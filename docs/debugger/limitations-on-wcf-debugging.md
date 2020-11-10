@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c70195cdc0a6a03395744c63f556ce8c2970aa30
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e8612bd2423849c61f21a5c184a3e1d39da0302b
+ms.sourcegitcommit: 023f52f10fb91850824558478cbfd2ec965054f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72731501"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94407750"
 ---
 # <a name="limitations-on-wcf-debugging"></a>WCE Hata Ayıklamasında Sınırlamalar
 WCF hizmetinde hata ayıklamaya başlayabilmeniz için kullanabileceğiniz üç yol vardır:
@@ -51,10 +51,10 @@ WCF hizmetinde hata ayıklamaya başlayabilmeniz için kullanabileceğiniz üç 
     </system.web>
     ```
 
-     Bu kod yalnızca bir kez eklenmelidir. Bu kodu,. config dosyasını düzenleyerek veya **Işleme İliştir**' i kullanarak hizmete ekleyerek ekleyebilirsiniz. Bir hizmette **Işleme ekleme** kullandığınızda, hata ayıklama kodu otomatik olarak. config dosyasına eklenir. Bundan sonra,. config dosyasını düzenlemek zorunda kalmadan hata ayıklamanıza ve hizmette ilerme yapabilirsiniz.
+     Bu kod yalnızca bir kez eklenmelidir. Bu kodu,. config dosyasını düzenleyerek veya **Işleme İliştir** ' i kullanarak hizmete ekleyerek ekleyebilirsiniz. Bir hizmette **Işleme ekleme** kullandığınızda, hata ayıklama kodu otomatik olarak. config dosyasına eklenir. Bundan sonra,. config dosyasını düzenlemek zorunda kalmadan hata ayıklamanıza ve hizmette ilerme yapabilirsiniz.
 
 ## <a name="limitations-on-stepping-out-of-a-service"></a>Bir hizmetten atlama sınırlamaları
- Bir hizmetin ve istemciye geri dönme işlemi, bir hizmetin adımlaması için açıklanan sınırlamalara sahiptir. Buna ek olarak, hata ayıklayıcı istemciye eklenmelidir. Bir istemcide hata ayıklaması yapıyorsanız ve bir hizmete adımla, hata ayıklayıcı hizmete bağlı kalır. Bu, istemciyi, **hata ayıklamayı Başlat** ' i kullanarak veya istemciye Iliştirerek, **İşleme İliştir**' i kullanarak başlatmış olmanız durumunda geçerlidir. Hizmete ekleyerek hata ayıklamaya başladıysanız, hata ayıklayıcı henüz istemciye eklenmez. Bu durumda, hizmeti kullanıma almak ve istemciye geri dönmek istiyorsanız, öncelikle istemciye el ile eklemek için **Ekle işlemini** kullanmanız gerekir.
+ Bir hizmetin ve istemciye geri dönme işlemi, bir hizmetin adımlaması için açıklanan sınırlamalara sahiptir. Buna ek olarak, hata ayıklayıcı istemciye eklenmelidir. Bir istemcide hata ayıklaması yapıyorsanız ve bir hizmete adımla, hata ayıklayıcı hizmete bağlı kalır. Bu, istemciyi, **hata ayıklamayı Başlat** ' i kullanarak veya istemciye Iliştirerek, **İşleme İliştir** ' i kullanarak başlatmış olmanız durumunda geçerlidir. Hizmete ekleyerek hata ayıklamaya başladıysanız, hata ayıklayıcı henüz istemciye eklenmez. Bu durumda, hizmeti kullanıma almak ve istemciye geri dönmek istiyorsanız, öncelikle istemciye el ile eklemek için **Ekle işlemini** kullanmanız gerekir.
 
 ## <a name="limitations-on-automatic-attach-to-a-service"></a>Bir hizmete otomatik Iliştirme sınırlamaları
  Bir hizmete otomatik iliştirme aşağıdaki sınırlamalara sahiptir:
@@ -73,10 +73,9 @@ WCF hizmetinde hata ayıklamaya başlayabilmeniz için kullanabileceğiniz üç 
   <system.web>
   ```
 
-## <a name="self-hosting"></a>Kendi kendine barındırma
- *Şirket içinde barındırılan bir hizmet* , IIS 'de, WCF hizmeti ana bilgisayarında veya geliştirme sunucusunda ÇALıŞTıRMAYAN bir WCF hizmetidir [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] . Şirket içinde barındırılan bir hizmette hata ayıklama hakkında daha fazla bilgi için bkz. [nasıl yapılır: Şirket Içinde BARıNDıRıLAN WCF hizmetinde hata ayıklama](../debugger/how-to-debug-a-self-hosted-wcf-service.md).
+## <a name="self-hosting"></a>Self-Hosting
+ *Şirket içinde barındırılan bir hizmet* , IIS 'de, WCF hizmeti ana bilgisayarında veya geliştirme sunucusunda ÇALıŞTıRMAYAN bir WCF hizmetidir [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] . Şirket içinde barındırılan bir hizmette hata ayıklama hakkında daha fazla bilgi için bkz. [nasıl yapılır: Self-Hosted WCF hizmetinde hata ayıklama](../debugger/how-to-debug-a-self-hosted-wcf-service.md).
 
-## <a name="self-hosting"></a>Kendi kendine barındırma
  [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]3,0 veya 3,5 uygulamalarında hata ayıklamayı etkinleştirmek için, [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] önce 3,0 veya 3,5 yüklü olmalıdır [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] . [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 3,0 veya 3,5 ' den önce yüklendiyse, bir [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 3,0 veya 3,5 uygulamasında hata ayıklamaya çalıştığınızda bir hata oluşur. "Sunucuda otomatik olarak adımla" hata iletisi görüntülenir. Bu sorunu gidermek için, Windows **Denetim Masası**  >  **Programlar ve Özellikler** ' i kullanarak yüklemenizi onarın [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] .
 
 ## <a name="see-also"></a>Ayrıca bkz.

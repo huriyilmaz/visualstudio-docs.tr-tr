@@ -14,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 94feafbc614be61aaa4eef9e26669c0fbe901ed5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8df973ef6a75a9134b4ee6e945a5702708ece712
+ms.sourcegitcommit: 023f52f10fb91850824558478cbfd2ec965054f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80740029"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94407724"
 ---
 # <a name="bind-keyboard-shortcuts-to-menu-items"></a>Klavye kısayollarını menü öğelerine bağlama
 Bir klavye kısayolunu özel bir menü komutuna bağlamak için, Package için *. vsct* dosyasına bir giriş eklemeniz yeterlidir. Bu konu başlığı altında, klavye kısayolunun özel düğme, menü öğesi veya araç çubuğu komutuna nasıl değiştirileceği ve varsayılan düzenleyicide klavye eşlemesinin nasıl uygulanacağı veya özel bir düzenleyici ile nasıl sınırlandırılacağını açıklanmaktadır.
@@ -31,9 +31,9 @@ Bir klavye kısayolunu özel bir menü komutuna bağlamak için, Package için *
 
 ### <a name="to-verify-the-availability-of-a-keyboard-shortcut"></a>Klavye kısayolunun kullanılabilirliğini doğrulamak için
 
-1. **Araç**  >  **seçenekleri**  >  **ortamı** penceresinde **klavye**' yi seçin.
+1. **Araç**  >  **seçenekleri**  >  **ortamı** penceresinde **klavye** ' yi seçin.
 
-2. **' De yeni kısayol kullan ' ın** **Global**olarak ayarlandığından emin olun.
+2. **' De yeni kısayol kullan ' ın** **Global** olarak ayarlandığından emin olun.
 
 3. **Kısayol tuşlarını bas** kutusunda, kullanmak istediğiniz klavye kısayolunu yazın.
 
@@ -42,7 +42,7 @@ Bir klavye kısayolunu özel bir menü komutuna bağlamak için, Package için *
 4. Eşlenmemiş bir tane bulana kadar anahtarların farklı birleşimlerini deneyin.
 
    > [!NOTE]
-   > **Alt** kullanan klavye kısayolları, bir menü açabilir ve doğrudan bir komut yürütmez. Bu nedenle, **alt**içeren bir kısayol yazdığınızda, **Şu anda Box tarafından kullanılan kısayol** boş olabilir. Kısayolun, **Seçenekler** iletişim kutusunu kapatarak ve ardından tuşlara basarak bir menü açmadığından emin olabilirsiniz.
+   > **Alt** kullanan klavye kısayolları, bir menü açabilir ve doğrudan bir komut yürütmez. Bu nedenle, **alt** içeren bir kısayol yazdığınızda, **Şu anda Box tarafından kullanılan kısayol** boş olabilir. Kısayolun, **Seçenekler** iletişim kutusunu kapatarak ve ardından tuşlara basarak bir menü açmadığından emin olabilirsiniz.
 
    Aşağıdaki yordamda, bir menü komutuyla mevcut bir VSPackage olduğunu varsaymaktadır. Bu işlemi gerçekleştirmek için yardıma ihtiyacınız varsa, bir [menü komutuyla uzantı oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md)konusuna göz atın.
 
@@ -59,7 +59,7 @@ Bir klavye kısayolunu özel bir menü komutuna bağlamak için, Package için *
 
     `guid`Ve `id` özniteliklerini çağırmak istediğiniz komuta ait olanlarla ayarlayın.
 
-    `mod1`Özniteliği **Control**, **alt**veya **Shift**olarak ayarlayın.
+    `mod1`Özniteliği **Control** , **alt** veya **Shift** olarak ayarlayın.
 
     KeyBindings bölümü şuna benzemelidir:
 
@@ -81,7 +81,7 @@ Bir klavye kısayolunu özel bir menü komutuna bağlamak için, Package için *
 
    Komutu yalnızca özel bir düzenleyicide kullanılabilir hale getirmek için, `editor` [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] özel düzenleyiciyi Içeren VSPackage oluşturduğunuzda özniteliği paket şablonu tarafından oluşturulan özel düzenleyicinin adına ayarlayın. Ad değerini bulmak için, `<Symbols>` `<GuidSymbol>` `name` özniteliği "." ile biten bir düğüm için bölümüne bakın `editorfactory` . Bu, özel düzenleyicinin adıdır.
 
-## <a name="example"></a>Örnek
+## <a name="example-1"></a>Örnek 1
  Bu örnek, **CTRL** + **alt** + **C** klavye kısayolunu `cmdidMyCommand` adlı bir pakette adlı bir komuta bağlar `MyPackage` .
 
 ```
@@ -98,7 +98,7 @@ Bir klavye kısayolunu özel bir menü komutuna bağlamak için, Package için *
 </CommandTable>
 ```
 
-## <a name="example"></a>Örnek
+## <a name="example-2"></a>Örnek 2
  Bu örnek, **CTRL** + **B** klavye kısayolunu adlı bir projede adlı bir komuta bağlar `cmdidBold` `TestEditor` . Komut, diğer düzenleyicilerde değil yalnızca özel düzenleyicide kullanılabilir.
 
 ```xml

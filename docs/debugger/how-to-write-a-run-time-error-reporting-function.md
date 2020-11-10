@@ -18,19 +18,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 073943d8b6a3dbf5ee3af653a43046c3b389fbfd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 22445868cca1533cad3d7e395452a6b19e102952
+ms.sourcegitcommit: 023f52f10fb91850824558478cbfd2ec965054f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85348411"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94407646"
 ---
-# <a name="how-to-write-a-run-time-error-reporting-function-c"></a>Nasıl yapılır: çalışma zamanı hata raporlama Işlevi yazma (C++)
+# <a name="how-to-write-a-run-time-error-reporting-function-c"></a>Nasıl yapılır: Run-Time hata raporlama Işlevi yazma (C++)
 Çalışma zamanı hataları için özel bir raporlama işlevi, ile aynı bildirime sahip olmalıdır `_CrtDbgReportW` . Hata ayıklayıcıya 1 değerini döndürmelidir.
 
 Aşağıdaki örnek, bir özel raporlama işlevinin nasıl tanımlanacağını göstermektedir.
 
-## <a name="example"></a>Örnek
+## <a name="example-1"></a>Örnek 1
 
 ```cpp
 #include <stdio.h>
@@ -61,7 +61,7 @@ int MyErrorFunc(int errorType, const wchar_t *filename,
 }
 ```
 
-## <a name="example"></a>Örnek
+## <a name="example-2"></a>Örnek 2
 Aşağıdaki örnekte, daha karmaşık bir özel raporlama işlevi gösterilmektedir. Bu örnekte, Switch ifadesinde parametresi tarafından tanımlandığı şekilde çeşitli hata türleri ele alır `reportType` `_CrtDbgReportW` . Değiştirdiğiniz için `_CrtDbgReportW` kullanamazsınız `_CrtSetReportMode` . İşleviniz çıktıyı işlemelidir. Bu işlevdeki ilk değişken bağımsız değişkeni bir çalışma zamanı hata numarası alır. Daha fazla bilgi için bkz. [_RTC_SetErrorType](/cpp/c-runtime-library/reference/rtc-seterrortype).
 
 ```cpp
@@ -106,7 +106,7 @@ int Catch_RTC_Failure(int errType, const wchar_t *file, int line,
 #pragma runtime_checks("", restore)
 ```
 
-## <a name="example"></a>Örnek
+## <a name="example-3"></a>Örnek 3
 Yerine `_RTC_SetErrorFuncW` özel işlevinizi yüklemek için kullanın `_CrtDbgReportW` . Daha fazla bilgi için bkz. [_RTC_SetErrorFuncW](/cpp/c-runtime-library/reference/rtc-seterrorfuncw). `_RTC_SetErrorFuncW`Dönüş değeri, bir önceki raporlama işlevidir ve gerekirse bunları kaydedebilir ve geri yükleyebilirsiniz.
 
 ```cpp

@@ -12,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 05ac1f393632934f193f5f4efaaf9e5459ffbb14
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7267060f2207b0842885dc3001c3926874be30a9
+ms.sourcegitcommit: 023f52f10fb91850824558478cbfd2ec965054f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705880"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94407737"
 ---
 # <a name="registering-a-project-type"></a>Proje Türü Kaydetme
 Yeni bir proje türü oluşturduğunuzda, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Proje türü tanımak ve bunlarla çalışmak için etkinleştirilecek kayıt defteri girişleri oluşturmanız gerekir. Genellikle bu kayıt defteri girdilerini bir kayıt defteri betiği (. RGS) dosyası kullanarak oluşturursunuz.
@@ -29,7 +29,7 @@ Yeni bir proje türü oluşturduğunuzda, [!INCLUDE[vsprvs](../../code-quality/i
 
  Aşağıdaki örnekler HKEY_CLASSES_ROOT.
 
-## <a name="example"></a>Örnek
+## <a name="example-1"></a>Örnek 1
 
 ```
 \.figp
@@ -47,7 +47,7 @@ Yeni bir proje türü oluşturduğunuzda, [!INCLUDE[vsprvs](../../code-quality/i
    @="devenv.exe \"%1\""
 ```
 
-|Ad|Tür|Veriler|Description|
+|Ad|Tür|Veriler|Açıklama|
 |----------|----------|----------|-----------------|
 |`@`|REG_SZ|`FigPrjFile`|. Figp uzantısına sahip proje türü dosyalarının adı ve açıklaması.|
 |`Content Type`|REG_SZ|`Text/plain`|Proje dosyaları için içerik türü.|
@@ -56,14 +56,14 @@ Yeni bir proje türü oluşturduğunuzda, [!INCLUDE[vsprvs](../../code-quality/i
 |`@`|REG_SZ|`&Open in Visual Studio`|Bu proje türünün açıldığı varsayılan uygulama.|
 |`@`|REG_SZ|`devenv.exe "%1"`|Bu türden bir proje açıldığında çalıştırılacak varsayılan komut.|
 
- Aşağıdaki örnekler HKEY_LOCAL_MACHINE ve [HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio\99.0Exp\Packages] anahtarı altındaki kayıt defterinde bulunur.
+ Aşağıdaki örnekler HKEY_LOCAL_MACHINE ve [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\99.0Exp\Packages] anahtarı altındaki kayıt defterinde bulunur.
 
-## <a name="example"></a>Örnek
+## <a name="example-2"></a>Örnek 2
 
 ```
 \{ACEF4EB2-57CF-11D2-96F4-000000000000} (The CLSID for the VSPackage)
    @="FigPrj Project Package"
-   "InprocServer32"="9.0<Visual Studio SDK installation path>\\VSIntegration\\Archive\\FigPkgs\\FigPrj\\                      Debug\\FigPrj.dll"
+   "InprocServer32"="9.0<Visual Studio SDK installation path>\\VSIntegration\\Archive\\FigPkgs\\FigPrj\\                      Debug\\FigPrj.dll"
    "CompanyName"="Microsoft"
    "ProductName"="Figure Project Sample"
    "ProductVersion"="9.0"
@@ -79,7 +79,7 @@ Yeni bir proje türü oluşturduğunuzda, [!INCLUDE[vsprvs](../../code-quality/i
    "FigProjectItemsEvents"="Returns the FigProjectItemsEvents Object"
 ```
 
-|Ad|Tür|Veriler|Description|
+|Ad|Tür|Veriler|Açıklama|
 |----------|----------|----------|-----------------|
 |`@` Varsayılanını|REG_SZ|`FigPrj Project VSPackage`|Bu kayıtlı VSPackage 'ın yerelleştirilebilir adı (proje türü).|
 |`InprocServer32`|REG_SZ|`%MODULE%`|Proje türü DLL dosyasının yolu. IDE bu DLL 'yi yükler ve nesneyi oluşturmaya ulaşmak için VSPackage CLSID değerini geçirir `DllGetClassObject` <xref:Microsoft.VisualStudio.OLE.Interop.IClassFactory> <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage> .|
@@ -93,21 +93,21 @@ Yeni bir proje türü oluşturduğunuzda, [!INCLUDE[vsprvs](../../code-quality/i
 |`FigProjectsEvents`|REG_SZ|Değer için bkz..|Bu Otomasyon olayı için döndürülen metin dizesini belirler.|
 |`FigProjectItemsEvents`|REG_SZ|Değer için bkz..|Bu Otomasyon olayı için döndürülen metin dizesini belirler.|
 
- Aşağıdaki örneklerin tümü, kayıt defterinde [HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio\9.0Exp\Projects] anahtarı altında bulunur.
+ Aşağıdaki örneklerin tümü kayıt defterinde [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\Projects] anahtarı altında bulunur.
 
-## <a name="example"></a>Örnek
+## <a name="example-3"></a>Örnek 3
 
 ```
 \{C061DB26-5833-11D2-96F5-000000000000} (The CLSID for projects of this type)
    @="FigPrj Project"
    "DisplayName"="#2"
    "Package"="{ACEF4EB2-57CF-11D2-96F4-000000000000}"
-   "ProjectTemplatesDir"="C:\\Program Files\\VSIP 9.0\\EnvSDK\\FigPkgs\\                           FigPrj\\FigPrjProjects"
-   "ItemTemplatesDir"="<Visual Studio SDK installation path>\\VSIntegration\\Archive9.0\\FigPkgs\\FigPrj\\                           FigPrjProjectItems"
+   "ProjectTemplatesDir"="C:\\Program Files\\VSIP 9.0\\EnvSDK\\FigPkgs\\                           FigPrj\\FigPrjProjects"
+   "ItemTemplatesDir"="<Visual Studio SDK installation path>\\VSIntegration\\Archive9.0\\FigPkgs\\FigPrj\\                           FigPrjProjectItems"
    "DisplayProjectFileExtensions"="#3"
    "PossibleProjectExtensions"="figp"
    "DefaultProjectExtension"=".figp"
-\{C061DB26-5833-11D2-96F5-000000000000}\Filters\1       (Folder 1 contains settings for Open Files filters.)
+\{C061DB26-5833-11D2-96F5-000000000000}\Filters\1       (Folder 1 contains settings for Open Files filters.)
    @="#4"
    "CommonOpenFilesFilter"=dword:00000000
    "CommonFindFilesFilter"=dword:00000000
@@ -126,11 +126,11 @@ Yeni bir proje türü oluşturduğunuzda, [!INCLUDE[vsprvs](../../code-quality/i
    "SortPriority"=dword:000003e8
 \{C061DB26-5833-11D2-96F5-000000000000}\AddItemTemplates\TemplateDirs\ {ACEF4EB2-57CF-11D2-96F4-000000000000}\1 (Second GUID indicates the registered project type for the Add Items templates.)
    @="#6"
-   "TemplatesDir"="<Visual Studio SDK installation path>\\VSIntegration\\Archive9.0\\FigPkgs\\FigPrj\\                    FigPrjProjectItems"
+   "TemplatesDir"="<Visual Studio SDK installation path>\\VSIntegration\\Archive9.0\\FigPkgs\\FigPrj\\                    FigPrjProjectItems"
    "SortPriority"=dword:00000064
 ```
 
-|Ad|Tür|Veriler|Description|
+|Ad|Tür|Veriler|Açıklama|
 |----------|----------|----------|-----------------|
 |`@`|REG_SZ|`FigPrj Project`|Bu türdeki projelerin varsayılan adı.|
 |`DisplayName`|REG_SZ|`#%IDS_PROJECT_TYPE%`|Paketler altında kayıtlı olan uydu DLL 'sinden alınacak adın kaynak KIMLIĞI.|
@@ -147,7 +147,7 @@ Yeni bir proje türü oluşturduğunuzda, [!INCLUDE[vsprvs](../../code-quality/i
 
  Aşağıdaki tabloda, önceki kod segmentinde bulunan filtre seçenekleri gösterilmektedir.
 
-|Filtre seçeneği|Description|
+|Filtre seçeneği|Açıklama|
 |-------------------|-----------------|
 |`CommonFindFilesFilter`|Filtrenin **dosyalarda bul** iletişim kutusunda ortak filtrelerden biri olduğunu gösterir. Ortak filtreler, filtreler ortak olarak işaretlenmeden önce filtre listesinde listelenir.|
 |`CommonOpenFilesFilter`|Filtrenin **Dosya Aç** iletişim kutusundaki ortak filtrelerden biri olduğunu gösterir. Ortak filtreler, filtreler ortak olarak işaretlenmeden önce filtre listesinde listelenir.|
@@ -157,9 +157,9 @@ Yeni bir proje türü oluşturduğunuzda, [!INCLUDE[vsprvs](../../code-quality/i
 
  Varsayılan olarak, bir filtre bu bayrak kümesinden bir veya daha fazla yoksa, filtre **Varolan öğe Ekle** iletişim kutusunda ve **Dosya Aç** iletişim kutusunda ortak filtreler listelendikten sonra kullanılır. Filtre, **dosyalarda bul** iletişim kutusunda kullanılmaz.
 
- Aşağıdaki örneklerin tümü, kayıt defterinde [HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio\9.0Exp\Projects] anahtarı altında bulunur.
+ Aşağıdaki örneklerin tümü kayıt defterinde [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\Projects] anahtarı altında bulunur.
 
-## <a name="example"></a>Örnek
+## <a name="example-4"></a>Örnek 4
 
 ```
 {FE3BBBB6-72D5-11d2-9ACE-00C04F79A2A4} (The CLSID for Enterprise Projects)
@@ -170,16 +170,16 @@ Yeni bir proje türü oluşturduğunuzda, [!INCLUDE[vsprvs](../../code-quality/i
    "NewProjectDialogOnly"=dword:00000000
 ```
 
-|Ad|Tür|Veriler|Description|
+|Ad|Tür|Veriler|Açıklama|
 |----------|----------|----------|-----------------|
 |`@`|REG_SZ|`#%IDS_NEWPROJ_ TEMPLATES_ENTRY%`|Yeni proje şablonları için kaynak KIMLIĞI.|
 |`TemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjects`|Kayıtlı proje türünün projeleri için varsayılan yol.|
 |`SortPriority`|REG_DWORD|`41 (x29)`|Yeni projeler Sihirbazı iletişim kutusunda görünen projelerin sıralama sırasını ayarlar.|
 |`NewProjectDialogOnly`|REG_DWORD|`0`|0, bu türdeki projelerin yalnızca yeni proje iletişim kutusunda görüntülendiğini belirtir.|
 
- Aşağıdaki örneklerin tümü, kayıt defterinde [HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio\9.0Exp\Projects] anahtarı altında bulunur.
+ Aşağıdaki örneklerin tümü kayıt defterinde [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\Projects] anahtarı altında bulunur.
 
-## <a name="example"></a>Örnek
+## <a name="example-5"></a>Örnek 5
 
 ```
 \{A2FE74E1-B743-11d0-AE1A-00A0C90FFFC3} (CLSID for Miscellaneous Files projects)
@@ -187,20 +187,20 @@ Yeni bir proje türü oluşturduğunuzda, [!INCLUDE[vsprvs](../../code-quality/i
 \AddItemTemplates\TemplateDirs\{ACEF4EB2-57CF-11D2-96F4-000000000000}\1
                                  (CLSID for Figures Project projects)
    @="#6"
-   "TemplatesDir"="<Visual Studio SDK installation path>\\VSIntegration\\Archive9.0\\FigPkgs\\FigPrj\\                    FigPrjProjectItems"
+   "TemplatesDir"="<Visual Studio SDK installation path>\\VSIntegration\\Archive9.0\\FigPkgs\\FigPrj\\                    FigPrjProjectItems"
    "SortPriority"=dword:00000064
 ```
 
-|Ad|Tür|Veriler|Description|
+|Ad|Tür|Veriler|Açıklama|
 |----------|----------|----------|-----------------|
-|`@`|REG_SZ|Hiçbiri|Diğer dosyalar proje girdileri için aşağıdaki girdilerin olduğunu gösteren varsayılan değer.|
+|`@`|REG_SZ|Yok|Diğer dosyalar proje girdileri için aşağıdaki girdilerin olduğunu gösteren varsayılan değer.|
 |`@`|REG_SZ|`#%IDS_ADDITEM_TEMPLATES_ENTRY%`|Yeni öğe Ekle şablon dosyaları için kaynak KIMLIĞI değeri.|
 |`TemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjectItems`|**Yeni öğe Ekle** iletişim kutusunda görüntülenecek olan öğelerin varsayılan yolu.|
 |`SortPriority`|REG_DWORD|`100 (vcprx64)`|**Yeni öğe Ekle** iletişim kutusunun ağaç düğümünde görüntülenmek üzere sıralama düzeni oluşturur.|
 
- Aşağıdaki örnek kayıt defterinde [HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio\9.0Exp\Menus] anahtarı altında bulunur.
+ Aşağıdaki örnek kayıt defterinde [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\Menus] anahtarı altında bulunur.
 
-## <a name="example"></a>Örnek
+## <a name="example-6"></a>Örnek 6
 
 ```
 "{ACEF4EB2-57CF-11D2-96F4-000000000000}"=",1000,1"
@@ -220,28 +220,28 @@ Yeni bir proje türü oluşturduğunuzda, [!INCLUDE[vsprvs](../../code-quality/i
 
   Son alan, CTMENU kaynağı için sürüm numarasını tanımlar. Sürüm numarasını değiştirerek menüyü bir kez daha birleştirebilirsiniz.
 
-|Ad|Tür|Veriler|Description|
+|Ad|Tür|Veriler|Açıklama|
 |----------|----------|----------|-----------------|
 |% CLSID_Package%|REG_SZ|`,1000,1`|Menü bilgilerini almak için kaynak.|
 
- Aşağıdaki örneklerin tümü, kayıt defterinde [HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio\9.0Exp\NewProjectTemplates] anahtarı altında bulunur.
+ Aşağıdaki örneklerin tümü kayıt defterinde [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\NewProjectTemplates] anahtarı altında bulunur.
 
 ```
-\TemplateDirs\{ACEF4EB2-57CF-11D2-96F4-000000000000}\1                (CLSID for Figures Project projects)
+\TemplateDirs\{ACEF4EB2-57CF-11D2-96F4-000000000000}\1                (CLSID for Figures Project projects)
    @="#7"
    "TemplatesDir"="<Visual Studio SDK installation path>\\VSIntegration\\Archive9.0\\FigPkgs\\FigPrj\\FigPrjProjects"
    "SortPriority"=dword:00000029
    "NewProjectDialogOnly"=dword:00000000
 ```
 
-|Ad|Tür|Veriler|Description|
+|Ad|Tür|Veriler|Açıklama|
 |----------|----------|----------|-----------------|
 |`@`|REG_SZ|`#%IDS_NEWPROJ_TEMPLATES_ENTRY%`|Şekil projesi yeni proje şablonlarının kaynak KIMLIĞI değeri.|
 |`TemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjects`|Yeni projeler dizininin varsayılan yolu. Bu dizindeki öğeler, **Yeni proje Sihirbazı** iletişim kutusunda görüntülenir.|
 |`SortPriority`|REG_DWORD|`41 (x29)`|**Projenin yeni proje** iletişim kutusunun ağaç düğümünde gösterileceği sırayı belirler.|
 |`NewProjectDialogOnly`|REG_DWORD|`0`|0, bu türdeki projelerin yalnızca **Yeni proje** iletişim kutusunda görüntülendiğini belirtir.|
 
- Aşağıdaki örnek kayıt defterinde [HKEY_LOCAL_MACHINE \Software\microsoft\visualstudio\9.0exp\ınstalınstalsınk\products] anahtarı altında bulunur.
+ Aşağıdaki örnek kayıt defterinde [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\InstalledProducts] anahtarı altında bulunur.
 
 ```
 \FiguresProductSample
@@ -249,18 +249,18 @@ Yeni bir proje türü oluşturduğunuzda, [!INCLUDE[vsprvs](../../code-quality/i
    "UseInterface"=dword:00000001
 ```
 
-|Ad|Tür|Veriler|Description|
+|Ad|Tür|Veriler|Açıklama|
 |----------|----------|----------|-----------------|
 |`Package`|REG_SZ|`%CLSID_Package%`|Kayıtlı VSPackage sınıf KIMLIĞI.|
 |`UseInterface`|REG_DWORD|`1`|1 Kullanıcı arabiriminin bu proje ile etkileşim kurmak için kullanılacağını gösterir. 0, UI arabirimi olmadığını gösterir.|
 
  Yeni proje türlerini denetleyen. vsz dosyaları sıklıkla bir RELATIVE_PATH girişi içerir. Bu yol, aşağıdaki kurulum anahtarında proje türünün \ProductDir girişinde belirtilen yola göredir:
 
- HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio\7.0Exp\Setup
+ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\7.0Exp\Setup
 
  Örneğin, kurumsal çerçeveler proje şablonları aşağıdaki kayıt defteri girdilerini ekler:
 
- HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio\7.0Exp\Setup\EF\ProductDir = C:\Program Files\Microsoft Visual Studio\EnterpriseFrameworks\
+ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\7.0Exp\Setup\EF\ProductDir = C:\Program Files\Microsoft Visual Studio\EnterpriseFrameworks\
 
  Yani,. vsz dosyasına bir PROJECT_TYPE = EF girişi eklerseniz, ortam daha önce belirtilen ProductDir dizininde. vsz dosyalarınızı bulur.
 

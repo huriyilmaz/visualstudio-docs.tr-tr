@@ -13,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - aspnet
-ms.openlocfilehash: f2c965866cdd8494af53748e4023196d84136553
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 7a28e9cea6db337cbe114c7e51c387315879ccd5
+ms.sourcegitcommit: 023f52f10fb91850824558478cbfd2ec965054f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90811142"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94407713"
 ---
 # <a name="collect-concurrency-data-for-an-aspnet-web-application-using-the-profiler-command-line"></a>Profil oluşturucu komut satırını kullanarak bir ASP.NET Web uygulaması için eşzamanlılık verileri toplama
 Profil Oluşturma Araçları eşzamanlılık yöntemi, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] kaynak çekişme verilerini toplamanıza olanak sağlar.
@@ -54,5 +54,5 @@ Profil Oluşturma Araçları eşzamanlılık yöntemi, [!INCLUDE[vsprvs](../code
 
 - [Eşzamanlılık Görselleştiricisi](../profiling/concurrency-visualizer.md)
 
-## <a name="reference"></a>Başvuru
+## <a name="see-also"></a>Ayrıca bkz.
 - [Komut satırı profil oluşturma araçları başvurusu](../profiling/command-line-profiling-tools-reference.md)

@@ -11,24 +11,24 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 63b44bee152acbf5529acfcadaa49a19e9feb52b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5639726762359bb8ba2fb374ee8ddc5c78e2f4da
+ms.sourcegitcommit: 023f52f10fb91850824558478cbfd2ec965054f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74778368"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94407581"
 ---
 # <a name="profile_currentid"></a>PROFILE_CURRENTID
 PROFILE_CURRENTID, NameProfile, StartProfile, StopProfile, SuspendProfile ve ResumeProfile işlevlerine yapılan çağrıda iş parçacığı KIMLIĞI veya işlem KIMLIĞI için sözde belirteci döndürür. İşlevin, özel olarak belirtilen bir iş parçacığı veya işlem üzerinde çalışmasını sağlamak için bunu kullanın.
 
-## <a name="example"></a>Örnek
+## <a name="example-1"></a>Örnek 1
  PROFILE_CURRENTID, *VSPerf. h* içinde şu şekilde tanımlanır:
 
 ```cpp
 static const unsigned int PROFILE_CURRENTID = (unsigned int)-1;
 ```
 
-## <a name="example"></a>Örnek
+## <a name="example-2"></a>Örnek 2
  Aşağıdaki örnekte PROFILE_CURRENTID gösterilmektedir. Örnek, [StartProfile](../profiling/startprofile.md) işlevine yapılan çağrıda geçerli iş parçacığını tanımlayan bir parametre olarak PROFILE_CURRENTID kullanır.
 
 ```cpp

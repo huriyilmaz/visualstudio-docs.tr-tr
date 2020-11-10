@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 314ec61da7ed61cc8bdd573e201d98a53862a32c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 075fc9c4be3890ce9a63c1aa79762dbd8ceaeea5
+ms.sourcegitcommit: 023f52f10fb91850824558478cbfd2ec965054f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "66262927"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94407568"
 ---
 # <a name="point-bilinear-trilinear-and-anisotropic-texture-filtering-variants"></a>Nokta, Çift Doğrusal, Üçlü Doğrusal ve Yön Bağımlı Doku Filtreleme Çeşitleri
 Uygun doku örnekleyicileri için filtreleme modunu geçersiz kılar.
@@ -61,7 +61,7 @@ Uygun doku örnekleyicileri için filtreleme modunu geçersiz kılar.
 ## <a name="restrictions-and-limitations"></a>Kısıtlamalar ve sınırlamalar
  Direct3D 'de, özellik düzeyi 9,1, 2x bir en yüksek anizedetrou belirtir. **Anısotropıc dokusu filtreleme** değişkeni, tek başına 16X aniztroa 'yı kullanmayı denetiğinden, bir özellik düzeyi 9,1 cihazında Çerçeve Analizi çalıştırıldığında kayıttan yürütme başarısız olur. Bu sınırlamanın etkilediği modern cihazlar ARM tabanlı Surface RT ve Surface 2 Windows tabletlerini içerir. Bazı bilgisayarlarda hala bulunan daha eski GPU 'Lar de etkilenebilir, ancak artık kullanılmıyor ve giderek daha sık görülen bir durumdur.
 
-## <a name="example"></a>Örnek
+## <a name="example-1"></a>Örnek 1
  **Nokta dokusu filtreleme** değişkeni aşağıdaki gibi kod kullanılarak yeniden oluşturulabilir:
 
 ```cpp
@@ -75,7 +75,7 @@ d3d_device->CreateSamplerState(&sampler_desc, &sampler);
 d3d_context->PSSetSamplers(0, 1, &sampler
 ```
 
-## <a name="example"></a>Örnek
+## <a name="example-2"></a>Örnek 2
  **Bilinear doku filtreleme** değişkeni aşağıdaki gibi kod kullanılarak yeniden oluşturulabilir:
 
 ```cpp
@@ -89,7 +89,7 @@ d3d_device->CreateSamplerState(&sampler_desc, &sampler);
 d3d_context->PSSetSamplers(0, 1, &sampler
 ```
 
-## <a name="example"></a>Örnek
+## <a name="example-3"></a>Örnek 3
  **Trilinear doku filtreleme** değişkeni aşağıdaki gibi kod kullanılarak yeniden oluşturulabilir:
 
 ```cpp
@@ -103,7 +103,7 @@ d3d_device->CreateSamplerState(&sampler_desc, &sampler);
 d3d_context->PSSetSamplers(0, 1, &sampler
 ```
 
-## <a name="example"></a>Örnek
+## <a name="example-4"></a>Örnek 4
  **Anısotropıc doku filtreleme** değişkeni, şunun gibi kod kullanılarak yeniden oluşturulabilir:
 
 ```cpp

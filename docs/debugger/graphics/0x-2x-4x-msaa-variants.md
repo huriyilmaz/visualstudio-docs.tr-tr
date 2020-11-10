@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 707d63d3ae5fb487f6232321a1d9d3128d379e06
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e77c0d7b5cbba2faf73fcca85ffcd0db063d618e
+ms.sourcegitcommit: 023f52f10fb91850824558478cbfd2ec965054f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64816540"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94407555"
 ---
 # <a name="0x2x4x-msaa-variants"></a>0x/2x/4x MSAA Çeşitleri
 Tüm işleme hedefleri ve takas zincirlerinde çok örnekli düzgünleştirme (MSAA) ayarlarını geçersiz kılar.
@@ -54,7 +54,7 @@ Tüm işleme hedefleri ve takas zincirlerinde çok örnekli düzgünleştirme (M
 
  Kayıttan yürütme bu tür çakışmaları algıladığında, amaçlanan davranışı çoğaltmak için en iyi çabayı yapar, ancak sonuçları tam olarak eşleştirmek mümkün olmayabilir. Bu, bu varyantlar performansını yanlış temsil eden bir şekilde etkilemek için bunun yaygın bir durumdur olsa da, örneğin, bir piksel gölgelendiricisi içindeki akış denetimi bir dokunun kesin içeriğine göre belirlenir; çünkü çoğaltılan doku aynı içeriğe sahip olmayabilir.
 
-## <a name="example"></a>Örnek
+## <a name="example-1"></a>Örnek 1
  Bu çeşitler, kullanılarak oluşturulan işleme hedefleri için aşağıdaki `ID3D11Device::CreateTexture2D` gibi kod kullanılarak yeniden oluşturulabilir:
 
 ```cpp
@@ -65,7 +65,7 @@ target_description.SampleDesc.Quality = 0;
 d3d_device->CreateTexture2D(&target_description, nullptr, &render_target);
 ```
 
-## <a name="example"></a>Örnek
+## <a name="example-2"></a>Örnek 2
  Ya da ıdxgiswapzincirine:: Createswapzinciri veya D3D11CreateDeviceAndSwapChain kullanılarak oluşturulan takas zincirlerini şunun gibi kod kullanarak:
 
 ```cpp

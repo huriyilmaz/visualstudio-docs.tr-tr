@@ -27,12 +27,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8e77f115eb4014f16107ae167576ed0d923bffe8
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: 09e5973b39bae2fbf923cf97ac1bd9cf15e10874
+ms.sourcegitcommit: 023f52f10fb91850824558478cbfd2ec965054f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94382981"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94407685"
 ---
 # <a name="ltdependencygt-element-clickonce-deployment"></a>&lt;Dependency &gt; öğesi (ClickOnce dağıtımı)
 Yüklenecek uygulamanın sürümünü ve uygulama bildiriminin konumunu tanımlar.
@@ -128,7 +128,7 @@ Yüklenecek uygulamanın sürümünü ve uygulama bildiriminin konumunu tanımla
 ## <a name="remarks"></a>Açıklamalar
  Dağıtım bildirimlerinin genellikle `assemblyIdentity` uygulama bildiriminin adını ve sürümünü tanımlayan tek bir öğesi vardır.
 
-## <a name="example"></a>Örnek
+## <a name="example-1"></a>Örnek 1
  Aşağıdaki kod örneğinde bir `dependency` dağıtım bildiriminde bir öğe gösterilmektedir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] .
 
 ```xml
@@ -147,7 +147,7 @@ Yüklenecek uygulamanın sürümünü ve uygulama bildiriminin konumunu tanımla
 </dependency>
 ```
 
-## <a name="example"></a>Örnek
+## <a name="example-2"></a>Örnek 2
  Aşağıdaki kod örneği GAC 'de zaten yüklü olan bir derlemeye bağımlılığı belirtir.
 
 ```xml
@@ -158,7 +158,7 @@ Yüklenecek uygulamanın sürümünü ve uygulama bildiriminin konumunu tanımla
 </dependency>
 ```
 
-## <a name="example"></a>Örnek
+## <a name="example-3"></a>Örnek 3
  Aşağıdaki kod örneği, ortak dil çalışma zamanının belirli bir sürümü için bir bağımlılık belirtir.
 
 ```xml
@@ -169,7 +169,7 @@ Yüklenecek uygulamanın sürümünü ve uygulama bildiriminin konumunu tanımla
 </dependency>
 ```
 
-## <a name="example"></a>Örnek
+## <a name="example-4"></a>Örnek 4
  Aşağıdaki kod örneği bir işletim sistemi bağımlılığını belirtir.
 
 ```xml
