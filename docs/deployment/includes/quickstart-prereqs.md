@@ -6,7 +6,7 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 09/02/2020
 ms.locfileid: "70197196"
 ---
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 ::: moniker range=">=vs-2019"
 
@@ -23,8 +23,8 @@ ms.locfileid: "70197196"
 ::: moniker-end
 
 * Bir ASP.NET, ASP.NET Core, Python veya Node.js projesi. Zaten bir projeniz yoksa aşağıdan bir seçenek belirleyin:
-  * ASP.NET Core: [hızlı başlangıç: Visual Studio 'yu kullanarak ilk ASP.NET Core Web uygulamanızı oluşturun](../../ide/quickstart-aspnet-core.md)veya **Dosya**  >  **Yeni proje**' yi kullanın, **Visual C#**  >  **.NET Core**' u seçin, sonra da **ASP.NET Core Web uygulaması**' nı seçin. İstendiğinde, **Web uygulaması (Model-View-Controller)** şablonunu seçin, **kimlik doğrulaması** olmadığından emin olun ve ardından **Tamam**' ı seçin.
-  * Python: [hızlı başlangıç: Visual Studio kullanarak ilk Python web uygulamanızı oluşturun](../../ide/quickstart-python.md)veya **Dosya**  >  **Yeni proje**' yi kullanın, **Python**' ı seçin ve ardından **Flask Web projesi**' ni seçin.
-  * Node.js: [hızlı başlangıç izleyin: Visual Studio 'yu kullanarak ilk Node.js uygulamanızı oluşturun](../../ide/quickstart-nodejs.md)veya **Dosya**  >  **Yeni proje**' yi kullanın, **JavaScript**' i seçin, sonra **boş Node.js web uygulaması**' nı seçin.
+  * ASP.NET Core: [hızlı başlangıç: Visual Studio 'yu kullanarak ilk ASP.NET Core Web uygulamanızı oluşturun](../../ide/quickstart-aspnet-core.md)veya **Dosya**  >  **Yeni proje** ' yi kullanın, **Visual C#**  >  **.NET Core** ' u seçin, sonra da **ASP.NET Core Web uygulaması** ' nı seçin. İstendiğinde, **Web uygulaması (Model-View-Controller)** şablonunu seçin, **kimlik doğrulaması** olmadığından emin olun ve ardından **Tamam** ' ı seçin.
+  * Python: [hızlı başlangıç: Visual Studio kullanarak ilk Python web uygulamanızı oluşturun](../../ide/quickstart-python.md)veya **Dosya**  >  **Yeni proje** ' yi kullanın, **Python** ' ı seçin ve ardından **Flask Web projesi** ' ni seçin.
+  * Node.js: [hızlı başlangıç izleyin: Visual Studio 'yu kullanarak ilk Node.js uygulamanızı oluşturun](../../ide/quickstart-nodejs.md)veya **Dosya**  >  **Yeni proje** ' yi kullanın, **JavaScript** ' i seçin, sonra **boş Node.js web uygulaması** ' nı seçin.
 
 * Dağıtım adımlarını takip etmeden önce **build > Build Solution** menü komutunu kullanarak projeyi derlediğinizden emin olun.
