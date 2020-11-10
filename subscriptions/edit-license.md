@@ -7,12 +7,12 @@ ms.assetid: 97ac8e4d-7a03-42f8-98cb-15bcaa90ef65
 ms.date: 11/09/2020
 ms.topic: how-to
 description: Yöneticilerin abonelik atamalarını nasıl düzenleyebileceğinizi öğrenin.
-ms.openlocfilehash: 785bad481e4329647582d1f441988b1cd83a055a
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: 0f1ec9c9aa63b5bd877e13f112964f7d74a4b5af
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94382500"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94433563"
 ---
 # <a name="edit-visual-studio-subscription-assignments"></a>Visual Studio abonelik atamalarını Düzenle
 Abonelik Yöneticisi olarak, kuruluşunuzdaki kişilere atanan aboneliklerde değişiklikler yapabilirsiniz.  Bu makale, yapabileceğiniz değişiklik türlerini açıklar ve gerekli adımları sağlar.
@@ -39,6 +39,8 @@ Toplu düzenleme kullanarak birden çok aboneyi nasıl düzenleyeceğinizi öğr
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4vkAF]
 
+> [!NOTE]
+> Şablondaki abonelik GUID 'Lerini değiştirmeyin. Lütfen [belirli bir abonelik GUID 'leri atama](assign-guid.md)hakkında makalemize bakın.
 
 1. Birden çok aboneyi aynı anda düzenlemek için, aboneler sekmesine gidin. Üstteki şeritte **toplu düzenleme** ' ye tıklayın.
 
@@ -46,7 +48,7 @@ Toplu düzenleme kullanarak birden çok aboneyi nasıl düzenleyeceğinizi öğr
    > [!div class="mx-imgBorder"]
    > ![Bir lisansı düzenleme-toplu düzenlemeler listesini dışarı aktarma](_img/edit-license/edit-license-bulk-edit-export.png "Geçerli aboneliklerinizin bir listesini oluşturmak için bu Excel 'i dışarı aktar ' a tıklayın.")
 
-3. Daha sonra, dosyayı kolayca bulabilmek ve karşıya yüklemeden önce gerekli değişiklikleri yapabilmek için dosyayı yerel olarak kaydedin. Başarılı bir karşıya yükleme işlemi sağlamak için, toplu düzenleme dosyasındaki **abonelik düzeyini veya ABONELIK GUID 'sini düzenlemeyin** , yüklemenin başarısız olmasına neden olur.
+3. Daha sonra, dosyayı kolayca bulabilmek ve karşıya yüklemeden önce gerekli değişiklikleri yapabilmek için dosyayı yerel olarak kaydedin. 
 
 4. Visual Studio abonelikleri yönetim portalına dönün ve toplu düzenleme iletişim kutusunda, **Araştır** ' a tıklayın. Kaydettiğiniz Excel dosyasını seçin ve **Tamam** ' a tıklayın. Karşıya yükleme ilerlemesini ekranda görürsünüz.
    > [!div class="mx-imgBorder"]

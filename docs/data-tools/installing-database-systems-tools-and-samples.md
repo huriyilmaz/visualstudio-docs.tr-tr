@@ -1,5 +1,7 @@
 ---
 title: Veritabanı uyumluluğu
+description: Visual Studio için Microsoft SQL Server, Oracle, MySQL, PostgreSQL, SQLite ve Firebird gibi uyumlu veritabanı sistemlerini gözden geçirin.
+ms.custom: SEO-VS-2020
 ms.date: 09/06/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: cfc3b6c3adc5c51cbbc4bc7d91338fd3595ec372
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 598d48d560db58a40b04e9d7684e98df22291a6a
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75586412"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94434863"
 ---
 # <a name="compatible-database-systems-for-visual-studio"></a>Visual Studio için uyumlu veritabanı sistemleri
 
@@ -39,15 +41,15 @@ Oracle teknolojisinin ücretli veya ücretsiz bir sürümünü [Oracle Technolog
 
 ## <a name="mysql"></a>MySQL
 
-MySQL, kurumlar ve web sitelerinde yaygın olarak kullanılan, popüler bir açık kaynaklı veritabanı sistemidir. MySQL için karşıdan yüklemeler, Visual Studio için MySQL ve ilgili ürünler [Windows üzerinde MySQL](https://www.mysql.com/why-mysql/windows/)'de yer alır. Üçüncü taraflar, MySQL için çeşitli Visual Studio uzantıları ve tek başına yönetim uygulamaları sunar. NuGet Paket Yöneticisi 'ndeki tekliflere gözatabilmeniz (**Araçlar**  >  **NuGet Paket Yöneticisi**  >  **çözüm için NuGet paketlerini yönetme**).
+MySQL, kurumlar ve web sitelerinde yaygın olarak kullanılan, popüler bir açık kaynaklı veritabanı sistemidir. MySQL için karşıdan yüklemeler, Visual Studio için MySQL ve ilgili ürünler [Windows üzerinde MySQL](https://www.mysql.com/why-mysql/windows/)'de yer alır. Üçüncü taraflar, MySQL için çeşitli Visual Studio uzantıları ve tek başına yönetim uygulamaları sunar. NuGet Paket Yöneticisi 'ndeki tekliflere gözatabilmeniz ( **Araçlar**  >  **NuGet Paket Yöneticisi**  >  **çözüm için NuGet paketlerini yönetme** ).
 
 ## <a name="postgresql"></a>PostgreSQL
 
-PostgreSQL, ücretsiz, açık kaynaklı bir nesne ilişkisel veritabanı sistemidir. Windows 'a yüklemek için [PostgreSQL indirme sayfasından](https://www.postgresql.org/download/windows/)indirebilirsiniz. Kaynak koddan PostgreSQL de oluşturabilirsiniz. PostgreSQL çekirdek sistemi bir C dili arabirimi içerir. Birçok üçüncü taraf, .NET uygulamalarından PostgreSQL kullanmaya yönelik NuGet paketleri sağlar. NuGet Paket Yöneticisi 'ndeki tekliflere gözatabilmeniz (**Araçlar**  >  **NuGet Paket Yöneticisi**  >  **çözüm için NuGet paketlerini yönetme**). Belki de en popüler paket, [npgsql.org](http://www.npgsql.org)tarafından sağlanır.
+PostgreSQL, ücretsiz, açık kaynaklı bir nesne ilişkisel veritabanı sistemidir. Windows 'a yüklemek için [PostgreSQL indirme sayfasından](https://www.postgresql.org/download/windows/)indirebilirsiniz. Kaynak koddan PostgreSQL de oluşturabilirsiniz. PostgreSQL çekirdek sistemi bir C dili arabirimi içerir. Birçok üçüncü taraf, .NET uygulamalarından PostgreSQL kullanmaya yönelik NuGet paketleri sağlar. NuGet Paket Yöneticisi 'ndeki tekliflere gözatabilmeniz ( **Araçlar**  >  **NuGet Paket Yöneticisi**  >  **çözüm için NuGet paketlerini yönetme** ). Belki de en popüler paket, [npgsql.org](http://www.npgsql.org)tarafından sağlanır.
 
 ## <a name="sqlite"></a>SQLite
 
-SQLite, uygulamanın kendi sürecinde çalışan gömülü bir SQL veritabanı altyapısıdır. Bunu, [SQLite indirme sayfasından](https://www.sqlite.org/download.html)indirebilirsiniz. SQLite için birçok üçüncü taraf NuGet paketi de mevcuttur. NuGet Paket Yöneticisi 'ndeki tekliflere gözatabilmeniz (**Araçlar**  >  **NuGet Paket Yöneticisi**  >  **çözüm için NuGet paketlerini yönetme**).
+SQLite, uygulamanın kendi sürecinde çalışan gömülü bir SQL veritabanı altyapısıdır. Bunu, [SQLite indirme sayfasından](https://www.sqlite.org/download.html)indirebilirsiniz. SQLite için birçok üçüncü taraf NuGet paketi de mevcuttur. NuGet Paket Yöneticisi 'ndeki tekliflere gözatabilmeniz ( **Araçlar**  >  **NuGet Paket Yöneticisi**  >  **çözüm için NuGet paketlerini yönetme** ).
 
 ## <a name="firebird"></a>Firebird
 

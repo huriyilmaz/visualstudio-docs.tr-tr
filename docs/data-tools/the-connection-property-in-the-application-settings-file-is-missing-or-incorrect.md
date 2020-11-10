@@ -1,6 +1,6 @@
 ---
 title: Bağlantı özelliği eksik
-description: Uygulama Ayarları dosyasındaki bağlantı özelliği eksik veya hatalı
+description: Uygulama ayarları dosyasındaki bağlantı özelliği eksik veya yanlış. Bu Visual Studio O/R Designer iletisi hakkındaki bilgileri görüntüleyin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: error-reference
@@ -10,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 9bd48b23273fe21031c25d7fea3b4208b29870ab
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 18e29171935719283e6658d24dcf5eeae3780bba
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036255"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94434861"
 ---
 # <a name="the-connection-property-in-the-application-settings-file-is-missing-or-incorrect"></a>Uygulama Ayarları dosyasındaki bağlantı özelliği eksik veya hatalı
 
@@ -23,7 +23,7 @@ Uygulama ayarları dosyasındaki bağlantı özelliği eksik veya yanlış. *. D
 
 *. Dbml* dosyası, uygulama ayarları dosyasında bulunamayan bir bağlantı dizesinin başvurusunu içerir. Bu ileti bilgilendirme amaçlıdır; bağlantı dizesi ayarı, **Tamam** tıklandığında oluşturulur.
 
-Bu iletiye yanıt vermek için **Tamam**' ı seçin. *. Dbml* dosyasında yer alan bağlantı bilgileri uygulama ayarlarına eklenir.
+Bu iletiye yanıt vermek için **Tamam** ' ı seçin. *. Dbml* dosyasında yer alan bağlantı bilgileri uygulama ayarlarına eklenir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

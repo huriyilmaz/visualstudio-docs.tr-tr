@@ -1,5 +1,7 @@
 ---
 title: İş Akışı Tasarımcısı-paralel etkinlik Tasarımcısı
+description: Paralel etkinlik ve bir alt etkinlik koleksiyonunu eşzamanlı olarak yürütmek için paralel etkinlik tasarımcısının nasıl kullanılacağı hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3f07dd02f682cd5c61d4d17099c1aeb76bb39bf8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8751c15e40658e7a901550eef3d86050da842cc7
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75593167"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94435605"
 ---
 # <a name="parallel-activity-designer"></a>Parallel Etkinlik Tasarımcısı
 
@@ -25,7 +27,7 @@ ms.locfileid: "75593167"
 
 <xref:System.Activities.Statements.Parallel>Etkinlik, alt etkinliklerini bir <xref:System.Activities.Statements.Parallel.Branches%2A> koleksiyonda depolar. <xref:System.Activities.Statements.Parallel> <xref:System.Activities.Statements.Sequence> Alt etkinliklerin bazıları boşta kalabileceğini etkinlik yerine etkinliğini kullanın.
 
-<xref:System.Activities.Statements.Parallel>Etkinlik, Kullanıcı tarafından <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> belirtilen Visual Basic ifadesi içeren bir özelliğe sahiptir. <xref:System.Activities.Statements.Parallel>Etkinlik her bir dal tamamlandıktan sonra bu özelliği değerlendirir. **True**olarak değerlendirilirse, <xref:System.Activities.Statements.Parallel> etkinlik diğer dalları yürütmeden tamamlanır. <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> **Doğru**olarak değerlendirilmiyorsa, <xref:System.Activities.Statements.Parallel> tüm alt etkinlikleri tamamlandığında etkinlik tamamlanır.
+<xref:System.Activities.Statements.Parallel>Etkinlik, Kullanıcı tarafından <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> belirtilen Visual Basic ifadesi içeren bir özelliğe sahiptir. <xref:System.Activities.Statements.Parallel>Etkinlik her bir dal tamamlandıktan sonra bu özelliği değerlendirir. **True** olarak değerlendirilirse, <xref:System.Activities.Statements.Parallel> etkinlik diğer dalları yürütmeden tamamlanır. <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> **Doğru** olarak değerlendirilmiyorsa, <xref:System.Activities.Statements.Parallel> tüm alt etkinlikleri tamamlandığında etkinlik tamamlanır.
 
 ### <a name="using-the-parallel-activity-designer"></a>Paralel etkinlik tasarımcısını kullanma
 
@@ -43,7 +45,7 @@ Aşağıdaki tabloda, paralel etkinlik özellikleri gösterilmektedir ve bunlar�
 |-|--------------|-|
 |<xref:System.Activities.Activity.DisplayName%2A>|Yanlış|Üst bilgide etkinlik tasarımcısının kolay görünen adını belirtir. Varsayılan değer **paraleldir**. Değer, isteğe bağlı olarak **Özellikler** kılavuzunda veya doğrudan etkinlik Tasarımcısı üstbilgisinde düzenlenebilir.|
 |<xref:System.Activities.Statements.Parallel.Branches%2A>|Doğru|Yürütülecek alt etkinliklerin koleksiyonunu içerir.|
-|<xref:System.Activities.Statements.Parallel.CompletionCondition%2A>|Yanlış|Bir dal tamamlandıktan sonra değerlendirilir. **True**olarak değerlendirilirse, zamanlanan bekleyen dallar iptal edilir. Bu özellik ayarlanmamışsa veya **false**olarak değerlendirilirse, tüm alt etkinlikleri tamamlandığında etkinlik tamamlanır. Varsayılan değer **null**.|
+|<xref:System.Activities.Statements.Parallel.CompletionCondition%2A>|Yanlış|Bir dal tamamlandıktan sonra değerlendirilir. **True** olarak değerlendirilirse, zamanlanan bekleyen dallar iptal edilir. Bu özellik ayarlanmamışsa veya **false** olarak değerlendirilirse, tüm alt etkinlikleri tamamlandığında etkinlik tamamlanır. Varsayılan değer **null**.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

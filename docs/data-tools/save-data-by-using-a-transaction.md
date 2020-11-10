@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: işlem kullanarak verileri kaydetme'
+description: Visual Studio 'da veri kümesi araçlarıyla bir işlem kullanarak nasıl veri kaydedileceğini inceleyin. System. Transactions ad alanını kullanarak bir işleme veri kaydedersiniz.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 40894adefb42d6de077a2e2812d26f90bc5f40dd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c1cd112a1960078c72c575542525a5ecf6571b06
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85281701"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94434596"
 ---
 # <a name="how-to-save-data-by-using-a-transaction"></a>Nasıl yapılır: işlem kullanarak verileri kaydetme
 
@@ -37,9 +39,9 @@ Bir işlemi uygulamanın en kolay yolu, <xref:System.Transactions.TransactionSco
 
 ## <a name="to-add-a-reference-to-the-systemtransactionsdll"></a>System.Transactions.dll bir başvuru eklemek için
 
-1. **Proje** menüsünde, **Başvuru Ekle**' yi seçin.
+1. **Proje** menüsünde, **Başvuru Ekle** ' yi seçin.
 
-2. **.Net** sekmesinde (SQL Server projeler için**SQL Server** sekmesinde), **System. Transactions**' ı seçin ve ardından **Tamam**' ı seçin.
+2. **.Net** sekmesinde (SQL Server projeler için **SQL Server** sekmesinde), **System. Transactions** ' ı seçin ve ardından **Tamam** ' ı seçin.
 
      Projeye *System.Transactions.dll* bir başvuru eklenir.
 

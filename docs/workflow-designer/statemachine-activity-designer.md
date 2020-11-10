@@ -1,5 +1,7 @@
 ---
 title: İş Akışı Tasarımcısı-StateMachine etkinlik Tasarımcısı
+description: StateMachine etkinliğinin bilinen durum makine paradigmasını kullanarak bir durum koleksiyonu ve modeller iş akışlarını nasıl içerdiğini öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,12 +13,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: TerryGLee
-ms.openlocfilehash: e7a270780a953a6104adc7089a02ff6529106fdf
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dacb6dfa5c30ce174c64accfedf82f1c288c734d
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75593141"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94433953"
 ---
 # <a name="statemachine-activity-designer"></a>StateMachine Etkinlik Tasarımcısı
 
@@ -24,7 +26,7 @@ ms.locfileid: "75593141"
 
 ## <a name="using-the-statemachine-activity-designer"></a>StateMachine etkinlik tasarımcısını kullanma
 
-Etkinlik eklemek için <xref:System.Activities.Statements.StateMachine> , **araç kutusunun** **durum makinesi** bölümünde **StateMachine** etkinlik tasarımcısını sürükleyin ve iş akışı Tasarımcısı yüzeyine bırakın. Bu etkinliğe bir alt durum eklemek için <xref:System.Activities.Statements.StateMachine> , <xref:System.Activities.Statements.State> <xref:System.Activities.Core.Presentation.FinalState> **araç kutusundan** bir veya sürükleyip **StateMachine**üzerine bırakın.
+Etkinlik eklemek için <xref:System.Activities.Statements.StateMachine> , **araç kutusunun** **durum makinesi** bölümünde **StateMachine** etkinlik tasarımcısını sürükleyin ve iş akışı Tasarımcısı yüzeyine bırakın. Bu etkinliğe bir alt durum eklemek için <xref:System.Activities.Statements.StateMachine> , <xref:System.Activities.Statements.State> <xref:System.Activities.Core.Presentation.FinalState> **araç kutusundan** bir veya sürükleyip **StateMachine** üzerine bırakın.
 
 ### <a name="statemachine-activity-properties-in-the-workflow-designer"></a>İş Akışı Tasarımcısı StateMachine etkinlik özellikleri
 
@@ -32,7 +34,7 @@ Aşağıdaki tabloda, <xref:System.Activities.Statements.StateMachine> iş akı�
 
 |Özellik Adı|Gerekli|Kullanım|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|Yanlış|Başlıktaki etkinlik tasarımcısının kolay adını belirtir <xref:System.Activities.Statements.StateMachine> . Varsayılan değer **StateMachine**' dir. Değer, özellik kılavuzunda veya doğrudan etkinlik tasarımcısının üst bilgisinde düzenlenebilir. , <xref:System.Activities.Activity.DisplayName%2A> İş akışı tasarımcısının üst kısmında görüntülenen içerik haritası gezintisinde kullanılır.<br /><br /> <xref:System.Activities.Activity.DisplayName%2A>Kesinlikle gerekli olmasa da, bir tane kullanmak en iyi uygulamadır.|
+|<xref:System.Activities.Activity.DisplayName%2A>|Yanlış|Başlıktaki etkinlik tasarımcısının kolay adını belirtir <xref:System.Activities.Statements.StateMachine> . Varsayılan değer **StateMachine** ' dir. Değer, özellik kılavuzunda veya doğrudan etkinlik tasarımcısının üst bilgisinde düzenlenebilir. , <xref:System.Activities.Activity.DisplayName%2A> İş akışı tasarımcısının üst kısmında görüntülenen içerik haritası gezintisinde kullanılır.<br /><br /> <xref:System.Activities.Activity.DisplayName%2A>Kesinlikle gerekli olmasa da, bir tane kullanmak en iyi uygulamadır.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

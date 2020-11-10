@@ -1,5 +1,7 @@
 ---
 title: İş Akışı Tasarımcısı-PickBranch etkinlik Tasarımcısı
+description: PickBranch etkinlik Tasarımcısı 'nın, gelen bir olay tarafından tetiklenebilecek bir çekme etkinliği içinde, olay tabanlı bir yürütme yolu sağladığını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 34da9091c0f96b7270678f9b36fe861e4a87418f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bce1cee7fad7ccff57a6911c99a9470a22b9a927
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86876092"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94434239"
 ---
 # <a name="pickbranch-activity-designer"></a>PickBranch Etkinlik Tasarımcısı
 
@@ -44,7 +46,7 @@ Nesne koleksiyonuna nesne eklemenin iki yolu vardır <xref:System.Activities.Sta
 Şunları silmenin iki yolu vardır <xref:System.Activities.Statements.PickBranch> :
 
 - **PickBranch** tasarımcısını seçin ve silin.
-- **PickBranch** tasarımcısını seçin, bağlam menüsünü almak için sağ tıklayın ve **Sil**' i seçin.
+- **PickBranch** tasarımcısını seçin, bağlam menüsünü almak için sağ tıklayın ve **Sil** ' i seçin.
 
 , **Tetikleyicisinin** veya **eylem** kutularının içindeki etkinliklerden birini, yanlışlıkla bu etkinliklerden birini siler ve nesne değil, seçim **dalı** tasarımcısını seçmeye dikkat edin <xref:System.Activities.Statements.PickBranch> .
 

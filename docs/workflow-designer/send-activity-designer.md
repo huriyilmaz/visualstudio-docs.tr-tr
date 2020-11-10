@@ -1,5 +1,7 @@
 ---
 title: İş Akışı Tasarımcısı-etkinlik tasarımcısını gönder
+description: Gönderme etkinliği ve gönderme etkinliği oluşturmak ve yapılandırmak için gönderme etkinliği tasarımcısını nasıl kullanabileceğiniz hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dd1eff0a52dfb258d7f7af49b03543fd741bc88c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d78925411f911f9c0dfc0c2cfff891deca0e91e3
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86875962"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94434057"
 ---
 # <a name="send-activity-designer"></a>Send Etkinlik Tasarımcısı
 
@@ -50,9 +52,9 @@ Aşağıdaki tabloda <xref:System.ServiceModel.Activities.Send> Özellikler gös
 | <xref:System.ServiceModel.Activities.Send.SerializerOption%2A> | Doğru | Etkinlik tarafından çağrılacak hizmet işlemi için kullanılacak seri hale getirici <xref:System.ServiceModel.Activities.Send> . Varsayılan değer, bir <xref:System.Runtime.Serialization.DataContractSerializer> tür örneğini seri hale getirilen ve BIR XML akışına veya belgeye sağlanan bir veri sözleşmesini kullanarak seri hale getirir. |
 | <xref:System.ServiceModel.Activities.Send.Action%2A> | Yanlış | İletinin eylem üst bilgisini belirtir. Açıkça ayarlanmamışsa, değeri varsayılan olarak şu şekilde olur: `https://tempuri.org/{service contract namespace}/{service contract name}/{operation name}` . Bir <xref:System.ServiceModel.Activities.Send> etkinlikte belirtilmişse <xref:System.ServiceModel.Activities.Receive> iletiyi alan etkinliğin, ileti doğru şekilde teslim edilebilmesi için aynı değere sahip olması gerekir. |
 | <xref:System.ServiceModel.Activities.Send.TokenImpersonationLevel%2A> | | <xref:System.Security.Principal.TokenImpersonationLevel>İleti alıcısı için izin verildi. Bir sunucu işleminin bir istemci işlemi adına işlem yapması için gereken dereceyi belirleyen güvenlik kimliğe bürünme düzeylerini tanımlar.<xref:System.Security.Principal.TokenImpersonationLevel> kimliğe bürünme düzeyi atanmamış olduğunu gösterir. <xref:System.Security.Principal.TokenImpersonationLevel> Sunucu işleminin istemciyle ilgili kimlik bilgilerini alamadığını ve istemcinin kimliğine bürünemediğini belirtir. <xref:System.Security.Principal.TokenImpersonationLevel> Sunucu işleminin istemci hakkında güvenlik tanımlayıcıları ve ayrıcalıklar gibi bilgiler edinebileceğini ancak istemcinin kimliğine bürünemediğini belirtir. Bu, kendi nesnelerini dışarı veren sunucular (örneğin, tabloları ve görünümleri dışa aktarma veritabanı ürünleri) için kullanışlıdır. Alınan istemci güvenlik bilgilerini kullanarak, sunucu, istemcinin güvenlik bağlamını kullanan diğer hizmetleri kullanabilmeniz için erişim doğrulama kararları verebilir. <xref:System.Security.Principal.TokenImpersonationLevel> Sunucu işleminin, yerel sisteminde istemcinin güvenlik bağlamını taklit edebilir olduğunu gösterir. Sunucu, uzak sistemlerde istemcinin kimliğine bürünemedi. <xref:System.Security.Principal.TokenImpersonationLevel> Sunucu işleminin uzak sistemlerde istemcinin güvenlik bağlamını taklit edebilir olduğunu gösterir. |
-| <xref:System.ServiceModel.Activities.Send.Endpoint%2A> | | <xref:System.ServiceModel.Endpoint> <xref:System.ServiceModel.Activities.Send> Etkinliğin iletiyi gönderdiği yer. Bu özellik ayarlandıysa, <xref:System.ServiceModel.Activities.Send.EndpointConfigurationName%2A> özelliği **null**olmalıdır. |
+| <xref:System.ServiceModel.Activities.Send.Endpoint%2A> | | <xref:System.ServiceModel.Endpoint> <xref:System.ServiceModel.Activities.Send> Etkinliğin iletiyi gönderdiği yer. Bu özellik ayarlandıysa, <xref:System.ServiceModel.Activities.Send.EndpointConfigurationName%2A> özelliği **null** olmalıdır. |
 | <xref:System.ServiceModel.Activities.Send.EndpointAddress%2A> | | <xref:System.ServiceModel.EndpointAddress>İletinin gönderildiği yer. |
-| <xref:System.ServiceModel.Activities.Send.EndpointConfigurationName%2A> | | Uç nokta yapılandırmasının adı. Bu özellik, bir yapılandırma dosyasında bir uç nokta yapılandırırken ayarlanır. Bu özellik **\<endpoint>** yapılandırma dosyanızdaki öğesinde verilen ada ayarlanmalıdır. Bu özellik ayarlandıysa, <xref:System.ServiceModel.Activities.Send.Endpoint%2A> özelliği **null**olmalıdır. |
+| <xref:System.ServiceModel.Activities.Send.EndpointConfigurationName%2A> | | Uç nokta yapılandırmasının adı. Bu özellik, bir yapılandırma dosyasında bir uç nokta yapılandırırken ayarlanır. Bu özellik **\<endpoint>** yapılandırma dosyanızdaki öğesinde verilen ada ayarlanmalıdır. Bu özellik ayarlandıysa, <xref:System.ServiceModel.Activities.Send.Endpoint%2A> özelliği **null** olmalıdır. |
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

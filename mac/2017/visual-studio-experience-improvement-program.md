@@ -5,12 +5,12 @@ author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 05/22/2018
 ms.assetid: 6F2ECF5A-E195-4890-8399-12A88C7D62FD
-ms.openlocfilehash: 5e8fa7f740275f416f80827276d74be1f05b0e21
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6668e0b61c541ffc0327120cb6e699ada6f1b690
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74984741"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94434382"
 ---
 # <a name="visual-studio-customer-experience-improvement-program"></a>Visual Studio Müşteri Deneyimini Geliştirme Programı
 
@@ -24,7 +24,7 @@ VSCEıP varsayılan olarak açıktır. Aşağıdaki yönergeleri izleyerek devre
 
 1. Mac için Visual Studio açın.
 
-1. Menü çubuğundan **Visual Studio > tercihleri ' ni > diğer > geri bildirimleri**' ni seçin.
+1. Menü çubuğundan **Visual Studio > tercihleri ' ni > diğer > geri bildirimleri** ' ni seçin.
 
 1. Katılım için tercihinizi seçin:
 
@@ -37,5 +37,5 @@ VSCEıP varsayılan olarak açıktır. Aşağıdaki yönergeleri izleyerek devre
 * [Müşteri Deneyimini Geliştirme Programı (Windows üzerinde Visual Studio)](/visualstudio/ide/visual-studio-experience-improvement-program)
 * [Visual Studio tarafından toplanan sistem tarafından oluşturulan Günlükler (Windows üzerinde)](/visualstudio/ide/diagnostic-data-collection)
 * [Mac için Visual Studio sorun bildirme](report-a-problem.md)
-* [Mac için Visual Studio Geliştirici topluluğu](https://developercommunity.visualstudio.com/spaces/41/index.html)
+* [Mac için Visual Studio Geliştirici topluluğu](https://aka.ms/feedback/vsm-home)
 * [Microsoft Gizlilik Bildirimi](https://privacy.microsoft.com/privacystatement)

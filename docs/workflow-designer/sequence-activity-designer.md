@@ -1,5 +1,7 @@
 ---
 title: İş Akışı Tasarımcısı dizisi etkinlik Tasarımcısı
+description: Sıra etkinliğinin sırayla yürüttüğünde bir sıralı alt etkinlik koleksiyonunu nasıl içerdiğini öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 77980077a580724f6db6bb5a544200890421d8e5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b9e7e6e9114405bc1575e0256dd63211a4fb6d08
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86875975"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94433979"
 ---
 # <a name="sequence-activity-designer"></a>Sequence Etkinlik Tasarımcısı
 

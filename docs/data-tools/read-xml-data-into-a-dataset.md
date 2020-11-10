@@ -1,5 +1,7 @@
 ---
 title: Bir veri kümesinin içine XML verileri okuma
+description: XML verilerini bir veri kümesine okuyun. Bu kılavuzda, XML verilerini bir veri kümesine yükleyen bir Windows uygulaması oluşturacaksınız.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -20,12 +22,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 6cceca336403bdd8907cf0e28e36387eb25a2402
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d5e0c287565c001870f91f4912afad28864fe2ef
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85281792"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94434655"
 ---
 # <a name="read-xml-data-into-a-dataset"></a>Bir veri kümesinin içine XML verileri okuma
 
@@ -33,15 +35,15 @@ ADO.NET XML verileriyle çalışmak için basit yöntemler sağlar. Bu kılavuzd
 
 ## <a name="create-a-new-project"></a>Yeni bir proje oluşturma
 
-C# veya Visual Basic için yeni bir **Windows Forms uygulama** projesi oluşturun. Projeyi **ReadingXML**olarak adlandırın.
+C# veya Visual Basic için yeni bir **Windows Forms uygulama** projesi oluşturun. Projeyi **ReadingXML** olarak adlandırın.
 
 ## <a name="generate-the-xml-file-to-be-read-into-the-dataset"></a>Veri kümesine okunacak XML dosyasını oluştur
 
 Bu izlenecek yol, XML verilerinin bir veri kümesine okunmasına odaklandığı için, bir XML dosyasının içeriği sağlanır.
 
-1. **Proje** menüsünde **Yeni öğe Ekle**' yi seçin.
+1. **Proje** menüsünde **Yeni öğe Ekle** ' yi seçin.
 
-2. **XML dosyası**' nı seçin, **authors.xml**dosyayı adlandırın ve ardından **Ekle**' yi seçin.
+2. **XML dosyası** ' nı seçin, **authors.xml** dosyayı adlandırın ve ardından **Ekle** ' yi seçin.
 
    XML dosyası tasarımcıya yüklenir ve düzenleme için hazırlayın.
 
@@ -107,7 +109,7 @@ Bu izlenecek yol, XML verilerinin bir veri kümesine okunmasına odaklandığı 
    </Authors_Table>
    ```
 
-4. **Dosya** menüsünde **authors.xmlkaydet **' i seçin.
+4. **Dosya** menüsünde **authors.xmlkaydet** ' i seçin.
 
 ## <a name="create-the-user-interface"></a>Kullanıcı arabirimini oluşturma
 
@@ -127,7 +129,7 @@ Bu uygulama için Kullanıcı arabirimi aşağıdakilerden oluşur:
 
 1. `Form1`Tasarım görünümünde açın.
 
-2. **Araç kutusundan**aşağıdaki denetimleri form üzerine sürükleyin:
+2. **Araç kutusundan** aşağıdaki denetimleri form üzerine sürükleyin:
 
     - Tek <xref:System.Windows.Forms.DataGridView> Denetim
 
@@ -150,11 +152,11 @@ Bu uygulama için Kullanıcı arabirimi aşağıdakilerden oluşur:
 
 Bu adımda adlı yeni bir veri kümesi oluşturursunuz `authors` . Veri kümeleri hakkında daha fazla bilgi için bkz. [Visual Studio 'Da veri kümesi araçları](../data-tools/dataset-tools-in-visual-studio.md).
 
-1. **Çözüm Gezgini**, **Form1**için kaynak dosyasını seçin ve sonra **Çözüm Gezgini** araç çubuğunda **Tasarımcı görüntüle** düğmesini seçin.
+1. **Çözüm Gezgini** , **Form1** için kaynak dosyasını seçin ve sonra **Çözüm Gezgini** araç çubuğunda **Tasarımcı görüntüle** düğmesini seçin.
 
-2. [Araç kutusu, veri sekmesinde](../ide/reference/toolbox-data-tab.md)bir **veri kümesini** **Form1**üzerine sürükleyin.
+2. [Araç kutusu, veri sekmesinde](../ide/reference/toolbox-data-tab.md)bir **veri kümesini** **Form1** üzerine sürükleyin.
 
-3. **Veri kümesi Ekle** Iletişim kutusunda **türsüz veri kümesi**' ni seçin ve ardından **Tamam**' ı seçin.
+3. **Veri kümesi Ekle** Iletişim kutusunda **türsüz veri kümesi** ' ni seçin ve ardından **Tamam** ' ı seçin.
 
      **DataSet1** , bileşen tepsisine eklenir.
 
@@ -164,7 +166,7 @@ Bu adımda adlı yeni bir veri kümesi oluşturursunuz `authors` . Veri kümeler
 
 **XML oku** düğmesi XML dosyasını veri kümesine okur. Daha sonra bu <xref:System.Windows.Forms.DataGridView> Denetim, veri kümesine bağlayan denetimdeki özellikleri ayarlar.
 
-1. **Çözüm Gezgini**, **Form1**' i seçin ve sonra **Çözüm Gezgini** araç çubuğunda **Tasarımcı görüntüle** düğmesini seçin.
+1. **Çözüm Gezgini** , **Form1** ' i seçin ve sonra **Çözüm Gezgini** araç çubuğunda **Tasarımcı görüntüle** düğmesini seçin.
 
 2. **XML oku** düğmesini seçin.
 
@@ -181,7 +183,7 @@ Bu adımda adlı yeni bir veri kümesi oluşturursunuz `authors` . Veri kümeler
 
 **Şemayı göster** düğmesi, <xref:System.IO.StringWriter> şemayla doldurulmuş ve denetimde görüntülenen bir nesne oluşturur <xref:System.Windows.Forms.TextBox> .
 
-1. **Çözüm Gezgini**, **Form1**' i seçin ve sonra **Tasarımcı görüntüle** düğmesini seçin.
+1. **Çözüm Gezgini** , **Form1** ' i seçin ve sonra **Tasarımcı görüntüle** düğmesini seçin.
 
 2. **Şemayı göster** düğmesini seçin.
 
@@ -217,4 +219,4 @@ Bu izlenecek yol, bir XML dosyasını bir veri kümesine okumayla ilgili temel b
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Studio'da verilere erişime](../data-tools/accessing-data-in-visual-studio.md)
-- [Visual Studio 'da XML araçları](../xml-tools/xml-tools-in-visual-studio.md)
+- [Visual Studio'daki XML araçları](../xml-tools/xml-tools-in-visual-studio.md)

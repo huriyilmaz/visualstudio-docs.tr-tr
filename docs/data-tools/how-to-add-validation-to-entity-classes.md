@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: Varlık sınıflarına doğrulama ekleme'
+description: Varlık sınıflarına doğrulamanın nasıl ekleneceğini inceleyin. Belirli bir sütundaki bir değere yapılan değişiklikler için doğrulama ekleyin. Bir varlık sınıfına güncelleştirmeler için doğrulama ekleyin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -11,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 5d408c67b2e54fecd6404bac93d93ecfb35de162
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4f367cf799dd00b8b442870554e499e5405865cb
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85282351"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94435116"
 ---
 # <a name="how-to-add-validation-to-entity-classes"></a>Nasıl yapılır: Varlık sınıflarına doğrulama ekleme
 Varlık sınıflarını *doğrulamak* , veri nesnelerine girilen değerlerin bir nesnenin şemasındaki kısıtlamalara ve ayrıca uygulama için belirlenen kurallara uygun olduğunu onaylama işlemidir. Temel alınan veritabanına güncelleştirmeleri göndermeden önce verilerin doğrulanması, hataları azaltan iyi bir uygulamadır. Ayrıca, bir uygulama ve veritabanı arasındaki gidiş dönüşlerin olası sayısını azaltır.
@@ -24,7 +26,7 @@ Varlık sınıflarını *doğrulamak* , veri nesnelerine girilen değerlerin bir
 [Visual Studio 'daki LINQ to SQL araçları](../data-tools/linq-to-sql-tools-in-visual-studio2.md) , kullanıcıların, tüm varlıkların ekleme, güncelleştirme ve silme sırasında çalışan tasarımcı tarafından oluşturulan kodu genişletmelerine imkan tanıyan kısmi yöntemler sağlar ve ayrıca tek tek sütun değişiklikleri sırasında ve sonrasında.
 
 > [!NOTE]
-> Bu konuda, **O/R Tasarımcısı**kullanılarak varlık sınıflarına doğrulama eklemek için temel adımlar sağlanmaktadır. Belirli bir varlık sınıfına başvurulmadan bu genel adımların izlenmesi zor olabileceğinden, gerçek verileri kullanan bir anlatım sağlanır.
+> Bu konuda, **O/R Tasarımcısı** kullanılarak varlık sınıflarına doğrulama eklemek için temel adımlar sağlanmaktadır. Belirli bir varlık sınıfına başvurulmadan bu genel adımların izlenmesi zor olabileceğinden, gerçek verileri kullanan bir anlatım sağlanır.
 
 ## <a name="add-validation-for-changes-to-the-value-in-a-specific-column"></a>Belirli bir sütundaki değere yapılan değişiklikler için doğrulama ekleme
 Bu yordam, bir sütundaki değer değiştiğinde verilerin nasıl doğrulandığını gösterir. Doğrulama, sınıf tanımı içinde (Kullanıcı arabirimi yerine) gerçekleştirildiğinden, değer doğrulamanın başarısız olmasına neden olursa bir özel durum oluşturulur. Uygulamanızda sütun değerlerini değiştirmeye çalışır olan kod için hata işlemeyi uygulayın.
@@ -33,9 +35,9 @@ Bu yordam, bir sütundaki değer değiştiğinde verilerin nasıl doğrulandığ
 
 ### <a name="to-validate-data-during-a-columns-value-change"></a>Bir sütunun değer değişikliği sırasında verileri doğrulamak için
 
-1. **O/R tasarımcısında**yeni bir LINQ to SQL Classes dosyası (**. dbml** dosyası) açın veya oluşturun. ( **Çözüm Gezgini** **. dbml** dosyasına çift tıklayın.)
+1. **O/R tasarımcısında** yeni bir LINQ to SQL Classes dosyası ( **. dbml** dosyası) açın veya oluşturun. ( **Çözüm Gezgini** **. dbml** dosyasına çift tıklayın.)
 
-2. **O/R tasarımcısında**, doğrulama eklemek istediğiniz sınıfa sağ tıklayın ve sonra **kodu görüntüle**' ye tıklayın.
+2. **O/R tasarımcısında** , doğrulama eklemek istediğiniz sınıfa sağ tıklayın ve sonra **kodu görüntüle** ' ye tıklayın.
 
      Kod Düzenleyicisi seçili varlık sınıfı için kısmi bir sınıf ile açılır.
 
@@ -79,9 +81,9 @@ Değişiklikler sırasında değerleri denetlemenin yanı sıra, bir bütün var
 
 ### <a name="to-validate-data-during-an-update-to-an-entity-class"></a>Bir varlık sınıfına yönelik bir güncelleştirme sırasında verileri doğrulamak için
 
-1. **O/R tasarımcısında**yeni bir LINQ to SQL Classes dosyası (**. dbml** dosyası) açın veya oluşturun. ( **Çözüm Gezgini** **. dbml** dosyasına çift tıklayın.)
+1. **O/R tasarımcısında** yeni bir LINQ to SQL Classes dosyası ( **. dbml** dosyası) açın veya oluşturun. ( **Çözüm Gezgini** **. dbml** dosyasına çift tıklayın.)
 
-2. **O/R tasarımcısında** boş bir alana sağ tıklayın ve **kodu görüntüle**' ye tıklayın.
+2. **O/R tasarımcısında** boş bir alana sağ tıklayın ve **kodu görüntüle** ' ye tıklayın.
 
      Kod Düzenleyicisi, için kısmi bir sınıf ile açılır `DataContext` .
 
@@ -91,7 +93,7 @@ Değişiklikler sırasında değerleri denetlemenin yanı sıra, bir bütün var
 
     1. **Yöntem adı** listesini genişletin.
 
-    2. **Updateentityclassname**öğesine tıklayın.
+    2. **Updateentityclassname** öğesine tıklayın.
 
     3. `UpdateENTITYCLASSNAME`Kısmi sınıfa bir yöntem eklenir.
 

@@ -1,5 +1,7 @@
 ---
 title: İş Akışı Tasarımcısı-While etkinlik Tasarımcısı
+description: Belirtilen koşul doğru olarak değerlendirirken while etkinliğinin gövdesinde içerilen etkinliği nasıl yürüttüğünü öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 77954925533c51885a056f7156121e68851ad769
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2e78d4f2e6aa332c9dfd5faebf834e4f5015c454
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76115174"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94433706"
 ---
 # <a name="while-activity-designer"></a>While Etkinlik Tasarımcısı
 
@@ -28,7 +30,7 @@ Aşağıdaki tabloda en yararlı <xref:System.Activities.Statements.While> etkin
 |Özellik Adı|Gerekli|Kullanım|
 |-|--------------|-|
 |<xref:System.Activities.Activity.DisplayName%2A>|Yanlış|Başlıktaki etkinlik tasarımcısının kolay adını belirtir <xref:System.Activities.Statements.While> . Varsayılan değer while değeridir. Değer, **Özellikler** penceresinde veya doğrudan etkinlik Tasarımcısı üst bilgisinde düzenlenebilir.<br /><br /> <xref:System.Activities.Activity.DisplayName%2A>Kesinlikle gerekli olmasa da, bir tane kullanmak en iyi uygulamadır.|
-|<xref:System.Activities.Statements.While.Body%2A>|Yanlış|<xref:System.Activities.Statements.While.Condition%2A> **Doğru**olarak değerlendirilirken yürütülecek etkinliği içerir.|
+|<xref:System.Activities.Statements.While.Body%2A>|Yanlış|<xref:System.Activities.Statements.While.Condition%2A> **Doğru** olarak değerlendirilirken yürütülecek etkinliği içerir.|
 |<xref:System.Activities.Statements.While.Condition%2A>|Doğru|İçindeki etkinliğin yürütülüp yürütülmeyeceğini belirlemekte değerlendirilen Visual Basic ifadesini içerir <xref:System.Activities.Statements.While.Body%2A> .|
 
 ## <a name="see-also"></a>Ayrıca bkz.

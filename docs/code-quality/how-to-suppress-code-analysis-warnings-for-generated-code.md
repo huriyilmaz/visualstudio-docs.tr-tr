@@ -1,6 +1,8 @@
 ---
 title: Üretilen kod için kod analizi ihlallerini gösterme
 ms.date: 05/13/2019
+description: Üretilen kod için kod analizi uyarılarını nasıl bastıralabileceğinizi öğrenin. Bkz. Visual Studio 'Nun oluşturulan kod hakkında eski analiz uyarılarını görüntülemesini engelleme.
+ms.custom: SEO-VS-2020
 ms.topic: how-to
 ms.assetid: 3a96434e-d419-43a7-81ba-95cccac835b8
 author: mikejo5000
@@ -8,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 175df8bb4dded4f66508ef405e031178606fd531
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e462281686236f809fbd88588df5ad8fd832dbde
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85371813"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94435553"
 ---
 # <a name="how-to-suppress-code-analysis-warnings-for-generated-code"></a>Nasıl yapılır: üretilen kod için kod analizi uyarılarını gösterme
 
@@ -26,7 +28,7 @@ Bir projenin kod analizi özelliği sayfasında, **üretilen koddan sonuçları 
 
 ### <a name="to-suppress-warnings-for-generated-code-in-a-project"></a>Bir projede oluşturulan koda yönelik uyarıları gizlemek için
 
-1. **Çözüm Gezgini** ' de projeye sağ tıklayın ve ardından **Özellikler**' e tıklayın.
+1. **Çözüm Gezgini** ' de projeye sağ tıklayın ve ardından **Özellikler** ' e tıklayın.
 
 2. **Kod Analizi** sekmesini seçin.
 

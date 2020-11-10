@@ -1,6 +1,8 @@
 ---
 title: Kod Analizi iade etme ilkesi kullanma
 ms.date: 11/04/2016
+description: Kodun devralma, sınıf bağlantısı, bakım ve karmaşıklık standartlarıyla uyumlu olduğunu doğrulamak için bir kod analizi iade ilkesi kullanmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.topic: how-to
 helpviewer_keywords:
 - code analysis, check-in policies
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 883b5e231036c446c1cbf1fbc2fc125a01b3de62
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6fa97f52f67e08b2ccf0843e5b5400680ed1c020
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85371865"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94434824"
 ---
 # <a name="how-to-enforce-maintainable-code-with-a-code-analysis-check-in-policy"></a>Nasıl yapılır: bir kod çözümleme iade ilkesiyle sürdürülebilir kodu zorlama
 
@@ -27,21 +29,21 @@ Team Foundation için sürüm denetimi yöneticileri, iade ilkesi gereksinimleri
 
 ## <a name="to-open-the-code-analysis-policy-editor"></a>Kod Analizi Ilke düzenleyicisini açmak için
 
-1. **Takım Gezgini**, projeye sağ tıklayın, **proje ayarları**' na tıklayın ve ardından **kaynak denetimi**' ne tıklayın.
+1. **Takım Gezgini** , projeye sağ tıklayın, **proje ayarları** ' na tıklayın ve ardından **kaynak denetimi** ' ne tıklayın.
 
      **Kaynak denetimi** iletişim kutusu görüntülenir.
 
-2. **Iade ilkesi** sekmesinde, **Ekle**' ye tıklayın.
+2. **Iade ilkesi** sekmesinde, **Ekle** ' ye tıklayın.
 
      **Iade Ilkesi Ekle** iletişim kutusu görünür.
 
-3. **Iade ilkesi** listesinde, **Kod Analizi** onay kutusunu seçin ve ardından **Tamam**' a tıklayın.
+3. **Iade ilkesi** listesinde, **Kod Analizi** onay kutusunu seçin ve ardından **Tamam** ' a tıklayın.
 
      **Kod Analizi Ilke Düzenleyicisi** iletişim kutusu görüntülenir.
 
 ## <a name="to-enable-code-analysis-maintainability-rules"></a>Kod Analizi bakım kurallarını etkinleştirmek için
 
-1. **Kod Analizi Ilke Düzenleyicisi** iletişim kutusunda, **Kural ayarları**' nın altında, bakım **kuralları** düğümünü genişletin.
+1. **Kod Analizi Ilke Düzenleyicisi** iletişim kutusunda, **Kural ayarları** ' nın altında, bakım **kuralları** düğümünü genişletin.
 
 2. Aşağıdaki kuralların onay kutularını seçin:
 
@@ -55,7 +57,7 @@ Team Foundation için sürüm denetimi yöneticileri, iade ilkesi gereksinimleri
 
      Ayrıca, başarılı bir derlemeyi engellemek için bir kural ihlalini isterseniz, kural açıklamasının yanındaki **uyarıyı hata olarak işle** onay kutusunu seçin.
 
-3. **Tamam**’a tıklayın. Yeni iade ilkesi artık gelecek iadeler için geçerlidir.
+3. **Tamam** düğmesine tıklayın. Yeni iade ilkesi artık gelecek iadeler için geçerlidir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

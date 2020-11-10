@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: Bir Hizmetteki Verilere Bağlanma'
+description: Veri kaynağı Yapılandırma Sihirbazı 'nı çalıştırarak ve veri kaynağı türü seç sayfasında hizmet ' i seçerek uygulamanızı bir hizmetten döndürülen verilere bağlayın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 0b49840a2190abfd223edf5643b8d70da1a59d6b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3c565f7238edf9126dd651fa567de82aed7b8d21
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85282234"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94435019"
 ---
 # <a name="how-to-connect-to-data-in-a-service"></a>Nasıl yapılır: bir hizmette verilere bağlanma
 
@@ -36,11 +38,11 @@ Sihirbazı tamamladıktan sonra projenize bir hizmet başvurusu eklenir ve [veri
 
 ## <a name="to-connect-your-application-to-a-service"></a>Uygulamanızı bir hizmete bağlamak için
 
-1. **Veri** menüsünde **Yeni veri kaynağı Ekle**' ye tıklayın.
+1. **Veri** menüsünde **Yeni veri kaynağı Ekle** ' ye tıklayın.
 
-2. **Veri kaynağı türü seçin** sayfasında **hizmet** ' i seçin ve ardından **İleri**' ye tıklayın.
+2. **Veri kaynağı türü seçin** sayfasında **hizmet** ' i seçin ve ardından **İleri** ' ye tıklayın.
 
-3. Kullanmak istediğiniz hizmetin adresini girin veya geçerli çözümde hizmetleri bulmak için **bul** ' a tıklayın ve ardından **Git**' e tıklayın.
+3. Kullanmak istediğiniz hizmetin adresini girin veya geçerli çözümde hizmetleri bulmak için **bul** ' a tıklayın ve ardından **Git** ' e tıklayın.
 
 4. İsteğe bağlı olarak, varsayılan değer yerine yeni bir **ad alanı** yazabilirsiniz.
 
@@ -49,7 +51,7 @@ Sihirbazı tamamladıktan sonra projenize bir hizmet başvurusu eklenir ve [veri
 
 5. Projenize bir hizmet başvurusu eklemek için **Tamam** ' ı tıklatın.
 
-6. **Son**'a tıklayın.
+6. **Finish (Son)** düğmesine tıklayın.
 
      Veri kaynağı **veri kaynakları** penceresine eklenir.
 

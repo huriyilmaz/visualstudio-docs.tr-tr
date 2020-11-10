@@ -1,5 +1,7 @@
 ---
 title: İş Akışı Tasarımcısı-kalıcı etkinlik Tasarımcısı
+description: Kalıcı etkinlik ve kalıcı etkinlik tasarımcısının kalıcı etkinlik oluşturmak ve yapılandırmak için nasıl kullanılacağı hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 75236d7955cba6b8c62b9a4504f02c66cebe4062
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3daa7cef76d2448cc7bcda66a967a3406bb2352c
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76114760"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94435579"
 ---
 # <a name="persist-activity-designer"></a>Persist Etkinlik Tasarımcısı
 

@@ -1,5 +1,7 @@
 ---
 title: İş Akışı Tasarımcısı-etkinlik tasarımcısını al
+description: Alma etkinliği ve bir alma etkinliği oluşturmak ve yapılandırmak için alma etkinliği Tasarımcısı 'nı kullanma hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 55f49a32036fcfd5e9f75f3d8dd61499c4af0b2e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f6414d92cea867a1235d73a39b6415ab884651ec
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86875728"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94434200"
 ---
 # <a name="receive-activity-designer"></a>Receive Etkinlik Tasarımcısı
 
@@ -46,7 +48,7 @@ Aşağıdaki tabloda <xref:System.ServiceModel.Activities.Receive> Özellikler g
 | <xref:System.ServiceModel.Activities.Receive.CorrelatesOn%2A> | Yanlış | Bir <xref:System.ServiceModel.Activities.Receive> nesne ile bir iş akışının hizmet işlemlerinde etkinlikler arasındaki bağıntıları belirtir <xref:System.ServiceModel.MessageQuerySet> . Özellikler kılavuzundaki özelliğin yanındaki üç nokta düğmesine tıklayarak <xref:System.ServiceModel.Activities.Receive.CorrelatesOn%2A> **CorrelatesOn tanımı** iletişim kutusunu açın. Bu iletişim kutusunun kullanımı hakkında daha fazla bilgi için [Içerik tanımı Iletişim kutusu](../workflow-designer/content-definition-dialog-box.md) konusuna bakın. |
 | <xref:System.ServiceModel.Activities.Receive.CorrelatesWith%2A> | Yanlış | <xref:System.ServiceModel.Activities.CorrelationHandle>İletiyi uygun iş akışı örneğine yönlendirmek için kullanılan öğesini belirtir.<br /><br /> Özellikler kılavuzundaki özelliğin yanındaki üç nokta düğmesine tıklayarak <xref:System.ServiceModel.Activities.Receive.CorrelatesWith%2A> **ifade Düzenleyicisi** iletişim kutusunu açın. Bu iletişim kutusunun kullanımı hakkında daha fazla bilgi için bkz. [nasıl yapılır: Ifade düzenleyicisini kullanma](../workflow-designer/how-to-use-the-expression-editor.md) konusu. |
 | <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> | Yanlış | <xref:System.ServiceModel.Activities.CorrelationInitializer> <xref:System.ServiceModel.Activities.CorrelationHandle> Bu <xref:System.ServiceModel.Activities.Receive> etkinliği iş akışı içinde yapılandıran birden çok nesneyi başlatacak nesne koleksiyonunu belirtir. Özellikler kılavuzundaki özelliğin yanındaki üç nokta düğmesine tıklayarak <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> **bağıntı başlatıcıları Ekle** iletişim kutusunu açın. Bu kutuyu kullanma hakkında daha fazla bilgi için bkz. [Correlationbaşlatıcıları ekleme Iletişim kutusu](../workflow-designer/add-correlationinitializers-dialog-box.md) konusu. |
-| <xref:System.ServiceModel.Activities.Receive.CanCreateInstance%2A> | Yanlış | İleti mevcut bir iş akışı örneğiyle bağıntılı değilse, iletiyi işlemek için yeni bir iş akışı örneği oluşturulup oluşturulmayacağını belirleyen bir değer belirtir. Değer **true**olarak ayarlanırsa, ileti mevcut bir iş akışı örneğiyle bağıntılı olmadığında iletiyi işlemek için yeni bir iş akışı örneği oluşturulur. |
+| <xref:System.ServiceModel.Activities.Receive.CanCreateInstance%2A> | Yanlış | İleti mevcut bir iş akışı örneğiyle bağıntılı değilse, iletiyi işlemek için yeni bir iş akışı örneği oluşturulup oluşturulmayacağını belirleyen bir değer belirtir. Değer **true** olarak ayarlanırsa, ileti mevcut bir iş akışı örneğiyle bağıntılı olmadığında iletiyi işlemek için yeni bir iş akışı örneği oluşturulur. |
 | <xref:System.ServiceModel.Activities.Receive.KnownTypes%2A> | Yanlış | Bu etkinlik tarafından uygulanan hizmet işlemi için bilinen türlerin bir koleksiyonunu belirtir <xref:System.ServiceModel.Activities.Receive> . Bu özellik, <xref:System.ServiceModel.Activities.Receive.SerializerOption%2A> özelliği olarak ayarlanmış özellik ile birlikte kullanılmalıdır <xref:System.Runtime.Serialization.DataContractSerializer> . Kullanılıyorsa yok sayılır <xref:System.Xml.Serialization.XmlSerializer> .<br /><br /> Özellik kılavuzunda **KnownTypes** alanının yanındaki üç nokta düğmesini seçerek ilgili türleri ekleyebileceğiniz **tür koleksiyonu Düzenleyicisi** iletişim kutusunu görüntüleyin. Bu kutuyu kullanma hakkında daha fazla bilgi için, [tür koleksiyonu Düzenleyicisi Iletişim kutusu](../workflow-designer/type-collection-editor-dialog-box.md) konusuna bakın. |
 | <xref:System.ServiceModel.Activities.Receive.ProtectionLevel%2A> | Yanlış | <xref:System.Net.Security.ProtectionLevel>İleti için belirtir.<br /><br /> 1.  <xref:System.Net.Security.ProtectionLevel> yalnızca kimlik doğrulaması anlamına gelir.<br />2.  <xref:System.Net.Security.ProtectionLevel> aktarılan verilerin bütünlüğünü sağlamaya yardımcı olmak için imza verileri anlamına gelir.<br />3.  <xref:System.Net.Security.ProtectionLevel> iletilen verilerin gizliliğini ve bütünlüğünü sağlamaya yardımcı olmak için verileri şifreleme ve imzalama anlamına gelir. |
 | <xref:System.ServiceModel.Activities.Receive.SerializerOption%2A> | Yanlış | Etkinlik tarafından uygulanan hizmet işlemi için kullanılacak seri hale getirici türünü belirtir <xref:System.ServiceModel.Activities.Receive> . Varsayılan değer, <xref:System.Runtime.Serialization.DataContractSerializer> bir türdeki bir örneği BIR XML akışına veya sağlanan veri sözleşmesini kullanan belgeye seri hale getirir ve seri hale getirir. <xref:System.Xml.Serialization.XmlSerializer>XML üzerinde daha fazla denetim gerekliyse de kullanılabilir. |

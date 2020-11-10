@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f8c4a1effcf61348d2f2267fb38164fd166f7d48
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: 45fc0a58262a533416f630ede795d0060f9fc909
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94382978"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94434499"
 ---
 # <a name="deploy-your-app-to-a-folder-iis-azure-or-another-destination"></a>Uygulamanızı bir klasöre, IIS 'ye, Azure 'a veya başka bir hedefe dağıtın
 
@@ -126,7 +126,7 @@ Daha fazla bilgi için, Visual Studio 'daki özel seçeneğini kullanarak dağı
 #### <a name="when-to-choose-azure-virtual-machines"></a>Azure sanal makinelerini seçme
 
 - Atanan IP adreslerinin kullanım ömrü boyunca tam denetim ile Internet üzerinden erişilebilen bir Web uygulaması dağıtmak istiyorsunuz.
-- Sunucularınızda özelleştirilmiş bir veritabanı sistemi, belirli ağ yapılandırması, disk bölümleri vb. gibi ek yazılımlar içeren makine düzeyinde özelleştirmeler yapmanız gerekir.
+- Sunucularınızda özelleştirilmiş bir veritabanı sistemi, belirli ağ yapılandırması, disk bölümleri vb. gibi ek yazılımlar dahil olmak üzere makine düzeyinde özelleştirmeler yapmanız gerekir.
 - Web uygulamanızın ölçeklendirilmesi üzerinde ince bir denetim istiyorsunuz.
 - Herhangi bir nedenden dolayı uygulamanızı barındıran sunuculara doğrudan erişmeniz gerekir.
 
@@ -147,19 +147,29 @@ Daha fazla bilgi için, aşağıdakilere bakın:
 
 ## <a name="folder"></a>Klasör
 
-Dosya sistemine dağıtım yapmanız, uygulamanızın dosyalarını kendi bilgisayarınızda belirli bir klasöre kopyalamak anlamına gelir. Bu, genellikle test amacıyla veya bilgisayar aynı zamanda bir sunucu çalıştırıyorsa, sınırlı sayıda kişi tarafından kullanılmak üzere uygulamayı dağıtmak için kullanılır. Hedef klasör bir ağda paylaşılmışsa, dosya sistemine dağıtım, Web uygulama dosyalarını, daha sonra belirli sunuculara dağıtabilecek diğer kullanıcılar için kullanılabilir hale getirir.
+Dosya sistemine dağıtım, uygulamanızın dosyalarını kendi bilgisayarınızda belirli bir klasöre kopyalamak anlamına gelir. Bir klasöre dağıtım, çoğu zaman test amacıyla kullanılır veya bilgisayar aynı zamanda bir sunucu çalıştırıyorsa, sınırlı sayıda kişi tarafından kullanılmak üzere uygulamayı dağıtabilir. Hedef klasör bir ağda paylaşılmışsa, dosya sistemine dağıtım, Web uygulama dosyalarını, daha sonra belirli sunuculara dağıtabilecek diğer kullanıcılar için kullanılabilir hale getirir.
+::: moniker range=">=vs-2019"
+Visual Studio 2019 16,8 ' den itibaren, klasör hedefi ClickOnce kullanarak bir .NET Windows uygulaması yayımlama özelliğini içerir.
 
+ClickOnce ile bir .NET Core 3,1 veya daha yeni bir sürümü yayınlamak istiyorsanız, bkz. [ClickOnce kullanarak .NET Windows uygulaması dağıtma](quickstart-deploy-using-clickonce-folder.md).
+::: moniker-end
 Bir sunucu çalıştıran tüm yerel makineler, uygulamanızın nasıl yapılandırıldığına ve bağlı olduğu ağlara bağlı olarak Internet veya bir Intranet üzerinden kullanılabilir hale getirir. (Bir bilgisayarı doğrudan Internet 'e bağladığınızda, özellikle de dış güvenlik tehditlerine karşı korumak için dikkatli olun.) Bu makineleri yönettiğinizde, yazılım ve donanım yapılandırmalarının denetimini tamamlıyoruz.
 
-Herhangi bir nedenle (örneğin, makine erişimi gibi) Azure App Service veya Azure sanal makineleri gibi bulut hizmetlerini kullanmayacağınızı unutmayın, kendi veri merkezinizdeki [Azure Stack](https://azure.microsoft.com/overview/azure-stack/) kullanabilirsiniz. Azure Stack, Azure App Service ve Azure sanal makineler aracılığıyla bilgi işlem kaynaklarını yönetip kullanmanıza ve şirket içinde her şeyi korurken kullanmanıza olanak sağlar.
+Herhangi bir nedenle (örneğin, makine erişimi) Azure App Service veya Azure sanal makineleri gibi bulut hizmetlerini kullanamayacaksınız, kendi veri merkezinizdeki [Azure Stack](https://azure.microsoft.com/overview/azure-stack/) kullanabilirsiniz. Azure Stack, Azure App Service ve Azure sanal makineler aracılığıyla bilgi işlem kaynaklarını yönetip kullanmanıza ve şirket içinde her şeyi korurken kullanmanıza olanak sağlar.
 
 ### <a name="when-to-choose-file-system-deployment"></a>Dosya sistemi dağıtımına ne zaman seçim
 
 - Uygulamayı yalnızca diğerlerinin farklı sunuculara dağıtacağı bir dosya paylaşımında dağıtmanız gerekir.
+::: moniker range=">=vs-2019"
+- ClickOnce kullanarak .NET Windows uygulaması dağıtmak istiyorsunuz
+::: moniker-end
 - Yalnızca bir yerel test dağıtımına ihtiyacınız vardır.
 - Uygulama dosyalarını başka bir dağıtım hedefine göndermeden önce bir şekilde incelemek ve potansiyel olarak değiştirmek istiyorsunuz.
 
 Daha fazla bilgi için bkz. [hızlı başlangıç-yerel bir klasöre dağıtma](quickstart-deploy-to-local-folder.md).
+::: moniker range=">=vs-2019"
+ClickOnce kullanarak .NET Windows uygulaması dağıtma hakkında daha fazla bilgi için bkz. [ClickOnce kullanarak .NET Windows uygulaması dağıtma](quickstart-deploy-using-clickonce-folder.md).
+::: moniker-end
 
 Ayarlarınızı seçme konusunda ek yardım için aşağıdakilere bakın:
 
@@ -171,7 +181,7 @@ Ayarlarınızı seçme konusunda ek yardım için aşağıdakilere bakın:
 
 Bir FTP/FTPS sunucusu, uygulamanızı Azure dışında bir sunucuya dağıtmanıza olanak tanır. Diğer bulut hizmetleri de dahil olmak üzere, erişiminiz olan bir dosya sistemine veya başka bir sunucuya (Internet veya Intranete) dağıtılabilir. Web dağıtımı (dosyalar veya) ile çalışabilir. ZIP) ve FTP.
 
-Bir FTP/FTPS sunucusu seçerken, Visual Studio sizden bir profil adı ister ve hedef sunucu ya da konum, bir site adı ve kimlik bilgileri dahil olmak üzere ek **bağlantı** bilgileri toplamanızı ister. **Ayarlar** sekmesinde aşağıdaki davranışları kontrol edebilirsiniz:
+Bir FTP/FTPS sunucusu seçerken, Visual Studio sizden bir profil adı ister ve hedef sunucu ya da konum, bir site adı ve kimlik bilgileri dahil olmak üzere ek **bağlantı** bilgileri toplar. **Ayarlar** sekmesinde aşağıdaki davranışları kontrol edebilirsiniz:
 
 - Dağıtmak istediğiniz yapılandırma.
 - Mevcut dosyaların hedefteki kaldırılması gerekip gerekmediğini belirtir.
@@ -190,7 +200,7 @@ Visual Studio 'da istediğiniz sayıda FTP/FTPS dağıtım profili oluşturabili
 
 IIS Web sunucusu, uygulamanızı Azure dışında bir Web sunucusuna dağıtmanıza olanak tanır. Diğer bulut hizmetleri de dahil olmak üzere, erişiminiz olan bir IIS sunucusuna (Internet veya Intranet) dağıtılabilir. Web Dağıtımı veya bir Web Dağıtımı paketiyle çalışabilir.
 
-Bir IIS Web sunucusu seçerken, Visual Studio sizden bir profil adı ister ve hedef sunucu ya da konum, bir site adı ve kimlik bilgileri dahil olmak üzere ek **bağlantı** bilgileri toplar. **Ayarlar** sekmesinde aşağıdaki davranışları kontrol edebilirsiniz:
+Bir IIS Web sunucusu seçerken, Visual Studio sizden bir profil adı ister ve hedef sunucu veya konum, bir site adı ve kimlik bilgileri de dahil olmak üzere ek **bağlantı** bilgileri toplar. **Ayarlar** sekmesinde aşağıdaki davranışları kontrol edebilirsiniz:
 
 - Dağıtmak istediğiniz yapılandırma.
 - Mevcut dosyaların hedefteki kaldırılması gerekip gerekmediğini belirtir.
@@ -207,7 +217,7 @@ Visual Studio 'da istediğiniz sayıda IIS Web sunucusu dağıtım profili oluş
 
 Daha fazla bilgi için bkz. [hızlı başlangıç-bir Web sitesine dağıtma](quickstart-deploy-to-a-web-site.md).
 
-IIS 'de ASP.NET Core sorun giderme konusunda yardım için bkz. [Azure App Service ve IIS 'de ASP.NET Core sorun giderme](/aspnet/core/test/troubleshoot-azure-iis).
+IIS 'de sorun giderme ASP.NET Core konusunda yardım için bkz. [Azure App Service ve IIS 'de ASP.NET Core sorunlarını giderme](/aspnet/core/test/troubleshoot-azure-iis).
 
 ## <a name="import-profile"></a>Profili içeri aktar
 
@@ -218,7 +228,7 @@ Bir yayımlama ayarları dosyası kullanımı, dağıtım yapılandırmasını b
 ### <a name="when-to-choose-import-profile"></a>Profili içeri aktar ' ı seçme
 
 - IIS 'de yayımlıyorsunuz ve dağıtım yapılandırmasını basitleştirmek istiyorsunuz.
-- IIS 'ye veya Azure App Service yayımladınız ve dağıtım yapılandırmasını yeniden kullanmak veya aynı hizmete yayımlayan takım üyeleri için hızlandırmak istiyorsunuz.
+- IIS 'ye veya Azure App Service yayımladınız ve dağıtım yapılandırmasını yeniden kullanım için veya aynı hizmete yayımlayan takım üyeleri için hızlandırmak istiyorsunuz.
 
 Daha fazla bilgi için, aşağıdakilere bakın:
 

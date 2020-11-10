@@ -1,5 +1,7 @@
 ---
 title: WPF ve Entity Framework 6 ile basit veri uygulaması
+description: Bu kılavuzda, bkz. Visual Studio 'da Windows Presentation Foundation (WPF) ve Entity Framework 6 ile basit form verileri oluşturma.
+ms.custom: SEO-VS-2020
 ms.date: 08/22/2017
 ms.topic: conceptual
 dev_langs:
@@ -9,16 +11,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 078b3eedc9971dfc444e86b9f8d7ce770fcdb966
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: 7aad99392db33256e991e731770266c1a53dec50
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89743380"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94435499"
 ---
 # <a name="create-a-simple-data-application-with-wpf-and-entity-framework-6"></a>WPF ve Entity Framework 6 kullanarak basit veri uygulaması oluşturma
 
-Bu izlenecek yolda, Visual Studio 'da temel bir "veri üzerinden Forms" uygulamasının nasıl oluşturulacağı gösterilmektedir. Uygulama SQL Server LocalDB, Northwind veritabanı, Entity Framework 6 (Entity Framework Core değil) ve .NET Framework için Windows Presentation Foundation (.NET Core değil) kullanır. Ana ayrıntı görünümü ile temel veri bağlamanın nasıl yapılacağını gösterir ve ayrıca, **Ileri taşı**, **Öncekini**taşı, **başlangıca**taşı, son, **Güncelleştir** ve **Sil**düğmelerine sahip özel bir bağlama **Gezginine**sahip olur.
+Bu izlenecek yolda, Visual Studio 'da temel bir "veri üzerinden Forms" uygulamasının nasıl oluşturulacağı gösterilmektedir. Uygulama SQL Server LocalDB, Northwind veritabanı, Entity Framework 6 (Entity Framework Core değil) ve .NET Framework için Windows Presentation Foundation (.NET Core değil) kullanır. Ana ayrıntı görünümü ile temel veri bağlamanın nasıl yapılacağını gösterir ve ayrıca, **Ileri taşı** , **Öncekini** taşı, **başlangıca** taşı, son, **Güncelleştir** ve **Sil** düğmelerine sahip özel bir bağlama **Gezginine** sahip olur.
 
 Bu makalede, Visual Studio 'da veri araçları kullanılmaya odaklanılır ve temel alınan teknolojiler herhangi bir derinlikte açıklanmaz. XAML, Entity Framework ve SQL ile temel bir benzerlik olduğunu varsayar. Bu örnek, WPF uygulamaları için standart olan Model-View-ViewModel (MVVM) mimarisini de göstermez. Ancak, bu kodu birkaç değişiklik ile kendi MVVM uygulamanıza kopyalayabilirsiniz.
 
@@ -26,11 +28,11 @@ Bu makalede, Visual Studio 'da veri araçları kullanılmaya odaklanılır ve te
 
 Bu örnek SQL Server Express LocalDB ve Northwind örnek veritabanını kullanır. Bu ürüne yönelik ADO.NET veri sağlayıcısı Entity Framework destekliyorsa, aynı zamanda diğer SQL veritabanı ürünleriyle de birlikte çalışmalıdır.
 
-1. SQL Server Express LocalDB yoksa, [SQL Server Express indirme sayfasından](https://www.microsoft.com/sql-server/sql-server-editions-express)veya **Visual Studio yükleyicisi**aracılığıyla yükleyin. **Visual Studio yükleyicisi**, SQL Server Express LocalDB 'yi **.net masaüstü geliştirme** iş yükünün parçası olarak veya bağımsız bir bileşen olarak yükleyebilirsiniz.
+1. SQL Server Express LocalDB yoksa, [SQL Server Express indirme sayfasından](https://www.microsoft.com/sql-server/sql-server-editions-express)veya **Visual Studio yükleyicisi** aracılığıyla yükleyin. **Visual Studio yükleyicisi** , SQL Server Express LocalDB 'yi **.net masaüstü geliştirme** iş yükünün parçası olarak veya bağımsız bir bileşen olarak yükleyebilirsiniz.
 
 2. Aşağıdaki adımları izleyerek Northwind örnek veritabanını yüklersiniz:
 
-    1. Visual Studio 'da **SQL Server Nesne Gezgini** penceresini açın. (**SQL Server Nesne Gezgini** , **Visual Studio yükleyicisi** **veri depolama ve işleme** iş yükünün parçası olarak yüklenir.) **SQL Server** düğümünü genişletin. LocalDB örneğinize sağ tıklayıp **Yeni sorgu**' yı seçin.
+    1. Visual Studio 'da **SQL Server Nesne Gezgini** penceresini açın. ( **SQL Server Nesne Gezgini** , **Visual Studio yükleyicisi** **veri depolama ve işleme** iş yükünün parçası olarak yüklenir.) **SQL Server** düğümünü genişletin. LocalDB örneğinize sağ tıklayıp **Yeni sorgu** ' yı seçin.
 
        Sorgu Düzenleyicisi penceresi açılır.
 
@@ -46,11 +48,11 @@ Bu örnek SQL Server Express LocalDB ve Northwind örnek veritabanını kullanı
 
 1. Visual Studio 'da yeni bir C# **WPF uygulaması** projesi oluşturun.
 
-2. Entity Framework 6 için NuGet paketini ekleyin. **Çözüm Gezgini**, proje düğümünü seçin. Ana menüde **Proje**  >  **NuGet Paketlerini Yönet**' i seçin.
+2. Entity Framework 6 için NuGet paketini ekleyin. **Çözüm Gezgini** , proje düğümünü seçin. Ana menüde **Proje**  >  **NuGet Paketlerini Yönet** ' i seçin.
 
      ![NuGet Paketlerini Yönet menü öğesi](../data-tools/media/raddata_vs2015_manage_nuget_packages.png)
 
-3. **NuGet Paket Yöneticisi**' nde, **Gözden** geçirme bağlantısına tıklayın. Entity Framework, büyük olasılıkla listedeki en üst pakettir. Sağ bölmedeki **yüklensin** ' e tıklayın ve yönergeleri izleyin. Çıkış penceresi, yüklemenin ne zaman tamamlandığını söyler.
+3. **NuGet Paket Yöneticisi** ' nde, **Gözden** geçirme bağlantısına tıklayın. Entity Framework, büyük olasılıkla listedeki en üst pakettir. Sağ bölmedeki **yüklensin** ' e tıklayın ve yönergeleri izleyin. Çıkış penceresi, yüklemenin ne zaman tamamlandığını söyler.
 
      ![NuGet paketi Entity Framework](../data-tools/media/raddata_vs2015_nuget_ef.png)
 
@@ -58,17 +60,17 @@ Bu örnek SQL Server Express LocalDB ve Northwind örnek veritabanını kullanı
 
 ## <a name="create-the-model"></a>Modeli oluşturma
 
-1. **Çözüm Gezgini** ' de proje düğümüne sağ tıklayın ve **Add**  >  **Yeni öğe**Ekle ' yi seçin. Sol bölmedeki C# düğümünün altında **veri** ' ı seçin ve ortadaki bölmede **ADO.net varlık veri modeli**' yi seçin.
+1. **Çözüm Gezgini** ' de proje düğümüne sağ tıklayın ve **Add**  >  **Yeni öğe** Ekle ' yi seçin. Sol bölmedeki C# düğümünün altında **veri** ' ı seçin ve ortadaki bölmede **ADO.net varlık veri modeli** ' yi seçin.
 
    ![Entity Framework modeli yeni öğe](../data-tools/media/raddata-ef-new-project-item.png)
 
-2. Modeli çağırın `Northwind_model` ve **Tamam**' ı seçin. **Varlık veri modeli Sihirbazı** açılır. **Veritabanından EF Designer** ' ı seçin ve ardından **İleri**' ye tıklayın.
+2. Modeli çağırın `Northwind_model` ve **Tamam** ' ı seçin. **Varlık veri modeli Sihirbazı** açılır. **Veritabanından EF Designer** ' ı seçin ve ardından **İleri** ' ye tıklayın.
 
    ![Veritabanından EF modeli](../data-tools/media/raddata-ef-model-from-database.png)
 
-3. Sonraki ekranda, LocalDB Northwind bağlantınızı girin veya seçin (örneğin, (LocalDB) \MSSQLLocalDB), Northwind veritabanını belirtin ve **İleri**' ye tıklayın.
+3. Sonraki ekranda, LocalDB Northwind bağlantınızı girin veya seçin (örneğin, (LocalDB) \MSSQLLocalDB), Northwind veritabanını belirtin ve **İleri** ' ye tıklayın.
 
-4. Sihirbazın sonraki sayfasında, Entity Framework modeline dahil edilecek tabloları, saklı yordamları ve diğer veritabanı nesnelerini seçin. Ağaç görünümünde dbo düğümünü genişletin ve **müşteriler**, **siparişler**ve **sipariş ayrıntıları**' nı seçin. Varsayılan değerleri işaretli bırakın ve **son**' a tıklayın.
+4. Sihirbazın sonraki sayfasında, Entity Framework modeline dahil edilecek tabloları, saklı yordamları ve diğer veritabanı nesnelerini seçin. Ağaç görünümünde dbo düğümünü genişletin ve **müşteriler** , **siparişler** ve **sipariş ayrıntıları** ' nı seçin. Varsayılan değerleri işaretli bırakın ve **son** ' a tıklayın.
 
     ![Model için veritabanı nesneleri seçin](../data-tools/media/raddata-choose-ef-objects.png)
 
@@ -78,7 +80,7 @@ Bu örnek SQL Server Express LocalDB ve Northwind örnek veritabanını kullanı
 
     *. Edmx* dosyası için tasarımcı yüzeyi, modeldeki bazı özellikleri ve ilişkileri değiştirmenize olanak sağlar. Bu kılavuzda tasarımcı kullanmıyoruz.
 
-6. *. Tt* dosyaları genel amaçlıdır ve OBSERVABLECOLLECTIONS gerektiren WPF veri bağlaması ile çalışmak için bunlardan birini ince ayar gerekir. **Çözüm Gezgini**, *Northwind_model. tt*bulana kadar Northwind_model düğümünü genişletin. (' De olmadığından emin olun *. Context.tt* dosyası *. edmx* dosyasının hemen altında.)
+6. *. Tt* dosyaları genel amaçlıdır ve OBSERVABLECOLLECTIONS gerektiren WPF veri bağlaması ile çalışmak için bunlardan birini ince ayar gerekir. **Çözüm Gezgini** , *Northwind_model. tt* bulana kadar Northwind_model düğümünü genişletin. (' De olmadığından emin olun *. Context.tt* dosyası *. edmx* dosyasının hemen altında.)
 
    - Öğesinin iki örneğini ile değiştirin <xref:System.Collections.ICollection> <xref:System.Collections.ObjectModel.ObservableCollection%601> .
 
@@ -86,7 +88,7 @@ Bu örnek SQL Server Express LocalDB ve Northwind örnek veritabanını kullanı
 
    - Tek <xref:System.Collections.Generic> (431 etrafında) konumunu ile değiştirin <xref:System.Collections.ObjectModel> .
 
-7. **Ctrl** + **Shift** + Projeyi derlemek için CTRL SHIFT**B** tuşlarına basın. Yapı tamamlandığında, model sınıfları veri kaynakları Sihirbazı 'nda görülebilir.
+7. **Ctrl** + **Shift** + Projeyi derlemek için CTRL SHIFT **B** tuşlarına basın. Yapı tamamlandığında, model sınıfları veri kaynakları Sihirbazı 'nda görülebilir.
 
 Artık verileri görüntüleyebilmeniz, gezinebilmeniz ve değiştirebilmeniz için bu modeli XAML sayfasına bağlamak için hazırsınız.
 
@@ -94,15 +96,15 @@ Artık verileri görüntüleyebilmeniz, gezinebilmeniz ve değiştirebilmeniz i�
 
 Kendi veri bağlama kodunuzu yazmak mümkündür, ancak Visual Studio 'Nun sizin için bunu yapmasına çok daha kolay.
 
-1. **Project**  >  **Veri kaynağı Yapılandırma Sihirbazı 'nı**açmak için ana menüden proje**Yeni veri kaynağı Ekle** ' yi seçin. Veritabanına değil model sınıflarına bağladığınız için **nesne** seçin:
+1. **Project**  >  **Veri kaynağı Yapılandırma Sihirbazı 'nı** açmak için ana menüden proje **Yeni veri kaynağı Ekle** ' yi seçin. Veritabanına değil model sınıflarına bağladığınız için **nesne** seçin:
 
      ![Nesne kaynağı ile veri kaynağı Yapılandırma Sihirbazı](../data-tools/media/raddata-data-source-configuration-wizard-with-object-source.png)
 
-2. Projenizin düğümünü genişletin ve **Müşteri**' yi seçin. (Siparişler için kaynaklar, müşterinin siparişler gezintisi özelliğinden otomatik olarak oluşturulur.)
+2. Projenizin düğümünü genişletin ve **Müşteri** ' yi seçin. (Siparişler için kaynaklar, müşterinin siparişler gezintisi özelliğinden otomatik olarak oluşturulur.)
 
      ![Veri kaynakları olarak varlık sınıfları ekleme](../data-tools/media/raddata-add-entity-classes-as-data-sources.png)
 
-3. **Son**'a tıklayın.
+3. **Finish (Son)** düğmesine tıklayın.
 
 4. Kod görünümünde *MainWindow. xaml* sayfasına gidin. Bu örneğin amaçları doğrultusunda XAML 'yi basit tutuyoruz. MainWindow başlığını daha açıklayıcı bir şekilde değiştirin ve şimdilik yüksekliğini ve genişliğini 600 x 800 olarak arttırın. Daha sonra dilediğiniz zaman değiştirebilirsiniz. Şimdi bu üç satır tanımını ana kılavuza, biri müşterinin ayrıntıları için bir satıra, diğeri de emirlerini gösteren kılavuza ekleyin:
 
@@ -114,11 +116,11 @@ Kendi veri bağlama kodunuzu yazmak mümkündür, ancak Visual Studio 'Nun sizin
         </Grid.RowDefinitions>
     ```
 
-5. Şimdi, tasarımcıda görüntülemekte olduğunuzdan *MainWindow. xaml* ' i açın. Bu, **veri kaynakları** penceresinin **araç kutusunun**yanındaki Visual Studio pencere kenar boşluğunda bir seçenek olarak görünmesine neden olur. Pencereyi açmak için sekmeye tıklayın veya **SHIFT** + **alt** + **D** tuşlarına basın veya **View**  >  **diğer Windows**  >  **veri kaynaklarını**görüntüle ' yi seçin. Her bir özelliği müşteriler sınıfında kendi tek metin kutusunda görüntüleyeceğiz. Önce, **müşteriler** açılan kutusunda oka tıklayın ve **Ayrıntılar**' ı seçin. Sonra, tasarımcı 'nın orta satıra gitmesini bilmesini sağlamak için düğümü tasarım yüzeyinin orta kısmına sürükleyin. Onu yanlış yerleştirirseniz, daha sonra XAML içinde satırı el ile belirtebilirsiniz. Varsayılan olarak, denetimler bir ızgara öğesine dikey olarak yerleştirilir, ancak bu noktada formda istediğiniz gibi düzenleyebilirsiniz. Örneğin, **ad** metin kutusunu, adresin üzerine en üste yerleştirmek mantıklı olabilir. Bu makaleye yönelik örnek uygulama, alanları yeniden sıralar ve bunları iki sütuna yeniden düzenler.
+5. Şimdi, tasarımcıda görüntülemekte olduğunuzdan *MainWindow. xaml* ' i açın. Bu, **veri kaynakları** penceresinin **araç kutusunun** yanındaki Visual Studio pencere kenar boşluğunda bir seçenek olarak görünmesine neden olur. Pencereyi açmak için sekmeye tıklayın veya **SHIFT** + **alt** + **D** tuşlarına basın veya **View**  >  **diğer Windows**  >  **veri kaynaklarını** görüntüle ' yi seçin. Her bir özelliği müşteriler sınıfında kendi tek metin kutusunda görüntüleyeceğiz. Önce, **müşteriler** açılan kutusunda oka tıklayın ve **Ayrıntılar** ' ı seçin. Sonra, tasarımcı 'nın orta satıra gitmesini bilmesini sağlamak için düğümü tasarım yüzeyinin orta kısmına sürükleyin. Onu yanlış yerleştirirseniz, daha sonra XAML içinde satırı el ile belirtebilirsiniz. Varsayılan olarak, denetimler bir ızgara öğesine dikey olarak yerleştirilir, ancak bu noktada formda istediğiniz gibi düzenleyebilirsiniz. Örneğin, **ad** metin kutusunu, adresin üzerine en üste yerleştirmek mantıklı olabilir. Bu makaleye yönelik örnek uygulama, alanları yeniden sıralar ve bunları iki sütuna yeniden düzenler.
 
      ![Müşteriler veri kaynağını bireysel denetimlere bağlama](../data-tools/media/raddata-customers-data-source-binding-to-individual-controls.png)
 
-     Kod görünümünde, artık `Grid` üst kılavuzun satır 1 ' de (orta satır) yeni bir öğe görebilirsiniz. Üst kılavuz, `DataContext` öğesine eklenen bir CollectionViewSource öğesine başvuran bir özniteliğe sahiptir `Windows.Resources` . Bu veri bağlamı verildiğinde, ilk metin kutusu **adrese**bağlandığında, bu ad `Address` `Customer` CollectionViewSource içindeki geçerli nesnede bulunan özelliğe eşlenir.
+     Kod görünümünde, artık `Grid` üst kılavuzun satır 1 ' de (orta satır) yeni bir öğe görebilirsiniz. Üst kılavuz, `DataContext` öğesine eklenen bir CollectionViewSource öğesine başvuran bir özniteliğe sahiptir `Windows.Resources` . Bu veri bağlamı verildiğinde, ilk metin kutusu **adrese** bağlandığında, bu ad `Address` `Customer` CollectionViewSource içindeki geçerli nesnede bulunan özelliğe eşlenir.
 
     ```xaml
     <Grid DataContext="{StaticResource customerViewSource}">
@@ -142,13 +144,13 @@ Kendi veri bağlama kodunuzu yazmak mümkündür, ancak Visual Studio 'Nun sizin
 
      [!code-csharp[Window_Loaded#2](../data-tools/codesnippet/CSharp/CreateWPFDataApp/MainWindow.xaml.cs#2)]
 
-8. **F5**tuşuna basın. CollectionViewSource 'a alınan ilk müşterinin ayrıntılarını görmeniz gerekir. Ayrıca, veri kılavuzundaki emirlerini de görmeniz gerekir. Biçimlendirme harika olmadığından, bunu çözelim. Ayrıca, diğer kayıtları görüntülemek ve temel CRUD işlemlerini yapmak için bir yol da oluşturabilirsiniz.
+8. **F5** tuşuna basın. CollectionViewSource 'a alınan ilk müşterinin ayrıntılarını görmeniz gerekir. Ayrıca, veri kılavuzundaki emirlerini de görmeniz gerekir. Biçimlendirme harika olmadığından, bunu çözelim. Ayrıca, diğer kayıtları görüntülemek ve temel CRUD işlemlerini yapmak için bir yol da oluşturabilirsiniz.
 
 ## <a name="adjust-the-page-design-and-add-grids-for-new-customers-and-orders"></a>Sayfa tasarımını ayarlama ve yeni müşteriler ve siparişler için Izgaralar ekleme
 
 Visual Studio tarafından üretilen varsayılan düzenleme uygulamanız için ideal değildir, bu nedenle kodunuzda kopyalamak için son XAML 'yi sağlayacağız. Ayrıca, kullanıcının yeni bir müşteri veya sipariş eklemesini sağlamak için bazı "Formlar" (aslında ızgaralar) gerekir. Yeni bir müşteri ve sipariş ekleyebilmek için, veri bağlantılı olmayan ayrı bir metin kutusu kümesine ihtiyacınız vardır `CollectionViewSource` . İşleyici yöntemlerinde Visible özelliğini ayarlayarak kullanıcının belirli bir zamanda hangi kılavuza bakarak olduğunu kontrol edeceksiniz. Son olarak, kullanıcıların tek bir siparişi silmesini sağlamak için Orders kılavuzundaki her satıra bir Delete düğmesi eklersiniz.
 
-İlk olarak, bu stilleri `Windows.Resources` *MainWindow. xaml*içindeki öğesine ekleyin:
+İlk olarak, bu stilleri `Windows.Resources` *MainWindow. xaml* içindeki öğesine ekleyin:
 
 ```xaml
 <Style x:Key="Label" TargetType="{x:Type Label}" BasedOn="{x:Null}">
@@ -419,13 +421,13 @@ Komut mantığın dört bölümü vardır: (1) komutlar, (2) bağlamalar, (3), d
 
 Arka plan kod ekleme ve silme yöntemleri hariç en düşük düzeydedir. Gezinti, CollectionViewSource 'un View özelliğindeki Yöntemler çağırarak gerçekleştirilir. , `DeleteOrderCommandHandler` Bir siparişte art arda silmenin nasıl gerçekleştirileceğini gösterir. Öncelikle onunla ilişkili olan Order_Details silmemiz gerekir. , `UpdateCommandHandler` Koleksiyona yeni bir müşteri veya sipariş ekler ya da yalnızca mevcut bir müşteriyi veya siparişi, kullanıcının metin kutularında yaptığı değişikliklerle güncelleştirir.
 
-Bu işleyici yöntemlerini *MainWindow.xaml.cs*içinde MainWindow sınıfına ekleyin. Müşteriler tablosu için Collectionviewkaynağınız farklı bir ada sahipse, bu yöntemlerin her birinde adı ayarlamanız gerekir:
+Bu işleyici yöntemlerini *MainWindow.xaml.cs* içinde MainWindow sınıfına ekleyin. Müşteriler tablosu için Collectionviewkaynağınız farklı bir ada sahipse, bu yöntemlerin her birinde adı ayarlamanız gerekir:
 
 [!code-csharp[CommandHandlers#3](../data-tools/codesnippet/CSharp/CreateWPFDataApp/MainWindow.xaml.cs#3)]
 
 ## <a name="run-the-application"></a>Uygulamayı çalıştırma
 
-Hata ayıklamayı başlatmak için **F5**'e basın. Kılavuzda doldurulmuş müşteri ve sipariş verilerini görmeniz gerekir ve gezinti düğmelerinin beklenen şekilde çalışması gerekir. Verileri girdikten sonra, modele yeni bir müşteri veya sipariş eklemek için **Yürüt** ' e tıklayın. Verileri kaydetmeden yeni bir müşterinin veya yeni sipariş formunun dışına çıkmak için **Iptal 'e** tıklayın. Mevcut müşteriler ve siparişlerde düzenlemeler doğrudan metin kutularında ve bu değişiklikler modele otomatik olarak yazılır.
+Hata ayıklamayı başlatmak için **F5** 'e basın. Kılavuzda doldurulmuş müşteri ve sipariş verilerini görmeniz gerekir ve gezinti düğmelerinin beklenen şekilde çalışması gerekir. Verileri girdikten sonra, modele yeni bir müşteri veya sipariş eklemek için **Yürüt** ' e tıklayın. Verileri kaydetmeden yeni bir müşterinin veya yeni sipariş formunun dışına çıkmak için **Iptal 'e** tıklayın. Mevcut müşteriler ve siparişlerde düzenlemeler doğrudan metin kutularında ve bu değişiklikler modele otomatik olarak yazılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

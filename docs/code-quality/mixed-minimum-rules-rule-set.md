@@ -1,6 +1,8 @@
 ---
 title: Karışık Minimum Kurallar kural kümesi
 ms.date: 11/04/2016
+description: Visual Studio 'da karma minimum Kurallar kural kümesi hakkında bilgi edinin. Ortak dil çalışma zamanını destekleyen C++ projeleri için kuralların açıklamalarını inceleyin.
+ms.custom: SEO-VS-2020
 ms.topic: reference
 ms.assetid: bc8df61c-19af-40ab-a871-315807e5f4bf
 author: mikejo5000
@@ -8,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: edacd898cc1deb0382dd8e8b4b048af895c3b579
-ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
+ms.openlocfilehash: 5bb87da3cc668ba946c6ee607fa3be5a2c79cc32
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91658470"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94435332"
 ---
 # <a name="mixed-minimum-rules-rule-set"></a>Karışık Minimum Kurallar kural kümesi
 
@@ -43,8 +45,8 @@ Bu kuralı, ortak dil çalışma zamanını destekleyen C++ projeleriniz için o
 |[C6276](/cpp/code-quality/c6276)|Geçersiz dize dönüştürme|
 |[C6277](/cpp/code-quality/c6277)|Geçersiz CreateProcess çağrısı|
 |[C6284](/cpp/code-quality/c6284)|Biçimlendirme Işlevine geçersiz nesne değişkeni|
-|[C6290](/cpp/code-quality/c6290)|Mantıksal değil bit düzeyinde and önceliği|
-|[C6291](/cpp/code-quality/c6291)|Mantıksal değil bit düzeyinde OR önceliği|
+|[C6290](/cpp/code-quality/c6290)|Logical-Not Bitwise-And önceliği|
+|[C6291](/cpp/code-quality/c6291)|Logical-Not Bitwise-Or önceliği|
 |[C6302](/cpp/code-quality/c6302)|Biçimlendirme Işlevine geçersiz karakter dizesi değişkeni|
 |[C6303](/cpp/code-quality/c6303)|Biçimlendirme Işlevine geçersiz geniş karakter dizesi değişkeni|
 |[C6305](/cpp/code-quality/c6305)|Eşleşmeyen boyut ve sayı kullanımı|

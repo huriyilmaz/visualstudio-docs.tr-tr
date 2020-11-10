@@ -1,5 +1,7 @@
 ---
 title: Hiyerarşik güncelleştirme
+description: Bilgi tutarlılığı kurallarını koruyarak güncelleştirilmiş verilerin (2 + ilişkili tabloları olan bir veri kümesinden) bir VERITABANıNA geri kaydedilmesini içeren hiyerarşik güncelleştirmeleri gözden geçirin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -21,12 +23,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 158908c45d33781bc9f983950d5558a23481ad37
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bfc0c1ca96f5bf6ce58a1b7df9ad0ea10f283e1e
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75586588"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94435162"
 ---
 # <a name="hierarchical-update"></a>Hiyerarşik güncelleştirme
 
@@ -34,17 +36,17 @@ ms.locfileid: "75586588"
 
 Hiyerarşik güncelleştirme özelliği `TableAdapterManager` , `TableAdapter` türü belirlenmiş bir veri kümesindeki s 'yi yönetmek için bir kullanır. `TableAdapterManager`Bileşen, .NET türü değil, Visual Studio tarafından oluşturulan bir sınıftır. **Veri kaynakları** penceresinden bir tabloyu bir Windows form veya WPF sayfasına sürüklediğinizde, Visual Studio form veya sayfaya TableAdapterManager türünde bir değişken ekler ve onu bileşen tepsisinde tasarımcıda görürsünüz. Sınıfıyla ilgili ayrıntılı bilgi için `TableAdapterManager` bkz. TableAdapterManager Reference bölümü [TableAdapters](../data-tools/create-and-configure-tableadapters.md).
 
-Varsayılan olarak, bir veri kümesi ilgili tabloları "yalnızca ilişkiler" olarak değerlendirir ve bu, yabancı anahtar kısıtlamalarını Zorlamayacağı anlamına gelir. Bu ayarı tasarım zamanında **veri kümesi Tasarımcısı**kullanarak değiştirebilirsiniz. **İlişki** iletişim kutusunu açmak için iki tablo arasındaki ilişki satırını seçin. Burada yaptığınız değişiklikler, `TableAdapterManager` ilgili tablolardaki değişiklikleri veritabanına geri gönderirken nasıl davranacağını belirleyeceğini tespit eder.
+Varsayılan olarak, bir veri kümesi ilgili tabloları "yalnızca ilişkiler" olarak değerlendirir ve bu, yabancı anahtar kısıtlamalarını Zorlamayacağı anlamına gelir. Bu ayarı tasarım zamanında **veri kümesi Tasarımcısı** kullanarak değiştirebilirsiniz. **İlişki** iletişim kutusunu açmak için iki tablo arasındaki ilişki satırını seçin. Burada yaptığınız değişiklikler, `TableAdapterManager` ilgili tablolardaki değişiklikleri veritabanına geri gönderirken nasıl davranacağını belirleyeceğini tespit eder.
 
 ## <a name="enable-hierarchical-update-in-a-dataset"></a>Veri kümesinde hiyerarşik güncelleştirmeyi etkinleştirme
 
-Varsayılan olarak, Hiyerarşik güncelleştirme bir projede eklenen veya oluşturulan tüm yeni veri kümeleri için etkindir. Veri kümesindeki bir türü belirtilmiş veri kümesinin **Hiyerarşik güncelleştirme** özelliğini **true** veya **false**olarak ayarlayarak hiyerarşik güncelleştirmeyi açın veya kapatın:
+Varsayılan olarak, Hiyerarşik güncelleştirme bir projede eklenen veya oluşturulan tüm yeni veri kümeleri için etkindir. Veri kümesindeki bir türü belirtilmiş veri kümesinin **Hiyerarşik güncelleştirme** özelliğini **true** veya **false** olarak ayarlayarak hiyerarşik güncelleştirmeyi açın veya kapatın:
 
 ![Hiyerarşik güncelleştirme ayarı](../data-tools/media/hierarchical-update-setting.png)
 
 ## <a name="create-a-new-relation-between-tables"></a>Tablolar arasında yeni bir ilişki oluşturma
 
-İki tablo arasında yeni bir ilişki oluşturmak için, Veri Kümesi Tasarımcısı her tablonun başlık çubuğunu seçin, sonra sağ tıklayıp **Ilişki Ekle**' yi seçin.
+İki tablo arasında yeni bir ilişki oluşturmak için, Veri Kümesi Tasarımcısı her tablonun başlık çubuğunu seçin, sonra sağ tıklayıp **Ilişki Ekle** ' yi seçin.
 
 ![Hiyerarşik güncelleştirme ilişki Ekle menüsü](../data-tools/media/hierarchical-update-add-relation-menu.png)
 
@@ -118,12 +120,12 @@ Varsayılan olarak, `TableAdapterManager` ilişkili tabloları içeren bir veri 
 
 Aşağıda, sınıfının sık kullanılan yöntemleri ve özellikleri verilmiştir `TableAdapterManager` :
 
-|Üye|Description|
+|Üye|Açıklama|
 |------------|-----------------|
 |`UpdateAll` yöntemi|Tüm veri tablolarından tüm verileri kaydeder.|
 |`BackUpDataSetBeforeUpdate` özelliði|Yöntemi yürütmeden önce veri kümesinin yedek kopyasının oluşturulup oluşturulmayacağını belirler `TableAdapterManager.UpdateAll` . Boolean.|
 |*TableName* `TableAdapter` özelliði|Bir temsil eder `TableAdapter` . Oluşturulan `TableAdapterManager` her biri için bir özelliği içerir `TableAdapter` . Örneğin, Customers ve Orders tablosu içeren bir veri kümesi, `TableAdapterManager` ve özellikleri içeren bir ile oluşturulur `CustomersTableAdapter` `OrdersTableAdapter` .|
-|`UpdateOrder` özelliði|Tek tek ekleme, güncelleştirme ve silme komutlarının sırasını denetler. Bunu, Numaralandırmadaki değerlerden birine ayarlayın `TableAdapterManager.UpdateOrderOption` .<br /><br /> Varsayılan olarak, `UpdateOrder` **InsertUpdateDelete**olarak ayarlanır. Bu, daha sonra, ve sonrasında silinmeler, veri kümesindeki tüm tablolar için gerçekleştirilir.|
+|`UpdateOrder` özelliði|Tek tek ekleme, güncelleştirme ve silme komutlarının sırasını denetler. Bunu, Numaralandırmadaki değerlerden birine ayarlayın `TableAdapterManager.UpdateOrderOption` .<br /><br /> Varsayılan olarak, `UpdateOrder` **InsertUpdateDelete** olarak ayarlanır. Bu, daha sonra, ve sonrasında silinmeler, veri kümesindeki tüm tablolar için gerçekleştirilir.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

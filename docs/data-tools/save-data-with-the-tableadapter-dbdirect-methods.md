@@ -1,5 +1,7 @@
 ---
 title: TableAdapter DBDirect metotlarıyla veri kaydetme
+description: Bu kılavuzda, bir TableAdapter 'ın DBDirect yöntemlerini kullanarak SQL deyimlerini doğrudan bir veritabanına karşı çalıştırın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 77d7aa0859ee383258f80dfd74f36d584790e464
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5d79b2081e2d30d77ae3507884b44421f0f14bae
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85281615"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94434577"
 ---
 # <a name="save-data-with-the-tableadapter-dbdirect-methods"></a>TableAdapter DBDirect metotlarıyla veri kaydetme
 
@@ -29,7 +31,7 @@ Bu izlenecek yol, bir TableAdapter 'ın DBDirect yöntemlerini kullanarak SQL de
 
 Bu izlenecek yol sırasında şunları yapmayı öğreneceksiniz:
 
-- Yeni bir **Windows Forms uygulaması**oluşturun.
+- Yeni bir **Windows Forms uygulaması** oluşturun.
 
 - [Veri kaynağı Yapılandırma Sihirbazı](../data-tools/media/data-source-configuration-wizard.png)ile bir veri kümesi oluşturun ve yapılandırın.
 
@@ -43,11 +45,11 @@ Bu izlenecek yol sırasında şunları yapmayı öğreneceksiniz:
 
 Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını kullanır.
 
-1. SQL Server Express LocalDB yoksa, [SQL Server Express indirme sayfasından](https://www.microsoft.com/sql-server/sql-server-editions-express)veya **Visual Studio yükleyicisi**aracılığıyla yükleyin. **Visual Studio yükleyicisi**, SQL Server Express LocalDB 'yi **veri depolama ve işleme** iş yükünün parçası olarak veya ayrı bir bileşen olarak yükleyebilirsiniz.
+1. SQL Server Express LocalDB yoksa, [SQL Server Express indirme sayfasından](https://www.microsoft.com/sql-server/sql-server-editions-express)veya **Visual Studio yükleyicisi** aracılığıyla yükleyin. **Visual Studio yükleyicisi** , SQL Server Express LocalDB 'yi **veri depolama ve işleme** iş yükünün parçası olarak veya ayrı bir bileşen olarak yükleyebilirsiniz.
 
 2. Aşağıdaki adımları izleyerek Northwind örnek veritabanını yüklersiniz:
 
-    1. Visual Studio 'da **SQL Server Nesne Gezgini** penceresini açın. (SQL Server Nesne Gezgini, Visual Studio Yükleyicisi **veri depolama ve işleme** iş yükünün parçası olarak yüklenir.) **SQL Server** düğümünü genişletin. LocalDB örneğinize sağ tıklayıp **Yeni sorgu**' yı seçin.
+    1. Visual Studio 'da **SQL Server Nesne Gezgini** penceresini açın. (SQL Server Nesne Gezgini, Visual Studio Yükleyicisi **veri depolama ve işleme** iş yükünün parçası olarak yüklenir.) **SQL Server** düğümünü genişletin. LocalDB örneğinize sağ tıklayıp **Yeni sorgu** ' yı seçin.
 
        Sorgu Düzenleyicisi penceresi açılır.
 
@@ -59,17 +61,17 @@ Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını 
 
 ## <a name="create-a-windows-forms-application"></a>Windows Forms uygulaması oluşturma
 
-İlk adım **Windows Forms bir uygulama**oluşturmaktır.
+İlk adım **Windows Forms bir uygulama** oluşturmaktır.
 
-1. Visual Studio 'da, **Dosya** menüsünde **Yeni**  >  **Proje**' yi seçin.
+1. Visual Studio 'da, **Dosya** menüsünde **Yeni**  >  **Proje** ' yi seçin.
 
-2. Sol bölmedeki **Visual C#** veya **Visual Basic** genişletip **Windows Masaüstü**' nü seçin.
+2. Sol bölmedeki **Visual C#** veya **Visual Basic** genişletip **Windows Masaüstü** ' nü seçin.
 
 3. Orta bölmede **Windows Forms uygulama** proje türünü seçin.
 
-4. Projeyi **TableAdapterDbDirectMethodsWalkthrough**olarak adlandırın ve ardından **Tamam**' ı seçin.
+4. Projeyi **TableAdapterDbDirectMethodsWalkthrough** olarak adlandırın ve ardından **Tamam** ' ı seçin.
 
-     **TableAdapterDbDirectMethodsWalkthrough** projesi oluşturulup **Çözüm Gezgini**eklenir.
+     **TableAdapterDbDirectMethodsWalkthrough** projesi oluşturulup **Çözüm Gezgini** eklenir.
 
 ## <a name="create-a-data-source-from-your-database"></a>Veritabanınızdan bir veri kaynağı oluşturun
 
@@ -77,13 +79,13 @@ Bu adım, Northwind örnek veritabanındaki tabloya dayalı bir veri kaynağı o
 
 ### <a name="to-create-the-data-source"></a>Veri kaynağı oluşturmak için
 
-1. **Veri** menüsünde **veri kaynaklarını göster**' i seçin.
+1. **Veri** menüsünde **veri kaynaklarını göster** ' i seçin.
 
    **Veri kaynakları** penceresi açılır.
 
-2. Veri **kaynakları** penceresinde, **veri kaynağı Yapılandırma Sihirbazı**' nı başlatmak Için **Yeni veri kaynağı Ekle** ' yi seçin.
+2. Veri **kaynakları** penceresinde, **veri kaynağı Yapılandırma Sihirbazı** ' nı başlatmak Için **Yeni veri kaynağı Ekle** ' yi seçin.
 
-3. **Veri kaynağı türü seçin** ekranında **veritabanı**' nı seçin ve ardından **İleri**' yi seçin.
+3. **Veri kaynağı türü seçin** ekranında **veritabanı** ' nı seçin ve ardından **İleri** ' yi seçin.
 
 4. **Veri bağlantınızı seçin** ekranında aşağıdakilerden birini yapın:
 
@@ -93,13 +95,13 @@ Bu adım, Northwind örnek veritabanındaki tabloya dayalı bir veri kaynağı o
 
     - **Yeni bağlantı** ' yı seçerek **Bağlantı Ekle/Değiştir** iletişim kutusunu başlatın.
 
-5. Veritabanınız parola gerektiriyorsa, hassas verileri dahil etme seçeneğini belirleyin ve ardından **İleri**' yi seçin.
+5. Veritabanınız parola gerektiriyorsa, hassas verileri dahil etme seçeneğini belirleyin ve ardından **İleri** ' yi seçin.
 
-6. **Bağlantı dizesini uygulama yapılandırma dosyasına kaydet** ekranında, **İleri**' yi seçin.
+6. **Bağlantı dizesini uygulama yapılandırma dosyasına kaydet** ekranında, **İleri** ' yi seçin.
 
 7. **Veritabanı nesnelerinizi seçin** ekranında **Tablolar** düğümünü genişletin.
 
-8. Tabloyu seçin `Region` ve ardından **son**' u seçin.
+8. Tabloyu seçin `Region` ve ardından **son** ' u seçin.
 
      **NorthwindDataSet** , projenize eklenir ve `Region` tablo **veri kaynakları** penceresinde görünür.
 
@@ -113,11 +115,11 @@ Windows formunda veri bağlantılı denetimler oluşturmak için, **veri kaynakl
 
 ### <a name="to-add-buttons-that-will-call-the-individual-tableadapter-dbdirect-methods"></a>Bireysel TableAdapter DbDirect yöntemlerini çağıran düğmeler eklemek için
 
-1. <xref:System.Windows.Forms.Button> **Araç kutusundan** üç denetimi **Form1** ( **RegionDataGridView**altında) üzerine sürükleyin.
+1. <xref:System.Windows.Forms.Button> **Araç kutusundan** üç denetimi **Form1** ( **RegionDataGridView** altında) üzerine sürükleyin.
 
 2. Her düğme için aşağıdaki **ad** ve **metin** özelliklerini ayarlayın.
 
-    |Name|Metin|
+    |Ad|Metin|
     |----------|----------|
     |`InsertButton`|**Ekle**|
     |`UpdateButton`|**Güncelleştirme**|
