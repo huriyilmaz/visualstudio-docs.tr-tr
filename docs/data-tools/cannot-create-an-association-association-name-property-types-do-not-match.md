@@ -1,6 +1,7 @@
 ---
 title: Özellik türleri eşleşmiyor
 description: İlişki oluşturulamıyor-Özellik türleri eşleşmiyor. Bu Visual Studio Nesne İlişkisel Tasarımcısı (O/R Designer) iletisiyle ilgili bilgileri görüntüleyin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: error-reference
 ms.assetid: 97ec5a04-6e23-45a2-9226-d77ead854392
@@ -9,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: bce5a285f3bccdc2be8004f0eba4546bb7964a42
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: 8413ffd8b5bf2af4c4d7272173a9cb4d0fbf6cbc
+ms.sourcegitcommit: 63ff7cb85b3baeeb713240d17bb2a18497f3741d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94382058"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94518472"
 ---
 # <a name="cannot-create-an-association-ltassociation-namegt---property-types-do-not-match"></a>İlişki &lt; ilişkilendirme adı oluşturulamıyor &gt; -özellik türleri eşleşmiyor
 
@@ -32,7 +33,7 @@ ms.locfileid: "94382058"
 
 3. **Ilişki özelliklerini** inceleyin ve aynı veri türünde Özellikler ' i seçin.
 
-4. **Tamam** ’a tıklayın.
+4. **Tamam** düğmesine tıklayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

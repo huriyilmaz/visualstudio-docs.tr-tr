@@ -1,6 +1,7 @@
 ---
 title: N Katmanlı bir veri kümesine doğrulama ekleme
 description: Visual Studio 'da n katmanlı bir veri kümesine doğrulama ekleyin. Tek tek sütunlarda veya tüm satırlarda yapılan değişiklikleri doğrulayın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -16,12 +17,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: ecd57066f310886f2941700173d138756f682a0e
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: 4c7891df6de9f12df324c8d79eed5dda0e091d9a
+ms.sourcegitcommit: 63ff7cb85b3baeeb713240d17bb2a18497f3741d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94382136"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94518758"
 ---
 # <a name="add-validation-to-an-n-tier-dataset"></a>N Katmanlı bir veri kümesine doğrulama ekleme
 N katmanlı bir çözüme ayrılmış bir veri kümesine doğrulama eklemek, temelde tek bir dosya veri kümesine (tek bir projede bir veri kümesi) doğrulama ekleme ile aynıdır. Veriler üzerinde doğrulama gerçekleştirmek için önerilen konum, <xref:System.Data.DataTable.ColumnChanging> bir veri tablosunun ve/veya <xref:System.Data.DataTable.RowChanging> olaylarının sayısıdır.

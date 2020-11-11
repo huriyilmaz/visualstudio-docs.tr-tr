@@ -1,6 +1,7 @@
 ---
 title: N katmanlı uygulamalarda TableAdapter’lara kod ekleme
 description: N katmanlı uygulamalardaki tablo bağdaştırıcılarına kod ekleyin. TableAdapter için kısmi bir sınıf dosyası oluşturun ve buna kod ekleyin (örneğin, DatasetName. DataSet. Designer yerine).
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -15,12 +16,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: ed0664b78408e91eeda5b65c26615e870e2171b6
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: 85e89e9800f35fc6d27346b4ed3d4757f83a8dfc
+ms.sourcegitcommit: 63ff7cb85b3baeeb713240d17bb2a18497f3741d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94382370"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94518706"
 ---
 # <a name="add-code-to-tableadapters-in-n-tier-applications"></a>N katmanlı uygulamalarda TableAdapter’lara kod ekleme
 TableAdapter için kısmi bir sınıf dosyası oluşturarak ve buna kod ekleyerek bir TableAdapter 'ın işlevselliğini genişletebilirsiniz ( *DataSetName. DataSet. Designer* dosyasına kod eklemek yerine). Kısmi sınıflar, belirli bir sınıfın kodunu birden çok fiziksel dosyaya bölünecek şekilde etkinleştirir. Daha fazla bilgi için bkz. [kısmi](/dotnet/visual-basic/language-reference/modifiers/partial) veya [kısmi (tür)](/dotnet/csharp/language-reference/keywords/partial-type).

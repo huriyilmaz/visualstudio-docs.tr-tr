@@ -1,6 +1,7 @@
 ---
 title: Hizmet Başvurusu Yapılandırma İletişim Kutusu
 description: Windows Communication Foundation (WCF) hizmetlerinin davranışını yapılandırmak için Visual Studio 'daki hizmet başvurusunu Yapılandır iletişim kutusunu kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -15,12 +16,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 70faee4277625621074b1bd1bfdf667c818e1f46
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: 1dc1d82b0267e5e0655f3ebef8eb08806ad319a8
+ms.sourcegitcommit: 63ff7cb85b3baeeb713240d17bb2a18497f3741d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94382357"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94518732"
 ---
 # <a name="configure-service-reference-dialog-box"></a>Hizmet Başvurusu Yapılandır iletişim kutusu
 

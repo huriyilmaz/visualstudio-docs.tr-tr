@@ -14,12 +14,12 @@ ms.topic: reference
 ms.workload:
 - cplusplus
 monikerRange: vs-2019
-ms.openlocfilehash: 31a7db73a4487267c2a74fe628d28b577d339aba
-ms.sourcegitcommit: 14637be49401f56341c93043eab560a4ff6b57f6
+ms.openlocfilehash: f248ede6a4bb45a58d64a346489124462f304a86
+ms.sourcegitcommit: 63ff7cb85b3baeeb713240d17bb2a18497f3741d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90078843"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94518550"
 ---
 # <a name="c-editorconfig-formatting-conventions"></a>C++ EditorConfig biçimlendirme kuralları
 
@@ -27,10 +27,10 @@ Visual Studio C++ biçimlendiricisi, genel olarak uygulanabilen, zengin bir yap�
 
 ## <a name="c-formatting-conventions"></a>C++ biçimlendirme kuralları
 
-C++ biçimlendirme EditorConfig ayarları ön ekine sahiptir `_cpp__` . Aşağıda, EditorConfig dosyanızın nasıl görünebileceğini bir örnek verilmiştir:
+C++ biçimlendirme EditorConfig ayarları ön ekine sahiptir `cpp_` . Aşağıda, EditorConfig dosyanızın nasıl görünebileceğini bir örnek verilmiştir:
 
 ```ini
-[\*.{c++,cc,cpp,cxx,h,h++,hh,hpp,hxx,inl,ipp,tlh,tli}]
+[*.{c++,cc,cpp,cxx,h,h++,hh,hpp,hxx,inl,ipp,tlh,tli}]
 
 cpp_indent_case_contents_when_block = true
 cpp_new_line_before_open_brace_namespace = same_line

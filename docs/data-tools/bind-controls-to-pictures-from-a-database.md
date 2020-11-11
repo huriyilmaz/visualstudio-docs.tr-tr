@@ -1,6 +1,7 @@
 ---
 title: Bir veritabanından resimlere denetim bağlama
 description: Veritabanındaki bir görüntüyü Visual Studio uygulamanızdaki bir denetime bağlamak için veri kaynakları penceresini kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -18,12 +19,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 6a2033bfe6719ccd325a2409d20fbb0e77d92926
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: 10ea349186aa46bfb58f4b9ceeaab2c8ac3edd81
+ms.sourcegitcommit: 63ff7cb85b3baeeb713240d17bb2a18497f3741d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94382305"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94518576"
 ---
 # <a name="bind-controls-to-pictures-from-a-database"></a>Bir veritabanından resimlere denetim bağlama
 
