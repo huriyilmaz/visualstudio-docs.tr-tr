@@ -1,18 +1,18 @@
 ---
 title: Visual Studio 'da XAML Tasarımcısı tasarım zamanı verilerini kullanma
 description: XAML 'de tasarım zamanı verilerini nasıl kullanacağınızı öğrenin.
-ms.date: 09/29/2020
+ms.date: 11/10/2020
 ms.topic: overview
 author: alihamie
 ms.author: tglee
 manager: jillfra
 monikerRange: vs-2019
-ms.openlocfilehash: b9477868d265e9ad8b927d9e13b67112c0ea14f7
-ms.sourcegitcommit: 6b62e09026b6f1446187c905b789645f967a371c
+ms.openlocfilehash: 1dd0b4df440f6addd474ef08e7bf0b2958a58076
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92298473"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94492904"
 ---
 # <a name="use-design-time-data-with-the-xaml-designer-in-visual-studio"></a>Visual Studio 'da XAML Tasarımcısı tasarım zamanı verilerini kullanma
 
@@ -25,7 +25,7 @@ Bazı mizanpajlar veri olmadan görselleştirilecek. Bu belgede, masaüstü proj
 
 Tasarım zamanı verileri, denetimlerinizi XAML Tasarımcısı görselleştirmeyi kolaylaştırmak için ayarladığınız veri verileri. Başlamak için, zaten mevcut değilse XAML belgenizin üstbilgisine aşağıdaki kod satırlarını ekleyin:
 
-```xml 
+```xml
 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 mc:Ignorable="d"
@@ -138,9 +138,9 @@ Buradaki avantaj, denetimlerinizi modelinizin tasarım zamanı statik sürümün
 
 ## <a name="use-design-time-data-with-custom-types-and-properties"></a>Özel türler ve özelliklerle tasarım zamanı verileri kullanma
 
-Bu özellik varsayılan olarak yalnızca platform denetimleri ve özellikleriyle birlikte kullanılabilir. Bu bölümde, Visual Studio 2019 Preview sürüm [16,8](/visualstudio/releases/2019/preview-notes) veya sonraki bir sürümünü kullanan müşteriler için yeni bir özellik olan tasarım zamanı denetimleri olarak kendi özel denetimlerinizi kullanmanıza imkan tanımak için gereken adımları inceleyeceğiz. Bunu etkinleştirmek için üç gereksinim vardır:
+Bu özellik varsayılan olarak yalnızca platform denetimleri ve özellikleriyle birlikte kullanılabilir. Bu bölümde, Visual Studio 2019 sürüm [16,8](/visualstudio/releases/2019/release-notes/) veya sonraki bir sürümünü kullanan müşteriler için yeni bir özellik olan tasarım zamanı denetimleri olarak kendi özel denetimlerinizi kullanmanıza imkan tanımak için gerekli olan adımlara geçeceğiz. Bunu etkinleştirmek için üç gereksinim vardır:
 
-- Özel bir xmlns ad alanı 
+- Özel bir xmlns ad alanı
 
     ```xml
     xmlns:myControls="http://MyCustomControls"

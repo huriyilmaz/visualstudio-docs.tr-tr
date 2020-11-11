@@ -6,12 +6,12 @@ ms.author: dominicn
 ms.date: 09/19/2019
 ms.assetid: E4B6CB42-9FE2-43B9-93B7-BD4BD50518B1
 ms.topic: how-to
-ms.openlocfilehash: a33b590290880a7e20e7c0ec44c0b12942b1240e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: de6be4b509eff8a013f7367614e0016f810b3657
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85939108"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94492704"
 ---
 # <a name="building-and-cleaning-projects-and-solutions"></a>Projeleri ve çözümleri oluşturma ve Temizleme
 
@@ -22,7 +22,7 @@ Bir çözümdeki projelerin tümünü veya bir kısmını oluşturma, yeniden ol
 
 ## <a name="to-build-rebuild-or-clean-an-entire-solution"></a>Tüm çözümü derlemek, yeniden derlemek veya temizlemek için
 
-1. **Çözüm bölmesi**çözüm düğümünü seçin:
+1. **Çözüm penceresinde** çözüm düğümünü seçin:
 
     ![Çözüm düğümünü seçme](media/compiling-and-building-image1.png)
 
@@ -38,7 +38,7 @@ Bir çözümdeki projelerin tümünü veya bir kısmını oluşturma, yeniden ol
 
 ## <a name="to-build-or-rebuild-a-single-project"></a>Tek bir projeyi derlemek veya yeniden derlemek için
 
-1. **Çözüm bölmesi**projeyi seçin.
+1. **Çözüm penceresinde** projeyi seçin.
 
 2. Menü çubuğundan **Yapı** menüsünü seçin.
 
@@ -54,7 +54,7 @@ Bir derlemeyi durdurmak için, aşağıdaki seçeneklerden birini kullanın:
 
 * **Derleme** menüsündeki **Durdur** öğesini kullanın.
 
-* **Cmd + SHIFT + Return**tuşlarına basın.
+* **Cmd + SHIFT + Return** tuşlarına basın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

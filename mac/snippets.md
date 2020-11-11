@@ -1,20 +1,20 @@
 ---
 title: Kod Parçacıkları
 description: Mac için Visual Studio ' de kod parçacıklarını verimli bir şekilde kullanma
-author: cobey
-ms.author: cobey
-ms.date: 02/07/2019
+author: jmatthiesen
+ms.author: jomatthi
+ms.date: 11/09/2020
 ms.assetid: 0FE27C0C-A861-4133-A74E-8D0505CF5342
-ms.openlocfilehash: 1dacc935549d738ff1b5e84c3ac4420c343155fd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a8fdf70b4d966c644719047eca4249e432561ace
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "68787694"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493458"
 ---
 # <a name="code-snippets"></a>Kod parçacıkları
 
-Genellikle _kod şablonları_olarak anılan kod parçacıkları, önceden yazılmış kod bloklarının eklenmesine ve düzenlenmesine izin veren verimli programlama için yararlıdır. Kod parçacıklarını kullanmak, sık kullanılan desenleri kolayca eklemek veya geliştirici olarak sözdiziminin ne zaman öğreneceğinizden yeni desenler öğrenmek için kullanışlı olabilir. C#, F #, HTML, XML, Python ve Razor için sunulan şablonlar vardır.
+Genellikle _kod şablonları_ olarak anılan kod parçacıkları, önceden yazılmış kod bloklarının eklenmesine ve düzenlenmesine izin veren verimli programlama için yararlıdır. Kod parçacıklarını kullanmak, sık kullanılan desenleri kolayca eklemek veya geliştirici olarak sözdiziminin ne zaman öğreneceğinizden yeni desenler öğrenmek için kullanışlı olabilir. C#, F #, HTML, XML, Python ve Razor için sunulan şablonlar vardır.
 
 Bu bölümde kod içinde kod parçacıklarının nasıl oluşturulacağı, ekleneceği ve kullanılacağı açıklanmaktadır.
 
@@ -26,17 +26,17 @@ Kod parçacıkları eklemenin bazı farklı yolları vardır, bazıları aşağ�
 
   ![Kodda sekme genişletme](media/source-editor-image13.png)
 
-- **Araç kutusu** &ndash; Tüm kod parçacıklarının listesini göstermek için araç kutusu panelini kullanın. Araç kutusundaki herhangi bir şablonu kaynak kodda doğru konuma sürükleyin:
+- **Araç kutusu** &ndash; Tüm kod parçacıklarının listesini göstermek için araç kutusu penceresini kullanın. Araç kutusundaki herhangi bir şablonu kaynak kodda doğru konuma sürükleyin:
 
   [![Araç kutusundaki kod parçacıkları](media/source-editor-image14-sml.png)](media/source-editor-image14.png#lightbox)
 
-- **Şablon Ekle komutu** &ndash; Şu anda şablon eklemek için ayarlanmış varsayılan anahtar bağlama yok. Bir tane oluşturmak için **Visual Studio > tercihleri > anahtar bağlamaları** ' na gidin ve arama yapın `template` . Bu, istenen anahtar bağlamasının düzenleme bağlama alanına eklenmesini sağlar ve ardından **Uygula**' ya tıklayın:
+- **Şablon Ekle komutu** &ndash; Şu anda şablon eklemek için ayarlanmış varsayılan anahtar bağlama yok. Bir tane oluşturmak için **Visual Studio > tercihleri > anahtar bağlamaları** ' na gidin ve arama yapın `template` . Bu, istenen anahtar bağlamasının düzenleme bağlama alanına eklenmesini sağlar ve ardından **Uygula** ' ya tıklayın:
 
   ![İç içe şablon komutu](media/source-editor-image15.png)
 
 ## <a name="creating-a-new-template"></a>Yeni şablon oluşturma
 
-Kullanabileceğiniz ve düzenleyebileceğiniz çeşitli dillerde birçok mevcut şablon varsa, **Visual Studio > tercihleri > metin düzenleyicisi > kod parçacıkları**' na giderek yeni şablonlar da eklenebilir.
+Kullanabileceğiniz ve düzenleyebileceğiniz çeşitli dillerde birçok mevcut şablon varsa, **Visual Studio > tercihleri > metin düzenleyicisi > kod parçacıkları** ' na giderek yeni şablonlar da eklenebilir.
 
 ![Yeni şablonu iç içe](media/source-editor-image12.png)
 

@@ -8,12 +8,12 @@ ms.author: tglee
 author: prnadago
 ms.manager: jillfra
 monikerRange: vs-2019
-ms.openlocfilehash: 71136bb634bd42eaf4933dead8c024b290177da3
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 33606a2b4290735d5c15788a1e6961191d6d92f9
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94434707"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493562"
 ---
 # <a name="git-productivity-in-visual-studio"></a>Visual Studio 'da git üretkenliği
 
@@ -94,7 +94,7 @@ Visual Studio Ayrıca, **Tümünü Kaydet ve** **Tümünü Yürüt ve Tümünü 
 :::image type="content" source="media/git-file-version-compare.png" alt-text="Visual Studio 'da dosya sürümlerinin satır içi karşılaştırmasının ekran görüntüsü ":::
 
 > [!TIP]
-> Azure DevOps deposuna bağlıysanız, "#" karakterini kullanarak Azure DevOps iş öğesini bir COMMIT ile ilişkilendirebilirsiniz. **Takım Gezgini**  >  **bağlantıları yönetmek** için Azure DevOps deponuzu bağlayabilirsiniz.
+> Azure DevOps deposuna bağlıysanız, "#" karakterini kullanarak bir Azure DevOps iş öğesini bir işlemeye ilişkilendirebilirsiniz. **Takım Gezgini**  >  **bağlantıları yönetmek** için Azure DevOps deponuzu bağlayabilirsiniz.
 
 ### <a name="select-an-existing-branch"></a>Mevcut bir dalı seçin
 
@@ -180,7 +180,7 @@ Git ayarlarınızı bir depo düzeyinde ve genel düzeyde kişiselleştirmek ve 
 
 :::image type="content" source="media/git-options-settings.png" alt-text="Visual Studio IDE 'de kişiselleştirme ve özelleştirme ayarları seçebileceğiniz Seçenekler iletişim kutusunun ekran görüntüsü ":::
 
-## <a name="how-to-use-legacy-team-explorer-experience-in-visual-studio"></a>Visual Studio 'da eski Takım Gezgini deneyimini kullanma
+## <a name="how-to-use-the-legacy-team-explorer-experience-in-visual-studio"></a>Visual Studio 'da eski Takım Gezgini deneyimini kullanma
 
 Yeni git deneyimi, Visual Studio 2019 ' deki [sürüm 16,8](/visualstudio/releases/2019/release-notes/) ' den sonraki sürümlerde varsayılan sürüm denetim sistemidir. Ancak, devre dışı bırakmak istiyorsanız, kullanabilirsiniz. **Araçlar**  >  **Seçenekler**  >  **ortam**  >  **Önizleme özellikleri** ' ne gidin ve ardından **Yeni git Kullanıcı deneyimi** onay kutusunu açıp, Eski Takım Gezgini deneyimine geri geçiş yapar.
 

@@ -3,15 +3,15 @@ title: Projenize bir NuGet paketi dahil etme
 description: Bu belge, Mac için Visual Studio kullanarak bir projeye NuGet paketinin nasıl ekleneceğini kapsar. Bir paketi bulmayı ve indirmeyi, Ayrıca IDE tümleştirme özelliklerini tanıtmayı da açıklar.
 author: jmatthiesen
 ms.author: jomatthi
-ms.date: 09/04/2020
+ms.date: 11/09/2020
 ms.assetid: 5C800815-0B13-4B27-B017-95FCEF1A0EA2
 ms.custom: conceptual
-ms.openlocfilehash: e361a1a0fba05a6fdabc66b03008049dfa34784f
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 46ceb99617c6a0e9ba457fdb769c1162090d1d31
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94349337"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493497"
 ---
 # <a name="install-and-manage-nuget-packages-in-visual-studio-for-mac"></a>Mac için Visual Studio NuGet paketlerini yükleyip yönetme
 
@@ -23,7 +23,7 @@ Mac için Visual Studio 'de NuGet kullanma girişi için bkz [. hızlı başlang
 
 ## <a name="find-and-install-a-package"></a>Paket bulma ve yüklemeyi
 
-1. Mac için Visual Studio bir proje açıkken, **çözüm bölmesi** **Bağımlılıklar** klasörüne (Xamarin projesi kullanılıyorsa **paketler** klasörü) sağ tıklayın ve **NuGet Paketlerini Yönet..**. seçeneğini belirleyin.
+1. Mac için Visual Studio bir proje açıkken, **çözüm penceresinde** **Bağımlılıklar** klasörüne (Xamarin projesi kullanılıyorsa **paketler** klasörü) sağ tıklayın ve **NuGet Paketlerini Yönet...** seçeneğini belirleyin.
 
     ![Yeni NuGet paketi bağlam eylemi Ekle](media/nuget-walkthrough-packages-menu.png)
 
@@ -85,7 +85,7 @@ Son olarak, iletişim kutusunun **güncelleştirmeler** sekmesinde, güncelleşt
 ![Yüklü sekmesine açılan, seçili bir paket ve yeni sürüm açılan listesi açık olan NuGet Paketlerini Yönet iletişim kutusu.](media/nuget-walkthrough-packages-nuget-dialog-update-installed-package.png)
 
 ### <a name="locating-outdated-packages"></a>Güncel olmayan paketleri bulma
-Çözüm panelinden, bir paketin hangi sürümünün yüklü olduğunu görüntüleyebilir ve güncelleştirilecek pakete sağ tıklamakta tıklayabilirsiniz.
+Çözüm penceresinde, şu anda yüklü olan bir paketin sürümünü görüntüleyebilir ve güncelleştirilecek pakete sağ tıklamakta tıklayabilirsiniz.
 
 ![Güncelleştirme, kaldırma, yenileme seçeneklerini içeren paketler menüsü](media/nuget-walkthrough-PackageMenu.png)
 

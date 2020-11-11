@@ -1,21 +1,21 @@
 ---
 title: ASP.NET Core Kullanmaya Başlama
 description: Bu makalede, yükleme ve yeni bir proje oluşturma dahil olmak üzere Mac için Visual Studio ' de ASP.NET ile çalışmaya başlama açıklanmaktadır.
-author: sayedihashimi
-ms.author: sayedha
-ms.date: 04/02/2019
+author: jmatthiesen
+ms.author: jomatthi
+ms.date: 11/06/2020
 ms.assetid: 6E8B0C90-33D6-4546-8207-CE0787584565
 ms.custom: video
 no-loc:
 - Blazor
 - Blazor WebAssembly
 ms.topic: how-to
-ms.openlocfilehash: 7f8795b798b492370a08e55171c5627485c7869a
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: a2f45069967df412f9245f8044c53ef425a00fdf
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584067"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493367"
 ---
 # <a name="getting-started-with-aspnet-core"></a>ASP.NET Core Kullanmaya Başlama
 
@@ -44,13 +44,13 @@ ASP.NET Core uygulamanızı oluşturmaya başlamak için size önceden oluşturu
 
 ![ASP.NET proje seçenekleri](media/asp-net-core-2019-new-asp-core.png)
 
-**Boş ASP.NET Core Web uygulaması** ' nı seçin ve **İleri**' ye basın. Projeye bir ad verin ve **Oluştur**' a basın. Bu, yeni bir ASP.NET Core uygulaması oluşturur. Çözüm panelinin sol bölmesinde, ikinci oku genişletin ve ardından **Startup.cs**' ı seçin. Aşağıdaki görüntüye benzer görünmelidir:
+**Boş ASP.NET Core Web uygulaması** ' nı seçin ve **İleri** ' ye basın. Projeye bir ad verin ve **Oluştur** ' a basın. Bu, yeni bir ASP.NET Core uygulaması oluşturur. Çözüm penceresinin sol bölmesinde, ikinci oku genişletin ve ardından **Startup.cs** ' ı seçin. Aşağıdaki görüntüye benzer görünmelidir:
 
 ![Yeni ASP.NET Core boş proje görünümü](media/asp-net-core-2019-empty-project.png)
 
 ASP.NET Core boş şablon, aşağıda açıklanan iki varsayılan dosya içeren bir Web uygulaması oluşturur: **program.cs** ve **Startup.cs**. Ayrıca, projenin ASP.NET Core, .NET Core Framework ve projeyi oluşturan MSBuild hedefleri gibi NuGet paket bağımlılıklarını içeren bir bağımlılıklar klasörü de oluşturur:
 
-![Bağımlılıkları görüntüleme Çözüm Bölmesi](media/asp-net-core-2019-solution-dependencies.png)
+![Bağımlılıkları görüntüleyen çözüm penceresi](media/asp-net-core-2019-solution-dependencies.png)
 
 ### <a name="programcs"></a>Program.cs
 
@@ -128,7 +128,7 @@ Bu basit Merhaba, Dünya Projesi artık ek kod eklenmeksizin çalıştırılabil
 
 ![Tarayıcı çalıştırması](media/asp-net-web-picker.png)
 
-Mac için Visual Studio, Web projenizi başlatmak için rastgele bir bağlantı noktası kullanır. Bu bağlantı noktasını öğrenmek için, **görünüm > Pad**altında listelenen uygulama çıktısını açın. Aşağıdakine benzer bir çıktıyı aşağıda gösterildiği gibi bulmalısınız:
+Mac için Visual Studio, Web projenizi başlatmak için rastgele bir bağlantı noktası kullanır. Bu bağlantı noktasını öğrenmek için, **diğer Windows > görüntüle** menüsünden listelenen uygulama çıktısını açın. Aşağıdakine benzer bir çıktıyı aşağıda gösterildiği gibi bulmalısınız:
 
 ![Dinleme bağlantı noktasını görüntüleyen uygulama çıkışı](media/asp-net-core-image6.png)
 
@@ -138,17 +138,17 @@ Proje çalışmaya başladıktan sonra varsayılan Web tarayıcınız, uygulama 
 
 ## <a name="adding-a-controller"></a>Denetleyici Ekleme
 
-ASP.NET Core uygulamalar, uygulamanın her bir bölümü için bir sorumluluk için bir mantık ayrımı sağlamak üzere Model-View-Controller (MVC) tasarım modelini kullanır. MVC aşağıdakilerden oluşur:
+ASP.NET Core uygulamalar, uygulamanın her bir bölümü için bir sorumluluk için bir mantık ayrımı sağlamak üzere Model-View-Controller (MVC) tasarım modelini kullanır. MVC tasarım stili aşağıdaki kavramlardan oluşur:
 
-- **Model**: uygulamanın verilerini temsil eden bir sınıf.
-- **Görünüm**: uygulamanın kullanıcı arabirimini (genellikle model verileri) görüntüler.
-- **Denetleyici**: Tarayıcı isteklerini işleyen, kullanıcı girişine ve etkileşime yanıt veren bir sınıf.
+- **Model** : uygulamanın verilerini temsil eden bir sınıf.
+- **Görünüm** : uygulamanın kullanıcı arabirimini (genellikle model verileri) görüntüler.
+- **Denetleyici** : Tarayıcı isteklerini işleyen, kullanıcı girişine ve etkileşime yanıt veren bir sınıf.
 
-MVC kullanma hakkında daha fazla bilgi için [, ASP.NET Core MVC kılavuzuna genel bakış](/aspnet/core/mvc/overview) bölümüne bakın.
+MVC kullanma hakkında daha fazla bilgi için [ASP.NET Core MVC kılavuzuna genel bakış](/aspnet/core/mvc/overview) bölümüne bakın.
 
 Bir denetleyici eklemek için aşağıdakileri yapın:
 
-1. Proje adına sağ tıklayın ve **> yeni dosya Ekle**' yi seçin. **Genel > boş sınıfı**' nı seçin ve bir denetleyici adı girin:
+1. Proje adına sağ tıklayın ve **> yeni dosya Ekle** ' yi seçin. **Genel > boş sınıfı** ' nı seçin ve bir denetleyici adı girin:
 
     ![Yeni dosya iletişim kutusu](media/asp-net-core-image8.png)
 
@@ -177,7 +177,7 @@ Bir denetleyici eklemek için aşağıdakileri yapın:
 
 3. Bağımlılık `Microsoft.AspNetCore.Mvc` klasörüne sağ tıklayıp **paket Ekle...** seçeneğini belirleyerek **Dependency** bağımlılığı projeye ekleyin.
 
-4. İçin NuGet kitaplığına gitmek için arama kutusunu kullanın `Microsoft.AspNetCore.Mvc` ve **paket Ekle**' yi seçin. Bu işlem birkaç dakika sürebilir ve gerekli bağımlılıklar için çeşitli lisanslar kabul etmeniz istenebilir:
+4. İçin NuGet kitaplığına gitmek için arama kutusunu kullanın `Microsoft.AspNetCore.Mvc` ve **paket Ekle** ' yi seçin. Bu işlem birkaç dakika sürebilir ve gerekli bağımlılıklar için çeşitli lisanslar kabul etmeniz istenebilir:
 
     ![NuGet Ekle](media/asp-net-core-image9.png)
 
@@ -230,7 +230,7 @@ Bir denetleyici eklemek için aşağıdakileri yapın:
 
 ## <a name="troubleshooting"></a>Sorun giderme
 
-.NET Core 'u Mac OS 10,12 (Sierra) ve daha yüksek sürüme el ile yüklemeniz gerekiyorsa aşağıdakileri yapın:
+MacOS 10,12 (Sierra) ve üzeri sürümlerde .NET Core 'u el ile yüklemeniz gerekiyorsa şunları yapın:
 
 1. .NET Core 'u yüklemeye başlamadan önce, tüm işletim sistemi güncelleştirmelerini en son kararlı sürüme güncelleştirdiğinizden emin olun. Bunu, App Store uygulamasına gidip Güncelleştirmeler sekmesini seçerek kontrol edebilirsiniz.
 
@@ -242,7 +242,7 @@ Bir denetleyici eklemek için aşağıdakileri yapın:
 
 Bu kılavuz ASP.NET Core bir giriş verdi. Ne olduğunu, ne zaman kullanılacağını ve Mac için Visual Studio ' de kullanma hakkında bilgi sağlandığını açıklar.
 Buradaki sonraki adımlar hakkında daha fazla bilgi için aşağıdaki kılavuzlara bakın:
-- Belgeleri [ASP.NET Core](/aspnet/core/?view=aspnetcore-2.1) .
+- Belgeleri [ASP.NET Core](/aspnet/core/) .
 - [Yerel mobil uygulamalar Için arka uç hizmetleri oluşturma](/aspnet/core/mobile/native-mobile-backend), bir Xamarin. Forms uygulaması için ASP.NET Core kullanarak REST hizmeti oluşturmayı gösterir.
 - [Uygulamalı laboratuvar ASP.NET Core](https://github.com/Microsoft/vs4mac-labs/tree/master/Web/Getting-Started).
 

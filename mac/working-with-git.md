@@ -3,15 +3,15 @@ title: Git ile çalışma
 description: Mac için Visual Studio git 'i kullanma.
 author: jmatthiesen
 ms.author: jomatthi
-ms.date: 05/06/2018
+ms.date: 11/09/2020
 ms.assetid: 852B6A9D-AEFA-4EF4-A5DD-94A506019D20
 ms.custom: video
-ms.openlocfilehash: 767c08505877391d71ca085097a0464d516f4f24
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 148a72fb13ff34e3fa15f0c56e145a70fa16608d
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "70108019"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493237"
 ---
 # <a name="working-with-git"></a>Git ile çalışma
 
@@ -27,9 +27,9 @@ Aşağıdaki görüntüde sürüm denetim menüsü öğesi tarafından Mac için
 
 ## <a name="push-and-pull"></a>Gönderim ve çekme
 
-Git içinde en sık kullanılan eylemlerden biri gönderiliyor ve çekiliyor. Diğer kişilerin uzak depoya yaptığı değişiklikleri eşleştirmek için Buradan **çekmeniz** gerekir. Bu, **sürüm denetimi > güncelleştirme çözümü**seçilerek Mac için Visual Studio yapılır.
+Git içinde en sık kullanılan eylemlerden biri gönderiliyor ve çekiliyor. Diğer kişilerin uzak depoya yaptığı değişiklikleri eşleştirmek için Buradan **çekmeniz** gerekir. Bu, **sürüm denetimi > güncelleştirme çözümü** seçilerek Mac için Visual Studio yapılır.
 
-Dosyalarınızı güncelleştirdikten sonra gözden geçirdikten ve kaydettikten sonra başkalarının değişikliklere erişmesine izin vermek **için bunları uzak** depoya göndermeniz gerekir. Bu, **sürüm denetimi > gönderme değişiklikleri**seçilerek Mac için Visual Studio yapılır. Bu, anında Iletme iletişim kutusunu görüntüleyerek, kaydedilen değişiklikleri görüntülemenize ve şu şekilde gönderim yapılacak dalı seçmenizi sağlar:
+Dosyalarınızı güncelleştirdikten sonra gözden geçirdikten ve kaydettikten sonra başkalarının değişikliklere erişmesine izin vermek **için bunları uzak** depoya göndermeniz gerekir. Bu, **sürüm denetimi > gönderme değişiklikleri** seçilerek Mac için Visual Studio yapılır. Bu, anında Iletme iletişim kutusunu görüntüleyerek, kaydedilen değişiklikleri görüntülemenize ve şu şekilde gönderim yapılacak dalı seçmenizi sağlar:
 
 ![Yürütülecek dalı gösteren iletişim kutusu](media/version-control-gitPush.png)
 
@@ -65,7 +65,7 @@ Bağımsız bir geliştirme hattı, ana öğe (veya başka bir dal) üzerinde da
 
 Kullanıcılar her depo için istedikleri kadar çok dal oluşturabilir, ancak bir dalı kullanmayı bitirdikten sonra depoyu düzenli tutmak üzere silmiş olması önerilir.
 
-Dallar, sürüm denetimine göz atarak Mac için Visual Studio **ve uzak dalları yönetmek > görüntülenir...**:
+Dallar, sürüm denetimine göz atarak Mac için Visual Studio **ve uzak dalları yönetmek > görüntülenir...** :
 
 ![Dallar görünümü](media/version-control-gitBranch2.png)
 
@@ -77,9 +77,9 @@ Yeni bir dal oluşturmak için Git deposu yapılandırma iletişim kutusunda **Y
 
 Ayrıca, _izleme_ dalınıza uzak bir dal ayarlayabilirsiniz. [Git belgelerindeki](https://git-scm.com/book/en/v2/Git-Branching-Remote-Branches#Tracking-Branches)dalları izleme hakkında daha fazla bilgi edinin.
 
-Proje adının yanındaki Çözüm Bölmesi geçerli dala bakın:
+Proje adının yanındaki çözüm penceresinde geçerli dala bakın:
 
- ![Geçerli dal çözüm panelinde gösteriliyor](media/version-control-gitBranchName.png)
+ ![Geçerli dal çözüm penceresinde görüntülendi](media/version-control-gitBranchName.png)
 
 ## <a name="reviewing-and-committing"></a>İnceleme ve kaydetme
 
@@ -91,7 +91,7 @@ Sürüm denetimine göz atarak, **çözüm ve COMMIT menü öğesini gözden ge�
 
 Bu, bir proje dosyasındaki tüm değişikliklerin, alma, düzeltme eki oluşturma veya tamamlama seçeneğiyle görüntülenmesine olanak sağlar.
 
-Uzak depoya bir dosyayı kaydetmek için, **Kaydet**' e basın, bir teslim iletisi girin ve Kaydet düğmesini kullanarak onaylayın:
+Uzak depoya bir dosyayı kaydetmek için, **Kaydet** ' e basın, bir teslim iletisi girin ve Kaydet düğmesini kullanarak onaylayın:
 
 ![Dosya yürütülüyor](media/version-control-gitCommit.png)
 

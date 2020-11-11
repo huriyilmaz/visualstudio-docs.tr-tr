@@ -7,12 +7,12 @@ ms.date: 05/06/2018
 ms.technology: vs-ide-install
 ms.assetid: 26A0DE31-2FBF-4E1B-99FB-083111AA1680
 ms.topic: how-to
-ms.openlocfilehash: adeab06341c0691bdb902a3bb8a813ac38d786f6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c7269b4272fb8ed2c73dbe9f57e94da071dc623e
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85938518"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493070"
 ---
 # <a name="creating-and-editing-a-custom-editorconfig-file"></a>Özel bir EditorConfig dosyası oluşturma ve düzenleniyor
 
@@ -51,7 +51,7 @@ EditorConfig, C# ' de [kodlama kurallarını](/visualstudio/ide/editorconfig-cod
 
     Öğeyi çözüm düzeyinde eklemek, bir **Çözüm öğeleri** klasörü içinde otomatik olarak oluşturur ve oluşturur:
 
-    ![Çözüm panelinde görünen çözüm öğesi](media/editorconfig-image1a.png)
+    ![Çözüm penceresinde görünen çözüm öğesi](media/editorconfig-image1a.png)
 
 4. Dosyayı düzenleyin. Örneğin:
 
@@ -80,17 +80,17 @@ Zaten bir dosya içeren bir proje veya çözümle çalışıyorsanız `.editorco
 
 Projenizde var olan bir dosyayı yeniden kullanmak isteyebilirsiniz `.editorconfig` . Var olan bir dosyayı eklemek için aşağıdakileri yapın:
 
-1. Eklemek istediğiniz klasöre sağ tıklayın ve Ekle **> dosya Ekle**' yi seçin.
+1. Eklemek istediğiniz klasöre sağ tıklayın ve Ekle **> dosya Ekle** ' yi seçin.
 
 2. Gerekli dosyanın dizinine gidin.
 
 3. `.`(Gibi) ile başlayan dosyalar `.editorconfig` MacOS 'ta gizli dosyalardır, bu nedenle **Command + SHIFT +** tuşlarına basın. dosyayı görünür hale getirmek için `.editorconfig` .
 
-4. Dosyayı seçin `.editorconfig` ve **Aç**' a tıklayın:
+4. Dosyayı seçin `.editorconfig` ve **Aç** ' a tıklayın:
 
     ![Yeni dosya penceresi ekleme](media/editorconfig-image3b.png)
 
-5. Aşağıdaki iletişim kutusunda, **dosyayı dizine Kopyala** seçeneğini belirleyin ve **Tamam**' ı seçin:
+5. Aşağıdaki iletişim kutusunda, **dosyayı dizine Kopyala** seçeneğini belirleyin ve **Tamam** ' ı seçin:
 
     ![Klasöre dosya Ekle iletişim kutusu seçenekleri](media/editorconfig-image3.png)
 
@@ -123,15 +123,15 @@ csharp_new_line_before_open_brace = none
 
 `root` `true` Bu dosyayı, kod temelinin en üstteki dosyası olarak işaretler ve proje içindeki tüm daha yüksek `.editorconfig` dosyalar, [Editorconfig ayarlarını geçersiz kıl](#override-editorconfig-settings) bölümünde açıklandığı gibi yok sayılır.
 
-Her bölüm kare (**[]**) ayraçları ile gösterilir ve aşağıdaki özelliklerin ait olduğu dosya türleri hakkında bilgi belirtir.
+Her bölüm kare ( **[]** ) ayraçları ile gösterilir ve aşağıdaki özelliklerin ait olduğu dosya türleri hakkında bilgi belirtir.
 
 Yukarıdaki örnekte, bazı ayarlar projedeki tüm dosyalara uygulanır ve diğer kullanıcılar yalnızca C# dosyalarına eklenir. Aşağıdaki ekran görüntüleri, ayarlar uygulandıktan önce ve sonra gösterilmektedir `.editorconfig` :
 
-**Önce**:
+**Önce** :
 
 ![Editorconfig ayarları uygulanmadan önce](media/editorconfig-image4.png)
 
-**Sonra**:
+**Sonra** :
 
 ![editorconfig ayarları uygulandıktan sonra](media/editorconfig-image5.png)
 

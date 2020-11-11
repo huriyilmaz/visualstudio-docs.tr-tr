@@ -3,28 +3,28 @@ title: Hata ayıklama-veri görselleştirmeleri
 description: Hata ayıklama, programlama için ortak ve gerekli bir parçasıdır. Mac için Visual Studio hata ayıklamayı kolay hale getirmek için bir bütün özellik paketini içerir. Bu makale, hata ayıklayıcıdaki nesneler incelenirken görüntülenebilecek farklı veri görselleştirmelerine bakar.
 author: jmatthiesen
 ms.author: jomatthi
-ms.date: 05/06/2018
+ms.date: 11/09/2020
 ms.technology: vs-ide-debug
 ms.assetid: 527E6BEC-EF15-4002-ACB5-62AE1C16F6B7
-ms.openlocfilehash: 14696040160dfc33f89b7647fb73b116b41afa16
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 838762435268ea06c09392475f294dbb22c3038d
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "67691739"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493250"
 ---
 # <a name="data-visualizations"></a>Veri görselleştirmeleri
 
 Mac için Visual Studio hata ayıklayıcı için Kullanıcı arabirimi desteği içerir ve hata ayıklama sırasında değişken, alan veya özellik değerlerinin görselleştirmelerini sağlar. Bu veri Görselleştiriciler, verilerin genişletilmiş bir sürümünü gösterir ve geliştiricilerin bilinen yapıları inceleyerek, örneğin bir Color yapısının rengini gösterir.
 
-Hata ayıklama  **Yerel** panelindeki Görselleştiriciler, Kullanıcı satırın üzerine geldiğinde değerin sağında görüntülenen Önizleme simgesine tıklanarak görüntülenebilir:
+Hata Ayıkla  **Yereller** penceresindeki Görselleştiriciler, Kullanıcı satırın üzerine geldiğinde değerin sağında görüntülenen Önizleme simgesine tıklanarak görüntülenebilir:
 
-![Yerel panel](media/data-visualizations-image9.png)
+![Yereller penceresi](media/data-visualizations-image9.png)
 
 Aşağıdaki liste, Mac için Visual Studio hata ayıklamada bulunan yeni görselleştirmelerin çoğuna bakar.
 
 ## <a name="point"></a>Seçeneğinin
-İOS ve Mac 'teki bir Point/PointF ya da CGPoint, hata ayıklama panelindeki X ve Y değerlerini gösteren bir kayıt düzeni olarak işlenir:
+İOS ve Mac 'teki bir Point/PointF ya da CGPoint, hata ayıklama pencerelerinin X ve Y değerlerini gösteren bir kayıt düzeni olarak işlenir:
 
 ![Nokta görselleştirme](media/data-visualizations-image10.png)
 
@@ -43,7 +43,7 @@ Koordinatlar, merkeze sabitlenmiş konum ile bir haritada çizilir:
 
 [Koordinat görselleştirme](media/data-visualizations-image13.png)
 
-## <a name="color"></a>Color
+## <a name="color"></a>Renk
 Bu, renk önizlemesi, RGBA bileşenleri, Ton doygunluğu ve açıklık değerlerinin yanı sıra rengin onaltılı değerini gösteren Uıicton, CGColor ve Color özelliklerini görüntüler:
 
 ![Renk görselleştirme](media/data-visualizations-image14.png)

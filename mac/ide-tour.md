@@ -3,15 +3,15 @@ title: Mac için Visual Studio turu
 description: Mac için Visual Studio, macOS 'ta iOS, Android, Mac ve Xamarin. Forms için ASP.NET Core Web siteleri ve Xamarin projeleri gibi .NET uygulamaları oluşturmaya yönelik tümleşik bir geliştirme ortamı sağlar.
 author: heiligerdankgesang
 ms.author: dominicn
-ms.date: 07/03/2020
+ms.date: 11/09/2020
 ms.assetid: 7DC64A52-AA41-4F3A-A8A1-8A20BCD81CC7
 ms.custom: video
-ms.openlocfilehash: a385e58f73edbcea6eb25b7b2e2728e00f9bcb8d
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: a2caadd454564b389f48987e69e1bc08475affea
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584015"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493276"
 ---
 # <a name="visual-studio-2019-for-mac-tour"></a>Mac için Visual Studio 2019 Tur turu
 
@@ -36,7 +36,7 @@ Bu makalede, bu uygulamaların oluşturulmasına yönelik güçlü bir araç hal
 
 Mac için Visual Studio, uygulama dosyalarını ve ayarlarını yönetmek, uygulama kodu oluşturmak ve hata ayıklamak için çeşitli bölümler halinde düzenlenmiştir.
 
-## <a name="getting-started"></a>Kullanmaya başlama
+## <a name="getting-started"></a>Başlarken
 
 Mac için Visual Studio 2019 ' i ilk kez başlattığınızda, yeni kullanıcılar bir oturum açma penceresi görür. Ücretli bir lisansı etkinleştirmek (varsa) veya Azure aboneliklerine bağlanmak için Microsoft hesabı ile oturum açın. Bunu **daha sonra yapacağım** ve daha sonra **Visual Studio > oturum açma** menü öğesi aracılığıyla oturum açacağım.
 
@@ -58,11 +58,11 @@ Aşağıdaki görüntüde, yüklü bir uygulamayla birlikte Mac için Visual Stu
 
 Aşağıdaki bölümlerde Mac için Visual Studio içindeki önemli alanlara genel bir bakış sağlanmaktadır.
 
-## <a name="solution-pad"></a>Çözüm paneli
+## <a name="solution-window"></a>Çözüm penceresi
 
-Çözüm Bölmesi bir çözümde proje (ler) i düzenler:
+Çözüm penceresi bir çözümdeki projeleri düzenler:
 
-![Çözüm Bölmesi düzenlenmiş projeler](media/ide-tour-image18.png)
+![Çözüm penceresinde düzenlenmiş projeler](media/ide-tour-image18.png)
 
 Bu, kaynak kodu, kaynaklar, Kullanıcı arabirimi ve bağımlılıkların dosyaları platforma özgü projelere göre düzenlenir.
 
@@ -72,7 +72,7 @@ Mac için Visual Studio 'de projeleri ve çözümleri kullanma hakkında daha fa
 
 Her proje için derleme başvuruları, başvurular klasörü altında kullanılabilir:
 
-![Çözüm panelinde başvurular klasörü](media/ide-tour-image19.png)
+![Çözüm penceresinde başvurular klasörü](media/ide-tour-image19.png)
 
 Başvurular klasörüne çift tıklanarak veya bağlam menüsü eylemlerinde **başvuruları Düzenle** ' yi seçerek görüntülenen **başvuruları Düzenle** iletişim kutusu kullanılarak ek başvurular eklenir:
 
@@ -86,7 +86,7 @@ Uygulamanızda kullanılan tüm dış bağımlılıklar, .NET Core veya Xamarin.
 
 NuGet, .NET geliştirme için en popüler paket yöneticisidir. Visual Studio 'nun NuGet desteğiyle, kolayca uygulamanıza paket arayabilir ve uygulamanızı ekleyebilirsiniz.
 
-Uygulamanıza bir bağımlılık eklemek için bağımlılıklar/paketler klasörüne sağ tıklayın ve **Paketleri Ekle**' yi seçin:
+Uygulamanıza bir bağımlılık eklemek için bağımlılıklar/paketler klasörüne sağ tıklayın ve **Paketleri Ekle** ' yi seçin:
 
 ![NuGet paketi ekleme](media/ide-tour-image21.png)
 
@@ -135,9 +135,9 @@ Mac için Visual Studio, git ve alt sürüm kaynak denetimi sistemleriyle tümle
 
 ![Kaynak denetimi altında projeyi gösterecek dal adı](media/ide-tour-image22.png)
 
-Kaydedilmemiş değişiklikleri olan dosyalar, aşağıdaki görüntüde gösterildiği gibi, çözüm bölmesindeki simgelerinde ek açıklamasına sahiptir:
+Kaydedilmemiş değişiklikleri olan dosyalar, aşağıdaki görüntüde gösterildiği gibi, çözüm penceresindeki simgelerinde ek açıklamaya sahiptir:
 
-![Çözüm panelinde işlenmemiş dosyalar](media/ide-tour-image23.png)
+![Çözüm penceresinde işlenmemiş dosyalar](media/ide-tour-image23.png)
 
 Visual Studio 'da sürüm denetimini kullanma hakkında daha fazla bilgi için [sürüm denetimi](./version-control.md) makalesine bakın.
 

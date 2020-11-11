@@ -6,20 +6,20 @@ ms.author: dominicn
 ms.date: 09/23/2019
 ms.assetid: 87D22340-2BE6-40EE-ACFD-3CF1BA886175
 ms.topic: how-to
-ms.openlocfilehash: 7b0959c8a2f91e340a8b173d94fb2dbd9e2d9474
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f56141cb59cc679993140e2ed2093fe1cb9d9790
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88801821"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493471"
 ---
 # <a name="set-ide-accessibility-options"></a>IDE erişilebilirlik seçeneklerini ayarlama
 
 MacOS 'a doğrudan yerleştirilmiş özelliklerin yanı sıra Mac için Visual Studio, farklı yetenekler kullanıcılarına olanak tanımak için birçok erişilebilirlik özelliğine sahiptir.
 
-## <a name="resize-pad-and-editor-content"></a>Paneli ve düzenleyici içeriğini yeniden boyutlandır
+## <a name="resize-tool-windows-and-editor-content"></a>Araç pencerelerini ve düzenleyici içeriğini yeniden boyutlandır
 
-1. İçeriği yeniden boyutlandırmak istediğiniz Pad veya pencereyi seçin.
+1. İçeriği yeniden boyutlandırmak istediğiniz araç penceresini veya düzenleyici penceresini seçin.
 
 1. Görünüm ' ü **(menü)** seçin ve ardından **Yakınlaştır ' ı (&#8984;+)** veya **uzaklaştır (&#8984;-)** seçeneğini belirleyin.
 
@@ -28,18 +28,18 @@ MacOS 'a doğrudan yerleştirilmiş özelliklerin yanı sıra Mac için Visual S
 
 ## <a name="change-the-content-font-and-size"></a>İçerik yazı tipini ve boyutunu değiştirme
 
-Mac için Visual Studio çoğu defterde içeriğin yazı tipini ve boyutunu özelleştirmek mümkündür. Bunu yapmak için:
+Mac için Visual Studio ' deki çoğu araç penceresinde içeriğin yazı tipini ve boyutunu özelleştirmek mümkündür. Aşağıdaki adımları uygulayın:
 
 1. **Visual Studio (menü)**  >  **tercihlerine git... (&#8984;,)**.
 
-1. **Tercihler**' de **ortam**  >  **yazı tipleri**' ne gidin.
+1. **Tercihler** ' de **ortam**  >  **yazı tipleri** ' ne gidin.
 
-1. **Metin Düzenleyicisi**, **genel Pad metni**veya **Çıkış paneli içerikleri**için yazı tipi ve boyut düğmesini seçin.
+1. **Metin Düzenleyicisi** , **genel araç penceresi metni** veya **Çıkış penceresi içerikleri** için yazı tipi ve boyut düğmesini seçin.
 
-1. İstediğiniz yazı tipini, stili ve boyutu seçin ve **Tamam**' ı seçin.
+1. İstediğiniz yazı tipini, stili ve boyutu seçin ve **Tamam** ' ı seçin.
 
 > [!TIP]
-> Her ayar için varsayılan yazı tipine ve stile geri dönmek için **Varsayılan olarak ayarla**' yı seçin.
+> Her ayar için varsayılan yazı tipine ve stile geri dönmek için **Varsayılan olarak ayarla** ' yı seçin.
 
 ## <a name="change-the-editor-syntax-highlighting"></a>Düzenleyici söz dizimi vurgulamasını değiştirme
 
@@ -47,7 +47,7 @@ Bazı kullanıcılar varsayılan renk düzeninin karşıtlığın veya renk gere
 
 1. **Visual Studio (menü)**  >  **tercihlerine git... (&#8984;,)**.
 
-1. **Tercihler**bölümünde **metin düzenleyici**  >  **renk teması**' na gidin.
+1. **Tercihler** bölümünde **metin düzenleyici**  >  **renk teması** ' na gidin.
 
 1. İstediğiniz temayı seçin.
 

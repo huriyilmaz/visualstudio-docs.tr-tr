@@ -1,6 +1,7 @@
 ---
 title: Klasöre yayımlama
-ms.date: 04/02/2019
+description: Mac için Visual Studio kullanarak bir Web uygulamasını bir klasöre yayımlama.
+ms.date: 11/09/2020
 helpviewer_keywords:
 - deployment, website, console, publish
 ms.assetid: e963fb4b-6d32-4d45-86bb-ef7e4d3028b0
@@ -9,12 +10,12 @@ ms.author: sayedha
 manager: unniravindranathan
 ms.prod: visual-studio-mac
 ms.topic: how-to
-ms.openlocfilehash: 42d1d76275afd4944791137b97e04dd499e36083
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 640cdf8b9c31bad42f8c5664f3cef44c558e2a3a
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91583950"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493419"
 ---
 # <a name="publish-to-a-folder-using-visual-studio-for-mac"></a>Mac için Visual Studio kullanarak bir klasöre yayımlama
 
@@ -23,13 +24,13 @@ ms.locfileid: "91583950"
 ## <a name="prerequisites"></a>Önkoşullar
 
 - .NET Core etkinken [Mac Için Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs4mac2019) yüklendi.
-- Bir .NET Core konsolu veya ASP.NET Core projesi. Zaten bir projeniz yoksa [Yeni bir tane oluşturabilirsiniz](./create-new-projects.md?view=vsmac-2019).
+- Bir .NET Core konsolu veya ASP.NET Core projesi. Zaten bir projeniz yoksa [Yeni bir tane oluşturabilirsiniz](./create-new-projects.md).
 
 ## <a name="publish-to-folder"></a>Klasöre Yayımlama
 
 Mac için Visual Studio kullanarak .NET Core projelerinizi Yayımla aracını kullanarak bir klasöre yayımlayabilirsiniz. Bir klasöre yayımladıktan sonra, dosyaları farklı bir ortama aktarabilirsiniz. Bir klasöre yayımlamak için aşağıdaki adımları izleyin.
 
- 1. Çözüm Bölmesi projeye sağ tıklayın ve **Yayımla**' yı seçin.
+ 1. Çözüm penceresinde projeye sağ tıklayın ve **Yayımla** ' yı seçin.
 
     ![Yayımla bağlam menüsü](media/publish-context-menu.png)
 

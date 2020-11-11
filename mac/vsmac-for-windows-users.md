@@ -1,20 +1,20 @@
 ---
 title: Windows kullanıcıları için Mac için Visual Studio
-description: Mac için Visual Studio erişilebilirlik özelliklerinin ve bunların nasıl etkinleştiribilecekleri hakkında giriş.
+description: Windows işletim sisteminde Visual Studio 'Yu kullanarak tanıdık geliştiriciler için Mac için Visual Studio tanıtım.
 author: heiligerdankgesang
 ms.author: dominicn
-ms.date: 09/25/2019
+ms.date: 11/09/2020
 ms.assetid: 61CB6883-08CE-470F-8599-6F7570DB756E
-ms.openlocfilehash: b414026ba7297dd6c93fecdf56d9a9c58c99f294
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 880811c675aac34a18a65c6eccb8ee10f3347d4c
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74984264"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493380"
 ---
 # <a name="visual-studio-for-mac-for-windows-users"></a>Windows kullanıcıları için Mac için Visual Studio
 
-Bir işletim sisteminden diğerine geçiş yapmak çok fazla olabilir. Platformlar arası uygulamalarda, kullanıcı arabiriminden menü öğelerinin kategorilere ayrılması arasında genellikle daha hafif farklılıklar vardır. Ayrıca, kullanıcıların yeni işletim sisteminin kullanıcı arabirimine aclım öğrenme eğrisi vardır. Burada, Windows için Mac için Visual Studio ve Visual Studio arasındaki en yaygın farklılıkları öğreneceksiniz. Ayrıca, macOS ve Windows arasında birkaç farklı kural öğreneceksiniz.
+Bir işletim sisteminden diğerine geçiş yapmak çok fazla olabilir. Platformlar arası uygulamalarda, kullanıcı arabiriminden menü öğelerinin kategorilere ayrılması arasında genellikle daha hafif farklılıklar vardır. Burada, Windows için Mac için Visual Studio ve Visual Studio arasındaki en yaygın farklılıkları öğreneceksiniz. Ayrıca, macOS ve Windows arasında birkaç farklı kural öğreneceksiniz.
 
 ## <a name="keyboard-shortcuts"></a>Klavye kısayolları
 
@@ -49,10 +49,9 @@ MacOS menüleri Windows 'daki menülerden farklı şekilde düzenlenmiştir. Mac
 |-----------------------|---------------------------------------------------------------------|-------------------------------------|
 |Tercihler (Seçenekler)  |Araçlar > seçenekleri...                                                   |Visual Studio > tercihleri...       |
 |Uzantılar             |Uzantılar > uzantıları yönetme                                       |Visual Studio > uzantıları...        |
-|Düzenler                |Pencere > pencere düzeni uygula > [Düzen Seç]                       |Görüntüleme > [Düzen Seç]               |
+|Düzenler                |Pencere > pencere düzeni uygula > [Düzen Seç]                       |> düzeni görüntüleme > [Düzen Seç]               |
 |Güncelleştirmeler                |Güncelleştirme > için yardım denetimi                                             |Visual Studio güncelleştirmeleri denetle >... |
 |NuGet Paket Yöneticisi  |NuGet Paket Yöneticisi > araçlar > NuGet paketlerini veya çözümünü Yönet... |Proje > NuGet Paketlerini Yönet...   |
-|Pad/Windows         |Görünüm > [panel/pencere Seç]                                         |> bölmeleri görüntüleme > [panel/pencere seçin]  |
 |Araç bul             |Düzenle > bul ve Değiştir > [araç seçin]                              |Arama > [Araç seçme]               |
 |Visual Studio Hakkında    |Microsoft Visual Studio hakkında yardım >                                 |Visual Studio > Visual Studio hakkında  
 

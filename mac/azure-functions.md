@@ -1,18 +1,18 @@
 ---
 title: Azure İşlevleri’ne Giriş
-description: Mac için Visual Studio 'de Azure işlevleri 'ni kullanma.
+description: Mac için Visual Studio 'de Azure Işlevleri 'ni kullanmaya başlama.
 author: jmatthiesen
 ms.author: jomatthi
 ms.date: 04/02/2019
 ms.technology: vs-ide-install
 ms.assetid: 25CD47A4-5B32-4734-8EF3-E24A02AABF29
 ms.topic: how-to
-ms.openlocfilehash: 586d03e88ba3a2523dde00a6826980830ad54fbc
-ms.sourcegitcommit: 703c68667261df5985a73282c1cbb0541118989c
+ms.openlocfilehash: 69ecab4f4d3dd7d99821b384dbda0c8986297282
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89402323"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94492847"
 ---
 # <a name="introduction-to-azure-functions"></a>Azure İşlevleri’ne Giriş
 
@@ -26,12 +26,12 @@ Azure Işlev araçları, **Mac için Visual Studio 7,5** ve daha yeni bir sürü
 
 ## <a name="creating-your-first-azure-functions-project"></a>İlk Azure Işlevleri projenizi oluşturma
 
-1. Mac için Visual Studio **dosya > yeni çözüm**' ı seçin.
-2. Yeni proje iletişim kutusunda **Cloud > genel** ' ın altındaki Azure işlevleri şablonunu seçin ve **İleri**' ye tıklayın:
+1. Mac için Visual Studio **dosya > yeni çözüm** ' ı seçin.
+2. Yeni proje iletişim kutusunda **Cloud > genel** ' ın altındaki Azure işlevleri şablonunu seçin ve **İleri** ' ye tıklayın:
 
     ![Azure işlevleri seçeneğini gösteren yeni proje iletişim kutusu](media/azure-functions-image1.png)
 
-3. Kullanmak istediğiniz ilk Azure Işlevleri şablonunu seçin, işlevinizin adını girin ve **İleri**' ye tıklayın.
+3. Kullanmak istediğiniz ilk Azure Işlevleri şablonunu seçin, işlevinizin adını girin ve **İleri** ' ye tıklayın.
 
     ![Azure işlevleri şablonlarını gösteren yeni proje iletişim kutusu](media/azure-functions-image2.png)
 
@@ -45,7 +45,7 @@ Azure Işlev araçları, **Mac için Visual Studio 7,5** ve daha yeni bir sürü
 
     Farklı türlerde Azure Işlevleri şablonları ve her bir şablonu yapılandırmak için gereken bağlama özellikleri hakkında daha fazla bilgi için, [kullanılabilir işlev şablonları](#available-function-templates) bölümüne bakın. Bu örnekte, erişim hakları anonim olarak ayarlanmış bir http tetikleyicisi kullanıyoruz.
 
-4. Parametreleri ayarladıktan sonra, projenin konumunu seçin ve **Oluştur**' a tıklayın.
+4. Parametreleri ayarladıktan sonra, projenin konumunu seçin ve **Oluştur** ' a tıklayın.
 
 Mac için Visual Studio, varsayılan bir işlevle dahil .NET Standard bir proje oluşturur. Ayrıca, çeşitli **AzureWebJobs** paketlerine yönelik NuGet başvurularını ve ayrıca paketteki **Newtonsoft.Js** de içerir.
 
@@ -95,10 +95,10 @@ Mac için Visual Studio Azure Işlevleri desteğiyle, işlevinizi yerel gelişti
 
 ## <a name="publish-to-azure"></a>Azure’da Yayımlama
 
-1. Proje adına sağ tıklayıp **yayımla > Azure**'da Yayımla ' yı seçin: Azure 'da  ![ Yayımla menü seçeneği](media/azure-functions-image5.png)
+1. Proje adına sağ tıklayın ve **yayımla > Azure 'Da Yayımla** ' yı seçin:  ![ > Yayımla Ile bağlam menüsü Azure 'da Yayımla... seçenek vurgulandı](media/azure-functions-image5.png)
 2. Azure hesabınızı Mac için Visual Studio için zaten bağladıysanız, kullanılabilir uygulama hizmetlerinin bir listesi görüntülenir. Oturum açmadıysanız bunu yapmanız istenir.
-3. **Azure App Service Yayımla** iletişim kutusunda, var olan bir uygulama hizmetini seçebilir veya **Yeni**' ye tıklayarak yeni bir tane oluşturabilirsiniz.
-4. **Yeni App Service oluştur** iletişim kutusunda ayarlarınızı girin: ![ Azure 'a Yayımla menü seçeneği](media/azure-functions-image7.png)
+3. **Azure App Service Yayımla** iletişim kutusunda, var olan bir uygulama hizmetini seçebilir veya **Yeni** ' ye tıklayarak yeni bir tane oluşturabilirsiniz.
+4. **Yeni App Service oluştur** iletişim kutusunda, ![ hizmet adı, abonelik, kaynak grubu ve hizmet planı ayarları alanlarıyla birlikte ayarlar: yeni App Service iletişim kutusunu girin.](media/azure-functions-image7.png)
 
     |Ayar  |Açıklama  |
     |---------|---------|
@@ -109,23 +109,23 @@ Mac için Visual Studio Azure Işlevleri desteğiyle, işlevinizi yerel gelişti
 
 5. Bir depolama hesabı oluşturmak için **İleri** ' ye tıklayın. İşlevler çalışma zamanı için bir Azure depolama hesabı gereklidir. Genel amaçlı bir depolama hesabı oluşturmak için **özel** ' e tıklayın veya var olan birini kullanın:
 
-    ![Azure 'da Yayımla menü seçeneği](media/azure-functions-image8.png)
+    ![Depolama hesabı adı istemiyle yeni App Service iletişim kutusu.](media/azure-functions-image8.png)
 
-6. **Oluştur**'a tıklayarak Azure'da bu ayarlarla bir işlev uygulaması ve ilgili kaynaklar oluşturun ve işlev proje kodunuzu dağıtın.
+6. **Oluştur** 'a tıklayarak Azure'da bu ayarlarla bir işlev uygulaması ve ilgili kaynaklar oluşturun ve işlev proje kodunuzu dağıtın.
 
-7. Yayımlama sırasında bir iletişim kutusu istenebilir, "Azure 'da Işlevleri güncelleştirme" konusunda sizi bilgilendiren bir iletişim kutusu görüntülenebilir. **Evet**' e tıklayın:
+7. Yayımlama sırasında bir iletişim kutusu istenebilir, "Azure 'da Işlevleri güncelleştirme" konusunda sizi bilgilendiren bir iletişim kutusu görüntülenebilir. **Evet** ' e tıklayın:
 
-    ![Azure 'da Yayımla menü seçeneği](media/azure-functions-image12.png)
+    !["Azure uygulama ayarlarını yerel Işlevlerin sürümüyle eşleşecek şekilde güncelleştirin mi?" uyarısını yazın. Evet ve seçenek yoktur.](media/azure-functions-image12.png)
 
 ## <a name="function-app-settings"></a>İşlev uygulaması ayarları
 
 local.settings.jseklediğiniz tüm ayarlar ayrıca Azure 'daki işlev uygulamasına eklenmelidir. Projeyi yayımladığınızda bu ayarlar otomatik olarak karşıya yüklenemez.
 
-Uygulama ayarlarınıza erişmek için Azure portal gidin [https://ms.portal.azure.com/](https://ms.portal.azure.com/) . **Işlevler uygulamalar**' ın altında **işlev uygulamaları** ' nı seçin ve işlevinizin adını vurgulayın:
+Uygulama ayarlarınıza erişmek için Azure portal gidin [https://ms.portal.azure.com/](https://ms.portal.azure.com/) . **Işlevler uygulamalar** ' ın altında **işlev uygulamaları** ' nı seçin ve işlevinizin adını vurgulayın:
 
 ![Azure işlevleri menüsü](media/azure-functions-image9.png)
 
-**Genel bakış** sekmesinden **yapılandırılmış özellikler**altında **uygulama ayarları** ' nı seçin:
+**Genel bakış** sekmesinden **yapılandırılmış özellikler** altında **uygulama ayarları** ' nı seçin:
 
 ![Azure işlevinin Over sekmesi](media/azure-functions-image10.png)
 
@@ -133,7 +133,7 @@ Buradan, yeni uygulama ayarları ekleyebileceğiniz veya var olanları değişti
 
 ![Azure portal uygulama ayarları alanı](media/azure-functions-image11.png)
 
-Ayarlamanız gerekebilmeniz gereken önemli bir ayardır `FUNCTIONS_EXTENSION_VERSION` . Mac için Visual Studio yayımlarken, bu değer **Beta**olarak ayarlanmalıdır.
+Ayarlamanız gerekebilmeniz gereken önemli bir ayardır `FUNCTIONS_EXTENSION_VERSION` . Mac için Visual Studio yayımlarken, bu değer **Beta** olarak ayarlanmalıdır.
 
 ## <a name="available-function-templates"></a>Kullanılabilir işlev şablonları
 

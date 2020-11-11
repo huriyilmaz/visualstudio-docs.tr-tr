@@ -3,16 +3,16 @@ title: 'Nasıl yapılır: birden çok çözüm açma'
 description: Mac için Visual Studio ' de birden fazla çözüm açmayı ve uygulamanın birden fazla örneğini açmayı öğrenin.
 author: heiligerdankgesang
 ms.author: dominicn
-ms.date: 04/02/2019
+ms.date: 11/09/2020
 ms.assetid: 592BA4E3-8DEF-4FCD-8BA0-519A4CEEE03E
 ms.custom: video
 ms.topic: how-to
-ms.openlocfilehash: d90a2a92e2902633e5667e71c5692faa8fa161e1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e54f002141379d93a40df69ea070d5a64eba2f7d
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85950055"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493445"
 ---
 # <a name="open-multiple-solutions-or-instances-of-visual-studio-for-mac"></a>Birden çok çözüm veya Mac için Visual Studio örnekleri açın
 
@@ -22,7 +22,7 @@ Ayrıca, bir çözümü açtığınızda, varsayılan davranış çözümü yeni
 
 ## <a name="open-a-second-instance-of-visual-studio-for-mac"></a>İkinci bir Mac için Visual Studio örneğini açın
 
-Tümleşik geliştirme ortamının (IDE) ikinci bir örneğini açmak için yuva veya **uygulamalar** klasörünüzdeki Visual Studio simgesine sağ tıklayın ve **Yeni örnek**' i seçin.
+Tümleşik geliştirme ortamının (IDE) ikinci bir örneğini açmak için yuva veya **uygulamalar** klasörünüzdeki Visual Studio simgesine sağ tıklayın ve **Yeni örnek** ' i seçin.
 
 ![Sağ tıklanan Visual Studio simgesinde yeni örnek menü seçeneğinin ekran görüntüsü](media/open-new-instance.png)
 
@@ -30,9 +30,9 @@ Tümleşik geliştirme ortamının (IDE) ikinci bir örneğini açmak için yuva
 
 İkinci bir çözümü ilk çözümünüzün yanında açmak için aşağıdaki adımları kullanın:
 
-1. İlk çözümünüz zaten açık olduğunda **Dosya**  >  **Aç**' ı seçin.
+1. İlk çözümünüz zaten açık olduğunda **Dosya**  >  **Aç** ' ı seçin.
 2. Mevcut çözümü bulmak için dosya sistemine gidin.
-3. **. Sln** dosyasını seçin ve **Seçenekler**' i seçin:
+3. **. Sln** dosyasını seçin ve **Seçenekler** ' i seçin:
 
     ![. Sln dosyası ve seçenekleri vurgulanmış Mac için Visual Studio ekran görüntüsü](media/open-multiple-solutions-image3.png)
 
@@ -40,15 +40,15 @@ Tümleşik geliştirme ortamının (IDE) ikinci bir örneğini açmak için yuva
 
     ![Geçerli çalışma alanını kapat kutusunu işaretsiz Seçenekler iletişim kutusunun ekran görüntüsü](media/open-multiple-solutions-image1.png)
 
-5. Çözüm Bölmesi ikinci çözümü açmak için **Aç** ' ı seçin.
+5. Çözüm penceresinde ikinci çözümü açmak için **Aç** ' ı seçin.
 
 Alternatif olarak, çözümü son zamanlarda açtıysanız aşağıdaki adımları kullanabilirsiniz:
 
-1. **File**  >  **Son çözüm**dosyaları sayfasına gidin.
+1. **File**  >  **Son çözüm** dosyaları sayfasına gidin.
 
     ![Son çözümler menüsünün ekran görüntüsü](media/open-multiple-solutions-image2.png)
 
-1. **CTRL** tuşunu basılı tutun ve çözümü seçin. Bu bileşim Çözüm Bölmesi ikinci çözümü açar.
+1. **CTRL** tuşunu basılı tutun ve çözümü seçin. Bu bileşim, çözüm penceresinde ikinci çözümü açar.
 
 ## <a name="related-video"></a>İlgili video
 

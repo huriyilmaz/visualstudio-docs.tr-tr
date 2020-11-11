@@ -3,14 +3,14 @@ title: Yeni projeler ve çözümler oluşturma
 description: Bu makalede Mac için Visual Studio ' de projelerin ve çözümlerin nasıl oluşturulacağı açıklanmaktadır
 author: heiligerdankgesang
 ms.author: dominicn
-ms.date: 05/23/2019
+ms.date: 11/06/2020
 ms.assetid: 5880BB10-0A12-47E2-8A82-7A2D59C4D579
-ms.openlocfilehash: fa77993892c79cf29d268aa942b8c77ccb7a2139
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7ee9b23f9ede12a353f6c6fdc0f578d7f78a772c
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84183969"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493322"
 ---
 # <a name="create-a-new-project"></a>Yeni bir proje oluştur
 
@@ -23,11 +23,11 @@ Mac için Visual Studio yeni bir proje oluşturmanın birkaç yolu vardır. Mac 
 
 ![Yeni proje oluştur ile başlangıç penceresi](media/first-run-project.png)
 
-Mac için Visual Studio yüklenmiş bir çözümle zaten açıksa, menü çubuğuna gidip **dosya > yeni çözüm**' i seçerek yeni bir çözüm oluşturabilirsiniz. Bu şekilde yeni bir çözüm oluşturulması, zaten yüklü olan çözümü kapatır.
+Mac için Visual Studio yüklenmiş bir çözümle zaten açıksa, menü çubuğuna gidip **dosya > yeni çözüm** ' i seçerek yeni bir çözüm oluşturabilirsiniz. Bu şekilde yeni bir çözüm oluşturulması, zaten yüklü olan çözümü kapatır.
 
 ## <a name="creating-a-new-project"></a>Yeni bir proje oluşturma
 
-Varsayılan olarak **Yeni proje** iletişim kutusu, son kullanılan şablonlarınızı *en son*Kullanılanlar tarafından sıralanan şekilde gösterir.
+Varsayılan olarak **Yeni proje** iletişim kutusu, son kullanılan şablonlarınızı *en son* Kullanılanlar tarafından sıralanan şekilde gösterir.
 
 Son kullanılan bir şablonu kullanmak istemiyorsanız, iletişim kutusunun solundaki kategoriler arasından seçim yapabilirsiniz. Her kategori, aralarından seçim yapabileceğiniz çeşitli proje şablonları içerir. Proje türüne tıklanması, ekranın sağ tarafında bir açıklama görmenizi sağlar.
 
@@ -45,7 +45,7 @@ Tüm projeler, dosyaları depolamak için bir konum ile birlikte yeni bir proje 
 
 ## <a name="adding-additional-projects-to-a-solution"></a>Çözüme ek projeler ekleme
 
-Çözüm Bölmesi çözüme sağ tıklayıp **Yeni proje ekle > Ekle** veya Ekle **> var olan proje**Ekle ' yi seçerek başka projeler ekleyebilirsiniz.
+Çözüm **penceresinde** çözüme sağ tıklayıp, **Ekle > yeni proje Ekle** ' yi veya **var olan proje Ekle >** Ekle ' yi seçerek başka projeler ekleyebilirsiniz.
 
 Yeni bir proje eklendiğinde, [yeni projenizi yapılandırma](#configuring-your-new-project)bölümünde gösterildiği gibi proje oluşturma boyunca işlem yapılır.
 

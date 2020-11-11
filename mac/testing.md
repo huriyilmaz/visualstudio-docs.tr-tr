@@ -1,18 +1,19 @@
 ---
 title: Mac için Visual Studio test araçları
-ms.date: 08/03/2020
+description: Mac için Visual Studio kullanarak test oluşturma ve çalıştırma.
+ms.date: 11/09/2020
 ms.topic: conceptual
 helpviewer_keywords:
 - testing tools [Visual Studio for Mac]
 - unit tests [Visual Studio for Mac]
 ms.author: jomatthi
 author: jmatthiesen
-ms.openlocfilehash: 758bdcb0d854247847e4d0d56152840643402bf4
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 3956c3158fd4ec1ad32b76882ac3f9d4cf1ea9bf
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91580967"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493393"
 ---
 # <a name="testing-tools-in-visual-studio-for-mac"></a>Mac için Visual Studio 'de test araçları
 
@@ -27,7 +28,7 @@ Teste başlamak için çözümünüze sağ tıklayıp **> yeni proje Ekle...** m
 > .NET Core uygulamalarınızın birim testi ve birim testi çerçeveleri seçme hakkında daha fazla bilgi için bkz. [.NET Core 'Da birim testi ve .NET Standard](/dotnet/core/testing/?pivots=xunit) belgeleri.
 
 ## <a name="running-tests"></a>Testleri çalıştırma
-Birim **Testleri penceresi,** birim testlerini çalıştırmak için kullanılır ve **> bölmeleri görüntüle > birim testleri** menüsü kullanılarak açılır. Çözümünüzdeki birim testleri otomatik olarak bulunur ve bu pencerede gösterilir. burada, seçtiğiniz tüm testleri veya testlerin bir kümesini çalıştırabilirsiniz.
+Birim **Testleri penceresi,** birim testlerini çalıştırmak için kullanılır ve **> testleri görüntüle** menüsü kullanılarak açılır. Çözümünüzdeki birim testleri otomatik olarak bulunur ve bu pencerede gösterilir. burada, seçtiğiniz tüm testleri veya testlerin bir kümesini çalıştırabilirsiniz.
 
 ![Testleri çalıştırmaya veya durdurmayla ilgili bir araç çubuğunun ve birim testlerinin listesini gösteren test penceresi.](media/test-window.PNG)
 

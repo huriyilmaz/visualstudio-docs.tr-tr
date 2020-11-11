@@ -3,15 +3,15 @@ title: Projedeki başvuruları yönetme
 description: Bu makalede, Mac için Visual Studio projedeki başvuruların nasıl yönetileceği açıklanmaktadır
 author: jmatthiesen
 ms.author: jomatthi
-ms.date: 05/06/2018
+ms.date: 11/09/2020
 ms.assetid: 4AD51385-B0A8-4BA7-B2D4-BF2BD167A142
 ms.topic: overview
-ms.openlocfilehash: 28ea53826a19a9ec97349060702cf13c68342ad2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 41d49fe6b23818f3cb9de8dec72462d4b2029bb6
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85939004"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493523"
 ---
 # <a name="managing-references-in-a-project"></a>Projedeki başvuruları yönetme
 
@@ -22,7 +22,7 @@ Mac için Visual Studio projenize ek başvurular eklemenin iki yolu sağlar:
 Bunlar:
 
 * Başvurular
-* Nual (Paketler klasörü aracılığıyla eklenir)
+* NuGet paketleri (Paketler klasörü aracılığıyla eklenir)
 
 Ayrıca, Web başvuruları ve yerel başvurular da herhangi bir projeye eklenebilir.
 
@@ -40,7 +40,7 @@ Her Xamarin çerçevesi için kullanılabilen derlemeler hakkında bilgi için [
 
 NuGet, .NET geliştirme için en popüler paket yöneticisidir. Mac için Visual Studio NuGet desteği projenize eklenecek paketleri aramanızı sağlar.
 
-Bunu yapmak için Çözüm Bölmesi **paket** klasörüne sağ tıklayın ve paket Ekle ' yi seçin.
+Bunu yapmak için, çözüm penceresinde **paket** klasörüne sağ tıklayın ve paket Ekle ' yi seçin.
 
 NuGet paketi kullanma hakkında daha fazla bilgi için, projenizin Gözden geçirmedeki [bir NuGet paketi de dahil](nuget-walkthrough.md) edilmiştir.
 

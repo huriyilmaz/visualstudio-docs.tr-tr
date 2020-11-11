@@ -3,20 +3,20 @@ title: Docker 'ı kullanmaya başlama
 description: Mac için Visual Studio, projelerinize Docker ekleme hakkında bilgi edinin
 author: heiligerdankgesang
 ms.author: dominicn
-ms.date: 06/17/2019
+ms.date: 11/09/2020
 ms.topic: how-to
-ms.openlocfilehash: 5f21d55568328a9aeb9b7982e5978500f7ef715b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e2bfb78369ae5da389820a318196dd7e9e13e897
+ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85939046"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94493081"
 ---
 # <a name="get-started-with-docker-in-visual-studio-for-mac"></a>Mac için Visual Studio Docker ile çalışmaya başlama
 
 Mac için Visual Studio, Kapsayıcılı ASP.NET Core uygulamaları kolayca oluşturabilir, ayıklayabilir ve çalıştırabilir ve bunları Azure 'da yayımlayabilirsiniz.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 * [Docker Masaüstü](https://hub.docker.com/editions/community/docker-ce-desktop-mac)
 * [Mac için Visual Studio 2019](https://visualstudio.microsoft.com/vs/mac)
@@ -27,11 +27,11 @@ Docker yüklemesi için, [Mac Için Docker Desktop 'ı yükleme](https://docs.do
 
 ## <a name="creating-an-aspnet-core-web-application-and-adding-docker-support"></a>ASP.NET Core Web uygulaması oluşturma ve Docker desteği ekleme
 
-1. **Yeni çözüm > dosyaya**giderek yeni bir çözüm oluşturun.
+1. **Yeni çözüm > dosyaya** giderek yeni bir çözüm oluşturun.
 1. **.NET Core > uygulama** altında **Web uygulaması** şablonunu seçin: ![ Yeni bir ASP.NET uygulaması oluşturma](media/docker-quickstart-1.png)
 1. Hedef çerçeveyi seçin. Bu örnekte, .NET Core 2,2: ![ Target Framework 'ü ayarla ' yı kullanacağız](media/docker-quickstart-2.png)
-1. Ad (Bu örnekteki_Dockerdemo_ ) gibi proje ayrıntılarını girin. Oluşturulan proje, bir ASP.NET Core Web sitesi derlemek ve çalıştırmak için ihtiyacınız olan tüm temel bilgileri içerir.
-1. Çözüm Bölmesi DockerDemo projesine sağ tıklayın ve **ekle > Docker desteği**Ekle ' yi seçin: ![ Docker desteği ekle](media/docker-quickstart-3.png)
+1. Ad (Bu örnekteki _Dockerdemo_ ) gibi proje ayrıntılarını girin. Oluşturulan proje, bir ASP.NET Core Web sitesi derlemek ve çalıştırmak için ihtiyacınız olan tüm temel bilgileri içerir.
+1. Çözüm penceresinde DockerDemo projesine sağ tıklayın ve **ekle > Docker desteği** Ekle ' yi seçin: ![ Docker desteği ekle](media/docker-quickstart-3.png)
 
 Mac için Visual Studio, çözümünüze **Docker-Compose** adlı otomatik olarak yeni bir proje ekleyecek ve mevcut projenize bir **dockerfile** ekleyecek.
 
@@ -70,7 +70,7 @@ Yukarıdaki *Dockerfile* , [Microsoft/aspnetcore](https://hub.docker.com/r/micro
 
 ## <a name="debugging"></a>Hata Ayıklama
 
-`docker-compose`Başlangıç projesi olarak projeyi seçin ve hata ayıklamayı başlatın (**> başlatın**. Bu işlem, ASP.NET projesini bir kapsayıcıda oluşturur, dağıtır ve başlatır.
+`docker-compose`Başlangıç projesi olarak projeyi seçin ve hata ayıklamayı başlatın ( **> başlatın**. Bu işlem, ASP.NET projesini bir kapsayıcıda oluşturur, dağıtır ve başlatır.
 
 > [!TIP]
 > Docker Desktop 'ı yükledikten sonra ilk çalıştırmada, hata ayıklamaya çalışırken şu hatayı alabilirsiniz: `Cannot start service dockerdemo: Mounts denied`
@@ -87,6 +87,6 @@ Kapsayıcının bir bağlantı noktasını dinlediğini, `http://localhost:32768
 
 Çalışan kapsayıcıların listesini görmek için `docker ps` terminalde komutunu kullanın.
 
-Aşağıdaki ekran görüntüsünde bağlantı noktası geçişine ( **bağlantı noktaları**altında) göz önünde edin. Bu, kapsayıcının yukarıda Safari 'de gördüğdiğimiz bağlantı noktasını dinlediği ve bağlantı noktası 80 ' deki iç Web sunucusuna (Dockerfile içinde tanımlandığı gibi) istek geçirdiğini gösterir. Uygulamanın perspektifinden, 80 numaralı bağlantı noktasını dinler:
+Aşağıdaki ekran görüntüsünde bağlantı noktası geçişine ( **bağlantı noktaları** altında) göz önünde edin. Bu, kapsayıcının yukarıda Safari 'de gördüğdiğimiz bağlantı noktasını dinlediği ve bağlantı noktası 80 ' deki iç Web sunucusuna (Dockerfile içinde tanımlandığı gibi) istek geçirdiğini gösterir. Uygulamanın perspektifinden, 80 numaralı bağlantı noktasını dinler:
 
 ![Docker kapsayıcı listesi](media/docker-quickstart-7.png)
