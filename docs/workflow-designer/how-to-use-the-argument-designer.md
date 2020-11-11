@@ -1,5 +1,7 @@
 ---
 title: 'İş Akışı Tasarımcısı-nasıl yapılır: bağımsız değişken tasarımcısını kullanma'
+description: Bağımsız değişken Tasarımcısı ve verilerin bir etkinliğin içine ve dışına akmasını sağlamak için bağımsız değişken tasarımcısının nasıl kullanılacağını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -11,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6c3c0fe3de3a9ab74ed09c1be45e0d39a71a5b7c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: aca39eaf94e5dca3159a9f3740dae0f87257d9c1
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85817456"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94437872"
 ---
 # <a name="how-to-use-the-argument-designer"></a>Nasıl Yapılır: Bağımsız Değişken Tasarımcısını Kullanma
 
@@ -28,7 +30,7 @@ Bağımsız değişken Tasarımcısı, verilerin bir etkinliğin içine ve dış
 
 2. Tasarım tuvalinin sol alt köşesindeki **bağımsız değişkenler** düğmesine tıklayarak bağımsız değişkenler tasarımcısını açın. Bağımsız değişkenler Tasarımcısı görüntülenir.
 
-3. **Oluşturma bağımsız değişkeni**etiketli boş satıra tıklayın. Bu, aşağıdaki varsayılan değerleri kullanarak yeni bir bağımsız değişken içeren yeni bir satır ekler: x değeri için bağımsız **Name** değişken **x,** **yönü**Için ve **bağımsız değişken türü**için **dize** olarak benzersiz bağımsız değişken adları oluşturmak üzere otomatik olarak artan 1. **Varsayılan değer**için hiçbir değer eklenmez. Bu değerleri, iş akışı tasarım sürecinde istediğiniz zaman değiştirebilirsiniz.
+3. **Oluşturma bağımsız değişkeni** etiketli boş satıra tıklayın. Bu, aşağıdaki varsayılan değerleri kullanarak yeni bir bağımsız değişken içeren yeni bir satır ekler: x değeri için bağımsız **Name** değişken **x,** **yönü** Için ve **bağımsız değişken türü** için **dize** olarak benzersiz bağımsız değişken adları oluşturmak üzere otomatik olarak artan 1. **Varsayılan değer** için hiçbir değer eklenmez. Bu değerleri, iş akışı tasarım sürecinde istediğiniz zaman değiştirebilirsiniz.
 
     > [!NOTE]
     > Bir bağımsız değişkeni silmek için, ve ardından **Delete** tuşuna basarak bağımsız değişkeni seçin.

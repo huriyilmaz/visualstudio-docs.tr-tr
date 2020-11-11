@@ -1,5 +1,7 @@
 ---
 title: İş Akışı Tasarımcısı-gecikme etkinlik Tasarımcısı
+description: Gecikme etkinlikleri ve bir gecikme etkinliği oluşturmak ve yapılandırmak için gecikme etkinliği tasarımcısını nasıl kullanabileceğiniz hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: abfd625a248c14f646683c7b035065e6ca096f68
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8e6bbadcbabbe1dbd274c48f2325217c17d3933d
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86876118"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94438093"
 ---
 # <a name="delay-activity-designer"></a>Delay Etkinlik Tasarımcısı
 
@@ -27,7 +29,7 @@ ms.locfileid: "86876118"
 
 ### <a name="use-the-delay-activity-designer"></a>Gecikme etkinliği tasarımcısını kullanma
 
-**Gecikme** etkinlik tasarımcısı, iş akışı Tasarımcısı araç **kutusu** sekmesine tıklanarak erişilen **araç kutusu**' nu **temel elemanlar** kategorisinde bulunabilir. Alternatif olarak, **Görünüm** menüsünden **araç kutusu** ' nu seçin veya **CTRL** + **alt** + **X**tuşlarına basın.
+**Gecikme** etkinlik tasarımcısı, iş akışı Tasarımcısı araç **kutusu** sekmesine tıklanarak erişilen **araç kutusu** ' nu **temel elemanlar** kategorisinde bulunabilir. Alternatif olarak, **Görünüm** menüsünden **araç kutusu** ' nu seçin veya **CTRL** + **alt** + **X** tuşlarına basın.
 
 **Gecikme** etkinlik Tasarımcısı **araç kutusundan** sürüklenip, örneğin içinde olduğu gibi etkinliklerin genellikle yerleştirildiği iş akışı Tasarımcısı yüzeyine bırakılabilir <xref:System.Activities.Statements.Sequence> . Etkinlik Tasarımcısı ' nın atılması, <xref:System.Activities.Statements.Delay> varsayılan gecikmeyle bir etkinlik oluşturur <xref:System.Activities.Activity.DisplayName%2A> . , <xref:System.Activities.Activity.DisplayName%2A> **Gecikme** etkinlik tasarımcısının üst bilgisinde veya özellik kılavuzunun **DisplayName** kutusunda düzenlenebilir.
 

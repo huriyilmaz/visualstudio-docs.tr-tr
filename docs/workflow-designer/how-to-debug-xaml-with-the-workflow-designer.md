@@ -1,5 +1,7 @@
 ---
 title: 'İş Akışı Tasarımcısı: XAML hatalarını ayıklama'
+description: İş akışlarının XAML açısından nasıl tanımlandığını ve İş Akışı Tasarımcısı XAML hata ayıklamanın nasıl yapılacağını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: d9305dbc-af62-4bdd-b03f-c54e3fe9ecc7
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 9be7c8da251a9698e0fceba64e3941ba8fbdf803
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 24540a6e7a2f99f35edf6018355583b5f9230e1a
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85817521"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94437937"
 ---
 # <a name="how-to-debug-xaml-with-the-workflow-designer"></a>Nasıl Yapılır: İş Akışı Tasarımcısı ile XAML Hatalarını Ayıklama
 
@@ -28,7 +30,7 @@ ms.locfileid: "85817521"
 
 2. [Nasıl yapılır: Iş akışlarında kesme noktalarını ayarlama](../workflow-designer/how-to-set-breakpoints-in-workflows.md)bölümünde açıklandığı gibi, hata ayıklamak istediğiniz etkinlik veya etkinliklerde bir kesme noktası ayarlayın.
 
-3. İş akışı tanımınızı içeren. xaml dosyasına sağ tıklayın ve **kodu görüntüle**' yi seçin. Tasarım görünümünde, kesme noktasını ayarladığınız etkinliğin XAML öğesi bildirimiyle aynı satırda görüntülenen bir kesme noktası görürsünüz.
+3. İş akışı tanımınızı içeren. xaml dosyasına sağ tıklayın ve **kodu görüntüle** ' yi seçin. Tasarım görünümünde, kesme noktasını ayarladığınız etkinliğin XAML öğesi bildirimiyle aynı satırda görüntülenen bir kesme noktası görürsünüz.
 
 4. Hata [ayıklama iş akışlarında](debugging-workflows-with-the-workflow-designer.md)açıklandığı şekilde hata ayıklayıcıyı çağırın.
 

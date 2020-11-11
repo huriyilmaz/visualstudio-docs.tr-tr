@@ -1,5 +1,7 @@
 ---
 title: İş Akışı Tasarımcısı-akış çizelgesi etkinlik Tasarımcısı
+description: Karmaşık akış denetimlerini tanımlayan ve yöneten iş akışları oluşturmak için akış çizelgesi etkinliğini nasıl kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -12,12 +14,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d786e9acfa99d2b106b72822a0106e2161724790
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 08c7957d79d51cab93e45adf8f74899ecc59b76d
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75597041"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94438015"
 ---
 # <a name="flowchart-activity-designer"></a>Flowchart Etkinlik Tasarımcısı
 
@@ -29,7 +31,7 @@ ms.locfileid: "75597041"
 
 ### <a name="using-the-flowchart-activity-designer"></a>Akış çizelgesi etkinlik tasarımcısını kullanma
 
-**Akış çizelgesi** etkinlik **Tasarımcısı, iş akışı Tasarımcısı araç çubuğu kategorisinde bulunabilir** **ve bu,** **araç kutusu** sekmesine tıklanarak erişilir. Alternatif olarak, **Görünüm** menüsünden **araç kutusu** ' nu seçin veya **CTRL** + **alt** + **X**tuşlarına basın.
+**Akış çizelgesi** etkinlik **Tasarımcısı, iş akışı Tasarımcısı araç çubuğu kategorisinde bulunabilir** **ve bu,** **araç kutusu** sekmesine tıklanarak erişilir. Alternatif olarak, **Görünüm** menüsünden **araç kutusu** ' nu seçin veya **CTRL** + **alt** + **X** tuşlarına basın.
 
 **Akış çizelgesi** etkinlik Tasarımcısı **araç kutusundan** sürüklenip, etkinlik tasarımcılarının bir kök etkinlik olarak veya başka bir denetim akışı etkinliğinin alt öğesi olarak yerleştirildiği iş akışı Tasarımcısı yüzeyine bırakılabilir. **Akış çizelgesi** etkinlik Tasarımcısı boş bir iş akışı Tasarımcısı yüzeyi üzerine bırakıldığında, <xref:System.Activities.Statements.Flowchart> Varsayılan olarak kendisini yürütmeyi Başlatan başlangıç düğümünün yeşil bir top olarak temsil edildiği genişletilmiş bir görünümde gösterir. **Akış çizelgesi** etkinlik Tasarımcısı başka bir denetim akışı etkinliğine bırakıldığında, kendisini, **akış çizelgesi** etkinlik tasarımcısına çift tıklayarak genişletilebilen, simge durumuna küçültülmüş bir görünümde sunar. **Araç kutusundaki** herhangi bir etkinlik, diğer denetim akışı etkinlikleri dahil olmak üzere doğrudan **akış çizelgesi** etkinlik tasarımcısına sürüklenebilir.
 

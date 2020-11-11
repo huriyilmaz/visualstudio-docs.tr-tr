@@ -1,5 +1,7 @@
 ---
 title: İş Akışı Tasarımcısı-CorrelationScope etkinlik Tasarımcısı
+description: CorrelationScope etkinliği oluşturmak ve yapılandırmak için CorrelationScope etkinlik Tasarımcısı 'nı nasıl kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 135acfbbaf9fdcbbf219fd50a504cf9262fe4d24
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cc85dbb5c774f6afa956f51852ef15d4c7ccebc0
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86876105"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94438119"
 ---
 # <a name="correlationscope-activity-designer"></a>CorrelationScope Etkinlik Tasarımcısı
 
@@ -27,7 +29,7 @@ ms.locfileid: "86876105"
 
 ### <a name="use-the-correlationscope-activity-designer"></a>CorrelationScope etkinlik tasarımcısını kullanma
 
-**CorrelationScope** etkinlik tasarımcısı, iş akışı Tasarımcısı sol tarafındaki **araç kutusu** sekmesine tıklanarak erişilen **araç kutusunun** **mesajlaşma** kategorisinde bulunabilir. Alternatif olarak, **Görünüm** menüsünden **araç kutusu** ' nu seçin veya **CTRL** + **alt** + **X**tuşlarına basın.
+**CorrelationScope** etkinlik tasarımcısı, iş akışı Tasarımcısı sol tarafındaki **araç kutusu** sekmesine tıklanarak erişilen **araç kutusunun** **mesajlaşma** kategorisinde bulunabilir. Alternatif olarak, **Görünüm** menüsünden **araç kutusu** ' nu seçin veya **CTRL** + **alt** + **X** tuşlarına basın.
 
 **CorrelationScope** etkinlik Tasarımcısı **araç kutusundan** sürüklenip iş akışı Tasarımcısı yüzeyine bırakılabilir. Bu <xref:System.ServiceModel.Activities.CorrelationScope> , varsayılan olarak bir CorrelationScope **DisplayName** 'i olan bir etkinlik oluşturur. , <xref:System.Activities.Activity.DisplayName%2A> **CorrelationScope** etkinlik tasarımcısının üst bilgisinde veya **Özellikler** penceresinin **DisplayName** kutusunda düzenlenebilir.
 

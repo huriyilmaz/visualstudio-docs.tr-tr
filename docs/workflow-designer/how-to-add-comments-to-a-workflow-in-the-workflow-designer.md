@@ -1,5 +1,7 @@
 ---
 title: 'İş Akışı Tasarımcısı-nasıl yapılır: bir iş akışına açıklama ekleme'
+description: .NET Framework 4,5 ' nin geliştiricinin tasarımcı içindeki belirli öğe türlerine (örneğin, etkinlik, durum ve geçiş öğeleri) ek açıklama eklemesine nasıl izin verdiğini öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -11,12 +13,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: TerryGLee
-ms.openlocfilehash: 77fb43671a45d5d53d2fe23fa3e4e7a9a98c4373
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0fe5b766c0c5545a1cc3839e29d71e3f3b7a1f39
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85815506"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94437963"
 ---
 # <a name="how-to-add-comments-to-a-workflow-in-the-workflow-designer"></a>Nasıl yapılır: İş Akışı Tasarımcısında bir iş akışına açıklama ekleme
 
@@ -39,7 +41,7 @@ Daha büyük, daha karmaşık iş akışları oluşturmayı kolaylaştırmak iç
 
 ## <a name="adding-an-annotation-to-an-activity-in-the-designer"></a>Tasarımcıda bir etkinliğe ek açıklama ekleme
 
-1. İş akışı tasarımcısında, iş akışı tasarımcısında bir öğeye sağ tıklayın ve **ek** **Açıklama Ekle**' yi seçin.
+1. İş akışı tasarımcısında, iş akışı tasarımcısında bir öğeye sağ tıklayın ve **ek** **Açıklama Ekle** ' yi seçin.
 
 1. Ek açıklamanın metnini, girilen alana ekleyin.
 
@@ -59,21 +61,21 @@ Daha büyük, daha karmaşık iş akışları oluşturmayı kolaylaştırmak iç
 
 ## <a name="showing-or-hiding-all-annotations"></a>Tüm ek açıklamaları gösterme veya gizleme
 
-1. Ek açıklamasına sahip bir etkinliğe sağ tıklayın. **Ek açıklamaları**seç, **tüm ek açıklamaları göster**.
+1. Ek açıklamasına sahip bir etkinliğe sağ tıklayın. **Ek açıklamaları** seç, **tüm ek açıklamaları göster**.
 
    Tüm ek açıklamalar etkinliğin tasarımcıları içinde görüntülenir.
 
-1. Etkinliğin tasarımcıları dışındaki tüm ek açıklamaları göstermek için, etkinliğe sağ tıklayın ve **ek açıklamalar**' ı seçin, **tüm ek açıklamaları gizleyin**.
+1. Etkinliğin tasarımcıları dışındaki tüm ek açıklamaları göstermek için, etkinliğe sağ tıklayın ve **ek açıklamalar** ' ı seçin, **tüm ek açıklamaları gizleyin**.
 
 ## <a name="editing-or-deleting-an-annotation-for-an-activity"></a>Etkinlik için ek açıklama ekleme veya silme
 
 1. Ek açıklamasına sahip bir etkinliğe sağ tıklayın.
 
-1. **Ek açıklamaları**seç, **ek açıklamayı Düzenle** veya **ek açıklamayı Sil**.
+1. **Ek açıklamaları** seç, **ek açıklamayı Düzenle** veya **ek açıklamayı Sil**.
 
    Ek açıklama, düzenlenmek veya silinmek üzere açıldı.
 
-1. Tüm ek açıklamaları aynı anda silmek için, iş akışı tasarımcısına sağ tıklayın ve **ek açıklama**' yı seçin, **tüm ek açıklamaları silin**.
+1. Tüm ek açıklamaları aynı anda silmek için, iş akışı tasarımcısına sağ tıklayın ve **ek açıklama** ' yı seçin, **tüm ek açıklamaları silin**.
 
 ## <a name="adding-editing-and-deleting-an-annotation-for-a-variable-or-argument"></a>Bir değişken veya bağımsız değişken için ek açıklama ekleme, düzenlememe ve silme
 

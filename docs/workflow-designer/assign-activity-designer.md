@@ -1,5 +1,7 @@
 ---
 title: İş Akışı Tasarımcısı-etkinlik Tasarımcısı atama
+description: Atama etkinliği oluşturma ve yapılandırma ve atama etkinliğinin bir değişkene veya bağımsız değişkene değer atama şeklini nasıl kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 83a01c96b64dcd55adfd775efc266063efbab27d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9d8601951cfaba3f246e8488ab23c9b6ccad0d01
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86875949"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94438197"
 ---
 # <a name="assign-activity-designer"></a>Assign Etkinlik Tasarımcısı
 
@@ -27,7 +29,7 @@ Etkinlik oluşturma ve yapılandırma etkinliği için **atama** etkinliği Tasa
 
 ### <a name="using-the-assign-activity-designer"></a>Atama etkinliği tasarımcısını kullanma
 
-**Ata** etkinlik Tasarımcısı **, araç kutusu sekmesine** tıklanarak **erişilen araç kutusu**' nda (alternatif olarak, **Görünüm** menüsünden **araç kutusu** ' nu veya Ctrl + Alt + X ' i seçerek) bulunan **temel öğeler** kategorisinde bulunabilir.
+**Ata** etkinlik Tasarımcısı **, araç kutusu sekmesine** tıklanarak **erişilen araç kutusu** ' nda (alternatif olarak, **Görünüm** menüsünden **araç kutusu** ' nu veya Ctrl + Alt + X ' i seçerek) bulunan **temel öğeler** kategorisinde bulunabilir.
 
 **Atama** etkinliği Tasarımcısı **araç kutusundan** sürüklenip, içinde olduğu gibi, herhangi bir etkinliğin yerleştirildiği iş akışı Tasarımcısı yüzeyine bırakılabilir <xref:System.Activities.Statements.Sequence> . **Atama** etkinliği Tasarımcısı ' nın atılması, <xref:System.Activities.Statements.Assign> varsayılan ata **DisplayName** ile bir etkinlik oluşturur. , <xref:System.Activities.Activity.DisplayName%2A> **Atama** etkinliğinin üst bilgisinde veya özellik kılavuzunun **DisplayName** kutusunda düzenlenebilir.
 

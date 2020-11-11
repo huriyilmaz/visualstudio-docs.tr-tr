@@ -1,5 +1,7 @@
 ---
 title: 'İş Akışı Tasarımcısı-nasıl yapılır: araç kutusuna etkinlik ekleme'
+description: Çözümünüze, geçerli projenizden ekleyerek veya farklı bir projeden başvurarak araç kutusuna etkinlik ekleyin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: b3a8a785-5928-457a-8a50-30267e29503d
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0ebe3f4c3daf5ee3a0f64a0197967b6da62a467b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d2330392ace27a913870e7c7448976d1cae46958
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85815831"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94437950"
 ---
 # <a name="how-to-add-activities-to-the-toolbox"></a>Nasıl Yapılır: Araç Kutusuna Etkinlik Ekleme
 
@@ -46,11 +48,11 @@ Etkinlikler çözümünüzdeki **araç kutusuna** birkaç farklı şekilde eklen
 
 1. Bir iş akışı çözümü açın.
 
-2. **Araçlar** menüsünde **araç kutusu öğelerini Seç**' i seçin.
+2. **Araçlar** menüsünde **araç kutusu öğelerini Seç** ' i seçin.
 
 3. **Araç kutusu öğelerini Seç** iletişim kutusunda, **System. Activities bileşenleri** sekmesini seçin ve ardından Ekle ' **ye tıklayarak eklemek istediğiniz özel** etkinliği içeren derlemeye gidin.
 
-4. Derlemeyi seçin ve **Tamam**' a tıklayın. Özel etkinlik bileşeni Bileşen listesine eklenir ve otomatik olarak seçilir.
+4. Derlemeyi seçin ve **Tamam** ' a tıklayın. Özel etkinlik bileşeni Bileşen listesine eklenir ve otomatik olarak seçilir.
 
     1. İletişim kutusunu kapatmak için **Tamam** ' ı tıklatın.
 

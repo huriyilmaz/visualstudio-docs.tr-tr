@@ -1,5 +1,7 @@
 ---
 title: İş Akışı Tasarımcısında Hata İletileri
+description: İş Akışı Tasarımcısı çalışırken karşılaşabileceğiniz hata iletilerinin türleri hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -12,12 +14,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 72592d21fdaba1ef47a15a113c820dffe0ba71eb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8f3886739cbc6deefd13570ae0f49da7e89ad9b1
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75597054"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94438041"
 ---
 # <a name="error-messages-in-workflow-designer"></a>İş Akışı Tasarımcısında Hata İletileri
 
@@ -37,7 +39,7 @@ Bu konu, İş Akışı Tasarımcısı çalışırken karşılaşılabilecek hata
 
 Geçersiz ifadeler ve karşılanmamış doğrulama kısıtlamaları iş akışının derlenmemesine neden olmaz. İş akışınızı oluşturma işlemi başarılı olur, ancak çalışma zamanında bir oluşturulur <xref:System.Activities.InvalidWorkflowException> . XAML dosyasında hatalar varsa, yapı başarısız olur.
 
-Visual Studio 'Nun içinde, bir iş akışı yüklendiğinde, hata **hata listesi**görüntülenir. Hatanın kaynağı olan etkinliğe gitmek için **hata listesi**hataya çift tıklayın.
+Visual Studio 'Nun içinde, bir iş akışı yüklendiğinde, hata **hata listesi** görüntülenir. Hatanın kaynağı olan etkinliğe gitmek için **hata listesi** hataya çift tıklayın.
 
 ### <a name="expression-errors"></a>İfade hataları
  Geçersiz bir ifade, ifadenin yanındaki beyaz ünlem işaretine sahip kırmızı bir daire ile belirtilir. Bu simgenin üzerine gelindiğinde, hatanın kaynağını açıklayan bir araç ipucu görüntülenir. Visual Studio içinde, hata kaynağının altını çizili çizgiyi görüntülemek için ifadeye tıklayın. Çizgili metnin üzerine gelindiğinde, hatanın kaynağını açıklayan bir araç ipucu görüntülenir.

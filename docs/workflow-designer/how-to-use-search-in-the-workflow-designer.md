@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: İş Akışı Tasarımcısında Aramayı kullanma'
+description: Daha büyük, daha karmaşık iş akışları oluşturmayı kolaylaştırmak için, öğeleri anahtar sözcüğe göre bulmak için İş Akışı Tasarımcısı içinde arama yapmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: f42d3115-2ed2-4941-8f1e-92dac41c30fa
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 63ad6f8b6d3afd1f30f2e9a02eaa4927fb3608d2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3dadaf6ce4728dfac8d4052804cbed70ee7cefcd
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85817482"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94437911"
 ---
 # <a name="how-to-use-search-in-the-workflow-designer"></a>Nasıl yapılır: İş Akışı Tasarımcısında Aramayı kullanma
 
@@ -33,9 +35,9 @@ Hızlı bul, tasarımcıda aşağıdakileri bulur:
 
 ### <a name="use-quick-find"></a>Hızlı bul kullanma
 
-1. İş akışı Tasarımcısı açıkken, **CTRL + F**tuşlarına basın veya **Düzenle**  >  **Bul ve Değiştir '** i seçerek  >  **hızlı bul**' u seçin.
+1. İş akışı Tasarımcısı açıkken, **CTRL + F** tuşlarına basın veya **Düzenle**  >  **Bul ve Değiştir '** i seçerek  >  **hızlı bul** ' u seçin.
 
-2. **Aranan metin kutusuna** arama terimini girin ve **Sonrakini Bul**' a tıklayın.
+2. **Aranan metin kutusuna** arama terimini girin ve **Sonrakini Bul** ' a tıklayın.
 
 3. Arama terimi geçerli iş akışında bulunur. Aşağıdaki görüntüde, tasarımcıda bulunan bir etkinlik görünen adı gösterilmektedir:
 
@@ -47,8 +49,8 @@ Dosyalarda bul, XAML dosyaları da dahil olmak üzere iş akışı dosyalarında
 
 ### <a name="use-find-in-files"></a>Dosyalarda bul kullanma
 
-1. Visual Studio 'da **CTRL** + **SHIFT** + **F**tuşlarına basın veya **Düzenle**bul ' u  >  **ve**  >  **dosyalardaki bul**Değiştir ' i seçin.
+1. Visual Studio 'da **CTRL** + **SHIFT** + **F** tuşlarına basın veya **Düzenle** bul ' u  >  **ve**  >  **dosyalardaki bul** Değiştir ' i seçin.
 
-2. **Aranan metin kutusuna** arama öğesini girin ve **Tümünü Bul**' a tıklayın.
+2. **Aranan metin kutusuna** arama öğesini girin ve **Tümünü Bul** ' a tıklayın.
 
 3. Bulma sonucu **bul sonucu** görünümünde gösterilir. Bir sonuç öğesine çift tıklamak, iş akışı tasarımcısında eşleşmeyi içeren etkinliğe gider.

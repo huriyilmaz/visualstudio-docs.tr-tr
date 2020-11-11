@@ -1,5 +1,7 @@
 ---
 title: İş Akışı Tasarımcısı-Flowkarar etkinlik Tasarımcısı
+description: Flowkarar düğümünün, denetimin akışı için iki alternatifden birine bir dal sağlayan bir koşullu düğüm olduğunu öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 79e405f82bcf33bc01ad07f1092879c17dec5849
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1a70e7e44976df975be721d93e918d7c25d192bf
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76111443"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94438002"
 ---
 # <a name="flowdecision-activity-designer"></a>FlowDecision Etkinlik Tasarımcısı
 
@@ -27,11 +29,11 @@ ms.locfileid: "76111443"
 
 ### <a name="using-the-flowdecision-designer"></a>Flowkarar tasarımcısını kullanma
 
-**Flowkarar** Tasarımcısı **araç çubuğu** **kategorisinde bulunabilir** ve bu, iş akışı Tasarımcısı **araç kutusu** sekmesine tıklanarak erişilir. Alternatif olarak, **Görünüm** menüsünden **araç kutusu** ' nu seçin veya **CTRL** + **alt** + **X**tuşlarına basın.
+**Flowkarar** Tasarımcısı **araç çubuğu** **kategorisinde bulunabilir** ve bu, iş akışı Tasarımcısı **araç kutusu** sekmesine tıklanarak erişilir. Alternatif olarak, **Görünüm** menüsünden **araç kutusu** ' nu seçin veya **CTRL** + **alt** + **X** tuşlarına basın.
 
 **Flowkarar** Tasarımcısı **araç kutusundan** sürüklenip bir **akış çizelgesi** etkinlik Tasarımcısı içinde iş akışı Tasarımcısı yüzeyine bırakılabilir. Bu <xref:System.Activities.Statements.FlowDecision> , etkinlik içinde etiketlenmiş bir **karar** oluşturur <xref:System.Activities.Statements.Flowchart> . Tasarımcı üzerinde fare ve iki dal için **doğru** ve **yanlış** kare tutamaçları görüntülenir.
 
-**Flowkarar** tasarımcısını ve diğer tasarımcıları **Akış Çizelgesine**sürükledikten sonra, yürütme sırasını belirtmek için düğümler birbirine bağlanabilir. Kaynak düğüm ( **doğru** ve **Hatalı** **flowkararı**dahil) ile bir hedef düğümün arasında bir bağlantı oluşturmak için, kaynak düğüm ve kare tutamaçları tasarımcısının her tarafında görünür. Kare tutamaçlarından birine tıklayın ve fare düğmesini, üzerine fare düğmesini basılı tutarak hedef düğümün etrafında benzer şekilde görünen tutamaçlardan birine tıklayarak sürükleyin. Fare düğmesini bırakın ve bir bağlantı, kaynak tasarımcıdan hedef tasarımcıya ok olarak temsil edilen bu iki düğüm arasında oluşturulmuş bir bağlantıdır.
+**Flowkarar** tasarımcısını ve diğer tasarımcıları **Akış Çizelgesine** sürükledikten sonra, yürütme sırasını belirtmek için düğümler birbirine bağlanabilir. Kaynak düğüm ( **doğru** ve **Hatalı** **flowkararı** dahil) ile bir hedef düğümün arasında bir bağlantı oluşturmak için, kaynak düğüm ve kare tutamaçları tasarımcısının her tarafında görünür. Kare tutamaçlarından birine tıklayın ve fare düğmesini, üzerine fare düğmesini basılı tutarak hedef düğümün etrafında benzer şekilde görünen tutamaçlardan birine tıklayarak sürükleyin. Fare düğmesini bırakın ve bir bağlantı, kaynak tasarımcıdan hedef tasarımcıya ok olarak temsil edilen bu iki düğüm arasında oluşturulmuş bir bağlantıdır.
 
 ' I belirten ifade, <xref:System.Activities.Statements.FlowDecision.Condition%2A> İpucu metninin "vb Ifadesi girin" ifadesini tıklatarak **Özellikler** penceresinin **koşul** kutusuna yazılabilir.
 

@@ -1,5 +1,7 @@
 ---
 title: 'İş Akışı Tasarımcısı: iş akışı projesine yeni öğe ekleme'
+description: Bir iş akışı projesi oluşturduktan sonra projenize iş akışı etkinliklerini, tasarımcıları ve diğer tanıdık Visual Studio öğelerini nasıl ekleyebileceğiniz hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 06/25/2018
 ms.topic: how-to
 ms.assetid: 5c6180ca-af10-4513-b0cb-7d478fd84eab
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 53737eb421f4194b00354899e373441ff0a97227
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: af6563d21ce41d54e66f474de126c3bd4070ff8a
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85814622"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94437976"
 ---
 # <a name="how-to-add-a-new-item-to-a-workflow-project"></a>Nasıl yapılır: bir iş akışı projesine yeni öğe ekleme
 
@@ -30,7 +32,7 @@ Aşağıdaki tabloda, bir iş akışı projesine ekleyebileceğiniz Windows Work
 
 ## <a name="to-add-a-new-item-to-a-workflow-project"></a>Bir iş akışı projesine yeni bir öğe eklemek için
 
-1. **Proje** menüsünde **Yeni öğe Ekle**' yi seçin.
+1. **Proje** menüsünde **Yeni öğe Ekle** ' yi seçin.
 
    **Yeni öğe Ekle** iletişim kutusu açılır.
 

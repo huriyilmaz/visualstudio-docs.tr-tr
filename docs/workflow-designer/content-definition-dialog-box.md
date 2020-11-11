@@ -1,5 +1,7 @@
 ---
 title: İş Akışı Tasarımcısı-Içerik tanımı Iletişim kutusu
+description: Send, Receive, SendReply ve ReceiveReply etkinliklerinin Içerik özelliklerini yapılandırmak için Içerik tanımı iletişim kutusunu nasıl kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 19e2341d458c98f01d3b58d6f77887ac1cfe6746
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2858c179d05645b3e47e6be27e386168392fcb48
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86876209"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94438171"
 ---
 # <a name="content-definition-dialog-box"></a>İçerik Tanımı İletişim Kutusu
 
@@ -23,12 +25,12 @@ ms.locfileid: "86876209"
 
 Aşağıdaki tabloda **bağıntı Başlat** iletişim kutusunun kullanıcı ARABIRIMI (UI) öğeleri açıklanmaktadır:
 
-|Arabirim Öğesi|Description|
+|Arabirim Öğesi|Açıklama|
 |-|-----------------|
 |**İleti**|İleti **türü** açılan liste kutusunu kullanarak ileti **verisi** ifadesi metin kutusu ve türü ile ileti içeriğini belirtir. Varsayılan olarak, **Içerik tanımı** <xref:System.ServiceModel.Activities.ReceiveMessageContent> <xref:System.ServiceModel.Channels.Message> iş akışı hizmeti tanımında bir veya ileti sözleşme türü bekleyen öğesini kullanır.|
 |**Parametreler**|Kullanmak için **Parametreler** radyo düğmesine tıklayın <xref:System.ServiceModel.Activities.ReceiveParametersContent> ve bu da veri anlaşması bekler. <xref:System.Activities.OutArgument>Değerleri geçerli iş akışındaki değişken parametrelerine atanmış olan anahtar/değer çiftlerinin genel bir koleksiyonunu ayarlamak için veri kılavuzunu kullanın.|
 
-**Içerik tanımı** Iletişim kutusu **Send**, **Receive**, **ReceiveAndSendReply**ve **SendAndReceiveReply** tasarımcıları tarafından kullanılır. Bunlara erişmek her durumda benzerdir ve yordamı göstermek için alma durumu burada kullanılır.
+**Içerik tanımı** Iletişim kutusu **Send** , **Receive** , **ReceiveAndSendReply** ve **SendAndReceiveReply** tasarımcıları tarafından kullanılır. Bunlara erişmek her durumda benzerdir ve yordamı göstermek için alma durumu burada kullanılır.
 
 **Alma** etkinliği Tasarımcısı **araç kutusundan** sürüklenip, etkinliklerin genellikle yerleştirildiği her yerde iş akışı Tasarımcısı yüzeyine bırakılabilir. Bu <xref:System.ServiceModel.Activities.Receive> , varsayılan alma için bir etkinlik oluşturur <xref:System.Activities.Activity.DisplayName%2A> . **Al** etkinlik Tasarımcısı ' nı seçin ve **İçerik tanımı** Iletişim kutusunun Özellikler kılavuzundaki **içerik** özelliği için (içerik) metninin yanındaki üç nokta düğmesine tıklayın.
 

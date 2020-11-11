@@ -1,5 +1,7 @@
 ---
 title: İş Akışı Tasarımcısı ile Uygulama Geliştirme
+description: Visual Studio 'da WF uygulamalarında grafik oluşturma ve hata ayıklama için kullanabileceğiniz İş Akışı Tasarımcısı ile uygulama geliştirmeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -16,12 +18,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9f1b7aa37794618cd051cfdaaacb9359087cc664
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 88825e5328fc11702a503311b227fde155c79d73
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85814726"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94438080"
 ---
 # <a name="develop-apps-with-the-workflow-designer"></a>İş Akışı Tasarımcısı ile uygulamaları geliştirme
 
@@ -31,7 +33,7 @@ ms.locfileid: "85814726"
 
 Visual Studio 'da Iş akışı proje şablonlarını kullanmak için önce **Windows Workflow Foundation** bileşenini yüklemeniz gerekir.
 
-1. Visual Studio Yükleyicisi açın. **Tools**  >  Visual Studio 'da Araçlar**ve Özellikler Al ' i** seçerek açmak için hızlı bir yoldur.
+1. Visual Studio Yükleyicisi açın. **Tools**  >  Visual Studio 'da Araçlar **ve Özellikler Al ' i** seçerek açmak için hızlı bir yoldur.
 
 1. Visual Studio Yükleyicisi, **tek tek bileşenler** sekmesini seçin.
 
@@ -39,7 +41,7 @@ Visual Studio 'da Iş akışı proje şablonlarını kullanmak için önce **Win
 
    ![Visual Studio Windows Workflow Foundation bileşeni](media/windows-workflow-foundation-component.png)
 
-1. **Değiştir**'i seçin.
+1. **Değiştir** 'i seçin.
 
    Visual Studio **Windows Workflow Foundation** bileşenini yüklüyor.
 

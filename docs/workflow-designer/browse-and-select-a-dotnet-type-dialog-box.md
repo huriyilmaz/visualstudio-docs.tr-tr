@@ -1,5 +1,7 @@
 ---
 title: İş Akışı Tasarımcısı-.NET türüne gözatıp seçin Iletişim kutusu
+description: Derlemeler ve projeler için bir ağaç görünümünden bir tür seçmek üzere bir .NET türünü görüntüle ve Seç iletişim kutusunu nasıl kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -11,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: a526bc9504f4f63a7a135978ade02654bbe63ffd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7e887cf339647df9bca7fdc3d07a45dd44901c42
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75597119"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94438184"
 ---
 # <a name="browse-and-select-a-net-type-dialog-box"></a>.NET Türüne Gözat ve Seç İletişim Kutusu
 
@@ -39,7 +41,7 @@ Bu iletişim kutusu, aşağıdakiler de dahil olmak üzere çeşitli Kullanıcı
 
 1. **Tür adı** kutusuna, kullanmak istediğiniz türün adını girin.
 
-2. Şunlardan birini yapın:
+2. Aşağıdakilerden birini yapın:
 
     - Kullanmak istediğiniz türün adı, **tür adı** kutusundaki ağaçta göründüğünde, seçmek için türe çift tıklayın.
 
@@ -51,11 +53,11 @@ Bu iletişim kutusu, aşağıdakiler de dahil olmak üzere çeşitli Kullanıcı
 
 2. Kullanmak istediğiniz türün adı **tür adı** kutusundaki ağaçta göründüğünde, açılan kutuların görünmesine neden olacak şekilde seçmek için türe tıklayın.
 
-     Açılan kutulardan genel ' i kapatmak için kullanmak istediğiniz türü seçin ve ardından **Tamam**' a tıklayın.
+     Açılan kutulardan genel ' i kapatmak için kullanmak istediğiniz türü seçin ve ardından **Tamam** ' a tıklayın.
 
 ## <a name="types-displayed-in-the-type-browser"></a>Tür tarayıcısında görünen türler
 
-Tür tarayıcısında görünen türler, tür tarayıcısının nasıl başlatıldığına bağlı olarak farklılık gösterebilir. Tür tarayıcısı **VS2010**içindeki bir iş akışı projesinden başlatılmışsa, varsayılan olarak başvurulan derlemelerdeki tüm türler ve başvurulan projeler gösterilir. Tür tarayıcısı bir **VS2010** projesi sisteminin dışından (örneğin, yeniden barındırılan bir iş akışı uygulamasında veya tek başına bir iş akışı dosyasında) başlatılmışsa, varsayılan olarak, uygulama etki alanında yüklü derlemelerin tümünün türleri gösterilir.
+Tür tarayıcısında görünen türler, tür tarayıcısının nasıl başlatıldığına bağlı olarak farklılık gösterebilir. Tür tarayıcısı **VS2010** içindeki bir iş akışı projesinden başlatılmışsa, varsayılan olarak başvurulan derlemelerdeki tüm türler ve başvurulan projeler gösterilir. Tür tarayıcısı bir **VS2010** projesi sisteminin dışından (örneğin, yeniden barındırılan bir iş akışı uygulamasında veya tek başına bir iş akışı dosyasında) başlatılmışsa, varsayılan olarak, uygulama etki alanında yüklü derlemelerin tümünün türleri gösterilir.
 
 Tür tarayıcısındaki türler, etkinlik Tasarımcısı geliştiricilerine göre filtrelenebilir. Belirli bir etkinlik için yalnızca türlerin bir alt kümesini görebilirsiniz. Örneğin, <xref:System.Activities.Statements.TryCatch> etkinliğinde, türü tarayıcıda yalnızca öğesinden türetilmiş türler <xref:System.Exception> gösterilir.
 

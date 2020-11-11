@@ -1,5 +1,7 @@
 ---
 title: İş Akışı Tasarımcısı-etkinlik tasarımcısını Onayla
+description: Onaylama etkinliği tasarımcısını ve bir onaylama etkinliği oluşturmak ve yapılandırmak için bu tasarımcıyı nasıl kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: abd7fedd958072baf23b456f9897ab67c864991d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4928dcd7a9e1b83ba797614545315022d0f36ac3
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86876144"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94438158"
 ---
 # <a name="confirm-activity-designer"></a>Confirm Etkinlik Tasarımcısı
 
@@ -27,7 +29,7 @@ Etkinlik oluşturmak ve yapılandırmak için **onaylama** etkinliği Tasarımc�
  <xref:System.Activities.Statements.CompensationToken>Tarafından belirtilen, <xref:System.Activities.Statements.Compensate.Target%2A> başarıyla tamamlandıktan sonra açıkça onaylamak veya telafi etmek için bir yol sağlar <xref:System.Activities.Statements.CompensableActivity> <xref:System.Activities.Statements.CompensableActivity.Body%2A> <xref:System.Activities.Statements.CompensableActivity> .
 
 ### <a name="using-the-confirm-activity-designer"></a>Onaylama etkinliği tasarımcısını kullanma
- **Onaylama** etkinliği tasarımcısı, iş akışı Tasarımcısı sol tarafındaki **araç kutusu** sekmesine tıklanarak erişilen **araç kutusu** **işlem** kategorisinde bulunabilir. Alternatif olarak, **Görünüm** menüsünden **araç kutusu** ' nu seçin veya **CTRL** + **alt** + **X**tuşlarına basın.
+ **Onaylama** etkinliği tasarımcısı, iş akışı Tasarımcısı sol tarafındaki **araç kutusu** sekmesine tıklanarak erişilen **araç kutusu** **işlem** kategorisinde bulunabilir. Alternatif olarak, **Görünüm** menüsünden **araç kutusu** ' nu seçin veya **CTRL** + **alt** + **X** tuşlarına basın.
 
  **Onaylama** etkinliği Tasarımcısı **araç kutusundan** sürüklenip, örneğin içinde olduğu gibi etkinliklerin genellikle yerleştirildiği iş akışı Tasarımcısı yüzeyine bırakılabilir <xref:System.Activities.Statements.Sequence> . Bu <xref:System.Activities.Statements.Confirm> , varsayılan Onayla olan bir etkinlik oluşturur <xref:System.Activities.Activity.DisplayName%2A> . <xref:System.Activities.Activity.DisplayName%2A>Değer, **Onayla** etkinlik tasarımcısının üst bilgisinde veya özellik kılavuzunun **DisplayName** kutusunda düzenlenebilir.
 

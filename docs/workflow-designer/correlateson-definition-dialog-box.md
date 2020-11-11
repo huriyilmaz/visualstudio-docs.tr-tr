@@ -1,5 +1,7 @@
 ---
 title: İş Akışı Tasarımcısı-CorrelatesOn tanımı Iletişim kutusu
+description: Alma etkinliğinin CorrelatesOn özelliğini düzenlemek için İş Akışı Tasarımcısı içindeki CorrelatesOn iletişim kutusunu nasıl kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8d2db5bbfa4f34d86d3bf20cfe6bcc42b3dc00d0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2be38ba9521762c38c629c2817a7c8e8ca5a709a
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86876131"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94438132"
 ---
 # <a name="correlateson-definition-dialog-box"></a>CorrelatesOn Tanımı İletişim Kutusu
 
@@ -25,7 +27,7 @@ Etkinlikler arasındaki bağıntı, <xref:System.ServiceModel.Activities.Receive
 
 Aşağıdaki tabloda **CorrelatesOn** iletişim kutusunun kullanıcı ARABIRIMI (UI) öğeleri açıklanmaktadır.
 
-|Arabirim Öğesi|Description|
+|Arabirim Öğesi|Açıklama|
 |-|-----------------|
 |**CorrelatesWith**|<xref:System.ServiceModel.Activities.CorrelationHandle>İletiyi uygun iş akışı örneğine yönlendirmek için kullanılır.|
 |**XPath sorguları**|Gelen iletilerden bağıntı verilerini ayıklamak için kullanılan sorguları içeren bir anahtar/değer çifti. Bu değer özelliğine karşılık gelir <xref:System.ServiceModel.Activities.Receive.CorrelatesOn%2A> . XPath sorguları bir nesnesi içinde bulunur <xref:System.ServiceModel.MessageQuerySet> .|

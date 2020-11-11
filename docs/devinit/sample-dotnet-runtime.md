@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 04ac5ba718e72085f8e050ecf0e2ce0cc1305629
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: 0cc36dc58b65188b21115569f1216446784d227a
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93134269"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94438224"
 ---
 # <a name="net-core-runtime"></a>.NET Core çalışma zamanı
 
@@ -45,7 +45,7 @@ _packages.config_ dosyası, yüklenecek Chocolatey paketlerinin listesini tanım
 
 ## <a name="devinitjson"></a>.devinit.json
 
-Dosyadaki [_.devinit.js_](devinit-json.md) içeriği. Bu dosyanın dosyada _.devcontainer.js_ aynı klasörde olması gerekir.
+[`.devinit.json`](devinit-json.md)Dosyanın içeriği. Bu dosyanın dosyadaki _.devcontainer.js_ klasörde olması gerekir.
 
 ```json
 {

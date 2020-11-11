@@ -11,18 +11,20 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 2b6cc27d2614f71c85988457ab9bb64228bbaebb
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: acd3b65f520a9be048fe2d0209a85a85d086df2f
+ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93399968"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94438231"
 ---
 # <a name="devinit-configuration-file"></a>devinit yapılandırma dosyası
 
+`.devinit.json`Dosya, uygulamanızın çalıştırmak ve derlemek için ihtiyaç duyacağı sistem genelinde bağımlılıkları tanımlar. Sistem genelinde bağımlılıklar Node.js, SQL Server, IIS, Kbbitmq, Docker vb. gibi şeyler. Bunlar, normalde, belirli bir depoyla yüklenmeyen geliştirme kutusuna yüklediğiniz şeyleri sıralacağlardır. NuGet veya NPM gibi paket yöneticilerinde yaptığınız gibi uygulamaya özel bağımlılıklar tanımlamak bir yer değildir. Ancak, bu paket yöneticilerine ihtiyacınız olduğunu tanımlamak için bir yer vardır.
+
 ## <a name="file-location"></a>Dosya konumu
 
-`devinit.exe init`Komut, _.devinit.js_ dosyası aracılığıyla yönlendiriliyor. Varsayılan olarak, `devinit.exe` aşağıdaki konumlarda dosyayı arar:
+`devinit init`Komut, dosya aracılığıyla yönlendiriliyor `.devinit.json` . Varsayılan olarak, `devinit` aşağıdaki konumlarda dosyayı arar:
 
 * {geçerli-dizin} \\ Üzerinde.devinit.js
 * {geçerli-dizin} \\ Üzerindedevinit.js
@@ -36,7 +38,7 @@ ms.locfileid: "93399968"
 > [!NOTE]
 > Birden çok varsayılan dosya bulunursa, devınit yukarıdaki listede ilk görüntülenen dosyayı kullanır.
 
-Dosyadaki _.devinit.js_ , açıkça seçeneği aracılığıyla da belirlenebilir `--file` / `-f` .
+`.devinit.json`Dosya ayrıca seçeneği aracılığıyla açıkça de belirtilebilir `--file` / `-f` .
 
 ### <a name="directories-and-relative-paths"></a>Dizinler ve göreli yollar
 
