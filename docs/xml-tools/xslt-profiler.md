@@ -2,7 +2,7 @@
 title: XSLT performansı
 description: XSLT kodunuzun performansını en iyileştirmenize yardımcı olmak üzere ayrıntılı XSLT performans raporları oluşturan Visual Studio 'daki XSLT Profiler hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
-ms.date: 03/05/2019
+ms.date: 11/11/2020
 ms.topic: conceptual
 ms.assetid: 87387c9a-2e89-4801-ad51-83740cd6ea25
 author: TerryGLee
@@ -10,12 +10,13 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4f4fd10df6a5cd91866633a46e1a512e91da2040
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+monikerRange: vs-2017
+ms.openlocfilehash: f2214ab4d66dcad1ee92eda7d7acbb94b89e8eb6
+ms.sourcegitcommit: 83a39d48b00c6c351e5c1707942633b7f73aaad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94351420"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94531894"
 ---
 # <a name="the-xslt-profiler"></a>XSLT Profiler
 
@@ -23,14 +24,14 @@ XSLT Profiler, XSLT kodundaki performansla ilgili sorunları ölçmenize, değer
 
 XSLT Profiler, Visual Studio 'nun bir parçasıdır ve **XML** menüsünde kullanılabilir.
 
-![XSLT Profil Oluşturucusu](../xml-tools/media/profile-xslt-menu.png)
+![XSLT Profiler](../xml-tools/media/profile-xslt-menu.png "Visual Studio 2017 ' de XML menü öğelerinin ekran görüntüsü")
 
 > [!NOTE]
-> XSLT Profiler yalnızca Visual Studio Enterprise sürümünde kullanılabilir.
+> XSLT Profiler yalnızca Visual Studio 2017 Enterprise sürümünde kullanılabilir.
 
 ## <a name="create-a-performance-report"></a>Performans raporu oluşturma
 
-1. Visual Studio 'da bir XSLT belgesi açın.
+1. Visual Studio 2017 ' de bir XSLT belgesi açın.
 
 2. Menü çubuğunda, **XML**  >  **profili XSLT** ' yi seçin.
 

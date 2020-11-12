@@ -10,12 +10,12 @@ manager: jillfra
 ms.workload:
 - multiple
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: a4e0079fa301d751962a945a0bf8348ffd3c359d
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: b5d2f8205c72f2fd661a76296392bb94d1d24469
+ms.sourcegitcommit: 83a39d48b00c6c351e5c1707942633b7f73aaad6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93047791"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94531868"
 ---
 # <a name="whats-new-in-msbuild-160"></a>MSBuild 16.0 sürümündeki yenilikler
 
@@ -33,10 +33,14 @@ Bu makalede, MSBuild 16,0 ' deki güncelleştirilmiş özellikler ve özellikler
 
 - `VisualStudioVersion` araçların bu sürümü için "16,0"
 
+## <a name="change-waves"></a>Dalgaları değiştirme
+
+MSBuild 16,8 ' den itibaren, MSBuild 'te belirli olabilecek ciddi değişikliklerden vazgeçmek isteyip istemediğinizi seçerek seçebilirsiniz. Bkz. [dalgaları değiştirme](change-waves.md).
+
 ## <a name="updates"></a>Güncelleştirmeler
 
 MSBuild (ve Visual Studio) artık .NET Framework 4.7.2’yi hedeflemektedir. Yeni MSBuild API özelliklerini kullanmak istiyorsanız bütünleştirilmiş kodunuz da yükseltilmelidir, ancak mevcut kod çalışmaya devam eder.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [MSBuild](../msbuild/msbuild.md)
+- [MSBUILD](../msbuild/msbuild.md)
