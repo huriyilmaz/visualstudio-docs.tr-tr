@@ -24,7 +24,9 @@
           href: /dotnet/core/deploying/deploy-with-vs
         - name: Bir masaüstü uygulamasını Microsoft Store için paketleme
           href: /windows/msix/desktop/desktop-to-uwp-packaging-dot-net
-        - name: ClickOnce kullanarak masaüstü uygulaması dağıtma
+        - name: ClickOnce kullanarak .NET Windows uygulaması dağıtma
+          href: quickstart-deploy-using-clickonce-folder.md
+        - name: ClickOnce kullanarak .NET Framework masaüstü uygulaması dağıtma
           href: how-to-publish-a-clickonce-application-using-the-publish-wizard.md
         - name: Komut Satırından ClickOnce uygulamalarını derleme
           href: building-clickonce-applications-from-the-command-line.md

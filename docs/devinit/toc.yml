@@ -80,7 +80,7 @@
           href: sample-eshoponweb.md
         - name: OpenCV deposu
           href: sample-opencv.md
-        - name: Codespaces özel önizlemesi
+        - name: Codespaces özel beta sürümü
           href: sample-private-preview.md
         - name: .NET Core Uygulaması
           href: sample-dotnet-core.md
