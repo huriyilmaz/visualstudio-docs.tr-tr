@@ -1,7 +1,7 @@
 ---
 title: wsl-install
 description: devinit aracı WSL-Install.
-ms.date: 08/28/2020
+ms.date: 11/10/2020
 ms.topic: reference
 author: andysterland
 ms.author: andster
@@ -11,18 +11,19 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 3283b6e90cb2bced27f09b8c4491992fb5ac315f
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: ab63b5feb8c71659b83e824f104dd7bbcbb744f9
+ms.sourcegitcommit: 62f91179f2c3a51c85dd7b0e6172a3a53393fb7e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400180"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94567015"
 ---
 # <a name="wsl-install"></a>wsl-install
 
 `wsl-install`Araç, [Linux için Windows alt sistemi](/windows/wsl/) (WSL) için Linux Distro 'lara yüklemek üzere kullanılır.
 
-`wsl-install`Araç, Windows üzerinde WSL 2 ' nin zaten etkinleştirilmesini gerektirir. Bazı nedenlerle WSL2 etkinleştirilmemişse, [WindowsFeature-Enable](tool-windowsfeature-enable.md) aracını ve özellik adını kullanarak WSL2 'yi etkinleştirebilirsiniz `Microsoft-Windows-Subsystem-Linux` .
+> [!IMPORTANT]
+> `wsl-install`Araç, Windows üzerinde WSL 2 ' nin zaten etkinleştirilmesini gerektirir. Bazı nedenlerle WSL 2 etkinleştirilmemişse, [WSL yüklemesi belgelerini](https://docs.microsoft.com/windows/wsl/install-win10)takip edebilirsiniz. Gerekli Windows özelliklerini etkinleştirmek için [WindowsFeature-Enable](tool-windowsfeature-enable.md) aracını da kullanabilirsiniz.
 
 ## <a name="usage"></a>Kullanım
 
