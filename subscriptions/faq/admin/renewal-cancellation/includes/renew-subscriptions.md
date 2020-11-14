@@ -1,18 +1,18 @@
 ---
 title: Aboneliklerimi nasıl yenileyebilirim?
 description: 'Abonelikleri yenileme işlemi bunların nasıl satın alındığına bağlıdır. Perakende: Microsoft Store aracılığıyla alınan abonelikler için,...'
-ms.faqid: group4_1
+ms.faqid: group4_2
 ms.topic: include
 ms.assetid: 754c7033-72db-49ea-b99b-cea892261834
 author: CaityBuschlen
 ms.author: cabuschl
 ms.date: 3/3/2020
-ms.openlocfilehash: 3707dc584eb9aa7c200526efbe7815d19b4d1451
-ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
+ms.openlocfilehash: f8c116084401c7166ee8d93945a27b2c55c1542c
+ms.sourcegitcommit: f915322d60182143da7036893d2941bc200cf439
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91838240"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94575452"
 ---
 ## <a name="how-do-i-renew-my-subscriptions"></a>Aboneliklerimi nasıl yenileyebilirim?
 
@@ -22,6 +22,6 @@ Perakende: Microsoft Store aracılığıyla alınan abonelikler için Microsoft 
 
 Bulut abonelikleri: Bulut abonelikleri kullanıyorsanız, bunları yenilemeniz gerekmez. Bunlar siz iptal edene kadar otomatik olarak yenilenir.
 
-[Bulut abonelikleri satın alma](../../../../vscloud-overview.md) hakkında daha fazla bilgi edinin.
+[Bulut abonelikleri satın alma](https://docs.microsoft.com/visualstudio/subscriptions/vscloud-overview) hakkında daha fazla bilgi edinin.
 
 Toplu Lisanslama: Toplu Lisanslama aracılığıyla satın alınan abonelikleri yenilemek için lütfen satıcınızla iletişim kurun. Bölgenizde [bir bayi bulun](https://www.microsoft.com/licensing/how-to-buy/how-to-buy).

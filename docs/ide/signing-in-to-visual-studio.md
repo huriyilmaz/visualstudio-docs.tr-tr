@@ -11,12 +11,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 870d5005cb74a3c130af3d720991a6797bb53bc5
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 3fd3a6153a347bcaf7d17fd265b7d9c7d4e6a5e5
+ms.sourcegitcommit: c1cc3d8e1673c52fbfddc86b089b4a3d46bb3e59
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036177"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94626183"
 ---
 # <a name="sign-in-to-visual-studio"></a>Visual Studio’da oturum açma
 
@@ -39,7 +39,7 @@ Oturum açtığınızda, Visual Studio deneyiminizi zenginleştirin. Örneğin, 
 İşte, oturum açtıktan sonra neleri beklediklerinize ilişkin tam bir liste aşağıda verilmiştir:
 - **Visual Studio deneme süresini genişletin** -30 günlük deneme süresi boyunca sınırlı olmak yerine Visual Studio Professional veya Visual Studio Enterprise ek 90 gün boyunca kullanabilirsiniz. Daha fazla bilgi için bkz. [deneme sürümünü genişletme veya lisans güncelleştirme](../ide/how-to-unlock-visual-studio.md).
 
-- **Visual Studio Community Edition 'ı kullanmaya devam et** -topluluk sürümü yüklemeniz bir lisans ısterse, Visual Studio Community 'yi **ücretsiz**kullanmaya devam etmek için IDE 'de oturum açın. 
+- **Visual Studio Community Edition 'ı kullanmaya devam et** -topluluk sürümü yüklemeniz bir lisans ısterse, Visual Studio Community 'yi **ücretsiz** kullanmaya devam etmek için IDE 'de oturum açın. 
 
 - **Visual Studio aboneliği veya bir Azure DevOps organizasyonu ile ilişkili bir hesap kullanıyorsanız, Visual Studio 'Nun kilidini açın**. Ayrıntılı yönergeler için bkz. [deneme sürümünü genişletme veya lisans güncelleştirme](../ide/how-to-unlock-visual-studio.md).
 
@@ -51,19 +51,19 @@ Oturum açtığınızda, Visual Studio deneyiminizi zenginleştirin. Örneğin, 
 
 ## <a name="how-to-sign-in-to-visual-studio"></a>Visual Studio 'da oturum açma
 
-Visual Studio 'Yu ilk kez açtığınızda, oturum açmanız ve bazı temel kayıt bilgilerini sağlamanız istenir. 
+Visual Studio 'Yu ilk kez açtığınızda, oturum açmanız ve bazı temel kayıt bilgilerini sağlamanız istenir.
 
 ![Oturum açma istemi](../ide/media/vs2019_signinpopup.png)
 
 Sizi en iyi şekilde temsil eden bir Microsoft hesabı veya bir iş veya okul hesabı seçmelisiniz. Bu hesaplardan herhangi birine sahip değilseniz, oturum aç düğmesinin altındaki bağlantıya tıklayarak bir Microsoft hesabı ücretsiz olarak oluşturabilirsiniz. Sorun yaşıyorsanız, [Microsoft hesabı nasıl yaparım? kaydolma](https://support.microsoft.com/help/4026324/microsoft-account-how-to-create) bölümüne bakın.
 
-Daha sonra, Visual Studio'da kullanmak istediğiniz kullanıcı arabirimi ayarlarını ve renk temasını seçin. Visual Studio bu ayarları anımsar ve oturum açtığınız tüm Visual Studio ortamlarında eşitlenir. Eşitlenen ayarların listesi için bkz. [Eşitlenmiş Ayarlar](../ide/synchronized-settings-in-visual-studio.md). **Tools**  >  Visual Studio 'da Araçlar**Seçenekler** menüsünü açarsanız ayarları daha sonra değiştirebilirsiniz.
+Daha sonra, Visual Studio'da kullanmak istediğiniz kullanıcı arabirimi ayarlarını ve renk temasını seçin. Visual Studio bu ayarları anımsar ve oturum açtığınız tüm Visual Studio ortamlarında eşitlenir. Eşitlenen ayarların listesi için bkz. [Eşitlenmiş Ayarlar](../ide/synchronized-settings-in-visual-studio.md). **Tools**  >  Visual Studio 'da Araçlar **Seçenekler** menüsünü açarsanız ayarları daha sonra değiştirebilirsiniz.
 
 Ayarları yaptıktan sonra Visual Studio başlatılır, oturumunuz açılır ve başlamaya hazır olursunuz. Oturum açmış olup olmadığını doğrulamak için, Visual Studio ortamının sağ üst köşesinde adınızı arayın.
 
 ![VS2019 'de Şu anda oturum açmış olan Kullanıcı](../ide/media/vs2019_username.png)
 
-Visual Studio 'Yu ilk kez açtığınızda oturum açmayı tercih ediyorsanız daha sonra kolayca yapabilirsiniz. Visual Studio ortamının sağ üst köşesindeki **oturum aç** bağlantısına bakın. 
+Visual Studio 'Yu ilk kez açtığınızda oturum açmayı tercih ediyorsanız daha sonra kolayca yapabilirsiniz. Visual Studio ortamının sağ üst köşesindeki **oturum aç** bağlantısına bakın.
 
 ![Oturum açmamış Kullanıcı](../ide/media/vs2019_usernotsignedin.png)
 
@@ -75,7 +75,7 @@ Oturumu kapatmadığınız takdirde, Visual Studio 'Yu her başlattığınızda 
 
 1. Tarayıcı penceresinde **Profili Düzenle** ' yi seçin ve istediğiniz ayarları değiştirin.
 
-1. İşiniz bittiğinde **Değişiklikleri Kaydet**' i seçin.
+1. İşiniz bittiğinde **Değişiklikleri Kaydet** ' i seçin.
 
 ## <a name="troubleshooting"></a>Sorun giderme
 

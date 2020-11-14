@@ -11,16 +11,16 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 7ba3ff8e22923590c21333c35563a98352eeef21
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 929be4682465494738d859f9fe8144b5e26aaf4f
+ms.sourcegitcommit: c1cc3d8e1673c52fbfddc86b089b4a3d46bb3e59
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94438238"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94626170"
 ---
 # <a name="devinit-and-github-codespaces"></a>devinit ve GitHub Codespaces
 
-devinit, [GitHub codespace](https://github.com/features/codespaces) 'e harika bir fikir ve devinit, katkıda bulunanlar oluşturmak, çalıştırmak ve hata ayıklamak için hemen bir kod alanı kurulumu sağlamak üzere kullanılabilir.
+devinit, [GitHub kod alanları](https://github.com/features/codespaces) için harika bir tamamlama ve devinit, katkıda bulunanlar oluşturmak, çalıştırmak ve hata ayıklamak için hemen bir kod alanı kurulumu sağlamak üzere kullanılabilir.
 
 > [!IMPORTANT]
 > Devinit 'i codespace ile tümleştirmadan önce, bağımlılıklarınızı tanımlayan bir dosyaya sahip olduğunuzdan emin olmanız gerekir `.devinit.json` . Oluşturma hakkında daha fazla bilgi için Başlarken `.devinit.json` [belgelerini](getting-started-with-devinit.md)okuyun.

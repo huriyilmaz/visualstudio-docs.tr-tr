@@ -7,16 +7,16 @@ ms.date: 04/02/2019
 ms.technology: vs-ide-install
 ms.assetid: 25CD47A4-5B32-4734-8EF3-E24A02AABF29
 ms.topic: how-to
-ms.openlocfilehash: 69ecab4f4d3dd7d99821b384dbda0c8986297282
-ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
+ms.openlocfilehash: f3c1c528e9201c66bc566f9867f8325c653700b9
+ms.sourcegitcommit: f915322d60182143da7036893d2941bc200cf439
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94492847"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94575547"
 ---
 # <a name="introduction-to-azure-functions"></a>Azure İşlevleri’ne Giriş
 
-Azure işlevleri, altyapıyı açıkça sağlamak veya yönetmek zorunda kalmadan, kod – – işlevleri – –, bulutta olay odaklı kod parçacıkları oluşturup çalıştırmanın bir yoludur. Azure Işlevleri hakkında daha fazla bilgi için bkz. [Azure işlevleri belgeleri](/azure/azure-functions/).
+Azure Işlevleri, altyapıyı açıkça sağlamak veya yönetmek zorunda kalmadan, kod – – işlevleri – –, bulutta olay odaklı kod parçacıkları oluşturup çalıştırmanın bir yoludur. Azure Işlevleri hakkında daha fazla bilgi için bkz. [Azure işlevleri belgeleri](/azure/azure-functions/).
 
 ## <a name="requirements"></a>Gereksinimler
 
@@ -29,15 +29,15 @@ Azure Işlev araçları, **Mac için Visual Studio 7,5** ve daha yeni bir sürü
 1. Mac için Visual Studio **dosya > yeni çözüm** ' ı seçin.
 2. Yeni proje iletişim kutusunda **Cloud > genel** ' ın altındaki Azure işlevleri şablonunu seçin ve **İleri** ' ye tıklayın:
 
-    ![Azure işlevleri seçeneğini gösteren yeni proje iletişim kutusu](media/azure-functions-image1.png)
+    ![Azure Işlevleri seçeneğini gösteren yeni proje iletişim kutusu](media/azure-functions-image1.png)
 
 3. Kullanmak istediğiniz ilk Azure Işlevleri şablonunu seçin, işlevinizin adını girin ve **İleri** ' ye tıklayın.
 
-    ![Azure işlevleri şablonlarını gösteren yeni proje iletişim kutusu](media/azure-functions-image2.png)
+    ![Azure Işlevleri şablonlarını gösteren yeni proje iletişim kutusu](media/azure-functions-image2.png)
 
     > [!TIP]
     > Paketlenmiş Azure Işlevleri çalışma zamanı ve şablonları (CLı) mümkün olduğunca güncel tutulurken, kaçınılmaz olarak güncelliğini yitirmiş. Yeni bir Işlevler projesi oluştururken, Mac için Visual Studio CLı güncelleştirmelerini denetler ve aşağıdaki görüntüde gösterildiği gibi size bildirir. Güncelleştirilmiş şablonları indirmek için düğmeye tıklamanız yeterlidir.
-    > ![Azure işlevleri güncelleştirmelerini gösteren yeni proje iletişim kutusu kullanılabilir](media/azure-functions-update.png)
+    > ![Azure Işlevleri güncelleştirmelerini gösteren yeni proje iletişim kutusu kullanılabilir](media/azure-functions-update.png)
 
     Seçtiğiniz işlevin türüne bağlı olarak, sonraki sayfada aşağıdaki görüntüde gösterildiği gibi erişim hakları gibi ayrıntılar girmeniz istenir:
 

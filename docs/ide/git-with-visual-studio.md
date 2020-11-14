@@ -2,20 +2,20 @@
 title: Visual Studio 'da git deneyimi
 titleSuffix: ''
 description: Visual Studio 2019 ' de yeni tümleşik git deneyiminin daha üretken olmanıza nasıl yardımcı olabileceğini öğrenin.
-ms.date: 11/10/2020
+ms.date: 11/13/2020
 ms.topic: conceptual
 ms.author: tglee
 author: prnadago
 ms.manager: jillfra
 monikerRange: vs-2019
-ms.openlocfilehash: 33606a2b4290735d5c15788a1e6961191d6d92f9
-ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
+ms.openlocfilehash: cf2f55f64eff13e9f7966ac21decf669c36284bd
+ms.sourcegitcommit: c1cc3d8e1673c52fbfddc86b089b4a3d46bb3e59
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94493562"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94626274"
 ---
-# <a name="git-productivity-in-visual-studio"></a>Visual Studio 'da git üretkenliği
+# <a name="git-experience-in-visual-studio"></a>Visual Studio 'da git deneyimi
 
 Git artık Visual Studio 2019 ' de varsayılan sürüm denetimi deneyimidir. [Sürüm 16,6](/visualstudio/releases/2019/release-notes-v16.6)' den itibaren, özellik kümesini oluşturmaya ve geri bildiriminiz doğrultusunda bu uygulamayı yineleme konusunda çalıştık. Yeni git deneyimi, [sürüm 16,8](/visualstudio/releases/2019/release-notes/)sürümüne sahip herkes için varsayılan olarak açıktır.
 
@@ -24,7 +24,11 @@ Git artık Visual Studio 2019 ' de varsayılan sürüm denetimi deneyimidir. [S�
 
 ## <a name="how-to-use-git-in-visual-studio"></a>Visual Studio 'da git 'i kullanma
 
-Daha üretken olmak için Visual Studio 2019 ile git kullanmaya başlamanın üç yolu vardır:
+Visual Studio 2019 ' de yeni git deneyiminin nasıl kullanılacağı konusunda size kılavuzluk edeceğiz, ancak ilk olarak hızlı bir tura katılmak istiyorsanız aşağıdaki videoya göz atın: <br><br>*Video uzunluğu: 5,27 dakika*
+
+> [!VIDEO https://www.youtube.com/embed/UHrAg3iKoe0]
+
+Daha üretken olmak için Visual Studio ile git kullanmaya başlamanın üç yolu vardır:
 
 - [Var olan bir Git deposunu açın](#open-an-existing-local-repository). Kodunuz zaten makinenizde ise, **Dosya**  >  **Aç**  >  **Proje/çözüm** (veya **klasör** ) kullanarak dosyayı açabilir ve Visual Studio başlatılmış bir git deposu olup olmadığını otomatik olarak algılar.
 - [Yeni bir git deposu oluşturun](#create-a-new-git-repository). Kodunuz git ile ilişkili değilse, yeni bir git deposu oluşturabilirsiniz.
@@ -195,6 +199,7 @@ Yeni git deneyimi artık Visual Studio 2019 [sürüm 16,8](/visualstudio/release
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
+- [Visual Studio blog gönderisine git deneyiminin yayını duyurusu](https://devblogs.microsoft.com/visualstudio/announcing-the-release-of-the-git-experience-in-visual-studio/)
 - YouTube 'da [Yeni git deneyiminin başlatılması](https://www.youtube.com/watch?v=UHrAg3iKoe0&t)
 - [Visual Studio araç kutusu serisi şunları sunar:](https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/The-New-Git-Experience) Channel 9 ve [YouTube](https://www.youtube.com/watch?v=ZiQ2LXtAJ6I&feature=youtu.be) 'da yeni git deneyimi videosu
 - [Visual Studio blog gönderisine git deneyimine heyecan verici yeni güncelleştirmeler](https://devblogs.microsoft.com/visualstudio/exciting-new-updates-to-the-git-experience-in-visual-studio/)

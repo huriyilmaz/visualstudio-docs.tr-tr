@@ -1,6 +1,6 @@
 ---
 title: Seçenekler, Metin Düzenleyici, C#, Gelişmiş
-ms.date: 08/12/2020
+ms.date: 11/13/2020
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.CSharp.Outlining
@@ -10,16 +10,16 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: b8e515058b17205a65bab401c7b31c7205aa55bc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: acd04f80d5ade3a4afea418def69d4bbb6e20fa0
+ms.sourcegitcommit: c1cc3d8e1673c52fbfddc86b089b4a3d46bb3e59
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88214672"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94626203"
 ---
 # <a name="options-text-editor-c-advanced"></a>Seçenekler, Metin Düzenleyici, C#, Gelişmiş
 
-C# için düzenleyici biçimlendirme, kod yeniden düzenleme ve XML belge yorumlarının ayarlarını değiştirmek için **Gelişmiş** Seçenekler sayfasını kullanın. Bu seçenekler sayfasına erişmek için **Araçlar**  >  **Seçenekler**' i ve ardından **metin düzenleyici**  >  **C#**  >  **Gelişmiş**' i seçin.
+C# için düzenleyici biçimlendirme, kod yeniden düzenleme ve XML belge yorumlarının ayarlarını değiştirmek için **Gelişmiş** Seçenekler sayfasını kullanın. Bu seçenekler sayfasına erişmek için **Araçlar**  >  **Seçenekler** ' i ve ardından **metin düzenleyici**  >  **C#**  >  **Gelişmiş** ' i seçin.
 
 > [!NOTE]
 > Tüm seçenekler burada listelenmeyebilir.
@@ -134,6 +134,12 @@ Kodunuzda süslü ayraçlar () arasında noktalı dikey çizgiler göstermek iç
     Seçildiğinde, işlev çağrılarında her bağımsız değişkenden önce sabit değerler, yayımlanmış sabit değerler ve nesne örneklemeleri için parametre adı ipuçları ekler.  
     
     ![CSharp için satır içi parametre adı Ipuçları](media/inline-parameter-name-hints-csharp.png)
+
+- Satır içi tür Ipuçları 
+    
+    Seçildiğinde, çıkartılan türler ve Lambda parametre türleri olan değişkenler için tür ipuçları ekler.  
+    
+    ![CSharp için satır içi tür Ipuçları](media/inline-type-hints-csharp.png)
 ::: moniker-end
 - ///İçin XML belgesi açıklamaları oluştur
 

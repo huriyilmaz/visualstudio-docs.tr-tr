@@ -169,7 +169,7 @@
         - name: Docker Compose ile Çok Kapsayıcılı Uygulama Oluşturma
           href: docker-multi-container.md
     - name: Unity Oyun Geliştirme
-      href: /visualstudio/gamedev/unity/get-started/visual-studio-tools-for-unity.md
+      href: /visualstudio/gamedev/unity/get-started/visual-studio-tools-for-unity
     - name: Xamarin ile mobil uygulamalar
       href: ./xamarin.md
 - name: Erişilebilirlik
