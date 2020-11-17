@@ -1,5 +1,7 @@
 ---
 title: ProjectItem öğesi (Visual Studio proje şablonları) | Microsoft Docs
+description: Proje şablonları için ProjectItem öğesi ve şablonun bir proje ya da öğe için olup olmadığına bağlı olarak farklı öznitelikleri kabul etme hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 943f50823892e3cd942709bdcd4556b65c006b58
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bf2d41fe83b440e2a3b4bfebd4fac6f5d06094a4
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85770312"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94671330"
 ---
 # <a name="projectitem-element-visual-studio-project-templates"></a>ProjectItem öğesi (Visual Studio proje şablonları)
 Proje şablonuna dahil olan bir dosyayı belirtir.
@@ -53,10 +55,10 @@ Proje şablonuna dahil olan bir dosyayı belirtir.
 | Öznitelik | Açıklama |
 |---------------------| - |
 | `TargetFileName` | İsteğe bağlı öznitelik.<br /><br /> Şablondan bir proje oluşturulduğunda proje öğesinin adını ve yolunu belirtir. Bu öznitelik, şablon *. zip* dosyasındaki dizin yapısından farklı bir dizin yapısı oluşturmak veya bir öğe adı oluşturmak için parametre değişimini kullanmak için yararlıdır. |
-| `ReplaceParameters` | İsteğe bağlı öznitelik.<br /><br /> Şablondan bir proje oluşturulduğunda, öğenin değiştirilmesini gerektiren parametre değerleri olup olmadığını belirten bir Boole değeri. Varsayılan değer `false` . |
-| `OpenInEditor` | İsteğe bağlı öznitelik.<br /><br /> Şablondan bir proje oluşturulduğunda öğenin ilgili düzenleyicide açılıp açılmayacağını belirten bir Boole değeri [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .<br /><br /> `OpenInWebBrowser`Ve `OpenInHelpBrowser` öznitelikleri, değeri olan bir öğe üzerinde yok sayılır `OpenInEditor` `true` .<br /><br /> Varsayılan değer: `false`. |
-| `OpenInWebBrowser` | İsteğe bağlı öznitelik.<br /><br /> Şablondan bir proje oluşturulduğunda öğenin Web tarayıcısını açıp açılmayacağını belirten bir Boole değeri.<br /><br /> Web tarayıcısında yalnızca proje için yerel olan HTML dosyaları ve metin dosyaları açılabilir. Dış URL 'Ler Bu öznitelikle açılamaz.<br /><br /> Varsayılan değer: `false`. |
-| `OpenInHelpBrowser` | İsteğe bağlı öznitelik.<br /><br /> Şablondan bir proje oluşturulduğunda öğenin yardım görüntüleyicisinde açılıp açılmayacağını belirten bir Boole değeri.<br /><br /> Yardım tarayıcısında yalnızca proje için yerel olan HTML dosyaları ve metin dosyaları açılabilir. Dış URL 'Ler Bu öznitelikle açılamaz.<br /><br /> Varsayılan değer: `false`. |
+| `ReplaceParameters` | İsteğe bağlı öznitelik.<br /><br /> Şablondan bir proje oluşturulduğunda, öğenin değiştirilmesini gerektiren parametre değerleri olup olmadığını belirten bir Boole değeri. Varsayılan değer `false` olarak belirlenmiştir. |
+| `OpenInEditor` | İsteğe bağlı öznitelik.<br /><br /> Şablondan bir proje oluşturulduğunda öğenin ilgili düzenleyicide açılıp açılmayacağını belirten bir Boole değeri [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .<br /><br /> `OpenInWebBrowser`Ve `OpenInHelpBrowser` öznitelikleri, değeri olan bir öğe üzerinde yok sayılır `OpenInEditor` `true` .<br /><br /> `false` varsayılan değerdir. |
+| `OpenInWebBrowser` | İsteğe bağlı öznitelik.<br /><br /> Şablondan bir proje oluşturulduğunda öğenin Web tarayıcısını açıp açılmayacağını belirten bir Boole değeri.<br /><br /> Web tarayıcısında yalnızca proje için yerel olan HTML dosyaları ve metin dosyaları açılabilir. Dış URL 'Ler Bu öznitelikle açılamaz.<br /><br /> `false` varsayılan değerdir. |
+| `OpenInHelpBrowser` | İsteğe bağlı öznitelik.<br /><br /> Şablondan bir proje oluşturulduğunda öğenin yardım görüntüleyicisinde açılıp açılmayacağını belirten bir Boole değeri.<br /><br /> Yardım tarayıcısında yalnızca proje için yerel olan HTML dosyaları ve metin dosyaları açılabilir. Dış URL 'Ler Bu öznitelikle açılamaz.<br /><br /> `false` varsayılan değerdir. |
 | `OpenOrder` | İsteğe bağlı öznitelik.<br /><br /> Öğelerin ilgili düzenleyicilerde açılacak sırayı temsil eden sayısal bir değer belirtir. Tüm değerler 10 ' un katları olmalıdır. Daha yüksek değerlere sahip öğeler `OpenOrder` önce açılır. |
 
 ### <a name="child-elements"></a>Alt öğeleri
@@ -84,7 +86,7 @@ Proje şablonuna dahil olan bir dosyayı belirtir.
 
  Özniteliği, dosya `TargetFileName` adlarında uluslararası karakterler içeren dosyaları yeniden adlandırmak için de kullanılabilir. Örneğin, bir şablon *. zip* dosyası Unicode karakterler içeren dosya adlarını içeremez, bu yüzden dosyanın bir *. zip* dosyasına sıkıştırılabilmesi için önce yeniden adlandırılması gerekir. `TargetFileName`Özniteliği, dosya adını özgün Unicode dosya adına geri ayarlamak için kullanılabilir.
 
- `TargetFileName`Özniteliği parametreleri olan dosyaları yeniden adlandırmak için de kullanılabilir. Aşağıdaki yordamda, şablon *. zip* dosyasının kök dizininde bulunan *Dosyam. vb*dosyasının proje adına göre bir dosya adına nasıl yeniden adlandırılacağı açıklanmaktadır.
+ `TargetFileName`Özniteliği parametreleri olan dosyaları yeniden adlandırmak için de kullanılabilir. Aşağıdaki yordamda, şablon *. zip* dosyasının kök dizininde bulunan *Dosyam. vb* dosyasının proje adına göre bir dosya adına nasıl yeniden adlandırılacağı açıklanmaktadır.
 
 ### <a name="to-rename-files-with-parameters"></a>Dosyaları parametrelerle yeniden adlandırmak için
 

@@ -1,5 +1,7 @@
 ---
 title: AppliesTo öğesi (Visual Studio şablonları) | Microsoft Docs
+description: AppliesTo öğesi ve bir veya daha fazla özellik eşleşmesi için isteğe bağlı bir ifade nasıl belirttiği hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -9,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 39b5ee1e3cad0b4d8ddbe0fc2dfa1c2d478ec063
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5fca9f6550a066d3f3e0e46514a15d9ff14cb66c
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80740079"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94671707"
 ---
 # <a name="appliesto-element-visual-studio-templates"></a>AppliesTo öğesi (Visual Studio şablonları)
 

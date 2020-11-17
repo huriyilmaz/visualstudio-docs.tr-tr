@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: c784bb25fe9abc77cfb562ae085930b275d0ef03
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 0aa0d250289e6bf79467c0a00ddddef5264ed6d2
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400290"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94671901"
 ---
 # <a name="require-azureartifactscredentialprovider"></a>require-azureartifactscredentialprovider
 
@@ -32,7 +32,7 @@ Hem hem de `input` `additionalOptions` özellikleri atlanırsa veya boşsa, ara�
 | [**girişinin**](#input)                              | dize | No       | Kullanılmadı. Ayrıntılar için aşağıdaki [girişi](#input) inceleyin. |
 | [**additionalOptions**](#additional-options)     | dize | No       | Ayrıntılar için aşağıdaki [ek seçeneklere](#additional-options) bakın.                     |
 
-### <a name="input"></a>Giriş
+### <a name="input"></a>Girdi
 
 Kullanılmadı. Bahsedildiğinde herhangi bir girişi yoksayar.
 
@@ -45,15 +45,15 @@ Ek seçenekler, kimlik bilgisi sağlayıcısı komutuna olduğu gibi geçirilir.
 Aracın varsayılan davranışı, `require-azureartifactscredentialprovider` Azure Artifacts kimlik bilgisi sağlayıcısı 'nın en son sürümünü yüklemektir.
 
 ## <a name="example-usage"></a>Örnek kullanım
+Kullanarak nasıl çalıştırılacağını gösteren bir örnek aşağıda verilmiştir `require-azureartifactscredentialprovider` `.devinit.json` . 
 
+#### <a name="devinitjson-that-will-install-azure-artifacts-credential-provider"></a>.devinit.js, Azure Artifacts kimlik bilgisi sağlayıcısı yükleyecek:
 ```json
 {
     "$schema": "https://json.schemastore.org/devinit.schema-3.0",
-    "comments": "A sample dot-devinit file that installs Azure Artifacts Credential Provider.'",
     "run": [
         {
             "tool": "require-azureartifactscredentialprovider",
-            "comments": "Installs Azure Artifacts Credential Provider."
         }
     ]
 }

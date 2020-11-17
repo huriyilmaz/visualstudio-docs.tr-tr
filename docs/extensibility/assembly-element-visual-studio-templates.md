@@ -1,5 +1,8 @@
 ---
 title: Assembly öğesi (Visual Studio şablonları) | Microsoft Docs
+titleSuffix: ''
+description: Derleme öğesi hakkında bilgi edinin ve şablonun projelere Bu derlemenin bir başvurusunu eklemek için kullandığı bir derleme hakkındaki bilgileri nasıl belirttiği hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,12 +17,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c80044657b16448ba4567fff839274226985fa14
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f4115e999cc061be53ba437a090f207046f71ef8
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80740039"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94671652"
 ---
 # <a name="assembly-element-visual-studio-templates"></a>Assembly öğesi (Visual Studio şablonları)
 Şablonun projelere Bu derlemenin bir başvurusunu eklemek için kullandığı bir derleme hakkındaki bilgileri belirtir.

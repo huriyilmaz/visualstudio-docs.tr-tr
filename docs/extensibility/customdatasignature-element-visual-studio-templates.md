@@ -1,5 +1,7 @@
 ---
 title: CustomDataSignature öğesi (Visual Studio şablonları) | Microsoft Docs
+description: CustomDataSignature öğesi ve özel verileri bulmak için metin imzasını nasıl belirttiği hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ec8bae34da0f007bac65f26c4e442c1d03e56d08
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c0b2442e7b254ccaaf9e890b5370f712b5715f18
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80739436"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94671525"
 ---
 # <a name="customdatasignature-element-visual-studio-templates"></a>CustomDataSignature öğesi (Visual Studio şablonları)
 Özel verileri bulmak için metin imzasını belirtir.

@@ -1,5 +1,7 @@
 ---
 title: CustomParameter öğesi (Visual Studio şablonları) | Microsoft Docs
+description: CustomParameter öğesi hakkında bilgi edinin ve şablondan bir proje veya öğe oluşturulduğunda kullanılacak özel parametre adını ve değerini nasıl içerdiğini öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9063a354f03b896e189566e8d84a18caf7509db8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 61c118bbc85064beb10b99641f0803af7af12d56
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80739421"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94671955"
 ---
 # <a name="customparameter-element-visual-studio-templates"></a>CustomParameter öğesi (Visual Studio şablonları)
 Şablondan bir proje veya öğe oluşturulduğunda kullanılacak özel bir parametre adı ve değeri içerir.

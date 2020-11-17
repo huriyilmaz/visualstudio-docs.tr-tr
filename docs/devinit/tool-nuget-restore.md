@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: be31cb2c4c1e71b2e49928488b1cb061d41033a9
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 7d797e744b651eafd629ec83f20478f0142864e6
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93399635"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672168"
 ---
 # <a name="nuget-restore"></a>nuget-restore
 
@@ -32,7 +32,7 @@ Hem hem de `input` `additionalOptions` özellikleri atlanırsa veya boşsa, ara�
 | [**girişinin**](#input)                              | dize | No       | Geri yüklenecek proje/çözüm dosyasının yolu. Ayrıntılar için aşağıdaki [girişi](#input) inceleyin. |
 | [**additionalOptions**](#additional-options)     | dize | No       | Ayrıntılar için aşağıdaki [ek seçeneklere](#additional-options) bakın.                     |
 
-### <a name="input"></a>Giriş
+### <a name="input"></a>Girdi
 
 Geri yüklenecek proje/çözüm dosyasının yolu.
 
@@ -45,15 +45,15 @@ Ek seçenekler, NuGet restore komutuna olduğu gibi geçirilir.
 Aracın varsayılan davranışı `nuget-restore` geçerli dizinde ' NuGet restore ' öğesini çalıştıralım.
 
 ## <a name="example-usage"></a>Örnek kullanım
+Kullanarak nasıl çalıştırılacağını gösteren bir örnek aşağıda verilmiştir `nuget-restore` `.devinit.json` . 
 
+#### <a name="devinitjson-that-will-restore-dependencies-and-tools-of-a-project"></a>.devinit.js, bir projenin bağımlılıklarını ve araçlarını geri yükler:
 ```json
 {
     "$schema": "https://json.schemastore.org/devinit.schema-3.0",
-    "comments": "A sample dot-devinit file that restores NuGet pacakges.",
     "run": [
         {
             "tool": "nuget-restore",
-            "comments": "Restores the dependencies and tools of a project using nuget restore.",
             "input": "C:\\nuget\\Nuget.config"
         }
     ]

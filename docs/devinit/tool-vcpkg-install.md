@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 30bd66310f386a920b20522f59e54d586e3d3af1
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 6e10887e09c329a241aab7f18c6170c873705fbf
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400234"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672054"
 ---
 # <a name="vcpkg-install"></a>vcpkg-install
 
@@ -32,7 +32,7 @@ Hem hem de `input` `additionalOptions` özellikleri atlanırsa veya boşsa, ara�
 | [**girişinin**](#input)                              | string | Yes      | Yüklenecek paket (ler). Ayrıntılar için aşağıdaki [girişi](#input) inceleyin.                       |
 | [**additionalOptions**](#additional-options)     | dize | No       | Ayrıntılar için aşağıdaki [ek seçeneklere](#additional-options) bakın.                        |
 
-### <a name="input"></a>Giriş
+### <a name="input"></a>Girdi
 
 `input`Özelliği, `name` bir `vcpkg` veya birden çok paket yüklemek için boşlukla ayrılmış adların bir listesi olmalıdır. Kullanılabilir bağlantı noktalarının listesi [vcpkg GitHub](https://github.com/microsoft/vcpkg/tree/master/ports)deposunda bulunabilir.
 
@@ -45,18 +45,28 @@ Ek seçenekler doğrudan [vcpkg](/powershell/module/powershellget/install-module
 Aracının varsayılan davranışı `vcpkg-install` , gerekli olduğu gibi hata ' dır `input` .
 
 ## <a name="example-usage"></a>Örnek kullanım
+Kullanarak nasıl çalıştırılacağını gösteren örnekler aşağıda verilmiştir `vcpkg-install` `.devinit.json` . 
 
+#### <a name="devinitjson-that-will-install-the-sdl2-port"></a>.devinit.js, sdl2 bağlantı noktasını yükleyecek:
 ```json
 {
     "$schema": "https://json.schemastore.org/devinit.schema-3.0",
     "run": [
         {
-            "comments": "Installs the sdl2 port.",
             "tool": "vcpkg-install",
             "input": "sdl2",
-        },
+        }
+    ]
+}
+```
+
+#### <a name="devinitjson-that-will-install-multiple-ports"></a>Birden fazla bağlantı noktası yükleyecek .devinit.js:
+```json
+{
+    "$schema": "https://json.schemastore.org/devinit.schema-3.0",
+    "run": [
+
         {
-            "comments": "Installs the sdl2 and sqlite3 ports.",
             "tool": "vcpkg-install",
             "input": "sdl2 sqlite3"
         }

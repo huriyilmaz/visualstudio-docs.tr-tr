@@ -1,5 +1,7 @@
 ---
 title: Createınplace öğesi (Visual Studio şablonları)
+description: Createınplace öğesi hakkında bilgi edinin ve projenin oluşturulup oluşturulmayacağını ve belirli veya geçici bir konumda parametre değişimini gerçekleştirip gerçekleştirmeyeceğinizi nasıl belirtir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ab2b5d68be069f30c8f71536b6d47cb1ce8823b6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 51348e8304b67314ffd19d0aec15d43d904ee651
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80739665"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94671988"
 ---
 # <a name="createinplace-element-visual-studio-templates"></a>Createınplace öğesi (Visual Studio şablonları)
 Projenin oluşturulup oluşturulmayacağını ve belirtilen konumda parametre değişimini gerçekleştirip gerçekleştirmeyeceğinizi belirtir ya da geçici bir konumda parametre değişimini gerçekleştirin ve ardından projeyi belirtilen konuma kaydedin.
@@ -54,7 +56,7 @@ Projenin oluşturulup oluşturulmayacağını ve belirtilen konumda parametre de
  Metin ya da olmalıdır `true` `false` . Eğer `true` , proje oluşturulur ve **Yeni proje** iletişim kutusunda belirtilen konumda parametre değişimi gerçekleştirilir. `false`Parametre değiştirme geçici bir konumda gerçekleştirilir ve proje belirtilen konuma kopyalanır.
 
 ## <a name="remarks"></a>Açıklamalar
- `CreateInPlace` isteğe bağlı bir öğedir. Varsayılan değer: `true`.
+ `CreateInPlace` isteğe bağlı bir öğedir. `true` varsayılan değerdir.
 
 ## <a name="example"></a>Örnek
  Aşağıdaki örnek, bir şablon için meta verileri gösterir [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] .

@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 86427e0ad6dde2f51336d9ea0e508413425fdc29
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 304c7b12e3b290c3e47857877b050b18873e3934
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93399663"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672313"
 ---
 # <a name="azurecli-login"></a>azurecli-login
 
@@ -32,7 +32,7 @@ Her iki özellik de atlanırsa veya boşsa, araç aşağıda ayrıntılı olarak
 | [**girişinin**](#input)                              | dize | No       | Kullanılmadı. Ayrıntılar için aşağıdaki [girişi](#input) inceleyin.                               |
 | [**additionalOptions**](#additional-options)     | dize | No       | Kullanılmadı. Ayrıntılar için aşağıdaki [ek seçeneklere](#additional-options) bakın.     |
 
-### <a name="input"></a>Giriş
+### <a name="input"></a>Girdi
 
 Kullanılmadı.
 
@@ -45,13 +45,15 @@ Kullanılmadı.
 Aracın varsayılan davranışı, `azurecli-login` en son Azure CLI sürümünü yüklemek ve yola eklemektir (yalnızca Windows).
 
 ## <a name="example-usage"></a>Örnek kullanım
+Kullanarak nasıl çalıştırılacağını gösteren bir örnek aşağıda verilmiştir `azurecli-login` `.devinit.json` . 
+
+#### <a name="devinitjson-that-will-trigger-azure-login"></a>Azure oturum açma tetiklenecek .devinit.js:
 
 ```json
 {
     "$schema": "https://json.schemastore.org/devinit.schema-3.0",
     "run": [
         {
-            "comments": "Example that will trigger az login --use-device-code behavior.",
             "tool": "azurecli-login"
         }
     ]

@@ -1,5 +1,7 @@
 ---
 title: BuildProjectOnload öğesi (Visual Studio şablonları) | Microsoft Docs
+description: BuildProjectOnload öğesi hakkında bilgi edinin ve bunları, oluşturup bir çözüme eklerken yalnızca yeni projeleri nasıl yapılandıracağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -9,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 72d1981aab67762b3ee4aa8d62e0643f4c2a8963
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bdf4256b2fb376fc063eb330d47c843c1ff8820b
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80739957"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94671598"
 ---
 # <a name="buildprojectonload-element-visual-studio-templates"></a>BuildProjectOnload öğesi (Visual Studio şablonları)
 Oluştururken yalnızca yeni projeler oluşturur ve bunları bir çözüme ekler. Tüm çözüm derlenmez.
@@ -54,7 +56,7 @@ Oluştururken yalnızca yeni projeler oluşturur ve bunları bir çözüme ekler
  Metin ya da `true` `false` şablondan oluşturulduğunda yalnızca yeni proje oluşturulup oluşturulmayacağını göstermek için olmalıdır.
 
 ## <a name="remarks"></a>Açıklamalar
- `BuildProjectOnLoad` isteğe bağlı bir öğedir. Varsayılan değer: `false`.
+ `BuildProjectOnLoad` isteğe bağlı bir öğedir. `false` varsayılan değerdir.
 
 ## <a name="example"></a>Örnek
  Aşağıdaki örnek, bir Visual C# şablonu için meta verileri gösterir.

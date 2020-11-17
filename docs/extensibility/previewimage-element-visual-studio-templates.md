@@ -1,5 +1,7 @@
 ---
 title: Previewiımage öğesi (Visual Studio şablonları) | Microsoft Docs
+description: PreviewImage öğesi hakkında bilgi edinin ve yeni proje veya yeni öğe Ekle iletişim kutusunda görünecek Önizleme resminin dosya adını nasıl belirtir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f20cfe5f3ef35b23a52972ef1e3b7d9d4adc5a39
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 326588259203224d3f70b505af8437af22930faa
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80702013"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672352"
 ---
 # <a name="previewimage-element-visual-studio-templates"></a>Previewiımage öğesi (Visual Studio şablonları)
 Önizleme görüntüsünün **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda görünecek olan önizleme resmini bir dosya adı olarak belirtir.

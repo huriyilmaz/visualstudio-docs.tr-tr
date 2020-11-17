@@ -1,5 +1,7 @@
 ---
 title: ProjectItem öğesi (Visual Studio öğe şablonları) | Microsoft Docs
+description: Öğe şablonları için ProjectItem öğesi ve şablonun bir proje ya da öğe için olup olmadığına bağlı olarak farklı öznitelikleri kabul etme hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 885d0fbb50204f23a30fa43c1ffad45c9d67f829
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 431f1d5f81827b47b57a53dbe411a2a7e8a57941
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85770722"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672339"
 ---
 # <a name="projectitem-element-visual-studio-item-templates"></a>ProjectItem öğesi (Visual Studio öğe şablonları)
 Öğe şablonunda bulunan bir dosyayı belirtir.
@@ -53,7 +55,7 @@ ms.locfileid: "85770722"
 | `SubType` | İsteğe bağlı öznitelik.<br /><br /> Birden çok dosya öğesi şablonundaki bir öğenin alt türünü belirtir. Bu değer, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] öğeyi açmak için kullanılacak düzenleyiciyi belirlemekte kullanılır. |
 | `CustomTool` | İsteğe bağlı öznitelik.<br /><br /> Proje dosyasındaki öğe için CustomTool 'ı ayarlar. |
 | `ItemType` | İsteğe bağlı öznitelik.<br /><br /> Proje dosyasındaki öğe için ItemType 'ı ayarlar. |
-| `ReplaceParameters` | İsteğe bağlı öznitelik.<br /><br /> Şablondan bir proje oluşturulduğunda, öğenin değiştirilmesini gerektiren parametre değerleri olup olmadığını belirten bir Boole değeri. Varsayılan değer `false` . |
+| `ReplaceParameters` | İsteğe bağlı öznitelik.<br /><br /> Şablondan bir proje oluşturulduğunda, öğenin değiştirilmesini gerektiren parametre değerleri olup olmadığını belirten bir Boole değeri. Varsayılan değer `false` olarak belirlenmiştir. |
 | `TargetFileName` | İsteğe bağlı öznitelik.<br /><br /> Şablondan oluşturulan öğenin adını belirtir. Bu öznitelik, bir öğe adı oluşturmak için parametre değişimini kullanmak için yararlıdır. |
 
 ### <a name="child-elements"></a>Alt öğeleri

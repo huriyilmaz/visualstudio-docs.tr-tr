@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 87938b05b860921ee81cb2ca9191ad58fa85dd7a
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: e28a1f896904c89a4553f18c73324293ea468ee6
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93399594"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672127"
 ---
 # <a name="require-npm"></a>require-npm
 
@@ -32,7 +32,7 @@ Hem hem de `input` `additionalOptions` özellikleri atlanırsa veya boşsa, ara�
 | [**girişinin**](#input)                              | string | Yes      | NPM sürümünü belirtir. Ayrıntılar için aşağıdaki [girişi](#input) inceleyin.                           |
 | [**additionalOptions**](#additional-options)     | dize | No       | Kullanılmadı. Ayrıntılar için aşağıdaki [ek seçeneklere](#additional-options) bakın.                  |
 
-### <a name="input"></a>Giriş
+### <a name="input"></a>Girdi
 
 `input`Özelliği NPM sürümünü belirtmek için kullanılır.
 
@@ -45,17 +45,26 @@ Kullanılmıyor.
 Aracın varsayılan davranışı `require-nodejs` NPM 'nin en son LTS sürümünü yüklemektir.
 
 ## <a name="example-usage"></a>Örnek kullanım
+Kullanarak nasıl çalıştırılacağını gösteren örnekler aşağıda verilmiştir `require-npm` `.devinit.json` . 
 
+#### <a name="devinitjson-that-will-install-the-lts-of-npm"></a>.devinit.js, NPM 'nin LTS 'sini yükleyecek:
 ```json
 {
     "$schema": "https://json.schemastore.org/devinit.schema-3.0",
     "run": [
         {
-            "comments": "Example that will trigger the Default behavior of installing latest LTS of NPM.",
             "tool": "require-npm"
-        },
+        }
+    ]
+}
+```
+
+#### <a name="devinitjson-that-will-install-a-specific-version-of-npm"></a>.devinit.js, belirli bir NPM sürümünü yükleyecek:
+```json
+{
+    "$schema": "https://json.schemastore.org/devinit.schema-3.0",
+    "run": [
         {
-            "comments": "Example that will install a specific version.",
             "tool": "require-npm",
             "input": "6.14.6"
         }

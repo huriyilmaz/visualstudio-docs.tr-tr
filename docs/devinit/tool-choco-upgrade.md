@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 39d30b08e4ca3ba3a3e355fdf123f3a05055c358
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 7db97694e129fe5c70de09aaf4c132656ae00746
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93399669"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672228"
 ---
 # <a name="choco-upgrade"></a>choco-upgrade
 
@@ -32,9 +32,9 @@ Hem hem de `input` `additionalOptions` özellikleri atlanırsa veya boşsa araç
 | [**girişinin**](#input)                              | dize | No       | Yükseltilecek paket. Ayrıntılar için aşağıdaki [girişi](#input) inceleyin.                                                 |
 | [**additionalOptions**](#additional-options)     | dize | No       | Araca geçirilecek ek seçenekler. Ayrıntılar için aşağıdaki [ek seçeneklere](#additional-options) bakın.       |
 
-### <a name="input"></a>Giriş
+### <a name="input"></a>Girdi
 
-`input`Özelliği, Yükseltilecek paketin adını (örneğin ' MongoDB ') veya aşağıdaki biçimlerdeki bir yapılandırma dosyasının yolunu belirtmek için kullanılır _packages.config_ , _. nuspec_ ve _. nupkg_. Değeri, `input` öğesine `choco upgrade` `choco upgrade mongodb` özgü bağımsız değişkenlerle birlikte (örneğin,) [`additionalOptions`](#additional-options) ve yerleşik `choco` seçeneklere ( [aşağıda](#built-in-options)tanımlanmıştır) eklenir. Paketler [Chocolatey paket galerisinde](https://chocolatey.org/packages)bulunabilir. Bir yapılandırma dosyası kullanırken, bu dosyanın yolunu özelliğinde geçirebilirsiniz, `input` Örneğin: `"input":"packages.config"` .
+`input`Özelliği, Yükseltilecek paketin adını (örneğin ' MongoDB ') veya aşağıdaki biçimlerdeki bir yapılandırma dosyasının yolunu belirtmek için kullanılır _packages.config_, _. nuspec_ ve _. nupkg_. Değeri, `input` öğesine `choco upgrade` `choco upgrade mongodb` özgü bağımsız değişkenlerle birlikte (örneğin,) [`additionalOptions`](#additional-options) ve yerleşik `choco` seçeneklere ( [aşağıda](#built-in-options)tanımlanmıştır) eklenir. Paketler [Chocolatey paket galerisinde](https://chocolatey.org/packages)bulunabilir. Bir yapılandırma dosyası kullanırken, bu dosyanın yolunu özelliğinde geçirebilirsiniz, `input` Örneğin: `"input":"packages.config"` .
 
 ### <a name="additional-options"></a>Ek seçenekler
 
@@ -51,23 +51,40 @@ Ek yapılandırma seçenekleri ' ın bir değeri olarak geçirilebilir `addition
 | **--Skip-PowerShell** | PowerShell 'i atla-chocolateyInstall.ps1 çalıştırılmayacaktır.                                              |
 
 ## <a name="example-usage"></a>Örnek kullanım
+Kullanarak nasıl çalıştırılacağını gösteren örnekler aşağıda verilmiştir `choco-upgrade` `.devinit.json` . 
 
+#### <a name="devinitjson-that-will-update-packages-listed-in-packagesconfig"></a>.devinit.js, packages.config listelenen paketleri güncelleştirecek:
 ```json
 {
     "$schema": "https://json.schemastore.org/devinit.schema-3.0",
     "run": [
         {
-            "comments": "Example that will trigger the Default behavior of upgrading packages listed in a packages.config file.",
             "tool": "choco-upgrade",
             "input": "packages.config",
-        },
+        }
+    ]
+}
+```
+
+#### <a name="devinitjson-that-will-upgrade-mongodb"></a>MongoDB 'yi yükseltecektir .devinit.js:
+```json
+{
+    "$schema": "https://json.schemastore.org/devinit.schema-3.0",
+    "run": [
         {
-            "comments": "Example that will upgrade the package 'mongodb'.",
             "tool": "choco-upgrade",
             "input": "mongodb"
-        },
+        }
+    ]
+}
+```
+
+#### <a name="devinitjson-that-will-upgrade-to-a-specific-version-of-mongodb"></a>.devinit.js, MongoDB 'nin belirli bir sürümüne yükseltecektir:
+```json
+{
+    "$schema": "https://json.schemastore.org/devinit.schema-3.0",
+    "run": [
         {
-            "comments": "Example that will upgrade the '4.2.7' version of 'mongodb'.",
             "tool": "choco-upgrade",
             "input": "mongodb",
             "additionalOptions": "--version 4.2.7"

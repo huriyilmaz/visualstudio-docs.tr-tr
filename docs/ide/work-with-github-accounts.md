@@ -10,12 +10,12 @@ manager: jillfra
 ms.workload:
 - multiple
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: d0575abb528810e714dbe747b46db986dc3ce6e1
-ms.sourcegitcommit: c1cc3d8e1673c52fbfddc86b089b4a3d46bb3e59
+ms.openlocfilehash: cdea71e2d5c376e465bb5cdb990ec7ed45caa1f3
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/14/2020
-ms.locfileid: "94631628"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672365"
 ---
 # <a name="work-with-github-accounts-in-visual-studio"></a>Visual Studio 'da GitHub hesaplarıyla çalışma
 
@@ -25,11 +25,11 @@ Ortak bir GitHub veya GitHub Enterprise hesabınız varsa, Visual Studio anahtar
 
 Visual Studio 'da bir Microsoft hesabı veya bir iş veya okul hesabı ile zaten oturum açtıysanız, genel GitHub hesabınızı ekleyebilirsiniz.
 
-1. Visual Studio ortamının sağ üst köşesindeki baş harflerinizi içeren simgeyi seçin. Ardından, hesaplarınızı yönetmek için **Hesap ayarları...** seçeneğini belirleyin. Ayrıca, **Dosya**  >  **hesabı ayarları** ' na giderek hesap ayarları iletişim kutusunu açabilirsiniz.
+1. Visual Studio ortamının sağ üst köşesindeki baş harflerinizi içeren simgeyi seçin. Ardından, hesaplarınızı yönetmek için **Hesap ayarları...** seçeneğini belirleyin. Ayrıca, **Dosya**  >  **hesabı ayarları**' na giderek hesap ayarları iletişim kutusunu açabilirsiniz.
 
     :::image type="content" source="../ide/media/account-picker.png" alt-text="Hesap ayarları":::
 
-2. **Tüm hesaplar** alt menüsünde, hesap eklemek için artı işaretini seçin ve **GitHub** ' ı seçin.
+2. **Tüm hesaplar** alt menüsünde, hesap eklemek için artı işaretini seçin ve **GitHub**' ı seçin.
 
     :::image type="content" source="../ide/media/sign-in-add-github.png" alt-text="GitHub hesabı ekle 'yi seçin":::
 
@@ -41,7 +41,7 @@ Visual Studio 'da bir Microsoft hesabı veya bir iş veya okul hesabı ile zaten
 
     :::image type="content" source="../ide/media/show-both-accounts.png" alt-text="Her iki hesap de gösteriliyor":::
 
-Visual Studio 'da farklı bir hesapla oturum açmadıysanız, Visual Studio ortamının sağ üst köşesindeki **oturum aç** bağlantısını seçin. Ayrıca, **Dosya**  >  **hesabı ayarları** ' na giderek hesap ayarları iletişim kutusunu açabilirsiniz. Ardından, GitHub hesabınızı eklemek için yukarıdaki yönergeleri izleyin.
+Visual Studio 'da farklı bir hesapla oturum açmadıysanız, Visual Studio ortamının sağ üst köşesindeki **oturum aç** bağlantısını seçin. Ayrıca, **Dosya**  >  **hesabı ayarları**' na giderek hesap ayarları iletişim kutusunu açabilirsiniz. Ardından, GitHub hesabınızı eklemek için yukarıdaki yönergeleri izleyin.
 
 ![Oturum açmamış Kullanıcı](../ide/media/vs2019_usernotsignedin.png)
 
@@ -57,7 +57,7 @@ Varsayılan olarak, Visual Studio 'Nun yalnızca genel GitHub hesapları etkindi
 
     :::image type="content" source="../ide/media/github-enterprise-endpoint-signin.png" alt-text="GitHub Enterprise ile oturum açma":::
 
-3. GitHub Enterprise Server adresinizi girdikten sonra **tarayıcınızla oturum aç** ' ı seçin. Burada, GitHub kurumsal kimlik bilgilerinizi kullanarak oturum açabilirsiniz.
+3. GitHub Enterprise Server adresinizi girdikten sonra **tarayıcınızla oturum aç**' ı seçin. Burada, GitHub kurumsal kimlik bilgilerinizi kullanarak oturum açabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

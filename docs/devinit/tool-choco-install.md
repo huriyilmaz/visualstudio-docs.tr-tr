@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 3bdcf6caa52f19bc03559fb57d41fadb0ac56485
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 82c1bfbaed4a8ae5540447991f1a097760ade0bd
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93399860"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94671942"
 ---
 # <a name="choco-install"></a>choco-install
 
@@ -32,9 +32,9 @@ Hem hem de `input` `additionalOptions` özellikleri atlanırsa veya boşsa araç
 | [**girişinin**](#input)                              | dize | No       | Yüklenecek paket. Ayrıntılar için aşağıdaki [girişi](#input) inceleyin.                                                 |
 | [**additionalOptions**](#additional-options)     | dize | No       | Araca geçirilecek ek seçenekler. Ayrıntılar için aşağıdaki [ek seçeneklere](#additional-options) bakın.       |
 
-### <a name="input"></a>Giriş
+### <a name="input"></a>Girdi
 
-`input`Özelliği, Yüklenecek paketin adını (örneğin ' MongoDB ') veya aşağıdaki biçimlerdeki bir yapılandırma dosyasının yolunu belirtmek için kullanılır _packages.config_ , _. nuspec_ ve _. nupkg_. Değeri, `input` öğesine `choco install` `choco install mongodb` özgü bağımsız değişkenlerle birlikte (örneğin,) [`additionalOptions`](#additional-options) ve yerleşik `choco` seçeneklere ( [aşağıda](#built-in-options)tanımlanmıştır) eklenir. Paketler [Chocolatey paket galerisinde](https://chocolatey.org/packages)bulunabilir. Bir yapılandırma dosyası kullanırken, bu dosyanın yolunu, `input` Örneğin, özelliğinde geçirebilirsiniz `"input":"packages.config"` .
+`input`Özelliği, Yüklenecek paketin adını (örneğin ' MongoDB ') veya aşağıdaki biçimlerdeki bir yapılandırma dosyasının yolunu belirtmek için kullanılır _packages.config_, _. nuspec_ ve _. nupkg_. Değeri, `input` öğesine `choco install` `choco install mongodb` özgü bağımsız değişkenlerle birlikte (örneğin,) [`additionalOptions`](#additional-options) ve yerleşik `choco` seçeneklere ( [aşağıda](#built-in-options)tanımlanmıştır) eklenir. Paketler [Chocolatey paket galerisinde](https://chocolatey.org/packages)bulunabilir. Bir yapılandırma dosyası kullanırken, bu dosyanın yolunu, `input` Örneğin, özelliğinde geçirebilirsiniz `"input":"packages.config"` .
 
 ### <a name="additional-options"></a>Ek seçenekler
 
@@ -51,23 +51,40 @@ Ek yapılandırma seçenekleri ' ın bir değeri olarak geçirilebilir `addition
 | **--Skip-PowerShell** | PowerShell 'i atla-chocolateyInstall.ps1 çalıştırılmayacaktır.                                              |
 
 ## <a name="example-usage"></a>Örnek kullanım
+Kullanarak nasıl çalıştırılacağını gösteren örnekler aşağıda verilmiştir `choco-install` `.devinit.json` . 
 
+#### <a name="devinitjson-that-will-install-packages-listed-in-packagesconfig"></a>.devinit.js, packages.config listelenen paketleri yükleyecek:
 ```json
 {
     "$schema": "https://json.schemastore.org/devinit.schema-3.0",
     "run": [
         {
-            "comments": "Example that will trigger the Default behavior of installing packages listed in a packages.config file.",
             "tool": "choco-install",
             "input": "packages.config",
-        },
+        }
+    ]
+}
+```
+
+#### <a name="devinitjson-that-will-install-mongodb"></a>MongoDB yükleyecek .devinit.js:
+```json
+{
+    "$schema": "https://json.schemastore.org/devinit.schema-3.0",
+    "run": [
         {
-            "comments": "Example that will install the package 'mongodb'.",
             "tool": "choco-install",
             "input": "mongodb"
-        },
+        }
+    ]
+}
+```
+
+#### <a name="devinitjson-that-will-install-a-specific-version-of-mongodb"></a>.devinit.js, MongoDB 'nin belirli bir sürümünü yükleyecek:
+```json
+{
+    "$schema": "https://json.schemastore.org/devinit.schema-3.0",
+    "run": [
         {
-            "comments": "Example that will install the '4.2.7' version of 'mongodb'.",
             "tool": "choco-install",
             "input": "mongodb",
             "additionalOptions": "--version 4.2.7"

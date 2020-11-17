@@ -1,6 +1,8 @@
 ---
 title: LocationField Öğesi (Visual Studio Proje Şablonları)
 titleSuffix: ''
+description: LocationField öğesi hakkında bilgi edinin ve proje şablonu için yeni proje iletişim kutusu konumu metin kutusunun etkin, devre dışı veya gizli olup olmadığını belirtir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9aafe51669bcc95d6024b5a3fd749ba70ea8ddc7
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: 3f3febc5a47288225d1780ba4579dad243c1ea45
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89739131"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94671278"
 ---
 # <a name="locationfield-element-visual-studio-project-templates"></a>LocationField öğesi (Visual Studio proje şablonları)
 **Yeni proje** Iletişim kutusundaki **konum** metin kutusunun etkin, devre dışı veya proje şablonu için gizli olup olmadığını belirtir.
@@ -46,7 +48,7 @@ ms.locfileid: "89739131"
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırır ve **Yeni projede**nasıl görüntüleneceğini tanımlar.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırır ve **Yeni projede** nasıl görüntüleneceğini tanımlar.|
 
 ## <a name="text-value"></a>Metin değeri
  Bir metin değeri gereklidir.
@@ -60,7 +62,7 @@ ms.locfileid: "89739131"
 - `Hidden`**Yeni proje** Iletişim kutusunun **konum** kutusunun gizlendiğini belirtir.
 
 ## <a name="remarks"></a>Açıklamalar
- Varsayılan değer: `Enabled`.
+ `Enabled` varsayılan değerdir.
 
  **Yeni proje** Iletişim kutusundaki **konum** metin kutusu, kullanıcıların, yeni projelerin kaydedildiği varsayılan dizini değiştirmesine olanak sağlar.
 

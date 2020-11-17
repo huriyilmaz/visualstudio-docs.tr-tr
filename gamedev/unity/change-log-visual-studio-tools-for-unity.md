@@ -2,7 +2,7 @@
 title: Değişiklik günlüğü (Unity için Visual Studio Araçları, Windows) | Microsoft Docs
 description: Unity için Visual Studio Araçları, Windows için değişiklik günlüğünü görüntüleyin. 4.7.0.0 ve dışında 1.0.0.0 sürümündeki değişikliklere bakın.
 ms.custom: ''
-ms.date: 7/30/2020
+ms.date: 11/13/2020
 ms.technology: vs-unity-tools
 ms.prod: visual-studio-dev16
 ms.topic: conceptual
@@ -12,16 +12,65 @@ ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: f8a1ed0520bb1a2e5d213cd9a670769f70251ebb
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: e3b4b730608234b8d25b7ff4bf6b6fcfa25bec09
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "94341857"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94671252"
 ---
 # <a name="change-log-visual-studio-tools-for-unity-windows"></a>Değişiklik günlüğü (Unity için Visual Studio Araçları, Windows)
 
 Unity için Visual Studio Araçları değişiklik günlüğü.
+
+## <a name="4820"></a>4.8.2.0
+Yayın tarihi 10 Kasım 2020
+
+### <a name="new-features"></a>Yeni Özellikler
+
+- **Tümleştirme**
+
+  - [`UNT0010`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0010.md)Yalnızca ' den devralan her şeye uygulanacak tanılama geliştirildi `Component` `MonoBehaviour` .
+
+### <a name="bug-fixes"></a>Hata düzeltmeleri
+
+- **Tümleştirme**
+
+  - Sabit CodeLens iletisi ınvalidation.
+
+## <a name="4810"></a>4.8.1.0
+Yayın tarihi, 13 Ekim 2020
+
+### <a name="new-features"></a>Yeni Özellikler
+
+- **Değerlendirmesinin**
+
+  - Etkinleştirmeleri ile örtük dönüştürme desteği eklendi. Daha önce değerlendirici, kesin tür denetlemesini zorladı ve `Failed to find a match for method([parameters...])` uyarı iletileri elde ediyor.
+
+- **Tümleştirme**
+
+  - [`UNT0018`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0018.md)Tanılama eklendi. ,, `System.Reflection` Veya gibi performans açısından kritik iletilerde özellikleri kullanmamalısınız `Update` `FixedUpdate` `LateUpdate` `OnGUI` .
+
+  - [`USP0003`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0003.md) [`USP0005`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0005.md) Tüm statik yöntemler desteğiyle geliştirilmiş ve gizliyoruz `AssetPostprocessor` .
+
+  - [`USP0016`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0016.md)İçin Suppressor eklendi `CS8618` . `C# 8.0` Nullable başvuru türlerini ve null değer atanamaz başvuru türlerini tanıtır. ' Den devralan türlerin başlatılma algılaması `UnityEngine.Object` desteklenmez ve hatalara neden olur.
+
+  - Artık hem Unity 2019. x hem de 2020. x + için aynı oynatıcı ve asmdef proje oluşturma mekanizmasını kullanıyor.
+
+### <a name="bug-fixes"></a>Hata düzeltmeleri
+
+- **Tümleştirme**
+
+  - Açıklamalarda iletiler için beklenmeyen tamamlama düzeltildi.
+
+## <a name="4800"></a>4.8.0.0 
+Yayın tarihi 14 Eylül 2020
+
+### <a name="bug-fixes"></a>Hata düzeltmeleri
+
+- **Tümleştirme**
+
+  - Unity 2019. x ile sabit oynatıcı proje üretimi.
 
 ## <a name="4710"></a>4.7.1.0
 5 Ağustos 2020 tarihinde yayınlandı

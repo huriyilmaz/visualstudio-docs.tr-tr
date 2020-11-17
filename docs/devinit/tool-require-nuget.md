@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: f58809465e41b3b1b6020de91fe0ab590ca1c428
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: e4f08e8c3f5967eb2e9db53633a12b304ac23bfb
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400262"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94671762"
 ---
 # <a name="require-nuget"></a>require-nuget
 
@@ -32,7 +32,7 @@ Hem hem de `input` `additionalOptions` özellikleri atlanırsa veya boşsa, ara�
 | [**girişinin**](#input)                              | dize | No       | Yüklenecek NuGet CLı sürümü. Ayrıntılar için aşağıdaki [girişi](#input) inceleyin. |
 | [**additionalOptions**](#additional-options)     | dize | No       | Ayrıntılar için aşağıdaki [ek seçeneklere](#additional-options) bakın.                     |
 
-### <a name="input"></a>Giriş
+### <a name="input"></a>Girdi
 
 , `input` Yüklenecek NUGET CLI sürümü için kullanılan isteğe bağlı bir özelliktir. `input`Atlanırsa, en son CLI sürümü yüklenir.
 
@@ -45,16 +45,16 @@ Kullanılmadı.
 Aracın varsayılan davranışı, `require-nuget` NUGET CLI 'nın en son sürümünü yüklemektir.
 
 ## <a name="example-usage"></a>Örnek kullanım
+Kullanarak nasıl çalıştırılacağını gösteren bir örnek aşağıda verilmiştir `require-nuget` `.devinit.json` . 
 
+#### <a name="devinitjson-that-will-install-a-specified-version-of-nuget"></a>.devinit.js, NuGet 'in belirtilen bir sürümünü yükleyecek:
 ```json
 {
     "$schema": "https://json.schemastore.org/devinit.schema-3.0",
-    "comments": "A sample dot-devinit file that downloads NuGet CLI and adds to PATH variable.'",
     "run": [
         {
             "tool": "require-nuget",
             "input": "5.5.1",
-            "comments": "Installs NuGet for given input version. If no input given, then installs latest."
         }
     ]
 }

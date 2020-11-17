@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 6ba6b5a53c6b6f1c67c957c55a612cbe461b108c
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 3da6bd121aff31c680bea2c4655ee2250f5edb05
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400269"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94671789"
 ---
 # <a name="require-nodejs"></a>require-nodejs
 
@@ -32,7 +32,7 @@ Hem hem de `input` `additionalOptions` özellikleri atlanırsa veya boşsa, ara�
 | [**girişinin**](#input)                              | dize | No       | Yüklenecek Node.JS sürümü. Ayrıntılar için aşağıdaki [girişi](#input) inceleyin. |
 | [**additionalOptions**](#additional-options)     | dize | No       | Ayrıntılar için aşağıdaki [ek seçeneklere](#additional-options) bakın.          |
 
-### <a name="input"></a>Giriş
+### <a name="input"></a>Girdi
 
 `input`Özelliği, Node.js sürümünü belirtmek için kullanılır. [Node.js indirme sayfasında](https://nodejs.org/en/download/)sürümlerin listesini bulabilirsiniz. Tam sürüm numarası gereklidir. Ikincil. yol (örneğin 14.4.0) varsa, yükleme başarısız olur.
 
@@ -45,17 +45,26 @@ Ek yapılandırma seçenekleri ' ın bir değeri olarak geçirilebilir `addition
 Aracının varsayılan davranışı, `require-nodejs` Node.JS [Web sitesinde](https://nodejs.org/en/download/)açıklandığı gibi, düğümün en son LTS sürümünü yüklemektir.
 
 ## <a name="example-usage"></a>Örnek kullanım
+Kullanarak nasıl çalıştırılacağını gösteren örnekler aşağıda verilmiştir `require-nodejs` `.devinit.json` . 
 
+#### <a name="devinitjson-that-will-install-the-lts-of-nodejs"></a>.devinit.js, Node.js LTS 'leri yükleyecek:
 ```json
 {
     "$schema": "https://json.schemastore.org/devinit.schema-3.0",
     "run": [
         {
-            "comments": "Example that will trigger the Default behavior of installing latest LTS of Node.JS.",
             "tool": "require-nodejs"
-        },
+        }
+    ]
+}
+```
+
+#### <a name="devinitjson-that-will-install-a-specific-version-of-nodejs"></a>.devinit.js, Node.js belirli bir sürümünü yükleyecek:
+```json
+{
+    "$schema": "https://json.schemastore.org/devinit.schema-3.0",
+    "run": [
         {
-            "comments": "Example that will install a specific version.",
             "tool": "require-nodejs",
             "input": "14.4.0"
         }

@@ -1,5 +1,7 @@
 ---
 title: CreateNewFolder öğesi (Visual Studio şablonları) | Microsoft Docs
+description: CreateNewFolder öğesi hakkında bilgi edinin ve projenin oluşturulacağı hedef dizinin mevcut olmadığını denetleyip denetmeyeceğini nasıl belirlediğini öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 860f4df3e69a568a3e391da4d7437d9a5fd83f15
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 15633c2f701c813ca24c5484fd4108a86c57b05b
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80739677"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94671585"
 ---
 # <a name="createnewfolder-element-visual-studio-templates"></a>CreateNewFolder öğesi (Visual Studio şablonları)
 Projenin oluşturulacağı hedef dizinin mevcut olmadığını denetleyip denetmeyeceğini belirler. Dizin varsa, proje için yeni bir dizin oluşturulabilir. Bu ayar genellikle, `NewProjectRequiresNewFolder(VsTemplate)` `HKEY_LOCAL_MACHINE/SOFTWARE(/Wow6432Node)/Microsoft/VisualStudio/<version number>/Projects/<project GUID>` tüm ortak proje türlerinin yeni bir dizinde yeni bir proje oluşturulup oluşturulmayacağını belirlemede kullanılan kayıt defteri bayrağı () tarafından geçersiz kılınır.
@@ -58,7 +60,7 @@ Projenin oluşturulacağı hedef dizinin mevcut olmadığını denetleyip denetm
  Metin `true` veya `false` şablondan bir proje oluşturulduğunda yeni bir kapsayıcı klasörünün oluşturulup oluşturulmayacağını belirten bir değer olmalıdır.
 
 ## <a name="remarks"></a>Açıklamalar
- `CreateNewFolder` isteğe bağlı bir öğedir. Varsayılan değer: `true`.
+ `CreateNewFolder` isteğe bağlı bir öğedir. `true` varsayılan değerdir.
 
  Öğesinde belirtilen değer `CreateNewFolder` yalnızca [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] temel alınan proje sistemi tarafından destekliyorsa kabul edilir.
 

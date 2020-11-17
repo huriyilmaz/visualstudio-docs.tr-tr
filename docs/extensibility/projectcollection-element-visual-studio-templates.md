@@ -1,5 +1,7 @@
 ---
 title: ProjectCollection öğesi (Visual Studio şablonları) | Microsoft Docs
+description: ProjectCollection öğesi hakkında bilgi edinin ve çoklu proje şablonlarının organizasyonunu ve içeriğini nasıl belirtir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 12a22ca28c90ed1df69529ed3004b417b5e04276
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2d9da3dbe92bdde8b0c19495e73cdbf2660ef3b4
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80701972"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94671239"
 ---
 # <a name="projectcollection-element-visual-studio-templates"></a>ProjectCollection öğesi (Visual Studio şablonları)
 Birden fazla projeli şablonların içeriğini ve düzenini belirtir.

@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: d899faa4c830e443c4f6f597c191313d53514efd
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 51d9353333fac6dcca0035bf7cc8dd722c32cb40
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93399574"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672120"
 ---
 # <a name="require-psmodule"></a>require-psmodule
 
@@ -35,7 +35,7 @@ Hem hem de `input` `additionalOptions` özellikleri atlanırsa veya boşsa, ara�
 | [**girişinin**](#input)                              | string | Yes      | Yüklenecek paket (ler). Ayrıntılar için aşağıdaki [girişi](#input) inceleyin.                       |
 | [**additionalOptions**](#additional-options)     | dize | No       | Kullanılmadı. Ayrıntılar için aşağıdaki [ek seçeneklere](#additional-options) bakın.              |
 
-### <a name="input"></a>Giriş
+### <a name="input"></a>Girdi
 
 `input`Özelliği, `Name` yüklemek için PowerShell modülünün bir olmalıdır. Kullanılabilir PowerShell modüllerinin listesi [PowerShell Galerisi](https://www.powershellgallery.com/)arayarak bulunabilir.
 
@@ -59,18 +59,27 @@ Aracın varsayılan davranışı, `require-psmodule` gerekli olduğu gibi hatada
 
 
 ## <a name="example-usage"></a>Örnek kullanım
+Kullanarak nasıl çalıştırılacağını gösteren örnekler aşağıda verilmiştir `require-psmodule` `.devinit.json` . 
 
+#### <a name="devinitjson-that-will-install-the-powershellget-module"></a>PowerShellGet modülünü yükleyecek .devinit.js:
 ```json
 {
     "$schema": "https://json.schemastore.org/devinit.schema-3.0",
     "run": [
         {
-            "comments": "Installs the PowerShellGet module.",
             "tool": "require-psmodule",
             "input": "PowerShellGet",
-        },
+        }
+    ]
+}
+```
+
+#### <a name="devinitjson-that-will-install-the-powershellget-module-from-a-specific-repository"></a>.devinit.js, PowerShellGet modülünü belirli bir depodan yükleyecek:
+```json
+{
+    "$schema": "https://json.schemastore.org/devinit.schema-3.0",
+    "run": [
         {
-            "comments": "Installs the PowerShellGet module from a specific repository.",
             "tool": "require-psmodule",
             "input": "PowerShellGet",
             "additionalOptions": "-Repository PSGallery"

@@ -1,5 +1,5 @@
 ---
-title: MSI-install
+title: msi-install
 description: msiexec için devinit aracı.
 ms.date: 10/13/2020
 ms.topic: reference
@@ -11,14 +11,14 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 98667c602272f22e7803647a688ee75d6c6cbd70
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: ab56157d531e762ed36f8c2349e50e76596b05ec
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93402353"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672175"
 ---
-# <a name="msi-install"></a>MSI-install
+# <a name="msi-install"></a>msi-install
 
 `msi-install`Araç, `.msi` [msiexec](https://docs.microsoft.com/windows-server/administration/windows-commands/msiexec)kullanarak paket dosya biçimlerini yüklemek için kullanılır.
 
@@ -32,7 +32,7 @@ ms.locfileid: "93402353"
 | [**girişinin**](#input)                          | string | Yes      | Öğesini `msi` yüklemek için. Ayrıntılar için aşağıdaki [girişi](#input) inceleyin.                      |
 | [**additionalOptions**](#additional-options) | dize | No       | Ayrıntılar için aşağıdaki [ek seçeneklere](#additional-options) bakın.                  |
 
-### <a name="input"></a>Giriş
+### <a name="input"></a>Girdi
 
 Input özelliği, yüklenecek bir dosyanın yolunu veya URL 'sini belirtmek için kullanılır `.msi` . Yolu `.msi` yanlışsa veya URL doğrudan işaret vermezse `.msi` , `msi-install` yükleme paketinin açılmadığını unutmayın.
 
@@ -54,13 +54,14 @@ MSI-install Aracı, `msiexec` MSI 'nin gözetimsiz olarak çalışmasını sağl
 | /norestart    | Yükleme tamamlandıktan sonra makinenin yeniden başlatılmasını engeller, ancak yeniden başlatma gerekirse 3010 çıkış kodu döndürür                                                                  | 
 
 ## <a name="example-usage"></a>Örnek kullanım
+Kullanarak nasıl çalıştırılacağını gösteren bir örnek aşağıda verilmiştir `msi-install` `.devinit.json` . 
 
+#### <a name="devinitjson-that-will-install-the-7-zip-msi"></a>.devinit.js, 7-ZIP MSI ' yi yükleyecek:
 ```json
 {
     "$schema": "https://json.schemastore.org/devinit.schema-4.0",
     "run": [
         {
-            "comments": "Installs the 7-Zip MSI",
             "tool": "msi-install",
             "input": "https://www.7-zip.org/a/7z1900.msi"
         }

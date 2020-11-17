@@ -1,5 +1,7 @@
 ---
 title: Description öğesi (Visual Studio şablonları) | Microsoft Docs
+description: Açıklama öğesi ve yeni proje veya yeni öğe Ekle iletişim kutusunda göründüğü şekilde şablonun açıklamasını nasıl belirttiği hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2ea10b43662d2818792dbc57aeac09a056cb63ce
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2f244fb6d681c9cc22416422be3ade098c67deea
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80712254"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94671291"
 ---
 # <a name="description-element-visual-studio-templates"></a>Description öğesi (Visual Studio şablonları)
 **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda göründüğü haliyle şablonun açıklamasını belirtir.

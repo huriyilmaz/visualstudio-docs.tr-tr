@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: ec326871f5565ecaabdc8cda369b36df14029414
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 9b6ba2e22484850dd6079cfc7e4ab9cd68371dcb
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93399832"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94671928"
 ---
 # <a name="enable-iis"></a>enable-iis
 
@@ -32,7 +32,7 @@ Hem hem de `input` `additionalOptions` özellikleri atlanırsa veya boşsa, ara�
 | [**girişinin**](#input)                              | dize | No       | Kullanılmadı.                                                                           |
 | [**additionalOptions**](#additional-options)     | dize | No       | Kullanılmadı.                                                                           |
 
-### <a name="input"></a>Giriş
+### <a name="input"></a>Girdi
 
 Kullanılmadı.
 
@@ -45,13 +45,14 @@ Kullanılmadı.
 Aracın varsayılan davranışı `enable-iis` IIS özelliklerini etkinleştirmektir: IIS-WebSunucusu, IIS-WebServerRole, IIS-WebSockets ve IIS-WebAuthentication ve ardından ASP.NET Core modülünü içeren ASP.NET barındırma paketinin en son sürümünü yükler. 
 
 ## <a name="example-usage"></a>Örnek kullanım
+Kullanarak nasıl çalıştırılacağını gösteren bir örnek aşağıda verilmiştir `enable-iis` `.devinit.json` . 
 
+#### <a name="devinitjson-that-will-enable-iis-development"></a>.devinit.js, IIS geliştirmeyi etkinleştirecek:
 ```json
 {
     "$schema": "https://json.schemastore.org/devinit.schema-3.0.json",
     "run": [
         {
-            "comments": "Example that will enable IIS features and install the latest ASP.NET hosting bundle.",
             "tool": "enable-iis"
         },
     ]
