@@ -7,12 +7,12 @@ author: evanwindom
 ms.author: v-evwin
 ms.date: 11/12/2020
 ms.faqid: q3_4
-ms.openlocfilehash: afcfa047e8b6b26f8e5d3648c91d684c13d8a59d
-ms.sourcegitcommit: f915322d60182143da7036893d2941bc200cf439
+ms.openlocfilehash: 7e38e477cbcbe17ce5407ba87cd7f26b35b4d174
+ms.sourcegitcommit: c1cc3d8e1673c52fbfddc86b089b4a3d46bb3e59
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94575582"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94633383"
 ---
 ## <a name="how-do-i-download-find-a-key-and-activate-the-visual-studio-ide"></a>Visual Studio IDE’yi indirme, etkinleştirme ve buna ait anahtar bulma
 Erişebileceğiniz Visual Studio IDE düzeyi, abonelik düzeyinize bağlıdır. Örneğin, bir Visual Studio Professional aboneliğinin Visual Studio Enterprise’a erişimi yoktur. Hangi düzeyi kullandığınızdan emin değilseniz portaldaki [abonelikler sayfasından](https://my.visualstudio.com/subscriptions) kullanabileceğiniz aboneliklere göz atın. 
@@ -25,4 +25,4 @@ Erişebileceğiniz Visual Studio IDE düzeyi, abonelik düzeyinize bağlıdır. 
 0. Aboneliğinizin atandığı e-postayı kullanarak, kurulumun hemen ardından **ürün anahtarı gerekmeksizin** IDE’de oturum açabilirsiniz. Çevrimdışı ortamdaysanız [ürün anahtarı talep etmeyi](https://docs.microsoft.com/visualstudio/subscriptions/find-keys) öğrenin.
 
 ### <a name="find-an-older-version"></a>Daha eski bir sürüm bulma 
-Ayrıca, abonelikler portalındaki  [indirmeler sayfasından](https://my.visualstudio.com/Downloads?q=Visual%20Studio%20for%20mac&pgroup=) önceki sürümleri arayıp indirebilirsiniz.
+Ayrıca, abonelikler portalındaki  [indirmeler sayfasından](https://my.visualstudio.com/Downloads?q=visual%20studio&pgroup=) önceki sürümleri arayıp indirebilirsiniz.

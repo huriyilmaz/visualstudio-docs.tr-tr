@@ -1,5 +1,7 @@
 ---
 title: FeatureProperties öğesi | Microsoft Docs
+description: SharePoint proje öğesi şemasındaki bir öğe olan FeatureProperties öğesiyle ilgili başvuru bilgilerini görüntüleyin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 6860a91067daa6da1d4223ae5060385087ad3433
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9ee2bddec02263a889fb1f69088a8a50b3d8b57d
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62967337"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672606"
 ---
 # <a name="featureproperties-element"></a>FeatureProperties öğesi
   SharePoint 'e dağıtıldığında bir özelliğe dahil olan özellik değerlerinin bir koleksiyonu. Bir özellik dağıtıldıktan sonra, kodunuzda özellik değerlerine erişebilirsiniz.

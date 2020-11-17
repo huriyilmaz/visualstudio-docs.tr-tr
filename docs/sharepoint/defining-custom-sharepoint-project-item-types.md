@@ -1,5 +1,7 @@
 ---
 title: Özel SharePoint proje öğesi türlerini tanımlama | Microsoft Docs
+description: Yeni bir SharePoint proje öğesi türü oluşturmak istediğinizde özel bir SharePoint proje öğesi türü tanımlayın.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e5f32abba4c4cbdeab59ed66e38019d913e704e6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fc2e3670dd734b368795f270fa6c1d63c8c079e8
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62580790"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672840"
 ---
 # <a name="define-custom-sharepoint-project-item-types"></a>Özel SharePoint proje öğesi türlerini tanımlama
   Yeni bir SharePoint proje öğesi türü oluşturmak istediğinizde yeni bir SharePoint proje öğesi türü tanımlayın. Örneğin, Visual Studio bir SharePoint sitesine alanlar veya özel eylemler eklemek için SharePoint proje öğeleri içermez. Alanları, özel eylemleri veya diğer SharePoint bileşeni türlerini oluşturmak için kendi SharePoint proje öğeleri türlerinizi tanımlayabilirsiniz.
@@ -29,9 +31,9 @@ ms.locfileid: "62580790"
 
  Özel bir proje öğesi türü tanımladığınızda, proje öğesine aşağıdaki işlevleri de ekleyebilirsiniz:
 
-- Proje öğesine kısayol menü öğesi ekleyin. Menü öğesi, proje öğesine sağ tıklayarak veya seçerek ve ardından **SHIFT**F10 tuşlarını seçerek **Çözüm Gezgini** içindeki proje öğesi için kısayol menüsünü açtığınızda görünür + **F10** . Daha fazla bilgi için bkz. [nasıl yapılır: özel bir SharePoint proje öğe türüne kısayol menü öğesi ekleme](../sharepoint/how-to-add-a-shortcut-menu-item-to-a-custom-sharepoint-project-item-type.md).
+- Proje öğesine kısayol menü öğesi ekleyin. Menü öğesi, proje öğesine sağ tıklayarak veya seçerek ve ardından **SHIFT** F10 tuşlarını seçerek **Çözüm Gezgini** içindeki proje öğesi için kısayol menüsünü açtığınızda görünür + **F10** . Daha fazla bilgi için bkz. [nasıl yapılır: özel bir SharePoint proje öğe türüne kısayol menü öğesi ekleme](../sharepoint/how-to-add-a-shortcut-menu-item-to-a-custom-sharepoint-project-item-type.md).
 
-- Proje öğesine özel bir özellik ekleyin. Özelliği, **Çözüm Gezgini**içinde Proje öğesini seçtiğinizde **Özellikler** penceresinde görünür. Daha fazla bilgi için bkz. [nasıl yapılır: özel bir SharePoint proje öğe türüne özellik ekleme](../sharepoint/how-to-add-a-property-to-a-custom-sharepoint-project-item-type.md).
+- Proje öğesine özel bir özellik ekleyin. Özelliği, **Çözüm Gezgini** içinde Proje öğesini seçtiğinizde **Özellikler** penceresinde görünür. Daha fazla bilgi için bkz. [nasıl yapılır: özel bir SharePoint proje öğe türüne özellik ekleme](../sharepoint/how-to-add-a-property-to-a-custom-sharepoint-project-item-type.md).
 
   Diğer geliştiricilerin, Visual Studio 'da Proje öğesini kullanmasını sağlamak için bir. spdata dosyası oluşturun ve proje öğesiyle ilişkili bir öğe şablonu veya proje şablonu oluşturun. Daha fazla bilgi için bkz. [SharePoint proje öğeleri için öğe şablonları ve proje şablonları oluşturma](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md).
 

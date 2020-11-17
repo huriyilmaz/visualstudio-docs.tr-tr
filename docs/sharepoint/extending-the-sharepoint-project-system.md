@@ -1,5 +1,7 @@
 ---
 title: SharePoint proje sistemini genişletme | Microsoft Docs
+description: SharePoint proje sistemini genişletin. SharePoint proje sistemini genişletmeyi öğrenin. Yaygın geliştirme görevlerini anlayın.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,18 +15,18 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7dce10c2bc44eb4fde6a6e38417d136ea5e9ba41
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c017217f66e38eed6248b90efaeabce0efaa9c70
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62557030"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672554"
 ---
 # <a name="extend-the-sharepoint-project-system"></a>SharePoint proje sistemini genişletme
   Visual Studio 'da bir dizi proje şablonu ve öğe şablonu kullanarak SharePoint çözümleri oluşturabilirsiniz. Bu şablonlar birçok geliştirme senaryosunun gereksinimlerini karşılar, ancak ihtiyacınız olan işlevleri sağlamayan bazı durumları keşfedebilirsiniz. Bu gibi durumlarda, SharePoint proje sistemini genişletebilirsiniz.
 
 ## <a name="overview-of-the-sharepoint-project-system"></a>SharePoint proje sistemine genel bakış
- SharePoint proje sistemi, *SharePoint proje öğelerinin*temel bileşenini temel alır. SharePoint proje öğesi, liste tanımı, Web Bölümü veya içerik türü gibi tek bir SharePoint özelleştirmesini temsil eder.
+ SharePoint proje sistemi, *SharePoint proje öğelerinin* temel bileşenini temel alır. SharePoint proje öğesi, liste tanımı, Web Bölümü veya içerik türü gibi tek bir SharePoint özelleştirmesini temsil eder.
 
  SharePoint projesi bir veya daha fazla SharePoint proje öğesi içeren bir Visual Studio projem. SharePoint projeleri ayrıca, proje öğelerinin dağıtım için özellikler ve paketler halinde nasıl gruplandığını tanımlayan ek bileşenler içerir.
 

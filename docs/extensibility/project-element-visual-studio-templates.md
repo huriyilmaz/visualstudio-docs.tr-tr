@@ -1,5 +1,7 @@
 ---
 title: Project öğesi (Visual Studio şablonları) | Microsoft Docs
+description: Proje öğesi ve projeye eklenecek dosyaları ya da dizinleri nasıl belirttiği hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 335a1e4efa62f07e10bb24b9971627d24bb13273
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 652d438d6a0fdf0c42648ded7d3dc9c18b0212ff
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80701999"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672391"
 ---
 # <a name="project-element-visual-studio-templates"></a>Project öğesi (Visual Studio şablonları)
 Projeye eklenecek dosyaları veya dizinleri belirtir.
@@ -47,7 +49,7 @@ Projeye eklenecek dosyaları veya dizinleri belirtir.
 |Öznitelik|Açıklama|
 |---------------|-----------------|
 |`File`|Gerekli öznitelik.<br /><br /> Şablon *. zip* dosyasındaki proje dosyasının adını belirtir.|
-|`ReplaceParameters`|İsteğe bağlı öznitelik.<br /><br /> Şablondan bir proje oluşturulduğunda proje dosyasında değiştirilmesini gerektiren parametre değerleri olup olmadığını belirten bir Boolean değer. Varsayılan değer `false` .|
+|`ReplaceParameters`|İsteğe bağlı öznitelik.<br /><br /> Şablondan bir proje oluşturulduğunda proje dosyasında değiştirilmesini gerektiren parametre değerleri olup olmadığını belirten bir Boolean değer. Varsayılan değer `false` olarak belirlenmiştir.|
 |`TargetFileName`|İsteğe bağlı öznitelik.<br /><br /> Şablondan bir proje oluşturulduğunda proje dosyasının adını belirtir.|
 |`IgnoreProjectParameter`|İsteğe bağlı öznitelik.<br /><br /> Projenin geçerli çözüme eklenip eklenmeyeceğini belirtir. "$*MyCustomParameter*$" özel parametresinin değeri parametre değiştirme dosyasında mevcutsa, proje oluşturulur ancak şu anda açık olan çözümün parçası olarak eklenmez.|
 

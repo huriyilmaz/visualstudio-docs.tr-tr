@@ -1,5 +1,7 @@
 ---
 title: SharePoint proje öğelerini genişletme | Microsoft Docs
+description: SharePoint proje öğelerini genişletmek için görevleri gözden geçirin. Proje öğesi uzantılarının ve proje öğesi örneklerinin nasıl ilişkili olduğunu anlayın.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f60c95418379399196c461e055645ae7c85a473e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 22ba5acb995466e695c0e25b5b7540f3677b1264
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62967402"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672580"
 ---
 # <a name="extend-sharepoint-project-items"></a>SharePoint proje öğelerini genişletme
   Visual Studio 'da zaten yüklü olan bir SharePoint proje öğesi türüne işlevsellik eklemek istediğinizde bir proje öğesi uzantısı oluşturun. Örneğin, Visual Studio 'da yerleşik **olay alıcısı** veya **liste tanımı** proje öğeleri için bir uzantı oluşturabilir veya özel bir proje öğesi türü için bir uzantı oluşturabilirsiniz. Ayrıca, tüm SharePoint proje öğesi türleri için bir uzantı oluşturabilirsiniz.
@@ -29,9 +31,9 @@ ms.locfileid: "62967402"
 
  Bir proje öğesini genişlettiğinizde, proje öğesine aşağıdaki işlevselliği de ekleyebilirsiniz:
 
-- Proje öğesine kısayol menü öğesi ekleyin. **Çözüm Gezgini**içinde proje öğesi için kısayol menüsünü açtığınızda menü öğesi görünür. Kısayol menüsünü, proje öğesine sağ tıklayarak veya seçip **SHIFT** + **F10** tuşlarını seçerek açarsınız. Daha fazla bilgi için bkz. [nasıl yapılır: bir SharePoint proje öğesi uzantısına kısayol menü öğesi ekleme](../sharepoint/how-to-add-a-shortcut-menu-item-to-a-sharepoint-project-item-extension.md).
+- Proje öğesine kısayol menü öğesi ekleyin. **Çözüm Gezgini** içinde proje öğesi için kısayol menüsünü açtığınızda menü öğesi görünür. Kısayol menüsünü, proje öğesine sağ tıklayarak veya seçip **SHIFT** + **F10** tuşlarını seçerek açarsınız. Daha fazla bilgi için bkz. [nasıl yapılır: bir SharePoint proje öğesi uzantısına kısayol menü öğesi ekleme](../sharepoint/how-to-add-a-shortcut-menu-item-to-a-sharepoint-project-item-extension.md).
 
-- Proje öğesine özel bir özellik ekleyin. Özelliği, **Çözüm Gezgini**içinde Proje öğesini seçtiğinizde **Özellikler** penceresinde görünür. Daha fazla bilgi için bkz. [nasıl yapılır: bir SharePoint proje öğe uzantısına özellik ekleme](../sharepoint/how-to-add-a-property-to-a-sharepoint-project-item-extension.md).
+- Proje öğesine özel bir özellik ekleyin. Özelliği, **Çözüm Gezgini** içinde Proje öğesini seçtiğinizde **Özellikler** penceresinde görünür. Daha fazla bilgi için bkz. [nasıl yapılır: bir SharePoint proje öğe uzantısına özellik ekleme](../sharepoint/how-to-add-a-property-to-a-sharepoint-project-item-extension.md).
 
   Proje öğesi uzantısının nasıl oluşturulduğunu, dağıtılacağını ve test leyeceğinizi gösteren bir anlatım için bkz. [Izlenecek yol: bir SharePoint proje öğesi türünü genişletme](../sharepoint/walkthrough-extending-a-sharepoint-project-item-type.md).
 

@@ -1,5 +1,7 @@
 ---
 title: SharePoint çözümlerini geliştirme | Microsoft Docs
+description: SharePoint çözümleri geliştirin. Bir SharePoint projesinin öğelerini öğrenin. SharePoint projesi ve proje öğesi özelliklerini anlayın.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: overview
 f1_keywords:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 36823637c530d65776c149ff576bf5e7e0ca545f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 755723dd2ae309e971e86852646ee33d2caa22cf
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016787"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672827"
 ---
 # <a name="develop-sharepoint-solutions"></a>SharePoint çözümleri geliştirme
   [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]SharePoint siteleri ve site öğeleri oluşturmak için içinde çeşitli SharePoint proje türü şablonları mevcuttur. Kullanılabilir proje türlerinin bir listesi için bkz. [SharePoint projesi ve proje öğesi şablonları](../sharepoint/sharepoint-project-and-project-item-templates.md). Aşağıda bir SharePoint projesinin öğelerinin ve özelliklerinin açıklaması verilmiştir.
@@ -28,7 +30,7 @@ ms.locfileid: "86016787"
  SharePoint 2013 ve SharePoint eklentileri hakkında daha fazla bilgi için bkz. [sharepoint 2013](https://www.microsoft.com/microsoft-365/previous-versions/microsoft-sharepoint-2013) ve [derleme SharePoint eklentileri](/sharepoint/dev/sp-add-ins/sharepoint-add-ins).
 
 ## <a name="elements-of-a-sharepoint-project"></a>Bir SharePoint projesinin öğeleri
- SharePoint projesi altındaki düğümler, *SharePoint öğeleri*olarak bilinir. SharePoint öğeleri, yapılandırma dosyaları,. aspx formları ve daha fazlası gibi *SharePoint öğe dosyaları*olarak adlandırılan bir veya daha fazla alt dosya da içerebilir [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] .
+ SharePoint projesi altındaki düğümler, *SharePoint öğeleri* olarak bilinir. SharePoint öğeleri, yapılandırma dosyaları,. aspx formları ve daha fazlası gibi *SharePoint öğe dosyaları* olarak adlandırılan bir veya daha fazla alt dosya da içerebilir [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] .
 
  Proje öğesi dosyaları ile doldurulmuş proje şablonları kullanarak proje oluşturmak yerine boş **Proje** şablonunu kullanarak boş bir SharePoint projesi oluşturabilir ve ardından proje öğelerini el ile ekleyebilirsiniz. SharePoint projeleri Ayrıca isteğe bağlı olarak bir veya daha fazla özellik dosyası (SharePoint 'te etkinleştirme için) ve projenin dağıtılacağı bir paket dosyası içerebilir.
 
@@ -47,24 +49,24 @@ ms.locfileid: "86016787"
 
  Bir özelliği el ile eklemek için özellik düğümünün kısayol menüsünde **Özellik Ekle** komutunu yürütün. Özellik tasarımcısını kullanarak bir özelliğin içeriğini görüntüleyebilir veya değiştirebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: SharePoint 'ı özelleştirme özelliği](../sharepoint/how-to-customize-a-sharepoint-feature.md).
 
- Bir özellik bir SharePoint projesine eklendiğinde, bu özellik*x*. feature adlı bir düğüm olarak **Çözüm Gezgini** görüntülenir, burada *x* benzersiz bir sayıdır. Bir özellik SharePoint sunucusuna dağıtıldıktan sonra, SharePoint Yöneticisi onu etkinleştirebilir ve SharePoint site kullanıcıları tarafından kullanılabilir hale getirir.
+ Bir özellik bir SharePoint projesine eklendiğinde, bu özellik *x*. feature adlı bir düğüm olarak **Çözüm Gezgini** görüntülenir, burada *x* benzersiz bir sayıdır. Bir özellik SharePoint sunucusuna dağıtıldıktan sonra, SharePoint Yöneticisi onu etkinleştirebilir ve SharePoint site kullanıcıları tarafından kullanılabilir hale getirir.
 
 #### <a name="package-node"></a>Paket düğümü
- **Paket** düğümü, SharePoint projesi için dağıtım mekanizması görevi gören tek bir dosya içerir. Bu dosya, *çözüm paketi*olarak bilinir. CAB tabanlı bir. WSP uzantısı. Çözüm paketi, SharePoint siteleri için uygulanan ve tek tek etkinleştirebileceğiniz veya devre dışı bırakabilen bir dizi özellik, site tanımı ve derleme içeren dağıtılabilir, yeniden kullanılabilir bir dosyadır. **Paket** düğümü her zaman paket için bir tanım dosyası olan Package. wspdef adlı bir dosya içerir [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] . SharePoint çalıştıran sunucuya bir paket dağıtıldıktan sonra, SharePoint Yöneticisi onu yükleyebilir ve özelliklerini etkinleştirebilir.
+ **Paket** düğümü, SharePoint projesi için dağıtım mekanizması görevi gören tek bir dosya içerir. Bu dosya, *çözüm paketi* olarak bilinir. CAB tabanlı bir. WSP uzantısı. Çözüm paketi, SharePoint siteleri için uygulanan ve tek tek etkinleştirebileceğiniz veya devre dışı bırakabilen bir dizi özellik, site tanımı ve derleme içeren dağıtılabilir, yeniden kullanılabilir bir dosyadır. **Paket** düğümü her zaman paket için bir tanım dosyası olan Package. wspdef adlı bir dosya içerir [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] . SharePoint çalıştıran sunucuya bir paket dağıtıldıktan sonra, SharePoint Yöneticisi onu yükleyebilir ve özelliklerini etkinleştirebilir.
 
  Paket Tasarımcısı ' nda paket düğümüne çift tıklayarak veya kısayol menüsünü açıp **Aç**' ı seçerek paketin içeriğini görüntüleyebilir veya değiştirebilirsiniz. Daha fazla bilgi için bkz. [SharePoint çözüm paketleri oluşturma](../sharepoint/creating-sharepoint-solution-packages.md).
 
 ## <a name="sharepoint-project-and-project-item-properties"></a>SharePoint projesi ve proje öğesi özellikleri
  Diğer projeler gibi SharePoint projeleri, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Özellikler penceresi ve Özellikler sayfasındaki özellikleri görüntüler. Görüntülenen özellikler Seçili düğüme göre değişir.
 
- **Çözüm Gezgini**bir SharePoint projesi, proje öğesi veya proje öğesi dosya düğümü seçildiğinde, aşağıdaki özellikler Özellikler penceresi veya Özellikler sayfasında görünür:
+ **Çözüm Gezgini** bir SharePoint projesi, proje öğesi veya proje öğesi dosya düğümü seçildiğinde, aşağıdaki özellikler Özellikler penceresi veya Özellikler sayfasında görünür:
 
 ### <a name="project-properties"></a>Proje özellikleri
 
-|Özellik Adı|Description|
+|Özellik Adı|Açıklama|
 |-------------------|-----------------|
 |Etkin dağıtım yapılandırması|Dağıtım sırasında gerçekleştirilen adımların serisini belirtir. Daha fazla bilgi için bkz. [nasıl yapılır: SharePoint dağıtım yapılandırmasını düzenleme](../sharepoint/how-to-edit-a-sharepoint-deployment-configuration.md).|
-|Bütünleştirilmiş kod dağıtım hedefi|*SharePoint uygulama derlemelerinin* nerede olduğunu belirler. Geçerli bütünleştirilmiş kod konumu değerleri *GlobalAssemblyCache* (varsayılan) veya *WebApplication*.<br /><br /> *Korumalı çözüm* özelliği **true**olarak ayarlandıysa, bu özellik devre dışı bırakılır.|
+|Bütünleştirilmiş kod dağıtım hedefi|*SharePoint uygulama derlemelerinin* nerede olduğunu belirler. Geçerli bütünleştirilmiş kod konumu değerleri *GlobalAssemblyCache* (varsayılan) veya *WebApplication*.<br /><br /> *Korumalı çözüm* özelliği **true** olarak ayarlandıysa, bu özellik devre dışı bırakılır.|
 |Hata ayıklamadan sonra otomatik olarak geri çek|Dağıtılan çözümün ' de hata ayıklama modunda, uygulamayı çalıştırdıktan sonra otomatik olarak SharePoint 'ten geri çekme yapıp kullanmadığını belirtir [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . Seçildiğinde, çözüm hata ayıkladıktan sonra, IDE Tasarım görünümüne geri gittiğinde çözüm geri çeker. Bu, kaldırıldığında çözüm geri çekmez. Daha fazla bilgi için bkz. [geri çekiliyor a Solution](/previous-versions/office/developer/sharepoint-2010/aa543958(v=office.14)).|
 |Yapılandırma Düzenle|Proje için kullanılacak dağıtım yapılandırmasını belirtir. Daha fazla bilgi için bkz. [nasıl yapılır: SharePoint dağıtım yapılandırmasını düzenleme](../sharepoint/how-to-edit-a-sharepoint-deployment-configuration.md) ve [SharePoint çözüm paketlerini dağıtma, yayımlama ve yükseltme](../sharepoint/deploying-publishing-and-upgrading-sharepoint-solution-packages.md).|
 |Silverlight hata ayıklamasını etkinleştir (betik hata ayıklaması yerine)|Seçildiğinde, Silverlight hata ayıklayıcı hata ayıklama işlemine ekler. Kaldırıldığında, betik hata ayıklayıcısı hata ayıklama işlemine ekler. Daha fazla bilgi için bkz. [Silverlight hata ayıklamasına genel bakış](/previous-versions/windows/).|
@@ -73,7 +75,7 @@ ms.locfileid: "86016787"
 |Dağıtım öncesi komut satırı|SharePoint çözümünü dağıtmadan önce çalıştırılacak komutları belirtir. Bu satır, tüm Batch komutlarının yanı sıra MSBuild değişkenlerinin çözümlenmesini de destekler. Daha fazla bilgi için bkz. [nasıl yapılır: SharePoint dağıtım komutlarını ayarlama](../sharepoint/how-to-set-sharepoint-deployment-commands.md).|
 |Proje Dosyası|Derleme, yapılandırma ve proje hakkında diğer bilgileri içeren dosyanın adı.|
 |Proje klasörü|Sistemdeki proje dosyasının konumu. (Salt okunur.)|
-|Korumalı çözüm|Projenin, *Kullanıcı tarafından oluşturulan çözüm*olarak da bilinen bir *Korumalı çözüm*olarak dağıtılıp dağıtılmayacağını belirtir. Korumalı çözümlerin güvenilir olması gerekmez. **Doğru** değeri, projenin bir korumalı çözüm olarak dağıtıldığı anlamına gelir, **yanlış** değeri projenin bir Grup çözümü olarak dağıtıldığı anlamına gelir. Daha fazla bilgi için bkz. korumalı [çözüm konuları](../sharepoint/sandboxed-solution-considerations.md) ve [korumalı ve Grup çözümleri arasındaki farklar](../sharepoint/differences-between-sandboxed-and-farm-solutions.md).|
+|Korumalı çözüm|Projenin, *Kullanıcı tarafından oluşturulan çözüm* olarak da bilinen bir *Korumalı çözüm* olarak dağıtılıp dağıtılmayacağını belirtir. Korumalı çözümlerin güvenilir olması gerekmez. **Doğru** değeri, projenin bir korumalı çözüm olarak dağıtıldığı anlamına gelir, **yanlış** değeri projenin bir Grup çözümü olarak dağıtıldığı anlamına gelir. Daha fazla bilgi için bkz. korumalı [çözüm konuları](../sharepoint/sandboxed-solution-considerations.md) ve [korumalı ve Grup çözümleri arasındaki farklar](../sharepoint/differences-between-sandboxed-and-farm-solutions.md).|
 |Site URL 'SI|[!INCLUDE[TLA2#tla_url](../sharepoint/includes/tla2sharptla-url-md.md)]Bu proje için hedef siteyi belirtir.|
 |Başlangıç öğesi|Projedeki çalıştırılacak ilk öğeyi belirtir.|
 
@@ -81,7 +83,7 @@ ms.locfileid: "86016787"
 
 ### <a name="project-item-properties"></a>Proje öğesi özellikleri
 
-|Özellik Adı|Description|
+|Özellik Adı|Açıklama|
 |-------------------|-----------------|
 |Dağıtıma Çakışma Çözümlemesi|Özellikleri sunucuda zaten olan bir öğeyle aynı olan bir proje öğesi dağıtıldığında gerçekleştirilecek eylemi belirtir. Daha fazla bilgi için bkz. [SharePoint paketleme ve dağıtım sorunlarını giderme](../sharepoint/troubleshooting-sharepoint-packaging-and-deployment.md).|
 |Özellik özellikleri|SharePoint 'e dağıtırken bir özelliğe eklenen bir değer kümesini (anahtar/değer çiftleri olarak saklanır) belirtir. Özellik dağıtıldıktan sonra, kodunuzda özellik değerlerine erişebilirsiniz. Daha fazla bilgi için bkz. [Proje Öğelerinde Paketleme ve dağıtım bilgileri sağlama](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md).|
@@ -92,7 +94,7 @@ ms.locfileid: "86016787"
 
 ### <a name="project-item-file-properties"></a>Proje öğesi dosya özellikleri
 
-|Özellik Adı|Description|
+|Özellik Adı|Açıklama|
 |-------------------|-----------------|
 |Derleme eylemi|Dosyanın derleme ve dağıtım işlemleriyle ilişkisini belirtir. Daha fazla bilgi için bkz. [dosya özellikleri](/previous-versions/visualstudio/visual-studio-2010/0c6xyb66\(v\=vs.100\)).|
 |Çıkış dizinine Kopyala|Kaynak dosyaların çıkış dizinine kopyalanıp kopyalanmayacağını belirtir. Aşağıdaki değerlerden biri olabilir:<br /><br /> -   *Kopyalamayın*<br />-   *Her zaman Kopyala*<br />-   *Daha yeniyse kopyala*<br /><br /> Daha fazla bilgi için bkz. [dosya özellikleri](/previous-versions/visualstudio/visual-studio-2010/0c6xyb66\(v\=vs.100\)).|
@@ -101,7 +103,7 @@ ms.locfileid: "86016787"
 |Dağıtım Konumu|SharePoint sunucusundaki dosyanın tam yolu. Bu yol, dağıtım kökü ve dağıtım yolu alt özelliklerinden oluşur.|
 |Dağıtım yolu|SharePoint Server dosyasındaki dosyanın Workflow1 gibi göreli yolu \\ . Dosyanın tam yolu, dağıtım *yolu* değeri *dağıtım kök* değerinin sonuna bitişerek oluşturulur.<br /><br /> *Dağıtım türü* özelliği Için bir *RootFile* değeri seçildiğinde, *dağıtım kök* özelliği, \<SharePointRoot> \\ tam olarak \<SharePointRoot> \workflow1 yoluna neden olacak şekilde değişir \\ . Daha fazla bilgi için bkz. [SharePoint çözümlerini paketleme ve dağıtma](../sharepoint/packaging-and-deploying-sharepoint-solutions.md).|
 |Dağıtım kökü|Dize. SharePoint sunucusunda dosyanın dağıtıldığı kök klasör. Örneğin, \<SharePointRoot> \Template\features \\ \<FeatureName> \\ .<br /><br /> *Dağıtım kök* özelliğinin değeri, *dağıtım türü* ayarı tarafından belirlenir.|
-|Dağıtım türü|Dosyanın dağıtım türü, *dağıtım kök* değerini belirler. Aşağıdaki değerlerden biri olabilir:<br /><br /> NoDeployment: *\<no value>*<br /><br /> ElementManifest: * \<SharePointRoot> \Template\features \\ \<FeatureName> *\\<br /><br /> ElementFile: * \<SharePointRoot> \Template\özellikler \\ \<FeatureName> \\ *<br /><br /> TemplateFile: * \<SharePointRoot> \ şablon \\ *<br /><br /> RootFile: *\<SharePointRoot>\\*<br /><br /> GlobalResource: * \<SharePointRoot> \Resources \\ *<br /><br /> ClassResource: *\<ClassResourcePath>\\*<br /><br /> Daha fazla bilgi için bkz. <xref:Microsoft.VisualStudio.SharePoint.DeploymentType>.|
+|Dağıtım türü|Dosyanın dağıtım türü, *dağıtım kök* değerini belirler. Aşağıdaki değerlerden biri olabilir:<br /><br /> NoDeployment: *\<no value>*<br /><br /> ElementManifest: *\<SharePointRoot> \Template\features \\ \<FeatureName>*\\<br /><br /> ElementFile: *\<SharePointRoot> \Template\özellikler \\ \<FeatureName> \\*<br /><br /> TemplateFile: *\<SharePointRoot> \ şablon \\*<br /><br /> RootFile: *\<SharePointRoot>\\*<br /><br /> GlobalResource: *\<SharePointRoot> \Resources \\*<br /><br /> ClassResource: *\<ClassResourcePath>\\*<br /><br /> Daha fazla bilgi için bkz. <xref:Microsoft.VisualStudio.SharePoint.DeploymentType>.|
 |Dosya Adı|Öğe dosyası için dosya veya klasörün adı.|
 |Tam Yol|Öğe için dosyanın konumu. (Salt okunur.)|
 

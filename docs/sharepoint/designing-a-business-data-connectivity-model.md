@@ -1,5 +1,7 @@
 ---
 title: Iş verileri bağlantı modeli tasarlama | Microsoft Docs
+description: Bir iş verileri bağlantısı (BDC) modeli tasarlayın. Varlıklar ve yöntemler ekleyin. Yöntem parametrelerini tanımlayın. Filtre tanımlayıcıları ekleyin. IVB modelini doğrulayın.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 16a410b59cef6f282d2d27ad90a90013636d6489
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b574c52b9081cc6640c5611e0759b5559e7a4f6d
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72984462"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672658"
 ---
 # <a name="design-a-business-data-connectivity-model"></a>İş verileri bağlantı modeli tasarlama
   Bir model dosyasına varlıklar ve yöntemler ekleyerek Iş verileri bağlantısı (BDC) hizmeti için bir model geliştirebilirsiniz. Bir varlık, veri alanları koleksiyonunu açıklar. Örneğin, bir varlık veritabanındaki bir tabloyu temsil edebilir. Bir yöntem, varlıklar tarafından temsil edilen verileri ekleme, silme veya güncelleştirme gibi bir görevi gerçekleştirir. Daha fazla bilgi için bkz. [iş verilerini SharePoint Ile tümleştirme](../sharepoint/integrating-business-data-into-sharepoint.md).
@@ -57,7 +59,7 @@ ms.locfileid: "72984462"
  SharePoint, kullanıcıların filtre değerleri sağlamasını sağlayan çeşitli özellikler sağlar. Örneğin, Iş verileri Web Bölümleri bir filtre metin kutusu sağlar. Kullanıcılar bir listedeki verileri metin kutusuna bir değer girerek sınırlayabilir. Bir yönteme filtre tanımlayıcısı ekleme hakkında daha fazla bilgi için bkz. [nasıl yapılır: bir Bulucu yöntemine filtre tanımlayıcısı ekleme](../sharepoint/how-to-add-a-filter-descriptor-to-a-finder-method.md).
 
 ### <a name="filter-descriptor-properties"></a>Filtre tanımlayıcısı özellikleri
- Bir filtre tanımlayıcısının **Ilişkili tür tanımlayıcısının**, **adının**ve **tür** özelliklerinin değerini ayarlamanız gerekir. Diğer tüm özellikler isteğe bağlıdır.
+ Bir filtre tanımlayıcısının **Ilişkili tür tanımlayıcısının**, **adının** ve **tür** özelliklerinin değerini ayarlamanız gerekir. Diğer tüm özellikler isteğe bağlıdır.
 
  **Ilişkili tür tanımlayıcısı** özelliği, filtre tanımlayıcısını bir giriş parametresiyle ilişkilendirir. Bir Kullanıcı bir filtre değeri sağlıyorsa, IVB hizmeti bu değeri giriş parametresini kullanarak yöntemine geçirir.
 
@@ -69,11 +71,11 @@ ms.locfileid: "72984462"
  Bazı durumlarda, Kullanıcı bir filtre değeri sağlayamayabilir. Yöntem örneğine varsayılan bir değer ekleyerek veya yönteminizin kodundaki varsayılan değeri ayarlayarak varsayılan bir değer sağlayabilirsiniz. Yöntem örneğine bir varsayılan değer ekleme hakkında daha fazla bilgi için bkz. [MethodInstance](/previous-versions/office/developer/sharepoint-2010/ee556838(v=office.14)). Yönteminizin kodundaki bir giriş parametresinin varsayılan değerini ayarlamaya ilişkin bir örnek için bkz. [nasıl yapılır: bir Bulucu yöntemine filtre tanımlayıcısı ekleme](../sharepoint/how-to-add-a-filter-descriptor-to-a-finder-method.md).
 
 ## <a name="validate-the-model"></a>Modeli doğrulama
- Geliştirme sırasında modelinizi doğrulayabilirsiniz. Visual Studio, modelinizin beklendiği gibi davranmasını engelleyebilecek sorunları tanımlar. Bu sorunlar, Visual Studio **hata listesi**görüntülenir.
+ Geliştirme sırasında modelinizi doğrulayabilirsiniz. Visual Studio, modelinizin beklendiği gibi davranmasını engelleyebilecek sorunları tanımlar. Bu sorunlar, Visual Studio **hata listesi** görüntülenir.
 
- Bir modeli, IVB Tasarımcısı için kısayol menüsünü açıp **Doğrula**' yı seçerek doğrulayabilirsiniz. Model herhangi bir hata içeriyorsa **hata listesi**görünürler. İmleci, listedeki hataya çift tıklayarak, hata içeren koda hızlıca taşıyabilirsiniz. Alternatif olarak, listedeki hataların ileri veya geri ilerlemek için **F8** veya **SHIFT** + **F8** tuşlarını tekrar tekrar seçebilirsiniz.
+ Bir modeli, IVB Tasarımcısı için kısayol menüsünü açıp **Doğrula**' yı seçerek doğrulayabilirsiniz. Model herhangi bir hata içeriyorsa **hata listesi** görünürler. İmleci, listedeki hataya çift tıklayarak, hata içeren koda hızlıca taşıyabilirsiniz. Alternatif olarak, listedeki hataların ileri veya geri ilerlemek için **F8** veya **SHIFT** + **F8** tuşlarını tekrar tekrar seçebilirsiniz.
 
- Doğrulama hataları, modelin kuralları bir şekilde ihlal edildiğinde meydana gelebilir. Örneğin, bir tür tanımlayıcısının **IsCollection** özelliği **true**olarak ayarlanmışsa, ancak alt tür tanımlayıcıları yoksa, bir doğrulama hatası görüntülenir. Visual Studio **hata listesi**görünen bazı hataları anlamak IÇIN bir BDC modeli kurallarına başvurmanız gerekebilir. Bir BDC modelinin kuralları hakkında daha fazla bilgi için bkz. [BDCMetadata şeması](/previous-versions/office/developer/sharepoint-2010/ee556387(v=office.14)).
+ Doğrulama hataları, modelin kuralları bir şekilde ihlal edildiğinde meydana gelebilir. Örneğin, bir tür tanımlayıcısının **IsCollection** özelliği **true** olarak ayarlanmışsa, ancak alt tür tanımlayıcıları yoksa, bir doğrulama hatası görüntülenir. Visual Studio **hata listesi** görünen bazı hataları anlamak IÇIN bir BDC modeli kurallarına başvurmanız gerekebilir. Bir BDC modelinin kuralları hakkında daha fazla bilgi için bkz. [BDCMetadata şeması](/previous-versions/office/developer/sharepoint-2010/ee556387(v=office.14)).
 
 ## <a name="debug-the-solution-that-contains-the-model"></a>Modeli içeren çözümde hata ayıklama
  Visual Studio 'da herhangi bir kodda hata ayıklaması yaptığınız için kodunuzda hata ayıklayabilirsiniz. Kodunuzda hata ayıklamak için, kodunuzda herhangi bir yere kesme noktaları ayarlayın ve ardından hata ayıklayıcıyı başlatın. Visual Studio, SharePoint sitesini açar. SharePoint 'te, iş verilerinizi kullanan bir liste veya Web bölümü oluşturun. Ardından, kodunuzda adım adım ilerme yapabilirsiniz. SharePoint projelerinde hata ayıklama hakkında daha fazla bilgi için bkz. [SharePoint Çözümlerinde Sorun giderme](../sharepoint/troubleshooting-sharepoint-solutions.md).
@@ -101,10 +103,10 @@ ms.locfileid: "72984462"
 ### <a name="retract-models-that-become-corrupt"></a>Bozuk olan modelleri geri çek
  Hata ayıklayıcıyı ilk kez başlattığınızda, Visual Studio modelin tamamını SharePoint 'e dağıtır. Bundan sonra Visual Studio, SharePoint 'teki modeli dağıtımlar arasında yaptığınız değişikliklerle güncelleştirir.
 
- Visual Studio 'Nun modeli SharePoint 'ten tamamen geri çekmek istediğiniz durumlar olabilir. Örneğin, bir model bozuk hale gelebilir.  Modelinizi SharePoint 'e yeniden dağıtmak için, modelin **artımlı güncelleştirme** özelliğini **false**olarak ayarlayın ve ardından hata ayıklayıcıyı başlatın. **Artımlı güncelleştirme** özelliği, **BDC Gezgini**'nde modeli temsil eden düğümü seçtiğinizde **Özellikler** penceresinde görünür. Varsayılan olarak, modelin adı **BdcModel1**' dir.
+ Visual Studio 'Nun modeli SharePoint 'ten tamamen geri çekmek istediğiniz durumlar olabilir. Örneğin, bir model bozuk hale gelebilir.  Modelinizi SharePoint 'e yeniden dağıtmak için, modelin **artımlı güncelleştirme** özelliğini **false** olarak ayarlayın ve ardından hata ayıklayıcıyı başlatın. **Artımlı güncelleştirme** özelliği, **BDC Gezgini**'nde modeli temsil eden düğümü seçtiğinizde **Özellikler** penceresinde görünür. Varsayılan olarak, modelin adı **BdcModel1**' dir.
 
 ### <a name="change-identifier-names-of-entities-in-the-model"></a>Modeldeki varlıkların tanımlayıcı adlarını değiştirme
- Modeli dağıttıktan sonra bir tanımlayıcının adını değiştirirseniz bir dağıtım hatası alabilirsiniz. Modelin **artımlı güncelleştirme** özelliğini **false**olarak ayarlayarak bu hatayı çözebilirsiniz. Modeli el ile geri çekin ve sonra çözümü yeniden dağıtmanız gerekir. Daha fazla bilgi için bkz. [SharePoint Çözümlerinde Sorun giderme](../sharepoint/troubleshooting-sharepoint-solutions.md). İlk olarak modeli dağıtmadan önce **artımlı güncelleştirme** özelliğini **false** olarak ayarlayarak bu hatadan kaçınabilirsiniz.
+ Modeli dağıttıktan sonra bir tanımlayıcının adını değiştirirseniz bir dağıtım hatası alabilirsiniz. Modelin **artımlı güncelleştirme** özelliğini **false** olarak ayarlayarak bu hatayı çözebilirsiniz. Modeli el ile geri çekin ve sonra çözümü yeniden dağıtmanız gerekir. Daha fazla bilgi için bkz. [SharePoint Çözümlerinde Sorun giderme](../sharepoint/troubleshooting-sharepoint-solutions.md). İlk olarak modeli dağıtmadan önce **artımlı güncelleştirme** özelliğini **false** olarak ayarlayarak bu hatadan kaçınabilirsiniz.
 
 ## <a name="locate-documentation-for-bdc-model-elements"></a>IVB model öğeleri için belgeleri bulma
  Visual Studio, her varlık, yöntem veya oluşturduğunuz diğer öğe için modele bir XML öğesi ekler. Öğe öznitelikleri **Özellikler** penceresinde özellikler olarak görünür. Modeli tasarlarken Visual Studio 'Nun oluşturduğu öğeler ve öznitelikler hakkında daha fazla bilgi için bkz. [BDCMetadata şeması](/previous-versions/office/developer/sharepoint-2010/ee556387(v=office.14)).

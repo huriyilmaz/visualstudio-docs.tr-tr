@@ -1,5 +1,7 @@
 ---
 title: SharePoint için Web Bölümleri oluşturuluyor | Microsoft Docs
+description: SharePoint için Web bölümleri oluşturun. Web bölümleri 'ni kullanarak bir SharePoint sitesinin sayfalarının içeriğini, görünümünü ve davranışını bir tarayıcı kullanarak değiştirebilirsiniz.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: overview
 f1_keywords:
@@ -23,12 +25,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4824c358f81f2cf757f037611ed70ba9b8935130
-ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
+ms.openlocfilehash: bc9427d561817cb115473bddc71f2ba63475427e
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90740163"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672801"
 ---
 # <a name="create-web-parts-for-sharepoint"></a>SharePoint için Web bölümleri oluşturma
   Web bölümleri 'ni kullanarak bir SharePoint sitesinin sayfalarının içeriğini, görünümünü ve davranışını bir tarayıcı kullanarak değiştirebilirsiniz. Web bölümleri, bir Web Bölümü sayfası içinde çalışan sunucu tarafı denetimleridir: bir SharePoint sitesinde görünen sayfaların yapı taşlarıdır. Bkz. [Yapı bloğu: Web bölümleri](/previous-versions/office/developer/sharepoint-2010/ee535520(v=office.14)).
@@ -43,7 +45,7 @@ ms.locfileid: "90740163"
 ### <a name="web-part-item"></a>Web Bölümü öğesi
  **Web Bölümü** öğesi, bir SharePoint sitesi için bir Web Bölümü tasarlamak üzere kullanabileceğiniz dosyalar sağlar. Bir **Web Bölümü** öğesi eklediğinizde, Visual Studio projenizde bir klasör oluşturur ve sonra klasöre birkaç dosya ekler. Aşağıdaki tabloda her bir dosya açıklanmaktadır.
 
-|Dosya|Description|
+|Dosya|Açıklama|
 |----------|-----------------|
 |*Elements.xml*|Projenizdeki Özellik tanım dosyasının Web bölümünü dağıtmak için kullandığı bilgileri içerir.|
 |. WebPart dosyası|Web Bölümü galerisinde, SharePoint 'in Web bölümünü görüntülemesi için gereken bilgileri sağlar.|
@@ -55,12 +57,12 @@ ms.locfileid: "90740163"
  Görsel web bölümü, Visual Studio 'da Visual Web Developer Designer kullanarak oluşturduğunuz bir Web bölümüdür. Görsel web bölümü, diğer Web bölümleri ile aynı şekilde çalışır. Bir Web bölümüne düğmeler ve metin kutuları gibi denetimler eklemek için bir XML dosyasına kod eklersiniz. Ancak, Visual Studio **araç kutusu**'ndan web bölümüne sürükleyip yapıştırarak bir görsel web bölümüne denetimler eklersiniz. Tasarımcı daha sonra gerekli kodu XML dosyasında oluşturur. Bkz. [nasıl yapılır: tasarımcı kullanarak SharePoint Web Bölümü oluşturma](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md).
 
 ## <a name="sharepoint-controls"></a>SharePoint denetimleri
- Visual Studio, uygulama sayfaları gibi SharePoint sayfaları oluşturmaya yönelik bazı denetimler sağlar. Bu denetimler, **SharePoint denetimleri**altındaki **araç kutusunda** görünür. Bu denetimlerin işlevselliği, SharePoint sitesinde ve liste sayfalarında kullanılan ASP.NET sunucu denetimlerini içeren [Microsoft. SharePoint. WebControls](/previous-versions/office/sharepoint-server/ms413880(v=office.15)) ad alanından türetilir.
+ Visual Studio, uygulama sayfaları gibi SharePoint sayfaları oluşturmaya yönelik bazı denetimler sağlar. Bu denetimler, **SharePoint denetimleri** altındaki **araç kutusunda** görünür. Bu denetimlerin işlevselliği, SharePoint sitesinde ve liste sayfalarında kullanılan ASP.NET sunucu denetimlerini içeren [Microsoft. SharePoint. WebControls](/previous-versions/office/sharepoint-server/ms413880(v=office.15)) ad alanından türetilir.
 
-|Denetim adı|Description|
+|Denetim adı|Açıklama|
 |------------------|-----------------|
 |[AspMenu](/previous-versions/office/sharepoint-server/ms454108(v=office.15))|Bir ASP menüsü ekler. Daha fazla bilgi için bkz. [menü denetimine genel bakış](/previous-versions/ecs0x9w5(v=vs.140)).|
-|[CssLink](/previous-versions/office/sharepoint-server/ms439048(v=office.15))|*. Aspx* sayfasına bir **bağlantı** öğesi ekler ve **CssRegistration**tarafından tanımlanan bir veya daha fazla dış stil sayfası uygular.|
+|[CssLink](/previous-versions/office/sharepoint-server/ms439048(v=office.15))|*. Aspx* sayfasına bir **bağlantı** öğesi ekler ve **CssRegistration** tarafından tanımlanan bir veya daha fazla dış stil sayfası uygular.|
 |[DateTimeControl](/previous-versions/office/sharepoint-server/ms414993(v=office.15))|*. Aspx* sayfasına bir tarih saat denetimi ekler.|
 |[FormDigest](/previous-versions/office/sharepoint-server/ms416616(v=office.15))|*. Aspx* sayfasına bir güvenlik doğrulaması ekler|
 |[ListProperty](/previous-versions/office/sharepoint-server/ms455032(v=office.15))|Belirtilen listenin bir özelliğini döndürür.|

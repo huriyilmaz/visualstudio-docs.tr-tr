@@ -11,12 +11,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3fd3a6153a347bcaf7d17fd265b7d9c7d4e6a5e5
-ms.sourcegitcommit: c1cc3d8e1673c52fbfddc86b089b4a3d46bb3e59
+ms.openlocfilehash: 7873d42e075619e23c14d4e2e1babc6898825a6b
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/14/2020
-ms.locfileid: "94626183"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672775"
 ---
 # <a name="sign-in-to-visual-studio"></a>Visual Studio’da oturum açma
 
@@ -75,7 +75,7 @@ Oturumu kapatmadığınız takdirde, Visual Studio 'Yu her başlattığınızda 
 
 1. Tarayıcı penceresinde **Profili Düzenle** ' yi seçin ve istediğiniz ayarları değiştirin.
 
-1. İşiniz bittiğinde **Değişiklikleri Kaydet** ' i seçin.
+1. İşiniz bittiğinde **Değişiklikleri Kaydet**' i seçin.
 
 ## <a name="troubleshooting"></a>Sorun giderme
 
@@ -84,6 +84,7 @@ Oturum açarken herhangi bir sorunla karşılaşırsanız, yardım almak için l
 ## <a name="see-also"></a>Ayrıca bkz.
 
 * [Deneme sürümü uzatma veya bir lisansı güncelleştirme](../ide/how-to-unlock-visual-studio.md)
+* [Visual Studio 'da GitHub hesaplarıyla çalışma](../ide/work-with-github-accounts.md)
 * [Visual Studio IDE 'ye Genel Bakış](../get-started/visual-studio-ide.md)
 * [Oturum aç (Mac için Visual Studio)](/visualstudio/mac/signing-in)
 * [Etkinleştirme (Mac için Visual Studio)](/visualstudio/mac/activation)

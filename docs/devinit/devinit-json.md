@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: acd3b65f520a9be048fe2d0209a85a85d086df2f
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 863c2715b7dfbc2c331bb57f6cf06851401c51df
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94438231"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672502"
 ---
 # <a name="devinit-configuration-file"></a>devinit yapılandırma dosyası
 
@@ -45,6 +45,7 @@ ms.locfileid: "94438231"
 Yollar, devınit 'in çalıştığı konuma göre belirlenir. Bu, genellikle yürütülen geçerli çalışma dizinidir `devinit` .
 
 ## <a name="file-format"></a>Dosya Biçimi
+Bir içinde `.devinit.json` , çalıştırmak için birden fazla araç belirtebilirsiniz. `run`Bölümünde istediğiniz sayıda nesne yerleştirebilirsiniz. Bunun bir örneği, tüm araçlarımızla birlikte örnek [.devinit.js](sample-all-tool.md) görülür.
 
 ```json
 {

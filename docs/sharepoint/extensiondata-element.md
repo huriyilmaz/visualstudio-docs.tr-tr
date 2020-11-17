@@ -1,5 +1,7 @@
 ---
 title: ExtensionData öğesi | Microsoft Docs
+description: SharePoint proje öğesi şemasındaki bir öğe olan ExtensionData öğesiyle ilgili başvuru bilgilerini görüntüleyin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 3b700239f97153cef94ab1d7010ad16ed9aa6001
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3131aca3664e37198b0a32bdc0ade0499c12a1e6
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85546568"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672541"
 ---
 # <a name="extensiondata-element"></a>ExtensionData öğesi
   SharePoint proje öğesiyle ilişkili özel veri öğelerinin koleksiyonunu temsil eder.
@@ -58,7 +60,7 @@ ms.locfileid: "85546568"
 |**Ad Alanı**|http: \/ \/ schemas.Microsoft.com/VisualStudio/<br>2010/SharePointTools/Sharepointprojectıtemmodel|
 |**Şema adı**|SharePoint proje öğesi şeması|
 |**Doğrulama dosyası**|Projectıtemmodelschema. xsd|
-|**Boş olabilir**|No|
+|**Boş olabilir**|Hayır|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [SharePoint proje öğesi şema başvurusu](../sharepoint/sharepoint-project-item-schema-reference.md)

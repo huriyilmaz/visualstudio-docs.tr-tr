@@ -1,5 +1,7 @@
 ---
 title: Visual Studio 'da SharePoint araçları için uzantıları dağıtma | Microsoft Docs
+description: Visual Studio 'da SharePoint araçları için uzantıları dağıtın. VSıX paketleri oluşturmak için Visual Studio uzantısı (VSıX) projelerini kullanın.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8178a660f757ae7d7c2758c76d6fd0fc4b22918f
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 9c8b05b5cb74a28157436f95f01992515c716e6a
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584709"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672684"
 ---
 # <a name="deploy-extensions-for-the-sharepoint-tools-in-visual-studio"></a>Visual Studio 'da SharePoint araçları için uzantıları dağıtma
 
@@ -84,11 +86,11 @@ Aşağıdaki yordamlar, bu öğelerin her biri için. valtmanifest dosyasına gi
 
      **Yeni varlık Ekle** iletişim kutusu açılır.
 
-3. **Tür** listesinde, **Microsoft. VisualStudio. MefComponent**öğesini seçin.
+3. **Tür** listesinde, **Microsoft. VisualStudio. MefComponent** öğesini seçin.
 
 4. **Kaynak** listesinde aşağıdaki adımlardan birini gerçekleştirin:
 
-    - Uzantı derlemesi, VSıX projesiyle aynı çözümde bulunan bir projeden derlenmiş ise, **Geçerli çözümde bir proje**seçin. **Proje** listesinde projenin adını seçin.
+    - Uzantı derlemesi, VSıX projesiyle aynı çözümde bulunan bir projeden derlenmiş ise, **Geçerli çözümde bir proje** seçin. **Proje** listesinde projenin adını seçin.
 
     - Uzantı derlemesi projenize bir dosya olarak dahil edilip dosya **sistemi üzerinde dosya**' yı seçin. **Yol** listesinde, uzantı derleme dosyasının tüm yolunu girin veya derleme dosyasını bulmak ve seçmek için **Araştır** düğmesini kullanın.
 
@@ -104,11 +106,11 @@ Aşağıdaki yordamlar, bu öğelerin her biri için. valtmanifest dosyasına gi
 
      **Yeni varlık Ekle** iletişim kutusu açılır.
 
-3. **Tür** kutusuna **SharePoint. Commands. v4**yazın.
+3. **Tür** kutusuna **SharePoint. Commands. v4** yazın.
 
 4. **Kaynak** listesinde aşağıdaki adımlardan birini gerçekleştirin:
 
-    - Komut derlemesi, VSıX projesiyle aynı çözümde bulunan bir projeden derlenmiş ise, **Geçerli çözümde bir proje**seçin. **Proje** listesinde projenin adını seçin.
+    - Komut derlemesi, VSıX projesiyle aynı çözümde bulunan bir projeden derlenmiş ise, **Geçerli çözümde bir proje** seçin. **Proje** listesinde projenin adını seçin.
 
     - Komut derlemesi projenize bir dosya olarak dahil edilip dosya **sistemi üzerinde dosya**' yı seçin. **Yol** listesinde, uzantı derleme dosyasının tüm yolunu girin veya derleme dosyasını bulmak ve seçmek için **Araştır** düğmesini kullanın.
 
@@ -126,13 +128,13 @@ Aşağıdaki yordamlar, bu öğelerin her biri için. valtmanifest dosyasına gi
 
 3. **Tür** listesinde **Microsoft. VisualStudio. ProjectTemplate** veya **Microsoft. VisualStudio. ItemTemplate**' i seçin.
 
-4. **Kaynak** listesinde, **Geçerli çözümde bir proje**seçin.
+4. **Kaynak** listesinde, **Geçerli çözümde bir proje** seçin.
 
 5. **Proje** listesinde projenin adını seçin ve **Tamam** düğmesini seçin.
 
 6. **Çözüm Gezgini**' de, proje şablonunuz veya öğe şablonu projeniz için kısayol menüsünü açın ve ardından **Projeyi Kaldır**' ı seçin.
 
-7. Proje düğümü için kısayol menüsünü yeniden açın ve ardından_yourtemplateprojectname_**. csproj** **Düzenle**' yi seçin veya_yourtemplateprojectname_**. vbproj**' i **düzenleyin**.
+7. Proje düğümü için kısayol menüsünü yeniden açın ve ardından _yourtemplateprojectname_**. csproj** **Düzenle**' yi seçin veya _yourtemplateprojectname_**. vbproj**' i **düzenleyin**.
 
 8. `VSTemplate`Proje dosyasında aşağıdaki öğeyi bulun.
 
@@ -170,11 +172,11 @@ Aşağıdaki yordamlar, bu öğelerin her biri için. valtmanifest dosyasına gi
 
      *YourTemplateName*. zip
 
-     Örneğin, Ingilizce (Birleşik Devletler) yerel ayarını destekleyen ContosoCustomAction.zip adlı bir öğe şablonunuz varsa, tam yol *ItemTemplates\SharePoint\SharePoint14\1033\ContosoCustomAction.zip*olabilir.
+     Örneğin, Ingilizce (Birleşik Devletler) yerel ayarını destekleyen ContosoCustomAction.zip adlı bir öğe şablonunuz varsa, tam yol *ItemTemplates\SharePoint\SharePoint14\1033\ContosoCustomAction.zip* olabilir.
 
 3. **Çözüm Gezgini**, şablon dosyasını (*YourTemplateName*. zip) seçin.
 
-4. **Özellikler** penceresinde, **derleme eylemi** özelliğini **içerik**olarak ayarlayın.
+4. **Özellikler** penceresinde, **derleme eylemi** özelliğini **içerik** olarak ayarlayın.
 
 5. Source. Extension. valtmanifest dosyası için kısayol menüsünü açın ve **Aç**' ı seçin.
 
@@ -188,7 +190,7 @@ Aşağıdaki yordamlar, bu öğelerin her biri için. valtmanifest dosyasına gi
 
 8. **Kaynak** listesinde **dosya sistemi üzerinde dosya**' yı seçin.
 
-9. **Yol** alanına, derlemeye yönelik yolun tamamını girin (örneğin, *ItemTemplates\SharePoint\SharePoint14\1033\ContosoCustomAction.zip*veya derlemeyi bulmak ve seçmek için **Araştır** düğmesini kullanın ve ardından **Tamam** düğmesini seçin.
+9. **Yol** alanına, derlemeye yönelik yolun tamamını girin (örneğin, *ItemTemplates\SharePoint\SharePoint14\1033\ContosoCustomAction.zip* veya derlemeyi bulmak ve seçmek için **Araştır** düğmesini kullanın ve ardından **Tamam** düğmesini seçin.
 
 #### <a name="to-include-a-wizard-for-a-project-template-or-item-template"></a>Proje şablonuna veya öğe şablonuna yönelik bir sihirbaz eklemek için
 
@@ -200,11 +202,11 @@ Aşağıdaki yordamlar, bu öğelerin her biri için. valtmanifest dosyasına gi
 
      **Yeni varlık Ekle** iletişim kutusu açılır.
 
-3. **Tür** listesinde **Microsoft. VisualStudio. Assembly**öğesini seçin.
+3. **Tür** listesinde **Microsoft. VisualStudio. Assembly** öğesini seçin.
 
 4. **Kaynak** listesinde aşağıdaki adımlardan birini gerçekleştirin:
 
-    - Sihirbaz derlemesi, VSıX projesiyle aynı çözümde bulunan bir projeden derlenmiş ise, **Geçerli çözümde bir proje**seçin. **Proje** listesinde projenin adını seçin.
+    - Sihirbaz derlemesi, VSıX projesiyle aynı çözümde bulunan bir projeden derlenmiş ise, **Geçerli çözümde bir proje** seçin. **Proje** listesinde projenin adını seçin.
 
     - Sihirbaz derlemesi projenize bir dosya olarak dahil edilip dosya **sistemi üzerinde dosya**' yı seçin. **Yol** alanına, derleme dosyasının tüm yolunu girin veya derlemeyi bulmak ve seçmek için **Araştır** düğmesini kullanın.
 

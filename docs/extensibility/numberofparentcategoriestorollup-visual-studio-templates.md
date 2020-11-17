@@ -1,5 +1,7 @@
 ---
 title: NumberOfParentCategoriesToRollUp öğesi (şablonlar)
+description: NumberOfParentCategoriesToRollUp öğesi hakkında bilgi edinin ve yeni proje iletişim kutusunda şablonu görüntüleyecek üst kategori sayısını belirtir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b903b9d0bdab2c17dd2e489de01badad82c15473
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 58c702a70392f4a0330ea51b563570362f51df35
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80702366"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672417"
 ---
 # <a name="numberofparentcategoriestorollup-element-visual-studio-templates"></a>NumberOfParentCategoriesToRollUp öğesi (Visual Studio şablonları)
 **Yeni proje** iletişim kutusunda şablonu görüntüleyecek üst kategori sayısını belirtir.

@@ -1,5 +1,7 @@
 ---
 title: SharePoint Çözümlerinde hata ayıklama | Microsoft Docs
+description: Visual Studio hata ayıklayıcısını kullanarak SharePoint Çözümlerinde hata ayıklayın. F5 hata ayıklama ve dağıtım sürecini, hata ayıklama iş akışlarını ve hata ayıklama özelliği olay alıcılarını keşfet.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: d83c8ffd4fe5ebb627b70fa07f010bdc713225dd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c0bd1996f5d42561cb2d44879ab702d6b6c4b4f7
+ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72984483"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94672866"
 ---
 # <a name="debug-sharepoint-solutions"></a>SharePoint Çözümlerinde hata ayıklama
   Hata ayıklayıcıyı kullanarak SharePoint Çözümlerinde hata ayıklaması yapabilirsiniz [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . Hata ayıklamayı başlattığınızda, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Proje dosyalarını SharePoint sunucusuna dağıtır ve ardından Web tarayıcısında SharePoint sitesinin bir örneğini açar. Aşağıdaki bölümlerde ' de SharePoint uygulamalarının nasıl ayıklanacağı açıklanmaktadır [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
@@ -107,7 +109,7 @@ ms.locfileid: "72984483"
 
 9. Özelleştirilebilir dağıtım sonrası komutlarını çalıştırır.
 
-10. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]Hata ayıklayıcıyı [!INCLUDE[sharepointShort](../sharepoint/includes/sharepointshort-md.md)] işleme iliştirir (*w3wp.exe*). Proje türü, *Korumalı çözüm* özelliğini değiştirmenize izin verir ve değeri **true**olarak ayarlanırsa, hata ayıklayıcı farklı bir işleme (*SPUCWorkerProcess.exe*) iliştirir. Daha fazla bilgi için bkz. [Korumalı çözüm konuları](../sharepoint/sandboxed-solution-considerations.md).
+10. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]Hata ayıklayıcıyı [!INCLUDE[sharepointShort](../sharepoint/includes/sharepointshort-md.md)] işleme iliştirir (*w3wp.exe*). Proje türü, *Korumalı çözüm* özelliğini değiştirmenize izin verir ve değeri **true** olarak ayarlanırsa, hata ayıklayıcı farklı bir işleme (*SPUCWorkerProcess.exe*) iliştirir. Daha fazla bilgi için bkz. [Korumalı çözüm konuları](../sharepoint/sandboxed-solution-considerations.md).
 
 11. SharePoint çözümü bir grup çözümüdür ise JavaScript hata ayıklayıcıyı başlatır.
 
@@ -118,9 +120,9 @@ ms.locfileid: "72984483"
 ## <a name="sharepoint-project-features"></a>SharePoint proje özellikleri
  Bir özellik, site tanımlarını kullanarak sitelerin değiştirilmesini kolaylaştıran taşınabilir ve modüler bir işlev birimidir. Ayrıca, [!INCLUDE[sharepointShort](../sharepoint/includes/sharepointshort-md.md)] belirli bir kapsam için etkinleştirilenebilir ve kullanıcılara belirli bir hedef veya görev gerçekleştirmenize yardımcı olan bir (WSS) öğeleri paketidir. Şablonlar özellik olarak dağıtılır.
 
- Bir projeyi hata ayıklama modunda çalıştırdığınızda, dağıtım işlemi, *%CommonProgramFiles%\Microsoft Shared\Web Server extensions\14\TEMPLATE\FEATURES*konumundaki *özellik* dizininde bir klasör oluşturur. Özellik adlarında, TestProject_Feature1 gibi _Feature*x*biçimli *Proje adı*vardır.
+ Bir projeyi hata ayıklama modunda çalıştırdığınızda, dağıtım işlemi, *%CommonProgramFiles%\Microsoft Shared\Web Server extensions\14\TEMPLATE\FEATURES* konumundaki *özellik* dizininde bir klasör oluşturur. Özellik adlarında, TestProject_Feature1 gibi _Feature *x* biçimli *Proje adı* vardır.
 
- Özellik dizinindeki çözümün klasörü, bir *Özellik tanım* dosyası ve bir *iş akışı Tanım* dosyası içerir. Özellik tanım dosyası (Feature.xml) projenin özelliğindeki dosyaları açıklar. proje tanım dosyası (*Elements.xml*) proje şablonunu açıklar. *Elements.xml* **Çözüm Gezgini**bulunabilir, ancak çözüm paketi oluşturulduğunda Feature.xml üretilir. Bu dosyalar hakkında daha fazla bilgi için bkz. [SharePoint projesi ve proje öğesi şablonları](../sharepoint/sharepoint-project-and-project-item-templates.md).
+ Özellik dizinindeki çözümün klasörü, bir *Özellik tanım* dosyası ve bir *iş akışı Tanım* dosyası içerir. Özellik tanım dosyası (Feature.xml) projenin özelliğindeki dosyaları açıklar. proje tanım dosyası (*Elements.xml*) proje şablonunu açıklar. *Elements.xml* **Çözüm Gezgini** bulunabilir, ancak çözüm paketi oluşturulduğunda Feature.xml üretilir. Bu dosyalar hakkında daha fazla bilgi için bkz. [SharePoint projesi ve proje öğesi şablonları](../sharepoint/sharepoint-project-and-project-item-templates.md).
 
 ## <a name="debug-workflows"></a>İş akışları hata ayıklama
  İş akışı projelerinde hata ayıklarken, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] iş akışı şablonunu (türüne bağlı olarak) bir kitaplığa veya listeye ekler. Daha sonra iş akışı şablonunu el ile veya bir öğe ekleyerek veya güncelleştirerek başlatabilirsiniz. Daha sonra [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] iş akışında hata ayıklamak için kullanabilirsiniz.
@@ -140,7 +142,7 @@ ms.locfileid: "72984483"
 ## <a name="enable-enhanced-debugging-information"></a>Gelişmiş hata ayıklama bilgilerini etkinleştir
  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]İşlem (devenv.exe), [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint ana bilgisayar işlemi (*vssphost4.exe*), SharePoint ve WCF katmanı arasındaki bazen karmaşık etkileşimler nedeniyle, oluşturma, dağıtma, vb. işlemleri yaparken oluşan hataları tanılama işlemi bir sorun olabilir. Bu tür hataları çözmenize yardımcı olması için gelişmiş hata ayıklama bilgilerini etkinleştirebilirsiniz. Bunu yapmak için, Windows kayıt defterinde aşağıdaki kayıt defteri anahtarına gidin:
 
- **HKEY_CURRENT_USER \Software\Microsoft\VisualStudio\11.0\SharePointTools**
+ **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\11.0\SharePointTools**
 
  "EnableDiagnostics" **REG_DWORD** değeri zaten yoksa el ile oluşturun. "EnableDiagnostics" değerini "1" olarak ayarlayın.
 
