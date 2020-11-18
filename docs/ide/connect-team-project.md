@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: tglee
 author: TerryGLee
 ms.manager: jillfra
-ms.openlocfilehash: 4e4fdfb26c601ce6b706c1c946ea9afe9b18ecb2
-ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
+ms.openlocfilehash: 7d920370013b2d624430acbdbe8e38dcc9aab03d
+ms.sourcegitcommit: f78960320798e2c6b33145cee77a2221f031603c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 11/18/2020
-ms.locfileid: "94850097"
+ms.locfileid: "94878263"
 ---
 # <a name="connect-to-projects-in-team-explorer"></a>Takım Gezgini projelere bağlanma
 
@@ -32,7 +32,7 @@ Bir proje geliştirmek ve size, takımınızı ya da projelerinize atanan işler
 
 ::: moniker-end
 
-![Visual Studio 'da Takım Gezgini giriş sayfası](media/team-explorer/team-explorer.png)
+![Visual Studio 'da Takım Gezgini giriş sayfası](media/team-explorer/team-explorer.png "Visual Studio 'daki Takım Gezgini giriş sayfası.")
 
 ::: moniker range="vs-2017"
 
@@ -45,17 +45,17 @@ Bir proje geliştirmek ve size, takımınızı ya da projelerinize atanan işler
 
 **Bağlan** sayfasındaki bir projeye veya depoya bağlanın.
 
-![Takım Gezgini sayfa bağlama](media/team-explorer/connect.png)
+![Takım Gezgini sayfa bağlama](media/team-explorer/connect.png "Visual Studio 'da Takım Gezgini-Connect sayfası")
 
 Bir projeye bağlanmak için:
 
 1. **Bağlantıları Yönet** simgesini seçerek **Bağlan** sayfasını açın.
 
-   ![Takım Gezgini bağlantıları yönetme düğmesi](media/team-explorer/manage-connections.png)
+   ![Takım Gezgini bağlantıları yönetme düğmesi](media/team-explorer/manage-connections.png "Visual Studio 'da Takım Gezgini-bağlantıları Yönet düğmesi.")
 
 1. **Bağlan** sayfasında **Bağlantıları Yönet**' i seçin  >  **bir projeye bağlanın**.
 
-   ![Takım Gezgini bir projeye bağlanma](media/team-explorer/connect-project.png)
+   ![Takım Gezgini bir projeye bağlanma](media/team-explorer/connect-project.png "Takım Gezgini-Visual Studio 'da bir proje seçeneğine bağlanın.")
 
 > [!TIP]
 > Bir depodan bir proje açmak isterseniz, bkz. bir [depodan bir proje açma](../get-started/tutorial-open-project-from-repo.md). Yeni bir proje oluşturmak veya bir projeye Kullanıcı eklemek istiyorsanız, bkz. [Proje oluşturma (Azure DevOps)](/azure/devops/organizations/projects/create-project) ve [bir projeye veya takıma Kullanıcı ekleme (Azure DevOps)](/azure/devops/organizations/security/add-users-team-project).

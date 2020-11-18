@@ -1,5 +1,6 @@
 ---
 title: Projelere ve çözümlere giriş
+description: Projeler ve çözümler arasındaki fark ve bunları Visual Studio 'da nasıl kullanacağınızı öğrenin.
 ms.date: 11/17/2020
 ms.technology: vs-ide-general
 ms.custom: get-started
@@ -9,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cf99c191ef6cfe32ec8ccc9b2cfd57f761941be7
-ms.sourcegitcommit: e8a13978131f257d91ce37c5a2e0d153a4c400ef
+ms.openlocfilehash: 026e046e4bcc2291bd27907f10e6ac6a50729601
+ms.sourcegitcommit: f78960320798e2c6b33145cee77a2221f031603c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94704059"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94878276"
 ---
 # <a name="learn-about-projects-and-solutions"></a>Projeler ve çözümler hakkında bilgi edinin
 
@@ -55,7 +56,7 @@ Boş bir çözüm oluşturarak araştırmayla başlayacağız. Visual Studio 'Yu
 
 1. Sol bölmede **diğer proje türleri**' ni genişletin ve ardından **Visual Studio çözümleri**' ni seçin. Orta bölmede **boş çözüm** şablonunu seçin. Çözümünüzü **hızlı çözümünüz** olarak adlandırın, sonra **Tamam** düğmesini seçin.
 
-   ![Visual Studio 2017 'de boş çözüm şablonu](media/tutorial-projects-new-solution.png)
+   ![Visual Studio 2017 'de boş çözüm şablonu](media/tutorial-projects-new-solution.png "Visual Studio 2017 ' de boş çözüm şablonu.")
 
    **Başlangıç sayfası** kapanır ve Visual Studio penceresinin sağ tarafında **Çözüm Gezgini** bir çözüm görüntülenir. Genellikle **Çözüm Gezgini** , projelerinizdeki içeriğe gözatabilmeniz için çok büyük bir zaman kullanırsınız.
 
@@ -69,7 +70,7 @@ Boş bir çözüm oluşturarak araştırmayla başlayacağız. Visual Studio 'Yu
 
 3. **Yeni proje oluştur** sayfasında, arama kutusuna **boş çözüm** girin, **boş çözüm** şablonunu seçin ve ardından **İleri**' yi seçin.
 
-   ![Visual Studio 2019 'de boş çözüm şablonu](media/vs-2019/tutorial-projects-blank-solution-template.png)
+   ![Visual Studio 2019 'de boş çözüm şablonu](media/vs-2019/tutorial-projects-blank-solution-template.png "Visual Studio 2019 ' de boş çözüm şablonu.")
 
     > [!TIP]
     > Birden çok iş yükünden biri yüklüyse, **boş çözüm** şablonu arama sonuçları listenizin en üstünde görünmeyebilir. Listenin **Arama bölümüne göre diğer sonuçlara** kaydırma yapmayı deneyin. Burada görünmelidir.
@@ -97,7 +98,7 @@ Boş bir çözüm oluşturarak araştırmayla başlayacağız. Visual Studio 'Yu
    > [!NOTE]
    > İletişim kutusunun sol bölmesinde **Visual C#** ' yi görmüyorsanız, **.net masaüstü geliştirme** Visual Studio iş yükünü yüklemelisiniz. Visual Studio yalnızca sizin oluşturduğunuz geliştirme türü için gereken bileşenleri yüklemek üzere iş yükü tabanlı yükleme kullanır. Yeni bir iş yükünü yüklemenin kolay bir yolu, **Yeni Proje Ekle** iletişim kutusunun sol alt köşesindeki **Aç Visual Studio yükleyicisi** bağlantısını seçeklemektir. Visual Studio Yükleyicisi başlatıldıktan sonra, **.net masaüstü geliştirme** iş yükünü ve sonra **Değiştir** düğmesini seçin.
    >
-   > ![Visual Studio Yükleyicisi bağlantısını aç](media/tutorial-projects-open-installer.png)
+   > ![Visual Studio Yükleyicisi bağlantısını aç](media/tutorial-projects-open-installer.png "Visual Studio 2017 ' de yeni proje Ekle iletişim kutusunda Visual Studio Yükleyicisi aç bağlantısı.")
 
 ::: moniker-end
 
@@ -116,9 +117,11 @@ Boş bir çözüm oluşturarak araştırmayla başlayacağız. Visual Studio 'Yu
    QuickDate adlı bir proje, **Çözüm Gezgini** çözümünün altında görünür. Şu anda *App.config* adlı tek bir dosya içerir.
 
    > [!NOTE]
-   > **Boş proje (.NET Framework)** şablonu görmüyorsanız, **.net masaüstü geliştirme** Visual Studio iş yükünü yüklemelisiniz. Visual Studio yalnızca sizin oluşturduğunuz geliştirme türü için gereken bileşenleri yüklemek üzere iş yükü tabanlı yükleme kullanır. Yeni bir proje oluştururken yeni bir iş yükü yüklemenin kolay bir yolu, **ne aradığınızı bulmadığını** belirten metin altında **daha fazla araç ve özellik yüklesin** bağlantısını seçiyoruz. Visual Studio Yükleyicisi başlatıldıktan sonra, **.net masaüstü geliştirme** iş yükünü ve sonra **Değiştir** düğmesini seçin.
+   > **Boş proje (.NET Framework)** şablonu görmüyorsanız, **.net masaüstü geliştirme** Visual Studio iş yükünü yüklemelisiniz. Visual Studio yalnızca sizin oluşturduğunuz geliştirme türü için gereken bileşenleri yüklemek üzere iş yükü tabanlı yükleme kullanır.
    >
-   > ![Visual Studio Yükleyicisi bağlantısını aç](media/vs-2019/tutorial-projects-open-installer.png)
+   >Yeni bir proje oluştururken yeni bir iş yükü yüklemenin kolay bir yolu, **ne aradığınızı bulmadığını** belirten metin altında **daha fazla araç ve özellik yüklesin** bağlantısını seçiyoruz. Visual Studio Yükleyicisi başlatıldıktan sonra, **.net masaüstü geliştirme** iş yükünü ve sonra **Değiştir** düğmesini seçin.
+   >
+   > ![Visual Studio Yükleyicisi bağlantısını aç](media/vs-2019/tutorial-projects-open-installer.png "Visual Studio 'da yeni proje oluştur iletişim kutusunda Visual Studio Yükleyicisi aç bağlantısı.")
 
 ::: moniker-end
 
@@ -174,7 +177,7 @@ Boş bir projem var. Bir kod dosyası ekleyelim.
 
    **Çözüm Gezgini** ikinci bir proje ve düzenleyicide *UnitTest1.cs* adlı bir dosya açılır.
 
-   ![İki projeyle Visual Studio Çözüm Gezgini](media/tutorial-projects-solution-explorer.png)
+   ![İki projeyle Visual Studio Çözüm Gezgini](media/tutorial-projects-solution-explorer.png "Visual Studio 2017 ' de iki projeyle Çözüm Gezgini.")
 
 ::: moniker-end
 
@@ -188,7 +191,7 @@ Boş bir projem var. Bir kod dosyası ekleyelim.
 
    **Çözüm Gezgini** ikinci bir proje ve düzenleyicide *UnitTest1.cs* adlı bir dosya açılır.
 
-   ![İki projeyle Visual Studio Çözüm Gezgini](media/vs-2019/tutorial-projects-solution-explorer.png)
+   ![İki projeyle Visual Studio Çözüm Gezgini](media/vs-2019/tutorial-projects-solution-explorer.png "Visual Studio 'da iki projeyle Çözüm Gezgini.")
 
 ::: moniker-end
 
@@ -204,7 +207,7 @@ Boş bir projem var. Bir kod dosyası ekleyelim.
 
    **Quickdate** projesine bir başvuru eklenir.
 
-   ![Visual Studio 2019 Çözüm Gezgini proje başvurusunu gösterme](media/vs-2019/tutorial-projects-solution-explorer-reference.png)
+   ![Visual Studio 2019 Çözüm Gezgini proje başvurusunu gösterme](media/vs-2019/tutorial-projects-solution-explorer-reference.png "Visual Studio 'da bir proje başvurusunu göstermek Çözüm Gezgini.")
 
 ## <a name="add-test-code"></a>Test kodu ekle
 
@@ -240,7 +243,7 @@ Boş bir projem var. Bir kod dosyası ekleyelim.
 
    Kod dosyası şuna benzemelidir:
 
-   ![CSharp kodu](media/tutorial-projects-cs-code.png)
+   ![CSharp kodu](media/tutorial-projects-cs-code.png "Bu makaledeki test kodu Ekle bölümünde kod parçacığı.")
 
 ## <a name="project-properties"></a>Proje özellikleri
 
@@ -250,7 +253,7 @@ Boş bir projem var. Bir kod dosyası ekleyelim.
 
    Projenin *Özellik sayfaları* **uygulama** sekmesinde açılır. Özellik sayfaları, proje için çeşitli ayarlar içerir. **Hızlı test** projesinin derleme adının gerçekten "QuickTest" olduğuna dikkat edin. Bunu değiştirmek isterseniz bunu yapmanız gerekir. Ardından, test projesi oluşturduğunuzda, sonuçta elde edilen ikili dosyanın adı *QuickTest.dll* ' den seçtiğiniz şeyle değişir.
 
-   ![Proje özellikleri](media/tutorial-projects-netcore-properties.png)
+   ![Proje Özellikleri](media/tutorial-projects-netcore-properties.png "Visual Studio 'da proje özellikleri iletişim kutusu.")
 
 1. Projenin özellik sayfalarındaki **derleme** ve **hata ayıklama** gibi diğer sekmelerin bazılarını keşfedelim. Bu sekmeler farklı proje türleri için farklıdır.
 
@@ -258,7 +261,7 @@ Boş bir projem var. Bir kod dosyası ekleyelim.
 
 Birim testinizin çalıştığını denetlemek isterseniz, **Test**  >  **Run**  >  menü çubuğundan **tüm testleri** Çalıştır test ' i seçin. **Test Gezgini** adlı bir pencere açılır ve **TestGetCurrentDate** testin başarılı olduğunu görmeniz gerekir.
 
-![Başarılı testi gösteren Visual Studio 'da test Gezgini](media/tutorial-projects-test-explorer.png)
+![Başarılı testi gösteren Visual Studio 'da test Gezgini](media/tutorial-projects-test-explorer.png "Başarılı bir testi gösteren Visual Studio 'da test Gezgini.")
 
 ::: moniker range="vs-2017"
 

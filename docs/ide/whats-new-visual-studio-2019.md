@@ -15,12 +15,12 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: a9bf479796db1b23a204050c941650c3c20dd6aa
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: de5027024956c03341ac3e2d851bf85430f48f18
+ms.sourcegitcommit: f78960320798e2c6b33145cee77a2221f031603c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94438277"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94878302"
 ---
 # <a name="whats-new-in-visual-studio-2019"></a>Visual Studio 2019’daki yenilikler
 
@@ -33,9 +33,9 @@ Visual Studio 2019 ile herhangi bir geliştirici, uygulama ve herhangi bir platf
 
 İşte yenilikler ve hepsi için yüksek düzey bir üst sınır aşağıda verilmiştir:
 
-* **[Geliştirme](#develop)** : gelişmiş performans, anlık kod temizleme ve daha iyi arama sonuçlarıyla odaklanmış ve üretken olun.
-* **[İşbirliği](#collaborate)** : git-ilk iş akışı, gerçek zamanlı Düzenle ve hata ayıklama ve Visual Studio 'da kod İncelemeleri aracılığıyla doğal işbirliğinden yararlanın.
-* **[Hata Ayıkla](#debug)** : belirli değerleri vurgulayın ve bu değerlere gidin, bellek kullanımını iyileştirin ve uygulamanızın yürütmesinin otomatik anlık görüntülerini alın.
+* **[Geliştirme](#develop)**: gelişmiş performans, anlık kod temizleme ve daha iyi arama sonuçlarıyla odaklanmış ve üretken olun.
+* **[İşbirliği](#collaborate)**: git-ilk iş akışı, gerçek zamanlı Düzenle ve hata ayıklama ve Visual Studio 'da kod İncelemeleri aracılığıyla doğal işbirliğinden yararlanın.
+* **[Hata Ayıkla](#debug)**: belirli değerleri vurgulayın ve bu değerlere gidin, bellek kullanımını iyileştirin ve uygulamanızın yürütmesinin otomatik anlık görüntülerini alın.
 
 Bu sürümdeki tüm yenilikleri içeren tüm liste için [sürüm notlarına](/visualstudio/releases/2019/release-notes/)bakın.
 
@@ -49,7 +49,7 @@ Yeni özelliklerle zamanı nasıl kaydedebileceğinizi öğrenmek için aşağı
 
 Daha önce Hızlı Başlat olarak bilinen yeni arama deneyimimiz daha hızlı ve daha etkilidir. Şimdi, yazarken arama sonuçları dinamik olarak görünür. Ve arama sonuçları genellikle komutların klavye kısayollarını içerebilir, böylece daha sonra bunları daha kolay kullanıma almak için daha kolay hale getirebilirsiniz.
 
-   ![Visual Studio 2019 'de yeni arama deneyimine yönelik bir animasyon](media/vs-2019/new-search-feature.gif)
+   ![Visual Studio 2019 'de yeni arama deneyimine yönelik bir animasyon](media/vs-2019/new-search-feature.gif "Visual Studio 2019 ' deki yeni arama deneyimi.")
 
 Yeni benzer arama mantığı, yazım hatalarını ne olursa olsun ihtiyacınız olan her şeyi bulur. Bu nedenle, komutları, ayarları, belgeleri veya diğer yararlı şeyleri arıyorsanız, yeni arama özelliği aradığınızı bulmayı kolaylaştırır.
 
@@ -57,7 +57,7 @@ Yeni benzer arama mantığı, yazım hatalarını ne olursa olsun ihtiyacınız 
 
 C# ' de kodunuzun düzenlenmesine daha kolay olan çok sayıda yeni ve son derece yararlı yeniden düzenlemeler vardır. Hafif ampulde öneriler olarak görünür ve üyeleri arabirim veya temel sınıfa taşıma, ad alanlarını klasör yapısıyla eşleşecek şekilde ayarlama, Foreach-döngülerini LINQ Sorgularına dönüştürme ve daha fazlasını içeren eylemleri içerir.
 
-   ![Visual Studio 2019 yeniden düzenlemeler deneyiminin animasyonunu](media/vs-2019/refactorings.gif)
+   ![Visual Studio 2019 yeniden düzenlemeler deneyiminin animasyonunu](media/vs-2019/refactorings.gif "Visual Studio 2019 ' de yeniden düzenlemeler deneyimi.")
 
 Yalnızca **CTRL +** tuşlarına basarak yeniden düzenlemeler çağırın. ve gerçekleştirmek istediğiniz eylemi seçin.
 
@@ -65,7 +65,7 @@ Yalnızca **CTRL +** tuşlarına basarak yeniden düzenlemeler çağırın. ve g
 
 [Visual Studio ıntellicode](/visualstudio/intellicode/) yapay zeka (AI) kullanarak yazılım geliştirme çabalarınızı geliştirir. Intellicode &mdash; , her birinin &mdash; önerilerini oluşturmak için her biri 100 yıldız ile 2.000 açık kaynaklı projeler arasında gezinir.
 
-![Visual Studio 2019 ' de ıntellicode animasyonu](media/vs-2019/IntelliCode.gif)
+![Visual Studio 2019 ' de ıntellicode animasyonu](media/vs-2019/IntelliCode.gif "Visual Studio 2019 ' de ıntellicode.")
 
 Visual Studio ıntellicode 'un üretkenliğinizi artırmaya yardımcı olabilecek birkaç yol aşağıda verilmiştir:
 
@@ -86,11 +86,11 @@ Yeni bir belge durumu göstergesi ile eşleştirilmiş yeni bir kod temizleme ko
 
 Temizleme kodu biçimlendirir ve [geçerli ayarlar](code-styles-and-code-cleanup.md) ve [. editorconfig dosyaları](create-portable-custom-editor-options.md)tarafından önerildiği şekilde kod düzeltmelerini uygular.
 
-   ![Visual Studio 2019 ' de yeni kod temizleme denetiminin ekran görüntüsü](media/vs-2019/code-cleanup-profile.png)
+   ![Visual Studio 2019 ' de yeni kod temizleme denetiminin ekran görüntüsü](media/vs-2019/code-cleanup-profile.png "Visual Studio 2019 ' de yeni kod temizleme denetimi.")
 
 Ayrıca, armanesnelerin koleksiyonlarını bir profil olarak kaydedebilirsiniz. Örneğin, kodlarken sıkça uyguladığınız bir dizi hedeflenmiş sabit listesi varsa ve daha sonra bir kod incelemesinin önüne uygulamak üzere daha kapsamlı bir sabit listesi varsa, profilleri bu farklı görevleri ele almak için yapılandırabilirsiniz.
 
-   ![Visual Studio 2019 'de kod temizleme denetimini yapılandırma ekran görüntüsü](media/vs-2019/code-cleanup-profile-configure.png)
+   ![Visual Studio 2019 'de kod temizleme denetimini yapılandırma ekran görüntüsü](media/vs-2019/code-cleanup-profile-configure.png "Visual Studio 2019 ' de kod temizleme denetimini yapılandırma.")
 
 ### <a name="per-monitor-aware-pma-rendering"></a>Monitör başına duyarlı (PMA) işleme
 
@@ -98,15 +98,15 @@ Farklı görüntü ölçeği faktörlerine sahip veya ana cihazınızdan farklı
 
 Visual Studio 2019 ' in piyasaya çıkmasıyla birlikte, Visual Studio 'Yu ekran uyumlu (PMA) uygulaması olarak yapıyoruz. Artık, kullandığınız görüntü ölçeği çarpanlarından bağımsız olarak Visual Studio doğru şekilde işler.
 
-   ![Visual Studio 2019 ' de monitöre duyarlı (PMA) işleme](media/vs-2019/pma-dpi-scaling.png)
+   ![Visual Studio 2019 ' de monitöre duyarlı (PMA) işleme](media/vs-2019/pma-dpi-scaling.png "Visual Studio 2019 ' de monitöre duyarlı (PMA) işleme.")
 
 Daha fazla bilgi için bkz. [Visual Studio 2019 blog gönderisi Ile daha iyi çoklu izleme deneyimi](https://devblogs.microsoft.com/visualstudio/a-better-multi-monitor-experience-with-visual-studio-2019/) .
 
 ### <a name="test-explorer"></a>Test Gezgini
 
-**16,2 ' de yeni** : Test Gezgini ' ni, büyük test kümelerinin daha iyi işlenmesini, daha kolay filtrelenmesini, daha keşfedilebilir komutları, sekmeli çalma listesi görünümlerini ve özelleştirilebilir sütunları, hangi test bilgilerinin görüntülendiğini ayarlamanıza olanak sağlayacak şekilde güncelleştirdik.
+**16,2 ' de yeni**: Test Gezgini ' ni, büyük test kümelerinin daha iyi işlenmesini, daha kolay filtrelenmesini, daha keşfedilebilir komutları, sekmeli çalma listesi görünümlerini ve özelleştirilebilir sütunları, hangi test bilgilerinin görüntülendiğini ayarlamanıza olanak sağlayacak şekilde güncelleştirdik.
 
-   ![Test Gezgininde Kullanıcı arabirimi geliştirmelerini gösteren ekran görüntüsü](media/vs-2019/test-explorer-ui.png)
+   ![Test Gezgininde Kullanıcı arabirimi geliştirmelerini gösteren ekran görüntüsü](media/vs-2019/test-explorer-ui.png "Test Gezgini 'ndeki Kullanıcı arabirimi geliştirmeleri.")
 
 ### <a name="net-core"></a>.NET Core
 
@@ -124,11 +124,11 @@ Sorunları çözmek için nasıl ekip sağlayabileceğiniz hakkında daha fazla 
 
 Visual Studio 2019 ' i açtığınızda yeni başlangıç penceresi olduğunu fark edeceksiniz.
 
-   ![Visual Studio 2019 ' de yeni başlangıç penceresinin ekran görüntüsü](media/vs-2019/start-window-dark.png)
+   ![Visual Studio 2019 ' de yeni başlangıç penceresinin ekran görüntüsü](media/vs-2019/start-window-dark.png "Visual Studio 2019 ' deki yeni başlangıç penceresi.")
 
 Başlangıç penceresi size hızlı bir şekilde kod almanızı sağlamak için çeşitli seçenekler sunar. Önce bir depodan kod kopyalama veya kullanıma alma seçeneğini yerleştirdik.
 
-   ![Visual Studio 2019 ' de ' git-First ' deneyiminin animasyonu](media/vs-2019/git-first.gif)
+   ![Visual Studio 2019 ' de ' git-First ' deneyiminin animasyonu](media/vs-2019/git-first.gif "Visual Studio 2019 ' de ' git-First ' deneyimi.")
 
 Başlangıç penceresi ayrıca bir proje veya çözüm açma, yerel bir klasör açma veya yeni bir proje oluşturma seçeneklerini de içerir.
 
@@ -146,7 +146,7 @@ Daha fazla bilgi için bkz. [Visual Studio 'Da git üretkenlik](git-with-visual-
 
 Visual Studio 2019 ile bu hizmet varsayılan olarak yüklenir.
 
-![Visual Studio 2019 ' de Live Share işbirliği özelliğini gösteren bir animasyon](media/vs-2019/live-share.gif)
+![Visual Studio 2019 ' de Live Share işbirliği özelliğini gösteren bir animasyon](media/vs-2019/live-share.gif "Visual Studio 2019 Live Share işbirliği özelliği.")
 
 Daha fazla bilgi için, bkz. [gerçek zamanlı kod İncelemeleri ve etkileşimli eğitim](https://devblogs.microsoft.com/visualstudio/visual-studio-live-share-for-real-time-code-reviews-and-interactive-education/) blog gönderisi ve [live share artık Visual Studio 2019](https://devblogs.microsoft.com/visualstudio/live-share-now-included-with-visual-studio-2019/) blog gönderisine dahil Visual Studio Live Share.
 
@@ -154,7 +154,7 @@ Daha fazla bilgi için, bkz. [gerçek zamanlı kod İncelemeleri ve etkileşimli
 
 Visual Studio 2019 ile kullanmak üzere indirebileceğiniz yeni bir uzantı sunuyoruz. Bu yeni uzantıyla, Visual Studio 'dan çıkmadan takımınızın çekme isteklerini gözden geçirebilir, çalıştırabilir ve hatta hata ayıklayabilirsiniz. Hem GitHub hem de Azure DevOps depolarındaki kodu destekliyoruz.
 
-   ![Visual Studio 2019 ' de yeni çekme Istekleri uzantısının ekran görüntüsü](media/vs-2019/pr-experience.png)
+   ![Visual Studio 2019 ' de yeni çekme Istekleri uzantısının ekran görüntüsü](media/vs-2019/pr-experience.png "Visual Studio 2019 ' de yeni çekme Istekleri uzantısı.")
 
 Daha fazla bilgi için [Visual Studio çekme istekleri uzantısı blog gönderisini kullanarak kod incelemelerine](https://devblogs.microsoft.com/visualstudio/code-reviews-using-the-visual-studio-pull-requests-extension/) bakın.
 
@@ -168,7 +168,7 @@ Hata ayıklarken kesin hedefleme ile nasıl tam olarak izin sağlayacağınız h
 
 Bir kez özel C++ veri kesme noktası aldık ve bunları .NET Core uygulamaları için uyartık.
 
-   ![Visual Studio 2019 ' de hata ayıklama veri kesme noktalarını gösteren bir animasyon](media/vs-2019/debug-data-breakpoints.gif)
+   ![Visual Studio 2019 ' de hata ayıklama veri kesme noktalarını gösteren bir animasyon](media/vs-2019/debug-data-breakpoints.gif "Visual Studio 2019 ' de hata ayıklama veri kesme noktaları.")
 
 C++ veya .NET Core 'da kodlama yapıp etmeksizin, veri kesme noktaları yalnızca normal kesme noktaları yerleştirilerek iyi bir alternatif olabilir. Veri kesme noktaları, bir genel nesnenin nerede değiştirildiğini veya bir listeden eklendiğini veya kaldırılacağını bulma gibi senaryolar için de idealdir.
 
@@ -178,11 +178,11 @@ Ve, büyük uygulamalar geliştiren bir C++ geliştiriciyseniz, Visual Studio 20
 
 Büyük olasılıkla bir değer kümesi arasında bir dize izleme penceresi arayarak daha önce vardı. Visual Studio 2019 ' de, aradığınız nesneleri ve değerleri bulmanıza yardımcı olmak için Watch, Yereller ve oto pencerelerinde arama ekledik.
 
-   ![Visual Studio 2019 'de hata ayıklama arama penceresini gösteren bir animasyon](media/vs-2019/debug-window-search.gif)
+   ![Visual Studio 2019 'de hata ayıklama arama penceresini gösteren bir animasyon](media/vs-2019/debug-window-search.gif "Visual Studio 2019 ' de hata ayıklama arama penceresi.")
 
 Ayrıca, bir değerin Izleme, Yereller ve oto pencereleri içinde nasıl görüntüleneceğini de biçimlendirebilirsiniz. Herhangi bir Windows 'daki öğelerden birini (çift tıklayarak) seçin ve olası biçim Belirticilerinin açılan listesine erişmek için bir virgül (",") ekleyin (her biri amaçlanan efektinin açıklamasını içerir).
 
-   ![Visual Studio 2019 ' de yeni izleme penceresi ve biçim değerleri özelliği](media/search-watch-window.png)
+   ![Visual Studio 2019 ' de yeni izleme penceresi ve biçim değerleri özelliği](media/search-watch-window.png "Visual Studio 2019 ' deki yeni izleme penceresi ve biçim değerleri özelliği.")
 
 Daha fazla bilgi için bkz. [Visual Studio 2019 ' de geliştirildi: Watch, oto ve Yereller Windows blog gönderide nesneleri ve özellikleri arama](https://devblogs.microsoft.com/visualstudio/enhanced-in-visual-studio-2019-search-for-objects-and-properties-in-the-watch-autos-and-locals-windows/) .
 
@@ -190,7 +190,7 @@ Daha fazla bilgi için bkz. [Visual Studio 2019 ' de geliştirildi: Watch, oto v
 
 Tam olarak neler olduğunu görmek için, bulutta uygulamanın yürütmesinin bir anlık görüntüsünü alın. (Bu özellik yalnızca Visual Studio Enterprise ' de kullanılabilir.)
 
-   ![Visual Studio 2019 Enterprise Snapshot Debugger gösteren bir animasyon](media/vs-2019/snapshot-debugger.gif)
+   ![Visual Studio 2019 Enterprise Snapshot Debugger gösteren bir animasyon](media/vs-2019/snapshot-debugger.gif "Visual Studio 2019 Enterprise Snapshot Debugger.")
 
 Azure VM 'de çalışan ASP.NET (çekirdek ve Masaüstü) uygulamalarını hedefleme desteği ekledik. Azure Kubernetes hizmetinde çalışan uygulamalar için de destek ekledik. Snapshot Debugger, üretim ortamlarında oluşan sorunları çözmek için geçen süreyi önemli ölçüde düşürmeye yardımcı olabilir.
 
@@ -198,15 +198,15 @@ Daha fazla bilgi için bkz. [Snapshot Debugger sayfasını kullanarak canlı ASP
 
 ### <a name="microsoft-edge-insider-support"></a>Microsoft Edge Insider desteği
 
-**16,2 ' deki yenilikler** : bir JavaScript uygulamasında bir kesme noktası ayarlayabilir ve [Microsoft Edge Insider](https://www.microsoftedgeinsider.com/) tarayıcısını kullanarak bir hata ayıklama oturumu başlatabilirsiniz. Bunu yaptığınızda, Visual Studio, hata ayıklama etkinken yeni bir tarayıcı penceresi açar. Bu, daha sonra Visual Studio 'da uygulama JavaScript 'i aracılığıyla ilerlemek için kullanabilirsiniz.
+**16,2 ' deki yenilikler**: bir JavaScript uygulamasında bir kesme noktası ayarlayabilir ve [Microsoft Edge Insider](https://www.microsoftedgeinsider.com/) tarayıcısını kullanarak bir hata ayıklama oturumu başlatabilirsiniz. Bunu yaptığınızda, Visual Studio, hata ayıklama etkinken yeni bir tarayıcı penceresi açar. Bu, daha sonra Visual Studio 'da uygulama JavaScript 'i aracılığıyla ilerlemek için kullanabilirsiniz.
 
-   ![Tarayıcıda JavaScript kod işlemeyi gösteren ekran görüntüsü](media/vs-2019/edge-chromium-breakpoint.png)
+   ![Tarayıcıda JavaScript kod işlemeyi gösteren ekran görüntüsü](media/vs-2019/edge-chromium-breakpoint.png "Tarayıcıda JavaScript kod işleme.")
 
 ### <a name="pinnable-properties-tool"></a>Pinleştir Özellikler aracı
 
-**16,4 ' de yeni** : artık, yeni pinalgıladığında Özellikler aracıyla hata ayıklarken nesneleri özelliklerine göre belirlemek daha kolay. İmleci, gözcü, oto ve Yereller pencerelerinin hata ayıklayıcı penceresinde görüntülemek istediğiniz bir özelliğin üzerine getirin, PIN simgesini seçin ve pencerenin en üstünde aradığınız bilgileri hemen görün!
+**16,4 ' de yeni**: artık, yeni pinalgıladığında Özellikler aracıyla hata ayıklarken nesneleri özelliklerine göre belirlemek daha kolay. İmleci, gözcü, oto ve Yereller pencerelerinin hata ayıklayıcı penceresinde görüntülemek istediğiniz bir özelliğin üzerine getirin, PIN simgesini seçin ve pencerenin en üstünde aradığınız bilgileri hemen görün!
 
-   ![Visual Studio hata ayıklayıcısında, Pinilik özellikleri aracını kullanarak özelliklerin nasıl sabitlenebilmesini gösteren bir animasyon](media/vs-2019/debugger-pinnable-properties.gif)
+   ![Visual Studio hata ayıklayıcısında, Pinilik özellikleri aracını kullanarak özelliklerin nasıl sabitlenebilmesini gösteren bir animasyon](media/vs-2019/debugger-pinnable-properties.gif "Visual Studio hata ayıklayıcısındaki özellikleri, Pinilik özellikleri aracını kullanarak sabitleyin.")
 
 Daha fazla bilgi için bkz. [Pintuma özellikleri: Debug & yönetilen nesneleri blog GÖNDERINIZDE görüntüleme](https://devblogs.microsoft.com/visualstudio/pinnable-properties-debug-display-managed-objects-your-way/) .
 

@@ -15,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 34e038256d46909e135f8285cb1b3edc45d0ba3e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cbd85ece0cf7b84230e37c74c27e746df7a52439
+ms.sourcegitcommit: f78960320798e2c6b33145cee77a2221f031603c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75565350"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94878289"
 ---
 # <a name="intellisense-in-visual-studio"></a>Visual Studio 'da IntelliSense
 
@@ -38,11 +38,11 @@ Bir öğeyi seçtikten sonra **sekme** tuşuna basarak veya bir boşluk yazarak 
 
 ![Visual Studio üye listesi](../ide/media/vs2015_intellisense.png)
 
-**CTRL**J yazarak, **List Members** + **J** **Edit**  >  **IntelliSense**  >  **Liste üyelerini**Düzenle ' yi seçerek veya Düzenleyici araç çubuğunda **üyeleri Listele** düğmesini seçerek liste üyeleri özelliğini el ile çağırabilirsiniz. Boş bir satırda veya tanınabilir bir kapsamın dışında çağrıldığında, bu liste genel ad alanında simgeleri görüntüler.
+**CTRL** J yazarak, **List Members** + **J** **Edit**  >  **IntelliSense**  >  **Liste üyelerini** Düzenle ' yi seçerek veya Düzenleyici araç çubuğunda **üyeleri Listele** düğmesini seçerek liste üyeleri özelliğini el ile çağırabilirsiniz. Boş bir satırda veya tanınabilir bir kapsamın dışında çağrıldığında, bu liste genel ad alanında simgeleri görüntüler.
 
-Liste üyelerini varsayılan olarak devre dışı bırakmak için (özellikle çağrılmadıkça gözükmemesi için), **Araçlar**  >  **Seçenekler**  >  **tüm diller** ' e gidin ve **üyeleri otomatik Listele**seçimini kaldırın. Yalnızca belirli bir dil için Liste üyelerini devre dışı bırakmak istiyorsanız bu dilin **genel** ayarlarına gidin.
+Liste üyelerini varsayılan olarak devre dışı bırakmak için (özellikle çağrılmadıkça gözükmemesi için), **Araçlar**  >  **Seçenekler**  >  **tüm diller** ' e gidin ve **üyeleri otomatik Listele** seçimini kaldırın. Yalnızca belirli bir dil için Liste üyelerini devre dışı bırakmak istiyorsanız bu dilin **genel** ayarlarına gidin.
 
-Sadece yazdığınız metnin kodun içine eklendiği öneri moduna da geçebilirsiniz. Örneğin, listede olmayan bir tanımlayıcı girip **sekme**tuşuna basarsanız, tamamlama modunda giriş, yazılan tanımlayıcının yerini alır. Tamamlama modu ve öneri modu arasında geçiş yapmak için **CTRL** + **alt** + **boşluk**tuşlarına basın veya IntelliSense **Düzenle**  >  **IntelliSense**  >  **tamamlama modunu**seçin.
+Sadece yazdığınız metnin kodun içine eklendiği öneri moduna da geçebilirsiniz. Örneğin, listede olmayan bir tanımlayıcı girip **sekme** tuşuna basarsanız, tamamlama modunda giriş, yazılan tanımlayıcının yerini alır. Tamamlama modu ve öneri modu arasında geçiş yapmak için **CTRL** + **alt** + **boşluk** tuşlarına basın veya IntelliSense **Düzenle**  >  **IntelliSense**  >  **tamamlama modunu** seçin.
 
 ## <a name="parameter-info"></a>Parametre Bilgisi
 
@@ -54,7 +54,7 @@ Kalın yazı tipli parametre, işlevi yazarken gerekli olan bir sonraki parametr
 
 XML Belgeleri yorumlarıyla işlevlere ve parametrelere ek açıklamalar koyduğunuzda, yorumlar Parametre Bilgisi olarak görüntülenir. Daha fazla bilgi için bkz. [XML kodu açıklamalarını sağlama](reference/generate-xml-documentation-comments.md).
 
-**Edit**  >  **IntelliSense**  >  **parametre bilgilerini**Düzenle ' yi seçerek, **CTRL** + **vardiyası** + **alanı**' na basarak veya Düzenleyici araç çubuğunda **parametre bilgisi** düğmesini seçerek parametre bilgilerini el ile çağırabilirsiniz.
+**Edit**  >  **IntelliSense**  >  **parametre bilgilerini** Düzenle ' yi seçerek, **CTRL** + **vardiyası** + **alanı**' na basarak veya Düzenleyici araç çubuğunda **parametre bilgisi** düğmesini seçerek parametre bilgilerini el ile çağırabilirsiniz.
 
 ## <a name="quick-info"></a>Hızlı Bilgi
 
@@ -66,7 +66,7 @@ Hızlı bilgi kodunuzdaki herhangi bir tanımlayıcı için bütün bildirimi g�
 
 ![C&#35; kod dosyasında parametre bilgisi](../ide/media/vs2015_paraminfo.png)
 
-Hızlı bilgiyi, **Edit**  >  **IntelliSense**  >  **CTRL**tuşuna basarak veya Düzenleyici araç çubuğunda**Quick Info** + **I** **hızlı bilgi** düğmesini seçerek IntelliSense hızlı bilgilerini düzenle ' yi seçerek el ile çağırabilirsiniz.
+Hızlı bilgiyi, **Edit**  >  **IntelliSense**  >  **CTRL** tuşuna basarak veya Düzenleyici araç çubuğunda **Quick Info** + **I** **hızlı bilgi** düğmesini seçerek IntelliSense hızlı bilgilerini düzenle ' yi seçerek el ile çağırabilirsiniz.
 
 Bir işlev aşırı yüklenmişse, IntelliSense, tüm aşırı yük biçimleri için bilgileri görüntülemeyebilir.
 
@@ -74,7 +74,7 @@ Bir işlev aşırı yüklenmişse, IntelliSense, tüm aşırı yük biçimleri i
 
 ## <a name="complete-word"></a>Tam Sözcük
 
-Bütün sözcük, dönemi belirsizliğini ortadan kaldırmak için yeterli sayıda karakter girdikten sonra değişken, komut veya işlev adının kalanını tamamlar. Tüm sözcüğü, IntelliSense 'in tamamını **Düzenle**  >  **IntelliSense**  >  **Tamam**' ı seçerek, **CTRL**tuşuna basarak + **Space**veya Düzenleyici araç çubuğunda **sözcük Tamam** düğmesini seçerek çağırabilirsiniz.
+Bütün sözcük, dönemi belirsizliğini ortadan kaldırmak için yeterli sayıda karakter girdikten sonra değişken, komut veya işlev adının kalanını tamamlar. Tüm sözcüğü, IntelliSense 'in tamamını **Düzenle**  >  **IntelliSense**  >  **Tamam**' ı seçerek, **CTRL** tuşuna basarak + **Space** veya Düzenleyici araç çubuğunda **sözcük Tamam** düğmesini seçerek çağırabilirsiniz.
 
 ## <a name="intellisense-options"></a>IntelliSense seçenekleri
 
@@ -111,6 +111,7 @@ MessageBox( hWnd, "String literal|")
 
 - [Visual Basic IntelliSense](../ide/visual-basic-specific-intellisense.md)
 - [C# IntelliSense](../ide/visual-csharp-intellisense.md)
+- [Python IntelliSense](../python/editing-python-code-in-visual-studio.md#intellisense)
 - [JavaScript IntelliSense](../ide/javascript-intellisense.md)
 - [Kodu yazma ve yeniden düzenleme (C++)](/cpp/ide/writing-and-refactoring-code-cpp)
 - [XML kodu açıklamalarını sağlama](reference/generate-xml-documentation-comments.md)
