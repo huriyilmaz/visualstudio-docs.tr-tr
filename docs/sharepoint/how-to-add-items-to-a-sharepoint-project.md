@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: bir SharePoint projesine öğe ekleme | Microsoft Docs'
+description: SharePoint çözümünü açtıktan veya oluşturduktan sonra, Visual Studio 'da bir SharePoint projesine yeni veya mevcut öğeleri ekleyin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 1f7a36591d94e846a0024bce8c5d0b618479e647
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4471f6a593e9349f32e4837da15df2e3e952d227
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86014701"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850734"
 ---
 # <a name="how-to-add-items-to-a-sharepoint-project"></a>Nasıl yapılır: bir SharePoint projesine öğe ekleme
   SharePoint çözümleri, her biri birden çok SharePoint proje öğesi içeren bir veya daha fazla proje içerir. Bir SharePoint çözümünü açtıktan veya oluşturduktan sonra, bu projelere yeni veya varolan öğeleri ekleyebilirsiniz. Örneğin, yeni iş akışı projeleri default. aspx adlı varsayılan bir formla gelir, ancak bu formu yeni veya farklı bir formla değiştirebilir veya başka bir ASPX formu ekleyebilirsiniz.
@@ -28,7 +30,7 @@ ms.locfileid: "86014701"
 
 2. **Çözüm Gezgini**, projenin düğümünü seçin.
 
-3. **Project**  >  **Yeni öğe** Ekle iletişim kutusunu göstermek için menü çubuğunda Proje**Yeni öğe Ekle** ' yi seçin.
+3. **Project**  >  **Yeni öğe** Ekle iletişim kutusunu göstermek için menü çubuğunda Proje **Yeni öğe Ekle** ' yi seçin.
 
 4. **Yüklü şablonlar** listesinde, **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
 
@@ -42,7 +44,7 @@ ms.locfileid: "86014701"
 
 2. **Çözüm Gezgini**, projenin düğümünü seçin.
 
-3. **Project**  >  **Varolan öğeyi Ekle** iletişim kutusunu göstermek için menü çubuğunda Proje**Varolan öğe Ekle** ' yi seçin.
+3. **Project**  >  **Varolan öğeyi Ekle** iletişim kutusunu göstermek için menü çubuğunda Proje **Varolan öğe Ekle** ' yi seçin.
 
 4. Eklemek istediğiniz öğeyi içeren klasöre gidin, seçin ve sonra **Ekle** düğmesini seçin.
 

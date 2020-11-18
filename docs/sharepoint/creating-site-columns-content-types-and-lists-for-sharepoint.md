@@ -1,6 +1,8 @@
 ---
 title: SharePoint için site sütunları, Içerik türleri ve listeler oluşturma | Microsoft Docs
 titleSuffix: ''
+description: SharePoint için site sütunları, içerik türleri ve listeler oluşturun. Visual Studio bu SharePoint öğesi türleri için proje öğesi şablonları sağlar.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -19,15 +21,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 269be4aaf34e9b6c611a5d79ba38cddba04276bf
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 29d0ebc33bf3df198f3ee9b3f9d80a747087341c
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585112"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850526"
 ---
 # <a name="create-site-columns-content-types-and-lists-for-sharepoint"></a>SharePoint için site sütunları, içerik türleri ve listeler oluşturma
-  Visual Studio, her ikisi de site sütunları (veya *alanları*) içerebilen *listeler* ve *içerik türleri*de dahil olmak üzere birçok farklı temel SharePoint öğesi için proje öğesi şablonları sağlar. İçerik türleri ve listeleri için yeni tasarımcılar, bu öğelerin her zamankinden daha kolay oluşturulmasını sağlar.
+  Visual Studio, her ikisi de site sütunları (veya *alanları*) içerebilen *listeler* ve *içerik türleri* de dahil olmak üzere birçok farklı temel SharePoint öğesi için proje öğesi şablonları sağlar. İçerik türleri ve listeleri için yeni tasarımcılar, bu öğelerin her zamankinden daha kolay oluşturulmasını sağlar.
 
 ## <a name="site-columns"></a>Site sütunları
  Site sütunları, bir SharePoint projesine ekleyebileceğiniz en temel öğelerden biridir. Bir site sütunu, bir kişi listesindeki bir kişinin telefon numarası, yorum veya şehir adı gibi bir veri türünü temsil eder.

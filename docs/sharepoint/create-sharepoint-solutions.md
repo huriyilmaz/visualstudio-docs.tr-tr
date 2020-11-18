@@ -1,5 +1,7 @@
 ---
 title: SharePoint çözümleri oluşturma | Microsoft Docs
+description: SharePoint Designer 'da oluşturmaya alternatif olarak, Visual Studio 'da SharePoint uygulamaları oluşturun.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: overview
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 13689d82f3aae24a16a577b1555d8b02ae31b2ba
-ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
+ms.openlocfilehash: 0893596157078de62e33034a9ab6566637642176
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90740176"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850500"
 ---
 # <a name="create-sharepoint-solutions"></a>SharePoint çözümleri oluşturma
   SharePoint Designer 'da oluşturmaya alternatif olarak, Visual Studio 'da SharePoint uygulamaları oluşturabilirsiniz. Visual Studio, gelişmiş hata ayıklama araçları, IntelliSense, ekstre tamamlama ve proje şablonları gibi özellikleri sağlayarak hızlı SharePoint geliştirmesini yükseltir. Visual Studio, gelişmiş .NET Framework tabanlı araç ve dillerden de yararlanır. Visual Basic veya Visual C# kullanarak SharePoint projeleri geliştirebilir ve JavaScript kullanarak SharePoint projeleri için uygulama geliştirebilirsiniz.

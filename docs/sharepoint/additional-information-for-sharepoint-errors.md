@@ -1,5 +1,7 @@
 ---
 title: SharePoint hataları için ek bilgiler | Microsoft Docs
+description: Visual Studio SharePoint araçları 'nda oluşan hata ve uyarı sorunlarını giderme hakkında daha fazla bilgi alın.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 2c22f6570d741bce7f72ffd2c07f75cc8c6dc18b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 240913e93dc1945846613ac1ecc8d0141368f7b3
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72985074"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850435"
 ---
 # <a name="additional-information-for-sharepoint-errors"></a>SharePoint hataları için ek bilgiler
   [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]Sorun giderme konularında ve genel forumlarda SharePoint araçları hatalarını ve uyarılarını sorun giderme konusunda yardım bulabilirsiniz.
@@ -38,7 +40,7 @@ ms.locfileid: "72985074"
 ## <a name="other-resources"></a>Diğer kaynaklar
  Aşağıdaki tabloda [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint Araç forumları ve diğer kaynaklar listelenmektedir.
 
-|Süre|Tanım|
+|Terim|Tanım|
 |----------|----------------|
 |[SharePoint geliştirme](https://social.msdn.microsoft.com/Forums/office/home?forum=sharepointdevelopmentprevious)|' De SharePoint geliştirme hakkında sorularınız için bir forum sağlar [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .|
 |[Visual Studio forumları](https://social.msdn.microsoft.com/Forums/vstudio/home?category=visualstudio)|Hakkında sorularınız için bir forum sağlar [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .|

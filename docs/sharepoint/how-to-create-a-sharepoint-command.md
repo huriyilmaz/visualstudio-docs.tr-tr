@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: SharePoint komutu oluşturma | Microsoft Docs'
+description: SharePoint Araçları uzantısında sunucu nesne modeli API 'sini çağırmak için özel bir SharePoint komutu oluşturmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 15ea7ff86e90bf7a474f9d64c30a9803e3e20bf5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 41e4ab0fd70f4993d148cd5c67cb816bdc92e77a
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016220"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850708"
 ---
 # <a name="how-to-create-a-sharepoint-command"></a>Nasıl yapılır: SharePoint komutu oluşturma
   Sunucu nesne modelini bir SharePoint Araçları uzantısında kullanmak istiyorsanız, API 'yi çağırmak için özel bir *SharePoint komutu* oluşturmanız gerekir. SharePoint komutunu, doğrudan sunucu nesne modeline çağırabilirler bir derlemede tanımlarsınız.
@@ -53,7 +55,7 @@ ms.locfileid: "86016220"
 
     - İkinci parametre ve dönüş değeri Windows Communication Foundation (WCF) tarafından seri hale getirilebilen bir tür olmalıdır. Daha fazla bilgi için bkz. [veri sözleşmesi serileştiricisi tarafından desteklenen türler](/dotnet/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer) ve [XmlSerializer sınıfı kullanılıyor](/dotnet/framework/wcf/feature-details/using-the-xmlserializer-class).
 
-    - Yöntemi herhangi bir görünürlüğe (**genel**, **iç**veya **özel**) sahip olabilir ve statik veya statik olmayan bir işlem olabilir.
+    - Yöntemi herhangi bir görünürlüğe (**genel**, **iç** veya **özel**) sahip olabilir ve statik veya statik olmayan bir işlem olabilir.
 
 4. Yöntemine uygulayın <xref:Microsoft.VisualStudio.SharePoint.Commands.SharePointCommandAttribute> . Bu öznitelik, komut için benzersiz bir tanımlayıcı belirtir; Bu tanımlayıcının yöntem adıyla eşleşmesi gerekmez.
 

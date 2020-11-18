@@ -1,6 +1,8 @@
 ---
 title: 'Nasıl yapılır: bir SharePoint proje öğe uzantısına özellik ekleme | Microsoft Docs'
 titleSuffix: ''
+description: Visual Studio 'da zaten yüklü olan herhangi bir SharePoint proje öğesine bir özellik eklemek için bir SharePoint proje öğesi uzantısı kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,15 +17,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 752a782bb4aafd977ff10a0b57dd971f7ad6bed4
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: ae43eb1fd2c20fde6e7b1ad503b87a5d1cb367b1
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584262"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850175"
 ---
 # <a name="how-to-add-a-property-to-a-sharepoint-project-item-extension"></a>Nasıl yapılır: bir SharePoint proje öğe uzantısına özellik ekleme
-  Visual Studio 'da zaten yüklü olan herhangi bir SharePoint proje öğesine bir özellik eklemek için bir proje öğesi uzantısı kullanabilirsiniz. Özelliği, proje öğesi **Çözüm Gezgini**seçildiğinde **Özellikler** penceresinde görünür.
+  Visual Studio 'da zaten yüklü olan herhangi bir SharePoint proje öğesine bir özellik eklemek için bir proje öğesi uzantısı kullanabilirsiniz. Özelliği, proje öğesi **Çözüm Gezgini** seçildiğinde **Özellikler** penceresinde görünür.
 
  Aşağıdaki adımlarda zaten bir proje öğesi uzantısı oluşturmuş olduğunuz varsayılır. Daha fazla bilgi için bkz. [nasıl yapılır: SharePoint proje öğesi uzantısı oluşturma](../sharepoint/how-to-create-a-sharepoint-project-item-extension.md).
 

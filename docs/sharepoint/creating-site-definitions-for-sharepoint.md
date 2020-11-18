@@ -1,5 +1,7 @@
 ---
 title: SharePoint için site tanımları oluşturma | Microsoft Docs
+description: SharePoint için site tanımları oluşturun. Site tanımları, SharePoint sitesinin görünümünü ve davranışını ve varsayılan içerik ve işlevlerini tanımlar.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: overview
 dev_langs:
@@ -13,15 +15,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0f1a512218c3c1b7af179cfaba3e231a90941fe0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7585a4b80322afb37e816758fc7074806a443676
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015060"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850578"
 ---
 # <a name="create-site-definitions-for-sharepoint"></a>SharePoint için site tanımları oluşturma
-  İçindeki SharePoint site tanımı projesi, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Yeni bir SharePoint sitesi için temel görevi gören bir *site tanımı*oluşturmanızı sağlar. Bu tanımlar yalnızca SharePoint sitesinin görünüm ve davranışını ve ayrıca varsayılan içerik ve işlevlerini belirlememez. Tanımda önceden yapılandırılmış listeleri, içerik türlerini, olay alıcılarını, görüntüleri ve diğer öğeleri yerleştirebilirsiniz. SharePoint, örneğin BLOG gibi bazı site tanımlarını içerir. BLOG site tanımına dayalı bir site oluşturduğunuzda, site, bir blog sitesinin gerektirdiği listeleri, Web bölümlerini ve diğer öğeleri içerir.
+  İçindeki SharePoint site tanımı projesi, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Yeni bir SharePoint sitesi için temel görevi gören bir *site tanımı* oluşturmanızı sağlar. Bu tanımlar yalnızca SharePoint sitesinin görünüm ve davranışını ve ayrıca varsayılan içerik ve işlevlerini belirlememez. Tanımda önceden yapılandırılmış listeleri, içerik türlerini, olay alıcılarını, görüntüleri ve diğer öğeleri yerleştirebilirsiniz. SharePoint, örneğin BLOG gibi bazı site tanımlarını içerir. BLOG site tanımına dayalı bir site oluşturduğunuzda, site, bir blog sitesinin gerektirdiği listeleri, Web bölümlerini ve diğer öğeleri içerir.
 
  Site tanımları hakkında daha fazla bilgi için bkz. [site şablonları ve tanımları](/previous-versions/office/developer/sharepoint-2010/ms434313(v=office.14)).
 
@@ -29,7 +31,7 @@ ms.locfileid: "86015060"
  İçindeki site tanımı projeleri [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] yalnızca bir SharePoint sitesinin ihtiyacı olan temel dosyaları sağlar; varsayılan işlevleri sağlamaz. İstediğiniz işlevselliği sağlamak için dosya ve içerik eklemeniz gerekir. İhtiyacınız olan dosyaları oluşturarak ve ekleyerek siteyi el ile oluşturabilirsiniz.
 
 ## <a name="feature-stapling"></a>Özellik Zımbalama
- ' De site tanımları oluşturmanın bir avantajı [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , otomatik olarak *özellik zımbalama*Kullandır. Özellik zımbalama, işlevselliğini site tanımına eklemek yerine bir özelliği site tanımına iliştirir. Bunun yapılması, özelliği, özgün site tanımını değiştirmeden site tanımı kullanılarak oluşturulan herhangi bir siteye eklemenizi sağlar. Daha fazla bilgi için bkz. [özellik zımbalama](/previous-versions/office/developer/sharepoint-2007/bb861862(v=office.12)).
+ ' De site tanımları oluşturmanın bir avantajı [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , otomatik olarak *özellik zımbalama* Kullandır. Özellik zımbalama, işlevselliğini site tanımına eklemek yerine bir özelliği site tanımına iliştirir. Bunun yapılması, özelliği, özgün site tanımını değiştirmeden site tanımı kullanılarak oluşturulan herhangi bir siteye eklemenizi sağlar. Daha fazla bilgi için bkz. [özellik zımbalama](/previous-versions/office/developer/sharepoint-2007/bb861862(v=office.12)).
 
 ## <a name="site-definition-project-components"></a>Site tanımı proje bileşenleri
  Bir site tanımı çözümü oluşturduğunuzda, aşağıdaki varsayılan dosyalar **SiteDefinition** düğümüne eklenir.
@@ -40,7 +42,7 @@ ms.locfileid: "86015060"
 |*onet.xml*|Yeni sitenin yapılandırmasını, site tanımı şablonunun bileşenlerini ve varsayılan davranışı belirtir. Bu ayarlar, etkin olan içerik türleri, varsayılan liste görünümleri, belge şablonu dosyaları ve sitede bulunan Web bölümleri gibi öznitelikleri içerebilir. Varsayılan olarak, `Modules` bölümünde SharePoint sitesine eklenecek dosyalar ve bunların nasıl yapılandırıldığı listelenir.|
 |*webtemp_ \<SiteDefinitionName> . xml*|**Yeni SharePoint sitesi** sayfasının **şablon seçimi** bölümünde görünen site tanımı yapılandırmasını belirtir.|
 
- Varsayılan olarak, tüm site tanımları * \<drive:> \Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\TEMPLATE\SiteTemplates* klasöründe depolanır. Her site tanımının kendi alt klasörü vardır.
+ Varsayılan olarak, tüm site tanımları *\<drive:> \Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\TEMPLATE\SiteTemplates* klasöründe depolanır. Her site tanımının kendi alt klasörü vardır.
 
 ## <a name="related-topics"></a>İlgili konular
 

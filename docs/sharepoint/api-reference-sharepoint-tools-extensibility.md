@@ -1,5 +1,7 @@
 ---
 title: API başvurusu (SharePoint Araçları Genişletilebilirliği) | Microsoft Docs
+description: Visual Studio 'da SharePoint araçlarını genişletmek için API başvuru belgelerini inceleyin. Microsoft. VisualStudio. SharePoint gibi ilgili ad alanlarının listesini görüntüleyin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 37639068b74b5d99864871355a8b9ef36906f6cd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4599a2c305558f2ef551d19abac210bdf05269f3
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62987982"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850396"
 ---
 # <a name="api-reference-sharepoint-tools-extensibility"></a>API başvurusu (SharePoint Araçları Genişletilebilirliği)
   Bu bölüm, Visual Studio 'da SharePoint araçlarını genişletmek için API başvuru belgelerini içerir.
@@ -29,7 +31,7 @@ ms.locfileid: "62987982"
 
  <xref:Microsoft.VisualStudio.SharePoint.Commands>
 
- Özel *SharePoint komutları*oluşturmak için kullanabileceğiniz türleri içerir. SharePoint komutu SharePoint Araçlar uzantısından SharePoint Server nesne modeline çağıran bir yöntemdir.
+ Özel *SharePoint komutları* oluşturmak için kullanabileceğiniz türleri içerir. SharePoint komutu SharePoint Araçlar uzantısından SharePoint Server nesne modeline çağıran bir yöntemdir.
 
  <xref:Microsoft.VisualStudio.SharePoint.Deployment>
 

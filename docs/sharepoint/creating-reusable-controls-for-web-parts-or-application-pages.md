@@ -1,6 +1,8 @@
 ---
 title: Web Bölümleri veya uygulama sayfaları için yeniden kullanılabilir denetimler oluşturma | Microsoft Docs
 titleSuffix: ''
+description: Visual Studio 'da, SharePoint 'te çalışan uygulama sayfaları ve Web bölümleri tarafından tüketilen özel, yeniden kullanılabilir denetimler (Kullanıcı denetimleri) oluşturun.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: overview
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: d3052b2eab3dc353cdccc991a793c47485037fe8
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 2e9d2f3a99e3e43ebf40208bf8dfc01d5ac92dca
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585099"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850604"
 ---
 # <a name="create-reusable-controls-for-web-parts-or-application-pages"></a>Web bölümleri veya uygulama sayfaları için yeniden kullanılabilir denetimler oluşturma
   Visual Studio 'da, uygulama sayfaları ve SharePoint 'te çalışan Web Bölümleri tarafından tüketilen özel, yeniden kullanılabilir denetimler oluşturabilirsiniz. Bu denetimlere Kullanıcı denetimleri denir. Kullanıcı denetimi, bir ASP.NET Web sayfasına çok benzeyen bir bileşik denetim türüdür. var olan Web sunucusu denetimlerini ve işaretlemesini bir kullanıcı denetimine ekleyebilir ve denetimin özelliklerini ve yöntemlerini tanımlayabilirsiniz. Daha sonra bunları birim olarak davranan ASP.NET Web sayfalarına ekleyebilirsiniz.

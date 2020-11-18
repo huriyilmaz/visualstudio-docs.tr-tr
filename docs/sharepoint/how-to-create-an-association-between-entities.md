@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: varlıklar arasında Ilişkilendirme oluşturma | Microsoft Docs'
+description: Visual Studio 'da ilişkiler oluşturarak Iş verileri bağlantısı (BDC) modelinizdeki varlıklar arasındaki ilişkileri tanımlayın.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -21,12 +23,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 75d4fcc9b99c9c5e2960e152eb5dac1da1343109
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e736e0befe8aaf9a6c090615d0c43bb3f3116dbf
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016941"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94849850"
 ---
 # <a name="how-to-create-an-association-between-entities"></a>Nasıl yapılır: varlıklar arasında ilişkilendirme oluşturma
   İlişkiler oluşturarak Iş verileri bağlantısı (BDC) modelinizdeki varlıklar arasında ilişkiler tanımlayabilirsiniz. Visual Studio, her ilişki hakkında bilgi içeren modelin tüketicilerini sağlayan yöntemler oluşturur. Bu yöntemler, veri ilişkilerini bir kullanıcı arabiriminde (UI) göstermek için SharePoint Web bölümleri, listeleri veya özel uygulamalar tarafından kullanılabilir.

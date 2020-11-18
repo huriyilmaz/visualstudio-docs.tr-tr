@@ -11,12 +11,12 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 monikerRange: vs-2019
-ms.openlocfilehash: 2223aecd66da721ff1afe9877853c8a00c837611
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: 9072676dfc96ffc6286f81785048eca8ec46b0b8
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91862230"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850513"
 ---
 # <a name="how-to-customize-a-codespace-preview"></a>Codespace 'i özelleştirme (Önizleme)
 
@@ -28,21 +28,21 @@ Hemen kullanmaya başlamak için Windows codespaces, zaten yüklü birçok çer�
 
 | Uygulama                                         | Yol diğer adı | Sürüm            |
 |---------------------------------------------|------------|--------------------|
-| .NET                                        | Yok        | 4,8                |
+| .NET                                        | YOK        | 4.8                |
 | .NET Core Runtime                           | dotnet     | 2,1, 3,1           |
 | .NET Core SDK                               | dotnet     | 2,1, 3.1.3, 3.1.4  |
-| Azure CLI                                   | az         | 2.5                |
+| Azure CLI’si                                   | az         | 2.5                |
 | Chocolatey                                  | Choco      | 0.10.15            |
 | CMake                                       | CMake      | 3,17               |
 | Git                                         | git        | 2,26               |
 | Microsoft derleme                             | MSBUILD    | 16,7               |
-| Microsoft SQL Server Express Edition 2019   | Yok        | 15,0               |
+| Microsoft SQL Server Express Edition 2019   | YOK        | 15.0               |
 | Ninja                                       | Ninja      | 1.8.2              |
 | Node.js                                     | node       | 12,16              |
 | NPM                                         | npm        | 6,14               |
 | Python                                      | python     | 3.7                |
 | VC Paket Yöneticisi                          | vcpkg      | 2020,02            |
-| Windows SDK’sı                                 | Yok        | 10.0.18362         |
+| Windows SDK’sı                                 | YOK        | 10.0.18362         |
 
 Yukarıdaki liste ayrıntılı değildir ve Visual Studio 'Nun yüklediği birçok aracı dışlar (örneğin, IISExpress). Bir bileşen, yukarıda belirtilenden farklı bir küçük veya yayama sürümüne de sahip olabilir.
 
@@ -84,7 +84,7 @@ GitHub Codespaces, özelliklerde aşağıdaki *devcontainer.js* destekler. Visua
 
 ## <a name="customize-with-devinit"></a>Devinit ile özelleştirme
 
-[devinit](../../devinit/getting-started-with-devinit.md) , Windows codespaces 'a eklenen ve ortamınıza çerçeveleri ve araçları yüklemenize olanak tanıyan bir komut satırı aracıdır. Bir komut isteminden () el ile çalıştırılabilir, `devinit -t require-dotnetcoresdk` ancak gerçek güç, bir kod alanını oluşturduğunuz her seferinde bir codespace yapılandırmak için dosyanın özel [ *.devinit.js* ](../../devinit/devinit-json.md) oluşturma işleminden gelir.
+[devinit](../../devinit/getting-started-with-devinit.md) , Windows codespaces 'a eklenen ve ortamınıza çerçeveleri ve araçları yüklemenize olanak tanıyan bir komut satırı aracıdır. Bir komut isteminden () el ile çalıştırılabilir, `devinit run -t require-dotnetcoresdk` ancak gerçek güç, bir kod alanını oluşturduğunuz her seferinde bir codespace yapılandırmak için dosyanın özel [ *.devinit.js*](../../devinit/devinit-json.md) oluşturma işleminden gelir.
 
 `devinit` SQL Server ve Azure CLı gibi belirli öğeleri yüklemeye ve ayrıca Chocolatey, NPM ve vcpkg gibi genel paket yöneticilerini çalıştırmaya yönelik bir araç kümesi içerir. Araçların tüm listesini `devinit` [kullanılabilir araçlar](../../devinit/devinit-tool-list.md) belgelerinde bulabilirsiniz.
 
@@ -126,7 +126,7 @@ Belirterek `devinit init` , `devinit` yapılandırmada *devinit.js* kullanılara
 
 .NET Core Entity Framework komut satırı aracını yükleme hakkında basit bir örnek aşağıda verilmiştir `dotnet-ef` .
 
-** Üzerindedevcontainer.js**
+**devcontainer.json**
 
 Depo kökündeki dosya *.devcontainer.js* içeriği. 
 
@@ -136,9 +136,9 @@ Depo kökündeki dosya *.devcontainer.js* içeriği.
 }
 ```
 
-** Üzerindedevinit.js**
+**Üzerindedevinit.js**
 
-Dosyadaki *.devinit.js* içeriği. Bu dosyanın *.devcontainer.js*ile aynı klasörde olması gerekir.
+Dosyadaki *.devinit.js* içeriği. Bu dosyanın *.devcontainer.js* ile aynı klasörde olması gerekir.
 
 ```json
 {
@@ -160,7 +160,7 @@ GitHub Codespaces, bağlantı noktası iletme yoluyla uzak ortamlarda çalışan
 
 ### <a name="configure-port-forwarding"></a>Bağlantı noktası iletmeyi yapılandırma
 
-Belirli bir depo için varsayılan olarak iletilmesi gereken bir veya daha fazla bağlantı noktası varsa, bu, özelliği ile * üzerindedevcontainer.js* yapılandırılabilir `forwardPorts` .
+Belirli bir depo için varsayılan olarak iletilmesi gereken bir veya daha fazla bağlantı noktası varsa, bu, özelliği ile *üzerindedevcontainer.js* yapılandırılabilir `forwardPorts` .
 
 * `forwardPorts` -Ortam çalışırken otomatik olarak yerel olarak iletilmesi gereken bağlantı noktası veya bağlantı noktası dizisi.
 
@@ -178,7 +178,7 @@ Aşağıda, yerel MS SQL Server 'a bağlanmak için bir bağlantı dizesi örne�
 "Server=(LocalDB);Integrated Security=true;"
 ```
 
-### <a name="azure-cli"></a>Azure CLI
+### <a name="azure-cli"></a>Azure CLI’si
 
 Azure CLı, tüm Windows Codespace ortamlarına yüklenir ve farklı yolda bulunabilir `az` .
 

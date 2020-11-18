@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: kaynak dosyası ekleme | Microsoft Docs'
+description: Çözüm düğümünün kısayol menüsündeki komutları ve Çözüm Gezgini içindeki Özellik düğümlerini kullanarak Visual Studio 'da bir kaynak dosyası ekleyin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 657eb473adcff40a62d2fc9b09518ebe8135eeb4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 440777aaaf239dcdd3c276786a82e3d8aef55070
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015179"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850142"
 ---
 # <a name="how-to-add-a-resource-file"></a>Nasıl yapılır: kaynak dosyası ekleme
   Kaynak dosyalarını ekleme komutları, Çözüm Gezgini çözüm düğümünün kısayol menüsünde ve özellik düğümlerinin ' de yer alır. Daha fazla bilgi için bkz. [SharePoint çözümlerini yerelleştirme](../sharepoint/localizing-sharepoint-solutions.md).
@@ -46,7 +48,7 @@ ms.locfileid: "86015179"
 
 2. **Çözüm Gezgini**' de, **Özellikler** düğümü altında bir özelliğin adı için kısayol menüsünü açın ve ardından **Özellik kaynağı Ekle**' yi seçin.
 
-     Bu adım, _resourceFileName_biçimindeki özelliğe bir kaynak dosyası ekler **.** _kültür_**. resx**, örneğin, *özellik1. en-US. resx*.
+     Bu adım, _resourceFileName_ biçimindeki özelliğe bir kaynak dosyası ekler **.** _kültür_**. resx**, örneğin, *özellik1. en-US. resx*.
 
 3. **Kaynak Düzenleyicisi** içinde açıldığında [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] kaynakları kaynak dosyasına ekleyin.
 

@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: SharePoint çözümleri derleme | Microsoft Docs'
+description: Bir SharePoint çözümü oluşturun. Visual Studio 'da, SharePoint çözümünün oluşturulması diğer uygulamalardan farklı değildir.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: d3beb1602a6572ed578208d6dd85951f1ea1c30b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e4e878221f3b6989a87fa3c9e36be1018d34d4af
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86014516"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850695"
 ---
 # <a name="how-to-build-sharepoint-solutions"></a>Nasıl yapılır: SharePoint çözümleri derleme
 
@@ -31,7 +33,7 @@ SharePoint Çözümünüzü oluşturma işlemi, Visual Studio 'da başka uygulam
 
 2. Çözümünüzü veya projenizi oluşturmak veya yeniden derlemek için uygun seçeneği belirleyin. Daha fazla bilgi için bkz. [Visual Studio 'Da derleme ve oluşturma](../ide/compiling-and-building-in-visual-studio.md).
 
-3. Menü **çubuğunda Build**  >  **Build Solution**öğesini seçin.
+3. Menü **çubuğunda Build**  >  **Build Solution** öğesini seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

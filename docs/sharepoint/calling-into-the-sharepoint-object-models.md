@@ -1,5 +1,7 @@
 ---
 title: SharePoint nesne modellerine çağırma | Microsoft Docs
+description: SharePoint araçları uzantılarında kullanabileceğiniz iki farklı nesne modeline nasıl çağrılacağını anlayın.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 24634143a40f7b163c0b658bddb5596041868033
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 40cd7132888d8b19d8e2a2818ec9a299b465e786
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62988404"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850058"
 ---
 # <a name="call-into-the-sharepoint-object-models"></a>SharePoint nesne modellerine çağrı
   Visual Studio 'da SharePoint araçları için Uzantılar oluşturduğunuzda, belirli görevleri gerçekleştirmek için SharePoint API 'Lerini çağırmanız gerekebilir. Örneğin, SharePoint projeleri için özel bir dağıtım adımı oluşturursanız, çözümleri dağıtmak için bazı görevleri gerçekleştirmek üzere SharePoint API 'Lerini çağırmanız gerekebilir.
@@ -52,7 +54,7 @@ ms.locfileid: "62988404"
  SharePoint komutlarının nasıl oluşturulduğunu ve kullanılacağını gösteren izlenecek yollar için bkz. [Izlenecek yol: SharePoint projeleri için özel bir dağıtım adımı oluşturma](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md) ve [izlenecek yol: Sunucu Gezgini Web bölümlerini görüntülemek için genişletme](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md).
 
 ### <a name="understand-how-sharepoint-commands-are-executed"></a>SharePoint komutlarının nasıl yürütüleceğini anlayın
- SharePoint komutlarını tanımlayan derlemeler *vssphost4.exe*adlı 64 bitlik bir ana bilgisayar işlemine yüklenir. SharePoint Araçları uzantısında bir SharePoint komutunu çağırdığınızda, komut 32 bitlik Visual Studio işlemi (*devenv.exe*) yerine *vssphost4.exe* tarafından yürütülür. Kayıt defterindeki değerleri ayarlayarak SharePoint komutlarının nasıl yürütüldüğü hakkında bazı yönlerini denetleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio 'Da SharePoint araçları Için hata ayıklama uzantıları](../sharepoint/debugging-extensions-for-the-sharepoint-tools-in-visual-studio.md).
+ SharePoint komutlarını tanımlayan derlemeler *vssphost4.exe* adlı 64 bitlik bir ana bilgisayar işlemine yüklenir. SharePoint Araçları uzantısında bir SharePoint komutunu çağırdığınızda, komut 32 bitlik Visual Studio işlemi (*devenv.exe*) yerine *vssphost4.exe* tarafından yürütülür. Kayıt defterindeki değerleri ayarlayarak SharePoint komutlarının nasıl yürütüldüğü hakkında bazı yönlerini denetleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio 'Da SharePoint araçları Için hata ayıklama uzantıları](../sharepoint/debugging-extensions-for-the-sharepoint-tools-in-visual-studio.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Nasıl yapılır: SharePoint komutu oluşturma](../sharepoint/how-to-create-a-sharepoint-command.md)

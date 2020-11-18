@@ -2,17 +2,17 @@
 title: Visual Studio aboneliğinde Azure Community destek avantajı | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
-manager: lank
+manager: cabuschl
 ms.assetid: c15f7e18-b280-4902-a60d-2c2598653207
-ms.date: 07/29/2019
+ms.date: 11/17/2020
 ms.topic: conceptual
 description: Seçili Visual Studio aboneliklerine dahil edilen Azure Community destek avantajı hakkında bilgi edinin.
-ms.openlocfilehash: 000732d2c46d777c68451153dc5965d45087abce
-ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
+ms.openlocfilehash: 285b10670c10b2b2d14af45bfe23e891b08bbb5b
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92353219"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850539"
 ---
 # <a name="azure-community-support-forum-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Azure Community destek forumu
 Azure Community aracılığıyla destek forumları seçme içindeki Azure ekibinden doğrudan yardım alın.  Azure Community avantajı, Azure ile ilgili konularda odaklanan bir forum koleksiyonuna erişmenizi sağlar.
@@ -49,7 +49,7 @@ Azure Community aracılığıyla destek forumları seçme içindeki Azure ekibin
     :::column-end:::
 :::row-end:::
 
-## <a name="get-started"></a>başlarken
+## <a name="get-started"></a>Kullanmaya başlayın
 Azure Community 'yi kullanmaya başlamak kolaydır.
 1. [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) adresinde oturum açın.
 
@@ -70,13 +70,13 @@ Azure Community avantajının kullanılabilirliği, aşağıda gösterildiği gi
 
 |                                          Abonelik düzeyi                                           |     Kanallar      |    Avantaj    | Yenilenebilir? |
 |-------------------------------------------------------------------------------------------------------|-------------------|---------------|------------|
-|                           Visual Studio Enterprise (Standart)                           | VL, Azure, perakende |   Bir yıl    |    Yes     |
+|                           Visual Studio Enterprise (Standart), NFR<sup>1</sup>                            | VL, Azure, perakende |   Bir yıl    |    Yes     |
 |                           GitHub Enterprise ile Visual Studio Enterprise                           | VL, Azure, perakende |   Bir yıl    |    Yes     |
 |                          Visual Studio Professional (Standart)                          | VL, Azure, perakende |   Bir yıl    |    Yes     |
 |                          GitHub Enterprise ile Visual Studio Professional                          | VL, Azure, perakende |   Bir yıl    |    Yes     |
 |                              Visual Studio Test Professional (Standart)                               |    VL, perakende     |   Bir yıl    |    Yes     |
 |                                       MSDN Platformları (Standart)                                       |    VL, perakende     |   Bir yıl    |    Yes     |
-| Visual Studio Enterprise (aylık bulut), Visual Studio Professional (aylık bulut), NFR<sup>1</sup> |        Tümü        | Kullanılamaz |     No     |
+| Visual Studio Enterprise (aylık bulut), Visual Studio Professional (aylık bulut)|        Tümü        | Kullanılamaz |     No     |
 
 <sup>1</sup>  *şunları Içerir: SATıLAMAZ (NFR), Microsoft FTE, en DEĞERLI profesyonel (MVP), bölgesel Müdürü (RD), Visual Studio sektör ortağı (VSIP), BizSpark, Imagine, Microsoft Sertifikalı TRAINER (MCT)*
 

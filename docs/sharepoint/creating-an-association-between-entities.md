@@ -1,5 +1,7 @@
 ---
 title: Varlıklar arasında Ilişkilendirme oluşturma | Microsoft Docs
+description: Iş verileri bağlantısı (BDC) modelinizdeki varlıklar arasında bir ilişki oluşturun. İlişkilendirme yöntemleri ve ilişkilerin türleri hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -21,12 +23,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ee767ded0687baa09653bd82785b68bee7fa0ebd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6a5decf8ad803bea8b1d64c79410c319dbef0be9
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72981086"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850552"
 ---
 # <a name="create-an-association-between-entities"></a>Varlıklar arasında ilişkilendirme oluşturma
   İlişkiler oluşturarak Iş verileri bağlantısı (BDC) modelinizdeki varlıklar arasında ilişkiler tanımlayabilirsiniz. Visual Studio, her ilişki hakkında bilgi içeren modelin tüketicilerini sağlayan yöntemler oluşturur. Bu yöntemler, veri ilişkilerini bir kullanıcı arabiriminde (UI) göstermek için SharePoint Web bölümleri, listeleri veya özel uygulamalar tarafından kullanılabilir.
@@ -35,7 +37,7 @@ ms.locfileid: "72981086"
  Visual Studio **araç kutusunda** **ilişki** denetimini seçip ilk varlığı (kaynak varlık olarak adlandırılır) seçip ikinci varlığı (hedef varlık olarak adlandırılır) seçerek bir ilişki oluşturun. İlişki **Düzenleyicisi**' nde ilişkilendirmenin ayrıntılarını tanımlayabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: varlıklar arasında Ilişkilendirme oluşturma](../sharepoint/how-to-create-an-association-between-entities.md).
 
 ## <a name="association-methods"></a>İlişkilendirme yöntemleri
- SharePoint iş verileri Web bölümleri gibi uygulamalar, bir varlığın hizmet sınıfındaki yöntemleri çağırarak ilişkilendirmeleri kullanır. **Ilişki düzenleyicisinde**seçerek bir varlığın hizmet sınıfına Yöntemler ekleyebilirsiniz.
+ SharePoint iş verileri Web bölümleri gibi uygulamalar, bir varlığın hizmet sınıfındaki yöntemleri çağırarak ilişkilendirmeleri kullanır. **Ilişki düzenleyicisinde** seçerek bir varlığın hizmet sınıfına Yöntemler ekleyebilirsiniz.
 
  Varsayılan olarak, **Ilişkilendirme Düzenleyicisi** kaynak ve hedef varlıklara bir ilişkilendirme gezinti yöntemi ekler. Kaynak varlıktaki bir Ilişkilendirme gezinti yöntemi, tüketicilerin hedef varlıkların bir listesini almasını sağlar. Hedef varlıktaki bir Ilişkilendirme gezinti yöntemi, tüketicilerin bir hedef varlıkla ilgili kaynak varlığı almasını sağlar.
 
@@ -47,7 +49,7 @@ ms.locfileid: "72981086"
 ### <a name="foreign-key-based-association"></a>Yabancı anahtar tabanlı ilişkilendirme
  Kaynak varlıktaki bir tanımlayıcıyı hedef varlıkta tanımlanan tür tanımlayıcılarıyla ilişkilendirerek, yabancı anahtar tabanlı bir ilişki oluşturabilirsiniz. Bu ilişki, modelin tüketicilerinin kullanıcıları için gelişmiş bir kullanıcı arabirimi sağlamasına olanak sağlar. Örneğin, Outlook 'ta, bir kullanıcının bir açılan listede müşterileri görüntüleyebilen bir satış siparişi oluşturmasını sağlayan bir form; veya SharePoint 'te, kullanıcıların bir müşteri için bir profil sayfası açmasını sağlayan satış siparişlerinin bir listesi.
 
- Yabancı anahtar tabanlı bir ilişki oluşturmak için, aynı adı ve türü paylaşan tanımlayıcıları ve tür tanımlayıcılarını ilişkilendirin. Örneğin, bir varlık ve varlık arasında yabancı anahtar tabanlı bir ilişki oluşturabilirsiniz `Contact` `SalesOrder` . `SalesOrder`Varlık, `ContactID` Bulucu veya belirli Bulucu yöntemlerinin dönüş parametresinin bir parçası olarak bir tür tanımlayıcısı döndürür. Her iki tür tanımlayıcısı da **Ilişkilendirme düzenleyicisinde**görünür. Varlık ve varlık arasında yabancı anahtar tabanlı bir ilişki oluşturmak için `Contact` `SalesOrder` , `ContactID` Bu alanların her birinin yanındaki tanımlayıcıyı seçin.
+ Yabancı anahtar tabanlı bir ilişki oluşturmak için, aynı adı ve türü paylaşan tanımlayıcıları ve tür tanımlayıcılarını ilişkilendirin. Örneğin, bir varlık ve varlık arasında yabancı anahtar tabanlı bir ilişki oluşturabilirsiniz `Contact` `SalesOrder` . `SalesOrder`Varlık, `ContactID` Bulucu veya belirli Bulucu yöntemlerinin dönüş parametresinin bir parçası olarak bir tür tanımlayıcısı döndürür. Her iki tür tanımlayıcısı da **Ilişkilendirme düzenleyicisinde** görünür. Varlık ve varlık arasında yabancı anahtar tabanlı bir ilişki oluşturmak için `Contact` `SalesOrder` , `ContactID` Bu alanların her birinin yanındaki tanımlayıcıyı seçin.
 
  Hedef varlıkların koleksiyonunu döndüren kaynak varlığın Ilişkilendirme gezgin yöntemine kod ekleyin. Aşağıdaki örnek, bir kişinin satış siparişlerini döndürür.
 

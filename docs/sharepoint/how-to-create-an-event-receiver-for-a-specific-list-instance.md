@@ -1,6 +1,8 @@
 ---
 title: 'Nasıl yapılır: belirli bir liste örneği için olay alıcısı oluşturma | Microsoft Docs'
 titleSuffix: ''
+description: Belirli bir liste örneği için olay alıcısı oluşturun. Liste örneği olay alıcısı, bir liste tanımının herhangi bir örneğinde oluşan olaylara yanıt verir.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c37da8b798c3b6a0fdc093d5c443584f68b4b5cc
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 8bd76f2aafc5d0b3058dcaba68b6f3099f01ff8d
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585842"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94849902"
 ---
 # <a name="how-to-create-an-event-receiver-for-a-specific-list-instance"></a>Nasıl yapılır: belirli bir liste örneği için olay alıcısı oluşturma
   Liste örneği olay alıcısı, bir liste tanımının herhangi bir örneğinde oluşan olaylara yanıt verir. Olay alıcısı şablonu belirli bir liste örneğinin hedeflemesini etkinleştirmese de, belirli bir liste örneğindeki olaylara yanıt vermek için liste tanımı kapsamındaki bir olay alıcısını değiştirebilirsiniz.
@@ -50,7 +52,7 @@ ms.locfileid: "91585842"
 
 8. **Aşağıdaki olayları işle** listesinde, **bir öğe ekleniyor** onay kutusunu seçin ve ardından **son** düğmesini seçin.
 
-9. **Çözüm Gezgini**' de, EventReceiver1 altında *Elements.xml*açın.
+9. **Çözüm Gezgini**' de, EventReceiver1 altında *Elements.xml* açın.
 
      Olay alıcısı Şu anda aşağıdaki satırı kullanarak Duyurular listesi tanımına başvuruyor:
 
@@ -84,7 +86,7 @@ ms.locfileid: "91585842"
 
 17. Yeni bir duyuru ekleyin.
 
-     Alıcı yalnızca özel duyuru listesi örneğindeki etkinliklere yanıt verecek şekilde yapılandırıldığı için, yeni **duyuruda olay**alıcısının tetiklemez olduğuna dikkat edin.
+     Alıcı yalnızca özel duyuru listesi örneğindeki etkinliklere yanıt verecek şekilde yapılandırıldığı için, yeni **duyuruda olay** alıcısının tetiklemez olduğuna dikkat edin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Nasıl yapılır: olay alıcısı oluşturma](../sharepoint/how-to-create-an-event-receiver.md)

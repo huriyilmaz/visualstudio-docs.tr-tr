@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: SharePoint projelerine özellik ekleme | Microsoft Docs'
+description: Bir SharePoint projesine özellik eklemek için bir proje uzantısı kullanın. Çözüm Gezgini içinde projeyi seçtiğinizde bir özellik Özellikler penceresi görüntülenir.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,15 +16,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: eb72b0546b504e2df1a7e93ea9d4def350143d1d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 62766b704d140805a3b76dbc3c00acaf6257f5e5
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015924"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850162"
 ---
 # <a name="how-to-add-a-property-to-sharepoint-projects"></a>Nasıl yapılır: SharePoint projelerine özellik ekleme
-  Herhangi bir SharePoint projesine özellik eklemek için bir proje uzantısı kullanabilirsiniz. Özellik, proje **Çözüm Gezgini**seçildiğinde **Özellikler** penceresinde görünür.
+  Herhangi bir SharePoint projesine özellik eklemek için bir proje uzantısı kullanabilirsiniz. Özellik, proje **Çözüm Gezgini** seçildiğinde **Özellikler** penceresinde görünür.
 
  Aşağıdaki adımlarda zaten bir proje uzantısı oluşturmuş olduğunuz varsayılır. Daha fazla bilgi için bkz. [nasıl yapılır: SharePoint Proje uzantısı oluşturma](../sharepoint/how-to-create-a-sharepoint-project-extension.md).
 

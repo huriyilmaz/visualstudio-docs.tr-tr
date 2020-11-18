@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: olay alıcısı oluşturma | Microsoft Docs'
+description: Bir kullanıcı listeler veya liste öğeleri gibi SharePoint öğeleriyle etkileşime geçtiğinde yanıt verebilmeniz için bir olay alıcısı oluşturun.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -17,15 +19,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 26d8c9f433fad051716b6ebd37e3d1f3b3f9f4eb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2e94bd1594f94f43c82eed5033d6ec2660905c18
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016917"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94849889"
 ---
 # <a name="how-to-create-an-event-receiver"></a>Nasıl yapılır: olay alıcısı oluşturma
-  *Olay alıcıları*oluşturarak, bir kullanıcı listeler veya liste öğeleri gibi SharePoint öğeleriyle etkileşime geçtiğinde yanıt verebilirsiniz. Örneğin, bir kullanıcı takvimi değiştirdiğinde veya bir kişi listesinden bir adı silerse bir olay alıcısındaki kod tetiklenebilir. Bu konuyu izleyerek bir liste örneğine bir olay alıcısının nasıl ekleneceğini öğrenebilirsiniz.
+  *Olay alıcıları* oluşturarak, bir kullanıcı listeler veya liste öğeleri gibi SharePoint öğeleriyle etkileşime geçtiğinde yanıt verebilirsiniz. Örneğin, bir kullanıcı takvimi değiştirdiğinde veya bir kişi listesinden bir adı silerse bir olay alıcısındaki kod tetiklenebilir. Bu konuyu izleyerek bir liste örneğine bir olay alıcısının nasıl ekleneceğini öğrenebilirsiniz.
 
  Bu adımları tamamlayabilmeniz için, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Windows ve SharePoint 'in yüklü ve desteklenen sürümlerini yüklemiş olmanız gerekir. Bu örnekte bir SharePoint projesi gerektiğinden, [Izlenecek yol: SharePoint için site sütunu, içerik türü ve liste oluşturma](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md)konusundaki prosedürü de tamamlamış olmanız gerekir.
 
@@ -36,13 +38,13 @@ ms.locfileid: "86016917"
 
 1. [Izlenecek yol: SharePoint için site sütunu, içerik türü ve liste oluşturma](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md)bölümünde oluşturduğunuz projeyi açın.
 
-2. **Çözüm Gezgini**' de, **Clinic**adlı SharePoint proje düğümünü seçin.
+2. **Çözüm Gezgini**' de, **Clinic** adlı SharePoint proje düğümünü seçin.
 
 3. Menü çubuğunda, **Proje**  >  **Yeni öğe Ekle**' yi seçin.
 
-4. **Visual C#** veya **Visual Basic**altında **SharePoint** düğümünü genişletin ve ardından **2010** öğesini seçin.
+4. **Visual C#** veya **Visual Basic** altında **SharePoint** düğümünü genişletin ve ardından **2010** öğesini seçin.
 
-5. **Şablonlar** bölmesinde **olay alıcısı**' nı seçin, **TestEventReceiver1**olarak adlandırın ve **Tamam** düğmesini seçin.
+5. **Şablonlar** bölmesinde **olay alıcısı**' nı seçin, **TestEventReceiver1** olarak adlandırın ve **Tamam** düğmesini seçin.
 
      **SharePoint Özelleştirme Sihirbazı** görüntülenir.
 
@@ -50,7 +52,7 @@ ms.locfileid: "86016917"
 
 7. **Hangi öğe olay kaynağı olmalıdır?** listesinde, **hastalar (klinic\hastalar)** öğesini seçin.
 
-8. **Aşağıdaki olayları işle** listesinde, **öğe eklenmiş**seçeneğinin yanındaki onay kutusunu işaretleyin ve ardından **son** düğmesini seçin.
+8. **Aşağıdaki olayları işle** listesinde, **öğe eklenmiş** seçeneğinin yanındaki onay kutusunu işaretleyin ve ardından **son** düğmesini seçin.
 
      Yeni olay alıcısının kod dosyası, adlı tek bir yöntem içerir `ItemAdded` . Sonraki adımda, bu yönteme kod ekleyeceksiniz, böylece her kişi varsayılan olarak Scott kahverengi olarak adlandırılır.
 

@@ -1,5 +1,7 @@
 ---
 title: SharePoint Araçları uzantıları ile özel verileri ilişkilendirme | Microsoft Docs
+description: SharePoint Araç Uzantıları ile özel verileri ilişkilendirin. Özel veri içerebilen nesnelerin listesini görüntüleyin. Özel veri ekleyin ve alın.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 434f8aaf9303f3ee9a4008094b4e98c99d635e9f
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: db32c05b4a1f4536e71b4ef233758f747a958327
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584696"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850409"
 ---
 # <a name="associate-custom-data-with-sharepoint-tools-extensions"></a>SharePoint Araç Uzantıları ile özel verileri ilişkilendirme
   SharePoint araçları uzantılarında belirli nesnelere özel veriler ekleyebilirsiniz. Bu, uzantınızın bir bölümünde yer alan ve daha sonra uzantınızın diğer kodundan erişmek istediğiniz veriler olduğunda yararlıdır. Verileri depolamak ve verilere erişmek için özel bir yol uygulamak yerine, verileri uzantınızın bir nesnesiyle ilişkilendirebilir ve ardından verileri aynı nesneden daha sonra alabilirsiniz.

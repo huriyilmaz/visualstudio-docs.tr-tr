@@ -1,18 +1,18 @@
 ---
 title: Visual Studio 'da XAML Tasarımcısı tasarım zamanı verilerini kullanma
 description: XAML 'de tasarım zamanı verilerini nasıl kullanacağınızı öğrenin.
-ms.date: 11/10/2020
+ms.date: 11/17/2020
 ms.topic: overview
 author: alihamie
 ms.author: tglee
 manager: jillfra
 monikerRange: vs-2019
-ms.openlocfilehash: bda4af3a3985ec6fc3aae1e991b7f5f622d67965
-ms.sourcegitcommit: e8a13978131f257d91ce37c5a2e0d153a4c400ef
+ms.openlocfilehash: 992c97b188535fb39548fca4fd9d02d588a45474
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94704007"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850747"
 ---
 # <a name="use-design-time-data-with-the-xaml-designer-in-visual-studio"></a>Visual Studio 'da XAML Tasarımcısı tasarım zamanı verilerini kullanma
 
@@ -179,11 +179,11 @@ Bu bölümde listelenmeyen bir sorunla karşılaşırsanız lütfen [sorun bildi
 
 ### <a name="requirements"></a>Gereksinimler
 
-- Tasarım zamanı verileri, Visual Studio 2019 sürüm [16,7](/visualstudio/releases/2019/release-notes) veya üstünü gerektirir.
+- Tasarım zamanı verileri, Visual Studio 2019 sürüm [16,7](/visualstudio/releases/2019/release-notes-v16.7) veya üstünü gerektirir.
 
-- .NET Core ve UWP için Windows Presentation Foundation (WPF) hedefleyen Windows Masaüstü projelerini destekler. Bu özellik, .NET Framework için [Önizleme kanalında](/visualstudio/releases/2019/release-notes-preview) da kullanılabilir. Etkinleştirmek için **Araçlar**  >  **Seçenekler**  >  **ortam**  >  **Önizleme özellikleri**' ne gidin, **.NET Framework için yeni WPF XAML Tasarımcısı** seçin ve ardından Visual Studio 'yu yeniden başlatın.
+- .NET Core ve UWP için Windows Presentation Foundation (WPF) hedefleyen Windows Masaüstü projelerini destekler. Bu özellik, [Önizleme kanalında](/visualstudio/releases/2019/release-notes-preview).NET Framework için de kullanılabilir. Etkinleştirmek için **Araçlar**  >  **Seçenekler**  >  **ortam**  >  **Önizleme özellikleri**' ne gidin, **.NET Framework için yeni WPF XAML Tasarımcısı** seçin ve ardından Visual Studio 'yu yeniden başlatın.
 
-- Visual Studio 2019 sürüm 16,7 ' den itibaren, bu özellik WPF ve UWP çerçevelerinden gelen tüm yerleşik denetimlerle birlikte kullanılabilir. Üçüncü taraf denetimleri için destek artık 16,8 Önizleme sürümünde sunulmaktadır.
+- Visual Studio 2019 sürüm 16,7 ' den itibaren, bu özellik WPF ve UWP çerçevelerinden gelen tüm yerleşik denetimlerle birlikte kullanılabilir. Üçüncü taraf denetimleri için destek artık [16,8 sürümünde](/visualstudio/releases/2019/release-notes/)sunulmaktadır.
 
 ### <a name="the-xaml-designer-stopped-working"></a>XAML Tasarımcısı çalışmayı durdurdu
 

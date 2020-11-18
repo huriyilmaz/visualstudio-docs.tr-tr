@@ -2,7 +2,7 @@
 title: Azure sanal makinesinde Visual Studio 'Yu kullanma
 titleSuffix: ''
 description: Azure sanal makinesinde Visual Studio 'Yu nasıl kullanacağınızı öğrenin
-ms.date: 04/23/2020
+ms.date: 11/17/2020
 ms.custom: seodec18
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +17,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 6453c263cb970ae3fff2c134f1ae570bca730b93
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f73a410752d4b3befd00602f84d575a040c457fe
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84183242"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850461"
 ---
 # <a name="visual-studio-images-on-azure"></a><a id="top"> </a> Azure 'Da Visual Studio görüntüleri
 
@@ -36,11 +36,11 @@ En son ana sürümlere ait görüntüler, Visual Studio 2019, Visual Studio 2017
 
 | Yayın sürümü                                                                                                                                          | Sürümler              |    Ürün sürümü    |
 |:--------------------------------------------------------------------------------------------------------------------------------------------------------:|:---------------------:|:-----------------------:|
-| [Visual Studio 2019: en son (sürüm 16,5)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio2019latest?tab=Overview) | Kuruluş, topluluk | Sürüm 16.5.4    |
-| Visual Studio 2019: RTW                         | Enterprise            | Sürüm 16.0.13    |
-| Visual Studio 2017: en son (sürüm 15,9)           | Kuruluş, topluluk | Sürüm 15.9.22   |
-| Visual Studio 2017: RTW                             | Kuruluş, topluluk | Sürüm 15.0.28   |
-| Visual Studio 2015: latest (güncelleştirme 3)              | Kuruluş, topluluk | Sürüm 14.0.25431.01 |
+| [Visual Studio 2019: en son (sürüm 16,8)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio2019latest?tab=Overview) | Kuruluş, topluluk | Sürüm 16.8.0    |
+| [Visual Studio 2019: RTW](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio2019?tab=Overview)                         | Enterprise            | Sürüm 16.0.20    |
+| [Visual Studio 2017: en son (sürüm 15,9)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio?tab=Overview)           | Kuruluş, topluluk | Sürüm 15.9.29   |
+| [Visual Studio 2017: RTW](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio?tab=Overview)                             | Kuruluş, topluluk | Sürüm 15.0.28   |
+| [Visual Studio 2015: latest (güncelleştirme 3)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio?tab=Overview)               | Kuruluş, topluluk | Sürüm 14.0.25431.01 |
 
 > [!NOTE]
 > Microsoft hizmet ilkesine uygun olarak, Visual Studio 2015 ' nin ilk olarak yayınlanan (RTW) sürümü bakım için sona ermiştir. Visual Studio 2015 güncelleştirme 3, Visual Studio 2015 ürün satırı için sunulan tek sürümdür.

@@ -1,5 +1,7 @@
 ---
 title: SharePoint proje öğeleri için öğe şablonları/proje şablonları
+description: SharePoint proje öğeleri için öğe şablonları ve proje şablonları oluşturun. Öğe şablonları ve proje şablonları için sihirbaz oluşturun.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ec97eb2dfab7ab92c1e324c89fd044c1a50c2173
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 59710eb4651f363d669dc27b6190f8d224d9917f
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585621"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850643"
 ---
 # <a name="create-item-templates-and-project-templates-for-sharepoint-project-items"></a>SharePoint proje öğeleri için öğe şablonları ve proje şablonları oluşturma
 
@@ -74,8 +76,8 @@ ms.locfileid: "91585621"
 |İsteğe bağlı dosya|Açıklama|
 |-------------------|-----------------|
 |SharePoint proje öğeleri|SharePoint proje öğesi türlerini tanımlayan bir veya daha fazla. spdata dosyası ekleyebilirsiniz. Her *. spdata* dosyasının, <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider> Proje şablonuyla VSIX paketine dahil edilen bir uzantı derlemesinde eşleşen bir uygulamasına sahip olması gerekir. Daha fazla bilgi için bkz. [öğe şablonları oluşturma](#create-item-templates).<br /><br /> Genellikle, SharePoint projeleri en az bir SharePoint proje öğesi içerir. Ancak, bu gerekli değildir.|
-|*\<featureName>. Feature*|Bu dosya, dağıtım için birkaç proje öğesini gruplandırmak üzere kullanılan bir SharePoint özelliğini tanımlar. Projenizdeki bir özelliği özelleştirmek için özellik tasarımcısını kullandığınızda, Visual Studio bu dosyadaki özellik hakkındaki verileri depolar. Proje öğelerini farklı özelliklere gruplandırmak isterseniz, birden fazla *. feature* dosyası ekleyebilirsiniz.<br /><br /> Özel bir SharePoint proje şablonu oluşturduğunuzda, her bir *. feature* dosyasında yalnızca gereken en az içeriği dahil etmenizi ve <xref:Microsoft.VisualStudio.SharePoint.Features> Proje şablonuyla ilişkili bir uzantıdaki ad alanındaki API 'leri kullanarak özellikleri yapılandırmanızı öneririz. Bunu yaparsanız, proje şablonunuz daha sonra *. feature* dosyası yapısına karşı değişir. Yalnızca gerekli en az içeriğe sahip bir *. feature* dosyası oluşturmayı gösteren bir örnek için bkz. [izlenecek yol: proje şablonu, Bölüm 1 ile bir site sütunu oluşturma proje öğesi](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md).<br /><br /> Bir *. feature* dosyasını doğrudan değiştirmek istiyorsanız, *% Program Files (x86)% \ Microsoft Visual Studio 11.0 \ Xml\schemas\featuremodelschema.exe. xsd*konumundaki şemayı kullanarak içeriği doğrulayabilirsiniz.|
-|*\<featureName>.Template.xml*|Bu dosya, projeden oluşturulan her bir özellik için özellik bildirim dosyası (*Feature.xml*) temelini sağlar. Proje türü kullanıcıları tarafından değiştirilmesi amaçlanmayan bazı davranışları belirtmek istiyorsanız bu dosyaya içerik ekleyebilirsiniz. Daha fazla bilgi için bkz. [Yapı bloğu: Özellikler](/previous-versions/office/developer/sharepoint-2010/ee537350(v=office.14)) ve [Feature.xml](/sharepoint/dev/schema/feature-xml-files) dosyaları.<br /><br /> Projeden bir çözüm paketi oluşturduğunuzda, Visual Studio her bir * \<featureName> . feature* dosyası ve * \<featureName>.Template.xml* dosya içeriğini bir özellik bildirim dosyası içine birleştirir. Çözüm paketleri oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: MSBuild görevlerini kullanarak bir SharePoint çözüm paketi oluşturma](../sharepoint/how-to-create-a-sharepoint-solution-package-by-using-msbuild-tasks.md).|
+|*\<featureName>. Feature*|Bu dosya, dağıtım için birkaç proje öğesini gruplandırmak üzere kullanılan bir SharePoint özelliğini tanımlar. Projenizdeki bir özelliği özelleştirmek için özellik tasarımcısını kullandığınızda, Visual Studio bu dosyadaki özellik hakkındaki verileri depolar. Proje öğelerini farklı özelliklere gruplandırmak isterseniz, birden fazla *. feature* dosyası ekleyebilirsiniz.<br /><br /> Özel bir SharePoint proje şablonu oluşturduğunuzda, her bir *. feature* dosyasında yalnızca gereken en az içeriği dahil etmenizi ve <xref:Microsoft.VisualStudio.SharePoint.Features> Proje şablonuyla ilişkili bir uzantıdaki ad alanındaki API 'leri kullanarak özellikleri yapılandırmanızı öneririz. Bunu yaparsanız, proje şablonunuz daha sonra *. feature* dosyası yapısına karşı değişir. Yalnızca gerekli en az içeriğe sahip bir *. feature* dosyası oluşturmayı gösteren bir örnek için bkz. [izlenecek yol: proje şablonu, Bölüm 1 ile bir site sütunu oluşturma proje öğesi](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md).<br /><br /> Bir *. feature* dosyasını doğrudan değiştirmek istiyorsanız, *% Program Files (x86)% \ Microsoft Visual Studio 11.0 \ Xml\schemas\featuremodelschema.exe. xsd* konumundaki şemayı kullanarak içeriği doğrulayabilirsiniz.|
+|*\<featureName>.Template.xml*|Bu dosya, projeden oluşturulan her bir özellik için özellik bildirim dosyası (*Feature.xml*) temelini sağlar. Proje türü kullanıcıları tarafından değiştirilmesi amaçlanmayan bazı davranışları belirtmek istiyorsanız bu dosyaya içerik ekleyebilirsiniz. Daha fazla bilgi için bkz. [Yapı bloğu: Özellikler](/previous-versions/office/developer/sharepoint-2010/ee537350(v=office.14)) ve [Feature.xml](/sharepoint/dev/schema/feature-xml-files) dosyaları.<br /><br /> Projeden bir çözüm paketi oluşturduğunuzda, Visual Studio her bir *\<featureName> . feature* dosyası ve *\<featureName>.Template.xml* dosya içeriğini bir özellik bildirim dosyası içine birleştirir. Çözüm paketleri oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: MSBuild görevlerini kullanarak bir SharePoint çözüm paketi oluşturma](../sharepoint/how-to-create-a-sharepoint-solution-package-by-using-msbuild-tasks.md).|
 
 ## <a name="create-wizards-for-item-templates-and-project-templates"></a>Öğe şablonları ve proje şablonları için sihirbaz oluşturma
  Bir SharePoint proje öğesi türünü tanımladıktan ve bir öğe ya da proje şablonuyla ilişkilendirdikten sonra, bir sihirbaz de oluşturabilirsiniz. Sihirbaz, bir geliştirici SharePoint proje öğesini bir projeye eklemek için öğe şablonunu kullandığında veya bir geliştirici, SharePoint proje öğesini içeren yeni bir proje oluşturmak için proje şablonunu kullandığında görüntülenir. Sihirbaz, geliştiricilerden bilgi toplamak ve yeni SharePoint proje öğesini başlatmak için kullanılabilir.

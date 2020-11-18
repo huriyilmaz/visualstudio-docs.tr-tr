@@ -1,5 +1,7 @@
 ---
 title: Iş verileri bağlantı modeli oluşturma | Microsoft Docs
+description: Visual Studio kullanarak bir Iş verileri bağlantısı (BDC) modeli oluşturun veya var olan bir BDC modelini özelleştirin. Her SharePoint projesi yalnızca bir model içerebilir.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,23 +17,23 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9f3da13858507a3ff176aaa0a44051674fd5285f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0486ce6ac53850b1b607f9e7f859806cdc3ef8fe
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64788190"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850474"
 ---
 # <a name="create-a-business-data-connectivity-model"></a>İş verileri bağlantı modeli oluşturma
   Visual Studio kullanarak, bir Iş verileri bağlantısı (BDC) modeli oluşturabilir veya var olan bir BDC modelini özelleştirebilirsiniz. Her SharePoint projesi yalnızca bir model içerebilir. Daha fazla bilgi için bkz. [iş verilerini SharePoint Ile tümleştirme](../sharepoint/integrating-business-data-into-sharepoint.md).
 
 ## <a name="create-a-new-model"></a>Yeni model oluştur
- Yeni bir model oluşturmak için, bir **Iş verileri bağlantı modeli** projesi oluşturun veya **boş bir SharePoint projesine**bir **iş verileri bağlantı modeli** öğesi ekleyin.
+ Yeni bir model oluşturmak için, bir **Iş verileri bağlantı modeli** projesi oluşturun veya **boş bir SharePoint projesine** bir **iş verileri bağlantı modeli** öğesi ekleyin.
 
 > [!NOTE]
 > [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)]Bilgisayarınızda yüklü olmalıdır.
 
- Visual Studio projeye bir klasör ekler. Bu klasör, **Yeni öğe Ekle** Iletişim kutusunda **Iş verileri bağlantı modeli** öğesi için belirttiğiniz ada sahiptir. Yeni bir **Iş verileri bağlantı modeli** projesi oluşturursanız, Visual Studio **BdcModel1**klasörünü adlandırır.
+ Visual Studio projeye bir klasör ekler. Bu klasör, **Yeni öğe Ekle** Iletişim kutusunda **Iş verileri bağlantı modeli** öğesi için belirttiğiniz ada sahiptir. Yeni bir **Iş verileri bağlantı modeli** projesi oluşturursanız, Visual Studio **BdcModel1** klasörünü adlandırır.
 
  Visual Studio yeni klasöre aşağıdaki dosyaları ekler:
 

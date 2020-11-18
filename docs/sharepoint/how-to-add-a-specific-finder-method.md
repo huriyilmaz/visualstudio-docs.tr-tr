@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: belirli bir bulucu yöntemi ekleme | Microsoft Docs'
+description: Bir bulucu yöntemi ekleyerek bir varlık örneği alın. Bir Kullanıcı bir iş verileri Web bölümünde veya dış listede bir varlık seçtiğinde BDC hizmeti yöntemi çağırır.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -17,23 +19,23 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 403213b6dcd87251df0b24333c759c8de8720afd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a02e88b0168a6aa4b1a69af3ee14150a71e76037
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86014820"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94849734"
 ---
 # <a name="how-to-add-a-specific-finder-method"></a>Nasıl yapılır: belirli bir bulucu yöntemi ekleme
   *Belirli bir bulucu* yöntemi oluşturarak tek bir varlık örneği döndürebilirsiniz. Iş verileri bağlantısı (BDC) hizmeti, bir kullanıcı iş verileri Web bölümünde veya dış listede bir varlık seçtiğinde belirli Bulucu yöntemini yürütür. Daha fazla bilgi için bkz. [iş verileri bağlantı modeli tasarlama](../sharepoint/designing-a-business-data-connectivity-model.md).
 
 ### <a name="to-create-a-specific-finder-method"></a>Belirli bir bulucu yöntemi oluşturmak için
 
-1. **IVB tasarımcısında**bir varlık seçin.
+1. **IVB tasarımcısında** bir varlık seçin.
 
     Visual Studio 'da **BDC tasarımcısına** bir varlık ekleme hakkında daha fazla bilgi için bkz. [nasıl yapılır: modele varlık ekleme](../sharepoint/how-to-add-an-entity-to-a-model.md).
 
-2. Menü çubuğunda, **View**  >  **diğer Windows**ve **BDC Yöntem ayrıntılarını**görüntüle ' yi seçin.
+2. Menü çubuğunda, **View**  >  **diğer Windows** ve **BDC Yöntem ayrıntılarını** görüntüle ' yi seçin.
 
     **IVB yöntemi ayrıntıları** penceresi açılır. Bu pencere hakkında daha fazla bilgi için bkz. [BDC modeli tasarım araçlarına genel bakış](../sharepoint/bdc-model-design-tools-overview.md).
 
@@ -61,7 +63,7 @@ ms.locfileid: "86014820"
    > Varlığa bir bulucu yöntemi eklediyseniz bu adımı gerçekleştirmeniz gerekmez. Visual Studio, Finder yönteminde tanımladığınız tür tanımlayıcısını kullanır.
 
    > [!NOTE]
-   > Varlık türünün tanımlayıcı alanı, otomatik olarak oluşturulan bir veritabanı tablosundaki bir alanı temsil ediyorsa, tanımlayıcı alanının **salt okunurdur** özelliğini **true**olarak ayarlayın.
+   > Varlık türünün tanımlayıcı alanı, otomatik olarak oluşturulan bir veritabanı tablosundaki bir alanı temsil ediyorsa, tanımlayıcı alanının **salt okunurdur** özelliğini **true** olarak ayarlayın.
 
 6. **Yöntem ayrıntıları** penceresinde, yönteminin Yöntem örneğini seçin.
 

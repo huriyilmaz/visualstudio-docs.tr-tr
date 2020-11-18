@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: BDC modeli oluşturma | Microsoft Docs'
+description: Bu tür öğe için Visual Studio şablonunu kullanarak bir Iş verileri bağlantısı (BDC) modeli oluşturun ve ardından modeli herhangi bir SharePoint projesine ekleyin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 139da31ced1d32def450a1dc176ca241b0c4677f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8f95533a5ad3955ee00829194bc4da1498baace0
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86014546"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850682"
 ---
 # <a name="how-to-create-a-bdc-model"></a>Nasıl yapılır: BDC modeli oluşturma
   Bu öğe türü için şablonu kullanarak bir Iş verileri bağlantısı (BDC) modeli oluşturabilir ve ardından modeli herhangi bir SharePoint projesine ekleyebilirsiniz. Daha fazla bilgi için bkz. [iş verileri bağlantı modeli oluşturma](../sharepoint/creating-a-business-data-connectivity-model.md). Modeli tasarlamak hakkında daha fazla bilgi için bkz. [iş verileri bağlantı modeli tasarlama](../sharepoint/designing-a-business-data-connectivity-model.md).

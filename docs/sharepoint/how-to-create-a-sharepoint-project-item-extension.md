@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: SharePoint proje öğesi uzantısı oluşturma | Microsoft Docs'
+description: Visual Studio 'da zaten yüklü olan bir SharePoint proje öğesine işlevsellik eklemek istediğinizde bir proje öğesi uzantısının nasıl oluşturulacağını inceleyin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 345bfa49da4bf5d5b73fe1d3f209675fe2814de2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6ad0befdfc656233373e8c79d14495aa3f7fa21e
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015345"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850657"
 ---
 # <a name="how-to-create-a-sharepoint-project-item-extension"></a>Nasıl yapılır: SharePoint proje öğesi uzantısı oluşturma
   Visual Studio 'da zaten yüklü olan bir SharePoint proje öğesine işlevsellik eklemek istediğinizde bir proje öğesi uzantısı oluşturun. Daha fazla bilgi için bkz. [SharePoint proje öğelerini genişletme](../sharepoint/extending-sharepoint-project-items.md).

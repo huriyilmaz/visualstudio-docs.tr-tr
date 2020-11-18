@@ -1,5 +1,7 @@
 ---
 title: SharePoint çözümlerini derleme ve hata ayıklama | Microsoft Docs
+description: SharePoint çözümlerini derlemeyi ve hata ayıklamayı öğrenin ve Visual Studio 'da diğer proje türlerini oluşturma ve hata ayıklamanın nasıl farklı olduğunu anlayın.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: overview
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e4b34df23c8cb612d72fed108a6c0aecbf57875c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f6801f6b60d2ef522385ecdf290d0a1913bd6df2
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016363"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850240"
 ---
 # <a name="build-and-debug-sharepoint-solutions"></a>SharePoint çözümlerini derleme ve hata ayıklama
   Genel olarak, SharePoint çözümlerini derleme ve hata ayıklama, içindeki diğer proje türlerini derleme ve hata ayıklama ile aynıdır [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . Bu bölümdeki konular, var olan farkları açıklamaktadır.
@@ -28,10 +30,10 @@ ms.locfileid: "86016363"
 
 |Derleme öğesi|Çıkış klasörü|
 |----------------|-------------------|
-|Derleme, program veritabanı (*. pdb*) ve *. wsp* dosyaları.|* \<ProjectName> \Bin\Debug* veya * \<ProjectName> \bin\Release*|
-|SharePoint proje öğesi dosyaları.|* \<ProjectName> \pkg\debug* veya * \<ProjectName> \pkg\release*|
-|Ara dosyalar oluşturun.|* \<ProjectName> \obj\debug* veya * \<ProjectName> \obj\release*|
-|Paket ara dosyaları.|* \<ProjectName> \pkgobj\debug* veya * \<ProjectName> \pkgobj\release*|
+|Derleme, program veritabanı (*. pdb*) ve *. wsp* dosyaları.|*\<ProjectName> \Bin\Debug* veya *\<ProjectName> \bin\Release*|
+|SharePoint proje öğesi dosyaları.|*\<ProjectName> \pkg\debug* veya *\<ProjectName> \pkg\release*|
+|Ara dosyalar oluşturun.|*\<ProjectName> \obj\debug* veya *\<ProjectName> \obj\release*|
+|Paket ara dosyaları.|*\<ProjectName> \pkgobj\debug* veya *\<ProjectName> \pkgobj\release*|
 
 ## <a name="build-sharepoint-solutions"></a>SharePoint çözümleri oluşturma
  SharePoint çözümleri oluşturmak için, geliştirme bilgisayarında SharePoint Server 'ın doğru sürümünün yüklü olması gerekir. Aksi halde, SharePoint çözümlerini derleme ' de diğer proje türlerini oluşturma ile aynıdır [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . Daha fazla bilgi için bkz. [nasıl yapılır: SharePoint çözümleri derleme](../sharepoint/how-to-build-sharepoint-solutions.md).

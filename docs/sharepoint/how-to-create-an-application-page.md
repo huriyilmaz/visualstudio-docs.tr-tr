@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: uygulama sayfası oluşturma | Microsoft Docs'
+description: Bir veya daha fazla SharePoint sitesi için Visual Studio 'da bir ASP.NET Web sayfası (uygulama sayfası olarak da bilinir) oluşturun.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 32e6fbb7cece4c3b7513dfc1f5de3aca22f145ee
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: df52ca75ef99fe98158cb5f874e59fe4ee0c47b4
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016949"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94849863"
 ---
 # <a name="how-to-create-an-application-page"></a>Nasıl yapılır: uygulama sayfası oluşturma
   Bir veya daha fazla SharePoint sitesi için ASP.NET Web sayfası oluşturabilirsiniz. SharePoint 'te, bu sayfalara uygulama sayfaları denir. Bir site sayfasının aksine, bir uygulama sayfası sayfanın arkasında çalışan kodu içerir. Daha fazla bilgi için bkz. [SharePoint için uygulama sayfaları oluşturma](../sharepoint/creating-application-pages-for-sharepoint.md).

@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: proje çıktı başvurusu ekleme | Microsoft Docs'
+description: SharePoint 'e ait olmayan proje derlemelerini (veya Silverlight projelerinde. xap dosyalarını) SharePoint 'e dağıtabilmeniz için bir proje çıkış başvurusu eklemeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: bea0f39ae161d8b695f872cb634c35d0cb205c91
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 03980eea9d16cde2b6f079e0b33973958fed7a7f
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016748"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94849876"
 ---
 # <a name="how-to-add-a-project-output-reference"></a>Nasıl yapılır: proje çıktı başvurusu ekleme
   SharePoint olmayan proje derlemelerini (veya. xap dosyalarını Silverlight projelerinde) SharePoint 'e dağıtmak için, bunları bir proje çıktı başvurusu olarak ekleyin.
@@ -36,7 +38,7 @@ ms.locfileid: "86016748"
 
 4. **Proje çıktısı başvuruları** Iletişim kutusunda **Ekle** düğmesini seçin.
 
-5. Özellikler bölmesinde, **dağıtım türü** özelliğinin yanındaki oku seçin ve ardından başvuru yaptığınız SharePoint olmayan öğe Için **ElementFile**gibi uygun bir değer seçin.
+5. Özellikler bölmesinde, **dağıtım türü** özelliğinin yanındaki oku seçin ve ardından başvuru yaptığınız SharePoint olmayan öğe Için **ElementFile** gibi uygun bir değer seçin.
 
 6. **Proje adı**' nın yanındaki oku seçin, SharePoint olmayan proje öğesinin adını seçin ve **Tamam** düğmesini seçin.
 

@@ -1,25 +1,45 @@
 ---
 title: Takım Gezgini projelere bağlanma
-ms.date: 07/07/2020
+description: Projeleri geliştirmek ve yönetmek için Visual Studio 'da Takım Gezgini kullanarak takım üyeleriyle nasıl çalışacağınızı öğrenin.
+ms.date: 11/17/2020
 ms.topic: conceptual
 ms.author: tglee
 author: TerryGLee
 ms.manager: jillfra
-ms.openlocfilehash: ff2e78698bb9180a50a4c2c8014b88dfd07b0b77
-ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
+ms.openlocfilehash: 4e4fdfb26c601ce6b706c1c946ea9afe9b18ecb2
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91829911"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850097"
 ---
 # <a name="connect-to-projects-in-team-explorer"></a>Takım Gezgini projelere bağlanma
 
+::: moniker range="vs-2017"
+
 Bir proje geliştirmek ve size, takımınızı ya da projelerinize atanan işleri yönetmek için, **Takım Gezgini** araç penceresini diğer takım üyeleriyle koordine etmek için kullanın. **Takım Gezgini** , Visual Studio 'yu git ve GitHub depoları, Team Foundation sürüm denetimi (TFVC) depoları ve [Azure DevOps Services](/azure/devops/user-guide/what-is-azure-devops-services) veya şirket içi [Azure DevOps Server](/azure/devops/index-all) (eski adıyla TFS) barındırılan projelere bağlar. Kaynak kodu, iş öğeleri ve yapıları yönetebilirsiniz.
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+**Takım Gezgini** araç penceresini, proje geliştirmek için kod çabalarınızı diğer takım üyeleriyle koordine etmek ve size, ekibinize veya projelerinize atanan işleri yönetmek için kullanabilirsiniz.
+
+> [!IMPORTANT]
+> Visual Studio 2019 [sürüm 16,8](/visualstudio/releases/2019/release-notes/)' nin son sürümüyle birlikte yeni git sürüm denetimi deneyimi artık varsayılan olarak açık durumdadır. Ancak Takım Gezgini kullanmaya devam etmeyi tercih ediyorsanız, **Araçlar**  >  **Seçenekler**  >  **ortam**  >  **Önizleme özellikleri** ' ne gidin ve ardından **Yeni git Kullanıcı deneyimi** onay kutusunu açın. Daha fazla bilgi için bkz. [Visual Studio 'Da git deneyimi](git-with-visual-studio.md) sayfası.
+
+**Takım Gezgini** , Visual Studio 'yu git ve GitHub depoları, Team Foundation sürüm denetimi (TFVC) depoları ve [Azure DevOps Services](/azure/devops/user-guide/what-is-azure-devops-services) veya şirket içi [Azure DevOps Server](/azure/devops/index-all) (eski adıyla TFS) barındırılan projelere bağlar. Kaynak kodu, iş öğeleri ve yapıları yönetebilirsiniz.
+
+::: moniker-end
 
 ![Visual Studio 'da Takım Gezgini giriş sayfası](media/team-explorer/team-explorer.png)
 
+::: moniker range="vs-2017"
+
 > [!TIP]
-> Visual Studio 'yu açıp **Takım Gezgini** görünmezse, **View**  >  menü çubuğundan**Takım Gezgini** görüntüle ' yi seçerek veya **CTRL** + **&#92;**, **CTRL**tuşuna basarak dosyayı açın + **M**.
+> Visual Studio 'yu açıp **Takım Gezgini** görünmezse, **View**  >  menü çubuğundan **Takım Gezgini** görüntüle ' yi seçerek veya **CTRL** + **&#92;**, **CTRL** tuşuna basarak dosyayı açın + **M**.
+
+::: moniker-end
 
 ## <a name="connect-to-a-project-or-repository"></a>Bir projeye veya depoya bağlanma
 
@@ -42,6 +62,7 @@ Bir projeye bağlanmak için:
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
+- [Visual Studio 'da yeni git deneyimi](git-with-visual-studio.md)
 - [Öğretici: bir depodan bir proje açın](../get-started/tutorial-open-project-from-repo.md)
 - [Takım Gezgini başvurusu](reference/team-explorer-reference.md)
 - [Bir projeye bağlanma (Azure DevOps)](/azure/devops/organizations/projects/connect-to-projects)

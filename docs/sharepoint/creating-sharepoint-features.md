@@ -1,5 +1,7 @@
 ---
 title: SharePoint özellikleri oluşturuluyor | Microsoft Docs
+description: Daha kolay dağıtım için ilgili SharePoint proje öğelerini gruplamak üzere bir SharePoint özelliği oluşturun. SharePoint çözümüne özellikler ekleyin. Özellik tasarımcısını kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8d3f453770dbb389a688db0a9edcc8e97e179858
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 06a8fdef9c194e9b0f81768f93b675ade77d39ef
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62952756"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850591"
 ---
 # <a name="create-sharepoint-features"></a>SharePoint özellikleri oluşturma
   Daha kolay dağıtım için ilgili SharePoint proje öğelerini gruplamak üzere bir SharePoint özelliği kullanabilirsiniz. SharePoint Özellik tasarımcısını kullanarak Özellikler oluşturabilir, kapsamları ayarlayabilir ve diğer özellikleri bağımlılıklar olarak işaretleyebilirsiniz. Tasarımcı Ayrıca her bir özelliği açıklayan bir XML dosyası olan bir bildirim oluşturur.
@@ -26,7 +28,7 @@ ms.locfileid: "62952756"
 ## <a name="add-features-to-the-sharepoint-solution"></a>SharePoint çözümüne özellikler ekleme
  SharePoint çözümüne Çözüm Gezgini veya paketleme Gezgini 'ni kullanarak bir özellik ekleyebilirsiniz. Bir özellik eklemek için aşağıdaki yöntemlerden birini kullanabilirsiniz.
 
-- **Çözüm Gezgini**, **Özellikler**için kısayol menüsünü açın ve **Özellik Ekle**' yi seçin.
+- **Çözüm Gezgini**, **Özellikler** için kısayol menüsünü açın ve **Özellik Ekle**' yi seçin.
 
 - **Paketleme Gezgini**' nde paketin kısayol menüsünü açın ve **Özellik Ekle**' yi seçin.
 
@@ -40,9 +42,9 @@ ms.locfileid: "62952756"
 
 |Özellik|Açıklama|
 |--------------|-----------------|
-|Başlık|İsteğe bağlı. Özelliğin varsayılan başlığı *SolutionName* *featurename*olarak ayarlanmıştır.|
+|Başlık|İsteğe bağlı. Özelliğin varsayılan başlığı *SolutionName* *featurename* olarak ayarlanmıştır.|
 |Açıklama|İsteğe bağlı. SharePoint özelliğinin açıklaması.|
-|Kapsam|Gereklidir. Bir özellik **Çözüm Gezgini**kullanılarak oluşturulduysa, kapsam varsayılan olarak Web 'e ayarlanır.<br /><br /> -Farm: tüm sunucu grubu için bir özelliği etkinleştirin.<br /><br /> -Site: bir site koleksiyonundaki tüm Web siteleri için bir özelliği etkinleştirin.<br /><br /> -Web: belirli bir Web sitesi için bir özelliği etkinleştirin.<br /><br /> -WebApplication: bir Web uygulamasındaki tüm Web siteleri için bir özelliği etkinleştirin.|
+|Kapsam|Gereklidir. Bir özellik **Çözüm Gezgini** kullanılarak oluşturulduysa, kapsam varsayılan olarak Web 'e ayarlanır.<br /><br /> -Farm: tüm sunucu grubu için bir özelliği etkinleştirin.<br /><br /> -Site: bir site koleksiyonundaki tüm Web siteleri için bir özelliği etkinleştirin.<br /><br /> -Web: belirli bir Web sitesi için bir özelliği etkinleştirin.<br /><br /> -WebApplication: bir Web uygulamasındaki tüm Web siteleri için bir özelliği etkinleştirin.|
 |Çözümdeki öğeler|Özelliğe eklenebilecek tüm SharePoint öğeleri.|
 |Özelliğindeki öğeler|Özelliğe eklenen SharePoint proje öğeleri.|
 

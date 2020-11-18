@@ -1,6 +1,8 @@
 ---
 title: Özel SharePoint proje öğesi türüne kısayol menü öğesi Ekle
 titleSuffix: ''
+description: Özel bir SharePoint proje öğesi türüne nasıl kısayol menü öğesi ekleneceğini öğrenin. Çözüm Gezgini içindeki proje öğesine sağ tıkladığınızda menü öğesi görünür.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,15 +17,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 39de735c09c97541684628c8e4140aa42d119500
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 2916b806c6e149a9c0cbe2495a7edabcfc883e7e
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585881"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850084"
 ---
 # <a name="how-to-add-a-shortcut-menu-item-to-a-custom-sharepoint-project-item-type"></a>Nasıl yapılır: özel bir SharePoint proje öğe türüne kısayol menü öğesi ekleme
-  Özel bir SharePoint proje öğesi türü tanımladığınızda, proje öğesine kısayol menü öğesi ekleyebilirsiniz. Kullanıcı **Çözüm Gezgini**içindeki proje öğesine sağ tıkladığında menü öğesi görünür.
+  Özel bir SharePoint proje öğesi türü tanımladığınızda, proje öğesine kısayol menü öğesi ekleyebilirsiniz. Kullanıcı **Çözüm Gezgini** içindeki proje öğesine sağ tıkladığında menü öğesi görünür.
 
  Aşağıdaki adımlarda, kendi SharePoint proje öğesi türünü zaten tanımlamış olduğunuz varsayılır. Daha fazla bilgi için bkz. [nasıl yapılır: bir SharePoint proje öğesi türü tanımlama](../sharepoint/how-to-define-a-sharepoint-project-item-type.md).
 

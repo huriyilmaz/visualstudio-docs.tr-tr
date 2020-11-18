@@ -1,5 +1,7 @@
 ---
 title: SharePoint için uygulama sayfaları oluşturma | Microsoft Docs
+description: SharePoint için uygulama sayfaları oluşturun. Bir uygulama sayfası, SharePoint Web sitesinde kullanılmak üzere tasarlanan bir ASP.NET Web sayfasıdır.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 47f403f4eec6ec66563ae88bec226e073f625716
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1228ef551235fd616803d6e05057ee50f0ea7ec4
+ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72981106"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94850448"
 ---
 # <a name="create-application-pages-for-sharepoint"></a>SharePoint için uygulama sayfaları oluşturma
   Bir *uygulama sayfası* , SharePoint Web sitesinde kullanılmak üzere tasarlanan bir ASP.NET Web sayfasıdır. Uygulama sayfaları, ASP.NET sayfasının özelleşmiş bir türüdür. Bir uygulama sayfası ve standart ASP.NET sayfası arasındaki birincil fark, bir uygulama sayfasının bir SharePoint ana sayfasıyla birleştirilmiş içerik içermesinden bir uygulamadır. Ana sayfa, uygulama sayfalarının bir sitedeki diğer sayfalarla aynı görünümü ve davranışı paylaşmasına olanak sağlar.
@@ -41,14 +43,14 @@ ms.locfileid: "72981106"
 ## <a name="create-an-application-page"></a>Uygulama sayfası oluşturma
  Bir uygulama sayfası oluşturmak için bir SharePoint projesine bir **Uygulama sayfa** öğesi ekleyin. Bir uygulama sayfası oluşturduğunuzda, Visual Studio projenize aşağıdaki klasörleri ekler:
 
-|Klasör|Description|
+|Klasör|Açıklama|
 |------------|-----------------|
 |Düzenler|SharePoint dosya sisteminin _layouts sanal diziniyle eşlenir.|
 |Düzenler alt klasörü|Uygulama sayfasını oluşturan dosyaları içerir. Varsayılan olarak, bu klasör projenizle aynı ada sahiptir. Bu klasörü dilediğiniz zaman yeniden adlandırabilirsiniz. Projeyi çalıştırdığınızda, Visual Studio bu klasörü SharePoint dosya sisteminin _layouts sanal dizinine dağıtır.|
 
  Visual Studio projenize aşağıdaki dosyaları ekler:
 
-|Dosya|Description|
+|Dosya|Açıklama|
 |----------|-----------------|
 |ASP.NET sayfa dosyası (*. aspx*)|Sayfayı tanımlayan XML işaretlemesini içerir.|
 |Uygulama sayfası kod dosyası|Uygulama sayfasının arkasındaki kodu içerir. Bu dosyaya olayları işleyen kodu ekleyin.|
