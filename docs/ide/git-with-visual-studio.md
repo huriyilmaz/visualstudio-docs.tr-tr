@@ -8,12 +8,12 @@ ms.author: tglee
 author: TerryGLee
 ms.manager: jillfra
 monikerRange: vs-2019
-ms.openlocfilehash: 621aed831e55d2fca1fda7063f8c10f859ca5157
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: 30ae69f07c89efb6d01228088596fc1bc05fac87
+ms.sourcegitcommit: e8a13978131f257d91ce37c5a2e0d153a4c400ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 11/17/2020
-ms.locfileid: "94672528"
+ms.locfileid: "94704072"
 ---
 # <a name="git-experience-in-visual-studio"></a>Visual Studio 'da git deneyimi
 
@@ -35,7 +35,7 @@ Daha üretken olmak için Visual Studio ile git kullanmaya başlamanın üç yol
 - [Var olan bir Git deposunu kopyalayın](#clone-an-existing-git-repository). Üzerinde çalışmak istediğiniz kod makinenizde yoksa, var olan uzak depoları kopyalayabilirsiniz.
 
 > [!NOTE]
-> Visual Studio 2019 artık tamamen tümleşik bir GitHub hesabı deneyimi sunmaktadır. [Sürüm 16,8](/visualstudio/releases/2019/release-notes/)' den başlayarak, anahtarınıza hem GitHub hem de GitHub Enterprise hesapları ekleyebilirsiniz. Microsoft hesapları ile yaptığınız gibi bunları ekleyebilir ve bu kişilere de atayabilirsiniz. Bu, GitHub kaynaklarınıza Visual Studio üzerinden erişmenin daha kolay bir zaman olacağı anlamına gelir. Daha fazla bilgi için bkz. [Visual Studio 'Da GitHub hesaplarıyla çalışma](work-with-github-accounts.md) sayfası.
+> [Sürüm 16,8](/visualstudio/releases/2019/release-notes/)ile başlayarak, Visual Studio 2019 tamamen tümleşik bir GitHub hesabı deneyimi içerir. Artık anahtarınıza GitHub ve GitHub kurumsal hesaplarını ekleyebilirsiniz. Microsoft hesapları ile yaptığınız gibi bunları ekleyebilir ve bu kişilere de atayabilirsiniz. Bu, GitHub kaynaklarınıza Visual Studio üzerinden erişmenin daha kolay bir zaman olacağı anlamına gelir. Daha fazla bilgi için bkz. [Visual Studio 'Da GitHub hesaplarıyla çalışma](work-with-github-accounts.md) sayfası.
 
 ## <a name="create-a-new-git-repository"></a>Yeni bir git deposu oluşturun
 
@@ -207,5 +207,5 @@ Yeni git deneyimi artık Visual Studio 2019 [sürüm 16,8](/visualstudio/release
 - [Visual Studio araç kutusu serisi şunları sunar:](https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/The-New-Git-Experience) Channel 9 ve [YouTube](https://www.youtube.com/watch?v=ZiQ2LXtAJ6I&feature=youtu.be) 'da yeni git deneyimi videosu
 - [Visual Studio blog gönderisine git deneyimine heyecan verici yeni güncelleştirmeler](https://devblogs.microsoft.com/visualstudio/exciting-new-updates-to-the-git-experience-in-visual-studio/)
 - [Visual Studio 2019 blog gönderisine gelişmiş git deneyimi](https://devblogs.microsoft.com/visualstudio/improved-git-experience-in-visual-studio-2019/)
-- [Visual Studio 'da GitHub hesaplarıyla çalışma](work-with-github-accounts.md)
+- [Visual Studio’da GitHub hesaplarıyla çalışma](work-with-github-accounts.md)
 - [Visual Studio 2019 sürüm notları](/visualstudio/releases/2019/release-notes)
