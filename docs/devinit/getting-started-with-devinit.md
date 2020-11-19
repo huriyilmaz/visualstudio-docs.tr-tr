@@ -1,7 +1,7 @@
 ---
 title: Devinit ile çalışmaya başlama
 description: Devınit için Başlarken Kılavuzu.
-ms.date: 08/28/2020
+ms.date: 11/18/2020
 ms.topic: reference
 author: andysterland
 ms.author: andster
@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 1f66f691bd92c6cc9d315c58225b9345198fe96d
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: d071a49c9996c9f7f161faf676117704fbcbbdcd
+ms.sourcegitcommit: 3b9a8aec34c7e835069f4db5c133dd002028180c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94435768"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94937697"
 ---
 # <a name="getting-started-with-devinit"></a>Devinit ile çalışmaya başlama
 
@@ -32,7 +32,9 @@ devinit Şu anda yalnızca Visual Studio kullanılırken GitHub Codespaces 'ın 
 
 En önemli adım, ' geliştirme ' ortamınızı [ dosyadaki bir.devinit.js](devinit-json.md)tanımlamaktır. Bu dosya, çalıştırdığınızda ortamınızı oluşturmak için devinit tarafından kullanılacaktır `devinit init` .
 
-Bu adım için, bir projeyi bir proje deposu ile çalışmaya ve çalıştırmaya verdiğiniz yönergeleri düşünün. Örneğin, SQL 'in yüklü olması gerekir mi? .NET Core 'un belirli bir sürümü mi? Etki alanları bu hiyerarşi sıralamasıyla devam eder. Ardından, bu bağımlılıkların her biri için, [Araçlar listesinde](devinit-tool-list.md) ilgili devinit aracına bakın ve bunu deponun `.devinit.json` dosyasına ekleyin. Örnekler [belgelerinde](sample-readme.md)örnek seçimini de görebilirsiniz.
+Bu adım için, bir projeyi bir proje deposu ile çalışmaya ve çalıştırmaya verdiğiniz yönergeleri düşünün. Örneğin, SQL 'in yüklü olması gerekir mi? .NET Core 'un belirli bir sürümü mi? Etki alanları bu hiyerarşi sıralamasıyla devam eder. Ardından, bu bağımlılıkların her biri için, [Araçlar listesinde](devinit-tool-list.md) ilgili devinit aracına bakın ve bunu deponun `.devinit.json` dosyasına ekleyin.
+
+Örnekler [belgelerinde](sample-readme.md)örnek seçimini de görebilir veya [öğreticiye](tutorial.md)göz atın.
 
 ## <a name="step-3-enjoy"></a>3. Adım: keyfini çıkarın!
 
