@@ -104,6 +104,12 @@
               href: vs-concierge-chat.md
             - name: Teknik Destek
               href: vs-tech-support.md
+            - name: Geliştirici Topluluğu
+              href: vs-developer-community.md
+            - name: Microsoft Soru-Cevap
+              href: vs-microsoft-qa.md
+            - name: Microsoft Teknoloji Topluluğu
+              href: vs-microsoft-tech-community.md
 - name: Yazılım ve anahtarlar
   items:
     - name: Yazılım indirmeleri
