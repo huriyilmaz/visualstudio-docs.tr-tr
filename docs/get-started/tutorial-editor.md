@@ -1,8 +1,11 @@
 ---
 title: Kod düzenleyicisinde düzenleme için giriş
+description: Visual Studio 'da kod düzenleyicisini kullanarak bir dosyaya kod ekleme ve ayrıca kod yazma, dosyaya gitme ve yeniden düzenleme hakkında bilgi edinin.
 ms.date: 11/30/2017
 ms.technology: vs-ide-general
-ms.custom: get-started
+ms.custom:
+- get-started
+- SEO-VS-2020
 ms.topic: tutorial
 author: TerryGLee
 ms.author: tglee
@@ -11,12 +14,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: a0c8122bd08e4eb9af68a0aa70f06cfb18e51469
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 39c5fd62b67c8153da0a64dcd92142300912c25f
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75595273"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94901784"
 ---
 # <a name="learn-to-use-the-code-editor"></a>Kod düzenleyicisini kullanmayı öğrenin
 
@@ -76,7 +79,7 @@ Visual Studio, yaygın olarak kullanılan kod bloklarını hızlı ve kolay bir 
 
    `static void Main()`Dosyanın imzasını dosyaya eklendiğini görürsünüz.
 
-Kullanılabilir kod parçacıkları farklı programlama dilleri için farklılık gösterir. **Edit**  >  **IntelliSense**  >  **ekleme kod parçacığını**Düzenle ' yi ve ardından Dilinizin klasörünü seçerek diliniz için kullanılabilir kod parçacıkları bölümüne bakabilirsiniz. C# için liste şöyle görünür:
+Kullanılabilir kod parçacıkları farklı programlama dilleri için farklılık gösterir. **Edit**  >  **IntelliSense**  >  **ekleme kod parçacığını** Düzenle ' yi ve ardından Dilinizin klasörünü seçerek diliniz için kullanılabilir kod parçacıkları bölümüne bakabilirsiniz. C# için liste şöyle görünür:
 
 ![C# kod parçacığı listesi](media/tutorial-code-snippet-list.png)
 
@@ -112,7 +115,7 @@ Visual Studio 'daki menü çubuğu altındaki düğmelerin satırı olan araç �
                                 select word;
     ```
 
-1. Bu değişkeni kullanmıyoruz `morewords` , ancak bunu daha sonra tamamen silmek istemdiğimiz için kullanabiliriz. Bunun yerine, bu satırları açıklamaya bakalım. Tüm tanımlamayı `morewords` sağ noktalı virgülle seçin ve ardından araç çubuğundaki **Seçili çizgiler** düğmesini seçin. Klavyeyi kullanmayı tercih ediyorsanız **CTRL** + **K**, **CTRL** + **C**tuşlarına basın.
+1. Bu değişkeni kullanmıyoruz `morewords` , ancak bunu daha sonra tamamen silmek istemdiğimiz için kullanabiliriz. Bunun yerine, bu satırları açıklamaya bakalım. Tüm tanımlamayı `morewords` sağ noktalı virgülle seçin ve ardından araç çubuğundaki **Seçili çizgiler** düğmesini seçin. Klavyeyi kullanmayı tercih ediyorsanız **CTRL** + **K**, **CTRL** + **C** tuşlarına basın.
 
    ![Açıklama dışarı düğmesi](media/tutorial-comment-out.png)
 
@@ -120,7 +123,7 @@ Visual Studio 'daki menü çubuğu altındaki düğmelerin satırı olan araç �
 
 ## <a name="collapse-code-blocks"></a>Kod bloklarını Daralt
 
-Oluşturulan boş [oluşturucuyu](/dotnet/csharp/programming-guide/classes-and-structs/constructors) görmek istemiyorum `Class1` , bu nedenle kodun görünümümüzü kaldırmak için bunu daralm. Oluşturucunun ilk satırının kenar boşluğunda eksi işareti olan küçük gri kutusunu seçin. Ya da bir klavye kullanıcısı kullanıyorsanız, imleci Oluşturucu kodunda herhangi bir yere yerleştirin ve **CTRL** + **m**, **CTRL** + **m**tuşlarına basın.
+Oluşturulan boş [oluşturucuyu](/dotnet/csharp/programming-guide/classes-and-structs/constructors) görmek istemiyorum `Class1` , bu nedenle kodun görünümümüzü kaldırmak için bunu daralm. Oluşturucunun ilk satırının kenar boşluğunda eksi işareti olan küçük gri kutusunu seçin. Ya da bir klavye kullanıcısı kullanıyorsanız, imleci Oluşturucu kodunda herhangi bir yere yerleştirin ve **CTRL** + **m**, **CTRL** + **m** tuşlarına basın.
 
 ![Anahat Daralt düğmesi](media/tutorial-collapse.png)
 
@@ -130,7 +133,7 @@ Kod bloğu yalnızca ilk satırı ve ardından üç nokta () ile daraltır `...`
 
 Visual Studio Düzenleyicisi bir tür, yöntem vb. tanımlamayı incelemenizi kolaylaştırır. Tek bir yol, tanımı içeren dosyaya gitmeniz, örneğin simgenin başvurduğu her yerde **Tanıma Git** ' i seçerek. Odağı, üzerinde çalıştığınız dosyadan uzağa taşımayın, [göz atma tanımını](../ide/go-to-and-peek-definition.md#peek-definition)kullanmaktır. Türün tanımına göz atalım `string` .
 
-1. Herhangi bir oluşumuna sağ tıklayın `string` ve içerik menüsünden **Açıklama Özeti** ' ni seçin. Alternatif olarak, **alt** + **F12**tuşuna basın.
+1. Herhangi bir oluşumuna sağ tıklayın `string` ve içerik menüsünden **Açıklama Özeti** ' ni seçin. Alternatif olarak, **alt** + **F12** tuşuna basın.
 
    Sınıfının tanımına sahip bir açılır pencere görüntülenir `String` . Açılır pencere içinde kaydırma yapabilir veya atılamıyor kodundan başka bir türün tanımına de göz atın.
 
@@ -152,7 +155,7 @@ Kodlamadan [IntelliSense](../ide/using-intellisense.md) , değerli bir kaynaktı
 
    ![Visual Studio 'da IntelliSense kelime tamamlama](media/tutorial-intellisense-completion-list.png)
 
-1. `query`IntelliSense 'in kelime tamamlama işlevini kullanarak sözcüğün geri kalanını eklemek Için **Tab**tuşuna basın.
+1. `query`IntelliSense 'in kelime tamamlama işlevini kullanarak sözcüğün geri kalanını eklemek Için **Tab** tuşuna basın.
 
 1. Aşağıdaki kod gibi görmek için kod bloğunu sona erdirin. Kodu `cw` oluşturmak için iki kez **Tab** tuşuna basarak ve sonra da kod parçacıklarını yeniden kullanarak da alıştırma yapabilirsiniz `Console.WriteLine` .
 
@@ -167,11 +170,11 @@ Kodlamadan [IntelliSense](../ide/using-intellisense.md) , değerli bir kaynaktı
 
 Hiç kimse ilk kez kod alır ve değiştirmeniz gerekebilecek işlemlerden biri bir değişkenin veya yöntemin adıdır. Değişkeni olarak yeniden adlandırmak için Visual Studio 'nun yeniden [düzenleme](../ide/refactoring-in-visual-studio.md) işlevini deneyelim `_words` `words` .
 
-1. İmlecinizi değişkeninin tanımına yerleştirin `_words` ve sağ tıklama ya da bağlam menüsünden **Yeniden Adlandır** ' ı seçin veya **CTRL** + **r**, **CTRL** + **r**tuşlarına basın.
+1. İmlecinizi değişkeninin tanımına yerleştirin `_words` ve sağ tıklama ya da bağlam menüsünden **Yeniden Adlandır** ' ı seçin veya **CTRL** + **r**, **CTRL** + **r** tuşlarına basın.
 
    Düzenleyicinin sağ üst köşesinde bir açılır pencere **yeniden adlandırma** iletişim kutusu görüntülenir.
 
-1. İstenen ad **sözcüklerini**girin. `words`Sorgudaki başvurunun da otomatik olarak yeniden adlandırıldığına dikkat edin. **ENTER**tuşuna tıklamadan önce, **Yeniden Adlandır** açılan kutusunda **açıklamaları dahil et** onay kutusunu seçin.
+1. İstenen ad **sözcüklerini** girin. `words`Sorgudaki başvurunun da otomatik olarak yeniden adlandırıldığına dikkat edin. **ENTER** tuşuna tıklamadan önce, **Yeniden Adlandır** açılan kutusunda **açıklamaları dahil et** onay kutusunu seçin.
 
    ![Yeniden Adlandır iletişim kutusu](media/tutorial-rename.png)
 

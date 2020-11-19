@@ -4,17 +4,16 @@ ms.custom: SEO-VS-2020
 description: Öykünücü Express kullanarak yerel bir makinede bir bulut hizmetini çalıştırma ve hata ayıklama
 author: mikejo5000
 manager: jillfra
-ms.assetid: 73108f98-a552-4817-b7a1-551367b71906
 ms.topic: how-to
 ms.workload: azure-vs
 ms.date: 03/06/2017
 ms.author: mikejo
-ms.openlocfilehash: 4874a93cd7d7546ca1d131f6c8941bd78cd98465
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: dee97ab487f4e165fd372559e51b6f19c3501e9f
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809839"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94902447"
 ---
 # <a name="using-emulator-express-to-run-and-debug-an-azure-cloud-service-on-a-local-machine"></a>Emulator Express kullanarak Azure bulut hizmetini yerel makinede çalıştırma ve hatalarını ayıklama
 Öykünücü Express 'i kullanarak, Visual Studio 'Yu yönetici olarak çalıştırmadan bir bulut hizmetini test edebilir ve hatalarını ayıklayabilirsiniz. Bulut hizmetinizin gereksinimlerine bağlı olarak, proje ayarlarınızı öykünücü Express ya da tam öykünücü kullanacak şekilde ayarlayabilirsiniz. Tam öykünücü hakkında daha fazla bilgi için bkz. [Işlem öykünücüsünde Azure uygulaması çalıştırma](/azure/storage/common/storage-use-emulator).
@@ -30,9 +29,9 @@ Azure SDK 2,3 veya sonraki sürümlerde bir Azure projesi oluşturduğunuzda, ö
 
     ![Azure bulut hizmeti projesi özellikleri](./media/vs-azure-tools-emulator-express-debug-run/web-properties.png)
 
-1. **Yerel geliştirme sunucusu**altında **IIS Express seçeneğini kullan**' ı seçin.
+1. **Yerel geliştirme sunucusu** altında **IIS Express seçeneğini kullan**' ı seçin.
 
-1. **Öykünücü**bölümünde **öykünücü hızlı kullan**' ı seçin.
+1. **Öykünücü** bölümünde **öykünücü hızlı kullan**' ı seçin.
 
 1. Öykünücü Express 'i başlatmak için komut isteminde aşağıdaki komutu çalıştırın:
 

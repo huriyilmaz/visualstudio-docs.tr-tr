@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl Yapılır: Sınıf Diyagramlarına Açıklamalar Ekleme (Sınıf Tasarımcısı)'
+description: Sınıf Diyagramlarına açıklama eklemek için açıklama şekillerini nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -14,18 +16,18 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d8e7514e8ab55697bdfc01f58c5ceffe4228721c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3b146efb27bb76d91b7453d574bda6d79d53a68a
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85771027"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94901680"
 ---
 # <a name="how-to-add-comments-to-class-diagrams"></a>Nasıl yapılır: Sınıf Diyagramlarına Açıklamalar ekleme
 
-Sınıf Diyagramlarına açıklama eklemek için açıklama şekillerini kullanabilirsiniz. Açıklama şeklinin, metin yazabileceğiniz bir özelliği, **metni**vardır. Açıklama şekilleri yalnızca Diyagram yüzeyinde bulunur ve kodda değildir.
+Sınıf Diyagramlarına açıklama eklemek için açıklama şekillerini kullanabilirsiniz. Açıklama şeklinin, metin yazabileceğiniz bir özelliği, **metni** vardır. Açıklama şekilleri yalnızca Diyagram yüzeyinde bulunur ve kodda değildir.
 
-**Sınıf Tasarımcısı**içindeki sınıf diyagramı görünümünde bir yorum bulunur. İkinci bir sınıf diyagramını aynı proje üzerine açarsanız, ilk görünümde oluşturduğunuz açıklamalar görünmez. Bir diyagramı silerseniz, içerdiği yorumların tümü de silinir.
+**Sınıf Tasarımcısı** içindeki sınıf diyagramı görünümünde bir yorum bulunur. İkinci bir sınıf diyagramını aynı proje üzerine açarsanız, ilk görünümde oluşturduğunuz açıklamalar görünmez. Bir diyagramı silerseniz, içerdiği yorumların tümü de silinir.
 
 Bir yorum şeklini yeniden boyutlandırabilirsiniz, ancak arka plan rengi, yazı tipi veya yazı tipi boyutu gibi görünüşünün diğer yönlerini değiştiremezsiniz.
 

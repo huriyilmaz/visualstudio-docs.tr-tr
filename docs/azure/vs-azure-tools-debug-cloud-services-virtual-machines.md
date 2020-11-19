@@ -3,18 +3,17 @@ title: Azure bulut hizmetinde veya sanal makinede hata ayıklama
 description: Visual Studio 'da bir bulut hizmetinde veya sanal makinede hata ayıklama
 author: mikejo5000
 manager: jillfra
-ms.assetid: 945e06e0-2100-41af-b218-72347367ddab
 ms.topic: how-to
 ms.workload: azure-vs
 ms.date: 11/11/2016
 ms.author: mikejo
 ms.technology: vs-ide-debug
-ms.openlocfilehash: cd55ebd9171a7f9cd2157194da8876f47aa22ece
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: c6e03bb4048b077bb4e1faa8b0382a3f4dbaf856
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93398702"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94902565"
 ---
 # <a name="debugging-an-azure-cloud-service-or-virtual-machine-in-visual-studio"></a>Visual Studio 'da bir Azure bulut hizmetinde veya sanal makinede hata ayıklama
 
@@ -32,7 +31,7 @@ Azure işlem öykünücüsü 'nü kullanarak, yerel bir makinedeki bulut hizmeti
 
     ![Sistem tepsisinde Azure öykünücüsü](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC783828.png)
 
-2. Bildirim alanında Azure simgesi için kısayol menüsünü açarak ve ardından **Işlem öykünücüsü Kullanıcı arabirimini göster** ' i seçerek işlem öykünücüsünün Kullanıcı arabirimini görüntüleyin.
+2. Bildirim alanında Azure simgesi için kısayol menüsünü açarak ve ardından **Işlem öykünücüsü Kullanıcı arabirimini göster**' i seçerek işlem öykünücüsünün Kullanıcı arabirimini görüntüleyin.
 
     Kullanıcı arabiriminin sol bölmesi, şu anda işlem öykünücüsüne ve her bir hizmetin çalıştığı rol örneklerine dağıtılan Hizmetleri gösterir. Sağ bölmedeki yaşam döngüsü, günlüğe kaydetme ve tanılama bilgilerini görüntüleyecek hizmeti veya rolleri seçebilirsiniz. Odağı eklenen pencerenin üst kenar boşluğuna yerleştirirseniz, sağ bölmeyi dolduracak şekilde genişler.
 
@@ -52,7 +51,7 @@ Bir bulut hizmeti için uzaktan hata ayıklamayı etkinleştirirseniz, performan
 
 ### <a name="to-enable-remote-debugging-for-a-cloud-service"></a>Bir bulut hizmeti için uzaktan hata ayıklamayı etkinleştirmek için
 
-1. Azure projesi için kısayol menüsünü açın ve ardından **Yayımla** ' yı seçin.
+1. Azure projesi için kısayol menüsünü açın ve ardından **Yayımla**' yı seçin.
 
 2. **Hazırlama** ortamını ve **hata ayıklama** yapılandırmasını seçin.
 
@@ -68,7 +67,7 @@ Bir bulut hizmeti için uzaktan hata ayıklamayı etkinleştirirseniz, performan
 
 1. Sunucu Gezgini, bulut hizmetinizin düğümünü genişletin.
 
-2. Eklemek istediğiniz rol veya rol örneği için kısayol menüsünü açın ve ardından **hata ayıklayıcı Ekle** ' yi seçin.
+2. Eklemek istediğiniz rol veya rol örneği için kısayol menüsünü açın ve ardından **hata ayıklayıcı Ekle**' yi seçin.
 
     Bir rolde hata ayıklaması yaparsanız, Visual Studio hata ayıklayıcı ilgili rolün her örneğine eklenir. Hata ayıklayıcı, bu kod satırını çalıştıran ve bu kesme noktasının tüm koşullarını karşılayan ilk rol örneği için bir kesme noktasına kesilir. Bir örnekte hata ayıklaması yaparsanız, hata ayıklayıcı yalnızca bu örneğe iliştirir ve yalnızca belirli bir örnek bu kod satırını çalıştırdığında kesme noktasının koşullarını karşıladığı zaman kesme noktasında kesilir.
 
@@ -78,14 +77,14 @@ Bir bulut hizmeti için uzaktan hata ayıklamayı etkinleştirirseniz, performan
 
     ![Kod türünü seç iletişim kutusu](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC718346.png)
 
-4. Hata ayıklayıcının eklendiği işlemi belirlemek için, menü çubuğunda Windows işlemlerini **Hata Ayıkla** ' yı seçin  >  **Windows**  >  **Processes** ve **süreçler** iletişim kutusunu açın. (Klavye: Ctrl + Alt + Z) Belirli bir işlemi ayırmak için, kısayol menüsünü açın ve ardından **Işlemi ayır** ' ı seçin. Ya da Sunucu Gezgini ' de örnek düğümünü bulun, işlemi bulun, kısayol menüsünü açın ve ardından **Işlemi ayır** ' ı seçin.
+4. Hata ayıklayıcının eklendiği işlemi belirlemek için, menü çubuğunda Windows işlemlerini **Hata Ayıkla**' yı seçin  >  **Windows**  >  **Processes** ve **süreçler** iletişim kutusunu açın. (Klavye: Ctrl + Alt + Z) Belirli bir işlemi ayırmak için, kısayol menüsünü açın ve ardından **Işlemi ayır**' ı seçin. Ya da Sunucu Gezgini ' de örnek düğümünü bulun, işlemi bulun, kısayol menüsünü açın ve ardından **Işlemi ayır**' ı seçin.
 
     ![Hata Ayıklama İşlemleri](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC690787.gif)
 
 > [!WARNING]
 > Uzaktan hata ayıklama sırasında kesme noktalarında uzun durakları önleyin. Azure, birkaç dakikadan uzun süre sonra durdurulan bir işlemi yanıt vermemeye ve bu örneğe trafik göndermeyi durdurmaktadır. Çok uzun süre durdurursanız msvsmon.exe işlemden ayırır.
 
-Hata ayıklayıcıyı örneğinizin veya rolünüzün tüm işlemlerinden ayırmak için, hata ayıklaması yaptığınız rol veya örnek için kısayol menüsünü açın ve ardından **hata ayıklayıcıyı ayır** ' ı seçin.
+Hata ayıklayıcıyı örneğinizin veya rolünüzün tüm işlemlerinden ayırmak için, hata ayıklaması yaptığınız rol veya örnek için kısayol menüsünü açın ve ardından **hata ayıklayıcıyı ayır**' ı seçin.
 
 ## <a name="limitations-of-remote-debugging-in-azure"></a>Azure 'da uzaktan hata ayıklama sınırlamaları
 
@@ -109,7 +108,7 @@ Visual Studio 'da Sunucu Gezgini kullanarak Azure sanal makinelerinde çalışan
 
 1. Sunucu Gezgini ' de, sanal makineler düğümünü genişletin ve sanal makinenin hata ayıklamak istediğiniz düğümünü seçin.
 
-2. Bağlam menüsünü açın ve **hata ayıklamayı etkinleştir** ' i seçin. Sanal makinede hata ayıklamayı etkinleştirmek isteyip istemediğinizden emin olup olmadığınız sorulduğunda **Evet** ' i seçin.
+2. Bağlam menüsünü açın ve **hata ayıklamayı etkinleştir**' i seçin. Sanal makinede hata ayıklamayı etkinleştirmek isteyip istemediğinizden emin olup olmadığınız sorulduğunda **Evet**' i seçin.
 
     Azure, hata ayıklamayı etkinleştirmek için sanal makinede uzaktan hata ayıklama uzantısı 'nı yüklüyor.
 
@@ -127,7 +126,7 @@ Visual Studio 'da Sunucu Gezgini kullanarak Azure sanal makinelerinde çalışan
 
     ![Kod türünü seç iletişim kutusu](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC718346.png)
 
-5. Sanal makinede hata ayıklamak istediğiniz işlemi seçin ve ardından **Ekle** ' yi seçin. Örneğin, sanal makinede bir Web uygulamasında hata ayıklamak istiyorsanız w3wp.exe işlemini seçebilirsiniz. Daha fazla bilgi için bkz. Visual Studio ve [Azure rol mimarisinde](/archive/blogs/kwill/windows-azure-role-architecture) [bir veya daha fazla işlemde hata ayıklama](../debugger/debug-multiple-processes.md) .
+5. Sanal makinede hata ayıklamak istediğiniz işlemi seçin ve ardından **Ekle**' yi seçin. Örneğin, sanal makinede bir Web uygulamasında hata ayıklamak istiyorsanız w3wp.exe işlemini seçebilirsiniz. Daha fazla bilgi için bkz. Visual Studio ve [Azure rol mimarisinde](/archive/blogs/kwill/windows-azure-role-architecture) [bir veya daha fazla işlemde hata ayıklama](../debugger/debug-multiple-processes.md) .
 
 ## <a name="create-a-web-project-and-a-virtual-machine-for-debugging"></a>Hata ayıklama için bir Web projesi ve sanal makine oluşturma
 
@@ -148,7 +147,7 @@ Visual Studio ASP.NET projeleri, uygulama testi için kullanabileceğiniz kullan
     > [!NOTE]
     > Henüz oturum açmadıysanız Azure hesabınızda oturum açmanız istenir.
 
-3. Sanal makine için çeşitli ayarları seçin ve ardından **Tamam** ' ı seçin. Daha fazla bilgi için bkz. [sanal makineler](/azure/virtual-machines/) .
+3. Sanal makine için çeşitli ayarları seçin ve ardından **Tamam**' ı seçin. Daha fazla bilgi için bkz. [sanal makineler](/azure/virtual-machines/) .
 
     DNS adı için girdiğiniz ad, sanal makinenin adı olacaktır.
 
@@ -158,7 +157,7 @@ Visual Studio ASP.NET projeleri, uygulama testi için kullanabileceğiniz kullan
 
 4. Sanal makine tam olarak yapılandırıldıktan sonra, Sunucu Gezgini sanal makinenin düğümünü seçin.
 
-5. Bağlam menüsünü açın ve **hata ayıklamayı etkinleştir** ' i seçin. Sanal makinede hata ayıklamayı etkinleştirmek isteyip istemediğinizden emin olup olmadığınız sorulduğunda **Evet** ' i seçin.
+5. Bağlam menüsünü açın ve **hata ayıklamayı etkinleştir**' i seçin. Sanal makinede hata ayıklamayı etkinleştirmek isteyip istemediğinizden emin olup olmadığınız sorulduğunda **Evet**' i seçin.
 
     Azure, hata ayıklamayı etkinleştirmek için uzaktan hata ayıklama uzantısını sanal makineye yüklüyor.
 
@@ -170,7 +169,7 @@ Visual Studio ASP.NET projeleri, uygulama testi için kullanabileceğiniz kullan
 
     ![Yayımlama ayarları](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC718349.png)
 
-7. **Dosya yayımlama seçeneklerinde** , proje zaten daha önceki bir zamanda dağıtılmışsa, **Hedefteki ek dosyaları Kaldır** ' ı seçin.
+7. **Dosya yayımlama seçeneklerinde**, proje zaten daha önceki bir zamanda dağıtılmışsa, **Hedefteki ek dosyaları Kaldır** ' ı seçin.
 
 8. Proje yayımlandıktan sonra, sanal makinenin Sunucu Gezgini içindeki bağlam menüsünde **hata ayıklayıcı Ekle...** seçeneğini belirleyin.
 
@@ -182,7 +181,7 @@ Visual Studio ASP.NET projeleri, uygulama testi için kullanabileceğiniz kullan
 
     ![Kod türünü seç iletişim kutusu](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC718346.png)
 
-10. Sanal makinede hata ayıklamak istediğiniz işlemi seçin ve ardından **Ekle** ' yi seçin. Örneğin, sanal makinede bir Web uygulamasında hata ayıklamak istiyorsanız w3wp.exe işlemini seçebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio 'Da bir veya daha fazla Işlemde hata ayıklama](../debugger/debug-multiple-processes.md) .
+10. Sanal makinede hata ayıklamak istediğiniz işlemi seçin ve ardından **Ekle**' yi seçin. Örneğin, sanal makinede bir Web uygulamasında hata ayıklamak istiyorsanız w3wp.exe işlemini seçebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio 'Da bir veya daha fazla Işlemde hata ayıklama](../debugger/debug-multiple-processes.md) .
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

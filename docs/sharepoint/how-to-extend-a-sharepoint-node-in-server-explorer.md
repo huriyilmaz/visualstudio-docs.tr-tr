@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: Sunucu Gezgini bir SharePoint düğümünü genişletme | Microsoft Docs'
+description: SharePoint bağlantıları düğümünü kullanarak Sunucu Gezgini bir SharePoint düğümünü genişletmeyi anlayın.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,15 +15,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ea556d18641b96ea6a38ef5abf6efe4c93a44cdf
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bad90701d19f97036ecba55bb2901739ad30b200
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015020"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903552"
 ---
 # <a name="how-to-extend-a-sharepoint-node-in-server-explorer"></a>Nasıl yapılır: Sunucu Gezgini bir SharePoint düğümünü genişletme
-  **Sunucu Gezgini**Içindeki **SharePoint bağlantıları** düğümünün altında düğümleri genişletebilirsiniz. Bu, varolan bir düğüme yeni alt düğümler, kısayol menü öğeleri veya özellikler eklemek istediğinizde yararlıdır. Daha fazla bilgi için, bkz. [Sunucu Gezgini SharePoint bağlantıları düğümünü genişletme](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md).
+  **Sunucu Gezgini** Içindeki **SharePoint bağlantıları** düğümünün altında düğümleri genişletebilirsiniz. Bu, varolan bir düğüme yeni alt düğümler, kısayol menü öğeleri veya özellikler eklemek istediğinizde yararlıdır. Daha fazla bilgi için, bkz. [Sunucu Gezgini SharePoint bağlantıları düğümünü genişletme](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md).
 
 ### <a name="to-extend-a-sharepoint-node-in-server-explorer"></a>Sunucu Gezgini bir SharePoint düğümünü genişletmek için
 
@@ -43,7 +45,7 @@ ms.locfileid: "86015020"
 
      Visual Studio tarafından sunulan yerleşik düğüm türlerini belirtmek için aşağıdaki numaralandırma değerlerinden birini öznitelik oluşturucusuna geçirin:
 
-    - <xref:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeTypes>: Site bağlantı düğümlerini (site URL 'Lerini görüntüleyen düğümler), site düğümlerini veya **Sunucu Gezgini**tüm diğer üst düğümleri belirtmek için bu değerleri kullanın.
+    - <xref:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeTypes>: Site bağlantı düğümlerini (site URL 'Lerini görüntüleyen düğümler), site düğümlerini veya **Sunucu Gezgini** tüm diğer üst düğümleri belirtmek için bu değerleri kullanın.
 
     - <xref:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.ExtensionNodeTypes>: Bir liste, alan veya içerik türünü temsil eden bir düğüm gibi bir SharePoint sitesindeki tek bir bileşeni temsil eden yerleşik düğümlerden birini belirtmek için bu değerleri kullanın.
 
@@ -60,7 +62,7 @@ ms.locfileid: "86015020"
 
 - SharePoint site düğümlerine bağlam menüsü öğesi ekleyen uzantı. Menü öğesine tıkladığınızda, tıklanan düğümün adını görüntüler.
 
-- **Body**adlı bir alanı temsil eden her düğüme **ContosoExampleProperty** adlı özel bir özellik ekleyen uzantı.
+- **Body** adlı bir alanı temsil eden her düğüme **ContosoExampleProperty** adlı özel bir özellik ekleyen uzantı.
 
   [!code-csharp[SPExtensibility.ProjectSystemExtension.General#9](../sharepoint/codesnippet/CSharp/projectsystemexamples/extension/serverexplorerextension.cs#9)]
   [!code-vb[SPExtensibility.ProjectSystemExtension.General#9](../sharepoint/codesnippet/VisualBasic/projectsystemexamples/extension/serverexplorerextension.vb#9)]

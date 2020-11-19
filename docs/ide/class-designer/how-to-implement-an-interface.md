@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl Yapılır: Arabirimi Uygulama (Sınıf Tasarımcısı)'
+description: Arabirim yöntemleri için kod sağlayan bir sınıfa bağlayarak sınıf diyagramında bir arabirim uygulamayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 81b6815dd96894acd574de59c5616371220d2999
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ad038774b4acfb7256edbaa35ae4c67cfe835891
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85770096"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94901381"
 ---
 # <a name="how-to-implement-an-interface-in-class-designer"></a>Nasıl yapılır: Sınıf Tasarımcısı bir arabirimi uygulama
 
@@ -42,7 +44,7 @@ Daha fazla bilgi için bkz. [nasıl yapılır: türler arasında devralma oluşt
 2. **Sınıf görünümü** açın ve arabirimini bulun.
 
     > [!TIP]
-    > **Sınıf görünümü** açık değilse, **Görünüm** menüsünden **sınıf görünümü** açın veya **CTRL** + **SHIFT** + **C**tuşlarına basın.
+    > **Sınıf görünümü** açık değilse, **Görünüm** menüsünden **sınıf görünümü** açın veya **CTRL** + **SHIFT** + **C** tuşlarına basın.
 
 3. Arabirim düğümünü diyagramdaki sınıf şekline sürükleyin.
 

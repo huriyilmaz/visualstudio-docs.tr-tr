@@ -1,5 +1,7 @@
 ---
 title: Sınıf Tasarımcısı için klavye ve fare kısayolları
+description: Sınıf Tasarımcısı ve Sınıf Ayrıntıları penceresinde gezinme eylemleri gerçekleştirmek için fareyle ek olarak klavyeyi nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 30932a6c94bc6104aeea0244f06f471d0a639b21
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c184a12474e2d7ff0b626547acaaf2a37d460c8e
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85533672"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94901108"
 ---
 # <a name="keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window"></a>Sınıf diyagramı ve Sınıf Ayrıntıları penceresinde klavye ve fare kısayolları
 
@@ -28,7 +30,7 @@ ms.locfileid: "85533672"
 
 Aşağıdaki fare eylemleri sınıf diyagramlarında desteklenir:
 
-|Fare birleşimi|Bağlam|Description|
+|Fare birleşimi|Bağlam|Açıklama|
 | - |-------------|-----------------|
 |Çift tıklama|Şekil öğeleri|Kod düzenleyicisini açar.|
 |Çift tıklama|Lolipop Bağlayıcısı|Lolipop 'i Genişlet/Daralt.|
@@ -56,15 +58,15 @@ Bir fare kullanarak, **Sınıf Ayrıntıları** penceresinin ve görüntülediğ
 
 Aşağıdaki klavye eylemleri sınıf diyagramlarında desteklenir:
 
-|Anahtar|Bağlam|Description|
+|Anahtar|Bağlam|Açıklama|
 |---------|-------------|-----------------|
 |**Ok tuşları**|Tür şekillerinin içinde|Şekil içeriklerinde ağaç stili gezinti (şeklin etrafında kaydırma desteklenir). Sol ve sağ tuşları, Genişletilebilir ise geçerli öğeyi genişletir/daraltır ve değilse üst öğeye gidebilir (ayrıntılı davranış için bkz. ağaç görünümü gezintisi).|
 |**Ok tuşları**|Üst düzey şekiller|Diyagramda şekiller taşınıyor.|
 |**SHIFT** + **ok tuşları**|Tür şekillerinin içinde|Üyeler, iç içe türler veya bölmeleri gibi şekil öğelerinden oluşan sürekli seçim oluşturma. Bu kısayollar etrafında kaydırmayı desteklemez.|
-|**Giriş**|Tür şekillerinin içinde|Üst düzey şekil başlığına gidin.|
-|**Giriş**|Üst düzey şekiller|Diyagramdaki ilk şekle gidin.|
-|**Erer**|Tür şekillerinin içinde|Şeklin içindeki son görünür öğeye gidin.|
-|**Erer**|Üst düzey şekiller|Diyagramdaki son şekle gidin.|
+|**Giriş Ekranı**|Tür şekillerinin içinde|Üst düzey şekil başlığına gidin.|
+|**Giriş Ekranı**|Üst düzey şekiller|Diyagramdaki ilk şekle gidin.|
+|**End**|Tür şekillerinin içinde|Şeklin içindeki son görünür öğeye gidin.|
+|**End**|Üst düzey şekiller|Diyagramdaki son şekle gidin.|
 |**SHIFT** + **Giriş sayfası**|Tür şeklinin içinde|Geçerli öğeyle başlayan ve aynı şekildeki en üstteki öğeyle biten şekildeki öğeleri seçer.|
 |**SHIFT** + **Son**|Tür şeklinin içinde|**SHIFT** + **girişi** , ancak yukarıdan aşağı yönle aynıdır.|
 |**Girmesini**|Tüm bağlamlar|Şekil üzerinde, Çift tıklama ile de kullanılabilen varsayılan eylemi çağırır. Çoğu durumda bu, kod görüntüler ancak bazı öğeler bunu farklı şekilde tanımlar (Lollipop 'lar, bölme üstbilgileri, lolipop etiketleri).|

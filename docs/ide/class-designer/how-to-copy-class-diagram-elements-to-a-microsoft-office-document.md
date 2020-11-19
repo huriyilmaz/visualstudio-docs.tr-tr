@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl Yapılır: Microsoft Office Belgesine Sınıf Diyagramı Öğeleri Kopyalama (Sınıf Tasarımcısı)'
+description: Bir .NET sınıf diyagramından diğer belgelere şekil kopyalamayı öğrenin. Şeklin bir kopyasını ya da onun temel kodunu alacaksınız.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0fa6d97b5087659b9fc8120d9480a241517ca8ec
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fe473dfdfdf78934ad018a507c6386a1da9babb6
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85771001"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94901628"
 ---
 # <a name="how-to-copy-class-diagram-elements-to-a-microsoft-office-document"></a>Nasıl yapılır: Microsoft Office belgeye sınıf diyagramı öğeleri kopyalama
 
@@ -34,11 +36,11 @@ Bir .NET sınıf diyagramı 'ndan (*. CD* dosyası) diğer belgelere şekil kopy
 
 ## <a name="copy-all-the-elements-in-a-class-diagram"></a>Sınıf diyagramındaki tüm öğeleri Kopyala
 
-1. Diyagram yüzeyine sağ tıklayın ve **Tümünü Seç**' i seçin veya **CTRL + A**tuşlarına basın.
+1. Diyagram yüzeyine sağ tıklayın ve **Tümünü Seç**' i seçin veya **CTRL + A** tuşlarına basın.
 
 2. **Düzenle** menüsünde **görüntüyü Kopyala**' yı seçin.
 
-**Resmi Kopyala**yerine **Kopyala** seçeneğini de belirleyebilirsiniz. **Kopya** görüntüyü normal bir bit eşlem olarak kopyalar. **Görüntüyü Kopyala** , görüntüyü vektör tabanlı bir görüntü olarak kopyalar, bu da çoğu Office uygulaması için daha iyidir.
+**Resmi Kopyala** yerine **Kopyala** seçeneğini de belirleyebilirsiniz. **Kopya** görüntüyü normal bir bit eşlem olarak kopyalar. **Görüntüyü Kopyala** , görüntüyü vektör tabanlı bir görüntü olarak kopyalar, bu da çoğu Office uygulaması için daha iyidir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

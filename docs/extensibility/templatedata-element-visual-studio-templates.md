@@ -1,5 +1,7 @@
 ---
 title: TemplateData öğesi (Visual Studio şablonları) | Microsoft Docs
+description: TemplateData öğesi hakkında bilgi edinin ve şablonu kategorilere ayırır ve yeni proje ya da yeni öğe Ekle iletişim kutusunda nasıl görüntüleneceğini tanımlar.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f3ce0226286e8cc4623b66c043eb7bd376597118
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bc0edf82421ba41198480e6c105dd56c02bd0f7e
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699189"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903266"
 ---
 # <a name="templatedata-element-visual-studio-templates"></a>TemplateData Öğesi (Visual Studio Şablonları)
 Şablonu kategorilere ayırır ve **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda nasıl görüntülediğini tanımlar.
@@ -49,7 +51,7 @@ ms.locfileid: "80699189"
 | - | - |
 | [Ad](../extensibility/name-element-visual-studio-templates.md) | Gerekli öğe.<br /><br /> **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda göründüğü gibi şablonun adını belirtir. |
 | [Açıklama](../extensibility/description-element-visual-studio-templates.md) | Gerekli öğe.<br /><br /> **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda göründüğü gibi şablonun açıklamasını belirtir. |
-| [Simg](../extensibility/icon-element-visual-studio-templates.md) | Gerekli öğe.<br /><br /> Şablon için **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda görünen simge olarak hizmet gören görüntü dosyasının yolunu ve dosya adını belirtir. |
+| [Simge](../extensibility/icon-element-visual-studio-templates.md) | Gerekli öğe.<br /><br /> Şablon için **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda görünen simge olarak hizmet gören görüntü dosyasının yolunu ve dosya adını belirtir. |
 | [ProjectType](../extensibility/projecttype-element-visual-studio-templates.md) | Gerekli öğe.<br /><br /> Proje şablonunu **Yeni proje** iletişim kutusunda belirtilen grubun altında görünecek şekilde kategorilere ayırır. |
 | [ProjectSubType](../extensibility/projectsubtype-element-visual-studio-templates.md) | İsteğe bağlı öğe.<br /><br /> Proje şablonunu, **Yeni proje** iletişim kutusunda belirtilen alt kategori altında görünecek şekilde sınıflandırır. |
 | [TemplateID](../extensibility/templateid-element-visual-studio-templates.md) | İsteğe bağlı öğe.<br /><br /> Şablon KIMLIĞINI belirtir. |
@@ -60,7 +62,7 @@ ms.locfileid: "80699189"
 | [ProvideDefaultName](../extensibility/providedefaultname-element-visual-studio-templates.md) | İsteğe bağlı öğe.<br /><br /> Visual Studio proje sisteminin, oluşturulduğunda bir proje veya öğe için varsayılan adı oluşturup üretmeyeceğini belirtir. |
 | [PromptForSaveOnCreation](../extensibility/promptforsaveoncreation-element-visual-studio-templates.md) | İsteğe bağlı öğe.<br /><br /> Projenin geçici bir proje olarak oluşturulup oluşturuamayacağını belirtir (yalnızca Visual Studio 2017). |
 | [EnableLocationBrowseButton](../extensibility/enablelocationbrowsebutton-element-visual-studio-templates.md) | İsteğe bağlı öğe.<br /><br /> Kullanıcıların yeni bir projenin kaydedildiği varsayılan dizini kolayca değiştirebilmeleri için **Yeni proje** iletişim kutusunda, **tarayıcı** düğmesinin kullanılabilir olup olmadığını belirtir. |
-| [Lene](../extensibility/hidden-element-visual-studio-templates.md) | İsteğe bağlı öğe.<br /><br /> Şablonun **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda görünüp başlatılmayacağını belirtir. |
+| [Gizli](../extensibility/hidden-element-visual-studio-templates.md) | İsteğe bağlı öğe.<br /><br /> Şablonun **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda görünüp başlatılmayacağını belirtir. |
 | [NumberOfParentCategoriesToRollUp](../extensibility/numberofparentcategoriestorollup-visual-studio-templates.md) | İsteğe bağlı öğe.<br /><br /> **Yeni proje** iletişim kutusunda şablonu görüntüleyecek üst kategori sayısını belirtir. |
 | [LocationFieldMRUPrefix](../extensibility/locationfieldmruprefix-element-visual-studio-templates.md) | İsteğe bağlı öğe. |
 | [LocationField](../extensibility/locationfield-element-visual-studio-project-templates.md) | İsteğe bağlı öğe.<br /><br /> **Yeni proje** Iletişim kutusundaki **konum** metin kutusunun etkin, devre dışı ya da proje şablonu için gizli olup olmadığını belirtir. |

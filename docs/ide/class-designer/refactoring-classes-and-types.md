@@ -1,5 +1,7 @@
 ---
 title: Sınıf Tasarımcısı sınıfları ve türleri yeniden adlandırma ve taşıma
+description: Sınıf Tasarımcısı ve sınıf ayrıntıları penceresini kullanarak sınıfları ve türleri yeniden adlandırma ve taşıma hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -19,12 +21,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: baf0e9d9d0f4bb45ef965f64c256bd9360af112b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3d51a541edb30e24405faccfec6e05264303d049
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85768613"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94901095"
 ---
 # <a name="refactor-classes-and-types-in-class-designer"></a>Sınıf Tasarımcısı sınıfları ve türleri yeniden düzenleme
 
@@ -78,7 +80,7 @@ Sınıf Tasarımcısı, sınıf diyagramında veya **Özellikler** penceresinde 
 
 ## <a name="move-type-members-from-one-type-to-another"></a>Tür üyelerini bir türden diğerine taşıma
 
-**Sınıf Tasarımcısı**kullanarak, bir tür üyesini bir türden başka bir türe taşıyabilirsiniz. Her iki tür de geçerli sınıf diyagramında görünür olmalıdır.
+**Sınıf Tasarımcısı** kullanarak, bir tür üyesini bir türden başka bir türe taşıyabilirsiniz. Her iki tür de geçerli sınıf diyagramında görünür olmalıdır.
 
 1. Tasarım yüzeyinde görünür olan bir türde, başka bir türe taşımak istediğiniz üyeye sağ tıklayın ve ardından **Kes**' i seçin.
 

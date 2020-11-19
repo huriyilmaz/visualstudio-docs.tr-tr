@@ -23,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3a8301fcca5fd915b130477600ed9fe0b5b90f46
-ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
+ms.openlocfilehash: db37c22af858cef76acda2a42d29a38d244395c8
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91830770"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903331"
 ---
 # <a name="first-look-at-deployment-in-visual-studio"></a>Visual Studio 'da dağıtıma ilk bakış
 
@@ -40,15 +40,19 @@ Adım adım dağıtım yönergeleri için hızlı başlangıç ve öğreticiler 
 
 Yerel bir klasöre dağıtım, genellikle test için veya son dağıtım için başka bir aracın kullanıldığı hazırlanmış bir dağıtıma başlamak için kullanılır.
 
-- **ASP.net**, **ASP.NET Core**, **Node.js**, **Python**ve. **NET Core**: yerel bir klasöre dağıtmak için Yayımla aracını kullanın. Kullanılabilecek tam seçenekler, uygulama türüne bağlıdır. Çözüm Gezgini, projenize sağ tıklayın ve **Yayımla**' yı seçin. (Daha önce herhangi bir yayımlama profili yapılandırmadıysanız, **Yeni Profil oluştur**' a tıklamanız gerekir.) Sonra **klasör**' ü seçin. Daha fazla bilgi için bkz. [yerel bir klasöre dağıtma](quickstart-deploy-to-local-folder.md).
+- **ASP.net**, **ASP.NET Core**, **Node.js**, **Python** ve. **NET Core**: yerel bir klasöre dağıtmak için Yayımla aracını kullanın. Kullanılabilecek tam seçenekler, uygulama türüne bağlıdır. Çözüm Gezgini, projenize sağ tıklayın ve **Yayımla**' yı seçin. (Daha önce herhangi bir yayımlama profili yapılandırmadıysanız, **Yeni Profil oluştur**' a tıklamanız gerekir.) Sonra **klasör**' ü seçin. Daha fazla bilgi için bkz. [yerel bir klasöre dağıtma](quickstart-deploy-to-local-folder.md).
 
     ![Yayımla ' yı seçin](../deployment/media/quickstart-publish.png)
 
-- **Windows Masaüstü** Bir Windows masaüstü uygulamasını ClickOnce dağıtımını kullanarak bir klasöre yayımlayabilirsiniz. Kullanıcılar, daha sonra uygulamayı tek bir tıklamayla yükleyebilir. Daha fazla bilgi için bkz. [ClickOnce kullanarak masaüstü uygulaması dağıtma](how-to-publish-a-clickonce-application-using-the-publish-wizard.md) (C# ve Visual Basic). C++/CLR için bkz. [ClickOnce kullanarak yerel uygulama dağıtma](/cpp/windows/clickonce-deployment-for-visual-cpp-applications) veya C/C++ için bkz. [Kurulum projesi kullanarak yerel uygulama dağıtma](/cpp/windows/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project).
+- **Windows Masaüstü** Bir Windows masaüstü uygulamasını ClickOnce dağıtımını kullanarak bir klasöre yayımlayabilirsiniz. Kullanıcılar, daha sonra uygulamayı tek bir tıklamayla yükleyebilir. Daha fazla bilgi için, aşağıdakilere bakın:
+
+  - [ClickOnce kullanarak .NET Framework Windows masaüstü uygulaması dağıtma](how-to-publish-a-clickonce-application-using-the-publish-wizard.md)
+  - [ClickOnce kullanarak .NET Windows masaüstü uygulaması dağıtma](quickstart-deploy-using-clickonce-folder.md)
+  - [ClickOnce kullanarak bir C++/CLR uygulaması dağıtın](/cpp/windows/clickonce-deployment-for-visual-cpp-applications) veya C/C++ için, bkz. [Kurulum projesi kullanarak yerel uygulama dağıtma](/cpp/windows/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project).
 
 ## <a name="publish-to-azure"></a>Azure’da Yayımlama
 
-- **ASP.net**, **ASP.NET Core**, **Python**ve **Node.js**: aşağıdaki yöntemlerden birini kullanarak Azure App Service veya Azure App Service Linux 'ta (kapsayıcılar kullanarak) yayımlayın.
+- **ASP.net**, **ASP.NET Core**, **Python** ve **Node.js**: aşağıdaki yöntemlerden birini kullanarak Azure App Service veya Azure App Service Linux 'ta (kapsayıcılar kullanarak) yayımlayın.
 
   - Uygulamaların sürekli (veya otomatik) dağıtımı için [Azure Pipelines](/azure/devops/pipelines/get-started-yaml?view=azdevops&preserve-view=true)Ile Azure DevOps kullanın.
 
@@ -60,20 +64,18 @@ Yerel bir klasöre dağıtım, genellikle test için veya son dağıtım için b
 
   ![Azure App Service seçin](../deployment/media/quickstart-publish-azure-new.png "Azure App Service seçin")
 
-  Visual Studio 2017 sürüm 15,7 ' den başlayarak, **Linux için App Service**ASP.NET Core uygulamaları dağıtabilirsiniz.
+  Visual Studio 2017 sürüm 15,7 ' den başlayarak, **Linux için App Service** ASP.NET Core uygulamaları dağıtabilirsiniz.
 
   Python uygulamaları için Ayrıca, [Azure App Service Için Python-yayımlama](../python/publishing-python-web-applications-to-azure-from-visual-studio.md?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)konusuna bakın.
 
   Hızlı bir giriş için bkz. [Azure 'Da yayımlama](quickstart-deploy-to-azure.md) ve [Linux 'ta yayımlama](quickstart-deploy-to-linux.md). Ayrıca bkz. [Azure 'da ASP.NET Core uygulama yayımlama](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs). Git kullanarak dağıtım için bkz. [Git Ile Azure 'A sürekli ASP.NET Core dağıtımı](/aspnet/core/publishing/azure-continuous-deployment).
-
-  Azure App Service yayımlama profilini Visual Studio 'ya aktarma hakkında daha fazla bilgi için bkz. [Yayımlama ayarlarını Içeri aktarma ve Azure 'a dağıtma](../deployment/tutorial-import-publish-settings-azure.md).
 
   > [!NOTE]
   > Henüz bir Azure hesabınız yoksa, [buradan kaydolabilirsiniz](https://azure.microsoft.com/free/?ref=microsoft.com&utm_source=microsoft.com&utm_medium=doc&utm_campaign=visualstudio).
 
 ## <a name="publish-to-web-or-deploy-to-network-share"></a>Web 'de yayımlama veya ağ paylaşımında dağıtma
 
-- **ASP.net**, **ASP.NET Core**, **Node.js**ve **Python**: FTP veya Web dağıtımı kullanarak bir Web sitesine dağıtmak için Yayımla aracını kullanabilirsiniz. Daha fazla bilgi için bkz. [Web sitesine dağıtma](quickstart-deploy-to-a-web-site.md).
+- **ASP.net**, **ASP.NET Core**, **Node.js** ve **Python**: FTP veya Web dağıtımı kullanarak bir Web sitesine dağıtmak için Yayımla aracını kullanabilirsiniz. Daha fazla bilgi için bkz. [Web sitesine dağıtma](quickstart-deploy-to-a-web-site.md).
 
     Çözüm Gezgini, projeye sağ tıklayın ve **Yayımla**' yı seçin. (Daha önce herhangi bir yayımlama profili yapılandırdıysanız **Yeni Profil oluştur**' a tıklamanız gerekir.) Yayımla aracında istediğiniz seçeneği belirleyin ve yapılandırma adımlarını izleyin.
 
@@ -83,7 +85,11 @@ Yerel bir klasöre dağıtım, genellikle test için veya son dağıtım için b
 
     Ayrıca, ASP.NET uygulamalarını ve hizmetlerini çeşitli yollarla dağıtabilirsiniz. Daha fazla bilgi için bkz. [ASP.NET Web uygulamaları ve hizmetleri dağıtma](/aspnet/overview/deployment).
 
-- **Windows Masaüstü** ClickOnce dağıtımını kullanarak bir Windows masaüstü uygulamasını bir Web sunucusuna veya ağ dosya paylaşımında yayımlayabilirsiniz. Kullanıcılar, daha sonra uygulamayı tek bir tıklamayla yükleyebilir. Daha fazla bilgi için bkz. [ClickOnce kullanarak masaüstü uygulaması dağıtma](how-to-publish-a-clickonce-application-using-the-publish-wizard.md) (C# ve Visual Basic). C++/CLR için bkz. [ClickOnce kullanarak yerel uygulama dağıtma](/cpp/windows/clickonce-deployment-for-visual-cpp-applications) veya C/C++ için bkz. [Kurulum projesi kullanarak yerel uygulama dağıtma](/cpp/windows/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project).
+- **Windows Masaüstü** ClickOnce dağıtımını kullanarak bir Windows masaüstü uygulamasını bir Web sunucusuna veya ağ dosya paylaşımında yayımlayabilirsiniz. Kullanıcılar, daha sonra uygulamayı tek bir tıklamayla yükleyebilir. Daha fazla bilgi için, aşağıdakilere bakın:
+
+  - [ClickOnce kullanarak .NET Framework Windows masaüstü uygulaması dağıtma](how-to-publish-a-clickonce-application-using-the-publish-wizard.md)
+  - [ClickOnce kullanarak .NET Windows masaüstü uygulaması dağıtma](quickstart-deploy-using-clickonce-folder.md)
+  - [ClickOnce kullanarak C++/CLR uygulaması dağıtma](/cpp/windows/clickonce-deployment-for-visual-cpp-applications)
 
 ## <a name="publish-to-microsoft-store"></a>Microsoft Store yayımlama
 
@@ -103,7 +109,7 @@ Bir cihazda test için UWP uygulaması dağıtıyorsanız bkz. [Visual Studio 'd
 
 ## <a name="create-an-installer-package-windows-desktop"></a>Yükleyici paketi oluşturma (Windows Masaüstü)
 
-[ClickOnce](how-to-publish-a-clickonce-application-using-the-publish-wizard.md) 'ın sağlayabileceğinden daha karmaşık bir masaüstü uygulaması yüklemesi gerekiyorsa, bir Windows Installer PAKETI (MSI veya exe yükleme dosyası) veya özel bir önyükleyici oluşturabilirsiniz.
+ClickOnce 'ın sağlayabileceğinden daha karmaşık bir masaüstü uygulaması yüklemesi gerekiyorsa, bir Windows Installer paketi (MSI veya EXE yükleme dosyası) veya özel bir önyükleyici oluşturabilirsiniz.
 
 - [WIX araç takımı Visual Studio 2017 uzantısı](https://marketplace.visualstudio.com/items?itemName=RobMensching.WixToolsetVisualStudio2017Extension)kullanılarak MSI tabanlı bir yükleyici paketi oluşturulabilir. Bu bir komut satırı araç takımıdır.
 

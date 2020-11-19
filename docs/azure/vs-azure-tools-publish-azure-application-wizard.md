@@ -3,17 +3,16 @@ title: Azure bulut hizmeti yayımlama
 description: Visual Studio Azure Uygulama Yayımlama Sihirbazı 'ndaki çeşitli ayarları nasıl yapılandıracağınızı öğrenin
 author: ghogen
 manager: jillfra
-assetId: 7d8f1ac9-e439-47e0-a183-0642c4ea1920
 ms.workload: azure-vs
 ms.topic: how-to
 ms.date: 03/21/2017
 ms.author: ghogen
-ms.openlocfilehash: 281547356dcb8910af9426a853ceeb7e757b195d
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 87082a0d4df4542f36b1ce95cba92d261a2b4d9e
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93399462"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94902317"
 ---
 # <a name="using-the-visual-studio-publish-azure-application-wizard"></a>Visual Studio Azure Uygulamasını Yayımlama Sihirbazı'nı kullanma
 
@@ -30,15 +29,15 @@ Azure uygulaması Yayımlama Sihirbazı 'na, sahip olduğunuz Visual Studio proj
 
 1. Visual Studio 'da bir Azure bulut hizmeti projesi oluşturun veya açın.
 
-1. **Çözüm Gezgini** , projeye sağ tıklayın ve bağlam menüsünden **Yayımla** ' yı seçin.
+1. **Çözüm Gezgini**, projeye sağ tıklayın ve bağlam menüsünden **Yayımla**' yı seçin.
 
 **Azure için etkinleştirilmemiş bir Web uygulaması projeniz varsa:**
 
 1. Visual Studio 'da bir Azure bulut hizmeti projesi oluşturun veya açın.
 
-1. **Çözüm Gezgini** , projeye sağ tıklayın ve bağlam menüsünde, **Convert**  >  **Dönüştür Azure bulut hizmeti projesine** Dönüştür ' ü seçin.
+1. **Çözüm Gezgini**, projeye sağ tıklayın ve bağlam menüsünde, **Convert**  >  **Dönüştür Azure bulut hizmeti projesine** Dönüştür ' ü seçin.
 
-1. **Çözüm Gezgini** , yeni oluşturulan Azure projesine sağ tıklayın ve bağlam menüsünden **Yayımla** ' yı seçin.
+1. **Çözüm Gezgini**, yeni oluşturulan Azure projesine sağ tıklayın ve bağlam menüsünden **Yayımla**' yı seçin.
 
 ## <a name="sign-in-page"></a>Oturum açma sayfası
 
@@ -52,13 +51,13 @@ Azure uygulaması Yayımlama Sihirbazı 'na, sahip olduğunuz Visual Studio proj
 
 ![Ortak ayarlar](./media/vs-azure-tools-publish-azure-application-wizard/settings-common-settings.png)
 
-**Bulut hizmeti** -açılan menüyü kullanarak var olan bir bulut hizmetini seçin ya da **&lt; Yeni>oluştur** ' u seçin ve bir bulut hizmeti oluşturun. Veri merkezi her bir bulut hizmeti için parantez içinde görüntülenir. Bulut hizmeti için veri merkezi konumunun, depolama hesabı için veri merkezi konumuyla aynı olması önerilir (Gelişmiş ayarlar).
+**Bulut hizmeti** -açılan menüyü kullanarak var olan bir bulut hizmetini seçin ya da **&lt; Yeni>oluştur**' u seçin ve bir bulut hizmeti oluşturun. Veri merkezi her bir bulut hizmeti için parantez içinde görüntülenir. Bulut hizmeti için veri merkezi konumunun, depolama hesabı için veri merkezi konumuyla aynı olması önerilir (Gelişmiş ayarlar).
 
 **Ortam** - **Üretim** veya **hazırlama** seçeneklerinden birini belirleyin. Uygulamanızı bir test ortamında dağıtmak istiyorsanız, hazırlama ortamını seçin.
 
-**Derleme yapılandırması** - **Hata Ayıkla** veya **Yayınla** ' yı seçin.
+**Derleme yapılandırması** - **Hata Ayıkla** veya **Yayınla**' yı seçin.
 
-**Hizmet yapılandırması** - **bulut** ya da **Yerel** ' i seçin.
+**Hizmet yapılandırması** - **bulut** ya da **Yerel**' i seçin.
 
 **Tüm roller Için uzak masaüstünü etkinleştir** -hizmete uzaktan bağlanabiliyor olmanız için bu seçeneği belirleyin. Bu seçenek, birincil olarak sorun giderme için kullanılır. Daha fazla bilgi için bkz. [Visual Studio kullanarak Azure Cloud Services bir rol için Uzak Masaüstü bağlantısı etkinleştirme](/azure/cloud-services/cloud-services-role-enable-remote-desktop-visual-studio).
 
@@ -78,7 +77,7 @@ Azure depolama hesabı, uygulama dağıtımı için paketi depolar. Uygulama da�
 
 **Dağıtım güncelleştirmesi** -yalnızca güncelleştirilmiş bileşenleri dağıtmak istiyorsanız bu seçeneği belirleyin. Bu tür bir dağıtım tam dağıtımdan daha hızlı olabilir. Bulut hizmetiniz için sabit bir sanal IP adresi sürdürmek istiyorsanız bu onay edilmelidir.
 
-**Dağıtım güncelleştirmesi-ayarlar** -bu iletişim kutusu, rollerin nasıl güncelleştirilmesini istediğinizi daha fazla belirtmek için kullanılır. **Artımlı güncelleştirme** ' yi seçerseniz, uygulamanın her bir örneği diğerinden sonra güncelleştirilir, böylece uygulama her zaman kullanılabilir. **Eşzamanlı güncelleştirme** ' yi seçerseniz, uygulamanızın tüm örnekleri aynı anda güncelleştirilir. Eşzamanlı güncelleştirme daha hızlıdır, ancak güncelleştirme işlemi sırasında hizmetiniz kullanılamayabilir.
+**Dağıtım güncelleştirmesi-ayarlar** -bu iletişim kutusu, rollerin nasıl güncelleştirilmesini istediğinizi daha fazla belirtmek için kullanılır. **Artımlı güncelleştirme**' yi seçerseniz, uygulamanın her bir örneği diğerinden sonra güncelleştirilir, böylece uygulama her zaman kullanılabilir. **Eşzamanlı güncelleştirme**' yi seçerseniz, uygulamanızın tüm örnekleri aynı anda güncelleştirilir. Eşzamanlı güncelleştirme daha hızlıdır, ancak güncelleştirme işlemi sırasında hizmetiniz kullanılamayabilir.
 
 ![Dağıtım ayarları](./media/vs-azure-tools-publish-azure-application-wizard/deployment-settings.png)
 

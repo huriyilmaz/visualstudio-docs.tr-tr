@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: dağıtım çakışmalarını Işleme | Microsoft Docs'
+description: Bir SharePoint proje öğesi için dağıtım çakışmalarını işlemek üzere kendi kodunuzu nasıl uygulayacağınızı gösteren bir örnek görürsünüz.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5df9677fd349825983cc33c5a8ed2648f34b8c9e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 975fa69a503f5e2acd3e90defd9fa9895c70db00
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015312"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903513"
 ---
 # <a name="how-to-handle-deployment-conflicts"></a>Nasıl yapılır: dağıtım çakışmalarını Işleme
   Bir SharePoint proje öğesi için dağıtım çakışmalarını işlemek üzere kendi kodunuzu sağlayabilirsiniz. Örneğin, geçerli proje öğesinde bulunan herhangi bir dosyanın dağıtım konumunda zaten mevcut olup olmadığını belirleyebilir ve ardından geçerli proje öğesi dağıtılmadan önce dağıtılan dosyaları silebilirsiniz. Dağıtım çakışmaları hakkında daha fazla bilgi için bkz. [SharePoint paketleme ve dağıtımını genişletme](../sharepoint/extending-sharepoint-packaging-and-deployment.md).

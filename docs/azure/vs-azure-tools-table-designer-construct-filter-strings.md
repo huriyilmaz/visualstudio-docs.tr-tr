@@ -3,23 +3,22 @@ title: Tablo Tasarımcısı için filtre dizeleri oluşturma | Microsoft Docs
 description: Tablo Tasarımcısı için filtre dizeleri oluşturma
 author: ghogen
 manager: jillfra
-assetId: a1a10ea1-687a-4ee1-a952-6b24c2fe1a22
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/18/2016
 ms.author: ghogen
-ms.openlocfilehash: 30e9a347be1a3b35e69d2c72d141873c62dcdeb3
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 288e4256a472eb7bbc692758ad81df68be507676
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93398611"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94901927"
 ---
 # <a name="constructing-filter-strings-for-the-table-designer"></a>Tablo Tasarımcısı için Filtre Dizelerini Oluşturma
 ## <a name="overview"></a>Genel Bakış
 Visual Studio **Tablo Tasarımcısı** görüntülenen bir Azure tablosundaki verileri filtrelemek için bir filtre dizesi oluşturur ve bunu filtre alanına girersiniz. Filtre dizesi sözdizimi WCF Veri Hizmetleri tarafından tanımlanır ve bir SQL WHERE yan tümcesine benzerdir, ancak bir HTTP isteği aracılığıyla tablo hizmetine gönderilir. **Tablo Tasarımcısı** , sizin için uygun kodlamayı işler, böylece istenen özellik değerini filtrelemek için filtre alanına yalnızca özellik adı, karşılaştırma işleci, ölçüt değeri ve isteğe bağlı olarak Boolean işlecini girmeniz gerekir. [Depolama hizmetleri REST API başvurusu](/rest/api/storageservices/)aracılığıyla tabloyu sorgulamak IÇIN bir URL oluştururken yaptığınız gibi $Filter sorgu seçeneğini de eklemeniz gerekmez.
 
-WCF Veri Hizmetleri, [Açık Veri Protokolü 'nü](https://www.odata.org/) (OData) temel alır. Filtre sistemi sorgu seçeneği ( **$Filter** ) hakkında daha fazla bilgi için bkz. [OData URI kuralları belirtimi](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/).
+WCF Veri Hizmetleri, [Açık Veri Protokolü 'nü](https://www.odata.org/) (OData) temel alır. Filtre sistemi sorgu seçeneği (**$Filter**) hakkında daha fazla bilgi için bkz. [OData URI kuralları belirtimi](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/).
 
 ## <a name="comparison-operators"></a>Karşılaştırma İşleçleri
 Aşağıdaki mantıksal işleçler tüm özellik türleri için desteklenir:
@@ -32,7 +31,7 @@ Aşağıdaki mantıksal işleçler tüm özellik türleri için desteklenir:
 | lt |Küçüktür |Fiyat lt 20 |
 | le |Küçüktür veya eşittir |Fiyat Le 100 |
 | ne |Eşit değildir |Şehir ne ' Londra ' |
-| reservedStorageGb |And |Fiyat Le 200 ve fiyat gt 3,5 |
+| ve |And |Fiyat Le 200 ve fiyat gt 3,5 |
 | veya |Veya |Fiyat Le 3,5 veya fiyat gt 200 |
 | not |Not |ıısavailable yok |
 

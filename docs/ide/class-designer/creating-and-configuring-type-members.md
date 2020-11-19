@@ -1,5 +1,7 @@
 ---
 title: Tür Üyeleri Oluşturma ve Yapılandırma (Sınıf Tasarımcısı)
+description: Sınıf diyagramında türlere üye ekleme ve bu üyeleri Sınıf Ayrıntıları penceresinde yapılandırma hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -29,12 +31,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2bb65cc70bfec5e8eafc4a823d24f609166d4327
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 504488bdd08e80c34ebeed727e7b95badf12ca37
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85771045"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903020"
 ---
 # <a name="create-and-configure-type-members-in-class-designer"></a>Sınıf Tasarımcısı tür üyeleri oluşturma ve yapılandırma
 
@@ -51,7 +53,7 @@ Bu üyeleri bir sınıf diyagramında türlere ekleyebilir ve bu üyeleri **Sın
 |Modül (Yalnızca VB)|yöntem, özellik, alan, olay, oluşturucu, sabit|
 
 > [!NOTE]
-> Bir özelliğin get ve set erişimcileri ek mantığa gerek duymadığında, otomatik uygulanan özellikleri (yalnızca C#) kullanarak özellik bildirimini daha kısa yapın. Tam imzayı göstermek için, **sınıf diyagramı** menüsünden **üyeleri Değiştir biçim**  >  **tam imzayı**göster ' i seçin. Otomatik uygulanan özellikler hakkında daha fazla bilgi için bkz. [Otomatik uygulanan özellikler](/dotnet/csharp/programming-guide/classes-and-structs/auto-implemented-properties).
+> Bir özelliğin get ve set erişimcileri ek mantığa gerek duymadığında, otomatik uygulanan özellikleri (yalnızca C#) kullanarak özellik bildirimini daha kısa yapın. Tam imzayı göstermek için, **sınıf diyagramı** menüsünden **üyeleri Değiştir biçim**  >  **tam imzayı** göster ' i seçin. Otomatik uygulanan özellikler hakkında daha fazla bilgi için bkz. [Otomatik uygulanan özellikler](/dotnet/csharp/programming-guide/classes-and-structs/auto-implemented-properties).
 
 ## <a name="common-tasks"></a>Genel görevler
 
@@ -66,7 +68,7 @@ Varsayılan olarak, yeni bir sınıf diyagramı açtığınızda **Sınıf Ayrı
 
 - Diyagramda herhangi bir sınıfa sağ tıklayıp bağlam menüsünü görüntüleyin ve **Sınıf Ayrıntıları**' nı seçin.
 
-- **View**  >  Menü çubuğundan**diğer Windows**  >  **sınıfı ayrıntılarını** görüntüle ' yi seçin.
+- **View**  >  Menü çubuğundan **diğer Windows**  >  **sınıfı ayrıntılarını** görüntüle ' yi seçin.
 
 ## <a name="create-members"></a>Üye Oluştur
 
@@ -98,7 +100,7 @@ Varsayılan olarak, yeni bir sınıf diyagramı açtığınızda **Sınıf Ayrı
 
      Tür odağı alır ve içeriği **Sınıf Ayrıntıları** penceresinde görüntülenir.
 
-2. **Sınıf Ayrıntıları** penceresi araç çubuğunda en üstteki simgesine tıklayın ve açılan listeden **Yeni \<member> ** ' yi seçin.
+2. **Sınıf Ayrıntıları** penceresi araç çubuğunda en üstteki simgesine tıklayın ve açılan listeden **Yeni \<member>** ' yi seçin.
 
      İmleç, eklemek istediğiniz üye türü için bir satırdaki **ad** alanına gider. Örneğin, **yeni özellik**' e tıkladıysanız, Imleç **Sınıf Ayrıntıları** penceresinin **Özellikler** bölümünde yeni bir satıra gider.
 
@@ -131,7 +133,7 @@ Sınıf Tasarımcısı, diyagram görüntülenen türlerin üyelerinde değişik
 
 **Sınıf Ayrıntıları** penceresinde görünen tüm Üyeler sınıf diyagramındaki türlerin üyelerini temsil eder. Dört üye türü vardır: yöntemler, özellikler, alanlar ve olaylar.
 
-Tüm üye satırları, üyeleri türe göre gruplandıran başlıkların altında görünür. Örneğin, tüm özellikler başlık **özellikleri**altında görünür, bu, kılavuzdaki bir düğüm olarak daraltılabilir veya Genişletilebilir.
+Tüm üye satırları, üyeleri türe göre gruplandıran başlıkların altında görünür. Örneğin, tüm özellikler başlık **özellikleri** altında görünür, bu, kılavuzdaki bir düğüm olarak daraltılabilir veya Genişletilebilir.
 
 Her üye satırı aşağıdaki öğeleri görüntüler:
 
@@ -163,7 +165,7 @@ Her üye satırı aşağıdaki öğeleri görüntüler:
 
 - **Özet**
 
-     **Özet** hücresi, üye hakkında bilgilerin bir özetini gösterir. **Özet hücresinde,** üyenin **Özeti**, **dönüş türü**ve **açıklamalar** hakkındaki bilgileri görüntülemek veya düzenlemek için bu üç noktaya tıklayın.
+     **Özet** hücresi, üye hakkında bilgilerin bir özetini gösterir. **Özet hücresinde,** üyenin **Özeti**, **dönüş türü** ve **açıklamalar** hakkındaki bilgileri görüntülemek veya düzenlemek için bu üç noktaya tıklayın.
 
 - **Gizle**
 
@@ -198,7 +200,7 @@ Parametre satırı aşağıdaki öğeleri içerir:
 
 - **İcisi**
 
-     Bir parametre satırındaki **değiştirici** hücresi kabul eder ve parametrenin yeni değiştiricisini görüntüler. Yeni bir parametre değiştiricisi girmek için, açılan liste kutusunu kullanarak C# ' de **none**, **ref**, **Out**veya **params** arasından seçim yapın ve vb 'de **ByVal**, **ByRef**veya **ParamArray** ' i seçin.
+     Bir parametre satırındaki **değiştirici** hücresi kabul eder ve parametrenin yeni değiştiricisini görüntüler. Yeni bir parametre değiştiricisi girmek için, açılan liste kutusunu kullanarak C# ' de **none**, **ref**, **Out** veya **params** arasından seçim yapın ve vb 'de **ByVal**, **ByRef** veya **ParamArray** ' i seçin.
 
 - **Özet**
 
@@ -206,9 +208,9 @@ Parametre satırı aşağıdaki öğeleri içerir:
 
 - **\<add parameter>**
 
-     Bir üyenin son parametre satırı, **ad** hücresine **<Add parametresi \> ** metin içerir. Bu hücreye tıklanması yeni bir parametre oluşturmanıza izin verir. Daha fazla bilgi için, bkz. [bir yönteme parametre eklemek için](creating-and-configuring-type-members.md#add-parameters-to-methods).
+     Bir üyenin son parametre satırı, **ad** hücresine **<Add parametresi \>** metin içerir. Bu hücreye tıklanması yeni bir parametre oluşturmanıza izin verir. Daha fazla bilgi için, bkz. [bir yönteme parametre eklemek için](creating-and-configuring-type-members.md#add-parameters-to-methods).
 
-**Özellikler** penceresi, **Sınıf Ayrıntıları** penceresinde görüntülenen aynı parametre özelliklerini görüntüler: **ad**, **tür**, **değiştirici**, **Özet**ve **isteğe bağlı varsayılan** özellik. Özelliğin bir konumda değiştirilmesi, özelliğin değerini global olarak güncelleştirir (değerinin diğer konumda görüntülenmesi de buna dahildir).
+**Özellikler** penceresi, **Sınıf Ayrıntıları** penceresinde görüntülenen aynı parametre özelliklerini görüntüler: **ad**, **tür**, **değiştirici**, **Özet** ve **isteğe bağlı varsayılan** özellik. Özelliğin bir konumda değiştirilmesi, özelliğin değerini global olarak güncelleştirir (değerinin diğer konumda görüntülenmesi de buna dahildir).
 
 > [!NOTE]
 > Bir temsilciye bir parametre eklemek için bkz. [üyeleri oluşturma](creating-and-configuring-type-members.md#create-members).
@@ -224,9 +226,9 @@ Parametre satırı aşağıdaki öğeleri içerir:
 
 2. **Sınıf Ayrıntıları** penceresinde, parametre eklemek istediğiniz yöntemin satırını genişletin.
 
-     Yalnızca bir parantez ve sözcük çifti içeren girintili bir parametre satırı görünür ** \<add parameter> .**
+     Yalnızca bir parantez ve sözcük çifti içeren girintili bir parametre satırı görünür **\<add parameter> .**
 
-3. Tıklayın **\<add parameter>** , yeni parametrenin adını yazın ve **ENTER**tuşuna basın.
+3. Tıklayın **\<add parameter>** , yeni parametrenin adını yazın ve **ENTER** tuşuna basın.
 
      Yeni parametre yöntemine ve yöntemin koduna eklenir. **Sınıf Ayrıntıları** penceresinde ve Özellikler penceresi görüntülenir.
 
@@ -240,9 +242,9 @@ Parametre satırı aşağıdaki öğeleri içerir:
 
 2. **Sınıf Ayrıntıları** penceresinde, isteğe bağlı parametre eklemek istediğiniz yöntemin satırını genişletin.
 
-     Yalnızca bir parantez ve sözcük çifti içeren girintili bir parametre satırı görünür ** \<add parameter> .**
+     Yalnızca bir parantez ve sözcük çifti içeren girintili bir parametre satırı görünür **\<add parameter> .**
 
-3. Tıklayın **\<add parameter>** , yeni parametrenin adını yazın ve **ENTER**tuşuna basın.
+3. Tıklayın **\<add parameter>** , yeni parametrenin adını yazın ve **ENTER** tuşuna basın.
 
      Yeni parametre yöntemine ve yöntemin koduna eklenir. **Sınıf Ayrıntıları** penceresinde ve Özellikler penceresi görüntülenir.
 
@@ -305,7 +307,7 @@ Proje, kaynak kodu denetimi dışındaki bir nedenle salt okunur olabilir. Proje
 
 **Salt okuma türleri**
 
-Kaynak kodu dosyası salt okunan bir tür içeren bir projeyi kaydetmeye çalışırsanız, dosyayı yeni bir adla veya yeni bir konuma kaydetme ya da salt yazılır dosyanın üzerine yazma seçimlerini sağlayan **salt yazılır dosyayı kaydet** iletişim kutusu görüntülenir. Dosyanın üzerine yazarsanız yeni kopyası artık salt okunur özellikte olmaz.
+Kaynak kodu dosyası salt okunan bir tür içeren bir projeyi kaydetmeye çalışırsanız, dosyayı yeni bir adla veya yeni bir konuma kaydetme veya salt-yazılır dosyanın üzerine yazma seçeneklerini sağlayan **Read-Only dosyayı kaydet** iletişim kutusu görüntülenir. Dosyanın üzerine yazarsanız yeni kopyası artık salt okunur özellikte olmaz.
 
 Bir Kod dosyası sözdizimi hatası içeriyorsa, bu dosyadaki kodu gösteren şekiller söz dizimi hatası düzeltilinceye kadar geçici olarak salt okunur olur. Bu durumdaki şekiller, "Kaynak kodu dosyası ayrıştırma hatası içeriyor" yazılı araç ipucunu gösteren kırmızı bir metin ve kırmızı bir simge görüntüler.
 

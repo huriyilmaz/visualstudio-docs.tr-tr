@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: bir BDC özelliğine özel derleme ekleme | Microsoft Docs'
+description: Bir iş verileri bağlantısı (BDC) özelliğine özel derlemeler ekleyin, böylece projenizin aynı çözümdeki diğer projelerdeki derlemelere başvurabilmesi sağlanır.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 79336e241b822e5fa9f84dbb771aa4187ea5eadb
-ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
+ms.openlocfilehash: e7a2a0109faca4da5406b45b4d606ae8a5cd0685
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90740077"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903474"
 ---
 # <a name="how-to-include-a-custom-assembly-in-a-bdc-feature"></a>Nasıl yapılır: bir BDC özelliğine özel bütünleştirilmiş kod ekleme
   Projeniz aynı çözümdeki diğer projelerden derlemelere başvurabilir. Ancak, **başvurulan derlemeleri LobSystems 'A ata** iletişim kutusunu kullanarak bu derlemeleri projenin özellik dosyasına eklemeniz gerekir.

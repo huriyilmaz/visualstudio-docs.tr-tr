@@ -1,5 +1,7 @@
 ---
 title: CodeIndex komutu
+description: Kod dizinlemeyi Azure DevOps Server (eski adıyla Team Foundation Server) yönetmek için CodeIndex komutunu nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 07338e83f0c58331345cd3f4c6eb61855a16fd4f
-ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
+ms.openlocfilehash: ece3916f0af442b67bb5cdd0999ad37159e53448
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91928495"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94901186"
 ---
 # <a name="codeindex-command"></a>CodeIndex komutu
 
@@ -30,7 +32,7 @@ Team Foundation Server kod dizinlemeyi yönetmek için **CodeIndex** komutunu ku
 > [!NOTE]
 > Yönetici kimlik bilgileriyle oturum açmış olsanız bile, bu komutu çalıştırmak için yükseltilmiş bir komut Istemi penceresi açmalısınız. Ayrıca, bu komutu Team Foundation uygulama katmanından çalıştırmanız gerekir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cmd
 TFSConfig CodeIndex /indexingStatus | /setIndexing:[ on | off | keepupOnly ] | /ignoreList:[ add | remove | removeAll | view ] ServerPath | /listLargeFiles [/fileCount:FileCount] [/minSize:MinSize] | /reindexAll | /destroyCodeIndex [/noPrompt] | /temporaryDataSizeLimit:[ view | <SizeInGBs> | disable ] | /indexHistoryPeriod:[ view | all | <NumberOfMonths> ] [/collectionName:CollectionName | /collectionId:CollectionId]
@@ -54,8 +56,8 @@ TFSConfig CodeIndex /indexingStatus | /setIndexing:[ on | off | keepupOnly ] | /
 |**/Destroyıcodeındex [/noPrompt]**|Kod dizinini silin ve tüm dizinli verileri kaldırın. **/Noprompt** seçeneğini kullanırsanız onay gerektirmez.|
 |**/temporaryDataSizeLimit**: [görünüm &#124; <`SizeInGBs`> &#124; devre dışı]|Değişiklik kümelerini işlerken CodeLens 'in ne kadar geçici veri oluşturduğunu denetleyin. Varsayılan sınır 2 GB 'dir.<br /><br /> -   **görüntüle**: geçerli boyut sınırını göster.<br />-   `SizeInGBs`: Boyut sınırını değiştirin.<br />-   **devre dışı bırak**: boyut sınırını kaldır.<br /><br /> Bu sınır, CodeLens yeni bir değişiklik kümesini işleyerek denetlenir. Geçici veriler bu sınırı aşarsa, CodeLens, yenilerini değil, geçmiş değişiklik kümelerini işlemeyi duraklatacaktır. CodeLens, veriler temizlendikten ve bu sınırın altına düştüğünde işlemeyi yeniden başlatacak. Temizleme, günde bir kez otomatik olarak çalıştırılır. Bu, temizleme çalışmaya başlamadan geçici verilerin bu sınırı aşabileceği anlamına gelir.|
 |**/ındexgeçmişini**: [&#124; tüm &#124; <> görüntüleme `NumberOfMonths` ]|Değişiklik geçmişinizin ne kadar süreyle dizine alınacağını denetleyin. Bu, ne kadar geçmiş CodeLens 'in size gösterdiği geçmişi etkiler. Varsayılan sınır 12 aydır. Bu, CodeLens 'in yalnızca son 12 aydan değişiklik geçmişinizi gösterdiği anlamına gelir.<br /><br /> -   **görüntüle**: geçerli ay sayısını göster.<br />-   **All**: tüm değişiklik geçmişinin dizinini oluştur.<br />-   `NumberOfMonths`: Değişiklik geçmişine dizin eklemek için kullanılan ayların sayısını değiştirin.|
-|**/CollectionName:**`CollectionName`|**CodeIndex** komutunun çalıştırılacağı proje koleksiyonunun adını belirtir. **/CollectionId**kullanmıyorsanız gereklidir.|
-|**/CollectionId:**`CollectionId`|**CodeIndex** komutunun çalıştırılacağı proje koleksiyonunun kimlik numarasını belirtir. **/CollectionName**kullanmıyorsanız gereklidir.|
+|**/CollectionName:**`CollectionName`|**CodeIndex** komutunun çalıştırılacağı proje koleksiyonunun adını belirtir. **/CollectionId** kullanmıyorsanız gereklidir.|
+|**/CollectionId:**`CollectionId`|**CodeIndex** komutunun çalıştırılacağı proje koleksiyonunun kimlik numarasını belirtir. **/CollectionName** kullanmıyorsanız gereklidir.|
 
 ## <a name="examples"></a>Örnekler
 

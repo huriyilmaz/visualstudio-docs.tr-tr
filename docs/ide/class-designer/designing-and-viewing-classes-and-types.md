@@ -1,5 +1,7 @@
 ---
 title: Sınıf Tasarımcısı kullan
+description: Visual Studio 'da Sınıf Tasarımcısı ile kodunuzda sınıfları ve diğer türleri tasarlama, görselleştirme ve yeniden düzenleme hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 05/08/2018
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +19,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 80668f3b999d9e022de3d22abb383f2dbd10730a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 72d646150baafb7e7169a3c0a2452da6aec5df9b
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87507917"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94902993"
 ---
 # <a name="design-and-view-classes-and-types-with-class-designer"></a>Sınıf Tasarımcısı sınıfları ve türleri tasarlama ve görüntüleme
 
@@ -54,7 +56,7 @@ Her bir sınıf diyagramının ne gösterdiğini tanımlamaya ek olarak, bilgile
 Bir veya daha fazla sınıf diyagramına ince ayar yaptıktan sonra, bunları Microsoft Office belgelerine kopyalayabilir ve yazdırabilir ya da resim dosyası olarak dışarı aktarabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: sınıf diyagramı öğelerini Microsoft Office bir belgeye kopyalama](how-to-copy-class-diagram-elements-to-a-microsoft-office-document.md), [nasıl yapılır: sınıf diyagramlarını yazdırma](how-to-print-class-diagrams.md) ve [nasıl yapılır: sınıf diyagramlarını görüntü olarak dışarı aktarma](how-to-export-class-diagrams-as-images.md).
 
 > [!NOTE]
-> Sınıf Tasarımcısı, kaynak dosyalarınızın konumunu izlememez, bu yüzden proje yapınızı değiştirmek veya projede kaynak dosyaları taşımak Sınıf Tasarımcısı, özellikle bir typedef, taban sınıf veya ilişki türlerinin kaynak türü olan türün izini kaybetmesine neden olabilir. **Sınıf Tasarımcısı, bu tür görüntülenemiyor**gibi bir hata alabilirsiniz. Bunu yaparsanız, yeniden görüntülemek için değiştirilen veya yeniden konumlandırılan kaynak kodu yeniden sınıf diyagramına sürükleyin.
+> Sınıf Tasarımcısı, kaynak dosyalarınızın konumunu izlememez, bu yüzden proje yapınızı değiştirmek veya projede kaynak dosyaları taşımak Sınıf Tasarımcısı, özellikle bir typedef, taban sınıf veya ilişki türlerinin kaynak türü olan türün izini kaybetmesine neden olabilir. **Sınıf Tasarımcısı, bu tür görüntülenemiyor** gibi bir hata alabilirsiniz. Bunu yaparsanız, yeniden görüntülemek için değiştirilen veya yeniden konumlandırılan kaynak kodu yeniden sınıf diyagramına sürükleyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

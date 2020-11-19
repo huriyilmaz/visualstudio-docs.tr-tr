@@ -1,5 +1,7 @@
 ---
 title: TemplateGroupID öğesi (Visual Studio şablonları) | Microsoft Docs
+description: TemplateGroupID öğesi hakkında bilgi edinin ve bir öğe şablonlarının ne tür projenin gösterileceğini belirtir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: affc324418e3745f85fb0b91a0ef7abda0ab28b0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e5f7d30036f0f25d1f81b690168675d74fc36bbd
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699072"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903227"
 ---
 # <a name="templategroupid-element-visual-studio-templates"></a>TemplateGroupID Öğesi (Visual Studio Şablonları)
 Öğe şablonlarının ne tür projenin gösterileceğini belirtir. Bu öğe, [ShowByDefault (Visual Studio şablonları)](../extensibility/showbydefault-visual-studio-templates.md) olarak ayarlandığında önemlidir `false` . [ShowByDefault (Visual Studio şablonları)](../extensibility/showbydefault-visual-studio-templates.md) olarak ayarlandığında `true` , tüm proje türlerinde bir öğe şablonu kullanılabilir.
@@ -56,18 +58,18 @@ ms.locfileid: "80699072"
 ## <a name="remarks"></a>Açıklamalar
  `TemplateGroupID` bir öğesidir.
 
- Öğe değeri, `TemplateGroupID` Proje sistem kaydı (HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio \projects) ile birlikte, \\ *\<version number>* \\ **Yeni öğe Ekle** iletişim kutusunda görünen şablonları filtrelemek için kullanılır.
+ Öğe değeri, `TemplateGroupID` Proje sistem kaydı (HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\projects) ile birlikte, \\ *\<version number>* \\ **Yeni öğe Ekle** iletişim kutusunda görünen şablonları filtrelemek için kullanılır.
 
 |Visual C++ değeri|Anlamı|
 |------------------------|-------------|
-|VC-yerel|Yerel projeler için kullanılır. Ayrıca, bir proje türü belirlenemiyorsa varsayılan değer.|
-|VC tarafından yönetilen|Yönetilen (/CLR) projeler için kullanılır|
+|VC-Native|Yerel projeler için kullanılır. Ayrıca, bir proje türü belirlenemiyorsa varsayılan değer.|
+|VC-Managed|Yönetilen (/CLR) projeler için kullanılır|
 |VC-Windows|Windows platformunu hedefleyen tüm projeler için kullanılır (Yerel/yönetilen/mağaza)|
 |WinRT-yerel-UAP|Windows 10 mağazası projeleri için kullanılır|
-|CodeSharing-yerel|Paylaşılan öğe projeleri için kullanılır|
+|CodeSharing-Native|Paylaşılan öğe projeleri için kullanılır|
 |WinRT-yerel-6,3|Windows 8.1 mağaza projeleri için kullanılır|
 |WinRT-yerel-telefon-6,3|Windows Phone 8,1 projeleri için kullanılır|
-|WinRT-yerel|Windows 8,0 mağaza projeleri için kullanılır|
+|WinRT-Native|Windows 8,0 mağaza projeleri için kullanılır|
 |VC-Android|Android projeleri için kullanılır|
 
 ## <a name="see-also"></a>Ayrıca bkz.

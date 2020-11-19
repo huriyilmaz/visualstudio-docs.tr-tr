@@ -4,17 +4,16 @@ ms.custom: SEO-VS-2020
 description: Visual Studio ve IntelliTrace ile bir bulut hizmetinde hata ayıklamayı öğrenin
 author: mikejo5000
 manager: jillfra
-ms.assetid: 5e6662fc-b917-43ea-bf2b-4f2fc3d213dc
 ms.topic: how-to
 ms.workload: azure-vs
 ms.date: 03/21/2017
 ms.author: mikejo
-ms.openlocfilehash: b89ed536e6483f54d4d7370a02935728dedfb517
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: abfe3de9bad150fbfb187646592218e62c1cce20
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809826"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94902421"
 ---
 # <a name="debugging-a-published-azure-cloud-service-with-visual-studio-and-intellitrace"></a>Visual Studio ve IntelliTrace ile yayımlanan bir Azure bulut hizmetinin hatalarını ayıklama
 IntelliTrace ile, Azure 'da çalıştırıldığında bir rol örneği için kapsamlı hata ayıklama bilgilerini günlüğe kaydedebilirsiniz. Bir sorunun nedenini bulmanız gerekiyorsa, Visual Studio 'dan Azure 'da çalışıyor gibi kodunuzda adım adım ilerlemek için IntelliTrace günlüklerini kullanabilirsiniz. Aslında, IntelliTrace anahtar kodu yürütme ve ortam verilerini Azure uygulamanız Azure 'da bir bulut hizmeti olarak çalışırken kaydeder ve kaydedilen verileri Visual Studio 'dan yeniden oynamanızı sağlar.
@@ -30,7 +29,7 @@ Alternatif olarak, [Uzaktan hata ayıklamayı](vs-azure-tools-debugging-cloud-se
 ## <a name="configure-an-azure-application-for-intellitrace"></a>IntelliTrace için bir Azure uygulaması yapılandırma
 Bir Azure uygulaması için IntelliTrace 'i etkinleştirmek üzere uygulamayı bir Visual Studio Azure projesinden oluşturmanız ve yayımlamanız gerekir. Azure 'a yayımlamadan önce Azure uygulamanız için IntelliTrace 'i yapılandırmanız gerekir. Uygulamanızı IntelliTrace yapılandırması olmadan yayımlarsanız projeyi yeniden yayımlamanız gerekir. Daha fazla bilgi için bkz. [Visual Studio kullanarak Azure bulut hizmetleri projelerini yayımlama](vs-azure-tools-publishing-a-cloud-service.md).
 
-1. Azure uygulamanızı dağıtmaya hazırsanız, proje derleme hedeflerinizin **hata ayıklama**olarak ayarlandığını doğrulayın.
+1. Azure uygulamanızı dağıtmaya hazırsanız, proje derleme hedeflerinizin **hata ayıklama** olarak ayarlandığını doğrulayın.
 
 1. **Çözüm Gezgini**, proje öğesine sağ tıklayın ve bağlam menüsünden **Yayımla**' yı seçin.
 
@@ -40,7 +39,7 @@ Bir Azure uygulaması için IntelliTrace 'i etkinleştirmek üzere uygulamayı b
 
 1. Bulutta yayımlandığında uygulamanıza yönelik IntelliTrace günlüklerini toplamak için **IntelliTrace 'ı etkinleştir** seçeneğini etkinleştirin.
 
-1. Temel IntelliTrace yapılandırmasını özelleştirmek için, **IntelliTrace 'ı etkinleştir ' in**yanındaki **Ayarlar** ' ı seçin.
+1. Temel IntelliTrace yapılandırmasını özelleştirmek için, **IntelliTrace 'ı etkinleştir ' in** yanındaki **Ayarlar** ' ı seçin.
 
     ![IntelliTrace ayarları bağlantısı](./media/vs-azure-tools-intellitrace-debug-published-cloud-services/intellitrace-settings-link.png)
 
@@ -50,7 +49,7 @@ Bir Azure uygulaması için IntelliTrace 'i etkinleştirmek üzere uygulamayı b
 
 IntelliTrace günlüğü, IntelliTrace ayarlarında belirtilen en büyük boyutun (varsayılan boyut 250 MB 'tır) bir dairesel günlük dosyasıdır. IntelliTrace günlükleri, sanal makinenin dosya sistemindeki bir dosyaya toplanır. Günlükleri istediğinizde, o zaman bu noktada bir anlık görüntü alınır ve yerel bilgisayarınıza indirilir.
 
-Azure bulut hizmeti Azure 'da yayımlandıktan sonra, aşağıdaki görüntüde gösterildiği gibi, IntelliTrace 'in **Sunucu Gezgini**Azure düğümünden etkinleştirilip etkinleştirilmediğini belirleyebilirsiniz:
+Azure bulut hizmeti Azure 'da yayımlandıktan sonra, aşağıdaki görüntüde gösterildiği gibi, IntelliTrace 'in **Sunucu Gezgini** Azure düğümünden etkinleştirilip etkinleştirilmediğini belirleyebilirsiniz:
 
 ![Sunucu Gezgini-IntelliTrace etkin](./media/vs-azure-tools-intellitrace-debug-published-cloud-services/IC744134.png)
 

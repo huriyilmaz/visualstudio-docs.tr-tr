@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.date: 08/17/2020
 ms.author: angelpe
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: 48554484781cca46ba96f8a075d18ea55ec3ef43
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: ad233d51e271dfbacb80b7f5f2792d546a8a3e0a
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93398624"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903071"
 ---
 # <a name="add-azure-cache-for-redis-by-using-visual-studio-connected-services"></a>Visual Studio bağlı hizmetlerini kullanarak Redsıs için Azure önbelleği ekleme
 
@@ -42,19 +42,19 @@ Bağlı hizmet işlevselliği, gerekli tüm başvuruları ve bağlantı kodları
 
 1. Projenizi Visual Studio’da açın.
 
-1. **Çözüm Gezgini** , **bağlı hizmetler** düğümüne sağ tıklayın ve bağlam menüsünden **bağlı hizmet ekle** ' yi seçin.
+1. **Çözüm Gezgini**, **bağlı hizmetler** düğümüne sağ tıklayın ve bağlam menüsünden **bağlı hizmet ekle**' yi seçin.
 
 1. **Bağlı hizmetler** sekmesinde, **hizmet bağımlılıkları** için + simgesini seçin.
 
     ![Hizmet bağımlılığı Ekle](./media/vs-azure-tools-connected-services-storage/vs-2019/connected-services-tab.png)
 
-1. **Bağımlılık Ekle** sayfasında **Redsıs için Azure önbelleği** ' ni seçin.
+1. **Bağımlılık Ekle** sayfasında **Redsıs için Azure önbelleği**' ni seçin.
 
     ![Redis için Azure Cache ekleme](./media/azure-redis-cache-add-connected-service/azure-redis-cache.png)
 
     Henüz oturum açmadıysanız Azure hesabınızda oturum açın. Bir Azure hesabınız yoksa, [ücretsiz deneme](https://azure.microsoft.com/account/free)için kaydolabilirsiniz.
 
-1. **Redsıs Için Azure önbelleğini Yapılandır** ekranında, redsıs için mevcut bir Azure önbelleği seçin ve **İleri** ' yi seçin.
+1. **Redsıs Için Azure önbelleğini Yapılandır** ekranında, redsıs için mevcut bir Azure önbelleği seçin ve **İleri**' yi seçin.
 
     Yeni bir bileşen oluşturmanız gerekiyorsa, bir sonraki adıma gidin. Aksi takdirde 7. adıma geçin.
 
@@ -64,17 +64,17 @@ Bağlı hizmet işlevselliği, gerekli tüm başvuruları ve bağlantı kodları
 
    1. Ekranın alt kısmındaki **yeni Azure Redis Cache oluştur** ' u seçin.
 
-   1. **Redsıs Için Azure önbelleğini doldurun: yeni ekran oluşturun** ve **Oluştur** ' u seçin.
+   1. **Redsıs Için Azure önbelleğini doldurun: yeni ekran oluşturun** ve **Oluştur**' u seçin.
 
        ![Redsıs için yeni Azure önbelleği](./media/azure-redis-cache-add-connected-service/create-new-azure-redis-cache.png)
 
-   1. **Redsıs Için Azure önbelleğini Yapılandır** ekranı görüntülendiğinde, yeni önbellek listede görüntülenir. Listeden yeni veritabanını seçin ve **İleri** ' yi seçin.
+   1. **Redsıs Için Azure önbelleğini Yapılandır** ekranı görüntülendiğinde, yeni önbellek listede görüntülenir. Listeden yeni veritabanını seçin ve **İleri**' yi seçin.
 
 1. Bir bağlantı dizesi adı girin veya varsayılanı seçin ve bağlantı dizesinin yerel bir gizli dizi dosyasında mi yoksa [Azure Key Vault](/azure/key-vault)mi depolandığını seçin.
 
    ![Bağlantı dizesini belirtin](./media/azure-redis-cache-add-connected-service/connection-string.png)
 
-1. **Değişiklikler ekranının Özeti** , işlemi tamamlamadıysanız projenizde yapılacak tüm değişiklikleri gösterir. Değişiklikler tamam ise **son** ' u seçin.
+1. **Değişiklikler ekranının Özeti** , işlemi tamamlamadıysanız projenizde yapılacak tüm değişiklikleri gösterir. Değişiklikler tamam ise **son**' u seçin.
 
    ![Değişikliklerin özeti](./media/azure-redis-cache-add-connected-service/summary-of-changes.png)
 

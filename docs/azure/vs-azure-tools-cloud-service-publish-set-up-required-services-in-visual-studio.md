@@ -3,17 +3,16 @@ title: Bulut hizmetini yayımlamaya veya dağıtmaya hazırlanma
 description: Bulut ve depolama hesabı hizmetlerini ayarlama ve Azure uygulamanızı yapılandırma yordamlarını öğrenin.
 author: ghogen
 manager: jillfra
-ms.assetid: 92ee2f9e-ec49-4c7a-900d-620abe5e9d8a
 ms.workload: azure-vs
 ms.topic: how-to
 ms.date: 11/10/2017
 ms.author: ghogen
-ms.openlocfilehash: a09b8f5c6efacab0f02a445ed78f8a3769031fa0
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: c048968ca97484812b7423a16e4a1834e1c8a66b
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93399014"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94902512"
 ---
 # <a name="prepare-to-publish-or-deploy-a-cloud-service-from-visual-studio"></a>Visual Studio'dan bulut hizmeti yayımlamaya veya dağıtmaya hazırlanma
 
@@ -28,7 +27,7 @@ Bulut hizmeti, rollerinizi Azure ortamında çalıştırır. Visual Studio 'da y
 
 ### <a name="create-a-cloud-service-from-visual-studio"></a>Visual Studio 'dan bir bulut hizmeti oluşturma
 
-1. Daha önce oluşturulmuş bir bulut hizmeti projesiyle, projeye sağ tıklayıp **Yayımla** ' yı seçin.
+1. Daha önce oluşturulmuş bir bulut hizmeti projesiyle, projeye sağ tıklayıp **Yayımla**' yı seçin.
 1. Gerekirse, Azure aboneliğinizle ilişkili Microsoft veya kurumsal hesapla oturum açın ve ardından **Ayarlar** sayfasına Ilerlemek için **İleri** ' yi seçin.
 1. **Bulut hizmeti oluştur ve depolama hesabı** iletişim kutusu görüntülenir (yoksa, **bulut hizmeti** listesinden **Yeni oluştur** ' u seçin).
 1. URL 'nizin bir parçasını oluşturan ve benzersiz olması gereken bulut hizmetiniz için büyük/küçük harfe duyarsız bir ad girin. Ayrıca bir bölge veya benzeşim grubu seçin ve bir çoğaltma seçeneği belirleyin.
@@ -37,7 +36,7 @@ Bulut hizmeti, rollerinizi Azure ortamında çalıştırır. Visual Studio 'da y
 
 1. [Azure portalında](https://portal.azure.com/) oturum açın.
 1. Sayfanın sol tarafındaki **Cloud Services (klasik)** seçeneğini belirleyin.
-1. **+ Ekle** ' yi seçin ve gerekli BILGILERI (DNS adı, abonelik, kaynak grubu ve konum) sağlayın. Bu noktada, daha sonra Visual Studio 'da yaptığınız için bir paketi karşıya yüklemek gerekli değildir.
+1. **+ Ekle**' yi seçin ve gerekli BILGILERI (DNS adı, abonelik, kaynak grubu ve konum) sağlayın. Bu noktada, daha sonra Visual Studio 'da yaptığınız için bir paketi karşıya yüklemek gerekli değildir.
 1. İşlemi gerçekleştirmek için **Oluştur** ' u seçin.
 
 ## <a name="create-a-storage-account"></a>Depolama hesabı oluşturma
@@ -46,11 +45,11 @@ Depolama hesabı, blob, kuyruk ve tablo hizmetlerine erişim sağlar. Visual Stu
 
 ### <a name="create-a-storage-account-from-visual-studio"></a>Visual Studio 'dan bir depolama hesabı oluşturma
 
-1. Daha önce oluşturulmuş bir bulut hizmeti projesiyle **Çözüm Gezgini** , bir rol projesi Içindeki **bağlı hizmetler** düğümünü bulun, sağ tıklayın ve **bağlı hizmet ekle** ' yi seçin. (Visual Studio 2015 ' de **depolama** düğümüne sağ tıklayın ve **depolama hesabı oluştur** ' u seçin.)
-1. Görüntülenen **bağlı hizmetler** listesinde, **Azure depolama ile bulut depolama** ' yı seçin.
-1. Görüntülenen Azure depolama iletişim kutusunda, aboneliğinizi belirttiğiniz bir iletişim kutusunu, hesap için bir adı, bir fiyatlandırma katmanını, kaynak grubunu ve konumu gösteren **+ Yeni depolama hesabı oluştur** ' u seçin.
+1. Daha önce oluşturulmuş bir bulut hizmeti projesiyle **Çözüm Gezgini** , bir rol projesi Içindeki **bağlı hizmetler** düğümünü bulun, sağ tıklayın ve **bağlı hizmet ekle**' yi seçin. (Visual Studio 2015 ' de **depolama** düğümüne sağ tıklayın ve **depolama hesabı oluştur**' u seçin.)
+1. Görüntülenen **bağlı hizmetler** listesinde, **Azure depolama ile bulut depolama**' yı seçin.
+1. Görüntülenen Azure depolama iletişim kutusunda, aboneliğinizi belirttiğiniz bir iletişim kutusunu, hesap için bir adı, bir fiyatlandırma katmanını, kaynak grubunu ve konumu gösteren **+ Yeni depolama hesabı oluştur**' u seçin.
 1. İşiniz bittiğinde **Oluştur** ' u seçin. Yeni depolama hesabı, aboneliğinizdeki kullanılabilir depolama hesapları listesinde görüntülenir.
-1. Bu hesabı seçin ve **Ekle** ' yi seçin.
+1. Bu hesabı seçin ve **Ekle**' yi seçin.
 
 ### <a name="create-a-storage-account-through-the-azure-portal"></a>Azure portal aracılığıyla bir depolama hesabı oluşturun
 
@@ -64,11 +63,11 @@ Depolama hesabı, blob, kuyruk ve tablo hizmetlerine erişim sağlar. Visual Stu
 
 Bir depolama hesabı oluşturduktan sonra, Visual Studio 'dan bu sunucuya bağlanmak, URL ve erişim anahtarları dahil olmak üzere, proje için hizmet yapılandırmasını otomatik olarak güncelleştirir.
 
-**Bağlı hizmet ekle** ' yi kullanarak Visual Studio 'dan bir bulut hizmeti oluşturduysanız, ve ' i açarak bağlantıları kontrol edebilirsiniz `ServiceConfiguration.Cloud.cscfg` `ServiceConfiguration.Local.cscfg` .
+**Bağlı hizmet ekle**' yi kullanarak Visual Studio 'dan bir bulut hizmeti oluşturduysanız, ve ' i açarak bağlantıları kontrol edebilirsiniz `ServiceConfiguration.Cloud.cscfg` `ServiceConfiguration.Local.cscfg` .
 
 Azure portal aracılığıyla bir bulut hizmeti oluşturduysanız, [Visual Studio 'dan bir depolama hesabı oluşturma](#create-a-storage-account-from-visual-studio) bölümünde aynı adımları izleyin, ancak yeni bir hesap oluşturmak yerine var olan hesabı seçin. Ardından, Visual Studio yapılandırmayı sizin için güncelleştirir.
 
-Ayarları el ile yapılandırmak için, bulut hizmeti projenizde uygulanabilir rol için Visual Studio 'daki özellik sayfalarını kullanın (Role sağ tıklayıp **Özellikler** ' i seçin). Daha fazla bilgi için bkz. bir [depolama hesabına bağlantı dizesi yapılandırma](vs-azure-tools-multiple-services-project-configurations.md#configuring-a-connection-string-for-a-storage-account).
+Ayarları el ile yapılandırmak için, bulut hizmeti projenizde uygulanabilir rol için Visual Studio 'daki özellik sayfalarını kullanın (Role sağ tıklayıp **Özellikler**' i seçin). Daha fazla bilgi için bkz. bir [depolama hesabına bağlantı dizesi yapılandırma](vs-azure-tools-multiple-services-project-configurations.md#configuring-a-connection-string-for-a-storage-account).
 
 ### <a name="about-access-keys"></a>Erişim tuşları hakkında
 

@@ -1,8 +1,11 @@
 ---
 title: Eğitim projeleri ve çözümleri Visual Basic
+description: Visual Studio 'da Visual Basic geliştirici olarak bir çözüm ve proje oluşturmayı öğrenin.
 ms.date: 12/12/2018
 ms.technology: vs-ide-general
-ms.custom: get-started
+ms.custom:
+- get-started
+- SEO-VS-2020
 ms.topic: tutorial
 author: TerryGLee
 ms.author: tglee
@@ -11,12 +14,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 48b3f2c9aae099e3ae5f2cf2d8c438fb0f9062a2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0277379c44a7d0334798920759438dce52ae16f8
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75590221"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94901277"
 ---
 # <a name="learn-about-projects-and-solutions-using-visual-basic"></a>Visual Basic kullanarak projeler ve çözümler hakkında bilgi edinin
 
@@ -57,7 +60,7 @@ Boş bir çözüm oluşturarak araştırmayla başlayacağız. Visual Studio 'Yu
 
    **Yeni proje** iletişim kutusu açılır.
 
-1. Sol bölmede **diğer proje türleri**' ni genişletin ve ardından **Visual Studio çözümleri**' ni seçin. Orta bölmede **boş çözüm** şablonunu seçin. Çözümünüzü **hızlı çözümünüz**olarak adlandırın ve ardından **Tamam**' ı seçin.
+1. Sol bölmede **diğer proje türleri**' ni genişletin ve ardından **Visual Studio çözümleri**' ni seçin. Orta bölmede **boş çözüm** şablonunu seçin. Çözümünüzü **hızlı çözümünüz** olarak adlandırın ve ardından **Tamam**' ı seçin.
 
    ![Visual Studio 'da boş çözüm şablonu](../media/tutorial-projects-new-solution.png)
 
@@ -75,7 +78,7 @@ Boş bir çözüm oluşturarak araştırmayla başlayacağız. Visual Studio 'Yu
 
    ![Visual Studio 2019 'de boş çözüm şablonu](../media/vs-2019/tutorial-projects-blank-solution-template.png)
 
-4. Çözüm **hızlı çözümünü**adlandırın ve ardından **Oluştur**' u seçin.
+4. Çözüm **hızlı çözümünü** adlandırın ve ardından **Oluştur**' u seçin.
 
    Visual Studio penceresinin sağ tarafında **Çözüm Gezgini** bir çözüm görüntülenir. Genellikle **Çözüm Gezgini** , projelerinizdeki içeriğe gözatabilmeniz için çok büyük bir zaman kullanırsınız.
 
@@ -87,16 +90,16 @@ Boş bir çözüm oluşturarak araştırmayla başlayacağız. Visual Studio 'Yu
 
 ::: moniker range="vs-2017"
 
-1. **Çözüm Gezgini** **' hızlı çözüm ' çözümünün** sağ tıklama veya bağlam menüsünden **Add** > **Yeni proje**Ekle ' yi seçin.
+1. **Çözüm Gezgini** **' hızlı çözüm ' çözümünün** sağ tıklama veya bağlam menüsünden **Add** > **Yeni proje** Ekle ' yi seçin.
 
    **Yeni Proje Ekle** iletişim kutusu açılır.
 
-1. Sol bölmede **Visual Basic** ' ı genişletin ve **Windows Masaüstü**' nu seçin. Ardından Ortadaki bölmede **boş proje (.NET Framework)** şablonunu seçin. Proje **Quickdate**olarak adlandırın, sonra **Tamam** düğmesini seçin.
+1. Sol bölmede **Visual Basic** ' ı genişletin ve **Windows Masaüstü**' nu seçin. Ardından Ortadaki bölmede **boş proje (.NET Framework)** şablonunu seçin. Proje **Quickdate** olarak adlandırın, sonra **Tamam** düğmesini seçin.
 
-   QuickDate adlı bir proje, **Çözüm Gezgini**çözümünün altında görünür. Şu anda *App.config*adlı tek bir dosya içerir.
+   QuickDate adlı bir proje, **Çözüm Gezgini** çözümünün altında görünür. Şu anda *App.config* adlı tek bir dosya içerir.
 
    > [!NOTE]
-   > İletişim kutusunun sol bölmesinde **Visual Basic** görmüyorsanız, **.net masaüstü geliştirme** Visual Studio *iş yükünü*yüklemeniz gerekir. Visual Studio yalnızca sizin oluşturduğunuz geliştirme türü için gereken bileşenleri yüklemek üzere iş yükü tabanlı yükleme kullanır. Yeni bir iş yükünü yüklemenin kolay bir yolu, **Yeni Proje Ekle** iletişim kutusunun sol alt köşesindeki **Aç Visual Studio yükleyicisi** bağlantısını seçeklemektir. Visual Studio Yükleyicisi başlatıldıktan sonra, **.net masaüstü geliştirme** iş yükünü ve sonra **Değiştir** düğmesini seçin.
+   > İletişim kutusunun sol bölmesinde **Visual Basic** görmüyorsanız, **.net masaüstü geliştirme** Visual Studio *iş yükünü* yüklemeniz gerekir. Visual Studio yalnızca sizin oluşturduğunuz geliştirme türü için gereken bileşenleri yüklemek üzere iş yükü tabanlı yükleme kullanır. Yeni bir iş yükünü yüklemenin kolay bir yolu, **Yeni Proje Ekle** iletişim kutusunun sol alt köşesindeki **Aç Visual Studio yükleyicisi** bağlantısını seçeklemektir. Visual Studio Yükleyicisi başlatıldıktan sonra, **.net masaüstü geliştirme** iş yükünü ve sonra **Değiştir** düğmesini seçin.
    >
    > ![Visual Studio Yükleyicisi bağlantısını aç](media/tutorial-projects-open-installer-vb.png)
 
@@ -104,20 +107,20 @@ Boş bir çözüm oluşturarak araştırmayla başlayacağız. Visual Studio 'Yu
 
 ::: moniker range=">=vs-2019"
 
-1. **Çözüm Gezgini** **' hızlı çözüm ' çözümünün** sağ tıklama veya bağlam menüsünden **Add** > **Yeni proje**Ekle ' yi seçin.
+1. **Çözüm Gezgini** **' hızlı çözüm ' çözümünün** sağ tıklama veya bağlam menüsünden **Add** > **Yeni proje** Ekle ' yi seçin.
 
-   **Yeni bir proje ekleyen**bir iletişim kutusu açılır.
+   **Yeni bir proje ekleyen** bir iletişim kutusu açılır.
 
-1. Üstteki arama kutusuna **boş** metin girin ve ardından **dil**altında **Visual Basic** ' yi seçin.
+1. Üstteki arama kutusuna **boş** metin girin ve ardından **dil** altında **Visual Basic** ' yi seçin.
 
 1. **Boş proje (.NET Framework)** şablonunu seçin ve ardından **İleri**' yi seçin.
 
-1. Proje **Quickdate**olarak adlandırın, sonra **Oluştur**' u seçin.
+1. Proje **Quickdate** olarak adlandırın, sonra **Oluştur**' u seçin.
 
-   QuickDate adlı bir proje, **Çözüm Gezgini**çözümünün altında görünür. Şu anda *App.config*adlı tek bir dosya içerir.
+   QuickDate adlı bir proje, **Çözüm Gezgini** çözümünün altında görünür. Şu anda *App.config* adlı tek bir dosya içerir.
 
    > [!NOTE]
-   > **Boş proje (.NET Framework)** şablonu görmüyorsanız, **.net masaüstü geliştirme** Visual Studio *iş yükünü*yüklemeniz gerekir. Visual Studio yalnızca sizin oluşturduğunuz geliştirme türü için gereken bileşenleri yüklemek üzere iş yükü tabanlı yükleme kullanır. Yeni bir proje oluştururken yeni bir iş yükü yüklemenin kolay bir yolu, **ne aradığınızı bulmadığını**belirten metin altında **daha fazla araç ve özellik yüklesin** bağlantısını seçiyoruz. Visual Studio Yükleyicisi başlatıldıktan sonra, **.net masaüstü geliştirme** iş yükünü ve sonra **Değiştir** düğmesini seçin.
+   > **Boş proje (.NET Framework)** şablonu görmüyorsanız, **.net masaüstü geliştirme** Visual Studio *iş yükünü* yüklemeniz gerekir. Visual Studio yalnızca sizin oluşturduğunuz geliştirme türü için gereken bileşenleri yüklemek üzere iş yükü tabanlı yükleme kullanır. Yeni bir proje oluştururken yeni bir iş yükü yüklemenin kolay bir yolu, **ne aradığınızı bulmadığını** belirten metin altında **daha fazla araç ve özellik yüklesin** bağlantısını seçiyoruz. Visual Studio Yükleyicisi başlatıldıktan sonra, **.net masaüstü geliştirme** iş yükünü ve sonra **Değiştir** düğmesini seçin.
    >
    > ![Visual Studio 2019 ' de yükleyici bağlantısı](../media/vs-2019/tutorial-projects-open-installer.png)
 
@@ -127,13 +130,13 @@ Boş bir çözüm oluşturarak araştırmayla başlayacağız. Visual Studio 'Yu
 
 Boş bir projem var. Bir kod dosyası ekleyelim.
 
-1. **Çözüm Gezgini**içindeki **quickdate** projesinin sağ tıklama veya kısayol menüsünden **Add**  >  **Yeni öğe**Ekle ' yi seçin.
+1. **Çözüm Gezgini** içindeki **quickdate** projesinin sağ tıklama veya kısayol menüsünden **Add**  >  **Yeni öğe** Ekle ' yi seçin.
 
    **Yeni öğe Ekle** iletişim kutusu açılır.
 
-1. **Ortak öğeler**' i genişletin ve **kod**öğesini seçin. Orta bölmede **sınıf** öğesi şablonunu seçin. Sınıf **takvimini**adlandırın ve ardından **Ekle** düğmesini seçin.
+1. **Ortak öğeler**' i genişletin ve **kod** öğesini seçin. Orta bölmede **sınıf** öğesi şablonunu seçin. Sınıf **takvimini** adlandırın ve ardından **Ekle** düğmesini seçin.
 
-   Projeye *Calendar. vb* adlı bir dosya eklenir. Uçtaki *. vb* , Visual Basic kod dosyalarına verilen dosya uzantısıdır. Dosya **Çözüm Gezgini**içinde görsel proje hiyerarşisinde ve içeriği düzenleyicide açılır.
+   Projeye *Calendar. vb* adlı bir dosya eklenir. Uçtaki *. vb* , Visual Basic kod dosyalarına verilen dosya uzantısıdır. Dosya **Çözüm Gezgini** içinde görsel proje hiyerarşisinde ve içeriği düzenleyicide açılır.
 
 1. *Calendar. vb* dosyasının içeriğini aşağıdaki kodla değiştirin:
 
@@ -147,7 +150,7 @@ Boş bir projem var. Bir kod dosyası ekleyelim.
 
    `Calendar`Sınıfı, geçerli tarihi döndüren tek bir işlevi içerir `GetCurrentDate` .
 
-1. **Çözüm Gezgini**' de **projem** ' a çift tıklayarak proje özelliklerini açın. **Uygulama** sekmesinde **uygulama türünü** **sınıf kitaplığı**olarak değiştirin. Projeyi başarıyla derlemek için bu adım gereklidir.
+1. **Çözüm Gezgini**' de **projem** ' a çift tıklayarak proje özelliklerini açın. **Uygulama** sekmesinde **uygulama türünü** **sınıf kitaplığı** olarak değiştirin. Projeyi başarıyla derlemek için bu adım gereklidir.
 
 1. **Çözüm Gezgini** ' de **Hızlı Tarih** ' i sağ tıklayıp **Oluştur**' u seçerek projeyi derleyin. **Çıkış** penceresinde başarılı bir derleme iletisi görmeniz gerekir.
 
@@ -157,13 +160,13 @@ Birden fazla proje içermesi ve genellikle bu projelerin birbirlerine başvurmas
 
 Çözümünüze bir birim testi projesi ekleyelim. Bu kez bir proje şablonundan başlayacağız, böylece projeye ek bir kod dosyası eklememiz gerekmez.
 
-1. **Çözüm Gezgini** **' hızlı çözüm ' çözümünün** sağ tıklama veya bağlam menüsünden **Add**  >  **Yeni proje**Ekle ' yi seçin.
+1. **Çözüm Gezgini** **' hızlı çözüm ' çözümünün** sağ tıklama veya bağlam menüsünden **Add**  >  **Yeni proje** Ekle ' yi seçin.
 
 ::: moniker range="Vs-2017"
 
-2. Sol bölmede **Visual Basic** ' ı genişletin ve **Test** kategorisini seçin. Orta bölmede, **birim testi projesi (.NET Framework)** proje şablonunu seçin. Projeyi **hızlı test**olarak adlandırın ve ardından **Tamam**' ı seçin.
+2. Sol bölmede **Visual Basic** ' ı genişletin ve **Test** kategorisini seçin. Orta bölmede, **birim testi projesi (.NET Framework)** proje şablonunu seçin. Projeyi **hızlı test** olarak adlandırın ve ardından **Tamam**' ı seçin.
 
-   **Çözüm Gezgini**ikinci bir proje eklenir ve düzenleyicide *UnitTest1. vb* adlı bir dosya açılır.
+   **Çözüm Gezgini** ikinci bir proje eklenir ve düzenleyicide *UnitTest1. vb* adlı bir dosya açılır.
 
    ![İki projeyle Visual Studio Çözüm Gezgini](media/tutorial-projects-solution-explorer-vb.png)
 
@@ -171,19 +174,19 @@ Birden fazla proje içermesi ve genellikle bu projelerin birbirlerine başvurmas
 
 ::: moniker range=">=vs-2019"
 
-2. **Yeni Proje Ekle** iletişim kutusunda, üstteki arama kutusuna metin **birimi testini** girin ve ardından **dil**altında **Visual Basic** ' yi seçin.
+2. **Yeni Proje Ekle** iletişim kutusunda, üstteki arama kutusuna metin **birimi testini** girin ve ardından **dil** altında **Visual Basic** ' yi seçin.
 
 3. **Birim testi projesi (.NET Framework)** proje şablonunu seçin ve ardından **İleri**' yi seçin.
 
-4. Projeyi **hızlı teste**adlandırın ve ardından **Oluştur**' u seçin.
+4. Projeyi **hızlı teste** adlandırın ve ardından **Oluştur**' u seçin.
 
-   **Çözüm Gezgini**ikinci bir proje eklenir ve düzenleyicide *UnitTest1. vb* adlı bir dosya açılır.
+   **Çözüm Gezgini** ikinci bir proje eklenir ve düzenleyicide *UnitTest1. vb* adlı bir dosya açılır.
 
 ::: moniker-end
 
 ## <a name="add-a-project-reference"></a>Proje başvurusu Ekle
 
-**Hızlı Tarih** projesindeki yöntemizi test etmek için yeni birim testi projesini kullanacağız, bu nedenle bu projeye bir başvuru eklememiz gerekiyor. Bu, iki proje arasında bir *derleme bağımlılığı* oluşturur. Bu, çözümü oluşturduğunuzda hızlı **Test**öncesinde hızlı bir **Tarih** oluşturulur.
+**Hızlı Tarih** projesindeki yöntemizi test etmek için yeni birim testi projesini kullanacağız, bu nedenle bu projeye bir başvuru eklememiz gerekiyor. Bu, iki proje arasında bir *derleme bağımlılığı* oluşturur. Bu, çözümü oluşturduğunuzda hızlı **Test** öncesinde hızlı bir **Tarih** oluşturulur.
 
 1. **Hızlı test** projesinde **Başvurular** düğümünü seçin ve sağ tıklama ya da bağlam menüsünden **Başvuru Ekle**' yi seçin.
 
@@ -191,7 +194,7 @@ Birden fazla proje içermesi ve genellikle bu projelerin birbirlerine başvurmas
 
    **Başvuru Yöneticisi** iletişim kutusu açılır.
 
-1. Sol bölmede, **Projeler** ' i genişletin ve **çözüm**' ü seçin. Orta bölmede, **Quickdate**seçeneğinin yanındaki onay kutusunu seçin ve ardından **Tamam** düğmesini seçin.
+1. Sol bölmede, **Projeler** ' i genişletin ve **çözüm**' ü seçin. Orta bölmede, **Quickdate** seçeneğinin yanındaki onay kutusunu seçin ve ardından **Tamam** düğmesini seçin.
 
    **Quickdate** projesine bir başvuru eklenir.
 
@@ -227,22 +230,22 @@ Birden fazla proje içermesi ve genellikle bu projelerin birbirlerine başvurmas
 
 Bu özniteliği içeren *Calendar. vb* dosyasındaki satır, <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> **hızlı test** projesinin derleme adına (dosya adı) başvurur. Derleme adı, proje adı ile her zaman aynı olamaz. Projenin derleme adını bulmak için, proje özelliklerini açın.
 
-1. **Çözüm Gezgini**' de **hızlı test** projesini seçin. Sağ tıklama veya bağlam menüsünde **Özellikler**' i seçin veya yalnızca **alt** + **ENTER**tuşuna basın. (Ayrıca **Çözüm Gezgini**, **projem** ' de çift tıklayabilirsiniz.)
+1. **Çözüm Gezgini**' de **hızlı test** projesini seçin. Sağ tıklama veya bağlam menüsünde **Özellikler**' i seçin veya yalnızca **alt** + **ENTER** tuşuna basın. (Ayrıca **Çözüm Gezgini**, **projem** ' de çift tıklayabilirsiniz.)
 
    Projenin *Özellik sayfaları* **uygulama** sekmesinde açılır. Özellik sayfaları, proje için çeşitli ayarlar içerir. **Hızlı test** projesinin derleme adının gerçekten "QuickTest" olduğuna dikkat edin. Bunu değiştirmek isterseniz bunu yapmanız gerekir. Ardından, test projesi oluşturduğunuzda, sonuçta elde edilen ikili dosyanın adı *QuickTest.dll* ' den seçtiğiniz şeyle değişir.
 
    ![Proje özellikleri](../media/tutorial-projects-properties.png)
 
-1. Projenin özellik sayfalarındaki **derleme** ve **Ayarlar**gibi diğer sekmelerin bazılarını keşfedebilir. Bu sekmeler farklı proje türleri için farklıdır.
+1. Projenin özellik sayfalarındaki **derleme** ve **Ayarlar** gibi diğer sekmelerin bazılarını keşfedebilir. Bu sekmeler farklı proje türleri için farklıdır.
 
 ## <a name="optional-run-the-test"></a>Seçim Testi çalıştırın
 
-Birim testinizin çalıştığını denetlemek isterseniz, **Test**  >  **Run**  >  menü çubuğundan**tüm testleri** Çalıştır test ' i seçin. **Test Gezgini** adlı bir pencere açılır ve **TestGetCurrentDate** testin başarılı olduğunu görmeniz gerekir.
+Birim testinizin çalıştığını denetlemek isterseniz, **Test**  >  **Run**  >  menü çubuğundan **tüm testleri** Çalıştır test ' i seçin. **Test Gezgini** adlı bir pencere açılır ve **TestGetCurrentDate** testin başarılı olduğunu görmeniz gerekir.
 
 ![Başarılı testi gösteren Visual Studio 'da metin Gezgini](../media/tutorial-projects-test-explorer.png)
 
 > [!TIP]
-> **Test Gezgini** otomatik olarak açılmazsa, **Test**  >  **Windows**  >  menü çubuğundan Windows**Test Gezgini** 'ni test et ' i seçerek açın.
+> **Test Gezgini** otomatik olarak açılmazsa, **Test**  >  **Windows**  >  menü çubuğundan Windows **Test Gezgini** 'ni test et ' i seçerek açın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

@@ -1,5 +1,7 @@
 ---
 title: Kod Parçacıkları İçin En İyi Uygulamalar
+description: Kod parçacıkları, kod parçacığının amacı ne olduğu ve uygulamanıza uyacak şekilde ne kadar en iyi şekilde kullanılacağı hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 08add20b59e3e14897d1870aa45fd6cce8698d96
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f54a451bea8345d06073e6f3a8ab944b3c7ea820
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75591716"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903149"
 ---
 # <a name="best-practices-for-using-code-snippets"></a>Kod parçacıkları kullanmak için en iyi uygulamalar
 
@@ -31,7 +33,7 @@ Dosya konumlarını uygulamanıza uyardığınızda, aşağıdakilere göz önü
 
 - Erişilebilir bir konum bulma. Kullanıcıların, bilgisayarın *Program Files* klasörüne erişimi olmayabilir, bu nedenle dosyaları uygulama dosyalarıyla depolamak çalışmayabilir.
 
-- Güvenli bir konum bulma. Dosyaların kök klasörde depolanması (*C: \\ *) güvenli değildir. Uygulama verileri için *uygulama verileri* klasörünü öneririz. Uygulama, bireysel kullanıcı verileri için *Belgeler* klasöründeki her bir kullanıcı için bir dosya oluşturabilir.
+- Güvenli bir konum bulma. Dosyaların kök klasörde depolanması (*C: \\*) güvenli değildir. Uygulama verileri için *uygulama verileri* klasörünü öneririz. Uygulama, bireysel kullanıcı verileri için *Belgeler* klasöründeki her bir kullanıcı için bir dosya oluşturabilir.
 
 - Geçerli bir dosya adı kullanılıyor. <xref:System.Windows.Forms.OpenFileDialog>Ve <xref:System.Windows.Forms.SaveFileDialog> denetimlerini, geçersiz dosya adlarının olasılığını azaltmak için kullanabilirsiniz. Kullanıcının bir dosyayı seçtiği zaman ve kodunuzun dosyayı ne zaman kullandığı zaman arasında, dosyanın silinmiş olabileceğini unutmayın. Ayrıca, kullanıcının dosyaya yazma izni olmayabilir.
 
@@ -41,7 +43,7 @@ Bir parçacığı güvenli hale getirme, kaynak kodda kullanıldığı yere ve k
 
 - Dosya ve veritabanı erişimi
 
-- Kod erişim güvenliği
+- Kod erişimi güvenliği
 
 - Kaynakları koruma (olay günlükleri, kayıt defteri)
 

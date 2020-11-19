@@ -1,5 +1,7 @@
 ---
 title: Üye & ilişkilendirme gösterimi arasında geçiş (Sınıf Tasarımcısı)
+description: Sınıf diyagramının, üye gösterimden ilişki gösterimine ve tam tersi kadar iki tür arasındaki ilişki ilişkisini nasıl değiştireceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d453dd2cd19f8a6c9c76ebcc48a762ba3142ea74
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 64d26b6ca1c71fe3484544f02006a27866ff4843
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85771008"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94901667"
 ---
 # <a name="how-to-change-between-member-notation-and-association-notation-in-class-designer"></a>Nasıl yapılır: Sınıf Tasarımcısı içindeki üye gösterimi ile ilişkilendirme gösterimi arasında geçiş yapma
 

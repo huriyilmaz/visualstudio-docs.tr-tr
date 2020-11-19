@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl Yapılır: Türler Arasında Devralmayı Görüntüleme (Sınıf Tasarımcısı)'
+description: Sınıf Tasarımcısı bir sınıf diyagramında temel tür ve türetilmiş türler arasındaki devralma ilişkisini bulmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -14,16 +16,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d5c35279421ad17e62afe707d62dbc879d03b384
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 82785f1a5cac2185925c63c4d6d224ffd5fd67de
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85769907"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94901199"
 ---
 # <a name="how-to-view-inheritance-between-types-in-class-designer"></a>Nasıl yapılır: Sınıf Tasarımcısı türler arasında devralmayı görüntüleme
 
-Varsa, bir temel tür ve türetilmiş türleri arasında, devralma ilişkisini **Sınıf Tasarımcısı**bir sınıf diyagramında bulabilirsiniz. Hiçbiri yoksa, bir devralma ilişkisi oluşturmak için, iki tür arasında bkz. [nasıl yapılır: türler arasında devralma oluşturma](how-to-create-inheritance-between-types.md).
+Varsa, bir temel tür ve türetilmiş türleri arasında, devralma ilişkisini **Sınıf Tasarımcısı** bir sınıf diyagramında bulabilirsiniz. Hiçbiri yoksa, bir devralma ilişkisi oluşturmak için, iki tür arasında bkz. [nasıl yapılır: türler arasında devralma oluşturma](how-to-create-inheritance-between-types.md).
 
 ## <a name="to-find-the-base-type"></a>Temel türü bulmak için
 

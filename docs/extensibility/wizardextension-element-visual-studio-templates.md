@@ -1,5 +1,7 @@
 ---
 title: Wizardexgeri öğesi (Visual Studio şablonları) | Microsoft Docs
+description: Wizardexgeri öğesi ve Şablon Sihirbazı ' nı özelleştirmek için kayıt öğelerini nasıl içerdiği hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: fd81b32861114d654aa794b992826589406b1df9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 07d1c52e2b1dd8fe452d4c24f8dc6db6b32334a5
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80740380"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903396"
 ---
 # <a name="wizardextension-element-visual-studio-templates"></a>WizardExtension Öğesi (Visual Studio Şablonları)
 Şablon Sihirbazı ' nı özelleştirmek için kayıt öğelerini içerir.

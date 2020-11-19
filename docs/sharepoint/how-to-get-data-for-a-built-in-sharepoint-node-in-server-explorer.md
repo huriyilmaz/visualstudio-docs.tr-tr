@@ -1,6 +1,8 @@
 ---
 title: Sunucu Gezgini yerleşik SharePoint düğümü için veri al
 titleSuffix: ''
+description: Visual Studio 'nun Sunucu Gezgini penceresinde yerleşik bir SharePoint düğümünün temel alınan SharePoint bileşeni için veri alın.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,18 +16,18 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7649092cc21fcc7b861f4ddf630007bde896e852
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 3a975374b82b10c0e29d74bcf68d7bce3225a967
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585777"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903526"
 ---
 # <a name="how-to-get-data-for-a-built-in-sharepoint-node-in-server-explorer"></a>Nasıl yapılır: Sunucu Gezgini yerleşik bir SharePoint düğümü için veri alma
-  **Sunucu Gezgini**içindeki her bir yerleşik SharePoint düğümü için, düğümün gösterdiği temel SharePoint bileşeni için veri alabilirsiniz. Daha fazla bilgi için, bkz. [Sunucu Gezgini SharePoint bağlantıları düğümünü genişletme](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md).
+  **Sunucu Gezgini** içindeki her bir yerleşik SharePoint düğümü için, düğümün gösterdiği temel SharePoint bileşeni için veri alabilirsiniz. Daha fazla bilgi için, bkz. [Sunucu Gezgini SharePoint bağlantıları düğümünü genişletme](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md).
 
 ## <a name="example"></a>Örnek
- Aşağıdaki kod örneği, bir liste düğümünün **Sunucu Gezgini**içinde temsil ettiği temel alınan SharePoint listesi için verilerin nasıl alınacağını gösterir. Varsayılan olarak, liste düğümlerinde, listeleri bir Web tarayıcısında açmak için tıklayan bir **tarayıcıda görünüm** bağlam menüsü öğesi vardır. Bu örnek liste düğümlerini, listeleri doğrudan Visual Studio 'da açan **Visual Studio** bağlam menü öğesinde bir görünüm ekleyerek genişletir. Kod, Visual Studio 'da açılacak listenin URL 'sini almak için düğüm liste verilerine erişir.
+ Aşağıdaki kod örneği, bir liste düğümünün **Sunucu Gezgini** içinde temsil ettiği temel alınan SharePoint listesi için verilerin nasıl alınacağını gösterir. Varsayılan olarak, liste düğümlerinde, listeleri bir Web tarayıcısında açmak için tıklayan bir **tarayıcıda görünüm** bağlam menüsü öğesi vardır. Bu örnek liste düğümlerini, listeleri doğrudan Visual Studio 'da açan **Visual Studio** bağlam menü öğesinde bir görünüm ekleyerek genişletir. Kod, Visual Studio 'da açılacak listenin URL 'sini almak için düğüm liste verilerine erişir.
 
  [!code-vb[SPExtensibility.ProjectSystemExtension.General#10](../sharepoint/codesnippet/VisualBasic/projectsystemexamples/extension/serverexplorerextensionnodeinfo.vb#10)]
  [!code-csharp[SPExtensibility.ProjectSystemExtension.General#10](../sharepoint/codesnippet/CSharp/projectsystemexamples/extension/serverexplorerextensionnodeinfo.cs#10)]

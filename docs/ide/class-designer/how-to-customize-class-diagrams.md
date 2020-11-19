@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl Yapılır: Sınıf Diyagramlarını Özelleştirme (Sınıf Tasarımcısı)'
+description: Sınıf diyagramlarının bilgileri nasıl görüntüleyeceği ve tasarım yüzeyindeki tüm diyagram ya da tek türlerin nasıl özelleştirileceği hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4e8e4665790aa228bb30aac05ea4782cfe4a62f1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 05f0b20307ac0802c4c4350588f5dc0c47cb3b6b
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85770181"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94901433"
 ---
 # <a name="how-to-customize-class-diagrams"></a>Nasıl yapılır: sınıf diyagramlarını özelleştirme
 
@@ -60,7 +62,7 @@ Bir sınıftaki **Özellikler** bölümü gibi tür üyelerini içeren bölümle
 
 ## <a name="hide-compartments-on-a-type"></a>Türe göre bölmeleri gizleme
 
-1. **Sınıf Tasarımcısı**bir sınıf diyagramı dosyası açın ve seçin.
+1. **Sınıf Tasarımcısı** bir sınıf diyagramı dosyası açın ve seçin.
 
 2. Özelleştirmek istediğiniz türdeki üye kategorisine sağ tıklayın (örneğin, bir sınıfta **Yöntemler** düğümünü seçin).
 

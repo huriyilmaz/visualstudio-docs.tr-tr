@@ -1,5 +1,7 @@
 ---
 title: Sınıf Tasarımcısı 'de C++ Typedefs
+description: Sınıf Tasarımcısı, typedef anahtar sözcüğü ile belirtilen C++ typedef türlerini nasıl desteklediğini öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c57382809b7730df2d7c674c24902d70ccab647
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f95b948d4ffc70d225dd4a8b2bb2debe111c967e
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75590702"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903448"
 ---
 # <a name="c-typedefs-in-class-designer"></a>Sınıf Tasarımcısı 'de C++ tür tanımları
 
@@ -39,7 +41,7 @@ Daha sonra bu türü bir örnek bildirmek için kullanabilirsiniz:
 
 ## <a name="class-and-struct-shapes"></a>Sınıf ve yapı şekilleri
 
-**Sınıf Tasarımcısı**, C++ typedef, typedef içinde belirtilen türde bir şekle sahiptir. Kaynak bildirirse `typedef class` , şekil yuvarlak köşeler ve Label **sınıfına**sahiptir. İçin `typedef struct` , şeklinin kare köşeleri ve Label **yapısı**vardır.
+**Sınıf Tasarımcısı**, C++ typedef, typedef içinde belirtilen türde bir şekle sahiptir. Kaynak bildirirse `typedef class` , şekil yuvarlak köşeler ve Label **sınıfına** sahiptir. İçin `typedef struct` , şeklinin kare köşeleri ve Label **yapısı** vardır.
 
 Sınıfların ve yapıların içinde bildirildiği iç içe tür tanımları olabilir. **Sınıf Tasarımcısı**, sınıf ve yapı şekilleri iç içe geçmiş bir typedef bildirimini iç içe geçmiş şekiller olarak gösterebilir.
 
@@ -68,7 +70,7 @@ typedef struct mystructtag
 
 ## <a name="unnamed-typedefs"></a>Adlandırılmamış tür tanımları
 
-Bir typedef adı olmadan bildirebilseniz de **Sınıf Tasarımcısı** belirttiğiniz etiket adını kullanmaz. **Sınıf Tasarımcısı** , **sınıf görünümü** oluşturduğu adı kullanır. Örneğin, aşağıdaki bildirim geçerlidir, ancak **sınıf görünümü** ve **Sınıf Tasarımcısı** **__unnamed**adlı bir nesne olarak görünür:
+Bir typedef adı olmadan bildirebilseniz de **Sınıf Tasarımcısı** belirttiğiniz etiket adını kullanmaz. **Sınıf Tasarımcısı** , **sınıf görünümü** oluşturduğu adı kullanır. Örneğin, aşağıdaki bildirim geçerlidir, ancak **sınıf görünümü** ve **Sınıf Tasarımcısı** **__unnamed** adlı bir nesne olarak görünür:
 
 ```cpp
 typedef class coord

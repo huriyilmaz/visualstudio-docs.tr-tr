@@ -3,34 +3,33 @@ title: Adlandırılmış kimlik doğrulama kimlik bilgilerini ayarlama | Microso
 description: Visual Studio 'Nun Azure 'a yönelik isteklerin kimliğini doğrulamak için kullanabileceği kimlik bilgilerini nasıl sağlayacağınızı öğrenin. böylece, Azure 'da bir uygulamayı Visual Studio 'dan yayımlayabilir veya var olan bir bulut hizmetini izleyebilirsiniz.
 author: ghogen
 manager: jillfra
-assetId: 61570907-42a1-40e8-bcd6-952b21a55786
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2017
 ms.author: ghogen
-ms.openlocfilehash: 5f45517eb12c5443667e7a308f03943ee394190e
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 059ac654f13ed833e80464e74e18a6cb8b0f8132
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93399348"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94902005"
 ---
 # <a name="set-up-named-authentication-credentials"></a>Adlandırılmış kimlik doğrulama bilgilerini ayarlama
 
 Bir uygulamayı Azure 'da yayınlamak veya var olan bir bulut hizmetini izlemek için, Visual Studio Azure abonelik KIMLIĞINIZ ve en az 2048 bitlik bir anahtarla geçerli bir X. 509.440 v3 sertifikası olmak üzere Azure 'Da isteklerin kimliğini doğrulamak için kimlik bilgileri gerektirir. Aşağıdaki yöntemlerden birini kullanarak bu kimlik bilgilerini sağlarsınız:
 
-- Visual Studio 'da **görünüm > Sunucu Gezgini** seçin, **Azure** düğümüne sağ tıklayın, **Microsoft Azure aboneliğine Bağlan** ' ı seçin ve oturum açın.
+- Visual Studio 'da **görünüm > Sunucu Gezgini** seçin, **Azure** düğümüne sağ tıklayın, **Microsoft Azure aboneliğine Bağlan**' ı seçin ve oturum açın.
 - `.publishsettings`Sertifika için ortak anahtar içeren bir abonelik dosyası () oluşturun. Abonelik dosyası, bu makalede açıklandığı gibi birden fazla abonelik için kimlik bilgileri içerebilir.
 
 Note: Bu kimlik bilgileri, Azure depolama hizmetlerine yönelik isteklerin kimliğini doğrulamak için kullanılan kimlik bilgilerinden farklıdır.
 
 ## <a name="create-a-subscription-file"></a>Abonelik dosyası oluşturma
 
-Sunucu Gezgini, **Azure** düğümüne sağ tıklayın ve **abonelikleri Yönet ve filtrele** ' yi seçin. Ardından **Sertifikalar** sekmesini seçin ve ardından aşağıdaki eylemlerden birini yapın:
+Sunucu Gezgini, **Azure** düğümüne sağ tıklayın ve **abonelikleri Yönet ve filtrele**' yi seçin. Ardından **Sertifikalar** sekmesini seçin ve ardından aşağıdaki eylemlerden birini yapın:
 
 - **Microsoft Azure abonelikleri Içeri aktar** iletişim kutusunu açmak Için **içeri aktar** ' ı seçin. **Abonelik dosyasını indir** bağlantısını seçin ve tarayıcıda indirilen dosyayı geçici bir konuma kaydedin. İletişim kutusuna geri dönüp indirme konumuna gidin ve kimlik doğrulamasında kullanmak için içeri aktarın.
-- Etkin bir abonelik seçin ve kimlik doğrulamasında kullanılmak üzere mevcut bir aboneliği düzenlediğiniz bir iletişim kutusu açan **Düzenle** ' yi seçin.
-- Yeni **abonelik** iletişim kutusunu açmak için **Yeni** ' yi seçin ve gereken ayrıntıları sağlayın. Sertifikayı bulut hizmetinize yüklemek için iletişim kutusunda, Azure portal oturum açın, bulut hizmetinize gidin, **ayarlar > yönetim sertifikaları** ' nı seçin, **karşıya yükle** ' yi seçin, sonra dosyanın yolunu belirtin `.cer` .
+- Etkin bir abonelik seçin ve kimlik doğrulamasında kullanılmak üzere mevcut bir aboneliği düzenlediğiniz bir iletişim kutusu açan **Düzenle**' yi seçin.
+- Yeni **abonelik** iletişim kutusunu açmak için **Yeni** ' yi seçin ve gereken ayrıntıları sağlayın. Sertifikayı bulut hizmetinize yüklemek için iletişim kutusunda, Azure portal oturum açın, bulut hizmetinize gidin, **ayarlar > yönetim sertifikaları**' nı seçin, **karşıya yükle**' yi seçin, sonra dosyanın yolunu belirtin `.cer` .
 
 Kendiniz bir sertifika oluşturmak isterseniz, [Azure için bir yönetim sertifikası oluşturma ve yükleme](/azure/cloud-services/cloud-services-certs-create) ' deki yönergelere başvurabilirsiniz ve sonra sertifikayı [Azure Portal](https://portal.azure.com/)el ile yükleyebilirsiniz.
 

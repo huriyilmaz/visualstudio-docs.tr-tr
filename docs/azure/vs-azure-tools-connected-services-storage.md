@@ -3,18 +3,17 @@ title: Bağlı hizmetler 'i kullanarak Azure depolama ekleme | Microsoft Docs
 description: Visual Studio bağlı hizmetlerini kullanarak uygulamanıza bir Azure depolama hizmeti bağımlılığı ekleyin
 author: ghogen
 manager: jillfra
-assetId: 521ec044-ad4b-4828-8864-01decde2e758
 ms.custom: vs-azure
 ms.workload: azure-vs
 ms.topic: how-to
 ms.date: 08/13/2020
 ms.author: ghogen
-ms.openlocfilehash: f2f55a149420205435d9f64ea1f66c8c6854ec38
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d169940d6deffdf67bcbcb94e9f647631d0f606a
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88800521"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94902642"
 ---
 # <a name="adding-azure-storage-by-using-visual-studio-connected-services"></a>Visual Studio bağlı hizmetler 'i kullanarak Azure depolama ekleme
 
@@ -22,7 +21,7 @@ Visual Studio ile, **bağlı hizmetler** özelliğini kullanarak aşağıdakiler
 
 - .NET Framework konsol uygulaması
 - ASP.NET MVC (.NET Framework)
-- ASP.NET Çekirdeği
+- ASP.NET Core
 - .NET Core (konsol uygulaması, WPF, Windows Forms, sınıf kitaplığı dahil)
 - .NET Core çalışan rolü
 - Azure İşlevleri
@@ -80,7 +79,7 @@ Bağlı hizmet işlevselliği, gerekli tüm başvuruları ve bağlantı kodları
 
     ![Azure bağlı hizmeti Ekle](./media/vs-azure-tools-connected-services-storage/vs-2019/add-connected-service.png)
 
-1. **Bağlı hizmetler** sekmesinde, **hizmet bağımlılıkları**için + simgesini seçin.
+1. **Bağlı hizmetler** sekmesinde, **hizmet bağımlılıkları** için + simgesini seçin.
 
     ![Hizmet bağımlılığı Ekle](./media/vs-azure-tools-connected-services-storage/vs-2019/connected-services-tab.png)
 

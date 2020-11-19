@@ -1,5 +1,7 @@
 ---
 title: Gelişmiş özellikler
+description: Deneyimli geliştiriciler için daha uygun olabilecek gelişmiş özellikler veya Visual Studio 'Yu zaten bildiğiniz geliştiriciler hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 06/01/2018
 ms.topic: conceptual
 author: TerryGLee
@@ -7,12 +9,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 04c725e5bcae5d72562e767a06afdee8aa84950b
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 61109a315a7f331821527ee882dd7c019411fca3
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93399259"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903305"
 ---
 # <a name="features-of-visual-studio"></a>Visual Studio 'nun özellikleri
 
@@ -90,7 +92,7 @@ Visual Studio 'Yu kullanarak macOS, Linux ve Windows için uygulama ve Oyunlar, 
 
 ## <a name="connect-to-databases"></a>Veritabanlarına bağlanma
 
-**Sunucu Gezgini** , SQL Server örneklerine ve varlıklara yerel olarak, uzaktan ve Azure, Salesforce.com, Microsoft 365 ve web sitelerinde gözatmanıza ve yönetmenize yardımcı olur. **Sunucu Gezgini** açmak için, ana menüdeki Sunucu Gezgini **görüntüle** ' yi seçin  >  **Server Explorer**. Sunucu Gezgini kullanma hakkında daha fazla bilgi için bkz. [yeni bağlantılar ekleme](../data-tools/add-new-connections.md).
+**Sunucu Gezgini** , SQL Server örneklerine ve varlıklara yerel olarak, uzaktan ve Azure, Salesforce.com, Microsoft 365 ve web sitelerinde gözatmanıza ve yönetmenize yardımcı olur. **Sunucu Gezgini** açmak için, ana menüdeki Sunucu Gezgini **görüntüle**' yi seçin  >  **Server Explorer**. Sunucu Gezgini kullanma hakkında daha fazla bilgi için bkz. [yeni bağlantılar ekleme](../data-tools/add-new-connections.md).
 
 [SQL Server veri araçları (SSDT)](/sql/ssdt/download-sql-server-data-tools-ssdt) , SQL Server, Azure SQL veritabanı ve Azure SQL veri ambarı için güçlü bir geliştirme ortamıdır. Veritabanlarını oluşturmanızı, hatalarını ayıklamanızı, bakımını ve yeniden düzenlemenize olanak sağlar. Bir veritabanı projesiyle veya doğrudan bağlı bir veritabanı örneğiyle ya da şirket içi olarak çalışabilirsiniz.
 
@@ -118,7 +120,7 @@ Azure DevOps Services, yazılımı planlamak, barındırmak, otomatikleştirmek 
 
 Team Foundation Server (TFS), Visual Studio için uygulama yaşam döngüsü yönetim merkezdir. Geliştirme işlemiyle ilgili herkesin tek bir çözüm kullanarak katılmasını sağlar. TFS, heterojen takımları ve projeleri yönetmek için yararlıdır.
 
-Ağınızda bir Azure DevOps kuruluşunuz veya bir Team Foundation Server varsa, Visual Studio 'daki **Takım Gezgini** pencere aracılığıyla buna bağlanırsınız. Bu pencereden, kaynak denetimi içine veya dışına kodu denetleyebilir, iş öğelerini yönetebilir, yapıları başlatabilir ve ekip odalarına ve çalışma alanlarına erişebilirsiniz. **Takım Gezgini** arama kutusundan veya ana menüdeki Takım Gezgini **görüntüle** ' den  >  **Team Explorer** veya **takımdan**  >  **Bağlantıları Yönet** ' den açabilirsiniz.
+Ağınızda bir Azure DevOps kuruluşunuz veya bir Team Foundation Server varsa, Visual Studio 'daki **Takım Gezgini** pencere aracılığıyla buna bağlanırsınız. Bu pencereden, kaynak denetimi içine veya dışına kodu denetleyebilir, iş öğelerini yönetebilir, yapıları başlatabilir ve ekip odalarına ve çalışma alanlarına erişebilirsiniz. **Takım Gezgini** arama kutusundan veya ana menüdeki Takım Gezgini **görüntüle**' den  >  **Team Explorer** veya **takımdan**  >  **Bağlantıları Yönet**' den açabilirsiniz.
 
 Aşağıdaki görüntüde, Azure DevOps Services barındırılan bir çözüme yönelik **Takım Gezgini** penceresi gösterilmektedir.
 

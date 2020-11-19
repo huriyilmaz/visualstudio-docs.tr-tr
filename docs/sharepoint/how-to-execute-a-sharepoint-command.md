@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: SharePoint komutu yürütme | Microsoft Docs'
+description: SharePoint Araçları uzantısından sunucu nesne modeli API 'sini çağırmak için özel bir SharePoint komutu oluşturmayı okuyun.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 789b77f3161b5fe566ea033060e8cab16cbaecc7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2746704e30a61b0971db50a5083855b4a93560d4
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016989"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903542"
 ---
 # <a name="how-to-execute-a-sharepoint-command"></a>Nasıl yapılır: SharePoint komutu yürütme
   Sunucu nesne modelini bir SharePoint Araçları uzantısında kullanmak istiyorsanız, API 'yi çağırmak için özel bir *SharePoint komutu* oluşturmanız gerekir. Komutunu tanımladıktan ve SharePoint araçları uzantılarınızla dağıttıktan sonra, uzantınız SharePoint Server nesne modelini çağırmak için komutunu yürütebilir. Komutu yürütmek için, bir nesnenin ExecuteCommand yöntemlerinden birini kullanın <xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection> .
@@ -32,7 +34,7 @@ ms.locfileid: "86016989"
 
          Proje sistem uzantıları hakkında daha fazla bilgi için bkz. [SharePoint proje sistemini genişletme](../sharepoint/extending-the-sharepoint-project-system.md).
 
-    - **Sunucu Gezgini**Içindeki **SharePoint bağlantıları** düğümünün bir uzantısında <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeContext.SharePointConnection%2A> özelliğini kullanın. Bir nesne almak için <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeContext> <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode.Context%2A> özelliğini kullanın.
+    - **Sunucu Gezgini** Içindeki **SharePoint bağlantıları** düğümünün bir uzantısında <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeContext.SharePointConnection%2A> özelliğini kullanın. Bir nesne almak için <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeContext> <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode.Context%2A> özelliğini kullanın.
 
          **Sunucu Gezgini** uzantıları hakkında daha fazla bilgi için bkz. [Sunucu Gezgini SharePoint bağlantıları düğümünü genişletme](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md).
 
@@ -65,7 +67,7 @@ ms.locfileid: "86016989"
 
 - İkinci parametre, komutun özel ikinci parametresine geçmesini istediğiniz değerdir. Bu durumda, SharePoint sitesine yükseltilmekte olan *. wsp* dosyasının tam yoludur.
 
-- Kod örtük <xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext> parametreyi komutuna geçirmez. Bu parametre, komutu SharePoint proje sisteminin bir uzantısından veya **Sunucu Gezgini** **SharePoint bağlantıları** düğümünün bir uzantısından çağırdığınızda otomatik olarak komuta geçirilir. Arabirimi uygulayan bir proje şablonu sihirbazında olduğu gibi diğer tür çözümlerde, <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> Bu parametre **null**olur.
+- Kod örtük <xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext> parametreyi komutuna geçirmez. Bu parametre, komutu SharePoint proje sisteminin bir uzantısından veya **Sunucu Gezgini** **SharePoint bağlantıları** düğümünün bir uzantısından çağırdığınızda otomatik olarak komuta geçirilir. Arabirimi uygulayan bir proje şablonu sihirbazında olduğu gibi diğer tür çözümlerde, <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> Bu parametre **null** olur.
 
 ## <a name="compile-the-code"></a>Kodu derle
  Bu örnek, Microsoft. VisualStudio. SharePoint derlemesine bir başvuru gerektirir.

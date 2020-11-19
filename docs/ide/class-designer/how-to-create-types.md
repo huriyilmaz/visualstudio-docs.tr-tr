@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl Yapılır: Sınıf Tasarımcısı Kullanarak Tür Oluşturma'
+description: C# ve Visual Basic projeleri için bir sınıf diyagramında oluşturarak yeni türler tasarlamayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -17,12 +19,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 98e489a37e5d75cbc17d17c32a1fa3b53f9993f8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ac6e59f4dc6fa68962ac061132e3fab90ec8e955
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85770215"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94901446"
 ---
 # <a name="how-to-create-types-by-using-class-designer"></a>Nasıl yapılır: Sınıf Tasarımcısı kullanarak tür oluşturma
 
@@ -30,7 +32,7 @@ C# ve Visual Basic projelerine yönelik yeni türler tasarlamak için bunları b
 
 ## <a name="create-a-new-type"></a><a name="CreateType"></a> Yeni bir tür oluştur
 
-1. **Araç kutusunda**, **Sınıf Tasarımcısı**altında, bunlardan birini bir sınıf diyagramına sürükleyin:
+1. **Araç kutusunda**, **Sınıf Tasarımcısı** altında, bunlardan birini bir sınıf diyagramına sürükleyin:
 
     - **Sınıf** veya **soyut sınıf**
 

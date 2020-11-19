@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl Yapılır: Türler Arasında İlişkilendirme Oluşturma (Sınıf Tasarımcısı)'
+description: Sınıf Tasarımcısı farklı türler arasında ilişkilendirme oluşturmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -16,12 +18,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3cce893efaad5f2317b175391a2685cae7053e3c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f72cb173b5ece347bb2d9eb1b4ef0e8d2317b21d
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85770958"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94901615"
 ---
 # <a name="how-to-create-associations-between-types-in-class-designer"></a>Nasıl yapılır: Sınıf Tasarımcısı türler arasında ilişkilendirme oluşturma
 
@@ -34,7 +36,7 @@ Tüm alanları ve özellikleri ilişkilendirmeler halinde görüntüleyebilirsin
 
 ## <a name="to-define-an-association-line-in-the-class-diagram"></a>Sınıf Diyagramı'nda bir ilişkilendirme çizgisi tanımlamak için
 
-1. Araç kutusunda, **Sınıf Tasarımcısı**altında **ilişkilendirme**' yi seçin.
+1. Araç kutusunda, **Sınıf Tasarımcısı** altında **ilişkilendirme**' yi seçin.
 
 2. İlişkilendirme ile bağlamak istediğiniz iki şekil arasına bir çizgi çizin.
 
@@ -50,7 +52,7 @@ Alternatif olarak, aşağıdaki adımları izleyin:
 
    Şekil odağı ve üyelerini edinir **Sınıf Ayrıntıları** ve **Özellikler** penceresinde görüntüler.
 
-2. **Sınıf Ayrıntıları** veya **Özellikler** penceresinde, bu özellik için ad alanını düzenleyin ve **ENTER**tuşuna basın.
+2. **Sınıf Ayrıntıları** veya **Özellikler** penceresinde, bu özellik için ad alanını düzenleyin ve **ENTER** tuşuna basın.
 
    Ad, **Sınıf Ayrıntıları** penceresinde, ilişkilendirme satırında, **Özellikler** penceresinde ve kod ' de güncelleştirilir.
 

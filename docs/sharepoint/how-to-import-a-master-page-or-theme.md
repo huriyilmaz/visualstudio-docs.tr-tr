@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: bir ana sayfa veya temayı Içeri aktarma | Microsoft Docs'
+description: SharePoint Designer 'da ana sayfalar ve Temalar için şablonlar oluşturun ve ardından SharePoint sitenizdeki sayfalara tutarlı bir görünüm sağlamak için Visual Studio 'ya aktarın.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7abca9e9141fdc8d4540e8a38e9579862fc540f1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c17f4e7477a20ea245eaa359a6f9611a8dc4ece6
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015302"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903500"
 ---
 # <a name="how-to-import-a-master-page-or-theme"></a>Nasıl yapılır: bir ana sayfa veya temayı Içeri aktarma
   SharePoint sitenizde sayfalara, ana sayfalar ve Temalar oluşturup kullanarak tutarlı bir görünüm verebilirsiniz. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Bu öğeler için şablon sağlamıyor, ancak bunları SharePoint Designer 'da oluşturabilir ve sonra içine aktarabilirsiniz [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . Daha fazla bilgi için bkz. Microsoft Web sitesinde [yapı taşı: sayfalar ve Kullanıcı arabirimi](/previous-versions/office/developer/sharepoint-2010/ee539040(v=office.14)) .
@@ -37,7 +39,7 @@ ms.locfileid: "86015302"
 
      Modül, SharePoint 'te belirttiğiniz bir konuma dağıtım için dosyaları (örneğin, ana sayfa veya Tema dosyaları) içerir.
 
-5. Modülünde, *Sample.txt*adlı varsayılan dosyayı silin.
+5. Modülünde, *Sample.txt* adlı varsayılan dosyayı silin.
 
 6. Modül düğümünü seçin.
 
@@ -81,7 +83,7 @@ ms.locfileid: "86015302"
      **Web** değeri, ana sayfanın yalnızca projede belirtilen Web sitesi için geçerli olduğu anlamına gelir. **Site** değeri, ana sayfanın tüm alt siteleri ve kök Web 'i içeren geçerli site koleksiyonuna uygulandığı anlamına gelir. Diğer değerler uygulanmaz.
 
     > [!NOTE]
-    > Temalar yalnızca site koleksiyonu düzeyine uygulanabileceğinden, bir temanın kapsamını **site**dışında bir şeyle ayarlamanıza gerek kalmaz. Bir tema alt sitede kullanılıyorsa hatalar oluşabilir.
+    > Temalar yalnızca site koleksiyonu düzeyine uygulanabileceğinden, bir temanın kapsamını **site** dışında bir şeyle ayarlamanıza gerek kalmaz. Bir tema alt sitede kullanılıyorsa hatalar oluşabilir.
 
 12. Menü çubuğunda **Yapı**  >  **dağıtım çözümü**' ni seçin.
 

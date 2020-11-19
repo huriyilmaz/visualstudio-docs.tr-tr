@@ -1,5 +1,7 @@
 ---
 title: Visual Studio Şablon Şeması Başvurusu | Microsoft Docs
+description: . Vstemplate dosyalarındaki XML öğelerini inceleyerek Visual Studio şablon şeması hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 49e41431938eed0078f6cbb241d3d62812899942
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9402efcc6c08343f1661945ae1701f7be7909bab
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80697971"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903422"
 ---
 # <a name="visual-studio-template-schema-reference"></a>Visual Studio Şablon Şeması Başvurusu
 Bu bölüm, proje şablonları, öğe şablonları ve Başlangıç setleri için meta verileri depolayan dosyalar olan *. vstemplate* dosyalarındaki XML öğeleri hakkında bilgiler içerir.
@@ -27,24 +29,24 @@ Bu bölüm, proje şablonları, öğe şablonları ve Başlangıç setleri için
 
 |Öğe|Alt Öğeler|Öznitelikler|
 |-------------|--------------------|----------------|
-|[AppliesTo](../extensibility/appliesto-element-visual-studio-templates.md)|Hiçbiri|Hiçbiri|
+|[AppliesTo](../extensibility/appliesto-element-visual-studio-templates.md)|Yok|Yok|
 |[Bütünleştirilmiş kod (şablon)](../extensibility/assembly-element-visual-studio-templates.md)|--|--|
 |[Bütünleştirilmiş kod (sihirbaz uzantısı)](../extensibility/assembly-element-visual-studio-template-wizard-extension.md)|--|--|
 |[BuildProjectOnload](../extensibility/buildprojectonload-element-visual-studio-templates.md)|--|--|
 |[CreateInPlace](../extensibility/createinplace-visual-studio-templates.md)|--|--|
 |[CreateNewFolder](../extensibility/createnewfolder-element-visual-studio-templates.md)|--|--|
 |[CustomDataSignature](../extensibility/customdatasignature-element-visual-studio-templates.md)|--|--|
-|[CustomParameter](../extensibility/customparameter-element-visual-studio-templates.md)|--|Name<br /><br /> Değer|
+|[CustomParameter](../extensibility/customparameter-element-visual-studio-templates.md)|--|Ad<br /><br /> Değer|
 |[CustomParameters](../extensibility/customparameters-element-visual-studio-templates.md)|CustomParameter|--|
 |[DefaultName](../extensibility/defaultname-element-visual-studio-templates.md)|--|--|
 |[Açıklama](../extensibility/description-element-visual-studio-templates.md)|--|Paket<br /><br /> ID|
 |[EnableEditOfLocationField](../extensibility/enableeditoflocationfield-element-visual-studio-templates.md)|--|--|
 |[EnableLocationBrowseButton](../extensibility/enablelocationbrowsebutton-element-visual-studio-templates.md)|--|--|
-|[Klasör](../extensibility/folder-element-visual-studio-project-templates.md)|ProjectItem<br /><br /> Klasör|Name|
+|[Klasör](../extensibility/folder-element-visual-studio-project-templates.md)|ProjectItem<br /><br /> Klasör|Ad|
 ||[kullanım dışı]|--|
 |[FullClassName](../extensibility/fullclassname-element-visual-studio-template-wizard-extension.md)|--|--|
-|[Lene](../extensibility/hidden-element-visual-studio-templates.md)|--|--|
-|[Simg](../extensibility/icon-element-visual-studio-templates.md)|--|Paket<br /><br /> ID|
+|[Gizli](../extensibility/hidden-element-visual-studio-templates.md)|--|--|
+|[Simge](../extensibility/icon-element-visual-studio-templates.md)|--|Paket<br /><br /> ID|
 |[LocationField](../extensibility/locationfield-element-visual-studio-project-templates.md)|--|--|
 |[LocationFieldMRUPrefix](../extensibility/locationfieldmruprefix-element-visual-studio-templates.md)|--|--|
 |[MaxFrameworkVersion](../extensibility/maxframeworkversion-element-visual-studio-templates.md)|--|--|
@@ -66,7 +68,7 @@ Bu bölüm, proje şablonları, öğe şablonları ve Başlangıç setleri için
 |[RequiredPlatformVersion](../extensibility/requiredplatformversion-element-visual-studio-templates.md)|--|Sürüm|
 |[SDKReference](../extensibility/sdkreference-element-visual-studio-templates.md)|--|Paket|
 |[ShowByDefault](../extensibility/showbydefault-visual-studio-templates.md)|--|--|
-|[SolutionFolder](../extensibility/solutionfolder-element-visual-studio-templates.md)|ProjectTemplateLink<br /><br /> SolutionFolder|Name|
+|[SolutionFolder](../extensibility/solutionfolder-element-visual-studio-templates.md)|ProjectTemplateLink<br /><br /> SolutionFolder|Ad|
 |[SortOrder](../extensibility/sortorder-element-visual-studio-templates.md)|--|--|
 |[SupportsCodeSeparation](../extensibility/supportscodeseparation-element-visual-studio-templates.md)|--|--|
 |[SupportsLanguageDropDown](../extensibility/supportslanguagedropdown-element-visual-studio-templates.md)|--|--|
@@ -77,7 +79,7 @@ Bu bölüm, proje şablonları, öğe şablonları ve Başlangıç setleri için
 |[TemplateGroupID](../extensibility/templategroupid-element-visual-studio-templates.md)|--|--|
 |[TemplateID](../extensibility/templateid-element-visual-studio-templates.md)|--|--|
 |[VSTemplate](../extensibility/vstemplate-element-visual-studio-templates.md)|TemplateData<br /><br /> TemplateContent<br /><br /> WizardExtension<br /><br /> WizardData|Tür<br /><br /> Sürüm|
-|[WizardData](../extensibility/wizarddata-element-visual-studio-templates.md)|--|Name|
+|[WizardData](../extensibility/wizarddata-element-visual-studio-templates.md)|--|Ad|
 |[WizardExtension](../extensibility/wizardextension-element-visual-studio-templates.md)|Bütünleştirilmiş Kod<br /><br /> FullClassName|--|
 
 ## <a name="see-also"></a>Ayrıca bkz.

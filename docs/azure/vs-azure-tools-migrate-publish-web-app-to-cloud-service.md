@@ -4,17 +4,16 @@ description: Visual Studio 'Yu kullanarak Web uygulamanızı bir Azure bulut hiz
 ms.custom: SEO-VS-2020
 author: ghogen
 manager: jillfra
-ms.assetid: 9394adfd-a645-4664-9354-dd5df08e8c91
 ms.workload: azure-vs
 ms.topic: how-to
 ms.date: 11/10/2017
 ms.author: ghogen
-ms.openlocfilehash: eb87aff7bf4ca1e3eac359b27a4280877eaefc50
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: c9d689ddca7b6f1b0c02f89c7afb82392e8a58af
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93399825"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94902356"
 ---
 # <a name="how-to-migrate-and-publish-a-web-application-to-an-azure-cloud-service-from-visual-studio"></a>Nasıl yapılır: bir Web uygulamasını Visual Studio 'dan Azure bulut hizmeti 'ne geçirme ve yayımlama
 
@@ -43,7 +42,7 @@ Uyarıları hata olarak işleme hakkında daha fazla bilgi için bkz. [Visual St
 
 ### <a name="test-the-migration-locally"></a>Geçişi yerel olarak test etme
 
-1. Visual Studio **Çözüm Gezgini** , eklenen bulut hizmeti projesine sağ tıklayın ve **Başlangıç projesi olarak ayarla** ' yı seçin.
+1. Visual Studio **Çözüm Gezgini**, eklenen bulut hizmeti projesine sağ tıklayın ve **Başlangıç projesi olarak ayarla**' yı seçin.
 1. Azure hata ayıklama ortamını başlatmak için hata ayıklamayı Başlat (F5) **> hata ayıkla** ' yı seçin. Bu ortam özellikle çeşitli Azure hizmetlerinin öykünmesinin benzetimini sağlar.
 
 ### <a name="use-an-azure-sql-database-for-your-application"></a>Uygulamanız için bir Azure SQL veritabanı kullanın
@@ -59,14 +58,14 @@ Web uygulamanız için bir şirket içi SQL Server veritabanı kullanan bir bağ
 1. Visual Studio 'da uygulama projesine sağ tıklayın ve **Microsoft Azure..** . ("Yayımla..." öğesinden farklı Yayımla ' yı seçin. komutu.).
 1. Görüntülenen **Azure uygulamasını Yayımla** ' da, Azure aboneliğinizdeki hesabı kullanarak oturum açın ve **Ileri >' yi** seçin.
 1. **Ayarlar > ortak ayarlar** sekmesinde, **bulut hizmeti** açılır listesinden hedef bulut hizmetini seçtiğiniz ortam ve konfigürasyonlarla birlikte seçin.
-1. **Ayarlar > Gelişmiş ayarlar** ' da, kullanılacak depolama hesabını seçin ve ardından **İleri >** ' yi seçin.
+1. **Ayarlar > Gelişmiş ayarlar**' da, kullanılacak depolama hesabını seçin ve ardından **İleri >**' yi seçin.
 1. **Tanılama** bölümünde Application Insights bilgi gönderileceğini seçin.
 1. Bir özeti görüntülemek için **ileri >** ' yi seçin ve sonra dağıtımı başlatmak için **Yayımla** ' yı seçin.
 1. Visual Studio, ilerlemeyi izleyebileceğiniz bir etkinlik günlüğü penceresi açar:
 
     ![VST_AzureActivityLog](./media/vs-azure-tools-migrate-publish-web-app-to-cloud-service/IC744149.png)
 
-1. Seçim Dağıtım işlemini iptal etmek için etkinlik günlüğündeki satır öğesine sağ tıklayın ve **iptal ve Kaldır** ' ı seçin. Bu komut dağıtım sürecini durduruyor ve dağıtım ortamını Azure 'dan siler. Note: dağıtıldıktan sonra bu dağıtım ortamını kaldırmak için [Azure Portal](https://portal.azure.com)kullanmanız gerekir.
+1. Seçim Dağıtım işlemini iptal etmek için etkinlik günlüğündeki satır öğesine sağ tıklayın ve **iptal ve Kaldır**' ı seçin. Bu komut dağıtım sürecini durduruyor ve dağıtım ortamını Azure 'dan siler. Note: dağıtıldıktan sonra bu dağıtım ortamını kaldırmak için [Azure Portal](https://portal.azure.com)kullanmanız gerekir.
 1. Seçim Rol örneklerinizin başlatılmasından sonra Visual Studio, **Sunucu Gezgini > Cloud Services** düğümünde dağıtım ortamını otomatik olarak gösterir. Buradan, tek tek rol örneklerinin durumunu görüntüleyebilirsiniz.
 1. Dağıtımdan sonra uygulamanıza erişmek için, **Azure etkinlik GÜNLÜĞÜNDE** URL Ile birlikte **tamamlandı** durumu görüntülendiğinde dağıtımınızın yanındaki oku seçin. Azure 'dan belirli bir Web uygulaması türünün nasıl başlatılacağı hakkındaki ayrıntılar için aşağıdaki tabloya bakın.
 
