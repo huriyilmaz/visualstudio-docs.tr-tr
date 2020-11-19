@@ -1,5 +1,7 @@
 ---
 title: ProjectType öğesi (Visual Studio şablonları) | Microsoft Docs
+description: ProjectType öğesi hakkında bilgi edinin ve proje şablonunu yeni proje veya yeni öğe Ekle iletişim kutusunda görünecek şekilde kategorilere ayırır.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d794bd5e81e77a892b5a3be38ff73ab805582dd7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2bd457bfb639ff0def2662476e60c8736e14b3ce
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80701803"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903825"
 ---
 # <a name="projecttype-element-visual-studio-templates"></a>ProjectType öğesi (Visual Studio şablonları)
 Proje şablonunu **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda belirtilen grup altında görünecek şekilde kategorilere ayırır.

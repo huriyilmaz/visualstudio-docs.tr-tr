@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: bir SharePoint proje öğesi türü tanımlama | Microsoft Docs'
+description: Özel bir SharePoint proje öğesi oluşturmak istediğinizde bir proje öğesi türünün nasıl tanımlanacağını anlayın.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ae709bf2d81e2b8b00dc984602c0426fdf272ebd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 78b10e6878301a878de14306f92f425402e1cc17
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016860"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903617"
 ---
 # <a name="how-to-define-a-sharepoint-project-item-type"></a>Nasıl yapılır: bir SharePoint proje öğesi türü tanımlama
   Özel bir SharePoint proje öğesi oluşturmak istediğinizde bir proje öğesi türü tanımlayın. Daha fazla bilgi için bkz. [özel SharePoint proje öğesi türleri tanımlama](../sharepoint/defining-custom-sharepoint-project-item-types.md).
@@ -40,9 +42,9 @@ ms.locfileid: "86016860"
 
     - <xref:System.ComponentModel.Composition.ExportAttribute>. Bu öznitelik, Visual Studio 'Nun uygulamanızı bulmasını ve yüklemesini sağlar <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider> . <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider>Türü öznitelik oluşturucusuna geçirin.
 
-    - <xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemTypeAttribute>. Proje öğesi türü tanımında, bu öznitelik yeni proje öğesi için dize tanımlayıcısını belirtir. *Şirket adı*biçimini kullanmanızı öneririz. Tüm proje öğelerinin benzersiz bir adı olduğundan emin olmak için *özellik adı* .
+    - <xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemTypeAttribute>. Proje öğesi türü tanımında, bu öznitelik yeni proje öğesi için dize tanımlayıcısını belirtir. *Şirket adı* biçimini kullanmanızı öneririz. Tüm proje öğelerinin benzersiz bir adı olduğundan emin olmak için *özellik adı* .
 
-    - <xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemIconAttribute>. Bu öznitelik **Çözüm Gezgini**içindeki bu proje öğesi için görüntülenecek simgeyi belirtir. Bu öznitelik isteğe bağlıdır; Bunu sınıfınıza uygulamazsanız, Visual Studio proje öğesi için varsayılan bir simge görüntüler. Bu özniteliği ayarlarsanız, derlemeye gömülü bir simgenin veya bit eşlemin tam nitelikli adını geçirin.
+    - <xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemIconAttribute>. Bu öznitelik **Çözüm Gezgini** içindeki bu proje öğesi için görüntülenecek simgeyi belirtir. Bu öznitelik isteğe bağlıdır; Bunu sınıfınıza uygulamazsanız, Visual Studio proje öğesi için varsayılan bir simge görüntüler. Bu özniteliği ayarlarsanız, derlemeye gömülü bir simgenin veya bit eşlemin tam nitelikli adını geçirin.
 
 5. <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider.InitializeType%2A>Yöntemi uygulamanızda, proje öğesi türünün davranışını tanımlamak Için *projectItemTypeDefinition* parametresinin üyelerini kullanın. Bu parametre <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition> , ve arabirimlerinde tanımlanan olaylara erişim sağlayan bir nesnedir <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents> <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFileEvents> . Proje öğesi türünün belirli bir örneğine erişmek için ve gibi olayları işleyin <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents> <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemAdded> <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemInitialized> .
 

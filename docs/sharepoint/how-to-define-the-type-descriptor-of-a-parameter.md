@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: bir parametrenin tür tanımlayıcısını tanımlama | Microsoft Docs'
+description: İş verileri bağlantısı (BDC) modelinizdeki bir yöntem için bir parametrenin tür tanımlayıcısını tanımlama hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0b3ae803576c98a86a45d175af45aa28b3852134
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8044f04902e74b2597d6cf331e54eb4a6138817a
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016843"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903604"
 ---
 # <a name="how-to-define-the-type-descriptor-of-a-parameter"></a>Nasıl yapılır: bir parametrenin tür tanımlayıcısını tanımlama
   Bir tür tanımlayıcısı, bir parametrenin veri türünü tanımlayan özellikler içerir. Bir tür tanımlayıcısı bir alanı, varlığı veya bir varlık koleksiyonunu tanımlayabilir. Daha fazla bilgi için bkz. [TypeDescriptor](/previous-versions/office/developer/sharepoint-2007/ms543392\(v\=office.12\)).
@@ -85,7 +87,7 @@ ms.locfileid: "86016843"
 
 3. **Özellikler** penceresinde, **ad** özelliğini varlığı tanımlayan bir ad olarak ayarlayın (örneğin: **kişiler**).
 
-4. **IsCollection** özelliğini **true**olarak ayarlayın. Bu, bu tür tanımlayıcısının bir varlık koleksiyonu olduğunu gösterir.
+4. **IsCollection** özelliğini **true** olarak ayarlayın. Bu, bu tür tanımlayıcısının bir varlık koleksiyonu olduğunu gösterir.
 
 5. **TypeName** özelliğini, arabirime yönelik bir başvuru <xref:System.Collections.Generic.IEnumerable%601> ve varlığı temsil eden türün tam adını içeren bir dizeye ayarlayın. Bu tür, projenizdeki bir sınıf, çözümünüzde başvurduğunuz bir derlemede tanımlanan bir tür veya IVB nesne modelinde tanımlı bir tür olabilir.
 

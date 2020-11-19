@@ -1,6 +1,8 @@
 ---
 title: 'Nasıl yapılır: tasarımcı kullanarak SharePoint Web Bölümü oluşturma | Microsoft Docs'
 titleSuffix: ''
+description: Visual Studio 'da Visual Web Developer Designer 'ı açan bir SharePoint projesine Visual Web Bölümü öğesi ekleyerek bir Web bölümü oluşturun.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: d19822237f61d5404f42e30078541a735eb206bc
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 09b237704a5b42f75c2239bd6d159e3d58e3025e
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584119"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903721"
 ---
 # <a name="how-to-create-a-sharepoint-web-part-by-using-a-designer"></a>Nasıl yapılır: tasarımcı kullanarak SharePoint Web Bölümü oluşturma
   Herhangi bir SharePoint projesine bir **görsel web bölümü** öğesi ekleyerek bir Web bölümü oluşturabilirsiniz. Bu, Visual Studio 'da web bölümüne denetimler ve kod ekleyebileceğiniz Visual Web Developer Designer 'ı açar. Görsel Web bölümleri, Web bölümleri ile aynı şekilde çalışır. Tek fark, Visual Web Developer Designer 'da görsel Web bölümleri tasarlayamanızdır.
@@ -31,7 +33,7 @@ ms.locfileid: "91584119"
 
      **Yeni proje** iletişim kutusu açılır.
 
-2. **Yeni proje** iletişim kutusunda, **Visual C#** veya **Visual Basic**altında, **Office/SharePoint** düğümünü genişletin ve ardından **SharePoint çözümleri** kategorisini seçin.
+2. **Yeni proje** iletişim kutusunda, **Visual C#** veya **Visual Basic** altında, **Office/SharePoint** düğümünü genişletin ve ardından **SharePoint çözümleri** kategorisini seçin.
 
 3. Proje şablonları listesinde **SharePoint 2013-Visual Web Bölümü**' nu seçin ve ardından **Tamam** düğmesini seçin.
 

@@ -1,5 +1,7 @@
 ---
 title: SupportsMasterPage öğesi (Visual Studio şablonları) | Microsoft Docs
+description: SupportsMasterPage öğesi hakkında bilgi edinin ve yeni öğe Ekle iletişim kutusunda ana sayfa seç onay kutusunun etkin olup olmadığını belirtir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 384672303d00b72431820b98fa02d09e440a1de5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 07230c3a9b76be8d78e22acaa83addd0fa21005a
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699446"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903838"
 ---
 # <a name="supportsmasterpage-element-visual-studio-templates"></a>SupportsMasterPage Öğesi (Visual Studio Şablonları)
 **Yeni öğe Ekle** Iletişim kutusunda **Ana sayfa seç** onay kutusunun etkin olup olmadığını belirtir.
@@ -54,7 +56,7 @@ ms.locfileid: "80699446"
  Metin ya da ya da `true` `false` **Yeni öğe Ekle** Iletişim kutusunda **Ana sayfa seç** onay kutusunun etkin olup olmadığını gösteren bir değer olmalıdır.
 
 ## <a name="remarks"></a>Açıklamalar
- `SupportsMasterPage` isteğe bağlı bir öğedir. Varsayılan değer: `false`.
+ `SupportsMasterPage` isteğe bağlı bir öğedir. `false` varsayılan değerdir.
 
  `SupportsMasterPage`Öğesi yalnızca Web öğesi şablonları için kullanılabilir.
 

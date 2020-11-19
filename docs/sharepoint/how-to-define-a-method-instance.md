@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: bir yöntem örneği tanımlama | Microsoft Docs'
+description: İş verileri bağlantısı (BDC) modelinizdeki bir yöntem için nasıl Yöntem örneği tanımlanacağını anlayın.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 170982a5d4abe33ca8cd705a979acc0737185a9c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 751683873d98e6c7aedc7228e0a91fb59117993b
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016827"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903630"
 ---
 # <a name="how-to-define-a-method-instance"></a>Nasıl yapılır: Yöntem örneği tanımlama
   Modelinizdeki her yöntem için en az bir yöntem örneği tanımlamanız gerekir.
@@ -35,7 +37,7 @@ ms.locfileid: "86016827"
 
      **Örnekler** düğümünün altında yeni bir yöntem örneği görüntülenir.
 
-3. Menü çubuğunda **View**  >  **Özellikler penceresini**görüntüle ' yi seçin.
+3. Menü çubuğunda **View**  >  **Özellikler penceresini** görüntüle ' yi seçin.
 
 4. **Özellikler** penceresinde, yöntem örneğinin özelliklerini ayarlayın. Her özellik hakkında daha fazla bilgi için bkz. [MethodInstance](/previous-versions/office/developer/sharepoint-2010/ee556838(v=office.14)).
 

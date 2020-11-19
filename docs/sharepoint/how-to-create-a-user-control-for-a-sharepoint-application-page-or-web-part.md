@@ -1,6 +1,8 @@
 ---
 title: SharePoint uygulama sayfası veya Web bölümü için Kullanıcı denetimi oluşturma
 titleSuffix: ''
+description: SharePoint çözümünüz için özel işlevler sağlayan özel kullanıcı denetimleri oluşturun ve bu işlevselliği bir Web Bölümü veya uygulama sayfası içinde yeniden kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b9c8a99562d937d7b10c3539888c2dd62eb1d1da
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: cbaeaff14d365f41bff73c29e678a08130b03dc0
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584106"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903682"
 ---
 # <a name="how-to-create-a-user-control-for-a-sharepoint-application-page-or-web-part"></a>Nasıl yapılır: SharePoint uygulama sayfası veya Web bölümü için Kullanıcı denetimi oluşturma
   SharePoint çözümünüz için özel işlevler sağlayan özel kullanıcı denetimleri oluşturabilir ve bu işlevselliği projenizde yeniden kullanabilirsiniz. Kullanıcı denetimlerini bir Web Bölümü veya uygulama sayfasına dahil edebilir, diğer ASP.NET denetimlerini ve SharePoint denetimlerini ekleyebilir ve denetimin özelliklerini ve yöntemlerini tanımlayabilirsiniz. Kullanıcı denetimleri hakkında daha fazla bilgi için bkz. [Web bölümleri veya uygulama sayfaları için yeniden kullanılabilir denetimler](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md) ve [SharePoint 'te Kullanıcı denetimleri ve sunucu denetimleri](https://blogs.msdn.microsoft.com/kaevans/2011/04/28/user-controls-and-server-controls-in-sharepoint/)oluşturma.
@@ -47,7 +49,7 @@ ms.locfileid: "91584106"
 
      Visual Studio, projenize birkaç klasör ve dosya ekler. Bu dosyalar hakkında daha fazla bilgi için bkz. [Web bölümleri veya uygulama sayfaları için yeniden kullanılabilir denetimler oluşturma](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md).
 
-     Varsayılan olarak, Kullanıcı denetimi dosyası, Visual Web Developer Designer 'ın **kaynak** görünümünde görüntülenir. Bu görünümde, denetimin XML işaretlemesini düzenleyebilirsiniz. Denetimleri **araç kutusundan**sürükleyerek görsel olarak tasarlamak istiyorsanız **Tasarım** görünümüne geçebilirsiniz. Bkz. [Tasarım görünümü, Web sayfası tasarımcısı](/previous-versions/aspnet/ms178149\(v\=vs.100\)).
+     Varsayılan olarak, Kullanıcı denetimi dosyası, Visual Web Developer Designer 'ın **kaynak** görünümünde görüntülenir. Bu görünümde, denetimin XML işaretlemesini düzenleyebilirsiniz. Denetimleri **araç kutusundan** sürükleyerek görsel olarak tasarlamak istiyorsanız **Tasarım** görünümüne geçebilirsiniz. Bkz. [Tasarım görünümü, Web sayfası tasarımcısı](/previous-versions/aspnet/ms178149\(v\=vs.100\)).
 
 7. Denetimde oluşan olayları işlemek istiyorsanız, Kullanıcı denetiminin kod dosyasına kod ekleyin.
 

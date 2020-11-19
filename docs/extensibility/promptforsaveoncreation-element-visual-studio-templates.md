@@ -1,6 +1,8 @@
 ---
 title: PromptForSaveOnCreation Öğesi (Visual Studio Şablonları)
 titleSuffix: ''
+description: Promptforsaveonoluşturma öğesi hakkında bilgi edinin ve yeni proje iletişim kutusu aracılığıyla kullanıcının bir proje kaydetme konumu isteyip istemediğiniz sorulur.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -15,12 +17,12 @@ manager: jillfra
 ms.workload:
 - vssdk
 monikerRange: vs-2017
-ms.openlocfilehash: ffc610cf701bdf5be3a0b6116455ac413fbd6dcd
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: e6897eb86f531ca86d0e935836683b8a0b244645
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89743138"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903799"
 ---
 # <a name="promptforsaveoncreation-element-visual-studio-templates"></a>Promptforsaveonoluşturma öğesi (Visual Studio şablonları)
 
@@ -59,7 +61,7 @@ Proje oluştururken, kullanıcıdan **Yeni proje** iletişim kutusu aracılığ�
  Metin ya da ya da `true` `false` `true` Yeni bir proje oluştururken kullanıcıdan kaydetme konumu istenmeyeceğini belirten bir olmalıdır.
 
 ## <a name="remarks"></a>Açıklamalar
- `PromptForSaveOnCreation` isteğe bağlı bir öğedir. Varsayılan değer: `false`.
+ `PromptForSaveOnCreation` isteğe bağlı bir öğedir. `false` varsayılan değerdir.
 
  Geçici projeler, bu projenin içeriğini diskte kaydetmeden oluşturabileceğiniz ve değiştirebileceğiniz projelerdir.
 

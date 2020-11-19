@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: bir SharePoint çözüm paketini özelleştirme | Microsoft Docs'
+description: Bir SharePoint çözüm paketi (. wsp) oluşturmak ve özelleştirmek için paket tasarımcısını kullanın. Paketlenmiş bildirim dosyasını görüntüleyin veya üzerine yazın. Bildirim şablonunu değiştirin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 77b66160d489f711b5588fdcdd024d13769d734f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7055be0b089a0b7c582ef0b66d84951d01685870
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016876"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903643"
 ---
 # <a name="how-to-customize-a-sharepoint-solution-package"></a>Nasıl yapılır: bir SharePoint çözüm paketini özelleştirme
   Paket Tasarımcısını bir paket (*. wsp*) oluşturmak ve özelleştirmek için kullanabilirsiniz. Örneğin, SharePoint proje öğeleri ve özellikleri ekleyebilir, çözüm dağıtıldığında Web sunucusunun sıfırlanıp sıfırlanmadığını belirtebilir ve dağıtım sunucusu türünü ayarlayabilirsiniz.
@@ -31,7 +33,7 @@ ms.locfileid: "86016876"
 
 #### <a name="to-open-the-package-designer"></a>Paket tasarımcısını açmak için
 
-- **Çözüm Gezgini**' de **paket**' e çift tıklayın veya **paket**için kısayol menüsünde **Tasarımcı görünüm** ' ü seçin.
+- **Çözüm Gezgini**' de **paket**' e çift tıklayın veya **paket** için kısayol menüsünde **Tasarımcı görünüm** ' ü seçin.
 
 ## <a name="view-the-packaged-manifestffile"></a>Paketlenmiş manifestfFile dosyasını görüntüleme
  Paketlenmiş bildirim dosyasını değiştirmek ve oluşturmak için paket tasarımcısını kullanabilirsiniz. Daha sonra, bu dosyanın XML kodunu Visual Studio 'da görüntüleyebilirsiniz.

@@ -1,6 +1,6 @@
 ---
 title: Evrensel Windows Platformu (UWP) için uygulama geliştirme
-description: Visual Studio ve Evrensel Windows uygulama geliştirme araçlarını kullanarak uygulama oluşturma hakkında bilgi edinin.
+description: Visual Studio ve Evrensel Windows Platformu geliştirme araçlarını kullanarak uygulama oluşturma hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 10/24/2017
 ms.technology: vs-ide-general
@@ -11,12 +11,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: e9cff517c60a67ee9bbf929c59a1150d5ace3757
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: 54849cc004bdae4d4f50c1492ff79c762c2cb41b
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94671425"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903864"
 ---
 # <a name="develop-apps-for-the-universal-windows-platform-uwp"></a>Evrensel Windows Platformu (UWP) için uygulama geliştirme
 

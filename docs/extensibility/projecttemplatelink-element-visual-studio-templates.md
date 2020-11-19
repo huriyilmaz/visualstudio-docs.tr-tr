@@ -1,5 +1,7 @@
 ---
 title: ProjectTemplateLink öğesi (Visual Studio şablonları) | Microsoft Docs
+description: <element>Öğesi ve çoklu Proje şablonundaki bir projenin. vstemplate dosyasının yolunu nasıl belirttiği hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e87b33d9b4b3863b89ecd06c3ea959c6e35ec7c0
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: 51098553d0b4b969b600f6e6e55cf62871cb44bf
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90011989"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903851"
 ---
 # <a name="projecttemplatelink-element-visual-studio-templates"></a>ProjectTemplateLink öğesi (Visual Studio şablonları)
 Çoklu Proje şablonundaki bir projenin *. vstemplate* dosyasının yolunu belirtir.
@@ -49,7 +51,7 @@ veya \<VSTemplate>
 |Öznitelik|Açıklama|
 |---------------|-----------------|
 |`ProjectName`|İsteğe bağlı öznitelik.<br /><br /> Birden fazla projeli bir şablonda, her bir proje için adı belirtir. **Yeni proje** iletişim kutusu ayrı projelere ad atayamaz.|
-|`CopyParameters`|Ana grup şablonundaki tüm değişkenlerin bağlı şablonların her birine kopyalanmasını sağlar.<br /><br /> Bağlantılı şablonlardaki parametrelerin öneki vardır `"$ext_*$"` . Örneğin, üst grup şablonunda parametresinin `$projectname$` bir **ExampleProject1**değeri varsa, bağlantılı şablon, yürütülmesi için bir değer aldığında, `$ext_projectname$` `$projectname$` üst grup şablonundan parametresinin bir kopyası olan bir parametre alır.<br /><br /> Bu durum, bağlı şablonların, yalnızca üst grup şablonunda rahatlıkla oluşturulabilecek bazı ortak parametreleri paylaşmasına olanak sağlar.<br /><br /> Bu öznitelik isteğe bağlıdır ve dahil olmadığında otomatik olarak varsayılan olarak ayarlanır `false` .<br /><br /> Visual Studio 2013 güncelleştirme 2 ' de kullanıma sunulmuştur. Doğru ürün sürümüne başvurmak için, bkz. [VISUAL STUDIO 2013 SDK güncelleştirme 2 ' de sunulan başvuru derlemeleri](/previous-versions/dn632168(v=vs.120)).|
+|`CopyParameters`|Ana grup şablonundaki tüm değişkenlerin bağlı şablonların her birine kopyalanmasını sağlar.<br /><br /> Bağlantılı şablonlardaki parametrelerin öneki vardır `"$ext_*$"` . Örneğin, üst grup şablonunda parametresinin `$projectname$` bir **ExampleProject1** değeri varsa, bağlantılı şablon, yürütülmesi için bir değer aldığında, `$ext_projectname$` `$projectname$` üst grup şablonundan parametresinin bir kopyası olan bir parametre alır.<br /><br /> Bu durum, bağlı şablonların, yalnızca üst grup şablonunda rahatlıkla oluşturulabilecek bazı ortak parametreleri paylaşmasına olanak sağlar.<br /><br /> Bu öznitelik isteğe bağlıdır ve dahil olmadığında otomatik olarak varsayılan olarak ayarlanır `false` .<br /><br /> Visual Studio 2013 güncelleştirme 2 ' de kullanıma sunulmuştur. Doğru ürün sürümüne başvurmak için, bkz. [VISUAL STUDIO 2013 SDK güncelleştirme 2 ' de sunulan başvuru derlemeleri](/previous-versions/dn632168(v=vs.120)).|
 
 ### <a name="child-elements"></a>Alt öğeleri
  Yok.

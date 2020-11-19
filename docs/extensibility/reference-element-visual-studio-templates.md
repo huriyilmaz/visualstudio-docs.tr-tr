@@ -1,5 +1,7 @@
 ---
 title: Reference öğesi (Visual Studio şablonları) | Microsoft Docs
+description: Başvuru öğesi ve öğe bir projeye eklendiğinde Eklenecek derleme başvurusunu nasıl belirttiği hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 11d893f6268a69172d27a0f7caee707767abfe89
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dcb713a62ebc9a0c3e4daf5aa16f36779b1a1fdc
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80701621"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903773"
 ---
 # <a name="reference-element-visual-studio-templates"></a>Reference öğesi (Visual Studio şablonları)
 Öğe projeye eklendiğinde Eklenecek derleme başvurusunu belirtir.

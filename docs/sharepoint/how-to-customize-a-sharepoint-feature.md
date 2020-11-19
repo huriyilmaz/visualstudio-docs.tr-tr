@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: bir SharePoint özelliğini özelleştirme | Microsoft Docs'
+description: Visual Studio 'da SharePoint özelliklerini özelleştirin. Özellik Tasarımcısı, Çözüm Gezgini veya SharePoint paket Gezgini ' nde yeni bir özellik eklediğinizde açılır.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a330f3c4cbe1e410ddc6a1612796c92eeda281b8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b4846d79af7a031970e8870626f88450e8a3e647
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016901"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903669"
 ---
 # <a name="how-to-customize-a-sharepoint-feature"></a>Nasıl yapılır: bir SharePoint özelliğini özelleştirme
   Visual Studio 'daki Özellik tasarımcısını kullanarak SharePoint özelliklerini oluşturabilir ve özelleştirebilirsiniz. Örneğin, özellik kapsamını ayarlayabilir ve diğer özellikleri bağımlılıklar olarak ekleyebilirsiniz. Varsayılan olarak, Çözüm Gezgini veya SharePoint paket Gezgini ' nde yeni bir özellik eklediğinizde özellik Tasarımcısı açılır.
@@ -46,7 +48,7 @@ ms.locfileid: "86016901"
 
 1. **Çözüm Gezgini**, **tüm dosyaları göster** simgesini seçin.
 
-2. Özellikler ' i genişletin, ÖzellikAdı ' nı genişletin, FeatureName. feature öğesini genişletin ve * \<FeatureName>.Template.xml* dosyasını açın.
+2. Özellikler ' i genişletin, ÖzellikAdı ' nı genişletin, FeatureName. feature öğesini genişletin ve *\<FeatureName>.Template.xml* dosyasını açın.
 
     > [!NOTE]
     > Özellik şablonu bildirim XML dosyasını açtığınızda, dosyalar otomatik olarak onaylanır ve Hata Listesi penceresinde görüntülenen uyarılar yoksayılabilir.

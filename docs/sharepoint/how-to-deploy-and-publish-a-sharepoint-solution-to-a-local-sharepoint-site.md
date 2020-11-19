@@ -1,6 +1,8 @@
 ---
 title: SharePoint çözümünü yerel SharePoint sitesine dağıtma & yayımlama
 titleSuffix: ''
+description: Geliştirme bilgisayarınızda SharePoint çözümlerini yerel bir SharePoint sunucusuna dağıtmayı veya yayımlamayı inceleyin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 78a837cc7145187fbc529e6e86cc27f88dd81f51
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 65683544f345a2378fdec559f582985ffec7bc43
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585803"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903591"
 ---
 # <a name="how-to-deploy-and-publish-a-sharepoint-solution-to-a-local-sharepoint-site"></a>Nasıl yapılır: bir SharePoint çözümünü yerel bir SharePoint sitesine dağıtma ve yayımlama
   Geliştirme bilgisayarınızda, SharePoint çözümlerini yerel bir SharePoint sunucusuna dağıtabilir veya yayımlayabilirsiniz. Dağıtım işlemi *. wsp* dosyasını SharePoint sunucusuna kopyalar, çözümü yüklenir ve ardından özellikleri etkinleştirir. Yayımlama işlemi yalnızca *. wsp* dosyasını SharePoint sunucusuna kopyalar ve onu kurar. SharePoint 'te etkinleştirmek için el ile etkinleştirmeniz gerekir.

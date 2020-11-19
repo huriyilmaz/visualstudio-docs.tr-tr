@@ -1,5 +1,7 @@
 ---
 title: C++ kodu ile çalışma (Sınıf Tasarımcısı)
+description: C++ kod öğesini, sınıfları ve bir projedeki diğer türleri tasarlamak ve görselleştirmek için sınıf diyagramlarını nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 06/21/2017
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54087a719b0079ba32ff08ff1e08ad01f5e64ed0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c3509f625686f97156efe79f5e1b72aa991ce5ca
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75596755"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903890"
 ---
 # <a name="work-with-c-code-in-class-designer"></a>Sınıf Tasarımcısı C++ koduyla çalışma
 
@@ -52,11 +54,11 @@ ms.locfileid: "75596755"
 
 ### <a name="location-of-source-files"></a>Kaynak dosyalarının konumu
 
-**Sınıf Tasarımcısı** , kaynak dosyaların konumunu izlememez. Bu nedenle, proje yapınızı değiştirir veya kaynak dosyalarını projenize taşırsanız, **Sınıf Tasarımcısı** türü (özellikle bir typedef, Taban sınıfları veya ilişkilendirme türleri kaynak türü) kaybedebilir. **Sınıf Tasarımcısı bu tür görüntülenemiyor**gibi bir hata alabilirsiniz. Bunu yaparsanız, yeniden görüntülemek için değiştirilen veya yeniden konumlandırılan kaynak kodu yeniden sınıf diyagramına sürükleyin.
+**Sınıf Tasarımcısı** , kaynak dosyaların konumunu izlememez. Bu nedenle, proje yapınızı değiştirir veya kaynak dosyalarını projenize taşırsanız, **Sınıf Tasarımcısı** türü (özellikle bir typedef, Taban sınıfları veya ilişkilendirme türleri kaynak türü) kaybedebilir. **Sınıf Tasarımcısı bu tür görüntülenemiyor** gibi bir hata alabilirsiniz. Bunu yaparsanız, yeniden görüntülemek için değiştirilen veya yeniden konumlandırılan kaynak kodu yeniden sınıf diyagramına sürükleyin.
 
 ### <a name="update-and-performance-issues"></a>Güncelleştirme ve performans sorunları
 
-C++ projeleri için, kaynak dosyadaki bir değişikliğin sınıf diyagramında görünmesi 30 ila 60 saniye sürebilir. Bu gecikme **, seçimde hiçbir tür bulunamamış**bir hata **Sınıf Tasarımcısı** oluşturulmasına da neden olabilir. Bunun gibi bir hata alırsanız hata iletisindeki **iptal** ' e tıklayın ve kod öğesinin **sınıf görünümü**görünmesini bekleyin. Bunu yaptıktan sonra, **Sınıf Tasarımcısı** türü görüntüleyebilmelidir.
+C++ projeleri için, kaynak dosyadaki bir değişikliğin sınıf diyagramında görünmesi 30 ila 60 saniye sürebilir. Bu gecikme **, seçimde hiçbir tür bulunamamış** bir hata **Sınıf Tasarımcısı** oluşturulmasına da neden olabilir. Bunun gibi bir hata alırsanız hata iletisindeki **iptal** ' e tıklayın ve kod öğesinin **sınıf görünümü** görünmesini bekleyin. Bunu yaptıktan sonra, **Sınıf Tasarımcısı** türü görüntüleyebilmelidir.
 
 Bir sınıf diyagramı kodda yaptığınız değişikliklerle güncelleştirmezse, diyagramı kapatıp yeniden açmanız gerekebilir.
 
@@ -74,7 +76,7 @@ Bir sınıf diyagramı kodda yaptığınız değişikliklerle güncelleştirmezs
 
 - **Sınıf Tasarımcısı** girdiğiniz türü desteklediğinden emin olun. [C++ kod öğelerine yönelik sınırlamalara](#limitations-for-c-code-elements)bakın.
 
-**' \<element> ' Sınıf diyagramında bir veya daha fazla şekil için**bir tür çözümleme sorunu için görmeniz muhtemel olan hata, kod bulunamadı. Bu hata iletisi, kodunuzun hatalı olduğunu göstermez. Yalnızca bu sınıf tasarımcısının kodunuzun görüntülenemiyor olduğunu gösterir. Aşağıdaki ölçüleri deneyin:
+**' \<element> ' Sınıf diyagramında bir veya daha fazla şekil için** bir tür çözümleme sorunu için görmeniz muhtemel olan hata, kod bulunamadı. Bu hata iletisi, kodunuzun hatalı olduğunu göstermez. Yalnızca bu sınıf tasarımcısının kodunuzun görüntülenemiyor olduğunu gösterir. Aşağıdaki ölçüleri deneyin:
 
 - Türün var olduğundan emin olun. Kaynak kodu istemeyerek dışarı veya silmediğinden emin olun.
 

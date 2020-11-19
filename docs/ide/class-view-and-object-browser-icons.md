@@ -1,5 +1,7 @@
 ---
 title: Sınıf Görünümü ve Nesne Tarayıcısı Simgeleri
+description: Sınıf Görünümü ve kod varlıklarını temsil eden Nesne Tarayıcısı görüntü simgeleri (örneğin, ad alanları, sınıflar, işlevler ve değişkenler) hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -16,18 +18,18 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 87bce70f83be2af80f93cf9888432257f6139732
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f8c0cf21d6d9055f183d15728fb63118ffb87e9c
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85285158"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94904007"
 ---
 # <a name="class-view-and-object-browser-icons"></a>Sınıf Görünümü ve Nesne Tarayıcısı simgeleri
 
 **Sınıf görünümü** ve **nesne tarayıcısı** ; Örneğin, ad alanları, sınıflar, işlevler ve değişkenler gibi kod varlıklarını temsil eden simgeler görüntüler. Aşağıdaki tabloda, simgeler gösterilmektedir ve açıklanmaktadır.
 
-|Simge|Description|Simge|Description|
+|Simge|Açıklama|Simge|Açıklama|
 |----------|-----------------|----------|-----------------|
 |![Ad alanı simgesi](../ide/media/vxnamespace_icon.gif)|Ad Alanı|![Bildirim simgesi](../ide/media/vxmethod_icon.gif)|Yöntem veya Işlev|
 |![Sınıf simgesi](../ide/media/vxclass_icon.gif)|Sınıf|![İşleç simgesi](../ide/media/vxoperator_icon.gif)|Operatör|
@@ -44,7 +46,7 @@ ms.locfileid: "85285158"
 |![Tür Iletme simgesi](../ide/media/ob_type_forward.gif)|Tür Iletme|||
 
 > [!TIP]
-> Bu sayfadaki simgeleri en iyi şekilde görüntülemek için Microsoft Docs temanızın **Açık**olarak ayarlandığından emin olun. Aşağıdaki ekran görüntüsünde gösterildiği gibi, bu renk temasını sayfanın sol alt kısmında bulunan denetimden geçirebilirsiniz:
+> Bu sayfadaki simgeleri en iyi şekilde görüntülemek için Microsoft Docs temanızın **Açık** olarak ayarlandığından emin olun. Aşağıdaki ekran görüntüsünde gösterildiği gibi, bu renk temasını sayfanın sol alt kısmında bulunan denetimden geçirebilirsiniz:
 >
 > ![Docs teması](../ide/media/toggle-docs-color-theme.png "Microsoft Docs sayfaları için renk temasını değiştirme")
 
@@ -52,7 +54,7 @@ ms.locfileid: "85285158"
 
 Aşağıdaki sinyal simgeleri önceki tüm simgelere uygulanır ve erişilebilirliğini gösterir.
 
-|Simge|Description|
+|Simge|Açıklama|
 |----------|-----------------|
 |\<No Signal Icon>|Geneldir. Bu bileşenin her yerinden ve ona başvuran herhangi bir bileşenden erişilebilir.|
 |![Sinyal korumalı simgesi](../ide/media/vxsignal_icon_key.gif)|Korunamadı. Kapsayan sınıf veya türden ya da kapsayan sınıf veya türden türeten erişilebilir.|

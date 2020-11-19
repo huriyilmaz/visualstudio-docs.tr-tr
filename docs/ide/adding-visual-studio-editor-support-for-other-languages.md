@@ -1,5 +1,7 @@
 ---
 title: Diğer diller için düzenleyici desteği ekle
+description: Visual Studio düzenleyicisinin farklı bilgisayar dillerini okumayı ve gezinmeyi nasıl desteklediğini ve diğer diller için nasıl destek ekleyebileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +18,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7c6761e74e68bad1ef800246d400c79b9689a18c
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 7bf84f4e48b9f070b3cebed4c2e17e5fc07992e3
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809078"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903903"
 ---
 # <a name="add-visual-studio-editor-support-for-other-languages"></a>Diğer diller için Visual Studio Düzenleyicisi desteği ekleme
 
@@ -43,7 +45,7 @@ Visual Studio şu anda [TextMate Grammars](https://manual.macromates.com/en/lang
 - Rust
 - Visual Basic
 - Clojure
-- Başlayın
+- Go
 - JavaDoc
 - Objective-C
 - ShaderLab
@@ -106,10 +108,10 @@ Bu temel yol altında, durumunuza uygulandıklarında aşağıdaki klasörleri e
 |Klasör adı|Açıklama|
 |-----------------|-----------------|
 |\\*\<language name>*|Dil klasörü. *\<language name>* Dilin adıyla değiştirin. Örneğin, *\Matlab*.|
-|*\ Sözdizimleri*|Dilbilgisi klasörü. Dil için *Matlab.js*gibi Grammar *. JSON* dosyalarını içerir.|
+|*\ Sözdizimleri*|Dilbilgisi klasörü. Dil için *Matlab.js* gibi Grammar *. JSON* dosyalarını içerir.|
 |*\ Kod parçacıkları*|Parçacıklar klasörü. Dil için kod parçacıkları içerir.|
 
-Windows 'da *% userprofile%* şu yolu çözer: * \\ \<user name> c:\Users*. *Uzantılar* klasörü sisteminizde yoksa, oluşturmanız gerekir. Klasör zaten varsa gizli olacaktır.
+Windows 'da *% userprofile%* şu yolu çözer: *\\ \<user name> c:\Users*. *Uzantılar* klasörü sisteminizde yoksa, oluşturmanız gerekir. Klasör zaten varsa gizli olacaktır.
 
 > [!TIP]
 > Düzenleyicide açık dosyalarınız varsa, TextMate dilbilgisi ekledikten sonra söz dizimi vurgulamasını görmek için bunları kapatıp yeniden açmanız gerekir.

@@ -1,5 +1,7 @@
 ---
 title: SortOrder öğesi (Visual Studio şablonları) | Microsoft Docs
+description: SortOrder öğesi hakkında bilgi edinin ve şablonu yeni proje veya yeni öğe Ekle iletişim kutusunda göründüğü şekilde düzenlemek için kullanılan bir değeri nasıl belirtir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 935d00335a21d3e129e79ce351e554ea93787447
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f07c3b62d1412564fd74c420b31b2a9fed41d1fa
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699962"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903760"
 ---
 # <a name="sortorder-element-visual-studio-templates"></a>SortOrder Öğesi (Visual Studio Şablonları)
 **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda göründüğü gibi, şablonu düzenlemek için kullanılan bir değeri belirtir.

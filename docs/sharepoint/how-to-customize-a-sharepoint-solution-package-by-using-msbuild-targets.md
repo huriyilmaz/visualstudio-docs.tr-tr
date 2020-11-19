@@ -1,6 +1,8 @@
 ---
 title: MSBuild hedeflerini kullanarak SharePoint çözüm paketini özelleştirme
 titleSuffix: ''
+description: Visual Studio 'Nun bir komut isteminde MSBuild hedeflerini kullanarak SharePoint çözüm paketi dosyalarını (. wsp) nasıl oluşturduğunu özelleştirin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9845f755d184c18b6b5ade4c5504e393edae7b00
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 5aa0afbe685c85d9a005dc621f58f17d396c0236
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585816"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903656"
 ---
 # <a name="how-to-customize-a-sharepoint-solution-package-by-using-msbuild-targets"></a>Nasıl yapılır: MSBuild hedeflerini kullanarak SharePoint çözüm paketini özelleştirme
   Bir komut isteminde MSBuild hedeflerini kullanarak, Visual Studio 'Nun SharePoint paket dosyalarını (*. wsp*) nasıl oluşturduğunu özelleştirebilirsiniz. Örneğin, paket ara dizinini ve numaralandırılmış dosyaları belirten MSBuild öğe gruplarını değiştirmek için MSBuild özelliklerini özelleştirebilirsiniz.
@@ -40,11 +42,11 @@ ms.locfileid: "91585816"
 
     Bu örnek, bu hedefin paketlemeden önce bir ileti görüntüler.
 
-2. Dosyayı **CustomLayout. SharePoint. targets**olarak adlandırın ve SharePoint projesinin klasörüne kaydedin.
+2. Dosyayı **CustomLayout. SharePoint. targets** olarak adlandırın ve SharePoint projesinin klasörüne kaydedin.
 
 3. Projeyi açın, kısayol menüsünü açın ve ardından **Projeyi Kaldır**' ı seçin.
 
-4. **Çözüm Gezgini**' de, proje için kısayol menüsünü açın ve ardından * \<ProjectName> . vbproj* veya * \<ProjectName> . csproj* **Düzenle** ' **yi seçin.**
+4. **Çözüm Gezgini**' de, proje için kısayol menüsünü açın ve ardından *\<ProjectName> . vbproj* veya *\<ProjectName> . csproj* **Düzenle** ' **yi seçin.**
 
 5. `Import`Proje dosyasının sonuna yakın olan satırdan sonra, aşağıdaki satırı ekleyin.
 

@@ -1,5 +1,7 @@
 ---
 title: SolutionFolder öğesi (Visual Studio şablonları) | Microsoft Docs
+description: SolutionFolder öğesi hakkında bilgi edinin ve birden çok projeli şablonlarda projeleri nasıl gruplandırır.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3262a5dcc0f226a0ac1b3aa08219fb89dbf70e83
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: be6cb773e2d822efe01f87b1102293898005cbc8
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699998"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903786"
 ---
 # <a name="solutionfolder-element-visual-studio-templates"></a>SolutionFolder Öğesi (Visual Studio Şablonları)
 Birden fazla projeli şablonlardaki projeleri gruplandırır.

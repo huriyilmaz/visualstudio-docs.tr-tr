@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: SharePoint Web Bölümü oluşturma | Microsoft Docs'
+description: Bir tasarımcı kullanarak veya bir Web Bölümü öğesini bir SharePoint projesine ekleyerek ve sonra Web bölümü için kod dosyasını düzenleyerek bir Web bölümü oluşturun ve özelleştirin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 2a8c02cce2f55374b4d62ba5663e8b3fe85b55b5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 13039520299d52e6f6a704567cf1cdc5ccfd66db
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016436"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903708"
 ---
 # <a name="how-to-create-a-sharepoint-web-part"></a>Nasıl yapılır: SharePoint Web Bölümü oluşturma
   Herhangi bir SharePoint projesine **Web** bölümü öğesi ekleyerek ve sonra Web bölümü için veya Tasarımcı kullanarak bir Web bölümü oluşturup özelleştirebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: tasarımcı kullanarak SharePoint Web Bölümü oluşturma](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md).
@@ -37,11 +39,11 @@ ms.locfileid: "86016436"
 
 5. **Ad** kutusunda, Web bölümü için bir ad belirtin ve sonra **Ekle** düğmesini seçin.
 
-     Web Bölümü **Çözüm Gezgini**görüntülenir. Bir Web bölümünün içerdiği dosyalar hakkında daha fazla bilgi için bkz. [SharePoint için Web bölümleri oluşturma](../sharepoint/creating-web-parts-for-sharepoint.md).
+     Web Bölümü **Çözüm Gezgini** görüntülenir. Bir Web bölümünün içerdiği dosyalar hakkında daha fazla bilgi için bkz. [SharePoint için Web bölümleri oluşturma](../sharepoint/creating-web-parts-for-sharepoint.md).
 
 6. **Çözüm Gezgini**' de, az önce oluşturduğunuz Web bölümü için kod dosyasını açın.
 
-     Örneğin, Web bölümünün adı *WebPart1*Ise, *WebPart1. vb* dosyasını açın (Visual Basic) veya *WebPart1.cs* (C# dilinde).
+     Örneğin, Web bölümünün adı *WebPart1* Ise, *WebPart1. vb* dosyasını açın (Visual Basic) veya *WebPart1.cs* (C# dilinde).
 
 7. Kod dosyasında, yöntemine denetimler ekleyin <xref:System.Web.UI.Control.CreateChildControls%2A> .
 

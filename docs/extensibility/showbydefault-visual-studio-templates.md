@@ -1,5 +1,7 @@
 ---
 title: ShowByDefault öğesi (Visual Studio şablonları)
+description: ShowByDefault öğesi hakkında bilgi edinin ve nasıl, false olarak ayarlandığında, şablonun yalnızca belirtilen TemplateGroupID altında görüntüleneceğini belirtir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 711cff06637957b796525543a02bfdd376e04284
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7b17a9a29b55721695509deed6b3d33cc7554aa9
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80700104"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903981"
 ---
 # <a name="showbydefault-element-visual-studio-templates"></a>ShowByDefault öğesi (Visual Studio şablonları)
 Varsa `false` , şablonun yalnızca belirtilen [TemplateGroupID](../extensibility/templategroupid-element-visual-studio-templates.md)altında görüntülendiğini belirtir.
@@ -54,7 +56,7 @@ Varsa `false` , şablonun yalnızca belirtilen [TemplateGroupID](../extensibilit
  Metin ya da olmalıdır `true` `false` . True ise, şablonun tüm proje türleri için görüntülendiğini belirtir. False ise, şablon yalnızca belirtilen altında görüntülenir `TemplateGroupID` .
 
 ## <a name="remarks"></a>Açıklamalar
- `ShowByDefault` isteğe bağlı bir öğedir. Varsayılan değer: `true`.
+ `ShowByDefault` isteğe bağlı bir öğedir. `true` varsayılan değerdir.
 
 ## <a name="example"></a>Örnek
  Aşağıdaki örnek, bir şablon için meta verileri gösterir [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] .

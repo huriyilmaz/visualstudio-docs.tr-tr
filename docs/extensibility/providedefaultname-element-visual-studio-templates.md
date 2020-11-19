@@ -1,5 +1,7 @@
 ---
 title: ProvideDefaultName öğesi (Visual Studio şablonları) | Microsoft Docs
+description: ProvideDefaultName öğesi ve Visual Studio 'Nun yeni öğe veya yeni proje Ekle iletişim kutusunda varsayılan bir Visual Studio adı oluşturup üretmeyeceğinizi nasıl belirttiği hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 192716198f605a5f6b4f62730e84dcf83b4229cc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7732c6f02ae5ec086a89bd9ade5c00ea533a68f2
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80701711"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94903812"
 ---
 # <a name="providedefaultname-element-visual-studio-templates"></a>ProvideDefaultName öğesi (Visual Studio şablonları)
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]Proje sisteminin **Yeni öğe** veya **Yeni proje** Ekle iletişim kutusunda şablon için varsayılan bir ad oluşturup üretmeyeceğini belirtir.
@@ -53,7 +55,7 @@ ms.locfileid: "80701711"
  Metin ya da ya da `true` `false` **Yeni öğe Ekle** iletişim kutusunda şablon için varsayılan bir ad oluşturulup oluşturulmayacağını belirten bir değer olmalıdır. **New Project**
 
 ## <a name="remarks"></a>Açıklamalar
- `ProvideDefaultName` isteğe bağlı bir öğedir. Varsayılan değer: `true`.
+ `ProvideDefaultName` isteğe bağlı bir öğedir. `true` varsayılan değerdir.
 
  `ProvideDefaultName`Öğesi ise `false` , **Yeni öğe Ekle** ve **Yeni proje** iletişim kutularının **ad** kutuları değeri içerir `<Enter_name>` .
 

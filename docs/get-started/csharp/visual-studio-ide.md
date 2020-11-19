@@ -1,8 +1,11 @@
 ---
 title: C# geliştiricileri için genel bakış
+description: Visual Studio tümleşik geliştirme ortamı ve C# geliştiricileri için nasıl uyarlanbildiği hakkında bilgi edinin.
 ms.date: 03/19/2019
 ms.technology: vs-ide-general
-ms.custom: get-started
+ms.custom:
+- get-started
+- SEO-VS-2020
 ms.topic: overview
 author: TerryGLee
 ms.author: tglee
@@ -11,12 +14,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: ade9dbfb17aa4330b572ac96080117562498a338
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 688a4377b9e4bd6f80d65744955dc84908a18e7a
+ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85771124"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94904020"
 ---
 # <a name="welcome-to-the-visual-studio-ide--c"></a>Visual Studio IDE 'ye hoş geldiniz | ,\#
 
