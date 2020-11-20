@@ -156,8 +156,6 @@
       items:
         - name: Hata ayıklayıcısı ipuçları ve püf noktaları
           href: debugger-tips-and-tricks.md
-        - name: Hata ayıklayıcısı ile çalıştırma işlemleri iliştirme
-          href: attach-to-running-processes-with-the-visual-studio-debugger.md
         - name: Tasarım zamanında hata ayıklama
           href: walkthrough-debugging-at-design-time.md
         - name: Tam Zamanında Hata Ayıklayıcı
@@ -286,8 +284,6 @@
           href: remote-debugging-csharp.md
         - name: C++ projesinin hatalarını uzaktan ayıklama
           href: remote-debugging-cpp.md
-        - name: Linux’ta .NET Core hatalarını uzaktan ayıklama
-          href: remote-debugging-dotnet-core-linux-with-ssh.md
         - name: Uzaktan hata ayıklayıcı bağlantı noktası atamaları
           href: remote-debugger-port-assignments.md
         - name: Windows Güvenlik Duvarı’nı uzaktan hata ayıklama için yapılandırma
@@ -342,6 +338,14 @@
               href: error-mixed-mode-debugging-for-x64-processes-is-supported-only-when-using-microsoft-dotnet-framework-4-or-greater.md
             - name: 'Uzak Makine, Uzaktan Bağlantılar iletişim kutusunda görünmüyor'
               href: error-remote-machine-does-not-appear-in-a-remote-connections-dialog.md
+    - name: İşleme ekle
+      items:
+        - name: Hata ayıklayıcısı ile çalıştırma işlemleri iliştirme
+          href: attach-to-running-processes-with-the-visual-studio-debugger.md
+        - name: Linux’ta .NET Core hatalarını ayıklama
+          href: remote-debugging-dotnet-core-linux-with-ssh.md
+        - name: Docker kapsayıcısında çalışan bir işleme ekleme
+          href: attach-to-process-running-in-docker-container.md
     - name: Çok iş parçacıklı uygulamaların hatalarını ayıklama
       items:
         - name: Çok iş parçacıklı uygulamaların hatalarını ayıklama
