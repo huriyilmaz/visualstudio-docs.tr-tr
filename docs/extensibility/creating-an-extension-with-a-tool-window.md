@@ -1,5 +1,7 @@
 ---
 title: Araç penceresi ile uzantı oluşturma | Microsoft Docs
+description: Bir araç penceresi ile uzantı oluşturmak için VSıX proje şablonunu ve özel araç penceresi öğesi şablonunu nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 3/16/2019
 ms.topic: how-to
 ms.assetid: 585b0a3a-f85b-4f92-81bb-9ca499bb8a89
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 597b84854dd398abee9dc21090e085273bc94c75
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bf2bcbce3c97830663b43a94191d84d81418b423
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85903895"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94973933"
 ---
 # <a name="create-an-extension-with-a-tool-window"></a>Araç penceresi ile uzantı oluşturma
 
@@ -25,16 +27,16 @@ Bu yordamda, bir araç penceresi ile uzantı oluşturmak için VSıX proje şabl
 
 ### <a name="create-a-tool-window"></a>Araç penceresi oluşturma
 
-1. **Firstwindow**ADLı bir VSIX projesi oluşturun. "VSIX" araması yaparak VSıX proje şablonunu **Yeni proje** iletişim kutusunda bulabilirsiniz.
+1. **Firstwindow** ADLı bir VSIX projesi oluşturun. "VSIX" araması yaparak VSıX proje şablonunu **Yeni proje** iletişim kutusunda bulabilirsiniz.
 
-2. Proje açıldığında, **MyWindow**adlı bir araç penceresi öğe şablonu ekleyin. **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve **Add**  >  **Yeni öğe**Ekle ' yi seçin. **Yeni öğe Ekle** iletişim kutusunda, **Visual C#**  >  **genişletilebilirliği** ' ne gidin ve **özel araç penceresi**' ni seçin. Pencerenin alt kısmındaki **ad** alanında araç penceresi dosya adını *MyWindow.cs*olarak değiştirin.
+2. Proje açıldığında, **MyWindow** adlı bir araç penceresi öğe şablonu ekleyin. **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve **Add**  >  **Yeni öğe** Ekle ' yi seçin. **Yeni öğe Ekle** iletişim kutusunda, **Visual C#**  >  **genişletilebilirliği** ' ne gidin ve **özel araç penceresi**' ni seçin. Pencerenin alt kısmındaki **ad** alanında araç penceresi dosya adını *MyWindow.cs* olarak değiştirin.
 
 3. Projeyi derleyin ve hata ayıklamayı başlatın.
 
    Visual Studio 'nun deneysel örneği görüntülenir. Deneysel örnek hakkında daha fazla bilgi için bkz. [deneysel örnek](../extensibility/the-experimental-instance.md).
 
-4. Deneysel örnekte, **View**  >  **diğer pencereleri**görüntüle ' ye gidin.
+4. Deneysel örnekte, **View**  >  **diğer pencereleri** görüntüle ' ye gidin.
 
-   **MyWindow**için bir menü öğesi görmeniz gerekir. Tıklayın.
+   **MyWindow** için bir menü öğesi görmeniz gerekir. Tıklayın.
 
    **MyWindow** başlığına ve **bana tıkladığını** belirten bir düğmeye sahip bir araç penceresi görmeniz gerekir.

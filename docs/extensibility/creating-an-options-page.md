@@ -1,5 +1,7 @@
 ---
 title: Seçenekler sayfası oluşturma | Microsoft Docs
+description: Özellikleri incelemek ve ayarlamak için özellik kılavuzunu kullanan basit bir Araçlar/Seçenekler sayfası oluşturmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 3/16/2019
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: be826b73e28a73216ea88ceba8e23eb1e9ea457b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 41102dfbbf1e49dadb1360ab0182810a47651dca
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85903815"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94973710"
 ---
 # <a name="create-an-options-page"></a>Seçenekler sayfası oluşturma
 
@@ -25,7 +27,7 @@ Bu izlenecek yol, özellikleri incelemek ve ayarlamak için özellik kılavuzunu
 
  MPF, araç seçenekleri sayfaları, sınıfı ve sınıfı oluşturmanıza yardımcı olmak için iki sınıf sağlar <xref:Microsoft.VisualStudio.Shell.Package> <xref:Microsoft.VisualStudio.Shell.DialogPage> . Bu sayfalar için altsınıflama sınıfının kapsayıcısını sağlamak üzere bir VSPackage oluşturun `Package` . Her bir araç seçenekleri sayfasını sınıfından türeterek oluşturursunuz `DialogPage` .
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
  Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yüklememeyin. Visual Studio kurulumuna isteğe bağlı bir özellik olarak dahildir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
 
@@ -37,7 +39,7 @@ Bu izlenecek yol, özellikleri incelemek ve ayarlamak için özellik kılavuzunu
 
 1. Her Visual Studio uzantısı, uzantı varlıklarını içeren bir VSıX dağıtım projesiyle başlar. Adlı bir [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] VSIX projesi oluşturun `MyToolsOptionsExtension` . "VSIX" araması yaparak VSıX proje şablonunu **Yeni proje** iletişim kutusunda bulabilirsiniz.
 
-2. Adlı bir Visual Studio paket öğesi şablonu ekleyerek VSPackage ekleyin `MyToolsOptionsPackage` . **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve **Add**  >  **Yeni öğe**Ekle ' yi seçin. **Yeni öğe Ekle iletişim kutusunda** **Visual C# öğeleri**  >  **genişletilebilirliği** ' ne gidin ve **Visual Studio paketi**' ni seçin. İletişim kutusunun alt kısmındaki **ad** alanında, dosya adını olarak değiştirin `MyToolsOptionsPackage.cs` . VSPackage oluşturma hakkında daha fazla bilgi için bkz. [VSPackage ile uzantı oluşturma](../extensibility/creating-an-extension-with-a-vspackage.md).
+2. Adlı bir Visual Studio paket öğesi şablonu ekleyerek VSPackage ekleyin `MyToolsOptionsPackage` . **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve **Add**  >  **Yeni öğe** Ekle ' yi seçin. **Yeni öğe Ekle iletişim kutusunda** **Visual C# öğeleri**  >  **genişletilebilirliği** ' ne gidin ve **Visual Studio paketi**' ni seçin. İletişim kutusunun alt kısmındaki **ad** alanında, dosya adını olarak değiştirin `MyToolsOptionsPackage.cs` . VSPackage oluşturma hakkında daha fazla bilgi için bkz. [VSPackage ile uzantı oluşturma](../extensibility/creating-an-extension-with-a-vspackage.md).
 
 ### <a name="to-create-the-tools-options-property-grid"></a>Araç seçenekleri özellik kılavuzunu oluşturmak için
 
@@ -99,7 +101,7 @@ Bu izlenecek yol, özellikleri incelemek ve ayarlamak için özellik kılavuzunu
 
 7. Visual Studio 'nun deneysel örneğinde, **Araçlar** menüsünde **Seçenekler**' e tıklayın.
 
-     Sol bölmede **kategorim**' i görmeniz gerekir. (Seçenek kategorileri alfabetik sırada listelenmiştir, bu nedenle listenin alt yarısında ilgili görünmelidir.) **Kategorim** ' i açın ve **kılavuz sayfam**' ı tıklatın. Seçenekler Kılavuzu sağ bölmede görüntülenir. Özellik kategorisi **My seçeneklerim**ve özellik adı My **Integer seçeneğim**. Özellik açıklaması, **tamsayı seçeneği**, bölmenin en altında görünür. Değeri ilk 256 olan başlangıç değerinden başka bir şeye değiştirin. **Tamam**' a tıklayın ve sonra **kılavuz sayfamı**yeniden açın. Yeni değerin devam etmediğini görebilirsiniz.
+     Sol bölmede **kategorim**' i görmeniz gerekir. (Seçenek kategorileri alfabetik sırada listelenmiştir, bu nedenle listenin alt yarısında ilgili görünmelidir.) **Kategorim** ' i açın ve **kılavuz sayfam**' ı tıklatın. Seçenekler Kılavuzu sağ bölmede görüntülenir. Özellik kategorisi **My seçeneklerim** ve özellik adı My **Integer seçeneğim**. Özellik açıklaması, **tamsayı seçeneği**, bölmenin en altında görünür. Değeri ilk 256 olan başlangıç değerinden başka bir şeye değiştirin. **Tamam**' a tıklayın ve sonra **kılavuz sayfamı** yeniden açın. Yeni değerin devam etmediğini görebilirsiniz.
 
      Seçenekler sayfanız, Visual Studio 'nun arama kutusu aracılığıyla da kullanılabilir. IDE 'nin üst kısmındaki arama kutusuna **kategorim** yazın ve **kategorim > kılavuz** sayfam sonuçlar bölümünde listelenmiş olarak görürsünüz.
 
@@ -190,7 +192,7 @@ Bu izlenecek yol, özellikleri incelemek ve ayarlamak için özellik kılavuzunu
     }
     ```
 
-     `optionsPage`Alan, üst örneğe bir başvuru içerir `OptionPageCustom` . `Initialize`Yöntemi `OptionString` **TextBox**içinde görüntülenir. Olay **işleyicisi TextBox 'ın** geçerli değerini `OptionString` odak **kutusu**dışına çıktığında içine yazar.
+     `optionsPage`Alan, üst örneğe bir başvuru içerir `OptionPageCustom` . `Initialize`Yöntemi `OptionString` **TextBox** içinde görüntülenir. Olay **işleyicisi TextBox 'ın** geçerli değerini `OptionString` odak **kutusu** dışına çıktığında içine yazar.
 
 9. Paket kodu dosyasında, `OptionPageCustom.Window` `OptionPageCustom` bir örneği oluşturmak, başlatmak ve döndürmek için sınıfına özelliği için bir geçersiz kılma ekleyin `MyUserControl` . Sınıf şu şekilde görünmelidir:
 
@@ -223,9 +225,9 @@ Bu izlenecek yol, özellikleri incelemek ve ayarlamak için özellik kılavuzunu
 
 11. Deneysel örnekte **Araçlar**  >  **Seçenekler**' e tıklayın.
 
-12. **Kategorumu** ve sonra **özel sayfamı**bul.
+12. **Kategorumu** ve sonra **özel sayfamı** bul.
 
-13. **OptionString**değerini değiştirin. **Tamam**' a tıklayın ve ardından **özel sayfamı**yeniden açın. Yeni değerin kalıcı olduğunu görebilirsiniz.
+13. **OptionString** değerini değiştirin. **Tamam**' a tıklayın ve ardından **özel sayfamı** yeniden açın. Yeni değerin kalıcı olduğunu görebilirsiniz.
 
 ## <a name="access-options"></a>Erişim seçenekleri
 
@@ -247,7 +249,7 @@ Bu izlenecek yol, özellikleri incelemek ve ayarlamak için özellik kılavuzunu
 
      Bu kod, <xref:Microsoft.VisualStudio.Shell.Package.GetDialogPage%2A> bir örnek oluşturmak veya almak için çağırır `OptionPageGrid` . `OptionPageGrid`<xref:Microsoft.VisualStudio.Shell.DialogPage.LoadSettingsFromStorage%2A>Genel Özellikler olan seçeneklerini yüklemek için çağırır.
 
-2. Şimdi değeri göstermek için **Myaraçları SeçenekAdı komutu** adlı özel bir komut öğesi şablonu ekleyin. **Yeni öğe Ekle** iletişim kutusunda, **Visual C#**  >  **genişletilebilirliği** ' ne gidin ve **özel komut**' yi seçin. Pencerenin alt kısmındaki **ad** alanında, komut dosyası adını *MyToolsOptionsCommand.cs*olarak değiştirin.
+2. Şimdi değeri göstermek için **Myaraçları SeçenekAdı komutu** adlı özel bir komut öğesi şablonu ekleyin. **Yeni öğe Ekle** iletişim kutusunda, **Visual C#**  >  **genişletilebilirliği** ' ne gidin ve **özel komut**' yi seçin. Pencerenin alt kısmındaki **ad** alanında, komut dosyası adını *MyToolsOptionsCommand.cs* olarak değiştirin.
 
 3. *Myaraçları seçenekleri komut* dosyasında, komut `ShowMessageBox` yönteminin gövdesini aşağıdaki şekilde değiştirin:
 

@@ -1,5 +1,7 @@
 ---
 title: VSPackage ile uzantı oluşturma | Microsoft Docs
+description: Bir VSıX projesi oluşturmayı ve bir ileti kutusu göstermek için UI kabuğu hizmetini almak amacıyla VSPackage kullanarak VSPackage proje öğesi eklemeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 3/16/2019
 ms.topic: how-to
 ms.assetid: c0cc5e08-4897-44f2-8309-e3478f1f999e
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 68ade2f8d334c1f93349e396d910fa300f6b5417
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 431de32838ad236229db5e41330aba372e30ea75
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85903850"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94973776"
 ---
 # <a name="create-an-extension-with-a-vspackage"></a>VSPackage ile uzantı oluşturma
 
@@ -25,9 +27,9 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
 
 ## <a name="create-a-vspackage"></a>VSPackage oluşturma
 
-1. **Firstpackage**ADLı bir VSIX projesi oluşturun. "VSIX" araması yaparak VSıX proje şablonunu **Yeni proje** iletişim kutusunda bulabilirsiniz.
+1. **Firstpackage** ADLı bir VSIX projesi oluşturun. "VSIX" araması yaparak VSıX proje şablonunu **Yeni proje** iletişim kutusunda bulabilirsiniz.
 
-2. Proje açıldığında, **Firstpackage**adlı bir Visual Studio paket öğe şablonu ekleyin. **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve **Add**  >  **Yeni öğe**Ekle ' yi seçin. **Yeni öğe Ekle** iletişim kutusunda **Visual C#**  >  **genişletilebilirliği** ' ne gidin ve **Visual Studio paketi**' ni seçin. Pencerenin alt kısmındaki **ad** alanında, komut dosyası adını *FirstPackage.cs*olarak değiştirin.
+2. Proje açıldığında, **Firstpackage** adlı bir Visual Studio paket öğe şablonu ekleyin. **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve **Add**  >  **Yeni öğe** Ekle ' yi seçin. **Yeni öğe Ekle** iletişim kutusunda **Visual C#**  >  **genişletilebilirliği** ' ne gidin ve **Visual Studio paketi**' ni seçin. Pencerenin alt kısmındaki **ad** alanında, komut dosyası adını *FirstPackage.cs* olarak değiştirin.
 
 3. Projeyi derleyin ve hata ayıklamayı başlatın.
 
@@ -76,4 +78,4 @@ Bu noktada, yüklenmesine neden olan hiçbir şey olmadığından uzantı yükle
 
 3. Projeyi derleyin ve hata ayıklamayı başlatın. Deneysel örnek görüntülenir.
 
-4. Deneysel örnekte bir çözüm açın. **Ilk paketin Initialize () içinde**olduğunu belirten bir ileti kutusu görmeniz gerekir.
+4. Deneysel örnekte bir çözüm açın. **Ilk paketin Initialize () içinde** olduğunu belirten bir ileti kutusu görmeniz gerekir.

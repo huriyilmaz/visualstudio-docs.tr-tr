@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: cf93d619ddeb385960eae74de8b64a7f11b7be4d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 67368f8bc8e6762dedf448829aca364e06b83fd3
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87115299"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94973765"
 ---
 # <a name="visual-studio-documentation"></a>Visual Studio belgeleri
 
 Hoş geldiniz! Bu depo, Visual Studio Technical belgelerinin kaynak dosyalarını içerir. Konular [docs.Microsoft.com](https://docs.microsoft.com/visualstudio)sitesinde yayımlanır.
 
-Bu depo, 23 Haziran 2017 tarihinde üzerinden taşınmıştır https://github.com/Microsoft/vsdocs . Eski URL 'Lere giden trafik buradan yeniden yönlendirilir.
+Bu depo, 23 Haziran 2017 tarihinde üzerinden taşınmıştır https://github.com/Microsoft/vsdocs .
 
 Visual Basic ve Visual C# belgeleri [DotNet docs](https://github.com/dotnet/docs/tree/master/docs)deposunda bulunur ve Visual C++ belgeleri [C++ belgeleri](https://github.com/MicrosoftDocs/cpp-docs)deposunda bulunur.
 

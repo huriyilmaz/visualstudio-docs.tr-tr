@@ -1,5 +1,7 @@
 ---
 title: Yazılım geliştirme kiti oluşturma | Microsoft Docs
+description: SDK 'ların genel altyapısı ve bir platform SDK 'sı ve uzantı SDK 'Sı oluşturma hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 8496afb4-1573-4585-ac67-c3d58b568a12
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 61e547be5f240cafccc058eb7ea2249fd492554b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b3a793e3d7233eb1b6d0aaaa74fbe16d52cf6f43
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904109"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94974325"
 ---
 # <a name="create-a-software-development-kit"></a>Yazılım geliştirme seti oluşturma
 
@@ -53,7 +55,7 @@ Platform SDK 'Ları aşağıdaki düzene sahiptir:
 | Node | Description |
 |------------------------| - |
 | *Başvurular* klasörü | İle kodlanması yapabilen API 'Leri içeren ikili dosyaları içerir. Bunlar Windows meta verileri (WinMD) dosyalarını veya derlemelerini içerebilir. |
-| *Tasarım zamanı* klasörü | Yalnızca çalıştırma öncesi/hata ayıklama zamanında gereken dosyaları içerir. Bunlar XML docs, kitaplıklar, üst bilgiler, araç kutusu tasarım zamanı ikilileri, MSBuild yapıtları, vb. içerebilir.<br /><br /> XML belgeleri, ideal olarak *\Designtime* klasörüne yerleştirilecektir, ancak başvurular için XML docs, Visual Studio 'daki başvuru dosyası ile birlikte yerleştirilmeye devam edecektir. Örneğin, bir başvurunun XML belgesi<em>\ başvurular [ \\ config] \\ [Arch] \sample.dll</em> *\references [config] [Arch] \\ \\ \sample.xml*ve bu belgeye ait yerelleştirilmiş sürüm *\ başvurular \\ [config] \\ [Arch] \\ [locale] \sample.xml*olur. |
+| *Tasarım zamanı* klasörü | Yalnızca çalıştırma öncesi/hata ayıklama zamanında gereken dosyaları içerir. Bunlar XML docs, kitaplıklar, üst bilgiler, araç kutusu tasarım zamanı ikilileri, MSBuild yapıtları, vb. içerebilir.<br /><br /> XML belgeleri, ideal olarak *\Designtime* klasörüne yerleştirilecektir, ancak başvurular için XML docs, Visual Studio 'daki başvuru dosyası ile birlikte yerleştirilmeye devam edecektir. Örneğin, bir başvurunun XML belgesi <em>\ başvurular [ \\ config] \\ [Arch] \sample.dll</em> *\references [config] [Arch] \\ \\ \sample.xml* ve bu belgeye ait yerelleştirilmiş sürüm *\ başvurular \\ [config] \\ [Arch] \\ [locale] \sample.xml* olur. |
 | *Yapılandırma* klasörü | Yalnızca üç klasör olabilir: *hata ayıklama*, *Perakende* ve *CommonConfiguration*. SDK yazarları, SDK tüketicisinin hedefleyecek yapılandırmadan bağımsız olarak, aynı SDK dosyaları kümesi tüketilmesi gerekiyorsa, dosyalarını *CommonConfiguration* altına yerleştirebilir. |
 | *Mimari* klasörü | Desteklenen herhangi bir *mimari* klasörü bulunabilir. Visual Studio şu mimarileri destekler: x86, x64, ARM ve neutral. Note: Win32 ile x86 eşlenir ve eşlemeler ' ı nötr olarak eşleştirir.<br /><br /> MSBuild yalnızca Platform SDK 'Ları için *\CommonConfiguration\neutral* ' ın altında görünür. |
 | *SDKManifest.xml* | Bu dosya, Visual Studio 'Nun SDK 'Yı nasıl tüketmesi gerektiğini açıklar. İçin SDK bildirimine bakın [!INCLUDE[win81](../debugger/includes/win81_md.md)] :<br /><br /> `<FileList             DisplayName = "Windows"             PlatformIdentity = "Windows, version=8.1"             TargetFramework = ".NET for Windows Store apps, version=v4.5.1; .NET Framework, version=v4.5.1"             MinVSVersion = "14.0">              <File Reference = "Windows.winmd">                <ToolboxItems VSCategory = "Toolbox.Default" />             </File> </FileList>`<br /><br /> **DisplayName:** Nesne Tarayıcısı, gezinme listesinde görüntülenen değer.<br /><br /> **Platformıdentity:** Bu özniteliğin varlığı, Visual Studio 'ya ve MSBuild 'in bir platform SDK olduğunu ve bundan eklenen başvuruların yerel olarak kopyalanmayacağını söyler.<br /><br /> **TargetFramework:** Bu öznitelik, Visual Studio tarafından yalnızca bu özniteliğin değerinde belirtilen çerçeveleri hedefleyen projelerin SDK 'Yı tükettiği için kullanılır.<br /><br /> **MinVSVersion:** Bu öznitelik, Visual Studio tarafından yalnızca buna uygulanan SDK 'Ları kullanmak için kullanılır.<br /><br /> **Başvuru:** Bu özniteliğin yalnızca denetimleri içeren başvurular için belirtilmesi gerekir. Bir başvurunun denetimler içerip içermediğini belirtme hakkında bilgi için aşağıya bakın. |
@@ -107,7 +109,7 @@ Uzantı SDK 'Ları aşağıdaki yükleme düzenine sahiptir:
 
 2. *Başvurular* klasörü: API 'leri içeren ikili dosyalar. Bunlar Windows meta verileri (WinMD) dosyaları veya derlemeleri olabilir.
 
-3. *Redist* klasörü: çalışma zamanı/hata ayıklama için gereken dosyalar ve kullanıcının uygulamasının bir parçası olarak paketlenmesi gerekir. Tüm ikili dosyalar *\redist \\<config \> \\ \><Arch*altına yerleştirilmelidir ve ikili adların benzersizlik sağlamak için aşağıdaki biçimi olmalıdır: *]* \<company> . \<product> . \<purpose> . \<extension> <em>. Örneğin, * Microsoft.Cpp.Build.dll</em>. Diğer SDK 'lardan dosya adlarıyla çakışelebilecek adlara sahip tüm dosyalar (örneğin, JavaScript, CSS, PRI, XAML, PNG ve jpg dosyaları), <em> \\ \> \\ \> \\ \> \* xaml denetimleriyle ilişkili dosyalar dışında \redist<config<Arch<SDKName altına yerleştirilmelidir. Bu dosyalar * \redist \\<config \> \\<Arch \> \\<ComponentName \> \\ altına yerleştirilmelidir</em>.
+3. *Redist* klasörü: çalışma zamanı/hata ayıklama için gereken dosyalar ve kullanıcının uygulamasının bir parçası olarak paketlenmesi gerekir. Tüm ikili dosyalar *\redist \\<config \> \\ \><Arch* altına yerleştirilmelidir ve ikili adların benzersizlik sağlamak için aşağıdaki biçimi olmalıdır: *]* \<company> . \<product> . \<purpose> . \<extension> <em>. Örneğin, * Microsoft.Cpp.Build.dll</em>. Diğer SDK 'lardan dosya adlarıyla çakışelebilecek adlara sahip tüm dosyalar (örneğin, JavaScript, CSS, PRI, XAML, PNG ve jpg dosyaları), <em> \\ \> \\ \> \\ \> \* xaml denetimleriyle ilişkili dosyalar dışında \redist<config<Arch<SDKName altına yerleştirilmelidir. Bu dosyalar * \redist \\<config \> \\<Arch \> \\<ComponentName \> \\ altına yerleştirilmelidir</em>.
 
 4. *Tasarım zamanı* klasörü: yalnızca ön çalıştırma/hata ayıklama sırasında gerekli olan ve kullanıcının uygulamasının bir parçası olarak paketlenmemelidir. Bunlar XML belgeleri, kitaplıklar, üst bilgiler, araç kutusu tasarım zamanı ikilileri, MSBuild yapıtları vb. olabilir. Yerel bir proje tarafından tüketimine yönelik herhangi bir SDK 'nın bir *SDKName. props* dosyası olması gerekir. Aşağıda bu dosya türünün bir örneği gösterilmektedir.
 
@@ -127,9 +129,9 @@ Uzantı SDK 'Ları aşağıdaki yükleme düzenine sahiptir:
 
    ```
 
-    XML başvuru belgeleri, başvuru dosyasının yanına yerleştirilir. Örneğin, *\references \\<config \> \\<Arch \>\sample.dll* bütünleştirilmiş kodu için XML başvuru belgesi, *\references \\<config \> \\<Arch \>\sample.xml*ve bu belgenin yerelleştirilmiş sürümü *\references<\\ config<\> \\ Arch \> \\<locale \>\sample.xml*.
+    XML başvuru belgeleri, başvuru dosyasının yanına yerleştirilir. Örneğin, *\references \\<config \> \\<Arch \>\sample.dll* bütünleştirilmiş kodu için XML başvuru belgesi, *\references \\<config \> \\<Arch \>\sample.xml* ve bu belgenin yerelleştirilmiş sürümü *\references<\\ config<\> \\ Arch \> \\<locale \>\sample.xml*.
 
-5. *Yapılandırma* klasörü: üç alt klasör: *Hata Ayıkla*, *Perakende*ve *CommonConfiguration*. SDK yazarları, SDK tüketicisinin hedeflediği yapılandırmadan bağımsız olarak aynı SDK dosyaları kümesi tüketilmesi gerektiğinde dosyalarını *CommonConfiguration* altına yerleştirebilir.
+5. *Yapılandırma* klasörü: üç alt klasör: *Hata Ayıkla*, *Perakende* ve *CommonConfiguration*. SDK yazarları, SDK tüketicisinin hedeflediği yapılandırmadan bağımsız olarak aynı SDK dosyaları kümesi tüketilmesi gerektiğinde dosyalarını *CommonConfiguration* altına yerleştirebilir.
 
 6. *Mimari* klasörü: Şu mimariler desteklenir: x86, x64, ARM, nötr. Win32, x86 ile eşlenir ve eşlemeleri bağımsız olarak eşler.
 
@@ -181,9 +183,9 @@ Aşağıdaki liste, dosyanın öğelerini verir:
 
 9. Supportedmimariler: SDK 'nın desteklediği mimarilerin virgülle ayrılmış bir listesi. Tüketim projesindeki hedeflenen SDK mimarisi desteklenmiyorsa MSBuild bir uyarı görüntüler. Bu öznitelik belirtilmemişse, MSBuild hiçbir şekilde bu uyarı türünü görüntülemez.
 
-10. SupportsMultipleVersions: Bu öznitelik **hata** veya **Uyarı**olarak ayarlandıysa, MSBUILD aynı projenin aynı SDK ailesinin birden çok sürümüne başvuramayacağını gösterir. Bu öznitelik yoksa veya **Izin ver**olarak ayarlanırsa, MSBuild bu hata veya uyarı türünü görüntülemez.
+10. SupportsMultipleVersions: Bu öznitelik **hata** veya **Uyarı** olarak ayarlandıysa, MSBUILD aynı projenin aynı SDK ailesinin birden çok sürümüne başvuramayacağını gösterir. Bu öznitelik yoksa veya **Izin ver** olarak ayarlanırsa, MSBuild bu hata veya uyarı türünü görüntülemez.
 
-11. AppX: diskteki Windows Bileşen kitaplığı için uygulama paketlerinin yolunu belirtir. Bu değer, yerel hata ayıklama sırasında Windows Bileşen kitaplığı 'nın kayıt bileşenine geçirilir. Dosya adı için adlandırma kuralı.... * \<Company> \<Product> \<Architecture> \<Configuration> \<Version> . appx*. Yapılandırma ve mimari, Windows Bileşen kitaplığı için uygulanamazlar öznitelik adı ve öznitelik değeri için isteğe bağlıdır. Bu değer yalnızca Windows bileşen kitaplıkları için geçerlidir.
+11. AppX: diskteki Windows Bileşen kitaplığı için uygulama paketlerinin yolunu belirtir. Bu değer, yerel hata ayıklama sırasında Windows Bileşen kitaplığı 'nın kayıt bileşenine geçirilir. Dosya adı için adlandırma kuralı.... *\<Company> \<Product> \<Architecture> \<Configuration> \<Version> . appx*. Yapılandırma ve mimari, Windows Bileşen kitaplığı için uygulanamazlar öznitelik adı ve öznitelik değeri için isteğe bağlıdır. Bu değer yalnızca Windows bileşen kitaplıkları için geçerlidir.
 
 12. Copyredisttoaltdizini: *\redist* klasörü altındaki dosyaların, uygulama paketi köküne (yani, **uygulama paketi oluşturma** Sihirbazı 'nda seçilen **paket konumu** ) ve çalışma zamanı düzen köküne göre kopyalanması gerektiğini belirtir. Varsayılan konum, uygulama paketinin ve **F5** düzeninin köküdür.
 

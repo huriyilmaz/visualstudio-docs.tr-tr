@@ -1,5 +1,7 @@
 ---
 title: ButtonText öğesi | Microsoft Docs
+description: ButtonText öğesi, çeşitli menülerde görüntülenen metni belirtmenize olanak tanır. Başka metin alanları belirtilmiş olsa bile ButtonText öğesi boş olamaz.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 59308feea2002a18662a7c04b95a92a920f934c4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2db20bb3298a7b849e8bc4a261987c5314a29841
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80739914"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94974464"
 ---
 # <a name="buttontext-element"></a>ButtonText öğesi
 Bu alan, çeşitli menülerde görüntülenen metni belirtmenize olanak tanır. Varsayılan olarak, `ButtonText` öğesi menü denetleyicileri ' nde görünür. `ButtonText`Diğer metin alanları boşsa, öğesi de varsayılan olarak olur. `ButtonText`Diğer metin alanları belirtilmiş olsa bile öğe boş bırakılamaz.

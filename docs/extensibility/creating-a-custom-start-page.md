@@ -1,5 +1,7 @@
 ---
 title: Özel başlangıç sayfası oluşturma | Microsoft Docs
+description: Özel başlangıç sayfası oluşturmayı öğrenin. Boş bir başlangıç sayfasıyla başlayın, boş UserControl öğesine denetimler ekleyin ve ardından sayfanızı test edin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: d67e0c53-9f5a-45fb-a929-b9d2125c3c82
@@ -9,12 +11,12 @@ manager: jillfra
 ms.workload:
 - vssdk
 monikerRange: vs-2017
-ms.openlocfilehash: ed35948158866b7d0bbb2e458c8f8bc2f7b3f844
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b7e4c9690e573d2807eb3ad9d842921ee08417d8
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85903668"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94974557"
 ---
 # <a name="creating-a-custom-start-page"></a>Özel başlangıç sayfası oluşturma
 
@@ -69,9 +71,9 @@ Visual Studio 'nun kilitlenmediğinden emin olana kadar, Visual Studio 'nun biri
 
 ### <a name="to-test-a-manually-created-custom-start-page"></a>El ile oluşturulan özel başlangıç sayfasını test etmek için
 
-1. XAML dosyanızı ve destekleyici metin dosyalarını veya biçimlendirme dosyalarını, *%USERPROFILE%\My SiteStudio 2015 \ StartPages \\ * klasörüne kopyalayın.
+1. XAML dosyanızı ve destekleyici metin dosyalarını veya biçimlendirme dosyalarını, *%USERPROFILE%\My SiteStudio 2015 \ StartPages \\* klasörüne kopyalayın.
 
-2. Başlangıç sayfanız, Visual Studio tarafından yüklenmeyen derlemelerdeki denetimlere veya türlere başvuruyorsa, derlemeleri kopyalayın ve *{Visual Studio yükleme klasörü} \Common7\IDE\PrivateAssemblies \\ *içine yapıştırın.
+2. Başlangıç sayfanız, Visual Studio tarafından yüklenmeyen derlemelerdeki denetimlere veya türlere başvuruyorsa, derlemeleri kopyalayın ve *{Visual Studio yükleme klasörü} \Common7\IDE\PrivateAssemblies \\* içine yapıştırın.
 
 3. Visual Studio komut isteminde **devenv/rootsuffix exp** yazarak Visual Studio 'nun deneysel bir örneğini açın.
 

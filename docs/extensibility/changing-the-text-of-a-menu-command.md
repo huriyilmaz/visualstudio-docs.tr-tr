@@ -1,5 +1,7 @@
 ---
 title: Menü komutunun metnini değiştirme | Microsoft Docs
+description: Bu kod örneğini inceleyerek, bir menü komutunun metin etiketini ımtrcommandservice hizmetini kullanarak nasıl değiştireceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,19 +14,19 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 88a20d9f29ae86f7946389cafd26d67c244caea7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d22669e67becb62d5e90f58c0cdd6b572e684bcf
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84183697"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94974396"
 ---
 # <a name="change-the-text-of-a-menu-command"></a>Menü komutunun metnini değiştirme
 Aşağıdaki adımlarda, hizmetini kullanarak bir menü komutunun metin etiketinin nasıl değiştirileceği gösterilmektedir <xref:System.ComponentModel.Design.IMenuCommandService> .
 
 ## <a name="changing-a-menu-command-label-with-the-imenucommandservice"></a>Bir menü komut etiketini ımtrcommandservice ile değiştirme
 
-1. `MenuText` **ChangeMenuText**adlı bir menü komutuyla adlı bir VSIX projesi oluşturun. Daha fazla bilgi için bkz. [bir menü komutuyla uzantı oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md).
+1. `MenuText` **ChangeMenuText** adlı bir menü komutuyla adlı bir VSIX projesi oluşturun. Daha fazla bilgi için bkz. [bir menü komutuyla uzantı oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md).
 
 2. *. Vsct* dosyasında, `TextChanges` Aşağıdaki örnekte gösterildiği gibi, menü komutunuz bayrağını ekleyin.
 
@@ -73,6 +75,6 @@ Aşağıdaki adımlarda, hizmetini kullanarak bir menü komutunun metin etiketin
 
 5. Projeyi derleyin ve hata ayıklamayı başlatın. Visual Studio 'nun deneysel örneği görüntülenir.
 
-6. **Araçlar** menüsünde **değiştirme ChangeMenuText**adlı bir komut görmeniz gerekir.
+6. **Araçlar** menüsünde **değiştirme ChangeMenuText** adlı bir komut görmeniz gerekir.
 
-7. Komutuna tıklayın. **Menuitemcallback** çağrıldığında bildiren ileti kutusunu görmeniz gerekir. İleti kutusunu kapattığınızda, Araçlar menüsündeki komutun adının artık **Yeni metin**olduğunu görmeniz gerekir.
+7. Komutuna tıklayın. **Menuitemcallback** çağrıldığında bildiren ileti kutusunu görmeniz gerekir. İleti kutusunu kapattığınızda, Araçlar menüsündeki komutun adının artık **Yeni metin** olduğunu görmeniz gerekir.

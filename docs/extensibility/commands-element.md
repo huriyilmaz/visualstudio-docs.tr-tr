@@ -1,5 +1,7 @@
 ---
 title: Commands öğesi | Microsoft Docs
+description: 'Commands öğesi VSPackage araç çubuğundaki komutların koleksiyonunu temsil eder ve şu bölümlere sahip olabilir: menüler, gruplar, düğmeler, combos ve bit eşlemler.'
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3ea2400cca19a02475caecec3d022e0b78794ae4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 59afdda5a9af3a779b65063c3c764ef4f284a265
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80739691"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94974505"
 ---
 # <a name="commands-element"></a>Commands öğesi
 VSPackage araç çubuğundaki komutların koleksiyonunu temsil eder. Koleksiyonda en fazla beş alt dizi olabilir: menüler, gruplar, düğmeler, comboler ve bit eşlemler.

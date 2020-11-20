@@ -1,5 +1,7 @@
 ---
 title: Menü öğelerine klavye kısayollarını bağlama | Microsoft Docs
+description: Visual Studio 'da klavye kısayolunun varsayılan düzenleyici veya özel bir düzenleyici için özel düğme, menü öğesi veya araç çubuğu komutuna nasıl eşlendiğini öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8df973ef6a75a9134b4ee6e945a5702708ece712
-ms.sourcegitcommit: 023f52f10fb91850824558478cbfd2ec965054f0
+ms.openlocfilehash: 112089581965b96133f2160341a13efe23329934
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94407724"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94974630"
 ---
 # <a name="bind-keyboard-shortcuts-to-menu-items"></a>Klavye kısayollarını menü öğelerine bağlama
 Bir klavye kısayolunu özel bir menü komutuna bağlamak için, Package için *. vsct* dosyasına bir giriş eklemeniz yeterlidir. Bu konu başlığı altında, klavye kısayolunun özel düğme, menü öğesi veya araç çubuğu komutuna nasıl değiştirileceği ve varsayılan düzenleyicide klavye eşlemesinin nasıl uygulanacağı veya özel bir düzenleyici ile nasıl sınırlandırılacağını açıklanmaktadır.
@@ -31,7 +33,7 @@ Bir klavye kısayolunu özel bir menü komutuna bağlamak için, Package için *
 
 ### <a name="to-verify-the-availability-of-a-keyboard-shortcut"></a>Klavye kısayolunun kullanılabilirliğini doğrulamak için
 
-1. **Araç**  >  **seçenekleri**  >  **ortamı** penceresinde **klavye** ' yi seçin.
+1. **Araç**  >  **seçenekleri**  >  **ortamı** penceresinde **klavye**' yi seçin.
 
 2. **' De yeni kısayol kullan ' ın** **Global** olarak ayarlandığından emin olun.
 
@@ -59,7 +61,7 @@ Bir klavye kısayolunu özel bir menü komutuna bağlamak için, Package için *
 
     `guid`Ve `id` özniteliklerini çağırmak istediğiniz komuta ait olanlarla ayarlayın.
 
-    `mod1`Özniteliği **Control** , **alt** veya **Shift** olarak ayarlayın.
+    `mod1`Özniteliği **Control**, **alt** veya **Shift** olarak ayarlayın.
 
     KeyBindings bölümü şuna benzemelidir:
 

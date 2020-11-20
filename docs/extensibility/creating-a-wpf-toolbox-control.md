@@ -1,5 +1,7 @@
 ---
 title: WPF araç kutusu denetimi oluşturma | Microsoft Docs
+description: Diğer kullanıcılara dağıtabileceğiniz bir araç kutusu denetimi oluşturmak için WPF araç kutusu denetim şablonunu nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 3/16/2019
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a6aa6051648e495e21f7954a737f7b572ce6a6f2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6dbe9ed00223fa549420537579d39a4c88cf37cb
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85903940"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94973974"
 ---
 # <a name="create-a-wpf-toolbox-control"></a>WPF araç kutusu denetimi oluşturma
 
@@ -31,9 +33,9 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
 
 1. Adlı bir VSıX projesi oluşturun `MyToolboxControl` . "VSIX" araması yaparak VSıX proje şablonunu **Yeni proje** iletişim kutusunda bulabilirsiniz.
 
-2. Proje açıldığında, adlı bir **WPF araç kutusu denetim** öğesi şablonu ekleyin `MyToolboxControl` . **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve **Add**  >  **Yeni öğe**Ekle ' yi seçin. **Yeni öğe Ekle** iletişim kutusunda, **Visual C#**  >  **genişletilebilirliği** ' ne gidin ve **WPF araç kutusu denetimi**' ni seçin. Pencerenin alt kısmındaki **ad** alanında, komut dosyası adını *MyToolboxControl.cs*olarak değiştirin.
+2. Proje açıldığında, adlı bir **WPF araç kutusu denetim** öğesi şablonu ekleyin `MyToolboxControl` . **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve **Add**  >  **Yeni öğe** Ekle ' yi seçin. **Yeni öğe Ekle** iletişim kutusunda, **Visual C#**  >  **genişletilebilirliği** ' ne gidin ve **WPF araç kutusu denetimi**' ni seçin. Pencerenin alt kısmındaki **ad** alanında, komut dosyası adını *MyToolboxControl.cs* olarak değiştirin.
 
-    Çözüm artık, `ProvideToolboxControlAttribute` <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute> denetimi **araç kutusuna**ekleyen bir Kullanıcı denetımı ve dağıtım Için VSIX bildiriminde bir **Microsoft. VisualStudio. ToolboxControl** varlık girişi içerir.
+    Çözüm artık, `ProvideToolboxControlAttribute` <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute> denetimi **araç kutusuna** ekleyen bir Kullanıcı denetımı ve dağıtım Için VSIX bildiriminde bir **Microsoft. VisualStudio. ToolboxControl** varlık girişi içerir.
 
 #### <a name="to-create-the-control-ui"></a>Denetim Kullanıcı arabirimini oluşturmak için
 
@@ -55,13 +57,13 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
 
 ## <a name="renaming-the-control"></a>Denetimi yeniden adlandırma
 
- Varsayılan olarak, denetiminiz **araç kutusunda** **MyToolboxControl. MyToolboxControl**adlı bir grupta **MyToolboxControl** olarak görünür. *MyToolboxControl.xaml.cs* dosyasında bu adları değiştirebilirsiniz.
+ Varsayılan olarak, denetiminiz **araç kutusunda** **MyToolboxControl. MyToolboxControl** adlı bir grupta **MyToolboxControl** olarak görünür. *MyToolboxControl.xaml.cs* dosyasında bu adları değiştirebilirsiniz.
 
 1. Kod görünümünde *MyToolboxControl.xaml.cs* öğesini açın.
 
 2. Sınıfını bulun `MyToolboxControl` ve TestControl olarak yeniden adlandırın. (Bunu yapmanın en hızlı yolu, sınıfı yeniden adlandırmanız ve bağlam menüsünden **Yeniden Adlandır** ' ı seçip adımları tamamlamayın. ( **Yeniden adlandırma** komutu hakkında daha fazla bilgi için bkz. [yeniden düzenlemeyi yeniden adlandırma (C#)](../ide/reference/rename.md).)
 
-3. `ProvideToolboxControl`Özniteliğine gidin ve **Test**olarak ilk parametrenin değerini değiştirin. Bu, **araç kutusunda**denetimi içerecek olan grubun adıdır.
+3. `ProvideToolboxControl`Özniteliğine gidin ve **Test** olarak ilk parametrenin değerini değiştirin. Bu, **araç kutusunda** denetimi içerecek olan grubun adıdır.
 
     Elde edilen kod şöyle görünmelidir:
 
@@ -100,4 +102,4 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
 
 3. *. Vsix* dosyasını bir ağa veya bir Web sitesine yükleyin.
 
-    Dosyayı [Visual Studio Market](https://marketplace.visualstudio.com/) Web sitesine yüklerseniz, diğer kullanıcılar **Tools**  >  denetimi çevrimiçi bulmak ve yüklemek için Visual Studio 'daki Araçlar**uzantılarını ve güncelleştirmeleri** kullanabilir.
+    Dosyayı [Visual Studio Market](https://marketplace.visualstudio.com/) Web sitesine yüklerseniz, diğer kullanıcılar **Tools**  >  denetimi çevrimiçi bulmak ve yüklemek için Visual Studio 'daki Araçlar **uzantılarını ve güncelleştirmeleri** kullanabilir.

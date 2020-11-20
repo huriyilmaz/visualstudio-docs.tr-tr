@@ -1,5 +1,7 @@
 ---
 title: IDE tarafından uygulanan geri çağırma Işlevleri | Microsoft Docs
+description: Eklentinin IDE 'ye bilgi geçirmek için kaynak denetim işlemi sırasında uygun zamanlarda çağırabileceği geri çağırma işlevleri hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +13,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 666486f5b800707a4467a129abeed7a13306f10a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9dfb7e8b7e046c9587f591aec96a6a7fbd270865
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80739898"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94974452"
 ---
 # <a name="callback-functions-implemented-by-the-ide"></a>IDE tarafından uygulanan geri çağırma işlevleri
 Tümleşik geliştirme ortamı (IDE) ile tümleştirmeyi mümkün olduğunca sorunsuz hale getirmek ve birleştirilmiş bir son kullanıcı deneyimi sağlamak için, kaynak denetimi eklentisi IDE tarafından uygulanan geri çağırma işlevlerini kullanabilir. Eklenti, IDE 'ye bilgi geçirmek için kaynak denetim işlemi sırasında bu işlevleri uygun zamanlarda çağırabilir; IDE daha sonra bu bilgileri yerel kullanıcı arabiriminde katıştırılmış öğeler olarak görüntüleyebilir. Bu senaryoda, eklenti kendi Kullanıcı arabirimini işe alıyorsa, kullanıcının bu senaryoda daha az parçalanmış bir deneyimi vardır.
 
- Gerekli üst bilgi dosyası *SCC. h*' dir. Varsayılan konum *\Program Files\vsıp 8.0 \ EnvSDK\common\inc \\ *' dir. Ayrıca, *\Program Files\vsıp 8.0 \ MSSCCı \\ *konumundaki kaynak denetimi eklentisi örneğine sahip VSIP klasöründedir.
+ Gerekli üst bilgi dosyası *SCC. h*' dir. Varsayılan konum *\Program Files\vsıp 8.0 \ EnvSDK\common\inc \\*' dir. Ayrıca, *\Program Files\vsıp 8.0 \ MSSCCı \\* konumundaki kaynak denetimi eklentisi örneğine sahip VSIP klasöründedir.
 
 ## <a name="in-this-section"></a>Bu bölümde
 - [LPTEXTOUTPROC](../extensibility/lptextoutproc.md) IDE aracılığıyla kaynak denetimi eklentisindeki iletileri göstermek için [SccOpenProject](../extensibility/sccopenproject-function.md) tarafından kullanılan geri çağırma işlevini açıklar.

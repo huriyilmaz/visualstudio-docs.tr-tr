@@ -1,5 +1,7 @@
 ---
 title: Komut kodu numaralandırıcısı | Microsoft Docs
+description: Komut kodu numaralandırıcısı, seçeneklerin belirtilme komutunu göstermek için Sccgetcommandooptıons ve SccPopulateListto seçeneklerinde kullanılır.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 15916d26ac0120417205af0bb9117a45ec0397c6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9a831813bb975819e9152dfab4d4eefd6b440606
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80739793"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94974257"
 ---
 # <a name="command-code-enumerator"></a>Komut kodu numaralandırıcısı
 Bu Numaralandırıcı, seçeneklerin belirtilme komutunu göstermek için [Sccgetcommandooptıons](../extensibility/sccgetcommandoptions-function.md) ve [SccPopulateList](../extensibility/sccpopulatelist-function.md)seçeneklerinde kullanılır.

@@ -1,5 +1,7 @@
 ---
 title: Ayarlar kategorisi oluşturma | Microsoft Docs
+description: Bir Visual Studio ayarları kategorisi oluşturmayı ve bir ayarlar dosyasından değerleri kaydetmek ve geri yüklemek için kullanmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 03d50ca998efa034b1d4392c1fb7cecb8de8ed06
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 468b1a44fb4754f86b31992e2c6d96bf6380592d
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904019"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94974546"
 ---
 # <a name="create-a-settings-category"></a>Ayarlar kategorisi oluşturma
 
@@ -25,7 +27,7 @@ Sınıfından türeterek bir ayarlar kategorisi oluşturursunuz <xref:Microsoft.
 
 Bu yönergeyi başlatmak için önce [bir seçenek sayfası oluştur sayfasının](../extensibility/creating-an-options-page.md)ilk bölümünü tamamlamalısınız. Elde edilen seçenekler Özellik Kılavuzu, kategorideki özellikleri incelemenizi ve değiştirmenizi sağlar. Özellik kategorisini bir ayarlar dosyasına kaydettikten sonra, özellik değerlerinin nasıl depolandığını görmek için dosyayı inceleyebilirsiniz.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
  Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yüklememeyin. Visual Studio kurulumuna isteğe bağlı bir özellik olarak dahildir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-a-settings-category"></a>Ayarlar kategorisi oluşturma
@@ -51,15 +53,15 @@ Bu yönergeyi başlatmak için önce [bir seçenek sayfası oluştur sayfasını
 3. *MyToolsOptionsPackage.cs*' de, `float` `OptionFloat` `OptionPageGrid` Aşağıdaki örnekte gösterildiği gibi sınıfına adlı bir özellik ekleyin.
 
     ```csharp
-    public class OptionPageGrid : DialogPage
+    public class OptionPageGrid : DialogPage
     {
-        private int optionInt = 256;
-        private float optionFloat = 3.14F;
+        private int optionInt = 256;
+        private float optionFloat = 3.14F;
 
         [Category("My Options")]
         [DisplayName("My Integer option")]
         [Description("My integer option")]
-        public int OptionInteger
+        public int OptionInteger
         {
             get { return optionInt; }
             set { optionInt = value; }
@@ -67,7 +69,7 @@ Bu yönergeyi başlatmak için önce [bir seçenek sayfası oluştur sayfasını
         [Category("My Options")]
         [DisplayName("My Float option")]
         [Description("My float option")]
-        public float OptionFloat
+        public float OptionFloat
         {
             get { return optionFloat; }
             set { optionFloat = value; }
@@ -90,13 +92,13 @@ Bu yönergeyi başlatmak için önce [bir seçenek sayfası oluştur sayfasını
 ## <a name="examine-the-settings-file"></a>Ayarlar dosyasını inceleyin
  Bu bölümde, özellik kategorisi değerlerini bir ayarlar dosyasına dışarı aktaralırsınız. Dosyayı incelemektir ve sonra değerleri özellik kategorisine geri aktarabilirsiniz.
 
-1. **F5**tuşuna basarak projeyi hata ayıklama modunda başlatın. Bu, deneysel örneği başlatır.
+1. **F5** tuşuna basarak projeyi hata ayıklama modunda başlatın. Bu, deneysel örneği başlatır.
 
 2. **Araç**  >  **seçenekleri** iletişim kutusunu açın.
 
 3. Sol bölmedeki ağaç görünümünde, **kategorim** ' ı genişletin ve ardından **kılavuz sayfam**' ı tıklatın.
 
-4. **OptionFloat** değerini 3,1416 ve **OptionInteger** değerlerini 12 olarak değiştirin. **Tamam**’a tıklayın.
+4. **OptionFloat** değerini 3,1416 ve **OptionInteger** değerlerini 12 olarak değiştirin. **Tamam** düğmesine tıklayın.
 
 5. **Araçlar** menüsünde **Içeri ve dışarı aktarma ayarları**' na tıklayın.
 
@@ -106,15 +108,15 @@ Bu yönergeyi başlatmak için önce [bir seçenek sayfası oluştur sayfasını
 
      **Dışarı aktarılacak ayarları seçin** sayfası görüntülenir.
 
-7. Ayarlarım **' ı**tıklatın.
+7. Ayarlarım **' ı** tıklatın.
 
-     **Açıklama** **OptionInteger ve OptionFloat**olarak değişir.
+     **Açıklama** **OptionInteger ve OptionFloat** olarak değişir.
 
 8. **Ayarlarım '** ın seçili tek kategori olduğundan emin olun ve ardından **İleri**' ye tıklayın.
 
      **Ayarlar dosyanızın adı** sayfası görüntülenir.
 
-9. Yeni ayarlar dosyasını *MySettings. vssettings* olarak adlandırın ve uygun bir dizine kaydedin. **Son**'a tıklayın.
+9. Yeni ayarlar dosyasını *MySettings. vssettings* olarak adlandırın ve uygun bir dizine kaydedin. **Finish (Son)** düğmesine tıklayın.
 
      **Dışarı aktarma tamamlandı** sayfası, ayarlarınızın başarıyla verildiğini bildiriyor.
 
@@ -137,7 +139,7 @@ Bu yönergeyi başlatmak için önce [bir seçenek sayfası oluştur sayfasını
 
 11. Ayarları değiştirmeden ayarlar dosyasını kapatın.
 
-12. **Araçlar** menüsünde **Seçenekler**' i tıklatın, **kategorim**' ı genişletin, **kılavuz** Sayfam ' ı tıklatın ve ardından **OptionFloat** değerini 1,0 ve **OptionInteger** olarak 1 olarak değiştirin. **Tamam**’a tıklayın.
+12. **Araçlar** menüsünde **Seçenekler**' i tıklatın, **kategorim**' ı genişletin, **kılavuz** Sayfam ' ı tıklatın ve ardından **OptionFloat** değerini 1,0 ve **OptionInteger** olarak 1 olarak değiştirin. **Tamam** düğmesine tıklayın.
 
 13. **Araçlar** menüsünde **Içeri ve dışarı aktarma ayarları**' na tıklayın, **Seçili ortam ayarlarını içeri aktar**' ı seçin ve ardından **İleri**' ye tıklayın.
 

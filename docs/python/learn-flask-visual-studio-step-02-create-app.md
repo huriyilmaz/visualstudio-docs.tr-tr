@@ -11,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 03a0eb6808b2298e0727492978d9beb7cfaf2216
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a06c6dbacf21cb2ce00539af901c24c77aaf9ef5
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89313750"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94974091"
 ---
 # <a name="step-2-create-a-flask-app-with-views-and-page-templates"></a>2. Adım: görünümler ve sayfa şablonlarıyla bir Flask uygulaması oluşturma
 
@@ -36,7 +36,7 @@ Bu adımda şu adımları öğrenebilirsiniz:
 
 1. Proje klasörünüzde adlı bir uygulama klasörü oluşturun `HelloFlask` ( **Çözüm Gezgini** içinde projeye sağ tıklayın ve yeni klasör Ekle ' yi seçin **Add**  >  **New Folder**.)
 
-2. *Helloflask* klasöründe, örneği oluşturan ve uygulamanın görünümlerini yükleyen (bir sonraki adımda oluşturulan) aşağıdaki içeriklerle * \_ \_ init \_ \_ . Kopyala* adlı bir dosya oluşturun `Flask` :
+2. *Helloflask* klasöründe, örneği oluşturan ve uygulamanın görünümlerini yükleyen (bir sonraki adımda oluşturulan) aşağıdaki içeriklerle *\_ \_ init \_ \_ . Kopyala* adlı bir dosya oluşturun `Flask` :
 
     ```python
     from flask import Flask
@@ -45,7 +45,7 @@ Bu adımda şu adımları öğrenebilirsiniz:
     import HelloFlask.views
     ```
 
-3. *Helloflask* klasöründe, aşağıdaki içeriklerle *views.py* adlı bir dosya oluşturun. *views.py* `import HelloFlask.views` * \_ \_ İnit \_ \_ . Kopyala*içinde kullandığınız için views.py adı önemlidir; adlar eşleşmezse çalışma zamanında bir hata görürsünüz.
+3. *Helloflask* klasöründe, aşağıdaki içeriklerle *views.py* adlı bir dosya oluşturun. *views.py* `import HelloFlask.views` *\_ \_ İnit \_ \_ . Kopyala* içinde kullandığınız için views.py adı önemlidir; adlar eşleşmezse çalışma zamanında bir hata görürsünüz.
 
     ```python
     from flask import Flask
@@ -57,11 +57,11 @@ Bu adımda şu adımları öğrenebilirsiniz:
         return "Hello Flask!"
     ```
 
-    İşlevi ve yolunu yeniden `home` adlandırmanın yanı sıra, bu kod *app.py* adresinden sayfa işleme kodunu içerir ve `app` * \_ \_ init \_ \_ . Kopyala*içinde belirtilen nesneyi içeri aktarır.
+    İşlevi ve yolunu yeniden `home` adlandırmanın yanı sıra, bu kod *app.py* adresinden sayfa işleme kodunu içerir ve `app` *\_ \_ init \_ \_ . Kopyala* içinde belirtilen nesneyi içeri aktarır.
 
 4. *Helloflask* adlı *şablonlarda*, şimdilik boş kalan bir alt klasör oluşturun.
 
-5. Projenin kök klasöründe *app.py* *olarak yeniden*adlandırın ve içeriğin aşağıdaki kodla eşleştiğinden emin olun:
+5. Projenin kök klasöründe *app.py* *olarak yeniden* adlandırın ve içeriğin aşağıdaki kodla eşleştiğinden emin olun:
 
     ```python
     import os
@@ -82,9 +82,9 @@ Bu adımda şu adımları öğrenebilirsiniz:
 
     ![Kodu yeniden düzenlemeye başladıktan sonra proje yapısı](media/flask/step02-project-structure.png)
 
-7. **Debug**  >  Uygulamayı başlatmak ve bir tarayıcı açmak için, hata**ayıklamayı Başlat** (**F5**) hata ayıkla seçeneğini belirleyin veya araç çubuğunda **Web sunucusu** düğmesini kullanın. Hem/hem de/Home URL 'SI yollarını deneyin.
+7. **Debug**  >  Uygulamayı başlatmak ve bir tarayıcı açmak için, hata **ayıklamayı Başlat** (**F5**) hata ayıkla seçeneğini belirleyin veya araç çubuğunda **Web sunucusu** düğmesini kullanın. Hem/hem de/Home URL 'SI yollarını deneyin.
 
-8. Ayrıca, kodun çeşitli bölümlerinde kesme noktaları ayarlayabilir ve başlangıç sırasını izlemek için uygulamayı yeniden başlatabilirsiniz. Örneğin, *runserver.py* ve * \_ Helloflask*init_*. kopyala*' nın ilk satırlarında ve `return "Hello Flask!"` *views.py*içindeki satıra bir kesme noktası ayarlayın. Ardından uygulamayı yeniden başlatın (aşağıdaki**Hata Ayıkla**  >  **Restart**, **CTRL** + **F5**veya araç çubuğu düğmesini aşağıda gösterildiği gibi) ve **F5**kullanarak**F10**her bir kesme noktasından çalıştırın.
+8. Ayrıca, kodun çeşitli bölümlerinde kesme noktaları ayarlayabilir ve başlangıç sırasını izlemek için uygulamayı yeniden başlatabilirsiniz. Örneğin, *runserver.py* ve *\_ Helloflask* init_ *. kopyala*' nın ilk satırlarında ve `return "Hello Flask!"` *views.py* içindeki satıra bir kesme noktası ayarlayın. Ardından, uygulamayı yeniden başlatın (**Hata Ayıkla**  >  **Restart**, **CTRL** + **+ SHIFT** + **F5** veya aşağıda gösterilen araç çubuğu düğmesi) ve **F5** kullanarak **F10** her bir kesme noktasından çalıştırın.
 
     ![Visual Studio 'da hata ayıklama araç çubuğunda yeniden Başlat düğmesi](media/debugging-restart-toolbar-button.png)
 
@@ -94,11 +94,11 @@ Bu adımda şu adımları öğrenebilirsiniz:
 
 Kodunuzda değişiklik yaptığınız ve bunları başarıyla test ettiğiniz için, değişiklikleri gözden geçirmek ve kaynak denetimine uygulamak harika bir süredir. Bu öğreticideki sonraki adımlar, kaynak denetimine yeniden kaydolmasını ve bu bölüme geri dönebilmeniz için uygun zamanları hatırlatır.
 
-1. **Takım Gezgini**gittiği, Visual Studio 'nun alt kısmındaki (aşağıda daire içinde) bulunan değişiklikler düğmesini seçin.
+1. **Takım Gezgini** gittiği, Visual Studio 'nun alt kısmındaki (aşağıda daire içinde) bulunan değişiklikler düğmesini seçin.
 
     ![Visual Studio durum çubuğunda kaynak denetimi değişiklikleri düğmesi](media/flask/step02-source-control-changes-button.png)
 
-1. **Takım Gezgini**' de, "kodu yeniden Düzenle" gibi bir teslim iletisi girin ve **Tümünü Kaydet**' i seçin. Tamamlama tamamlandığında **yerel olarak oluşturulan bir Ileti kaydı görürsünüz \<hash> . Değişikliklerinizi sunucuyla paylaşmak için eşitleyin.** Değişiklikleri uzak deponuza göndermek istiyorsanız **Eşitle**' yi ve ardından **giden işlemeler**altında **Gönder** ' i seçin. Ayrıca, uzaktan göndermeden önce birden çok yerel işleme de birikmeniz gerekir.
+1. **Takım Gezgini**' de, "kodu yeniden Düzenle" gibi bir teslim iletisi girin ve **Tümünü Kaydet**' i seçin. Tamamlama tamamlandığında **yerel olarak oluşturulan bir Ileti kaydı görürsünüz \<hash> . Değişikliklerinizi sunucuyla paylaşmak için eşitleyin.** Değişiklikleri uzak deponuza göndermek istiyorsanız **Eşitle**' yi ve ardından **giden işlemeler** altında **Gönder** ' i seçin. Ayrıca, uzaktan göndermeden önce birden çok yerel işleme de birikmeniz gerekir.
 
     ![Takım Gezgini 'da yürütmeleri uzak 'a gönderme](media/flask/step02-source-control-push-to-remote.png)
 
@@ -136,7 +136,7 @@ Görünümün dönüş değeri yalnızca bir dize olduğundan, dinamik içerik k
 
 1. Tarihi/saati güncelleştirildiğini görmek için uygulamayı çalıştırın ve sayfayı birkaç kez yenileyin. İşiniz bittiğinde uygulamayı durdurun.
 
-1. Sayfa işlemesini bir şablon kullanacak şekilde dönüştürmek için, aşağıdaki içeriğe sahip *Şablonlar* klasöründe *index.html* adlı bir dosya oluşturun; burada, `{{ content }}` kodda bir değer verdiğiniz bir yer tutucu veya değiştirme belirteci ( *şablon değişkeni*olarak da bilinir).
+1. Sayfa işlemesini bir şablon kullanacak şekilde dönüştürmek için, aşağıdaki içeriğe sahip *Şablonlar* klasöründe *index.html* adlı bir dosya oluşturun; burada, `{{ content }}` kodda bir değer verdiğiniz bir yer tutucu veya değiştirme belirteci ( *şablon değişkeni* olarak da bilinir).
 
     ```html
     <html>

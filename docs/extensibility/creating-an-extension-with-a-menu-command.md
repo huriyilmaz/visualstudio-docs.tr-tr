@@ -1,5 +1,7 @@
 ---
 title: Menü komutuyla uzantı oluşturma | Microsoft Docs
+description: Not defteri 'Ni başlatan menü komutuyla bir uzantı oluşturmayı öğrenin. Bir menü komutu oluşturun ve menü komut işleyicisini değiştirin.
+ms.custom: SEO-VS-2020
 ms.date: 3/16/2019
 ms.topic: how-to
 helpviewer_keywords:
@@ -13,34 +15,34 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7c8639ede4a01157718f0ab1a1514927e620fa8d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 00afdc31e72e4b0336db19939955a0b2360a00a1
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86972341"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94974272"
 ---
 # <a name="create-an-extension-with-a-menu-command"></a>Menü komutuyla uzantı oluşturma
 
 Bu izlenecek yol, Not defteri 'Ni başlatan menü komutuyla bir uzantının nasıl oluşturulacağını gösterir.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yüklememeyin. Visual Studio kurulumuna isteğe bağlı bir özellik olarak dahildir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-a-menu-command"></a>Menü komutu oluştur
 
-1. **FirstMenuCommand**ADLı bir VSIX projesi oluşturun. "VSIX" araması yaparak VSıX proje şablonunu **Yeni proje** iletişim kutusunda bulabilirsiniz.
+1. **FirstMenuCommand** ADLı bir VSIX projesi oluşturun. "VSIX" araması yaparak VSıX proje şablonunu **Yeni proje** iletişim kutusunda bulabilirsiniz.
 
 ::: moniker range="vs-2017"
 
-2. Proje açıldığında, **FirstCommand**adlı özel bir komut öğesi şablonu ekleyin. **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve **Add**  >  **Yeni öğe**Ekle ' yi seçin. **Yeni öğe Ekle** iletişim kutusunda, **Visual C#**  >  **genişletilebilirliği** ' ne gidin ve **özel komut**' yi seçin. Pencerenin alt kısmındaki **ad** alanında, komut dosyası adını *FirstCommand.cs*olarak değiştirin.
+2. Proje açıldığında, **FirstCommand** adlı özel bir komut öğesi şablonu ekleyin. **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve **Add**  >  **Yeni öğe** Ekle ' yi seçin. **Yeni öğe Ekle** iletişim kutusunda, **Visual C#**  >  **genişletilebilirliği** ' ne gidin ve **özel komut**' yi seçin. Pencerenin alt kısmındaki **ad** alanında, komut dosyası adını *FirstCommand.cs* olarak değiştirin.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-2. Proje açıldığında, **FirstCommand**adlı özel bir komut öğesi şablonu ekleyin. **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve **Add**  >  **Yeni öğe**Ekle ' yi seçin. **Yeni öğe Ekle** iletişim kutusunda, **Visual C#**  >  **genişletilebilirliği** ' ne gidin ve **komut**' yi seçin. Pencerenin alt kısmındaki **ad** alanında, komut dosyası adını *FirstCommand.cs*olarak değiştirin.
+2. Proje açıldığında, **FirstCommand** adlı özel bir komut öğesi şablonu ekleyin. **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve **Add**  >  **Yeni öğe** Ekle ' yi seçin. **Yeni öğe Ekle** iletişim kutusunda, **Visual C#**  >  **genişletilebilirliği** ' ne gidin ve **komut**' yi seçin. Pencerenin alt kısmındaki **ad** alanında, komut dosyası adını *FirstCommand.cs* olarak değiştirin.
 
 ::: moniker-end
 
@@ -60,7 +62,7 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
 
 ::: moniker-end
 
-Şimdi deneysel örnekteki **Araçlar** menüsüne gidin. **Invoke FirstCommand** komutunu görmeniz gerekir. Bu noktada, komut **FirstMenuCommand. FirstCommand. Menuıitemcallback () Içinde FirstCommand**yazan bir ileti kutusu görüntüler. Bir sonraki bölümde bu komuttan Not defteri 'ni gerçekten nasıl başlatacağız.
+Şimdi deneysel örnekteki **Araçlar** menüsüne gidin. **Invoke FirstCommand** komutunu görmeniz gerekir. Bu noktada, komut **FirstMenuCommand. FirstCommand. Menuıitemcallback () Içinde FirstCommand** yazan bir ileti kutusu görüntüler. Bir sonraki bölümde bu komuttan Not defteri 'ni gerçekten nasıl başlatacağız.
 
 ## <a name="change-the-menu-command-handler"></a>Menü komut işleyicisini değiştirme
 
@@ -100,13 +102,13 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
     }
     ```
 
-4. Şimdi deneyin. Projede hata ayıklamayı başlattığınızda ve **Araçlar**  >  **FirstCommand komutunu**tıklattığınızda, Not defteri 'nin bir örneğini görmeniz gerekir.
+4. Şimdi deneyin. Projede hata ayıklamayı başlattığınızda ve **Araçlar**  >  **FirstCommand komutunu** tıklattığınızda, Not defteri 'nin bir örneğini görmeniz gerekir.
 
     <xref:System.Diagnostics.Process>Yalnızca Not defteri değil, çalıştırılabilir dosyayı çalıştırmak için sınıfının bir örneğini kullanabilirsiniz. `calc.exe`Örneğin, ile deneyin.
 
 ## <a name="clean-up-the-experimental-environment"></a>Deneysel ortamı temizle
 
-Birden çok uzantı geliştirmekte veya yalnızca uzantı kodunuzun farklı sürümleriyle sonuçları araştırıyorsanız, deneysel ortamınız bu şekilde çalışmayı durdurabilir. Bu durumda, sıfırlama betiğini çalıştırmanız gerekir. **Visual Studio Deneysel örneğini sıfırlayın**olarak adlandırılır ve Visual Studio SDK 'sının bir parçası olarak dağıtılır. Bu betik, deneysel ortamdan uzantılarınızın tüm başvurularını kaldırır, böylece sıfırdan başlayabilirsiniz.
+Birden çok uzantı geliştirmekte veya yalnızca uzantı kodunuzun farklı sürümleriyle sonuçları araştırıyorsanız, deneysel ortamınız bu şekilde çalışmayı durdurabilir. Bu durumda, sıfırlama betiğini çalıştırmanız gerekir. **Visual Studio Deneysel örneğini sıfırlayın** olarak adlandırılır ve Visual Studio SDK 'sının bir parçası olarak dağıtılır. Bu betik, deneysel ortamdan uzantılarınızın tüm başvurularını kaldırır, böylece sıfırdan başlayabilirsiniz.
 
 Bu betiğe iki şekilde ulaşabilirsiniz:
 
@@ -127,7 +129,7 @@ Bu uzantı için *. vsix* dosyasını *FirstMenuCommand* bin dizininde bulabilir
 
 *\<code directory>\Firstmenucommand\firstmenucommand\bin\release\firstmenucommand.exe*
 
-Uzantıyı yüklemek için, arkadaşınızın Visual Studio 'nun tüm açık örneklerini kapatması gerekir ve ardından **VSIX yükleyicisini**getiren *. vsix* dosyasına çift tıklayın. Dosyalar, *%LocalAppData%\microsoft\visualstudio \<version> \Extensions* dizinine kopyalanır.
+Uzantıyı yüklemek için, arkadaşınızın Visual Studio 'nun tüm açık örneklerini kapatması gerekir ve ardından **VSIX yükleyicisini** getiren *. vsix* dosyasına çift tıklayın. Dosyalar, *%LocalAppData%\microsoft\visualstudio \<version> \Extensions* dizinine kopyalanır.
 
 Arkadaşınız Visual Studio 'yu tekrar getirdiklerinde, **Araçlar**  >  **Uzantılar ve güncelleştirmeler**' de FirstMenuCommand uzantısını bulacağız. Uzantıyı kaldırmak veya devre dışı bırakmak için **Uzantılar ve güncelleştirmeler** 'e gidebilir.
 

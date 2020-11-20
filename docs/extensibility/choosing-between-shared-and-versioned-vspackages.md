@@ -1,5 +1,7 @@
 ---
 title: Paylaşılan ve sürümlü VSPackages arasında seçim yapma | Microsoft Docs
+description: Visual Studio 'nun birden çok sürümü ve .NET Framework, paylaşılan veya sürümlü stratejiler aracılığıyla VSPackages 'nin yan yana yüklemeleri hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 96386c2d3b7d1e822fdd1dd6632d754740f86301
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: 725dd8368bd4db9509426fa1a98ce56ef85bc3c0
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90011937"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94974401"
 ---
 # <a name="choose-between-shared-and-versioned-vspackages"></a>Paylaşılan ve sürümlenmiş VSPackages arasında seçim yapın
 Visual Studio 'nun farklı sürümleri aynı bilgisayarda bulunabilir. VSPackages, sürümlerin herhangi bir karışımını destekleyebilir [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .

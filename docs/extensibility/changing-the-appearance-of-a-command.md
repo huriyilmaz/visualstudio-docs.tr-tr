@@ -1,5 +1,7 @@
 ---
 title: Komutun görünümünü değiştirme | Microsoft Docs
+description: Komutların kullanılabilir/kullanılamaz, gizli/gösterilen veya işaretli/işaretsiz gibi bir komutun görünümünü değiştirme hakkında geri bildirim sağlamayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1c1574704f8848c16f4740189688cb1719f19623
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0f79ac7873a1746e0b14db51ba864e94f6bbfa1e
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84183723"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94974422"
 ---
 # <a name="change-the-appearance-of-a-command"></a>Komutun görünümünü değiştirme
 Bir komutun görünümünü değiştirerek, kullanıcıya geri bildirim sağlayabilirsiniz. Örneğin, kullanılamayan bir komutun farklı görünmesini isteyebilirsiniz. Komutları kullanılabilir veya kullanılamaz hale getirebilirsiniz, gizleyebilir veya gösterebilir veya menüdeki bu öğeleri denetleyebilir ya da işaretini kaldırabilirsiniz.
@@ -82,7 +84,7 @@ Bir komutun görünüşünü değiştirmek için şu eylemlerden birini gerçekl
 
 7. **Araçlar** menüsünde, **ChangeMenuText komutunu çağır** komutuna tıklayın. Bu noktada, komut adı **ChangeMenuText olarak çağırılır**, bu nedenle komut Işleyicisi **ChangeMyCommand ()** öğesini çağırmaz.
 
-8. **Araçlar** menüsünde şimdi **Yeni metin**görmeniz gerekir. **Yeni metin**' e tıklayın. Komutun şimdi gri olması gerekir.
+8. **Araçlar** menüsünde şimdi **Yeni metin** görmeniz gerekir. **Yeni metin**' e tıklayın. Komutun şimdi gri olması gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Komutlar, menüler ve araç çubukları](../extensibility/internals/commands-menus-and-toolbars.md)

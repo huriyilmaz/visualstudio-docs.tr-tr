@@ -1,5 +1,7 @@
 ---
 title: Kalıcı Iletişim kutuları oluşturma ve yönetme | Microsoft Docs
+description: Visual Studio içinde, DialogWindow kullanarak ve DialogWindow 'u kullanmadan kalıcı iletişim kutusu oluşturmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f2f4f296bb155bcde82235d962ae63c8fa4d41d7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c95f03ee71a827380539404a90cd79d50232e488
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85903775"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94973622"
 ---
 # <a name="create-and-manage-modal-dialog-boxes"></a>Kalıcı iletişim kutuları oluşturma ve yönetme
 Visual Studio içinde kalıcı iletişim kutusu oluşturduğunuzda iletişim kutusu görüntülenirken iletişim kutusunun ana penceresinin devre dışı olduğundan emin olmanız gerekir ve iletişim kutusu kapatıldıktan sonra üst pencereyi yeniden etkinleştirin. Bunu yapmazsanız, şu hatayı alabilirsiniz: *kalıcı bir iletişim kutusu etkin olduğundan Microsoft Visual Studio kapatılamadı. Etkin iletişim kutusunu kapatın ve yeniden deneyin.*
@@ -26,7 +28,7 @@ Bunu yapmanın iki yolu vardır. Önerilen yol, bir WPF iletişim kutusu varsa, 
 
 ## <a name="create-a-dialog-box-derived-from-dialogwindow"></a>DialogWindow 'dan türetilmiş bir iletişim kutusu oluştur
 
-1. **OpenDialogTest** ADLı bir VSIX projesi oluşturun ve **OpenDialog**adlı bir menü komutu ekleyin. Bunun nasıl yapılacağı hakkında daha fazla bilgi için bkz. [bir menü komutuyla uzantı oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md).
+1. **OpenDialogTest** ADLı bir VSIX projesi oluşturun ve **OpenDialog** adlı bir menü komutu ekleyin. Bunun nasıl yapılacağı hakkında daha fazla bilgi için bkz. [bir menü komutuyla uzantı oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md).
 
 2. Sınıfını kullanmak için <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow> , aşağıdaki derlemelere başvurular eklemelisiniz ( **Başvuru Ekle** iletişim kutusunun Framework sekmesinde):
 
@@ -38,7 +40,7 @@ Bunu yapmanın iki yolu vardır. Önerilen yol, bir WPF iletişim kutusu varsa, 
 
     - *System. xaml*
 
-3. *OpenDialog.cs*içinde aşağıdaki `using` ifadeyi ekleyin:
+3. *OpenDialog.cs* içinde aşağıdaki `using` ifadeyi ekleyin:
 
     ```csharp
     using Microsoft.VisualStudio.PlatformUI;
@@ -68,7 +70,7 @@ Bunu yapmanın iki yolu vardır. Önerilen yol, bir WPF iletişim kutusu varsa, 
     testDialog.ShowModal();
     ```
 
-7. Uygulamayı derleyin ve çalıştırın. Visual Studio 'nun deneysel örneği görünmelidir. Deneysel örneğin **Araçlar** menüsünde, **OpenDialog Invoke**adlı bir komut görmeniz gerekir. Bu komuta tıkladığınızda, iletişim kutusu penceresini görmeniz gerekir. Pencereyi simge durumuna küçültebilir ve ekranı kaplamasını sağlayabilmelisiniz.
+7. Uygulamayı derleyin ve çalıştırın. Visual Studio 'nun deneysel örneği görünmelidir. Deneysel örneğin **Araçlar** menüsünde, **OpenDialog Invoke** adlı bir komut görmeniz gerekir. Bu komuta tıkladığınızda, iletişim kutusu penceresini görmeniz gerekir. Pencereyi simge durumuna küçültebilir ve ekranı kaplamasını sağlayabilmelisiniz.
 
 ## <a name="create-and-manage-a-dialog-box-not-derived-from-dialogwindow"></a>DialogWindow 'dan türetilmeyen bir iletişim kutusu oluşturma ve yönetme
 
@@ -125,4 +127,4 @@ Bunu yapmanın iki yolu vardır. Önerilen yol, bir WPF iletişim kutusu varsa, 
     }
     ```
 
-7. Uygulamayı derleyin ve çalıştırın. **Araçlar** menüsünde, **OpenDialog Invoke**adlı bir komut görmeniz gerekir. Bu komuta tıkladığınızda, iletişim kutusu penceresini görmeniz gerekir.
+7. Uygulamayı derleyin ve çalıştırın. **Araçlar** menüsünde, **OpenDialog Invoke** adlı bir komut görmeniz gerekir. Bu komuta tıkladığınızda, iletişim kutusu penceresini görmeniz gerekir.

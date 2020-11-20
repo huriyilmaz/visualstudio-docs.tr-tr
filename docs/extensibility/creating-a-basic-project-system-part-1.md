@@ -1,5 +1,7 @@
 ---
 title: Temel proje sistemi oluşturma, Bölüm 1 | Microsoft Docs
+description: Uzantı. myproj adlı bir proje türü oluşturmayı öğrenin. Visual Studio 'da, projeler kaynak kodu dosyalarını ve diğer varlıkları düzenlemek için kullanılan kapsayıcılardır.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,15 +14,15 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e95f760712f46632120540091b9f8f408aad9da4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c202aa9e76f568db9394625485282345ea3222c1
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85903422"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94974537"
 ---
 # <a name="create-a-basic-project-system-part-1"></a>Temel proje sistemi oluşturma, Bölüm 1
-Visual Studio 'da, projeler, geliştiricilerin kaynak kodu dosyalarını ve diğer varlıkları düzenlemek için kullandığı kapsayıcılardır. Projeler **Çözüm Gezgini**çözümlerin alt öğeleri olarak görünür. Projeler, kaynak kodu düzenlemenize, oluşturmanıza, hata ayıklamanıza ve dağıtmanıza, Web Hizmetleri, veritabanları ve diğer kaynaklara başvurular oluşturmanıza imkan tanır.
+Visual Studio 'da, projeler, geliştiricilerin kaynak kodu dosyalarını ve diğer varlıkları düzenlemek için kullandığı kapsayıcılardır. Projeler **Çözüm Gezgini** çözümlerin alt öğeleri olarak görünür. Projeler, kaynak kodu düzenlemenize, oluşturmanıza, hata ayıklamanıza ve dağıtmanıza, Web Hizmetleri, veritabanları ve diğer kaynaklara başvurular oluşturmanıza imkan tanır.
 
  Projeler proje dosyalarında tanımlanır, örneğin bir Visual C# projesi için *. csproj* dosyası. Kendi proje dosya adı uzantınıza sahip olan kendi proje türünü de oluşturabilirsiniz. Proje türleri hakkında daha fazla bilgi için bkz. [Proje türleri](../extensibility/internals/project-types.md).
 
@@ -55,22 +57,22 @@ Visual Studio 'da, projeler, geliştiricilerin kaynak kodu dosyalarını ve diğ
 
 - Temel şablon parametre değişimini uygulayın.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
  Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yüklememeyin. Visual Studio kurulumuna isteğe bağlı bir özellik olarak dahildir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
 
  Ayrıca, [Projeler Için yönetilen paket çerçevesi](https://github.com/tunnelvisionlabs/MPFProj10)için kaynak kodunu da indirmeniz gerekir. Dosyayı oluşturacağınız çözümün erişebileceği bir konuma ayıklayın.
 
 ## <a name="create-a-basic-project-type"></a>Temel proje türü oluşturma
- **SimpleProject**ADLı BIR C# VSIX projesi oluşturun. (**Dosya**  >  **Yeni**  >  **Projeyi** ve sonra **Visual C#**  >  **genişletilebilirlik**  >  **VSIX projesi**). Bir Visual Studio paketi proje öğesi şablonu ekleyin ( **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve **Add**  >  **Yeni öğe**Ekle ' yi seçin ve ardından **genişletilebilirlik**  >  **Visual Studio paketi**' ne gidin). Dosyayı *Simpleprojectpackage*olarak adlandırın.
+ **SimpleProject** ADLı BIR C# VSIX projesi oluşturun. (**Dosya**  >  **Yeni**  >  **Projeyi** ve sonra **Visual C#**  >  **genişletilebilirlik**  >  **VSIX projesi**). Bir Visual Studio paketi proje öğesi şablonu ekleyin ( **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve **Add**  >  **Yeni öğe** Ekle ' yi seçin ve ardından **genişletilebilirlik**  >  **Visual Studio paketi**' ne gidin). Dosyayı *Simpleprojectpackage* olarak adlandırın.
 
 ## <a name="creating-a-basic-project-template"></a>Temel proje şablonu oluşturma
  Şimdi, yeni *. myproj* proje türünü uygulamak için bu temel VSPackage 'ı değiştirebilirsiniz. *. Myproj* proje türünü temel alan bir proje oluşturmak Için, Visual Studio 'nun hangi dosyaları, kaynakları ve başvuruları yeni projeye ekleneceğini bilmeleri gerekir. Bu bilgileri sağlamak için proje dosyalarını bir proje şablonu klasörüne koyun. Bir Kullanıcı bir proje oluşturmak için *. myproj* projesini kullandığında, dosyalar yeni projeye kopyalanır.
 
 ### <a name="to-create-a-basic-project-template"></a>Temel proje şablonu oluşturmak için
 
-1. Projeye bir tane olmak üzere üç klasör ekleyin: *Templates\projeler* ( **Çözüm Gezgini**, **SimpleProject** proje düğümüne sağ tıklayın, **Ekle**' nin üzerine gelin ve **Yeni klasör**' e tıklayın. Klasör *şablonlarını*adlandırın. *Şablonlar* klasöründe, *Projeler*adlı bir klasör ekleyin. *Projeler* klasöründe, *SimpleProject*adlı bir klasör ekleyin.)
+1. Projeye bir tane olmak üzere üç klasör ekleyin: *Templates\projeler* ( **Çözüm Gezgini**, **SimpleProject** proje düğümüne sağ tıklayın, **Ekle**' nin üzerine gelin ve **Yeni klasör**' e tıklayın. Klasör *şablonlarını* adlandırın. *Şablonlar* klasöründe, *Projeler* adlı bir klasör ekleyin. *Projeler* klasöründe, *SimpleProject* adlı bir klasör ekleyin.)
 
-2. *Templates\projeler\simpleproject* klasöründe, *SimpleProject. ico*adlı simge olarak kullanılacak bir bit eşlem resim dosyası ekleyin. **Ekle**' ye tıkladığınızda, simge Düzenleyicisi açılır.
+2. *Templates\projeler\simpleproject* klasöründe, *SimpleProject. ico* adlı simge olarak kullanılacak bir bit eşlem resim dosyası ekleyin. **Ekle**' ye tıkladığınızda, simge Düzenleyicisi açılır.
 
 3. Simgeyi farklı yapın. Bu simge, izlenecek yolun ilerleyen kısımlarında yer alacak **Yeni proje** iletişim kutusunda görünür.
 
@@ -78,7 +80,7 @@ Visual Studio 'da, projeler, geliştiricilerin kaynak kodu dosyalarını ve diğ
 
 4. Simgeyi kaydedin ve simge düzenleyicisini kapatın.
 
-5. *Templates\projeler\simpleproject* klasöründe, *program.cs*adlı bir **sınıf** öğesi ekleyin.
+5. *Templates\projeler\simpleproject* klasöründe, *program.cs* adlı bir **sınıf** öğesi ekleyin.
 
 6. Mevcut kodu aşağıdaki satırlarla değiştirin.
 
@@ -101,13 +103,13 @@ Visual Studio 'da, projeler, geliştiricilerin kaynak kodu dosyalarını ve diğ
    ```
 
    > [!IMPORTANT]
-   > Bu, *program.cs* kodunun son formu değildir; değiştirme parametreleri sonraki bir adımda ele alınacaktır. Derleme hataları görebilirsiniz, ancak dosyanın **Builkaction** **içeriği**olduğu sürece projeyi her zamanki gibi derleyip çalıştırabilirsiniz.
+   > Bu, *program.cs* kodunun son formu değildir; değiştirme parametreleri sonraki bir adımda ele alınacaktır. Derleme hataları görebilirsiniz, ancak dosyanın **Builkaction** **içeriği** olduğu sürece projeyi her zamanki gibi derleyip çalıştırabilirsiniz.
 
 7. Dosyayı kaydedin.
 
 8. *AssemblyInfo.cs* dosyasını *Özellikler* klasöründen, *projelerprojem proje* klasörüne kopyalayın.
 
-9. *Projeler\simpleproject* klasöründe, *SimpleProject. myproj*adlı bir XML dosyası ekleyin.
+9. *Projeler\simpleproject* klasöründe, *SimpleProject. myproj* adlı bir XML dosyası ekleyin.
 
    > [!NOTE]
    > Bu türden tüm projeler için dosya adı uzantısı *. myproj*' dir. Bunu değiştirmek istiyorsanız, izlenecek yolda bahsedilen her yerde değiştirmeniz gerekir.
@@ -154,9 +156,9 @@ Visual Studio 'da, projeler, geliştiricilerin kaynak kodu dosyalarını ve diğ
 
 11. Dosyayı kaydedin.
 
-12. **Özellikler** penceresinde, *AssemblyInfo.cs*, *program.cs*, *SimpleProject. ico*ve *SimpleProject. myproj* öğesinin **Build eylemini** **Content**olarak ayarlayın ve **VSIX özellikleri içindeki Include** değerlerini **true**olarak ayarlayın.
+12. **Özellikler** penceresinde, *AssemblyInfo.cs*, *program.cs*, *SimpleProject. ico* ve *SimpleProject. myproj* öğesinin **Build eylemini** **Content** olarak ayarlayın ve **VSIX özellikleri içindeki Include** değerlerini **true** olarak ayarlayın.
 
-    Bu proje şablonu, hem hata ayıklama yapılandırması hem de sürüm yapılandırması olan temel bir Visual C# projesi tanımlar. Proje iki kaynak dosyası, *AssemblyInfo.cs* ve *program.cs*ve çeşitli derleme başvuruları içerir. Şablondan bir proje oluşturulduğunda, Projectguıd değeri otomatik olarak yeni bir GUID ile değiştirilmiştir.
+    Bu proje şablonu, hem hata ayıklama yapılandırması hem de sürüm yapılandırması olan temel bir Visual C# projesi tanımlar. Proje iki kaynak dosyası, *AssemblyInfo.cs* ve *program.cs* ve çeşitli derleme başvuruları içerir. Şablondan bir proje oluşturulduğunda, Projectguıd değeri otomatik olarak yeni bir GUID ile değiştirilmiştir.
 
     **Çözüm Gezgini**, genişletilmiş **Şablonlar** klasörü aşağıdaki gibi görünmelidir:
 
@@ -188,7 +190,7 @@ Templates
        }
    ```
 
-2. *SimpleProjectFactory.cs*adlı üst *SimpleProject* klasörüne bir sınıf ekleyin.
+2. *SimpleProjectFactory.cs* adlı üst *SimpleProject* klasörüne bir sınıf ekleyin.
 
 3. Aşağıdaki using yönergelerini ekleyin:
 
@@ -233,7 +235,7 @@ Templates
 
 1. Visual Studio 'nun deneysel örneğinde hata ayıklamaya başlamak için **F5** 'e basın.
 
-2. Deneysel örnekte, yeni oluşturulan proje türünden yeni bir proje oluşturun. **Yeni proje** iletişim kutusunda, **yüklü şablonlar**altında **SimpleProject** ' i görmeniz gerekir.
+2. Deneysel örnekte, yeni oluşturulan proje türünden yeni bir proje oluşturun. **Yeni proje** iletişim kutusunda, **yüklü şablonlar** altında **SimpleProject** ' i görmeniz gerekir.
 
    Artık kayıtlı bir proje fabrikasına sahipsiniz. Ancak, henüz bir proje oluşturamaz. Proje paketi ve proje fabrikası bir proje oluşturmak ve başlatmak için birlikte çalışır.
 
@@ -261,7 +263,7 @@ Templates
 
     4. Aşağıdaki derlemelere başvurular ekleyin:
 
-        - `Microsoft.VisualStudio.Designer.Interfaces`( * \<VSSDK install> \VisualStudioIntegration\Common\Assemblies\v2.0*)
+        - `Microsoft.VisualStudio.Designer.Interfaces`( *\<VSSDK install> \VisualStudioIntegration\Common\Assemblies\v2.0*)
 
         - `WindowsBase`
 
@@ -352,9 +354,9 @@ Templates
 ## <a name="extend-the-projectnode-class"></a>ProjectNode sınıfını genişletme
  Artık `SimpleProjectNode` sınıfından türeten sınıfını uygulayabilirsiniz `ProjectNode` . `ProjectNode`Temel sınıf, proje oluşturma için aşağıdaki görevleri işler:
 
-- *SimpleProject. myproj*proje şablon dosyasını yeni proje klasörüne kopyalar. Kopya, **Yeni proje** iletişim kutusuna girilen ada göre yeniden adlandırılır. `ProjectGuid`Özellik değeri yeni BIR GUID ile değiştirilmiştir.
+- *SimpleProject. myproj* proje şablon dosyasını yeni proje klasörüne kopyalar. Kopya, **Yeni proje** iletişim kutusuna girilen ada göre yeniden adlandırılır. `ProjectGuid`Özellik değeri yeni BIR GUID ile değiştirilmiştir.
 
-- , *SimpleProject. myproj*proje şablon dosyasının MSBuild öğelerine erişir ve `Compile` öğeleri arar. Her `Compile` hedef dosya için dosyayı yeni proje klasörüne kopyalar.
+- , *SimpleProject. myproj* proje şablon dosyasının MSBuild öğelerine erişir ve `Compile` öğeleri arar. Her `Compile` hedef dosya için dosyayı yeni proje klasörüne kopyalar.
 
   Türetilmiş `SimpleProjectNode` sınıf şu görevleri gerçekleştirir:
 
@@ -452,13 +454,13 @@ Templates
 
 ### <a name="to-add-a-custom-project-node-icon"></a>Özel bir proje düğümü simgesi eklemek için
 
-1. **Kaynaklar** klasöründe *SimpleProjectNode.bmp*adlı bir bit eşlem dosyası ekleyin.
+1. **Kaynaklar** klasöründe *SimpleProjectNode.bmp* adlı bir bit eşlem dosyası ekleyin.
 
 2. **Özellikler** penceresinde bit eşlemi 16 ile 16 piksel azaltın. Bit eşlemi farklı hale getirin.
 
     ![Basit proje Comm](../extensibility/media/simpleprojprojectcomm.png "SimpleProjProjectComm")
 
-3. **Özellikler** penceresinde, bit eşlemin **derleme eylemini** **katıştırılmış kaynak**olarak değiştirin.
+3. **Özellikler** penceresinde, bit eşlemin **derleme eylemini** **katıştırılmış kaynak** olarak değiştirin.
 
 4. *SimpleProjectNode.cs*' de, aşağıdaki `using` yönergeleri ekleyin:
 
@@ -520,7 +522,7 @@ Templates
 
 - *SimpleProject.Resources.SimpleProjectNode.bmp*
 
-  Örnek oluşturma sırasında, `ProjectNode` temel sınıf, *Resources\imagelis.bmp*, yaygın olarak kullanılan 16 x 16 bit eşlem olan *Resources.imagelis.bmp*yükler. Bu bit eşlem listesi olarak kullanılabilir hale `SimpleProjectNode` getirilir `ImageHandler.ImageList` . `SimpleProjectNode` proje düğümü bit eşlemini listeye ekler. Görüntü listesindeki proje düğümü bit eşleminin boşluğu daha sonra public özelliğinin değeri olarak kullanılmak üzere önbelleğe alınır `ImageIndex` . Visual Studio, proje düğümü simgesi olarak hangi bit eşlemin gösterileceğini öğrenmek için bu özelliği kullanır.
+  Örnek oluşturma sırasında, `ProjectNode` temel sınıf, *Resources\imagelis.bmp*, yaygın olarak kullanılan 16 x 16 bit eşlem olan *Resources.imagelis.bmp* yükler. Bu bit eşlem listesi olarak kullanılabilir hale `SimpleProjectNode` getirilir `ImageHandler.ImageList` . `SimpleProjectNode` proje düğümü bit eşlemini listeye ekler. Görüntü listesindeki proje düğümü bit eşleminin boşluğu daha sonra public özelliğinin değeri olarak kullanılmak üzere önbelleğe alınır `ImageIndex` . Visual Studio, proje düğümü simgesi olarak hangi bit eşlemin gösterileceğini öğrenmek için bu özelliği kullanır.
 
 ## <a name="test-the-custom-project-node-icon"></a>Özel proje düğümü simgesini test etme
  Özel proje düğümünüz simgenizi içeren bir proje hiyerarşisi oluşturup oluşturmadığını görmek için proje fabrikasını test edin.

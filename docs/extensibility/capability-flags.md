@@ -1,5 +1,7 @@
 ---
 title: Yetenek bayrakları | Microsoft Docs
+description: Kaynak denetim eklentisinin yeteneklerini ve genişletilmiş özellikleri belirten SCC_EXCAP_xxx bayraklarını belirten SCC_CAP_xxx bayrakları hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,15 +12,15 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9660cbe5a18e82974858fa4d923a38fc73e773f2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b80672b00bec95c740824ef7e29f1faba0e63cf4
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80739875"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94974443"
 ---
 # <a name="capability-flags"></a>Yetenek bayrakları
-SCC_CAP_*XXX* bayrakları, kaynak denetimi eklentisinin yeteneklerini göstermek için kullanılan bit bayraklardır. SCC_EXCAP_*XXX* bayrakları, genişletilmiş özellikleri belirten ve tamsayı değerlerine çözümleyecek artımlı bayraklardır.
+SCC_CAP_ *XXX* bayrakları, kaynak denetimi eklentisinin yeteneklerini göstermek için kullanılan bit bayraklardır. SCC_EXCAP_ *XXX* bayrakları, genişletilmiş özellikleri belirten ve tamsayı değerlerine çözümleyecek artımlı bayraklardır.
 
 |Yetenek kodu|Değer|Açıklama|
 |---------------------|-----------|-----------------|

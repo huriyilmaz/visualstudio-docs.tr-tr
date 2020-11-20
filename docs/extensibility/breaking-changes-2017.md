@@ -1,5 +1,7 @@
 ---
 title: Visual Studio 2017 genişletilebilirlikteki son değişiklikler
+description: Visual Studio 2017 ' de genişletilebilirlik modelinde yapılan son değişikliklerin teknik ayrıntıları ve bunları ele almak için yapabilecekleriniz hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 11/09/2016
 ms.topic: conceptual
@@ -9,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d872003b319773401ef4da72c1fac8dc177ecbdb
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: 3121189b1d73543d2a01bbf0b149c6a98eab6909
+ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90011794"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94973749"
 ---
 # <a name="changes-in-visual-studio-2017-extensibility"></a>Visual Studio 2017 genişletilebilirlikteki değişiklikler
 
@@ -63,14 +65,14 @@ Visual Studio temel derlemelerinin çoğu artık GAC 'ye yüklenmez. Visual Stud
 
 * Yalnızca GAC 'ye yüklenmiş olan derlemeler:
 
-  Bu derlemeler artık <em>[INSTALLDİR] \Common7\IDE \* , * [INSTALLDİR] \Common7\IDE\PublicAssemblies</em> veya *[INSTALLDİR] \Common7\IDE\PrivateAssemblies*altına yüklendi. Bu klasörler, Visual Studio işleminin yoklama yollarının bir parçasıdır.
+  Bu derlemeler artık <em>[INSTALLDİR] \Common7\IDE \* , * [INSTALLDİR] \Common7\IDE\PublicAssemblies</em> veya *[INSTALLDİR] \Common7\IDE\PrivateAssemblies* altına yüklendi. Bu klasörler, Visual Studio işleminin yoklama yollarının bir parçasıdır.
 
 * Yoklama dışı bir yola ve GAC 'ye yüklenmiş derlemeler:
 
   * GAC 'deki kopya kurulumdan kaldırılmıştır.
   * Derleme için bir kod tabanı girişi belirtmek üzere bir *. pkgdef* dosyası eklenmiştir.
 
-    Örneğin:
+    Örnek:
 
     ```
     [$RootKey$\RuntimeConfiguration\dependentAssembly\codeBase\{UniqueGUID}]
@@ -98,7 +100,7 @@ Visual Studio temel derlemelerinin çoğu artık GAC 'ye yüklenmez. Visual Stud
 ### <a name="global-com-registration"></a>Genel COM kaydı
 
 * Daha önce, Visual Studio yerel COM kaydını desteklemek için HKEY_CLASSES_ROOT ve HKEY_LOCAL_MACHINE kovanına birçok kayıt defteri anahtarı yükledi. Bu etkiyi ortadan kaldırmak için, Visual Studio artık [com bileşenleri Için kayıtsız etkinleştirme](/previous-versions/dotnet/articles/ms973913(v=msdn.10))kullanır.
-* Sonuç olarak,% ProgramFiles (x86)% \ Common Files\Microsoft Shared\MSEnv altındaki TLB/OLB/DLL dosyaları artık Visual Studio tarafından varsayılan olarak yüklenmez. Bu dosyalar artık, Visual Studio konak işlemi tarafından kullanılan ilgili kayıtsız COM bildirimleri ile [ıNSTALLDIR] altına yüklenir.
+* Sonuç olarak,% ProgramFiles (x86)% \ Common Files\Microsoft Shared\MSEnv altındaki TLB/OLB/DLL dosyaları artık Visual Studio tarafından varsayılan olarak yüklenmez. Bu dosyalar artık, Visual Studio konak işlemi tarafından kullanılan karşılık gelen Registration-Free COM bildirimleri ile [ıNSTALLDIR] altına yüklenir.
 * Sonuç olarak, Visual Studio COM arabirimleri için genel COM kaydına dayanan dış kod artık bu kayıtları bulamaz. Visual Studio işleminin içinde çalışan kod, bir fark görmez.
 
 ### <a name="visual-studio-registry"></a>Visual Studio kayıt defteri
@@ -109,13 +111,13 @@ Visual Studio temel derlemelerinin çoğu artık GAC 'ye yüklenmez. Visual Stud
   * **Hkcu\software\microsoft\visualstudio \{ Sürüm}**: Visual Studio tarafından kullanıcıya özgü ayarları depolamak için oluşturulan kayıt defteri anahtarları.
   * **Hkcu\software\microsoft\visualstudio \{ Sürüm} _Config**: Yukarıdaki Visual STUDIO HKLM anahtarının bir kopyası, ve *. pkgdef* dosyalarından birleştirilmiş kayıt defteri anahtarları uzantılara göre.
 
-* Kayıt defterindeki etkiyi azaltmak için, Visual Studio artık, kayıt defteri anahtarlarını *[VSAPPDATA] \privateregistry.bin*altında özel bir ikili dosyada depolamak üzere [Regloadappkey](/windows/desktop/api/winreg/nf-winreg-regloadappkeya) işlevini kullanır. Yalnızca çok az sayıda Visual Studio 'Ya özgü anahtar sistem kayıt defterinde kalır.
+* Kayıt defterindeki etkiyi azaltmak için, Visual Studio artık, kayıt defteri anahtarlarını *[VSAPPDATA] \privateregistry.bin* altında özel bir ikili dosyada depolamak üzere [Regloadappkey](/windows/desktop/api/winreg/nf-winreg-regloadappkeya) işlevini kullanır. Yalnızca çok az sayıda Visual Studio 'Ya özgü anahtar sistem kayıt defterinde kalır.
 * Visual Studio işleminin içinde çalışan mevcut kod etkilenmez. Visual Studio, HKCU Visual Studio 'ya özgü anahtar altındaki tüm kayıt defteri işlemlerini özel kayıt defterine yönlendirir. Diğer kayıt defteri konumlarına okuma ve yazma, sistem kayıt defterini kullanmaya devam edecektir.
 * Dış kodun, Visual Studio kayıt defteri girdileri için bu dosyadan yüklenmesi ve okunması gerekir.
 
 ### <a name="react-to-this-breaking-change"></a>Bu son değişikliğe tepki verme
 
-* Dış kod, COM bileşenleri için de kayıt-ücretsiz etkinleştirmeyi kullanacak şekilde dönüştürülmelidir.
+* Dış kod, COM bileşenleri için Registration-Free etkinleştirme kullanacak şekilde dönüştürülmelidir.
 * Dış bileşenler, [buradaki Kılavuzu Izleyerek](https://devblogs.microsoft.com/setup/changes-to-visual-studio-15-setup)Visual Studio konumunu bulabilir.
 * Dış bileşenlerin, doğrudan Visual Studio kayıt defteri anahtarlarına okumak/yazmak yerine [dış ayarlar yöneticisini](/dotnet/api/microsoft.visualstudio.settings.externalsettingsmanager) kullanmasını öneririz.
 * Uzantınızın kullandığı bileşenlerin kayıt için başka bir teknik uygulanıp uygulanmadığını denetleyin. Örneğin, hata ayıklayıcı uzantıları New [msvsmon JSON-FILE com kaydından](migrate-debugger-COM-registration.md)faydalanabilir.
