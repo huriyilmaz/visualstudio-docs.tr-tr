@@ -1,5 +1,6 @@
 ---
 title: Veri Kümesi Tasarımcısı bir veri kümesi oluşturma
+description: Bu izlenecek yolda, Veri Kümesi Tasarımcısı kullanarak bir veri kümesi oluşturun. Yeni bir proje oluşturma ve buna yeni bir veri kümesi öğesi ekleme sürecini anlayın.
 ms.custom: SEO-VS-2020
 ms.date: 09/11/2017
 ms.topic: conceptual
@@ -14,22 +15,22 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 20cd8bdc4f7d72cd0ed3920f75a4955ee57d2a68
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 1f124a459d55b945cd8dbb480d7e7c22b5de4f3e
+ms.sourcegitcommit: 72a49c10a872ab45ec6c6d7c4ac7521be84526ff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036788"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94998037"
 ---
 # <a name="walkthrough-create-a-dataset-with-the-dataset-designer"></a>İzlenecek yol: Veri Kümesi Tasarımcısı bir veri kümesi oluşturma
 
-Bu izlenecek yolda, **veri kümesi Tasarımcısı**kullanarak bir veri kümesi oluşturursunuz. Makale, yeni bir proje oluşturma ve buna yeni bir **veri kümesi** öğesi ekleme sürecinde size kılavuzluk eden bir işlemdir. Bir sihirbaz kullanmadan bir veritabanındaki tabloları temel alan tablolar oluşturmayı öğreneceksiniz.
+Bu izlenecek yolda, **veri kümesi Tasarımcısı** kullanarak bir veri kümesi oluşturursunuz. Makale, yeni bir proje oluşturma ve buna yeni bir **veri kümesi** öğesi ekleme sürecinde size kılavuzluk eden bir işlemdir. Bir sihirbaz kullanmadan bir veritabanındaki tabloları temel alan tablolar oluşturmayı öğreneceksiniz.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını kullanır.
 
-1. SQL Server Express LocalDB yoksa, [SQL Server Express indirme sayfasından](https://www.microsoft.com/sql-server/sql-server-editions-express)veya **Visual Studio yükleyicisi**aracılığıyla yükleyin. Visual Studio Yükleyicisi, SQL Server Express LocalDB, **veri depolama ve işleme** iş yükünün parçası olarak veya ayrı bir bileşen olarak yüklenebilir.
+1. SQL Server Express LocalDB yoksa, [SQL Server Express indirme sayfasından](https://www.microsoft.com/sql-server/sql-server-editions-express)veya **Visual Studio yükleyicisi** aracılığıyla yükleyin. Visual Studio Yükleyicisi, SQL Server Express LocalDB, **veri depolama ve işleme** iş yükünün parçası olarak veya ayrı bir bileşen olarak yüklenebilir.
 
 2. Aşağıdaki adımları izleyerek Northwind örnek veritabanını yüklersiniz:
 
@@ -51,7 +52,7 @@ Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını 
 
 3. Orta bölmede **Windows Forms uygulama** proje türünü seçin.
 
-4. Projeyi **Datasetdesignerwalkthrough**olarak adlandırın ve ardından **Tamam**' ı seçin.
+4. Projeyi **Datasetdesignerwalkthrough** olarak adlandırın ve ardından **Tamam**' ı seçin.
 
      Visual Studio, projeyi **Çözüm Gezgini** ekler ve tasarımcıda yeni bir form görüntüler.
 
@@ -63,9 +64,9 @@ Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını 
 
 2. Sol bölmedeki **veriler**' i seçin ve ardından orta bölmedeki veri **kümesi** ' ni seçin.
 
-3. Veri kümesini **NorthwindDataSet**olarak adlandırın ve ardından **Ekle**' yi seçin.
+3. Veri kümesini **NorthwindDataSet** olarak adlandırın ve ardından **Ekle**' yi seçin.
 
-     Visual Studio, projeye **NorthwindDataSet. xsd** adlı bir dosya ekler ve **veri kümesi Tasarımcısı**açar.
+     Visual Studio, projeye **NorthwindDataSet. xsd** adlı bir dosya ekler ve **veri kümesi Tasarımcısı** açar.
 
 ## <a name="create-a-data-connection-in-server-explorer"></a>Sunucu Gezgini bir veri bağlantısı oluşturma
 
@@ -83,21 +84,21 @@ Bu bölümde, veri kümesine nasıl tablo ekleneceği açıklanmaktadır.
 
 1. **Sunucu Gezgini**' de oluşturduğunuz veri bağlantısını genişletin ve **Tablolar** düğümünü genişletin.
 
-2. **Müşteriler** tablosunu **Sunucu Gezgini** **veri kümesi Tasarımcısı**üzerine sürükleyin.
+2. **Müşteriler** tablosunu **Sunucu Gezgini** **veri kümesi Tasarımcısı** üzerine sürükleyin.
 
      Bir **Customers** veri tablosu ve **CustomersTableAdapter** , DataSet 'e eklenir.
 
 ### <a name="to-create-the-orders-table"></a>Siparişler tablosu oluşturmak için
 
-- **Orders** tablosunu **Sunucu Gezgini** **veri kümesi Tasarımcısı**üzerine sürükleyin.
+- **Orders** tablosunu **Sunucu Gezgini** **veri kümesi Tasarımcısı** üzerine sürükleyin.
 
-     **Siparişler** veri tablosu, **OrdersTableAdapter**ve **Customers** ve **Orders** tabloları arasındaki veri ilişkisi DataSet 'e eklenir.
+     **Siparişler** veri tablosu, **OrdersTableAdapter** ve **Customers** ve **Orders** tabloları arasındaki veri ilişkisi DataSet 'e eklenir.
 
 ### <a name="to-create-the-orderdetails-table"></a>OrderDetails tablosu oluşturmak için
 
-- **Order details** tablosunu **Sunucu Gezgini** **veri kümesi Tasarımcısı**üzerine sürükleyin.
+- **Order details** tablosunu **Sunucu Gezgini** **veri kümesi Tasarımcısı** üzerine sürükleyin.
 
-     **Sipariş ayrıntıları** veri tablosu, **OrderDetails TableAdapter**ve **Orders** ile **OrderDetails** tabloları arasındaki bir veri ilişkisi DataSet 'e eklenir.
+     **Sipariş ayrıntıları** veri tablosu, **OrderDetails TableAdapter** ve **Orders** ile **OrderDetails** tabloları arasındaki bir veri ilişkisi DataSet 'e eklenir.
 
 ## <a name="next-steps"></a>Sonraki Adımlar
 

@@ -1,5 +1,7 @@
 ---
 title: Hizmet Başvurularında Sorun Giderme
+description: Visual Studio 'da Windows Communication Foundation (WCF) veya WCF Veri Hizmetleri başvurularıyla çalışırken oluşabilecek yaygın sorunları gözden geçirin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: troubleshooting
 f1_keywords:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: d52562382f10615c7da1dfab22d4c18323b725b3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7d1a1f0efc21f1f612d85725358555fcb0cb8245
+ms.sourcegitcommit: 72a49c10a872ab45ec6c6d7c4ac7521be84526ff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75586126"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94998076"
 ---
 # <a name="troubleshoot-service-references"></a>Hizmet başvurularında sorun giderme
 
@@ -82,7 +84,7 @@ Bu hatayı onarmak için, hizmet projesini el ile yeniden oluşturmanız gerekir
 
 4. WCF hizmeti projesini yükleyin.
 
-5. **Configuration Manager** iletişim kutusunda, **etkin çözüm yapılandırmasını** **Hata Ayıkla**olarak ayarlayın. Daha fazla bilgi için bkz. [nasıl yapılır: yapılandırma oluşturma ve düzenleme](../ide/how-to-create-and-edit-configurations.md).
+5. **Configuration Manager** iletişim kutusunda, **etkin çözüm yapılandırmasını** **Hata Ayıkla** olarak ayarlayın. Daha fazla bilgi için bkz. [nasıl yapılır: yapılandırma oluşturma ve düzenleme](../ide/how-to-create-and-edit-configurations.md).
 
 6. **Çözüm Gezgini**, WCF hizmeti projesini seçin.
 

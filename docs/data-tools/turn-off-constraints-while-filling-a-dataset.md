@@ -1,5 +1,7 @@
 ---
 title: Bir veri kümesini doldururken kısıtlamaları kapatma
+description: Bir veri kümesini doldururken kısıtlamaların nasıl kapatılacağı hakkında bilgi. Güncelleştirme kısıtlamalarını programlama yoluyla veya Veri Kümesi Tasarımcısı kullanarak askıya alın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -20,12 +22,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 7bdb225a5b310f6f602619b2afcee610c3e9258b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8a4d1e17d2f6a0159a9c0187d5e1a3d16216d0ba
+ms.sourcegitcommit: 72a49c10a872ab45ec6c6d7c4ac7521be84526ff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85281272"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94998323"
 ---
 # <a name="turn-off-constraints-while-filling-a-dataset"></a>Bir veri kümesini doldururken kısıtlamaları kapatma
 
@@ -45,7 +47,7 @@ Geçici kısıtlama askıya almaya izin veren bir mekanizma yoksa, alt tabloya b
 
 ## <a name="to-suspend-update-constraints-using-the-dataset-designer"></a>Veri Kümesi Tasarımcısı kullanarak güncelleştirme kısıtlamalarını askıya almak için
 
-1. Veri kümenizi **veri kümesi Tasarımcısı**açın. Daha fazla bilgi için bkz. [Izlenecek yol: veri kümesi Tasarımcısı veri kümesi oluşturma](walkthrough-creating-a-dataset-with-the-dataset-designer.md).
+1. Veri kümenizi **veri kümesi Tasarımcısı** açın. Daha fazla bilgi için bkz. [Izlenecek yol: veri kümesi Tasarımcısı veri kümesi oluşturma](walkthrough-creating-a-dataset-with-the-dataset-designer.md).
 
 2. **Özellikler** penceresinde, <xref:System.Data.DataSet.EnforceConstraints%2A> özelliğini olarak ayarlayın `false` .
 

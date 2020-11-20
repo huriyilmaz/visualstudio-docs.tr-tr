@@ -1,5 +1,6 @@
 ---
 title: Tek tablo devralma ile sınıfları LINQ to SQL
+description: Bu kılavuzda, Visual Studio Nesne İlişkisel Tasarımcısı (O/R Designer) içinde tek Tablo Devralma kullanarak LINQ to SQL sınıflar oluşturun.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: b0b5319cb36179e51b34eacce56282b97ad4a4bb
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: b83fd664cb2969c12d69e1e818f61190deed3804
+ms.sourcegitcommit: 72a49c10a872ab45ec6c6d7c4ac7521be84526ff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036762"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94998245"
 ---
 # <a name="walkthrough-create-linq-to-sql-classes-by-using-single-table-inheritance-or-designer"></a>İzlenecek yol: tek tablo devralma (O/R Designer) kullanarak LINQ to SQL sınıfları oluşturma
 [Visual Studio 'daki LINQ to SQL araçları](../data-tools/linq-to-sql-tools-in-visual-studio2.md) , genellikle ilişkisel sistemlerde uygulanan tek tablo devralmayı destekler. Bu izlenecek yol, [nasıl yapılır: O/R Tasarımcısı kullanılarak devralmayı yapılandırma](../data-tools/how-to-configure-inheritance-by-using-the-o-r-designer.md) konusunun ve içindeki devralmanın kullanımını göstermek için bazı gerçek veriler sunan genel adımlara genişletilir [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)] .
@@ -56,11 +57,11 @@ Kalıtımın nasıl çalıştığını görmek için küçük bir tablo oluştur
     |**Tür**|**int**|**True**|
     |**FirstName**|**nvarchar (200)**|**False**|
     |**LastName**|**nvarchar (200)**|**False**|
-    |**Manager**|**int**|**True**|
+    |**Yönetici**|**int**|**True**|
 
 3. KIMLIK sütununu birincil anahtar olarak ayarlayın.
 
-4. Tabloyu kaydedin ve **kişiyi**adlandırın.
+4. Tabloyu kaydedin ve **kişiyi** adlandırın.
 
 ## <a name="add-data-to-the-table"></a>Tabloya veri ekleme
 Kalıtımın doğru yapılandırıldığını doğrulayabilmeniz için tablonun tek tablo Devralmada her bir sınıf için bazı veriler olması gerekir.
@@ -71,7 +72,7 @@ Kalıtımın doğru yapılandırıldığını doğrulayabilmeniz için tablonun 
 
 2. Aşağıdaki verileri tabloya kopyalayın. (Bunu kopyalayabilir ve ardından **sonuçlar** bölmesinde tüm satırı seçerek tabloya yapıştırabilirsiniz.)
 
-    |**ID**|**Tür**|**FirstName**|**LastName**|**Manager**|
+    |**ID**|**Tür**|**FirstName**|**LastName**|**Yönetici**|
     |-|-|-|-|-|
     |**1**|**1**|**Gamze**|**Wallace**|**DEĞER**|
     |**2**|**1**|**Carlos**|**Grilo dili**|**DEĞER**|
@@ -97,9 +98,9 @@ Artık tabloyu oluşturduğunuza göre, devralmayı yapılandırmayı göstermek
 
 3. Orta bölmede **Windows Forms uygulama** proje türünü seçin.
 
-4. Projeyi **InheritanceWalkthrough**olarak adlandırın ve ardından **Tamam**' ı seçin.
+4. Projeyi **InheritanceWalkthrough** olarak adlandırın ve ardından **Tamam**' ı seçin.
 
-     **InheritanceWalkthrough** projesi oluşturulur ve **Çözüm Gezgini**eklenir.
+     **InheritanceWalkthrough** projesi oluşturulur ve **Çözüm Gezgini** eklenir.
 
 ## <a name="add-a-linq-to-sql-classes-file-to-the-project"></a>Projeye LINQ to SQL sınıfları dosyası ekleyin
 
@@ -116,27 +117,27 @@ Artık tabloyu oluşturduğunuza göre, devralmayı yapılandırmayı göstermek
 
 ### <a name="to-create-the-inheritance"></a>Devralmayı oluşturmak için
 
-1. **Sunucu Gezgini** veya **veritabanı Gezgini**içinde, daha önce oluşturduğunuz **kişi** tablosuna gidin.
+1. **Sunucu Gezgini** veya **veritabanı Gezgini** içinde, daha önce oluşturduğunuz **kişi** tablosuna gidin.
 
 2. **Kişi** tablosunu **O/R Tasarımcısı** tasarım yüzeyine sürükleyin.
 
-3. İkinci bir **kişi** tablosunu **O/R tasarımcısına** sürükleyin ve adını **çalışan**olarak değiştirin.
+3. İkinci bir **kişi** tablosunu **O/R tasarımcısına** sürükleyin ve adını **çalışan** olarak değiştirin.
 
 4. **Kişi** nesnesinden **yönetici** özelliğini silin.
 
-5. **Employee** nesnesinden **Type**, **ID**, **FirstName**ve **LastName** özelliklerini silin. (Diğer bir deyişle, **yönetici**hariç tüm özellikleri silin.)
+5. **Employee** nesnesinden **Type**, **ID**, **FirstName** ve **LastName** özelliklerini silin. (Diğer bir deyişle, **yönetici** hariç tüm özellikleri silin.)
 
 6. **Araç kutusunun** **nesne ilişkisel Tasarımcısı** sekmesinden, **kişi** ve **çalışan** nesneleri arasında bir **Devralma** oluşturun. Bunu yapmak için **araç kutusu** 'nda **Devralma** öğesine tıklayın ve fare düğmesini bırakın. Ardından, **çalışan** nesnesine ve sonra **O/R tasarımcısında** **Person** nesnesine tıklayın. Devralma satırındaki ok daha sonra **Person** nesnesine işaret eder.
 
 7. Tasarım yüzeyinde **Devralma** satırına tıklayın.
 
-8. **Ayrıştırıcı özelliği** özelliğini **Type**olarak ayarlayın.
+8. **Ayrıştırıcı özelliği** özelliğini **Type** olarak ayarlayın.
 
-9. **Türetilmiş sınıf ayrıştırıcı değeri** özelliğini **2**olarak ayarlayın.
+9. **Türetilmiş sınıf ayrıştırıcı değeri** özelliğini **2** olarak ayarlayın.
 
-10. **Temel sınıf ayrıştırıcı değeri** özelliğini **1**olarak ayarlayın.
+10. **Temel sınıf ayrıştırıcı değeri** özelliğini **1** olarak ayarlayın.
 
-11. **Devralma varsayılan** özelliğini **Person**olarak ayarlayın.
+11. **Devralma varsayılan** özelliğini **Person** olarak ayarlayın.
 
 12. Projeyi derleyin.
 
@@ -145,7 +146,7 @@ Artık, nesne modelinde belirli bir sınıf için sorgular oluşturacak biçimde
 
 ### <a name="to-create-a-linq-query-and-display-the-results-on-the-form"></a>Bir LINQ sorgusu oluşturmak ve sonuçları formda göstermek için
 
-1. Bir **liste kutusunu** **Form1**üzerine sürükleyin.
+1. Bir **liste kutusunu** **Form1** üzerine sürükleyin.
 
 2. Olay işleyicisi oluşturmak için forma çift tıklayın `Form1_Load` .
 
@@ -174,12 +175,12 @@ Artık, nesne modelinde belirli bir sınıf için sorgular oluşturacak biçimde
     }
     ```
 
-## <a name="test-the-application"></a>Uygulamayı test etme
+## <a name="test-the-application"></a>Uygulamayı test edin
 Uygulamayı çalıştırın ve liste kutusunda görüntülenen kayıtların tüm çalışanlar ( **tür** sütununda 2 değeri olan kayıtlar) olduğunu doğrulayın.
 
 ### <a name="to-test-the-application"></a>Uygulamayı test etmek için
 
-1. **F5**tuşuna basın.
+1. **F5** tuşuna basın.
 
 2. Yalnızca **tür** sütununda 2 değeri olan kayıtların görüntülendiğini doğrulayın.
 
@@ -190,5 +191,5 @@ Uygulamayı çalıştırın ve liste kutusunda görüntülenen kayıtların tüm
 - [Visual Studio 'da LINQ to SQL araçları](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
 - [İzlenecek yol: LINQ to SQL sınıfları oluşturma (O-R Designer)](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md)
 - [Nasıl yapılır: Güncelleştirme, ekleme ve silme işlemleri gerçekleştirmek için saklı yordamlar atama (O/R Tasarımcısı)](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md)
-- [LINQ - SQL](/dotnet/framework/data/adonet/sql/linq/index)
+- [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)
 - [Nasıl yapılır: Visual Basic veya C 'de nesne modeli oluşturma #](/dotnet/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp)

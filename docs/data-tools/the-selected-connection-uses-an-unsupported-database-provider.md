@@ -1,6 +1,6 @@
 ---
 title: Desteklenmeyen veritabanı sağlayıcısı
-description: Seçili bağlantı desteklenmeyen bir veritabanı sağlayıcısı kullanıyor
+description: Seçilen bağlantı desteklenmeyen bir veritabanı sağlayıcısı kullanıyor. Bu Visual Studio Nesne İlişkisel Tasarımcısı (O/R Designer) iletisiyle ilgili bilgileri görüntüleyin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: error-reference
@@ -10,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: c8fa073b47927f673914156c586bf27a121e53ea
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 06e08f9a9c28698ae2ee2fecfbcec64c39666c8a
+ms.sourcegitcommit: 72a49c10a872ab45ec6c6d7c4ac7521be84526ff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037575"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94998353"
 ---
 # <a name="the-selected-connection-uses-an-unsupported-database-provider"></a>Seçili bağlantı desteklenmeyen bir veritabanı sağlayıcısı kullanıyor
 
@@ -23,7 +23,7 @@ Bu ileti, **Sunucu Gezgini** veya **Veritabanı Gezgini** SQL Server için .NET 
 
 **O/R Tasarımcısı** , SQL Server için yalnızca .NET Framework sağlayıcıyı kullanan veri bağlantılarını destekler. Yalnızca Microsoft SQL Server veya Microsoft SQL Server veritabanı dosyası bağlantıları geçerlidir.
 
-Bu hatayı düzeltmek için, yalnızca SQL Server için .NET Framework Veri Sağlayıcısı kullanan veri bağlantılarından yalnızca **O/R tasarımcısına**öğe ekleyin.
+Bu hatayı düzeltmek için, yalnızca SQL Server için .NET Framework Veri Sağlayıcısı kullanan veri bağlantılarından yalnızca **O/R tasarımcısına** öğe ekleyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

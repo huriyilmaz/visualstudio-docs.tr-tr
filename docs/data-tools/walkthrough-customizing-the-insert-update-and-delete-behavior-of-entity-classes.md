@@ -1,5 +1,6 @@
 ---
 title: Ekleme/güncelleştirme/silme davranışını özelleştirme
+description: Bu kılavuzda, LINQ (dil ile tümleşik sorgu) kullanan varlık sınıflarının INSERT, Update ve DELETE davranışını Visual Studio 'daki SQL araçları ile özelleştirin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 5323cfa41dc4931db514977238fd359b4f38ab3f
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: cac9f27263fc7d316d308f1f8d906751f419f104
+ms.sourcegitcommit: 72a49c10a872ab45ec6c6d7c4ac7521be84526ff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036749"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94997933"
 ---
 # <a name="walkthrough-customize-the-insert-update-and-delete-behavior-of-entity-classes"></a>İzlenecek yol: varlık sınıflarının INSERT, Update ve DELETE davranışını özelleştirme
 
@@ -26,7 +27,7 @@ ms.locfileid: "90036749"
 Varsayılan olarak, güncelleştirmeleri gerçekleştirme mantığı LINQ to SQL çalışma zamanı tarafından sağlanır. Çalışma zamanı, `Insert` `Update` `Delete` tablonun şemasına göre varsayılan, ve deyimlerini oluşturur (sütun tanımları ve birincil anahtar bilgileri). Varsayılan davranışı kullanmak istemiyorsanız, güncelleştirme davranışını yapılandırabilir ve veritabanındaki verilerle çalışmak için gerekli olan ekleme, güncelleştirme ve silme işlemlerini gerçekleştirmek için belirli saklı yordamları belirtebilirsiniz. Bunun yanı sıra, varsayılan davranış oluşturulmayan, örneğin varlık sınıflarınız görünümlerle eşlenme olduğunda da yapabilirsiniz. Ayrıca, veritabanı saklı yordamlar üzerinden tablo erişimi gerektirdiğinde varsayılan güncelleştirme davranışını geçersiz kılabilirsiniz. Daha fazla bilgi için bkz. [saklı yordamları kullanarak Işlemleri özelleştirme](/dotnet/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures).
 
 > [!NOTE]
-> Bu izlenecek yol, Northwind veritabanı için **InsertCustomer**, **UpdateCustomer**ve **DeleteCustomer** saklı yordamlarının kullanılabilir olmasını gerektirir.
+> Bu izlenecek yol, Northwind veritabanı için **InsertCustomer**, **UpdateCustomer** ve **DeleteCustomer** saklı yordamlarının kullanılabilir olmasını gerektirir.
 
 Bu izlenecek yol, depolanan yordamları kullanarak verileri veritabanına geri kaydetmek için varsayılan LINQ to SQL çalışma zamanı davranışını geçersiz kılmak için izlemeniz gereken adımları sağlar.
 
@@ -42,15 +43,15 @@ Bu kılavuzda, aşağıdaki görevlerin nasıl gerçekleştirileceğini öğrene
 
 - Form için kaydetme işlevini uygulayın.
 
-- <xref:System.Data.Linq.DataContext> **O/R tasarımcısına**saklı yordamlar ekleyerek Yöntemler oluşturun.
+- <xref:System.Data.Linq.DataContext> **O/R tasarımcısına** saklı yordamlar ekleyerek Yöntemler oluşturun.
 
 - `Customer`Ekleme, güncelleştirme ve silme işlemlerini gerçekleştirmek üzere saklı yordamları kullanmak için sınıfını yapılandırın.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını kullanır.
 
-1. SQL Server Express LocalDB yoksa, [SQL Server Express indirme sayfasından](https://www.microsoft.com/sql-server/sql-server-editions-express)veya **Visual Studio yükleyicisi**aracılığıyla yükleyin. **Visual Studio yükleyicisi**, SQL Server Express LocalDB 'yi **veri depolama ve işleme** iş yükünün parçası olarak veya ayrı bir bileşen olarak yükleyebilirsiniz.
+1. SQL Server Express LocalDB yoksa, [SQL Server Express indirme sayfasından](https://www.microsoft.com/sql-server/sql-server-editions-express)veya **Visual Studio yükleyicisi** aracılığıyla yükleyin. **Visual Studio yükleyicisi**, SQL Server Express LocalDB 'yi **veri depolama ve işleme** iş yükünün parçası olarak veya ayrı bir bileşen olarak yükleyebilirsiniz.
 
 2. Aşağıdaki adımları izleyerek Northwind örnek veritabanını yüklersiniz:
 
@@ -78,9 +79,9 @@ LINQ to SQL sınıflarıyla çalıştığınızdan ve verileri bir Windows formu
 
 3. Orta bölmede **Windows Forms uygulama** proje türünü seçin.
 
-4. Projeyi **UpdatingwithSProcsWalkthrough**olarak adlandırın ve ardından **Tamam**' ı seçin.
+4. Projeyi **UpdatingwithSProcsWalkthrough** olarak adlandırın ve ardından **Tamam**' ı seçin.
 
-     **UpdatingwithSProcsWalkthrough** projesi oluşturulur ve **Çözüm Gezgini**eklenir.
+     **UpdatingwithSProcsWalkthrough** projesi oluşturulur ve **Çözüm Gezgini** eklenir.
 
 4. **Proje** menüsünde **Yeni öğe Ekle**' ye tıklayın.
 
@@ -92,18 +93,18 @@ LINQ to SQL sınıflarıyla çalıştığınızdan ve verileri bir Windows formu
 
 ## <a name="create-the-customer-entity-class-and-object-data-source"></a>Müşteri varlık sınıfı ve nesne veri kaynağı oluşturma
 
-**Sunucu Gezgini** veya **veritabanı Gezgini** tabloları **O/R tasarımcısına**sürükleyerek veritabanı tablolarıyla eşlenen LINQ to SQL sınıflar oluşturun. Sonuç, veritabanındaki tablolarla eşlenen LINQ to SQL varlık sınıflarıdır. Varlık sınıfları oluşturduktan sonra, yalnızca ortak özelliklerine sahip diğer sınıflar gibi nesne veri kaynakları olarak kullanılabilirler.
+**Sunucu Gezgini** veya **veritabanı Gezgini** tabloları **O/R tasarımcısına** sürükleyerek veritabanı tablolarıyla eşlenen LINQ to SQL sınıflar oluşturun. Sonuç, veritabanındaki tablolarla eşlenen LINQ to SQL varlık sınıflarıdır. Varlık sınıfları oluşturduktan sonra, yalnızca ortak özelliklerine sahip diğer sınıflar gibi nesne veri kaynakları olarak kullanılabilirler.
 
 ### <a name="to-create-a-customer-entity-class-and-configure-a-data-source-with-it"></a>Bir müşteri varlık sınıfı oluşturmak ve bir veri kaynağını onunla yapılandırmak için
 
-1. **Sunucu Gezgini** veya **veritabanı Gezgini**içinde, Northwind örnek veritabanının SQL Server sürümünde **Customer** tablosunu bulun.
+1. **Sunucu Gezgini** veya **veritabanı Gezgini** içinde, Northwind örnek veritabanının SQL Server sürümünde **Customer** tablosunu bulun.
 
 2. **Müşteriler** düğümünü **Sunucu Gezgini** veya **veritabanı Gezgini** , **O/R tasarımcı* yüzeyine sürükleyin.
 
-     **Müşteri** adlı bir varlık sınıfı oluşturulur. Müşteriler tablosundaki sütunlara karşılık gelen özelliklere sahiptir. Müşteriler tablosundan tek bir müşteriyi temsil ettiğinden, varlık sınıfı **Müşteri** olarak adlandırılır ( **müşteriler**değil).
+     **Müşteri** adlı bir varlık sınıfı oluşturulur. Müşteriler tablosundaki sütunlara karşılık gelen özelliklere sahiptir. Müşteriler tablosundan tek bir müşteriyi temsil ettiğinden, varlık sınıfı **Müşteri** olarak adlandırılır ( **müşteriler** değil).
 
     > [!NOTE]
-    > Bu yeniden adlandırma davranışı *çoğullaştırma*olarak adlandırılır. [Seçenekler iletişim kutusunda](../ide/reference/options-dialog-box-visual-studio.md)açılıp kapatılabilir. Daha fazla bilgi için bkz. [nasıl yapılır: plurseli açma ve kapatma (O/R Designer)](../data-tools/how-to-turn-pluralization-on-and-off-o-r-designer.md).
+    > Bu yeniden adlandırma davranışı *çoğullaştırma* olarak adlandırılır. [Seçenekler iletişim kutusunda](../ide/reference/options-dialog-box-visual-studio.md)açılıp kapatılabilir. Daha fazla bilgi için bkz. [nasıl yapılır: plurseli açma ve kapatma (O/R Designer)](../data-tools/how-to-turn-pluralization-on-and-off-o-r-designer.md).
 
 3. Projeyi derlemek için **Build** (Oluştur) menüsünde **UpdatingwithSProcsWalkthrough derleme** ' ye tıklayın.
 
@@ -127,7 +128,7 @@ Veri **kaynakları** penceresinden bir Windows Form üzerine LINQ to SQL veri ka
 
 1. Tasarım görünümü 'da **Form1** ' i açın.
 
-2. **Veri kaynakları** penceresinde, **Müşteri** düğümünü **Form1**üzerine sürükleyin.
+2. **Veri kaynakları** penceresinde, **Müşteri** düğümünü **Form1** üzerine sürükleyin.
 
     > [!NOTE]
     > **Veri kaynakları** penceresini görüntülemek için **veri** menüsünde **veri kaynaklarını göster** ' e tıklayın.
@@ -166,7 +167,7 @@ Varsayılan olarak, Kaydet düğmesi etkin değildir ve Kaydet işlevi uygulanma
 
 2. **CustomerBindingNavigator** (disket simgesini içeren düğme) üzerinde Kaydet düğmesini seçin.
 
-3. **Özellikler** penceresinde, **etkin** özelliği **true**olarak ayarlayın.
+3. **Özellikler** penceresinde, **etkin** özelliği **true** olarak ayarlayın.
 
 4. Kaydet düğmesine çift tıklayarak bir olay işleyicisi oluşturun ve kod düzenleyicisine geçiş yapın.
 
@@ -184,11 +185,11 @@ Varsayılan olarak, Kaydet düğmesi etkin değildir ve Kaydet işlevi uygulanma
 
 ### <a name="to-override-the-default-update-behavior"></a>Varsayılan güncelleştirme davranışını geçersiz kılmak için
 
-1. **U/R tasarımcısında**LINQ to SQL dosyasını açın. ( **Çözüm Gezgini** **Northwind. dbml** dosyasına çift tıklayın.)
+1. **U/R tasarımcısında** LINQ to SQL dosyasını açın. ( **Çözüm Gezgini** **Northwind. dbml** dosyasına çift tıklayın.)
 
-2. **Sunucu Gezgini** veya **veritabanı Gezgini**' de, Northwind veritabanları **saklı yordamları** düğümünü genişletin ve **InsertCustomers**, **UpdateCustomers**ve **DeleteCustomers** saklı yordamlarını bulun.
+2. **Sunucu Gezgini** veya **veritabanı Gezgini**' de, Northwind veritabanları **saklı yordamları** düğümünü genişletin ve **InsertCustomers**, **UpdateCustomers** ve **DeleteCustomers** saklı yordamlarını bulun.
 
-3. Tüm üç saklı yordamı **O/R tasarımcısına**sürükleyin.
+3. Tüm üç saklı yordamı **O/R tasarımcısına** sürükleyin.
 
      Saklı yordamlar Yöntemler bölmesine yöntemler olarak eklenir <xref:System.Data.Linq.DataContext> . Daha fazla bilgi için bkz. [DataContext yöntemleri (O/R Designer)](../data-tools/datacontext-methods-o-r-designer.md).
 
@@ -230,16 +231,16 @@ Varsayılan olarak, Kaydet düğmesi etkin değildir ve Kaydet işlevi uygulanma
 
 18. **Original_CustomerID** yöntemi bağımsız değişkenini **CustomerID (orijinal)** sınıf özelliği ile eşleyin.
 
-19. **Tamam**’a tıklayın.
+19. **Tamam** düğmesine tıklayın.
 
 > [!NOTE]
 > Bu izlenecek yol için bir sorun olmasa da, LINQ to SQL kimlik (otomatik artırma), ROWGUIDCOL (veritabanı tarafından üretilen GUID) ve ekleme ve güncelleştirme sırasında zaman damgası sütunları için veritabanı tarafından oluşturulan değerleri otomatik olarak işlediğini belirten bir değer. Diğer sütun türlerindeki veritabanı tarafından oluşturulan değerler beklenmedik bir şekilde null değer oluşmasına neden olur. Veritabanı tarafından oluşturulan değerleri döndürmek için, aşağıdakilerden birine el ile ve olarak ayarlamanız gerekir <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> `true` <xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> : [oto Sync. Always](<xref:System.Data.Linq.Mapping.AutoSync.Always>), [oto Sync. OnInsert](<xref:System.Data.Linq.Mapping.AutoSync.OnInsert>)veya [oto Sync. OnUpdate](<xref:System.Data.Linq.Mapping.AutoSync.OnUpdate>).
 
-## <a name="test-the-application"></a>Uygulamayı test etme
+## <a name="test-the-application"></a>Uygulamayı test edin
 
 **UpdateCustomers** saklı yordamının veritabanındaki müşteri kaydını doğru bir şekilde güncelleştirdiğini doğrulamak için uygulamayı yeniden çalıştırın.
 
-1. **F5**tuşuna basın.
+1. **F5** tuşuna basın.
 
 2. Kılavuzdaki bir kaydı değiştirerek güncelleştirme davranışını test edin.
 
@@ -275,5 +276,5 @@ Uygulama gereksinimlerinize bağlı olarak, LINQ to SQL varlık sınıfları olu
 - [Visual Studio 'da LINQ to SQL araçları](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
 - [DataContext metotları](../data-tools/datacontext-methods-o-r-designer.md)
 - [Nasıl yapılır: güncelleştirme, ekleme ve silme işlemleri gerçekleştirmek için saklı yordamlar atama](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md)
-- [LINQ - SQL](/dotnet/framework/data/adonet/sql/linq/index)
+- [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)
 - [LINQ to SQL sorguları](/dotnet/framework/data/adonet/sql/linq/linq-to-sql-queries)

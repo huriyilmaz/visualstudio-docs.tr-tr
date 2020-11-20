@@ -1,5 +1,6 @@
 ---
 title: Windows Forms 'de basit bir WCF hizmeti oluşturma
+description: Bu kılavuzda, Visual Studio 'da bir Windows Communication Foundation (WCF) hizmeti oluşturun, test edin ve ardından bir Windows Forms uygulamasından erişin.
 ms.date: 11/04/2016
 ms.custom: SEO-VS-2020
 ms.topic: conceptual
@@ -17,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 7b0c874509622b34d7a9703a6b31481e0d88e586
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 215ae1409c36417526bb1362f0029029ed95e801
+ms.sourcegitcommit: 72a49c10a872ab45ec6c6d7c4ac7521be84526ff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036801"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94998141"
 ---
 # <a name="walkthrough-create-a-simple-wcf-service-in-windows-forms"></a>İzlenecek yol: Windows Forms basit bir WCF hizmeti oluşturma
 
@@ -38,7 +39,7 @@ Bu izlenecek yol, basit bir Windows Communication Foundation (WCF) hizmeti oluş
 
 2. **Dosya** menüsünde **Yeni** > **Proje**' yi seçin.
 
-3. **Yeni proje** iletişim kutusunda **Visual Basic** veya **Visual C#** düğümünü genişletin ve ardından WCF **hizmet kitaplığı**' **nı**seçin.
+3. **Yeni proje** iletişim kutusunda **Visual Basic** veya **Visual C#** düğümünü genişletin ve ardından WCF **hizmet kitaplığı**' **nı** seçin.
 
 4. Projeyi oluşturmak için **Tamam**'a tıklayın.
 
@@ -50,7 +51,7 @@ Bu izlenecek yol, basit bir Windows Communication Foundation (WCF) hizmeti oluş
 
 2. Başlangıç penceresinde **Yeni proje oluştur**' u seçin.
 
-3. **Yeni proje oluştur** sayfasındaki arama kutusuna **WCF hizmet kitaplığı** yazın. **WCF hizmet kitaplığı**Için C# veya Visual Basic şablonu ' nu seçin ve ardından **İleri**' ye tıklayın.
+3. **Yeni proje oluştur** sayfasındaki arama kutusuna **WCF hizmet kitaplığı** yazın. **WCF hizmet kitaplığı** Için C# veya Visual Basic şablonu ' nu seçin ve ardından **İleri**' ye tıklayın.
 
    ![Visual Studio 2019 'de yeni WCF hizmet kitaplığı projesi oluşturma](media/vs-2019/create-new-wcf-service-library.png)
 
@@ -64,7 +65,7 @@ Bu izlenecek yol, basit bir Windows Communication Foundation (WCF) hizmeti oluş
    > [!NOTE]
    > Bu, test edilebilir ve erişilebilen bir çalışan hizmet oluşturur. Aşağıdaki iki adım, farklı bir veri türünü kullanmak için varsayılan yöntemi nasıl değiştirebileceğinizi göstermektedir. Gerçek bir uygulamada, hizmete kendi işlevlerinizi de eklemeniz gerekir.
 
-5. **Çözüm Gezgini**, **IService1. vb** veya **IService1.cs**öğesine çift tıklayın.
+5. **Çözüm Gezgini**, **IService1. vb** veya **IService1.cs** öğesine çift tıklayın.
 
    ![IService1 dosyası](../data-tools/media/wcf2.png)
 
@@ -80,7 +81,7 @@ Bu izlenecek yol, basit bir Windows Communication Foundation (WCF) hizmeti oluş
 
    Yukarıdaki kodda, veya özniteliklerini aklınızda edin `<OperationContract()>` `[OperationContract]` . Bu öznitelikler, hizmet tarafından sunulan herhangi bir yöntem için gereklidir.
 
-6. **Çözüm Gezgini**, **Service1. vb** veya **Service1.cs**öğesine çift tıklayın.
+6. **Çözüm Gezgini**, **Service1. vb** veya **Service1.cs** öğesine çift tıklayın.
 
    ![Service1 dosyası](../data-tools/media/wcf3.png)
 
@@ -98,7 +99,7 @@ Bu izlenecek yol, basit bir Windows Communication Foundation (WCF) hizmeti oluş
 
 1. Hizmeti çalıştırmak için **F5** tuşuna basın. Bir **WCF Test istemcisi** formu görünür ve hizmeti yükler.
 
-2. **WCF Test istemcisi** formunda, **IService1**altındaki **GetData ()** yöntemine çift tıklayın. **GetData** sekmesi görüntülenir.
+2. **WCF Test istemcisi** formunda, **IService1** altındaki **GetData ()** yöntemine çift tıklayın. **GetData** sekmesi görüntülenir.
 
      ![GetData&#40;&#41; yöntemi](../data-tools/media/wcf4.png)
 
@@ -136,7 +137,7 @@ Bu izlenecek yol, basit bir Windows Communication Foundation (WCF) hizmeti oluş
 
 1. **Çözüm Gezgini**, zaten açık değilse Windows Form Tasarımcısı açmak için **Form1. vb** veya **Form1.cs** öğesine çift tıklayın.
 
-2. **Araç kutusundan**bir `TextBox` denetimi, `Label` denetimi ve `Button` denetimi form üzerine sürükleyin.
+2. **Araç kutusundan** bir `TextBox` denetimi, `Label` denetimi ve `Button` denetimi form üzerine sürükleyin.
 
      ![Forma denetim ekleme](../data-tools/media/wcf9.png)
 

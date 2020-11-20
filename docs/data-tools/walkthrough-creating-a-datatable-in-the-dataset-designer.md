@@ -1,5 +1,6 @@
 ---
 title: Veri Kümesi Tasarımcısı bir DataTable oluşturun
+description: Bu izlenecek yolda, Veri Kümesi Tasarımcısı kullanarak bir DataTable (TableAdapter olmadan) oluşturun. Yeni bir Windows Forms uygulaması oluşturun ve buna yeni bir veri kümesi ekleyin.
 ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: conceptual
@@ -13,16 +14,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 7dd762c6df5eebc9ebbf142a3ad7dfe430800802
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: a0dad1e6878adc73a08753dca21500499e652602
+ms.sourcegitcommit: 72a49c10a872ab45ec6c6d7c4ac7521be84526ff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036775"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94998258"
 ---
 # <a name="walkthrough-create-a-datatable-in-the-dataset-designer"></a>İzlenecek yol: Veri Kümesi Tasarımcısı bir DataTable oluşturun
 
-Bu izlenecek yol <xref:System.Data.DataTable> , **veri kümesi tasarımcısı**kullanarak (TableAdapter olmadan) oluşturmayı açıklar. TableAdapters içeren veri tabloları oluşturma hakkında daha fazla bilgi için bkz. [Create and configure TableAdapters](../data-tools/create-and-configure-tableadapters.md).
+Bu izlenecek yol <xref:System.Data.DataTable> , **veri kümesi tasarımcısı** kullanarak (TableAdapter olmadan) oluşturmayı açıklar. TableAdapters içeren veri tabloları oluşturma hakkında daha fazla bilgi için bkz. [Create and configure TableAdapters](../data-tools/create-and-configure-tableadapters.md).
 
 ## <a name="create-a-new-windows-forms-application"></a>Yeni bir Windows Forms uygulaması oluşturma
 
@@ -32,9 +33,9 @@ Bu izlenecek yol <xref:System.Data.DataTable> , **veri kümesi tasarımcısı**k
 
 3. Orta bölmede **Windows Forms uygulama** proje türünü seçin.
 
-4. Projeyi **DataTableWalkthrough**olarak adlandırın ve ardından **Tamam**' ı seçin.
+4. Projeyi **DataTableWalkthrough** olarak adlandırın ve ardından **Tamam**' ı seçin.
 
-     **DataTableWalkthrough** projesi oluşturulup **Çözüm Gezgini**eklenir.
+     **DataTableWalkthrough** projesi oluşturulup **Çözüm Gezgini** eklenir.
 
 ## <a name="add-a-new-dataset-to-the-application"></a>Uygulamaya yeni bir veri kümesi ekleme
 
@@ -46,11 +47,11 @@ Bu izlenecek yol <xref:System.Data.DataTable> , **veri kümesi tasarımcısı**k
 
 3. **Ekle**' yi seçin.
 
-     Visual Studio **dataSet1. xsd** adlı bir dosyayı projeye ekler ve **veri kümesi Tasarımcısı**açar.
+     Visual Studio **dataSet1. xsd** adlı bir dosyayı projeye ekler ve **veri kümesi Tasarımcısı** açar.
 
 ## <a name="add-a-new-datatable-to-the-dataset"></a>Veri kümesine yeni bir DataTable ekleyin
 
-1. **Araç kutusunun** **veri kümesi** sekmesinden bir **DataTable nesnesini** **veri kümesi Tasarımcısı**üzerine sürükleyin.
+1. **Araç kutusunun** **veri kümesi** sekmesinden bir **DataTable nesnesini** **veri kümesi Tasarımcısı** üzerine sürükleyin.
 
      **DataTable1** adlı bir tablo, veri kümesine eklenir.
 

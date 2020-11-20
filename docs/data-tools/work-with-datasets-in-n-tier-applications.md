@@ -1,5 +1,7 @@
 ---
 title: N katmanlı uygulamalarda veri kümeleriyle çalışma
+description: N katmanlı uygulamalarda veri kümeleriyle çalışmayı öğrenin. N katmanlı veri uygulamaları, birden çok mantıksal katmana (veya katmana) ayrılan veri merkezli uygulamalardır.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +21,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: c7532bed6a7d43c24d698870723d2265fc2b176f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d450bb60bdb604f658f73d0b5df4b9bd739cf923
+ms.sourcegitcommit: 72a49c10a872ab45ec6c6d7c4ac7521be84526ff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75585931"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94998193"
 ---
 # <a name="work-with-datasets-in-n-tier-applications"></a>N katmanlı uygulamalarda veri kümeleriyle çalışma
 
@@ -32,7 +34,7 @@ ms.locfileid: "75585931"
 
 Türü belirtilmiş veri kümeleri, TableAdapters ve DataSet sınıflarının ayrı projelerde üretilebilmesi için geliştirilmiştir. Bu, uygulama katmanlarını hızlı bir şekilde ayırma ve n katmanlı veri uygulamaları oluşturma olanağı sağlar.
 
-Türü belirtilmiş veri kümelerinde n katmanlı destek, uygulama mimarisinin n katmanlı bir tasarıma yinelemeli olarak geliştirilmesini sağlar. Ayrıca, kodu birden fazla projeye el ile ayıran gereksinimi ortadan kaldırır. **Veri kümesi Tasarımcısı**kullanarak veri katmanını tasarlamayı başlatın. Uygulama mimarisini n katmanlı bir tasarıma geçmeye hazırsanız, veri kümesi sınıfını ayrı bir projede oluşturmak için veri kümesi **Proje** özelliğini ayarlayın.
+Türü belirtilmiş veri kümelerinde n katmanlı destek, uygulama mimarisinin n katmanlı bir tasarıma yinelemeli olarak geliştirilmesini sağlar. Ayrıca, kodu birden fazla projeye el ile ayıran gereksinimi ortadan kaldırır. **Veri kümesi Tasarımcısı** kullanarak veri katmanını tasarlamayı başlatın. Uygulama mimarisini n katmanlı bir tasarıma geçmeye hazırsanız, veri kümesi sınıfını ayrı bir projede oluşturmak için veri kümesi **Proje** özelliğini ayarlayın.
 
 ## <a name="reference"></a>Başvuru
 

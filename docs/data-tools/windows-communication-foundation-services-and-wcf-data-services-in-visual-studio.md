@@ -1,5 +1,7 @@
 ---
 title: Windows Communication Foundation ve WCF Veri Hizmetleri
+description: Visual Studio 'da Windows Communication Foundation (WCF) Hizmetleri ve WCF Veri Hizmetleri araştırıp dağıtılmış uygulamalar oluşturabilirsiniz.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: overview
 dev_langs:
@@ -35,12 +37,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: c1f24a33a482b1994d0d8667b4fc71cf968e4625
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 983ff598003a4f966b5173dc9ae78dd9aaa16580
+ms.sourcegitcommit: 72a49c10a872ab45ec6c6d7c4ac7521be84526ff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85281051"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94997907"
 ---
 # <a name="windows-communication-foundation-services-and-wcf-data-services-in-visual-studio"></a>Visual Studio'da Windows Communication Foundation Hizmetleri ve WCF Veri Hizmetleri
 
@@ -74,7 +76,7 @@ Ayrıca, bir öznitelik ile bileşik bir tür işaretleyerek serileştirilmiş v
 
 Bir arabirim ve yöntemleri tanımlandıktan sonra, arabirimini uygulayan bir sınıfta kapsüllenir. Tek bir WCF hizmeti sınıfı, birden çok hizmet sözleşmesi uygulayabilir.
 
-Bir WCF hizmeti, *uç nokta*olarak bilinen bir şekilde tüketimine sunulur. Uç nokta, hizmetle iletişim kurmanın tek yolunu sağlar; diğer sınıflarla yaptığınız gibi doğrudan başvuru aracılığıyla hizmete erişemezsiniz.
+Bir WCF hizmeti, *uç nokta* olarak bilinen bir şekilde tüketimine sunulur. Uç nokta, hizmetle iletişim kurmanın tek yolunu sağlar; diğer sınıflarla yaptığınız gibi doğrudan başvuru aracılığıyla hizmete erişemezsiniz.
 
 Bir uç nokta, bir adres, bağlama ve bir anlaşmada oluşur. Adres, hizmetin nerede olduğunu tanımlar; Bu bir URL, FTP adresi veya ağ ya da yerel yol olabilir. Bağlama, hizmetle iletişim kurma şeklini tanımlar. WCF bağlamaları, HTTP veya FTP gibi bir protokol ve Windows kimlik doğrulaması, Kullanıcı adları ve parolalar gibi bir güvenlik mekanizması ve çok daha fazlasını belirtmek için çok yönlü bir model sağlar. Bir sözleşme, WCF hizmet sınıfı tarafından sunulan işlemleri içerir.
 
@@ -107,7 +109,7 @@ WCF şablonları hakkında daha fazla bilgi için bkz. [WCF Visual Studio şablo
 
 #### <a name="wcf-service-host"></a>WCF hizmet ana bilgisayarı
 
-Bir WCF hizmeti projesi için Visual Studio hata ayıklayıcısını başlattığınızda ( **F5**tuşuna basarak), hizmeti yerel olarak BARıNDıRMAK Için WCF hizmeti ana bilgisayar aracı otomatik olarak başlatılır. WCF hizmeti ana bilgisayarı bir WCF hizmeti projesindeki Hizmetleri numaralandırır, projenin yapılandırmasını yükler ve bulduğu her hizmet için bir konak başlatır.
+Bir WCF hizmeti projesi için Visual Studio hata ayıklayıcısını başlattığınızda ( **F5** tuşuna basarak), hizmeti yerel olarak BARıNDıRMAK Için WCF hizmeti ana bilgisayar aracı otomatik olarak başlatılır. WCF hizmeti ana bilgisayarı bir WCF hizmeti projesindeki Hizmetleri numaralandırır, projenin yapılandırmasını yükler ve bulduğu her hizmet için bir konak başlatır.
 
 WCF hizmeti ana bilgisayarı kullanarak, ek kod yazmadan veya geliştirme sırasında belirli bir konağa işlemeden bir WCF hizmetini test edebilirsiniz.
 
@@ -156,7 +158,7 @@ Böyle bir durumda, `endpointConfigurationName` hizmet başvurusu için oluştur
 
 3. Oluşturucunun aşırı yüklerini içeren bir IntelliSense listesi görüntülenir. `endpointConfigurationName As String`Aşırı yüklemeyi seçin.
 
-4. Aşırı yüklemeden sonra, `=` *ConfigurationName* , kullanmak istediğiniz uç noktanın adı olan *ConfigurationName*yazın.
+4. Aşırı yüklemeden sonra, `=` *ConfigurationName* , kullanmak istediğiniz uç noktanın adı olan *ConfigurationName* yazın.
 
     > [!NOTE]
     > Kullanılabilir uç noktaların adlarını bilinmediğinizde, *app.config* dosyasında bulabilirsiniz.

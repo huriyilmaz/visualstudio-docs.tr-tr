@@ -1,5 +1,7 @@
 ---
 title: .mdf dosyalarını yükseltme
+description: Visual Studio 'nun daha yeni bir sürümünü yükledikten sonra bir veritabanı dosyasını (. mdf) yükseltme seçeneklerini gözden geçirin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -14,12 +16,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: d35611dcc7b6067cf6d6166aff521ef291b8dfcd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: babc82469d32540f1a003b629c9d83887ca91595
+ms.sourcegitcommit: 72a49c10a872ab45ec6c6d7c4ac7521be84526ff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85281129"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94998050"
 ---
 # <a name="upgrade-mdf-files"></a>.mdf dosyalarını yükseltme
 
@@ -79,7 +81,7 @@ Bir veritabanını yükseltmeden önce aşağıdaki ölçütleri göz önünde b
 
     Veritabanı yükseltilir, LocalDB veritabanı altyapısına iliştirilir ve artık LocalDB 'nin eski sürümüyle uyumlu değildir.
 
-Ayrıca, bağlantı için kısayol menüsünü açıp **Bağlantıyı Değiştir**' i seçerek LocalDB 'yi kullanmak için bir SQL Server Express bağlantısını değiştirebilirsiniz. **Bağlantıyı Değiştir** iletişim kutusunda sunucu adını olarak değiştirin `(LocalDB)\MSSQLLocalDB` . **Gelişmiş Özellikler** iletişim kutusunda, **Kullanıcı örneğinin** **false**olarak ayarlandığından emin olun.
+Ayrıca, bağlantı için kısayol menüsünü açıp **Bağlantıyı Değiştir**' i seçerek LocalDB 'yi kullanmak için bir SQL Server Express bağlantısını değiştirebilirsiniz. **Bağlantıyı Değiştir** iletişim kutusunda sunucu adını olarak değiştirin `(LocalDB)\MSSQLLocalDB` . **Gelişmiş Özellikler** iletişim kutusunda, **Kullanıcı örneğinin** **false** olarak ayarlandığından emin olun.
 
 ### <a name="to-upgrade-a-database-file-to-use-the-sql-server-express-version"></a>Bir veritabanı dosyasını SQL Server Express sürümünü kullanacak şekilde yükseltmek için
 

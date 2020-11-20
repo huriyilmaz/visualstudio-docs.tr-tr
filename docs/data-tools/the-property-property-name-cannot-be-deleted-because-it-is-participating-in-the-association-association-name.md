@@ -1,6 +1,6 @@
 ---
 title: Özellik ilişkiye katılıyor
-description: Özellik, ilişkiye katıldığından silinemiyor
+description: Özellik, ilişkiye katıldığından silinemiyor. Bu Nesne İlişkisel Tasarımcısı (O/R Designer) iletisiyle ilgili bilgileri görüntüleyin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: error-reference
@@ -10,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: d473c3aa83bc5ac4ca802067b9b9eb32073d32f1
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: a0d39fa3d7740996be3fc9da75224739f1e55539
+ms.sourcegitcommit: 72a49c10a872ab45ec6c6d7c4ac7521be84526ff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036216"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94998379"
 ---
 # <a name="the-property-ltproperty-namegt-cannot-be-deleted-because-it-is-participating-in-the-association-ltassociation-namegt"></a>Özellik &lt; özelliği adı, &gt; ilişkilendirme ilişkilendirme adına katıldığından silinemiyor &lt;&gt;
 
@@ -29,7 +29,7 @@ Seçilen özellik, hata iletisinde belirtilen sınıflar arasındaki ilişki iç
 
 2. **Ilişkilendirme düzenleyici** iletişim kutusunu açmak için satıra çift tıklayın.
 
-3. Özelliği **Ilişkilendirme özelliklerinden**kaldırın.
+3. Özelliği **Ilişkilendirme özelliklerinden** kaldırın.
 
 4. Özelliği silmeyi yeniden deneyin.
 

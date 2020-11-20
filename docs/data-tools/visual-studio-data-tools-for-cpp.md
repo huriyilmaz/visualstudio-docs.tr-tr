@@ -1,5 +1,7 @@
 ---
 title: C++ için veri araçları
+description: C++ için Visual Studio veri araçlarını gezin. ODBC ve SQL Native Client aracılığıyla bir C++ uygulamasından localDB 'ye bağlanın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: overview
 dev_langs:
@@ -10,12 +12,12 @@ manager: jillfra
 ms.workload:
 - data-storage
 - cplusplus
-ms.openlocfilehash: 063efeebff92698b8e5db66880360713c73fe150
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 36b1fe83cb20aee6d6fc95984a254c9ac9d212bd
+ms.sourcegitcommit: 72a49c10a872ab45ec6c6d7c4ac7521be84526ff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85281103"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94998102"
 ---
 # <a name="visual-studio-data-tools-for-c"></a>C++ için Visual Studio veri araçları
 
@@ -49,7 +51,7 @@ SQL Server 2005 ve sonraki sürümlerde özel işlevlerden faydalanmak için, [S
 
    **%ProgramFiles%\Microsoft SQL Server\110\SDK\Lib**
 
-6. Bu satırları *odbcsql. cpp*öğesine ekleyin. #Define, ilgisiz OLE DB tanımlarının derlenmelerini engeller.
+6. Bu satırları *odbcsql. cpp* öğesine ekleyin. #Define, ilgisiz OLE DB tanımlarının derlenmelerini engeller.
 
    ```cpp
    #define _SQLNCLI_ODBC_
@@ -58,7 +60,7 @@ SQL Server 2005 ve sonraki sürümlerde özel işlevlerden faydalanmak için, [S
 
     Örnek aslında yerel istemci işlevlerinin hiçbirini kullanmaz, bu nedenle önceki adımların derlenmesi ve çalışması için gerekli değildir. Ancak proje artık bu işlevselliği kullanabilmeniz için yapılandırılmıştır. Daha fazla bilgi için bkz. [SQL Server Native Client programlama](/sql/relational-databases/native-client/sql-server-native-client).
 
-7. ODBC alt sisteminde kullanılacak sürücüyü belirtin. Örnek, içindeki sürücü bağlantı dizesi özniteliğini bir komut satırı bağımsız değişkeni olarak geçirir. **Proje**  >  **özellikleri**  >  **hata ayıklaması**bölümünde şu komut bağımsız değişkenini ekleyin:
+7. ODBC alt sisteminde kullanılacak sürücüyü belirtin. Örnek, içindeki sürücü bağlantı dizesi özniteliğini bir komut satırı bağımsız değişkeni olarak geçirir. **Proje**  >  **özellikleri**  >  **hata ayıklaması** bölümünde şu komut bağımsız değişkenini ekleyin:
 
    ```cpp
    DRIVER="SQL Server Native Client 11.0"

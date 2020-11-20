@@ -1,5 +1,7 @@
 ---
 title: WPF & Entity Framework WCF veri hizmeti oluşturma
+description: WPF ve bir ASP.NET Web uygulamasında barındırılan Entity Framework bir WCF veri hizmeti oluşturun ve sonra buna bir Windows Forms uygulamasından erişin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 9abdeee9a785a8bccf6cbb580c87bae4fa313036
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c8c9ced0b589b28f1cd21de4a862c6f11dc6e03e
+ms.sourcegitcommit: 72a49c10a872ab45ec6c6d7c4ac7521be84526ff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75585996"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94998271"
 ---
 # <a name="walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework"></a>İzlenecek Yol: WPF ve Entity Framework ile WCF Veri Hizmeti Oluşturma
 Bu izlenecek yol [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] , bir Web uygulamasında barındırılan basit bir oluşturma [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] ve ardından bu uygulamaya Windows Forms bir uygulamadan erişme işlemlerinin nasıl yapılacağını gösterir.
@@ -43,7 +45,7 @@ Bu kılavuzda şunları yapabilirsiniz:
 ## <a name="prerequisites"></a>Önkoşullar
 Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını kullanır.
 
-1. SQL Server Express LocalDB yoksa, [SQL Server Express indirme sayfasından](https://www.microsoft.com/sql-server/sql-server-editions-express)veya **Visual Studio yükleyicisi**aracılığıyla yükleyin. **Visual Studio yükleyicisi**, SQL Server Express LocalDB 'yi **veri depolama ve işleme** iş yükünün parçası olarak veya ayrı bir bileşen olarak yükleyebilirsiniz.
+1. SQL Server Express LocalDB yoksa, [SQL Server Express indirme sayfasından](https://www.microsoft.com/sql-server/sql-server-editions-express)veya **Visual Studio yükleyicisi** aracılığıyla yükleyin. **Visual Studio yükleyicisi**, SQL Server Express LocalDB 'yi **veri depolama ve işleme** iş yükünün parçası olarak veya ayrı bir bileşen olarak yükleyebilirsiniz.
 
 2. Aşağıdaki adımları izleyerek Northwind örnek veritabanını yüklersiniz:
 
@@ -70,7 +72,7 @@ Oluşturmak için [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_serv
 
 2. **Yeni proje** iletişim kutusunda **Visual Basic** veya **Visual C#** ve **Web** düğümlerini genişletin ve **ASP.NET Web uygulaması** şablonunu seçin.
 
-3. **Ad** metin kutusuna **NorthwindWeb**yazın ve sonra **Tamam** düğmesini seçin.
+3. **Ad** metin kutusuna **NorthwindWeb** yazın ve sonra **Tamam** düğmesini seçin.
 
 4. **Yeni ASP.NET projesi** iletişim kutusunda, **bir şablon seçin** listesinde **boş**' ı seçin ve ardından **Tamam** düğmesini seçin.
 
@@ -120,7 +122,7 @@ Sonraki adımda, veri hizmetini oluşturup test edersiniz.
 
 3. **Ad** metin kutusuna girin `NorthwindCustomers` ve sonra **Ekle** düğmesini seçin.
 
-     **NorthwindCustomers. svc** dosyası **kod düzenleyicisinde**görüntülenir.
+     **NorthwindCustomers. svc** dosyası **kod düzenleyicisinde** görüntülenir.
 
 4. **Kod Düzenleyicisi**'nde, ilk `TODO:` yorumu bulun ve kodu aşağıdaki kodla değiştirin:
 
@@ -134,7 +136,7 @@ Sonraki adımda, veri hizmetini oluşturup test edersiniz.
 
 6. Hizmeti çalıştırmak için menü çubuğunda Hata **ayıklama**  >  **olmadan Başlat** ' ı seçin. Bir tarayıcı penceresi açılır ve hizmet için XML şeması görüntülenir.
 
-7. **Adres** çubuğunda, `Customers` **NORTHWINDCUSTOMERS. svc**URL 'sinin sonuna yazın ve **ENTER** tuşunu seçin.
+7. **Adres** çubuğunda, `Customers` **NORTHWINDCUSTOMERS. svc** URL 'sinin sonuna yazın ve **ENTER** tuşunu seçin.
 
      Tablodaki verilerin bir XML temsili `Customers` görüntülenir.
 
@@ -152,7 +154,7 @@ Sonraki adımlarda, hizmeti kullanmak için bir Windows Forms istemci uygulamas�
 
 ### <a name="to-create-the-client-application"></a>İstemci uygulamasını oluşturmak için
 
-1. Menü çubuğunda dosya, **Add**  >  **Yeni proje**Ekle öğesini seçin.
+1. Menü çubuğunda dosya, **Add**  >  **Yeni proje** Ekle öğesini seçin.
 
 2. **Yeni proje** iletişim kutusunda, **Visual Basic** veya **Visual C#** düğümünü genişletin, **Windows** düğümünü seçin ve sonra **Windows Forms uygulama**' yı seçin.
 
@@ -178,7 +180,7 @@ Bir sonraki adımda, hizmete veri bağlamayı etkinleştirmek için bir veri kay
 
 ### <a name="to-enable-data-binding-to-the-service"></a>Hizmete veri bağlamayı etkinleştirmek için
 
-1. Menü çubuğunda **View**  >  **diğer Windows**  >  **veri kaynaklarını**görüntüle ' yi seçin.
+1. Menü çubuğunda **View**  >  **diğer Windows**  >  **veri kaynaklarını** görüntüle ' yi seçin.
 
    **Veri kaynakları** penceresi açılır.
 
@@ -200,7 +202,7 @@ Sonraki adımda, hizmetten gelen verileri görüntüleyen Kullanıcı arabirimin
 
     Bir <xref:System.Windows.Forms.DataGridView> Denetim, <xref:System.Windows.Forms.BindingSource> bileşen ve <xref:System.Windows.Forms.BindingNavigator> bileşen forma eklenir.
 
-3. **CustomersDataGridView** denetimini seçin ve ardından **Özellikler** penceresinde **Dock** özelliğini **Fill**olarak ayarlayın.
+3. **CustomersDataGridView** denetimini seçin ve ardından **Özellikler** penceresinde **Dock** özelliğini **Fill** olarak ayarlayın.
 
 4. **Çözüm Gezgini**, **Form1** düğümünün kısayol menüsünü açın ve kod düzenleyicisini açmak için **kodu görüntüle** ' yi seçin ve aşağıdaki `Imports` veya `Using` ifadesini dosyanın en üstüne ekleyin:
 
@@ -284,7 +286,7 @@ Bu adımda, verileri müşterinin şehre göre filtrelemek için uygulamayı öz
 
 5. Uygulamayı çalıştırmak için menü çubuğunda **hata**  >  **ayıklamayı Başlat** ' ı seçin.
 
-6. Metin kutusuna **Londra**yazın ve ardından düğmeyi seçin. Yalnızca Londralı müşteriler görüntülenir.
+6. Metin kutusuna **Londra** yazın ve ardından düğmeyi seçin. Yalnızca Londralı müşteriler görüntülenir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

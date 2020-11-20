@@ -1,5 +1,7 @@
 ---
 title: TableAdapter kullanarak verileri güncelleştirme
+description: Veri kümesindeki verileri güncelleştirme. Bir TableAdapter 'ın Update yöntemini çağırarak verileri veritabanına geri gönderin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: f7ecca8c28ff355952907f1f0c49485117a25456
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 049137d85429d720024fa9ce075f6a102f8d7c91
+ms.sourcegitcommit: 72a49c10a872ab45ec6c6d7c4ac7521be84526ff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85281207"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94998297"
 ---
 # <a name="update-data-by-using-a-tableadapter"></a>TableAdapter kullanarak verileri güncelleştirme
 
