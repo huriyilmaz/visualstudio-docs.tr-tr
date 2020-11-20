@@ -20,45 +20,45 @@
   items:
     - name: .NET
       items:
-        - name: Yayımla aracı ile .NET Core uygulaması dağıtma
-          href: /dotnet/core/deploying/deploy-with-vs
-        - name: Bir masaüstü uygulamasını Microsoft Store için paketleme
-          href: /windows/msix/desktop/desktop-to-uwp-packaging-dot-net
         - name: ClickOnce kullanarak .NET Windows uygulaması dağıtma
           href: quickstart-deploy-using-clickonce-folder.md
         - name: ClickOnce kullanarak .NET Framework masaüstü uygulaması dağıtma
           href: how-to-publish-a-clickonce-application-using-the-publish-wizard.md
+        - name: Yükleyici paketi oluşturma (Windows masaüstü)
+          href: deploying-applications-services-and-components.md#create-an-installer-package-windows-desktop
+        - name: Bir masaüstü uygulamasını Microsoft Store için paketleme >>
+          href: /windows/msix/desktop/desktop-to-uwp-packaging-dot-net
         - name: Komut Satırından ClickOnce uygulamalarını derleme
           href: building-clickonce-applications-from-the-command-line.md
     - name: ASP.NET
       items:
-        - name: Azure’a ASP.NET Core uygulaması yayımlama
+        - name: Azure’a ASP.NET Core uygulaması yayımlama >>
           href: /aspnet/core/tutorials/publish-to-azure-webapp-using-vs
         - name: Yayımlama ayarlarını içeri aktarma ve IIS’ye dağıtma
           href: tutorial-import-publish-settings-iis.md
         - name: Yayımlama ayarlarını içeri aktarma ve Azure’a dağıtma
           href: tutorial-import-publish-settings-azure.md
-        - name: Git ile Azure’a sürekli ASP.NET Core dağıtımı
+        - name: Git ile Azure’a sürekli ASP.NET Core dağıtımı >>
           href: /aspnet/core/publishing/azure-continuous-deployment
     - name: C++
       items:
-        - name: C/C++ uygulaması dağıtma
-          href: /cpp/windows/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project
-        - name: Bir masaüstü uygulamasını Microsoft Store için paketleme
+        - name: Yükleyici paketi oluşturma
+          href: deploying-applications-services-and-components.md#create-an-installer-package-windows-desktop
+        - name: Bir masaüstü uygulamasını Microsoft Store için paketleme >>
           href: /windows/msix/desktop/desktop-to-uwp-packaging-dot-net
-        - name: ClickOnce kullanarak C++/CLR uygulaması dağıtma...
+        - name: ClickOnce kullanarak C++/CLR uygulaması dağıtma >>
           href: /cpp/windows/clickonce-deployment-for-visual-cpp-applications
     - name: UWP
       items:
-        - name: Visual Studio kullanarak UWP uygulaması paketleme
+        - name: Visual Studio kullanarak UWP uygulaması paketleme >>
           href: /windows/uwp/packaging/packaging-uwp-apps
     - name: Node.js
       items:
-        - name: Linux App Service’e yayımlama
+        - name: Linux App Service’e yayımlama >>
           href: ../javascript/publish-nodejs-app-azure.md
     - name: Python
       items:
-        - name: Azure App Service’e yayımlama
+        - name: Azure App Service’e yayımlama >>
           href: ../python/publishing-python-web-applications-to-azure-from-visual-studio.md
 - name: Nasıl yapılır kılavuzları
   items:
