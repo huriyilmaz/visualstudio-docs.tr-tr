@@ -1,5 +1,7 @@
 ---
 title: EditorConfig ayarları
+description: Kod tabanında çalıştırılan herkes için tutarlı kodlama stillerini zorlamak üzere projenize veya kod tabanınıza bir EditorConfig dosyası eklemeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 09/02/2020
 ms.topic: how-to
 helpviewer_keywords:
@@ -7,12 +9,12 @@ helpviewer_keywords:
 author: mikadumont
 ms.author: midumont
 manager: jillfra
-ms.openlocfilehash: 277e5cd03d4006ced0791356be73ca1fcbe5c217
-ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
+ms.openlocfilehash: a1f66368972614347df9eebe33af435987ea9cc8
+ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91659257"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95006503"
 ---
 # <a name="create-portable-custom-editor-settings-with-editorconfig"></a>EditorConfig ile taşınabilir, özel düzenleyici ayarları oluşturma
 
@@ -25,7 +27,7 @@ EditorConfig ayarları, Visual Studio da dahil olmak üzere çok sayıda kod Dü
 Visual Studio 'da projenize bir EditorConfig dosyası eklediğinizde, yeni kod satırları EditorConfig ayarlarına göre biçimlendirilir. Aşağıdaki komutlardan birini çalıştırmadığınız takdirde varolan kodun biçimlendirmesi değiştirilmez:
 
  - [Kod temizleme](../ide/code-styles-and-code-cleanup.md) (**CTRL** + **K**, **CTRL** + **E**), girinti stili gibi tüm beyaz boşluk ayarlarını ve nasıl sıralama yönergeleri gibi seçili kod stili ayarlarını uygular `using` .
- - **Düzenle** > **Gelişmiş** > **Format Document** **Ctrl** + **K** **Ctrl** + Yalnızca girinti stili gibi beyaz boşluk ayarlarını uygulayan belgeyi (veya varsayılan profilde CTRL**D** ) biçimlendirin.
+ - **Düzenle** > **Gelişmiş** > **Format Document** **Ctrl** + **K** **Ctrl** + Yalnızca girinti stili gibi beyaz boşluk ayarlarını uygulayan belgeyi (veya varsayılan profilde CTRL **D** ) biçimlendirin.
 
  ::: moniker-end
 
@@ -53,7 +55,7 @@ Kişisel projeleriniz üzerinde kullandığınız kodlama kuralları, takımın�
 Ayarlar kod temelindeki bir dosyada bulunduğundan, bu kod temeli ile birlikte seyahat ederler. Kod dosyasını bir EditorConfig uyumlu düzenleyicide açtığınız sürece, metin düzenleyici ayarları uygulanır. EditorConfig dosyaları hakkında daha fazla bilgi için bkz. [EditorConfig.org](https://editorconfig.org/) Web sitesi.
 
 > [!NOTE]
-> Bir EditorConfig dosyasında ayarlanan kurallar, derleme hataları veya uyarılar olarak bir CI/CD ardışık düzeninde zorlanamaz. Stil sapmaları yalnızca Visual Studio düzenleyicisinde ve **hata listesi**görünür.
+> Bir EditorConfig dosyasında ayarlanan kurallar, derleme hataları veya uyarılar olarak bir CI/CD ardışık düzeninde zorlanamaz. Stil sapmaları yalnızca Visual Studio düzenleyicisinde ve **hata listesi** görünür.
 
 ## <a name="supported-settings"></a>Desteklenen ayarlar
 
@@ -166,7 +168,7 @@ Projenizin konumunun veya üstündeki dizin yapısında herhangi bir yerde bir E
 
    **"Bu dosya türü için Kullanıcı tercihleri bu projenin kodlama kuralları tarafından geçersiz kılınır."**
 
-Diğer bir deyişle, **Araçlar**  >  **Seçenekler**  >  **metin düzenleyicisinde** (girinti boyutu ve stil, sekme boyutu veya kodlama kuralları gibi) herhangi bir düzenleyici ayarı, dizin yapısında proje üzerinde veya üzerinde bir editorconfig dosyasında belirtildiğinde, editorconfig dosyasındaki kurallar **seçeneklerindeki**ayarları geçersiz kılar. **Araç**seçenekleri metin düzenleyicisinde **Proje kodlama kurallarını izle** seçeneğini değiştirerek bu davranışı kontrol edebilirsiniz  >  **Options**  >  **Text Editor**. Seçeneğin işaretlenmesi, Visual Studio için EditorConfig desteğini devre dışı bırakır.
+Diğer bir deyişle, **Araçlar**  >  **Seçenekler**  >  **metin düzenleyicisinde** (girinti boyutu ve stil, sekme boyutu veya kodlama kuralları gibi) herhangi bir düzenleyici ayarı, dizin yapısında proje üzerinde veya üzerinde bir editorconfig dosyasında belirtildiğinde, editorconfig dosyasındaki kurallar **seçeneklerindeki** ayarları geçersiz kılar. **Araç** seçenekleri metin düzenleyicisinde **Proje kodlama kurallarını izle** seçeneğini değiştirerek bu davranışı kontrol edebilirsiniz  >  **Options**  >  **Text Editor**. Seçeneğin işaretlenmesi, Visual Studio için EditorConfig desteğini devre dışı bırakır.
 
 ![Araç seçenekleri-proje kodlama kurallarını izleyin](media/coding_conventions_option.png)
 

@@ -1,5 +1,7 @@
 ---
 title: Tanılama verileri ve sistem tarafından oluşturulan Günlükler
+description: Visual Studio sistem tarafından oluşturulan Günlükler, toplanan veri türleri ve sorunların giderilmesi ve ürün kalitesini geliştirmek için nasıl kullanıldığı hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 05/24/2018
 ms.topic: conceptual
 author: jillre
@@ -7,12 +9,12 @@ ms.author: michma
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b3f3774a816ca31bfcdd4013d35dadbb1737e5ab
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 93f450eab5879991f45f4a924338d4a277d13544
+ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86387258"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95005931"
 ---
 # <a name="system-generated-logs-collected-by-visual-studio"></a>Visual Studio tarafından toplanan sistem tarafından oluşturulan Günlükler
 
@@ -24,7 +26,7 @@ Visual Studio kilitlenmeler, UI için yanıt verme ve yüksek CPU ya da bellek k
 
 - Yüksek CPU kullanımı ve yanıt verme için, ilgili Visual Studio iş parçacıklarının yığın izlemeleri toplanır.
 
-- Bazı iş parçacıklarının yığın izlemelerinin, sorunun kök nedenini (örneğin kilitlenmeler, yanıt verme veya yüksek bellek kullanımı) belirlemede yeterli olmadığı durumlarda bir bellek *dökümü*topladık. Döküm, hata oluştuğunda işlemin durumunu temsil eder.
+- Bazı iş parçacıklarının yığın izlemelerinin, sorunun kök nedenini (örneğin kilitlenmeler, yanıt verme veya yüksek bellek kullanımı) belirlemede yeterli olmadığı durumlarda bir bellek *dökümü* topladık. Döküm, hata oluştuğunda işlemin durumunu temsil eder.
 
 - Beklenmeyen hata koşulları için örneğin, diskteki bir dosyaya yazmaya çalışırken özel durum hakkında bilgi topladık. Bu bilgiler, özel durumun adını, özel durumun oluştuğu iş parçacığının yığın izlemesini, özel durumla ilişkili iletiyi ve belirli özel durumla ilgili diğer bilgileri içerir.
 

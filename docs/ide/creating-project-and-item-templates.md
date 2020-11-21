@@ -1,5 +1,7 @@
 ---
 title: Projeler ve dosyalar için şablonlar
+description: Proje ve öğe şablonlarının, kullanıcılara bazı temel kod ve yapı sağlayan yeniden kullanılabilir saplamalar sağlama hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 01/02/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 2cc932a2407aeb4951bab970a0edc6e2b2a5fcc9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f7ce85818e0cce4a6e78f5e2ec5901452ebd83f9
+ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89313802"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95006308"
 ---
 # <a name="project-and-item-templates"></a>Proje ve öğe şablonları
 

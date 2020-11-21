@@ -1,5 +1,7 @@
 ---
 title: Projelerin bir alt kümesini yükleme
+description: Çözüm filtreleme ve bir çözümdeki projelerin alt kümesini hızlı bir şekilde yüklemenize nasıl izin verdiği hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 04/22/2019
 ms.prod: visual-studio-dev16
 ms.topic: conceptual
@@ -10,16 +12,16 @@ author: jillre
 ms.author: stsu
 manager: jillfra
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: 4c44d267ef5686d04e9549601e05866aabbfb62d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 73cb7afe913f7656ac6124d1f54fbc1cb7b611cb
+ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72650844"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95006620"
 ---
 # <a name="filtered-solutions-in-visual-studio"></a>Visual Studio 'da filtrelenmiş çözümler
 
-Büyük geliştirme ekipleri genellikle birçok projeyle tek bir büyük çözüm kullanarak işbirliği yapabilirler. Ancak, bireysel geliştiriciler genellikle bu projelerin küçük bir alt kümesinde çalışır. Büyük çözümleri açarken performansı artırmak için, Visual Studio 2019 *çözüm filtrelemesini*sunmuştur. Çözüm filtreleme, yalnızca seçmeli projelerle yüklenmiş bir çözüm açmanıza olanak tanır. Bir çözümdeki projelerin alt kümesini yüklemek çözüm yükünü, derlemeyi ve test çalışma süresini azaltır ve daha odaklanmış gözden geçirmeyi mümkün bir şekilde sunar.
+Büyük geliştirme ekipleri genellikle birçok projeyle tek bir büyük çözüm kullanarak işbirliği yapabilirler. Ancak, bireysel geliştiriciler genellikle bu projelerin küçük bir alt kümesinde çalışır. Büyük çözümleri açarken performansı artırmak için, Visual Studio 2019 *çözüm filtrelemesini* sunmuştur. Çözüm filtreleme, yalnızca seçmeli projelerle yüklenmiş bir çözüm açmanıza olanak tanır. Bir çözümdeki projelerin alt kümesini yüklemek çözüm yükünü, derlemeyi ve test çalışma süresini azaltır ve daha odaklanmış gözden geçirmeyi mümkün bir şekilde sunar.
 
 Aşağıdaki özellikler mevcuttur:
 
@@ -81,9 +83,9 @@ Yalnızca seçili projelerin yüklendiği bir çözümde, projenin tüm proje ba
 
 ## <a name="solution-filter-files"></a>Çözüm filtresi dosyaları
 
-Proje yük yapılandırmanızı paylaşmak veya kaynak denetimine uygulamak istiyorsanız, bir çözüm filtresi dosyası ( *. slnf*uzantısına sahiptir) oluşturabilirsiniz. Bir çözüm filtresi dosyası açtığınızda, çözüm Visual Studio 'da belirtilen projelerle yüklendi ve tüm yüklenmemiş projeler gizli olarak açılır. Yüklü projeleri görüntülemek için [geçiş](#toggle-unloaded-project-visibility) yapabilirsiniz.
+Proje yük yapılandırmanızı paylaşmak veya kaynak denetimine uygulamak istiyorsanız, bir çözüm filtresi dosyası ( *. slnf* uzantısına sahiptir) oluşturabilirsiniz. Bir çözüm filtresi dosyası açtığınızda, çözüm Visual Studio 'da belirtilen projelerle yüklendi ve tüm yüklenmemiş projeler gizli olarak açılır. Yüklü projeleri görüntülemek için [geçiş](#toggle-unloaded-project-visibility) yapabilirsiniz.
 
-Çözüm filtresi dosyaları, normal çözüm dosyalarından, **Çözüm Gezgini**çözümünün yanında bulunan simgenin yanındaki ek huni glifinin görsel açıdan farklılaştırılabilir. Filtrenin adı ve yüklenen proje sayısı, çözüm adının yanında da gösterilir.
+Çözüm filtresi dosyaları, normal çözüm dosyalarından, **Çözüm Gezgini** çözümünün yanında bulunan simgenin yanındaki ek huni glifinin görsel açıdan farklılaştırılabilir. Filtrenin adı ve yüklenen proje sayısı, çözüm adının yanında da gösterilir.
 
 ![Visual Studio 'da çözüm filtresi dosyası açık Çözüm Gezgini](media/filtered-solutions/solution-filter.PNG)
 

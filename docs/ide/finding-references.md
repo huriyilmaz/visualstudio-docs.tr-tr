@@ -1,5 +1,7 @@
 ---
 title: Kodunuzdaki başvuruları bulma
+description: Kodunuzda belirli kod öğelerine yönelik başvuruları bulmak için tüm başvuruları bul komutunu öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 09/26/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,18 +12,18 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1e4ef16ef88e871778fd4e0c755ffb156c374109
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d5ee6a0792c5dbfa1661018e75806499d1aa1028
+ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75592041"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95006555"
 ---
 # <a name="find-references-in-your-code"></a>Kodunuzdaki başvuruları bulma
 
-Kodlarınızın tamamında belirli kod öğelerine nerede başvurulduğunu bulmak için **tüm başvuruları bul** komutunu kullanabilirsiniz. **Tüm başvuruları bul** komutu, başvuruları bulmak istediğiniz öğenin bağlam (sağ tıklama) menüsünde mevcuttur. Ya da bir klavye kullanıcısı kullanıyorsanız **SHIFT + F12**tuşlarına basın.
+Kodlarınızın tamamında belirli kod öğelerine nerede başvurulduğunu bulmak için **tüm başvuruları bul** komutunu kullanabilirsiniz. **Tüm başvuruları bul** komutu, başvuruları bulmak istediğiniz öğenin bağlam (sağ tıklama) menüsünde mevcuttur. Ya da bir klavye kullanıcısı kullanıyorsanız **SHIFT + F12** tuşlarına basın.
 
-Sonuçlar, ** \<element> başvuru**adlı bir araç penceresinde görüntülenir; burada *öğe* , aradığınız öğenin adıdır. **Başvurular** penceresindeki bir araç çubuğu şunları yapmanızı sağlar:
+Sonuçlar, **\<element> başvuru** adlı bir araç penceresinde görüntülenir; burada *öğe* , aradığınız öğenin adıdır. **Başvurular** penceresindeki bir araç çubuğu şunları yapmanızı sağlar:
 - Açılan liste kutusunda aramanın kapsamını değiştirin. Yalnızca değiştirilen belgelerde, tüm çözüme kadar olan görünümü seçebilirsiniz.
 - Seçilen başvurulan öğeyi **Kopyala** düğmesini seçerek kopyalayın.
 - Listedeki bir sonraki veya önceki konuma gitmek için düğmeleri seçin veya **F8** **+ SHIFT + F8** tuşlarına basarak bunu yapın.
@@ -40,7 +42,7 @@ Ayrıca, başvurunun bir önizlemesini görmek için fareyi herhangi bir arama s
 - Sonraki başvuruya gitmek için **F8** tuşuna basın veya önceki başvuruya gitmek için **SHIFT + F8** tuşlarına basın.
 - Bir başvuru üzerinde **ENTER** tuşuna basın veya kodda bu koda gitmek için çift tıklayın.
 - Başvurunun sağ tıklama menüsünde (bağlam menüsü) **önceki konuma git** ' i veya **sonraki konum komutlarına git** ' i seçin.
-- **Yukarı ok** ve **aşağı ok** tuşlarını ( **Seçenekler** iletişim kutusunda etkinse) seçin. Bu işlevi etkinleştirmek için, menü çubuğunda **Araçlar**  >  **Seçenekler**  >  **ortam**  >  **sekmeleri ve Windows**  >  **Önizleme sekmesini**seçin ve ardından **yeni dosyaların önizleme sekmesinde açılmasına izin ver** ' i seçin ve **sonuçları bul kutularında seçili dosyaları önizleyin** .
+- **Yukarı ok** ve **aşağı ok** tuşlarını ( **Seçenekler** iletişim kutusunda etkinse) seçin. Bu işlevi etkinleştirmek için, menü çubuğunda **Araçlar**  >  **Seçenekler**  >  **ortam**  >  **sekmeleri ve Windows**  >  **Önizleme sekmesini** seçin ve ardından **yeni dosyaların önizleme sekmesinde açılmasına izin ver** ' i seçin ve **sonuçları bul kutularında seçili dosyaları önizleyin** .
 
 ## <a name="change-reference-groupings"></a>Başvuru gruplamalarını değiştirme
 Varsayılan olarak, başvurular projeye göre ve ardından tanıma göre gruplandırılır. Ancak, bu Gruplandırma sırasını, araç çubuğundaki gruplandırma **ölçütü:** açılan liste kutusunda bulunan ayarı değiştirerek değiştirebilirsiniz. Örneğin, bunu proje varsayılan ayarından, **ardından** tanım ' ın **ardından Proje**' ye ve diğer ayarlara dönüştürebilirsiniz.

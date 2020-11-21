@@ -1,5 +1,7 @@
 ---
 title: Windows Information Protection muaf tut
+description: Visual Studios 'ın kurumsal verileri kullanmasına izin verirken Windows Information Protection 'tan muaf tutma hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 06/01/2018
 ms.topic: conceptual
 author: TerryGLee
@@ -7,12 +9,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8b4eb454f641b5bef7273464d605fb194f650790
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cfb078ee3f136a1d33f5b25040198c23411a05fb
+ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75588570"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95006633"
 ---
 # <a name="configure-visual-studio-as-a-wip-exempt-app"></a>Visual Studio 'Yu WıP muaf tutulan bir uygulama olarak yapılandırma
 

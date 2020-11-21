@@ -1,5 +1,7 @@
 ---
 title: Visual Basic'teki Uyarıları Yapılandırma
+description: Daha az hata ile temizleyici, daha hızlı ve daha iyi kod yazmanıza yardımcı olacak Visual Basic uyarılarını nasıl yapılandırabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 33302a4a686d80621cc64ee018371a2d03ea30ee
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cd5239c4fd01aefa247fc63a66af3e872dbecbb6
+ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76114723"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95006412"
 ---
 # <a name="configuring-warnings-in-visual-basic"></a>Visual Basic uyarıları yapılandırma
 
@@ -28,11 +30,11 @@ Bazen derleyici Kullanıcı adına ek mantık sağlar, böylece Kullanıcı, ben
 Projenizi özelleştirmek ve diğer uyarıları hatalara karşı yaparken uygulamanız için gerekli olan bazı uyarıları kapatmak isteyebilirsiniz. Bu sayfada, tek tek uyarıların nasıl kapatılacağı ve kapatılacağı açıklanmaktadır.
 
 ## <a name="turning-warnings-off-and-on"></a>Uyarıları kapatma ve açma
-Uyarıları yapılandırmanın iki farklı yolu vardır: **Proje tasarımcısını**kullanarak bunları yapılandırabilir veya **/warnaserror** ve **/nowarn** derleyici seçeneklerini kullanabilirsiniz.
+Uyarıları yapılandırmanın iki farklı yolu vardır: **Proje tasarımcısını** kullanarak bunları yapılandırabilir veya **/warnaserror** ve **/nowarn** derleyici seçeneklerini kullanabilirsiniz.
 
 **Proje Tasarımcısı** sayfasının **Derle** sekmesi, uyarıları açıp kapatmanızı sağlar. Tüm uyarıları devre dışı bırakmak için **tüm uyarıları devre dışı bırak** onay kutusunu seçin; Tüm uyarıları hata olarak değerlendirmek için **tüm uyarıları hata olarak değerlendir** ' i seçin. Bazı ayrı uyarılar, görüntülenmiş tabloda istendiği gibi hata veya uyarı olarak değiştirilebilir.
 
-**Option Strict** **devre dışı**olarak ayarlandığında, kesin ilgili uyarı **seçeneği** birbirinden bağımsız olarak kabul edilemez. **Option Strict** **Açık**olarak ayarlandığında, ilişkili uyarılar, durumu ne olduğuna bakılmaksızın hata olarak değerlendirilir. **Option Strict** **Custom** `/optionstrict:custom` , komut satırı derleyicisinde belirtilerek özel olarak ayarlandığında, **kesin** uyarılar bağımsız olarak açık veya kapalı olabilir.
+**Option Strict** **devre dışı** olarak ayarlandığında, kesin ilgili uyarı **seçeneği** birbirinden bağımsız olarak kabul edilemez. **Option Strict** **Açık** olarak ayarlandığında, ilişkili uyarılar, durumu ne olduğuna bakılmaksızın hata olarak değerlendirilir. **Option Strict** **Custom** `/optionstrict:custom` , komut satırı derleyicisinde belirtilerek özel olarak ayarlandığında, **kesin** uyarılar bağımsız olarak açık veya kapalı olabilir.
 
 Derleyicinin **/warnaserror** komut satırı seçeneği, uyarıların hata olarak değerlendirilip değerlendirilmeyeceğini belirtmek için de kullanılabilir. + Veya-kullanarak hangi uyarıların hata veya uyarı olarak değerlendirileceğini belirtmek için bu seçeneğe virgülle ayrılmış bir liste ekleyebilirsiniz. Aşağıdaki tabloda olası seçenekler ayrıntılı olarak verilmiştir.
 
@@ -73,12 +75,12 @@ Geç bağlama örnekleri için oluşturulur. Yeni projeler için varsayılan de�
 KIMLIK: 42017
 
 ### <a name="operands-of-type-object-warnings"></a>' Object ' uyarı türünde işlenenler
-Tür işlenenleri oluştuğunda üretilir ve `Object` **Option Strict On**ile bir hata oluşturur. Yeni projeler için varsayılan değer açık.
+Tür işlenenleri oluştuğunda üretilir ve `Object` **Option Strict On** ile bir hata oluşturur. Yeni projeler için varsayılan değer açık.
 
 KIMLIK: 42018 ve 42019
 
 ### <a name="declarations-require-as-clause-warnings"></a>Bildirimler ' As ' yan tümce uyarıları gerektirir
-Bir yan tümce olmayan bir değişken, işlev veya özellik bildirimi, `As` **Option Strict On**ile bir hata oluşturacaksa oluşturulur. Kendisine atanmış bir türü olmayan değişkenlerin tür olduğu varsayılır `Object` . Yeni projeler için varsayılan değer açık.
+Bir yan tümce olmayan bir değişken, işlev veya özellik bildirimi, `As` **Option Strict On** ile bir hata oluşturacaksa oluşturulur. Kendisine atanmış bir türü olmayan değişkenlerin tür olduğu varsayılır `Object` . Yeni projeler için varsayılan değer açık.
 
 KIMLIK: 42020 (değişken bildirimi), 42021 (işlev bildirimi) ve 42022 (özellik bildirimi).
 

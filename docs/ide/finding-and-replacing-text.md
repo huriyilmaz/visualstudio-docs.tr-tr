@@ -1,5 +1,7 @@
 ---
 title: Metin bul ve Değiştir ve çok şapka seçimi
+description: Bul ve Değiştir özelliği ve bir düzenin örneklerini bulmak ve değiştirmek için nasıl kullanılacağı hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 10/17/2020
 ms.topic: conceptual
 f1_keywords:
@@ -30,12 +32,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b878ccbf6714987599d1585ca9c0dc3ceb759144
-ms.sourcegitcommit: 4450abc99453ccaf8936449bbff437c5b9efa022
+ms.openlocfilehash: 475f0249bd6af8176fba3ecc79ad758cc6ceceb7
+ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92334200"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95006594"
 ---
 # <a name="find-and-replace-text"></a>Metin bulma ve değiştirme
 
@@ -53,8 +55,8 @@ Aramaları geçerli belge, geçerli çözüm veya özel bir klasör kümesiyle k
 
 ## <a name="find-and-replace-control"></a>Bul ve Değiştir denetimi
 
-- **Ctrl** + Geçerli dosyada bir dize *bulmak* için kısayol olarak Ctrl**F** tuşlarına basın.
-- **Ctrl** + Geçerli dosyadaki bir dizeyi *bulmak ve değiştirmek* için kısayol olarak Ctrl**H** tuşuna basın.
+- **Ctrl** + Geçerli dosyada bir dize *bulmak* için kısayol olarak Ctrl **F** tuşlarına basın.
+- **Ctrl** + Geçerli dosyadaki bir dizeyi *bulmak ve değiştirmek* için kısayol olarak Ctrl **H** tuşuna basın.
 
 **Bul ve Değiştir** denetimi, kod Düzenleyicisi penceresinin sağ üst köşesinde görüntülenir. Geçerli belgede verilen arama dizesinin her oluşumunu anında vurgular. Arama denetimindeki **Sonrakini Bul** düğmesini veya **Öncekini Bul** düğmesini seçerek bir örnekten diğerine gidebilirsiniz.
 
@@ -66,16 +68,16 @@ Eşleşmelerin vurgu rengini değiştirmek için, **Araçlar** menüsünü seçi
 
 ### <a name="search-tool-windows"></a>Arama aracı pencereleri
 
-Bul ve Değiştir Windows ve **sonuçları bul** **pencereleri gibi bir** kod veya metin penceresinde **bul** denetimini, bul **Düzenle**  >  **'** yi seçerek veya **CTRL + F**tuşlarına basarak kullanabilirsiniz.
+Bul ve Değiştir Windows ve **sonuçları bul** **pencereleri gibi bir** kod veya metin penceresinde **bul** denetimini, bul **Düzenle**  >  **'** yi seçerek veya **CTRL + F** tuşlarına basarak kullanabilirsiniz.
 
-**Bul** denetiminin bir sürümü de bazı araç pencereleri için de kullanılabilir. Örneğin, arama kutusuna metin girerek **araç kutusu** penceresindeki denetim listesini filtreleyebilirsiniz. İçeriklerini aramanıza izin veren diğer araç pencereleri **Çözüm Gezgini**, **özellikler** penceresi ve **Takım Gezgini**içerir.
+**Bul** denetiminin bir sürümü de bazı araç pencereleri için de kullanılabilir. Örneğin, arama kutusuna metin girerek **araç kutusu** penceresindeki denetim listesini filtreleyebilirsiniz. İçeriklerini aramanıza izin veren diğer araç pencereleri **Çözüm Gezgini**, **özellikler** penceresi ve **Takım Gezgini** içerir.
 
 ## <a name="find-in-files-and-replace-in-files"></a>Dosyalarda bulma ve dosyalardaki değiştirme
 
-- **Ctrl** + **Shift** + Birden çok dosyada dize *bulmak* için CTRL SHIFT**F** kısayolunu kısayol olarak basın.
-- **Ctrl** + **Shift** + Birden çok dosyada bir dizeyi *bulmak ve değiştirmek* için kısayol olarak CTRL SHIFT**H** tuşuna basın.
+- **Ctrl** + **Shift** + Birden çok dosyada dize *bulmak* için CTRL SHIFT **F** kısayolunu kısayol olarak basın.
+- **Ctrl** + **Shift** + Birden çok dosyada bir dizeyi *bulmak ve değiştirmek* için kısayol olarak CTRL SHIFT **H** tuşuna basın.
 
-**Dosyalarınızda Bul/Değiştir** , **Bul ve Değiştir** denetimi gibi çalışarak, aramanız için bir kapsam tanımlayabilmeniz gerekir. Yalnızca düzenleyicideki geçerli açık dosyada arama yapabilir, ancak tüm açık belgeler, tüm çözüm, geçerli proje ve seçili klasör kümelerini de arayabilirsiniz. Dosya adı uzantısına göre de arama yapabilirsiniz. **Dosyalarda Bul/Değiştir** iletişim kutusuna erişmek için, **Düzenle** menüsünde **Bul ve Değiştir** ' i seçin (veya **CTRL** + **SHIFT** + **F**tuşlarına basın).
+**Dosyalarınızda Bul/Değiştir** , **Bul ve Değiştir** denetimi gibi çalışarak, aramanız için bir kapsam tanımlayabilmeniz gerekir. Yalnızca düzenleyicideki geçerli açık dosyada arama yapabilir, ancak tüm açık belgeler, tüm çözüm, geçerli proje ve seçili klasör kümelerini de arayabilirsiniz. Dosya adı uzantısına göre de arama yapabilirsiniz. **Dosyalarda Bul/Değiştir** iletişim kutusuna erişmek için, **Düzenle** menüsünde **Bul ve Değiştir** ' i seçin (veya **CTRL** + **SHIFT** + **F** tuşlarına basın).
 
 ![Visual Studio 'da dosyalarda bul](media/find-in-files-box.png)
 
@@ -92,7 +94,7 @@ Arama **yeri** kutusunun yanındaki arama **klasörlerini Seç** düğmesini ( *
 
 ### <a name="create-custom-component-sets"></a>Özel bileşen kümeleri oluşturma
 
-Arama **yeri** kutusunun yanındaki **özel bileşen kümesini Düzenle** düğmesini seçerek, bileşen kümelerini arama kapsamınız olarak tanımlayabilirsiniz. Yüklü .NET veya COM bileşenlerini, çözümünüze dahil olan Visual Studio projelerini veya herhangi bir derlemeyi ya da tür kitaplığını (*. dll*, *. tlb*, *. olb*, *. exe*veya *. ocx*) belirtebilirsiniz. Başvuruları aramak için **başvurularda ara** kutusunu seçin.
+Arama **yeri** kutusunun yanındaki **özel bileşen kümesini Düzenle** düğmesini seçerek, bileşen kümelerini arama kapsamınız olarak tanımlayabilirsiniz. Yüklü .NET veya COM bileşenlerini, çözümünüze dahil olan Visual Studio projelerini veya herhangi bir derlemeyi ya da tür kitaplığını (*. dll*, *. tlb*, *. olb*, *. exe* veya *. ocx*) belirtebilirsiniz. Başvuruları aramak için **başvurularda ara** kutusunu seçin.
 
 ## <a name="multi-caret-selection"></a>Çoklu giriş işareti seçimi
 
@@ -110,7 +112,7 @@ Aşağıdaki ekran görüntüsünde, `-0000` üç konumda seçilidir; Kullanıc�
 Birden çok Evcil hayvan seçmek için her zamanki gibi ilk metin seçimini tıklatın veya seçin, sonra da her bir ek konumda metin ' i tıklattığınızda veya seçerken **alt** tuşuna basın. Ayrıca, eşleşen metni ek seçimler olarak otomatik olarak ekleyebilir veya her satırda aynı şekilde düzenlenecek metin kutusunu seçebilirsiniz.
 
 > [!TIP]
-> Fare tıklaması için değiştirici tuşu olarak **alt** öğesini seçtiyseniz **Araçlar**seçeneklerinde tanıma git ' e tıklayın  >  **Options**, çoklu şapka seçimi devre dışıdır.
+> Fare tıklaması için değiştirici tuşu olarak **alt** öğesini seçtiyseniz **Araçlar** seçeneklerinde tanıma git ' e tıklayın  >  **Options**, çoklu şapka seçimi devre dışıdır.
 
 ### <a name="commands"></a>Komutlar
 
@@ -128,7 +130,7 @@ Birden çok Evcil hayvan seçmek için her zamanki gibi ilk metin seçimini tık
 |**Alt** + tıklama|Kutu seçimi Ekle|
 |**ESC** veya tıklama|Tüm Seçimleri Temizle|
 
-Bazı komutlardan biri de **düzenleme** menüsünde, **birden çok sepetin**altında bulunur:
+Bazı komutlardan biri de **düzenleme** menüsünde, **birden çok sepetin** altında bulunur:
 
 :::image type="content" source="media/edit-menu-multiple-carets-find-replace.png" alt-text="Visual Studio 'da birden çok Evcil hayvan uçarak giriş menüsünün ekran görüntüsü":::
 

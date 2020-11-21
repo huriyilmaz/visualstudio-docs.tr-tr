@@ -1,5 +1,7 @@
 ---
-title: Find-komut kutusu
+title: Find-Command kutusu
+description: Bul/komut kutusu hakkında bilgi edinin ve bu uygulamayı kullanarak metin arayabilir ve Visual Studio komutlarını çalıştırabilirsiniz.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -11,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 99b50c0503d313d4482d8370071220dbf1403d9a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 341362fe74d4d8a6edbf10afec1a0d49998e857d
+ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75591534"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95006607"
 ---
 # <a name="findcommand-box"></a>Bul/Komut kutusu
 
@@ -24,7 +26,7 @@ ms.locfileid: "75591534"
 
 Bir komutu çalıştırmak için [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , () işaretiyle daha büyük bir işareti ile ön yüzü **>** .
 
-**Bul/komut** kutusu, girilen son 20 öğeyi korur ve bir açılan listede görüntüler. **Ok tuşlarını**seçerek listede gezinebilirsiniz.
+**Bul/komut** kutusu, girilen son 20 öğeyi korur ve bir açılan listede görüntüler. **Ok tuşlarını** seçerek listede gezinebilirsiniz.
 
 ![&#47;komut kutusu bul](../ide/media/findcommandbox.png)
 
@@ -34,7 +36,7 @@ Varsayılan olarak, **Bul/komut** kutusunda metin belirttiğinizde ve ardından 
 
 ## <a name="entering-commands"></a>Komutları girme
 
-Metin aramak yerine tek bir komut veya diğer ad vermek üzere **Bul/komut** kutusunu kullanmak için [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , komutu daha büyük () simgesiyle bir daha önyüz yapın **>** . Örneğin:
+Metin aramak yerine tek bir komut veya diğer ad vermek üzere **Bul/komut** kutusunu kullanmak için [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , komutu daha büyük () simgesiyle bir daha önyüz yapın **>** . Örnek:
 
 ```
 >File.NewFile c:\temp\MyFile /t:"General\Text File"
@@ -44,7 +46,7 @@ Alternatif olarak, **komut** penceresini tek veya birden çok komut girmek ve y�
 
 ## <a name="escape-characters"></a>Kaçış karakterleri
 
-Komutta bir şapka işareti ( **^** ) karakteri, bir denetim karakteri yerine, bundan hemen sonra gelen karakterin bir şekilde yorumlanması anlamına gelir. Bu, anahtar adları dışında bir parametre veya anahtar değerindeki düz tırnak işaretlerini (**"**), boşlukları, baştaki eğik çizgileri, yüzleri veya diğer sabit karakterleri eklemek için kullanılabilir. Örneğin:
+Komutta bir şapka işareti ( **^** ) karakteri, bir denetim karakteri yerine, bundan hemen sonra gelen karakterin bir şekilde yorumlanması anlamına gelir. Bu, anahtar adları dışında bir parametre veya anahtar değerindeki düz tırnak işaretlerini (**"**), boşlukları, baştaki eğik çizgileri, yüzleri veya diğer sabit karakterleri eklemek için kullanılabilir. Örnek:
 
 ```
 >Edit.Find ^^t /regex

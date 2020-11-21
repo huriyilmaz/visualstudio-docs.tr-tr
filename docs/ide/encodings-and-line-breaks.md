@@ -1,5 +1,7 @@
 ---
 title: Kodlama ve satır sonu karakterleri
+description: Visual Studio 'Nun satır sonları olarak yorumladığı karakterler ve özgün kodlama ile çizgi kesme karakterlerinin nasıl korunacağı hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +19,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6634a0b2715fb83a397b5e8cd0c8c68274771e2a
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: 889af1c0fd28224b2f31eb80bbeecad28346cd1c
+ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93045593"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95006646"
 ---
 # <a name="encodings-and-line-endings"></a>Kodlamalar ve satır sonları
 
@@ -50,13 +52,13 @@ Farklı satır sonu karakterleri olan bir dosyayı açtığınızda tutarsız ç
 
 > [!NOTE]
 > **Dosya** menüsünde **Gelişmiş Kaydet seçeneklerini** görmüyorsanız, ekleyebilirsiniz. 
-> 1. **Araç** seç, **Özelleştir** , 
-> 1. **Komutlar** sekmesini seçin, **menü çubuğu** radyo düğmesini seçin ve ilgili açılan listeden **Dosya** ' yı seçin. **Komut Ekle** düğmesini seçin. 
-> 1. **Komut Ekle** iletişim kutusunda, **Kategoriler** altında **Dosya** ' yı seçin ve ardından **Komutlar** listesinden **Gelişmiş Kaydet seçeneklerini** belirleyin. **Tamam** düğmesini seçin.
+> 1. **Araç** seç, **Özelleştir**, 
+> 1. **Komutlar** sekmesini seçin, **menü çubuğu** radyo düğmesini seçin ve ilgili açılan listeden **Dosya**' yı seçin. **Komut Ekle** düğmesini seçin. 
+> 1. **Komut Ekle** iletişim kutusunda, **Kategoriler** altında **Dosya**' yı seçin ve ardından **Komutlar** listesinden **Gelişmiş Kaydet seçeneklerini** belirleyin. **Tamam** düğmesini seçin.
 > 1. Komutu menüdeki herhangi bir yere taşımak için **Yukarı taşı** ve **aşağı taşı** düğmelerini kullanın. **Özelleştir** iletişim kutusunu kapatmak için **Kapat** ' ı seçin. 
 > Daha fazla bilgi için bkz. [menüleri ve araç çubuklarını özelleştirme](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md#customizing_menu).
 >
-> Alternatif olarak, **Dosya** farklı Kaydet ' i seçerek **Gelişmiş kaydetme seçenekleri** iletişim kutusuna erişebilirsiniz  >  **\<file\>** . **Dosyayı farklı kaydet** Iletişim kutusunda **Kaydet** düğmesinin yanındaki aşağı açılan üçgeni seçin ve **kodlama ile kaydet** ' i seçin.
+> Alternatif olarak, **Dosya** farklı Kaydet ' i seçerek **Gelişmiş kaydetme seçenekleri** iletişim kutusuna erişebilirsiniz  >  **\<file\>**. **Dosyayı farklı kaydet** Iletişim kutusunda **Kaydet** düğmesinin yanındaki aşağı açılan üçgeni seçin ve **kodlama ile kaydet**' i seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

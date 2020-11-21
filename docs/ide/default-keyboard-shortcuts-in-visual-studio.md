@@ -1,5 +1,7 @@
 ---
 title: Varsayılan klavye kısayolları
+description: Visual Studio 'da çeşitli komutlara ve Windows 'a erişmenize izin veren varsayılan klavye kısayolları hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 06/26/2017
 ms.topic: reference
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: eab8798dfb5c1666ef2829361adb8c48202c3981
-ms.sourcegitcommit: 4affcf2830337e6aba84621c3eda5faf5d0d4a01
+ms.openlocfilehash: 06bbbb0124984530e92b0066044c71bfbe80ad2b
+ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91022223"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95006373"
 ---
 # <a name="default-keyboard-shortcuts-in-visual-studio"></a>Visual Studio 'da varsayılan klavye kısayolları
 
@@ -48,7 +50,7 @@ Visual Studio 'da erişilebilirlik hakkında daha fazla bilgi için bkz. [erişi
 - [Yardım](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_help)
 - [Çözüm Gezgini](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_solutionexplorerGLOBAL)
 - [Görünüm](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_view)
-- [Hata ayıklama](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_debug)
+- [H](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_debug)
 - [Yük testi](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_loadtest)
 - [Team](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_team) (Takım)
 - [Pencere](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_window)
@@ -195,7 +197,7 @@ Bu klavye kısayolları *geneldir*. Bu, herhangi bir Visual Studio penceresi oda
 |. Sayfayall Düzenle|**CTRL +** ya da **CTRL + T**|
 |Edit.GoToDeclaration|**Ctrl+F12**|
 |Edit.GoToDefinition|**F12**|
-|. Sayfaymember 'ı Düzenle|**CTRL + 1, CTRL + a** ya da **CTRL + 1,** ı ya da **alt + \\ **|
+|. Sayfaymember 'ı Düzenle|**CTRL + 1, CTRL + a** ya da **CTRL + 1,** ı ya da **alt + \\**|
 |Edit.GoToNextLocation|**F8** (hata listesi veya çıkış penceresinde bir sonraki hata)|
 |Edit.GoToPrevLocation|**SHIFT + F8** (hata listesi veya çıkış penceresinde önceki hata)|
 |Edit.InsertSnippet|**Ctrl+K, Ctrl+X**|
@@ -844,7 +846,7 @@ Bu klavye kısayolları *geneldir*. Bu, herhangi bir Visual Studio penceresi oda
 | Edit.LineDown | **Aşağı Ok** |
 | Edit.LineDownExtend | **Shift+Aşağı Ok** |
 | Edit.LineDownExtendColumn | **Shift+Alt+Aşağı Ok** |
-| Edit.LineEnd | **Erer** |
+| Edit.LineEnd | **End** |
 | Edit.LineEndExtend | **Shift+End** |
 | Edit.LineEndExtendColumn | **Shift+Alt+End** |
 | Edit.LineOpenAbove | **Ctrl+Enter** |
@@ -1054,7 +1056,7 @@ Bu klavye kısayolları *geneldir*. Bu, herhangi bir Visual Studio penceresi oda
 |Edit.CharLeftExtend|**Shift+Sol Ok**|
 |Edit.CharRight|**Sağ Ok**|
 |Edit.CharRightExtend|**Shift+Sağ Ok**|
-|Edit.DocumentEnd|**Erer**|
+|Edit.DocumentEnd|**End**|
 |Edit.DocumentEndExtend|**Shift+End**|
 |Edit.DocumentStart|**Giriş Ekranı**|
 |Edit.DocumentStartExtend|**Shift+Home**|

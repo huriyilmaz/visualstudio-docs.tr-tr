@@ -1,5 +1,7 @@
 ---
 title: Projeler ve çözümler oluşturma
+description: Çözümler ve projeler arasındaki fark ve bunları Visual Studio 'da nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/06/2018
 ms.topic: how-to
 f1_keywords:
@@ -14,12 +16,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 19a836847aa01038bdbb015612c4fb4a3964d9a9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7bd893c06da9bc2c2c8d95fc4c085affa815edd2
+ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85770542"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95006451"
 ---
 # <a name="create-solutions-and-projects"></a>Projeler ve çözümler oluşturma
 
@@ -30,7 +32,7 @@ ms.locfileid: "85770542"
 > [!NOTE]
 > Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için bkz. [Mac için Visual Studio proje oluşturma](/visualstudio/mac/create-new-projects).
 
-Çözümlerinizi ve projelerinizi, **Çözüm Gezgini**adlı bir araç penceresinde görüntüleyebilirsiniz. Aşağıdaki ekran görüntüsünde, iki proje içeren **Çözüm Gezgini** (**Bıkesharing. Xamarin-UWP**) içinde örnek bir çözüm gösterilmektedir: **Bıkesharing. clients. Core** ve **Bıkesharing. clients. Windows**. Her proje birden çok dosya, klasör ve başvuru içerir. Kalın yazı tipiyle proje adı *Başlangıç projem*' dir; diğer bir deyişle, uygulamayı çalıştırdığınızda Başlatan projem. Hangi projenin başlangıç projesi olduğunu belirtebilirsiniz.
+Çözümlerinizi ve projelerinizi, **Çözüm Gezgini** adlı bir araç penceresinde görüntüleyebilirsiniz. Aşağıdaki ekran görüntüsünde, iki proje içeren **Çözüm Gezgini** (**Bıkesharing. Xamarin-UWP**) içinde örnek bir çözüm gösterilmektedir: **Bıkesharing. clients. Core** ve **Bıkesharing. clients. Windows**. Her proje birden çok dosya, klasör ve başvuru içerir. Kalın yazı tipiyle proje adı *Başlangıç projem*' dir; diğer bir deyişle, uygulamayı çalıştırdığınızda Başlatan projem. Hangi projenin başlangıç projesi olduğunu belirtebilirsiniz.
 
 ![Projelerle Çözüm Gezgini](./media/vside-solution-explorer-projects.png)
 
@@ -46,7 +48,7 @@ Bu şekilde, Visual Studio 'da uygulama geliştirmek için çözümler ve projel
 
 Bir kod kaynağı dosyası koleksiyonunuz varsa, bunları bir projeye kolayca ekleyebilirsiniz.
 
-1. Menüde, **File**  >  **New**  >  **Varolan koddan**dosya yeni proje ' yi seçin.
+1. Menüde, **File**  >  **New**  >  **Varolan koddan** dosya yeni proje ' yi seçin.
 
 1. **Varolan kod dosyalarından proje oluştur** sihirbazında, **ne tür proje oluşturmak** istediğiniz proje türünü seçin? açılan liste kutusu ve sonra **İleri** düğmesini seçin.
 
@@ -57,7 +59,7 @@ Bir kod kaynağı dosyası koleksiyonunuz varsa, bunları bir projeye kolayca ek
 
 ## <a name="add-files-to-a-solution"></a>Bir çözüme dosya ekleme
 
-Çözüme yönelik bir Benioku dosyası veya belirli bir proje altında mantıksal olarak çözüm düzeyine ait olan diğer dosyalar gibi birden çok proje için geçerli bir dosyanız varsa, bunları çözüme ekleyebilirsiniz. Bir çözüme öğe eklemek için **Çözüm Gezgini**çözüm düğümünün bağlam (sağ tıklama) menüsünde, **Add**  >  **Yeni öğe**Ekle ' yi seçin veya **Add**  >  **varolan öğeyi**ekleyin.
+Çözüme yönelik bir Benioku dosyası veya belirli bir proje altında mantıksal olarak çözüm düzeyine ait olan diğer dosyalar gibi birden çok proje için geçerli bir dosyanız varsa, bunları çözüme ekleyebilirsiniz. Bir çözüme öğe eklemek için **Çözüm Gezgini** çözüm düğümünün bağlam (sağ tıklama) menüsünde, **Add**  >  **Yeni öğe** Ekle ' yi seçin veya **Add**  >  **varolan öğeyi** ekleyin.
 
 ## <a name="create-a-net-project-that-targets-a-specific-version-of-the-net-framework"></a>.NET Framework belirli bir sürümünü hedefleyen bir .NET projesi oluşturma
 

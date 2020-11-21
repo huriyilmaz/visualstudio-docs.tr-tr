@@ -1,5 +1,7 @@
 ---
 title: Kod parçacıkları şema başvurusu
+description: IntelliSense kod parçacığı XML şeması ve kendi üretkenliğinizi artırmak için bunları nasıl kullanabileceğiniz hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 03/31/2020
 ms.topic: reference
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e31ec2be9ccce0b07b04746d2ed51ab3909cdd2c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b5030efcfe6fc774a1bb576f6056db7d9f8fd662
+ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84183684"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95006477"
 ---
 # <a name="code-snippets-schema-reference"></a>Kod parçacıkları şema başvurusu
 
@@ -588,7 +590,7 @@ Tek tek `SnippetType` öğeleri gruplandırır. `SnippetTypes`Öğe yoksa, kod p
 
 ## <a name="title-element"></a>Title öğesi
 
-Kod parçacığı için başlığı belirtir. Kod parçacığının öğesinde depolanan başlık kod `Title` **parçacığı seçicisinde** ve kod parçacığı Içindeki açıklama kod **parçacıkları yöneticisinde**görüntülenir.
+Kod parçacığı için başlığı belirtir. Kod parçacığının öğesinde depolanan başlık kod `Title` **parçacığı seçicisinde** ve kod parçacığı Içindeki açıklama kod **parçacıkları yöneticisinde** görüntülenir.
 
 ```xml
 <Title>
@@ -633,7 +635,7 @@ Nesnenin türünü belirtir. `Object`Öğesi, kod parçacığı için gereken an
 | - |-----------------|
 |[Nesne öğesi](../ide/code-snippets-schema-reference.md#object-element)|Kod parçacığının düzenleme yapabileceğiniz nesne alanlarını tanımlar.|
 
-Bir metin değeri gereklidir. Bu metin nesnenin türünü belirtir. Örneğin:
+Bir metin değeri gereklidir. Bu metin nesnenin türünü belirtir. Örnek:
 
 ```xml
 <Type>System.Data.SqlClient.SqlConnection</Type>

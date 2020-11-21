@@ -1,5 +1,7 @@
 ---
 title: Proje veya çözüm olmadan kod geliştirme
+description: Proje veya çözümlere gerek duymadan doğrudan Visual Studio 'da kod geliştirmeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 06/22/2020
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 68665acfcc3ea00f118dc19cf155cb3e6f5d1b36
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d706ccdc07abcc91e956878e1bc180be9c542223
+ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85769658"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95006009"
 ---
 # <a name="develop-code-in-visual-studio-without-projects-or-solutions"></a>Visual Studio’da projeler veya çözümler olmadan kod geliştirme
 
@@ -28,7 +30,7 @@ Visual Studio 'da kod dosyalarınızı açtıktan sonra, **Çözüm Gezgini** kl
 
 Aşağıdaki yollarla kodu Visual Studio 'da açabilirsiniz:
 
-- Visual Studio menü çubuğunda **Dosya**  >  **Open**  >  **klasörü**aç ' ı seçin ve ardından kod konumuna gidin.
+- Visual Studio menü çubuğunda **Dosya**  >  **Open**  >  **klasörü** aç ' ı seçin ve ardından kod konumuna gidin.
 
 - Kod içeren bir klasörün bağlam (sağ tıklama) menüsünde, **Visual Studio 'Da aç** komutunu seçin.
 
@@ -48,7 +50,7 @@ Aşağıdaki yollarla kodu Visual Studio 'da açabilirsiniz:
 
 ::: moniker-end
 
-- Klavye kullanıcısı kullanıyorsanız, **Ctrl** + **Shift** + **Alt** + Visual Studio 'da CTRL SHIFT alt**O** tuşlarına basın.
+- Klavye kullanıcısı kullanıyorsanız, **Ctrl** + **Shift** + **Alt** + Visual Studio 'da CTRL SHIFT alt **O** tuşlarına basın.
 
 - Kopyalanmış bir GitHub deposundan kodu açın.
 
@@ -62,7 +64,7 @@ Aşağıdaki örnekte, bir GitHub deposunun nasıl klonaçılacağı ve sonra ko
 
    ![GitHub kopyalama düğmesi](./media/VSIDE_Code_Clone.png)
 
-1. Visual Studio 'da **Takım Gezgini**açmak için **Takım Gezgini** sekmesini seçin. Sekmeyi görmüyorsanız, Takım Gezgini **Görünüm**' den açın  >  **Team Explorer**.
+1. Visual Studio 'da **Takım Gezgini** açmak için **Takım Gezgini** sekmesini seçin. Sekmeyi görmüyorsanız, Takım Gezgini **Görünüm**' den açın  >  **Team Explorer**.
 
 1. Takım Gezgini, **yerel Git depoları** bölümünde, **Kopyala** komutunu seçin ve ardından GitHub sayfasının URL 'sini metin kutusuna yapıştırın.
 
@@ -74,7 +76,7 @@ Aşağıdaki örnekte, bir GitHub deposunun nasıl klonaçılacağı ve sonra ko
 
    ![Kopyalanmış depo](./media/VSIDE_Code_Clone3.png)
 
-1. **Çözüm Gezgini**dosyaları görüntülemek Için **klasör görünümünü göster** komutunu seçin.
+1. **Çözüm Gezgini** dosyaları görüntülemek Için **klasör görünümünü göster** komutunu seçin.
 
    ![Klasör görünümünü göster](./media/VSIDE_Code_Clone3_show.png)
 

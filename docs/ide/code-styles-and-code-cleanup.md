@@ -1,5 +1,7 @@
 ---
 title: Kod stili seçenekleri ve kod Temizleme
+description: Visual Studio 'Yu kod Temizleme (Visual Studio 2019) ve Format Document (Visual Studio 2017) komutlarını kullanarak kod stili tercihleri uygulamak üzere nasıl yapılandıracağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 04/25/2019
 ms.topic: conceptual
 author: mikejo5000
@@ -10,12 +12,12 @@ f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.Basic.Code_Style.General
 ms.workload:
 - multiple
-ms.openlocfilehash: 82eec2a911ec113c42423fe14b06539e465e8bb3
-ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
+ms.openlocfilehash: 9172fff2dde1528c5ea382aea996d316e0738ea0
+ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91658392"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95006685"
 ---
 # <a name="code-style-preferences"></a>Kod stili tercihleri
 
@@ -58,7 +60,7 @@ Bu pencerede ayarlanan seçenekler, Visual Studio kişiselleştirme hesabınız 
 
 ### <a name="preference-and-severity"></a>Tercih ve önem derecesi
 
-Bu sayfadaki her kod stili ayarı için, her satırdaki açılan listeleri kullanarak **tercih** ve **önem derecesi** değerlerini ayarlayabilirsiniz. Önem derecesi **yalnızca yeniden düzenleme**, **öneri**, **Uyarı**veya **hata**olarak ayarlanabilir. Bir kod stili için [hızlı eylemleri](../ide/quick-actions.md) etkinleştirmek Istiyorsanız, **önem derecesi** ayarının **yalnızca yeniden düzenleme**dışında bir değere ayarlandığından emin olun. **Quick Actions** ![ ](media/light-bulb-dropdown.png) Tercih edilen stile otomatik olarak yeniden yazmak için hızlı eylemler ampul ışığı ampulü, hata ampulü ![ hatası ampul ](media/error-bulb.png) veya screwsürücü ![ screwdriver ](media/screwdriver.png) simgesi görüntülenir ve **hızlı eylemler** listesinde bir seçeneği belirleyebilirsiniz.
+Bu sayfadaki her kod stili ayarı için, her satırdaki açılan listeleri kullanarak **tercih** ve **önem derecesi** değerlerini ayarlayabilirsiniz. Önem derecesi **yalnızca yeniden düzenleme**, **öneri**, **Uyarı** veya **hata** olarak ayarlanabilir. Bir kod stili için [hızlı eylemleri](../ide/quick-actions.md) etkinleştirmek Istiyorsanız, **önem derecesi** ayarının **yalnızca yeniden düzenleme** dışında bir değere ayarlandığından emin olun. **Quick Actions** :::image type="icon" source="media/light-bulb-dropdown.png"::: Tercih edilmeyen bir stil kullanıldığında ve hızlı eylemler açık ampul, hata ampul :::image type="icon" source="media/error-bulb.png"::: veya screwsürücü :::image type="icon" source="media/screwdriver.png"::: simgesi görünür ve kodu tercih edilen stile otomatik olarak yeniden yazmak için **hızlı eylemler** listesinde bir seçenek belirleyebilirsiniz.
 
 ::: moniker range=">=vs-2019"
 
@@ -72,7 +74,7 @@ Bu sayfadaki her kod stili ayarı için, her satırdaki açılan listeleri kulla
 
 ::: moniker range="vs-2017"
 
-**Format Document** **Edit**  >  **Advanced**  >  Kod stili ayarlarınızı (bir editorconfig dosyası veya **kod stili** seçenekleri), yaptığı normal biçimlendirme (girintileme gibi) ile birlikte uygulamak için, biçim belgesi komutunu (Gelişmiş**Biçim belgesini**Düzenle) yapılandırabilirsiniz. Proje için bir *. editorconfig* dosyası varsa, bu ayarlar öncelik kazanır.
+**Format Document** **Edit**  >  **Advanced**  >  Kod stili ayarlarınızı (bir editorconfig dosyası veya **kod stili** seçenekleri), yaptığı normal biçimlendirme (girintileme gibi) ile birlikte uygulamak için, biçim belgesi komutunu (Gelişmiş **Biçim belgesini** Düzenle) yapılandırabilirsiniz. Proje için bir *. editorconfig* dosyası varsa, bu ayarlar öncelik kazanır.
 
 > [!NOTE]
 > **Belgeyi Biçimlendir** komutunu kullanarak kod stillerini uygulamak yalnızca C# kod dosyaları için kullanılabilir. Bu bir deneysel özelliktir.
@@ -101,7 +103,7 @@ C# kod dosyaları için, Visual Studio 2019, düzenleyicinin alt kısmındaki bi
 
 ![Visual Studio 2019 ' de kod temizlemeyi yapılandırma](media/configure-code-cleanup.png)
 
-Kod temizlemeyi yapılandırdıktan sonra, **Ctrl** + kod temizlemeyi çalıştırmak için Broom simgesine tıklayabilir veya CTRL**K**, **CTRL** + **E** tuşlarına basabilirsiniz. Ayrıca, tüm proje veya çözümünüz genelinde kod temizleme işlemini de çalıştırabilirsiniz. **Çözüm Gezgini**' de proje veya çözüm adına sağ tıklayın, **Çözümle ve kod temizleme**' yi seçin ve ardından **kod temizlemeyi Çalıştır**' ı seçin.
+Kod temizlemeyi yapılandırdıktan sonra, **Ctrl** + kod temizlemeyi çalıştırmak için Broom simgesine tıklayabilir veya CTRL **K**, **CTRL** + **E** tuşlarına basabilirsiniz. Ayrıca, tüm proje veya çözümünüz genelinde kod temizleme işlemini de çalıştırabilirsiniz. **Çözüm Gezgini**' de proje veya çözüm adına sağ tıklayın, **Çözümle ve kod temizleme**' yi seçin ve ardından **kod temizlemeyi Çalıştır**' ı seçin.
 
 ![Kod temizlemeyi tüm proje veya çözüm genelinde Çalıştır](media/run-code-cleanup-project-solution.png)
 

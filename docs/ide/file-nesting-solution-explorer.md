@@ -1,5 +1,7 @@
 ---
 title: Çözüm Gezgini için dosya iç içe kuralları
+description: Çözüm Gezgini dosya iç içe kuralları, önayarları ve özelleştirme hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 05/25/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,16 +10,16 @@ helpviewer_keywords:
 author: angelosp
 ms.author: angelpe
 manager: jillfra
-ms.openlocfilehash: a36ca2535785f72756ad66a69c2ebe4d7d5a373b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5425c255e85a2785383f1e8e718340fc2049e0c4
+ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "67587023"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95006698"
 ---
 # <a name="file-nesting-in-solution-explorer"></a>Çözüm Gezgini’nde dosya iç içe yerleştirme
 
-Onları düzenlemeye ve bulmayı kolaylaştırmak için ilgili dosyaları **Çözüm Gezgini** . Örneğin, bir projeye Windows Forms form eklerseniz, formun kod dosyası, **Çözüm Gezgini**formun altına iç içe geçmiş olur. ASP.NET Core projelerinde, iç içe geçmiş bir adım daha alınabilir. Dosya iç içe **ön ayarları arasından**, **varsayılan**ve **Web**arasında seçim yapabilirsiniz. Ayrıca [dosyaların iç içe geçmiş olduğunu](#customize-file-nesting) [ve çözüme özel ve projeye özel ayarlar oluşturmayı](#create-project-specific-settings)özelleştirebilirsiniz.
+Onları düzenlemeye ve bulmayı kolaylaştırmak için ilgili dosyaları **Çözüm Gezgini** . Örneğin, bir projeye Windows Forms form eklerseniz, formun kod dosyası, **Çözüm Gezgini** formun altına iç içe geçmiş olur. ASP.NET Core projelerinde, iç içe geçmiş bir adım daha alınabilir. Dosya iç içe **ön ayarları arasından**, **varsayılan** ve **Web** arasında seçim yapabilirsiniz. Ayrıca [dosyaların iç içe geçmiş olduğunu](#customize-file-nesting) [ve çözüme özel ve projeye özel ayarlar oluşturmayı](#create-project-specific-settings)özelleştirebilirsiniz.
 
 > [!NOTE]
 > Özelliği şu anda yalnızca ASP.NET Core projeleri için desteklenir.
@@ -148,7 +150,7 @@ Yalnızca bölüm içindeki dosyalar için değil, kural bölümlerinin kendiler
 
 ### <a name="file-nesting-button"></a>Dosya iç içe düğmesi
 
-Kendi özel ayarlarınız dahil olmak üzere tüm ayarları, **Çözüm Gezgini**içindeki aynı düğme aracılığıyla yönetebilirsiniz:
+Kendi özel ayarlarınız dahil olmak üzere tüm ayarları, **Çözüm Gezgini** içindeki aynı düğme aracılığıyla yönetebilirsiniz:
 
 ![Özel dosya iç içe kuralları etkinleştir](media/filenesting_activatecustom.png)
 
@@ -160,15 +162,15 @@ Her bir çözümün ve projenin sağ tıklama menüsünde (bağlam menüsü), ç
 
 Çözüme özgü ve projeye özel ayarlar, etkin Visual Studio ayarlarıyla birleştirilir. Örneğin, projeye özgü boş bir ayarlar dosyanız olabilir, ancak **Çözüm Gezgini** dosyaları iç içe geçirme işlemi devam etmektedir. İç içe geçme davranışı çözüme özgü ayarlardan ya da Visual Studio ayarlarından geliyor. Dosya iç içe geçme ayarlarını birleştirme önceliği: Visual Studio > çözüm > projesi.
 
-Visual Studio 'ya, **Tools**dosya iç içe ASP.NET Core Araçlar Seçenekler altında **çözümü ve proje ayarlarını yoksay** seçeneğini etkinleştirerek çözüme özgü ve projeye özgü ayarları yok saymasını söyleyebilirsiniz  >  **Options**  >  **ASP.NET Core**  >  **File Nesting**.
+Visual Studio 'ya, **Tools** dosya iç içe ASP.NET Core Araçlar Seçenekler altında **çözümü ve proje ayarlarını yoksay** seçeneğini etkinleştirerek çözüme özgü ve projeye özgü ayarları yok saymasını söyleyebilirsiniz  >  **Options**  >  **ASP.NET Core**  >  **File Nesting**.
 
-Bunun tersini yapabilir ve Visual Studio 'ya *yalnızca* çözüme özgü veya projeye özgü ayarları kullanarak **kök** düğümü **true**olarak ayarlayarak bunu söyleyebilirsiniz. Visual Studio, dosyaları bu düzeyde birleştirmeyi durduruyor ve hiyerarşiyi daha üst düzeydeki dosyalarla birleştirmez.
+Bunun tersini yapabilir ve Visual Studio 'ya *yalnızca* çözüme özgü veya projeye özgü ayarları kullanarak **kök** düğümü **true** olarak ayarlayarak bunu söyleyebilirsiniz. Visual Studio, dosyaları bu düzeyde birleştirmeyi durduruyor ve hiyerarşiyi daha üst düzeydeki dosyalarla birleştirmez.
 
 Çözüme özgü ve projeye özgü ayarlar kaynak denetimine iade edilebilir ve kod temeli üzerinde çalışma yapan tüm takım bunları paylaşabilir.
 
 ## <a name="disable-file-nesting-rules-for-a-project"></a>Bir proje için dosya iç içe kurallarını devre dışı bırak
 
-Belirli çözümler veya projeler için, **Ekle**yerine bir sağlayıcının **Kaldır** eylemini kullanarak mevcut genel dosya iç içe kurallarını devre dışı bırakabilirsiniz. Örneğin, bir projeye aşağıdaki ayar kodunu eklerseniz, bu belirli proje için genel olarak mevcut olabilecek tüm **PathSegment** kuralları devre dışı bırakılır:
+Belirli çözümler veya projeler için, **Ekle** yerine bir sağlayıcının **Kaldır** eylemini kullanarak mevcut genel dosya iç içe kurallarını devre dışı bırakabilirsiniz. Örneğin, bir projeye aşağıdaki ayar kodunu eklerseniz, bu belirli proje için genel olarak mevcut olabilecek tüm **PathSegment** kuralları devre dışı bırakılır:
 
 ```json
 "dependentFileProviders": {

@@ -1,5 +1,7 @@
 ---
 title: Dosyalarda Bul
+description: Dosya içinde Bul özelliğini ve belirli bir dosya kümesinde arama yapmak için nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -19,12 +21,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1a32720475bda124c563d45133028f43b4f1b9cd
-ms.sourcegitcommit: e132a870ec198fdcec289227f1a0c1c48fef070c
+ms.openlocfilehash: c9aa0d1523c8ef8be73a3c5e73255ce1eeb32d57
+ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93344513"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95006581"
 ---
 # <a name="find-in-files"></a>Dosyalarda Bul
 
@@ -34,11 +36,11 @@ ms.locfileid: "93344513"
 
 ## <a name="to-display-find-in-files"></a>Dosyalarda bul ' i görüntüleme
 
-1. Menü çubuğunda **Düzenle**  >  **Bul ve Değiştir** ' i seçin.
+1. Menü çubuğunda **Düzenle**  >  **Bul ve Değiştir**' i seçin.
 
 1. **Dosyalarda bul '** ı seçin.
 
-Bir bul işlemini iptal etmek için **CTRL**  +  **Kes** ' e basın.
+Bir bul işlemini iptal etmek için **CTRL**  +  **Kes**' e basın.
 
 > [!NOTE]
 > Bul ve Değiştir aracı, `Hidden` veya özniteliğiyle Dizin aramaz `System` .
@@ -92,11 +94,11 @@ Belirli türlerin dosyalarını bulacak önceden yapılandırılmış bir arama 
 
 **Arama sonuçları 1 penceresi**
 
-Seçildiğinde, geçerli aramanın sonuçları, **sonuçları Bul 1** penceresinin içeriğinin yerini alır. Bu pencere, arama sonuçlarınızı göstermek için otomatik olarak açılır. Bu pencereyi el ile açmak için, **Görünüm** menüsünde **diğer pencereler** ' i seçin ve **sonuçları Bul 1** ' i seçin.
+Seçildiğinde, geçerli aramanın sonuçları, **sonuçları Bul 1** penceresinin içeriğinin yerini alır. Bu pencere, arama sonuçlarınızı göstermek için otomatik olarak açılır. Bu pencereyi el ile açmak için, **Görünüm** menüsünde **diğer pencereler** ' i seçin ve **sonuçları Bul 1**' i seçin.
 
 **Sonuçları bul 2 penceresi**
 
-Seçildiğinde, geçerli aramanın sonuçları, **bulma sonuçları 2** penceresinin içeriğinin yerini alır. Bu pencere, arama sonuçlarınızı göstermek için otomatik olarak açılır. Bu pencereyi el ile açmak için, **Görünüm** menüsünde **diğer pencereler** ' i seçin ve **sonuçları bul 2** ' yi seçin.
+Seçildiğinde, geçerli aramanın sonuçları, **bulma sonuçları 2** penceresinin içeriğinin yerini alır. Bu pencere, arama sonuçlarınızı göstermek için otomatik olarak açılır. Bu pencereyi el ile açmak için, **Görünüm** menüsünde **diğer pencereler** ' i seçin ve **sonuçları bul 2**' yi seçin.
 
 **Yalnızca dosya adlarını görüntüle**
 

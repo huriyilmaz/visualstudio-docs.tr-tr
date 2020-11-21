@@ -1,5 +1,6 @@
 ---
 title: JSON dosyalarıyla derleme hata ayıklama görevlerini özelleştirme
+description: Visual Studio 'Nun tanımadığı bir kod temeli çalıştırmak ve hata ayıklamak için bazı yapılandırma ayrıntılarını sağlamak üzere görevleri özelleştirmeyi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/21/2018
 ms.topic: conceptual
@@ -14,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 795fbb099654c8b947c1c8e2941fad015a574717
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: 26f529fe8d9d8731375c4aa0783dde0dadb28a1d
+ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93046234"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95006464"
 ---
 # <a name="customize-build-and-debug-tasks-for-open-folder-development"></a>"Klasör aç" geliştirmesi için derleme ve hata ayıklama görevlerini özelleştirin
 
@@ -31,8 +32,8 @@ Aşağıdaki *. JSON* dosyalarını kullanarak proje-Less kod tabanınızı öze
 
 |Dosya adı|Amaç|
 |-|-|
-|*Üzerindetasks.vs.js*|Özel derleme komutları ve derleyici anahtarları ve rastgele (derleme olmayan ilişkili) görevleri belirtin.<br>**Çözüm Gezgini** sağ tıklama menü öğesi **görevleri Yapılandır** ' ı kullanarak erişilir.|
-|*Üzerindelaunch.vs.js*|Hata ayıklama için komut satırı bağımsız değişkenlerini belirtin.<br>**Çözüm Gezgini** menü öğesi **hata ayıklama ve başlatma ayarları** ' na sağ tıklayın.|
+|*Üzerindetasks.vs.js*|Özel derleme komutları ve derleyici anahtarları ve rastgele (derleme olmayan ilişkili) görevleri belirtin.<br>**Çözüm Gezgini** sağ tıklama menü öğesi **görevleri Yapılandır**' ı kullanarak erişilir.|
+|*Üzerindelaunch.vs.js*|Hata ayıklama için komut satırı bağımsız değişkenlerini belirtin.<br>**Çözüm Gezgini** menü öğesi **hata ayıklama ve başlatma ayarları**' na sağ tıklayın.|
 
 Bu *. JSON* dosyaları, kod tabanınızın kök klasöründe *vs. ile* adlı gizli bir klasörde bulunur. Dosyalarda *tasks.vs.js* ve *launch.vs.js* , **Çözüm Gezgini** bir dosya veya klasör üzerinde **görevleri yapılandırma** veya **hata ayıklama ve başlatma ayarları** ' nı seçtiğinizde, Visual Studio tarafından gerekli bir şekilde oluşturulur. Kullanıcılar genellikle kaynak denetimine denetlemek istemediğinden, bu *. JSON* dosyaları gizlidir. Ancak onları kaynak denetimine denetleyebilmek istiyorsanız, dosyaları görünür oldukları kod tabanınızın köküne sürükleyin.
 
@@ -41,7 +42,7 @@ Bu *. JSON* dosyaları, kod tabanınızın kök klasöründe *vs. ile* adlı giz
 
 ## <a name="define-tasks-with-tasksvsjson"></a>tasks.vs.jsile görevleri tanımlama
 
-Mevcut çalışma alanınızda bulunan dosyalar üzerinde, derleme betikleri veya diğer dış işlemleri otomatikleştirebilir ve bunları doğrudan IDE 'de görevler olarak çalıştırabilirsiniz. Bir dosya veya klasöre sağ tıklayıp **görevleri Yapılandır** ' ı seçerek yeni bir görev yapılandırabilirsiniz.
+Mevcut çalışma alanınızda bulunan dosyalar üzerinde, derleme betikleri veya diğer dış işlemleri otomatikleştirebilir ve bunları doğrudan IDE 'de görevler olarak çalıştırabilirsiniz. Bir dosya veya klasöre sağ tıklayıp **görevleri Yapılandır**' ı seçerek yeni bir görev yapılandırabilirsiniz.
 
 ![Görevler menüsünü Yapılandır](../ide/media/customize-configure-tasks-menu.png)
 
@@ -154,7 +155,7 @@ Aşağıdaki örnekte, tek bir görevi tanımlayan bir dosya *tasks.vs.js* göst
 - `args`Özelliği, çağrılan komuta geçirilecek bağımsız değişkenleri belirtir.
 - `${file}`Makro seçili dosyayı **Çözüm Gezgini** alır.
 
-*tasks.vs.js* kaydettikten sonra, klasördeki herhangi bir *. js* dosyasına sağ tıklayıp **yankı dosya adı** ' nı seçebilirsiniz. Dosya adı **Çıkış** penceresinde görüntülenir.
+*tasks.vs.js* kaydettikten sonra, klasördeki herhangi bir *. js* dosyasına sağ tıklayıp **yankı dosya adı**' nı seçebilirsiniz. Dosya adı **Çıkış** penceresinde görüntülenir.
 
 > [!NOTE]
 > Kod tabanınız dosya *tasks.vs.js* içermiyorsa, **Çözüm Gezgini** bir dosyanın sağ tıklama veya bağlam menüsünden **görevleri Yapılandır** ' ı seçerek bir tane oluşturabilirsiniz.
@@ -179,7 +180,7 @@ Sonraki örnek, *bin* dizininin dosyalarını ve alt klasörlerini listeleyen bi
 
 - `${outDir}` , bloğundan önce ilk tanımlanan özel bir makrodur `tasks` . Daha sonra `args` özelliğinde çağırılır.
 
-Bu görev tüm dosyalar için geçerlidir. **Çözüm Gezgini** bir dosya üzerinde bağlam menüsünü açtığınızda, görevin ad **listesi çıktıları** menünün alt kısmında görünür. **Liste çıktıları** ' nı seçtiğinizde, *bin* dizininin Içeriği Visual Studio 'daki **Çıkış** penceresinde listelenir.
+Bu görev tüm dosyalar için geçerlidir. **Çözüm Gezgini** bir dosya üzerinde bağlam menüsünü açtığınızda, görevin ad **listesi çıktıları** menünün alt kısmında görünür. **Liste çıktıları**' nı seçtiğinizde, *bin* dizininin Içeriği Visual Studio 'daki **Çıkış** penceresinde listelenir.
 
 ![Bağlam menüsünde rastgele görev](../ide/media/customize-arbitrary-task-menu.png)
 
@@ -217,12 +218,12 @@ Alanında adını belirterek herhangi bir dosya veya klasör için görevler olu
 |Makroya|Description|
 |-|-|
 |`${env.<VARIABLE>}`| Herhangi bir ortam değişkenini belirtir (örneğin, $ {env. Geliştirici komut istemi için ayarlanan PATH}, $ {env. COMSPEC} ve benzeri). Daha fazla bilgi için bkz. [Visual Studio Için Geliştirici komut istemi](/dotnet/framework/tools/developer-command-prompt-for-vs).|
-|`${workspaceRoot}`| Çalışma alanı klasörünün tam yolu (örneğin, *C:\sources\hello* )|
-|`${file}`| Bu görevi çalıştırmak için seçilen dosya veya klasörün tam yolu (örneğin, *C:\sources\hello\src\hello.js* )|
-|`${relativeFile}`| Dosya veya klasörün göreli yolu (örneğin, *src\hello.js* )|
-|`${fileBasename}`| Dosyanın yolu veya uzantısı olmayan adı (örneğin, *Merhaba* )|
-|`${fileDirname}`| Dosya adı hariç dosyanın tam yolu (örneğin, *C:\sources\hello\src* )|
-|`${fileExtname}`| Seçilen dosyanın uzantısı (örneğin,  *. js* )|
+|`${workspaceRoot}`| Çalışma alanı klasörünün tam yolu (örneğin, *C:\sources\hello*)|
+|`${file}`| Bu görevi çalıştırmak için seçilen dosya veya klasörün tam yolu (örneğin, *C:\sources\hello\src\hello.js*)|
+|`${relativeFile}`| Dosya veya klasörün göreli yolu (örneğin, *src\hello.js*)|
+|`${fileBasename}`| Dosyanın yolu veya uzantısı olmayan adı (örneğin, *Merhaba*)|
+|`${fileDirname}`| Dosya adı hariç dosyanın tam yolu (örneğin, *C:\sources\hello\src*)|
+|`${fileExtname}`| Seçilen dosyanın uzantısı (örneğin,  *. js*)|
 
 ## <a name="configure-debugging-with-launchvsjson"></a>launch.vs.jsile hata ayıklamayı yapılandırma
 
@@ -252,13 +253,13 @@ CMake projelerini hata ayıklama için yapılandırmak için bkz. [CMake hata ay
    }
    ```
 
-1. Sonra, **Çözüm Gezgini** ' de çalıştırılabilir dosyaya sağ tıklayın ve **Başlangıç öğesi olarak ayarla** ' yı seçin.
+1. Sonra, **Çözüm Gezgini**' de çalıştırılabilir dosyaya sağ tıklayın ve **Başlangıç öğesi olarak ayarla**' yı seçin.
 
    Yürütülebilir dosya, kod tabanınız için başlangıç öğesi olarak atanır ve hata ayıklama **Başlangıç** düğmesinin başlığı, yürütülebilir dosyanızın adını yansıtacak şekilde değişir.
 
    ![Özelleştirilmiş Başlangıç düğmesi](media/customize-start-button.png)
 
-   **F5** ' i seçtiğinizde, hata ayıklayıcı önceden ayarlamış olduğunuz herhangi bir kesme noktasında başlatılır ve duraklar. Tüm tanıdık hata ayıklayıcı pencereleri kullanılabilir ve çalışır.
+   **F5**' i seçtiğinizde, hata ayıklayıcı önceden ayarlamış olduğunuz herhangi bir kesme noktasında başlatılır ve duraklar. Tüm tanıdık hata ayıklayıcı pencereleri kullanılabilir ve çalışır.
 
    > [!IMPORTANT]
    > C++ açık klasör projelerinde özel derleme ve hata ayıklama görevleriyle ilgili ek ayrıntılar için bkz. [Visual Studio 'Da c++ derleme sistemleri Için klasörü açma desteği](/cpp/build/open-folder-projects-cpp).
