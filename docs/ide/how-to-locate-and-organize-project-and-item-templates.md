@@ -1,5 +1,7 @@
 ---
 title: Şablonları bulma
+description: Proje ve öğe şablonlarını bulmayı ve düzenlemeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 01/02/2018
 ms.topic: how-to
 helpviewer_keywords:
@@ -9,12 +11,12 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: ecbc5421562ca79466ace0d93a16ac4e3635ddfb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 517918bf7e56381a4d4d2a36fc43f976a07c29ea
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85284249"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597164"
 ---
 # <a name="how-to-locate-and-organize-project-and-item-templates"></a>Nasıl yapılır: proje ve öğe şablonlarını bulma ve düzenleme
 
@@ -87,7 +89,7 @@ Kullanıcı şablonu dizinine *. vstemplate* dosyasını içeren bir sıkıştı
 ::: moniker-end
 
 > [!TIP]
-> **Araçlar**  >  **Seçenekler**  >  **projelerinde ve çözüm**  >  **konumlarında**Kullanıcı şablonlarının bilinen konumunu değiştirebilirsiniz.
+> **Araçlar**  >  **Seçenekler**  >  **projelerinde ve çözüm**  >  **konumlarında** Kullanıcı şablonlarının bilinen konumunu değiştirebilirsiniz.
 
 ::: moniker range="vs-2017"
 
@@ -120,7 +122,7 @@ Kullanıcı şablonu dizinine *. vstemplate* dosyasını içeren bir sıkıştı
 
 1. Proje oluşturun veya var olan bir projeyi açın. Ardından, **Proje** menüsünde **Yeni öğe Ekle**' yi seçin.
 
-   **HelloWorld** kategorisi, **Yeni öğe Ekle** iletişim kutusunda, **yüklü** > **Visual C# öğeleri**altında görünür.
+   **HelloWorld** kategorisi, **Yeni öğe Ekle** iletişim kutusunda, **yüklü** > **Visual C# öğeleri** altında görünür.
 
 ### <a name="display-templates-in-parent-categories"></a>Şablonları üst kategorilerde görüntüle
 
@@ -146,7 +148,7 @@ Alt kategorilerindeki şablonları, `NumberOfParentCategoriesToRollUp` *. vstemp
 
 1. *. Vstemplate* dosyasını kaydedin ve kapatın.
 
-1. Şablonunuzda dosyaları seçin, seçime sağ tıklayın ve **Send to** > **Sıkıştırılmış (daraltılmış) klasöre**Gönder ' i seçin.
+1. Şablonunuzda dosyaları seçin, seçime sağ tıklayın ve **Send to** > **Sıkıştırılmış (daraltılmış) klasöre** Gönder ' i seçin.
 
    Dosyalar bir *. zip* dosyasında sıkıştırılır.
 

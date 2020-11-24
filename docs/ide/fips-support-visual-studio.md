@@ -1,6 +1,7 @@
 ---
 title: FIPS için Visual Studio desteği
 titleSuffix: ''
+description: Visual Studio 'Nun, Windows, Azure ve .NET için Standart yayın 140-2 tarafından onaylanan Federal bilgi işlem modunu nasıl desteklediği hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 04/14/2020
 ms.topic: conceptual
@@ -9,18 +10,18 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 56fe4fa2381502f01a952977fe2d506dc7792231
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: ddf7831df3a820c757120159d6d367b884d224a4
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93045511"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597489"
 ---
 # <a name="visual-studio-support-for-the-fips-140-2-approved-mode-of-operation"></a>FIPS 140-2 tarafından onaylanan işlem modu için Visual Studio desteği
 
 [Sürüm 16,4](/visualstudio/releases/2019/release-notes-v16.4/)' den başlayarak, Visual Studio 2019, Windows, Azure ve .net Için Federal bilgi işleme standardı (FIPS) yayını 140-2 onaylı işlem modunu destekler. Visual Studio, [sürüm 16,5](/visualstudio/releases/2019/release-notes-archive-v16.5)' de, [uzak bir Linux sistemini hedefleyen C++ UYGULAMALARı](/cpp/linux/set-up-fips-compliant-secure-remote-linux-development/)geliştirirken artık FIPS 140-2 tarafından onaylanan işlem modunu desteklemektedir.
 
-Visual Studio için FIPS 140-2 onaylı modunu yapılandırmak için [.NET Framework 4,8](https://dotnet.microsoft.com/download/dotnet-framework/net48) ' yi yükleyip Grup İlkesi ayarını etkinleştirin ve **Sistem şifrelemesi: şifreleme, karma ve imzalama için FIPS Ile uyumlu algoritmalar kullanın** .
+Visual Studio için FIPS 140-2 onaylı modunu yapılandırmak için [.NET Framework 4,8](https://dotnet.microsoft.com/download/dotnet-framework/net48) ' yi yükleyip Grup İlkesi ayarını etkinleştirin ve **Sistem şifrelemesi: şifreleme, karma ve imzalama için FIPS Ile uyumlu algoritmalar kullanın**.
 
 FIPS 140-2 onaylı işlem modu ve bunun nasıl etkinleştirileceği hakkında daha fazla bilgi için bkz. [fıps 140-2 doğrulaması](/windows/security/threat-protection/fips-140-validation/).
 

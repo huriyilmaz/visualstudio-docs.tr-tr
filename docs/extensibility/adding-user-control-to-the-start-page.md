@@ -1,5 +1,7 @@
 ---
 title: Başlangıç sayfasına kullanıcı denetimi ekleniyor | Microsoft Docs
+description: Visual Studio 'da başlangıç sayfasına Windows Presentation Foundation (WPF) Kullanıcı denetimi eklemeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -13,12 +15,12 @@ manager: jillfra
 ms.workload:
 - vssdk
 monikerRange: vs-2017
-ms.openlocfilehash: 1d093ecc8afd9fe822c19c2c1f2ceb5765208865
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: fa812b477f88b03b8f0d4bdcba6c69f009ec2894
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012002"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597554"
 ---
 # <a name="add-user-control-to-the-start-page"></a>Başlangıç sayfasına kullanıcı denetimi Ekle
 
@@ -111,7 +113,7 @@ WPF Kullanıcı denetimi uygulamak için XAML 'de Kullanıcı arabirimi (UI) olu
 2. SetButton_Click olay Işleyicisini aşağıda gösterildiği gibi girin.
 
     ```csharp
-    private void SetButton_Click(object sender, RoutedEventArgs e)
+    private void SetButton_Click(object sender, RoutedEventArgs e)
     {
         try
         {
@@ -177,9 +179,9 @@ Bu denetimi başlangıç sayfası projesi için kullanılabilir hale getirmek i�
 
 ## <a name="test-a-manually-created-custom-start-page"></a>El ile oluşturulan özel başlangıç sayfasını test etme
 
-1. XAML dosyanızı ve destekleyici metin dosyalarını veya biçimlendirme dosyalarını, *%USERPROFILE%\My SiteStudio 2015 \ StartPages \\ * klasörüne kopyalayın.
+1. XAML dosyanızı ve destekleyici metin dosyalarını veya biçimlendirme dosyalarını, *%USERPROFILE%\My SiteStudio 2015 \ StartPages \\* klasörüne kopyalayın.
 
-2. Başlangıç sayfanız, Visual Studio tarafından yüklenmeyen derlemelerdeki herhangi bir denetime veya türe başvuruyorsa, derlemeleri kopyalayın ve sonra _Visual Studio yükleme klasörü_**\Common7\IDE\PrivateAssemblies \\ **' na yapıştırın.
+2. Başlangıç sayfanız, Visual Studio tarafından yüklenmeyen derlemelerdeki herhangi bir denetime veya türe başvuruyorsa, derlemeleri kopyalayın ve sonra _Visual Studio yükleme klasörü_**\Common7\IDE\PrivateAssemblies \\**' na yapıştırın.
 
 3. Visual Studio komut isteminde **devenv/rootsuffix exp** yazarak Visual Studio 'nun deneysel bir örneğini açın.
 

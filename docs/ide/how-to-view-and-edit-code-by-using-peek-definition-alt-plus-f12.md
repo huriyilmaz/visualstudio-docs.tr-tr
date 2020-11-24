@@ -1,5 +1,7 @@
 ---
 title: Peek tanımını kullanma
+description: Şu anda yazmakta olduğunuz koddan bağlam değiştirmek zorunda kalmadan kodunuzu görüntülemek ve düzenlemek için Özet Tanım komutunu nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 01/10/2018
 ms.topic: how-to
 author: TerryGLee
@@ -7,12 +9,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 753d26e2c48f6263ccbc9c403f255948b5077924
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0b706e730767c7c79fbeebc11291ecd11f4635b6
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86092316"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95596930"
 ---
 # <a name="how-to-view-and-edit-code-by-using-peek-definition-altf12"></a>Nasıl yapılır: Özet tanımı 'nı kullanarak kodu görüntüleme ve düzenleme (alt + F12)
 
@@ -24,7 +26,7 @@ Yazmakta olduğunuz koddan çıkmadan kodu görüntülemek ve düzenlemek için 
 
 ### <a name="open-a-peek-definition-window"></a>Bir Özet Tanım penceresi açın
 
-1. İncelemek istediğiniz bir tür veya üyenin sağ tıklama menüsünden **Açıklama tanımı** ' nı seçerek bir tanımına göz atmayı sağlayabilirsiniz. Seçenek etkinleştirilirse, **CTRL** (veya başka bir değiştirici) tuşuna basarak ve üye adına tıklayarak bir tanımına da göz atmayı sağlayabilirsiniz. Ya da klavyeden **alt** + **F12**tuşuna basın.
+1. İncelemek istediğiniz bir tür veya üyenin sağ tıklama menüsünden **Açıklama tanımı** ' nı seçerek bir tanımına göz atmayı sağlayabilirsiniz. Seçenek etkinleştirilirse, **CTRL** (veya başka bir değiştirici) tuşuna basarak ve üye adına tıklayarak bir tanımına da göz atmayı sağlayabilirsiniz. Ya da klavyeden **alt** + **F12** tuşuna basın.
 
      Bu çizimde adlı bir yöntem için Özet **tanım** penceresi gösterilmektedir `Print()` :
 
@@ -60,7 +62,7 @@ Bir Özet **tanım** penceresi içinde düzenlemeye başladığınızda, değiş
 
 1. **Araçlar**  >  **Seçenekler**  >  **metin düzenleyici**  >  **genel**' e gidin.
 
-1. **Göz atma görünümünde açık tanım**seçeneğini belirleyin.
+1. **Göz atma görünümünde açık tanım** seçeneğini belirleyin.
 
 1. **Seçenekler** iletişim kutusunu kapatmak için **Tamam** ' ı tıklatın.
 

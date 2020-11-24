@@ -1,5 +1,7 @@
 ---
 title: Veri kaynağını tanımlamak için yapılandırma dosyası kullan
+description: Bir veri kaynağını tanımlayan bir app.config dosyası oluşturmaya başlamadan önce birim testi için bir app.config dosyasında tanımlanan veri kaynağını nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4a4f5731a828eb04e57f56a46fe399125b5ded2f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 06e33721fa4ac1cc657c79c8aa68b35e5ceec00b
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75776152"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95598503"
 ---
 # <a name="walkthrough-using-a-configuration-file-to-define-a-data-source"></a>İzlenecek yol: bir veri kaynağı tanımlamak için yapılandırma dosyası kullanma
 
@@ -32,7 +34,7 @@ Bu izlenecek yol, birim testi için bir *app.config* dosyasında tanımlanan bir
 
 - Sınıfını kullanarak veri kaynaklarına erişme <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute> .
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Bu kılavuzu tamamlamak için gerekenler:
 
@@ -46,7 +48,7 @@ Bu kılavuzu tamamlamak için gerekenler:
 
 1. Test projenizin zaten bir *app.config* dosyası varsa, [özel yapılandırma tanımla bölümüne](#define-a-custom-configuration-section)gidin.
 
-2. **Çözüm Gezgini**' de test projenize sağ tıklayın ve ardından **Add**  >  **Yeni öğe**Ekle ' yi seçin.
+2. **Çözüm Gezgini**' de test projenize sağ tıklayın ve ardından **Add**  >  **Yeni öğe** Ekle ' yi seçin.
 
      **Yeni öğe Ekle** penceresi açılır.
 
@@ -190,9 +192,9 @@ Artık bir *app.config* dosyası tanımlandığına göre, *app.config* dosyası
 
 ### <a name="to-create-a-microsoft-access-data-source"></a>Microsoft Access veri kaynağı oluşturmak için
 
-1. *Testdatasource. accdb*adlı bir Microsoft Access veritabanı oluşturun.
+1. *Testdatasource. accdb* adlı bir Microsoft Access veritabanı oluşturun.
 
-2. Bir tablo oluşturun ve `MyDataTable` *testdatasource. accdb*içinde adlandırın.
+2. Bir tablo oluşturun ve `MyDataTable` *testdatasource. accdb* içinde adlandırın.
 
 3. `MyDataTable`Adında `Arg1` ve `Arg2` `Number` veri türünü kullanarak iki alan oluşturun.
 
@@ -204,9 +206,9 @@ Artık bir *app.config* dosyası tanımlandığına göre, *app.config* dosyası
 
 ### <a name="to-create-a-microsoft-excel-data-source"></a>Microsoft Excel veri kaynağı oluşturmak için
 
-1. *data.xlsx*adlı bir Microsoft Excel elektronik tablosu oluşturun.
+1. *data.xlsx* adlı bir Microsoft Excel elektronik tablosu oluşturun.
 
-2. `Sheet1` *data.xlsx*içinde zaten mevcut değilse adlı bir sayfa oluşturun.
+2. `Sheet1` *data.xlsx* içinde zaten mevcut değilse adlı bir sayfa oluşturun.
 
 3. İki sütunlu üst bilgi oluşturun ve bunları `Val1` `Val2` içinde ve olarak adlandırın `Sheet1` .
 

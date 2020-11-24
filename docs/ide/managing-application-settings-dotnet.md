@@ -1,5 +1,7 @@
 ---
 title: Uygulama ayarlarını yönetme (.NET)
+description: Uygulama kodunda bulunmayan, ancak çalışma zamanında gerekli olan uygulama ayarlarını (eskiden dinamik özellikler olarak adlandırılır) yönetmeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -11,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8d792a6147795f81211203fc442539371f3caa91
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f62e03210e83f434bd32d08c3fe0f7b2b539155e
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75593713"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95596904"
 ---
 # <a name="manage-application-settings-net"></a>Uygulama ayarlarını yönetme (.NET)
 
@@ -57,7 +59,7 @@ Uygulama kapsamlı bir ayar oluşturduğunuzda (örneğin, bir veritabanı bağl
 Kullanıcı kapsamlı bir ayar oluşturduğunuzda (örneğin, varsayılan yazı tipi, giriş sayfası veya pencere boyutu), [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] etiketi ile *app.config* kaydeder `<userSettings>` .
 
 > [!IMPORTANT]
-> Bağlantı dizelerini *app.config*depoladığınızda, bağlantı dizesinde parolalar veya sunucu yolları gibi hassas bilgilerin görüntülenmesinden kaçınmak için önlemler almalısınız.
+> Bağlantı dizelerini *app.config* depoladığınızda, bağlantı dizesinde parolalar veya sunucu yolları gibi hassas bilgilerin görüntülenmesinden kaçınmak için önlemler almalısınız.
 >
 > Bir dış kaynaktan bir kullanıcı KIMLIĞI ve parola sağlayan bağlantı dizesi bilgileri alırsanız, Bağlantı dizenizi oluşturmak için kullandığınız değerlerin bağlantınızın davranışını değiştiren ek bağlantı dizesi parametreleri içermediğinden emin olmak için dikkatli olmanız gerekir.
 >
@@ -78,7 +80,7 @@ Ayar gruplarının kolay yönetimi için projenize özelleştirilmiş ayarlar do
 
 Visual Basic projelerinde, nesnesini kullanarak çalışma zamanında uygulama ayarlarına erişebilirsiniz `My.Settings` . **Ayarlar sayfasında,** *Settings. vb* dosyasını görüntülemek için **kodu görüntüle** düğmesine tıklayın. *Settings. vb* , `Settings` Ayarlar sınıfında bu olayları idare etmenizi sağlayan sınıfını tanımlar: <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> ,, <xref:System.Configuration.ApplicationSettingsBase.PropertyChanged> <xref:System.Configuration.ApplicationSettingsBase.SettingsLoaded> ve <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> . `Settings` *Settings. vb* dosyasındaki sınıfın, tüm oluşturulan sınıfı değil yalnızca kullanıcıya ait kodu görüntüleyen kısmi bir sınıf olduğunu unutmayın. Nesnesini kullanarak uygulama ayarlarına erişme hakkında daha fazla bilgi için `My.Settings` bkz. [erişim uygulama ayarları (.NET Framework)](/dotnet/visual-basic/developing-apps/programming/app-settings/accessing-application-settings).
 
-Kullanıcının çalışma zamanında değiştiği kullanıcı kapsamlı ayarların değerleri (örneğin, bir formun konumu) *user.config* bir dosyada depolanır. Varsayılan değerlerin *app.config*hala kaydedildiğinden emin olun.
+Kullanıcının çalışma zamanında değiştiği kullanıcı kapsamlı ayarların değerleri (örneğin, bir formun konumu) *user.config* bir dosyada depolanır. Varsayılan değerlerin *app.config* hala kaydedildiğinden emin olun.
 
 Çalışma zamanında Kullanıcı tanımlı herhangi bir ayar değiştirilmişse, örneğin, uygulamayı test etmek ve bu ayarları varsayılan değerlerine sıfırlamak istiyorsanız, **Synchronize** düğmesine tıklayın.
 

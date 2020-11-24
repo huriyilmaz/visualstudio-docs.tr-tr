@@ -1,5 +1,7 @@
 ---
 title: Araç penceresine kısayol menüsü ekleme | Microsoft Docs
+description: Bir düğme, metin kutusu veya pencere arka planı sağ tıklandığında görüntülenen Visual Studio 'daki bir araç penceresine kısayol menüsü eklemeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: aa8d6f5c47289e66a51653e39d31890f09e8ceb2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2e14d948bf5d4b637002ca1f2ec8be37b64dc22b
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904194"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597879"
 ---
 # <a name="add-a-shortcut-menu-in-a-tool-window"></a>Araç penceresine kısayol menüsü ekleme
 Bu izlenecek yol, bir araç penceresine kısayol menüsü yerleştirir. Kısayol menüsü, bir Kullanıcı bir düğmeyi, metin kutusunu veya pencere arka planını sağ tıklattığında görüntülenen bir menü olur. Kısayol menüsündeki komutlar, diğer menülerdeki veya araç çubuklarındaki komutlarla aynı şekilde davranır. Bir kısayol menüsünü desteklemek için, *. vsct* dosyasında belirtin ve fareyi sağ tıklaması karşılığında görüntüleyin.
@@ -39,7 +41,7 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
 ## <a name="specifying-the-shortcut-menu"></a>Kısayol menüsünü belirtme
 Bu kılavuzda gösterildiği gibi bir kısayol menüsü, kullanıcının araç penceresinin arka planını göstermek için kullanılan bir renk listesinden seçim yapmanızı sağlar.
 
-1. *ShortcutMenuPackage. vsct*Içinde, guidShortcutMenuPackageCmdSet adlı GuidSymbol öğesinde bulun ve kısayol menüsünü, kısayol menü grubunu ve menü seçeneklerini bildirin. GuidSymbol öğesi şu şekilde görünmelidir:
+1. *ShortcutMenuPackage. vsct* Içinde, guidShortcutMenuPackageCmdSet adlı GuidSymbol öğesinde bulun ve kısayol menüsünü, kısayol menü grubunu ve menü seçeneklerini bildirin. GuidSymbol öğesi şu şekilde görünmelidir:
 
     ```xml
     <GuidSymbol name="guidShortcutMenuPackageCmdSet" value="{00000000-0000-0000-0000-0000}"> // your GUID here
@@ -116,10 +118,10 @@ Bu kılavuzda gösterildiği gibi bir kısayol menüsü, kullanıcının araç p
 
     ```csharp
     public const string guidShortcutMenuPackageCmdSet = "00000000-0000-0000-0000-00000000"; // your GUID will differ
-    public const int ColorMenu = 0x1000;
-    public const int cmdidRed = 0x102;
-    public const int cmdidYellow = 0x103;
-    public const int cmdidBlue = 0x104;
+    public const int ColorMenu = 0x1000;
+    public const int cmdidRed = 0x102;
+    public const int cmdidYellow = 0x103;
+    public const int cmdidBlue = 0x104;
     ```
 
     Bunlar, *ShortcutMenuPackage. vsct* dosyasının semboller bölümünde tanımlanan komut kimlikleridir. Yalnızca *. vsct* dosyasında gerekli olduğu için bağlam grubu buraya dahil edilmez.
@@ -183,7 +185,7 @@ Bu kılavuzda gösterildiği gibi bir kısayol menüsü, kullanıcının araç p
     }
     ```
 
-6. *ShortcutMenuControl. xaml*içinde, <xref:System.Windows.UIElement.MouseRightButtonDown> en üst düzey öğeye bir olay ekleyin <xref:System.Windows.Controls.UserControl> . XAML dosyası şu şekilde görünmelidir:
+6. *ShortcutMenuControl. xaml* içinde, <xref:System.Windows.UIElement.MouseRightButtonDown> en üst düzey öğeye bir olay ekleyin <xref:System.Windows.Controls.UserControl> . XAML dosyası şu şekilde görünmelidir:
 
     ```vb
     <UserControl x:Class="TWShortcutMenu.ShortcutMenuControl"
@@ -208,7 +210,7 @@ Bu kılavuzda gösterildiği gibi bir kısayol menüsü, kullanıcının araç p
 7. *ShortcutMenuControl.xaml.cs*' de, olay işleyicisi için bir saplama ekleyin.
 
     ```csharp
-    private void MyToolWindow_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
+    private void MyToolWindow_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
     {
     . . .
     }

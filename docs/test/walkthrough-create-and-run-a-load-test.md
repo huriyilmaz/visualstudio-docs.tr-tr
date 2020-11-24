@@ -1,5 +1,7 @@
 ---
 title: Yük testi oluşturma ve çalıştırma
+description: Birim testleri içeren bir yük testi oluşturmayı öğrenin. Visual Studio Enterprise kullanarak yük testleri oluşturup çalıştırın.
+ms.custom: SEO-VS-2020
 ms.date: 10/01/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.assetid: bbf075a5-96d5-48ed-a03c-330f0fc04748
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 780485a4d42cad574cddaaa5a9ae51a65a1a9b7d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bdcd96e8fc87a7627689af1c67a81b69b2ecee72
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "79093630"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95598269"
 ---
 # <a name="walkthrough-create-and-run-a-load-test-that-contains-unit-tests"></a>İzlenecek yol: birim testlerini içeren bir yük testi oluşturma ve çalıştırma
 
@@ -23,7 +25,7 @@ Bu izlenecek yolda, birim testlerini içeren bir yük testi oluşturursunuz.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-Bu izlenecek yol, Visual Studio Enterprise kullanarak bir yük testi oluşturma ve çalıştırma adımlarında size yol göstermiştir. Yük testi, Web performans testlerinin ve birim testlerinin bir kapsayıcısıdır. **Yeni Yük Testi Sihirbazı**yük testleri oluşturursunuz.
+Bu izlenecek yol, Visual Studio Enterprise kullanarak bir yük testi oluşturma ve çalıştırma adımlarında size yol göstermiştir. Yük testi, Web performans testlerinin ve birim testlerinin bir kapsayıcısıdır. **Yeni Yük Testi Sihirbazı** yük testleri oluşturursunuz.
 
 Yük testi, istenen yük simülasyonu oluşturmak için değiştirilebilen birçok çalışma zamanı özelliği de sunar. Bu izlenecek yolda, bir yük testine birim testleri eklemek için **yeni Yük Testi Sihirbazı** kullanırsınız.
 
@@ -49,7 +51,7 @@ Bu kılavuzda, aşağıdaki görevleri tamamlayacaksınız:
 
      **Yeni Proje Ekle** iletişim kutusu görüntülenir.
 
-1. **Yeni Proje Ekle** iletişim kutusunda, **Visual C#** ' yi genişletin ve **Test**' i seçin. Şablonlar listesinden **Web performansı ve yük testi projesi** ' ni seçin ve **ad** alanına yazın `BankLoadTest` . **Tamam ' ı**seçin.
+1. **Yeni Proje Ekle** iletişim kutusunda, **Visual C#** ' yi genişletin ve **Test**' i seçin. Şablonlar listesinden **Web performansı ve yük testi projesi** ' ni seçin ve **ad** alanına yazın `BankLoadTest` . **Tamam ' ı** seçin.
 
      BankLoadTest web performans ve yük testi projesi çözüme eklenir.
 
@@ -63,7 +65,7 @@ Bu kılavuzda, aşağıdaki görevleri tamamlayacaksınız:
 
 ### <a name="to-edit-settings-for-load-test-scenario"></a>Yük testi senaryosuna yönelik ayarları düzenlemek için
 
-1. **Yük testi senaryosu için bir ad girin** metin kutusuna **ScenarioSample**yazın.
+1. **Yük testi senaryosu için bir ad girin** metin kutusuna **ScenarioSample** yazın.
 
      *Senaryo* , gruplandırma mekanizmasıdır. Test kümesinden ve bu testleri yük altında çalıştırmaya yönelik özelliklerden oluşur.
 
@@ -90,13 +92,13 @@ Bu kılavuzda, aşağıdaki görevleri tamamlayacaksınız:
 
 ### <a name="to-select-test-mix-model-for-the-scenario"></a>Senaryonun test karışımı modelini seçmek için
 
-1. **Test karışımı modellenmesi gereken**altında, **Toplam test sayısına göre**' yi seçin.
+1. **Test karışımı modellenmesi gereken** altında, **Toplam test sayısına göre**' yi seçin.
 
 2. **İleri**’yi seçin.
 
 ### <a name="to-add-unit-tests-to-the-scenario"></a>Senaryoya birim testleri eklemek için
 
-1. Bir sonraki adım, **Yük testi senaryosuna testler eklemek ve test karışımını düzenlemek**için kullanılır.
+1. Bir sonraki adım, **Yük testi senaryosuna testler eklemek ve test karışımını düzenlemek** için kullanılır.
 
 2. Testleri seçmek için **Ekle** ' yi seçin.
 
@@ -132,16 +134,16 @@ Bu kılavuzda, aşağıdaki görevleri tamamlayacaksınız:
 
 1. Yük testi **süresi** ' ni seçin ve ardından Yük testinizi *duman test* etmek için **çalışma süresini** 2 dakikaya ayarlayın.
 
-     Yük testlerinizi oluştururken, her şeyin doğru şekilde yapılandırıldığını ve kısa, hafif bir yük testi çalıştırarak beklendiği gibi çalıştığını doğrulamak iyi bir uygulamadır. Bu işlem *duman testi*olarak bilinir.
+     Yük testlerinizi oluştururken, her şeyin doğru şekilde yapılandırıldığını ve kısa, hafif bir yük testi çalıştırarak beklendiği gibi çalıştığını doğrulamak iyi bir uygulamadır. Bu işlem *duman testi* olarak bilinir.
 
-2. **Son**’u seçin. Yük testiniz **Yük Testi Düzenleyicisi**açılır.
+2. **Son**’u seçin. Yük testiniz **Yük Testi Düzenleyicisi** açılır.
 
 ## <a name="run-the-load-test"></a>Yük testini çalıştırma
  Yük testini oluşturduktan sonra, banka uygulamanızın yük benzetimine nasıl yanıt vereceğini görüntülemek için çalıştırın. Yük testi çalışırken, **Yük Testi Çözümleyicisi** penceresini görürsünüz.
 
 ### <a name="to-run-the-load-test"></a>Yük testini çalıştırmak için
 
-1. **Yük Testi Düzenleyicisi**bir yük testi açıkken, araç çubuğundaki yeşil **Test Çalıştır** düğmesini seçin. Yük testiniz çalışmaya başlar.
+1. **Yük Testi Düzenleyicisi** bir yük testi açıkken, araç çubuğundaki yeşil **Test Çalıştır** düğmesini seçin. Yük testiniz çalışmaya başlar.
 
 2. Test simülasyonu herhangi bir eşiği aşarsa, bir eşik ihlali göstermek için ağaç denetimi düğümlerinde simgeler görünür. Hataların kırmızı bir daire kaplaması var, uyarılar sarı bir üçgen yer paylaşımına sahiptir. Eşiği aşan bir sayaç bulabilir ve simgeyi grafiğe sürükleyerek grafiğe ekleyebilirsiniz. Test çalışırken bunu yapabilirsiniz.
 

@@ -1,5 +1,7 @@
 ---
 title: C# birim testi öğreticisi
+description: Yönetilen kod ve Visual Studio Test Gezgini için Microsoft birim testi çerçevesini kullanarak bir dizi birim testi oluşturmayı, çalıştırmayı ve özelleştirmeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 05/14/2019
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,16 +15,16 @@ manager: jillfra
 ms.workload:
 - dotnet
 author: mikejo5000
-ms.openlocfilehash: b68cb720a636483a0c5e8c3193142d95dbb0afcd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ed2e7f11a6e36c797bb6c506c19b0fff11fb5ad1
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "81223677"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95598555"
 ---
 # <a name="walkthrough-create-and-run-unit-tests-for-managed-code"></a>İzlenecek yol: Yönetilen kod için birim testleri oluşturma ve çalıştırma
 
-Bu makalede, yönetilen kod ve Visual Studio **Test Gezgini**için Microsoft birim testi çerçevesini kullanarak bir dizi birim testi oluşturma, çalıştırma ve özelleştirme adımları anlatılmaktadır. Geliştirme kapsamında olan bir C# projesi ile çalışmaya başlayın, kodunu çalıştıran testler oluşturun, testleri çalıştırın ve sonuçları inceleyin. Ardından proje kodunu değiştirin ve testleri yeniden çalıştırın.
+Bu makalede, yönetilen kod ve Visual Studio **Test Gezgini** için Microsoft birim testi çerçevesini kullanarak bir dizi birim testi oluşturma, çalıştırma ve özelleştirme adımları anlatılmaktadır. Geliştirme kapsamında olan bir C# projesi ile çalışmaya başlayın, kodunu çalıştıran testler oluşturun, testleri çalıştırın ve sonuçları inceleyin. Ardından proje kodunu değiştirin ve testleri yeniden çalıştırın.
 
 
 
@@ -38,7 +40,7 @@ Bu makalede, yönetilen kod ve Visual Studio **Test Gezgini**için Microsoft bir
 
 3. **Visual C#** > **.NET Core** kategorisi altında **konsol uygulaması (.NET Core)** proje şablonunu seçin.
 
-4. Proje **bankasının**adını belirleyip **Tamam**' a tıklayın.
+4. Proje **bankasının** adını belirleyip **Tamam**' a tıklayın.
 
    Banka projesi oluşturulur ve kod düzenleyicisinde açık olan *program.cs* dosyası ile **Çözüm Gezgini** görüntülenir.
 
@@ -55,7 +57,7 @@ Bu makalede, yönetilen kod ve Visual Studio **Test Gezgini**için Microsoft bir
 
 3. C# **konsol uygulaması (.NET Core)** proje şablonunu arayıp seçin ve ardından **İleri**' ye tıklayın.
 
-4. Proje **bankasının**adını, ardından **Oluştur**' a tıklayın.
+4. Proje **bankasının** adını, ardından **Oluştur**' a tıklayın.
 
    Banka projesi oluşturulur ve kod düzenleyicisinde açık olan *program.cs* dosyası ile **Çözüm Gezgini** görüntülenir.
 
@@ -64,7 +66,7 @@ Bu makalede, yönetilen kod ve Visual Studio **Test Gezgini**için Microsoft bir
 
 ::: moniker-end
 
-5. *Program.cs* Içeriğini, *BankAccount*sınıfını tanımlayan aşağıdaki C# kodu ile değiştirin:
+5. *Program.cs* Içeriğini, *BankAccount* sınıfını tanımlayan aşağıdaki C# kodu ile değiştirin:
 
    ```csharp
    using System;
@@ -142,10 +144,10 @@ Artık test edebilirsiniz yöntemleri olan bir projeniz var. Bu makalede, testle
 
 ## <a name="create-a-unit-test-project"></a>Birim testi projesi oluşturma
 
-1. **Dosya** menüsünde **Add**  >  **Yeni proje**Ekle ' yi seçin.
+1. **Dosya** menüsünde **Add**  >  **Yeni proje** Ekle ' yi seçin.
 
    > [!TIP]
-   > Ayrıca **Çözüm Gezgini** çözüme sağ tıklayıp **Add**  >  **Yeni proje**Ekle ' yi seçebilirsiniz.
+   > Ayrıca **Çözüm Gezgini** çözüme sağ tıklayıp **Add**  >  **Yeni proje** Ekle ' yi seçebilirsiniz.
 
 ::: moniker range="vs-2017"
 
@@ -163,9 +165,9 @@ Artık test edebilirsiniz yöntemleri olan bir projeniz var. Bu makalede, testle
 
 2. C# **MSTest test projesi (.NET Core)** proje şablonunu arayıp seçin ve ardından **İleri**' ye tıklayın.
 
-3. Projeyi **BankTests**olarak adlandırın.
+3. Projeyi **BankTests** olarak adlandırın.
 
-4. **Oluştur**’a tıklayın.
+4. **Oluştur**'a tıklayın.
 
    **BankTests** projesi **Banka** çözümüne eklenir.
 
@@ -177,7 +179,7 @@ Artık test edebilirsiniz yöntemleri olan bir projeniz var. Bu makalede, testle
 
 6. **Başvuru Yöneticisi** iletişim kutusunda, **Projeler**' i genişletin, **çözüm**' ü seçin ve ardından **Banka** öğesini kontrol edin.
 
-7. **Tamam ' ı**seçin.
+7. **Tamam ' ı** seçin.
 
 ## <a name="create-the-test-class"></a>Test sınıfı oluşturma
 
@@ -185,7 +187,7 @@ Sınıfı doğrulamak için bir test sınıfı oluşturun `BankAccount` . Proje 
 
 ### <a name="rename-a-file-and-class"></a>Dosya ve sınıfı yeniden adlandırma
 
-1. Dosyayı yeniden adlandırmak için, **Çözüm Gezgini**Içinde, BankTests projesindeki *UnitTest1.cs* dosyasını seçin. Sağ tıklama menüsünde, **Yeniden Adlandır**' ı seçin ve ardından dosyayı *BankAccountTests.cs*olarak yeniden adlandırın.
+1. Dosyayı yeniden adlandırmak için, **Çözüm Gezgini** Içinde, BankTests projesindeki *UnitTest1.cs* dosyasını seçin. Sağ tıklama menüsünde, **Yeniden Adlandır**' ı seçin ve ardından dosyayı *BankAccountTests.cs* olarak yeniden adlandırın.
 
 ::: moniker range="vs-2017"
 
@@ -195,7 +197,7 @@ Sınıfı doğrulamak için bir test sınıfı oluşturun `BankAccount` . Proje 
 
 ::: moniker range=">=vs-2019"
 
-2. Sınıfı yeniden adlandırmak için, imleci `UnitTest1` kod düzenleyicisinde üzerine konumlandırın, sağ tıklayın ve ardından **Yeniden Adlandır**' ı seçin. **BankAccountTests** yazın ve **ENTER**tuşuna basın.
+2. Sınıfı yeniden adlandırmak için, imleci `UnitTest1` kod düzenleyicisinde üzerine konumlandırın, sağ tıklayın ve ardından **Yeniden Adlandır**' ı seçin. **BankAccountTests** yazın ve **ENTER** tuşuna basın.
 
 ::: moniker-end
 
@@ -287,9 +289,9 @@ Bir test yönteminin aşağıdaki gereksinimleri karşılaması gerekir:
 
 ## <a name="build-and-run-the-test"></a>Test oluşturun ve çalıştırın
 
-1. **Build** menüsünde **Build Solution**öğesini seçin.
+1. **Build** menüsünde **Build Solution** öğesini seçin.
 
-2. **Test Gezgini** açık değilse, **Test**  >  **Windows**  >  üstteki menü çubuğundan Windows**Test Gezgini** 'ni test et ' i seçerek açın.
+2. **Test Gezgini** açık değilse, **Test**  >  **Windows**  >  üstteki menü çubuğundan Windows **Test Gezgini** 'ni test et ' i seçerek açın.
 
 3. Testi çalıştırmak için **Tümünü Çalıştır** ' ı seçin.
 
@@ -303,7 +305,7 @@ Bir test yönteminin aşağıdaki gereksinimleri karşılaması gerekir:
 
 Test sonucu, hatayı açıklayan bir ileti içerir. Yöntemi için `AreEqual` , ileti beklendiğini ve gerçekten alındığını gösterir. Bakiyenin azalmasını bekliyorduk, ancak bunun yerine çekme miktarı artar.
 
-Birim testi bir hatayı kapsamıyor: geri al 'ın miktarı, *kaldırılması gereken hesap*bakiyesine *eklenir* .
+Birim testi bir hatayı kapsamıyor: geri al 'ın miktarı, *kaldırılması gereken hesap* bakiyesine *eklenir* .
 
 ### <a name="correct-the-bug"></a>Hatayı düzeltin
 
@@ -467,7 +469,7 @@ public void Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange()
 Test koduna yönelik iyileştirmeler daha sağlam ve bilgilendirici test yöntemlerine sahiptir. Ancak daha da önemlisi test altındaki kodu geliştirmiştir.
 
 > [!TIP]
-> Bu izlenecek yol, yönetilen kod için Microsoft birim testi çerçevesini kullanır. **Test Gezgini** , **Test Gezgini**için bağdaştırıcılara sahip üçüncü taraf birim testi çerçevelerinden testleri de çalıştırabilir. Daha fazla bilgi için bkz. [üçüncü taraf birim testi çerçevelerini yüklemeyi](../test/install-third-party-unit-test-frameworks.md).
+> Bu izlenecek yol, yönetilen kod için Microsoft birim testi çerçevesini kullanır. **Test Gezgini** , **Test Gezgini** için bağdaştırıcılara sahip üçüncü taraf birim testi çerçevelerinden testleri de çalıştırabilir. Daha fazla bilgi için bkz. [üçüncü taraf birim testi çerçevelerini yüklemeyi](../test/install-third-party-unit-test-frameworks.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

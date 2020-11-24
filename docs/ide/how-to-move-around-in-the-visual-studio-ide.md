@@ -1,5 +1,7 @@
 ---
 title: IDE 'de gezinme
+description: Visual Studio IDE ' de pencere ' den pencereye ve dosya dosyasına birkaç farklı yolla nasıl geçeceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -17,12 +19,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1052deb04a93d11349ef9beb2ff667893095902f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b8f2e796ed122bc4dba0c1fb4cfca85c74065fb8
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85769843"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597047"
 ---
 # <a name="how-to-move-around-in-the-visual-studio-ide"></a>Nasıl yapılır: Visual Studio IDE 'de gezinme
 
@@ -63,10 +65,10 @@ Ayrıca, dosyaya son erişiminizden bağımsız olarak, **IDE Gezginini**, düze
 
 ### <a name="to-switch-to-specific-files-in-the-editor"></a>Düzenleyicideki belirli dosyalara geçiş yapmak için
 
-- **Ctrl** + **Tab** **IDE Gezginini**göstermek için CTRL tuşuna basın. **CTRL** tuşunu basılı tutun ve geçiş yapmak istediğiniz dosyayı seçene kadar **sekme** tuşuna basın.
+- **Ctrl** + **Tab** **IDE Gezginini** göstermek için CTRL tuşuna basın. **CTRL** tuşunu basılı tutun ve geçiş yapmak istediğiniz dosyayı seçene kadar **sekme** tuşuna basın.
 
     > [!TIP]
-    > **Etkin dosyalar** listesinden gittiğiniz sırayı tersine çevirmek için **CTRL** + **SHIFT** tuşlarını basılı tutarak **Tab**tuşuna basın.
+    > **Etkin dosyalar** listesinden gittiğiniz sırayı tersine çevirmek için **CTRL** + **SHIFT** tuşlarını basılı tutarak **Tab** tuşuna basın.
 
     \- veya
 
@@ -87,10 +89,10 @@ Ayrıca, dosyaya son erişiminizden bağımsız olarak, **IDE Gezginini**, düze
 
 ### <a name="to-switch-to-a-specific-tool-window-in-the-ide"></a>IDE 'de belirli bir araç penceresine geçiş yapmak için
 
-- **Alt** + **IDE Gezginini**göstermek için alt**F7** tuşuna basın. Geçiş yapmak istediğiniz pencereyi seçene kadar **alt** tuşunu basılı tutun ve **F7** tuşuna basın.
+- **Alt** + **IDE Gezginini** göstermek için alt **F7** tuşuna basın. Geçiş yapmak istediğiniz pencereyi seçene kadar **alt** tuşunu basılı tutun ve **F7** tuşuna basın.
 
     > [!TIP]
-    > **Etkin araç pencereleri** listesinden gittiğiniz sırayı tersine çevirmek için **SHIFT** + **alt** tuşlarını basılı tutun ve **F7**tuşuna basın.
+    > **Etkin araç pencereleri** listesinden gittiğiniz sırayı tersine çevirmek için **SHIFT** + **alt** tuşlarını basılı tutun ve **F7** tuşuna basın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,5 +1,7 @@
 ---
 title: Yük testleri için Sanal Kullanıcı etkinliği grafiğini kullanma
+description: Yük testinizi çalıştıran tekil sanal kullanıcılar için oluşan hataları yalıtmak üzere sanal kullanıcı etkinliği grafiğini nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.assetid: d1c10fb9-cfeb-4e7f-9991-2d1e1103699e
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: c58dd4f6e6a0c8fe1bd468053bf18c3635b1ee9d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7f87542e528b743fa59dfe82aa52a57f1a9cfa2c
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "78169384"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95598243"
 ---
 # <a name="walkthrough-using-the-virtual-user-activity-chart-to-isolate-issues"></a>İzlenecek yol: sorunları yalıtmak için Sanal Kullanıcı etkinliği grafiğini kullanma
 
@@ -38,9 +40,9 @@ Sanal Kullanıcı etkinliği grafiği, yük testinizdeki ilişkili sanal kullan�
 
 1. Visual Studio'yu açın.
 
-2. *LoadTest1. LoadTest*içeren **ColorWebApp** çözümünü açın. Bu yük testi, Önkoşullar bölümünde konunun başlangıcında listelenen üç izlenecek yoldaki adımları yürütmektedir.
+2. *LoadTest1. LoadTest* içeren **ColorWebApp** çözümünü açın. Bu yük testi, Önkoşullar bölümünde konunun başlangıcında listelenen üç izlenecek yoldaki adımları yürütmektedir.
 
-     Bu yönergedeki geri kalan adımlarda, *ColorWebAppTest. webtest* adlı bir Web performans testi ve *LoadTest1. LoadTest*adlı bir yük testi olan ColorWebApp adlı bir Web uygulaması varsayılır.
+     Bu yönergedeki geri kalan adımlarda, *ColorWebAppTest. webtest* adlı bir Web performans testi ve *LoadTest1. LoadTest* adlı bir yük testi olan ColorWebApp adlı bir Web uygulaması varsayılır.
 
 ## <a name="run-the-load-test"></a>Yük testini çalıştırma
 
@@ -67,7 +69,7 @@ Yük testinizi çalıştırdıktan ve Sanal Kullanıcı etkinliği verilerini to
 
      Y ekseninde yatay çizimler tek tek sanal kullanıcıları temsil eder. X ekseni, yük testi çalıştırmasının zaman satırını görüntüler.
 
-3. **Sanal Kullanıcı Etkinlik grafiğinin**altındaki **zaman dilimini Yakınlaştır** aracında, her ikisi de eşik ihlali simgesine kapatılana kadar sol ve sağ kaydırıcıları ayarlayın. Bu, **Sanal Kullanıcı Etkinlik grafiğinde** zaman ölçeğini değiştirir
+3. **Sanal Kullanıcı Etkinlik grafiğinin** altındaki **zaman dilimini Yakınlaştır** aracında, her ikisi de eşik ihlali simgesine kapatılana kadar sol ve sağ kaydırıcıları ayarlayın. Bu, **Sanal Kullanıcı Etkinlik grafiğinde** zaman ölçeğini değiştirir
 
 4. **Ayrıntılar göstergesinde**, **(hataları vurgula)** onay kutusunu seçin. Eşik ihlaline neden olan sanal kullanıcı vurgulandığını unutmayın.
 
@@ -93,15 +95,15 @@ Yük testinizi çalıştırdıktan ve Sanal Kullanıcı etkinliği verilerini to
 
     - **Süre**
 
-    - **Aracı**
+    - **Aracısı**
 
     - **Test günlüğü**
 
 8. **Test günlüğünün** bir bağlantı olduğunu unutmayın. **Test günlüğü** bağlantısını seçin.
 
-9. Günlük ile ilişkili ColorWebTest Web performans testi **Web performans test sonuçları görüntüleyicisinde**açılır. Bu, eşik ihlallerinin nerede oluştuğunu yalıtmanızı sağlar.
+9. Günlük ile ilişkili ColorWebTest Web performans testi **Web performans test sonuçları görüntüleyicisinde** açılır. Bu, eşik ihlallerinin nerede oluştuğunu yalıtmanızı sağlar.
 
-     Performans sorunlarını yalıtmaya yardımcı olmak için **Ayrıntılar göstergesinde** ve **filtre sonuçları** panellerinde çeşitli ayarları kullanabilir ve yük testlerinizdeki hataları izleyebilirsiniz. Sanal Kullanıcı verilerinin **Sanal Kullanıcı Etkinlik grafiğinde**nasıl sunulduğunu görmek için bu ayarları ve **zaman dilimi yakınlaştırma** aracını deneyin.
+     Performans sorunlarını yalıtmaya yardımcı olmak için **Ayrıntılar göstergesinde** ve **filtre sonuçları** panellerinde çeşitli ayarları kullanabilir ve yük testlerinizdeki hataları izleyebilirsiniz. Sanal Kullanıcı verilerinin **Sanal Kullanıcı Etkinlik grafiğinde** nasıl sunulduğunu görmek için bu ayarları ve **zaman dilimi yakınlaştırma** aracını deneyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

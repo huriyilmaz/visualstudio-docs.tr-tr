@@ -1,5 +1,7 @@
 ---
 title: Birden çok proje şablonu oluşturma
+description: Visual Studio 'da aynı anda birçok proje için kapsayıcı olarak hareket eden çoklu proje şablonları oluşturmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 04/17/2019
 ms.topic: how-to
 helpviewer_keywords:
@@ -9,18 +11,18 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: b71af98c7d72e0b3a510f3968f3d0770cd5401df
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: efd0808342e38627d0b79b097f36f86a1881dafe
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85284418"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597242"
 ---
 # <a name="how-to-create-multi-project-templates"></a>Nasıl yapılır: birden çok proje şablonu oluşturma
 
 Birden fazla projeli şablonlar, iki veya daha fazla proje için kapsayıcı olarak davranır. Çoklu proje şablonuna dayalı bir proje oluşturduğunuzda, şablondaki her proje çözüme eklenir.
 
-Çoklu proje şablonunda iki veya daha fazla proje şablonu ve **ProjectGroup**türünde bir kök şablon vardır.
+Çoklu proje şablonunda iki veya daha fazla proje şablonu ve **ProjectGroup** türünde bir kök şablon vardır.
 
 Çoklu proje şablonları, tek proje şablonlarından farklı davranır. Aşağıdaki benzersiz özelliklere sahiptir:
 
@@ -46,14 +48,14 @@ Birden çok projeli bir şablon, bir *. zip* dosyasına sıkıştırılan aşağ
 
 Çoklu proje şablonu için kök *vstemplate* dosyası, tek projeli bir şablondan aşağıdaki yollarla farklılık gösterir:
 
-- **Vstemplate** öğesinin **Type** özniteliği **Project**yerine **ProjectGroup** değerine sahiptir. Örneğin:
+- **Vstemplate** öğesinin **Type** özniteliği **Project** yerine **ProjectGroup** değerine sahiptir. Örnek:
 
     ```xml
     <VSTemplate Version="2.0.0" Type="ProjectGroup"
         xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
     ```
 
-- **TemplateContent** öğesi, dahil edilen projelerin *vstemplate* dosyalarının yollarını tanımlayan bir veya daha fazla **ProjectTemplateLink** öğesine sahip bir **ProjectCollection** öğesi içeriyor. Örneğin:
+- **TemplateContent** öğesi, dahil edilen projelerin *vstemplate* dosyalarının yollarını tanımlayan bir veya daha fazla **ProjectTemplateLink** öğesine sahip bir **ProjectCollection** öğesi içeriyor. Örnek:
 
     ```xml
     <TemplateContent>
@@ -69,7 +71,7 @@ Birden çok projeli bir şablon, bir *. zip* dosyasına sıkıştırılan aşağ
     ```
 
 > [!TIP]
-> Yalnızca çoklu proje şablonunun yeni proje iletişim kutusunda görünmesini istiyorsanız, içerdiği ayrı projeler değil, iç şablonları [gizli](../extensibility/hidden-element-visual-studio-templates.md)olarak işaretleyin. Örneğin:
+> Yalnızca çoklu proje şablonunun yeni proje iletişim kutusunda görünmesini istiyorsanız, içerdiği ayrı projeler değil, iç şablonları [gizli](../extensibility/hidden-element-visual-studio-templates.md)olarak işaretleyin. Örnek:
 >
 > ```xml
 > <VSTemplate Type="Project" ... >
@@ -88,7 +90,7 @@ Birden çok projeli bir şablon, bir *. zip* dosyasına sıkıştırılan aşağ
 2. Projeleri bir şablona aktarılmaya hazırlanana kadar özelleştirin.
 
    > [!TIP]
-   > [Şablon parametreleri](template-parameters.md) kullanıyorsanız ve üst şablondaki değişkenlere başvurmak istiyorsanız, parametresinin adını ile önek yapın `ext_` . Örneğin, `$ext_safeprojectname$`. Ayrıca, **ProjectTemplateLink** öğesinin **CopyParameters** özniteliğini **true**olarak ayarlayın.
+   > [Şablon parametreleri](template-parameters.md) kullanıyorsanız ve üst şablondaki değişkenlere başvurmak istiyorsanız, parametresinin adını ile önek yapın `ext_` . Örneğin, `$ext_safeprojectname$`. Ayrıca, **ProjectTemplateLink** öğesinin **CopyParameters** özniteliğini **true** olarak ayarlayın.
    >
    > ```xml
    > <ProjectTemplateLink ProjectName="MyProject" CopyParameters="true">...</ProjectTemplateLink>
@@ -113,17 +115,17 @@ Birden çok projeli bir şablon, bir *. zip* dosyasına sıkıştırılan aşağ
 
 8. Taban dizininde *. vstemplate* dosya uzantısına sahıp bir XML dosyası oluşturun. Bu dosya, çoklu proje şablonu için meta verileri içerir. Dosyanın yapısı için aşağıdaki örneğe bakın. Her projenin *vstemplate* dosyasının göreli yolunu belirttiğinizden emin olun.
 
-9. Temel dizindeki tüm dosyaları seçin ve sağ tıklama ya da bağlam menüsünden **Send to**  >  **Sıkıştırılmış (daraltılmış) klasöre**Gönder ' i seçin.
+9. Temel dizindeki tüm dosyaları seçin ve sağ tıklama ya da bağlam menüsünden **Send to**  >  **Sıkıştırılmış (daraltılmış) klasöre** Gönder ' i seçin.
 
    Dosyalar ve klasörler bir *. zip* dosyasında sıkıştırılır.
 
-10. *. Zip* dosyasını Kullanıcı projesi şablon dizinine kopyalayın. Varsayılan olarak, bu dizin *%userprofile%\, Studio \<version\> \Templates\projecttemplates*şeklindedir.
+10. *. Zip* dosyasını Kullanıcı projesi şablon dizinine kopyalayın. Varsayılan olarak, bu dizin *%userprofile%\, Studio \<version\> \Templates\projecttemplates* şeklindedir.
 
 11. Visual Studio 'da **Dosya**  >  **Yeni**  >  **Proje** ' yi seçin ve şablonunuzun göründüğünü doğrulayın.
 
 ## <a name="two-project-example"></a>İki projem örneği
 
-Bu örnek, temel bir çoklu proje kök *vstemplate* dosyasını gösterir. Bu örnekte, şablonda iki proje, **Windows Uygulamam** ve **My Class Library**vardır. **ProjectTemplateLink** öğesindeki **ProjectName** özniteliği, projeye verilen adı belirtir.
+Bu örnek, temel bir çoklu proje kök *vstemplate* dosyasını gösterir. Bu örnekte, şablonda iki proje, **Windows Uygulamam** ve **My Class Library** vardır. **ProjectTemplateLink** öğesindeki **ProjectName** özniteliği, projeye verilen adı belirtir.
 
 > [!TIP]
 > **ProjectName** özniteliği belirtilmemişse, *vstemplate* dosyasının adı proje adı olarak kullanılır.
@@ -152,7 +154,7 @@ Bu örnek, temel bir çoklu proje kök *vstemplate* dosyasını gösterir. Bu ö
 
 ## <a name="example-with-solution-folders"></a>Çözüm klasörleriyle örnek
 
-Bu örnek, projeleri iki gruba, **matematik sınıflarına** ve **grafik sınıflarına**bölmek için **SolutionFolder** öğesini kullanır. Şablonda her bir çözüm klasörüne yerleştirilmiş dört proje vardır.
+Bu örnek, projeleri iki gruba, **matematik sınıflarına** ve **grafik sınıflarına** bölmek için **SolutionFolder** öğesini kullanır. Şablonda her bir çözüm klasörüne yerleştirilmiş dört proje vardır.
 
 ```xml
 <VSTemplate Version="2.0.0" Type="ProjectGroup"

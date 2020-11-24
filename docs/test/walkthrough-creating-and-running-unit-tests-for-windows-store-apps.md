@@ -1,5 +1,7 @@
 ---
 title: UWP uygulamaları için birim testleri oluşturma ve çalıştırma
+description: Uygulamalar Evrensel Windows Platformu birim testi için Visual Studio desteği hakkında bilgi edinin. Visual Studio, C#, Visual Basic ve C++ için birim test şablonları sağlar.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ manager: jillfra
 ms.workload:
 - uwp
 author: mikejo5000
-ms.openlocfilehash: 4109f743caf7c62450591f78e90b92113fc4107e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fcf93dff859e2332c79b50086d0dc50d6bd304c8
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75568886"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95598347"
 ---
 # <a name="walkthrough-create-and-run-unit-tests-for-uwp-apps"></a>İzlenecek yol: UWP uygulamaları için birim testleri oluşturma ve çalıştırma
 
@@ -34,7 +36,7 @@ Aşağıdaki yordamlarda, UWP uygulaması için birim testleri oluşturma, çal�
 
 1. Visual Studio'yu açın. Başlangıç penceresinde **Yeni proje oluştur**' u seçin.
 
-2. **Yeni proje oluştur** sayfasının arama kutusunda **birim testi**girin.
+2. **Yeni proje oluştur** sayfasının arama kutusunda **birim testi** girin.
 
    Şablon listesi, birim testi için olanlarla filtreler.
 
@@ -82,7 +84,7 @@ Bu adımları tamamladıktan sonra, birim test projesi oluşturulur ve Çözüm 
 
 2. **Bildirim tasarımcısında** **yetenekler** sekmesini seçin.
 
-3. **Özellikleri**altındaki listede, birim testiniz için gereken özellikleri ve test eden kodu seçin. Örneğin, birim testinin ihtiyacı varsa ve test edilmiş kodun internet 'e erişme yeteneğine sahip olması gerekiyorsa **Internet** onay kutusunu seçin.
+3. **Özellikleri** altındaki listede, birim testiniz için gereken özellikleri ve test eden kodu seçin. Örneğin, birim testinin ihtiyacı varsa ve test edilmiş kodun internet 'e erişme yeteneğine sahip olması gerekiyorsa **Internet** onay kutusunu seçin.
 
    > [!NOTE]
    > Seçtiğiniz yetenekler yalnızca birim testinin doğru çalışması için gerekli olan özellikleri içermelidir.
@@ -99,7 +101,7 @@ Kod Düzenleyicisi 'nde, birim testini düzenleyin ve testiniz için gereken ona
 
 1. **Test** menüsünde **Windows**' u ve ardından **Test Gezgini**' ni seçin.
 
-2. **Build** menüsünde **Build Solution**öğesini seçin.
+2. **Build** menüsünde **Build Solution** öğesini seçin.
 
    Birim testiniz artık test Gezgini 'nde gösteriliyor.
 
@@ -115,7 +117,7 @@ Kod Düzenleyicisi 'nde, birim testini düzenleyin ve testiniz için gereken ona
    > [!TIP]
    > Test Gezgini 'nde listelenen bir veya daha fazla birim testi seçebilir ve sağ tıklayıp **Seçili Testleri Çalıştır**' ı seçebilirsiniz.
    >
-   > Ayrıca, **Seçili testlerin hatalarını ayıklamayı**, **testi açmayı**ve **Özellikler** seçeneğini kullanmayı seçebilirsiniz.
+   > Ayrıca, **Seçili testlerin hatalarını ayıklamayı**, **testi açmayı** ve **Özellikler** seçeneğini kullanmayı seçebilirsiniz.
    >
    > ![Birim test Gezgini &#45; birim testi bağlam menüsü](../test/media/unit_test_win8_unittestexplorer_contextmenu.png)
 

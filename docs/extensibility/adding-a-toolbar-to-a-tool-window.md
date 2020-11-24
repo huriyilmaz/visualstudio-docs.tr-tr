@@ -1,5 +1,7 @@
 ---
 title: Araç penceresine araç çubuğu ekleme | Microsoft Docs
+description: Visual Studio tümleşik geliştirme ortamındaki (IDE) bir araç penceresine komutlara bağlanan düğmeleri içeren bir araç çubuğu eklemeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e5351fe6a713c217f8fca20d6740b542dc75f053
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6a093dd65ce4de187cadf7e277c695bac99b5ca6
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904122"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597983"
 ---
 # <a name="add-a-toolbar-to-a-tool-window"></a>Araç penceresine araç çubuğu ekleme
 Bu izlenecek yol, araç penceresine bir araç çubuğunun nasıl ekleneceğini gösterir.
@@ -27,14 +29,14 @@ Bu izlenecek yol, araç penceresine bir araç çubuğunun nasıl ekleneceğini g
 
  Araç çubuğu ekleme hakkında daha fazla bilgi için bkz. [araç çubuğu ekleme](../extensibility/adding-a-toolbar.md).
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
  Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yüklememeyin. Visual Studio kurulumuna isteğe bağlı bir özellik olarak dahildir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yükleme](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-a-toolbar-for-a-tool-window"></a>Araç penceresi için araç çubuğu oluşturma
 
-1. `TWToolbar` **TWTestCommand** adlı bir menü komutu ve **TestToolWindow**adlı bir araç penceresi olan adlı bir VSIX projesi oluşturun. Daha fazla bilgi için bkz. bir [menü komutuyla uzantı oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md) ve [araç penceresi ile uzantı oluşturma](../extensibility/creating-an-extension-with-a-tool-window.md). Araç penceresi şablonunu eklemeden önce komut öğesi şablonunu eklemeniz gerekir.
+1. `TWToolbar` **TWTestCommand** adlı bir menü komutu ve **TestToolWindow** adlı bir araç penceresi olan adlı bir VSIX projesi oluşturun. Daha fazla bilgi için bkz. bir [menü komutuyla uzantı oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md) ve [araç penceresi ile uzantı oluşturma](../extensibility/creating-an-extension-with-a-tool-window.md). Araç penceresi şablonunu eklemeden önce komut öğesi şablonunu eklemeniz gerekir.
 
-2. *TWTestCommandPackage. vsct*içinde semboller bölümüne bakın. GuidTWTestCommandPackageCmdSet adlı GuidSymbol düğümünde aşağıdaki gibi bir araç çubuğu ve bir araç çubuğu grubu bildirin.
+2. *TWTestCommandPackage. vsct* içinde semboller bölümüne bakın. GuidTWTestCommandPackageCmdSet adlı GuidSymbol düğümünde aşağıdaki gibi bir araç çubuğu ve bir araç çubuğu grubu bildirin.
 
     ```xml
     <IDSymbol name="TWToolbar" value="0x1000" />
@@ -111,7 +113,7 @@ Bu izlenecek yol, araç penceresine bir araç çubuğunun nasıl ekleneceğini g
 
      Araç penceresinin sol üst kısmında, başlığın hemen altındaki bir araç çubuğu (varsayılan simge gibi görünür) görmeniz gerekir.
 
-3. Araç çubuğunda **TWTestCommandPackage öğesini TWTestCommand. Menuıitemcallback () içinde**göstermek için simgeye tıklayın.
+3. Araç çubuğunda **TWTestCommandPackage öğesini TWTestCommand. Menuıitemcallback () içinde** göstermek için simgeye tıklayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Araç çubuğu ekle](../extensibility/adding-a-toolbar.md)

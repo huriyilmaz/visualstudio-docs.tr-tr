@@ -1,5 +1,7 @@
 ---
 title: Web şablonları oluşturma
+description: El ile bir Web şablonu oluşturmayı ve şablonun kullandığı programlama dilini belirlemeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 01/02/2018
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 6870143be825469fde2be4b3448da24d54034fc1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8546b1364248b5c419a32e8f8ed40abf0b69fb5a
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85284184"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597086"
 ---
 # <a name="how-to-manually-create-web-templates"></a>Nasıl yapılır: Web şablonlarını elle oluşturma
 
@@ -41,7 +43,7 @@ Web şablonu oluşturmak diğer şablon türlerini oluşturmaktan farklıdır. W
    - Step\chapter
    - VisualBasic
 
-     Örneğin:
+     Örnek:
 
      ```xml
      <TemplateData>
@@ -52,9 +54,9 @@ Web şablonu oluşturmak diğer şablon türlerini oluşturmaktan farklıdır. W
      </TemplateData>
      ```
 
-7. Şablonunuzda dosyaları seçin (Bu *vstemplate* dosyasını içerir), seçime sağ tıklayın ve **Send to**  >  **Sıkıştırılmış (daraltılmış) klasöre**Gönder ' i seçin. Dosyalar bir *. zip* dosyasında sıkıştırılır.
+7. Şablonunuzda dosyaları seçin (Bu *vstemplate* dosyasını içerir), seçime sağ tıklayın ve **Send to**  >  **Sıkıştırılmış (daraltılmış) klasöre** Gönder ' i seçin. Dosyalar bir *. zip* dosyasında sıkıştırılır.
 
-8. *. Zip* şablon dosyasını Visual Studio proje şablonu dizinine yerleştirin. Varsayılan olarak, bu dizin *%userprofile%\, Studio \<Version\> \Projecttemplates*şeklindedir.
+8. *. Zip* şablon dosyasını Visual Studio proje şablonu dizinine yerleştirin. Varsayılan olarak, bu dizin *%userprofile%\, Studio \<Version\> \Projecttemplates* şeklindedir.
 
 ## <a name="example"></a>Örnek
 

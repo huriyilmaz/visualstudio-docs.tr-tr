@@ -1,5 +1,7 @@
 ---
 title: Başvuru Yöneticisi 'ne başvurular ekleme
+description: Geliştirilmiş bileşenlere başvurular eklemek ve bunları yönetmek için başvuru Yöneticisi iletişim kutusunu nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 08/02/2019
 ms.topic: how-to
 f1_keywords:
@@ -21,16 +23,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f02dcc5f38bf8eb4acc702c5d8a1ee466a6a4a71
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4884fdc857abd524fa62bb126e7a74af48e9ca88
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87390268"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597320"
 ---
 # <a name="how-to-add-or-remove-references-by-using-the-reference-manager"></a>Nasıl yapılır: başvuru Yöneticisi 'ni kullanarak başvuru ekleme veya kaldırma
 
-Sizin, Microsoft veya başka bir şirketinizin geliştirdiği bileşenlere başvurular eklemek ve bunları yönetmek için başvuru Yöneticisi iletişim kutusunu kullanabilirsiniz. Bir Evrensel Windows uygulaması geliştiriyorsanız, projeniz otomatik olarak doğru Windows SDK dll 'Lerine başvurur. Bir .NET uygulaması geliştiriyorsanız, projeniz otomatik olarak *mscorlib.dll*başvurur. Bazı .NET API 'Leri, el ile eklemeniz gereken bileşenlerde kullanıma sunulur. COM bileşenlerine veya özel bileşenlere yapılan başvuruların el ile eklenmesi gerekir.
+Sizin, Microsoft veya başka bir şirketinizin geliştirdiği bileşenlere başvurular eklemek ve bunları yönetmek için başvuru Yöneticisi iletişim kutusunu kullanabilirsiniz. Bir Evrensel Windows uygulaması geliştiriyorsanız, projeniz otomatik olarak doğru Windows SDK dll 'Lerine başvurur. Bir .NET uygulaması geliştiriyorsanız, projeniz otomatik olarak *mscorlib.dll* başvurur. Bazı .NET API 'Leri, el ile eklemeniz gereken bileşenlerde kullanıma sunulur. COM bileşenlerine veya özel bileşenlere yapılan başvuruların el ile eklenmesi gerekir.
 
 ## <a name="reference-manager-dialog-box"></a>Başvuru Yöneticisi iletişim kutusu
 
@@ -44,7 +46,7 @@ Başvuru Yöneticisi iletişim kutusu, proje türüne bağlı olarak sol tarafta
 
 - **Paylaşılan projeler**
 
-- **Windows**, **çekirdek** ve **Uzantılar** alt grupları ile. **Nesne tarayıcısı**kullanarak Windows SDK veya uzantı SDK 'lerinde başvuruları inceleyebilirsiniz.
+- **Windows**, **çekirdek** ve **Uzantılar** alt grupları ile. **Nesne tarayıcısı** kullanarak Windows SDK veya uzantı SDK 'lerinde başvuruları inceleyebilirsiniz.
 
 - **En son** alt grup ile **tarama**
  
@@ -91,7 +93,7 @@ Bir proje türü derlemeleri desteklemiyorsa, sekme başvuru Yöneticisi iletiş
 
    Ve [hedef çerçeve tanımlayıcısı] daha eski sürümleri
 
-   Örneğin, bir proje 32 bitlik bir makinede .NET Framework 4 ' ü hedefliyorsa, **Uzantılar** *\Microsoft \. NETFramework\v4.0\AssemblyFoldersEx*, *\Microsoft \. Netframework\v3.5\assemblyfoldersex*, *\Microsoft \. Netframework\v3.0\assemblyfoldersex*ve *\Microsoft \. netframework\v2.0\assemblyfoldersex*altında kayıtlı derlemeleri numaralandırır.
+   Örneğin, bir proje 32 bitlik bir makinede .NET Framework 4 ' ü hedefliyorsa, **Uzantılar** *\Microsoft \. NETFramework\v4.0\AssemblyFoldersEx*, *\Microsoft \. Netframework\v3.5\assemblyfoldersex*, *\Microsoft \. Netframework\v3.0\assemblyfoldersex* ve *\Microsoft \. netframework\v2.0\assemblyfoldersex* altında kayıtlı derlemeleri numaralandırır.
 
 Listedeki bazı bileşenler, projenizin Framework sürümüne bağlı olarak gösterilmeyebilir. Bu durum aşağıdaki koşullarda oluşabilir:
 
@@ -189,11 +191,11 @@ Aynı çözümdeki başka bir projenin çıktılarına dosya başvuruları eklem
 
 Bir SDK 'ya gözatamazsınız ve projenize ekleyemezsiniz. Yalnızca bir dosyaya (örneğin, bir derleme veya *. winmd*) gidebilir ve bu dosyayı projenize ekleyebilirsiniz.
 
-Bir WinMD 'ye dosya başvurusu yaparken, beklenen Düzen * \<FileName> . winmd*, * \<FileName> . dll*ve * \<FileName> . pri* dosyalarının tümünün birbirine yerleştirilme halidir. Aşağıdaki senaryolarda bir WinMD'ye başvuruda bulunursanız, proje çıkış dizinine eksik bir dosya kümesi kopyalanır ve sonuç olarak, derleme ve çalışma zamanı hataları meydana gelir.
+Bir WinMD 'ye dosya başvurusu yaparken, beklenen Düzen *\<FileName> . winmd*, *\<FileName> . dll* ve *\<FileName> . pri* dosyalarının tümünün birbirine yerleştirilme halidir. Aşağıdaki senaryolarda bir WinMD'ye başvuruda bulunursanız, proje çıkış dizinine eksik bir dosya kümesi kopyalanır ve sonuç olarak, derleme ve çalışma zamanı hataları meydana gelir.
 
-- **Yerel bileşen**: yerel bir proje, her ayrık ad alanı kümesi ve uygulamadan oluşan bir dll Için bir WinMD oluşturur. WinMD'ler ayrı adlara sahip olur. Bu yerel bileşen dosyasına başvurulduğunda, MSBuild, benzer şekilde adlandırılmış Wınmds 'nin bir bileşen yapmasını tanımaz. Sonuç olarak, yalnızca aynı adlı * \<FileName> . dll* ve * \<FileName> . winmd* kopyalanabilir ve çalışma zamanı hataları oluşur. Bu sorunu geçici olarak çözmek için bir uzantı SDK 'Sı oluşturun. Daha fazla bilgi için bkz. [yazılım geliştirme seti oluşturma](../extensibility/creating-a-software-development-kit.md).
+- **Yerel bileşen**: yerel bir proje, her ayrık ad alanı kümesi ve uygulamadan oluşan bir dll Için bir WinMD oluşturur. WinMD'ler ayrı adlara sahip olur. Bu yerel bileşen dosyasına başvurulduğunda, MSBuild, benzer şekilde adlandırılmış Wınmds 'nin bir bileşen yapmasını tanımaz. Sonuç olarak, yalnızca aynı adlı *\<FileName> . dll* ve *\<FileName> . winmd* kopyalanabilir ve çalışma zamanı hataları oluşur. Bu sorunu geçici olarak çözmek için bir uzantı SDK 'Sı oluşturun. Daha fazla bilgi için bkz. [yazılım geliştirme seti oluşturma](../extensibility/creating-a-software-development-kit.md).
 
-- **Denetimleri**kullanma: en azından, XAML denetimi bir * \<FileName> . winmd*, * \<FileName> . dll*, * \<FileName> . pri*, * \<XamlName> . xaml*ve bir * \<ImageName> . jpg*' den oluşur. Proje oluşturulduğunda, dosya başvurusuyla ilişkili kaynak dosyaları projenin çıkış dizinine kopyalanmaz ve yalnızca * \<FileName> . winmd*, * \<FileName> . dll* ve * \<FileName> . pri* kopyalanır. Kullanıcıya Resources * \<XamlName> . xaml* ve * \<ImageName> . jpg* 'nin eksik olduğunu bildirmek için bir yapı hatası kaydedilir. Başarılı olması için, kullanıcının bu kaynak dosyaları oluşturma ve hata ayıklama/çalışma zamanı için proje çıkış dizinine el ile kopyalaması gerekir. Bu sorunu geçici olarak çözmek için, [yazılım geliştirme seti oluşturma](../extensibility/creating-a-software-development-kit.md) ' daki adımları izleyerek bir uzantı SDK 'sı oluşturun ya da aşağıdaki özelliği eklemek için proje dosyasını düzenleyin:
+- **Denetimleri** kullanma: en azından, XAML denetimi bir *\<FileName> . winmd*, *\<FileName> . dll*, *\<FileName> . pri*, *\<XamlName> . xaml* ve bir *\<ImageName> . jpg*' den oluşur. Proje oluşturulduğunda, dosya başvurusuyla ilişkili kaynak dosyaları projenin çıkış dizinine kopyalanmaz ve yalnızca *\<FileName> . winmd*, *\<FileName> . dll* ve *\<FileName> . pri* kopyalanır. Kullanıcıya Resources *\<XamlName> . xaml* ve *\<ImageName> . jpg* 'nin eksik olduğunu bildirmek için bir yapı hatası kaydedilir. Başarılı olması için, kullanıcının bu kaynak dosyaları oluşturma ve hata ayıklama/çalışma zamanı için proje çıkış dizinine el ile kopyalaması gerekir. Bu sorunu geçici olarak çözmek için, [yazılım geliştirme seti oluşturma](../extensibility/creating-a-software-development-kit.md) ' daki adımları izleyerek bir uzantı SDK 'sı oluşturun ya da aşağıdaki özelliği eklemek için proje dosyasını düzenleyin:
 
     ```xml
     <PropertyGroup>

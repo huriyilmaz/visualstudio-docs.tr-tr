@@ -1,5 +1,7 @@
 ---
 title: Kodlanmış UI testi oluşturma
+description: Bir Windows Presentation Framework uygulaması için kodlanmış UI testinin nasıl kullanılacağını öğrenin ve zamanlama sorunları ve denetimleri yeniden düzenleme ile testlerin çözümlerini görün.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.author: mikejo
@@ -7,12 +9,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: f1e22a39035e5d3500f4dd45481319e1daecfa04
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f36704405776a790c3ec634856f54ee51bc23dc6
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75592067"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95598542"
 ---
 # <a name="walkthrough-create-edit-and-maintain-a-coded-ui-test"></a>İzlenecek yol: kodlanmış bir UI testi oluşturma, düzenleme ve sürdürme
 
@@ -22,7 +24,7 @@ Bu kılavuzda, bir Windows Presentation Framework (WPF) uygulamasını test etme
 
 ## <a name="create-a-wpf-app"></a>WPF uygulaması oluşturma
 
-1. Yeni bir **WPF uygulaması (.NET Framework)** projesi oluşturun ve **SimpleWPFApp**olarak adlandırın.
+1. Yeni bir **WPF uygulaması (.NET Framework)** projesi oluşturun ve **SimpleWPFApp** olarak adlandırın.
 
      **WPF Tasarımcısı** açılır ve projenin MainWindow öğesini görüntüler.
 
@@ -32,7 +34,7 @@ Bu kılavuzda, bir Windows Presentation Framework (WPF) uygulamasını test etme
 
 4. **Düğme** denetimini seçin. **Özellikler** penceresinde, **ad** özelliğinin değerini \<No Name> button1 olarak değiştirin. Ardından **içerik** özelliğinin değerini düğme ' den Başlat ' a değiştirin.
 
-5. **ProgressBar** denetimini seçin. **Özellikler** penceresinde, **ad** özelliğinin değerini \<No Name> progressBar1 olarak değiştirin. Daha sonra **100** olan **maksimum** özellik değerini **10000**olarak değiştirin.
+5. **ProgressBar** denetimini seçin. **Özellikler** penceresinde, **ad** özelliğinin değerini \<No Name> progressBar1 olarak değiştirin. Daha sonra **100** olan **maksimum** özellik değerini **10000** olarak değiştirin.
 
 6. **Onay kutusu** denetimini seçin. **Özellikler** penceresinde, **ad** özelliğinin değerini \<No Name> CheckBox1 olarak değiştirin ve **IsEnabled** özelliğini temizleyin.
 
@@ -85,7 +87,7 @@ Bu kılavuzda, bir Windows Presentation Framework (WPF) uygulamasını test etme
 
 ### <a name="run-the-wpf-app"></a>WPF uygulamasını çalıştırma
 
-1. **Hata Ayıkla** menüsünde, **hata ayıklamayı Başlat** ' ı seçin veya **F5**tuşuna basın.
+1. **Hata Ayıkla** menüsünde, **hata ayıklamayı Başlat** ' ı seçin veya **F5** tuşuna basın.
 
 2. Onay kutusu denetiminin devre dışı olduğuna dikkat edin. **Başlat**' ı seçin.
 
@@ -106,7 +108,7 @@ Bu kılavuzda, bir Windows Presentation Framework (WPF) uygulamasını test etme
 
 ## <a name="create-a-coded-ui-test-for-simplewpfapp"></a>SimpleWPFApp için kodlanmış UI testi oluşturma
 
-1. **Çözüm Gezgini**, çözüme sağ tıklayın ve **Add**  >  **Yeni proje**Ekle ' yi seçin.
+1. **Çözüm Gezgini**, çözüme sağ tıklayın ve **Add**  >  **Yeni proje** Ekle ' yi seçin.
 
 2. **KODLANMıŞ UI test projesi** proje şablonunu arayıp seçin ve proje oluşturuluncaya kadar adımlarla devam edin.
 
@@ -148,7 +150,7 @@ Bu kılavuzda, bir Windows Presentation Framework (WPF) uygulamasını test etme
 
 1. **Yöntem adı** kutusunda, **SimpleAppTest** yazın ve **Ekle ve oluştur**' u seçin. Birkaç saniye içinde kodlanmış UI testi görünür ve çözüme eklenir.
 
-1. **UIMap-KODLANMıŞ UI Test Oluşturucusu 'nu**kapatın.
+1. **UIMap-KODLANMıŞ UI Test Oluşturucusu 'nu** kapatın.
 
      *CodedUITest1.cs* dosyası kod düzenleyicisinde görüntülenir.
 
@@ -158,7 +160,7 @@ Bu kılavuzda, bir Windows Presentation Framework (WPF) uygulamasını test etme
 
 1. **Test** menüsünde **Windows** ' u ve ardından **Test Gezgini**' ni seçin.
 
-2. **Build** menüsünde **Build Solution**öğesini seçin.
+2. **Build** menüsünde **Build Solution** öğesini seçin.
 
 3. *CodedUITest1.cs* dosyasında, **CodedUITestMethod** metodunu bulun, **Testleri Çalıştır**' ı sağ tıklatın veya test **Gezgini**' nden testi çalıştırın.
 
@@ -178,7 +180,7 @@ Bu kılavuzda, bir Windows Presentation Framework (WPF) uygulamasını test etme
 3. Bu sorunu düzeltmek için, yöntemi kullanarak bu satıra devam etmeden önce, kodlanmış UI testinin CheckBox denetiminin etkinleştirilmesini beklemesini sağlayabilirsiniz `WaitForControlEnabled()` .
 
     > [!WARNING]
-    > *UIMap.Designer.cs* dosyasını değiştirmeyin. **UIMap – KODLANMıŞ UI Test Oluşturucusu**kullanarak her kod oluşturduğunuzda yaptığınız tüm kod değişikliklerinin üzerine yazılır. Kayıtlı bir yöntemi değiştirmeniz gerekiyorsa, *UIMap.cs* dosyasına kopyalayın ve yeniden adlandırın. *UIMap.cs* dosyası, *UIMapDesigner.cs* dosyasındaki yöntemleri ve özellikleri geçersiz kılmak için kullanılabilir. *CodedUITest.cs* dosyasındaki özgün yönteme başvuruyu kaldırmanız ve yeniden adlandırılmış yöntem adıyla değiştirmeniz gerekir.
+    > *UIMap.Designer.cs* dosyasını değiştirmeyin. **UIMap – KODLANMıŞ UI Test Oluşturucusu** kullanarak her kod oluşturduğunuzda yaptığınız tüm kod değişikliklerinin üzerine yazılır. Kayıtlı bir yöntemi değiştirmeniz gerekiyorsa, *UIMap.cs* dosyasına kopyalayın ve yeniden adlandırın. *UIMap.cs* dosyası, *UIMapDesigner.cs* dosyasındaki yöntemleri ve özellikleri geçersiz kılmak için kullanılabilir. *CodedUITest.cs* dosyasındaki özgün yönteme başvuruyu kaldırmanız ve yeniden adlandırılmış yöntem adıyla değiştirmeniz gerekir.
 
 4. **Çözüm Gezgini**' de, kodlanmış UI test projenizde *UIMap. UITest* ' i bulun.
 
@@ -231,7 +233,7 @@ Bu kılavuzda, bir Windows Presentation Framework (WPF) uygulamasını test etme
             }
     ```
 
-14. **Build** menüsünde **Build Solution**öğesini seçin.
+14. **Build** menüsünde **Build Solution** öğesini seçin.
 
 15. **CodedUITestMethod** yöntemine sağ tıklayın ve **Testleri Çalıştır**' ı seçin.
 
@@ -241,11 +243,11 @@ Bu kılavuzda, bir Windows Presentation Framework (WPF) uygulamasını test etme
 
 1. *MainWindow. xaml* dosyasında, tasarımcıda düğme denetimini seçin.
 
-2. **Özellikler** penceresinin üst kısmında, **button1** olarak **Name** özellik değerini **buttonA**olarak değiştirin.
+2. **Özellikler** penceresinin üst kısmında, **button1** olarak **Name** özellik değerini **buttonA** olarak değiştirin.
 
-3. **Build** menüsünde **Build Solution**öğesini seçin.
+3. **Build** menüsünde **Build Solution** öğesini seçin.
 
-4. **Test Gezgini**'nde **CodedUITestMethod1**çalıştırın.
+4. **Test Gezgini**'nde **CodedUITestMethod1** çalıştırın.
 
      Kodlanmış UI testi button1 olarak UIMap öğesinde başlangıçta eşlenen düğme denetimini konumlandıramadığından test başarısız olur. Yeniden düzenleme kodlanmış UI testlerini bu anlamda etkileyebilir.
 
@@ -272,13 +274,13 @@ Bu kılavuzda, bir Windows Presentation Framework (WPF) uygulamasını test etme
 
 3. **UIMap-KODLANMıŞ UI Test Oluşturucusu** iletişim kutusunda, ince artı aracını SimpleWPFApp üzerindeki **Başlat** düğmesine sürükleyin.
 
-     **Başlat** düğmesi mavi bir kutu içine alınmıştır. **KODLANMıŞ UI test oluşturucusunun** , seçilen denetim için verileri işlemesi ve denetimin özelliklerini görüntülemesi birkaç saniye sürer. **Automationuid** değerinin **buttonA**olduğunu unutmayın.
+     **Başlat** düğmesi mavi bir kutu içine alınmıştır. **KODLANMıŞ UI test oluşturucusunun** , seçilen denetim için verileri işlemesi ve denetimin özelliklerini görüntülemesi birkaç saniye sürer. **Automationuid** değerinin **buttonA** olduğunu unutmayın.
 
 4. Denetimin özelliklerinden, UI Denetim Eşlemesi'ni genişletmek için sol üst köşedeki oku seçin. **UIStartButton1** seçili olduğuna dikkat edin.
 
 5. Araç çubuğunda, **UI Denetim Haritasına denetim Ekle**' yi seçin.
 
-     Pencerenin alt kısmındaki durum, **Seçilen DENETIM UI denetim haritasına eklenmiş şekilde**eylemi doğrular.
+     Pencerenin alt kısmındaki durum, **Seçilen DENETIM UI denetim haritasına eklenmiş şekilde** eylemi doğrular.
 
 6. **UIMap-KODLANMıŞ UI Test Oluşturucusu** Iletişim kutusunda **kod oluştur**' u seçin.
 
@@ -288,7 +290,7 @@ Bu kılavuzda, bir Windows Presentation Framework (WPF) uygulamasını test etme
 
 8. SimpleWPFApp Uygulamasını Kapatın.
 
-9. **UIMap-KODLANMıŞ UI Test Oluşturucusu 'nu**kapatın.
+9. **UIMap-KODLANMıŞ UI Test Oluşturucusu 'nu** kapatın.
 
 10. **Çözüm Gezgini**, *UIMap.Designer.cs* dosyasını açın.
 
@@ -323,11 +325,11 @@ Bu kılavuzda, bir Windows Presentation Framework (WPF) uygulamasını test etme
             }
     ```
 
-13. **Build** menüsünde **Build Solution**öğesini seçin.
+13. **Build** menüsünde **Build Solution** öğesini seçin.
 
-14. **Test Gezgini**'nde **CodedUITestMethod1**çalıştırın.
+14. **Test Gezgini**'nde **CodedUITestMethod1** çalıştırın.
 
-     Bu kez, kodlanmış UI testi testteki tüm adımları başarıyla tamamlar. **Test sonuçları** penceresinde **geçildi**durumunu görürsünüz.
+     Bu kez, kodlanmış UI testi testteki tüm adımları başarıyla tamamlar. **Test sonuçları** penceresinde **geçildi** durumunu görürsünüz.
 
 ## <a name="videos"></a>Videolar
 

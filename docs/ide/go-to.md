@@ -1,5 +1,7 @@
 ---
 title: Dosyaya git, simgeye git, satıra git
+description: Visual Studio 'da komutlara gitme ve kodunuzda odaklanmış aramalar gerçekleştirmek için bunları nasıl kullanabileceğiniz hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 08/14/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bb39f1d395e48351aeacb587556224b0f86aac3e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e3e000224fc09810e15ba3cdbdc4be729139eaaa
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75593791"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597541"
 ---
 # <a name="find-code-using-go-to-commands"></a>Git komutlarını kullanarak kod bulma
 
@@ -28,7 +30,7 @@ Visual Studio 'nun komutlara **Git** , belirtilen öğeleri hızlı bir şekilde
 Giriş | İşlev
 ------------ | ---
 **Klavye** | **CTRL** + **T** veya **CTRL** + **,** tuşlarına basın
-**Fare** | **Düzenle**git ' i seçerek  >  **Go To**  >  **Tümünü git** ' i seçin
+**Fare** | **Düzenle** git ' i seçerek  >  **Go To**  >  **Tümünü git** ' i seçin
 
 Kod Düzenleyicinizde sağ üst köşede küçük bir pencere görüntülenir.
 

@@ -1,5 +1,7 @@
 ---
 title: MSTest onaylama sınıfları ve yöntemleri
+description: Uygulama kodunuzun birim testi sırasında kod davranışınızı doğruluğunu test etmek için onay deyimlerini nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 06/07/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -11,12 +13,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: c36916c79bd783ed2c6ce960b068e85478b9971d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c5401fb15a19d069c0bf454661d6d9283abb2585
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75592054"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95598204"
 ---
 # <a name="use-assert-classes-for-unit-testing"></a>Birim testi için onaylama sınıfları kullanma
 
@@ -34,11 +36,11 @@ Test yönteminde, sınıfının herhangi bir yöntemini (gibi) çağırabilirsin
 
 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert>Dizeleri karşılaştırmak ve incelemek için sınıfını kullanın. Bu sınıf, ve gibi çeşitli yararlı yöntemler içerir <xref:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert.Contains%2A?displayProperty=nameWithType> <xref:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert.Matches%2A?displayProperty=nameWithType> <xref:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert.StartsWith%2A?displayProperty=nameWithType> .
 
-### <a name="exceptions"></a>Özel durumlar
+### <a name="exceptions"></a>Özel Durumlar
 
 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException>Bir test başarısız olduğunda özel durum oluşturulur. Test zaman aşımına uğrarsa başarısız olur, beklenmeyen bir özel durum oluşturur veya **başarısız** bir sonuç üreten bir onay açıklaması içerir.
 
-<xref:Microsoft.VisualStudio.TestTools.UnitTesting.AssertInconclusiveException>Bir test, **Sonuçlandırılamayan**bir sonuç üretdiğinde oluşturulur. Genellikle, <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.Inconclusive%2A?displayProperty=nameWithType> hala üzerinde çalıştığınız bir teste, henüz çalıştırılmaya hazırlanma olduğunu göstermek için bir ifade eklersiniz.
+<xref:Microsoft.VisualStudio.TestTools.UnitTesting.AssertInconclusiveException>Bir test, **Sonuçlandırılamayan** bir sonuç üretdiğinde oluşturulur. Genellikle, <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.Inconclusive%2A?displayProperty=nameWithType> hala üzerinde çalıştığınız bir teste, henüz çalıştırılmaya hazırlanma olduğunu göstermek için bir ifade eklersiniz.
 
 > [!NOTE]
 > Alternatif bir strateji, özniteliğiyle çalıştırılmaya hazırlanmayan bir testi işaretlemenize olanak sağlar <xref:Microsoft.VisualStudio.TestTools.UnitTesting.IgnoreAttribute> . Ancak, bu, uygulanmayan testlerin sayısı üzerinde kolayca rapor oluşturmamalarınızın dezavantajı vardır.

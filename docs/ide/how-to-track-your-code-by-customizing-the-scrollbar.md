@@ -1,5 +1,7 @@
 ---
 title: Kaydırma çubuğu eşleme modu ve çubuk modu
+description: Kaydırma çubuğunun özelleştirmesiyle kodunuzda yapılan değişiklikleri nasıl izleyeceğinizi ve ayrıca çubuk modunu ve harita modunu kullanmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 03/20/2020
 ms.topic: how-to
 author: TerryGLee
@@ -7,12 +9,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5d1b659dabed2337013ffb84ff48277f0edacb09
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c59ac152be9528ef3e01410f0a3b5f34dd882286
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85283989"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95596943"
 ---
 # <a name="how-to-customize-the-scroll-bar"></a>Nasıl yapılır: kaydırma çubuğunu özelleştirme
 
@@ -57,9 +59,9 @@ Kaydırma çubuğunun iki modu vardır: çubuk modu ve eşleme modu.
 *Harita modu* , kod satırlarını, kaydırma çubuğunda küçük olarak görüntüler. Eşleme sütununun ne kadar geniş olduğunu seçerek **kaynak genel bakış**' da bir değer seçebilirsiniz. İşaretçiyi haritada tuttuğunuz zaman kodun daha büyük bir önizlemesini etkinleştirmek için **Önizleme araç Ipucunu göster** seçeneğini belirleyin. Daraltılmış bölgeler farklı şekilde genişleyebilir ve çift tıkladığınızda genişletilir.
 
 > [!TIP]
-> **Kaynak genel bakışını** **kapalı**olarak ayarlayarak, eşleme modunda küçük kod görünümünü kapatabilirsiniz. **Önizleme araç Ipucunu göster** seçiliyse, işaretçinizi kaydırma çubuğunun üzerine getirdiğinizde bu konumdaki kodun önizlemesini görmeye devam edersiniz ve imleç, tıkladığınızda dosyada bu konuma atlar.
+> **Kaynak genel bakışını** **kapalı** olarak ayarlayarak, eşleme modunda küçük kod görünümünü kapatabilirsiniz. **Önizleme araç Ipucunu göster** seçiliyse, işaretçinizi kaydırma çubuğunun üzerine getirdiğinizde bu konumdaki kodun önizlemesini görmeye devam edersiniz ve imleç, tıkladığınızda dosyada bu konuma atlar.
 
-Aşağıdaki görüntüde, harita modu açık olduğunda ve Genişlik **Orta**olarak ayarlandığında arama örneği gösterilmektedir:
+Aşağıdaki görüntüde, harita modu açık olduğunda ve Genişlik **Orta** olarak ayarlandığında arama örneği gösterilmektedir:
 
 ![Harita modunda Visual Studio kaydırma çubuğu](../ide/media/enhancedscrollbar.png)
 

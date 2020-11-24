@@ -1,5 +1,7 @@
 ---
 title: VSıX paketinin anatomumu | Microsoft Docs
+description: Visual Studio 'daki bir VSıX paketinin içerikleri, bir veya daha fazla Visual Studio uzantısı ve bir meta veri bildirim dosyası içeren bir dosya hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 33cecb4767193010d7e7ca330d891d1835091875
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: 3fc65cda5eb969e361e90771e0245fdaeaeebcd1
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012340"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95598165"
 ---
 # <a name="anatomy-of-a-vsix-package"></a>VSıX paketinin anatomumu
 VSıX paketi, Visual Studio 'Nun uzantıları sınıflandırmak ve yüklemek için kullandığı meta verilerle birlikte bir veya daha fazla Visual Studio uzantısı içeren bir *. VSIX* dosyasıdır. Bu meta veriler VSıX bildiriminde ve *[Content_Types]. xml* dosyasında bulunur. Bir VSıX paketi ayrıca yerelleştirilmiş kurulum metni sağlamak için bir veya daha fazla *extension. valtlangpack* dosyası içerebilir ve bağımlılıkları yüklemek IÇIN ek VSIX paketleri içerebilir.
@@ -50,7 +52,7 @@ VSıX paketi, Visual Studio 'Nun uzantıları sınıflandırmak ve yüklemek iç
  VSıX paketindeki başvurulan derlemelerden uydu dll 'Leri eklemek için `SatelliteDllsProjectOutputGroup` **VSIX özelliğinde bulunan çıkış gruplarına** ekleyin.
 
 ## <a name="installation-location"></a>Yükleme konumu
- Yükleme sırasında, **Uzantılar ve güncelleştirmeler** , VSIX paketinin içeriğini *%LocalAppData%\Microsoft\VisualStudio\14.0\Extensions*altındaki bir klasörde arar.
+ Yükleme sırasında, **Uzantılar ve güncelleştirmeler** , VSIX paketinin içeriğini *%LocalAppData%\Microsoft\VisualStudio\14.0\Extensions* altındaki bir klasörde arar.
 
  Varsayılan olarak, yükleme yalnızca geçerli kullanıcı için geçerlidir, çünkü *% LocalAppData%* kullanıcıya özgü bir dizindir. Ancak, bildirimin [ALLUSERS](/previous-versions/ee191547(v=vs.110)) öğesini olarak ayarlarsanız `True` , uzantı altına yüklenir <em>. \\ </em> VisualStudioInstallationFolder<em>\Common7\IDE\Extensions</em> ve bilgisayarın tüm kullanıcıları tarafından kullanılabilir.
 

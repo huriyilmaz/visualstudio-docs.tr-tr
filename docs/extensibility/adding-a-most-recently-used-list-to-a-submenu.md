@@ -1,5 +1,7 @@
 ---
 title: Alt menüye en son kullanılan bir liste ekleme | Microsoft Docs
+description: Visual Studio tümleşik geliştirme ortamındaki (IDE) bir alt menüye en son kullanılan menü komutlarını içeren dinamik bir liste eklemeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3f73f948befc7665ecc3a40f816389bfaae8e4fd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0de48e30ea20ab2f7df4e512312978e4faa3a46b
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904199"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597937"
 ---
 # <a name="add-a-most-recently-used-list-to-a-submenu"></a>Alt menüye en son kullanılan bir liste ekleme
 Bu izlenecek yol, [bir menüye alt menü ekleme](../extensibility/adding-a-submenu-to-a-menu.md)ve bir alt menüye nasıl dinamik bir liste ekleneceğini gösterir. Dinamik liste, en son kullanılanlar (MRU) listesini oluşturma temelini oluşturur.
@@ -30,7 +32,7 @@ Bu izlenecek yol, her birinin seçildiği her seferinde (seçili öğe listenin 
 
 Menüler ve *. vsct* dosyaları hakkında daha fazla bilgi için bkz. [Komutlar, menüler ve araç çubukları](../extensibility/internals/commands-menus-and-toolbars.md).
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 Bu yönergeyi izlemek için, Visual Studio SDK 'sını yüklemelisiniz. Daha fazla bilgi için bkz. [Visual STUDIO SDK](../extensibility/visual-studio-sdk.md).
 
 ## <a name="create-an-extension"></a>Uzantı oluşturma
@@ -41,13 +43,13 @@ Bu yönergeyi izlemek için, Visual Studio SDK 'sını yüklemelisiniz. Daha faz
 
 ## <a name="create-a-dynamic-item-list-command"></a>Dinamik öğe listesi komutu oluştur
 
-1. *TestCommandPackage. vsct*öğesini açın.
+1. *TestCommandPackage. vsct* öğesini açın.
 
 2. `Symbols`Bölümünde, `GuidSymbol` Guıdtestcommandpackagecmdset adlı düğümde, `MRUListGroup` Grup ve komut için sembolü `cmdidMRUList` aşağıdaki gibi ekleyin.
 
     ```xml
     <IDSymbol name="MRUListGroup" value="0x1200"/>
-    <IDSymbol name="cmdidMRUList" value="0x0200"/>
+    <IDSymbol name="cmdidMRUList" value="0x0200"/>
     ```
 
 3. `Groups`Bölümünde, varolan Grup girişlerinden sonra, belirtilen grubu ekleyin.
@@ -77,7 +79,7 @@ Bu yönergeyi izlemek için, Visual Studio SDK 'sını yüklemelisiniz. Daha faz
 
 5. Yeni komutun görüntülenmesini test etmek için projeyi derleyin ve hata ayıklamayı başlatın.
 
-    Yeni komut, **MRU yer tutucusunu**göstermek Için **TestMenu** menüsünde Yeni alt menüye, **alt menüye**tıklayın. Bir sonraki yordamda bir dinamik MRU komut listesi uygulandıktan sonra, bu komut etiketi, alt menü her açıldığında bu liste ile yerine geçer.
+    Yeni komut, **MRU yer tutucusunu** göstermek Için **TestMenu** menüsünde Yeni alt menüye, **alt menüye** tıklayın. Bir sonraki yordamda bir dinamik MRU komut listesi uygulandıktan sonra, bu komut etiketi, alt menü her açıldığında bu liste ile yerine geçer.
 
 ## <a name="filling-the-mru-list"></a>MRU listesini doldurma
 
@@ -85,7 +87,7 @@ Bu yönergeyi izlemek için, Visual Studio SDK 'sını yüklemelisiniz. Daha faz
 
     ```csharp
     public const string guidTestCommandPackageCmdSet = "00000000-0000-0000-0000-00000000"; // get the GUID from the .vsct file
-    public const uint cmdidMRUList = 0x200;
+    public const uint cmdidMRUList = 0x200;
     ```
 
 2. *TestCommand.cs* içinde aşağıdaki using ifadesini ekleyin.
@@ -147,7 +149,7 @@ Bu yönergeyi izlemek için, Visual Studio SDK 'sını yüklemelisiniz. Daha faz
 6. Yönteminden sonra `InitMRUMenu` aşağıdaki `OnMRUQueryStatus` yöntemi ekleyin. Bu, her MRU öğesi için metin ayarlayan işleyicidir.
 
     ```csharp
-    private void OnMRUQueryStatus(object sender, EventArgs e)
+    private void OnMRUQueryStatus(object sender, EventArgs e)
     {
         OleMenuCommand menuCommand = sender as OleMenuCommand;
         if (null != menuCommand)
@@ -155,7 +157,7 @@ Bu yönergeyi izlemek için, Visual Studio SDK 'sını yüklemelisiniz. Daha faz
             int MRUItemIndex = menuCommand.CommandID.ID - this.baseMRUID;
             if (MRUItemIndex >= 0 && MRUItemIndex < this.mruList.Count)
             {
-                menuCommand.Text = this.mruList[MRUItemIndex] as string;
+                menuCommand.Text = this.mruList[MRUItemIndex] as string;
             }
         }
     }
@@ -164,7 +166,7 @@ Bu yönergeyi izlemek için, Visual Studio SDK 'sını yüklemelisiniz. Daha faz
 7. Yönteminden sonra `OnMRUQueryStatus` aşağıdaki `OnMRUExec` yöntemi ekleyin. Bu, bir MRU öğesi seçmeye yönelik işleyicidir. Bu yöntem Seçili öğeyi listenin en üstüne taşıdıkça seçili öğeyi bir ileti kutusunda görüntüler.
 
     ```csharp
-    private void OnMRUExec(object sender, EventArgs e)
+    private void OnMRUExec(object sender, EventArgs e)
     {
         var menuCommand = sender as OleMenuCommand;
         if (null != menuCommand)
@@ -172,7 +174,7 @@ Bu yönergeyi izlemek için, Visual Studio SDK 'sını yüklemelisiniz. Daha faz
             int MRUItemIndex = menuCommand.CommandID.ID - this.baseMRUID;
             if (MRUItemIndex >= 0 && MRUItemIndex < this.mruList.Count)
             {
-                string selection = this.mruList[MRUItemIndex] as string;
+                string selection = this.mruList[MRUItemIndex] as string;
                 for (int i = MRUItemIndex; i > 0; i--)
                 {
                     this.mruList[i] = this.mruList[i - 1];

@@ -1,5 +1,7 @@
 ---
 title: Tür tanımlarını görüntüleme
+description: Bir türün veya üyenin tanımını kolayca görüntülemenizi sağlayan tanıma git ve açıklama tanıma özellikleri hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 01/10/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3ef13b959d4e106b451ea0cfb336835059667ce4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8fab4bae999825d7d2fb11dd232d1e271b4f62d5
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75592080"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597502"
 ---
 # <a name="view-type-and-member-definitions"></a>Görünüm türü ve üye tanımları
 
@@ -26,21 +28,21 @@ Geliştiricilerin genellikle kendi kodlarında kullandıkları türler veya sın
 
 ## <a name="go-to-definition"></a>Tanıma Git
 
-**Tanıma Git** özelliği bir tür veya üyenin kaynağına gider ve sonucu yeni bir sekmede açar. Bir klavye kullanıcısı kullanıyorsanız, metin imlecinizi bir yere sembol adının içine yerleştirin ve **F12**tuşuna basın. Fare kullanıcısı kullanıyorsanız, sağ tıklama menüsünden **Tanıma Git** ' i seçin veya aşağıdaki bölümde açıklanan **CTRL-tıklama** işlevini kullanın.
+**Tanıma Git** özelliği bir tür veya üyenin kaynağına gider ve sonucu yeni bir sekmede açar. Bir klavye kullanıcısı kullanıyorsanız, metin imlecinizi bir yere sembol adının içine yerleştirin ve **F12** tuşuna basın. Fare kullanıcısı kullanıyorsanız, sağ tıklama menüsünden **Tanıma Git** ' i seçin veya aşağıdaki bölümde açıklanan **CTRL-tıklama** işlevini kullanın.
 
 ### <a name="ctrl-click-go-to-definition"></a>CTRL-tanıma git ' e tıklayın
 
-**CTRL** + hızlı **erişim için fare kullanıcıları için bir**kısayoldur **seçeneğine tıklayın** . **CTRL** tuşuna bastığınızda ve türün ya da üyenin üzerine geldiğinizde semboller tıklatılabilir hale gelir. Bir simgenin tanımına hızlıca gitmek için **CTRL** tuşuna basın ve ardından üzerine tıklayın. Bu kadar kolay!
+**CTRL** + hızlı **erişim için fare kullanıcıları için bir** kısayoldur **seçeneğine tıklayın** . **CTRL** tuşuna bastığınızda ve türün ya da üyenin üzerine geldiğinizde semboller tıklatılabilir hale gelir. Bir simgenin tanımına hızlıca gitmek için **CTRL** tuşuna basın ve ardından üzerine tıklayın. Bu kadar kolay!
 
 ![Fare tıklaması tanım animasyonuna git](../ide/media/click_gotodef.gif)
 
-Fare tıklaması için değiştirici anahtarını değiştirebilirsiniz. **Araçlar** **Go To Definition**  >  **Seçenekler**  >  **metin Düzenleyicisi**  >  **genel**'e giderek ve **Alt** **Ctrl** + **değiştirici tuşu kullan** açılır listesinden alt ya da CTRL**alt** ' i seçerek tanıma git ' i seçin. Fare **tıklamasını** devre dışı bırakmak için fare tıklamasını **Etkinleştir** onay kutusunun işaretini kaldırın.
+Fare tıklaması için değiştirici anahtarını değiştirebilirsiniz. **Araçlar** **Go To Definition**  >  **Seçenekler**  >  **metin Düzenleyicisi**  >  **genel**'e giderek ve **Alt** **Ctrl** + **değiştirici tuşu kullan** açılır listesinden alt ya da CTRL **alt** ' i seçerek tanıma git ' i seçin. Fare **tıklamasını** devre dışı bırakmak için fare tıklamasını **Etkinleştir** onay kutusunun işaretini kaldırın.
 
 ![Fare tıklamasını etkinleştirme tanıma git](../ide/media/editor_options_mouse_click_gotodef.png)
 
 ## <a name="peek-definition"></a>Tanıma Göz At
 
-Özet **tanım** özelliği, bir türün tanımını düzenleyicide geçerli konumundan çıkmadan önizlemenizi sağlar. Bir klavye kullanıcısı kullanıyorsanız, metin imlecinizi bir yere tür veya üye adının içine yerleştirin ve **alt + F12**tuşlarına basın. Fare kullanıcısı kullanıyorsanız, sağ tıklama menüsünden **Açıklama tanımı** ' nı seçebilirsiniz.
+Özet **tanım** özelliği, bir türün tanımını düzenleyicide geçerli konumundan çıkmadan önizlemenizi sağlar. Bir klavye kullanıcısı kullanıyorsanız, metin imlecinizi bir yere tür veya üye adının içine yerleştirin ve **alt + F12** tuşlarına basın. Fare kullanıcısı kullanıyorsanız, sağ tıklama menüsünden **Açıklama tanımı** ' nı seçebilirsiniz.
 
 **CTRL** + **tıklama** işlevselliğini etkinleştirmek için **Araçlar**  >  **Seçenekler**  >  **metin düzenleyici**  >  **genel**' e gidin. **Göz atma görünümü ' nde tanımı aç** seçeneğini belirleyin ve **Seçenekler** Iletişim kutusunu kapatmak için **Tamam** ' ı tıklatın.
 

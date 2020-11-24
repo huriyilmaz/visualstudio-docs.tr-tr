@@ -1,5 +1,7 @@
 ---
 title: Menü komutlarına simgeler ekleme | Microsoft Docs
+description: Visual Studio tümleşik geliştirme ortamındaki (IDE) menülerde ve araç çubuklarında görünebilen komutlara simgeler eklemeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c9f038dc43c1705a7cef47eb09a17607c535e307
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: eaf0a089c10c850c14b9ba2f807a69eada5d04b9
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85903436"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597658"
 ---
 # <a name="add-icons-to-menu-commands"></a>Menü komutlarına simgeler ekleme
 Komutlar hem menülerde hem de araç çubuklarında görünebilir. Araç çubuklarında, bir komutun yalnızca bir simgeyle görüntülenmesi (boşluk kazanmak için), bir komutun genellikle bir simge ve metinle birlikte görüntülenmesidir.
@@ -33,11 +35,11 @@ Komutlar hem menülerde hem de araç çubuklarında görünebilir. Araç çubukl
 
      8 bit renk derinliği kullanıyorsanız, saydamlık olarak Macenta ' i kullanın `RGB(255,0,255)` . Ancak, 32 bit renk simgeleri tercih edilir.
 
-2. Simge dosyasını VSPackage projenizdeki *Resources* dizinine kopyalayın. **Çözüm Gezgini**, simgeyi projeye ekleyin. ( **Kaynakları**seçin ve bağlam menüsünde **Ekle**' ye tıklayın, ardından **Varolan öğe**' ye tıklayın ve simge dosyanızı seçin.)
+2. Simge dosyasını VSPackage projenizdeki *Resources* dizinine kopyalayın. **Çözüm Gezgini**, simgeyi projeye ekleyin. ( **Kaynakları** seçin ve bağlam menüsünde **Ekle**' ye tıklayın, ardından **Varolan öğe**' ye tıklayın ve simge dosyanızı seçin.)
 
 3. Düzenleyicide *. vsct* dosyasını açın.
 
-4. `GuidSymbol` **Teyapışon**adlı bir öğe ekleyin. Bir GUID oluşturun (**Araçlar**  >  **GUID oluşturun**, ardından **kayıt defteri biçimi** ' ni seçin ve **Kopyala**' ya tıklayın) ve `value` özniteliğe yapıştırın. Sonuç şöyle görünmelidir:
+4. `GuidSymbol` **Teyapışon** adlı bir öğe ekleyin. Bir GUID oluşturun (**Araçlar**  >  **GUID oluşturun**, ardından **kayıt defteri biçimi** ' ni seçin ve **Kopyala**' ya tıklayın) ve `value` özniteliğe yapıştırın. Sonuç şöyle görünmelidir:
 
     ```xml
     <!-- Create your own GUID -->
@@ -57,7 +59,7 @@ Komutlar hem menülerde hem de araç çubuklarında görünebilir. Araç çubukl
 
     - Değeri, `guid` `<GuidSymbol>` önceki adımda oluşturduğunuz öğenin adına ayarlayın.
 
-    - `href`Değeri bit eşlem dosyasının göreli yoluna ayarlayın (Bu durumda, ** \\<simge dosya adı \> **.
+    - `href`Değeri bit eşlem dosyasının göreli yoluna ayarlayın (Bu durumda, **\\<simge dosya adı \>**.
 
     - `usedList`Değerini daha önce oluşturduğunuz IDSymbol olarak ayarlayın. Bu öznitelik, VSPackage içinde kullanılacak simgelerin virgülle ayrılmış bir listesini belirtir. Listede olmayan simgeler, form derlemesini dışlanıyor.
 

@@ -1,5 +1,7 @@
 ---
 title: "Nasıl yapılır: C++ dll 'Leri için birim testleri yazma"
+description: Test-First yöntemini kullanarak yerel C++ DLL geliştirmeyi öğrenin. Yerel bir test projesi oluşturarak başlayın.
+ms.custom: SEO-VS-2020
 ms.date: 06/13/2019
 ms.topic: how-to
 ms.author: corob
@@ -7,12 +9,12 @@ manager: markl
 ms.workload:
 - cplusplus
 author: corob-msft
-ms.openlocfilehash: 16020c0928229c80a9eb33b3bc4804b004d9f432
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 178fef548bc52346a78c7f9e4607aad7b1c56f65
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85816013"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95598412"
 ---
 # <a name="how-to-write-unit-tests-for-c-dlls"></a>Nasıl yapılır: C++ dll 'Leri için birim testleri yazma
 
@@ -49,7 +51,7 @@ Bu izlenecek yol, test-First yöntemini kullanarak yerel C++ DLL 'nin nasıl gel
 
      ![Test&#95;sınıfı ve TEST&#95;YÖNTEMIYLE test projesi](../test/media/utecpp2.png)
 
-     Dikkat edin:
+     Şunlara dikkat edin:
 
     - Her test kullanılarak tanımlanır `TEST_METHOD(YourTestName){...}` .
 
@@ -72,13 +74,13 @@ Bu izlenecek yol, test-First yöntemini kullanarak yerel C++ DLL 'nin nasıl gel
 
          `Assert`Sınıfının, test yöntemlerinde sonuçları doğrulamak için kullanabileceğiniz çeşitli statik yöntemler sağladığını unutmayın.
 
-    2. **Test** menüsünde **Run**  >  **tüm testleri**Çalıştır ' ı seçin.
+    2. **Test** menüsünde **Run**  >  **tüm testleri** Çalıştır ' ı seçin.
 
          Test derlemeleri ve çalıştırmaları.
 
          **Test Gezgini** görüntülenir.
 
-         Test **geçilen testler**altında görünür.
+         Test **geçilen testler** altında görünür.
 
          ![Başarılı bir test ile birim test Gezgini](../test/media/utecpp04.png)
 
@@ -88,7 +90,7 @@ Bu izlenecek yol, test-First yöntemini kullanarak yerel C++ DLL 'nin nasıl gel
 
 Aşağıdaki adımlarda, Visual Studio 2019 ' de bir DLL projesi oluşturma gösterilmektedir.
 
-1. **Windows Masaüstü Sihirbazı 'nı**kullanarak bir C++ projesi oluşturma: **Çözüm Gezgini** çözüm adına sağ tıklayın ve **Add**  >  **Yeni proje**Ekle ' yi seçin. **Dili** C++ olarak ayarlayın ve arama kutusuna "Windows" yazın. Sonuçlar listesinden **Windows Masaüstü Sihirbazı** ' nı seçin.
+1. **Windows Masaüstü Sihirbazı 'nı** kullanarak bir C++ projesi oluşturma: **Çözüm Gezgini** çözüm adına sağ tıklayın ve **Add**  >  **Yeni proje** Ekle ' yi seçin. **Dili** C++ olarak ayarlayın ve arama kutusuna "Windows" yazın. Sonuçlar listesinden **Windows Masaüstü Sihirbazı** ' nı seçin.
 
      Bu kılavuzda, proje adlandırılır `RootFinder` .
 
@@ -188,7 +190,7 @@ Aşağıdaki adımlarda, Visual Studio 2017 ' de bir DLL projesi oluşturma gös
 
     Yeni test, **Test Gezgini**'nde görünür.
 
-5. **Test Gezgini**Içinde **Tümünü Çalıştır**' ı seçin.
+5. **Test Gezgini** Içinde **Tümünü Çalıştır**' ı seçin.
 
     ![Temel test &#45; birim test Gezgini geçildi](../test/media/utecpp10.png)
 
@@ -243,7 +245,7 @@ Aşağıdaki adımlarda, Visual Studio 2017 ' de bir DLL projesi oluşturma gös
     }
     ```
 
-4. Çözümü derleyin ve ardından **Test Gezgini**Içinde **Tümünü Çalıştır**' ı seçin.
+4. Çözümü derleyin ve ardından **Test Gezgini** Içinde **Tümünü Çalıştır**' ı seçin.
 
      Her iki test de geçer.
 

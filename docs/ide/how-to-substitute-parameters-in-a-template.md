@@ -1,5 +1,7 @@
 ---
 title: Proje ve öğe şablonlarına ad parametreleri ekleyin
+description: Sınıf adları ve ad alanları gibi tanımlayıcıları değiştirmek için şablon parametrelerini değiştirmeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 01/02/2018
 ms.topic: how-to
 helpviewer_keywords:
@@ -9,12 +11,12 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 3c8b6e0570567e8eb696fda61fe9db7bbd4a2f1b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ba830035f441421ca0eb83404b37319d9a9e2ca3
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85283950"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95596865"
 ---
 # <a name="how-to-substitute-parameters-in-a-template"></a>Nasıl yapılır: şablonda parametreleri değiştirme
 
@@ -26,7 +28,7 @@ Aşağıdaki bölümde, bir ad alanının adını "güvenli proje adı" ile değ
 
 ## <a name="example---namespace-name"></a>Örnek-ad alanı adı
 
-1. Parametreyi şablondaki bir veya daha fazla kod dosyasına ekleyin. Örneğin:
+1. Parametreyi şablondaki bir veya daha fazla kod dosyasına ekleyin. Örnek:
 
     ```csharp
     namespace $safeprojectname$

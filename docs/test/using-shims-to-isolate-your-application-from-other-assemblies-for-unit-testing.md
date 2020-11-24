@@ -1,5 +1,6 @@
 ---
 title: Uygulamanızı dolgular ile yalıtma (birim testi)
+description: Testinizin bir parçası olarak yazdığınız kodun belirli yöntemlerine çağrı yapmak için dolgu türlerini nasıl kullanacağınızı öğrenin. Bir dolgu, her çağrıda tutarlı sonuçlar döndürebilir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -9,12 +10,12 @@ author: mikejo5000
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 13a5c8c4058fc051cf7ec0093632220c757604f0
-ms.sourcegitcommit: f2bb3286028546cbd7f54863b3156bd3d65c55c4
+ms.openlocfilehash: 0ce89246d227d747fee2d3a02484855257f016f8
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93325922"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95598217"
 ---
 # <a name="use-shims-to-isolate-your-app-for-unit-testing"></a>Birim testi için uygulamanızı yalıtmak üzere dolgular kullanma
 
@@ -67,16 +68,16 @@ using (ShimsContext.Create()) {
 
 İlk olarak, Fakes derlemesi ekleyin:
 
-1. **Çözüm Gezgini** , 
+1. **Çözüm Gezgini**, 
     - Daha eski bir .NET Framework projesi (SDK olmayan stil) için, birim testi projenizin **Başvurular** düğümünü genişletin.
     ::: moniker range=">=vs-2019"
-    - .NET Framework veya .NET Core 'u hedefleyen SDK stili bir proje için, **derlemeler** , **Projeler** veya **paketler** altında taklit etmek istediğiniz derlemeyi bulmak için **Bağımlılıklar** düğümünü genişletin.
+    - .NET Framework veya .NET Core 'u hedefleyen SDK stili bir proje için, **derlemeler**, **Projeler** veya **paketler** altında taklit etmek istediğiniz derlemeyi bulmak için **Bağımlılıklar** düğümünü genişletin.
     ::: moniker-end
     - Visual Basic ' de çalışıyorsanız, **Başvurular** düğümünü görmek için **Çözüm Gezgini** araç çubuğunda **tüm dosyaları göster** ' i seçin.
 
-2. Dolgu oluşturmak istediğiniz sınıf tanımlarını içeren derlemeyi seçin. Örneğin, **TarihSaat** dolgusu istiyorsanız **System.dll** ' yi seçin.
+2. Dolgu oluşturmak istediğiniz sınıf tanımlarını içeren derlemeyi seçin. Örneğin, **TarihSaat** dolgusu istiyorsanız **System.dll**' yi seçin.
 
-3. Kısayol menüsünde **Fakes derlemesi Ekle** ' yi seçin.
+3. Kısayol menüsünde **Fakes derlemesi Ekle**' yi seçin.
 
 ### <a name="use-shimscontext"></a>ShimsContext kullanma
 
@@ -96,7 +97,7 @@ Her dolgu bağlamını doğru bir şekilde atmak önemlidir. Bir Thumb kuralı o
 
 ### <a name="write-a-test-with-shims"></a>Dolgular ile test yazma
 
-Test kodunuzda, taklit etmek istediğiniz yöntem için bir *deturu* ekleyin. Örneğin:
+Test kodunuzda, taklit etmek istediğiniz yöntem için bir *deturu* ekleyin. Örnek:
 
 ```csharp
 [TestClass]

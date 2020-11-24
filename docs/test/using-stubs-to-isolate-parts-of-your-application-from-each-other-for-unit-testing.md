@@ -1,5 +1,7 @@
 ---
 title: Uygulama parçalarını test için yalıtmak üzere saplamalar kullanma
+description: Test sırasında başka bir bileşenin yerini alan küçük bir kod parçası olan bir saplama hakkında bilgi edinin. Bir saplama kullanmak tutarlı sonuçlar döndürür.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.author: mikejo
@@ -10,12 +12,12 @@ author: mikejo5000
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 268cfaa0a5df458ae529f5f2d369dc157ef64548
-ms.sourcegitcommit: f2bb3286028546cbd7f54863b3156bd3d65c55c4
+ms.openlocfilehash: eeb7b981dcaec97d52c24ea40476f0bec84e608e
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93325969"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95598568"
 ---
 # <a name="use-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing"></a>Birim testi için uygulamanızın parçalarını birbirinden yalıtmak üzere saplamalar kullanma
 
@@ -147,16 +149,16 @@ Saptamalar kullanmak için saptama türleri arabirimi tanımlarından oluşturma
 
 #### <a name="add-a-fakes-assembly"></a>Fakes derlemesi Ekle
 
-1. **Çözüm Gezgini** , 
+1. **Çözüm Gezgini**, 
     - Daha eski bir .NET Framework projesi (SDK olmayan stil) için, birim testi projenizin **Başvurular** düğümünü genişletin.
     ::: moniker range=">=vs-2019"
-    - .NET Framework veya .NET Core 'u hedefleyen SDK stili bir proje için, **derlemeler** , **Projeler** veya **paketler** altında taklit etmek istediğiniz derlemeyi bulmak için **Bağımlılıklar** düğümünü genişletin.
+    - .NET Framework veya .NET Core 'u hedefleyen SDK stili bir proje için, **derlemeler**, **Projeler** veya **paketler** altında taklit etmek istediğiniz derlemeyi bulmak için **Bağımlılıklar** düğümünü genişletin.
     ::: moniker-end
     - Visual Basic ' de çalışıyorsanız, **Başvurular** düğümünü görmek için **Çözüm Gezgini** araç çubuğunda **tüm dosyaları göster** ' i seçin.
 
-2. Dolgu oluşturmak istediğiniz sınıf tanımlarını içeren derlemeyi seçin. Örneğin, **TarihSaat** dolgusu istiyorsanız **System.dll** ' yi seçin.
+2. Dolgu oluşturmak istediğiniz sınıf tanımlarını içeren derlemeyi seçin. Örneğin, **TarihSaat** dolgusu istiyorsanız **System.dll**' yi seçin.
 
-3. Kısayol menüsünde **Fakes derlemesi Ekle** ' yi seçin.
+3. Kısayol menüsünde **Fakes derlemesi Ekle**' yi seçin.
 
 ### <a name="write-your-test-with-stubs"></a>Saptamalarla test yazma
 
@@ -221,7 +223,7 @@ Saptamalar ayrıca olaylar ve genel yöntemlerle ilgili olarak özellik okuyucu 
 
 ### <a name="verify-parameter-values"></a>Parametre değerlerini doğrulama
 
-Bileşeniniz başka bir bileşen için çağrı yaptığında, doğrulayabilirsiniz, doğru değerleri geçirir. Bir onaylama işlemini saptamaya yerleştirebilirsiniz veya değer depolayabilir ve testin ana gövdesini de doğrulayabilirsiniz. Örneğin:
+Bileşeniniz başka bir bileşen için çağrı yaptığında, doğrulayabilirsiniz, doğru değerleri geçirir. Bir onaylama işlemini saptamaya yerleştirebilirsiniz veya değer depolayabilir ve testin ana gövdesini de doğrulayabilirsiniz. Örnek:
 
 ```csharp
 [TestClass]
@@ -393,7 +395,7 @@ Kod `GetValue<T>` diğer bir örnek oluşturma ile çağrılıyorsa, saplama yal
 
 ### <a name="stubs-of-virtual-classes"></a>Sanal sınıf saptamaları
 
-Önceki örneklerde saptamalar arabirimlerden üretilmedi. Sanal veya özet üyeler bir sınıftan saptamalar da oluşturabilir. Örneğin:
+Önceki örneklerde saptamalar arabirimlerden üretilmedi. Sanal veya özet üyeler bir sınıftan saptamalar da oluşturabilir. Örnek:
 
 ```csharp
 // Base class in application under test

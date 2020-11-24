@@ -1,5 +1,7 @@
 ---
 title: Kod parçacıklarını uzantı olarak dağıtma
+description: Kod parçacıklarını diğer geliştiricilere dağıtmak için kod parçacıkları yöneticisini nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 03/21/2019
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,16 +14,16 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: c283d5ca29b67e772df2a0bb2e25dee70cd63fd3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 17f477fe2d02a43cef77358e862cfdf80a079ba5
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85284379"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597177"
 ---
 # <a name="how-to-distribute-code-snippets"></a>Nasıl yapılır: kod parçacıklarını dağıtma
 
-Kod parçacıklarında Arkadaşlarınıza kod parçacıklarını verebilir ve **kod parçacıkları Yöneticisi 'ni**kullanarak kendi bilgisayarlarına kod parçacıkları yükleyebilirsiniz. Ancak, dağıtılacak birkaç kod parçacığına sahipseniz veya bunları daha yaygın olarak dağıtmak istiyorsanız, kod parçacığı dosyalarınızı bir Visual Studio uzantısına dahil edebilirsiniz. Visual Studio kullanıcıları daha sonra kod parçacıklarını almak için uzantıyı yükleyebilir.
+Kod parçacıklarında Arkadaşlarınıza kod parçacıklarını verebilir ve **kod parçacıkları Yöneticisi 'ni** kullanarak kendi bilgisayarlarına kod parçacıkları yükleyebilirsiniz. Ancak, dağıtılacak birkaç kod parçacığına sahipseniz veya bunları daha yaygın olarak dağıtmak istiyorsanız, kod parçacığı dosyalarınızı bir Visual Studio uzantısına dahil edebilirsiniz. Visual Studio kullanıcıları daha sonra kod parçacıklarını almak için uzantıyı yükleyebilir.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
@@ -33,9 +35,9 @@ Kod parçacıklarında Arkadaşlarınıza kod parçacıklarını verebilir ve **
 
 Bu yordamda, [Izlenecek yol: kod parçacığı oluşturma](../ide/walkthrough-creating-a-code-snippet.md)' da oluşturulan Merhaba Dünya kod parçacığını kullanacaksınız. Bu makalede kod parçacığı XML 'SI sağlanmıştır, bu nedenle geri dönüp bir kod parçacığı oluşturmanız gerekmez.
 
-1. **Boş VSIX proje** şablonundan yeni bir proje oluşturun ve proje **testparçacığını**adlandırın.
+1. **Boş VSIX proje** şablonundan yeni bir proje oluşturun ve proje **testparçacığını** adlandırın.
 
-2. **Testparçacığının** projesinde yenı bir XML dosyası ekleyin ve bu dosyayı *vbcodeparçacığın. parçacığını*çağırın. İçeriği aşağıdaki XML ile değiştirin:
+2. **Testparçacığının** projesinde yenı bir XML dosyası ekleyin ve bu dosyayı *vbcodeparçacığın. parçacığını* çağırın. İçeriği aşağıdaki XML ile değiştirin:
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -63,23 +65,23 @@ Bu yordamda, [Izlenecek yol: kod parçacığı oluşturma](../ide/walkthrough-cr
 
 ### <a name="set-up-the-directory-structure"></a>Dizin yapısını ayarlama
 
-1. **Çözüm Gezgini**' de, proje düğümünü seçin ve **kod parçacıkları yöneticisinde, kod**parçacığında olmasını istediğiniz ada sahip bir klasör ekleyin. Bu durumda, **Merhaba Worldvb**olmalıdır.
+1. **Çözüm Gezgini**' de, proje düğümünü seçin ve **kod parçacıkları yöneticisinde, kod** parçacığında olmasını istediğiniz ada sahip bir klasör ekleyin. Bu durumda, **Merhaba Worldvb** olmalıdır.
 
 2. *. Parçacığının* dosyasını *HelloWorldVB* klasörüne taşıyın.
 
-3. **Çözüm Gezgini** *. kod parçacığı* dosyasını seçin ve **Özellikler** penceresinde **derleme eyleminin** **içerik**olarak ayarlandığından emin olun, **Çıkış Dizinine Kopyala** özelliği **her zaman Kopyala**olarak ayarlanır ve **VSIX 'e dahil et** özelliği **true**olarak ayarlanır.
+3. **Çözüm Gezgini** *. kod parçacığı* dosyasını seçin ve **Özellikler** penceresinde **derleme eyleminin** **içerik** olarak ayarlandığından emin olun, **Çıkış Dizinine Kopyala** özelliği **her zaman Kopyala** olarak ayarlanır ve **VSIX 'e dahil et** özelliği **true** olarak ayarlanır.
 
 ### <a name="add-the-pkgdef-file"></a>. Pkgdef dosyasını ekleme
 
 ::: moniker range="vs-2017"
 
-1. *Merhaba worldvb* klasörüne bir metin dosyası ekleyin ve *Merhaba worldvb. pkgdef*olarak adlandırın. Bu dosya, kayıt defterine belirli anahtarlar eklemek için kullanılır. Bu durumda, **HKEY_CURRENT_USER \Software\Microsoft\VisualStudio\15.0\Languages\CodeExpansions\Basic** anahtarına yeni bir alt anahtar ekler.
+1. *Merhaba worldvb* klasörüne bir metin dosyası ekleyin ve *Merhaba worldvb. pkgdef* olarak adlandırın. Bu dosya, kayıt defterine belirli anahtarlar eklemek için kullanılır. Bu durumda, **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\15.0\Languages\CodeExpansions\Basic** anahtarına yeni bir alt anahtar ekler.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-1. *Merhaba worldvb* klasörüne bir metin dosyası ekleyin ve *Merhaba worldvb. pkgdef*olarak adlandırın. Bu dosya, kayıt defterine belirli anahtarlar eklemek için kullanılır. Bu durumda, **HKEY_CURRENT_USER \Software\Microsoft\VisualStudio\16.0\Languages\CodeExpansions\Basic** anahtarına yeni bir alt anahtar ekler.
+1. *Merhaba worldvb* klasörüne bir metin dosyası ekleyin ve *Merhaba worldvb. pkgdef* olarak adlandırın. Bu dosya, kayıt defterine belirli anahtarlar eklemek için kullanılır. Bu durumda, **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\16.0\Languages\CodeExpansions\Basic** anahtarına yeni bir alt anahtar ekler.
 
 ::: moniker-end
 
@@ -101,7 +103,7 @@ Bu yordamda, [Izlenecek yol: kod parçacığı oluşturma](../ide/walkthrough-cr
 
 4. *. Pkgdef* dosyasını VSIX bildiriminde bir varlık olarak ekleyin. *Source. Extension. valtmanifest* dosyasında, **varlıklar** sekmesine gidin ve **Yeni**' ye tıklayın.
 
-5. **Yeni varlık Ekle** iletişim kutusunda, **türü** **Microsoft. VisualStudio. VSPackage**, **FileSystem üzerindeki dosya**için **kaynak** ve **Merhaba worldvb. pkgdef** **yolunu** (açılan menüde görünmelidir) ayarlayın.
+5. **Yeni varlık Ekle** iletişim kutusunda, **türü** **Microsoft. VisualStudio. VSPackage**, **FileSystem üzerindeki dosya** için **kaynak** ve **Merhaba worldvb. pkgdef** **yolunu** (açılan menüde görünmelidir) ayarlayın.
 
 ### <a name="test-the-snippet"></a>Kod parçacığını test etme
 
@@ -111,11 +113,11 @@ Bu yordamda, [Izlenecek yol: kod parçacığı oluşturma](../ide/walkthrough-cr
 
    Visual Studio 'nun ikinci bir örneği görüntülenir.
 
-3. Deneysel örnekte, **Araçlar**  >  **kod parçacıkları Yöneticisi** ' ne gidin ve **dili** **temel**olarak ayarlayın. Bir klasörden birine *Merhaba Worldvb* görmeniz gerekir ve *Merhaba worldvb* kod parçacığını görmek için klasörü genişletmeniz gerekir.
+3. Deneysel örnekte, **Araçlar**  >  **kod parçacıkları Yöneticisi** ' ne gidin ve **dili** **temel** olarak ayarlayın. Bir klasörden birine *Merhaba Worldvb* görmeniz gerekir ve *Merhaba worldvb* kod parçacığını görmek için klasörü genişletmeniz gerekir.
 
 4. Kod parçacığını test edin. Deneysel örnekte, bir Visual Basic projesi açın ve kod dosyalarından birini açın. İmlecinizi kodda bir yere yerleştirin, sağ tıklayın ve bağlam menüsünde kod **parçacığı Ekle**' yi seçin.
 
-5. Bir klasörden biri olarak *Merhaba Worldvb* görmeniz gerekir. Çift tıklayın. Açılan bir **ekleme kod parçacığı ** görmeniz gerekir: bir açılan Merhaba çalışma parçacığı, bir açılan **helloworldvb**>. **Merhaba Worldvb** açılan listesine tıklayın.
+5. Bir klasörden biri olarak *Merhaba Worldvb* görmeniz gerekir. Çift tıklayın. Açılan bir **ekleme kod parçacığı** görmeniz gerekir: bir açılan Merhaba çalışma parçacığı, bir açılan **helloworldvb**>. **Merhaba Worldvb** açılan listesine tıklayın.
 
    Kod dosyasına aşağıdaki satır eklenir:
 

@@ -1,5 +1,7 @@
 ---
 title: Araç penceresi ekleme | Microsoft Docs
+description: Araç penceresi oluşturma ve araç penceresine bir komut içeren bir araç çubuğu ekleyerek Visual Studio ile tümleştirme hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 169f386128ccdd79aef6b90a6703f50323b9b6f3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 184e04e74e2065ea2a9e1bcd41b2e878981dd218
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904138"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597996"
 ---
 # <a name="add-a-tool-window"></a>Araç penceresi ekleme
 
@@ -38,7 +40,7 @@ Visual Studio SDK, Visual Studio kurulumuna isteğe bağlı bir özellik olarak 
 
 ## <a name="create-a-tool-window"></a>Araç penceresi oluşturma
 
-1. VSıX şablonunu kullanarak **Firsttoolwin** adlı bir proje oluşturun ve **FirstToolWindow**adlı özel bir araç penceresi öğesi şablonu ekleyin.
+1. VSıX şablonunu kullanarak **Firsttoolwin** adlı bir proje oluşturun ve **FirstToolWindow** adlı özel bir araç penceresi öğesi şablonu ekleyin.
 
     > [!NOTE]
     > Araç penceresiyle uzantı oluşturma hakkında daha fazla bilgi için bkz. [bir araç penceresi ile uzantı oluşturma](../extensibility/creating-an-extension-with-a-tool-window.md).
@@ -47,12 +49,12 @@ Visual Studio SDK, Visual Studio kurulumuna isteğe bağlı bir özellik olarak 
 
 1. Varsayılan denetimi kaldırın. *FirstToolWindowControl. xaml* ' i açın ve **Click ' i silin!** tıklayın.
 
-2. **Araç kutusunda** **tüm WPF denetimleri** bölümünü genişletin ve **medya öğesi** denetimini **FirstToolWindowControl** formuna sürükleyin. Denetimi seçin ve **Özellikler** penceresinde bu öğeyi **mediaElement1**olarak adlandırın.
+2. **Araç kutusunda** **tüm WPF denetimleri** bölümünü genişletin ve **medya öğesi** denetimini **FirstToolWindowControl** formuna sürükleyin. Denetimi seçin ve **Özellikler** penceresinde bu öğeyi **mediaElement1** olarak adlandırın.
 
 ## <a name="add-a-toolbar-to-the-tool-window"></a>Araç penceresine bir araç çubuğu ekleyin
 Aşağıdaki şekilde bir araç çubuğu ekleyerek, degradelerinin ve renklerinin IDE 'nin geri kalanı ile tutarlı olmasını güvence altına alırsınız.
 
-1. **Çözüm Gezgini**' de *FirstToolWindowPackage. vsct*öğesini açın. *. Vsct* dosyası, XML kullanarak araç pencerenizde grafik kullanıcı ARABIRIMI (GUI) öğelerini tanımlar.
+1. **Çözüm Gezgini**' de *FirstToolWindowPackage. vsct* öğesini açın. *. Vsct* dosyası, XML kullanarak araç pencerenizde grafik kullanıcı ARABIRIMI (GUI) öğelerini tanımlar.
 
 2. `<Symbols>`Bölümünde `<GuidSymbol>` özniteliği olan düğümünü bulun `name` `guidFirstToolWindowPackageCmdSet` . `<IDSymbol>` `<IDSymbol>` Bir araç çubuğu ve bir araç çubuğu grubu tanımlamak için aşağıdaki iki öğeyi bu düğümdeki öğe listesine ekleyin.
 
@@ -129,7 +131,7 @@ Araç çubuğuna düğme olarak görünen bir komut ekleyin.
 ## <a name="add-a-mediaplayer-property-to-firsttoolwindowcontrol"></a>FirstToolWindowControl 'a MediaPlayer özelliği ekleyin
 Araç çubuğu denetimlerinin olay işleyicilerinden, kodunuzun FirstToolWindowControl sınıfının bir alt öğesi olan Media Player denetimine erişebilmesi gerekir.
 
-**Çözüm Gezgini**, *FirstToolWindowControl. xaml*öğesine sağ tıklayın, **kodu görüntüle**' ye tıklayın ve aşağıdaki kodu FirstToolWindowControl sınıfına ekleyin.
+**Çözüm Gezgini**, *FirstToolWindowControl. xaml* öğesine sağ tıklayın, **kodu görüntüle**' ye tıklayın ve aşağıdaki kodu FirstToolWindowControl sınıfına ekleyin.
 
 ```csharp
 public System.Windows.Controls.MediaElement MediaPlayer
@@ -255,7 +257,7 @@ public System.Windows.Controls.MediaElement MediaPlayer
 
 Ardından, araç penceresi için IDE 'de varsayılan bir konum belirtin. Araç penceresi için yapılandırma bilgileri *FirstToolWindowPackage.cs* dosyasında bulunur.
 
-1. *FirstToolWindowPackage.cs*Içinde, <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> `FirstToolWindowPackage` FirstToolWindow türünü oluşturucuya geçiren sınıfında özniteliğini bulun. Varsayılan bir konum belirtmek için, aşağıdaki örnekteki oluşturucuya daha fazla parametre eklemeniz gerekir.
+1. *FirstToolWindowPackage.cs* Içinde, <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> `FirstToolWindowPackage` FirstToolWindow türünü oluşturucuya geçiren sınıfında özniteliğini bulun. Varsayılan bir konum belirtmek için, aşağıdaki örnekteki oluşturucuya daha fazla parametre eklemeniz gerekir.
 
     ```csharp
     [ProvideToolWindow(typeof(FirstToolWindow),
@@ -263,7 +265,7 @@ Ardından, araç penceresi için IDE 'de varsayılan bir konum belirtin. Araç p
         Window = "3ae79031-e1bc-11d0-8f78-00a0c9110057")]
     ```
 
-    İlk adlandırılmış parametre `Style` ve değeridir ve `Tabbed` Bu, pencerenin varolan bir pencerede bir sekme olacağı anlamına gelir. Yerleştirme konumu parametresi tarafından belirtilir `Window` , bu durum n **Çözüm Gezgini**GUID 'si.
+    İlk adlandırılmış parametre `Style` ve değeridir ve `Tabbed` Bu, pencerenin varolan bir pencerede bir sekme olacağı anlamına gelir. Yerleştirme konumu parametresi tarafından belirtilir `Window` , bu durum n **Çözüm Gezgini** GUID 'si.
 
     > [!NOTE]
     > IDE 'deki pencere türleri hakkında daha fazla bilgi için bkz <xref:EnvDTE.vsWindowType> ..
@@ -274,7 +276,7 @@ Ardından, araç penceresi için IDE 'de varsayılan bir konum belirtin. Araç p
 
 2. **Görünüm** menüsünde **diğer pencereler** ' in üzerine gelin ve ardından **ilk araç penceresi**' ne tıklayın.
 
-    Media Player araç penceresi **Çözüm Gezgini**aynı konumda açılmalıdır. Daha önceki ile aynı konumda görünüyorsa pencere mizanpajını sıfırlayın (pencere **/pencere düzeni düzeni**).
+    Media Player araç penceresi **Çözüm Gezgini** aynı konumda açılmalıdır. Daha önceki ile aynı konumda görünüyorsa pencere mizanpajını sıfırlayın (pencere **/pencere düzeni düzeni**).
 
 3. Araç penceresinde ( **arama** simgesine sahiptir) düğmesine tıklayın. Desteklenen bir ses veya video dosyası seçin, örneğin *C:\Windows\Media\chimes.exe*, sonra **Aç**' a basın.
 

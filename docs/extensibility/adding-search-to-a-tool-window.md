@@ -1,5 +1,7 @@
 ---
 title: Araç penceresine arama ekleme | Microsoft Docs
+description: Arama kutusu, filtreleme ve ilerleme göstergesi dahil olmak üzere, Visual Studio 'daki bir araç penceresine arama işlevleri ekleme hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b648b0202e00ea0fa3bc659b90f2f9a7d709768f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d117ab18022285e5cd52f18a1de01adeafbc5df3
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85903404"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597645"
 ---
 # <a name="add-search-to-a-tool-window"></a>Araç penceresine arama ekleme
 Uzantınızın bir araç penceresini oluştururken veya güncelleştirdiğinizde, Visual Studio 'da başka bir yerde görünen aynı arama işlevini ekleyebilirsiniz. Bu işlevsellik aşağıdaki özellikleri içerir:
@@ -48,7 +50,7 @@ Bu izlenecek yolu izleyerek aşağıdaki görevleri nasıl gerçekleştireceğin
 
 ## <a name="to-create-a-vsix-project"></a>VSıX projesi oluşturmak için
 
-1. `TestToolWindowSearch` **Testsearch**adlı bir araç penceresi Ile adlı bir VSIX projesi oluşturun. Bu işlemi gerçekleştirmek için yardıma ihtiyacınız varsa, bkz. [bir araç penceresi ile uzantı oluşturma](../extensibility/creating-an-extension-with-a-tool-window.md).
+1. `TestToolWindowSearch` **Testsearch** adlı bir araç penceresi Ile adlı bir VSIX projesi oluşturun. Bu işlemi gerçekleştirmek için yardıma ihtiyacınız varsa, bkz. [bir araç penceresi ile uzantı oluşturma](../extensibility/creating-an-extension-with-a-tool-window.md).
 
 ## <a name="to-create-a-tool-window"></a>Bir araç penceresi oluşturmak için
 
@@ -75,7 +77,7 @@ Bu izlenecek yolu izleyerek aşağıdaki görevleri nasıl gerçekleştireceğin
 
      **Testsearchcontrol** sınıfında aşağıdaki kodu ekleyin.
 
-     Bu kod <xref:System.Windows.Controls.TextBox> **Searchresultstextbox** adlı ortak bir özellik ve **searchcontent**adlı bir genel dize özelliği ekler. Oluşturucuda, SearchResultsTextBox metin kutusu olarak ayarlanır ve SearchContent, yeni bir dize kümesi olarak başlatılır. Metin kutusunun içeriği, dizeler kümesine de başlatılır.
+     Bu kod <xref:System.Windows.Controls.TextBox> **Searchresultstextbox** adlı ortak bir özellik ve **searchcontent** adlı bir genel dize özelliği ekler. Oluşturucuda, SearchResultsTextBox metin kutusu olarak ayarlanır ve SearchContent, yeni bir dize kümesi olarak başlatılır. Metin kutusunun içeriği, dizeler kümesine de başlatılır.
 
      [!code-csharp[ToolWindowSearch#1](../extensibility/codesnippet/CSharp/adding-search-to-a-tool-window_1.cs)]
      [!code-vb[ToolWindowSearch#1](../extensibility/codesnippet/VisualBasic/adding-search-to-a-tool-window_1.vb)]
@@ -93,9 +95,9 @@ Bu izlenecek yolu izleyerek aşağıdaki görevleri nasıl gerçekleştireceğin
      Aramayı etkinleştirmek için, özelliğini geçersiz kılmanız gerekir <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.SearchEnabled%2A> . <xref:Microsoft.VisualStudio.Shell.ToolWindowPane>Sınıfı uygular <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch> ve aramayı etkinleştiremeyen varsayılan bir uygulama sağlar.
 
     ```csharp
-    public override bool SearchEnabled
+    public override bool SearchEnabled
     {
-        get { return true; }
+        get { return true; }
     }
     ```
 
@@ -242,7 +244,7 @@ Bu izlenecek yolu izleyerek aşağıdaki görevleri nasıl gerçekleştireceğin
 1. * TestSearch.cs * dosyasında, sınıfına aşağıdaki kodu ekleyin `TestSearch` . Bu kod, isteğe bağlı arama yerine anında arama sağlar (kullanıcının **ENTER**'a tıklamasından başka bir deyişle). Kod, `ProvideSearchSettings` `TestSearch` sınıfının varsayılan ayarlarını değiştirmek için gerekli olan yöntemini geçersiz kılar.
 
     ```csharp
-    public override void ProvideSearchSettings(IVsUIDataSource pSearchSettings)
+    public override void ProvideSearchSettings(IVsUIDataSource pSearchSettings)
     {
         Utilities.SetValue(pSearchSettings,
             SearchSettingsDataSource.SearchStartTypeProperty.Name,
@@ -284,13 +286,13 @@ Bu izlenecek yolu izleyerek aşağıdaki görevleri nasıl gerçekleştireceğin
      Her arama yaptığınızda arama penceresinde (arama metin kutusunun altında bir mavi çizgi olarak) ilerleme çubuğu görüntülenir.
 
 ## <a name="to-enable-users-to-refine-their-searches"></a>Kullanıcıların aramalarını iyileştirmesini sağlamak için
- Kullanıcıların aramalarını, **büyük/küçük harf eşleştirme** veya **sözcüğün tamamını eşleştirme**gibi seçenekler aracılığıyla iyileştirmelerine izin verebilirsiniz. Seçenekler, düğme olarak görünen onay kutuları veya komutlar olarak görünen Boole olabilir. Bu izlenecek yol için bir Boole seçeneği oluşturacaksınız.
+ Kullanıcıların aramalarını, **büyük/küçük harf eşleştirme** veya **sözcüğün tamamını eşleştirme** gibi seçenekler aracılığıyla iyileştirmelerine izin verebilirsiniz. Seçenekler, düğme olarak görünen onay kutuları veya komutlar olarak görünen Boole olabilir. Bu izlenecek yol için bir Boole seçeneği oluşturacaksınız.
 
 1. *TestSearch.cs* dosyasında, sınıfına aşağıdaki kodu ekleyin `TestSearch` . Kod, `SearchOptionsEnum` Arama uygulamasının belirli bir seçeneğin açık veya kapalı olduğunu algılamasına izin veren yöntemini geçersiz kılar. İçindeki kod, `SearchOptionsEnum` bir Numaralandırıcı ile büyük/küçük harf eşleştirmek için bir seçenek ekler <xref:Microsoft.VisualStudio.Shell.Interop.IVsEnumWindowSearchOptions> . Büyük/küçük harf eşleştirme seçeneği de özellik olarak kullanılabilir hale getirilir `MatchCaseOption` .
 
     ```csharp
     private IVsEnumWindowSearchOptions m_optionsEnum;
-    public override IVsEnumWindowSearchOptions SearchOptionsEnum
+    public override IVsEnumWindowSearchOptions SearchOptionsEnum
     {
         get
         {
@@ -342,13 +344,13 @@ Bu izlenecek yolu izleyerek aşağıdaki görevleri nasıl gerçekleştireceğin
 1. *TestSearch.cs* dosyasında, sınıfına aşağıdaki kodu ekleyin `TestSearch` . Kod, `SearchFiltersEnum` <xref:Microsoft.VisualStudio.PlatformUI.WindowSearchSimpleFilter> arama sonuçlarının yalnızca çift satır görünecek şekilde filtreleneceğini belirten bir ekleyerek uygular.
 
     ```csharp
-    public override IVsEnumWindowSearchFilters SearchFiltersEnum
+    public override IVsEnumWindowSearchFilters SearchFiltersEnum
     {
         get
         {
             List<IVsWindowSearchFilter> list = new List<IVsWindowSearchFilter>();
             list.Add(new WindowSearchSimpleFilter("Search even lines only", "Search even lines only", "lines", "even"));
-            return new WindowSearchFilterEnumerator(list) as IVsEnumWindowSearchFilters;
+            return new WindowSearchFilterEnumerator(list) as IVsEnumWindowSearchFilters;
         }
     }
 
@@ -359,19 +361,19 @@ Bu izlenecek yolu izleyerek aşağıdaki görevleri nasıl gerçekleştireceğin
 2. *TestSearch.cs* dosyasında, sınıfındaki sınıfına aşağıdaki yöntemleri ekleyin `TestSearchTask` `TestSearch` . Bu yöntemler, bir `OnStartSearch` sonraki adımda değiştireceğiniz yöntemini destekler.
 
     ```csharp
-    private string RemoveFromString(string origString, string stringToRemove)
+    private string RemoveFromString(string origString, string stringToRemove)
     {
         int index = origString.IndexOf(stringToRemove);
         if (index == -1)
             return origString;
-        else 
+        else 
              return (origString.Substring(0, index) + origString.Substring(index + stringToRemove.Length)).Trim();
     }
 
-    private string[] GetEvenItems(string[] contentArr)
+    private string[] GetEvenItems(string[] contentArr)
     {
         int length = contentArr.Length / 2;
-        string[] evenContentArr = new string[length];
+        string[] evenContentArr = new string[length];
 
         int indexB = 0;
         for (int index = 1; index < contentArr.Length; index += 2)
@@ -387,13 +389,13 @@ Bu izlenecek yolu izleyerek aşağıdaki görevleri nasıl gerçekleştireceğin
 3. Sınıfında, `TestSearchTask` `OnStartSearch` aşağıdaki kodla yöntemi güncelleştirin. Bu değişiklik, filtreyi desteklemek için kodu güncelleştirir.
 
     ```csharp
-    protected override void OnStartSearch()
+    protected override void OnStartSearch()
     {
-        // Use the original content of the text box as the target of the search. 
-        var separator = new string[] { Environment.NewLine };
+        // Use the original content of the text box as the target of the search. 
+        var separator = new string[] { Environment.NewLine };
         string[] contentArr = ((TestSearchControl)m_toolWindow.Content).SearchContent.Split(separator, StringSplitOptions.None);
 
-        // Get the search option. 
+        // Get the search option. 
         bool matchCase = false;
         matchCase = m_toolWindow.MatchCaseOption.Value;
 
@@ -406,7 +408,7 @@ Bu izlenecek yolu izleyerek aşağıdaki görevleri nasıl gerçekleştireceğin
         {
             string searchString = this.SearchQuery.SearchString;
 
-            // If the search string contains the filter string, filter the content array. 
+            // If the search string contains the filter string, filter the content array. 
             string filterString = "lines:\"even\"";
 
             if (this.SearchQuery.SearchString.Contains(filterString))
@@ -418,7 +420,7 @@ Bu izlenecek yolu izleyerek aşağıdaki görevleri nasıl gerçekleştireceğin
                 searchString = RemoveFromString(searchString, filterString);
             }
 
-            // Determine the results. 
+            // Determine the results. 
             uint progress = 0;
             foreach (string line in contentArr)
             {
@@ -441,7 +443,7 @@ Bu izlenecek yolu izleyerek aşağıdaki görevleri nasıl gerçekleştireceğin
 
                 SearchCallback.ReportProgress(this, progress++, (uint)contentArr.GetLength(0));
 
-                // Uncomment the following line to demonstrate the progress bar. 
+                // Uncomment the following line to demonstrate the progress bar. 
                 // System.Threading.Thread.Sleep(100);
             }
         }
@@ -457,8 +459,8 @@ Bu izlenecek yolu izleyerek aşağıdaki görevleri nasıl gerçekleştireceğin
             this.SearchResults = resultCount;
         }
 
-        // Call the implementation of this method in the base class. 
-        // This sets the task status to complete and reports task completion. 
+        // Call the implementation of this method in the base class. 
+        // This sets the task status to complete and reports task completion. 
         base.OnStartSearch();
     }
     ```

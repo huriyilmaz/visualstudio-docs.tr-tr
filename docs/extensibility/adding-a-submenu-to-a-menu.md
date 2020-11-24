@@ -1,5 +1,7 @@
 ---
 title: Menüye alt menü ekleme | Microsoft Docs
+description: Alt menü oluşturma, Visual Studio menü çubuğuna ekleme ve alt menüye yeni bir komut ekleme hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5887dba1ed1c583653b93792174524f8dfb84609
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 16b58a6ab6a01ff635b3afd58b06133abacf970e
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86972328"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95598022"
 ---
 # <a name="add-a-submenu-to-a-menu"></a>Menüye alt menü ekleme
 Bu izlenecek yol, **TestMenu** menüsüne bir alt menü nasıl ekleneceğini göstererek, [Visual Studio menü çubuğuna bir menü ekleme](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md) bölümündeki gösteride oluşturulur.
@@ -34,7 +36,7 @@ Bu izlenecek yol, **TestMenu** menüsüne bir alt menü nasıl ekleneceğini gö
 
 1. Projeyi ve menü öğesini oluşturmak için [Visual Studio menü çubuğuna menü ekleme](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md) bölümündeki adımları izleyin. Bu izlenecek yolda yer alan adımlarda VSıX projesinin adı olduğu varsayılır `TopLevelMenu` .
 
-2. *TestCommandPackage. vsct*öğesini açın. Bölümünde alt menü için bir `<Symbols>` `<IDSymbol>` , alt menü grubu ve diğeri Ise `<GuidSymbol>` "guidTopLevelMenuCmdSet" adlı düğümde bir öğe ekleyin. Bu, `<IDSymbol>` üst düzey menünün öğesini içeren düğümdür.
+2. *TestCommandPackage. vsct* öğesini açın. Bölümünde alt menü için bir `<Symbols>` `<IDSymbol>` , alt menü grubu ve diğeri Ise `<GuidSymbol>` "guidTopLevelMenuCmdSet" adlı düğümde bir öğe ekleyin. Bu, `<IDSymbol>` üst düzey menünün öğesini içeren düğümdür.
 
     ```xml
     <IDSymbol name="SubMenu" value="0x1100"/>
@@ -79,7 +81,7 @@ Bu izlenecek yol, **TestMenu** menüsüne bir alt menü nasıl ekleneceğini gö
 
 6. Çözümü oluşturun ve hata ayıklamayı başlatın. Deneysel örneği görmeniz gerekir.
 
-7. **Alt menü**adlı yeni bir alt menü görmek Için **TestMenu** öğesine tıklayın. Alt **menüyü açmak Için alt menü** ' ye tıklayın ve yeni bir komut, **Test Sub komutunu**görüntüleyin. **Test Sub komutunu** tıklatmak hiçbir şey yapmaz.
+7. **Alt menü** adlı yeni bir alt menü görmek Için **TestMenu** öğesine tıklayın. Alt **menüyü açmak Için alt menü** ' ye tıklayın ve yeni bir komut, **Test Sub komutunu** görüntüleyin. **Test Sub komutunu** tıklatmak hiçbir şey yapmaz.
 
 ## <a name="add-a-command"></a>Komut Ekle
 

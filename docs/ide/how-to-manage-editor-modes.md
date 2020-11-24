@@ -1,5 +1,7 @@
 ---
 title: Tam ekran ve sanal boşluk modu
+description: Visual Studio Düzenleyicisi modlarını, tüm araçları ve pencereleri sizin için en uygun şekilde görüntüleyecek şekilde yönetmeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -24,12 +26,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3f8f86d635e1e57d82dd2d18084c91a9267f9a0b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2b86859f5f5718871499bb1f3e2014da59f956db
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85284210"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597151"
 ---
 # <a name="how-to-manage-editor-modes"></a>Nasıl yapılır: düzenleyici modlarını yönetme
 
@@ -42,7 +44,7 @@ Visual Studio kod düzenleyicisini çeşitli görüntü modlarında görüntüle
 
 Tüm araç pencerelerini gizlemeyi ve yalnızca **tam ekran** modunu etkinleştirerek yalnızca belge pencerelerini görüntülemeyi seçebilirsiniz.
 
-- **Alt** + **Shift** + **Tam ekran** moduna girmek veya çıkmak için alt SHIFT**ENTER** tuşuna basın.
+- **Alt** + **Shift** + **Tam ekran** moduna girmek veya çıkmak için alt SHIFT **ENTER** tuşuna basın.
 
      -- veya --
 
@@ -56,7 +58,7 @@ Tüm araç pencerelerini gizlemeyi ve yalnızca **tam ekran** modunu etkinleşti
 
 2. **Metin düzenleyici** klasörünü genişletin ve bu seçeneği Global olarak ayarlamak Için **tüm diller** ' i seçin veya belirli bir dil klasörü seçin. Örneğin, satır numaralarını yalnızca Visual Basic açmak için **temel**  >  **metin düzenleyici** düğümünü seçin.
 
-3. **Genel** Seçenekler ' i seçin ve **Ayarlar**altında **sanal alanı etkinleştir**' i seçin.
+3. **Genel** Seçenekler ' i seçin ve **Ayarlar** altında **sanal alanı etkinleştir**' i seçin.
 
     > [!NOTE]
     > **Sütun seçim** modunda **sanal alan** etkindir. **Sanal boşluk** modu etkin olmadığında, ekleme noktası bir satırın sonundan doğrudan bir sonraki ilk karaktere gider.

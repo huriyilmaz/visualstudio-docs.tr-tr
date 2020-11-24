@@ -1,5 +1,7 @@
 ---
 title: VSTest.Console.exe komut satırı seçenekleri
+description: Testleri çalıştıran VSTest.Console.exe komut satırı aracı hakkında bilgi edinin. Bu makalede genel komut satırı seçenekleri bulunur.
+ms.custom: SEO-VS-2020
 ms.date: 07/17/2020
 ms.topic: reference
 helpviewer_keywords:
@@ -10,21 +12,21 @@ author: mikejo5000
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 875af363cbd85f8667d56a33cf7646ac2a9da429
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 98d58b745b35870d287b6e81aa0a14fcdaeac921
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037022"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95598529"
 ---
 # <a name="vstestconsoleexe-command-line-options"></a>VSTest.Console.exe komut satırı seçenekleri
 
 *VSTest.Console.exe* , testleri çalıştırmak için komut satırı aracıdır. Komut satırında herhangi bir sırada birkaç seçenek belirtebilirsiniz. Bu seçenekler [genel komut satırı seçeneklerinde](#general-command-line-options)listelenmiştir.
 
 > [!NOTE]
-> Visual Studio 'daki MSTest bağdaştırıcısı, uyumluluk için eski modda da ( *mstest.exe*ile testleri çalıştırmaya eşdeğerdir) çalışır. Eski modda, TestCaseFilter özelliğinden faydalanabilirsiniz. Bir *testsettings* dosyası belirtildiğinde, bağdaştırıcı eski moda geçebilir, **forcelegacymode** bir *runsettings* dosyasında **true** olarak ayarlanır veya **HostType**gibi öznitelikler kullanılarak.
+> Visual Studio 'daki MSTest bağdaştırıcısı, uyumluluk için eski modda da ( *mstest.exe* ile testleri çalıştırmaya eşdeğerdir) çalışır. Eski modda, TestCaseFilter özelliğinden faydalanabilirsiniz. Bir *testsettings* dosyası belirtildiğinde, bağdaştırıcı eski moda geçebilir, **forcelegacymode** bir *runsettings* dosyasında **true** olarak ayarlanır veya **HostType** gibi öznitelikler kullanılarak.
 >
-> ARM mimarisi tabanlı bir makinede otomatikleştirilmiş testler çalıştırmak için *VSTest.Console.exe*kullanmanız gerekir.
+> ARM mimarisi tabanlı bir makinede otomatikleştirilmiş testler çalıştırmak için *VSTest.Console.exe* kullanmanız gerekir.
 
 Komut satırı aracını kullanmak için bir [Geliştirici komut istemi](/dotnet/framework/tools/developer-command-prompt-for-vs) açın veya aracı *% Program Files (x86)% \ Microsoft Visual Studio \\<sürüm \> \\<Edition \> \common7\ide\CommonExtensions \\<platformunda bulabilirsiniz | Microsoft>*.
 
@@ -43,7 +45,7 @@ Aşağıdaki tabloda *VSTest.Console.exe* ve bunların kısa açıklamaları iç
 |**/UseVsixExtensions**|Bu seçenek, *vstest.console.exe* işleminin Test çalıştırmasında yüklü olan (varsa) VSIX uzantılarını kullanmasını veya atlamasını sağlar.<br />Bu seçenek kullanım dışıdır. Visual Studio 'nun bir sonraki ana sürümünden itibaren bu seçenek kaldırılabilir. NuGet paketi olarak kullanılabilir hale getirilen genişletme uzantılarına taşıyın.<br />Örnek: `/UseVsixExtensions:true`|
 |**/TestAdapterPath: [*yol*]**|*vstest.console.exe* işlemini, Test çalıştırmasında belirtilen yoldan (varsa) özel test bağdaştırıcılarını kullanacak şekilde zorlar.<br />Örnek: `/TestAdapterPath:[pathToCustomAdapters]`|
 |**/Platform: [*Platform türü*]**|Test yürütmesi için kullanılacak hedef platform mimarisi.<br />Geçerli değerler x86, x64 ve ARM 'dir.|
-|**/Framework: [*Framework sürümü*]**|Test yürütmesi için kullanılacak hedef .NET sürümü.<br />Örnek değerler şunlardır,,, `Framework35` `Framework40` `Framework45` `FrameworkUap10` , `.NETCoreApp,Version=v1.1` .<br />TargetFrameworkAttribute, bu seçeneği derlemeinizden otomatik olarak algılamak için kullanılır ve özniteliği mevcut olmadığında varsayılan olarak öğesine ayarlanır `Framework40` . [TargetFrameworkAttribute](/dotnet/api/system.runtime.versioning.targetframeworkattribute) 'Yi .NET Core derlemelerinden kaldırırsanız bu seçeneği açıkça belirtmeniz gerekir.<br />Hedef çerçeve **Framework35**olarak belirtilmişse, testler CLR 4,0 "uyumluluk modunda" çalışır.<br />Örnek: `/Framework:framework40`|
+|**/Framework: [*Framework sürümü*]**|Test yürütmesi için kullanılacak hedef .NET sürümü.<br />Örnek değerler şunlardır,,, `Framework35` `Framework40` `Framework45` `FrameworkUap10` , `.NETCoreApp,Version=v1.1` .<br />TargetFrameworkAttribute, bu seçeneği derlemeinizden otomatik olarak algılamak için kullanılır ve özniteliği mevcut olmadığında varsayılan olarak öğesine ayarlanır `Framework40` . [TargetFrameworkAttribute](/dotnet/api/system.runtime.versioning.targetframeworkattribute) 'Yi .NET Core derlemelerinden kaldırırsanız bu seçeneği açıkça belirtmeniz gerekir.<br />Hedef çerçeve **Framework35** olarak belirtilmişse, testler CLR 4,0 "uyumluluk modunda" çalışır.<br />Örnek: `/Framework:framework40`|
 |**/TestCaseFilter: [*ifade*]**|Verilen ifadeyle eşleşen testleri çalıştırın.<br /><Ifade \> <özellik \> =<değer \> [ \|<ifadesi \> ] biçimindedir.<br />Örnek: `/TestCaseFilter:"Priority=1"`<br />Örnek: `/TestCaseFilter:"TestCategory=Nightly|FullyQualifiedName=Namespace.ClassName.MethodName"`<br />**/TestCaseFilter** komut satırı seçeneği **/Tests** komut satırı seçeneğiyle birlikte kullanılamaz. <br />İfadeleri oluşturma ve kullanma hakkında daha fazla bilgi için bkz. [TestCase filtresi](https://github.com/Microsoft/vstest-docs/blob/master/docs/filter.md).|
 |**/?**|Kullanım bilgilerini görüntüler.|
 |**/Günlükçü: [*Uri/FriendlyName*]**|Test sonuçları için bir günlükçü belirtin. Birden çok günlüğü etkinleştirmek için parametreyi birden çok kez belirtin.<br />Örnek: sonuçları bir Visual Studio Test Sonuçları dosyasına (TRX) kaydetmek Için, şunu kullanın:<br />**/Günlükçü: TRX**<br />**[; LogFileName = \<Defaults to unique file name> ]**|
@@ -68,7 +70,7 @@ Aşağıdaki tabloda *VSTest.Console.exe* ve bunların kısa açıklamaları iç
 
 `vstest.console.exe [TestFileNames] [Options]`
 
-Aşağıdaki komut, test Kitaplığı *myTestProject.dll*için *vstest.console.exe* çalıştırır:
+Aşağıdaki komut, test Kitaplığı *myTestProject.dll* için *vstest.console.exe* çalıştırır:
 
 ```cmd
 vstest.console.exe myTestProject.dll
@@ -86,7 +88,7 @@ Aşağıdaki komut birkaç seçenekten *vstest.console.exe* çalışır. *myTest
 vstest.console.exe myTestFile.dll /Settings:Local.RunSettings /InIsolation /TestCaseFilter:"Priority=1" /Logger:trx
 ```
 
-Aşağıdaki komut, *vstest.console.exe* `/blame` Test kitaplığı *myTestProject.dll*seçeneğiylevstest.console.exeçalışır:
+Aşağıdaki komut, *vstest.console.exe* `/blame` Test kitaplığı *myTestProject.dll* seçeneğiylevstest.console.exeçalışır:
 
 ```cmd
 vstest.console.exe myTestFile.dll /blame

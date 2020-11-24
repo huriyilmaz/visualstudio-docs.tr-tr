@@ -1,5 +1,7 @@
 ---
 title: Proje şablonları oluşturma
+description: Visual Studio 'da proje şablonları oluşturmak için şablonu dışarı aktarma Sihirbazı 'Nı ve diğer yöntemleri kullanmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 01/02/2018
 ms.topic: how-to
 f1_keywords:
@@ -9,16 +11,16 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: e6f168244971a348cdb7938af463538d0fa2acaf
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9030a88e67c90fab870613d71d0fe63992166222
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85284392"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597190"
 ---
 # <a name="how-to-create-project-templates"></a>Nasıl yapılır: proje şablonları oluşturma
 
-Bu konu başlığı altında, şablonunuzu bir *. zip* dosyasında paketleyen **şablonu dışarı aktarma Sihirbazı 'nı**kullanarak nasıl şablon oluşturacağınız gösterilmektedir.
+Bu konu başlığı altında, şablonunuzu bir *. zip* dosyasında paketleyen **şablonu dışarı aktarma Sihirbazı 'nı** kullanarak nasıl şablon oluşturacağınız gösterilmektedir.
 
 ## <a name="use-the-export-template-wizard"></a>Şablonu dışarı aktarma Sihirbazı 'Nı kullanma
 
@@ -41,7 +43,7 @@ Bu konu başlığı altında, şablonunuzu bir *. zip* dosyasında paketleyen **
 
    Proje bir *. zip* dosyasına aktarılır ve belirtilen çıktı konumuna yerleştirilir ve seçilirse, Visual Studio 'ya içeri aktarılır.
 
-**Yeni proje** iletişim kutusunda şablonunuzu bulmak Için, **yüklü** ' i genişletin ve ardından `ProjectType` *. vstemplate* dosyasındaki öğesine karşılık gelen kategoriyi genişletin. Örneğin, içeren bir *. vstemplate* dosyası `<ProjectType>CSharp</ProjectType>` **Installed**  >  , varsayılan olarak yüklü**Visual C#** altında görünür. Bu dizinde bir klasör oluşturup şablonun *. zip* dosyasını içine yerleştirerek, şablonunuzu proje türünün bir alt dizininde düzenleyebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: şablonları bulma ve düzenleme](../ide/how-to-locate-and-organize-project-and-item-templates.md).
+**Yeni proje** iletişim kutusunda şablonunuzu bulmak Için, **yüklü** ' i genişletin ve ardından `ProjectType` *. vstemplate* dosyasındaki öğesine karşılık gelen kategoriyi genişletin. Örneğin, içeren bir *. vstemplate* dosyası `<ProjectType>CSharp</ProjectType>` **Installed**  >  , varsayılan olarak yüklü **Visual C#** altında görünür. Bu dizinde bir klasör oluşturup şablonun *. zip* dosyasını içine yerleştirerek, şablonunuzu proje türünün bir alt dizininde düzenleyebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: şablonları bulma ve düzenleme](../ide/how-to-locate-and-organize-project-and-item-templates.md).
 
 ::: moniker-end
 

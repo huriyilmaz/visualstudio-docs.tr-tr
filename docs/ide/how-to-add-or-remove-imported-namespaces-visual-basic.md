@@ -1,5 +1,6 @@
 ---
 title: İçeri aktarılan ad uzaylarını ekleme veya kaldırma (Visual Basic)
+description: İçeri aktarılan ad alanlarını ekleme ve kaldırma ve Kullanıcı içeri aktarmaları ekleme veya kaldırma hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 06/21/2017
 ms.topic: how-to
@@ -15,24 +16,24 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ff6b63db07d515e85c4c756f8d302d292c62dd50
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: c175f838389067ef7e40b07d2f3f9d15aa5df03e
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93047106"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597372"
 ---
 # <a name="how-to-add-or-remove-imported-namespaces-visual-basic"></a>Nasıl yapılır: içeri aktarılan ad alanlarını ekleme veya kaldırma (Visual Basic)
 
 Bir ad alanını içeri aktarmak, öğesini tamamen nitelemeden kodunuzda bu ad alanındaki öğeleri kullanmanıza olanak sağlar. Örneğin, `Create` sınıfındaki yöntemine erişmek istiyorsanız `System.Messaging.MessageQueue` , `System.Messaging` ad alanını içeri aktarabilir ve yalnızca kodunuzda gereken öğeye başvurabilirsiniz `MessageQueue.Create` .
 
-İçeri aktarılan ad alanları, **Proje Tasarımcısı** 'nın **Başvurular** sayfasında yönetilir. Bu iletişim kutusunda belirttiğiniz içeri aktarmalar doğrudan derleyiciye geçirilir ( */Imports* ) ve projenizdeki tüm dosyalar için geçerlidir. Tek bir `Imports` kaynak kod dosyasında bir ad alanı kullanmak için ifadesini kullanın.
+İçeri aktarılan ad alanları, **Proje Tasarımcısı**'nın **Başvurular** sayfasında yönetilir. Bu iletişim kutusunda belirttiğiniz içeri aktarmalar doğrudan derleyiciye geçirilir (*/Imports*) ve projenizdeki tüm dosyalar için geçerlidir. Tek bir `Imports` kaynak kod dosyasında bir ad alanı kullanmak için ifadesini kullanın.
 
 ### <a name="to-add-an-imported-namespace"></a>İçeri aktarılan bir ad alanı eklemek için
 
-1. **Çözüm Gezgini** , proje Için **projem** düğümüne çift tıklayın.
+1. **Çözüm Gezgini**, proje Için **projem** düğümüne çift tıklayın.
 
-2. **Proje tasarımcısında** , **Başvurular** sekmesine tıklayın.
+2. **Proje tasarımcısında**, **Başvurular** sekmesine tıklayın.
 
 3. **Içeri aktarılan ad alanları** listesinde, eklemek istediğiniz ad alanının onay kutusunu seçin.
 
@@ -41,9 +42,9 @@ Bir ad alanını içeri aktarmak, öğesini tamamen nitelemeden kodunuzda bu ad 
 
 ### <a name="to-remove-an-imported-namespace"></a>İçeri aktarılan bir ad alanını kaldırma
 
-1. **Çözüm Gezgini** , proje Için **projem** düğümüne çift tıklayın.
+1. **Çözüm Gezgini**, proje Için **projem** düğümüne çift tıklayın.
 
-2. **Proje tasarımcısında** , **Başvurular** sekmesine tıklayın.
+2. **Proje tasarımcısında**, **Başvurular** sekmesine tıklayın.
 
 3. **Içeri aktarılan ad alanları** listesinde, kaldırmak istediğiniz ad alanı için onay kutusunu temizleyin.
 
@@ -54,9 +55,9 @@ Daha sonra fikrinizi değiştirirseniz ve gerçekten gereken sınıf olduğuna k
 
 ### <a name="to-add-a-user-import"></a>Kullanıcı içeri aktarma eklemek için
 
-1. **Çözüm Gezgini** , proje Için **projem** düğümüne çift tıklayın.
+1. **Çözüm Gezgini**, proje Için **projem** düğümüne çift tıklayın.
 
-2. **Proje tasarımcısında** , **Başvurular** sekmesine tıklayın.
+2. **Proje tasarımcısında**, **Başvurular** sekmesine tıklayın.
 
 3. **Içeri aktarılan ad alanları** listesinin altındaki metin kutusunda, kök ad alanı dahil olmak üzere içeri aktarmak istediğiniz ad alanının tam adını girin.
 
@@ -67,9 +68,9 @@ Daha sonra fikrinizi değiştirirseniz ve gerçekten gereken sınıf olduğuna k
 
 ### <a name="to-update-a-user-import"></a>Bir kullanıcı içeri aktarmayı güncelleştirmek için
 
-1. **Çözüm Gezgini** , proje Için **projem** düğümüne çift tıklayın.
+1. **Çözüm Gezgini**, proje Için **projem** düğümüne çift tıklayın.
 
-2. **Proje tasarımcısında** , **Başvurular** sekmesine tıklayın.
+2. **Proje tasarımcısında**, **Başvurular** sekmesine tıklayın.
 
 3. **Içeri aktarılan ad alanları** listesinde, değiştirmek istediğiniz ad alanını seçin.
 

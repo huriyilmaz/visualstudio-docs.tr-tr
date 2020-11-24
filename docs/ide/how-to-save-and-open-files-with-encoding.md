@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: kodlama ile dosyaları kaydetme ve açma'
+description: Belirli bir kodlamaya sahip dosyaları kaydetme ve açma hakkında bilgi edinin. dosyayı açtığınızda, Visual Studio dosyayı doğru şekilde görüntüler.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 72496e842841b2c55833075e890da4b7088cb489
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cfec7d31e6fc2c120ef42dc9de2a5a7eea4132e0
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85284171"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597099"
 ---
 # <a name="how-to-save-and-open-files-with-encoding"></a>Nasıl yapılır: kodlama ile dosyaları kaydetme ve açma
 
@@ -30,9 +32,9 @@ ms.locfileid: "85284171"
 
      **Gelişmiş kaydetme seçenekleri** iletişim kutusu görüntülenir.
 
-2. **Kodlama**bölümünde dosya için kullanılacak kodlamayı seçin.
+2. **Kodlama** bölümünde dosya için kullanılacak kodlamayı seçin.
 
-3. İsteğe bağlı olarak **satır sonları**altında satır sonu karakterlerinin biçimini seçin.
+3. İsteğe bağlı olarak **satır sonları** altında satır sonu karakterlerinin biçimini seçin.
 
      Bu seçenek, dosyayı farklı bir işletim sistemi kullanıcılarıyla değiş tokuş etmek istiyorsanız yararlıdır.
 

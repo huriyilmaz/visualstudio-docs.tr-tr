@@ -1,5 +1,7 @@
 ---
 title: Dil sunucusu protokol uzantısı ekleme | Microsoft Docs
+description: Dil sunucusu protokolüne (LSP) göre bir dil sunucusunu tümleştiren bir Visual Studio uzantısı oluşturmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/14/2017
 ms.topic: conceptual
 ms.assetid: 52f12785-1c51-4c2c-8228-c8e10316cd83
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d0c43d5a50b7a2acb536dee5fe9c6ed9ec3d36d7
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: 26f78be8708e61370be3256c8cde481d5c61c89d
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91860450"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95598152"
 ---
 # <a name="add-a-language-server-protocol-extension"></a>Dil Sunucusu Protokolü uzantısı ekleme
 
@@ -45,48 +47,48 @@ Aşağıdaki tablolarda, Visual Studio 'da hangi LSP özelliklerinin desteklendi
 
 İleti | Visual Studio 'da desteğe sahiptir
 --- | ---
-Öbek | evet
-başlatıldığını | evet
-kapatma | evet
-çıkıp | evet
-$/cancelRequest | evet
-pencere/showMessage | evet
-Window/showMessageRequest | evet
-pencere/oturum Iletisi | evet
+Öbek | yes
+başlatıldığını | yes
+kapatma | yes
+çıkıp | yes
+$/cancelRequest | yes
+pencere/showMessage | yes
+Window/showMessageRequest | yes
+pencere/oturum Iletisi | yes
 Telemetri/olay |
 istemci/kayıt yeteneği |
 istemci/unregisterCapability |
-çalışma alanı/didChangeConfiguration | evet
-çalışma alanı/didChangeWatchedFiles | evet
-çalışma alanı/simge | evet
-çalışma alanı/executeCommand | evet
-çalışma alanı/applyEdit | evet
-textDocument/publishDiagnostics | evet
-textDocument/didOpen | evet
-textDocument/didChange | evet
+çalışma alanı/didChangeConfiguration | yes
+çalışma alanı/didChangeWatchedFiles | yes
+çalışma alanı/simge | yes
+çalışma alanı/executeCommand | yes
+çalışma alanı/applyEdit | yes
+textDocument/publishDiagnostics | yes
+textDocument/didOpen | yes
+textDocument/didChange | yes
 textDocument/willSave |
 textDocument/Sollsavewaituntil |
-textDocument/didSave | evet
-textDocument/didClose | evet
-textDocument/tamamlama | evet
-tamamlama/çözme | evet
-textDocument/vurgulu | evet
-textDocument/signatureHelp | evet
-textDocument/başvurular | evet
-textDocument/Belgetri ışığı | evet
-textDocument/documentSymbol | evet
-textDocument/biçimlendirme | evet
-textDocument/rangeFormatting | evet
+textDocument/didSave | yes
+textDocument/didClose | yes
+textDocument/tamamlama | yes
+tamamlama/çözme | yes
+textDocument/vurgulu | yes
+textDocument/signatureHelp | yes
+textDocument/başvurular | yes
+textDocument/Belgetri ışığı | yes
+textDocument/documentSymbol | yes
+textDocument/biçimlendirme | yes
+textDocument/rangeFormatting | yes
 textDocument/onTypeFormatting |
-textDocument/tanım | evet
-textDocument/codeAction | evet
+textDocument/tanım | yes
+textDocument/codeAction | yes
 textDocument/codeLens |
 codeLens/Resolve |
 textDocument/documentLink |
 documentLink/Resolve |
-textDocument/yeniden adlandır | evet
+textDocument/yeniden adlandır | yes
 
-## <a name="get-started"></a>başlarken
+## <a name="get-started"></a>Kullanmaya başlayın
 
 > [!NOTE]
 > Visual Studio 2017 sürüm 15,8 ' den başlayarak, ortak dil sunucusu protokolü desteği Visual Studio 'da yerleşik olarak bulunur. Preview [Language Server CLIENT VSIX](https://marketplace.visualstudio.com/items?itemName=vsext.LanguageServerClientPreview) sürümünü kullanarak LSP uzantıları oluşturduysanız, sürüm 15,8 veya üzeri sürümüne yükselttikten sonra çalışmayı durduracaktır. LSP uzantılarınızın yeniden çalışmasını sağlamak için aşağıdakileri yapmanız gerekir:
@@ -125,7 +127,7 @@ LSP, diller için metin renklendirme sağlama hakkında belirtim içermez. Uzant
 
 1. Uzantınızın içinde "Dilmars" adlı bir klasör oluşturun (veya seçtiğiniz herhangi bir ad olabilir).
 
-2. *Grammars* klasörü içinde, özel renklendirme sağlamak istediğiniz * \* . tmlanguage*, * \* . plist*, * \* . tmtheme*veya * \* . JSON* dosyalarını ekleyin.
+2. *Grammars* klasörü içinde, özel renklendirme sağlamak istediğiniz *\* . tmlanguage*, *\* . plist*, *\* . tmtheme* veya *\* . JSON* dosyalarını ekleyin.
 
    > [!TIP]
    > Bir *. tmtheme* dosyası, kapsamların Visual Studio sınıflandırmalarına nasıl eşlendiğini tanımlar (renk anahtarları olarak adlandırılır). Rehberlik için, *% ProgramFiles (x86)% \ Microsoft Visual Studio \\ \<version> \\ \<SKU> \Common7\IDE\CommonExtensions\Microsoft\TextMate\Starterkit\Themesg* dizinindeki global *. tmtheme* dosyasına başvurabilirsiniz.
@@ -137,7 +139,7 @@ LSP, diller için metin renklendirme sağlama hakkında belirtim içermez. Uzant
     "MyLang"="$PackageFolder$\Grammars"
     ```
 
-4. Dosyalara sağ tıklayıp **Özellikler**' i seçin. **Derleme** eylemini **içerik** olarak değiştirin ve **VSIX içindeki Include** özelliğini **true**olarak değiştirin.
+4. Dosyalara sağ tıklayıp **Özellikler**' i seçin. **Derleme** eylemini **içerik** olarak değiştirin ve **VSIX içindeki Include** özelliğini **true** olarak değiştirin.
 
 Önceki adımları tamamladıktan sonra, paketin Install dizinine ' MyLang ' adlı bir depo kaynağı olarak bir *Grammars* klasörü eklenir (' mylang ' yalnızca Kesinleştirme için bir addır ve herhangi bir benzersiz dize olabilir). Bu dizindeki tüm dilbilgisi (*. tmlanguage* dosyaları) ve Tema dosyaları (*. tmtheme* dosyaları), artırmasını olarak alınır ve TextMate ile birlikte sunulan yerleşik dilbilgisi ve bunların yerini alır. Dilbilgisi dosyası tarafından tanımlanan uzantılar, açılan dosyanın uzantısıyla eşleşiyorsa, TextMate ' de adım adım olur.
 
@@ -300,7 +302,7 @@ LSP dil hizmeti uzantınızın ayarlarına yönelik destek eklemek için aşağ�
     }
     ```
 
-2. JSON dosyasına sağ tıklayın ve **Özellikler**' i seçin. **Derleme** eylemini "content" ve "VSIX 'te Ekle" özelliğini **true**olarak değiştirin.
+2. JSON dosyasına sağ tıklayın ve **Özellikler**' i seçin. **Derleme** eylemini "content" ve "VSIX 'te Ekle" özelliğini **true** olarak değiştirin.
 
 3. ConfigurationSections uygulayın ve JSON dosyasında tanımlanan ayarlar için ön ekler listesini döndürün (Visual Studio Code, bu, package.jsüzerinde yapılandırma bölümü adıyla eşlenir):
 
@@ -328,7 +330,7 @@ LSP dil hizmeti uzantınızın ayarlarına yönelik destek eklemek için aşağ�
     @="$PackageFolder$\MockLanguageExtensionSettings.json"
     ```
 
-5. . Pkgdef dosyasına sağ tıklayın ve **Özellikler**' i seçin. **Derleme** eylemini **içerik** ve **VSIX 'e dahil et** özelliğini **true**olarak değiştirin.
+5. . Pkgdef dosyasına sağ tıklayın ve **Özellikler**' i seçin. **Derleme** eylemini **içerik** ve **VSIX 'e dahil et** özelliğini **true** olarak değiştirin.
 
 6. *Source. Extension. valtmanifest* dosyasını açın ve **varlık** sekmesine bir varlık ekleyin:
 
@@ -341,7 +343,7 @@ LSP dil hizmeti uzantınızın ayarlarına yönelik destek eklemek için aşağ�
 ### <a name="user-editing-of-settings-for-a-workspace"></a>Çalışma alanının ayarlarını kullanıcı düzenlemesi
 
 1. Kullanıcı, sunucunuzun sahip olduğu dosyaları içeren bir çalışma alanı açar.
-2. Kullanıcı, içinde *VSWorkspaceSettings.js*adlı *. vs* klasörüne bir dosya ekler.
+2. Kullanıcı, içinde *VSWorkspaceSettings.js* adlı *. vs* klasörüne bir dosya ekler.
 3. Kullanıcı, sunucunun sağladığı bir ayar için dosyadaki *VSWorkspaceSettings.js* bir satır ekler. Örnek:
 
     ```json
@@ -369,7 +371,7 @@ Tanılama izleme, istemci ve sunucu arasındaki tüm iletileri, hata ayıklama s
 * "İletiler": izleme açık, ancak yalnızca Yöntem adı ve yanıt KIMLIĞI izleniyor.
 * "Ayrıntılı": izleme açık; Tüm RPC iletisi izleniyor.
 
-İzleme açıldığında, içerik *%Temp%\visualstudio\lsp* dizinindeki bir dosyaya yazılır. Günlük *[LanguageClientName]-[DateTime damga]. log*adlandırma biçimini izler. Şu anda izleme yalnızca açık klasör senaryolarında etkinleştirilebilir. Bir dil sunucusunu etkinleştirmek için tek bir dosyanın açılması, Tanılama izleme desteğine sahip değildir.
+İzleme açıldığında, içerik *%Temp%\visualstudio\lsp* dizinindeki bir dosyaya yazılır. Günlük *[LanguageClientName]-[DateTime damga]. log* adlandırma biçimini izler. Şu anda izleme yalnızca açık klasör senaryolarında etkinleştirilebilir. Bir dil sunucusunu etkinleştirmek için tek bir dosyanın açılması, Tanılama izleme desteğine sahip değildir.
 
 ### <a name="custom-messages"></a>Özel iletiler
 

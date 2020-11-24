@@ -1,5 +1,7 @@
 ---
 title: Yerelleştirme araçları
+description: Visual Studio 'ya dahil olan yerelleştirme araçları ve birden çok dilde yerelleştirilmiş uygulamalar oluşturmak için bunların nasıl kullanılacağı hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 02/15/2019
 ms.topic: reference
 helpviewer_keywords:
@@ -15,12 +17,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: eebdccf44580442b87e3d31e33ddcd7052838306
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 65c7a82488fea8fc12e6d5db838818269add0181
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810907"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597450"
 ---
 # <a name="develop-globalized-and-localized-apps"></a>Genelleştirilmiş ve yerelleştirilmiş uygulamalar geliştirin
 

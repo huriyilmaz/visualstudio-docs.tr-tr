@@ -1,5 +1,7 @@
 ---
 title: Çok dosya öğesi şablonları oluşturma
+description: Visual Studio 'da birden fazla dosyadan oluşan bir öğe şablonu oluşturmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 01/02/2018
 ms.topic: how-to
 helpviewer_keywords:
@@ -9,12 +11,12 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 4a4f0c50fc0a3fe21da560356d3551ca85ef9d66
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a947d23bd7094e003bae3cfe880299bb3698d92e
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85284431"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95597268"
 ---
 # <a name="how-to-create-multi-file-item-templates"></a>Nasıl yapılır: birden çok dosya öğesi şablonları oluşturma
 
@@ -26,7 +28,7 @@ ms.locfileid: "85284431"
 
 - Form için gömülü kaynakları içeren bir dosya
 
-Birden çok dosya öğesi şablonları, öğe oluşturulduğunda doğru dosya uzantılarının kullanıldığından emin olmak için parametreler gerektirir. **Şablonu dışarı aktarma Sihirbazı 'nı**kullanarak çok sunuculu bir öğe şablonu oluşturursanız, bu parametreler otomatik olarak oluşturulur ve başka bir Düzenle gerekli değildir.
+Birden çok dosya öğesi şablonları, öğe oluşturulduğunda doğru dosya uzantılarının kullanıldığından emin olmak için parametreler gerektirir. **Şablonu dışarı aktarma Sihirbazı 'nı** kullanarak çok sunuculu bir öğe şablonu oluşturursanız, bu parametreler otomatik olarak oluşturulur ve başka bir Düzenle gerekli değildir.
 
 ## <a name="use-the-export-template-wizard"></a>Şablonu dışarı aktarma Sihirbazı 'Nı kullanma
 
@@ -36,7 +38,7 @@ Birden çok dosya öğesi şablonunu tek bir dosya öğesi şablonuyla aynı şe
 
 1. Bir tek dosya öğesi şablonunu el ile oluşturacağınız, ancak çoklu dosya öğesini oluşturan her dosyayı dahil ettiğiniz için öğe şablonunu oluşturun.
 
-1. *. Vstemplate* XML dosyasında `ProjectItem` her bir dosya için bir öğe ekleyin ve `TargetFileName` Bu öğeye bir öznitelik ekleyin. `TargetFileName`Özniteliğin değerini *$fileinputname $ olarak ayarlayın. FileExtension*, burada *FileExtension* , şablonda yer alan dosyanın dosya uzantısıdır. Örneğin:
+1. *. Vstemplate* XML dosyasında `ProjectItem` her bir dosya için bir öğe ekleyin ve `TargetFileName` Bu öğeye bir öznitelik ekleyin. `TargetFileName`Özniteliğin değerini *$fileinputname $ olarak ayarlayın. FileExtension*, burada *FileExtension* , şablonda yer alan dosyanın dosya uzantısıdır. Örnek:
 
     ```xml
     <ProjectItem TargetFileName="$fileinputname$.vb">
@@ -53,11 +55,11 @@ Birden çok dosya öğesi şablonunu tek bir dosya öğesi şablonuyla aynı şe
      > [!NOTE]
      > Bu şablondan türetilen bir öğe projeye eklendiğinde, dosya adları kullanıcının **Yeni öğe Ekle** iletişim kutusuna girdiği adından türetilir.
 
-1. Şablonunuza dahil edilecek dosyaları seçin, seçime sağ tıklayın ve **Send to**  >  **Sıkıştırılmış (daraltılmış) klasöre**Gönder ' i seçin.
+1. Şablonunuza dahil edilecek dosyaları seçin, seçime sağ tıklayın ve **Send to**  >  **Sıkıştırılmış (daraltılmış) klasöre** Gönder ' i seçin.
 
    Seçtiğiniz dosyalar bir *. zip* dosyasında sıkıştırılır.
 
-1. *. Zip* dosyasını Kullanıcı öğesi şablonu konumuna kopyalayın. Varsayılan olarak dizin, *%userprofile%\, Studio \<Version\> \Templates\ıtemtemplates*şeklindedir. Daha fazla bilgi için bkz. [nasıl yapılır: şablonları bulma ve düzenleme](../ide/how-to-locate-and-organize-project-and-item-templates.md).
+1. *. Zip* dosyasını Kullanıcı öğesi şablonu konumuna kopyalayın. Varsayılan olarak dizin, *%userprofile%\, Studio \<Version\> \Templates\ıtemtemplates* şeklindedir. Daha fazla bilgi için bkz. [nasıl yapılır: şablonları bulma ve düzenleme](../ide/how-to-locate-and-organize-project-and-item-templates.md).
 
 1. Visual Studio 'Yu kapatın ve yeniden açın.
 

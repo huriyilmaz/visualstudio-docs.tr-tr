@@ -1,5 +1,7 @@
 ---
 title: Dış araçları yönetme
+description: Araçlar menüsü aracılığıyla erişebileceğiniz yeni dış araçlar ekleme ve yönetme hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/20/2017
 ms.topic: conceptual
 f1_keywords:
@@ -11,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f22c687f88c7736d5c088ebc28ff490c4c16b8f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c77ab079a2950d4417c2d00ef74cf86d5c206de7
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75591300"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95596696"
 ---
 # <a name="manage-external-tools"></a>Dış araçları yönetme
 
@@ -47,7 +49,7 @@ ms.locfileid: "75591300"
 
 **Araçlar** menüsünde görünecek bir dış araç ekleyebilirsiniz.
 
-1. **Araçlar**dış araçları ' nı seçerek **dış araçlar** iletişim kutusunu açın  >  **External Tools**.
+1. **Araçlar** dış araçları ' nı seçerek **dış araçlar** iletişim kutusunu açın  >  **External Tools**.
 
 1. **Ekle**' ye tıklayın ve ardından bilgileri girin. Örneğin, aşağıdaki giriş, **Windows Gezgini** 'nin şu anda Visual Studio 'da açtığınız dosyanın dizininde açılmasını sağlar:
 
@@ -61,7 +63,7 @@ ms.locfileid: "75591300"
 
 Aşağıda, dış bir araç tanımlarken kullanılabilecek bağımsız değişkenlerin tam bir listesi verilmiştir:
 
-|Name|Bağımsız Değişken|Açıklama|
+|Name|Bağımsız Değişken|Description|
 |----------|--------------|-----------------|
 |Öğe yolu|$ (ItemPath)|Geçerli dosyanın (sürücü + yol + dosya adı) tüm dosya adı.|
 |Öğe dizini|$ (Itemdır)|Geçerli dosyanın dizini (sürücü + yol).|
@@ -81,7 +83,7 @@ Aşağıda, dış bir araç tanımlarken kullanılabilecek bağımsız değişke
 |Çözüm dosyası adı|$ (SolutionFileName)|Geçerli çözümün dosya adı (sürücü + yol + dosya adı).|
 
 > [!NOTE]
-> IDE durum çubuğu, ekleme noktasının etkin **kod düzenleyicisinde**nerede olduğunu göstermek Için **geçerli satırı** ve **Geçerli sütun** değişkenlerini görüntüler. **Geçerli metin** değişkeni, bu konumda seçili olan metni veya kodu döndürür.
+> IDE durum çubuğu, ekleme noktasının etkin **kod düzenleyicisinde** nerede olduğunu göstermek Için **geçerli satırı** ve **Geçerli sütun** değişkenlerini görüntüler. **Geçerli metin** değişkeni, bu konumda seçili olan metni veya kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
