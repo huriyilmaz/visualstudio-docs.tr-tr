@@ -1,5 +1,6 @@
 ---
 title: Excel kullanarak yük testi performans raporu oluşturma
+description: İki veya daha fazla test sonucunu temel alan Microsoft Excel yük testi raporları oluşturmayı öğrenin. Çalışma karşılaştırma ve eğilim raporları oluşturabilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
@@ -10,12 +11,12 @@ ms.assetid: b87fb196-9973-4512-a924-088788def4ea
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 9ce92e157ba3fe02dbabd1ddd408492c440102a1
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: a89818630258aab42535fb4256fa3e844b0c6878
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810265"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442436"
 ---
 # <a name="how-to-create-load-test-performance-reports-using-microsoft-excel"></a>Nasıl yapılır: Microsoft Excel kullanarak yük testi performans raporları oluşturma
 
@@ -61,15 +62,15 @@ Excel raporları, **Yük Testi Çözümleyicisi**'nde, araç çubuğundaki **Exc
       > [!NOTE]
       > **Web performansı test sonuçları Görüntüleyicisi** araç çubuğunda **Excel raporu oluştur** düğmesi devre dışıysa, etkinleştirilmeden önce Microsoft Excel 'i bir kez çalıştırmanız gerekebilir. Visual Studio Enterprise yüklendiğinde, Visual Studio Enterprise yük testi eklentisi Microsoft Excel için bilgisayarınıza kopyalanır; Ancak, eklentinin yükleme işlemini tamamlaması için Microsoft Excel 'nin çalıştırılması gerekir.
 
-      Microsoft Excel, **Yük testi raporu oluşturma Sihirbazı**ile açılır.
+      Microsoft Excel, **Yük testi raporu oluşturma Sihirbazı** ile açılır.
 
-   **VEYA**
+   **OR**
 
    1. Microsoft Excel 'i açın, **Office** şeridinde **Yük testi** sekmesini seçin ve ardından **Yük testi raporu**' nu seçin.
 
        **Yük testi raporu oluşturma Sihirbazı** görünür.
 
-   2. **Yük testlerini içeren veritabanını seçin** sayfasında, **sunucu adı**altında, yük testi sonuçlarını içeren sunucunun adını yazın.
+   2. **Yük testlerini içeren veritabanını seçin** sayfasında, **sunucu adı** altında, yük testi sonuçlarını içeren sunucunun adını yazın.
 
    3. **Veritabanı adı** açılır listesinde, yük testi sonuçlarını içeren veritabanını seçin.
 
@@ -79,7 +80,7 @@ Excel raporları, **Yük Testi Çözümleyicisi**'nde, araç çubuğundaki **Exc
 
 5. **Yük testi rapor ayrıntılarını girin** sayfasında, **rapor adı**' na raporunuz için bir ad yazın.
 
-6. Raporu oluşturmak istediğiniz yük testini seçin ve **İleri ' yi**seçin.
+6. Raporu oluşturmak istediğiniz yük testini seçin ve **İleri ' yi** seçin.
 
 7. **Raporunuzun çalıştırmalarını seçin** sayfasında, **rapora eklemek için bir veya daha fazla çalıştırma seçin**' in altında, raporda karşılaştırmak istediğiniz iki yük testi sonucunu seçin ve **İleri**' yi seçin.
 
@@ -116,15 +117,15 @@ Excel raporları, **Yük Testi Çözümleyicisi**'nde, araç çubuğundaki **Exc
       > [!NOTE]
       > **Web performansı test sonuçları Görüntüleyicisi** araç çubuğunda **Excel raporu oluştur** düğmesi devre dışıysa, etkinleştirilmeden önce Microsoft Excel 'i bir kez çalıştırmanız gerekebilir. Visual Studio Enterprise yüklendiğinde, Visual Studio Enterprise yük testi eklentisi Microsoft Excel için bilgisayarınıza kopyalanır; Ancak, eklentinin yükleme işlemini tamamlaması için Microsoft Excel 'nin çalıştırılması gerekir.
 
-      Microsoft Excel, **Yük testi raporu oluşturma Sihirbazı**ile açılır.
+      Microsoft Excel, **Yük testi raporu oluşturma Sihirbazı** ile açılır.
 
-   **VEYA**
+   **OR**
 
    1. Microsoft Excel 'i açın, **Office** şeridinde **Yük testi** sekmesini seçin ve ardından **Yük testi raporu**' nu seçin.
 
        **Yük testi raporu oluşturma Sihirbazı** görünür.
 
-   2. **Yük testlerini içeren veritabanını seçin** sayfasında, **sunucu adı**altında, yük testi sonuçlarını içeren sunucunun adını yazın.
+   2. **Yük testlerini içeren veritabanını seçin** sayfasında, **sunucu adı** altında, yük testi sonuçlarını içeren sunucunun adını yazın.
 
    3. **Veritabanı adı** açılır listesinde, yük testi sonuçlarını içeren veritabanını seçin.
 
@@ -134,11 +135,11 @@ Excel raporları, **Yük Testi Çözümleyicisi**'nde, araç çubuğundaki **Exc
 
 5. **Yük testi rapor ayrıntılarını girin** sayfasında, **rapor adı**' na raporunuz için bir ad yazın.
 
-6. Raporu oluşturmak istediğiniz yük testini seçin ve **İleri ' yi**seçin.
+6. Raporu oluşturmak istediğiniz yük testini seçin ve **İleri ' yi** seçin.
 
-7. **Raporunuzun çalıştırmalarını seçin** sayfasında, **rapora eklemek için bir veya daha fazla çalıştırma seçin**altında, raporda karşılaştırmak istediğiniz yük testi sonuçlarını seçin ve **İleri**' yi seçin.
+7. **Raporunuzun çalıştırmalarını seçin** sayfasında, **rapora eklemek için bir veya daha fazla çalıştırma seçin** altında, raporda karşılaştırmak istediğiniz yük testi sonuçlarını seçin ve **İleri**' yi seçin.
 
-8. **Raporunuzun sayaçlarını seçin** sayfasında, rapora **eklemek için bir veya daha fazla sayaç seçin**altında, raporunuzu özelleştirmek için sayaçların genişletilebilir bir listesi mevcuttur. Eğilim analizi için karşılaştırmak istediğiniz sayaçları seçin ve **son**' u seçin.
+8. **Raporunuzun sayaçlarını seçin** sayfasında, rapora **eklemek için bir veya daha fazla sayaç seçin** altında, raporunuzu özelleştirmek için sayaçların genişletilebilir bir listesi mevcuttur. Eğilim analizi için karşılaştırmak istediğiniz sayaçları seçin ve **son**' u seçin.
 
 9. Rapor, raporda oluşturulan çeşitli Excel çalışma kitabı sekmelerine bağlantılar içeren bir içindekiler tablosu ile oluşturulur. Bağlantılar, eğilim raporu için seçilen sayaçları temel alır. Örneğin, adım 7 ' de varsayılan sayaçları seçtiyseniz, rapor 7. adımda listelenen her sayaç için Excel 'de ayrı sekmelerde sunulan veriler oluşturacaktır. Her sayaç için oluşturulan veriler, eğilim stili grafiklerde sunulur.
 

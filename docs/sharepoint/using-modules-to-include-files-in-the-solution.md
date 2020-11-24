@@ -1,5 +1,7 @@
 ---
 title: Çözümdeki dosyaları dahil etmek için modülleri kullanma | Microsoft Docs
+description: Dosya türleri (örneğin, ana sayfalar) ne olursa olsun SharePoint sunucusuna dosya dağıtmak için modüller veya bir SharePoint çözümünde dosya kapsayıcıları kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: overview
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 778bbc9cff2d7853628edbb5be6466acc55d9ab8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: aa0d6fe1855a1d60a0e1293e8422791f8148bd04
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015820"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442527"
 ---
 # <a name="use-modules-to-include-files-in-the-solution"></a>Çözümdeki dosyaları dahil etmek için modülleri kullanma
   Dosyaları, yeni ana sayfalar gibi dosya türlerine bakılmaksızın SharePoint sunucusuna dağıtmak isteyebileceğiniz zamanlar olabilir. Bunu yapmak için *modüller* ( [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] kod modülleriyle karıştırılmamalıdır) kullanabilirsiniz. Modüller bir SharePoint çözümündeki dosyalar için kapsayıcılardır. Çözüm dağıtıldığında, modüldeki dosyalar SharePoint sunucusundaki belirtilen klasörlere kopyalanır.
@@ -52,9 +54,9 @@ ms.locfileid: "86015820"
 |------------------|-----------------|
 |Öğeler|Modülde tanımlanan tüm öğeleri içerir.|
 |Modül|Module öğesi, ' ın ' de modül adını belirten tek bir özniteliğe ( *Name*) sahiptir `<Module Name="Module1">` .<br /><br /> Modülün adını (veya *klasör adı* özelliğini) değiştirirseniz, bu adı modül öğesinde el ile güncelleştirmeniz gerektiğini unutmayın.<br /><br /> Modül öğesinde dosya (ler) için bir alt dizin belirtirseniz, [!INCLUDE[sharepointShort](../sharepoint/includes/sharepointshort-md.md)] (WSS) onlar için otomatik olarak eşleşen bir dizin yapısı oluşturur.|
-|Dosya|Dosya öğesinin iki parametresi, *yolu* ve *URL 'si*vardır.<br /><br /> -Path: SharePoint çözümündeki dosyanın adı ve konumu. Biçimi, `Path="Module1\Sample.txt"` .<br /><br /> -URL: dosyanın SharePoint sunucusunda dağıtılacağı konum. Biçimi, `Url="Module1/Sample.txt"` .<br /><br /> -Type: iki ayarı olan isteğe bağlı bir öznitelik: *GhostableInLibrary* ve *Ghostable*. Biçimi, `Type="GhostableInLibrary"` . *GhostableInLibrary* belirtme, dosyanın kitaplığa eklendiği sırada dosyaya eşlik eden bir liste öğesiyle birlikte SharePoint 'teki bir belge kitaplığına eklenebileceği anlamına gelir. *Ghostable* belirtme, dosyanın belge kitaplığı dışından SharePoint 'e eklenmesine neden olur.|
+|Dosya|Dosya öğesinin iki parametresi, *yolu* ve *URL 'si* vardır.<br /><br /> -Path: SharePoint çözümündeki dosyanın adı ve konumu. Biçimi, `Path="Module1\Sample.txt"` .<br /><br /> -URL: dosyanın SharePoint sunucusunda dağıtılacağı konum. Biçimi, `Url="Module1/Sample.txt"` .<br /><br /> -Type: iki ayarı olan isteğe bağlı bir öznitelik: *GhostableInLibrary* ve *Ghostable*. Biçimi, `Type="GhostableInLibrary"` . *GhostableInLibrary* belirtme, dosyanın kitaplığa eklendiği sırada dosyaya eşlik eden bir liste öğesiyle birlikte SharePoint 'teki bir belge kitaplığına eklenebileceği anlamına gelir. *Ghostable* belirtme, dosyanın belge kitaplığı dışından SharePoint 'e eklenmesine neden olur.|
 
- Dağıtmak istediğiniz her dosya `<File>` *Elements.xml*içinde ayrı bir öğe girişi gerektirir.
+ Dağıtmak istediğiniz her dosya `<File>` *Elements.xml* içinde ayrı bir öğe girişi gerektirir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Nasıl yapılır: modül kullanarak dosyaları Içerme](../sharepoint/how-to-include-files-by-using-a-module.md)

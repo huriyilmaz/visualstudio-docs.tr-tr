@@ -1,5 +1,7 @@
 ---
 title: Web hizmeti testi oluşturma
+description: Web Hizmetleri için bir performans testi kullanmayı ve Web Performans Testi Düzenleyicisi Web hizmeti sayfalarını bulmak için istekleri özelleştirmeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 06/30/2020
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.assetid: fbcd57ee-06ad-4260-8694-09f8e0f93e39
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 9934f48e6d5900a418995eb96d357b4ea1ea532f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 32b5a6a91221e8942faeefcb89cfc52dd0cc5895
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85814765"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95439933"
 ---
 # <a name="how-to-create-a-web-service-test"></a>Nasıl yapılır: Web hizmeti testi oluşturma
 
@@ -34,7 +36,7 @@ Test etmek için kendi Web hizmetinizi kullanabilir veya Visual Studio 'ya dahil
 
 1. Visual Studio 'da, ASP.NET Web uygulaması (.NET Framework) şablonunu kullanarak yeni bir proje oluşturun ve istendiğinde **boş** şablonu seçin. Bir ad yazın ve projeyi oluşturun.
 
-1. Çözüm Gezgini, proje düğümüne sağ tıklayın, yeni öğe **Ekle**' yi seçin  >  **New Item**ve ardından **Web hizmeti (asmx)** öğesini seçin. Web hizmetini ekleyin.
+1. Çözüm Gezgini, proje düğümüne sağ tıklayın, yeni öğe **Ekle**' yi seçin  >  **New Item** ve ardından **Web hizmeti (asmx)** öğesini seçin. Web hizmetini ekleyin.
 
 1. *WebService1. asmx* ' i açın ve varsayılan `HelloWorld` Web yöntemini aşağıdaki kodla değiştirin.
 
@@ -95,7 +97,7 @@ Web testi, Web performansı ve yük testi projesi şablonu gerektirir. Bu bölü
 
 ::: moniker-end
 
-   Visual Studio projeyi oluşturur ve **Çözüm Gezgini**dosyaları görüntüler. Proje başlangıçta *WebTest1. webtest*adlı bir Web testi dosyası içerir.
+   Visual Studio projeyi oluşturur ve **Çözüm Gezgini** dosyaları görüntüler. Proje başlangıçta *WebTest1. webtest* adlı bir Web testi dosyası içerir.
 
 ## <a name="to-test-a-web-service"></a>Bir Web hizmetini test etmek için
 
@@ -137,7 +139,7 @@ Web testi, Web performansı ve yük testi projesi şablonu gerektirir. Bu bölü
     > [!NOTE]
     > Sözdizimini kullanarak herhangi bir yer tutucu değerini veri bağlama değerleriyle değiştirmek için SOAP gövdesinde veri bağlamayı kullanabilirsiniz `{{DataSourceName.TableName.ColumnName}}` .
 
-1. Testi çalıştırın. **Web performans test sonuçları görüntüleyicisinin**üst bölmesinde Web hizmeti isteğini seçin. Alt bölmede **Web tarayıcısı** sekmesini seçin. Web hizmeti tarafından döndürülen XML ve tüm işlemlerin sonuçları görüntülenir.
+1. Testi çalıştırın. **Web performans test sonuçları görüntüleyicisinin** üst bölmesinde Web hizmeti isteğini seçin. Alt bölmede **Web tarayıcısı** sekmesini seçin. Web hizmeti tarafından döndürülen XML ve tüm işlemlerin sonuçları görüntülenir.
 
    Web hizmeti isteğinizin sonuçlarını arayın.
 

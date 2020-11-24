@@ -1,5 +1,6 @@
 ---
 title: Test denetleyicisi/test aracısını bir ağ bağdaştırıcısına bağlama
+description: Birden çok ağ bağdaştırıcısı için yüklenmesi durumunda, bir IP adresi kullanarak bir test denetleyicisini veya test aracısını bir ağ bağdaştırıcısına bağlamayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
@@ -12,12 +13,12 @@ ms.assetid: 7eb9290a-f9f6-4e41-9caa-796fcfaf0610
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: dc590973a0a98cd9c5108c9cfe44ea957073b313
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 3f4c215937f6637eedfa869a5e3abd701966c693
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810304"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442358"
 ---
 # <a name="how-to-bind-a-test-controller-or-test-agent-to-a-network-adapter"></a>Nasıl yapılır: bir test denetleyicisini veya test aracısını ağ bağdaştırıcısına bağlama
 
@@ -36,7 +37,7 @@ Test denetleyicisi veya test aracısı yazılımının yüklü olduğu bir bilgi
 
 ### <a name="to-obtain-the-ip-addresses-of-the-network-adapters"></a>Ağ bağdaştırıcılarının IP adreslerini almak için
 
-1. Microsoft Windows 'da **Başlat**' ı seçin, **aramaya başla** kutusuna tıklayın, **cmd**yazın ve **ENTER**' a tıklayın.
+1. Microsoft Windows 'da **Başlat**' ı seçin, **aramaya başla** kutusuna tıklayın, **cmd** yazın ve **ENTER**' a tıklayın.
 
 2. **ipconfig /all** yazın.
 
@@ -44,7 +45,7 @@ Test denetleyicisi veya test aracısı yazılımının yüklü olduğu bir bilgi
 
 ### <a name="to-bind-a-network-adapter-to-a-test-controller"></a>Bir ağ bağdaştırıcısını bir test denetleyicisine bağlamak için
 
-1. Microsoft Windows 'da **Başlat**' ı seçin, **aramaya başla** kutusunda, **Services. msc**yazın ve ardından **ENTER**' u seçin.
+1. Microsoft Windows 'da **Başlat**' ı seçin, **aramaya başla** kutusunda, **Services. msc** yazın ve ardından **ENTER**' u seçin.
 
      **Hizmetler** iletişim kutusu görüntülenir.
 
@@ -56,7 +57,7 @@ Test denetleyicisi veya test aracısı yazılımının yüklü olduğu bir bilgi
 
      `net stop vsttcontroller`
 
-3. *% ProgramFiles (x86)% \ Microsoft Visual Studio\2017 \\ \<edition> \Common7\IDE*içinde bulunan *QTCcontroller.exe.config* XML yapılandırma dosyasını açın.
+3. *% ProgramFiles (x86)% \ Microsoft Visual Studio\2017 \\ \<edition> \Common7\IDE* içinde bulunan *QTCcontroller.exe.config* XML yapılandırma dosyasını açın.
 
 4. `<appSettings>`etiketi bulun.
 
@@ -90,7 +91,7 @@ Test denetleyicisi veya test aracısı yazılımının yüklü olduğu bir bilgi
 
 ### <a name="to-bind-a-network-interface-card-to-a-test-agent"></a>Bir ağ arabirimi kartını bir test aracısına bağlamak için
 
-1. Microsoft Windows 'da **Başlat**' ı seçin, **aramaya başla** kutusunda, **Services. msc**yazın ve ardından **ENTER**' u seçin.
+1. Microsoft Windows 'da **Başlat**' ı seçin, **aramaya başla** kutusunda, **Services. msc** yazın ve ardından **ENTER**' u seçin.
 
     **Hizmetler** iletişim kutusu görüntülenir.
 
@@ -102,7 +103,7 @@ Test denetleyicisi veya test aracısı yazılımının yüklü olduğu bir bilgi
 
      **net stop vsttagent**
 
-3. *% ProgramFiles (x86)% \ Microsoft Visual Studio\2017 \\ \<edition> \Common7\IDE*içinde bulunan *QTAgentService.exe.config* XML yapılandırma dosyasını açın.
+3. *% ProgramFiles (x86)% \ Microsoft Visual Studio\2017 \\ \<edition> \Common7\IDE* içinde bulunan *QTAgentService.exe.config* XML yapılandırma dosyasını açın.
 
 4. `<appSettings>`etiketi bulun.
 

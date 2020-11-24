@@ -1,5 +1,7 @@
 ---
-title: Veri odaklı kodlanmış UI test öğreticisi
+title: Kodlanmış UI test öğreticisini Data-Driven
+description: Farklı parametre değerleriyle testlerinizi birden çok kez çalıştırarak farklı koşulları test etmek için veri odaklı kodlanmış UI testlerini nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ada1f297bbb30fbe636042c87aae42849c1b6b7d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d9c4deb02bea8bf6e3dc3615ba9c5f0eddc6c877
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75595364"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442683"
 ---
 # <a name="create-a-data-driven-coded-ui-test"></a>Veri odaklı kodlanmış UI testi oluşturma
 
@@ -40,7 +42,7 @@ Bu örnek, Windows Hesaplayıcı uygulamasında çalışan kodlanmış bir UI te
    > [!NOTE]
    > **KODLANMıŞ UI testi proje** şablonunu görmüyorsanız, [kodlanmış UI test bileşenini yüklemeniz](../test/use-ui-automation-to-test-your-code.md#install-the-coded-ui-test-component)gerekir.
 
-2. **Eylemleri kaydetmeyi**seçin.
+2. **Eylemleri kaydetmeyi** seçin.
 
     ![Eylemleri kaydetmeyi seçin](../test/media/cuit_datadriven_generatecodedialog.png)
 
@@ -74,7 +76,7 @@ Bu örnek, Windows Hesaplayıcı uygulamasında çalışan kodlanmış bir UI te
 
     ![UI metin denetimini eşleme](../test/media/cuit_datadriven_addassertion.png)
 
-7. Toplamın değerinin doğru olduğunu doğrulayan bir onaylama ekleyin. **3** değerine sahip **Görüntümetni** özelliğini seçin ve ardından **onay Ekle**' yi seçin. **Areeşitse** karşılaştırıcısı ' nı kullanın ve karşılaştırma değerinin **3**olduğunu doğrulayın.
+7. Toplamın değerinin doğru olduğunu doğrulayan bir onaylama ekleyin. **3** değerine sahip **Görüntümetni** özelliğini seçin ve ardından **onay Ekle**' yi seçin. **Areeşitse** karşılaştırıcısı ' nı kullanın ve karşılaştırma değerinin **3** olduğunu doğrulayın.
 
     ![Onaylama işlemi yapılandırma](../test/media/cuit_datadriven_builderaddassertion2.png)
 
@@ -98,7 +100,7 @@ Bu örnek, Windows Hesaplayıcı uygulamasında çalışan kodlanmış bir UI te
 
 ### <a name="step-2---create-a-data-set"></a>2. adım-veri kümesi oluşturma
 
-1. *data.csv*adlı dataDrivenSample projesine bir metin dosyası ekleyin.
+1. *data.csv* adlı dataDrivenSample projesine bir metin dosyası ekleyin.
 
      ![Projeye virgülle ayrılmış bir değer dosyası ekleyin](../test/media/cuit_datadriven_addcsvfile.png)
 

@@ -1,5 +1,6 @@
 ---
 title: Web performans testi için HTTP Gövde Düzenleyicisi oluşturma
+description: Bir Web hizmeti isteğinin dize gövde içeriğini veya ikili gövde içeriğini düzenlemenizi sağlayan özel bir İçerik Düzenleyicisi oluşturmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
@@ -9,12 +10,12 @@ ms.assetid: a0b2d8ff-3e2a-487e-9172-90047174f336
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 7539f9055fb64cdbfa77ebe5beee7173b8967afb
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 7d6da75b24a982c420b475815f665851ebf06504
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810291"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95440153"
 ---
 # <a name="how-to-create-a-custom-http-body-editor-for-the-web-performance-test-editor"></a>Nasıl yapılır: Web Performans Testi Düzenleyicisi için özel HTTP Gövde Düzenleyicisi oluşturma
 
@@ -32,7 +33,7 @@ Bu arabirimler ad alanında yer alır <xref:Microsoft.VisualStudio.TestTools.Web
 
 ## <a name="create-a-windows-control-library-project"></a>Windows Denetim Kitaplığı projesi oluşturma
 
-1. Visual Studio 'da yeni bir **Windows Forms denetim kitaplığı** projesi oluşturun. Proje **Messagedüzenleyicilerini**adlandırın.
+1. Visual Studio 'da yeni bir **Windows Forms denetim kitaplığı** projesi oluşturun. Proje **Messagedüzenleyicilerini** adlandırın.
 
    Proje yeni çözüme eklenir ve <xref:System.Windows.Forms.UserControl> Tasarımcı içinde adlandırılmış bir *UserControl1.cs* sunulur.
 
@@ -128,7 +129,7 @@ Dize gövdesinin düzenlenmesi tamamlandığında ve Kullanıcı eklenti iletiş
 
    **Yeni Öğe Ekle** iletişim kutusu görüntülenir.
 
-2. **Sınıf**seçin.
+2. **Sınıf** seçin.
 
 3. **Ad** metin kutusuna sınıf için anlamlı bir ad yazın, örneğin, `MessageEditorPlugins` .
 
@@ -265,14 +266,14 @@ Dize gövdesinin düzenlenmesi tamamlandığında ve Kullanıcı eklenti iletiş
 
 ## <a name="build-and-deploy-the-plug-ins"></a>Eklentileri derleme ve dağıtma
 
-1. **Yapı** menüsünde, **Oluştur \<Windows Form Control Library project name> **' u seçin.
+1. **Yapı** menüsünde, **Oluştur \<Windows Form Control Library project name>**' u seçin.
 
 2. Visual Studio 'nun tüm örneklerini kapatın.
 
    > [!NOTE]
    > Visual Studio 'Yu kapatmak, kopyalamayı denemeden önce *. dll* dosyasının kilitlenmediğinden emin olmanızı sağlar.
 
-3. Elde edilen *. dll* dosyasını projenizin *bin\Debug* klasöründen (örneğin, *MessageEditors.dll*) *%ProgramFiles%\Microsoft Visual studio\2017 \\ \<edition> \Common7\IDE\PrivateAssemblies\WebTestPlugins*dizinine kopyalayın.
+3. Elde edilen *. dll* dosyasını projenizin *bin\Debug* klasöründen (örneğin, *MessageEditors.dll*) *%ProgramFiles%\Microsoft Visual studio\2017 \\ \<edition> \Common7\IDE\PrivateAssemblies\WebTestPlugins* dizinine kopyalayın.
 
 4. Visual Studio'yu açın.
 
@@ -284,7 +285,7 @@ Dize gövdesinin düzenlenmesi tamamlandığında ve Kullanıcı eklenti iletiş
 
 2. Web performans testi oluşturun ve bir Web hizmetine tarayıcıda bir URL girin.
 
-3. Kaydı tamamladığınızda, Web Performans Testi Düzenleyicisi Web hizmeti için isteği genişletin ve bir **dize gövdesi** ya da **ikili gövde**seçin.
+3. Kaydı tamamladığınızda, Web Performans Testi Düzenleyicisi Web hizmeti için isteği genişletin ve bir **dize gövdesi** ya da **ikili gövde** seçin.
 
 4. **Özellikler** penceresinde, dize gövdesi veya ikili gövde ' yi seçin ve üç nokta **(...)** simgesini seçin.
 

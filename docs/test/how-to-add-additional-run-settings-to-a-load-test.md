@@ -1,5 +1,7 @@
 ---
 title: Yük testine çalışma ayarları ekleme
+description: Testin süresi, sonuç koleksiyonu ayrıntısı düzeyi ve toplanan sayaç kümeleri dahil olmak üzere yük testi için ek ayarlar kullanmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -9,16 +11,16 @@ ms.assetid: 257d2a24-d582-4cfe-8b2b-51f51ba9cc84
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: a2f62b3e9797e411138590fc15b0fe872920d203
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: aef68ac9371833fb44b1ead026e669ad14f7b5d8
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85288461"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95441241"
 ---
 # <a name="how-to-add-additional-run-settings-to-a-load-test"></a>Nasıl yapılır: yük testine ek çalışma ayarları ekleme
 
-Yük testinin çalışma ayarları, diğer birçok ayarı tespit. Bunlar testin süresini, sonuç koleksiyonu ayrıntısı düzeyini ve test çalışırken toplanan sayaç kümelerini içerir. Her bir yük testi için birden fazla çalışma ayarı oluşturup depolayabilmeniz ve sonra testi çalıştırdığınızda kullanılacak belirli bir ayarı seçmeniz gerekir. **Yeni Yük Testi Sihirbazı**kullanarak yük testinizi oluşturduğunuzda, yük testinize bir başlangıç çalıştırması ayarı eklenir.
+Yük testinin çalışma ayarları, diğer birçok ayarı tespit. Bunlar testin süresini, sonuç koleksiyonu ayrıntısı düzeyini ve test çalışırken toplanan sayaç kümelerini içerir. Her bir yük testi için birden fazla çalışma ayarı oluşturup depolayabilmeniz ve sonra testi çalıştırdığınızda kullanılacak belirli bir ayarı seçmeniz gerekir. **Yeni Yük Testi Sihirbazı** kullanarak yük testinizi oluşturduğunuzda, yük testinize bir başlangıç çalıştırması ayarı eklenir.
 
 Yük testini farklı koşullarda çalıştırabilmeniz için, farklı özellik ayarlarıyla yük testinize daha fazla çalışma ayarı ekleyebilirsiniz. Örneğin, yeni bir test ayarı ekleyebilir ve farklı bir örnek hızı kullanabilir ya da daha uzun çalışma süresi belirtebilirsiniz. Tek seferde yalnızca bir çalıştırma ayarı kullanabilir ve onu etkin olarak işaretleyerek kullanılacak çalıştırma ayarını belirtmeniz gerekir.
 

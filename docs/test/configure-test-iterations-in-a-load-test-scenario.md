@@ -1,5 +1,7 @@
 ---
 title: Yük testi için test yinelemeleri yapılandırma
+description: Test yineleme ayarlarını yapılandırmayı, senaryodaki en fazla yineleme sayısını ve bunlar arasında ne kadar duraklama gerektiğini yapılandırmak hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.assetid: ac480fb7-f4f7-47dc-9ae5-98be3aca4fba
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 6adbdedf8a71319877c5527e00e0e7c5e73fa6b1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b5316b03220a094d3280aba3eb8c46f190a2874f
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85288786"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442566"
 ---
 # <a name="configure-test-iterations-in-a-load-test-scenario"></a>Yük testi senaryosunda test yinelemelerini yapılandırma
 

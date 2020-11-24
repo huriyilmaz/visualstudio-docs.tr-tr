@@ -1,5 +1,7 @@
 ---
-title: Web performans testleri için Kaydedici eklentisi oluşturma
+title: Web performans testleri için bir kaydedici Plug-In oluşturma
+description: Web performans testi Kaydedicisi araç çubuğunda Durdur seçeneğini belirledikten sonra, türünde webtestrecorderpluginexception 'in kayıtlı bir Web performans testini değiştirmenize nasıl izin sağladığını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -8,12 +10,12 @@ ms.assetid: 6fe13be1-aeb5-4927-9bff-35950e194da9
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 3f75114683a4f456d0514af20c1c201c373bd4b0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ce4be33e2e29ee0089184a034e56cf3a0539dc76
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85288019"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95440066"
 ---
 # <a name="how-to-create-a-recorder-plug-in"></a>Nasıl yapılır: Kaydedici eklentisi oluşturma
 
@@ -71,7 +73,7 @@ Aşağıdaki yordamlarda, kaydedici eklentisi için ilkel kodu oluşturma, eklen
 
 8. Web kaydı oluştuktan sonra kaydedici eklentisinin yürütmesini istediğiniz koda göre daha fazla kod ekleyin. Örneğin, aşağıdaki örnekte gösterildiği gibi özel bağıntıyı işleyecek bir kod ekleyebilirsiniz. Ayrıca, yorumları işlemlere dönüştürme veya Web başarım testine doğrulama kuralları ekleme gibi şeyler için bir kaydedici eklentisi de oluşturabilirsiniz.
 
-9. **Yapı** menüsünde, **Oluştur \<class library project name> **' u seçin.
+9. **Yapı** menüsünde, **Oluştur \<class library project name>**' u seçin.
 
 Sonra, Kaydedici eklentisini Visual Studio 'ya kaydolmaları için dağıtın.
 

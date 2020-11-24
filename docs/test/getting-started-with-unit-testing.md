@@ -1,5 +1,7 @@
 ---
 title: Birim testini kullanmaya başlama
+description: Kod durumunu korumak, kod kapsamını sağlamak ve müşterilerinizin yapabilmesi için hata ve hataları bulmak üzere birim testlerini tanımlamak ve çalıştırmak için Visual Studio 'Yu kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 04/07/2020
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c167e98f9419842876aed713e008b8746064669a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3daff1a7b7c2e62b4ca4a508c5c8dd31261a40dd
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "82153043"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95441787"
 ---
 # <a name="get-started-with-unit-testing"></a>Birim testini kullanmaya başlama
 
@@ -26,7 +28,7 @@ Bu bölümde, birim testi projesinin nasıl oluşturulduğu açıklanmaktadır.
 
 1. Visual Studio 'da sınamak istediğiniz projeyi açın.
 
-   Bu makalede, örnek birim testi gösterimi amacıyla, **Merhaba WorldCore**adlı basit bir "Merhaba Dünya" projesi test eder. Bu tür bir projenin örnek kodu aşağıdaki gibidir:
+   Bu makalede, örnek birim testi gösterimi amacıyla, **Merhaba WorldCore** adlı basit bir "Merhaba Dünya" projesi test eder. Bu tür bir projenin örnek kodu aşağıdaki gibidir:
 
    ```csharp
    namespace HelloWorldCore
@@ -166,7 +168,7 @@ Visual Studio 2017 veya sonraki sürümlerde MSTest, xUnit veya NUnit test çer�
 > [!NOTE]
 > Canlı birim testi yalnızca Enterprise sürümünde kullanılabilir.
 
-1. **Test**Live Unit Testing Başlat ' a tıklayarak **Test** menüsünden canlı birim testi ' ni açın  >  **Live Unit Testing**  >  **Start**.
+1. **Test** Live Unit Testing Başlat ' a tıklayarak **Test** menüsünden canlı birim testi ' ni açın  >  **Live Unit Testing**  >  **Start**.
 
    ::: moniker range="vs-2017"
 
@@ -211,7 +213,7 @@ Visual Studio 'da Boost, Google ve NUnit gibi üçüncü taraf test çerçeveler
 
 1. Test etmek istediğiniz kodu içeren çözümü açın.
 
-2. **Çözüm Gezgini** çözüme sağ tıklayın ve **Add**  >  **Yeni proje**Ekle ' yi seçin.
+2. **Çözüm Gezgini** çözüme sağ tıklayın ve **Add**  >  **Yeni proje** Ekle ' yi seçin.
 
 3. **NUnit test projesi** proje şablonunu seçin.
 

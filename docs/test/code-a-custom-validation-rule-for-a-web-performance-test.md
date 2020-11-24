@@ -1,5 +1,6 @@
 ---
 title: Web performans testi için özel doğrulama kuralı oluşturma
+description: Doğrulama kuralı sınıfından, ValidationRule 'dan türetilmiş kendi doğrulama kurallarınızı oluşturmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
@@ -16,12 +17,12 @@ dev_langs:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: a6222aaf6b6aeace595e12c797ead1dfb86b4931
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 627122368c90163cf9aef4c8035bfbb67c4a0dba
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810620"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95441839"
 ---
 # <a name="code-a-custom-validation-rule-for-a-web-performance-test"></a>Web performans testi için özel doğrulama kuralı kodu oluşturma
 
@@ -49,7 +50,7 @@ Kendi doğrulama kurallarınızı oluşturabilirsiniz. Bunu yapmak için, bir do
 
 6. Seçim Test projesinde, özel doğrulama kuralını içeren sınıf kitaplığı projesine bir başvuru ekleyin.
 
-7. Test projesinde, **Web Performans Testi Düzenleyicisi**bir Web başarım testi açın.
+7. Test projesinde, **Web Performans Testi Düzenleyicisi** bir Web başarım testi açın.
 
 8. Özel doğrulama kuralını bir Web performans testi isteğine eklemek için, bir isteğe sağ tıklayın ve **doğrulama kuralı ekle**' yi seçin.
 

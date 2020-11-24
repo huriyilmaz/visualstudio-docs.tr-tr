@@ -1,5 +1,7 @@
 ---
 title: Yük testlerinde eşik kuralı Ihlallerini çözümleme
+description: İhlalleri çözümleyebilmeniz için, ayarladığınız eşik kuralları ihlallerini görüntülemeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: conceptual
 f1_keywords:
@@ -15,12 +17,12 @@ ms.assetid: 969ed346-cf2e-4d48-82b3-edb3e075e1c0
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 0a20c5e3f30a6d006175e78fc70dab79d0b9bf8a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 49fe5893254083dd83551ef5f43fffcc295a992a
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75591287"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442709"
 ---
 # <a name="analyzing-threshold-rule-violations-in-load-tests-using-the-load-test-analyzer"></a>Yük Testi Çözümleyicisini kullanarak yük testlerinde eşik kuralı ihlallerini çözümleme
 
@@ -36,12 +38,12 @@ Eşik ihlalleri tablosu ilk 1.000 ihlallerini görüntüler. Aşağıdaki tablo 
 
 |Sütun|Açıklama|Varsayılan olarak görünür|
 |-|-|-|
-|Süre|Yük testi sırasında ihlalin gerçekleştiği zaman.|Yes|
-|Bilgisayar|İhlalin gerçekleştiği test altındaki bilgisayarın adı. **Note:**  Bu, yük testlerini Rig 'ler üzerinde çalıştırdığınızda önemlidir.|Yes|
-|Kategori|İhlalin gerçekleştiği performans sayacının kategorisi.|Yes|
-|Sayaç|İhlalin gerçekleştiği performans sayacının adı.|Yes|
-|Örnek|İhlalin gerçekleştiği performans sayacı örneği.|Yes|
-|İleti|Eşik ihlalini açıklayan bir ileti. Örneğin, **5 değeri 0 ' ın kritik eşik değerini aşıyor**.|Yes|
+|Saat|Yük testi sırasında ihlalin gerçekleştiği zaman.|Evet|
+|Bilgisayar|İhlalin gerçekleştiği test altındaki bilgisayarın adı. **Note:**  Bu, yük testlerini Rig 'ler üzerinde çalıştırdığınızda önemlidir.|Evet|
+|Kategori|İhlalin gerçekleştiği performans sayacının kategorisi.|Evet|
+|Sayaç|İhlalin gerçekleştiği performans sayacının adı.|Evet|
+|Örnek|İhlalin gerçekleştiği performans sayacı örneği.|Evet|
+|İleti|Eşik ihlalini açıklayan bir ileti. Örneğin, **5 değeri 0 ' ın kritik eşik değerini aşıyor**.|Evet|
 
 > [!NOTE]
 > Sütun üstbilgilerini seçerek tabloyu sıralayabilirsiniz.

@@ -1,5 +1,7 @@
 ---
 title: Birim testleri .NET Framework önceki sürümünü hedefleyin
+description: .NET Framework belirli sürümlerini hedeflemek için birim testi projeleri oluşturmayı öğrenin. Hedeflenen sürüm 3,5 veya üzeri olmalıdır ve istemci sürümü olamaz.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.author: mikejo
@@ -7,12 +9,12 @@ manager: jillfra
 ms.workload:
 - dotnet
 author: mikejo5000
-ms.openlocfilehash: 670ec672c55d591496e26435db5a3112c345a44d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6badbb7723bf4d8ed0c9385558204c2dc4907574
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85288175"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95441254"
 ---
 # <a name="how-to-configure-unit-tests-to-target-an-earlier-version-of-the-net-framework"></a>Nasıl yapılır: birim testlerini .NET Framework önceki bir sürümünü hedeflemek için yapılandırma
 
@@ -83,7 +85,7 @@ Yukarıda listelenen yetenekler, Visual Studio kullanarak SharePoint uygulamalar
 
 2. **Çözüm Gezgini**' de, yeni C++ test projenizden **Projeyi Kaldır** ' ı seçin.
 
-3. **Çözüm Gezgini**' de, yüklenmeyen C++ test projesini ve ardından **Edit \<project name> . vcxproj**öğesini seçin.
+3. **Çözüm Gezgini**' de, yüklenmeyen C++ test projesini ve ardından **Edit \<project name> . vcxproj** öğesini seçin.
 
    *. Vcxproj* dosyası düzenleyicide açılır.
 

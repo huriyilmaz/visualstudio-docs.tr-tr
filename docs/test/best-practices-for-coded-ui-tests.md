@@ -1,5 +1,7 @@
 ---
 title: Kodlanmış UI Testleri için En İyi Yöntemler
+description: Kodlanmış UI testleri geliştirmeye yönelik öneriler hakkında bilgi edinin. Bu yönergeler esnek bir kodlanmış UI testi oluşturmaya yardımcı olur.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e71029a185d1b3fea1812b2a4b1cf7bf20effff8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2a4a79ca397b46d06e18c62fde2034551ff7afe0
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75565168"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95441813"
 ---
 # <a name="best-practices-for-coded-ui-tests"></a>Kodlanmış UI testleri için en iyi uygulamalar
 
@@ -22,7 +24,7 @@ Bu konuda, kodlanmış UI testleri geliştirmeye yönelik bazı öneriler açık
 
 [!INCLUDE [coded-ui-test-deprecation](includes/coded-ui-test-deprecation.md)]
 
-## <a name="best-practices"></a>En iyi uygulamalar
+## <a name="best-practices"></a>Önerilen uygulamalar
 
 Esnek kodlanmış bir UI testi oluşturmak için aşağıdaki yönergeleri kullanın.
 
@@ -38,7 +40,7 @@ Esnek kodlanmış bir UI testi oluşturmak için aşağıdaki yönergeleri kulla
 
 - Mümkün olduğunda, her bir kaydedilen yöntemi 10 ' dan az eylemden sınırlayın. Bu modüler yaklaşım, UI değişirse bir yöntemin değiştirilmesini kolaylaştırır.
 
-- *UIMap.Designer.cs* dosyasına otomatik olarak bir onaylama yöntemi ekleyen **kodlanmış UI test oluşturucusunu**kullanarak her bir onaylama işlemi oluşturun.
+- *UIMap.Designer.cs* dosyasına otomatik olarak bir onaylama yöntemi ekleyen **kodlanmış UI test oluşturucusunu** kullanarak her bir onaylama işlemi oluşturun.
 
 - Kullanıcı arabirimi (UI) değişirse, test yöntemlerini veya onaylama yöntemlerini yeniden kaydedin veya var olan bir test yönteminin etkilenen bölümlerini yeniden kaydedin.
 

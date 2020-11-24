@@ -1,7 +1,7 @@
 ---
 title: vcpkg-install
 description: devinit Tool vcpkg-Install.
-ms.date: 08/28/2020
+ms.date: 11/20/2020
 ms.topic: reference
 author: andysterland
 ms.author: andster
@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 6e10887e09c329a241aab7f18c6170c873705fbf
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: 5247bdd262a7c5ec2c3c7e3b77ab21f2777524d1
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94672054"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442168"
 ---
 # <a name="vcpkg-install"></a>vcpkg-install
 
@@ -29,10 +29,10 @@ Hem hem de `input` `additionalOptions` özellikleri atlanırsa veya boşsa, ara�
 | Ad                                             | Tür   | Gerekli | Değer                                                                                   |
 |--------------------------------------------------|--------|----------|-----------------------------------------------------------------------------------------|
 | **açıklamaları**                                     | dize | No       | İsteğe bağlı Yorumlar özelliği. Kullanılmadı.                                                   |
-| [**girişinin**](#input)                              | string | Yes      | Yüklenecek paket (ler). Ayrıntılar için aşağıdaki [girişi](#input) inceleyin.                       |
+| [**girişinin**](#input)                              | string | Evet      | Yüklenecek paket (ler). Ayrıntılar için aşağıdaki [girişi](#input) inceleyin.                       |
 | [**additionalOptions**](#additional-options)     | dize | No       | Ayrıntılar için aşağıdaki [ek seçeneklere](#additional-options) bakın.                        |
 
-### <a name="input"></a>Girdi
+### <a name="input"></a>Giriş
 
 `input`Özelliği, `name` bir `vcpkg` veya birden çok paket yüklemek için boşlukla ayrılmış adların bir listesi olmalıdır. Kullanılabilir bağlantı noktalarının listesi [vcpkg GitHub](https://github.com/microsoft/vcpkg/tree/master/ports)deposunda bulunabilir.
 
@@ -42,10 +42,10 @@ Ek seçenekler doğrudan [vcpkg](/powershell/module/powershellget/install-module
 
 ### <a name="default-behavior"></a>Varsayılan davranış
 
-Aracının varsayılan davranışı `vcpkg-install` , gerekli olduğu gibi hata ' dır `input` .
+Aracın varsayılan davranışı, `vcpkg-install` gerekli olduğu gibi hatada yapılır `input` .
 
 ## <a name="example-usage"></a>Örnek kullanım
-Kullanarak nasıl çalıştırılacağını gösteren örnekler aşağıda verilmiştir `vcpkg-install` `.devinit.json` . 
+Kullanarak nasıl çalıştırılacağını gösteren örnekler aşağıda verilmiştir `vcpkg-install` `.devinit.json` .
 
 #### <a name="devinitjson-that-will-install-the-sdl2-port"></a>.devinit.js, sdl2 bağlantı noktasını yükleyecek:
 ```json

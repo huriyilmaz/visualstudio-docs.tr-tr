@@ -1,5 +1,7 @@
 ---
 title: Bir. runsettings dosyası ile birim testlerini yapılandırma
+description: Komut satırından, IDE 'den veya bir derleme iş akışında çalıştırılan birim testlerini yapılandırmak için Visual Studio 'da. runsettings dosyasını nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 07/15/2020
 ms.topic: conceptual
 ms.author: mikejo
@@ -7,12 +9,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 8194a5f61b45ac2b4358922aaf8c7c7b8bea4ae9
-ms.sourcegitcommit: 63ff7cb85b3baeeb713240d17bb2a18497f3741d
+ms.openlocfilehash: ca15e265f9e6f3188826c019a8c81d02a7668bcf
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94518771"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442696"
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>*. Runsettings* dosyasını kullanarak birim testlerini yapılandırma
 
@@ -24,7 +26,7 @@ Visual Studio 'daki birim testleri, bir *. runsettings* dosyası kullanılarak y
 
 ## <a name="create-a-run-settings-file-and-customize-it"></a>Çalışma ayarları dosyası oluşturma ve özelleştirme
 
-1. Çözümünüze bir çalışma ayarları dosyası ekleyin. **Çözüm Gezgini** , çözümünüzün kısayol menüsünde, **Add**  >  **Yeni öğe** Ekle ' yi seçin ve **XML dosyası** ' nı seçin. Dosyayı *test. runsettings* gibi bir adla kaydedin.
+1. Çözümünüze bir çalışma ayarları dosyası ekleyin. **Çözüm Gezgini**, çözümünüzün kısayol menüsünde, **Add**  >  **Yeni öğe** Ekle ' yi seçin ve **XML dosyası**' nı seçin. Dosyayı *test. runsettings* gibi bir adla kaydedin.
 
    > [!TIP]
    > Dosya adı, *. runsettings* uzantısını kullandığınız sürece büyük değildir.
@@ -65,7 +67,7 @@ IDE 'de bir çalıştırma ayarları dosyası belirtmek **için test** > **testi
 
 ![Visual Studio 2017 'de test ayarları Dosya menüsünü seçin](media/select-test-settings-file.png)
 
-Dosya, test ayarları menüsünde görünür ve onu seçebilir veya seçimden kaldırabilirsiniz. Seçildiğinde, çalışma ayarları dosyası **kod kapsamını çözümle** ' yi seçtiğiniz her seferinde geçerlidir.
+Dosya, test ayarları menüsünde görünür ve onu seçebilir veya seçimden kaldırabilirsiniz. Seçildiğinde, çalışma ayarları dosyası **kod kapsamını çözümle**' yi seçtiğiniz her seferinde geçerlidir.
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
@@ -122,11 +124,11 @@ Bir proje için *. runsettings* dosyası belirtme örneği:
 
 ### <a name="visual-studio-2019-version-163-and-earlier"></a>Visual Studio 2019 sürüm 16,3 ve önceki sürümleri
 
-IDE 'de bir çalıştırma ayarları dosyası belirtmek için **Test**  >  **seçme ayarları dosyası** ' nı seçin. *. Runsettings* dosyasına gidin ve seçin.
+IDE 'de bir çalıştırma ayarları dosyası belirtmek için **Test**  >  **seçme ayarları dosyası**' nı seçin. *. Runsettings* dosyasına gidin ve seçin.
 
 ![Visual Studio 2019 'de test ayarları Dosya menüsünü seçin](media/vs-2019/select-settings-file.png)
 
-Dosya, Test menüsünde görünür ve onu seçebilir veya seçimden kaldırabilirsiniz. Seçildiğinde, çalışma ayarları dosyası **kod kapsamını çözümle** ' yi seçtiğiniz her seferinde geçerlidir.
+Dosya, Test menüsünde görünür ve onu seçebilir veya seçimden kaldırabilirsiniz. Seçildiğinde, çalışma ayarları dosyası **kod kapsamını çözümle**' yi seçtiğiniz her seferinde geçerlidir.
 ::: moniker-end
 
 ## <a name="specify-a-run-settings-file-from-the-command-line"></a>Komut satırından bir çalıştırma ayarları dosyası belirtin
@@ -233,7 +235,7 @@ Diğer herhangi bir tanılama veri bağdaştırıcısı türünü özelleştirme
 
 ### <a name="blame-data-collector"></a>Blame veri toplayıcısı
 
-Bu seçenek, test ana bilgisayarı kilitlenmesine neden olan sorunlu bir testi yalıtmanıza yardımcı olabilir. Toplayıcıyı *çalıştırmak, test* eden bir çıkış dosyası ( *Sequence.xml* ) oluşturur ve bu, kilitlenmeden önce testin yürütülme sırasını yakalar.
+Bu seçenek, test ana bilgisayarı kilitlenmesine neden olan sorunlu bir testi yalıtmanıza yardımcı olabilir. Toplayıcıyı *çalıştırmak, test* eden bir çıkış dosyası (*Sequence.xml*) oluşturur ve bu, kilitlenmeden önce testin yürütülme sırasını yakalar.
 
 ```xml
 <DataCollector friendlyName="blame" enabled="True">
@@ -315,7 +317,7 @@ Bu ayarlar, özniteliğine sahip test yöntemlerini çalıştıran test bağdaş
 |**DeploymentEnabled**|true|Değeri **false** olarak ayarlarsanız, test yöntetiniz içinde belirttiğiniz dağıtım öğeleri dağıtım dizinine kopyalanmaz.|
 |**CaptureTraceOutput**|true|Kullanarak test yönteminizin hata ayıklama izini yazabilirsiniz <xref:System.Diagnostics.Trace.WriteLine%2A?displayProperty=nameWithType> .|
 |**DeleteDeploymentDirectoryAfterTestRunIsComplete**|true|Bir test çalıştırdıktan sonra dağıtım dizinini sürdürmek için bu değeri **false** olarak ayarlayın.|
-|**MapInconclusiveToFailed**|yanlış|Bir test, Sonuçlandırılamayan bir durumla tamamlanırsa **Test Gezgini** 'nde atlanan duruma eşlenir. Sonuçlandırılamayan testlerin başarısız olarak görüntülenmesini istiyorsanız değeri **true** olarak ayarlayın.|
+|**MapInconclusiveToFailed**|yanlış|Bir test, Sonuçlandırılamayan bir durumla tamamlanırsa **Test Gezgini**'nde atlanan duruma eşlenir. Sonuçlandırılamayan testlerin başarısız olarak görüntülenmesini istiyorsanız değeri **true** olarak ayarlayın.|
 |**InProcMode**|yanlış|Testlerinizin MSTest bağdaştırıcısıyla aynı işlemde çalıştırılmasını istiyorsanız, bu değeri **true** olarak ayarlayın. Bu ayar, küçük bir performans kazancı sağlar. Ancak bir test bir özel durumla çıkıldığında, kalan testler çalıştırılmaz.|
 |**AssemblyResolution**|yanlış|Birim testlerini bulurken ve çalıştırırken ek derlemeler için yollar belirtebilirsiniz. Örneğin, test derlemesi ile aynı dizinde olmayan bağımlılık derlemeleri için bu yolları kullanın. Bir yol belirtmek için bir **Dizin yolu** öğesi kullanın. Yol, ortam değişkenleri içerebilir.<br /><br />`<AssemblyResolution>  <Directory Path="D:\myfolder\bin\" includeSubDirectories="false"/> </AssemblyResolution>`|
 

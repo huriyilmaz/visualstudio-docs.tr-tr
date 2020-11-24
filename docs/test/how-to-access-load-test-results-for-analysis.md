@@ -1,5 +1,7 @@
 ---
 title: Yük testi sonuçlarını çözümle
+description: Yük testi çözümleyicisinden otomatik olarak veya komut satırından testler için el ile yük testi sonuçlarına erişmeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -14,12 +16,12 @@ ms.assetid: b0a3e694-2894-479b-b270-7e61e9fafacd
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: b72db87014304dc2b9baf57e05015e53a630c431
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 95108a5901a00582e708f6bf3660cb07d2126e0a
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85288539"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442605"
 ---
 # <a name="how-to-access-load-test-results-for-analysis"></a>Nasıl yapılır: analiz için yük testi sonuçlarına erişme
 
@@ -37,11 +39,11 @@ Tamamlanan yük testinin yük testi sonucu, bilgisayarlardan düzenli olarak top
 
      **Sonuçları aç ve Yönet** iletişim kutusu görünür.
 
-3. **Yük testi sonuçlarını bulmak için bir denetleyici adı girin**' de bir denetleyici seçin. Yerel olarak depolanan sonuçlara erişmek için ** \<local> Denetleyici yok** ' u seçin.
+3. **Yük testi sonuçlarını bulmak için bir denetleyici adı girin**' de bir denetleyici seçin. Yerel olarak depolanan sonuçlara erişmek için **\<local> Denetleyici yok** ' u seçin.
 
-4. **Aşağıdaki yük testi için sonuçları göster**bölümünde, sonuçlarını görüntülemek istediğiniz yük testini seçin. **\<Show results for all tests>** Tüm testlerin tüm sonuçlarını görmek için seçin.
+4. **Aşağıdaki yük testi için sonuçları göster** bölümünde, sonuçlarını görüntülemek istediğiniz yük testini seçin. **\<Show results for all tests>** Tüm testlerin tüm sonuçlarını görmek için seçin.
 
-     Yük testi sonuçları varsa, bunlar **Yük testi sonuçları** listesinde görünürler. Sütunlar **saat**, **süre**, **Kullanıcı**, **sonuç**, **Test**ve **Açıklama**. **Test, testin adını içerir ve** **Açıklama** , test çalıştırılmadan önce eklenen isteğe bağlı açıklamayı içerir.
+     Yük testi sonuçları varsa, bunlar **Yük testi sonuçları** listesinde görünürler. Sütunlar **saat**, **süre**, **Kullanıcı**, **sonuç**, **Test** ve **Açıklama**. **Test, testin adını içerir ve** **Açıklama** , test çalıştırılmadan önce eklenen isteğe bağlı açıklamayı içerir.
 
     > [!NOTE]
     > Sonuçlar listenin en son sonuçlarıyla birlikte görüntülenir.

@@ -1,5 +1,7 @@
 ---
 title: IntelliTrace verileri
+description: Visual Studio 'da belirli tanılama izleme bilgilerini toplamak üzere IntelliTrace için tanılama veri bağdaştırıcısını nasıl yapılandıracağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 10/13/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.assetid: 02b6716f-569e-4961-938a-e790a0c74b5c
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 9da0000397042355387d21501c64c29806ddeaaa
-ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
+ms.openlocfilehash: 7a043f2841dc5a6918036c152628ebfc346e11ee
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91928521"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95440114"
 ---
 # <a name="how-to-collect-intellitrace-data-to-help-debug-difficult-issues"></a>Nasıl yapılır: hata ayıklama zor sorunlarını gidermek için IntelliTrace verilerini toplama
 
@@ -27,7 +29,7 @@ Visual Studio 'da belirli tanılama izleme bilgilerini toplamak üzere IntelliTr
 > [!NOTE]
 > IntelliTrace yalnızca yönetilen kod kullanılarak yazılmış bir uygulama üzerinde çalışıyor. İstemci olarak tarayıcı kullanan bir Web uygulamasını test ediyorsanız, izleme için kullanılabilir yönetilen kod olmadığından test ayarlarınızda istemci için IntelliTrace 'i etkinleştirmemelisiniz. Bu durumda, bir ortam ayarlamak ve IntelliTrace verilerini Web sunucunuzda Uzaktan toplamak isteyebilirsiniz.
 
-IntelliTrace verileri *. iTrace*uzantısına sahip bir dosyada depolanır. Testinizi çalıştırdığınızda bir test adımı başarısız olursa, bir hata oluşturabilirsiniz. Tanılama bilgilerini içeren IntelliTrace dosyası otomatik olarak bu hataya eklenir.
+IntelliTrace verileri *. iTrace* uzantısına sahip bir dosyada depolanır. Testinizi çalıştırdığınızda bir test adımı başarısız olursa, bir hata oluşturabilirsiniz. Tanılama bilgilerini içeren IntelliTrace dosyası otomatik olarak bu hataya eklenir.
 
 > [!NOTE]
 > IntelliTrace için tanılama veri bağdaştırıcısı, test geçişi başarılı olduğunda bir IntelliTrace dosyası oluşturmaz. Dosyayı yalnızca başarısız bir test çalışmasında veya bir hata gönderdiğinizde kaydeder.
@@ -65,7 +67,7 @@ Bu yordamdaki adımları gerçekleştirmeden önce, Visual Studio 'dan test ayar
 
 2. **IntelliTrace**' i seçin.
 
-3. Bir Web istemci rolü için veya bir ASP.NET Web uygulaması için IntelliTrace ekliyorsanız, **IntelliTrace ve test etkisi için ASP.net Istemci proxy 'sini**de seçmeniz gerekir.
+3. Bir Web istemci rolü için veya bir ASP.NET Web uygulaması için IntelliTrace ekliyorsanız, **IntelliTrace ve test etkisi için ASP.net Istemci proxy 'sini** de seçmeniz gerekir.
 
      Bu proxy, IntelliTrace ve test etkisi tanılama veri bağdaştırıcıları için bir istemciden bir Web sunucusuna http çağrıları hakkında bilgi toplamanıza olanak sağlar.
 

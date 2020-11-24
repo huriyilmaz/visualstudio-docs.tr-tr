@@ -1,5 +1,7 @@
 ---
 title: Yük testi için özel sayaç kümeleri ekleme
+description: Yük Testi Sihirbazı bir yük testi oluşturduğunuzda, bir ilk sayaç kümesi eklersiniz. Yük Testi Düzenleyicisi kullanarak özel sayaç kümeleri eklemeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,21 +12,21 @@ ms.assetid: 499aca80-1069-408d-ac68-326da6a50645
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: e2b78cb68f1e7a7e1f47c6cc3e771353d7e46ca9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c65226a8694cbccf7c5b94f7688d1828a2526cf6
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85288435"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95440239"
 ---
 # <a name="how-to-add-custom-counter-sets-using-the-load-test-editor"></a>Nasıl yapılır: Yük Testi Düzenleyicisi kullanarak özel sayaç kümeleri ekleme
 
-**Yeni Yük Testi Sihirbazı**bir yük testi oluşturduğunuzda, ilk sayaç kümesini eklersiniz. Bunlar, yük testiniz için önceden tanımlanmış sayaç kümeleri kümesi sunar.
+**Yeni Yük Testi Sihirbazı** bir yük testi oluşturduğunuzda, ilk sayaç kümesini eklersiniz. Bunlar, yük testiniz için önceden tanımlanmış sayaç kümeleri kümesi sunar.
 
 > [!NOTE]
 > Yük testleriniz uzak makineler arasında dağıtılmışsa, denetleyici ve aracı sayaçları denetleyici ve aracı sayaç kümelerine eşlenir. Yük testinizde uzak makineleri kullanma hakkında daha fazla bilgi için bkz. [Test denetleyicileri ve test aracıları](configure-test-agents-and-controllers-for-load-tests.md).
 
-Sayaçlarınızı **Yük Testi Düzenleyicisi**yönetirsiniz. Teste zaten eklenmiş olan sayaç kümeleri, yük testinin **sayaç kümeleri** düğümünde görünür. Yük testi oluşturduktan sonra, buna yeni özel sayaç kümeleri ekleyebilirsiniz.
+Sayaçlarınızı **Yük Testi Düzenleyicisi** yönetirsiniz. Teste zaten eklenmiş olan sayaç kümeleri, yük testinin **sayaç kümeleri** düğümünde görünür. Yük testi oluşturduktan sonra, buna yeni özel sayaç kümeleri ekleyebilirsiniz.
 
 ![Özel sayaç kümesi](../test/media/loadtestcustomcounter.png)
 
@@ -39,7 +41,7 @@ Sayaçlarınızı **Yük Testi Düzenleyicisi**yönetirsiniz. Teste zaten eklenm
 3. **Sayaç kümeleri** düğümüne sağ tıklayın ve **Özel sayaç kümesi Ekle**' yi seçin.
 
     > [!NOTE]
-    > Sayaç kümesine **Özel1**gibi varsayılan bir ad verilir. **Özellikler** penceresini kullanarak adı değiştirebilirsiniz. **Özellikler** penceresini göstermek için **F4** tuşuna basın.
+    > Sayaç kümesine **Özel1** gibi varsayılan bir ad verilir. **Özellikler** penceresini kullanarak adı değiştirebilirsiniz. **Özellikler** penceresini göstermek için **F4** tuşuna basın.
 
 4. Özel sayaç kümesine sayaç eklemek için, yeni sayaç kümesine sağ tıklayın ve ardından **Sayaç Ekle**' yi seçin. Sayaçların nasıl ekleneceği hakkında daha fazla bilgi için bkz. [nasıl yapılır: sayaç kümelerine sayaç ekleme](../test/how-to-add-counters-to-counter-sets-using-the-load-test-editor.md).
 

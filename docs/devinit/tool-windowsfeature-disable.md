@@ -1,7 +1,7 @@
 ---
 title: windowsfeature-disable
 description: devinit aracı WindowsFeature-devre dışı.
-ms.date: 08/28/2020
+ms.date: 11/20/2020
 ms.topic: reference
 author: andysterland
 ms.author: andster
@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 1f06f89a61b77bd4c323303ca796252d4874b3cc
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: e48ba0a288aec76588e3d984d4c1577e053e35ae
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94671734"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442161"
 ---
 # <a name="windowsfeature-disable"></a>windowsfeature-disable
 
@@ -27,10 +27,10 @@ ms.locfileid: "94671734"
 | Ad                                             | Tür   | Gerekli | Değer                                                                  |
 |--------------------------------------------------|--------|----------|------------------------------------------------------------------------|
 | **açıklamaları**                                     | dize | No       | İsteğe bağlı Yorumlar özelliği. Kullanılmadı.                                  |
-| [**girişinin**](#input)                              | string | Yes      | Yüklenecek Windows özelliği. Ayrıntılar için aşağıdaki [girişi](#input) inceleyin. |
+| [**girişinin**](#input)                              | string | Evet      | Yüklenecek Windows özelliği. Ayrıntılar için aşağıdaki [girişi](#input) inceleyin. |
 | [**additionalOptions**](#additional-options)     | dize | No       | Ayrıntılar için aşağıdaki [ek seçeneklere](#additional-options) bakın.       |
 
-### <a name="input"></a>Girdi
+### <a name="input"></a>Giriş
 
 `input`Özelliği `name` `windows feature` devre dışı bırakmak için özelliğinin öğesinin ' i olmalıdır.
 
@@ -40,10 +40,10 @@ Yok.
 
 ### <a name="default-behavior"></a>Varsayılan davranış
 
-Aracının varsayılan davranışı `windowsfeature-disable` , gerekli olduğu gibi hata ' dır `input` .
+Aracın varsayılan davranışı, `windowsfeature-disable` gerekli olduğu gibi hatada yapılır `input` .
 
 ## <a name="example-usage"></a>Örnek kullanım
-Kullanarak nasıl çalıştırılacağını gösteren bir örnek aşağıda verilmiştir `windowsfeature-disable` `.devinit.json` . 
+Kullanarak nasıl çalıştırılacağını gösteren bir örnek aşağıda verilmiştir `windowsfeature-disable` `.devinit.json` .
 
 #### <a name="devinitjson-that-will-disable-a-specified-feature"></a>.devinit.js, belirtilen bir özelliği devre dışı bırakacak:
 ```json

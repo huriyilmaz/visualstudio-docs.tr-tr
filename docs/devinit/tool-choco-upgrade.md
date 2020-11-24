@@ -1,7 +1,7 @@
 ---
 title: choco-upgrade
 description: devinit aracı Choco-Upgrade.
-ms.date: 08/28/2020
+ms.date: 11/20/2020
 ms.topic: reference
 author: andysterland
 ms.author: andster
@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 7db97694e129fe5c70de09aaf4c132656ae00746
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: 27a29584a4cf3cd688abe36f625c2e68967c39c0
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94672228"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95440491"
 ---
 # <a name="choco-upgrade"></a>choco-upgrade
 
@@ -26,13 +26,13 @@ ms.locfileid: "94672228"
 
 Hem hem de `input` `additionalOptions` özellikleri atlanırsa veya boşsa araç hiçbir şey yapmaz.
 
-| Ad                                             | Tür   | Gerekli | Değer                                                                                                          |
-|--------------------------------------------------|--------|----------|----------------------------------------------------------------------------------------------------------------|
-| **açıklamaları**                                     | dize | No       | İsteğe bağlı Yorumlar özelliği. Kullanılmadı.                                                                          |
-| [**girişinin**](#input)                              | dize | No       | Yükseltilecek paket. Ayrıntılar için aşağıdaki [girişi](#input) inceleyin.                                                 |
-| [**additionalOptions**](#additional-options)     | dize | No       | Araca geçirilecek ek seçenekler. Ayrıntılar için aşağıdaki [ek seçeneklere](#additional-options) bakın.       |
+| Ad                                             | Tür   | Gerekli  | Değer                                                                                                          |
+|--------------------------------------------------|--------|-----------|----------------------------------------------------------------------------------------------------------------|
+| **açıklamaları**                                     | dize | No        | İsteğe bağlı Yorumlar özelliği. Kullanılmadı.                                                                          |
+| [**girişinin**](#input)                              | string | Evet       | Yükseltilecek paket. Ayrıntılar için aşağıdaki [girişi](#input) inceleyin.                                                 |
+| [**additionalOptions**](#additional-options)     | dize | No        | Araca geçirilecek ek seçenekler. Ayrıntılar için aşağıdaki [ek seçeneklere](#additional-options) bakın.       |
 
-### <a name="input"></a>Girdi
+### <a name="input"></a>Giriş
 
 `input`Özelliği, Yükseltilecek paketin adını (örneğin ' MongoDB ') veya aşağıdaki biçimlerdeki bir yapılandırma dosyasının yolunu belirtmek için kullanılır _packages.config_, _. nuspec_ ve _. nupkg_. Değeri, `input` öğesine `choco upgrade` `choco upgrade mongodb` özgü bağımsız değişkenlerle birlikte (örneğin,) [`additionalOptions`](#additional-options) ve yerleşik `choco` seçeneklere ( [aşağıda](#built-in-options)tanımlanmıştır) eklenir. Paketler [Chocolatey paket galerisinde](https://chocolatey.org/packages)bulunabilir. Bir yapılandırma dosyası kullanırken, bu dosyanın yolunu özelliğinde geçirebilirsiniz, `input` Örneğin: `"input":"packages.config"` .
 
@@ -40,7 +40,7 @@ Hem hem de `input` `additionalOptions` özellikleri atlanırsa veya boşsa araç
 
 Ek yapılandırma seçenekleri ' ın bir değeri olarak geçirilebilir `additionalOptions` . Bu bağımsız değişkenler tarafından kullanılan bağımsız değişkenlere doğrudan geçiş yapılır [`choco upgrade`](https://chocolatey.org/docs/commands-upgrade) ve Chocolatey belgelerinde tanımlanmıştır.
 
-## <a name="built-in-options"></a>Yerleşik Seçenekler
+### <a name="built-in-options"></a>Yerleşik Seçenekler
 
 `choco-upgrade`Araç, gözetimsiz bir şekilde `choco` çalışmasını sağlamak için bir dizi komut satırı bağımsız değişkeni ayarlar `choco` . Bu bağımsız değişkenler aşağıda listelenmiştir ve bunlarla ilgili belgeler [Chocolatey belgelerinde](https://chocolatey.org/docs/)bulunabilir.
 
@@ -50,8 +50,12 @@ Ek yapılandırma seçenekleri ' ın bir değeri olarak geçirilebilir `addition
 | **--devam ediyor**     | İlerleme durumunu gösterme-Ilerleme yüzdeleri gösterilmez.                                         |
 | **--Skip-PowerShell** | PowerShell 'i atla-chocolateyInstall.ps1 çalıştırılmayacaktır.                                              |
 
+### <a name="default-behavior"></a>Varsayılan davranış
+
+`choco-upgrade`Özelliğin gerekli olduğu şekilde aracın varsayılan davranışı hata olur `input` .
+
 ## <a name="example-usage"></a>Örnek kullanım
-Kullanarak nasıl çalıştırılacağını gösteren örnekler aşağıda verilmiştir `choco-upgrade` `.devinit.json` . 
+Kullanarak nasıl çalıştırılacağını gösteren örnekler aşağıda verilmiştir `choco-upgrade` `.devinit.json` .
 
 #### <a name="devinitjson-that-will-update-packages-listed-in-packagesconfig"></a>.devinit.js, packages.config listelenen paketleri güncelleştirecek:
 ```json

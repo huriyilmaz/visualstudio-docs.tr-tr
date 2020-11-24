@@ -1,7 +1,7 @@
 ---
 title: windowsfeature-enable
 description: devinit aracı WindowsFeature-etkinleştirin.
-ms.date: 08/28/2020
+ms.date: 11/20/2020
 ms.topic: reference
 author: andysterland
 ms.author: andster
@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 9ed1cc5379cc28c3932c96271fda27e23f4cd27c
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: 57c122f9ff86994d6ed262fa41834a01be5fa949
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94672008"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442121"
 ---
 # <a name="windowsfeature-enable"></a>windowsfeature-enable
 
@@ -27,10 +27,10 @@ ms.locfileid: "94672008"
 | Ad                                             | Tür   | Gerekli | Değer                                                                    |
 |--------------------------------------------------|--------|----------|--------------------------------------------------------------------------|
 | **açıklamaları**                                     | dize | No       | İsteğe bağlı Yorumlar özelliği. Kullanılmadı.                                    |
-| [**girişinin**](#input)                              | string | Yes      | Yüklenecek Windows özelliği. Ayrıntılar için aşağıdaki [girişi](#input) inceleyin.   |
+| [**girişinin**](#input)                              | string | Evet      | Yüklenecek Windows özelliği. Ayrıntılar için aşağıdaki [girişi](#input) inceleyin.   |
 | [**additionalOptions**](#additional-options)     | dize | No       | Ayrıntılar için aşağıdaki [ek seçeneklere](#additional-options) bakın.         |
 
-### <a name="input"></a>Girdi
+### <a name="input"></a>Giriş
 
 `input`Özelliği, `name` `windows feature` yüklemesinin için olmalıdır. Kullanılabilir özelliklerin listesi `Get-WindowsFeature` PowerShell cmd çalıştırılarak bulunabilir.
 
@@ -40,10 +40,10 @@ Yok.
 
 ### <a name="default-behavior"></a>Varsayılan davranış
 
-Aracının varsayılan davranışı `windowsfeature-enable` , gerekli olduğu gibi hata ' dır `input` .
+Aracın varsayılan davranışı, `windowsfeature-enable` gerekli olduğu gibi hatada yapılır `input` .
 
 ## <a name="example-usage"></a>Örnek kullanım
-Kullanarak nasıl çalıştırılacağını gösteren örnekler aşağıda verilmiştir `windowsfeature-enable` `.devinit.json` . 
+Kullanarak nasıl çalıştırılacağını gösteren örnekler aşağıda verilmiştir `windowsfeature-enable` `.devinit.json` .
 
 #### <a name="devinitjson-that-will-install-iis"></a>IIS 'nin yükleneceği .devinit.js:
 ```json

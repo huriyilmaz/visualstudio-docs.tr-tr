@@ -1,5 +1,7 @@
 ---
 title: Yük Testlerini Düzenleme
+description: Senaryolar, sayaç kümeleri ve yük testlerini tanımlayan çalışma ayarları arasındaki farklar hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.assetid: ba16ed02-137e-40bf-a4cb-45d87d922d37
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: b95689871a987c018720c529743b8447f39b2bf6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 81825b2a9060d75a792e73519486275fd34569a4
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85288708"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95441475"
 ---
 # <a name="edit-load-tests"></a>Yük testlerini Düzenle
 
@@ -22,7 +24,7 @@ Yük testleri bir sunucuya aynı anda erişen birçok kullanıcının benzetimin
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-Yük testi *senaryolar*, *sayaç kümeleri*ve *çalışma ayarları*tarafından tanımlanır. Aşağıdaki çizimde [senaryolar](../test/edit-load-test-scenarios.md), [sayaç kümeleri](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md)ve [çalışma ayarları](../test/load-test-run-settings-properties.md)arasındaki farklılıklar açıklanmaktadır:
+Yük testi *senaryolar*, *sayaç kümeleri* ve *çalışma ayarları* tarafından tanımlanır. Aşağıdaki çizimde [senaryolar](../test/edit-load-test-scenarios.md), [sayaç kümeleri](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md)ve [çalışma ayarları](../test/load-test-run-settings-properties.md)arasındaki farklılıklar açıklanmaktadır:
 
 ![Yük testi mimarisi](../test/media/load_test_editor.png)
 
@@ -38,7 +40,7 @@ Daha fazla bilgi için bkz. [Yük testi senaryolarını](../test/edit-load-test-
 
 ## <a name="configure-and-manage-performance-counter-sets"></a>Performans sayacı kümelerini yapılandırma ve yönetme
 
-Yük testleri, performans sayacı verilerini çözümlediğinizde kullanışlı olan teknoloji tarafından düzenlenen adlandırılmış sayaç kümeleri sağlar. Sayaç kümeleri yük testi, IIS, ASP.NET ve SQL içerir. **Yeni Yük Testi Sihirbazı**bir yük testi oluşturduğunuzda, yük testine dahil etmek üzere belirttiğiniz bilgisayarlar için önceden tanımlanmış ve önemli sayaçların ilk kümesi yapılandırılır. Sayaçlarınızı **Yük Testi Düzenleyicisi**yönetirsiniz.
+Yük testleri, performans sayacı verilerini çözümlediğinizde kullanışlı olan teknoloji tarafından düzenlenen adlandırılmış sayaç kümeleri sağlar. Sayaç kümeleri yük testi, IIS, ASP.NET ve SQL içerir. **Yeni Yük Testi Sihirbazı** bir yük testi oluşturduğunuzda, yük testine dahil etmek üzere belirttiğiniz bilgisayarlar için önceden tanımlanmış ve önemli sayaçların ilk kümesi yapılandırılır. Sayaçlarınızı **Yük Testi Düzenleyicisi** yönetirsiniz.
 
 Daha fazla bilgi için bkz. [bir yük testinde bilgisayarlar için sayaç kümelerini ve eşik kurallarını belirtme](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md).
 

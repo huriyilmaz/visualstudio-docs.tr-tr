@@ -1,5 +1,7 @@
 ---
 title: URL Seçici iletişim kutusu (SharePoint geliştirme)
+description: Kullanıcının projesinde veya SharePoint çalıştıran yerel sunucuda bulunan dosyaları seçmesini sağlayan URL Seçicisi iletişim kutusu hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 991693c3379e008a2a907efd3127290c7e804c22
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 584b77ab714cb692069fadd6c6fad50e20d46f80
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "66261939"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442540"
 ---
 # <a name="url-picker-dialog-box-sharepoint-development-in-visual-studio"></a>URL Seçici iletişim kutusu (Visual Studio 'da SharePoint geliştirme)
   URL Seçici iletişim kutusunda, projenizde veya SharePoint çalıştıran yerel sunucuda bulunan ana sayfa dosyaları veya görüntü dosyaları gibi dosyaları seçebilirsiniz.
@@ -42,7 +44,7 @@ ms.locfileid: "66261939"
 
   SharePoint çalıştıran yerel sunucuda bulunan dosyaları seçmek için **sunucu** düğümünü genişletin. İletişim kutusunda seçilebilir olarak görünmesi için, bu dosyaların aşağıdaki ölçütlere uyması gerekir:
 
-- Dosya şu eşlenmiş klasörlerden birinde bulunmalıdır: **resimler**, **düzenler**veya **ControlTemplates**.
+- Dosya şu eşlenmiş klasörlerden birinde bulunmalıdır: **resimler**, **düzenler** veya **ControlTemplates**.
 
 - Dosya, SharePoint içerik veritabanında bulunamıyor.
 

@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: Yük Testi Sonuçlarında Özel Grafikler Oluşturma'
+description: Yük testi ile ilgili belirli bilgileri görüntüleyen grafikleri nasıl tasarlayacağınızı, yük testinin çalışırken veya çalışmayı bitirdikten sonra öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.assetid: 17fcafce-76f9-4411-9389-6e5376eab236
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 1cc9c5bab7601a62bacfbbb155227bd5b632f93a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c003fc5d6573dfdd88ec85ea37fbb10f80c94484
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85287811"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95441045"
 ---
 # <a name="how-to-create-custom-graphs-in-load-test-results"></a>Nasıl yapılır: yük testi sonuçlarında özel grafikler oluşturma
 
@@ -34,7 +36,7 @@ Yük testi çalışırken veya çalışmayı bitirdikten sonra aşağıdaki yord
 
      **Grafik adını girin** iletişim kutusu görüntülenir.
 
-2. **Grafik adı**bölümüne grafik için bir ad yazın ve **Tamam**' ı seçin.
+2. **Grafik adı** bölümüne grafik için bir ad yazın ve **Tamam**' ı seçin.
 
      Yeni grafik **Yük Testi Çözümleyicisi**'nde görünür. Şu anda seçili olan grafik panelinde görünür; Bu panelde görüntülenen grafiğin yerini alır.
 

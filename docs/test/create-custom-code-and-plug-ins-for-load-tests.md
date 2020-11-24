@@ -1,5 +1,7 @@
 ---
 title: Yük testleri için özel kod ve eklentiler oluşturma
+description: Testlerin yerleşik işlevselliğine genişlemesine yönelik özel eklentiler oluşturmak için yük testi API 'SI ve Web performans testi API 'sini nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 f1_keywords:
@@ -11,12 +13,12 @@ ms.assetid: 0c0fcc99-673b-4ea0-a268-0475f66e5cb6
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 3c060dc9bd50c6dc49777e9114eadae4d6267d92
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: db91f8f5ccf86d67d01bb56a3a42b66757320500
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85288682"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442670"
 ---
 # <a name="create-custom-code-and-plug-ins-for-load-tests"></a>Yük testleri için özel kod ve eklentiler oluşturma
 

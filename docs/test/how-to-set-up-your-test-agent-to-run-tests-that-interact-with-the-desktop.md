@@ -1,5 +1,7 @@
 ---
 title: Test Aracısı yapılandırma
+description: Aracınızı hizmet yerine işlem olarak çalışacak şekilde ayarlayarak masaüstü ile etkileşime geçen otomatikleştirilmiş testlerin nasıl çalıştırılacağını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 09/18/2018
 ms.topic: how-to
 helpviewer_keywords:
@@ -8,12 +10,12 @@ ms.assetid: 3a94dd07-6d17-402c-ae8f-7947143755c9
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 994d5da8af7b00ab8af55681d4a67e9681ebbde6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 13949465677301a336f0a4738e903657dbfe2b7f
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85287538"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95441019"
 ---
 # <a name="how-to-set-up-your-test-agent-to-run-tests-that-interact-with-the-desktop"></a>Nasıl yapılır: Masaüstü ile etkileşimi olan testleri çalıştırmak için test aracınızı ayarlama
 
@@ -56,7 +58,7 @@ Masaüstüyle etkileşim kurması gereken bir görevi gerçekleştiren bir role 
    > [!NOTE]
    > - İşlemi başlatmak için eklediğiniz kullanıcının bu aracı için test denetleyicisi için bilgisayarda TeamTestAgentService grubunun bir üyesi olarak da eklenmesi gerekir. Bu Kullanıcı geçerli kullanıcı ise, bu kullanıcıyı test denetleyicisi bilgisayarına eklediğinizde, oturumunuzu kapatmanız veya yeniden başlatmanız gerekir.
    > - Kullanıcı hesaplarında null parolalar desteklenmez.
-   > - IntelliTrace 'i veya ağ öykünmesi verilerini ve tanılama bağdaştırıcısını kullanmak istiyorsanız, Kullanıcı hesabının Yöneticiler grubunun bir üyesi olması gerekir. Test aracısını çalıştıran makine, en az ayrıcalıklı kullanıcı hesabı olan bir işletim sistemi çalıştırıyorsa, bunu yönetici olarak da çalıştırmanız gerekir (yükseltilmiş). Aracı Kullanıcı adı aracı hizmetinde değilse, test denetleyicisinde izinler gerektiren bu uygulamayı eklemeye çalışacaktır.
+   > - IntelliTrace 'i veya ağ öykünmesi verilerini ve tanılama bağdaştırıcısını kullanmak istiyorsanız, Kullanıcı hesabının Yöneticiler grubunun bir üyesi olması gerekir. Test aracısını çalıştıran makine Least-Privileged Kullanıcı hesabına sahip bir işletim sistemi çalıştırıyorsa, bunu yönetici olarak da çalıştırmanız gerekir (yükseltilmiş). Aracı Kullanıcı adı aracı hizmetinde değilse, test denetleyicisinde izinler gerektiren bu uygulamayı eklemeye çalışacaktır.
    > - Test denetleyicisini kullanmaya çalışan Kullanıcı, test denetleyicisinin Kullanıcı hesabında olmalıdır, aksi durumda denetleyiciye karşı testleri çalıştıramazlar.
 
 4. Test aracısı olan bir bilgisayarın yeniden başlattıktan sonra testleri çalıştırabilmeniz için, bilgisayarı test aracısı kullanıcısı olarak otomatik olarak oturum açmak üzere ayarlayabilirsiniz. **Otomatik oturum aç '** ı seçin. Bu işlem, Kullanıcı adını ve parolayı kayıt defterindeki şifreli bir biçimde depolar.
@@ -69,7 +71,7 @@ Masaüstüyle etkileşim kurması gereken bir görevi gerçekleştiren bir role 
    > [!WARNING]
    > Otomatik olarak oturum açtığınızda veya ekran koruyucuyu devre dışı bıraktığınızda güvenlik riskleri vardır. Otomatik oturum açma özelliğini etkinleştirerek, diğer kullanıcıların bu bilgisayarı başlatmasını ve otomatik olarak oturum açtığı hesabı kullanabilmelerini sağlayabilirsiniz. Ekran koruyucusunu devre dışı bırakırsanız, bilgisayar bir kullanıcının bilgisayarın kilidini açmak için oturum açmasını istemez. Bu, bilgisayara fiziksel erişimi olan herkesin bilgisayara erişmesini sağlar. Bu özellikleri bir bilgisayarda etkinleştirirseniz, bu bilgisayarların fiziksel olarak güvenli olduğundan emin olun. Örneğin, bu bilgisayarlar fiziksel olarak güvenli bir laboratuvarda bulunur. **Ekran koruyucunun devre dışı bırakıldığından emin olun**, bu ekran koruyucunuzu etkinleştirmez.
 
-   Aracıyı yeniden hizmet olarak çalışacak şekilde değiştirmek için bu aracı kullanabilir ve **hizmet**seçeneğini belirleyebilirsiniz.
+   Aracıyı yeniden hizmet olarak çalışacak şekilde değiştirmek için bu aracı kullanabilir ve **hizmet** seçeneğini belirleyebilirsiniz.
 
 6. Değişikliklerinizi uygulamak için **Ayarları Uygula**' yı seçin.
 

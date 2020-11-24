@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: Tanılama Veri Bağdaştırıcısı Oluşturma'
+description: Visual Studio kullanarak bir sınıf kitaplığı oluşturarak ve tanılama veri bağdaştırıcısı API 'Leri ekleyerek bir tanılama veri bağdaştırıcısı oluşturmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -8,16 +10,16 @@ ms.assetid: bd7ad36c-54cb-4d2a-9aea-9d10ad98d7ba
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: bd5d4d14267be51dfea20c43630ff9f31f6d13ac
-ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
+ms.openlocfilehash: 730a3e2618bd5f424d21eaf3eb4ef3621ec1838e
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91928625"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95439855"
 ---
 # <a name="how-to-create-a-diagnostic-data-adapter"></a>Nasıl yapılır: tanılama veri bağdaştırıcısı oluşturma
 
-Bir *Tanılama veri bağdaştırıcısı*oluşturmak Için, Visual Studio 'yu kullanarak bir sınıf kitaplığı oluşturun ve ardından Visual Studio Enterprise tarafından sunulan tanılama veri bağdaştırıcısı API 'lerini sınıf kitaplığınıza eklersiniz. Test çalıştırması sırasında oluşturulan olayları işlerken, bir akış veya bir dosya olarak istediğiniz tüm bilgileri Framework tarafından verilen bir dosya olarak gönderin <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionSink> . ' A gönderilen akışlar veya dosyalar, <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionSink> testiniz tamamlandığında test sonuçlarına ek olarak depolanır. Bu test sonuçlarından bir hata oluşturursanız veya kullandığınızda [!INCLUDE[mtrlong](../test/includes/mtrlong_md.md)] , dosyalar hataya da bağlanır.
+Bir *Tanılama veri bağdaştırıcısı* oluşturmak Için, Visual Studio 'yu kullanarak bir sınıf kitaplığı oluşturun ve ardından Visual Studio Enterprise tarafından sunulan tanılama veri bağdaştırıcısı API 'lerini sınıf kitaplığınıza eklersiniz. Test çalıştırması sırasında oluşturulan olayları işlerken, bir akış veya bir dosya olarak istediğiniz tüm bilgileri Framework tarafından verilen bir dosya olarak gönderin <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionSink> . ' A gönderilen akışlar veya dosyalar, <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionSink> testiniz tamamlandığında test sonuçlarına ek olarak depolanır. Bu test sonuçlarından bir hata oluşturursanız veya kullandığınızda [!INCLUDE[mtrlong](../test/includes/mtrlong_md.md)] , dosyalar hataya da bağlanır.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
@@ -32,7 +34,7 @@ Tanılama veri bağdaştırıcınızın testte o noktada görev gerçekleştireb
 
 Aşağıda, tanılama veri bağdaştırıcınızı oluştururken kullanabileceğiniz önemli olayların kısmi bir listesi verilmiştir. Tanılama veri bağdaştırıcısı olaylarının tamamı listesi için bkz <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents> . soyut sınıf.
 
-|Olay|Açıklama|
+|Olay|Description|
 |-|-----------------|
 |<xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.SessionStart>|Test çalıştıralım başlangıcı|
 |<xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.SessionEnd>|Test çalıştıralım bitişi|
@@ -52,21 +54,21 @@ Test ayarlarınızı oluştururken yapılandırdığınız bilgileri temel alan 
 
 1. Yeni bir **sınıf kitaplığı** projesi oluşturun.
 
-2. **Microsoft.VisualStudio.QualityTools.ExecutionCommon**derlemesini ekleyin.
+2. **Microsoft.VisualStudio.QualityTools.ExecutionCommon** derlemesini ekleyin.
 
    1. **Çözüm Gezgini**' de, **Başvurular** ' a sağ tıklayın ve **Başvuru Ekle** komutunu seçin.
 
-   2. **.Net** ' i seçin ve **Microsoft.VisualStudio.QualityTools.ExecutionCommon.dll**bulun.
+   2. **.Net** ' i seçin ve **Microsoft.VisualStudio.QualityTools.ExecutionCommon.dll** bulun.
 
-   3. **Tamam ' ı**seçin.
+   3. **Tamam ' ı** seçin.
 
-3. **Microsoft. VisualStudio. QualityTools. Common**derlemesini ekleyin.
+3. **Microsoft. VisualStudio. QualityTools. Common** derlemesini ekleyin.
 
    1. **Çözüm Gezgini**' de, **Başvurular** ' a sağ tıklayın ve **Başvuru Ekle** komutunu seçin.
 
-   2. **/.Net**' i seçin, **Microsoft.VisualStudio.QualityTools.Common.dll**bulun.
+   2. **/.Net**' i seçin, **Microsoft.VisualStudio.QualityTools.Common.dll** bulun.
 
-   3. **Tamam ' ı**seçin.
+   3. **Tamam ' ı** seçin.
 
 4. Aşağıdaki `using` yönergeleri sınıf dosyanıza ekleyin:
 
@@ -79,7 +81,7 @@ Test ayarlarınızı oluştururken yapılandırdığınız bilgileri temel alan 
    using System;
    ```
 
-5. Tanılama veri bağdaştırıcısı <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectorTypeUriAttribute> olarak tanımlamak için tanılama veri bağdaştırıcınız için sınıfına ekleyin; **Şirket**, **ürün**ve **sürümü** , tanılama veri bağdaştırıcınız için uygun bilgilerle değiştirin:
+5. Tanılama veri bağdaştırıcısı <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectorTypeUriAttribute> olarak tanımlamak için tanılama veri bağdaştırıcınız için sınıfına ekleyin; **Şirket**, **ürün** ve **sürümü** , tanılama veri bağdaştırıcınız için uygun bilgilerle değiştirin:
 
    ```csharp
    [DataCollectorTypeUri("datacollector://Company/Product/Version")]

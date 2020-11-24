@@ -1,5 +1,6 @@
 ---
 title: Yük testi için bir Web sitesinin gerçek dünya kullanımına öykünme
+description: Test yük testi yaptığınız bir Web sitesinin veya uygulamanın beklenen gerçek dünya kullanımını daha doğru tahmin etmek için yük modelleme seçeneklerini kullanın.
 ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: conceptual
@@ -10,12 +11,12 @@ ms.assetid: b7fae849-0538-40d1-ab35-2bb3a0fe4393
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: f4dbbc5ec2ead98f9b20cb137f9e15237c13cf80
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: ba5bba0b90acdfab932196ceda7dd8ad971efde1
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810317"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95441267"
 ---
 # <a name="test-mix-models-overview"></a>Test karışımı modellerine genel bakış
 
@@ -36,7 +37,7 @@ Yük testi senaryonuz için aşağıdaki test karışımı modeli seçeneklerind
 - **Kullanıcı adımına göre:** Yük testi sırasında, her Web performans testi veya birim testi, Kullanıcı başına saat başına belirtilen sayıda kez çalıştırılır. Sanal kullanıcıların testi yük testi boyunca belirli bir hızda çalıştırmasını istediğinizde, bu test karışımı modelini kullanın. Daha fazla bilgi için bkz. [hız testi karışımı](#PacingTestMix).
 
     > [!TIP]
-    > Ne zaman **yüzde test karışımı** seçtiğinizde ve **sanal kullanıcılara göre yüzdeyi**ne zaman seçersiniz? Bu iki seçenek arasındaki fark, Test karışımındaki bazı testlerin diğer testlerden çok daha uzun süreli olduğu durumlarda önemlidir. Bu durumda, büyük olasılıkla **sanal kullanıcılara göre yüzdeyi**seçmelisiniz. Bu seçim, çok fazla kullanıcının uzun süreli testler çalıştıracağına ilişkin olasılık artışının arttığı bir test çalıştırmasının önlenmesine yardımcı olur. Ancak, testlerin hepsi benzer süreler içeriyorsa, **yüzde test karışımını**daha güvenli bir şekilde seçebilirsiniz.
+    > Ne zaman **yüzde test karışımı** seçtiğinizde ve **sanal kullanıcılara göre yüzdeyi** ne zaman seçersiniz? Bu iki seçenek arasındaki fark, Test karışımındaki bazı testlerin diğer testlerden çok daha uzun süreli olduğu durumlarda önemlidir. Bu durumda, büyük olasılıkla **sanal kullanıcılara göre yüzdeyi** seçmelisiniz. Bu seçim, çok fazla kullanıcının uzun süreli testler çalıştıracağına ilişkin olasılık artışının arttığı bir test çalıştırmasının önlenmesine yardımcı olur. Ancak, testlerin hepsi benzer süreler içeriyorsa, **yüzde test karışımını** daha güvenli bir şekilde seçebilirsiniz.
 
 - **Sıralı sıraya göre:** Her sanal kullanıcı, Web performansını veya birim testlerini, testlerin senaryoda belirlenen sırada çalıştırır. Sanal Kullanıcı, yük testi tamamlanana kadar bu sırada testlerin ilerlemeye devam eder. Daha fazla bilgi için bkz. [sıralı sıra](#SequentialOrder).
 
@@ -74,11 +75,11 @@ Yük testi senaryosunda, **Adımlama Gecikmesine Dağıtım Uygula** özelliği 
 
 - **Doğru**: senaryo, **test karışımını düzenle** Iletişim kutusunda **saat başına Kullanıcı başına testler** sütunundaki değer tarafından belirtilen tipik istatistiksel dağıtım gecikmelerini uygular. Daha fazla bilgi için bkz. [test çalıştıran bir Sanal Kullanıcı olasılığını belirtmek için metin karışımı modellerini düzenleme](../test/edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test.md).
 
-   Örneğin, test kümesinin saat başına 2 Kullanıcı olarak ayarlanması için **test karışımını düzenle** Iletişim kutusunda **saat başına Kullanıcı başına** test olduğunu varsayalım. **Ilerleme Gecikmesine Dağıtım Uygula** özelliği **true**olarak ayarlanırsa, testler arasındaki bekleme süresine tipik istatistiksel bir dağıtım uygulanır. Sınamalar saat başına 2 test çalıştırmaya devam eder, ancak aralarında 30 dakika olması gerekmez. İlk test 4 dakika sonra ve ikinci test 45 dakika sonra çalışabilir.
+   Örneğin, test kümesinin saat başına 2 Kullanıcı olarak ayarlanması için **test karışımını düzenle** Iletişim kutusunda **saat başına Kullanıcı başına** test olduğunu varsayalım. **Ilerleme Gecikmesine Dağıtım Uygula** özelliği **true** olarak ayarlanırsa, testler arasındaki bekleme süresine tipik istatistiksel bir dağıtım uygulanır. Sınamalar saat başına 2 test çalıştırmaya devam eder, ancak aralarında 30 dakika olması gerekmez. İlk test 4 dakika sonra ve ikinci test 45 dakika sonra çalışabilir.
 
 - **Yanlış**: testler, **test karışımını düzenle** Iletişim kutusunda **saat başına Kullanıcı başına testler** sütunundaki değer için belirttiğiniz belirli hızda çalışır. Daha fazla bilgi için bkz. [test çalıştıran bir Sanal Kullanıcı olasılığını belirtmek için metin karışımı modellerini düzenleme](../test/edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test.md).
 
-   Örneğin, test kümesinin saat başına 2 Kullanıcı olarak ayarlanması için **test karışımını düzenle** Iletişim kutusunda **saat başına Kullanıcı başına** test olduğunu varsayalım. **Adımlama Gecikmesine Dağıtım Uygula** özelliği **yanlış**olarak ayarlanırsa, Testleriniz çalışırken temel olarak hiçbir zaman bir yöntem verirsiniz. Test her 30 dakikada bir çalışacaktır. Bu, saat başına 2 test yürütmenizi sağlar.
+   Örneğin, test kümesinin saat başına 2 Kullanıcı olarak ayarlanması için **test karışımını düzenle** Iletişim kutusunda **saat başına Kullanıcı başına** test olduğunu varsayalım. **Adımlama Gecikmesine Dağıtım Uygula** özelliği **yanlış** olarak ayarlanırsa, Testleriniz çalışırken temel olarak hiçbir zaman bir yöntem verirsiniz. Test her 30 dakikada bir çalışacaktır. Bu, saat başına 2 test yürütmenizi sağlar.
 
   Daha fazla bilgi için, bkz. [nasıl yapılır: Kullanıcı hız testi karışımı modeli kullanırken Adım Gecikmesine Dağıtım uygulama](../test/how-to-apply-distribution-to-pacing-delay-when-using-a-user-pace-test-mix-model.md).
 

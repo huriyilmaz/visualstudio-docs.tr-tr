@@ -1,7 +1,7 @@
 ---
 title: require-mssql
 description: devinit aracı-MSSQL gerektirir.
-ms.date: 08/28/2020
+ms.date: 11/20/2020
 ms.topic: reference
 author: andysterland
 ms.author: andster
@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 7d7a5e7d8ba78b98e05d1b9aff3145c3c34c6ca0
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: 95558da015462899d0388870fce95d19030fc291
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94672134"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442100"
 ---
 # <a name="require-mssql"></a>require-mssql
 
@@ -32,7 +32,7 @@ Hem hem de `input` `additionalOptions` özellikleri atlanırsa veya boşsa, ara�
 | [**girişinin**](#input)                              | dize | No       | Ayrıntılar için aşağıdaki [girişi](#input) inceleyin.                                                  |
 | [**additionalOptions**](#additional-options)     | dize | No       | Kullanılmadı. Ayrıntılar için aşağıdaki [ek seçeneklere](#additional-options) bakın.              |
 
-### <a name="input"></a>Girdi
+### <a name="input"></a>Giriş
 
 `input`Özelliği iki değerden birini içeren bir dize olabilir:
 
@@ -49,7 +49,7 @@ Kullanılmadı.
 
 Aracın varsayılan davranışı `require-mssql` SQL Server 'ı yüklemektir.
 
-### <a name="builtin-options"></a>Yerleşik Seçenekler
+### <a name="built-in-options"></a>Yerleşik Seçenekler
 
 `require-mssql`Araç, yükleyicinin gözetimsiz olarak çalıştırıladiğinden emin olmak için bir dizi yükleyici komut satırı bağımsız değişkeni ayarlar. Bu bağımsız değişkenler aşağıda listelenmiştir ve bunlar üzerindeki belgeler [SQL yüklemesi belgelerinde](/sql/database-engine/install-windows/install-sql-server-from-the-command-prompt?view=sql-server-ver15&preserve-view=true)bulunabilir.
 
@@ -75,7 +75,7 @@ Aracın varsayılan davranışı `require-mssql` SQL Server 'ı yüklemektir.
 | /IACCEPTSQLSERVERLICENSETERMS                                      |             |
 
 ## <a name="example-usage"></a>Örnek kullanım
-Kullanarak nasıl çalıştırılacağını gösteren bir örnek aşağıda verilmiştir `require-msssql` `.devinit.json` . 
+Kullanarak nasıl çalıştırılacağını gösteren bir örnek aşağıda verilmiştir `require-msssql` `.devinit.json` .
 
 #### <a name="devinitjson-that-will-install-mssql"></a>.devinit.js, MSSQL 'yi yükleyecek:
 ```json

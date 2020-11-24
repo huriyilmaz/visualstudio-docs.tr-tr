@@ -1,5 +1,6 @@
 ---
 title: İstek düzeyi eklentisi oluşturma (Web performans testleri)
+description: Tek bir istek üzerindeki Web performans testi eklentilerinin, Web performans testinizde ana bildirim deyimleri dışında kodu yeniden kullanmanıza nasıl olanak sağladığını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
@@ -10,12 +11,12 @@ ms.assetid: d0b5b23c-7e94-4637-be6c-2620a5442d46
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 5f136214b787820396fdbcff37f9f3b78574e9c8
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: fb0b5339507866b8e6c134db2951c5ae94f108b9
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810278"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95441071"
 ---
 # <a name="how-to-create-a-request-level-plug-in"></a>Nasıl yapılır: istek düzeyi eklentisi oluşturma
 
@@ -41,7 +42,7 @@ Temel sınıftan kendi sınıfınızı türeterek özelleştirilmiş bir Web per
 
 4. **.Net** sekmesini seçin, aşağı kaydırın, **Microsoft. VisualStudio. QualityTools. WebTestFramework** öğesini seçin ve ardından **Tamam** ' ı seçin.
 
-     **Microsoft. VisualStudio. QualityTools. WebTestFramework** başvurusu **Çözüm Gezgini**içindeki **başvuru** klasörüne eklenir.
+     **Microsoft. VisualStudio. QualityTools. WebTestFramework** başvurusu **Çözüm Gezgini** içindeki **başvuru** klasörüne eklenir.
 
 5. **Çözüm Gezgini**' de, Web performansı test isteği test eklentisini eklemek istediğiniz yük testini içeren Web performansının ve yük testi projesinin en üst düğümüne sağ tıklayın. **Başvuru Ekle**' yi seçin.
 
@@ -61,14 +62,14 @@ Temel sınıftan kendi sınıfınızı türeterek özelleştirilmiş bir Web per
 
      **Web test Isteği eklentisi Ekle** iletişim kutusu görüntülenir.
 
-12. **Eklenti seçin**altında yeni eklentiyi seçin.
+12. **Eklenti seçin** altında yeni eklentiyi seçin.
 
 13. **Seçili eklenti bölmesinin Özellikler** bölümünde, çalışma zamanında kullanılacak eklentinin başlangıç değerlerini ayarlayın.
 
     > [!NOTE]
     > Eklentilerinizi istediğiniz kadar çok özelliği kullanıma sunabilirsiniz. bunları ortak, ayarlanabilir ve tamsayı, Boole veya dize gibi bir temel tür yapmanız yeterlidir. Web performans testi eklentisi özelliklerini daha sonra Özellikler penceresi kullanarak da değiştirebilirsiniz.
 
-14. **Tamam ' ı**seçin.
+14. **Tamam ' ı** seçin.
 
      Eklenti, HTTP isteğinin bir alt klasörü olan **istek** eklentileri klasörüne eklenir.
 

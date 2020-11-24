@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: Bir Depodan Yük Testi Sonuçlarını Silme'
+description: Load Test Sonuçları deposundaki bilgileri aç ve Yönet Test Sonuçları iletişim kutusunu kullanarak nasıl kaldıracağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.assetid: c2afe36b-d061-4f0e-9580-c18569ec08f9
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: dd196076fb769f80c36ab8630eebf1e8a0f8b234
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9b838d79237fc54f6d44d5b8222489973dea0c6e
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85287785"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95440954"
 ---
 # <a name="how-to-delete-load-test-results-from-a-repository"></a>Nasıl yapılır: bir depodan yük testi sonuçlarını silme
 
@@ -38,9 +40,9 @@ Yük testi sonuçlarını, **yük test sonuçları aç ve Yönet** iletişim kut
 
 3. **Yük testi sonuçlarını bulmak için bir denetleyici adı girin**' de bir denetleyici seçin. **\<Local - No controller>** Yerel olarak depolanan sonuçlara erişmek için seçin.
 
-4. **Aşağıdaki yük testi için sonuçları göster**bölümünde, sonuçlarını görüntülemek istediğiniz yük testini seçin. **\<Show results for all tests>** Tüm testlerin tüm sonuçlarını görmek için seçin.
+4. **Aşağıdaki yük testi için sonuçları göster** bölümünde, sonuçlarını görüntülemek istediğiniz yük testini seçin. **\<Show results for all tests>** Tüm testlerin tüm sonuçlarını görmek için seçin.
 
-     Yük testi sonuçları kullanılabiliyorsa, bunlar **Yük testi sonuçları** listesinde görünürler. Sütunlar **saat**, **süre**, **Kullanıcı**, **sonuç**, **Test**ve **Açıklama**. **Test, testin adını içerir ve** **Açıklama** , test çalıştırılmadan önce eklenen isteğe bağlı açıklamayı içerir. **Açıklama** sütunu, bu test sonucu Için **analiz açıklamalarında** girilen kısa açıklamaları görüntüler.
+     Yük testi sonuçları kullanılabiliyorsa, bunlar **Yük testi sonuçları** listesinde görünürler. Sütunlar **saat**, **süre**, **Kullanıcı**, **sonuç**, **Test** ve **Açıklama**. **Test, testin adını içerir ve** **Açıklama** , test çalıştırılmadan önce eklenen isteğe bağlı açıklamayı içerir. **Açıklama** sütunu, bu test sonucu Için **analiz açıklamalarında** girilen kısa açıklamaları görüntüler.
 
 5. **Yük testi sonuçları** listesinde bir sonuç seçin. Birden fazla sonuç seçmek için **SHIFT** tuşunu, **CTRL** tuşunu veya her ikisini de kullanabilirsiniz.
 

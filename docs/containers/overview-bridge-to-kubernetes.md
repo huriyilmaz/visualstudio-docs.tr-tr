@@ -1,7 +1,7 @@
 ---
 title: Bridge to Kubernetes’in işleyiş biçimi
 ms.technology: vs-azure
-ms.date: 06/02/2020
+ms.date: 11/19/2020
 ms.topic: conceptual
 description: Geliştirme bilgisayarınızı Kubernetes kümenize bağlamak için Kubernetes 'e köprü kullanma işlemlerini açıklar
 keywords: Kubernetes, Docker, Kubernetes, Azure, kapsayıcılar için köprü oluşturma
@@ -9,12 +9,12 @@ monikerRange: '>=vs-2019'
 manager: jillfra
 author: ghogen
 ms.author: ghogen
-ms.openlocfilehash: afeb612e1d092ebc1f5c33394a62dd9cef6b6a1c
-ms.sourcegitcommit: 54ec951bcfa87fd80a42e3ab4539084634a5ceb4
+ms.openlocfilehash: d1a92433a90e6e6b7f71d0c7db6ced3a52c33315
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92116109"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95440616"
 ---
 # <a name="how-bridge-to-kubernetes-works"></a>Bridge to Kubernetes’in işleyiş biçimi
 
@@ -105,6 +105,37 @@ Kümenizin bağlantısını kestiğinizde, Kubernetes 'e olan köprü, tüm habe
 ## <a name="diagnostics-and-logging"></a>Tanılama ve günlüğe kaydetme
 
 Kümenize bağlanmak için Kubernetes Köprüsü kullanılırken, kümenizdeki tanılama günlükleri, *Kubernetes klasörüne olan köprüdeki* geliştirme bilgisayarınızın *geçici* dizinine kaydedilir.
+
+## <a name="rbac-authorization"></a>RBAC yetkilendirmesi
+
+Kubernetes, kullanıcılar ve gruplar için izinleri yönetmek üzere rol tabanlı Access Control (RBAC) sağlar. Daha fazla bilgi için bkz. [Kubernetes belgeleri](https://kubernetes.io/docs/reference/access-authn-authz/rbac/) , BIR YAML dosyası oluşturarak ve `kubectl` bunu kümeye uygulamak için kullanarak RBAC özellikli bir küme için izinleri ayarlamanıza olanak sağlar. 
+
+Küme izinlerini ayarlamak için, kendi ad alanınızı ve erişmesi gereken konuları (kullanıcılar ve gruplar) kullanarak aşağıdaki gibi *Permissions. yıml* gıbı bır YAML dosyası oluşturun veya değiştirin `<namespace>` .
+
+```yml
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: bridgetokubernetes-<namespace>
+  namespace: development
+subjects:
+  - kind: User
+    name: jane.w6wn8.k8s.ginger.eu-central-1.aws.gigantic.io
+    apiGroup: rbac.authorization.k8s.io
+  - kind: Group
+    name: dev-admin
+    apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: ClusterRole
+  name: admin
+  apiGroup: rbac.authorization.k8s.io
+```
+
+Şu komutu kullanarak izinleri uygulayın:
+
+```cmd
+kubectl -n <namespace> apply -f <yaml file name>
+```
 
 ## <a name="limitations"></a>Sınırlamalar
 

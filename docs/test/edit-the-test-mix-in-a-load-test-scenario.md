@@ -1,5 +1,7 @@
 ---
 title: Yük testi senaryosu için test karışımı
+description: Web performansı ve birim testlerinin seçiminin ve bu testlerin dağılımının birleşimi olan bir senaryonun test karışımını nasıl düzenleyeceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.assetid: 303e1d70-5d98-424a-b51e-e0898e16d3f8
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 4a52d660140416ce829493a733171cfcf64ebbe4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d6681b8aead05a180df04b1c3953002aa832a281
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75595936"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95441384"
 ---
 # <a name="edit-the-test-mix-to-specify-which-web-performance-unit-and-coded-ui-tests-to-include-in-a-load-test-scenario"></a>Yük testi senaryosuna hangi Web performansı, birim ve kodlanmış UI testlerinin ekleneceğini belirlemek için test karışımını düzenleyin
 
@@ -33,9 +35,9 @@ Karışıma testler ekledikten sonra bunları kaldırabilirsiniz. Ayrıca, Karı
 
 ## <a name="add-new-tests-to-a-test-mix-in-an-existing-scenario"></a>Mevcut bir senaryoda bir test karışımına yeni testler ekleme
 
-Yeni **Yük Testi Sihirbazı**kullanarak yeni bir senaryo oluşturduğunuzda, yeni senaryonun test karışımına eklemek için Web performansını ve birim testlerini belirtebilirsiniz.
+Yeni **Yük Testi Sihirbazı** kullanarak yeni bir senaryo oluşturduğunuzda, yeni senaryonun test karışımına eklemek için Web performansını ve birim testlerini belirtebilirsiniz.
 
-**Yük Testi Düzenleyicisi**kullanarak senaryonun metin karışımına daha fazla Web performansı ve birim testi ekleyebilirsiniz.
+**Yük Testi Düzenleyicisi** kullanarak senaryonun metin karışımına daha fazla Web performansı ve birim testi ekleyebilirsiniz.
 
 ![Var olan bir yük testine test ekleme](../test/media/ltest_addingtests.png)
 

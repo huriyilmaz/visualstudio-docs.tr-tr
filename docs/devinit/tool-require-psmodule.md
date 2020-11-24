@@ -1,7 +1,7 @@
 ---
 title: require-psmodule
 description: devinit aracı-psmodule gerektirir.
-ms.date: 08/28/2020
+ms.date: 11/20/2020
 ms.topic: reference
 author: andysterland
 ms.author: andster
@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 51d9353333fac6dcca0035bf7cc8dd722c32cb40
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: c8c87e6df0e7ea66c2413f85fa39f397f30d50a7
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94672120"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95440006"
 ---
 # <a name="require-psmodule"></a>require-psmodule
 
@@ -32,10 +32,10 @@ Hem hem de `input` `additionalOptions` özellikleri atlanırsa veya boşsa, ara�
 | Ad                                             | Tür   | Gerekli | Değer                                                                                   |
 |--------------------------------------------------|--------|----------|-----------------------------------------------------------------------------------------|
 | **açıklamaları**                                     | dize | No       | İsteğe bağlı Yorumlar özelliği. Kullanılmadı.                                                   |
-| [**girişinin**](#input)                              | string | Yes      | Yüklenecek paket (ler). Ayrıntılar için aşağıdaki [girişi](#input) inceleyin.                       |
+| [**girişinin**](#input)                              | string | Evet      | Yüklenecek paket (ler). Ayrıntılar için aşağıdaki [girişi](#input) inceleyin.                       |
 | [**additionalOptions**](#additional-options)     | dize | No       | Kullanılmadı. Ayrıntılar için aşağıdaki [ek seçeneklere](#additional-options) bakın.              |
 
-### <a name="input"></a>Girdi
+### <a name="input"></a>Giriş
 
 `input`Özelliği, `Name` yüklemek için PowerShell modülünün bir olmalıdır. Kullanılabilir PowerShell modüllerinin listesi [PowerShell Galerisi](https://www.powershellgallery.com/)arayarak bulunabilir.
 
@@ -47,7 +47,7 @@ Ek seçenekler doğrudan [Install-Module](/powershell/module/powershellget/insta
 
 Aracın varsayılan davranışı, `require-psmodule` gerekli olduğu gibi hatada yapılır `input` .
 
-## <a name="builtin-options"></a>Yerleşik Seçenekler
+### <a name="built-in-options"></a>Yerleşik Seçenekler
 
 `require-psmodule`Araç, gözetimsiz bir şekilde `Install-Module` çalışmasını sağlamak için bir dizi komut satırı bağımsız değişkeni ayarlar `Install-Module` . Bu bağımsız değişkenler aşağıda listelenmiştir ve bunlara ilişkin belgeler [Install-Module](/powershell/module/powershellget/install-module?view=powershell-7&preserve-view=true)içinde bulunabilir.
 
@@ -59,7 +59,7 @@ Aracın varsayılan davranışı, `require-psmodule` gerekli olduğu gibi hatada
 
 
 ## <a name="example-usage"></a>Örnek kullanım
-Kullanarak nasıl çalıştırılacağını gösteren örnekler aşağıda verilmiştir `require-psmodule` `.devinit.json` . 
+Kullanarak nasıl çalıştırılacağını gösteren örnekler aşağıda verilmiştir `require-psmodule` `.devinit.json` .
 
 #### <a name="devinitjson-that-will-install-the-powershellget-module"></a>PowerShellGet modülünü yükleyecek .devinit.js:
 ```json

@@ -1,5 +1,7 @@
 ---
 title: Yük testi senaryoları
+description: Karmaşık, gerçekçi iş yüklerinin benzetimini yapmak için testleri yapılandırmanıza imkan tanıyan yük testi senaryolarını nasıl düzenleyeceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 10/03/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.assetid: fec04f2e-bf38-4d44-b2ec-fa50f58fd0d9
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 8fa323d275628fe580763709884552754acfba81
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 95e7c612e7379c44c95f17e7b12c36f7a6f07d8c
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75593245"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442657"
 ---
 # <a name="edit-load-test-scenarios"></a>Yük testi senaryolarını Düzenle
 
@@ -27,13 +29,13 @@ Yük testi *senaryosu* , yük modelini, test karışımını, tarayıcı karış
 
 ## <a name="scenario-components"></a>Senaryo bileşenleri
 
-Bir yük testi oluşturduğunuzda belirttiğiniz ilk yapılandırma seçenekleri ve ayarları, **Yük Testi Düzenleyicisi**daha sonra değiştirilebilir. Ayrıca, bir yük testine yeni senaryolar, çalıştırma ayarları ve sayaç kümeleri ekleyebilirsiniz.
+Bir yük testi oluşturduğunuzda belirttiğiniz ilk yapılandırma seçenekleri ve ayarları, **Yük Testi Düzenleyicisi** daha sonra değiştirilebilir. Ayrıca, bir yük testine yeni senaryolar, çalıştırma ayarları ve sayaç kümeleri ekleyebilirsiniz.
 
 ![Yük testi senaryoları](../test/media/loadtesteditinscenarios.png)
 
 Senaryolar aşağıdaki bileşenleri içerir:
 
-|Süre|Tanım|
+|Terim|Tanım|
 |-|-|
 |Tarayıcı karışımı|Sanal kullanıcıların çeşitli web tarayıcıları aracılığıyla bir Web sitesine erişmesini taklit eder.|
 |Yük kalıbı|Yük testi sırasında etkin olan sanal kullanıcı sayısını ve yeni kullanıcıların başlatılma hızını belirtir. Örneğin: adım, sabit ve amaç tabanlı.|
@@ -41,7 +43,7 @@ Senaryolar aşağıdaki bileşenleri içerir:
 |Test karışımı|Test karışımı, senaryoyu oluşturan Web performansı ve birim testlerinin seçiminden ve bu testlerin dağıtımına göre belirlenir.|
 |Ağ karışımı|Sanal kullanıcıların bir Web sitesine çeşitli ağ bağlantılarıyla erişmesini taklit eder. Ağ karışımı, LAN, kablolu modem ve diğer seçenekleri içeren seçenekler sunar.|
 
-Senaryo, **Yük Testi Düzenleyicisi**kullanarak düzenleyebileceğiniz diğer birçok özelliğe sahiptir. Daha fazla bilgi için bkz. [Yük testi senaryo özellikleri](../test/load-test-scenario-properties.md).
+Senaryo, **Yük Testi Düzenleyicisi** kullanarak düzenleyebileceğiniz diğer birçok özelliğe sahiptir. Daha fazla bilgi için bkz. [Yük testi senaryo özellikleri](../test/load-test-scenario-properties.md).
 
 ## <a name="tasks"></a>Görevler
 

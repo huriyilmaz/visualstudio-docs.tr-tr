@@ -1,5 +1,7 @@
 ---
 title: Denetimlerinizin Kodlanmış UI Testlerini Etkinleştirme
+description: Denetiminizi daha kararlı hale getirmek için kodlanmış UI test çerçevesi desteğinin nasıl uygulanacağını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.author: mikejo
@@ -7,12 +9,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: d94c68a660201b0a8767b1405fcd4399cdf6d660
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7b36b7e2469aa5d4ef6e11cff2580e0fb0c8ff03
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85288695"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95441410"
 ---
 # <a name="enable-coded-ui-testing-of-your-controls"></a>Denetimlerinizin kodlanmış UI testlerini etkinleştirme
 
@@ -99,7 +101,7 @@ Kayıt ve kayıttan yürütme ve Özellik doğrulama için temel desteği uygula
     }
     ```
 
-1. Bir sınıf kitaplığı projesi oluşturarak denetiminiz için bir UI test uzantısı paketi oluşturun. Erişilebilirlik, Microsoft. VisualStudio. TestTools. Uıitedıe, Microsoft. VisualStudio. TestTools. UITest. Common ve Microsoft. VisualStudio. TestTools. Extension 'a başvurular ekleyin. Erişilebilirlik için **Embed Interop türlerini** **false**olarak değiştirin.
+1. Bir sınıf kitaplığı projesi oluşturarak denetiminiz için bir UI test uzantısı paketi oluşturun. Erişilebilirlik, Microsoft. VisualStudio. TestTools. Uıitedıe, Microsoft. VisualStudio. TestTools. UITest. Common ve Microsoft. VisualStudio. TestTools. Extension 'a başvurular ekleyin. Erişilebilirlik için **Embed Interop türlerini** **false** olarak değiştirin.
 
 1. Öğesinden türetilen bir özellik sağlayıcısı sınıfı ekleyin <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider> :
 
@@ -134,7 +136,7 @@ Kayıt ve kayıttan yürütme ve Özellik doğrulama için temel desteği uygula
 
 1. Kalan soyut yöntemleri ve özelliklerini geçersiz kılın <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITestExtensionPackage> .
 
-1. İkili dosyalarınızı derleyin ve *%ProgramFiles%\common\microsoft Shared\VSTT\10.0\UITestExtensionPackages*öğesine kopyalayın.
+1. İkili dosyalarınızı derleyin ve *%ProgramFiles%\common\microsoft Shared\VSTT\10.0\UITestExtensionPackages* öğesine kopyalayın.
 
 > [!NOTE]
 > Bu uzantı paketi "metin" türünde herhangi bir denetime uygulanır. Aynı türden birden çok denetimi test ediyorsanız, testleri kaydettiğinizde hangi uzantı paketlerinin dağıtıldığını yönetebilmeniz için bunları ayrı olarak test edin.
@@ -171,7 +173,7 @@ Visual Studio bir testi kaydeder, her fare ve klavye olayını yakalar. Ancak ba
 
 1. Eylem filtresini <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITestExtensionPackage.GetService%2A> uzantı paketinizin yöntemine ekleyin.
 
-1. İkili dosyalarınızı derleyin ve *%ProgramFiles%\Common Files\Microsoft Shared\VSTT\10.0\UITestExtensionPackages*öğesine kopyalayın.
+1. İkili dosyalarınızı derleyin ve *%ProgramFiles%\Common Files\Microsoft Shared\VSTT\10.0\UITestExtensionPackages* öğesine kopyalayın.
 
 > [!NOTE]
 > Eylem filtresi, erişilebilirlik uygulamasına veya özellik sağlayıcısına bağlı değildir.
@@ -182,7 +184,7 @@ Visual Studio bir testi kaydeder, her fare ve klavye olayını yakalar. Ancak ba
 
 ### <a name="to-debug-your-property-provider-or-action-filter"></a>Özellik sağlayıcınızdaki veya eylem filtreinizdeki hataları ayıklamak için
 
-1. Uzantı paketinizin hata ayıklama sürümünü oluşturun *. dll* ve *. pdb* dosyalarını *%ProgramFiles%\Common Files\Microsoft Shared\VSTT\10.0\UITestExtensionPackages*klasörüne kopyalayın.
+1. Uzantı paketinizin hata ayıklama sürümünü oluşturun *. dll* ve *. pdb* dosyalarını *%ProgramFiles%\Common Files\Microsoft Shared\VSTT\10.0\UITestExtensionPackages* klasörüne kopyalayın.
 
 2. Uygulamanızı çalıştırın (hata ayıklayıcıda değil).
 

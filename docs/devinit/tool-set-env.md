@@ -1,7 +1,7 @@
 ---
 title: set-env
 description: devinit aracı gerekli-set-env.
-ms.date: 08/28/2020
+ms.date: 11/20/2020
 ms.topic: reference
 author: andysterland
 ms.author: andster
@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: ce3876884061246d8ac1dbc1b211766903ea840a
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: 820cd87f26e4babc7a83d975c3fb480187af564f
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94671741"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442286"
 ---
 # <a name="set-env"></a>set-env
 
@@ -32,13 +32,13 @@ Bu araç .NET Core API 'sini kullanır `Environment.SetEnvironment` ve bu API il
 | [**girişinin**](#input)                          | dize | No       | Araca giriş. Ayrıntılar için aşağıdaki [girişi](#input) inceleyin.               |
 | [**additionalOptions**](#additional-options) | dize | No       | Kullanılmadı. Ayrıntılar için aşağıdaki [ek seçeneklere](#additional-options) bakın.  |
 
-### <a name="input"></a>Girdi
+### <a name="input"></a>Giriş
 
 `set-env`Araç, özellikte giriş olarak tek bir dize alır `input` . Dize, noktalı virgül (;)) dizesi olarak biçimlendirilmelidir özelliğin değerine göre ayrılmış anahtar değeri çiftleri (ad = değer) ve dört olası eylem `input` .
 
-| Eylem       | Girdi            | Açıklama                                                                                                                                                              | Örnek             |
+| Eylem       | Giriş            | Açıklama                                                                                                                                                              | Örnek             |
 |--------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|
-| **Tümünü Listele** | boş veya atlanmış | Tüm geçerli ortam değişkenlerini listeleyin.                                                                                                                              | `"input":""`        |
+| **Tümünü Listele** | boş veya atlanmış | Tüm geçerli ortam değişkenlerini listeleyin.                                                                                                                           | `"input":""`        |
 | **liste bir** | string           | Belirli bir ortam değişkeninin değerini ada göre listeleyin.                                                                                                               | `"input":"foo"`     |
 | **add**      | string           | Bir ortam değişkeninin değerini anahtar değer çifti olarak ayarlar. Henüz yoksa yeni bir ortam değişkeni ekler veya var olan bir ortam değişkeninin değerini ayarlar | `"input":"foo=bar"` |
 | **delete**   | string           | Boş bir değer dizesini geçirerek var olan bir ortam değişkenini siler.                                                                                            | `"input":"foo="`    |
@@ -49,12 +49,16 @@ Bir `input` dize `%userprofile%` , örneğin değer okuma olduğunda genişletil
 
 Kullanılmadı.
 
+### <a name="default-behavior"></a>Varsayılan davranış
+
+Aracın varsayılan davranışı, `set-env` tüm geçerli ortam değişkenlerini listeleridir.
+
 ## <a name="usage-in-a-codespace"></a>Codespace 'teki kullanım
 
 Codespace kullanıyorsanız, dosyadaki özelliği özelleştirerek codespace 'te kullanılan ortam değişkenlerini ayarlayabilirsiniz `remoteEnv` [`.devcontainer.json`](/visualstudio/codespaces/reference/configuring) .
 
 ## <a name="example-usage"></a>Örnek kullanım
-Kullanarak nasıl çalıştırılacağını gösteren örnekler aşağıda verilmiştir `set-env` `.devinit.json` . 
+Kullanarak nasıl çalıştırılacağını gösteren örnekler aşağıda verilmiştir `set-env` `.devinit.json` .
 
 #### <a name="devinitjson-that-will-set-an-environment-variable-foo-to-value-bar"></a>Üzerinde .devinit.js, bir ortam değişkeni ayarlanacak, `foo` değer `bar` :
 ```json

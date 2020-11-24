@@ -1,5 +1,7 @@
 ---
 title: SafeControls öğesi | Microsoft Docs
+description: Bir SharePoint sitesinin ASPX sayfasında erişim için güvenli olarak işaretlenmiş bir ASPX denetimleri veya Web bölümleri koleksiyonu tutan SafeControls öğesi hakkında bilgi alın.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e840f0040cf94fea408615525358580d207f07c0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c3423d1b6efd106ef7f947bd8573dcd1aa548a66
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547907"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95440681"
 ---
 # <a name="safecontrols-element"></a>SafeControls öğesi
   Herhangi bir kullanıcının SharePoint sitesindeki herhangi bir ASPX sayfasına erişmesi için güvenli olarak belirlenmiş bir ASPX denetimleri ve Web Bölümleri koleksiyonu.
@@ -55,10 +57,10 @@ ms.locfileid: "85547907"
 
 |Özellik|Değer|
 |-|-|
-|**Ad Alanı**|http: \/ \/ schemas.Microsoft.com/VisualStudio/<br>2010/SharePointTools/Sharepointprojectıtemmodel|
+|**Uzayına**|http: \/ \/ schemas.Microsoft.com/VisualStudio/<br>2010/SharePointTools/Sharepointprojectıtemmodel|
 |**Şema adı**|SharePoint proje öğesi şeması|
 |**Doğrulama dosyası**|Projectıtemmodelschema. xsd|
-|**Boş olabilir**|No|
+|**Boş olabilir**|Hayır|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [SharePoint proje öğesi şema başvurusu](../sharepoint/sharepoint-project-item-schema-reference.md)

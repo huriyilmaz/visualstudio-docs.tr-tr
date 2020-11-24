@@ -1,7 +1,7 @@
 ---
 title: dotnet-restore
 description: devinit aracı DotNet-restore.
-ms.date: 08/28/2020
+ms.date: 11/20/2020
 ms.topic: reference
 author: andysterland
 ms.author: andster
@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 51c6ed6576fefe3853bca7f4250c1884bd364f64
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: 647748acc3eb45e2eca6ab4ca1e48a8bda3a563b
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94671935"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95440397"
 ---
 # <a name="dotnet-restore"></a>dotnet-restore
 
@@ -32,7 +32,7 @@ Hem hem de `input` `additionalOptions` özellikleri atlanırsa veya boşsa, ara�
 | [**girişinin**](#input)                              | dize | No       | Geri yüklenecek proje/çözüm dosyasının yolu. Ayrıntılar için aşağıdaki [girişi](#input) inceleyin. |
 | [**additionalOptions**](#additional-options)     | dize | No       | Ayrıntılar için aşağıdaki [ek seçeneklere](#additional-options) bakın.                     |
 
-### <a name="input"></a>Girdi
+### <a name="input"></a>Giriş
 
 Geri yüklenecek proje/çözüm dosyasının yolu.
 
@@ -42,10 +42,10 @@ Ek seçenekler, dotnet restore komutuna olduğu gibi geçirilir.
 
 ### <a name="default-behavior"></a>Varsayılan davranış
 
-Aracın varsayılan davranışı `dotnet-restore` geçerli dizinde ' DotNet restore ' öğesini çalıştıralım.
+Aracın varsayılan davranışı `dotnet-restore` `dotnet restore` geçerli dizinde çalıştırılır.
 
 ## <a name="example-usage"></a>Örnek kullanım
-Kullanarak nasıl çalıştırılacağını gösteren bir örnek aşağıda verilmiştir `dotnet-restore` `.devinit.json` . 
+Kullanarak nasıl çalıştırılacağını gösteren bir örnek aşağıda verilmiştir `dotnet-restore` `.devinit.json` .
 
 #### <a name="devinitjson-that-will-restore-dependencies-and-tools-of-a-project"></a>.devinit.js, bir projenin bağımlılıklarını ve araçlarını geri yükler:
 ```json

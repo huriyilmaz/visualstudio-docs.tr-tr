@@ -1,5 +1,7 @@
 ---
 title: Yük Testi Sanal Kullanıcı etkinliğini çözümleme
+description: Sanal Kullanıcı etkinliği grafiğini görüntüleyen Ayrıntılar görünümü hakkında bilgi edinin. Yük testi sırasında tek tek sanal kullanıcıların ne yaptığını çözümleyin.
+ms.custom: SEO-VS-2020
 ms.date: 10/03/2016
 ms.topic: conceptual
 f1_keywords:
@@ -11,12 +13,12 @@ ms.assetid: 63f4bd42-3cfb-4eee-af68-e8334976539e
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 0289ff0d4a20eacc4f6801d9300d39df594bc79e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5c05a907bf75ffcdff5bb579ec2624e0dc8a7df9
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75591241"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95441904"
 ---
 # <a name="analyzing-load-test-virtual-user-activity-in-the-details-view-of-the-load-test-analyzer"></a>Yük Testi Çözümleyicisinin Ayrıntılar görünümündeki Yük Testi Sanal Kullanıcı etkinliğini çözümleme
 
@@ -26,16 +28,16 @@ ms.locfileid: "75591241"
 
 ![Sanal Kullanıcı etkinliği grafiği](../test/media/virtual_actchart.png)
 
-**Ayrıntılar** görünümü, tek tek sanal kullanıcıların yük testi sırasında ne yaptığını görsel olarak analiz etmek Için kullanılan **Sanal Kullanıcı etkinliği grafiğini**görüntüler. **Sanal Kullanıcı etkinliği grafiği** , Kullanıcı etkinliği düzenlerini, yük düzenlerini görmenizi, başarısız veya yavaş testlerin bağıntılı olduğunu ve diğer Sanal Kullanıcı etkinliğiyle istekleri görmenizi sağlar. **Sanal Kullanıcı etkinliği grafiği** , CPU kullanımında ani artışları, saniye başına isteklerin düşünü ve artışlar ve bırakılanlar sırasında hangi testlerin veya sayfaların çalıştığını belirlemenize de yardımcı olabilir.
+**Ayrıntılar** görünümü, tek tek sanal kullanıcıların yük testi sırasında ne yaptığını görsel olarak analiz etmek Için kullanılan **Sanal Kullanıcı etkinliği grafiğini** görüntüler. **Sanal Kullanıcı etkinliği grafiği** , Kullanıcı etkinliği düzenlerini, yük düzenlerini görmenizi, başarısız veya yavaş testlerin bağıntılı olduğunu ve diğer Sanal Kullanıcı etkinliğiyle istekleri görmenizi sağlar. **Sanal Kullanıcı etkinliği grafiği** , CPU kullanımında ani artışları, saniye başına isteklerin düşünü ve artışlar ve bırakılanlar sırasında hangi testlerin veya sayfaların çalıştığını belirlemenize de yardımcı olabilir.
 
 > [!NOTE]
-> **Sanal Kullanıcı etkinliği ayrıntıları grafiğini**kullanmak istediğiniz yük testini çalıştırmadan önce, yük performansı Testi Düzenleyicisi 'ni kullanarak, **Zamanlama Ayrıntıları Depolama** özelliğinin **allindividualdetails** seçeneğine ayarlandığını doğrulamanız gerekir.
+> **Sanal Kullanıcı etkinliği ayrıntıları grafiğini** kullanmak istediğiniz yük testini çalıştırmadan önce, yük performansı Testi Düzenleyicisi 'ni kullanarak, **Zamanlama Ayrıntıları Depolama** özelliğinin **allindividualdetails** seçeneğine ayarlandığını doğrulamanız gerekir.
 
 **Ayrıntılar gösterge bölmesi**
 
 ![Ayrıntılar gösterge bölmesi](../test/media/ltest_detailslegend.png)
 
-Ayrıntılar gösterge paneli **Sanal Kullanıcı etkinliği grafiğinde**görünür. Ayrıntılar gösterge bölmesi, birkaç farklı ölçüte göre testleri, sayfaları ve işlemleri filtrelemenizi sağlar. Örneğin, belirli testleri görünümden kaldırabilir veya tüm başarılı testleri kaldırabilir veya bazı hatalarda başarısız olan testleri kaldırabilirsiniz. Ayrıca, günlüğü olmayan tüm testleri de kaldırabilirsiniz.
+Ayrıntılar gösterge paneli **Sanal Kullanıcı etkinliği grafiğinde** görünür. Ayrıntılar gösterge bölmesi, birkaç farklı ölçüte göre testleri, sayfaları ve işlemleri filtrelemenizi sağlar. Örneğin, belirli testleri görünümden kaldırabilir veya tüm başarılı testleri kaldırabilir veya bazı hatalarda başarısız olan testleri kaldırabilirsiniz. Ayrıca, günlüğü olmayan tüm testleri de kaldırabilirsiniz.
 
 Başarısız olan testleri vurgulayabilirsiniz, bu, başarısız olan tüm testleri kırmızı renkte görüntüler. Ayrıca, test günlükleri olan testleri vurgulayabilirsiniz. Günlükleri olan testler yeşil renkte görünür.
 
@@ -55,8 +57,8 @@ Filtre sonuçları paneli **Sanal Kullanıcı etkinliği grafiği**'nde görün�
 
 |Görevler|İlişkili konular|
 |-|-|
-|**Yük testinizi çalıştırın:** Bir yük testi oluşturduktan ve Sanal Kullanıcı etkinliği verilerini toplamayı etkinleştirecek şekilde yapılandırdıktan sonra, **Sanal Kullanıcı etkinliği grafiğini**görüntülemek için testi tamamlanana kadar testi çalıştırmanız gerekir.||
-|**Sanal Kullanıcı etkinliği verilerini içeren yük testi sonuçlarını görüntüleyin:** Yük testiniz oluşturulduktan, yapılandırıldıktan ve çalışmayı tamamladıktan sonra, Sanal Kullanıcı **etkinlik grafiğini**kullanarak sanal kullanıcı etkinliği verilerini görüntüleyebilirsiniz.|-   [Yük testi sonuçlarını çözümle](../test/analyze-load-test-results-using-the-load-test-analyzer.md)<br />-   [Nasıl yapılır: yük testi sırasında sanal kullanıcıların ne yaptığını çözümleme](../test/how-to-analyze-virtual-user-activity-during-a-load-test.md)|
+|**Yük testinizi çalıştırın:** Bir yük testi oluşturduktan ve Sanal Kullanıcı etkinliği verilerini toplamayı etkinleştirecek şekilde yapılandırdıktan sonra, **Sanal Kullanıcı etkinliği grafiğini** görüntülemek için testi tamamlanana kadar testi çalıştırmanız gerekir.||
+|**Sanal Kullanıcı etkinliği verilerini içeren yük testi sonuçlarını görüntüleyin:** Yük testiniz oluşturulduktan, yapılandırıldıktan ve çalışmayı tamamladıktan sonra, Sanal Kullanıcı **etkinlik grafiğini** kullanarak sanal kullanıcı etkinliği verilerini görüntüleyebilirsiniz.|-   [Yük testi sonuçlarını çözümle](../test/analyze-load-test-results-using-the-load-test-analyzer.md)<br />-   [Nasıl yapılır: yük testi sırasında sanal kullanıcıların ne yaptığını çözümleme](../test/how-to-analyze-virtual-user-activity-during-a-load-test.md)|
 |**Yük testlerinde performans sorunlarını yalıtın:** Yük testinizde performans sorunlarını yalıtmaya yardımcı olması için **Sanal Kullanıcı etkinliği grafiğini** kullanabilirsiniz.|-   [İzlenecek yol: sorunları yalıtmak için Sanal Kullanıcı etkinliği grafiğini kullanma](../test/walkthrough-use-the-virtual-user-activity-chart-to-isolate-issues.md)|
 
 ## <a name="see-also"></a>Ayrıca bkz.

@@ -1,5 +1,7 @@
 ---
-title: Web performans testi eklentisi oluşturma
+title: Web başarım testi oluşturma Plug-In
+description: Web performans testi eklentilerinin, Web performans testinizde ana bildirim deyimleri dışında kodu yeniden kullanmanıza nasıl olanak sağladığını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 10/03/2016
 ms.topic: how-to
 f1_keywords:
@@ -11,12 +13,12 @@ ms.assetid: a612f2d2-9806-477d-a126-12842f07da6e
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 3c9651f4003647e18ba52e916aeb21e176274de5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5ddb46b3e83c86396dfea6fbcdb3584882591fce
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85287941"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442348"
 ---
 # <a name="how-to-create-a-web-performance-test-plug-in"></a>Nasıl yapılır: Web başarım testi eklentisi oluşturma
 
@@ -39,7 +41,7 @@ Web performans testleriniz üzerinde daha fazla denetim elde etmek için en az m
 
 3. Yeni bir **sınıf kitaplığı** projesi oluşturun.
 
-   Yeni sınıf kitaplığı projesi **Çözüm Gezgini** eklenir ve yeni sınıf **kod düzenleyicisinde**görüntülenir.
+   Yeni sınıf kitaplığı projesi **Çözüm Gezgini** eklenir ve yeni sınıf **kod düzenleyicisinde** görüntülenir.
 
 4. **Çözüm Gezgini**' de, yeni sınıf kitaplığındaki **Başvurular** klasörüne sağ tıklayın ve **Başvuru Ekle**' yi seçin.
 
@@ -47,17 +49,17 @@ Web performans testleriniz üzerinde daha fazla denetim elde etmek için en az m
 
 5. **.Net** sekmesini seçin, aşağı kaydırın ve **Microsoft. VisualStudio. QualityTools. WebTestFramework** öğesini seçin
 
-6. **Tamam ' ı**seçin.
+6. **Tamam ' ı** seçin.
 
-     **Microsoft. VisualStudio. QualityTools. WebTestFramework** başvurusu **Çözüm Gezgini**içindeki **başvuru** klasörüne eklenir.
+     **Microsoft. VisualStudio. QualityTools. WebTestFramework** başvurusu **Çözüm Gezgini** içindeki **başvuru** klasörüne eklenir.
 
 7. **Çözüm Gezgini**' de, Web performans testi eklentisini eklemek istediğiniz yük testini içeren Web performansı ve yük testi projesinin üst düğümüne sağ tıklayın ve **Başvuru Ekle**' yi seçin.
 
 8. **Başvuru Ekle iletişim kutusu görüntülenir**.
 
-9. **Projeler** sekmesini seçin ve **Sınıf Kitaplığı projesini**seçin.
+9. **Projeler** sekmesini seçin ve **Sınıf Kitaplığı projesini** seçin.
 
-10. **Tamam ' ı**seçin.
+10. **Tamam ' ı** seçin.
 
 11. **Kod düzenleyicisinde**, eklentinin kodunu yazın. İlk olarak, öğesinden türetilen yeni bir ortak sınıf oluşturun <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestPlugin> .
 
@@ -87,14 +89,14 @@ Web performans testleriniz üzerinde daha fazla denetim elde etmek için en az m
 
      **Web testi eklentisi Ekle** iletişim kutusu görüntülenir.
 
-16. **Eklenti seçin**altında Web başarım testi eklenti sınıfınızı seçin.
+16. **Eklenti seçin** altında Web başarım testi eklenti sınıfınızı seçin.
 
 17. **Seçili eklenti bölmesinin Özellikler** bölümünde, çalışma zamanında kullanılacak eklentinin başlangıç değerlerini ayarlayın.
 
     > [!NOTE]
     > Eklentilerinizi istediğiniz kadar çok özelliği kullanıma sunabilirsiniz. bunları ortak, ayarlanabilir ve tamsayı, Boole veya dize gibi bir temel tür yapmanız yeterlidir. Web performans testi eklentisi özelliklerini daha sonra Özellikler penceresi kullanarak da değiştirebilirsiniz.
 
-18. **Tamam ' ı**seçin.
+18. **Tamam ' ı** seçin.
 
      Eklenti, **Web testi eklentileri** klasörüne eklenir.
 

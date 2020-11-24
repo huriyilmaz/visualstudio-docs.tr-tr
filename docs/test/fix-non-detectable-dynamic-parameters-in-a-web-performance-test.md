@@ -1,5 +1,6 @@
 ---
 title: Algılanabilir olmayan dinamik parametreleri çözme (Web performans testi)
+description: Web performans testi Kaydedicisi ve kayıttan yürütme altyapısının en yaygın dinamik parametre türlerini otomatik olarak nasıl işlediğini öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
@@ -11,12 +12,12 @@ ms.assetid: 92dff25c-36ee-4135-acdd-315c4962fa11
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: cad94040997d8cead6be799bee6b2bc17aab699c
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 713d711847d798c617074d2d620e09f914c1a147
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810646"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442722"
 ---
 # <a name="fix-non-detectable-dynamic-parameters-in-a-web-performance-test"></a>Web performans testindeki dinamik parametreleri algılayamama sorununu çözme
 
@@ -36,11 +37,11 @@ Bazı dinamik parametre türleri algılanmaz. Saptanmamış dinamik bir parametr
 
 Hem algılanabilir hem de algılanamaz dinamik bir parametreyi göstermek için, birkaç denetim ve bazı özel kod içeren üç Web formu bulunan basit bir ASP.NET Web uygulaması oluşturacağız. Daha sonra dinamik parametrelerin nasıl yalıtılacağı ve bunların nasıl işleneceği öğreneceğiz.
 
-1. **DynamicParameterSample**adlı yeni bir ASP.NET projesi oluşturun.
+1. **DynamicParameterSample** adlı yeni bir ASP.NET projesi oluşturun.
 
      ![Boş bir ASP.NET Web uygulaması projesi oluşturma](../test/media/web_test_dynamicparameter_aspproject.png)
 
-2. *QueryString. aspx*adlı bir Web formu ekleyin.
+2. *QueryString. aspx* adlı bir Web formu ekleyin.
 
 3. Tasarım görünümü ' nde, bir HiddenField alanını sayfaya sürükleyin ve içinde (ID) özelliğinin değerini HiddenFieldSessionID olarak değiştirin.
 
@@ -75,13 +76,13 @@ Hem algılanabilir hem de algılanamaz dinamik bir parametreyi göstermek için,
     }
     ```
 
-6. *ASPQuery. aspx*adlı ikinci bir Web formu ekleyin.
+6. *ASPQuery. aspx* adlı ikinci bir Web formu ekleyin.
 
-7. Tasarım görünümü ' nde, sayfaya bir **etiket** sürükleyin ve **(ID)** özelliğinin değerini **IndexLabel**olarak değiştirin.
+7. Tasarım görünümü ' nde, sayfaya bir **etiket** sürükleyin ve **(ID)** özelliğinin değerini **IndexLabel** olarak değiştirin.
 
      ![Web formuna etiket ekleme](../test/media/web_test_dynamicparameter_label.png)
 
-8. Sayfaya bir **köprü** sürükleyin ve **metin** özelliği için değerini öğesini **geri**olarak değiştirin.
+8. Sayfaya bir **köprü** sürükleyin ve **metin** özelliği için değerini öğesini **geri** olarak değiştirin.
 
      ![Web formuna köprü ekleme](../test/media/web_test_dynamicparameter_hyperlink.png)
 
@@ -89,7 +90,7 @@ Hem algılanabilir hem de algılanamaz dinamik bir parametreyi göstermek için,
 
      ![NavigateURL özelliğini Düzenle](../test/media/web_test_dynamicparameter_hyperlink_navurl.png)
 
-     *QueryString. aspx*öğesini seçin.
+     *QueryString. aspx* öğesini seçin.
 
      ![QueryString. aspx olacak URL 'yi seçin](../test/media/web_test_dynamicparameter_hyperlink_navurl2.png)
 
@@ -102,9 +103,9 @@ Hem algılanabilir hem de algılanamaz dinamik bir parametreyi göstermek için,
             }
     ```
 
-11. *JScriptQuery. aspx*adlı üçüncü bir Web formu ekleyin.
+11. *JScriptQuery. aspx* adlı üçüncü bir Web formu ekleyin.
 
-     İkinci sayfada olduğu gibi, bir **etiketi** formun üzerine sürükleyin, **(ID)** özelliğini **IndexLabel** olarak ayarlayıp form üzerine bir **köprü** sürükleyin, **Text** özelliğini **Back**ve **NavigationURL** özelliği de **QueryString. aspx**olarak ayarlar.
+     İkinci sayfada olduğu gibi, bir **etiketi** formun üzerine sürükleyin, **(ID)** özelliğini **IndexLabel** olarak ayarlayıp form üzerine bir **köprü** sürükleyin, **Text** özelliğini **Back** ve **NavigationURL** özelliği de **QueryString. aspx** olarak ayarlar.
 
      ![Üçüncü Web formunu ekleme ve yapılandırma](../test/media/web_test_dynamicparameter_addwebform3.png)
 
@@ -123,7 +124,7 @@ Hem algılanabilir hem de algılanamaz dinamik bir parametreyi göstermek için,
 
      ![QueryString. aspx üzerinde başlangıç sayfasını ayarla](../test/media/web_test_dynamicparameter_setstartpage.png)
 
-15. **Ctrl** + Tarayıcıda Web uygulamasını çalıştırmak için CTRL**F5** tuşuna basın. URL'yi kopyalayın. Testinizi kaydettiğinizde buna ihtiyaç duyarsınız.
+15. **Ctrl** + Tarayıcıda Web uygulamasını çalıştırmak için CTRL **F5** tuşuna basın. URL'yi kopyalayın. Testinizi kaydettiğinizde buna ihtiyaç duyarsınız.
 
 16. Her iki bağlantıyı da deneyin. Her biri "başarılı" iletisini görüntülemelidir. Dinamik QueryString parametresi bulundu. "
 
@@ -159,11 +160,11 @@ Hem algılanabilir hem de algılanamaz dinamik bir parametreyi göstermek için,
 
 7. ASPQuery sayfasındaki CustomQueryString için dinamik parametre otomatik olarak algılanır. Ancak, JScriptQuery sayfasındaki CustomQueryString için dinamik parametre algılanmaz.
 
-     *QueryString. aspx*öğesine bir ayıklama kuralı eklemek için **Tamam** ' ı seçerek ASPQuery sayfasına bağlama yapın.
+     *QueryString. aspx* öğesine bir ayıklama kuralı eklemek için **Tamam** ' ı seçerek ASPQuery sayfasına bağlama yapın.
 
      ![Algılanan dinamik parametreyi yükselt](../test/media/web_test_dynamicparameter_promotedialog.png)
 
-     Ayıklama kuralı, ilk *QueryString. aspx*isteğine eklenir.
+     Ayıklama kuralı, ilk *QueryString. aspx* isteğine eklenir.
 
      ![Ayıklama kuralı isteğe eklendi](../test/media/web_test_dynamicparameter_autoextractionrule.png)
 

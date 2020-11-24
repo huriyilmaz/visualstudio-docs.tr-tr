@@ -1,5 +1,7 @@
 ---
 title: ProjectItemFolder öğesi | Microsoft Docs
+description: SharePoint proje öğesi XML şema başvurusunda eşlenmiş bir klasörü temsil eden ProjectItemFolder öğesi hakkında başvuru bilgileri alın.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 38f8f70cc6480554441809e33c4083735600fbbb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 99a27f8e255aa17e8b9fa604b504109976c5d36a
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85539821"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95440798"
 ---
 # <a name="projectitemfolder-element"></a>ProjectItemFolder öğesi
   Eşlenmiş bir klasörü temsil eder.
@@ -58,10 +60,10 @@ ms.locfileid: "85539821"
 
 |Özellik|Değer|
 |-|-|
-|**Ad Alanı**|http: \/ \/ schemas.Microsoft.com/VisualStudio/2010/<br>SharePointTools/Sharepointprojectıtemmodel|
+|**Uzayına**|http: \/ \/ schemas.Microsoft.com/VisualStudio/2010/<br>SharePointTools/Sharepointprojectıtemmodel|
 |**Şema adı**|SharePoint proje öğesi şeması|
 |**Doğrulama dosyası**|Projectıtemmodelschema. xsd|
-|**Boş olabilir**|No|
+|**Boş olabilir**|Hayır|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [SharePoint proje öğesi şema başvurusu](../sharepoint/sharepoint-project-item-schema-reference.md)

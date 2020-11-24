@@ -1,5 +1,7 @@
 ---
 title: Yük Testi Çalıştırma Ayarlarını Yapılandırma
+description: Yük testinin çalışma biçimini etkileyen özellikler olan çalıştırma ayarları hakkında bilgi edinin. Çalışma ayarları Özellikler penceresi kategorilerine göre düzenlenir.
+ms.custom: SEO-VS-2020
 ms.date: 10/03/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -8,12 +10,12 @@ ms.assetid: 0c86918b-cd63-4468-8f49-6d547a1276dc
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: a485b3648f69276c0d1cc472dda70524a00d9c1c
-ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
+ms.openlocfilehash: 24f267e32468958171266f0e8aaf45c69b2c373a
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92099420"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95441626"
 ---
 # <a name="configure-load-test-run-settings"></a>Yük testi çalıştırma ayarlarını yapılandır
 
@@ -23,7 +25,7 @@ ms.locfileid: "92099420"
 
 Yük testinde birden fazla çalışma ayarınız olabilir, ancak çalıştırma ayarlarından yalnızca biri etkin olabilir. Diğer çalışma ayarları, sonraki test çalıştırmaları için kullanılacak alternatif bir ayar seçmek için hızlı bir yol sağlar.
 
-**Yeni Yük Testi Sihirbazı**kullanarak bir yük testi oluşturduğunuzda ilk çalıştırma ayarı oluşturulur.
+**Yeni Yük Testi Sihirbazı** kullanarak bir yük testi oluşturduğunuzda ilk çalıştırma ayarı oluşturulur.
 
 ![Yük testi çalıştırma ayarları](../test/media/loadtestrunsettings.png)
 
@@ -31,7 +33,7 @@ Yük testinde birden fazla çalışma ayarınız olabilir, ancak çalıştırma 
 
 |Görevler|İlişkili Konular|
 |-|-|
-|**Yük testinize daha fazla çalışma ayarı ekleyin:** **Yeni Yük Testi Sihirbazı**çalıştırdığınızda oluşturulan çalıştırma ayarına ek olarak, testi farklı koşullarda çalıştırabilmeniz için yük testinize daha fazla çalışma ayarları ekleyebilirsiniz.|-   [Nasıl yapılır: yük testine ek çalışma ayarları ekleme](../test/how-to-add-additional-run-settings-to-a-load-test.md)|
+|**Yük testinize daha fazla çalışma ayarı ekleyin:** **Yeni Yük Testi Sihirbazı** çalıştırdığınızda oluşturulan çalıştırma ayarına ek olarak, testi farklı koşullarda çalıştırabilmeniz için yük testinize daha fazla çalışma ayarları ekleyebilirsiniz.|-   [Nasıl yapılır: yük testine ek çalışma ayarları ekleme](../test/how-to-add-additional-run-settings-to-a-load-test.md)|
 |**Yük testiyle birlikte kullanılacak etkin çalıştırma ayarını belirtin:** Yük Testi Düzenleyicisi kullanarak, yük testinizdeki kullanmak istediğiniz çalıştırma ayarını seçebilirsiniz. Etkin çalıştırma ayarı "[etkin]" son eki tarafından tanımlanır.|-   [Nasıl yapılır: bir yük testi için etkin çalışma ayarını seçme](../test/how-to-select-the-active-run-setting-for-a-load-test.md)|
 |**Çalışma ayarı özelliklerini Düzenle:** Farklı Çalıştır seçeneklerini (daha fazla bkz. daha fazla bilgi), test süresini, ısınma süresini, en fazla hata ayrıntısı sayısını belirleme, örnekleme hızı, bağlantı modeli (yalnızca Web performans testleri), sonuç depolama türü, doğrulama düzeyi ve SQL izleme gibi işlemler için çalışma ayarı özelliklerini düzenleyebilirsiniz. Çalışma ayarları, yük testinizin hedeflerini yansıtmalıdır.|-   [Yük testi çalıştırma ayarları özellikleri](../test/load-test-run-settings-properties.md)<br />-   [Çalışma ayarı özelliklerini değiştirme](../test/load-test-run-settings-properties.md#change-run-setting-properties)|
 |**Yük testi çalıştırma ayarlarında test yineleme sayısını belirtin:** **Test yinelemeleri** özelliğini yapılandırarak yük testlerinizin tüm senaryolarında Web performansının ve birim testlerinin tümünün kaç kez çalıştırılacağını belirtebilirsiniz.|-   [Nasıl yapılır: bir çalışma ayarında test yineleme sayısını belirtme](../test/how-to-specify-the-number-of-test-iterations-in-a-load-test.md)|

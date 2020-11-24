@@ -1,5 +1,7 @@
 ---
 title: Test ayarlarını kullanarak ağ öykünmesini yapılandırma
+description: Visual Studio 'daki çeşitli ağ ortamları altında uygulamanızı test etmek için tanılama veri bağdaştırıcısını nasıl yapılandıracağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 10/03/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -8,12 +10,12 @@ ms.assetid: ff275cfb-5df9-4710-9a91-9caabaaad34f
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 27de590cc40808eb3bebf18857c0ba4b254c39d1
-ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
+ms.openlocfilehash: 98ee28b51445af4b81422460ecb1450b2d383407
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91928664"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95440173"
 ---
 # <a name="how-to-configure-network-emulation-using-test-settings-in-visual-studio"></a>Nasıl yapılır: Visual Studio 'da test ayarlarını kullanarak ağ öykünmesini yapılandırma
 

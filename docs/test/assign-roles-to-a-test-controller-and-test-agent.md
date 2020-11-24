@@ -1,5 +1,6 @@
 ---
 title: Test denetleyicisi ve test aracısı rolleri
+description: Visual Studio kullanarak çeşitli makinelerde test dağıtmak için test denetleyicisi ve test Aracısı kullanan bir test ayarı oluşturmayı ve yapılandırmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 10/20/2016
 ms.topic: conceptual
@@ -13,12 +14,12 @@ ms.assetid: 57ed43ae-4e67-4139-8aec-3e9fceb0a745
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: c7f4360772f3962ff60517071dcae4318dc71e56
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: c059510dc39472d5c981f93e4d7259545b809d38
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809308"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442449"
 ---
 # <a name="assign-roles-to-a-test-controller-and-test-agent"></a>Bir test denetleyicisine ve test aracısına roller atama
 
@@ -40,11 +41,11 @@ Bu makalede, Visual Studio kullanarak çeşitli makinelerde test dağıtmak içi
 
 2. **Yüklü şablonlar** bölmesinde, **Test ayarları**' nı seçin.
 
-3. **Ad** kutusuna **TestSettingDistributedTestWalkthrough**yazın.
+3. **Ad** kutusuna **TestSettingDistributedTestWalkthrough** yazın.
 
 4. **Ekle**' yi seçin.
 
-     Yeni test *TestSettingDistributedTestWalkthrough. testsettings* dosyası **Çözüm öğeleri** klasörü altında **Çözüm Gezgini**görüntülenir.
+     Yeni test *TestSettingDistributedTestWalkthrough. testsettings* dosyası **Çözüm öğeleri** klasörü altında **Çözüm Gezgini** görüntülenir.
 
      **Test ayarları** iletişim kutusu görüntülenir. **Genel** sayfa seçilidir.
 
@@ -52,13 +53,13 @@ Bu makalede, Visual Studio kullanarak çeşitli makinelerde test dağıtmak içi
 
 5. **Ad**' ın altında, test ayarlarının adını yazın.
 
-6. **Açıklama**' nın altında, **Dağıtılmış test ayarları**yazın.
+6. **Açıklama**' nın altında, **Dağıtılmış test ayarları** yazın.
 
 7. **Varsayılan adlandırma şemasını** seçili bırakın.
 
 ## <a name="to-assign-roles-to-a-test-controller-and-test-agents"></a>Bir test denetleyicisine ve Test aracılarına roller atamak için
 
-1. **Rolleri**seçin.
+1. **Rolleri** seçin.
 
      **Roller** sayfası görüntülenir.
 
@@ -69,19 +70,19 @@ Bu makalede, Visual Studio kullanarak çeşitli makinelerde test dağıtmak içi
     > [!NOTE]
     > İlk kez bir denetleyici ekliyorsanız, açılan listede hiçbir denetleyici listelenmez. Liste, diğer test ayarlarında belirttiğiniz önceki denetleyiciler tarafından doldurulur.
 
-4. **Roller**altında **Ekle**' yi seçin.
+4. **Roller** altında **Ekle**' yi seçin.
 
-5. **Ad** sütununun altındaki vurgulanmış satıra **Dağıtılmış test**yazın.
+5. **Ad** sütununun altındaki vurgulanmış satıra **Dağıtılmış test** yazın.
 
 ## <a name="to-assign-a-diagnostic-and-data-adapter-to-your-test-setting"></a>Test ayarınıza bir tanılama ve veri bağdaştırıcısı atamak için
 
-1. **Veri ve tanılama**seçeneklerini belirleyin.
+1. **Veri ve tanılama** seçeneklerini belirleyin.
 
      **Veri ve tanılama** sayfası görüntülenir.
 
-2. **Rol**altında, **Dağıtılmış test** rolünün seçili olduğunu doğrulayın.
+2. **Rol** altında, **Dağıtılmış test** rolünün seçili olduğunu doğrulayın.
 
-3. **Rol Seç Için veri ve tanılama**altında **IntelliTrace** ve **sistem bilgi** bağdaştırıcılarını seçin.
+3. **Rol Seç Için veri ve tanılama** altında **IntelliTrace** ve **sistem bilgi** bağdaştırıcılarını seçin.
 
      Bir test ayarında kullanabileceğiniz bu bağdaştırıcılar ve diğer bağdaştırıcılar hakkında daha fazla bilgi için bkz. [birim testlerini yapılandırma](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md).
 

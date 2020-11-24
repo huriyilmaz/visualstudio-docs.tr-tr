@@ -1,7 +1,7 @@
 ---
 title: windowsfeature-list
 description: devinit Tool WindowsFeature-List.
-ms.date: 08/28/2020
+ms.date: 11/20/2020
 ms.topic: reference
 author: andysterland
 ms.author: andster
@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: b521009affbc1db81676481e33640a69e619aaf3
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: 07b92e8783393fa19e5c09344a396a6c5c4fc011
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94671714"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442128"
 ---
 # <a name="windowsfeature-list"></a>windowsfeature-list
 
@@ -28,7 +28,7 @@ ms.locfileid: "94671714"
 | [**girişinin**](#input)                              | dize | No       | Kullanılmadı. LIP.                         |
 | [**additionalOptions**](#additional-options)     | dize | No       | Kullanılmadı. LIP.                         |
 
-### <a name="input"></a>Girdi
+### <a name="input"></a>Giriş
 
 Kullanılmadı. LIP.
 
@@ -41,7 +41,7 @@ Kullanılmadı. LIP.
 Aracın varsayılan davranışı, `windowsfeature-list` tüm Windows özelliklerinin etkinleştirme/devre dışı bırakma durumunu Listeleyeceği.
 
 ## <a name="example-usage"></a>Örnek kullanım
-Kullanarak nasıl çalıştırılacağını gösteren bir örnek aşağıda verilmiştir `windowsfeature-list` `.devinit.json` . 
+Kullanarak nasıl çalıştırılacağını gösteren bir örnek aşağıda verilmiştir `windowsfeature-list` `.devinit.json` .
 
 #### <a name="devinitjson-that-will-list-the-state-of-all-windows-features"></a>.devinit.js, tüm Windows özelliklerinin durumunu listeler:
 ```json

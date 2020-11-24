@@ -1,5 +1,7 @@
 ---
 title: Yük testi için bir çalıştırma ayarı seçin
+description: Yük testi, yük testinin çalışma biçimini etkileyen özellikler olan çalıştırma ayarları ' nı içerebilir. Etkin çalışma ayarını nasıl seçeceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -8,16 +10,16 @@ ms.assetid: ed6ff546-acfa-4dd8-b3a2-6e7455930ca4
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 8400c5afcb81215078617cca00cef9aa8ce018d6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 87a67cb90ed48993e75dc248f23d10e982c64c43
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85287551"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95439868"
 ---
 # <a name="how-to-select-the-active-run-setting-for-a-load-test"></a>Nasıl yapılır: bir yük testi için etkin çalışma ayarını seçme
 
-**Yeni Yük Testi Sihirbazı**yük testinizi oluşturduktan sonra, test ihtiyaçlarını ve hedeflerinizi karşılamak üzere senaryolar özelliklerini değiştirmek için **Yük Testi Düzenleyicisi** kullanabilirsiniz.
+**Yeni Yük Testi Sihirbazı** yük testinizi oluşturduktan sonra, test ihtiyaçlarını ve hedeflerinizi karşılamak üzere senaryolar özelliklerini değiştirmek için **Yük Testi Düzenleyicisi** kullanabilirsiniz.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
@@ -38,7 +40,7 @@ Yük testiniz **çalışma ayarları** klasörü altında yalnızca bir çalış
 
 3. Etkin düğüm olmasını istediğiniz çalışma ayarları düğümüne sağ tıklayın ve sonra **etkin olarak ayarla**' yı seçin.
 
-     **Yük testi edito**r 'de, etkilenen çalışma ayarı düğümü "[etkin]" sonekiyle güncellenir.
+     **Yük testi edito** r 'de, etkilenen çalışma ayarı düğümü "[etkin]" sonekiyle güncellenir.
 
      Seçilen çalıştırma ayarı etkin duruma gelir ve etkin olacak farklı bir çalışma ayarı seçene kadar etkin kalır.
 

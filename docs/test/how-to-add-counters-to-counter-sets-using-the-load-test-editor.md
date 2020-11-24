@@ -1,5 +1,7 @@
 ---
 title: Yük testi için sayaç kümelerine sayaç ekleme
+description: Yük Testi Sihirbazı bir yük testi oluşturduğunuzda, bir ilk sayaç kümesi eklersiniz. Yük Testi Düzenleyicisi kullanarak sayaçların nasıl ekleneceğini öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,23 +12,23 @@ ms.assetid: e17d0e71-f982-4fc1-a2df-a1065d37473d
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 754c88bd6dbe76736148718d2f1ad32888623c34
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6aabd5bc7293a73ec0fa1a304262c24776a9e38f
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85288383"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442579"
 ---
 # <a name="how-to-add-counters-to-counter-sets-using-the-load-test-editor"></a>Nasıl yapılır: Yük Testi Düzenleyicisi kullanarak sayaç kümelerine sayaç ekleme
 
-**Yük Testi Sihirbazı**bir yük testi oluşturduğunuzda, bir ilk sayaç kümesi eklersiniz. Bunlar, yük testiniz için önceden tanımlanmış sayaç kümeleri kümesi sunar. Daha fazla bilgi için bkz. [bir yük testinde bilgisayarlar için sayaç kümelerini ve eşik kurallarını belirtme](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md).
+**Yük Testi Sihirbazı** bir yük testi oluşturduğunuzda, bir ilk sayaç kümesi eklersiniz. Bunlar, yük testiniz için önceden tanımlanmış sayaç kümeleri kümesi sunar. Daha fazla bilgi için bkz. [bir yük testinde bilgisayarlar için sayaç kümelerini ve eşik kurallarını belirtme](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md).
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 > [!NOTE]
 > Yük testleriniz uzak makineler arasında dağıtılmışsa, denetleyici ve aracı sayaçları denetleyici ve aracı sayaç kümelerine eşlenir. Yük testinizde uzak makinelerin nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [Test denetleyicileri ve test aracıları](configure-test-agents-and-controllers-for-load-tests.md).
 
-Sayaçlarınızı **Yük Testi Düzenleyicisi**yönetirsiniz. Teste zaten eklenmiş olan sayaç kümeleri, yük testinin **sayaç kümeleri** düğümünde görünür. Yük testi oluşturduktan sonra, mevcut sayaç kümelerine yeni sayaçlar ekleyebilirsiniz.
+Sayaçlarınızı **Yük Testi Düzenleyicisi** yönetirsiniz. Teste zaten eklenmiş olan sayaç kümeleri, yük testinin **sayaç kümeleri** düğümünde görünür. Yük testi oluşturduktan sonra, mevcut sayaç kümelerine yeni sayaçlar ekleyebilirsiniz.
 
 ## <a name="to-add-counters-to-a-counter-set"></a>Sayaç kümesine sayaç eklemek için
 
@@ -57,7 +59,7 @@ Sayaçlarınızı **Yük Testi Düzenleyicisi**yönetirsiniz. Teste zaten eklenm
 
      Tüm kullanılabilir sayaçları seçmek için **Tüm sayaçlar** radyo düğmesini seçin.
 
-7. **Tamam ' ı**seçin.
+7. **Tamam ' ı** seçin.
 
     > [!NOTE]
     > Ayrıca, var olan bir sayacı veya sayaç kategorisini seçip Kopyala ' yı seçip farklı bir sayaç kümesi düğümüne yapıştırarak sayaç kümesine sayaçlar eklemek mümkündür. Kopyalanmış, ancak gerekli olmayan ek sayaçlar silinebilir.

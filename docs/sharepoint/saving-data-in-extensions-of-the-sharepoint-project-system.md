@@ -1,6 +1,8 @@
 ---
 title: SharePoint proje sisteminin uzantılarında veri kaydetme | Microsoft Docs
 titleSuffix: ''
+description: Uzantı içeren bir SharePoint projesi kapatıldıktan sonra devam eden dize verilerini kaydetmeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 30142b9aaec3df7ce0d43845e369eb538533de62
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 1e3c05b9ad570febcfc28fec367a8d180dd2b222
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91583872"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95440655"
 ---
 # <a name="save-data-in-extensions-of-the-sharepoint-project-system"></a>SharePoint proje sisteminin uzantılarında veri kaydetme
   SharePoint proje sistemini genişlettiğinizde, bir SharePoint projesi kapatıldıktan sonra devam eden dize verilerini kaydedebilirsiniz. Veriler genellikle belirli bir proje öğesiyle veya projenin kendisiyle ilişkilendirilir.

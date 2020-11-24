@@ -1,5 +1,7 @@
 ---
 title: Birim testi projesi oluşturma
+description: Birim testi projesi oluşturmayı öğrenin. Test projesi üretim koduyla aynı çözümde olabilir veya ayrı bir çözümde olabilir.
+ms.custom: SEO-VS-2020
 ms.date: 01/29/2019
 ms.topic: how-to
 ms.author: mikejo
@@ -7,12 +9,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: ffa19fb9dc49d6286ef3f54c51d89043445f18ba
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f0d438c05d3c9608c11903c02119d7c3e267a48b
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85288721"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95441852"
 ---
 # <a name="create-a-unit-test-project"></a>Birim testi projesi oluşturma
 
@@ -23,7 +25,7 @@ Birim testleri genellikle test altındaki kodun yapısını yansıtır. Örneği
 
 ## <a name="to-create-a-unit-test-project"></a>Birim testi projesi oluşturmak için
 
-1. **Dosya** menüsünde **Yeni**  >  **Proje**' yi seçin veya **CTRL** + **SHIFT** + **N**tuşuna basın.
+1. **Dosya** menüsünde **Yeni**  >  **Proje**' yi seçin veya **CTRL** + **SHIFT** + **N** tuşuna basın.
 
 ::: moniker range="vs-2017"
 
@@ -37,7 +39,7 @@ Birim testleri genellikle test altındaki kodun yapısını yansıtır. Örneği
 
 ::: moniker range=">=vs-2019"
 
-2. **Yeni proje oluştur** sayfasında, arama kutusuna **birim testi** yazın. Kullanmak istediğiniz test çerçevesinin proje şablonunu seçin, örneğin **MSTest test projesi** veya **NUnit test projesi**ve sonra **İleri**' yi seçin.
+2. **Yeni proje oluştur** sayfasında, arama kutusuna **birim testi** yazın. Kullanmak istediğiniz test çerçevesinin proje şablonunu seçin, örneğin **MSTest test projesi** veya **NUnit test projesi** ve sonra **İleri**' yi seçin.
 
    ![Visual Studio 2019 ' de test projesi şablonları](media/vs-2019/test-project-templates.png)
 
@@ -51,7 +53,7 @@ Birim testleri genellikle test altındaki kodun yapısını yansıtır. Örneği
 
    2. **Proje** menüsünde, **Başvuru Ekle**' yi seçin.
 
-   3. **Başvuru Yöneticisi**' nde **Projeler**altındaki **çözüm** düğümünü seçin. Test etmek istediğiniz kod projesini seçin ve ardından **Tamam**' ı seçin.
+   3. **Başvuru Yöneticisi**' nde **Projeler** altındaki **çözüm** düğümünü seçin. Test etmek istediğiniz kod projesini seçin ve ardından **Tamam**' ı seçin.
 
    Test etmek istediğiniz kod başka bir konumdaysa, başvuru ekleme hakkında bilgi için bkz. [bir projedeki başvuruları yönetme](../ide/managing-references-in-a-project.md) .
 

@@ -1,5 +1,7 @@
 ---
 title: Testler sırasında ekran ve ses kaydetme
+description: Visual Studio 'da testi çalıştıran kullanıcının ekranını ve sesini kaydeden tanılama veri bağdaştırıcısını nasıl yapılandıracağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 10/03/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -8,12 +10,12 @@ ms.assetid: 2cefe8c2-430a-4cb4-bbe0-f3edb2e5bc03
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 2366e77b0b66e2a31ce17e1aefb9240e4f45df2d
-ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
+ms.openlocfilehash: 08ae6d19327a956b5dab71fa30b0b33742390d2b
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91928651"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95440993"
 ---
 # <a name="how-to-include-recordings-of-the-screen-and-voice-during-tests-using-test-settings"></a>Nasıl yapılır: test ayarlarını kullanarak testler sırasında ekran ve ses kayıtlarını ekleme
 
@@ -48,7 +50,7 @@ Ekran ve Ses Kaydedicisi, el ile veya otomatikleştirilmiş testlerle birlikte k
     > [!WARNING]
     > **Test çalışması geçerse kaydı kaydet**' i seçerseniz, kayıt, sunucuda depolama alanı kullanan test sonuçlarıyla depolanır. Bu ekleri temizlemek için **Test eki temizleyici** aracı 'nı kullanabilirsiniz.
 
-6. **Ekran kayıt kalitesi**altında aşağıdaki açılan liste seçeneklerini yapılandırın:
+6. **Ekran kayıt kalitesi** altında aşağıdaki açılan liste seçeneklerini yapılandırın:
 
     1. **Kare hızı:** Ekranda ve ses kaydında saniye başına kaç kare kullanmak istediğinizi belirtin. Varsayılan değer, saniye başına 4 kare olur. 2 ve 20 arasındaki değerler belirtilebilir.
 
@@ -56,7 +58,7 @@ Ekran ve Ses Kaydedicisi, el ile veya otomatikleştirilmiş testlerle birlikte k
 
     3. **Kalite (1-100):** 1 ile 100 arasında bir Aralık seçerek ekran ve ses kaydı kalitesini belirtebilirsiniz. Varsayılan değer 50 ' dir (orta Aralık).
 
-7. **Tamam ' ı**seçin. Tanılama izleme toplayıcısı ayarları artık test ayarlarınız için yapılandırılır ve kaydedilir.
+7. **Tamam ' ı** seçin. Tanılama izleme toplayıcısı ayarları artık test ayarlarınız için yapılandırılır ve kaydedilir.
 
     ::: moniker range="vs-2017"
     > [!TIP]

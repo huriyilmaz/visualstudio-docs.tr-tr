@@ -1,5 +1,7 @@
 ---
 title: Kodlanmış UI Test Günlüklerini Kullanarak Kodlanmış UI Testlerini Çözümleme
+description: Kodlanmış UI test çalıştırmaları hakkında önemli bilgileri filtreleyip kaydeden kodlanmış UI test günlükleri hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.author: mikejo
@@ -7,12 +9,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 6bbb3e6599ef4ae26740eed0eb79047c49356374
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 3dcbb1bdfd89ae13df5174b6502dc6e89437a468
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036151"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95442501"
 ---
 # <a name="analyzing-coded-ui-tests-using-coded-ui-test-logs"></a>Kodlanmış UI test günlüklerini kullanarak kodlanmış UI testlerini çözümleme
 
@@ -28,7 +30,7 @@ Senaryonuza bağlı olarak, günlüğü etkinleştirmek için aşağıdaki yönt
 
    1. Testinizi çalıştırdığınızda hangi *QTAgent \* . exe* işleminin başlatılmayı saptayın. Bunu yapmanın bir yolu Windows **Görev Yöneticisi**'nde **Ayrıntılar** sekmesini izlerken.
 
-   2. *% ProgramFiles (x86)% \ Microsoft Visual Studio \\ \<version> \\ \<edition> \Common7\IDE* klasöründe karşılık gelen *. config* dosyasını açın. Örneğin, çalıştıran işlem *QTAgent_40.exe*, *QTAgent_40.exe.config*açın.
+   2. *% ProgramFiles (x86)% \ Microsoft Visual Studio \\ \<version> \\ \<edition> \Common7\IDE* klasöründe karşılık gelen *. config* dosyasını açın. Örneğin, çalıştıran işlem *QTAgent_40.exe*, *QTAgent_40.exe.config* açın.
 
    2. **EqtTraceLevel** değerini istediğiniz günlük düzeyi ile değiştirin.
 
@@ -60,18 +62,18 @@ Senaryonuza bağlı olarak, günlüğü etkinleştirmek için aşağıdaki yönt
 
 ## <a name="step-2-run-your-coded-ui-test-and-view-the-log"></a>2. Adım: kodlanmış UI testinizi çalıştırma ve günlüğü görüntüleme
 
-*QTAgent \*.exe.config* dosyasında yapılan DEĞIŞIKLIKLERLE kodlanmış bir UI testi çalıştırdığınızda, **Test Gezgini** sonuçlarında bir çıkış bağlantısı görürsünüz. Günlük dosyaları yalnızca testiniz başarısız olduğunda değil, izleme düzeyi **verbose**olarak ayarlandığında de başarılı testler için değil.
+*QTAgent \*.exe.config* dosyasında yapılan DEĞIŞIKLIKLERLE kodlanmış bir UI testi çalıştırdığınızda, **Test Gezgini** sonuçlarında bir çıkış bağlantısı görürsünüz. Günlük dosyaları yalnızca testiniz başarısız olduğunda değil, izleme düzeyi **verbose** olarak ayarlandığında de başarılı testler için değil.
 
 1. **Test** menüsünde **Windows** ' u ve ardından **Test Gezgini**' ni seçin.
 
-2. **Build** menüsünde **Build Solution**öğesini seçin.
+2. **Build** menüsünde **Build Solution** öğesini seçin.
 
 3. **Test Gezgini**'nde, çalıştırmak ISTEDIĞINIZ kodlanmış UI testini seçin, kısayol menüsünü açın ve ardından **Testleri Seç**' i seçin.
 
      Otomatikleştirilmiş testler çalışır ve başarılı veya başarısız olup olmadığını gösterir.
 
     > [!TIP]
-    > **Test Gezginini**görüntülemek için **Test**  >  **pencereleri**' ni ve ardından **Test Gezgini**' ni seçin.
+    > **Test Gezginini** görüntülemek için **Test**  >  **pencereleri**' ni ve ardından **Test Gezgini**' ni seçin.
 
 4. **Test Gezgini** sonuçlarında **Çıkış** bağlantısını seçin.
 

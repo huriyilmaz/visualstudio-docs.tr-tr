@@ -1,5 +1,7 @@
 ---
 title: Kodlanmış UI testlerini düzenleniyor
+description: Test yöntemlerinizi ve UI eylemlerinizi bulmak, görüntülemek ve düzenlemek için kodlanmış UI test düzenleyicisini kullanmayı öğrenin. İlgili denetimleri görüntülemek ve düzenlemek için UI denetim haritasını kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -11,12 +13,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: d6c2fcf3d8807e9095abc9546e8bf1e39aecb8ea
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0f78839280ae19da5020b08d499d347c0537a045
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85288734"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95441449"
 ---
 # <a name="edit-coded-ui-tests-using-the-coded-ui-test-editor"></a>Kodlanmış UI Test Düzenleyicisi 'Ni kullanarak kodlanmış UI testlerini düzenleme
 
@@ -53,15 +55,15 @@ Kodlanmış UI Test Düzenleyicisi 'nin kullanılması daha hızlı ve kod düze
 
 9. **Tümünü Bul** özelliği, denetim özelliğini doğrulamanızı ve uygulamanın denetimlerinde önemli değişiklikler yapmanıza yardımcı olur.
 
-Kodlanmış UI Testinizle bağlantılı *UIMap. UITest* dosyasını açtığınızda, kodlanmış UI testi kodlanmış UI testi **düzenleyicisinde**açılır. Aşağıdaki yordamlarda, test yöntemlerinizi bulma ve düzenleme, UI eylemlerinin özellikleri ve düzenleyicinin araç çubuğunu ve kısayol menülerini kullanarak denetimlerin nasıl yapılacağı açıklanır.
+Kodlanmış UI Testinizle bağlantılı *UIMap. UITest* dosyasını açtığınızda, kodlanmış UI testi kodlanmış UI testi **düzenleyicisinde** açılır. Aşağıdaki yordamlarda, test yöntemlerinizi bulma ve düzenleme, UI eylemlerinin özellikleri ve düzenleyicinin araç çubuğunu ve kısayol menülerini kullanarak denetimlerin nasıl yapılacağı açıklanır.
 
 ## <a name="open-a-coded-ui-test"></a>Kodlanmış UI testi açma
 
-**KODLANMıŞ UI test düzenleyicisini**kullanarak, Visual C# ve Visual Basic tabanlı kodlanmış UI testinizi görüntüleyebilir ve düzenleyebilirsiniz.
+**KODLANMıŞ UI test düzenleyicisini** kullanarak, Visual C# ve Visual Basic tabanlı kodlanmış UI testinizi görüntüleyebilir ve düzenleyebilirsiniz.
 
 ![Bağlam menüsü kodlanmış UI Test Oluşturucusu Ile Düzenle](../test/media/editcodeduitest.png)
 
-**Çözüm Gezgini**' de *UIMap. UITest* için kısayol menüsünü açın ve **Aç**' ı seçin. Kodlanmış UI testi, **KODLANMıŞ UI testi düzenleyicisinde**görüntülenir. Artık, kodlanmış UI testinde kayıtlı yöntemleri, eylemleri ve ilgili denetimleri görüntüleyebilir ve düzenleyebilirsiniz.
+**Çözüm Gezgini**' de *UIMap. UITest* için kısayol menüsünü açın ve **Aç**' ı seçin. Kodlanmış UI testi, **KODLANMıŞ UI testi düzenleyicisinde** görüntülenir. Artık, kodlanmış UI testinde kayıtlı yöntemleri, eylemleri ve ilgili denetimleri görüntüleyebilir ve düzenleyebilirsiniz.
 
 > [!TIP]
 > **UI eylemleri** bölmesindeki bir yöntemde bulunan bir UI eylemi seçtiğinizde, karşılık gelen denetim vurgulanır. UI eylemini veya denetim özelliklerini de değiştirebilirsiniz.
@@ -86,9 +88,9 @@ Değişikliklerinizi tamamladıktan sonra, Visual Studio araç çubuğunda **Kay
 
 ### <a name="tips"></a>İpuçları
 
-- **Özellikler** penceresi görüntülenmiyorsa, **ENTER**tuşuna basarak **alt** tuşunu basılı tutun veya **F4**tuşuna basın.
+- **Özellikler** penceresi görüntülenmiyorsa, **ENTER** tuşuna basarak **alt** tuşunu basılı tutun veya **F4** tuşuna basın.
 
-- Yaptığınız özellik değişikliklerini geri almak için, **Düzenle** menüsünden **geri al** ' ı seçin veya **CTRL** + **Z**tuşuna basın.
+- Yaptığınız özellik değişikliklerini geri almak için, **Düzenle** menüsünden **geri al** ' ı seçin veya **CTRL** + **Z** tuşuna basın.
 
 - Visual Studio 'da **Bul ve Değiştir** aracını açmak IÇIN kodlanmış UI Test Düzenleyicisi araç çubuğundaki **bul** düğmesini kullanabilirsiniz. Daha sonra, kodlanmış UI test düzenleyicisinde bir kullanıcı arabirimi eylemini bulmak için **bul** denetimini kullanabilirsiniz. Örneğin, "Click ' Login' düğmesini bulmayı deneyebilirsiniz." Bu, büyük testlerde yararlı olabilir. Kodlanmış UI test düzenleyicisinde **Bul ve Değiştir** aracında değiştirme işlevini kullanamazsınız. Daha fazla bilgi için bkz. [bulma ve değiştirme metin](../ide/finding-and-replacing-text.md)Içinde denetimi bulma.
 
@@ -121,7 +123,7 @@ Yöntemi bölmeyi tamamladıktan sonra, Visual Studio araç çubuğunda **Kaydet
 
 ### <a name="tips"></a>İpuçları
 
-- Bölmeyi geri almak için, **Düzenle** menüsünden **geri al** ' ı seçin veya **CTRL** + **Z**tuşuna basın.
+- Bölmeyi geri almak için, **Düzenle** menüsünden **geri al** ' ı seçin veya **CTRL** + **Z** tuşuna basın.
 
 - Yeni yöntemi yeniden adlandırabilirsiniz. **UI eylemleri** bölmesinde seçin ve kodlanmış UI Test Düzenleyicisi araç çubuğundaki **Yeniden Adlandır** düğmesini seçin.
 
@@ -135,7 +137,7 @@ Yöntemi bölmeyi tamamladıktan sonra, Visual Studio araç çubuğunda **Kaydet
 
 Kodlanmış UI testinizde test yöntemlerinizin birinin özel kod gerektirdiğini belirlerseniz, *UIMap.cs* veya *umap. vb* dosyasına taşımanız gerekir. Aksi takdirde, kodlanmış UI testi yeniden derlendiğinde kodunuzun üzerine yazılır. Yöntemi taşıyamazsınız, test her yeniden derlenilişinde özel kodunuzun üzerine yazılır.
 
-**UI eylemi** bölmesinde, test kodu yeniden derlenme sırasında üzerine yazılmayacak özel kod işlevlerini kolaylaştırmak için *UIMap.cs* veya *umap. vb* dosyasına taşımak istediğiniz test yöntemini seçin. Sonra, kodlanmış UI Test Düzenleyicisi araç çubuğundaki **kodu taşı** düğmesini seçin veya test yönteminin kısayol menüsünü açın ve **kodu taşı**' yı seçin. Test yöntemi *UIMap. UITest* dosyasından kaldırılır ve artık **UI eylemleri** bölmesinde görüntülenmez. Taşıdığınız test dosyasını düzenlemek için, *UIMap.cs* veya *UIMap. vb* dosyasını **Çözüm Gezgini**açın.
+**UI eylemi** bölmesinde, test kodu yeniden derlenme sırasında üzerine yazılmayacak özel kod işlevlerini kolaylaştırmak için *UIMap.cs* veya *umap. vb* dosyasına taşımak istediğiniz test yöntemini seçin. Sonra, kodlanmış UI Test Düzenleyicisi araç çubuğundaki **kodu taşı** düğmesini seçin veya test yönteminin kısayol menüsünü açın ve **kodu taşı**' yı seçin. Test yöntemi *UIMap. UITest* dosyasından kaldırılır ve artık **UI eylemleri** bölmesinde görüntülenmez. Taşıdığınız test dosyasını düzenlemek için, *UIMap.cs* veya *UIMap. vb* dosyasını **Çözüm Gezgini** açın.
 
 Yöntemi taşımayı tamamladıktan sonra, Visual Studio araç çubuğunda **Kaydet** ' i seçerek *UIMap. Designer* dosyasına değişiklikleri kaydedin.
 
@@ -144,7 +146,7 @@ Yöntemi taşımayı tamamladıktan sonra, Visual Studio araç çubuğunda **Kay
 
 ### <a name="tips"></a>İpuçları
 
-Taşımayı geri almak için, **Düzenle** menüsünden **geri al** ' ı seçin veya **CTRL** + **Z**tuşuna basın. Ancak, kodu *UIMap.cs* veya *umap. vb* dosyasından el ile kaldırmanız gerekir.
+Taşımayı geri almak için, **Düzenle** menüsünden **geri al** ' ı seçin veya **CTRL** + **Z** tuşuna basın. Ancak, kodu *UIMap.cs* veya *umap. vb* dosyasından el ile kaldırmanız gerekir.
 
 ## <a name="locate-a-ui-control-in-the-application-under-test"></a>Test edilen uygulamada bir UI denetimini bulma
 

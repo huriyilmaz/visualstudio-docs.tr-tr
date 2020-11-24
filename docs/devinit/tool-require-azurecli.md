@@ -1,7 +1,7 @@
 ---
 title: require-azurecli
 description: devinit aracı-azurecli gerektirir.
-ms.date: 08/28/2020
+ms.date: 11/20/2020
 ms.topic: reference
 author: andysterland
 ms.author: andster
@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: da6ce656e552a7df0b02fd4a0df3a1fb78871607
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: d73fe7c1745ded16ca6b0c94acf117c1707c1063
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94672148"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95440424"
 ---
 # <a name="require-azurecli"></a>require-azurecli
 
@@ -32,7 +32,7 @@ Hem hem de `input` `additionalOptions` özellikleri atlanırsa veya boşsa, ara�
 | [**girişinin**](#input)                              | dize | No       | Kullanılmadı. Ayrıntılar için aşağıdaki [girişi](#input) inceleyin.                               |
 | [**additionalOptions**](#additional-options)     | dize | No       | Kullanılmadı. Ayrıntılar için aşağıdaki [ek seçeneklere](#additional-options) bakın.     |
 
-### <a name="input"></a>Girdi
+### <a name="input"></a>Giriş
 
 Kullanılmadı.
 
@@ -42,10 +42,10 @@ Kullanılmadı.
 
 ### <a name="default-behavior"></a>Varsayılan davranış
 
-Aracın varsayılan davranışı, `require-azurecli` en son Azure CLI sürümünü yüklemek ve yola eklemektir (yalnızca Windows).
+Aracın varsayılan davranışı, `require-azurecli` en son Azure CLI sürümünü yüklemek ve ' a eklemektir `PATH` .
 
 ## <a name="example-usage"></a>Örnek kullanım
-Kullanarak nasıl çalıştırılacağını gösteren bir örnek aşağıda verilmiştir `require-azurecli` `.devinit.json` . 
+Kullanarak nasıl çalıştırılacağını gösteren bir örnek aşağıda verilmiştir `require-azurecli` `.devinit.json` .
 
 #### <a name="devinitjson-that-will-install-the-azure-cli"></a>Azure CLı 'yı yükleyecek .devinit.js:
 ```json
