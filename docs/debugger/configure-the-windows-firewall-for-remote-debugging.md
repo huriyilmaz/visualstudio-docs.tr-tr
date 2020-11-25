@@ -9,11 +9,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0fa5d60d7fe662cff31b54bf3a13c203f4b6d8c9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350699"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95970085"
 ---
 # <a name="configure-windows-firewall-for-remote-debugging"></a>Uzaktan hata ayıklama için Windows güvenlik duvarını yapılandırma
 
@@ -22,7 +22,7 @@ Windows güvenlik duvarı tarafından korunan bir ağda, güvenlik duvarının u
 Bu konuda, Windows 10, 8/8.1 ve 7 ' de uzaktan hata ayıklamayı etkinleştirmek için Windows Güvenlik Duvarı 'nın nasıl yapılandırılacağı açıklanmaktadır; ve Windows Server 2012 R2, 2012 ve 2008 R2 bilgisayarları. Visual Studio ve uzak bilgisayarın aynı işletim sistemini çalıştırması gerekmez. Örneğin, Visual Studio bilgisayarı Windows 10 çalıştırabilir ve uzak bilgisayar Windows Server 2012 R2 'yi çalıştırabilir.
 
 >[!NOTE]
->Windows Güvenlik Duvarı 'nı yapılandırmaya yönelik yönergeler, farklı işletim sistemlerinde ve Windows 'un eski sürümlerinde farklılık gösterebilir. Windows 8/8.1, Windows 10 ve Windows Server 2012 ayarları Word *uygulamasını*kullanır, Windows 7 ve windows Server 2008 Word *programını*kullanır.
+>Windows Güvenlik Duvarı 'nı yapılandırmaya yönelik yönergeler, farklı işletim sistemlerinde ve Windows 'un eski sürümlerinde farklılık gösterebilir. Windows 8/8.1, Windows 10 ve Windows Server 2012 ayarları Word *uygulamasını* kullanır, Windows 7 ve windows Server 2008 Word *programını* kullanır.
 
 ## <a name="configure-ports-for-remote-debugging"></a>Uzaktan hata ayıklama için bağlantı noktalarını yapılandırma
 
@@ -30,7 +30,7 @@ Visual Studio ve uzaktan hata ayıklayıcı yükleme veya başlatma sırasında 
 
 **Bir bağlantı noktasını açmak için:**
 
-1. Windows **Başlat** menüsünde, **Gelişmiş Güvenlik Özellikli Windows Güvenlik Duvarı 'nı**arayın ve açın. Windows 10 ' da bu, **Gelişmiş Güvenlik Özellikli Windows Defender güvenlik duvarıdır**.
+1. Windows **Başlat** menüsünde, **Gelişmiş Güvenlik Özellikli Windows Güvenlik Duvarı 'nı** arayın ve açın. Windows 10 ' da bu, **Gelişmiş Güvenlik Özellikli Windows Defender güvenlik duvarıdır**.
 
 1. Yeni gelen bağlantı noktası için **gelen kuralları** ' nı seçin ve ardından **Yeni kural**' ı seçin. Giden kuralı için bunun yerine **giden kuralları** ' nı seçin.
 
@@ -38,13 +38,13 @@ Visual Studio ve uzaktan hata ayıklayıcı yükleme veya başlatma sırasında 
 
 1. Aşağıdaki tablolardaki bağlantı noktası numarasına bağlı olarak **TCP** veya **UDP**' yi seçin.
 
-1. **Belirli yerel bağlantı noktaları**altında, aşağıdaki tablolardan bir bağlantı noktası numarası girin ve **İleri**' yi seçin.
+1. **Belirli yerel bağlantı noktaları** altında, aşağıdaki tablolardan bir bağlantı noktası numarası girin ve **İleri**' yi seçin.
 
 1. **Bağlantıya Izin ver**' i seçin ve ardından **İleri**' yi seçin.
 
 1. Uzaktan bağlantı için ağ türü de dahil olmak üzere etkinleştirilecek bir veya daha fazla ağ türünü seçin ve ardından **İleri**' yi seçin.
 
-1. Kural için bir ad ekleyin (örneğin, **msvsmon**, **IIS**veya **Web dağıtımı**) ve ardından **son**' u seçin.
+1. Kural için bir ad ekleyin (örneğin, **msvsmon**, **IIS** veya **Web dağıtımı**) ve ardından **son**' u seçin.
 
    Yeni kural, **gelen kurallar** veya **giden kurallar** listesinde görünmelidir ve seçilmelidir.
 
@@ -72,7 +72,7 @@ Uzaktan hata ayıklama için, uzak bilgisayarda aşağıdaki bağlantı noktalar
 
 ::: moniker-end
 
-**Araçlar**seçenekler hata ayıklama bölümünde **yönetilen uyumluluk modunu kullan**  >  **Options**  >  **Debugging**' ı seçerseniz, bu ek uzaktan hata ayıklayıcı bağlantı noktalarını açın. Hata ayıklayıcı yönetilen uyumluluk modu, hata ayıklayıcının eski, Visual Studio 2010 sürümünü sunar.
+**Araçlar** seçenekler hata ayıklama bölümünde **yönetilen uyumluluk modunu kullan**  >  **Options**  >  **Debugging**' ı seçerseniz, bu ek uzaktan hata ayıklayıcı bağlantı noktalarını açın. Hata ayıklayıcı yönetilen uyumluluk modu, hata ayıklayıcının eski, Visual Studio 2010 sürümünü sunar.
 
 |**Bağlantı noktaları**|**Gelen/giden**|**Protokol**|**Açıklama**|
 |-|-|-|-|
@@ -98,11 +98,11 @@ Uzak bir bilgisayarda, uzaktan hata ayıklama araçları şu şekilde bulunur:
 
 ### <a name="allow-and-configure-the-remote-debugger-through-windows-firewall"></a>Windows Güvenlik Duvarı üzerinden uzaktan hata ayıklayıcıya izin verme ve yapılandırma
 
-1. Windows **Başlat** menüsünde **Windows Güvenlik Duvarı**veya **Windows Defender güvenlik duvarı**araması yapın ve açın.
+1. Windows **Başlat** menüsünde **Windows Güvenlik Duvarı** veya **Windows Defender güvenlik duvarı** araması yapın ve açın.
 
 1. **Windows Güvenlik Duvarı aracılığıyla bir uygulamaya Izin ver**' i seçin.
 
-1. **Uzaktan hata ayıklayıcı** veya **Visual Studio uzaktan hata ayıklayıcı** **izin verilen uygulamalar ve Özellikler**altında görünmezse, **Ayarları Değiştir**' i seçin ve sonra **başka bir uygulamaya izin ver**' i seçin.
+1. **Uzaktan hata ayıklayıcı** veya **Visual Studio uzaktan hata ayıklayıcı** **izin verilen uygulamalar ve Özellikler** altında görünmezse, **Ayarları Değiştir**' i seçin ve sonra **başka bir uygulamaya izin ver**' i seçin.
 
 1. Uzaktan hata ayıklayıcı uygulaması hala **Uygulama Ekle** iletişim kutusunda listelenmiyorsa, **Araştır**' ı seçin ve \<Visual Studio installation directory\> \\ \\ \\ \\ \<x86*, *x64*, or *Appx*\> uygulamanızın uygun mimarisine bağlı olarak * Common7 IDE uzaktan hata ayıklayıcı ' ya gidin. *msvsmon.exe*' yi seçin ve ardından **Ekle**' yi seçin.
 
@@ -116,7 +116,7 @@ Uzaktan hata ayıklayıcı ile uygulamanıza iliştiretemezsiniz, uzaktan hata a
 
 - Windows **Başlat** menüsünde **Windows Güvenlik Duvarı**'Nı arayıp açın ve **Windows Güvenlik Duvarı aracılığıyla uygulamaya izin ver**' i seçin. **Uzaktan hata ayıklayıcı** veya **Visual Studio uzaktan hata ayıklayıcı** , **izin verilen uygulamalar ve Özellikler** listesinde seçili onay kutusuyla göründüğünden emin olun ve doğru ağ türleri seçilidir. Aksi takdirde, [doğru uygulamaları ve ayarları ekleyin](#configure-remote-debugging-through-windows-firewall).
 
-- Windows **Başlat** menüsünde, **Gelişmiş Güvenlik Özellikli Windows Güvenlik Duvarı 'nı**arayın ve açın. **Uzaktan hata ayıklayıcı** veya **Visual Studio uzaktan hata ayıklayıcı** , yeşil onay işareti simgesiyle **gelen kuralların** altında (ve isteğe bağlı olarak, **giden kuralları**) göründüğünden ve tüm ayarların doğru olduğundan emin olun.
+- Windows **Başlat** menüsünde, **Gelişmiş Güvenlik Özellikli Windows Güvenlik Duvarı 'nı** arayın ve açın. **Uzaktan hata ayıklayıcı** veya **Visual Studio uzaktan hata ayıklayıcı** , yeşil onay işareti simgesiyle **gelen kuralların** altında (ve isteğe bağlı olarak, **giden kuralları**) göründüğünden ve tüm ayarların doğru olduğundan emin olun.
 
   - Kural ayarlarını görüntülemek veya değiştirmek için, listede **Uzaktan hata ayıklayıcı** uygulamasına sağ tıklayın ve **Özellikler**' i seçin. Kuralı etkinleştirmek veya devre dışı bırakmak ya da bağlantı noktası numaralarını, protokolleri veya ağ türlerini değiştirmek için **Özellikler** sekmelerini kullanın.
   - Uzaktan hata ayıklayıcı uygulaması kurallar listesinde görünmüyorsa, [doğru bağlantı noktalarını ekleyin ve yapılandırın](#configure-ports-for-remote-debugging).

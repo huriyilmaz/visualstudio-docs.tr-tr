@@ -1,5 +1,7 @@
 ---
 title: Değiştirilebilen parametreler | Microsoft Docs
+description: Gerçek değerleri tasarım zamanında bilinen SharePoint çözüm öğeleri için proje dosyaları içindeki değerleri belirten değiştirilebilir parametreleri (belirteçler) gözden geçirin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +16,12 @@ author: John-Hart
 ms.author: johnhart
 manager: jillfra
 ms.workload: office
-ms.openlocfilehash: 165ef1256a0150e0942d85c4f876c8b3f5e15c72
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1cd44b3edfaeae376e5a4a9698d138bd75c03bf8
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64825313"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95970254"
 ---
 # <a name="replaceable-parameters"></a>Değiştirilebilen parametreler
   Değiştirilebilir parametreler veya *belirteçler*, gerçek değerleri tasarım zamanında bilinen SharePoint çözüm öğeleri için değerler sağlamak üzere proje dosyaları içinde kullanılabilir. Bunlar işlev olarak standart [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] şablon belirteçlerine benzerdir. Daha fazla bilgi için bkz. [şablon parametreleri](../ide/template-parameters.md).
@@ -60,11 +62,11 @@ ms.locfileid: "64825313"
 |$SharePoint. Package. FileName $|Kapsayan paketin tanım dosyasının adı.|
 |$SharePoint. Package. FileNameWithoutExtension $|Kapsayan paketin tanım dosyasının adı (uzantısı olmadan).|
 |$SharePoint. Package.Id $|Kapsayan paket için SharePoint KIMLIĞI. Bir özellik birden fazla pakette kullanılıyorsa, bu değer değişecektir.|
-|$SharePoint. Feature. FileName $|*Özellik1. feature*gibi kapsayan özelliğin tanım dosyasının adı.|
+|$SharePoint. Feature. FileName $|*Özellik1. feature* gibi kapsayan özelliğin tanım dosyasının adı.|
 |$SharePoint. Feature. FileNameWithoutExtension $|Dosya adı uzantısı olmadan Özellik tanım dosyasının adı.|
 |$SharePoint. Feature. DeploymentPath $|Paketteki özelliği içeren klasörün adı. Bu belirteç, özellik tasarımcısında "dağıtım yolu" özelliğine sahiptir. Örnek bir değer, "Project1_Feature1".|
 |$SharePoint. Feature.Id $|Kapsayan özelliğin SharePoint KIMLIĞI. Tüm özellik düzeyinde belirteçlerde olduğu gibi, bu belirteç yalnızca bir özellik aracılığıyla bir pakette bulunan dosyalar tarafından, bir özellik dışında doğrudan bir pakete eklenmemiş olan dosyalar tarafından kullanılabilir.|
-|$SharePoint. ProjectItem.Name $|**ISharePointProjectItem.Name**öğesinden alınan proje öğesinin adı (dosya adı değil).|
+|$SharePoint. ProjectItem.Name $|**ISharePointProjectItem.Name** öğesinden alınan proje öğesinin adı (dosya adı değil).|
 |$SharePoint. Type. \<GUID> . AssemblyQualifiedName $|Belirtecin türüyle eşleşen türün derleme nitelikli adı [!INCLUDE[TLA2#tla_guid](../sharepoint/includes/tla2sharptla-guid-md.md)] . Biçimi [!INCLUDE[TLA2#tla_guid](../sharepoint/includes/tla2sharptla-guid-md.md)] küçük harfli ve Guid. ToString ("D") biçimine (yani, xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx) karşılık gelir.|
 |$SharePoint. Type. \<GUID> . FullName $|Belirteçteki GUID ile eşleşen türün tam adı. GUID 'nin biçimi küçük harfli ve Guid. ToString ("D") biçimine (yani, xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx) karşılık gelir.|
 
@@ -86,7 +88,7 @@ ms.locfileid: "64825313"
   Ancak, listeye ek dosya uzantıları ekleyebilirsiniz. SharePoint `<TokenReplacementFileExtensions>` hedefleri dosyasından önce tanımlanan SharePoint proje dosyasındaki herhangi bir PropertyGroup 'a bir öğe ekleyin \<Import> .
 
 > [!NOTE]
-> Bir proje derlendikten sonra belirteç değişikliği gerçekleştiğinden, *. cs*, *. vb* veya *. resx*gibi derlenmiş dosya türleri için dosya uzantıları eklememelisiniz. Belirteçler yalnızca derlenmemiş dosyalarda yer alır.
+> Bir proje derlendikten sonra belirteç değişikliği gerçekleştiğinden, *. cs*, *. vb* veya *. resx* gibi derlenmiş dosya türleri için dosya uzantıları eklememelisiniz. Belirteçler yalnızca derlenmemiş dosyalarda yer alır.
 
  Örneğin, dosya adı uzantılarını (*. MyExtension* ve *. yourexgeri*) belirteç değiştirme dosya adı uzantıları listesine eklemek için aşağıdakileri bir proje (*. csproj*) dosyasına ekleyin:
 

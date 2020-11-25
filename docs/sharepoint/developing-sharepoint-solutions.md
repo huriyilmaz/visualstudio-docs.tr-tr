@@ -18,11 +18,11 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 755723dd2ae309e971e86852646ee33d2caa22cf
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94672827"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95970385"
 ---
 # <a name="develop-sharepoint-solutions"></a>SharePoint çözümleri geliştirme
   [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]SharePoint siteleri ve site öğeleri oluşturmak için içinde çeşitli SharePoint proje türü şablonları mevcuttur. Kullanılabilir proje türlerinin bir listesi için bkz. [SharePoint projesi ve proje öğesi şablonları](../sharepoint/sharepoint-project-and-project-item-templates.md). Aşağıda bir SharePoint projesinin öğelerinin ve özelliklerinin açıklaması verilmiştir.
@@ -63,7 +63,7 @@ ms.locfileid: "94672827"
 
 ### <a name="project-properties"></a>Proje özellikleri
 
-|Özellik Adı|Açıklama|
+|Özellik Adı|Description|
 |-------------------|-----------------|
 |Etkin dağıtım yapılandırması|Dağıtım sırasında gerçekleştirilen adımların serisini belirtir. Daha fazla bilgi için bkz. [nasıl yapılır: SharePoint dağıtım yapılandırmasını düzenleme](../sharepoint/how-to-edit-a-sharepoint-deployment-configuration.md).|
 |Bütünleştirilmiş kod dağıtım hedefi|*SharePoint uygulama derlemelerinin* nerede olduğunu belirler. Geçerli bütünleştirilmiş kod konumu değerleri *GlobalAssemblyCache* (varsayılan) veya *WebApplication*.<br /><br /> *Korumalı çözüm* özelliği **true** olarak ayarlandıysa, bu özellik devre dışı bırakılır.|
@@ -83,7 +83,7 @@ ms.locfileid: "94672827"
 
 ### <a name="project-item-properties"></a>Proje öğesi özellikleri
 
-|Özellik Adı|Açıklama|
+|Özellik Adı|Description|
 |-------------------|-----------------|
 |Dağıtıma Çakışma Çözümlemesi|Özellikleri sunucuda zaten olan bir öğeyle aynı olan bir proje öğesi dağıtıldığında gerçekleştirilecek eylemi belirtir. Daha fazla bilgi için bkz. [SharePoint paketleme ve dağıtım sorunlarını giderme](../sharepoint/troubleshooting-sharepoint-packaging-and-deployment.md).|
 |Özellik özellikleri|SharePoint 'e dağıtırken bir özelliğe eklenen bir değer kümesini (anahtar/değer çiftleri olarak saklanır) belirtir. Özellik dağıtıldıktan sonra, kodunuzda özellik değerlerine erişebilirsiniz. Daha fazla bilgi için bkz. [Proje Öğelerinde Paketleme ve dağıtım bilgileri sağlama](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md).|
@@ -94,7 +94,7 @@ ms.locfileid: "94672827"
 
 ### <a name="project-item-file-properties"></a>Proje öğesi dosya özellikleri
 
-|Özellik Adı|Açıklama|
+|Özellik Adı|Description|
 |-------------------|-----------------|
 |Derleme eylemi|Dosyanın derleme ve dağıtım işlemleriyle ilişkisini belirtir. Daha fazla bilgi için bkz. [dosya özellikleri](/previous-versions/visualstudio/visual-studio-2010/0c6xyb66\(v\=vs.100\)).|
 |Çıkış dizinine Kopyala|Kaynak dosyaların çıkış dizinine kopyalanıp kopyalanmayacağını belirtir. Aşağıdaki değerlerden biri olabilir:<br /><br /> -   *Kopyalamayın*<br />-   *Her zaman Kopyala*<br />-   *Daha yeniyse kopyala*<br /><br /> Daha fazla bilgi için bkz. [dosya özellikleri](/previous-versions/visualstudio/visual-studio-2010/0c6xyb66\(v\=vs.100\)).|

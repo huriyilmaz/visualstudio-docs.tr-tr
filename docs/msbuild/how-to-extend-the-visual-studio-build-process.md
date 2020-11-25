@@ -16,11 +16,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 07f0312892d9f4f4073cf6fb2c9537ffa52a6267
-ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92436362"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95970069"
 ---
 # <a name="how-to-extend-the-visual-studio-build-process"></a>Nasıl yapılır: Visual Studio derleme işlemini genişletme
 
@@ -35,13 +35,13 @@ Visual Studio derleme işlemi, proje dosyanıza aktarılan MSBuild *. targets* d
 Ortak hedefler, yapı işlemindeki ana hedeflerden önce ve sonra çağrılan bir dizi önceden tanımlanmış boş hedef kümesi içerir. Örneğin, MSBuild `BeforeBuild` hedefi ana `CoreBuild` hedeften önce ve hedeften `AfterBuild` sonra hedeften sonra çağırır `CoreBuild` . Varsayılan olarak, ortak hedeflerde boş hedefler hiçbir şey yapmaz, ancak ortak hedefleri içeri aktaran bir proje dosyasında istediğiniz hedefleri tanımlayarak varsayılan davranışlarını geçersiz kılabilirsiniz. Önceden tanımlanmış hedefleri geçersiz kılarak, yapı işlemi üzerinde size daha fazla denetim sağlamak için MSBuild görevlerini kullanabilirsiniz.
 
 > [!NOTE]
-> SDK stili projelerin, *Proje dosyasının son satırından sonra*hedeflerin örtük bir şekilde içe aktarılması vardır. Diğer bir deyişle, içeri aktarmaların [nasıl yapılır: MSBuild proje SDK 'Larını kullanma](how-to-use-project-sdk.md)bölümünde açıklandığı şekilde el ile belirtmediğiniz sürece varsayılan hedefleri geçersiz kılamazsınız.
+> SDK stili projelerin, *Proje dosyasının son satırından sonra* hedeflerin örtük bir şekilde içe aktarılması vardır. Diğer bir deyişle, içeri aktarmaların [nasıl yapılır: MSBuild proje SDK 'Larını kullanma](how-to-use-project-sdk.md)bölümünde açıklandığı şekilde el ile belirtmediğiniz sürece varsayılan hedefleri geçersiz kılamazsınız.
 
 #### <a name="to-override-a-predefined-target"></a>Önceden tanımlanmış bir hedefi geçersiz kılmak için
 
 1. Geçersiz kılmak istediğiniz ortak hedeflerde önceden tanımlanmış bir hedef belirler. Güvenli şekilde geçersiz kılabileceğiniz hedeflerin tamamı listesi için aşağıdaki tabloya bakın.
 
-2. Doğrudan etiketinden önce, proje dosyanızın sonundaki hedef veya hedefleri tanımlayın `</Project>` . Örneğin:
+2. Doğrudan etiketinden önce, proje dosyanızın sonundaki hedef veya hedefleri tanımlayın `</Project>` . Örnek:
 
     ```xml
     <Project>
@@ -71,7 +71,7 @@ Aşağıdaki tabloda, güvenle geçersiz kılabileceğiniz ortak hedeflerin tüm
 
 ## <a name="example-aftertargets-and-beforetargets"></a>Örnek: AfterTargets ve BeforeTargets
 
-Aşağıdaki örnek, `AfterTargets` Çıkış dosyalarıyla bir şeyi yapan özel bir hedef eklemek için özniteliğinin nasıl kullanılacağını gösterir. Bu durumda, çıktı dosyalarını *Customoutput*yeni bir klasöre kopyalar.  Örnek ayrıca bir özniteliği kullanarak bir hedefle birlikte özel yapı işlemi tarafından oluşturulan dosyaların nasıl temizleyeceğini `CustomClean` `BeforeTargets` ve özel temizleme işleminin hedeften önce çalıştığını belirtmektir `CoreClean` .
+Aşağıdaki örnek, `AfterTargets` Çıkış dosyalarıyla bir şeyi yapan özel bir hedef eklemek için özniteliğinin nasıl kullanılacağını gösterir. Bu durumda, çıktı dosyalarını *Customoutput* yeni bir klasöre kopyalar.  Örnek ayrıca bir özniteliği kullanarak bir hedefle birlikte özel yapı işlemi tarafından oluşturulan dosyaların nasıl temizleyeceğini `CustomClean` `BeforeTargets` ve özel temizleme işleminin hedeften önce çalıştığını belirtmektir `CoreClean` .
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -130,7 +130,7 @@ Bu XML parçası, hedefin çalıştırılabilmesi için önce `Build` özellikte
 </PropertyGroup>
 ```
 
-Proje dosyanızın sonunda adlı başka bir özelliği bildirerek, bu özellik değerini geçersiz kılabilirsiniz `BuildDependsOn` . Önceki `BuildDependsOn` özelliği yeni özelliğe dahil ederek, hedef listenin başına ve sonuna yeni hedefler ekleyebilirsiniz. Örneğin:
+Proje dosyanızın sonunda adlı başka bir özelliği bildirerek, bu özellik değerini geçersiz kılabilirsiniz `BuildDependsOn` . Önceki `BuildDependsOn` özelliği yeni özelliğe dahil ederek, hedef listenin başına ve sonuna yeni hedefler ekleyebilirsiniz. Örnek:
 
 ```xml
 <PropertyGroup>

@@ -23,11 +23,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: dbfd8ac877fce4b1808a76e3bb2a66ac595693de
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89599503"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95970615"
 ---
 # <a name="dump-files-in-the-visual-studio-debugger"></a>Visual Studio hata ayıklayıcısındaki döküm dosyaları
 
@@ -86,9 +86,9 @@ Visual Studio 'da bir işlemde hata ayıklarken, hata ayıklayıcı bir özel du
 
    ![Mini döküm Özet sayfası](../debugger/media/dbg_dump_summarypage.png "Mini döküm Özet sayfası")
 
-1. **Eylemler**altında:
+1. **Eylemler** altında:
    - Sembol yükleme konumlarını ayarlamak için **sembol yollarını ayarla**' yı seçin.
-   - Hata ayıklamayı başlatmak için, **yalnızca yönetilen Ile hata**Ayıkla, **yalnızca yerel ile**Hata Ayıkla, **karma Ile**hata ayıklama veya **yönetilen bellekle hata ayıklama**seçeneğini belirleyin.
+   - Hata ayıklamayı başlatmak için, **yalnızca yönetilen Ile hata** Ayıkla, **yalnızca yerel ile** Hata Ayıkla, **karma Ile** hata ayıklama veya **yönetilen bellekle hata ayıklama** seçeneğini belirleyin.
 
 ## <a name="find-exe-pdb-and-source-files"></a><a name="BKMK_Find_binaries__symbol___pdb__files__and_source_files"></a> . Exe,. pdb ve kaynak dosyalarını bul
 
@@ -111,7 +111,7 @@ Visual Studio, döküm dosyasına dahil olmayan *. exe* dosyaları için bu konu
 
 ### <a name="use-the-no-binary-no-symbols-or-no-source-found-pages"></a>Hiçbir binary, simge yok veya hiçbir kaynak bulunamadı sayfası kullanın
 
-Visual Studio, dökümdeki bir modülün hatalarını ayıklamak için gereken dosyaları bulamazsa, **hiçbir Ikili bulunamadı**, **sembol bulunamadı**veya hiçbir **kaynak bulunamadı** sayfası görüntülenir. Bu sayfalar, sorunun nedeni hakkında ayrıntılı bilgi sağlar ve dosyaları bulmanıza yardımcı olabilecek eylem bağlantıları sağlar. Bkz. [simge (. pdb) ve kaynak dosyaları belirtme](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).
+Visual Studio, dökümdeki bir modülün hatalarını ayıklamak için gereken dosyaları bulamazsa, **hiçbir Ikili bulunamadı**, **sembol bulunamadı** veya hiçbir **kaynak bulunamadı** sayfası görüntülenir. Bu sayfalar, sorunun nedeni hakkında ayrıntılı bilgi sağlar ve dosyaları bulmanıza yardımcı olabilecek eylem bağlantıları sağlar. Bkz. [simge (. pdb) ve kaynak dosyaları belirtme](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

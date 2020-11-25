@@ -10,11 +10,11 @@ manager: AndSter
 ms.workload:
 - multiple
 ms.openlocfilehash: 563531b6dfbf59e33b63dcb4561612d86cd39acc
-ms.sourcegitcommit: 14637be49401f56341c93043eab560a4ff6b57f6
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90075424"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95970231"
 ---
 # <a name="analyze-memory-usage-by-using-the-net-object-allocation-tool"></a>.NET nesne ayırma aracı 'nı kullanarak bellek kullanımını analiz etme
 
@@ -68,21 +68,21 @@ Yalnızca belirli bir zaman aralığı için etkinliğin görüntüleneceği tab
 
 **Ayırma** görünümü, bellek ayıran nesnelerin konumunu ve bu nesnelerin ne kadar bellek ayırışını gösterir.
 
--  **Tür**   sütunu, bellek kullanan sınıfların ve yapıların bir listesidir. Geri izlemeyi ters çevrilmiş çağrı ağacı olarak görüntülemek için bir türe çift tıklayın. Yalnızca **ayırma** görünümünde, seçili kategoride bellek alan öğeleri görebilirsiniz.
+- **Tür** sütunu, bellek kullanan sınıfların ve yapıların bir listesidir. Geri izlemeyi ters çevrilmiş çağrı ağacı olarak görüntülemek için bir türe çift tıklayın. Yalnızca **ayırma** görünümünde, seçili kategoride bellek alan öğeleri görebilirsiniz.
 
--  **Tahsisatlar**   sütunu, belirli bir ayırma türü veya işlevi içinde belleği alan nesne sayısını gösterir. Bu sütun yalnızca **ayırma**, **çağrı ağacı**ve **işlev**   görünümlerinde görünür.
+- **Tahsisatlar** sütunu, belirli bir ayırma türü veya işlevi içinde belleği alan nesne sayısını gösterir. Bu sütun yalnızca **ayırma**, **çağrı ağacı** ve **işlev** görünümlerinde görünür.
 
--  **Bayt**   ve **Ortalama Boyut (bayt)**   sütunları varsayılan olarak görünmez. Bunları göstermek için **tür**   veya **ayırmalar**   sütununa sağ tıklayın ve ardından **Bytes**   bunları grafiğe eklemek için bayt ve **Ortalama Boyut (bayt)**   seçeneklerini belirleyin. 
+- **Bayt** ve **Ortalama Boyut (bayt)** sütunları varsayılan olarak görünmez. Bunları göstermek için **tür** veya **ayırmalar** sütununa sağ tıklayın ve ardından bunları grafiğe eklemek Için **bayt** ve **Ortalama Boyut (bayt)** seçeneklerini belirleyin. 
 
-   İki sütun **Toplam (ayırmalar)** ve **kendine (ayırmalar)** benzerdir, ancak belleği alan nesne sayısı yerine, alınan bellek miktarını gösterir. Bu sütunlar yalnızca **ayırma** görünümünde görünür.
+   İki sütun **Toplam (ayırmalar)** ve **kendine (ayırmalar)** benzerdir, ancak belleği alan nesne sayısı yerine, alınan bellek miktarını gösterir. Bu sütunlar yalnızca **ayırma** görünümünde görünür.
 
--  **Modül adı**   sütunu, çağıran işlevi veya işlemi içeren modülü gösterir.
+- **Modül adı** sütunu, çağıran işlevi veya işlemi içeren modülü gösterir.
 
-Bu sütunların hepsi sıralanabilir.  **Tür** ve **Modül adı** sütunları için öğeleri alfabetik olarak artan veya azalan sırada sıralayabilirsiniz.  **Ayırmalar**, **baytlar**   ve **Ortalama Boyut (bayt)** için, sayısal değeri artırarak veya azaltarak öğeleri sıralayabilirsiniz.
+Bu sütunların hepsi sıralanabilir. **Tür** ve **Modül adı** sütunları için öğeleri alfabetik olarak artan veya azalan sırada sıralayabilirsiniz. **Ayırmalar**, **baytlar** ve **Ortalama Boyut (bayt)** için, sayısal değeri artırarak veya azaltarak öğeleri sıralayabilirsiniz.
 
 #### <a name="symbols"></a>Simgeleri
 
-**Ayırma**, **çağrı ağacı**ve **işlevler** sekmelerinde aşağıdaki semboller görünür:
+**Ayırma**, **çağrı ağacı** ve **işlevler** sekmelerinde aşağıdaki semboller görünür:
 
 - ![Değer türü symbol](../profiling/media/valuetypeicon.png "Değer türü simgesi") -Integer gibi bir değer türü
 
@@ -96,13 +96,13 @@ Bu sütunların hepsi sıralanabilir.  **Tür** ve **Modül adı** sütunları 
 
 ![Çağrı ağacı görünümü](../profiling/media/calltreelight.png "Çağrı ağacı görünümü")
 
- **Çağrı ağacı**   görünümü, çok fazla bellek ayıran nesneleri içeren işlev yürütme yollarını gösterir.
+**Çağrı ağacı** görünümü, çok fazla bellek ayıran nesneleri içeren işlev yürütme yollarını gösterir.
 
--  **Işlev adı**   sütunu, bellek ayıran nesneleri içeren işlevin işlemini veya adını gösterir. Görüntü, İnceleme yaptığınız düğümün düzeyini temel alır.
--  **Toplam (ayırmalar)** ve **Toplam Boyut (bayt)**   sütunları, ayrılan nesne sayısını ve bir işlev tarafından kullanılan bellek miktarını ve çağrı yaptığı diğer tüm işlevleri gösterir.
+- **Işlev adı** sütunu, bellek ayıran nesneleri içeren işlevin işlemini veya adını gösterir. Görüntü, İnceleme yaptığınız düğümün düzeyini temel alır.
+- **Toplam (ayırmalar)** ve **Toplam Boyut (bayt)** sütunları, ayrılan nesne sayısını ve bir işlev tarafından kullanılan bellek miktarını ve çağrı yaptığı diğer tüm işlevleri gösterir.
 - **Kendi kendine (ayırmalar)** ve **kendi kendine boyut (bayt)** sütunları, ayrılan nesne sayısını ve tek bir seçili işlev veya ayırma türü tarafından kullanılan bellek miktarını gösterir.
 - **Ortalama Boyut (bayt)** sütunu, **ayırma** görünümündeki ile aynı bilgileri gösterir.
--  **Modül adı**   sütunu, çağıran işlevi veya işlemi içeren modülü gösterir.
+- **Modül adı** sütunu, çağıran işlevi veya işlemi içeren modülü gösterir.
 
    ![Genişletilmiş etkin yol](../profiling/media/hotpathlight.png "Genişletilmiş etkin yol")
 
@@ -135,7 +135,7 @@ Bu sütunların hepsi sıralanabilir.  **Tür** ve **Modül adı** sütunları 
 
 ### <a name="filtering-tools"></a>Filtreleme araçları
 
-**Ayırmalar**, **çağrı ağacı**ve **işlev** görünümleri tümünü **göster yalnızca kendi kodum** ve **yerel kod** seçeneklerini ve bir filtre kutusunu gösterir.
+**Ayırmalar**, **çağrı ağacı** ve **işlev** görünümleri tümünü **göster yalnızca kendi kodum** ve **yerel kod** seçeneklerini ve bir filtre kutusunu gösterir.
 
 - Yalnızca kodunuza odaklanabilmeniz için sistemleri, çerçeveleri ve diğer kullanıcı olmayan kodu **[harici kod]** çerçevelerine göre daraltır **yalnızca kendi kodum** . Daha fazla bilgi için bkz. [yalnızca kendi kodum Kullanıcı kodunda hata ayıklama](../debugger/just-my-code.md).
 - **Yerel kodu göster** , analiz hedefi içindeki yerel kodu gösterir ve Kullanıcı olmayan kod içerebilir.

@@ -1,5 +1,7 @@
 ---
 title: İlişkilendirme ve başlatma formları ile iş akışı oluşturma
+description: Bu SharePoint gözden geçirmede ilişkilendirme ve başlatma formlarının kullanımını içeren temel bir sıralı iş akışı oluşturun.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 6f257dfed2fe439c5ab22ab9951b6258116c6567
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 62501a23695b81ee0437d3210dced7c81f9b054e
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86017134"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95970440"
 ---
 # <a name="walkthrough-create-a-workflow-with-association-and-initiation-forms"></a>İzlenecek yol: ilişkilendirme ve başlatma formları ile iş akışı oluşturma
   Bu izlenecek yol, ilişkilendirme ve başlatma formlarının kullanımını içeren temel sıralı bir iş akışının nasıl oluşturulacağını gösterir. Bunlar, SharePoint Yöneticisi (ilişkilendirme formu) tarafından ilk kez ilişkilendirildiğinde ve iş akışı Kullanıcı tarafından başlatıldığında (başlatma formu) parametrelerin bir iş akışına eklenmesini sağlayan ASPX formlarıdır.
@@ -54,7 +56,7 @@ ms.locfileid: "86017134"
 >
 > Ayrıca bilgisayarınız, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Aşağıdaki yönergelerde bazı Kullanıcı arabirimi öğeleri için farklı adlar veya konumlar gösterebilir. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]Sahip olduğunuz sürüm ve kullandığınız ayarlar bu öğeleri tespit. Daha fazla bilgi için bkz. [Visual STUDIO IDE 'Yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - Ve SharePoint 'in desteklenen sürümleri [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] .
@@ -66,9 +68,9 @@ ms.locfileid: "86017134"
 
 #### <a name="to-create-a-sharepoint-sequential-workflow-project"></a>SharePoint sıralı iş akışı projesi oluşturmak için
 
-1. **File**  >  **New**  >  **Yeni proje** iletişim kutusunu göstermek için menü çubuğunda dosya yeni**Proje** ' yi seçin.
+1. **File**  >  **New**  >  **Yeni proje** iletişim kutusunu göstermek için menü çubuğunda dosya yeni **Proje** ' yi seçin.
 
-2. **Visual C#** veya **Visual Basic**altında **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
+2. **Visual C#** veya **Visual Basic** altında **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
 
 3. **Şablonlar** bölmesinde, **SharePoint 2010 proje** projesi şablonunu seçin.
 
@@ -84,7 +86,7 @@ ms.locfileid: "86017134"
 
 7. Menü çubuğunda, **Proje**  >  **Yeni öğe Ekle**' yi seçin.
 
-8. **Visual C#** veya **Visual Basic**altında **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
+8. **Visual C#** veya **Visual Basic** altında **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
 
 9. **Şablonlar** bölmesinde, **sıralı iş akışı (yalnızca Grup çözümü)** şablonunu seçin ve ardından **Ekle** düğmesini seçin.
 
@@ -103,15 +105,15 @@ ms.locfileid: "86017134"
 
 #### <a name="to-add-an-association-form-to-the-workflow"></a>İş akışına bir ilişkilendirme formu eklemek için
 
-1. **Çözüm Gezgini**içinde **Workflow1** düğümünü seçin.
+1. **Çözüm Gezgini** içinde **Workflow1** düğümünü seçin.
 
-2. **Project**  >  **Yeni öğe** Ekle iletişim kutusunu göstermek için menü çubuğunda Proje**Yeni öğe Ekle** ' yi seçin.
+2. **Project**  >  **Yeni öğe** Ekle iletişim kutusunu göstermek için menü çubuğunda Proje **Yeni öğe Ekle** ' yi seçin.
 
 3. İletişim kutusu ağacı görünümünde, **Visual C#** veya **Visual Basic** (Proje dilinize bağlı olarak) öğesini genişletin, **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
 
 4. Şablon listesinde **Iş akışı Ilişkilendirmesi form** şablonunu seçin.
 
-5. **Ad** metin kutusuna **ExpenseReportAssocForm. aspx**girin.
+5. **Ad** metin kutusuna **ExpenseReportAssocForm. aspx** girin.
 
 6. Formu projeye eklemek için **Ekle** düğmesini seçin.
 
@@ -164,7 +166,7 @@ ms.locfileid: "86017134"
 
 #### <a name="to-create-an-initiation-form"></a>Başlatma formu oluşturmak için
 
-1. **Çözüm Gezgini**içinde **Workflow1** düğümünü seçin.
+1. **Çözüm Gezgini** içinde **Workflow1** düğümünü seçin.
 
 2. Menü çubuğunda, **Proje**  >  **Yeni öğe Ekle** ' yi seçerek **Yeni öğe Ekle** iletişim kutusunu görüntüleyin.
 
@@ -172,7 +174,7 @@ ms.locfileid: "86017134"
 
 4. Şablon listesinde, **Iş akışı başlatma formu** şablonunu seçin.
 
-5. **Ad** metin kutusuna **ExpenseReportInitForm. aspx**girin.
+5. **Ad** metin kutusuna **ExpenseReportInitForm. aspx** girin.
 
 6. Formu projeye eklemek için **Ekle** düğmesini seçin.
 
@@ -267,7 +269,7 @@ ms.locfileid: "86017134"
 
     - **CreateTask** etkinliğinin kısayol menüsünü açın, **Kopyala**' yı seçin, iş akışı tasarımcısında **IfElseActivity1** içinde yer alan iki **bırakma etkinliği** alanının kısayol menüsünü açın ve ardından **Yapıştır**' ı seçin.
 
-    - **CreateTask** etkinliğini **araç kutusundan** **IfElseActivity1**içinde yer alan iki **bırakma etkinliği** alanından birine sürükleyin.
+    - **CreateTask** etkinliğini **araç kutusundan** **IfElseActivity1** içinde yer alan iki **bırakma etkinliği** alanından birine sürükleyin.
 
 6. **Özellikler** penceresinde, **CorrelationToken** özelliği için *taskToken* özellik değerini girin.
 
@@ -289,7 +291,7 @@ ms.locfileid: "86017134"
 
     - **LogToHistoryListActivity** etkinliğinin kısayol menüsünü açın, **Kopyala**' yı seçin, iş akışı tasarımcısında **IfElseActivity1** içindeki diğer **bırakma etkinlikleri** için kısayol menüsünü açın ve ardından **Yapıştır**' ı seçin.
 
-    - **LogToHistoryListActivity** etkinliğini **araç kutusundan**sürükleyin ve **IfElseActivity1**içindeki diğer **bırakma etkinlikleri** alanına bırakın.
+    - **LogToHistoryListActivity** etkinliğini **araç kutusundan** sürükleyin ve **IfElseActivity1** içindeki diğer **bırakma etkinlikleri** alanına bırakın.
 
 ## <a name="add-code-to-the-workflow"></a>İş akışına kod ekleme
  Sonra, BT işlevselliği sağlamak için iş akışına kod ekleyin.
@@ -359,7 +361,7 @@ ms.locfileid: "86017134"
 
 5. **Özellikler** penceresinde **koşul** özelliğinin aşağı açılan okunu seçin ve ardından *Kod koşulu* değerini ayarlayın.
 
-6. **Koşul** özelliğini genişleterek yanındaki artı Işaretini (![TreeView Plus](../sharepoint/media/plus.gif "TreeView Plus")) seçip değerini *checkApprovalNeeded*olarak ayarlayın.
+6. **Koşul** özelliğini genişleterek yanındaki artı Işaretini (![TreeView Plus](../sharepoint/media/plus.gif "TreeView Plus")) seçip değerini *checkApprovalNeeded* olarak ayarlayın.
 
 7. İş akışı tasarımcısında, **logToHistoryListActivity1** etkinliğinin kısayol menüsünü açın ve ardından olay için boş bir yöntem oluşturmak üzere **işleyicileri oluştur** ' u seçin `MethodInvoking` .
 
@@ -426,11 +428,11 @@ ms.locfileid: "86017134"
 
      Bu, iş akışı başlatma formunu görüntüler. ( **Otomatik onay limiti** kutusunda görüntülenen değerin, ilişkilendirme formuna girildiği için salt okunurdur.)
 
-7. **Gider toplamı** metin kutusuna **1600**girin ve sonra **iş akışını başlat** düğmesini seçin.
+7. **Gider toplamı** metin kutusuna **1600** girin ve sonra **iş akışını başlat** düğmesini seçin.
 
      Bu, **paylaşılan belgeler** listesini yeniden görüntüler. **Tamamlanan** değere sahip **ExpenseReportWorkflow** adlı yeni bir sütun, iş akışının yeni başlatıldığı öğeye eklenir.
 
-8. Karşıya yüklenen belgenin yanındaki açılan oku seçin ve sonra iş akışı durumu sayfasını göstermek için **Iş akışları** öğesini seçin. **Tamamlanan Iş akışları**altında **Tamamlanan** değeri seçin. Görev, **Görevler** bölümünün altında listelenir.
+8. Karşıya yüklenen belgenin yanındaki açılan oku seçin ve sonra iş akışı durumu sayfasını göstermek için **Iş akışları** öğesini seçin. **Tamamlanan Iş akışları** altında **Tamamlanan** değeri seçin. Görev, **Görevler** bölümünün altında listelenir.
 
 9. Görevin ayrıntılarını göstermek için görevin başlığını seçin.
 

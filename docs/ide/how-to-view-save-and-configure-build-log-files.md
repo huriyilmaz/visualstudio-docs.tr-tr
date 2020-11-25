@@ -12,11 +12,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 02d26416357ec13b61232f2adb0bc3e5e3c67818
-ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92136608"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95970201"
 ---
 # <a name="how-to-view-save-and-configure-build-log-files"></a>Nasıl yapılır: derleme günlüğü dosyalarını görüntüleme, kaydetme ve yapılandırma
 
@@ -36,11 +36,11 @@ MSBuild kullanarak her türlü proje oluşturuyorsanız, derleme hakkında bilgi
 
 ## <a name="to-create-a-build-log-file-for-a-managed-code-project"></a>Yönetilen kod projesi için bir yapı günlük dosyası oluşturmak için
 
-1. Menü **çubuğunda Build**  >  **Build Solution**öğesini seçin.
+1. Menü **çubuğunda Build**  >  **Build Solution** öğesini seçin.
 
 2. **Çıkış** penceresinde, metinde herhangi bir yere tıklayın.
 
-3. **CTRL** + **S**tuşuna basın.
+3. **CTRL** + **S** tuşuna basın.
 
    Visual Studio, derleme çıktısının kaydedileceği bir konum ister.
 
@@ -65,7 +65,7 @@ Ayrıca, `-fileLogger` ( `-fl` ) komut satırı seçeneğini kullanarak doğruda
      Daha fazla bilgi için bkz. [Seçenekler iletişim kutusu, projeler ve çözümler, oluşturma ve çalıştırma](../ide/reference/options-dialog-box-projects-and-solutions-build-and-run.md) <xref:Microsoft.Build.Framework.LoggerVerbosity> .
 
     > [!IMPORTANT]
-    > Değişikliklerinizin **Çıkış** penceresinde (tüm projeler) ve * \<ProjectName> . txt* dosyasında (yalnızca C++ projeleri) etkili olması için projeyi yeniden oluşturmanız gerekir.
+    > Değişikliklerinizin **Çıkış** penceresinde (tüm projeler) ve *\<ProjectName> . txt* dosyasında (yalnızca C++ projeleri) etkili olması için projeyi yeniden oluşturmanız gerekir.
 
 ## <a name="use-binary-logs-to-make-it-easier-to-browse-large-log-files"></a>Büyük günlük dosyalarına gözatmaya daha kolay hale getirmek için ikili günlükleri kullanın
 

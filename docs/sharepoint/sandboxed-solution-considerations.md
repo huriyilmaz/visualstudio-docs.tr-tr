@@ -1,5 +1,7 @@
 ---
 title: Korumalı çözüm konuları | Microsoft Docs
+description: Site koleksiyonu kullanıcılarının kendi özel kod çözümlerini karşıya yüklemesine olanak sağlayan, Microsoft SharePoint 'in bir özelliği olan korumalı çözümleri keşfet.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 3f6345e7627549c672aa28fac8cba5f6d9658a23
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 17b310a3f992f80b04ad14bb6e038e05b009a4af
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64793822"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95970457"
 ---
 # <a name="sandboxed-solution-considerations"></a>Korumalı çözüm konuları
   *Korumalı çözümler* , site koleksiyonu kullanıcılarının kendi özel kod çözümlerini karşıya yüklemesine olanak sağlayan bir Microsoft SharePoint 2010 özelliğidir. Ortak bir korumalı çözüm, kullanıcılar kendi Web Bölümleri karşıya yüklüyor.
@@ -31,7 +33,7 @@ ms.locfileid: "64793822"
  Korumalı bir SharePoint uygulaması, Web grubunun sınırlı bir kısmına erişimi olan güvenli, izlenen bir işlemde çalışır. Microsoft SharePoint 2010, korumalı çözümleri etkinleştirmek için özelliklerin, çözüm galerlarının, çözüm izlemenin ve bir doğrulama çerçevesinin bir birleşimini kullanır.
 
 ## <a name="specify-project-trust-level"></a>Proje güven düzeyini belirtin
- [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] korumalı *çözüm*adlı bir Boole proje özelliği aracılığıyla korumalı çözümleri destekler. Bu özellik projede herhangi bir zamanda ayarlanabilir veya **SharePoint Özelleştirme sihirbazında**projeyi oluşturduğunuzda belirlenebilir.
+ [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] korumalı *çözüm* adlı bir Boole proje özelliği aracılığıyla korumalı çözümleri destekler. Bu özellik projede herhangi bir zamanda ayarlanabilir veya **SharePoint Özelleştirme sihirbazında** projeyi oluşturduğunuzda belirlenebilir.
 
 > [!NOTE]
 > Projenin, oluşturulduktan sonra *Korumalı çözüm* özelliğini değiştirmek doğrulama hatalarına neden olabilir.
@@ -78,7 +80,7 @@ ms.locfileid: "64793822"
 
 - Korumalı çözümler için kullanılabilir dağıtılabilir çözüm öğelerinin kısıtlı bir alt kümesi vardır. Site tanımları ve iş akışları gibi savunmasız olabilecek SharePoint proje şablonları kullanılamaz.
 
-- SharePoint, ana* * [!INCLUDE[TLA2#tla_iis5](../sharepoint/includes/tla2sharptla-iis5-md.md)] uygulama havuzu (*w3wp.exe*) işleminden ayrı bir işlemde (SPUCWorkerProcess.exe) Korumalı çözüm kodu çalıştırır.
+- SharePoint, ana ** [!INCLUDE[TLA2#tla_iis5](../sharepoint/includes/tla2sharptla-iis5-md.md)] uygulama havuzu (*w3wp.exe*) işleminden ayrı bir işlemde (SPUCWorkerProcess.exe) Korumalı çözüm kodu çalıştırır.
 
 - Eşlenen klasörler projeye eklenemiyor.
 
@@ -119,7 +121,7 @@ ms.locfileid: "64793822"
 
 - Web Bölümleri
 
-- WebTemplate özellik öğeleri ( *Webtemp.xml*yerine)
+- WebTemplate özellik öğeleri ( *Webtemp.xml* yerine)
 
 - Görsel Web Bölümleri
 

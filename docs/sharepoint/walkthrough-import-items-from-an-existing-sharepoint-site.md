@@ -1,6 +1,8 @@
 ---
 title: 'İzlenecek yol: mevcut bir SharePoint sitesinden öğeleri Içeri aktarma | Microsoft Docs'
 titleSuffix: ''
+description: Bu kılavuzda, var olan bir SharePoint sitesindeki öğeleri bir Visual Studio SharePoint projesine aktarın.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,19 +16,19 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c5f9fd5e3cc9b0df5feb60149e58e895996bb1f0
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 7eeff880538d98f997f48f82c49d01045e834031
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "92298649"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95970132"
 ---
 # <a name="walkthrough-import-items-from-an-existing-sharepoint-site"></a>İzlenecek yol: mevcut bir SharePoint sitesinden öğeleri Içeri aktarma
   Bu izlenecek yol, mevcut bir SharePoint sitesinden SharePoint projesine nasıl öğe aktarılacağını gösterir [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
  Bu izlenecek yol aşağıdaki görevleri gösterir:
 
-- Özel bir site sütunu ( *alan*olarak da bilinir) ekleyerek bir SharePoint sitesini özelleştirme.
+- Özel bir site sütunu ( *alan* olarak da bilinir) ekleyerek bir SharePoint sitesini özelleştirme.
 
 - Bir SharePoint sitesini bir. wsp dosyasına aktarma.
 
@@ -34,7 +36,7 @@ ms.locfileid: "92298649"
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - Ve SharePoint 'in desteklenen sürümleri [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] .
@@ -58,7 +60,7 @@ ms.locfileid: "92298649"
 
 6. Daha sonra, **Site eylemleri** menüsünü açıp **Yeni site**' yi seçip **boş site** türünü seçerek ana SharePoint sitesinden boş bir alt site oluşturun.
 
-7. **Başlık** kutusuna **site sütunu test 2**yazın; **URL adı** kutusuna **columntest2**; yazın. diğer ayarları varsayılan değerlerinde bırakın; ardından **Oluştur** düğmesini seçin.
+7. **Başlık** kutusuna **site sütunu test 2** yazın; **URL adı** kutusuna **columntest2**; yazın. diğer ayarları varsayılan değerlerinde bırakın; ardından **Oluştur** düğmesini seçin.
 
 8. Http://<em>SystemName</em>/columntest1/default.exe adlı ilk alt siteye geri gidin.
 
@@ -68,7 +70,7 @@ ms.locfileid: "92298649"
 
 11. **Site sütunu Galerisi** sayfasının en üstünde **Oluştur** düğmesini seçin.
 
-12. **Sütun adı** kutusuna **Test sütunu**girin, diğer varsayılan değerleri koruyun ve **Tamam** düğmesini seçin.
+12. **Sütun adı** kutusuna **Test sütunu** girin, diğer varsayılan değerleri koruyun ve **Tamam** düğmesini seçin.
 
 13. **Test sütunu** sütunu, site sütunu galerisinde özel sütunlar başlığı altında görüntülenir.
 
@@ -84,7 +86,7 @@ ms.locfileid: "92298649"
 
 2. Site Ayarları sayfasının **Site eylemleri** bölümünde **siteyi şablon olarak kaydet** bağlantısı ' nı seçin.
 
-3. **Dosya adı** kutusuna **ExampleSite**girin ve **şablon adı** kutusuna **örnek site**girin.
+3. **Dosya adı** kutusuna **ExampleSite** girin ve **şablon adı** kutusuna **örnek site** girin.
 
 4. Bu örnek için **Içerik Ekle** onay kutusunu boş bırakın.
 
@@ -103,9 +105,9 @@ ms.locfileid: "92298649"
 
 ### <a name="to-import-a-wsp-file"></a>Bir. wsp dosyasını içeri aktarmak için
 
-1. ' De [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , menü çubuğunda **File**  >  **New**  >  **Yeni** proje iletişim kutusunu göstermek için dosya yeni**Proje** ' yi seçin. IDE 'niz Visual Basic geliştirme ayarlarını kullanacak şekilde ayarlandıysa, menü çubuğunda **Dosya**  >  **Yeni proje**' yi seçin.
+1. ' De [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , menü çubuğunda **File**  >  **New**  >  **Yeni** proje iletişim kutusunu göstermek için dosya yeni **Proje** ' yi seçin. IDE 'niz Visual Basic geliştirme ayarlarını kullanacak şekilde ayarlandıysa, menü çubuğunda **Dosya**  >  **Yeni proje**' yi seçin.
 
-2. **Visual C#** veya **Visual Basic**altında **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
+2. **Visual C#** veya **Visual Basic** altında **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
 
 3. **Şablonlar** bölmesinde **SharePoint 2010 çözüm paketini içeri aktar** ' ı seçin, projenin adını WspImportProject1 olarak bırakın ve **Tamam** düğmesini seçin.
 
@@ -113,18 +115,18 @@ ms.locfileid: "92298649"
 
 4. **Hata ayıklama için site ve güvenlik düzeyini belirtin** sayfasında, [!INCLUDE[TLA2#tla_url](../sharepoint/includes/tla2sharptla-url-md.md)] daha önce oluşturduğunuz ikinci SharePoint alt sitesi için öğesini girin. Http://<em>sistem adı</em>/columntest2 adlı yeni özel alan öğesini bu alt siteye eklersiniz.
 
-5. **Bu SharePoint çözümünün güven düzeyi nedir?** bölümünde, seçimi **bir korumalı çözüm olarak dağıt**olarak bırakın.
+5. **Bu SharePoint çözümünün güven düzeyi nedir?** bölümünde, seçimi **bir korumalı çözüm olarak dağıt** olarak bırakın.
 
 6. **Yeni proje kaynağını belirtin** sayfasında, daha önce *. wsp* dosyasını kaydettiğiniz sistemdeki konuma gidin ve sonra **İleri** düğmesini seçin.
 
    > [!NOTE]
    > Bu sayfada **son** düğmesini seçerseniz, *. wsp* dosyasındaki tüm kullanılabilir öğeler içeri aktarılır.
 
-7. **İçeri aktarılacak öğeleri seçin** kutusunda, listede **Test sütunu**hariç tüm onay kutularını temizleyin ve ardından **son** düğmesini seçin.
+7. **İçeri aktarılacak öğeleri seçin** kutusunda, listede **Test sütunu** hariç tüm onay kutularını temizleyin ve ardından **son** düğmesini seçin.
 
     Listede çok sayıda öğe bulunduğundan, listedeki tüm öğeleri seçmek için **CTRL** + **tuşuna** basın ' ı seçebilirsiniz, tüm onay kutularını temizlemek için ara çubuğu tuşunu ve ardından yalnızca **Test sütunu** öğesinin yanındaki onay kutusunu seçebilirsiniz.
 
-    İçeri aktarma işlemi tamamlandıktan sonra, **alanlar**adlı bir klasör içeren **WspImportProject1** adlı yeni bir proje oluşturulur. Bu klasörde özel site sütunu **Test sütunu** ve tanım dosyası *Elements.xml*.
+    İçeri aktarma işlemi tamamlandıktan sonra, **alanlar** adlı bir klasör içeren **WspImportProject1** adlı yeni bir proje oluşturulur. Bu klasörde özel site sütunu **Test sütunu** ve tanım dosyası *Elements.xml*.
 
 ## <a name="deploy-the-project"></a>Projeyi dağıtma
  Son olarak, özel site sütununu görüntülemek için daha önce oluşturduğunuz ikinci SharePoint alt sitesine **WspImportProject1** dağıtın.

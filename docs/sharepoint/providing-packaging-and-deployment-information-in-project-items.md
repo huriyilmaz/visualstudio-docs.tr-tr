@@ -1,5 +1,7 @@
 ---
 title: Proje öğelerinde & dağıtım bilgilerini paketleme
+description: Özellik özellikleri, özellik alıcıları, proje çıktı başvuruları ve güvenli denetim varlıklarını kullanarak SharePoint Proje Öğelerinde Paketleme ve dağıtım verileri ekleyin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -24,12 +26,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: db805c308fd245554824997b24236eb2e2d80e62
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f73d8727fb960cf519d368d928aa20cae38ae1a9
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72984208"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95970479"
 ---
 # <a name="provide-packaging-and-deployment-information-in-project-items"></a>Proje Öğelerinde Paketleme ve dağıtım bilgileri sağlama
   İçindeki tüm SharePoint proje öğeleri [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , proje SharePoint 'e dağıtıldığında ek veri sağlamak için kullanabileceğiniz özelliklere sahiptir. Bu özellikler aşağıdaki gibidir:
@@ -82,7 +84,7 @@ ms.locfileid: "72984208"
  Daha fazla bilgi için bkz. [nasıl yapılır: proje çıktı başvurusu ekleme](../sharepoint/how-to-add-a-project-output-reference.md).
 
 ## <a name="safe-control-entries"></a>Güvenli denetim girdileri
- SharePoint, güvenilmeyen kullanıcıların erişimini belirli denetimlere sınırlamak için güvenli denetim girişleri adlı bir güvenlik mekanizması sağlar. Tasarım, SharePoint 'e güvenilmeyen kullanıcıların, SharePoint sunucusunda ASPX sayfaları yüklemesine ve oluşturmalarına olanak tanır. Bu kullanıcıların ASPX sayfalarına güvenli olmayan kod eklemesini engellemek için, SharePoint *güvenli denetimlere*erişimini sınırlandırır. Güvenli denetimler, sitenizdeki herhangi bir kullanıcı tarafından kullanılabilen ve güvenli olarak belirlenmiş olan ASPX denetimleridir ve Web bölümleridir. Daha fazla bilgi için bkz. [4. Adım: Web bölümünü güvenli denetimler listesine ekleme](/previous-versions/office/developer/sharepoint-2007/ms581321(v=office.12)).
+ SharePoint, güvenilmeyen kullanıcıların erişimini belirli denetimlere sınırlamak için güvenli denetim girişleri adlı bir güvenlik mekanizması sağlar. Tasarım, SharePoint 'e güvenilmeyen kullanıcıların, SharePoint sunucusunda ASPX sayfaları yüklemesine ve oluşturmalarına olanak tanır. Bu kullanıcıların ASPX sayfalarına güvenli olmayan kod eklemesini engellemek için, SharePoint *güvenli denetimlere* erişimini sınırlandırır. Güvenli denetimler, sitenizdeki herhangi bir kullanıcı tarafından kullanılabilen ve güvenli olarak belirlenmiş olan ASPX denetimleridir ve Web bölümleridir. Daha fazla bilgi için bkz. [4. Adım: Web bölümünü güvenli denetimler listesine ekleme](/previous-versions/office/developer/sharepoint-2007/ms581321(v=office.12)).
 
  İçindeki her SharePoint proje öğesi, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Iki Boolean alt özelliğine sahip **Güvenli denetim girişleri** adlı bir özelliğe sahiptir: **betikte** **güvenli** ve güvenlidir. Safe özelliği, güvenilmeyen kullanıcıların bir denetime erişip erişemeyeceğini belirtir. Betik özelliği açısından güvenli, güvenilmeyen kullanıcıların bir denetimin özelliklerini görüntüleyip değiştiremeyeceğini belirtir.
 

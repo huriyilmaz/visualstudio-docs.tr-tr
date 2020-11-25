@@ -11,11 +11,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4bebca3a27d11015388e45ff6839f446506e716c
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400121"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95970606"
 ---
 # <a name="how-to-use-xml-snippets"></a>Nasıl yapılır: XML kod parçacıklarını kullanma
 
@@ -28,13 +28,13 @@ XML kod parçacığı düzenleyiciye eklendikten sonra, kod parçacığındaki d
 Aşağıdaki yordamlarda, **kod parçacığı Ekle** komutuna nasıl erişebileceğiniz açıklanır.
 
 > [!NOTE]
-> **Kod parçacığı Ekle** komutu, klavye kısayolu ( **CTRL** + **K** ve **CTRL** + **X** ) aracılığıyla da kullanılabilir.
+> **Kod parçacığı Ekle** komutu, klavye kısayolu (**CTRL** + **K** ve **CTRL** + **X**) aracılığıyla da kullanılabilir.
 
 ### <a name="to-insert-snippets-from-the-shortcut-menu"></a>Kısayol menüsünden kod parçacıkları eklemek için
 
 1. İmleci XML parçacığı eklemek istediğiniz yere konumlandırın.
 
-2. Sağ tıklayın ve **kod parçacığı Ekle** ' yi seçin.
+2. Sağ tıklayın ve **kod parçacığı Ekle**' yi seçin.
 
    Kullanılabilir XML kod parçacıklarının listesi görüntülenir.
 
@@ -44,7 +44,7 @@ Aşağıdaki yordamlarda, **kod parçacığı Ekle** komutuna nasıl erişebilec
 
 1. İmleci XML parçacığı eklemek istediğiniz yere konumlandırın.
 
-2. **Düzenle** menüsünde, **IntelliSense** ' ın üzerine gelin ve **kod parçacığı Ekle** ' yi seçin.
+2. **Düzenle** menüsünde, **IntelliSense**' ın üzerine gelin ve **kod parçacığı Ekle**' yi seçin.
 
    Kullanılabilir XML kod parçacıklarının listesi görüntülenir.
 
@@ -54,7 +54,7 @@ Aşağıdaki yordamlarda, **kod parçacığı Ekle** komutuna nasıl erişebilec
 
 1. İmleci XML parçacığı eklemek istediğiniz yere konumlandırın.
 
-2. Dosyanıza eklemek istediğiniz XML kod parçacığını yazmaya başlayın. Otomatik tamamlama açıksa, IntelliSense Tamam sözcük listesi görüntülenir. Görünmezse, etkinleştirmek için **CTRL** + + **boşluk** tuşlarına basın.
+2. Dosyanıza eklemek istediğiniz XML kod parçacığını yazmaya başlayın. Otomatik tamamlama açıksa, IntelliSense Tamam sözcük listesi görüntülenir. Görünmezse, etkinleştirmek için **CTRL**+ + **boşluk** tuşlarına basın.
 
 3. Tüm sözcük listesinden XML kod parçacığını seçin.
 
@@ -78,13 +78,13 @@ Aşağıdaki yordamlarda, **kod parçacığı Ekle** komutuna nasıl erişebilec
 Aşağıdaki yordamlarda, komutla **birlikte** nasıl erişebileceğiniz açıklanır.
 
 > [!NOTE]
-> Komut **ile çevreleme** , klavye kısayolu ( **CTRL** + **K** ve **CTRL** + **S** ) aracılığıyla da kullanılabilir.
+> Komut **ile çevreleme** , klavye kısayolu (**CTRL** + **K** ve **CTRL** + **S**) aracılığıyla da kullanılabilir.
 
 ### <a name="to-use-surround-with-from-the-context-menu"></a>Bağlam menüsünden Ile çevrelemeyi kullanmak için
 
 1. XML düzenleyicisinde çevreleyecek metni seçin.
 
-2. Sağ tıklayıp **birlikte Çevrele** ' yi seçin.
+2. Sağ tıklayıp **birlikte Çevrele**' yi seçin.
 
    XML parçacıkları ile kullanılabilir çevreler listesi görüntülenir.
 
@@ -94,7 +94,7 @@ Aşağıdaki yordamlarda, komutla **birlikte** nasıl erişebileceğiniz açıkl
 
 1. XML düzenleyicisinde çevreleyecek metni seçin.
 
-2. **Düzenle** menüsünde, **IntelliSense** ' ın üzerine gelin ve **birlikte Çevrele** ' yi seçin.
+2. **Düzenle** menüsünde, **IntelliSense**' ın üzerine gelin ve **birlikte Çevrele**' yi seçin.
 
    XML parçacıkları ile kullanılabilir çevreler listesi görüntülenir.
 

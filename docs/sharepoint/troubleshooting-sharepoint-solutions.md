@@ -1,5 +1,7 @@
 ---
 title: SharePoint Çözümlerinde Sorun giderme | Microsoft Docs
+description: Visual Studio hata ayıklayıcısını kullanarak SharePoint Çözümlerinde hata ayıkladığınızda sorun veya uyarıların neler olabileceğini görün.
+ms.custom: SEO-VS-2020
 ms.date: 02/22/2017
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e79a08d3f8dbc4b579a52501afb08ffb7dca33f2
-ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
+ms.openlocfilehash: a9ef5e7d47f72b82e7a8fab52cc2f1f8716c83bf
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "92298382"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95970264"
 ---
 # <a name="troubleshoot-sharepoint-solutions"></a>SharePoint Çözümlerinde Sorun giderme
   Hata ayıklayıcıyı kullanarak SharePoint Çözümlerinde hata ayıklarken aşağıdaki sorunlar veya uyarılar oluşabilir [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . Daha fazla bilgi için bkz. [SharePoint 2007 Iş akışı çözümlerinde hata ayıklama](/previous-versions/bb386166(v=vs.100)).
@@ -102,7 +104,7 @@ ms.locfileid: "92298382"
  Yok.
 
 ### <a name="resolution"></a>Çözüm
- Bu sorun, Webtemp site tanımı yapılandırma dosyası için **yol** özelliğindeki yanlış bir değer nedeniyle oluşur, örneğin *webtemp_SiteDefinitionProject1.xml*. **Dağıtım konumu**altında bulunan webtemp dosyasının **Path** özelliğinde, 1033 değerini uygun yerel ayara değiştirin [!INCLUDE[TLA2#tla_id](../sharepoint/includes/tla2sharptla-id-md.md)] . Örneğin, Japonca yerel ayarı kullanmak için değeri 1041 olarak değiştirin. Daha fazla bilgi için bkz. [Microsoft tarafından atanan yerel kimlikler](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).
+ Bu sorun, Webtemp site tanımı yapılandırma dosyası için **yol** özelliğindeki yanlış bir değer nedeniyle oluşur, örneğin *webtemp_SiteDefinitionProject1.xml*. **Dağıtım konumu** altında bulunan webtemp dosyasının **Path** özelliğinde, 1033 değerini uygun yerel ayara değiştirin [!INCLUDE[TLA2#tla_id](../sharepoint/includes/tla2sharptla-id-md.md)] . Örneğin, Japonca yerel ayarı kullanmak için değeri 1041 olarak değiştirin. Daha fazla bilgi için bkz. [Microsoft tarafından atanan yerel kimlikler](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).
 
 ## <a name="error-appears-when-a-workflow-project-is-deployed-on-a-clean-system"></a>Bir iş akışı projesi temiz bir sisteme dağıtıldığında hata görüntülenir
  Bu sorun, içinde bir iş akışı projesini [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] temiz bir sistemde dağıtırsanız oluşur. Temiz bir sistem, ve SharePoint 'in yeni yüklemesi olan [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ancak dağıtılan iş akışı projelerinin olmadığı bir bilgisayardır.
@@ -123,7 +125,7 @@ ms.locfileid: "92298382"
  Görüntü denetimi gibi bir görüntü görüntüleyen bir uygulama sayfası içeren bir SharePoint çözümünde hata ayıklaması yapıyorsanız, [!INCLUDE[TLA2#tla_html](../sharepoint/includes/tla2sharptla-html-md.md)] görüntüde yapılan tüm değişiklikleri göstermek için tarayıcıda sayfayı yenilemeniz gerekir.
 
 ## <a name="error-the-site-location-is-not-valid"></a>Hata: site konumu geçerli değil
- Bu sorun, [!INCLUDE[moss_14_short](../sharepoint/includes/moss-14-short-md.md)] yüklü değilse oluşabilir. **SharePoint Özelleştirme sihirbazında**belirtilen SharePoint Web sitesine yönetici erişiminiz yoksa da bu durum oluşabilir.
+ Bu sorun, [!INCLUDE[moss_14_short](../sharepoint/includes/moss-14-short-md.md)] yüklü değilse oluşabilir. **SharePoint Özelleştirme sihirbazında** belirtilen SharePoint Web sitesine yönetici erişiminiz yoksa da bu durum oluşabilir.
 
 ### <a name="error-message"></a>Hata iletisi
 
@@ -189,9 +191,9 @@ ms.locfileid: "92298382"
 
 ##### <a name="to-resolve-this-issue"></a>Bu sorunu çözmek için
 
-1. **Çözüm Gezgini**, dosya adı uzantısı *. ascx*olan kullanıcı denetim dosyasını seçin.
+1. **Çözüm Gezgini**, dosya adı uzantısı *. ascx* olan kullanıcı denetim dosyasını seçin.
 
-2. Menü çubuğunda **View**  >  **Özellikler penceresini**görüntüle ' yi seçin.
+2. Menü çubuğunda **View**  >  **Özellikler penceresini** görüntüle ' yi seçin.
 
 3. **Özellikler** penceresinde **dağıtım konumu** düğümünü genişletin.
 
@@ -201,7 +203,7 @@ ms.locfileid: "92298382"
  Bu sorun, bir alan içeren bir görev formu içeren bir iş akışını içeri aktarırsanız ve ardından yeni iş akışını içeri aktardığınız aynı sistemde çalıştırırsanız oluşur.
 
 ### <a name="error-message"></a>Hata iletisi
- ' Etkinleştirme özellikleri ' dağıtım adımında hata oluştu: [*GUID*] özelliğinde tanımlanan [*GUID] kimliğine*sahip alan, geçerli site koleksiyonunda veya bir alt sitede bulundu.
+ ' Etkinleştirme özellikleri ' dağıtım adımında hata oluştu: [*GUID*] özelliğinde tanımlanan [*GUID] kimliğine* sahip alan, geçerli site koleksiyonunda veya bir alt sitede bulundu.
 
 ### <a name="resolution"></a>Çözüm
  Bu hata, içinde yeniden kullanılabilir yeniden kullanılabilir Iş akışı projesi [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] görev formu alan kimliklerini değiştirmediğinden oluşan alan kimliği çakışmalarının sonucudur. İçeri aktarılan bir iş akışını orijinal iş akışını içeren aynı sunucuya dağıtırsanız, alan KIMLIĞI çakışmaları oluşur.
@@ -238,7 +240,7 @@ ms.locfileid: "92298382"
 
 4. IIS zaman aşımından önceki bekleme süresini artırmak için, **ping en yüksek yanıt süresi (saniye)** değerini 90 saniyeden daha büyük bir değere değiştirin.
 
-5. IIS ping komutunu devre dışı bırakmak için **ping etkin** ayarını **false**olarak ayarlayın.
+5. IIS ping komutunu devre dışı bırakmak için **ping etkin** ayarını **false** olarak ayarlayın.
 
 ## <a name="auto-retract-leaves-orphaned-list-instance-in-sharepoint"></a>Otomatik geri çekme, SharePoint 'te yalnız bırakılmış liste örneğini bırakır
  Aşağıdaki adımları uygulamanız durumunda bu sorun oluşur.
@@ -257,7 +259,7 @@ ms.locfileid: "92298382"
 ### <a name="resolution"></a>Çözüm
  Bu durum, bir SharePoint çözümünün hata ayıklama oturumunu kapattıktan sonra otomatik olarak geri çekin özelliğinin çözümü geri çeker. Geri çekme, liste tanımını SharePoint 'ten siler, ancak listenin örneğini silmez. Liste örneği için temel alınan liste tanımı gereklidir.
 
- Bu sorunu çözmek için, menü çubuğunda **Yapı**dağıtımı ' nı seçerek çözümü dağıtın  >  **Deploy**. ( **F5** tuşunu seçerek çözümde hata ayıklamayın.) Ardından, SharePoint 'teki liste örneğini silin.
+ Bu sorunu çözmek için, menü çubuğunda **Yapı** dağıtımı ' nı seçerek çözümü dağıtın  >  **Deploy**. ( **F5** tuşunu seçerek çözümde hata ayıklamayın.) Ardından, SharePoint 'teki liste örneğini silin.
 
 ## <a name="original-sharepoint-solution-is-replaced-by-an-exported-version"></a>Özgün SharePoint çözümü, dışarıya aktarılmış bir sürümle değiştirilmiştir
  Bir SharePoint çözümünü dışarı aktarırsanız, çözümü içine aktarın [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ve ardından, dışarı aktarılan siteye geri döndüğünüzde özgün SharePoint çözümü değiştirilmiştir. Çözümü, üzerinde etkin bir çözüm etkinleştirilmemiş bir sunucuya dağıtırsanız bu sorun oluşmaz.
@@ -275,7 +277,7 @@ ms.locfileid: "92298382"
  Web.config yapılandırma dosyası yüklenemedi. Hatalı biçimlendirilmiş XML öğeleri için dosyayı denetleyin ve yeniden deneyin. Şu hata oluştu: belirtilen anahtar sözlükte yoktu.
 
 ### <a name="resolution"></a>Çözüm
- Bu sorunu çözmek için, Visual Studio 'daki SharePoint projesinin site URL 'SI Özellik değerinin, Web uygulamasının alternatif erişim eşlemeleri için varsayılan bölgeye atanan URL ile eşleştiğinden emin olun. URL için Intranet gibi başka bir bölge kullanarak hatayı çözümlenemez. Projenin site URL 'SI ve varsayılan bölgedeki URL eşleşmelidir. Alternatif erişim eşlemelerine erişmek için SharePoint 2010 merkezi yönetim yardımcı programını açın, **uygulama yönetimi** bağlantısını seçin ve ardından **Web uygulamaları**altında, **Alternatif erişim eşlemelerini Yapılandır** bağlantısını seçin. Daha fazla bilgi için bkz. [Web uygulamaları için bölge oluşturma](/previous-versions/office/sharepoint-2007-products-and-technologies/cc263087(v=office.12)).
+ Bu sorunu çözmek için, Visual Studio 'daki SharePoint projesinin site URL 'SI Özellik değerinin, Web uygulamasının alternatif erişim eşlemeleri için varsayılan bölgeye atanan URL ile eşleştiğinden emin olun. URL için Intranet gibi başka bir bölge kullanarak hatayı çözümlenemez. Projenin site URL 'SI ve varsayılan bölgedeki URL eşleşmelidir. Alternatif erişim eşlemelerine erişmek için SharePoint 2010 merkezi yönetim yardımcı programını açın, **uygulama yönetimi** bağlantısını seçin ve ardından **Web uygulamaları** altında, **Alternatif erişim eşlemelerini Yapılandır** bağlantısını seçin. Daha fazla bilgi için bkz. [Web uygulamaları için bölge oluşturma](/previous-versions/office/sharepoint-2007-products-and-technologies/cc263087(v=office.12)).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

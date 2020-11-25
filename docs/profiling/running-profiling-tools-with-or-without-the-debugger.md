@@ -10,11 +10,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0bd8f90c586366a298ba96009dfe5d87a042141b
-ms.sourcegitcommit: ae9145b32fc8e1e663e504c315a5df5dd302fee9
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92918116"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95970298"
 ---
 # <a name="run-profiling-tools-with-or-without-the-debugger"></a>Hata ayıklayıcı ile veya hata ayıklayıcı olmadan profil oluşturma araçları çalıştırma
 
@@ -43,11 +43,11 @@ Hangi araçların ve sonuçların kullanılacağına karar vermek için aşağı
 
 ![Tanılama Araçları penceresinin ekran görüntüsü](../profiling/media/diagnostictoolswindow.png " Tanılama Araçları Penceresi")
 
-- **Bellek kullanımını** , **UI analizini** ve **CPU kullanımını** görüntüleyip görüntüleyemeyeceğinizi belirlemek için araç çubuğundaki **Ayarlar** simgesini kullanın.
+- **Bellek kullanımını**, **UI analizini** ve **CPU kullanımını** görüntüleyip görüntüleyemeyeceğinizi belirlemek için araç çubuğundaki **Ayarlar** simgesini kullanın.
 
 - Daha fazla seçenek içeren **Tanılama Araçları özellik sayfalarını** açmak için **Ayarlar** açılan listesinden **Ayarlar** ' ı seçin.
 
-- Visual Studio Enterprise çalıştırıyorsanız, **araç**  >  **seçenekleri**  >  **IntelliTrace** 'e giderek IntelliTrace 'i etkinleştirebilir veya devre dışı bırakabilirsiniz.
+- Visual Studio Enterprise çalıştırıyorsanız, **araç**  >  **seçenekleri**  >  **IntelliTrace**'e giderek IntelliTrace 'i etkinleştirebilir veya devre dışı bırakabilirsiniz.
 
 Hata ayıklamayı durdurduğunuzda Tanılama oturumu sonlanır.
 
@@ -58,7 +58,7 @@ Daha fazla bilgi için bkz.
 
 ### <a name="the-events-tab"></a>Olaylar sekmesi
 
-Bir hata ayıklama oturumu sırasında, Tanılama Araçları penceresinin Olaylar sekmesinde oluşan tanılama olayları listelenir. Kategori ön ekleri *kesme noktası* , *Dosya* ve diğerleri, bir kategorinin listesini hızlıca taramanızı sağlar veya ilgilendiğiniz kategorileri atlar.
+Bir hata ayıklama oturumu sırasında, Tanılama Araçları penceresinin Olaylar sekmesinde oluşan tanılama olayları listelenir. Kategori ön ekleri *kesme noktası*, *Dosya* ve diğerleri, bir kategorinin listesini hızlıca taramanızı sağlar veya ilgilendiğiniz kategorileri atlar.
 
 Belirli olay kategorilerini seçerek veya temizleyerek, olayları görünüm içinde ve dışında filtrelemek için **filtre** açılan listesini kullanın.
 
@@ -74,7 +74,7 @@ Daha fazla bilgi için, [Tanılama Araçları penceresinin Olaylar sekmesinde ar
 
 Performans verilerini hata ayıklama olmadan toplamak için, performans profil Oluşturucu araçlarını çalıştırabilirsiniz.
 
-1. Visual Studio 'da bir proje açıkken, çözüm yapılandırmasını **yayın** olarak ayarlayın ve dağıtım hedefi olarak **yerel Windows hata ayıklayıcısı** 'Nı (veya **yerel makine** ) seçin.
+1. Visual Studio 'da bir proje açıkken, çözüm yapılandırmasını **yayın** olarak ayarlayın ve dağıtım hedefi olarak **yerel Windows hata ayıklayıcısı** 'Nı (veya **yerel makine**) seçin.
 
 1. **Hata ayıklama**  >  **performans profil oluşturucuyu** seçin veya **alt** + **F2** tuşuna basın.
 
@@ -82,13 +82,13 @@ Performans verilerini hata ayıklama olmadan toplamak için, performans profil O
 
    ![Tanılama araçlarının ekran görüntüsü](../profiling/media/diaghubsummarypage.png "DIAG_SelectTool")
 
-1. Tanılama oturumu başlatmak için **Başlat** ' ı seçin.
+1. Tanılama oturumu başlatmak için **Başlat**' ı seçin.
 
    Oturum çalışırken, bazı araçlar tanılama araçları sayfasındaki gerçek zamanlı verilerin grafiklerini, ayrıca veri toplamayı duraklatma ve sürdürmeye yönelik denetimleri gösterir.
 
     ![Performans Profiler 'daki veri koleksiyonunun ekran görüntüsü](../profiling/media/diaghubcollectdata.png "Merkez verileri topla")
 
-1. Tanılama oturumunu sonlandırmak için, **toplamayı durdur** ' u seçin.
+1. Tanılama oturumunu sonlandırmak için, **toplamayı durdur**' u seçin.
 
    Analiz edilen veriler **rapor** sayfasında görünür.
 

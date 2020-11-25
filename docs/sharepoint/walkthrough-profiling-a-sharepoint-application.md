@@ -1,5 +1,7 @@
 ---
 title: 'İzlenecek yol: SharePoint uygulaması profili oluşturma | Microsoft Docs'
+description: Bu kılavuzda, bir SharePoint uygulamasının performansını iyileştirmek için Visual Studio 'daki profil oluşturma araçlarını kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,15 +17,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9a2e4ca528c7f534cc3a7f04d7e1e2832ee9b412
-ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
+ms.openlocfilehash: 66e19f7744a56d147fb0760c6f20254ea4308603
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "92298631"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95970096"
 ---
 # <a name="walkthrough-profile-a-sharepoint-application"></a>İzlenecek yol: SharePoint uygulaması profili oluşturma
-  Bu izlenecek yol, bir SharePoint uygulamasının performansını iyileştirmek için Visual Studio 'da profil oluşturma araçlarının nasıl kullanılacağını gösterir. Örnek uygulama, özellik olay alıcısının performansını düşürür bir boşta kalma döngüsü içeren bir SharePoint özellik olay alıcıdır. Visual Studio Profiler, projenin *etkin yol*olarak da bilinen en pahalı (en yavaş performanslı) kısmını bulmanıza ve ortadan kaldırmanıza olanak sağlar.
+  Bu izlenecek yol, bir SharePoint uygulamasının performansını iyileştirmek için Visual Studio 'da profil oluşturma araçlarının nasıl kullanılacağını gösterir. Örnek uygulama, özellik olay alıcısının performansını düşürür bir boşta kalma döngüsü içeren bir SharePoint özellik olay alıcıdır. Visual Studio Profiler, projenin *etkin yol* olarak da bilinen en pahalı (en yavaş performanslı) kısmını bulmanıza ve ortadan kaldırmanıza olanak sağlar.
 
  Bu izlenecek yol aşağıdaki görevleri gösterir:
 
@@ -37,7 +39,7 @@ ms.locfileid: "92298631"
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - Desteklenen Microsoft Windows ve SharePoint sürümleri.
@@ -49,13 +51,13 @@ ms.locfileid: "92298631"
 
 ### <a name="to-create-a-sharepoint-project"></a>SharePoint projesi oluşturmak için
 
-1. **File**  >  **New**  >  **Yeni proje** iletişim kutusunu göstermek için menü çubuğunda dosya yeni**Proje** ' yi seçin.
+1. **File**  >  **New**  >  **Yeni proje** iletişim kutusunu göstermek için menü çubuğunda dosya yeni **Proje** ' yi seçin.
 
-2. **Visual C#** veya **Visual Basic**altında **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
+2. **Visual C#** veya **Visual Basic** altında **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
 
 3. Şablonlar bölmesinde, **SharePoint 2010 proje** şablonunu seçin.
 
-4. **Ad** kutusunda, **ProfileTest**girin ve **Tamam** düğmesini seçin.
+4. **Ad** kutusunda, **ProfileTest** girin ve **Tamam** düğmesini seçin.
 
     **SharePoint Özelleştirme Sihirbazı** görüntülenir.
 
@@ -65,16 +67,16 @@ ms.locfileid: "92298631"
 
     Şu anda yalnızca Grup çözümlerini profil oluşturabilirsiniz. Korumalı çözümler ve Grup çözümleri hakkında daha fazla bilgi için bkz. [Korumalı çözüm konuları](../sharepoint/sandboxed-solution-considerations.md).
 
-7. **Son** düğmesini seçin. Proje **Çözüm Gezgini**görüntülenir.
+7. **Son** düğmesini seçin. Proje **Çözüm Gezgini** görüntülenir.
 
 ## <a name="add-a-feature-and-feature-event-receiver"></a>Özellik ve özellik olay alıcısı ekleme
  Daha sonra, özelliği için bir olay alıcısıyla birlikte projeye bir özellik ekleyin. Bu olay alıcısı, profili oluşturulacak kodu içerecektir.
 
 ### <a name="to-add-a-feature-and-feature-event-receiver"></a>Özellik ve özellik olay alıcısı eklemek için
 
-1. **Çözüm Gezgini**, **Özellikler** düğümünün kısayol menüsünü açın, **Özellik Ekle**' yi seçin ve adı varsayılan değer olan **özellik1**olarak bırakın.
+1. **Çözüm Gezgini**, **Özellikler** düğümünün kısayol menüsünü açın, **Özellik Ekle**' yi seçin ve adı varsayılan değer olan **özellik1** olarak bırakın.
 
-2. **Çözüm Gezgini**' de, **özellik1**için kısayol menüsünü açın ve ardından **olay alıcısı Ekle**' yi seçin.
+2. **Çözüm Gezgini**' de, **özellik1** için kısayol menüsünü açın ve ardından **olay alıcısı Ekle**' yi seçin.
 
      Bu, birkaç açıklamalı olay işleyicileriyle özelliğe bir kod dosyası ekler ve dosyayı düzenlenmek üzere açar.
 
@@ -195,15 +197,15 @@ ms.locfileid: "92298631"
 
 1. **Çözümle** menüsünde, **Performans Sihirbazını Başlat**' ı seçin.
 
-2. **Performans sihirbazından**biri sayfasında, profil oluşturma yöntemini **CPU örneklemesi** olarak bırakın ve **İleri** düğmesini seçin.
+2. **Performans sihirbazından** biri sayfasında, profil oluşturma yöntemini **CPU örneklemesi** olarak bırakın ve **İleri** düğmesini seçin.
 
      Diğer profil oluşturma yöntemleri, daha gelişmiş profil oluşturma durumlarında kullanılabilir. Daha fazla bilgi için bkz. [performans toplama yöntemlerini anlama](../profiling/understanding-performance-collection-methods.md).
 
-3. **Performans sihirbazının**ikinci sayfasında profil hedefini **ProfileTest** olarak bırakın ve **İleri** düğmesini seçin.
+3. **Performans sihirbazının** ikinci sayfasında profil hedefini **ProfileTest** olarak bırakın ve **İleri** düğmesini seçin.
 
      Bir çözümde birden çok proje varsa, bu listede görünürler.
 
-4. **Performans sihirbazının**üç sayfasında, **katman etkileşim profilini etkinleştir** onay kutusunu temizleyin ve ardından **İleri** düğmesini seçin.
+4. **Performans sihirbazının** üç sayfasında, **katman etkileşim profilini etkinleştir** onay kutusunu temizleyin ve ardından **İleri** düğmesini seçin.
 
      Katman etkileşimi profil oluşturma (tıp) özelliği, veritabanlarını sorgulayan uygulamaların performansını ölçmek ve bir Web sayfasının istendiği zaman sayısını göstermek için yararlıdır. Bu örnek için bu veriler gerekli olmadığından, bu özelliği etkinleştiremeyecektir.
 
@@ -247,7 +249,7 @@ ms.locfileid: "92298631"
 
 3. **Çağrılan işlevler** bölümünde **FeatureActivated** düğmesini seçin.
 
-     **FeatureActivated**için **çağrılan işlevler** bölümünde `TimeCounter` işlev, en pahalı çağrılan işlev olarak listelenir. **Işlev kodu görünümü** bölmesinde, vurgulanan kod ( `TimeCounter` ) etkin değildir ve düzeltmenin nerede gerekli olduğunu gösterir.
+     **FeatureActivated** için **çağrılan işlevler** bölümünde `TimeCounter` işlev, en pahalı çağrılan işlev olarak listelenir. **Işlev kodu görünümü** bölmesinde, vurgulanan kod ( `TimeCounter` ) etkin değildir ve düzeltmenin nerede gerekli olduğunu gösterir.
 
 4. Örnek profil oluşturma raporunu kapatın.
 

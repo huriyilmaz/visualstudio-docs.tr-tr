@@ -11,19 +11,19 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f1c7165f301c82dfaf5aa066a3e15bd7ab244089
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93399488"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95970239"
 ---
 # <a name="how-to-execute-an-xslt-transformation-from-the-xml-editor"></a>Nasıl yapılır: XML düzenleyicisinden XSLT dönüşümü yürütme
 
 XML Düzenleyicisi bir XSLT stil sayfasını bir XML belgesi ile ilişkilendirmenize, dönüştürmeyi gerçekleştirmenize ve çıktıyı görüntülemenize imkan tanır. XSLT dönüşümünde elde edilen çıktı yeni bir belge penceresinde görüntülenir.
 
-**Output** özelliği, çıktının dosya adını belirtir. **Output** özelliği boşsa, geçici dizininizde bir dosya adı oluşturulur. Dosya uzantısı, `xsl:output` Stil sayfanızdaki öğesine dayalıdır ve olabilir. *XML* ,. *txt* veya. *htm*.
+**Output** özelliği, çıktının dosya adını belirtir. **Output** özelliği boşsa, geçici dizininizde bir dosya adı oluşturulur. Dosya uzantısı, `xsl:output` Stil sayfanızdaki öğesine dayalıdır ve olabilir.*XML*,. *txt* veya. *htm*.
 
-**Output** özelliği ile bir dosya adı belirtiyorsa. *htm* veya. *HTML* UZANTıSı, XSLT çıktısı bir Web tarayıcısı kullanılarak önizlenebilir. Diğer tüm dosya uzantıları, Visual Studio tarafından seçilen varsayılan düzenleyici kullanılarak açılır. Örneğin, dosya uzantısı ise. *XML* , VISUAL Studio XML düzenleyicisini kullanır.
+**Output** özelliği ile bir dosya adı belirtiyorsa. *htm* veya. *HTML* UZANTıSı, XSLT çıktısı bir Web tarayıcısı kullanılarak önizlenebilir. Diğer tüm dosya uzantıları, Visual Studio tarafından seçilen varsayılan düzenleyici kullanılarak açılır. Örneğin, dosya uzantısı ise. *XML*, VISUAL Studio XML düzenleyicisini kullanır.
 
 ## <a name="execute-an-xslt-transformation-from-an-xml-file"></a>XML dosyasından XSLT dönüşümü yürütme
 
@@ -35,9 +35,9 @@ XML Düzenleyicisi bir XSLT stil sayfasını bir XML belgesi ile ilişkilendirme
 
        -veya-
 
-    - **Özellikler** PENCERESINI kullanarak XSLT stil sayfasını ekleyin. Düzenleyicide XML dosyası açıkken, düzenleyicide herhangi bir yere sağ tıklayın ve **Özellikler** ' i seçin. **Özellikler** penceresinde, **stil sayfası** alanına tıklayın ve ardından (...) düğmesini seçin. XSLT stil sayfasını seçin ve sonra **Aç** ' ı seçin.
+    - **Özellikler** PENCERESINI kullanarak XSLT stil sayfasını ekleyin. Düzenleyicide XML dosyası açıkken, düzenleyicide herhangi bir yere sağ tıklayın ve **Özellikler**' i seçin. **Özellikler** penceresinde, **stil sayfası** alanına tıklayın ve ardından (...) düğmesini seçin. XSLT stil sayfasını seçin ve sonra **Aç**' ı seçin.
 
-3. Menü çubuğunda, **XML**  >  **hata ayıklama olmadan XML Başlat XSLT** 'yi seçin. Ya da **CTRL** + **alt** + **F5** tuşuna basın.
+3. Menü çubuğunda, **XML**  >  **hata ayıklama olmadan XML Başlat XSLT**'yi seçin. Ya da **CTRL** + **alt** + **F5** tuşuna basın.
 
    XSLT dönüştürmesinin çıktısı yeni bir belge penceresinde görüntülenir.
 
@@ -53,7 +53,7 @@ XML Düzenleyicisi bir XSLT stil sayfasını bir XML belgesi ile ilişkilendirme
    > [!NOTE]
    > XML belgesi, dönüştürme için kullanılan giriş belgesidir. XSLT dönüşümü başlatıldığında bir belge belirtilmemişse, **Dosya Aç** iletişim kutusu görüntülenir ve o sırada bir belge belirtebilirsiniz.
 
-3. Menü çubuğunda, **XML**  >  **hata ayıklama olmadan XML Başlat XSLT** 'yi seçin. Ya da **CTRL** + **alt** + **F5** tuşuna basın.
+3. Menü çubuğunda, **XML**  >  **hata ayıklama olmadan XML Başlat XSLT**'yi seçin. Ya da **CTRL** + **alt** + **F5** tuşuna basın.
 
    XSLT dönüştürmesinin çıktısı yeni bir belge penceresinde görüntülenir.
 

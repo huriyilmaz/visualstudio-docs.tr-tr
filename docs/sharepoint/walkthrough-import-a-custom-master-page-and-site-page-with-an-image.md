@@ -1,5 +1,7 @@
 ---
 title: Özel Ana sayfa & site sayfasını görüntüyle al
+description: Bu kılavuzda, bir SharePoint özel ana sayfasını ve bir Visual Studio SharePoint projesine görüntü içeren bir site sayfasını içeri aktarın.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 311124b2e0b81e70c4c2a7b40754207e6c66b749
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7ceb69608a2d1770f082991f3d927d4e4639ae56
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015684"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95970159"
 ---
 # <a name="walkthrough-import-a-custom-master-page-and-site-page-with-an-image"></a>İzlenecek yol: bir görüntü ile özel ana sayfa ve site sayfasını Içeri aktarma
   Bu izlenecek yol, bir SharePoint özel ana sayfasının ve bir SharePoint projesine görüntü içeren bir site sayfasının nasıl içeri aktarılacağını göstermektedir [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
@@ -76,7 +78,7 @@ ms.locfileid: "86015684"
     </html>
     ```
 
-6. Sayfayı kaydedin, **ana sayfalar** sekmesini seçin ve ana sayfayı **mybasic1. Master**olarak yeniden adlandırın.
+6. Sayfayı kaydedin, **ana sayfalar** sekmesini seçin ve ana sayfayı **mybasic1. Master** olarak yeniden adlandırın.
 
 ## <a name="add-an-image-to-the-content-database-in-sharepoint-designer"></a>SharePoint Designer 'da içerik veritabanına resim ekleme
  Artık site sayfasında görüntülenecek bir resim ekleyebilirsiniz. Görüntü, SharePoint içerik veritabanına dağıtılır.
@@ -85,7 +87,7 @@ ms.locfileid: "86015684"
 
 1. Gezinti bölmesinde, **tüm dosyalar** site nesnesini seçin ve ardından ağaç görünümünde **görüntüler** klasörünü seçin.
 
-2. **Tüm dosyalar** şeridinde **dosyaları içeri aktar**' ı seçin, Istediğiniz dosyayı seçin ve **Tamam** düğmesini seçin. Bu örnekte, dosya **myimg1.png**olarak adlandırılır.
+2. **Tüm dosyalar** şeridinde **dosyaları içeri aktar**' ı seçin, Istediğiniz dosyayı seçin ve **Tamam** düğmesini seçin. Bu örnekte, dosya **myimg1.png** olarak adlandırılır.
 
      İsteğe bağlı olarak, görüntülerin düzenlenmesine yardımcı olması için bir alt klasör oluşturabilirsiniz.
 
@@ -98,7 +100,7 @@ ms.locfileid: "86015684"
 
 1. Gezinti bölmesinde, **site sayfaları** nesnesini seçin.
 
-2. **Sayfalar** şeridinde, **sayfa** düğmesini seçin, **aspx** sayfası türünü seçin ve ardından yeni dosyayı **MyContentPage1. aspx**olarak adlandırın.
+2. **Sayfalar** şeridinde, **sayfa** düğmesini seçin, **aspx** sayfası türünü seçin ve ardından yeni dosyayı **MyContentPage1. aspx** olarak adlandırın.
 
      İsteğe bağlı olarak, site sayfalarını düzenlemeye yardımcı olması için bir alt klasör oluşturabilirsiniz.
 
@@ -158,7 +160,7 @@ ms.locfileid: "86015684"
 
 3. Seçilen öğeleri içe aktarmak için **son** düğmesini seçin.
 
-4. **Çözüm Gezgini**, \_ catalogsmasterpage \_ düğümünü seçin ve **dağıtım çakışma çözümü** özelliğinin değerini **Otomatik**olarak ayarlayın.
+4. **Çözüm Gezgini**, \_ catalogsmasterpage \_ düğümünü seçin ve **dağıtım çakışma çözümü** özelliğinin değerini **Otomatik** olarak ayarlayın.
 
     Bu, tüm dağıtım çakışmalarının otomatik olarak çözümlendiğinden emin olmanıza yardımcı olur.
 

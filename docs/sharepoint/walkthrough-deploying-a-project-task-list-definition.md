@@ -1,5 +1,7 @@
 ---
 title: 'İzlenecek yol: Proje Görev Listesi tanımını dağıtma | Microsoft Docs'
+description: Bu kılavuzda, proje görevlerini izlemek için bir SharePoint listesi oluşturmak, özelleştirmek, hatalarını ayıklamak ve dağıtmak için Visual Studio 'Yu kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b5639fe7a1b35dea41b14be3730986ad7c7309b7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0be8eed2dc41ad433c0e0514dfd34e3c6e3d7193
+ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015765"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95970422"
 ---
 # <a name="walkthrough-deploy-a-project-task-list-definition"></a>İzlenecek yol: proje görev listesi tanımını dağıtma
 
@@ -25,7 +27,7 @@ Bu izlenecek yol, [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-
 
 [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 - Desteklenen Microsoft Windows ve SharePoint sürümleri.
 
@@ -37,23 +39,23 @@ Bir SharePoint listesi projesi oluşturun ve liste tanımını görevlerle iliş
 
 1. **Yeni proje** iletişim kutusunu açın, **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
 
-2. **Şablonlar** bölmesinde, **SharePoint 2010 proje** şablonunu seçin, projeyi **ProjectTaskList**olarak adlandırın ve **Tamam** düğmesini seçin.
+2. **Şablonlar** bölmesinde, **SharePoint 2010 proje** şablonunu seçin, projeyi **ProjectTaskList** olarak adlandırın ve **Tamam** düğmesini seçin.
 
      **SharePoint Özelleştirme Sihirbazı** görüntülenir.
 
 3. Hata ayıklama için kullandığınız yerel SharePoint sitesini belirtin, **Grup çözümü olarak dağıt** seçenek düğmesini seçin ve ardından **son** düğmesini seçin.
 
-4. Proje için kısayol menüsünü açın ve ardından **Add**  >  **Yeni öğe**Ekle ' yi seçin.
+4. Proje için kısayol menüsünü açın ve ardından **Add**  >  **Yeni öğe** Ekle ' yi seçin.
 
 5. **Şablonlar** bölmesinde, **liste** şablonunu seçin ve sonra **Ekle** düğmesini seçin.
 
      **SharePoint Özelleştirme Sihirbazı** görüntülenir.
 
-6. **Listenizde hangi adı göstermek istiyorsunuz?** kutusuna **Project görev listesi**girin.
+6. **Listenizde hangi adı göstermek istiyorsunuz?** kutusuna **Project görev listesi** girin.
 
 7. **Var olan bir liste türüne göre özelleştirilemeyen olmayan bir liste oluştur** düğmesini seçin ve ardından listesinde **Görevler**' i seçin ve ardından **son** düğmesini seçin.
 
-     Liste, özellik ve paket **Çözüm Gezgini**görüntülenir.
+     Liste, özellik ve paket **Çözüm Gezgini** görüntülenir.
 
 ## <a name="add-an-event-receiver"></a>Olay alıcısı ekleme
 
@@ -61,7 +63,7 @@ Görev listesinde, görevin son tarihini ve açıklamasını otomatik olarak aya
 
 1. Proje düğümünün kısayol menüsünü açın, **Ekle**' yi ve ardından **Yeni öğe**' yi seçin.
 
-2. SharePoint şablonları listesinde, **olay alıcısı** şablonunu seçin ve sonra **Projecttasklisteventalıcısı**olarak adlandırın.
+2. SharePoint şablonları listesinde, **olay alıcısı** şablonunu seçin ve sonra **Projecttasklisteventalıcısı** olarak adlandırın.
 
      **SharePoint Özelleştirme Sihirbazı** görüntülenir.
 
@@ -69,9 +71,9 @@ Görev listesinde, görevin son tarihini ve açıklamasını otomatik olarak aya
 
 4. **Hangi öğede olay kaynağı listesi olması gerekir** , **Görevler**' i seçin.
 
-5. İşlenecek olaylar listesinde, **bir öğe eklendiği**yanındaki onay kutusunu işaretleyin ve ardından **son** düğmesini seçin.
+5. İşlenecek olaylar listesinde, **bir öğe eklendiği** yanındaki onay kutusunu işaretleyin ve ardından **son** düğmesini seçin.
 
-     Projeye **Projecttasklisteventalıcısı**adlı bir kod dosyası ile yeni bir olay alıcısı düğümü eklenir.
+     Projeye **Projecttasklisteventalıcısı** adlı bir kod dosyası ile yeni bir olay alıcısı düğümü eklenir.
 
 6. `ItemAdded` **Projecttasklisteventalıcı** kod dosyasındaki yöntemine kod ekleyin. Her yeni görev eklendiğinde, göreve varsayılan bir bitiş tarihi ve açıklama eklenir. Varsayılan son tarih 1 Temmuz 2009 ' dir.
 
@@ -84,9 +86,9 @@ Bir SharePoint çözümü oluşturduğunuzda, Visual Studio otomatik olarak vars
 
 1. **Çözüm Gezgini**, **Özellikler**' i genişletin.
 
-2. **Özellik1**için kısayol menüsünü açın ve **Tasarımcı görüntüle**' yi seçin.
+2. **Özellik1** için kısayol menüsünü açın ve **Tasarımcı görüntüle**' yi seçin.
 
-3. **Başlık** kutusuna **Project görev listesi özelliğini**girin.
+3. **Başlık** kutusuna **Project görev listesi özelliğini** girin.
 
 4. **Kapsam** listesinden **Web**' i seçin.
 
@@ -96,9 +98,9 @@ Bir SharePoint çözümü oluşturduğunuzda, Visual Studio otomatik olarak vars
 
 Bir SharePoint projesi oluşturduğunuzda, Visual Studio varsayılan proje öğelerini içeren özellikleri otomatik olarak pakete ekler. SharePoint sitesinin proje görev listesi ayarlarını paket tasarımcısını kullanarak özelleştirebilirsiniz.
 
-1. **SolutionExplorer**'Da, **paket**için kısayol menüsünü açın ve ardından **Görünüm Tasarımcısı**' nı seçin.
+1. **SolutionExplorer**'Da, **paket** için kısayol menüsünü açın ve ardından **Görünüm Tasarımcısı**' nı seçin.
 
-2. **Ad** kutusuna **ProjectTaskListPackage**yazın.
+2. **Ad** kutusuna **ProjectTaskListPackage** yazın.
 
 3. **Web sunucusunu Sıfırla** onay kutusunu seçin.
 
@@ -120,19 +122,19 @@ Projeyi çalıştırdığınızda, SharePoint sitesi açılır. Ancak, görev li
 
 5. **Öğeler** grubunda, **Yeni öğe** düğmesini seçin.
 
-6. **Başlık** metin kutusuna **Task1**girin.
+6. **Başlık** metin kutusuna **Task1** girin.
 
 7. **Kaydet** düğmesini seçin.
 
      Site yenilendikten sonra, **Task1** görevi son tarih olan 7/1/2009 ile görüntülenir.
 
-8. **Task1**seçin.
+8. **Task1** seçin.
 
      Görevin ayrıntılı görünümü görüntülenir ve açıklama "Bu kritik bir görevdir." ifadesi gösterilir.
 
 ## <a name="deploy-the-project-task-list"></a>Proje görev listesini dağıtma
 
-Proje görev listesini derleyip test ettikten sonra, *yerel sisteme* veya *uzak bir sisteme*dağıtabilirsiniz. Yerel sistem, çözümü geliştirmiş olduğunuz bilgisayardır, ancak uzak sistem farklı bir bilgisayardır.
+Proje görev listesini derleyip test ettikten sonra, *yerel sisteme* veya *uzak bir sisteme* dağıtabilirsiniz. Yerel sistem, çözümü geliştirmiş olduğunuz bilgisayardır, ancak uzak sistem farklı bir bilgisayardır.
 
 ### <a name="to-deploy-the-project-task-list-to-the-local-system"></a>Proje görev listesini yerel sisteme dağıtmak için
 

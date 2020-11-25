@@ -1,5 +1,7 @@
 ---
 title: SharePoint çözümleri için güvenlik | Microsoft Docs
+description: SharePoint uygulamalarının güvenliğinin artırılmasına yardımcı olmak için Visual Studio 'Nun hangi özellikleri eklediğini öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 6dc1449a40528670274ea5b275cca3f0a8d2f277
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e3290d603de124288a5b176dfe0d2e39f5c1377f
+ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "73983784"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95970452"
 ---
 # <a name="security-for-sharepoint-solutions"></a>SharePoint çözümleri için güvenlik
   [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint uygulamalarının güvenliğinin artırılmasına yardımcı olmak için aşağıdaki özellikleri içerir.
@@ -34,7 +36,7 @@ ms.locfileid: "73983784"
  Allowpartiallytrustedçağıranlar özniteliği, sistem genel derleme önbelleğine () dağıtılmayan herhangi bir SharePoint çözümüne eklenir [!INCLUDE[TLA2#tla_gac](../sharepoint/includes/tla2sharptla-gac-md.md)] . Bu, korumalı çözümleri veya SharePoint uygulama sepeti dizinine dağıtılan çözümleri içerir. Daha fazla bilgi için bkz. [Microsoft .NET Framework Için sürüm 1 güvenlik değişiklikleri](/previous-versions/msp-n-p/ff921345(v=pandp.10)) ve [SharePoint Foundation 'da Web bölümleri dağıtma](/previous-versions/office/developer/sharepoint-2010/cc768621(v=office.14)).
 
 ## <a name="safe-against-script-property"></a>Betik özelliğine karşı güvenli
- *Betiği ekleme* , olası kötü amaçlı kodun denetimlere veya Web sayfalarına eklenmesidir. SharePoint 2010 sitelerini betik eklenmesine karşı korumaya yardımcı olmak için, katkıda bulunanlar, varsayılan olarak Web bölümlerini veya özelliklerini görüntüleyemez veya düzenleyemez. Bu davranış, SafeAgainstScript adlı bir SafeControl özniteliğiyle denetlenir. ' De [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)] , bir proje öğesinin **Güvenli denetim girdileri** alt özelliğindeki bu özniteliği **betikle güvende**olarak ayarlayın. Daha fazla bilgi için bkz. [Proje öğelerinde paket ve dağıtım bilgilerini sağlama](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md) ve [nasıl yapılır: denetimleri güvenli denetim olarak işaretleme](../sharepoint/how-to-mark-controls-as-safe-controls.md).
+ *Betiği ekleme* , olası kötü amaçlı kodun denetimlere veya Web sayfalarına eklenmesidir. SharePoint 2010 sitelerini betik eklenmesine karşı korumaya yardımcı olmak için, katkıda bulunanlar, varsayılan olarak Web bölümlerini veya özelliklerini görüntüleyemez veya düzenleyemez. Bu davranış, SafeAgainstScript adlı bir SafeControl özniteliğiyle denetlenir. ' De [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)] , bir proje öğesinin **Güvenli denetim girdileri** alt özelliğindeki bu özniteliği **betikle güvende** olarak ayarlayın. Daha fazla bilgi için bkz. [Proje öğelerinde paket ve dağıtım bilgilerini sağlama](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md) ve [nasıl yapılır: denetimleri güvenli denetim olarak işaretleme](../sharepoint/how-to-mark-controls-as-safe-controls.md).
 
 ## <a name="vista-and-windows-7-user-account-control"></a>Vista ve Windows 7 Kullanıcı hesabı denetimi
  [!INCLUDE[windowsver](../sharepoint/includes/windowsver-md.md)] ve [!INCLUDE[win7](../sharepoint/includes/win7-md.md)] Kullanıcı hesabı denetimi (UAC) olarak bilinen bir güvenlik özelliği ekleyebilirsiniz. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]Üzerinde ve sistemlerinde SharePoint çözümleri geliştirmek [!INCLUDE[windowsver](../sharepoint/includes/windowsver-md.md)] IÇIN [!INCLUDE[win7](../sharepoint/includes/win7-md.md)] , UAC [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] bir sistem yöneticisi olarak çalıştırmanızı gerektirir. **Başlat** menüsünde, için kısayol menüsünü açın [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ve ardından **yönetici olarak çalıştır**' ı seçin.
