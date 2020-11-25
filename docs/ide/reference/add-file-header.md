@@ -1,5 +1,7 @@
 ---
 title: Dosya üst bilgisi ekleme
+description: Varolan dosyalara, projelere ve çözümlere dosya üstbilgileri eklemek için bir EditorConfig dosyası kullanmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 07/10/2020
 ms.topic: reference
 author: mikadumont
@@ -7,12 +9,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 44c3b64d9fb8944a578d054b7d98d4bf39bde3bc
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 5f2e4715c0333b02f120ec5f92d9f742196c04f3
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810382"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95870865"
 ---
 # <a name="add-file-header"></a>Dosya üst bilgisi ekleme
 
@@ -36,18 +38,18 @@ Bu kod üretimi için geçerlidir:
 
 3. Kuralın değerini, uygulamak istediğiniz üst bilgi metnine eşit olacak şekilde ayarlayın. `{fileName}`Dosya adı için bir yer tutucu olarak kullanabilirsiniz.
 
-    ![EditorConfig dosyası üst bilgi kuralı](media/add-file-header-rule.png)
+    ![File_header_template değerini gösteren EditorConfig dosyasının ekran görüntüsü.](media/add-file-header-rule.png)
 
     > [!NOTE]
     > Bir EditorConfig içinde açık multilines olamaz ve yeni satırlar eklemek için UNIX yeni satır karakterini kullanmanız gerekir.
 
 4. Giriş işaretini herhangi bir C# veya Visual Basic dosyasının ilk satırına yerleştirin.
 
-5. **CTRL**tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
+5. **CTRL** tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
 
 6. **Dosya başlığı Ekle**' yi seçin. 
 
-    ![EditorConfig dosyası üst bilgi kuralı](media/add-file-header.png)
+    ![Dosya üst bilgisi ekle seçeneğinin ekran görüntüsü.](media/add-file-header.png)
 
 7. Dosya üstbilgisini bir proje veya çözüme uygulamak için, **içindeki tüm oluşumları çözümle:** seçeneğini altında **Proje** veya **çözüm** ' ı seçin.
 

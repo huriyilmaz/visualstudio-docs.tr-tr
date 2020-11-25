@@ -1,5 +1,7 @@
 ---
 title: Varolan Projeyi Ekle Komutu
+description: Mevcut proje Ekle komutu ve mevcut bir projeyi geçerli bir çözüme nasıl ekleyen hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 008802546d87bd44137c6d13ee2aef802877e308
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2c12106621599d428e9a701de9ba5e468b5e312a
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75595884"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95871008"
 ---
 # <a name="add-existing-project-command"></a>Varolan Projeyi Ekle Komutu
 Geçerli çözüme mevcut bir projeyi ekler.

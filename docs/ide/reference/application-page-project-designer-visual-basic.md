@@ -1,5 +1,7 @@
 ---
 title: VB proje özelliklerinin uygulama sayfası
+description: Projenin uygulama ayarlarını ve özelliklerini belirtmek için Visual Basic proje tasarımcısının uygulama sayfasını nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 10/30/2018
 ms.topic: reference
 f1_keywords:
@@ -13,18 +15,18 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fe303f86b282e7e803dacc1dd8f4d3c1d6b72121
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 675c3fbaaf1a3e49648befebca4927299649b057
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75595819"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95871424"
 ---
 # <a name="application-page-project-designer-visual-basic"></a>Uygulama Sayfası, Proje Tasarımcısı (Visual Basic)
 
 Projenin uygulama ayarlarını ve özelliklerini belirtmek için proje Tasarımcısı ' nın **uygulama** sayfasını kullanın.
 
-**Uygulama** sayfasına erişmek için **Çözüm Gezgini**' de bir proje düğümü ( **çözüm** düğümünü değil) seçin. Ardından **Project**  >  , menü çubuğunda Proje**özellikleri** ' ni seçin. **Proje Tasarımcısı** göründüğünde **uygulama** sekmesini seçin.
+**Uygulama** sayfasına erişmek için **Çözüm Gezgini**' de bir proje düğümü ( **çözüm** düğümünü değil) seçin. Ardından **Project**  >  , menü çubuğunda Proje **özellikleri** ' ni seçin. **Proje Tasarımcısı** göründüğünde **uygulama** sekmesini seçin.
 
 [!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)]
 
@@ -44,10 +46,10 @@ Bu özelliğe programlı bir şekilde erişme hakkında daha fazla bilgi için b
 
 Projedeki tüm dosyalar için temel ad alanını belirtir. Örneğin, **kök ad alanını** olarak ayarlarsanız `Project1` ve `Class1` kodunuzda herhangi bir ad alanı dışında bir alanınız varsa, ad alanı olur `Project1.Class1` . Kodda bir ad alanında varsa `Class2` `Order` , ad alanı olur `Project1.Order.Class2` .
 
-**Kök ad alanını**temizlerseniz, kodda projenizin ad alanı yapısını belirtebilirsiniz.
+**Kök ad alanını** temizlerseniz, kodda projenizin ad alanı yapısını belirtebilirsiniz.
 
 > [!NOTE]
-> `Global`Bir [Namespace ifadesinde](/dotnet/visual-basic/language-reference/statements/namespace-statement)anahtar sözcüğünü kullanıyorsanız, projenizin kök ad alanından bir ad alanı tanımlayabilirsiniz. **Kök ad alanını**temizlerseniz, `Global` üst düzey ad alanı haline gelir ve bu, `Global` bir deyimdeki anahtar kelimesinin gereksinimini ortadan kaldırır `Namespace` . Daha fazla bilgi için [Visual Basic ad alanları](/dotnet/visual-basic/programming-guide/program-structure/namespaces)Içindeki "ad alanı deyimlerine genel anahtar sözcük" başlığına bakın.
+> `Global`Bir [Namespace ifadesinde](/dotnet/visual-basic/language-reference/statements/namespace-statement)anahtar sözcüğünü kullanıyorsanız, projenizin kök ad alanından bir ad alanı tanımlayabilirsiniz. **Kök ad alanını** temizlerseniz, `Global` üst düzey ad alanı haline gelir ve bu, `Global` bir deyimdeki anahtar kelimesinin gereksinimini ortadan kaldırır `Namespace` . Daha fazla bilgi için [Visual Basic ad alanları](/dotnet/visual-basic/programming-guide/program-structure/namespaces)Içindeki "ad alanı deyimlerine genel anahtar sözcük" başlığına bakın.
 
 Kodunuzda ad alanlarını oluşturma hakkında daha fazla bilgi için bkz. [Namespace deyimleri](/dotnet/visual-basic/language-reference/statements/namespace-statement).
 
@@ -68,15 +70,15 @@ Daha fazla bilgi için bkz. [Çerçeve hedefleme genel bakış](../../ide/visual
 
 ### <a name="application-type"></a>Uygulama türü
 
-Oluşturulacak uygulamanın türünü belirtir. Değerler proje türüne göre farklılık açmış. Örneğin, **Windows Forms bir uygulama** projesi Için **Windows Forms uygulama**, **sınıf kitaplığı**, **konsol uygulaması**, **Windows hizmeti**veya **Web denetim kitaplığı**belirtebilirsiniz.
+Oluşturulacak uygulamanın türünü belirtir. Değerler proje türüne göre farklılık açmış. Örneğin, **Windows Forms bir uygulama** projesi Için **Windows Forms uygulama**, **sınıf kitaplığı**, **konsol uygulaması**, **Windows hizmeti** veya **Web denetim kitaplığı** belirtebilirsiniz.
 
-Bir Web uygulaması projesi için **sınıf kitaplığı**belirtmeniz gerekir.
+Bir Web uygulaması projesi için **sınıf kitaplığı** belirtmeniz gerekir.
 
 **Uygulama türü** özelliği hakkında daha fazla bilgi için bkz. [/target (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/target). Bu özelliğe programlı bir şekilde erişme hakkında daha fazla bilgi için bkz <xref:VSLangProj.ProjectProperties.OutputType%2A> ..
 
 ### <a name="auto-generate-binding-redirects"></a>Bağlama yeniden yönlendirmelerini otomatik oluştur
 
-Uygulamanız veya bileşenleri aynı derlemenin birden fazla sürümüne başvurduğu takdirde bağlama yeniden yönlendirmeleri projenize eklenir. Proje dosyasında bağlama yeniden yönlendirmelerini el ile tanımlamak istiyorsanız **bağlama yeniden yönlendirmelerini otomatik oluştur**seçimini kaldırın.
+Uygulamanız veya bileşenleri aynı derlemenin birden fazla sürümüne başvurduğu takdirde bağlama yeniden yönlendirmeleri projenize eklenir. Proje dosyasında bağlama yeniden yönlendirmelerini el ile tanımlamak istiyorsanız **bağlama yeniden yönlendirmelerini otomatik oluştur** seçimini kaldırın.
 
 Yeniden yönlendirme hakkında daha fazla bilgi için bkz. [derleme sürümlerini yeniden yönlendirme](/dotnet/framework/configure-apps/redirect-assembly-versions).
 
@@ -86,7 +88,7 @@ Uygulamanın başlangıç formunu veya giriş noktasını belirtir.
 
 **Uygulama çerçevesini etkinleştir** seçilirse (varsayılan), bu liste **başlangıç formu** olarak belirlenir ve yalnızca form gösterir çünkü uygulama çerçevesi nesneleri değil yalnızca başlangıç formlarını destekler.
 
-Proje bir WPF tarayıcı uygulamasıdır, bu liste **Başlangıç URI 'si**ve varsayılan olarak **Sayfa1. xaml**' dir. **Başlangıç URI** listesi, uygulama başladığında uygulamanın görüntülediği Kullanıcı arabirimi KAYNAĞıNı (XAML öğesi) belirtmenize olanak sağlar. Daha fazla bilgi için bkz. <xref:System.Windows.Application.StartupUri%2A>.
+Proje bir WPF tarayıcı uygulamasıdır, bu liste **Başlangıç URI 'si** ve varsayılan olarak **Sayfa1. xaml**' dir. **Başlangıç URI** listesi, uygulama başladığında uygulamanın görüntülediği Kullanıcı arabirimi KAYNAĞıNı (XAML öğesi) belirtmenize olanak sağlar. Daha fazla bilgi için bkz. <xref:System.Windows.Application.StartupUri%2A>.
 
 **Uygulama çerçevesini etkinleştir** ayarı silinirse, bu liste **Başlangıç nesnesi** olur ve hem form hem de sınıfları veya modülleri ile gösterir `Sub Main` .
 
@@ -102,11 +104,11 @@ Program simgenizin olarak kullanmak istediğiniz. ico dosyasını ayarlar. **\<B
 
 ### <a name="enable-application-framework"></a>Uygulama çerçevesini etkinleştir
 
-Projenin uygulama çerçevesini kullanıp kullanmayacağını belirtir. Bu seçeneğin ayarı **başlangıç formu** / **Başlangıç nesnesinde**bulunan seçenekleri etkiler.
+Projenin uygulama çerçevesini kullanıp kullanmayacağını belirtir. Bu seçeneğin ayarı **başlangıç formu** / **Başlangıç nesnesinde** bulunan seçenekleri etkiler.
 
 Bu onay kutusu işaretliyse, uygulamanız standart kullanır `Sub Main` . Bu onay kutusu seçildiğinde, **Windows uygulama çerçevesi özellikleri** bölümündeki Özellikler etkinleştirilir ve ayrıca bir başlangıç formu seçmeniz gerekir.
 
-Bu onay kutusu silinirse, uygulamanız `Sub Main` **Başlangıç formunda**belirttiğiniz özel kullanımı kullanır. Bu durumda, bir başlangıç nesnesi ( `Sub Main` bir yöntemde veya bir sınıfta özel) ya da bir form belirtebilirsiniz. Ayrıca, **Windows Application Framework Özellikler** bölümündeki seçenekler kullanılamaz hale gelir.
+Bu onay kutusu silinirse, uygulamanız `Sub Main` **Başlangıç formunda** belirttiğiniz özel kullanımı kullanır. Bu durumda, bir başlangıç nesnesi ( `Sub Main` bir yöntemde veya bir sınıfta özel) ya da bir form belirtebilirsiniz. Ayrıca, **Windows Application Framework Özellikler** bölümündeki seçenekler kullanılamaz hale gelir.
 
 ### <a name="view-windows-settings"></a>Windows ayarlarını görüntüleme
 
@@ -127,11 +129,11 @@ Bildirim oluşturma hakkında daha fazla bilgi için bkz. [Windows Vista 'Da Cli
 
 ### <a name="enable-xp-visual-styles"></a>XP görsel stillerini etkinleştir
 
-*WINDOWS XP temaları*olarak da BILINEN Windows XP görsel stillerini etkinleştirilir veya devre dışı bırakır. Windows XP görsel stilleri, yuvarlatılmış köşeler ve dinamik renklerle denetimleri sağlar. Varsayılan değer etkindir.
+*WINDOWS XP temaları* olarak da BILINEN Windows XP görsel stillerini etkinleştirilir veya devre dışı bırakır. Windows XP görsel stilleri, yuvarlatılmış köşeler ve dinamik renklerle denetimleri sağlar. Varsayılan değer etkindir.
 
 ### <a name="make-single-instance-application"></a>Tek örnekli uygulama oluştur
 
-Kullanıcıların uygulamanın birden çok örneğini çalıştırmasını engellemek için bu onay kutusunu işaretleyin. Bu onay kutusunun varsayılan ayarı *temizlenir*ve bu, uygulamanın birden çok örneğinin çalıştırılmasına izin verir. Daha fazla bilgi için, <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> olayına bakın.
+Kullanıcıların uygulamanın birden çok örneğini çalıştırmasını engellemek için bu onay kutusunu işaretleyin. Bu onay kutusunun varsayılan ayarı *temizlenir* ve bu, uygulamanın birden çok örneğinin çalıştırılmasına izin verir. Daha fazla bilgi için, <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> olayına bakın.
 
 ### <a name="save-mysettings-on-shutdown"></a>My. Settings 'i kapatmadan Kaydet
 

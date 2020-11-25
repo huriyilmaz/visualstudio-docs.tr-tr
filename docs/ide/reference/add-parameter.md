@@ -1,5 +1,7 @@
 ---
 title: Yöntem hızlı eylemine parametre ekleme
+description: Bir yönteme, kullanıma göre otomatik olarak bir parametre eklemek ve bildirmek için hızlı bir eylem kullanmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 09/28/2018
 ms.topic: reference
 author: TerryGLee
@@ -7,12 +9,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6720421fd5188688214665d85de682542b1c1357
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c2582228426afcefdb2587d646a8668f622309c6
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75595871"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95871307"
 ---
 # <a name="add-a-parameter-to-a-method-using-a-quick-action"></a>Hızlı eylem kullanarak bir yönteme parametre ekleme
 
@@ -39,7 +41,7 @@ Bu kod üretimi için geçerlidir:
    ![Visual Studio 'da yönteme parametre ekleme hızlı eylem](media/add-parameter-to-method.png)
 
    > [!TIP]
-   > Hızlı Eylemler menüsüne imlecinizi yöntem çağrısının satırına yerleştirerek ve sonra **CTRL**tuşuna basarak da erişebilirsiniz + **.** (nokta) veya dosya kenar boşluğunda ampul simgesini seçin.
+   > Hızlı Eylemler menüsüne imlecinizi yöntem çağrısının satırına yerleştirerek ve sonra **CTRL** tuşuna basarak da erişebilirsiniz + **.** (nokta) veya dosya kenar boşluğunda ampul simgesini seçin.
 
    Visual Studio, yöntem bildirimine yeni parametreyi ekler.
 

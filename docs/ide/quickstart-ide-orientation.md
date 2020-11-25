@@ -1,5 +1,7 @@
 ---
 title: 'Hızlı başlangıç: Visual Studio IDE turu'
+description: Visual Studio tümleşik geliştirme ortamının (IDE) bazı Windows, menü ve diğer kullanıcı arabirimi özellikleri hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/21/2019
 ms.topic: quickstart
@@ -8,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 08ec25312068d5c69cdb0df9b7c293ae0575f608
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4511658a454c1431967905e88428842c3ba00c64
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88238861"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95870902"
 ---
 # <a name="quickstart-first-look-at-the-visual-studio-ide"></a>Hızlı başlangıç: Visual Studio IDE 'ye Ilk bakış
 
@@ -47,7 +49,7 @@ Visual Studio 'Yu açtıktan sonra ilk olarak **Başlangıç sayfası büyük ol
 
 ::: moniker range=">=vs-2019"
 
-## <a name="start-window"></a>Başlangıç penceresi
+## <a name="start-window"></a> Başlangıç penceresi
 
 Visual Studio 'Yu açtıktan sonra ilk olarak göreceğiniz şey başlangıç penceresidir. Başlangıç penceresi, "koda ulaşmak" için daha hızlı yardımcı olacak şekilde tasarlanmıştır. Kodu kopyalama veya kullanıma alma, mevcut bir projeyi veya çözümü açma, yeni bir proje oluşturma veya yalnızca bazı kod dosyalarını içeren bir klasörü açma seçeneklerine sahiptir.
 
@@ -67,7 +69,7 @@ Visual Studio 'nun özelliklerini araştırmaya devam etmek için yeni bir proje
 
 ::: moniker range="vs-2017"
 
-1. **Başlangıç sayfasında**, **Yeni proje**altındaki arama kutusuna, proje türleri listesini, adında "konsol" içeren olanlarla filtrelemek için **konsol** yazın.
+1. **Başlangıç sayfasında**, **Yeni proje** altındaki arama kutusuna, proje türleri listesini, adında "konsol" içeren olanlarla filtrelemek için **konsol** yazın.
 
    ![Visual Studio başlangıç sayfasında proje şablonları ara](media/start-page-search-templates.png)
 
@@ -81,7 +83,7 @@ Visual Studio 'nun özelliklerini araştırmaya devam etmek için yeni bir proje
 
 1. Başlangıç penceresinde **Yeni proje oluştur**' u seçin.
 
-   **Yeni bir proje oluşturur**yazılı bir iletişim kutusu açılır. Burada, bir proje şablonunu arayabilir, filtreleyebilir ve seçebilirsiniz. Ayrıca, son kullanılan proje şablonlarının bir listesini gösterir.
+   **Yeni bir proje oluşturur** yazılı bir iletişim kutusu açılır. Burada, bir proje şablonunu arayabilir, filtreleyebilir ve seçebilirsiniz. Ayrıca, son kullanılan proje şablonlarının bir listesini gösterir.
 
 1. Üstteki arama kutusunda, proje türleri listesini, adında "konsol" içeren olanlarla filtrelemek için **konsol** yazın. **Dil** seçicisinden **C#** (veya tercih ettiğiniz başka bir dil) seçerek arama sonuçlarını daha da belirginleştirin.
 
@@ -99,7 +101,7 @@ Visual Studio 'nun özelliklerini araştırmaya devam etmek için yeni bir proje
 
 ## <a name="solution-explorer"></a>Çözüm Gezgini
 
-Genellikle Visual Studio 'nun sağ tarafındaki **Çözüm Gezgini**, projenizde, çözümünüzde veya kod klasörünüzdeki dosya ve klasörler hiyerarşisinin grafik bir gösterimini gösterir. Hiyerarşiye gözatabilir ve **Çözüm Gezgini**bir dosyaya gidebilirsiniz.
+Genellikle Visual Studio 'nun sağ tarafındaki **Çözüm Gezgini**, projenizde, çözümünüzde veya kod klasörünüzdeki dosya ve klasörler hiyerarşisinin grafik bir gösterimini gösterir. Hiyerarşiye gözatabilir ve **Çözüm Gezgini** bir dosyaya gidebilirsiniz.
 
 ![Visual Studio 'da Çözüm Gezgini](media/quickstart-IDE-solution-explorer.png)
 
@@ -131,7 +133,7 @@ Visual Studio gruplarının üst kısmında bulunan menü çubuğu, kategoriler 
 
 **Çıkış** penceresinde, projenizi ve kaynak denetimi sağlayıcınızdan oluşturduğunuz çıkış iletileri görüntülenir.
 
-Ayrıca, bazı derleme çıktısını görmek için projeyi derlim. **Build** menüsünde **Build Solution**öğesini seçin. **Çıkış** penceresi, odağı otomatik olarak edinir ve başarılı bir derleme iletisi görüntüler.
+Ayrıca, bazı derleme çıktısını görmek için projeyi derlim. **Build** menüsünde **Build Solution** öğesini seçin. **Çıkış** penceresi, odağı otomatik olarak edinir ve başarılı bir derleme iletisi görüntüler.
 
 ![Visual Studio 'da çıkış penceresi](media/build-output-minimal.png)
 
@@ -153,7 +155,7 @@ Arama kutusu, Visual Studio 'da çok daha fazla şeye gitmeniz için hızlı ve 
 
 ::: moniker range=">=vs-2019"
 
-1. **Ctrl** + IDE 'nin üst kısmındaki arama kutusunu etkinleştirmek için CTRL**Q** tuşlarına basın.
+1. **Ctrl** + IDE 'nin üst kısmındaki arama kutusunu etkinleştirmek için CTRL **Q** tuşlarına basın.
 
 2. Arama kutusuna **ayrıntı düzeyi** yazın. Görünen sonuçlardan **MSBuild ayrıntı düzeyini Değiştir**' i seçin.
 
@@ -163,7 +165,7 @@ Arama kutusu, Visual Studio 'da çok daha fazla şeye gitmeniz için hızlı ve 
 
 ::: moniker-end
 
-3. **MSBuild proje derlemesi çıkış ayrıntı düzeyi**altında **normal**' i seçin ve ardından **Tamam**' a tıklayın.
+3. **MSBuild proje derlemesi çıkış ayrıntı düzeyi** altında **normal**' i seçin ve ardından **Tamam**' a tıklayın.
 
 4. **Çözüm Gezgini** ' de **ConsoleApp1** projesine sağ tıklayıp bağlam menüsünden **yeniden oluştur** ' u seçerek projeyi yeniden derleyin.
 

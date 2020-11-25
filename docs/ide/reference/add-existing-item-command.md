@@ -1,5 +1,7 @@
 ---
 title: Varolan Öğeyi Ekle Komutu
+description: Var olan öğe Ekle komutu ve var olan bir dosyayı geçerli bir çözüme ekleme ve bunu açma hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4d49f0fde7bbf13a1219296420b84970f4350860
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 59d1e032150035258df4b1cc88253cefc555d826
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75585710"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95871034"
 ---
 # <a name="add-existing-item-command"></a>Varolan Öğeyi Ekle Komutu
 Geçerli çözüme var olan bir dosyayı ekler ve açar.
@@ -37,7 +39,7 @@ Gereklidir. Geçerli çözüme eklenecek öğenin Uzantısı ile tam yol ve dosy
 /e `editorname`\
 İsteğe bağlı. Dosyanın açıldığı düzenleyicinin adı. Bağımsız değişken belirtilmişse ancak düzenleyici adı sağlanmadığında, **birlikte Aç** iletişim kutusu görüntülenir.
 
-/E: `editorname` Argument sözdizimi, **birlikte Aç iletişim kutusunda**göründükleri gibi, tırnak işaretleri içine alınan düzenleyici adlarını kullanır. Örneğin, kaynak kodu düzenleyicisinde bir stil sayfası açmak için/e: Argument için aşağıdakini girersiniz `editorname` .
+/E: `editorname` Argument sözdizimi, **birlikte Aç iletişim kutusunda** göründükleri gibi, tırnak işaretleri içine alınan düzenleyici adlarını kullanır. Örneğin, kaynak kodu düzenleyicisinde bir stil sayfası açmak için/e: Argument için aşağıdakini girersiniz `editorname` .
 
 ```cmd
 /e:"Source Code (text) Editor"

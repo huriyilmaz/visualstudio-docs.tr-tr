@@ -1,5 +1,7 @@
 ---
 title: Bir yönteme çağrı bulma
+description: Seçilen bir yöntem, özellik veya oluşturucunun tüm çağrılarına ve bazı çağrılarına gitmek için çağrı hiyerarşisi penceresini nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 05/18/2018
 ms.topic: reference
 f1_keywords:
@@ -11,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dcedc6a49c0df84b4482f8030524d59d4336bcc8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 75c330855d3fca1187f88171adb893c3f77c4ccd
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75595806"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95871411"
 ---
 # <a name="view-call-hierarchy"></a>Çağrı hiyerarşisini görüntüle
 
@@ -42,13 +44,13 @@ C# ve Visual Basic kodu için, bir üyeye yapılan çağrıları görebilir, anc
 
 - C++ için, düğümdeki **çağrıları** genişlettikten sonra seçili üye tarafından çağrılan tüm Üyeler görüntülenir.
 
-Ardından, **çağrılarını**görmek için her bir çağıran üyeyi genişletebilir ve C++ Için düğümlerden **çağrılar** yapabilirsiniz. Bu, aşağıdaki görüntüde gösterildiği gibi çağıranların yığınına gitmenizi sağlar:
+Ardından, **çağrılarını** görmek için her bir çağıran üyeyi genişletebilir ve C++ Için düğümlerden **çağrılar** yapabilirsiniz. Bu, aşağıdaki görüntüde gösterildiği gibi çağıranların yığınına gitmenizi sağlar:
 
 ![Birden çok düzey genişletilen hiyerarşi çağrısı penceresi](media/call-hierarchy-csharp-expanded.png)
 
 Sanal veya soyut olarak tanımlanan üyeler için bir **geçersiz kılma yöntemi adı** düğümü görüntülenir. Arabirim üyeleri için bir **Implements Yöntem adı** düğümü görüntülenir. Bu **Genişletilebilir düğümler** **, ve düğümlerin çağrılarıyla** aynı düzeyde görüntülenir.
 
-Araç çubuğundaki **arama kapsamı** kutusu **çözümünüz**, **geçerli proje**ve **geçerli belge**için seçenekler içerir.
+Araç çubuğundaki **arama kapsamı** kutusu **çözümünüz**, **geçerli proje** ve **geçerli belge** için seçenekler içerir.
 
 **Çağrı hiyerarşisi** ağacı görünüm bölmesinde bir alt üye seçtiğinizde:
 
@@ -63,11 +65,11 @@ Araç çubuğundaki **arama kapsamı** kutusu **çözümünüz**, **geçerli pro
 
 Aşağıdaki tabloda, ağaç görünümü bölmesinde bir düğüme sağ tıkladığınızda kullanılabilecek çeşitli kısayol menü seçenekleri açıklanmaktadır.
 
-|Bağlam menüsü öğesi|Description|
+|Bağlam menüsü öğesi|Açıklama|
 | - |-----------------|
 |**Yeni kök olarak ekle**|Seçili düğümü ağaç görünümü bölmesine yeni bir kök düğüm olarak ekler. Bu, ilgilenmeniz belirli bir alt ağaçta odaklanmanızı sağlar.|
 |**Kökü Kaldır**|Seçili kök düğümü ağaç görünümü bölmesinden kaldırır. Bu seçenek yalnızca bir kök düğümden kullanılabilir.<br /><br /> Seçili kök düğümü kaldırmak için **kök kaldır** araç çubuğu düğmesini de kullanabilirsiniz.|
 |**Tanıma Git**|Seçili düğümdeki Tanıma Git komutunu çalıştırır. Bu, bir üye çağrısının veya değişken tanımının orijinal tanımına gider.<br /><br /> Tanıma Git komutunu çalıştırmak için Seçili düğüme çift tıklayabilir veya seçili düğümdeki F12 tuşuna basabilirsiniz.|
 |**Tüm Başvuruları Bul**|Seçili düğümdeki tüm başvuruları bul komutunu çalıştırır. Bu, projenizdeki bir sınıfa veya üyeye başvuran tüm kod satırlarını bulur.<br /><br /> Seçili düğümdeki tüm başvuruları bul komutunu çalıştırmak için SHIFT + F12 tuşlarını da kullanabilirsiniz.|
-|**Kopyala**|Seçili düğümün içeriğini kopyalar (alt düğümleri değil).|
+|**Kopya**|Seçili düğümün içeriğini kopyalar (alt düğümleri değil).|
 |**Yenile**|Seçili düğümü, yeniden genişleterek geçerli bilgileri görüntüleyecek şekilde daraltır.|

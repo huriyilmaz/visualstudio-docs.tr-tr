@@ -1,5 +1,7 @@
 ---
 title: UWP uygulamaları için uygulama Özellik sayfası
+description: Evrensel Windows Platformu (UWP) projesinin derleme ve paket bilgilerini belirtmek ve Windows 10 sürümünü hedeflemek için uygulama sayfasını nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 01/23/2018
 ms.topic: reference
 f1_keywords:
@@ -11,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 3c8f72d4e1d1caeacd5dfefef5310dc2cef83b92
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 826d408d8e1a6a2cb8bcad956ce930781a9155db
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77173084"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95871372"
 ---
 # <a name="application-property-page-uwp-projects"></a>Uygulama özellik sayfası (UWP projeleri)
 
@@ -24,7 +26,7 @@ Evrensel Windows Platformu (UWP) projesinin derleme ve paket bilgilerini belirtm
 
 ![Uygulama özellik sayfası](media/application-page-uwp.png)
 
-**Uygulama** sayfasına erişmek için **Çözüm Gezgini**içinde proje düğümünü seçin. Ardından **Project**  >  , menü çubuğunda Proje**özellikleri** ' ni seçin. Özellik sayfaları **uygulama** sekmesinde açılır.
+**Uygulama** sayfasına erişmek için **Çözüm Gezgini** içinde proje düğümünü seçin. Ardından **Project**  >  , menü çubuğunda Proje **özellikleri** ' ni seçin. Özellik sayfaları **uygulama** sekmesinde açılır.
 
 ## <a name="general-section"></a>Genel Bölüm
 

@@ -1,5 +1,7 @@
 ---
 title: Proje ve çözüm özelliklerini yönetme
+description: Visual Studio 'da hem proje özelliklerini hem de çözüm özelliklerini yönetmeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 author: TerryGLee
@@ -7,12 +9,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 01fcdc09c9d3ee4f5a38a95ef4304bfdf537d527
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7b7b89588e778a142e7dd49e1a3051a9aa188ff1
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75591313"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95871398"
 ---
 # <a name="manage-project-and-solution-properties"></a>Proje ve çözüm özelliklerini yönetme
 
@@ -40,7 +42,7 @@ C#, Visual Basic ve F # projelerinde, Özellikler **Proje Tasarımcısı**'nda g
 **Proje Tasarımcısı**'ndaki her özellik sayfası hakkında daha fazla bilgi için bkz. [Proje Özellikleri başvurusu](../ide/reference/project-properties-reference.md).
 
 > [!TIP]
-> Çözümlerin birkaç özelliği vardır ve proje öğelerini yapın; Bu özelliklere **Proje tasarımcısında**değil [Özellikler penceresi](../ide/reference/properties-window.md)erişilir.
+> Çözümlerin birkaç özelliği vardır ve proje öğelerini yapın; Bu özelliklere **Proje tasarımcısında** değil [Özellikler penceresi](../ide/reference/properties-window.md)erişilir.
 
 ### <a name="c-and-javascript-projects"></a>C++ ve JavaScript projeleri
 

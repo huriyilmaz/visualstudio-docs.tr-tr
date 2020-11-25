@@ -1,5 +1,7 @@
 ---
 title: Kod Gezinti komutları
+description: Düzenleyicide kodunuzda gezinmek için kullanabileceğiniz farklı seçenekler hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/21/2019
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +20,12 @@ ms.author: tglee
 manager: tglee
 ms.workload:
 - multiple
-ms.openlocfilehash: 0216a71b675473d54aec9738ea7bdc85b7643841
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 77b0f8782f9ffaf37701f13b30be6e068ce05f8d
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75585827"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95871528"
 ---
 # <a name="navigate-code"></a>Koda git
 
@@ -49,7 +51,7 @@ Açılır kutuların etrafında aşağıdaki gibi gezinebilirsiniz:
 
 - Bir yordama veya bir sınıfın diğer üyesine doğrudan gitmek için sağ açılan kutuda bunu seçin.
 
-- Odağı kod penceresinden gezinti çubuğuna kaydırmak için **CTRL** + **F2**tuş birleşimine basın.
+- Odağı kod penceresinden gezinti çubuğuna kaydırmak için **CTRL** + **F2** tuş birleşimine basın.
 
 - Odağı gezinti çubuğundaki kutudan kutuya kaydırmak için **Tab** tuşuna basın.
 
@@ -70,7 +72,7 @@ Giriş | İşlev
 
 ## <a name="reference-highlighting"></a>Başvuru vurgulama
 
-Kaynak kodunda bir simgeye tıkladığınızda, söz konusu simgenin tüm örnekleri belgede vurgulanır. Vurgulanan semboller, bildirim ve başvuru içerebilir ve **tüm başvuruları** içeren diğer birçok sembol döndürülür. Bunlar sınıfların, nesnelerin, değişkenlerin, yöntemlerin ve özelliklerin adlarını içerir. Visual Basic kodda, birçok denetim yapısı için anahtar sözcükler de vurgulanır. İleri veya önceki vurgulanan simgeye gitmek için **CTRL** + **SHIFT** + **aşağı ok** veya **CTRL** + **SHIFT** + **yukarı ok**tuşlarına basın. **Araç**  >  **seçenekleri**  >  **ortam**  >  **yazı tipi ve renkler**  >  **vurgulanan başvuru**bölümünde vurgulama rengini değiştirebilirsiniz.
+Kaynak kodunda bir simgeye tıkladığınızda, söz konusu simgenin tüm örnekleri belgede vurgulanır. Vurgulanan semboller, bildirim ve başvuru içerebilir ve **tüm başvuruları** içeren diğer birçok sembol döndürülür. Bunlar sınıfların, nesnelerin, değişkenlerin, yöntemlerin ve özelliklerin adlarını içerir. Visual Basic kodda, birçok denetim yapısı için anahtar sözcükler de vurgulanır. İleri veya önceki vurgulanan simgeye gitmek için **CTRL** + **SHIFT** + **aşağı ok** veya **CTRL** + **SHIFT** + **yukarı ok** tuşlarına basın. **Araç**  >  **seçenekleri**  >  **ortam**  >  **yazı tipi ve renkler**  >  **vurgulanan başvuru** bölümünde vurgulama rengini değiştirebilirsiniz.
 
 ## <a name="go-to-commands"></a>Komutlara git
 
@@ -145,7 +147,7 @@ Giriş | İşlev
 
 ## <a name="next-method-and-previous-method-commands-visual-basic"></a>Next yöntemi ve önceki yöntem komutları (Visual Basic)
 
-Visual Basic kod dosyalarında, ekleme noktasını farklı yöntemlere taşımak için bu komutları kullanın. **Edit**  >  **Sonraki yöntemi** Düzenle veya **Edit**  >  **önceki yöntemi**Düzenle seçeneğini belirleyin.
+Visual Basic kod dosyalarında, ekleme noktasını farklı yöntemlere taşımak için bu komutları kullanın. **Edit**  >  **Sonraki yöntemi** Düzenle veya **Edit**  >  **önceki yöntemi** Düzenle seçeneğini belirleyin.
 
 ## <a name="structure-visualizer"></a>Yapı görselleştiricisi
 

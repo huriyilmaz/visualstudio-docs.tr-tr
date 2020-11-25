@@ -1,5 +1,7 @@
 ---
 title: Hızlı Eylemler, hafif bulbs ve screwdrivers
+description: Kodunuzu yeniden düzenlemek, oluşturmak veya başka bir şekilde değiştirmek için tek bir hızlı eylemi nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 03/28/2018
 ms.topic: conceptual
 author: TerryGLee
@@ -10,12 +12,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: bfafcca1cddcaa216b8a9e12dd7d961949afa2bb
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 967e73748b364e7e41b1773a7fab33831152ab18
+ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036528"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "95870787"
 ---
 # <a name="quick-actions"></a>Hızlı Eylemler
 
@@ -62,7 +64,7 @@ Bir çözüm varsa, hafif bulbs görünür:
 
 - Giriş işaretini (imleç) geçerli kod satırına taşıdığınızda düzenleyicinin sol kenar boşluğunda
 
-Ayrıca, **CTRL**tuşuna da basabilirsiniz + **.** kullanılabilir hızlı eylemlerin ve yeniden düzenlemeler listesini görmek için satırda herhangi bir yerde.
+Ayrıca, **CTRL** tuşuna da basabilirsiniz + **.** kullanılabilir hızlı eylemlerin ve yeniden düzenlemeler listesini görmek için satırda herhangi bir yerde.
 
 Olası düzeltmeleri görmek için, ampul ' ın yanındaki aşağı oku veya **olası düzeltmeleri göster** bağlantısını seçin. Kullanılabilir hızlı eylemlerin bir listesi görüntülenir.
 
