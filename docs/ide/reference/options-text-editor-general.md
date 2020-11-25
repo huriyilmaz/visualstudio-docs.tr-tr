@@ -1,5 +1,7 @@
 ---
 title: Seçenekler, Metin Düzenleyici, Genel
+description: Genel sayfasını kullanarak Visual Studio Code ve metin düzenleyicisinin genel ayarlarını değiştirme hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 01/18/2019
 ms.topic: reference
 f1_keywords:
@@ -33,12 +35,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ed55d65555425b04749696b5510cfe799d2a1194
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1665db5fff414227c18fd8de4224302cb6d43c2a
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80472825"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96040608"
 ---
 # <a name="options-dialog-box-text-editor--general"></a>Seçenekler iletişim kutusu: metin düzenleyici \> genel
 
@@ -68,7 +70,7 @@ Seçildiğinde, projenin belirtilen kodlama kuralları kişisel projelerinizde k
 
 ### <a name="enable-mouse-click-to-perform-go-to-definition"></a>Tanıma Git işlemini gerçekleştirmek için fare tıklamasını etkinleştir
 
-Seçildiğinde, **CTRL** tuşuna basabilir ve fareyle tıklarken bir öğenin üzerine geldiğinizde üzerine gelebilmeniz gerekir. Bunun yapılması sizi seçili öğenin tanımına götürür. **Alt** **Ctrl**  +  **Değiştirici tuşu kullan** açılır listesinden alt veya CTRL**alt** tuşlarını da seçebilirsiniz.
+Seçildiğinde, **CTRL** tuşuna basabilir ve fareyle tıklarken bir öğenin üzerine geldiğinizde üzerine gelebilmeniz gerekir. Bunun yapılması sizi seçili öğenin tanımına götürür. **Alt** **Ctrl**  +  **Değiştirici tuşu kullan** açılır listesinden alt veya CTRL **alt** tuşlarını da seçebilirsiniz.
 
 Öğenin tanımını, kod düzenleyicisinde geçerli konumunuzla uzaklaşmadan bir pencerede görüntülemek için, **görünümü göz atma ' da aç** onay kutusunu seçin.
 

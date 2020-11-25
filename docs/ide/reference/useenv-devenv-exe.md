@@ -1,5 +1,7 @@
 ---
 title: -UseEnv (devenv.exe)
+description: Visual Studio 'Yu başlatmak ve derleme için belirli ortam değişkenlerini yüklemek üzere UseEnv Devenv komut satırı anahtarını nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 01/10/2019
 ms.topic: reference
 f1_keywords:
@@ -19,12 +21,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 35808b27964b3ca8fa0488f1be2ce6dc5530b3dd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 51b47156b73d81f427c08e62006dc6e457e5780b
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75596402"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96040946"
 ---
 # <a name="useenv-devenvexe"></a>/UseEnv (devenv.exe)
 
@@ -51,7 +53,7 @@ devenv /UseEnv {SolutionName|ProjectName}
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu anahtar, **VC + + dizinleri**için proje özellikleri Içindeki VISUAL Studio IDE 'yi etkiler. `/UseEnv`Anahtarı belirtirseniz, **VC + + DIZINLERI** düğümü Path, INCLUDE, LıBPATH ve LIB ortam değişkenlerinin değerlerini gösterir. (Ayrıca, **kaynak dizinlerin** ve **Dışlanan dizinlerin**değerlerini gösterir.) Aksi halde düğüm, ortam değişkenlerini beş dizin değeriyle değiştirir: **yürütülebilir dizinler**, **dizinleri**, **başvuru dizinleri**, **kitaplık dizinleri**ve **kitaplık WinRT dizinleri**.
+Bu anahtar, **VC + + dizinleri** için proje özellikleri Içindeki VISUAL Studio IDE 'yi etkiler. `/UseEnv`Anahtarı belirtirseniz, **VC + + DIZINLERI** düğümü Path, INCLUDE, LıBPATH ve LIB ortam değişkenlerinin değerlerini gösterir. (Ayrıca, **kaynak dizinlerin** ve **Dışlanan dizinlerin** değerlerini gösterir.) Aksi halde düğüm, ortam değişkenlerini beş dizin değeriyle değiştirir: **yürütülebilir dizinler**, **dizinleri**, **başvuru dizinleri**, **kitaplık dizinleri** ve **kitaplık WinRT dizinleri**.
 
 > [!TIP]
 > C++ projesine sağ tıklayıp **Özellikler**' i seçerek Proje özelliklerine erişirsiniz. **Özellik sayfaları** Iletişim kutusunda **yapılandırma özellikleri** ' ni ve ardından **VC + + dizinleri**' ni seçin.

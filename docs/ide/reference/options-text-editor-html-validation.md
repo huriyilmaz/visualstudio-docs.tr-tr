@@ -1,5 +1,7 @@
 ---
 title: Seçenekler, metin düzenleyici, HTML (Web Forms), doğrulama
+description: HTML Düzenleyicisi 'nin belgenizdeki HTML biçimlendirme sözdizimini nasıl denetlediğini gösteren tercihleri ayarlamak için HTML bölümünde doğrulama sayfasını nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 1/15/2019
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ede4600cb1fa1df118b4635a193d8bff348d5119
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b65edc2b6c48bc76075e909d0f9bd1341a1b6dd8
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75568288"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96040569"
 ---
 # <a name="options-text-editor-html-web-forms-validation"></a>Seçenekler, metin düzenleyici, HTML (Web Forms), doğrulama
 
@@ -27,11 +29,11 @@ HTML düzenleyicisinin belgenizde HTML biçimlendirme sözdizimini nasıl denetl
 
    Şema, bu şemada hangi öğelerin, özniteliklerin ve büyük/küçük harflerin geçerli olduğunu belirler. IntelliSense 'de kullanılabilen etiketleri ve öznitelikleri de belirler.
 
-   Visual Studio 'nun sayfa< içeriğini kullanmasını istiyorsanız bu seçeneği belirleyin ** ! ** Şemayı öğrenmek IÇIN DOCTYPE>bildirimi ve **HTML** öğesi. Örneğin, bu seçeneği belirlerseniz ve sayfada bildirim varsa `<!DOCTYPE html>` , Visual STUDIO HTML5 şemasını kullanır. Ancak, **HTML** etiketinde, gibi bir **xmlns** özniteliği varsa `<html xmlns="http://www.w3.org/1999/xhtml">` , Visual Studio XHTML5 şemasını kullanır.
+   Visual Studio 'nun sayfa< içeriğini kullanmasını istiyorsanız bu seçeneği belirleyin **!** Şemayı öğrenmek IÇIN DOCTYPE>bildirimi ve **HTML** öğesi. Örneğin, bu seçeneği belirlerseniz ve sayfada bildirim varsa `<!DOCTYPE html>` , Visual STUDIO HTML5 şemasını kullanır. Ancak, **HTML** etiketinde, gibi bir **xmlns** özniteliği varsa `<html xmlns="http://www.w3.org/1999/xhtml">` , Visual Studio XHTML5 şemasını kullanır.
 
 - **Hiçbir DOCTYPE bulunamadığında hedefle**
 
-   < olmadığında doğrulanacak şemayı seçin ** ! Sayfada DOCTYPE>** bildirimi.
+   < olmadığında doğrulanacak şemayı seçin **! Sayfada DOCTYPE>** bildirimi.
 
   - **Hataları göster**
 

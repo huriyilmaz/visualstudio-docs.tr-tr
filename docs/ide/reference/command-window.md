@@ -1,5 +1,7 @@
 ---
 title: Komut Penceresi
+description: Komutları veya diğer adları doğrudan Visual Studio IDE 'de yürütmek için Komut penceresi nasıl kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,12 +18,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cb855cbed67bffc5ff2fb63b1785c577dd9fea25
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8e133f20464fb19752c7616d2fab1a631fa802c9
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75570355"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96040917"
 ---
 # <a name="command-window"></a>Komut Penceresi
 **Komut** penceresi, komutları veya diğer adları doğrudan [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Tümleşik GELIŞTIRME ortamında (IDE) yürütmek için kullanılır. Herhangi bir menüde görünmeyen menü komutlarını ve komutları çalıştırabilirsiniz. **Komut** penceresini görüntülemek Için, **Görünüm** menüsünde **diğer pencereler** ' i seçin ve **komut penceresi**' ni seçin.

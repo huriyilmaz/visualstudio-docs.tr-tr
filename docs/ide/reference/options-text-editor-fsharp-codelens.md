@@ -1,5 +1,7 @@
 ---
 title: 'Seçenekler, metin düzenleyici, F #, CodeLens'
+description: 'F # için metin düzenleyici CodeLens ayarlarını değiştirmek üzere F # bölümündeki CodeLens sayfasını nasıl kullanacağınızı öğrenin.'
+ms.custom: SEO-VS-2020
 ms.date: 01/16/2019
 ms.topic: reference
 f1_keywords:
@@ -9,12 +11,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: ad891030cb9cf54855e6bef69a8b6926d6ae17aa
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6bdccdc45664bd620018fa094d35add545b302d4
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75568483"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96039659"
 ---
 # <a name="options-text-editor-f-codelens"></a>Seçenekler, metin düzenleyici, F #, CodeLens
 

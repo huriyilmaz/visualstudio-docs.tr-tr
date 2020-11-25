@@ -1,5 +1,7 @@
 ---
 title: Seçenekler, Metin Düzenleyici, C#, IntelliSense
+description: C# için IntelliSense 'in davranışını etkileyen ayarları değiştirmek için C# bölümünde IntelliSense sayfasını nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,12 +18,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 87a167a75f3b06522da77d562b0137df89757975
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8e727fad6d3cb15f70cf630b1077170d16d28b7f
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75596222"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96039750"
 ---
 # <a name="options-text-editor-c-intellisense"></a>Seçenekler, Metin Düzenleyici, C#, IntelliSense
 
@@ -59,19 +61,19 @@ C# için IntelliSense davranışını etkileyen ayarları değiştirmek için **
 
 - ENTER 'a hiçbir şekilde yeni satır eklemeyin
 
-   Tamamlanma listesindeki bir öğeyi seçip **ENTER**tuşuna basarak yeni bir satırın hiçbir şekilde otomatik olarak eklendiğine belirtir.
+   Tamamlanma listesindeki bir öğeyi seçip **ENTER** tuşuna basarak yeni bir satırın hiçbir şekilde otomatik olarak eklendiğine belirtir.
 
 - Yalnızca tam yazılan kelimeden sonra ENTER 'a yeni satır ekle
 
    Tamamlanma listesindeki bir girdinin tüm karakterlerini yazıp **ENTER**' a basarsanız, otomatik olarak yeni bir satır eklenir ve imleç yeni satıra gider.
 
-   Örneğin, yazıp ENTER `else` tuşuna basarsanız, düzenleyicide aşağıdakiler **Enter**görüntülenir:
+   Örneğin, yazıp ENTER `else` tuşuna basarsanız, düzenleyicide aşağıdakiler **Enter** görüntülenir:
 
    `else`
 
    `|` (imleç konumu)
 
-   Ancak, yalnızca yazıp `el` **ENTER**tuşuna basarsanız, düzenleyicide aşağıdakiler görüntülenir:
+   Ancak, yalnızca yazıp `el` **ENTER** tuşuna basarsanız, düzenleyicide aşağıdakiler görüntülenir:
 
    `else|` (imleç konumu)
 

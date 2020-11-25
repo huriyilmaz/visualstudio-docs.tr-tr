@@ -1,5 +1,7 @@
 ---
 title: Seçenekler, Metin Düzenleyici, C/C++, Gelişmiş
+description: IntelliSense ve gözatma veritabanıyla ilgili davranışı değiştirmek için C/C++ bölümünde Gelişmiş sayfasını nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -14,12 +16,12 @@ ms.author: corob
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e7e031836c9762d9666a5624e78ecc7c8cc7dd9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fe69471d231599c6e3eece0b56ff70fca5b6afab
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77275204"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96040348"
 ---
 # <a name="options-text-editor-cc-advanced"></a>Seçenekler, Metin Düzenleyici, C/C++, Gelişmiş
 
@@ -44,7 +46,7 @@ Veritabanı salt okunurdur ve dosyalar düzenlenirken hiçbir güncelleştirme g
 
 **Veritabanı otomatik güncelleştirmelerini devre dışı bırak**
 
-Kaynak dosyalar değiştirildiğinde, kod gözatma veritabanı otomatik olarak güncelleştirilmeyecek. Ancak **Çözüm Gezgini**açarsanız, proje için kısayol menüsünü açın ve ardından **çözümü yeniden Tara**' yı seçerseniz, tüm güncel dosyalar denetlenir ve veritabanı güncelleştirilir.
+Kaynak dosyalar değiştirildiğinde, kod gözatma veritabanı otomatik olarak güncelleştirilmeyecek. Ancak **Çözüm Gezgini** açarsanız, proje için kısayol menüsünü açın ve ardından **çözümü yeniden Tara**' yı seçerseniz, tüm güncel dosyalar denetlenir ve veritabanı güncelleştirilir.
 
 **Örtük dosyaları devre dışı bırak**
 
@@ -194,7 +196,7 @@ Performans nedenleriyle, her adayı doğrulamak için IntelliSense kullanmak yer
 
 **Başvuru vurgulamasını devre dışı bırak**
 
-Varsayılan olarak, bazı metinleri seçtiğinizde, aynı metnin tüm örnekleri otomatik olarak geçerli belgede vurgulanır. **Başvuru Vurgulamayı devre dışı bırak** ayarını **true**olarak ayarlayarak bu özelliği devre dışı bırakabilirsiniz.
+Varsayılan olarak, bazı metinleri seçtiğinizde, aynı metnin tüm örnekleri otomatik olarak geçerli belgede vurgulanır. **Başvuru Vurgulamayı devre dışı bırak** ayarını **true** olarak ayarlayarak bu özelliği devre dışı bırakabilirsiniz.
 
 ## <a name="text-editor"></a>Metin Düzenleyici
 

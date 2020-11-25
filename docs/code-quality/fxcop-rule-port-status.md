@@ -1,33 +1,33 @@
 ---
 title: FxCop kural bağlantı noktası durumu
 ms.date: 05/21/2019
-description: Visual Studio 'da FxCop analizine yönelik olan statik kod analizi kuralları hakkında bilgi edinin. Güncelleştirme taşıma konusunda yer alan kuralları ve kaynakları görüntüleyin.
+description: Visual Studio 'da .NET çözümleyicilerine eklenen statik kod analizi kuralları hakkında bilgi edinin. Güncelleştirme taşıma konusunda yer alan kuralları ve kaynakları görüntüleyin.
 ms.custom: SEO-VS-2020
 ms.topic: reference
 helpviewer_keywords:
 - fxcop rules
-- fxcop analyzers, ported rules
+- .NET analyzers, ported rules
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: cedd96036a6d0725dbde5f0b11400a20360a20ec
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: dde5a3d8ccf5557905395ee03d108e995ecffe7e
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94348951"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96039581"
 ---
 # <a name="fxcop-rule-port-status"></a>FxCop kural bağlantı noktası durumu
 
-Daha önce Visual Studio 'da statik Kod analizini kullandıysanız, bu kurallardan hangilerinin geçerli uygulamada [FxCop çözümleyicileri](install-fxcop-analyzers.md)olarak kullanılabildiğini merak ediyor olabilirsiniz. Bu sayfa, bir sayfada yer alan kuralları listeler. [Numaralandırmamaları](fxcop-unported-rules.md) ve bağlantı noktası ile ilgili planlar olup olmadığı hakkında bilgi için bkz. eksik kurallar.
+Daha önce Visual Studio 'da statik Kod analizini kullandıysanız, bu kurallardan hangilerinin [.net Çözümleyicileri](install-net-analyzers.md)olarak geçerli uygulamada kullanılabilir olduğunu merak ediyor olabilirsiniz. Bu sayfa, bir sayfada yer alan kuralları listeler. [Numaralandırmamaları](fxcop-unported-rules.md) ve bağlantı noktası ile ilgili planlar olup olmadığı hakkında bilgi için bkz. eksik kurallar.
 
 ## <a name="ported-rules"></a>Taşınan kurallar
 
-Roslyn-çözümleyiciler depolarındaki otomatik olarak oluşturulan [Belgeler sayfasında](https://github.com/dotnet/roslyn-analyzers/blob/master/src/Microsoft.CodeAnalysis.FxCopAnalyzers/Microsoft.CodeAnalysis.FxCopAnalyzers.md) , FxCop çözümleyicileri ' nin içinde yer alan kuralların en güncel listesi bulunur. Bu sayfada Ayrıca kuralın varsayılan olarak etkinleştirilip etkinleştirilmeyeceğini ve ilişkili bir *kod düzeltmesine* sahip olup olmadığı gibi ek bilgiler de bulunur. ([Kod düzeltmeleri](../ide/quick-actions.md) , Visual Studio 'da ampul simgesi menüsünde sunulan tek tıklamayla düzeltmeler ' dir.)
+Roslyn-çözümleyiciler depolarındaki otomatik olarak oluşturulan [Belgeler sayfasında](https://github.com/dotnet/roslyn-analyzers/blob/master/src/NetAnalyzers/Microsoft.CodeAnalysis.NetAnalyzers.md) , Roslyn çözümleyicilerine eklenen kuralların en güncel listesi bulunur. Bu sayfada Ayrıca kuralın varsayılan olarak etkinleştirilip etkinleştirilmeyeceğini ve ilişkili bir *kod düzeltmesine* sahip olup olmadığı gibi ek bilgiler de bulunur. ([Kod düzeltmeleri](../ide/quick-actions.md) , Visual Studio 'da ampul simgesi menüsünde sunulan tek tıklamayla düzeltmeler ' dir.)
 
-Bu sayfadaki tarihin itibariyle, [FxCop çözümleyicileri](install-fxcop-analyzers.md) 'nin kapsamında yer alan FxCop kuralları listesi şunları içerir:
+Bu sayfadaki tarihte, [.net çözümleyicilerine](install-net-analyzers.md) eklenen FxCop kurallarının listesi şunları içerir:
 
 Kural Kimliği | Başlık
 --------|---------
@@ -64,7 +64,7 @@ Kural Kimliği | Başlık
 [CA1050](/dotnet/fundamentals/code-analysis/quality-rules/ca1050) | Ad alanlarında türler bildirin
 [CA1051](/dotnet/fundamentals/code-analysis/quality-rules/ca1051) | Görünür örnek alanlarını bildirmeyin
 [CA1052](/dotnet/fundamentals/code-analysis/quality-rules/ca1052) | Statik tutucu türleri statik veya NotInheritable olmalıdır
-[CA1053](/dotnet/fundamentals/code-analysis/quality-rules/ca1053) | Statik tutucu türlerin oluşturucuları olmamalıdır (CA1053, FxCop çözümleyicileri için [CA1052](/dotnet/fundamentals/code-analysis/quality-rules/ca1052) 'in bir parçasıdır)
+[CA1053](/dotnet/fundamentals/code-analysis/quality-rules/ca1053) | Statik tutucu türlerin oluşturucuları olmamalıdır (CA1053, .NET Çözümleyicileri için [CA1052](/dotnet/fundamentals/code-analysis/quality-rules/ca1052) 'in bir parçasıdır)
 [CA1054](/dotnet/fundamentals/code-analysis/quality-rules/ca1054) | URI parametreleri dize olmamalıdır
 [CA1055](/dotnet/fundamentals/code-analysis/quality-rules/ca1055) | URI dönüş değerleri dize olmamalıdır
 [CA1056](/dotnet/fundamentals/code-analysis/quality-rules/ca1056) | URI özellikleri dize olmamalıdır
@@ -204,4 +204,4 @@ CA9999 | Çözümleyici sürümü uyumsuzluğu
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Microsoft. CodeAnalysis. Fxcopçözümleyiciler kuralları](https://github.com/dotnet/roslyn-analyzers/blob/master/src/Microsoft.CodeAnalysis.FxCopAnalyzers/Microsoft.CodeAnalysis.FxCopAnalyzers.md)
+- [.NET çözümleyici kuralları](https://github.com/dotnet/roslyn-analyzers/blob/master/src/NetAnalyzers/Microsoft.CodeAnalysis.NetAnalyzers.md)

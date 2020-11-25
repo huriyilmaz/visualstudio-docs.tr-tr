@@ -1,5 +1,7 @@
 ---
 title: Seçenekler, metin düzenleyici, XAML, çeşitli
+description: Öğelerin ve özniteliklerin XAML belgelerinizde nasıl biçimlendirileceğini belirtmek için XML bölümündeki Miscellaneous sayfasını nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 10/29/2018
 ms.topic: reference
 f1_keywords:
@@ -28,12 +30,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: f646d52e3aae3d52f6cd24d75421fbdc71d30d66
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c5662381d025fa2c74ac82ac217122ea9097ab14
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85544098"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96040972"
 ---
 # <a name="options-text-editor-xaml-miscellaneous"></a>Seçenekler, metin düzenleyici, XAML, çeşitli
 
@@ -43,7 +45,7 @@ ms.locfileid: "85544098"
 
 Etiketlerin ve tekliflerin otomatik olarak ne zaman oluşturulduğunu denetlemek için bu ayarı kullanın.
 
-|Ad|Açıklama|
+|Adı|Açıklama|
 |-|-|
 |**Kapatma etiketleri**|Açılış etiketini (>) karakterden daha uzun bir öğe kapatma etiketinin otomatik olarak oluşturulup oluşturulmayacağını belirtir.|
 |**Öznitelik teklifleri**|Ekstre tamamlama açılan listesinden bir öznitelik değeri seçildiğinde kapsayan tekliflerin oluşturulup oluşturulmayacağını belirtir.|

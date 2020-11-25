@@ -1,5 +1,6 @@
 ---
 title: For döngüsünü foreach ifadesine dönüştürmek için yeniden Düzenle
+description: For döngüsü ve foreach ifadesi arasında dönüştürme yapmak için hızlı eylemler ve yeniden düzenlemeler menüsünü nasıl kullanacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 03/10/2020
 ms.topic: reference
@@ -11,12 +12,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 68ed736a1e3a07c7cd3f67ea9c936821cf4ac78c
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: 70c2b17f00c1f5e72ce0e913c360b4655b18df12
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93045918"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96040829"
 ---
 # <a name="refactoring-to-convert-between-a-for-loop-and-a-foreach-statement"></a>For döngüsü ve foreach ifadesi arasında dönüştürmek için yeniden düzenleme
 
@@ -51,7 +52,7 @@ Bu yeniden düzenleme için geçerlidir:
 
    ![Foreach menüsüne Dönüştür](media/convert-to-foreach.png)
 
-1. **' Foreach ' olarak Dönüştür** ' ü seçin. Ya [da Değişiklikleri Önizle iletişim kutusunu](../../ide/preview-changes.md) açmak Için **Değişiklikleri Önizle** ' yi seçin ve ardından **Uygula** ' yı seçin.
+1. **' Foreach ' olarak Dönüştür**' ü seçin. Ya [da Değişiklikleri Önizle iletişim kutusunu](../../ide/preview-changes.md) açmak Için **Değişiklikleri Önizle** ' yi seçin ve ardından **Uygula**' yı seçin.
 
 ## <a name="convert-a-foreach-statement-to-a-for-loop"></a>Foreach ifadesini for döngüsüne Dönüştür
 
@@ -79,12 +80,12 @@ Bu yeniden düzenleme için geçerlidir:
 
    ![Menüye Dönüştür](media/convert-to-for.png)
 
-1. **' For ' olarak Dönüştür '** ü seçin. Ya [da Değişiklikleri Önizle iletişim kutusunu](../../ide/preview-changes.md) açmak Için **Değişiklikleri Önizle** ' yi seçin ve ardından **Uygula** ' yı seçin.
+1. **' For ' olarak Dönüştür '** ü seçin. Ya [da Değişiklikleri Önizle iletişim kutusunu](../../ide/preview-changes.md) açmak Için **Değişiklikleri Önizle** ' yi seçin ve ardından **Uygula**' yı seçin.
 
 1. Yeniden düzenleme yeni bir yineleme sayısı değişkeni tanıtıldığı için, düzenleyicinin sağ üst köşesinde **Yeniden Adlandır** kutusu görünür. Değişken için farklı bir ad seçmek istiyorsanız, yazın ve **ENTER tuşuna basın** veya **Yeniden Adlandır** kutusuna **Uygula** ' yı seçin. Yeni bir ad seçmek istemiyorsanız, **ESC** tuşuna basın veya **Yeniden Adlandır** kutusunu kapatmak için **Uygula** ' yı seçin.
 
 > [!NOTE]
-> C# için, bu yeniden düzenlemeler tarafından oluşturulan kod, koleksiyondaki öğelerin türü için açık bir tür ya da [var](/dotnet/csharp/language-reference/keywords/var) kullanır. Oluşturulan koddaki tür açık veya örtük, kapsamdaki kod stili ayarlarına bağlıdır. Bu özel kod stili ayarları, **Araçlar**  >  **Seçenekler**  >  **metin düzenleyici**  >  **C#**  >  **kod stili**  >  **genel**  >  **\' var ' tercihleri** altında makine düzeyinde veya bir [editorconfig](/dotnet/fundamentals/code-analysis/style-rules/language-rules#implicit-and-explicit-types) dosyasındaki çözüm düzeyinde yapılandırılır. **Seçenekler** ' de bir kod stili ayarını değiştirirseniz değişikliklerin etkili olması için kod dosyasını yeniden açın.
+> C# için, bu yeniden düzenlemeler tarafından oluşturulan kod, koleksiyondaki öğelerin türü için açık bir tür ya da [var](/dotnet/csharp/language-reference/keywords/var) kullanır. Oluşturulan koddaki tür açık veya örtük, kapsamdaki kod stili ayarlarına bağlıdır. Bu özel kod stili ayarları, **Araçlar**  >  **Seçenekler**  >  **metin düzenleyici**  >  **C#**  >  **kod stili**  >  **genel**  >  **\' var ' tercihleri** altında makine düzeyinde veya bir [editorconfig](/dotnet/fundamentals/code-analysis/style-rules/language-rules#implicit-and-explicit-types) dosyasındaki çözüm düzeyinde yapılandırılır. **Seçenekler**' de bir kod stili ayarını değiştirirseniz değişikliklerin etkili olması için kod dosyasını yeniden açın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,5 +1,7 @@
 ---
 title: Seçenekler, Metin Düzenleyici, Tüm Diller, Sekmeler
+description: Visual Studio 'daki kod Düzenleyicisi sekmelerinin varsayılan davranışını değiştirmek için tüm diller bölümündeki sekmeler sayfasını nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -41,12 +43,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0fc169960cf757e4e334d5f77b06ff70b0d6da7c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e66654c8ceefa2cb7983c29f441cbb0f9cf97aff
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75594753"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96043978"
 ---
 # <a name="options-text-editor-all-languages-tabs"></a>Seçenekler, Metin Düzenleyici, Tüm Diller, Sekmeler
 
@@ -59,7 +61,7 @@ Belirli programlama dilleri için sekmeler seçenekler sayfalarında farklı aya
 
 ## <a name="indenting"></a>Girintileme
 
-Hiçbiri
+Yok
 
 Seçildiğinde, yeni satırlar girintili değildir. Ekleme noktası yeni bir satırın ilk sütununa yerleştirilir.
 
@@ -89,7 +91,7 @@ Seçildiğinde, girinti işlemleri sekme karakterleri değil yalnızca boşluk k
 
 Sekmeleri izleyin
 
-Seçildiğinde, Girintile işlemleri mümkün olduğunca çok sekme karakteri ekler. Her sekme karakteri, **sekme boyutunda**belirtilen boşluk sayısını doldurur. **Girinti boyutu** **sekme boyutunun**Çift katı değilse, farkı dolduracak şekilde boşluk karakterleri eklenir.
+Seçildiğinde, Girintile işlemleri mümkün olduğunca çok sekme karakteri ekler. Her sekme karakteri, **sekme boyutunda** belirtilen boşluk sayısını doldurur. **Girinti boyutu** **sekme boyutunun** Çift katı değilse, farkı dolduracak şekilde boşluk karakterleri eklenir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

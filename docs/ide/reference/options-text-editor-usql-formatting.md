@@ -1,5 +1,7 @@
 ---
 title: U-SQL Düzenleyicisi biçimlendirme seçenekleri
+description: U-SQL ' te programlama yaparken kod düzenleyicisinde biçimlendirme seçeneklerini ayarlamak için biçimlendirme seçenekleri sayfasını ve alt sayfalarını nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 01/17/2019
 ms.topic: reference
 f1_keywords:
@@ -13,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 200ec41a1295178f1127d10053985384a7813158
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5bf65c6c80bbcf24d48f5da584349cc4d6b26049
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75568275"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96040296"
 ---
 # <a name="options-text-editor-u-sql-formatting"></a>Seçenekler, metin düzenleyici, U-SQL, biçimlendirme
 
@@ -40,7 +42,7 @@ Bu ayarlar, kod düzenleyicisinin koda biçimlendirme seçeneklerini uyguladığ
 
 ## <a name="preview-windows"></a>Önizleme pencereleri
 
-**Girinti**, **yeni satırlar**ve **Aralık** alt sayfaları her biri en altta bir önizleme penceresi görüntüler. Önizleme penceresi her bir seçeneğin etkisini gösterir. Önizleme penceresini kullanmak için bir biçimlendirme seçeneği belirleyin. Önizleme penceresinde seçilen seçeneğe bir örnek gösterilir. Bir ayarı bir onay kutusu seçerek değiştirdiğinizde, Önizleme penceresi Yeni ayarın etkisini gösterecek şekilde güncelleştirilir.
+**Girinti**, **yeni satırlar** ve **Aralık** alt sayfaları her biri en altta bir önizleme penceresi görüntüler. Önizleme penceresi her bir seçeneğin etkisini gösterir. Önizleme penceresini kullanmak için bir biçimlendirme seçeneği belirleyin. Önizleme penceresinde seçilen seçeneğe bir örnek gösterilir. Bir ayarı bir onay kutusu seçerek değiştirdiğinizde, Önizleme penceresi Yeni ayarın etkisini gösterecek şekilde güncelleştirilir.
 
 ### <a name="indentation-remarks"></a>Girintileme açıklamaları
 

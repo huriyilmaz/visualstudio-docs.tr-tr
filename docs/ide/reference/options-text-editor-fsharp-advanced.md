@@ -1,5 +1,7 @@
 ---
 title: 'Seçenekler, metin düzenleyici, F #, gelişmiş'
+description: 'F # bölümündeki gelişmiş sayfasını kullanarak F # için blok yapısı kılavuzlarını ve ana hat ayarlarını değiştirme hakkında bilgi edinin.'
+ms.custom: SEO-VS-2020
 ms.date: 01/16/2019
 ms.topic: reference
 f1_keywords:
@@ -9,12 +11,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 64626a0ebd8850098bbbc056d523b6a3f034bf4e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f9f4550ccf83f5697bca46d4a4049fe7df9b1c20
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85770951"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96039646"
 ---
 # <a name="options-text-editor-f-advanced"></a>Seçenekler, metin düzenleyici, F #, gelişmiş
 

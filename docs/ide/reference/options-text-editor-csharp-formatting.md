@@ -1,5 +1,7 @@
 ---
 title: C# Düzenleyicisi biçimlendirme seçenekleri
+description: C# dilinde programlama yaparken kod düzenleyicisinde biçimlendirme seçeneklerini ayarlamak için biçimlendirme seçenekleri sayfasını ve alt sayfalarını nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 08/14/2018
 ms.topic: reference
 f1_keywords:
@@ -18,21 +20,21 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 57d95cd3f3dcf68e7af143bdde3a16474beda20c
-ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
+ms.openlocfilehash: a29f298579d571595cbf537f99ed67b333fbbb9c
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91659283"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96039779"
 ---
 # <a name="options-dialog-box-text-editor--c--code-style--formatting"></a>Seçenekler iletişim kutusu: metin düzenleyici \> C# \> kod stili \> biçimlendirme
 
-Kod düzenleyicisinde biçimlendirme kodu seçeneklerini ayarlamak için **biçimlendirme** seçenekleri sayfasını ve alt sayfalarını ([**girintileme**](#indentation-page), **yeni satırlar**, **boşluk**ve **kaydırma**) kullanın.
+Kod düzenleyicisinde biçimlendirme kodu seçeneklerini ayarlamak için **biçimlendirme** seçenekleri sayfasını ve alt sayfalarını ([**girintileme**](#indentation-page), **yeni satırlar**, **boşluk** ve **kaydırma**) kullanın.
 
-Bu seçenekler sayfasına erişmek için, menü çubuğundan **Araçlar**  >  **Seçenekler** ' i seçin. **Seçenekler** iletişim kutusunda **metin düzenleyici**  >  **C#**  >  **kod stili**  >  **biçimlendirme**öğesini seçin.
+Bu seçenekler sayfasına erişmek için, menü çubuğundan **Araçlar**  >  **Seçenekler** ' i seçin. **Seçenekler** iletişim kutusunda **metin düzenleyici**  >  **C#**  >  **kod stili**  >  **biçimlendirme** öğesini seçin.
 
 > [!TIP]
-> **Girinti**, **yeni satırlar**, **Aralık**ve **kaydırma** alt sayfaları her bir seçeneğin etkisini gösteren bir önizleme penceresi görüntüler. Önizleme penceresini kullanmak için bir biçimlendirme seçeneği belirleyin. Önizleme penceresinde seçilen seçeneğe bir örnek gösterilir. Bir seçimi bir radyo düğmesi veya onay kutusu seçerek değiştirdiğinizde, Önizleme penceresi Yeni ayarın etkisini gösterecek şekilde güncelleştirilir.
+> **Girinti**, **yeni satırlar**, **Aralık** ve **kaydırma** alt sayfaları her bir seçeneğin etkisini gösteren bir önizleme penceresi görüntüler. Önizleme penceresini kullanmak için bir biçimlendirme seçeneği belirleyin. Önizleme penceresinde seçilen seçeneğe bir örnek gösterilir. Bir seçimi bir radyo düğmesi veya onay kutusu seçerek değiştirdiğinizde, Önizleme penceresi Yeni ayarın etkisini gösterecek şekilde güncelleştirilir.
 
 ## <a name="formatting-general-page"></a>Biçimlendirme (genel) sayfası
 

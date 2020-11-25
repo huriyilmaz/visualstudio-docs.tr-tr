@@ -1,5 +1,7 @@
 ---
 title: Seçenekler, metin düzenleyici, temel (VB), gelişmiş
+description: Analiz, Içeri aktarma yönergelerinin ve özellikleri vurgulamanın varsayılan ayarlarını değiştirmek için temel bölümdeki gelişmiş sayfasını nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 08/12/2020
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 778cd1f9c126b176cafad8b33a147d284bea1b67
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 530fffdf335232a76a54e66551487a89dc50b09a
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88214657"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96040998"
 ---
 # <a name="options-text-editor-basic-visual-basic-advanced"></a>Seçenekler, metin düzenleyici, temel (Visual Basic), gelişmiş
 **Seçenekler** (**Araçlar** menüsü) iletişim kutusunun **metin düzenleyici** klasörünün **temel** klasöründe **vb 'ye özgü** Özellik sayfası aşağıdaki özellikleri içerir:
@@ -55,7 +57,7 @@ ms.locfileid: "88214657"
 
  **Başvuruların ve anahtar sözcüklerin vurgulanmasını etkinleştir**
 
-Metin Düzenleyicisi, veya gibi bir yan tümcedeki bir sembolün veya tüm anahtar kelimelerin tüm örneklerini vurgulayabilir `If..Then` `While...End While` `Try...Catch...Finally` . **CTRL**  +  **SHIFT**  +  **aşağı ok** veya **CTRL**  +  **SHIFT**  +  **yukarı ok**tuşlarına basarak vurgulanan başvurular veya anahtar sözcükler arasında gezinebilirsiniz.
+Metin Düzenleyicisi, veya gibi bir yan tümcedeki bir sembolün veya tüm anahtar kelimelerin tüm örneklerini vurgulayabilir `If..Then` `While...End While` `Try...Catch...Finally` . **CTRL**  +  **SHIFT**  +  **aşağı ok** veya **CTRL**  +  **SHIFT**  +  **yukarı ok** tuşlarına basarak vurgulanan başvurular veya anahtar sözcükler arasında gezinebilirsiniz.
 
 ## <a name="outlining"></a>Anahat Oluşturma
 
@@ -104,7 +106,7 @@ Seçildiğinde, işlev çağrılarında her bağımsız değişkenden önce sabi
 
 **Son yapıların otomatik eklenmesi**
 
-Örneğin, bir yordam bildiriminin ilk satırı `Sub Main` — ve **ENTER**tuşuna bastığınızda, metin düzenleyici eşleşen bir `End Sub` satır ekler. Benzer şekilde, bir [for](/dotnet/visual-basic/language-reference/statements/for-next-statement) döngüsü eklerseniz, metin düzenleyici eşleşen bir `Next` ifade ekler. Bu seçenek belirlendiğinde, kod Düzenleyicisi bitiş yapısını otomatik olarak ekler.
+Örneğin, bir yordam bildiriminin ilk satırı `Sub Main` — ve **ENTER** tuşuna bastığınızda, metin düzenleyici eşleşen bir `End Sub` satır ekler. Benzer şekilde, bir [for](/dotnet/visual-basic/language-reference/statements/for-next-statement) döngüsü eklerseniz, metin düzenleyici eşleşen bir `Next` ifade ekler. Bu seçenek belirlendiğinde, kod Düzenleyicisi bitiş yapısını otomatik olarak ekler.
 
 **Arabirim ve MustOverride üyelerinin otomatik olarak eklenmesi**
 

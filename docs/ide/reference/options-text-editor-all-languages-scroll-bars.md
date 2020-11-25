@@ -1,5 +1,7 @@
 ---
 title: Seçenekler, metin düzenleyici, tüm diller, kaydırma çubukları
+description: Visual Studio içindeki kod düzenleyici kaydırma çubuklarının varsayılan davranışını değiştirmek için tüm diller bölümündeki kaydırma çubukları sayfasını nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 10/25/2018
 ms.topic: reference
 f1_keywords:
@@ -32,12 +34,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c89be8a79aad9a2e3e0cdbc8601a08a99c1ad1aa
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: f75ba02b65b7025f9cf1e4f2eb9b5b6e3de96be0
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808096"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96039802"
 ---
 # <a name="options-text-editor-all-languages-scroll-bars"></a>Seçenekler, metin düzenleyici, tüm diller, kaydırma çubukları
 Bu iletişim kutusu, kod Düzenleyicisi kaydırma çubuğunun varsayılan davranışını değiştirmenize olanak sağlar. Bu seçenekleri göstermek için, **Araçlar** menüsünden **Seçenekler** ' i seçin. **Metin Düzenleyicisi** klasörü Içinde **tüm diller** alt klasörünü genişletin ve ardından **kaydırma çubukları**' nı seçin.
@@ -84,7 +86,7 @@ Kaydırma çubuğunun iki modu vardır: çubuk modu ve eşleme modu.
 *Harita modunda*, kaydırma çubuğundaki bir konuma tıkladığınızda, imleç yalnızca bir sayfada yukarı veya aşağı kaydırmak yerine dosyada bu konuma atlar. Kod satırları, kaydırma çubuğunda küçük olarak gösterilir. Eşleme sütununun ne kadar geniş olduğunu seçerek **kaynak genel bakış**' da bir değer seçebilirsiniz. İşaretçiyi haritada tuttuğunuz zaman kodun daha büyük bir önizlemesini etkinleştirmek için **Önizleme araç Ipucunu göster** seçeneğini belirleyin. Daraltılmış bölgeler farklı şekilde genişleyebilir ve çift tıkladığınızda genişletilir.
 
 > [!TIP]
-> **Kaynak genel bakışını** **kapalı**olarak ayarlayarak, eşleme modunda küçük kod görünümünü kapatabilirsiniz. **Önizleme araç Ipucunu göster** seçiliyse, işaretçinizi kaydırma çubuğunun üzerine getirdiğinizde bu konumdaki kodun önizlemesini görmeye devam edersiniz ve imleç, tıkladığınızda dosyada bu konuma atlar.
+> **Kaynak genel bakışını** **kapalı** olarak ayarlayarak, eşleme modunda küçük kod görünümünü kapatabilirsiniz. **Önizleme araç Ipucunu göster** seçiliyse, işaretçinizi kaydırma çubuğunun üzerine getirdiğinizde bu konumdaki kodun önizlemesini görmeye devam edersiniz ve imleç, tıkladığınızda dosyada bu konuma atlar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

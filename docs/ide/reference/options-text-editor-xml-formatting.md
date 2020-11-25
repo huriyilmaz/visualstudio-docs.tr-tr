@@ -1,5 +1,7 @@
 ---
 title: Seçenekler, metin düzenleyici, XML, biçimlendirme
+description: XML belgelerindeki biçimlendirme sayfasını, öğelerin ve özniteliklerin XML belgelerinizde nasıl biçimlendirileceğini belirtmek için nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 10/29/2018
 ms.topic: reference
 f1_keywords:
@@ -8,12 +10,12 @@ ms.assetid: 203e60b2-7b80-4ff4-9fa1-aa9f4374377b
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: b5dabfbc4f705d7de9fa881f373994714e43d26a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9aac9420d084c64a4bd5d9199f6a7ca96b8c4281
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75568145"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96040517"
 ---
 # <a name="options-text-editor-xml-formatting"></a>Seçenekler, metin düzenleyici, XML, biçimlendirme
 
@@ -67,4 +69,4 @@ Bir öğe metin ve biçimlendirme karışımı içeriyorsa, içerik karışık i
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [XML seçenekleri-çeşitli](options-text-editor-xml-miscellaneous.md)
-- [Visual Studio 'da XML araçları](../../xml-tools/xml-tools-in-visual-studio.md)
+- [Visual Studio'daki XML araçları](../../xml-tools/xml-tools-in-visual-studio.md)

@@ -1,5 +1,7 @@
 ---
 title: Seçenekler, Metin Düzenleyici, Dosya Uzantısı
+description: Belirli dosya uzantılarına sahip tüm dosyaların Visual Studio IDE tarafından nasıl işleneceğini belirtmek için dosya uzantısı sayfasını nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -15,12 +17,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3711a87d84e25fd6f790cee62ecb71b2b046d0be
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1d0e782b0d141666ca7d1f79464d60afd89ef871
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75596209"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96039737"
 ---
 # <a name="options-text-editor-file-extension"></a>Seçenekler, Metin Düzenleyici, Dosya Uzantısı
 
@@ -56,7 +58,7 @@ Uzantısı olmayan dosyaların IDE tarafından nasıl işleneceğini belirtmek i
 
 **Uzantısız dosya seçenekleri**
 
-**Düzenleyiciyle**aynı listeyi sağlar. Dosya uzantıları olmayan belgelerin açılacağı IDE Düzenleyicisi veya tasarımcı ' yı seçin.
+**Düzenleyiciyle** aynı listeyi sağlar. Dosya uzantıları olmayan belgelerin açılacağı IDE Düzenleyicisi veya tasarımcı ' yı seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

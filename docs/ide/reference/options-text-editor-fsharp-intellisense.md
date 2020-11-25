@@ -1,5 +1,7 @@
 ---
 title: 'Seçenekler, metin düzenleyici, F #, IntelliSense'
+description: 'F # bölümünde IntelliSense sayfasını kullanarak F # için metin düzenleyici IntelliSense ayarlarını değiştirme hakkında bilgi edinin.'
+ms.custom: SEO-VS-2020
 ms.date: 01/16/2019
 ms.topic: reference
 f1_keywords:
@@ -9,12 +11,12 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: d293d2c649329f5de8444ea75fd05ddc34738ab4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 84e24f609891e67bdafaab5ff8847dc341b861ba
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72666222"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96039620"
 ---
 # <a name="options-text-editor-f-intellisense"></a>Seçenekler, metin düzenleyici, F #, IntelliSense
 
@@ -24,7 +26,7 @@ F # için bazı metin düzenleyici ayarlarını değiştirmek üzere **IntelliSe
 
 - **Bir karakter yazıldıktan sonra tamamlanma listesini göster**
 
-   Bu seçenek belirlendiğinde, yazmaya başladığınızda IntelliSense, tamamlanma listesini otomatik olarak görüntüler. Bu seçeneği seçmezseniz, IntelliSense 'i IntelliSense menüsünde veya **CTRL**Space tuşuna basarak kullanmaya devam edebilirsiniz  +  **Space**.
+   Bu seçenek belirlendiğinde, yazmaya başladığınızda IntelliSense, tamamlanma listesini otomatik olarak görüntüler. Bu seçeneği seçmezseniz, IntelliSense 'i IntelliSense menüsünde veya **CTRL** Space tuşuna basarak kullanmaya devam edebilirsiniz  +  **Space**.
 
 - **Bir karakter silindikten sonra tamamlanma listesini göster**
 

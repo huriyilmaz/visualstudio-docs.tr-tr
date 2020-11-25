@@ -1,5 +1,7 @@
 ---
 title: Seçenekler, metin düzenleyici, HTML (Web Forms), çeşitli
+description: HTML Düzenleyicisi 'nin sayfaya yapıştırılan öğeleri nasıl işleyeceğini gösteren tercihleri ayarlamak için HTML bölümündeki çeşitli sayfasını nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 1/15/2019
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -10,16 +12,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8aa26144a7c0a2f7edad58ecfb26e3a7d402a994
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bf5495f60e92a38c0c43a0751054d41dc4de6970
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85770909"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96040777"
 ---
 # <a name="options-text-editor-html-web-forms-miscellaneous"></a>Seçenekler, metin düzenleyici, HTML (Web Forms), çeşitli
 
-HTML düzenleyicisinin sayfaya yapıştırılan öğeleri nasıl işleyeceğini gösteren tercihleri ayarlamak için **çeşitli** Seçenekler sayfasını kullanın. Bu sayfaya erişmek için, menü çubuğunda **Araçlar**  >  **Seçenekler**' i seçin ve ardından **metin düzenleyici**  >  **HTML (Web Forms)**  >  **diğer**öğesini genişletin.
+HTML düzenleyicisinin sayfaya yapıştırılan öğeleri nasıl işleyeceğini gösteren tercihleri ayarlamak için **çeşitli** Seçenekler sayfasını kullanın. Bu sayfaya erişmek için, menü çubuğunda **Araçlar**  >  **Seçenekler**' i seçin ve ardından **metin düzenleyici**  >  **HTML (Web Forms)**  >  **diğer** öğesini genişletin.
 
 ## <a name="miscellaneous-html-options"></a>Çeşitli HTML seçenekleri
 

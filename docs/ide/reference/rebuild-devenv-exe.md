@@ -1,5 +1,7 @@
 ---
 title: -Rebuild (devenv.exe)
+description: Yeniden oluşturma Devenv komut satırı anahtarını kullanarak, belirtilen çözüm yapılandırmasını temizleyip oluşturmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 12/10/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -14,12 +16,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 76fe4bcf3441163604d93e9264ed6f78fcf0224b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8086e5ffb2ebdd154e95eda18e04ed5b64cd3dd2
+ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75565623"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96040049"
 ---
 # <a name="rebuild-devenvexe"></a>/Rebuild (devenv.exe)
 
@@ -39,7 +41,7 @@ devenv SolutionName /Rebuild [SolnConfigName [/Project ProjName [/ProjectConfig 
 
 - *SolnConfigName*
 
-  İsteğe bağlı. `Debug` `Release` *SolutionName*içinde adlı çözümü yeniden derlemek için kullanılacak Çözüm yapılandırmasının adı (veya gibi). Birden fazla çözüm platformu varsa, platformu da belirtmeniz gerekir (örneğin, `Debug|Win32` ). Bu bağımsız değişken belirtilmemişse veya boş bir dize ( `""` ) ise, araç çözümün etkin yapılandırmasını kullanır.
+  İsteğe bağlı. `Debug` `Release` *SolutionName* içinde adlı çözümü yeniden derlemek için kullanılacak Çözüm yapılandırmasının adı (veya gibi). Birden fazla çözüm platformu varsa, platformu da belirtmeniz gerekir (örneğin, `Debug|Win32` ). Bu bağımsız değişken belirtilmemişse veya boş bir dize ( `""` ) ise, araç çözümün etkin yapılandırmasını kullanır.
 
 - `/Project` *ProjName*
 
