@@ -13,21 +13,25 @@
           items:
             - name: Genel Bakış
               href: use-roslyn-analyzers.md
-            - name: Kod kalitesi
+            - name: .NET çözümleyicileri
               items:
-                - name: Kod kalitesi seçenekleri
-                  href: /dotnet/fundamentals/code-analysis/code-quality-rule-options?toc=%2fvisualstudio%2fcode-quality%2ftoc.json
-                - name: Kod kalitesi için EditorConfig dosyaları kullanma
-                  href: /dotnet/fundamentals/code-analysis/configuration-files?toc=%2fvisualstudio%2fcode-quality%2ftoc.json
-            - name: Kod stili
-              items:
-                - name: Kod stili tercihleri
-                  href: ../ide/code-styles-and-code-cleanup.md?toc=%252fvisualstudio%252fcode-quality%252ftoc.json
-                - name: Kod stili için EditorConfig dosyaları kullanma
-                  displayName: Configure code style analyzers
-                  href: ../ide/create-portable-custom-editor-options.md?toc=%252fvisualstudio%252fcode-quality%252ftoc.json
-                - name: Kural seçenekleri
-                  href: /dotnet/fundamentals/code-analysis/code-style-rule-options?toc=%2fvisualstudio%2fcode-quality%2ftoc.json
+                - name: .NET çözümleyicilerini yükleme
+                  href: install-net-analyzers.md
+                - name: Kod kalitesi
+                  items:
+                    - name: Kod kalitesi seçenekleri
+                      href: /dotnet/fundamentals/code-analysis/code-quality-rule-options?toc=%2fvisualstudio%2fcode-quality%2ftoc.json
+                    - name: Kod kalitesi için EditorConfig dosyaları kullanma
+                      href: /dotnet/fundamentals/code-analysis/configuration-files?toc=%2fvisualstudio%2fcode-quality%2ftoc.json
+                - name: Kod stili
+                  items:
+                    - name: Kod stili tercihleri
+                      href: ../ide/code-styles-and-code-cleanup.md?toc=%252fvisualstudio%252fcode-quality%252ftoc.json
+                    - name: Kod stili için EditorConfig dosyaları kullanma
+                      displayName: Configure code style analyzers
+                      href: ../ide/create-portable-custom-editor-options.md?toc=%252fvisualstudio%252fcode-quality%252ftoc.json
+                    - name: Kural seçenekleri
+                      href: /dotnet/fundamentals/code-analysis/code-style-rule-options?toc=%2fvisualstudio%2fcode-quality%2ftoc.json
             - name: Canlı kod analizini yapılandırma
               href: configure-live-code-analysis-scope-managed-code.md
             - name: Kod analizini el ile çalıştırma
@@ -49,8 +53,8 @@
           href: static-code-analysis-for-managed-code-overview.md
         - name: Eski analiz kılavuzu
           href: walkthrough-analyzing-managed-code-for-code-defects.md
-        - name: FxCop çözümleyicilerine geçiş yapma
-          href: migrate-from-legacy-analysis-to-fxcop-analyzers.md
+        - name: .NET çözümleyicilerine geçirme
+          href: migrate-from-legacy-analysis-to-net-analyzers.md
         - name: Eski analizi el ile çalıştırma
           href: how-to-run-legacy-code-analysis-manually-for-managed-code.md
         - name: Yapılandırma
@@ -77,16 +81,14 @@
               href: how-to-synchronize-code-project-rule-sets-with-team-project-check-in-policy.md
             - name: Sürüm uyumluluğu
               href: version-compatibility-for-code-analysis-check-in-policies.md
-        - name: FxCop çözümleyicileri
+        - name: .NET çözümleyicilerine geçirme
           items:
-            - name: FxCop çözümleyicilerini yükleme
-              href: install-fxcop-analyzers.md
-            - name: FxCop çözümleyicilerine geçiş yapma
-              items:
-                - name: Eski analizden FxCop çözümleyicilerine geçiş
-                  href: migrate-from-legacy-analysis-to-fxcop-analyzers.md
-                - name: SSS
-                  href: fxcop-analyzers-faq.md
+            - name: Eski analizden .NET çözümleyicilerine geçirme
+              href: migrate-from-legacy-analysis-to-net-analyzers.md
+            - name: FxCop çözümleyicilerinden .NET çözümleyicilerine geçirme
+              href: migrate-from-fxcop-analyzers-to-net-analyzers.md
+            - name: SSS
+              href: net-analyzers-faq.md
         - name: Kural kümeleri
           items:
             - name: Genel Bakış
