@@ -7,11 +7,11 @@ ms.date: 05/06/2018
 ms.assetid: F7C2A28C-0759-4E0D-A28E-B72D5AB73DB6
 ms.custom: video
 ms.openlocfilehash: f547662278d2ae01660312aff2708970a0a9300a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89315011"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96190258"
 ---
 # <a name="customizing-the-ide"></a>IDE’yi Özelleştirme
 
@@ -25,7 +25,7 @@ Mac için Visual Studio temaları, Visual **Studio > tercihleri > ortam > görse
 
 ![Koyu tema seçimi](media/customizing-the-ide-image7b.png)
 
-## <a name="localization"></a>Yerelleştirme
+## <a name="localization"></a>Localization (Yerelleştirme)
 
 Mac için Visual Studio, aşağıdaki 14 dilde yerelleştirilir ve daha fazla geliştirici tarafından erişilebilmesini sağlar:
 
@@ -64,7 +64,7 @@ Doldurulan **ad** ve **e-posta** alanları, Mac için Visual Studio sürüm dene
 
 Anahtar bağlamaları, Mac için Visual Studio boyunca daha verimli bir şekilde geçiş yapabilmeniz için geliştirme ortamınızı uyarlamanızı sağlar. Visual Studio (Windows üzerinde), ReSharper, Visual Studio Code ve Xcode gibi birçok popüler IDE için tanıdık anahtar bağlamaları sağlar.
 
-Anahtar bağlamaları, aşağıdaki görüntüde gösterildiği gibi **Visual Studio > tercihleri > ortam > anahtar bağlamalarına**göz atarak ayarlanabilir:
+Anahtar bağlamaları, aşağıdaki görüntüde gösterildiği gibi **Visual Studio > tercihleri > ortam > anahtar bağlamalarına** göz atarak ayarlanabilir:
 
 ![Anahtar bağlamalarını ayarla](media/customizing-the-ide-image10a.png)
 
@@ -102,7 +102,7 @@ Oto gizli yüzeyler, gerektiğinde kolayca erişilebilir hale getirerek çalış
 
 Herhangi bir zamanda görüntülenen Pad 'ler geçerli içeriğe bağımlıdır. Örneğin, görsel tasarımcı kullanılırken araç kutusu ve özellik Kılavuz bölmeleri en önemli öneme sahiptir; hata ayıklama sırasında, yığın ve Yereller görüntülemek için hata ayıklayıcı Pad 'ler olması yararlı olur.
 
-Açık tablaın durumu bir *Düzen*tarafından temsil edilir. Düzenler, aşağıdaki görüntüde gösterildiği gibi Görünüm menüsü aracılığıyla el ile değiştirilebilir veya hata ayıklama veya film şeridi açma gibi bir eylemi gerçekleştirdiğinizde otomatik olarak geçer:
+Açık tablaın durumu bir *Düzen* tarafından temsil edilir. Düzenler, aşağıdaki görüntüde gösterildiği gibi Görünüm menüsü aracılığıyla el ile değiştirilebilir veya hata ayıklama veya film şeridi açma gibi bir eylemi gerçekleştirdiğinizde otomatik olarak geçer:
 
 ![Yeni düzenleri seçme](media/customizing-the-ide-image6b.png)
 

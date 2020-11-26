@@ -14,11 +14,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e854425bab10174220188b23fb7e292371e9cb48
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88168729"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96189348"
 ---
 # <a name="step-7-keep-pairs-visible"></a>7. Adım: Çiftleri görünür durumda tutma
 Oyuncu yalnızca eşleşmeyen simge çiftlerini seçtiği sürece oyun düzgün çalışır. Ancak oyuncu eşleşen bir çift seçtiğinde ne olması gerektiğini bir düşünün. Zamanlayıcıyı etkinleştirerek (yöntemi kullanarak) simgeleri ortadan <xref:System.Windows.Forms.Timer.Start> kaldırmamak yerine, oyunun kendisini sıfırlaması gerekir; böylece, `firstClicked` `secondClicked` Seçilen iki etiket için renkleri sıfırlamadan, ve başvuru değişkenlerini kullanarak hiçbir etiketi izlememek üzere.
@@ -57,12 +57,12 @@ Oyuncu yalnızca eşleşmeyen simge çiftlerini seçtiği sürece oyun düzgün 
     firstClicked = null;
     ```
 
-     Bu deyimlerden birincisi iki simgenin aynı olup olmadığını denetler. İki değer karşılaştırıldığından, C# programı `==` eşitlik işlecini kullanır. İkinci ifade gerçekten değeri değiştirir ( *atama*olarak adlandırılır), `firstClicked` başvuru değişkenini sıfırlamak için değerine eşit olarak ayarlar `null` . `=`Bunun yerine atama işlecini kullanmasının nedeni budur. C# `=` , değerleri ayarlamak ve `==` karşılaştırmak için kullanır. Visual Basic `=` , hem değişken atama hem de karşılaştırma için kullanır.
+     Bu deyimlerden birincisi iki simgenin aynı olup olmadığını denetler. İki değer karşılaştırıldığından, C# programı `==` eşitlik işlecini kullanır. İkinci ifade gerçekten değeri değiştirir ( *atama* olarak adlandırılır), `firstClicked` başvuru değişkenini sıfırlamak için değerine eşit olarak ayarlar `null` . `=`Bunun yerine atama işlecini kullanmasının nedeni budur. C# `=` , değerleri ayarlamak ve `==` karşılaştırmak için kullanır. Visual Basic `=` , hem değişken atama hem de karşılaştırma için kullanır.
 
 2. Programı kaydedip çalıştırın ve sonra formdaki simgeleri seçmeye başlayın. Eşleşmeyen bir çift seçerseniz, zamanlayıcının Tick olayı tetiklenir ve iki simge de kaybolur. Eşleşen bir çift seçerseniz, yeni `if` ifade yürütülür ve Return deyimleri, aşağıdaki görüntüde gösterildiği gibi, simgenin görünür kalması için, bu yöntemin zamanlayıcıyı başlatan kodu atlamasına neden olur.
 
      ![Bu öğreticide oluşturduğunuz oyun](../ide/media/express_finishedgame.png)<br/>
-*Görünür simge çiftleri Ile* ***eşleşen oyun***
+***Eşleşen oyun** _ _with görünür simge çiftleri *
 
 ## <a name="to-continue-or-review"></a>Devam etmek veya gözden geçirmek için
 

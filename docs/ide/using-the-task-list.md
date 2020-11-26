@@ -16,11 +16,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8d19794b4fce3e4a1388f864cecf408e0f7e9c53
-ms.sourcegitcommit: 3e05bd4bfac6f0b8b3534d8c013388f67e288651
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91959808"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96189842"
 ---
 # <a name="use-the-task-list"></a>Görev Listesini Kullanma
 
@@ -33,7 +33,7 @@ Ve **Task List** , veya özel belirteçler gibi belirteçleri kullanan kod açı
 
 **Görev listesi** açık olduğunda, uygulama penceresinin alt kısmında görünür.
 
-**Görev listesi**açmak için görev listesi **görüntüle**' yi seçin  >  **Task List**veya klavyeden **CTRL** + **\\** ,**T**tuşlarına basın.
+**Görev listesi** açmak için görev listesi **görüntüle**' yi seçin  >  **Task List** veya klavyeden **CTRL** + **\\** ,**T** tuşlarına basın.
 
 ![Görev Listesi penceresi](../ide/media/vs2015_task_list.png)
 
@@ -51,7 +51,7 @@ Kullanıcı görev verilerinize erişmeye ve güncelleştirmeye devam etmek isti
 
 ## <a name="tokens-and-comments"></a>Belirteçler ve açıklamalar
 
-Kodunuzda bir açıklama işaretçisi ve önceden tanımlanmış bir belirteç bulunan bir yorum de **görev listesi**görüntülenir. Örneğin, aşağıdaki C# açıklamasının üç ayrı bölümü vardır:
+Kodunuzda bir açıklama işaretçisi ve önceden tanımlanmış bir belirteç bulunan bir yorum de **görev listesi** görüntülenir. Örneğin, aşağıdaki C# açıklamasının üç ayrı bölümü vardır:
 
 - Açıklama işaretçisi ( `//` )
 
@@ -76,7 +76,7 @@ Varsayılan olarak, Visual Studio aşağıdaki belirteçleri içerir: `HACK` , `
 
 1. **Araçlar** menüsünde **Seçenekler**' i seçin.
 
-2. **Ortam** klasörünü açın ve ardından **görev listesi**öğesini seçin.
+2. **Ortam** klasörünü açın ve ardından **görev listesi** öğesini seçin.
 
    [Görev listesi Seçenekler sayfası](../ide/reference/task-list-environment-options-dialog-box.md) görüntülenir.
 
@@ -93,19 +93,19 @@ Varsayılan olarak, Visual Studio aşağıdaki belirteçleri içerir: `HACK` , `
 
 ### <a name="c-todo-comments"></a>C++ TODO açıklamaları
 
-Varsayılan olarak, C++ TODO açıklamaları **görev listesi**görüntülenir.
+Varsayılan olarak, C++ TODO açıklamaları **görev listesi** görüntülenir.
 
-C++ Todo açıklamalarını kapatmak için, **Araçlar** menüsünde **Seçenekler**  >  **metin düzenleyici**  >  **C/C++**  >  **görünümü**  >  **Açıklama görevlerini numaralandır**' ı seçin ve değeri **false**olarak ayarlayın.
+C++ Todo açıklamalarını kapatmak için, **Araçlar** menüsünde **Seçenekler**  >  **metin düzenleyici**  >  **C/C++**  >  **görünümü**  >  **Açıklama görevlerini numaralandır**' ı seçin ve değeri **false** olarak ayarlayın.
 
 ## <a name="shortcuts"></a>Kısayollar
 
-*Kısayol* , **görev listesi**izlenen koddaki bir yer işaretidir. Bu, düzenli bir yer işaretine göre farklı bir simgeye sahiptir. Koddaki ilgili konuma gitmek için **görev listesi** kısayoluna çift tıklayın.
+*Kısayol* , **görev listesi** izlenen koddaki bir yer işaretidir. Bu, düzenli bir yer işaretine göre farklı bir simgeye sahiptir. Koddaki ilgili konuma gitmek için **görev listesi** kısayoluna çift tıklayın.
 
 ![Visual Studio Görev Listesi kısayol simgesi](../ide/media/vs2015_task_list_bookmark.png)
 
 ### <a name="create-a-shortcut"></a>Kısayol oluşturma
 
-Bir kısayol oluşturmak için, işaretçiyi bir kısayol yerleştirmek istediğiniz koda ekleyin. **Edit**  >  **Yer imlerini**Düzenle  >  **görev listesi kısayolunu** seçin veya **CTRL** + **K**, **CTRL** + **H**tuşlarına basın.
+Bir kısayol oluşturmak için, işaretçiyi bir kısayol yerleştirmek istediğiniz koda ekleyin. **Edit**  >  **Yer imlerini** Düzenle  >  **görev listesi kısayolunu** seçin veya **CTRL** + **K**, **CTRL** + **H** tuşlarına basın.
 
 Koddaki kısayollar arasında gezinmek için listeden bir kısayol seçin ve sonra kısayol menüsünden **sonraki görev** veya **önceki görev** ' i seçin.
 

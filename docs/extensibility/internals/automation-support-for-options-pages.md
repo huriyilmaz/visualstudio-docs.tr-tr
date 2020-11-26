@@ -1,5 +1,7 @@
 ---
 title: Seçenekler sayfaları için Otomasyon desteği | Microsoft Docs
+description: Visual Studio otomasyon modeli için kullanılabilir VSPackages içindeki özel araç seçenekleri sayfalarınızı nasıl yapacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: fe45238948d5b4cdebbf9f002f6b242515e7622e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1e15b1f8bdd27e013e1ef2060d9867a81e8ddde3
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80709928"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96190037"
 ---
 # <a name="automation-support-for-options-pages"></a>Seçenekler sayfaları için Otomasyon desteği
 VSPackages, ' de **Araçlar** menüsüne (**Araçlar seçenekleri** sayfaları) özel **Seçenekler** iletişim kutuları sunabilir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ve bunları otomasyon modeli için kullanılabilir hale getirir.

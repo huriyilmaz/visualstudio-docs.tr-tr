@@ -7,11 +7,11 @@ ms.date: 05/30/2019
 ms.assetid: 771C2F8E-46BC-4280-AFE8-ED9D5C7790CE
 ms.topic: how-to
 ms.openlocfilehash: 22dfa4a33005afd64be54828f3b49c45244779d2
-ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94493510"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96189881"
 ---
 # <a name="building-aspnet-core-applications-in-visual-studio-for-mac"></a>Mac için Visual Studio’da ASP.NET Core uygulamaları oluşturma
 
@@ -26,7 +26,7 @@ Bu laboratuvarda, Mac için Visual Studio bir ASP.NET Core uygulaması oluştura
 > * Barındırma, yapılandırma ve ara yazılım modelini ASP.NET Core keşfet
 > * ASP.NET Core Web uygulamasında hata ayıklama
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 - [Mac için Visual Studio](https://www.visualstudio.com/vs/visual-studio-mac)
 
@@ -38,9 +38,9 @@ Bu laboratuvar, C# hakkında bilgi sahibi olan geliştiricilere yöneliktir, anc
 
 1. **Mac için Visual Studio** başlatın.
 
-2. **Yeni çözüm > dosya** ' yı seçin.
+2. **Yeni çözüm > dosya**' yı seçin.
 
-3. **.NET Core > uygulama** kategorisini ve **ASP.NET Core Web uygulaması (C#)** şablonunu seçin. **İleri** ’ye tıklayın.
+3. **.NET Core > uygulama** kategorisini ve **ASP.NET Core Web uygulaması (C#)** şablonunu seçin. **İleri**’ye tıklayın.
 
     ![Yeni projeniz için bir Web uygulaması şablonunun nasıl seçileceğini gösteren ekran görüntüsü.](media/netcore-image1.png)
 
@@ -80,7 +80,7 @@ Bu laboratuvar, C# hakkında bilgi sahibi olan geliştiricilere yöneliktir, anc
 
 ## <a name="task-3-understanding-how-the-application-is-hosted"></a>3. görev: uygulamanın nasıl barındırıldığını anlama
 
-1. **Çözüm Gezgini** , **program.cs** açın. Bu, uygulamanızı çalıştıracak olan önyükleyici.
+1. **Çözüm Gezgini**, **program.cs** açın. Bu, uygulamanızı çalıştıracak olan önyükleyici.
 
     ![C# kaynak dosyası program seçildi adlı çözümün ekran görüntüsü.](media/netcore-image10.png)
 
@@ -96,7 +96,7 @@ Bu laboratuvar, C# hakkında bilgi sahibi olan geliştiricilere yöneliktir, anc
 
     ![UseContentRoot yöntemiyle sunucunun içerik kökünü ayarlayarak ana bilgisayar değişkenini vurgulayan C# ana yönteminin ekran görüntüsü.](media/netcore-image13.png)
 
-5. Uygulamanın Internet Information Services (IIS) Web sunucusu ile çalışması gerekiyorsa, konak oluşturmanın bir parçası olarak **Useiisıntegration** yöntemi çağrılmalıdır. Bu, **UseKestrel** gibi bir sunucu yapılandırmaz. IIS 'yi ASP.NET Core kullanmak için, hem **UseKestrel** hem de **useiisıntegration** ' i belirtmeniz gerekir. **Kestrel** , bir proxy 'nin arkasında çalışacak şekilde tasarlanmıştır ve doğrudan internet 'e yönelik olarak dağıtılmamalıdır. **Useiisıntegration** , IIS 'yi ters ara sunucu olarak belirtir, ancak yalnızca IIS 'e sahip makinelerde çalışırken ilgilidir. Uygulamanızı Windows 'a dağıtırsanız, içinde bırakın. Aksi takdirde, tersi olmaz.
+5. Uygulamanın Internet Information Services (IIS) Web sunucusu ile çalışması gerekiyorsa, konak oluşturmanın bir parçası olarak **Useiisıntegration** yöntemi çağrılmalıdır. Bu, **UseKestrel** gibi bir sunucu yapılandırmaz. IIS 'yi ASP.NET Core kullanmak için, hem **UseKestrel** hem de **useiisıntegration**' i belirtmeniz gerekir. **Kestrel** , bir proxy 'nin arkasında çalışacak şekilde tasarlanmıştır ve doğrudan internet 'e yönelik olarak dağıtılmamalıdır. **Useiisıntegration** , IIS 'yi ters ara sunucu olarak belirtir, ancak yalnızca IIS 'e sahip makinelerde çalışırken ilgilidir. Uygulamanızı Windows 'a dağıtırsanız, içinde bırakın. Aksi takdirde, tersi olmaz.
 
     ![C# Main yönteminin, ters proxy sunucusunu Useiisıntegration yöntemiyle ayarlayarak ana bilgisayar değişkenini vurgulayan ekran görüntüsü.](media/netcore-image14.png)
 
@@ -114,19 +114,19 @@ Bu laboratuvar, C# hakkında bilgi sahibi olan geliştiricilere yöneliktir, anc
 
 ## <a name="task-4-running-and-debugging-the-application"></a>4. görev: uygulamayı çalıştırma ve hata ayıklama
 
-1. **Çözüm Gezgini** , **CoreLab** proje düğümüne sağ tıklayın ve **Seçenekler** ' i seçin.
+1. **Çözüm Gezgini**, **CoreLab** proje düğümüne sağ tıklayın ve **Seçenekler**' i seçin.
 
     ![CoreLab çözümünün bağlam menüsünü gösteren ekran görüntüsü, vurgulama seçenekleri.](media/netcore-image18.png)
 
 2. **Proje seçenekleri** iletişim kutusu, uygulamanın nasıl oluşturulduğunu ve çalıştırılacağını ayarlamak için ihtiyacınız olan her şeyi içerir. Sol paneldeki **> yapılandırma > varsayılan düğümünü Çalıştır** ' ı seçin.
 
-3. **Dış konsolda Çalıştır** ' ı işaretleyin ve **konsol çıkışını Duraklat** ' işaretini kaldırın. Genellikle şirket içinde barındırılan uygulamanın Konsolu görünür olmaz, bunun yerine sonuçları **Çıkış** penceresine kaydeder. Bu laboratuvarın amaçları doğrultusunda, normal geliştirme sırasında bunu yapmanıza gerek olmasa da, bunu ayrı bir pencerede de göstereceğiz.
+3. **Dış konsolda Çalıştır** ' ı işaretleyin ve **konsol çıkışını Duraklat**' işaretini kaldırın. Genellikle şirket içinde barındırılan uygulamanın Konsolu görünür olmaz, bunun yerine sonuçları **Çıkış** penceresine kaydeder. Bu laboratuvarın amaçları doğrultusunda, normal geliştirme sırasında bunu yapmanıza gerek olmasa da, bunu ayrı bir pencerede de göstereceğiz.
 
 4. **Tamam** düğmesine tıklayın.
 
     ![Dış konsolda Çalıştır seçili ve konsol çıkışını Duraklat seçili değil, yapılandırmayı Çalıştır Genel sekmesini gösteren ekran görüntüsü.](media/netcore-image19.png)
 
-5. Uygulamayı derlemek ve çalıştırmak için **F5** tuşuna basın. Alternatif olarak, **hata ayıklamayı başlatmak > Çalıştır** ' ı seçebilirsiniz.
+5. Uygulamayı derlemek ve çalıştırmak için **F5** tuşuna basın. Alternatif olarak, **hata ayıklamayı başlatmak > Çalıştır**' ı seçebilirsiniz.
 
 6. Mac için Visual Studio iki pencere başlatacaktır. Birincisi, size şirket içinde barındırılan sunucu uygulamasına bir görünüm sağlayan bir konsol penceresidir.
 
@@ -174,7 +174,7 @@ Bu laboratuvar, C# hakkında bilgi sahibi olan geliştiricilere yöneliktir, anc
 
 ## <a name="task-5-application-startup-configuration"></a>5. görev: uygulama başlangıç yapılandırması
 
-1. **Çözüm Gezgini** , **Startup.cs** açın. NuGet paketleri arka planda geri yüklendiği ve Roslyn derleyicisi proje bağımlılıklarının tamamen bir resmini oluşturmakta olduğu için başlangıçta bazı Red dalgalı çizgiler fark edebilirsiniz.
+1. **Çözüm Gezgini**, **Startup.cs** açın. NuGet paketleri arka planda geri yüklendiği ve Roslyn derleyicisi proje bağımlılıklarının tamamen bir resmini oluşturmakta olduğu için başlangıçta bazı Red dalgalı çizgiler fark edebilirsiniz.
 
     ![C# sınıf dosyası başlatma seçiliyken çözümün ekran görüntüsü.](media/netcore-image29.png)
 
@@ -218,13 +218,13 @@ Bu laboratuvar, C# hakkında bilgi sahibi olan geliştiricilere yöneliktir, anc
 
 4. Eklenen üstbilgileri denetlemek için tarayıcıyı kullanabiliriz. Aşağıdaki yönergeler Safari 'ye yöneliktir, ancak [Chrome](https://stackoverflow.com/questions/4423061/view-http-headers-in-google-chrome) veya [Firefox](https://stackoverflow.com/questions/33974595/in-firefox-how-do-i-see-http-request-headers-where-in-web-console)'ta aynı şekilde yapabilirsiniz.
 
-5. Tarayıcı siteyi yükledikten sonra **Safari > tercihleri** ' ni seçin.
+5. Tarayıcı siteyi yükledikten sonra **Safari > tercihleri**' ni seçin.
 
 6. **Gelişmiş** sekmesinde, **menü çubuğunda geliştir menüsünü göster** ' i işaretleyin ve iletişim kutusunu kapatın.
 
     ![Safari tercihleri iletişim kutusundaki Gelişmiş bölmesini menü çubuğundaki geliştir menüsünü göster seçeneği belirlenmiş olarak gösteren ekran görüntüsü.](media/netcore-image37.png)
 
-7. **Geliştirme > sayfa kaynaklarını göster** ' i seçin.
+7. **Geliştirme > sayfa kaynaklarını göster**' i seçin.
 
 8. Yeni açılan Geliştirici araçlarının trafiği ve içeriği izleyip çözümleyebilmesi için tarayıcı penceresini yenileyin.
 

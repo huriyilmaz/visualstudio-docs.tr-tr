@@ -1,5 +1,7 @@
 ---
 title: Yeni öğe Ekle Iletişim kutusuna dizin ekleme | Microsoft Docs
+description: Dizinleri kaydettirmek için bir kayıt defteri betiği kullanarak Visual Studio 'da yeni öğe Ekle iletişim kutusuna dizin eklemeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,15 +12,15 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1d4af79f95c87271e9a10eece6c728daa9a81305
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d6a8090a47c275e66272ed3ee3e5d5a1eef1926d
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80710260"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96189738"
 ---
 # <a name="add-directories-to-the-add-new-item-dialog-box"></a>Yeni öğe Ekle iletişim kutusuna dizin ekleme
-Aşağıdaki kod örneğinde **Yeni öğe Ekle** iletişim kutusu için yeni bir dizin kümesinin nasıl kaydedileceği gösterilmektedir. **Yeni öğe Ekle** iletişim kutusu için dizinler her proje için farklıdır. Bu nedenle, dizinler, **HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio\8.0Exp\Projects**dizininde bulunan **Projeler** alt anahtarı altına kaydedilir.
+Aşağıdaki kod örneğinde **Yeni öğe Ekle** iletişim kutusu için yeni bir dizin kümesinin nasıl kaydedileceği gösterilmektedir. **Yeni öğe Ekle** iletişim kutusu için dizinler her proje için farklıdır. Bu nedenle, dizinler **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\Projects** bulunan **Projeler** alt anahtarı altında kaydedilir.
 
 ## <a name="registry-script"></a>Kayıt defteri betiği
 
@@ -50,7 +52,7 @@ NoRemove Projects
  `SortPriority`Değer bir sıralama önceliği belirtir.
 
 ## <a name="add-items-to-an-existing-project"></a>Mevcut bir projeye öğe ekleme
- Ayrıca, varolan bir projeye öğe ekleyebilirsiniz. Örneğin, bir proje için [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] * \<root> \Program Files\Microsoft Visual Studio\vc # \Csharpprojectıtems\localprojectıtems* klasörüne öğe ekleyebilirsiniz. Bu durumda, `%GUID_Project%` bir C# projesinin GUID 'sidir ({FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}).
+ Ayrıca, varolan bir projeye öğe ekleyebilirsiniz. Örneğin, bir proje için [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] *\<root> \Program Files\Microsoft Visual Studio\vc # \Csharpprojectıtems\localprojectıtems* klasörüne öğe ekleyebilirsiniz. Bu durumda, `%GUID_Project%` bir C# projesinin GUID 'sidir ({FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}).
 
  Ayrıca, varolan bir projeyi bir proje alt türünü programlamaya göre genişletebilirsiniz. Proje alt türü ile, yeni bir proje türü yazmadan bir projeyi genişletebilirsiniz. Proje alt türleri hakkında daha fazla bilgi için bkz. [Proje alt türleri](../../extensibility/internals/project-subtypes.md).
 

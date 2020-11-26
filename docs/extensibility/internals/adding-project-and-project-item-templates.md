@@ -1,5 +1,7 @@
 ---
 title: Proje ve proje öğesi şablonları ekleme | Microsoft Docs
+description: Visual Studio tümleşik geliştirme ortamındaki (IDE) iletişim kutularına proje ve proje öğesi şablonları ekleme hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 14eb1a9e2e63fa6e63d3ba2efa4426421e6b5593
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1e97b04294f0545c378210d39f343f3b009b6d15
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80710201"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96190180"
 ---
 # <a name="add-project-and-project-item-templates"></a>Proje ve proje öğesi şablonları ekleme
 Kendi proje türlerinizi oluştururken, standart [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Tümleşik geliştirme ortamı (IDE) iletişim kutularını kullanarak yeni projeler ve proje öğeleri ekleme desteği sağlamanız gerekir. Aşağıdaki konularda projeler ve proje öğeleri eklemek için farklı teknikler ele alınmaktadır.

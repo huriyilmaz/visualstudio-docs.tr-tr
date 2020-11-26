@@ -1,5 +1,6 @@
 ---
 title: Projeler ve düzenleyicilerle ilgili kaynak denetimi yönergeleri
+description: Proje ve düzenleyicilerin kaynak denetimini desteklemek için uyması gereken yönergeler hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2d1066995537ff6c43a587326c1087b66f79ff52
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: fdd7e23840701981eaea46b44355c34b55b37a33
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037640"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96190141"
 ---
 # <a name="additional-source-control-guidelines-for-projects-and-editors"></a>Projeler ve düzenleyiciler için ek kaynak denetimi yönergeleri
 Projeler ve düzenleyicilerin kaynak denetimini desteklemek için uyması gereken birçok yönerge vardır.

@@ -10,11 +10,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 64c00c10b8b7207e1162aa0041145000126fde87
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809178"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96189855"
 ---
 # <a name="walkthrough-missing-objects-due-to-misconfigured-pipeline"></a>İzlenecek yol: Yanlış Yapılandırılmış Ardışık Düzen Nedeniyle Eksik Nesneler
 Bu izlenecek yol, bir geçersiz bir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] piksel gölgelendiricisi nedeniyle eksik olan bir nesneyi araştırmak için grafik tanılama araçlarının nasıl kullanılacağını gösterir.
@@ -47,7 +47,7 @@ Bu izlenecek yol, bir geçersiz bir [!INCLUDE[vsprvs](../../code-quality/include
 
     ![Visual Studio 'da grafik günlüğü belgesi](media/gfx_diag_demo_misconfigured_pipeline_step_1.png "gfx_diag_demo_misconfigured_pipeline_step_1")
 
-   Sorunu gösteren bir çerçeve seçtikten sonra **grafik olay listesini**kullanarak tanımayı başlatabilirsiniz. **Grafik olay listesi** , etkin çerçeveyi işlemek için yapılan her Direct3D API çağrısını içerir — örneğin, cihaz durumunu ayarlamak, arabellekleri oluşturmak ve güncelleştirmek ve çerçevede görünen nesneleri çizmek için. Birçok çağrı türü — örneğin, çizim, dağıtma, kopyalama veya temizleme çağrıları — uygulama beklendiği gibi çalıştığında işleme hedefinde genellikle karşılık gelen bir değişikliğe (her zaman değil) göre ilginç olur. Her biri uygulamanın işlendiği geometriyi temsil ettiğinden, çizim çağrıları özellikle ilginç hale alınır.
+   Sorunu gösteren bir çerçeve seçtikten sonra **grafik olay listesini** kullanarak tanımayı başlatabilirsiniz. **Grafik olay listesi** , etkin çerçeveyi işlemek için yapılan her Direct3D API çağrısını içerir — örneğin, cihaz durumunu ayarlamak, arabellekleri oluşturmak ve güncelleştirmek ve çerçevede görünen nesneleri çizmek için. Birçok çağrı türü — örneğin, çizim, dağıtma, kopyalama veya temizleme çağrıları — uygulama beklendiği gibi çalıştığında işleme hedefinde genellikle karşılık gelen bir değişikliğe (her zaman değil) göre ilginç olur. Her biri uygulamanın işlendiği geometriyi temsil ettiğinden, çizim çağrıları özellikle ilginç hale alınır.
 
    Render hedefinin eksik nesne içermediğini, ancak başka hatalar gibi görünmediğini bildiğiniz için, hangi çizim çağrısının eksik nesnenin geometrisine karşılık geldiğini öğrenmek için grafik **olay listesi** ' ni **grafik ardışık düzen aşamaları** aracıyla birlikte kullanabilirsiniz. **Grafik ardışık düzen aşamaları** penceresi, işleme hedefi üzerindeki etkisiyle bağımsız olarak her bir çizim çağrısına gönderilen geometriyi gösterir. Çizim çağrılarında ilerledikten sonra, işlem hattı aşamaları her bir çağrı ile ilişkili geometriyi göstermek üzere güncelleştirilir ve bu işlem hedef çıkışı, çağrı tamamlandıktan sonra oluşturma hedefinin durumunu gösterecek şekilde güncelleştirilir.
 
@@ -72,9 +72,9 @@ Bu izlenecek yol, bir geçersiz bir [!INCLUDE[vsprvs](../../code-quality/include
 
 #### <a name="to-examine-device-context"></a>Cihaz bağlamını incelemek için
 
-1. **D3d11 cihaz bağlamını**açın. **Grafik ardışık düzen aşamaları** penceresinde, pencerenin üst kısmında görüntülenen çağrının parçası olan **ID3D11DeviceContext** bağlantısını seçin `DrawIndexed` .
+1. **D3d11 cihaz bağlamını** açın. **Grafik ardışık düzen aşamaları** penceresinde, pencerenin üst kısmında görüntülenen çağrının parçası olan **ID3D11DeviceContext** bağlantısını seçin `DrawIndexed` .
 
-2. Çizim çağrısı sırasında hiçbir piksel gölgelendiricisi etkin olmadığını doğrulamak için **d3d11 cihaz bağlamı** sekmesinde görüntülenen cihaz durumunu inceleyin. Bu senaryoda, **piksel gölgelendirici durumu**altında görüntülenen **gölgelendirici genel bilgileri**, gölgelendiricinin **null**olduğunu belirtir:
+2. Çizim çağrısı sırasında hiçbir piksel gölgelendiricisi etkin olmadığını doğrulamak için **d3d11 cihaz bağlamı** sekmesinde görüntülenen cihaz durumunu inceleyin. Bu senaryoda, **piksel gölgelendirici durumu** altında görüntülenen **gölgelendirici genel bilgileri**, gölgelendiricinin **null** olduğunu belirtir:
 
     ![D3D 11 cihaz bağlamı piksel gölgelendirici durumunu gösterir](media/gfx_diag_demo_misconfigured_pipeline_step_4.png "gfx_diag_demo_misconfigured_pipeline_step_4")
 

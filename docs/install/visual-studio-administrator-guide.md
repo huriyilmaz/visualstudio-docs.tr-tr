@@ -18,11 +18,11 @@ ms.workload:
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.openlocfilehash: ea12076e41185e9de4ee10afe3056ff97403d6ea
-ms.sourcegitcommit: 13cf7569f62c746708a6ced1187d8173eda7397c
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91352276"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96190219"
 ---
 # <a name="visual-studio-administrator-guide"></a>Visual Studio yönetici kılavuzu
 
@@ -40,11 +40,11 @@ Kuruluşunuz genelinde Visual Studio 'Yu dağıtmadan önce, yapmanız gereken b
 
 * Bakım gereksinimlerinize karar verin.
 
-  Şirketinizin bir özellik kümesi daha uzun bir süre içinde kalması, ancak hala düzenli bakım güncelleştirmelerini almak istiyorsa, bir hizmet temeli kullanmayı planlayın. Daha fazla bilgi için, [Visual Studio ürün yaşam döngüsü ve bakım](/visualstudio/releases/2019/servicing#support-options-for-enterprise-and-professional-customers) sayfasının ***Enterprise ve Professional müşterilerinin destek seçeneklerine*** ve [hizmet ana hat üzerinde Visual Studio 'yu güncelleştirme](update-servicing-baseline.md) bölümüne bakın.
+  Şirketinizin bir özellik kümesi daha uzun bir süre içinde kalması, ancak hala düzenli bakım güncelleştirmelerini almak istiyorsa, bir hizmet temeli kullanmayı planlayın. Daha fazla bilgi için, [Visual Studio ürün yaşam döngüsü ve bakım](/visualstudio/releases/2019/servicing#support-options-for-enterprise-and-professional-customers) sayfasının ***Kurumsal ve profesyonel müşterilere yönelik destek seçenekleri** _ bölümüne ve [hizmet ana hat üzerinde Visual Studio 'yu Güncelleştir](update-servicing-baseline.md) ' i inceleyin.
 
   Toplu özellik güncelleştirmeleriyle birlikte bakım güncelleştirmelerini uygulamayı planlıyorsanız en son bitleri seçebilirsiniz.
 
-* Güncelleştirme modeline karar verin.
+Güncelleştirme modeline karar verin.
 
   Tek tek istemci makinelerinin güncelleştirmeleri nereden almasını istiyorsunuz? Özellikle, güncelleştirmeleri Internet 'ten mi yoksa şirket genelindeki bir yerel paylaşımdan mı almak istediğinize karar verin. Ardından, yerel bir paylaşma kullanmayı seçerseniz, bireysel kullanıcıların kendi istemcilerini güncelleştirip güncelleştiremeyeceğine karar verin ya da bir yöneticinin istemcileri program aracılığıyla güncelleştirmesini ister misiniz?
 
@@ -66,11 +66,11 @@ Kuruluşunuz genelinde Visual Studio 'Yu dağıtmadan önce, yapmanız gereken b
 
 * Bakım gereksinimlerinize karar verin.
 
-  Şirketinizin bir özellik kümesi daha uzun bir süre içinde kalması, ancak hala düzenli bakım güncelleştirmelerini almak istiyorsa, bir hizmet temeli kullanmayı planlayın. Daha fazla bilgi için, Visual Studio [ürün yaşam döngüsü ve bakım](/visualstudio/releases/2019/servicing#support-for-older-versions-of-visual-studio) sayfası 'nın yanı sıra [bir hizmet ana hat üzerinde Visual Studio 'yu güncelleştirme](update-servicing-baseline.md) bölümünde yer alan Visual ***Studio 'nun eski sürümleri için destek*** bölümüne bakın.
+  Şirketinizin bir özellik kümesi daha uzun bir süre içinde kalması, ancak hala düzenli bakım güncelleştirmelerini almak istiyorsa, bir hizmet temeli kullanmayı planlayın. Daha fazla bilgi için, Visual Studio [ürün yaşam döngüsü ve bakım](/visualstudio/releases/2019/servicing#support-for-older-versions-of-visual-studio) sayfasının, Visual Studio 'nun **eski sürümleri için destek** bölümüne ve [hizmet ana hat üzerinde Visual Studio 'yu güncelleştirme](update-servicing-baseline.md) sayfasına bakın.
 
   Toplu özellik güncelleştirmeleriyle birlikte bakım güncelleştirmelerini uygulamayı planlıyorsanız en son bitleri seçebilirsiniz.
 
-* Güncelleştirme modeline karar verin.
+Güncelleştirme modeline karar verin.
 
   Tek tek istemci makinelerinin güncelleştirmeleri nereden almasını istiyorsunuz? Özellikle, güncelleştirmeleri Internet 'ten mi yoksa şirket genelindeki bir yerel paylaşımdan mı almak istediğinize karar verin. Ardından, yerel bir paylaşma kullanmayı seçerseniz, bireysel kullanıcıların kendi istemcilerini güncelleştirip güncelleştiremeyeceğine karar verin ya da bir yöneticinin istemcileri program aracılığıyla güncelleştirmesini ister misiniz?
 

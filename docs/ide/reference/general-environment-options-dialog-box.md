@@ -21,11 +21,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: dfd1b876e58c05c668fd74087d5131bb1e9fcd40
-ms.sourcegitcommit: bccc6503542e1517e0e96a9f02f5a89d69c60c25
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91135098"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96189790"
 ---
 # <a name="options-dialog-box-environment--general"></a>Seçenekler iletişim kutusu: ortam \> genel
 
@@ -35,7 +35,7 @@ Bu sayfayı, tümleşik geliştirme ortamı (IDE) için diğer seçenekler aras�
 
 **Renk Teması**
 
-IDE için **mavi**, **hafif**, **koyu**veya **mavi (ekstra kontrast)** renk temasını seçin.
+IDE için **mavi**, **hafif**, **koyu** veya **mavi (ekstra kontrast)** renk temasını seçin.
 
 [Visual Studio Market](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.VisualStudio2017ColorThemeEditor) **Visual Studio Color teması düzenleyicisini** indirip yükleyerek, önceden tanımlanmış ek temalar yükleyebilir ve özel temalar oluşturabilirsiniz. Bu aracı yükledikten sonra, **renk teması** liste kutusunda ek renk temaları görüntülenir.
 
@@ -50,8 +50,8 @@ Menüler, varsayılan olarak başlık durumu stili kullanır. Bunun yerine tüm 
 Bu seçenek, inç başına nokta (DPI) tanıma (veya *PMA*) için bir veya devre dışı bırakır. PMA etkinleştirildiğinde, Visual Studio Kullanıcı arabirimi, birden çok monitöre dahil olmak üzere herhangi bir izleyici görüntü ölçek faktörü ve DPı yapılandırmasında net görünür. PMA 'yı etkinleştirmek için Windows 10 Nisan 2018 güncelleştirmesi veya üzeri ve .NET Framework 4,8 veya üzeri bir sürüme sahip olmanız gerekir. (Bu iki önkoşul karşılanmazsa Bu seçenek gri renkte görünür.)
 
 > [!TIP]
-> - Windows 10 ' **un, bulanık olmadıkları Için Windows 'un uygulamaları düzeltmesine Izin verdiğini**belirten bir ayarı vardır. **Farklı piksel denikler seçeneği işaretli ekranlarda en iyileştirme için Işlemeyi en uygun hale getirmeniz** durumunda, bu Windows ayarı **Açık** bir etkiye sahip olur.
-> - Windows 10 ' da bir **Program uyumluluğu sorun giderici**de bulunur. Bu sorun gidericiyi kullanarak Visual Studio 'nun görünümünü gidermeye çalışmamız önerilmez.
+> - Windows 10 ' **un, bulanık olmadıkları Için Windows 'un uygulamaları düzeltmesine Izin verdiğini** belirten bir ayarı vardır. **Farklı piksel denikler seçeneği işaretli ekranlarda en iyileştirme için Işlemeyi en uygun hale getirmeniz** durumunda, bu Windows ayarı **Açık** bir etkiye sahip olur.
+> - Windows 10 ' da bir **Program uyumluluğu sorun giderici** de bulunur. Bu sorun gidericiyi kullanarak Visual Studio 'nun görünümünü gidermeye çalışmamız önerilmez.
 
 ::: moniker-end
 
@@ -62,7 +62,7 @@ Visual Studio 'Nun ayarlamayı otomatik olarak ayarlama veya ayarlamayı açık 
 ::: moniker range="vs-2017"
 
 > [!TIP]
-> Windows 10 ' **un, bulanık olmadıkları Için Windows 'un uygulamaları düzeltmesine Izin verdiğini**belirten bir ayarı vardır. Visual Studio, monitörünüzde bulanık **görünürse, bu ayarın etkinleştirilmesi** önerilir. [Visual Studio 2019](https://visualstudio.microsoft.com/downloads)' a yükseltmeyi göz önünde bulundurun. Bu, büyük ölçüde geliştirilmiş görüntüleme netliği olan, her/inç bir uygulama için ekran başına nokta olarak geliştirilmiştir.
+> Windows 10 ' **un, bulanık olmadıkları Için Windows 'un uygulamaları düzeltmesine Izin verdiğini** belirten bir ayarı vardır. Visual Studio, monitörünüzde bulanık **görünürse, bu ayarın etkinleştirilmesi** önerilir. [Visual Studio 2019](https://visualstudio.microsoft.com/downloads)' a yükseltmeyi göz önünde bulundurun. Bu, büyük ölçüde geliştirilmiş görüntüleme netliği olan, her/inç bir uygulama için ekran başına nokta olarak geliştirilmiştir.
 
 ::: moniker-end
 

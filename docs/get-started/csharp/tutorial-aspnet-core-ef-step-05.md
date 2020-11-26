@@ -17,11 +17,11 @@ ms.workload:
 - aspnet
 - dotnetcore
 ms.openlocfilehash: fc0729eccc6f1392561959dcdac0cf13dfc8e04a
-ms.sourcegitcommit: a778dffddb05d2f0f15969eadaf9081c9b466196
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91780957"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96189764"
 ---
 # <a name="step-5-deploy-your-aspnet-core-app-to-azure"></a>5. Adım: ASP.NET Core uygulamanızı Azure 'a dağıtma
 
@@ -45,7 +45,7 @@ ASP.NET Core uygulamanızı Visual Studio 2019 ' de açın. Uygulamanın, [Bu ö
 
    ![Azure App Service 2 ekran görüntüsü](media/vs-2019/app-service-screen-2.png)
 
-1. **Yeni Azure App Service oluştur ' a**tıklayın. Henüz bir Azure hesabınız yoksa **ücretsiz Azure hesabınızı oluşturun** ve kısa kayıt işlemini doldurun.
+1. **Yeni Azure App Service oluştur ' a** tıklayın. Henüz bir Azure hesabınız yoksa **ücretsiz Azure hesabınızı oluşturun** ve kısa kayıt işlemini doldurun.
 
    ![Azure App Service 3 ekran görüntüsü](media/vs-2019/app-service-screen-3.png)
 
@@ -57,7 +57,7 @@ ASP.NET Core uygulamanızı Visual Studio 2019 ' de açın. Uygulamanın, [Bu ö
 
 Şimdi bir Azure SQL Server veritabanı ekleyin.
 
-1. **Yayımla** sekmesinde, **hizmet bağımlılıkları**altında, **SQL Server veritabanı**' nın yanındaki **Yapılandır**' ı seçin.
+1. **Yayımla** sekmesinde, **hizmet bağımlılıkları** altında, **SQL Server veritabanı**' nın yanındaki **Yapılandır**' ı seçin.
 
 1. Sonraki ekranda **Azure SQL veritabanı**' nı seçin.
 

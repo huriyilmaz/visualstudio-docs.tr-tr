@@ -9,11 +9,11 @@ manager: jillfra
 ms.workload:
 - data-science
 ms.openlocfilehash: 31dfa975cea519d4d064856090a265b844f265f6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88238731"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96189114"
 ---
 # <a name="code-snippets-for-r"></a>R için kod parçacıkları
 
@@ -32,7 +32,7 @@ Kod parçacıkları yalnızca karakterlerin karakter tamamından çok daha fazla
 
 Bu durumda, siz yazarken `readc` , IntelliSense bir tamamlanma listesi görüntüler. Açılır listeden ve **Tab** tuşuna basarak bu tamamlamayı seçip `readc` , **sekme** tuşuna bir kez daha basıldığında kod parçacığı genişletilir. (Bu nedenle, kod parçacığı genişletmesi genellikle "parçacığı yazın ve TAB tuşuna iki kez bas" olarak düşünülebilir). Çoğu durumda, ilk sekme IntelliSense seçimini tamamlar ve ikinci sekme genişletmeyi tetikler.
 
-Kullanılabilir tüm parçacıkları görmek için **Araçlar**  >  **kod parçacıkları Yöneticisi** iletişim kutusunu (**CTRL** + **K**,**B**) açın ve **dil**için **R** ' yi seçin. Bir açıklamayı ve kısayol metnini görmek için grupları genişletin ve bağımsız parçacıkları seçin:
+Kullanılabilir tüm parçacıkları görmek için **Araçlar**  >  **kod parçacıkları Yöneticisi** iletişim kutusunu (**CTRL** + **K**,**B**) açın ve **dil** için **R** ' yi seçin. Bir açıklamayı ve kısayol metnini görmek için grupları genişletin ve bağımsız parçacıkları seçin:
 
 ![R için kod parçacıkları iletişim kutusu](media/code-snippet-dialog.png)
 

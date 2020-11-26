@@ -12,11 +12,11 @@ ms.workload:
 - multiple
 monikerRange: vs-2019
 ms.openlocfilehash: c3a2e14236c2d24bc9650fab81150cc295826844
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91006260"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96189933"
 ---
 # <a name="how-to-use-visual-studio-with-a-codespace-preview"></a>Visual Studio 'Yu bir codespace ile kullanma (Önizleme)
 
@@ -32,9 +32,9 @@ Visual Studio, GitHub Codespaces 'da geliştirme için harika destek içerir. Bi
 
 Visual Studio 2019 Preview ile GitHub Codespaces 'a bağlanmak varsayılan olarak etkin değildir, bu nedenle önce Önizleme özellikleri seçeneğini etkinleştirmeniz gerekir.
 
-1. Visual Studio 2019 önizlemesinde, **Tools**  >  Seçenekler iletişim kutusunu açmak için Araçlar**Seçenekler** menü öğesini kullanın.
+1. Visual Studio 2019 önizlemesinde, **Tools**  >  Seçenekler iletişim kutusunu açmak için Araçlar **Seçenekler** menü öğesini kullanın.
 
-2. **Ortam**altında **Önizleme özellikleri** ' ni seçin ve **GitHub Codespaces** Önizlemesi ' ne bağlan ' ı işaretleyin.
+2. **Ortam** altında **Önizleme özellikleri** ' ni seçin ve **GitHub Codespaces** Önizlemesi ' ne bağlan ' ı işaretleyin.
 
    ![GitHub Codespaces önizleme özelliğinin bağlantısını denetleyin](media/connect-to-github-codespaces-preview-feature.png)
 
@@ -56,7 +56,7 @@ Zaten bir codespace yoksa, Visual Studio 'dan bir tane oluşturabilirsiniz.
 
 3. Hiç bir codespace oluşturmadıysanız, sizden bir tane oluşturmanız istenir.
 
-   "Codespace details" bölümünde, bir **Depo URL 'si**sağlamanız gerekir. GitHub Codespaces, belirtilen depoyu oluşturma sırasında codespace 'e kopyalar.
+   "Codespace details" bölümünde, bir **Depo URL 'si** sağlamanız gerekir. GitHub Codespaces, belirtilen depoyu oluşturma sırasında codespace 'e kopyalar.
 
    Ayrıca, **örnek türünü** değiştirebilir ve zaman aşımından **sonra** , açılan listeleri aracılığıyla askıya alabilirsiniz. Codespace ayrıntılarını ayarladıktan sonra **Oluştur ve Bağlan** düğmesini seçin.
 

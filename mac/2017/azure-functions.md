@@ -8,11 +8,11 @@ ms.technology: vs-ide-install
 ms.assetid: 25CD47A4-5B32-4734-8EF3-E24A02AABF29
 ms.topic: how-to
 ms.openlocfilehash: 009df6525696405914aeeb224e3817bbfbe27155
-ms.sourcegitcommit: 703c68667261df5985a73282c1cbb0541118989c
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89402632"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96189803"
 ---
 # <a name="introduction-to-azure-functions"></a>Azure İşlevleri’ne Giriş
 
@@ -127,7 +127,7 @@ Uygulama ayarlarınıza erişmek için, adresindeki Azure portalına gidin [http
 
 ![Azure işlevleri menüsü](media/azure-functions-image9.png)
 
-**Genel bakış** sekmesinden **yapılandırılmış özellikler**altında **uygulama ayarları** ' nı seçin:
+**Genel bakış** sekmesinden **yapılandırılmış özellikler** altında **uygulama ayarları** ' nı seçin:
 
 ![Azure işlevinin Over sekmesi](media/azure-functions-image10.png)
 
@@ -135,7 +135,7 @@ Buradan, yeni uygulama ayarları ekleyebileceğiniz veya var olanları değişti
 
 ![Azure portalının uygulama ayarları alanı](media/azure-functions-image11.png)
 
-Ayarlamanız gerekebilmeniz gereken önemli bir ayardır `FUNCTIONS_EXTENSION_VERSION` . Mac için Visual Studio yayımlarken, bu değer **Beta**olarak ayarlanmalıdır.
+Ayarlamanız gerekebilmeniz gereken önemli bir ayardır `FUNCTIONS_EXTENSION_VERSION` . Mac için Visual Studio yayımlarken, bu değer **Beta** olarak ayarlanmalıdır.
 
 ## <a name="available-function-templates"></a>Kullanılabilir işlev şablonları
 

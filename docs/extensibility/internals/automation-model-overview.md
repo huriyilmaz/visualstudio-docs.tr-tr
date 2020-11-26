@@ -1,5 +1,7 @@
 ---
 title: Otomasyon modeline genel bakış | Microsoft Docs
+description: Bir Visual Studio eklentisi veya uzantısı yazabileceğiniz bir nesne kümesinden oluşan Visual Studio otomasyon modeli hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: aa06b58ccd8d4cba8e16b17bc725798ae02d7e8f
-ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
+ms.openlocfilehash: f88d064c551ccffe1c59e68c8472b519a58db436
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93414444"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96190102"
 ---
 # <a name="automation-model-overview"></a>Otomasyon modeline genel bakış
 Otomasyon modeli, Visual Studio eklentisi veya uzantısı yazabileceğiniz bir nesne kümesinden oluşur. Bir eklenti, Visual Studio ortamını işleyebilen ve ortak görevleri otomatikleştiren bir uygulamadır. Visual Studio uzantısı, özel Visual Studio bileşenleri oluşturabilir veya metin Düzenleyicisi gibi standart bileşenlerin işlevlerine ekleyebilir.
@@ -38,7 +40,7 @@ Otomasyon modeli, Visual Studio eklentisi veya uzantısı yazabileceğiniz bir n
 
 - Kod
 
-- Yapı
+- Oluşturma
 
 Otomasyon hakkında daha fazla bilgi için bkz. [Visual Studio Için Otomasyon ve genişletilebilirlik](/previous-versions/visualstudio/visual-studio-2015/extensibility/extensibility-in-visual-studio?preserve-view=true&view=vs-2015). Bu belge ve bağlantı sağladığı belgeler, VSPackage için nasıl Otomasyon sağlayacağınızla ilgili kararlar almanıza yardımcı olur.
 

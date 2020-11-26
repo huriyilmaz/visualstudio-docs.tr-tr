@@ -1,5 +1,7 @@
 ---
 title: 'Denetim listesi: yeni proje türleri oluşturma | Microsoft Docs'
+description: Visual Studio 'da yeni bir proje türü oluşturmak ve göstermek için tamamlanması gereken görevler hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 111eb74d388682ff3cf97d5e0aa7e7e5a91cbaf3
-ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
+ms.openlocfilehash: 20579422e8253b2c0cff7961a91395b5e44137ab
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93414197"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96189972"
 ---
 # <a name="checklist-create-new-project-types"></a>Denetim listesi: yeni proje türleri oluşturma
 Yeni bir proje türü oluşturmak için birkaç görevi gerçekleştirmeniz gerekir. Aşağıdaki denetim listesi, bu görevlere rehberlik sağlar:
@@ -49,13 +51,13 @@ Yeni bir proje türü oluşturmak için birkaç görevi gerçekleştirmeniz gere
 
     - ' Den türetilmiş nesneler veya sınıflar `IDispatch` Otomasyon için kullanılabilir.
 
-    - XML komut tablosu ( *. vsct* ) dosyaları. Daha fazla bilgi için bkz. [Visual Studio komut tablosu (. vsct) dosyaları](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md).
+    - XML komut tablosu (*. vsct*) dosyaları. Daha fazla bilgi için bkz. [Visual Studio komut tablosu (. vsct) dosyaları](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md).
 
 6. Proje türünü test edin, hata ayıklayın ve başlatın.
 
 7. Projeniz için değer olarak ayarlayarak **Başvuru Ekle** Iletişim kutusunun **Proje** sekmesinde projenizi görüntüleyin `VARIANT_TRUE` `VSHPROPID_ShowProjInSolutionPage` . Daha fazla bilgi için <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID> ve <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> bölümlerine bakın.
 
-8. VSPackages 'yi yüklemek için Microsoft Installer ( *. msi* ) dosyasını oluşturun. Daha fazla bilgi için bkz. [Windows Installer Ile VSPackages](../../extensibility/internals/installing-vspackages-with-windows-installer.md)'yi, [bir proje türünü](../../extensibility/internals/registering-a-project-type.md)ve [VSPackages](../../extensibility/internals/vspackages.md)'yi kaydetme.
+8. VSPackages 'yi yüklemek için Microsoft Installer (*. msi*) dosyasını oluşturun. Daha fazla bilgi için bkz. [Windows Installer Ile VSPackages](../../extensibility/internals/installing-vspackages-with-windows-installer.md)'yi, [bir proje türünü](../../extensibility/internals/registering-a-project-type.md)ve [VSPackages](../../extensibility/internals/vspackages.md)'yi kaydetme.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio’da Hiyerarşiler](../../extensibility/internals/hierarchies-in-visual-studio.md)

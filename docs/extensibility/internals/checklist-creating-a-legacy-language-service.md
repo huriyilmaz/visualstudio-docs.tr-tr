@@ -1,5 +1,7 @@
 ---
 title: 'Denetim listesi: eski dil hizmeti oluşturma | Microsoft Docs'
+description: Visual Studio çekirdek Düzenleyicisi için eski dil hizmeti oluşturmak için gerçekleştirmeniz gereken temel adımları öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 11785dab63cbb6a95ab2d34c5edbfb4525ebf34c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 905d81d49706c3ae5348d71c03189d6e036dd3e5
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80709783"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96189998"
 ---
 # <a name="checklist-create-a-legacy-language-service"></a>Denetim listesi: eski dil hizmeti oluşturma
 Aşağıdaki denetim listesi, çekirdek Düzenleyici için bir dil hizmeti oluşturmak üzere uygulamanız gereken temel adımları özetler [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Dil hizmetinizi ile tümleştirmek için [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] bir hata ayıklama ifade değerlendiricisi oluşturmanız gerekir. Daha fazla bilgi için bkz. [Visual Studio hata ayıklayıcısı genişletilebilirliği](../../extensibility/debugger/visual-studio-debugger-extensibility.md)IÇINDE [bir clr ifade değerlendiricisi yazma](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md) .

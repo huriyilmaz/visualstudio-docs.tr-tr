@@ -1,5 +1,7 @@
 ---
 title: Yeni öğe Ekle Iletişim kutularına öğe ekleme | Microsoft Docs
+description: Projenizde kullanılmak üzere şablonlar ve proje öğelerini görüntüleyebilmeniz için Visual Studio 'daki yeni öğe Ekle iletişim kutusuna nasıl öğe ekleneceğini öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: af7f9e5c792785a23ad1674a50abeb4eb6d3cba9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 99377db0e835de8d84485d0254d84892a360f5f0
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80710211"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96190167"
 ---
 # <a name="add-items-to-the-add-new-item-dialog-box"></a>Yeni öğe Ekle iletişim kutusuna öğe ekleme
 **Yeni öğe Ekle** iletişim kutusuna öğe ekleme işlemi kayıt defteri anahtarlarıyla başlar. Aşağıdaki kayıt defteri girişlerinde gösterildiği gibi, **Additemtemplates** bölümü, **Yeni öğe Ekle** iletişim kutusunda bulunan öğelerin bulunduğu dizinin yolunu ve adını içerir.
@@ -23,7 +25,7 @@ ms.locfileid: "80710211"
 > [!NOTE]
 > Kod segmentinden hemen sonraki tablo, kayıt defteri girdisiyle ilgili ek bilgiler içerir.
 
- Bu bölüm **HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio\14.0Exp\Projects**altında bulunur.
+ Bu bölüm **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\14.0Exp\Projects** altında bulunur.
 
  İlk GUID, bu türdeki projelerin CLSID 'sidir; İkinci GUID, öğe Ekle şablonları için kayıtlı proje türünü gösterir:
 
@@ -46,7 +48,7 @@ ms.locfileid: "80710211"
 > - [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]: {FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}
 > - [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]: {F184B08F-C81C-45F6-A57F-5ABD9991F28F}
 
- % *TEMPLATE_PATH% \\ &lt; Someprojectıtems &gt; * **adlı Templates dizini**için listelenen dizin, **Yeni öğe Ekle** iletişim kutusu ağacının sol tarafındaki düğümdür. Ağaçtaki ek öğeler, bu kök dizin içindeki alt dizine dayalıdır. Projeye eklenmek üzere kullanılabilir dosyalar, **Yeni öğe Ekle** iletişim kutusunun sağ bölmesindeki öğelerdir.
+ % *TEMPLATE_PATH% \\ &lt; Someprojectıtems &gt;* **adlı Templates dizini** için listelenen dizin, **Yeni öğe Ekle** iletişim kutusu ağacının sol tarafındaki düğümdür. Ağaçtaki ek öğeler, bu kök dizin içindeki alt dizine dayalıdır. Projeye eklenmek üzere kullanılabilir dosyalar, **Yeni öğe Ekle** iletişim kutusunun sağ bölmesindeki öğelerdir.
 
  Genellikle, bu klasör, projeniz için bir şablon HTML veya *. cpp* dosyası ve sihirbazları başlatmak için *. vsz* dosyaları gibi şablon dosyalarını içerir. Öğelerin nasıl görüntülendiğini denetlemek için dizin adlarını ve simgelerini yerelleştirme için *. vsdir* dosyalarını da dahil edebilirsiniz. Yerelleştirilmiş dize, **Yeni öğe Ekle** iletişim kutusu ağacında bu düğümü temsil eden iletişim kutusunda görüntülenen başlıktır.
 
