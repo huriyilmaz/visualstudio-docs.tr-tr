@@ -9,11 +9,11 @@ manager: jillfra
 ms.workload:
 - data-science
 ms.openlocfilehash: 8c89f1d59405fb7475e827cac9624c6623d7041e
-ms.sourcegitcommit: 1d74273a50ede5a90d9d64372d93aad357daef42
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89365671"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96189101"
 ---
 # <a name="frequently-asked-questions"></a>Sık sorulan sorular
 
@@ -49,7 +49,7 @@ A. RTVS 'nin 1,0 sürümü yalnızca Ingilizce 'dir. 1,1 sürümü, Visual Studi
 
 **Ç. Gerçekten geçerli Visual Studio ayarlarımı beğendiniz, ancak yeni veri bilimi ayarlarını denemek istiyorum. Ne yapmam gerekir?**
 
-A. Mevcut Visual Studio ayarlarınızı **Araçlar**  >  **içeri ve dışarı aktarma ayarlarını**kullanarak kaydedin, sonra veri bilimi ayarlarına geçin. Kaydedilen ayarları geri yüklemek için, **Ayarları içeri ve dışarı aktar** komutunu yeniden kullanın.
+A. Mevcut Visual Studio ayarlarınızı **Araçlar**  >  **içeri ve dışarı aktarma ayarlarını** kullanarak kaydedin, sonra veri bilimi ayarlarına geçin. Kaydedilen ayarları geri yüklemek için, **Ayarları içeri ve dışarı aktar** komutunu yeniden kullanın.
 
 **Ç. Visual Studio projem bir ağ paylaşımında depolayabilirim?**
 

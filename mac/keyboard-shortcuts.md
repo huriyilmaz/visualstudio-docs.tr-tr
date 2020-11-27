@@ -6,11 +6,11 @@ author: heiligerdankgesang
 ms.author: dominicn
 ms.assetid: 48E06A61-7294-4EC8-A09D-1763C32AD910
 ms.openlocfilehash: 3a4b2a56e5ac6ed29289c3946a65fc57b54eaa21
-ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
+ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94493211"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96188984"
 ---
 # <a name="default-keyboard-shortcuts-in-visual-studio-for-mac"></a>Mac için Visual Studio varsayılan klavye kısayolları
 
@@ -32,9 +32,9 @@ En çok kullanılan ve en kullanışlı klavye kısayollarını indirilebilir PD
 
 |Komutlar|Klavye kısayolları|
 |-|-|
-|Başvuruları bul|**⇧ ⌘ R** , **F12**|
-|Bildirime git|**⌘ D** , **F12**|
-|Sonraki hata|**⌥ ⇧ ⇟** , **⇧ ⌘ F12**|
+|Başvuruları bul|**⇧ ⌘ R**, **F12**|
+|Bildirime git|**⌘ D**, **F12**|
+|Sonraki hata|**⌥ ⇧ ⇟**, **⇧ ⌘ F12**|
 |Dosyadaki bir sonraki sorun|**⌥⇟**|
 |Önceki hata|**⌥⇧⇞**|
 |Dosyadaki önceki sorun|**⌥⇞**|
@@ -43,16 +43,16 @@ En çok kullanılan ve en kullanışlı klavye kısayollarını indirilebilir PD
 
 |Komutlar|Klavye kısayolları|
 |-|-|
-|Kesme noktasını etkinleştir veya devre dışı bırak|**⌥ ⌘/** , **⌘ F9**|
-|Duraklat|**⌥ ⌘ P** , **⌥ ⌘ L5**|
+|Kesme noktasını etkinleştir veya devre dışı bırak|**⌥ ⌘/**, **⌘ F9**|
+|Duraklat|**⌥ ⌘ P**, **⌥ ⌘ L5**|
 |Tüm kesme noktalarını kaldır|**⇧ ⌘ F9**|
 |Imlece kadar Çalıştır|**⌘ F10**|
 |Sonraki Deyimi Belirle|**⇧ ⌘ F10**|
 |Sonraki Ifadeyi göster|**⌥ \** _|
 |Adımla|_ * ⇧ ⌘ I * *, **⌘ F11**|
-|Dışarı adımla|**⇧ ⌘ U** , **⇧ ⌘ F11**|
-|Adımla|**⇧ ⌘ O** , **F10**|
-|Kesme noktasını aç|**⌘ \\** , **F9**|
+|Dışarı adımla|**⇧ ⌘ U**, **⇧ ⌘ F11**|
+|Adımla|**⇧ ⌘ O**, **F10**|
+|Kesme noktasını aç|**⌘ \\**, **F9**|
 |Kesme noktalarını görüntüle|**⌥ ⌘ B**|
 
 ## <a name="designer"></a>Tasarımcı
@@ -74,7 +74,7 @@ En çok kullanılan ve en kullanışlı klavye kısayollarını indirilebilir PD
 |Yapıştır|**⌘ V**|
 |Tercihler|**⌘**|
 |Yinele|**⇧ ⌘ Z**|
-|Rename|**⌘ R** , **F2**|
+|Rename|**⌘ R**, **F2**|
 |Tümünü Seç|**⌘ A**|
 |Kod oluşturmayı göster|**⌘ I**|
 |Tüm katlara geç|**⌥ ⇧ ⌘ ↑**|
@@ -131,14 +131,14 @@ En çok kullanılan ve en kullanışlı klavye kısayollarını indirilebilir PD
 |Komutlar|Klavye kısayolları|
 |-|-|
 |Dosya Ekleme|**⌥ ⌘ A**|
-|Yapı|**⌘ K** , **⇧ F6**|
-|Tümünü Oluştur|**⌘ B** , **F6**|
+|Oluşturma|**⌘ K**, **⇧ F6**|
+|Tümünü Oluştur|**⌘ B**, **F6**|
 |Temizle|**⇧ ⌘ K**|
 |Yeniden derleme|**⌃ ⌘ K**|
 |Tümünü yeniden derle|**⌃ ⌘ B**|
-|Hata ayıklamayı Başlat|**⌘ ⏎** , **F5**|
-|Hata ayıklama olmadan Başlat|**⌥ ⌘ ⏎** , **⌃ F5**|
-|Durdur|**⇧ ⌘ ⏎** , **⇧ F5**|
+|Hata ayıklamayı Başlat|**⌘ ⏎**, **F5**|
+|Hata ayıklama olmadan Başlat|**⌥ ⌘ ⏎**, **⌃ F5**|
+|Durdur|**⇧ ⌘ ⏎**, **⇧ F5**|
 
 ## <a name="refactoring"></a>Yeniden Düzenle
 
@@ -153,9 +153,9 @@ En çok kullanılan ve en kullanışlı klavye kısayollarını indirilebilir PD
 |-|-|
 |Komut|**⇧ ⌘ P**|
 |Dosyalarda Bul|**⇧ ⌘ F**|
-|Sonrakini Bul|**⌘ G** , **F3**|
-|Seçime benzeyen Sonrakini Bul|**⌘ E** , **⌘ F3**|
-|Öncekini Bul|**⇧ ⌘ G** , **⇧ F3**|
+|Sonrakini Bul|**⌘ G**, **F3**|
+|Seçime benzeyen Sonrakini Bul|**⌘ E**, **⌘ F3**|
+|Öncekini Bul|**⇧ ⌘ G**, **⇧ F3**|
 |Seçimi beğen Öncekini Bul|**⇧ ⌘ F3**|
 |Bul|**⌘ F**|
 |Dosyaya git|**⇧ ⌘ D**|
@@ -180,10 +180,10 @@ En çok kullanılan ve en kullanışlı klavye kısayollarını indirilebilir PD
 |Dinamik kısaltma|**⌃/**|
 |Seçimi genişlet|**⌥⇧↓**|
 |Seçimi genişlet|**⌥⇧↑**|
-|Seçimi belge sonuna Genişlet|**⇧ ⌘ ↓** , **⇧ ⌘ ↘**|
-|Seçimi Belge başına Genişlet|**⇧ ⌘ ↑** , **⇧ ⌘ ↖**|
-|Seçimi satır sonuna Genişlet|**⇧ ↘** , **⇧ ⌘ →**|
-|Seçimi satır başına Genişlet|**⇧ ↖** , **⇧ ⌘ ←**|
+|Seçimi belge sonuna Genişlet|**⇧ ⌘ ↓**, **⇧ ⌘ ↘**|
+|Seçimi Belge başına Genişlet|**⇧ ⌘ ↑**, **⇧ ⌘ ↖**|
+|Seçimi satır sonuna Genişlet|**⇧ ↘**, **⇧ ⌘ →**|
+|Seçimi satır başına Genişlet|**⇧ ↖**, **⇧ ⌘ ←**|
 |Seçimi sonraki satıra Genişlet|**⇧↓**|
 |Seçimi sonraki sözcüğe Genişlet|**⌥ ⇧ →**|
 |Seçimi sayfa aşağı genişlet|**⇧⇟**|
@@ -196,9 +196,9 @@ En çok kullanılan ve en kullanışlı klavye kısayollarını indirilebilir PD
 |Bir karakter sola git|**⌃ B**|
 |Bir karakter sağa git|**⌃ F**|
 |Belgenin başlangıcına git|**⌘ ↑**|
-|Satırın başlangıcına git|**⌘ ←** , **⌃ A**|
+|Satırın başlangıcına git|**⌘ ←**, **⌃ A**|
 |Belgenin sonuna git|**⌘ ↓**|
-|Satır sonuna git|**⌘ →** , **⌃ E**|
+|Satır sonuna git|**⌘ →**, **⌃ E**|
 |Eşleşen ayraca git|**⇧ ⌘\\**|
 |Sonraki satıra git|**⌃ N**|
 |Sonraki sözcüğe git|**⌥ →**|
@@ -229,11 +229,11 @@ En çok kullanılan ve en kullanışlı klavye kısayollarını indirilebilir PD
 |Ileri git|**⌃ ⌘ →**|
 |Normal boyut|**⌘ 0**|
 |Tek bir düzenleyici sütunu|**⌥ ⌘ 1**|
-|Sonrakini göster|**⌥ ⌘ ↓** , **F8**|
-|Öncekini göster|**⌥ ⌘ ↑** , **⇧ F8**|
+|Sonrakini göster|**⌥ ⌘ ↓**, **F8**|
+|Öncekini göster|**⌥ ⌘ ↑**, **⇧ F8**|
 |İki düzenleyici sütunu|**⌥ ⌘ 2**|
-|Yakınlaştır|**⌘ +** , **⌘ =**|
-|Uzaklaştır|**⌘-** , **⌘ _**|
+|Yakınlaştır|**⌘ +**, **⌘ =**|
+|Uzaklaştır|**⌘-**, **⌘ _**|
 
 ## <a name="window"></a>Pencere
 
@@ -251,8 +251,8 @@ En çok kullanılan ve en kullanışlı klavye kısayollarını indirilebilir PD
 |Diğerlerini gizle|**⌥ ⌘ H**|
 |Visual Studio 'Yu gizle|**⌘ H**|
 |Simge durumuna küçült|**⌘**|
-|Sonraki belge|**⌘}** , **⌘ F6**|
-|Önceki belge|**⌘ {** , **⇧ ⌘ F6**|
+|Sonraki belge|**⌘}**, **⌘ F6**|
+|Önceki belge|**⌘ {**, **⇧ ⌘ F6**|
 |Sonraki belgeye geç|**⌃⇥**|
 |Sonraki araç penceresine geç|**⌃⌥⇥**|
 |Önceki belgeye geç|**⌃⇧⇥**|
@@ -262,13 +262,13 @@ En çok kullanılan ve en kullanışlı klavye kısayollarını indirilebilir PD
 
 |Sembol|Anahtar|
 |-|-|
-|⌘|**Komut** ( **cmd** )|
-|⌥|**Seçenek** ( **alt** )|
+|⌘|**Komut** (**cmd**)|
+|⌥|**Seçenek** (**alt**)|
 |⇧|**Shift**|
-|⌃|**Denetim** ( **CTRL** )
-|⇞|**Sayfa yukarı** ( **pg up** )|
-|⇟|**Sayfa aşağı** ( **pg dn** )|
-|⌫|**Sil** ( **geri al** )|
+|⌃|**Denetim** (**CTRL**)
+|⇞|**Sayfa yukarı** (**pg up**)|
+|⇟|**Sayfa aşağı** (**pg dn**)|
+|⌫|**Sil** (**geri al**)|
 |⌦|**İleri silme**|
 |⏎|**Döndürülmesini**|
 |←→↑↓|**Ok tuşları**|
