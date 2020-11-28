@@ -1,5 +1,7 @@
 ---
 title: Bağlam parametreleri | Microsoft Docs
+description: Bir sihirbaz eklediğinizde veya uyguladığınızda projenin durumunu tanımlayan Visual Studio tümleşik geliştirme ortamında (IDE) bağlam parametreleri hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,15 +13,15 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3d1a8c83ef9794479c35cd36609d77ef94621732
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: 654ebf68efebaa44766079c172e87396134805e3
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012457"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96304712"
 ---
 # <a name="context-parameters"></a>Bağlam parametreleri
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Tümleşik geliştirme ortamında (IDE), **yeni projeye**sihirbaz ekleyebilir, **Yeni öğe ekleyebilir**veya **alt proje** iletişim kutuları ekleyebilirsiniz. Eklenen sihirbazlar **Dosya** menüsünde veya **Çözüm Gezgini**bir projeye sağ tıklanarak kullanılabilir. IDE, sihirbazın uygulamasına bağlam parametrelerini geçirir. Bağlam parametreleri, IDE Sihirbazı çağırdığında projenin durumunu tanımlar.
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Tümleşik geliştirme ortamında (IDE), **yeni projeye** sihirbaz ekleyebilir, **Yeni öğe ekleyebilir** veya **alt proje** iletişim kutuları ekleyebilirsiniz. Eklenen sihirbazlar **Dosya** menüsünde veya **Çözüm Gezgini** bir projeye sağ tıklanarak kullanılabilir. IDE, sihirbazın uygulamasına bağlam parametrelerini geçirir. Bağlam parametreleri, IDE Sihirbazı çağırdığında projenin durumunu tanımlar.
 
  IDE, <xref:Microsoft.VisualStudio.Shell.Interop.VSADDITEMOPERATION> IDE 'nin proje için metoduna olan bayrağını ayarlayarak sihirbazları başlatır <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.AddItem%2A> . Ayarlandığında, projenin, `IVsExtensibility::RunWizardFile` kayıtlı sihirbaz adı veya GUID 'si ve IDE 'nin kendisine geçirdiği diğer bağlam parametreleri kullanılarak, yöntemin yürütülmesine neden olması gerekir.
 

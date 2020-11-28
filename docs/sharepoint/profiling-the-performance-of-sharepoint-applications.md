@@ -1,5 +1,7 @@
 ---
 title: SharePoint uygulamalarının performansının profilini oluşturma | Microsoft Docs
+description: Yavaş veya yeterince uygun çalışıyorsa SharePoint uygulamalarının performansını profil halinde yapın. Sorunlu kodu bulmak için Visual Studio profil oluşturma özelliklerini kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 13f2e3f5df236157550aa79af40f0cbc575eb8bf
-ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
+ms.openlocfilehash: ecdacce58e17c616b22c9a6a8ba6fce9d5cf272c
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93414418"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96305106"
 ---
 # <a name="profile-the-performance-of-sharepoint-applications"></a>SharePoint uygulamalarının performansını profil halinde
 
@@ -39,9 +41,9 @@ Uygulamanızda bir profil analizi oluşturup çalıştırdıktan sonra, bir rapo
 
 ## <a name="performance-session-process"></a>Performans oturumu işlemi
 
-Bir uygulama profili oluşturmak için, performans oturumu oluşturmak üzere Profil Oluşturma Araçları Performans Sihirbazı 'Nı kullanarak başlar. Menü çubuğunda **Çözümle** , **performans Başlatma Sihirbazı** ' nı seçin. Sihirbazı tamamladıktan sonra, istediğiniz profil yöntemi ve profil vermek istediğiniz uygulama gibi performans oturumunuz için gerekli bilgileri girersiniz. Daha fazla bilgi için bkz. [nasıl yapılır: performans sihirbazını kullanarak Web sitesi veya Web uygulaması profili oluşturma](../profiling/how-to-collect-performance-data-for-a-web-site.md). Alternatif olarak, bir performans oturumu ayarlamak ve çalıştırmak için komut satırı seçeneklerini kullanabilirsiniz. Daha fazla bilgi için, bkz. [komut satırından profil oluşturma araçları kullanma](../profiling/using-the-profiling-tools-from-the-command-line.md). Bir performans oturumunun her yönünü el ile yapılandırmak istiyorsanız, bkz. [nasıl yapılır: el ile profil oluşturma araçları performans oturumları oluşturma](../profiling/how-to-manually-create-performance-sessions.md). Ayrıca, **test sonuçları** penceresinde, birim testinin kısayol menüsünü açarak ve ardından **performans oturumu oluştur** ' u seçerek bir birim testten bir performans oturumu oluşturabilirsiniz.
+Bir uygulama profili oluşturmak için, performans oturumu oluşturmak üzere Profil Oluşturma Araçları Performans Sihirbazı 'Nı kullanarak başlar. Menü çubuğunda **Çözümle**, **performans Başlatma Sihirbazı**' nı seçin. Sihirbazı tamamladıktan sonra, istediğiniz profil yöntemi ve profil vermek istediğiniz uygulama gibi performans oturumunuz için gerekli bilgileri girersiniz. Daha fazla bilgi için bkz. [nasıl yapılır: performans sihirbazını kullanarak Web sitesi veya Web uygulaması profili oluşturma](../profiling/how-to-collect-performance-data-for-a-web-site.md). Alternatif olarak, bir performans oturumu ayarlamak ve çalıştırmak için komut satırı seçeneklerini kullanabilirsiniz. Daha fazla bilgi için, bkz. [komut satırından profil oluşturma araçları kullanma](../profiling/using-the-profiling-tools-from-the-command-line.md). Bir performans oturumunun her yönünü el ile yapılandırmak istiyorsanız, bkz. [nasıl yapılır: el ile profil oluşturma araçları performans oturumları oluşturma](../profiling/how-to-manually-create-performance-sessions.md). Ayrıca, **test sonuçları** penceresinde, birim testinin kısayol menüsünü açarak ve ardından **performans oturumu oluştur**' u seçerek bir birim testten bir performans oturumu oluşturabilirsiniz.
 
-Bir performans oturumu ayarladıktan sonra oturum yapılandırması kaydedilir, sunucu profil oluşturma verileri sağlamak üzere yapılandırılır ve uygulama çalışır. Uygulamayı kullanırken, performans verileri bir günlük dosyasına yazılır. Performans oturumları, **hedefler** klasörü altında **Performans Gezgini** listelenmiştir. Bir performans oturumu bittikten sonra, raporu **Performans Gezgini** **rapor klasöründe görüntülenir** . Raporu göstermek için **Performans Gezgini** açın. Bir performans oturumunun özelliklerini görüntülemek veya yapılandırmak için, **Performans Gezgini** kısayol menüsünü açın ve ardından **Özellikler** ' i seçin. Bir performans oturumunun belirli özellikleri hakkında daha fazla bilgi için bkz. [profil oluşturma araçları performans oturumlarını yapılandırma](../profiling/configuring-performance-sessions.md). Bir performans oturumunun sonuçlarını yorumlama hakkında daha fazla bilgi için bkz. [profil oluşturma araçları verileri çözümleme](../profiling/analyzing-performance-tools-data.md).
+Bir performans oturumu ayarladıktan sonra oturum yapılandırması kaydedilir, sunucu profil oluşturma verileri sağlamak üzere yapılandırılır ve uygulama çalışır. Uygulamayı kullanırken, performans verileri bir günlük dosyasına yazılır. Performans oturumları, **hedefler** klasörü altında **Performans Gezgini** listelenmiştir. Bir performans oturumu bittikten sonra, raporu **Performans Gezgini** **rapor klasöründe görüntülenir** . Raporu göstermek için **Performans Gezgini** açın. Bir performans oturumunun özelliklerini görüntülemek veya yapılandırmak için, **Performans Gezgini** kısayol menüsünü açın ve ardından **Özellikler**' i seçin. Bir performans oturumunun belirli özellikleri hakkında daha fazla bilgi için bkz. [profil oluşturma araçları performans oturumlarını yapılandırma](../profiling/configuring-performance-sessions.md). Bir performans oturumunun sonuçlarını yorumlama hakkında daha fazla bilgi için bkz. [profil oluşturma araçları verileri çözümleme](../profiling/analyzing-performance-tools-data.md).
 
 ## <a name="stress-test"></a>Stres testi
 
@@ -51,7 +53,7 @@ Visual Studio 'da yük testleri ve Web performans testleri oluşturarak uygulama
 
 ![Yük testi grafik görünümünü çalıştırma](../sharepoint/media/load-webgraphs.png "Yük testi grafik görünümünü çalıştırma")
 
-Web performans testleri, son kullanıcının bir SharePoint uygulamasıyla nasıl etkileşime girebileceğini taklit eder. HTTP isteklerini bir tarayıcı oturumunda kaydederek veya **Web performans testi Kaydedicisi** ' ni kullanarak Web performans testleri oluşturabilirsiniz. Web istekleri, tarayıcı oturumu bittikten sonra **Web Performans Testi Düzenleyicisi** görüntülenir. Daha sonra **Web performans test sonuçları görüntüleyicisindeki** sonuçlarda hata ayıklaması yapabilirsiniz. Ayrıca, **Web Performans Testi Düzenleyicisi** kullanarak Web performans testlerini el ile oluşturabilirsiniz.
+Web performans testleri, son kullanıcının bir SharePoint uygulamasıyla nasıl etkileşime girebileceğini taklit eder. HTTP isteklerini bir tarayıcı oturumunda kaydederek veya **Web performans testi Kaydedicisi**' ni kullanarak Web performans testleri oluşturabilirsiniz. Web istekleri, tarayıcı oturumu bittikten sonra **Web Performans Testi Düzenleyicisi** görüntülenir. Daha sonra **Web performans test sonuçları görüntüleyicisindeki** sonuçlarda hata ayıklaması yapabilirsiniz. Ayrıca, **Web Performans Testi Düzenleyicisi** kullanarak Web performans testlerini el ile oluşturabilirsiniz.
 
 ## <a name="test-user-interfaces"></a>Test Kullanıcı arabirimleri
 

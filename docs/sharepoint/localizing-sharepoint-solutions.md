@@ -1,5 +1,7 @@
 ---
 title: SharePoint çözümlerini yerelleştirme | Microsoft Docs
+description: Koddan sabit kodlanmış dizeleri kaldırarak ve bunları çevrilmiş dizeleri içeren XML tabanlı kaynak (. resx) dosyalarına soyutlayarak SharePoint çözümlerini yerelleştirin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: overview
 f1_keywords:
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0a7b04ab1f77eba15f2bc617f89514a8d0952674
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 16cb372e5acf719d3edc79f081cff6f4b0396b6a
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86017149"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96304271"
 ---
 # <a name="localize-sharepoint-solutions"></a>SharePoint çözümlerini yerelleştirin
 
@@ -64,7 +66,7 @@ ms.locfileid: "86017149"
 $Resources:String ID
 ```
 
- ' Deki özellik kaynakları [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] her zaman kaynaklar olarak adlandırılır. Sabit dil dışında bir dil seçerseniz, [!INCLUDE[TLA2#tla_id](../sharepoint/includes/tla2sharptla-id-md.md)] kaynak dosyası adına bir kültür eklenir. Örneğin, bir sabit dil (varsayılan) özellik kaynak dosyası eklerseniz, *Resources. resx*olarak adlandırılır. Japonca (Japonya) kültürü seçerek dile özgü bir özellik kaynağı eklerseniz, dosya *Resources. ja-JP. resx*olarak adlandırılır. Özellik kaynak dosyası adları otomatik olarak atanır ve değiştirilemez.
+ ' Deki özellik kaynakları [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] her zaman kaynaklar olarak adlandırılır. Sabit dil dışında bir dil seçerseniz, [!INCLUDE[TLA2#tla_id](../sharepoint/includes/tla2sharptla-id-md.md)] kaynak dosyası adına bir kültür eklenir. Örneğin, bir sabit dil (varsayılan) özellik kaynak dosyası eklerseniz, *Resources. resx* olarak adlandırılır. Japonca (Japonya) kültürü seçerek dile özgü bir özellik kaynağı eklerseniz, dosya *Resources. ja-JP. resx* olarak adlandırılır. Özellik kaynak dosyası adları otomatik olarak atanır ve değiştirilemez.
 
  Özellik Kaynaklarının kapsamı, eklendiği özellik için yereldir. Çözümde herhangi bir özellik veya öğe dosyası tarafından kullanılabilecek kaynaklar oluşturmak için, bir özellik kaynak dosyası yerine bir **genel kaynak dosyası** proje öğesi ekleyin. **Genel kaynak dosyası** proje öğesi, **Yeni öğe Ekle** iletişim kutusunda **SharePoint** altındaki **2010** klasöründe bulunur. Genel kaynak dosyaları, SharePoint kök klasörünün \Resources klasörüne dağıtılır.
 
@@ -73,7 +75,7 @@ $Resources:String ID
 
  Varsayılan dil kaynak dosyası için bir ad girin. Yerelleştirilmiş kaynak dosyalarına dile özgü kültüre eklenmiş aynı adı verin [!INCLUDE[TLA2#tla_id](../sharepoint/includes/tla2sharptla-id-md.md)] . Örneğin, Almanca ve MyAppResources için *MyAppResources.de-de. resx* , Japonca için. *ja-JP. resx* .
 
- Her kaynak dosyasının **dağıtım türü** özelliğini **AppGlobalResource**olarak ayarlayın. Bu, kaynak dosyalarının Çözümdeki tüm ASPX sayfaları ve denetimleri tarafından kullanılabildiği App_GlobalResources klasöre dağıtılmasını sağlar. App_GlobalResources klasörü C:\inetpub\wwwroot\wss\virtualdizinlerinde \\<bağlantı noktası numarası \ App_GlobalResources ' nda bulunur \> .
+ Her kaynak dosyasının **dağıtım türü** özelliğini **AppGlobalResource** olarak ayarlayın. Bu, kaynak dosyalarının Çözümdeki tüm ASPX sayfaları ve denetimleri tarafından kullanılabildiği App_GlobalResources klasöre dağıtılmasını sağlar. App_GlobalResources klasörü C:\inetpub\wwwroot\wss\virtualdizinlerinde \\<bağlantı noktası numarası \ App_GlobalResources ' nda bulunur \> .
 
 > [!NOTE]
 > Genel olmayan kaynak dosyaları kullanırsanız, dağıtım türü özelliğini ve SharePoint 'e özgü diğer özellikleri etkinleştirmek için bunları proje öğesi klasörüne taşıyın.
@@ -109,11 +111,11 @@ $Resources:String ID
 ### <a name="localize-code"></a>Kodu yerelleştirin
  Özellik dizelerini ve biçimlendirmeyi yerelleştirmeye ek olarak [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] , çözüm kodunuzda görüntülenen ileti dizelerini ve hata dizelerini de yerelleştirmeniz gerekir. Yerelleştirilmiş bilgilendirme ve hata iletileri uydu Derlemeleriyle bulunur. Uydu derlemeleri, kullanıcılar için görünür olan [!INCLUDE[TLA2#tla_ui](../sharepoint/includes/tla2sharptla-ui-md.md)] ve özel durumlar gibi metin ve çıkış iletileri gibi dizeleri içerir.
 
- [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Standart .NET Framework hub ve bağlı bileşen modelini kullanır. Hub veya ana program derlemesi, varsayılan dil kaynaklarını içerir. Bağlı bileşenler veya uydu derlemeleri dile özgü kaynakları içerir. Daha fazla bilgi için bkz. [kaynakları paketleme ve dağıtma](/previous-versions/dotnet/netframework-4.0/sb6a8618(v=vs.100)). Uydu derlemeleri kaynak (*. resx*) dosyalarından derlenir. Projenize ve çözüm paketine dile özgü kaynak dosyaları eklediğinizde, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] kaynak dosyalarını *{Project Name} .resources.dll*adlı uydu Derlemeleriyle derler.
+ [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Standart .NET Framework hub ve bağlı bileşen modelini kullanır. Hub veya ana program derlemesi, varsayılan dil kaynaklarını içerir. Bağlı bileşenler veya uydu derlemeleri dile özgü kaynakları içerir. Daha fazla bilgi için bkz. [kaynakları paketleme ve dağıtma](/previous-versions/dotnet/netframework-4.0/sb6a8618(v=vs.100)). Uydu derlemeleri kaynak (*. resx*) dosyalarından derlenir. Projenize ve çözüm paketine dile özgü kaynak dosyaları eklediğinizde, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] kaynak dosyalarını *{Project Name} .resources.dll* adlı uydu Derlemeleriyle derler.
 
  ASPX biçimlendirmesinde olduğu gibi, projenize ayrı kaynak dosyası proje öğeleri ekleyerek SharePoint uygulama kodunu yerelleştirin; biri varsayılan dil ve diğeri her yerelleştirilmiş dil için. Ancak, daha önce belirtildiği gibi, ASPX işaretlemesini yerelleştirme için kaynak dosyalarınız zaten varsa, kodu yerelleştirme için yeniden kullanabilirsiniz. Kaynak dosyaları oluşturmanız gerekiyorsa, varsayılan dil kaynak dosyasına bir *. resx* uzantısıyla tercih ettiğiniz bir ad verin. Yerelleştirilmiş kaynak dosyalarını dile özgü kültürle aynı adı eklenmiş şekilde adlandırın [!INCLUDE[TLA2#tla_id](../sharepoint/includes/tla2sharptla-id-md.md)] . Uydu kaynak derlemelerinin oluşturulmasını sağlamak için her kaynak dosyanın derleme eylemi özelliğini gömülü kaynak olarak ayarlayın.
 
- Uydu derlemelerini oluşturmak için, projeyi derleyin ve sonra **paket tasarımcısının** **Gelişmiş** sekmesinde dosyaları ek derlemeler olarak ekleyin. Derlemeleri eklerken, bir kültür [!INCLUDE[TLA2#tla_id](../sharepoint/includes/tla2sharptla-id-md.md)] klasörünü konum yoluna ekleyin; örneğin, * \\ {Proje öğesi adı} .resources.dll*. Bu, paketin aynı ada sahip dosyalar içermesini sağlar.
+ Uydu derlemelerini oluşturmak için, projeyi derleyin ve sonra **paket tasarımcısının** **Gelişmiş** sekmesinde dosyaları ek derlemeler olarak ekleyin. Derlemeleri eklerken, bir kültür [!INCLUDE[TLA2#tla_id](../sharepoint/includes/tla2sharptla-id-md.md)] klasörünü konum yoluna ekleyin; örneğin, *\\ {Proje öğesi adı} .resources.dll*. Bu, paketin aynı ada sahip dosyalar içermesini sağlar.
 
  Kodunuzda, sabit kodlanmış dizeleri <xref:System.Web.HttpContext.GetGlobalResourceObject%2A> aşağıdaki sözdizimini kullanarak yöntemine yapılan çağrılarla değiştirin:
 

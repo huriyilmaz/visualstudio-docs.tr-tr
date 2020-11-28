@@ -1,5 +1,7 @@
 ---
 title: Belgeler, Ortam, Seçenekler İletişim Kutusu
+description: Belgeler bölümündeki ortamlar sayfasını kullanarak IDE 'deki belgelerin görüntülenmesini denetleyebilir ve belge ve dosyalardaki dış değişiklikleri yönetebilir.
+ms.custom: SEO-VS-2020
 ms.date: 03/28/2019
 ms.topic: reference
 f1_keywords:
@@ -31,16 +33,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7813a2e7686bef5a146e7472bce7f2c24baf9cd2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 28b0e7920aca2ae8b789a37fad25509dbb8b4d7a
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75570069"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96305487"
 ---
 # <a name="options-dialog-box-environment--documents"></a>Seçenekler iletişim kutusu: ortam \> belgeleri
 
-Tümleşik geliştirme ortamındaki (IDE) belgelerin görüntülenmesini denetlemek ve belge ve dosyalardaki dış değişiklikleri yönetmek için **Seçenekler** iletişim kutusunun bu sayfasını kullanın. Bu iletişim kutusuna, **Araçlar** menüsünde **Seçenekler** ' i ve ardından **ortam**belgeleri ' ni seçerek erişebilirsiniz  >  **Documents**.
+Tümleşik geliştirme ortamındaki (IDE) belgelerin görüntülenmesini denetlemek ve belge ve dosyalardaki dış değişiklikleri yönetmek için **Seçenekler** iletişim kutusunun bu sayfasını kullanın. Bu iletişim kutusuna, **Araçlar** menüsünde **Seçenekler** ' i ve ardından **ortam** belgeleri ' ni seçerek erişebilirsiniz  >  **Documents**.
 
 **Dosya ortamın dışında değiştirildiğinde Algıla**
 
@@ -68,7 +70,7 @@ Düzenleyicinin bir dosyadaki satır sonlarını taramasını sağlamak ve satı
 
 **Çözüm Gezgini çeşitli dosyaları göster**
 
-**Çözüm Gezgini**Içindeki **çeşitli dosyalar** düğümünü göstermek için bu seçeneği belirleyin. Çeşitli dosyalar bir proje veya çözümle ilişkilendirilmemiş ancak kolaylık olması için **Çözüm Gezgini** içinde görünebilen dosyalardır.
+**Çözüm Gezgini** Içindeki **çeşitli dosyalar** düğümünü göstermek için bu seçeneği belirleyin. Çeşitli dosyalar bir proje veya çözümle ilişkilendirilmemiş ancak kolaylık olması için **Çözüm Gezgini** içinde görünebilen dosyalardır.
 
 > [!NOTE]
 > Etkin Web uygulamasına dahil edilen Web belgelerinin **Dosya** menüsünde **Tarayıcıda görüntüle** komutunu etkinleştirmek için bu seçeneği belirleyin.

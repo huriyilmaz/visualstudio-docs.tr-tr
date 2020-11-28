@@ -1,5 +1,7 @@
 ---
 title: SharePoint çözümlerini paketleme ve dağıtma | Microsoft Docs
+description: Bir çözüm paketi (. wsp) dosyası kullanarak bir SharePoint sunucusuna dağıtılan SharePoint çözümlerini paketleme ve dağıtma.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: overview
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9a4bf3394cf47b4f355fbe6a330ff5374e2da1c9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bd06a5be3c9e7ceea38bdb4560f8b6262175bd45
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015600"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96305076"
 ---
 # <a name="package-and-deploy-sharepoint-solutions"></a>SharePoint çözümlerini paketleme ve dağıtma
   Genellikle, bir SharePoint çözümü bir SharePoint sunucusuna bir çözüm paketi (. wsp) dosyası kullanılarak dağıtılır. SharePoint proje öğelerinizi Özellikler halinde organize etmek ve SharePoint özelliklerinizi dağıtmak üzere bir paket oluşturmak için Visual Studio 'Yu kullanabilirsiniz.
@@ -35,7 +37,7 @@ ms.locfileid: "86015600"
 - [SharePoint Çözümlerinde dosya dağıtma](#deploy-files-in-sharepoint-solutions)
 
 ## <a name="create-features-and-packages"></a>Özellik ve paket oluşturma
- İlgili SharePoint öğelerini bir *özellik*halinde gruplamak Için Visual Studio 'yu kullanabilirsiniz. Örneğin, bir kişiler liste tanımına yönelik bir özellik liste örneğini ve liste tanımını içerebilir. Bu iki öğeyi, dağıtım amacıyla tek bir özellikte birleştirebilirsiniz. Özellikler hakkında daha fazla bilgi için bkz. [Yapı bloğu: Özellikler](/previous-versions/office/developer/sharepoint-2010/ee537350(v=office.14)).
+ İlgili SharePoint öğelerini bir *özellik* halinde gruplamak Için Visual Studio 'yu kullanabilirsiniz. Örneğin, bir kişiler liste tanımına yönelik bir özellik liste örneğini ve liste tanımını içerebilir. Bu iki öğeyi, dağıtım amacıyla tek bir özellikte birleştirebilirsiniz. Özellikler hakkında daha fazla bilgi için bkz. [Yapı bloğu: Özellikler](/previous-versions/office/developer/sharepoint-2010/ee537350(v=office.14)).
 
  Daha sonra, birden çok özelliği, site tanımlarını, derlemeleri ve diğer dosyaları tek bir pakete dağıtmak için bir SharePoint çözüm paketi (*. wsp*) oluşturabilirsiniz. Bu, dosyaları sunucuya dağıtmak üzere SharePoint 'in gerektirdiği bir biçimde depolar. Daha fazla bilgi için bkz. [Yapı bloğu: çözümler](/previous-versions/office/developer/sharepoint-2010/ee537008(v=office.14)).
 
@@ -89,15 +91,15 @@ ms.locfileid: "86015600"
  Geliştirme bilgisayarındaki dağıtım adımlarını da özelleştirebilirsiniz. Daha fazla bilgi için bkz. [SharePoint çözüm paketlerini dağıtma, yayımlama ve yükseltme](../sharepoint/deploying-publishing-and-upgrading-sharepoint-solution-packages.md).
 
 ## <a name="deploy-files-in-sharepoint-solutions"></a>SharePoint Çözümlerinde dosya dağıtma
- Genellikle, SharePoint çözümünüze bir SharePoint proje öğesi eklediğinizde, gerekli tüm dosyalar dahil edilir. Derlenebilecek dosyalar (kod dosyaları) çözümün çıktı derlemesine yerleşik olarak bulunur. Ancak, örneğin, *. xml*, *. txt*veya kaynak dosyaları gibi derlenebilir olmayan dosyaları bir SharePoint projesine eklemeniz de gerekebilir. Bu dosyalar çözümünüzde otomatik olarak paketlenemez. Paketlendiklerinden emin olmak için, dosyaları eşlenmiş bir klasöre veya SharePoint proje öğesine ekleyin.
+ Genellikle, SharePoint çözümünüze bir SharePoint proje öğesi eklediğinizde, gerekli tüm dosyalar dahil edilir. Derlenebilecek dosyalar (kod dosyaları) çözümün çıktı derlemesine yerleşik olarak bulunur. Ancak, örneğin, *. xml*, *. txt* veya kaynak dosyaları gibi derlenebilir olmayan dosyaları bir SharePoint projesine eklemeniz de gerekebilir. Bu dosyalar çözümünüzde otomatik olarak paketlenemez. Paketlendiklerinden emin olmak için, dosyaları eşlenmiş bir klasöre veya SharePoint proje öğesine ekleyin.
 
- Eşlenmiş klasörlere eklenen dosyalar, çözüm dağıtıldığında otomatik olarak SharePoint Hive 'e kopyalanır. Bir SharePoint proje öğesine eklenen dosyalar, dağıtım **türü** özelliğine göre kısmen ayarlanan her dosya Için **dağıtım konumu** özelliğinde belirtilen konuma dağıtılır. Varsayılan olarak, **dağıtım türü** Özellik değeri **NoDeployment**olur, bu da dosyanın çözümle birlikte dağıtılmadığı anlamına gelir. Özelliği paketini pakete dahil etmek için başka bir değer ayarlamanız gerekir.
+ Eşlenmiş klasörlere eklenen dosyalar, çözüm dağıtıldığında otomatik olarak SharePoint Hive 'e kopyalanır. Bir SharePoint proje öğesine eklenen dosyalar, dağıtım **türü** özelliğine göre kısmen ayarlanan her dosya Için **dağıtım konumu** özelliğinde belirtilen konuma dağıtılır. Varsayılan olarak, **dağıtım türü** Özellik değeri **NoDeployment** olur, bu da dosyanın çözümle birlikte dağıtılmadığı anlamına gelir. Özelliği paketini pakete dahil etmek için başka bir değer ayarlamanız gerekir.
 
  Örneğin, bir SharePoint projesine bir *. xml* dosyası eklemek için şu eylemlerden birini gerçekleştirin:
 
-- Projenize bir SharePoint "düzenleri" eşlenmiş klasör ekleyin. Bu, proje için alt klasörü olan **düzenler** adlı bir klasör **Çözüm Gezgini** oluşturur. *. Xml* dosyasını yeni alt klasöre ekleyin. Varsayılan olarak, dosya altında SharePoint dosya sistemine dağıtılır *. \TEMPLATE\DÜZENLERI \\ \<Folder Name> *. Eşlenmiş klasörler ekleme hakkında daha fazla bilgi için bkz. [nasıl yapılır: eşlenmiş klasör ekleme ve kaldırma](../sharepoint/how-to-add-and-remove-mapped-folders.md).
+- Projenize bir SharePoint "düzenleri" eşlenmiş klasör ekleyin. Bu, proje için alt klasörü olan **düzenler** adlı bir klasör **Çözüm Gezgini** oluşturur. *. Xml* dosyasını yeni alt klasöre ekleyin. Varsayılan olarak, dosya altında SharePoint dosya sistemine dağıtılır *. \TEMPLATE\DÜZENLERI \\ \<Folder Name>*. Eşlenmiş klasörler ekleme hakkında daha fazla bilgi için bkz. [nasıl yapılır: eşlenmiş klasör ekleme ve kaldırma](../sharepoint/how-to-add-and-remove-mapped-folders.md).
 
-- *. Xml* dosyasını bir SharePoint proje öğesinin klasörüne ekleyin ve ardından *. xml* dosyasının **dağıtım türü** özelliğini **NoDeployment** iken **RootFile** veya **ElementFile**gibi başka bir ayara değiştirin. Uygun **dağıtım türü** ayarı dosya ve projeye bağlıdır. **Dağıtım türü** özelliği ayarları hakkında daha fazla bilgi için bkz. [SharePoint çözümleri geliştirme](../sharepoint/developing-sharepoint-solutions.md).
+- *. Xml* dosyasını bir SharePoint proje öğesinin klasörüne ekleyin ve ardından *. xml* dosyasının **dağıtım türü** özelliğini **NoDeployment** iken **RootFile** veya **ElementFile** gibi başka bir ayara değiştirin. Uygun **dağıtım türü** ayarı dosya ve projeye bağlıdır. **Dağıtım türü** özelliği ayarları hakkında daha fazla bilgi için bkz. [SharePoint çözümleri geliştirme](../sharepoint/developing-sharepoint-solutions.md).
 
   Eklenen bir dosya çözümdeki belirli bir proje için uygulanmayabilir, çözümünüze boş bir SharePoint projesi ekleyebilir ve ardından ek dosyaları ekleyebilirsiniz. SharePoint 'e, özellikle de içerik veritabanına dosya dağıtmaya yönelik başka bir alternatif, projeye bir modül eklemek ve ardından dosyaları modüle eklemektir. Daha fazla bilgi için bkz. [çözümdeki dosyaları dahil etmek için modülleri kullanma](../sharepoint/using-modules-to-include-files-in-the-solution.md).
 

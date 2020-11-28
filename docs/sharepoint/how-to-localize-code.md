@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: kod yerelleştirin | Microsoft Docs'
+description: Yerelleştirilmiş kaynaklara başvuran bir yöntem olan GetGlobalResourceObject çağrılarıyla sabit kodlanmış dizeleri değiştirerek SharePoint 'teki kodu yerelleştirmeye öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 6c1963ff0b6ef317dfa1a2c8154a1628710dc562
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2cbe38c55b92514954cc3487544fed89d68cc4dc
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016689"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96304579"
 ---
 # <a name="how-to-localize-code"></a>Nasıl yapılır: kod yerelleştirme
   Yerelleştirilmemiş kod, sabit kodlanmış dize değerlerini kullanır. Kod dizelerini yerelleştirmek için, <xref:System.Web.HttpContext.GetGlobalResourceObject%2A> yerelleştirilmiş kaynaklara başvuran bir yöntem olan çağrılarıyla değiştirin.
@@ -38,13 +40,13 @@ ms.locfileid: "86016689"
 
 3. SharePoint proje öğesine ayrı kaynak dosyaları eklemek için 1 ve 2. adımları yineleyin: her bir yerelleştirilmiş dil için bir tane.
 
-     Her yerelleştirilmiş kaynak dosyası için aynı temel adı kullanın, ancak kültür KIMLIĞINI ekleyin. Örneğin, *MyAppResources.de-de. resx*adlı bir Almanya yerelleştirilmiş kaynağını adlandırın.
+     Her yerelleştirilmiş kaynak dosyası için aynı temel adı kullanın, ancak kültür KIMLIĞINI ekleyin. Örneğin, *MyAppResources.de-de. resx* adlı bir Almanya yerelleştirilmiş kaynağını adlandırın.
 
 4. Her kaynak dosyasını açın ve yerelleştirilmiş dizeler ekleyin. Her dosyada aynı dize kimliklerini kullanın.
 
 5. Her bir dosyanın sunucu App_GlobalResources klasörüne dağıtımına yol açmak için her bir kaynak dosyasının **dağıtım türü** özelliğinin değerini **AppGlobalResource** olarak değiştirin.
 
-6. Her bir dosyanın **derleme eylemi** özelliğinin değerini **katıştırılmış kaynak**olarak bırakın.
+6. Her bir dosyanın **derleme eylemi** özelliğinin değerini **katıştırılmış kaynak** olarak bırakın.
 
      Gömülü kaynaklar projenin DLL 'sine derlenir.
 

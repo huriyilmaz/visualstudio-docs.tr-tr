@@ -1,6 +1,8 @@
 ---
 title: SharePoint Araç uzantıları için programlama kavramları & özellikleri
 titleSuffix: ''
+description: SharePoint araçları uzantılarında önemli bir rol oynayabileceği, Visual Studio 'da SharePoint araçlarıyla ilgili önemli programlama kavramlarını ve özelliklerini gözden geçirin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 607f4841ea66a01d64a6c0c2b93b07e3cd0a5a43
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 2513eb99940d45d11bc2360581cbba455e864da2
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585712"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96305027"
 ---
 # <a name="programming-concepts-and-features-for-sharepoint-tools-extensions"></a>SharePoint Araçları uzantıları için programlama kavramları ve özellikleri
   Visual Studio 'daki SharePoint araçlarıyla ilgili birçok önemli programlama kavramı ve özelliği vardır. Bu kavramlar ve özellikler birçok SharePoint araçları uzantısı için önemli bir rol oynar.

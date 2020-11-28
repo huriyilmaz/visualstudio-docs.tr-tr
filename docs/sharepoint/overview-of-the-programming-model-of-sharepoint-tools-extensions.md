@@ -1,6 +1,8 @@
 ---
 title: SharePoint Araç uzantılarının programlama modeline genel bakış
 titleSuffix: ''
+description: SharePoint araçları uzantılarının programlama modeline genel bakış konusunu okuyun. Genişletilebilirlik arabirimlerini uygulayın. Nesne modellerini anlayın.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: d2f7b56b372f1f083b441a5d3e6045ffc7aff7ed
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 67e0f4ae5b06e96747a7257b2b9b444566235877
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585738"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96305127"
 ---
 # <a name="overview-of-the-programming-model-of-sharepoint-tools-extensions"></a>SharePoint Araç uzantılarının programlama modeline genel bakış
   Visual Studio 'da SharePoint araçları için bir uzantı oluşturduğunuzda, SharePoint araçları tarafından sunulan bir veya daha fazla genişletilebilirlik arabirimini uygulayarak başlarsınız. Çoğu durumda, uzantınızın özelliklerini uygulamak için SharePoint araçları tarafından sunulan diğer türleri de kullanacaksınız. Bazı senaryolarda, Visual Studio ve SharePoint tarafından sunulan diğer nesne modellerinde türleri de kullanabilirsiniz. Bu nesne modellerinin her birinin amacını anlamalısınız ve SharePoint araçları için uzantı oluşturmak üzere bunları birbirleriyle nasıl kullanacağınızı bilmeniz gerekir.
@@ -30,7 +32,7 @@ ms.locfileid: "91585738"
 
  SharePoint araçlarını genişletmek için, Visual Studio tarafından sunulan bir veya daha fazla genişletilebilirlik arabirimini uygulayın. Ayrıca, <xref:System.ComponentModel.Composition.ExportAttribute> arayüz uygulamanıza, gerektiğinde ve ek SharePoint araçlarına özel öznitelikler de uygulamanız gerekir. Aşağıdaki tabloda, SharePoint araçlarını genişletmek için uygulayabileceğiniz arabirimler listelenmektedir.
 
-|Arabirim|Açıklama|
+|Arabirim|Description|
 |---------------|-----------------|
 |<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider>|Bu arabirimi yeni bir SharePoint proje öğesi türü tanımlamak için uygulayın. Bir örnek için bkz. [nasıl yapılır: bir SharePoint proje öğesi türü tanımlama](../sharepoint/how-to-define-a-sharepoint-project-item-type.md).|
 |<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeExtension>|Visual Studio 'da zaten yüklü olan bir SharePoint proje öğesi türünü genişletmek için bu arabirimi uygulayın. Bir örnek için bkz. [nasıl yapılır: SharePoint proje öğesi uzantısı oluşturma](../sharepoint/how-to-create-a-sharepoint-project-item-extension.md).|
@@ -60,7 +62,7 @@ ms.locfileid: "91585738"
 
 #### <a name="microsoftvisualstudiosharepointdll"></a>Microsoft.VisualStudio.SharePoint.dll
 
-|Ad Alanı|Açıklama|
+|Ad Alanı|Description|
 |-|-|
 |<xref:Microsoft.VisualStudio.SharePoint>|SharePoint proje sistemini genişletmek ve otomatikleştirmek için kullandığınız türleri içerir. Örneğin, yerleşik SharePoint projelerini ve proje öğelerini genişletebilir veya kendi proje öğelerinizi de oluşturabilirsiniz. Daha fazla bilgi için bkz. [SharePoint proje sistemini genişletme](../sharepoint/extending-the-sharepoint-project-system.md).|
 |<xref:Microsoft.VisualStudio.SharePoint.Deployment>|Kendi dağıtım adımlarınızı ve dağıtım yapılandırmalarının oluşturulması gibi, SharePoint projeleri için dağıtım işlemini genişletmek için kullandığınız türleri içerir. Daha fazla bilgi için bkz. [SharePoint paketleme ve dağıtımını genişletme](../sharepoint/extending-sharepoint-packaging-and-deployment.md).|
@@ -71,13 +73,13 @@ ms.locfileid: "91585738"
 
 #### <a name="microsoftvisualstudiosharepointcommandsdll"></a>Microsoft.VisualStudio.SharePoint.Commands.dll
 
-|Ad Alanı|Açıklama|
+|Ad Alanı|Description|
 |-|-|
-|<xref:Microsoft.VisualStudio.SharePoint.Commands>|Özel *SharePoint komutları*oluşturmak için kullanabileceğiniz türleri içerir. SharePoint komutu SharePoint Araçlar uzantısından SharePoint Server nesne modeline çağıran bir yöntemdir. Daha fazla bilgi için bkz. [SharePoint nesne modellerine çağrı](../sharepoint/calling-into-the-sharepoint-object-models.md).|
+|<xref:Microsoft.VisualStudio.SharePoint.Commands>|Özel *SharePoint komutları* oluşturmak için kullanabileceğiniz türleri içerir. SharePoint komutu SharePoint Araçlar uzantısından SharePoint Server nesne modeline çağıran bir yöntemdir. Daha fazla bilgi için bkz. [SharePoint nesne modellerine çağrı](../sharepoint/calling-into-the-sharepoint-object-models.md).|
 
 #### <a name="microsoftvisualstudiosharepointexplorerextensionsdll"></a>Microsoft.VisualStudio.SharePoint.Explorer.Extensions.dll
 
-|Ad Alanı|Açıklama|
+|Ad Alanı|Description|
 |-|-|
 |<xref:Microsoft.VisualStudio.SharePoint.Explorer.Extensions>|Bir liste, alan veya içerik türünü temsil eden bir düğüm gibi bir SharePoint sitesindeki tek tek bileşenleri temsil eden yerleşik **Sunucu Gezgini** düğümleri hakkında bilgi almak için kullanabileceğiniz türleri içerir. Daha fazla bilgi için, bkz. [Sunucu Gezgini SharePoint bağlantıları düğümünü genişletme](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md).|
 
@@ -89,11 +91,11 @@ ms.locfileid: "91585738"
  Otomasyon nesne modeli hakkında daha fazla bilgi için bkz. [Visual STUDIO SDK başvurusu](../extensibility/visual-studio-sdk-reference.md).
 
 ### <a name="visual-studio-integration-object-model"></a>Visual Studio Tümleştirme nesne modeli
- Integration Object modeli, *VSPackage*oluşturarak Visual Studio 'ya özellik eklemek Için kullanabileceğiniz API 'ler sağlar. VSPackage, araç pencereleri, düzenleyiciler, tasarımcılar, hizmetler ve projeler gibi özel özellikler sağlayarak Visual Studio IDE 'yi genişleten bir modüldür.
+ Integration Object modeli, *VSPackage* oluşturarak Visual Studio 'ya özellik eklemek Için kullanabileceğiniz API 'ler sağlar. VSPackage, araç pencereleri, düzenleyiciler, tasarımcılar, hizmetler ve projeler gibi özel özellikler sağlayarak Visual Studio IDE 'yi genişleten bir modüldür.
 
- Yerleşik SharePoint araçlarıyla kullanılacak yeni bir Visual Studio özelliği eklemek istiyorsanız, Tümleştirme nesne modelini kullanabilirsiniz. Örneğin, bir SharePoint sitesi için özel bir eylemi temsil eden özel bir SharePoint proje öğesi oluşturursanız, özel eylem için Tasarımcı uygulayan bir VSPackage da oluşturabilirsiniz. **Çözüm Gezgini**içindeki özel eylemi temsil eden proje öğesine bir kısayol menü öğesi ekleyerek tasarımcıyı özel eylemle ilişkilendirebilirsiniz. Kendi kısayol menüsünü açarak (özel eylem projesi öğesine sağ tıklayıp ya da seçip **SHIFT** + **F10** tuşlarını seçerek) ve sonra **Aç**' ı seçerek tasarımcıyı açabilirsiniz.
+ Yerleşik SharePoint araçlarıyla kullanılacak yeni bir Visual Studio özelliği eklemek istiyorsanız, Tümleştirme nesne modelini kullanabilirsiniz. Örneğin, bir SharePoint sitesi için özel bir eylemi temsil eden özel bir SharePoint proje öğesi oluşturursanız, özel eylem için Tasarımcı uygulayan bir VSPackage da oluşturabilirsiniz. **Çözüm Gezgini** içindeki özel eylemi temsil eden proje öğesine bir kısayol menü öğesi ekleyerek tasarımcıyı özel eylemle ilişkilendirebilirsiniz. Kendi kısayol menüsünü açarak (özel eylem projesi öğesine sağ tıklayıp ya da seçip **SHIFT** + **F10** tuşlarını seçerek) ve sonra **Aç**' ı seçerek tasarımcıyı açabilirsiniz.
 
- Bu nesne modeli, Visual Studio SDK ile birlikte bulunan bir derlemeler kümesi içinde tanımlanmıştır. Bu nesne modelindeki bazı ana derlemelerden *Microsoft.VisualStudio.Shell.11.0.dll*, *Microsoft.VisualStudio.Shell.Interop.dll*ve *Microsoft.VisualStudio.OLE.Interop.dll*dahildir.
+ Bu nesne modeli, Visual Studio SDK ile birlikte bulunan bir derlemeler kümesi içinde tanımlanmıştır. Bu nesne modelindeki bazı ana derlemelerden *Microsoft.VisualStudio.Shell.11.0.dll*, *Microsoft.VisualStudio.Shell.Interop.dll* ve *Microsoft.VisualStudio.OLE.Interop.dll* dahildir.
 
  Tümleştirme nesne modeli hakkında daha fazla bilgi için bkz. [Automation model genel bakış](../extensibility/internals/automation-model-overview.md) ve [Visual Studio SDK başvurusu](../extensibility/visual-studio-sdk-reference.md).
 
@@ -102,9 +104,9 @@ ms.locfileid: "91585738"
 
  API 'Leri bir SharePoint Araçları uzantısında herhangi bir nesne modelinde kullanabilirsiniz, ancak her nesne modelinde SharePoint Araçları uzantıları bağlamında bazı avantajlar ve dezavantajları vardır. Daha fazla bilgi için bkz. [SharePoint nesne modellerine çağrı](../sharepoint/calling-into-the-sharepoint-object-models.md).
 
-|Nesne modeli|Açıklama|
+|Nesne modeli|Description|
 |------------------|-----------------|
-|Sunucu nesne modeli|Sunucu nesne modeli, [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] programlı olarak kullanıma sunulacak tüm özelliklere erişim sağlar [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)] . Bu nesne modeli, SharePoint sunucusunda çalışan SharePoint çözümleri tarafından kullanılmak üzere tasarlanmıştır. Bu nesne modelinin çoğunluğu *Microsoft.SharePoint.dll* derlemesinde tanımlanmıştır. Sunucu nesne modeli hakkında daha fazla bilgi için bkz. [SharePoint Foundation sunucu tarafı nesne modelini kullanma](/previous-versions/office/developer/sharepoint-2010/ee538251(v=office.14)).|
+|Sunucu nesne modeli|Sunucu nesne modeli, [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] programlı olarak kullanıma sunulacak tüm özelliklere erişim sağlar [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)] . Bu nesne modeli, SharePoint sunucusunda çalışan SharePoint çözümleri tarafından kullanılmak üzere tasarlanmıştır. Bu nesne modelinin çoğunluğu *Microsoft.SharePoint.dll* derlemesinde tanımlanmıştır. Sunucu nesne modeli hakkında daha fazla bilgi için bkz. [SharePoint Foundation Server-Side nesne modelini kullanma](/previous-versions/office/developer/sharepoint-2010/ee538251(v=office.14)).|
 |İstemci nesne modeli|İstemci nesne modeli, uzak bir istemciden veya sunucudan SharePoint verileriyle birlikte çalışmak için kullanılabilen sunucu nesne modelinin bir alt kümesidir. Ortak görevleri gerçekleştirmek üzere yürütülmesi gereken gidiş dönüş sayısını en aza indirmek için tasarlanmıştır. İstemci nesne modelinin çoğunluğu *Microsoft.SharePoint.Client.dll* ve *Microsoft.SharePoint.Client.Runtime.dll* derlemelerinde tanımlanmıştır. İstemci nesne modeli hakkında daha fazla bilgi için bkz. [yönetilen Istemci nesne modeli](/previous-versions/office/developer/sharepoint-2010/ee537247(v=office.14)).|
 
 ## <a name="see-also"></a>Ayrıca bkz.

@@ -1,5 +1,7 @@
 ---
 title: Dosya Aç Komutu
+description: Dosya Aç komutu ve var olan bir dosyayı nasıl açtığı hakkında bilgi edinin ve bir düzenleyici belirtmenize izin verir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -14,12 +16,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 50e29e3182a19c9f3a667d41725327110b415fd0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 792fe50aea43bc9711a58a895be09f85c041345b
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75591521"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96304119"
 ---
 # <a name="open-file-command"></a>Dosya Aç komutu
 

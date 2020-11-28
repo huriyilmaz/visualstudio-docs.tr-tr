@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: bir özelliği yerelleştirme | Microsoft Docs'
+description: Sabit kodlanmış dize değerlerini yerelleştirilmiş kaynaklara başvuran ifadelerle değiştirerek SharePoint 'teki Özellik başlıklarını ve açıklamalarını yerelleştirmeye öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b0d15654ba48b6c95cf2b2f7fa4f9cd665f0959a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3865c11c67fd826e0ce914b6aeb88364da3212b7
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016136"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96305198"
 ---
 # <a name="how-to-localize-a-feature"></a>Nasıl yapılır: bir özelliği yerelleştirme
   Varsayılan olarak, özellik başlıkları ve açıklamaları sabit kodlanmış dize değerlerini kullanır. Özellik başlığını ve açıklamasını yerelleştirmek için, dizeleri yerelleştirilmiş kaynaklara başvuran ifadelerle değiştirin.
@@ -37,7 +39,7 @@ ms.locfileid: "86016136"
 
 4. Kaynak düzenleyicisinde her bir kaynak dosyasını açın ve ardından tüm dize kimliklerini ve değerlerini girin.
 
-     Örneğin, varsayılan özellik kaynak dosyasında, **özellik unvanım**değeri olan BIR **başlık** kimliği ve **özellik açıklamamın** **değeri ile ikinci** bir dize kimliği girin. Her yerelleştirilmiş kaynak dosyası için, varsayılan özellik kaynağında kullanılan dize kimliklerini kullanın, ancak değerler için yerelleştirilmiş dizeler girin.
+     Örneğin, varsayılan özellik kaynak dosyasında, **özellik unvanım** değeri olan BIR **başlık** kimliği ve **özellik açıklamamın** **değeri ile ikinci** bir dize kimliği girin. Her yerelleştirilmiş kaynak dosyası için, varsayılan özellik kaynağında kullanılan dize kimliklerini kullanın, ancak değerler için yerelleştirilmiş dizeler girin.
 
 5. Tüm kaynak değerlerini girdikten sonra, özelliğin kısayol menüsünü açın (örneğin, *özellik1. feature*) ve sonra özellik tasarımcısında özelliği açmak Için **tasarımcıyı görüntüle** ' yi seçin.
 

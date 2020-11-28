@@ -1,5 +1,7 @@
 ---
 title: ProjectItem öğesi | Microsoft Docs
+description: SharePoint proje öğesi XML şema başvurusunda bir SharePoint proje öğesini temsil eden ProjectItem öğesi hakkında başvuru bilgileri alın.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 44fc1b918960f0268d916ccfa560f118cea47144
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3e211aa44b1402d6667fc3e02ca7e271a29c3ec7
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85536883"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96305058"
 ---
 # <a name="projectitem-element"></a>ProjectItem öğesi
   Bir SharePoint proje öğesini temsil eder. Bu öğe *. spdata* dosyasının gerekli kök öğesi.
@@ -73,7 +75,7 @@ ms.locfileid: "85536883"
 |**Ad Alanı**|http: \/ \/ schemas.Microsoft.com/VisualStudio/<br>2010/SharePointTools/Sharepointprojectıtemmodel|
 |**Şema adı**|SharePoint proje öğesi şeması|
 |**Doğrulama dosyası**|Projectıtemmodelschema. xsd|
-|**Boş olabilir**|Hayır|
+|**Boş olabilir**|No|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 [SharePoint proje öğesi şeması rseference](../sharepoint/sharepoint-project-item-schema-reference.md)

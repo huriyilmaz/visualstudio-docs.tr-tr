@@ -1,5 +1,7 @@
 ---
 title: Komut tasarımı | Microsoft Docs
+description: Visual Studio 'da VSPackage için bir komut tasarlamayı öğrenin. Dahil olmak üzere nerede göründüğünü, ne zaman kullanılabileceğini ve nasıl işleneceğini belirtme.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6aa58813623dc8150cafb4fbfee6496d09f889ac
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2ab06ade9be1ccd0683cd298a5e758ddcfa883f8
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80709653"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96304876"
 ---
 # <a name="command-design"></a>Komut tasarımı
 VSPackage 'a bir komut eklediğinizde, nerede görüneceğini, kullanılabilir olduğunda ve nasıl işleneceğini belirtmeniz gerekir.
@@ -41,7 +43,7 @@ VSPackage 'a bir komut eklediğinizde, nerede görüneceğini, kullanılabilir o
 ### <a name="command-organization"></a>Komut organizasyonu
  Ortam komutları gruba, önceliğe ve menüye göre konumlandırır.
 
-- Gruplar, ilgili komutların mantıksal koleksiyonlarıdır, örneğin **Kes**, **Kopyala**ve **Yapıştır** komut grubu. Gruplar menülerde görüntülenen komutlardır.
+- Gruplar, ilgili komutların mantıksal koleksiyonlarıdır, örneğin **Kes**, **Kopyala** ve **Yapıştır** komut grubu. Gruplar menülerde görüntülenen komutlardır.
 
 - Öncelik, bir gruptaki bireysel komutların menüde görünme sırasını belirler.
 

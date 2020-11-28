@@ -1,5 +1,7 @@
 ---
 title: Komut yönlendirme algoritması | Microsoft Docs
+description: Komutlar farklı bileşenler tarafından işlendiği ve en içteki içerikten en dıştaki içeriğe yönlendirildiği için, Visual Studio 'da komut çözümünün sırası hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: af8d3e53e09214ce36a80ca18856085dfb2bb746
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1694e0835add6eac75986538a8abae99adf717b1
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80709545"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96305232"
 ---
 # <a name="command-routing-algorithm"></a>Komut yönlendirme algoritması
 Visual Studio komutları 'nda birkaç farklı bileşen tarafından işlenir. Komutlar, geçerli seçime bağlı olarak en dıştaki (genel olarak da bilinir) bağlam olan en içteki bağlamdan yönlendirilir. Daha fazla bilgi için bkz. [komut kullanılabilirliği](../../extensibility/internals/command-availability.md).
@@ -36,9 +38,9 @@ Visual Studio komutları 'nda birkaç farklı bileşen tarafından işlenir. Kom
 
 6. Belge penceresi: komut, `RouteToDocs` *. vsct* dosyasında bayrak kümesine sahipse, Visual Studio bir <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane> arabirim örneği veya bir belge nesnesi örneği (genellikle bir arabirim <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines> veya arabirim) olan belge görünümü nesnesi üzerinde bir komut hedefi arar <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer> . Belge görünümü nesnesi komutunu desteklemiyorsa, Visual Studio komutu <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> döndürülen arabirime yönlendirir. (Bu, belge veri nesneleri için isteğe bağlı bir arabirimdir.)
 
-7. Geçerli hiyerarşi: geçerli hiyerarşi, etkin belge penceresine veya **Çözüm Gezgini**seçili hiyerarşiye sahip proje olabilir. Visual Studio, <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> geçerli ya da etkin, hiyerarşide uygulanan arabirimi arar. Hiyerarşisi, bir proje öğesinin belge penceresi odağa sahip olsa bile, hiyerarşi etkin olduğunda geçerli olan komutları desteklemelidir. Ancak, yalnızca **Çözüm Gezgini** odağa sahip olduğunda uygulanan komutlar, <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy> arabirimi ve <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.QueryStatusCommand%2A> ve yöntemleri kullanılarak desteklenmelidir <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.ExecCommand%2A> .
+7. Geçerli hiyerarşi: geçerli hiyerarşi, etkin belge penceresine veya **Çözüm Gezgini** seçili hiyerarşiye sahip proje olabilir. Visual Studio, <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> geçerli ya da etkin, hiyerarşide uygulanan arabirimi arar. Hiyerarşisi, bir proje öğesinin belge penceresi odağa sahip olsa bile, hiyerarşi etkin olduğunda geçerli olan komutları desteklemelidir. Ancak, yalnızca **Çözüm Gezgini** odağa sahip olduğunda uygulanan komutlar, <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy> arabirimi ve <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.QueryStatusCommand%2A> ve yöntemleri kullanılarak desteklenmelidir <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.ExecCommand%2A> .
 
-     **Kesme**, **kopyalama**, **Yapıştırma**, **silme**, **yeniden adlandırma**, **girme**ve **DoubleClick** komutları özel işleme gerektirir. Hiyerarşilerde **silme** ve **kaldırma** komutlarının nasıl ele alınacağını öğrenmek için, <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyDeleteHandler> arabirimine bakın.
+     **Kesme**, **kopyalama**, **Yapıştırma**, **silme**, **yeniden adlandırma**, **girme** ve **DoubleClick** komutları özel işleme gerektirir. Hiyerarşilerde **silme** ve **kaldırma** komutlarının nasıl ele alınacağını öğrenmek için, <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyDeleteHandler> arabirimine bakın.
 
 8. Genel: bir komut daha önce bahsedilen bağlamlar tarafından işlenmezse, Visual Studio onu arabirimini uygulayan bir komuta sahip VSPackage 'a yönlendirmenize çalışır <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> . VSPackage henüz yüklenmediyse, Visual Studio yöntemi çağırdığında yüklenmez <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> . VSPackage yalnızca <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> yöntemi çağrıldığında yüklenir.
 

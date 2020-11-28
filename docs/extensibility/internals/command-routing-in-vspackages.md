@@ -1,5 +1,7 @@
 ---
 title: VSPackages 'de komut yönlendirme | Microsoft Docs
+description: VSPackages içindeki komut yönlendirme hakkında bilgi edinin ve komutların Visual Studio 'da yürütüldüğü bağlama göre nasıl yönlendirildiği hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 957ddcca46365a882609c15c96d666c2848ace6c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8168fbe3ad5ba9b1b332aebc4675ecd8e752ee7e
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80709550"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96305225"
 ---
 # <a name="command-routing-in-vspackages"></a>VSPackages 'de komut yönlendirme
 Bir komut, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] yürütüldüğü bağlama göre içinde yönlendirilir. İlk içerikten genel bağlamdan dışarı yönlendirilir.

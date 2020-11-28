@@ -1,5 +1,7 @@
 ---
 title: İş Parçacıklarını Listele Komutu
+description: Iş parçacıklarını Listele komutu ve geçerli programdaki iş parçacıklarının bir listesini görüntüleme hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -14,12 +16,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e1b36b8f4d9970d94eb83c47b59e85d01f932589
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cf7b3ed8b28a43c31efe68c6512f08883cb4187a
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75595494"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96305263"
 ---
 # <a name="list-threads-command"></a>İş Parçacıklarını Listele Komutu
 Geçerli programdaki iş parçacıklarının listesini görüntüler.

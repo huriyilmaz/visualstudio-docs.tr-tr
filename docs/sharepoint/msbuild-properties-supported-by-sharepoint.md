@@ -1,5 +1,7 @@
 ---
 title: SharePoint tarafından desteklenen MSBuild özellikleri | Microsoft Docs
+description: Tarafından desteklenen ve SharePoint 'e özgü MSBuild özellik adlarının ve açıklamalarının listesini okuyun.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5470160c6b0af1af39238a14319ad497e1541a43
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f1eab3832121f1e0c926257797ddbc79695546a5
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72985174"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96305142"
 ---
 # <a name="msbuild-properties-supported-by-sharepoint"></a>SharePoint tarafından desteklenen MsBuild özellikleri
   [!INCLUDE[vstecmsbuild](../sharepoint/includes/vstecmsbuild-md.md)]Microsoft. VisualStudio. SharePoint. targets dosyasında, proje dosyasında veya Project User dosyasında tanımlanan herhangi bir özellik [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint projelerinde kullanılabilir. [!INCLUDE[vstecmsbuild](../sharepoint/includes/vstecmsbuild-md.md)]SharePoint, projenin sağladığı ortak özelliklere ek olarak SharePoint projelerine özgü ek özellikler tanımlar.
@@ -27,7 +29,7 @@ ms.locfileid: "72985174"
 ## <a name="msbuild-properties-specific-to-sharepoint"></a>SharePoint 'e özgü MsBuild özellikleri
  Aşağıdaki tabloda, [!INCLUDE[vstecmsbuild](../sharepoint/includes/vstecmsbuild-md.md)] ' de SharePoint projelerine özel olarak uygulanan özellikler listelenmiştir [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . Diğer özellikler mevcuttur, ancak bunlar iç kullanım içindir.
 
-|Özellik Adı|Açıklama|
+|Özellik Adı|Description|
 |-------------------|-----------------|
 |SharePointSiteUrl|SharePoint sitesini temsil eden bir dize [!INCLUDE[TLA2#tla_url](../sharepoint/includes/tla2sharptla-url-md.md)] .|
 |SandboxedSolution|Çözümün korumalı bir çözüm olup olmadığını gösteren bir Boole değeri.|

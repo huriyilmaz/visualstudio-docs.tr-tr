@@ -1,5 +1,7 @@
 ---
 title: Çağrı Yığınını Listele Komutu
+description: Çağrı yığınını Listele komutu ve geçerli çağrı yığınını görüntüleme hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 34de768f41079311505ae7948502bb4356814ec7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 845d48f6a0fcc2b844777870bd7c9551f4a4d471
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85770682"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96305353"
 ---
 # <a name="list-call-stack-command"></a>Çağrı Yığınını Listele Komutu
 Geçerli çağrı yığınını görüntüler.
@@ -47,35 +49,35 @@ Her anahtar, tamamı ya da kısa bir form kullanılarak çağrılabilir.
 
 /ShowTypes: `yes`&#124;`no` [veya]/t: `yes`&#124;`no`
 
-İsteğe bağlı. Parametre türlerinin görüntülenip görüntülenmeyeceğini belirtir. Varsayılan değer `yes` .
+İsteğe bağlı. Parametre türlerinin görüntülenip görüntülenmeyeceğini belirtir. Varsayılan değer `yes` olarak belirlenmiştir.
 
 /ShowNames: `yes`&#124;`no` [veya]/n: `yes`&#124;`no`
 
-İsteğe bağlı. Parametre adlarının görüntülenip görüntülenmeyeceğini belirtir. Varsayılan değer `yes` .
+İsteğe bağlı. Parametre adlarının görüntülenip görüntülenmeyeceğini belirtir. Varsayılan değer `yes` olarak belirlenmiştir.
 
 /ShowValues: `yes`&#124;`no` [veya]/v: `yes`&#124;`no`
 
-İsteğe bağlı. Parametre değerlerinin görüntülenip görüntülenmeyeceğini belirtir. Varsayılan değer `yes` .
+İsteğe bağlı. Parametre değerlerinin görüntülenip görüntülenmeyeceğini belirtir. Varsayılan değer `yes` olarak belirlenmiştir.
 
 /ShowModule: `yes`&#124;`no` [veya]/m: `yes`&#124;`no`
 
-İsteğe bağlı. Modül adının görüntülenip görüntülenmeyeceğini belirtir. Varsayılan değer `yes` .
+İsteğe bağlı. Modül adının görüntülenip görüntülenmeyeceğini belirtir. Varsayılan değer `yes` olarak belirlenmiştir.
 
 /Showlinekayması: `yes`&#124;`no` [veya]/#: `yes`&#124;`no`
 
-İsteğe bağlı. Çizgi kaydırın görüntülenip görüntülenmeyeceğini belirtir. Varsayılan değer `no` .
+İsteğe bağlı. Çizgi kaydırın görüntülenip görüntülenmeyeceğini belirtir. Varsayılan değer `no` olarak belirlenmiştir.
 
 /Showbytekayması: `yes`&#124;`no` [veya]/b: `yes`&#124;`no`
 
-İsteğe bağlı. Bayt kaydırının görüntülenip görüntülenmeyeceğini belirtir. Varsayılan değer `no` .
+İsteğe bağlı. Bayt kaydırının görüntülenip görüntülenmeyeceğini belirtir. Varsayılan değer `no` olarak belirlenmiştir.
 
 /ShowLanguage: `yes`&#124;`no` [veya]/l: `yes`&#124;`no`
 
-İsteğe bağlı. Dilin görüntülenip görüntülenmeyeceğini belirtir. Varsayılan değer `no` .
+İsteğe bağlı. Dilin görüntülenip görüntülenmeyeceğini belirtir. Varsayılan değer `no` olarak belirlenmiştir.
 
 /Includecallsacrossthreads: `yes`&#124;`no` [veya]/i: `yes`&#124;`no`
 
-İsteğe bağlı. Diğer iş parçacıklarından veya çağrıların eklenip eklenmeyeceğini belirtir. Varsayılan değer `no` .
+İsteğe bağlı. Diğer iş parçacıklarından veya çağrıların eklenip eklenmeyeceğini belirtir. Varsayılan değer `no` olarak belirlenmiştir.
 
 /ShowExternalCode: `yes`&#124;`no`
 

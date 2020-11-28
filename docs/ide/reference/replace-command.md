@@ -1,5 +1,7 @@
 ---
 title: Değiştir Komutu
+description: Değiştir komutu ve bul ve Değiştir penceresinin dosyalardaki dosyaları Değiştir sekmesinde bulunan seçeneklerin bir alt kümesini kullanarak dosyalardaki metni nasıl değiştirdiği hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 620e55938a9c96393d8cd7de6f238d3f98715d29
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2db7b59c1982f706cc6d2b18039870871ffa1039
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75596690"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96304044"
 ---
 # <a name="replace-command"></a>Değiştir Komutu
 Dosyalardaki metni **Bul ve Değiştir** penceresinin **dosyaları değiştir** sekmesinde bulunan seçeneklerin bir alt kümesini kullanarak değiştirir.

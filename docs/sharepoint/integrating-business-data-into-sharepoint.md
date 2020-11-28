@@ -1,5 +1,7 @@
 ---
 title: Iş verilerini SharePoint ile tümleştirme | Microsoft Docs
+description: İş verileri bağlantısı (BDC) hizmeti için bir model oluşturarak iş verilerini SharePoint 'e tümleştirme hakkında üst düzey bir Özet okuyun.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: overview
 dev_langs:
@@ -19,12 +21,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b4bbfb681a0dac0825bf7af4f1f27ab1c1b50053
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f3156adc286222282ae63f70f70838bc6b7155a8
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016305"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96304355"
 ---
 # <a name="integrate-business-data-into-sharepoint"></a>İş verilerini SharePoint ile tümleştirme
   İş verilerini SharePoint ile tümleştirebilirsiniz. İş verileri [!INCLUDE[TLA#tla_sqlsvr](../sharepoint/includes/tlasharptla-sqlsvr-md.md)] , Siebel, SAP veya bir Web hizmeti gibi arka uç sunucu uygulamalarından gelebilir. Kullanıcılar, SharePoint 'te dış listeleri veya Iş verileri Web Bölümleri kullanarak iş verilerini görüntüleyebilir, ekleyebilir, güncelleştirebilir veya silebilir.  Kullanıcılar bu verilere Microsoft Outlook gibi bir Microsoft Office uygulamasına çevrimdışı de erişebilirler. Daha fazla bilgi için bkz. [dış verileri nerede gösterebileceğiniz](/previous-versions/office/developer/sharepoint-2010/ee558737(v=office.14)).

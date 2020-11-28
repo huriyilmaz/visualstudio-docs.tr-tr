@@ -1,5 +1,7 @@
 ---
 title: Belleği Listele Komutu
+description: Belleği Listele komutu ve belirtilen bellek aralığının içeriğini görüntüleme hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -14,12 +16,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c500b1b516c2b1ab1bc66b7970fccc4ec7a85baa
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 696cb36f932a1a79388d94d749b4b5d4bff7d0c2
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75568717"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96305328"
 ---
 # <a name="list-memory-command"></a>Belleği Listele Komutu
 Belirtilen bellek aralığının içeriğini görüntüler.
@@ -70,11 +72,11 @@ Tüm anahtarlarla birlikte bir **hata ayıklama. ListMemory** komutu yazmak yeri
 
 |Diğer ad|Komut ve anahtarlar|
 |-----------| - |
-|**TID**|Debug. ListMemory|
+|**d**|Debug. ListMemory|
 |**kapattığımda**|Debug. ListMemory/ANSI|
 |**veritabanı**|Debug. ListMemory/Format: OneByte|
 |**'ye**|Debug. ListMemory/Format: on bayt/ANSI|
-|**gg**|Debug. ListMemory/Format: on bayt|
+|**dd**|Debug. ListMemory/Format: on bayt|
 |**df**|Debug. ListMemory/Format: float|
 |**DQ**|Debug. ListMemory/Format: sekizinci TBytes|
 |**du**|Debug. ListMemory/UNICODE|

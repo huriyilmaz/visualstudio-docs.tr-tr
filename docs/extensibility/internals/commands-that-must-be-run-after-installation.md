@@ -1,5 +1,7 @@
 ---
 title: Yüklemeden sonra çalıştırılması gereken komutlar | Microsoft Docs
+description: Visual Studio 'da bir. msi dosyası aracılığıyla dağıtılan bir uzantı yüklemenizin parçası olarak çalıştırılması gereken komutlar hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 77add5afd5d44358f0077a11bb70559a796e74c6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 64eda9c95b9c469d8defc8ab0318031e9e43172a
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80709480"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96305045"
 ---
 # <a name="commands-that-must-be-run-after-installation"></a>Yüklemeden sonra çalıştırılması gereken komutlar
 Uzantınızı bir *. msi* dosyası aracılığıyla dağıtırsanız, Visual Studio 'nun uzantılarınızı bulması için **devenv/setup** ' ı yüklemenizin bir parçası olarak çalıştırmanız gerekir.
@@ -44,7 +46,7 @@ Uzantınızı bir *. msi* dosyası aracılığıyla dağıtırsanız, Visual Stu
 |DEVENV_EXE_2005|RL_DevenvExe_2005|
 |DEVENV_EXE_2008|RL_DevenvExe_2008|
 
- Örneğin, Visual Studio yükleyicisi **HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio\9.0\Setup\VS\EnvironmentPath** kayıt defteri değerini *C:\VS2008\Common7\IDE\devenv.exe*olarak yazar ve yükleyicinin çalıştırması gereken yürütülebilir dosyanın tüm yolu.
+ Örneğin, Visual Studio yükleyicisi **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0\Setup\VS\EnvironmentPath** kayıt defteri değerini *C:\VS2008\Common7\IDE\devenv.exe* olarak yazar ve yükleyicinin çalıştırması gereken yürütülebilir dosyanın tüm yolu.
 
 > [!NOTE]
 > RegLocator tablosunun Type sütunu 2 olduğundan, Imza tablosunda ek sürüm bilgisi belirtilmesi gerekli değildir.

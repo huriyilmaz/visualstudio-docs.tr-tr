@@ -1,5 +1,7 @@
 ---
 title: Özellik ve paket bildirimlerinde XML birleştirme | Microsoft Docs
+description: Tasarımcı tarafından oluşturulan ve SharePoint özelliğinde ve paket bildirimlerinde Kullanıcı tarafından eklenen XML kodu birleştirme. Özellik ve paket bildirim öğelerini öğrenin ve özel durumları birleştirin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 1378cddbc9770af923a98f1b7083a8792874b5b3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 16305ed63f48d9f14e35aeb8d37e35f23f40be25
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64806744"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96304232"
 ---
 # <a name="merge-xml-in-feature-and-package-manifests"></a>Özellik ve paket bildirimlerinde XML 'yi birleştirme
   Özellikler ve paketler, [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] bildirim dosyaları tarafından tanımlanır. Bu paketlenmiş bildirimler, tasarımcılardan oluşturulan verilerin ve [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] bildirim şablonunda kullanıcılar tarafından girilen özel bir birleşimidir. Paketleme sırasında, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] paketlenmiş bildirim dosyasını oluşturmak için özel deyimleri tasarımcı tarafından belirtilen şekilde birleştirir [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] . Daha sonra birleştirme özel durumları 'nda belirtilen özel durumlarla benzer öğeler, [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] dosyaları SharePoint 'e dağıttıktan sonra doğrulama hatalarından kaçınmak ve bildirim dosyalarını daha küçük ve daha verimli hale getirmek için birleştirilir.
@@ -31,7 +33,7 @@ ms.locfileid: "64806744"
  Bir öğe benzersiz bir anahtara sahipse, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Tasarımcı ve özel anahtarların değerlerini karşılaştırır. Değerler eşleşiyorsa, tek bir değer birleştirir. Değerler farklıysa, tasarımcı anahtar değeri atılır ve özel anahtar değeri kullanılır. Koleksiyonlar da birleştirilir. Örneğin, tasarımcı tarafından oluşturulan [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] ve Custom [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] her ikisi de bir derlemeler koleksiyonu içeriyorsa, paketlenmiş bildirim yalnızca bir derlemeler koleksiyonu içerir.
 
 ## <a name="merge-exceptions"></a>Özel durumları Birleştir
- [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] birçok tasarımcı [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] öğesini, benzer özel öğelerle birlikte birleştirerek [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] , tek, benzersiz bir tanımlayıcı özniteliği oldukları sürece. Ancak, bazı öğeler birleştirme için gerekli benzersiz tanımlayıcı olmamasıdır [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] . Bu öğeler *birleştirme özel durumları*olarak bilinir. Bu durumlarda, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] özel [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] öğeleri tasarımcı tarafından sağlanmış öğelerle birleştirmez [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] , bunun yerine bunları paketlenmiş bildirim dosyasına ekler.
+ [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] birçok tasarımcı [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] öğesini, benzer özel öğelerle birlikte birleştirerek [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] , tek, benzersiz bir tanımlayıcı özniteliği oldukları sürece. Ancak, bazı öğeler birleştirme için gerekli benzersiz tanımlayıcı olmamasıdır [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] . Bu öğeler *birleştirme özel durumları* olarak bilinir. Bu durumlarda, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] özel [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] öğeleri tasarımcı tarafından sağlanmış öğelerle birleştirmez [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] , bunun yerine bunları paketlenmiş bildirim dosyasına ekler.
 
  Özellik ve paket bildirim dosyaları için birleştirme özel durumlarının listesi aşağıda verilmiştir [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] .
 

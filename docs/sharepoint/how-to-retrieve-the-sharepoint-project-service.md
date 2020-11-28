@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: SharePoint proje hizmetini alma | Microsoft Docs'
+description: Project System Extensions, Sunucu Gezgini uzantıları veya diğer Visual Studio uzantılarında SharePoint proje hizmetine nasıl erişebileceğinizi anlayın.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -12,19 +14,19 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f49883337c5748c0f8bcab5d0a88e02612e51b4c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 553b4ae3b7ecfa9fa49065824020ebdcecf77215
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015562"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96304436"
 ---
 # <a name="how-to-retrieve-the-sharepoint-project-service"></a>Nasıl yapılır: SharePoint proje hizmetini alma
   SharePoint proje hizmetine aşağıdaki çözüm türlerinde erişebilirsiniz:
 
 - SharePoint proje sisteminin bir proje uzantısı, proje öğesi uzantısı veya proje öğesi türü tanımı gibi uzantısı. Bu uzantı türleri hakkında daha fazla bilgi için bkz. [SharePoint proje sistemini genişletme](../sharepoint/extending-the-sharepoint-project-system.md).
 
-- **Sunucu Gezgini**Içindeki **SharePoint bağlantıları** düğümünün uzantısı. Bu uzantı türleri hakkında daha fazla bilgi için, bkz. [Sunucu Gezgini SharePoint Connections düğümünü genişletme](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md).
+- **Sunucu Gezgini** Içindeki **SharePoint bağlantıları** düğümünün uzantısı. Bu uzantı türleri hakkında daha fazla bilgi için, bkz. [Sunucu Gezgini SharePoint Connections düğümünü genişletme](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md).
 
 - VSPackage gibi başka bir Visual Studio uzantısı türü.
 
@@ -81,7 +83,7 @@ ms.locfileid: "86015562"
 
 2. <xref:System.IServiceProvider.GetService%2A>Bir nesne istemek için yöntemini kullanın <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService> .
 
-     Aşağıdaki kod örneği, **Çıkış** penceresine bir ileti yazmak için proje hizmetinin nasıl kullanılacağını ve uzantının **Sunucu Gezgini**liste düğümlerine eklediği bir kısayol menüsünden **hata listesi** penceresini gösterir.
+     Aşağıdaki kod örneği, **Çıkış** penceresine bir ileti yazmak için proje hizmetinin nasıl kullanılacağını ve uzantının **Sunucu Gezgini** liste düğümlerine eklediği bir kısayol menüsünden **hata listesi** penceresini gösterir.
 
      [!code-vb[SPExtensibility.ProjectService.FromSPExplorerExtensions#1](../sharepoint/codesnippet/VisualBasic/spextensibility.projectservice.fromspexplorerextensions.getprojectservice/extension/extension.vb#1)]
      [!code-csharp[SPExtensibility.ProjectService.FromSPExplorerExtensions#1](../sharepoint/codesnippet/CSharp/spextensibility.projectservice.fromspexplorerextensions.getprojectservice/extension/extension.cs#1)]

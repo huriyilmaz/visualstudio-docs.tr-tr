@@ -1,5 +1,7 @@
 ---
 title: Yeni öğe Ekle Iletişim kutusuna katkıda bulunma | Microsoft Docs
+description: Proje kayıt defteri alt anahtarının altına öğe Ekle şablonları kaydederek Visual Studio 'daki yeni öğe Ekle iletişim kutusuna nasıl katkıda bulunabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,18 +12,18 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 83444d9be6ba23392b792a0187bf46dc9920c465
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 94a13890f0b5e60b1da204b89a01c1cadc6d00c4
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80709283"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96304636"
 ---
 # <a name="contribute-to-the-add-new-item-dialog-box"></a>Yeni öğe Ekle iletişim kutusuna katkıda bulunun
 Proje alt türü **, proje kayıt defteri alt** anahtarının altına **öğe Ekle** şablonları kaydederek **Yeni öğe Ekle** iletişim kutusu için yeni bir öğe dizini sağlayabilir.
 
 ## <a name="register-add-new-item-templates"></a>Yeni öğe ekleme şablonları Kaydet
- Bu bölüm, kayıt defterindeki **HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio\8.0\Projects** altında bulunur. Aşağıdaki kayıt defteri girişlerinde, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kuramsal bir proje alt türü tarafından toplanan bir proje varsayılmaktadır. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Projenin girişleri aşağıda listelenmiştir.
+ Bu bölüm, kayıt defterindeki **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0\Projects** altında bulunur. Aşağıdaki kayıt defteri girişlerinde, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kuramsal bir proje alt türü tarafından toplanan bir proje varsayılmaktadır. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Projenin girişleri aşağıda listelenmiştir.
 
 ```
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0\Projects\{F184B08F-C81C-45F6-A57F-5ABD9991F28F}]
@@ -37,7 +39,7 @@ Proje alt türü **, proje kayıt defteri alt** anahtarının altına **öğe Ek
 
  **AddItemTemplates\TemplateDirs** alt anahtarı, **Yeni öğe Ekle** iletişim kutusunda kullanılabilir öğelerin yerleştirildiği dizinin yolunu içeren kayıt defteri girdilerini içerir.
 
- Ortam, tüm **Additemtemplate** verilerini **Projeler** kayıt defteri alt anahtarı altında otomatik olarak yükler. Bu veriler, temel proje uygulamalarının verilerini ve ayrıca belirli proje alt türü türleri için verileri içerebilir. Her proje alt türü bir proje türü **GUID**ile tanımlanır. Proje alt türü, **Add Item** `VSHPROPID_ AddItemTemplatesGuid` <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2> <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> Proje alt türünün GUID değerini döndürmek için uygulamadaki sabit listesini destekleyerek, belirli bir flavored proje örneği için farklı bir Add Item şablonu kullanılması gerektiğini belirtebilir. `VSHPROPID_AddItemTemplatesGuid`Özelliği belirtilmemişse, temel proje GUID 'si kullanılır.
+ Ortam, tüm **Additemtemplate** verilerini **Projeler** kayıt defteri alt anahtarı altında otomatik olarak yükler. Bu veriler, temel proje uygulamalarının verilerini ve ayrıca belirli proje alt türü türleri için verileri içerebilir. Her proje alt türü bir proje türü **GUID** ile tanımlanır. Proje alt türü, **Add Item** `VSHPROPID_ AddItemTemplatesGuid` <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2> <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> Proje alt türünün GUID değerini döndürmek için uygulamadaki sabit listesini destekleyerek, belirli bir flavored proje örneği için farklı bir Add Item şablonu kullanılması gerektiğini belirtebilir. `VSHPROPID_AddItemTemplatesGuid`Özelliği belirtilmemişse, temel proje GUID 'si kullanılır.
 
  Proje alt türü toplayıcısı nesnesi üzerinde arabirimini uygulayarak **Yeni öğe Ekle** iletişim kutusundaki öğeleri filtreleyebilirsiniz <xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg> . Örneğin, bir projeyi toplayarak bir veritabanı projesi uygulayan bir proje alt türü [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] filtre uygulayarak **Yeni öğe Ekle** iletişim kutusundan belirli öğeleri filtreleyebilir ve sırasıyla ' de destekleyerek veritabanına projeye özgü öğeler ekleyebilirler `VSHPROPID_ AddItemTemplatesGuid` <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> . **Yeni öğe Ekle** iletişim kutusuna öğe filtreleme ve ekleme hakkında daha fazla bilgi Için, [Yeni öğe Ekle Iletişim kutusuna öğe ekleme](../../extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes.md)bölümüne bakın.
 

@@ -1,5 +1,7 @@
 ---
 title: Devenv komut satırı anahtarları
+description: Devenv komut satırı anahtarları ve IDE seçeneklerini ayarlamak için bunları nasıl kullanacağınızı ve ayrıca, komut satırından projeleri oluşturma, hata ayıklama ve dağıtma hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 12/10/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ed7a36ad561daf87ec65db0f6c51c9dd7833eb9e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 597a3f7e9a9b36d52f55a9215891c40b18f1a9e9
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "82255558"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96305501"
 ---
 # <a name="devenv-command-line-switches"></a>Devenv komut satırı anahtarları
 
@@ -76,13 +78,13 @@ Aşağıdaki komut satırı anahtarları IDE 'yi görüntüler ve açıklanan g�
 |[/Run veya/R](run-devenv-exe.md)|Belirtilen çözümü derler ve çalıştırır.<br /><br /> `devenv /run mysln.sln`|
 |[/RunExit](runexit-devenv-exe.md)|Belirtilen çözümü derler ve çalıştırır, çözüm çalıştırıldığında IDE 'yi en aza indirir ve çözümün çalışmasını tamamladıktan sonra IDE 'yi kapatır.<br /><br /> `devenv /runexit mysln.sln`|
 |[/SafeMode](safemode-devenv-exe.md)|Visual Studio 'Yu güvenli modda başlatır. Bu anahtar yalnızca varsayılan ortamı, varsayılan Hizmetleri ve üçüncü taraf paketlerin sevk edilen sürümlerini yükler.<br /><br /> Bu anahtar bağımsız değişken almaz.|
-|[/UseEnv](useenv-devenv-exe.md)|IDE 'nin C++ derlemesi için PATH, ıNCLUDE, LıBPATH ve LIB ortam değişkenlerini kullanmasına neden olur. Bu anahtar, C++ iş yüküne **sahip masaüstü geliştirmeyle** birlikte yüklenir. Daha fazla bilgi için bkz. [komut satırı derlemeleri Için yolu ve ortam değişkenlerini ayarlama](/cpp/build/setting-the-path-and-environment-variables-for-command-line-builds).|
+|[/UseEnv](useenv-devenv-exe.md)|IDE 'nin C++ derlemesi için PATH, ıNCLUDE, LıBPATH ve LIB ortam değişkenlerini kullanmasına neden olur. Bu anahtar, C++ iş yüküne **sahip masaüstü geliştirmeyle** birlikte yüklenir. Daha fazla bilgi için bkz. [Command-Line derlemeler Için yolu ve ortam değişkenlerini ayarlama](/cpp/build/setting-the-path-and-environment-variables-for-command-line-builds).|
 
 Aşağıdaki komut satırı anahtarları IDE 'yi görüntülemez.
 
 |Komut satırı anahtarı|Description|
 | - |-----------------|
-|[/?](q-devenv-exe.md)|`devenv` **Komut istemi penceresinde**anahtarlar için yardımı görüntüler.<br /><br /> Bu anahtar bağımsız değişken almaz.|
+|[/?](q-devenv-exe.md)|`devenv` **Komut istemi penceresinde** anahtarlar için yardımı görüntüler.<br /><br /> Bu anahtar bağımsız değişken almaz.|
 |[/Build](build-devenv-exe.md)|Belirtilen çözümü veya projeyi belirtilen çözümün yapılandırmasına göre oluşturur.<br /><br /> `devenv mysln.sln /build`|
 |[/Clean](clean-devenv-exe.md)|Kaynak dosyalarını etkilemeden derleme komutu tarafından oluşturulan tüm dosyaları siler.<br /><br /> `devenv mysln.sln /clean`|
 |[/Deploy](deploy-devenv-exe.md)|Çözümü, çözümün yapılandırmasına göre, dağıtım için gerekli dosyalarla birlikte oluşturur.<br /><br /> `devenv mysln.sln /deploy`|

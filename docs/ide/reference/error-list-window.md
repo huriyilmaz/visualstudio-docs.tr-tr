@@ -1,5 +1,7 @@
 ---
 title: Hata Listesi Penceresi
+description: Hata Listesi penceresi ve görüntülediği hataları çözmeye ilişkin görevleri gerçekleştirmek için nasıl kullanılacağı hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -15,17 +17,17 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8c6d925f61714c524f97a57690870229b2340d21
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bf008bd7c1355f5991890ca5ab8bd999f2a8dd32
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75569669"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96305438"
 ---
 # <a name="error-list-window"></a>Hata Listesi Penceresi
 
 > [!NOTE]
-> **Hata listesi** belirli bir hata iletisiyle ilgili bilgileri görüntüler. Hata numarasını veya hata dizesi metnini **Çıkış** penceresinden kopyalayabilirsiniz. **Çıkış** penceresini göstermek için **CTRL** + **alt** + **O**tuşlarına basın. [Çıkış penceresine](../../ide/reference/output-window.md)bakın.
+> **Hata listesi** belirli bir hata iletisiyle ilgili bilgileri görüntüler. Hata numarasını veya hata dizesi metnini **Çıkış** penceresinden kopyalayabilirsiniz. **Çıkış** penceresini göstermek için **CTRL** + **alt** + **O** tuşlarına basın. [Çıkış penceresine](../../ide/reference/output-window.md)bakın.
 
 **Hata listesi** penceresi aşağıdaki görevleri gerçekleştirmenize olanak sağlar:
 
@@ -41,9 +43,9 @@ ms.locfileid: "75569669"
 
 - Belirli terimleri arayın ve aramayı yalnızca geçerli proje veya belge ile kapsamını bulun.
 
-**Hata listesi**görüntülemek için **View**  >  **hata listesi**görüntüle ' yi seçin veya **CTRL** + **\\** + **E**tuşlarına basın.
+**Hata listesi** görüntülemek için **View**  >  **hata listesi** görüntüle ' yi seçin veya **CTRL** + **\\** + **E** tuşlarına basın.
 
-Farklı bilgi düzeylerini görmek için **hatalar**, **Uyarılar**ve **iletiler** sekmelerini seçebilirsiniz.
+Farklı bilgi düzeylerini görmek için **hatalar**, **Uyarılar** ve **iletiler** sekmelerini seçebilirsiniz.
 
 Listeyi sıralamak için herhangi bir sütun başlığına tıklayın. Ek bir sütuna yeniden sıralamak için **SHIFT** tuşunu basılı tutarak başka bir sütun başlığına tıklayın. Hangi sütunların görüntülendiğini ve gizli olduğunu seçmek için kısayol menüsünde **sütunları göster** ' i seçin. Sütunların görüntülenme sırasını değiştirmek için herhangi bir sütun başlığını sola veya sağa sürükleyin.
 
@@ -53,16 +55,16 @@ Listeyi sıralamak için herhangi bir sütun başlığına tıklayın. Ek bir s�
 
 Arama kapsamını analiz edilecek ve hata gruplarını görecek şekilde kısıtlayabilirsiniz. Örneğin, bir projenin derlenmesini engelleyen temel hatalara odaklanmak isteyebilirsiniz. Kapsam seçenekleri şunlardır:
 
-1. **Açık**belgeler: açık belgeler için hataları, uyarıları ve iletileri göster.
+1. **Açık** belgeler: açık belgeler için hataları, uyarıları ve iletileri göster.
 
 2. **Geçerli proje**: **düzenleyicide** veya seçilen projede seçili olan belgenin projesinden hataları, uyarıları ve iletileri göster **Çözüm Gezgini**.
 
     > [!NOTE]
     > Şu anda seçili olan belgenin projesi **Çözüm Gezgini**' de seçilen projeden farklıysa, hata, uyarı ve ileti filtrelenmiş listesi değişecektir.
 
-3. **Geçerli belge**: **düzenleyicide** veya **Çözüm Gezgini**seçili olan belge için hataları, uyarıları ve iletileri göster.
+3. **Geçerli belge**: **düzenleyicide** veya **Çözüm Gezgini** seçili olan belge için hataları, uyarıları ve iletileri göster.
 
-Arama sonuçlarına bir filtre uygulanmışsa, filtrenin adı **hata listesi** başlık çubuğunda görüntülenir. **Hatalar**, **Uyarılar**ve **iletiler** düğmeleri daha sonra toplam öğe sayısıyla birlikte gösterilen filtrelenmiş öğe sayısını görüntüler. Örneğin, düğmeler "x/y hata" gösterir. Hiçbir filtre uygulanmazsa, başlık çubuğu yalnızca "Hata Listesi" ifadesini belirtir.
+Arama sonuçlarına bir filtre uygulanmışsa, filtrenin adı **hata listesi** başlık çubuğunda görüntülenir. **Hatalar**, **Uyarılar** ve **iletiler** düğmeleri daha sonra toplam öğe sayısıyla birlikte gösterilen filtrelenmiş öğe sayısını görüntüler. Örneğin, düğmeler "x/y hata" gösterir. Hiçbir filtre uygulanmazsa, başlık çubuğu yalnızca "Hata Listesi" ifadesini belirtir.
 
 Araç çubuğunun sağ tarafındaki liste, derlemeden hataların (bir derleme işleminden kaynaklanan hatalar) veya IntelliSense 'den (bir derleme çalıştırılmadan önce algılanan hatalar) veya her ikisiyle ait hataların gösterilip gösterilmeyeceğini belirtir.
 
@@ -76,7 +78,7 @@ Hata listesini kopyalayabilir ve bir dosyaya kaydedebilirsiniz. Kopyalamak isted
 
 ## <a name="ui-element-list"></a>UI Öğe Listesi
 
-Önem Derecesi
+Önem derecesi
 
 **Hata listesi** girişi farklı türlerini görüntüler (**hata**, **ileti**, **Uyarı**, **uyarı (etkin)**, **uyarı (etkin olmayan)**.
 

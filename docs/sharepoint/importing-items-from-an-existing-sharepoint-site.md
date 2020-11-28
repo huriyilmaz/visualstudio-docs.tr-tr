@@ -1,5 +1,7 @@
 ---
 title: Mevcut bir SharePoint sitesinden öğeleri içeri aktarma | Microsoft Docs
+description: SharePoint çözüm paketini Içeri aktar proje şablonunu kullanarak mevcut bir SharePoint sitesinden öğeleri içeri aktarın, böylece öğeleri yeni bir SharePoint çözümünde yeniden kullanabilirsiniz.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: overview
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9c2703bfdd4f47281a1fc19060cb69f8b312e7d2
-ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
+ms.openlocfilehash: ef77fb280021fcfb701a677bc9ce17ec26e39516
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "95970532"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96304518"
 ---
 # <a name="import-items-from-an-existing-sharepoint-site"></a>Mevcut bir SharePoint sitesinden öğeleri içeri aktar
   Içeri aktarma SharePoint çözüm paketi proje şablonu, yeni bir SharePoint çözümündeki mevcut SharePoint sitelerinden içerik türleri ve alanlar gibi öğeleri yeniden kullanmanıza olanak sağlar [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . Çoğu içeri aktarılan çözümü değişiklik yapmadan çalıştırabilmenize karşın, özellikle de herhangi bir öğeyi içe aktardıktan sonra değiştirirseniz dikkate alınması gereken bazı kısıtlamalar ve sorunlar vardır.

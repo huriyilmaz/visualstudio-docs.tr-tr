@@ -1,5 +1,7 @@
 ---
 title: Bileşen yönetimi | Microsoft Docs
+description: Visual Studio 'da VSPackage yükleyicisi oluştururken Windows Installer bileşenlerini yönetmeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b5dcac9fb14a83021b852be2c52436fcdca84bf5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 648a1c90b143a0f38f8911fcaed3ee1ed16908b6
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80709330"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96304920"
 ---
 # <a name="component-management"></a>Bileşen yönetimi
 Windows Installer görev birimleri Windows Installer bileşenleri (bazen WICs veya yalnızca bileşenler olarak adlandırılır) olarak adlandırılır. Bir GUID, Windows Installer kullanan kurulumlara yönelik temel yükleme birimi ve başvuru sayımı olan her bir WIC 'yi tanımlar.
@@ -29,7 +31,7 @@ Windows Installer görev birimleri Windows Installer bileşenleri (bazen WICs ve
 
 - Sürümler arasında paylaşılan dosyaları ve kayıt defteri anahtarlarını kendi bileşenlerine yazar.
 
-     Bunun yapılması, bunları bir sonraki sürümde kolayca kullanmanıza olanak sağlar. Örneğin, genel olarak kayıtlı kitaplıklar, dosya uzantıları, **HKEY_CLASSES_ROOT**kayıtlı diğer öğeler ve benzeri.
+     Bunun yapılması, bunları bir sonraki sürümde kolayca kullanmanıza olanak sağlar. Örneğin, genel olarak kayıtlı kitaplıklar, dosya uzantıları, **HKEY_CLASSES_ROOT** kayıtlı diğer öğeler ve benzeri.
 
 - Paylaşılan bileşenleri ayrı birleştirme modülleriyle gruplandırın.
 

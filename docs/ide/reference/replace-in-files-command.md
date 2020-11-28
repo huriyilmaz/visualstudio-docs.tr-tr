@@ -1,5 +1,7 @@
 ---
 title: Dosyalarda Değiştir Komutu
+description: Bul ve Değiştir penceresinin dosyalardaki dosyaları Değiştir sekmesinde bulunan bazı seçenekleri kullanarak dosyalardaki metni Değiştir komutu ve bu dosyanın metinde nasıl yerini aldığını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -14,12 +16,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 96f7d7ae0ea5eaf0de1a6fa4357e2750cdd8c22e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: da2bfe820f70925a979548abeab955865f2bbc2c
+ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75565480"
+ms.lasthandoff: 11/28/2020
+ms.locfileid: "96304157"
 ---
 # <a name="replace-in-files-command"></a>Dosyalarda Değiştir Komutu
 Dosyalardaki metni **Bul ve Değiştir** penceresinin **dosyaları değiştir** sekmesinde bulunan seçeneklerin bir alt kümesini kullanarak değiştirir.
