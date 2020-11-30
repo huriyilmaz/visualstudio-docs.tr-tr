@@ -1,5 +1,7 @@
 ---
 title: Web performansı ve yük testi projesi oluşturma
+description: Bu hızlı başlangıç ile Visual Studio 'da Web performans ve yük testi projesi oluşturma ve çalıştırma hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 03/14/2018
 ms.topic: quickstart
 helpviewer_keywords:
@@ -7,12 +9,12 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: d883d531737caf32ec202955ff951382b5ff9009
-ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
+ms.openlocfilehash: 3833542dc00f347014dabf96f836fbd4fa810862
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91928586"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329139"
 ---
 # <a name="quickstart-create-a-load-test-project"></a>Hızlı Başlangıç: Yük testi projesi oluşturma
 
@@ -70,11 +72,11 @@ Bu bölümde, bir C# yük testi projesi oluşturacağız. Dilerseniz, bir Visual
 
 ::: moniker-end
 
-   Visual Studio projeyi oluşturur ve **Çözüm Gezgini**dosyaları görüntüler. Proje başlangıçta *WebTest1. webtest*adlı bir Web testi dosyası içerir.
+   Visual Studio projeyi oluşturur ve **Çözüm Gezgini** dosyaları görüntüler. Proje başlangıçta *WebTest1. webtest* adlı bir Web testi dosyası içerir.
 
 ## <a name="add-a-load-test-to-the-project"></a>Projeye yük testi ekleme
 
-1. **Çözüm Gezgini**içindeki proje düğümünün sağ tıklama menüsünde veya bağlam menüsünde **Add**  >  **Yük testi**Ekle ' yi seçin.
+1. **Çözüm Gezgini** içindeki proje düğümünün sağ tıklama menüsünde veya bağlam menüsünde **Add**  >  **Yük testi** Ekle ' yi seçin.
 
    **Yeni Yük Testi Sihirbazı** açılır.
 
@@ -86,11 +88,11 @@ Bu bölümde, bir C# yük testi projesi oluşturacağız. Dilerseniz, bir Visual
 
    **Testler ekle** iletişim kutusu açılır.
 
-1. **Kullanılabilir testler**altında **WebTest1**' ı seçin ve ardından sağ oku seçerek **Seçili testler** kutusuna taşıyın. **Tamam** düğmesini seçin.
+1. **Kullanılabilir testler** altında **WebTest1**' ı seçin ve ardından sağ oku seçerek **Seçili testler** kutusuna taşıyın. **Tamam** düğmesini seçin.
 
    ![Testler Ekle iletişim kutusu](media/add-tests-dialog-box.png)
 
-1. **Yeni Yük Testi Sihirbazı**geri dönüp **son** düğmesini seçin.
+1. **Yeni Yük Testi Sihirbazı** geri dönüp **son** düğmesini seçin.
 
    Yük testi projeye eklenir ve yükleme testi dosyası düzenleyici penceresinde açılır.
 
@@ -102,7 +104,7 @@ Düzenleyicide açık olan yük testinin sağ tıklama menüsünde veya bağlam 
 
 ![Yük testi menüsünü Çalıştır](media/run-load-test.png)
 
-Yük testi çalışmaya başlar. **Test sonuçları** pencere, testin devam ettiğini ve Yük Testi Çözümleyicisinin düzenleyici penceresinde görüntülendiğini gösterir. Test tamamlandıktan sonra, Varsayılanları kabul ettiyseniz beş dakika olması gerekir, düzenleyicide bir Özet gösterilir. Yük testinin sonuçları hakkında farklı bilgiler almak için **grafikler**, **Tablolar**veya **ayrıntı** seçeneklerini belirleyebilirsiniz.
+Yük testi çalışmaya başlar. **Test sonuçları** pencere, testin devam ettiğini ve Yük Testi Çözümleyicisinin düzenleyici penceresinde görüntülendiğini gösterir. Test tamamlandıktan sonra, Varsayılanları kabul ettiyseniz beş dakika olması gerekir, düzenleyicide bir Özet gösterilir. Yük testinin sonuçları hakkında farklı bilgiler almak için **grafikler**, **Tablolar** veya **ayrıntı** seçeneklerini belirleyebilirsiniz.
 
 ![Yük Testi Çözümleyicisi penceresi](media/load-test-analyzer.png)
 

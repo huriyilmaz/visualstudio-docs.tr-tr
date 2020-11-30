@@ -1,5 +1,7 @@
 ---
 title: Uyarılar ve hatalar | Microsoft IntelliTest geliştirici test aracı
+description: Bu makalede, her bir uyarı ve hatanın açıklamalarıyla birlikte, her bir uyarı ve hata için açıklamaların bulunduğu IntelliTest uyarıları ve hataları bulunur
+ms.custom: SEO-VS-2020
 ms.date: 05/02/2017
 ms.topic: reference
 helpviewer_keywords:
@@ -9,12 +11,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: c3f5fe55a4e1afb1a9551d43d0d61ae9f76b81e4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 639b68c4d999a5e491f6e52a2cf3a7960563ed17
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77275444"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329438"
 ---
 # <a name="warnings-and-errors"></a>Uyarıları ve hatalar
 
@@ -145,7 +147,7 @@ IntelliTest, [giriş oluşturma](input-generation.md)sırasında incelendiğinde
 
 Yürütülen ve izlenen kodun her çağrısı (doğrudan, dolaylı, sanal veya atlamanın) bu sınıra doğru sayılır.
 
-**PexSettingsAttributeBase**öğesinden türetilmiş bir özniteliğin **maxgörüşmelerini** seçeneğini, örneğin [PexClass](attribute-glossary.md#pexclass) veya [PexMethod](attribute-glossary.md#pexmethod). Aşağıdaki örnek bu sınırı etkin bir şekilde kaldırır:
+**PexSettingsAttributeBase** öğesinden türetilmiş bir özniteliğin **maxgörüşmelerini** seçeneğini, örneğin [PexClass](attribute-glossary.md#pexclass) veya [PexMethod](attribute-glossary.md#pexmethod). Aşağıdaki örnek bu sınırı etkin bir şekilde kaldırır:
 
 ```csharp
 [PexMethod(MaxCalls=int.MaxValue)]
@@ -161,7 +163,7 @@ public void MyTest(...) {
 
 IntelliTest, [giriş oluşturma](input-generation.md)sırasında incelendiğinden herhangi bir yürütme yolunun çağrı yığınının boyutunu sınırlandırır. Bu özellik, bir yığın taşması oluştuğunda IntelliTest 'in sonlandırmasını önler.
 
-**PexSettingsAttributeBase**öğesinden türetilmiş bir özniteliğin **maxstack** seçeneğini ( [PexClass](attribute-glossary.md#pexclass) veya [PexMethod](attribute-glossary.md#pexmethod)gibi) düzenleyebilirsiniz. Aşağıdaki örnek, bu sınırı etkin bir şekilde kaldırır (önerilmez):
+**PexSettingsAttributeBase** öğesinden türetilmiş bir özniteliğin **maxstack** seçeneğini ( [PexClass](attribute-glossary.md#pexclass) veya [PexMethod](attribute-glossary.md#pexmethod)gibi) düzenleyebilirsiniz. Aşağıdaki örnek, bu sınırı etkin bir şekilde kaldırır (önerilmez):
 
 ```csharp
 [PexMethod(MaxStack=int.MaxValue)]
@@ -179,7 +181,7 @@ IntelliTest, [giriş oluşturma](input-generation.md)sırasında ele aldığı y
 
 Her IntelliTest, belirli girişlerle parametreli testi çalıştırdığında yeni bir test durumu yayar, bu durum olmayabilir. Daha fazla bilgi için bkz. [Testemissionfilter](exploration-bounds.md#testemissionfilter) .
 
-**PexSettingsAttributeBase**öğesinden türetilmiş bir özniteliğin **maxçalıştırmaları** seçeneğini düzenleyerek, örneğin [PexClass](attribute-glossary.md#pexclass) veya [PexMethod](attribute-glossary.md#pexmethod). Aşağıdaki örnek, bu sınırı etkin bir şekilde kaldırır (önerilmez):
+**PexSettingsAttributeBase** öğesinden türetilmiş bir özniteliğin **maxçalıştırmaları** seçeneğini düzenleyerek, örneğin [PexClass](attribute-glossary.md#pexclass) veya [PexMethod](attribute-glossary.md#pexmethod). Aşağıdaki örnek, bu sınırı etkin bir şekilde kaldırır (önerilmez):
 
 ```csharp
 [PexMethod(MaxRuns=2000)]
@@ -235,7 +237,7 @@ Kısıtlamalarla eşleşen bir veya daha fazla türe işaret ederek IntelliTest 
 
 * **PexUseTypeAttribute**, belirli bir türü işaret eder.
 
-  Örneğin, IntelliTest, " **System. Collections. IDictionary**öğesine atanabilir herhangi bir türü bilmez" olarak bildirirse, teste aşağıdaki **PexUseTypeAttribute** öğesini ekleyerek (veya düzeni sınıfına) yardımcı olabilirsiniz:
+  Örneğin, IntelliTest, " **System. Collections. IDictionary** öğesine atanabilir herhangi bir türü bilmez" olarak bildirirse, teste aşağıdaki **PexUseTypeAttribute** öğesini ekleyerek (veya düzeni sınıfına) yardımcı olabilirsiniz:
 
   ```csharp
   [PexMethod]
@@ -298,7 +300,7 @@ Bu uyarı, belgelenmiş kod IntelliTest 'in izleyemeyen bir yöntemi çağırdı
 
 IntelliTest program yürütmesini izleyerek [Test girişleri oluşturur](input-generation.md) . Yalnızca program belirleyici olduğunda ve ilgili davranış test girişleri tarafından denetleniyorsa, ilgili test girişleri oluşturabilir.
 
-Bu uyarı, test durumlarınızın yürütülmesi sırasında, belirleyici olmayan bir şekilde davranan ya da ortamla etkileşim kuran bir yöntem çağrıldığı için görüntülenir. Örnek olarak **System. Random** ve **System. IO. File**yöntemleri verilebilir. IntelliTest 'in anlamlı test girişleri oluşturmasını istiyorsanız, IntelliTest bayraklarının test edilebilirlik sorunları olarak bir test etme yöntemi olarak tanımlamalısınız.
+Bu uyarı, test durumlarınızın yürütülmesi sırasında, belirleyici olmayan bir şekilde davranan ya da ortamla etkileşim kuran bir yöntem çağrıldığı için görüntülenir. Örnek olarak **System. Random** ve **System. IO. File** yöntemleri verilebilir. IntelliTest 'in anlamlı test girişleri oluşturmasını istiyorsanız, IntelliTest bayraklarının test edilebilirlik sorunları olarak bir test etme yöntemi olarak tanımlamalısınız.
 
 <a name="limitation"></a>
 ## <a name="limitation"></a>Sınırlama

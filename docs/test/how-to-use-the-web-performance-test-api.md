@@ -1,5 +1,7 @@
 ---
 title: Web performans testi API 'SI
+description: Kodlanmış Web performans testlerini, test eklentilerini, istek eklentilerini, istekleri ve ayıklama/doğrulama kurallarını destekleyen Web performans testi API 'SI hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.assetid: 93a6a1dd-663b-4ab5-8760-7d6b081561d3
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 14b7320a38d474748713d687f4ee00b5b91f0208
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d4802d95c46d1187911f4bbc134cc0c50ce08b18
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85287083"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329724"
 ---
 # <a name="how-to-use-the-web-performance-test-api"></a>Nasıl yapılır: Web başarım testi API 'sini kullanma
 
@@ -51,14 +53,14 @@ Ayrıca, yük testleri için eklentiler de oluşturabilirsiniz. Daha fazla bilgi
 
          **Web testi eklentisi Ekle** iletişim kutusu görüntülenir.
 
-    2. **Eklenti seçin**altında Web başarım testi eklenti sınıfınızı seçin.
+    2. **Eklenti seçin** altında Web başarım testi eklenti sınıfınızı seçin.
 
     3. **Seçili eklenti bölmesinin Özellikler** bölümünde, çalışma zamanında kullanılacak eklentinin başlangıç değerlerini ayarlayın.
 
         > [!NOTE]
         > Eklentilerinizi istediğiniz kadar çok özelliği kullanıma sunabilirsiniz. bunları ortak, ayarlanabilir ve tamsayı, Boole veya dize gibi bir temel tür yapmanız yeterlidir. Ayrıca, daha sonra Özellikler penceresi kullanarak Web performans testi eklentisi özelliklerini düzenleyebilirsiniz.
 
-    4. **Tamam ' ı**seçin.
+    4. **Tamam ' ı** seçin.
 
 9. Web performans testinizi çalıştırın.
 

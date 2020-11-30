@@ -1,5 +1,7 @@
 ---
 title: C++ dll 'Leri için birim testleri yazma
+description: Dll 'nin test etmek istediğiniz işlevleri dışarı aktarıp vermediğine bağlı olarak, DLL kodunu test etmenin çeşitli yolları hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 05/01/2019
 ms.topic: how-to
 ms.author: corob
@@ -7,12 +9,12 @@ manager: markl
 ms.workload:
 - cplusplus
 author: corob-msft
-ms.openlocfilehash: 3bfbe5fd0147a04d6fc6142fd1d722f8f2304586
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b7eb7b7be524e20ca87c70c3f1f771f4f8a01141
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85287044"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328632"
 ---
 # <a name="write-unit-tests-for-c-dlls-in-visual-studio"></a>Visual Studio 'da C++ dll 'Leri için birim testleri yazma
 
@@ -58,7 +60,7 @@ Bu yaklaşım, testlerin dışarıya aktarılmamış üyeleri kullanmasına izin
 
       ::: moniker range="vs-2019"
 
-      1. **Dosya** menüsünde **Yeni**  >  **Proje**' yi seçin. **Yeni Proje Ekle** iletişim kutusunda, **dili** C++ olarak ayarlayın ve arama kutusuna "test" yazın. Ardından **yerel birim test projesini**seçin.
+      1. **Dosya** menüsünde **Yeni**  >  **Proje**' yi seçin. **Yeni Proje Ekle** iletişim kutusunda, **dili** C++ olarak ayarlayın ve arama kutusuna "test" yazın. Ardından **yerel birim test projesini** seçin.
 
       ::: moniker-end
 
@@ -70,7 +72,7 @@ Bu yaklaşım, testlerin dışarıya aktarılmamış üyeleri kullanmasına izin
 
   1. **Çözüm Gezgini**' de, test projesine sağ tıklayın ve ardından başvuru **Ekle**' yi seçin  >  **Reference**.
 
-  1. **Projeler**ve ardından sınanacak proje ' yi seçin.
+  1. **Projeler** ve ardından sınanacak proje ' yi seçin.
 
        **Ekle** düğmesini seçin.
 
@@ -90,7 +92,7 @@ Bu yaklaşım, testlerin dışarıya aktarılmamış üyeleri kullanmasına izin
 
       ::: moniker range="vs-2019"
 
-      1. **Dosya** menüsünde **Yeni**  >  **Proje**' yi seçin. **Yeni Proje Ekle** iletişim kutusunda, **dili** C++ olarak ayarlayın ve arama kutusuna "test" yazın. Ardından **yerel birim test projesini**seçin.
+      1. **Dosya** menüsünde **Yeni**  >  **Proje**' yi seçin. **Yeni Proje Ekle** iletişim kutusunda, **dili** C++ olarak ayarlayın ve arama kutusuna "test" yazın. Ardından **yerel birim test projesini** seçin.
 
       ::: moniker-end
 
@@ -102,7 +104,7 @@ Bu yaklaşım, testlerin dışarıya aktarılmamış üyeleri kullanmasına izin
 
   2. **Çözüm Gezgini**, test projesinin kısayol menüsünde **Özellikler**' i seçin.
 
-  3. **Yapılandırma özellikleri**  >  **bağlayıcı**  >  **Input**  >  **ek bağımlılıklar**gir ' i seçin.
+  3. **Yapılandırma özellikleri**  >  **bağlayıcı**  >  **Input**  >  **ek bağımlılıklar** gir ' i seçin.
 
        **Düzenle**' yi seçin ve **. obj** veya **. lib** dosyalarının adlarını ekleyin. Tam yol adlarını kullanmayın.
 
@@ -133,7 +135,7 @@ Bu yaklaşım, testlerin dışarıya aktarılmamış üyeleri kullanmasına izin
 
 2. C++ birim testi dosyası Ekle:
 
-   - **Çözüm Gezgini**, projenin kısayol menüsünde **Add**  >  **Yeni öğe**Ekle  >  **C++ birim testi**' ni seçin.
+   - **Çözüm Gezgini**, projenin kısayol menüsünde **Add**  >  **Yeni öğe** Ekle  >  **C++ birim testi**' ni seçin.
 
    [Birim testlerini yazmak](#addTests)için gidin.
 
@@ -167,7 +169,7 @@ Bu yaklaşım, testlerin dışarıya aktarılmamış üyeleri kullanmasına izin
 
 1. Tüm testleriniz pencerede görünmüyorsa, **Çözüm Gezgini** ' de düğümüne sağ tıklayıp **Derle** veya **yeniden oluştur**' u seçerek test projesi oluşturun.
 
-1. **Test Gezgini**Içinde **Tümünü Çalıştır**' ı seçin veya çalıştırmak istediğiniz belirli testleri seçin. Kesme noktaları etkinken hata ayıklama modunda çalıştırmak dahil diğer seçenekler için teste sağ tıklayın.
+1. **Test Gezgini** Içinde **Tümünü Çalıştır**' ı seçin veya çalıştırmak istediğiniz belirli testleri seçin. Kesme noktaları etkinken hata ayıklama modunda çalıştırmak dahil diğer seçenekler için teste sağ tıklayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

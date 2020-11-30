@@ -1,5 +1,7 @@
 ---
 title: Yük Testi Senaryosu Özellikleri
+description: Visual Studio 'daki yük testi senaryo özelliği ayarlarınızı, bu makaledeki çeşitli yük testi senaryosu özelliklerinden birine nasıl değiştireceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.assetid: 4414a638-1fa2-40ad-b1f4-b99f90b62e62
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: c2011438f1fcb0230cde0de527216456553e7c64
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 263a3a1f928fe42d1f5b910f82d0d4a6ea24412e
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75584445"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328814"
 ---
 # <a name="load-test-scenario-properties"></a>Yük testi senaryosu özellikleri
 
@@ -42,17 +44,17 @@ Yük testi gereksinimlerinizi karşılamak için Visual Studio 'daki yük testi 
 |Özellik|Tanım|
 |-|----------------|
 |**Kullanılacak Aracılar**|Yük testini uzaktan çalıştırıyorsanız, senaryonuzun kullanmasını istediğiniz aracıları belirtir. Örneğin, performans eğilimlerini analiz ettiğinizde tutarlılığı korumanız için belirli bir aracı kümesi belirtmek isteyebilirsiniz. Ayrıca, aracıların hangi betikler çalıştırdıkları ve aracının bulunduğu bir benzeşim olması için coğrafi olarak dağıtılmış olabilir.<br /><br />Aracıların virgülle ayrılması gerekir, örneğin "**Agent1, agent2, Agent3**". Özelliği boş bırakmak, senaryonun kullanılabilir tüm aracıları kullanması gerektiğini belirtir.<br /><br />Daha fazla bilgi için bkz. [nasıl yapılır: kullanılacak test aracılarını belirtme](../test/how-to-specify-test-agents-to-use-in-load-test-scenarios.md).|
-|**Ilerleme Gecikmesine Dağıtım Uygula**|Kullanıcı hız testi karıştırıcı modelinde tipik dağıtım gecikmeleri uygulamak istiyorsanız, belirtmek için kullanılan Boolean değeri. Bu özellik yalnızca **Test karışımı türü** özelliği **Kullanıcı adına göre**ayarlandıysa geçerlidir.<br /><br />Daha fazla bilgi için bkz [. nasıl yapılır: adım adım gecikmesine dağıtım uygulama](../test/how-to-apply-distribution-to-pacing-delay-when-using-a-user-pace-test-mix-model.md)|
+|**Ilerleme Gecikmesine Dağıtım Uygula**|Kullanıcı hız testi karıştırıcı modelinde tipik dağıtım gecikmeleri uygulamak istiyorsanız, belirtmek için kullanılan Boolean değeri. Bu özellik yalnızca **Test karışımı türü** özelliği **Kullanıcı adına göre** ayarlandıysa geçerlidir.<br /><br />Daha fazla bilgi için bkz [. nasıl yapılır: adım adım gecikmesine dağıtım uygulama](../test/how-to-apply-distribution-to-pacing-delay-when-using-a-user-pace-test-mix-model.md)|
 |**IP değiştirme**|IP geçişinin kullanıldığını belirtmek için kullanılan Boolean değeri.<br /><br />IP anahtarlama, bir test aracısının istekleri bir farklı IP adresi aralığı kullanarak sunucuya göndermesini sağlar. Bu, farklı istemci bilgisayarlardan gelen çağrıların benzetimini yapar. Yük dengeli bir Web grubuna karşı test ettiğinizde IP geçişi önemlidir. Çoğu yük dengeleyiciler, istemcinin IP adresini kullanarak bir istemciyle belirli bir Web sunucusu arasında benzeşim kurar. Tüm istekler tek bir istemciden geliyor gibi görünüyorsa, yük dengeleyici yükü dengeetmez. Web grubunda iyi yük dengelemesi elde etmek için isteklerin bir IP adresi aralığından gelmesi önemlidir.<br /><br />IP değiştirme yalnızca test aracısında kullanılabilir.|
 |**En yüksek test yinelemeleri**|Senaryoda çalıştırılacak en fazla test sayısını belirtmek için kullanılan sayısal değer. 0 değeri en fazla bir değer belirtir.<br /><br />Daha fazla bilgi için bkz. [senaryolar için test yinelemelerini yapılandırma](../test/configure-test-iterations-in-a-load-test-scenario.md).|
 |**Yeni Kullanıcı yüzdesi**|Senaryodaki yeni kullanıcıların veya ilk kez ziyaretçilerin yüzdesini belirten sayısal değer.<br /><br />Daha fazla bilgi için bkz. [nasıl yapılır: Web önbelleği verilerini kullanan sanal kullanıcıların yüzdesini belirtme](../test/how-to-specify-the-percentage-of-virtual-users-that-use-web-cache-data.md).|
-|**Düşünme profili**|Senaryonun **normal dağıtım**kullanıp kullanyacağını veya düşünme profilinin **Açık** veya **kapalı**olduğunu belirtir.<br /><br />Daha fazla bilgi için bkz. [Web sitesi insan etkileşimi gecikmelerini benzetmek için düşünme zamanlarını düzenleme](../test/edit-think-times-in-load-test-scenarios.md).|
+|**Düşünme profili**|Senaryonun **normal dağıtım** kullanıp kullanyacağını veya düşünme profilinin **Açık** veya **kapalı** olduğunu belirtir.<br /><br />Daha fazla bilgi için bkz. [Web sitesi insan etkileşimi gecikmelerini benzetmek için düşünme zamanlarını düzenleme](../test/edit-think-times-in-load-test-scenarios.md).|
 
 ## <a name="timing"></a>Zamanlama
 
 |Özellik|Tanım|
 |-|----------------|
-|**Gecikme başlangıç saati**|Yük testi başladıktan sonra senaryonun başlatılmasının kaç saat, dakika ve saniye gecikme süresini belirten bir zaman değeri. **Warmup özelliği sırasında devre dışı bırak** özelliği **true**olarak ayarlanırsa, beklenecek sürenin miktarı, ısınma döneminin tamamlanmasından sonra geçerli olur.<br /><br />Daha fazla bilgi için bkz. [senaryo başlangıç gecikmelerini yapılandırma](../test/configure-scenario-start-delays.md).|
+|**Gecikme başlangıç saati**|Yük testi başladıktan sonra senaryonun başlatılmasının kaç saat, dakika ve saniye gecikme süresini belirten bir zaman değeri. **Warmup özelliği sırasında devre dışı bırak** özelliği **true** olarak ayarlanırsa, beklenecek sürenin miktarı, ısınma döneminin tamamlanmasından sonra geçerli olur.<br /><br />Daha fazla bilgi için bkz. [senaryo başlangıç gecikmelerini yapılandırma](../test/configure-scenario-start-delays.md).|
 |**Warmup sırasında devre dışı bırak**|Senaryonun, yük testinin çalıştırma ayarında belirtilen **Isınma süresi** özelliği zaman değeri sırasında çalıştırılması ya da olmaması durumunda olup olmadığını belirtmek için kullanılan Boolean değeri.<br /><br />Yük testi çalıştırma ayarı özellikleri hakkında daha fazla bilgi için bkz. [Yük testi çalıştırma ayarları özellikleri](../test/load-test-run-settings-properties.md).<br /><br />Daha fazla bilgi için bkz. [senaryo başlangıç gecikmelerini yapılandırma](../test/configure-scenario-start-delays.md).|
 |**Test yinelemeleri arasındaki düşünme süreleri**|Test yinelemeleri arasında saniye cinsinden bekleme süresini belirtmek için kullanılan sayısal değer.<br /><br />Daha fazla bilgi için bkz. [Web sitesi insan etkileşimi gecikmelerini benzetmek için düşünme zamanlarını düzenleme](../test/edit-think-times-in-load-test-scenarios.md).|
 

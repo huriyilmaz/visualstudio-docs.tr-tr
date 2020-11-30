@@ -1,5 +1,7 @@
 ---
 title: Proje fabrikalarını kullanarak proje örnekleri oluşturma | Microsoft Docs
+description: Visual Studio tümleşik geliştirme ortamında (IDE) proje fabrikaları kullanarak proje sınıfı örnekleri oluşturmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +13,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 31ba5dd11af18f8a723b2271544eff2bd292e2e8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 59ad41bda80337fd0adc65d4792adbbbb1cf38f1
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80709056"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328606"
 ---
 # <a name="create-project-instances-by-using-project-factories"></a>Proje fabrikalarını kullanarak proje örnekleri oluşturma
 İçindeki proje türleri proje [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] nesneleri örnekleri oluşturmak için bir *proje fabrikası* kullanır. Proje fabrikası, cocreatable COM nesneleri için standart sınıf fabrikasına benzer. Ancak, proje nesneleri cocreatable değildir; Bunlar yalnızca bir proje fabrikası kullanılarak oluşturulabilirler.
 
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]IDE, bir kullanıcı var olan bir projeyi yüklediğinde veya içinde yeni bir proje oluşturduğunda VSPackage uygulamanızda uygulanan proje fabrikasını çağırır [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Yeni proje nesnesi, IDE 'yi **Çözüm Gezgini**doldurmak için yeterli bilgi sağlar. Yeni proje nesnesi, IDE tarafından başlatılan ilgili tüm Kullanıcı Arabirimi eylemlerini desteklemek için gereken arabirimleri de sağlar.
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]IDE, bir kullanıcı var olan bir projeyi yüklediğinde veya içinde yeni bir proje oluşturduğunda VSPackage uygulamanızda uygulanan proje fabrikasını çağırır [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Yeni proje nesnesi, IDE 'yi **Çözüm Gezgini** doldurmak için yeterli bilgi sağlar. Yeni proje nesnesi, IDE tarafından başlatılan ilgili tüm Kullanıcı Arabirimi eylemlerini desteklemek için gereken arabirimleri de sağlar.
 
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory>Arabirimini projenizdeki bir sınıfta uygulayabilirsiniz. Genellikle kendi modülünde bulunur.
 
@@ -38,7 +40,7 @@ ms.locfileid: "80709056"
 
    Proje türleri belirli bir dosya adı uzantısıyla ilişkilendirilir. Bir kullanıcı var olan bir proje dosyasını açmaya çalıştığında veya bir şablonu kopyalayarak yeni bir proje oluşturmaya çalışırsa, IDE ilgili proje GUID 'sini belirlemede dosyadaki uzantıyı kullanır.
 
-   IDE, yeni bir proje oluşturmak mı yoksa belirli bir türdeki mevcut bir projeyi açmak mı gerektiğini belirlediğinde, IDE, gerekli proje fabrikasını uygulayan VSPackage 'ı bulmak için **[HKEY_LOCAL_MACHINE \Software\Microsoft\VisualStudio\8.0\Projects]** altındaki sistem kayıt defteri bilgilerini kullanır. IDE bu VSPackage 'ı yükler. <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A>Yönteminde, VSPackage, yöntemini çağırarak, onun proje fabrikasını IDE ile kaydetmesi gerekir <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterProjectTypes.RegisterProjectType%2A> .
+   IDE, yeni bir proje oluşturmak mı yoksa belirli bir türdeki mevcut bir projeyi açmak mı gerektiğini belirlediğinde, IDE, gerekli proje fabrikasını uygulayan VSPackage 'ı bulmak için **[HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\8.0\Projects]** altındaki sistem kayıt defterindeki bilgileri kullanır. IDE bu VSPackage 'ı yükler. <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A>Yönteminde, VSPackage, yöntemini çağırarak, onun proje fabrikasını IDE ile kaydetmesi gerekir <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterProjectTypes.RegisterProjectType%2A> .
 
    Arabirimin birincil yöntemi, `IVsProjectFactory` <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory.CreateProject%2A> iki senaryoyu ele almalıdır: mevcut bir projeyi açma ve yeni bir proje oluşturma. Çoğu proje, proje durumlarını proje dosyasında depolar. Genellikle yeni projeler, yönteme geçirilen şablon dosyasının bir kopyası yapılarak `CreateProject` ve sonra kopyayı açarak oluşturulur. Mevcut projeler, doğrudan yöntemine geçirilen proje dosyası açılarak oluşturulur `CreateProject` . `CreateProject`Yöntemi, gerektiğinde kullanıcıya ek kullanıcı arabirimi özelliklerini görüntüleyebilir.
 

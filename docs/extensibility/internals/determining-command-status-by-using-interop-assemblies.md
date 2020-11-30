@@ -1,5 +1,7 @@
 ---
 title: Birlikte çalışma derlemelerini kullanarak komut durumunu belirleme | Microsoft Docs
+description: Microsoft. VisualStudio. OLE. Interop. IOleCommandTarget arabirimini kullanarak bir VSPackage içinde işlenen komutların durumunu belirlemeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,22 +13,22 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 52bea32997b083cd13349a37201411e357f94a90
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e46252cea550a2caaa81c92853220db4fa2b5b1a
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708708"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328385"
 ---
 # <a name="determine-command-status-by-using-interop-assemblies"></a>Birlikte çalışabilirlik derlemelerini kullanarak komut durumunu belirleme
-VSPackage, işleyebilmesi için komutların durumunu takip etmelidir. Ortam, VSPackage içinde işlenen bir komutun etkin veya devre dışı olacağını belirleyemiyor. Bu, ortama komut durumları hakkında bilgi vermek için VSPackage 'ın sorumluluğundadır. Örneğin, **Kes**, **Kopyala**ve **Yapıştır**gibi genel komutların durumu.
+VSPackage, işleyebilmesi için komutların durumunu takip etmelidir. Ortam, VSPackage içinde işlenen bir komutun etkin veya devre dışı olacağını belirleyemiyor. Bu, ortama komut durumları hakkında bilgi vermek için VSPackage 'ın sorumluluğundadır. Örneğin, **Kes**, **Kopyala** ve **Yapıştır** gibi genel komutların durumu.
 
 ## <a name="status-notification-sources"></a>Durum bildirim kaynakları
  Ortam, <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> arabirim uygulamanın VSPackage 'un bir parçası olan VSPackages ' yöntemi aracılığıyla komutlar hakkında bilgi alır <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> . Ortam, <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> iki koşulda VSPackage yöntemini çağırır:
 
 - Bir Kullanıcı ana menüyü veya bağlam menüsünü açtığında (sağ tıklanarak), ortam, durumlarını <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> belirlemede Bu menüdeki tüm komutlarda yöntemini yürütür.
 
-- VSPackage, ortamın geçerli kullanıcı arabirimini (UI) güncelleştirmesini istediğinde. Bu güncelleştirme, Standart araç çubuğunda **kesme**, **kopyalama**ve **Yapıştırma** gruplandırması gibi, kullanıcıya şu anda görünür olan ve bağlam ve kullanıcı eylemlerine yanıt olarak etkin ve devre dışı bırakılmış olan komutlar olarak oluşur.
+- VSPackage, ortamın geçerli kullanıcı arabirimini (UI) güncelleştirmesini istediğinde. Bu güncelleştirme, Standart araç çubuğunda **kesme**, **kopyalama** ve **Yapıştırma** gruplandırması gibi, kullanıcıya şu anda görünür olan ve bağlam ve kullanıcı eylemlerine yanıt olarak etkin ve devre dışı bırakılmış olan komutlar olarak oluşur.
 
   Kabuk birden çok VSPackages barındırdığından, her VSPackage 'ı yoklamak için komut durumunu belirlemede gerekliyse, kabuğun performansı kaçınılmaz. Bunun yerine, değişiklik sırasında kullanıcı arabirimi değiştiğinde VSPackage, ortamı etkin bir şekilde bilgilendirmelidir. Güncelleştirme bildirimi hakkında daha fazla bilgi için bkz. [Kullanıcı arabirimini güncelleştirme](../../extensibility/updating-the-user-interface.md).
 

@@ -1,5 +1,7 @@
 ---
 title: Özel Renklenebilir öğeler | Microsoft Docs
+description: Anahtar sözcükler ve açıklamalar gibi yazı tipi ve renkler iletişim kutusunda öğeleri geçersiz kılarak dil hizmetinin bir parçası olarak özel renklenebilir öğeler oluşturmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,18 +13,18 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: feecd9e8f8178045f66999b775e2d0792f50b288
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 648a8e45b5b472ccc1a37cd69e2043f0bb5b9aa3
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708990"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328541"
 ---
 # <a name="custom-colorable-items"></a>Özel renklenebilir öğeler
 Dil hizmetinizin bir parçası olarak özel renklenebilir öğeler uygulayarak, anahtar sözcükler ve açıklamalar gibi renklendirime için tür listesini geçersiz kılabilirsiniz.
 
 ## <a name="user-settings-of-colorable-items"></a>Renklenebilir öğelerin Kullanıcı ayarları
- **Araçlar** menüsünde **Seçenekler** ' i ve ardından **ortam**altında **yazı tipi ve renkler** ' i seçerek **yazı tipi ve renkler** iletişim kutusunu görüntüleyebilirsiniz. **Metin düzenleyici** veya **komut penceresi**gibi bir görüntü seçtiğinizde, **öğeleri görüntüle** liste kutusu bu ekran için renklenebilir tüm öğeleri gösterir. Renklenebilir her öğe için yazı tipi, boyut, ön plan rengi ve arka plan rengini görüntüleyebilir ve değiştirebilirsiniz. Seçimleriniz kayıt defterindeki bir önbellekte depolanır ve renklenebilir öğe adı tarafından erişilir.
+ **Araçlar** menüsünde **Seçenekler** ' i ve ardından **ortam** altında **yazı tipi ve renkler** ' i seçerek **yazı tipi ve renkler** iletişim kutusunu görüntüleyebilirsiniz. **Metin düzenleyici** veya **komut penceresi** gibi bir görüntü seçtiğinizde, **öğeleri görüntüle** liste kutusu bu ekran için renklenebilir tüm öğeleri gösterir. Renklenebilir her öğe için yazı tipi, boyut, ön plan rengi ve arka plan rengini görüntüleyebilir ve değiştirebilirsiniz. Seçimleriniz kayıt defterindeki bir önbellekte depolanır ve renklenebilir öğe adı tarafından erişilir.
 
 ## <a name="presentation-of-colorable-items"></a>Renklenebilir öğelerin sunumu
  IDE, **yazı tipi ve renkler** iletişim kutusunda renklenebilir öğelerin Kullanıcı geçersiz kılmalarını işlediği için, yalnızca bir özel renklenebilir öğeyi bir adla sağlamanız gerekir. Bu ad, **görüntüleme öğeleri** listesinde görünür. Renklenebilir öğeler alfabetik sırada görünür. Dil hizmetinizin özel renklenebilir öğelerini gruplandırmak için, her bir adı dil adınızla başlatabilir, örneğin **NewLanguage-Comment** ve **NewLanguage-anahtar sözcüğü**.
@@ -32,7 +34,7 @@ Dil hizmetinizin bir parçası olarak özel renklenebilir öğeler uygulayarak, 
 >
 > *C:\Program Files (x86) \Microsoft Visual Studio 14.0 \ VSSDK\VisualStudioIntegration\Tools\Bin*
 >
-> Önbelleği sıfırlamak için **CreateExpInstance/Reset**girin. **CreateExpInstance**hakkında daha fazla bilgi için bkz. [CreateExpInstance yardımcı programı](../../extensibility/internals/createexpinstance-utility.md).
+> Önbelleği sıfırlamak için **CreateExpInstance/Reset** girin. **CreateExpInstance** hakkında daha fazla bilgi için bkz. [CreateExpInstance yardımcı programı](../../extensibility/internals/createexpinstance-utility.md).
 
  Renklenebilir öğeler listenizdeki ilk öğeye hiçbir şekilde başvurulmuyor. İlk öğe, 0 renklenebilir bir öğe dizinine karşılık gelir ve [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Bu öğe için her zaman varsayılan metin renkleri ve özniteliklerini sağlar. Başvurulmayan bu öğeyle ilgilenmenin en kolay yolu, listenizde ilk öğe olarak yer tutucu renklenebilir bir öğe sağlamadır.
 

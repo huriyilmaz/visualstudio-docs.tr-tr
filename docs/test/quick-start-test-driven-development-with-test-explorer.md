@@ -1,5 +1,7 @@
 ---
 title: Test odaklı geliştirme Kılavuzu
+description: Microsoft Test çerçevesi kullanarak C# ' de test edilmiş bir yöntemi geliştirmeyi öğrenin ve bu, NUnit gibi diğer dillere veya test çerçevelerine kolayca uyum sağlayabilirsiniz.
+ms.custom: SEO-VS-2020
 ms.date: 07/24/2019
 ms.topic: conceptual
 ms.author: mikejo
@@ -7,24 +9,24 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: a264975014fea88126bbca0589fe037e629dae10
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 82cccbc47d26dd9ef74ee02931d6efb4bbfa0054
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75566286"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329165"
 ---
 # <a name="walkthrough-test-driven-development-using-test-explorer"></a>İzlenecek yol: test Gezginini kullanarak test odaklı geliştirme
 
-Artımlı kod değişiklikleri aracılığıyla kodunuzun düzgün çalışmasını sağlamaya yardımcı olmak için birim testleri oluşturun. Üçüncü taraflar tarafından geliştirilen bazıları dahil olmak üzere birim testlerini yazmak için kullanabileceğiniz çeşitli çerçeveler vardır. Bazı test çerçeveleri, farklı diller veya platformlarda test için özelleştirilmiştir. Test Gezgini, bu çerçevelerin herhangi birinde birim testleri için tek bir arabirim sağlar. **Test Gezgini**hakkında daha fazla bilgi için bkz. Test Gezgini ve [Test Gezgini](test-explorer-faq.md) [ile birim testleri çalıştırma](run-unit-tests-with-test-explorer.md) SSS.
+Artımlı kod değişiklikleri aracılığıyla kodunuzun düzgün çalışmasını sağlamaya yardımcı olmak için birim testleri oluşturun. Üçüncü taraflar tarafından geliştirilen bazıları dahil olmak üzere birim testlerini yazmak için kullanabileceğiniz çeşitli çerçeveler vardır. Bazı test çerçeveleri, farklı diller veya platformlarda test için özelleştirilmiştir. Test Gezgini, bu çerçevelerin herhangi birinde birim testleri için tek bir arabirim sağlar. **Test Gezgini** hakkında daha fazla bilgi için bkz. Test Gezgini ve [Test Gezgini](test-explorer-faq.md) [ile birim testleri çalıştırma](run-unit-tests-with-test-explorer.md) SSS.
 
 Bu izlenecek yol, Microsoft Test çerçevesi (MSTest) kullanarak C# ' de test edilmiş bir yöntemin nasıl geliştirileceğini göstermektedir. Diğer diller veya NUnit gibi diğer test çerçeveleri için kolayca uyum sağlayabilirsiniz. Daha fazla bilgi için bkz. [üçüncü taraf birim testi çerçevelerini yüklemeyi](install-third-party-unit-test-frameworks.md).
 
 ## <a name="create-a-test-and-generate-code"></a>Test oluşturma ve kod üretme
 
-1. C# **sınıf kitaplığı (.NET Standard)** projesi oluşturun. Bu proje, test etmek istediğimiz kodu içerecektir. Projeyi **MyMath**olarak adlandırın.
+1. C# **sınıf kitaplığı (.NET Standard)** projesi oluşturun. Bu proje, test etmek istediğimiz kodu içerecektir. Projeyi **MyMath** olarak adlandırın.
 
-2. Aynı çözümde yeni bir **MSTest test projesi (.NET Core)** projesi ekleyin. Test projesini **MathTests**olarak adlandırın.
+2. Aynı çözümde yeni bir **MSTest test projesi (.NET Core)** projesi ekleyin. Test projesini **MathTests** olarak adlandırın.
 
    ![Yeni kod ve test projeleri](../test/media/test-driven-development-ide.png)
 
@@ -87,7 +89,7 @@ Bu noktada, testin başarılı olması için değiştirebileceğiniz bir test ve
     }
     ```
 
-2. **Test Gezgini**Içinde **Tümünü Çalıştır**' ı seçin.
+2. **Test Gezgini** Içinde **Tümünü Çalıştır**' ı seçin.
 
    Çözüm oluşturulur ve test çalıştırmaları ve geçirir.
 
@@ -124,7 +126,7 @@ Kodun her durumda çalıştığından emin olmak için, daha geniş bir giriş d
     }
     ```
 
-2. **Test Gezgini**Içinde **Tümünü Çalıştır**' ı seçin.
+2. **Test Gezgini** Içinde **Tümünü Çalıştır**' ı seçin.
 
    Yeni test başarısız olur (ancak ilk test devam eder). Başarısızlık noktasını bulmak için, başarısız testi seçin ve ardından **Test ayrıntısı Özeti** bölmesindeki ayrıntılara bakın.
 
@@ -144,7 +146,7 @@ Kodun her durumda çalıştığından emin olmak için, daha geniş bir giriş d
     }
     ```
 
-4. **Test Gezgini**Içinde **Tümünü Çalıştır**' ı seçin.
+4. **Test Gezgini** Içinde **Tümünü Çalıştır**' ı seçin.
 
    Her iki test artık geçer.
 
@@ -169,11 +171,11 @@ Kodun her durumda çalıştığından emin olmak için, daha geniş bir giriş d
     }
     ```
 
-2. **Test Gezgini**Içinde **Tümünü Çalıştır**' ı seçin.
+2. **Test Gezgini** Içinde **Tümünü Çalıştır**' ı seçin.
 
    Test döngüleri altındaki yöntemi el ile iptal edilmesi gerekir.
 
-3. **Test Gezgini**araç çubuğunda **iptal** ' i seçin.
+3. **Test Gezgini** araç çubuğunda **iptal** ' i seçin.
 
    Test yürütmeyi durduruyor.
 
@@ -189,7 +191,7 @@ Kodun her durumda çalıştığından emin olmak için, daha geniş bir giriş d
         ...
     ```
 
-5. **Test Gezgini**Içinde **Tümünü Çalıştır**' ı seçin.
+5. **Test Gezgini** Içinde **Tümünü Çalıştır**' ı seçin.
 
    Tüm testler geçer.
 

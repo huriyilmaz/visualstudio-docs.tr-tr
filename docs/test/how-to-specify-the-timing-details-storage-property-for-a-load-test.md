@@ -1,5 +1,6 @@
 ---
 title: Zamanlama Ayrıntıları Depolama özelliği (yük testi çalıştırma ayarı)
+description: Çalışma ayarı için zamanlama ayrıntıları depolama özelliğini nasıl düzenleyeceğinizi öğrenin. Geçerli değerler yalnızca bireysel ayrıntılar, hiçbiri ve Istatistiklerdir.
 ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
@@ -10,16 +11,16 @@ ms.assetid: 867a9c21-0909-4963-bc02-d41e9393008c
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 132c55b4cd6f716d8983358064f749eabeb9ba88
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 94603c2da0eb339df52aa58e3b2bb5666b75ead7
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810568"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96330023"
 ---
 # <a name="how-to-specify-the-timing-details-storage-property-for-a-load-test-run-setting"></a>Nasıl yapılır: bir yük testi çalışma ayarı için zamanlama ayrıntıları depolama özelliğini belirtme
 
-**Yeni Yük Testi Sihirbazı**yük testinizi oluşturduktan sonra, ayarları test ihtiyaçlarını ve hedeflerinizi karşılayacak şekilde değiştirmek için **Yük Testi Düzenleyicisi** kullanabilirsiniz.
+**Yeni Yük Testi Sihirbazı** yük testinizi oluşturduktan sonra, ayarları test ihtiyaçlarını ve hedeflerinizi karşılayacak şekilde değiştirmek için **Yük Testi Düzenleyicisi** kullanabilirsiniz.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
@@ -36,11 +37,11 @@ ms.locfileid: "90810568"
 
   **Zamanlama Ayrıntıları Depolama özelliği için değerlendirmeler**
 
-  **Zamanlama Ayrıntıları Deposu** özelliği etkinleştirilmişse, yük testi sırasında her bir test, işlem ve sayfanın yürütülmesi için geçen süre, yük testi sonuçları deposunda depolanır. Bu, 90. ve 95. yüzdebirlik verilerinin **testler**, **işlemler**ve **Sayfalar** tablolarındaki **Yük Testi Çözümleyicisi** 'nde görüntülenmesini sağlar.
+  **Zamanlama Ayrıntıları Deposu** özelliği etkinleştirilmişse, yük testi sırasında her bir test, işlem ve sayfanın yürütülmesi için geçen süre, yük testi sonuçları deposunda depolanır. Bu, 90. ve 95. yüzdebirlik verilerinin **testler**, **işlemler** ve **Sayfalar** tablolarındaki **Yük Testi Çözümleyicisi** 'nde görüntülenmesini sağlar.
 
-  **Zamanlama Ayrıntıları Depolama** özelliği etkinleştirilmişse, değerini **StatisticsOnly** veya **allindividualdetails**olarak ayarlayarak, tüm bireysel testler, sayfalar ve işlemler zaman aşımına uğramıştır ve yüzdelik veriler bireysel zamanlama verilerinden hesaplanır. Aradaki fark, bir yüzdebirlik verileri hesaplandıktan sonra, bireysel zamanlama verilerinin depodan silindiği, **StatisticsOnly** seçeneğinin bulunduğu farktır. Bu, zamanlama ayrıntıları kullanıldığında depoda gereken alan miktarını azaltır. Bununla birlikte, zamanlama ayrıntı verilerini SQL araçlarını kullanarak başka yollarla işlemek isteyebilirsiniz, bu durumda **Allindividualdetails** seçeneği bu işlem için zamanlama ayrıntı verilerinin kullanılabilir olması için kullanılmalıdır. Ayrıca, özelliğini **Allindividualdetails**olarak ayarlarsanız, yük testi çalışmayı tamamladıktan sonra **Yük Testi Çözümleyicisi** 'Ndeki **Sanal Kullanıcı etkinliği grafiğini** kullanarak sanal kullanıcı etkinliğini çözümleyebilirsiniz. Daha fazla bilgi için bkz. [Ayrıntılar görünümündeki sanal kullanıcı etkinliğini çözümleme](../test/analyze-load-test-virtual-user-activity-in-the-details-view.md).
+  **Zamanlama Ayrıntıları Depolama** özelliği etkinleştirilmişse, değerini **StatisticsOnly** veya **allindividualdetails** olarak ayarlayarak, tüm bireysel testler, sayfalar ve işlemler zaman aşımına uğramıştır ve yüzdelik veriler bireysel zamanlama verilerinden hesaplanır. Aradaki fark, bir yüzdebirlik verileri hesaplandıktan sonra, bireysel zamanlama verilerinin depodan silindiği, **StatisticsOnly** seçeneğinin bulunduğu farktır. Bu, zamanlama ayrıntıları kullanıldığında depoda gereken alan miktarını azaltır. Bununla birlikte, zamanlama ayrıntı verilerini SQL araçlarını kullanarak başka yollarla işlemek isteyebilirsiniz, bu durumda **Allindividualdetails** seçeneği bu işlem için zamanlama ayrıntı verilerinin kullanılabilir olması için kullanılmalıdır. Ayrıca, özelliğini **Allindividualdetails** olarak ayarlarsanız, yük testi çalışmayı tamamladıktan sonra **Yük Testi Çözümleyicisi** 'Ndeki **Sanal Kullanıcı etkinliği grafiğini** kullanarak sanal kullanıcı etkinliğini çözümleyebilirsiniz. Daha fazla bilgi için bkz. [Ayrıntılar görünümündeki sanal kullanıcı etkinliğini çözümleme](../test/analyze-load-test-virtual-user-activity-in-the-details-view.md).
 
-  Zamanlama ayrıntıları verilerini depolamak için yük testi sonuçları deposunda gereken alan miktarı, özellikle daha uzun yük testleri için çok büyük olabilir. Ayrıca, bu verileri yük testinin sonundaki yük testi sonuçları deposunda depolama süresi daha uzundur, çünkü bu veriler yük testi yürütmeyi tamamlayana kadar yük testinin yürütülmesi bitene kadar, verilerin depoya depolandığı zaman. **Zamanlama Ayrıntıları Depolama** özelliği varsayılan olarak etkindir. Bu, test ortamınız için bir sorun ise, **zamanlama ayrıntıları depolamayı** **none**olarak ayarlamak isteyebilirsiniz.
+  Zamanlama ayrıntıları verilerini depolamak için yük testi sonuçları deposunda gereken alan miktarı, özellikle daha uzun yük testleri için çok büyük olabilir. Ayrıca, bu verileri yük testinin sonundaki yük testi sonuçları deposunda depolama süresi daha uzundur, çünkü bu veriler yük testi yürütmeyi tamamlayana kadar yük testinin yürütülmesi bitene kadar, verilerin depoya depolandığı zaman. **Zamanlama Ayrıntıları Depolama** özelliği varsayılan olarak etkindir. Bu, test ortamınız için bir sorun ise, **zamanlama ayrıntıları depolamayı** **none** olarak ayarlamak isteyebilirsiniz.
 
   Zamanlama ayrıntıları verileri çalıştırma sırasında *Loadtestemresults. dat* dosyasında depolanır ve yük testi tamamlandıktan sonra denetleyiciye geri gönderilir. Uzun süre çalışan bir yük testi için, dosyanın boyutu büyük olur. Aracı makinede yeterli disk alanı yoksa, bu bir sorun olacaktır.
 
@@ -58,7 +59,7 @@ ms.locfileid: "90810568"
 
 5. **Sonuçlar** kategorisi altında **Zamanlama Ayrıntıları Depolama** özelliğini seçin ve **Tüm Bireysel Ayrıntılar**' ı seçin.
 
-     **Zamanlama Ayrıntıları Depolaması** özelliği Için **Tüm Bireysel Ayrıntılar** ayarlarını yapılandırdıktan sonra, yük testinizi çalıştırabilir ve **Sanal Kullanıcı etkinliği grafiğini**görüntüleyebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: yük testi sırasında sanal kullanıcıların ne yaptığını çözümleme](../test/how-to-analyze-virtual-user-activity-during-a-load-test.md).
+     **Zamanlama Ayrıntıları Depolaması** özelliği Için **Tüm Bireysel Ayrıntılar** ayarlarını yapılandırdıktan sonra, yük testinizi çalıştırabilir ve **Sanal Kullanıcı etkinliği grafiğini** görüntüleyebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: yük testi sırasında sanal kullanıcıların ne yaptığını çözümleme](../test/how-to-analyze-virtual-user-activity-during-a-load-test.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

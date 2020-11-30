@@ -1,5 +1,7 @@
 ---
 title: Kod Kapsamı Sorunlarını Giderme
+description: Visual Studio 'Nun yerel ve yönetilen derlemeler için veri toplamasını beklediğinde hatalı boş sonuç iletilerini nasıl çözebileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 03/31/2020
 ms.topic: troubleshooting
 ms.author: mikejo
@@ -7,12 +9,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 39d5d54021e7b8286bd653941d233a73bcf8cfb4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7e960e0729e7d13b27d0c4fbda9b3f8eca0ac57c
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80528005"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96330127"
 ---
 # <a name="troubleshoot-code-coverage"></a>Kod kapsamı sorunlarını giderme
 
@@ -43,7 +45,7 @@ Analiz, &mdash; çıktı pencerenizi kontrol edin. **Çıktıyı göster** açı
 
 Açıklama &mdash; kod kapsamı analizi, testler çalışırken yapılır. Testler çalıştırıldığında sadece belleğe yüklenen derlemeleri içerir. Testlerin hiçbiri yürütülürse, kod kapsamı raporlamak için bir şey yoktur.
 
-&mdash;Test Gezgini 'nde çözüm, testlerin başarıyla çalıştığını doğrulamak Için **Tümünü Çalıştır** ' ı seçin. **Kod kapsamını çözümle**özelliğini kullanmadan önce tüm hataları düzeltin.
+&mdash;Test Gezgini 'nde çözüm, testlerin başarıyla çalıştığını doğrulamak Için **Tümünü Çalıştır** ' ı seçin. **Kod kapsamını çözümle** özelliğini kullanmadan önce tüm hataları düzeltin.
 
 ### <a name="youre-looking-at-a-previous-result"></a>Önceki sonuca bakıyorsunuz
 
@@ -61,15 +63,15 @@ Açıklama &mdash; kod kapsamı altyapısı, test çalıştırması sırasında 
 
 *. Pdb* dosyası *. dll* veya *. exe* dosyalarıyla aynı derlemeden oluşturulmalıdır.
 
-Çözüm &mdash; , derleme ayarlarınızın *. pdb* dosyasını oluşturmasını sağlayın. Proje oluşturulduğunda *. pdb* dosyaları güncellenmemişse, proje özelliklerini açın, **derleme** sayfasını seçin, **Gelişmiş**' i seçin ve **hata ayıklama bilgilerini**inceleyin.
+Çözüm &mdash; , derleme ayarlarınızın *. pdb* dosyasını oluşturmasını sağlayın. Proje oluşturulduğunda *. pdb* dosyaları güncellenmemişse, proje özelliklerini açın, **derleme** sayfasını seçin, **Gelişmiş**' i seçin ve **hata ayıklama bilgilerini** inceleyin.
 
-C++ projeleri için, oluşturulan. pdb dosyalarının tam hata ayıklama bilgilerine sahip olduğundan emin olun. Proje özelliklerini açın ve **bağlayıcı**hata  >  **ayıklama**  >  **hata ayıklama bilgileri oluştur** ' un, **Paylaşım ve yayımlama için iyileştirilmiş hata ayıklama bilgileri oluşturmak üzere ayarlandığını doğrulayın (/Debug: Full)**.
+C++ projeleri için, oluşturulan. pdb dosyalarının tam hata ayıklama bilgilerine sahip olduğundan emin olun. Proje özelliklerini açın ve **bağlayıcı** hata  >  **ayıklama**  >  **hata ayıklama bilgileri oluştur** ' un, **Paylaşım ve yayımlama için iyileştirilmiş hata ayıklama bilgileri oluşturmak üzere ayarlandığını doğrulayın (/Debug: Full)**.
 
 *. Pdb* ve *. dll* veya *. exe* dosyaları farklı yerlerde ise, *. pdb* dosyasını aynı dizine kopyalayın. Ayrıca, başka bir konumdaki *. pdb* dosyalarını aramak için kod kapsamı altyapısını yapılandırmak mümkündür. Daha fazla bilgi için bkz. [kod kapsamı analizini özelleştirme](../test/customizing-code-coverage-analysis.md).
 
 ### <a name="use-an-instrumented-or-optimized-binary"></a>Belgelenmiş veya iyileştirilmiş bir ikili kullanın
 
-Analiz &mdash; , ikili dosyanın profil temelli iyileştirme veya *vsinstr.exe* ya da *vsperfmon.exe*gibi bir profil oluşturma aracı tarafından işaretlenmiş gelişmiş iyileştirmede herhangi bir biçime sahip olup olmadığını belirleme.
+Analiz &mdash; , ikili dosyanın profil temelli iyileştirme veya *vsinstr.exe* ya da *vsperfmon.exe* gibi bir profil oluşturma aracı tarafından işaretlenmiş gelişmiş iyileştirmede herhangi bir biçime sahip olup olmadığını belirleme.
 
 Açıklama bir &mdash; derleme başka bir profil oluşturma aracı tarafından zaten belgelenmiş veya iyileştirilmişse, derleme kod kapsamı analizinden çıkarılır. Bu tür derlemelerde kod kapsamı Analizi gerçekleştirilemez.
 

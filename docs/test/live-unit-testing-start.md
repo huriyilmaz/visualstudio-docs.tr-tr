@@ -1,5 +1,7 @@
 ---
 title: Canlı birim testi ile kodunuzu test etme hakkında bilgi edinin
+description: .NET Standard hedefleyen ve test etmek üzere .NET Core ' u hedefleyen bir MSTest projesi oluşturan basit bir sınıf kitaplığı oluşturarak Live Unit Testing kullanmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 04/03/2020
 ms.topic: how-to
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: ef0fbd5c422d16df4e361ff95f4ac8deabdd5bae
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ce2376f2dc3cb6abeb11b328452defb891949558
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85287018"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329503"
 ---
 # <a name="get-started-with-live-unit-testing"></a>Live Unit Testing kullanmaya başlama
 
@@ -24,7 +26,7 @@ Live Unit Testing, .NET Framework ya da .NET Core ' u hedefleyen çözümleri te
 
 Tam C# çözümü, GitHub 'daki [microsoftdocs/VisualStudio-docs](https://github.com/MicrosoftDocs/visualstudio-docs/tree/master/docs/test/samples/csharp/UtilityLibraries/) deposundan indirilebilir.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Bu öğreticide, **.NET Core platformlar arası geliştirme** iş yüküne Visual Studio Enterprise Edition sürümünü yüklemiş olmanız gerekir.
 
@@ -34,9 +36,9 @@ Tek bir .NET Standard Class Library projesinden (StringLibrary) oluşan bir Visu
 
 Çözüm yalnızca bir veya daha fazla proje için bir kapsayıcıdır. Boş bir çözüm oluşturmak için Visual Studio 'Yu açın ve aşağıdakileri yapın:
 
-1. **File**  >  **New**  >  En üst düzey Visual Studio menüsünden dosya yeni**Proje** ' yi seçin.
+1. **File**  >  **New**  >  En üst düzey Visual Studio menüsünden dosya yeni **Proje** ' yi seçin.
 
-1. Şablon arama kutusuna **çözüm** yazın ve ardından **boş çözüm** şablonunu seçin. Projenin kullanımı **Tylibraries**olarak adlandırın.
+1. Şablon arama kutusuna **çözüm** yazın ve ardından **boş çözüm** şablonunu seçin. Projenin kullanımı **Tylibraries** olarak adlandırın.
 
    ::: moniker range="vs-2017"
 
@@ -48,7 +50,7 @@ Tek bir .NET Standard Class Library projesinden (StringLibrary) oluşan bir Visu
 
 Çözümü oluşturduğunuza göre, dizeler ile çalışmak için birkaç uzantı yöntemi içeren StringLibrary adlı bir sınıf kitaplığı oluşturacaksınız.
 
-1. **Çözüm Gezgini**, kullanımı uygun proje çözümüne sağ tıklayın ve **Add**  >  **Yeni proje**Ekle ' yi seçin.
+1. **Çözüm Gezgini**, kullanımı uygun proje çözümüne sağ tıklayın ve **Add**  >  **Yeni proje** Ekle ' yi seçin.
 
 ::: moniker range="vs-2017"
 
@@ -72,7 +74,7 @@ Tek bir .NET Standard Class Library projesinden (StringLibrary) oluşan bir Visu
    > [!NOTE]
    > Kitaplığımız belirli bir .NET uygulamasının yerine .NET Standard hedeflediğinden, bu .NET Standard sürümünü destekleyen herhangi bir .NET uygulamasından çağrılabilir. Daha fazla bilgi için bkz. [.NET Standard](/dotnet/standard/net-standard).
 
-3. Proje **StringLibrary**olarak adlandırın.
+3. Proje **StringLibrary** olarak adlandırın.
 
 4. Projeyi oluşturmak için **Oluştur** ' a tıklayın.
 
@@ -90,13 +92,13 @@ Tek bir .NET Standard Class Library projesinden (StringLibrary) oluşan bir Visu
 
    - `HasEmbeddedSpaces``true`bir dize gömülü bir boşluk karakteri içeriyorsa döndürür; Aksi takdirde, döndürür `false` .
 
-6. **Build**  >  Üst düzey Visual Studio menüsünden Build**Build Solution** öğesini seçin. Derleme başarılı olmalıdır.
+6. **Build**  >  Üst düzey Visual Studio menüsünden Build **Build Solution** öğesini seçin. Derleme başarılı olmalıdır.
 
 ## <a name="create-the-test-project"></a>Test projesi oluşturma
 
 Sonraki adım, StringLibrary kitaplığını test etmek için birim test projesi oluşturmaktır. Aşağıdaki adımları gerçekleştirerek birim testlerini oluşturun:
 
-1. **Çözüm Gezgini**, kullanımı uygun proje çözümüne sağ tıklayın ve **Add**  >  **Yeni proje**Ekle ' yi seçin.
+1. **Çözüm Gezgini**, kullanımı uygun proje çözümüne sağ tıklayın ve **Add**  >  **Yeni proje** Ekle ' yi seçin.
 
 ::: moniker range="vs-2017"
 
@@ -117,7 +119,7 @@ Sonraki adım, StringLibrary kitaplığını test etmek için birim test projesi
 
 2. Şablon arama kutusuna **birim testi** yazın ve **MSTest test projesi (.NET Core)** şablonunu seçin. **İleri**’ye tıklayın.
 
-3. Projeyi **Stringlibrarytests**olarak adlandırın.
+3. Projeyi **Stringlibrarytests** olarak adlandırın.
 
 4. Projeyi oluşturmak için **Oluştur** ' a tıklayın.
 
@@ -146,7 +148,7 @@ Sonraki adım, StringLibrary kitaplığını test etmek için birim test projesi
 
    ![UTF-8 kodlamasını seçme](media/lut-start/utf8-encoding.png)
 
-10. **Build**  >  Üst düzey Visual Studio menüsünden derleme**yeniden oluşturma çözümünü** seçerek birim testi projesini derleyin.
+10. **Build**  >  Üst düzey Visual Studio menüsünden derleme **yeniden oluşturma çözümünü** seçerek birim testi projesini derleyin.
 
 Bir sınıf kitaplığı ve bunun için bazı birim testlerini oluşturdunuz. Artık Live Unit Testing kullanmak için gereken başlangıç kuralları tamamladınız.
 
@@ -156,7 +158,7 @@ Bir sınıf kitaplığı ve bunun için bazı birim testlerini oluşturdunuz. Ar
 
 1. İsteğe bağlı olarak, StringLibrary kodunu içeren kod düzenleyici penceresini seçin. Bu, bir C# projesi için *Class1.cs* veya Visual Basic projesi için *Class1. vb* ' dir. (Bu adım, Live Unit Testing etkinleştirdikten sonra testlerinizin sonucunu ve kod kapsamınız kapsamını görsel olarak incelemenize olanak sağlar.)
 
-1. **Test**  >  **Live Unit Testing**  >  En üst düzey Visual Studio menüsünden test Live Unit Testing**Başlat** ' ı seçin.
+1. **Test**  >  **Live Unit Testing**  >  En üst düzey Visual Studio menüsünden test Live Unit Testing **Başlat** ' ı seçin.
 
 1. Visual Studio, tüm testlerinizi otomatik olarak çalıştıran canlı birim testi başlatır.
 
@@ -260,7 +262,7 @@ Bu bölümde, test başarısızlıklarını belirlemek, sorunlarını gidermek v
 
    **Oto** , `phrase` değişkenin değerinin "adı tdescription" olduğunu ve dizinin ikinci öğesi olduğunu unutmayın. Test yöntemi `HasEmbeddedSpaces` `true` Bu dizeyi geçtiğinde döndürülmesini bekler; bunun yerine, döndürür `false` . Daha açık bir şekilde, "\t", sekme karakterini gömülü bir boşluk olarak tanımaz.
 
-1. **Hata Ayıkla**  >  **devam et**' i seçin, **F5**tuşuna basın veya test programını yürütmeye devam etmek için araç çubuğundaki **devam** düğmesine tıklayın. İşlenmemiş bir özel durum oluştuğundan, test sonlanır.
+1. **Hata Ayıkla**  >  **devam et**' i seçin, **F5** tuşuna basın veya test programını yürütmeye devam etmek için araç çubuğundaki **devam** düğmesine tıklayın. İşlenmemiş bir özel durum oluştuğundan, test sonlanır.
 Bu, hatanın ön araştırması için yeterli bilgi sağlar. `TestHasEmbeddedSpaces`(Test yordamı) yanlış bir varsayım yaptı ya da `HasEmbeddedSpaces` gömülü tüm boşlukları doğru bir şekilde tanımıyor.
 
 1. Sorunu tanılamak ve düzeltmek için `StringLibrary.HasEmbeddedSpaces` yöntemiyle başlayın. Yöntemindeki karşılaştırmaya bakın `HasEmbeddedSpaces` . Bir katıştırılmış alanı U + 0020 olarak değerlendirir. Ancak, Unicode standart birkaç boşluk karakteri içerir. Bu, kitaplık kodunun bir boşluk karakteri için yanlış test edilmiş olduğunu önerir.

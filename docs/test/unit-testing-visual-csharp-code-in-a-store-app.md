@@ -1,5 +1,7 @@
 ---
 title: Birim testi Visual C# kodu
+description: UWP uygulamasında bir C# sınıfı için birim testleri oluşturmayı öğrenin. Bu makalede, test odaklı geliştirme gösterilmektedir.
+ms.custom: SEO-VS-2020
 ms.date: 09/27/2019
 ms.topic: conceptual
 ms.author: mikejo
@@ -7,12 +9,12 @@ author: mikejo5000
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 31fbbfaa5d16dd51776f592b89a7846936b3013f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 410d5dfefa5980bceabff99d66067987b390a615
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75590871"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96330088"
 ---
 # <a name="unit-test-c-code"></a>C# birim testi sınıfı
 
@@ -20,7 +22,7 @@ Bu makalede, UWP uygulamasında bir C# sınıfı için birim testleri oluşturma
 
 Test altındaki sınıf olan **Rooter** sınıfı, belirli bir sayının kare kökünü tahmin eden bir işlevi uygular.
 
-Bu makalede, *test odaklı geliştirme*gösterilmektedir. Bu yaklaşımda, öncelikle test ettiğiniz sistemde belirli bir davranışı doğrulayan bir test yazar ve ardından testi geçiren kodu yazarsınız.
+Bu makalede, *test odaklı geliştirme* gösterilmektedir. Bu yaklaşımda, öncelikle test ettiğiniz sistemde belirli bir davranışı doğrulayan bir test yazar ve ardından testi geçiren kodu yazarsınız.
 
 ## <a name="create-the-solution-and-the-unit-test-project"></a>Çözüm ve birim testi projesi oluşturma
 
@@ -28,13 +30,13 @@ Bu makalede, *test odaklı geliştirme*gösterilmektedir. Bu yaklaşımda, önce
 
 2. **Boş uygulama (Evrensel Windows)** proje şablonunu arayın ve seçin.
 
-3. Projeyi **Maaltı**olarak adlandırın.
+3. Projeyi **Maaltı** olarak adlandırın.
 
-4. **Çözüm Gezgini**, çözüme sağ tıklayın ve **Add**  >  **Yeni proje**Ekle ' yi seçin.
+4. **Çözüm Gezgini**, çözüme sağ tıklayın ve **Add**  >  **Yeni proje** Ekle ' yi seçin.
 
 5. **Birim testi uygulaması (Evrensel Windows)** proje şablonunu arayın ve seçin.
 
-6. Test projesi kökü \ **tertest**adını adlandırın.
+6. Test projesi kökü \ **tertest** adını adlandırın.
 
 ## <a name="verify-that-the-tests-run-in-test-explorer"></a>Test Gezgini 'nde testlerin çalıştırıldığını doğrulama
 
@@ -52,7 +54,7 @@ Bu makalede, *test odaklı geliştirme*gösterilmektedir. Bu yaklaşımda, önce
 
 ::: moniker range="vs-2017"
 
-2. **Test** menüsünde **Run** > **tüm testleri**Çalıştır ' ı seçin.
+2. **Test** menüsünde **Run** > **tüm testleri** Çalıştır ' ı seçin.
 
 ::: moniker-end
 
@@ -62,13 +64,13 @@ Bu makalede, *test odaklı geliştirme*gösterilmektedir. Bu yaklaşımda, önce
 
 ::: moniker-end
 
-   Test projesi oluşturulup çalışır. Biraz uzun sürebileceğinden sabırlı olun. **Test Gezgini** penceresi görünür ve test **geçilen testler**altında listelenir. Pencerenin alt kısmındaki **Özet** bölmesi, seçilen test hakkında ek ayrıntılar sağlar.
+   Test projesi oluşturulup çalışır. Biraz uzun sürebileceğinden sabırlı olun. **Test Gezgini** penceresi görünür ve test **geçilen testler** altında listelenir. Pencerenin alt kısmındaki **Özet** bölmesi, seçilen test hakkında ek ayrıntılar sağlar.
 
 ## <a name="add-the-rooter-class-to-the-maths-project"></a>Rooter sınıfını Maon projesine ekleyin
 
 1. **Çözüm Gezgini**, **maaltı** projeye sağ tıklayın ve ardından sınıf **Ekle**' yi seçin  >  **Class**.
 
-2. Sınıf dosyasını *Rooter.cs*olarak adlandırın.
+2. Sınıf dosyasını *Rooter.cs* olarak adlandırın.
 
 3. Aşağıdaki kodu **Rooter** sınıfı *Rooter.cs* dosyasına ekleyin:
 
@@ -112,7 +114,7 @@ Bu makalede, *test odaklı geliştirme*gösterilmektedir. Bu yaklaşımda, önce
        using Maths;
        ```
 
-3. **Rooter** işlevini kullanan bir test ekleyin. Aşağıdaki kodu *UnitTest.cs*öğesine ekleyin:
+3. **Rooter** işlevini kullanan bir test ekleyin. Aşağıdaki kodu *UnitTest.cs* öğesine ekleyin:
 
    ```csharp
    [TestMethod]
@@ -132,7 +134,7 @@ Bu makalede, *test odaklı geliştirme*gösterilmektedir. Bu yaklaşımda, önce
 
 ::: moniker range="vs-2017"
 
-6. **Test Gezgini**Içinde **Tümünü Çalıştır**' ı seçin.
+6. **Test Gezgini** Içinde **Tümünü Çalıştır**' ı seçin.
 
    Çözüm oluşturulur ve testler çalışır ve geçer.
 
@@ -154,7 +156,7 @@ Test ve uygulama projelerini ayarlamış ve uygulama projesindeki işlevleri ça
 
 ## <a name="iteratively-augment-the-tests-and-make-them-pass"></a>Testleri tekrarlayarak ve geçiş yapın
 
-1. **Rangetest**adlı yeni bir test ekleyin:
+1. **Rangetest** adlı yeni bir test ekleyin:
 
    ```csharp
    [TestMethod]
@@ -200,7 +202,7 @@ Test ve uygulama projelerini ayarlamış ve uygulama projesindeki işlevleri ça
 
 ::: moniker range="vs-2017"
 
-4. **Test Gezgini**Içinde **Tümünü Çalıştır**' ı seçin.
+4. **Test Gezgini** Içinde **Tümünü Çalıştır**' ı seçin.
 
 ::: moniker-end
 

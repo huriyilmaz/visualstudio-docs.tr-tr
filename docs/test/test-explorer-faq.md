@@ -1,5 +1,7 @@
 ---
 title: Test Gezgini Hakkında SSS
+description: Visual Studio Test Gezgini hakkında, yaygın olarak karşılaşılan bazı sorunları içeren bu sık sorulan sorulara bakın.
+ms.custom: SEO-VS-2020
 ms.date: 06/25/2020
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +16,12 @@ ms.workload:
 - multiple
 author: kendrahavens
 manager: jillfra
-ms.openlocfilehash: 5d0e98c3201d1e0e58ee972ad38c3a49bc9555de
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: ef6c6bf3cedcccd156e7ae9ae02c2e5f70805521
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037035"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96330179"
 ---
 # <a name="visual-studio-test-explorer-faq"></a>Visual Studio Test Gezgini hakkında SSS
 
@@ -31,7 +33,7 @@ ms.locfileid: "90037035"
 Derleme tabanlı bulma çalıştırmak için projenizi derleyin.
 ::: moniker-end
 ::: moniker range="vs-2017"
-Projenizi derleyin ve **Araçlar** > **Seçenekler** > **testinde**derleme tabanlı bulmanın açık olduğundan emin olun.
+Projenizi derleyin ve **Araçlar** > **Seçenekler** > **testinde** derleme tabanlı bulmanın açık olduğundan emin olun.
 ::: moniker-end
 Gerçek zamanlı test bulma, kaynak tabanlı test [bulgusunu](https://devblogs.microsoft.com/dotnet/real-time-test-discovery/) . Çalışma zamanında tanımlandıklarından, bu, özel bağdaştırıcılar, özel nitelikler, `#ifdef` deyimler ve daha fazlasını kullanan testleri bulamaz. Bu testlerin doğru şekilde bulunması için bir derleme gereklidir. Visual Studio 2017 sürüm 15,6 ve üzeri sürümlerde, derleme tabanlı bulma (geleneksel Discoverer) yalnızca derlemeler sonrasında çalışır. Bu ayar, gerçek zamanlı test bulmanın, düzenlemekte olduğunuz kadar çok test bulduğu ve derleme tabanlı bulma, dinamik olarak tanımlanan testlerin bir derlemeden sonra görünmesine izin veriyor demektir. Gerçek zamanlı test bulma, yanıt hızını iyileştirir, ancak yine de bir derlemeden sonra tam ve kesin sonuçlar almanızı sağlar.
 
@@ -115,7 +117,7 @@ Test bağdaştırıcısı uzantılarını kullanmak yerine, projelerin test bağ
 
 ::: moniker range="vs-2017"
 > [!NOTE]
-> NUnit 2 test bağdaştırıcısı kullanıyorsanız ve NUnit 3 test bağdaştırıcısına geçiş yapamıyor, bu yeni keşif davranışını **Araçlar**  >  **Seçenekler**  >  **testinde**Visual Studio sürüm 15,8 ' de devre dışı bırakabilirsiniz.
+> NUnit 2 test bağdaştırıcısı kullanıyorsanız ve NUnit 3 test bağdaştırıcısına geçiş yapamıyor, bu yeni keşif davranışını **Araçlar**  >  **Seçenekler**  >  **testinde** Visual Studio sürüm 15,8 ' de devre dışı bırakabilirsiniz.
 
 ![Araç seçeneklerinde test Gezgini bağdaştırıcı davranışı](media/testex-adapterbehavior.png)
 ::: moniker-end
@@ -124,7 +126,7 @@ Test bağdaştırıcısı uzantılarını kullanmak yerine, projelerin test bağ
 
 **UWP testleriniz artık Visual Studio 2017 sürüm 15,7 ve sonrasında yürütülmiyor.**
 
-Son UWP test projeleri, test uygulamalarını tanımlamaya yönelik daha iyi performansa izin veren bir test platformu derleme özelliği belirtir. Visual Studio sürüm 15,7 ' den önce başlatılmış bir UWP test projenize sahipseniz, **Çıkış**  >  **testlerinde**bu hatayı görebilirsiniz:
+Son UWP test projeleri, test uygulamalarını tanımlamaya yönelik daha iyi performansa izin veren bir test platformu derleme özelliği belirtir. Visual Studio sürüm 15,7 ' den önce başlatılmış bir UWP test projenize sahipseniz, **Çıkış**  >  **testlerinde** bu hatayı görebilirsiniz:
 
 **System. AggregateException: bir veya daha fazla hata oluştu. System. InvalidOperationException >---: Şu TestContainer, {} Microsoft. VisualStudio. TestWindow. Controller. TestContainerProvider \<GetTestContainerAsync> D__61. MoveNext () konumunda bulunamadı**
 

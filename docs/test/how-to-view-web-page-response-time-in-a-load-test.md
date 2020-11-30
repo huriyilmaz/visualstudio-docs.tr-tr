@@ -1,5 +1,7 @@
 ---
 title: Yük testinde sayfa yanıt süresi
+description: Bir Web sayfasının yüklenmesi için gereken süre yanıt süresidir. Web performans testinizde her bir Web sayfası isteği için bir yanıt süresi hedefi ayarlamayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,16 +12,16 @@ ms.assetid: e61c49f3-3161-45b1-9220-08b5459065a2
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 1affda002290a191fde6d5115094a2185ac8bfcb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a20e8dc21e2ff5d76ea582b6ea3a9a0e36f7ed74
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85287057"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328658"
 ---
 # <a name="how-to-view-web-page-response-time-in-a-load-test-using-the-load-test-analyzer"></a>Nasıl yapılır: Yük Testi Çözümleyicisini kullanarak yük testinde Web sayfası yanıt süresini görüntüleme
 
-Her Web sayfasının yüklenmesi için gereken süre *yanıt süresi*olarak bilinir. Web performans testi oluşturduğunuzda, Web performans testinizde her bir Web sayfası isteği için bir yanıt süresi hedefi ayarlayabilirsiniz.
+Her Web sayfasının yüklenmesi için gereken süre *yanıt süresi* olarak bilinir. Web performans testi oluşturduğunuzda, Web performans testinizde her bir Web sayfası isteği için bir yanıt süresi hedefi ayarlayabilirsiniz.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
@@ -56,7 +58,7 @@ Web performans testinizi yük testinde stres altında çalıştırırsanız, her
    |**%90**|Yanıt süresi için 90. yüzdebirlik. Bu, sayfaların %90 ' unun bu sayıdan daha hızlı yanıt verdiğini ve sayfaların %10 ' unun daha yavaş yanıt verdiğini gösterir.<br /><br /> Varsayılan olarak, bu veriler toplanmaz. Bu verileri toplamak için, **Yük Testi Düzenleyicisi**, **çalışma ayarları** düğümü altında, değiştirilecek çalışma ayarı düğümünü seçin. **Özellikler** penceresinde, **Zamanlama Ayrıntıları Deposu** özelliği Için, **alllindividualdetails**' i seçin.|
    |**%95**|Yanıt süresi için 95. yüzdebirlik. Bu, sayfaların %95 ' unun bu sayıdan daha hızlı yanıt verdiğini ve sayfaların %5 ' unun daha yavaş yanıt verdiğini gösterir.|
    |**%99**|Yanıt süresi için 99. yüzdebirlik. Bu, sayfaların %99 ' unun bu sayıdan daha hızlı yanıt verdiğini ve sayfaların %1 ' unun daha yavaş yanıt verdiğini gösterir.<br /><br /> Varsayılan olarak, bu veriler toplanmaz. Bu verileri toplamak için, **Yük Testi Düzenleyicisi**, **çalışma ayarları** düğümü altında, değiştirilecek çalışma ayarı düğümünü seçin. **Özellikler** penceresinde, **Zamanlama Ayrıntıları Deposu** özelliği Için, **alllindividualdetails**' i seçin.|
-   |**Biçimlendir**|En fazla sayfa yanıt süresi.<br /><br /> Varsayılan olarak, bu veriler toplanmaz. Bu verileri toplamak için, **Yük Testi Düzenleyicisi**, **çalışma ayarları** düğümü altında, değiştirilecek çalışma ayarı düğümünü seçin. **Özellikler** penceresinde, **Zamanlama Ayrıntıları Deposu** özelliği Için, **alllindividualdetails**' i seçin.|
+   |**Maks**|En fazla sayfa yanıt süresi.<br /><br /> Varsayılan olarak, bu veriler toplanmaz. Bu verileri toplamak için, **Yük Testi Düzenleyicisi**, **çalışma ayarları** düğümü altında, değiştirilecek çalışma ayarı düğümünü seçin. **Özellikler** penceresinde, **Zamanlama Ayrıntıları Deposu** özelliği Için, **alllindividualdetails**' i seçin.|
    |**STD dev**|Varsayılan olarak, standart sapma verileri toplanmaz. Bu verileri toplamak için, **Yük Testi Düzenleyicisi**, **çalışma ayarları** düğümü altında, değiştirilecek çalışma ayarı düğümünü seçin. **Özellikler** penceresinde, **Zamanlama Ayrıntıları Deposu** özelliği Için, **alllindividualdetails**' i seçin.|
    |**Sayfa saati**|Web sayfası için yapılan tüm isteklere yönelik ortalama yanıt süresi.|
    |**Hedef**|Sayfa saati hedefi. Bu sayfa için sabit bir değerdir. **Note:**  Sayfa saati hedefi yalnızca hedef, Web performans testinde istek için tanımlandığında görüntülenir.|
@@ -76,7 +78,7 @@ Yanıt süresi verilerini bir grafikte görüntülemek için:
 
 3. İlgilendiğiniz Web performans testinin düğümünü genişletin.
 
-4. Düğüm **sayfalarını**genişletin.
+4. Düğüm **sayfalarını** genişletin.
 
 5. İlgilendiğiniz sayfanın düğümünü genişletin.
 
@@ -84,7 +86,7 @@ Yanıt süresi verilerini bir grafikte görüntülemek için:
 
     Veriler grafiğe eklenir.
 
-7. Seçim **Ortalama sayfa zamanı**, **sayfa yanıt süresi hedefi**ve **Toplam sayfa**için önceki adımı tekrarlayın.
+7. Seçim **Ortalama sayfa zamanı**, **sayfa yanıt süresi hedefi** ve **Toplam sayfa** için önceki adımı tekrarlayın.
 
    > [!NOTE]
    > **Sayfa yanıt süresi hedefi** sabittir.

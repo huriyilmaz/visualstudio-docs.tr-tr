@@ -1,5 +1,7 @@
 ---
 title: Microsoft Fakes ile Test Edilen Kodu Yalıtma
+description: Microsoft Fakes 'in, uygulamanın diğer bölümlerini saplamalar veya parçalar ile değiştirerek test ettiğiniz kodu yalıtmanıza nasıl yardımcı olduğunu öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 06/03/2020
 ms.topic: how-to
 ms.author: mikejo
@@ -10,12 +12,12 @@ author: mikejo5000
 dev_langs:
 - VB
 - CSharp
-ms.openlocfilehash: e837b1a0e9a1d8fe06342352e4eedf5ce0fa9117
-ms.sourcegitcommit: f2bb3286028546cbd7f54863b3156bd3d65c55c4
+ms.openlocfilehash: aa1f0505d37059ce65da80fcf483473610cf2f6d
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93325958"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329542"
 ---
 # <a name="isolate-code-under-test-with-microsoft-fakes"></a>Microsoft Fakes ile test edilen kodu yalıtma
 
@@ -83,15 +85,15 @@ Daha ayrıntılı bir açıklama için, [birim testi için uygulamanızın parç
 
 2. **Fakes derlemesi Ekle**
 
-   1. **Çözüm Gezgini** , 
+   1. **Çözüm Gezgini**, 
        - Daha eski bir .NET Framework projesi (SDK olmayan stil) için, birim testi projenizin **Başvurular** düğümünü genişletin.
        ::: moniker range=">=vs-2019"
-       - .NET Framework veya .NET Core 'u hedefleyen SDK stili bir proje için, **derlemeler** , **Projeler** veya **paketler** altında taklit etmek istediğiniz derlemeyi bulmak için **Bağımlılıklar** düğümünü genişletin.
+       - .NET Framework veya .NET Core 'u hedefleyen SDK stili bir proje için, **derlemeler**, **Projeler** veya **paketler** altında taklit etmek istediğiniz derlemeyi bulmak için **Bağımlılıklar** düğümünü genişletin.
        ::: moniker-end
        - Visual Basic ' de çalışıyorsanız, **Başvurular** düğümünü görmek için **Çözüm Gezgini** araç çubuğunda **tüm dosyaları göster** ' i seçin.
-   2. Dolgu oluşturmak istediğiniz sınıf tanımlarını içeren derlemeyi seçin. Örneğin, **TarihSaat** dolgusu istiyorsanız **System.dll** ' yi seçin.
+   2. Dolgu oluşturmak istediğiniz sınıf tanımlarını içeren derlemeyi seçin. Örneğin, **TarihSaat** dolgusu istiyorsanız **System.dll**' yi seçin.
 
-   3. Kısayol menüsünde **Fakes derlemesi Ekle** ' yi seçin.
+   3. Kısayol menüsünde **Fakes derlemesi Ekle**' yi seçin.
 
 3. Testlerinizde saptama örnekleri oluşturun ve yöntemleri için kod sağlayın:
 
@@ -174,9 +176,9 @@ Dolgu kullanmak için uygulama kodunu değiştirmeniz veya belirli bir şekilde 
 
 1. **Fakes derlemesi Ekle**
 
-     **Çözüm Gezgini** , birim testi projenizin başvurularını açın ve taklit etmek istediğiniz yöntemi içeren derlemenin başvurusunu seçin. Bu örnekte, `DateTime` sınıfı *System.dll*.  Visual Basic projesindeki başvuruları görmek için **tüm dosyaları göster** ' i seçin.
+     **Çözüm Gezgini**, birim testi projenizin başvurularını açın ve taklit etmek istediğiniz yöntemi içeren derlemenin başvurusunu seçin. Bu örnekte, `DateTime` sınıfı *System.dll*.  Visual Basic projesindeki başvuruları görmek için **tüm dosyaları göster**' i seçin.
 
-     **Fakes derlemesi Ekle** ' yi seçin.
+     **Fakes derlemesi Ekle**' yi seçin.
 
 2. **ShimsContext içine dolgu ekleme**
 

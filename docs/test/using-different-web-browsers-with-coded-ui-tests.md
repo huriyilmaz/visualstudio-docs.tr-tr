@@ -1,5 +1,7 @@
 ---
 title: Kodlanmış UI Testleriyle Farklı Web Tarayıcıları Kullanma
+description: Testinizi özelleştirmeyi ve Web uygulamalarınız için farklı tarayıcılar kullanarak geri yürütmenizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.author: mikejo
@@ -7,12 +9,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 507da254d108ddc31f2b1c9fdf7f393d42934f2a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6baddaeac3fdea3d27f60722e728df209bfd768d
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85289332"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96330036"
 ---
 # <a name="use-different-web-browsers-with-coded-ui-tests"></a>Kodlanmış UI Testleriyle farklı Web tarayıcıları kullanma
 
@@ -43,11 +45,11 @@ Kodlanmış UI testleri, web uygulamaları için Internet Explorer'ı kullanarak
 > [!NOTE]
 > Google Chrome veya Mozilla Firefox tarayıcısı kullanarak kodlanmış UI testleri kaydedemezsiniz.
 
-**Internet Explorer ile kayıttan Çal:** Açık bir tarayıcı belirtilmediğinde, testler varsayılan olarak Internet Explorer 'da çalışır. Test kodunuzda **BrowserWindow. CurrentBrowser** özelliğini ayarlayarak kullanılacak tarayıcıyı açıkça sağlayabilirsiniz. Internet Explorer için bu özellik **IE** veya **Internet Explorer**olarak ayarlanmalıdır.
+**Internet Explorer ile kayıttan Çal:** Açık bir tarayıcı belirtilmediğinde, testler varsayılan olarak Internet Explorer 'da çalışır. Test kodunuzda **BrowserWindow. CurrentBrowser** özelliğini ayarlayarak kullanılacak tarayıcıyı açıkça sağlayabilirsiniz. Internet Explorer için bu özellik **IE** veya **Internet Explorer** olarak ayarlanmalıdır.
 
-**Internet Explorer olmayan Web tarayıcıları ile kayıttan yürütme:** Internet Explorer olmayan Web tarayıcılarında yeniden oynatmak için, test kodunuzda BrowserWindow. CurrentBrowser özelliğini **Firefox** veya **Chrome**olarak değiştirin.
+**Internet Explorer olmayan Web tarayıcıları ile kayıttan yürütme:** Internet Explorer olmayan Web tarayıcılarında yeniden oynatmak için, test kodunuzda BrowserWindow. CurrentBrowser özelliğini **Firefox** veya **Chrome** olarak değiştirin.
 
-IE olmayan Web tarayıcılarındaki testleri kayıttan yürütmek için, **KODLANMıŞ UI çapraz tarayıcı testi Için Selenium bileşenlerini**yüklemelisiniz.
+IE olmayan Web tarayıcılarındaki testleri kayıttan yürütmek için, **KODLANMıŞ UI çapraz tarayıcı testi Için Selenium bileşenlerini** yüklemelisiniz.
 
 ### <a name="install-selenium-components"></a>Selenium bileşenlerini yükler
 
@@ -88,7 +90,7 @@ Web uygulamanızda hata ayıklamayı etkinleştirmek için aşağıdaki yapılan
 
     1. **Hata Ayıkla** menüsünde **özel durumlar**' ı seçin.
 
-    2. **Ortak dil çalışma zamanı özel durumları**Için, **Kullanıcı tarafından işlenmeyen**onay işaretini kaldırın.
+    2. **Ortak dil çalışma zamanı özel durumları** Için, **Kullanıcı tarafından işlenmeyen** onay işaretini kaldırın.
 
 `BrowserWindow.CurrentBrowser`KODLANMıŞ UI testinde değiştirme seçeneğini görmüyorsanız, Visual Studio 'nun çeşitli web tarayıcıları kullanılarak KODLANMıŞ UI testlerini desteklemeyen bir sürümünü kullanıyor olabilirsiniz. Bu tür kodlanmış UI testlerini kullanmak için Visual Studio Enterprise sürümünü kullanmanız gerekir.
 

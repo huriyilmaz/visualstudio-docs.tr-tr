@@ -1,5 +1,6 @@
 ---
 title: Yük testi çalışma ayarında yineleme sayısını belirtin
+description: Yük Testi Düzenleyicisi kullanarak bir yük testinde tüm senaryolarda tüm Web performansı ve birim testlerinde çalıştırılacak yineleme sayısını belirtmeyi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
@@ -10,18 +11,18 @@ ms.assetid: 45a625db-b3e7-4d64-beda-b9a76248096d
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: fbca5bcaabbfbf87108fb057280d070006ddd718
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 754a5ad7612f6abbea52ea9d4bb4cb1d159f6dac
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810607"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328307"
 ---
 # <a name="how-to-specify-the-number-of-test-iterations-in-a-load-test-run-setting"></a>Nasıl yapılır: bir yük testi çalışma ayarında test yineleme sayısını belirtme
 
-**Yeni Yük Testi Sihirbazı**yük testinizi oluşturduktan sonra, test ihtiyaçlarını ve hedeflerinizi karşılamak üzere senaryolar özelliklerini değiştirmek için **Yük Testi Düzenleyicisi** kullanabilirsiniz. Daha fazla bilgi için bkz. [Izlenecek yol: yük testi oluşturma ve çalıştırma](../test/walkthrough-create-and-run-a-load-test.md).
+**Yeni Yük Testi Sihirbazı** yük testinizi oluşturduktan sonra, test ihtiyaçlarını ve hedeflerinizi karşılamak üzere senaryolar özelliklerini değiştirmek için **Yük Testi Düzenleyicisi** kullanabilirsiniz. Daha fazla bilgi için bkz. [Izlenecek yol: yük testi oluşturma ve çalıştırma](../test/walkthrough-create-and-run-a-load-test.md).
 
-**Yük Testi Düzenleyicisi**kullanarak, **Özellikler** penceresinde bir çalışma ayarları değerinin **test yinelemeleri** özelliğini düzenleyebilirsiniz. **Test yinelemeleri** özelliği, **Yük Testi Düzenleyicisi**kullanarak bir yük testinde tüm senaryolarda tüm Web performansı ve birim testlerinde çalıştırılacak yineleme sayısını belirtir.
+**Yük Testi Düzenleyicisi** kullanarak, **Özellikler** penceresinde bir çalışma ayarları değerinin **test yinelemeleri** özelliğini düzenleyebilirsiniz. **Test yinelemeleri** özelliği, **Yük Testi Düzenleyicisi** kullanarak bir yük testinde tüm senaryolarda tüm Web performansı ve birim testlerinde çalıştırılacak yineleme sayısını belirtir.
 
 > [!NOTE]
 > Çalışma ayarları özelliklerinin ve açıklamalarının tüm listesi için bkz. [Yük testi çalıştırma ayarları özellikleri](../test/load-test-run-settings-properties.md).
@@ -38,7 +39,7 @@ ms.locfileid: "90810607"
 
 3. **Görünüm** menüsünde **Özellikler penceresi** ' ni seçerek yük çalıştırma ayarlarının kategorilerini ve özelliklerini görüntüleyin.
 
-4. **Test Yinelemeleri Kullan** özelliğini **doğru**olarak ayarlayın.
+4. **Test Yinelemeleri Kullan** özelliğini **doğru** olarak ayarlayın.
 
 5. **Test yinelemeleri** özelliğinde, yük testi sırasında çalıştırılacak test yinelemesi sayısını gösteren bir sayı girin.
 

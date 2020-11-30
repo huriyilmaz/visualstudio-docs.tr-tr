@@ -1,5 +1,7 @@
 ---
 title: XML komut tablosu tasarlama (. Vsct) dosyaları | Microsoft Docs
+description: Düğmeler, Birleşik giriş kutuları, menüler ve araç çubukları dahil olmak üzere komut öğelerinin yerleşimini ve görünümünü açıklayan bir XML komut tablosu (. vsct) dosyası tasarlamayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: fcd29aee98139bb151c87590b256df6b8370abff
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a1ccab1eddf38e2f93cb00f1f5fdea6ce09f2f05
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708748"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328437"
 ---
 # <a name="design-xml-command-table-vsct-files"></a>XML komut tablosu (. vsct) dosyaları tasarlama
 Bir XML komut tablosu (*. vsct*) dosyası, VSPackage için komut öğelerinin yerleşimini ve görünümünü açıklar. Komut öğeleri düğme, Birleşik giriş kutuları, menüler, araç çubukları ve komut öğesi gruplarını içerir. Bu makale, XML komut tablosu dosyalarını, komut öğelerini ve menülerini nasıl etkileyeceğini ve bunların nasıl oluşturulacağını açıklamaktadır.
@@ -89,7 +91,7 @@ Var olan bir *. CTO* dosyasını bir *. vsct* dosyasına dönüştürmek için *
 
 - [Visibilitykısıtlamalar öğesi](../../extensibility/visibilityconstraints-element.md): bir komutun her zaman mı yoksa yalnızca belirli bağlamlarda mı (örneğin, belirli bir iletişim kutusu veya pencere görüntülendiğinde) gösterilip gösterilmeyeceğini belirtir. Bu öğe için bir değere sahip menüler ve komutlar yalnızca belirtilen bağlam etkin olduğunda görüntülenir. Varsayılan davranış, komutu her zaman görüntülemektir.
 
-- [Keybindings öğesi](../../extensibility/keybindings-element.md): komutlar için herhangi bir anahtar bağlama belirtir. Diğer bir deyişle, **CTRL**S gibi komutları yürütmek için basılan bir veya daha fazla tuş birleşimi + **S**.
+- [Keybindings öğesi](../../extensibility/keybindings-element.md): komutlar için herhangi bir anahtar bağlama belirtir. Diğer bir deyişle, **CTRL** S gibi komutları yürütmek için basılan bir veya daha fazla tuş birleşimi + **S**.
 
 - [UsedCommands öğesi](../../extensibility/usedcommands-element.md): ortama, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] belirtilen komutun diğer kod tarafından uygulanmasını, ancak geçerli VSPackage etkin olduğunda, komut uygulamasını sağladığını bildirir.
 
@@ -113,13 +115,13 @@ Var olan bir *. CTO* dosyasını bir *. vsct* dosyasına dönüştürmek için *
 - Komutlar ve alt menüler birden çok gruba da atanabilir ve gruplar, [Komutlar öğesi](../../extensibility/commands-element.md)kullanılarak birden çok menüye atanabilir.
 
 ## <a name="vsct-file-notes"></a>. vsct dosya notları
- Her iki derleme sonrasında bir *. vsct* dosyasında herhangi bir değişiklik yaparsanız ve bunu yerel BIR uydu dll 'e yerleştirirseniz, ** /Setup/nosetupvstemptıvedevenv.exe**çalıştırmalısınız. Bunu yaptığınızda, Deneysel kayıt defterinde belirtilen VSPackage kaynaklarının yeniden yapılandırılması ve yeniden oluşturulması için açıklanan iç veritabanı vardır [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
+ Her iki derleme sonrasında bir *. vsct* dosyasında herhangi bir değişiklik yaparsanız ve bunu yerel BIR uydu dll 'e yerleştirirseniz, **/Setup/nosetupvstemptıvedevenv.exe** çalıştırmalısınız. Bunu yaptığınızda, Deneysel kayıt defterinde belirtilen VSPackage kaynaklarının yeniden yapılandırılması ve yeniden oluşturulması için açıklanan iç veritabanı vardır [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
 
  Geliştirme sırasında, birden çok VSPackage projesinin oluşturulup, IDE 'de kafa karıştırıcı ile sonuçlanmasına neden olabilecek Deneysel kayıt defteri Hive 'de kaydettirilmesi mümkündür. Bunu yapmak için, tüm kayıtlı VSPackages 'leri ve IDE 'de yapmış olabileceği tüm değişiklikleri kaldırmak üzere deneysel Hive 'yi varsayılan ayarlara sıfırlayabilirsiniz. Deneysel Hive 'yi sıfırlamak için, Visual Studio SDK ile birlikte gelen CreateExpInstance.exe aracını kullanın. Şu adreste bulabilirsiniz:
 
  *% PROGRAMFILES (x86)% \ Visual Studio \\ \<version> SDK\VisualStudioIntegration\Tools\Bin\CreateExpInstance.exe*
 
- **CreateExpInstance/Reset**komutunu kullanarak aracı çalıştırın. Bu aracın, normalde ile yüklenmeyen tüm kayıtlı VSPackages 'leri deneysel Hive 'den kaldırdığından emin unutmayın [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
+ **CreateExpInstance/Reset** komutunu kullanarak aracı çalıştırın. Bu aracın, normalde ile yüklenmeyen tüm kayıtlı VSPackages 'leri deneysel Hive 'den kaldırdığından emin unutmayın [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Menüleri ve komutları Genişlet](../../extensibility/extending-menus-and-commands.md)

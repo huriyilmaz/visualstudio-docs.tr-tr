@@ -1,5 +1,7 @@
 ---
 title: Test denetleyicileri ve test aracılarında sorun giderme
+description: Visual Studio 'da test denetleyicileri ve test aracılarıyla çalışırken karşılaşabileceğiniz bazı yaygın sorunlar hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 10/20/2016
 ms.topic: troubleshooting
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.assetid: 77329348-3a5d-43de-b6cb-90f93296a081
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 51d7e15ec71eec7134dfc49b3515385970e593a0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e86811739df2d59e3de7980cfa346da68cc0eb43
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75565961"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96330153"
 ---
 # <a name="strategies-for-troubleshooting-test-controllers-and-test-agents-in-load-tests"></a>Yük testlerinde test denetleyicileri ve test aracılarında sorun giderme stratejileri
 
@@ -41,7 +43,7 @@ Bir test denetleyicisi bilgisayarında günlüğe kaydetme düzeyini denetleyebi
 
 1. Test denetleyicisi hizmetini durdurun. Komut isteminde yazın `net stop vsttcontroller` .
 
-2. *QTController.exe.config*dosyasını açın. Bu dosya, denetleyici yükleme dizininde bulunur.
+2. *QTController.exe.config* dosyasını açın. Bu dosya, denetleyici yükleme dizininde bulunur.
 
 3. `EqtTraceLevel`Dosyanın sistem tanılama bölümünde anahtar için girişi düzenleyin. Kodunuz şuna benzemelidir:
 
@@ -113,7 +115,7 @@ Bu hatayı onarmak için, test denetleyicisini ağ bağdaştırıcılarından bi
 
 1. Test denetleyicisi hizmetini durdurun. Komut isteminde yazın `net stop vsttcontroller` .
 
-2. *QTController.exe.config*dosyasını açın. Bu dosya *% ProgramFiles (x86)% \ Microsoft Visual Studio\2017\Enterprise\Common7\IDE*konumunda bulunuyor.
+2. *QTController.exe.config* dosyasını açın. Bu dosya *% ProgramFiles (x86)% \ Microsoft Visual Studio\2017\Enterprise\Common7\IDE* konumunda bulunuyor.
 
 3. Uygulama ayarlarına özelliği için bir giriş ekleyin `BindTo` . Denetleyiciyi bağlamak istediğiniz ağ bağdaştırıcısının IP adresini belirtin. Kodunuz şuna benzemelidir:
 

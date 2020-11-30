@@ -1,5 +1,7 @@
 ---
 title: Birden Çok UI Haritası Bulunan Büyük Uygulamaları Test Etme
+description: Birden çok UI haritası kullanarak büyük bir uygulamayı sınarken, kodlanmış UI testlerini nasıl kullanacağınızı öğrenin. Bu özellik Visual Studio Enterprise gerektirir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 99e703d10d2bc6ed8fd573f4973e73f7ad40a937
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 93ae6aaa77a133a0d1805554a38b2714bff5b312
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85286589"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96330166"
 ---
 # <a name="test-a-large-application-with-multiple-ui-maps"></a>Birden çok UI haritası ile büyük bir uygulamayı test etme
 

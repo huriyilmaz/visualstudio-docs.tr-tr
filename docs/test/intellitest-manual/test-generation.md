@@ -1,5 +1,7 @@
 ---
 title: Test üretimi | Microsoft IntelliTest geliştirici test aracı
+description: IntelliTest 'in uygulamanızın yöntemlerinden test çalışmalarını nasıl ürettireceğinizi öğrenin, ardından yöntemler için girişler oluşturur ve verilerin üzerinde onayları kontrol edin.
+ms.custom: SEO-VS-2020
 ms.date: 05/02/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: c251a1539b42da2b4e92c2996457075f3c3be135
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 790146e3014765224f22bd247732c7ac3f062269
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89315180"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329451"
 ---
 # <a name="test-generation"></a>Test oluşturma
 
@@ -191,7 +193,7 @@ Oluşturulan test çalışması ne zaman başarısız olur?
 
 1. [Yapılandırılmış yol sınırları](exploration-bounds.md)içinde Sonlanmamışsa, [Testexcludepathboundsexceılsınıo](exploration-bounds.md#testexcludepathboundsexceeded) seçeneği ayarlanmamışsa hata olarak kabul edilir
 
-1. Test bir **PexAssumeFailedException**oluşturursa başarılı olur. Ancak, [Testemissionfilter](exploration-bounds.md#testemissionfilter) **Tümü** olarak ayarlanmadığı takdirde genellikle filtrelenir.
+1. Test bir **PexAssumeFailedException** oluşturursa başarılı olur. Ancak, [Testemissionfilter](exploration-bounds.md#testemissionfilter) **Tümü** olarak ayarlanmadığı takdirde genellikle filtrelenir.
 
 1. Test bir [onaylama işlemi](#assumptions-and-assertions)ihlal ederse; Örneğin, bir birim testi çerçevesinin bir onaylama ihlali özel durumu oluşturarak başarısız olur
 

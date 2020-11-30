@@ -1,5 +1,7 @@
 ---
 title: Visual Studio 2017 ' de Live Unit Testing yenilikler
+description: Bu makalede, Visual Studio 2017 sürüm 15,3 ' den başlayarak her Visual Studio sürümünde Live Unit Testing eklenen yeni özellikler açıklanmaktadır.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 10/11/2017
 ms.topic: conceptual
@@ -11,12 +13,12 @@ ms.author: mikejo
 ms.workload:
 - dotnet
 monikerRange: vs-2017
-ms.openlocfilehash: cc6a7a25ebd2f7d07dcb887952b82bda34aaad35
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: ae1caef04c1ccd1c51c38ddef5dc8c783bdbfaa9
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851469"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328840"
 ---
 # <a name="whats-new-in-live-unit-testing-for-visual-studio-2017"></a>Visual Studio 2017 için Live Unit Testing yenilikler
 
@@ -26,7 +28,7 @@ Bu konuda, Visual Studio 2017 sürüm 15,3 ' den başlayarak her Visual Studio s
 
 Visual Studio 2017 sürüm 15,4 ' den başlayarak, Live Unit Testing çeşitli alanlarda iyileştirmeler ve iyileştirmeler içerir:
 
-- **İyileştirilmiş bulunabilirliği**. Live Unit Testing özelliğinin mevcut olduğunu bilemeyen kullanıcılar için, Visual Studio IDE, Kullanıcı birim testlerini içeren bir çözümü her açtığında Live Unit Testing bahsetmeyen bir altın çubuk gösterir, ancak Live Unit Testing etkinleştirilmez. Altın renkli çubukta sunulan bilgiler, kullanıcının Live Unit Testing hakkında daha fazla bilgi almasına ve etkinleştirmesini sağlar. Altın renkli çubuk, Live Unit Testing önkoşulları karşılanmazsa bilgileri de görüntüler. Bu güncelleştirmeler şunlardır:
+- **İyileştirilmiş bulunabilirliği**. Live Unit Testing özelliğinin mevcut olduğunu bilemeyen kullanıcılar için, Visual Studio IDE, Kullanıcı birim testlerini içeren bir çözümü her açtığında Live Unit Testing bahsetmeyen bir altın çubuk gösterir, ancak Live Unit Testing etkinleştirilmez. Altın renkli çubukta sunulan bilgiler, kullanıcının Live Unit Testing hakkında daha fazla bilgi almasına ve etkinleştirmesini sağlar. Altın renkli çubuk, Live Unit Testing önkoşulları karşılanmazsa bilgileri de görüntüler. Bunlar:
 
   - Test bağdaştırıcıları eksik.
   - Test bağdaştırıcılarının eski sürümleri mevcuttur.
@@ -38,7 +40,7 @@ Visual Studio 2017 sürüm 15,4 ' den başlayarak, Live Unit Testing çeşitli a
 
 - **Güvenilirlik & performansı**: Live Unit Testing artık, projenin tamamen yüklemeyi tamamlamadıklarında ve kilitlenen Live Unit Testing kaçınarak sistemin daha iyi algılayabilmesini sağlar. Yapı performansı geliştirmeleri Ayrıca, sistem proje dosyasındaki hiçbir şeyin değiştiğini bildiğinde MSBuild projelerinin yeniden değerlendirilmesinden kaçının.
 
-- **Çeşitli kullanıcı arabirimi işlevselliklerindeki**: sağ tıklama hareketinizden karışık **canlı test kümesi – dahil etme/hariç tutma** seçeneği **Live Unit Testing dahil etme/hariç tutma**olarak yeniden adlandırıldı. Test Live Unit Testing menüsündeki **temiz sıfırlama** seçeneği **Test**  >  **Live Unit Testing** kaldırılmıştır. Artık **Araçlar**  >  **Seçenekler**  >  **Live Unit Testing** ve **kalıcı verileri Sil**' i seçerek erişilebilir.
+- **Çeşitli kullanıcı arabirimi işlevselliklerindeki**: sağ tıklama hareketinizden karışık **canlı test kümesi – dahil etme/hariç tutma** seçeneği **Live Unit Testing dahil etme/hariç tutma** olarak yeniden adlandırıldı. Test Live Unit Testing menüsündeki **temiz sıfırlama** seçeneği **Test**  >  **Live Unit Testing** kaldırılmıştır. Artık **Araçlar**  >  **Seçenekler**  >  **Live Unit Testing** ve **kalıcı verileri Sil**' i seçerek erişilebilir.
 
 ## <a name="version-153"></a>Sürüm 15,3
 

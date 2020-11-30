@@ -1,5 +1,7 @@
 ---
 title: Yük Testlerini Çözümlemek için Grafik Görünümü Göstergesini Kullanma
+description: Seçilen bir grafik için performans sayaçlarıyla ilgili bilgileri görüntüleyen bir gösterge paneli içeren Yük Testi Çözümleyicisinin grafik görünümü hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.assetid: 0f6ba8e4-1343-419c-8a9f-240cf50efed7
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 1455c67c3cb6d8dc99aeab91a7bfa63cce009c51
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 25200b691e0bebf2e3bd1c6252efb371ed9caeb2
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75590806"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96330075"
 ---
 # <a name="use-the-graphs-view-legend-to-analyze-load-tests"></a>Yük testlerini çözümlemek için grafik görünümü göstergesini kullanın
 
@@ -26,14 +28,14 @@ Yük Testi Çözümleyicisi 'nin grafik görünümü, seçili grafik ile ilişki
 
 Aşağıdaki bilgiler gösterge içinde bulunur:
 
-- **Grafikte göster:** Grafik üzerinde **Kullanıcı yükleme** veya **hatalar/sn**gibi belirli bir sayaca ait çizginin çizilip çizilmeyeceğini belirtmek için onay kutularını kullanın. Çizginin grafikte çizilmesini istiyorsanız onay kutusunu işaretleyin. Çizim çizgisini grafikten kaldırmak için onay kutusunu temizleyin. Bir çizim çizgisi kaldırıldığında, sayacın istatistikleri göstergede görüntülenmeye devam eder.
+- **Grafikte göster:** Grafik üzerinde **Kullanıcı yükleme** veya **hatalar/sn** gibi belirli bir sayaca ait çizginin çizilip çizilmeyeceğini belirtmek için onay kutularını kullanın. Çizginin grafikte çizilmesini istiyorsanız onay kutusunu işaretleyin. Çizim çizgisini grafikten kaldırmak için onay kutusunu temizleyin. Bir çizim çizgisi kaldırıldığında, sayacın istatistikleri göstergede görüntülenmeye devam eder.
 
 - **Aralık:** Bu sütun, performans sayacının y ekseni aralığını görüntüler. Varsayılan olarak, bu değer örnek veri değişikliği aralığı olarak otomatik olarak ayarlar. Otomatik olarak ayarlanmış bir Aralık, her zaman 10 ' un en büyük değerden sonraki kuvveti olacaktır; Bu, 10 ' un negatif üslerini içerir. Grafik, her biri farklı aralığa sahip çeşitli sayaçlar içerebilir. Bu nedenle, y ekseni belirli bir aralıkla etiketlenemez, ancak bunun yerine her sayaç için toplam aralığın yüzdesini temsil eden 0-100 değerleriyle etiketlidir. Örneğin, 1000 aralığına sahip bir sayaç için y ekseninde 60 veri noktası sayaç için bir 600 değerine karşılık gelir.
 
     > [!NOTE]
     > Aralığı belirli bir değere kilitleyerek otomatik Aralık değer ayarlamayı devre dışı bırakabilirsiniz. Aralık kilitlendiğinde, aralığı aşan tüm değerler grafiğin en üstünde belirttiğiniz en büyük değer olarak görüntülenir. Aralığı belirli bir değerde kilitlemek için **Çizim seçenekleri** iletişim kutusunu kullanın.
 
-- **Sayaç:** **Sayaç**, **örnek**, **Kategori**ve **bilgisayar** adlı dört sütun, performans sayacını benzersiz şekilde tanımlar.
+- **Sayaç:** **Sayaç**, **örnek**, **Kategori** ve **bilgisayar** adlı dört sütun, performans sayacını benzersiz şekilde tanımlar.
 
 - **Renk:** **Renk** sütunu, performans sayacı için çizilen çizginin rengini ve çizgi stilini gösterir. Grafikteki bir performans sayacının rengini veya çizgi stilini değiştirmek için **Çizim seçenekleri** iletişim kutusunu kullanın. **Çizim seçenekleri** iletişim kutusu, göstergenin kısayol menüsünden kullanılabilir.
 

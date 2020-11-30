@@ -1,5 +1,7 @@
 ---
 title: UWP uygulamaları için C++ DLL 'yi test etme
+description: C++ için Microsoft Test çerçevesi ile Evrensel Windows Platformu uygulamalar için bir C++ DLL için birim testleri oluşturmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 05/01/2019
 ms.topic: how-to
 ms.author: corob
@@ -7,12 +9,12 @@ manager: jillfra
 ms.workload:
 - uwp
 author: corob-msft
-ms.openlocfilehash: 7b556f085ae4e4a9c610aefa87b3f9125fb27042
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a7ae79ff4df783d3c4541720c9fef709087e7da6
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85285615"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96330101"
 ---
 # <a name="how-to-test-a-c-dll"></a>C++ DLL 'yi test etme
 
@@ -73,7 +75,7 @@ Yeni bir test projesi oluşturarak başlayın. **Dosya** menüsünde **Yeni**  >
 
 2. **Test** menüsünde **Çalıştır** ' ı ve ardından **Tümünü Çalıştır**' ı seçin.
 
-     Test projesi oluşturulup çalışır. **Test Gezgini** penceresi görünür ve test **geçilen testler**altında listelenir. Pencerenin alt kısmındaki **Özet** bölmesi, seçilen test hakkında ek ayrıntılar sağlar.
+     Test projesi oluşturulup çalışır. **Test Gezgini** penceresi görünür ve test **geçilen testler** altında listelenir. Pencerenin alt kısmındaki **Özet** bölmesi, seçilen test hakkında ek ayrıntılar sağlar.
 
      ![Test Gezgini](../test/media/ute_cpp_testexplorer_testmethod1.png)
 
@@ -81,14 +83,14 @@ Yeni bir test projesi oluşturarak başlayın. **Dosya** menüsünde **Yeni**  >
 
 ::: moniker range="vs-2019"
 
-**Çözüm Gezgini**, çözüm adını seçin. Kısayol menüsünde, **Ekle**ve ardından **Yeni proje**' yi seçin. **Yeni Proje Ekle** iletişim kutusunda, **dili** C++ olarak ayarlayın ve arama kutusuna "dll" yazın. Sonuçlar listesinden **birim testi uygulaması (Evrensel Windows-C++/CX)** öğesini seçin.
+**Çözüm Gezgini**, çözüm adını seçin. Kısayol menüsünde, **Ekle** ve ardından **Yeni proje**' yi seçin. **Yeni Proje Ekle** iletişim kutusunda, **dili** C++ olarak ayarlayın ve arama kutusuna "dll" yazın. Sonuçlar listesinden **birim testi uygulaması (Evrensel Windows-C++/CX)** öğesini seçin.
 
 ![RooterLib projesi oluşturma](../test/media/vs-2019/cpp-new-uwp-test-project-vs2019.png)
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
-**Çözüm Gezgini**, çözüm adını seçin. Kısayol menüsünde, **Ekle**ve ardından **Yeni proje**' yi seçin.
+**Çözüm Gezgini**, çözüm adını seçin. Kısayol menüsünde, **Ekle** ve ardından **Yeni proje**' yi seçin.
 
 ![RooterLib projesi oluşturma](../test/media/ute_cpp_windows_rooterlib_create.png)
 
@@ -152,13 +154,13 @@ Yeni bir test projesi oluşturarak başlayın. **Dosya** menüsünde **Yeni**  >
 
 1. RooterLib öğesini RooterLibTests projesine ekleyin.
 
-   1. **Çözüm Gezgini**, **RooterLibTests** projesini ve ardından **Add**  >  kısayol menüsünde**başvuru** Ekle ' yi seçin.
+   1. **Çözüm Gezgini**, **RooterLibTests** projesini ve ardından **Add**  >  kısayol menüsünde **başvuru** Ekle ' yi seçin.
 
    1. **Başvuru Ekle** Iletişim kutusunda **Projeler**' i seçin. Ardından, **Routerlib** öğesini seçin.
 
-2. *UnitTest1. cpp*Içinde RooterLib üstbilgi dosyasını dahil edin.
+2. *UnitTest1. cpp* Içinde RooterLib üstbilgi dosyasını dahil edin.
 
-   1. *UnitTest1. cpp*öğesini açın.
+   1. *UnitTest1. cpp* öğesini açın.
 
    2. Bu kodu satırın altına ekleyin `#include "CppUnitTest.h"` :
 
@@ -166,7 +168,7 @@ Yeni bir test projesi oluşturarak başlayın. **Dosya** menüsünde **Yeni**  >
        #include "..\RooterLib\RooterLib.h"
        ```
 
-3. İçeri aktarılan işlevi kullanan bir test ekleyin. Aşağıdaki kodu *UnitTest1. cpp*öğesine ekleyin:
+3. İçeri aktarılan işlevi kullanan bir test ekleyin. Aşağıdaki kodu *UnitTest1. cpp* öğesine ekleyin:
 
    ```cpp
    TEST_METHOD(BasicTest)
@@ -190,7 +192,7 @@ Yeni bir test projesi oluşturarak başlayın. **Dosya** menüsünde **Yeni**  >
 
     Yeni test, **Test Gezgini** 'Nde, **çalıştırma testleri** düğümünde görünür.
 
-5. **Test Gezgini**Içinde **Tümünü Çalıştır**' ı seçin.
+5. **Test Gezgini** Içinde **Tümünü Çalıştır**' ı seçin.
 
     ![Temel test geçildi](../test/media/ute_cpp_testexplorer_basictest.png)
 
@@ -219,7 +221,7 @@ Yeni bir test projesi oluşturarak başlayın. **Dosya** menüsünde **Yeni**  >
     >
     > Kullanıcılarınız gereksinimlerini değiştirmelerine göre artık doğru olmayan Testleri devre dışı bırakın. Yeni testler yazın ve aynı anda bir kez, aynı şekilde çalışır hale getirin.
 
-2. **Test Gezgini**Içinde **Tümünü Çalıştır**' ı seçin.
+2. **Test Gezgini** Içinde **Tümünü Çalıştır**' ı seçin.
 
 3. Test başarısız oluyor.
 
@@ -228,7 +230,7 @@ Yeni bir test projesi oluşturarak başlayın. **Dosya** menüsünde **Yeni**  >
     > [!TIP]
     > Her testin yazıldıktan hemen sonra başarısız olduğunu doğrulayın. Bu, hiç başarısız olmayan bir testi yazmanın kolay bir hata yaşamadan kaçınmanıza yardımcı olur.
 
-4. Yeni testin başarılı olması için test kapsamındaki kodu geliştirin. Şunları *RooterLib. cpp*öğesine ekleyin:
+4. Yeni testin başarılı olması için test kapsamındaki kodu geliştirin. Şunları *RooterLib. cpp* öğesine ekleyin:
 
     ```cpp
     #include <math.h>
@@ -249,7 +251,7 @@ Yeni bir test projesi oluşturarak başlayın. **Dosya** menüsünde **Yeni**  >
 
     ```
 
-5. Çözümü derleyin ve ardından **Test Gezgini**Içinde **Tümünü Çalıştır**' ı seçin.
+5. Çözümü derleyin ve ardından **Test Gezgini** Içinde **Tümünü Çalıştır**' ı seçin.
 
      Her iki test de geçer.
 
@@ -258,7 +260,7 @@ Yeni bir test projesi oluşturarak başlayın. **Dosya** menüsünde **Yeni**  >
 
 ## <a name="debug-a-failing-test"></a><a name="Debug_a_failing_test"></a> Başarısız bir testte hata ayıkla
 
-1. *UnitTest1. cpp*öğesine başka bir test ekleyin:
+1. *UnitTest1. cpp* öğesine başka bir test ekleyin:
 
    ```cpp
    // Verify that negative inputs throw an exception.
@@ -289,7 +291,7 @@ Yeni bir test projesi oluşturarak başlayın. **Dosya** menüsünde **Yeni**  >
    };
    ```
 
-2. **Test Gezgini**Içinde **Tümünü Çalıştır**' ı seçin.
+2. **Test Gezgini** Içinde **Tümünü Çalıştır**' ı seçin.
 
     Test başarısız oluyor. **Test Gezgini**'nde test adını seçin. Başarısız onaylama vurgulanır. Hata iletisi, **Test Gezgini**'nin ayrıntı bölmesinde görünür.
 

@@ -1,5 +1,7 @@
 ---
 title: Test aracılarını ve test denetleyicilerini yükleme
+description: Azure Test Plans veya Team Foundation Server ile testi düzenlemek için Visual Studio aracılarını nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 04/17/2019
 ms.topic: how-to
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2b75ae05a65ae15e82c45ec0cf43935fb0809160
-ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
+ms.openlocfilehash: d2ffa3a1006057169d7e4f473922ff2eebbfe7bb
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91928612"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328892"
 ---
 # <a name="install-test-agents-and-test-controllers"></a>Test aracılarını ve test denetleyicilerini yükleme
 
@@ -28,13 +30,13 @@ Aşağıdaki tabloda, Visual Studio için test aracısı veya test denetleyicisi
 
 | Öğe | Gereksinimler |
 | ---- | ------------ |
-| **Aracısı** | Windows 10<br />Windows 8, Windows 8.1<br />Windows 7 Service Pack 1<br />Windows Server 2016 Standard ve Datacenter<br />Windows Server 2012 R2 |
-| **Kumandasını** | Windows 10<br />Windows 8, Windows 8.1<br />Windows 7 Service Pack 1<br />Windows Server 2016 Standard ve Datacenter<br />Windows Server 2012 R2 |
+| **Aracı** | Windows 10<br />Windows 8, Windows 8.1<br />Windows 7 Service Pack 1<br />Windows Server 2016 Standard ve Datacenter<br />Windows Server 2012 R2 |
+| **Denetleyici** | Windows 10<br />Windows 8, Windows 8.1<br />Windows 7 Service Pack 1<br />Windows Server 2016 Standard ve Datacenter<br />Windows Server 2012 R2 |
 | **.NET Framework** | .NET Framework 4.5 |
 
 ## <a name="install-the-test-controller-and-test-agents"></a>Test denetleyicisini ve test aracılarını yükler
 
-Visual Studio için aracıları [VisualStudio.Microsoft.com](https://visualstudio.microsoft.com/downloads/?q=agents)adresinden indirebilirsiniz. *Visual Studio 2019 Için aracıları*arayın, *Aracı* veya *Denetleyici*' yi seçin ve ardından *İndir*' i seçin. Test aracısını veya denetleyiciyi yüklemek için indirilen yürütülebilir dosyayı çalıştırın.
+Visual Studio için aracıları [VisualStudio.Microsoft.com](https://visualstudio.microsoft.com/downloads/?q=agents)adresinden indirebilirsiniz. *Visual Studio 2019 Için aracıları* arayın, *Aracı* veya *Denetleyici*' yi seçin ve ardından *İndir*' i seçin. Test aracısını veya denetleyiciyi yüklemek için indirilen yürütülebilir dosyayı çalıştırın.
 
 Visual Studio 2017, Visual Studio 2015 ve Visual Studio 2013 için aracıları [eski indirmeler](https://visualstudio.microsoft.com/vs/older-downloads/) sayfasından indirebilirsiniz.
 
@@ -45,7 +47,7 @@ Bu yükleyiciler, sanal makinelerde kolay yükleme için ISO dosyaları olarak k
 
 Aşağıdaki tabloya göre TFS, Microsoft Test Yöneticisi, test denetleyicisi ve test aracısının farklı sürümlerini karıştırabilirsiniz:
 
-| TFS | Laboratuvar Merkezi ile Microsoft Test Yöneticisi | Kumandasını | Aracı |
+| TFS | Laboratuvar Merkezi ile Microsoft Test Yöneticisi | Denetleyici | Aracı |
 | --- | -------------------------------------- | ---------- | ----- |
 | 2017:2015 veya yeni yüklemeyi yükseltin | 2017 | 2017 | 2017 |
 | 2017:2015 veya yeni yüklemeyi yükseltin | 2017 | 2013 güncelleştirme 5 | 2013 güncelleştirme 5 |
@@ -61,7 +63,7 @@ Aşağıdaki tabloya göre TFS, Microsoft Test Yöneticisi, test denetleyicisi v
 
 Aşağıdaki tabloya göre TFS, test denetleyicisi ve test aracısının farklı sürümlerini karıştırabilirsiniz:
 
-| TFS | Kumandasını | Aracı |
+| TFS | Denetleyici | Aracı |
 | --- | -------------------------------------- | ---------- | ----- |
 | 2017:2015 veya yeni yüklemeyi yükseltin | 2017 | 2017 |
 | 2017:2015 veya yeni yüklemeyi yükseltin | 2013 güncelleştirme 5 | 2013 güncelleştirme 5 |

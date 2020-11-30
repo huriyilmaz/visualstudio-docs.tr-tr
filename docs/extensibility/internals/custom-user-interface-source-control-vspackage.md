@@ -1,5 +1,7 @@
 ---
 title: Özel Kullanıcı arabirimi (kaynak denetimi VSPackage) | Microsoft Docs
+description: UI öğelerini belirtmek için bir kaynak denetimi VSPackage kullanarak Visual Studio 'da özel kullanıcı arabirimi (UI) oluşturmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a6ef807cef17a6ca3cddfee05ba57ace27e34a9e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e1426b271ea8db4d486043c9fbe885a0f428b514
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708925"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328529"
 ---
 # <a name="custom-user-interface-source-control-vspackage"></a>Özel Kullanıcı arabirimi (kaynak denetimi VSPackage)
 VSPackage, Visual Studio komut tablosu (*. vsct*) dosyası aracılığıyla menü öğelerini ve bunların varsayılan durumlarını bildirir. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Tümleşik geliştirme ortamı (IDE), VSPackage yükleninceye kadar menü öğelerini varsayılan durumlarında görüntüler. Daha sonra, <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> yöntemi menü öğelerini etkinleştirmek veya devre dışı bırakmak için çağrılır.
@@ -49,7 +51,7 @@ VSPackage, Visual Studio komut tablosu (*. vsct*) dosyası aracılığıyla men�
 
   Aşağıdaki tabloda, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE 'nin farklı kullanıcı arabirimi öğelerini nasıl gizlediğini gösteren özel ayrıntılar açıklanmaktadır.
 
-| UI öğesi | Description |
+| UI öğesi | Açıklama |
 | - | - |
 | Menüler ve araç çubukları | Kaynak denetim paketi, ilk menü ve araç çubuğu görünürlük durumlarını, *. vsct* dosyasının [visibilitykýsýtlamalarındaki](../../extensibility/visibilityconstraints-element.md) kaynak denetim paketi kimliğine ayarlamış olmalıdır. Bu, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE 'nin, VSPackage yüklemeden ve yönteminin bir uygulamasını çağırarak menü öğelerinin durumunu uygun şekilde ayarlanmasını sağlar <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> . |
 | Araç pencereleri | Kaynak denetimi VSPackage, etkin olmadığında sahip olduğu tüm araç pencerelerini gizler. |

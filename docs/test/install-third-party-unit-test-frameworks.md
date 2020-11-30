@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: Üçüncü taraf birim test çerçevelerini yükleme'
+description: Visual Studio Test Gezgini, bir bağdaştırıcı arabirimi geliştirmiş olan herhangi bir birim test çerçevesinden testleri çalıştırabilir.
+ms.custom: SEO-VS-2020
 ms.date: 07/09/2020
 ms.topic: how-to
 ms.author: mikejo
@@ -7,12 +9,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: c274f203b9bf2746716c0625c61141aaa332977a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e6433d665157c186a390e2963ef7ad1447b2f982
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86387193"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329984"
 ---
 # <a name="install-unit-test-frameworks"></a>Birim testi çerçeveleri 'ni yükler
 
@@ -29,7 +31,7 @@ Visual Studio çözümü, farklı çerçeveleri kullanan ve farklı dillerde hed
 
 ## <a name="acquire-frameworks"></a>Çerçeveleri al
 
-**NuGet Paket Yöneticisi 'ni**kullanarak üçüncü taraf birim testi çerçeveleri ' ni yükler.
+**NuGet Paket Yöneticisi 'ni** kullanarak üçüncü taraf birim testi çerçeveleri ' ni yükler.
 
 1. Test kodunuzu içerecek projeye sağ tıklayın ve **NuGet Paketlerini Yönet**' i seçin.
 

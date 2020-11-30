@@ -1,5 +1,7 @@
 ---
 title: Gecikmeli belge yükleme | Microsoft Docs
+description: Visual Studio 'da gecikmeli belge yükleme hakkında bilgi edinin ve bir belgedeki öğeleri yüklenmeden önce sorgulayıp uzantıları nasıl kodlarlar.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: fb07b8e2-a4e3-4cb0-b04f-8eb11c491f35
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2f78d49013c1f0bd359d4439b73620a159a9ccc0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c6489c819efe0fd29cd2d120c08414cf0532ad6f
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708808"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328398"
 ---
 # <a name="delayed-document-loading"></a>Gecikmeli belge yükleme
 
@@ -65,4 +67,4 @@ Belgeye erişmenin daha verimli bir yolu, <xref:Microsoft.VisualStudio.Shell.Int
 
 Bir belgenin başlatılmış olup olmadığını göstermek için görünür bir ipucu yoktur, bu nedenle uzantınızın başlatmayı zorluyor olup olmadığına ulaşmak zor olabilir. Bir kaydı daha kolay hale getiren bir kayıt defteri anahtarı ayarlayabilirsiniz, çünkü tam olarak başlatılmamış her belge başlığına, başlığında *[stub]* metni sahip olacak şekilde neden olur.
 
-**HKEY_CURRENT_USER \Software\Microsoft\VisualStudio\14.0\BackgroundSolutionLoad**, **StubTabTitleFormatString** öğesini * {0} [stub]* olarak ayarlayın.
+**HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0\BackgroundSolutionLoad**'de **StubTabTitleFormatString** öğesini *{0} [stub]* olarak ayarlayın.

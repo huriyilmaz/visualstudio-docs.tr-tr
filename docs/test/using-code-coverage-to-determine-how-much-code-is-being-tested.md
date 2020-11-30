@@ -1,5 +1,7 @@
 ---
 title: Kod kapsamı testi
+description: Visual Studio 'nun kod kapsamı özelliğini kullanarak, kodlanmış testler tarafından proje kodunuzun ne oranlarından hangilerinin test edildiğini öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 07/23/2019
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ dev_langs:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 2d1b51661d9fc9a5492d123bdacd6c49d241ed87
-ms.sourcegitcommit: 3e05bd4bfac6f0b8b3534d8c013388f67e288651
+ms.openlocfilehash: c2c7bcb270184bcc140dbadef63af1315df765dc
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91959781"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96330062"
 ---
 # <a name="use-code-coverage-to-determine-how-much-code-is-being-tested"></a>Kod kapsamını kullanarak ne kadar kodun test edildiğini belirleme
 
@@ -57,7 +59,7 @@ Kod kapsamı özelliği yalnızca Visual Studio Enterprise sürümünde kullanı
 2. Testler çalıştırıldıktan sonra, hangi satırların çalıştırıldığını görmek için ![ kod kapsamı renklendirmesi simgesini göster ' i seçin ](../test/media/codecoverage-showcoloringicon.png) . kod **kapsamı sonuçları** penceresinde kod **kapsamı renklendirmesini göster** ' i seçin. Varsayılan olarak, testlerin kapsadığı kod açık mavi renkle vurgulanır.
 
    > [!TIP]
-   > Renkleri değiştirmek veya kalın yüzü kullanmak için **Araçlar**  >  **Seçenekler**  >  **ortam**  >  **yazı tipleri ve renkler**  >  **ayarları göster: metin düzenleyici**. **Görüntüleme öğeleri**altında, "kapsam" öğeleri için ayarları ayarlayın, örneğin, **kapsam dokunulmayan alanı**.
+   > Renkleri değiştirmek veya kalın yüzü kullanmak için **Araçlar**  >  **Seçenekler**  >  **ortam**  >  **yazı tipleri ve renkler**  >  **ayarları göster: metin düzenleyici**. **Görüntüleme öğeleri** altında, "kapsam" öğeleri için ayarları ayarlayın, örneğin, **kapsam dokunulmayan alanı**.
    >
    > ![Kod kapsamı yazı tipleri ve renkler](media/vs-2019/coverage-fonts-and-colors.png)
 
@@ -74,7 +76,7 @@ Kodunuzu güncelleştirdikten sonra kod kapsamını çalıştırmayı unutmayın
 
 ## <a name="report-in-blocks-or-lines"></a>Bloklar veya satırlarda raporla
 
-Kod kapsamı *bloklar*halinde sayılır. Bir blok, tek bir giriş ve çıkış noktası kodu parçasıdır.  Programın denetim akışı test çalışması sırasında bir bloktan geçerse, bu blok kapsanmış olarak sayılır. Blok kullanılma sayısının sonuç üzerinde etkisi yoktur.
+Kod kapsamı *bloklar* halinde sayılır. Bir blok, tek bir giriş ve çıkış noktası kodu parçasıdır.  Programın denetim akışı test çalışması sırasında bir bloktan geçerse, bu blok kapsanmış olarak sayılır. Blok kullanılma sayısının sonuç üzerinde etkisi yoktur.
 
 Ayrıca, tablo üst bilgisinde **sütun Ekle/Kaldır** ' a tıklayarak da sonuçları satır bakımından görüntülenmesini sağlayabilirsiniz. Yüzdeler kaynak kodunda gördüğünüz parçaların boyutuyla daha yakından ilişkili olduğundan bazı kullanıcılar satırları saymayı tercih eder. Birçok satır kaplayan olsa bile uzun bir blok hesaplama tek bir blok olarak sayılacaktır.
 
@@ -97,7 +99,7 @@ Birçok çalıştırmanın sonucunu örneğin farklı test verileri kullanan ça
 
 - **Sonuçları metin olarak okunabilir hale getirmek Için** **kod kapsamı sonuçlarını dışarı aktar**' ı seçin. Bu, diğer araçlarla işlem yapmak veya e-posta ile kolayca göndermek için okunabilir bir *. katarexml* dosyası oluşturur.
 
-- **Başka birine sonuç göndermek için**bir *. Coverage* dosyası ya da aktarılmış bir *. veXML* dosyası gönderin. Sonra dosyayı içe aktarabilirsiniz. Kaynak kodun aynı sürümü varsa, kapsam renklendirmeyi görebilirsiniz.
+- **Başka birine sonuç göndermek için** bir *. Coverage* dosyası ya da aktarılmış bir *. veXML* dosyası gönderin. Sonra dosyayı içe aktarabilirsiniz. Kaynak kodun aynı sürümü varsa, kapsam renklendirmeyi görebilirsiniz.
 
 ## <a name="merge-results-from-different-runs"></a>Farklı çalıştırmaların sonuçlarını birleştirme
 
@@ -124,7 +126,7 @@ Birleştirme işleminin sonuçlarını kaydetmek için **kod kapsamı sonuçlar�
 > [!TIP]
 > Bir sınıfın dışlanması türetilmiş sınıfları dışlamaz.
 
-Örnek:
+Örneğin:
 
 ```csharp
 using System.Diagnostics.CodeAnalysis;
@@ -276,19 +278,19 @@ Kodunuzu iade ettiğinizde, testleriniz yapı sunucusunda diğer takım üyeleri
 
 ## <a name="analyze-code-coverage-from-the-command-line"></a>Komut satırından kod kapsamını analiz etme
 
-Komut satırından testleri çalıştırmak için *vstest.console.exe*kullanın. Kod kapsamı *vstest.console.exe* yardımcı programının bir seçeneğidir.
+Komut satırından testleri çalıştırmak için *vstest.console.exe* kullanın. Kod kapsamı *vstest.console.exe* yardımcı programının bir seçeneğidir.
 
 1. Visual Studio için Geliştirici Komut İstemi başlatın:
 
    ::: moniker range="vs-2017"
 
-   Windows **Başlat** menüsünde, vs 2017 için **Visual Studio 2017** > **Geliştirici komut istemi**seçin.
+   Windows **Başlat** menüsünde, vs 2017 için **Visual Studio 2017** > **Geliştirici komut istemi** seçin.
 
    ::: moniker-end
 
    ::: moniker range=">=vs-2019"
 
-   Windows **Başlat** menüsünde, vs 2019 için **Visual Studio 2019** > **Geliştirici komut istemi**seçin.
+   Windows **Başlat** menüsünde, vs 2019 için **Visual Studio 2019** > **Geliştirici komut istemi** seçin.
 
    ::: moniker-end
 

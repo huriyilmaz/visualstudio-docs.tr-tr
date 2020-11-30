@@ -1,5 +1,7 @@
 ---
 title: Dinamik sembolik yürütme | Microsoft IntelliTest geliştirici test aracı
+description: IntelliTest 'in, programdaki dal koşullarını çözümleyerek parametreleştirilmiş birim testleri için giriş oluşturma şeklini öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 05/02/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: e5a3248d3f081bcab08c08110d305f0aa6235817
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 771fd167a2dc9fce8278ca53f730872a9f170eb7
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89315206"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329916"
 ---
 # <a name="input-generation-using-dynamic-symbolic-execution"></a>Dinamik sembolik yürütme kullanarak giriş oluşturma
 
@@ -26,7 +28,7 @@ Döngünün adımları şunlardır:
 
 1. IntelliTest, Seçili girişle testi yürütür ve testin `i` ve test altındaki programın yürütülmesini izler.
 
-1. Yürütme sırasında program, programın tüm koşullu dallarıyla belirlenen belirli bir yolu alır. Yürütmeyi tespit eden tüm koşulların kümesine, biçimsel giriş parametreleri üzerinde koşul olarak yazılmış *yol koşulu*denir `p: I -> {true, false}` . IntelliTest bu koşulun gösterimini hesaplar.
+1. Yürütme sırasında program, programın tüm koşullu dallarıyla belirlenen belirli bir yolu alır. Yürütmeyi tespit eden tüm koşulların kümesine, biçimsel giriş parametreleri üzerinde koşul olarak yazılmış *yol koşulu* denir `p: I -> {true, false}` . IntelliTest bu koşulun gösterimini hesaplar.
 
 1. IntelliTest kümeleri `q := (q or p)` . Diğer bir deyişle, tarafından temsil edilen yolu gördüğü olguyu kaydeder `p` .
 
@@ -59,7 +61,7 @@ Daha sonra analizde daha erişilebilir yöntemler bulunduğundan, her ikisi de p
 
 ## <a name="integers-and-floats"></a>Tamsayılar ve kayan noktalı sayılar
 
-IntelliTest [kısıtlama çözücü](#constraint-solver) , test ve test edilen program için farklı yürütme yolları tetiklemek üzere **byte**, **Int**, **float**ve diğer basit türlerin test giriş değerlerini belirler.
+IntelliTest [kısıtlama çözücü](#constraint-solver) , test ve test edilen program için farklı yürütme yolları tetiklemek üzere **byte**, **Int**, **float** ve diğer basit türlerin test giriş değerlerini belirler.
 
 ## <a name="objects"></a>Nesneler
 
@@ -79,7 +81,7 @@ Tür görünür değilse veya alanlar [görünür](#visibility)değilse, Intelli
 
 ## <a name="visibility"></a>Görüş Mesafesi
 
-.NET, ayrıntılı görünürlük modeline sahiptir: türler, Yöntemler, alanlar ve diğer Üyeler **özel**, **genel**, **dahili**ve daha birçok iş olabilir.
+.NET, ayrıntılı görünürlük modeline sahiptir: türler, Yöntemler, alanlar ve diğer Üyeler **özel**, **genel**, **dahili** ve daha birçok iş olabilir.
 
 IntelliTest testleri oluşturduğunda, oluşturulan testlerin bağlamı içinden .NET görünürlük kurallarına göre geçerli olan yalnızca eylemleri (oluşturucular, Yöntemler ve ayar alanları gibi) gerçekleştirmeye çalışır.
 
@@ -90,7 +92,7 @@ Kurallar aşağıdaki gibidir:
   .NET, iç üyelerin görünürlüğünü diğer derlemelere genişletmek için **InternalsVisibleToAttribute** sahiptir.
 
 * **[PexClass](attribute-glossary.md#pexclass) üyelerinin özel ve aile görünürlüğü (C# ' de korumalı)**
-  * IntelliTest, oluşturulan testleri her zaman doğrudan [PexClass](attribute-glossary.md#pexclass) içinde veya bir alt sınıfa koyar. Bu nedenle, IntelliTest, tüm görünür aile üyelerini (C# ' de**korunan** ) kullanabileceği varsayılmaktadır.
+  * IntelliTest, oluşturulan testleri her zaman doğrudan [PexClass](attribute-glossary.md#pexclass) içinde veya bir alt sınıfa koyar. Bu nedenle, IntelliTest, tüm görünür aile üyelerini (C# ' de **korunan** ) kullanabileceği varsayılmaktadır.
   * Oluşturulan testler doğrudan [PexClass](attribute-glossary.md#pexclass) 'a (genellikle kısmi sınıflar kullanılarak) yerleştirilmişse, IntelliTest, [PexClass](attribute-glossary.md#pexclass)' ın tüm özel üyelerini de kullanabilir olduğunu varsayar.
 
 * **Ortak üyelerin görünürlüğü**

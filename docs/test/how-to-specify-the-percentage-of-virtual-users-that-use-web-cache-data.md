@@ -1,5 +1,7 @@
 ---
 title: 'Yük testi: Web önbelleği verilerini kullanarak Sanal Kullanıcı yüzdesini ayarla'
+description: Özellikler penceresi yeni kullanıcılar özelliğinin yüzdesini belirtmeyi öğrenin. Yük Testi Düzenleyicisi yük testi senaryosu özelliklerini düzenleyebilirsiniz.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -8,20 +10,20 @@ ms.assetid: f66d5d43-4121-4487-b27f-d0a0baaf7601
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 0a31ea50cdedbeb825d03de38a89200b6e8e5200
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 19568cce3fbd7abd4a74922d2a726ff7c92dd09a
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85287408"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329061"
 ---
 # <a name="how-to-specify-the-percentage-of-virtual-users-that-use-web-cache-data"></a>Nasıl yapılır: Web önbelleği verilerini kullanan sanal kullanıcıların yüzdesini belirtme
 
-**Yeni Yük Testi Sihirbazı**yük testinizi oluşturduktan sonra, **Yük Testi Düzenleyicisi**kullanarak test ihtiyaçlarını ve hedeflerinizi karşılamak için senaryolar özelliklerini değiştirebilirsiniz. Yük testi senaryosu özelliklerinin tam listesi ve açıklamaları için bkz. [Yük testi senaryo özellikleri](../test/load-test-scenario-properties.md).
+**Yeni Yük Testi Sihirbazı** yük testinizi oluşturduktan sonra, **Yük Testi Düzenleyicisi** kullanarak test ihtiyaçlarını ve hedeflerinizi karşılamak için senaryolar özelliklerini değiştirebilirsiniz. Yük testi senaryosu özelliklerinin tam listesi ve açıklamaları için bkz. [Yük testi senaryo özellikleri](../test/load-test-scenario-properties.md).
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-**Yeni kullanıcılar özelliğinin yüzdesi** **Özellikler** penceresinde ayarlanır. **Yük Testi Düzenleyicisi**yük testi senaryosu özelliklerini düzenleyebilirsiniz.
+**Yeni kullanıcılar özelliğinin yüzdesi** **Özellikler** penceresinde ayarlanır. **Yük Testi Düzenleyicisi** yük testi senaryosu özelliklerini düzenleyebilirsiniz.
 
 **Yeni kullanıcılar özelliğinin yüzdesi** , yük testinin bir Web tarayıcısı tarafından gerçekleştirilecek önbelleğe alma işlemini taklit etme yöntemini etkiler. Varsayılan olarak, **yeni kullanıcılar özelliğinin yüzdesi** %0 olarak ayarlanır. **Yeni kullanıcılar özelliğinin yüzdesi** %100 olarak ayarlanırsa, bir yük testinde her Web performans testi çalıştırması, önceki ziyaretlerden tarayıcı önbelleğinde Web sitesinden hiçbir içerik bulunmayan Web sitesine ilk Kullanıcı gibi davranır. Bu nedenle, görüntü gibi tüm bağımlı istekler de dahil olmak üzere Web testinde yapılan tüm istekler indirilir.
 

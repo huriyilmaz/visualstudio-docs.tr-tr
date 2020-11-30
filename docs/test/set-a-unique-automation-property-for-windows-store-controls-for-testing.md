@@ -1,5 +1,6 @@
 ---
 title: Benzersiz bir Otomasyon özelliği ayarlama-test UWP denetimleri
+description: Kodlanmış UI testi çalıştırmak için XAML tabanlı UWP uygulamanızda XAML denetiminin türüne göre benzersiz bir Otomasyon özelliği atamayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 05/31/2018
 ms.topic: how-to
@@ -8,12 +9,12 @@ manager: jillfra
 ms.workload:
 - uwp
 author: mikejo5000
-ms.openlocfilehash: 1790ac51f513ddcb42500eb271212b68a4aefe63
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 5af4f9c70696144e0efb420ab27860a1969bddc6
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810226"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328335"
 ---
 # <a name="set-a-unique-automation-property-for-uwp-controls-for-testing"></a>Test için UWP denetimleri için benzersiz bir Otomasyon özelliği ayarlama
 
@@ -44,7 +45,7 @@ Denetimin XAML içindeki **Content** özelliğini kullanarak **AutomationPropert
 Denetim için XAML 'de **AutomationProperties. AutomationId** öğesini **buttonx** olarak ayarlayın.
 
 ```xaml
-<Button AutomationProperties.AutomationId="ButtonX" Height="31" HorizontalAlignment="Left" Margin="23,26,0,0"  VerticalAlignment="Top" Width="140" Click="ButtonX_Click" />
+<Button AutomationProperties.AutomationId="ButtonX" Height="31" HorizontalAlignment="Left" Margin="23,26,0,0"  VerticalAlignment="Top" Width="140" Click="ButtonX_Click" />
 ```
 
 Denetimin XAML içinde **AutomationProperties.Name** öğesini **buttony** olarak ayarlayın.
@@ -55,13 +56,13 @@ Denetimin XAML içinde **AutomationProperties.Name** öğesini **buttony** olara
 
 ## <a name="assign-unique-names"></a>Benzersiz adlar ata
 
-Visual Studio için Blend ' de, denetimler, liste kutuları, Birleşik giriş kutuları ve metin kutuları gibi etkileşimli öğelere benzersiz adlar atamak için bir seçenek belirleyebilirsiniz. Bu, denetimleri **AutomationProperties.Name**için benzersiz değerler sağlar.
+Visual Studio için Blend ' de, denetimler, liste kutuları, Birleşik giriş kutuları ve metin kutuları gibi etkileşimli öğelere benzersiz adlar atamak için bir seçenek belirleyebilirsiniz. Bu, denetimleri **AutomationProperties.Name** için benzersiz değerler sağlar.
 
 Varolan denetimlere benzersiz adlar atamak için **Araçlar**  >  **adı etkileşimli öğeler**' i seçin.
 
 ![Visual Studio için Blend etkileşimli öğeleri adlandırın](../test/media/cuit_windowsstoreproperty_blend_1.png)
 
-Eklediğiniz yeni denetimlere otomatik olarak benzersiz adlar vermek için, **Tools**  >  **Seçenekler** iletişim kutusunu açmak üzere Araçlar**Seçenekler** ' i seçin. **XAML Tasarımcısı** ' yi seçin ve sonra **otomatik olarak etkileşimli öğeleri oluşturma '** yı seçin. İletişim kutusunu kapatmak için **Tamam ' ı** seçin.
+Eklediğiniz yeni denetimlere otomatik olarak benzersiz adlar vermek için, **Tools**  >  **Seçenekler** iletişim kutusunu açmak üzere Araçlar **Seçenekler** ' i seçin. **XAML Tasarımcısı** ' yi seçin ve sonra **otomatik olarak etkileşimli öğeleri oluşturma '** yı seçin. İletişim kutusunu kapatmak için **Tamam ' ı** seçin.
 
 ## <a name="use-a-data-template"></a>Veri şablonu kullanma
 
@@ -100,7 +101,7 @@ Ayrıca, değerlerini değişkenlere bağlamak için **ItemContainerStyle** içe
 </ListBox>
 ```
 
-Bu örneklerin her ikisi için de, aşağıdaki kod örneğini kullanarak gösterildiği gibi **ItemSource**için **ToString ()** yöntemini geçersiz kılmanız gerekir. Bu kod, bağlama kullanarak her bir veri bağlama listesi öğesi için benzersiz bir Otomasyon özelliği ayarlayamadığı için **AutomationProperties.Name** değerinin ayarlanmış ve benzersiz olduğundan emin olur. Bu durumda **Automation Properties.Name** için benzersiz bir değer ayarlanması yeterlidir.
+Bu örneklerin her ikisi için de, aşağıdaki kod örneğini kullanarak gösterildiği gibi **ItemSource** için **ToString ()** yöntemini geçersiz kılmanız gerekir. Bu kod, bağlama kullanarak her bir veri bağlama listesi öğesi için benzersiz bir Otomasyon özelliği ayarlayamadığı için **AutomationProperties.Name** değerinin ayarlanmış ve benzersiz olduğundan emin olur. Bu durumda **Automation Properties.Name** için benzersiz bir değer ayarlanması yeterlidir.
 
 > [!NOTE]
 > Bu yaklaşımı kullanarak, liste öğesinin iç içeriği, bağlama yoluyla çalışan sınıfında bir dizeye de ayarlanabilir. Örnekte gösterildiği gibi, her liste öğesinin içindeki düğme denetimine, çalışan KIMLIĞI olan benzersiz bir Otomasyon kimliği atanır.

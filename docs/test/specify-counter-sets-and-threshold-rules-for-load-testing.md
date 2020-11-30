@@ -1,5 +1,7 @@
 ---
 title: Yük testi için sayaç kümeleri ve eşik kuralları
+description: Yük testinde sayaç kümeleri ve eşik kuralları belirtmeyi öğrenin. Test edilen sunucuları, sayaçların toplanacağı bilgisayar listesine ekleyin.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,16 +15,16 @@ ms.assetid: 9e14d955-f3a4-4717-bbfe-7f08cdda5678
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 440bc01b52269c477d9d2f2194fd831041f1d20d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 04348eb2d88c560e9687c687486e6b44d8394371
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75596326"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328957"
 ---
 # <a name="specify-counter-sets-and-threshold-rules-for-computers-in-a-load-test"></a>Yük testinde bilgisayarlar için sayaç kümeleri ve eşik kuralları belirtme
 
-Yük testleri, performans sayacı verilerini çözümlediğinizde kullanışlı olan adlandırılmış sayaç kümeleri sağlar. Sayaç kümeleri teknolojiye göre düzenlenir ve Application, ASP.NET, .NET Application, IIS ve SQL dahil. **Yeni Yük Testi Sihirbazı**kullanarak bir yük testi oluşturduğunuzda, ilk sayaç kümesini eklersiniz. Bunlar, yük testiniz için önceden tanımlanmış ve önemli sayaç kümeleri kümesi sunar. Sayaçlarınızı **Yük Testi Düzenleyicisi**yönetirsiniz.
+Yük testleri, performans sayacı verilerini çözümlediğinizde kullanışlı olan adlandırılmış sayaç kümeleri sağlar. Sayaç kümeleri teknolojiye göre düzenlenir ve Application, ASP.NET, .NET Application, IIS ve SQL dahil. **Yeni Yük Testi Sihirbazı** kullanarak bir yük testi oluşturduğunuzda, ilk sayaç kümesini eklersiniz. Bunlar, yük testiniz için önceden tanımlanmış ve önemli sayaç kümeleri kümesi sunar. Sayaçlarınızı **Yük Testi Düzenleyicisi** yönetirsiniz.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
@@ -40,13 +42,13 @@ Test edilen sunucuları, sayaçların toplanacağı bilgisayar listesine eklemen
 |Görevler|İlişkili Konular|
 |-|-----------------------|
 |**Yük testiniz için sayaç kümelerini yönetme:** Yük testinizi oluşturduktan sonra, Yük Testi Düzenleyicisi sayaç kümesini düzenleyebilirsiniz. Sayaç kümelerini yönetmek, performans verilerini toplamak istediğiniz bilgisayar kümesini seçmeyi ve her bir bilgisayardan toplanacak bir dizi sayaç kümesi atamayı içerir. Sayaçlarınızı Yük Testi Düzenleyicisi yönetirsiniz.|-   [Nasıl yapılır: sayaç kümelerini yönetme](../test/how-to-manage-counter-sets-using-the-load-test-editor.md)|
-|**Yük testinize sayaç kümeleri ekleyin:** **Yeni Yük Testi Sihirbazı**bir yük testi oluşturduğunuzda, ilk sayaç kümesini eklersiniz. Bunlar, yük testiniz için önceden tanımlanmış sayaç kümeleri kümesi sunar. Yük testi oluşturduktan sonra, Yük Testi Düzenleyicisi kullanarak mevcut sayaç kümelerine yeni sayaçlar ekleyebilirsiniz.|-   [Nasıl yapılır: sayaç kümelerine sayaç ekleme](../test/how-to-add-counters-to-counter-sets-using-the-load-test-editor.md)<br />-   [Nasıl yapılır: özel sayaç kümeleri ekleme](../test/how-to-add-custom-counter-sets-using-the-load-test-editor.md)|
+|**Yük testinize sayaç kümeleri ekleyin:** **Yeni Yük Testi Sihirbazı** bir yük testi oluşturduğunuzda, ilk sayaç kümesini eklersiniz. Bunlar, yük testiniz için önceden tanımlanmış sayaç kümeleri kümesi sunar. Yük testi oluşturduktan sonra, Yük Testi Düzenleyicisi kullanarak mevcut sayaç kümelerine yeni sayaçlar ekleyebilirsiniz.|-   [Nasıl yapılır: sayaç kümelerine sayaç ekleme](../test/how-to-add-counters-to-counter-sets-using-the-load-test-editor.md)<br />-   [Nasıl yapılır: özel sayaç kümeleri ekleme](../test/how-to-add-custom-counter-sets-using-the-load-test-editor.md)|
 |**Yük testiniz için sayaçları kullanarak bir eşik kuralı belirtin:** Eşik kuralı, bir yük testi sırasında sistem kaynak kullanımını izlemek için bireysel bir performans sayacı üzerinde ayarlanan bir kuraldır. Sayaç kümesi tanımları birçok ana performans sayacı için önceden tanımlanmış eşik kuralları içerir. Yük testlerinde eşik kuralları bir performans sayacı değerini sabit bir değerle veya başka bir performans sayacı değeriyle karşılaştırır.|-   [Nasıl yapılır: eşik kuralı ekleme](../test/how-to-add-a-threshold-rule-using-the-load-test-editor.md)|
 |**Sayaç kümelerinin eşlendiği bilgisayarlara kolay adlar atayın:** Bilgisayara kolayca tanınan bir ad uygulamanızı sağlayan bilgisayar etiketleri ekleyebilirsiniz. Etiketler, Yük Testi Düzenleyicisi ağacın **sayaç kümesi eşlemeleri** düğümünde görüntülenir. Daha önemli olan Etiketler, paydaşların bilgisayarın yük testinde hangi rolün olduğunu belirlemesine yardımcı olan Excel raporlarında görüntülenir. Örneğin, "Web 'de Sunucu1, lab2" veya "Phoenix ofisinde SQL Sunucu2" gibi.<br /><br /> Daha fazla bilgi için bkz. [Test karşılaştırmaları veya eğilim analizi Için rapor yükleme testleri sonuçları](../test/compare-load-test-results.md).||
 
 ## <a name="use-counter-sets"></a>Sayaç kümelerini kullanma
 
-Yük testi araçları, zaman içinde sayaçları kullanarak performans verilerini toplar ve grafiğini çizin. Sayaç verileri, bir yük testi çalıştırması sırasında Kullanıcı tarafından belirtilen aralıklarda toplanır. Daha fazla bilgi için bkz. [nasıl yapılır: örnek hızını belirtme](../test/how-to-specify-the-sample-rate-for-a-load-test.md). Çalışma zamanında sayaçları görüntüleyebilir veya *Yük Testi Çözümleyicisini*kullanarak bir yük testi çalıştırdıktan sonra bunları görüntüleyebilirsiniz.
+Yük testi araçları, zaman içinde sayaçları kullanarak performans verilerini toplar ve grafiğini çizin. Sayaç verileri, bir yük testi çalıştırması sırasında Kullanıcı tarafından belirtilen aralıklarda toplanır. Daha fazla bilgi için bkz. [nasıl yapılır: örnek hızını belirtme](../test/how-to-specify-the-sample-rate-for-a-load-test.md). Çalışma zamanında sayaçları görüntüleyebilir veya *Yük Testi Çözümleyicisini* kullanarak bir yük testi çalıştırdıktan sonra bunları görüntüleyebilirsiniz.
 
 Sayaç verileri, sunucuda ve testin çalıştırıldığı herhangi bir bilgisayarda toplanır. Testlerinizin çalıştırılacağı bir aracı bilgisayarları kümesi ayarladıysanız, sayaçlar bu bilgisayarlarda da toplanır.
 
@@ -75,7 +77,7 @@ Yük testinin uzunluğuna bağlı olarak yük testi çalıştırma ayarlarındak
 
 ## <a name="store-performance-data"></a>Performans verilerini depolayın
 
-Yük testi çalıştırması sırasında, performans sayacı verileri toplanır ve *load test sonuçları deposunda*depolanır. Daha fazla bilgi için bkz. yük testi sonuçları [deposundaki yük testi sonuçlarını yönetme](../test/manage-load-test-results-in-the-load-test-results-repository.md).
+Yük testi çalıştırması sırasında, performans sayacı verileri toplanır ve *load test sonuçları deposunda* depolanır. Daha fazla bilgi için bkz. yük testi sonuçları [deposundaki yük testi sonuçlarını yönetme](../test/manage-load-test-results-in-the-load-test-results-repository.md).
 
 ## <a name="about-threshold-rules"></a>Eşik kuralları hakkında
 
@@ -93,9 +95,9 @@ Eşik kuralları oluştururken kural düzeylerini de ayarlarsınız. Düzeyler, 
 
 ## <a name="the-alert-if-over-property"></a>Eğer Özellik üzerindeyken uyarır
 
-Bir eşiği aşan bir sorun olduğunu belirtmek için özelliği **true** olarak ayarlandıysa **uyarıyı** ayarlayın. Örneğin, eşik kuralı **% Işlemci zamanı**üzerinde ayarlandıysa ve değer 90 ' den büyükse uyarılmak Istiyorsanız, sabit kural türünü **Karşılaştır** ' ı kullanın, **kritik eşik değerini** 90 olarak ayarlayın ve **true** **ise uyarıyı** ayarlayın.
+Bir eşiği aşan bir sorun olduğunu belirtmek için özelliği **true** olarak ayarlandıysa **uyarıyı** ayarlayın. Örneğin, eşik kuralı **% Işlemci zamanı** üzerinde ayarlandıysa ve değer 90 ' den büyükse uyarılmak Istiyorsanız, sabit kural türünü **Karşılaştır** ' ı kullanın, **kritik eşik değerini** 90 olarak ayarlayın ve **true** **ise uyarıyı** ayarlayın.
 
-Eşiğin altına düşülecek bir sorun olduğunu belirtmek için, özelliği **false** olarak ayarlandıysa **uyarıyı** ayarlayın. Örneğin, eşik kuralı **istekler/sn**üzerinde ayarlandıysa ve değer 50 ' in altındaysa uyarılmak Istiyorsanız, sabit kural türünü **Karşılaştır** ' ı kullanın, **kritik eşik değerini** 50 olarak ayarlayın ve **false** **ise uyarı** olarak ayarlayın.
+Eşiğin altına düşülecek bir sorun olduğunu belirtmek için, özelliği **false** olarak ayarlandıysa **uyarıyı** ayarlayın. Örneğin, eşik kuralı **istekler/sn** üzerinde ayarlandıysa ve değer 50 ' in altındaysa uyarılmak Istiyorsanız, sabit kural türünü **Karşılaştır** ' ı kullanın, **kritik eşik değerini** 50 olarak ayarlayın ve **false** **ise uyarı** olarak ayarlayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,5 +1,7 @@
 ---
 title: Çözümler için üst kapsayıcı klasörleri oluşturma | Microsoft Docs
+description: Bir çözüm içindeki tüm Web projeleri için tek bir kök kaynak denetimi hedefi belirtmek üzere kaynak denetimi eklentisi API 'SI sürüm 1,2 ' i nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3e5481e20a12fc05ccba97eef55173e5ce9b30d6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e65da2b50984b0259079a1693dd31d400e1e12e3
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80709096"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329945"
 ---
 # <a name="create-parent-container-folders-for-solutions"></a>Çözümler için üst kapsayıcı klasörleri oluşturma
 Kaynak denetimi eklentisi API sürümü 1,2 ' de, bir Kullanıcı Çözümdeki tüm Web projeleri için tek bir kök kaynak denetimi hedefi belirtebilir. Bu tek köke süper Birleşik kök (SUR) denir.
@@ -45,7 +47,7 @@ Kaynak denetimi eklentisi API sürümü 1,2 ' de, bir Kullanıcı Çözümdeki t
 
 ' De [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , sur klasörünün adının uzantı olmadan çözüm adıyla aynı olması önerilir. Aşağıdaki tabloda, iki sürümündeki davranış özetlenmektedir.
 
-|Öne çıkan özelliği|Kaynak denetimi eklentisi API sürümü 1,1|Kaynak denetimi eklentisi API sürümü 1,2|
+|Özellik|Kaynak denetimi eklentisi API sürümü 1,1|Kaynak denetimi eklentisi API sürümü 1,2|
 |-------------| - | - |
 |SCC 'e çözüm ekleme|SccInitialize ()<br /><br /> SccGetProjPath ()<br /><br /> SccGetProjPath ()<br /><br /> SccOpenProject ()|SccInitialize ()<br /><br /> SccGetProjPath ()<br /><br /> Scccreatealt projesi ()<br /><br /> Scccreatealt projesi ()<br /><br /> SccOpenProject ()|
 |Kaynak denetimli çözüme proje ekleme|SccGetProjPath ()<br /><br /> OpenProject ()|SccGetParentProjectPath ()<br /><br /> SccOpenProject ()<br /><br />  **Note:**  Visual Studio, bir çözümün bir doğrudan SUR 'in alt öğesi olduğunu varsayar.|
@@ -60,9 +62,9 @@ Kaynak denetimi eklentisi API sürümü 1,2 ' de, bir Kullanıcı Çözümdeki t
 
  Bir hata nedeniyle işlemin iptal edilip edilmeyeceğini veya başarısız olup olmamasından bağımsız olarak, SUR klasörü ve alt klasörleri oluşturulur. Bunlar, iptal veya hata koşullarında otomatik olarak kaldırılmaz.
 
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Kaynak denetimi eklentisi ve yetenek bayrakları döndürmezse varsayılan sürüm 1,1 davranışına `SCC_CAP_CREATESUBPROJECT` `SCC_CAP_GETPARENTPROJECT` sahiptir. Ayrıca, kullanıcıları [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] aşağıdaki anahtarın değerini *DWORD: 00000001*olarak ayarlayarak sürüm 1,1 davranışına döndürmeyi seçebilir:
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Kaynak denetimi eklentisi ve yetenek bayrakları döndürmezse varsayılan sürüm 1,1 davranışına `SCC_CAP_CREATESUBPROJECT` `SCC_CAP_GETPARENTPROJECT` sahiptir. Ayrıca, kullanıcıları [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] aşağıdaki anahtarın değerini *DWORD: 00000001* olarak ayarlayarak sürüm 1,1 davranışına döndürmeyi seçebilir:
 
- **[HKEY_CURRENT_USER \Software\Microsoft\VisualStudio\8.0\SourceControl] DoNotCreateSolutionRootFolderInSourceControl**  =  *DWORD: 00000001*
+ **[HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0\SourceControl] DoNotCreateSolutionRootFolderInSourceControl**  =  *DWORD: 00000001*
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Kaynak denetimi eklentisi API sürümü 1,2 ' deki yenilikler](../../extensibility/internals/what-s-new-in-the-source-control-plug-in-api-version-1-2.md)

@@ -1,5 +1,7 @@
 ---
 title: Test denetleyicileri ve test aracıları için zaman aşımı süreleri
+description: İlişkili XML yapılandırma dosyalarını düzenleyerek test denetleyicisi ve test aracısının zaman aşımı değerlerini değiştirmeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.assetid: 777d0db5-0073-458a-a2a3-58b1c1f24c60
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 7b06dc7d363cefd568a6e1432582744f486fa222
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9dc661999eb12bb679aa3622f0f14adc3ffc661a
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85287291"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96330010"
 ---
 # <a name="how-to-specify-timeout-periods-for-test-controllers-and-test-agents"></a>Nasıl yapılır: test denetleyicileri ve test aracıları için zaman aşımı sürelerini belirtme
 
@@ -28,7 +30,7 @@ Bir test denetleyicisini veya test aracısının çeşitli zaman aşımı ayarla
 
 - Test denetleyicisi: *QTController.exe.config*
 
-    |Anahtar adı|Description|Değer|
+    |Anahtar adı|Açıklama|Değer|
     |-|-----------------|-|
     |AgentConnectionTimeoutInSeconds|Bağlantının kaybolduğu kabul edilmeden önce aracı ping isteği için beklenecek saniye sayısı.|"n" saniye.|
     |Agentsynctimeoutınseconds|Bir eşitleme testi çalıştırması başlattığınızda, çalıştırmayı iptal etmeden önce tüm aracıların eşitlenmesi için beklenecek saniye sayısı.|"n" saniye.|
@@ -37,7 +39,7 @@ Bir test denetleyicisini veya test aracısının çeşitli zaman aşımı ayarla
 
 - Test Aracısı: *QTAgentService.exe.config*
 
-    |Anahtar adı|Description|Değer|
+    |Anahtar adı|Açıklama|Değer|
     |-|-----------------|-|
     |ControllerConnectionPeriodInSeconds|Denetleyiciye bağlanma denemeleri arasındaki saniye sayısı.|"n" saniye. Varsayılan: "30" (otuz saniye).|
     |RemotingTimeoutSeconds|Uzaktan iletişim çağrısının en uzun süre (saniye cinsinden).|"n" saniye. Varsayılan: "600" (on dakika).|
@@ -46,7 +48,7 @@ Bir test denetleyicisini veya test aracısının çeşitli zaman aşımı ayarla
 
 ## <a name="to-specify-agent-timeout-options-for-a-test-controller"></a>Bir test denetleyicisi için aracı zaman aşımı seçeneklerini belirtmek için
 
-1. *% ProgramFiles (x86)% \ Microsoft Visual Studio\2017\Enterprise\Common7\IDE*içinde bulunan *QTCcontroller.exe.config* XML yapılandırma dosyasını açın.
+1. *% ProgramFiles (x86)% \ Microsoft Visual Studio\2017\Enterprise\Common7\IDE* içinde bulunan *QTCcontroller.exe.config* XML yapılandırma dosyasını açın.
 
 2. `<appSettings>`Etiketi bulun.
 
@@ -80,7 +82,7 @@ Bir test denetleyicisini veya test aracısının çeşitli zaman aşımı ayarla
 
 ## <a name="to-specify-agent-timeout-options-for-a-test-agent"></a>Bir test aracısı için aracı zaman aşımı seçeneklerini belirtmek için
 
-1. *% ProgramFiles (x86)% \ Microsoft Visual Studio\2017\Enterprise\Common7\IDE*içinde bulunan *QTAgentService.exe.config* XML yapılandırma dosyasını açın.
+1. *% ProgramFiles (x86)% \ Microsoft Visual Studio\2017\Enterprise\Common7\IDE* içinde bulunan *QTAgentService.exe.config* XML yapılandırma dosyasını açın.
 
 2. `<appSettings>`Etiketi bulun.
 

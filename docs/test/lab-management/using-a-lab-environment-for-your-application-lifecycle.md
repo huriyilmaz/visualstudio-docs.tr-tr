@@ -1,5 +1,7 @@
 ---
 title: DevOps için laboratuvar ortamı kullanma
+description: Laboratuvar ortamları ve Azure Pipelines ile bulutu kullanmayı ve Team Foundation Server derleme ve yayınlama hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 05/02/2017
 ms.topic: how-to
 helpviewer_keywords:
@@ -9,18 +11,18 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 1a5958b03b9797882b3df37f4ba99c75ff832d22
-ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
+ms.openlocfilehash: cb25561f70882336a1143918d3cf78849b394065
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91928114"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328931"
 ---
 # <a name="use-a-lab-environment-for-your-devops"></a>DevOps 'niz için laboratuvar ortamı kullanma
 
 Laboratuvar ortamı, uygulama geliştirmek ve test etmek için kullanabileceğiniz sanal ve fiziksel makinelerin bir koleksiyonudur. Laboratuvar ortamında, iş istasyonları, Web sunucuları ve veritabanı sunucuları gibi çok katmanlı uygulamaları test etmek için gereken birden çok rol bulunabilir. Ayrıca, uygulamanızda otomatikleştirilmiş testler oluşturma, dağıtma ve çalıştırma sürecini otomatik hale getirmek için Laboratuvar ortamınıza sahip bir yapı dağıtımı test iş akışı kullanabilirsiniz.
 
-* **Otomatikleştirilmiş testleri çalıştırmak için bir test planı kullanın** - *test planı*olarak adlandırılan otomatikleştirilmiş testlerin bir koleksiyonunu çalıştırabilir ve ilerleme durumunu görüntüleyebilirsiniz.
+* **Otomatikleştirilmiş testleri çalıştırmak için bir test planı kullanın** - *test planı* olarak adlandırılan otomatikleştirilmiş testlerin bir koleksiyonunu çalıştırabilir ve ilerleme durumunu görüntüleyebilirsiniz.
 
 * **Yapı-dağıtma-test iş akışı kullanma** -birden çok katmanlı uygulamaları otomatik olarak test etmek için bir yapı dağıtma test iş akışı kullanabilirsiniz. Tipik bir örnek, derleme Başlatan bir iş akışıdır, derleme dosyalarını bir laboratuar ortamında uygun makinelere dağıtır ve ardından otomatikleştirilmiş testleri gerçekleştirir. Ayrıca, iş akışınızı belirli aralıklarda çalışacak şekilde zamanlayabilirsiniz.
 
@@ -30,9 +32,9 @@ Yaygın laboratuvar ortamı Topolojilerine örnekler aşağıda verilmiştir:
 
 | Topoloji | Açıklama |
 |---|---|
-|![Yalnızca sunucu topolojisi](../media/topology_backend.png)| Bu laboratuvar ortamında, genellikle sunucu uygulamalarında el ile testleri çalıştırmak için kullanılan ve Test edicilerin ortamdaki hataları doğrulamak için kendi istemci makinelerini kullanmasına izin veren bir *sunucu topolojisi*vardır. Bir arka uç topolojisinde, Laboratuvar ortamınız yalnızca sunucular içerir. Bu tür bir topoloji kullandığınızda, genellikle ortamı parçası olmayan bir istemci makinesini kullanarak Laboratuvar ortamındaki sunuculara bağlanırsınız.|
-|![Bulut Laboratuvarı ortamı](../media/topology_cloud.png)| Bu laboratuvar ortamı _sunucu topolojisi_olarak benzer özellikler ve özellikler sağlar, ancak yerel bir ortamda çalışan fiziksel veya sanal makinelerin gereksinimini ortadan kaldırır; Bu, kurulum süresini azaltabilir, bakımın basitleşebilir ve maliyeti en aza indirir. Özel ağlarla birlikte birden çok Web sitesi ve sanal makine ayarlamak, Microsoft Azure gibi bir bulut ortamında hızlı ve kolaydır.|
-|![İstemci-sunucu Laboratuvarı ortamı](../media/topology_clientserver.png)| Bu laboratuvar ortamında, genellikle sunucu ve istemci bileşenlerine sahip bir uygulamayı test etmek için kullanılan bir *istemci-sunucu topolojisi*vardır. Bir istemci/sunucu topolojisinde, uygulamanızı test etmek için kullanılan tüm istemci ve sunucu makineleri Laboratuvar ortamınızda bulunur. Bu topolojiyi kullandığınızda, testlerinizi etkileyen her makineden test verileri toplayabilirsiniz.|
+|![Yalnızca sunucu topolojisi](../media/topology_backend.png)| Bu laboratuvar ortamında, genellikle sunucu uygulamalarında el ile testleri çalıştırmak için kullanılan ve Test edicilerin ortamdaki hataları doğrulamak için kendi istemci makinelerini kullanmasına izin veren bir *sunucu topolojisi* vardır. Bir arka uç topolojisinde, Laboratuvar ortamınız yalnızca sunucular içerir. Bu tür bir topoloji kullandığınızda, genellikle ortamı parçası olmayan bir istemci makinesini kullanarak Laboratuvar ortamındaki sunuculara bağlanırsınız.|
+|![Bulut Laboratuvarı ortamı](../media/topology_cloud.png)| Bu laboratuvar ortamı _sunucu topolojisi_ olarak benzer özellikler ve özellikler sağlar, ancak yerel bir ortamda çalışan fiziksel veya sanal makinelerin gereksinimini ortadan kaldırır; Bu, kurulum süresini azaltabilir, bakımın basitleşebilir ve maliyeti en aza indirir. Özel ağlarla birlikte birden çok Web sitesi ve sanal makine ayarlamak, Microsoft Azure gibi bir bulut ortamında hızlı ve kolaydır.|
+|![İstemci-sunucu Laboratuvarı ortamı](../media/topology_clientserver.png)| Bu laboratuvar ortamında, genellikle sunucu ve istemci bileşenlerine sahip bir uygulamayı test etmek için kullanılan bir *istemci-sunucu topolojisi* vardır. Bir istemci/sunucu topolojisinde, uygulamanızı test etmek için kullanılan tüm istemci ve sunucu makineleri Laboratuvar ortamınızda bulunur. Bu topolojiyi kullandığınızda, testlerinizi etkileyen her makineden test verileri toplayabilirsiniz.|
 
 :::row:::
     :::column:::
@@ -75,7 +77,7 @@ Laboratuvar Yönetimi System Center Virtual Machine Manager (SCVMM) ile birlikte
 
 ### <a name="standard-environments-and-scvmm-environments"></a>Standart ortamlar ve SCVMM ortamları
 
-Visual Studio Laboratuvar Yönetimi: **Standart ortamlar** ve **SCVMM ortamları**ile oluşturabileceğiniz iki tür laboratuvar ortamı vardır. Ancak, her bir ortam türünün özellikleri farklıdır.
+Visual Studio Laboratuvar Yönetimi: **Standart ortamlar** ve **SCVMM ortamları** ile oluşturabileceğiniz iki tür laboratuvar ortamı vardır. Ancak, her bir ortam türünün özellikleri farklıdır.
 
 **Standart ortamlar:** sanal ve fiziksel makinelerin bir karışımını içerebilir. Ayrıca, üçüncü taraf sanallaştırma çerçeveleri tarafından yönetilen standart bir ortama sanal makineler ekleyebilirsiniz. Ayrıca, standart ortamlar bir SCVMM sunucusu gibi ek sunucu kaynakları gerektirmez.
 

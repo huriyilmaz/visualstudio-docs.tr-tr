@@ -1,5 +1,7 @@
 ---
 title: Statik yardımcı sınıfları | Microsoft IntelliTest geliştirici test aracı
+description: IntelliTest 'in parametreli birim testlerini yazmak için sağladığı statik yardımcı sınıfları hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 05/02/2017
 ms.topic: reference
 helpviewer_keywords:
@@ -9,12 +11,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 5010761213cf79756cf8da3d2fffe60dd0b61efd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f11b4f7d456e588e6a2920580766ce06530227e0
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89315193"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329477"
 ---
 # <a name="static-helper-classes"></a>Statik yardımcı sınıfları
 
@@ -38,7 +40,7 @@ Kabul edilen koşul bazı test girişleri için Tutulmasa, bir **PexAssumeFailed
 
 **Örnek**
 
-Şu parametreli test, **j = 0**olarak kabul etmez:
+Şu parametreli test, **j = 0** olarak kabul etmez:
 
 ```csharp
 public void TestSomething(int i, int j) {
@@ -85,7 +87,7 @@ public void TestSomething(int i) {
 
 Bir teste yardımcı giriş değerleri sağlayan statik bir sınıf, [parametreli modülleri](input-generation.md#parameterized-mocks)uygulamak için kullanılabilir.
 
-**PexChoose** sınıfı, bir testin belirli giriş değerleri için başarılı veya başarısız olup olmadığını belirlemede yardımcı değildir. **PexChoose** , *seçenek*olarak da adlandırılan giriş değerlerini sağlar. Bu, giriş değerlerini kısıtlamak ve bir testin ne zaman başarılı veya başarısız olduğunu tanımlayan onaylamaları yazmak için hala kullanıcıya kadar sürer.
+**PexChoose** sınıfı, bir testin belirli giriş değerleri için başarılı veya başarısız olup olmadığını belirlemede yardımcı değildir. **PexChoose** , *seçenek* olarak da adlandırılan giriş değerlerini sağlar. Bu, giriş değerlerini kısıtlamak ve bir testin ne zaman başarılı veya başarısız olduğunu tanımlayan onaylamaları yazmak için hala kullanıcıya kadar sürer.
 
 **İşlem modları**
 

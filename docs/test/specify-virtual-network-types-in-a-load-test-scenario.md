@@ -1,5 +1,6 @@
 ---
 title: Sanal ağ türlerini belirtin (yük testi)
+description: Son kullanıcıların uygulamalarınızla nasıl etkileşime gireceğini daha yakından bir şekilde oluşturmak için bir ağ karışımını nasıl kullanacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
@@ -13,18 +14,18 @@ ms.assetid: 3c4f7874-081a-4ec4-9510-4d6d7d863a11
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: b505ae281042264d909b72ff0f7911381a2d8ad8
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 94973f8f791158f408b841442478dcfa6aeeff58
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809878"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96330218"
 ---
 # <a name="specify-virtual-network-types-in-a-load-test-scenario"></a>Yük testi senaryosunda sanal ağ türlerini belirtme
 
 *Ağ karışımı* , yük testi senaryosunda yükün daha gerçekçi bir şekilde benzetimini yapmanızı sağlar. Yük, tek bir ağ türü yerine farklı ağ türleri karışımı kullanılarak oluşturulur. Son kullanıcıların uygulamalarınızla nasıl etkileşime gireceğini daha yakından bir şekilde oluşturursunuz.
 
-Ağ karışımı, belirli bir *ağ profilini*çalıştıran bir sanal kullanıcının olasılığını belirtir. Ağ profili, uygulama katmanında ağ bant genişliğinin bir simülasyonu olur. Gecikme süresini benzemez.
+Ağ karışımı, belirli bir *ağ profilini* çalıştıran bir sanal kullanıcının olasılığını belirtir. Ağ profili, uygulama katmanında ağ bant genişliğinin bir simülasyonu olur. Gecikme süresini benzemez.
 
 Bir yük testi oluşturduğunuzda, yükün birden fazla ağ bağlantısı türü aracılığıyla üretilmekte olduğunu benzetmek isteyebilirsiniz. Ağ karışımı birkaç ağ türü sunar. Farklı ağlar benzetilir. Gibi bir seçenek belirlediğinizde `Cable-DSL 1.5Mbps` , seçili bant genişliğinin benzetimini yapmak için bekleme süreleri teste eklenir.
 

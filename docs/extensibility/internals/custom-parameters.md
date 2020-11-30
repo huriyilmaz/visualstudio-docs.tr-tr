@@ -1,5 +1,7 @@
 ---
 title: Özel parametreler | Microsoft Docs
+description: Bir sihirbaz başladıktan sonra bir. vsz dosyasını değiştirerek sihirbazın çalışmasını denetleyen özel parametreler oluşturmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: cd52a49daa7d57a21d8cb0896f7108efa09e32b2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f2fd2ba746f10094a79f1b37e57ba4ca90ff117b
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708941"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328450"
 ---
 # <a name="custom-parameters"></a>Özel parametreler
 Özel parametreler sihirbaz başladıktan sonra sihirbazın işlemini denetler. İlgili bir *. vsz* dosyası, tümleşik geliştirme ORTAMı (IDE) tarafından paketlenmiş ve sihirbaz başlatıldığında dize dizisi olarak sihirbaza geçilen Kullanıcı tanımlı parametrelerin dizisini sağlar. Sihirbaz daha sonra dizeler dizisini ayrıştırır ve sihirbazın gerçek işlemini denetlemek için bu bilgileri kullanır. Bu şekilde, bir sihirbaz *. vsz* dosyasının içeriğine bağlı olarak işlevselliği özelleştirebilir.

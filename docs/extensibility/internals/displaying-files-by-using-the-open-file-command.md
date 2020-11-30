@@ -1,5 +1,7 @@
 ---
 title: Dosya Aç komutunu kullanarak dosyaları görüntüleme | Microsoft Docs
+description: Visual Studio tümleşik geliştirme ortamının (IDE) dosyaları göstermek için Dosya menüsünde Dosya Aç komutunu nasıl işlediğini öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: cc18442c55b6989c4d8668e1425fdd62a2d4b1b6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5a932a9b56a63069e010cb2b945de25564c2d135
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708592"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328346"
 ---
 # <a name="display-files-by-using-the-open-file-command"></a>Dosya Aç komutunu kullanarak dosyaları görüntüleme
 Aşağıdaki adımlarda IDE 'nin içindeki **Dosya** menüsünde bulunan **Açık dosya** komutunu nasıl işlediği açıklanır [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Bu adımlar, projelerin bu komuttan kaynaklanan çağrılara nasıl yanıt vereceğini de açıklamaktadır.

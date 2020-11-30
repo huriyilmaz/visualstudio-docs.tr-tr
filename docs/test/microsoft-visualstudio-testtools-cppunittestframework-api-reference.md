@@ -1,5 +1,7 @@
 ---
 title: Microsoft. VisualStudio. TestTools. CppUnitTestFramework API 'SI
+description: Bu makalede, Microsoft yerel birim testi çerçevesini temel alan C++ birim testlerini yazmak için kullanabileceğiniz CppUnitTestFramework üyeleri açıklanmaktadır.
+ms.custom: SEO-VS-2020
 ms.date: 09/27/2019
 ms.topic: reference
 ms.author: corob
@@ -7,18 +9,18 @@ manager: jillfra
 ms.workload:
 - multiple
 author: corob-msft
-ms.openlocfilehash: 16ea629312237dd859e9eb1aad21b9b219de7229
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b552ff667d4b7aef5f982d4fb0cda78d65c98ed6
+ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "82109435"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96329191"
 ---
 # <a name="microsoftvisualstudiotesttoolscppunittestframework-api-reference"></a>Microsoft. VisualStudio. TestTools. CppUnitTestFramework API başvurusu
 
 Bu konu, ad alanının ortak üyelerini listeler `Microsoft::VisualStudio::CppUnitTestFramework` . Microsoft yerel birim testi çerçevesini temel alan C++ birim testlerini yazmak için bu API 'Leri kullanın. Konunun sonunda bir [kullanım örneği](#example) vardır.
 
-Header ve lib dosyaları * \<Visual Studio installation folder> \VC\Auxiliary\VS\UnitTest*altında bulunur.
+Header ve lib dosyaları *\<Visual Studio installation folder> \VC\Auxiliary\VS\UnitTest* altında bulunur.
 
 Üst bilgi ve LIB yolları yerel bir test projesinde otomatik olarak yapılandırılır.
 
@@ -183,9 +185,9 @@ BEGIN_TEST_METHOD_ATTRIBUTE(testMethodName)
 END_TEST_METHOD_ATTRIBUTE()
 ```
 
-`TEST_METHOD_ATTRIBUTE` *Testmethodname*test yöntemine bir veya daha fazla makro ile tanımlanan öznitelikleri ekler.
+`TEST_METHOD_ATTRIBUTE` *Testmethodname* test yöntemine bir veya daha fazla makro ile tanımlanan öznitelikleri ekler.
 
-`TEST_METHOD_ATTRIBUTE`Makro, *ÖznitelikAdı* ve *AttributeValue*değeri olan bir özniteliği tanımlar.
+`TEST_METHOD_ATTRIBUTE`Makro, *ÖznitelikAdı* ve *AttributeValue* değeri olan bir özniteliği tanımlar.
 
 #### <a name="test-class-attributes"></a><a name="test_class_attributes"></a> Test sınıfı öznitelikleri
 
@@ -196,9 +198,9 @@ BEGIN_TEST_CLASS_ATTRIBUTE(testClassName)
 END_TEST_CLASS_ATTRIBUTE()
 ```
 
-`TEST_CLASS_ATTRIBUTE` *TestClassName*test sınıfına bir veya daha fazla makro ile tanımlanan öznitelikleri ekler.
+`TEST_CLASS_ATTRIBUTE` *TestClassName* test sınıfına bir veya daha fazla makro ile tanımlanan öznitelikleri ekler.
 
-`TEST_CLASS_ATTRIBUTE`Makro, *ÖznitelikAdı* ve *AttributeValue*değeri olan bir özniteliği tanımlar.
+`TEST_CLASS_ATTRIBUTE`Makro, *ÖznitelikAdı* ve *AttributeValue* değeri olan bir özniteliği tanımlar.
 
 #### <a name="test-module-attributes"></a><a name="test_module_attributes"></a> Test modülü öznitelikleri
 
@@ -209,9 +211,9 @@ BEGIN_TEST_MODULE_ATTRIBUTE(testModuleName)
 END_TEST_MODULE_ATTRIBUTE()
 ```
 
-`TEST_MODULE_ATTRIBUTE` *TestModuleName*test modülüne bir veya daha fazla makro ile tanımlanan öznitelikleri ekler.
+`TEST_MODULE_ATTRIBUTE` *TestModuleName* test modülüne bir veya daha fazla makro ile tanımlanan öznitelikleri ekler.
 
-`TEST_MODULE_ATTRIBUTE`Makro, *ÖznitelikAdı* ve *AttributeValue*değeri olan bir özniteliği tanımlar.
+`TEST_MODULE_ATTRIBUTE`Makro, *ÖznitelikAdı* ve *AttributeValue* değeri olan bir özniteliği tanımlar.
 
 #### <a name="pre-defined-attributes"></a><a name="pre_defined_attributes"></a> Önceden tanımlanmış öznitelikler
 
@@ -221,13 +223,13 @@ END_TEST_MODULE_ATTRIBUTE()
 TEST_OWNER(ownerAlias)
 ```
 
-`TEST_METHOD_ATTRIBUTE` `Owner` *OwnerAlias*öğesinin Name ve Attribute değeri ile bir tanımlar.
+`TEST_METHOD_ATTRIBUTE` `Owner` *OwnerAlias* öğesinin Name ve Attribute değeri ile bir tanımlar.
 
 ```cpp
 TEST_DESCRIPTION(description)
 ```
 
-`TEST_METHOD_ATTRIBUTE` `Description` *Açıklaması ve açıklama*özniteliği değeri ile tanımlar.
+`TEST_METHOD_ATTRIBUTE` `Description` *Açıklaması ve açıklama* özniteliği değeri ile tanımlar.
 
 ```cpp
 TEST_PRIORITY(priority)
@@ -239,7 +241,7 @@ TEST_PRIORITY(priority)
 TEST_WORKITEM(workitem)
 ```
 
-Çalışma `TEST_METHOD_ATTRIBUTE` `WorkItem` öğesinin adı *workItem*ve öznitelik değeri ile bir tanımlar.
+Çalışma `TEST_METHOD_ATTRIBUTE` `WorkItem` öğesinin adı *workItem* ve öznitelik değeri ile bir tanımlar.
 
 ```cpp
 TEST_IGNORE()
@@ -558,7 +560,7 @@ template<typename _EXPECTEDEXCEPTION, typename _RETURNTYPE>
 ## <a name="cppunittestloggerh"></a><a name="cppunittestlogger_h"></a> Cppunittestgünlükçü. h
 
 ### <a name="logger"></a><a name="logger"></a> Medi
-Günlükçü sınıfı, **Çıkış penceresi**yazılacak statik yöntemler içerir.
+Günlükçü sınıfı, **Çıkış penceresi** yazılacak statik yöntemler içerir.
 
 ### <a name="write-message"></a><a name="write_message"></a> Ileti yaz
 **Çıkış penceresi** bir dize yazın
