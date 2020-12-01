@@ -1,7 +1,7 @@
 ---
-title: .NET çözümleyicilerinin etkinleştirilmesi veya yüklenmesi
+title: Birinci taraf .NET çözümleyicilerinin etkinleştirilmesi veya yüklenmesi
 ms.date: 08/03/2018
-description: .NET SDK 'sından .NET Çözümleyicileri 'ni etkinleştirmeyi veya bu Çözümleyicileri bir NuGet paketi olarak yüklemeyi öğrenin.
+description: .NET SDK 'dan birinci taraf .NET Çözümleyicileri 'ni etkinleştirmeyi veya bu Çözümleyicileri bir NuGet paketi olarak yüklemeyi öğrenin.
 ms.custom: SEO-VS-2020
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,18 +11,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: a14d89caba498a07c2447f9df1109e4da9f6a466
-ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
+ms.openlocfilehash: 60eb4828d4c8450376178c2fdccf7d4c0f63d989
+ms.sourcegitcommit: 208bd1edebfe6dec5d3bb92c63b5c1e093677e35
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96112237"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96440371"
 ---
-# <a name="enable-or-install-net-analyzers"></a>.NET çözümleyicilerinin etkinleştirilmesi veya yüklenmesi
+# <a name="enable-or-install-first-party-net-analyzers"></a>Birinci taraf .NET çözümleyicilerinin etkinleştirilmesi veya yüklenmesi
 
 ## <a name="overview"></a>Genel Bakış
 
-.NET derleyici platformu (Roslyn) çözümleyicileri, C# veya Visual Basic kodunuzda kod kalitesi ve kod stili sorunları olup olmadığını inceler. Bu Çözümleyicileri aşağıdaki yollarla etkinleştirebilir veya yükleyebilirsiniz:
+.NET derleyici platformu (Roslyn) çözümleyicileri, C# veya Visual Basic kodunuzda kod kalitesi ve kod stili sorunları olup olmadığını inceler. Birinci taraf .NET Çözümleyicileri 'ni aşağıdaki yollarla etkinleştirebilir veya yükleyebilirsiniz:
 
 - **.NET SDK 'Dan etkinleştir**: Visual Studio 2019 16,8 ve .NET 5,0 'den başlayarak, bu çözümleyiciler [.NET SDK 'ya dahildir](/dotnet/fundamentals/code-analysis/overview). Varsayılan olarak, .NET 5,0 veya üstünü hedefleyen projeler için analiz etkindir. Özelliğini olarak ayarlayarak, önceki .NET sürümlerini hedefleyen projelerde Kod analizini etkinleştirebilirsiniz `EnableNETAnalyzers` `true` . Ayrıca, olarak ayarlayarak projeniz için kod analizini devre dışı bırakabilirsiniz `EnableNETAnalyzers` `false` .
 
@@ -35,5 +35,5 @@ ms.locfileid: "96112237"
 
 - [Visual Studio 'da kod Çözümleyicileri 'ne genel bakış](roslyn-analyzers-overview.md)
 - [Visual Studio 'da kod Çözümleyicileri kullanma](use-roslyn-analyzers.md)
-- [Eski analizden .NET çözümleyiciler 'e geçiş](migrate-from-legacy-analysis-to-net-analyzers.md)
-- [FxCop çözümleyicileri 'nden .NET çözümleyicilerine geçiş](migrate-from-fxcop-analyzers-to-net-analyzers.md)
+- [Eski analizden .NET çözümleyicilerine geçirme](migrate-from-legacy-analysis-to-net-analyzers.md)
+- [FxCop çözümleyicilerinden .NET çözümleyicilerine geçirme](migrate-from-fxcop-analyzers-to-net-analyzers.md)
