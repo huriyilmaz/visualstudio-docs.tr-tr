@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 820cd87f26e4babc7a83d975c3fb480187af564f
-ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
+ms.openlocfilehash: 20f2d142c0e253cf5ad5a7ec5d85974ff5522508
+ms.sourcegitcommit: 593bdd2da62633f8d1f1eef70d0238e2682f3e02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95442286"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96356836"
 ---
 # <a name="set-env"></a>set-env
 
@@ -30,7 +30,7 @@ Bu araç .NET Core API 'sini kullanır `Environment.SetEnvironment` ve bu API il
 |----------------------------------------------|--------|----------|-----------------------------------------------------------------------------|
 | **açıklamaları**                                 | dize | No       | İsteğe bağlı Yorumlar özelliği. Kullanılmadı.                                       |
 | [**girişinin**](#input)                          | dize | No       | Araca giriş. Ayrıntılar için aşağıdaki [girişi](#input) inceleyin.               |
-| [**additionalOptions**](#additional-options) | dize | No       | Kullanılmadı. Ayrıntılar için aşağıdaki [ek seçeneklere](#additional-options) bakın.  |
+| [**additionalOptions**](#additional-options) | dize | No       | Ayrıntılar için aşağıdaki [ek seçeneklere](#additional-options) bakın.            |
 
 ### <a name="input"></a>Giriş
 
@@ -47,7 +47,7 @@ Bir `input` dize `%userprofile%` , örneğin değer okuma olduğunda genişletil
 
 ### <a name="additional-options"></a>Ek seçenekler
 
-Kullanılmadı.
+ `--user`, `--process` veya `--machine` ortam değişkenlerinin nerede ayarlanacağını belirtmek için dahil edilebilir. Varsayılan olarak, kullanıcıyı hedefliyoruz. Ortam değişkenlerinin olası hedefleri hakkında daha fazla bilgi için bkz. [EnvironmentVariableTarget](https://docs.microsoft.com/dotnet/api/system.environmentvariabletarget).
 
 ### <a name="default-behavior"></a>Varsayılan davranış
 
@@ -68,6 +68,20 @@ Kullanarak nasıl çalıştırılacağını gösteren örnekler aşağıda veril
     {
       "tool": "set-env",
       "input": "foo=bar",
+    }
+  ]
+}
+```
+
+#### <a name="devinitjson-that-will-set-an-environment-variable-foo-to-value-bar-stored-in-the-environment-block-associated-with-the-current-process"></a>Üzerinde .devinit.js, `foo` `bar` geçerli işlemle ilişkili ortam bloğunda depolanan bir ortam değişkenini değere ayarlayacaktır:
+```json
+{
+  "$schema": "https://json.schemastore.org/devinit.schema-3.0",
+  "run": [
+    {
+      "tool": "set-env",
+      "input": "foo=bar",
+      "additionalOptions": "--process",
     }
   ]
 }
