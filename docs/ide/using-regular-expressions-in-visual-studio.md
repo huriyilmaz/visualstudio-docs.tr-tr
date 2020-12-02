@@ -1,5 +1,7 @@
 ---
 title: Normal ifadeler kullanma
+description: Visual Studio 'da kullanabileceğiniz bazı normal ifade karakterleri, işleçler, yapılar ve model örnekleri hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 09/13/2019
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +18,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f1739d6b2376a4f86edd3c0102f7fad79da5d7cd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8648eb48c68e0220b1d36a851619edec2b51ceb7
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75568626"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96478997"
 ---
 # <a name="use-regular-expressions-in-visual-studio"></a>Visual Studio 'da normal ifadeler kullanma
 
@@ -31,7 +33,7 @@ Visual Studio, metni bulmak ve değiştirmek için [.net normal ifadelerini](/do
 
 Aşağıdaki tabloda bazı normal ifade karakterleri, işleçler, yapılar ve model örnekleri yer almaktadır. Daha kapsamlı bir başvuru için bkz. [normal ifade dili](/dotnet/standard/base-types/regular-expression-language-quick-reference).
 
-|Amaç|Expression|Örnek|
+|Amaç|İfade|Örnek|
 |-------------|----------------|-------------|
 |Tek bir karakterle Eşleştir (satır sonu hariç). Daha fazla bilgi için, bkz. [herhangi bir karakter](/dotnet/standard/base-types/character-classes-in-regular-expressions#any-character-).|.|`a.o` "About" içinde "Acro" ve "" değil "About" ve "ABO" içinde "Aro" ile eşleşir|
 |Önceki ifadenin sıfır veya daha fazla tekrarlamalarını eşleştirin (mümkün olduğunca çok karakterle Eşleştir). Daha fazla bilgi için bkz. [sıfır veya daha fazla kez eşleşme](/dotnet/standard/base-types/quantifiers-in-regular-expressions#match-zero-or-more-times-).|*|`a*r` "bin", "ark" içinde "ar" ve "aardvark" içinde "aar" içinde "r" ile eşleşir|
@@ -71,7 +73,7 @@ Numaralandırılmış bir yakalama grubu oluşturmak için, alt ifadeyi normal i
 
 - **normal ifade içinde**: kullanın `\number` . Örneğin, `\1` normal ifadede `(\w+)\s\1` ilk yakalama grubuna başvuru yapılır `(\w+)` .
 
-- **değiştirme**düzeninde: kullanın `$number` . Örneğin, gruplanmış normal ifade `(\d)([a-z])` iki grup tanımlar: ilk grup tek bir ondalık basamak içerir ve ikinci grup, ve **z**arasında tek bir karakter içerir. **a** İfade şu dizede dört eşleşme bulur: **1a 2b 3c 4d**. Değiştirme dizesi `z$1` yalnızca ilk gruba ( `$1` ) başvurur ve dizeyi **Z1 Z2 Z3 Z4**öğesine dönüştürür.
+- **değiştirme** düzeninde: kullanın `$number` . Örneğin, gruplanmış normal ifade `(\d)([a-z])` iki grup tanımlar: ilk grup tek bir ondalık basamak içerir ve ikinci grup, ve **z** arasında tek bir karakter içerir. **a** İfade şu dizede dört eşleşme bulur: **1a 2b 3c 4d**. Değiştirme dizesi `z$1` yalnızca ilk gruba ( `$1` ) başvurur ve dizeyi **Z1 Z2 Z3 Z4** öğesine dönüştürür.
 
 Aşağıdaki görüntüde bir normal ifade `(\w+)\s\1` ve bir değiştirme dizesi gösterilmektedir `$1` . Normal ifade ve değiştirme deseninin her ikisi de otomatik olarak numaralandırılan ilk yakalama grubuna başvurur. Visual Studio 'daki **hızlı değiştirme** iletişim kutusunda **Tümünü Değiştir** ' i seçtiğinizde, yinelenen sözcükler metinden kaldırılır.
 
@@ -88,7 +90,7 @@ Numaralandırılmış yakalama grupları gibi adlandırılmış yakalama gruplar
 
 - **normal ifade içinde**: kullanın `\k<name>` . Örneğin, `\k<repeated>` normal ifadede, `(?<repeated>\w+)\s\k<repeated>` adlandırılmış ve alt ifadesi olan yakalama grubuna başvuruda `repeated` bulunur `\w+` .
 
-- **değiştirme**düzeninde: kullanın `${name}` . Örneğin, `${repeated}`.
+- **değiştirme** düzeninde: kullanın `${name}` . Örneğin, `${repeated}`.
 
 Örnek olarak, aşağıdaki görüntüde bir normal ifade `(?<repeated>\w+)\s\k<repeated>` ve bir değiştirme dizesi gösterilmektedir `${repeated}` . Hem normal ifade hem de değiştirme deseninin adlı yakalama grubu başvurusu `repeated` . Visual Studio 'daki **hızlı değiştirme** iletişim kutusunda **Tümünü Değiştir** ' i seçtiğinizde, yinelenen sözcükler metinden kaldırılır.
 

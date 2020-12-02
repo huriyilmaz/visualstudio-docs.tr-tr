@@ -1,5 +1,7 @@
 ---
 title: '7. Adım: formunuza Iletişim kutusu bileşenleri ekleme'
+description: <xref:System.Windows.Forms.OpenFileDialog>Formunuza bir iletişim kutusu bileşeni ve bir <xref:System.Windows.Forms.ColorDialog> iletişim kutusu bileşeni eklemeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 08/30/2019
 ms.assetid: ea98c55e-6213-4893-ba7b-f19d7f119527
 ms.topic: tutorial
@@ -10,12 +12,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a9697bf6cf84c2a74daac2017b4f63d52a7019b6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 37cbd2ca1f0207eaf2a41f6a08248bcedcfbe5bb
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77579285"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96479478"
 ---
 # <a name="step-7-add-dialog-components-to-your-form"></a>7. Adım: Formunuza iletişim kutusu bileşenleri ekleme
 
@@ -30,11 +32,11 @@ Bir bileşen, bazı yollarla denetim gibidir. Formunuza bir bileşen eklemek iç
     > [!NOTE]
     > **Araç kutusundaki** **iletişim** kutusu grubunda, sizin için birçok yararlı iletişim kutusu açan bileşenler bulunur. Bu, dosyaları açmak ve kaydetmek, klasörlere gözatmak ve yazı tipi ve renkler seçmek için kullanılabilir. Bu projede iki iletişim kutusu bileşeni kullanıyorsunuz: OpenFileDialog ve ColorDialog.
 
-1. Formunuza **OpenFileDialog1** adlı bir bileşen eklemek Için, **OpenFileDialog**öğesine çift tıklayın. Formunuza **colorDialog1** adlı bir bileşen eklemek Için **araç kutusunda** **ColorDialog** ' a çift tıklayın. (Bunu bir sonraki öğretici adımında kullanırsınız.) Aşağıdaki görüntüde gösterildiği gibi, eklediğiniz iki iletişim kutusu bileşeninin bir simgesine sahip **Windows Form Tasarımcısı** ( **Resim Görüntüleyicisi** formunun altında) altında bir alan görmeniz gerekir.
+1. Formunuza **OpenFileDialog1** adlı bir bileşen eklemek Için, **OpenFileDialog** öğesine çift tıklayın. Formunuza **colorDialog1** adlı bir bileşen eklemek Için **araç kutusunda** **ColorDialog** ' a çift tıklayın. (Bunu bir sonraki öğretici adımında kullanırsınız.) Aşağıdaki görüntüde gösterildiği gibi, eklediğiniz iki iletişim kutusu bileşeninin bir simgesine sahip **Windows Form Tasarımcısı** ( **Resim Görüntüleyicisi** formunun altında) altında bir alan görmeniz gerekir.
 
-     ![İletişim kutusu bileşenleri](../ide/media/express_dialogsadded.png)<br>***Iletişim kutusu*** *bileşenleri*
+     ![İletişim kutusu bileşenleri](../ide/media/express_dialogsadded.png)<br>**_Iletişim kutusu_* _ _components *
 
-1. **Windows Form Tasarımcısı**altındaki alanda bulunan **OpenFileDialog1** simgesini seçin. İki özellik ayarlayın:
+1. **Windows Form Tasarımcısı** altındaki alanda bulunan **OpenFileDialog1** simgesini seçin. İki özellik ayarlayın:
 
     - **Filter** özelliğini aşağıdaki gibi ayarlayın (kopyalayabilir ve yapıştırabilirsiniz):
 

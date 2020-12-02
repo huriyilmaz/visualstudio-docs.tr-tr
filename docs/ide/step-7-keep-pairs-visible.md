@@ -1,5 +1,7 @@
 ---
 title: '7. Adım: Çiftleri görünür durumda tutma'
+description: Bir if ifadesinin nasıl ekleneceğini öğrenin. bu nedenle, oynatıcı eşleşen bir simge çifti seçtiğinde simgeler görünür kalır.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: tutorial
 ms.prod: visual-studio-windows
@@ -13,12 +15,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e854425bab10174220188b23fb7e292371e9cb48
-ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
+ms.openlocfilehash: 9fc61a59d1e04d96fb36e7a7e4cd1304e2057adb
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96189348"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96479452"
 ---
 # <a name="step-7-keep-pairs-visible"></a>7. Adım: Çiftleri görünür durumda tutma
 Oyuncu yalnızca eşleşmeyen simge çiftlerini seçtiği sürece oyun düzgün çalışır. Ancak oyuncu eşleşen bir çift seçtiğinde ne olması gerektiğini bir düşünün. Zamanlayıcıyı etkinleştirerek (yöntemi kullanarak) simgeleri ortadan <xref:System.Windows.Forms.Timer.Start> kaldırmamak yerine, oyunun kendisini sıfırlaması gerekir; böylece, `firstClicked` `secondClicked` Seçilen iki etiket için renkleri sıfırlamadan, ve başvuru değişkenlerini kullanarak hiçbir etiketi izlememek üzere.

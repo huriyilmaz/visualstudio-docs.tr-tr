@@ -1,5 +1,7 @@
 ---
 title: Bozuk başvurularda sorun giderme
+description: Uygulamalarınızdan başka bir şeyin başvurulan bileşeni bulamamasına neden olmuş olabilecek hatalı başvuruların nasıl giderileceği hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 03/21/2017
 ms.topic: troubleshooting
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a5116d2487ca9f53c460e1cae8f362f3ff1bcdf8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 627724410ac9e0829faeb23cb5b0eef01b153293
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75565922"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96479179"
 ---
 # <a name="troubleshoot-broken-references"></a>Bozuk başvurularda sorun giderme
 
@@ -43,7 +45,7 @@ Aşağıda bu sorunlara yönelik çözümler verilmiştir.
 
 Projeler farklı bilgisayarlarda paylaşılmışsa, bir bileşen her bilgisayarda farklı bir dizinde bulunuyorsa bazı başvurular bulunamamıştır. Başvurular, bileşen dosyasının adı altında depolanır (örneğin, *MyComponent*). Bir projeye başvuru eklendiğinde, bileşen dosyasının klasör konumu (örneğin, *C:\mycomponents*) **ReferencePath** proje özelliğine eklenir.
 
-Proje açıldığında, başvuru yolundaki dizinlere bakarak bu başvurulan bileşen dosyalarını bulmaya çalışır. Proje, bileşeni *D:\mycomponents*gibi farklı bir dizinde depolayan bir bilgisayarda açılırsa, başvuru bulunamaz ve **görev listesi**bir hata görünür.
+Proje açıldığında, başvuru yolundaki dizinlere bakarak bu başvurulan bileşen dosyalarını bulmaya çalışır. Proje, bileşeni *D:\mycomponents* gibi farklı bir dizinde depolayan bir bilgisayarda açılırsa, başvuru bulunamaz ve **görev listesi** bir hata görünür.
 
 Bu sorunu gidermek için bozuk başvuruyu silebilir ve ardından **Başvuru Ekle** iletişim kutusunu kullanarak bunu değiştirebilirsiniz. Başka bir çözüm, projenin özellik sayfalarındaki **başvuru yolu** öğesini kullanmak ve listedeki klasörleri doğru konumlara işaret etmek için değiştirmektir. Her bilgisayardaki her bir kullanıcı için **başvuru yolu** özelliği kalıcıdır. Bu nedenle, başvuru yolunuzda değişiklik yapmak projenin diğer kullanıcılarını etkilemez.
 

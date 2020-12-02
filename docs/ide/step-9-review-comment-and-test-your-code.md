@@ -1,5 +1,7 @@
 ---
 title: '9. Adım: Kodunuzu gözden geçirme, açıklama ve test etme'
+description: Kodunuza nasıl açıklama ekleneceğini ve uygulamanızı test etme hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 08/30/2019
 ms.assetid: f26f79ba-c91b-4164-b87f-679a1b231c09
 ms.topic: tutorial
@@ -13,18 +15,18 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1b31532bf6c26512e471ee787dc7219620e6db62
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8f5be5d8c59d9ef402bd929bd386a7bdaaa9912e
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77579751"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96479309"
 ---
 # <a name="step-9-review-comment-and-test-your-code"></a>9. Adım: Kodunuzu gözden geçirme, açıklama ve test etme
 
 Daha sonra kodunuza bir açıklama eklersiniz. Yorum, uygulamanın davranış biçimini değiştirmeyen bir notdur. Kodunuzu okuyan birisinin ne yaptığını öğrenmesini kolaylaştırır. Kodunuza açıklama eklemek için iyi bir önleminizi alarak vardır.
 
-C# dilinde iki eğik çizgi (//) bir satırı açıklama olarak işaretler. Visual Basic, bir satırı açıklama olarak işaretlemek için tek tırnak işareti (') kullanılır. Bir açıklama ekledikten sonra uygulamanızı test edersiniz. Projeniz üzerinde çalışırken kodunuzu sık çalıştırmak ve test etmek iyi bir uygulamadır. bu sayede, kod daha karmaşık hale gelmeden önce sorunları önceden yakalayabilir ve çözebilirsiniz. Buna *yinelemeli test*denir.
+C# dilinde iki eğik çizgi (//) bir satırı açıklama olarak işaretler. Visual Basic, bir satırı açıklama olarak işaretlemek için tek tırnak işareti (') kullanılır. Bir açıklama ekledikten sonra uygulamanızı test edersiniz. Projeniz üzerinde çalışırken kodunuzu sık çalıştırmak ve test etmek iyi bir uygulamadır. bu sayede, kod daha karmaşık hale gelmeden önce sorunları önceden yakalayabilir ve çözebilirsiniz. Buna *yinelemeli test* denir.
 
 Yalnızca bir şey oluşturmuş olabilirsiniz ve henüz yapılmasa da, bir resmi yükleyebilir. Kodunuza bir açıklama eklemeden ve test etmeden önce, bu kavramları sık kullandığınız için kod kavramlarını gözden geçirmek için zaman alın:
 
@@ -34,7 +36,7 @@ Yalnızca bir şey oluşturmuş olabilirsiniz ve henüz yapılmasa da, bir resmi
 
 - Çoğu zaman, `showButton_Click()` (veya `ShowButton_Click()` ) yönteminizin bir iletişim kutusu gösterdiği ve sonra bir resmi yükleyen gibi belirli bir sırada çok sayıda şey yapmaz.
 
-- Yöntem kod *deyimlerinden*veya kod satırlarından oluşur. Bir yöntemi kod deyimlerini birlikte paketetmenin bir yolu olarak düşünün.
+- Yöntem kod *deyimlerinden* veya kod satırlarından oluşur. Bir yöntemi kod deyimlerini birlikte paketetmenin bir yolu olarak düşünün.
 
 - Bir yöntem yürütüldüğünde veya *çağrıldığında*, yöntem içindeki deyimler sırayla yürütülür ve ilki birinci bir ile başlar.
 
@@ -65,24 +67,24 @@ Yalnızca bir şey oluşturmuş olabilirsiniz ve henüz yapılmasa da, bir resmi
     > [!TIP]
     > IDE, kod yazmanızı kolaylaştıracak şekilde oluşturulmuştur ve *kod parçacıkları* bunu yapmanın bir yoludur. Kod parçacığı, küçük bir kod bloğuna genişletilmiş bir kısayoldur.
     >
-    >  Kullanılabilir tüm parçacıkları görebilirsiniz. Menü çubuğunda **Araçlar**  >  **kod parçacıkları Yöneticisi**' ni seçin. C# için, `if` kod parçacığı **Visual C#** ' de bulunur. Visual Basic için, `if` kod parçacıkları, **kod desenleri**  >  **conditionals ve döngülerinde**bulunur. Bu yöneticiyi, mevcut parçacıkları taramak veya kendi kod parçacıklarınızı eklemek için kullanabilirsiniz.
+    >  Kullanılabilir tüm parçacıkları görebilirsiniz. Menü çubuğunda **Araçlar**  >  **kod parçacıkları Yöneticisi**' ni seçin. C# için, `if` kod parçacığı **Visual C#** ' de bulunur. Visual Basic için, `if` kod parçacıkları, **kod desenleri**  >  **conditionals ve döngülerinde** bulunur. Bu yöneticiyi, mevcut parçacıkları taramak veya kendi kod parçacıklarınızı eklemek için kullanabilirsiniz.
     >
     >  Kodu yazarken bir kod parçacığını etkinleştirmek için yazın ve **sekme** tuşunu seçin. Birçok parçacık, **IntelliSense** penceresinde görünür. bu **nedenle,** **IntelliSense** PENCERESINDE kod parçacığını seçmek ve sonra IDE 'nin kod parçacığını kullanmasını söylemek için. (IntelliSense parçacığı destekler `if` , ancak `ifelse` kod parçacığını destekler.)
 
 1. Uygulamanızı çalıştırmadan önce, aşağıdaki ekran görüntüsüne benzer şekilde görünmesi gereken **Tümünü Kaydet** araç çubuğu düğmesini seçerek uygulamanızı kaydedin.
 
      ![Tümünü Kaydet araç çubuğu düğmesi](../ide/media/express_iconsaveall.png)<br>
-***Tümünü Kaydet*** *düğmesi*
+**_Tümünü Kaydet_* _ _button *
 
-     Alternatif olarak, uygulamanızı kaydetmek için, **Dosya**  >  **Tümünü** menü çubuğundan Kaydet ' i seçin (veya **CTRL** + **+ Shift** + **S**tuşlarına basın). Bu, erken ve sık tasarrufu sağlamak için en iyi uygulamadır.
+     Alternatif olarak, uygulamanızı kaydetmek için, **Dosya**  >  **Tümünü** menü çubuğundan Kaydet ' i seçin (veya **CTRL** + **+ Shift** + **S** tuşlarına basın). Bu, erken ve sık tasarrufu sağlamak için en iyi uygulamadır.
 
      Çalıştığında, programınız aşağıdaki görüntüye benzer şekilde görünmelidir.
 
-     ![Resim görüntüleyici](../ide/media/express_pictureviewerdonerun.png)<br>***Resim görüntüleyici***
+     ![Resim görüntüleyici](../ide/media/express_pictureviewerdonerun.png)<br>**_Resim görüntüleyici_* _
 
 ## <a name="to-test-your-app"></a>Uygulamanızı test etmek için
 
-1. **F5** tuşunu seçin veya **hata ayıklamayı Başlat** araç çubuğu düğmesini seçin.
+1. _ *F5** anahtarını seçin veya **hata ayıklamayı Başlat** araç çubuğu düğmesini seçin.
 
 1. Yeni yazdığınız kodu çalıştırmak için **bir resim göster** düğmesini seçin. Uygulama ilk olarak bir **Dosya Aç** iletişim kutusu açar. Filtrelerinizin, iletişim kutusunun alt kısmındaki **dosya türü** açılan listesinde göründüğünü doğrulayın. Ardından bir resme gidin ve açın. Genellikle *Belgelerim klasörünüzdeki Windows* işletim sistemiyle birlikte gelen örnek resimleri, *Resimlerim \ örnek resimler* klasörü içinde bulabilirsiniz.
 

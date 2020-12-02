@@ -1,5 +1,7 @@
 ---
 title: Proje ve öğe şablonu parametreleri
+description: Şablon örneği oluşturulurken şablonlarınızın değerlerini değiştirmek için şablon parametrelerini nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 01/02/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -10,20 +12,20 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 7076e8f5718e44cc382eb0768e6456dbd6ee5664
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8e575011f76370083b5a0f461fbb62bbbc839ea3
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "78169371"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96479214"
 ---
 # <a name="template-parameters"></a>Şablon parametreleri
 
-Şablon örneği oluşturulurken şabloninizdeki değerleri değiştirebilirsiniz. Bu işlevi ayarlamak için *şablon parametreleri*kullanın. Şablon parametreleri, şablondaki sınıf adları ve ad alanları gibi değerleri değiştirmek için kullanılabilir. Bir Kullanıcı yeni bir öğe eklediğinde veya proje bu parametrelerin yerini aldığı zaman arka planda çalışan Şablon Sihirbazı.
+Şablon örneği oluşturulurken şabloninizdeki değerleri değiştirebilirsiniz. Bu işlevi ayarlamak için *şablon parametreleri* kullanın. Şablon parametreleri, şablondaki sınıf adları ve ad alanları gibi değerleri değiştirmek için kullanılabilir. Bir Kullanıcı yeni bir öğe eklediğinde veya proje bu parametrelerin yerini aldığı zaman arka planda çalışan Şablon Sihirbazı.
 
 ## <a name="declare-and-enable-template-parameters"></a>Şablon parametrelerini bildir ve Etkinleştir
 
-Şablon parametreleri $*Parameter*$ biçiminde bildirilmiştir. Örneğin:
+Şablon parametreleri $*Parameter*$ biçiminde bildirilmiştir. Örnek:
 
 - $safeprojectname $
 

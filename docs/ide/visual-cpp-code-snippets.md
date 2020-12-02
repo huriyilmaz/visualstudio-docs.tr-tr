@@ -1,5 +1,7 @@
 ---
 title: Visual C++ kod parçacıkları
+description: C++ kod dosyalarınıza yaygın olarak kullanılan kodu eklemek için kod parçacıklarını nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 author: corob-msft
@@ -9,12 +11,12 @@ dev_langs:
 - CPP
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db6ea1e233d32872322926a4d75b847ee6a49ba3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e5cde2be817c49344e02ff06030022f99790a7a2
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77277835"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96478815"
 ---
 # <a name="visual-c-code-snippets"></a>Visual C++ kod parçacıkları
 
@@ -32,7 +34,7 @@ Bir kod parçacığı eklemek için bir C++ kod dosyası (*. cpp* veya *. h*) a�
 
 - Kısayol tuşlarını kullanın: **CTRL** + **K** + **X**
 
-**#İf**başlayan seçeneklerin bir listesini görmeniz gerekir. **#İf**' yi seçtiğinizde, dosyaya aşağıdaki kodun eklendiğini görmeniz gerekir:
+**#İf** başlayan seçeneklerin bir listesini görmeniz gerekir. **#İf**' yi seçtiğinizde, dosyaya aşağıdaki kodun eklendiğini görmeniz gerekir:
 
 ```cpp
 #if 0
@@ -52,7 +54,7 @@ Seçilen kodu çevrelemek için bir kod parçacığı kullanmak için bir satır
 
 - Klavye kullanarak, şunu bas: **CTRL** + **K** + **S**
 
-**#İf**seçin. Şuna benzer bir şey görmeniz gerekir:
+**#İf** seçin. Şuna benzer bir şey görmeniz gerekir:
 
 ```cpp
 #if 0

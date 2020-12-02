@@ -1,5 +1,7 @@
 ---
 title: C# kod parçacıkları
+description: C# kod dosyalarınıza yaygın olarak kullanılan kodu eklemek için kod parçacıklarını nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 06/05/2017
 ms.topic: reference
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: d41907a15b7e0b1692dda3f4d678c2b843dfcd03
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 46b2d231f1fa9a0e90538c426f48c86e5fafecbe
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75594168"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96478763"
 ---
 # <a name="c-code-snippets"></a>C# kod parçacıkları
 
@@ -31,7 +33,7 @@ Kod parçacıkları, kodunuza hızlı bir şekilde ekleyebileceğiniz kod parça
 
 Varsayılan olarak, aşağıdaki kod parçacıkları C# için Visual Studio 'Ya eklenmiştir.
 
-|Ad (veya kısayol)|Description|Kod parçacığı eklemek için geçerli konumlar|
+|Ad (veya kısayol)|Açıklama|Kod parçacığı eklemek için geçerli konumlar|
 | - |-----------------| - |
 |#if|Bir [#if](/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-if) yönergesi ve [#endif](/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-endif) yönergesi oluşturur.|Yerdeki.|
 |#region|Bir [#region](/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-region) yönergesi ve [#endregion](/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-endregion) yönergesi oluşturur.|Yerdeki.|
@@ -56,7 +58,7 @@ Varsayılan olarak, aşağıdaki kod parçacıkları C# için Visual Studio 'Ya 
 |iterator|Bir yineleyici oluşturur.|Bir sınıf veya yapı içinde.|
 |yinedizin|İç içe bir sınıf kullanarak "adlandırılmış" yineleyici ve Dizin Oluşturucu çifti oluşturur.|Bir sınıf veya yapı içinde.|
 |lock|Bir [kilit](/dotnet/csharp/language-reference/keywords/lock-statement) bloğu oluşturur.|Bir yöntem içinde, bir Dizin Oluşturucu, bir özellik erişimcisi veya bir olay erişimcisi.|
-|MBOX|Öğesine bir çağrı oluşturur <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=fullName> . *System.Windows.Forms.dll*bir başvuru eklemeniz gerekebilir.|Bir yöntem içinde, bir Dizin Oluşturucu, bir özellik erişimcisi veya bir olay erişimcisi.|
+|MBOX|Öğesine bir çağrı oluşturur <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=fullName> . *System.Windows.Forms.dll* bir başvuru eklemeniz gerekebilir.|Bir yöntem içinde, bir Dizin Oluşturucu, bir özellik erişimcisi veya bir olay erişimcisi.|
 |ad alanı|Bir [ad alanı](/dotnet/csharp/language-reference/keywords/namespace) bildirimi oluşturur.|Bir ad alanı içinde (genel ad alanı dahil).|
 |Prop|[Otomatik uygulanan bir özellik](/dotnet/csharp/programming-guide/classes-and-structs/auto-implemented-properties) bildirimi oluşturur.|Bir sınıf veya yapı içinde.|
 |propfull|Ve erişimcileri ile bir özellik bildirimi oluşturur `get` `set` .|Bir sınıf veya yapı içinde.|

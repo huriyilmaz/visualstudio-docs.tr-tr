@@ -1,5 +1,7 @@
 ---
 title: Arapça ve Ibranice desteği
+description: Arapça ve Ibranice metinleri görüntüleme ve nesne adları ve değerleri için çift yönlü metin girme hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 57bccfccb77c5a80fd2630680564f88f08d7ca5b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: aa2520527259c476f84d83cdff81d9f96bc2bbd7
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75592002"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96478971"
 ---
 # <a name="support-for-bidirectional-languages-in-visual-studio"></a>Visual Studio 'da çift yönlü diller için destek
 
@@ -58,7 +60,7 @@ Aşağıdaki öğeler Arapça veya Ibranice kullanılarak adlandırılabilir ve 
 
 - Özellik değerleri.
 
-   **Özellikler** penceresinde Arapça veya İbranice metin kullanabilirsiniz. Pencere, standart Windows tuş vuruşlarını kullanarak sağdan sola ve soldan sağa okuma düzeni arasında geçiş yapmanıza olanak**sağlar (** + **RightShift** sağdan sola ve **Ctrl** + soldan sağa**kaydırma** için CTRL + SHIFT tuşlarına basın).
+   **Özellikler** penceresinde Arapça veya İbranice metin kullanabilirsiniz. Pencere, standart Windows tuş vuruşlarını kullanarak sağdan sola ve soldan sağa okuma düzeni arasında geçiş yapmanıza olanak **sağlar (** + **RightShift** sağdan sola ve **Ctrl** + soldan sağa **kaydırma** için CTRL + SHIFT tuşlarına basın).
 
 - Kod ve sabit metin.
 

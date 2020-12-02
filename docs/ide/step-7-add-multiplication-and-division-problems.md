@@ -1,5 +1,7 @@
 ---
 title: '7. Adım: Çarpma ve bölme problemleri ekleme'
+description: Çarpma ve bölme sorunları eklemeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: tutorial
 ms.prod: visual-studio-windows
@@ -13,12 +15,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 92a1744b68ad043dcee21dcb5995fbd1908bd81b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 84dc1df79392aeefe331746c52d2fbe8dbb91e8e
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77579784"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96479504"
 ---
 # <a name="step-7-add-multiplication-and-division-problems"></a>7. Adım: Çarpma ve bölme problemleri ekleme
 
@@ -58,7 +60,7 @@ Bu öğreticinin yedinci kısmında çarpma ve bölme sorunları ekleyeceksiniz,
      Aşağıdaki çizimde gösterildiği gibi, test takiciler, testi tamamlamaya yönelik dört sorunu yanıtmalıdır.
 
      ![Dört problemle matematik sınavından](../ide/media/express_finishedquiz.png)<br/>
-*Dört problemle* ***matematik sınavından***
+***Matematik sınavı** _ _with dört sorun *
 
 ## <a name="to-continue-or-review"></a>Devam etmek veya gözden geçirmek için
 

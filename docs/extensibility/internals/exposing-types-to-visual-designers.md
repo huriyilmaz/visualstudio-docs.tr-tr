@@ -1,5 +1,7 @@
 ---
 title: Türleri görsel tasarımcılara sunma | Microsoft Docs
+description: Visual Studio 'Nun görsel tasarımcılar tarafından kullanılabilmesini sağlamak için, özel araçlardır dahil olmak üzere sınıf ve tür tanımlarını kullanıma sunma hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 48aa8a729b5cc38d3cee08a7f5ec143d5e84931a
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: 43d1e1dca1860faa44d6bb5bc256bb8f0465e8b2
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012536"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96479540"
 ---
 # <a name="expose-types-to-visual-designers"></a>Türleri görsel tasarımcılara sunun
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] görsel bir tasarımcıyı göstermek için tasarım zamanında sınıf ve tür tanımlarına erişimi olmalıdır. Sınıflar, geçerli projenin tüm bağımlılık kümesini (başvurular artı bunların bağımlılıkları) içeren önceden tanımlanmış bir derleme kümesinden yüklenir. Görsel tasarımcılarının özel araçlar tarafından oluşturulan dosyalarda tanımlanan sınıflara ve türlere erişmesi de gerekebilir.
@@ -37,7 +39,7 @@ ms.locfileid: "90012536"
 
 - Oluşturulan kod, genel proje ayarıyla aynı dilde olmalıdır.
 
-     Geçici PE, özel araç tarafından istenen uzantı olarak rapor edilir ve <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator.DefaultExtension%2A> Bu durum kayıt defterinde **GeneratesDesignTimeSource** 'in 1 olarak ayarlanması şartıyla derlenir. Uzantının *. vb*, *. cs*veya *. jsl*; olması gerekmez. herhangi bir uzantı olabilir.
+     Geçici PE, özel araç tarafından istenen uzantı olarak rapor edilir ve <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator.DefaultExtension%2A> Bu durum kayıt defterinde **GeneratesDesignTimeSource** 'in 1 olarak ayarlanması şartıyla derlenir. Uzantının *. vb*, *. cs* veya *. jsl*; olması gerekmez. herhangi bir uzantı olabilir.
 
 - Özel araç tarafından oluşturulan kod geçerli olmalıdır ve yalnızca, yürütme tamamlandığında projede bulunan başvuruların kümesi kullanılarak derlenmelidir <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator.Generate%2A> .
 

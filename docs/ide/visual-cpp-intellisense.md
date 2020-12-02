@@ -1,5 +1,7 @@
 ---
 title: C++ IntelliSense
+description: C++ projenizi kodlarken kullanabileceğiniz bazı IntelliSense özellikleri hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 10/08/2018
 ms.topic: conceptual
 author: TerryGLee
@@ -7,12 +9,12 @@ ms.author: tglee
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0d1be12f733a858bf223fb1dce6a091c0dc6c50
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 49d555b2e509237e34375e1b85a35c57a6db4f3b
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75594220"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96478893"
 ---
 # <a name="visual-c-intellisense-features"></a>Visual C++ IntelliSense özellikleri
 
@@ -22,7 +24,7 @@ Bu makalede C++ IntelliSense özelliklerine genel bakış sunulmaktadır. Projen
 
 ## <a name="intellisense-features-in-c"></a>C++ ' da IntelliSense özellikleri
 
-IntelliSense, kodlamayı daha kolay hale getirmek için bir özellik kümesine verilen addır. Farklı kişilerin ne kullanışlı olduğuna ilişkin farklı fikirleri olduğundan, IntelliSense özelliklerinin neredeyse hepsi, **metin düzenleyici** **Options**  >  **C/C++**  >  **Gelişmiş**altında Seçenekler iletişim kutusunda etkinleştirilebilir veya devre dışı bırakılabilir. **Seçenekler** iletişim kutusu, menü çubuğundaki **Araçlar** menüsünden kullanılabilir.
+IntelliSense, kodlamayı daha kolay hale getirmek için bir özellik kümesine verilen addır. Farklı kişilerin ne kullanışlı olduğuna ilişkin farklı fikirleri olduğundan, IntelliSense özelliklerinin neredeyse hepsi, **metin düzenleyici** **Options**  >  **C/C++**  >  **Gelişmiş** altında Seçenekler iletişim kutusunda etkinleştirilebilir veya devre dışı bırakılabilir. **Seçenekler** iletişim kutusu, menü çubuğundaki **Araçlar** menüsünden kullanılabilir.
 
 ![Araç seçenekleri iletişim kutusu](../ide/media/sintellisensecpptoolsoptions.PNG)
 
@@ -38,13 +40,13 @@ Simgelerin ve anlamlarıyla ilgili bir liste için, bkz. [sınıf görünümü v
 
 ![Visual C&#43;&#43; Tamam Word penceresi](../ide/media/vs2015_cpp_complete_word.png)
 
-Üye listesini ilk kez çağırdığınızda, yalnızca geçerli bağlam için erişilebilen üyeleri gösterir. Bundan sonra **CTRL** + **J** tuşlarına basarsanız, erişilebilirliğinden bağımsız olarak tüm üyeleri gösterir. Üçüncü kez çağırırsanız, daha geniş bir program öğeleri listesi gösterilir. **Seçenekler** iletişim kutusundaki üye listesini, **metin düzenleyici**  >  **C/C++**  >  **genel**  >  **otomatik liste üyeleri**altında devre dışı bırakabilirsiniz.
+Üye listesini ilk kez çağırdığınızda, yalnızca geçerli bağlam için erişilebilen üyeleri gösterir. Bundan sonra **CTRL** + **J** tuşlarına basarsanız, erişilebilirliğinden bağımsız olarak tüm üyeleri gösterir. Üçüncü kez çağırırsanız, daha geniş bir program öğeleri listesi gösterilir. **Seçenekler** iletişim kutusundaki üye listesini, **metin düzenleyici**  >  **C/C++**  >  **genel**  >  **otomatik liste üyeleri** altında devre dışı bırakabilirsiniz.
 
 ![Visual C&#43;&#43; üye listesi](../ide/media/vs2015_cpp_list_members.png)
 
 ## <a name="parameter-help"></a>Parametre yardımı
 
-Bir işlev çağrısının açma ayracı veya bir sınıf şablonu değişken bildiriminde açılı ayraç yazdığınızda, düzenleyici, işlevin veya oluşturucunun her bir aşırı yüklemesiyle ilgili parametre türleriyle küçük bir pencere gösterir. &mdash;İmleç konumunu temel alan "geçerli" parametresi &mdash; kalın yazılmıştır. **Seçenekler** iletişim kutusundaki parametre bilgilerini **metin düzenleyici**  >  **C/C++**  >  **genel**  >  **parametre bilgileri**altında devre dışı bırakabilirsiniz.
+Bir işlev çağrısının açma ayracı veya bir sınıf şablonu değişken bildiriminde açılı ayraç yazdığınızda, düzenleyici, işlevin veya oluşturucunun her bir aşırı yüklemesiyle ilgili parametre türleriyle küçük bir pencere gösterir. &mdash;İmleç konumunu temel alan "geçerli" parametresi &mdash; kalın yazılmıştır. **Seçenekler** iletişim kutusundaki parametre bilgilerini **metin düzenleyici**  >  **C/C++**  >  **genel**  >  **parametre bilgileri** altında devre dışı bırakabilirsiniz.
 
 ![Visual C&#43;&#43; parametresi yardımı](../ide/media/vs_2015_cpp_param_help.png)
 
@@ -62,7 +64,7 @@ Dalgalı çizgiler bir program öğesi (değişken, anahtar sözcük, küme ayra
 
 ### <a name="code-colorization-and-fonts"></a>Kod renklendirme ve yazı tipleri
 
-Varsayılan renkler ve yazı tipleri, **Options** **ortam**  >  **yazı tipleri ve renkler**altında Seçenekler iletişim kutusunda değiştirilebilir. Yalnızca düzenleyiciden değil, burada birçok UI penceresi için yazı tiplerini değiştirebilirsiniz. C++ ' a özel ayarlar "C++" ile başlar; diğer ayarlar tüm diller içindir.
+Varsayılan renkler ve yazı tipleri, **Options** **ortam**  >  **yazı tipleri ve renkler** altında Seçenekler iletişim kutusunda değiştirilebilir. Yalnızca düzenleyiciden değil, burada birçok UI penceresi için yazı tiplerini değiştirebilirsiniz. C++ ' a özel ayarlar "C++" ile başlar; diğer ayarlar tüm diller içindir.
 
 ## <a name="cross-platform-intellisense"></a>Platformlar arası IntelliSense
 
@@ -90,7 +92,7 @@ Etkin projeyi Android olarak değiştirirseniz dalgalı çizgiler değişikliği
 
 ## <a name="intellisense-for-stand-alone-files"></a>Tek başına dosyalar için IntelliSense
 
-Herhangi bir projenin dışında tek bir dosya açtığınızda IntelliSense 'i yine de kullanmaya devam edersiniz. **Seçenekler** iletişim kutusunda belirli IntelliSense özelliklerini, **metin düzenleyici**  >  **C/C++**  >  **Gelişmiş**altında etkinleştirebilir veya devre dışı bırakabilirsiniz. IntelliSense 'i bir projenin parçası olmayan tek dosyalar için yapılandırmak üzere, **proje dışı dosyalar Için IntelliSense ve gözatma** bölümüne bakın.
+Herhangi bir projenin dışında tek bir dosya açtığınızda IntelliSense 'i yine de kullanmaya devam edersiniz. **Seçenekler** iletişim kutusunda belirli IntelliSense özelliklerini, **metin düzenleyici**  >  **C/C++**  >  **Gelişmiş** altında etkinleştirebilir veya devre dışı bırakabilirsiniz. IntelliSense 'i bir projenin parçası olmayan tek dosyalar için yapılandırmak üzere, **proje dışı dosyalar Için IntelliSense ve gözatma** bölümüne bakın.
 
 ![Visual C&#43;&#43; tek dosya IntelliSense](../ide/media/vs2015_cpp_single_file_intellisense.png)
 
@@ -100,7 +102,7 @@ Varsayılan olarak, tek dosya IntelliSense yalnızca üst bilgi dosyalarını bu
 
 ## <a name="enable-or-disable-features"></a>Özellikleri etkinleştirme veya devre dışı bırakma
 
-Farklı kişilerin ne kullanışlı olduğuna ilişkin farklı fikirleri olduğundan, IntelliSense özelliklerinin neredeyse hepsi, **metin düzenleyici** **Options**  >  **C/C++**  >  **Gelişmiş**altında Seçenekler iletişim kutusunda etkinleştirilebilir veya devre dışı bırakılabilir. **Seçenekler** iletişim kutusu, menü çubuğundaki **Araçlar** menüsünden kullanılabilir.
+Farklı kişilerin ne kullanışlı olduğuna ilişkin farklı fikirleri olduğundan, IntelliSense özelliklerinin neredeyse hepsi, **metin düzenleyici** **Options**  >  **C/C++**  >  **Gelişmiş** altında Seçenekler iletişim kutusunda etkinleştirilebilir veya devre dışı bırakılabilir. **Seçenekler** iletişim kutusu, menü çubuğundaki **Araçlar** menüsünden kullanılabilir.
 
 ![Araç seçenekleri iletişim kutusu](../ide/media/sintellisensecpptoolsoptions.PNG)
 

@@ -1,5 +1,7 @@
 ---
 title: '8. Adım: Oyuncunun kazanıp kazanmadığını doğrulamak için yöntem ekleme'
+description: Oyuncunun kazandığını tespit etmek için nasıl Yöntem ekleneceğini öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: tutorial
 ms.prod: visual-studio-windows
@@ -13,12 +15,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 881fa0d90390a059bea28cb19584381f814396d3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c53afebfd8c39e9c43f82916095d8eeef2ec8b11
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77579756"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96479296"
 ---
 # <a name="step-8-add-a-method-to-verify-whether-the-player-won"></a>8. Adım: Oyuncunun kazanıp kazanmadığını doğrulamak için yöntem ekleme
 Eğlenceli bir oyun oluşturdunuz, ancak bitirmek için bir şeye daha ihtiyaç var. Oyuncu, oynatıcı WINS 'e göre sona erdirmek `CheckForWinner()` için oyuncunun kazanıp kazanılmadığını doğrulamak üzere bir yöntem eklemeniz gerekir.
@@ -43,10 +45,10 @@ Eğlenceli bir oyun oluşturdunuz, ancak bitirmek için bir şeye daha ihtiyaç 
 3. Programı kaydedip çalıştırın. Oyunu oynayın ve tüm simgeleri eşleştirin. Kazandığınızda, program bir kutlama **MessageBox** (aşağıdaki ekran görüntüsünde gösterildiği gibi) görüntüler ve sonra kutuyu kapatır.
 
      ![MessageBox ile eşleştirme oyunu](../ide/media/express_tut4step8.png)<br/>
-***MessageBox*** *ile* ***eşleşen oyun***
+*_* ***MessageBox** ile_ *_eşleşen oyun_* _
 
 ## <a name="to-continue-or-review"></a>Devam etmek veya gözden geçirmek için
 
-- Sonraki öğretici adımına gitmek için bkz. 9. **[Adım: diğer özellikleri deneyin](../ide/step-9-try-other-features.md)**.
+- Sonraki öğretici adımına gitmek için bkz. _ *[adım 9: diğer özellikleri deneyin](../ide/step-9-try-other-features.md)* *.
 
 - Önceki öğretici adımına dönmek için bkz. 7. [Adım: çiftleri görünür tut](../ide/step-7-keep-pairs-visible.md).

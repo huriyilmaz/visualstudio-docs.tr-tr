@@ -1,5 +1,6 @@
 ---
 title: Yönetici olarak çalıştır ögesini seçin
+description: Visual Studio 'Yu yönetici olarak çalıştırmayı öğrenin.
 ms.date: 01/06/2020
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 927031b4755644aeac553367a4f8a08faa0c0992
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9d69d916b8b99d6f5b5b3421ae4aea073e24fa67
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75718642"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96478958"
 ---
 # <a name="user-permissions-and-visual-studio"></a>Kullanıcı izinleri ve Visual Studio
 
@@ -32,10 +33,10 @@ Normal bir kullanıcı olarak Visual Studio IDE 'deki neredeyse her şeyi yapabi
 |----------|----------| - |
 |Yükleme|Visual Studio 'Yu yükler veya değiştirir.|[Visual Studio 'Yu yüklemeyi](../install/install-visual-studio.md), [Visual Studio 'yu değiştirme](../install/modify-visual-studio.md)|
 ||Yerel Yardım içeriğini yükler, güncelleştirir veya kaldırır.|[Yerel Yardım içeriğini yükleyip yönetme](../help-viewer/install-manage-local-content.md)|
-|Araç Kutusu|**Araç kutusuna**klasik com denetimleri ekleyin.|[Araç Kutusu](../ide/reference/toolbox.md)|
+|Araç Kutusu|**Araç kutusuna** klasik com denetimleri ekleyin.|[Araç Kutusu](../ide/reference/toolbox.md)|
 |Oluşturma|Bir bileşeni kaydeden oluşturma sonrası olayları kullanın.|[Özel derleme adımlarını ve derleme olaylarını anlama](/cpp/build/understanding-custom-build-steps-and-build-events)|
 ||C++ projeleri oluşturduğunuzda bir kayıt adımı ekleyin.||
-|Hata Ayıklama|Yükseltilmiş izinlerle çalışan uygulamalarda hata ayıklayın.|[Hata ayıklayıcı ayarları ve hazırlığı](../debugger/debugger-settings-and-preparation.md)|
+|Hata Ayıklama|Yükseltilmiş izinlerle çalışan uygulamalarda hata ayıklayın.|[Hata ayıklayıcısı ayarları ve hazırlığı](../debugger/debugger-settings-and-preparation.md)|
 ||ASP.NET Web siteleri gibi farklı bir kullanıcı hesabı altında çalışan uygulamalarda hata ayıklayın.|[ASP.NET ve AJAX uygulamalarında hata ayıklama](../debugger/how-to-enable-debugging-for-aspnet-applications.md)|
 ||XAML tarayıcı uygulamaları (XBAP) için bölgede hata ayıklama.|[WPF konağı (PresentationHost.exe)](/dotnet/framework/wpf/app-development/wpf-host-presentationhost-exe)|
 ||Microsoft Azure için bulut hizmeti projelerinde hata ayıklamak için öykünücüyü kullanın.|[Visual Studio 'da bir bulut hizmetinde hata ayıklama](/azure/vs-azure-tools-debug-cloud-services-virtual-machines)|

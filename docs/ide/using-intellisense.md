@@ -1,5 +1,7 @@
 ---
 title: Parametre bilgisi, liste üyeleri ve hızlı bilgi
+description: 'Bu IntelliSense özelliklerini nasıl kullanacağınızı öğrenin: liste üyeleri, parametre bilgileri, hızlı bilgi ve tüm kelime.'
+ms.custom: SEO-VS-2020
 ms.date: 05/25/2018
 ms.topic: conceptual
 f1_keywords:
@@ -15,12 +17,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cbd85ece0cf7b84230e37c74c27e746df7a52439
-ms.sourcegitcommit: f78960320798e2c6b33145cee77a2221f031603c
+ms.openlocfilehash: c60372d7268dd76bf9bbd967678490998ffa76c3
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94878289"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96479023"
 ---
 # <a name="intellisense-in-visual-studio"></a>Visual Studio 'da IntelliSense
 

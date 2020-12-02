@@ -1,5 +1,7 @@
 ---
 title: IntelliSense için bir C++ projesi yapılandırma
+description: IntelliSense sorunlarını belirlemenize ve düzeltmenize yardımcı olması için Visual Studio IDE 'yi kullanarak IntelliSense 'in düzgün şekilde çalışmasını sağlamak üzere C++ projenizi el ile yapılandırmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 10/08/2018
 ms.topic: conceptual
 author: corob-msft
@@ -7,12 +9,12 @@ ms.author: corob
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 610f3d92d86e227973be9c481adaf830d3d16737
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: 34be73203f5c1d01e4674e7892e0f89d4aae4816
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89509893"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96478802"
 ---
 # <a name="configure-a-c-project-for-intellisense"></a>IntelliSense için bir C++ projesi yapılandırma
 
@@ -20,7 +22,7 @@ Bazı durumlarda, IntelliSense 'in düzgün şekilde çalışmasını sağlamak 
 
 ## <a name="single-file-intellisense"></a>Tek dosya IntelliSense
 
-Bir projeye dahil olmayan bir dosyayı açtığınızda, Visual Studio bazı IntelliSense desteği sağlar ancak varsayılan olarak hiçbir hata dalgalı çizgiler gösterilmez. **Gezinti çubuğu** *çeşitli dosyalar*yazmazsa, büyük olasılıkla hatalı kod altında hata dalgalı çizgiler görmediğiniz veya bir Önişlemci makrosunun neden tanımlanmadığı açıklanmaktadır.
+Bir projeye dahil olmayan bir dosyayı açtığınızda, Visual Studio bazı IntelliSense desteği sağlar ancak varsayılan olarak hiçbir hata dalgalı çizgiler gösterilmez. **Gezinti çubuğu** *çeşitli dosyalar* yazmazsa, büyük olasılıkla hatalı kod altında hata dalgalı çizgiler görmediğiniz veya bir Önişlemci makrosunun neden tanımlanmadığı açıklanmaktadır.
 
 ## <a name="check-the-error-list"></a>Hata Listesi denetleyin
 
@@ -38,7 +40,7 @@ Yapılarınızı Visual Studio IDE dışında çalıştırırsanız, yapıların
 
 ![VC + + Içerme dizinleri](media/vcpp-intellisense-include-paths.png)
 
-**VC_IncludePath**gibi derleme makrolarının geçerli değerlerini görmek Için Dizin Ekle satırını seçin ve sağdaki aşağı açılan listeye tıklayın. Sonra **\<Edit>** **makrolar** düğmesini seçin ve tıklayın.
+**VC_IncludePath** gibi derleme makrolarının geçerli değerlerini görmek Için Dizin Ekle satırını seçin ve sağdaki aşağı açılan listeye tıklayın. Sonra **\<Edit>** **makrolar** düğmesini seçin ve tıklayın.
 
 ### <a name="makefile-projects"></a>Derleme görevleri dosyası projeleri
 
@@ -93,7 +95,7 @@ IntelliSense derleyicisinin Içerme ve Önişlemci makroları dahil doğru derle
 /Yustdafx.h
 ```
 
-Bu bilgiler, IntelliSense 'in neden yanlış bilgi sağladığını anlamanıza yardımcı olabilir. Örneğin, projenizin Içerme dizini **$ (MyVariable) \ Include**değerini içeriyorsa ve tanılama günlüğünde **/I\ınclude** öğesini içerme yolu olarak gösteriyorsa, **$ (MyVariable)** öğesinin değerlendirilmediği ve son içerme yolundan kaldırıldığı anlamına gelir.
+Bu bilgiler, IntelliSense 'in neden yanlış bilgi sağladığını anlamanıza yardımcı olabilir. Örneğin, projenizin Içerme dizini **$ (MyVariable) \ Include** değerini içeriyorsa ve tanılama günlüğünde **/I\ınclude** öğesini içerme yolu olarak gösteriyorsa, **$ (MyVariable)** öğesinin değerlendirilmediği ve son içerme yolundan kaldırıldığı anlamına gelir.
 
 ## <a name="about-the-intellisense-build"></a>IntelliSense derlemesi hakkında
 
@@ -103,7 +105,7 @@ Ancak, bazı durumlarda Visual Studio IntelliSense veritabanını zamanında gü
 
 ## <a name="troubleshooting-intellisense-build-failures"></a>IntelliSense derleme hatalarıyla ilgili sorunları giderme
 
-Bir IntelliSense derlemesi ikili dosyaları oluşturmaz, ancak yine de başarısız olabilir. Hatanın olası nedenlerinden biri Custom. props veya. targets dosyalarıdır. Visual Studio 2017 sürüm 15,6 ve sonrasında, yalnızca IntelliSense derleme hataları çıkış penceresine kaydedilir. Bunları görmek için, **çıktıyı ' den** **çözüme**göster ' i ayarlayın:
+Bir IntelliSense derlemesi ikili dosyaları oluşturmaz, ancak yine de başarısız olabilir. Hatanın olası nedenlerinden biri Custom. props veya. targets dosyalarıdır. Visual Studio 2017 sürüm 15,6 ve sonrasında, yalnızca IntelliSense derleme hataları çıkış penceresine kaydedilir. Bunları görmek için, **çıktıyı ' den** **çözüme** göster ' i ayarlayın:
 
 ![Çözüm hataları için çıkış penceresi](media/vcpp-intellisense-output-window.png)
 

@@ -1,5 +1,7 @@
 ---
 title: Visual Basic IntelliSense
+description: Visual Basic kaynak kodu Düzenleyicisi tarafından sunulan IntelliSense özelliklerini kullanmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +14,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 118de9ec05bcd5c56376376619bea0c5148d36ab
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 70cdcf9eb6d741fc579ce555ce0bfa3cdea0d774
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75594194"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96478828"
 ---
 # <a name="intellisense-for-visual-basic-code-files"></a>Visual Basic kod dosyaları için IntelliSense
 
@@ -39,7 +41,7 @@ Söz dizimi ipuçları, yazmakta olduğunuz deyimin sözdizimini görüntüler. 
 
 Tamamlama, **Visual Basic** klasöründeki **genel** özellik sayfasından **otomatik liste üyelerinin** seçimini kaldırarak varsayılan olarak devre dışı bırakabilirsiniz.
 
-Liste üyelerini, tamamla sözcüğünü veya **alt** + **sağ oku**çağırarak tamamlamayı el ile çağırabilirsiniz. Daha fazla bilgi için bkz. [IntelliSense 'ı kullanma](../ide/using-intellisense.md).
+Liste üyelerini, tamamla sözcüğünü veya **alt** + **sağ oku** çağırarak tamamlamayı el ile çağırabilirsiniz. Daha fazla bilgi için bkz. [IntelliSense 'ı kullanma](../ide/using-intellisense.md).
 
 ## <a name="intellisense-in-zone"></a>Bölgedeki IntelliSense
 

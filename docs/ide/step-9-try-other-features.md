@@ -1,5 +1,7 @@
 ---
 title: '9. Adım: Diğer özellikleri deneme'
+description: Simgeleri ve renkleri değiştirme, oyun süreölçeri ekleme, ses ekleme ve oyun panosunu daha büyük hale getirme hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: tutorial
 ms.prod: visual-studio-windows
@@ -10,12 +12,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 32ac2f1977bb0b8b391651ed7ed459b9dc560330
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4f462d70fda9a212bf848477952ecc7132a60265
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77579737"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96479257"
 ---
 # <a name="step-9-try-other-features"></a>9. Adım: Diğer özellikleri deneme
 Daha fazla bilgi edinmek için simgeleri ve renkleri değiştirmeyi, oyun zamanlayıcısı ve sesler eklemeyi deneyin. Oyunu daha zorlu hale getirmek için tahtayı büyütmeyi ve zamanlayıcıyı ayarlamayı deneyin.
