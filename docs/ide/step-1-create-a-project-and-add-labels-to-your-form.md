@@ -1,5 +1,7 @@
 ---
 title: '1. Adım: Proje oluşturma ve formunuza etiketler ekleme'
+description: Bir forma proje oluşturmayı, etiket, düğme ve diğer denetimleri eklemeyi ve eklediğiniz her denetim için özellikleri ayarlamayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 10/15/2019
 ms.topic: tutorial
 ms.prod: visual-studio-windows
@@ -10,12 +12,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6bf904fca84fba88e81306ff91add6c2156b4544
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cd84b7b11f58b8deb62f6138255b4c8d942b5a00
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77579453"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480115"
 ---
 # <a name="step-1-create-a-project-and-add-labels-to-your-form"></a>1. Adım: Proje oluşturma ve formunuza etiketler ekleme
 
@@ -32,7 +34,7 @@ Bu testi geliştirmenin ilk adımı olarak, projeyi oluşturur ve bir forma Etik
 
 1. **Yeni proje** iletişim kutusunun sol tarafındaki **Visual C#** veya **Visual Basic** seçin ve ardından **Windows Masaüstü**' ne tıklayın.
 
-1. Şablon listesinde **Windows Forms App (.NET Framework)** şablonunu seçin, *MathQuiz*olarak adlandırın ve **Tamam** düğmesini seçin.
+1. Şablon listesinde **Windows Forms App (.NET Framework)** şablonunu seçin, *MathQuiz* olarak adlandırın ve **Tamam** düğmesini seçin.
 
     Seçtiğiniz programlama diline bağlı olarak, *Form1.cs* veya *Form1. vb* adlı bir form görüntülenir.
 
@@ -70,7 +72,7 @@ Bu testi geliştirmenin ilk adımı olarak, projeyi oluşturur ve bir forma Etik
 
 ## <a name="to-set-properties-for-a-form"></a>Form özelliklerini ayarlamak için
 
-1. Visual Studio 'da, formu (programlama diline bağlı olarak *Form1.cs* veya *Form1. vb*) seçin ve ardından **Text** özelliğini **matematik sınavı**olarak değiştirin.
+1. Visual Studio 'da, formu (programlama diline bağlı olarak *Form1.cs* veya *Form1. vb*) seçin ve ardından **Text** özelliğini **matematik sınavı** olarak değiştirin.
 
      **Özellikler** penceresi form özelliklerini içerir.
 
@@ -78,13 +80,13 @@ Bu testi geliştirmenin ilk adımı olarak, projeyi oluşturur ve bir forma Etik
 
      Tümleşik geliştirme ortamının (IDE) sol alt köşesinde doğru boyut görünene kadar, kenarlarını sürükleyerek formu yeniden boyutlandırabilirsiniz. Alternatif olarak, **size** özelliğinin değerlerini değiştirebilirsiniz.
 
-1. **FormBorderStyle** özelliğinin değerini **Fixed3D**olarak değiştirin ve **MaximizeBox** özelliğini **false**olarak ayarlayın.
+1. **FormBorderStyle** özelliğinin değerini **Fixed3D** olarak değiştirin ve **MaximizeBox** özelliğini **false** olarak ayarlayın.
 
      Bu değerler, test takipçilerin formu yeniden boyutlandırmasını engeller.
 
 ## <a name="to-create-the-time-remaining-box"></a>Kalan süre kutusunu oluşturmak için
 
-1. <xref:System.Windows.Forms.Label> **Araç kutusundan**bir denetim ekleyin ve sonra **(Name)** özelliğinin değerini **timeLabel**olarak ayarlayın.
+1. <xref:System.Windows.Forms.Label> **Araç kutusundan** bir denetim ekleyin ve sonra **(Name)** özelliğinin değerini **timeLabel** olarak ayarlayın.
 
      Bu etiket, sağ üst köşede, test içinde kalan saniye sayısını gösteren bir kutu olur.
 
@@ -92,7 +94,7 @@ Bu testi geliştirmenin ilk adımı olarak, projeyi oluşturur ve bir forma Etik
 
 3. Kutunun çevresinde bir çizgi çizmek için **BorderStyle** özelliğini **FixedSingle** olarak değiştirin.
 
-4. **Boyut** özelliğini **200, 30**olarak ayarlayın.
+4. **Boyut** özelliğini **200, 30** olarak ayarlayın.
 
 5. Etiketi formun sağ üst köşesine taşıyın, burada mavi yer çizgisi çizgileri görünür.
 
@@ -100,33 +102,33 @@ Bu testi geliştirmenin ilk adımı olarak, projeyi oluşturur ve bir forma Etik
 
 6. **Özellikler** penceresinde, **metin** özelliğini seçin ve sonra değerini temizlemek için **geri al** tuşunu seçin.
 
-7. **+** **Yazı tipi** özelliğinin yanındaki artı işaretini () seçin ve ardından **size** özelliğinin değerini **15,75**olarak değiştirin.
+7. **+** **Yazı tipi** özelliğinin yanındaki artı işaretini () seçin ve ardından **size** özelliğinin değerini **15,75** olarak değiştirin.
 
      Aşağıdaki ekran görüntüsünde gösterildiği gibi çeşitli yazı tipi özelliklerini değiştirebilirsiniz.
 
      ![Yazı tipi boyutunu gösteren Özellikler penceresi](../ide/media/express_setfontsize.png)
 
-8. **Araç kutusundan**başka bir etiket denetimi ekleyin ve ardından yazı tipi boyutunu **15,75**olarak ayarlayın.
+8. **Araç kutusundan** başka bir etiket denetimi ekleyin ve ardından yazı tipi boyutunu **15,75** olarak ayarlayın.
 
-9. **Text** özelliğini **Left zaman**olarak ayarlayın.
+9. **Text** özelliğini **Left zaman** olarak ayarlayın.
 
 10. Etiketi **timeLabel** etiketinin hemen soluna doğru olacak şekilde taşıyın.
 
 ### <a name="to-add-controls-for-the-addition-problems"></a>Ek sorunlara yönelik denetimler eklemek için
 
-1. **Araç kutusundan**bir etiket denetimi ekleyin ve **Text** **özelliğini olarak ayarlayın** . (soru işareti).
+1. **Araç kutusundan** bir etiket denetimi ekleyin ve **Text** **özelliğini olarak ayarlayın** . (soru işareti).
 
-2. **AutoSize** özelliğini **false**olarak ayarlayın.
+2. **AutoSize** özelliğini **false** olarak ayarlayın.
 
-3. **Boyut** özelliğini **60, 50**olarak ayarlayın.
+3. **Boyut** özelliğini **60, 50** olarak ayarlayın.
 
-4. Yazı tipi boyutunu **18**olarak ayarlayın.
+4. Yazı tipi boyutunu **18** olarak ayarlayın.
 
-5. **TextAlign** özelliğini **MiddleCenter**olarak ayarlayın.
+5. **TextAlign** özelliğini **MiddleCenter** olarak ayarlayın.
 
 6. Denetimi form üzerinde konumlandırmak için **Location** özelliğini **50, 75** olarak ayarlayın.
 
-7. **(Ad)** özelliğini **plusLeftLabel**olarak ayarlayın.
+7. **(Ad)** özelliğini **plusLeftLabel** olarak ayarlayın.
 
 8. **PlusLeftLabel** etiketini seçin ve ardından **CTRL** + **C** tuşlarını veya **Düzen** menüsünden **Kopyala** ' yı seçin.
 
@@ -138,17 +140,17 @@ Bu testi geliştirmenin ilk adımı olarak, projeyi oluşturur ve bir forma Etik
 
 11. İkinci etiketin **metin** özelliğinin değerini **+** (artı işareti) olarak ayarlayın.
 
-12. Üçüncü etiketin **(Name)** özelliğinin değerini **plusRightLabel**olarak ayarlayın.
+12. Üçüncü etiketin **(Name)** özelliğinin değerini **plusRightLabel** olarak ayarlayın.
 
 13. Dördüncü etiketin **Text** özelliğinin değerini **=** (eşittir işareti) olarak ayarlayın.
 
-14. <xref:System.Windows.Forms.NumericUpDown> **Araç kutusundan**bir denetim ekleyin, yazı tipi boyutunu **18**olarak ayarlayın ve genişliğini **100**olarak ayarlayın.
+14. <xref:System.Windows.Forms.NumericUpDown> **Araç kutusundan** bir denetim ekleyin, yazı tipi boyutunu **18** olarak ayarlayın ve genişliğini **100** olarak ayarlayın.
 
      Daha sonra bu tür bir denetim hakkında daha fazla bilgi edineceksiniz.
 
 15. Ek sorun için etiket denetimleriyle NumericUpDown denetimini hizalamak.
 
-16. NumericUpDown denetimi için **(Name)** özelliğinin değerini **Sum**olarak değiştirin.
+16. NumericUpDown denetimi için **(Name)** özelliğinin değerini **Sum** olarak değiştirin.
 
      İlk satırı aşağıdaki çizimde gösterildiği gibi oluşturdunuz.
 
@@ -166,45 +168,45 @@ Bu testi geliştirmenin ilk adımı olarak, projeyi oluşturur ve bir forma Etik
 
 3. İkinci etiket için **metin** özelliğinin değerini **-** (eksi işareti) olarak değiştirin.
 
-4. İlk soru-işaret etiketini **minusLeftLabel**olarak adlandırın.
+4. İlk soru-işaret etiketini **minusLeftLabel** olarak adlandırın.
 
-5. İkinci soru-işaret etiketini **minusRightLabel**olarak adlandırın.
+5. İkinci soru-işaret etiketini **minusRightLabel** olarak adlandırın.
 
-6. NumericUpDown denetim **farkını**adlandırın.
+6. NumericUpDown denetim **farkını** adlandırın.
 
 7. Beş denetimi iki kez yapıştırın.
 
-8. Üçüncü satır için, ilk etiketi **timesLeftLabel**olarak adlandırın, Ikinci etiketin **Text** özelliğini **×** (çarpma işareti) olarak değiştirin, üçüncü etiketi **timesRightLabel**olarak adlandırın ve NumericUpDown denetim **ürününe**adlandırın.
+8. Üçüncü satır için, ilk etiketi **timesLeftLabel** olarak adlandırın, Ikinci etiketin **Text** özelliğini **×** (çarpma işareti) olarak değiştirin, üçüncü etiketi **timesRightLabel** olarak adlandırın ve NumericUpDown denetim **ürününe** adlandırın.
 
-9. Dördüncü satır için, ilk etiketi **Dividedleftlabel**olarak adlandırın, Ikinci etiketin **Text** özelliğini **÷** (bölme işareti) olarak değiştirin, üçüncü Label **Dividedrigulabel**' ı adlandırın ve NumericUpDown denetim **bölümünü**adlandırın.
+9. Dördüncü satır için, ilk etiketi **Dividedleftlabel** olarak adlandırın, Ikinci etiketin **Text** özelliğini **÷** (bölme işareti) olarak değiştirin, üçüncü Label **Dividedrigulabel**' ı adlandırın ve NumericUpDown denetim **bölümünü** adlandırın.
 
     > [!NOTE]
     > Bu öğreticiden çarpma işareti × ve bölüm işareti ÷ kopyalayabilir ve bunları forma yapıştırabilirsiniz.
 
 ## <a name="to-add-a-start-button-and-set-the-tab-index-order"></a>Bir başlangıç düğmesi eklemek ve sekme-dizin sırasını ayarlamak için
 
-1. <xref:System.Windows.Forms.Button> **Araç kutusundan**bir denetim ekleyin ve sonra **(Name)** özelliğini **startButton**olarak ayarlayın.
+1. <xref:System.Windows.Forms.Button> **Araç kutusundan** bir denetim ekleyin ve sonra **(Name)** özelliğini **startButton** olarak ayarlayın.
 
-2. **Testi başlatmak**için **metin** özelliğini ayarlayın.
+2. **Testi başlatmak** için **metin** özelliğini ayarlayın.
 
-3. Yazı tipi boyutunu **14**olarak ayarlayın.
+3. Yazı tipi boyutunu **14** olarak ayarlayın.
 
-4. **AutoSize** özelliğini **true**olarak ayarlayın. Bu, düğmenin metne sığacak şekilde otomatik olarak yeniden boyutlandırmasına neden olur.
+4. **AutoSize** özelliğini **true** olarak ayarlayın. Bu, düğmenin metne sığacak şekilde otomatik olarak yeniden boyutlandırmasına neden olur.
 
 5. Formun alt kısmındaki düğmeyi ortalayın.
 
-6. **StartButton** denetimi için **TabIndex** özelliğinin değerini **1**olarak ayarlayın.
+6. **StartButton** denetimi için **TabIndex** özelliğinin değerini **1** olarak ayarlayın.
 
     > [!NOTE]
     > **TabIndex** özelliği, test Taklayıcı **sekme** tuşunu seçtiğinde denetimlerin sırasını ayarlar. Nasıl çalıştığını görmek için herhangi bir iletişim kutusunu açın (örneğin, menü çubuğunda **Dosya**  >  **Aç**' ı seçin) ve ardından **sekme** tuşuna birkaç kez tıklayın. Her **sekme** tuşunu seçtiğiniz her seferinde imlecinizin denetim ' e nasıl taşındığını izleyin. Bir programcı bu formu oluştururken bir sıraya karar verdi.
 
-7. Değer denetimi için **TabIndex** özelliğinin değerini **2**, fark denetimi için **3**, ürün denetimi için **4**ve bölüm denetimi için **5**olarak ayarlayın.
+7. Değer denetimi için **TabIndex** özelliğinin değerini **2**, fark denetimi için **3**, ürün denetimi için **4** ve bölüm denetimi için **5** olarak ayarlayın.
 
      Form aşağıdaki ekran görüntüsüne benzer şekilde görünmelidir.
 
      ![İlk matematik testi formu](../ide/media/express_formlaidout.png)
 
-8. **TabIndex** özelliğinin beklendiği gibi çalışıp çalışmadığını doğrulamak için **F5** tuşunu seçerek veya menü çubuğunda Hata **Ayıkla**Başlat ' ı seçerek programınızı kaydedip çalıştırın  >  **Start Debugging** ve ardından **sekme** tuşuna birkaç kez tıklayın.
+8. **TabIndex** özelliğinin beklendiği gibi çalışıp çalışmadığını doğrulamak için **F5** tuşunu seçerek veya menü çubuğunda Hata **Ayıkla** Başlat ' ı seçerek programınızı kaydedip çalıştırın  >  **Start Debugging** ve ardından **sekme** tuşuna birkaç kez tıklayın.
 
 ## <a name="to-continue-or-review"></a>Devam etmek veya gözden geçirmek için
 

@@ -1,5 +1,7 @@
 ---
 title: Kaynak denetimi eklentilerini kullanmaya başlama | Microsoft Docs
+description: Kaynak kodu sürüm denetiminde kullanılmak üzere kaynak denetimi eklentisi API 'sinde tanımlanan işlevleri uygulayan bir kaynak denetimi eklentisi oluşturma hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: efc21e07830614d9d3041b2d2d231fd82c652114
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1524e4c4f08b272fd17973597d558efdabec41af
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708340"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480505"
 ---
 # <a name="get-started-with-source-control-plug-ins"></a>Kaynak denetim eklentilerini kullanmaya başlama
 Kaynak denetimi eklentisi oluşturmak için, kaynak denetimi eklentisi API 'sinde tanımlanan işlevleri uygulayan bir DLL oluşturmanız ve ardından, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kaynak kodu sürüm denetiminde kullanılabilmesi IÇIN dll 'yi ile kaydetmeniz gerekir.

@@ -1,5 +1,7 @@
 ---
 title: Eleme ~ SAK Files | Microsoft Docs
+description: Kaynak denetimi eklentisi API 1,2 ' den ~ SAK dosyalarının eleme ve bunların nasıl değiştirildiğini yetenek bayrakları ve yeni işlevlerle nasıl değiştirdikleri hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0294198bb1560f8df6f17170013f88d4fe11e5cf
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8e846354b2d48b2f7866daa14987e757f41779c8
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708494"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480518"
 ---
 # <a name="elimination-of-sak-files"></a>~ SAK dosyaları için eleme
 Kaynak denetimi eklentisi API 1,2 ' de, *~ sak* dosyaları yetenek bayraklarıyla ve kaynak denetimi eklentisinin *Mssccprj* dosyasını ve paylaşılan kullanıma alma işlemleri destekleyip desteklemediğini algılayan yeni işlevlerle değiştirilmiştir.
@@ -45,10 +47,10 @@ Kaynak denetimi eklentisi API 1,2 ' de sunulan gelişmiş işlevleri destekleyen
 
  Bir kaynak denetimi eklentisi bir *Mssccprj. SCC* dosyasının oluşturulmasını ve kullanımını destekliyorsa, `SCC_CAP_SCCFILE` özelliği bildirir ve [sccwillcreatesccdosyasını](../../extensibility/sccwillcreatesccfile-function.md)uygular. Bu işlev, bir dosya listesi ile çağırılır. İşlevi, `TRUE' or 'FALSE` Visual Studio 'nun kendisi için bir *Mssccprj. SCC* dosyası kullanması gerekip gerekmediğini belirtmek için her bir dosya için döndürür. Kaynak denetimi eklentisi bu yeni özellikleri ve işlevleri desteklememe seçerse, bu dosyaların oluşturulmasını devre dışı bırakmak için aşağıdaki kayıt defteri anahtarını kullanabilir:
 
- **[HKEY_CURRENT_USER \Software\Microsoft\VisualStudio\8.0\SourceControl] DoNotCreateTemporaryFilesInSourceControl**  =  *DWORD: 00000001*
+ **[HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0\SourceControl]DoNotCreateTemporaryFilesInSourceControl**  =  *DWORD: 00000001*
 
 > [!NOTE]
-> Bu kayıt defteri anahtarı *DWORD: 00000000*olarak ayarlandıysa, varolmayan anahtarla eşdeğerdir ve Visual Studio yine de geçici dosyaları oluşturmaya çalışır. Ancak, kayıt defteri anahtarı *DWORD: 00000001*olarak ayarlandıysa, Visual Studio geçici dosyaları oluşturmayı denemez. Bunun yerine, kaynak denetimi eklentisinin *Mssccprj. SCC* dosyasını desteklemediğini varsayar ve paylaşılan kullanıma alma işlemleri desteklenmez.
+> Bu kayıt defteri anahtarı *DWORD: 00000000* olarak ayarlandıysa, varolmayan anahtarla eşdeğerdir ve Visual Studio yine de geçici dosyaları oluşturmaya çalışır. Ancak, kayıt defteri anahtarı *DWORD: 00000001* olarak ayarlandıysa, Visual Studio geçici dosyaları oluşturmayı denemez. Bunun yerine, kaynak denetimi eklentisinin *Mssccprj. SCC* dosyasını desteklemediğini varsayar ve paylaşılan kullanıma alma işlemleri desteklenmez.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Kaynak denetimi eklentisi API sürümü 1,2 ' deki yenilikler](../../extensibility/internals/what-s-new-in-the-source-control-plug-in-api-version-1-2.md)

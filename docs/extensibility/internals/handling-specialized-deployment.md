@@ -1,5 +1,7 @@
 ---
 title: Özelleştirilmiş dağıtımı işleme | Microsoft Docs
+description: Visual Studio 'da bir uygulama projesinin özelleşmiş dağıtımını nasıl işleyeceğinizi öğrenin. Örneğin, bir Web sunucusuna veya bir cihaza dağıtım.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 972965c3565088af8205d6f7903d7098e568c057
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 664625cd8737fb9a9a3e398716d750d6d9665529
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708220"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480440"
 ---
 # <a name="handle-specialized-deployment"></a>Özelleştirilmiş dağıtımı işle
 Dağıtım, projeler için isteğe bağlı bir işlemdir. Örneğin, bir Web projesi, projenin bir Web sunucusunu güncelleştirmesine izin vermek için bir dağıtımı destekler. Benzer şekilde, **akıllı bir cihaz** projesi, yerleşik bir uygulamayı hedef cihaza kopyalamak için bir dağıtımı destekler. Proje alt türleri, arabirimini uygulayarak özelleştirilmiş dağıtım davranışı sağlayabilir <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg> . Bu arabirim, dağıtım işlemlerinin bir bütün kümesini tanımlar:

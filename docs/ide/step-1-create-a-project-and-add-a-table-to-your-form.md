@@ -1,5 +1,7 @@
 ---
 title: '1. Adım: Proje oluşturma ve formunuza tablo ekleme'
+description: Eşleşen oyun projesini oluşturma ve formunuza tablo ekleme hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 10/15/2019
 ms.topic: tutorial
 ms.prod: visual-studio-windows
@@ -10,12 +12,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c1134fb5bb02bd8c78f347ef582f12da35074c36
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1a8ae9b17df85431945b19d65f5435ac081b4a1c
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77579925"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480726"
 ---
 # <a name="step-1-create-a-project-and-add-a-table-to-your-form"></a>1. Adım: Proje oluşturma ve formunuza tablo ekleme
 
@@ -29,7 +31,7 @@ Eşleştirme oyunu hazırlarken ilk adım projeyi oluşturmak ve formunuza bir t
 
 1. **Yeni proje** iletişim kutusunun sol tarafındaki **Visual C#** veya **Visual Basic** seçin ve ardından **Windows Masaüstü**' ne tıklayın.
 
-1. Şablon listesinde **Windows Forms App (.NET Framework)** şablonunu seçin, *MatchingGame*olarak adlandırın ve **Tamam** düğmesini seçin.
+1. Şablon listesinde **Windows Forms App (.NET Framework)** şablonunu seçin, *MatchingGame* olarak adlandırın ve **Tamam** düğmesini seçin.
 
     Seçtiğiniz programlama diline bağlı olarak, *Form1.cs* veya *Form1. vb* adlı bir form görüntülenir.
 
@@ -69,22 +71,22 @@ Eşleştirme oyunu hazırlarken ilk adım projeyi oluşturmak ve formunuza bir t
 
 1. **Özellikler** penceresinde, aşağıdaki form özelliklerini ayarlayın.
 
-   1. Formun **Text** özelliğini **Form1** iken **eşleşen oyunla**değiştirin. Bu metin oyun penceresinin en üstünde görünür.
+   1. Formun **Text** özelliğini **Form1** iken **eşleşen oyunla** değiştirin. Bu metin oyun penceresinin en üstünde görünür.
 
-   2. Formun boyutunu 550 piksel genişliğe ve 550 piksel uzunluğa ayarlayın. Bunu, **Boyut** özelliğini **550, 550**olarak ayarlayarak veya tümleşik geliştirme ortamının sağ alt köşesinde (IDE) doğru boyutu görene kadar formun köşesini sürükleyerek yapabilirsiniz.
+   2. Formun boyutunu 550 piksel genişliğe ve 550 piksel uzunluğa ayarlayın. Bunu, **Boyut** özelliğini **550, 550** olarak ayarlayarak veya tümleşik geliştirme ortamının sağ alt köşesinde (IDE) doğru boyutu görene kadar formun köşesini sürükleyerek yapabilirsiniz.
 
 2. IDE 'nin sol tarafındaki **araç kutusu** sekmesini seçerek araç kutusunu görüntüleyin.
 
 3. <xref:System.Windows.Forms.TableLayoutPanel>Araç kutusundaki **kapsayıcılar** kategorisinden bir denetim sürükleyin ve sonra bunun için aşağıdaki özellikleri ayarlayın.
 
-   1. **BackColor** özelliğini **CornflowerBlue**olarak ayarlayın. Bunu yapmak için, **Özellikler** penceresinde **BackColor** özelliğinin yanındaki açılan oku seçerek **BackColor** iletişim kutusunu açın.  Ardından, kullanılabilir renk adlarının listesini görüntülemek için **BackColor** Iletişim kutusundaki **Web** sekmesini seçin.
+   1. **BackColor** özelliğini **CornflowerBlue** olarak ayarlayın. Bunu yapmak için, **Özellikler** penceresinde **BackColor** özelliğinin yanındaki açılan oku seçerek **BackColor** iletişim kutusunu açın.  Ardından, kullanılabilir renk adlarının listesini görüntülemek için **BackColor** Iletişim kutusundaki **Web** sekmesini seçin.
 
       > [!NOTE]
       > Renkler alfabetik sırada değildir ve **CornflowerBlue** listenin en altına yakındır.
 
    2. Özelliğin yanındaki açılan düğmeyi seçerek ve büyük orta düğmesini seçerek, **Dock** özelliğini **Fill** olarak ayarlayın. Böylece tablo formun tamamını kaplayacak şekilde yayılır.
 
-   3. **CellBorderStyle** özelliğini **ınmetinolarak**ayarlayın. Böylece, tahta üzerindeki her bir hücre arasında görsel kenarlıklar olur.
+   3. **CellBorderStyle** özelliğini **ınmetinolarak** ayarlayın. Böylece, tahta üzerindeki her bir hücre arasında görsel kenarlıklar olur.
 
    4. TableLayoutPanel denetiminin sağ üst köşesindeki üçgen düğmesini seçerek ilgili görev menüsünü görüntüleyin.
 
@@ -98,19 +100,19 @@ Eşleştirme oyunu hazırlarken ilk adım projeyi oluşturmak ve formunuza bir t
 
     TableLayoutPanel seçiliyken, araç kutusunu açın ve <xref:System.Windows.Forms.Label> TableLayoutPanel 'in sol üst hücresine bir denetim ( **ortak denetimler** kategorisinde bulunur) ekleyin. Etiket denetimi artık IDE 'de seçilmelidir. Bu öğe için aşağıdaki özellikleri ayarlayın.
 
-   1. Etiketin **BackColor** özelliğinin **CornflowerBlue**olarak ayarlandığından emin olun.
+   1. Etiketin **BackColor** özelliğinin **CornflowerBlue** olarak ayarlandığından emin olun.
 
-   2. **AutoSize** özelliğini **false**olarak ayarlayın.
+   2. **AutoSize** özelliğini **false** olarak ayarlayın.
 
-   3. **Dock** özelliğini **Fill**olarak ayarlayın.
+   3. **Dock** özelliğini **Fill** olarak ayarlayın.
 
    4. Özelliğin yanındaki açılan düğmeyi seçerek ve ardından ortadaki düğmeyi seçerek **TextAlign** özelliğini **MiddleCenter** olarak ayarlayın. Böylece, simgenin hücrenin ortasında görünmesi sağlanır.
 
    5. **Yazı tipi** özelliğini seçin. Üç nokta (**...**) düğmesi görünmelidir.
 
-   6. Üç nokta düğmesini seçin ve **yazı tipi** değerini **Web**'e, **yazı tipi stilini** **kalın**olarak ve **Boyut** olarak **48**olarak ayarlayın.
+   6. Üç nokta düğmesini seçin ve **yazı tipi** değerini **Web**'e, **yazı tipi stilini** **kalın** olarak ve **Boyut** olarak **48** olarak ayarlayın.
 
-   7. Etiketin **Text** özelliğini **c**harfine ayarlayın.
+   7. Etiketin **Text** özelliğini **c** harfine ayarlayın.
 
         TableLayoutPanel öğesinin sol üst hücresinde şimdi, mavi arka plan üzerinde ortalanmış bir siyah kutu yer alıyor olmalıdır.
 

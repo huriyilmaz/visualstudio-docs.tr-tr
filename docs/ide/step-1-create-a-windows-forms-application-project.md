@@ -1,5 +1,7 @@
 ---
 title: '1. Adım: Windows Forms Uygulaması projesi oluşturma'
+description: Resim görüntüleyiciniz için Windows Forms uygulama projesi oluşturmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 08/30/2019
 ms.assetid: 16ac2422-e720-4e3a-b511-bc2a54201a86
 ms.topic: tutorial
@@ -10,12 +12,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2d5e34d825d2a4d296a8a394105b412195b4e3fb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 76225685a9f68ca6f6cb05f902922f8fa208015d
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77579905"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480401"
 ---
 # <a name="step-1-create-a-windows-forms-app-project"></a>1. Adım: Windows Forms Uygulaması projesi oluşturma
 
@@ -27,11 +29,11 @@ Bir resim görüntüleyici oluşturduğunuzda, ilk adım Windows Forms bir uygul
 
 1. Menü çubuğunda **Dosya**  >  **Yeni**  >  **Proje**' yi seçin. İletişim kutusu aşağıdaki ekran görüntüsüne benzer görünmelidir.
 
-     ![Yeni proje iletişim kutusu](../ide/media/newprojectdialogcallouts.png)<br/>***Yeni proje*** *iletişim kutusu*
+     ![Yeni proje iletişim kutusu](../ide/media/newprojectdialogcallouts.png)<br/>**_Yeni proje_* _ _dialog kutusu *
 
-2. **Yeni proje** iletişim kutusunun sol tarafında, **Visual C#** veya **Visual Basic**seçeneklerinden birini belirleyin ve ardından **Windows Masaüstü**' ne tıklayın.
+2. **Yeni proje** iletişim kutusunun sol tarafında, **Visual C#** veya **Visual Basic** seçeneklerinden birini belirleyin ve ardından **Windows Masaüstü**' ne tıklayın.
 
-3. Proje şablonları listesinde **Windows Forms uygulama (.NET Framework)** öğesini seçin. Yeni formu *PictureViewer olarak adlandırın*olarak adlandırın ve ardından **Tamam** düğmesini seçin.
+3. Proje şablonları listesinde **Windows Forms uygulama (.NET Framework)** öğesini seçin. Yeni formu *PictureViewer olarak adlandırın* olarak adlandırın ve ardından **Tamam** düğmesini seçin.
 
     >[!NOTE]
     >**Windows Forms App (.NET Framework)** şablonunu görmüyorsanız, **.net masaüstü geliştirme** iş yükünü yüklemek için Visual Studio yükleyicisi kullanın.<br/><br/>![Visual Studio Yükleyicisi .NET masaüstü geliştirme iş yükü](../ide/media/dot-net-desktop-dev-workload.png)<br/><br/> Daha fazla bilgi için bkz. [Visual Studio 'Yu Install](../install/install-visual-studio.md) sayfası.
@@ -71,7 +73,7 @@ Visual Studio, uygulamanız için bir çözüm oluşturur. Bir çözüm, uygulam
 
 ## <a name="about-the-windows-forms-app-project"></a>Windows Forms uygulama projesi hakkında
 
-1. Geliştirme ortamı üç pencere içerir: Ana pencere, **Çözüm Gezgini**ve **Özellikler** penceresi.
+1. Geliştirme ortamı üç pencere içerir: Ana pencere, **Çözüm Gezgini** ve **Özellikler** penceresi.
 
      Bu pencerelerin herhangi biri eksikse, varsayılan pencere yerleşimini geri yükleyebilirsiniz. Menü çubuğunda **pencere**  >  **sıfırlama pencere düzeni**' ni seçin.
 
@@ -81,31 +83,31 @@ Visual Studio, uygulamanız için bir çözüm oluşturur. Bir çözüm, uygulam
 
     ::: moniker range="vs-2017"
 
-    * **Ana pencere** Bu pencerede, yaptığınız gibi, formlarla çalışma ve kod düzenlemeyle ilgili birçok iş olacaktır. Pencere, **form düzenleyicisinde**bir form gösterir. Pencerenin üst kısmında, **Başlangıç sayfası** sekmesi ve **Form1.cs [Design]** sekmesi görüntülenir. (Visual Basic, sekme adı *. cs*yerine *. vb* ile biter.)
+    * **Ana pencere** Bu pencerede, yaptığınız gibi, formlarla çalışma ve kod düzenlemeyle ilgili birçok iş olacaktır. Pencere, **form düzenleyicisinde** bir form gösterir. Pencerenin üst kısmında, **Başlangıç sayfası** sekmesi ve **Form1.cs [Design]** sekmesi görüntülenir. (Visual Basic, sekme adı *. cs* yerine *. vb* ile biter.)
 
     ::: moniker-end
 
     ::: moniker range=">=vs-2019"
 
-    * **Ana pencere** Bu pencerede, yaptığınız gibi, formlarla çalışma ve kod düzenlemeyle ilgili birçok iş olacaktır. Pencere, **form düzenleyicisinde**bir form gösterir.
+    * **Ana pencere** Bu pencerede, yaptığınız gibi, formlarla çalışma ve kod düzenlemeyle ilgili birçok iş olacaktır. Pencere, **form düzenleyicisinde** bir form gösterir.
 
     ::: moniker-end
 
     * **Çözüm Gezgini penceresi** Bu pencerede, çözümünüzdeki tüm öğeleri görüntüleyebilir ve buna gidebilirsiniz.
 
-    Bir dosya seçerseniz, **Özellikler** penceresinin içeriği değişir. Bir kod dosyası açarsanız (C# ve *. vb* içinde *. cs* ile biten) Visual Basic), kod dosyası veya kod dosyası Tasarımcısı görüntülenir. Tasarımcı, üzerinde düğme ve liste gibi denetimler ekleyebileceğiniz görsel bir yüzeydir. Visual Studio Forms için tasarımcı **Windows Form Tasarımcısı**olarak adlandırılır.
+    Bir dosya seçerseniz, **Özellikler** penceresinin içeriği değişir. Bir kod dosyası açarsanız (C# ve *. vb* içinde *. cs* ile biten) Visual Basic), kod dosyası veya kod dosyası Tasarımcısı görüntülenir. Tasarımcı, üzerinde düğme ve liste gibi denetimler ekleyebileceğiniz görsel bir yüzeydir. Visual Studio Forms için tasarımcı **Windows Form Tasarımcısı** olarak adlandırılır.
 
     * **Özellikler penceresi** Bu pencerede, diğer pencereler üzerinde seçtiğiniz öğelerin özelliklerini değiştirebilirsiniz. Örneğin, Form1 ' i seçerseniz, **Text** özelliğini ayarlayarak başlığını değiştirebilir ve **BackColor** özelliğini ayarlayarak arka plan rengini değiştirebilirsiniz.
 
       > [!NOTE]
-      > **Çözüm Gezgini** en üstteki satır, Visual Studio 'nun sizin için bir çözüm oluşturduğu anlamına gelen **' PictureViewer olarak adlandırın ' (1 proje) çözümünü**gösterir. Bir çözüm birden fazla proje içerebilir, ancak şimdilik yalnızca bir proje içeren çözümlerle çalışırsınız.
+      > **Çözüm Gezgini** en üstteki satır, Visual Studio 'nun sizin için bir çözüm oluşturduğu anlamına gelen **' PictureViewer olarak adlandırın ' (1 proje) çözümünü** gösterir. Bir çözüm birden fazla proje içerebilir, ancak şimdilik yalnızca bir proje içeren çözümlerle çalışırsınız.
 
 1. Menü çubuğunda **Dosya**  >  **Tümünü Kaydet**' i seçin.
 
      Alternatif olarak, aşağıdaki görüntüde gösterildiği gibi, araç çubuğunda **Tümünü Kaydet** düğmesini seçin.
 
      ![Tümünü Kaydet araç çubuğu düğmesi](../ide/media/express_iconsaveall.png)<br/>
-     ***Tümünü Kaydet*** *araç çubuğu düğmesi*
+     **_Tümünü Kaydet_* _ _toolbar düğmesi *
 
      Visual Studio, klasör adı ve proje adını otomatik olarak doldurur ve projeyi projeler klasörünüze kaydeder.
 

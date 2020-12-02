@@ -1,5 +1,7 @@
 ---
 title: Visual Studio komutlarının GUID 'Leri ve kimlikleri | Microsoft Docs
+description: Visual Studio tümleşik geliştirme ortamında (IDE) bulunan komutların GUID ve KIMLIK değerlerini bulmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8932f23d301eabc97414bf76453d70336e0dabae
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cabf5c9452cf0a6809673d488f9cf01252d7b0ef
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708249"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480453"
 ---
 # <a name="guids-and-ids-of-visual-studio-commands"></a>Visual Studio komutlarının GUID 'Leri ve kimlikleri
 Visual Studio tümleşik geliştirme ortamında (IDE) bulunan komutların GUID ve KIMLIK değerleri, Visual Studio SDK 'sının bir parçası olarak yüklenen. vsct dosyalarında tanımlanmıştır. Daha fazla bilgi için bkz. [IDE tanımlı komutlar, menüler ve gruplar](../../extensibility/internals/ide-defined-commands-menus-and-groups.md).
@@ -31,13 +33,13 @@ Visual Studio tümleşik geliştirme ortamında (IDE) bulunan komutların GUID v
 
 ### <a name="to-locate-a-command-definition"></a>Bir komut tanımını bulmak için
 
-1. Visual Studio 'da *<Visual STUDIO SDK yükleme yolu \> \VisualStudioIntegration\Common\Inc \\ * klasöründe şu dosyaları açın: *SharedCmdDef. vsct*, *ShellCmdDef. vsct*, *VsDbgCmdUsed. vsct*, *Venusmenu. vsct*.
+1. Visual Studio 'da *<Visual STUDIO SDK yükleme yolu \> \VisualStudioIntegration\Common\Inc \\* klasöründe şu dosyaları açın: *SharedCmdDef. vsct*, *ShellCmdDef. vsct*, *VsDbgCmdUsed. vsct*, *Venusmenu. vsct*.
 
-    Çoğu Visual Studio komutu *SharedCmdDef. vsct* ve *ShellCmdDef. vsct*içinde tanımlanmıştır. *VsDbgCmdUsed. vsct* , hata ayıklayıcıya ait komutları tanımlar ve *Venusmenu. vsct* , Web geliştirmeye özgü komutları tanımlar.
+    Çoğu Visual Studio komutu *SharedCmdDef. vsct* ve *ShellCmdDef. vsct* içinde tanımlanmıştır. *VsDbgCmdUsed. vsct* , hata ayıklayıcıya ait komutları tanımlar ve *Venusmenu. vsct* , Web geliştirmeye özgü komutları tanımlar.
 
 2. Komut bir menü öğesi ise, menü öğesinin tam metnini aklınızda yapın. Komut bir araç çubuğunda düğme ise, üzerinde durakladığınızda görüntülenen araç ipucu metnini unutmayın.
 
-3. **Ctrl** + **Bul** iletişim kutusunu açmak için CTRL**F** tuşlarına basın.
+3. **Ctrl** + **Bul** iletişim kutusunu açmak için CTRL **F** tuşlarına basın.
 
 4. **Bulunacak** kutusunda, adım 2 ' de not ettiğiniz metni yazın.
 
@@ -54,11 +56,11 @@ Visual Studio tümleşik geliştirme ortamında (IDE) bulunan komutların GUID v
 
 - **Dosya** menüsündeki **Yazdır** komutu gibi altı çizili bir karakter içeren menü öğeleri; Örneğin, *P* altı çizili.
 
-     Menü öğesi adlarında ve işareti (&) karakterinin önünde bulunan karakterler altı çizili olarak görüntülenir. Ancak, *. vsct* dosyaları, özel karakterleri göstermek için ve işareti (&) KARAKTERINI kullanan XML dilinde yazılır ve görüntülenecek bir ampersan 'ın * &amp; amp;* olarak yazılması gerekir. Bu nedenle, bir *. vsct* dosyasında **Print** komutu amp olarak görünür * &amp; ; Yazdır*.
+     Menü öğesi adlarında ve işareti (&) karakterinin önünde bulunan karakterler altı çizili olarak görüntülenir. Ancak, *. vsct* dosyaları, özel karakterleri göstermek için ve işareti (&) KARAKTERINI kullanan XML dilinde yazılır ve görüntülenecek bir ampersan 'ın *&amp; amp;* olarak yazılması gerekir. Bu nedenle, bir *. vsct* dosyasında **Print** komutu amp olarak görünür *&amp; ; Yazdır*.
 
 - **Kaydet** gibi dinamik metne sahip komutlar \<Current Filename\> ve **son kullanılan dosyalar** listesindeki öğeler gibi dinamik olarak oluşturulan menü öğeleri.
 
-     Dinamik metinde aramanın güvenilir bir yolu yoktur. Bunun yerine, [Visual Studio menülerinin GUID 'leri ve kimliklerini](../../extensibility/internals/guids-and-ids-of-visual-studio-menus.md) , [Visual Studio araç çubuklarının GUID 'lerini](../../extensibility/internals/guids-and-ids-of-visual-studio-toolbars.md)ve kimliklerini inceleyerek istenen komutu barındıran bir grup bulun ve bu grubun kimliğini arayın. Komut tanımı, [ana öğesi](../../extensibility/parent-element.md)olarak grup içermiyorsa, komutun üst öğesini ayarlayan bir öğe *Için SharedCmdPlace. vsct* ve *ShellCmdPlace. vsct* (veya *VsDbgCmdPlace. vsct* ) ' i arayın `<CommandPlacement>` . *SharedCmdPlace. vsct*, *ShellCmdPlace. vsct*ve *VsDbgCmdPlace. vsct* , * \<Visual Studio SDK installation path\> \VisualStudioIntegration\Common\Inc \\ * klasöründedir.
+     Dinamik metinde aramanın güvenilir bir yolu yoktur. Bunun yerine, [Visual Studio menülerinin GUID 'leri ve kimliklerini](../../extensibility/internals/guids-and-ids-of-visual-studio-menus.md) , [Visual Studio araç çubuklarının GUID 'lerini](../../extensibility/internals/guids-and-ids-of-visual-studio-toolbars.md)ve kimliklerini inceleyerek istenen komutu barındıran bir grup bulun ve bu grubun kimliğini arayın. Komut tanımı, [ana öğesi](../../extensibility/parent-element.md)olarak grup içermiyorsa, komutun üst öğesini ayarlayan bir öğe *Için SharedCmdPlace. vsct* ve *ShellCmdPlace. vsct* (veya *VsDbgCmdPlace. vsct* ) ' i arayın `<CommandPlacement>` . *SharedCmdPlace. vsct*, *ShellCmdPlace. vsct* ve *VsDbgCmdPlace. vsct* , *\<Visual Studio SDK installation path\> \VisualStudioIntegration\Common\Inc \\* klasöründedir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

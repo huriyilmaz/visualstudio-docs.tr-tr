@@ -1,5 +1,7 @@
 ---
 title: Kullanıcıya geri bildirim | Microsoft Docs
+description: Visual Studio tümleşik geliştirme ortamında (IDE) kullanılabilir işlevsellik hakkında kullanıcıya görsel geri bildirim sağlamayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 46b9190b16b9aa444384847bf209ccca50c7f768
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d8f3f79a61729a641ee7c046ddd196a648469fb3
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708408"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480531"
 ---
 # <a name="feedback-to-the-user"></a>Kullanıcıya geri bildirim
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Tümleşik geliştirme ortamında (IDE), kullanılabilir işlevlerle ilgili görsel geri bildirimler kullanıcının geçerli seçimine ve genel seçim içeriğine göre belirlenir. Aşağıdaki tabloda, farklı seçim bağlamlarında kullanılabilen işlevler listelenmektedir.
@@ -55,7 +57,7 @@ ms.locfileid: "80708408"
 
 - **Düzenleyici** araç çubuğu ve **tablo** menüsü görüntülenir ve başlık çubuğu Web formu penceresini yansıtacak şekilde güncelleştirilir.
 
-- Genellikle **Çözüm Gezgini**olan etkin hiyerarşi penceresi ve geçerli bağlamı yansıtmak için başlık çubuğu güncelleştirmesi ve bağlam duyarlı **Proje** menü komutları artık etkin Web uygulaması projesi için geçerlidir.
+- Genellikle **Çözüm Gezgini** olan etkin hiyerarşi penceresi ve geçerli bağlamı yansıtmak için başlık çubuğu güncelleştirmesi ve bağlam duyarlı **Proje** menü komutları artık etkin Web uygulaması projesi için geçerlidir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDE 'de seçim ve para birimi](../../extensibility/internals/selection-and-currency-in-the-ide.md)

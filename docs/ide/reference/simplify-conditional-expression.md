@@ -1,5 +1,7 @@
 ---
 title: Koşullu ifadeyi basitleştirme
+description: Bir koşullu ifadeyi basitleştirmek için hızlı eylemler ve yeniden düzenlemeler menüsünü nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 06/08/2020
 ms.topic: reference
 author: mikadumont
@@ -9,12 +11,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0242c8c89848e3e76673ddfbca8a27c20605048d
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: dd7b3f29e804ec5e925c34f7994164d5a8465a50
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810356"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480219"
 ---
 # <a name="simplify-conditional-expression-refactoring"></a>Koşullu ifade yeniden düzenlemeyi basitleştirme
 
@@ -32,7 +34,7 @@ Bu yeniden düzenleme için geçerlidir:
 
 1. Giriş işaretini koşullu ifadeye yerleştirin:
 
-2. **CTRL**tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
+2. **CTRL** tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
 
 3. **Koşullu Ifadeyi Basitleştir** ' i seçin
 

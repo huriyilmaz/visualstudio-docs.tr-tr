@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: oluşturma. Vsct dosyası | Microsoft Docs'
+description: XML tabanlı Visual Studio komut tablosu yapılandırma dosyası olan. vsct dosyasını el ile oluşturmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a571098deeeca0e8262d855c24d0bf1ce66be08e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 47d38e68494f29947131bcc8ce3a2a59b2e8d48b
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905533"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480375"
 ---
 # <a name="how-to-create-a-vsct-file"></a>Nasıl yapılır:. vsct dosyası oluşturma
 
@@ -23,7 +25,7 @@ XML tabanlı Visual Studio komut tablosu yapılandırma (*. vsct*) dosyası olu�
 
 - Paket şablonunda yeni bir VSPackage oluşturabilirsiniz [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
 
-- Var olan bir *. CTC* dosyasından bir dosya oluşturmak IÇIN, XML tabanlı komut tablosu yapılandırma derleyicisini *Vsct.exe*kullanabilirsiniz.
+- Var olan bir *. CTC* dosyasından bir dosya oluşturmak IÇIN, XML tabanlı komut tablosu yapılandırma derleyicisini *Vsct.exe* kullanabilirsiniz.
 
 - Var olan bir *. CTO* dosyasından bir *. vsct* dosyası oluşturmak için *Vsct.exe* kullanabilirsiniz.
 
@@ -45,7 +47,7 @@ XML tabanlı Visual Studio komut tablosu yapılandırma (*. vsct*) dosyası olu�
 
 6. XSD şemaları listesinde *vsct. xsd* şemasını seçin. Listede yoksa, **Ekle** ' ye tıklayın ve dosyayı yerel bir sürücüde bulun. İşiniz bittiğinde **Tamam** ' a tıklayın.
 
-7. XML dosyasında *<CommandTable* yazın ve ardından **Tab**tuşuna basın. Yazarak etiketi kapatın *>* .
+7. XML dosyasında *<CommandTable* yazın ve ardından **Tab** tuşuna basın. Yazarak etiketi kapatın *>* .
 
     Bu eylem, temel bir *. vsct* dosyası oluşturur.
 
@@ -61,7 +63,7 @@ Varolan bir komut tablosu *. CTC* kaynak dosyasından XML tabanlı *. vsct* dosy
 
 1. Perl dilinin bir kopyasını alın.
 
-2. Genellikle * \<Visual Studio SDK installation path> \VisualStudioIntegration\Tools\bin* klasöründe bulunan Perl betiğinin *ConvertCTCToVSCT.pl*bir kopyasını alın.
+2. Genellikle *\<Visual Studio SDK installation path> \VisualStudioIntegration\Tools\bin* klasöründe bulunan Perl betiğinin *ConvertCTCToVSCT.pl* bir kopyasını alın.
 
 3. Dönüştürmek istediğiniz *. CTC* kaynak dosyasının bir kopyasını alın.
 
@@ -138,7 +140,7 @@ Var olan bir binary *. CTO* dosyasından XML tabanlı *. vsct* dosyası oluştur
 
      Bu biçimlendirme, `ItemGroup` gömülü kaynakları içeren öğenin içinde olmalıdır.
 
-4. Düzenleyicide, genellikle * \<ProjectName\> Package.cs* veya * \<ProjectName\> Package. vb*adlı paket dosyasını açın.
+4. Düzenleyicide, genellikle *\<ProjectName\> Package.cs* veya *\<ProjectName\> Package. vb* adlı paket dosyasını açın.
 
 5. `ProvideMenuResource`Aşağıdaki örnekte gösterildiği gibi, Package sınıfına bir öznitelik ekleyin.
 

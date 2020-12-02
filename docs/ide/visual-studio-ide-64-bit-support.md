@@ -1,5 +1,7 @@
 ---
 title: 64 bit desteği
+description: Uygulamalarınızı 64 bitlik platformlar dahil farklı platformları hedefleyecek şekilde ayarlamayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/21/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e3cd670eed61f510998599276e3a44fc7647777b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 11cd4979172f80b44ad5fb5ed335b00737e7579d
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75594142"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96479725"
 ---
 # <a name="visual-studio-ide-64-bit-support"></a>Visual Studio IDE 64 bit desteği
 

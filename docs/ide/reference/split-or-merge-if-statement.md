@@ -1,5 +1,7 @@
 ---
 title: Birleştir veya ayır if deyimleri
+description: İf deyimlerini ayırmak veya birleştirmek için hızlı eylemler ve yeniden düzenlemeler menüsünü nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 03/10/2020
 ms.topic: reference
 author: mikadumont
@@ -10,12 +12,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: a3b42f83faacda6be34b282150cf4fb4c0f379f1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f72c6c2ed1cfdd1c8ea4471976d6a4980dfe422f
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "79093695"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96479933"
 ---
 # <a name="split-or-merge-if-statements"></a>Birleştir veya ayır if deyimleri
 
@@ -37,7 +39,7 @@ Bu yeniden düzenleme için geçerlidir:
 
 1. İmlecinizi `if` ifadeye `&&` or `||` işlecine koyun.
 
-2. **CTRL**tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
+2. **CTRL** tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
 
     ![If Ifadesini Böl](../media/split-if-statement.png)
 
@@ -49,7 +51,7 @@ Bu yeniden düzenleme için geçerlidir:
 
 1. İmlecinizi iç `if` anahtar sözcüğe yerleştirin.
 
-2. **CTRL**tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
+2. **CTRL** tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
 
     ![If Ifadesini Birleştir](../media/merge-if-statement.png)
 

@@ -1,5 +1,7 @@
 ---
 title: C# IntelliSense
+description: C# projenizi kodlarken kullanabileceğiniz bazı IntelliSense özellikleri hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2ed5d86599fa99b9c1360b414b37ef95ab59082d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e725a06a2bc90c91cff11b05ad32b20a0db8e4fc
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89313438"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96479790"
 ---
 # <a name="c-intellisense"></a>C# IntelliSense
 
@@ -66,7 +68,7 @@ IntelliSense, filtre kullanarak gereksiz üyeleri tamamlama listesinden kaldır�
 
 - **Nesne başlatıcıları**: yalnızca başlatılmış Üyeler tamamlama listesinde görünür.
 
-- **Yeni anahtar sözcük**: yazdıktan `new` sonra **alana**bastığınızda bir tamamlama listesi görüntülenir. Kodunuzda bağlam temelinde, listede otomatik olarak bir öğe seçilir. Örneğin, öğeler için tamamlama listesinde ve metotlarda Return deyimlerinin öğeleri otomatik olarak seçilir.
+- **Yeni anahtar sözcük**: yazdıktan `new` sonra **alana** bastığınızda bir tamamlama listesi görüntülenir. Kodunuzda bağlam temelinde, listede otomatik olarak bir öğe seçilir. Örneğin, öğeler için tamamlama listesinde ve metotlarda Return deyimlerinin öğeleri otomatik olarak seçilir.
 
 - **enum anahtar sözcüğü**: bir Enum ataması için eşittir Işaretinden sonra **boşluğa** bastığınızda bir tamamlama listesi görüntülenir. Kodunuzda bağlam temelinde, listede otomatik olarak bir öğe seçilir. Örneğin, Return anahtar sözcüğünü yazdıktan sonra ve bir bildirim yaptığınızda öğeler tamamlama listesinde otomatik olarak seçilir.
 
@@ -78,11 +80,11 @@ IntelliSense, filtre kullanarak gereksiz üyeleri tamamlama listesinden kaldır�
 
 ### <a name="most-recently-used-members"></a>En son kullanılan Üyeler
 
-IntelliSense, otomatik nesne adı tamamlamada açılan [liste üyeleri](../ide/using-intellisense.md) kutusunda en son seçtiğiniz üyeleri anımsar. **Üye listesini**bir dahaki sefer kullandığınızda en son kullanılan Üyeler en üstte gösterilir. En son kullanılan üyelerin geçmişi her bir Visual Studio oturumu arasında temizlenir.
+IntelliSense, otomatik nesne adı tamamlamada açılan [liste üyeleri](../ide/using-intellisense.md) kutusunda en son seçtiğiniz üyeleri anımsar. **Üye listesini** bir dahaki sefer kullandığınızda en son kullanılan Üyeler en üstte gösterilir. En son kullanılan üyelerin geçmişi her bir Visual Studio oturumu arasında temizlenir.
 
 ### <a name="override"></a>override
 
-[Geçersiz kılma](/dotnet/csharp/language-reference/keywords/override) yazın ve ardından **boşluk**tuşuna bastığınızda IntelliSense, bir açılır liste kutusunda geçersiz kılabileceğiniz geçerli temel sınıf üyelerini görüntüler. Yöntemin dönüş türünü, `override` yalnızca aynı türü döndüren yöntemleri göstermek Için IntelliSense istemlerine yazarak yazın. IntelliSense herhangi bir eşleşme bulamadığınızda, tüm temel sınıf üyelerini görüntüler.
+[Geçersiz kılma](/dotnet/csharp/language-reference/keywords/override) yazın ve ardından **boşluk** tuşuna bastığınızda IntelliSense, bir açılır liste kutusunda geçersiz kılabileceğiniz geçerli temel sınıf üyelerini görüntüler. Yöntemin dönüş türünü, `override` yalnızca aynı türü döndüren yöntemleri göstermek Için IntelliSense istemlerine yazarak yazın. IntelliSense herhangi bir eşleşme bulamadığınızda, tüm temel sınıf üyelerini görüntüler.
 
 ### <a name="ai-enhanced-intellisense"></a>AI ile geliştirilmiş IntelliSense
 
@@ -94,7 +96,7 @@ IntelliSense, otomatik nesne adı tamamlamada açılan [liste üyeleri](../ide/u
 
 IntelliSense **kullanarak ekleme** işlemi, gerekli `using` yönergeyi kod dosyanıza otomatik olarak ekler. Bu özellik, odağınızı kodun başka bir bölümüne kaydırabilmeniz yerine, yazmakta olduğunuz koda odaklanmanızı sağlar.
 
-**Using using** işlemini başlatmak için imleci çözümlenemeyen bir tür başvurusu üzerine konumlandırın. Örneğin, bir konsol uygulaması oluşturup `XmlReader` yöntemin gövdesine eklediğinizde `Main` , bu kod satırında kırmızı bir dalgalı çizgi görünür çünkü tür başvurusu çözümlenemez. Daha sonra **hızlı eylemler**aracılığıyla **ekleme komutunu** çağırabilirsiniz. **Hızlı eylemler** yalnızca imleç ilişkisiz türde konumlandırıldığında görünür.
+**Using using** işlemini başlatmak için imleci çözümlenemeyen bir tür başvurusu üzerine konumlandırın. Örneğin, bir konsol uygulaması oluşturup `XmlReader` yöntemin gövdesine eklediğinizde `Main` , bu kod satırında kırmızı bir dalgalı çizgi görünür çünkü tür başvurusu çözümlenemez. Daha sonra **hızlı eylemler** aracılığıyla **ekleme komutunu** çağırabilirsiniz. **Hızlı eylemler** yalnızca imleç ilişkisiz türde konumlandırıldığında görünür.
 
 ![Kullanarak, hızlı eylem genişletilmiş görüntüsünü ekleyin](../ide/media/addusing-quickaction.png)
 
@@ -114,7 +116,7 @@ Uygulama arabirimini sağlamak için gereken en az Yöntem saplamaları sayısı
 
 IntelliSense, kod Düzenleyicisi 'nde çalışırken soyut bir temel sınıfın üyelerini otomatik olarak uygulamanıza yardımcı olacak bir seçenek sunar. Normalde, soyut bir temel sınıfın üyelerini uygulamak için, türetilmiş sınıfınızdaki soyut temel sınıfın her bir yöntemi için yeni bir yöntem tanımı oluşturulmasını gerektirir. IntelliSense kullanarak bir sınıf bildiriminde soyut bir temel sınıfın adını yazdıktan sonra **hızlı bir eylem** ışığı görüntülenir. Ampul, size temel sınıf yöntemlerini otomatik olarak uygulama seçeneği sunar.
 
-**Soyut temel sınıf Uygula** özelliği tarafından oluşturulan Yöntem saplamaları, *MethodStub. parçacığında*dosyasında tanımlanan kod parçacığına göre modellenir. Kod parçacıkları değiştirilebilir. Daha fazla bilgi için bkz. [Izlenecek yol: kod parçacığı oluşturma](../ide/walkthrough-creating-a-code-snippet.md).
+**Soyut temel sınıf Uygula** özelliği tarafından oluşturulan Yöntem saplamaları, *MethodStub. parçacığında* dosyasında tanımlanan kod parçacığına göre modellenir. Kod parçacıkları değiştirilebilir. Daha fazla bilgi için bkz. [Izlenecek yol: kod parçacığı oluşturma](../ide/walkthrough-creating-a-code-snippet.md).
 
 ### <a name="generate-from-usage"></a>Kullanımdan oluştur
 
@@ -148,17 +150,17 @@ IntelliSense, kod Düzenleyicisi 'nde Yöntemler (olay işleyicileri) ile olay a
 
 ![Düğme otomatik kancası](../ide/media/vxautohookup.gif)
 
-**Sekme**tuşuna basarsanız, IntelliSense sizin için ifadeyi otomatik olarak tamamlar ve olay işleyicisi başvurusunu kod düzenleyicisinde seçili metin olarak görüntüler. Otomatik olay kancaini tamamlayabilmeniz için, IntelliSense, olay işleyicisi için boş bir saplama oluşturmak üzere **Tab** tuşuna tekrar basmanız istenir.
+**Sekme** tuşuna basarsanız, IntelliSense sizin için ifadeyi otomatik olarak tamamlar ve olay işleyicisi başvurusunu kod düzenleyicisinde seçili metin olarak görüntüler. Otomatik olay kancaini tamamlayabilmeniz için, IntelliSense, olay işleyicisi için boş bir saplama oluşturmak üzere **Tab** tuşuna tekrar basmanız istenir.
 
 ![Olay Işleyicisi oluştur](../ide/media/vxgenerateeventhandler.gif)
 
 > [!NOTE]
 > IntelliSense tarafından oluşturulan yeni bir temsilci var olan bir olay işleyicisine başvuruyorsa, IntelliSense bu bilgileri araç ipucunda iletişim kurar. Bu başvuruyu daha sonra değiştirebilirsiniz; metin, kod düzenleyicisinde zaten seçilidir. Aksi takdirde, bu noktada otomatik olay kancau tamamlanmıştır.
 
-**Sekme**tuşuna basarsanız, IntelliSense doğru imzaya sahip bir yöntemi dışarı yerleştirir ve imleci olay işleyicinizin gövdesine koyar.
+**Sekme** tuşuna basarsanız, IntelliSense doğru imzaya sahip bir yöntemi dışarı yerleştirir ve imleci olay işleyicinizin gövdesine koyar.
 
 > [!NOTE]
-> **View** **Ctrl**Olay kancası bildirimine geri dönmek için Görünüm menüsündeki **geri git** komutunu (Ctrl + **-** ) kullanın.
+> **View** **Ctrl** Olay kancası bildirimine geri dönmek için Görünüm menüsündeki **geri git** komutunu (Ctrl + **-** ) kullanın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

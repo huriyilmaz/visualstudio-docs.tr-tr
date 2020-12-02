@@ -1,5 +1,7 @@
 ---
 title: '2. Adım: resim görüntüleyici uygulamanızı çalıştırma'
+description: Resim görüntüleyici uygulamanızı çalıştırmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 09/06/2019
 ms.assetid: 9a8fe90e-c97b-4e98-b6c8-0c6b3962c49d
 ms.topic: tutorial
@@ -10,12 +12,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8204f2a32a1bb29203c75af55aa383141f17853f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ddc016df63a7bb6ffbe3923de72c4f23cb32739c
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77579411"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480661"
 ---
 # <a name="step-2-run-your-picture-viewer-app"></a>2. Adım: resim görüntüleyici uygulamanızı çalıştırma
 
@@ -27,30 +29,30 @@ Uygulamanızı çalıştırmak için aşağıdaki adımları uygulayın.
 
     - **F5** tuşunu seçin.
 
-    - Menü çubuğunda **hata**  >  **ayıklamayı Başlat hata**Ayıkla ' yı seçin.
+    - Menü çubuğunda **hata**  >  **ayıklamayı Başlat hata** Ayıkla ' yı seçin.
 
     - Araç çubuğunda, aşağıdaki gibi görünen **hata ayıklamayı Başlat** düğmesini seçin:
 
       ![Hata ayıklamayı Başlat araç çubuğu düğmesi](../ide/media/express_icondebug.png)<br>
-      ***Hata ayıklamayı Başlat*** *araç çubuğu düğmesi*
+      **_Hata ayıklamayı Başlat_* _ _toolbar düğmesi *
 
 1. Visual Studio, uygulamanızı çalıştırır ve **Form1** adlı bir pencere görünür. Aşağıdaki ekran görüntüsünde, yeni oluşturduğunuz uygulama gösterilmektedir. Uygulama çalışıyor ve yakında buna ekleyeceğiz.
 
      ![Windows Forms uygulama çalışıyor](../ide/media/express_firstrun.png)<br>
-***Windows Forms uygulaması***, *çalışıyor*
+**_Windows Forms App_* _, _running *
 
 1. Visual Studio tümleşik geliştirme ortamına (IDE) dönün ve yeni araç çubuğuna bakın. Bir uygulamayı çalıştırdığınızda, araç çubuğunda ek düğmeler görüntülenir. Bu düğmeler, uygulamanızı durdurma ve başlatma gibi işlemleri yapmanızı sağlar ve sahip olabileceği hataları (hataları) izlemenize yardımcı olur. Bu örnekte, uygulamayı başlatmak ve durdurmak için kullanırız.
 
      ![Hata ayıklama araç çubuğu](../ide/media/express_debugtoolbar.png)<br>
-***Hata ayıklama*** *araç çubuğu*
+*_ _Toolbar * **hatalarını ayıklama**
 
 1. Uygulamanızı durdurmak için aşağıdaki yöntemlerden birini kullanın:
 
     - Araç çubuğunda **hata ayıklamayı Durdur** düğmesini seçin.
 
-    - Menü çubuğunda **hata**  >  **ayıklamayı Durdur hata**Ayıkla ' yı seçin.
+    - Menü çubuğunda **hata**  >  **ayıklamayı Durdur hata** Ayıkla ' yı seçin.
 
-    - Klavyenizi kullanın ve **SHIFT** + **F5**tuşuna basın.
+    - Klavyenizi kullanın ve **SHIFT** + **F5** tuşuna basın.
 
     - **Form1** penceresinin üst köşesindeki **X** düğmesini seçin.
 

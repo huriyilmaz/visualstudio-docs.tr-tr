@@ -1,5 +1,7 @@
 ---
 title: Glif denetimi (kaynak denetimi VSPackage) | Microsoft Docs
+description: Kaynak denetimi altındaki öğelerin durumunu göstermek için kendi simgelerinizi kullanabilmeniz için bir kaynak denetiminde VSPackage içindeki özel glifleri görüntülemeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,21 +13,21 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9db1b4542eae293e39cda674fac3eb984aa77d3e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: eaf7f40224e2f197627bb995dc6cccdf297b46e5
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708314"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480479"
 ---
 # <a name="glyph-control-source-control-vspackage"></a>Glif denetimi (kaynak denetimi VSPackage)
 Kaynak denetimi VSPackages tarafından kullanılabilen derin tümleştirmenin bir parçası, kaynak denetimi altındaki öğelerin durumunu göstermek için kendi gliflerini görüntüleme olanağıdır.
 
 ## <a name="levels-of-glyph-control"></a>Glif denetimi düzeyleri
- Durum karakteri, örneğin **Çözüm Gezgini** veya **sınıf görünümü**gibi, görüntülendiğinde bir öğenin geçerli durumunu gösteren bir simgedir. Kaynak denetimi VSPackage iki karakter düzeyi denetimi uygulayabilir. Karakter seçimini IDE tarafından sunulan önceden tanımlanmış bir karakter kümesiyle sınırlayabilir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] veya görüntülenecek özel bir glif kümesi tanımlayabilir.
+ Durum karakteri, örneğin **Çözüm Gezgini** veya **sınıf görünümü** gibi, görüntülendiğinde bir öğenin geçerli durumunu gösteren bir simgedir. Kaynak denetimi VSPackage iki karakter düzeyi denetimi uygulayabilir. Karakter seçimini IDE tarafından sunulan önceden tanımlanmış bir karakter kümesiyle sınırlayabilir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] veya görüntülenecek özel bir glif kümesi tanımlayabilir.
 
 ### <a name="default-set-of-glyphs"></a>Varsayılan glif kümesi
- Bir proje, **Çözüm Gezgini**bir öğeyle ilişkili olan durum glifleri tespit etmek için, kullanarak kaynak denetiminden durum glifi ister <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccManager2.GetSccGlyph%2A> . Kaynak denetimi VSPackage, IDE tarafından sunulan önceden tanımlanmış glifle sınırlı karakter seçimini tutmaya karar verebilir. Bu durumda, VSPackage, *vsshell. IDL*dosyasında tanımlanan glif numaralandırmaları temsil eden bir değer dizisini geri geçirir. Daha fazla bilgi için bkz. <xref:Microsoft.VisualStudio.Shell.Interop.VsStateIcon>. Bu, giriş karakteri için bir asma kilidi ve kullanıma hazır karakter için bir onay işareti gibi, IDE tarafından ayarlanan, önceden tanımlanmış bir karakter kümesidir.
+ Bir proje, **Çözüm Gezgini** bir öğeyle ilişkili olan durum glifleri tespit etmek için, kullanarak kaynak denetiminden durum glifi ister <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccManager2.GetSccGlyph%2A> . Kaynak denetimi VSPackage, IDE tarafından sunulan önceden tanımlanmış glifle sınırlı karakter seçimini tutmaya karar verebilir. Bu durumda, VSPackage, *vsshell. IDL* dosyasında tanımlanan glif numaralandırmaları temsil eden bir değer dizisini geri geçirir. Daha fazla bilgi için bkz. <xref:Microsoft.VisualStudio.Shell.Interop.VsStateIcon>. Bu, giriş karakteri için bir asma kilidi ve kullanıma hazır karakter için bir onay işareti gibi, IDE tarafından ayarlanan, önceden tanımlanmış bir karakter kümesidir.
 
 ### <a name="custom-set-of-glyphs"></a>Özel glif kümesi
  Kaynak denetimi VSPackage, yüklendiğinde benzersiz bir görünüm ve kullanım için kendi gliflerinden yararlanabilirsiniz. Yeni bir kaynak denetimi VSPackage etkinken, önceki bir kaynak denetimi VSPackage hala yüklenmiş ancak devre dışı olsa bile kendi glifleri kullanmaya başlayabilmelidir. Bu modda, kaynak denetimi VSPackage hala, seçerse tutarlı bir görünüm sağlamak için var olan simgeleri kullanabilir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .

@@ -1,5 +1,7 @@
 ---
 title: Visual Studio araç çubuklarının GUID 'Leri ve kimlikleri | Microsoft Docs
+description: Visual Studio tümleşik geliştirme ortamına (IDE) dahil edilen araç çubuklarının ve içerdikleri grupların GUID ve KIMLIK değerlerinin listesini görüntüleyin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +18,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: fe42821cdacc038d767e52373d45ddd7b8954323
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b44cda401faa0d7e34bf9ce7579aa3cca026fa13
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708222"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480388"
 ---
 # <a name="guids-and-ids-of-visual-studio-toolbars"></a>Visual Studio araç çubuklarının GUID 'Leri ve kimlikleri
 Bu konu, Visual Studio tümleşik geliştirme ortamında (IDE) ve içerdikleri gruplarda bulunan araç çubuklarının GUID ve KIMLIK değerlerini numaralandırır. Bu değerler, Visual Studio SDK 'nin bir parçası olarak yüklenen *. vsct* dosyalarında tanımlanmıştır. Daha fazla bilgi için bkz. [IDE tanımlı komutlar, menüler ve gruplar](../../extensibility/internals/ide-defined-commands-menus-and-groups.md).
@@ -61,13 +63,13 @@ Bu konu, Visual Studio tümleşik geliştirme ortamında (IDE) ve içerdikleri g
 
 ### <a name="standard-toolbar-groups"></a>Standart araç çubuğu grupları
 
-|Name|ID|
+|Ad|ID|
 |----------|--------|
 |Kaydet/Aç|IDG_VS_TOOLSB_SAVEOPEN|
 |Kes/kopyala|IDG_VS_TOOLSB_CUTCOPY|
 |Geri Al/Yinele|IDG_VS_TOOLSB_UNDOREDO|
 |Çalıştır/oluştur|IDG_VS_TOOLSB_RUNBUILD|
-|Arayın|IDG_VS_TOOLSB_SEARCH|
+|Arama|IDG_VS_TOOLSB_SEARCH|
 |Windows|IDG_VS_TOOLSB_WINDOWS|
 |Yeni pencereler|IDG_VS_TOOLSB_NEWWINDOWS|
 |Yükle/Kaydet|IDG_VS_WINDOWUI_LOADSAVE|
@@ -75,14 +77,14 @@ Bu konu, Visual Studio tümleşik geliştirme ortamında (IDE) ve içerdikleri g
 
 ### <a name="build-toolbar-groups"></a>Araç çubuğu grupları oluşturma
 
-|Name|ID|
+|Ad|ID|
 |----------|--------|
 |Yapı çubuğu|IDG_VS_BUILDBAR|
 |İptal|IDG_VS_BUILD_CANCEL|
 
 ### <a name="text-editor-toolbar-groups"></a>Metin düzenleyici araç çubuğu grupları
 
-|Name|ID|
+|Ad|ID|
 |----------|--------|
 |Tamamlama|IDM_VS_TOOL_TEXTEDITOR|
 |Leyebilirsiniz|IDG_VS_EDITTOOLBAR_INDENT|
@@ -91,7 +93,7 @@ Bu konu, Visual Studio tümleşik geliştirme ortamında (IDE) ve içerdikleri g
 
 ### <a name="debug-toolbar-groups"></a>Hata ayıklama araç çubuğu grupları
 
-|Name|ID|
+|Ad|ID|
 |----------|--------|
 |Yürütme|IDM_DEBUG_TOOLBAR|
 |Atma|IDG_DEBUG_TOOLBAR_STEPPING|
@@ -100,12 +102,12 @@ Bu konu, Visual Studio tümleşik geliştirme ortamında (IDE) ve içerdikleri g
 
 ### <a name="debug-location-toolbar-groups"></a>Hata ayıklama konumu araç çubuğu grupları
 
-|Name|ID|
+|Ad|ID|
 |----------|--------|
 |Hata ayıklama konumu|IDG_DEBUG_CONTEXT_TOOLBAR|
 
 ## <a name="tool-window-toolbars"></a>Araç penceresi araç çubukları
- Araç çubukları doğrudan IDE 'de veya **Çözüm Gezgini**gibi araç pencereleri içinde görünebilir. Araç pencereleri *. vsct* dosyalarında tanımlanmadığı için araç penceresi araç çubuklarının tanımlı üst öğeleri yok. Bunun yerine, kod içine yerleştirilir. Aşağıdaki tablo, IDE 'deki araç pencereleri ve içerdikleri komut grupları üzerinde görünen araç çubuklarını gösterir.
+ Araç çubukları doğrudan IDE 'de veya **Çözüm Gezgini** gibi araç pencereleri içinde görünebilir. Araç pencereleri *. vsct* dosyalarında tanımlanmadığı için araç penceresi araç çubuklarının tanımlı üst öğeleri yok. Bunun yerine, kod içine yerleştirilir. Aşağıdaki tablo, IDE 'deki araç pencereleri ve içerdikleri komut grupları üzerinde görünen araç çubuklarını gösterir.
 
 > [!NOTE]
 > Araç çubukları ve gruplar GUID `guidSHLMainMenu` : ID sözdizimi kullanılarak BELIRTILMEDIKÇE GUID 'yi kullanır. Bir araç çubuğu için bir GUID belirtildiğinde, bu araç çubuğundan gelen gruplar için de geçerli olur.

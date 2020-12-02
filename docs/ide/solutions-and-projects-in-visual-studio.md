@@ -1,5 +1,7 @@
 ---
 title: Çözümler ve projeler
+description: Visual Studio projeleri ve çözümleri hakkında bilgi edinin ve Çözüm Gezgini aracı ile yeni bir proje oluşturmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 06/26/2020
 ms.topic: conceptual
 f1_keywords:
@@ -20,12 +22,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ad0ee64afa78a962271d2b702ee525287c5b2457
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 949da02ac074e9740038fef7917655ca552a12f6
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85468736"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480713"
 ---
 # <a name="solutions-and-projects-in-visual-studio"></a>Visual Studio 'da çözümler ve projeler
 
@@ -36,20 +38,20 @@ Bu sayfa, Visual Studio 'da bir *Proje* ve *çözüm* kavramını açıklar. Ayr
 
 ## <a name="projects"></a>Projeler
 
-Visual Studio 'da bir uygulama veya Web sitesi oluşturduğunuzda bir *Proje*ile başlayabilirsiniz. Bir mantıksal anlamda, bir proje çalıştırılabilir, kitaplık veya Web sitesine derlenen tüm dosyaları içerir. Bu dosyalar, kaynak kodu, simgeler, resimler, veri dosyaları vb. içerebilir. Bir proje Ayrıca, programınızın iletişim kurduğu çeşitli hizmetler veya bileşenler tarafından gerekebilecek derleyici ayarlarını ve diğer yapılandırma dosyalarını da içerir.
+Visual Studio 'da bir uygulama veya Web sitesi oluşturduğunuzda bir *Proje* ile başlayabilirsiniz. Bir mantıksal anlamda, bir proje çalıştırılabilir, kitaplık veya Web sitesine derlenen tüm dosyaları içerir. Bu dosyalar, kaynak kodu, simgeler, resimler, veri dosyaları vb. içerebilir. Bir proje Ayrıca, programınızın iletişim kurduğu çeşitli hizmetler veya bileşenler tarafından gerekebilecek derleyici ayarlarını ve diğer yapılandırma dosyalarını da içerir.
 
 ### <a name="project-file"></a>Proje dosyası
 
 Visual Studio, bir çözümde her projeyi derlemek için [MSBuild](../msbuild/msbuild.md) kullanır ve her proje bir MSBuild proje dosyası içerir. Dosya uzantısı, projenin türünü (örneğin, bir C# projesi (. csproj), Visual Basic projesi (. vbproj) veya veritabanı projesini (. dbproj) yansıtır. Proje dosyası, içerik, Platform gereksinimleri, sürüm bilgileri, Web sunucusu veya veritabanı sunucusu ayarları ve gerçekleştirilecek görevler de dahil olmak üzere projenizi derlemek için MSBuild 'in ihtiyaç duyacağı tüm bilgileri ve yönergeleri içeren bir XML belgesidir.
 
-Proje dosyaları [MSBUILD XML şemasını](../msbuild/msbuild-project-file-schema-reference.md)temel alır. Visual Studio 'da daha yeni, [SDK stili proje dosyalarının](../msbuild/how-to-use-project-sdk.md) içeriğine bakmak için **Çözüm Gezgini** ' de proje düğümüne sağ tıklayın ve **Düzenle \<projectname\> **' yi seçin. .NET Framework içeriğine ve bu stilin diğer projelerine bakmak için, önce projeyi kaldırın ( **Çözüm Gezgini** proje düğümüne sağ tıklayın ve **Projeyi Kaldır**' ı seçin). Ardından projeye sağ tıklayıp **Düzenle \<projectname\> **' yi seçin.
+Proje dosyaları [MSBUILD XML şemasını](../msbuild/msbuild-project-file-schema-reference.md)temel alır. Visual Studio 'da daha yeni, [SDK stili proje dosyalarının](../msbuild/how-to-use-project-sdk.md) içeriğine bakmak için **Çözüm Gezgini** ' de proje düğümüne sağ tıklayın ve **Düzenle \<projectname\>**' yi seçin. .NET Framework içeriğine ve bu stilin diğer projelerine bakmak için, önce projeyi kaldırın ( **Çözüm Gezgini** proje düğümüne sağ tıklayın ve **Projeyi Kaldır**' ı seçin). Ardından projeye sağ tıklayıp **Düzenle \<projectname\>**' yi seçin.
 
 > [!NOTE]
 > Kodu düzenlemek, derlemek ve hata ayıklamak için Visual Studio 'da çözüm veya proje kullanmanız gerekmez. Yalnızca kaynak dosyalarınızı içeren klasörü Visual Studio 'da açabilir ve düzenleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio 'da projeler veya çözümler olmadan kod geliştirme](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md).
 
 ## <a name="solutions"></a>Çözümler
 
-Bir proje bir *çözüm*içinde yer alır. Adına rağmen çözüm bir "yanıt" değildir. Yalnızca bir veya daha fazla ilişkili projenin kapsayıcısı, derleme bilgileri, Visual Studio pencere ayarları ve belirli bir projeyle ilişkilendirilmemiş çeşitli dosyalar için bir kapsayıcıdır. Bir çözüm, bir metin dosyası (uzantısı *. sln*) tarafından kendine özgü benzersiz biçimde tanımlanır; el ile düzenlenmesi amaçlanmamıştır.
+Bir proje bir *çözüm* içinde yer alır. Adına rağmen çözüm bir "yanıt" değildir. Yalnızca bir veya daha fazla ilişkili projenin kapsayıcısı, derleme bilgileri, Visual Studio pencere ayarları ve belirli bir projeyle ilişkilendirilmemiş çeşitli dosyalar için bir kapsayıcıdır. Bir çözüm, bir metin dosyası (uzantısı *. sln*) tarafından kendine özgü benzersiz biçimde tanımlanır; el ile düzenlenmesi amaçlanmamıştır.
 
 Visual Studio, çözümlerin ayarlarını depolamak için iki dosya türü (*. sln* ve *. suo*) kullanır:
 
@@ -64,7 +66,7 @@ Yeni bir proje oluşturmanın en kolay yolu, belirli bir uygulama veya Web sites
 
 Projelerinizi genellikle belirli bir şekilde özelleştirirseniz, daha sonra yeni projeler oluşturmak için kullanabileceğiniz özel bir proje şablonu oluşturabilirsiniz. Daha fazla bilgi için bkz. [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md).
 
-Yeni bir proje oluşturduğunuzda, varsayılan olarak *%USERPROFILE%\source\repos dizinine*kaydedilir. Bu konumu, **Araçlar** **Projects location**  >  **Seçenekler**  >  **Projeler ve çözüm**  >  **konumları**altındaki projeler konum ayarında değiştirebilirsiniz. Daha fazla bilgi için bkz. [Projeler ve çözümler sayfası, Seçenekler iletişim kutusu](../ide/reference/projects-and-solutions-options-dialog-box.md).
+Yeni bir proje oluşturduğunuzda, varsayılan olarak *%USERPROFILE%\source\repos dizinine* kaydedilir. Bu konumu, **Araçlar** **Projects location**  >  **Seçenekler**  >  **Projeler ve çözüm**  >  **konumları** altındaki projeler konum ayarında değiştirebilirsiniz. Daha fazla bilgi için bkz. [Projeler ve çözümler sayfası, Seçenekler iletişim kutusu](../ide/reference/projects-and-solutions-options-dialog-box.md).
 
 ## <a name="solution-explorer"></a>Çözüm Gezgini
 
@@ -72,12 +74,12 @@ Yeni bir proje oluşturduktan sonra, projeyi ve çözümü ve ilişkili öğeler
 
 ![Çözüm Gezgini](../ide/media/vs2015_solution_explorer.png)
 
-Birçok menü komutu, **Çözüm Gezgini**çeşitli öğelerde sağ tıklama menüsünde bulunur. Bu komutlar bir proje oluşturma, NuGet paketlerini yönetme, bir başvuru ekleme, bir dosyayı yeniden adlandırma ve Testleri çalıştırma, yalnızca birkaç kez adlandırma içerir. **Çözüm Gezgini** üstündeki araç çubuğunda, bir çözüm görünümünden klasör görünümüne geçiş yapmak, gizli dosyaları göstermek, tüm düğümleri daraltmak ve daha fazlası için düğmeler bulunur.
+Birçok menü komutu, **Çözüm Gezgini** çeşitli öğelerde sağ tıklama menüsünde bulunur. Bu komutlar bir proje oluşturma, NuGet paketlerini yönetme, bir başvuru ekleme, bir dosyayı yeniden adlandırma ve Testleri çalıştırma, yalnızca birkaç kez adlandırma içerir. **Çözüm Gezgini** üstündeki araç çubuğunda, bir çözüm görünümünden klasör görünümüne geçiş yapmak, gizli dosyaları göstermek, tüm düğümleri daraltmak ve daha fazlası için düğmeler bulunur.
 
 > [!TIP]
 > Çözüm Gezgini kapattıysanız ve yeniden açmak istiyorsanız, menü çubuğundan **pencere**  >  **düzeni penceresini Sıfırla** ' yı seçin.
 
-ASP.NET Core projeleri için, dosyaların **Çözüm Gezgini**nasıl iç içe yerleşdiğini özelleştirebilirsiniz. Daha fazla bilgi için bkz. [Çözüm Gezgini dosya iç içe geçirmeyi özelleştirme](file-nesting-solution-explorer.md).
+ASP.NET Core projeleri için, dosyaların **Çözüm Gezgini** nasıl iç içe yerleşdiğini özelleştirebilirsiniz. Daha fazla bilgi için bkz. [Çözüm Gezgini dosya iç içe geçirmeyi özelleştirme](file-nesting-solution-explorer.md).
 
 Çözüm Gezgini görünen simgelerin bir listesini görüntülemek için, bkz. [sınıf görünümü ve nesne tarayıcısı simgeleri](class-view-and-object-browser-icons.md).
 

@@ -1,5 +1,7 @@
 ---
 title: '3. Adım: Her etikete rastgele bir simge atama'
+description: Simgelerin her oyunda aynı hücrelerde gösterilmemesi için her etikete rastgele bir simge atamayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 03/21/2020
 ms.topic: tutorial
 ms.prod: visual-studio-windows
@@ -13,12 +15,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 627b798827cd0b966d1f34336c7e1119841f9d4a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3f3330daeed243f96c44825a4be5516c573bb005
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80472632"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480635"
 ---
 # <a name="step-3-assign-a-random-icon-to-each-label"></a>3. Adım: Her etikete rastgele bir simge atama
 
@@ -51,11 +53,11 @@ Simgeler her oyunda aynı hücrelerde gösterilirse, oyun pek de zorlu olmaz. Bu
      [!code-csharp[VbExpressTutorial4Step2_3_4#16](../ide/codesnippet/CSharp/step-3-assign-a-random-icon-to-each-label_3.cs)]
      [!code-vb[VbExpressTutorial4Step2_3_4#16](../ide/codesnippet/VisualBasic/step-3-assign-a-random-icon-to-each-label_3.vb)]
 
-     İlk satır, **Denetim** değişkenini **iconLabel**adlı bir etikete dönüştürür. Bundan sonraki satır, `if` dönüştürmenin çalıştığından emin olmak için denetleyen bir ifadedir. Dönüştürme işe alıyorsa, `if` deyimindeki deyimler çalışır. (Önceki öğreticilerden hatırlayabileceğiniz gibi, `if` ifade belirttiğiniz koşulu değerlendirmek için kullanılır.) Deyimdeki ilk satır, `if` simgeler listesindeki öğelerden birine karşılık gelen rastgele bir sayı Içeren **rasgelenumber** adlı bir değişken oluşturur. Bunu yapmak için, <xref:System.Random.Next> <xref:System.Random> daha önce oluşturduğunuz nesnenin yöntemini kullanır. `Next`Yöntemi rastgele sayı döndürür. Bu satır, <xref:System.Collections.Generic.List%601.Count> rastgele sayının seçim aralığını belirlemek için **simgeler** listesinin özelliğini de kullanır. Sonraki satır, simge listesi öğelerinden birini <xref:System.Windows.Forms.Label.Text> etiketin özelliğine atar. Derleme dışı bırakılan satır bu konunun sonunda açıklanmaktadır. Son olarak, deyimindeki son satır, `if` forma eklenmiş olan simgeyi listeden kaldırır.
+     İlk satır, **Denetim** değişkenini **iconLabel** adlı bir etikete dönüştürür. Bundan sonraki satır, `if` dönüştürmenin çalıştığından emin olmak için denetleyen bir ifadedir. Dönüştürme işe alıyorsa, `if` deyimindeki deyimler çalışır. (Önceki öğreticilerden hatırlayabileceğiniz gibi, `if` ifade belirttiğiniz koşulu değerlendirmek için kullanılır.) Deyimdeki ilk satır, `if` simgeler listesindeki öğelerden birine karşılık gelen rastgele bir sayı Içeren **rasgelenumber** adlı bir değişken oluşturur. Bunu yapmak için, <xref:System.Random.Next> <xref:System.Random> daha önce oluşturduğunuz nesnenin yöntemini kullanır. `Next`Yöntemi rastgele sayı döndürür. Bu satır, <xref:System.Collections.Generic.List%601.Count> rastgele sayının seçim aralığını belirlemek için **simgeler** listesinin özelliğini de kullanır. Sonraki satır, simge listesi öğelerinden birini <xref:System.Windows.Forms.Label.Text> etiketin özelliğine atar. Derleme dışı bırakılan satır bu konunun sonunda açıklanmaktadır. Son olarak, deyimindeki son satır, `if` forma eklenmiş olan simgeyi listeden kaldırır.
 
      Kodun belirli bir bölümünün ne işe yaradığından emin olamadığınızda, fare işaretçisini kod öğesinin üzerine getirip ortaya çıkan araç ipucunu gözden geçirebileceğinizi unutmayın. Ayrıca, Visual Studio hata ayıklayıcısını kullanarak, program çalışırken kodun her satırını adım adım geçebilirsiniz. Bkz. [nasıl yaparım?: Visual Studio 'daki hata ayıklayıcıyla adımla mı?](https://msdn.microsoft.com/vstudio/ee672313.aspx) veya daha fazla bilgi için [hata ayıklayıcıyla birlikte kod içine gidin](../debugger/navigating-through-code-with-the-debugger.md) .
 
-3. Oyun panosunu simgelerle doldurmanız için `AssignIconsToSquares()` Program başlatıldıktan hemen sonra yöntemi çağırmanız gerekir. C# kullanıyorsanız, Form1 oluşturucusunda yöntemine yapılan çağrının hemen altına bir ifade ekleyin `InitializeComponent()` , böylece formunuz görüntülenmeden önce **Form1** _constructor_kendisini ayarlamak için yeni yönteminizi çağırır. Oluşturucular, sınıf veya yapı gibi yeni bir nesne oluşturduğunuzda çağrılır. Daha fazla bilgi için bkz. [oluşturucular (C# Programlama Kılavuzu)](/dotnet/csharp/programming-guide/classes-and-structs/constructors) veya Visual Basic [oluşturucular ve Yıkıcılar kullanın](/previous-versions/visualstudio/visual-studio-2008/2z08e49e\(v\=vs.90\)) .
+3. Oyun panosunu simgelerle doldurmanız için `AssignIconsToSquares()` Program başlatıldıktan hemen sonra yöntemi çağırmanız gerekir. C# kullanıyorsanız, Form1 oluşturucusunda yöntemine yapılan çağrının hemen altına bir ifade ekleyin `InitializeComponent()` , böylece formunuz görüntülenmeden önce **Form1** _constructor_ kendisini ayarlamak için yeni yönteminizi çağırır. Oluşturucular, sınıf veya yapı gibi yeni bir nesne oluşturduğunuzda çağrılır. Daha fazla bilgi için bkz. [oluşturucular (C# Programlama Kılavuzu)](/dotnet/csharp/programming-guide/classes-and-structs/constructors) veya Visual Basic [oluşturucular ve Yıkıcılar kullanın](/previous-versions/visualstudio/visual-studio-2008/2z08e49e\(v\=vs.90\)) .
 
      [!code-csharp[VbExpressTutorial4Step2_3_4#13](../ide/codesnippet/CSharp/step-3-assign-a-random-icon-to-each-label_4.cs)]
 

@@ -1,5 +1,7 @@
 ---
 title: Visual Studio SDK 'da olayları gösterme | Microsoft Docs
+description: Projeler ve proje öğeleri için olayları ortaya çıkaran Visual Studio SDK yöntemleri ve kayıt defteri girişleri hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 48f1e0ea0dcd07bbc26fc89d5c61a6a5941d4727
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d5eec842f989497fda618482916154aabdcdd406
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708483"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480544"
 ---
 # <a name="expose-events-in-the-visual-studio-sdk"></a>Visual Studio SDK 'da olayları kullanıma sunma
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Otomasyonu kullanarak olayları kaynak yapmanızı sağlar. Projeler ve proje öğeleri için olayları kaynak yapmanızı öneririz.
@@ -27,7 +29,7 @@ ms.locfileid: "80708483"
 
 1. Ortam başlatılır.
 
-2. Tüm VSPackages 'in **Otomasyon**, **AutomationEvents**ve **AutomationProperties** anahtarlarının altındaki tüm değer adlarını kayıt defterinden okur ve bu adları bir tabloda depolar.
+2. Tüm VSPackages 'in **Otomasyon**, **AutomationEvents** ve **AutomationProperties** anahtarlarının altındaki tüm değer adlarını kayıt defterinden okur ve bu adları bir tabloda depolar.
 
 3. Otomasyon tüketicisi, bu örnekte veya ' de çağırır `DTE.Events.AutomationProjectsEvents` `DTE.Events.AutomationProjectItemsEvents` .
 
@@ -46,13 +48,13 @@ ms.locfileid: "80708483"
 ## <a name="registry-entries-from-the-basic-project-sample"></a>Temel proje örneğindeki kayıt defteri girişleri
  Bu bölümde, kayıt defterine Otomasyon olay değerlerinin ekleneceği yer gösterilmektedir.
 
- **[HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio\8.0\Packages \\<PkgGUID \> \Automationevents]**
+ **[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0\Packages\\<PkgGUID \> \Automationevents]**
 
  **AutomationProjectEvents** = nesnesini döndürür `AutomationProjectEvents` .
 
  **AutomationProjectItemEvents** = nesnesini döndürür `AutomationProjectItemsEvents` .
 
-|Ad|Tür|Aralık|Description|
+|Ad|Tür|Aralık|Açıklama|
 |----------|----------|-----------|-----------------|
 |Varsayılan (@)|REG_SZ|Kullanılmıyor|Kullanılmıyor. Belgeler için veri alanını kullanabilirsiniz.|
 |*AutomationProjectsEvents*|REG_SZ|Olay nesnenizin adı.|Yalnızca anahtar adı ilgili. Belgeler için veri alanını kullanabilirsiniz.<br /><br /> Bu örnek, temel proje örneğinden gelir.|
@@ -62,7 +64,7 @@ ms.locfileid: "80708483"
 
  ![Visual Studio proje olayları](../../extensibility/internals/media/projectevents.gif "ProjectEvents") Olaylar için otomasyon modeli
 
- Sınıfı `CProjectEventsContainer` *BscProjectsEvents*için kaynak nesnesini temsil eder ve `CProjectItemsEventsContainer` *BscProjectItemsEvents*için kaynak nesnesini temsil eder.
+ Sınıfı `CProjectEventsContainer` *BscProjectsEvents* için kaynak nesnesini temsil eder ve `CProjectItemsEventsContainer` *BscProjectItemsEvents* için kaynak nesnesini temsil eder.
 
  Çoğu durumda, çoğu olay nesnesi bir filtre nesnesi alıp, her olay isteği için yeni bir nesne döndürmelidir. Olaylarınızı ateşleyerek, olay işleyicisinin çağrıldığından emin olmak için bu filtreyi kontrol edin.
 
@@ -104,7 +106,7 @@ STDMETHODIMP CVsPackage::GetAutomationObject(
 }
 ```
 
- Yukarıdaki kodda, ( `g_wszAutomationProjects` *FigProjects*figprojectsevents) proje koleksiyonunuzun adı ve `g_wszAutomationProjectsEvents` *FigProjectsEvents* `g_wszAutomationProjectItemsEvents` (*FigProjectItemEvents*), VSPackage uygulamanızdan kaynaklaştırılmış proje olayları ve proje öğeleri olaylarının adlarıdır.
+ Yukarıdaki kodda, ( `g_wszAutomationProjects` *FigProjects* figprojectsevents) proje koleksiyonunuzun adı ve `g_wszAutomationProjectsEvents` *FigProjectsEvents* `g_wszAutomationProjectItemsEvents` (*FigProjectItemEvents*), VSPackage uygulamanızdan kaynaklaştırılmış proje olayları ve proje öğeleri olaylarının adlarıdır.
 
  Olay nesneleri aynı merkezi konumdan alınır, `DTE.Events` nesnesi. Bu şekilde, bir son kullanıcının belirli bir olayı bulmak için tüm nesne modeline gözatmasına sahip olmaması için tüm olay nesneleri birlikte gruplandırılır. Bu Ayrıca, sistem genelinde olaylar için kendi kodunuzu uygulamanızı gerektirmek yerine, belirli VSPackage nesnelerinizi sağlamanıza olanak tanır. Bununla birlikte, arabiriminiz için bir olay bulması gereken son kullanıcı için, `ProjectItem` olay nesnesinin alındığı yerden hemen net değildir.
 

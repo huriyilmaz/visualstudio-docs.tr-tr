@@ -1,5 +1,7 @@
 ---
 title: '3. Adım: Geri sayım zamanlayıcısı ekleme'
+description: Sınavın tamamlaması için kalan saniye sayısını izlemek için geri sayım süreölçeri ekleme hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: tutorial
 ms.prod: visual-studio-windows
@@ -13,12 +15,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6ca2dce7f6f9ddc484b67f250f34d69747c6e46e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 723b5daabd19d2e49462bf62d2657c6a6cd14b7f
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77579876"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480648"
 ---
 # <a name="step-3-add-a-countdown-timer"></a>3. Adım: Geri sayım zamanlayıcısı ekleme
 
@@ -29,7 +31,7 @@ Bu öğreticinin üçüncü bölümünde, bir geri sayım süreölçeri ekleyere
 
 ## <a name="to-add-a-countdown-timer"></a>Geri sayım Zamanlayıcısı eklemek için
 
-1. Önceki yordamda yaptığınız gibi, **timeleft**adlı bir tamsayı değişkeni ekleyin. Kodunuzun aşağıdaki gibi görünmesi gerekir.
+1. Önceki yordamda yaptığınız gibi, **timeleft** adlı bir tamsayı değişkeni ekleyin. Kodunuzun aşağıdaki gibi görünmesi gerekir.
 
      [!code-vb[VbExpressTutorial3Step3#5](../ide/codesnippet/VisualBasic/step-3-add-a-countdown-timer_1.vb)]
      [!code-csharp[VbExpressTutorial3Step3#5](../ide/codesnippet/CSharp/step-3-add-a-countdown-timer_1.cs)]
@@ -42,7 +44,7 @@ Bu öğreticinin üçüncü bölümünde, bir geri sayım süreölçeri ekleyere
 
      Denetim, tasarım penceresinin altındaki gri alanda görüntülenir.
 
-3. Formunda, az önce eklediğiniz **Süreölçer1** simgesini seçin ve **Interval** özelliğini **1000**olarak ayarlayın.
+3. Formunda, az önce eklediğiniz **Süreölçer1** simgesini seçin ve **Interval** özelliğini **1000** olarak ayarlayın.
 
      Aralık değeri milisaniyelik olduğundan, 1000 değeri <xref:System.Windows.Forms.Timer.Tick> olayın her saniye tetiklenmesine neden olur.
 
@@ -94,7 +96,7 @@ Bu öğreticinin üçüncü bölümünde, bir geri sayım süreölçeri ekleyere
 
      İfade, `addend1 + addend2` değerleri iki değişkene birlikte ekler. İlk kısım ( `sum.Value` ), doğru yanıtı göstermek için Sum NumericUpDown denetiminin **Value** özelliğini kullanır. Daha sonra test yanıtlarını denetlemek için aynı özelliği kullanırsınız.
 
-     Test sahipleri, bir denetimi kullanarak daha kolay sayı girebilir <xref:System.Windows.Forms.NumericUpDown> , bu da matematik sorunlarına yanıtlar için bir tane kullanmanızı sağlar. Tüm olası yanıtlar 0 ile 100 arasında tüm sayılardır. **Minimum**, **Maksimum**ve **DecimalPlaces** özelliklerinin varsayılan değerlerini bırakarak, test takipçilerin ondalık sayı, negatif sayı veya çok yüksek sayı girememesini sağlayabilirsiniz. (Test takipçilerin 3,141 girmelerini, ancak 3,1415 değil, izin vermek istiyorsanız, **DecimalPlaces** özelliğini 3 olarak ayarlayabilirsiniz.)
+     Test sahipleri, bir denetimi kullanarak daha kolay sayı girebilir <xref:System.Windows.Forms.NumericUpDown> , bu da matematik sorunlarına yanıtlar için bir tane kullanmanızı sağlar. Tüm olası yanıtlar 0 ile 100 arasında tüm sayılardır. **Minimum**, **Maksimum** ve **DecimalPlaces** özelliklerinin varsayılan değerlerini bırakarak, test takipçilerin ondalık sayı, negatif sayı veya çok yüksek sayı girememesini sağlayabilirsiniz. (Test takipçilerin 3,141 girmelerini, ancak 3,1415 değil, izin vermek istiyorsanız, **DecimalPlaces** özelliğini 3 olarak ayarlayabilirsiniz.)
 
 6. Yöntemin sonuna üç satır ekleyin `StartTheQuiz()` , bu nedenle kod aşağıdaki gibi görünür.
 

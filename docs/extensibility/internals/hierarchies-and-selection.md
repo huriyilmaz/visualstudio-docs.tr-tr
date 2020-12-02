@@ -1,5 +1,7 @@
 ---
 title: Hiyerarşiler ve seçim | Microsoft Docs
+description: Visual Studio 'Nun projeler gibi hiyerarşileri nasıl işlediğini ve kullanıcıya nelerin gösterileceğini belirlemek için seçim bağlamını nasıl kullandığını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a0e38c2cea464abded5ecf6ee2c8ac087868b07e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 04f433e3da45e10d2b1721ac13254856489d2d0a
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708136"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480427"
 ---
 # <a name="hierarchies-and-selection"></a>Hiyerarşiler ve seçim
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]' Yi özelleştirirken, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] proje gibi hiyerarşilerin nasıl işlediğini ve kullanıcıya neyin gösterileceğini belirlemek için seçim bağlamını nasıl kullandığını anlamanız gerekir. Bu bölümde [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] hiyerarşiler ve seçim kavramlarını ele alınmaktadır.

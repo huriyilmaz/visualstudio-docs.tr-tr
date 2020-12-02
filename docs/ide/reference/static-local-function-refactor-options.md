@@ -1,5 +1,7 @@
 ---
 title: Statik yerel işlev yeniden düzenleme seçenekleri
+description: Bir yerel işlevi statik hale getirmek ve işlev dışında tanımlanan değişkenleri işlevin bildirimine ve çağrılarına geçirmek için hızlı eylemler ve yeniden düzenlemeler menüsünü nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/10/2020
 ms.topic: reference
 author: governesss
@@ -11,12 +13,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: c297457c910c484c05c974c581e89c75e0ad44e5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8e85fcc96542b4f3538729aeb50a4e080c902657
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77144831"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96479894"
 ---
 # <a name="static-local-function-refactorings-and-quick-actions"></a>Statik yerel işlev yeniden düzenlemeler ve hızlı eylemler
 
@@ -38,7 +40,7 @@ Bu yeniden düzenleme için geçerlidir:
 
 1. Giriş işaretini yerel işlev adına yerleştirin.
 
-2. **CTRL**tuşuna basın + **.** (nokta) **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetikleyin.
+2. **CTRL** tuşuna basın + **.** (nokta) **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetikleyin.
 
    ![Yerel işlevi statik yap](media/make-local-function-static.png)
 
@@ -60,7 +62,7 @@ Bu hızlı eylem şu şekilde geçerlidir:
 
 1. Giriş işaretini statik yerel işlevde kullanıldığı değişkene yerleştirin.
 
-2. **CTRL**tuşuna basın + **.** (nokta) **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetikleyin.
+2. **CTRL** tuşuna basın + **.** (nokta) **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetikleyin.
 
    ![Değişkeni statik yerel işlevde açıkça geçir](media/pass-variable-explicitly-static-local-function.png)
 

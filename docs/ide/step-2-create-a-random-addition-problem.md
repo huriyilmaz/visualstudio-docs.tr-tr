@@ -1,5 +1,7 @@
 ---
 title: '2. Adım: Rastgele bir toplama problemi oluşturma'
+description: Rastgele sayılara göre matematik sorunları ekleyerek, testi zorlayıcı hale getirme hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: tutorial
 ms.prod: visual-studio-windows
@@ -13,12 +15,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2febef6987cf3440f92f6a6c505840cfe3ca3448
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1c23b85dec73c6810420dc5e8ab2d3f4121fc903
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77579880"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480687"
 ---
 # <a name="step-2-create-a-random-addition-problem"></a>2. Adım: Rastgele bir toplama problemi oluşturma
 
@@ -42,13 +44,13 @@ Bu öğreticinin ikinci bölümünde, rastgele sayıları temel alan matematik s
 
      [!INCLUDE [devlang-control-csharp-vb](./includes/devlang-control-csharp-vb.md)]
 
-     Formunuza rastgele bir nesne eklediniz ve nesne **rastgele**olarak adlandırılıyordu.
+     Formunuza rastgele bir nesne eklediniz ve nesne **rastgele** olarak adlandırılıyordu.
 
-     `Random` bir nesne olarak bilinir. Daha önce bu kelimeyi duydunuz ve bir sonraki öğreticide programlamanın anlamı hakkında daha fazla bilgi edindiniz. Şimdilik, `new` düğmeler, Etiketler, paneller, Openfileiletişimler, Coloriletişimler, ses çalarlar, Randoms ve hatta formlar oluşturmak için deyimleri kullanabileceğiniz ve bu öğelerin nesneler olarak adlandırıldığına yalnızca unutmayın. Programınızı çalıştırdığınızda, form başlatılır ve arkasındaki kod rastgele bir nesne oluşturur ve **rasgeleleştirici**olarak adlandırır.
+     `Random` bir nesne olarak bilinir. Daha önce bu kelimeyi duydunuz ve bir sonraki öğreticide programlamanın anlamı hakkında daha fazla bilgi edindiniz. Şimdilik, `new` düğmeler, Etiketler, paneller, Openfileiletişimler, Coloriletişimler, ses çalarlar, Randoms ve hatta formlar oluşturmak için deyimleri kullanabileceğiniz ve bu öğelerin nesneler olarak adlandırıldığına yalnızca unutmayın. Programınızı çalıştırdığınızda, form başlatılır ve arkasındaki kod rastgele bir nesne oluşturur ve **rasgeleleştirici** olarak adlandırır.
 
      Kısa süre içinde yanıtları denetlemek için bir yöntem oluşturacaksınız, böylece test her bir sorun için oluşturduğu rastgele sayıları depolamak için değişkenleri kullanmalıdır. Bkz. [değişkenler](/dotnet/visual-basic/programming-guide/language-features/variables/index) veya [türler](/dotnet/csharp/programming-guide/types/index). Değişkenleri düzgün şekilde kullanmak için, bunları bildirmeniz gerekir, bu da adlarını ve veri türlerini listelemesi anlamına gelir.
 
-4. Forma iki tamsayı değişkeni ekleyin ve **addend1** ve **addend2**olarak adlandırın.
+4. Forma iki tamsayı değişkeni ekleyin ve **addend1** ve **addend2** olarak adlandırın.
 
     > [!NOTE]
     > Tamsayı değişkeni, C# veya Visual Basic tamsayı olarak bilinir. Bu tür bir değişken,-2147483648 ile 2147483647 arasında pozitif veya negatif bir sayı depolar ve ondalık basamak değil yalnızca tam sayıları depolayabilirler.
@@ -71,7 +73,7 @@ Bu öğreticinin ikinci bölümünde, rastgele sayıları temel alan matematik s
      Bir nesneden sonra bir nokta girdiğinizde, IntelliSense, nesne üyelerinin bir listesini (özellikler, Yöntemler ve olaylar gibi) gösterir.
 
     > [!NOTE]
-    > `Next()`Yöntemi `Random` nesnesiyle kullandığınızda `randomizer.Next(50)` (örneğin, öğesini çağırdığınızda) 50 ' den küçük bir rastgele sayı alırsınız (0 ile 49 arasında). Bu örnekte, çağırılır `randomizer.Next(51)` . İki rastgele sayının, 0 ile 100 arasında bir yanıt ekleyecek şekilde 50 değil 51 ' i kullandınız. Yöntemine 50 geçirirseniz, `Next()` 0 ile 49 arasında bir sayı seçer. bu nedenle, olası en yüksek yanıt 100 değil 98. Yöntemdeki ilk iki deyim çalıştıktan sonra, **addend1** ve **addend2**iki tamsayı değişkeninin her biri, 0 ile 50 arasında rastgele bir sayı tutar. Bu ekran görüntüsünde C# kodu gösterilmektedir, ancak IntelliSense Visual Basic için aynı şekilde çalışmaktadır.
+    > `Next()`Yöntemi `Random` nesnesiyle kullandığınızda `randomizer.Next(50)` (örneğin, öğesini çağırdığınızda) 50 ' den küçük bir rastgele sayı alırsınız (0 ile 49 arasında). Bu örnekte, çağırılır `randomizer.Next(51)` . İki rastgele sayının, 0 ile 100 arasında bir yanıt ekleyecek şekilde 50 değil 51 ' i kullandınız. Yöntemine 50 geçirirseniz, `Next()` 0 ile 49 arasında bir sayı seçer. bu nedenle, olası en yüksek yanıt 100 değil 98. Yöntemdeki ilk iki deyim çalıştıktan sonra, **addend1** ve **addend2** iki tamsayı değişkeninin her biri, 0 ile 50 arasında rastgele bir sayı tutar. Bu ekran görüntüsünde C# kodu gösterilmektedir, ancak IntelliSense Visual Basic için aynı şekilde çalışmaktadır.
 
      Bu deyimlere daha yakından göz atın.
 

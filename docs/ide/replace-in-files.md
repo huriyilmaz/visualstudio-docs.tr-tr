@@ -1,5 +1,7 @@
 ---
 title: Dosyalarda bul ve Değiştir
+description: Dosyaları değiştirme özelliği hakkında bilgi edinin ve bir dize veya ifade için belirtilen dosya kümesinin kodunu aramanıza ve bulunan eşleşmelerin bazılarını veya tümünü değiştirmenize nasıl izin verdiğini öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -14,16 +16,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dddd55714e53516ba1ccd8a11c99761a4db7136a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0c3499c1b2073d0263231eb1f60129b2cd3548fa
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75585632"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480037"
 ---
 # <a name="replace-in-files"></a>Dosyalarda Değiştir
 
-**Dosyalardaki Değiştir** bir dize veya ifade için belirtilen dosya kümesinin kodunu aramanıza ve bulunan eşleşmelerin bazılarını veya tümünü değiştirmenize izin verir. Bulunan eşleşmeler ve gerçekleştirilen eylemler, **sonuç seçeneklerinde**seçilen **sonuçları bul** penceresinde listelenir.
+**Dosyalardaki Değiştir** bir dize veya ifade için belirtilen dosya kümesinin kodunu aramanıza ve bulunan eşleşmelerin bazılarını veya tümünü değiştirmenize izin verir. Bulunan eşleşmeler ve gerçekleştirilen eylemler, **sonuç seçeneklerinde** seçilen **sonuçları bul** penceresinde listelenir.
 
 > [!NOTE]
 > Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza veya sürümüne bağlı olarak **Yardım** bölümünde açıklananlardan farklı bir durum içerebilir. Ayarlarınızı değiştirmek (örneğin, **genel** veya **Visual C++** ayarları) için **Araçlar**  >  **içeri ve dışarı aktarma ayarları**' nı seçin ve ardından **tüm ayarları Sıfırla**' yı seçin.
@@ -45,7 +47,7 @@ ms.locfileid: "75585632"
 Yeni bir metin dizesi veya ifade aramak için, kutuyu kutuda belirtin. En son aradığınız 20 dizeden herhangi birini aramak için, açılan listeyi açın ve dizeyi seçin. Arama dizenizde bir veya daha fazla normal ifade kullanmak istiyorsanız bitişik **Ifade Oluşturucu** düğmesini seçin. Daha fazla bilgi için bkz. [Visual Studio 'da normal Ifadeler kullanma](../ide/using-regular-expressions-in-visual-studio.md).
 
 > [!NOTE]
-> **Ifade Oluşturucu** düğmesi yalnızca **Bul seçenekleri**altında **Normal ifadeleri kullan** seçeneğini belirlediyseniz etkinleştirilir.
+> **Ifade Oluşturucu** düğmesi yalnızca **Bul seçenekleri** altında **Normal ifadeleri kullan** seçeneğini belirlediyseniz etkinleştirilir.
 
 ## <a name="replace-with"></a>Şununla Değiştir
 

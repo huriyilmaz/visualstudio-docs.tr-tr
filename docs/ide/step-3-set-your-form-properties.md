@@ -1,5 +1,7 @@
 ---
 title: '3. Adım: Form özelliklerinizi ayarlama'
+description: Formunuzun görünüşünü değiştirmek için Özellikler penceresi nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 08/30/2019
 ms.assetid: 634ef037-1525-48c8-ac7f-abf04be69376
 ms.topic: tutorial
@@ -10,12 +12,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 82dbef4baee72be8ff96f83e436b2587e9a020ea
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0b858ed302c7fe89049585edb7cc5c4391a4789b
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77579859"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480622"
 ---
 # <a name="step-3-set-your-form-properties"></a>3. Adım: Form özelliklerinizi ayarlama
 
@@ -23,17 +25,17 @@ Daha sonra, formunuzun görünüşünü değiştirmek için **Özellikler** penc
 
 ## <a name="how-to-set-your-form-properties"></a>Form özelliklerinizi ayarlama
 
-1. **Windows Form Tasarımcısı**baktığınızdan emin olun. Visual Studio tümleşik geliştirme ortamında (IDE), **Form1.cs [Design]** (ya da **Form1. vb [Design]** ) sekmesini seçerek Visual Basic).
+1. **Windows Form Tasarımcısı** baktığınızdan emin olun. Visual Studio tümleşik geliştirme ortamında (IDE), **Form1.cs [Design]** (ya da **Form1. vb [Design]** ) sekmesini seçerek Visual Basic).
 
 1. Seçmek için **Form1** form içinde herhangi bir yeri seçin. Şimdi form özelliklerini göstermeli **Özellikler** penceresine bakın. Formlarda çeşitli özellikler vardır. Örneğin, ön plan ve arka plan rengini, formun üstünde görünen başlık metnini, formun boyutunu ve diğer özellikleri ayarlayabilirsiniz.
 
    > [!NOTE]
-   > **Özellikler** penceresi görünmezse, araç çubuğunda kare **ayıklamayı Durdur** düğmesini seçerek uygulamanızı durdurun veya yalnızca pencereyi kapatın. Uygulama durdurulmuşsa ve yine de **Özellikler** penceresini görmüyorsanız, menü çubuğunda **View**  >  **Özellikler penceresini**görüntüle ' yi seçin.
+   > **Özellikler** penceresi görünmezse, araç çubuğunda kare **ayıklamayı Durdur** düğmesini seçerek uygulamanızı durdurun veya yalnızca pencereyi kapatın. Uygulama durdurulmuşsa ve yine de **Özellikler** penceresini görmüyorsanız, menü çubuğunda **View**  >  **Özellikler penceresini** görüntüle ' yi seçin.
 
-1. Form seçildikten sonra, **Özellikler** penceresinde **Text** özelliğini bulun. Listenin nasıl sıralandığına bağlı olarak aşağı kaydırmanız gerekebilir. **Metin**' i seçin, **resim görüntüleyici**yazın ve ardından **ENTER**' u seçin.  Formunuz artık başlık çubuğunda metin **resmi görüntüleyicisine** sahip olmalıdır ve **Özellikler** penceresi aşağıdaki ekran görüntüsüne benzer görünmelidir.
+1. Form seçildikten sonra, **Özellikler** penceresinde **Text** özelliğini bulun. Listenin nasıl sıralandığına bağlı olarak aşağı kaydırmanız gerekebilir. **Metin**' i seçin, **resim görüntüleyici** yazın ve ardından **ENTER**' u seçin.  Formunuz artık başlık çubuğunda metin **resmi görüntüleyicisine** sahip olmalıdır ve **Özellikler** penceresi aşağıdaki ekran görüntüsüne benzer görünmelidir.
 
     ![Özellik penceresi](../ide/media/express_edittextproperty.png)<br>
-   ***Özellikler*** *penceresi*
+   **_Özellikler_* _ _window *
 
    > [!NOTE]
    > Özellikler, **kategorilere ayrılmış** veya **alfabetik** bir görünüme göre sıralanabilir. **Özellikler** penceresindeki düğmeleri kullanarak bu iki görünüm arasında geçiş yapabilirsiniz. Bu öğreticide, **alfabetik** görünüm aracılığıyla özellikleri bulmak daha kolay.
@@ -51,12 +53,12 @@ Daha sonra, formunuzun görünüşünü değiştirmek için **Özellikler** penc
 
    - **F5** tuşunu seçin.
 
-   - Menü çubuğunda **hata**  >  **ayıklamayı Başlat hata**Ayıkla ' yı seçin.
+   - Menü çubuğunda **hata**  >  **ayıklamayı Başlat hata** Ayıkla ' yı seçin.
 
    - Araç çubuğunda, aşağıdaki gibi görünen **hata ayıklamayı Başlat** düğmesini seçin.
 
       ![Hata ayıklamayı Başlat araç çubuğu düğmesi](../ide/media/express_icondebug.png)<br>
-     ***Hata ayıklamayı Başlat*** *araç çubuğu düğmesi*
+     **_Hata ayıklamayı Başlat_* _ _toolbar düğmesi *
 
      Daha önce olduğu gibi, IDE uygulamanızı oluşturup çalıştırır ve bir pencere görüntülenir.
 
@@ -64,9 +66,9 @@ Daha sonra, formunuzun görünüşünü değiştirmek için **Özellikler** penc
 
    - Araç çubuğunda **hata ayıklamayı Durdur** düğmesini seçin.
 
-   - Menü çubuğunda **hata**  >  **ayıklamayı Durdur hata**Ayıkla ' yı seçin.
+   - Menü çubuğunda **hata**  >  **ayıklamayı Durdur hata** Ayıkla ' yı seçin.
 
-   - Klavyenizi kullanın ve **SHIFT** + **F5**tuşuna basın.
+   - Klavyenizi kullanın ve **SHIFT** + **F5** tuşuna basın.
 
    - **Resim görüntüleyici** penceresinin üst köşesindeki **X** düğmesini seçin.
 

@@ -1,5 +1,7 @@
 ---
 title: Birden çok kullanıcı hesabıyla çalışma
+description: Tüm Microsoft hesaplarınızı Visual Studio 'ya eklemeyi öğrenin. böylece, kaynaklara ayrı olarak oturum açmanıza gerek kalmadan herhangi bir hesaptan erişebilirsiniz.
+ms.custom: SEO-VS-2020
 ms.date: 11/16/2020
 ms.topic: conceptual
 author: ornellaalt
@@ -7,12 +9,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fe124fc35eabec4b3c48cdf8dfa53ef8f17b0003
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: 071c6061417e26b45e5f9e67bc6ac1001bf08530
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94671343"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480349"
 ---
 # <a name="work-with-multiple-user-accounts"></a>Birden çok kullanıcı hesabıyla çalışma
 
@@ -115,7 +117,7 @@ Cihaz kod akışını kullanarak oturum açmak için:
 
 1. **Visual Studio** altında **devam**' ı seçin.
 
-   ![device-login-page.png](media/work-with-multiple-user-accounts/device-login-page.png)
+   ![Devam seçeneğini gösteren cihaz oturum açma sayfasının ekran görüntüsü.](media/work-with-multiple-user-accounts/device-login-page.png)
 
 1. Hesap kimlik bilgilerinizi girmek için istemleri izleyin.
 

@@ -1,5 +1,7 @@
 ---
 title: '4. Adım: Her etikete bir tıklama olayı işleyicisi ekleme'
+description: Her etikete bir tıklama olayı işleyicisi eklemeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: tutorial
 ms.prod: visual-studio-windows
@@ -13,12 +15,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7049271dddb4e763bf5ecb3760358bdd63e38df5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f620b097e2a565bbacf3322d03385aa70fd0356f
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77579340"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480609"
 ---
 # <a name="step-4-add-a-click-event-handler-to-each-label"></a>4. Adım: Her etikete bir tıklama olayı işleyicisi ekleme
 
@@ -34,7 +36,7 @@ Eşleştirme oyunu aşağıdaki gibi çalışır:
 
 ## <a name="to-add-a-click-event-handler-to-each-label"></a>Her etikete bir tıklama olayı işleyicisi eklemek için
 
-1. **Windows Form Tasarımcısı**formunu açın. **Çözüm Gezgini**' de *Form1.cs* veya *Form1. vb*öğesini seçin. Menü çubuğunda **Görünüm**  >  **Tasarımcısı**' nı seçin.
+1. **Windows Form Tasarımcısı** formunu açın. **Çözüm Gezgini**' de *Form1.cs* veya *Form1. vb* öğesini seçin. Menü çubuğunda **Görünüm**  >  **Tasarımcısı**' nı seçin.
 
 2. İlk etiket denetimini belirleyip seçin. Daha sonra, seçmek için diğer etiketlerin her birini seçerken **CTRL** tuşunu basılı tutun. Her etiketin seçildiğinden emin olun.
 

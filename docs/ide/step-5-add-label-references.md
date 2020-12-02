@@ -1,5 +1,7 @@
 ---
 title: '5. Adım: Etiket başvuruları ekleme'
+description: Formunuza etiket başvuruları eklemeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: tutorial
 ms.prod: visual-studio-windows
@@ -13,15 +15,15 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: de89d7194425e1a8cba9e11f2734372d80b256b3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 95a4286feb778e17b345f964b1b7ccca5343e461
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77579335"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480570"
 ---
 # <a name="step-5-add-label-references"></a>5. Adım: Etiket başvuruları ekleme
-Programın, Player 'ın seçtiği etiket denetimlerini izlemesi gerekir. Şu anda program oyuncunun seçtiği tüm etiketleri göstermektedir. Ancak bunun değişmesini sağlayacağız. İlk etiket seçildikten sonra program etiketin simgesini göstermelidir. İkinci etiket seçildikten sonra iki simgeyi de kısa bir süre göstermeli ve ardından iki simgeyi de tekrar gizlemelidir. Programınız artık ilk olarak hangi etiket denetiminin seçili olduğunu ve *başvuru değişkenlerini*kullanarak ikinci seçili olduğunu izler.
+Programın, Player 'ın seçtiği etiket denetimlerini izlemesi gerekir. Şu anda program oyuncunun seçtiği tüm etiketleri göstermektedir. Ancak bunun değişmesini sağlayacağız. İlk etiket seçildikten sonra program etiketin simgesini göstermelidir. İkinci etiket seçildikten sonra iki simgeyi de kısa bir süre göstermeli ve ardından iki simgeyi de tekrar gizlemelidir. Programınız artık ilk olarak hangi etiket denetiminin seçili olduğunu ve *başvuru değişkenlerini* kullanarak ikinci seçili olduğunu izler.
 
 ## <a name="to-add-label-references"></a>Etiket başvuruları eklemek için
 
@@ -47,7 +49,7 @@ Programın, Player 'ın seçtiği etiket denetimlerini izlemesi gerekir. Şu and
 4. Bir sonraki etiket denetimini seçin ve hiçbir olay gerçekleşmediğine dikkat edin. Program, Player 'ın seçtiği ilk etiketi zaten tutuyor, bu nedenle `firstClicked` `null` C# veya Visual Basic olarak eşit değildir `Nothing` . `if`Deyiminiz `firstClicked` veya ' a eşit olup olmadığını belirlemeyi denetlediğinde, olmadığını `null` `Nothing` bulur ve `if` deyimdeki deyimleri yürütmez. Bu nedenle, aşağıdaki görüntüde gösterildiği gibi, yalnızca seçilen ilk simge siyah ' ü etkinleştirir ve diğer simgeler görünmez hale gelir.
 
      ![Tek bir simgeyi gösteren eşleştirme oyunu](../ide/media/express_tut4step5.png)<br/>
-***Eşleşen oyun*** *bir simge gösteriyor*
+***Eşleşen oyun** _ _showing bir simge *
 
      Bu durumu, bir **Zamanlayıcı** denetimi ekleyerek öğreticinin bir sonraki adımında düzeltireceksiniz.
 

@@ -1,5 +1,7 @@
 ---
 title: '2. Adım: rastgele bir nesne ve simge listesi ekleme'
+description: Oyun için bir dizi eşleşen sembol oluşturmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: tutorial
 ms.prod: visual-studio-windows
@@ -13,12 +15,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1f4731778ebb3acbdc3bb7d9b5827c1015541d98
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1018b390f6ebbf67fab88554aa85fe6a8ecec88d
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77579422"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480700"
 ---
 # <a name="step-2-add-a-random-object-and-a-list-of-icons"></a>2. Adım: rastgele bir nesne ve simge listesi ekleme
 
@@ -26,7 +28,7 @@ Bu adımda, oyun için bir grup eşleşen simge oluşturuyorsunuz. Her simge, fo
 
 ## <a name="to-add-a-random-object-and-a-list-of-icons"></a>Rastgele bir nesne ve simge listesi eklemek için
 
-1. **Çözüm Gezgini**, C# kullanıyorsanız *Form1.cs* ' yi veya Visual Basic kullanıyorsanız *Form1. vb* öğesini seçin ve ardından menü çubuğunda kodu **görüntüle**' yi seçin  >  **Code**. Alternatif olarak, **F7** tuşunu seçebilir veya **Çözüm Gezgini**içinde **Form1** ' e çift tıklayatıklayabilirsiniz.
+1. **Çözüm Gezgini**, C# kullanıyorsanız *Form1.cs* ' yi veya Visual Basic kullanıyorsanız *Form1. vb* öğesini seçin ve ardından menü çubuğunda kodu **görüntüle**' yi seçin  >  **Code**. Alternatif olarak, **F7** tuşunu seçebilir veya **Çözüm Gezgini** içinde **Form1** ' e çift tıklayatıklayabilirsiniz.
 
      Böylece Form1'in arkasındaki kod modülü görüntülenir.
 
@@ -42,7 +44,7 @@ Bu adımda, oyun için bir grup eşleşen simge oluşturuyorsunuz. Her simge, fo
 
 3. Liste nesnesi eklenirken, açılan **IntelliSense** penceresine dikkat edin. Aşağıda bir C# örneği verilmiştir ancak Visual Basic bir liste eklediğinizde benzer bir metin görüntülenir.
 
-     ![Tıklama olayını gösteren Özellikler penceresi](../ide/media/express_listintellisense.png)<br/>***IntelliSense** penceresi*
+     ![Tıklama olayını gösteren Özellikler penceresi](../ide/media/express_listintellisense.png)<br/>**_IntelliSense_* penceresi*
 
     > [!NOTE]
     > IntelliSense penceresi yalnızca el ile kod girdiğinizde görünür. Kodu kopyalayıp yapıştırırsanız görünmez.
@@ -51,7 +53,7 @@ Bu adımda, oyun için bir grup eşleşen simge oluşturuyorsunuz. Her simge, fo
 
      `List`Bir ifade kullanarak bir nesne oluşturduğunuzda `new` , içinde depolamak istediğiniz veri türünü belirtmeniz gerekir. **IntelliSense** penceresinin en üstündeki araç ipucu, listedeki öğe türlerini gösterir. Ayrıca, bu, `List<string>` (C# ' de) ve `List(Of String)` (Visual Basic olarak), `List` veri türü öğelerini tutan bir nesnedir `string` . Bir dize, programınızın metin depolamak için kullandığı şeydir. Bu, **IntelliSense** penceresinin sağındaki araç ipucu sizi size söylemiş olur.
 
-4. Visual Basic neden geçici bir dizi oluşturulmalıdır, ancak C# ' ta, listenin tek bir deyimle oluşturulması gerekir. Bunun nedeni, C# dilinin *koleksiyon başlatıcıları*olduğundan, listeyi değerleri kabul edecek şekilde hazırlar. Visual Basic'te bir koleksiyon başlatıcısı kullanabilirsiniz. Ancak, önceki Visual Basic sürümü ile uyumluluk açısından önceki kodu kullanmanızı öneririz.
+4. Visual Basic neden geçici bir dizi oluşturulmalıdır, ancak C# ' ta, listenin tek bir deyimle oluşturulması gerekir. Bunun nedeni, C# dilinin *koleksiyon başlatıcıları* olduğundan, listeyi değerleri kabul edecek şekilde hazırlar. Visual Basic'te bir koleksiyon başlatıcısı kullanabilirsiniz. Ancak, önceki Visual Basic sürümü ile uyumluluk açısından önceki kodu kullanmanızı öneririz.
 
      Bir koleksiyon başlatıcısı kullandığınızda `new` , yeni liste nesnesi oluşturulduktan sonra, program bunu küme ayraçları içinde verdiğiniz verilerle doldurur. Bu durumda, simgeler adlı dizelerin bir listesini alırsınız ve bu liste altı harfli dizeler içerecek şekilde başlatılır. Bu dizelerin her biri tek bir harftir ve bunların tümü etiketlerde yer alacak simgelere karşılık gelir. Dolayısıyla, oyunda bir çift ünlem işareti, bir çift büyük N harfi, bir çift virgül vs. olacaktır. (Bu karakterler, Web 'e ait yazı tipine ayarlandığında, bir veri yolu, Bisiklet, Spider vb. gibi simgeler olarak görünürler.) Liste nesneniz, TableLayoutPanel panelindeki her hücre için bir tane olmak üzere on altı dizeye sahip olacaktır.
 

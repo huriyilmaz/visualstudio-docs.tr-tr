@@ -1,5 +1,7 @@
 ---
 title: Visual Studio 'da hiyerarşiler | Microsoft Docs
+description: Visual Studio tümleşik geliştirme ortamında (IDE) proje öğeleri ve bunlarla ilişkili özellikler içeren proje hiyerarşileri hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,15 +13,15 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: cdbb8a0e58f6b1e5bc6e32f8c319d1480c4db4b5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5a7126f52517b1028cf878750294f1d4c7dbfe26
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708185"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96480362"
 ---
 # <a name="hierarchies-in-visual-studio"></a>Visual Studio’da Hiyerarşiler
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Tümleşik geliştirme ortamı (IDE) bir projeyi *hiyerarşi*olarak görüntüler. IDE 'de hiyerarşi, her düğümün ilişkili özellikler kümesi olduğu düğüm ağacıdır. *Proje hiyerarşisi* projenin öğelerini, öğelerin ilişkilerini ve öğelerin ilişkili özelliklerini ve komutlarını tutan bir kapsayıcıdır.
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Tümleşik geliştirme ortamı (IDE) bir projeyi *hiyerarşi* olarak görüntüler. IDE 'de hiyerarşi, her düğümün ilişkili özellikler kümesi olduğu düğüm ağacıdır. *Proje hiyerarşisi* projenin öğelerini, öğelerin ilişkilerini ve öğelerin ilişkili özelliklerini ve komutlarını tutan bir kapsayıcıdır.
 
  İçinde [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , hiyerarşi arabirimini kullanarak proje hiyerarşilerini yönetirsiniz <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> . <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy>Arabirim, Proje öğelerinden çağırma komutlarını standart komut işleyicisi yerine uygun hiyerarşi penceresine yeniden yönlendirir.
 

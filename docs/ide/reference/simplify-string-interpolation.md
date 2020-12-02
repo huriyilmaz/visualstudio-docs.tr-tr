@@ -1,5 +1,7 @@
 ---
 title: Dize ilişkilendirmesini basitleştirme
+description: Dize ilişkilendirmeyi basitleştirmek için hızlı eylemler ve yeniden düzenlemeler menüsünü nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 03/10/2020
 ms.topic: reference
 author: mikadumont
@@ -10,12 +12,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5e801d417280d5d9ce8225c2185b582544fe2cef
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 422e3f24b98fd1ddd155e5c3975833b4e4cb248c
+ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810343"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96479946"
 ---
 # <a name="simplify-string-interpolation-refactoring"></a>Dize ilişkilendirme yeniden düzenlemesi Basitleştir
 
@@ -35,7 +37,7 @@ Bu yeniden düzenleme için geçerlidir:
 
 1. Giriş işaretini dize ilişkilendirme üzerine yerleştirin:
 
-2. **CTRL**tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
+2. **CTRL** tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
 
 3. **Ilişkilendirmeyi Basitleştir** ' i seçin
 
