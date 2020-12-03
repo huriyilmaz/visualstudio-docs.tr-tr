@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: c4b13464-76be-40f1-ad60-ed79ee264b12
-ms.date: 10/22/2020
+ms.date: 12/02/2020
 ms.topic: how-to
-description: Visual Studio aboneliğinize dahil edilen Visual Studio IDE 'yi indirme ve yükleme hakkında bilgi edinin.
-ms.openlocfilehash: 2baf2e452e86d44d814e3f4a511ebb5442b83578
-ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
+description: Visual Studio aboneliğinize dahil edilen Visual Studio IDE 'yi indirme ve yükleme hakkında bilgi edinin
+ms.openlocfilehash: edabaa21e8f8b6c7fe8fee33d2c1a4252efa7a1c
+ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92435754"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96538065"
 ---
 # <a name="the-visual-studio-2019-benefit"></a>Visual Studio 2019 avantajı
 
@@ -62,11 +62,11 @@ IDE 'yi indirmek için:
 
 | Abonelik düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilenebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standart, aylık bulut)   | VL, Azure, perakende, seçili NFR<sup>1</sup> | Kullanılabilir       |  Yes          |
-| GitHub Enterprise ile Visual Studio Enterprise   | VL | Kullanılabilir       |  Yes          |
-| Visual Studio Professional (Standart, aylık bulut) | VL, Azure, perakende                                       | Kullanılabilir                                                            |  Yes          |
-| GitHub Enterprise ile Visual Studio Professional | VL   | Kullanılabilir              |  Yes          |
-| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Kullanılabilir                                             |  Yes         |
+| Visual Studio Enterprise (Standart, aylık bulut)   | VL, Azure, perakende, seçili NFR<sup>1</sup> | Kullanılabilir       |  Evet          |
+| GitHub Enterprise ile Visual Studio Enterprise aboneliği   | VL | Kullanılabilir       |  Evet          |
+| Visual Studio Professional (Standart, aylık bulut) | VL, Azure, perakende                                       | Kullanılabilir                                                            |  Evet          |
+| GitHub Enterprise ile Visual Studio Professional aboneliği | VL   | Kullanılabilir              |  Evet          |
+| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Kullanılabilir                                             |  Evet         |
 | MSDN Platformları (Standart)                                          | VL, perakende                                              | Kullanılamaz                                              |  Yok          |
 
 <sup>1</sup>  *şunları Içerir: for SATıL (NFR), Visual Studio Endüstri ortağı (vsıp), Microsoft iş ortağı ağı (MPN), FTE, mct Software & Services Geliştirici, BizSpark, Imagine, en DEĞERLI profesyonel (MVP), bölgesel Müdürü (RD).  Dışlar: MCT Software & Hizmetleri.*

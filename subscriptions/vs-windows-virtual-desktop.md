@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 872c5746-5357-4764-949b-aa525a0adf1a
-ms.date: 09/08/2020
+ms.date: 12/02/2020
 ms.topic: conceptual
 description: Visual Studio aboneliğiniz aracılığıyla Microsoft Windows sanal masaüstü 'nden nasıl yararlanabileceğinizi öğrenin
-ms.openlocfilehash: 4e619b9c1140611be5236edfff70e8b0aa560b23
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 9198f4180a2f98b89540f1eedc0dab4be59558ab
+ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005052"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96537961"
 ---
 # <a name="access-windows-virtual-desktop-in-subscriptions"></a>Aboneliklerde Windows sanal masaüstüne erişme 
 Visual Studio aboneleri artık Microsoft Windows Sanal Masaüstü Hizmetleri için Azure geliştirme ve test kredilerini kullanabiliyor.  
@@ -37,7 +37,7 @@ Windows sanal masaüstü, VM 'Lerin katılacağını Azure Active Directory (Azu
 - Bir etki alanı denetleyicisi promosyon çalıştıran bir sanal makine.  Bu seçenek, daha fazla iş ayarlanmasını gerektirir, ancak çoğu kullanıcıya daha düşük bir işletim maliyeti sunar.
 Windows sanal masaüstü kullanımıyla ilgili önkoşulların tam listesini görmek için lütfen Windows sanal masaüstü [genel bakış sayfasını](/azure/virtual-desktop/overview#requirements)ziyaret edin. 
 
-## <a name="get-started"></a>başlarken 
+## <a name="get-started"></a>Kullanmaya başlayın 
 Tüm ön koşullar gerçekleşirken, uygulamanızı yerine getirmek için birkaç eylemi tamamlamayı tercih edersiniz.  Başlamak için şu öğreticilere göz atın:
 - [Windows sanal masaüstü kiracısı oluşturma](/azure/virtual-desktop/virtual-desktop-fall-2019/tenant-setup-azure-active-directory)
 - Azure portal kullanarak [bir konak havuzu oluşturma](/azure/virtual-desktop/create-host-pools-azure-marketplace)
@@ -46,12 +46,12 @@ Tüm ön koşullar gerçekleşirken, uygulamanızı yerine getirmek için birka�
 ## <a name="eligibility"></a>Önceliği
 | Abonelik düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilenebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standart)   | VL, Azure, perakende, | Kullanılabilir|  Yes          |
-| GitHub Enterprise ile Visual Studio Enterprise  | VL | Kullanılabilir|  Yes          |
-| Visual Studio Professional (Standart) | VL, Azure, perakende                                       | Kullanılabilir                                                             |  Yes             |
-| GitHub Enterprise ile Visual Studio Professional | VL                                       | Kullanılabilir                                        |  Yes           |
-| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Kullanılabilir|  Yes          |
-| MSDN Platformları (Standart)                                          | VL, perakende                                              | Kullanılabilir                                         |  Yes          |
+| Visual Studio Enterprise (Standart)   | VL, Azure, perakende, | Kullanılabilir|  Evet          |
+| GitHub Enterprise ile Visual Studio Enterprise aboneliği  | VL | Kullanılabilir|  Evet          |
+| Visual Studio Professional (Standart) | VL, Azure, perakende                                       | Kullanılabilir                                                             |  Evet             |
+| GitHub Enterprise ile Visual Studio Professional aboneliği | VL                                       | Kullanılabilir                                        |  Evet           |
+| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Kullanılabilir|  Evet          |
+| MSDN Platformları (Standart)                                          | VL, perakende                                              | Kullanılabilir                                         |  Evet          |
 | Visual Studio Enterprise (Standart)  | NFR<sup>1</sup> |Kullanılamaz  | Yok |
 | Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure | Kullanılamaz | Yok |
 

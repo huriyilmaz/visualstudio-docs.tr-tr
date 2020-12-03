@@ -2,17 +2,17 @@
 title: Visual Studio aboneliklerinde beyaz kaynak sürgüsü | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
-manager: lank
+manager: cabuschl
 ms.assetid: 5e5d3f1a-533d-42eb-960e-01bb6bc7ca16
-ms.date: 10/22/2020
+ms.date: 12/02/2020
 ms.topic: how-to
 description: Visual Studio aboneliğinize dahil edilen beyaz kaynak sürgüsü aboneliğini nasıl etkinleştireceğinizi öğrenin.
-ms.openlocfilehash: 7d0e95bf82f31b92ef5b581a0b7d8b7d082d3237
-ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
+ms.openlocfilehash: dffa4645795e771b2f947426907ed3e03caedf80
+ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92435990"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96537688"
 ---
 # <a name="whitesource-bolt-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde beyaz kaynak sürgüsü
 
@@ -26,7 +26,7 @@ Açık kaynak güvenlik açıklarını bulup düzeltir ve derinizdeki tüm açı
    > [!div class="mx-imgBorder"]
    > ![Beyaz kaynak avantajı kutucuğu](_img/vs-whitesource/vs-whitesource-tile.png "Başlamak için beyaz kaynak sürgüsü kutucuğunda ' kodu al ' düğmesine tıklayın.")
 
-3. Etkinleştirme kodunuzu görüntüleyen bir bildirim alırsınız.  **Kodu panonuza kopyalayın**ve ardından **Etkinleştir**' e tıklayın.
+3. Etkinleştirme kodunuzu görüntüleyen bir bildirim alırsınız.  **Kodu panonuza kopyalayın** ve ardından **Etkinleştir**' e tıklayın.
    > [!div class="mx-imgBorder"]
    > ![Beyaz kaynak avantajı kodu ](_img/vs-whitesource/vs-whitesource-code.png "Kodu panonuza kopyalayın ve ardından ' etkinleştir 'e tıklayın.")
 
@@ -42,10 +42,10 @@ Açık kaynak güvenlik açıklarını bulup düzeltir ve derinizdeki tüm açı
 
 | Abonelik düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilenebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standart)   | VL, Azure, perakende, seçili NFR<sup>1</sup> | 6 ay       |  Yes       |
-| GitHub Enterprise ile Visual Studio Enterprise | VL | 6 ay       |  Yes       |
+| Visual Studio Enterprise (Standart)   | VL, Azure, perakende, seçili NFR<sup>1</sup> | 6 ay       |  Evet       |
+| GitHub Enterprise ile Visual Studio Enterprise aboneliği | VL | 6 ay       |  Evet       |
 | Visual Studio Professional (Standart) | VL, Azure, perakende                                       | Kullanılamaz                                                           |NA         |
-| GitHub Enterprise ile Visual Studio Professional | VL                                      | Kullanılamaz                                                           |NA         |
+| GitHub Enterprise ile Visual Studio Professional aboneliği | VL                                      | Kullanılamaz                                                           |NA         |
 | Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Kullanılamaz                                                           |NA         |
 | MSDN Platformları (Standart)                                          | VL, perakende                                              | Kullanılamaz                                                           |NA         |
 | Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure                                       | Kullanılamaz                                                           |NA|

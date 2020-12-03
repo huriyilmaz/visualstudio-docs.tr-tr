@@ -2,17 +2,17 @@
 title: Visual Studio aboneliklerinde parasoft Virtualınitialize/SOAtest Professional | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
-manager: lank
+manager: cabuschl
 ms.assetid: 00c1f300-d04e-4695-815e-775ffbf0f931
-ms.date: 10/22/2020
+ms.date: 12/02/2020
 ms.topic: how-to
 description: Visual Studio aboneliğinize dahil edilen parasoft Virtualınitialize/SOA Test Professional aboneliğini nasıl etkinleştireceğinizi öğrenin.
-ms.openlocfilehash: 6209be915d3744e13aad674ea893e77e0b276044
-ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
+ms.openlocfilehash: dbe3ee78d46128a5944ee7b4d0bc69f001270588
+ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92436027"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96537454"
 ---
 # <a name="parasoft-virtualizesoatest-professional-desktop-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde parasoft Virtualınitialize/SOAtest Professional Desktop
 
@@ -73,10 +73,10 @@ Daha önce ve daha sık test edin.  Kullanılamayan gelişen uygulamalar ve sist
 
 | Abonelik düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilenebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standart)   | VL, Azure, perakende, seçili NFR<sup>1</sup> | 6 ay       |  Yes       |
-| GitHub Enterprise ile Visual Studio Enterprise | VL | 6 ay       |  Yes       |
+| Visual Studio Enterprise (Standart)   | VL, Azure, perakende, seçili NFR<sup>1</sup> | 6 ay       |  Evet       |
+| GitHub Enterprise ile Visual Studio Enterprise aboneliği | VL | 6 ay       |  Evet       |
 | Visual Studio Professional (Standart) | VL, Azure, perakende                                       | Kullanılamaz                                                           |NA         |
-| GitHub Enterprise ile Visual Studio Professional | VL                                      | Kullanılamaz                                                           |NA         |
+| GitHub Enterprise ile Visual Studio Professional aboneliği | VL                                      | Kullanılamaz                                                           |NA         |
 | Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Kullanılamaz                                                           |NA         |
 | MSDN Platformları (Standart)                                          | VL, perakende                                              | Kullanılamaz                                                           |NA         |
 | Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure                                       | Kullanılamaz                                                           |NA|

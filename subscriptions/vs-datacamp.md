@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: fc33d419-78cf-485e-b558-5b7efa900f14
-ms.date: 10/22/2020
+ms.date: 12/02/2020
 ms.topic: how-to
 description: Seçili Visual Studio abonelikleriyle birlikte bulunan veri Camp eğitim aboneliği hakkında bilgi edinin.
-ms.openlocfilehash: 54f2cf98d6e726e8abf8a0a863a54cc891c12523
-ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
+ms.openlocfilehash: c675d49f1a099c53dfdabe08a71f1c5545010f97
+ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92435883"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96538091"
 ---
 # <a name="the-datacamp-training-benefit-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde DataCamp eğitimi avantajı
 Uygun Visual Studio abonelikleri, DataCamp abonelikleri içerir.  DataCamp ile, tarayıcınızın rahatlığıyla ihtiyacınız olan tüm veri bilimi yeteneklerini öğrenebilirsiniz. Ne zaman ve ne zaman öğreneceğinizi seçebilirsiniz. Yüklenecek yazılım olmadan ve özel donanım gereksinimleri olmadan öğrenme veri bilimi her zamankinden daha kolay.
@@ -38,7 +38,7 @@ Uygun Visual Studio abonelikleri, DataCamp abonelikleri içerir.  DataCamp ile, 
    > [!div class="mx-imgBorder"]
    > ![DataCamp seçim yolu](_img/vs-datacamp/vs-datacamp-choose-path.png "İlgilendiğiniz bir öğrenme yolu seçin.")
 
-5. Yolunuzu seçtikten sonra, bir hedef seçerek öğrenme yolunuzu daha da iyileştirebilirsiniz.  Örneğin, "Data Science Beceri geliştirin" yolunu seçerseniz, aşağıdaki seçenekleri görürsünüz. Bir seçenek belirleyin veya eminim ' e tıklayın **.  ** Daha geniş bir yol oluşturmak için tüm kariyer yollarını göster.
+5. Yolunuzu seçtikten sonra, bir hedef seçerek öğrenme yolunuzu daha da iyileştirebilirsiniz.  Örneğin, "Data Science Beceri geliştirin" yolunu seçerseniz, aşağıdaki seçenekleri görürsünüz. Bir seçenek belirleyin veya eminim ' e tıklayın **.** Daha geniş bir yol oluşturmak için tüm kariyer yollarını göster.
    > [!div class="mx-imgBorder"]
    > ![DataCamp veri bilimi beceri](_img/vs-datacamp/vs-datacamp-datascience.png ""Eminim" seçeneğine tıklayın.  Tüm kariyer yollarını göster ' i tüm listeyi görüntüleyecek şekilde görüntüleyin.")
 
@@ -60,9 +60,9 @@ Herhangi bir noktada durabilir ve bir sonraki oturumunuzda öğreticinizi sürd�
 | Abonelik düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilenebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise (Standart)   | VL, Azure, perakende, | 3 ay       |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir          |
-| GitHub Enterprise ile Visual Studio Enterprise   | VL | 3 ay       |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir          |
+| GitHub Enterprise ile Visual Studio Enterprise aboneliği   | VL | 3 ay       |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir          |
 | Visual Studio Professional (Standart) | VL, Azure, perakende                                       | 3 ay                                                            |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir           |
-| GitHub Enterprise ile Visual Studio Professional| VL | 3 ay                                                            |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir           |
+| GitHub Enterprise ile Visual Studio Professional aboneliği| VL | 3 ay                                                            |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir           |
 | Visual Studio Test Professional (Standart)                         | VL, perakende                                              | 3 ay                                             |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir           |
 | MSDN Platformları (Standart)                                          | VL, perakende                                              | 3 ay                                              |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir           |
 | Visual Studio Enterprise (Standart)  | NFR<sup>1</sup> |Kullanılamaz  | Yok |

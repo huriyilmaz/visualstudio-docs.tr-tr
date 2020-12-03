@@ -2,17 +2,17 @@
 title: Visual Studio aboneliklerinde Visual Studio App Center avantaj | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
-manager: lank
+manager: cabushcl
 ms.assetid: badd1d4a-90a6-46de-a037-945a91e6019b
-ms.date: 10/22/2020
+ms.date: 12/02/2020
 ms.topic: how-to
 description: Visual Studio aboneliklerine dahil Visual Studio App Center avantajı hakkında bilgi edinin.
-ms.openlocfilehash: 6b1fc94d596f3b771f8354c0857ef533c00e1449
-ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
+ms.openlocfilehash: 8468b7641d12eca4db09d55d8d308ef5a913bc3c
+ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92435731"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96537779"
 ---
 # <a name="visual-studio-app-center-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Visual Studio App Center
 
@@ -42,12 +42,12 @@ Visual Studio App Center kullanmaya başlamak kolaydır.
 
 | Abonelik düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilenebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standart, aylık bulut)   | VL, Azure, perakende, NFR<sup>1</sup> | Dahil       |  Yes          |
-| GitHub Enterprise ile Visual Studio Enterprise  | VL | Dahil       |  Yes          |
-| Visual Studio Professional (Standart, aylık bulut) | VL, Azure, perakende                                       | Dahil                                                            |Yes |
-| GitHub Enterprise ile Visual Studio Professional | VL                                      | Dahil                                                            |Yes |
-| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Dahil                                                            |Yes |
-| MSDN Platformları (Standart)                                          | VL, perakende                                              | Dahil                                                            |Yes |
+| Visual Studio Enterprise (Standart, aylık bulut)   | VL, Azure, perakende, NFR<sup>1</sup> | Dahil       |  Evet          |
+| GitHub Enterprise ile Visual Studio Enterprise aboneliği  | VL | Dahil       |  Evet          |
+| Visual Studio Professional (Standart, aylık bulut) | VL, Azure, perakende                                       | Dahil                                                            |Evet |
+| GitHub Enterprise ile Visual Studio Professional aboneliği | VL                                      | Dahil                                                            |Evet |
+| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Dahil                                                            |Evet |
+| MSDN Platformları (Standart)                                          | VL, perakende                                              | Dahil                                                            |Evet |
 ||
 
 <sup>1</sup>  *şunları Içerir: for SATıL (NFR), FTE, Visual Studio Endüstri ortağı (VSIP), ımagine, Microsoft iş ortağı ağı (MPN), mct yazılım & Hizmetleri, mct Software & Services Geliştirici, BizSpark, en DEĞERLI profesyonel (MVP), bölgesel yönetmen (RD).*

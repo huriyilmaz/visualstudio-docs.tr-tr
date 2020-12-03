@@ -2,17 +2,17 @@
 title: Visual Studio aboneliğinde danışman sohbet avantajı | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
-manager: lank
+manager: cabuschl
 ms.assetid: dcd99e32-c9f3-4e19-8428-319dfa220463
-ms.date: 10/21/2020
+ms.date: 12/02/2020
 ms.topic: how-to
 description: Visual Studio aboneliklerine dahil olan danışman sohbet avantajı hakkında bilgi edinin.
-ms.openlocfilehash: 0aab627d7c870720c0cc0d043ffb6ce556568703
-ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
+ms.openlocfilehash: 4f5f188ee7b6662549e5ade80a97c57f24bce64c
+ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92353388"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96538104"
 ---
 # <a name="concierge-chat-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Concierge Sohbeti
 Danışman sohbet hizmeti, ürün bilgilerinin ve teknik belgelerin yanı sıra Visual Studio abonelik avantajlarınızı kullanmayla ilgili yardım sağlar.
@@ -38,12 +38,12 @@ Danışman sohbet hizmeti aracılığıyla yardım almak çok kolaydır.
 ## <a name="eligibility"></a>Önceliği
 | Abonelik düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilenebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standart)   | VL, Azure, perakende, seçili NFR<sup>1</sup> | Kullanılabilir       |  Yes          |
-| GitHub Enterprise ile Visual Studio Enterprise | VL| Kullanılabilir       |  Yes          |
-| Visual Studio Professional (Standart) | VL, Azure, perakende                                       | Kullanılabilir                                                            |  Yes          |
-| GitHub Enterprise ile Visual Studio Professional | VL | Kullanılabilir                                                            |  Yes          |
-| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Kullanılabilir                                             |  Yes          |
-| MSDN Platformları (Standart)                                          | VL, perakende                                              | Kullanılabilir                                              |  Yes          |
+| Visual Studio Enterprise (Standart)   | VL, Azure, perakende, seçili NFR<sup>1</sup> | Kullanılabilir       |  Evet          |
+| GitHub Enterprise ile Visual Studio Enterprise aboneliği | VL| Kullanılabilir       |  Evet          |
+| Visual Studio Professional (Standart) | VL, Azure, perakende                                       | Kullanılabilir                                                            |  Evet          |
+| GitHub Enterprise ile Visual Studio Professional aboneliği | VL | Kullanılabilir                                                            |  Evet          |
+| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Kullanılabilir                                             |  Evet          |
+| MSDN Platformları (Standart)                                          | VL, perakende                                              | Kullanılabilir                                              |  Evet          |
 | Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure | Kullanılamaz | Yok |
 
 <sup>1</sup>  *şunları Içerir: SATıLAMAZ (NFR), Visual Studio Endüstri ortağı (VSIP), Microsoft Sertifikalı Trainer, BizSpark.  Dışlar: FTE, en değerli profesyonel (MVP), bölgesel Müdürü (RD), Microsoft İş Ortağı Ağı (MPN), Imagine.*

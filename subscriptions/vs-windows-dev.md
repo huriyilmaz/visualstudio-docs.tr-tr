@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 588480a3-8806-4ea5-9915-c25974770069
-ms.date: 10/22/2020
+ms.date: 12/02/2020
 ms.topic: how-to
 description: Visual Studio aboneliğinize dahil olan Windows Geliştirici hesabı hakkında bilgi edinin.
-ms.openlocfilehash: 46cb22becd8a5ac852c7fddbd2cf8b473cef47bc
-ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
+ms.openlocfilehash: 4b8d2190792f942f808c1fda62a7020fefdca866
+ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92435820"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96537727"
 ---
 # <a name="windows-developer-account-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Windows Geliştirici hesabı
 Seçili Visual Studio aboneliğine dahil olan Windows geliştirici hesabınız, Windows Mağazası 'na ücretsiz ve ücretli Windows uygulamaları göndermenize olanak tanır.
@@ -36,17 +36,17 @@ Bu işlem için bir "özel" tarayıcı penceresi oluşturmanızı öneririz.  Ö
 7. Yayımcının görünen adını oluşturun.  Bu, müşterilerinizin uygulamalarınız, eklentiler ve hizmetlerinize ilişkin göreceği benzersiz addır.
 8. İletişim bilgilerinizi ve tercih edilen e-posta dilinizi girip **İleri**' ye tıklayın.
 9. Parolanızı doğrulamanız istenebilir.  Girin ve **oturum aç**' a tıklayın.
-10. Kayıt – ödeme sayfasında, daha önce kopyaladığınız kodu promosyon kodu alanına yapıştırın.  Sayfa, *ödeme gerekmediğini*göstermek için güncelleştirilecek.  **İleri**’ye tıklayın.
+10. Kayıt – ödeme sayfasında, daha önce kopyaladığınız kodu promosyon kodu alanına yapıştırın.  Sayfa, *ödeme gerekmediğini* göstermek için güncelleştirilecek.  **İleri**’ye tıklayın.
 11. Hesap bilgilerinizi gözden geçirin, uygulama geliştirici sözleşmesini gözden geçirin ve hüküm ve koşulları kabul edip etmenizin kabul edildiğini göstermek için onay kutusuna tıklayın.  Ardından, **Son**'a tıklayın.
 12. Windows Geliştirici hesabınızı kullanmaya başlamak için **panoya git** ' e tıklayın!
 
 ## <a name="eligibility"></a>Önceliği
 | Abonelik düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilenebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standart)   | VL, Azure, perakende, seçili NFR<sup>1</sup> | Dahil       |  Yes|
-| GitHub Enterprise ile Visual Studio Enterprise   | VL  | Dahil       |  Yes|
-| Visual Studio Professional (Standart) | VL, Azure, perakende                                       | Dahil                                                            |Yes|
-| GitHub Enterprise ile Visual Studio Professional | VL                                        | Dahil                                                            |Yes|
+| Visual Studio Enterprise (Standart)   | VL, Azure, perakende, seçili NFR<sup>1</sup> | Dahil       |  Evet|
+| GitHub Enterprise ile Visual Studio Enterprise aboneliği   | VL  | Dahil       |  Evet|
+| Visual Studio Professional (Standart) | VL, Azure, perakende                                       | Dahil                                                            |Evet|
+| GitHub Enterprise ile Visual Studio Professional aboneliği | VL                                        | Dahil                                                            |Evet|
 | Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Kullanılamaz                                            |  NA|
 | MSDN Platformları (Standart)                                          | VL, perakende                                              |  Kullanılamaz                                            |  NA|
 | Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure                                       | Kullanılamaz                                                           |NA|

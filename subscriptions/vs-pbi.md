@@ -2,17 +2,17 @@
 title: Visual Studio aboneliklerinde Power BI Pro avantaj | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
-manager: lank
+manager: cabuschl
 ms.assetid: 383fc910-3f4c-474a-a3f8-0f13525f05e9
-ms.date: 10/22/2020
+ms.date: 12/02/2020
 ms.topic: how-to
 description: Seçili Visual Studio aboneliklerine dahil Power BI Pro aboneliği hakkında bilgi edinin.
-ms.openlocfilehash: efc7aca0c5729a65a7f622721dbf25931eb89fb8
-ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
+ms.openlocfilehash: 6d64c9e5d15e24dcf53dd5b45261305dffb43353
+ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92435780"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96538078"
 ---
 # <a name="power-bi-pro-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Power BI Pro
 
@@ -63,12 +63,12 @@ Power BI Pro kullanmak için, bir hesap ayarlamanız veya mevcut bir hesabı kul
 
 | Abonelik düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilenebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standart)   | VL, Azure, perakende, seçili NFR<sup>1</sup> | Kullanılabilir       |  Yes|
-| GitHub Enterprise ile Visual Studio Enterprise  | VL | Kullanılabilir       |  Yes|
+| Visual Studio Enterprise (Standart)   | VL, Azure, perakende, seçili NFR<sup>1</sup> | Kullanılabilir       |  Evet|
+| GitHub Enterprise ile Visual Studio Enterprise aboneliği  | VL | Kullanılabilir       |  Evet|
 | Visual Studio Professional (Standart, aylık bulut) | VL, Azure, perakende                                       | Kullanılamaz                                                            |NA         |
-| GitHub Enterprise ile Visual Studio Professional | VL                                      | Kullanılamaz                                                            |NA         |
+| GitHub Enterprise ile Visual Studio Professional aboneliği | VL                                      | Kullanılamaz                                                            |NA         |
 | Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Kullanılamaz                                                            |NA         |
-| MSDN Platformları (Standart)                                          | VL, perakende                                              | Kullanılabilir       |  Yes|
+| MSDN Platformları (Standart)                                          | VL, perakende                                              | Kullanılabilir       |  Evet|
 | Visual Studio Enterprise (aylık bulut) | Azure                                       | Kullanılamaz                                  |NA|
 ||
 
@@ -92,7 +92,7 @@ Y: Evet, iki önemli uyarılarla onu bir üretimde kullanabilirsiniz:
 
 ### <a name="q--when-i-try-to-activate-power-bi-pro-i-get-a-message-you-already-have-an-account-through-work--can-i-still-use-the-benefit"></a>S: Power BI Pro etkinleştirmeyi denediğimde "iş üzerinden bir hesabınız zaten var" iletisini alıyorum.  Avantajı kullanmaya devam edebilir miyim?
 Y: Evet.  İleti, zaten yönetici olmadığınız etkin Microsoft 365 kiracılarına sahip bir etki alanında oturum açtığınızı gösterir.  Bir kiracıya Power BI Pro eklemek için bu kiracıda yönetici olmanız gerekir.  Bu sorunu çözmek için, kendi kiracınızı oluşturmak için aşağıdaki adımları izleyin.
-1. Çalışır durumda bir hesabınız olduğunu gördüğünüzde **Yeni hesap oluştur ' a**tıklayın.
+1. Çalışır durumda bir hesabınız olduğunu gördüğünüzde **Yeni hesap oluştur ' a** tıklayın.
 
 2. Sonraki ekranda, iletişim bilgilerinizi girip **İleri**' ye tıklayın.
 

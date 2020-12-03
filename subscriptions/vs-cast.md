@@ -7,12 +7,12 @@ ms.assetid: 92e8957f-c690-46bd-a812-3efd06a2bc6b
 ms.date: 10/21/2020
 ms.topic: how-to
 description: Seçili Visual Studio aboneliklerinde bulunan atama vurgusu avantajı hakkında bilgi edinin
-ms.openlocfilehash: a6c1836724f05255c5120a336b8976ccae3cadbd
-ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
+ms.openlocfilehash: fbc7b6278d29d96ed8d97933c295468c7d3e2754
+ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92353375"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96538144"
 ---
 # <a name="the-cast-highlight-benefit-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde atama vurgulaması avantajı
 Geliştiricilerin, buluta geçiş yaparken yazılım üzerinde kritik Öngörüler olması gerekir. ATAMA vurgulaması sayesinde, Visual Studio aboneleri, Azure 'a geçiş için uygulamalarının bulut hazırlığını belirlemek üzere uygulama kaynak kodunu hızla tarayabilir ve bir geçiş sırasında ve sonrasında uygulamasının ilerlemesini izler.
@@ -78,9 +78,9 @@ Geliştiricilerin, buluta geçiş yaparken yazılım üzerinde kritik Öngörül
 | Abonelik düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilenebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise (Standart)   | VL, Azure, perakende, | Üç ay boyunca 5 uygulama değerlendirin|  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir          |
-| GitHub Enterprise ile Visual Studio Enterprise  | VL | Üç ay boyunca 5 uygulama değerlendirin|  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir          |
+| GitHub Enterprise ile Visual Studio Enterprise aboneliği  | VL | Üç ay boyunca 5 uygulama değerlendirin|  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir          |
 | Visual Studio Professional (Standart) | VL, Azure, perakende                                       | Üç ay boyunca 1 uygulamayı değerlendirme                                                             |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir                  |
-| GitHub Enterprise ile Visual Studio Professional | VL                                       | Üç ay boyunca 1 uygulamayı değerlendirme                                                            |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir                  |
+| GitHub Enterprise ile Visual Studio Professional aboneliği | VL                                       | Üç ay boyunca 1 uygulamayı değerlendirme                                                            |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir                  |
 | Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Kullanılamaz                                             |  Yok           |
 | MSDN Platformları (Standart)                                          | VL, perakende                                              | Kullanılamaz                                              |  Yok          |
 | Visual Studio Enterprise (Standart)  | NFR<sup>1</sup> |Kullanılamaz  | Yok |

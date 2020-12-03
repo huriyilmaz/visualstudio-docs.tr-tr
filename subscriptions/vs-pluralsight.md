@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: bc8b526c-2fed-4ac8-aaa2-73d2495256fd
-ms.date: 08/04/2020
+ms.date: 12/02/2020
 ms.topic: how-to
 description: Seçili Visual Studio aboneliklerine dahil edilen Pluralsel eğitim aboneliği hakkında bilgi edinin.
-ms.openlocfilehash: 26056c823dc4ab67f576eb430b85caac26d854af
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: 02ed0d2417317116182800980206a1fcc7fbfc16
+ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2020
-ms.locfileid: "91005348"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96537987"
 ---
 # <a name="pluralsight-training-benefits-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde pluralalsel eğitim avantajları
 
@@ -43,9 +43,9 @@ Aşağıdaki tabloda, her bir Visual Studio abonelik türü için Pluralalsel ab
    > [!NOTE]
    > Hesabınız yeni teklifleri kullanmaya uygun değilse, aldığınız e-posta uygun olmadığından hesabınızı oluştururken bir sorun olduğunu açıklacaktır.  Ayrıca, Pluraltarın destek ekibine başvurabileceğiniz, hesabınız hakkında sahip olduğunuz soruları yanıtlayabilen bilgiler de içerir.
 
-1. **Parolayı ayarla** ' ya tıklayın.
+1. **Parolayı ayarla**' ya tıklayın.
 
-1. **Yeni parola** alanına istediğiniz parolayı girin, **Parolayı Onayla** alanına bir kez daha girin ve **Kaydet** ' e tıklayın.
+1. **Yeni parola** alanına istediğiniz parolayı girin, **Parolayı Onayla** alanına bir kez daha girin ve **Kaydet**' e tıklayın.
 
 1. İşte bu kadar!  Artık binlerce Pluralaltim kursu ile öğrenmeye başlamaya hazırsınız!
 
@@ -73,9 +73,9 @@ Pluraltarın aboneliğinizin süresi dolarsa, durum "0 gün kaldı" olarak deği
 |                          Abonelik düzeyi                          |     Kanallar      |    Avantaj    |   Yenilenebilir?   |
 |----------------------------------------------------------------------|-------------------|---------------|----------------|
 |          Visual Studio Enterprise (Standart)           | VL, Azure, perakende |   6 ay    | Evet<sup>2</sup> |
-|          GitHub Enterprise ile Visual Studio Enterprise          | VL  |   6 ay    | Evet<sup>2</sup> |
+|          GitHub Enterprise ile Visual Studio Enterprise aboneliği          | VL  |   6 ay    | Evet<sup>2</sup> |
 |         Visual Studio Professional (Standart)          | VL, Azure, perakende |   3 ay    | Evet<sup>2</sup> |
-|         GitHub Enterprise ile Visual Studio Professional          | VL  |   3 ay    | Evet<sup>2</sup> |
+|         GitHub Enterprise ile Visual Studio Professional aboneliği          | VL  |   3 ay    | Evet<sup>2</sup> |
 |              Visual Studio Test Professional (Standart)              |    VL, perakende     |   Kullanılamaz    | NA  |
 |                      MSDN Platformları (Standart)                       |    VL, perakende     |   Kullanılamaz    | NA  |
 | Visual Studio Enterprise, Visual Studio Professional (aylık bulut) |       Azure       | Kullanılamaz |       NA       |

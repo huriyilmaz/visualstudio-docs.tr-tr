@@ -2,22 +2,22 @@
 title: Visual Studio aboneliklerinde CloudPilot avantajı | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
-manager: lank
+manager: cabuschl
 ms.assetid: 6255b6a3-f101-4b2c-b7fa-851eccc944b2
-ms.date: 03/24/2020
+ms.date: 12/02/2020
 ms.topic: conceptual
 description: Seçili Visual Studio aboneliklerinde bulunan CloudPilot avantajı hakkında bilgi edinin
-ms.openlocfilehash: 642a5b35f41676c76d9eb4e5f1319fbbf57c55df
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 505e4caad5ee6d9b70fc50769c8a008469aa1345
+ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005930"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96538156"
 ---
 # <a name="the-cloudpilot-benefit-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde CloudPilot avantajı
 Uygulamalarınızı birkaç kolay adımda Microsoft Azure taşıyın. Dakikalar içinde, başarılı geçiş için kod satırına tüm gerekli kod değişikliklerini belirlemek için: kapsayıcılar, VM 'Ler, App Services, SQL Azure ve/veya SQL MI. Ardından, ASR, DMA ve DMS kullanan sihirbazları kullanarak uygulamaları Azure 'a geçirin.
 
-## <a name="overview"></a>Genel Bakış
+## <a name="overview"></a>Genel bakış
 UniFi bulutu tarafından sağlanan CloudPilot, geliştiricilerin uygulamaları hızla ve kolayca Azure 'a taşımalarına yardımcı olmak için tasarlanmıştır.  El ile gerçekleştirilen bir değerlendirmenin zaman içinde, CloudPilot, Azure PaaS & IaaS geçiş maliyetlerini doğru şekilde belirler ve uygulamanın bulutta çalışması için hangi kod değişikliklerinin yapılması gerektiği hakkında ayrıntılı öneriler sağlar. CloudPilot, buluta yönelik ayrıntılı kod düzeyinde değişiklikler sunarak ve kurumsal teknoloji denetimleri ve ilkelerine karşı son sınamalarda, bulut geçiş çabasından ve geliştirme planlamadaki ilk değerlendirmede yardımcı olur.
 
 ## <a name="activation-steps"></a>Etkinleştirme adımları
@@ -60,9 +60,9 @@ UniFi bulutu tarafından sağlanan CloudPilot, geliştiricilerin uygulamaları h
 | Abonelik düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilenebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise (Standart)   | VL, Azure, perakende, | 2 lisans, 90 gün, sınırsız tarama       |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir          |
-| GitHub Enterprise ile Visual Studio Enterprise   | VL | 2 lisans, 90 gün, sınırsız tarama       |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir          |
+| GitHub Enterprise ile Visual Studio Enterprise aboneliği   | VL | 2 lisans, 90 gün, sınırsız tarama       |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir          |
 | Visual Studio Professional (Standart) | VL, Azure, perakende                                       | 1 lisans, 30 gün, bir tarama                                                            |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir           |
-| GitHub Enterprise ile Visual Studio Professional | VL | 1 lisans, 30 gün, bir tarama                                                            |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir           |
+| GitHub Enterprise ile Visual Studio Professional aboneliği | VL | 1 lisans, 30 gün, bir tarama                                                            |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir           |
 | Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Kullanılamaz                                             |  Yok           |
 | MSDN Platformları (Standart)                                          | VL, perakende                                              | Kullanılamaz                                              |  Yok          |
 | Visual Studio Enterprise (Standart)  | NFR<sup>1</sup> |Kullanılamaz  | Yok |

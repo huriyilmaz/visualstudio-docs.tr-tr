@@ -7,12 +7,12 @@ ms.assetid: d1257931-392a-4a65-bf26-177737505122
 ms.date: 06/24/2020
 ms.topic: how-to
 description: Enterprise için Microsoft 365 uygulamalar hakkında bilgi edinin ve bunları yükler
-ms.openlocfilehash: 88570806d90ff022ede6f39c16325d8696ef0f9e
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: d23f8cccd284972d05d7085aea7e0b1cab0f275d
+ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91006130"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96537831"
 ---
 # <a name="microsoft-365-apps-for-enterprise-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Enterprise için Microsoft 365 uygulamalar
 Enterprise (eskiden Office 365 Pro Plus) için Microsoft 365 uygulamalar, seçilen Visual Studio aboneliklerinde kullanılabilir. 
@@ -38,7 +38,7 @@ Kurumsal abonelik için Microsoft 365 uygulamalarınızı etkinleştirme işlemi
    > [!div class="mx-imgBorder"]
    > ![Kurumsal Kullanıcı KIMLIĞI oluşturma için Microsoft 365 uygulamalar](_img/microsoft-365-apps-for-enterprise/create-your-user-id.png "Kullanıcı KIMLIĞINIZI ve parolanızı oluşturma")
 
-1. Daha sonra, bir robot olmadığınızı kanıtlamak için bir kod sağlamanız istenecektir.  Kodunuzun size bir kısa mesaj olarak gönderilmesini sağlayabilirsiniz.  Kodu girin ve Ileri ' **yi**seçin. 
+1. Daha sonra, bir robot olmadığınızı kanıtlamak için bir kod sağlamanız istenecektir.  Kodunuzun size bir kısa mesaj olarak gönderilmesini sağlayabilirsiniz.  Kodu girin ve Ileri ' **yi** seçin. 
    > [!div class="mx-imgBorder"]
    > ![Kurumsal bir robot olmadığınız için uygulamalar Microsoft 365](_img/microsoft-365-apps-for-enterprise/prove-youre-not-a-robot.png "Bir kod isteyin ve devam etmek için girin")
 
@@ -55,11 +55,11 @@ Kurumsal abonelik için Microsoft 365 uygulamalarınızı etkinleştirme işlemi
 
 | Abonelik düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilenebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standart)   | VL, Azure, perakende| Kullanılabilir       |  Yes          |
-| GitHub Enterprise ile Visual Studio Enterprise  | VL | Kullanılabilir       |  Yes          |
+| Visual Studio Enterprise (Standart)   | VL, Azure, perakende| Kullanılabilir       |  Evet          |
+| GitHub Enterprise ile Visual Studio Enterprise aboneliği  | VL | Kullanılabilir       |  Evet          |
 | Visual Studio Enterprise (Standart)   | NFR<sup>1</sup> | Kullanılamaz       |  Yok          |
 | Visual Studio Professional (Standart) | VL, Azure, perakende                                       | Kullanılamaz                                                            |  Yok          |
-| GitHub Enterprise ile Visual Studio Professional | VL | Kullanılamaz         |  Yok          |
+| GitHub Enterprise ile Visual Studio Professional aboneliği | VL | Kullanılamaz         |  Yok          |
 | Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Kullanılamaz                                             |  Yok          |
 | MSDN Platformları (Standart)                                          | VL, perakende                                              | Kullanılamaz                                              |  Yok          |
 | Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure | Kullanılamaz | Yok |

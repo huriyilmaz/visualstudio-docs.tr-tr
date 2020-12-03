@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 5bba2205-d32f-413d-9b58-724a24993842
-ms.date: 10/21/2020
+ms.date: 12/02/2020
 ms.topic: how-to
 description: Seçili Visual Studio aboneliklerine dahil olan LinkedIn Premium aboneliğinin bir parçası olarak dahil olan LinkedIn öğrenme avantajı hakkında bilgi edinin.
-ms.openlocfilehash: 7a5e15ad5d1101123a03b98da30d48895410313b
-ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
+ms.openlocfilehash: b3c8d0b61dbde3f9e45d6000e1de409255750931
+ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "95970304"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96537896"
 ---
 # <a name="the-linkedin-learning-benefit-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde LinkedIn öğrenme avantajı
 
@@ -72,9 +72,9 @@ LinkedIn Premium aboneliğinizi ve LinkedIn öğrenme avantajını etkinleştirm
 | Abonelik düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilenebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise (Standart)   | VL, Azure, perakende<sup>1</sup> | 6 ay       |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir          |
-| GitHub Enterprise ile Visual Studio Enterprise   | VL | 6 ay       |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir          |
+| GitHub Enterprise ile Visual Studio Enterprise aboneliği   | VL | 6 ay       |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir          |
 | Visual Studio Professional (Standart) | VL, Azure, perakende                                       | 3 ay                                                            |Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir         |
-| GitHub Enterprise ile Visual Studio Professional | VL | 3 ay      | Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir         |
+| GitHub Enterprise ile Visual Studio Professional aboneliği | VL | 3 ay      | Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir         |
 | Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Kullanılamaz                                            |  NA         |
 | MSDN Platformları (Standart)                                          | VL, perakende                                              | Kullanılamaz                                              | NA         |
 | Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure                                       | Kullanılamaz                                                           |NA|

@@ -7,12 +7,12 @@ ms.assetid: 872c5746-5357-4764-949b-aa525a0adf1a
 ms.date: 10/28/2020
 ms.topic: how-to
 description: Visual Studio aboneliğinize dahil edilen Azure DevTest bireysel kredi avantajını nasıl etkinleştireceğinizi öğrenin.
-ms.openlocfilehash: f524f0933d067d0c62c184d54c441edc7b15739d
-ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
+ms.openlocfilehash: bfd94ef7995ed5f456462e1bce6aa0d4d045bdd0
+ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92903650"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96538013"
 ---
 # <a name="use-microsoft-azure-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Microsoft Azure kullanma
 Bir Visual Studio abonesi olarak, ek ücret ödemeden Microsoft Azure kullanabilirsiniz.  [Aylık Azure DevTest krediniz](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/)sayesinde Azure, geliştirme ve test için kişisel korumalı alanınız.  Sanal makineleri, bulut hizmetlerini ve diğer Azure kaynaklarını sağlayabilirsiniz.  Kredi tutarları abonelik düzeyine göre farklılık gösterir.
@@ -24,15 +24,15 @@ Bir Visual Studio abonesi olarak, ek ücret ödemeden Microsoft Azure kullanabil
    > [!div class="mx-imgBorder"]
    > ![Azure kutucuğu](_img/vs-azure/vs-azure-tile.png "Başlamak için Azure kutucuğunda ' etkinleştir ' düğmesine tıklayın.")
 
-3. Mevcut bir Azure aboneliğiniz yoksa, Azure aboneliğinizi oluşturmak için gerekli bilgileri doldurmanız istenir.  İlk adım, kişisel bilgilerinizin sağlanması ve sonra **İleri** ' yi seçsağlamaktır.
+3. Mevcut bir Azure aboneliğiniz yoksa, Azure aboneliğinizi oluşturmak için gerekli bilgileri doldurmanız istenir.  İlk adım, kişisel bilgilerinizin sağlanması ve sonra **İleri**' yi seçsağlamaktır.
    > [!div class="mx-imgBorder"]
    > ![Azure kaydolma](_img/vs-azure/vs-azure-about-you.png "Azure aboneliğinize kişisel iletişim bilgilerinizi ekleyin.")
 
-4. Daha sonra, kimliğinizi basit bir doğrulama kodu kullanarak doğrulamanız gerekir. Telefon numaranızı girin ve kodu metin veya telefona göre almak isteyip istemediğinizi seçin.  Aldığınız kodu girin ve **kodu doğrula** ' yı seçin.   
+4. Daha sonra, kimliğinizi basit bir doğrulama kodu kullanarak doğrulamanız gerekir. Telefon numaranızı girin ve kodu metin veya telefona göre almak isteyip istemediğinizi seçin.  Aldığınız kodu girin ve **kodu doğrula**' yı seçin.   
    > [!div class="mx-imgBorder"]
    > ![Azure hazırlanıyor](_img/vs-azure/vs-azure-identity.png "Bir doğrulama kodu isteyin ve devam etmek için girin.")
 
-5. Son adım için, koşulları kabul etmek için onay kutusunu işaretleyin ve ardından **Kaydol** ' u seçin.  İşte bu kadar!
+5. Son adım için, koşulları kabul etmek için onay kutusunu işaretleyin ve ardından **Kaydol**' u seçin.  İşte bu kadar!
    > [!div class="mx-imgBorder"]
    > ![Azure kaydolma](_img/vs-azure/vs-azure-agreement.png "Azure aboneliğinizin oluşturulmasını tamamladıktan sonra ' kaydolun ' düğmesine tıklayın.")
 
@@ -50,11 +50,11 @@ Visual Studio aboneliğinizin süresi dolarsa veya kaldırılırsa, aylık Azure
 
 Azure için aylık krediyi kullanmaya devam etmenin birkaç yolu vardır.  Azure kaynaklarınızı kaydetmek için, aşağıda seçtiğiniz eylemden bağımsız olarak [kaynaklarınızı](/azure/azure-resource-manager/management/move-resource-group-and-subscription) başka bir Azure aboneliğine aktarmanız gerekir. 
 
-- **Visual Studio aboneliğinizi doğrudan satın aldıysanız** , yeni bir abonelik satın alın veya aboneliğinizi Microsoft Store ile yenileyin.  
+- **Visual Studio aboneliğinizi doğrudan satın aldıysanız**, yeni bir abonelik satın alın veya aboneliğinizi Microsoft Store ile yenileyin.  
     - [Visual Studio Enterprise](https://www.microsoft.com/p/visual-studio-enterprise-subscription/dg7gmgf0dst4?activetab=pivot%3aoverviewtab)
     - [Visual Studio Professional](https://www.microsoft.com/p/visual-studio-professional-subscription/dg7gmgf0dst3?activetab=pivot%3aoverviewtab)
     - [Visual Studio Test Professional](https://www.microsoft.com/p/visual-studio-test-professional-subscription/dg7gmgf0dst6?activetab=pivot%3aoverviewtab)
-- **Kuruluşunuzdaki bir kişi kuruluşunuz için abonelikler satın alıyorsa** , [Visual Studio abonelik yöneticinize başvurun](./contact-my-admin.md) ve ihtiyacınız olan aylık krediyi sağlayan bir abonelik isteyin.  
+- **Kuruluşunuzdaki bir kişi kuruluşunuz için abonelikler satın alıyorsa**, [Visual Studio abonelik yöneticinize başvurun](./contact-my-admin.md) ve ihtiyacınız olan aylık krediyi sağlayan bir abonelik isteyin.  
 - Başka bir Microsoft hesabı ilişkili abonelik düzeyinde **başka bir etkin Visual Studio aboneliğiniz varsa** , Visual Studio [abonelikleri portalına](https://my.visualstudio.com/subscriptions) [alternatif bir hesap ekleyerek](./manage-vs-subscriptions.md#managing-my-profile) Azure avantajını başka bir etkin Visual Studio aboneliğine aktarabilirsiniz.  
 
 Her abonelik türüne kaç kredi ekleneceğini öğrenmek için aşağıdaki Uygunluk tablosunu kullanın.  
@@ -73,10 +73,10 @@ Kaynakları aktarma, harcama limitlerini kaldırma veya diğer Azure konuların�
 |                 Abonelik düzeyi/program                 |           Avantaj           |                         Yenilenebilir?                          |
 |--------------------------------------------------------------|-----------------------------|-------------------------------------------------------------|
 |              Visual Studio Enterprise standart               |     $150 aylık kredi     |                             Evet                             |
-|              GitHub Enterprise ile Visual Studio Enterprise               |     $150 aylık kredi     |                             Evet                             |
+|              GitHub Enterprise ile Visual Studio Enterprise aboneliği               |     $150 aylık kredi     |                             Evet                             |
 |               Visual Studio Enterprise aylık               |        Kullanılamaz        |                                                             |
 |             Visual Studio Professional Standart              |     $50 aylık kredi      |                             Evet
-|              GitHub Enterprise ile Visual Studio Professional              |     $150 aylık kredi     |                             Evet                             |
+|              GitHub Enterprise ile Visual Studio Professional aboneliği              |     $150 aylık kredi     |                             Evet                             |
 |              Visual Studio Professional aylık              |        Kullanılamaz        |                                                             |
 |                    Visual Studio test Pro                    |     $50 aylık kredi      |                             Evet                             |
 |                        MSDN Platformları                        |     $100 aylık kredi     |                             Evet                             |
