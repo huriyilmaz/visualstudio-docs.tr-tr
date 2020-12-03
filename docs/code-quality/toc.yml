@@ -8,15 +8,21 @@
       items:
         - name: Genel Bakış
           href: roslyn-analyzers-overview.md
+        - name: Yükleme
+          expanded: true
+          items:
+            - name: .NET çözümleyicileri
+              href: install-net-analyzers.md
+            - name: Üçüncü taraf çözümleyiciler
+              href: install-roslyn-analyzers.md
         - name: Yapılandırma
           expanded: true
           items:
             - name: Genel Bakış
               href: use-roslyn-analyzers.md
             - name: .NET çözümleyicileri
+              expanded: true
               items:
-                - name: .NET çözümleyicilerini yükleme
-                  href: install-net-analyzers.md
                 - name: Kod kalitesi
                   items:
                     - name: Kod kalitesi seçenekleri
@@ -42,8 +48,6 @@
               href: automatic-feature-suspension.md
             - name: Kod analizi ihlallerini gizleme
               href: in-source-suppression-overview.md
-        - name: Üçüncü taraf çözümleyici yükleme
-          href: install-roslyn-analyzers.md
         - name: SSS
           href: analyzers-faq.md
     - name: Eski analiz
