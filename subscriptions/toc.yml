@@ -188,7 +188,7 @@
           href: aliasing.md
         - name: Kişisel e-posta ile oturum açan aboneler
           href: personal-email-sign-ins.md
-        - name: GitHub Enterprise ile Visual Studio’yu Yönetme
+        - name: GitHub Enterprise ile Visual Studio aboneliklerini yönetme
           href: assign-github.md
 - name: Kaynaklar
   items:
