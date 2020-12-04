@@ -1,5 +1,7 @@
 ---
 title: Kesme modunda ifade değerlendirmesi | Microsoft Docs
+description: Hata ayıklayıcı kesme modundayken oluşan ve ifade değerlendirmesi yapmak zorunda olan işlem hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: bc09fc43bd9f0edea4f6dc32e5f37c387c045796
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8e73d98e9fff713258f4797577fd8402932fe266
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738726"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96559642"
 ---
 # <a name="expression-evaluation-in-break-mode"></a>Kesme modunda ifade değerlendirmesi
 Aşağıdaki bölümde, hata ayıklayıcı kesme modundayken ve ifade değerlendirmesi yapmak gerektiğinde oluşan işlem açıklanmaktadır.

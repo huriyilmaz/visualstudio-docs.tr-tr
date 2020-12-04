@@ -1,5 +1,7 @@
 ---
 title: Bağlantı noktası sağlayıcısı uygulama ve kaydetme | Microsoft Docs
+description: İşlem ve kaynakları yöneten bağlantı noktalarını izleyen ve sağlayan bağlantı noktası tedarikçilerini uygulamayı ve kaydetmeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: efa9cdd8740648b66fe7190177b5fe769c4b2539
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a5bce26a00a525ed93e27b531b36aca1fc04dce4
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738527"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96559933"
 ---
 # <a name="implement-and-register-a-port-supplier"></a>Bir bağlantı noktası sağlayıcısı uygulama ve kaydetme
 Bir bağlantı noktası tedarikçinin rolü, işlem yönetimini izleyen ve bu bağlantı noktalarını izlemek ve sağlamak için kullanılır. Bir bağlantı noktasının oluşturulması gerektiğinde, bağlantı noktası sağlayıcısının GUID 'SI ile CoCreate kullanılarak oluşturulur (oturum hata ayıklama Yöneticisi [SDM], kullanıcının seçtiği bağlantı noktası tedarikçisine veya proje sistemi tarafından belirtilen bağlantı noktası sağlayıcısına) sahip olur. SDM daha sonra herhangi bir bağlantı noktasının eklenip eklenediğine bakmak için [CanAddPort](../../extensibility/debugger/reference/idebugportsupplier2-canaddport.md) öğesini çağırır. Bir bağlantı noktası eklenediyse, [AddPort](../../extensibility/debugger/reference/idebugportsupplier2-addport.md) çağırarak ve bağlantı noktasını açıklayan bir [IDebugPortRequest2](../../extensibility/debugger/reference/idebugportrequest2.md) geçirerek yeni bir bağlantı noktası istenir. `AddPort` bir [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md) arabirimi tarafından temsil edilen yeni bir bağlantı noktasını döndürür.
@@ -55,7 +57,7 @@ RemoveMetric(metrictypePortSupplier,
 ```
 
 > [!NOTE]
-> [Hata ayıklama Için SDK yardımcıları](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) `SetMetric` ve `RemoveMetric` *dbgmetric. h* içinde tanımlanan ve *ad2de. lib*içinde derlenen statik işlevlerdir. `metrictypePortSupplier`, `metricCLSID` Ve `metricName` yardımcıları *dbgmetric. h*içinde de tanımlanmıştır.
+> [Hata ayıklama Için SDK yardımcıları](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) `SetMetric` ve `RemoveMetric` *dbgmetric. h* içinde tanımlanan ve *ad2de. lib* içinde derlenen statik işlevlerdir. `metrictypePortSupplier`, `metricCLSID` Ve `metricName` yardımcıları *dbgmetric. h* içinde de tanımlanmıştır.
 
  Bir bağlantı noktası sağlayıcısı, sırasıyla [GetPortSupplierName](../../extensibility/debugger/reference/idebugportsupplier2-getportsuppliername.md) ve [GetPortSupplierId](../../extensibility/debugger/reference/idebugportsupplier2-getportsupplierid.md)YÖNTEMLERI aracılığıyla adını ve GUID 'sini sağlayabilir.
 

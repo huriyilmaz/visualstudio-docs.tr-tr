@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: özel hata ayıklama altyapısında hata ayıklama | Microsoft Docs'
+description: Özel hata ayıklama motorunda veya özel bir proje türünde hata ayıklamak için Visual Studio 'Yu kullanmanıza imkan tanıyan adımlar hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a65e69655c4e8699bd267f1835ec0c49603014d7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e79ceea58fc78922cd07bb6635ed2f399e97dd1c
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85903306"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560817"
 ---
 # <a name="how-to-debug-a-custom-debug-engine"></a>Nasıl yapılır: özel hata ayıklama altyapısında hata ayıklama
 Proje türü, yöntemi hata ayıklama altyapısını (DE) başlatır <xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg.DebugLaunch%2A> . Bu, öğesinin proje türünü denetleme örneğinin denetimi altında başlatıldığı anlamına gelir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Ancak, bu örneği [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] de hata ayıklaması yapılamaz. Özel DE hata ayıklamanıza olanak tanıyan adımlar aşağıda verilmiştir.
@@ -29,7 +31,7 @@ Proje türü, yöntemi hata ayıklama altyapısını (DE) başlatır <xref:Micro
 
 ## <a name="debug-a-custom-debug-engine"></a>Özel hata ayıklama altyapısında hata ayıklama
 
-1. Uzaktan hata ayıklama Izleyicisi *msvsmon.exe*başlatın.
+1. Uzaktan hata ayıklama Izleyicisi *msvsmon.exe* başlatın.
 
 2. *msvsmon.exe* **Araçlar** menüsünde **Seçenekler iletişim kutusunu** açmak için **Seçenekler** ' i seçin.
 
@@ -57,13 +59,13 @@ Proje türü, yöntemi hata ayıklama altyapısını (DE) başlatır <xref:Micro
 
 1. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Normal kayıt defteri kovanında başlatın ve proje türü projenizi (Bu, kaynak, proje türünün örneklenmesi değil, proje türüne) yükleyin.
 
-2. Proje özelliklerini açın ve **hata ayıklama** sayfasına gidin. **Komut**için, IDE yolunu yazın [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] (varsayılan olarak bu *[sürücü]* \Program Files\Microsoft [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 8\Common7\IDE\devenv.exe).
+2. Proje özelliklerini açın ve **hata ayıklama** sayfasına gidin. **Komut** için, IDE yolunu yazın [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] (varsayılan olarak bu *[sürücü]* \Program Files\Microsoft [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 8\Common7\IDE\devenv.exe).
 
-3. **Komut bağımsız değişkenleri**için, `/rootsuffix exp` Deneysel kayıt defteri kovanını (VSIP yüklendiğinde oluşturulur) yazın.
+3. **Komut bağımsız değişkenleri** için, `/rootsuffix exp` Deneysel kayıt defteri kovanını (VSIP yüklendiğinde oluşturulur) yazın.
 
 4. Değişiklikleri kabul etmek için **Tamam** 'ı tıklayın.
 
-5. **F5**tuşuna basarak proje türünü başlatın. Bu, ikinci bir örneğini başlatır [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
+5. **F5** tuşuna basarak proje türünü başlatın. Bu, ikinci bir örneğini başlatır [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
 
 6. Bu noktada, kesme noktalarını proje türü kaynak kodunuza yerleştirebilirsiniz.
 

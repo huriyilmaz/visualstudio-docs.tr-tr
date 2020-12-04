@@ -1,5 +1,7 @@
 ---
 title: Bağlantı noktası alma | Microsoft Docs
+description: Visual Studio 'Nun program düğümlerini bağlantı noktası ile kaydetmek ve işlem bilgileri isteklerini karşılamak için hata ayıklama altyapısına bir bağlantı noktası sağladığını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7bf4948e7cb2590136774eab76fbafec91dbfa40
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cd86d84ba4187df70d2aa02181249336c38dda41
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738637"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560054"
 ---
 # <a name="get-a-port"></a>Bağlantı noktası al
 Bir bağlantı noktası, işlemlerin çalıştığı bir makineye bağlantıyı temsil eder. Bu makine, yerel makine veya uzak bir makine olabilir (Windows tabanlı olmayan bir işletim sistemi çalışıyor olabilir; daha fazla bilgi için bkz. [bağlantı noktaları](../../extensibility/debugger/ports.md) ).

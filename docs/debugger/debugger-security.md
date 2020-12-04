@@ -1,5 +1,7 @@
 ---
 title: Hata ayıklayıcı güvenliği | Microsoft Docs
+description: Hata ayıklama, her ikisi de hata ayıklama makinesi ve hata ayıklamakta olan makinede oluşan güvenlik risklerini öğrenin. Riski en aza indirmek için önerileri izleyin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d8b7ac2aed43bcb39b4bb5924ad6f1cf2c438b64
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: f6d0c09a7f54157bd2ace9a6be09a357eb436ceb
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89600080"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96559751"
 ---
 # <a name="debugger-security"></a>Hata Ayıklama Güvenliği
 Başka bir işlemde hata ayıklama özelliği, özellikle de uzaktan hata ayıklarken, daha önce sahip olmamanıza izin veren son derece geniş bir üstür sağlar. Kötü amaçlı bir hata ayıklayıcı, hata ayıklanan makinede yaygın olarak hasar verebilir.
@@ -37,7 +39,7 @@ Başka bir işlemde hata ayıklama özelliği, özellikle de uzaktan hata ayıkl
 ### <a name="managed-debugging-security"></a>Yönetilen hata ayıklama güvenliği
  Tüm yönetilen hata ayıklama için uygulanan bazı genel öneriler aşağıda verilmiştir.
 
-- Güvenilmeyen bir kullanıcının işlemine eklenirken dikkatli olun: Bunu yaptığınızda, güvenilir olduğunu varsayabilirsiniz. Güvenilmeyen bir kullanıcının sürecine iliştirmeye çalıştığınızda, işleme eklemek isteyip istemediğinizi soran bir güvenlik uyarısı iletişim kutusu onayı görüntülenir. "Güvenilen kullanıcılar" size ve **ASPNET**, **LocalSystem**, **NetworkService**ve **LocalService**gibi .NET Framework yüklü makinelerde yaygın olarak tanımlanmış bir dizi standart Kullanıcı içerir. Daha fazla bilgi için bkz [. güvenlik uyarısı: güvenilmeyen bir kullanıcının sahip olduğu bir Işleme ekleme tehlikeli olabilir. Aşağıdaki bilgiler şüpheli görünüyorsa veya emin değilseniz, bu işleme](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user.md)eklemeyin.
+- Güvenilmeyen bir kullanıcının işlemine eklenirken dikkatli olun: Bunu yaptığınızda, güvenilir olduğunu varsayabilirsiniz. Güvenilmeyen bir kullanıcının sürecine iliştirmeye çalıştığınızda, işleme eklemek isteyip istemediğinizi soran bir güvenlik uyarısı iletişim kutusu onayı görüntülenir. "Güvenilen kullanıcılar" size ve **ASPNET**, **LocalSystem**, **NetworkService** ve **LocalService** gibi .NET Framework yüklü makinelerde yaygın olarak tanımlanmış bir dizi standart Kullanıcı içerir. Daha fazla bilgi için bkz [. güvenlik uyarısı: güvenilmeyen bir kullanıcının sahip olduğu bir Işleme ekleme tehlikeli olabilir. Aşağıdaki bilgiler şüpheli görünüyorsa veya emin değilseniz, bu işleme](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user.md)eklemeyin.
 
 - Bir projeyi Internet 'ten indirirken ve içine yüklerken dikkatli olun [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Hata ayıklama olmadan bile bu çok riskli olur. Bunu yaptığınızda, projenin ve içerdiği kodun güvenilir olduğunu varsayıyoruz.
 
@@ -78,7 +80,7 @@ Başka bir işlemde hata ayıklama özelliği, özellikle de uzaktan hata ayıkl
   Bkz [. simge (. pdb) ve kaynak dosyaları belirtme](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Hata Ayıklayıcısı Ayarları ve Hazırlığı](../debugger/debugger-settings-and-preparation.md)
+- [Hata ayıklayıcı ayarları ve hazırlığı](../debugger/debugger-settings-and-preparation.md)
 - [Hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md)
 - [Güvenlik Uyarısı: güvenilmeyen bir kullanıcının sahip olduğu bir işleme ekleme tehlikeli olabilir. Aşağıdaki bilgiler şüpheli görünüyorsa veya emin değilseniz, bu işleme eklemeyin](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user.md)
 - [Güvenlik Uyarısı: hata ayıklayıcı güvenilmeyen komut yürütmelidir](../debugger/security-warning-debugger-must-execute-untrusted-command.md)

@@ -1,5 +1,7 @@
 ---
 title: Hata ayıklayıcı ayarları ve hazırlığı | Microsoft Docs
+description: Bu bölümde, Visual Studio hata ayıklayıcısını kullanmaya nasıl hazırlanılacağı ve ilgili özelliklerin nasıl kullanılacağı açıklanmaktadır. İhtiyaç duyduğunuz bilgilere yönelik bağlantıları izleyin.
+ms.custom: SEO-VS-2020
 ms.date: 08/01/2018
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2704f4e73b1077f14c89e377453a858d341a2738
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5ddae505580781c707678e95d9e270c46b86cdae
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72738274"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560232"
 ---
 # <a name="debugger-settings-and-preparation"></a>Hata Ayıklayıcısı Ayarları ve Hazırlığı
 Bu bölümde hata ayıklayıcı ile ilgili özellik ayarları ve hata ayıklayıcıyla programınızın hatalarını ayıklamak için gereken hazırlık açıklanmaktadır [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Programınızı [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] proje şablonlarını kullanarak oluşturursanız, bu ayarlar hata ayıklama yapılandırmasında sizin için doğru şekilde ayarlanır.
@@ -47,6 +49,6 @@ Bu bölümde hata ayıklayıcı ile ilgili özellik ayarları ve hata ayıklayı
  [Nasıl yapılır: hata ayıklama için eski bir .NET Framework sürümünü belirtme](../debugger/how-to-specify-a-dotnet-framework-version-for-debugging.md) Hangi sürümün kullanılacağını hata ayıklayıcı olarak göstermek için bir kayıt defteri anahtarının nasıl ayarlanacağını açıklar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Hata Ayıklama Güvenliği](../debugger/debugger-security.md)
+- [Hata ayıklayıcı güvenliği](../debugger/debugger-security.md)
 - [Visual Studio'da Hata Ayıklama](../debugger/index.yml)
 - [Hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md)

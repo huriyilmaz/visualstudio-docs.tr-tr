@@ -1,5 +1,7 @@
 ---
 title: CRT hata ayıklama kitaplığı kullanımı | Microsoft Docs
+description: C çalışma zamanı (CRT) kitaplığının hata ayıklama çabalarınızı nasıl desteklediğini ve CRT hata ayıklama kitaplıklarını kullanmak için ne yapmanız gerektiğini öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 10/03/2019
 ms.topic: conceptual
 f1_keywords:
@@ -28,24 +30,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 20aeee220bec600c2232286d18600b04201ad03b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4d145ccd8764e488a5d1270985050b29bcd8987d
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72745616"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560570"
 ---
 # <a name="crt-debug-library-use"></a>CRT Hata Ayıklama Kitaplığı Kullanımı
-C çalışma zamanı kitaplığı kapsamlı hata ayıklama desteği sağlar. CRT hata ayıklama kitaplıklarından birini kullanmak için [/Debug](/cpp/build/reference/debug-generate-debug-info) ile bağlantı oluşturmanız ve **/MDD**, **/MTD**veya **/LDD**ile derlemeniz gerekir.
+C çalışma zamanı kitaplığı kapsamlı hata ayıklama desteği sağlar. CRT hata ayıklama kitaplıklarından birini kullanmak için [/Debug](/cpp/build/reference/debug-generate-debug-info) ile bağlantı oluşturmanız ve **/MDD**, **/MTD** veya **/LDD** ile derlemeniz gerekir.
 
 ## <a name="remarks"></a>Açıklamalar
  CRT hata ayıklama için ana tanımları ve makroları CRTDBG. h üstbilgi dosyasında bulabilirsiniz.
 
  CRT hata ayıklama kitaplıklarının işlevleri hata ayıklama bilgileri ([/Z7,/ZD,/Zi,/ZI (hata ayıklama bilgileri biçimi)](/cpp/build/reference/z7-zi-zi-debug-information-format)) ve iyileştirme olmadan derlenir. Bazı işlevler, bunlara geçirilen parametreleri doğrulamak için onay onayları içerir ve kaynak kodu sağlanır. Bu kaynak kodla, işlevlerin beklenen şekilde çalıştığını doğrulamak ve hatalı parametreleri ya da bellek durumlarını denetlemek için CRT işlevlere ilerleyebiliriz. (Bazı CRT teknolojileri özeldir ve özel durum işleme, kayan nokta ve diğer birkaç yordam için kaynak kodu sağlamaz.)
 
- Kullanabileceğiniz çeşitli çalışma zamanı kitaplıkları hakkında daha fazla bilgi için bkz. [C çalışma zamanı kitaplıkları](/cpp/c-runtime-library/crt-library-features).
+ Kullanabileceğiniz çeşitli çalışma zamanı kitaplıkları hakkında daha fazla bilgi için bkz. [C Run-Time kitaplıkları](/cpp/c-runtime-library/crt-library-features).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [CRT Hata Ayıklama Teknikleri](../debugger/crt-debugging-techniques.md)
-- [/MD,/MT,/LD (çalışma zamanı kitaplığını kullan)](/cpp/build/reference/md-mt-ld-use-run-time-library)
+- [CRT hata ayıklama teknikleri](../debugger/crt-debugging-techniques.md)
+- [/MD,/MT,/LD (Run-Time kitaplığı kullanın)](/cpp/build/reference/md-mt-ld-use-run-time-library)

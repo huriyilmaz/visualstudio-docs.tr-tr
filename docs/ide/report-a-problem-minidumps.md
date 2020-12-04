@@ -1,5 +1,7 @@
 ---
 title: Tüm çağrı yığınları ile mini döküm oluşturma
+description: Tüm çağrı yığınları için bilgi içeren bir Visual Studio işlemi için mini döküm oluşturmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 06/27/2019
 ms.topic: how-to
 helpviewer_keywords:
@@ -14,12 +16,12 @@ dev_langs:
 ms.workload:
 - multiple
 ms.description: Collect minidumps to send to Microsoft for help with troubleshooting issues with Visual Studio
-ms.openlocfilehash: 8af2ef642a1c2422d470c716e14dca7d2e0168eb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d5cf6add1a20a0ee45ec69ade0d5f2839483bb9f
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85770839"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560882"
 ---
 # <a name="create-minidumps-for-a-visual-studio-process-with-all-call-stacks"></a>Tüm çağrı yığınlarıyla Visual Studio işlemi için mini döküm oluşturma
 
@@ -28,20 +30,20 @@ Bazı durumlarda Microsoft, çalışan bir Visual Studio işleminin tüm çağr�
 ## <a name="create-the-minidump-file"></a>Mini döküm dosyası oluşturma
 
 1. Visual Studio 'nun yeni bir örneğini başlatın.
-1. Ana menüden, **Debug**  >  **işleme Ekle**Hata Ayıkla ' yı seçin.
+1. Ana menüden, **Debug**  >  **işleme Ekle** Hata Ayıkla ' yı seçin.
 1. İlgili **yönetilen** ve **Yerel** onay kutularını işaretleyin ve **Ekle**'ye basın.
 
-   ![İşleme İliştir](../ide/media/attach-to-process.png)
+   ![İşleme ekle](../ide/media/attach-to-process.png)
 
 1. Çalışan işlemlerin listesinden iliştirilecek diğer Visual Studio örneğini seçin.
 1. Ana menüden **Hata Ayıkla**  >  **Tümünü kes**' i seçin.
-1. Ana menüden, **Debug**  >  **dökümü farklı kaydet kayıt**Ayıkla ' yı seçin.
+1. Ana menüden, **Debug**  >  **dökümü farklı kaydet kayıt** Ayıkla ' yı seçin.
 
 ## <a name="get-the-call-stacks-from-the-minidump"></a>Mini döküm dosyasından çağrı yığınlarını al
 
 1. Döküm dosyasını Visual Studio 'da açın.
 1. **Araçlar**  >  **Seçenekler**  >  **hata ayıklama**  >  **simgeleri** ' ne gidin ve **sembol dosyası (. pdb) konumlarında** **Microsoft sembol sunucularının** işaretli olduğundan emin olun.
-1. **Komut** penceresini açın (**View**  >  **diğer Windows**  >  **komut penceresini**görüntüle)
+1. **Komut** penceresini açın (**View**  >  **diğer Windows**  >  **komut penceresini** görüntüle)
 1. ' ~ * K ' yazın. Pencerede tüm iş parçacıklarının çağrı yığınları görüntülenir.
 1. Komut penceresinden tüm metni kopyalayın ve bir metin dosyasına kaydedin.
 1. Txt dosyasını hataya iliştirin.

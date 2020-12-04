@@ -1,5 +1,7 @@
 ---
 title: Araç kutusu penceresi
+description: Araç kutusu penceresi ve Visual Studio projelerine ekleyebileceğiniz denetimleri görüntüleme hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 06/01/2020
 ms.topic: reference
 f1_keywords:
@@ -13,18 +15,18 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9807762a4573cdbc68a4af26bf9d73b46827c7af
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 905288d4a580f5633196273666fbea3954d1767c
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85285353"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560284"
 ---
 # <a name="toolbox"></a>Araç Kutusu
 
-**Araç kutusu** penceresi, Visual Studio projelerine ekleyebileceğiniz denetimleri görüntüler. **Araç kutusunu**açmak için menü çubuğundan **Görünüm**  >  **araç kutusunu** seçin veya **CTRL** + **alt** + **X**tuşlarına basın.
+**Araç kutusu** penceresi, Visual Studio projelerine ekleyebileceğiniz denetimleri görüntüler. **Araç kutusunu** açmak için menü çubuğundan **Görünüm**  >  **araç kutusunu** seçin veya **CTRL** + **alt** + **X** tuşlarına basın.
 
-![Araç kutusu penceresi](media/vs-2019/toolbox.png "Araç kutusu penceresinin ekran görüntüsü")
+![Kapsayıcılar bölümündeki seçenekleri gösteren araç kutusu penceresinin ekran görüntüsü.](media/vs-2019/toolbox.png "Araç kutusu penceresinin ekran görüntüsü")
 
 Kullandığınız tasarımcı yüzeyine farklı denetimleri sürükleyip bırakabilir ve denetimleri yeniden boyutlandırabilir ve yerleştirebilirsiniz.
 
@@ -37,7 +39,7 @@ Projenizin hedeflediği .NET sürümü araç kutusu 'nda görünen denetim küme
 
 ::: moniker range="vs-2019"
 
-![Araç kutusu penceresi](media/vs-2019/toolbox-change-dotnet-version.png ".NET sürümünü değiştirebileceğiniz iletişim kutusunun ekran görüntüsü")
+![Hedef çerçeve açılır penceresinde seçenekleri gösteren uygulama iletişim kutusunun ekran görüntüsü.](media/vs-2019/toolbox-change-dotnet-version.png ".NET sürümünü değiştirebileceğiniz iletişim kutusunun ekran görüntüsü")
 
 ::: moniker-end
 
@@ -56,7 +58,7 @@ Sağ tıklama bağlam menüsünde aşağıdaki komutları kullanarak bir **araç
 
 - **Tümünü göster** -tüm olası denetimleri gösterir (yalnızca geçerli Tasarımcı için geçerli olanları değil).
 
-- **Öğeleri seç** - **araç**kutusunda görünen öğeleri belirleyebilmeniz Için **araç kutusu öğelerini Seç** iletişim kutusunu açar. Onay kutusunu seçerek veya temizleyerek bir öğeyi gösterebilir veya gizleyebilirsiniz.
+- **Öğeleri seç** - **araç** kutusunda görünen öğeleri belirleyebilmeniz Için **araç kutusu öğelerini Seç** iletişim kutusunu açar. Onay kutusunu seçerek veya temizleyerek bir öğeyi gösterebilir veya gizleyebilirsiniz.
 
 - **Öğeleri alfabetik olarak Sırala** -öğeleri ada göre sıralar.
 

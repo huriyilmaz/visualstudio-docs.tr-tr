@@ -1,5 +1,7 @@
 ---
 title: Ifade Değerlendiricisi uygulama | Microsoft Docs
+description: Hata ayıklama altyapısını, sembol sağlayıcısını, Ciltçi nesnesini ve ifade değerlendirici 'ni içeren bir ifadeyi değerlendirme hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a8c7c9a1130794dd4c28f212afd6cb3c030f5a1b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 28989178ab726a9b274f66e0a9296f2bf49ead4a
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738543"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96559972"
 ---
 # <a name="implement-an-expression-evaluator"></a>İfade değerlendiricisi uygulama
 > [!IMPORTANT]
@@ -46,7 +48,7 @@ ms.locfileid: "80738543"
 
 - [IDebugBinder](../../extensibility/debugger/reference/idebugbinder.md)
 
-  EE, [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md)çalıştırır. `IDebugProperty2` Yerel bir değişken, temel öğe veya Visual Studio için bir nesne gibi bir ifade değerlendirmesinin sonucunu açıklamak için mekanizmayı sağlar ve ardından **Yereller**, **İzle**veya **hemen** penceresinde uygun bilgileri görüntüler.
+  EE, [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md)çalıştırır. `IDebugProperty2` Yerel bir değişken, temel öğe veya Visual Studio için bir nesne gibi bir ifade değerlendirmesinin sonucunu açıklamak için mekanizmayı sağlar ve ardından **Yereller**, **İzle** veya **hemen** penceresinde uygun bilgileri görüntüler.
 
   SP, bilgi istediğinde DE Bu, EE 'a verilir. SP, aşağıdaki arabirimler ve bunların türevleri gibi adresleri ve alanları tanımlayan arabirimler çalıştırır:
 

@@ -1,5 +1,7 @@
 ---
 title: Komut diğer adları
+description: Komutu yürütmek istediğinizde daha az karakter yazmak için komut diğer adlarını nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -16,12 +18,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b420644672309371ab61f1499e22d4745c69c569
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9dda564939652a09b64fec65747ca14d1315b3f1
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75596417"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96561077"
 ---
 # <a name="visual-studio-command-aliases"></a>Visual Studio Komut Diğer Adları
 
@@ -51,16 +53,16 @@ Aşağıdaki tablo, önceden tanımlanmış Visual Studio komut diğer adların�
 |Kodu Görüntüle|kod|View.ViewCode|
 |[Belleği Listele komutu](../../ide/reference/list-memory-command.md)|d|Debug. ListMemory|
 |[Bellek komutunu](../../ide/reference/list-memory-command.md) ANSI olarak Listele|kapattığımda|Debug. ListMemory/ANSI|
-|[Belleği Listele komutu](../../ide/reference/list-memory-command.md) Tek baytlık biçim|veritabanı|Debug. ListMemory/Format: OneByte|
-|Dört baytlık biçimdeki [bellek komutunu](../../ide/reference/list-memory-command.md) ANSI olarak Listele|'ye|Debug. ListMemory/Format: on bayt/ANSI|
-|[Belleği Listele komutu](../../ide/reference/list-memory-command.md) Dört baytlık biçim|Ekle|Debug. ListMemory/Format: on bayt|
+|[Bellek komut](../../ide/reference/list-memory-command.md) One-Byte biçimini Listele|veritabanı|Debug. ListMemory/Format: OneByte|
+|[Bellek komutunu](../../ide/reference/list-memory-command.md) Four-Byte biçimde ANSI olarak Listele|'ye|Debug. ListMemory/Format: on bayt/ANSI|
+|[Bellek komut](../../ide/reference/list-memory-command.md) Four-Byte biçimini Listele|dd|Debug. ListMemory/Format: on bayt|
 |BOL 'a Sil|DelBOL|. DeleteToBOL 'yi Düzenle|
 |EOL 'a Sil|DelEOL|Düzenle. DeleteToEOL|
 |Yatay boşluğu Sil|DelHSp|. DeleteHorizontalWhitespace Düzenle|
 |Görünüm Tasarımcısı|tasarımcı|View.ViewDesigner|
 |[Belleği Listele komutu](../../ide/reference/list-memory-command.md) Kayan biçim|df|Debug. ListMemory/biçim: float|
 |Ayrıştırma penceresi|DISASM|Debug.Disassembly|
-|[Belleği Listele komutu](../../ide/reference/list-memory-command.md) Sekiz baytlık biçim|DQ|Debug. ListMemory/Format: sekizinci TBytes|
+|[Bellek komut](../../ide/reference/list-memory-command.md) Eight-Byte biçimini Listele|DQ|Debug. ListMemory/Format: sekizinci TBytes|
 |[Bellek komutunu](../../ide/reference/list-memory-command.md) Unicode olarak Listele|du|Debug. ListMemory/UNICODE|
 |[Ifadeyi değerlendir komutu](../../ide/reference/evaluate-statement-command.md)|Eval|Debug. EvaluateStatement|
 |Çıkış|Çıkış|File.Exit|
@@ -94,7 +96,7 @@ Aşağıdaki tablo, önceden tanımlanmış Visual Studio komut diğer adların�
 |Tanımlara Daralt/ana hattı durdur|OutlineDefs Stopouthizalama|Düzenle. CollapseToDefinitions|
 |Adımla|p|Debug.StepOver|
 |Parametre bilgileri|Paraınfo|Edit.ParameterInfo|
-|Dışarı adımla|çekme isteği|Debug.StepOut|
+|Dışarı adımla|pr|Debug.StepOut|
 |Önceki Yer İşareti|PrevBook|Edit.PreviousBookmark|
 |Dosya Yazdırma|yazdır|File.Print|
 |Özellikler Penceresi|props|View.PropertiesWindow|

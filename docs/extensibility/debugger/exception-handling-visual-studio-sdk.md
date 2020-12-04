@@ -1,5 +1,7 @@
 ---
 title: Özel durum Işleme (Visual Studio SDK) | Microsoft Docs
+description: Özel durumlar oluştuğunda oluşan işlem hakkında bilgi edinin. Bu makalede, ilgili tüm adımlar açıklanmaktadır.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 34b83c7181a7ba405e642d9911e2c53df3f4401d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: af5dc1007a4624a24bef59dd822f6e9fe3861551
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738767"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96559660"
 ---
 # <a name="exception-handling-visual-studio-sdk"></a>Özel durum işleme (Visual Studio SDK)
 Aşağıdakiler, özel durumlar oluşturulduğunda oluşan süreci açıklar.
@@ -38,7 +40,7 @@ Aşağıdakiler, özel durumlar oluşturulduğunda oluşan süreci açıklar.
 
          Yöntem S_FALSE döndürürse, hata ayıklamakta olan programa özel durumu işlemek için ikinci bir şans verilir.
 
-6. Hata ayıklamakta olan programın ikinci şans özel durumu için işleyici yoksa, DE `IDebugExceptionEvent2` **event_sync_stop**olarak SDM 'yi gönderir.
+6. Hata ayıklamakta olan programın ikinci şans özel durumu için işleyici yoksa, DE `IDebugExceptionEvent2` **event_sync_stop** olarak SDM 'yi gönderir.
 
 7. Hata ayıklama paketi kullanıcıdan bir ilk şans özel durum iletişim kutusunu açarak özel durumu nasıl işlemesini ister.
 

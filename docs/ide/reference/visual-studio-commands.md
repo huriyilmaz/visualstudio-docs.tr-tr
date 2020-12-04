@@ -1,5 +1,7 @@
 ---
 title: Komutlar
+description: Visual Studio 'da erişiminiz olan çeşitli komutlar hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -12,18 +14,18 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ac0284ce274791f21c9c0f85d265d92a7097cb09
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7928c03e52e4a72fb354bd7202e041ec2264fcd6
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75596404"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560960"
 ---
 # <a name="visual-studio-commands"></a>Visual Studio komutları
 
 **Komut** penceresinde, **anında** pencereye veya **Bul/komut** kutusuna Visual Studio komutlarını girebilirsiniz. Her durumda, büyüktür işareti ( `>` ), bir arama veya hata ayıklama işlemi yerine bir komutun aşağıda gösterildiği anlamına gelir.
 
-Komutların ve sözdiziminin tamamen bir listesini, **Keyboard** **Araçlar**  >  **Seçenekler**  >  **ortamındaki**klavye sayfasında bulabilirsiniz.
+Komutların ve sözdiziminin tamamen bir listesini, **Keyboard** **Araçlar**  >  **Seçenekler**  >  **ortamındaki** klavye sayfasında bulabilirsiniz.
 
 IDE 'nin yerelleştirilmiş sürümlerinde, komut adları IDE 'nin yerel dilinde veya Ingilizce ' de girilebilir. Örneğin, `File.NewFile` `Fichier.NouveauFichier` aynı komutu yürütmek için ya da Fransızca IDE 'de yazabilirsiniz.
 
@@ -31,7 +33,7 @@ Birçok komutun diğer adları vardır. Komut diğer adlarının listesi için b
 
 ## <a name="escape-character"></a>Atlatma karakteri
 
-Visual Studio komutları için kaçış karakteri bir şapka (^). Kaçış karakteri, bir denetim karakteri olarak değil, tam olarak yorumlandığı anlamına gelir. Bu, anahtar adları dışında bir parametre veya anahtar değerindeki düz tırnak işaretlerini ("), boşlukları, baştaki eğik çizgileri, yüzleri veya diğer sabit karakterleri eklemek için kullanılabilir. Örneğin:
+Visual Studio komutları için kaçış karakteri bir şapka (^). Kaçış karakteri, bir denetim karakteri olarak değil, tam olarak yorumlandığı anlamına gelir. Bu, anahtar adları dışında bir parametre veya anahtar değerindeki düz tırnak işaretlerini ("), boşlukları, baştaki eğik çizgileri, yüzleri veya diğer sabit karakterleri eklemek için kullanılabilir. Örnek:
 
 ```
 >Edit.Find ^^t /regex
@@ -43,7 +45,7 @@ Bir giriş işareti, tırnak işaretlerinin içinde mi yoksa dışında mı oldu
 
 Aşağıdaki komutlar bağımsız değişkenler veya anahtarlar alır:
 
-| Komut adı | Description |
+| Komut adı | Açıklama |
 | - | - |
 | [Var olan öğeyi Ekle](../../ide/reference/add-existing-item-command.md) | Geçerli çözüme var olan bir dosyayı ekler ve açar. |
 | [Mevcut projeyi Ekle](../../ide/reference/add-existing-project-command.md) | Geçerli çözüme mevcut bir projeyi ekler. |
@@ -64,7 +66,7 @@ Aşağıdaki komutlar bağımsız değişkenler veya anahtarlar alır:
 | [Yeni dosya](../../ide/reference/new-file-command.md) | Yeni bir dosya oluşturur ve onu seçili olan projeye ekler. |
 | [Dosya Aç](../../ide/reference/open-file-command.md) | Var olan bir dosyayı açar ve bir düzenleyici belirtmenize olanak tanır. |
 | [Projeyi aç](../../ide/reference/open-project-command.md) | Mevcut bir projeyi açar ve projeyi geçerli çözüme eklemenize olanak sağlar. |
-| [Yazdırma](../../ide/reference/print-command.md) | İfadeyi değerlendirir ve sonuçları veya belirtilen metni görüntüler. |
+| [Yazdırdığımda](../../ide/reference/print-command.md) | İfadeyi değerlendirir ve sonuçları veya belirtilen metni görüntüler. |
 | [Hızlı Izle komutu](../../ide/reference/quick-watch-command.md) | **Hızlı izleme** Iletişim kutusunun **ifade** alanında seçili veya belirtilen metni görüntüler. |
 | [Değiştirin](../../ide/reference/replace-command.md) | **Bul ve Değiştir** denetiminde bulunan seçeneklerin bir alt kümesini kullanarak dosyalardaki metni değiştirir. |
 | [Dosyalarda Değiştir](../../ide/reference/replace-in-files-command.md) | Dosyalardaki metni [Değiştir dosyalarında](../../ide/replace-in-files.md)bulunan seçeneklerin bir alt kümesini kullanarak değiştirir. |

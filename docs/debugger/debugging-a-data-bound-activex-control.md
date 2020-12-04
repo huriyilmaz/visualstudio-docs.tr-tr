@@ -1,5 +1,7 @@
 ---
-title: Veri bağlantılı ActiveX denetiminde hata ayıklama | Microsoft Docs
+title: Data-Bound ActiveX denetiminde hata ayıklama | Microsoft Docs
+description: Hata ayıklama için bir kapsayıcı uygulaması oluşturarak bir veri kaynağı denetimine yönelik bir ActiveX denetiminde hata ayıklamanın nasıl yapılacağını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ccca00387e701d62e47eee0a93adff44a4765fa2
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: a999014309c4545067967b77d1b91794e4bd3c99
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89600069"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560726"
 ---
 # <a name="debugging-a-data-bound-activex-control"></a>Veri Bağımlı ActiveX Denetiminde Hata Ayıklama
 Bir veri kaynağı denetimine bağlanacak bir ActiveX denetimi geliştiriyorsanız, kendi kapsayıcı uygulamanızı oluşturabilir ve bu kapsayıcıyı ActiveX denetiminde hata ayıklamak için kullanabilirsiniz.
@@ -35,5 +37,5 @@ Bir veri kaynağı denetimine bağlanacak bir ActiveX denetimi geliştiriyorsan�
  Hata ayıklarken kapsayıcının kodunu değiştirmeniz gerekiyorsa, kapsayıcının hata ayıklama sürümünü kullanın veya ActiveX test kapsayıcısının hata ayıklama sürümünü kullanın. Daha fazla bilgi için bkz. [tstcon örneği: ActiveX denetimi test kapsayıcısı](/previous-versions/f9adb5t5(v=vs.100)).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [COM ve ActiveX Hata Ayıklaması](../debugger/com-and-activex-debugging.md)
+- [COM ve ActiveX hata ayıklaması](../debugger/com-and-activex-debugging.md)
 - [ActiveX denetimleri](/cpp/mfc/activex-controls)

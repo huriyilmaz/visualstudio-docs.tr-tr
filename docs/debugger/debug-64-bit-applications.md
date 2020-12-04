@@ -1,5 +1,7 @@
 ---
 title: Hata ayıklama 64-bit uygulamalar | Microsoft Docs
+description: Visual Studio ile 64 bitlik bir uygulamada hata ayıklamayı öğrenin. Beklenmedik hata ayıklama gecikmeleriyle ilgili sorunları gidermeye yönelik ipuçları vardır.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6cc84f690962cd83f45245758f88f7fd8261e500
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 29deb50bb57f018d3031ed1065145b6a39abab67
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86386257"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560453"
 ---
 # <a name="debug-64-bit-applications"></a>64 Bit Uygulamalarda Hata Ayıklama
 Yerel bilgisayarda veya uzak bir bilgisayarda çalışan 64 bitlik bir uygulamada hata ayıklaması yapabilirsiniz.

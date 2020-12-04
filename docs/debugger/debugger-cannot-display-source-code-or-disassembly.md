@@ -1,6 +1,7 @@
 ---
 title: Hata ayıklayıcı kaynak kodu veya ayrıştırılmış kod görüntüleyemiyor
-ms.custom: seodec18
+description: "\"Hata ayıklayıcı, yürütmenin durdurulduğu geçerli konum için kaynak kodu veya ayrıştırılmış kod görüntülenemiyor\" iletisinin nedenlerini inceleyin."
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d87de3034cb6cb8ba3364fa362eff1c27e6bae9d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dd0ed9a798c29010911a1537c99f30ba44e01aea
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72738338"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96561051"
 ---
 # <a name="debugger-cannot-display-source-code-or-disassembly"></a>Hata Ayıklayıcı Kaynak Kodu veya Ayrıştırılmış Kodu Görüntüleyemez
 Bu hata şunu okur:

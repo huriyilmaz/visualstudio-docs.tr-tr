@@ -1,5 +1,7 @@
 ---
 title: WebView denetiminde hata ayıklama (UWP) | Microsoft Docs
+description: Windows Çalışma Zamanı uygulamasında kullanılan WebView denetimlerini incelemeyi ve hata ayıklamayı öğrenin. DOM Gezgini 'ni ve JavaScript Konsol penceresini kullanabilirsiniz.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - uwp
-ms.openlocfilehash: f0cab4a77c601414e766851aaf048fb3c32f6458
-ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
+ms.openlocfilehash: 5439f9f253126e159df5dd9ea58bad04c3f6c649
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91211121"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560557"
 ---
 # <a name="debug-a-webview-control-in-a-uwp-app"></a>UWP uygulamasında bir WebView denetiminde hata ayıklama
 

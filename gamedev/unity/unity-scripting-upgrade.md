@@ -10,12 +10,12 @@ ms.technology: vs-unity-tools
 ms.prod: visual-studio-dev16
 ms.workload:
 - unity
-ms.openlocfilehash: 5b7e36d0f0c29e997b4b39506fb27d73ceb45146
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: c1b745e4a1da85324b2dc73e30bebb873e2d0720
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "94341719"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96559816"
 ---
 # <a name="using-net-4x-in-unity"></a>Unity’de .NET 4.x kullanma
 
@@ -32,7 +32,7 @@ Unity 2017,1 sürümü ile Unity, betik çalışma zamanının bir .NET 4,6, C# 
 
 .NET 4. x Scripting çalışma zamanını etkinleştirmek için aşağıdaki adımları uygulayın:
 
-1. **> proje ayarlarını düzenle > oynatıcı** ' yı seçerek Unity denetçisinde playersettings ' i açın.
+1. **> proje ayarlarını düzenle > oynatıcı**' yı seçerek Unity denetçisinde playersettings ' i açın.
 
 1. **Yapılandırma** başlığı altında, **komut dosyası çalışma zamanı sürüm** açılan listesine tıklayın ve **.NET 4. x eşdeğerini** seçin. Unity 'yi yeniden başlatmanız istenir.
 
@@ -40,7 +40,7 @@ Unity 2017,1 sürümü ile Unity, betik çalışma zamanının bir .NET 4,6, C# 
 
 ## <a name="choosing-between-net-4x-and-net-standard-20-profiles"></a>.NET 4. x ve .NET Standard 2,0 profillerinin arasından seçim yapma
 
-.NET 4. x eşdeğer betik çalışma zamanına geçiş yaptıktan sonra, PlayerSettings ( **> proje ayarlarını düzenle > Player** ) açılır menüsünü kullanarak **API uyumluluk düzeyini** belirtebilirsiniz. İki seçenek vardır:
+.NET 4. x eşdeğer betik çalışma zamanına geçiş yaptıktan sonra, PlayerSettings (**> proje ayarlarını düzenle > Player**) açılır menüsünü kullanarak **API uyumluluk düzeyini** belirtebilirsiniz. İki seçenek vardır:
 
 * **.NET Standard 2,0**. Bu profil, .NET Foundation tarafından yayımlanan [.NET Standard 2,0 profiliyle](https://github.com/dotnet/standard/blob/master/docs/versions/netstandard2.0.md) eşleşir. Unity yeni projeler için .NET Standard 2,0 önerir. Boyut kısıtlı platformlar için avantajlı olan .NET 4. x 'ten daha küçüktür. Ayrıca Unity, Unity 'nin desteklediği tüm platformlarda bu profili desteklemeye kararlıdır.
 
@@ -58,9 +58,9 @@ Bu seçenekler hakkında daha fazla bilgi için Unity 'nin [Blog](https://blogs.
 
 ![eksik bütünleştirilmiş kod başvurusu](media/vs/vstu-missing-reference.png)
 
-Visual Studio her açılışında Unity projeleri için. csproj ve. sln dosyalarını yeniden oluşturur. Sonuç olarak, proje yeniden alındıktan sonra kaybolabilecek olduğundan doğrudan Visual Studio 'da derleme başvuruları ekleyemezsiniz. Bunun yerine, **MCS. rsp** adlı özel bir metin dosyası kullanılmalıdır:
+Visual Studio her açılışında Unity projeleri için. csproj ve. sln dosyalarını yeniden oluşturur. Sonuç olarak, proje yeniden alındıktan sonra kaybolabilecek olduğundan doğrudan Visual Studio 'da derleme başvuruları ekleyemezsiniz. Bunun yerine, **CSC. rsp** adlı özel bir metin dosyası kullanılmalıdır:
 
-1. Unity projenizin kök **varlıklar** dizininde **MCS. rsp** adlı yeni bir metin dosyası oluşturun.
+1. Unity projenizin kök **varlıklar** dizininde **CSC. rsp** adlı yeni bir metin dosyası oluşturun.
 
 1. Boş metin dosyasının ilk satırında, şunu girin: `-r:System.Net.Http.dll` ve sonra dosyayı kaydedin. "System.Net.Http.dll" öğesini bir başvuru eksik olabilecek herhangi bir dahil edilen derlemeyle değiştirebilirsiniz.
 

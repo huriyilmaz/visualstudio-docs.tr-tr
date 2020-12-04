@@ -1,5 +1,7 @@
 ---
 title: Hata ayıklayıcı proje ayarları | Microsoft Docs
+description: Hata ayıklamayı etkileyen çeşitli proje ayarları vardır. Ayarları değiştirmek için özellik sayfaları iletişim kutusunu nasıl kullanacağınızı öğrenmek için bu makaledeki bağlantıları izleyin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 77f5ca5dcc1b886ec56b7177dd0d6aa62a8ce4f0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6a3a5ba7a1e215fddd5b1127859948496e9b4e1d
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "73188638"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96561038"
 ---
 # <a name="debugger-project-settings"></a>Hata Ayıklayıcı Proje Ayarları
 Belirli proje ayarları hata ayıklamayı da etkiler. Bu ayarlar, hata ayıklayıcının hangi dizinlerde göründüğünü, programı başlatmak için kullanılan komut ve komut bağımsız değişkenlerini ve program için oluşturulan hata ayıklama bilgilerinin türünü tespit eden şeyleri sağlar. Bu ayarları **Özellik sayfaları** iletişim kutusunda değiştirebilirsiniz.
@@ -49,4 +51,4 @@ Belirli proje ayarları hata ayıklamayı da etkiler. Bu ayarlar, hata ayıklay�
  [Hata ayıklayıcı ayarları ve hazırlığı](../debugger/debugger-settings-and-preparation.md) Hata ayıklayıcı ile ilgili özellik ayarlarını ve hata ayıklayıcıyla programınızın hatalarını ayıklamak için gereken hazırlık işlemini açıklar [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .
 
 ## <a name="see-also"></a>Ayrıca bkz.
- [Hata Ayıklama Güvenliği](../debugger/debugger-security.md)
+ [Hata ayıklayıcı güvenliği](../debugger/debugger-security.md)

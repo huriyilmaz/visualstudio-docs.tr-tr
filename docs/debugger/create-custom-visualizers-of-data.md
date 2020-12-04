@@ -1,5 +1,7 @@
 ---
 title: Özel veri Görselleştiriciler oluştur | Microsoft Docs
+description: Visual Studio hata ayıklayıcı Görselleştiriciler, verileri görüntüleyen bileşenlerdir. Altı standart Görselleştiriciler ve diğer kişilerin nasıl yazılacağı veya indirileceği hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 05/27/2020
 ms.topic: conceptual
 f1_keywords:
@@ -19,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0e184507415810f64060b0d2b2e92a825d642d2e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4c39fae399cd735d09218699f10c1eaead8e40ee
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85280882"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560687"
 ---
 # <a name="create-custom-data-visualizers"></a>Özel veri Görselleştiriciler oluşturma
 
@@ -49,7 +51,7 @@ Bir hata ayıklayıcı görselleştiricisi mimarisi iki bölümden oluşur:
 
 - Hata *ayıklanan yan* Işlem Visual Studio 'da çalışıyor (hata *ayıklanan*). Hata ayıklanan işlemde görselleştirilecek veri nesnesi (örneğin, bir dize nesnesi) var. Hata ayıklanan yüz, nesneyi oluşturduğunuz Kullanıcı arabiriminde görüntüleyen hata ayıklayıcı tarafına gönderir.
 
-Hata ayıklayıcı tarafı, arabirimini uygulayan bir *nesne sağlayıcısından* veri nesnesini alır <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider> . Hata ayıklanan yüz, nesnesini öğesinden türetilen *nesne kaynağı*üzerinden gönderir <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource> .
+Hata ayıklayıcı tarafı, arabirimini uygulayan bir *nesne sağlayıcısından* veri nesnesini alır <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider> . Hata ayıklanan yüz, nesnesini öğesinden türetilen *nesne kaynağı* üzerinden gönderir <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource> .
 
 Nesne sağlayıcısı Ayrıca verileri nesne kaynağına geri gönderebilir ve bu sayede verileri düzenleyebilen bir Görselleştirici yazmanızı sağlayabilirsiniz. İfade değerlendiricisi ve nesne kaynağıyla konuşmak için nesne sağlayıcısını geçersiz kılabilirsiniz.
 

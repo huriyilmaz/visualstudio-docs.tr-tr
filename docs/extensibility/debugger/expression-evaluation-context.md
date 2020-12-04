@@ -1,5 +1,7 @@
 ---
 title: İfade değerlendirme bağlamı | Microsoft Docs
+description: İfade değerlendirmesi bağlamını temsil eden ifade değerlendirme bağlamı hakkında bilgi edinin ve bir program kesme noktasında durdurulduğunda vardır.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e939a4fa5f4673e2f701206c96599c54bc0c3b51
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 26705b32628a9bd9ecc79489e2552f2d7e537273
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738742"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96559686"
 ---
 # <a name="expression-evaluation-context"></a>İfade değerlendirme bağlamı
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Hata ayıklama sırasında **ifade değerlendirme bağlamı**:

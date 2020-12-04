@@ -1,5 +1,7 @@
 ---
 title: Web Tarayıcısı, Ortam, Seçenekler İletişim Kutusu
+description: İç Web tarayıcısı ve Internet Explorer seçeneklerini ayarlamak için ortam bölümünde Web tarayıcı sayfasını nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -21,12 +23,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 85592076b99cf54991d21e1249cf30c609413733
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 2898984896ef96f9e7767e0c56ad58c92be42f54
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808684"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560934"
 ---
 # <a name="options-dialog-box-environment--web-browser"></a>Seçenekler iletişim kutusu: ortam \> Web tarayıcısı
 

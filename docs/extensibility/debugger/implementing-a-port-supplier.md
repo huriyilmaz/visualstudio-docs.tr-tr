@@ -1,5 +1,7 @@
 ---
 title: Bağlantı noktası sağlayıcısı uygulama | Microsoft Docs
+description: DCOM olmayan bir makinede hata ayıklarken veya yeni bir cihaz destek gerektirdiğinde gerekli olan bir bağlantı noktası sağlayıcısı uygulama hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8218e372ad3aece922811bc20cfd7650f33296f3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 72963660e4f50a72cdbc04bab4833b397d15fc27
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738562"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560674"
 ---
 # <a name="implement-a-port-supplier"></a>Bağlantı noktası sağlayıcısı uygulama
 Bir bağlantı noktası sağlayıcısı, oturum hata ayıklama Yöneticisi 'ne (SDM) istek üzerine bağlantı noktaları sağlar. DCOM olmayan bir makinede hata ayıklanırken veya yeni bir cihaz destek gerektirdiğinde, bir bağlantı noktası sağlayıcısı uygulanmalıdır. Örneğin, bir hücre telefonunda hata ayıklama sağlamak için, cep telefonuna (Belki IR veya bir hücre bağlantısı yoluyla) bağlanan bağlantı noktaları sağlayan bir bağlantı noktası sağlayıcısı ayarlayabilir ve telefonda çalışan işlem ve programları numaralandırır.

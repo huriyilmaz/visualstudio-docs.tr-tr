@@ -1,20 +1,22 @@
 ---
 title: Takım Gezgini başvurusu
+description: İşi yönetmek için Takım Gezgini çeşitli işlevler hakkında bilgi edinin ve proje geliştirmek için diğer takım üyeleriyle koordine edin.
+ms.custom: SEO-VS-2020
 ms.date: 12/04/2018
 ms.topic: reference
 ms.author: kaelli
 author: KathrynEE
 ms.manager: jillfra
-ms.openlocfilehash: fa73894d713ded42696f5e47d40dffb2d2405b1a
-ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
+ms.openlocfilehash: a7089defb41c3ba8379d1020cbf1225d6333b912
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91928088"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560999"
 ---
 # <a name="team-explorer-reference"></a>Takım Gezgini başvurusu
 
-Bu makale, **Takım Gezgini**çeşitli Işlevler hakkında Azure DevOps makalelerine bağlantılar sağlar.
+Bu makale, **Takım Gezgini** çeşitli Işlevler hakkında Azure DevOps makalelerine bağlantılar sağlar.
 
 Bir proje geliştirmek ve size, takımınızı ya da projelerinize atanan işleri yönetmek için, **Takım Gezgini** araç penceresini diğer takım üyeleriyle koordine etmek için kullanın. **Takım Gezgini** , Visual Studio 'yu git ve GitHub depoları, Team Foundation sürüm denetimi (TFVC) depoları ve [Azure DevOps Services](/azure/devops/user-guide/what-is-azure-devops-services) veya şirket içi [Azure DevOps Server](/azure/devops/index-all) (eski adıyla TFS) barındırılan projelere bağlar. Kaynak kodu, iş öğeleri ve yapıları yönetebilirsiniz.
 

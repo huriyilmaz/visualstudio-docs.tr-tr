@@ -1,5 +1,7 @@
 ---
 title: Proje Özellikleri Başvurusu
+description: Proje özelliklerini yapılandırmayı ve özelleştirmeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cc3ec00ed771caba7e779e708801d611ca16b8c5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f76e34f0a806a524c1305796bddabebd155e680c
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75567729"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560349"
 ---
 # <a name="project-properties-reference"></a>Proje Özellikleri başvurusu
 

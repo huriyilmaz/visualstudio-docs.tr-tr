@@ -1,5 +1,7 @@
 ---
 title: Yürütme denetimi ve durum değerlendirmesi | Microsoft Docs
+description: Visual Studio hata ayıklamasının, hata ayıklayıcı bileşenleri arasında gönderilen olaylar üzerinde yürütme denetimini temel aldığı hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: dc76ae97e8baa6ce78dd4d565109d6a19e2051e2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 021fab07cfaf1ec17821a8ef9a33a03f2d6ec714
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738745"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560908"
 ---
 # <a name="execution-control-and-state-evaluation"></a>Yürütme denetimi ve durum değerlendirmesi
 Bir uygulamada hata ayıklamak, bu tür yürütme denetimi özelliklerinin işlevleri üzerinde Adımlama, kesme noktalarında durdurulması ve yürütmeye devam edilmesi için uygulanması gerekir. Visual Studio hata ayıklama, hata ayıklayıcı bileşenleri arasında gönderilen olaylar üzerinde yürütme denetimini temel alır.

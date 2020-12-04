@@ -1,5 +1,7 @@
 ---
 title: Olay kaynakları (Visual Studio SDK) | Microsoft Docs
+description: 'Visual Studio hata ayıklamada iki olay kaynağı hakkında bilgi edinin: hata ayıklama altyapısı ve oturum hata ayıklama Yöneticisi.'
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 13842ab7b231d04bdbcafdf32534edc4eb2a9af6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1ab0bc2bb61069e20276c471d1245d167715cc7a
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738776"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96559673"
 ---
 # <a name="event-sources-visual-studio-sdk"></a>Olay kaynakları (Visual Studio SDK)
 İki olay kaynağı vardır: hata ayıklama altyapısı (DE) ve oturum hata ayıklama Yöneticisi (SDM). Sürümünden gönderilen olaylar NULL olmayan bir altyapıya sahip olsa da, SDM 'den gönderilen olayların NULL bir altyapısı vardır.

@@ -1,5 +1,7 @@
 ---
 title: Araç Kutusu, Veri Sekmesi
+description: Araç kutusu penceresinin veri sekmesinde bulacağınız veri nesneleri hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -12,16 +14,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e79b80890925bdf4d6d191db759516b5545fc403
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 78a697ae8d9f3f551c8bb734c28c1f53551b1f81
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75590260"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96561090"
 ---
 # <a name="toolbox-data-tab"></a>Araç kutusu, veri sekmesi
 
-Formlara ve bileşenlere ekleyebileceğiniz veri nesnelerini görüntüler. **Araç kutusunun** **veri** sekmesi, ilişkili tasarlayıcı içeren bir proje oluşturduğunuzda görüntülenir. **Araç kutusu** , Visual Studio tümleşik geliştirme ortamında varsayılan olarak görünür; **araç kutusunu**görüntülemeniz gerekiyorsa, **Görünüm** menüsünden **araç kutusu** ' nu seçin.
+Formlara ve bileşenlere ekleyebileceğiniz veri nesnelerini görüntüler. **Araç kutusunun** **veri** sekmesi, ilişkili tasarlayıcı içeren bir proje oluşturduğunuzda görüntülenir. **Araç kutusu** , Visual Studio tümleşik geliştirme ortamında varsayılan olarak görünür; **araç kutusunu** görüntülemeniz gerekiyorsa, **Görünüm** menüsünden **araç kutusu** ' nu seçin.
 
 > [!TIP]
 > Veri kaynağı Yapılandırma Sihirbazı 'Nı çalıştırmak, çoğu veri öğesini otomatik olarak oluşturur ve yapılandırır. Daha fazla bilgi için bkz. [Yeni veri kaynakları ekleme](../../data-tools/add-new-data-sources.md).

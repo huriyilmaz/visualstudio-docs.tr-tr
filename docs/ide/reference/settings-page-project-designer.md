@@ -1,5 +1,7 @@
 ---
 title: Ayarlar Sayfası, Proje Tasarımcısı
+description: Projenin uygulama ayarlarını belirtmek için proje Tasarımcısı ' nın ayarlar sayfasını nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 06/14/2018
 ms.topic: reference
 f1_keywords:
@@ -12,12 +14,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4f4ca1def334241999445e3f11cf142aa426d962
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2b5aa077043b16c01a05e8730bcd2b42719edaf0
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75566780"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560323"
 ---
 # <a name="settings-page-project-designer"></a>Ayarlar sayfası, proje Tasarımcısı
 
@@ -35,7 +37,7 @@ Projenin uygulama ayarlarını belirtmek için proje Tasarımcısı ' nın **Aya
 
 **Web ayarlarını yükle**
 
-**Web ayarlarını yükle** ayarı, kimliği doğrulanmış bir kullanıcı için veya anonim kullanıcılar için ayarları yüklemeniz sağlayan bir **oturum açma** iletişim kutusu görüntüler. Bu düğme yalnızca, **Hizmetler** sayfasında istemci uygulama hizmetleri 'ni etkinleştirdiğinizde ve bir **Web ayarları hizmet konumu**belirtmişseniz etkindir.
+**Web ayarlarını yükle** ayarı, kimliği doğrulanmış bir kullanıcı için veya anonim kullanıcılar için ayarları yüklemeniz sağlayan bir **oturum açma** iletişim kutusu görüntüler. Bu düğme yalnızca, **Hizmetler** sayfasında istemci uygulama hizmetleri 'ni etkinleştirdiğinizde ve bir **Web ayarları hizmet konumu** belirtmişseniz etkindir.
 
 **Kodu Görüntüle**
 
@@ -51,13 +53,13 @@ Uygulama ayarlarına erişme hakkında daha fazla bilgi için bkz. [Windows Form
 
 **Erişim değiştiricisi**
 
-**Erişim değiştirici** düğmesi, `Properties.Settings` `My.Settings` Visual Studio 'nun *Settings.Designer.cs* veya *Settings. Designer. vb*içinde oluşturduğu (C# ' de) veya (Visual Basic) yardımcı sınıflarının erişim düzeyini belirtir.
+**Erişim değiştirici** düğmesi, `Properties.Settings` `My.Settings` Visual Studio 'nun *Settings.Designer.cs* veya *Settings. Designer. vb* içinde oluşturduğu (C# ' de) veya (Visual Basic) yardımcı sınıflarının erişim düzeyini belirtir.
 
-Visual C# projeleri için, erişim değiştiricisi **iç** veya **genel**olabilir.
+Visual C# projeleri için, erişim değiştiricisi **iç** veya **genel** olabilir.
 
-Visual Basic projeleri için, erişim değiştiricisi **arkadaş** veya **genel**olabilir.
+Visual Basic projeleri için, erişim değiştiricisi **arkadaş** veya **genel** olabilir.
 
-Varsayılan **olarak, ayar** C# ve **arkadaş** Visual Basic. Visual Studio, **iç** veya **arkadaş**olarak yardımcı sınıflar oluşturduğunda, yürütülebilir (*. exe*) uygulamalar, sınıf kitaplıklarına (*. dll* dosyaları) eklediğiniz kaynak ve ayarlara erişemez. Kaynak ve ayarları bir sınıf kitaplığından paylaşmanız gerekiyorsa, erişim değiştiricisini **Public**olarak ayarlayın.
+Varsayılan **olarak, ayar** C# ve **arkadaş** Visual Basic. Visual Studio, **iç** veya **arkadaş** olarak yardımcı sınıflar oluşturduğunda, yürütülebilir (*. exe*) uygulamalar, sınıf kitaplıklarına (*. dll* dosyaları) eklediğiniz kaynak ve ayarlara erişemez. Kaynak ve ayarları bir sınıf kitaplığından paylaşmanız gerekiyorsa, erişim değiştiricisini **Public** olarak ayarlayın.
 
 Ayarlar yardımcı sınıfları hakkında daha fazla bilgi için bkz. [uygulama ayarlarını yönetme](../managing-application-settings-dotnet.md).
 
@@ -71,11 +73,11 @@ Uygulama ayarının adını bu alana girin.
 
 **Tür**
 
-Ayar için bir tür seçmek üzere açılır listeyi kullanın. En sık kullanılan türler, örneğin **dize**, **(bağlantı dizesi)** ve **System. Drawing. Font**gibi açılan listede görüntülenir. Listenin sonuna kadar **bul** ' u seçerek ve ardından **bir tür Seç** iletişim kutusunda bir tür seçerek başka bir tür seçebilirsiniz. Bir tür seçtikten sonra, açılan listedeki ortak türlere eklenir (yalnızca geçerli çözüm için).
+Ayar için bir tür seçmek üzere açılır listeyi kullanın. En sık kullanılan türler, örneğin **dize**, **(bağlantı dizesi)** ve **System. Drawing. Font** gibi açılan listede görüntülenir. Listenin sonuna kadar **bul** ' u seçerek ve ardından **bir tür Seç** iletişim kutusunda bir tür seçerek başka bir tür seçebilirsiniz. Bir tür seçtikten sonra, açılan listedeki ortak türlere eklenir (yalnızca geçerli çözüm için).
 
 **Kapsam**
 
-**Uygulama** veya **Kullanıcı**seçin.
+**Uygulama** veya **Kullanıcı** seçin.
 
 Bağlantı dizeleri gibi uygulama kapsamlı ayarlar uygulamayla ilişkilendirilir. Kullanıcılar, çalışma zamanında uygulama kapsamlı ayarları değiştiremezler.
 
@@ -83,7 +85,7 @@ Sistem yazı tipleri gibi kullanıcı kapsamlı ayarların Kullanıcı tercihler
 
 **Değer**
 
-Uygulama ayarıyla ilişkili veri veya değer. Örneğin, ayar bir yazı tipi ise, değeri **Verdana, 9.75 PT, Style = kalın**olabilir.
+Uygulama ayarıyla ilişkili veri veya değer. Örneğin, ayar bir yazı tipi ise, değeri **Verdana, 9.75 PT, Style = kalın** olabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

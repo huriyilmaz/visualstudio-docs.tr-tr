@@ -1,5 +1,7 @@
 ---
 title: Hata ayıklayıcı genişletilebilirliği ile çalışmaya başlama | Microsoft Docs
+description: Visual Studio ortamının içinden programlarda hata ayıklamak için kullanılan hata ayıklayıcı bileşenlerini oluşturmaya ve özelleştirmeye başlayın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 153db8889c78890a31a2e8003e6aa95ed24a02eb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6949b9b8a9168915c64bc6183f6b1391a1c79220
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738599"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560041"
 ---
 # <a name="get-started-with-debugger-extensibility"></a>Hata ayıklayıcı genişletilebilirliği ile çalışmaya başlama
 , [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] Ortamında programların hatalarını ayıklamak için kullanılan hata ayıklayıcı bileşenlerini oluşturmak ve özelleştirmek için ihtiyacınız olan bilgileri sağlar [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .

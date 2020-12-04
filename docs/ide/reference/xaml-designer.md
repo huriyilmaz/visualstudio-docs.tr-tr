@@ -1,5 +1,7 @@
 ---
 title: XAML Tasarımcısı seçenekleri sayfası
+description: Öğelerin ve özniteliklerin XAML belgelerinizde nasıl biçimlendirileceğini belirtmek için XAML Tasarımcısı bölümünde Genel sayfasını nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 03/02/2017
 ms.topic: reference
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 45c7a5ba87c006332b601b93143cbf8acfda16b5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0955a6644e8f1dc1d42a1b22b15399a6d1ca452d
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547309"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560986"
 ---
 # <a name="xaml-designer-options-page"></a>XAML Tasarımcısı seçenekleri sayfası
 
@@ -42,13 +44,13 @@ XAML belgeleri yüklendiğinde Tasarım görünümü görünüp başlatılmayaca
 
 ## <a name="split-orientation"></a>Yönü Böl
 
-XAML belgesi düzenlenirken XAML Tasarımcısı ne zaman ve nasıl görüneceğini denetlemek için bu ayarı kullanın. Bu ayarlar yalnızca **varsayılan belge görünümü** **bölünmüş görünüme**ayarlandığında geçerlidir.
+XAML belgesi düzenlenirken XAML Tasarımcısı ne zaman ve nasıl görüneceğini denetlemek için bu ayarı kullanın. Bu ayarlar yalnızca **varsayılan belge görünümü** **bölünmüş görünüme** ayarlandığında geçerlidir.
 
 |Ad|Açıklama|
 |-|-|
 |**Dikey**|Xaml kaynağı XAML görünümünün sol tarafında görünür ve XAML Tasarımcısı diğer tarafta görüntülenir.|
 |**Yatay**|XAML Tasarımcısı XAML görünümünün üst kısmında görünür ve XAML kaynağı bunun altında görünür.|
-|**Varsayılanını**|XAML belgesi, belge projesinin hedeflediği platform için önerilen bölünmüş yönlendirmeyi kullanır. Çoğu platformda bu **yatay**olarak eşdeğerdir.|
+|**Varsayılan**|XAML belgesi, belge projesinin hedeflediği platform için önerilen bölünmüş yönlendirmeyi kullanır. Çoğu platformda bu **yatay** olarak eşdeğerdir.|
 
 ## <a name="zoom-by-using"></a>Kullanarak Yakınlaştır
 

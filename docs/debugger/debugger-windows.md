@@ -1,6 +1,7 @@
 ---
 title: Hata ayıklayıcı Windows kullanarak verileri İnceleme | Microsoft Docs
-ms.custom: seodec18
+description: Size bilgi sağlayan birçok hata ayıklayıcı penceresi vardır. Bu makale, türlerin bir listesini sağlar. Her biri için daha fazla bilgi bağlantısı vardır.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 04/25/2018
 ms.topic: conceptual
 ms.assetid: 4c6fe8f1-b015-4989-bb31-72ebac390026
@@ -9,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3c27d2b4436fc5defedcda44c4f7840760018ade
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e8caa5f11f4f0501d8b56c308d5336f10d518062
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "73188547"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560739"
 ---
 # <a name="inspect-data-using-debugger-windows-in-visual-studio"></a>Visual Studio 'da hata ayıklayıcı pencerelerini kullanarak verileri İnceleme
 
@@ -42,7 +43,7 @@ Programınızda hata ayıklarken çoğu hata ayıklayıcı penceresini açabilir
 |DOM Gezgini|CTRL + ALT + V, D|[DOM Gezgini'ni kullanarak düzen hatalarını ayıklama](quickstart-debug-html-and-css.md)|
 |Canlı görsel ağaç|-|[Hata ayıklama sırasında XAML özelliklerini denetleme](../xaml-tools/inspect-xaml-properties-while-debugging.md)|
 |Canlı Özellik Gezgini|-|[Hata ayıklama sırasında XAML özelliklerini denetleme](../xaml-tools/inspect-xaml-properties-while-debugging.md)|
-|İşlemler|CTRL + ALT + Z|[İş Parçacıklarında ve İşlemlerde Hata Ayıklama](../debugger/debug-threads-and-processes.md)|
+|İşlemler|CTRL + ALT + Z|[Hata ayıklama Iş parçacıkları ve süreçler](../debugger/debug-threads-and-processes.md)|
 |Bellek|CTRL + ALT + A, (1, 2, 3, 4)|[Bellek Pencereleri](../debugger/memory-windows.md)|
 |Ayrıştırılmış kod|CTRL + ALT + D|[Nasıl Yapılır: Ayrıştırılmış Kod Penceresini Kullanma](../debugger/how-to-use-the-disassembly-window.md)|
 |Kayıtların|CTRL + ALT + G|[Nasıl Yapılır: Yazmaçlar Penceresini Kullanma](../debugger/how-to-use-the-registers-window.md)|

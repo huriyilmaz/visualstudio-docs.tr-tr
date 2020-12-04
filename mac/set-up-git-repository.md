@@ -3,15 +3,15 @@ title: Git deposu ayarlama
 description: Mac için Visual Studio kullanarak bir git deposuna bağlanma.
 author: therealjohn
 ms.author: johmil
-ms.date: 11/09/2020
+ms.date: 12/03/2020
 ms.assetid: E992FA1D-B2AD-4A28-ADC6-47E4FC471060
 ms.topic: how-to
-ms.openlocfilehash: 862f073d3c6d535d612a67f215aee740cea175bd
-ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
+ms.openlocfilehash: bacd533bf5c28c6f431fe7088fad36b6bbd3d04b
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94493133"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96561064"
 ---
 # <a name="set-up-a-git-repository"></a>Git deposu ayarlama
 
@@ -45,6 +45,9 @@ Bir git deposu ayarlamak için aşağıdaki adımları yürütün:
 
 Zaten sürüm denetiminde _olmayan_ mevcut bir projeniz varsa, git 'te ayarlamak için aşağıdaki adımları kullanın:
 
+> [!TIP]
+> Git ile hangi klasörlerin ve dosyaların izleneceğini ve yayımlandığını denetlemek için bir. gitignore dosyası kullanın. Yapı dizinlerini, ikilileri veya oluşturulan dosyaları dışlamak isteyebilirsiniz. [Dosyaları yok sayan GitHub belgelerinden](https://docs.github.com/en/free-pro-team@latest/github/using-git/ignoring-files)daha fazla bilgi edinin.
+
 1. Mac için Visual Studio çözüm penceresinden çözüm adını seçin.
 
 2. **Kopyalama deposu** iletişim kutusunu göstermek için menü çubuğunda **sürüm denetimi > sürüm denetimi 'nde Yayımla** ' yı seçin:
@@ -67,14 +70,14 @@ Zaten sürüm denetiminde _olmayan_ mevcut bir projeniz varsa, git 'te ayarlamak
 
     ![Projeyi git 'e yayımlamayı dene](media/version-control-git7.png)
 
-6. **Tamam** ' a ve ardından uyarı Iletişim kutusundan **Yayımla** ' ya tıklayın.
+6. **Tamam**' a ve ardından uyarı Iletişim kutusundan **Yayımla** ' ya tıklayın.
 
 7. **Git kimlik bilgileri** penceresinde GitHub Kullanıcı adınızı ve parolanızı girin. 
 
 > [!NOTE]
 > Hesabınızda iki öğeli kimlik doğrulaması (2FA) etkinse, parola yerine kullanılan bir erişim belirteci oluşturmanız gerekir. Erişim belirteci oluşturmadıysanız git [erişim belirteci](https://help.github.com/articles/creating-an-access-token-for-command-line-use/) belgelerindeki adımları izleyin.
 
-8. Kullanıcı adı ve kişisel erişim belirtecini girip **Tamam** ' a basın:
+8. Kullanıcı adı ve kişisel erişim belirtecini girip **Tamam**' a basın:
 
     ![Git için Kullanıcı adı ve parola girin](media/version-control-git9-sml.png)
 
@@ -101,19 +104,19 @@ Yeni yerel deponuzu yeni bir GitHub deposuna göndermek için aşağıdaki adım
 
 2. Durum sekmesinde, sol üst kısımdaki **Kaydet** ' i seçin.
 
-3. "Ilk tamamlama" gibi bir teslim iletisi yazın ve ardından **Yürüt** ' e tıklayın:
+3. "Ilk tamamlama" gibi bir teslim iletisi yazın ve ardından **Yürüt**' e tıklayın:
 
     ![Git deposuna ilk değişiklikleri Kaydet](media/version-control-git-publish-new2.png)
 
 4. Ardından, menü çubuğunda sürüm denetimi ' ne gidin **> dalları ve uzaktan** Kumandalar ' ı yönetin.
 
-5. **Uzak kaynaklar** sekmesine gidin ve ardından **Ekle** ' ye tıklayın.
+5. **Uzak kaynaklar** sekmesine gidin ve ardından **Ekle**' ye tıklayın.
 
-6. **Uzak kaynak** penceresinde, önceden oluşturulmuş GitHub deponuzun ayrıntılarını ekleyin ve **Tamam** ' a tıklayın:
+6. **Uzak kaynak** penceresinde, önceden oluşturulmuş GitHub deponuzun ayrıntılarını ekleyin ve **Tamam**' a tıklayın:
 
     ![Git deposu için uzak kaynakları yapılandırma](media/version-control-git-publish-new3.png)
 
-7. **Git deposu yapılandırma** penceresini kapatın, ardından menü çubuğunda **sürüm denetimi > gönderme değişiklikleri** ' ne gidin.
+7. **Git deposu yapılandırma** penceresini kapatın, ardından menü çubuğunda **sürüm denetimi > gönderme değişiklikleri**' ne gidin.
 
 8. **Depoya gönder** penceresinde **Değişiklikleri Gönder** düğmesine tıklayın:
 
@@ -132,7 +135,7 @@ Mac için Visual Studio artık değişiklikleri uzak GitHub deponuza gönderir:
 
 Yerel makinenizde değil yalnızca uzak üzerinde bulunan bir GitHub deposu ile çalışmanız gerekecektir. Mac için Visual Studio bu depoyu hızlı bir şekilde klonlamanızı sağlar. Makinenize kopyalamak için aşağıdaki adımları izleyin:
 
-1. Menü çubuğunda, **kopya deposu > sürüm denetimi** ' ni seçin:
+1. Menü çubuğunda, **kopya deposu > sürüm denetimi**' ni seçin:
 
 2. Bu, **URL Ile Bağlan** sekmesini görüntüler:
 
@@ -144,7 +147,7 @@ Yerel makinenizde değil yalnızca uzak üzerinde bulunan bir GitHub deposu ile 
 
 4. **URL 'ye Bağlan** sekmesindeki **URL** girdisi alanındaki tüm metni değiştirin. Bu, adım #2 görüntüde gösterildiği gibi bu sekmedeki diğer birçok alanın çoğunu dolduracaktır.
 
-5. Depoyu kopyalamak istediğiniz dizini girin ve **Kopyala** 'ya basın.
+5. Depoyu kopyalamak istediğiniz dizini girin ve **Kopyala**'ya basın.
 
 > [!NOTE]
 > Depo boyutu 4 GB 'ın üzerinde olduğunda sorunlarla karşılaşabilirsiniz.

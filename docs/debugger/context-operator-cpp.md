@@ -1,5 +1,7 @@
 ---
 title: Hata ayıklayıcıda bağlam işleci (C++) | Microsoft Docs
+description: Dış kapsamda olan ve yerel bir adla gizlenen bir C++ adı için bağlam sağlamanız gerekebilir. Bunu yapmak için bağlam işlecini nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -22,12 +24,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa16bd6f93198e5360139dbc5a6a0d96f02a1e41
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1bc238cc56e1b815e79ba381a7cd4866085d3bef
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62564710"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96559764"
 ---
 # <a name="context-operator-in-the-visual-studio-debugger-c"></a>Visual Studio hata ayıklayıcısında bağlam Işleci (C++)
 Bir kesme noktası konumunu, değişken adını veya ifadeyi nitelemek için C++ ' daki bağlam işlecini kullanabilirsiniz. Bağlam işleci, başka bir şekilde yerel bir adla gizlenen bir dış kapsamdan bir ad belirtmek için yararlıdır.
@@ -59,7 +61,7 @@ Bir kesme noktası konumunu, değişken adını veya ifadeyi nitelemek için C++
   {,,"a long, long, library name.dll"} g_Var
   ```
 
-- *ifade* , bir işlev adı, değişken adı veya *modüldeki*işaretçi adresi gibi geçerli bir hedefe çözümlenen geçerli bir C++ ifadesiyse.
+- *ifade* , bir işlev adı, değişken adı veya *modüldeki* işaretçi adresi gibi geçerli bir hedefe çözümlenen geçerli bir C++ ifadesiyse.
 
   İfade değerlendirici bir ifadede bir sembol ile karşılaştığında, sembolü aşağıdaki sırayla arar:
 

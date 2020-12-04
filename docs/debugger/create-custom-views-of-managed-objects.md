@@ -1,5 +1,7 @@
 ---
 title: Yönetilen nesnelerin özel görünümlerini oluşturma | Microsoft Docs
+description: Visual Studio hata ayıklayıcı, verileri değişken penceresinde görüntüler. Veri türlerinin (özel türler dahil) nasıl görüntüleneceğini özelleştirmeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 01/08/2019
 ms.topic: conceptual
 f1_keywords:
@@ -23,12 +25,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: f5247a56667f5715d9f155c662eb333967878d71
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c2248a361837f664b0f78acfe61f6d7588f5258b
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "73188640"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96560219"
 ---
 # <a name="create-custom-views-of-managed-objects-c-visual-basic-f-ccli"></a>Yönetilen nesnelerin özel görünümlerini oluşturma (C#, Visual Basic, F #, C++/CLı)
 Visual Studio 'Nun veri türlerini hata ayıklayıcı değişken pencerelerinin gösterdiği şekilde özelleştirebilirsiniz.
