@@ -9,12 +9,12 @@ monikerRange: '>=vs-2019'
 manager: jillfra
 author: ghogen
 ms.author: ghogen
-ms.openlocfilehash: d1a92433a90e6e6b7f71d0c7db6ced3a52c33315
-ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
+ms.openlocfilehash: c6a85faf2d1451dcab9bc822fcdf228513b90dca
+ms.sourcegitcommit: ab60fd7b4a8219e378d100df1386e1b038ecdafc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95440616"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96595272"
 ---
 # <a name="how-bridge-to-kubernetes-works"></a>Bridge to Kubernetes’in işleyiş biçimi
 
@@ -72,7 +72,8 @@ Yalıtımda çalışmayı etkinleştirdiğinizde Kubernetes Köprüsü, Kubernet
 Kubernetes Köprüsü, Kubernetes kümenizde Azure Dev Spaces etkinleştirildiğini algılarsa, Kubernetes için köprü kullanabilmeniz için Azure Dev Spaces önce devre dışı bırakmanız istenir.
 
 Yönlendirme Yöneticisi başlatıldığında şunları yapar:
-* Ad alanında bulunan tüm gelen verileri alt etki alanı için *GENERATED_NAME* kullanarak çoğaltır.
+
+* Alt etki alanı için *GENERATED_NAME* kullanarak ad alanında bulunan tüm gelen parolaları (yük dengeleyici dahil) çoğaltır.
 * *GENERATED_NAME* alt etki alanı ile yinelenen giriş ile ilişkili her hizmet için bir haberci Pod oluşturur.
 * Yalıtım aşamasında çalıştığınız hizmet için ek bir haberci Pod oluşturur. Bu, alt etki alanı olan isteklerin geliştirme bilgisayarınıza yönlendirilmesine izin verir.
 * Her haberci pod için yönlendirme kurallarını, alt etki alanı ile hizmetlerin yönlendirilmesini işleyecek şekilde yapılandırır.
@@ -144,7 +145,7 @@ Kubernetes Köprüsü aşağıdaki sınırlamalara sahiptir:
 * Bu hizmete bağlanabilmek için bir hizmetin tek bir pod tarafından desteklenen olması gerekir. Çoğaltmaları olan bir hizmet gibi birden fazla pods içeren bir hizmete bağlanamazsınız.
 * Pod, başarıyla bağlanmak için Kubernetes 'e Köprüsü için bu Pod 'da çalışan tek bir kapsayıcıya sahip olabilir. Kubernetes Köprüsü, hizmet kafesleri tarafından eklenen sepet kapsayıcıları gibi ek kapsayıcıları olan Pod hizmetlerine bağlanamaz.
 * Şu anda, Kubernetes Pod Köprüsü 'nün Linux kapsayıcıları olması gerekir. Windows kapsayıcıları desteklenmez.
-* Yalıtım, HTTPS ile kullanılamaz.
+* Visual Studio ile Kubernetes için köprü kullandığınızda yalıtım, HTTPS ile kullanılamaz. HTTPS yalnızca Visual Studio Code kullandığınızda yalıtım modunda desteklenir.
 * Kubernetes köprüsünün, ana bilgisayar Dosyanızı düzenlemek için geliştirme bilgisayarınızda çalışması için yükseltilmiş izinlere sahip olması gerekir.
 * Kubernetes Köprüsü Azure Dev Spaces etkinleştirilmiş kümeler üzerinde kullanılamaz.
 
