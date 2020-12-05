@@ -1,5 +1,7 @@
 ---
 title: Projeler ve çözümler, Seçenekler iletişim kutusu
+description: Projeler ve çözümlerle ilgili Visual Studio davranışını tanımlamak için projeler ve çözümler bölümünde Genel sayfasını nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 07/26/2019
 ms.topic: reference
 f1_keywords:
@@ -13,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1ed60e07c625665f92838cfbc671b03c605fda0d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 01ee7e0da5fab8ceba2e5dc0642148033e2415da
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75567651"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96616908"
 ---
 # <a name="options-dialog-box-projects-and-solutions--general"></a>Seçenekler iletişim kutusu: projeler ve çözümler \> genel
 
@@ -38,7 +40,7 @@ Seçildiğinde, **Çözüm Gezgini** otomatik olarak açılır ve etkin öğe se
 
 Seçildiğinde, derleme yapılandırma seçenekleri **Proje özellik sayfaları** iletişim kutusunda ve **Çözüm Özellik sayfaları** iletişim kutusunda görünür. Temizlenme sırasında, derleme yapılandırma seçenekleri **Proje özellik sayfaları** iletişim kutusunda ve bir yapılandırma ya da iki yapılandırma hata ayıklaması ve sürümü içeren Visual Basic ve C# projelerinin **Çözüm Özellik sayfaları** iletişim kutusunda görünmez. Bir projede Kullanıcı tanımlı bir yapılandırma varsa, derleme yapılandırma seçenekleri gösterilir.
 
-Seçilmediğinde, oluşturma **çözümü**, **çözümü yeniden oluşturma**ve **çözümü Temizleme**gibi **derleme** menüsündeki komutlar, sürüm yapılandırması üzerinde gerçekleştirilir ve hata **ayıklamayı Başlat** ve hata ayıklama **olmadan Başlat**gibi **hata** ayıklama menüsündeki komutlar hata ayıklama yapılandırmasında gerçekleştirilir.
+Seçilmediğinde, oluşturma **çözümü**, **çözümü yeniden oluşturma** ve **çözümü Temizleme** gibi **derleme** menüsündeki komutlar, sürüm yapılandırması üzerinde gerçekleştirilir ve hata **ayıklamayı Başlat** ve hata ayıklama **olmadan Başlat** gibi **hata** ayıklama menüsündeki komutlar hata ayıklama yapılandırmasında gerçekleştirilir.
 
 ## <a name="always-show-solution"></a>Çözümü her zaman göster
 
@@ -66,7 +68,7 @@ Seçildiğinde, Visual Studio projedeki tüm başvuruları kod öğesine de yeni
 
 ## <a name="prompt-before-moving-files-to-a-new-location"></a>Dosyaları yeni bir konuma taşımadan önce sor
 
-Seçildiğinde, dosya konumları **Çözüm Gezgini**eylemler tarafından değiştirilmeden önce Visual Studio bir onay iletisi kutusu görüntüler.
+Seçildiğinde, dosya konumları **Çözüm Gezgini** eylemler tarafından değiştirilmeden önce Visual Studio bir onay iletisi kutusu görüntüler.
 
 ## <a name="reopen-documents-on-solution-load"></a>Çözüm yükünden belgeleri yeniden aç
 
@@ -87,12 +89,12 @@ Seçildiğinde, Çözüm Gezgini düğümlerin durumunu, çözümün en son aç�
 
 ## <a name="open-sdk-style-project-files-with-double-click-or-the-enter-key"></a>Çift tıklama veya ENTER tuşu ile SDK stili proje dosyaları açın
 
-Bu seçenek belirlendiğinde ve Çözüm Gezgini bir SDK stili proje düğümüne çift tıkladığınızda veya seçin ve ardından **ENTER**tuşuna basarsanız proje dosyası (örneğin, \* . csproj dosyası) düzenleyicide XML olarak açılır. Seçimi kaldırıldığında, Çözüm Gezgini bir SDK stili proje düğümüne çift tıklayarak veya onu seçip **ENTER** tuşuna basarak yalnızca düğümü genişletme veya daraltma etkisi vardır.
+Bu seçenek belirlendiğinde ve Çözüm Gezgini bir SDK stili proje düğümüne çift tıkladığınızda veya seçin ve ardından **ENTER** tuşuna basarsanız proje dosyası (örneğin, \* . csproj dosyası) düzenleyicide XML olarak açılır. Seçimi kaldırıldığında, Çözüm Gezgini bir SDK stili proje düğümüne çift tıklayarak veya onu seçip **ENTER** tuşuna basarak yalnızca düğümü genişletme veya daraltma etkisi vardır.
 
 Bu seçenek seçilmezse ve bir SDK stili proje dosyasını düzenlemek istiyorsanız, Çözüm Gezgini ' de proje düğümüne sağ tıklayın ve **Proje dosyasını Düzenle**' yi seçin. Diğer proje türleri için öncelikle projeyi Visual Studio 'da düzenlemeden önce kaldırmanız gerekir.
 
 > [!TIP]
-> *SDK stili bir proje*veya [Proje SDK](../../msbuild/how-to-use-project-sdk.md)'sı, MSBuild 15,0 ile tanıtılan daha yeni, daha kolay bir proje dosyası biçimine sahiptir. SDK stili bir proje `Sdk` , öğe üzerinde bir özniteliği içerir `Project` , örneğin `<Project Sdk="Microsoft.NET.Sdk">` . Visual Studio şablonlarından yeni bir .NET Core projesi oluşturduğunuzda Visual Studio bir SDK stili proje oluşturur, örneğin.
+> *SDK stili bir proje* veya [Proje SDK](../../msbuild/how-to-use-project-sdk.md)'sı, MSBuild 15,0 ile tanıtılan daha yeni, daha kolay bir proje dosyası biçimine sahiptir. SDK stili bir proje `Sdk` , öğe üzerinde bir özniteliği içerir `Project` , örneğin `<Project Sdk="Microsoft.NET.Sdk">` . Visual Studio şablonlarından yeni bir .NET Core projesi oluşturduğunuzda Visual Studio bir SDK stili proje oluşturur, örneğin.
 
 ::: moniker-end
 

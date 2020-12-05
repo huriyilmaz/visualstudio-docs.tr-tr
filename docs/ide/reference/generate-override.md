@@ -1,5 +1,7 @@
 ---
 title: Bir yöntemi geçersiz kılma oluştur
+description: Temel sınıftan geçersiz kılınabilen tüm yöntemler için kodu hemen oluşturmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 01/26/2018
 ms.topic: reference
 author: TerryGLee
@@ -7,12 +9,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3c3a8f4eaf863fd8174ff70339fffc80141fc38d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5f27adacc39c53bf46b3a2ee09c71ae27b47f928
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75569250"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96617493"
 ---
 # <a name="generate-an-override-in-visual-studio"></a>Visual Studio 'da bir geçersiz kılma oluştur
 

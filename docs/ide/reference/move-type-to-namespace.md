@@ -1,5 +1,7 @@
 ---
 title: Türü ad alanına taşı
+description: Bir türü farklı bir ad alanına veya klasöre taşımak için hızlı eylemler ve yeniden düzenlemeler menüsünü nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 06/17/2019
 ms.topic: reference
 author: mikadumont
@@ -10,12 +12,12 @@ dev_langs:
 ms.workload:
 - dotnet
 monikerRange: vs-2019
-ms.openlocfilehash: 58d2757fa8798b67c8e597f5f82bc65a279f4a90
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 21e13938bcb19306b897501a4aad11d6b4bd15ea
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80375562"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96616921"
 ---
 # <a name="move-type-to-namespace"></a>Türü ad alanına taşı
 
@@ -32,7 +34,7 @@ Bu yeniden düzenleme için geçerlidir:
 ## <a name="how-to"></a>Nasıl yapılır
 
 1. İmlecinizi sınıf adına yerleştirin.
-2. **CTRL**tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
+2. **CTRL** tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
 3. **Ad alanına taşı**' yı seçin.
 
    ![Ad alanı yeniden düzenleme öğesine taşı](media/move-to-namespace.png)

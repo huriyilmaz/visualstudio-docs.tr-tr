@@ -1,5 +1,7 @@
 ---
 title: if deyimini tersine çevirme
+description: Kodun anlamını değiştirmeden bir if veya If Else ifadesini tersine çevirmek için hızlı eylemler ve yeniden düzenlemeler menüsünü nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/19/2019
 ms.topic: reference
 author: kendrahavens
@@ -10,12 +12,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: a0419100cbc5fcd543eb250fa85cbfe2ebd1c97f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 71b3a11e053b6a600d0b33db7c52a91c4950bf5b
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "65531584"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96616986"
 ---
 # <a name="invert-if-statement"></a>if deyimini tersine çevirme
 
@@ -36,7 +38,7 @@ Bu yeniden düzenleme için geçerlidir:
 
     ![Değilse ters çevir](media/invert-if.png)
 
-2. **CTRL**tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
+2. **CTRL** tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
 
     ![Değilse kod düzeltmesini ters çevir](media/invert-if-codefix.png)
 

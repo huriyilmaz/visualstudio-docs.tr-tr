@@ -1,5 +1,7 @@
 ---
 title: C++ proje ayarları seçenekleri
+description: Projeler ve Çözümler bölümündeki VC + + proje ayarları sayfasını kullanarak, günlük, performans ve destekleyici dosya türleriyle ilgili C++ derleme ve proje ayarlarını tanımlama hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 08/02/2017
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: corob
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7acd0d8f9c6d15f9f20c42f59c3bd5562884ac3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 16226cd66c2cf46d1dc46f1cb3f90dc3bad9658c
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "68918891"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96616284"
 ---
 # <a name="vc-project-settings-projects-and-solutions-options-dialog-box"></a>VC++ Proje Ayarları, Projeler ve Çözümler, Seçenekler İletişim Kutusu
 

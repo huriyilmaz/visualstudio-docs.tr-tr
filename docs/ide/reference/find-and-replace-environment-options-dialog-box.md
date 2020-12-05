@@ -1,5 +1,7 @@
 ---
 title: Bul ve Değiştir, Ortam, Seçenekler İletişim Kutusu
+description: İleti kutularını ve bulma ve değiştirme işleminin diğer yönlerini denetlemek için ortam bölümündeki bul ve Değiştir sayfasını nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -14,16 +16,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3ef53be4d3894dd1d22a3afbde9dbf631b472aa2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 29f5fb6034c693c14cd04c83fe4c71f8763a0b0c
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75569575"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96617324"
 ---
 # <a name="find-and-replace-environment-options-dialog-box"></a>Bul ve Değiştir, Ortam, Seçenekler İletişim Kutusu
 
-İleti kutularını ve bulma ve değiştirme işleminin diğer yönlerini denetlemek için **Seçenekler** iletişim kutusunun bu sayfasını kullanın. **Seçenekler**' i ve ardından **Bul ve Değiştir** **' e**tıklayarak **Araçlar** menüsünden bu iletişim kutusuna erişebilirsiniz. Bu sayfa listede görünmezse, **Seçenekler** iletişim kutusunda **Tüm ayarı göster** ' i seçin.
+İleti kutularını ve bulma ve değiştirme işleminin diğer yönlerini denetlemek için **Seçenekler** iletişim kutusunun bu sayfasını kullanın. **Seçenekler**' i ve ardından **Bul ve Değiştir** **' e** tıklayarak **Araçlar** menüsünden bu iletişim kutusuna erişebilirsiniz. Bu sayfa listede görünmezse, **Seçenekler** iletişim kutusunda **Tüm ayarı göster** ' i seçin.
 
 ## <a name="uielement-list"></a>UIElement Listesi
 

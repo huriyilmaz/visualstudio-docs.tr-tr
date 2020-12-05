@@ -1,5 +1,7 @@
 ---
 title: Yazı Tipleri ve Renkler, Ortam, Seçenekler İletişim Kutusu
+description: IDE 'deki çeşitli kullanıcı arabirimi öğeleri için özel bir yazı tipi ve renk şeması oluşturmak üzere ortam bölümündeki yazı tipleri ve renkler sayfasını nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -25,12 +27,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9d5c9edd47e3db43735d3c6e8f6a4ec1a881214e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dbbd42b0e4eae6d124fc59d68592155bf2c9bd49
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75595624"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96617532"
 ---
 # <a name="fonts-and-colors-environment-options-dialog-box"></a>Yazı Tipleri ve Renkler, Ortam, Seçenekler İletişim Kutusu
 
@@ -40,9 +42,9 @@ Renk şeması değişiklikleri, yaptığınız oturum sırasında etkili olmaz. 
 
 **Ayarları göster**
 
-Yazı tipi ve renk düzenlerini değiştirebileceğiniz tüm Kullanıcı arabirimi öğelerini listeler. Bu listeden bir öğe seçtikten sonra, **görüntüleme öğelerinde**seçilen öğenin renk ayarlarını özelleştirebilirsiniz.
+Yazı tipi ve renk düzenlerini değiştirebileceğiniz tüm Kullanıcı arabirimi öğelerini listeler. Bu listeden bir öğe seçtikten sonra, **görüntüleme öğelerinde** seçilen öğenin renk ayarlarını özelleştirebilirsiniz.
 
-- **Metin düzenleyici**
+- **Metin Düzenleyici**
 
      Metin Düzenleyicisi için yazı tipi stili, boyutu ve renk görüntüleme ayarlarındaki değişiklikler, varsayılan metin düzenleyicinizdeki metnin görünümünü etkiler. IDE dışında bir metin düzenleyicisinde açılan belgeler bu ayarlardan etkilenmeyecektir.
 
@@ -80,7 +82,7 @@ Yazı tipi ve renk düzenlerini değiştirebileceğiniz tüm Kullanıcı arabiri
 
 **Varsayılanları Kullan**
 
-**Ayarlarını göster**bölümünde seçilen liste öğesinin yazı tipi ve renk değerlerini sıfırlar. Diğer görüntüleme düzenleri seçime uygun olduğunda **kullan** düğmesi görünür. Örneğin, yazıcı için iki düzen arasından seçim yapabilirsiniz.
+**Ayarlarını göster** bölümünde seçilen liste öğesinin yazı tipi ve renk değerlerini sıfırlar. Diğer görüntüleme düzenleri seçime uygun olduğunda **kullan** düğmesi görünür. Örneğin, yazıcı için iki düzen arasından seçim yapabilirsiniz.
 
 **Yazı tipi (kalın tür sabit genişlikli yazı tiplerini gösterir)**
 
@@ -95,11 +97,11 @@ Vurgulanan yazı tipi için kullanılabilir nokta boyutlarını listeler. Yazı 
 Ön plan ve arka plan rengini değiştirebileceğiniz öğeleri listeler.
 
 > [!NOTE]
-> **Düz metin** varsayılan görüntüleme öğesidir. Bu nedenle, **düz metine** atanan özellikler diğer görüntü öğelerine atanan özellikler tarafından geçersiz kılınır. Örneğin, maviyi **düz metin** olarak ve yeşil renkle **tanımlayıcıya**atarsanız, tüm tanımlayıcılar yeşil renkte görünür. Bu örnekte, **tanımlayıcı** özellikleri **düz metin** özelliklerini geçersiz kılar.
+> **Düz metin** varsayılan görüntüleme öğesidir. Bu nedenle, **düz metine** atanan özellikler diğer görüntü öğelerine atanan özellikler tarafından geçersiz kılınır. Örneğin, maviyi **düz metin** olarak ve yeşil renkle **tanımlayıcıya** atarsanız, tüm tanımlayıcılar yeşil renkte görünür. Bu örnekte, **tanımlayıcı** özellikleri **düz metin** özelliklerini geçersiz kılar.
 
 Bazı görüntü öğeleri şunlardır:
 
-|Öğeyi görüntüle|Description|
+|Öğeyi görüntüle|Açıklama|
 |------------------|-----------------|
 |**Düz Metin**|Düzenleyicideki metin.|
 |**Seçilen Metin**|Düzenleyici odağa sahip olduğunda geçerli seçime dahil edilen metin.|
@@ -132,7 +134,7 @@ Bazı görüntü öğeleri şunlardır:
 |**Dokunulmayan kapsam alanı**|Birim testi kapsamında olmayan kod.|
 |**Kapsam kısmen dokunulmaz alanı**|Birim testinin kısmen kapsadığı kod.|
 |**Kapsam dokunulmaz alanı**|Bir birim testinin tamamen kapsadığı kod.|
-|**CSS yorumu**|Geçişli Stil Sayfaları bir yorum. Örneğin:<br /><br /> /* yorum \*/|
+|**CSS yorumu**|Geçişli Stil Sayfaları bir yorum. Örnek:<br /><br /> /* yorum \*/|
 |**CSS anahtar sözcüğü**|Basamaklı stil sayfasındaki anahtar sözcükler.|
 |**CSS özellik adı**|Arka plan gibi bir özelliğin adı.|
 |**CSS özellik değeri**|Mavi gibi bir özelliğe atanan değer.|
@@ -155,7 +157,7 @@ Bazı görüntü öğeleri şunlardır:
 |**Bellek verileri**|**Bellek** penceresi içindeki verileri göstermek için kullanılan metin rengi.|
 |**Bellek okunamaz**|**Bellek** penceresi içindeki okunamaz bellek alanını göstermek için kullanılan metnin rengi.|
 |**Sayı**|Kodda gerçek bir sayısal değeri temsil eden bir sayı.|
-|**İşlecinde**|+,-, Ve! = gibi işleçler.|
+|**İşleç**|+,-, Ve! = gibi işleçler.|
 |**Farklı Bir Hata**|Diğer hata türleri diğer hata dalgalı çizgiler kapsamına girmeyen bir hata oluştu. Şu anda, Düzenle ve devam et 'de işlenmemiş düzenlemelerini içerir.|
 |**Önişlemci anahtar sözcüğü**|#İnclude gibi Önişlemci tarafından kullanılan anahtar sözcükler.|
 |**Salt okuma bölgesi**|Düzenlenemeyen kod. Örneğin, kod tanımı görünümü penceresinde veya Düzenle ve devam et sırasında değiştirilemeyen kodda görüntülenen kod.|
@@ -168,7 +170,7 @@ Bazı görüntü öğeleri şunlardır:
 |**SQL DML Işaretçisi**|Transact-SQL Düzenleyicisi için geçerlidir. Bu düzenleyicideki DML deyimleri, varsayılan olarak bir sınırlayıcı mavi kutusuyla işaretlenir.|
 |**Eski kod**|Yenisiyle değiştirilen kod bir güncelleştirme bekliyor. Bazı durumlarda, Düzenle ve devam et, kod değişikliklerini hemen uygulayamaz, ancak hata ayıklamaya devam ederken bunları daha sonra uygulayacaktır. Bu, şu anda yürütülmekte olan işlevi çağırması gereken bir işlevi düzenlerseniz veya çağrı yığınında bekleyen bir işleve 64 bayttan fazla yeni değişken eklerseniz oluşur. Bu durumda, hata ayıklayıcı bir "eski kod uyarısı" iletişim kutusu görüntüler ve söz konusu işlev bitene kadar yerine geçilen kod yürütülmeye devam eder ve yeniden çağırılır. Düzenle ve devam et, kod değişikliklerini o zaman uygular.|
 |**Dize**|Dize sabit değerleri.|
-|**Dize (C# @ tam)**|C# dilinde, harfine yorumlanan dize sabit değerleri. Örneğin:<br /><br /> @"x"|
+|**Dize (C# @ tam)**|C# dilinde, harfine yorumlanan dize sabit değerleri. Örnek:<br /><br /> @"x"|
 |**Söz dizimi hatası**|Ayrıştırma hataları.|
 |**Görev Listesi kısayolu**|Bir satıra **görev listesi** kısayolu eklenirse ve gösterge kenar boşluğu devre dışıysa, çizgi vurgulanır.|
 |**İzleme noktası (devre dışı)**|Kullanılmadı.|
@@ -210,13 +212,13 @@ Bazı görüntü öğeleri şunlardır:
 
 **Öğe ön planı**
 
-**Görüntüleme öğelerinde**seçilen öğenin ön planı için seçebileceğiniz kullanılabilir renkleri listeler. Bazı öğeler ilişkili olduğundan ve bu nedenle tutarlı bir görüntüleme düzenini koruduğundan, metnin ön plan rengini değiştirmek de derleyici hatası, anahtar sözcük veya Işleç gibi öğelerin varsayılan değerlerini değiştirir.
+**Görüntüleme öğelerinde** seçilen öğenin ön planı için seçebileceğiniz kullanılabilir renkleri listeler. Bazı öğeler ilişkili olduğundan ve bu nedenle tutarlı bir görüntüleme düzenini koruduğundan, metnin ön plan rengini değiştirmek de derleyici hatası, anahtar sözcük veya Işleç gibi öğelerin varsayılan değerlerini değiştirir.
 
-**Automatic**
+**Otomatik**
 
-Öğeler, **düz metin**gibi diğer görüntüleme öğelerinden ön plan rengini alabilir. Bu seçeneği kullanarak, devralınan bir görüntüleme öğesinin rengini değiştirdiğinizde ilgili görüntü öğelerinin rengi de otomatik olarak değişir. Örneğin, **derleyici hatası** için **Otomatik** değeri seçtiyseniz ve daha sonra **düz metnin** rengini kırmızı olarak değiştirdiyseniz, **derleyici hatası** da otomatik olarak kırmızı rengi miras alır.
+Öğeler, **düz metin** gibi diğer görüntüleme öğelerinden ön plan rengini alabilir. Bu seçeneği kullanarak, devralınan bir görüntüleme öğesinin rengini değiştirdiğinizde ilgili görüntü öğelerinin rengi de otomatik olarak değişir. Örneğin, **derleyici hatası** için **Otomatik** değeri seçtiyseniz ve daha sonra **düz metnin** rengini kırmızı olarak değiştirdiyseniz, **derleyici hatası** da otomatik olarak kırmızı rengi miras alır.
 
-**Varsayılanını**
+**Varsayılan**
 
 Visual Studio 'Yu ilk kez açtığınızda öğe için görüntülenen renk. **Varsayılanları Kullan** düğmesine tıklamak bu renge sıfırlanır.
 
@@ -229,13 +231,13 @@ Görüntüleme öğeleri listesinde seçilen öğe için özel bir renk ayarlama
 
 **Öğe arka planı**
 
-, **Görüntüleme öğelerinde**seçilen öğe için bir arka plan rengi seçebileceğiniz bir renk paleti sağlar. Bazı öğeler ilişkili olduğundan ve bu nedenle tutarlı bir görüntüleme düzenini koruduğundan, metnin arka plan rengini değiştirmek de derleyici hatası, anahtar sözcük veya Işleç gibi öğelerin varsayılan değerlerini değiştirir.
+, **Görüntüleme öğelerinde** seçilen öğe için bir arka plan rengi seçebileceğiniz bir renk paleti sağlar. Bazı öğeler ilişkili olduğundan ve bu nedenle tutarlı bir görüntüleme düzenini koruduğundan, metnin arka plan rengini değiştirmek de derleyici hatası, anahtar sözcük veya Işleç gibi öğelerin varsayılan değerlerini değiştirir.
 
-**Automatic**
+**Otomatik**
 
-Öğeler **düz metin**gibi diğer görüntüleme öğelerinden arka plan rengini alabilir. Bu seçeneği kullanarak, devralınan bir görüntüleme öğesinin rengini değiştirdiğinizde ilgili görüntü öğelerinin rengi de otomatik olarak değişir. Örneğin, **derleyici hatası** için **Otomatik** değeri seçtiyseniz ve daha sonra **düz metnin** rengini kırmızı olarak değiştirdiyseniz, **derleyici hatası** da otomatik olarak kırmızı rengi miras alır.
+Öğeler **düz metin** gibi diğer görüntüleme öğelerinden arka plan rengini alabilir. Bu seçeneği kullanarak, devralınan bir görüntüleme öğesinin rengini değiştirdiğinizde ilgili görüntü öğelerinin rengi de otomatik olarak değişir. Örneğin, **derleyici hatası** için **Otomatik** değeri seçtiyseniz ve daha sonra **düz metnin** rengini kırmızı olarak değiştirdiyseniz, **derleyici hatası** da otomatik olarak kırmızı rengi miras alır.
 
-**Varsayılanını**
+**Varsayılan**
 
 Visual Studio 'Yu ilk kez açtığınızda öğe için görüntülenen renk. **Varsayılanları Kullan** düğmesine tıklamak bu renge sıfırlanır.
 

@@ -1,5 +1,7 @@
 ---
 title: Oluşturucu kaldırma hızlı eylemi oluştur
+description: Hızlı Eylemler ve yeniden düzenlemeler menüsünü kullanarak yeni bir Deconstructor için yöntem Saplamasının hemen nasıl oluşturulacağını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/19/2019
 ms.topic: reference
 author: kendrahavens
@@ -9,12 +11,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5a3a89d15d05b44575fede98d3043d706b24c1d9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ff2ac7682eff1c3da0597a95945a6a0b016d9213
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "65531892"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96617259"
 ---
 # <a name="generate-a-deconstructor-in-visual-studio"></a>Visual Studio 'da bir Deconstructor oluşturma
 
@@ -40,7 +42,7 @@ Bu kod üretimi için geçerlidir:
       - Bildirimindeki imleç ile CTRL + ' yi seçin. **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
    - **Fare**
       - Sağ tıklayın ve **Hızlı Eylemler ve yeniden düzenlemeler** menüsünü seçin.
-      - Şunu seçerek: ![Screwdriver](media/screwdriver.png) Sol kenar boşluğunda, metin imleci sınıfında zaten boş satırda görünen simge.
+      - :::image type="icon" source="media/screwdriver.png":::Metin imleci, sınıftaki boş satırda varsa sol kenar boşluğunda görünen simgeyi seçin.
 
       ![Deconstructor kodu düzeltmesini oluştur](media/deconstruct-codefix.png)
 

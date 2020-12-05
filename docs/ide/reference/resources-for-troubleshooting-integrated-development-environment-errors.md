@@ -1,5 +1,7 @@
 ---
 title: Sorun giderme için kaynaklar
+description: Bilgi Bankası makalelerini, forumları veya ürün desteğini kullanarak bir sorunu çözmenize yardımcı olmak için yeterince bilgilendirici olmayan IDE hatalarında sorun giderme hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 07/23/2020
 ms.topic: troubleshooting
 f1_keywords:
@@ -93,12 +95,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f18ef8a0bf8ffc6b7478f307b6c2a37247bef034
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f3fdf18c67be8188bd03c498778fe8e6ad9409ee
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87234737"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96616596"
 ---
 # <a name="resources-for-troubleshooting-integrated-development-environment-errors"></a>Tümleşik geliştirme ortamı hatalarında sorun giderme kaynakları
 

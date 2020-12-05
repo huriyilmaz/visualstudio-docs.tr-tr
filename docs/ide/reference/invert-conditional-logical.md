@@ -1,5 +1,7 @@
 ---
 title: Koşullu ifadeleri ve mantıksal işlemleri tersine çevirme
+description: Koşullu bir ifadeyi veya koşullu ve/veya işlecini tersine çevirmek için hızlı eylemler ve yeniden düzenlemeler menüsünü nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/19/2019
 ms.topic: reference
 author: kendrahavens
@@ -10,12 +12,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3931ae53fc29b0ffd8b8b6e96951a0f4786ff756
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 180e42d5399116df95289e4e5fd0aed1255bf3de
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "65531683"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96617389"
 ---
 # <a name="invert-conditional-expressions-and-conditional-andor-operators"></a>Koşullu ifadeleri ve koşullu ve/veya işleçleri ters çevir
 
@@ -33,12 +35,12 @@ Bu yeniden düzenleme için geçerlidir:
 ## <a name="invert-conditional-expressions-and-conditional-andor-operators-refactoring"></a>Koşullu ifadeleri ve koşullu ve/veya işleçleri yeniden düzenlemeyi ters çevir
 
 1. İmlecinizi koşullu bir ifadeye veya koşullu ve/veya işleçte yerleştirin.
-2. **CTRL**tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
+2. **CTRL** tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
 3. **Koşullu çevir** ' i seçin veya ' **&& ' öğesini ' | | ' ile değiştirin**
 
-    ![Koşullu ters çevir](media/invert-conditional.png)
+    ![Ters çevir koşullu seçeneğinin ekran görüntüsü.](media/invert-conditional.png)
 
-    ![Koşullu ters çevir](media/invert-logical-operator.png)
+    ![Değiştirme && ekran görüntüsü | | seçeneği.](media/invert-logical-operator.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

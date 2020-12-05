@@ -1,5 +1,7 @@
 ---
 title: Yeniden düzenleme yeniden Düzenle
+description: Alanlar, yerel değişkenler, Yöntemler, ad alanları, Özellikler ve türler gibi kod sembolleri için tanımlayıcıları yeniden adlandırmak üzere yeniden Düzenle özelliğini nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 05/04/2020
 ms.topic: reference
 author: TerryGLee
@@ -12,12 +14,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8d5b3d32b23b336dc86a92c33bcb97d02312f2dc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 43a6e93815732c4f9d2ec7f29d6d6bef4c1f3451
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84182969"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96616726"
 ---
 # <a name="rename-a-code-symbol-refactoring"></a>Kod sembolünü yeniden düzenlemeyi yeniden adlandırma
 
@@ -48,7 +50,7 @@ Bu yeniden düzenleme için geçerlidir:
 2. Ardından, klavyenizi veya farenizi aşağıdaki şekilde kullanın:
 
    - **Klavye**
-      - **CTRL + r**, ardından **CTRL + r**tuşlarına basın. (Klavye kısayolunuzun seçtiğiniz profile göre farklı olabileceğini unutmayın.)
+      - **CTRL + r**, ardından **CTRL + r** tuşlarına basın. (Klavye kısayolunuzun seçtiğiniz profile göre farklı olabileceğini unutmayın.)
    - **Fare**
       - **Düzenle > yeniden düzenle > yeniden adlandır**' ı seçin.
       - Koda sağ tıklayıp **Yeniden Adlandır**' ı seçin.
@@ -78,7 +80,7 @@ Bu yeniden düzenleme için geçerlidir:
 
    ![Yeniden adlandırma çakışması](media/rename-conflict-cs.png)
 
-- Bir sembolü yeniden adlandırmaya yönelik başka bir yol da düzenleyicide adını değiştirkullanmaktır. Ardından, imleç sembol adında, **CTRL**tuşuna basın + **.** ya da görüntülenen ampul simgesi menüsünü genişletin ve **Yeniden Adlandır \<old name> \<new name> **' ı seçin.
+- Bir sembolü yeniden adlandırmaya yönelik başka bir yol da düzenleyicide adını değiştirkullanmaktır. Ardından, imleç sembol adında, **CTRL** tuşuna basın + **.** ya da görüntülenen ampul simgesi menüsünü genişletin ve **Yeniden Adlandır \<old name> \<new name>**' ı seçin.
 
    ![Düzenleyicide yeniden adlandırma](media/rename-with-editor-cs.png)
 

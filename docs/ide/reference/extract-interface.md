@@ -1,5 +1,7 @@
 ---
 title: Arabirim yeniden düzenlemesi Ayıkla
+description: Bir sınıf, yapı veya arabirimden var olan üyeleri kullanarak bir arabirim oluşturmak için hızlı eylemler ve yeniden düzenlemeler menüsünü nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 01/26/2018
 ms.topic: reference
 author: TerryGLee
@@ -12,12 +14,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5055f50d07cf9362c9be1bdc8135e31240a7cc66
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 13e9b684c81abf491b5836c96190c6a89bdc0643
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75595676"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96617402"
 ---
 # <a name="extract-an-interface-refactoring"></a>Arabirim yeniden düzenlemesi Ayıkla
 
@@ -48,8 +50,8 @@ Bu yeniden düzenleme için geçerlidir:
 2. Sonra, aşağıdaki eylemlerden birini yapın:
 
    - **Klavye**
-      - **CTRL + R**, ardından **CTRL + ı**tuşlarına basın. (Klavye kısayolunuz, seçtiğiniz profile bağlı olarak farklı olabilir.)
-      - **CTRL**tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek ve Önizleme penceresi açılır penceresinden **Arabirimi Ayıkla** ' yı seçin.
+      - **CTRL + R**, ardından **CTRL + ı** tuşlarına basın. (Klavye kısayolunuz, seçtiğiniz profile bağlı olarak farklı olabilir.)
+      - **CTRL** tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek ve Önizleme penceresi açılır penceresinden **Arabirimi Ayıkla** ' yı seçin.
    - **Fare**
       - **Arabirimi ayıkla > düzenle > yeniden Düzenle**' yi seçin.
       - Sınıfın adına sağ tıklayın, **Hızlı Eylemler ve yeniden düzenlemeler** menüsünü seçin ve Önizleme penceresi açılır penceresinden **Arabirimi Ayıkla** ' yı seçin.
@@ -60,11 +62,11 @@ Bu yeniden düzenleme için geçerlidir:
 
    | Alan | Açıklama |
    | - | - |
-   | **Yeni arabirim adı** | Oluşturulacak arabirimin adı. Ad varsayılan olarak I*ClassName*olarak, burada *ClassName* yukarıda seçtiğiniz sınıfın adıdır. |
-   | **Yeni dosya adı** | Arabirimi içerecek oluşturulan dosyanın adı. Arabirim adında olduğu gibi, bu ad varsayılan olarak I*ClassName*olur; burada *ClassName* yukarıda seçtiğiniz sınıfın adıdır. Ayrıca **geçerli dosyaya ekleme**seçeneğini de belirleyebilirsiniz. |
+   | **Yeni arabirim adı** | Oluşturulacak arabirimin adı. Ad varsayılan olarak I *ClassName* olarak, burada *ClassName* yukarıda seçtiğiniz sınıfın adıdır. |
+   | **Yeni dosya adı** | Arabirimi içerecek oluşturulan dosyanın adı. Arabirim adında olduğu gibi, bu ad varsayılan olarak I *ClassName* olur; burada *ClassName* yukarıda seçtiğiniz sınıfın adıdır. Ayrıca **geçerli dosyaya ekleme** seçeneğini de belirleyebilirsiniz. |
    | **Arabirim oluşturmak için ortak üyeleri seçin** | Arabirime Ayıklanacak öğeler. İstediğiniz kadar istediğiniz kadar seçebilirsiniz. |
 
-4. **Tamam ' ı**seçin.
+4. **Tamam ' ı** seçin.
 
    Arabirim, belirtilen ad dosyasında oluşturulur. Ayrıca, seçtiğiniz sınıf bu arabirimi uygular.
 

@@ -1,5 +1,7 @@
 ---
 title: XML belgesi açıklamalarını Ekle
+description: Kodunuzda, .NET derlemenizin yanı sıra dağıtmak üzere derleyicinin ürettiği bir XML dosyası oluşturmak için kullanabileceğiniz XML belge açıklamalarını ekleme hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 01/22/2020
 ms.topic: reference
 author: mikadumont
@@ -7,12 +9,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0e21d0617f954c0cc34975b7f8626b83966f6b5d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 250e07994b04e03b015bf3893633ebce0f36a90d
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77706406"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96617480"
 ---
 # <a name="how-to-insert-xml-comments-for-documentation-generation"></a>Nasıl yapılır: belge oluşturmak için XML açıklamaları ekleme
 
@@ -30,7 +32,7 @@ Derleyici tarafından oluşturulan XML dosyası, Visual Studio ve diğer IDE 'Le
 
 1. Metin imlecinizi, belge, örneğin bir yöntem gibi, belgelemek istediğiniz öğenin üzerine yerleştirin.
 
-2. Şunlardan birini yapın:
+2. Aşağıdakilerden birini yapın:
 
    - `///`C# yazın veya `'''` Visual Basic
 
@@ -46,11 +48,11 @@ Derleyici tarafından oluşturulan XML dosyası, Visual Studio ve diğer IDE 'Le
 
 3. Kod öğesini tam olarak belgelemek için her bir XML öğesinin açıklamalarını girin.
 
-   ![Açıklama tamamlandı](media/doc-result-cs.png)
+   ![Tamamlanan yorumu gösteren ekran görüntüsü.](media/doc-result-cs.png)
 
 Öğe üzerine gelindiğinde hızlı bilgi içinde işlenecek XML açıklamalarındaki stilleri kullanabilirsiniz. Bu stiller şunlardır: italik, kalın, madde işaretleri ve tıklatılabilir bir bağlantı.
 
-   ![Açıklama tamamlandı](media/doc-style-cs.png) 
+   ![İtalik, kalın, madde işaretleri ve tıklatılabilir bir bağlantı için stil etiketleriyle tamamlanan açıklamayı gösteren ekran görüntüsü.](media/doc-style-cs.png) 
 
 > [!NOTE]
 > C# veya Visual Basic yazdıktan sonra XML belge açıklamalarını değiştirme [seçeneği](../../ide/reference/options-text-editor-csharp-advanced.md) vardır `///` `'''` . Menü çubuğundan **Araçlar**  >  **Seçenekler** ' i seçerek **Seçenekler** iletişim kutusunu açın. Sonra, **metin düzenleyici**  >  **C#** veya **temel**  >  **Gelişmiş**' e gidin. **Düzenleyici yardım** bölümünde **XML belge açıklamaları oluştur** seçeneğini arayın.

@@ -1,5 +1,7 @@
 ---
 title: Başvurular Sayfası, Proje Tasarımcısı (Visual Basic)
+description: Projenin başvurularını, Web başvurularını ve içeri aktarılan ad alanlarını yönetmek için proje Tasarımcısı ' nın başvurular sayfasını nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 06/21/2017
 ms.topic: reference
 f1_keywords:
@@ -15,12 +17,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b80427999ad841c493e61cd704b64435f81c3914
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6cc06bd51d66b49991e12db8bb03a63a5a742fe1
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75565610"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96616674"
 ---
 # <a name="references-page-project-designer-visual-basic"></a>Başvurular Sayfası, Proje Tasarımcısı (Visual Basic)
 
@@ -68,7 +70,7 @@ Web başvurusu **Ekle** iletişim kutusunu kullanarak projenize Web başvurusu e
 
 Kendi ad alanınızı bu kutuya yazabilir ve **Kullanıcı Içeri aktarma Ekle** ' ye tıklayarak ad alanları listesine ekleyebilirsiniz.
 
-Kullanıcı tarafından içeri aktarılan ad alanları için diğer adlar oluşturabilirsiniz. Bunu yapmak için, biçim *diğer* = *ad alanındaki*diğer adı ve ad alanını girin. Bu, uzun ad alanları kullanıyorsanız faydalıdır, örneğin: `Http= MyOrg.ObjectLib.Internet.WebRequestMethods.Http` .
+Kullanıcı tarafından içeri aktarılan ad alanları için diğer adlar oluşturabilirsiniz. Bunu yapmak için, biçim *diğer* = *ad alanındaki* diğer adı ve ad alanını girin. Bu, uzun ad alanları kullanıyorsanız faydalıdır, örneğin: `Http= MyOrg.ObjectLib.Internet.WebRequestMethods.Http` .
 
  **Kullanıcı Içeri aktarma Ekle**
 

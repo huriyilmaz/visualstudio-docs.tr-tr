@@ -1,5 +1,7 @@
 ---
 title: Genel, Ortam, Seçenekler İletişim Kutusu
+description: IDE için renk temalarını, durum çubuğu ayarlarını, dosya uzantısı ilişkilendirmelerini ve daha fazlasını değiştirmek üzere ortam bölümündeki Genel sayfasını nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 07/26/2019
 ms.topic: reference
 f1_keywords:
@@ -20,12 +22,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dfd1b876e58c05c668fd74087d5131bb1e9fcd40
-ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
+ms.openlocfilehash: 6068f63cc9c2e7abe36b6eac804beaaa6603303e
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96189790"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96617272"
 ---
 # <a name="options-dialog-box-environment--general"></a>Seçenekler iletişim kutusu: ortam \> genel
 

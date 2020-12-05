@@ -1,5 +1,7 @@
 ---
 title: Komut Penceresi
+description: İfadeleri hata ayıklamak ve değerlendirmek, deyimleri yürütmek ve değişken değerlerini yazdırmak için hemen penceresini nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/25/2019
 ms.topic: reference
 dev_langs:
@@ -16,18 +18,18 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b21cdb9136abe1e960e5b74bbf09e7d1694519d7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 342a2a34528134ed1174058b6701c77c9217fc63
+ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75568964"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96617025"
 ---
 # <a name="immediate-window"></a>Komut penceresi
 
 İfadeleri hata ayıklamak ve değerlendirmek, deyimleri yürütmek ve değişken değerlerini yazdırmak için **hemen** penceresini kullanın. **Komut** penceresi, şu anda seçili olan projeyi oluşturup kullanarak ifadeleri değerlendirir.
 
-**Hemen** penceresini göstermek için, bir projeyi düzenlenmek üzere açın ve sonra Windows anında **Hata Ayıkla**' yı seçin  >  **Windows**  >  **Immediate** veya **CTRL**+ + **Alt** + **ı**tuşlarına basın. Ayrıca, **komut** penceresinde **hata ayıkla. hemen** girebilirsiniz.
+**Hemen** penceresini göstermek için, bir projeyi düzenlenmek üzere açın ve sonra Windows anında **Hata Ayıkla**' yı seçin  >  **Windows**  >  **Immediate** veya **CTRL**+ + **Alt** + **ı** tuşlarına basın. Ayrıca, **komut** penceresinde **hata ayıkla. hemen** girebilirsiniz.
 
 **Komut** penceresi IntelliSense 'i destekler.
 
@@ -74,7 +76,7 @@ Tasarım zamanında bir işlevi veya alt yordamı yürütmek için **hemen** pen
 
 2. **Hata Ayıkla** menüsünde **Windows**  >  **anında**' yı seçin.
 
-3. `?MyFunction(2)` **Hemen** penceresine yazın ve **ENTER**tuşuna basın.
+3. `?MyFunction(2)` **Hemen** penceresine yazın ve **ENTER** tuşuna basın.
 
     **Komut** penceresi çalışır `MyFunction` ve görüntülenir `4` .
 
