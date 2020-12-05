@@ -1,5 +1,7 @@
 ---
 title: Başlatma tabanlı ek | Microsoft Docs
+description: Otomatik olan ve el ile ek gibi bir yolu izleyen bir programa başlatma tabanlı ek hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4910a97350366500b56593ec0076fdf0990b6d8f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7e041c692a833b7d0a1891c078388a3f5b2d11e4
+ms.sourcegitcommit: 42981ace63c0f2b087de5703ca76b8dcdd93a719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738466"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96606677"
 ---
 # <a name="launch-based-attachment"></a>Başlatma tabanlı ek
 Bir programa başlatma tabanlı ek otomatik. Programı barındıran işlem SDM tarafından başlatıldığında, başlatma tabanlı ek el ile ek yöntemine benzer bir yol izler. Bilgi için bkz. [programa iliştirme](../../extensibility/debugger/attaching-to-the-program.md).

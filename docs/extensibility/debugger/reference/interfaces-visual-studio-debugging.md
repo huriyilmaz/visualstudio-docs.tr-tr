@@ -1,5 +1,7 @@
 ---
 title: Arabirimler (Visual Studio hata ayıklama) | Microsoft Docs
+description: Visual Studio Hata ayıklamasında çekirdek arabirimler, ifade değerlendirme arabirimleri ve sembol sağlayıcısı arabirimleri hakkında bilgi edinmek için bu kaynakları kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d31eb6900841dee9d2675e87bac573b432ff2acb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 508cf5d324a62b0ada056fe0c2495ff97334b8cf
+ms.sourcegitcommit: 42981ace63c0f2b087de5703ca76b8dcdd93a719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80715075"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96606573"
 ---
 # <a name="interfaces-visual-studio-debugging"></a>Arabirimler (Visual Studio Hata Ayıklama)
 Yöntemler, içindekiler tablosundaki her arabirim altında ve vtable sırasındaki arabirim sayfasında alfabetik olarak listelenir.
@@ -25,7 +27,7 @@ Yöntemler, içindekiler tablosundaki her arabirim altında ve vtable sırasınd
 
  Hata ayıklama altyapısında kullanılan arabirimleri açıklar.
 
-- [İfade Değerlendirme Arabirimleri](../../../extensibility/debugger/reference/expression-evaluation-interfaces.md)
+- [Expression Evaluation Interfaces](../../../extensibility/debugger/reference/expression-evaluation-interfaces.md)
 
  Kesme modunda bir çağrı yığınında ifadeleri değerlendiren arabirimleri açıklar.
 

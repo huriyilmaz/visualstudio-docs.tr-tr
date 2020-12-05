@@ -1,7 +1,7 @@
 ---
 title: Kullanılabilir araçlar
 description: Geliştirme ortamını özelleştirmek için kullanılabilen tüm devinit araçlarının listesi.
-ms.date: 08/28/2020
+ms.date: 12/02/2020
 ms.topic: reference
 author: andysterland
 ms.author: andster
@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 6bb4656dd04db576877cfdddf67869eb6d1eff35
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: a8d8409cb6c959b8b2d1e9802a53775f2f360a44
+ms.sourcegitcommit: 42981ace63c0f2b087de5703ca76b8dcdd93a719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93399954"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96606710"
 ---
 # <a name="available-tools"></a>Kullanılabilir araçlar
 
@@ -26,11 +26,11 @@ Aşağıdaki tabloda devınit için şu anda kullanılabilir olan araçların bi
 |--------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
 | [**azurecli-login**](tool-azurecli-login.md)                                                     | Azure CLı komutunu yürütecek araç `az login --device-code` .                                             |
 | [**choco-install**](tool-choco-install.md)                                                       | Chocolatey paketlerini yüklemek için araç.                                                                        |
-| [**choco-upgrade**](tool-choco-upgrade.md)                                                       | Chocolatey paketlerini yükseltmek için araç.                                                                       |
+| [**choco-upgrade**](tool-choco-upgrade.md)                                                       | Chocolatey paketlerini yükseltmek için araç.                                                                        |
 | [**dotnet-restore**](tool-dotnet-restore.md)                                                     | Bir .NET projesinin bağımlılıklarını ve araçlarını geri yükleme aracı.                                               |
 | [**dotnet-toolinstall**](tool-dotnet-toolinstall.md)                                             | .NET Core araçları 'nı yüklemeye yönelik araç (örneğin,. DotNet-EF)                                                |
 | [**enable-iis**](tool-enable-iis.md)                                                             | IIS özelliklerini etkinleştirme ve en son ASP.NET barındırma paketini yüklemeye yönelik araç.                                  |
-| [**MSI-install**](tool-msi-install.md)                                                           | Bir yol veya URL 'ye verilen MSI dosyalarını yüklemeye yönelik araç.                                                              |
+| [**msi-install**](tool-msi-install.md)                                                           | Bir yol veya URL 'ye verilen MSI dosyalarını yüklemeye yönelik araç.                                                              |
 | [**npm-install**](tool-npm-install.md)                                                           | NPM paketlerini yüklemek için araç.                                                                               |
 | [**nuget-restore**](tool-nuget-restore.md)                                                       | NuGet paketlerini geri yüklemeye yönelik araç.                                                                         |
 | [**require-azureartifactscredentialprovider**](tool-require-azureartifactscredentialprovider.md) | Azure Artifacts kimlik bilgileri sağlayıcısını kurar.                                                           |
@@ -39,6 +39,7 @@ Aşağıdaki tabloda devınit için şu anda kullanılabilir olan araçların bi
 | [**require-dotnetframeworksdk**](tool-require-dotnetframeworksdk.md)                             | .NET Framework SDK 'Yı yüklemek için araç.                                                                     |
 | [**require-mssql**](tool-require-mssql.md)                                                       | MS SQL Server 2019 yüklemek için araç.                                                                         |
 | [**require-nodejs**](tool-require-nodejs.md)                                                     | NodeJS ve NPM 'yi yüklemek için araç.                                                                             |
+| [**require-nuget**](tool-require-nuget.md)                                                       | NuGet 'i yüklemeye yönelik araç.                                                                                      |
 | [**require-npm**](tool-require-npm.md)                                                           | NPM 'yi yüklemek için araç.                                                                                        |
 | [**require-psmodule**](tool-require-psmodule.md)                                                 | Galeriden PowerShell modülleri yüklemek için araç.                                                        |
 | [**require-vcpkg**](tool-require-vcpkg.md)                                                       | Vcpkg 'yi yüklemek için araç.                                                                                      |

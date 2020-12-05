@@ -1,5 +1,7 @@
 ---
 title: INTERCEPT_EXCEPTION_ACTION | Microsoft Docs
+description: INTERCEPT_EXCEPTION_ACTION numaralandırması, Visual Studio Hata ayıklamasında özel durumları kesintiye uğratan gerçekleştirilecek eylemi belirtir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -15,17 +17,17 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: cc44a4fc5264566468777749d5732662ba81ed6d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e80ed1b17f98326701b0ca0aacb8e114c9b49db4
+ms.sourcegitcommit: 42981ace63c0f2b087de5703ca76b8dcdd93a719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80715061"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96606449"
 ---
 # <a name="intercept_exception_action"></a>INTERCEPT_EXCEPTION_ACTION
 Özel durumları kesintiye girilirken gerçekleştirilecek eylemleri belirtir.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
 enum enum_INTERCEPT_EXCEPTION_ACTION
@@ -58,5 +60,5 @@ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Listelemeler](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [InterceptCurrentException](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md)

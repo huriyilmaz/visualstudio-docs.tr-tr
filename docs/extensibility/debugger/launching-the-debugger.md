@@ -1,5 +1,7 @@
 ---
 title: Hata ayıklayıcı başlatılıyor | Microsoft Docs
+description: Hata ayıklayıcıyı başlatmak için gereken uygun özniteliklere sahip yöntemlerin ve olayların sırası hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,14 +13,14 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ceb2f484449d1b3f8474a6586d298b057875b342
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 40b91ae695a5e78745c01c5ac974411ac924f8f0
+ms.sourcegitcommit: 42981ace63c0f2b087de5703ca76b8dcdd93a719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738452"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96606664"
 ---
-# <a name="launch-the-debugger"></a>Hata ayıklayıcıyı Başlat
+# <a name="launch-the-debugger"></a>Hata ayıklayıcıyı başlatma
 Hata ayıklayıcıyı başlatmak için doğru özniteliklerle doğru yöntem ve olay sırası gönderilmesi gerekir.
 
 ## <a name="sequences-of-methods-and-events"></a>Yöntem ve olay dizileri

@@ -1,5 +1,7 @@
 ---
 title: Program başlatma | Microsoft Docs
+description: Hata ayıklayıcıyı IDE 'den çalıştırmak için F5 'i kullanarak bir programda hata ayıkladığınızda gerçekleşen olay dizisi hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: bf638e0c96c7df1de2650260427a972a07efce23
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0dce13e49eeadf4dc02fec07707bebcfe164ed9c
+ms.sourcegitcommit: 42981ace63c0f2b087de5703ca76b8dcdd93a719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738482"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96606703"
 ---
 # <a name="launch-a-program"></a>Program başlatma
 Bir programda hata ayıklamak isteyen kullanıcılar, hata ayıklayıcıyı IDE 'den çalıştırmak için **F5** 'e basabilir. Bu, son olarak IDE 'nin bir hata ayıklama altyapısına (DE) bağlanmasına neden olan bir dizi olayı başlatır, bu da aşağıdaki gibi programa bağlı veya bağlı
@@ -39,7 +41,7 @@ Bir programda hata ayıklamak isteyen kullanıcılar, hata ayıklayıcıyı IDE 
 
    Yeni oluşturulan program, ile ilgili veya ilgisiz, aynı IDE 'den başlatılan veya bağlı olan diğer programlarla birlikte bir hata ayıklama oturumu oluşturabilir.
 
-   Programlı olarak, Kullanıcı **F5**tuşuna bastığında [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] hata ayıklama paketi, yöntemi aracılığıyla proje paketini (başlatılan programın türüyle ilişkili) çağırır <xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg.DebugLaunch%2A> , bu da <xref:Microsoft.VisualStudio.Shell.Interop.VsDebugTargetInfo2> çözümün etkin proje hata ayıklama ayarlarıyla bir yapıyı doldurur. Bu yapı, yöntemi çağrısıyla hata ayıklama paketine geri geçirilir <xref:Microsoft.VisualStudio.Shell.Interop.IVsDebugger2.LaunchDebugTargets2%2A> . Hata ayıklama paketi daha sonra oturum hata ayıklama Yöneticisi 'ni (SDM) başlatır ve bu, hata ayıklanan programı ve ilişkili hata ayıklama altyapılarını başlatır.
+   Programlı olarak, Kullanıcı **F5** tuşuna bastığında [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] hata ayıklama paketi, yöntemi aracılığıyla proje paketini (başlatılan programın türüyle ilişkili) çağırır <xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg.DebugLaunch%2A> , bu da <xref:Microsoft.VisualStudio.Shell.Interop.VsDebugTargetInfo2> çözümün etkin proje hata ayıklama ayarlarıyla bir yapıyı doldurur. Bu yapı, yöntemi çağrısıyla hata ayıklama paketine geri geçirilir <xref:Microsoft.VisualStudio.Shell.Interop.IVsDebugger2.LaunchDebugTargets2%2A> . Hata ayıklama paketi daha sonra oturum hata ayıklama Yöneticisi 'ni (SDM) başlatır ve bu, hata ayıklanan programı ve ilişkili hata ayıklama altyapılarını başlatır.
 
    SDM 'ye geçirilen bağımsız değişkenlerden biri, programı başlatmak için kullanılan DE GUID 'nin GUID 'sidir.
 
