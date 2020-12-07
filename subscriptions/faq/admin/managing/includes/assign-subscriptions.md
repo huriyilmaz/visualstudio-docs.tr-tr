@@ -6,13 +6,13 @@ ms.topic: include
 ms.assetid: 59eb35fd-ec94-41ce-b24c-a8a120976bac
 author: CaityBuschlen
 ms.author: cabuschl
-ms.date: 09/30/2020
-ms.openlocfilehash: add0bac2a9e7eb053c183d66fcee17c8133bb921
-ms.sourcegitcommit: 593bdd2da62633f8d1f1eef70d0238e2682f3e02
+ms.date: 12/03/2020
+ms.openlocfilehash: 5a12d59f90ee2a09002efcb99c78cfd563060006
+ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "91838315"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96584477"
 ---
 ## <a name="how-do-i-assign-visual-studio-subscriptions"></a>Visual Studio aboneliklerini nasıl atayabilirim?
 
@@ -43,7 +43,7 @@ Abonelikleri hızla ve kolayca atama hakkında daha fazla bilgi edinmek için Vi
 
 ## <a name="what-is-the-github-enterprise-setup-process"></a>GitHub Enterprise kurulum işlemi nasıldır? 
 
-GitHub Enterprise, Visual Studio aboneliklerinden ayrı olarak kurulur ve yönetilir. GitHub Enterprise ile Visual Studio satın alındıktan sonra, manage.visualstudio.com'da sözleşme yapma işlemiyle paralel (ama ayrı) olarak GitHub Enterprise hesabı ayarlama işlemi başlatılır. Bu GitHub Enterprise hesabının oluşturulması biraz zaman alabilir.  
+GitHub Enterprise, Visual Studio aboneliklerinden ayrı olarak kurulur ve yönetilir. GitHub Enterprise ile Visual Studio aboneliği satın alındıktan sonra, manage.visualstudio.com'da sözleşme yapma işlemiyle paralel (ama ayrı) olarak GitHub Enterprise hesabı ayarlama işlemi başlatılır. Bu GitHub Enterprise hesabının oluşturulması biraz zaman alabilir.  
 
 Şirketiniz GitHub Enterprise hesabını ayarladıktan sonra, kendilerine GitHub Enterprise ile Visual Studio abonelikleri atanan aboneler GitHub'dan Visual Studio aboneliklerinin bağlandığını bildiren bir e-posta alır. Aboneler bu e-postayı aldıktan sonra, uygun kuruluşuna davet almak için GitHub kuruluş yöneticilerine ulaşabilir. 
 
