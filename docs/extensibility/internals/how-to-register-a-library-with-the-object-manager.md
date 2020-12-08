@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: bir kitaplığı nesne yöneticisiyle kaydetme | Microsoft Docs'
+description: Sınıf Görünümü ve Nesne Tarayıcısı gibi gözatma araçlarındaki sembolleri görüntüleyebilmeniz için Visual Studio nesne Yöneticisi ile bir kitaplığı nasıl kaydedeceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -14,15 +16,15 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7179bd87fdfd9a2c3fc36958a9d964ec4f790dbd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8036a0f4fe073473891805766ea8e3bb941951f8
+ms.sourcegitcommit: 2f964946d7044cc7d49b3fc10b413ca06cb2d11b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905236"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761393"
 ---
 # <a name="how-to-register-a-library-with-the-object-manager"></a>Nasıl yapılır: bir kitaplığı nesne yöneticisiyle kaydetme
-**Sınıf görünümü**, **nesne tarayıcısı** **çağrı tarayıcısı** ve **sembol sonuçları bulma**gibi semboller-tarama araçları, projenizdeki veya dış bileşenlerdeki sembolleri görüntülemenizi sağlar. Semboller, ad alanları, sınıflar, arabirimler, Yöntemler ve diğer dil öğelerini içerir. Kitaplıklar bu sembolleri izler ve [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] araçları verilerle dolduran nesne Yöneticisi 'nde kullanıma sunar.
+**Sınıf görünümü**, **nesne tarayıcısı** **çağrı tarayıcısı** ve **sembol sonuçları bulma** gibi semboller-tarama araçları, projenizdeki veya dış bileşenlerdeki sembolleri görüntülemenizi sağlar. Semboller, ad alanları, sınıflar, arabirimler, Yöntemler ve diğer dil öğelerini içerir. Kitaplıklar bu sembolleri izler ve [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] araçları verilerle dolduran nesne Yöneticisi 'nde kullanıma sunar.
 
  Nesne Yöneticisi kullanılabilir tüm kitaplıkları izler. Sembol tarama araçları için semboller sağlamadan önce her kitaplığın nesne Yöneticisi ile kaydolması gerekir.
 

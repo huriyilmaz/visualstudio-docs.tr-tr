@@ -1,5 +1,7 @@
 ---
 title: Iç Içe projeler için komut Işlemeyi uygulama | Microsoft Docs
+description: Visual Studio tümleşik geliştirme ortamında (IDE) iç içe projeler için komut işlemeyi uygulamayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2092fc8033d5a5cc53b12bd63a945bd9865ca30e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 13cfa6ebb8cae645202339c511f15ca15e2b3490
+ms.sourcegitcommit: 2f964946d7044cc7d49b3fc10b413ca06cb2d11b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80707605"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761159"
 ---
 # <a name="implementing-command-handling-for-nested-projects"></a>İç içe Projeler için Komut İşlemesi Uygulama
 IDE, <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy> ve <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> arabirimleri aracılığıyla iç içe projelere geçirilen komutları geçirebilir veya üst projeler komutları filtreleyebilir veya geçersiz kılabilir.

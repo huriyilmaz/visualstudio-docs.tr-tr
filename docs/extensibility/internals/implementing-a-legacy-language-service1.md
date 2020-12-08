@@ -1,5 +1,7 @@
 ---
 title: Eski dil Service1 uygulama | Microsoft Docs
+description: Yönetilen paket çerçevesini (MPF) kullanarak genişletilmiş dil hizmeti özelliklerini destekleyen eski bir dil hizmetini nasıl uygulayacağınızı öğrenin. Bölüm 1/2.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2535c527fc3d2d94609246959c5293e455b9808d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: be2caf25dfef71cb267f49b6cfd732923aa0848c
+ms.sourcegitcommit: 2f964946d7044cc7d49b3fc10b413ca06cb2d11b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88238757"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761185"
 ---
 # <a name="implementing-a-legacy-language-service-1"></a>Eski dil hizmeti 1 uygulama
 Sözdizimi vurgulama, küme ayracı eşleştirme ve IntelliSense tamamlama gibi çok çeşitli özellikleri destekleyen eski bir dil hizmetini uygulamak için yönetilen paket çerçevesi 'nde (MPF) sınıfları kullanabilirsiniz.

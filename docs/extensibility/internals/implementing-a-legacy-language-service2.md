@@ -1,5 +1,7 @@
 ---
 title: Eski dil Service2 uygulama | Microsoft Docs
+description: Yönetilen paket çerçevesini (MPF) kullanarak genişletilmiş dil hizmeti özelliklerini destekleyen eski bir dil hizmetini nasıl uygulayacağınızı öğrenin. Bölüm 2/2.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: df44b92cdf311689397a062b127d4c3e514a15e6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1a7da218a9ada593731e6205e017861084e73adc
+ms.sourcegitcommit: 2f964946d7044cc7d49b3fc10b413ca06cb2d11b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88238705"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761146"
 ---
 # <a name="implementing-a-legacy-language-service-2"></a>Eski dil hizmeti uygulama 2
 Yönetilen paket çerçevesi 'ni (MPF) kullanarak bir dil hizmetini uygulamak için, sınıfından bir sınıf türetmeniz <xref:Microsoft.VisualStudio.Package.LanguageService> ve aşağıdaki soyut yöntemleri ve özellikleri uygulamanız gerekir:
@@ -32,7 +34,7 @@ Yönetilen paket çerçevesi 'ni (MPF) kullanarak bir dil hizmetini uygulamak i�
 
   Ek özellikleri desteklemek için dil hizmetinizin MPF dil hizmeti sınıflarından birindeki bir sınıfı türetmeniz gerekebilir; Örneğin, ek menü komutlarını desteklemek için, sınıfından bir sınıf türetmeniz <xref:Microsoft.VisualStudio.Package.ViewFilter> ve komut işleme yöntemlerinin birkaçını geçersiz kılmanız gerekir ( <xref:Microsoft.VisualStudio.Package.ViewFilter> Ayrıntılar için bkz.). <xref:Microsoft.VisualStudio.Package.LanguageService>Sınıfı, çeşitli sınıfların yeni örneklerini oluşturmak için çağrılan ve sınıfınızın bir örneğini sağlamak için uygun oluşturma yöntemini geçersiz kıldığınız birkaç yöntem sağlar. Örneğin, <xref:Microsoft.VisualStudio.Package.LanguageService.CreateViewFilter%2A> <xref:Microsoft.VisualStudio.Package.LanguageService> kendi sınıfınızın bir örneğini döndürmek için sınıfındaki yöntemini geçersiz kılmanız gerekir <xref:Microsoft.VisualStudio.Package.ViewFilter> . Daha fazla ayrıntı için "özel sınıflar örneği oluşturma" bölümüne bakın.
 
-  Dil hizmetiniz, birçok yerde kullanılan kendi simgelerini de sağlayabilir. Örneğin, bir IntelliSense tamamlanma listesi gösterildiğinde, listedeki her öğe kendisiyle ilişkili bir simgeye sahip olabilir, öğe bir yöntem, sınıf, ad alanı, özellik veya diliniz için gerekli herhangi bir şey olarak işaretleniyor. Bu simgeler tüm IntelliSense listelerinde, **Gezinti çubuğunda**ve **hata listesi** görev penceresinde kullanılır. Ayrıntılar için aşağıdaki "dil hizmeti görüntüleri" bölümüne bakın.
+  Dil hizmetiniz, birçok yerde kullanılan kendi simgelerini de sağlayabilir. Örneğin, bir IntelliSense tamamlanma listesi gösterildiğinde, listedeki her öğe kendisiyle ilişkili bir simgeye sahip olabilir, öğe bir yöntem, sınıf, ad alanı, özellik veya diliniz için gerekli herhangi bir şey olarak işaretleniyor. Bu simgeler tüm IntelliSense listelerinde, **Gezinti çubuğunda** ve **hata listesi** görev penceresinde kullanılır. Ayrıntılar için aşağıdaki "dil hizmeti görüntüleri" bölümüne bakın.
 
 ## <a name="getlanguagepreferences-method"></a>GetLanguagePreferences Yöntemi
  <xref:Microsoft.VisualStudio.Package.LanguageService.GetLanguagePreferences%2A>Yöntemi her zaman bir sınıfın örneğini döndürür <xref:Microsoft.VisualStudio.Package.LanguagePreferences> . <xref:Microsoft.VisualStudio.Package.LanguagePreferences>Dil hizmetiniz için ek bir tercihlerinize gerek yoksa, temel sınıfı kullanabilirsiniz. MPF dil hizmeti sınıfları, en az temel sınıf olduğunu varsayar <xref:Microsoft.VisualStudio.Package.LanguagePreferences> .
@@ -193,11 +195,11 @@ namespace TestLanguagePackage
 
 ### <a name="in-the-languageservice-class"></a>LanguageService sınıfında
 
-|Yöntem|Döndürülen sınıf|Description|
+|Yöntem|Döndürülen sınıf|Açıklama|
 |------------|--------------------|-----------------|
 |<xref:Microsoft.VisualStudio.Package.LanguageService.CreateCodeWindowManager%2A>|<xref:Microsoft.VisualStudio.Package.CodeWindowManager>|Metin görünümüne özel eklemeleri desteklemek için.|
 |<xref:Microsoft.VisualStudio.Package.LanguageService.CreateDocumentProperties%2A>|<xref:Microsoft.VisualStudio.Package.DocumentProperties>|Özel belge özelliklerini desteklemek için.|
-|<xref:Microsoft.VisualStudio.Package.LanguageService.CreateDropDownHelper%2A>|<xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars>|**Gezinti çubuğunu**desteklemek için.|
+|<xref:Microsoft.VisualStudio.Package.LanguageService.CreateDropDownHelper%2A>|<xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars>|**Gezinti çubuğunu** desteklemek için.|
 |<xref:Microsoft.VisualStudio.Package.LanguageService.CreateExpansionFunction%2A>|<xref:Microsoft.VisualStudio.Package.ExpansionFunction>|Kod parçacığı şablonlarındaki işlevleri desteklemek için.|
 |<xref:Microsoft.VisualStudio.Package.LanguageService.CreateExpansionProvider%2A>|<xref:Microsoft.VisualStudio.Package.ExpansionProvider>|Kod parçacıklarını desteklemek için (Bu yöntem genellikle geçersiz kılınmaz).|
 |<xref:Microsoft.VisualStudio.Package.LanguageService.CreateParseRequest%2A>|<xref:Microsoft.VisualStudio.Package.ParseRequest>|Yapının özelleştirmesini desteklemek için <xref:Microsoft.VisualStudio.Package.ParseRequest> (Bu yöntem genellikle geçersiz kılınmaz).|
@@ -210,7 +212,7 @@ namespace TestLanguagePackage
 
 ### <a name="in-the-source-class"></a>Kaynak sınıfta
 
-|Yöntem|Döndürülen sınıf|Description|
+|Yöntem|Döndürülen sınıf|Açıklama|
 |------------|--------------------|-----------------|
 |<xref:Microsoft.VisualStudio.Package.Source.CreateCompletionSet%2A>|<xref:Microsoft.VisualStudio.Package.CompletionSet>|IntelliSense tamamlanma listelerinin görüntülenmesini özelleştirmek için (Bu yöntem genellikle geçersiz kılınmaz).|
 |<xref:Microsoft.VisualStudio.Package.Source.CreateErrorTaskItem%2A>|<xref:Microsoft.VisualStudio.Package.DocumentTask>|Hata Listesi görev listesinde destekleyici işaretçiler için; Özellikle, dosyayı açan ve hataya neden olan satıra atlama özellikleri için destek.|
@@ -220,7 +222,7 @@ namespace TestLanguagePackage
 
 ### <a name="in-the-authoringscope-class"></a>AuthoringScope sınıfında
 
-|Yöntem|Döndürülen sınıf|Description|
+|Yöntem|Döndürülen sınıf|Açıklama|
 |------------|--------------------|-----------------|
 |<xref:Microsoft.VisualStudio.Package.AuthoringScope.GetDeclarations%2A>|<xref:Microsoft.VisualStudio.Package.Declarations>|Üyeler veya türler gibi bildirimlerin bir listesini sağlar. Bu yöntemin uygulanması gerekir, ancak null bir değer döndürebilir. Bu yöntem geçerli bir nesne döndürürse, nesne sınıfının sürümünün bir örneği olmalıdır <xref:Microsoft.VisualStudio.Package.Declarations> .|
 |<xref:Microsoft.VisualStudio.Package.AuthoringScope.GetMethods%2A>|<xref:Microsoft.VisualStudio.Package.Methods>|Belirli bir bağlam için yöntem imzalarının bir listesini sağlar. Bu yöntemin uygulanması gerekir, ancak null bir değer döndürebilir. Bu yöntem geçerli bir nesne döndürürse, nesne sınıfının sürümünün bir örneği olmalıdır <xref:Microsoft.VisualStudio.Package.Methods> .|
@@ -232,7 +234,7 @@ namespace TestLanguagePackage
  IntelliSense tamamlanma listeleri için görüntü dizini, sınıf yöntemindeki her öğe için belirtilir <xref:Microsoft.VisualStudio.Package.Declarations.GetGlyph%2A> <xref:Microsoft.VisualStudio.Package.Declarations> , bu da bir görüntü dizini sağlamak istiyorsanız geçersiz kılmanız gerekir. Yönteminden döndürülen değer, <xref:Microsoft.VisualStudio.Package.Declarations.GetGlyph%2A> sınıf oluşturucusuna sağlanan görüntü listesinin bir dizinidir <xref:Microsoft.VisualStudio.Package.CompletionSet> ve sınıftaki yöntemden döndürülen aynı görüntü listesidir <xref:Microsoft.VisualStudio.Package.LanguageService.GetImageList%2A> <xref:Microsoft.VisualStudio.Package.LanguageService> ( <xref:Microsoft.VisualStudio.Package.CompletionSet> <xref:Microsoft.VisualStudio.Package.Source.CreateCompletionSet%2A> <xref:Microsoft.VisualStudio.Package.Source> farklı bir görüntü listesi sağlamak için sınıfında yöntemini geçersiz kılarsınız, için kullanılacak görüntü listesini değiştirebilirsiniz).
 
 ### <a name="images-used-in-the-navigation-bar"></a>Gezinti çubuğunda kullanılan görüntüler
- **Gezinti çubuğu** , türlerin ve üyelerin listelerini görüntüler ve hızlı gezinme için kullanılan simgeleri gösterebilir. Bu simgeler, <xref:Microsoft.VisualStudio.Package.LanguageService.GetImageList%2A> sınıfındaki yönteminden alınır <xref:Microsoft.VisualStudio.Package.LanguageService> ve özellikle **Gezinti çubuğu**için geçersiz kılınamaz. Birleşik giriş kutularındaki her öğe için kullanılan dizinler, Birleşik giriş kutularını temsil eden listeler, sınıfındaki yönteminde doldurulduğu zaman belirtilir <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> (bkz. [eski dil hizmetindeki gezinti çubuğu için destek](../../extensibility/internals/support-for-the-navigation-bar-in-a-legacy-language-service.md)). Bu görüntü dizinleri, genellikle kendi sınıfınızın sürümü aracılığıyla Ayrıştırıcıdan bir şekilde alınır <xref:Microsoft.VisualStudio.Package.Declarations> . Dizinler nasıl alınır?
+ **Gezinti çubuğu** , türlerin ve üyelerin listelerini görüntüler ve hızlı gezinme için kullanılan simgeleri gösterebilir. Bu simgeler, <xref:Microsoft.VisualStudio.Package.LanguageService.GetImageList%2A> sınıfındaki yönteminden alınır <xref:Microsoft.VisualStudio.Package.LanguageService> ve özellikle **Gezinti çubuğu** için geçersiz kılınamaz. Birleşik giriş kutularındaki her öğe için kullanılan dizinler, Birleşik giriş kutularını temsil eden listeler, sınıfındaki yönteminde doldurulduğu zaman belirtilir <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars.OnSynchronizeDropdowns%2A> <xref:Microsoft.VisualStudio.Package.TypeAndMemberDropdownBars> (bkz. [eski dil hizmetindeki gezinti çubuğu için destek](../../extensibility/internals/support-for-the-navigation-bar-in-a-legacy-language-service.md)). Bu görüntü dizinleri, genellikle kendi sınıfınızın sürümü aracılığıyla Ayrıştırıcıdan bir şekilde alınır <xref:Microsoft.VisualStudio.Package.Declarations> . Dizinler nasıl alınır?
 
 ### <a name="images-used-in-the-error-list-task-window"></a>Hata Listesi görev penceresinde kullanılan görüntüler
  <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>Yöntem ayrıştırıcısı (bkz. [eski dil hizmeti ayrıştırıcısı ve tarayıcısı](../../extensibility/internals/legacy-language-service-parser-and-scanner.md)) bir hatayla karşılaştığında ve bu hatayı sınıftaki yönteme geçirdiğinde <xref:Microsoft.VisualStudio.Package.AuthoringSink.AddError%2A> <xref:Microsoft.VisualStudio.Package.AuthoringSink> , hata **hata listesi** görev penceresinde raporlanır. Bir simge, görev penceresinde görüntülenen her öğeyle ilişkilendirilebilir ve bu simge, sınıftaki yöntemden döndürülen görüntü listesinden gelir <xref:Microsoft.VisualStudio.Package.LanguageService.GetImageList%2A> <xref:Microsoft.VisualStudio.Package.LanguageService> . MPF sınıflarının varsayılan davranışı hata iletisiyle bir görüntü göstermemelidir. Ancak, sınıfından bir sınıf türeterek <xref:Microsoft.VisualStudio.Package.Source> ve yöntemi geçersiz kılarak bu davranışı geçersiz kılabilirsiniz <xref:Microsoft.VisualStudio.Package.Source.CreateErrorTaskItem%2A> . Bu yöntemde yeni bir <xref:Microsoft.VisualStudio.Package.DocumentTask> nesne oluşturacaksınız. Nesneyi döndürmeden önce, <xref:Microsoft.VisualStudio.Shell.Task.ImageIndex%2A> <xref:Microsoft.VisualStudio.Package.DocumentTask> görüntü dizinini ayarlamak için nesnesi üzerinde özelliğini kullanabilirsiniz. Bu, aşağıdaki örneğe benzer bir şekilde görünür. `TestIconImageIndex`Tüm simgeleri listeleyen ve bu örneğe özgü olan bir sabit listesi olduğunu unutmayın. Dil hizmetinizdeki simgeleri tanımlamaya yönelik farklı bir yönteme sahip olabilirsiniz.

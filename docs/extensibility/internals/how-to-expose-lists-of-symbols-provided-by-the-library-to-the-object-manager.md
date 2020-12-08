@@ -1,5 +1,7 @@
 ---
 title: Nesne yöneticisine sunulan simgelerin listesini kullanıma sunma | Microsoft Docs
+description: Visual Studio 'da nesne Yöneticisi 'nde sembol listelerini göstermek ve sembol tarama araçlarını güncelleştirmek için IVsSimpleObjectList2 arabirimini nasıl uygulayacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: bb15b7d9b29c578a0acf43fd1aa9cfdea88e23ae
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 52bb2505e70d39e6cd861190db6eab9fa29e7aa7
+ms.sourcegitcommit: 2f964946d7044cc7d49b3fc10b413ca06cb2d11b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708081"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761354"
 ---
 # <a name="how-to-expose-lists-of-symbols-provided-by-the-library-to-the-object-manager"></a>Nasıl yapılır: kitaplık tarafından nesne yöneticisine sunulan simgelerin listesini kullanıma sunma
 Sembol tarama araçları, **sınıf görünümü**, **nesne tarayıcısı** **çağrı tarayıcısı** ve **sembol sonuçları bul**, yeni veriler için istekleri [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] nesne yöneticisine geçirin. Nesne Yöneticisi uygun kitaplıkları bulur ve sembol yeni listesini ister. Kitaplıklar, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] arabirim aracılığıyla nesne yöneticisine istenen verileri sağlayarak yanıt verir <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2> . [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Nesne Yöneticisi, <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2> verileri almak için arabirimindeki yöntemleri çağırır ve sembol tarama araçlarının görünümlerini doldurmak veya güncelleştirmek için onu kullanır.

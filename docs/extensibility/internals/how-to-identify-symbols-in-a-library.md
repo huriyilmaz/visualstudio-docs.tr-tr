@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: kitaplıkta sembolleri belirleme | Microsoft Docs'
+description: Sembol kitaplığından Visual Studio nesne Yöneticisi 'ne gezinti bilgilerini geçiren yöntemler uygulayarak kitaplıktaki sembolleri nasıl tanımlayacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: fd091f003909110c696c2e42ad80d6c6ea4859d2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4b1dab9dc6bee4ed987141057194d8b00ff35f99
+ms.sourcegitcommit: 2f964946d7044cc7d49b3fc10b413ca06cb2d11b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905397"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761389"
 ---
 # <a name="how-to-identify-symbols-in-a-library"></a>Nasıl yapılır: kitaplıkta sembolleri belirleme
 Sembol tarama araçları, simgelerin hiyerarşik görünümlerini görüntüler. Semboller ad alanlarını, nesneleri, sınıfları, sınıf üyelerini ve diğer dil öğelerini temsil eder.

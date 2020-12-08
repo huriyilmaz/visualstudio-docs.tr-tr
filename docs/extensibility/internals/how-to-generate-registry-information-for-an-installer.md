@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: bir yükleyici için kayıt defteri bilgileri oluşturma | Microsoft Docs'
+description: Visual Studio 'da RegPkg.exe yardımcı programını kullanarak Windows Installer Kurulum paketindeki kurulduğu için VSPackage kayıt defteri bilgilerini oluşturma hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,19 +14,19 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b0140ea2e1b894754b0cf35bc75676f277b12a0a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 082833c97706868261e39b50377c158f90b46a4a
+ms.sourcegitcommit: 2f964946d7044cc7d49b3fc10b413ca06cb2d11b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905470"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761231"
 ---
 # <a name="how-to-generate-registry-information-for-an-installer"></a>Nasıl yapılır: bir yükleyici için kayıt defteri bilgileri oluşturma
 
 *RegPkg.exe* yardımcı programı, yönetilen bir VSPackage için bir kayıt bildirimi oluşturmak üzere kullanılabilir. Bildirim bir Windows Installer Kurulum paketine eklenebilir. RegPkg Ayrıca, [WINDOWS Installer XML araç takımını](https://wixtoolset.org/)temel alan bir kurulum kaynak dosyasına eklenebilecek bir dosya oluşturabilir.
 
 > [!IMPORTANT]
-> RegPkg, geliştirme sisteminize özgü yol adları oluşturur. bu nedenle, RegPkg 'i her kullandığınızda çıktıyı, uygun Windows Installer biçimlendirilen özellikleri kullanacak şekilde düzenlemeniz gerekir. Örneğin, `InprocServer32` değer * \<SystemFolder\>mscoree.dll* olmalıdır ve yollar *\<#filekey\>* ve ile kullanılmalıdır *\<$componentkey\>* . Çıktının bu şekilde ayarlanması, farklı bir sürücüde veya farklı bir dizinde, yerelleştirilmiş dizin adlarında ve kullanıcıların seçelebilecek yollarla Windows 'un yüklü olduğu bilgisayarları destekler. Daha fazla bilgi için bkz. Windows Installer SDK 'sında [biçimlendirme](https://msdn.microsoft.com/library?url=/library/msi/setup/formatted.asp) . Geliştirme sistem yollarınız için RegPkg kurallarını izlerseniz — Örneğin, form *File_ \<filename\> *dosya kimlikleri — daha az değişiklik yapmanız gerekir.
+> RegPkg, geliştirme sisteminize özgü yol adları oluşturur. bu nedenle, RegPkg 'i her kullandığınızda çıktıyı, uygun Windows Installer biçimlendirilen özellikleri kullanacak şekilde düzenlemeniz gerekir. Örneğin, `InprocServer32` değer *\<SystemFolder\>mscoree.dll* olmalıdır ve yollar *\<#filekey\>* ve ile kullanılmalıdır *\<$componentkey\>* . Çıktının bu şekilde ayarlanması, farklı bir sürücüde veya farklı bir dizinde, yerelleştirilmiş dizin adlarında ve kullanıcıların seçelebilecek yollarla Windows 'un yüklü olduğu bilgisayarları destekler. Daha fazla bilgi için bkz. Windows Installer SDK 'sında [biçimlendirme](https://msdn.microsoft.com/library?url=/library/msi/setup/formatted.asp) . Geliştirme sistem yollarınız için RegPkg kurallarını izlerseniz — Örneğin, form *File_ \<filename\>* dosya kimlikleri — daha az değişiklik yapmanız gerekir.
 
 ## <a name="to-create-a-registration-manifest"></a>Kayıt bildirimi oluşturmak için
 

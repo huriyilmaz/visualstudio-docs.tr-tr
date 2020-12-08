@@ -1,5 +1,7 @@
 ---
 title: VSPackages Kullanıcı arabirimi öğeleri ekleme | Microsoft Docs
+description: VSPackages 'ın menüler, araç çubukları ve araç pencereleri gibi kullanıcı arabirimi (UI) öğelerini Visual Studio 'ya nasıl ekleyeceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1d9cc3184009dd98e743064db1b8eb2abe6059d1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e3e2fe51c365e3e6936a73aef9d4de9d52024d47
+ms.sourcegitcommit: 2f964946d7044cc7d49b3fc10b413ca06cb2d11b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "81649593"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761094"
 ---
 # <a name="how-vspackages-add-user-interface-elements"></a>VSPackages Kullanıcı arabirimi öğeleri ekleme
 VSPackage, *. vsct* dosyası aracılığıyla, menüler, araç çubukları ve araç pencereleri gibi kullanıcı ARABIRIMI (UI) öğelerini Visual Studio 'ya ekleyebilir.
@@ -185,7 +187,7 @@ Aşağıdaki kurallar bir öğenin üst öğesi olarak başka bir öğeyi nasıl
 
 |Öğe|Komut tablosunun bu bölümünde tanımlanmıştır|Bulunabilir (üst öğe veya `CommandPlacements` bölüme yerleştirme veya her ikisi de)|Bulunabilir (üst öğe olarak adlandırılır)|
 |-------------| - | - | - |
-|Gruplama|[Groups öğesi](../../extensibility/groups-element.md), IDE, diğer VSPackages|Bir menü, Grup, öğenin kendisi|Menüler, gruplar ve komutlar|
+|Grup|[Groups öğesi](../../extensibility/groups-element.md), IDE, diğer VSPackages|Bir menü, Grup, öğenin kendisi|Menüler, gruplar ve komutlar|
 |Menü|[Menüler öğesi](../../extensibility/menus-element.md), IDE, diğer VSPackages|1- *n* Grup|0- *n* Grup|
 |Araç Çubuğu|[Menüler öğesi](../../extensibility/menus-element.md), IDE, diğer VSPackages|Öğenin kendisi|0- *n* Grup|
 |Menü Öğesi|[Düğmeler öğesi](../../extensibility/buttons-element.md), IDE, diğer VSPackages|1- *n* Grup, öğenin kendisi|-0- *n* Grup|

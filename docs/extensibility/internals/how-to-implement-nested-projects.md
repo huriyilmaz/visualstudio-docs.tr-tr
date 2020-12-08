@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: Iç Içe Projeler uygulama | Microsoft Docs'
+description: Bir proje hiyerarşisi oluşturmak için çözüm ve üst projelerdeki olayları yükselterek, Visual Studio 'da iç içe projeler uygulamayı nasıl uygulayacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3b1ac3c147962b943499172435c3f601115d36a9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 85a5c14196211a638cd830ac6df39570288aa831
+ms.sourcegitcommit: 2f964946d7044cc7d49b3fc10b413ca06cb2d11b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905345"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761343"
 ---
 # <a name="how-to-implement-nested-projects"></a>Nasıl yapılır: iç içe Projeler uygulama
 
@@ -27,7 +29,7 @@ ms.locfileid: "85905345"
 1. Tümleşik geliştirme ortamı (IDE), arabirimi çağırarak ana projenin proje dosyasını ve başlangıç bilgilerini yükler <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory> . Üst proje oluşturulup çözüme eklenir.
 
     > [!NOTE]
-    > Bu noktada, üst projenin alt projeler oluşturulmadan önce oluşturulması gerektiğinden, ana projenin iç içe proje oluşturması için çok erken bir işlemdir. Bu sırayı takip eden ana proje, alt projelere ayarları uygulayabilir ve alt projeler gerekirse ana projelerden bilgi alabilir. Bu sıra, kaynak kodu denetimi (SCC) ve **Çözüm Gezgini**gibi istemciler tarafından gerek duyuluyordu.
+    > Bu noktada, üst projenin alt projeler oluşturulmadan önce oluşturulması gerektiğinden, ana projenin iç içe proje oluşturması için çok erken bir işlemdir. Bu sırayı takip eden ana proje, alt projelere ayarları uygulayabilir ve alt projeler gerekirse ana projelerden bilgi alabilir. Bu sıra, kaynak kodu denetimi (SCC) ve **Çözüm Gezgini** gibi istemciler tarafından gerek duyuluyordu.
 
      Üst proje, <xref:Microsoft.VisualStudio.Shell.Interop.IVsParentProject.OpenChildren%2A> iç içe geçmiş (alt) proje veya projelerini oluşturabilmeniz için YÖNTEMIN IDE tarafından çağrılması için beklemeniz gerekir.
 

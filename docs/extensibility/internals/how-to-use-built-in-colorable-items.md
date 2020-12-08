@@ -1,5 +1,7 @@
 ---
-title: 'Nasıl yapılır: yerleşik Renklenebilir öğeleri kullanma | Microsoft Docs'
+title: 'Nasıl yapılır: Built-In Renklenebilir öğeleri kullanma | Microsoft Docs'
+description: Dil hizmetiniz için Visual Studio tümleşik geliştirme ortamında (IDE) yerleşik renklenebilir öğeleri nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,21 +13,21 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 762d1e53f7aafa11ed345859e68fc98766eec77d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 926cb77fe9477b7dc78c35c2ab58f9b73530e4fa
+ms.sourcegitcommit: 2f964946d7044cc7d49b3fc10b413ca06cb2d11b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905216"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761016"
 ---
 # <a name="how-to-use-built-in-colorable-items"></a>Nasıl yapılır: yerleşik renklenebilir öğeleri kullanma
 Yerleşik renklenebilir öğeleri kullanmadan önce, kendi özel renksiz öğelerinizi sağlamaktan önce tümleşik geliştirme ortamına (IDE) işaret etmeniz gerekir ve bu durumda <xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems> nesneler olur. Bu, dil hizmeti için bir kayıt defteri girişi ayarlayarak yapabilirsiniz.
 
 ## <a name="to-use-built-in-colorable-items"></a>Yerleşik renklenebilir öğeleri kullanmak için
 
-1. **HKEY_LOCAL_MACHINE \VisualStudio \\<X. Y> \Languages\Language Services \\<dil adı \> **, burada \<X.Y> bir sürümüdür [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ve \<Language Name> dilinizin adıdır, **RequestStockColors**adlı bir DWORD kayıt defteri giriş değeri oluşturun.
+1. **HKEY_LOCAL_MACHINE\VisualStudio\\<X. Y> \Languages\Language Services \\<dil adı \>**, burada \<X.Y> bir sürümüdür [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ve \<Language Name> dilinizin adıdır, **RequestStockColors** adlı bir DWORD kayıt defteri giriş değeri oluşturun.
 
-2. **RequestStockColors** kayıt defteri girdisinin değerini *1*olarak ayarlayın.
+2. **RequestStockColors** kayıt defteri girdisinin değerini *1* olarak ayarlayın.
 
     Kayıt defteri girişini oluşturduktan sonra, Colorizer 'ın yöntemi, <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer.ColorizeLine%2A> <xref:Microsoft.VisualStudio.TextManager.Interop.DEFAULTITEMS> Düzenleyici tarafından kullanılacak renk öznitelikleri dizisini dolduracak şekilde numaralandırmanın üyelerini kullanabilir.
 

@@ -1,5 +1,7 @@
 ---
 title: Görüntü Kitaplığı Görüntüleyici | Microsoft Docs
+description: Görüntü bildirimlerini yükleyen ve aradığı ve görüntü özniteliklerini görüntülemenize ve değiştirmenize olanak tanıyan Visual Studio Görüntü Kitaplığı Görüntüleyicisi aracı hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 9d9c7fbb-ebae-4b20-9dd8-3c9070c0d0d1
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d9714879f93af052e244134ce225b07317455921
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ae9090604a16196c43b80140395eb3401215d665
+ms.sourcegitcommit: 2f964946d7044cc7d49b3fc10b413ca06cb2d11b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85536350"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761277"
 ---
 # <a name="image-library-viewer"></a>Görüntü Kitaplığı Görüntüleyicisi
 Visual Studio Görüntü Kitaplığı Görüntüleyicisi Aracı, görüntü bildirimleri yükleyip arayabilir ve bu sayede, kullanıcının bunları Visual Studio ile aynı şekilde değiştirmesine izin verebilirsiniz. Kullanıcı arka plan, boyut, DPı, yüksek karşıtlık ve diğer ayarları değiştirebilir. Araç ayrıca her görüntü bildirimi için bilgileri yükleme ve görüntü bildirimindeki her bir görüntü için kaynak bilgilerini görüntüler. Bu araç için yararlı olur:
@@ -127,11 +129,11 @@ Visual Studio Görüntü Kitaplığı Görüntüleyicisi Aracı, görüntü bild
 |**Öznitelik**|**Tanım**|
 |-|-|
 |Kullanılmamışsa|Istenir Görüntünün nereden yüklenebileceğini tanımlayan bir URI. Aşağıdakilerden biri olabilir:<br /><br /> -Application:///yetkilisini kullanan bir [paket URI 'si](/dotnet/framework/wpf/app-development/pack-uris-in-wpf)<br /><br /> -Mutlak bir bileşen kaynağı başvurusu<br /><br /> -Yerel kaynak içeren bir dosyanın yolu|
-|Arka Plan|Seçim Kaynağın kullanılması amaçlanan arka plan türünü gösterir.<br /><br /> Aşağıdakilerden biri olabilir:<br /><br /> - *Işık*: kaynak açık bir arka planda kullanılabilir.<br /><br /> - *Koyu*: kaynak koyu bir arka planda kullanılabilir.<br /><br /> - *Highkarşıtlıklı*: kaynak yüksek karşıtlık modundaki herhangi bir arka planda kullanılabilir.<br /><br /> - *Highdeğişken Stlight*: kaynak yüksek karşıtlık modundaki hafif bir arka planda kullanılabilir.<br /><br /> -Üst *sınır*: kaynak, yüksek karşıtlık modunda koyu bir arka planda kullanılabilir.<br /><br /> **Arka plan** özniteliği atlanırsa, kaynak herhangi bir arka planda kullanılabilir.<br /><br /> **Arka plan** hafif, *koyu*, *Ince*bir *şekilde veya daha* *ince*, kaynak renkleri hiçbir şekilde ters çevrilmez. **Arka plan** atlanırsa veya *highkontrast*olarak ayarlandıysa, kaynak renklerinin Inversion değeri görüntünün **allowcolorınversion** özniteliği tarafından denetlenir.|
+|Arka plan|Seçim Kaynağın kullanılması amaçlanan arka plan türünü gösterir.<br /><br /> Aşağıdakilerden biri olabilir:<br /><br /> - *Işık*: kaynak açık bir arka planda kullanılabilir.<br /><br /> - *Koyu*: kaynak koyu bir arka planda kullanılabilir.<br /><br /> - *Highkarşıtlıklı*: kaynak yüksek karşıtlık modundaki herhangi bir arka planda kullanılabilir.<br /><br /> - *Highdeğişken Stlight*: kaynak yüksek karşıtlık modundaki hafif bir arka planda kullanılabilir.<br /><br /> -Üst *sınır*: kaynak, yüksek karşıtlık modunda koyu bir arka planda kullanılabilir.<br /><br /> **Arka plan** özniteliği atlanırsa, kaynak herhangi bir arka planda kullanılabilir.<br /><br /> **Arka plan** hafif, *koyu*, *Ince* bir *şekilde veya daha* *ince*, kaynak renkleri hiçbir şekilde ters çevrilmez. **Arka plan** atlanırsa veya *highkontrast* olarak ayarlandıysa, kaynak renklerinin Inversion değeri görüntünün **allowcolorınversion** özniteliği tarafından denetlenir.|
 
  Bir \<Source> öğe, aşağıdaki isteğe bağlı alt öğeler için tam olarak birine sahip olabilir:
 
-|**Öğe**|**Öznitelikler (tüm gerekli)**|**Tanım**|
+|**Dosyalarında**|**Öznitelikler (tüm gerekli)**|**Tanım**|
 |-|-|-|
 |\<Size>|Değer|Kaynak, verilen boyutun (cihaz birimlerinde) görüntüleri için kullanılacaktır. Resim kare olacak.|
 |\<SizeRange>|MinSize, MaxSize|Kaynak, MinSize ' den MaxSize 'a (cihaz birimlerinde) dahil olmak üzere, dahil edilecek görüntüler için kullanılacaktır. Resim kare olacak.|
@@ -179,7 +181,7 @@ Visual Studio Görüntü Kitaplığı Görüntüleyicisi Aracı, görüntü bild
 
  Araç, varsayılan olarak Visual Studio install dizinini bulmaya çalışır ve bu dizinleri arama dizinleri listesine ekler. Aracın bulamadığı dizinleri el ile ekleyebilirsiniz.
 
- Tüm bildirimler yüklendikten sonra, bir kullanıcının çeşitli ayarlar için doğru şekilde işlenip işlenmeyeceğini doğrulamak üzere görüntü varlıklarını görsel olarak inceleyebilmesi için **arka plan** renklerini, **DPI**, **yüksek karşıtlık**veya **gri ölçeklendirmeyi** değiştirmek için araç kullanılabilir.
+ Tüm bildirimler yüklendikten sonra, bir kullanıcının çeşitli ayarlar için doğru şekilde işlenip işlenmeyeceğini doğrulamak üzere görüntü varlıklarını görsel olarak inceleyebilmesi için **arka plan** renklerini, **DPI**, **yüksek karşıtlık** veya **gri ölçeklendirmeyi** değiştirmek için araç kullanılabilir.
 
  ![Görüntü Kitaplığı Görüntüleyicisi arka planı](../../extensibility/internals/media/image-library-viewer-background.png "Görüntü Kitaplığı Görüntüleyicisi arka planı")
 
