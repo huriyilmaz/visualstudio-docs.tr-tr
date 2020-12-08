@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: yazdırırken çalışma sayfalarında denetimleri gizleme'
+description: Windows Forms denetimleri içeren Microsoft Office bir Excel çalışma sayfası yazdırırken denetimleri gizleyebileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 336723f60a2cd90dc63db24e981dd06e0388cb9c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: acc90986dd394e69de12893aac01e0a4f662b1a3
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85544813"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96846499"
 ---
 # <a name="how-to-hide-controls-on-worksheets-when-printing"></a>Nasıl yapılır: yazdırırken çalışma sayfalarında denetimleri gizleme
   Windows Forms denetimleri içeren bir Microsoft Office Excel belgesi yazdırdığınızda, denetimler yazdırılmış çalışma sayfasında görünür. Çalışma sayfası yazdırılırken denetimleri gizleyebilirsiniz.
@@ -39,7 +41,7 @@ ms.locfileid: "85544813"
 
 2. **Araç kutusunun** **ortak denetimler** sekmesinden, bir <xref:Microsoft.Office.Tools.Excel.Controls.Button> denetimi üzerindeki bir hücreye sürükleyin `Sheet1` .
 
-3. **Özellikler** penceresinde, <xref:Microsoft.Office.Tools.Excel.Controls.Button.PrintObject%2A> özelliğini **false**olarak ayarlayın.
+3. **Özellikler** penceresinde, <xref:Microsoft.Office.Tools.Excel.Controls.Button.PrintObject%2A> özelliğini **false** olarak ayarlayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Office belgelerindeki denetimler](../vsto/controls-on-office-documents.md)

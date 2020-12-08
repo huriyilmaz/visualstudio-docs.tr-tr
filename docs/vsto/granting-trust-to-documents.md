@@ -1,5 +1,7 @@
 ---
 title: Belgelere güven verme
+description: Belge düzeyi bir projenin, bildirimleri bir sertifikayla imzalama veya güven istemine tıklama gibi uygulama düzeyi projelerle aynı güvenlik gereksinimlerine nasıl sahip olduğunu öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a631e8d8cffe6bfde925dfbae4a7350e6a0ef95a
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 9d91a86f8596e0ed7a04ae68099c7c9ab6099a40
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "92298612"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847747"
 ---
 # <a name="grant-trust-to-documents"></a>Belgelere güven verme
   Belge düzeyi proje, uygulama düzeyi projelerle aynı güvenlik gereksinimlerine sahiptir: bildirimleri bir sertifikayla imzalama veya güven istemine tıklama. Ayrıca, belge veya çalışma kitabı güvenilen konum olarak belirlenmiş bir dizinde bulunmalıdır.

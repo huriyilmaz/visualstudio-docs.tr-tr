@@ -1,7 +1,8 @@
 ---
 title: Kullanmaya başlayın (Visual Studio 'da Office geliştirme)
+description: Office çözümleri oluşturmak için Visual Studio 'da Microsoft Office geliştirici araçlarını kullanmaya nasıl başlayabileceğinizi öğrenin.
 titleSuffix: ''
-ms.custom: seodec18
+ms.custom: seodec18, SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 1439bef59c621523b74f0e0634cd809deea1f3ee
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a14d8254d42b78e788622afd93c6832871d54627
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72986071"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847331"
 ---
 # <a name="get-started-office-development-in-visual-studio"></a>Kullanmaya başlayın (Visual Studio 'da Office geliştirme)
   Bu bölümde, Visual Studio 'da Microsoft Office geliştirici araçlarını kullanmaya başlamanıza yardımcı olacak konular yer almaktadır.

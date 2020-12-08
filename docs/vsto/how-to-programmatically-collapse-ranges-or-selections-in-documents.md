@@ -1,5 +1,7 @@
 ---
 title: Belgelerdeki aralıkları veya seçimleri program aracılığıyla daraltma
+description: Bir Aralık veya seçim nesnesiyle çalışıyorsanız, metin eklemeden önce seçimi bir ekleme noktası olarak değiştirmek isteyebilirsiniz.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4bb22f97b6a876029ff5d984abf9bda32cfd3fbc
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: cba19d8cb6c26defcbb7cf39f461a45bf217b5a5
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585294"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847656"
 ---
 # <a name="how-to-programmatically-collapse-ranges-or-selections-in-documents"></a>Nasıl yapılır: belgelerde aralıkları veya seçimleri program aracılığıyla daraltma
   <xref:Microsoft.Office.Interop.Word.Range>Veya <xref:Microsoft.Office.Interop.Word.Selection> nesnesiyle çalışıyorsanız, varolan metnin üzerine yazılmasını önlemek için, metin eklemeden önce seçimi bir ekleme noktasıyla değiştirmek isteyebilirsiniz. Ve nesnelerinin her ikisi de, <xref:Microsoft.Office.Interop.Word.Range> <xref:Microsoft.Office.Interop.Word.Selection> numaralandırma değerlerini kullanan bir daraltma yöntemine sahiptir <xref:Microsoft.Office.Interop.Word.WdCollapseDirection> :

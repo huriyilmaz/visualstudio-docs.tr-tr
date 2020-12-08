@@ -1,5 +1,7 @@
 ---
 title: Windows Installer kullanarak VSTO çözümünü dağıtma
+description: Bir Visual Studio Yükleyicisi projesi kullanarak Office (VSTO) eklenti veya belge düzeyi çözümü için Microsoft Visual Studio Araçları dağıtmayı öğrenin.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 08/18/2010
 ms.topic: conceptual
@@ -19,12 +21,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a6fd2824ae10ad36a7ed50250620e98575e9ea60
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: e49705c99801cd6e09f4bf6d9be3c411cc2c53e3
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585699"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96846551"
 ---
 # <a name="deploying-a-vsto-solution-using-windows-installer"></a>Windows Installer kullanarak VSTO çözümünü dağıtma
 
@@ -126,7 +128,7 @@ Office çözümü için bir yükleyici oluşturmak üzere bu görevlerin gerçek
 4. **İleri**’ye tıklayın.
 ::: moniker-end
 
-5. **Ad** kutusuna **OfficeAddInSetup**yazın.
+5. **Ad** kutusuna **OfficeAddInSetup** yazın.
 ::: moniker range="=vs-2017"
 6. Yeni Kurulum projesini oluşturmak için **Aç** ' a tıklayın.
 ::: moniker-end
@@ -168,7 +170,7 @@ ExcelAddIn 'e başvurmak, ExcelAddIn 'in gerektirdiği tüm bileşenleri içerir
 
 ### <a name="to-exclude-the-exceladdin-project-dependencies"></a>ExcelAddIn projesi bağımlılıklarını dışlamak için
 
-1. **Çözüm Gezgini**, **OfficeAddInSetup** düğümünde, **Microsoft .NET Framework** veya ** \*.Utilities.dll**ile biten herhangi bir derleme hariç **Algılanan bağımlılıklar** öğesinin altındaki tüm bağımlılık öğelerini seçin. Yardımcı programlar derlemeleri, uygulamanızla birlikte dağıtılmaları anlamına gelir.
+1. **Çözüm Gezgini**, **OfficeAddInSetup** düğümünde, **Microsoft .NET Framework** veya **\*.Utilities.dll** ile biten herhangi bir derleme hariç **Algılanan bağımlılıklar** öğesinin altındaki tüm bağımlılık öğelerini seçin. Yardımcı programlar derlemeleri, uygulamanızla birlikte dağıtılmaları anlamına gelir.
 2. Gruba sağ tıklayın ve **Özellikler**' i seçin.
 3. **Özellikler** penceresinde, bağımlı derlemeleri Kurulum projesinden dışlamak Için **hariç tut** özelliğini **true** olarak değiştirin. Yardımcı program derlemelerinin dışlanmadığından emin olun.
 
@@ -178,7 +180,7 @@ ExcelAddIn 'e başvurmak, ExcelAddIn 'in gerektirdiği tüm bileşenleri içerir
 
 Önyükleyici olarak da bilinen bir kurulum programı ekleyerek Önkoşul bileşenlerini yüklemek için Windows Installer paketinizi yapılandırabilirsiniz. Bu kurulum programı önyükleme olarak adlandırılan bir işlem olan önkoşul bileşenlerini yükleyebilir.
 
-**ExcelAddIn**Için, eklentinin doğru şekilde çalıştırılabilmesi için önce bu önkoşulların yüklenmesi gerekir:
+**ExcelAddIn** Için, eklentinin doğru şekilde çalıştırılabilmesi için önce bu önkoşulların yüklenmesi gerekir:
 
 - Office çözümünün hedeflediği Microsoft .NET Framework sürümü.
 - Office çalışma zamanı için Microsoft Visual Studio 2010 araçları.
@@ -202,13 +204,13 @@ Microsoft Office, kayıt defteri anahtarlarını kullanarak eklentileri bulur. H
 ### <a name="to-configure-the-registry"></a>Kayıt defterini yapılandırmak için
 
 1. **Çözüm Gezgini** **OfficeAddInSetup**' a sağ tıklayın.
-2. **Görünümü**genişlet.
+2. **Görünümü** genişlet.
 3. Kayıt Defteri Düzenleyicisi penceresini açmak için **kayıt defteri** ' ne tıklayın.
 4. **Kayıt defteri (OfficeAddInSetup)** düzenleyicisinde, **HKEY \_ Local \_ MACHINE** ve ardından **Software**' i genişletin.
-5. **HKEY \_ Local \_ makine \\ yazılımı**altında bulunan ** \[ Manufacturer \] **? anahtarını silin.
+5. **HKEY \_ Local \_ makine \\ yazılımı** altında bulunan **\[ Manufacturer \]**? anahtarını silin.
 6. **HKEY \_ geçerli \_ Kullanıcı** ve ardından **Software**' i genişletin.
-7. **HKEY \_ geçerli \_ Kullanıcı \\ yazılımı**altında bulunan ** \[ üretici \] ** anahtarını silin.
-8. Eklenti yüklemesine kayıt defteri anahtarları eklemek için **Kullanıcı/makine Hive** anahtarına sağ tıklayın, **Yeni anahtar**' ı seçin. Yeni anahtarın adı için metin **yazılımını** kullanın. Yeni oluşturulan **yazılım** anahtarına sağ tıklayıp **Microsoft**metin ile yeni bir anahtar oluşturun.
+7. **HKEY \_ geçerli \_ Kullanıcı \\ yazılımı** altında bulunan **\[ üretici \]** anahtarını silin.
+8. Eklenti yüklemesine kayıt defteri anahtarları eklemek için **Kullanıcı/makine Hive** anahtarına sağ tıklayın, **Yeni anahtar**' ı seçin. Yeni anahtarın adı için metin **yazılımını** kullanın. Yeni oluşturulan **yazılım** anahtarına sağ tıklayıp **Microsoft** metin ile yeni bir anahtar oluşturun.
 9. Eklenti kaydı için gereken tüm anahtar hiyerarşisini oluşturmak için benzer bir işlem kullanın:
 
     **Kullanıcı/makine Hive \\ yazılım \\ Microsoft \\ Office \\ Excel \\ eklentileri \\ SampleCompany. ExcelAddIn**
@@ -222,7 +224,7 @@ Microsoft Office, kayıt defteri anahtarlarını kullanarak eklentileri bulur. H
     - **Dize** türü **bildirimi**
 
 12. Kayıt defteri düzenleyicisinde **Açıklama** değerine sağ tıklayın ve **Özellikler penceresi**' ne tıklayın. **Özellikler penceresinde**, Value özelliği Için **Excel Tanıtım eklentisi** ' ni girin.
-13. Kayıt defteri düzenleyicisinde **FriendlyName** anahtarı ' nı seçin. **Özellikler penceresinde**, **Value** özelliğini **Excel demo eklentisi**olarak değiştirin.
+13. Kayıt defteri düzenleyicisinde **FriendlyName** anahtarı ' nı seçin. **Özellikler penceresinde**, **Value** özelliğini **Excel demo eklentisi** olarak değiştirin.
 14. Kayıt defteri düzenleyicisinde **LoadBehavior** anahtarını seçin. **Özellikler penceresinde** **değer** özelliğini 3 olarak değiştirin **.** LoadBehavior için 3 değeri, eklentinin ana bilgisayar uygulamasının başlangıcında yüklenmesi gerektiğini gösterir. Yükleme davranışı hakkında daha fazla bilgi için bkz. [VSTO eklentileri Için kayıt defteri girişleri](registry-entries-for-vsto-add-ins.md).
 
 15. Kayıt defteri düzenleyicisinde **bildirim** anahtarını seçin. **Özellikler penceresinde**, **Value** özelliğini **FILE:///[targetı] ExcelAddIn. VSTO | vstolocal** olarak değiştirin
@@ -240,7 +242,7 @@ Microsoft Office, kayıt defteri anahtarlarını kullanarak eklentileri bulur. H
 64 bit Office sürümleri, eklentileri aramak için 64 bit kayıt defteri kovanını kullanacaktır. Eklentileri 64 bit kayıt defteri Hive altına kaydetmek için, Kurulum projesinin hedef platformunun yalnızca 64 bit olarak ayarlanması gerekir.
 
 1. Çözüm Gezgini ' nde **OfficeAddInSetup** projesini seçin.
-2. **Özellikler** penceresine gidin ve **TargetPlatform** özelliğini **x64**olarak ayarlayın.
+2. **Özellikler** penceresine gidin ve **TargetPlatform** özelliğini **x64** olarak ayarlayın.
 
 Office 'in hem 32-bit hem de 64-bit sürümleri için bir eklenti yükleme, iki ayrı MSI paketi oluşturmanızı gerektirir. Biri 32 bit için, diğeri 64 bit için.
 
@@ -253,21 +255,21 @@ Eklentiyi veya çözümü yüklemek için MSI paketi kullanılıyorsa, yüklenme
 ### <a name="configure-a-launch-condition-to-detect-the-vsto-runtime"></a>VSTO çalışma zamanını algılamak için bir başlatma koşulu yapılandırma
 
 1. **Çözüm Gezgini** **OfficeAddInSetup**' a sağ tıklayın.
-2. **Görünümü**genişlet.
+2. **Görünümü** genişlet.
 3. **Başlatma koşulları**' na tıklayın.
 4. **Başlatma koşulları (OfficeAddInSetup)** düzenleyicisinde, **hedef makinede gereksinimler**' e sağ tıklayın ve ardından **kayıt defteri başlatma koşulu Ekle**' ye tıklayın. Bu arama koşulu, VSTO çalışma zamanının yüklediği bir anahtarın kayıt defterinde arama yapabilir. Daha sonra anahtarın değeri, adlandırılmış bir özellik aracılığıyla yükleyicinin çeşitli parçaları tarafından kullanılabilir. Başlatma koşulu, belirli bir değeri denetlemek için arama koşulu tarafından tanımlanan özelliği kullanır.
 5. **Başlatma koşulları (OfficeAddInSetup)** düzenleyicisinde, RegistryEntry1 arama koşulu **Ara** ' yı seçin, koşulu sağ tıklatın ve **Özellikler penceresi**' ni seçin.
 
 6. **Özellikler** penceresinde, aşağıdaki özellikleri ayarlayın:
-   1. **VSTO 2010 çalışma zamanını aramak**Için **(ad)** değerini ayarlayın.
-   2. **Özelliğin** değerini **Vstoruntimeredist**olarak değiştirin.
+   1. **VSTO 2010 çalışma zamanını aramak** Için **(ad)** değerini ayarlayın.
+   2. **Özelliğin** değerini **Vstoruntimeredist** olarak değiştirin.
    3. **RegKey** değerini **yazılım \\ Microsoft \\ VSTO çalışma zamanı kurulumu \\ v4R** olarak ayarlayın
-   4. **Kök** özelliği **vsdrrHKLM**olarak ayarlayın.
-   5. **Değer** özelliğini **Sürüm**olarak değiştirin.
+   4. **Kök** özelliği **vsdrrHKLM** olarak ayarlayın.
+   5. **Değer** özelliğini **Sürüm** olarak değiştirin.
 
 7. **Başlatma koşulları (OfficeAddInSetup)** düzenleyicisinde, **condition1** başlatma koşulunu seçin, koşulu sağ tıklatın ve **Özellikler penceresi**' ni seçin.
 8. Özellikler penceresi, aşağıdaki özellikleri ayarlayın:
-   1. **VSTO 2010 çalışma zamanı kullanılabilirliğini doğrulamak**Için **(ad)** öğesini ayarlayın.
+   1. **VSTO 2010 çalışma zamanı kullanılabilirliğini doğrulamak** Için **(ad)** öğesini ayarlayın.
    2. **Koşulun** değerini **Vstoruntimeredist \> = "10.0.30319"** olarak değiştirin
    3. **InstallUrl** özelliğini boş bırakın.
    4. **Message** **Office çalışma zamanı için Visual Studio 2010 Araçları ' na yönelik iletiyi ayarlama yüklü değil. Eklentiyi yüklemek için lütfen Setup.exe çalıştırın**.
@@ -283,11 +285,11 @@ Eklentiyi veya çözümü yüklemek için MSI paketi kullanılıyorsa, yüklenme
 1. **Başlatma koşulları (OfficeAddInSetup)** düzenleyicisinde, **Arama hedef makine**' ye sağ tıklayın ve ardından **kayıt defteri araması Ekle**' ye tıklayın.
 2. RegistryEntry1 arama koşulunu **Ara** ' yı seçin, koşulu sağ tıklatın ve **Özellikler penceresi**' ni seçin.
 3. **Özellikler** penceresinde, aşağıdaki özellikleri ayarlayın:
-    1. **OFFICE VSTO çalışma zamanını aramak**Için **(ad)** değerini ayarlayın.
-    2. **Özelliğin** değerini **Officeruntime**olarak değiştirin.
-    3. **RegKey** değerini **yazılım \\ Microsoft \\ VSTO çalışma zamanı kurulum \\ v4**olarak ayarlayın.
-    4. **Kök** özelliği **vsdrrHKLM**olarak ayarlayın.
-    5. **Değer** özelliğini **Sürüm**olarak değiştirin.
+    1. **OFFICE VSTO çalışma zamanını aramak** Için **(ad)** değerini ayarlayın.
+    2. **Özelliğin** değerini **Officeruntime** olarak değiştirin.
+    3. **RegKey** değerini **yazılım \\ Microsoft \\ VSTO çalışma zamanı kurulum \\ v4** olarak ayarlayın.
+    4. **Kök** özelliği **vsdrrHKLM** olarak ayarlayın.
+    5. **Değer** özelliğini **Sürüm** olarak değiştirin.
 
 4. **Başlatma koşulları (OfficeAddInSetup)** düzenleyicisinde, daha önce tanımlanan **VSTO 2010 çalışma zamanı kullanılabilirlik** başlatma koşulunu Doğrula ' yı seçin, koşula sağ tıklayın ve **Özellikler penceresi**' ni seçin.
 
@@ -304,9 +306,9 @@ Aşağıdaki adımları uygulayarak birlikte çalışma türlerinin eklentiye ka
 1. Çözüm Gezgini Başvurular düğümünü genişletin
 2. PIA başvurularından birini (örneğin, **Office**) seçin.
 3. F4 ' i vurarak veya derlemeler bağlam menüsünden Özellikler ' i seçerek Özellikler pencerelerini görüntüleyin.
-4. **Birlikte çalışma türlerini katıştırma**özelliğinin değerini denetleyin.
+4. **Birlikte çalışma türlerini katıştırma** özelliğinin değerini denetleyin.
 
-Değer **true**olarak ayarlanırsa türler katıştırılır ve [**Kurulum projesi bölümünü oluşturmak için**](#to-build-the-setup-project) ' a atlayabilirsiniz.
+Değer **true** olarak ayarlanırsa türler katıştırılır ve [**Kurulum projesi bölümünü oluşturmak için**](#to-build-the-setup-project) ' a atlayabilirsiniz.
 
 Daha fazla bilgi için bkz. [tür denklik ve katıştırılmış birlikte çalışma türleri](/dotnet/framework/interop/type-equivalence-and-embedded-interop-types)
 
@@ -318,16 +320,16 @@ Daha fazla bilgi için bkz. [tür denklik ve katıştırılmış birlikte çalı
 
     1. **Office PAYLAŞıLAN PIA Için arama** yapmak üzere **(Name)** özelliğinin değerini değiştirme
     2. **ComponentID** değerini, kullanmakta olduğunuz Office bileşeninin Bileşen kimliği olarak değiştirin. Bileşen kimliklerinin listesini aşağıdaki tabloda bulabilirsiniz (örneğin, **{64E2917e-aa13-4CA4-bffe-ea6eda3afcb4}**).
-    3. **Property** özelliğinin değerini **hassharedpıa**olarak değiştirin.
+    3. **Property** özelliğinin değerini **hassharedpıa** olarak değiştirin.
 
 4. **Başlatma koşulları (OfficeAddInSetup)** düzenleyicisinde, **condition1** ' a sağ tıklayın ve **Özellikler penceresi** ' ne tıklayarak başlatma koşulunun özelliklerini görüntüleyin.
 
 5. **Condition1**'in bu özelliklerini değiştirin:
 
-    1. **Office PAYLAŞıLAN PIA kullanılabilirliğini doğrulamak**Için **(adı)** öğesini değiştirin.
-    2. **Koşulu** **hassharedpıa**olarak değiştirin.
+    1. **Office PAYLAŞıLAN PIA kullanılabilirliğini doğrulamak** Için **(adı)** öğesini değiştirin.
+    2. **Koşulu** **hassharedpıa** olarak değiştirin.
     3. **InstallUrl** 'yi boş bırakın.
-    4. **Message** **Excel ile etkileşim kurmak Için iletiyi gerekli bir bileşen olarak değiştirme kullanılamıyor. Lütfen setup.exeçalıştırın **.
+    4. **Message** **Excel ile etkileşim kurmak Için iletiyi gerekli bir bileşen olarak değiştirme kullanılamıyor. Lütfen setup.exeçalıştırın**.
 
     ![Office Paylaşılan PIA başlatma koşulunun Özellikler penceresinin ekran görüntüsü](media/setup-project-figure-10.jpg)
   
@@ -397,7 +399,7 @@ Aşağıdaki örnek, ExcelWorkbookProject adlı bir belge düzeyi çözümü ve 
 
 1. **Çözüm Gezgini** **Office belge dağıtım projesine** sağ tıklayarak çözüme yeni bir .NET konsol projesi ekleyin
 2. **Ekle** ' yi genişletin ve **Yeni proje**' ye tıklayın.
-3. Konsol uygulaması şablonunu seçin ve projeyi **Addcustomizationcustomaction**olarak adlandırın.
+3. Konsol uygulaması şablonunu seçin ve projeyi **Addcustomizationcustomaction** olarak adlandırın.
 
     ![Çözüm Gezgini-AddCustomizationCustomAction ekran görüntüsü](media/setup-project-figure-15.jpg)
   
@@ -545,12 +547,12 @@ Son adım, **yükleme** ve **kaldırma** adımları için özel eylemi yapıland
 
     **Şekil 15: belge bildirimi özel eylemi-proje çıkış grubu Ekle**
 
-4. **Çözüm Gezgini**, **excelworkbooksetup**öğesine sağ tıklayın.
+4. **Çözüm Gezgini**, **excelworkbooksetup** öğesine sağ tıklayın.
 5. **Görünüm** ' ü genişletin ve **özel eylemler**' i tıklatın.
 6. **Özel eylemler (ExcelWorkbookSetup)** düzenleyicisinde, **özel eylemler** ' i sağ tıklatın ve **özel eylem Ekle**' yi tıklatın.
 7. **Projede Öğe Seç** iletişim kutusunda, **konum** listesinde **uygulama klasörü**' ne tıklayın. **AddCustomizationCustomAction (etkin) öğesinden birincil çıkış** ' ı seçin ve ardından, özel eylemi yüklemek Için, **Tamam** ' a tıklayın.
-8. **Install düğümü**altında, **addcustomizationcustomaction (etkin) öğesinden birincil çıkış**' a sağ tıklayın ve **Yeniden Adlandır**' a tıklayın. Özel eylem **belgeyi Belgelerim 'e Kopyala ve özelleştirmeyi Ekle**şeklinde adlandırın.
-9. **Kaldırma düğümü**altında **addcustomizationcustomaction (etkin) öğesinden birincil çıkış** ' a sağ tıklayın ve **Yeniden Adlandır**' a tıklayın. **Belgeyi belgeler klasöründen Kaldır**özel eylemini adlandırın.
+8. **Install düğümü** altında, **addcustomizationcustomaction (etkin) öğesinden birincil çıkış**' a sağ tıklayın ve **Yeniden Adlandır**' a tıklayın. Özel eylem **belgeyi Belgelerim 'e Kopyala ve özelleştirmeyi Ekle** şeklinde adlandırın.
+9. **Kaldırma düğümü** altında **addcustomizationcustomaction (etkin) öğesinden birincil çıkış** ' a sağ tıklayın ve **Yeniden Adlandır**' a tıklayın. **Belgeyi belgeler klasöründen Kaldır** özel eylemini adlandırın.
 
     ![Belge bildirimi özel eylemler penceresinin ekran görüntüsü](media/setup-project-figure-19.jpg)
 

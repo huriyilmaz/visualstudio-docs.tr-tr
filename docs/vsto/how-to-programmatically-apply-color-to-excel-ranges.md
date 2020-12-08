@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: program aracılığıyla Excel aralıklarına renk uygulama'
+description: Bir hücre aralığı içindeki metne renk uygulamayı öğrenin, NamedRange denetimi veya yerel Excel Range nesnesi kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0d4a99e2e71e6a87b304ceea45a3cd595f911ff1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 63a38bb4fb6f8f8ab35b9e1104a1b93d6d757446
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85543461"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96848007"
 ---
 # <a name="how-to-programmatically-apply-color-to-excel-ranges"></a>Nasıl yapılır: program aracılığıyla Excel aralıklarına renk uygulama
   Bir hücre aralığı içindeki metne renk uygulamak için bir <xref:Microsoft.Office.Tools.Excel.NamedRange> Denetim veya yerel Excel Aralık nesnesi kullanın.

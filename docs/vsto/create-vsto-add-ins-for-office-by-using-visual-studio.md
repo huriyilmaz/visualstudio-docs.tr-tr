@@ -1,7 +1,8 @@
 ---
 title: Visual Studio kullanarak Office için VSTO Eklentileri oluşturma
+description: Office 'i genişleten .NET Framework uygulamalar oluşturmak için Visual Studio 'daki Microsoft Office geliştirici araçlarını nasıl kullanabileceğinizi öğrenin.
 titleSuffix: ''
-ms.custom: seodec18
+ms.custom: seodec18, SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +13,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 1e8cd25b8c4c70067641468dd6fa321e9e4fbe39
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 50337b728647b5e15a877216713cd6fc9823742a
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809368"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847981"
 ---
 # <a name="create-vsto-add-ins-for-office-by-using-visual-studio"></a>Visual Studio kullanarak Office için VSTO Eklentileri oluşturma
-  Office 'i genişleten .NET Framework uygulamalar oluşturmak için Visual Studio 'daki Microsoft Office Geliştirici Araçları ' nı kullanabilirsiniz. Bu uygulamalar *Office çözümleri*olarak da adlandırılır.
+  Office 'i genişleten .NET Framework uygulamalar oluşturmak için Visual Studio 'daki Microsoft Office Geliştirici Araçları ' nı kullanabilirsiniz. Bu uygulamalar *Office çözümleri* olarak da adlandırılır.
 
  Office geliştirici araçları, çeşitli iş ihtiyaçlarını karşılamak için Office çözümleri oluşturmanıza yardımcı olan özellikler sağlar. Araçlar, Visual Basic veya Visual C# ' yi kullanarak Office çözümleri oluşturmanıza yardımcı olan proje şablonlarını ve Office çözümleriniz için özel kullanıcı arabirimleri oluşturmanıza yardımcı olan görsel tasarımcıları içerir.
 

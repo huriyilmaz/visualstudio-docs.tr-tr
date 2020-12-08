@@ -1,5 +1,7 @@
 ---
 title: Sunucudaki belgelerdeki verilere erişin
+description: Microsoft Office Word veya Microsoft Office Excel 'in nesne modelini kullanmak zorunda kalmadan belge düzeyi özelleştirmesindeki verilerle nasıl programlama yapabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ab033120c0913bbae33458c5a2d0b53972364581
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e436c7a30708fac0cf59c2e79100cc89dade84b2
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71255776"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847630"
 ---
 # <a name="access-data-in-documents-on-the-server"></a>Sunucudaki belgelerdeki verilere erişin
   Microsoft Office Word veya Microsoft Office Excel 'in nesne modelini kullanmak zorunda kalmadan belge düzeyi özelleştirmesindeki verilere karşı programlama yapabilirsiniz. Bu, Word veya Excel yüklü olmayan bir sunucuda bulunan bir belgede bulunan verilere erişebileceğiniz anlamına gelir. Örneğin, bir sunucudaki kod (örneğin, bir [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] sayfada) bir belgedeki verileri özelleştirebilir ve özelleştirilmiş belgeyi bir son kullanıcıya gönderebilir. Son Kullanıcı belgeyi açtığında, çözüm derlemesinde veri bağlama kodu özelleştirilmiş verileri belgeye bağlar. Belgedeki veriler kullanıcı arabiriminden ayrıldığından bu mümkündür. Daha fazla bilgi için bkz. [belge düzeyi özelleştirmelerde önbelleğe alınmış veriler](../vsto/cached-data-in-document-level-customizations.md).
@@ -70,12 +72,12 @@ ms.locfileid: "71255776"
 ### <a name="modify-null-values-in-the-data-cache"></a>Veri önbelleğindeki null değerleri Değiştir
  Veri önbelleği, belge kaydedilip kapatıldığında **null** değeri olan nesneleri depolamaz. Önbelleğe alınmış verileri değiştirirken bu sınırlamanın çeşitli sonuçları vardır:
 
-- Veri önbelleğindeki herhangi bir nesneyi **null**değerine ayarlarsanız, belge açıldığında veri önbelleğindeki tüm nesneler otomatik olarak **null** olarak ayarlanır ve belge kaydedilip kapatıldığında tüm veri önbelleğinin temizlenmesi gerekir. Diğer bir deyişle, önbelleğe alınmış tüm nesneler veri önbelleğinden kaldırılır ve <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.CachedData%2A> koleksiyon boş olur.
+- Veri önbelleğindeki herhangi bir nesneyi **null** değerine ayarlarsanız, belge açıldığında veri önbelleğindeki tüm nesneler otomatik olarak **null** olarak ayarlanır ve belge kaydedilip kapatıldığında tüm veri önbelleğinin temizlenmesi gerekir. Diğer bir deyişle, önbelleğe alınmış tüm nesneler veri önbelleğinden kaldırılır ve <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.CachedData%2A> koleksiyon boş olur.
 
 - Veri önbelleğinde **null** nesnelerle bir çözüm oluşturursanız ve <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> belge ilk kez açılmadan önce sınıfını kullanarak bu nesneleri başlatmak istiyorsanız, veri önbelleğindeki tüm nesneleri başlattığınızdan emin olmanız gerekir. Nesneleri yalnızca bir kısmını başlattığınızda, belge açıldığında tüm nesneler **null** olarak ayarlanır ve belge kaydedilip kapatıldığında tüm veri önbelleğinin temizlenmesi gerekir.
 
 ## <a name="access-typed-datasets-in-the-cache"></a>Önbellekte yazılan veri kümelerine erişme
- Yazılı bir veri kümesindeki verilere hem Office çözümünden hem de Office dışındaki bir uygulamadan (Windows Forms uygulaması ya da bir proje gibi) erişmek istiyorsanız [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] , türü belirtilmiş veri kümesini her iki projede de başvurulan ayrı bir derlemede tanımlamanız gerekir. **Veri kaynağı yapılandırma** Sihirbazı 'nı veya **veri kümesi Tasarımcısı**kullanarak her bir projeye türü belirtilmiş veri kümesini eklerseniz, .NET Framework iki projedeki türü belirtilmiş veri kümelerini farklı türler olarak değerlendirir. Türü belirtilmiş veri kümeleri oluşturma hakkında daha fazla bilgi için bkz. [Visual Studio 'da veri kümeleri oluşturma ve yapılandırma](../data-tools/create-and-configure-datasets-in-visual-studio.md).
+ Yazılı bir veri kümesindeki verilere hem Office çözümünden hem de Office dışındaki bir uygulamadan (Windows Forms uygulaması ya da bir proje gibi) erişmek istiyorsanız [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] , türü belirtilmiş veri kümesini her iki projede de başvurulan ayrı bir derlemede tanımlamanız gerekir. **Veri kaynağı yapılandırma** Sihirbazı 'nı veya **veri kümesi Tasarımcısı** kullanarak her bir projeye türü belirtilmiş veri kümesini eklerseniz, .NET Framework iki projedeki türü belirtilmiş veri kümelerini farklı türler olarak değerlendirir. Türü belirtilmiş veri kümeleri oluşturma hakkında daha fazla bilgi için bkz. [Visual Studio 'da veri kümeleri oluşturma ve yapılandırma](../data-tools/create-and-configure-datasets-in-visual-studio.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

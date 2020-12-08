@@ -1,5 +1,7 @@
 ---
 title: Office çözümleri için uygulama bildirimleri
+description: Uygulama bildiriminin bir Microsoft Office çözümüne yüklenen derlemeleri açıklayan bir XML dosyası olduğunu öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: reference
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a6272f145ee2c7ef2a91cc635112e440e6404457
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5a16d0f438d06cbfa48538bb3e370ed9b334ad16
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85531514"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847929"
 ---
 # <a name="application-manifests-for-office-solutions"></a>Office çözümleri için uygulama bildirimleri
   Uygulama bildirimi, Microsoft Office çözümüne yüklenen derlemeleri açıklayan bir XML dosyasıdır. Visual Studio 'daki Microsoft Office geliştirme araçları, [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] [ClickOnce uygulama bildirimi](../deployment/clickonce-application-manifest.md) başvurusunda tanımlanan uygulama bildirimi şemasını kullanır.
@@ -96,7 +98,7 @@ ms.locfileid: "85531514"
  Uygulama bildirimi, bir çözümün tek bir sürümüne özeldir. Bu nedenle, uygulama bildirimlerinin dağıtım bildirimlerinden ayrı olarak depolanması gerekir. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] sürüme özgü dosyaları Yayımla klasöründeki *uygulama dosyaları* alt dizininde ilişkili sürümden sonra adlı bir alt dizine koyar.
 
 ## <a name="file-name-syntax"></a>Dosya adı sözdizimi
- Uygulama bildirim dosyasının adı, **assemblyIdentity** öğesinde tanımlandığı şekilde uygulamanın tam adı ve uzantısı olmalıdır ve ardından *. manifest*uzantısını izler. Örneğin, *OutlookAddIn1.dll* özelleştirmeye başvuran bir uygulama bildirimi aşağıdaki dosya adı sözdizimini kullanır.
+ Uygulama bildirim dosyasının adı, **assemblyIdentity** öğesinde tanımlandığı şekilde uygulamanın tam adı ve uzantısı olmalıdır ve ardından *. manifest* uzantısını izler. Örneğin, *OutlookAddIn1.dll* özelleştirmeye başvuran bir uygulama bildirimi aşağıdaki dosya adı sözdizimini kullanır.
 
  `OutlookAddIn1.dll.manifest`
 

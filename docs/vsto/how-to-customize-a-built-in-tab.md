@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: yerleşik bir sekmeyi özelleştirme'
+description: Yerleşik bir sekmeye grupları ve denetimleri nasıl ekleyebileceğiniz hakkında bilgi edinin. Yerleşik sekme, zaten bir Microsoft Office uygulamasının şeridinde bulunan bir sekmedir.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5f73ec7a8555a5e5d569d4316ca619747550bf11
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7ac002b4c9ebacaf9cb522b583d6c4c9580b7bf2
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547192"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96846642"
 ---
 # <a name="how-to-customize-a-built-in-tab"></a>Nasıl yapılır: yerleşik bir sekmeyi özelleştirme
   Yerleşik bir sekmeye grup ve denetim ekleyebilirsiniz. Yerleşik sekme, zaten bir Microsoft Office uygulamasının şeridinde bulunan bir sekmedir. Örneğin, **veri** sekmesi Excel 'deki yerleşik bir sekmedir. Özel bir grup oluşturduğunuzda, bu sekme en son sekmede görünür, ancak grubunuzu sekme üzerinde herhangi bir yere taşıyabilirsiniz.
@@ -33,11 +35,11 @@ ms.locfileid: "85547192"
 1. **Çözüm Gezgini**' de şerit kodu dosyasına sağ tıklayın ve ardından **tasarımcıyı görüntüle**' ye tıklayın.
 
     > [!NOTE]
-    > Şerit kod dosyası **Çözüm Gezgini**görünmüyorsa, projenize bir **Şerit öğesi** eklemeniz gerekir. Bkz. [nasıl yapılır: Şeriti özelleştirmeye başlama](../vsto/how-to-get-started-customizing-the-ribbon.md).
+    > Şerit kod dosyası **Çözüm Gezgini** görünmüyorsa, projenize bir **Şerit öğesi** eklemeniz gerekir. Bkz. [nasıl yapılır: Şeriti özelleştirmeye başlama](../vsto/how-to-get-started-customizing-the-ribbon.md).
 
 2. Şerit Tasarımcısı ' nda herhangi bir sekmeye sağ tıklayın ve ardından **Özellikler**' e tıklayın.
 
-3. **Özellikler** penceresinde **ControlID** özelliğini genişletin ve **ControlIdType** özelliğini **Office**olarak ayarlayın.
+3. **Özellikler** penceresinde **ControlID** özelliğini genişletin ve **ControlIdType** özelliğini **Office** olarak ayarlayın.
 
 4. **OfficeId** özelliğini, özelleştirmek istediğiniz yerleşik SEKMENIN *denetim kimliği* olarak ayarlayın.
 

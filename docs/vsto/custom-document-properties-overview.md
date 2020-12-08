@@ -1,5 +1,7 @@
 ---
 title: Özel belge özelliklerine genel bakış
+description: Belge düzeyinde bir proje oluşturduğunuzda, Visual Studio 'Nun projedeki belgeye iki özel özellik eklediği hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 3d9fd14753f447b929faf5aecd37277529e0dd19
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 8c30e0b3253e19316eed24fa26500cd55a3dd515
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "92298458"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847799"
 ---
 # <a name="custom-document-properties-overview"></a>Özel belge özelliklerine genel bakış
 
@@ -40,7 +42,7 @@ Bu özellik özelleştirme için dağıtım bildirimiyle ilgili ayrıntıları s
 
  \_AssemblyLocation Özellik değeri, çözümün nasıl dağıtıldığına bağlı olarak farklı biçimlere sahip olabilir:
 
-- Çözüm bir Web sitesinden, UNC yolundan veya CD ya da USB sürücüsünden yüklenmek üzere yayımlandıysa, _AssemblyLocation özelliği *DeploymentManifestPath* | *SolutionId*biçimindedir. Aşağıdaki dize bir örnektir:
+- Çözüm bir Web sitesinden, UNC yolundan veya CD ya da USB sürücüsünden yüklenmek üzere yayımlandıysa, _AssemblyLocation özelliği *DeploymentManifestPath* | *SolutionId* biçimindedir. Aşağıdaki dize bir örnektir:
 
      file://deployserver/MyShare/ExcelWorkbook1.vsto|74744e4b-e4d6-41eb-84f7-ad20346fe2d9
 

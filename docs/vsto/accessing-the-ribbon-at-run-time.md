@@ -1,5 +1,7 @@
 ---
 title: Çalışma zamanında Şerite erişin
+description: Şeriti göstermek, gizlemek ve değiştirmek için kod yazabilir ve kullanıcıların kodu özel bir görev bölmesinde, Eylemler bölmesinde veya Outlook form bölgesindeki denetimlerden çalıştırmasını sağlayabilirsiniz.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7c7fdda6234f1e98117cdb1bf047762ed9d4621a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d8facf847e484824b636324d1f84427a08172035
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71255738"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847604"
 ---
 # <a name="access-the-ribbon-at-run-time"></a>Çalışma zamanında Şerite erişin
   Şeriti göstermek, gizlemek ve değiştirmek için kod yazabilir ve kullanıcıların kodu özel bir görev bölmesinde, Eylemler bölmesinde veya Outlook form bölgesindeki denetimlerden çalıştırmasını sağlayabilirsiniz.

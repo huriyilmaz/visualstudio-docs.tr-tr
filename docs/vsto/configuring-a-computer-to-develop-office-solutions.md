@@ -1,5 +1,7 @@
 ---
 title: Office çözümleri geliştirmek için bir bilgisayarı yapılandırma
+description: Microsoft Office için VSTO eklentileri ve özelleştirmeleri oluşturabilmek için Visual Studio 'nun desteklenen bir sürümünü, .NET Framework ve Microsoft Office nasıl yükleyebileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7a0304c217599e790b8cfa9e738245927336470e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3658f655c50c9d1a0775a8cc69dd65baf32d1408
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88801847"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847268"
 ---
 # <a name="configure-a-computer-to-develop-office-solutions"></a>Office çözümleri geliştirmek için bir bilgisayarı yapılandırma
 

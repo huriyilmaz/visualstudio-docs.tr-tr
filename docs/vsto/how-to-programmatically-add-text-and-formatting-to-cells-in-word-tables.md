@@ -1,5 +1,7 @@
 ---
 title: Program aracılığıyla Word tablo hücrelerine metin & biçimlendirme ekleme
+description: Microsoft Office Word tablolarındaki hücrelere program aracılığıyla metin ve biçimlendirme nasıl ekleyebileceğiniz hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c0dc63c96669848703f3c18554100841a9f6c9cb
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: f10684fa3e9309611ebf3b04d3cea77ee822f49e
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585372"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96848020"
 ---
 # <a name="how-to-programmatically-add-text-and-formatting-to-cells-in-word-tables"></a>Nasıl yapılır: Word tablolarında hücrelere program aracılığıyla metin ve biçimlendirme ekleme
   Her tablo bir hücre koleksiyonundan oluşur. Her tek <xref:Microsoft.Office.Interop.Word.Cell> nesne tablodaki bir hücreyi temsil eder. Tablodaki konumuna göre her bir hücreye başvurursunuz. Bu örnek, ilk satırda bulunan hücreyi ve tablonun ilk sütununu ifade eder; hücreye metin ekler; ve biçimlendirme uygular.

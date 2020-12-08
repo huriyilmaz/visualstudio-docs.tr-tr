@@ -1,5 +1,7 @@
 ---
 title: Olayları gönderme | Microsoft Docs
+description: Hata ayıklayıcı ve hata ayıklama altyapısının DCOM 'a göre bir olay modeli nasıl kullandığını öğrenin. Olaylar COM nesneleri olarak gönderilir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5ec0d3aa29da562147b71b8efde49baf07d8ae0b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0262868ae442bfdd8b99c16f59e000f4ebfc35c5
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80713038"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847916"
 ---
 # <a name="send-events"></a>Olayları gönderme
 Hata ayıklayıcı ile hata ayıklama altyapısı (DE) arasındaki iletişim mekanizması DCOM 'u temel alan bir olay modelidir. Olaylar COM nesneleri olarak gönderilir ve her olayda şunları belirten parametreler bulunur:

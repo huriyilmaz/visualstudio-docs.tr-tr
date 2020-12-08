@@ -1,5 +1,6 @@
 ---
 title: 'Nasıl yapılır: Word belgelerine yer Işareti denetimleri ekleme'
+description: Belge düzeyi projelerde, tasarım zamanında veya çalışma zamanında projenizdeki belgeye Bookmark denetimleri ekleyebileceğinizi öğrenin.
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -16,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: de5868674790239b8374ef9796308280588ae96e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a6ccf3f5a355cdad682026453691a4203c95a814
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547257"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847474"
 ---
 # <a name="how-to-add-bookmark-controls-to-word-documents"></a>Nasıl yapılır: Word belgelerine yer Işareti denetimleri ekleme
   Belge düzeyi projelerde, <xref:Microsoft.Office.Tools.Word.Bookmark> tasarım zamanında veya çalışma zamanında projenizdeki belgeye denetim ekleyebilirsiniz. VSTO eklenti projelerinde, <xref:Microsoft.Office.Tools.Word.Bookmark> çalışma zamanında herhangi bir açık belgeye denetimler ekleyebilirsiniz.
@@ -65,7 +66,7 @@ ms.locfileid: "85547257"
 
 3. Yer işaretine eklemek istediğiniz metni veya diğer öğeleri seçin.
 
-4. **Tamam**’a tıklayın.
+4. **Tamam** düğmesine tıklayın.
 
      Varsayılan yer işaretinin adını korumak istemiyorsanız, adı **Özellikler** penceresinde değiştirebilirsiniz.
 

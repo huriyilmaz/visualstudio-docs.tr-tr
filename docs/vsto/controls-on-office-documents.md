@@ -1,5 +1,7 @@
 ---
 title: Office belgelerindeki denetimler
+description: Word belgelerine ve Excel çalışma sayfalarına Windows Forms denetimleri ve konak denetimleri eklemek için Visual Studio 'da Office geliştirme araçları 'nı nasıl kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 160897a37ff6a8b335479b42a80f4186f176cab6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 203edcf2b77cfff3fb557ce7c1c8fea7592e17ea
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71254409"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847994"
 ---
 # <a name="controls-on-office-documents"></a>Office belgelerindeki denetimler
   Word belgelerine ve Excel çalışma sayfalarına Windows Forms denetimleri ve *konak denetimleri* eklemek Için Visual Studio 'da Office geliştirme araçları ' nı kullanabilirsiniz. Konak denetimleri, Word ve Excel nesne modellerinde çeşitli kullanıcı arabirimi (UI) nesnelerini genişleten nesnelerdir.

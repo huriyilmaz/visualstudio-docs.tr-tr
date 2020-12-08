@@ -1,5 +1,7 @@
 ---
 title: Office çözümleri tasarlama ve oluşturma
+description: Visual Studio 'nun birçok farklı Office çözümü türü oluşturmak için kullanabileceğiniz proje şablonları nasıl sağladığını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: cd51c377ed20807c5e5e2b26f842c6152bf7c222
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 191de013c94bfede7d1ddac5f3dd0392143e08dc
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808226"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847539"
 ---
 # <a name="design-and-create-office-solutions"></a>Office çözümleri tasarlama ve oluşturma
 
@@ -56,9 +58,9 @@ Visual Studio, birçok farklı Office çözümü türü oluşturmak için kullan
 > Kullanarak oluşturduğunuz Office projelerinde .NET Framework 3,5 veya önceki bir sürümü hedeflenemez [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] . Kullanarak oluşturduğunuz Office projeleri [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] , ilk olarak [!INCLUDE[net_client_v40_long](../vsto/includes/net-client-v40-long-md.md)]
 
 ### <a name="understand-when-the-office-pias-are-required-on-end-user-computers"></a>Son kullanıcı bilgisayarlarında Office PIA 'ların ne zaman gerekli olduğunu anlayın
- Varsayılan olarak, projedeki her bir Office PIA başvurusunun **birlikte çalışma türlerini katıştır** özelliği **true**olarak ayarlandıysa ve varsayılan değer olan Office birincil birlikte çalışma derlemelerinin (PIA 'lar) Son Kullanıcı bilgisayarlara yüklenmesi gerekmez. Bu senaryoda, çözümünüz tarafından kullanılan PIA türleri için tür bilgileri, projeyi oluştururken çözüm derlemesine katıştırılır. Çalışma zamanında, Office uygulamasının COM tabanlı nesne modeline çağrı yapmak için PIA yerine gömülü tür bilgileri kullanılır. PIA 'lerden gelen türlerin çözümünüze nasıl katıştırıldığı hakkında daha fazla bilgi için bkz. [tür denklik ve katıştırılmış birlikte çalışma türleri](/dotnet/framework/interop/type-equivalence-and-embedded-interop-types).
+ Varsayılan olarak, projedeki her bir Office PIA başvurusunun **birlikte çalışma türlerini katıştır** özelliği **true** olarak ayarlandıysa ve varsayılan değer olan Office birincil birlikte çalışma derlemelerinin (PIA 'lar) Son Kullanıcı bilgisayarlara yüklenmesi gerekmez. Bu senaryoda, çözümünüz tarafından kullanılan PIA türleri için tür bilgileri, projeyi oluştururken çözüm derlemesine katıştırılır. Çalışma zamanında, Office uygulamasının COM tabanlı nesne modeline çağrı yapmak için PIA yerine gömülü tür bilgileri kullanılır. PIA 'lerden gelen türlerin çözümünüze nasıl katıştırıldığı hakkında daha fazla bilgi için bkz. [tür denklik ve katıştırılmış birlikte çalışma türleri](/dotnet/framework/interop/type-equivalence-and-embedded-interop-types).
 
- Projedeki her bir Office PIA başvurusunun **birlikte çalışma türlerini katıştır** özelliği **yanlış**olarak ayarlanırsa, Office PIA 'ları çözümü çalıştıran her bir son kullanıcı bilgisayarında genel derleme önbelleğinde yüklü ve kayıtlı olmalıdır. Çoğu durumda, PIA 'ler Office ile varsayılan olarak yüklenir, ancak aynı zamanda sizin çözümünüz için bir önkoşul olarak PIA Redistributable da dahil edebilirsiniz. Daha fazla bilgi için bkz. [dağıtım Için Office çözüm önkoşulları](/previous-versions/bb608617(v=vs.110)).
+ Projedeki her bir Office PIA başvurusunun **birlikte çalışma türlerini katıştır** özelliği **yanlış** olarak ayarlanırsa, Office PIA 'ları çözümü çalıştıran her bir son kullanıcı bilgisayarında genel derleme önbelleğinde yüklü ve kayıtlı olmalıdır. Çoğu durumda, PIA 'ler Office ile varsayılan olarak yüklenir, ancak aynı zamanda sizin çözümünüz için bir önkoşul olarak PIA Redistributable da dahil edebilirsiniz. Daha fazla bilgi için bkz. [dağıtım Için Office çözüm önkoşulları](/previous-versions/bb608617(v=vs.110)).
 
 ### <a name="understand-the-client-profile"></a>İstemci profilini anlayın
  .NET Framework Istemci profili, tam .NET Framework bir alt kümesidir. Yalnızca .NET Framework istemci özelliklerini kullanmanız gerekiyorsa ve Office çözümünüz için mümkün olan en hızlı dağıtım deneyimini sağlamak istiyorsanız .NET Framework Istemci profilini hedefleyebilirsiniz. Daha fazla bilgi için bkz. [.NET Framework istemci profili](/dotnet/framework/deployment/client-profile).
@@ -66,7 +68,7 @@ Visual Studio, birçok farklı Office çözümü türü oluşturmak için kullan
  ' İ hedefleyen bir Office projesi oluşturduğunuzda, [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] [!INCLUDE[net_client_v40_long](../vsto/includes/net-client-v40-long-md.md)] Varsayılan olarak hedeflenmelidir. Tam için geliştirme yapmak istiyorsanız [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] , bu seçeneği Proje oluşturulduktan sonra ayarlamanız gerekir. Daha fazla bilgi için bkz. [nasıl yapılır: .NET Framework bir sürümünü hedefleme](../ide/visual-studio-multi-targeting-overview.md).
 
 ## <a name="create-solutions-for-the-64-bit-edition-of-microsoft-office"></a>Microsoft Office 64 bit sürümü için çözümler oluşturma
- Microsoft Office, 64-bit ve 32 bit sürümlerde kullanılabilir. Her iki sürümde çalışabilen Office çözümleri oluşturmak için, projenizin platform hedefi ayarı **herhangi BIR CPU**olarak ayarlanmalıdır. Bu, Office projeleri için varsayılan değerdir. Daha fazla bilgi için bkz. [Office çözümleri oluşturma](../vsto/building-office-solutions.md).
+ Microsoft Office, 64-bit ve 32 bit sürümlerde kullanılabilir. Her iki sürümde çalışabilen Office çözümleri oluşturmak için, projenizin platform hedefi ayarı **herhangi BIR CPU** olarak ayarlanmalıdır. Bu, Office projeleri için varsayılan değerdir. Daha fazla bilgi için bkz. [Office çözümleri oluşturma](../vsto/building-office-solutions.md).
 
  [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]Microsoft Office 'ın 64-bit ve 32 bit sürümleri tarafından kullanılan ayrı 64-bit ve 32 bit sürümleri vardır. Daha fazla bilgi için bkz. [Office çalışma zamanına genel bakış Visual Studio Araçları](../vsto/visual-studio-tools-for-office-runtime-overview.md).
 

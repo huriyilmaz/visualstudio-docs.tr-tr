@@ -1,5 +1,7 @@
 ---
 title: Form bölgesini Outlook ileti sınıfıyla ilişkilendirme
+description: Form bölgesini her bir öğenin ileti sınıfıyla ilişkilendirerek, hangi Microsoft Office Outlook öğelerinin form bölgesi görüntülemesini istediğinizi nasıl kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 45db262b6bf7843a3893c5d60f0b6eaea5fcb70b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 213b167bf7fe10c83b028fce2d97c67cd837d272
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71254569"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847006"
 ---
 # <a name="associate-a-form-region-with-an-outlook-message-class"></a>Form bölgesini Outlook ileti sınıfıyla ilişkilendirme
   Form bölgesini her öğenin ileti sınıfıyla ilişkilendirerek, hangi Microsoft Office Outlook öğelerinin form bölgesi görüntülemesini belirtebilirsiniz. Örneğin, bir posta öğesinin altına bir form bölgesi eklemek istiyorsanız, form bölgesini `IPM.Note` ileti sınıfıyla ilişkilendirebilirsiniz.

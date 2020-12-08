@@ -1,5 +1,7 @@
 ---
 title: İçerik denetimleri
+description: İçerik denetimleri ve içerik denetimlerinin belge ve şablon tasarlamak için bir yol nasıl sağladığını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -38,12 +40,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8683f5379aaa33446b150adf34f8a5aa57a83ff3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a34211c7fb1fa001719219b7d08baab65340bde5
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72986184"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96848046"
 ---
 # <a name="content-controls"></a>İçerik denetimleri
   İçerik denetimleri, bu özelliklere sahip belge ve şablonlar tasarlamak için bir yol sağlar:
@@ -94,7 +96,7 @@ ms.locfileid: "72986184"
 ### <a name="drop-down-list"></a>Açılan liste
  Açılır liste, kullanıcıların seçebileceğiniz öğelerin bir listesini görüntüler. Birleşik giriş kutusunun aksine, açılan liste kullanıcıların öğeleri eklemesine veya düzenlemesine izin vermez. Daha fazla bilgi için bkz <xref:Microsoft.Office.Tools.Word.DropDownListContentControl> ..
 
-### <a name="group"></a>Gruplama
+### <a name="group"></a>Grup
  Bir grup denetimi, kullanıcıların düzenleyeve silememe veya silmesine yönelik bir belgenin korumalı bölgesini tanımlar. Bir grup denetimi metin, tablolar, grafikler ve diğer içerik denetimleri gibi herhangi bir belge öğesi içerebilir. Daha fazla bilgi için bkz <xref:Microsoft.Office.Tools.Word.GroupContentControl> ..
 
 ### <a name="picture"></a>Resim
@@ -148,7 +150,7 @@ ms.locfileid: "72986184"
 
 - Windows Forms ile aynı veri bağlama modelini kullanarak, içerik denetimlerini veritabanı alanlarına veya yönetilen nesnelere bağlayabilirsiniz.
 
-- İçerik denetimlerini, XML parçaları ( *özel XML parçaları*olarak da adlandırılır) halinde belgeye katıştırılmış öğelere bağlayabilirsiniz.
+- İçerik denetimlerini, XML parçaları ( *özel XML parçaları* olarak da adlandırılır) halinde belgeye katıştırılmış öğelere bağlayabilirsiniz.
 
   Office çözümlerinde verilere konak denetimlerini bağlamaya genel bakış için bkz. [Office çözümlerinde verileri denetimlere](../vsto/binding-data-to-controls-in-office-solutions.md)bağlama.
 

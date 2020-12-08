@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: belge düzeyi özelleştirmelerine özel XML bölümleri ekleme'
+description: Belge düzeyi özelleştirmesinde özel bir XML bölümü oluşturarak bir Microsoft Office Excel çalışma kitabında veya Microsoft Office Word belgesinde XML verilerini nasıl depolayabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 74bceeeabdaa46e6c1a35b5ab76de6a180d16d53
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 9b2f3b4e72f9255099ed7190867faba5585ced4c
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "92298446"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847436"
 ---
 # <a name="how-to-add-custom-xml-parts-to-document-level-customizations"></a>Nasıl yapılır: belge düzeyi özelleştirmelerine özel XML bölümleri ekleme
   XML verilerini bir Microsoft Office Excel çalışma kitabında veya Microsoft Office Word belgesinde, belge düzeyi özelleştirmesinde özel bir XML bölümü oluşturarak saklayabilirsiniz. Daha fazla bilgi için bkz. [özel XML bölümlerine genel bakış](../vsto/custom-xml-parts-overview.md).

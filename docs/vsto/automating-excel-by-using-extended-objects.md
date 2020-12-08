@@ -1,5 +1,7 @@
 ---
 title: Genişletilmiş nesneleri kullanarak Excel 'i otomatikleştirme
+description: Visual Studio 'da Excel çözümleri geliştirirken, çözümlerinizde konak öğelerini ve konak denetimlerini kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -20,15 +22,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 65734f5397bae8c35fb8e312041d0600b8fa84e9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 912385950721de1d1e0b98c1b6582552210aa04a
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71254340"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96846967"
 ---
 # <a name="automate-excel-by-using-extended-objects"></a>Genişletilmiş nesneleri kullanarak Excel 'i otomatikleştirme
-  Visual Studio 'da Excel çözümleri geliştirirken, çözümlerinizde *konak öğelerini* ve *konak denetimini*kullanabilirsiniz. Bunlar, ve nesneleri gibi, Excel nesne modelinde (yani, Excel için birincil birlikte çalışma derlemesi tarafından sunulan nesne modelinde) belirli yaygın kullanılan nesneleri genişleten nesnelerdir <xref:Microsoft.Office.Interop.Excel.Worksheet> <xref:Microsoft.Office.Interop.Excel.Range> . Genişletilmiş nesneler, temel aldığı Excel nesneleri gibi davranır, ancak nesnelere yeni olaylar ve veri bağlama özellikleri gibi ek özellikler ekler.
+  Visual Studio 'da Excel çözümleri geliştirirken, çözümlerinizde *konak öğelerini* ve *konak denetimini* kullanabilirsiniz. Bunlar, ve nesneleri gibi, Excel nesne modelinde (yani, Excel için birincil birlikte çalışma derlemesi tarafından sunulan nesne modelinde) belirli yaygın kullanılan nesneleri genişleten nesnelerdir <xref:Microsoft.Office.Interop.Excel.Worksheet> <xref:Microsoft.Office.Interop.Excel.Range> . Genişletilmiş nesneler, temel aldığı Excel nesneleri gibi davranır, ancak nesnelere yeni olaylar ve veri bağlama özellikleri gibi ek özellikler ekler.
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
 

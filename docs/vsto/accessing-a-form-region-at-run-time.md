@@ -1,5 +1,7 @@
 ---
 title: Çalışma zamanında form bölgesine erişme
+description: Çalışma zamanında Microsoft Office çeşitli proje türlerinde ve sürümlerinde form bölgesine erişmeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5dd8818b57a1aa33b70254303150d8f00e36cc02
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d0276405c023717c88f334d6231939d59f79ee4e
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71255793"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847422"
 ---
 # <a name="access-a-form-region-at-run-time"></a>Çalışma zamanında form bölgesine erişme
 
@@ -59,7 +61,7 @@ ms.locfileid: "71255793"
  Sınıfını kullanarak form bölgesindeki denetimlere erişmek için `Globals` , denetimleri form bölgesi kod dosyası dışındaki kod için erişilebilir yapmanız gerekir.
 
 ### <a name="form-regions-designed-in-the-form-region-designer"></a>Form bölgesi tasarımcısında tasarlanan form bölgeleri
- C# için, erişmek istediğiniz her denetimin değiştiricisini değiştirin. Bunu yapmak için, form bölgesi tasarımcısında her bir denetimi seçin ve **Özellikler** penceresinde **değiştiriciler** özelliğini **iç** veya **ortak** olarak değiştirin. Örneğin, öğesinin **değiştirici** özelliğini `textBox1` **iç**olarak değiştirirseniz `textBox1` yazarak erişebilirsiniz `Globals.FormRegions.FormRegion1.textBox1` .
+ C# için, erişmek istediğiniz her denetimin değiştiricisini değiştirin. Bunu yapmak için, form bölgesi tasarımcısında her bir denetimi seçin ve **Özellikler** penceresinde **değiştiriciler** özelliğini **iç** veya **ortak** olarak değiştirin. Örneğin, öğesinin **değiştirici** özelliğini `textBox1` **iç** olarak değiştirirseniz `textBox1` yazarak erişebilirsiniz `Globals.FormRegions.FormRegion1.textBox1` .
 
  Visual Basic için değiştiriciyi değiştirmenize gerek yoktur.
 

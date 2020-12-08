@@ -1,5 +1,7 @@
 ---
 title: Outlook form bölgeleri oluşturma
+description: Form bölgelerini daha kolay tasarlamak, geliştirmek ve hata ayıklamak üzere Microsoft Outlook formlarını özelleştirmek için form bölgelerini nasıl kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8a999ca11427533690628fb92f28e93d22cf0971
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f3273c02416cac54dfd244ba4f163fb5d726413c
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71255908"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847968"
 ---
 # <a name="create-outlook-form-regions"></a>Outlook form bölgeleri oluşturma
   Form bölgelerini Microsoft Office Outlook formlarını özelleştirmek için kullanabilirsiniz. Visual Studio, form bölgelerini tasarlamanıza, geliştirmenize ve hata ayıklamanıza daha kolay bir şekilde gelişmiş araçlar sağlar.
@@ -69,7 +71,7 @@ ms.locfileid: "71255908"
 
  Oluşturmak istediğiniz form bölgesi türünü belirtmek için Sihirbazı kullanın. Aşağıdaki tabloda her form bölge türü açıklanmaktadır.
 
-|Bölge türü|Description|
+|Bölge türü|Açıklama|
 |-----------------|-----------------|
 |Bağımsız|Form bölgesini Outlook formunda yeni bir sayfa olarak ekler.|
 |Boşluğuna bitişik alanda|Form bölgesini Outlook formunun varsayılan sayfasının altına ekler.|
@@ -151,7 +153,7 @@ ms.locfileid: "71255908"
 ### <a name="handle-form-region-events"></a><a name="HandlingFormRegionEvents"></a> Form bölgesi olaylarını işle
  **Outlook form bölgesi** öğesi, aşağıdaki üç olay işleyicisini form bölgesi kod dosyasına otomatik olarak ekler.
 
-|Olay|Description|
+|Olay|Açıklama|
 |-----------|-----------------|
 |Formregionbaşlatılıyor|Form bölgesi başlatılmadan önce oluşur. Outlook 'un form bölgesini görüntülemesi gerekip gerekmediğini öğrenmek için bu olay işleyicisindeki koşulları kontrol edebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: Outlook 'un form bölgesini görüntülemesini engelleme](../vsto/how-to-prevent-outlook-from-displaying-a-form-region.md).|
 |Bir Formregiongösteriliyor|Form bölgesinin bir örneği oluşturulduktan sonra, ancak form bölgesi görüntülenmeden önce oluşur.|

@@ -1,5 +1,7 @@
 ---
 title: Diğer Office çözümlerindeki VSTO eklentilerindeki kodu çağırma
+description: VSTO eklentiinizdeki bir nesneyi diğer Microsoft Office çözümleri de dahil olmak üzere diğer çözümlere nasıl kullanıma sunabileceğiniz hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 584406098f058c17b3dd215dda9c8c4e9498cf46
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fad3f107487e4736ccd0a6aa59ea5a801b5f72e5
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71255322"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847851"
 ---
 # <a name="call-code-in-vsto-add-ins-from-other-office-solutions"></a>Diğer Office çözümlerindeki VSTO eklentilerindeki kodu çağırma
   VSTO eklentiinizdeki bir nesneyi diğer Microsoft Office çözümleri de dahil olmak üzere diğer çözümlere kullanıma sunabilirsiniz. Bu, VSTO eklentisinin diğer çözümlerin kullanmasını sağlamak istediğiniz bir hizmet sağlıyorsa yararlı olur. Örneğin, bir Web hizmetinden finans verilerinde hesaplamalar gerçekleştiren Microsoft Office Excel için bir VSTO eklentileriniz varsa, diğer çözümler çalışma zamanında Excel VSTO eklentisini çağırarak bu hesaplamaları gerçekleştirebilir.
@@ -46,7 +48,7 @@ ms.locfileid: "71255322"
 
 - COM VSTO eklentileri (diğer bir deyişle, arabirimi doğrudan uygulayan VSTO eklentileri <xref:Extensibility.IDTExtensibility2> ).
 
-- VSTO eklentiinizdeki farklı bir işlemde çalışan herhangi bir çözüm (Bu tür çözümler, *işlem dışı istemciler*olarak da adlandırılır). Bunlar, bir Office uygulamasını otomatikleştiren bir Windows Forms veya konsol uygulaması ve farklı bir işlemde yüklenen VSTO eklentileri gibi uygulamaları içerir.
+- VSTO eklentiinizdeki farklı bir işlemde çalışan herhangi bir çözüm (Bu tür çözümler, *işlem dışı istemciler* olarak da adlandırılır). Bunlar, bir Office uygulamasını otomatikleştiren bir Windows Forms veya konsol uygulaması ve farklı bir işlemde yüklenen VSTO eklentileri gibi uygulamaları içerir.
 
 ## <a name="expose-objects-to-other-solutions"></a>Nesneleri diğer çözümlere sunma
  VSTO eklentiinizdeki bir nesneyi diğer çözümlere sunmak için, VSTO eklentilerinizde aşağıdaki adımları gerçekleştirin:
@@ -56,13 +58,13 @@ ms.locfileid: "71255322"
 2. <xref:Microsoft.Office.Tools.AddInBase.RequestComAddInAutomationService%2A>Sınıfında yöntemi geçersiz kılın `ThisAddIn` . Diğer çözümlere sunmak istediğiniz sınıfın bir örneğini döndürün.
 
 ### <a name="define-the-class-you-want-to-expose-to-other-solutions"></a>Diğer çözümlere sunmak istediğiniz sınıfı tanımlayın
- En azından, göstermek istediğiniz sınıfın public olması gerekir, <xref:System.Runtime.InteropServices.ComVisibleAttribute> özniteliği **true**olarak ayarlanmalıdır ve [IDispatch](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) arabirimini kullanıma sunmalıdır.
+ En azından, göstermek istediğiniz sınıfın public olması gerekir, <xref:System.Runtime.InteropServices.ComVisibleAttribute> özniteliği **true** olarak ayarlanmalıdır ve [IDispatch](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) arabirimini kullanıma sunmalıdır.
 
  [IDispatch](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) arabirimini kullanıma sunmak için önerilen yol aşağıdaki adımları gerçekleştirmedir:
 
 1. Diğer çözümlere sunmak istediğiniz üyeleri bildiren bir arabirim tanımlayın. Bu arabirimi, VSTO eklenti projenizde tanımlayabilirsiniz. Ancak, sınıfı VBA olmayan çözümlere göstermek istiyorsanız bu arabirimi ayrı bir sınıf kitaplığı projesinde tanımlamak isteyebilirsiniz. bu sayede, VSTO eklentisini çağıran çözümlerin, VSTO eklenti projenize başvurulmadan arabirime başvurabilmesi gerekir.
 
-2. <xref:System.Runtime.InteropServices.ComVisibleAttribute>Özniteliği bu arabirime uygulayın ve bu özniteliği **true**olarak ayarlayın.
+2. <xref:System.Runtime.InteropServices.ComVisibleAttribute>Özniteliği bu arabirime uygulayın ve bu özniteliği **true** olarak ayarlayın.
 
 3. Bu arabirimi uygulamak için sınıfınızı değiştirin.
 
@@ -111,7 +113,7 @@ ms.locfileid: "71255322"
    COMAddIn. Object özelliğinin dönüş değerini kullanma yöntemi, VBA istemcileri ve VBA olmayan istemciler için farklıdır. İşlem dışı istemcilerde, olası bir yarış durumundan kaçınmak için ek kod gereklidir.
 
 ### <a name="access-objects-from-vba-solutions"></a>VBA çözümlerinde nesnelere erişme
- Aşağıdaki kod örneği, bir VSTO eklentisi tarafından sunulan bir yöntemi çağırmak için VBA 'Yı nasıl kullanacağınızı gösterir. Bu VBA makrosu `ImportData` , **ExcelImportData**adlı bir VSTO eklentisinde tanımlanmış adlı bir yöntemi çağırır. Daha büyük bir anlatım bağlamında bu kodu görmek için bkz. [Izlenecek yol: BIR VSTO EKLENTISINDE VBA 'Dan çağrı kodu](../vsto/walkthrough-calling-code-in-a-vsto-add-in-from-vba.md).
+ Aşağıdaki kod örneği, bir VSTO eklentisi tarafından sunulan bir yöntemi çağırmak için VBA 'Yı nasıl kullanacağınızı gösterir. Bu VBA makrosu `ImportData` , **ExcelImportData** adlı bir VSTO eklentisinde tanımlanmış adlı bir yöntemi çağırır. Daha büyük bir anlatım bağlamında bu kodu görmek için bkz. [Izlenecek yol: BIR VSTO EKLENTISINDE VBA 'Dan çağrı kodu](../vsto/walkthrough-calling-code-in-a-vsto-add-in-from-vba.md).
 
 ```vb
 Sub CallVSTOMethod()

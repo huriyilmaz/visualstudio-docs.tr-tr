@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: Word tablolarına program aracılığıyla satır ve sütun ekleme'
+description: Tabloya satır eklemek için Rows nesnesinin Add metodunu nasıl kullanabileceğinizi öğrenin. Sütunlar eklemek için Columns nesnesinin Add yöntemini de kullanabilirsiniz.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 3887f80a5c2a0cb775059f58876135d91350133c
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 10154033c23cccc134752afb7f8b1e9c67099671
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585385"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96846369"
 ---
 # <a name="how-to-programmatically-add-rows-and-columns-to-word-tables"></a>Nasıl yapılır: Word tablolarına program aracılığıyla satır ve sütun ekleme
   Microsoft Office Word tablosunda hücreler satırlar ve sütunlar halinde düzenlenir. <xref:Microsoft.Office.Interop.Word.Rows.Add%2A> <xref:Microsoft.Office.Interop.Word.Rows> Tabloya satır eklemek için nesnesinin yöntemini ve <xref:Microsoft.Office.Interop.Word.Columns.Add%2A> <xref:Microsoft.Office.Interop.Word.Columns> sütun eklemek için nesne yöntemini kullanabilirsiniz.

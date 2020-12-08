@@ -1,5 +1,7 @@
 ---
 title: Belge düzeyi Özelleştirmelerdeki önbelleğe alınmış veriler
+description: Verilerin veri önbelleği olarak katıştırılması için, Visual Studio 'Nun verileri belge düzeyi özelleştirmelerindeki görünümden nasıl ayırılacağını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -18,17 +20,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9985dd25ba62cc9c0735a8a8f4008a4c0abe0558
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: be4229c179ec6c5640ab612d28991fe476363a53
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88238354"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847903"
 ---
 # <a name="cached-data-in-document-level-customizations"></a>Belge düzeyi Özelleştirmelerdeki önbelleğe alınmış veriler
   Belge düzeyi özelleştirmelerinin birincil amacı, verileri Office belgelerindeki görünümden ayıramaktır. Veriler, belgede saklanan, sayılar ve metin gibi bilgileri ifade eder. Görünüm, Kullanıcı arabirimi ve Microsoft Office Word ve Excel Microsoft Office nesne modeli anlamına gelir.
 
- Visual Studio, verilerin veri *önbelleği*olarak da adlandırılan bir *veri Adası*olarak gömülmesini sağlayarak belge düzeyi özelleştirmelerde görünümden verileri ayırır. Doğrudan Word veya Excel 'i başlatmadan verileri okuyabilir veya değiştirebilirsiniz. Bu, Microsoft Office yüklü olmayan bir sunucudaki belgelerdeki verileri değiştirmeniz gerektiğinde faydalıdır. Word ve Excel, istemci ortamlarında kullanılmak üzere tasarlanmıştır; Bunlar bir sunucuda çalıştırılmak üzere tasarlanmamıştır.
+ Visual Studio, verilerin veri *önbelleği* olarak da adlandırılan bir *veri Adası* olarak gömülmesini sağlayarak belge düzeyi özelleştirmelerde görünümden verileri ayırır. Doğrudan Word veya Excel 'i başlatmadan verileri okuyabilir veya değiştirebilirsiniz. Bu, Microsoft Office yüklü olmayan bir sunucudaki belgelerdeki verileri değiştirmeniz gerektiğinde faydalıdır. Word ve Excel, istemci ortamlarında kullanılmak üzere tasarlanmıştır; Bunlar bir sunucuda çalıştırılmak üzere tasarlanmamıştır.
 
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 

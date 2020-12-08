@@ -1,5 +1,7 @@
 ---
 title: Office çözümleri oluşturma
+description: Office projelerini derleme ve hata ayıklama ve Visual Studio 'da Windows Forms gibi diğer proje türlerini oluşturma ve hata ayıklama arasındaki farkları öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: conceptual
 dev_langs:
@@ -26,12 +28,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 3f89e20b710584c678c035f4d85034e90bb11323
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3d942a7818c3c71e0859c9271b329688734682f2
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "69551851"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847942"
 ---
 # <a name="build-office-solutions"></a>Office çözümleri oluşturma
   Genel olarak, Office projelerinin oluşturulması ve hata ayıklaması, Visual Studio 'da Windows Forms gibi diğer proje türlerini derleme ve hata ayıklama ile aynıdır. Bu bölümdeki konular, var olan farkları açıklamaktadır. Uygulamaları oluşturma hakkında genel bilgi için bkz. [Visual Studio 'Da derleme ve derleme](../ide/compiling-and-building-in-visual-studio.md).
@@ -46,11 +48,11 @@ ms.locfileid: "69551851"
 
 - Proje belgesinin bir kopyası.
 
-- Proje derlemesi ve **Copy Local** özelliği **true**olarak ayarlanmış olan tüm başvurulan derlemeler.
+- Proje derlemesi ve **Copy Local** özelliği **true** olarak ayarlanmış olan tüm başvurulan derlemeler.
 
-- Dosya adı uzantısı *. manifest*olan uygulama bildirimi. Daha fazla bilgi için bkz. [Office çözümleri Için uygulama bildirimleri](../vsto/application-manifests-for-office-solutions.md).
+- Dosya adı uzantısı *. manifest* olan uygulama bildirimi. Daha fazla bilgi için bkz. [Office çözümleri Için uygulama bildirimleri](../vsto/application-manifests-for-office-solutions.md).
 
-- *. VSTO*dosya adı uzantısına sahip dağıtım bildirimi. Daha fazla bilgi için bkz. [Office çözümleri Için dağıtım bildirimleri](../vsto/deployment-manifests-for-office-solutions.md).
+- *. VSTO* dosya adı uzantısına sahip dağıtım bildirimi. Daha fazla bilgi için bkz. [Office çözümleri Için dağıtım bildirimleri](../vsto/deployment-manifests-for-office-solutions.md).
 
 - Program veritabanı (*pdb*) dosyası.
 
@@ -60,11 +62,11 @@ ms.locfileid: "69551851"
 ### <a name="application-level-projects"></a>Uygulama düzeyi projeleri
  Bir VSTO eklenti projesi oluşturduğunuzda, aşağıdaki öğeler proje çıktısına dahil edilir:
 
-- Proje derlemesi ve **Copy Local** özelliği **true**olarak ayarlanmış olan tüm başvurulan derlemeler.
+- Proje derlemesi ve **Copy Local** özelliği **true** olarak ayarlanmış olan tüm başvurulan derlemeler.
 
-- Dosya adı uzantısı *. manifest*olan uygulama bildirimi. Daha fazla bilgi için bkz. [Office çözümleri Için uygulama bildirimleri](../vsto/application-manifests-for-office-solutions.md).
+- Dosya adı uzantısı *. manifest* olan uygulama bildirimi. Daha fazla bilgi için bkz. [Office çözümleri Için uygulama bildirimleri](../vsto/application-manifests-for-office-solutions.md).
 
-- *. VSTO*dosya adı uzantısına sahip dağıtım bildirimi. Daha fazla bilgi için bkz. [Office çözümleri Için dağıtım bildirimleri](../vsto/deployment-manifests-for-office-solutions.md).
+- *. VSTO* dosya adı uzantısına sahip dağıtım bildirimi. Daha fazla bilgi için bkz. [Office çözümleri Için dağıtım bildirimleri](../vsto/deployment-manifests-for-office-solutions.md).
 
 - Proje derlemesi için bir program veritabanı (*pdb*) dosyası.
 
@@ -79,7 +81,7 @@ ms.locfileid: "69551851"
   Outlook 'un form bölgelerini yüklemesi için bu bilgiye ihtiyacı vardır.
 
 ## <a name="referenced-assemblies"></a>Başvurulan derlemeler
- Derlemelere (sınıf kitaplığı projeleri dahil), yapı Office çözümleri projenizden başvurabilirsiniz. Her Başvurulmuş derleme **Yerel kopyalama**adlı bir özelliğe sahiptir. Yereli **Kopyala** , derlemenin çıkış dizinine kopyalanıp kopyalanmadığını gösterir. Varsayılan olarak **true**değerine ayarlanır. Yereli **Kopyala** ayarı **true** olan her Başvurulmuş derleme çıkış dizinine kopyalanır.
+ Derlemelere (sınıf kitaplığı projeleri dahil), yapı Office çözümleri projenizden başvurabilirsiniz. Her Başvurulmuş derleme **Yerel kopyalama** adlı bir özelliğe sahiptir. Yereli **Kopyala** , derlemenin çıkış dizinine kopyalanıp kopyalanmadığını gösterir. Varsayılan olarak **true** değerine ayarlanır. Yereli **Kopyala** ayarı **true** olan her Başvurulmuş derleme çıkış dizinine kopyalanır.
 
 ## <a name="security-during-the-build-process"></a>Oluşturma işlemi sırasında güvenlik
  Visual Studio, yapı işlemi sırasında çözüme güven sağlamak için geliştirme bilgisayarındaki güvenlik ayarlarını otomatik olarak yapılandırır. Bu, çözümün hata ayıklarken çalışmasına izin verir.
@@ -94,7 +96,7 @@ ms.locfileid: "69551851"
  Belge düzeyi projeleri için, belgenin tam konumunu da Office güvenilir klasörler listesine eklemeniz gerekir. Daha fazla bilgi için bkz. [belgelere güven verme](../vsto/granting-trust-to-documents.md).
 
 ## <a name="change-the-platform-target"></a>Platform hedefini değiştirme
- Varsayılan olarak, Office projeleri için platform hedefi **herhangi BIR CPU**olur. Genellikle, bu ayarı değiştirmemelisiniz. **Herhangi BIR CPU** platformu hedefi ayarıyla oluşturulan Office çözümleri, Microsoft 'un 32 bit ve 64 bit sürümlerinde çalışır [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)] .
+ Varsayılan olarak, Office projeleri için platform hedefi **herhangi BIR CPU** olur. Genellikle, bu ayarı değiştirmemelisiniz. **Herhangi BIR CPU** platformu hedefi ayarıyla oluşturulan Office çözümleri, Microsoft 'un 32 bit ve 64 bit sürümlerinde çalışır [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)] .
 
  Platform hedefini yalnızca Microsoft 'un 64-bit sürümlerinde çalışacak bir çözüm oluşturuyorsanız [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)] ve çözümünüz yerel 64 bit API 'leri çağırdığında x64 olarak ayarlamanız gerekir. Platform hedefi ayarını değiştirme hakkında daha fazla bilgi için bkz. [nasıl yapılır: projeleri hedef platformları Için yapılandırma](../ide/how-to-configure-projects-to-target-platforms.md).
 

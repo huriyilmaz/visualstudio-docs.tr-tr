@@ -1,5 +1,7 @@
 ---
 title: Office çözümleri için olay günlüğü
+description: Office çalışma zamanı için Visual Studio Araçları tarafından yakalanan özel durum iletilerini görmek için Windows 'da Olay Görüntüleyicisi 'ni nasıl kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 480a355ee2af321341c54b90edcc582d49102186
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 74aaf7c1c07c349fa3669332a41e4e7d06ba86f1
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62951950"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847773"
 ---
 # <a name="event-logging-for-office-solutions"></a>Office çözümleri için olay günlüğü
   Office çözümlerini yüklerken veya kaldırırken tarafından yakalanan özel durum iletilerini görmek için Windows 'daki Olay Görüntüleyicisi 'ni kullanabilirsiniz [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] . Bu iletileri, yükleme ve dağıtım sorunlarını çözmek için olay günlükçüsü ' nden kullanabilirsiniz.
@@ -34,7 +36,7 @@ ms.locfileid: "62951950"
 
 1. Denetim Masası 'nda **Yönetimsel Araçlar**' ı açın.
 
-2. **Olay Görüntüleyicisi**başlatın.
+2. **Olay Görüntüleyicisi** başlatın.
 
 3. Olay günlükleri listesinde **uygulama**' yı seçin.
 
@@ -42,7 +44,7 @@ ms.locfileid: "62951950"
 
 5. **Olay kaynağı** listesinde **VSTO 4,0**' ı seçin.
 
-6. Yükleme olayları için, **olay kimliği** kutusuna **4096**yazın.
+6. Yükleme olayları için, **olay kimliği** kutusuna **4096** yazın.
 
 7. Filtrelenmiş görünümü görmek için **Tamam** ' ı tıklatın.
 
@@ -50,7 +52,7 @@ ms.locfileid: "62951950"
 
 1. Denetim Masası 'nda **Yönetimsel Araçlar**' ı açın.
 
-2. **Olay Görüntüleyicisi**başlatın.
+2. **Olay Görüntüleyicisi** başlatın.
 
 3. **Windows günlükleri**' ni genişletin.
 
@@ -60,7 +62,7 @@ ms.locfileid: "62951950"
 
 6. **Olay kaynağı** listesinde **VSTO 4,0**' ı seçin.
 
-7. Yükleme olayları için, **olay kimliği** kutusuna **4096**yazın.
+7. Yükleme olayları için, **olay kimliği** kutusuna **4096** yazın.
 
 8. Filtrelenmiş görünümü görmek için **Tamam** ' ı tıklatın.
 
@@ -92,9 +94,9 @@ ms.locfileid: "62951950"
 
 4. **Yeni sistem değişkeni** iletişim kutusunda, **değişken adı** kutusuna **VSTO_EVENTLOGDISABLED** yazın.
 
-5. **Değişken değeri** kutusuna **1**yazın.
+5. **Değişken değeri** kutusuna **1** yazın.
 
-6. **Tamam**’a tıklayın.
+6. **Tamam** düğmesine tıklayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Office çözümünü dağıtma](../vsto/deploying-an-office-solution.md)

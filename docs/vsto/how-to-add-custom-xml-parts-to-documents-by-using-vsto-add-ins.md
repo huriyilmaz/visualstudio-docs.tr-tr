@@ -1,5 +1,7 @@
 ---
 title: VSTO Eklentilerini kullanarak belgelere özel XML bölümleri ekleme
+description: VSTO eklentilerde özel bir XML bölümü oluşturarak XML verilerini aşağıdaki belge türlerinde nasıl depolayabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -19,12 +21,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 92c00ea69069b7374f5f595cc6f198aac23d1f91
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1b153fe3e7c68ed6a8288ff69a30e16dd32c448a
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85538300"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847721"
 ---
 # <a name="how-to-add-custom-xml-parts-to-documents-by-using-vsto-add-ins"></a>Nasıl yapılır: VSTO Eklentilerini kullanarak belgelere özel XML bölümleri ekleme
   VSTO eklentilerde özel bir XML bölümü oluşturarak XML verilerini aşağıdaki belge türlerinde saklayabilirsiniz:
@@ -67,7 +69,7 @@ ms.locfileid: "85538300"
 
 ## <a name="to-add-a-custom-xml-part-to-a-powerpoint-presentation"></a>Bir PowerPoint sunusuna özel bir XML bölümü eklemek için
 
-1. <xref:Microsoft.Office.Core.CustomXMLPart>Sunudaki [Microsoft. Office. Interop. PowerPoint. _Presentation. CustomXMLParts](/previous-versions/office/developer/office-2010/ff760806%28v%3doffice.14%29) koleksiyonuna yeni bir nesne ekleyin. , <xref:Microsoft.Office.Core.CustomXMLPart> Sunuda depolamak ISTEDIĞINIZ XML dizesini içerir.
+1. <xref:Microsoft.Office.Core.CustomXMLPart>Sunudaki [Microsoft.Office.Interop.PowerPoint._Presentation. CustomXMLParts](/previous-versions/office/developer/office-2010/ff760806%28v%3doffice.14%29) koleksiyonuna yeni bir nesne ekleyin. , <xref:Microsoft.Office.Core.CustomXMLPart> Sunuda depolamak ISTEDIĞINIZ XML dizesini içerir.
 
      Aşağıdaki kod örneği, belirtilen sunuya özel bir XML bölümü ekler.
 
@@ -76,7 +78,7 @@ ms.locfileid: "85538300"
 
 2. Yöntemi, `AddCustomXmlPartToPresentation` `ThisAddIn` POWERPOINT Için VSTO eklenti projesindeki sınıfına ekleyin.
 
-3. Projenizdeki diğer koddan yöntemi çağırın. Örneğin, Kullanıcı bir sunu açtığında özel XML bölümü oluşturmak için, [Microsoft. Office. Interop. PowerPoint. EApplication_Event. AfterPresentationOpen](/previous-versions/office/developer/office-2010/ff762843(v=office.14)) olayı için bir olay işleyicisinden yöntemi çağırın.
+3. Projenizdeki diğer koddan yöntemi çağırın. Örneğin, Kullanıcı bir sunu açtığında özel XML bölümü oluşturmak için, [Microsoft.Office.Interop.PowerPoint.EApplication_Event. AfterPresentationOpen](/previous-versions/office/developer/office-2010/ff762843(v=office.14)) olayına yönelik bir olay işleyicisinden yöntemi çağırın.
 
 ## <a name="robust-programming"></a>Güçlü programlama
  Kolaylık olması için bu örnek, yönteminde yerel değişken olarak tanımlanan bir XML dizesi kullanır. Genellikle, XML dosyasını bir dosya veya veritabanı gibi bir dış kaynaktan edinmeniz gerekir.

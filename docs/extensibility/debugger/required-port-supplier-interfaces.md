@@ -1,5 +1,7 @@
 ---
 title: Gerekli bağlantı noktası sağlayıcısı arabirimleri | Microsoft Docs
+description: Bir bağlantı noktası tedarikçinin çalışması gereken arabirimler hakkında bilgi edinin. Bağlantı noktası sağlayıcısı, bağlantı noktaları sağlar ve bunları uygular.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: bf2aeb1f26f81d773e171aa3fed6b0f2ef976c91
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 13e3ac8dc0c229f0c0a00bd22131251c71893224
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80713159"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847136"
 ---
 # <a name="required-port-supplier-interfaces"></a>Gerekli bağlantı noktası sağlayıcısı arabirimleri
 Bir bağlantı noktası tedarikçinin [IDebugPortSupplier2](../../extensibility/debugger/reference/idebugportsupplier2.md) arabirimini uygulaması gerekir. [IDebugPortSupplier2](../../extensibility/debugger/reference/idebugportsupplier2.md)

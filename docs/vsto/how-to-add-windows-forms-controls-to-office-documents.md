@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: Office belgelerine Windows Forms denetimleri ekleme'
+description: Belge düzeyi projelerinde tasarım zamanında Microsoft Office Excel ve Microsoft Office Word belgelerine Windows Forms denetimleri nasıl ekleyebileceğiniz hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b12d51ffe3a2e647a067b95d320e8beb70cac384
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a8f073a72db1a18574dff6ab060b1ea069475fbb
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547543"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96846785"
 ---
 # <a name="how-to-add-windows-forms-controls-to-office-documents"></a>Nasıl yapılır: Office belgelerine Windows Forms denetimleri ekleme
   Belge düzeyi projelerinde, tasarım zamanında Excel Microsoft Office ve Microsoft Office Word belgelerine Windows Forms denetimleri ekleyebilirsiniz. Çalışma zamanında, belge düzeyi özelleştirmelerine ve VSTO eklentilerine denetim ekleyebilirsiniz. Örneğin, <xref:Microsoft.Office.Tools.Excel.Controls.ComboBox> kullanıcıların bir seçenek listesinden seçim yapabilmesi için çalışma sayfanıza bir denetim ekleyebilirsiniz.

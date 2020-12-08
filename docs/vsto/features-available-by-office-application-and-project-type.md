@@ -1,5 +1,7 @@
 ---
 title: Office uygulaması ve proje türü tarafından kullanılabilen özellikler
+description: Visual Studio 'nun Microsoft Office uygulamalar için farklı iş senaryolarını destekleyen çeşitli proje şablonu türlerine sahip olduğunu öğrenin.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -20,12 +22,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ba24bdeac9ad51d0173e765c8cb793be2473baf6
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 24db499602642f6ec980628d290ec8b5dd07fed3
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585438"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847812"
 ---
 # <a name="features-available-by-office-application-and-project-type"></a>Office uygulaması ve proje türü tarafından kullanılabilen özellikler
   Visual Studio, aşağıdaki türler dahil olmak üzere Microsoft Office uygulamalar için farklı iş senaryolarını destekleyen çeşitli proje şablonu türlerine sahiptir:
@@ -50,7 +52,7 @@ ms.locfileid: "91585438"
 ## <a name="features-available-in-different-project-types"></a>Farklı proje türlerinde kullanılabilen özellikler
  Aşağıdaki tabloda her bir özelliği hangi proje türlerinin sağladığı gösterilmektedir.
 
-|Öne çıkan özelliği|Özelliği sağlayan proje türleri|Daha fazla bilgi|
+|Özellik|Özelliği sağlayan proje türleri|Daha fazla bilgi|
 |-------------|--------------------------------------------|---------------------|
 |Eylemler bölmesi.|Belge düzeyi projeler.|[Eylemler bölmesine genel bakış](../vsto/actions-pane-overview.md)|
 |ClickOnce dağıtımı.|VS ve belge düzeyindeki projeler.|[Office çözümünü dağıtma](../vsto/deploying-an-office-solution.md)|

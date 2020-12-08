@@ -1,5 +1,7 @@
 ---
 title: Office projelerinde erişilebilirlik
+description: Microsoft Office projelerinin, standart erişilebilirlik gereksinimlerini karşılayan özel çözümler oluşturmanıza olanak sağlayan birçok erişilebilirlik özelliği nasıl ekleneceğini öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8bd74f4d61c74a4dc348f7a615e103b283a15fc0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: de877ccc2d2a036bf03b0888a7edf455b17788a4
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "73189625"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847370"
 ---
 # <a name="accessibility-in-office-projects"></a>Office projelerinde erişilebilirlik
 
@@ -44,11 +46,11 @@ Microsoft Visual Studio ve Microsoft Office, standart erişilebilirlik gereksini
 
 2. **Office Araçları** düğümünü genişletin ve uygun şekilde **Excel klavye Microsoft Office** veya **Microsoft Office sözcük klavye**' yi seçin.
 
-3. **Dinamik klavye şemasını**seçin.
+3. **Dinamik klavye şemasını** seçin.
 
      Değişikliğin etkili olması için Visual Studio 'Yu yeniden başlatmanız gerektiğini belirten bir ileti görüntülenir.
 
-4. **Tamam**’a tıklayın.
+4. **Tamam** düğmesine tıklayın.
 
 5. Visual Studio 'Yu yeniden başlatın ve projenizi yeniden açın.
 
@@ -70,7 +72,7 @@ Microsoft Visual Studio ve Microsoft Office, standart erişilebilirlik gereksini
   Belgelerde Windows Forms denetimlerinin sınırlamaları hakkında daha fazla bilgi için bkz. [Office belgelerindeki Windows Forms denetimlerinin sınırlamaları](../vsto/limitations-of-windows-forms-controls-on-office-documents.md).
 
 ### <a name="actions-panes-and-custom-task-panes"></a>Eylemler bölmeleri ve özel görev bölmeleri
- Bir eylemler bölmesi veya özel görev bölmesi odağa sahip olduğunda, denetimlere Windows Forms uygulamasındaki denetimlere erişen şekilde erişirsiniz. İmlecinizi eylemler bölmesi ve belge arasında taşımak için **F6**tuşuna basın.
+ Bir eylemler bölmesi veya özel görev bölmesi odağa sahip olduğunda, denetimlere Windows Forms uygulamasındaki denetimlere erişen şekilde erişirsiniz. İmlecinizi eylemler bölmesi ve belge arasında taşımak için **F6** tuşuna basın.
 
  Eylemler bölmeleri ve özel görev bölmeleri hakkında daha fazla bilgi için bkz. [eylemler bölmesine genel bakış](../vsto/actions-pane-overview.md) ve [özel görev bölmeleri](../vsto/custom-task-panes.md).
 
@@ -80,7 +82,7 @@ Visual Studio, görüntüleme modlarıyla ilgili aşağıdaki sınırlamalara sa
 
 - Bir Word belgesi veya Excel çalışma sayfasındaki denetimler, belgenin yakınlaştırma ayarını %100 dışında bir şeye değiştirdiğinizde devre dışı bırakılır.
 
-- **Yeni proje** iletişim kutusu, bir Kullanıcı bilgisayarın erişilebilirlik seçeneklerini **yüksek karşıtlık kullanacak**şekilde değiştirirse, denetimleri doğru görüntülemez.
+- **Yeni proje** iletişim kutusu, bir Kullanıcı bilgisayarın erişilebilirlik seçeneklerini **yüksek karşıtlık kullanacak** şekilde değiştirirse, denetimleri doğru görüntülemez.
 
 Bu kısıtlamaları aşmak için büyüteci kullanabilirsiniz. Büyüteç, ekranın büyütülmüş bir bölümünü görüntüleyen ayrı bir pencere oluşturan Windows 'daki bir görüntüleme yardımcı programıdır.
 

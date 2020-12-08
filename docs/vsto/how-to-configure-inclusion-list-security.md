@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: ekleme listesi güvenliğini yapılandırma'
+description: Son kullanıcılara, ekleme listesine bir güven kararı kaydederek Office çözümlerini yükleme seçeneği verilip verilmediğini denetlemek için ClickOnce güven istemi 'ni yapılandırın.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 459cf3f33197939a916a5f11a94bbaf09e8142e3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1f9eca5150e019906805adf40e5c9b6af8a3c14e
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85541641"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96846733"
 ---
 # <a name="how-to-configure-inclusion-list-security"></a>Nasıl yapılır: ekleme listesi güvenliğini yapılandırma
   Yönetici izinleriniz varsa, [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] son kullanıcılara, ekleme listesine bir güven kararı kaydederek Office çözümlerini yükleme seçeneği verilip verilmediğini denetlemek için güven istemi 'ni yapılandırabilirsiniz. Ekleme listeleri hakkında daha fazla bilgi için bkz. [ekleme listelerini kullanarak Office çözümlerine güvenme](../vsto/trusting-office-solutions-by-using-inclusion-lists.md).
@@ -42,15 +44,15 @@ ms.locfileid: "85541641"
 
     1. **Başlat**' a ve ardından **Çalıştır**' a tıklayın.
 
-    2. **Aç** kutusuna **regedt32.exe**yazın ve ardından **Tamam**' a tıklayın.
+    2. **Aç** kutusuna **regedt32.exe** yazın ve ardından **Tamam**' a tıklayın.
 
 2. Aşağıdaki kayıt defteri anahtarını bulun:
 
-     **\ HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT \\ . NETFramework\Security\TrustManager\PromptingLevel**
+     **\ HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\\ . NETFramework\Security\TrustManager\PromptingLevel**
 
      Anahtar yoksa, oluşturun.
 
-3. Zaten mevcut değilse, ilişkili değerlerle aşağıdaki alt anahtarları **dize değeri**olarak ekleyin.
+3. Zaten mevcut değilse, ilişkili değerlerle aşağıdaki alt anahtarları **dize değeri** olarak ekleyin.
 
     |Dize değeri alt anahtarı|Değer|
     |-------------------------|-----------|
@@ -101,15 +103,15 @@ ms.locfileid: "85541641"
 
     1. **Başlat**' a ve ardından **Çalıştır**' a tıklayın.
 
-    2. **Aç** kutusuna **regedt32.exe**yazın ve ardından **Tamam**' a tıklayın.
+    2. **Aç** kutusuna **regedt32.exe** yazın ve ardından **Tamam**' a tıklayın.
 
 2. Aşağıdaki kayıt defteri anahtarını bulun:
 
-     **\ HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT \\ . NETFramework\Security\TrustManager\PromptingLevel**
+     **\ HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\\ . NETFramework\Security\TrustManager\PromptingLevel**
 
      Anahtar yoksa, oluşturun.
 
-3. Zaten mevcut değilse, ilişkili değerlerle aşağıdaki alt anahtarları **dize değeri**olarak ekleyin.
+3. Zaten mevcut değilse, ilişkili değerlerle aşağıdaki alt anahtarları **dize değeri** olarak ekleyin.
 
     |Dize değeri alt anahtarı|Değer|
     |-------------------------|-----------|
@@ -160,13 +162,13 @@ ms.locfileid: "85541641"
 
     1. **Başlat**' a ve ardından **Çalıştır**' a tıklayın.
 
-    2. **Aç** kutusuna **regedt32.exe**yazın ve ardından **Tamam**' a tıklayın.
+    2. **Aç** kutusuna **regedt32.exe** yazın ve ardından **Tamam**' a tıklayın.
 
 2. Zaten yoksa, aşağıdaki kayıt defteri anahtarını oluşturun:
 
-     **\ HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT \\ . NETFramework\Security\TrustManager\PromptingLevel**
+     **\ HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\\ . NETFramework\Security\TrustManager\PromptingLevel**
 
-3. Zaten mevcut değilse, ilişkili değerlerle aşağıdaki alt anahtarları **dize değeri**olarak ekleyin.
+3. Zaten mevcut değilse, ilişkili değerlerle aşağıdaki alt anahtarları **dize değeri** olarak ekleyin.
 
     |Dize değeri alt anahtarı|Değer|
     |-------------------------|-----------|

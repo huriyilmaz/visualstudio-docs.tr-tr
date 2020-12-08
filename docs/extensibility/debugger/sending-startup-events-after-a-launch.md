@@ -1,5 +1,7 @@
 ---
 title: Başlatma sonrasında başlangıç olaylarını gönderme | Microsoft Docs
+description: Hata ayıklama altyapısı bir programa eklendikten sonra hata ayıklama altyapısının hata ayıklama oturumuna gönderdiği başlangıç olayları dizisi hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c71db002420a2b822bffd34f2ae05e712f6a4bb9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 99b094fd1019e0d7dea09e2953cb4f31e03b80dc
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80713006"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847890"
 ---
 # <a name="send-startup-events-after-a-launch"></a>Başlatma sonrasında başlangıç olaylarını gönder
 Hata ayıklama altyapısı (DE) programa eklendikten sonra, hata ayıklama oturumuna geri bir dizi başlangıç olayı gönderir.

@@ -1,5 +1,7 @@
 ---
 title: Önbellek verileri
+description: Verilerin çevrimdışı veya Microsoft Office Word ya da Excel açılmadan veya açmadan veri nesnelerini bir belge düzeyi özelleştirmesinde nasıl önbelleğe alabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c6e0f6d7fcf9920ddb8861712b7c5f8bf04506fc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: db22378477daffd4562a9d60c6b30bc7b96e58e2
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62939421"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847877"
 ---
 # <a name="cache-data"></a>Önbellek verileri
   Verilerin çevrimdışı olarak erişilebilmesi veya Microsoft Office Word ya da Excel Microsoft Office açılmadan, bir belge düzeyi özelleştirmesinde veri nesnelerini önbelleğe alabilirsiniz. Bir nesneyi önbelleğe almak için, nesnenin belirli gereksinimleri karşılayan bir veri türü olması gerekir. .NET Framework birçok ortak veri türü,, ve dahil olmak üzere bu gereksinimleri karşılar <xref:System.String> <xref:System.Data.DataSet> <xref:System.Data.DataTable> .
@@ -79,7 +81,7 @@ ms.locfileid: "62939421"
  Daha fazla bilgi için bkz. [nasıl yapılır: parola korumalı bir belgedeki verileri önbelleğe alma](../vsto/how-to-cache-data-in-a-password-protected-document.md).
 
 ## <a name="prevent-data-loss-when-adding-null-values-to-the-data-cache"></a>Veri önbelleğine null değerler eklenirken veri kaybını önleme
- Veri önbelleğine nesne eklediğinizde, belge kaydedilmeden ve kapatılmadan önce önbelleğe alınmış nesnelerin tümünün**null** olmayan bir değere başlatılması gerekir. Önbelleğe alınan herhangi bir nesne, belge kaydedilip kapatıldığında **null** değere sahipse, [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] önbelleğe alınan tüm nesneleri veri önbelleğinden otomatik olarak kaldırır.
+ Veri önbelleğine nesne eklediğinizde, belge kaydedilmeden ve kapatılmadan önce önbelleğe alınmış nesnelerin tümünün **null** olmayan bir değere başlatılması gerekir. Önbelleğe alınan herhangi bir nesne, belge kaydedilip kapatıldığında **null** değere sahipse, [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] önbelleğe alınan tüm nesneleri veri önbelleğinden otomatik olarak kaldırır.
 
  Tasarım zamanında özniteliğini kullanarak veri önbelleğine **null** değeri olan bir nesne eklerseniz <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute> , <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> belge açılmadan önce önbelleğe alınmış veri nesnelerini başlatmak için sınıfını kullanabilirsiniz. Belge son kullanıcı tarafından açılmadan önce, Word veya Excel yüklü olmayan bir sunucuda önbelleğe alınmış verileri başlatmak istiyorsanız bu kullanışlıdır. Daha fazla bilgi için bkz. [sunucudaki belgelerdeki verilere erişme](../vsto/accessing-data-in-documents-on-the-server.md).
 

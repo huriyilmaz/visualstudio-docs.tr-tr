@@ -1,5 +1,7 @@
 ---
 title: Otomatik kaydetme Office çözümlerini nasıl etkiler
+description: Excel, PowerPoint ve Word 'Ün düzenlemelerinizi otomatik olarak ve sürekli olarak kaydeden bir özelliği nasıl otomatik olarak kaydedeceğini öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 10/26/2018
 ms.topic: conceptual
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ceaf13e24d56060e3d962e108d43c4d87d69fb8c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6108ee35c79ec475de70e874ce0dc6d872cc62c6
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62826689"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96846798"
 ---
 # <a name="how-autosave-impacts-office-solutions"></a>Otomatik kaydetme Office çözümlerini nasıl etkiler
 

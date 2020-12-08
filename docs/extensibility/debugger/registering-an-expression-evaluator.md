@@ -1,5 +1,7 @@
 ---
 title: Ifade değerlendiricisi kaydetme | Microsoft Docs
+description: İfade değerlendiricisi 'nin kendisini hem Windows COM ortamı hem de Visual Studio ile bir sınıf fabrikası olarak kaydetmesi gerektiğini öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 600f7c8a2e2957cddf23ccc82b0872617e491940
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8f26eddf7191ee4393dd2ca986fe7a1d2c3af9e2
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80713210"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847149"
 ---
 # <a name="register-an-expression-evaluator"></a>İfade değerlendiricisi kaydetme
 > [!IMPORTANT]
@@ -25,7 +27,7 @@ ms.locfileid: "80713210"
  İfade değerlendirici (EE), hem Windows COM ortamı hem de Visual Studio ile birlikte bir sınıf fabrikası olarak kaydolmalıdır. Bir EE, bir DLL olarak ayarlanır ve bu sayede, hangi varlığın EE tarafından örnekdiği ile ilgili olarak hata ayıklama altyapısı (DE) adres alanına ya da Visual Studio adres alanına eklenir.
 
 ## <a name="managed-code-expression-evaluator"></a>Yönetilen kod ifade değerlendiricisi
- Yönetilen bir kod EE, kendisini COM ortamıyla kaydeden, genellikle VSıP *regpkg.exe*programı çağrısıyla BAŞLATıLAN bir dll olan sınıf kitaplığı olarak uygulanır. COM ortamı için kayıt defteri anahtarları yazma işleminin gerçek işlemi otomatik olarak gerçekleştirilir.
+ Yönetilen bir kod EE, kendisini COM ortamıyla kaydeden, genellikle VSıP *regpkg.exe* programı çağrısıyla BAŞLATıLAN bir dll olan sınıf kitaplığı olarak uygulanır. COM ortamı için kayıt defteri anahtarları yazma işleminin gerçek işlemi otomatik olarak gerçekleştirilir.
 
  Ana sınıfın bir yöntemi ile işaretlenir <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute> , bu YÖNTEMIN dll com ile kaydedildiğinde çağrılmakta olduğunu gösterir. Genellikle çağrılan bu kayıt yöntemi, `RegisterClass` Visual Studio Ile dll kaydetme görevini gerçekleştirir. Karşılık gelen `UnregisterClass` (ile işaretli <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute> ), dll kaldırıldığında etkilerini geri alır `RegisterClass` .
 Yönetilmeyen kodda yazılmış bir EE için aynı kayıt defteri girişleri yapılır; Tek fark, `SetEEMetric` çalışmayı sizin için yapmak gibi bir yardımcı işlev değildir. Kayıt ve kayıt silme işleminin bir örneği aşağıda verilmiştir.
@@ -101,7 +103,7 @@ namespace EEMC
  EE DLL, `DllRegisterServer` kendısını com ortamına ve Visual Studio 'ya kaydetmek için işlevi uygular.
 
 > [!NOTE]
-> MyCEE kod örneği kayıt defteri kodunu, EnVSDK\MyCPkgs\MyCEE. altındaki VSıP yüklemesinde bulunan *dllentry. cpp*dosyasında bulabilirsiniz.
+> MyCEE kod örneği kayıt defteri kodunu, EnVSDK\MyCPkgs\MyCEE. altındaki VSıP yüklemesinde bulunan *dllentry. cpp* dosyasında bulabilirsiniz.
 
 ### <a name="dll-server-process"></a>DLL sunucusu işlemi
  EE kaydedilirken, DLL sunucusu:
@@ -120,7 +122,7 @@ namespace EEMC
     > [!NOTE]
     > , `metricLanguage``GUID` Dili adına göre tanımlar, ancak `guidLang` `SetEEMetric` dilin seçtiği bağımsız değişkendir. Derleyici hata ayıklama bilgileri dosyasını oluşturduğunda, `guidLang` HANGI Ee 'ın kullanılacağını bilmesi için uygun şekilde yazması gerekir. Bu, genellikle sembol sağlayıcısını, `GUID` hata ayıklama bilgileri dosyasında depolanan bu dil için sorar.
 
-3. HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio X. Y altında anahtarlar oluşturarak Visual Studio ile kaydolur; \\ *X.Y*burada *X. Y* , kayıt yapılacak Visual Studio sürümüdür.
+3. HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudiox. Y altında anahtar oluşturarak Visual Studio ile kaydolduktan \\ *X.Y* sonra *x. y* , kayıt yapılacak Visual Studio sürümüdür.
 
 ### <a name="example"></a>Örnek
  Aşağıdaki işlev, yönetilmeyen kod (C++) EE 'ın Visual Studio ile kendisini nasıl kaydedeceğini ve onun kaydını silmediğini gösterir.

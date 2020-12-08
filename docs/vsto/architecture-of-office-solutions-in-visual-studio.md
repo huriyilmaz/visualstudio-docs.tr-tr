@@ -1,5 +1,7 @@
 ---
 title: Visual Studio 'da Office çözümlerinin mimarisi
+description: Visual Studio 'da Microsoft Office geliştirici araçları kullanılarak oluşturulan çözümler ve bunların nasıl çalıştıkları hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 08/14/2019
 ms.topic: conceptual
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0842cab03ba92568b0b672e2b8d257af4b6aa490
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0ca40ed18639caae3250ddc1dc2a664b11780f7a
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "69551868"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847591"
 ---
 # <a name="architecture-of-office-solutions-in-visual-studio"></a>Visual Studio 'da Office çözümlerinin mimarisi
   Bu bölümdeki konularda, Visual Studio 'da Office geliştirici araçları kullanılarak oluşturulan çözümlerin nasıl oluşturulduğu hakkında bilgi sağlanmaktadır.

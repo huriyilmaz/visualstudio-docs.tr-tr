@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: Şeritteki sekmenin konumunu değiştirme'
+description: Bir şeritte özel sekmelerin sırasını değiştirebilir ve sekme koleksiyonu düzenleyicisini kullanarak Şeritteki yerleşik bir sekmeden önce veya sonra özel sekmeleri konumlandırabilirsiniz.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -12,21 +14,21 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8f821ea2a469fc06f80a7aaea96d07274d02a81d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 21fd7f17f7a990f95ce5c8b781e85807a10608c4
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85544865"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96846772"
 ---
 # <a name="how-to-change-the-position-of-a-tab-on-the-ribbon"></a>Nasıl yapılır: Şeritteki sekmenin konumunu değiştirme
-  Bir Şeritteki özel sekmelerin sırasını **sekme koleksiyonu düzenleyicisini**kullanarak değiştirebilirsiniz. Şeritteki yerleşik bir sekmeden önce veya sonra özel sekmeler yerleştirebilirsiniz. Yerleşik sekme, zaten bir Microsoft Office uygulamasının şeridinde bulunan bir sekmedir. Örneğin, **veri** sekmesi Excel 'deki yerleşik bir sekmedir.
+  Bir Şeritteki özel sekmelerin sırasını **sekme koleksiyonu düzenleyicisini** kullanarak değiştirebilirsiniz. Şeritteki yerleşik bir sekmeden önce veya sonra özel sekmeler yerleştirebilirsiniz. Yerleşik sekme, zaten bir Microsoft Office uygulamasının şeridinde bulunan bir sekmedir. Örneğin, **veri** sekmesi Excel 'deki yerleşik bir sekmedir.
 
  [!INCLUDE[appliesto_ribbon](../vsto/includes/appliesto-ribbon-md.md)]
 
 ### <a name="to-change-the-order-of-tabs-on-the-ribbon"></a>Şeritteki sekmelerin sırasını değiştirmek için
 
-1. **Çözüm Gezgini**içindeki Şerit kod dosyasını (*. vb* veya *. cs* dosyası) seçin.
+1. **Çözüm Gezgini** içindeki Şerit kod dosyasını (*. vb* veya *. cs* dosyası) seçin.
 
 2. **Görünüm** menüsünde **Tasarımcı**' ya tıklayın.
 
@@ -42,7 +44,7 @@ ms.locfileid: "85544865"
 
 1. Şerit tasarımcısında özel bir sekme seçin.
 
-2. **Özellikler** penceresinde **ControlID** özelliğini genişletin ve **ControlIdType** özelliğinin değerinin **özel**olarak ayarlandığından emin olun.
+2. **Özellikler** penceresinde **ControlID** özelliğini genişletin ve **ControlIdType** özelliğinin değerinin **özel** olarak ayarlandığından emin olun.
 
 3. **Özellikler** penceresinde, **konum** özelliğini genişletin.
 

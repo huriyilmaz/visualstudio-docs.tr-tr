@@ -1,5 +1,7 @@
 ---
 title: Excel nesne modeline genel bakış
+description: Excel Microsoft Office kullanan çözümler geliştirmek için Excel nesne modeli tarafından sunulan nesnelerle etkileşime girebileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: conceptual
 dev_langs:
@@ -19,12 +21,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a823692a5cc0f154c514edff4fe9398de0efd212
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fb3134b7656fc5156554e60fc88d16e6c2b58120
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "81649421"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847695"
 ---
 # <a name="excel-object-model-overview"></a>Excel nesne modeline genel bakış
   Excel Microsoft Office kullanan çözümler geliştirmek için Excel nesne modeli tarafından sunulan nesnelerle etkileşim kurabilirsiniz. Bu konu, en önemli nesneleri tanıtır:
@@ -80,7 +82,7 @@ ms.locfileid: "81649421"
  Excel <xref:Microsoft.Office.Interop.Excel.Application> nesnesi, Excel uygulamasının kendisini temsil eder. <xref:Microsoft.Office.Interop.Excel.Application>Nesnesi, çalışan uygulamayla ilgili bilgilerin, bu örneğe uygulanan seçeneklerin ve geçerli kullanıcı nesnelerinin örnek içinde açık olduğu hakkında harika bir bilgi sunar.
 
 > [!NOTE]
-> <xref:Microsoft.Office.Interop.Excel.ApplicationClass.EnableEvents%2A> <xref:Microsoft.Office.Interop.Excel.Application> Excel 'deki nesnesinin özelliğini **false**olarak ayarlamanız gerekir. Bu özelliğin false olarak ayarlanması, Excel 'In konak denetimlerinin olayları da dahil olmak üzere tüm olayları oluşturmasını engeller.
+> <xref:Microsoft.Office.Interop.Excel.ApplicationClass.EnableEvents%2A> <xref:Microsoft.Office.Interop.Excel.Application> Excel 'deki nesnesinin özelliğini **false** olarak ayarlamanız gerekir. Bu özelliğin false olarak ayarlanması, Excel 'In konak denetimlerinin olayları da dahil olmak üzere tüm olayları oluşturmasını engeller.
 
 ### <a name="workbook-object"></a>Çalışma kitabı nesnesi
  <xref:Microsoft.Office.Interop.Excel.Workbook>Nesnesi Excel uygulaması içindeki tek bir çalışma kitabını temsil eder.

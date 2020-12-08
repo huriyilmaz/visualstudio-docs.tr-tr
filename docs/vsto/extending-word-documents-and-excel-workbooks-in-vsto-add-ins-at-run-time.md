@@ -1,5 +1,7 @@
 ---
 title: Çalışma zamanında VSTO Eklentilerindeki Word belgelerini & Excel çalışma kitaplarını genişletme
+description: Word belgelerini ve Excel çalışma kitaplarını çeşitli yollarla özelleştirmek için bir VSTO eklentisi kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -19,12 +21,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e2227aa2db4943ab132a8b2e2f9fc3a6f0ec4096
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 4686b2cd3a3ca5d4be7eefee9881039b9914a9b8
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585451"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847838"
 ---
 # <a name="extend-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time"></a>VSTO Eklentilerindeki Word belgelerini ve Excel çalışma kitaplarını çalışma zamanında genişletme
   Word belgelerini ve Excel çalışma kitaplarını aşağıdaki yollarla özelleştirmek için bir VSTO eklentisi kullanabilirsiniz:
@@ -40,7 +42,7 @@ ms.locfileid: "91585451"
   **Uygulama hedefi:** Bu makaledeki bilgiler şu uygulamalar için VSTO eklentisi projelerine yöneliktir: Excel ve Word. Daha fazla bilgi için bkz. [Office uygulaması ve proje türü tarafından kullanılabilen özellikler](../vsto/features-available-by-office-application-and-project-type.md).
 
 ## <a name="generate-extended-objects-in-vsto-add-ins"></a>VSTO eklentilerinde Genişletilmiş nesneler oluşturma
- *Genişletilmiş nesneler* , Word veya Excel nesne modelleriyle ( *yerel Office nesneleri*olarak adlandırılır) yerel olarak var olan nesnelere işlevsellik ekleyen Office çalışma zamanı için Visual Studio Araçları tarafından verilen türlerin örnekleridir. Bir Word veya Excel nesnesi için genişletilmiş bir nesne oluşturmak için `GetVstoObject` yöntemini kullanın. `GetVstoObject`Belirtilen bir kelime veya Excel nesnesi için yöntemi ilk kez çağırdığınızda, belirtilen nesneyi genişleten yeni bir nesne döndürür. Yöntemini her çağırdığınızda ve aynı Word ya da Excel nesnesini belirttiğinizde, aynı genişletilmiş nesneyi döndürür.
+ *Genişletilmiş nesneler* , Word veya Excel nesne modelleriyle ( *yerel Office nesneleri* olarak adlandırılır) yerel olarak var olan nesnelere işlevsellik ekleyen Office çalışma zamanı için Visual Studio Araçları tarafından verilen türlerin örnekleridir. Bir Word veya Excel nesnesi için genişletilmiş bir nesne oluşturmak için `GetVstoObject` yöntemini kullanın. `GetVstoObject`Belirtilen bir kelime veya Excel nesnesi için yöntemi ilk kez çağırdığınızda, belirtilen nesneyi genişleten yeni bir nesne döndürür. Yöntemini her çağırdığınızda ve aynı Word ya da Excel nesnesini belirttiğinizde, aynı genişletilmiş nesneyi döndürür.
 
  Genişletilmiş nesnenin türü, yerel Office nesnesinin türüyle aynı ada sahiptir, ancak tür <xref:Microsoft.Office.Tools.Excel> veya <xref:Microsoft.Office.Tools.Word> ad alanında tanımlanır. Örneğin, `GetVstoObject` bir nesneyi genişletmek için yöntemini çağırırsanız <xref:Microsoft.Office.Interop.Word.Document> , yöntemi bir <xref:Microsoft.Office.Tools.Word.Document> nesnesi döndürür.
 
@@ -49,7 +51,7 @@ ms.locfileid: "91585451"
  Genişletilmiş bir nesnenin belirli bir yerel Office nesnesi için önceden oluşturulup oluşturulmayacağını anlamak için `HasVstoObject` yöntemini kullanın. Daha fazla bilgi için bkz. [bir Office nesnesinin uzatılıp genişletilmediğini belirleme](#HasVstoObject).
 
 ### <a name="generate-host-items"></a>Konak öğeleri Oluştur
- `GetVstoObject`Belge düzeyi nesnesini (yani,, veya) genişletmek için kullandığınızda, <xref:Microsoft.Office.Interop.Excel.Workbook> <xref:Microsoft.Office.Interop.Excel.Worksheet> <xref:Microsoft.Office.Interop.Word.Document> döndürülen nesneye bir *konak öğesi*denir. Konak öğesi, diğer Genişletilmiş nesneler ve denetimler de dahil olmak üzere diğer nesneleri içerebilen bir türdür. Word veya Excel birincil birlikte çalışma derlemesinde karşılık gelen türe benzer, ancak ek özelliklere sahiptir. Konak öğeleri hakkında daha fazla bilgi için bkz. [konak öğeleri ve konak denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md).
+ `GetVstoObject`Belge düzeyi nesnesini (yani,, veya) genişletmek için kullandığınızda, <xref:Microsoft.Office.Interop.Excel.Workbook> <xref:Microsoft.Office.Interop.Excel.Worksheet> <xref:Microsoft.Office.Interop.Word.Document> döndürülen nesneye bir *konak öğesi* denir. Konak öğesi, diğer Genişletilmiş nesneler ve denetimler de dahil olmak üzere diğer nesneleri içerebilen bir türdür. Word veya Excel birincil birlikte çalışma derlemesinde karşılık gelen türe benzer, ancak ek özelliklere sahiptir. Konak öğeleri hakkında daha fazla bilgi için bkz. [konak öğeleri ve konak denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md).
 
  Bir konak öğesi oluşturduktan sonra, belgeye, çalışma kitabına veya çalışma sayfasına yönetilen denetimler eklemek için onu kullanabilirsiniz. Daha fazla bilgi için bkz. [belgelere ve çalışma sayfalarına yönetilen denetimler ekleme](#AddControls).
 
@@ -87,7 +89,7 @@ ms.locfileid: "91585451"
 ### <a name="add-managed-controls-to-documents-and-worksheets"></a><a name="AddControls"></a> Belgelere ve çalışma sayfalarına yönetilen denetimler ekleme
  Ya da oluşturduktan sonra <xref:Microsoft.Office.Tools.Word.Document> <xref:Microsoft.Office.Tools.Excel.Worksheet> , belgeye veya çalışma sayfasına bu genişletilmiş nesnelerin temsil ettiği denetimleri ekleyebilirsiniz. Denetim eklemek için, `Controls` veya özelliğini kullanın <xref:Microsoft.Office.Tools.Word.Document> <xref:Microsoft.Office.Tools.Excel.Worksheet> . Daha fazla bilgi için bkz. [çalışma zamanında Office belgelerine denetim ekleme](../vsto/adding-controls-to-office-documents-at-run-time.md).
 
- Windows Forms denetimleri veya *konak denetimleri*ekleyebilirsiniz. Konak denetimi, [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Word veya Excel birincil birlikte çalışma derlemesinde karşılık gelen bir denetimi sarmalayan tarafından sağlanmış bir denetimdir. Ana bilgisayar denetimi, temel alınan yerel Office nesnesinin tüm davranışlarını gösterir. Ayrıca, olaylar oluşturur ve Windows Forms veri bağlama modeli kullanılarak verilere bağlanabilir. Daha fazla bilgi için bkz. [konak öğeleri ve konak denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md).
+ Windows Forms denetimleri veya *konak denetimleri* ekleyebilirsiniz. Konak denetimi, [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Word veya Excel birincil birlikte çalışma derlemesinde karşılık gelen bir denetimi sarmalayan tarafından sağlanmış bir denetimdir. Ana bilgisayar denetimi, temel alınan yerel Office nesnesinin tüm davranışlarını gösterir. Ayrıca, olaylar oluşturur ve Windows Forms veri bağlama modeli kullanılarak verilere bağlanabilir. Daha fazla bilgi için bkz. [konak öğeleri ve konak denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md).
 
 > [!NOTE]
 > <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> <xref:Microsoft.Office.Tools.Word.XMLNode> VSTO eklentisini kullanarak bir çalışma sayfasına veya bir belgeye bir denetim ekleyemez <xref:Microsoft.Office.Tools.Word.XMLNodes> . Bu konak denetimleri program aracılığıyla eklenemez. Daha fazla bilgi için bkz. [konak öğelerinin ve konak denetimlerinin programlama sınırlamaları](../vsto/programmatic-limitations-of-host-items-and-host-controls.md).

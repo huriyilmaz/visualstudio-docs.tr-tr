@@ -1,5 +1,7 @@
 ---
 title: Özel hata ayıklama altyapısını kaydetme | Microsoft Docs
+description: Hata ayıklama altyapısının kendisini bir sınıf fabrikası olarak kaydetme, COM kurallarını izleyen ve kayıt defteri aracılığıyla Visual Studio ile kaydetme hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a664385594f139e2c3c5a18a0d8a59e23c13df0a
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: 01d7190bbf087bb60ac670341d82078e94c81c52
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90011846"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847188"
 ---
 # <a name="register-a-custom-debug-engine"></a>Özel bir hata ayıklama altyapısını kaydetme
 Hata ayıklama altyapısı kendisini bir sınıf fabrikası olarak kaydetmelidir, COM kurallarını ve Visual Studio kayıt defteri alt anahtarı aracılığıyla Visual Studio 'Ya kaydolmalıdır.
@@ -29,7 +31,7 @@ Hata ayıklama altyapısı kendisini bir sınıf fabrikası olarak kaydetmelidir
  [Hata ayıklama Için SDK yardımcıları](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) yalnızca bir hata ayıklama altyapısını kaydetmek için gereken kayıt defteri konumlarını değil; Ayrıca, kayıt defterini daha kolay hale getirmeye yönelik bir dizi kullanışlı işlevi ve C++ geliştiricileri için bildirim içeren *dbgmetric. lib* kitaplığını açıklar.
 
 ### <a name="example"></a>Örnek
- Aşağıdaki örnek (Textyorumlayıcı örneğinden), `SetMetric` Visual Studio ile bir hata ayıklama altyapısını kaydetmek için işlevinin ( *dbgmetric. lib*) nasıl kullanılacağını gösterir. Geçirilmekte olan ölçümler *dbgmetric. lib*içinde de tanımlanır.
+ Aşağıdaki örnek (Textyorumlayıcı örneğinden), `SetMetric` Visual Studio ile bir hata ayıklama altyapısını kaydetmek için işlevinin ( *dbgmetric. lib*) nasıl kullanılacağını gösterir. Geçirilmekte olan ölçümler *dbgmetric. lib* içinde de tanımlanır.
 
 > [!NOTE]
 > Textyorumlayıcı temel bir hata ayıklama altyapısıdır; ayarlanmamış — ve bu nedenle, diğer tüm özellikleri kaydetmez. Daha eksiksiz bir hata ayıklama altyapısı `SetMetric` , hata ayıklama altyapısının desteklediği her bir özellik için bir çağrı listesinin tamamını veya bunların eşdeğerini içermelidir.

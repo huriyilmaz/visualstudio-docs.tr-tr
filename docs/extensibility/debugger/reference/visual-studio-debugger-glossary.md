@@ -1,5 +1,7 @@
 ---
 title: Visual Studio hata ayıklayıcısı sözlüğü | Microsoft Docs
+description: Bu makalede, Visual Studio hata ayıklama SDK 'sında, bağlama kesme noktası, kaussellik ve kod bağlamı gibi birçok terim açıklanmaktadır.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 954532311fe6b63fc288877a6d41722e6ea47581
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a01a6ad0e23af04001e9b0990be57d78e84c7241
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80713355"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847071"
 ---
 # <a name="visual-studio-debugger-glossary"></a>Visual Studio Hata Ayıklayıcısı Sözlüğü
 Aşağıdakiler [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] hata ayıklama SDK 'sında kullanılan terimlerdir.

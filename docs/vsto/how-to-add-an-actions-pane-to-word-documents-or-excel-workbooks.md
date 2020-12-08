@@ -1,5 +1,7 @@
 ---
 title: Word belgelerine veya Excel çalışma kitaplarına eylemler bölmesi ekleme
+description: Bir Microsoft Office Word belgesine veya Microsoft Excel çalışma kitabına eylemler bölmesi eklemek için, önce bir Windows Forms Kullanıcı denetimi oluşturmanız gerektiğini öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 2d24ec3a17c9e0824c6b7aaffeaaac02c1c4f76e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 69d675209f2a3ac47e8681da8fca73c5cd86e95d
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85546230"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96848072"
 ---
 # <a name="how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks"></a>Nasıl Yapılır: Word Belgelerine veya Excel Çalışma Kitaplarına Eylemler Bölmesi Ekleme
   Bir Microsoft Office Word belgesine veya Microsoft Excel çalışma kitabına eylemler bölmesi eklemek için, önce bir Windows Forms Kullanıcı denetimi oluşturun. Daha sonra, Kullanıcı denetimini <xref:Microsoft.Office.Tools.ActionsPane.Controls%2A> `ThisDocument.ActionsPane` projenizdeki alan (Word) veya `ThisWorkbook.ActionsPane` alan (Excel) özelliğine ekleyin.
@@ -39,7 +41,7 @@ ms.locfileid: "85546230"
 
 2. **Proje** menüsünde **Yeni öğe Ekle**' ye tıklayın.
 
-3. **Yeni öğe Ekle** Iletişim kutusunda **Eylemler bölmesi denetimi**' ni seçin, **Merhaba denetimini**adlandırın ve **Ekle**' ye tıklayın.
+3. **Yeni öğe Ekle** Iletişim kutusunda **Eylemler bölmesi denetimi**' ni seçin, **Merhaba denetimini** adlandırın ve **Ekle**' ye tıklayın.
 
     > [!NOTE]
     > Alternatif olarak, projenize bir **Kullanıcı denetim** öğesi ekleyebilirsiniz. **Eylemler bölmesi denetimi** ve **Kullanıcı denetimi** öğeleri tarafından oluşturulan sınıflar, işlevsel olarak eşdeğerdir.

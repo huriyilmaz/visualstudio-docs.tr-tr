@@ -1,5 +1,7 @@
 ---
 title: "Nasıl yapılır: Outlook 'un form bölgesini görüntülemesini engelleme"
+description: Microsoft Office Outlook 'un belirli bir öğe için form bölgesi görüntülemesini nasıl engelleyebileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 90da255beb0a85a302158feb1f9d5cc4981437eb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f247bf82d51fda6d321b45c16f91b857300cc1e4
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85520140"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847682"
 ---
 # <a name="how-to-prevent-outlook-from-displaying-a-form-region"></a>Nasıl yapılır: Outlook 'un form bölgesini görüntülemesini engelleme
   Outlook Microsoft Office belirli bir öğe için bir form bölgesi görüntülemesini istemediğiniz durumlar olabilir. Örneğin, bir kişi öğesi iş adresi içermiyorsa, bir haritadaki işin konumunu gösteren bir form bölgesinin görüntülenmesini engelleyebilirsiniz.
@@ -31,9 +33,9 @@ ms.locfileid: "85520140"
 
 2. **Form bölgesi fabrikası** kod bölgesini genişletin.
 
-3. `FormRegionInitializing` <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> <xref:Microsoft.Office.Tools.Outlook.FormRegionInitializingEventArgs> Sınıfının özelliğini **true**olarak ayarlayan olay işleyicisine kod ekleyin.
+3. `FormRegionInitializing` <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> <xref:Microsoft.Office.Tools.Outlook.FormRegionInitializingEventArgs> Sınıfının özelliğini **true** olarak ayarlayan olay işleyicisine kod ekleyin.
 
-   Bu örnekte, kişi öğesi bir adres içermiyorsa, <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> özelliği **true**olarak ayarlanır ve form bölgesi görünmez.
+   Bu örnekte, kişi öğesi bir adres içermiyorsa, <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> özelliği **true** olarak ayarlanır ve form bölgesi görünmez.
 
 ## <a name="example"></a>Örnek
  [!code-csharp[Trin_Outlook_FR_Separate#1](../vsto/codesnippet/CSharp/Trin_Outlook_FR_Separate_O12/MapIt.cs#1)]

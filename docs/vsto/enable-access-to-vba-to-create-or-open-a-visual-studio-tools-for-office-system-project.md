@@ -1,8 +1,8 @@
 ---
 title: VSTO sistem projesi oluşturmak/açmak için VBA erişimi
 titleSuffix: ''
-decsprition: You must explicitly enable access to the Office VBA project system before you can create or open a Visual Studio Tools for Office system project
-ms.custom: seodec18
+description: Office sistemi projesi için bir Visual Studio Araçları oluşturmadan veya açmadan önce Office VBA proje sistemine erişimi açıkça etkinleştirmeniz gerektiğini öğrenin.
+ms.custom: seodec18, SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: conceptual
 f1_keywords:
@@ -19,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 71e30a89bdf8547eab9ed9c51b07c49e014b7302
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 62477f7cd37a7d5a416e8f42fb7eb2d2a8e43828
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584865"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96846135"
 ---
 # <a name="enable-access-to-vba-to-create-or-open-a-visual-studio-tools-for-the-microsoft-office-system-project"></a>Microsoft Office sistemi projesi için Visual Studio Araçları oluşturmak veya açmak üzere VBA 'a erişimi etkinleştir
 
@@ -59,7 +59,7 @@ Microsoft Office sistemi projesi için bir Visual Studio Araçları oluşturmada
 
 5. Visual Basic projelerine erişimi etkinleştirmek veya devre dışı bırakmak için **VBA proje nesne modeline güven erişimini** işaretleyin veya işaretini kaldırın.
 
-6. **Tamam**'a tıklayın.
+6. **Tamam** düğmesine tıklayın.
 
 ### <a name="to-enable-or-disable-access-to-visual-basic-projects-with-the-2007-microsoft-office-system"></a>2007 Microsoft Office sistemiyle Visual Basic projelerine erişimi etkinleştirmek veya devre dışı bırakmak için
 
@@ -67,9 +67,9 @@ Microsoft Office sistemi projesi için bir Visual Studio Araçları oluşturmada
 
 2. **Güvenlik** iletişim kutusunda, **Güvenilen Yayımcılar** sekmesine tıklayın.
 
-3. **Visual Basic projesine erişimi**devre dışı bırakmak veya kaldırmak için seçin.
+3. **Visual Basic projesine erişimi** devre dışı bırakmak veya kaldırmak için seçin.
 
-4. **Tamam**'a tıklayın.
+4. **Tamam** düğmesine tıklayın.
 
 ## <a name="to-set-your-office-macro-security-level"></a>Office makro güvenlik düzeyinizi ayarlamak için
 
@@ -83,7 +83,7 @@ Microsoft Office sistemi projesi için bir Visual Studio Araçları oluşturmada
 
 5. **Makro ayarları** bölümünde, istenen ayarı seçin.
 
-6. **Tamam**'a tıklayın.
+6. **Tamam** düğmesine tıklayın.
 
 ### <a name="to-set-your-office-macro-security-level-with-the-2007-microsoft-office-system"></a>Office makro güvenlik düzeyinizi 2007 Microsoft Office sistemiyle ayarlamak için
 

@@ -1,7 +1,8 @@
 ---
 title: 'Nasıl yapılır: Office çalışma zamanı yeniden dağıtılabilir için Visual Studio Araçları yüklemesi'
+description: Office çalışma zamanı yeniden dağıtılabilir için Microsoft Visual Studio 2010 araçlarını nasıl yükleyebileceğinizi öğrenin.
 titleSuffix: ''
-ms.custom: seodec18
+ms.custom: seodec18, SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: how-to
 dev_langs:
@@ -15,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ef71de75be5977ab80cbdd85448daa5de381c077
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d8fce7cc0fdbba49e0e247a6a65336105e149b6d
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547231"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96846538"
 ---
 # <a name="how-to-install-the-visual-studio-tools-for-office-runtime-redistributable"></a>Nasıl yapılır: Office çalışma zamanı yeniden dağıtılabilir için Visual Studio Araçları yüklemesi
   Office çalışma zamanı için Visual Studio 2010 araçları, ' de Microsoft Office geliştirici araçları kullanılarak oluşturulan çözümler çalıştıran her bilgisayara yüklenmelidir [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . Çalışma zamanı, yüklediğinizde ve Microsoft Office otomatik olarak yüklenir [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . Daha fazla bilgi için bkz. [Office çalışma zamanı yükleme senaryoları için Visual Studio Araçları](../vsto/visual-studio-tools-for-office-runtime-installation-scenarios.md).

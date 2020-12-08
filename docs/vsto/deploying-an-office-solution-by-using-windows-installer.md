@@ -1,5 +1,7 @@
 ---
 title: Windows Installer kullanarak bir Office çözümünü dağıtma
+description: Windows Installer oluşturmak için Visual Studio kullanarak, son kullanıcının bilgisayarında yönetici erişimi gerektiren bir Office çözümünü dağıtabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: conceptual
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 1336af7469b030492b486004940b730d372760bb
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: c001b3ce308c9e991cee747bdcab3ad646b226ab
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90807969"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96847123"
 ---
 # <a name="deploy-an-office-solution-by-using-windows-installer"></a>Windows Installer kullanarak bir Office çözümünü dağıtma
 
@@ -91,7 +93,7 @@ Visual Studio 'Yu yükledikten sonra ücretsiz olan InstallShield Limited Editio
 
 2. Şablonlar bölmesinde, **diğer proje türleri**' ni genişletin ve ardından **Kurulum ve dağıtım** şablonu ' nu seçin.
 
-3. **Kurulum ve dağıtım**için proje türleri listesinde **InstallShield Limited Edition 'ı etkinleştir**' i seçin ve **Tamam** düğmesini seçin.
+3. **Kurulum ve dağıtım** için proje türleri listesinde **InstallShield Limited Edition 'ı etkinleştir**' i seçin ve **Tamam** düğmesini seçin.
 
    InstallShield Limited Edition 'ın nasıl alınacağı hakkında bilgi sağlayan bir sayfa görüntülenir.
 
@@ -105,7 +107,7 @@ Visual Studio 'Yu yükledikten sonra ücretsiz olan InstallShield Limited Editio
 
 1. İçinde [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , dağıtmak Istediğiniz Office projesini açın.
 
-   Bu konuyla ilişkili VSTO eklenti örnekleri, **ExcelAddIn**adlı bir proje içerir. Belge düzeyi özelleştirme örnekleri, **ExcelWorkbook**adlı bir proje içerir. Bu konu, bu iki adlardan birini kullanarak çözümünüzdeki Office projesine başvuracaktır.
+   Bu konuyla ilişkili VSTO eklenti örnekleri, **ExcelAddIn** adlı bir proje içerir. Belge düzeyi özelleştirme örnekleri, **ExcelWorkbook** adlı bir proje içerir. Bu konu, bu iki adlardan birini kullanarak çözümünüzdeki Office projesine başvuracaktır.
 
 2. Menü çubuğunda **Dosya**  >  **Ekle**  >  **Yeni proje**' yi seçin.
 
@@ -113,11 +115,11 @@ Visual Studio 'Yu yükledikten sonra ücretsiz olan InstallShield Limited Editio
 
 3. Şablonlar bölmesinde, **diğer proje türleri**' ni genişletin ve ardından **Kurulum ve dağıtım** şablonu ' nu seçin.
 
-4. **Kurulum ve dağıtım**için proje türleri listesinde **InstallShield Limited Edition projesi**' ni seçin, projeyi adlandırın ve **Tamam** düğmesini seçin.
+4. **Kurulum ve dağıtım** için proje türleri listesinde **InstallShield Limited Edition projesi**' ni seçin, projeyi adlandırın ve **Tamam** düğmesini seçin.
 
    Oluşturduğunuz InstallShield Kurulum projesi çözümünüzde görüntülenir.
 
-   Bu konunun örnekleri, **OfficeAddInSetup**adlı bir kurulum projesi içerir. Bu konu, çözümünüzde aynı adı kullanarak kurulum projesine başvuracaktır.
+   Bu konunun örnekleri, **OfficeAddInSetup** adlı bir kurulum projesi içerir. Bu konu, çözümünüzde aynı adı kullanarak kurulum projesine başvuracaktır.
 
 ## <a name="add-the-project-output"></a><a name="Add"></a>Proje çıkışını ekleyin
 
@@ -179,7 +181,7 @@ Kurulum uygulamanızda, yalnızca aşağıdaki bileşenleri değil, çözümün�
 
 ### <a name="add-the-visual-studio-2010-tools-for-office-runtime"></a><a name="AddToolsForOffice"></a>Office çalışma zamanı için Visual Studio 2010 araçlarını ekleme
 
-**Yeniden dağıtılabilir** sayfası, **Microsoft VSTO 2010 çalışma zamanı**adında bir öğe içerir, ancak çalışma zamanının eski bir sürümüne başvurur. Bu nedenle, en son sürüme başvuran bir yapılandırma dosyası el ile oluşturabilirsiniz. Daha sonra bu dosyayı **yeniden dağıtılabilir** sayfasında görünen diğer tüm öğelerin yapılandırma dosyalarıyla aynı dizine koymanız gerekir.
+**Yeniden dağıtılabilir** sayfası, **Microsoft VSTO 2010 çalışma zamanı** adında bir öğe içerir, ancak çalışma zamanının eski bir sürümüne başvurur. Bu nedenle, en son sürüme başvuran bir yapılandırma dosyası el ile oluşturabilirsiniz. Daha sonra bu dosyayı **yeniden dağıtılabilir** sayfasında görünen diğer tüm öğelerin yapılandırma dosyalarıyla aynı dizine koymanız gerekir.
 
 #### <a name="to-add-the-visual-studio-2010-tools-for-office-runtime-as-a-prerequisite"></a>Office çalışma zamanı için Visual Studio 2010 araçlarını bir önkoşul olarak eklemek için
 
@@ -209,7 +211,7 @@ Kurulum uygulamanızda, yalnızca aşağıdaki bileşenleri değil, çözümün�
 
 4. Not defteri 'nde, GUID **'nizin** yerine bu metni yazın.
 
-   Dosyanızın ** &lt; Özellikler &gt; ** öğesi aşağıdakilere benzer.
+   Dosyanızın **&lt; Özellikler &gt;** öğesi aşağıdakilere benzer.
 
    ```xml
    <properties Id="{87989B73-21DC-4403-8FD1-0C68A41A6D8C}" Description="This prerequisite installs the most recent version of the Microsoft Visual Studio 2010 Tools for Office Runtime." >
@@ -231,9 +233,9 @@ Kurulum uygulamanızda, yalnızca aşağıdaki bileşenleri değil, çözümün�
 
 10. **Masaüstü** klasörünüzden, *Office Runtime. prq dosyasını Visual Studio 2010 araçları* 'nı bilgisayarınızdaki aşağıdaki dizinlerden birine kopyalayın.
 
-   32 bit işletim sistemleri için: *%ProgramFiles%\InstallShield\2013LE\SetupPrerequisites \\ *
+   32 bit işletim sistemleri için: *%ProgramFiles%\InstallShield\2013LE\SetupPrerequisites \\*
 
-   64 bit işletim sistemleri için: *% ProgramFiles (x86)% \ 2013LE \ Setupönkoşullarını \\ *
+   64 bit işletim sistemleri için: *% ProgramFiles (x86)% \ 2013LE \ Setupönkoşullarını \\*
 
 11. InstallShield projesinin **yeniden dağıtılabilir** sayfasında, aşağıdaki çizimde gösterildiği gibi yeniden dağıtılabilir bileşenlerin listesini yenilemek için **Yenile** düğmesini seçin.
 
@@ -303,21 +305,21 @@ Kullanıcı başına Yüklemeler Office veya Windows sürümünden bağımsız o
 
    **Kullanıcı başına yükleyici**
 
-   **HKEY_CURRENT_USER \Software\Microsoft\Office\Excel\Addins\SampleCompany.ExcelAddIn**
+   **HKEY_CURRENT_USER\Software\Microsoft\Office\Excel\Addins\SampleCompany.ExcelAddIn**
 
    **Office sürümüne dayalı bilgisayar başına yükleyiciler**
 
 | Office sürümü<br /><br /> | InstallShield yapılandırma yolu<br /><br /> |
 |----------------------------| - |
-| 32 bit<br /><br /> | **HKEY_LOCAL_MACHINE \SOFTWARE (32-bit) \Microsoft\Office\Excel\Addins\SampleCompany.ExcelAddIn**<br /><br /> |
-| 64 bit<br /><br /> | **HKEY_LOCAL_MACHINE \SOFTWARE (64 bit) \Microsoft\Office\Excel\Addins\SampleCompany.ExcelAddIn**<br /><br /> |
+| 32 bit<br /><br /> | **HKEY_LOCAL_MACHINE\SOFTWARE(32-Bit)\Microsoft\Office\Excel\Addins\SampleCompany.ExcelAddIn**<br /><br /> |
+| 64 bit<br /><br /> | **HKEY_LOCAL_MACHINE\SOFTWARE(64-Bit)\Microsoft\Office\Excel\Addins\SampleCompany.ExcelAddIn**<br /><br /> |
 
    **Windows sürümünü temel alan bilgisayar başına yükleyiciler**
 
 | Windows sürümü<br /><br /> | InstallShield yapılandırma yolu<br /><br /> |
 |-----------------------------| - |
-| 32 bit<br /><br /> | **HKEY_LOCAL_MACHINE \SOFTWARE (32-bit) \Microsoft\Office\Excel\Addins\SampleCompany.ExcelAddIn**<br /><br /> |
-| 64 bit<br /><br /> | **HKEY_LOCAL_MACHINE \SOFTWARE (32-bit) \Microsoft\Office\Excel\Addins\SampleCompany.ExcelAddIn**<br /><br />**HKEY_LOCAL_MACHINE \SOFTWARE (64 bit) \Microsoft\Office\Excel\Addins\SampleCompany.ExcelAddIn**<br /><br /> |
+| 32 bit<br /><br /> | **HKEY_LOCAL_MACHINE\SOFTWARE(32-Bit)\Microsoft\Office\Excel\Addins\SampleCompany.ExcelAddIn**<br /><br /> |
+| 64 bit<br /><br /> | **HKEY_LOCAL_MACHINE\SOFTWARE(32-Bit)\Microsoft\Office\Excel\Addins\SampleCompany.ExcelAddIn**<br /><br />**HKEY_LOCAL_MACHINE\SOFTWARE(64-Bit)\Microsoft\Office\Excel\Addins\SampleCompany.ExcelAddIn**<br /><br /> |
 
    > [!NOTE]
    > 64 bit Windows için bir yükleyici, kullanıcıların 64 bit Windows çalıştıran bir bilgisayarda 32-bit ve 64 bit Office sürümlerini çalıştırmasına olanak sağladığından, iki kayıt defteri yolu gerektirir.
@@ -329,7 +331,7 @@ Kullanıcı başına Yüklemeler Office veya Windows sürümünden bağımsız o
 
    Yeni dize değeri, **hedef bilgisayarın kayıt defteri verileri** listesinde görünür. Dize değerinin adı, yeniden adlandırabilmeniz için vurgulanır.
 
-6. Değeri **Açıklama**olarak yeniden adlandırın.
+6. Değeri **Açıklama** olarak yeniden adlandırın.
 
 7. Aşağıdaki değerleri oluşturmak için bu işlemi tekrarlayın.
 
@@ -359,7 +361,7 @@ Kullanıcı başına Yüklemeler Office veya Windows sürümünden bağımsız o
 
    **Verileri Düzenle** iletişim kutusu görüntülenir.
 
-13. **Değer verisi** metin kutusunda **3**girin ve **Tamam** düğmesini seçin.
+13. **Değer verisi** metin kutusunda **3** girin ve **Tamam** düğmesini seçin.
 
    3 değeri, uygulama başladığında VSTO eklentisini yükler. LoadBehavior değerleri hakkında daha fazla bilgi için bkz. [VSTO eklentileri Için kayıt defteri girişleri](../vsto/registry-entries-for-vsto-add-ins.md).
 
@@ -367,7 +369,7 @@ Kullanıcı başına Yüklemeler Office veya Windows sürümünden bağımsız o
 
    **Verileri Düzenle** iletişim kutusu görüntülenir.
 
-15. **Değer verileri** metin kutusuna **File:///[INSTALLDİR] ExcelAddIn. VSTO | vstolocal**yazın ve **Tamam** düğmesini seçin.
+15. **Değer verileri** metin kutusuna **File:///[INSTALLDİR] ExcelAddIn. VSTO | vstolocal** yazın ve **Tamam** düğmesini seçin.
 
    Office çalışma zamanı için Visual Studio 2010 araçları, dağıtım bildirimini bulmak için bu yolu kullanır. Bu yolun **[INSTALLDİR]** bölümü, InstallShield kurulum projenizin **genel bilgi** özelliği sayfasında **InstallDir** özelliğiyle eşleşen bir makrodur. Bu özellik, VSTO eklentisinin yükleneceği hedef bilgisayardaki konumu belirtir. **| Vstolocal** son eki, çözümünüzün ClickOnce önbelleğinden değil yükleme klasöründen yüklenmesini sağlar.
 
@@ -390,9 +392,9 @@ Belge düzeyi özelleştirmeleri, kayıt defteri anahtarlarını kullanmaz. Bunu
 
 2. Şablonlar bölmesinde, kullanmak istediğiniz dilin düğümü altında **Windows** klasörünü seçin.
 
-3. **Windows**için proje türleri listesinde **konsol uygulaması** şablonunu seçin.
+3. **Windows** için proje türleri listesinde **konsol uygulaması** şablonunu seçin.
 
-4. Projeyi **SetExcelDocumentProperties**olarak adlandırın ve ardından **Tamam** düğmesini seçin.
+4. Projeyi **SetExcelDocumentProperties** olarak adlandırın ve ardından **Tamam** düğmesini seçin.
 
 5. **Çözüm Gezgini**, **tüm dosyaları göster** düğmesini seçin, **SetExcelDocumentProperties** proje düğümü Için kısayol menüsünü açın ve ardından **Başvuru Ekle**' yi seçin.
 
@@ -440,7 +442,7 @@ Belge düzeyi özelleştirmeleri, kayıt defteri anahtarlarını kullanmaz. Bunu
    > [!NOTE]
    > Yalnızca bu listede görünen birkaç olay InstallShield Limited Edition 'da bulunabilir. Bu yordamda, **Kurulum tamamlandı başarı iletişim kutusu olayından sonra** programını kullanarak programı çalıştıracaksınız.
 
-8. Olaylar listesinde, **yükleme sırasında özel eylemler**altında, **Kurulum tamamlandıktan sonra başarı iletişim kutusu** olayının kısayol menüsünü açın ve sonra **Yeni exe**' yi seçin.
+8. Olaylar listesinde, **yükleme sırasında özel eylemler** altında, **Kurulum tamamlandıktan sonra başarı iletişim kutusu** olayının kısayol menüsünü açın ve sonra **Yeni exe**' yi seçin.
 
    **NewCustomAction1** adlı özel bir eylem, **Kurulum tamamlandıktan sonra başarı Iletişim kutusu olayından sonra** görünür. Özel eylem için bir dizi özellik, olayların yanındaki bir bölmede görüntülenir.
 
@@ -453,7 +455,7 @@ Belge düzeyi özelleştirmeleri, kayıt defteri anahtarlarını kullanmaz. Bunu
 
 11. **Hedef dosya Için araştır** Iletişim kutusunda **SetExcelDocumentProperties. PRIMARY. Output** dosyasına gidin ve **Aç** düğmesini seçin.
 
-    Bu dosyanın konumu, Kurulum projesinin **InstallDir** özelliği için belirttiğiniz klasöre bağlıdır. Örneğin, bu özelliği **[Personfolder] DemoWorkbookApp**adlı bir klasöre ayarlarsanız, **[ProgramFilesFolder] \DemoWorkbookApp**öğesine göz atarak **SetExcelDocumentProperties. Primary. Output** dosyasını bulabilirsiniz.
+    Bu dosyanın konumu, Kurulum projesinin **InstallDir** özelliği için belirttiğiniz klasöre bağlıdır. Örneğin, bu özelliği **[Personfolder] DemoWorkbookApp** adlı bir klasöre ayarlarsanız, **[ProgramFilesFolder] \DemoWorkbookApp** öğesine göz atarak **SetExcelDocumentProperties. Primary. Output** dosyasını bulabilirsiniz.
 
     Sonraki birkaç adımda, belgenin çözüm KIMLIĞINI alır ve ardından bu KIMLIĞI konsol uygulamasına bir parametre olarak geçireceğiz. Ayrıca belgenin konumunu, dağıtım bildirimini ve belge derlemesini de geçireceğiz.
 
@@ -461,13 +463,13 @@ Belge düzeyi özelleştirmeleri, kayıt defteri anahtarlarını kullanmaz. Bunu
 
     Çözümünüzü içeren klasör açılır.
 
-13. Çözümünüzün proje dosyasını Not defteri 'nde açın. Visual Basic projeleri için dosyanın adı *ExcelWorkbook. vbproj*olur. C# projeleri için dosyanın adı *ExcelWorkbook. csproj*olur.
+13. Çözümünüzün proje dosyasını Not defteri 'nde açın. Visual Basic projeleri için dosyanın adı *ExcelWorkbook. vbproj* olur. C# projeleri için dosyanın adı *ExcelWorkbook. csproj* olur.
 
-14. Proje dosyasında, ** &lt; SolutionId &gt; ** öğesini arayın, değerini panoya kopyalayın ve Not defteri 'ni kapatın.
+14. Proje dosyasında, **&lt; SolutionId &gt;** öğesini arayın, değerini panoya kopyalayın ve Not defteri 'ni kapatın.
 
     Bu değeri konsol uygulamasına parametre olarak geçirirsiniz.
 
-15. **NewCustomAction1**öğesinin Özellikler sayfasında, **komut satırı** özelliğini aşağıdaki metin satırına ayarlayın.
+15. **NewCustomAction1** öğesinin Özellikler sayfasında, **komut satırı** özelliğini aşağıdaki metin satırına ayarlayın.
 
    ```cmd
    /assemblyLocation="[INSTALLDIR]ExcelWorkbook.dll" /deploymentManifestLocation="[INSTALLDIR]ExcelWorkbook.vsto" /documentLocation="[INSTALLDIR]ExcelWorkbook.xlsx" /solutionID="Your Solution ID"
@@ -494,13 +496,13 @@ Belge düzeyi özelleştirmeleri, kayıt defteri anahtarlarını kullanmaz. Bunu
 
 6. Menü çubuğunda Configuration Manager **Oluştur**' u seçin  >  **Configuration Manager**.
 
-7. **Etkin çözüm yapılandırması** listesinde **SingleImage**öğesini seçin.
+7. **Etkin çözüm yapılandırması** listesinde **SingleImage** öğesini seçin.
 
 8. **Proje bağlamları** tablosunda, **OfficeAddInSetup** projesinin **yapılandırma** sütununda **SingleImage**' i seçin ve sonra **Kapat** düğmesini seçin.
 
-9. Menü çubuğunda **Build**  >  **Build OfficeAddInSetup**öğesini seçin.
+9. Menü çubuğunda **Build**  >  **Build OfficeAddInSetup** öğesini seçin.
 
-   Derleme tamamlandıktan sonra, **OfficeAddInSetup** projesinin *setup.exe* dosyasını şu konumda bulabilirsiniz: <em>Officeaddınsetupprojectroot</em>**\Officeaddınsetup\express\singleımage\diskımages\disk1 \\ **
+   Derleme tamamlandıktan sonra, **OfficeAddInSetup** projesinin *setup.exe* dosyasını şu konumda bulabilirsiniz: <em>Officeaddınsetupprojectroot</em>**\Officeaddınsetup\express\singleımage\diskımages\disk1 \\**
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
