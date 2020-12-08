@@ -1,5 +1,7 @@
 ---
 title: Yer işareti denetimi
+description: Yer Işareti denetiminin benzersiz bir ada sahip, olayları açığa çıkaran ve verilere bağlanabilen bir yer işareti olduğunu öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 2b8557581e93c8d2ba5a54a13c04d5de74b24f71
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 53f68bfd9abd26d9dfcb9e253c412a1ddf3c0e28
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71255143"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96848371"
 ---
 # <a name="bookmark-control"></a>Yer işareti denetimi
   <xref:Microsoft.Office.Tools.Word.Bookmark>Denetim, benzersiz bir ada sahip, olayları ortaya çıkaran ve verilere bağlanabilen bir yer işaretidir. Yer işareti, bir Microsoft Office Word belgesindeki bir öğeyi veya konumu işaretlemek için yer tutucu olarak kullanılabilir. <xref:Microsoft.Office.Tools.Word.Bookmark>Denetim bir <xref:Microsoft.Office.Interop.Word.Bookmark> nesne ve <xref:Microsoft.Office.Interop.Word.Range> nesne birleşimidir.
@@ -91,7 +93,7 @@ Aşağıdaki tabloda, "Bunun örnek metin olan" tümcesi gösterilmektedir. , ba
 |Bookmark1|Bu değişiklik.|
 |Bookmark2|*\<empty>*|
 
-## <a name="events"></a>Ekinlikler
+## <a name="events"></a>Olaylar
 
 Denetim için aşağıdaki olaylar mevcuttur <xref:Microsoft.Office.Tools.Word.Bookmark> :
 

@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: çalışma sayfalarına ListObject denetimleri ekleme'
+description: Tasarım zamanında Microsoft Office Excel çalışma sayfasına ve belge düzeyi projelerindeki çalışma zamanında ListObject denetimlerini nasıl ekleyebileceğiniz hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4c53d820170c359e568b0a7b0ab5711a632d9eba
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5dd72db2678f448158f268b790d39d4f6e44a737
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85538326"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96848163"
 ---
 # <a name="how-to-add-listobject-controls-to-worksheets"></a>Nasıl yapılır: çalışma sayfalarına ListObject denetimleri ekleme
   <xref:Microsoft.Office.Tools.Excel.ListObject>Tasarım zamanında bir Microsoft Office Excel çalışma sayfasına ve belge düzeyi projelerinde çalışma zamanında denetim ekleyebilirsiniz.
@@ -38,7 +40,7 @@ ms.locfileid: "85538326"
   Denetimler hakkında daha fazla bilgi için <xref:Microsoft.Office.Tools.Excel.ListObject> bkz. [ListObject denetimi](../vsto/listobject-control.md).
 
 ## <a name="add-listobject-controls-at-design-time"></a><a name="designtime"></a> Tasarım zamanında ListObject denetimleri ekleme
- <xref:Microsoft.Office.Tools.Excel.ListObject>Tasarım zamanında belge düzeyindeki bir projedeki çalışma sayfasına denetim eklemenin birkaç yolu vardır: Excel içinden, Visual Studio **araç kutusundan**ve **veri kaynakları** penceresinden.
+ <xref:Microsoft.Office.Tools.Excel.ListObject>Tasarım zamanında belge düzeyindeki bir projedeki çalışma sayfasına denetim eklemenin birkaç yolu vardır: Excel içinden, Visual Studio **araç kutusundan** ve **veri kaynakları** penceresinden.
 
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
@@ -71,7 +73,7 @@ ms.locfileid: "85538326"
 
 #### <a name="to-add-a-listobject-control-to-a-worksheet-programmatically"></a>Bir çalışma sayfasına programlı bir ListObject denetimi eklemek için
 
-1. <xref:Microsoft.Office.Tools.Excel.Worksheet.Startup>' In olay işleyicisinde `Sheet1` , <xref:Microsoft.Office.Tools.Excel.ListObject> **a1** ile **a4**arası hücrelere bir denetim eklemek için aşağıdaki kodu ekleyin.
+1. <xref:Microsoft.Office.Tools.Excel.Worksheet.Startup>' In olay işleyicisinde `Sheet1` , <xref:Microsoft.Office.Tools.Excel.ListObject> **a1** ile **a4** arası hücrelere bir denetim eklemek için aşağıdaki kodu ekleyin.
 
      [!code-csharp[Trin_VstcoreHostControlsExcel#2](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs#2)]
      [!code-vb[Trin_VstcoreHostControlsExcel#2](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb#2)]
@@ -81,7 +83,7 @@ ms.locfileid: "85538326"
 
 #### <a name="to-add-a-listobject-control-to-a-worksheet-programmatically"></a>Bir çalışma sayfasına programlı bir ListObject denetimi eklemek için
 
-1. Aşağıdaki kod, açık çalışma sayfasına dayalı bir çalışma sayfası konak öğesi oluşturur ve sonra <xref:Microsoft.Office.Tools.Excel.ListObject> **a1** ile **a4**arası hücrelere bir denetim ekler.
+1. Aşağıdaki kod, açık çalışma sayfasına dayalı bir çalışma sayfası konak öğesi oluşturur ve sonra <xref:Microsoft.Office.Tools.Excel.ListObject> **a1** ile **a4** arası hücrelere bir denetim ekler.
 
      [!code-csharp[Trin_Excel_Dynamic_Controls#8](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/ThisAddIn.cs#8)]
      [!code-vb[Trin_Excel_Dynamic_Controls#8](../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/ThisAddIn.vb#8)]

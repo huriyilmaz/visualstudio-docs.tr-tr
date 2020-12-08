@@ -1,7 +1,8 @@
 ---
 title: 'Nasıl yapılır: şemaları Visual Studio içindeki çalışma sayfalarına eşleme'
+description: Visual Studio 'da çalışma sayfası açıkken bir XML şemasını Microsoft Office Excel çalışma sayfasına nasıl eşleyeceğinizi öğrenin.
 titleSuffix: ''
-ms.custom: seodec18
+ms.custom: seodec18, SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -17,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c8a0437b940953e89e24969314f63df34d223496
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7a7e1a06e644536ce9ce881d9b9f1dc23aae03f1
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85538144"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96848215"
 ---
 # <a name="how-to-map-schemas-to-worksheets-inside-visual-studio"></a>Nasıl yapılır: şemaları Visual Studio içindeki çalışma sayfalarına eşleme
   Çalışma sayfası Visual Studio 'da açıkken bir XML şemasını çalışma sayfasıyla eşleyebilirsiniz. Çalışma kitabı Visual Studio dışında açıldığında kullandığınız Microsoft Office Excel araçlarını kullanırsınız. Office projesi, Excel çözümünüzü oluşturmadan önce veya sonra, şemayı çalışma sayfasıyla eşleştirdiğinizde aynı nesneleri oluşturur.
@@ -55,7 +56,7 @@ ms.locfileid: "85538144"
 
 7. Şema dosyanıza gidin, dosyayı seçin ve ardından **Aç**' a tıklayın.
 
-8. **Tamam**’a tıklayın.
+8. **Tamam** düğmesine tıklayın.
 
      Şema, **XML kaynak** penceresinde temsil edilir. Projenizde, <xref:System.Data.DataSet> bir türü şema temel alınarak oluşturulur ve <xref:System.Windows.Forms.BindingSource> oluşturulur.
 

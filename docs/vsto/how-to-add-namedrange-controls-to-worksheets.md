@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: çalışma sayfalarına NamedRange denetimleri ekleme'
+description: Tasarım zamanında ve belge düzeyi projelerindeki çalışma zamanında bir Microsoft Office Excel çalışma sayfasına NamedRange denetimleri nasıl ekleyebileceğiniz hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 448a44c8f4bc9380a4ef1ebfec33b264e797cac8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 54487ed7f7cdcb7e7da024e4b96fcbb6d5c2cfe4
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85543538"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96848150"
 ---
 # <a name="how-to-add-namedrange-controls-to-worksheets"></a>Nasıl yapılır: çalışma sayfalarına NamedRange denetimleri ekleme
   <xref:Microsoft.Office.Tools.Excel.NamedRange>Tasarım zamanında bir Microsoft Office Excel çalışma sayfasına ve belge düzeyi projelerinde çalışma zamanında denetim ekleyebilirsiniz.
@@ -39,7 +41,7 @@ ms.locfileid: "85543538"
   Denetimler hakkında daha fazla bilgi için <xref:Microsoft.Office.Tools.Excel.NamedRange> bkz. [NamedRange denetimi](../vsto/namedrange-control.md).
 
 ## <a name="add-namedrange-controls-at-design-time"></a><a name="designtime"></a> Tasarım zamanında NamedRange denetimleri ekleme
- <xref:Microsoft.Office.Tools.Excel.NamedRange>Tasarım zamanında belge düzeyindeki bir projedeki çalışma sayfasına denetim eklemenin birkaç yolu vardır: Excel içinden, Visual Studio **araç kutusundan**ve **veri kaynakları** penceresinden.
+ <xref:Microsoft.Office.Tools.Excel.NamedRange>Tasarım zamanında belge düzeyindeki bir projedeki çalışma sayfasına denetim eklemenin birkaç yolu vardır: Excel içinden, Visual Studio **araç kutusundan** ve **veri kaynakları** penceresinden.
 
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
@@ -47,7 +49,7 @@ ms.locfileid: "85543538"
 
 1. Adlandırılmış aralığa eklemek istediğiniz hücreyi veya hücreleri seçin.
 
-2. **Ad kutusuna**, Aralık için bir ad yazın ve **ENTER**tuşuna basın.
+2. **Ad kutusuna**, Aralık için bir ad yazın ve **ENTER** tuşuna basın.
 
      **Ad kutusu** , formül çubuğunun yanında, çalışma sayfasının **A** sütununun hemen üzerinde bulunur.
 
@@ -61,7 +63,7 @@ ms.locfileid: "85543538"
 
 3. Adlandırılmış aralığa eklemek istediğiniz hücreyi veya hücreleri seçin.
 
-4. **Tamam**’a tıklayın.
+4. **Tamam** düğmesine tıklayın.
 
      Denetim için verilen varsayılan adı istemiyorsanız, **Özellikler** penceresinde adı değiştirebilirsiniz.
 
