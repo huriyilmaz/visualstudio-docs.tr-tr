@@ -2,7 +2,7 @@
 title: 'Visual Studio belgeleri: yenilikler geçmişi '
 titleSuffix: ''
 description: Visual Studio belgelerindeki yeniliklerin geçmişi
-ms.date: 10/04/2020
+ms.date: 12/04/2020
 helpviewer_keywords:
 - Visual Studio, what's new, docs
 - what's new [Visual Studio]
@@ -15,16 +15,106 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 2314965dad6c77e749a62946f3372993813240bb
-ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
+ms.openlocfilehash: ef6f6e71dc7c4c0625877444d0091c73e81455ac
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93414509"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844016"
 ---
 # <a name="history-of-whats-new-in-visual-studio-docs"></a>Visual Studio belgelerindeki yeniliklerin geçmişi
 
-Visual Studio docs 'taki yenilikler geçmişine hoş geldiniz. Bu makale, 2020 Ekim 'de (2020 ' den itibaren) önce docs üzerinde yapılan büyük değişiklikleri içerir. En son yenilikler için bkz. [Visual Studio docs: docs 'taki](whats-new-visual-studio-docs.md)yenilikler.
+Visual Studio docs 'taki yenilikler geçmişine hoş geldiniz. Bu makale, 2020 Kasım 'dan önce docs 'ta bulunan büyük değişiklikleri içerir (2020 Temmuz 'dan itibaren). En son yenilikler için bkz. [Visual Studio docs: docs 'taki](whats-new-visual-studio-docs.md)yenilikler.
+
+## <a name="october-2020"></a>Ekim 2020
+### <a name="code-quality"></a>Kod kalitesi
+
+**Güncelleştirilmiş makaleler**
+- [Kod Çözümleyicileri](../code-quality/index.yml) -.NET 5 için CA yeniden düzenleme
+
+### <a name="containers"></a>Kapsayıcılar
+
+**Güncelleştirilmiş makaleler**
+
+- [Hızlı başlangıç: Visual Studio 'da bir tepki verme tek sayfalı uygulamayla Docker kullanma](../containers/container-tools-react.md)
+  - Kapsayıcı araçları: eski görüntü deposuna başvuruları kaldır
+  - .NET 3,1 ve VS 16,7 için kapsayıcıları güncelleştirme tepki verme öğreticisi
+- [Kubernetes Için köprü](../containers/overview-bridge-to-kubernetes.md) oluşturma-Kubernetes ile Köprü oluşturma: kısıtlama ekleme
+- [Yerel bir Docker kapsayıcısında uygulamalarda hata ayıklama](../containers/edit-and-refresh.md) -Docker araç kutusu
+
+### <a name="debugger"></a>Hata Ayıklayıcısı
+
+**Yeni makaleler**
+
+- [Visual Studio 'Da DirectX 12 desteği](../debugger/graphics/visual-studio-graphics-diagnostics-directx-12.md) -Vsdg DX12
+
+**Güncelleştirilmiş makaleler**
+
+- [Visual Studio 'da ASP.NET veya ASP.NET Core uygulamalarda hata ayıklayın](../debugger/how-to-enable-debugging-for-aspnet-applications.md) -GitHub sorunları için hata ayıklayıcı içerik düzeltmeleri
+- [Visual Studio hata ayıklayıcısında kesme noktaları kullan](../debugger/using-breakpoints.md) -GitHub sorunları için hata ayıklayıcı içerik düzeltmeleri
+- [Visual Studio 'Da Azure hizmetlerinde hata ayıklama](../debugger/debug-azure-apps.md) -bir anlık görüntü hata ayıklayıcısı için bağlantı güncelleştirmeleri
+- Anlık görüntü hata ayıklayıcısı için Snapshot Debugger-SEO ve bağlantı güncelleştirmelerini [kullanarak canlı ASP.net Azure uygulamalarında hata ayıklayın](../debugger/debug-live-azure-applications.md)
+- [Uzaktan hata ayıklama](../debugger/remote-debugging.md) -anlık görüntü hata ayıklayıcısı için SEO ve bağlantı güncelleştirmeleri
+- [Visual Studio grafik tanılama genel bakış](../debugger/graphics/overview-of-visual-studio-graphics-diagnostics.md) -Vsdg DX12
+- [Visual Studio grafik tanılama](../debugger/graphics/visual-studio-graphics-diagnostics.md) -Vsdg DX12
+
+### <a name="get-started"></a>başlarken
+
+**Güncelleştirilmiş makaleler**
+
+- [Öğretici: basit bir C# konsol uygulamasını genişletme](../get-started/csharp/tutorial-console-part-2.md) -genişletilmiş c# öğreticisi için hata ayıklama eklemeleri
+
+### <a name="ide"></a>IDE
+
+**Yeni makaleler**
+
+- [Visual Studio arama](./visual-studio-search.md) -vs arama belgesi kullanma
+
+### <a name="install"></a>Yükleme
+
+**Güncelleştirilmiş makaleler**
+
+- [Visual Studio derleme numaraları ve yayın tarihleri](../install/visual-studio-build-numbers-and-release-dates.md)
+  - 16.7.7 ve 16,8 Preview 6 verileri ekleme
+  - 16,8 Preview 5 bilgilerini ekle
+
+### <a name="msbuild"></a>MSBuild
+
+**Güncelleştirilmiş makaleler**
+
+- [Izlenecek yol: MSBuild](../msbuild/walkthrough-using-msbuild.md) -MSBuild izlenecek yol: tek başına yükleme adımları ekleme
+
+### <a name="profiling"></a>Profil Oluşturma
+
+**Güncelleştirilmiş makaleler**
+
+- [Bellek kullanımını analiz etme](../profiling/analyze-memory-usage.md)
+  - Profil oluşturma için bellek kullanım güncelleştirmeleri-bağlantılar ve açıklamalar
+  - Bellek kullanım Aracı güncelleştirmeleri
+- [Performans Profiler 'da hata ayıklama olmadan bellek kullanımını analiz etme](../profiling/memory-usage-without-debugging2.md)
+  - Profil oluşturma için bellek kullanım güncelleştirmeleri-bağlantılar ve açıklamalar
+  - Bellek kullanım Aracı güncelleştirmeleri
+- [Profil oluşturma araçlarına ilk bakış](../profiling/profiling-feature-tour.md)
+  - Profil oluşturma için bellek kullanım güncelleştirmeleri-bağlantılar ve açıklamalar
+  - Bellek kullanım Aracı güncelleştirmeleri
+- [Hata ayıklayıcı ile veya hata ayıklayıcı olmadan profil oluşturma araçları çalıştırma](../profiling/running-profiling-tools-with-or-without-the-debugger.md)
+  - Profil oluşturma için bellek kullanım güncelleştirmeleri-bağlantılar ve açıklamalar
+  - Bellek kullanım Aracı güncelleştirmeleri
+- Performans Profiler-bellek kullanım aracı güncelleştirmelerinde [, CPU kullanımını hata ayıklamadan çözümleyin](../profiling/cpu-usage.md)
+
+### <a name="windows"></a>Windows
+
+**Güncelleştirilmiş makaleler**
+
+- [Visual Studio belgeleri | Microsoft Docs](../windows/index.yml) -Windows hub güncelleştirmeleri
+
+### <a name="xaml-tools"></a>XAML araçları
+
+**Yeni makaleler**
+
+- [Visual Studio 'da XAML Tasarımcısı tasarım zamanı verilerini kullanma](../xaml-tools/xaml-designtime-data.md)
+  - XAML tasarım zamanı belgelerine genişletilebilirlik bölümü eklendi
+  - Yeni tasarım zamanı XAML makalesi
 
 ## <a name="september-2020"></a>Eylül 2020
 ### <a name="code-quality"></a>Kod kalitesi
@@ -156,7 +246,7 @@ Visual Studio docs 'taki yenilikler geçmişine hoş geldiniz. Bu makale, 2020 E
 - [Proje alt türleri](../extensibility/internals/project-subtypes.md) -liste öğelerini girintileme girintisini çözme
 - [Visual Studio Için renk değeri başvurusu](../extensibility/ux-guidelines/color-value-reference-for-visual-studio.md) -AB # 1759333 düzeltilmesi eksik sütun başlıkları
 
-### <a name="get-started"></a>Kullanmaya başlayın
+### <a name="get-started"></a>başlarken
 
 **Güncelleştirilmiş makaleler**
 
@@ -224,7 +314,7 @@ Visual Studio docs 'taki yenilikler geçmişine hoş geldiniz. Bu makale, 2020 E
 - [Değişiklik günlüğü (Unity için Visual Studio Araçları, Windows)](/gamedev/unity/change-log-visual-studio-tools-for-unity.md) -kabartma VSTU changelog 4.7.1.0
 - [Değişiklik günlüğü (Unity için Visual Studio Araçları, Mac)](/gamedev/unity/change-log-visual-studio-tools-for-unity-mac.md) -kabartma vstum changelog, 2.7.1.0
 
-### <a name="get-started"></a>Kullanmaya başlayın
+### <a name="get-started"></a>başlarken
 
 **Yeni makaleler**
 

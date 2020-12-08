@@ -1,5 +1,7 @@
 ---
 title: "&lt;appAddin &gt; öğesi (Visual Studio 'Da Office geliştirme)"
+description: Vstov4 ad alanının appAddin öğesinin, VSTO eklentileri için özelleştirmeye özgü bilgileri nasıl depoladığını öğrenin.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: reference
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 1bf9ea990d12bd24adee3f6a24a39fa43c74fb71
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a22015fe6183dfd74fff54c34bc6896e1d33d217
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85531644"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844757"
 ---
 # <a name="ltappaddingt-element-office-development-in-visual-studio"></a>&lt;appAddin &gt; öğesi (Visual Studio 'Da Office geliştirme)
   Ad alanının **appAddin** Öğesı, `vstov4` VSTO eklentileri için özelleştirmeden özel bilgileri depolar.
@@ -56,7 +58,7 @@ ms.locfileid: "85531644"
  İsteğe bağlı. **Description** öğesi [&#60;Description&#62; öğesi Visual Studio 'da Office geliştirme &#40;&#41;](../vsto/description-element-office-development-in-visual-studio.md)açıklanmaktadır.
 
 ### <a name="formregions"></a>formRegions
- Yalnızca form bölgelerini içeren Outlook VSTO eklentileri için gereklidir. **FormRegion** öğesi, [Visual&#41;Studio 'da Office geliştirme &#40;&#60;FormRegion&#62; öğesi ](../vsto/formregions-element-office-development-in-visual-studio.md)açıklanmaktadır.
+ Yalnızca form bölgelerini içeren Outlook VSTO eklentileri için gereklidir. **FormRegion** öğesi, [Visual&#41;Studio 'da Office geliştirme &#40;&#60;FormRegion&#62; öğesi](../vsto/formregions-element-office-development-in-visual-studio.md)açıklanmaktadır.
 
 ## <a name="vsto-add-in-example"></a>VSTO eklentisi örneği
 

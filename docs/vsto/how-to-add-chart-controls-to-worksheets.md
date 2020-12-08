@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: çalışma sayfalarına Grafik denetimleri ekleme'
+description: Tasarım zamanında Microsoft Office Excel çalışma sayfasına ve belge düzeyi özelleştirmelerde çalışma zamanında grafik denetimleri nasıl ekleyebileceğiniz hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: fdb1f738fe6e68f7470ae65e6ce08b2f3be0ef6d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7e48b8cfbcf4ee1c7340aef4cd59e09698f89412
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85546243"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845472"
 ---
 # <a name="how-to-add-chart-controls-to-worksheets"></a>Nasıl yapılır: çalışma sayfalarına Grafik denetimleri ekleme
   <xref:Microsoft.Office.Tools.Excel.Chart>Tasarım zamanında Microsoft Office Excel çalışma sayfasına ve belge düzeyi özelleştirmelerde çalışma zamanında denetim ekleyebilirsiniz. Ayrıca, <xref:Microsoft.Office.Tools.Excel.Chart> VSTO Eklentilerindeki çalışma zamanında denetim ekleyebilirsiniz.
@@ -51,7 +53,7 @@ ms.locfileid: "85546243"
 
 4. **Veri kaynağı seç** iletişim kutusunda, **grafik** **veri aralığı** kutusuna tıklayın ve varsayılan seçimi kaldırın.
 
-5. **Grafik verileri** sayfasında, grafiğe ait verileri içeren hücre aralığını seçin ( **a5** - **D8**arası hücreler).
+5. **Grafik verileri** sayfasında, grafiğe ait verileri içeren hücre aralığını seçin ( **a5** - **D8** arası hücreler).
 
 6. **Veri kaynağı seç** Iletişim kutusunda **Tamam**' a tıklayın.
 

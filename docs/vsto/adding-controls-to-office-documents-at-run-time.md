@@ -1,5 +1,7 @@
 ---
 title: Çalışma zamanında Office belgelerine denetim ekleme
+description: Çalışma zamanında bir Microsoft Office Word belgesine ve Microsoft Office Excel çalışma kitabına nasıl denetim ekleyebileceğiniz hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -22,15 +24,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 44bf1de5d550a264a63ba7293fe1bdc0c9630aee
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e971556605a120b4ef475f434390c6dcf7b17938
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72986329"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844848"
 ---
 # <a name="add-controls-to-office-documents-at-run-time"></a>Çalışma zamanında Office belgelerine denetim ekleme
-  Çalışma zamanında bir Microsoft Office Word belgesine ve Microsoft Office Excel çalışma kitabına denetimler ekleyebilirsiniz. Onları çalışma zamanında da kaldırabilirsiniz. Çalışma zamanında eklediğiniz veya kaldırdığınız denetimlere *Dinamik denetimler*denir.
+  Çalışma zamanında bir Microsoft Office Word belgesine ve Microsoft Office Excel çalışma kitabına denetimler ekleyebilirsiniz. Onları çalışma zamanında da kaldırabilirsiniz. Çalışma zamanında eklediğiniz veya kaldırdığınız denetimlere *Dinamik denetimler* denir.
 
  [!INCLUDE[appliesto_controls](../vsto/includes/appliesto-controls-md.md)]
 
@@ -54,7 +56,7 @@ ms.locfileid: "72986329"
 - Excel veya Word için VSTO eklentisi projesinde, `Controls` çalışma zamanında oluşturduğunuz bir veya öğesinin özelliğini kullanın <xref:Microsoft.Office.Tools.Excel.Worksheet> <xref:Microsoft.Office.Tools.Word.Document> . Çalışma zamanında bu nesneleri oluşturma hakkında daha fazla bilgi için bkz. [çalışma ZAMANıNDA VSTO Eklentilerindeki Word belgelerini ve Excel çalışma kitaplarını genişletme](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md).
 
 ### <a name="add-controls"></a>Denetim Ekle
- <xref:Microsoft.Office.Tools.Excel.ControlCollection>Ve <xref:Microsoft.Office.Tools.Word.ControlCollection> türleri, belgelere ve çalışma sayfalarına konak denetimleri ve ortak Windows Forms denetimleri eklemek için kullanabileceğiniz yardımcı yöntemleri içerir. Her yöntem adı, denetim sınıfının, `Add` eklemek istediğiniz denetimin *control class* sınıf adı olduğu biçim *denetim sınıfına*sahiptir. Örneğin, belgenize bir denetim eklemek için <xref:Microsoft.Office.Tools.Excel.NamedRange> <xref:Microsoft.Office.Tools.Excel.ControlCollection.AddNamedRange%2A> yöntemini kullanın.
+ <xref:Microsoft.Office.Tools.Excel.ControlCollection>Ve <xref:Microsoft.Office.Tools.Word.ControlCollection> türleri, belgelere ve çalışma sayfalarına konak denetimleri ve ortak Windows Forms denetimleri eklemek için kullanabileceğiniz yardımcı yöntemleri içerir. Her yöntem adı, denetim sınıfının, `Add` eklemek istediğiniz denetimin *control class* sınıf adı olduğu biçim *denetim sınıfına* sahiptir. Örneğin, belgenize bir denetim eklemek için <xref:Microsoft.Office.Tools.Excel.NamedRange> <xref:Microsoft.Office.Tools.Excel.ControlCollection.AddNamedRange%2A> yöntemini kullanın.
 
  Aşağıdaki kod örneği, <xref:Microsoft.Office.Tools.Excel.NamedRange> `Sheet1` Excel için belge düzeyi projesine öğesine ekler.
 
@@ -62,7 +64,7 @@ ms.locfileid: "72986329"
  [!code-csharp[Trin_ExcelWorkbookDynamicControls#3](../vsto/codesnippet/CSharp/trin_excelworkbookdynamiccontrols4/ThisWorkbook.cs#3)]
 
 ### <a name="access-and-delete-controls"></a>Erişim ve silme denetimleri
- `Controls` <xref:Microsoft.Office.Tools.Excel.Worksheet> <xref:Microsoft.Office.Tools.Word.Document> Tasarım zamanında eklediğiniz denetimler de dahil olmak üzere, belgenizdeki tüm denetimleri yinelemek için veya özelliğini kullanabilirsiniz. Tasarım zamanında eklediğiniz denetimlere de *Statik denetimler*denir.
+ `Controls` <xref:Microsoft.Office.Tools.Excel.Worksheet> <xref:Microsoft.Office.Tools.Word.Document> Tasarım zamanında eklediğiniz denetimler de dahil olmak üzere, belgenizdeki tüm denetimleri yinelemek için veya özelliğini kullanabilirsiniz. Tasarım zamanında eklediğiniz denetimlere de *Statik denetimler* denir.
 
  `Delete`Denetimin yöntemini çağırarak veya `Remove` her bir denetim koleksiyonunun yöntemini çağırarak dinamik denetimleri kaldırabilirsiniz. Aşağıdaki kod örneği, <xref:Microsoft.Office.Tools.Excel.ControlCollection.Remove%2A> <xref:Microsoft.Office.Tools.Excel.NamedRange> `Sheet1` Excel için belge düzeyindeki bir projede öğesinden kaldırmak için yöntemini kullanır.
 

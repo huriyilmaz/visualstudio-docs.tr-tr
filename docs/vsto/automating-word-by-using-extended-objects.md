@@ -1,5 +1,7 @@
 ---
 title: Genişletilmiş nesneleri kullanarak Word 'Ü otomatikleştirme
+description: Visual Studio 'da Word çözümleri geliştirirken, çözümlerinizde konak öğelerini ve konak denetimlerini nasıl kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -20,15 +22,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 083fe8cdd3bf9d0e4de4809aacfb78b537e4ed8e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 39ac9d50d0f75f595568c66b02bda1c5ed46a3d6
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71255530"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844458"
 ---
 # <a name="automate-word-by-using-extended-objects"></a>Genişletilmiş nesneleri kullanarak Word 'Ü otomatikleştirme
-  Visual Studio 'da Word çözümleri geliştirirken, çözümlerinizde *konak öğelerini* ve *konak denetimini*kullanabilirsiniz. Bunlar, ve nesneleri gibi, Word nesne modelinde (yani, Word için birincil birlikte çalışma derlemesi tarafından sunulan nesne modelinde) bazı yaygın kullanılan nesneleri genişleten nesnelerdir <xref:Microsoft.Office.Interop.Word.Document> <xref:Microsoft.Office.Interop.Word.ContentControl> . Genişletilmiş nesneler, temel aldığı Word nesneleri gibi davranır, ancak nesnelere ek olaylar ve veri bağlama özellikleri ekler.
+  Visual Studio 'da Word çözümleri geliştirirken, çözümlerinizde *konak öğelerini* ve *konak denetimini* kullanabilirsiniz. Bunlar, ve nesneleri gibi, Word nesne modelinde (yani, Word için birincil birlikte çalışma derlemesi tarafından sunulan nesne modelinde) bazı yaygın kullanılan nesneleri genişleten nesnelerdir <xref:Microsoft.Office.Interop.Word.Document> <xref:Microsoft.Office.Interop.Word.ContentControl> . Genişletilmiş nesneler, temel aldığı Word nesneleri gibi davranır, ancak nesnelere ek olaylar ve veri bağlama özellikleri ekler.
 
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 

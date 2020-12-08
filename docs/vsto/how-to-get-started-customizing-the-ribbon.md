@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: Şeriti özelleştirmeye başlama'
+description: Bir Microsoft Office uygulamasının şeritlerini özelleştirmeyi, bir şerit (görsel Tasarımcı) veya şerit (XML) öğesini bir Office projesine eklemeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: be311f87862f4447d903294508927735d3507b08
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3974fe85a97226a920959b41256fa7e29923c9d1
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85520074"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845953"
 ---
 # <a name="how-to-get-started-customizing-the-ribbon"></a>Nasıl yapılır: Şeriti özelleştirmeye başlama
   Bir Microsoft Office uygulamasının Şeridini özelleştirmek için bir Office projesine **Şerit (görsel Tasarımcı)** veya **Şerit (XML)** öğesi ekleyin.
@@ -65,9 +67,9 @@ ms.locfileid: "85520074"
 
    - Windows veya DOS için ayrılan adlar ("nul", "AUX", "Con", "COM1", "lpt1" vb.)
 
-4. **Tamam**’a tıklayın.
+4. **Tamam** düğmesine tıklayın.
 
-   Şerit öğesi **Çözüm Gezgini**görünür. Sonraki adımlar hakkında daha fazla bilgi için bkz. [Şerite genel bakış](../vsto/ribbon-overview.md).
+   Şerit öğesi **Çözüm Gezgini** görünür. Sonraki adımlar hakkında daha fazla bilgi için bkz. [Şerite genel bakış](../vsto/ribbon-overview.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Çalışma zamanında Şerite erişin](../vsto/accessing-the-ribbon-at-run-time.md)

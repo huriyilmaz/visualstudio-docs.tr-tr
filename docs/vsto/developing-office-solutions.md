@@ -1,5 +1,7 @@
 ---
 title: Office çözümleri geliştirme
+description: Visual Studio 'da Office geliştirici araçlarını kullanarak bir projeyi tasarlamayı öğrenin. Ayrıca, kodu ve özel kullanıcı arabirimini (UI) uygulamaya nasıl başlayacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8ede09f18808eda22c747ac28e3c279fc43266bc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fbfe569e587c53aede6d550bc20527ad8d0fd328
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "69551568"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845004"
 ---
 # <a name="develop-office-solutions"></a>Office çözümleri geliştirme
   Visual Studio 'da Office geliştirici araçlarını kullanarak bir proje tasarladıktan ve proje dosyalarını ayarladıktan sonra, kodu ve özel kullanıcı arabirimini (UI) uygulamaya odaklanabilirsiniz.
@@ -32,7 +34,7 @@ ms.locfileid: "69551568"
  Office nesne modeli, programlama yapacağımız çeşitli nesneler sunar. Yönetilen kod kullanarak Office çözümlerini programlayışınızda, Office birincil birlikte çalışma derlemelerindeki türler kullanan kodu yazarsınız. Visual Studio 'da Office proje şablonlarını kullanarak oluşturduğunuz çözümlerde, doğrudan projenizdeki oluşturulan sınıflara göre de kod yazarsınız. Daha fazla bilgi için bkz. [Office çözümlerinde kod yazma](../vsto/writing-code-in-office-solutions.md).
 
 ## <a name="program-different-types-of-office-solutions"></a>Office çözümlerinin farklı türlerini programlama
- Oluşturmakta olduğunuz çözüm türü, projenizde hangi özellikleri kullanabileceğinizi belirler. Örneğin, tasarım zamanında Visual Studio 'daki **araç kutusundan** öğeleri sürükleyerek belge düzeyi özelleştirmelere Windows Forms denetimleri ve genişletilmiş Office denetimleri ( *konak denetimleri*olarak adlandırılır) ekleyebilirsiniz. Ancak, VSTO eklentisi geliştiriyorsanız, kod yazarak bu denetim türlerini yalnızca çalışma zamanında belgelere ekleyebilirsiniz.
+ Oluşturmakta olduğunuz çözüm türü, projenizde hangi özellikleri kullanabileceğinizi belirler. Örneğin, tasarım zamanında Visual Studio 'daki **araç kutusundan** öğeleri sürükleyerek belge düzeyi özelleştirmelere Windows Forms denetimleri ve genişletilmiş Office denetimleri ( *konak denetimleri* olarak adlandırılır) ekleyebilirsiniz. Ancak, VSTO eklentisi geliştiriyorsanız, kod yazarak bu denetim türlerini yalnızca çalışma zamanında belgelere ekleyebilirsiniz.
 
  Farklı çözüm türlerine özgü özellikler hakkında daha fazla bilgi için aşağıdaki konulara bakın:
 

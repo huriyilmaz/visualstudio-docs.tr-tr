@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: belgelere yönetilen kod uzantıları Iliştirme'
+description: Varolan bir Microsoft Office Word belgesine veya Microsoft Office Excel çalışma kitabına bir özelleştirme derlemesini nasıl ekleyebileceğiniz hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f44b153ac7d55704ba649a7dc09860518a5e76b7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1929daaa82dbfec6f58513bf94eefe01f9520601
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547530"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844394"
 ---
 # <a name="how-to-attach-managed-code-extensions-to-documents"></a>Nasıl yapılır: belgelere yönetilen kod uzantıları Iliştirme
   Varolan bir Microsoft Office Word belgesine veya Microsoft Office Excel çalışma kitabına bir özelleştirme derlemesi ekleyebilirsiniz. Belge veya çalışma kitabı, Visual Studio 'daki Microsoft Office projeleri ve geliştirme araçları tarafından desteklenen herhangi bir dosya biçiminde olabilir. Daha fazla bilgi için bkz. [belge düzeyi özelleştirmelerinin mimarisi](../vsto/architecture-of-document-level-customizations.md).

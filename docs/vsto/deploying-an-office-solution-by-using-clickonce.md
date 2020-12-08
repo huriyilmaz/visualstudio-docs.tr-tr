@@ -1,5 +1,7 @@
 ---
 title: ClickOnce kullanarak Office çözümü dağıtma
+description: ClickOnce kullanıyorsanız Office çözümünüzü daha az adımda nasıl dağıtabileceğinizi öğrenin. Güncelleştirmeleri yayımlarsanız, çözümünüz bunları otomatik olarak algılar ve yükler.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: bb495b30950105d1ff19a1f4fb13da1ee624b228
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: d808348528a64cc184c7a6c50359c057b2325a75
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809355"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845654"
 ---
 # <a name="deploy-an-office-solution-by-using-clickonce"></a>ClickOnce kullanarak Office çözümü dağıtma
   ClickOnce kullanıyorsanız Office çözümünüzü daha az adımda dağıtabilirsiniz. Güncelleştirmeleri yayımlarsanız, çözümünüz bunları otomatik olarak algılar ve yükler. Bununla birlikte, ClickOnce, çözümünüzü bir bilgisayarın her kullanıcısı için ayrı ayrı yüklemenizi gerektirir. Bu nedenle, birden fazla Kullanıcı çözümünüzü aynı bilgisayarda çalıştırabileceğinden, Windows Installer (*. msi*) kullanmayı düşünmelisiniz.
@@ -46,7 +48,7 @@ ms.locfileid: "90809355"
   Bir Windows Installer dosyası oluşturarak Office çözümünü dağıtma hakkında daha fazla bilgi için, bkz. [Windows Installer kullanarak Office çözümü dağıtma](../vsto/deploying-a-vsto-solution-by-using-windows-installer.md).
 
 ## <a name="publish-the-solution"></a><a name="Publish"></a> Çözümü yayımlama
- Çözümünüzü **Yayımla sihirbazını** veya **Proje tasarımcısını**kullanarak yayımlayabilirsiniz. Bu yordamda, tüm yayımlama seçenekleri kümesini sağladığından **Proje tasarımcısını** kullanacaksınız. Bkz. [Visual Studio 'Da Office geliştirme &#40;Yayımlama sihirbazı&#41;](../vsto/publish-wizard-office-development-in-visual-studio.md).
+ Çözümünüzü **Yayımla sihirbazını** veya **Proje tasarımcısını** kullanarak yayımlayabilirsiniz. Bu yordamda, tüm yayımlama seçenekleri kümesini sağladığından **Proje tasarımcısını** kullanacaksınız. Bkz. [Visual Studio 'Da Office geliştirme &#40;Yayımlama sihirbazı&#41;](../vsto/publish-wizard-office-development-in-visual-studio.md).
 
 #### <a name="to-publish-the-solution"></a>Çözümü yayımlamak için
 
@@ -64,9 +66,9 @@ ms.locfileid: "90809355"
 
    - Yerel bir yol (örneğin, *C:\folderadı \ KlasörAdı*).
 
-   - Ağınızdaki bir klasörün Tekdüzen adlandırma kuralı (UNC) yolu (örneğin, * \\ \Sunucuadı \ KlasörAdı*).
+   - Ağınızdaki bir klasörün Tekdüzen adlandırma kuralı (UNC) yolu (örneğin, *\\ \Sunucuadı \ KlasörAdı*).
 
-   - Bir göreli yol (örneğin, varsayılan olarak projenin yayımlandığı klasör olan *publishfolder \\ *).
+   - Bir göreli yol (örneğin, varsayılan olarak projenin yayımlandığı klasör olan *publishfolder \\*).
 
 5. **Yükleme klasörü URL 'si** kutusuna, son kullanıcıların çözümünüzü bulacağı konumun tam yolunu girin.
 
@@ -78,14 +80,14 @@ ms.locfileid: "90809355"
 
 8. **Yüklenecek önkoşulları seçin** listesinde, **Windows Installer 4,5** ve uygun .NET Framework paketinin onay kutularını seçin.
 
-    Örneğin, çözümünüz [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] öğesini hedefliyorsa, **Windows Installer 4,5** ve **Microsoft .NET Framework 4,5 Full**onay kutularını seçin.
+    Örneğin, çözümünüz [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] öğesini hedefliyorsa, **Windows Installer 4,5** ve **Microsoft .NET Framework 4,5 Full** onay kutularını seçin.
 
 9. Çözümünüz 4,5 .NET Framework hedefliyorsa, **Office çalışma zamanı Için Visual Studio 2010 araçları** onay kutusunu da seçin.
 
     > [!NOTE]
     > Varsayılan olarak, bu onay kutusu görünmez. Bu onay kutusunu göstermek için bir Önyükleyici paketi oluşturmanız gerekir. Bkz. [Visual Studio 2012 Ile Office 2013 VSTO eklentisi Için önyükleyici paketi oluşturma](create-vsto-add-ins-for-office-by-using-visual-studio.md).
 
-10. **Önkoşullar için yüklemeyi belirtin**altında, görüntülenen seçeneklerden birini belirleyin ve sonra **Tamam** düğmesini seçin.
+10. **Önkoşullar için yüklemeyi belirtin** altında, görüntülenen seçeneklerden birini belirleyin ve sonra **Tamam** düğmesini seçin.
 
      Aşağıdaki tabloda her bir seçenek açıklanmaktadır.
 
@@ -170,7 +172,7 @@ ms.locfileid: "90809355"
 
 1. IIS 7,0 çalıştıran sunucuda **Start**  >  **tüm programlar**  >  **aksesuarları**' nı Başlat ' ı seçin.
 
-2. **Komut istemi**kısayol menüsünü açın ve ardından **yönetici olarak çalıştır** ' ı seçin.
+2. **Komut istemi** kısayol menüsünü açın ve ardından **yönetici olarak çalıştır** ' ı seçin.
 
 3. **Aç** kutusuna aşağıdaki yolu girin ve **Tamam** düğmesini seçin.
 
@@ -200,7 +202,7 @@ ms.locfileid: "90809355"
 
 3. **Şablonlar** bölmesinde, **sınıf kitaplığı** şablonunu seçin.
 
-4. **Ad** alanına **FileCopyPDA**girin ve **Tamam** düğmesini seçin.
+4. **Ad** alanına **FileCopyPDA** girin ve **Tamam** düğmesini seçin.
 
 5. **Çözüm Gezgini**, **FileCopyPDA** projesini seçin.
 
@@ -233,7 +235,7 @@ ms.locfileid: "90809355"
 
 6. Menü çubuğunda **Proje**  >  **Yeni klasör**' ü seçin.
 
-7. **Veri**girin ve **ENTER** tuşunu seçin.
+7. **Veri** girin ve **ENTER** tuşunu seçin.
 
 8. **Çözüm Gezgini**, **veri** klasörünü seçin.
 
@@ -243,7 +245,7 @@ ms.locfileid: "90809355"
 
 11. **Çözüm Gezgini** **ExcelWorkbook.xlsx** dosyasını seçin.
 
-12. **Özellikler** penceresinde, **derleme eylemi** özelliğini **içerik** olarak değiştirin ve **daha yeniyse kopyalamak**için **Çıkış Dizinine Kopyala** özelliğini değiştirin.
+12. **Özellikler** penceresinde, **derleme eylemi** özelliğini **içerik** olarak değiştirin ve **daha yeniyse kopyalamak** için **Çıkış Dizinine Kopyala** özelliğini değiştirin.
 
      Bu adımları tamamladığınızda, projeniz aşağıdaki çizime benzeyecektir.
 
@@ -253,7 +255,7 @@ ms.locfileid: "90809355"
 
 ### <a name="modify-the-application-manifest"></a>Uygulama bildiriminde değişiklik yapma
 
-1. **Dosya Gezgini**'ni kullanarak **c:\publish**çözüm dizinini açın.
+1. **Dosya Gezgini**'ni kullanarak **c:\publish** çözüm dizinini açın.
 
 2. **Uygulama dosyaları** klasörünü açın ve ardından çözümünüzün en son yayımlanmış sürümüne karşılık gelen klasörü açın.
 
@@ -329,7 +331,7 @@ ms.locfileid: "90809355"
 
         4. **Yol** kutusuna, karşıya yüklediğiniz belgeyi içeren SharePoint belge kitaplığının URL 'sini girin (örneğin, *http://SharePointServerName/TeamName/ProjectName/DocumentLibraryName* ).
 
-             Default *. aspx* veya *AllItems. aspx*gibi varsayılan Web sayfasının adını eklemeyin.
+             Default *. aspx* veya *AllItems. aspx* gibi varsayılan Web sayfasının adını eklemeyin.
 
         5. **Bu konumun alt klasörlerinde da güvenilir** onay kutusunu seçin ve ardından **Tamam** düğmesini seçin.
 
@@ -342,18 +344,18 @@ ms.locfileid: "90809355"
 
  *%CommonProgramFiles%\Microsoft shared\VSTO\10.0\VSTOInstaller.exe*
 
- Araç bu konumda değilse, bu aracın yolunu bulmak için **HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VSTO Runtime Setup\v4\InstallerPath** veya **HKEY_LOCAL_MACHINE \SOFTWARE\Wow6432Node\Microsoft\VSTO Runtime Setup\v4\InstallerPath** kayıt defteri anahtarını kullanabilirsiniz.
+ Araç bu konumda değilse, bu aracın yolunu bulmak için **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VSTO Runtime Setup\v4\InstallerPath** veya **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VSTO Runtime Setup\v4\InstallerPath** kayıt defteri anahtarını kullanabilirsiniz.
 
- *VSTOinstaller.exe*ile aşağıdaki parametreleri kullanabilirsiniz.
+ *VSTOinstaller.exe* ile aşağıdaki parametreleri kullanabilirsiniz.
 
 | Parametre | Tanım |
 |------------------| - |
-| /Install veya /I | Çözümü yükler. Bu seçeneğin ardından bir dağıtım bildiriminin konumunu vermelisiniz. Yerel bilgisayarda bir evrensel adlandırma kuralı (UNC) dosya paylaşımında bir yol belirtebilirsiniz. Yerel bir yol (*C:\folder\\publishfolder*), göreli bir yol (*Yayımla \\ *) veya tam bir konum (* \\ \Sunucuadı* \ KlasörAdı veya http://<em>ServerName/KlasörAdı</em>) belirtebilirsiniz. |
-| /Uninstall veya /U | Çözümü kaldırır. Bu seçeneğin ardından bir dağıtım bildiriminin konumunu vermelisiniz. Yerel bilgisayarda bir UNC dosya paylaşımında bir yol belirtebilirsiniz. Yerel bir yol (*C:\folder\\publishfolder*), göreli bir yol (*Yayımla \\ *) veya tam bir konum (* \\ \Sunucuadı* \ KlasörAdı veya http://<em>ServerName/KlasörAdı</em>) belirtebilirsiniz. |
+| /Install veya /I | Çözümü yükler. Bu seçeneğin ardından bir dağıtım bildiriminin konumunu vermelisiniz. Yerel bilgisayarda bir evrensel adlandırma kuralı (UNC) dosya paylaşımında bir yol belirtebilirsiniz. Yerel bir yol (*C:\folder\\publishfolder*), göreli bir yol (*Yayımla \\*) veya tam bir konum (*\\ \Sunucuadı* \ KlasörAdı veya http://<em>ServerName/KlasörAdı</em>) belirtebilirsiniz. |
+| /Uninstall veya /U | Çözümü kaldırır. Bu seçeneğin ardından bir dağıtım bildiriminin konumunu vermelisiniz. Yerel bilgisayarda bir UNC dosya paylaşımında bir yol belirtebilirsiniz. Yerel bir yol (*C:\folder\\publishfolder*), göreli bir yol (*Yayımla \\*) veya tam bir konum (*\\ \Sunucuadı* \ KlasörAdı veya http://<em>ServerName/KlasörAdı</em>) belirtebilirsiniz. |
 | /Silent veya /S | Kullanıcıdan bir şey girmesini istemeden veya ileti görüntülemeden yükler veya kaldırır. Güven istemi gerekiyorsa, özelleştirme yüklenmez veya güncellenmez. |
 | /Help or /? | Yardım bilgilerini görüntüler. |
 
- *VSTOinstaller.exe*çalıştırdığınızda aşağıdaki hata kodları görünebilir.
+ *VSTOinstaller.exe* çalıştırdığınızda aşağıdaki hata kodları görünebilir.
 
 |Hata Kodu|Tanım|
 |----------------|----------------|

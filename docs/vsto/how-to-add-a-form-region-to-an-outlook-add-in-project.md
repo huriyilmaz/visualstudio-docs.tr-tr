@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: Outlook eklenti projesine form bölgesi ekleme'
+description: Yeni Outlook form bölgesi Sihirbazı 'nı kullanarak standart veya özel Microsoft Office Outlook formunu genişletmek için form bölgesi oluşturmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a03ba05226720913d48dc1828dcb849bee72d17e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f137dbe88b8b3ecf51f17e0f19f61368359087fa
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85538404"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845069"
 ---
 # <a name="how-to-add-a-form-region-to-an-outlook-add-in-project"></a>Nasıl yapılır: Outlook eklenti projesine form bölgesi ekleme
   **Yeni Outlook form bölgesi** Sihirbazı 'nı kullanarak standart veya özel bir Microsoft Office Outlook formunu genişletmek için form bölgesi oluşturun. Visual Studio 'da yeni bir form bölgesi oluşturabilir ve Kullanıcı arabirimini tasarlayabilirsiniz veya Outlook 'ta tasarlanan bir form bölgesini içeri aktarabilir ve Visual Basic veya C# kodu ekleyebilirsiniz.

@@ -1,5 +1,7 @@
 ---
 title: Office çözümlerinin işbirlikçi geliştirmesi
+description: Birden çok geliştiricinin bir Office projesi üzerinde diğer Visual Studio projelerinde birlikte çalıştıkları şekilde nasıl çalışabilecekleri hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 76c26a110d88d3dee8bf7540647ea0bfde4e7c4f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d30f28b3e97469bc9e0bf921438960206b4f89c0
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62949493"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845810"
 ---
 # <a name="collaborative-development-of-office-solutions"></a>Office çözümlerinin işbirlikçi geliştirmesi
   Birden çok geliştirici, diğer Visual Studio projelerinde birlikte çalıştıkları şekilde bir Office projesi üzerinde çalışabilir. Visual Studio, Office farklı konumlara yüklense bile, her bilgisayarda Microsoft Office yüklemesini doğru şekilde konumlandırır. Ancak farkında olmanız gereken bazı önemli noktalar vardır.
@@ -33,7 +35,7 @@ ms.locfileid: "62949493"
  Proje kaynak denetimi yerine bir ağ paylaşımında kullanılıyorsa, işbirliği geliştiricilerin çözümü açmasını ve derlemeyi test etmesini sağlamak için bazı ek adımlar gerçekleştirilmelidir.
 
 ## <a name="source-control-requires-checking-out-all-files"></a>Kaynak denetimi tüm dosyaları kullanıma alma gerektiriyor
- Projeleriniz için kaynak denetimi kullanıyorsanız, kod dosyasını her değiştirmenizde (örneğin, *ThisDocument*, *ThisWorkbook*veya *ThisAddIn* kodu dosyaları gibi) bir kod **Çözüm Gezgini** dosyası altındaki tüm dosyaları (örneğin, varsayılan olarak gizli olan dosyalar) denetlemeniz gerekir. Yalnızca en üst düzey kod dosyasına göz atın, değişiklikleriniz kaybolmuş olabilir.
+ Projeleriniz için kaynak denetimi kullanıyorsanız, kod dosyasını her değiştirmenizde (örneğin, *ThisDocument*, *ThisWorkbook* veya *ThisAddIn* kodu dosyaları gibi) bir kod **Çözüm Gezgini** dosyası altındaki tüm dosyaları (örneğin, varsayılan olarak gizli olan dosyalar) denetlemeniz gerekir. Yalnızca en üst düzey kod dosyasına göz atın, değişiklikleriniz kaybolmuş olabilir.
 
  Değişikliklerinizi yaptıktan sonra, tüm dosyaları geri iade edin. Projelerde gizli kod dosyaları hakkında daha fazla bilgi için bkz. [Visual Studio ortamında Office projeleri](../vsto/office-projects-in-the-visual-studio-environment.md).
 

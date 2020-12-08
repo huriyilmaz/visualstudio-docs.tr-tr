@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: kod çalıştırmadan Office çözümlerini açma'
+description: Derleme kodunu çalıştırmadan yönetilen kod uzantıları içeren bir belge veya çalışma kitabını nasıl açabileceğiniz hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: d84515c2c3159b61b96f77555b23eef0df0ae961
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8339f21fbf7add4335941360b73d42700ef6e635
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85543487"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844926"
 ---
 # <a name="how-to-open-office-solutions-without-running-code"></a>Nasıl yapılır: kod çalıştırmadan Office çözümlerini açma
   Yönetilen kod uzantılarıyla oluşturulan Microsoft Office çözüm, son kullanıcının Office uygulamasındaki güvenlik ayarı yüksek olarak ayarlanmış olsa bile çalıştırılır. Bunun nedeni, .NET derleme kodu güvenliğinin Microsoft Office tarafından değil Microsoft .NET Framework tarafından yönetilmektedir.

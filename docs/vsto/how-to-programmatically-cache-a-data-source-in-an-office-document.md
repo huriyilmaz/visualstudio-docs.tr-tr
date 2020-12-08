@@ -1,5 +1,7 @@
 ---
 title: Office belgesindeki önbelleğe alma veri kaynağı programlama
+description: Bir konak öğesinin StartCaching metodunu çağırarak bir belgedeki veri önbelleğine programlı bir şekilde veri nesnesi ekleme hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8ec3a38d109de561e3cba77951764dd8dd9479df
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c0b739a7671f19b126b0566dfc8f4775a2c91063
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85544774"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845023"
 ---
 # <a name="how-to-programmatically-cache-a-data-source-in-an-office-document"></a>Nasıl yapılır: bir Office belgesinde program aracılığıyla veri kaynağını önbelleğe alma
   `StartCaching`,, Veya gibi bir konak öğesinin yöntemini çağırarak bir belgedeki veri önbelleğine programlı bir şekilde veri nesnesi ekleyebilirsiniz <xref:Microsoft.Office.Tools.Word.Document> <xref:Microsoft.Office.Tools.Excel.Workbook> <xref:Microsoft.Office.Tools.Excel.Worksheet> . Bir konak öğesinin yöntemini çağırarak veri önbelleğinden veri nesnesini kaldırın `StopCaching` .

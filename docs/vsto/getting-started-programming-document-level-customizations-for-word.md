@@ -1,5 +1,7 @@
 ---
 title: Word için belge düzeyi özelleştirmeleri Programlamaya Başlama
+description: Visual Studio 'Yu kullanarak Microsoft Office Word için belge düzeyi özelleştirmeleri oluşturmaya başlamak üzere bilmeniz gerekenleri öğrenin.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f4cf54dcdd08e7c44e8318973a3653dbe9c5ea1b
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: e9420ab02b5f402dd39e5ca1713b911a10932dfb
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585673"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845186"
 ---
 # <a name="get-started-programming-document-level-customizations-for-word"></a>Word için belge düzeyi özelleştirmeleri Programlamaya Başlama
   Visual Studio 'Yu kullanarak Microsoft Office Word için belge düzeyi özelleştirmeleri oluşturmaya başladıysanız, bilmeniz gerekenler aşağıda verilmiştir.

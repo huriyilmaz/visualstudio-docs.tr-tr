@@ -1,5 +1,7 @@
 ---
 title: Kodun, kısıtlı izinlerle belgelerin arkasında çalışmasına izin verme
+description: Visual Studio 'da Office geliştirme araçları 'nı kullanarak kodun kısıtlanmış izinlerle birlikte çalıştırılmasına nasıl izin verileceğini öğrenin.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 14c468a806160fd31c84b164a4b995f904e71fc6
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: ac15302e81a68d8866c69a30a8368d36648ef1d9
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "92298486"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844900"
 ---
 # <a name="how-to-permit-code-to-run-behind-documents-with-restricted-permissions"></a>Nasıl yapılır: kodun, kısıtlı izinlerle belgelerin arkasında çalışmasına Izin verme
   Bir belge veya çalışma kitabıyla izinleri kısıtlamak için Microsoft Office bilgi Rights Management (ıRM) özelliğini kullanabilirsiniz. Varsayılan olarak, kısıtlı bir Microsoft Office Word belgesi veya Microsoft Office Excel çalışma kitabının arkasındaki kodun çalışmasına izin verilmez. Varsayılan değer olarak, yönetilen kod uzantılarınızın nesne modeline erişebilmesi ve çözümünüzün çalışması için değiştirebilirsiniz.
@@ -36,14 +38,14 @@ ms.locfileid: "92298486"
 
 1. Belgeyi veya çalışma kitabını Word veya Excel 'de açın.
 
-2. **Dosya** sekmesine tıklayın, **hazırla**seçeneğinin üzerine gelin, **izin kısıtla**' nın üzerine gelin ve ardından **kısıtlı erişim**' e tıklayın.
+2. **Dosya** sekmesine tıklayın, **hazırla** seçeneğinin üzerine gelin, **izin kısıtla**' nın üzerine gelin ve ardından **kısıtlı erişim**' e tıklayın.
 
    > [!NOTE]
    > İlk kez kullandığınızda, Windows Rights Management istemcisini yüklemeniz istenir. İstemcisini yükledikten sonra, adımları tekrarlamanız gerekebilir.
 
 3. **İzin** iletişim kutusunda **Bu belge için izinleri kısıtla**' yı seçin ve **daha sonra diğer seçenekler**' e tıklayın.
 
-4. **Kullanıcılar Için ek izinler**altında, **içeriğe programlamayla erişim**' i seçin.
+4. **Kullanıcılar Için ek izinler** altında, **içeriğe programlamayla erişim**' i seçin.
 
    Word veya Excel, nesne modeline programlı erişime izin verir.
 

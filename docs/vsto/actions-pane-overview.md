@@ -1,5 +1,7 @@
 ---
 title: Eylemler bölmesine genel bakış
+description: Bir eylemler bölmesinin, belirli bir Microsoft Office Word belgesi veya Excel çalışma kitabına eklenen özelleştirilebilir bir belge eylemleri görev bölmesi olduğunu öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 82bf3ac9515effaa1053a011085849f0afea67f5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5d03ba8968b08fb07eb2cc9c17839af57cf06eca
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72986307"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844835"
 ---
 # <a name="actions-pane-overview"></a>Eylemler bölmesine genel bakış
   Bir eylemler bölmesi, belirli bir Microsoft Office Word belgesine veya Microsoft Office Excel çalışma kitabına eklenen özelleştirilebilir bir **belge eylemleri** görev bölmesidir. Eylemler bölmesi Office görev bölmesinin içinde, Excel 'deki **XML kaynağı** görev bölmesi veya Word 'deki **Stiller ve biçimlendirme** görev bölmesi gibi diğer yerleşik görev bölmeleri ile birlikte barındırılır. Eylemler bölmesi Kullanıcı arabirimini tasarlamak için Windows Forms denetimleri veya WPF denetimleri kullanabilirsiniz.
@@ -59,17 +61,17 @@ ms.locfileid: "72986307"
 
  Çözümünüzde görev bölmesini gizlemek için birkaç seçeneğiniz vardır:
 
-- Word için, <xref:Microsoft.Office.Interop.Word.TaskPane.Visible%2A> <xref:Microsoft.Office.Interop.Word.TaskPane> belge eylemleri görev bölmesini temsil eden nesnenin özelliğini **false**olarak ayarlayın. Aşağıdaki kod örneği, projenizdeki sınıfından çalıştırılmak üzere tasarlanmıştır `ThisDocument` .
+- Word için, <xref:Microsoft.Office.Interop.Word.TaskPane.Visible%2A> <xref:Microsoft.Office.Interop.Word.TaskPane> belge eylemleri görev bölmesini temsil eden nesnenin özelliğini **false** olarak ayarlayın. Aşağıdaki kod örneği, projenizdeki sınıfından çalıştırılmak üzere tasarlanmıştır `ThisDocument` .
 
      [!code-csharp[Trin_VstcoreActionsPaneWord#34](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs#34)]
      [!code-vb[Trin_VstcoreActionsPaneWord#34](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb#34)]
 
-- Excel için <xref:Microsoft.Office.Interop.Excel._Application.DisplayDocumentActionTaskPane%2A> <xref:Microsoft.Office.Tools.Excel.Workbook.Application%2A> nesnesinin özelliğini **false**olarak ayarlayın. Aşağıdaki kod örneği, projenizdeki sınıfından çalıştırılmak üzere tasarlanmıştır `ThisWorkbook` .
+- Excel için <xref:Microsoft.Office.Interop.Excel._Application.DisplayDocumentActionTaskPane%2A> <xref:Microsoft.Office.Tools.Excel.Workbook.Application%2A> nesnesinin özelliğini **false** olarak ayarlayın. Aşağıdaki kod örneği, projenizdeki sınıfından çalıştırılmak üzere tasarlanmıştır `ThisWorkbook` .
 
      [!code-csharp[Trin_VstcoreActionsPaneExcel#11](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ThisWorkbook.cs#11)]
      [!code-vb[Trin_VstcoreActionsPaneExcel#11](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneExcelVB/ThisWorkbook.vb#11)]
 
-- Word veya Excel için, <xref:Microsoft.Office.Core.CommandBar.Visible%2A> görev bölmesini gösteren komut çubuğunun özelliğini **yanlış**olarak ayarlayabilirsiniz. Aşağıdaki kod örneği, `ThisDocument` projenizdeki veya sınıfından çalıştırılmak üzere tasarlanmıştır `ThisWorkbook` .
+- Word veya Excel için, <xref:Microsoft.Office.Core.CommandBar.Visible%2A> görev bölmesini gösteren komut çubuğunun özelliğini **yanlış** olarak ayarlayabilirsiniz. Aşağıdaki kod örneği, `ThisDocument` projenizdeki veya sınıfından çalıştırılmak üzere tasarlanmıştır `ThisWorkbook` .
 
      [!code-csharp[Trin_VstcoreActionsPaneExcel#9](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ThisWorkbook.cs#9)]
      [!code-vb[Trin_VstcoreActionsPaneExcel#9](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneExcelVB/ThisWorkbook.vb#9)]
@@ -78,7 +80,7 @@ ms.locfileid: "72986307"
  Eylemler bölmesi görünür durumdayken bir Kullanıcı belgeyi kaydettiğinde, Eylemler bölmesi her açıldığında görünür ve eylemler bölmesi herhangi bir denetim içerip içermediğini belirtir. Ne zaman göründüğünü denetlemek isterseniz, ' <xref:Microsoft.Office.Tools.ActionsPane.Clear%2A> `ActionsPane` `Startup` ın olay işleyicisinde alanın yöntemini çağırın `ThisDocument` ve `ThisWorkbook` belge açıldığında eylemler bölmesinin görünür olmamasını sağlayın.
 
 ### <a name="determine-when-the-actions-pane-is-closed"></a>Eylemler bölmesinin ne zaman kapatıldığını belirleme
- Eylemler bölmesi kapatıldığında harekete geçirilen bir olay yoktur. <xref:Microsoft.Office.Tools.ActionsPane>Sınıfında bir olay olsa da <xref:Microsoft.Office.Tools.ActionsPane.VisibleChanged> , Son Kullanıcı Eylemler bölmesini kapattığında bu olay oluşturulmaz. Bunun yerine, bu olay, Eylemler bölmesindeki denetimler, <xref:Microsoft.Office.Tools.ActionsPane.Hide%2A> yöntemi çağırarak veya <xref:Microsoft.Office.Tools.ActionsPane.Visible%2A> özelliği **false**olarak ayarlanarak tetiklenir.
+ Eylemler bölmesi kapatıldığında harekete geçirilen bir olay yoktur. <xref:Microsoft.Office.Tools.ActionsPane>Sınıfında bir olay olsa da <xref:Microsoft.Office.Tools.ActionsPane.VisibleChanged> , Son Kullanıcı Eylemler bölmesini kapattığında bu olay oluşturulmaz. Bunun yerine, bu olay, Eylemler bölmesindeki denetimler, <xref:Microsoft.Office.Tools.ActionsPane.Hide%2A> yöntemi çağırarak veya <xref:Microsoft.Office.Tools.ActionsPane.Visible%2A> özelliği **false** olarak ayarlanarak tetiklenir.
 
  Kullanıcı Eylemler bölmesini kapattığında, uygulamanın kullanıcı arabiriminde (UI) aşağıdaki yordamlardan birini gerçekleştirerek Kullanıcı onu yeniden görüntüleyebilir.
 

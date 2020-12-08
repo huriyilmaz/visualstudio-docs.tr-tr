@@ -1,5 +1,7 @@
 ---
 title: VSTO Eklentilerini Programlamaya Başlama
+description: Microsoft Office uygulamalarını otomatikleştirebilmek, uygulamanın özelliklerini genişletmek ve uygulamanın kullanıcı arabirimini özelleştirmek için VSTO Eklentilerini nasıl kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 39cf3e8d59a2ced26f878da979fa87fc663b5bab
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: be4e129de68d2a7f7690ba24acc92fb09400cfb2
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71253585"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845121"
 ---
 # <a name="get-started-programming-vsto-add-ins"></a>VSTO Eklentilerini Programlamaya Başlama
   Microsoft Office uygulamalarını otomatikleştirmek, uygulamanın özelliklerini genişletmek ve uygulamanın kullanıcı arabirimini (UI) özelleştirmek için VSTO Eklentilerini kullanabilirsiniz. VSTO eklentilerinin, Visual Studio kullanarak oluşturabileceğiniz diğer Office çözümleri türleriyle nasıl Karşılaştırıldığı hakkında bilgi için bkz. [Office çözümleri geliştirmeye genel bakış &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md).
@@ -74,7 +76,7 @@ ms.locfileid: "71253585"
 
 - [İzlenecek yol: Excel için ilk VSTO eklentisini oluşturma](../vsto/walkthrough-creating-your-first-vsto-add-in-for-excel.md)
 
-- [İzlenecek yol: Outlook için ilk VSTO eklentisini oluşturma](../vsto/walkthrough-creating-your-first-vsto-add-in-for-outlook.md)
+- [İzlenecek yol: Outlook için ilk VSTO Add-In oluşturma](../vsto/walkthrough-creating-your-first-vsto-add-in-for-outlook.md)
 
 - [İzlenecek yol: PowerPoint için ilk VSTO eklentisini oluşturma](../vsto/walkthrough-creating-your-first-vsto-add-in-for-powerpoint.md)
 

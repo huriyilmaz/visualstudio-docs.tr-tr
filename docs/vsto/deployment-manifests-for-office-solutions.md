@@ -1,5 +1,7 @@
 ---
 title: Office çözümleri için dağıtım bildirimleri
+description: Dağıtım bildiriminin bir Office çözümünün dağıtım ayarlarını açıklayan ve geçerli uygulama sürümünü tanımlayan bir XML dosyası olduğunu öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: reference
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 3540420d07bd158b19f0b078f01cfdb37ce18beb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 31909d2a6765c357635cd0a8c039132f14b5967d
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547556"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845511"
 ---
 # <a name="deployment-manifests-for-office-solutions"></a>Office çözümleri için dağıtım bildirimleri
   Dağıtım bildirimi, bir Office çözümünün dağıtım ayarlarını açıklayan ve geçerli uygulama sürümünü tanımlayan bir XML dosyasıdır.

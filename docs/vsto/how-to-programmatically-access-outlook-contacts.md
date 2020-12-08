@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: program aracılığıyla Outlook kişilerine erişme'
+description: Outlook Kişilerine Program aracılığıyla nasıl erişebileceğinizi öğrenin. Bu örnek, son adları belirtilen arama dizesini içeren tüm kişileri bulur.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 2f6d64512af660392c10082e3bcd3c26b6bc6885
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 68fe58f2f70a68c37d9171eb01f9294bb5e4d4af
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85520112"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844693"
 ---
 # <a name="how-to-programmatically-access-outlook-contacts"></a>Nasıl yapılır: program aracılığıyla Outlook kişilerine erişme
   Bu örnek, son adları belirtilen arama dizesini içeren tüm kişileri bulur.

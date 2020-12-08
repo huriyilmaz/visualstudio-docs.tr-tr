@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: Kısayol menülerine komut ekleme'
+description: VSTO eklentisini kullanarak bir Office uygulamasındaki kısayol menüsüne nasıl komut ekleyebileceğiniz hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 1ad27481799718d9d2b0872d7a43837fc822ca40
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 95cc6a9dc773c9a0cb07eff518566af9dcc49e96
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85546204"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845498"
 ---
 # <a name="how-to-add-commands-to-shortcut-menus"></a>Nasıl yapılır: Kısayol menülerine komut ekleme
   Bu konu başlığı altında, VSTO eklentisi kullanarak bir Office uygulamasındaki kısayol menüsüne nasıl komut ekleyeceğiniz gösterilmektedir.
@@ -29,7 +31,7 @@ ms.locfileid: "85546204"
 
 1. Belge düzeyi veya VSTO eklenti projesine **ŞERIT XML** öğesi ekleyin. Daha fazla bilgi için bkz. [nasıl yapılır: Şeriti özelleştirmeye başlama](../vsto/how-to-get-started-customizing-the-ribbon.md). İçinde
 
-2. **Çözüm Gezgini**, **ThisAddin.cs** veya **ThisAddIn. vb**öğesini seçin.
+2. **Çözüm Gezgini**, **ThisAddin.cs** veya **ThisAddIn. vb** öğesini seçin.
 
 3. Menü çubuğunda kodu **görüntüle**' yi seçin  >  **Code**.
 
@@ -40,7 +42,7 @@ ms.locfileid: "85546204"
      [!code-csharp[Trin_WordAddIn_Menus#1](../vsto/codesnippet/CSharp/trin_wordaddin_menus.cs/thisaddin.cs#1)]
      [!code-vb[Trin_WordAddIn_Menus#1](../vsto/codesnippet/VisualBasic/trin_wordaddin_menus.vb/thisaddin.vb#1)]
 
-5. **Çözüm Gezgini**, Şerit XML dosyasını seçin. Varsayılan olarak, Şerit XML dosyası *Ribbon1.xml*olarak adlandırılır.
+5. **Çözüm Gezgini**, Şerit XML dosyasını seçin. Varsayılan olarak, Şerit XML dosyası *Ribbon1.xml* olarak adlandırılır.
 
 6. Menü çubuğunda kodu **görüntüle**' yi seçin  >  **Code**.
 
@@ -70,7 +72,7 @@ ms.locfileid: "85546204"
     </customUI>
     ```
 
-8. **Çözüm Gezgini**' de **MyRibbon.cs** veya **MyRibbon. vb**öğesini seçin.
+8. **Çözüm Gezgini**' de **MyRibbon.cs** veya **MyRibbon. vb** öğesini seçin.
 
 9. `Ribbon1`İşlemek istediğiniz her denetim için sınıfa bir geri çağırma yöntemi ekleyin.
 

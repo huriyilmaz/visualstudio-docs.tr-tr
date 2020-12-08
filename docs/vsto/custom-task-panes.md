@@ -1,5 +1,7 @@
 ---
 title: Özel görev bölmeleri
+description: Özel görev bölmeleri, kendi görev bölmenizi oluşturmak ve kullanıcılara çözümünüzün özelliklerine erişmek için tanıdık bir arabirim sağlamak için bir yol sağlar.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -25,12 +27,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 361b04edf2b677c2842376bd9d8fee0d6f3bda12
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: b08e0e3bbc9f45b33ecd0248179011113db7a779
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91862353"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844186"
 ---
 # <a name="custom-task-panes"></a>Özel görev bölmeleri
   Görev bölmeleri, genellikle bir Microsoft Office uygulamasındaki bir pencerenin bir tarafına yerleştirilen Kullanıcı arabirimi panolardır. Özel görev bölmeleri, kendi görev bölmenizi oluşturmak ve kullanıcılara çözümünüzün özelliklerine erişmek için tanıdık bir arabirim sağlamak için bir yol sağlar. Örneğin, arabirim, belgeleri değiştirmek veya bir veri kaynağındaki verileri göstermek için kodu çalıştıran denetimleri içerebilir.
@@ -89,7 +91,7 @@ ms.locfileid: "91862353"
  Görev bölmesini oluşturduktan sonra, görev bölmesinin <xref:Microsoft.Office.Tools.CustomTaskPane> Kullanıcı arabirimini denetlemek ve Kullanıcı görev bölmesini değiştirdiğinde yanıt vermek için nesnenin özelliklerini ve olaylarını kullanabilirsiniz.
 
 ### <a name="make-the-custom-task-pane-visible"></a>Özel görev bölmesini görünür yapma
- Varsayılan olarak, görev bölmesi görünür değildir. Görev bölmesini görünür yapmak için <xref:Microsoft.Office.Tools.CustomTaskPane.Visible%2A> özelliği **true**olarak ayarlamanız gerekir.
+ Varsayılan olarak, görev bölmesi görünür değildir. Görev bölmesini görünür yapmak için <xref:Microsoft.Office.Tools.CustomTaskPane.Visible%2A> özelliği **true** olarak ayarlamanız gerekir.
 
  Kullanıcılar, görev bölmesinin köşesindeki **Kapat** düğmesine (X) tıklayarak istediğiniz zaman bir görev bölmesini kapatabilir. Ancak, kullanıcıların özel görev bölmesini yeniden açması için varsayılan bir yol yoktur. Bir kullanıcı özel bir görev bölmesini kapatırsa, onu görüntülemek için bir yol sağlamadığınız takdirde bu kullanıcı özel görev bölmesini görüntüleyemez.
 

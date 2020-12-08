@@ -1,5 +1,7 @@
 ---
 title: Office çözümlerinde verileri denetimlere bağlama
+description: Bir Microsoft Office Word belgesi veya Excel çalışma sayfasında bir veri kaynağına Windows Forms denetimleri ve konak denetimlerini nasıl bağlayabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 93e2d5abb9c8fda9d4a1300a9bb0958ac9266499
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9be201899f0e2ff4f685343d58a859d8a9157068
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72986166"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844432"
 ---
 # <a name="bind-data-to-controls-in-office-solutions"></a>Office çözümlerinde verileri denetimlere bağlama
   Denetimlerin verileri otomatik olarak görüntülemesi için bir Microsoft Office Word belgesi veya Microsoft Office Excel çalışma sayfası üzerinde Windows Forms denetimleri ve *konak denetimleri* bağlayabilirsiniz. Her iki uygulama düzeyi ve belge düzeyi projesinde, denetimlere veri bağlayabilirsiniz.

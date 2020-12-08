@@ -1,5 +1,7 @@
 ---
 title: Sembol sağlayıcısı arabirimleri | Microsoft Docs
+description: Bu makale, kesme modundaki bir çağrı yığınındaki değişkenleri değerlendiren Visual Studio SDK 'Sı için sembol Işleme arabirimlerinin açıklamalarını bağlar.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7929ba36c76f0db1cabab087afe3590de509efff
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a24baec6738382f93dee5d8b7843d624eea80890
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80715846"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845797"
 ---
 # <a name="symbol-provider-interfaces"></a>Sembol Sağlayıcısı Arabirimleri
 Aşağıdakiler için sembol Işleme arabirimlerdir [!INCLUDE[vsipsdk](../../../extensibility/includes/vsipsdk_md.md)] .
@@ -25,7 +27,7 @@ Aşağıdakiler için sembol Işleme arabirimlerdir [!INCLUDE[vsipsdk](../../../
 ## <a name="discussion"></a>Tartışma
  Bu arabirimler, kesme modunda bir çağrı yığınında değişkenleri değerlendirmek için kullanılır. Yalnızca ortak dil çalışma zamanı sembol sağlayıcıları (SP) için uygulanır.
 
-|Arabirim|Uygulayan|Description|
+|Arabirim|Uygulayan|Açıklama|
 |---------------|--------------------|-----------------|
 |[IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)|SP2|Bir öğenin adresini temsil eder.|
 |[IDebugAddress2](../../../extensibility/debugger/reference/idebugaddress2.md)|SP2|İşlem KIMLIĞINE erişim sağlayan bir öğenin adresini temsil eder.|

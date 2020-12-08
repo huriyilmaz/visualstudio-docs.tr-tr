@@ -1,5 +1,7 @@
 ---
 title: Office projelerinde hata ayıklama
+description: Diğer Visual Studio projeleri için kullandığınız Microsoft Visual Studio araçları kullanarak Office projelerinin hatalarını nasıl ayıklayabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: conceptual
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 92cc0922a36d8c57b54b69ad984d18cf4742b823
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ea4874effcba4ee948f921ae9bf91f145b661f4f
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "73189705"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845641"
 ---
 # <a name="debug-office-projects"></a>Office projelerinde hata ayıklama
   [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]Diğer projeler için kullandığınız Microsoft araçlarını kullanarak Office projelerinde hata ayıklaması yapabilirsiniz [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] hata ayıklama özellikleri, örneğin, **Yerel öğeler** penceresinde kesme noktaları ekleme ve değişkenleri görüntüleme özelliği gibi Office projelerinde hata ayıklarken da kullanılabilir. Hata ayıklama araçları hakkında daha fazla bilgi için [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] bkz. [Visual Studio 'Da hata ayıklama](../debugger/debugger-feature-tour.md).
@@ -48,7 +50,7 @@ ms.locfileid: "73189705"
 ### <a name="debug-office-2013-vsto-add-ins-by-using-either-office-2013-or-office-2016"></a>Office 2013 veya Office 2016 kullanarak Office 2013 VSTO Eklentilerini hata ayıklama
  Visual Studio 2015 kullanıyorsanız ve Office sürümlerinin her iki sürümü de yan yana yüklüyse, Visual Studio Office 2016 ' i başlatır. Visual Studio 2013 kullanıyorsanız, Visual Studio Office 2013 ' i başlatır.
 
- Office 'in farklı bir sürümünü (2013 veya 2016) kullanarak VSTO eklentilerinizi ayıklamak istiyorsanız, **Proje tasarımcısını**açın ve **Hata Ayıkla** sekmesinde **dış program Başlat** seçenek düğmesini seçin. Ardından, uygun Office uygulaması yürütülebilir dosyasının konumuna gidin.
+ Office 'in farklı bir sürümünü (2013 veya 2016) kullanarak VSTO eklentilerinizi ayıklamak istiyorsanız, **Proje tasarımcısını** açın ve **Hata Ayıkla** sekmesinde **dış program Başlat** seçenek düğmesini seçin. Ardından, uygun Office uygulaması yürütülebilir dosyasının konumuna gidin.
 
 ## <a name="f10-and-f11-behavior"></a>F10 ve F11 davranışı
  Office projesinde hata ayıklamaya başladığınızda, **F10** ve **F11** , diğer Visual Basic veya C# projelerinin hatalarını ayıklamaya başladığınızda aynı davranışa sahip değildir. Visual Basic veya C# projelerinde, hata ayıklayıcı ana işlevde duraklar; Office projelerinde, Visual Studio 'nun Office uygulamasının ana işlevi üzerinde denetimi yoktur. Ancak, hata ayıklama sırasında **F10** ve **F11** Işlevleri Visual Basic ve C# projeleriyle aynı işlevlere sahiptir.
@@ -58,12 +60,12 @@ ms.locfileid: "73189705"
 
  Hata ayıklayıcıyı ortak dil çalışma zamanı özel durumlarının kesintiye uğratmak üzere ayarlarsanız, işledikleriniz de dahil olmak üzere tüm özel durumlar artık hata ayıklayıcıya bölünür ve bu da çalışma zamanının kendisinden ilgili olmayabilir. Msosec 'in bulunamamasına başvuran hatalar her projede görünür, ancak yok sayılacak güvenlidir. Bu msosec özel durumları, çözümünüzü etkilemez.
 
- **TRY... öğesini de kullanabilirsiniz. **Özel durumları yakalamak için yöntemlerinizin çevresindeki catch deyimleri.
+ **TRY... öğesini de kullanabilirsiniz.** Özel durumları yakalamak için yöntemlerinizin çevresindeki catch deyimleri.
 
  Visual Studio, varsayılan olarak Office projeleri için tam zamanında hata ayıklama hataları göstermez; Ancak, ortaya çıkan hataları görebilmeniz için bu özelliği etkinleştirebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio 'Da tam zamanında hata ayıklama](../debugger/just-in-time-debugging-in-visual-studio.md).
 
 ## <a name="command-line-arguments"></a>Komut satırı bağımsız değişkenleri
- **Hata ayıklama** özelliği sayfasında **Başlangıç eylemi** , **projeyi Başlat**olarak ayarlandıysa, Visual Studio, komut satırı bağımsız değişkenlerini başlangıç seçenekleri olarak belirtseniz bile, projenin hata ayıklaması sırasında komut satırı bağımsız değişkenlerini kullanmaz. Hata ayıklamayı başlattığınızda komut satırı bağımsız değişkenlerini kullanmak istiyorsanız, **projeyi Başlat**dışında bir **Başlangıç eylemi** seçmeniz gerekir.
+ **Hata ayıklama** özelliği sayfasında **Başlangıç eylemi** , **projeyi Başlat** olarak ayarlandıysa, Visual Studio, komut satırı bağımsız değişkenlerini başlangıç seçenekleri olarak belirtseniz bile, projenin hata ayıklaması sırasında komut satırı bağımsız değişkenlerini kullanmaz. Hata ayıklamayı başlattığınızda komut satırı bağımsız değişkenlerini kullanmak istiyorsanız, **projeyi Başlat** dışında bir **Başlangıç eylemi** seçmeniz gerekir.
 
 ## <a name="source-control"></a>Kaynak denetimi
  Hata ayıklama özellikleri, kaynak denetimi altındaki birden çok kullanıcı arasında paylaşılmaz. Visual Basic ve C# projeleri, hata ayıklama özelliklerini kullanıcıya özgü bir dosyaya (*ProjectName*. vbproj. User veya *ProjectName*. csproj. User) depolar ve bu dosya kaynak denetimi altında değildir. Birden fazla kişinin hata ayıklaması varsa, her bir kişinin hata ayıklama özelliklerini el ile girmesi gerekir.
@@ -95,7 +97,7 @@ ms.locfileid: "73189705"
 
  Her hatayı bir ileti kutusunda göstermek için adlı bir ortam değişkeni oluşturun `VSTO_SUPPRESSDISPLAYALERTS` ve 0 (sıfır) olarak ayarlayın. Ortam değişkenini silerek veya 1 (bir) olarak ayarlayarak iletileri gizleyebilirsiniz.
 
- Hataları bir günlük dosyasına yazmak için adlı bir ortam değişkeni oluşturun `VSTO_LOGALERTS` ve bunu 1 (bir) olarak ayarlayın. , [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] VSTO eklentisinin dağıtım bildirimini içeren klasörde veya özelleştirmeyle ilişkili belge veya çalışma kitabını içeren klasörde, günlük dosyasını oluşturur. Başarısız olursa, [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] yerel *% Temp%* klasöründe günlük dosyasını oluşturur. Uygulama düzeyi VSTO eklentileri için varsayılan ad *eklenti adı*. VSTO. log ' dır. Belge düzeyi projeleri için, günlük dosyasının adı *belge adı*olur. ExcelWorkbook1.xlsx. log gibi. log *Uzantısı*. Günlüğe kaydetme hatalarını durdurmak için, ortam değişkenini silin veya 0 (sıfır) olarak ayarlayın.
+ Hataları bir günlük dosyasına yazmak için adlı bir ortam değişkeni oluşturun `VSTO_LOGALERTS` ve bunu 1 (bir) olarak ayarlayın. , [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] VSTO eklentisinin dağıtım bildirimini içeren klasörde veya özelleştirmeyle ilişkili belge veya çalışma kitabını içeren klasörde, günlük dosyasını oluşturur. Başarısız olursa, [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] yerel *% Temp%* klasöründe günlük dosyasını oluşturur. Uygulama düzeyi VSTO eklentileri için varsayılan ad *eklenti adı*. VSTO. log ' dır. Belge düzeyi projeleri için, günlük dosyasının adı *belge adı* olur. ExcelWorkbook1.xlsx. log gibi. log *Uzantısı*. Günlüğe kaydetme hatalarını durdurmak için, ortam değişkenini silin veya 0 (sıfır) olarak ayarlayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

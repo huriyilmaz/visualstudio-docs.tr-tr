@@ -1,5 +1,7 @@
 ---
 title: Genişletilebilirlik arabirimlerini kullanarak Kullanıcı arabirimi özelliklerini özelleştirme
+description: Visual Studio 'daki Office geliştirme araçlarının Kullanıcı arabirimi özelliklerini özelleştirmenize yardımcı olan genişletilebilirlik arabirimleri sağladığını öğrenin.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -21,12 +23,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 07b62903388012dac3459c86011e349f8053762c
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 436f426eee6c90476997f416bab907c8e17f94cc
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91583846"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845628"
 ---
 # <a name="customize-ui-features-by-using-extensibility-interfaces"></a>Genişletilebilirlik arabirimlerini kullanarak Kullanıcı arabirimi özelliklerini özelleştirme
   Visual Studio 'daki Office geliştirme araçları, bir VSTO eklentisi içinde özel görev bölmeleri, Şerit özelleştirmeleri ve Outlook form bölgeleri oluşturmak için kullandığınızda birçok uygulama ayrıntılarını işleyen sınıflar ve tasarımcılar sağlar. Ancak, özel gereksinimleriniz varsa, her bir özellik için *genişletilebilirlik arabirimini* de uygulayabilirsiniz.

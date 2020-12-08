@@ -1,5 +1,7 @@
 ---
 title: Konak öğeleri ve konak denetimlerine genel bakış
+description: Konak öğelerinin ve konak denetimlerinin Office çözümleri için programlama modeli sağlamaya yardımcı olan türler olduğunu öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -36,12 +38,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c349756eb12fe66800e209bd6a1aad5b8d2337ab
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: edc8939f2a9e5f41f81c8176d5268528c273a7ce
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71255925"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845576"
 ---
 # <a name="host-items-and-host-controls-overview"></a>Konak öğeleri ve konak denetimlerine genel bakış
   Konak öğeleri ve konak denetimleri, Visual Studio 'da Office geliştirme araçları kullanılarak oluşturulan Office çözümlerine yönelik programlama modelinin sağlanmasına yardımcı olan türlerdir. Konak öğeleri ve konak denetimleri, COM 'a dayalı Microsoft Office Word ve Microsoft Office Excel 'in nesne modelleriyle etkileşim kuran Windows Forms denetimleri gibi yönetilen nesnelerle etkileşim kurma gibi.
@@ -59,7 +61,7 @@ ms.locfileid: "71255925"
 
 - <xref:Microsoft.Office.Tools.Excel.ChartSheet>
 
-  Bu türlerin her biri, *yerel bir Office nesnesi*olarak adlandırılan Word veya Excel nesne modelinde yerel olarak var olan bir nesneyi genişletir. Örneğin, <xref:Microsoft.Office.Tools.Word.Document> konak öğesi <xref:Microsoft.Office.Interop.Word.Document> , Word için birincil birlikte çalışma derlemesinde tanımlanan nesneyi genişletir.
+  Bu türlerin her biri, *yerel bir Office nesnesi* olarak adlandırılan Word veya Excel nesne modelinde yerel olarak var olan bir nesneyi genişletir. Örneğin, <xref:Microsoft.Office.Tools.Word.Document> konak öğesi <xref:Microsoft.Office.Interop.Word.Document> , Word için birincil birlikte çalışma derlemesinde tanımlanan nesneyi genişletir.
 
   Ana bilgisayar öğeleri genellikle karşılık gelen Office nesneleriyle aynı temel işlevlere sahiptir, ancak aşağıdaki özelliklerle geliştirilmiştir:
 
@@ -145,10 +147,10 @@ ms.locfileid: "71255925"
 - [Nasıl yapılır: Word belgelerine XMLNodes denetimleri ekleme](../vsto/how-to-add-xmlnodes-controls-to-word-documents.md)
 
 ### <a name="name-host-controls"></a>Konak denetimlerini Adlandır
- **Araç kutusundan** bir konak denetimini belgenize sürüklediğinizde Denetim, sonunda artımlı bir sayı ile denetim türü kullanılarak otomatik olarak adlandırılır. Örneğin, yer işaretleri **Bookmark1**, **bookmark2**vb. olarak adlandırılır. Denetimi eklemek için Word veya Excel 'in yerel işlevlerini kullanırsanız, oluşturduğunuz zamanda buna özel bir ad verebilirsiniz. Ayrıca, **Özellikler** penceresinde **ad** özelliğinin değerini değiştirerek denetimlerinizi yeniden adlandırabilirsiniz.
+ **Araç kutusundan** bir konak denetimini belgenize sürüklediğinizde Denetim, sonunda artımlı bir sayı ile denetim türü kullanılarak otomatik olarak adlandırılır. Örneğin, yer işaretleri **Bookmark1**, **bookmark2** vb. olarak adlandırılır. Denetimi eklemek için Word veya Excel 'in yerel işlevlerini kullanırsanız, oluşturduğunuz zamanda buna özel bir ad verebilirsiniz. Ayrıca, **Özellikler** penceresinde **ad** özelliğinin değerini değiştirerek denetimlerinizi yeniden adlandırabilirsiniz.
 
 > [!NOTE]
-> Konak denetimlerini adlandırmak için ayrılmış sözcükler kullanamazsınız. Örneğin, <xref:Microsoft.Office.Tools.Excel.NamedRange> bir çalışma sayfasına bir denetim ekler ve adı **sistem**olarak değiştirirseniz, projeyi oluşturduğunuzda hatalar oluşur.
+> Konak denetimlerini adlandırmak için ayrılmış sözcükler kullanamazsınız. Örneğin, <xref:Microsoft.Office.Tools.Excel.NamedRange> bir çalışma sayfasına bir denetim ekler ve adı **sistem** olarak değiştirirseniz, projeyi oluşturduğunuzda hatalar oluşur.
 
 ### <a name="delete-host-controls"></a>Konak denetimlerini Sil
  Belge düzeyi projelerinde, Excel çalışma sayfasındaki veya Word belgesindeki denetimi seçerek ve **Delete** tuşuna basarak, tasarım zamanında konak denetimlerini silebilirsiniz. Ancak, denetimleri silmek için Excel 'de **adı tanımla** iletişim kutusunu kullanmanız gerekir <xref:Microsoft.Office.Tools.Excel.NamedRange> .
@@ -166,7 +168,7 @@ ms.locfileid: "71255925"
  Konak denetimlerinin Office nesnelerini genişletmesinin bir yolu, olaylar eklemektir. Örneğin, <xref:Microsoft.Office.Interop.Excel.Range> Excel 'deki nesne ve <xref:Microsoft.Office.Interop.Word.Bookmark> Word içindeki nesne, olayları içermez, ancak [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] programlanabilir olaylar ekleyerek bu nesneleri genişletir. Bu olaylara karşı, Visual Basic ve C# içindeki olay özelliği sayfasındaki olay açılan listesi aracılığıyla Windows Forms: denetim olaylarına aynı şekilde erişim sağlayabilirsiniz. Daha fazla bilgi için bkz. [Walkthrough: bir NamedRange denetimindeki olaylara karşı](../vsto/walkthrough-programming-against-events-of-a-namedrange-control.md)programlama.
 
 > [!NOTE]
-> <xref:Microsoft.Office.Interop.Excel._Application.EnableEvents%2A> <xref:Microsoft.Office.Interop.Excel.Application> Excel 'deki nesnesinin özelliğini **false**olarak ayarlamanız gerekir. Bu özelliğin **false** olarak ayarlanması, Excel 'in konak denetimlerinin olayları da dahil olmak üzere tüm olayları oluşturmasını engeller.
+> <xref:Microsoft.Office.Interop.Excel._Application.EnableEvents%2A> <xref:Microsoft.Office.Interop.Excel.Application> Excel 'deki nesnesinin özelliğini **false** olarak ayarlamanız gerekir. Bu özelliğin **false** olarak ayarlanması, Excel 'in konak denetimlerinin olayları da dahil olmak üzere tüm olayları oluşturmasını engeller.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Konak öğelerinin ve konak denetimlerinin programlama sınırlamaları](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)

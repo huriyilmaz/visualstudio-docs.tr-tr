@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: çevrimdışı veya sunucuda kullanmak üzere verileri önbelleğe alma'
+description: Çevrimdışı kullanılabilir olması için bir veri öğesini belgede önbelleğe alınacak şekilde işaretleyin. Bu, belgedeki verilerin diğer kodla değiştirilmesini olanaklı kılar.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ce295e299e4accb2d79655675f6264a1497b8d69
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cefd4cd132e75f8ff622c8e0d809d317242c10f5
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85546191"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844328"
 ---
 # <a name="how-to-cache-data-for-use-offline-or-on-a-server"></a>Nasıl yapılır: çevrimdışı veya sunucuda kullanmak üzere verileri önbelleğe alma
   Çevrimdışı kullanılabilir olması için bir veri öğesini belgede önbelleğe alınacak şekilde işaretleyebilirsiniz. Bu, belge bir sunucuda depolandığında belgedeki verilerin diğer kodla değiştirilmesini de olanaklı kılar.
@@ -32,7 +34,7 @@ ms.locfileid: "85546191"
  Veri öğesi kodunuzda bildirildiği sırada veya kullanıyorsanız, <xref:System.Data.DataSet> **Özellikler** penceresinde bir özellik ayarlayarak önbelleğe alınacak bir veri öğesini işaretleyebilirsiniz. Veya olmayan bir veri öğesini önbelleğe alırsanız <xref:System.Data.DataSet> <xref:System.Data.DataTable> , belgede önbelleğe alma ölçütlerini karşıladığından emin olun. Daha fazla bilgi için bkz. [önbelleği verileri](../vsto/caching-data.md).
 
 > [!NOTE]
-> **Önbelleğe alınmış** ve **WithEvents** olarak işaretlenen Visual Basic kullanılarak oluşturulan veri kümeleri ( **veri kaynakları** penceresinden veya **CacheInDocument** özelliği **true**olarak ayarlanan **araç kutusu** dahil), önbellekte adlarına önek eklenmiş bir alt çizgi vardır. Örneğin, bir veri kümesi oluşturup **müşterileri**olarak ayarlarsanız, <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem> ad önbellekte **_Customers** olur. <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>Bu önbelleğe alınmış öğeye erişmek için kullandığınızda, **müşteriler**yerine **_Customers** belirtmeniz gerekir.
+> **Önbelleğe alınmış** ve **WithEvents** olarak işaretlenen Visual Basic kullanılarak oluşturulan veri kümeleri ( **veri kaynakları** penceresinden veya **CacheInDocument** özelliği **true** olarak ayarlanan **araç kutusu** dahil), önbellekte adlarına önek eklenmiş bir alt çizgi vardır. Örneğin, bir veri kümesi oluşturup **müşterileri** olarak ayarlarsanız, <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem> ad önbellekte **_Customers** olur. <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>Bu önbelleğe alınmış öğeye erişmek için kullandığınızda, **müşteriler** yerine **_Customers** belirtmeniz gerekir.
 
 ### <a name="to-cache-data-in-the-document-using-code"></a>Kodu kullanarak belgedeki verileri önbelleğe almak için
 
@@ -53,7 +55,7 @@ ms.locfileid: "85546191"
 
 2. Henüz bir tane yoksa veri kümesinin bir örneğini oluşturun ve tasarımcıdaki örneği seçin.
 
-3. **Özellikler** penceresinde **CacheInDocument** özelliğini **true**olarak ayarlayın.
+3. **Özellikler** penceresinde **CacheInDocument** özelliğini **true** olarak ayarlayın.
 
      Daha fazla bilgi için bkz. [Office projelerindeki Özellikler](../vsto/properties-in-office-projects.md).
 

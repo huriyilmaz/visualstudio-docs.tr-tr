@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: Word belgelerine Içerik denetimleri ekleme'
+description: Belge düzeyi Word projelerinde, tasarım zamanında veya çalışma zamanında projenizdeki belgeye içerik denetimleri ekleyebileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -26,12 +28,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 2f15adeb801e33a134c681c206e3a5b38ccce70f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: aa1528371a1466ec2886bf652ed33561b66b7028
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85538391"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845563"
 ---
 # <a name="how-to-add-content-controls-to-word-documents"></a>Nasıl yapılır: Word belgelerine Içerik denetimleri ekleme
   Belge düzeyi Word projelerinde, tasarım zamanında veya çalışma zamanında projenizdeki belgeye içerik denetimleri ekleyebilirsiniz. Word VSTO eklenti projelerinde, çalışma zamanında herhangi bir açık belgeye içerik denetimleri ekleyebilirsiniz.
@@ -67,7 +69,7 @@ ms.locfileid: "85538391"
 
 3. Denetimi aşağıdaki yollarla ekleyin:
 
-    - **Araç kutusunda**bir içerik denetimine çift tıklayın.
+    - **Araç kutusunda** bir içerik denetimine çift tıklayın.
 
          veya
 
@@ -78,7 +80,7 @@ ms.locfileid: "85538391"
     - **Araç kutusundan** bir içerik denetimini belgeye sürükleyin. İçerik denetimi, fare işaretçisinin konumunda değil belgedeki geçerli seçime eklenir.
 
 > [!NOTE]
-> <xref:Microsoft.Office.Tools.Word.GroupContentControl> **Araç kutusunu**kullanarak bir ekleyemezsiniz. Yalnızca bir <xref:Microsoft.Office.Tools.Word.GroupContentControl> kelime veya çalışma zamanında ekleyebilirsiniz.
+> <xref:Microsoft.Office.Tools.Word.GroupContentControl> **Araç kutusunu** kullanarak bir ekleyemezsiniz. Yalnızca bir <xref:Microsoft.Office.Tools.Word.GroupContentControl> kelime veya çalışma zamanında ekleyebilirsiniz.
 
 > [!NOTE]
 > Visual Studio, araç kutusunda onay kutusu içerik denetimi sağlamaz. Belgeye bir onay kutusu içerik denetimi eklemek için <xref:Microsoft.Office.Tools.Word.ContentControl> Program aracılığıyla bir nesne oluşturmanız gerekir. Daha fazla bilgi için bkz. [içerik denetimleri](../vsto/content-controls.md).

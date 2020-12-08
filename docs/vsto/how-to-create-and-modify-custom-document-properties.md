@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: özel belge özelliklerini oluşturma ve değiştirme'
+description: Belge ile depolamak istediğiniz ek bilgiler varsa, özel belge özelliklerini nasıl oluşturup değiştirebileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 6dd4f4ada36be4ef7b70f4f32d659abb10c8a62a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4897008f102600bd222a21761237acc4bcb62a30
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547218"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844302"
 ---
 # <a name="how-to-create-and-modify-custom-document-properties"></a>Nasıl yapılır: özel belge özelliklerini oluşturma ve değiştirme
   Yukarıda listelenen Microsoft Office uygulamalar, belgelerle depolanan yerleşik özellikler sağlar. Ayrıca, belgeyle birlikte depolamak istediğiniz ek bilgiler varsa özel belge özelliklerini oluşturabilir ve değiştirebilirsiniz.

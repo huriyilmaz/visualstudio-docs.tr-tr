@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: uygulamaya özel görev bölmesi ekleme'
+description: Office için Visual Studio Araçları (VSTO) eklentisini kullanarak uygulamalara nasıl özel bir görev bölmesi ekleyebileceğiniz hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0df4d51795f01c98790f1d5b0525c45cc71899ab
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1e8056eddef6329aeb10ed5545c4146f0af0f167
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85546217"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845056"
 ---
 # <a name="how-to-add-a-custom-task-pane-to-an-application"></a>Nasıl yapılır: uygulamaya özel görev bölmesi ekleme
   VSTO eklentisini kullanarak yukarıda listelenen uygulamalara özel bir görev bölmesi ekleyebilirsiniz. Daha fazla bilgi için bkz. [özel görev bölmeleri](../vsto/custom-task-panes.md).
@@ -36,7 +38,7 @@ ms.locfileid: "85546217"
 
 2. **Proje** menüsünde **Kullanıcı denetimi Ekle**' ye tıklayın.
 
-3. **Yeni öğe Ekle** iletişim kutusunda, Yeni Kullanıcı denetiminin adını **MyUserControl**olarak değiştirin ve ardından **Ekle**' ye tıklayın.
+3. **Yeni öğe Ekle** iletişim kutusunda, Yeni Kullanıcı denetiminin adını **MyUserControl** olarak değiştirin ve ardından **Ekle**' ye tıklayın.
 
      Kullanıcı denetimi tasarımcıda açılır.
 
@@ -44,7 +46,7 @@ ms.locfileid: "85546217"
 
 5. **ThisAddIn.cs** veya **ThisAddIn. vb** kod dosyasını açın.
 
-6. Sınıfına aşağıdaki kodu ekleyin `ThisAddIn` . Bu kod `MyUserControl` <xref:Microsoft.Office.Tools.CustomTaskPane> , sınıfının üyeleri olarak ve örneklerini bildirir `ThisAddIn` .
+6. Aşağıdaki kodu `ThisAddIn` sınıfına ekleyin. Bu kod `MyUserControl` <xref:Microsoft.Office.Tools.CustomTaskPane> , sınıfının üyeleri olarak ve örneklerini bildirir `ThisAddIn` .
 
      [!code-vb[Trin_TaskPaneBasic#1](../vsto/codesnippet/VisualBasic/Trin_TaskPaneBasic/ThisAddIn.vb#1)]
      [!code-csharp[Trin_TaskPaneBasic#1](../vsto/codesnippet/CSharp/Trin_TaskPaneBasic/ThisAddIn.cs#1)]

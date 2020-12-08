@@ -1,5 +1,7 @@
 ---
 title: Belge düzeyi özelleştirmelerinin mimarisi
+description: Özelleştirme bileşenleri ve özelleştirmelerin Microsoft Office uygulamalarla nasıl çalıştığı gibi belge düzeyi özelleştirmelerinin yönleri hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -19,12 +21,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f5028f5a9b16ecfc2461c0d29cbedb44be70a64c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a522446f9109d996088dff9389f267ef5ff39447
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "68926555"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845979"
 ---
 # <a name="architecture-of-document-level-customizations"></a>Belge düzeyi özelleştirmelerinin mimarisi
   [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] Microsoft Office Word ve Excel Microsoft Office için belge düzeyi özelleştirmeleri oluşturmaya yönelik projeleri içerir. Bu konuda, belge düzeyi özelleştirmelerinin aşağıdaki yönleri açıklanmaktadır:
@@ -91,11 +93,11 @@ ms.locfileid: "68926555"
 ### <a name="support-for-word-documents-that-have-xml-file-name-extensions"></a>. Xml dosya adı uzantılarına sahip Word belgeleri için destek
  Belge düzeyi proje şablonları, aşağıdaki dosya biçimlerine bağlı olarak proje oluşturmanıza izin vermez:
 
-- Word XML belgesi (* \* XML*).
+- Word XML belgesi (*\* XML*).
 
-- Word 2003 XML belgesi (* \* XML*).
+- Word 2003 XML belgesi (*\* XML*).
 
-  Son kullanıcılarınızın bu dosya biçimlerinde özelleştirmeler kullanmasını istiyorsanız Yukarıdaki tabloda belirtilen desteklenen dosya biçimlerinden birini kullanan bir özelleştirme oluşturun ve dağıtın. Özelleştirmeyi yükledikten sonra, son kullanıcılar belgeyi Word XML belgesi (* \* XML*) biçiminde veya Word 2003 XML belgesi (* \* XML*) biçiminde kaydedebilir ve özelleştirme beklendiği gibi çalışmaya devam eder.
+  Son kullanıcılarınızın bu dosya biçimlerinde özelleştirmeler kullanmasını istiyorsanız Yukarıdaki tabloda belirtilen desteklenen dosya biçimlerinden birini kullanan bir özelleştirme oluşturun ve dağıtın. Özelleştirmeyi yükledikten sonra, son kullanıcılar belgeyi Word XML belgesi (*\* XML*) biçiminde veya Word 2003 XML belgesi (*\* XML*) biçiminde kaydedebilir ve özelleştirme beklendiği gibi çalışmaya devam eder.
 
 ## <a name="components-of-customizations"></a><a name="Components"></a> Özelleştirmelerin bileşenleri
  Bir özelleştirmenin ana bileşenleri belge ve derlemedir. Bu bileşenlere ek olarak, Microsoft Office uygulamalarının özelleştirmeleri bulmasına ve yüklemesine ilişkin önemli bir rol oynayan birçok farklı bölüm de vardır.
@@ -109,7 +111,7 @@ ms.locfileid: "68926555"
  Daha fazla bilgi için bkz. [Office Için Visual Studio Araçları çalışma zamanına genel bakış](../vsto/visual-studio-tools-for-office-runtime-overview.md).
 
 ## <a name="how-customizations-work-with-microsoft-office-applications"></a><a name="HowCustomizationsWork"></a> Özelleştirmeler Microsoft Office uygulamalarla nasıl çalışır
- Bir Kullanıcı Microsoft Office özelleştirmenin parçası olan bir belgeyi açtığında, uygulama özelleştirme derlemesinin en güncel sürümünü bulmak ve yüklemek için belgeye bağlı dağıtım bildirimini kullanır. Dağıtım bildiriminin konumu **AssemblyLocation**adlı bir özel belge özelliğinde depolanır. Bu konumu tanımlayan dize, çözümü oluştururken özelliğine eklenir.
+ Bir Kullanıcı Microsoft Office özelleştirmenin parçası olan bir belgeyi açtığında, uygulama özelleştirme derlemesinin en güncel sürümünü bulmak ve yüklemek için belgeye bağlı dağıtım bildirimini kullanır. Dağıtım bildiriminin konumu **AssemblyLocation** adlı bir özel belge özelliğinde depolanır. Bu konumu tanımlayan dize, çözümü oluştururken özelliğine eklenir.
 
  Dağıtım bildirimi, uygulama bildirimini işaret eder ve daha sonra en güncel derlemeye işaret eder. Daha fazla bilgi için bkz. [Office çözümlerinde uygulama ve dağıtım bildirimleri](../vsto/application-and-deployment-manifests-in-office-solutions.md).
 
@@ -125,7 +127,7 @@ ms.locfileid: "68926555"
 
 1. Microsoft Office uygulama, belgeyle ilişkili yönetilen kod uzantıları olup olmadığını görmek için özel belge özelliklerini denetler. Daha fazla bilgi için bkz. [özel belge özelliklerine genel bakış](../vsto/custom-document-properties-overview.md).
 
-2. Yönetilen kod uzantıları varsa, uygulama *VSTOLoader.dll*yükleyen *VSTOEE.dll*yükler. Bunlar, Office çalışma zamanı için Visual Studio 2010 araçları için yükleyici bileşenleri olan yönetilmeyen DLL 'Lerdir. Daha fazla bilgi için bkz. [Office çalışma zamanına genel bakış Visual Studio Araçları](../vsto/visual-studio-tools-for-office-runtime-overview.md).
+2. Yönetilen kod uzantıları varsa, uygulama *VSTOLoader.dll* yükleyen *VSTOEE.dll* yükler. Bunlar, Office çalışma zamanı için Visual Studio 2010 araçları için yükleyici bileşenleri olan yönetilmeyen DLL 'Lerdir. Daha fazla bilgi için bkz. [Office çalışma zamanına genel bakış Visual Studio Araçları](../vsto/visual-studio-tools-for-office-runtime-overview.md).
 
 3. *VSTOLoader.dll* , [!INCLUDE[dnprdnshort](../sharepoint/includes/dnprdnshort-md.md)] ' nin Yönetilen bölümünü yükler ve başlatır [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] .
 

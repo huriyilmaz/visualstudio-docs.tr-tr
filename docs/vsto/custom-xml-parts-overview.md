@@ -1,5 +1,7 @@
 ---
 title: Özel XML bölümlerine genel bakış
+description: Bazı Microsoft Office uygulamaları için belgelere XML verilerini nasıl katıştıracağınızı öğrenin. XML verilerini bir belgeye katıştırdığınızda, veriler özel bir XML parçası olarak adlandırılır.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -23,15 +25,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b94deacad38f40d76b4c8485186bfd563808d912
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d7998f2a47edd85a65b1e81dd45a046de80d0cdb
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64784423"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844133"
 ---
 # <a name="custom-xml-parts-overview"></a>Özel XML bölümlerine genel bakış
-  Bazı Microsoft Office uygulamaları için belgelere XML verisi ekleyebilirsiniz. XML verilerini bir belgeye katıştırdığınızda, veriler *Özel BIR XML parçası*olarak adlandırılır.
+  Bazı Microsoft Office uygulamaları için belgelere XML verisi ekleyebilirsiniz. XML verilerini bir belgeye katıştırdığınızda, veriler *Özel BIR XML parçası* olarak adlandırılır.
 
  Visual Studio 'da VSTO eklentisi veya belge düzeyi çözümü kullanarak bir belgede özel XML bölümleri oluşturabilir ve değiştirebilirsiniz. Özel XML parçalarını oluşturmak ve değiştirmek için Microsoft Office uygulamayı başlatmanız gerekmez.
 
@@ -41,9 +43,9 @@ ms.locfileid: "64784423"
 > Visual Studio Ayrıca, belge düzeyi özelleştirmelerde veri nesnelerini önbelleğe almanıza olanak sağlar. Bu özellik özel XML bölümlerinden farklıdır, ancak bazı benzerlikler vardır. Daha fazla bilgi için bkz. [belge düzeyi özelleştirmelerde önbelleğe alınmış veriler](../vsto/cached-data-in-document-level-customizations.md).
 
 ## <a name="understand-custom-xml-parts"></a>Özel XML parçalarını anlama
- Özel XML parçaları 2007 Microsoft Office sisteminde, Open XML Biçimleriyle birlikte sunulmuştur. Bu biçimler Excel, PowerPoint ve Word için yeni XML tabanlı dosya biçimlerini (örn *. xlsx*, *. pptx*ve *. docx*) içerir. Bu biçimlerdeki belgeler, bir ZIP arşivinde klasörler halinde düzenlenmiş XML dosyalarından ( *XML parçaları*olarak da adlandırılır) oluşur. XML bölümlerinin çoğu, belgenin yapısını ve durumunu tanımlamaya yardımcı olan yerleşik bölümlerdir. Ancak belgeler, belgelerde rastgele XML verilerini depolamak için kullanabileceğiniz özel XML parçalarını da içerebilir.
+ Özel XML parçaları 2007 Microsoft Office sisteminde, Open XML Biçimleriyle birlikte sunulmuştur. Bu biçimler Excel, PowerPoint ve Word için yeni XML tabanlı dosya biçimlerini (örn *. xlsx*, *. pptx* ve *. docx*) içerir. Bu biçimlerdeki belgeler, bir ZIP arşivinde klasörler halinde düzenlenmiş XML dosyalarından ( *XML parçaları* olarak da adlandırılır) oluşur. XML bölümlerinin çoğu, belgenin yapısını ve durumunu tanımlamaya yardımcı olan yerleşik bölümlerdir. Ancak belgeler, belgelerde rastgele XML verilerini depolamak için kullanabileceğiniz özel XML parçalarını da içerebilir.
 
- XML dosyası biçimleri, uygulamaların, eski ikili dosya biçimleri (örn *. xls*, *. ppt*ve *. doc*gibi) mümkün olmayan yöntemlerle birlikte çalışmasını sağlar. ZIP arşivlerini okuyabilen herhangi bir uygulama, Microsoft Office yüklü olmasa bile belgelerin içeriğini inceleyebilir ve değiştirebilir.
+ XML dosyası biçimleri, uygulamaların, eski ikili dosya biçimleri (örn *. xls*, *. ppt* ve *. doc* gibi) mümkün olmayan yöntemlerle birlikte çalışmasını sağlar. ZIP arşivlerini okuyabilen herhangi bir uygulama, Microsoft Office yüklü olmasa bile belgelerin içeriğini inceleyebilir ve değiştirebilir.
 
  Açık XML ve özel XML bölümlerinin yapısı hakkında daha fazla bilgi için aşağıdaki makalelere bakın:
 

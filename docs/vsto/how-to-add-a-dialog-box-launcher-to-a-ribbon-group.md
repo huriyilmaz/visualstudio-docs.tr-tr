@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: Şerit grubuna Iletişim kutusu Başlatıcısı Ekleme'
+description: Bir şeritte, grupla ilgili daha fazla seçenek sağlayan ilgili iletişim kutularını veya görev bölmelerini açan herhangi bir gruba bir iletişim kutusu Başlatıcısı ekleyebilirsiniz.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 29b260929d0478749296496db5b454326497d3ad
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 85b5d6f127c6f8b2b8140e778792aa1088efe05c
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85541628"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844939"
 ---
 # <a name="how-to-add-a-dialog-box-launcher-to-a-ribbon-group"></a>Nasıl yapılır: Şerit grubuna Iletişim kutusu Başlatıcısı Ekleme
   Şeritteki herhangi bir gruba bir iletişim kutusu Başlatıcısı ekleyebilirsiniz. İletişim kutusu Başlatıcısı, bir grupta görüntülenen küçük bir simgedir. Kullanıcılar, grupla ilgili daha fazla seçenek sağlayan ilgili iletişim kutularını veya görev bölmelerini açmak için bu simgeye tıklayın.
@@ -27,7 +29,7 @@ ms.locfileid: "85541628"
 
 ### <a name="to-add-a-dialog-box-launcher-to-a-ribbon-group"></a>Şerit grubuna iletişim kutusu başlatıcısı eklemek için
 
-1. **Çözüm Gezgini**içindeki Şerit kod dosyasını (*. vb* veya *. cs* dosyası) seçin.
+1. **Çözüm Gezgini** içindeki Şerit kod dosyasını (*. vb* veya *. cs* dosyası) seçin.
 
 2. **Görünüm** menüsünde **Tasarımcı**' ya tıklayın.
 

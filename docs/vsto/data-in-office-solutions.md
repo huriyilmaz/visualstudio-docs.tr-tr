@@ -1,5 +1,7 @@
 ---
 title: Office çözümlerindeki veriler
+description: Visual Studio 'Yu kullanarak Microsoft Office çözümleri oluştururken verilerle çalışmanın çeşitli yollarını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a5f0b85acfd45996dd00208aae820b24265be9f5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4ce6d73a7c70101c0fe364ac5dafba8cbe47f5c8
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "73189686"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96845555"
 ---
 # <a name="data-in-office-solutions"></a>Office çözümlerindeki veriler
   Birçok Office çözümü, kullanıcıların verileri almasına veya değiştirmesine olanak tanır. Visual Studio kullanarak Office çözümleri oluşturduğunuzda, verilerle çalışmanın birkaç farklı yolu vardır.

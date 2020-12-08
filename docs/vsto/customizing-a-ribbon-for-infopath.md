@@ -1,5 +1,7 @@
 ---
 title: InfoPath için bir şeridi özelleştirme
+description: Microsoft Office InfoPath ' te Şeriti özelleştirirken, özel şeritlerinizin uygulamada nerede görüneceğini göz önünde bulundurmanız gerektiğini öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 76ec069ef71890a69fdbd41f40bd91cf75d93cd4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: baf5a7edbdd9452c4b7ce55e109eee9c79798b5e
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71255515"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844173"
 ---
 # <a name="customize-a-ribbon-for-infopath"></a>InfoPath için bir şeridi özelleştirme
   Microsoft Office InfoPath ' te şeridi özelleştirdiğinizde, özel şeritlerinizin uygulamada nerede görüneceğini göz önünde bulundurmanız gerekir. [!INCLUDE[InfoPath_14_short](../vsto/includes/infopath-14-short-md.md)] , aşağıdaki üç InfoPath uygulama penceresi türünde şeridi görüntüleyebilir:
@@ -36,7 +38,7 @@ ms.locfileid: "71255515"
   Baskı Önizleme penceresi, tasarımcılara ve kullanıcılara yazdırmadan önce form veya form şablonunun sayfalarını önizlemesine olanak sağlar.
 
 > [!NOTE]
-> **Eklentiler** sekmesi baskı önizleme penceresinde görünmüyor. Baskı Önizleme penceresinde bir özel sekmenin görünmesini istiyorsanız, sekmenin **OfficeId** özelliğinin **TabAddIns**olarak ayarlandığından emin olun.
+> **Eklentiler** sekmesi baskı önizleme penceresinde görünmüyor. Baskı Önizleme penceresinde bir özel sekmenin görünmesini istiyorsanız, sekmenin **OfficeId** özelliğinin **TabAddIns** olarak ayarlandığından emin olun.
 
  Şeritlerinizin görünmesini istediğiniz her pencerenin Şerit türünü belirtmeniz gerekir.
 

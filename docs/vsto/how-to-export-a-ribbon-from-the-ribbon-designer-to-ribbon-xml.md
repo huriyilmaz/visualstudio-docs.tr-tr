@@ -1,5 +1,7 @@
 ---
 title: "Nasıl yapılır: Şerit Tasarımcısından Şerit XML 'ine şerit aktarma"
+description: Şeriti özelleştirmeyi öğrenin, tasarımcıyı tasarımcıdan Şerit XML 'Ine aktarabilir ve XML 'i doğrudan düzenleyebilirsiniz.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -19,12 +21,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: cf3101a062fa8b30ae821bf6a157319b6f37862a
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: f39131eb7e3469d389ad2d50aaeb1ee97e3865b9
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "92298433"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844146"
 ---
 # <a name="how-to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml"></a>Nasıl yapılır: Şerit Tasarımcısından Şerit XML 'ine şerit aktarma
   **Şerit (görsel Tasarımcı)** öğesi, tüm olası Şerit özelleştirmesi türlerini desteklemiyor. Şeriti gelişmiş yöntemlerle özelleştirmek için, tasarımcıyı tasarımcıdan Şerit XML 'Ine aktarabilir ve XML 'i doğrudan düzenleyebilirsiniz.
@@ -44,11 +46,11 @@ ms.locfileid: "92298433"
 
 3. Şerit kod sınıfında, ile başlayan açıklamaları bulun `TODO:` .
 
-4. Bu açıklamalarda kod bloğunu, geliştirmekte olduğunuz çözüm türüne bağlı olarak **ThisAddIn**, **ThisWorkbook**veya **ThisDocument** sınıfına kopyalayın.
+4. Bu açıklamalarda kod bloğunu, geliştirmekte olduğunuz çözüm türüne bağlı olarak **ThisAddIn**, **ThisWorkbook** veya **ThisDocument** sınıfına kopyalayın.
 
      Bu kod, Microsoft Office uygulamasının özel şeritinizi bulmasını ve yüklemesini sağlar. Daha fazla bilgi için bkz. [ŞERIT XML](../vsto/ribbon-xml.md).
 
-5. **ThisAddIn**, **ThisWorkbook**veya **ThisDocument** sınıfında, kod bloğunun açıklamasını kaldırın.
+5. **ThisAddIn**, **ThisWorkbook** veya **ThisDocument** sınıfında, kod bloğunun açıklamasını kaldırın.
 
      Kodun açıklamasını belirledikten sonra, aşağıdaki örneğe benzemelidir. Bu örnekte, Şerit sınıfı çağırılır `MyRibbon` .
 

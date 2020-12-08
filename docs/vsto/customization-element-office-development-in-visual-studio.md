@@ -1,7 +1,8 @@
 ---
 title: "&lt;özelleştirme &gt; öğesi (Visual Studio 'Da Office geliştirme)"
+description: Vstov4 ad alanının özelleştirme öğesinin belirli bir Office çözümünü nasıl açıklar olduğunu öğrenin.
 titleSuffix: ''
-ms.custom: seodec18
+ms.custom: seodec18, SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: reference
 dev_langs:
@@ -14,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 1239c6749f25bf4bce7a1f5cc89a2a8430c98a4d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0f50b441393e9d07dcd0b409248f199484022654
+ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85544878"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96844120"
 ---
 # <a name="ltcustomizationgt-element-office-development-in-visual-studio"></a>&lt;özelleştirme &gt; öğesi (Visual Studio 'Da Office geliştirme)
   `customization`Ad alanının öğesi, `vstov4` belirli bir Office çözümünü tanımlar. Alt öğeler, belge düzeyi özelleştirmeleri ve VSTO eklentileri için farklıdır.
@@ -61,7 +62,7 @@ ms.locfileid: "85544878"
 |---------------|-----------------|
 |`id`|Çoklu proje dağıtımı için gereklidir. `id`Öğesi bir Office çözümünü benzersiz bir şekilde tanımlar.|
 
-### <a name="document-level-customizations"></a>Belge düzeyi özelleştirmeleri
+### <a name="document-level-customizations"></a>Document-Level özelleştirmeler
  `customization`Öğesi aşağıdaki alt öğeye sahiptir.
 
 #### <a name="document"></a>belge
@@ -75,7 +76,7 @@ ms.locfileid: "85544878"
 
 ## <a name="example-of-a-document-level-customization"></a>Belge düzeyi özelleştirmesi örneği
 
-### <a name="description"></a>Description
+### <a name="description"></a>Açıklama
  Aşağıdaki kod örneği, `customization` belge düzeyi özelleştirmesi için öğesini gösterir. Bu kod örneği, [Office çözümleri Için uygulama bildirimlerinde](../vsto/application-manifests-for-office-solutions.md)sunulan daha büyük bir örneğin bir parçasıdır.
 
 ### <a name="code"></a>Kod
@@ -89,7 +90,7 @@ ms.locfileid: "85544878"
 
 ## <a name="example-of-a-vsto-add-in"></a>VSTO eklentisi örneği
 
-### <a name="description"></a>Description
+### <a name="description"></a>Açıklama
  Aşağıdaki kod örneği, `customization` VSTO eklentisinin öğesini gösterir. Bu, form bölgelerini içeren bir Outlook VSTO eklentisi. Bu kod örneği, [Office çözümleri Için uygulama bildirimlerinde](../vsto/application-manifests-for-office-solutions.md)sunulan daha büyük bir örneğin bir parçasıdır.
 
 ### <a name="code"></a>Kod
