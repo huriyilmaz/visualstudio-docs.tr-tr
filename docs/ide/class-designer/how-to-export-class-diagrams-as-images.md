@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl Yapılır: Sınıf Diyagramlarını Görüntü Olarak Dışarı Aktarma (Sınıf Tasarımcısı)'
-description: Diyagramı görüntü olarak kaydederek projedeki koddan oluşturduğunuz bir sınıf diyagramını dışarı aktarmayı öğrenin.
+title: Sınıf diyagramlarını görüntü olarak dışarı aktarma
+description: Diyagramı bir resim olarak kaydederek projedeki koddan oluşturduğunuz bir sınıf diyagramını dışarı aktarmak için Sınıf Tasarımcısı nasıl kullanacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -14,12 +14,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2cb72a494cbafc9e2ab6661f056436a083b52de1
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: 2b82c96c99f3144d12afd887a82bc66dc0499f95
+ms.sourcegitcommit: 60e5a8a7ee91854356797d05f3b502572c4a4884
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94901407"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96933472"
 ---
 # <a name="how-to-export-class-diagrams-as-images"></a>Nasıl yapılır: sınıf diyagramlarını görüntü olarak dışarı aktarma
 

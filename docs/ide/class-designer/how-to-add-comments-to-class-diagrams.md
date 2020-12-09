@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl Yapılır: Sınıf Diyagramlarına Açıklamalar Ekleme (Sınıf Tasarımcısı)'
-description: Sınıf Diyagramlarına açıklama eklemek için açıklama şekillerini nasıl kullanacağınızı öğrenin.
+title: Sınıf diyagramlarına açıklama ekleme
+description: Sınıf Tasarımcısı ' de Sınıf Diyagramlarına açıklama eklemek için açıklama şekillerini nasıl kullanacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -16,12 +16,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3b146efb27bb76d91b7453d574bda6d79d53a68a
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: aa001c301174f2f7b45fb69265eeb24454a6626f
+ms.sourcegitcommit: 60e5a8a7ee91854356797d05f3b502572c4a4884
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94901680"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96933550"
 ---
 # <a name="how-to-add-comments-to-class-diagrams"></a>Nasıl yapılır: Sınıf Diyagramlarına Açıklamalar ekleme
 
