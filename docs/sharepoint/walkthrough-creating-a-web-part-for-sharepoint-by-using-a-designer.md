@@ -1,5 +1,7 @@
 ---
 title: Tasarımcı kullanarak SharePoint için Web Bölümü oluşturma
+description: Bu izlenecek yolda, Visual Studio 'da SharePoint Visual Web Bölümü proje şablonunu kullanarak görsel olarak bir Web bölümü oluşturun.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 732bd9fe3d34a768e0c6f71315f212c49bdf02af
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cc214e98b2ec0ed6feb31c9aaa6e8170b3ddd2c8
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016392"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96913990"
 ---
 # <a name="walkthrough-create-a-web-part-for-sharepoint-by-using-a-designer"></a>İzlenecek yol: tasarımcı kullanarak SharePoint için bir Web Bölümü oluşturma
 
@@ -37,7 +39,7 @@ Bu izlenecek yol aşağıdaki görevleri gösterir:
     > [!NOTE]
     > Bilgisayarınız, aşağıdaki yönergelerde Visual Studio için Kullanıcı arabiriminin bazı öğeleri için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Bkz. [Visual STUDIO IDE 'Yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
@@ -53,7 +55,7 @@ Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vard�
 
      **Yeni Proje** iletişim kutusu görünür.
 
-3. **Yeni proje** iletişim kutusunda, **Visual C#** veya **Visual Basic**altında **Office/SharePoint**' i genişletin ve **SharePoint çözümleri** kategorisini seçin.
+3. **Yeni proje** iletişim kutusunda, **Visual C#** veya **Visual Basic** altında **Office/SharePoint**' i genişletin ve **SharePoint çözümleri** kategorisini seçin.
 
 4. Şablonlar listesinde, **SharePoint 2013-Visual Web Bölümü** şablonunu seçin ve ardından **Tamam** düğmesini seçin.
 
@@ -69,7 +71,7 @@ Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vard�
 
 1. Görsel web geliştirici tasarımcısında, Tasarım görünümü geçiş yapmak için **Tasarım** sekmesini seçin.
 
-2. Menü çubuğunda **Görünüm**  >  **araç kutusunu**seçin.
+2. Menü çubuğunda **Görünüm**  >  **araç kutusunu** seçin.
 
 3. **Araç kutusunun** **Standart** düğümünde **CheckBoxList** denetimini seçin ve ardından aşağıdaki adımlardan birini gerçekleştirin:
 
@@ -81,7 +83,7 @@ Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vard�
 
 5. Tasarımcıda **button1** düğmesini seçin.
 
-6. Menü çubuğunda **View**  >  **Özellikler penceresini**görüntüle ' yi seçin.
+6. Menü çubuğunda **View**  >  **Özellikler penceresini** görüntüle ' yi seçin.
 
      **Özellikler** penceresi açılır.
 
@@ -95,7 +97,7 @@ Kullanıcının Ana Takvim görünümüne takvim eklemesini sağlayan kodu ekley
 
    - Tasarımcıda **Güncelleştir** düğmesine çift tıklayın.
 
-   - **Güncelleştirme** düğmesinin **Özellikler** penceresinde, **Olaylar** düğmesini seçin. **Tıklama** özelliğinde **Button1_Click**girin ve Enter tuşunu seçin.
+   - **Güncelleştirme** düğmesinin **Özellikler** penceresinde, **Olaylar** düğmesini seçin. **Tıklama** özelliğinde **Button1_Click** girin ve Enter tuşunu seçin.
 
      Kullanıcı denetimi kod dosyası Kod Düzenleyicisi 'nde açılır ve `Button1_Click` olay işleyicisi görünür. Daha sonra bu olay işleyicisine kod ekleyeceksiniz.
 
@@ -139,7 +141,7 @@ Projeyi çalıştırdığınızda, SharePoint sitesi açılır. Web Bölümü, S
 
      SharePoint sitesi açılır ve [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] sayfada Hızlı Başlat çubuğu görünür.
 
-2. Hızlı Başlat çubuğunda, **listeler**altında **Takvim** bağlantısını seçin.
+2. Hızlı Başlat çubuğunda, **listeler** altında **Takvim** bağlantısını seçin.
 
      **Takvim** sayfası görüntülenir.
 
@@ -147,13 +149,13 @@ Projeyi çalıştırdığınızda, SharePoint sitesi açılır. Web Bölümü, S
 
 3. Takvim sayfasında bir gün seçin ve ardından bir olay eklemek için seçili gündeki **Ekle** bağlantısını seçin.
 
-4. **Başlık** kutusuna **varsayılan takvime Olay**yazın ve ardından **Kaydet** düğmesini seçin.
+4. **Başlık** kutusuna **varsayılan takvime Olay** yazın ve ardından **Kaydet** düğmesini seçin.
 
 5. **Site içeriği** bağlantısını seçin ve ardından **Uygulama Ekle** kutucuğunu seçin.
 
 6. **Oluştur** sayfasında **Takvim** türünü seçin, takvimi adlandırın ve **Oluştur** düğmesini seçin.
 
-7. Yeni takvime bir olay ekleyin, olay **olayını özel takvime**adlandırın ve **Kaydet** düğmesini seçin.
+7. Yeni takvime bir olay ekleyin, olay **olayını özel takvime** adlandırın ve **Kaydet** düğmesini seçin.
 
 ### <a name="to-add-the-web-part-to-a-web-part-page"></a>Web bölümünü bir Web Bölümü sayfasına eklemek için
 
@@ -161,7 +163,7 @@ Projeyi çalıştırdığınızda, SharePoint sitesi açılır. Web Bölümü, S
 
 2. Şeritte, **dosyalar** sekmesini seçin, **Yeni belge** menüsünü açın ve ardından **Web Bölümü sayfası** komutunu seçin.
 
-3. **Yeni Web Bölümü sayfası** sayfasında **SampleWebPartPage. aspx**sayfasını adlandırın ve **Oluştur** düğmesini seçin.
+3. **Yeni Web Bölümü sayfası** sayfasında **SampleWebPartPage. aspx** sayfasını adlandırın ve **Oluştur** düğmesini seçin.
 
      Web Bölümü sayfası görüntülenir.
 

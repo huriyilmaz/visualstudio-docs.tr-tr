@@ -1,5 +1,7 @@
 ---
 title: Bağlama kesme noktaları | Microsoft Docs
+description: IDE 'nin bir kesme noktası için isteği nasıl ifade edeceğinizi öğrenin ve bir Kullanıcı bir kesme noktası ayarladığında, hata ayıklama oturumunun kesme noktası oluşturmasını ister.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,15 +12,15 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e839b6e0e7967c4802bee5617da3334c5d4033c5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 606c1f4cb5559722028b78ef4ef21c41c0ba5556
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85903232"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96914718"
 ---
 # <a name="bind-breakpoints"></a>Bağlama kesme noktaları
-Kullanıcı bir kesme noktası ayarlarsa, belki de **F9**tuşuna basarak, IDE isteği tanımlar ve hata ayıklama oturumunun kesme noktasını oluşturmasını ister.
+Kullanıcı bir kesme noktası ayarlarsa, belki de **F9** tuşuna basarak, IDE isteği tanımlar ve hata ayıklama oturumunun kesme noktasını oluşturmasını ister.
 
 ## <a name="set-a-breakpoint"></a>Kesme noktası ayarlama
  Kesme noktası tarafından etkilenen kod veya veriler henüz kullanılamadığından bir kesme noktası ayarlamak iki adımlı bir işlemdir. İlk olarak, kesme noktası açıklanmalıdır ve kod veya veri kullanılabilir hale geldiğinde, bu kod veya verilere aşağıdaki gibi bağlanmalıdır:

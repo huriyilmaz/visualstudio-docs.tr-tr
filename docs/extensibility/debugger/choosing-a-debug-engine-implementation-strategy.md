@@ -1,5 +1,7 @@
 ---
 title: Hata ayıklama altyapısı uygulama stratejisi seçme | Microsoft Docs
+description: Çalışma zamanı mimarisinin hata ayıklama altyapısı uygulamasının çeşitli stratejileri arasından seçim yapmanıza nasıl yardımcı olduğunu öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 05e66975a2d41108d3d9fb469da9e4a36a10d8d2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2b87d61586fb4acc360b5f5202b1219199c6a24b
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80739134"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96914302"
 ---
 # <a name="choose-a-debug-engine-implementation-strategy"></a>Hata ayıklama altyapısı uygulama stratejisi seçin
 Hata ayıklama altyapısı (DE) uygulama stratejinizi öğrenmek için çalışma zamanı mimarisini kullanın. Hata ayıklama altyapısını işlem içi hata ayıklaması yaptığınız programa oluşturabilirsiniz. Visual Studio oturumu hata ayıklama Yöneticisi (SDM) için işlem içi hata ayıklama altyapısını oluşturun. Ya da hata ayıklama altyapısını her ikisine de işlem dışı bir şekilde oluşturun. Aşağıdaki kılavuzlar bu üç strateji arasından seçim yapmanıza yardımcı olmalıdır.

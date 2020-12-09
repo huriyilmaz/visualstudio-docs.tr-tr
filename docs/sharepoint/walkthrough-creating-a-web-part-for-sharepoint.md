@@ -1,5 +1,7 @@
 ---
 title: 'İzlenecek yol: SharePoint için bir Web Bölümü oluşturma | Microsoft Docs'
+description: SharePoint için bir Web bölümü oluşturun. Web bölümleri, kullanıcıların SharePoint site sayfalarının içeriğini, görünümünü ve davranışını bir tarayıcı kullanarak doğrudan değiştirmesini sağlar.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7fe560ae0c639ec8c400719738ea1f52b5315a9a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 98e0c21fa4e3f119b32e19dd1be6e7d9148a17f4
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88247652"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96914666"
 ---
 # <a name="walkthrough-create-a-web-part-for-sharepoint"></a>İzlenecek yol: SharePoint için bir Web Bölümü oluşturma
 
@@ -74,7 +76,7 @@ Projeye bir **Web Bölümü** öğesi ekleyin. **Web Bölümü** öğesi, Web b�
 
 3. SharePoint şablonları listesinde, **Web Bölümü** şablonunu seçin ve sonra **Ekle** düğmesini seçin.
 
-     **Web Bölümü** öğesi **Çözüm Gezgini**görüntülenir.
+     **Web Bölümü** öğesi **Çözüm Gezgini** görüntülenir.
 
 ## <a name="rendering-content-in-the-web-part"></a>Web bölümünde içerik işleme
 
@@ -89,7 +91,7 @@ Web bölümünde görünmesini istediğiniz denetimleri, Web Bölümü sınıfı
      [!code-csharp[SP_WebPart#1](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#1)]
      [!code-vb[SP_WebPart#1](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#1)]
 
-3. Sınıfına aşağıdaki kodu ekleyin `WebPart1` . Bu kod aşağıdaki alanları bildirir:
+3. Aşağıdaki kodu `WebPart1` sınıfına ekleyin. Bu kod aşağıdaki alanları bildirir:
 
    - Web bölümünde çalışanları görüntüleyen bir veri kılavuzu.
 
@@ -102,7 +104,7 @@ Web bölümünde görünmesini istediğiniz denetimleri, Web Bölümü sınıfı
      [!code-csharp[SP_WebPart#2](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#2)]
      [!code-vb[SP_WebPart#2](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#2)]
 
-4. Sınıfına aşağıdaki kodu ekleyin `WebPart1` . Bu kod, Web bölümüne adlı özel bir özellik ekler `DataFilePath` . Özel özellik, Kullanıcı tarafından SharePoint 'te ayarlanarak kullanılabilecek bir özelliktir. Bu özellik, veri kılavuzunu doldurmak için kullanılan bir XML veri dosyasının konumunu alır ve ayarlar.
+4. Aşağıdaki kodu `WebPart1` sınıfına ekleyin. Bu kod, Web bölümüne adlı özel bir özellik ekler `DataFilePath` . Özel özellik, Kullanıcı tarafından SharePoint 'te ayarlanarak kullanılabilecek bir özelliktir. Bu özellik, veri kılavuzunu doldurmak için kullanılan bir XML veri dosyasının konumunu alır ve ayarlar.
 
      [!code-csharp[SP_WebPart#3](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#3)]
      [!code-vb[SP_WebPart#3](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#3)]
@@ -166,7 +168,7 @@ Projeyi çalıştırdığınızda, SharePoint sitesi açılır. Web Bölümü, S
 
 3. **Farklı kaydet** iletişim kutusunda, **farklı kaydet türü** listesinde **tüm dosyalar**' ı seçin.
 
-4. **Dosya adı** kutusuna **data.xml**girin.
+4. **Dosya adı** kutusuna **data.xml** girin.
 
 5. **Klasörlere gözatamazsınız** düğmesini kullanarak herhangi bir klasör seçin ve ardından **Kaydet** düğmesini seçin.
 
@@ -178,7 +180,7 @@ Projeyi çalıştırdığınızda, SharePoint sitesi açılır. Web Bölümü, S
 
 8. **Oluştur** sayfasında, **Web Bölümü sayfası** türünü seçin ve ardından **Oluştur** düğmesini seçin.
 
-9. **Yeni Web Bölümü sayfası** sayfasında **SampleWebPartPage. aspx**sayfasını adlandırın ve **Oluştur** düğmesini seçin.
+9. **Yeni Web Bölümü sayfası** sayfasında **SampleWebPartPage. aspx** sayfasını adlandırın ve **Oluştur** düğmesini seçin.
 
      Web Bölümü sayfası görüntülenir.
 

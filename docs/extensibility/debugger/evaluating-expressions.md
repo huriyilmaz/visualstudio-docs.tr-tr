@@ -1,5 +1,7 @@
 ---
 title: Ifadeleri değerlendirme | Microsoft Docs
+description: Oto, Izleme, hızlı Izleme veya anında Windows 'tan geçirilen dizelerden oluşturulan ifadeleri değerlendirme hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,15 +14,15 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 18e342704cbb4abd7de9667576ce331ef8fbf60a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b43fc91de129407f2fd01e12951cffee4028186f
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80738833"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96914601"
 ---
 # <a name="evaluate-expressions"></a>İfadeleri değerlendir
-İfadeler **,** **hızlı**bir şekilde veya **anında** Windows 'tan geçirilen dizelerden oluşturulur **Watch**. Bir ifade değerlendirildiğinde, değişken veya bağımsız değişkenin adını ve türünü ve değerini içeren yazdırılabilir bir dize oluşturur. Bu dize, karşılık gelen IDE penceresinde görüntülenir.
+İfadeler **,** **hızlı** bir şekilde veya **anında** Windows 'tan geçirilen dizelerden oluşturulur **Watch**. Bir ifade değerlendirildiğinde, değişken veya bağımsız değişkenin adını ve türünü ve değerini içeren yazdırılabilir bir dize oluşturur. Bu dize, karşılık gelen IDE penceresinde görüntülenir.
 
 ## <a name="implementation"></a>Uygulama
  Bir program kesme noktasında durdurulduğunda ifadeler değerlendirilir. İfadenin kendisi, verilen ifade değerlendirme bağlamı içinde bağlama ve değerlendirme için Ready bir ayrıştırılmış ifadeyi temsil eden bir [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) arabirimi tarafından temsil edilir. Yığın çerçevesi, [IDebugExpressionContext2](../../extensibility/debugger/reference/idebugexpressioncontext2.md) arabirimini uygulayarak hata ayıklama ALTYAPıSıNıN (de) sağladığı ifade değerlendirme bağlamını belirler.

@@ -1,5 +1,7 @@
 ---
 title: SharePoint kodunu doğrulama ve hata ayıklama | Microsoft Docs
+description: SharePoint kodunu doğrulayın ve hata ayıklayın. Çözümünüzde geçmiş olayları ve geçerli durumu incelemek için IntelliTrace kullanın. Yöntemlerinizin doğru şekilde çalışmasını sağlamak için birim testi kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7b57e07245631d37594d66ea7907b16efd817b2b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ce891e40552c0f8927bfd4ce006b750b6e5f8a54
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "63008271"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96914510"
 ---
 # <a name="verify-and-debug-sharepoint-code"></a>SharePoint kodunu doğrulama ve hata ayıklama
 IntelliTrace ve birim testi kullanarak SharePoint çözümlerinizde daha kolay hata ayıklama yapabilir ve bunların her bir yönteminin doğru şekilde çalıştığından emin olabilirsiniz. Bu özellikleri, diğer proje türleri için aynı yordamları izleyerek Visual Studio 'da SharePoint projeleri için kullanabilirsiniz.

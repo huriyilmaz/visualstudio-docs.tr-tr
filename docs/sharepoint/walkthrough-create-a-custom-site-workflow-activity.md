@@ -1,5 +1,7 @@
 ---
 title: 'İzlenecek yol: özel site Iş akışı etkinliği oluşturma | Microsoft Docs'
+description: Bu kılavuzda, bkz. Visual Studio kullanarak site düzeyi SharePoint iş akışı için özel etkinlik oluşturma.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: dc7eef8b0924be745de436e06acc36785b1cb99b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 86302a0b8eef4344a909ae3b8fb2c513c86c4ad6
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016531"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96913962"
 ---
 # <a name="walkthrough-create-a-custom-site-workflow-activity"></a>İzlenecek yol: özel site iş akışı etkinliği oluşturma
   Bu izlenecek yol, kullanarak site düzeyinde iş akışı için özel bir etkinliğin nasıl oluşturulacağını gösterir [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . (Site düzeyi iş akışları yalnızca sitede bir liste değil, tüm site için geçerlidir.) Özel etkinlik bir yedekleme duyuruları listesi oluşturur ve sonra Duyurular listesinin içeriğini buna kopyalar.
@@ -40,7 +42,7 @@ ms.locfileid: "86016531"
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - Ve SharePoint 'in desteklenen sürümleri [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] .
@@ -52,13 +54,13 @@ ms.locfileid: "86016531"
 
 #### <a name="to-create-a-site-workflow-custom-activity-project"></a>Bir site iş akışı özel etkinlik projesi oluşturmak için
 
-1. **File**  >  **New**  >  **Yeni proje** iletişim kutusunu göstermek için menü çubuğunda dosya yeni**Proje** ' yi seçin.
+1. **File**  >  **New**  >  **Yeni proje** iletişim kutusunu göstermek için menü çubuğunda dosya yeni **Proje** ' yi seçin.
 
-2. **Visual C#** veya **Visual Basic**altında **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
+2. **Visual C#** veya **Visual Basic** altında **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
 
 3. **Şablonlar** bölmesinde, **SharePoint 2010 proje** şablonunu seçin.
 
-4. **Ad** kutusuna **AnnouncementBackup**girin ve **Tamam** düğmesini seçin.
+4. **Ad** kutusuna **AnnouncementBackup** girin ve **Tamam** düğmesini seçin.
 
      **SharePoint Özelleştirme Sihirbazı** görüntülenir.
 
@@ -68,13 +70,13 @@ ms.locfileid: "86016531"
 
 6. **Çözüm Gezgini**, proje düğümünü seçin ve ardından menü çubuğunda **Proje**  >  **Ekle yeni öğe**' yi seçin.
 
-7. **Visual C#** veya **Visual Basic**altında **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
+7. **Visual C#** veya **Visual Basic** altında **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
 
 8. **Şablonlar** bölmesinde, **sıralı iş akışı (yalnızca Grup çözümü)** şablonunu seçin ve ardından **Ekle** düğmesini seçin.
 
      **SharePoint Özelleştirme Sihirbazı** görüntülenir.
 
-9. **Hata ayıklama için iş akışı adını belirtin** sayfasında, varsayılan adı (AnnouncementBackup-Workflow1) kabul edin. İş akışı şablonu türünü **site Iş akışı**olarak değiştirin ve ardından **İleri** düğmesini seçin.
+9. **Hata ayıklama için iş akışı adını belirtin** sayfasında, varsayılan adı (AnnouncementBackup-Workflow1) kabul edin. İş akışı şablonu türünü **site Iş akışı** olarak değiştirin ve ardından **İleri** düğmesini seçin.
 
 10. Kalan varsayılan ayarları kabul etmek için **son** düğmesini seçin.
 
@@ -83,7 +85,7 @@ ms.locfileid: "86016531"
 
 #### <a name="to-add-a-custom-workflow-activity-class"></a>Özel bir iş akışı etkinlik sınıfı eklemek için
 
-1. **Project**  >  **Yeni öğe** Ekle iletişim kutusunu göstermek için menü çubuğunda Proje**Yeni öğe Ekle** ' yi seçin.
+1. **Project**  >  **Yeni öğe** Ekle iletişim kutusunu göstermek için menü çubuğunda Proje **Yeni öğe Ekle** ' yi seçin.
 
 2. **Yüklü şablonlar** ağacı görünümünde, **kod** düğümünü seçin ve ardından proje öğesi şablonları listesinden **sınıf** şablonunu seçin. Class1 varsayılan adını kullanın. **Ekle** düğmesini seçin.
 
@@ -114,7 +116,7 @@ ms.locfileid: "86016531"
 
 1. Projeyi çalıştırmak ve SharePoint 'e dağıtmak için **F5** tuşunu seçin.
 
-2. Hızlı Başlat çubuğunda, SharePoint sitesinde bulunan tüm listeleri göstermek için **listeler** bağlantısını seçin. **Duyurular**adlı duyurular için yalnızca bir liste olduğuna dikkat edin.
+2. Hızlı Başlat çubuğunda, SharePoint sitesinde bulunan tüm listeleri göstermek için **listeler** bağlantısını seçin. **Duyurular** adlı duyurular için yalnızca bir liste olduğuna dikkat edin.
 
 3. SharePoint Web sayfasının en üstünde **site Iş akışları** bağlantısını seçin.
 

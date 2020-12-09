@@ -1,5 +1,7 @@
 ---
 title: 'İzlenecek yol: temel bir site tanımı projesi oluşturma | Microsoft Docs'
+description: Bu SharePoint yönergede, bazı denetimlerle görsel bir Web Bölümü içeren temel bir site tanımı oluşturma bölümüne bakın.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: d1c06f4df5d1efe06ad2537bd2e65f2c239f3be2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0411f027b105622d806e123bd80f38c4b05281ca
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016767"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96913860"
 ---
 # <a name="walkthrough-create-a-basic-site-definition-project"></a>İzlenecek yol: temel bir site tanımı projesi oluşturma
   Bu izlenecek yol, üzerinde bazı denetimlerle görsel bir Web Bölümü içeren temel bir site tanımı oluşturmayı gösterir. Daha fazla açıklık için, oluşturduğunuz görsel web bölümünün yalnızca birkaç denetimi vardır. Ancak, daha fazla işlevsellik içeren daha gelişmiş SharePoint site tanımları oluşturabilirsiniz.
@@ -35,7 +37,7 @@ ms.locfileid: "86016767"
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - Desteklenen Microsoft Windows ve SharePoint sürümleri. Daha fazla bilgi için bkz. SharePoint çözümleri geliştirmeye yönelik gereksinimler.
@@ -55,7 +57,7 @@ ms.locfileid: "86016767"
 
 3. **Şablonlar** listesinde, **SharePoint 2010 proje** şablonunu seçin.
 
-4. **Ad** kutusuna **TestSiteDef**yazın ve **Tamam** düğmesini seçin.
+4. **Ad** kutusuna **TestSiteDef** yazın ve **Tamam** düğmesini seçin.
 
     **SharePoint Özelleştirme Sihirbazı** görüntülenir.
 
@@ -67,13 +69,13 @@ ms.locfileid: "86016767"
 
 7. **Son** düğmesini seçin.
 
-    Proje **Çözüm Gezgini**görüntülenir.
+    Proje **Çözüm Gezgini** görüntülenir.
 
 8. **Çözüm Gezgini**, proje düğümünü seçin ve ardından menü çubuğunda **Proje**  >  **Ekle yeni öğe**' yi seçin.
 
-9. **Visual C#** veya **Visual Basic**altında **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
+9. **Visual C#** veya **Visual Basic** altında **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
 
-10. **Şablonlar** bölmesinde, **site tanımı** şablonunu seçin, **adı** **SiteDefinition1**olarak bırakın ve sonra **Ekle** düğmesini seçin.
+10. **Şablonlar** bölmesinde, **site tanımı** şablonunu seçin, **adı** **SiteDefinition1** olarak bırakın ve sonra **Ekle** düğmesini seçin.
 
 ## <a name="create-a-visual-web-part"></a>Görsel web bölümü oluşturma
  Sonra, site tanımının ana sayfasında görünecek bir görsel web bölümü oluşturun.
@@ -110,7 +112,7 @@ ms.locfileid: "86016767"
     </table>
     ```
 
-6. *VisualWebPart1. ascx*altında, *VisualWebPart1.ascx.cs* dosyasını (için [!INCLUDE[csprcs](../sharepoint/includes/csprcs-md.md)] ) veya *VisualWebPart1. ascx. vb* (için) açın [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] ve aşağıdaki kodu ekleyin:
+6. *VisualWebPart1. ascx* altında, *VisualWebPart1.ascx.cs* dosyasını (için [!INCLUDE[csprcs](../sharepoint/includes/csprcs-md.md)] ) veya *VisualWebPart1. ascx. vb* (için) açın [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] ve aşağıdaki kodu ekleyin:
 
      [!code-vb[SP_SimpleSiteDef#1](../sharepoint/codesnippet/VisualBasic/testsitedefvb/sitedefinition/visualwebpart1/visualwebpart1usercontrol.ascx.vb#1)]
      [!code-csharp[SP_SimpleSiteDef#1](../sharepoint/codesnippet/CSharp/testsitedef/sitedefinition/visualwebpart1/visualwebpart1usercontrol.ascx.cs#1)]

@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: eşlenmiş klasör ekleme ve kaldırma | Microsoft Docs'
+description: Eşlenen klasörleri SharePoint 'teki bir projeye ekleyin ve kaldırın.  Eşlenen bir klasörün dağıtım konumunu değiştirin. Eşlenen klasörleri yeniden adlandırın veya kaldırın.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 80fbd3e18b8d440eae2873c73013ad7468073640
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e4d29be9b008bfaa9ad6694725b03e25bf6847df
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86014644"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96914821"
 ---
 # <a name="how-to-add-and-remove-mapped-folders"></a>Nasıl yapılır: eşlenmiş klasörler ekleme ve kaldırma
   SharePoint 'te resim ve düzen gibi yaygın olarak kullanılan bazı klasörler, dosya hiyerarşisinde derin bir şekilde katıştırılır. Bu klasörleri daha kolay erişmek için bir SharePoint projesiyle eşleyebilirsiniz. Eşlenen klasörler SharePoint projesinde SharePoint Server yüklemesinde dosyaların fiziksel konumuna karşılık gelen klasörlerdir.
@@ -39,7 +41,7 @@ Proje için menü çubuğundaki komutları veya kısayol menüsünü kullanarak,
 
 3. Proje şablonları listesinde, **SharePoint 2013 Visual Web Bölümü** şablonunu seçin.
 
-4. **Ad** kutusuna **TestProject1**girin ve sonra **Tamam** düğmesini seçin.
+4. **Ad** kutusuna **TestProject1** girin ve sonra **Tamam** düğmesini seçin.
 
 5. **SharePoint Özelleştirme Sihirbazı**'nda, varsayılan ayarları sürdürmek için **son** düğmesini seçin.
 
@@ -47,7 +49,7 @@ Proje için menü çubuğundaki komutları veya kısayol menüsünü kullanarak,
 
      Projenizde **resim** adında bir klasör görünür ve TestProject1 adlı bir alt klasör içerir. Bu eşlenmiş klasör, Visual Web Bölümü projesinin görüntülerini içerir.
 
-7. **Çözüm Gezgini**, proje düğümünü seçin ve ardından menü çubuğunda, SharePoint eşlenmiş klasör Ekle **Project**  >  iletişim kutusunu göstermek için proje**SharePoint eşlenmiş klasör ekle** ' yi **Add SharePoint Mapped Folder** seçin.
+7. **Çözüm Gezgini**, proje düğümünü seçin ve ardından menü çubuğunda, SharePoint eşlenmiş klasör Ekle **Project**  >  iletişim kutusunu göstermek için proje **SharePoint eşlenmiş klasör ekle** ' yi **Add SharePoint Mapped Folder** seçin.
 
 8. Eşleme için kullanılabilen klasörlerin ağaç görünümünde **kaynaklar** klasörünü seçin ve **Tamam** düğmesini seçin.
 

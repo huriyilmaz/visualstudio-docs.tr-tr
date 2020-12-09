@@ -1,5 +1,7 @@
 ---
 title: Yürütmenin denetimi | Microsoft Docs
+description: Olayları durdurma hakkında bilgi edinin, bu da kullanıcının IDE aracılığıyla kullanıcıdan bir yanıt beklediği anlamına gelir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9c59831efb2fc97ad1bb2891fd93a67fe79f8eff
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 88adaad3092e084841c40b5e04d45f94985a2ee8
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86387011"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96913886"
 ---
 # <a name="control-of-execution"></a>Yürütmenin denetimi
 Hata ayıklama altyapısı (DE) genellikle son başlatma olayı olarak aşağıdaki olaylardan birini gönderir:
@@ -57,7 +59,7 @@ Hata ayıklama altyapısı (DE) genellikle son başlatma olayı olarak aşağıd
 
    Hata ayıklama paketi belirli bir durdurma olayını yok sayıyorsa, hata ayıklama paketi [IDebugProgram2:: Continue](../../extensibility/debugger/reference/idebugprogram2-continue.md)ÖĞESINI çağıran SDM 'yi çağırır. Program durdurma koşuluyla karşılaştığı zaman bir işlevin içine, üzerine veya dışına adımlanıyor ise, bu adım devam eder. Bu, programın nasıl devam edebildiğini bilmesi için bir atlama durumu koruduğu anlamına gelir.
 
-   SDM 'nin yaptığı çağrı `Step` , **yürütme**ve **devam etme** zaman uyumsuzdur ve bu, SDM 'nin çağrının hızlı dönmesini beklediği anlamına gelir. DE, SDM 'yi aynı iş parçacığında önce, yürütmeden veya devam etmeden önce durdurma olayı gönderirse, `Step` SDM yanıt vermeyi durduruyor. **Execute** **Continue**
+   SDM 'nin yaptığı çağrı `Step` , **yürütme** ve **devam etme** zaman uyumsuzdur ve bu, SDM 'nin çağrının hızlı dönmesini beklediği anlamına gelir. DE, SDM 'yi aynı iş parçacığında önce, yürütmeden veya devam etmeden önce durdurma olayı gönderirse, `Step` SDM yanıt vermeyi durduruyor. **Execute** **Continue**
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Hata ayıklama görevleri](../../extensibility/debugger/debugging-tasks.md)
