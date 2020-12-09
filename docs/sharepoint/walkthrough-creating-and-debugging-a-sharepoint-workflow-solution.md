@@ -1,5 +1,7 @@
 ---
 title: SharePoint iş akışı çözümü oluştur & hata ayıkla
+description: Bu kılavuzda bir SharePoint iş akışı çözümü oluşturun ve hata ayıklayın. Temel sıralı bir iş akışı şablonu oluşturun. İş akışı etkinlikleri oluşturun ve olayları işleyin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 65af3cbfc799a90d640579f8eed0e051fd5888f0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3c8d5ca5b941a7ae6e6ebada21f1eafaef2b6f43
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86014627"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915316"
 ---
 # <a name="walkthrough-create-and-debug-a-sharepoint-workflow-solution"></a>İzlenecek yol: SharePoint iş akışı çözümü oluşturma ve hatalarını ayıklama
   Bu izlenecek yol, temel sıralı bir iş akışı şablonunun nasıl oluşturulacağını göstermektedir. İş akışı, bir belgenin gözden geçirilip geçirilmediğini anlamak için paylaşılan belge kitaplığının bir özelliğini denetler. Belge incelenip iş akışı tamamlanır.
@@ -39,7 +41,7 @@ ms.locfileid: "86014627"
 >
 > Ayrıca bilgisayarınız, aşağıdaki yönergelerde yer alarak Visual Studio Kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Daha fazla bilgi için bkz. [Visual STUDIO IDE 'Yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - Desteklenen Microsoft Windows ve SharePoint sürümleri.
@@ -57,7 +59,7 @@ ms.locfileid: "86014627"
 
 3. **Kitaplık araçları** şeridinde **kitaplık** ' ı seçin ve ardından Şeritteki **sütun oluştur** düğmesini seçerek yeni bir sütun oluşturun.
 
-4. Sütun **belgesi durumunu**adlandırın, türünü seçenek olarak ayarlayın **(arasından seçim yapmak için menü)**, aşağıdaki üç seçeneği belirtin ve ardından **Tamam** düğmesini seçin:
+4. Sütun **belgesi durumunu** adlandırın, türünü seçenek olarak ayarlayın **(arasından seçim yapmak için menü)**, aşağıdaki üç seçeneği belirtin ve ardından **Tamam** düğmesini seçin:
 
     - **Gözden geçirme gerekiyor**
 
@@ -78,7 +80,7 @@ ms.locfileid: "86014627"
 
 3. **Genel ayarlar** bölümünde **sürüm oluşturma ayarları bağlantısını seçerek** **sürüm oluşturma ayarları** sayfasını görüntüleyin.
 
-4. **Belgelerin düzenlenmeden önce kullanıma alınmasını iste** seçeneğinin **Hayır**olduğunu doğrulayın. Değilse, **Hayır** olarak değiştirin ve **Tamam** düğmesini seçin.
+4. **Belgelerin düzenlenmeden önce kullanıma alınmasını iste** seçeneğinin **Hayır** olduğunu doğrulayın. Değilse, **Hayır** olarak değiştirin ve **Tamam** düğmesini seçin.
 
 5. Tarayıcıyı kapatın.
 
@@ -89,9 +91,9 @@ ms.locfileid: "86014627"
 
 1. Başlatın [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
-2. **File**  >  **New**  >  **Yeni proje** iletişim kutusunu göstermek için menü çubuğunda dosya yeni**Proje** ' yi seçin.
+2. **File**  >  **New**  >  **Yeni proje** iletişim kutusunu göstermek için menü çubuğunda dosya yeni **Proje** ' yi seçin.
 
-3. **Visual C#** veya **Visual Basic**altında **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
+3. **Visual C#** veya **Visual Basic** altında **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
 
 4. **Şablonlar** bölmesinde, **SharePoint 2010 proje** şablonunu seçin.
 
@@ -105,13 +107,13 @@ ms.locfileid: "86014627"
 
 7. **Çözüm Gezgini**, proje düğümünü seçin ve ardından menü çubuğunda **Proje**  >  **Ekle yeni öğe**' yi seçin.
 
-8. **Visual C#** veya **Visual Basic**altında **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
+8. **Visual C#** veya **Visual Basic** altında **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
 
 9. **Şablonlar** bölmesinde, **sıralı iş akışı (yalnızca Grup çözümü)** şablonunu seçin ve ardından **Ekle** düğmesini seçin.
 
      **SharePoint Özelleştirme Sihirbazı** görüntülenir.
 
-10. **Hata ayıklama için iş akışı adını belirtin** sayfasında, varsayılan adı (**MySharePointWorkflow-Workflow1**) kabul edin. Varsayılan iş akışı şablonu tür değerini tutun, **Iş akışını listeleyin**ve sonra **İleri** düğmesini seçin.
+10. **Hata ayıklama için iş akışı adını belirtin** sayfasında, varsayılan adı (**MySharePointWorkflow-Workflow1**) kabul edin. Varsayılan iş akışı şablonu tür değerini tutun, **Iş akışını listeleyin** ve sonra **İleri** düğmesini seçin.
 
 11. **Visual Studio 'nun bir hata ayıklama oturumunda iş akışını otomatik olarak ilişkilendirilmesini ister misiniz?** sayfasında, tüm varsayılan ayarları kabul etmek için **İleri** düğmesini seçin.
 
@@ -126,7 +128,7 @@ ms.locfileid: "86014627"
 
 #### <a name="to-create-workflow-activities"></a>İş akışı etkinlikleri oluşturmak için
 
-1. İş akışı, iş akışı Tasarımcısı 'nda görüntülenmelidir. Değilse, **Çözüm Gezgini**içinde **Workflow1.cs** veya **Workflow1. vb** dosyasını açın.
+1. İş akışı, iş akışı Tasarımcısı 'nda görüntülenmelidir. Değilse, **Çözüm Gezgini** içinde **Workflow1.cs** veya **Workflow1. vb** dosyasını açın.
 
 2. Tasarımcıda **onWorkflowActivated1** etkinliğini seçin.
 
@@ -200,7 +202,7 @@ ms.locfileid: "86014627"
     }
     ```
 
-3. `onWorkflowActivated` `onWorkflowItemChanged` Yöntemini çağırmak için ve yöntemlerine aşağıdaki kodu ekleyin `checkStatus` . İş akışı başladığında `onWorkflowActivated` yöntemi, `checkStatus` belgenin zaten gözden geçirilip geçirilmediğini anlamak için yöntemini çağırır. Gözden geçirilmeyen iş akışı devam eder. Belge kaydedildiğinde `onWorkflowItemChanged` yöntemi, `checkStatus` belgenin gözden geçirilip geçirilmediğini anlamak için yöntemini yeniden çağırır. `workflowPending`Alan **true**olarak ayarlandığında iş akışı çalışmaya devam eder.
+3. `onWorkflowActivated` `onWorkflowItemChanged` Yöntemini çağırmak için ve yöntemlerine aşağıdaki kodu ekleyin `checkStatus` . İş akışı başladığında `onWorkflowActivated` yöntemi, `checkStatus` belgenin zaten gözden geçirilip geçirilmediğini anlamak için yöntemini çağırır. Gözden geçirilmeyen iş akışı devam eder. Belge kaydedildiğinde `onWorkflowItemChanged` yöntemi, `checkStatus` belgenin gözden geçirilip geçirilmediğini anlamak için yöntemini yeniden çağırır. `workflowPending`Alan **true** olarak ayarlandığında iş akışı çalışmaya devam eder.
 
     ```vb
     Private Sub onWorkflowActivated(ByVal sender As System.Object, ByVal e As System.Workflow.Activities.ExternalDataEventArgs)
@@ -226,7 +228,7 @@ ms.locfileid: "86014627"
     }
     ```
 
-4. `isWorkflowPending`Özelliğin durumunu denetlemek için yöntemine aşağıdaki kodu ekleyin `workflowPending` . Belge her kaydedildiğinde, **whileActivity1** etkinliği `isWorkflowPending` yöntemini çağırır. Bu yöntem, <xref:System.Workflow.Activities.ConditionalEventArgs.Result%2A> <xref:System.Workflow.Activities.ConditionalEventArgs> **whileActivity1** etkinliğinin devam edip etmeyeceğini veya bitmeyeceğini anlamak için nesnesinin özelliğini inceler. Özelliği **true**olarak ayarlanırsa etkinlik devam eder. Aksi takdirde, etkinlik sonlanır ve iş akışı sonlanır.
+4. `isWorkflowPending`Özelliğin durumunu denetlemek için yöntemine aşağıdaki kodu ekleyin `workflowPending` . Belge her kaydedildiğinde, **whileActivity1** etkinliği `isWorkflowPending` yöntemini çağırır. Bu yöntem, <xref:System.Workflow.Activities.ConditionalEventArgs.Result%2A> <xref:System.Workflow.Activities.ConditionalEventArgs> **whileActivity1** etkinliğinin devam edip etmeyeceğini veya bitmeyeceğini anlamak için nesnesinin özelliğini inceler. Özelliği **true** olarak ayarlanırsa etkinlik devam eder. Aksi takdirde, etkinlik sonlanır ve iş akışı sonlanır.
 
     ```vb
     Private Sub isWorkflowPending(ByVal sender As System.Object, ByVal e As System.Workflow.Activities.ConditionalEventArgs)
@@ -270,15 +272,15 @@ ms.locfileid: "86014627"
 
      Bu, sizi varsayılan SharePoint Web sitesinin **paylaşılan belgeler** sayfasına döndürür.
 
-9. **Paylaşılan belgeler** sayfasında, **MySharePointWorkflow-Workflow1** sütununun altındaki değerin **devam ediyor**olarak ayarlandığını doğrulayın. Bu, iş akışının devam ettiğini ve belgenin gözden geçirme beklediğini gösterir.
+9. **Paylaşılan belgeler** sayfasında, **MySharePointWorkflow-Workflow1** sütununun altındaki değerin **devam ediyor** olarak ayarlandığını doğrulayın. Bu, iş akışının devam ettiğini ve belgenin gözden geçirme beklediğini gösterir.
 
 10. **Paylaşılan belgeler** sayfasında belgeyi seçin, görüntülenen oku seçin ve ardından **Özellikleri Düzenle** menü öğesini seçin.
 
-11. **Belge durumunu** **Gözden geçirme Tamam**olarak ayarlayın ve ardından **Kaydet** düğmesini seçin.
+11. **Belge durumunu** **Gözden geçirme Tamam** olarak ayarlayın ve ardından **Kaydet** düğmesini seçin.
 
      Bu, sizi varsayılan SharePoint Web sitesinin **paylaşılan belgeler** sayfasına döndürür.
 
-12. **Paylaşılan belgeler** sayfasında, **belge durumu** sütununun altındaki değerin **İnceleme Tamam**olarak ayarlandığını doğrulayın. **Paylaşılan belgeler** sayfasını yenileyin ve **MySharePointWorkflow-Workflow1** sütununun altındaki değerin **tamamlandı**olarak ayarlandığını doğrulayın. Bu, iş akışının tamamlandığını ve belgenin incelendiğini gösterir.
+12. **Paylaşılan belgeler** sayfasında, **belge durumu** sütununun altındaki değerin **İnceleme Tamam** olarak ayarlandığını doğrulayın. **Paylaşılan belgeler** sayfasını yenileyin ve **MySharePointWorkflow-Workflow1** sütununun altındaki değerin **tamamlandı** olarak ayarlandığını doğrulayın. Bu, iş akışının tamamlandığını ve belgenin incelendiğini gösterir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
  Aşağıdaki konulardan iş akışı şablonlarının nasıl oluşturulacağı hakkında daha fazla bilgi edinebilirsiniz:

@@ -1,6 +1,8 @@
 ---
 title: Öğe şablonu, Bölüm 1 ile özel eylem proje öğesi oluşturma
 titleSuffix: ''
+description: Bir SharePoint sitesinde özel bir eylem oluşturmak için bir öğe şablonu kullanarak bir SharePoint projesine eklenebilen bir proje öğesi oluşturun.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5cdf574d17e63e1ef4906c629d43f5f928784d01
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 5d9d1d2cca8f8ffaec67c92b44e7a621d08ad673
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585569"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915277"
 ---
 # <a name="walkthrough-create-a-custom-action-project-item-with-an-item-template-part-1"></a>İzlenecek yol: öğe şablonu, Bölüm 1 ile özel bir eylem proje öğesi oluşturma
   Visual Studio 'da SharePoint proje sistemini, kendi proje öğesi türlerinizi oluşturarak genişletebilirsiniz. Bu kılavuzda, bir SharePoint sitesinde özel bir eylem oluşturmak için bir SharePoint projesine eklenebilen bir proje öğesi oluşturacaksınız. Özel eylem, SharePoint sitesinin **Site eylemleri** menüsüne bir menü öğesi ekler.
@@ -34,7 +36,7 @@ ms.locfileid: "91585569"
 
   - Bir geliştirici proje öğesinin belirli özelliklerini ve onu içeren projeyi değiştirdiğinde çalıştırılan kod.
 
-  - **Çözüm Gezgini**içindeki proje öğesinin yanında görünen özel bir simge.
+  - **Çözüm Gezgini** içindeki proje öğesinin yanında görünen özel bir simge.
 
 - Proje öğesi için Visual Studio öğe şablonu oluşturuluyor.
 
@@ -86,9 +88,9 @@ ms.locfileid: "91585569"
 
 5. **VSIX proje** şablonunu seçin.
 
-6. **Ad** kutusuna **CustomActionProjectItem**girin ve sonra **Tamam** düğmesini seçin.
+6. **Ad** kutusuna **CustomActionProjectItem** girin ve sonra **Tamam** düğmesini seçin.
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**CustomActionProjectItem** projesini **Çözüm Gezgini**ekler.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**CustomActionProjectItem** projesini **Çözüm Gezgini** ekler.
 
 #### <a name="to-create-the-item-template-project"></a>Öğe şablonu projesi oluşturmak için
 
@@ -100,7 +102,7 @@ ms.locfileid: "91585569"
 
 4. Proje şablonları listesinde **C# öğe** şablonunu veya **Visual Basic öğesi** şablonu şablonunu seçin.
 
-5. **Ad** kutusuna **ItemTemplate**yazın ve **Tamam** düğmesini seçin.
+5. **Ad** kutusuna **ItemTemplate** yazın ve **Tamam** düğmesini seçin.
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**ItemTemplate** projesini çözüme ekler.
 
@@ -112,7 +114,7 @@ ms.locfileid: "91585569"
 
 3. **Yeni proje** iletişim kutusunda, **Visual C#** veya **Visual Basic** düğümlerini genişletin, **Windows** düğümünü seçin ve ardından **sınıf kitaplığı** proje şablonu ' nu seçin.
 
-4. **Ad** kutusuna **ProjectItemDefinition**yazın ve **Tamam** düğmesini seçin.
+4. **Ad** kutusuna **ProjectItemDefinition** yazın ve **Tamam** düğmesini seçin.
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**ProjectItemDefinition** projesini çözüme ekler ve varsayılan Class1 kod dosyasını açar.
 
@@ -154,7 +156,7 @@ ms.locfileid: "91585569"
      [!code-vb[SPExtensibility.ProjectItem.CustomAction#1](../sharepoint/codesnippet/VisualBasic/customactionprojectitem/projectitemdefinition/customaction.vb#1)]
 
 ## <a name="create-an-icon-for-the-project-item-in-solution-explorer"></a>Çözüm Gezgini içinde proje öğesi için bir simge oluşturun
- Özel bir SharePoint proje öğesi oluşturduğunuzda, bir görüntüyü (simge veya bit eşlem) proje öğesiyle ilişkilendirebilirsiniz. Bu görüntü, **Çözüm Gezgini**içindeki proje öğesinin yanında görünür.
+ Özel bir SharePoint proje öğesi oluşturduğunuzda, bir görüntüyü (simge veya bit eşlem) proje öğesiyle ilişkilendirebilirsiniz. Bu görüntü, **Çözüm Gezgini** içindeki proje öğesinin yanında görünür.
 
  Aşağıdaki yordamda, proje öğesi için bir simge oluşturacak ve simgeyi uzantı derlemesine katıştıraöğreneceksiniz. Bu simgeye, <xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemIconAttribute> `CustomActionProjectItemTypeProvider` daha önce oluşturduğunuz sınıf tarafından başvurulur.
 
@@ -167,9 +169,9 @@ ms.locfileid: "91585569"
     > [!NOTE]
     > Visual Basic projelerinde, **simge dosya** öğesini göstermek için **genel** düğümünü seçmeniz gerekir.
 
-3. **Ad** kutusuna **CustomAction_SolutionExplorer. ico**girin ve sonra **Ekle** düğmesini seçin.
+3. **Ad** kutusuna **CustomAction_SolutionExplorer. ico** girin ve sonra **Ekle** düğmesini seçin.
 
-     Yeni simge **görüntü düzenleyicisinde**açılır.
+     Yeni simge **görüntü düzenleyicisinde** açılır.
 
 4. Simge dosyasının 16x16 sürümünü, tanıyabileceğiniz bir tasarıma sahip olacak şekilde düzenleyin ve ardından simge dosyasını kaydedin.
 
@@ -225,7 +227,7 @@ ms.locfileid: "91585569"
 
 5. **Yeni öğe Ekle** Iletişim kutusunda **metin dosyası** şablonunu seçin.
 
-6. **Ad** kutusuna, **CustomAction. spdata**girin ve sonra **Ekle** düğmesini seçin.
+6. **Ad** kutusuna, **CustomAction. spdata** girin ve sonra **Ekle** düğmesini seçin.
 
 7. Aşağıdaki XML 'i *CustomAction. spdata* dosyasına ekleyin ve dosyayı kaydedin ve kapatın.
 
@@ -245,7 +247,7 @@ ms.locfileid: "91585569"
 
 9. **Yeni öğe Ekle** iletişim kutusunda, **XML dosya** şablonunu seçin.
 
-10. **Ad** kutusuna **Elements.xml**girin ve sonra **Ekle** düğmesini seçin.
+10. **Ad** kutusuna **Elements.xml** girin ve sonra **Ekle** düğmesini seçin.
 
 11. *Elements.xml* dosyasının IÇERIĞINI aşağıdaki XML ile değiştirin ve sonra dosyayı kaydedip kapatın.
 
@@ -269,7 +271,7 @@ ms.locfileid: "91585569"
 
 13. **Çözüm Gezgini**, **ItemTemplate** projesi için kısayol menüsünü açın ve ardından **Projeyi Kaldır**' ı seçin.
 
-14. **ItemTemplate** projesinin kısayol menüsünü yeniden açın ve ardından **ItemTemplate. csproj Düzenle** veya **ItemTemplate. vbproj**öğesini Düzenle ' yi seçin.
+14. **ItemTemplate** projesinin kısayol menüsünü yeniden açın ve ardından **ItemTemplate. csproj Düzenle** veya **ItemTemplate. vbproj** öğesini Düzenle ' yi seçin.
 
 15. `VSTemplate`Proje dosyasında aşağıdaki öğeyi bulun.
 
@@ -298,11 +300,11 @@ ms.locfileid: "91585569"
 
      Visual Studio, dosyayı bildirim düzenleyicisinde açar. Source. Extension. valtmanifest dosyası, tüm VSıX paketlerinin gerektirdiği uzantı. valtmanifest dosyasının temelini oluşturur. Bu dosya hakkında daha fazla bilgi için bkz. [VSIX uzantı şeması 1,0 başvurusu](/previous-versions/dd393700(v=vs.110)).
 
-2. **Ürün adı** kutusuna **özel eylem proje öğesi**girin.
+2. **Ürün adı** kutusuna **özel eylem proje öğesi** girin.
 
-3. **Yazar** kutusuna **contoso**girin.
+3. **Yazar** kutusuna **contoso** girin.
 
-4. **Açıklama** kutusunda, **özel bir eylemi temsil eden bir SharePoint proje öğesi**girin.
+4. **Açıklama** kutusunda, **özel bir eylemi temsil eden bir SharePoint proje öğesi** girin.
 
 5. **Varlıklar** sekmesinde **Yeni** düğmesini seçin.
 
@@ -313,7 +315,7 @@ ms.locfileid: "91585569"
     > [!NOTE]
     > Bu değer, `ItemTemplate` extension. valtmanifest dosyasındaki öğesine karşılık gelir. Bu öğe, proje öğesi şablonunu içeren VSıX paketindeki alt klasörü tanımlar. Daha fazla bilgi için bkz. [ItemTemplate öğesi (VSX şeması)](/previous-versions/visualstudio/visual-studio-2010/dd393681\(v\=vs.100\)).
 
-7. **Kaynak** listesinde, **Geçerli çözümde bir proje**seçin.
+7. **Kaynak** listesinde, **Geçerli çözümde bir proje** seçin.
 
 8. **Proje** listesinde **ItemTemplate**' i ve ardından **Tamam** düğmesini seçin.
 
@@ -321,18 +323,18 @@ ms.locfileid: "91585569"
 
      **Yeni varlık Ekle** iletişim kutusu görüntülenir.
 
-10. **Tür** listesinde, **Microsoft. VisualStudio. MefComponent**öğesini seçin.
+10. **Tür** listesinde, **Microsoft. VisualStudio. MefComponent** öğesini seçin.
 
     > [!NOTE]
     > Bu değer, `MefComponent` extension. valtmanifest dosyasındaki öğesine karşılık gelir. Bu öğe VSıX paketindeki bir uzantı derlemesinin adını belirtir. Daha fazla bilgi için bkz. [MefComponent öğesi (VSX şeması)](/previous-versions/visualstudio/visual-studio-2010/dd393736\(v\=vs.100\)).
 
-11. **Kaynak** listesinde, **Geçerli çözümde bir proje**seçin.
+11. **Kaynak** listesinde, **Geçerli çözümde bir proje** seçin.
 
 12. **Proje** listesinde **ProjectItemDefinition**' ı seçin.
 
 13. **Tamam** düğmesini seçin.
 
-14. Menü **çubuğunda Build**  >  **Build Solution**öğesini seçin ve ardından projenin hatasız derlendiğinden emin olun.
+14. Menü **çubuğunda Build**  >  **Build Solution** öğesini seçin ve ardından projenin hatasız derlendiğinden emin olun.
 
 15. CustomActionProjectItem projesinin derleme çıkış klasörünün CustomActionProjectItem. vsix dosyasını içerdiğinden emin olun.
 
@@ -359,7 +361,7 @@ ms.locfileid: "91585569"
 
 3. Proje şablonları listesinde **SharePoint 2010 projesi**' ni seçin.
 
-4. **Ad** kutusuna **CustomActionTest**girin ve sonra **Tamam** düğmesini seçin.
+4. **Ad** kutusuna **CustomActionTest** girin ve sonra **Tamam** düğmesini seçin.
 
 5. **SharePoint Özelleştirme Sihirbazı**'nda, hata ayıklama için kullanmak istediğiniz sitenin URL 'sini girin ve ardından **son** düğmesini seçin.
 
@@ -387,7 +389,7 @@ ms.locfileid: "91585569"
 
      **Çıkış** penceresi açılır.
 
-14. **Çözüm Gezgini**' de, **CustomAction1** öğesi için kısayol menüsünü açın ve adını **MyCustomAction**olarak değiştirin.
+14. **Çözüm Gezgini**' de, **CustomAction1** öğesi için kısayol menüsünü açın ve adını **MyCustomAction** olarak değiştirin.
 
      **Çıkış** penceresinde bir onay iletisi görüntülenir. Bu ileti, <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemNameChanged> sınıfında tanımladığınız olay işleyicisi tarafından yazılır `CustomActionProjectItemTypeProvider` . Geliştirici Proje öğesini değiştirdiğinde özel davranışı uygulamak için bu olayı ve diğer proje öğesi olaylarını işleyebilirsiniz.
 

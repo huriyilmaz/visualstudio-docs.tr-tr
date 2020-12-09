@@ -1,5 +1,7 @@
 ---
 title: 'İzlenecek yol: SharePoint uygulama sayfası oluşturma | Microsoft Docs'
+description: Bu kılavuzda, bir uygulama sayfası (bir ASP.NET sayfasının özelleştirilmiş formu) oluşturun ve ardından yerel bir SharePoint sitesi kullanarak hata ayıklayın.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 76375c15077bf672eaba01c840ba406228046435
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 95addb145312de85a3525c228297e7ff9636ea0d
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016499"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96914887"
 ---
 # <a name="walkthrough-create-a-sharepoint-application-page"></a>İzlenecek yol: SharePoint uygulama sayfası oluşturma
 
@@ -37,19 +39,19 @@ Bu izlenecek yol aşağıdaki görevleri gösterir:
 > [!NOTE]
 > Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Daha fazla bilgi için bkz. [Visual STUDIO IDE 'Yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 - Desteklenen Windows ve SharePoint sürümleri.
 
 ## <a name="create-a-sharepoint-project"></a>SharePoint projesi oluşturma
 
-İlk olarak, **boş bir SharePoint projesi**oluşturun. Daha sonra, bu projeye bir **uygulama sayfası** öğesi eklersiniz.
+İlk olarak, **boş bir SharePoint projesi** oluşturun. Daha sonra, bu projeye bir **uygulama sayfası** öğesi eklersiniz.
 
 1. Başlatın [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
 2. **Yeni proje** iletişim kutusunu açın, kullanmak istediğiniz dilin altındaki **Office/SharePoint** düğümünü genişletin ve **SharePoint çözümleri** düğümünü seçin.
 
-3. **Visual Studio yüklü şablonlar** bölmesinde, **SharePoint 2010-boş proje** şablonunu seçin. Projeyi **MySharePointProject**olarak adlandırın ve ardından **Tamam** düğmesini seçin.
+3. **Visual Studio yüklü şablonlar** bölmesinde, **SharePoint 2010-boş proje** şablonunu seçin. Projeyi **MySharePointProject** olarak adlandırın ve ardından **Tamam** düğmesini seçin.
 
      **SharePoint Özelleştirme Sihirbazı** görüntülenir. Bu sihirbaz, projenin hatalarını ayıklamak için kullanacağınız siteyi ve çözümün güven düzeyini seçmenizi sağlar.
 
@@ -65,7 +67,7 @@ Bir uygulama sayfası oluşturmak için projeye bir **Uygulama sayfa** öğesi e
 
 3. **Yeni öğe Ekle** iletişim kutusunda, **uygulama sayfasını (yalnızca Grup çözümü** şablonu) seçin.
 
-4. Sayfayı **SearchItems**olarak adlandırın ve ardından **Ekle** düğmesini seçin.
+4. Sayfayı **SearchItems** olarak adlandırın ve ardından **Ekle** düğmesini seçin.
 
      Visual Web Developer Designer, sayfanın HTML öğelerini görebileceğiniz **kaynak** görünümündeki uygulama sayfasını görüntüler. Tasarımcı, birkaç denetim için biçimlendirmeyi görüntüler <xref:System.Web.UI.WebControls.Content> . Her denetim <xref:System.Web.UI.WebControls.ContentPlaceHolder> , varsayılan uygulama ana sayfasında tanımlanan bir denetimle eşlenir.
 
@@ -73,9 +75,9 @@ Bir uygulama sayfası oluşturmak için projeye bir **Uygulama sayfa** öğesi e
 
 Uygulama sayfası öğesi, uygulama sayfasına ASP.NET denetimleri eklemek için bir tasarımcı kullanmanıza olanak sağlar. Bu tasarımcı, Visual Web Developer 'da kullanılan tasarlayıcıdır. Tasarımcı **kaynak** görünümüne bir etiket, radyo düğmesi listesi ve tablo ekleyin ve ardından, herhangi bir standart ASP.NET sayfası tasarlarken yaptığınız gibi özellikleri ayarlayın.
 
-1. Menü çubuğunda **Görünüm**  >  **araç kutusunu**seçin.
+1. Menü çubuğunda **Görünüm**  >  **araç kutusunu** seçin.
 
-2. **Araç kutusunun**standart düğümünde aşağıdaki adımlardan birini gerçekleştirin:
+2. **Araç kutusunun** standart düğümünde aşağıdaki adımlardan birini gerçekleştirin:
 
     - **Etiket** öğesi için kısayol menüsünü açın, **Kopyala**' yı seçin, tasarımcıda **PlaceHolderMain** içerik denetiminin altındaki satır Için kısayol menüsünü açın ve ardından **Yapıştır**' ı seçin.
 
@@ -83,7 +85,7 @@ Uygulama sayfası öğesi, uygulama sayfasına ASP.NET denetimleri eklemek için
 
 3. **PlaceHolderMain** içerik denetimine bir **DropDownList** öğesi ve **tablo** öğesi eklemek için önceki adımı tekrarlayın.
 
-4. Tasarımcıda `Text` etiket denetiminin özniteliğinin değerini **tüm öğeleri gösterecek**şekilde değiştirin.
+4. Tasarımcıda `Text` etiket denetiminin özniteliğinin değerini **tüm öğeleri gösterecek** şekilde değiştirin.
 
 5. Tasarımcıda `<asp:DropDownList>` öğesini AŞAĞıDAKI XML ile değiştirin.
 

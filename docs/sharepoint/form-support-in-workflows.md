@@ -1,5 +1,7 @@
 ---
 title: Iş akışlarında form desteği | Microsoft Docs
+description: 'SharePoint iş akışlarında form desteği hakkında bilgi edinin. Dört tür form, bir iş akışında kullanılabilir: ilişkilendirme, başlatma, görev ve değişiklik.'
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b064df6729b914af7758cde86b03b886fd0e5d26
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 52939fe00dcbca1cfd633c81d4b0a00ea6b517b9
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72986255"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915511"
 ---
 # <a name="form-support-in-workflows"></a>İş akışlarında form desteği
   Dört tür form, bir iş akışında kullanılabilir: ilişkilendirme, başlatma, görev ve değişiklik. Bu form türleri bir ASPX formu veya InfoPath formu temel alabilir. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]Belirli bir form için sağlanan destek düzeyi, aşağıdaki tablolarda açıklanan çeşitli etkenlere bağlıdır. İş akışı form türleri hakkında daha fazla bilgi için bkz. [Iş akışı formlarına genel bakış](/previous-versions/office/developer/sharepoint-2010/ms457061(v=office.14)).

@@ -1,6 +1,8 @@
 ---
 title: 'Paketleme Gezgini: pakete öğe & & Ekle veya Kaldır'
 titleSuffix: ''
+description: Visual Studio 'da paketleme Gezgini 'ni kullanarak bir SharePoint paketine Özellikler ve öğeler ekleyin ve kaldırın.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9bc4546d598a2fcca822f1921f778034fb768c2b
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: ee9b2a12c9eaa168f0223dff29a3379a12b3d691
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585595"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915355"
 ---
 # <a name="how-to-add-and-remove-features-and-items-to-a-package-by-using-the-packaging-explorer"></a>Nasıl yapılır: paketleme Gezgini 'ni kullanarak bir pakete Özellikler ve öğeler ekleme ve kaldırma
   SharePoint öğelerini ve özelliklerini dağıtmak üzere bir paket yapılandırmak için paketleme Gezgini ' ni kullanabilirsiniz. SharePoint proje öğelerini ve. wsp dosyanızın içindeki özellikleri ayarlayabilirsiniz.
@@ -32,20 +34,20 @@ ms.locfileid: "91585595"
 
 #### <a name="to-open-the-packaging-explorer"></a>Paketleme Gezgini 'ni açmak için
 
-1. Menü çubuğunda, **View**  >  **diğer Windows**  >  **paketleme Gezginini**görüntüle ' yi seçin.
+1. Menü çubuğunda, **View**  >  **diğer Windows**  >  **paketleme Gezginini** görüntüle ' yi seçin.
 
-     **Paketleme Gezgini** **araç kutusunda**görünür.
+     **Paketleme Gezgini** **araç kutusunda** görünür.
 
 ## <a name="adding-a-feature-to-a-package"></a>Bir pakete özellik ekleme
  Paketleme Gezgini 'ni kullanarak bir pakete yeni ve var olan özellikler ekleyebilirsiniz.
 
 #### <a name="to-add-a-sharepoint-feature"></a>Bir SharePoint özelliği eklemek için
 
-1. **Paketleme Gezginini**açın, proje için kısayol menüsünü açın ve **Özellik Ekle**' yi seçin.
+1. **Paketleme Gezginini** açın, proje için kısayol menüsünü açın ve **Özellik Ekle**' yi seçin.
 
 #### <a name="to-move-an-existing-sharepoint-feature"></a>Var olan bir SharePoint özelliğini taşımak için
 
-1. **Paketleme Gezginini**açın ve aşağıdaki adımlardan birini gerçekleştirin:
+1. **Paketleme Gezginini** açın ve aşağıdaki adımlardan birini gerçekleştirin:
 
     - Bir **özelliği** bir projeden başka bir projeye sürükleyin.
 
@@ -59,7 +61,7 @@ ms.locfileid: "91585595"
 
 #### <a name="to-validate-a-sharepoint-feature-or-package"></a>Bir SharePoint özelliğini veya paketini doğrulamak için
 
-1. **Paketleme Gezginini**açın.
+1. **Paketleme Gezginini** açın.
 
 2. Bir özellik veya paket için kısayol menüsünü açın ve ardından **Doğrula**' yı seçin.
 

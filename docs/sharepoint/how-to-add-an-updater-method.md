@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: bir Güncelleştirici yöntemi ekleme | Microsoft Docs'
+description: Bir Güncelleştirici yöntemi ekleyerek kullanıcıların bir SharePoint dış listesindeki iş verilerini güncelleştirmesini nasıl sağlayacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c76373c710908a8ae7edc49c4e26ff7e94336a6d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9d06737de7df40efa2bc6259cc0ea53bdda17b8c
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86014984"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915381"
 ---
 # <a name="how-to-add-an-updater-method"></a>Nasıl yapılır: Güncelleştirici yöntemi ekleme
   Bir *Güncelleştirici* yöntemi oluşturarak kullanıcıların bir SharePoint dış listesindeki iş verilerini güncelleştirmesine olanak sağlayabilirsiniz. Daha fazla bilgi için bkz. [iş verileri bağlantı modeli tasarlama](../sharepoint/designing-a-business-data-connectivity-model.md).
@@ -31,7 +33,7 @@ ms.locfileid: "86014984"
 
 1. IVB tasarımcısında bir varlık seçin.
 
-2. Menü çubuğunda, **View**  >  **diğer Windows**  >  **bdc yöntemi ayrıntılarını**görüntüle ' yi seçin.
+2. Menü çubuğunda, **View**  >  **diğer Windows**  >  **bdc yöntemi ayrıntılarını** görüntüle ' yi seçin.
 
     IVB yöntemi ayrıntıları penceresi açılır. Bu pencere hakkında daha fazla bilgi için bkz. [BDC modeli tasarım araçlarına genel bakış](../sharepoint/bdc-model-design-tools-overview.md).
 
@@ -39,7 +41,7 @@ ms.locfileid: "86014984"
 
     Visual Studio, modele aşağıdaki öğeleri ekler. Bu öğeler BDC Yöntem ayrıntıları penceresinde görüntülenir.
 
-   - **Update**adlı bir yöntem.
+   - **Update** adlı bir yöntem.
 
    - Yöntemi için bir giriş parametresi.
 
@@ -50,11 +52,11 @@ ms.locfileid: "86014984"
      Daha fazla bilgi için bkz. [iş verileri bağlantı modeli tasarlama](../sharepoint/designing-a-business-data-connectivity-model.md).
 
    > [!NOTE]
-   > Varlık türünün tanımlayıcısı, otomatik olarak oluşturulmayan bir veritabanı tablosundaki bir alanı temsil ediyorsa, **önceden Güncelleştirici alan** özelliğini **true**olarak ayarlayın.
+   > Varlık türünün tanımlayıcısı, otomatik olarak oluşturulmayan bir veritabanı tablosundaki bir alanı temsil ediyorsa, **önceden Güncelleştirici alan** özelliğini **true** olarak ayarlayın.
 
 4. **Çözüm Gezgini**' de, varlık için oluşturulan hizmet kodu dosyasının kısayol menüsünü açın ve **kodu görüntüle**' yi seçin.
 
-    Varlık hizmeti kod dosyası **kod düzenleyicisinde**açılır. Bu dosya hakkında daha fazla bilgi için bkz. [iş verileri bağlantı modeli oluşturma](../sharepoint/creating-a-business-data-connectivity-model.md).
+    Varlık hizmeti kod dosyası **kod düzenleyicisinde** açılır. Bu dosya hakkında daha fazla bilgi için bkz. [iş verileri bağlantı modeli oluşturma](../sharepoint/creating-a-business-data-connectivity-model.md).
 
 5. Güncelleştirme yöntemine, verileri güncelleştirmek için kod ekleyin. Aşağıdaki örnek, SQL Server için AdventureWorks örnek veritabanındaki bir kişinin bilgilerini günceller.
 

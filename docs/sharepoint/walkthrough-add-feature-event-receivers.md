@@ -1,5 +1,7 @@
 ---
 title: 'İzlenecek yol: özellik Olay alıcıları ekleme | Microsoft Docs'
+description: Bu izlenecek yolda, bir SharePoint özelliği yüklendiğinde, etkinleştirildiğinde, devre dışı bırakıldığında veya kaldırıldığında yürütülen Yöntemler olan özellik Olay alıcıları ekleyin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -16,15 +18,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f40358c157ec24557947f36b0c6eadb6d8a2622d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 98b85222fca4da6dfca653ad74e1315801798d83
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015368"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915602"
 ---
 # <a name="walkthrough-add-feature-event-receivers"></a>İzlenecek yol: özellik Olay alıcıları ekleme
-  Özellik Olay alıcıları, SharePoint 'te aşağıdaki özellikle ilgili olaylardan biri gerçekleştiğinde yürütülen yöntemlerdir:
+Özellik Olay alıcıları, SharePoint 'te aşağıdaki özellikle ilgili olaylardan biri gerçekleştiğinde yürütülen yöntemlerdir:
 
 - Bir özellik yüklendi.
 
@@ -34,7 +36,7 @@ ms.locfileid: "86015368"
 
 - Bir özellik kaldırılır.
 
-  Bu izlenecek yol, bir SharePoint projesindeki bir özelliğe olay alıcısının nasıl ekleneceğini gösterir. Aşağıdaki görevleri gösterir:
+Bu izlenecek yol, bir SharePoint projesindeki bir özelliğe olay alıcısının nasıl ekleneceğini gösterir. Aşağıdaki görevleri gösterir:
 
 - Özellik olay alıcısı ile boş bir proje oluşturma.
 
@@ -44,7 +46,7 @@ ms.locfileid: "86015368"
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - Desteklenen Microsoft Windows ve SharePoint sürümleri.
@@ -56,15 +58,15 @@ ms.locfileid: "86015368"
 
 #### <a name="to-create-a-project-with-a-feature-event-receiver"></a>Özellik olay alıcısı olan bir proje oluşturmak için
 
-1. **File**  >  **New**  >  **Yeni proje** iletişim kutusunu göstermek için menü çubuğunda dosya yeni**Proje** ' yi seçin.
+1. **File**  >  **New**  >  **Yeni proje** iletişim kutusunu göstermek için menü çubuğunda dosya yeni **Proje** ' yi seçin.
 
-2. **Visual C#** veya **Visual Basic**altında **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
+2. **Visual C#** veya **Visual Basic** altında **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
 
 3. **Şablonlar** bölmesinde, **SharePoint 2010 proje** şablonunu seçin.
 
      Bu proje türünü, proje şablonu bulunmadığından özellik Olay alıcıları için kullanırsınız.
 
-4. **Ad** kutusuna **FeatureEvtTest**girin ve ardından **Tamam** düğmesini seçerek **SharePoint Özelleştirme Sihirbazı**'nı görüntüleyin.
+4. **Ad** kutusuna **FeatureEvtTest** girin ve ardından **Tamam** düğmesini seçerek **SharePoint Özelleştirme Sihirbazı**'nı görüntüleyin.
 
 5. **Hata ayıklama için site ve güvenlik düzeyini belirtin** sayfasında, yeni özel alan öğesini eklemek istediğiniz SharePoint Server sitesinin URL 'sini girin veya varsayılan konumu (http:// \<*system name*> /) kullanın.
 
@@ -81,9 +83,9 @@ ms.locfileid: "86015368"
 
 1. Özellikler düğümü için kısayol menüsünü açın ve özellik oluşturmak için **Özellik Ekle** ' yi seçin.
 
-2. **Özellikler** düğümü altında, **özellik1**için kısayol menüsünü açın ve sonra özelliğe bir olay alıcısı eklemek için **olay alıcısı Ekle** ' yi seçin.
+2. **Özellikler** düğümü altında, **özellik1** için kısayol menüsünü açın ve sonra özelliğe bir olay alıcısı eklemek için **olay alıcısı Ekle** ' yi seçin.
 
-     Bu, Özellik1 altına bir kod dosyası ekler. Bu durumda, projenizin geliştirme diline bağlı olarak *Feature1.EventReceiver.cs* veya *Özellik1. eventahize. vb*olarak adlandırılır.
+     Bu, Özellik1 altına bir kod dosyası ekler. Bu durumda, projenizin geliştirme diline bağlı olarak *Feature1.EventReceiver.cs* veya *Özellik1. eventahize. vb* olarak adlandırılır.
 
 3. Projeniz ' de yazılmışsa [!INCLUDE[csprcs](../sharepoint/includes/csprcs-md.md)] , şu kodu henüz yoksa olay alıcısının üst kısmına ekleyin:
 
@@ -99,7 +101,7 @@ ms.locfileid: "86015368"
 
 #### <a name="to-test-the-feature-event-receiver"></a>Özellik olay alıcısını test etmek için
 
-1. Projenin **etkin dağıtım yapılandırma** özelliğinin değerini **etkinleştirme yok**olarak ayarlayın.
+1. Projenin **etkin dağıtım yapılandırma** özelliğinin değerini **etkinleştirme yok** olarak ayarlayın.
 
      Bu özelliğin ayarlanması, özelliğin SharePoint 'te etkinleşmesini engeller ve özellik olay alıcılarından hata ayıklamanıza olanak tanır. Daha fazla bilgi için bkz. [SharePoint Çözümlerinde hata ayıklama](../sharepoint/debugging-sharepoint-solutions.md).
 

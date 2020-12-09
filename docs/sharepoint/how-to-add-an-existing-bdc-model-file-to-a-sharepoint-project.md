@@ -1,6 +1,8 @@
 ---
 title: 'Nasıl yapılır: bir SharePoint projesine mevcut bir BDC modeli dosyası ekleme | Microsoft Docs'
 titleSuffix: ''
+description: Visual Studio 'da bir SharePoint projesine mevcut bir Iş verileri bağlantısı (BDC) modeli dosyası ekleyin, böylece bir BDC modelini özelleştirebilir, paketleyebilir ve yeniden dağıtabilirsiniz.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: fbfbd4e485a359b7e760188217326d23d3b0aa47
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: ce65f286c3de760ff74e5ef7239aac54d760f003
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584626"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96914965"
 ---
 # <a name="how-to-add-an-existing-bdc-model-file-to-a-sharepoint-project"></a>Nasıl yapılır: bir SharePoint projesine mevcut bir BDC modeli dosyası ekleme
   Bir Iş verileri bağlantısı (BDC) modelini, bir SharePoint grubu projesine model dosyasını (*. bdcm*) eklemek Için Visual Studio kullanarak özelleştirebilir, paketleyebilir ve yeniden dağıtabilirsiniz. Daha fazla bilgi için bkz. [iş verileri bağlantı modeli oluşturma](../sharepoint/creating-a-business-data-connectivity-model.md).
@@ -36,7 +38,7 @@ ms.locfileid: "91584626"
 
 3. **Varolan öğe Ekle** iletişim kutusunda, projenize eklemek istediğiniz model tanımı dosyasının konumuna gidin, dosyayı seçin ve sonra **Ekle** düğmesini seçin.
 
-    Model *.NET bütünleştirilmiş kodu türünde bir Iş kolu (LOB) sistemi*tanımlamamıyorsa **.NET Assembly LobSystem Ekle** iletişim kutusu açılır.
+    Model *.NET bütünleştirilmiş kodu türünde bir Iş kolu (LOB) sistemi* tanımlamamıyorsa **.NET Assembly LobSystem Ekle** iletişim kutusu açılır.
 
 4. İletişim kutusu görüntülenirse, aşağıdaki adımlardan birini gerçekleştirin:
 

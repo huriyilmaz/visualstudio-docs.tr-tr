@@ -1,6 +1,8 @@
 ---
 title: Proje şablonu, Bölüm 2 ile site sütunu proje öğesi oluştur
 titleSuffix: ''
+description: Bir site sütunu proje şablonuna, Proje öğesini içeren bir SharePoint projesi oluşturmak için şablonu kullandıklarında verileri toplamak üzere bir sihirbaz ekleyin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 51fb7a4fb3d2ccba8c0a811619d7793e730a8ec4
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: e6e5c9a0bb461f6b81b9cb7e1aa5f0134a7bdcbd
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585464"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915147"
 ---
 # <a name="walkthrough-create-a-site-column-project-item-with-a-project-template-part-2"></a>İzlenecek yol: proje şablonu, Bölüm 2 ile bir site sütunu proje öğesi oluşturma
   Özel bir SharePoint proje öğesi türü tanımladıktan ve Visual Studio 'daki bir proje şablonuyla ilişkilendirdikten sonra, şablon için bir sihirbaz de sağlamak isteyebilirsiniz. Sihirbazı kullanarak, Proje öğesini içeren yeni bir proje oluşturmak için şablonunuzu kullandıklarında kullanıcılardan bilgi toplayabilirsiniz. Topladığınız bilgiler Proje öğesini başlatmak için kullanılabilir.
@@ -100,7 +102,7 @@ ms.locfileid: "91585464"
 
 3. **Visual C#** düğümünü veya **Visual Basic** düğümünü genişletin ve ardından **Windows** düğümünü seçin.
 
-4. **Sınıf kitaplığı** proje şablonu ' nu seçin, projeyi **SharePointCommands**olarak adlandırın ve **Tamam** düğmesini seçin.
+4. **Sınıf kitaplığı** proje şablonu ' nu seçin, projeyi **SharePointCommands** olarak adlandırın ve **Tamam** düğmesini seçin.
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] çözüme **SharePointCommands** projesini ekler ve varsayılan Class1 kod dosyasını açar.
 
@@ -121,9 +123,9 @@ ms.locfileid: "91585464"
 
 4. **ProjectTemplateWizard** projesinin kısayol menüsünü açın, **Ekle**' yi ve ardından **Yeni öğe**' yi seçin.
 
-5. **Pencere (WPF)** öğesini seçin, öğe **WizardWindow**adını adlandırın ve ardından **Ekle** düğmesini seçin.
+5. **Pencere (WPF)** öğesini seçin, öğe **WizardWindow** adını adlandırın ve ardından **Ekle** düğmesini seçin.
 
-6. Projeye iki **Kullanıcı denetimi (WPF)** öğesi ekleyin ve bunları **Sayfa1** ve **Page2**olarak adlandırın.
+6. Projeye iki **Kullanıcı denetimi (WPF)** öğesi ekleyin ve bunları **Sayfa1** ve **Page2** olarak adlandırın.
 
 7. Projeye dört kod dosyası ekleyin ve aşağıdaki adları verin:
 
@@ -155,11 +157,11 @@ ms.locfileid: "91585464"
 
 10. Derlemeleri projeye eklemek için **Tamam** düğmesini seçin.
 
-11. **Çözüm Gezgini**, **ProjectTemplateWizard** projesi Için **Başvurular** klasörü altında **EnvDTE**öğesini seçin.
+11. **Çözüm Gezgini**, **ProjectTemplateWizard** projesi Için **Başvurular** klasörü altında **EnvDTE** öğesini seçin.
 
-12. **Özellikler** penceresinde, **birlikte çalışma türlerini katıştır** özelliğinin değerini **false**olarak değiştirin.
+12. **Özellikler** penceresinde, **birlikte çalışma türlerini katıştır** özelliğinin değerini **false** olarak değiştirin.
 
-13. Bir Visual Basic projesi geliştiriyorsanız, **Proje tasarımcısını**kullanarak ProjectTemplateWizard ad alanını projenize aktarın.
+13. Bir Visual Basic projesi geliştiriyorsanız, **Proje tasarımcısını** kullanarak ProjectTemplateWizard ad alanını projenize aktarın.
 
      Daha fazla bilgi için bkz. [nasıl yapılır: Içeri aktarılan ad alanlarını ekleme veya kaldırma &#40;Visual Basic&#41;](../ide/how-to-add-or-remove-imported-namespaces-visual-basic.md).
 
@@ -270,7 +272,7 @@ ms.locfileid: "91585464"
 
 #### <a name="to-create-the-second-wizard-page-ui"></a>İkinci sihirbaz sayfası kullanıcı arabirimini oluşturmak için
 
-1. ProjectTemplateWizard projesinde, Page2. xaml dosyası için kısayol menüsünü açın ve **Aç**öğesini seçin.
+1. ProjectTemplateWizard projesinde, Page2. xaml dosyası için kısayol menüsünü açın ve **Aç** öğesini seçin.
 
      Kullanıcı denetimi tasarımcıda açılır.
 
@@ -318,7 +320,7 @@ ms.locfileid: "91585464"
 
 #### <a name="to-build-your-project"></a>Projenizi derlemek için
 
-1. Menü **çubuğunda Build**  >  **Build Solution**öğesini seçin.
+1. Menü **çubuğunda Build**  >  **Build Solution** öğesini seçin.
 
 ## <a name="removing-the-keysnk-file-from-the-project-template"></a>Anahtar. snk dosyasını proje şablonundan kaldırma
  [Izlenecek yol: proje şablonu, Bölüm 1 ile bir site sütunu oluşturun](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md), oluşturduğunuz proje şablonu, her site sütunu proje örneğini imzalamak için kullanılan bir Key. snk dosyası içerir. Sihirbaz artık her proje için yeni bir Key. snk dosyası oluşturduğundan, bu Key. snk dosyası artık gerekli değildir. Anahtar. snk dosyasını proje şablonundan kaldırın ve bu dosyaya başvuruları kaldırın.
@@ -446,9 +448,9 @@ ms.locfileid: "91585464"
 
      **Yeni varlık Ekle** iletişim kutusu açılır.
 
-3. **Tür** listesinde **Microsoft. VisualStudio. Assembly**öğesini seçin.
+3. **Tür** listesinde **Microsoft. VisualStudio. Assembly** öğesini seçin.
 
-4. **Kaynak** listesinde, **Geçerli çözümde bir proje**seçin.
+4. **Kaynak** listesinde, **Geçerli çözümde bir proje** seçin.
 
 5. **Proje** listesinde **ProjectTemplateWizard**' ı seçin ve ardından **Tamam** düğmesini seçin.
 
@@ -456,13 +458,13 @@ ms.locfileid: "91585464"
 
      **Yeni varlık Ekle** iletişim kutusu açılır.
 
-7. **Tür** listesinde, **SharePoint. Commands. v4**girin.
+7. **Tür** listesinde, **SharePoint. Commands. v4** girin.
 
-8. **Kaynak** listesinde, **Geçerli çözümde bir proje**seçin.
+8. **Kaynak** listesinde, **Geçerli çözümde bir proje** seçin.
 
 9. **Proje** listesinde, **SharePointCommands** projesini seçin ve **Tamam** düğmesini seçin.
 
-10. Menü **çubuğunda Build**  >  **Build Solution**öğesini seçin ve ardından çözümün hatasız olarak derlendiğinizden emin olun.
+10. Menü **çubuğunda Build**  >  **Build Solution** öğesini seçin ve ardından çözümün hatasız olarak derlendiğinizden emin olun.
 
 ## <a name="test-the-wizard"></a>Sihirbazı test etme
  Artık Sihirbazı test etmeye hazırsınız. İlk olarak, Visual Studio 'nun deneysel örneğinde SiteColumnProjectItem çözümünde hata ayıklamaya başlayın. Ardından, Visual Studio 'nun Deneysel örneğindeki Site sütun projesi için Sihirbazı test edin. Son olarak, site sütununun beklendiği gibi çalıştığını doğrulamak için projeyi derleyin ve çalıştırın.
@@ -477,7 +479,7 @@ ms.locfileid: "91585464"
 
 4. **Özel durumlar** iletişim kutusunda, **ortak dil çalışma zamanı özel durumları** için **oluşturulan** ve **Kullanıcı tarafından işlenmeyen** onay kutularının temizlenmiş olduğundan emin olun ve **Tamam** düğmesini seçin.
 
-5. **F5** tuşunu seçerek veya menü **çubuğunda hata ayıklamayı**Başlat ' ı seçerek hata ayıklamayı başlatın  >  **Start Debugging**.
+5. **F5** tuşunu seçerek veya menü **çubuğunda hata ayıklamayı** Başlat ' ı seçerek hata ayıklamayı başlatın  >  **Start Debugging**.
 
      Visual Studio, uzantıyı%UserProfile%\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Contoso\Site Column\1.0 konumuna yükleyerek Visual Studio 'nun deneysel bir örneğini başlatır. Bu Visual Studio örneğinde Proje öğesini test edeceksiniz.
 
@@ -487,7 +489,7 @@ ms.locfileid: "91585464"
 
 2. **Visual C#** düğümünü veya **Visual Basic** düğümünü (proje şablonunuzun desteklediği dile bağlı olarak) genişletin, **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
 
-3. Proje şablonları listesinde **site sütunu**' nı seçin, projeyi **Sitecolumnwizardtest**olarak adlandırın ve **Tamam** düğmesini seçin.
+3. Proje şablonları listesinde **site sütunu**' nı seçin, projeyi **Sitecolumnwizardtest** olarak adlandırın ve **Tamam** düğmesini seçin.
 
 4. Visual Studio 'nun diğer örneğindeki kodun, daha önce yönteminde ayarladığınız kesme noktasında durduğunu doğrulayın `RunStarted` .
 
@@ -501,9 +503,9 @@ ms.locfileid: "91585464"
 
    - **Grup** listesinde, **özel Evet/Hayır sütunu**' nı seçin.
 
-   - **Ad** kutusuna **Evet/Hayır sütunumu**girin ve ardından **son** düğmesini seçin.
+   - **Ad** kutusuna **Evet/Hayır sütunumu** girin ve ardından **son** düğmesini seçin.
 
-     **Çözüm Gezgini**, yeni bir proje görünür ve **alan1**adlı bir proje öğesi içerir ve Visual Studio projenin *Elements.xml* dosyasını düzenleyicide açar.
+     **Çözüm Gezgini**, yeni bir proje görünür ve **alan1** adlı bir proje öğesi içerir ve Visual Studio projenin *Elements.xml* dosyasını düzenleyicide açar.
 
 8. *Elements.xml* , sihirbazda belirttiğiniz değerleri içerdiğini doğrulayın.
 
@@ -518,9 +520,9 @@ ms.locfileid: "91585464"
 
 2. **Site eylemleri** menüsünde, **site ayarları**' nı seçin.
 
-3. Site Ayarları sayfasında, **galeriler**altında, **site sütunları** bağlantısını seçin.
+3. Site Ayarları sayfasında, **galeriler** altında, **site sütunları** bağlantısını seçin.
 
-4. Site sütunları listesinde, **özel bir Evet/Hayır** sütun grubunun **Evet/Hayır sütunu**adlı bir sütun içerdiğini doğrulayın ve sonra Web tarayıcısını kapatın.
+4. Site sütunları listesinde, **özel bir Evet/Hayır** sütun grubunun **Evet/Hayır sütunu** adlı bir sütun içerdiğini doğrulayın ve sonra Web tarayıcısını kapatın.
 
 ## <a name="clean-up-the-development-computer"></a>Geliştirme bilgisayarını Temizleme
  Proje öğesini sınamayı bitirdikten sonra, Visual Studio 'nun deneysel örneğinden proje şablonunu kaldırın.

@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: Bulucu yöntemi ekleme | Microsoft Docs'
+description: Visual Studio 'da, Iş verileri bağlantısı (BDC) hizmetinin bir SharePoint Web Bölümü veya listesindeki varlıkların listesini görüntülemesini sağlayan bir bulucu yöntemi ekleyin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -17,23 +19,23 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 1fa8f8eb34943cc17bc6cabca8e93ea7569a7ba6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b7e2bb74278194878ed4496c12c918707cdc1e6e
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016723"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915095"
 ---
 # <a name="how-to-add-a-finder-method"></a>Nasıl yapılır: Bulucu yöntemi ekleme
   Iş verileri bağlantısı (BDC) hizmetini bir Web Bölümü veya listesindeki varlıkların listesini görüntüleyecek şekilde etkinleştirmek için bir *Bulucu* yöntemi oluşturmanız gerekir. Bir bulucu yöntemi, bir varlık örnekleri koleksiyonu döndüren özel bir yöntemdir. Daha fazla bilgi için bkz. [Iş verileri bağlantı modeli tasarlama](../sharepoint/designing-a-business-data-connectivity-model.md).
 
 ### <a name="to-create-a-finder-method"></a>Bir bulucu yöntemi oluşturmak için
 
-1. **IVB tasarımcısında**bir varlık seçin.
+1. **IVB tasarımcısında** bir varlık seçin.
 
     Daha fazla bilgi için bkz. [nasıl yapılır: bir modele varlık ekleme](../sharepoint/how-to-add-an-entity-to-a-model.md).
 
-2. Menü çubuğunda, **View**  >  **diğer Windows**  >  **bdc yöntemi ayrıntılarını**görüntüle ' yi seçin.
+2. Menü çubuğunda, **View**  >  **diğer Windows**  >  **bdc yöntemi ayrıntılarını** görüntüle ' yi seçin.
 
     **IVB yöntemi ayrıntıları** penceresi açılır. **IVB yöntemi ayrıntıları** penceresi hakkında daha fazla bilgi için bkz. [BDC modeli tasarım araçlarına genel bakış](../sharepoint/bdc-model-design-tools-overview.md).
 

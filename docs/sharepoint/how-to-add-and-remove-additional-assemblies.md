@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: ek derlemeler ekleme ve kaldırma | Microsoft Docs'
+description: SharePoint çözüm paketlerinde ek derlemeler eklemeyi ve kaldırmayı öğrenin. Ayrıca, güvenli denetimler ve sınıf kaynakları ekleyin veya silin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 07b9016a4e246d3ed5a2697d924f556517a8226f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 41b41ccd5eda2a44457adf23302a833574dade9e
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86014835"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96914978"
 ---
 # <a name="how-to-add-and-remove-additional-assemblies"></a>Nasıl yapılır: ek derlemeler ekleme ve kaldırma
   Bir SharePoint paketi işlevselliği veya verileri için diğer derlemelere bağımlıysa, derlemeleri çözüm paketinize (. wsp) ekleyebilirsiniz. Bu şekilde, SharePoint sunucusu özel derlemelerin bir paket ile yüklendiğinden emin olmanızı sağlar.
@@ -31,7 +33,7 @@ ms.locfileid: "86014835"
 
 #### <a name="to-add-an-existing-assembly"></a>Varolan bir derlemeyi eklemek için
 
-1. **Paket Tasarımcısını**açın. Daha fazla bilgi için bkz. [nasıl yapılır: bir SharePoint çözüm paketini özelleştirme](../sharepoint/how-to-customize-a-sharepoint-solution-package.md).
+1. **Paket Tasarımcısını** açın. Daha fazla bilgi için bkz. [nasıl yapılır: bir SharePoint çözüm paketini özelleştirme](../sharepoint/how-to-customize-a-sharepoint-solution-package.md).
 
 2. **Gelişmiş** sekmesini seçin.
 
@@ -41,11 +43,11 @@ ms.locfileid: "86014835"
 
 4. Üç nokta (![ASP.net Mobile Designer elips](../sharepoint/media/mwellipsis.gif "ASP.NET Mobile Designer elips")) seçin ve ardından eklemek istediğiniz derlemeyi seçin. Taşınabilirlik amacıyla seçili derlemeye göreli bir yol kullanmanızı öneririz.
 
-5. **Dağıtım hedefi**için, derlemeyi genel bütünleştirilmiş kod önbelleğine dağıtmak üzere **GlobalAssemblyCache** seçenek düğmesini seçin veya derlemeyi SharePoint çalıştıran sunucudaki WebApplication klasörüne dağıtmak için **WebApplication** seçenek düğmesini seçin.
+5. **Dağıtım hedefi** için, derlemeyi genel bütünleştirilmiş kod önbelleğine dağıtmak üzere **GlobalAssemblyCache** seçenek düğmesini seçin veya derlemeyi SharePoint çalıştıran sunucudaki WebApplication klasörüne dağıtmak için **WebApplication** seçenek düğmesini seçin.
 
 #### <a name="to-add-an-assembly-from-project-output"></a>Proje çıktısından bir derleme eklemek için
 
-1. **Paket Tasarımcısını**açın.
+1. **Paket Tasarımcısını** açın.
 
      Daha fazla bilgi için bkz. [nasıl yapılır: bir SharePoint çözüm paketini özelleştirme](../sharepoint/how-to-customize-a-sharepoint-solution-package.md).
 
@@ -57,7 +59,7 @@ ms.locfileid: "86014835"
 
 4. **Kaynak proje** listesinde, eklemek istediğiniz kaynak projeyi seçin.
 
-5. **Dağıtım hedefi**için, derlemeyi genel bütünleştirilmiş kod önbelleğine dağıtmak üzere **GlobalAssemblyCache** seçenek düğmesini seçin veya derlemeyi SharePoint çalıştıran sunucudaki WebApplication klasörüne dağıtmak için **WebApplication** seçenek düğmesini seçin.
+5. **Dağıtım hedefi** için, derlemeyi genel bütünleştirilmiş kod önbelleğine dağıtmak üzere **GlobalAssemblyCache** seçenek düğmesini seçin veya derlemeyi SharePoint çalıştıran sunucudaki WebApplication klasörüne dağıtmak için **WebApplication** seçenek düğmesini seçin.
 
 #### <a name="to-add-a-safe-control"></a>Güvenli denetim eklemek için
 
@@ -84,7 +86,7 @@ ms.locfileid: "86014835"
 
 #### <a name="to-delete-an-existing-assembly"></a>Varolan bir derlemeyi silmek için
 
-1. **Paket Tasarımcısını**açın. Daha fazla bilgi için bkz. [nasıl yapılır: bir SharePoint çözüm paketini özelleştirme](../sharepoint/how-to-customize-a-sharepoint-solution-package.md).
+1. **Paket Tasarımcısını** açın. Daha fazla bilgi için bkz. [nasıl yapılır: bir SharePoint çözüm paketini özelleştirme](../sharepoint/how-to-customize-a-sharepoint-solution-package.md).
 
 2. **Gelişmiş** sekmesini seçin.
 

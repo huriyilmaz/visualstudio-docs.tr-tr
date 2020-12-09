@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: bir silici yöntemi ekleme | Microsoft Docs'
+description: Son kullanıcının bir SharePoint sitesindeki dış listeden bir veri kaydını silebilmesi için, Visual Studio 'nun BDC Tasarımcısı 'nda bir deleter yöntemi ekleme hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -19,21 +21,21 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: dd97d28936e9f0cc50e9064fdc1a6a64bb20fc77
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a5e41fbb4f70bd3f5ae2db72b630ae6e524d3def
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86017035"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915446"
 ---
 # <a name="how-to-add-a-deleter-method"></a>Nasıl yapılır: bir silici yöntemi ekleme
   Bir son kullanıcının, modele bir deleter yöntemi ekleyerek bir SharePoint sitesindeki dış listeden bir veri kaydını silmesine izin verebilirsiniz. Daha fazla bilgi için bkz. [iş verileri bağlantı modeli tasarlama](../sharepoint/designing-a-business-data-connectivity-model.md).
 
 ### <a name="to-create-a-deleter-method"></a>Bir deleter yöntemi oluşturmak için
 
-1. **IVB tasarımcısında**bir varlık seçin.
+1. **IVB tasarımcısında** bir varlık seçin.
 
-2. Menü çubuğunda, **View**  >  **diğer Windows**  >  **bdc yöntemi ayrıntılarını**görüntüle ' yi seçin.
+2. Menü çubuğunda, **View**  >  **diğer Windows**  >  **bdc yöntemi ayrıntılarını** görüntüle ' yi seçin.
 
     **IVB yöntemi ayrıntıları** penceresi açılır. Bu pencere hakkında daha fazla bilgi için bkz. [BDC modeli tasarım araçlarına genel bakış](../sharepoint/bdc-model-design-tools-overview.md).
 
@@ -41,7 +43,7 @@ ms.locfileid: "86017035"
 
     Visual Studio, modele aşağıdaki öğeleri ekler. Bu öğeler **BDC Yöntem ayrıntıları** penceresinde görüntülenir.
 
-   - **Delete**adlı bir yöntem.
+   - **Delete** adlı bir yöntem.
 
    - Yöntemi için bir giriş parametresi.
 

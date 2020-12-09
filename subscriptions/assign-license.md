@@ -7,12 +7,12 @@ ms.assetid: 4e529a43-7aed-4eee-895d-862a631952df
 ms.date: 09/21/2020
 ms.topic: conceptual
 description: Yöneticilerin abonelere nasıl lisans atayabileceği hakkında bilgi edinin
-ms.openlocfilehash: 95e0358a39ccb88ed93f8e5bcee11d2b36d12d48
-ms.sourcegitcommit: 47da50a74fcd3db66d97cb20accac983bc41912f
+ms.openlocfilehash: dd80a14a3ff57100f210fd7ae1b882c0ab7a9faf
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96863120"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915420"
 ---
 # <a name="assign-licenses-in-the-visual-studio-subscriptions-administration-portal"></a>Visual Studio abonelikleri yönetim portalı 'nda lisans atama
 Visual Studio abonelikleri Yöneticisi olarak, bireysel kullanıcılara ve Kullanıcı gruplarına abonelik atamak için yönetim portalını kullanabilirsiniz.
@@ -58,7 +58,7 @@ Abonelik avantajlarına erişebilmeleri için bir Visual Studio aboneliğini yen
 ## <a name="why-use-a-different-notification-email-address"></a>Neden farklı bir bildirim e-posta adresi kullanmalısınız?
 Bazı kuruluşlar, e-posta hizmetlerini diğer etki alanlarından gelen e-postaları engelleyecek şekilde ayarladı.  Gelen e-postaların engellenmesi, aboneler ve yöneticilerin önemli iletişimleri kaçırmayacağı anlamına gelir:
 - Aboneler, bir aboneliğin atandığı bir bildirim almaz.  Bu, bazı avantajlardan bazılarını etkinleştirmesini de engeller.  
-- GitHub Enterprise ile Visual Studio abonelikleri atanmış aboneler, GitHub kuruluşunuza katılma davetini almaz, yani daveti kabul edemeyecektir. GitHub kuruluşunuza erişim kazanmak için e-postayla gönderilen daveti kabul etmelidir. 
+- GitHub Enterprise ile Visual Studio abonelikleri atanmış aboneler, GitHub kuruluşunuza katılma davetini almaz, yani daveti kabul edemeyecektir. GitHub kuruluşunuza erişim kazanmak için e- **postayla gönderilen daveti kabul etmelidir** . 
 - Yöneticilere bir sözleşmeye eklendiğinde bildirimde bulunulmayacak, aylık yönetici deyimlerini veya abonelikleri yönetme biçimini etkileyen özellik değişikliklerinin bildirimlerini alma.
 
 Bir bildirim e-posta adresi kullanmak, abonelerin, oturum açma e-posta adreslerinin işlevlerini değiştirmeden abonelikleriyle ilgili önemli iletişimler almasına izin verir.  

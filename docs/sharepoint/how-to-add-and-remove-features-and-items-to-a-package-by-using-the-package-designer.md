@@ -1,6 +1,8 @@
 ---
 title: 'Paket Tasarımcısı: Ekle & özellikleri ve öğeleri pakete kaldır'
 titleSuffix: ''
+description: Visual Studio 'da paket tasarımcısını kullanarak bir SharePoint paketine nasıl özellik ve öğe ekleneceğini ve kaldırılacağını inceleyin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 86dde3abc86ff42d2e558626abdb5faee7e5c90e
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 45c8da30a059599a291b18155dc48c4521d6d875
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585608"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96914952"
 ---
 # <a name="how-to-add-and-remove-features-and-items-to-a-package-by-using-the-package-designer"></a>Nasıl yapılır: Paket Tasarımcısını kullanarak bir pakete Özellikler ve öğeler ekleme ve kaldırma
   Bir SharePoint çözümü oluşturduğunuzda, Visual Studio varsayılan SharePoint özelliklerini çözümdeki pakete ekler. Son dağıtımdan önce SharePoint paketini değiştirmek için SharePoint proje öğeleri ve özellikleri ekleyebilir ve kaldırabilirsiniz.
@@ -32,7 +34,7 @@ ms.locfileid: "91585608"
 
 #### <a name="to-add-sharepoint-features-with-the-package-designer"></a>Paket Tasarımcısı ile SharePoint özellikleri eklemek için
 
-1. **Paket Tasarımcısını**açın.
+1. **Paket Tasarımcısını** açın.
 
     Daha fazla bilgi için bkz. [nasıl yapılır: bir SharePoint çözüm paketini özelleştirme](../sharepoint/how-to-customize-a-sharepoint-solution-package.md).
 

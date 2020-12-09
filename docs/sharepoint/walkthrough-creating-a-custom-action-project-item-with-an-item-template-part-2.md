@@ -1,6 +1,8 @@
 ---
 title: Öğe şablonu, Bölüm 2 ile özel eylem proje öğesi oluşturma
 titleSuffix: ''
+description: Bu kılavuzda, bir SharePoint sitesine özel eylem projesi öğesi eklemek için bir öğe şablonu kullandıklarında kullanıcılardan bilgi toplamak için bir sihirbaz ekleyin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 957af3fdb4a86f4973ff8ac24251bae923ec299c
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: fe283da2c2a81827ca70414315278cebd775873a
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585477"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915219"
 ---
 # <a name="walkthrough-create-a-custom-action-project-item-with-an-item-template-part-2"></a>İzlenecek yol: öğe şablonu, Bölüm 2 ile özel bir eylem proje öğesi oluşturma
   Özel bir SharePoint proje öğesi türü tanımladıktan ve Visual Studio 'daki bir öğe şablonuyla ilişkilendirdikten sonra, şablon için bir sihirbaz sağlamak isteyebilirsiniz. Bir projeye proje öğesinin yeni bir örneğini eklemek için şablonunuzu kullandıklarında kullanıcılardan bilgi toplamak için Sihirbazı kullanabilirsiniz. Topladığınız bilgiler Proje öğesini başlatmak için kullanılabilir.
@@ -100,7 +102,7 @@ ms.locfileid: "91585477"
 
 8. **Çözüm Gezgini**, ItemTemplateWizard projesi için **Başvurular** klasöründe **EnvDTE** başvurusunu seçin.
 
-9. **Özellikler** penceresinde, **birlikte çalışma türlerini katıştır** özelliğinin değerini **false**olarak değiştirin.
+9. **Özellikler** penceresinde, **birlikte çalışma türlerini katıştır** özelliğinin değerini **false** olarak değiştirin.
 
 ## <a name="define-the-default-location-and-id-strings-for-custom-actions"></a>Özel eylemler için varsayılan konumu ve KIMLIK dizelerini tanımlayın
  Her özel eylemin, `GroupID` `Location` `CustomAction` *Elements.xml* dosyasındaki öğesinin ve ÖZNITELIKLERINDE belirtilen bir konum ve kimliği vardır. Bu adımda, ItemTemplateWizard projesinde bu öznitelikler için geçerli dizelerin bazılarını tanımlarsınız. Bu izlenecek yolu tamamladığınızda, kullanıcılar sihirbazda bir konum ve KIMLIK belirtmede bu dizeler özel eylem proje öğesindeki *Elements.xml* dosyasına yazılır.
@@ -159,7 +161,7 @@ ms.locfileid: "91585477"
 
 #### <a name="to-build-your-project"></a>Projenizi derlemek için
 
-1. Menü **çubuğunda Build**  >  **Build Solution**öğesini seçin.
+1. Menü **çubuğunda Build**  >  **Build Solution** öğesini seçin.
 
 ## <a name="associate-the-wizard-with-the-item-template"></a>Sihirbazı öğe şablonuyla ilişkilendir
  Sihirbazı uyguladığınıza göre, üç ana adımı tamamlayarak **özel eylem** öğesi şablonuyla ilişkilendirmeniz gerekir:
@@ -180,7 +182,7 @@ ms.locfileid: "91585477"
 
 4. **Tanımlayıcı ad anahtarı oluştur** iletişim kutusunda bir ad girin, **anahtar dosyamı parolayla koru** onay kutusunu temizleyin ve **Tamam** düğmesini seçin.
 
-5. Menü **çubuğunda Build**  >  **Build Solution**öğesini seçin.
+5. Menü **çubuğunda Build**  >  **Build Solution** öğesini seçin.
 
 #### <a name="to-get-the-public-key-token-for-the-wizard-assembly"></a>Sihirbaz derlemesinin ortak anahtar belirtecini almak için
 
@@ -249,13 +251,13 @@ ms.locfileid: "91585477"
 
      **Yeni varlık Ekle** iletişim kutusu görüntülenir.
 
-3. **Tür** listesinde **Microsoft. VisualStudio. Assembly**öğesini seçin.
+3. **Tür** listesinde **Microsoft. VisualStudio. Assembly** öğesini seçin.
 
-4. **Kaynak** listesinde, **Geçerli çözümde bir proje**seçin.
+4. **Kaynak** listesinde, **Geçerli çözümde bir proje** seçin.
 
 5. **Proje** listesinde **ItemTemplateWizard**' ı seçin ve ardından **Tamam** düğmesini seçin.
 
-6. Menü **çubuğunda Build**  >  **Build Solution**öğesini seçin ve ardından çözümün hatasız derlendiğinden emin olun.
+6. Menü **çubuğunda Build**  >  **Build Solution** öğesini seçin ve ardından çözümün hatasız derlendiğinden emin olun.
 
 ## <a name="test-the-wizard"></a>Sihirbazı test etme
  Artık Sihirbazı test etmeye hazırsınız. İlk olarak, Visual Studio 'nun Deneysel örneğindeki CustomActionProjectItem çözümünde hata ayıklamaya başlayın. Ardından, Visual Studio 'nun Deneysel örneğindeki bir SharePoint projesindeki özel eylem proje öğesi için Sihirbazı test edin. Son olarak, özel eylemin beklendiği gibi çalıştığını doğrulamak için SharePoint projesini derleyin ve çalıştırın.
@@ -270,7 +272,7 @@ ms.locfileid: "91585477"
 
 4. **Özel durumlar** iletişim kutusunda, **ortak dil çalışma zamanı özel durumları** için **oluşturulan** ve **Kullanıcı tarafından işlenmeyen** onay kutularının temizlenmiş olduğundan emin olun ve **Tamam** düğmesini seçin.
 
-5. **F5** tuşunu seçerek veya menü **çubuğunda hata ayıklamayı**Başlat ' ı seçerek hata ayıklamayı başlatın  >  **Start Debugging**.
+5. **F5** tuşunu seçerek veya menü **çubuğunda hata ayıklamayı** Başlat ' ı seçerek hata ayıklamayı başlatın  >  **Start Debugging**.
 
      Visual Studio, uzantıyı%UserProfile%\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Contoso\Custom Action Project ıtem\1.0 konumuna yükleyerek Visual Studio 'nun deneysel bir örneğini başlatır. Bu Visual Studio örneğinde Proje öğesini test edeceksiniz.
 
@@ -280,7 +282,7 @@ ms.locfileid: "91585477"
 
 2. **Visual C#** veya **Visual Basic** düğümünü (öğe şablonunuzun desteklediği dile bağlı olarak) genişletin, **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
 
-3. Proje şablonları listesinde **SharePoint 2010 projesi**' ni seçin, projeyi **CustomActionWizardTest**olarak adlandırın ve **Tamam** düğmesini seçin.
+3. Proje şablonları listesinde **SharePoint 2010 projesi**' ni seçin, projeyi **CustomActionWizardTest** olarak adlandırın ve **Tamam** düğmesini seçin.
 
 4. **SharePoint Özelleştirme Sihirbazı**'nda, hata ayıklama için kullanmak istediğiniz sitenin URL 'sini girin ve ardından **son** düğmesini seçin.
 
@@ -302,7 +304,7 @@ ms.locfileid: "91585477"
 
 12. **Başlık** kutusuna **SharePoint Geliştirici Merkezi**' ni girin.
 
-13. **Açıklama** kutusuna **SharePoint Geliştirici Merkezi Web sitesini açar**yazın.
+13. **Açıklama** kutusuna **SharePoint Geliştirici Merkezi Web sitesini açar** yazın.
 
 14. **URL** kutusuna girin **https://docs.microsoft.com/sharepoint/dev/** ve ardından **son** düğmesini seçin.
 
@@ -310,7 +312,7 @@ ms.locfileid: "91585477"
 
 #### <a name="to-test-the-custom-action-in-sharepoint"></a>SharePoint 'te özel eylemi test etmek için
 
-1. Visual Studio 'nun deneysel örneğinde **F5** tuşunu seçin veya menü çubuğunda **Hata Ayıkla**  >  **Başlat hata**Ayıkla ' yı seçin.
+1. Visual Studio 'nun deneysel örneğinde **F5** tuşunu seçin veya menü çubuğunda **Hata Ayıkla**  >  **Başlat hata** Ayıkla ' yı seçin.
 
      Özel eylem paketlenir ve projenin **site URL 'si** özelliği tarafından belirtilen SharePoint sitesine dağıtılır ve Web tarayıcısı bu sitenin varsayılan sayfasında açılır.
 

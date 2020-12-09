@@ -1,5 +1,7 @@
 ---
 title: Özel proje ve öğe şablonları oluşturma | Microsoft Docs
+description: Visual Studio SDK 'daki şablon oluşturma şablonlarının şablonları daha büyük uzantılara ekleme hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 3/16/2019
 ms.topic: overview
 ms.assetid: 586da5dc-f678-402b-afd0-0332959fd7a6
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: eb6bcd63896a11f9ca1eabddddc17b3e52865e5b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 78770c74e5b866ad6791db01a448d46231edfd2a
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88801262"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915628"
 ---
 # <a name="create-custom-project-and-item-templates"></a>Özel proje ve öğe şablonları oluşturma
 
@@ -32,7 +34,7 @@ Temel şablon oluşturma senaryolarında, sıkıştırılmış bir dosyaya çık
 
 1. Proje şablonu projesi oluşturun. Proje şablonunu **Yeni proje** iletişim kutusunda "proje şablonu" arayarak ve C# ya da Visual Basic sürümünü seçerek bulabilirsiniz.
 
-     Şablon bir sınıf dosyası, bir simge, *. vstemplate* dosyası, *ProjectTemplate. vbproj* veya *ProjectTemplate. csproj*adlı düzenlenebilir bir proje dosyası ve genellikle *kaynaklar. resx* dosyası, bir *AssemblyInfo* dosyası ve bir *. Settings* dosyası gibi diğer proje türleri tarafından oluşturulan bazı dosyaları oluşturur. Her kod dosyası uygun yerlerde ortak parametre alternatifleri içerir.
+     Şablon bir sınıf dosyası, bir simge, *. vstemplate* dosyası, *ProjectTemplate. vbproj* veya *ProjectTemplate. csproj* adlı düzenlenebilir bir proje dosyası ve genellikle *kaynaklar. resx* dosyası, bir *AssemblyInfo* dosyası ve bir *. Settings* dosyası gibi diğer proje türleri tarafından oluşturulan bazı dosyaları oluşturur. Her kod dosyası uygun yerlerde ortak parametre alternatifleri içerir.
 
 ![Proje Şablonu proje seçimi](media/project-template-selection.png)
 
@@ -72,17 +74,17 @@ Temel şablon oluşturma senaryolarında, sıkıştırılmış bir dosyaya çık
 
 1. VSıX projesi oluşturun. Daha fazla bilgi için bkz. [VSIX proje şablonu](../extensibility/vsix-project-template.md).
 
-2. VSıX projesini başlangıç projesi olarak ayarlayın. **Çözüm GEZGINI**VSIX projesi düğümünü seçin, sağ tıklayın ve **Başlangıç projesi olarak ayarla**' yı seçin.
+2. VSıX projesini başlangıç projesi olarak ayarlayın. **Çözüm GEZGINI** VSIX projesi düğümünü seçin, sağ tıklayın ve **Başlangıç projesi olarak ayarla**' yı seçin.
 
 3. Proje şablonu projesini VSıX projesinin bir varlığı olarak ayarlayın. *. Valtmanifest* dosyasını açın. **Varlıklar** sekmesine gidin ve **Yeni**' yi seçin.
 
-    1. **Tür** alanını **Microsoft. VisualStudio. ProjectTemplate** veya **Microsoft. VisualStudio. ItemTemplate**olarak ayarlayın.
+    1. **Tür** alanını **Microsoft. VisualStudio. ProjectTemplate** veya **Microsoft. VisualStudio. ItemTemplate** olarak ayarlayın.
 
     2. Kaynak için **geçerli çözüm ' de bir proje** seçin ve ardından şablonunuzu içeren projeyi seçin.
 
-4. Çözümü oluşturun ve **F5**tuşuna basın. Deneysel örnek görüntülenir.
+4. Çözümü oluşturun ve **F5** tuşuna basın. Deneysel örnek görüntülenir.
 
-5. Proje şablonu projesi için, proje şablonunuzu,**File**Visual C# veya Visual Basic düğümündeki **Yeni proje** iletişim kutusunda (dosya  >  **Yeni**  >  **Proje**) listelendiğini görmeniz gerekir. Bir öğe şablonu projesi için, öğe şablonunuzun **Yeni öğe Ekle** iletişim kutusunda listelendiğini görmeniz gerekir. **Yeni öğe Ekle** iletişim kutusunu görüntülemek için, **Çözüm Gezgini**, proje düğümünü seçin ve **Add**  >  **Yeni öğe**Ekle ' yi seçin.
+5. Proje şablonu projesi için, proje şablonunuzu,**File** Visual C# veya Visual Basic düğümündeki **Yeni proje** iletişim kutusunda (dosya  >  **Yeni**  >  **Proje**) listelendiğini görmeniz gerekir. Bir öğe şablonu projesi için, öğe şablonunuzun **Yeni öğe Ekle** iletişim kutusunda listelendiğini görmeniz gerekir. **Yeni öğe Ekle** iletişim kutusunu görüntülemek için, **Çözüm Gezgini**, proje düğümünü seçin ve **Add**  >  **Yeni öğe** Ekle ' yi seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

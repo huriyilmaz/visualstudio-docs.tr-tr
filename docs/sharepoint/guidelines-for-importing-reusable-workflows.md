@@ -1,5 +1,7 @@
 ---
 title: Yeniden kullanılabilir Iş akışlarını Içeri aktarma yönergeleri | Microsoft Docs
+description: SharePoint Designer 'da oluşturulan yeniden kullanılabilir iş akışlarını Visual Studio 'ya aktarmak için yönergeleri gözden geçirin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,15 +17,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: bb386a2d80931ece415b0b3939f2947678808261
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: aab3d3b73fac086c4ff5aee8b5319a76e9aaea15
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62557194"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915524"
 ---
 # <a name="guidelines-for-importing-reusable-workflows"></a>Yeniden kullanılabilir iş akışlarını içeri aktarma yönergeleri
-  SharePoint Designer 'da oluşturulan yeniden kullanılabilir iş akışlarını içeri aktarmak için, içinde yeniden kullanılabilir SharePoint 2010 Iş akışı proje şablonunu kullanın [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . Bu şablon *bildirim temelli* bir *iş akışını* içeri aktarır ( [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] -yalnızca) ve bir *kod akışına*dönüştürerek, veya kod ile geliştirebileceğinizi bir iş akışıdır [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] [!INCLUDE[csprcs](../sharepoint/includes/csprcs-md.md)] . [!INCLUDE[crdefault](../sharepoint/includes/crdefault-md.md)][Izlenecek yol: bir SharePoint Designer yeniden kullanılabilir iş akışını Visual Studio 'Ya Içeri aktarma](../sharepoint/walkthrough-import-a-sharepoint-designer-reusable-workflow-into-visual-studio.md).
+  SharePoint Designer 'da oluşturulan yeniden kullanılabilir iş akışlarını içeri aktarmak için, içinde yeniden kullanılabilir SharePoint 2010 Iş akışı proje şablonunu kullanın [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . Bu şablon *bildirim temelli* bir *iş akışını* içeri aktarır ( [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] -yalnızca) ve bir *kod akışına* dönüştürerek, veya kod ile geliştirebileceğinizi bir iş akışıdır [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] [!INCLUDE[csprcs](../sharepoint/includes/csprcs-md.md)] . [!INCLUDE[crdefault](../sharepoint/includes/crdefault-md.md)][Izlenecek yol: bir SharePoint Designer yeniden kullanılabilir iş akışını Visual Studio 'Ya Içeri aktarma](../sharepoint/walkthrough-import-a-sharepoint-designer-reusable-workflow-into-visual-studio.md).
 
  Bununla birlikte, Içeri aktarma yeniden kullanılabilir SharePoint 2010 Iş akışı şablonu yalnızca Grup çözümlerini içeri aktarabilir. İş akışınızı bir korumalı çözüm olarak dağıtmak istiyorsanız, SharePoint 2010 çözüm paketi şablonunu Içeri Aktar ' ı kullanarak içeri aktarın. Bununla birlikte, bunu yaparak kod iş akışına dönüştüremezsiniz ve bu şekilde değiştiremeyecektir.
 
@@ -31,7 +33,7 @@ ms.locfileid: "62557194"
  Yeniden kullanılabilir bir iş akışını Içeri aktarma yeniden kullanılabilir SharePoint 2010 Iş akışı şablonunu kullanarak içeri aktarırsanız, çözümü başka bir SharePoint çözümüne benzer şekilde çalıştırabilir veya değiştirebilirsiniz [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , ancak bazı öğeleri el ile çözmeniz gerekebilir.
 
 ### <a name="import-task-forms"></a>Görev formlarını içeri aktarma
- Yeniden kullanılabilir SharePoint 2010 Iş akışı proje şablonu, tüm başlatma ve ilişkilendirme formlarını içeri aktarır, ancak yalnızca bir görev formu içeri aktarır çünkü kod iş akışı şeması yalnızca bir görev formuna izin verir. Özgün iş akışı çözümünden gelen tüm ek görev formları **Çözüm Gezgini**Içindeki **diğer içeri aktarılan dosyalar** klasörüne konur.
+ Yeniden kullanılabilir SharePoint 2010 Iş akışı proje şablonu, tüm başlatma ve ilişkilendirme formlarını içeri aktarır, ancak yalnızca bir görev formu içeri aktarır çünkü kod iş akışı şeması yalnızca bir görev formuna izin verir. Özgün iş akışı çözümünden gelen tüm ek görev formları **Çözüm Gezgini** Içindeki **diğer içeri aktarılan dosyalar** klasörüne konur.
 
 ## <a name="import-reusable-workflows-by-using-the-import-sharepoint-2010-solution-package-template"></a>Yeniden kullanılabilir iş akışlarını içeri aktarma SharePoint 2010 çözüm paketi şablonunu kullanarak
  SharePoint 2010 çözüm paketi şablonunu Içeri Aktar ' ı kullanarak yeniden kullanılabilir bir iş akışını içeri aktarırsanız, aşağıdaki sorunları göz önünde bulundurmanız gerekir:

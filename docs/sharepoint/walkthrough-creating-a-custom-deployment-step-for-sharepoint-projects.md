@@ -1,5 +1,7 @@
 ---
 title: SharePoint projeleri için özel dağıtım adımı oluşturma
+description: Bu izlenecek yolda SharePoint proje çözümlerini SharePoint çalıştıran bir sunucuda yükseltmek için özel bir dağıtım adımı oluşturun.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8b739db2755336958492a0aa67c9d5f0809f74bb
-ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
+ms.openlocfilehash: ea8e6a09c512ed5edb6098183c66361e96537f54
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90740025"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96914939"
 ---
 # <a name="walkthrough-create-a-custom-deployment-step-for-sharepoint-projects"></a>İzlenecek yol: SharePoint projeleri için özel bir dağıtım adımı oluşturma
   Bir SharePoint projesi dağıtırken, Visual Studio belirli bir sırada bir dizi dağıtım adımını yürütür. Visual Studio birçok yerleşik dağıtım adımı içerir, ancak kendi kendinize de oluşturabilirsiniz.
@@ -39,7 +41,7 @@ ms.locfileid: "90740025"
 
 - Yeni dağıtım adımını test etme.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için geliştirme bilgisayarında aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - Windows, SharePoint ve Visual Studio 'nun desteklenen sürümleri.
@@ -48,7 +50,7 @@ ms.locfileid: "90740025"
 
   İzlenecek yolu tamamlamak için aşağıdaki kavramların bilgisi yararlıdır, ancak gerekli değildir:
 
-- SharePoint için sunucu nesne modelini kullanma. Daha fazla bilgi için bkz. [SharePoint Foundation sunucu tarafı nesne modelini kullanma](/previous-versions/office/developer/sharepoint-2010/ee538251(v=office.14)).
+- SharePoint için sunucu nesne modelini kullanma. Daha fazla bilgi için bkz. [SharePoint Foundation Server-Side nesne modelini kullanma](/previous-versions/office/developer/sharepoint-2010/ee538251(v=office.14)).
 
 - SharePoint çözümleri. Daha fazla bilgi için bkz. [çözümlere genel bakış](/previous-versions/office/developer/sharepoint-2010/aa543214(v=office.14)).
 
@@ -78,9 +80,9 @@ ms.locfileid: "90740025"
 
 4. İletişim kutusunun üst kısmında, .NET Framework sürümleri listesinde **.NET Framework 4,5** ' ı seçin.
 
-5. **VSIX proje** şablonu ' nu seçin, projeyi **UpgradeDeploymentStep**olarak adlandırın ve **Tamam** düğmesini seçin.
+5. **VSIX proje** şablonu ' nu seçin, projeyi **UpgradeDeploymentStep** olarak adlandırın ve **Tamam** düğmesini seçin.
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**Çözüm Gezgini**Için **UpgradeDeploymentStep** projesini ekler.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**Çözüm Gezgini** Için **UpgradeDeploymentStep** projesini ekler.
 
 #### <a name="to-create-the-extension-project"></a>Uzantı projesini oluşturmak için
 
@@ -90,7 +92,7 @@ ms.locfileid: "90740025"
 
 3. İletişim kutusunun üst kısmında, .NET Framework sürümleri listesinde **.NET Framework 4,5** ' ı seçin.
 
-4. **Sınıf kitaplığı** proje şablonu ' nu seçin, projenin **DeploymentStep uzantısını**adlandırın ve **Tamam** düğmesini seçin.
+4. **Sınıf kitaplığı** proje şablonu ' nu seçin, projenin **DeploymentStep uzantısını** adlandırın ve **Tamam** düğmesini seçin.
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] çözüme **DeploymentStepExtension** projesini ekler ve varsayılan Class1 kod dosyasını açar.
 
@@ -100,11 +102,11 @@ ms.locfileid: "90740025"
 
 1. **Çözüm Gezgini**' de, UpgradeDeploymentStep çözüm düğümünün kısayol menüsünü açın, **Ekle**' yi ve ardından **Yeni proje**' yi seçin.
 
-2. **Yeni proje** iletişim kutusunda, **Visual C#** veya **Visual Basic**öğesini genişletin ve ardından **Windows** düğümünü seçin.
+2. **Yeni proje** iletişim kutusunda, **Visual C#** veya **Visual Basic** öğesini genişletin ve ardından **Windows** düğümünü seçin.
 
 3. İletişim kutusunun üst kısmında, .NET Framework sürümleri listesinde **.NET Framework 3,5** ' ı seçin.
 
-4. **Sınıf kitaplığı** proje şablonu ' nu seçin, projeyi **SharePointCommands**olarak adlandırın ve **Tamam** düğmesini seçin.
+4. **Sınıf kitaplığı** proje şablonu ' nu seçin, projeyi **SharePointCommands** olarak adlandırın ve **Tamam** düğmesini seçin.
 
      Visual Studio, çözüme **SharePointCommands** projesini ekler ve varsayılan Class1 kod dosyasını açar.
 
@@ -192,9 +194,9 @@ ms.locfileid: "90740025"
 
      Visual Studio, dosyayı bildirim düzenleyicisinde açar. Source. Extension. valtmanifest dosyası, tüm VSıX paketlerinin gerektirdiği uzantı. valtmanifest dosyasının temelini oluşturur. Bu dosya hakkında daha fazla bilgi için bkz. [VSIX uzantı şeması 1,0 başvurusu](/previous-versions/dd393700(v=vs.110)).
 
-2. **Ürün adı** kutusuna **SharePoint projeleri Için yükseltme dağıtım adımını**girin.
+2. **Ürün adı** kutusuna **SharePoint projeleri Için yükseltme dağıtım adımını** girin.
 
-3. **Yazar** kutusuna **contoso**girin.
+3. **Yazar** kutusuna **contoso** girin.
 
 4. **Açıklama** kutusuna, **SharePoint projelerinde kullanılabilecek özel bir yükseltme dağıtım adımı sağlar**.
 
@@ -202,12 +204,12 @@ ms.locfileid: "90740025"
 
      **Yeni varlık Ekle** iletişim kutusu görüntülenir.
 
-6. **Tür** listesinde, **Microsoft. VisualStudio. MefComponent**öğesini seçin.
+6. **Tür** listesinde, **Microsoft. VisualStudio. MefComponent** öğesini seçin.
 
     > [!NOTE]
     > Bu değer, `MefComponent` extension. valtmanifest dosyasındaki öğesine karşılık gelir. Bu öğe VSıX paketindeki bir uzantı derlemesinin adını belirtir. Daha fazla bilgi için bkz. [MefComponent öğesi (VSX şeması)](/previous-versions/visualstudio/visual-studio-2010/dd393736\(v\=vs.100\)).
 
-7. **Kaynak** listesinde, **Geçerli çözümde bir proje**seçin.
+7. **Kaynak** listesinde, **Geçerli çözümde bir proje** seçin.
 
 8. **Proje** listesinde **DeploymentStepExtension**' i seçin ve **Tamam** düğmesini seçin.
 
@@ -215,16 +217,16 @@ ms.locfileid: "90740025"
 
      **Yeni varlık Ekle** iletişim kutusu görüntülenir.
 
-10. **Tür** listesinde, **SharePoint. Commands. v4**girin.
+10. **Tür** listesinde, **SharePoint. Commands. v4** girin.
 
     > [!NOTE]
     > Bu öğe, Visual Studio uzantısına eklemek istediğiniz özel bir uzantıyı belirtir. Daha fazla bilgi için bkz. [varlık öğesi (VSX şeması)](/previous-versions/dd393737(v=vs.110)).
 
-11. **Kaynak** listesinde, **Geçerli çözümde bir proje**seçin.
+11. **Kaynak** listesinde, **Geçerli çözümde bir proje** seçin.
 
 12. **Proje** listesinde, **SharePointCommands**' i ve sonra **Tamam** düğmesini seçin.
 
-13. Menü **çubuğunda Build**  >  **Build Solution**öğesini seçin ve ardından çözümün hatasız derlendiğinden emin olun.
+13. Menü **çubuğunda Build**  >  **Build Solution** öğesini seçin ve ardından çözümün hatasız derlendiğinden emin olun.
 
 14. UpgradeDeploymentStep projesi için derleme çıkış klasörünün şimdi UpgradeDeploymentStep. vsix dosyasını içerdiğinden emin olun.
 
@@ -241,7 +243,7 @@ ms.locfileid: "90740025"
 
 2. DeploymentStepExtension projesinde, UpgradeStep kod dosyasını açın ve ardından ve yöntemlerinde ilk kod satırına bir kesme noktası ekleyin `CanExecute` `Execute` .
 
-3. **F5** tuşunu seçerek veya menü **çubuğunda hata ayıklamayı**Başlat ' ı seçerek hata ayıklamayı başlatın  >  **Start Debugging**.
+3. **F5** tuşunu seçerek veya menü **çubuğunda hata ayıklamayı** Başlat ' ı seçerek hata ayıklamayı başlatın  >  **Start Debugging**.
 
 4. Visual Studio, uzantıyı%UserProfile%\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Contoso\Upgrade dağıtım adımını SharePoint projeleri0 ' a ve Visual Studio 'nun deneysel bir örneğini başlatır. Bu Visual Studio örneğinde yükseltme dağıtım adımını test edeceksiniz.
 
@@ -255,7 +257,7 @@ ms.locfileid: "90740025"
 
     Ve için projeleri için [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)] .NET Framework gereklidir.
 
-4. Proje şablonları listesinde **SharePoint 2010 projesi**' ni seçin, projeyi **EmployeesListDefinition**olarak adlandırın ve **Tamam** düğmesini seçin.
+4. Proje şablonları listesinde **SharePoint 2010 projesi**' ni seçin, projeyi **EmployeesListDefinition** olarak adlandırın ve **Tamam** düğmesini seçin.
 
 5. **SharePoint Özelleştirme Sihirbazı**'nda, hata ayıklama için kullanmak istediğiniz sitenin URL 'sini girin.
 
@@ -272,7 +274,7 @@ ms.locfileid: "90740025"
 
 9. **Yeni öğe Ekle-EmployeesListDefinition** Iletişim kutusunda **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
 
-10. **Liste** öğesi şablonunu seçin, öğe **çalışanları listesini**adlandırın ve ardından **Ekle** düğmesini seçin.
+10. **Liste** öğesi şablonunu seçin, öğe **çalışanları listesini** adlandırın ve ardından **Ekle** düğmesini seçin.
 
      SharePoint Özelleştirme Sihirbazı görünür
 
@@ -337,9 +339,9 @@ ms.locfileid: "90740025"
 
 1. **Çözüm Gezgini**, **EmployeesListDefinition** proje düğümünü seçin.
 
-2. **Özellikler** penceresinde, **etkin dağıtım yapılandırma** özelliğinin **varsayılan**olarak ayarlandığından emin olun.
+2. **Özellikler** penceresinde, **etkin dağıtım yapılandırma** özelliğinin **varsayılan** olarak ayarlandığından emin olun.
 
-3. **F5** tuşunu seçin veya menü çubuğunda Hata **Ayıkla**  >  **Başlat hata**Ayıkla ' yı seçin.
+3. **F5** tuşunu seçin veya menü çubuğunda Hata **Ayıkla**  >  **Başlat hata** Ayıkla ' yı seçin.
 
 4. Projenin başarıyla yapılandırıldığını, Web tarayıcısının SharePoint sitesine açıldığını, Hızlı Başlatma çubuğundaki **listeler** öğesinin yeni **çalışanlar** listesini Içerdiğini ve **çalışanlar** listesinin Jim Hance girişini içerdiğini doğrulayın.
 
@@ -377,7 +379,7 @@ ms.locfileid: "90740025"
 
      Bu eylem, SharePoint sitesindeki **çalışanlar** listesinin varsayılan görünümünden bu alanları kaldırır.
 
-8. **F5** tuşunu seçerek veya menü **çubuğunda hata ayıklamayı**Başlat ' ı seçerek hata ayıklamayı başlatın  >  **Start Debugging**.
+8. **F5** tuşunu seçerek veya menü **çubuğunda hata ayıklamayı** Başlat ' ı seçerek hata ayıklamayı başlatın  >  **Start Debugging**.
 
 9. **Dağıtım çakışmaları** iletişim kutusunun göründüğünü doğrulayın.
 
@@ -406,9 +408,9 @@ ms.locfileid: "90740025"
 
 3. **Çalışanlar-yeni öğe** penceresinde, **başlık** kutusuna **tesisler Yöneticisi**' ni girin.
 
-4. **Ad** kutusuna **Andy**yazın.
+4. **Ad** kutusuna **Andy** yazın.
 
-5. **Şirket** kutusuna **contoso**yazın.
+5. **Şirket** kutusuna **contoso** yazın.
 
 6. **Kaydet** düğmesini seçin, yeni öğenin listede göründüğünü doğrulayın ve ardından Web tarayıcısını kapatın.
 
@@ -420,7 +422,7 @@ ms.locfileid: "90740025"
 
     Özellikler Düzenleyicisi/tasarımcı açılır.
 
-2. **SharePoint** sekmesinde, **etkin dağıtım yapılandırma** özelliğini **Yükselt**olarak ayarlayın.
+2. **SharePoint** sekmesinde, **etkin dağıtım yapılandırma** özelliğini **Yükselt** olarak ayarlayın.
 
     Bu özel dağıtım yapılandırması, yeni yükseltme dağıtım adımını içerir.
 
@@ -432,7 +434,7 @@ ms.locfileid: "90740025"
 
     Bu eylem, SharePoint sitesindeki **çalışanlar** listesinin varsayılan görünümünden bu alanları kaldırır.
 
-5. **F5** tuşunu seçerek veya menü **çubuğunda hata ayıklamayı**Başlat ' ı seçerek hata ayıklamayı başlatın  >  **Start Debugging**.
+5. **F5** tuşunu seçerek veya menü **çubuğunda hata ayıklamayı** Başlat ' ı seçerek hata ayıklamayı başlatın  >  **Start Debugging**.
 
 6. Visual Studio 'nun diğer örneğindeki kodun, daha önce yönteminde ayarladığınız kesme noktasında durduğunu doğrulayın `CanExecute` .
 
@@ -440,7 +442,7 @@ ms.locfileid: "90740025"
 
 8. Kodun daha önce yönteminde ayarladığınız kesme noktasında durduğunu doğrulayın `Execute` .
 
-9. **F5** tuşunu seçin veya menü çubuğunda **Hata Ayıkla**' yı seçerek  >  son saate**devam edin** .
+9. **F5** tuşunu seçin veya menü çubuğunda **Hata Ayıkla**' yı seçerek  >  son saate **devam edin** .
 
      Web tarayıcısı, SharePoint sitesini açar.
 
@@ -463,7 +465,7 @@ ms.locfileid: "90740025"
 
 3. **Ayarlar** grubunda, **Liste ayarları** öğesini seçin.
 
-4. **İzinler ve yönetim**altında **Bu listeyi Sil** komutunu seçin, listeyi geri dönüşüm kutusu 'na göndermek istediğinizi onaylamak için **Tamam** ' ı seçin ve ardından Web tarayıcısını kapatın.
+4. **İzinler ve yönetim** altında **Bu listeyi Sil** komutunu seçin, listeyi geri dönüşüm kutusu 'na göndermek istediğinizi onaylamak için **Tamam** ' ı seçin ve ardından Web tarayıcısını kapatın.
 
 #### <a name="to-remove-the-list-definition-from-the-sharepoint-site"></a>Liste tanımını SharePoint sitesinden kaldırmak için
 

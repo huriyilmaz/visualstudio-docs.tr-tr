@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: SharePoint özelliklerine öğe ekleme ve kaldırma | Microsoft Docs'
+description: Visual Studio 'da Özellik tasarımcısını kullanarak SharePoint proje öğelerini el ile SharePoint özelliklerine ekleyin ve kaldırın.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 27c6ebfb0b0cdbff0a184859ffa2a73acab809c1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dacfbf715ff37238af5332976313c3b592d21be6
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86014526"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96914926"
 ---
 # <a name="how-to-add-and-remove-items-to-sharepoint-features"></a>Nasıl yapılır: SharePoint özelliklerine öğe ekleme ve kaldırma
   Bir SharePoint çözümü oluşturduğunuzda, Visual Studio varsayılan SharePoint proje öğelerini özelliğinize ekler. Dağıtımdan önce SharePoint özelliğini değiştirmek için SharePoint proje öğeleri ekleyebilir ve kaldırabilirsiniz.

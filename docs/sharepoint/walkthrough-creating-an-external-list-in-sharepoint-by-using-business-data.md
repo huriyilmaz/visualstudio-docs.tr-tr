@@ -1,5 +1,7 @@
 ---
 title: İş verileri kullanarak SharePoint 'te dış liste oluşturma
+description: Bir iş veritabanındaki kişiler hakkında bilgi döndüren BDC hizmeti için bir model oluşturun, ardından bu modeli kullanarak SharePoint 'te bir dış liste oluşturun.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -19,12 +21,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9f4fe79c3a6f158eb61d624ce6c5e1566925e3fd
-ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
+ms.openlocfilehash: a791f94e46e16369392465e075ade92a833e2868
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90740064"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915342"
 ---
 # <a name="walkthrough-create-an-external-list-in-sharepoint-by-using-business-data"></a>İzlenecek yol: iş verileri kullanarak SharePoint 'te dış liste oluşturma
 
@@ -40,7 +42,7 @@ Bu izlenecek yol aşağıdaki görevleri gösterir:
 - Belirli bir bulucu yöntemi ekleniyor.
 - Projeyi test etme.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
@@ -54,9 +56,9 @@ Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vard�
 
      **Yeni proje** iletişim kutusu açılır.
 
-2. **Visual C#** veya **Visual Basic**altında **SharePoint** düğümünü genişletin ve ardından **2010** öğesini seçin.
+2. **Visual C#** veya **Visual Basic** altında **SharePoint** düğümünü genişletin ve ardından **2010** öğesini seçin.
 
-3. **Şablonlar** bölmesinde **SharePoint 2010 projesi**' ni seçin, projeyi **AdventureWorksTest**olarak adlandırın ve **Tamam** düğmesini seçin.
+3. **Şablonlar** bölmesinde **SharePoint 2010 projesi**' ni seçin, projeyi **AdventureWorksTest** olarak adlandırın ve **Tamam** düğmesini seçin.
 
      **SharePoint Özelleştirme Sihirbazı** görüntülenir. Bu sihirbazda, projede hata ayıklamak için kullanacağınız siteyi belirtebilir ve çözümün güven düzeyini ayarlayabilirsiniz.
 
@@ -70,7 +72,7 @@ Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vard�
 
      **Yeni öğe Ekle** iletişim kutusu açılır.
 
-8. **Şablonlar** bölmesinde, **Iş verileri bağlantı modeli (yalnızca Grup çözümü)** öğesini seçin, projeyi **AdventureWorksContacts**olarak adlandırın ve ardından **Ekle** düğmesini seçin.
+8. **Şablonlar** bölmesinde, **Iş verileri bağlantı modeli (yalnızca Grup çözümü)** öğesini seçin, projeyi **AdventureWorksContacts** olarak adlandırın ve ardından **Ekle** düğmesini seçin.
 
 ## <a name="add-data-access-classes-to-the-project"></a>Projeye veri erişim sınıfları ekleme
 
@@ -90,7 +92,7 @@ Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vard�
 
 6. **Şablonlar** bölmesinde **LINQ to SQL sınıfları**' nı seçin.
 
-7. **Ad** kutusunda **AdventureWorks**belirtin ve sonra **Ekle** düğmesini seçin.
+7. **Ad** kutusunda **AdventureWorks** belirtin ve sonra **Ekle** düğmesini seçin.
 
      Bir. dbml dosyası projeye eklenir ve Nesne İlişkisel Tasarımcısı (O/R Designer) açılır.
 
@@ -110,7 +112,7 @@ Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vard�
 
 2. Iş verileri bağlantı modeli dosyası BDC Tasarımcısı 'nda açılır.
 
-3. Tasarımcıda **Entity1**için kısayol menüsünü açın ve **Sil**' i seçin.
+3. Tasarımcıda **Entity1** için kısayol menüsünü açın ve **Sil**' i seçin.
 
 4. **Çözüm Gezgini**' de, *Entity1. vb* (Visual Basic) veya *Entity1.cs* (C# ' de) için kısayol menüsünü açın ve **Sil**' i seçin.
 
@@ -120,21 +122,21 @@ Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vard�
 
 Modele bir varlık ekleyin. Visual Studio **araç kutusu** 'ndan bdc Tasarımcısı üzerine varlık ekleyebilirsiniz.
 
-1. Menü çubuğunda **Görünüm**  >  **araç kutusunu**seçin.
+1. Menü çubuğunda **Görünüm**  >  **araç kutusunu** seçin.
 
 2. **Araç kutusunun** **BUSINESSDATACONNECTIVITY** sekmesinde, İVB tasarımcısına bir **varlık** ekleyin.
 
      Yeni varlık tasarımcıda görünür. Visual Studio, projeye *EntityService. vb* (Visual Basic) veya *EntityService.cs* (C# ' de) adlı bir dosya ekler.
 
-3. Menü çubuğunda **View**  >  **Özellikler**  >  **penceresini**görüntüle ' yi seçin.
+3. Menü çubuğunda **View**  >  **Özellikler**  >  **penceresini** görüntüle ' yi seçin.
 
-4. **Özellikler** penceresinde, **ad** özellik değerini **iletişim**olarak ayarlayın.
+4. **Özellikler** penceresinde, **ad** özellik değerini **iletişim** olarak ayarlayın.
 
 5. Tasarımcıda varlık için kısayol menüsünü açın, **Ekle**' yi seçin ve **tanımlayıcı**' yı seçin.
 
      Varlıkta yeni bir tanımlayıcı belirir.
 
-6. **Özellikler** penceresinde, tanımlayıcının adını, **kişi**kimliği olarak değiştirin.
+6. **Özellikler** penceresinde, tanımlayıcının adını, **kişi** kimliği olarak değiştirin.
 
 7. **Tür adı** listesinde, **System. Int32**' yi seçin.
 
@@ -146,7 +148,7 @@ BDC hizmetinin belirli bir kişiyi göstermesini sağlamak için belirli bir bul
 
 1. IVB tasarımcısında, **iletişim** varlığını seçin.
 
-2. Menü çubuğunda, **View**  >  **diğer Windows**  >  **bdc yöntemi ayrıntılarını**görüntüle ' yi seçin.
+2. Menü çubuğunda, **View**  >  **diğer Windows**  >  **bdc yöntemi ayrıntılarını** görüntüle ' yi seçin.
 
      IVB yöntemi ayrıntıları penceresi açılır.
 
@@ -170,19 +172,19 @@ BDC hizmetinin belirli bir kişiyi göstermesini sağlamak için belirli bir bul
 
 5. **Özellikler** penceresinde, **TypeName** özelliğinin yanındaki listeyi açın, **geçerli proje** sekmesini seçin ve ardından **iletişim** özelliğini seçin.
 
-6. **IVB Gezgini**' nde, **kişinin**kısayol menüsünü açın ve **tür tanımlayıcısı Ekle**' yi seçin.
+6. **IVB Gezgini**' nde, **kişinin** kısayol menüsünü açın ve **tür tanımlayıcısı Ekle**' yi seçin.
 
      **TypeDescriptor1** adlı yeni bir tür tanımlayıcısı **BDC Gezgini**'nde görünür.
 
 7. **Özellikler** penceresinde, **ad** özelliği değerini, **bir.**
 
-8. **TypeName** özelliğinin yanındaki listeyi açın ve ardından **Int32**öğesini seçin.
+8. **TypeName** özelliğinin yanındaki listeyi açın ve ardından **Int32** öğesini seçin.
 
 9. **Tanımlayıcı** özelliğinin yanındaki listeyi açın ve ardından, Ilgili **kişi kimliği**' ni seçin.
 
 10. Aşağıdaki alanların her biri için bir tür tanımlayıcısı oluşturmak üzere 6. adımı tekrarlayın.
 
-    |Ad|Tür adı|
+    |Name|Tür adı|
     |----------|---------------|
     |FirstName|System. String|
     |LastName|System. String|
@@ -252,7 +254,7 @@ Projeyi çalıştırdığınızda, SharePoint sitesi açılır ve Visual Studio 
 
 3. **Oluştur** sayfasında, **dış liste** şablonunu seçin ve ardından **Oluştur** düğmesini seçin.
 
-4. Özel liste **kişilerini**adlandırın.
+4. Özel liste **kişilerini** adlandırın.
 
 5. **Dış Içerik türü** alanının yanındaki Git düğmesini seçin.
 

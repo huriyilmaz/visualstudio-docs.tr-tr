@@ -1,5 +1,7 @@
 ---
 title: 'İzlenecek yol: bir uygulama sayfasını bir Iş akışına ekleme | Microsoft Docs'
+description: Bu izlenecek yolda, bir SharePoint iş akışı çözümüne bir uygulama sayfası ekleyin. İş akışı kodunu düzeltme. Uygulama sayfasını oluşturun, kodlayın ve test edin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f54914e6676e0cc2400fa04ebb089fac08f58c3c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c862c1de3b0630b3a5144f821e6266c34a88a5db
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015498"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915667"
 ---
 # <a name="walkthrough-add-an-application-page-to-a-workflow"></a>İzlenecek yol: bir uygulama sayfasını bir iş akışına ekleme
   Bu izlenecek yol, bir iş akışından türetilmiş verileri bir iş akışı projesine görüntüleyen bir uygulama sayfasının nasıl ekleneceğini gösterir. BT Kılavuzu [: ilişkilendirme ve başlatma formları ile iş akışı oluşturma](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)konu başlığı altında açıklanan projede oluşturulur.
@@ -35,7 +37,7 @@ ms.locfileid: "86015498"
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - Ve SharePoint 'in desteklenen sürümleri [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] .
@@ -44,7 +46,7 @@ ms.locfileid: "86015498"
 
 - Ayrıca, [Izlenecek yol: ilişkilendirme ve başlatma formları ile iş akışı oluşturma](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)başlıklı konudaki projeyi de doldurmanız gerekir.
 
-## <a name="ammend-the-workflow-code"></a>İş akışı kodunu ammend
+## <a name="amend-the-workflow-code"></a>İş akışı kodunu Düzeltme
  İlk olarak, sonuç sütununun değerini harcama raporu miktarına ayarlamak için iş akışına bir kod satırı ekleyin. Bu değer daha sonra gider raporu Özet hesaplamasında kullanılır.
 
 #### <a name="to-set-the-value-of-the-outcome-column-in-the-workflow"></a>İş akışındaki sonuç sütununun değerini ayarlamak için
@@ -314,7 +316,7 @@ ms.locfileid: "86015498"
 
 6. **Iş akışı ayarları** sayfasında, **iş akışı Ekle** bağlantısını seçin.
 
-7. **Iş akışı Ekle** sayfasında, **ExpenseReport-Workflow1** iş akışını seçin, Iş akışı için **ExpenseTest**gibi bir ad girin ve ardından **İleri** düğmesini seçin.
+7. **Iş akışı Ekle** sayfasında, **ExpenseReport-Workflow1** iş akışını seçin, Iş akışı için **ExpenseTest** gibi bir ad girin ve ardından **İleri** düğmesini seçin.
 
     İş akışı Ilişkilendirme formu görüntülenir. Gider limiti miktarını raporlamak için bunu kullanın.
 

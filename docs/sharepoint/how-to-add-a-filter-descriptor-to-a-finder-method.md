@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: bir Bulucu yöntemine filtre tanımlayıcısı ekleme | Microsoft Docs'
+description: Visual Studio 'da BDC Yöntem ayrıntıları penceresini kullanarak bir Bulucu yöntemine bir filtre tanımlayıcısı eklemeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 228afb2f49f4d528fa9b806e9bf8d2531f7de901
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ff312753be07867d8978dc4d5f60d5dfc0eee557
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016744"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915433"
 ---
 # <a name="how-to-add-a-filter-descriptor-to-a-finder-method"></a>Nasıl yapılır: bir Bulucu yöntemine filtre tanımlayıcısı ekleme
   Filtre tanımlayıcıları, modelin tüketicilerini yürütmeden önce yöntemlere geçmesini sağlar. Daha fazla bilgi için bkz. [iş verileri bağlantı modeli tasarlama](../sharepoint/designing-a-business-data-connectivity-model.md).
@@ -33,11 +35,11 @@ ms.locfileid: "86016744"
 
 2. **Yöntem ayrıntıları** penceresinde, parametrenin tür tanımlayıcısını seçin.
 
-3. Menü çubuğunda **View**  >  **Özellikler penceresini**görüntüle ' yi seçin.
+3. Menü çubuğunda **View**  >  **Özellikler penceresini** görüntüle ' yi seçin.
 
 4. **Özellikler** penceresinde, **tür adı** özelliğini filtreye uygun bir veri türü olarak ayarlayın.
 
-     Örneğin, bir filtre, yöntemi tarafından döndürülen satış siparişlerinin sayısını sınırlandırmak için bir sipariş tarihi kullanabilir. Bu filtreyi desteklemek için, tür tanımlayıcısının **tür adı** özelliği **System. DateTime**olarak ayarlanmalıdır.
+     Örneğin, bir filtre, yöntemi tarafından döndürülen satış siparişlerinin sayısını sınırlandırmak için bir sipariş tarihi kullanabilir. Bu filtreyi desteklemek için, tür tanımlayıcısının **tür adı** özelliği **System. DateTime** olarak ayarlanmalıdır.
 
 5. **Yöntem ayrıntıları** penceresinde, **filtre tanımlayıcıları** düğümünü genişletin.
 
@@ -45,7 +47,7 @@ ms.locfileid: "86016744"
 
      **Filtre tanımlayıcıları** düğümünün altında yeni bir filtre tanımlayıcısı görüntülenir.
 
-7. Menü çubuğunda **View**  >  **Özellikler penceresini**görüntüle ' yi seçin.
+7. Menü çubuğunda **View**  >  **Özellikler penceresini** görüntüle ' yi seçin.
 
 8. **Özellikler** penceresinde **tür** özelliğini seçin.
 

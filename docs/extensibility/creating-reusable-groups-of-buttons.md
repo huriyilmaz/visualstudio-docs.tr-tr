@@ -1,5 +1,7 @@
 ---
 title: Yeniden kullanılabilir düğme grupları oluşturma | Microsoft Docs
+description: Bir menü veya araç çubuğunda birlikte görünen komutların bir koleksiyonu olan bir komut grubu oluşturmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 477014ed77b60821ad191ba6842999be6f528fee
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8b9d1d8b985f7184ffdfbf083dc3f6b8ab03d894
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85903651"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915589"
 ---
 # <a name="create-reusable-groups-of-buttons"></a>Yeniden kullanılabilir düğme grupları oluşturma
 Komut grubu, her zaman bir menü veya araç çubuğunda birlikte görünen komutların bir koleksiyonudur. Herhangi bir komut grubu, *. vsct* dosyasının CommandPlacements bölümünde farklı üst menülere atayarak yeniden kullanılabilir.
@@ -28,7 +30,7 @@ Komut grubu, her zaman bir menü veya araç çubuğunda birlikte görünen komut
 
 1. Adlı bir VSıX projesi oluşturun `ReusableButtons` . Daha fazla bilgi için bkz. [bir menü komutuyla uzantı oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md).
 
-2. Proje açıldığında, **ReusableCommand**adlı özel bir komut öğesi şablonu ekleyin. **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve **Add**  >  **Yeni öğe**Ekle ' yi seçin. **Yeni öğe Ekle** iletişim kutusunda, **Visual C#**  >  **genişletilebilirliği** ' ne gidin ve **özel komut**' yi seçin. Pencerenin alt kısmındaki **ad** alanında, komut dosyası adını *ReusableCommand.cs*olarak değiştirin.
+2. Proje açıldığında, **ReusableCommand** adlı özel bir komut öğesi şablonu ekleyin. **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve **Add**  >  **Yeni öğe** Ekle ' yi seçin. **Yeni öğe Ekle** iletişim kutusunda, **Visual C#**  >  **genişletilebilirliği** ' ne gidin ve **özel komut**' yi seçin. Pencerenin alt kısmındaki **ad** alanında, komut dosyası adını *ReusableCommand.cs* olarak değiştirin.
 
 3. *. Vsct* dosyasında, semboller bölümüne gidin ve proje için grupları ve komutları Içeren GuidSymbol öğesini bulun. Bu, guidReusableCommandPackageCmdSet olarak adlandırılmalıdır.
 
@@ -98,7 +100,7 @@ Komut grubu, her zaman bir menü veya araç çubuğunda birlikte görünen komut
    </CommandTable>
    ```
 
-    Bir komut grubu, birden fazla menüye eklenebilir. Ana menü, oluşturduğunuz biri olan [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ( *ShellCmdDef. vsct* veya *SharedCmdDef. vsct*içinde açıklandığı gibi) ya da başka bir VSPackage içinde tanımlanmış bir tane olabilir. Üst menü sonunda [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] veya VSPackage tarafından görüntülenen bir kısayol menüsüne bağlı olduğu sürece, eklenen katmanların sayısı sınırsızdır.
+    Bir komut grubu, birden fazla menüye eklenebilir. Ana menü, oluşturduğunuz biri olan [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ( *ShellCmdDef. vsct* veya *SharedCmdDef. vsct* içinde açıklandığı gibi) ya da başka bir VSPackage içinde tanımlanmış bir tane olabilir. Üst menü sonunda [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] veya VSPackage tarafından görüntülenen bir kısayol menüsüne bağlı olduğu sürece, eklenen katmanların sayısı sınırsızdır.
 
     Aşağıdaki örnek, grubu **Çözüm Gezgini** araç çubuğuna diğer düğmelerin sağına koyar.
 

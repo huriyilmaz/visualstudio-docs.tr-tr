@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: özel özellik ekleme | Microsoft Docs'
+description: Visual Studio 'nun BDC Gezgini 'ndeki Özellik düzenleyicisini kullanarak SharePoint 'teki Iş verileri bağlantısı (BDC) modeline nasıl özel bir özellik ekleneceğini öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -17,21 +19,21 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e79b18b4d2b388d2ff0387fed24778f8db03fd54
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b12124d874c58ce17f1fa24d2bd9283af64f1c92
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86017074"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915485"
 ---
 # <a name="how-to-add-a-custom-property"></a>Nasıl yapılır: özel özellik ekleme
-  **Özellik düzenleyicisini**kullanarak modele özel özellikler ekleyebilirsiniz. Çalışma zamanında bağlantı dizeleri ve diğer veriler gibi bilgileri almak için koddaki bu özelliklere erişebilirsiniz.
+  **Özellik düzenleyicisini** kullanarak modele özel özellikler ekleyebilirsiniz. Çalışma zamanında bağlantı dizeleri ve diğer veriler gibi bilgileri almak için koddaki bu özelliklere erişebilirsiniz.
 
 ### <a name="to-add-a-custom-property"></a>Özel bir özellik eklemek için
 
 1. **IVB Gezgini**' nde, özel bir özellik uygulamak istediğiniz model öğesini temsil eden düğümü seçin.
 
-2. Menü çubuğunda **View**  >  **Özellikler penceresini**görüntüle ' yi seçin.
+2. Menü çubuğunda **View**  >  **Özellikler penceresini** görüntüle ' yi seçin.
 
 3. **Özellikler** penceresinde **özel özellikler** özelliğini seçin ve ardından üç nokta düğmesini (![ASP.net Mobile Designer elips](../sharepoint/media/mwellipsis.gif "ASP.NET Mobile Designer elips")) seçin.
 

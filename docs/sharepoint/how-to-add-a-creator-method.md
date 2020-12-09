@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: bir Oluşturucu yöntemi ekleme | Microsoft Docs'
+description: SharePoint 'teki Iş verileri bağlantısı (BDC) hizmetindeki bir varlığın veri kaynağına yeni veri ekleyen bir Oluşturucu yönteminin nasıl ekleneceğini öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -17,21 +19,21 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 962e353b5ae82f6dd3eccc2898385fd4b9ee30ee
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 790b4265b232c71ff3e0613cffcb45e710081fa3
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86017063"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915459"
 ---
 # <a name="how-to-add-a-creator-method"></a>Nasıl yapılır: bir Oluşturucu yöntemi ekleme
   Bir Oluşturucu yöntemi, bir varlığın veri kaynağına yeni veri ekler. Iş verileri bağlantısı (BDC) hizmeti, kullanıcılar modeli temel alan bir listenin **şeritinde** **Yeni öğe** düğmesini seçişinizde bu yöntemi çağırır. Daha fazla bilgi için bkz. [iş verileri bağlantı modeli tasarlama](../sharepoint/designing-a-business-data-connectivity-model.md).
 
 ### <a name="to-add-a-creator-method"></a>Bir Oluşturucu yöntemi eklemek için
 
-1. **IVB tasarımcısında**bir varlık seçin.
+1. **IVB tasarımcısında** bir varlık seçin.
 
-2. Menü çubuğunda, **View**  >  **diğer Windows**  > **bdc yöntemi ayrıntılarını**görüntüle ' yi seçin.
+2. Menü çubuğunda, **View**  >  **diğer Windows**  > **bdc yöntemi ayrıntılarını** görüntüle ' yi seçin.
 
     **IVB yöntemi ayrıntıları** penceresi açılır. Bu pencere hakkında daha fazla bilgi için bkz. [BDC modeli tasarım araçlarına genel bakış](../sharepoint/bdc-model-design-tools-overview.md).
 
@@ -39,7 +41,7 @@ ms.locfileid: "86017063"
 
     Visual Studio, modele aşağıdaki öğeleri ekler ve bu öğeler **BDC Yöntem ayrıntıları** penceresinde görünür.
 
-   - **Create**adlı bir yöntem.
+   - **Create** adlı bir yöntem.
 
    - Yöntemi için bir giriş parametresi.
 

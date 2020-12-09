@@ -1,5 +1,7 @@
 ---
 title: 'İzlenecek yol: SharePoint Proje uzantısı oluşturma | Microsoft Docs'
+description: Projenin eklenmesi, silinmesi veya yeniden adlandırılması gibi proje düzeyindeki olaylara yanıt vermek için kullanabileceğiniz bir SharePoint Proje uzantısı oluşturun.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,17 +16,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9d79bf66f88a7cbaa5321887b676cc9eca798a92
-ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
+ms.openlocfilehash: b815f8ea4656cc5a144f8cf12396391e55123ece
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90739934"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96914874"
 ---
 # <a name="walkthrough-create-a-sharepoint-project-extension"></a>İzlenecek yol: SharePoint Proje uzantısı oluşturma
   Bu izlenecek yol, SharePoint projeleri için bir uzantı oluşturmayı gösterir. Projenin eklenmesi, silinmesi veya yeniden adlandırılması gibi proje düzeyindeki olaylara yanıt vermek için bir proje uzantısı kullanabilirsiniz. Ayrıca bir özellik değeri değiştiğinde özel özellikler ekleyebilir veya yanıt verebilirsiniz. Proje öğesi uzantılarının aksine, proje uzantıları belirli bir SharePoint proje türüyle ilişkilendirilemez. Bir proje uzantısı oluşturduğunuzda uzantı, içinde herhangi bir tür SharePoint projesi açıldığında yüklenir [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
- Bu kılavuzda, içinde oluşturulan herhangi bir SharePoint projesine eklenen özel bir Boole özelliği oluşturacaksınız [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . **True**olarak ayarlandığında, yeni özellik projenize bir görüntü kaynak klasörü ekler veya bunları eşler. **False**olarak ayarlandığında, varsa Resimler klasörü kaldırılır. Daha fazla bilgi için bkz. [nasıl yapılır: eşlenmiş klasörler ekleme ve kaldırma](../sharepoint/how-to-add-and-remove-mapped-folders.md).
+ Bu kılavuzda, içinde oluşturulan herhangi bir SharePoint projesine eklenen özel bir Boole özelliği oluşturacaksınız [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . **True** olarak ayarlandığında, yeni özellik projenize bir görüntü kaynak klasörü ekler veya bunları eşler. **False** olarak ayarlandığında, varsa Resimler klasörü kaldırılır. Daha fazla bilgi için bkz. [nasıl yapılır: eşlenmiş klasörler ekleme ve kaldırma](../sharepoint/how-to-add-and-remove-mapped-folders.md).
 
  Bu izlenecek yol aşağıdaki görevleri gösterir:
 
@@ -40,7 +42,7 @@ ms.locfileid: "90739934"
 
 - Proje özelliğini hata ayıklama ve test etme.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için geliştirme bilgisayarında aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)], SharePoint ve ' nin desteklenen sürümleri [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
@@ -69,9 +71,9 @@ ms.locfileid: "90739934"
 
 4. İletişim kutusunun üst kısmında, .NET Framework sürümleri listesinde **.NET Framework 4,5** ' ı seçin ve ardından **VSIX proje** şablonunu seçin.
 
-5. **Ad** kutusuna **Projecbir sionpackage**girin ve **Tamam** düğmesini seçin.
+5. **Ad** kutusuna **Projecbir sionpackage** girin ve **Tamam** düğmesini seçin.
 
-     **Projecbir Sionpackage** projesi **Çözüm Gezgini**görüntülenir.
+     **Projecbir Sionpackage** projesi **Çözüm Gezgini** görüntülenir.
 
 #### <a name="to-create-the-extension-project"></a>Uzantı projesini oluşturmak için
 
@@ -81,7 +83,7 @@ ms.locfileid: "90739934"
 
 3. İletişim kutusunun üst kısmında, .NET Framework sürümleri listesinde **.NET Framework 4,5** ' i seçin ve ardından **sınıf kitaplığı** proje şablonu ' nu seçin.
 
-4. **Ad** kutusuna **ProjectExtension**yazın ve **Tamam** düğmesini seçin.
+4. **Ad** kutusuna **ProjectExtension** yazın ve **Tamam** düğmesini seçin.
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] çözüme **ProjectExtension** projesini ekler ve varsayılan Class1 kod dosyasını açar.
 
@@ -100,9 +102,9 @@ ms.locfileid: "90739934"
 
 4. **Uzantılar** düğümünü seçin, Microsoft. VisualStudio. SharePoint ve EnvDTE derlemelerinin yanındaki onay kutusunu işaretleyin ve ardından **Tamam** düğmesini seçin.
 
-5. **Çözüm Gezgini**, **ProjectExtension** projesi Için **Başvurular** klasörü altında **EnvDTE**öğesini seçin.
+5. **Çözüm Gezgini**, **ProjectExtension** projesi Için **Başvurular** klasörü altında **EnvDTE** öğesini seçin.
 
-6. **Özellikler** penceresinde, **birlikte çalışma türlerini katıştır** özelliğini **yanlış**olarak değiştirin.
+6. **Özellikler** penceresinde, **birlikte çalışma türlerini katıştır** özelliğini **yanlış** olarak değiştirin.
 
 ## <a name="define-the-new-sharepoint-project-property"></a>Yeni SharePoint proje özelliğini tanımlayın
  Proje uzantısını ve yeni proje özelliğinin davranışını tanımlayan bir sınıf oluşturun. Yeni proje uzantısını tanımlamak için sınıfı <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectExtension> arabirimini uygular. Bir SharePoint projesi için uzantı tanımlamak istediğinizde bu arabirimi uygulayın. Ayrıca, <xref:System.ComponentModel.Composition.ExportAttribute> sınıfını sınıfına ekleyin. Bu öznitelik [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , uygulamanızı bulmayı ve yüklemeyi sağlar <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectExtension> . <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectExtension>Türü özniteliğin oluşturucusuna geçirin.
@@ -119,7 +121,7 @@ ms.locfileid: "90739934"
 
 #### <a name="to-build-the-solution"></a>Çözümü oluşturmak için
 
-1. Menü **çubuğunda Build**  >  **Build Solution**öğesini seçin.
+1. Menü **çubuğunda Build**  >  **Build Solution** öğesini seçin.
 
 ## <a name="create-a-vsix-package-to-deploy-the-project-property-extension"></a>Proje özelliği uzantısını dağıtmak için bir VSıX paketi oluşturma
  Proje uzantısını dağıtmak için, çözümünüzdeki VSıX projesini kullanarak bir VSıX paketi oluşturun. İlk olarak, VSIX projesinde bulunan kaynak. Extension. valtmanifest dosyasını değiştirerek VSıX paketini yapılandırın. Ardından, çözümü oluşturarak VSıX paketini oluşturun.
@@ -130,24 +132,24 @@ ms.locfileid: "90739934"
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] dosyayı bildirim tasarımcısında açar. **Meta veriler** sekmesinde görüntülenen bilgiler **Uzantılar ve güncelleştirmeler**' de görünür. Tüm VSıX paketleri. valtmanifest dosyası uzantısını gerektirir. Bu dosya hakkında daha fazla bilgi için bkz. [VSIX uzantı şeması 1,0 başvurusu](/previous-versions/dd393700(v=vs.110)).
 
-2. **Ürün adı** kutusuna **özel proje özelliği**girin.
+2. **Ürün adı** kutusuna **özel proje özelliği** girin.
 
-3. **Yazar** kutusuna **contoso**girin.
+3. **Yazar** kutusuna **contoso** girin.
 
-4. **Açıklama** kutusunda, **görüntüler kaynak klasörünün eşlemesine geçiş yapan özel bir SharePoint proje özelliği**girin.
+4. **Açıklama** kutusunda, **görüntüler kaynak klasörünün eşlemesine geçiş yapan özel bir SharePoint proje özelliği** girin.
 
 5. **Varlıklar** sekmesini seçin ve ardından **Yeni** düğmesini seçin.
 
      **Yeni varlık Ekle** iletişim kutusu görüntülenir.
 
-6. **Tür** listesinde, **Microsoft. VisualStudio. MefComponent**öğesini seçin.
+6. **Tür** listesinde, **Microsoft. VisualStudio. MefComponent** öğesini seçin.
 
     > [!NOTE]
     > Bu değer, `MEFComponent` extension. valtmanifest dosyasındaki öğesine karşılık gelir. Bu öğe VSıX paketindeki bir uzantı derlemesinin adını belirtir. Daha fazla bilgi için bkz. [MefComponent öğesi (VSX şeması)](/previous-versions/visualstudio/visual-studio-2010/dd393736\(v\=vs.100\)).
 
 7. **Kaynak** listesinde, **geçerli çözüm ' de bir proje** seçin seçenek düğmesini seçin.
 
-8. **Proje** listesinde **ProjectExtension**öğesini seçin.
+8. **Proje** listesinde **ProjectExtension** öğesini seçin.
 
      Bu değer, projede oluşturmakta olduğunuz derlemenin adını tanımlar.
 
@@ -155,7 +157,7 @@ ms.locfileid: "90739934"
 
 10. Menü çubuğunda, bitirdiğinizde **Dosya**  >  **Tümünü Kaydet** ' i seçin ve ardından bildirim tasarımcısını kapatın.
 
-11. Menü **çubuğunda Build**  >  **Build Solution**öğesini seçin ve ardından projenin hatasız derlendiğinden emin olun.
+11. Menü **çubuğunda Build**  >  **Build Solution** öğesini seçin ve ardından projenin hatasız derlendiğinden emin olun.
 
 12. **Çözüm Gezgini**, **Projecbir sionpackage** projesi için kısayol menüsünü açın ve **Dosya Gezgini 'nde klasörü aç** düğmesini seçin.
 
@@ -170,7 +172,7 @@ ms.locfileid: "90739934"
 
 1. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]Yönetici kimlik bilgileriyle yeniden başlatın ve ardından Projecbir Sionpackage çözümünü açın.
 
-2. **F5** tuşunu seçerek veya menü çubuğunda hata ayıklama **Debug**  >  **Başlat hata**Ayıkla ' yı seçerek projenizin hata ayıklama derlemesini başlatın.
+2. **F5** tuşunu seçerek veya menü çubuğunda hata ayıklama **Debug**  >  **Başlat hata** Ayıkla ' yı seçerek projenizin hata ayıklama derlemesini başlatın.
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] uzantıyı%UserProfile%\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Contoso\Custom Project Property\1.0 dizinine yükleyerek deneysel bir örneğini başlatır [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
@@ -188,13 +190,13 @@ ms.locfileid: "90739934"
 
 4. **Çözüm Gezgini**' de **ModuleTest** projesi düğümünü seçin.
 
-     Yeni bir özel özellik **eşleme görüntüleri klasörü** , varsayılan değeri **false**olan **Özellikler** penceresinde görünür.
+     Yeni bir özel özellik **eşleme görüntüleri klasörü** , varsayılan değeri **false** olan **Özellikler** penceresinde görünür.
 
-5. Bu özelliğin değerini **true**olarak değiştirin.
+5. Bu özelliğin değerini **true** olarak değiştirin.
 
      Bir görüntüler kaynak klasörü SharePoint projesine eklenir.
 
-6. Bu özelliğin değerini yeniden **false**olarak değiştirin.
+6. Bu özelliğin değerini yeniden **false** olarak değiştirin.
 
      **Görüntüler klasörünü sil** Iletişim kutusunda **Evet** düğmesini seçerseniz, görüntüler kaynak klasörü SharePoint projesinden silinir.
 

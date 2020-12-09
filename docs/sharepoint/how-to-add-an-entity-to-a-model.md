@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: modele varlık ekleme | Microsoft Docs'
+description: Visual Studio araç kutusundan Iş verileri bağlantısı (BDC) tasarımcısına bir varlık denetimi ekleyerek modele bir varlık ekleyin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b80f39494b98014a75d4265f228906be2ff45188
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0efd7a6fc0d6254dbfd3cbda538ffe0e30585453
+ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016681"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96915394"
 ---
 # <a name="how-to-add-an-entity-to-a-model"></a>Nasıl yapılır: modele varlık ekleme
   Bir varlık oluşturmak için, Visual Studio **araç kutusundan** Iş verileri BAĞLANTıSı (BDC) Tasarımcısı üzerine bir varlık denetimi ekleyin.
