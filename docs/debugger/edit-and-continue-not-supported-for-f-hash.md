@@ -1,5 +1,7 @@
 ---
 title: 'F # için Düzenle ve devam et desteklenmiyor | Microsoft Docs'
+description: 'F # hata ayıklaması için Düzenle ve devam et desteklenmez. Hata ayıklama sırasında koda yapılan düzenlemeler kaynağa uygulanmaz, bu nedenle, hataları Ayıklanacak kod kaynakla eşleşmez.'
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ceb0ca767b1ac6364e103925fb86ed639c3d321d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 33d1e8379e71c41e42cbf761ccdfe740342ee642
+ms.sourcegitcommit: 47da50a74fcd3db66d97cb20accac983bc41912f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62851165"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96863094"
 ---
 # <a name="edit-and-continue-not-supported-for-f"></a>Düzenle ve Devam Et F#'de Desteklenmez #
 F # kodunda hata ayıklarken Düzenle ve devam et desteklenmez. F # kodundaki düzenlemeler hata ayıklama oturumu sırasında mümkündür ancak kaçınılması gerekir. Kod değişiklikleri hata ayıklama oturumu sırasında uygulanmaz. Bu nedenle, hata ayıklama sırasında F # kodunda yapılan tüm düzenlemeler, hata ayıklamakta olan kodla eşleşmeyen kaynak koda neden olur.

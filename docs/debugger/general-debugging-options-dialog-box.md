@@ -1,5 +1,7 @@
 ---
 title: Genel, hata ayıklama, Seçenekler Iletişim kutusu | Microsoft Docs
+description: Visual Studio hata ayıklayıcısı seçeneklerini hata ayıklama gereksinimlerinizi karşılayacak şekilde ayarlayın. Kesme davranışını, hata ayıklama düzeylerini, görüntüleme davranışını ve daha fazlasını yapılandırabilirsiniz.
+ms.custom: SEO-VS-2020
 ms.date: 06/04/2020
 ms.topic: reference
 f1_keywords:
@@ -21,16 +23,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c5b03d7b45e488d7e8026a7d6835bbfba1efa210
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1b052c2cce3d396debb4fbaf8ce688ede3effb98
+ms.sourcegitcommit: 47da50a74fcd3db66d97cb20accac983bc41912f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85286563"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96863016"
 ---
 # <a name="general-debugging-options"></a>Genel hata ayıklama seçenekleri
 
-Visual Studio hata ayıklayıcısı seçeneklerini ayarlamak için **Araçlar**  >  **Seçenekler**' i seçin ve **hata ayıklama** altında **genel** Seçenekler ' in yanındaki kutuları seçin veya seçimi kaldırın. Tüm varsayılan ayarları **Araçlar**  >  **içeri aktarma ve dışarı aktarma ayarları**  >  **tüm ayarları Sıfırla**geri yükleyebilirsiniz. Bir ayar alt kümesini sıfırlamak için, test etmek istediğiniz değişiklikleri yapmadan önce ayarlarınızı **içeri ve dışarı aktarma Sihirbazı** ile kaydedin, sonra kaydedilen ayarlarınızı daha sonra içeri aktarın.
+Visual Studio hata ayıklayıcısı seçeneklerini ayarlamak için **Araçlar**  >  **Seçenekler**' i seçin ve **hata ayıklama** altında **genel** Seçenekler ' in yanındaki kutuları seçin veya seçimi kaldırın. Tüm varsayılan ayarları **Araçlar**  >  **içeri aktarma ve dışarı aktarma ayarları**  >  **tüm ayarları Sıfırla** geri yükleyebilirsiniz. Bir ayar alt kümesini sıfırlamak için, test etmek istediğiniz değişiklikleri yapmadan önce ayarlarınızı **içeri ve dışarı aktarma Sihirbazı** ile kaydedin, sonra kaydedilen ayarlarınızı daha sonra içeri aktarın.
 
 Aşağıdaki **genel** seçenekleri belirleyebilirsiniz:
 

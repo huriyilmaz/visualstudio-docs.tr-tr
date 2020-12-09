@@ -1,5 +1,7 @@
 ---
 title: Düzenle ve devam et Iletişim kutusu (C++) | Microsoft Docs
+description: Düzenle ve devam et, kod değişiklerinizi uygulayamadık olduğunu bildirebilir. Bunun neden meydana gelebileceklerini ve neler yapabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -19,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba7b133594d016d1a80efae4d18d1fb55a96398d
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: dc1e7a27624cede9ca20295d3dc890f172e35889
+ms.sourcegitcommit: 47da50a74fcd3db66d97cb20accac983bc41912f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89599547"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96862990"
 ---
 # <a name="edit-and-continue-dialog-box-c"></a>Düzenle ve Devam Et İletişim Kutusu (C++)
 Düzenle ve devam et, yerel kodunuzda yaptığınız değişiklikleri uygulayamadı. Bu geçici bir durum olabilir. Bazen Düzenle ve devam et yerel kod değişikliklerini hemen uygulayamaz, ancak hata ayıklama oturumu sırasında daha sonra (örneğin, şu anda yürütülmekte olan yordama yapılan geçerli çağrının tamamlanmasından sonra) uygulanabilir. Daha fazla bilgi için bkz. [Düzenle ve devam et](../debugger/edit-and-continue.md).

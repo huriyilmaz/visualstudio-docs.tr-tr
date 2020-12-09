@@ -1,5 +1,7 @@
 ---
 title: Düzenle ve devam et (Visual Basic) | Microsoft Docs
+description: Düzenle ve devam et Visual Basic projeleri için kullanılabilir. Hangi düzenlemelerin desteklendiğini ve düzenlemelerinizin ne zaman uygulandığını nasıl denetleyebileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 10/11/2017
 ms.topic: conceptual
 dev_langs:
@@ -19,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f73b67ac4268c04dfa9ff7ab020891623f528f9b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e4560973cd6ccd2bbfee48028494731935945a4c
+ms.sourcegitcommit: 47da50a74fcd3db66d97cb20accac983bc41912f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62851257"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96862977"
 ---
 # <a name="edit-and-continue-visual-basic"></a>Düzenle ve Devam Et (Visual Basic)
 Düzenle ve devam et, hata ayıklama için bir özelliktir ve [!INCLUDE [vbprvb](../code-quality/includes/vbprvb_md.md)] Bu, kesme modunda yürütülürken kodunuzu değiştirmenize olanak sağlar. Kod düzenlemeleri uygulandıktan sonra, yeni düzenlemelerle birlikte kod yürütmeyi sürdürmeye ve etkiyi görmenizi sağlayabilirsiniz.
@@ -40,7 +42,7 @@ Düzenle ve devam et, hata ayıklama için bir özelliktir ve [!INCLUDE [vbprvb]
  > [!NOTE]
  > Desteklenmeyen uygulamalar ve platformlar şunlardır ASP.NET 5, Silverlight 5 ve Windows 8.1.
 
- **Işleme İliştir**kullanarak hata ayıklamaya başladığınızda Düzenle ve devam et desteklenmez. En iyileştirilmiş kod veya karma yönetilen ve yerel kod için Düzenle ve devam et desteklenmez. Daha fazla bilgi için bkz. [desteklenen kod değişiklikleri (C# ve Visual Basic)](../debugger/supported-code-changes-csharp.md).
+ **Işleme İliştir** kullanarak hata ayıklamaya başladığınızda Düzenle ve devam et desteklenmez. En iyileştirilmiş kod veya karma yönetilen ve yerel kod için Düzenle ve devam et desteklenmez. Daha fazla bilgi için bkz. [desteklenen kod değişiklikleri (C# ve Visual Basic)](../debugger/supported-code-changes-csharp.md).
 
  Bu bölümdeki konularda, bu özelliğin nasıl kullanılacağı ve ne tür değişikliklere izin verilmediğinden ilgili ek ayrıntılar sağlanmaktadır.
 

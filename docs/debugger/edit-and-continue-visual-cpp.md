@@ -1,5 +1,7 @@
 ---
 title: Düzenle ve devam et (C++) | Microsoft Docs
+description: Düzenle ve devam et C++ projeleri için kullanılabilir. Hangi düzenlemelerin desteklendiğini ve düzenlemelerinizin ne zaman uygulandığını nasıl denetleyebileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 05/31/2018
 ms.topic: conceptual
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c32c161d1df70fc81eee4186aa9d1ac102afa69
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 2a8cb40850aefe83ac048c708192bc24533a8296
+ms.sourcegitcommit: 47da50a74fcd3db66d97cb20accac983bc41912f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89599658"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96863068"
 ---
 # <a name="edit-and-continue-c"></a>Düzenle ve Devam Et (C++)
 C++ projelerinde Düzenle ve devam et ' i kullanabilirsiniz. Düzenle ve devam et sınırlamaları hakkında daha fazla bilgi için bkz. [desteklenen kod değişiklikleri (C++)](../debugger/supported-code-changes-cpp.md) .
@@ -80,4 +82,4 @@ Visual Studio 2015 güncelleştirme 3 geliştirmeleri hakkında daha fazla bilgi
  Bu gibi durumlarda, değişiklikler uygulanana kadar hata ayıklayıcı orijinal kodu yürütmeye devam eder. Eski kod, farklı bir kaynak penceresinde, gibi bir başlık ile geçici bir kaynak dosya penceresi olarak görünür `enc25.tmp` . Düzenlenen kaynak özgün kaynak penceresinde görünmeye devam eder. Eski kodu düzenlemeye çalışırsanız bir uyarı iletisi görüntülenir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Desteklenen kod değişiklikleri (C++)](../debugger/supported-code-changes-cpp.md)
+- [Desteklenen Kod Değişiklikleri (C++)](../debugger/supported-code-changes-cpp.md)

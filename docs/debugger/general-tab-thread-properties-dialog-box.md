@@ -1,5 +1,6 @@
 ---
 title: Genel sekmesi, Iş parçacığı özellikleri Iletişim kutusu | Microsoft Docs
+description: Modül adı, iş parçacığı KIMLIĞI, işlem KIMLIĞI, iş parçacığı durumu, bekleme nedeni ve CPU süresi dahil olmak üzere iş parçacığı hakkında bilgi için Iş parçacığı özellikleri Iletişim kutusunu görüntüleyin.
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -11,19 +12,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1e8604c2d31f6bb50e9e77efbf6423f56ed719c0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dd4c2bf24058ce8a69f05d8d2cee17a18ff9505d
+ms.sourcegitcommit: 47da50a74fcd3db66d97cb20accac983bc41912f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62896373"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96863003"
 ---
 # <a name="general-tab-thread-properties-dialog-box"></a>Genel Sekmesi, İş Parçacığı Özellikleri İletişim Kutusu
 Belirli bir iş parçacığı hakkında daha fazla bilgi edinmek için bu iletişim kutusunu kullanın. Bu iletişim kutusunu görüntülemek için odağı bir [Iş parçacığı görünümü](../debugger/threads-view.md) penceresine taşıyın veya [iletiler görünümü](../debugger/messages-view.md) ' ni açın ve bir ileti genişletin. Ağaçta herhangi bir iş parçacığı düğümünü seçin, sonra **Görünüm** menüsünden **Özellikler** ' i seçin.
 
  **Iş parçacığı özellikleri** iletişim kutusu, **genel** sekmesi olan bir bölme içerir. Aşağıdaki ayarlar kullanılabilir:
 
-|Giriş|Açıklama|
+|Giriş|Description|
 |-----------|-----------------|
 |**Modül Adı**|Modülün adı.|
 |**İş parçacığı KIMLIĞI**|Bu iş parçacığının benzersiz KIMLIĞI. İş parçacığı KIMLIĞI numaralarının yeniden kullanılabilir olduğunu unutmayın. bir iş parçacığını yalnızca o iş parçacığının ömrü için tanımlarlar.|

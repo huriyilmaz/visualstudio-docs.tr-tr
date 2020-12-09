@@ -1,5 +1,7 @@
 ---
 title: CRT kitaplığı ile bellek sızıntılarını bulma | Microsoft Docs
+description: C/C++ hata ayıklayıcı ve C çalışma zamanı kitaplığı 'nın (CRT) bellek sızıntılarını bulma konusunda nasıl yardımcı olabileceğini öğrenin. Teknikler, bellek sızıntısı raporlarını ve bellek anlık görüntülerini karşılaştırmayı içerir.
+ms.custom: SEO-VS-2020
 ms.date: 10/04/2018
 ms.topic: how-to
 dev_langs:
@@ -26,12 +28,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5deb42b2ab708bae572aebbcac15af2d077b14fa
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5f5c906bd06fd4107166a45e93bf11be579c2270
+ms.sourcegitcommit: 47da50a74fcd3db66d97cb20accac983bc41912f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350491"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96863081"
 ---
 # <a name="find-memory-leaks-with-the-crt-library"></a>CRT kitaplığı ile bellek sızıntılarını bulma
 
@@ -108,7 +110,7 @@ Sizin tanımladığınız olsun `_CRTDBG_MAP_ALLOC` , bellek sızıntısı rapor
 - Örneğin, bloktaki blok boyutu `64 bytes` .
 - Blok içindeki ilk 16 baytlık veriler, onaltılık biçimde.
 
-Bellek bloğu türleri *normal*, *istemci*veya *CRT*. *Normal bir blok* , programınız tarafından ayrılan sıradan bellektir. *İstemci bloğu* , MFC programları tarafından yıkıcı gerektiren nesneler için kullanılan özel bir bellek bloğu türüdür. MFC `new` işleci, oluşturulmakta olan nesneye uygun şekilde normal bir blok veya bir istemci bloğu oluşturur.
+Bellek bloğu türleri *normal*, *istemci* veya *CRT*. *Normal bir blok* , programınız tarafından ayrılan sıradan bellektir. *İstemci bloğu* , MFC programları tarafından yıkıcı gerektiren nesneler için kullanılan özel bir bellek bloğu türüdür. MFC `new` işleci, oluşturulmakta olan nesneye uygun şekilde normal bir blok veya bir istemci bloğu oluşturur.
 
 CRT *bloğu* , kendi kullanımı için CRT kitaplığı tarafından ayrılır. CRT kitaplığı bu bloklar için ayırmayı gerçekleştirir, bu nedenle CRT kitaplığı ile ciddi sorunlar olmadıkça, bellek sızıntısı raporunda CRT blokları görünmez.
 
@@ -182,13 +184,13 @@ Ayırma numarasını, bellek ayırmada bir kesme noktası ayarlamak için kullan
 
 1. Uygulamanızın başlangıcına yakın bir kesme noktası ayarlayın ve hata ayıklamayı başlatın.
 
-1. Uygulama kesme noktasında durakladığında, **Hata Ayıkla**Windows izleme 1 ' i seçerek bir **izleme** penceresi açın  >  **Windows**  >  **Watch 1** (veya **2**. **izleyin**veya **4**. izleyin).
+1. Uygulama kesme noktasında durakladığında, **Hata Ayıkla** Windows izleme 1 ' i seçerek bir **izleme** penceresi açın  >  **Windows**  >  **Watch 1** (veya **2**. **izleyin** veya **4**. izleyin).
 
 1. **Gözcü** penceresinde `_crtBreakAlloc` **ad** sütununu yazın.
 
    CRT kitaplığının çok iş parçacıklı DLL sürümünü (/MD seçeneği) kullanıyorsanız, bağlam işlecini ekleyin: `{,,ucrtbased.dll}_crtBreakAlloc`
    
-   Hata ayıklama simgelerinin yüklendiğinden emin olun. Aksi takdirde `_crtBreakAlloc` , *tanımlanamayan*olarak bildirilir.
+   Hata ayıklama simgelerinin yüklendiğinden emin olun. Aksi takdirde `_crtBreakAlloc` , *tanımlanamayan* olarak bildirilir.
 
 1.  **Enter** tuşuna basın.
 
@@ -262,6 +264,6 @@ Bellek sızıntılarını bulmak için bir teknik `_CrtMemCheckpoint` , uygulama
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [CRT hata ayıklama yığın ayrıntıları](../debugger/crt-debug-heap-details.md)
-- [Hata ayıklayıcı güvenliği](../debugger/debugger-security.md)
+- [CRT hata ayıklama öbeği ayrıntıları](../debugger/crt-debug-heap-details.md)
+- [Hata ayıklayıcısı güvenliği](../debugger/debugger-security.md)
 - [Yerel kodda hata ayıklama](../debugger/debugging-native-code.md)

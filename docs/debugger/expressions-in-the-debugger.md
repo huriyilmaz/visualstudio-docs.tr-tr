@@ -1,5 +1,7 @@
 ---
 title: Hata Ayıklayıcıdaki İfadeler | Microsoft Docs
+description: Düzenle ve devam et, Visual C# projeleri için kullanılabilir. Hangi düzenlemelerin desteklendiğini ve düzenlemelerinizin ne zaman uygulandığını nasıl denetleyebileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 03/02/2020
 ms.topic: conceptual
 f1_keywords:
@@ -19,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e4a06a249fee38ca7fd8521459eda7bbf4100a97
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 28d04ce836316024eb4aef9f1b4a9955d98dbba8
+ms.sourcegitcommit: 47da50a74fcd3db66d97cb20accac983bc41912f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89600291"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96862873"
 ---
 # <a name="expressions-in-the-visual-studio-debugger"></a>Visual Studio hata ayıklayıcısındaki ifadeler
 Visual Studio hata ayıklayıcı, **QuickWatch** iletişim kutusunda, **Gözcü** penceresinde veya **anında** pencereye bir ifade girdiğinizde çalışan ifade değerlendiricileri içerir. Değerlendiricileri ifadesi Ayrıca **kesme noktaları** penceresinde ve hata ayıklayıcıda birçok diğer yerde de çalışır.
@@ -206,6 +208,6 @@ Hata ayıklayıcı Windows 'da açık yeni değişkenler bildiremezsiniz. Bununl
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [C++ içindeki biçim belirticileri](../debugger/format-specifiers-in-cpp.md)
-- [Bağlam İşleci (C++)](../debugger/context-operator-cpp.md)
-- [C# içindeki Biçim Belirticileri](../debugger/format-specifiers-in-csharp.md)
+- [Bağlam Işleci (C++)](../debugger/context-operator-cpp.md)
+- [C 'de biçim belirticileri #](../debugger/format-specifiers-in-csharp.md)
 - [Sözde Değişkenler](../debugger/pseudovariables.md)

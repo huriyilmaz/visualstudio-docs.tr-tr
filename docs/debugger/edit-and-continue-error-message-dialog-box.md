@@ -1,5 +1,7 @@
 ---
 title: Düzenle ve devam et hata iletisi iletişim kutusu | Microsoft Docs
+description: Düzenle ve devam et, kod değişiklikleriniz için kullanılabilir olmadığını bildirebilir. Bu makalede olası nedenler sunulmaktadır.
+ms.custom: SEO-VS-2020
 ms.date: 10/15/2018
 ms.topic: reference
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7df95eae689f7c3abbb0d75a7557ce749bdceee5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8ef34889b838e2f7eaa92420eec90db9def57e65
+ms.sourcegitcommit: 47da50a74fcd3db66d97cb20accac983bc41912f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "73188229"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96862853"
 ---
 # <a name="edit-and-continue-error-message"></a>Düzenle ve devam et hata iletisi
 
@@ -45,7 +47,7 @@ Bu hata iletisinin olası nedenleri şunlardır:
 - Yüklenemeyen bir derlemede kod düzenlemeye çalışılıyor.
 - En son sürümde derleme hataları olduğundan, uygulamanın eski bir sürümünde hata ayıklama işlemi başlatılıyor.
 
-Daha fazla bilgi için bkz.
+Daha fazla bilgi için bkz:
 - [C++ Düzenle ve devam et blog gönderisi](https://devblogs.microsoft.com/cppblog/c-edit-and-continue-in-visual-studio-2015-update-3/)
 - [Desteklenen kod değişiklikleri (C++)](../debugger/supported-code-changes-cpp.md)
 - [Düzenle ve Devam Et](../debugger/edit-and-continue.md)

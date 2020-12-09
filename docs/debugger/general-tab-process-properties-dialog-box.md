@@ -1,5 +1,7 @@
 ---
 title: Genel sekmesi, Işlem özellikleri Iletişim kutusu | Microsoft Docs
+description: Modül adı, işlem KIMLIĞI, temel öncelik, iş parçacığı sayısı, CPU süresi, Kullanıcı saati ve geçen süre dahil olmak üzere bir işlemle ilgili bilgiler için Genel sekmesini görüntüleyin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,19 +12,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6116beb67baf072d9c9762a1e8c67408cc915f29
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4980437c63348050db1a007e8f541e9af9e186cc
+ms.sourcegitcommit: 47da50a74fcd3db66d97cb20accac983bc41912f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62849822"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96862743"
 ---
 # <a name="general-tab-process-properties-dialog-box"></a>Genel Sekmesi, İşlem Özellikleri İletişim Kutusu
 Belirli bir işlem hakkında daha fazla bilgi edinmek için **genel** sekmesini kullanın. [Işlem özellikleri Iletişim kutusunu](../debugger/process-properties-dialog-box.md)görüntülemek için odağı bir [işlem görünümü](../debugger/processes-view.md) penceresine taşıyın. Ağaçta herhangi bir işlem düğümünü seçin, sonra **Görünüm** menüsünden **Özellikler** ' i seçin.
 
  **Genel** sekmesinde aşağıdaki ayarlar kullanılabilir:
 
-|Giriş|Açıklama|
+|Giriş|Description|
 |-----------|-----------------|
 |**Modül Adı**|Modülün adı.|
 |**İşlem Kimliği**|Bu işlemin benzersiz KIMLIĞI. İşlem KIMLIĞI numaraları yeniden kullanılır, bu nedenle bir işlemi yalnızca bu işlemin kullanım ömrü için tanımlarlar. Işlem nesnesi türü, bir program çalıştırıldığında oluşturulur. Bir işlemdeki tüm iş parçacıkları aynı adres alanını paylaşır ve aynı verilere erişebilir.|

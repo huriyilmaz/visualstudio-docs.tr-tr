@@ -1,5 +1,6 @@
 ---
 title: Genel sekmesi, pencere özellikleri Iletişim kutusu | Microsoft Docs
+description: Resim yazısı, tanıtıcı, dikdörtgen, uygulama örneği tutamacı, menü tanıtıcısı ve Kullanıcı verileri dahil olmak üzere bir pencere hakkında bilgi için Genel sekmesini görüntüleyin.
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,19 +11,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c5160c79e2c8dae474927e6af7ebdc9e371e9edc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 125420655af4fb021e264c3885a739fc90cfff59
+ms.sourcegitcommit: 47da50a74fcd3db66d97cb20accac983bc41912f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62849567"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96862756"
 ---
 # <a name="general-tab-window-properties-dialog-box"></a>Genel Sekme, Pencere Özellikleri İletişim Kutusu
 Seçili pencereyle ilgili bilgileri göstermek için **genel** sekmesini kullanın. [Pencere özellikleri Iletişim kutusunu](../debugger/window-properties-dialog-box.md)görüntülemek Için odağı [Windows görünümü](../debugger/windows-view.md) penceresine taşıyın. Ağaçta herhangi bir pencere düğümünü seçin, sonra **Görünüm** menüsünden **Özellikler** ' i seçin.
 
  **Genel** sekmesinde aşağıdaki ayarlar kullanılabilir:
 
-|Giriş|Açıklama|
+|Giriş|Description|
 |-----------|-----------------|
 |**Pencere başlığı**|Pencere başlığında bulunan metin veya bir denetim ise bir pencerede bulunan metin.|
 |**Pencere tutamacı**|Bu pencerenin benzersiz KIMLIĞI. Pencere tanıtıcı numaraları yeniden kullanılır; yalnızca söz konusu pencerenin ömrü için bir pencere belirler.|

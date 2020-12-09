@@ -1,5 +1,7 @@
 ---
 title: Hata ayıklayıcıda biçim belirticileri (C++) | Microsoft Docs
+description: Bir değerin Watch, oto veya Locals penceresinde görüntüleneceği biçimi değiştirmek için bir Biçim belirleyicisi kullanın. Bu makalede kullanım ayrıntıları sağlanmaktadır.
+ms.custom: SEO-VS-2020
 ms.date: 3/11/2019
 ms.topic: conceptual
 f1_keywords:
@@ -24,15 +26,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 287ef3ccfd344786bd98098c5f28d0a2bd6573f6
-ms.sourcegitcommit: 4a9689890f271f9b8b73c3333e0699cce84a95d8
+ms.openlocfilehash: 64166768dea1da015c223a74c74440ae09a0d106
+ms.sourcegitcommit: 47da50a74fcd3db66d97cb20accac983bc41912f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90832326"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96863042"
 ---
 # <a name="format-specifiers-for-c-in-the-visual-studio-debugger"></a>Visual Studio hata ayıklayıcısında C++ için biçim belirticileri
-Biçim belirticilerini kullanarak, bir değerin **Watch**, **oto**ve **Yereller** pencerelerinde görüntüleneceği biçimi değiştirebilirsiniz.
+Biçim belirticilerini kullanarak, bir değerin **Watch**, **oto** ve **Yereller** pencerelerinde görüntüleneceği biçimi değiştirebilirsiniz.
 
 Biçim belirticilerini **hemen** penceresinde, **komut** penceresinde, [izlenenoktalarda](../debugger/using-breakpoints.md#BKMK_Print_to_the_Output_window_with_tracepoints), hatta kaynak penceresinde de kullanabilirsiniz. Bu pencerelerin bir ifadesinde durakladıysanız, sonuç bir [DataTip](../debugger/view-data-values-in-data-tips-in-the-code-editor.md)içinde görüntülenir. Veri Ipucu ekranı, biçim belirticisini yansıtır.
 
@@ -50,7 +52,7 @@ int main() {
 }
 ```
 
-`my_var1`Hata ayıklama sırasında değişkeni **izleme** penceresine ekleyin, Windows Watch 'da **hata ayıklama**  >  **Windows**  >  **Watch**  >  **1**' i izleyin. Sonra, değişkene sağ tıklayıp **onaltılık görüntü**' i seçin. Şimdi **İzle** penceresinde 0x0065 değeri gösterilir. Bu değeri bir tamsayı yerine bir karakter olarak ifade etmek için, önce sağ tıklayıp **onaltılık ekran**seçimini kaldırın. Ardından, değişken adından sonra **ad** sütununa **c** karakter Biçim belirleyicisi ekleyin. **Değer** sütununda şimdi **101 ' e '** gösterilmektedir.
+`my_var1`Hata ayıklama sırasında değişkeni **izleme** penceresine ekleyin, Windows Watch 'da **hata ayıklama**  >  **Windows**  >  **Watch**  >  **1**' i izleyin. Sonra, değişkene sağ tıklayıp **onaltılık görüntü**' i seçin. Şimdi **İzle** penceresinde 0x0065 değeri gösterilir. Bu değeri bir tamsayı yerine bir karakter olarak ifade etmek için, önce sağ tıklayıp **onaltılık ekran** seçimini kaldırın. Ardından, değişken adından sonra **ad** sütununa **c** karakter Biçim belirleyicisi ekleyin. **Değer** sütununda şimdi **101 ' e '** gösterilmektedir.
 
 ![WatchFormatCPlus1](../debugger/media/watchformatcplus1.png "WatchFormatCPlus1")
 
@@ -70,7 +72,7 @@ Aşağıdaki tablolarda, Visual Studio 'da kullanabileceğiniz biçim belirticil
 |---------------|------------|--------------------------|---------------------|
 |d|ondalık tamsayı|0x00000066|102|
 |o|işaretsiz sekizlik tamsayı|0x00000066|000000000146|
-|x<br /><br /> **olsun**|onaltılı tamsayı|102|0xcccccccc|
+|x<br /><br /> **h**|onaltılı tamsayı|102|0xcccccccc|
 |X<br /><br /> **H**|onaltılı tamsayı|102|0xCCCCCCCC|
 |XB<br /><br /> **HB**|onaltılık tamsayı (baştaki 0x olmadan)|102|cccccccc|
 |XB<br /><br /> **HB**|onaltılık tamsayı (baştaki 0x olmadan)|102|CCCCCCCC|
@@ -108,7 +110,7 @@ Aşağıdaki tablolarda, Visual Studio 'da kullanabileceğiniz biçim belirticil
 |---------------|------------|--------------------------|---------------------|
 |d|ondalık tamsayı|0x00000066|102|
 |o|işaretsiz sekizlik tamsayı|0x00000066|000000000146|
-|x<br /><br /> **olsun**|onaltılı tamsayı|102|0xcccccccc|
+|x<br /><br /> **h**|onaltılı tamsayı|102|0xcccccccc|
 |X<br /><br /> **H**|onaltılı tamsayı|102|0xCCCCCCCC|
 |c|tek karakter|0x0065, c|101 ' e '|
 |s|const char * dizesi (tırnak işaretleriyle birlikte)|\<location> "Merhaba Dünya"|"Merhaba Dünya"|
@@ -149,11 +151,11 @@ Bir dizi olarak görüntülemek istediğiniz bir nesne işaretçiniz varsa, dizi
 
 |Belirleyici|Biçimlendir|Özgün Izleme değeri|Değer görüntülendi|
 |---------------|------------|--------------------------|---------------------|
-|**TID**<br /><br />**i**|işaretli ondalık tamsayı|0xF000F065|-268373915|
+|**d**<br /><br />**i**|işaretli ondalık tamsayı|0xF000F065|-268373915|
 |**larınız**|işaretsiz ondalık tamsayı|0x0065|101|
 |o|işaretsiz sekizlik tamsayı|0xF065|0170145|
 |x<br /><br />X|Onaltılı tamsayı|61541|0x0000F065|
-|**girişindeki**<br /><br />**olsun**|için uzun veya kısa ön ek: d, i, u, o, x, X|00406042|0x0c22|
+|**girişindeki**<br /><br />**h**|için uzun veya kısa ön ek: d, i, u, o, x, X|00406042|0x0c22|
 |**vadeli**|işaretli kayan nokta|(3./2.), f|1,500000|
 |**a**|imzalanmış bilimsel gösterim|(3.0/2.0)|1.500000 e + 000|
 |**Acil**|işaretli kayan nokta veya imzalanmış bilimsel gösterim,<br/> Hangisi daha kısadır|(3.0/2.0)|1,5|
