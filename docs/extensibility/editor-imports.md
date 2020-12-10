@@ -1,5 +1,7 @@
 ---
 title: Düzenleyici Içeri aktarmaları | Microsoft Docs
+description: Uzantınızı çekirdek düzenleyiciye farklı türlerde erişim sağlayan Düzenleyici Hizmetleri, fabrikalar ve aracıları içeri aktarmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c6af95b452166aa71950ac1e869d333d12d857b9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d4e3a128f0f2873ad1946788b34761aadd1e7021
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80712008"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994777"
 ---
 # <a name="editor-imports"></a>Düzenleyici içeri aktarmaları
 Uzantınız için çekirdek düzenleyiciye farklı türlerde erişim sağlayan bir dizi Düzenleyici hizmeti, fabrikası ve aracıları içeri aktarabilirsiniz. Örneğin, <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService> belirli bir içerik türü için size bir sağlamak üzere öğesini içeri aktarabilirsiniz <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigator> . (Bu gezgin, bir metin arabelleğinde farklı türlerde aramalar gerçekleştirmenize olanak tanır.)

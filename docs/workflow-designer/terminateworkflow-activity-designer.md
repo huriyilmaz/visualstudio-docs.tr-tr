@@ -1,6 +1,6 @@
 ---
-title: İş Akışı Tasarımcısı-TerminateWorkflow etkinlik Tasarımcısı
-description: Bir TerminateWorkflow etkinliği oluşturmak ve yapılandırmak için TerminateWorkflow etkinlik Tasarımcısı 'nı nasıl kullanabileceğinizi öğrenin.
+title: TerminateWorkflow etkinlik Tasarımcısı
+description: İş Akışı Tasarımcısı, bir TerminateWorkflow etkinliği oluşturmak ve yapılandırmak için TerminateWorkflow etkinlik Tasarımcısı 'nı nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5af1f8656e796d9551e1d140b07868551d563a90
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 6fc52153ca71320ebe2ebc1e1a12780e37cac08e
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94433875"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995458"
 ---
 # <a name="terminateworkflow-activity-designer"></a>TerminateWorkflow Etkinlik Tasarımcısı
 

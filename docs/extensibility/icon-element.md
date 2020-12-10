@@ -1,5 +1,7 @@
 ---
 title: Icon öğesi | Microsoft Docs
+description: Kullanılan bit eşlem ve bit eşlem şeridindeki yuva özniteliklerini içeren Visual Studio IDE uzantılarında kullanılan simgeleri temsil eden Icon öğesi hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +13,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: cf4f8a69e565620007fba4b9970ce96bb1513995
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7ed5a4f64a2c80cfdc61b37a6a8bac72adc97a33
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80710515"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96993607"
 ---
 # <a name="icon-element"></a>Icon öğesi
 Simge etiketinin GUID özniteliği, tanımlı bir bit eşlemin GUID 'sidir. `id`Özniteliği, bit eşlem şeridinde yuva seçer. Bu öğe isteğe bağlıdır. Bu öğe GuidOfficeIcon değerini içeriyorsa, **Msotcıdnoıcon** dahil edilir.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Sözdizimi
 
 ```xml
 <Icon guid="guidImages" id="bmpPic1" />

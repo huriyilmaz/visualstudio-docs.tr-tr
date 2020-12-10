@@ -1,5 +1,7 @@
 ---
 title: Extern öğe | Microsoft Docs
+description: Extern öğesi, derleme zamanında. vsct dosyası ile birleştirmek için herhangi bir dış üstbilgi (. h) dosyasına başvurur.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2cf6f9db77abaa7034af8d074b9833a4c1560f07
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7e975c3f721d65b64fc7994824406b0c9af13022
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80711496"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994530"
 ---
 # <a name="extern-element"></a>Extern öğesi
 Extern öğesi, derleme zamanında *. vsct* dosyası ile birleştirmek için herhangi bir dış üstbilgi (*. h*) dosyasına başvurur. Birleştirilecek dosyalar, VSCT derleyicisine verilen veya bir [Include öğesi](../extensibility/include-element.md)tarafından başvurulan içerme yolunda olmalıdır. Dosyalar, diğer *. vsct* dosyaları veya C++ üst bilgi dosyaları olabilir.
@@ -27,7 +29,7 @@ Extern öğesi, derleme zamanında *. vsct* dosyası ile birleştirmek için her
 
  CommandTable öğesi extern öğesi
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Sözdizimi
 
 ```xml
 <Extern href="stdidcmd.h" />

@@ -1,5 +1,7 @@
 ---
 title: 'İzlenecek yol: cihaz durumu nedeniyle nesneler eksik | Microsoft Docs'
+description: Yanlış yapılandırılmış bir cihaz durumunu bulan bir araştırmayı izleyin. Grafik olay listesi, grafik ardışık düzen aşamaları ve Grafik piksel geçmişi kullanımını gösterir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 1b0d2bbd-0729-4aa5-8308-70c5bf1468c5
@@ -8,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0e85aa8fc5af3f32f117b112e8624962a49d90c6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c29e240d4be2f66fb0684bf5372d59fe5d4d825a
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62895456"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995063"
 ---
 # <a name="walkthrough-missing-objects-due-to-device-state"></a>İzlenecek yol: Cihaz Durumu Nedeniyle Eksik Nesneler
 Bu izlenecek yol [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , hatalı yapılandırılmış cihaz durumu nedeniyle eksik olan bir nesneyi araştırmak için grafik tanılama nasıl kullanacağınızı gösterir.
@@ -86,19 +88,19 @@ Bu izlenecek yol [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , 
 
 4. Bir eşleşme bulduğunuzda, **Grafik piksel geçmişi** penceresinde eşleşen çizim çağrısını genişletin ve pikselin dışlandığından emin olun. **Grafik piksel geçmişi** penceresindeki her çizim çağrısı, ilgili nesnenin geometrisinin bir sonucu olarak bu pikseli kesişen eden bir veya daha fazla geometrik temel noktalara (punto, çizgi veya üçgenler) karşılık gelir. Her bir kesişim, pikselin son rengine katkıda bulunabilir. Derinlik testinin, eğri olarak soldan sağa aşağı doğru bir ok üzerindeki Z harfini gösteren bir simge ile temsil edildiği, hariç tutulan bir temel.
 
-5. Çıkarılan bir temel öğeyi, dışlanmasının neden olduğu durumu daha ayrıntılı incelemek için genişletin. **Çıktı Merger** grubunda, işaretçiyi **sonucun**üzerine taşıyın. Araç ipucu, temel masının Neden dışlandığını gösterir. Bu senaryoda, İnceleme, derinlik testinde başarısız olduğu ve bu nedenle pikselin son rengine katkıda bulunmadığı için ilkel öğesinin dışlanacağını ortaya koyar.
+5. Çıkarılan bir temel öğeyi, dışlanmasının neden olduğu durumu daha ayrıntılı incelemek için genişletin. **Çıktı Merger** grubunda, işaretçiyi **sonucun** üzerine taşıyın. Araç ipucu, temel masının Neden dışlandığını gösterir. Bu senaryoda, İnceleme, derinlik testinde başarısız olduğu ve bu nedenle pikselin son rengine katkıda bulunmadığı için ilkel öğesinin dışlanacağını ortaya koyar.
 
-   Geometrinin derinlik testinde başarısız olduğu için geometri 'nin görünmediğini belirledikten sonra, bu sorunun hatalı yapılandırılmış cihaz durumuyla ilgili olduğunu şüpheli olabilirsiniz. Cihaz durumu ve diğer Direct3D nesne verileri **grafik nesne tablosu**kullanılarak incelenebilir.
+   Geometrinin derinlik testinde başarısız olduğu için geometri 'nin görünmediğini belirledikten sonra, bu sorunun hatalı yapılandırılmış cihaz durumuyla ilgili olduğunu şüpheli olabilirsiniz. Cihaz durumu ve diğer Direct3D nesne verileri **grafik nesne tablosu** kullanılarak incelenebilir.
 
 #### <a name="to-examine-device-state"></a>Cihaz durumunu incelemek için
 
 1. **Grafik nesne tablosu** penceresini açın. **Grafik tanılama** araç çubuğunda **nesne tablosu**' nu seçin.
 
-2. **Grafik nesnesi tablosunda** **D3D10 cihaz** nesnesini bulun ve **D3D10 cihaz** nesnesini açın. Yeni bir **D3D10 cihazı** sekmesi içinde açılır [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Bunun daha kolay olması için **grafik nesne tablosunu** **türe**göre sıralayabilirsiniz:
+2. **Grafik nesnesi tablosunda** **D3D10 cihaz** nesnesini bulun ve **D3D10 cihaz** nesnesini açın. Yeni bir **D3D10 cihazı** sekmesi içinde açılır [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Bunun daha kolay olması için **grafik nesne tablosunu** **türe** göre sıralayabilirsiniz:
 
     ![Grafik nesne tablosu ve ilgili cihaz durumu](media/vsg_walkthru1_objtable.png "vsg_walkthru1_objtable")
 
-3. Olası sorunlar için **D3D10 cihaz** sekmesinde görüntülenen cihaz durumunu inceleyin. Geometri, temel elemanlar derinlik testinde başarısız olduğu için görünmediğinden, derinlik testini etkileyen derinlik kalıbı gibi cihaz durumuna odaklanırsınız. Bu senaryoda, **derinlik kalıbı açıklaması** ( **çıktı birleşme durumu**altında), **derinlik işlevi** üyesi için seyrek bir değer içerir `D3D10_COMPARISON_GREATER` :
+3. Olası sorunlar için **D3D10 cihaz** sekmesinde görüntülenen cihaz durumunu inceleyin. Geometri, temel elemanlar derinlik testinde başarısız olduğu için görünmediğinden, derinlik testini etkileyen derinlik kalıbı gibi cihaz durumuna odaklanırsınız. Bu senaryoda, **derinlik kalıbı açıklaması** ( **çıktı birleşme durumu** altında), **derinlik işlevi** üyesi için seyrek bir değer içerir `D3D10_COMPARISON_GREATER` :
 
     ![Derinlik kalıbı bilgilerini gösteren D3D10 cihaz penceresi](media/vsg_walkthru1_devicestate.png "vsg_walkthru1_devicestate")
 

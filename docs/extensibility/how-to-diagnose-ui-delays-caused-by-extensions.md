@@ -1,17 +1,19 @@
 ---
 title: Visual Studio 'da uzantı Kullanıcı arabirimi gecikmelerini tanılama | Microsoft Docs
+description: Visual Studio, Kullanıcı arabirimi gecikmelerini bir uzantının neden olup olmadığını bildirir. Uzantı kodunuzda ne tür bir kullanıcı arabirimi gecikmesine neden olduğunu nasıl tanıleyeceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 01/26/2018
 ms.topic: conceptual
 author: PooyaZv
 ms.author: pozandev
 manager: jillfra
 ms.workload: multiple
-ms.openlocfilehash: e8b35a566eb0f2457d6eb8ae3a33235df2a64cd3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 965e96a7881e20eca035b61ed7fd6f29398e71c6
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75849155"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994270"
 ---
 # <a name="how-to-diagnose-ui-delays-caused-by-extensions"></a>Nasıl yapılır: Uzantılardan kaynaklanan kullanıcı arabirimi gecikmelerini tanılama
 
@@ -71,7 +73,7 @@ PerfView izleme toplamayı başlatduktan sonra, bildirimin tekrar görünmesi i�
 
 ## <a name="examine-the-activity-log-to-get-the-delay-id"></a>Gecikme KIMLIĞINI almak için etkinlik günlüğünü inceleyin
 
-Daha önce bahsedildiği gibi, etkinlik günlüğünü *%AppData%\microsoft\visualstudio \<vs_instance_id>\ActivityLog.xml*adresinde bulabilirsiniz. Visual Studio Uzantı UI gecikmesini her algıladığında, kaynak olarak etkinlik günlüğüne bir düğüm yazar `UIDelayNotifications` . Bu düğüm, UI gecikmesi hakkında dört bilgi içerir:
+Daha önce bahsedildiği gibi, etkinlik günlüğünü *%AppData%\microsoft\visualstudio \<vs_instance_id>\ActivityLog.xml* adresinde bulabilirsiniz. Visual Studio Uzantı UI gecikmesini her algıladığında, kaynak olarak etkinlik günlüğüne bir düğüm yazar `UIDelayNotifications` . Bu düğüm, UI gecikmesi hakkında dört bilgi içerir:
 
 - Bir VS oturumunda UI gecikmesini benzersiz bir şekilde tanımlayan ardışık bir sayı olan UI gecikme KIMLIĞI
 - Visual Studio oturumunuzu baştan kapatmaya benzersiz bir şekilde tanımlayan oturum KIMLIĞI
@@ -102,7 +104,7 @@ Sonra, izleme dosyasını açın. Bunu, aynı PerfView örneğini kullanarak ya 
 Ardından, sol bölmedeki izleme dosyasını seçin ve sağ tıklama ya da bağlam menüsünden **Aç** ' ı seçerek dosyayı açın.
 
 > [!NOTE]
-> Varsayılan olarak PerfView bir ZIP arşivi verir. *trace.zip*açtığınızda, Arşivi otomatik olarak açar ve izlemeyi açar. Bu, izleme koleksiyonu sırasında **ZIP** kutusunun işaretini kaldırarak atlayabilirsiniz. Ancak, farklı makinelerde izlemeleri aktarmayı ve kullanmayı planlıyorsanız, **ZIP** kutusunun denetlenmesini kesinlikle öneririz. Bu seçenek olmadan, Ngen derlemeleri için gerekli pdb 'leri, izlemeye eşlik etmez ve bu nedenle, Ngen derlemelerinin sembolleri hedef makinede çözümlenmeyecektir. (Ngen derlemeleri için pdb 'leri hakkında daha fazla bilgi için [Bu blog gönderisine](https://devblogs.microsoft.com/devops/creating-ngen-pdbs-for-profiling-reports/) bakın.)
+> Varsayılan olarak PerfView bir ZIP arşivi verir. *trace.zip* açtığınızda, Arşivi otomatik olarak açar ve izlemeyi açar. Bu, izleme koleksiyonu sırasında **ZIP** kutusunun işaretini kaldırarak atlayabilirsiniz. Ancak, farklı makinelerde izlemeleri aktarmayı ve kullanmayı planlıyorsanız, **ZIP** kutusunun denetlenmesini kesinlikle öneririz. Bu seçenek olmadan, Ngen derlemeleri için gerekli pdb 'leri, izlemeye eşlik etmez ve bu nedenle, Ngen derlemelerinin sembolleri hedef makinede çözümlenmeyecektir. (Ngen derlemeleri için pdb 'leri hakkında daha fazla bilgi için [Bu blog gönderisine](https://devblogs.microsoft.com/devops/creating-ngen-pdbs-for-profiling-reports/) bakın.)
 
 PerfView 'in izlemeyi işlemesi ve açması birkaç dakika sürebilir. İzleme açıkken, altında çeşitli "görünümler" listesi görüntülenir.
 
@@ -110,7 +112,7 @@ PerfView 'in izlemeyi işlemesi ve açması birkaç dakika sürebilir. İzleme a
 
 Kullanıcı arabirimi gecikmesi zaman aralığını almak için önce **Olaylar** görünümünü kullanacağız:
 
-1. **Events** `Events` İzleme altındaki düğüm ' i seçerek ve sağ tıklama veya bağlam menüsünden **Aç** ' ı seçerek Olaylar görünümünü açın.
+1.  `Events` İzleme altındaki düğüm ' i seçerek ve sağ tıklama veya bağlam menüsünden **Aç** ' ı seçerek Olaylar görünümünü açın.
 2. `Microsoft-VisualStudio/ExtensionUIUnresponsiveness`Sol bölmede "" seçeneğini belirleyin.
 3. ENTER tuşuna basın
 

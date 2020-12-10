@@ -1,5 +1,7 @@
 ---
 title: Çıkış Penceresi genişletiliyor | Microsoft Docs
+description: Visual Studio SDK 'da çıkış penceresini genişletmeyi ve kendi özel bölmelerinizi oluşturma ve yönetme hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,22 +12,22 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 800b443b079111d1d09fffdd900b246a020578f4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 39ee69f934a9962d2beefb83b1ada08b920ce53d
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80711652"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994673"
 ---
 # <a name="extend-the-output-window"></a>Çıkış penceresini genişletme
-**Çıkış** penceresi, okuma/yazma metin bölmeleri kümesidir. Visual Studio, bu yerleşik bölmelere sahiptir: derleme, projelerin derlemeler hakkındaki iletileri ve **genel**olarak IDE hakkındaki iletileri iletişim kurmasını sağlayan **derleme** [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Projeler, arabirim yöntemleri aracılığıyla **derleme** bölmesine otomatik olarak bir başvuru alır <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg> ve Visual Studio, hizmet aracılığıyla **genel** bölmeye doğrudan erişim sağlar <xref:Microsoft.VisualStudio.Shell.Interop.SVsGeneralOutputWindowPane> . Yerleşik bölmelere ek olarak kendi özel bölmelerinizi oluşturabilir ve yönetebilirsiniz.
+**Çıkış** penceresi, okuma/yazma metin bölmeleri kümesidir. Visual Studio, bu yerleşik bölmelere sahiptir: derleme, projelerin derlemeler hakkındaki iletileri ve **genel** olarak IDE hakkındaki iletileri iletişim kurmasını sağlayan **derleme** [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Projeler, arabirim yöntemleri aracılığıyla **derleme** bölmesine otomatik olarak bir başvuru alır <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg> ve Visual Studio, hizmet aracılığıyla **genel** bölmeye doğrudan erişim sağlar <xref:Microsoft.VisualStudio.Shell.Interop.SVsGeneralOutputWindowPane> . Yerleşik bölmelere ek olarak kendi özel bölmelerinizi oluşturabilir ve yönetebilirsiniz.
 
  **Çıkış** penceresini doğrudan <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindow> ve arabirimleri aracılığıyla denetleyebilirsiniz <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindowPane> . <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindow>Hizmet tarafından sunulan arabirim, <xref:Microsoft.VisualStudio.Shell.Interop.SVsOutputWindow> **Çıkış** pencere bölmelerini oluşturma, alma ve yok etme yöntemlerini tanımlar. <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindowPane>Arabirim bölmeleri gösterme, bölmeleri gizleme ve metinlerini düzenleme yöntemlerini tanımlar. **Çıktı** penceresini denetlemenin alternatif bir yolu, <xref:EnvDTE.OutputWindow> <xref:EnvDTE.OutputWindowPane> Visual Studio Automation nesne modelindeki ve nesneleri kullanmaktır. Bu nesneler, ve arabirimlerinin neredeyse tüm işlevlerini kapsülleyebilir <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindow> <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindowPane> . Ayrıca, <xref:EnvDTE.OutputWindow> ve nesneleri, <xref:EnvDTE.OutputWindowPane> **Çıkış** pencere bölmelerini daha kolay bir şekilde numaralandırmak ve bölmelerden metin almak için bazı üst düzey işlevleri de ekler.
 
 ## <a name="create-an-extension-that-uses-the-output-pane"></a>Çıkış bölmesini kullanan bir uzantı oluşturma
  Çıkış bölmesinin farklı yönlerini uygulayan bir uzantı yapabilirsiniz.
 
-1. `TestOutput` **TestOutput**adlı bir menü komutuyla adlı bir VSIX projesi oluşturun. Daha fazla bilgi için bkz. [bir menü komutuyla uzantı oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md).
+1. `TestOutput` **TestOutput** adlı bir menü komutuyla adlı bir VSIX projesi oluşturun. Daha fazla bilgi için bkz. [bir menü komutuyla uzantı oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md).
 
 2. Aşağıdaki başvuruları ekleyin:
 
@@ -40,7 +42,7 @@ ms.locfileid: "80711652"
     using EnvDTE80;
     ```
 
-4. *TestOutput.cs*içinde, yöntemini silin `ShowMessageBox` . Aşağıdaki yöntem saplaması 'nı ekleyin:
+4. *TestOutput.cs* içinde, yöntemini silin `ShowMessageBox` . Aşağıdaki yöntem saplaması 'nı ekleyin:
 
     ```csharp
     private void OutputCommandHandler(object sender, EventArgs e)

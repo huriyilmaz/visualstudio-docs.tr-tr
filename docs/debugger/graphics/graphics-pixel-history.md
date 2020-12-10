@@ -1,5 +1,7 @@
 ---
 title: Grafik piksel geçmişi | Microsoft Docs
+description: Belirli bir pikselin geçmişini görerek işleme sorunlarını giderin. Grafik piksel geçmişi, Direct3D olaylarının etkilerini gösterir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8cb1b7a869915eebc561e1baf47082dd5dbc00df
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0b12264c610d291ff49be0524663141a59082e9e
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72735483"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995310"
 ---
 # <a name="graphics-pixel-history"></a>Grafik Piksel Geçmişi
 Visual Studio Grafik Çözümleyicisi grafik piksel geçmişi penceresi, belirli bir pikselin, oyununuzun veya uygulamanızın bir çerçevesinde gerçekleşen Direct3D olaylarından nasıl etkilendiğini anlamanıza yardımcı olur.

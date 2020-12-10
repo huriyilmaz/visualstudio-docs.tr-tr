@@ -1,5 +1,7 @@
 ---
 title: Grafik ardışık düzen aşamaları | Microsoft Docs
+description: Direct3D grafik ardışık düzeninin her aşamasında çizim çağrısının nasıl dönüştürüleceğini görerek işleme sorunlarını giderin.
+ms.custom: SEO-VS-2020
 ms.date: 02/09/2017
 ms.topic: conceptual
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1d697313289bbf00234764cc04603b7bc256f174
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 150c61e271e7951332848a601aaddc619a1c37e5
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72735474"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96993932"
 ---
 # <a name="graphics-pipeline-stages"></a>Grafik Ardışık Düzen Aşamaları
 Grafik ardışık düzen Aşamaları penceresi, tek bir çizim çağrısının Direct3D grafik işlem hattının her aşamasına göre nasıl dönüştürüleceğini anlamanıza yardımcı olur.
@@ -50,7 +52,7 @@ Grafik ardışık düzen Aşamaları penceresi, tek bir çizim çağrısının D
 
 #### <a name="to-debug-a-shader"></a>Gölgelendiricide hata ayıklamak için
 
-- **Grafik ardışık düzen aşamaları** penceresinde, hata ayıklamak istediğiniz gölgelendiriciye karşılık gelen gölgelendirici aşamasını bulun. Ardından, önizleme görüntüsünün altında, **hata ayıklamayı Başlat**' ı seçin. Bu giriş noktası, HLSL hata ayıklayıcısına karşılık gelen aşama için gölgelendiriciye ait ilk çağrıya (yani, bu çizim çağrısı sırasında gölgelendirici tarafından işlenen ilk piksel, köşe veya ilkel) göre varsayılan olarak ayarlanır. Belirli bir piksel veya köşe için bu gölgelendirici çağırmaları **Grafik piksel geçmişi**aracılığıyla erişilebilir.
+- **Grafik ardışık düzen aşamaları** penceresinde, hata ayıklamak istediğiniz gölgelendiriciye karşılık gelen gölgelendirici aşamasını bulun. Ardından, önizleme görüntüsünün altında, **hata ayıklamayı Başlat**' ı seçin. Bu giriş noktası, HLSL hata ayıklayıcısına karşılık gelen aşama için gölgelendiriciye ait ilk çağrıya (yani, bu çizim çağrısı sırasında gölgelendirici tarafından işlenen ilk piksel, köşe veya ilkel) göre varsayılan olarak ayarlanır. Belirli bir piksel veya köşe için bu gölgelendirici çağırmaları **Grafik piksel geçmişi** aracılığıyla erişilebilir.
 
 ### <a name="the-pipeline-stages"></a>İşlem hattı aşamaları
  Ardışık düzen Aşamaları penceresi, yalnızca çizim çağrısı sırasında etkin olan işlem hattının aşamalarını görselleştirir. Grafik işlem hattının her aşaması, bir önceki aşamadaki girişi dönüştürür ve sonucu sonraki aşamaya geçirir. İlk aşamada, giriş derleyicisi, giriş olarak uygulamanızdan dizin ve köşe verileri alır; Son aşama — çıktı Merger —, ekranınızda gördüğünüz son görüntüyü oluşturmak için, yeni işlenmiş pikselleri, kendi çıktısı olarak framebuffer veya render Target ile birlikte birleştirir.

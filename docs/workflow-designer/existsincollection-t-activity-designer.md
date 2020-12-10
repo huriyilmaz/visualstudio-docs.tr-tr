@@ -1,6 +1,6 @@
 ---
-title: İş Akışı Tasarımcısı-mevcut Tsincollection &lt; T &gt; etkinlik Tasarımcısı
-description: Mevcut <T> bir Tsıncollection etkinliği oluşturmak ve yapılandırmak için var olan Tsıncollection etkinlik tasarımcısını nasıl kullanabileceğinizi öğrenin <T> .
+title: Mevcut Tsıncollection &lt; T &gt; etkinlik Tasarımcısı
+description: <T>Mevcut bir Tsıncollection etkinliği oluşturmak ve yapılandırmak için iş akışı Tasarımcısı ' de var olan bulunan Tsıncollection etkinlik tasarımcısını nasıl kullanabileceğinizi öğrenin <T> .
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 357001651018b1b9211efc75d3b9397fb2a943cf
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 9012bb936c2a9a8944639458d4165e08f5e7081e
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94438028"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995414"
 ---
 # <a name="existsincollectiont-activity-designer"></a>ExistsInCollection\<T> Etkinlik Tasarımcısı
 
@@ -31,7 +31,7 @@ Var olan **Tsıncollection \<T>** etkinlik Tasarımcısı bir etkinlik oluşturm
 
 **\<T> Mevcut Tsıncollection** etkinlik Tasarımcısı, iş akışı Tasarımcısı **araç kutusu** sekmesine tıklanarak erişilen **araç kutusu** **koleksiyon** kategorisinde bulunabilir. Alternatif olarak, **Görünüm** menüsünden **araç kutusu** ' nu seçin veya **CTRL** + **alt** + **X** tuşlarına basın.
 
-Var olan **Tsıncollection \<T>** etkinlik Tasarımcısı **araç kutusundan** sürüklenip, örneğin içinde olduğu gibi etkinliklerin genellikle yerleştirildiği iş akışı Tasarımcısı yüzeyine bırakılabilir <xref:System.Activities.Statements.Sequence> . Bu <xref:System.Activities.Statements.ExistsInCollection%601> , varsayılan değeri var olan bir etkinlik oluşturur <xref:System.Activities.Activity.DisplayName%2A><Int32 \> . (Varsayılan olarak, *TypeArgument* **Int32** ' dir. Özellik kılavuzunda değiştirilebilir.)  Değer, var <xref:System.Activities.Activity.DisplayName%2A> olan **Tsıncollection<\> T** etkinlik tasarımcısının üst bilgisinde veya özellik kılavuzunun **DisplayName** kutusunda düzenlenebilir. Diğer özellikler, özellik kılavuzunda düzenlenmelidir.
+Var olan **Tsıncollection \<T>** etkinlik Tasarımcısı **araç kutusundan** sürüklenip, örneğin içinde olduğu gibi etkinliklerin genellikle yerleştirildiği iş akışı Tasarımcısı yüzeyine bırakılabilir <xref:System.Activities.Statements.Sequence> . Bu <xref:System.Activities.Statements.ExistsInCollection%601> , varsayılan değeri var olan bir etkinlik oluşturur <xref:System.Activities.Activity.DisplayName%2A><Int32 \> . (Varsayılan olarak, *TypeArgument* **Int32**' dir. Özellik kılavuzunda değiştirilebilir.)  Değer, var <xref:System.Activities.Activity.DisplayName%2A> olan **Tsıncollection<\> T** etkinlik tasarımcısının üst bilgisinde veya özellik kılavuzunun **DisplayName** kutusunda düzenlenebilir. Diğer özellikler, özellik kılavuzunda düzenlenmelidir.
 
 ### <a name="the-existsincollectiont-properties"></a>Mevcut Tsıncollection \<T> Özellikleri
 

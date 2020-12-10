@@ -1,5 +1,7 @@
 ---
 title: Görüntü hizmeti ve kataloğu | Microsoft Docs
+description: Bu makale, Visual Studio görüntü hizmeti ve görüntü kataloğunu benimseme için rehberlik ve en iyi yöntemleri içerir.
+ms.custom: SEO-VS-2020
 ms.date: 04/01/2019
 ms.topic: conceptual
 ms.assetid: 34990c37-ae98-4140-9b1e-a91c192220d9
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a098e78e8895aea72d830a88e436a06f15de6133
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 41adcbe97f9d0779fbad465bac673a3f7cf086c7
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584548"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96993542"
 ---
 # <a name="image-service-and-catalog"></a>Görüntü hizmeti ve kataloğu
 Bu kılavuz kitabı, Visual Studio görüntü hizmeti ve Visual Studio 2015 ' de tanıtılan görüntü kataloğunu benimseme için rehberlik ve en iyi uygulamaları içerir.
@@ -103,7 +105,7 @@ Bu kılavuz kitabı, Visual Studio görüntü hizmeti ve Visual Studio 2015 ' de
 
 |**Subelement**|**Tanım**|
 |-|-|
-|İçeri Aktarma|Geçerli bildirimde kullanılmak üzere verilen bildirim dosyasının sembollerini içeri aktarır|
+|İçeri Aktar|Geçerli bildirimde kullanılmak üzere verilen bildirim dosyasının sembollerini içeri aktarır|
 |Guid|Sembol bir GUID 'YI temsil eder ve GUID biçimlendirmesi ile eşleşmelidir|
 |ID|Sembol bir KIMLIĞI temsil eder ve negatif olmayan bir tamsayı olmalıdır|
 |Dize|Sembol rastgele bir dize değerini temsil eder|
@@ -160,7 +162,7 @@ Bu kılavuz kitabı, Visual Studio görüntü hizmeti ve Visual Studio 2015 ' de
 |**Öznitelik**|**Tanım**|
 |-|-|
 |Kullanılmamışsa|Istenir Görüntünün nereden yüklenebileceğini tanımlayan bir URI. Aşağıdakilerden biri olabilir:<br /><br /> -Application:///yetkilisini kullanan bir [paket URI 'si](/dotnet/framework/wpf/app-development/pack-uris-in-wpf)<br />-Mutlak bir bileşen kaynağı başvurusu<br />-Yerel kaynak içeren bir dosyanın yolu|
-|Arka Plan|Seçim Kaynağın kullanılması amaçlanan arka plan türünü gösterir.<br /><br /> Aşağıdakilerden biri olabilir:<br /><br /> *Hafif:* Kaynak açık bir arka planda kullanılabilir.<br /><br /> *Koyu:* Kaynak, koyu bir arka planda kullanılabilir.<br /><br /> *Highkarşıtlıklı:* Kaynak Yüksek Karşıtlık modundaki herhangi bir arka planda kullanılabilir.<br /><br /> *High, Stlight:* Kaynak Yüksek Karşıtlık modundaki hafif bir arka planda kullanılabilir.<br /><br /> Üst *sınır:* Kaynak, Yüksek Karşıtlık modundaki karanlık bir arka planda kullanılabilir.<br /><br /> Arka plan özniteliği atlanırsa, kaynak herhangi bir arka planda kullanılabilir.<br /><br /> Arka plan hafif, *koyu*, *ince*bir *şekilde veya daha* *ince*, kaynak renkleri hiçbir şekilde ters çevrilmez. Arka plan atlanırsa veya *Highkontrast*olarak ayarlandıysa, kaynak renklerinin Inversion değeri görüntünün **allowcolorınversion** özniteliği tarafından denetlenir.|
+|Arka plan|Seçim Kaynağın kullanılması amaçlanan arka plan türünü gösterir.<br /><br /> Aşağıdakilerden biri olabilir:<br /><br /> *Hafif:* Kaynak açık bir arka planda kullanılabilir.<br /><br /> *Koyu:* Kaynak, koyu bir arka planda kullanılabilir.<br /><br /> *Highkarşıtlıklı:* Kaynak Yüksek Karşıtlık modundaki herhangi bir arka planda kullanılabilir.<br /><br /> *High, Stlight:* Kaynak Yüksek Karşıtlık modundaki hafif bir arka planda kullanılabilir.<br /><br /> Üst *sınır:* Kaynak, Yüksek Karşıtlık modundaki karanlık bir arka planda kullanılabilir.<br /><br /> Arka plan özniteliği atlanırsa, kaynak herhangi bir arka planda kullanılabilir.<br /><br /> Arka plan hafif, *koyu*, *ince* bir *şekilde veya daha* *ince*, kaynak renkleri hiçbir şekilde ters çevrilmez. Arka plan atlanırsa veya *Highkontrast* olarak ayarlandıysa, kaynak renklerinin Inversion değeri görüntünün **allowcolorınversion** özniteliği tarafından denetlenir.|
 
 Bir \<Source> öğe, aşağıdaki isteğe bağlı alt öğeler için tam olarak birine sahip olabilir:
 
@@ -245,7 +247,7 @@ Bir \<Source> öğe, aşağıdaki isteğe bağlı alt öğeler için tam olarak 
 
 - **Knownımageıds. h**
 
-  - Yerleşik görüntü kataloğu **Knownbilinen**adını kullanırsanız, ancak **IVsHierarchy GetGuidProperty** veya **GetProperty** çağrılarından değer döndürmekte olduğu gibi **ımagetakma** türünü kullanamaz.
+  - Yerleşik görüntü kataloğu **Knownbilinen** adını kullanırsanız, ancak **IVsHierarchy GetGuidProperty** veya **GetProperty** çağrılarından değer döndürmekte olduğu gibi **ımagetakma** türünü kullanamaz.
 
 - **Knowntakma adları. h**
 
@@ -281,13 +283,13 @@ Bir \<Source> öğe, aşağıdaki isteğe bağlı alt öğeler için tam olarak 
 
 ## <a name="how-do-i-write-new-wpf-ui"></a>Nasıl yaparım? yeni WPF Kullanıcı arabirimi mi yazılacak?
 
-1. Yukarıdaki ilk adımlar bölümünde gerekli derleme başvurularını projenize ekleyerek başlayın. Bunların tümünü eklemeniz gerekmez, bu nedenle yalnızca ihtiyacınız olan başvuruları ekleyin. (Yani, **fırçalar**yerine renkler kullanıyorsanız veya bu **renklere** erişiminiz varsa, dönüştürücüye gerek Duymayabileceğinizden, **yardımcı programlara**olan başvuruyu atlayabilirsiniz.)
+1. Yukarıdaki ilk adımlar bölümünde gerekli derleme başvurularını projenize ekleyerek başlayın. Bunların tümünü eklemeniz gerekmez, bu nedenle yalnızca ihtiyacınız olan başvuruları ekleyin. (Yani, **fırçalar** yerine renkler kullanıyorsanız veya bu **renklere** erişiminiz varsa, dönüştürücüye gerek Duymayabileceğinizden, **yardımcı programlara** olan başvuruyu atlayabilirsiniz.)
 
-2. İstenen görüntüyü seçin ve bilinen adını alın. Bir **Knownbilinen**adı kullanın veya kendi özel görüntünüz ve takma bilgileriniz varsa kendinizinkini kullanın.
+2. İstenen görüntüyü seçin ve bilinen adını alın. Bir **Knownbilinen** adı kullanın veya kendi özel görüntünüz ve takma bilgileriniz varsa kendinizinkini kullanın.
 
 3. XAML 'nize **çapraz resimler** ekleyin. (Örneğe bakın.)
 
-4. UI hiyerarşinizdeki **ImageThemingUtilities. ImageBackgroundColor** özelliğini ayarlayın. (Bu, **çapraz görüntüde**olması gerekmeyen arka plan renginin bilinen konumunda ayarlanmalıdır.) (Örneğe bakın.)
+4. UI hiyerarşinizdeki **ImageThemingUtilities. ImageBackgroundColor** özelliğini ayarlayın. (Bu, **çapraz görüntüde** olması gerekmeyen arka plan renginin bilinen konumunda ayarlanmalıdır.) (Örneğe bakın.)
 
 ```xaml
 <Window
@@ -317,7 +319,7 @@ Bir \<Source> öğe, aşağıdaki isteğe bağlı alt öğeler için tam olarak 
 
 2. Tüm kaynak özniteliklerini bilinen ad öznitelikleri olarak değiştirin.
 
-    - Görüntü hiçbir şekilde değişmüyorsa ve **Knowntakma adlar**kullanıyorsanız, bu özelliği bir **knownbilinen**adına statik olarak bağlayın. (Yukarıdaki örneğe bakın.)
+    - Görüntü hiçbir şekilde değişmüyorsa ve **Knowntakma adlar** kullanıyorsanız, bu özelliği bir **knownbilinen** adına statik olarak bağlayın. (Yukarıdaki örneğe bakın.)
 
     - Görüntü hiçbir şekilde değişiklik görmüyorsa ve kendi özel görüntünüzü kullanıyorsanız, kendi bilinen adınızı statik olarak bağlayın.
 
@@ -461,7 +463,7 @@ Bitmap bitmap = (Bitmap)GelUtilities.GetObjectData(uiObj); // Use this if you ne
 ::: moniker-end
 
 ## <a name="how-do-i-use-image-monikers-in-a-new-tool-window"></a>Nasıl yaparım? yeni bir araç penceresinde görüntü takma adları kullanılsın mı?
- VSıX paketi proje şablonu Visual Studio 2015 için güncelleştirildi. Yeni bir araç penceresi oluşturmak için VSIX projesine sağ tıklayın ve **Add**  >  **Yeni öğe** Ekle ' yi (**CTRL** + **vardiyası** + **a**) seçin. Proje dili için genişletilebilirlik düğümü altında **özel araç penceresi**' ni seçin, araç penceresine bir ad verin ve **Ekle** düğmesine basın.
+ VSıX paketi proje şablonu Visual Studio 2015 için güncelleştirildi. Yeni bir araç penceresi oluşturmak için VSIX projesine sağ tıklayın ve   >  **Yeni öğe** Ekle ' yi (**CTRL** + **vardiyası** + **a**) seçin. Proje dili için genişletilebilirlik düğümü altında **özel araç penceresi**' ni seçin, araç penceresine bir ad verin ve **Ekle** düğmesine basın.
 
  Bunlar bir araç penceresinde takma adlar kullanmak için önemli yer lardır. Her biri için yönergeleri izleyin:
 
@@ -576,15 +578,15 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 ## <a name="how-do-i-port-a-project-system"></a>Nasıl yaparım? bir proje sistemi mi?
  **Bir proje için ımagetakma adlar sağlama**
 
-1. Projenin **IVsHierarchy**üzerinde **VSHPROPID_SupportsIconMonikers** uygulayın ve true döndürün.
+1. Projenin **IVsHierarchy** üzerinde **VSHPROPID_SupportsIconMonikers** uygulayın ve true döndürün.
 
-2. **VSHPROPID_IconMonikerImageList** (orijinal proje **VSHPROPID_IconImgList**kullanıyorsa) veya **VSHPROPID_IconMonikerGuid**, **VSHPROPID_IconMonikerId**, **VSHPROPID_OpenFolderIconMonikerGuid**, **VSHPROPID_OpenFolderIconMonikerId** (orijinal proje **VSHPROPID_IconHandle** ve **VSHPROPID_OpenFolderIconHandle**kullanılıyorsa) uygulayın.
+2. **VSHPROPID_IconMonikerImageList** (orijinal proje **VSHPROPID_IconImgList** kullanıyorsa) veya **VSHPROPID_IconMonikerGuid**, **VSHPROPID_IconMonikerId**, **VSHPROPID_OpenFolderIconMonikerGuid**, **VSHPROPID_OpenFolderIconMonikerId** (orijinal proje **VSHPROPID_IconHandle** ve **VSHPROPID_OpenFolderIconHandle** kullanılıyorsa) uygulayın.
 
 3. Uzantı noktaları tarafından istenirse simgelerin "eski" sürümlerini oluşturmak için simgeler için özgün Vshpropıds uygulamasını değiştirin. **IVsImageService2** bu simgeleri almak için gereken işlevselliği sağlar
 
    **VB/C# proje türleri için ek gereksinimler**
 
-   Yalnızca projenizin en **dıştaki Flavor**olduğunu tespit ederseniz **VSHPROPID_SupportsIconMonikers** uygulayın. Aksi takdirde, gerçek en dıştaki Flavor gerçek görüntü adlarını desteklemiyor olabilir ve temel özellik, özelleştirilmiş görüntüleri etkili bir şekilde "gizleyebilir".
+   Yalnızca projenizin en **dıştaki Flavor** olduğunu tespit ederseniz **VSHPROPID_SupportsIconMonikers** uygulayın. Aksi takdirde, gerçek en dıştaki Flavor gerçek görüntü adlarını desteklemiyor olabilir ve temel özellik, özelleştirilmiş görüntüleri etkili bir şekilde "gizleyebilir".
 
    **Nasıl yaparım? CPS 'de görüntü takma adları kullanılsın mı?**
 
@@ -630,7 +632,7 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 
    - Önerilen: bildirime uyacak şekilde bildirim için varsayılan olmayan bir ad sağlayın.
 
-2. Yalnızca **Knowntakma adlar**kullanıyorsanız şunları yapın:
+2. Yalnızca **Knowntakma adlar** kullanıyorsanız şunları yapın:
 
    - \<Images>Bildirimin bölümünü ile değiştirin \<Images/> .
 
@@ -638,7 +640,7 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 
    - Önerilen: AssetsGuid sembolünü ve resim şeridi sembolünü, kullanımına uyacak şekilde yeniden adlandırın.
 
-   - Her bir **containedimage**GUID 'sini $ (ımagecatalogguid) ile değiştirin, her bir **CONTAINEDIMAGE**kimliğini $ () ile değiştirin \<moniker> ve her bir **containedimage** öğesine External = "true" özniteliğini ekleyin
+   - Her bir **containedimage** GUID 'sini $ (ımagecatalogguid) ile değiştirin, her bir **CONTAINEDIMAGE** kimliğini $ () ile değiştirin \<moniker> ve her bir **containedimage** öğesine External = "true" özniteliğini ekleyin
 
        - \<moniker> görüntüyle eşleşen **knownbilinen** adıyla değiştirilmelidir, ancak "Knowntakma adları" ile değiştirilmelidir. adından kaldırılır.
 
@@ -750,7 +752,7 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 
 - CPS proje sistemimi güncelleştiriyorum. **ImageName** ve **StockIconService**'a ne oldu?
 
-  - Bunlar, CPS 'in takma adlar kullanacak şekilde güncelleştirildiği zaman kaldırılmıştır. Artık **StockIconService**çağrısı yapmanız gerekmez, Istenen **KNOWNBILINEN** adı, CPS yardımcı programlarında **toprojectsystemtype ()** genişletme yöntemini kullanarak yönteme veya özelliğe geçirmeniz yeterlidir. **ImageName** 'Den **knowntakma adlarıyla** bir eşleme bulabilirsiniz:
+  - Bunlar, CPS 'in takma adlar kullanacak şekilde güncelleştirildiği zaman kaldırılmıştır. Artık **StockIconService** çağrısı yapmanız gerekmez, Istenen **KNOWNBILINEN** adı, CPS yardımcı programlarında **toprojectsystemtype ()** genişletme yöntemini kullanarak yönteme veya özelliğe geçirmeniz yeterlidir. **ImageName** 'Den **knowntakma adlarıyla** bir eşleme bulabilirsiniz:
 
     |**Görüntü**|**Knownbilinen ad**|
     |-|-|
@@ -819,7 +821,7 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 
   - Tamamlanma listesi sağlayıcımı güncelleştiriyorum. Eski **Standartglyphgroup** ve **standardglif** değerleriyle hangi **knowntakma adları** eşleşiyor?
 
-    |Ad|Ad|Ad|
+    |Name|Name|Name|
     |-|-|-|
     |GlyphGroupClass|Glyphitempublik|Classpublik|
     |GlyphGroupClass|GlyphItemInternal|Classınterternal|

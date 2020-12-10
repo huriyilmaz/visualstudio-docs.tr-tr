@@ -1,5 +1,7 @@
 ---
 title: 'İzlenecek yol: köşe gölgelemesi nedeniyle eksik nesneler | Microsoft Docs'
+description: Köşe gölgelendirici hatası bulan bir araştırmayı izleyin. Grafik olay listesi, grafik ardışık düzen aşamaları, HLSL hata ayıklayıcısı ve grafik olay çağrı yığınını gösterir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: e42b54a0-8092-455c-945b-9ecafb129d93
@@ -8,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cc3bd288044c9fea1da648b64cabc87148b8463a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a7e4c01a990ce4d3fff6769ba016c168b190687f
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64825525"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995009"
 ---
 # <a name="walkthrough-missing-objects-due-to-vertex-shading"></a>İzlenecek yol: Köşe Gölgeleme Nedeniyle Eksik Nesneler
 Bu izlenecek yol, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] köşe gölgelendirici aşamasında oluşan bir hata nedeniyle eksik olan bir nesneyi araştırmak için grafik tanılama araçlarının nasıl kullanılacağını gösterir.
@@ -46,7 +48,7 @@ Bu izlenecek yol, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] k
 
     ![Visual Studio 'da grafik günlüğü belgesi](media/gfx_diag_demo_missing_object_shader_step_1.png "gfx_diag_demo_missing_object_shader_step_1")
 
-   Sorunu gösteren bir çerçeve seçtikten sonra **grafik olay listesini**kullanarak tanımayı deneyebilirsiniz. **Grafik olay listesi** , etkin çerçeveyi işlemek için yapılan her Direct3D API çağrısını içerir, örneğin, cihaz durumunu ayarlamak için API çağrıları, arabellekleri oluşturma ve güncelleştirme, ve çerçevede görünen nesneleri çizme. Birçok çağrı türü, uygulama beklendiği gibi çalıştığında (her zaman değil) işleme hedefinde karşılık gelen bir değişikliğin (örneğin, çizim, dağıtım, kopyalama veya temizleme) olduğu için ilginç hale gelir. Çizim çağrıları özellikle ilginç olduğundan, her biri uygulamanın işlenmiş olduğu geometriyi temsil ettiğinden (dağıtım çağrıları geometriyi de işleyebilir).
+   Sorunu gösteren bir çerçeve seçtikten sonra **grafik olay listesini** kullanarak tanımayı deneyebilirsiniz. **Grafik olay listesi** , etkin çerçeveyi işlemek için yapılan her Direct3D API çağrısını içerir, örneğin, cihaz durumunu ayarlamak için API çağrıları, arabellekleri oluşturma ve güncelleştirme, ve çerçevede görünen nesneleri çizme. Birçok çağrı türü, uygulama beklendiği gibi çalıştığında (her zaman değil) işleme hedefinde karşılık gelen bir değişikliğin (örneğin, çizim, dağıtım, kopyalama veya temizleme) olduğu için ilginç hale gelir. Çizim çağrıları özellikle ilginç olduğundan, her biri uygulamanın işlenmiş olduğu geometriyi temsil ettiğinden (dağıtım çağrıları geometriyi de işleyebilir).
 
    Eksik nesnenin render Target 'a çizilmediğini (Bu durumda) bildiğiniz, ancak sahnenin geri kalanının beklenen şekilde çizildiğini bildiğiniz için grafik **olay listesini** **grafik ardışık düzen aşamaları** aracıyla birlikte kullanarak, hangi çizim çağrısının eksik nesnenin geometrisine karşılık geldiğini belirleyebilirsiniz. **Grafik ardışık düzen aşamaları** penceresi, işleme hedefi üzerindeki etkisiyle bağımsız olarak her bir çizim çağrısına gönderilen geometriyi gösterir. Çizim çağrılarında geçiş yaparken, işlem hattı aşamaları bu çağrıyla ilişkili geometriyi gösterecek şekilde güncelleştirilir ve işleme hedefi çıkışı, çağrı tamamlandıktan sonra oluşturma hedefinin durumunu gösterecek şekilde güncelleştirilir.
 

@@ -1,6 +1,6 @@
 ---
-title: İş Akışı Tasarımcısı-.NET türüne gözatıp seçin Iletişim kutusu
-description: Derlemeler ve projeler için bir ağaç görünümünden bir tür seçmek üzere bir .NET türünü görüntüle ve Seç iletişim kutusunu nasıl kullanabileceğinizi öğrenin.
+title: .NET tür iletişim kutusuna gözatıp seçin
+description: İş Akışı Tasarımcısı ' deki derlemelerin ve projelerin ağaç görünümünden bir tür seçmek için bir .NET türü görüntüle ve Seç iletişim kutusunu nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7e887cf339647df9bca7fdc3d07a45dd44901c42
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 9c479cbad884a8a21197c945f8f6f1ae13947991
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94438184"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995492"
 ---
 # <a name="browse-and-select-a-net-type-dialog-box"></a>.NET Türüne Gözat ve Seç İletişim Kutusu
 
@@ -53,7 +53,7 @@ Bu iletişim kutusu, aşağıdakiler de dahil olmak üzere çeşitli Kullanıcı
 
 2. Kullanmak istediğiniz türün adı **tür adı** kutusundaki ağaçta göründüğünde, açılan kutuların görünmesine neden olacak şekilde seçmek için türe tıklayın.
 
-     Açılan kutulardan genel ' i kapatmak için kullanmak istediğiniz türü seçin ve ardından **Tamam** ' a tıklayın.
+     Açılan kutulardan genel ' i kapatmak için kullanmak istediğiniz türü seçin ve ardından **Tamam**' a tıklayın.
 
 ## <a name="types-displayed-in-the-type-browser"></a>Tür tarayıcısında görünen türler
 
@@ -65,7 +65,7 @@ Tür tarayıcısındaki türler, etkinlik Tasarımcısı geliştiricilerine gör
 
 **Tür adı** kutusundaki türlerin listesi, bir eşleşme bulmak için daha fazla karakter yazdığınızda daha kısa olur. Yalnızca FullyQualified adı yazdığınız dize ile başlayan türler veya kısa adı yazdığınız dize ile başlayan ve filtrelenmiş listede görünen türler.
 
-Örneğin:
+Örnek:
 
 1. Yazma **işlemi** eşleşiyor <xref:System.OperationCanceledException> ancak eşleşmiyor <xref:System.InvalidOperationException> . Eşleştirmek için <xref:System.InvalidOperationException> , System. ı veya geçersiz yazmaya başlayın.
 

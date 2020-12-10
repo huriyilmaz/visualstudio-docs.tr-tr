@@ -1,5 +1,6 @@
 ---
 title: Dil hizmeti ve Düzenleyici uzantıları ile çalışmaya başlama
+description: Her türlü içerik türüne dil hizmeti özellikleri eklemeyi ve Visual Studio düzenleyicisinin görünümünü ve davranışını özelleştirmeyi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 55d9f018324c32a8b39c96037058593cebf52bc2
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 471acaef0145b3bf1a73925b42e17a6343439ea2
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037770"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994400"
 ---
 # <a name="get-started-with-language-service-and-editor-extensions"></a>Dil hizmeti ve Düzenleyici uzantıları ile çalışmaya başlama
 
@@ -75,7 +76,7 @@ Ana hat, küme ayracı eşleştirme, IntelliSense ve hafif bulbs gibi dil hizmet
 
  *% LocalAppData%* , oturum açmış kullanıcının adı, *Şirket* ise uzantının sahibi olan şirketin adı ve *extensionID* uzantısının kimliğidir.
 
- Deneysel konuma bir uzantı dağıttığınızda, hata ayıklama modunda çalışır. Visual Studio 'nun ikinci bir örneği başlatılır ve **Microsoft Visual Studio deneysel örnek**olarak adlandırılır.
+ Deneysel konuma bir uzantı dağıttığınızda, hata ayıklama modunda çalışır. Visual Studio 'nun ikinci bir örneği başlatılır ve **Microsoft Visual Studio deneysel örnek** olarak adlandırılır.
 
 ## <a name="manage-extensions"></a>Uzantıları yönetme
 

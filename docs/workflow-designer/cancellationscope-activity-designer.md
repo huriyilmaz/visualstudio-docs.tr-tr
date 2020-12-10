@@ -1,6 +1,6 @@
 ---
-title: İş Akışı Tasarımcısı-CancellationScope Etkinlik Tasarımcısı
-description: CancellationScope etkinliğini oluşturmak ve yapılandırmak için CancellationScope Etkinlik tasarımcısını nasıl kullanabileceğinizi öğrenin.
+title: CancellationScope Etkinlik Tasarımcısı
+description: CancellationScope etkinliğini oluşturmak ve yapılandırmak için İş Akışı Tasarımcısı 'de CancellationScope Etkinlik tasarımcısını nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 746ed70d0a1a8ae4de2207ea1fdf15280bd44de9
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 175ca46645d55106f18c163c54135316d73ea3ec
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94434447"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96993243"
 ---
 # <a name="cancellationscope-activity-designer"></a>CancellationScope Etkinlik Tasarımcısı
 

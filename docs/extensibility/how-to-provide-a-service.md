@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: hizmet sağlama | Microsoft Docs'
+description: VSPackage, diğer VSPackages tarafından kullanılabilecek hizmetler sağlayabilir. VSPackage 'ın bir hizmeti Visual Studio ile nasıl kaydedeceğini ve hizmeti nasıl ekleyeceğini öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 30bfdd49d871919503be767ea930b3d5f2f0fd95
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ac89984539b0870d3921918a5a96b821297c009f
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905764"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96993737"
 ---
 # <a name="how-to-provide-a-service"></a>Nasıl yapılır: hizmet sağlama
 VSPackage, diğer VSPackages tarafından kullanılabilecek hizmetler sağlayabilir. Bir hizmet sağlamak için, bir VSPackage hizmeti Visual Studio ile kaydetmelidir ve hizmeti ekleyecek.
@@ -31,7 +33,7 @@ VSPackage, diğer VSPackages tarafından kullanılabilecek hizmetler sağlayabil
 
 1. VSIX projesi oluşturun (**Dosya**  >  **Yeni**  >  **Proje**  >  **Visual C#**  >  **genişletilebilirlik**  >  **VSIX projesi**).
 
-2. Projeye VSPackage ekleyin. **Çözüm Gezgini** proje düğümünü seçin ve **Add**  >  **Yeni öğe**Ekle  >  **Visual C# öğeleri**  >  **genişletilebilirlik**  >  **Visual Studio paketi**' ne tıklayın.
+2. Projeye VSPackage ekleyin. **Çözüm Gezgini** proje düğümünü seçin ve   >  **Yeni öğe** Ekle  >  **Visual C# öğeleri**  >  **genişletilebilirlik**  >  **Visual Studio paketi**' ne tıklayın.
 
 3. Bir hizmeti uygulamak için üç tür oluşturmanız gerekir:
 

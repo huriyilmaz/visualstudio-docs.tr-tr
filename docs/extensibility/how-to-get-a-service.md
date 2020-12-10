@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: hizmet alma | Microsoft Docs'
+description: Farklı özelliklere erişmek için Visual Studio hizmetlerini nasıl alabileceğinizi öğrenin. Bir VSPackage kullanarak çoğu hizmeti alabilirsiniz.
+ms.custom: SEO-VS-2020
 ms.date: 3/16/2019
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a401103112096a1089b59ba3733d19480f93e891
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0a8f97900f1d400f3208a24ccc45ff9bbd774aeb
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905827"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994088"
 ---
 # <a name="how-to-get-a-service"></a>Nasıl yapılır: hizmet alma
 
@@ -29,9 +31,9 @@ Visual Studio bir yüklediğinde <xref:Microsoft.VisualStudio.Shell.Package> , <
 
 1. Her Visual Studio uzantısı, uzantı varlıklarını içeren bir VSıX dağıtım projesiyle başlar. Adlı bir [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] VSIX projesi oluşturun `GetServiceExtension` . "VSIX" araması yaparak VSıX proje şablonunu **Yeni proje** iletişim kutusunda bulabilirsiniz.
 
-2. Şimdi **GetServiceCommand**adlı özel bir komut öğesi şablonu ekleyin. **Yeni öğe Ekle** iletişim kutusunda, **Visual C#**  >  **genişletilebilirliği** ' ne gidin ve **özel komut**' yi seçin. Pencerenin alt kısmındaki **ad** alanında, komut dosyası adını *GetServiceCommand.cs*olarak değiştirin. Özel bir komut oluşturma hakkında daha fazla bilgi için, [bir menü komutuyla bir uzantı oluşturun](../extensibility/creating-an-extension-with-a-menu-command.md)
+2. Şimdi **GetServiceCommand** adlı özel bir komut öğesi şablonu ekleyin. **Yeni öğe Ekle** iletişim kutusunda, **Visual C#**  >  **genişletilebilirliği** ' ne gidin ve **özel komut**' yi seçin. Pencerenin alt kısmındaki **ad** alanında, komut dosyası adını *GetServiceCommand.cs* olarak değiştirin. Özel bir komut oluşturma hakkında daha fazla bilgi için, [bir menü komutuyla bir uzantı oluşturun](../extensibility/creating-an-extension-with-a-menu-command.md)
 
-3. *GetServiceCommand.cs*içinde, yönteminin gövdesini kaldırın `MenuItemCommand` ve aşağıdaki kodu ekleyin:
+3. *GetServiceCommand.cs* içinde, yönteminin gövdesini kaldırın `MenuItemCommand` ve aşağıdaki kodu ekleyin:
 
    ```csharp
    IVsActivityLog activityLog = ServiceProvider.GetService(typeof(SVsActivityLog)) as IVsActivityLog;
@@ -70,7 +72,7 @@ DTE nesnesi <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider> , kullana
 DTE nesnesinden bir hizmeti alma hakkında daha fazla bilgiyi burada bulabilirsiniz.
 
 ```csharp
-// Start with the DTE object, for example: 
+// Start with the DTE object, for example: 
 // using EnvDTE;
 // DTE dte = (DTE)GetService(typeof(DTE));
 

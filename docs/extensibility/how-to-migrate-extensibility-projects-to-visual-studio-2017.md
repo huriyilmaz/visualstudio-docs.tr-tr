@@ -1,6 +1,7 @@
 ---
 title: Genişletilebilirlik Projelerini Visual Studio 2017’ye Geçirme
 titleSuffix: ''
+description: Genişletilebilirlik projelerini Visual Studio 2017 ' a yükseltmeyi ve uzantı bildirimi sürüm 2 ' den sürüm 3 VSıX bildirimi ' ne yükseltmeyi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/09/2016
 ms.topic: how-to
@@ -11,12 +12,12 @@ manager: jillfra
 ms.workload:
 - vssdk
 monikerRange: vs-2017
-ms.openlocfilehash: 9212add38f877e76aa3eaaa98c3d0d863c97d62e
-ms.sourcegitcommit: 13cf7569f62c746708a6ced1187d8173eda7397c
+ms.openlocfilehash: 58d802ad97018a3d84e2b6a9f5e759db3a7cb2e3
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91352289"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96993971"
 ---
 # <a name="how-to-migrate-extensibility-projects-to-visual-studio-2017"></a>Nasıl yapılır: genişletilebilirlik projelerini Visual Studio 2017 'ye geçirme
 
@@ -61,7 +62,7 @@ Kullanıcının Visual Studio yüklemesinin uzantısı çalıştırmak için ger
 > [!Note]
 > En azından, tüm uzantıların bir önkoşul olarak Visual Studio çekirdek Düzenleyicisi bileşenini belirtmesi gerekir.
 
-* Uzantı bildirim dosyasını düzenleyin (genellikle *kaynak. uzantı. valtmanifest*olarak adlandırılır).
+* Uzantı bildirim dosyasını düzenleyin (genellikle *kaynak. uzantı. valtmanifest* olarak adlandırılır).
 * `InstallationTarget`15,0 içerdiğinden emin olun.
 * Gerekli yükleme önkoşullarını ekleyin (aşağıdaki örnekte gösterildiği gibi).
   * Yükleme önkoşulları için yalnızca bileşen kimliklerini belirtmenizi öneririz.
@@ -109,7 +110,7 @@ Bildirim XML 'sini doğrudan düzenlemeniz yerine, önkoşulları seçmek için 
 
 ## <a name="update-debug-settings-for-the-project"></a>Proje için hata ayıklama ayarlarını Güncelleştir
 
-Visual Studio 'nun deneysel örneğinde uzantınızın hatalarını ayıklamak istiyorsanız, **hata ayıklama**  >  **başlatma eylemi** için proje ayarları ' nın Visual Studio 2017 yüklemenizin *devenv.exe* dosyasına ayarlandığından **Start external program:** emin olun.
+Visual Studio 'nun deneysel örneğinde uzantınızın hatalarını ayıklamak istiyorsanız, **hata ayıklama**  >  **başlatma eylemi** için proje ayarları ' nın Visual Studio 2017 yüklemenizin *devenv.exe* dosyasına ayarlandığından  emin olun.
 
 Şöyle görünebilir: *C:\Program Files (x86) \Microsoft Visual Studio\2017\Enterprise\Common7\IDE\devenv.exe*
 
@@ -122,12 +123,12 @@ Visual Studio 'nun deneysel örneğinde uzantınızın hatalarını ayıklamak i
 
 * VSıX projesi oluşturun.
 * Oluşturulan VSıX 'i sıkıştırmayı açın.
-  * Varsayılan olarak, VSıX dosyası *bin/hata ayıklama* veya *bin/yayın* Içinde *[yourcustomexger]. VSIX*olarak bulunur.
+  * Varsayılan olarak, VSıX dosyası *bin/hata ayıklama* veya *bin/yayın* Içinde *[yourcustomexger]. VSIX* olarak bulunur.
   * İçeriği kolayca görüntülemek için *. vsix* *. zip* olarak yeniden adlandırın.
 * Üç dosya olup olmadığını denetleyin:
   * *Extension. valtmanifest*
-  * * Üzerindemanifest.js*
-  * * Üzerindecatalog.js*
+  * *Üzerindemanifest.js*
+  * *Üzerindecatalog.js*
 
 ## <a name="check-when-all-required-prerequisites-are-installed"></a>Gerekli tüm önkoşulların yüklü olup olmadığını denetle
 
@@ -187,18 +188,18 @@ Hangi bileşenin belirli bir ikiliye sahip olduğundan emin değilseniz, [bileş
 
 ### <a name="vs2017-componentbinarymappingxlsx"></a>vs2017-ComponentBinaryMapping.xlsx
 
-Excel sayfasında dört sütun vardır: **bileşen adı**, **ComponentID**, **Sürüm**ve **ikili dosya adları**.  Filtreleri kullanarak belirli bileşenleri ve ikili dosyaları arayabilir ve bulabilirsiniz.
+Excel sayfasında dört sütun vardır: **bileşen adı**, **ComponentID**, **Sürüm** ve **ikili dosya adları**.  Filtreleri kullanarak belirli bileşenleri ve ikili dosyaları arayabilir ve bulabilirsiniz.
 
 Tüm başvurularınız için, ilk olarak temel Düzenleyici (Microsoft. VisualStudio. Component. CoreEditor) bileşeninde hangilerinin olduğunu saptayın.  En azından, çekirdek Düzenleyici bileşeninin tüm uzantılar için bir önkoşul olarak belirtilmesini gerektiririz. Sol ana düzenleyicide bulunmayan başvurularda, bu başvuruların alt kümelerine sahip bileşenleri bulmak için **Ikili dosyaları/dosya adları** bölümüne filtre ekleyin.
 
 Örnekler:
 
-* Bir hata ayıklayıcı uzantınız varsa ve projenizin *VSDebugEng.dll* ve *VSDebug.dll*bir başvurusu olduğunu biliyorsanız, **ikili dosyalar/dosya adları** üstbilgisindeki filtre düğmesine tıklayın.  "VSDebugEng.dll" araması yapın ve *Tamam*' ı seçin.  Sonra, **Ikili dosyalar/dosya adları** üstbilgisindeki filtre düğmesine tıklayın ve "VSDebug.dll" araması yapın.  **Filtre uygulanacak geçerli seçimi Ekle** onay kutusunu seçin ve **Tamam**' ı seçin.  Uzantı yazdığınıza en çok ilişkili bir bileşeni bulmak için **bileşen adına** bakın. Bu örnekte, Just-In-Time hata ayıklayıcıyı seçtiniz ve bunu valtmanifest ' e eklersiniz.
+* Bir hata ayıklayıcı uzantınız varsa ve projenizin *VSDebugEng.dll* ve *VSDebug.dll* bir başvurusu olduğunu biliyorsanız, **ikili dosyalar/dosya adları** üstbilgisindeki filtre düğmesine tıklayın.  "VSDebugEng.dll" araması yapın ve *Tamam*' ı seçin.  Sonra, **Ikili dosyalar/dosya adları** üstbilgisindeki filtre düğmesine tıklayın ve "VSDebug.dll" araması yapın.  **Filtre uygulanacak geçerli seçimi Ekle** onay kutusunu seçin ve **Tamam**' ı seçin.  Uzantı yazdığınıza en çok ilişkili bir bileşeni bulmak için **bileşen adına** bakın. Bu örnekte, Just-In-Time hata ayıklayıcıyı seçtiniz ve bunu valtmanifest ' e eklersiniz.
 * Projenizin hata ayıklayıcı öğeleriyle ilgili olduğunu biliyorsanız, hangi bileşenlerin adında hata ayıklayıcı içerdiğini görmek için filtre arama kutusundaki "hata ayıklayıcı" üzerinde arama yapabilirsiniz.
 
 ## <a name="specify-a-visual-studio-2017-release"></a>Visual Studio 2017 sürümü belirtin
 
-Uzantınız Visual Studio 2017 ' nin belirli bir sürümünü gerektiriyorsa, örneğin, 15,3 ' de yayınlanan bir özelliğe bağlı ise, VSıX **ınstalyüklemehedefinde**derleme numarasını belirtmeniz gerekir. Örneğin, Release 15,3 ' 15.0.26730.3 ' derleme numarasına sahiptir. Sürüm numaralarını [burada](../install/visual-studio-build-numbers-and-release-dates.md)oluşturmak için bu sürümlerin eşlemesini görebilirsiniz. ' 15,3 ' yayın numarasını kullanmak düzgün çalışmayacak.
+Uzantınız Visual Studio 2017 ' nin belirli bir sürümünü gerektiriyorsa, örneğin, 15,3 ' de yayınlanan bir özelliğe bağlı ise, VSıX **ınstalyüklemehedefinde** derleme numarasını belirtmeniz gerekir. Örneğin, Release 15,3 ' 15.0.26730.3 ' derleme numarasına sahiptir. Sürüm numaralarını [burada](../install/visual-studio-build-numbers-and-release-dates.md)oluşturmak için bu sürümlerin eşlemesini görebilirsiniz. ' 15,3 ' yayın numarasını kullanmak düzgün çalışmayacak.
 
 Uzantınız 15,3 veya daha yüksek bir sürüm gerektiriyorsa, **ınstalyüklemehedef sürümünü** [15.0.26730.3, 16,0) olarak bildirebilirsiniz:
 

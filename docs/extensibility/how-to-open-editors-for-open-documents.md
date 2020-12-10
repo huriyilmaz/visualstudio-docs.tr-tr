@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: açık belgeler için düzenleyiciler açma | Microsoft Docs'
+description: Standart veya projeye özgü bir düzenleyicide dosya açmayı öğrenin. Bir proje bir belge penceresi açtığında, dosyanın zaten açık olup olmadığını belirlemesi gerekir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0f67a7fad5944e82087f520508ef9f4a66b7109d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6d329ce7b4f4b74b8ff77357393ffe9383a3977e
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905822"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96993867"
 ---
 # <a name="how-to-open-editors-for-open-documents"></a>Nasıl yapılır: açık belgeler için düzenleyiciler açma
 Proje bir belge penceresini açmadan önce, projenin, dosyanın zaten başka bir düzenleyicinin belge penceresinde açık olup olmadığını belirlemesi gerekir. Dosya projeye özgü bir düzenleyicide veya ile kaydedilen standart düzenleyicilerden birinde açılabilir [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .

@@ -1,5 +1,7 @@
 ---
 title: Groups öğesi | Microsoft Docs
+description: Groups öğesi bir VSPackage komut gruplarını tanımlayan girdileri içerir. Bu makale bir örnek içerir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +13,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a6383c3c7a28f9aa7778fddcbfe36b237d21323f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 31b5885ad6e08bd9e22049033d6191c97fdc857b
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80711184"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994296"
 ---
 # <a name="groups-element"></a>Groups öğesi
 VSPackage 'un komut gruplarını tanımlayan girişleri içerir.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Sözdizimi
 
 ```xml
 <Groups>

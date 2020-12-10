@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: standart düzenleyiciler açma | Microsoft Docs'
+description: OpenItem metodunu standart bir düzenleyici ile uygulamayı öğrenin. IDE, belirlenen dosya türü için standart bir düzenleyici belirler.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c12e831654e7e138289d33b6e6f0409328e22c8c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ff03ed508fc11377861556bc27bdc33aaa1ec069
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905791"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96993776"
 ---
 # <a name="how-to-open-standard-editors"></a>Nasıl yapılır: standart düzenleyiciler açma
 Standart bir düzenleyici açtığınızda, IDE 'nin dosya için projeye özgü bir düzenleyici belirtmek yerine, belirlenen dosya türü için standart bir düzenleyici belirlemesine izin verirolursunuz.

@@ -1,5 +1,7 @@
 ---
 title: Özel düzenleyicilerde belge verileri ve belge görünümü | Microsoft Docs
+description: Belge verileri nesnesi ve belge görünümü nesnesi olan bir özel düzenleyicinin bileşenleri hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6d4b14558a435d6ad9da32726508d81185961410
-ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
+ms.openlocfilehash: 576b195663f379b1f2fd327ce6a8806ddb43deda
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93414470"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994881"
 ---
 # <a name="document-data-and-document-view-in-custom-editors"></a>Özel düzenleyicilerde belge verileri ve belge görünümü
 Özel bir düzenleyici iki bölümden oluşur: bir belge veri nesnesi ve bir belge görünümü nesnesi. Adlar gösterildiğinde belge verileri nesnesi görüntülenecek metin verilerini temsil eder. Benzer şekilde, belge görünümü nesnesi (veya "Görünüm"), belge veri nesnesinin görüntüleneceği bir veya daha fazla pencere temsil eder.

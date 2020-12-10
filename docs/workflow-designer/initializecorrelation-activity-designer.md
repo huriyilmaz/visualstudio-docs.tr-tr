@@ -1,6 +1,6 @@
 ---
-title: İş Akışı Tasarımcısı-ınitialkaydedilmiş Ilişki etkinlik Tasarımcısı
-description: Initialbir Ilişki etkinliği oluşturmak ve yapılandırmak için ınitialbir ilişki etkinliği tasarımcısını nasıl kullanabileceğinizi öğrenin.
+title: InitializeCorrelation Etkinlik Tasarımcısı
+description: İş Akışı Tasarımcısı, ınitialbağlı bir Ilişki etkinliği oluşturmak ve yapılandırmak için ınitialkayıt Ilişkisi etkinlik tasarımcısını nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 82b786277c79a355e1859b337a45ab093e6f2a42
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 0ef70cb452c01917f65619d400c21ed18ed11721
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94437794"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96993204"
 ---
 # <a name="initializecorrelation-activity-designer"></a>InitializeCorrelation Etkinlik Tasarımcısı
 

@@ -1,6 +1,7 @@
 ---
 title: Visual Studio uzantıları için kural tabanlı kullanıcı arabirimi bağlamını kullanma
 titleSuffix: ''
+description: Uzantı yazarlarının, bir kullanıcı arabirimi bağlamı etkinleştirildiğinde ve VSPackages yüklendiğinde koşul tanımlamasına izin veren kural tabanlı kullanıcı arabirimi bağlamlarını nasıl kullanacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -9,12 +10,12 @@ author: acangialosi
 ms.author: anthc
 ms.workload:
 - vssdk
-ms.openlocfilehash: fc24fe3f5b27b3c92f0629ed378c1a97c820cd0a
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 41b804d3f7697890773b4b6888bcffa108b7a11b
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037113"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96993464"
 ---
 # <a name="how-to-use-rule-based-ui-context-for-visual-studio-extensions"></a>Nasıl yapılır: Visual Studio uzantıları için kural tabanlı kullanıcı arabirimi bağlamını kullanma
 
@@ -41,7 +42,7 @@ Kural tabanlı kullanıcı arabirimi bağlamı çeşitli yollarla kullanılabili
 
 1. Yeni bir UIContext GUID tanımlayın ve VSPackage sınıfına ve öğesine ekleyin <xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute> <xref:Microsoft.VisualStudio.Shell.ProvideUIContextRuleAttribute> .
 
-    Örneğin, yeni bir UIContext "Uıcontextguid" ekleneceğini varsayalım. Oluşturulan GUID ( **Araçlar**oluştur GUID ' ye tıklayarak bir GUID oluşturabilirsiniz  >  **Create GUID**) "8B40D5E2-5626-42AE-99EF-3DD1EFF46E7B" olur. Ardından, paket sınıfınızın içine aşağıdaki bildirimi eklersiniz:
+    Örneğin, yeni bir UIContext "Uıcontextguid" ekleneceğini varsayalım. Oluşturulan GUID ( **Araçlar** oluştur GUID ' ye tıklayarak bir GUID oluşturabilirsiniz  >  ) "8B40D5E2-5626-42AE-99EF-3DD1EFF46E7B" olur. Ardından, paket sınıfınızın içine aşağıdaki bildirimi eklersiniz:
 
    ```csharp
    public const string UIContextGuid = "8B40D5E2-5626-42AE-99EF-3DD1EFF46E7B";
@@ -58,7 +59,7 @@ Kural tabanlı kullanıcı arabirimi bağlamı çeşitli yollarla kullanılabili
        termValues: new[] { "HierSingleSelectionName:.config$" })]
    ```
 
-    Bu meta veriler, yeni UIContext GUID (8B40D5E2-5626-42AE-99EF-3DD1EFF46E7B) ve tek bir terime başvuran bir ifade ("DotConfig") tanımlar. Etkin hiyerarşideki geçerli seçimin ". config $" normal ifade düzeniyle eşleşen bir adı olduğunda "DotConfig" terimi true olarak değerlendirilir \\ ( *. config*ile biter). (Varsayılan) değeri, hata ayıklama için yararlı bir kural için isteğe bağlı bir ad tanımlar.
+    Bu meta veriler, yeni UIContext GUID (8B40D5E2-5626-42AE-99EF-3DD1EFF46E7B) ve tek bir terime başvuran bir ifade ("DotConfig") tanımlar. Etkin hiyerarşideki geçerli seçimin ". config $" normal ifade düzeniyle eşleşen bir adı olduğunda "DotConfig" terimi true olarak değerlendirilir \\ ( *. config* ile biter). (Varsayılan) değeri, hata ayıklama için yararlı bir kural için isteğe bağlı bir ad tanımlar.
 
     Öznitelik değerleri, derleme zamanı sırasında oluşturulan pkgdef öğesine eklenir.
 
@@ -82,7 +83,7 @@ Kural tabanlı kullanıcı arabirimi bağlamı çeşitli yollarla kullanılabili
    <GuidSymbol name="UIContextGuid" value="{8B40D5E2-5626-42AE-99EF-3DD1EFF46E7B}" />
    ```
 
-    Artık, * \* . config* dosyaları için bağlam menüsü komutları yalnızca Çözüm Gezgini 'ndeki seçili öğe bir *. config* dosyası olduğunda ve bu komutlardan biri seçilene kadar paket yüklenemeyecek şekilde görünür.
+    Artık, *\* . config* dosyaları için bağlam menüsü komutları yalnızca Çözüm Gezgini 'ndeki seçili öğe bir *. config* dosyası olduğunda ve bu komutlardan biri seçilene kadar paket yüklenemeyecek şekilde görünür.
 
    Daha sonra, paketin yalnızca bunu beklediğinde yüklediğini doğrulamak için bir hata ayıklayıcı kullanın. TestPackage hata ayıklaması yapmak için:
 
@@ -92,7 +93,7 @@ Kural tabanlı kullanıcı arabirimi bağlamı çeşitli yollarla kullanılabili
 
 7. Bir proje oluşturun veya birini açın.
 
-8. Uzantısı *. config*dışında herhangi bir dosya seçin. Kesme noktası isabet ettirilmemelidir.
+8. Uzantısı *. config* dışında herhangi bir dosya seçin. Kesme noktası isabet ettirilmemelidir.
 
 9. *App.Config* dosyasını seçin.
 
@@ -131,7 +132,7 @@ Kural tabanlı kullanıcı arabirimi bağlamı çeşitli yollarla kullanılabili
 
 Desteklenen çeşitli terim türleri şunlardır:
 
-|Süre|Açıklama|
+|Terim|Açıklama|
 |-|-|
 |{nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn}|GUID, bir UI bağlamını ifade eder. Kullanıcı arabirimi bağlamı etkin olduğunda terim true, aksi durumda false olur.|
 |HierSingleSelectionName:\<pattern>|Etkin hiyerarşide seçim tek bir öğe olduğunda ve seçili öğenin adı "model" tarafından verilen .net normal ifadesiyle eşleştiğinde, terim true olur.|

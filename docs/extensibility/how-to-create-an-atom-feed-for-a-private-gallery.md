@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: özel galeri için Atom akışı oluşturma | Microsoft Docs'
+description: Uzantıları içeren bir intranet konumuna bir atom (RSS) akışı oluşturabilir ve akışı uzantılara ve güncelleştirmelere özel galeri olarak ekleyebilirsiniz.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 269161e831fdb176dbfea844e951597efb467312
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 833d75d7dfd18e863664e6d3d17d65a4e08b4d77
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905856"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994153"
 ---
 # <a name="how-to-create-an-atom-feed-for-a-private-gallery"></a>Nasıl yapılır: özel galeri için Atom akışı oluşturma
 Uzantıları içeren bir intranet konumuna bir atom (RSS) akışı oluşturabilir ve akışı **uzantılara ve güncelleştirmelere** özel galeri olarak ekleyebilirsiniz. Daha fazla bilgi için bkz. [özel galeriler](../extensibility/private-galleries.md).
@@ -24,9 +26,9 @@ Uzantıları içeren bir intranet konumuna bir atom (RSS) akışı oluşturabili
 ## <a name="create-an-atom-feed"></a>Atom akışı oluşturma
  Özel Galeri olarak bir Atom akışı oluşturmak için, önce uzantılarınızı (*. vsix* Files) bir klasöre toplamanız gerekir. İsterseniz bunları alt klasörler halinde düzenleyebilirsiniz. Ayrıca aşağıdaki kaynaklara ihtiyacınız olacaktır:
 
-- Uzantıları özel galeri olarak kullanılabilir hale getiren bir *atom.xml* dosyası. *atom.xml* dosyasını **uzantılara ve güncelleştirmelere**bağlama hakkında daha fazla bilgi için bkz. [özel galeriler](../extensibility/private-galleries.md).
+- Uzantıları özel galeri olarak kullanılabilir hale getiren bir *atom.xml* dosyası. *atom.xml* dosyasını **uzantılara ve güncelleştirmelere** bağlama hakkında daha fazla bilgi için bkz. [özel galeriler](../extensibility/private-galleries.md).
 
-- Uzantılardan ayıklanan görüntü dosyalarını içeren bir klasör (örneğin, ekran görüntüleri). *atom.xml* dosyası, **Uzantılar ve güncelleştirmelerde**kullanılabilmesi için bu görüntülere yönelik göreli bağlantıları içerir.
+- Uzantılardan ayıklanan görüntü dosyalarını içeren bir klasör (örneğin, ekran görüntüleri). *atom.xml* dosyası, **Uzantılar ve güncelleştirmelerde** kullanılabilmesi için bu görüntülere yönelik göreli bağlantıları içerir.
 
   Örneğin, aşağıdaki iki uzantıyı bir klasöre topladığınızı varsayalım:
 
@@ -73,4 +75,4 @@ Uzantıları içeren bir intranet konumuna bir atom (RSS) akışı oluşturabili
  İki bağlantı etiketlerinin görüntünün oluşturulan klasöründeki ekran görüntülerini ifade ettiğini unutmayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Özel Galeriler](../extensibility/private-galleries.md)
+- [Özel galeriler](../extensibility/private-galleries.md)

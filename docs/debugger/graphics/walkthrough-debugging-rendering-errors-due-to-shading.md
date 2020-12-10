@@ -1,5 +1,7 @@
 ---
 title: 'İzlenecek yol: gölgeleme nedeniyle Işleme hatalarını ayıklama | Microsoft Docs'
+description: Gölgelendirici hatası bulan bir araştırmayı izleyin. Grafik piksel geçmişi ve HLSL hata ayıklayıcısı dahil olmak üzere Visual Studio Grafik Tanılama kullanımını gösterir.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 01875b05-cc7b-4add-afba-f2b776f86974
@@ -8,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 44e542bcbb801ee4035ba501b50bad81b53e8bdf
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b42aa5638b668d90fa44335c2d532c9bcddddc2b
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62849373"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995102"
 ---
 # <a name="walkthrough-debugging-rendering-errors-due-to-shading"></a>İzlenecek yol: Gölgeleme Nedeniyle Çıkan Oluşturma Hatalarını Ayıklama
 Bu izlenecek yol [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , gölgelendirici hatası nedeniyle yanlış renkli bir nesneyi araştırmak için grafik tanılama nasıl kullanacağınızı gösterir.
@@ -40,7 +42,7 @@ Bu izlenecek yol [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , 
 
 1. İçinde [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , eksik modeli gösteren bir çerçeveye sahip bir grafik günlüğü yükleyin. İçinde yeni bir grafik günlüğü belgesi penceresi görüntülenir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Bu pencerenin üst kısmında, seçili karenin işleme hedefi çıkışı bulunur. Alt kısımda, yakalanan her çerçeveyi bir küçük resim olarak görüntüleyen **çerçeve listesidir**.
 
-2. **Çerçeve listesinde**nesnenin doğru görünümü olmayan bir çerçeve seçin. Oluşturma hedefi seçili çerçeveyi yansıtacak şekilde güncelleştirilir. Bu senaryoda, grafik günlük belgesi penceresi şu resme benzer şekilde görünür:
+2. **Çerçeve listesinde** nesnenin doğru görünümü olmayan bir çerçeve seçin. Oluşturma hedefi seçili çerçeveyi yansıtacak şekilde güncelleştirilir. Bu senaryoda, grafik günlük belgesi penceresi şu resme benzer şekilde görünür:
 
     ![Visual Studio 'da grafik günlüğü belgesi.](media/gfx_diag_demo_render_error_shader_step_1.png "gfx_diag_demo_render_error_shader_step_1")
 

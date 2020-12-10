@@ -1,5 +1,5 @@
 ---
-title: XML şema tasarımcısında Içerik modeli görünümünü kullanarak düğümleri inceleyin
+title: Düğümlerin içerik modelini inceleme
 description: XML şemasında düğümlerin içerik modelini incelemek için XML şema Tasarımcısı ' nda Içerik modeli görünümünü nasıl kullanacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -10,14 +10,14 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ef330e6e189b9cee1126d5de48d55622fe8d9046
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: f3ce3d1a47125c446521ceb60a851322c37209d0
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93399515"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995284"
 ---
-# <a name="how-to-examine-the-content-model-of-nodes-using-the-content-model-view"></a>Nasıl yapılır: Içerik modeli görünümünü kullanarak düğümlerin içerik modelini Inceleme
+# <a name="how-to-examine-the-content-model-of-nodes-by-using-the-content-model-view"></a>Nasıl yapılır: Içerik modeli görünümünü kullanarak düğümlerin içerik modelini Inceleme
 
 Bu konu, [Içerik modeli görünümünü](../xml-tools/content-model-view.md)kullanarak düğümlerinizi nasıl keşfedebileceğinizi açıklamaktadır.
 
@@ -29,9 +29,9 @@ Bu konu, [Içerik modeli görünümünü](../xml-tools/content-model-view.md)kul
 
 3. XML şeması örnek kodunu [örnek xml şemasından kopyalayın: satın alma sırası şeması](../xml-tools/sample-xsd-file-purchase-order-schema.md) , varsayılan olarak yeni xsd dosyasına eklenen kodu değiştirmek için yapıştırın.
 
-4. `purchaseOrder` `purchaseOrder` XML düzenleyicisinde öğesine sağ tıklayıp **XML Explorer 'da göster** ' i seçerek şema Gezgini ' nde öğesini seçin.
+4. `purchaseOrder` `purchaseOrder` XML düzenleyicisinde öğesine sağ tıklayıp **XML Explorer 'da göster**' i seçerek şema Gezgini ' nde öğesini seçin.
 
-5. `purchaseOrder`XML Explorer 'da öğesine sağ tıklayın ve **Içerik modeli görünümünde göster** ' i seçin.
+5. `purchaseOrder`XML Explorer 'da öğesine sağ tıklayın ve **Içerik modeli görünümünde göster**' i seçin.
 
      Içerik modeli görünümü, `purchaseOrder` öğesini tasarım yüzeyinde görüntüler.
 

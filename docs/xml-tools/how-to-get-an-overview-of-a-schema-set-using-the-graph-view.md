@@ -1,6 +1,6 @@
 ---
-title: 'XML şema Tasarımcısı: grafik görünümünü kullanarak şema kümesine genel bakış alın'
-description: Şema kümesindeki düğümlerin üst düzey bir görünümünü ve düğümler arasındaki ilişkileri görmek için XML şema Gezgini 'nde grafik görünümünü nasıl kullanacağınızı öğrenin.
+title: Şema kümesine genel bakış elde etme
+description: "XML şema Tasarımcısı: bir şema kümesindeki düğümlerin ve düğümler arasındaki ilişkilerin üst düzey bir görünümünü görmek için XML şema Gezgini 'nde grafik görünümünü nasıl kullanacağınızı öğrenin."
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -10,14 +10,14 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 553b9f2d84f70c75ebcee40cdffe044237c23a5f
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 699167f8fe3662bbb162706f3f9fc6e5d53d82dc
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93398494"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995297"
 ---
-# <a name="how-to-get-an-overview-of-a-schema-set-using-the-graph-view"></a>Nasıl yapılır: grafik görünümünü kullanarak bir şema kümesine genel bakış alma
+# <a name="how-to-get-an-overview-of-a-schema-set-by-using-the-graph-view"></a>Nasıl yapılır: grafik görünümünü kullanarak bir şema kümesine genel bakış alma
 
 Bu konu başlığı altında, bir şema kümesindeki düğümlerin üst düzey bir görünümünü ve düğümler arasındaki ilişkileri görmek için [Graf görünümünün](../xml-tools/graph-view.md) nasıl kullanılacağı açıklanmaktadır.
 
@@ -29,7 +29,7 @@ Bu konu başlığı altında, bir şema kümesindeki düğümlerin üst düzey b
 
 3. XML şeması örnek kodunu [örnek xml şeması: ilişkiler](../xml-tools/sample-xsd-file-relationships.md) ' ten kopyalayın ve varsayılan olarak yeni xsd dosyasına eklenen kodu değiştirmek için yapıştırın.
 
-4. XML düzenleyicisinde herhangi bir yere sağ tıklayın ve **Görünüm Tasarımcısı** ' nı seçin.
+4. XML düzenleyicisinde herhangi bir yere sağ tıklayın ve **Görünüm Tasarımcısı**' nı seçin.
 
 5. **XSD araç çubuğundan** grafik görünümünü seçin.
 

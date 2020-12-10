@@ -1,5 +1,7 @@
 ---
 title: GuidSymbol öğesi | Microsoft Docs
+description: "GuidSymbol öğesi, bir menü, Grup veya komutu temsil eden GUID: ID çiftinin GUID 'sini içerir."
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +13,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 59068a9ac9f952b5370681b3684ce4234354afc9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 98fd802021f29365b6f338610754214352a996d7
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80711121"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994244"
 ---
 # <a name="guidsymbol-element"></a>GuidSymbol öğesi
 `GuidSymbol`Öğesi, bir menü, Grup veya komutu temsil eden GUID: ID ÇIFTININ GUID 'sini içerir. KIMLIĞI `IDSymbol` , öğesindeki bir öğeden gelir `GuidSymbol` . `GuidSymbol`Öğesi, `name` özniteliğinde yer alan GUID için kolay bir ad sağlayan bir özniteliğe sahiptir `value` .
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Sözdizimi
 
 ```xml
 <GuidSymbol name="guidMyCommandSet" value="{xxxxxxxxxxxxx-xxxx-xxxx-xxxxxxxxxxxx}">

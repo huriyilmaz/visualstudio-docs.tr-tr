@@ -1,5 +1,7 @@
 ---
 title: MİP eşleme oluşturma varyantı | Microsoft Docs
+description: MIP eşleme üretimi büyük performans kazançlarını gösteriyorsa, MIP haritalarını etkinleştirmeden ve doku önbelleğinden en iyi şekilde elde etmeden dokuları kullandığınızı gösterir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 3b4b3583-0b01-4f5d-aacb-3f96d19111d9
@@ -8,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 422a68f4e33733aa2874c639f0dcc799cd3ec795
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d939fb537ac6aed75d9b0f7bda2970a85f9175ad
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72734898"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994974"
 ---
 # <a name="mip-map-generation-variant"></a>Mip-map Oluşturma Çeşidi
 Oluşturma hedefleri olmayan dokuların MIP haritalarını sunar.

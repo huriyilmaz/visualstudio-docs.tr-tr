@@ -1,6 +1,6 @@
 ---
-title: İş Akışı Tasarımcısı AddToCollection &lt; T &gt; etkinlik Tasarımcısı
-description: AddToCollection <T> etkinlik tasarımcısının bir AddToCollection etkinliği oluşturmak ve yapılandırmak için nasıl kullanıldığını öğrenin <T> .
+title: AddToCollection &lt; T &gt; etkinlik Tasarımcısı
+description: AddToCollection <T> etkinlik Tasarımcısı 'nın iş akışı Tasarımcısı bir AddToCollection etkinliği oluşturmak ve yapılandırmak için nasıl kullanılacağını öğrenin <T> .
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a325cfa0ba00e798b3c663aac863737ba9aceb1f
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: d1592eab528f2312a9ad90dec02354814d6a81c3
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94438264"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96993256"
 ---
 # <a name="addtocollectiont-activity-designer"></a>AddToCollection\<T> Etkinlik Tasarımcısı
 
@@ -31,7 +31,7 @@ ms.locfileid: "94438264"
 
 **AddToCollection \<T>** etkinlik Tasarımcısı, iş akışı Tasarımcısı araç **kutusu** sekmesine tıklanarak erişilen **araç kutusu** **koleksiyon** kategorisinde bulunabilir. Alternatif olarak, **Görünüm** menüsünden **araç kutusu** ' nu seçin veya **CTRL** + **alt** + **X** tuşlarına basın.
 
-**AddToCollection \<T>** etkinlik Tasarımcısı **araç kutusundan** sürüklenip, içindeki gibi etkinliklerin yerleştirildiği iş akışı Tasarımcısı yüzeyine bırakılabilir <xref:System.Activities.Statements.Sequence> . **AddToCollection \<T>** etkinlik Tasarımcısı ' nın atılması, <xref:System.Activities.Statements.AddToCollection%601> varsayılan bir <xref:System.Activities.Activity.DisplayName%2A> AddToCollection<Int32 değeri olan bir etkinlik oluşturur \> . (Varsayılan olarak, *TypeArgument* **Int32** ' dir. TypeArgument özellik kılavuzunda değiştirilebilir.) <xref:System.Activities.Activity.DisplayName%2A>Değer, **AddToCollection<\> T** etkinlik tasarımcısının üst bilgisinde veya özellik kılavuzunun **DisplayName** kutusunda düzenlenebilir. Diğer özellikler, özellik kılavuzunda düzenlenmelidir.
+**AddToCollection \<T>** etkinlik Tasarımcısı **araç kutusundan** sürüklenip, içindeki gibi etkinliklerin yerleştirildiği iş akışı Tasarımcısı yüzeyine bırakılabilir <xref:System.Activities.Statements.Sequence> . **AddToCollection \<T>** etkinlik Tasarımcısı ' nın atılması, <xref:System.Activities.Statements.AddToCollection%601> varsayılan bir <xref:System.Activities.Activity.DisplayName%2A> AddToCollection<Int32 değeri olan bir etkinlik oluşturur \> . (Varsayılan olarak, *TypeArgument* **Int32**' dir. TypeArgument özellik kılavuzunda değiştirilebilir.) <xref:System.Activities.Activity.DisplayName%2A>Değer, **AddToCollection<\> T** etkinlik tasarımcısının üst bilgisinde veya özellik kılavuzunun **DisplayName** kutusunda düzenlenebilir. Diğer özellikler, özellik kılavuzunda düzenlenmelidir.
 
 ### <a name="the-addtocollectiont-properties"></a>AddToCollection \<T> Özellikleri
 

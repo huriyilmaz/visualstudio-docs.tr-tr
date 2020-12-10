@@ -1,5 +1,7 @@
 ---
-title: 'Nasıl yapılır: projeye özgü düzenleyiciler açma | Microsoft Docs'
+title: 'Nasıl yapılır: Project-Specific düzenleyicileri açma | Microsoft Docs'
+description: Projenin bu proje için bir düzenleyiciye bağlanan bir dosyayı açabilmeleri için, bir projeye özgü düzenleyiciyle OpenItem metodunu nasıl uygulayacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 22106ea09f86e3d61fe7aaa6e86e6e99c002f32d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4cbba1f4d6cf0a2a5a45dd2999afa5bbf3443fca
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905807"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96993789"
 ---
 # <a name="how-to-open-project-specific-editors"></a>Nasıl yapılır: projeye özgü düzenleyiciler açma
 Bir proje tarafından açılan bir öğe, doğası gereği bu proje için belirli düzenleyiciye bağlıysa, projenin projeye özgü bir düzenleyici kullanarak dosyayı açması gerekir. Dosya, bir düzenleyici seçmek için IDE 'nin mekanizmasına devredilemez. Örneğin, standart bir bit eşlem Düzenleyicisi kullanmak yerine, projenize özgü olan dosyadaki bilgileri tanıyan belirli bir bit eşlem düzenleyicisini belirtmek için bu projeye özgü düzenleyici seçeneğini kullanabilirsiniz.

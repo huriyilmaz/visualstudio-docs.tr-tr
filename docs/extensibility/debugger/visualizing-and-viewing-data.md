@@ -1,5 +1,7 @@
 ---
 title: Verileri görselleştirme ve görüntüleme | Microsoft Docs
+description: Tür Görselleştiriciler ve özel görüntüleyiciler bir geliştiriciye veri sunma hakkında bilgi edinin. İfade değerlendirici, üçüncü taraf tür görselleştiricilerini destekler.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2b5f984e6c6a3c1c8f3835dfa93a8679ae16680a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 856788546e10e69a8bb7e2787558505937f9effd
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80712370"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995466"
 ---
 # <a name="visualizing-and-viewing-data"></a>Verileri görselleştirme ve görüntüleme
 Görselleştiriciler ve özel görüntüleyiciler, verileri bir geliştiriciye hızlı bir şekilde anlamlı olacak şekilde sunar. İfade değerlendirici (EE), üçüncü taraf tür görselleştiricilerini destekleyebilir ve kendi özel görüntüleyicilerini sağlayabilir.
@@ -34,7 +36,7 @@ Görselleştiriciler ve özel görüntüleyiciler, verileri bir geliştiriciye h
 ### <a name="accessing-property-data"></a>Özellik verilerine erişme
  Özellik verilerine erişim, [IPropertyProxyEESide](../../extensibility/debugger/reference/ipropertyproxyeeside.md) arabirimi aracılığıyla yapılır. Bu arabirimi almak için, Visual Studio, [IPropertyProxyProvider](../../extensibility/debugger/reference/ipropertyproxyprovider.md) arabirimini ( [IDebugProperty3](../../extensibility/debugger/reference/idebugproperty3.md) arabirimini uygulayan aynı nesneye uygulanan) almak için özellik nesnesinde [QueryInterface](/cpp/atl/queryinterface) 'i çağırır ve sonra arabirimi almak için [GetPropertyProxy](../../extensibility/debugger/reference/ipropertyproxyprovider-getpropertyproxy.md) metodunu çağırır `IPropertyProxyEESide` .
 
- Arabirim içine ve dışına geçilen tüm veriler, `IPropertyProxyEESide` [IEEDataStorage](../../extensibility/debugger/reference/ieedatastorage.md) arabiriminde kapsüllenir. Bu arabirim bir bayt dizisini temsil eder ve hem Visual Studio hem de EE tarafından uygulanır. Özelliğin verileri değiştirilebiliyorsa, Visual Studio yeni verileri tutan bir nesne oluşturur ve buna karşılık olarak, `IEEDataStorage` özelliğin verilerini güncelleştirmek Için InPlaceUpdateObject ' e geçirilmiş yeni bir nesne almak için bu veri nesnesiyle birlikte [CreateReplacementObject](../../extensibility/debugger/reference/ipropertyproxyeeside-createreplacementobject.md) ' i çağırır `IEEDataStorage` . [InPlaceUpdateObject](../../extensibility/debugger/reference/ipropertyproxyeeside-inplaceupdateobject.md) `IPropertyProxyEESide::CreateReplacementObject` EE 'ın arabirimi uygulayan kendi sınıfını örneketmesine izin verir `IEEDataStorage` .
+ Arabirim içine ve dışına geçilen tüm veriler, `IPropertyProxyEESide` [IEEDataStorage](../../extensibility/debugger/reference/ieedatastorage.md) arabiriminde kapsüllenir. Bu arabirim bir bayt dizisini temsil eder ve hem Visual Studio hem de EE tarafından uygulanır. Özelliğin verileri değiştirilebiliyorsa, Visual Studio yeni verileri tutan bir nesne oluşturur ve buna karşılık olarak, `IEEDataStorage` özelliğin verilerini güncelleştirmek Için InPlaceUpdateObject ' e geçirilmiş yeni bir nesne almak için bu veri nesnesiyle birlikte [CreateReplacementObject](../../extensibility/debugger/reference/ipropertyproxyeeside-createreplacementobject.md) ' i çağırır `IEEDataStorage` . [](../../extensibility/debugger/reference/ipropertyproxyeeside-inplaceupdateobject.md) `IPropertyProxyEESide::CreateReplacementObject` EE 'ın arabirimi uygulayan kendi sınıfını örneketmesine izin verir `IEEDataStorage` .
 
 ## <a name="supporting-custom-viewers"></a>Özel görüntüleyiciler destekleme
  Bayrak, `DBG_ATTRIB_VALUE_CUSTOM_VIEWER` `dwAttrib` nesnenin kendisiyle ilişkili özel bir görüntüleyiciye sahip olduğunu göstermek için [DEBUG_PROPERTY_INFO](../../extensibility/debugger/reference/debug-property-info.md) yapısı alanında ayarlanır [(GetPropertyInfo](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md)çağrısı tarafından döndürülen). Bu bayrak ayarlandığında, Visual Studio [IDebugProperty3](../../extensibility/debugger/reference/idebugproperty3.md) arabirimini [QueryInterface](/cpp/atl/queryinterface)kullanarak [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) arabiriminden edinir.

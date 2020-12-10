@@ -1,5 +1,7 @@
 ---
 title: VSıX proje şablonu ile çalışmaya başlama | Microsoft Docs
+description: Uzantı oluşturmak veya var olan bir uzantıyı dağıtım için paketlemek üzere VSıX proje şablonunu nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 3/16/2019
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 18ca9672b22120718f63638d8668812d0e42e41f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c6c7c2e12f01b008be6937a8c974f2eea183d594
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905888"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994348"
 ---
 # <a name="get-started-with-the-vsix-project-template"></a>VSıX proje şablonu ile çalışmaya başlama
 
@@ -35,7 +37,7 @@ Bir uzantı oluşturmak veya var olan bir uzantıyı dağıtım için paketlemek
 
     2. **Proje** menüsünde **şablonu dışarı aktar**' a tıklayın. Sihirbazın adımlarını izleyin.
 
-         *%UserProfile%\My verdim Studio {Version} \Aktarılmış şablonlarında \\ *bir *. zip* dosyası oluşturulur.
+         *%UserProfile%\My verdim Studio {Version} \Aktarılmış şablonlarında \\* bir *. zip* dosyası oluşturulur.
 
 2. Boş bir VSıX projesi oluşturun.
 
@@ -43,15 +45,15 @@ Bir uzantı oluşturmak veya var olan bir uzantıyı dağıtım için paketlemek
 
 3. *. Zip* dosyasını projeye ekleyin. **Çıkış Dizinine Kopyala** özelliğini olarak ayarlayın `Copy Always` .
 
-4. **Çözüm Gezgini**, *kaynak. Extension. valtmanifest* dosyasına çift tıklayarak **VSIX bildirim tasarımcısında**açın ve ardından aşağıdaki değişiklikleri yapın:
+4. **Çözüm Gezgini**, *kaynak. Extension. valtmanifest* dosyasına çift tıklayarak **VSIX bildirim tasarımcısında** açın ve ardından aşağıdaki değişiklikleri yapın:
 
-    - **Ürün adı** alanını **Proje Şablonum**olarak ayarlayın.
+    - **Ürün adı** alanını **Proje Şablonum** olarak ayarlayın.
 
-    - **Ürün kimliği** alanını **myprojecttemplate-1**olarak ayarlayın.
+    - **Ürün kimliği** alanını **myprojecttemplate-1** olarak ayarlayın.
 
-    - **Yazar** alanını **fabrikam**olarak ayarlayın.
+    - **Yazar** alanını **fabrikam** olarak ayarlayın.
 
-    - **Açıklama** alanını **Proje Şablonum**olarak ayarlayın.
+    - **Açıklama** alanını **Proje Şablonum** olarak ayarlayın.
 
     - **Varlıklar** bölümünde, bir **Microsoft. VisualStudio. ProjectTemplate** türü ekleyin ve yolunu *. zip* dosyasının adı olarak ayarlayın.
 
@@ -67,13 +69,13 @@ Bir uzantı oluşturmak veya var olan bir uzantıyı dağıtım için paketlemek
 
 ::: moniker range="vs-2017"
 
-10. **Uzantılar ve güncelleştirmeler** ' i seçin ( **Araçlar** menüsünde) ve **Şablonlar** kategorisini seçin. Kullanılabilir uzantılardan biri **Proje Şablonum**olmalıdır.
+10. **Uzantılar ve güncelleştirmeler** ' i seçin ( **Araçlar** menüsünde) ve **Şablonlar** kategorisini seçin. Kullanılabilir uzantılardan biri **Proje Şablonum** olmalıdır.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-10. **Uzantıları Yönet** ' i ( **Uzantılar** menüsünde) seçin ve **Şablonlar** kategorisini seçin. Kullanılabilir uzantılardan biri **Proje Şablonum**olmalıdır.
+10. **Uzantıları Yönet** ' i ( **Uzantılar** menüsünde) seçin ve **Şablonlar** kategorisini seçin. Kullanılabilir uzantılardan biri **Proje Şablonum** olmalıdır.
 
 ::: moniker-end
 
@@ -83,7 +85,7 @@ Bir uzantı oluşturmak veya var olan bir uzantıyı dağıtım için paketlemek
 
 1. Şablon klasörleri *{Visual Studio yükleme yolu} \Common7\IDE\ProjectTemplates* ve *{Visual Studio yükleme yolu} \Common7\IDE\ItemTemplates* dizinlerinde bulunur. **Yeni proje** iletişim kutusundaki en üst düzey bölümlerin adları, şablon klasörlerinin adlarıyla tam olarak eşleşmez. Nerede farklıysa, şablon klasörünün adını kullanın.
 
-    *. Vsix* dosya uzantısını *. zip*olarak değiştirin ve ardından dosyayı açın.
+    *. Vsix* dosya uzantısını *. zip* olarak değiştirin ve ardından dosyayı açın.
 
 2. Şablonun içinde görünmesi gereken **Yeni proje** iletişim kutusunun bölümüyle aynı ada sahip yeni bir klasör oluşturun.
 
@@ -91,8 +93,8 @@ Bir uzantı oluşturmak veya var olan bir uzantıyı dağıtım için paketlemek
 
 4. Template *. zip* dosyasını yeni klasöre taşıyın.
 
-5. *. Zip* uzantısını *. vsix*olarak değiştirin.
+5. *. Zip* uzantısını *. vsix* olarak değiştirin.
 
 6. VSıX bildirimini açın.
 
-7. VSıX bildiriminde, şablonun **varlık** yolunu, şablon dosyasını içeren dizin ağacının köküne işaret eden bir şekilde güncelleştirin. Örneğin, şablon *\Csharp\windows*ise, başvuru *\csharp*' a işaret etmelidir.
+7. VSıX bildiriminde, şablonun **varlık** yolunu, şablon dosyasını içeren dizin ağacının köküne işaret eden bir şekilde güncelleştirin. Örneğin, şablon *\Csharp\windows* ise, başvuru *\csharp*' a işaret etmelidir.

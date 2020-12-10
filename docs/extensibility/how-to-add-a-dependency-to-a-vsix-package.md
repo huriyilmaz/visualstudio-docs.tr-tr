@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: VSıX paketine bağımlılık ekleme | Microsoft Docs'
+description: Hedef bilgisayarda zaten mevcut olmayan bağımlılıkları yükleyen bir VSıX paketi dağıtımını ayarlamayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b7ee7cbc4dee800351689386056389d274e07f4f
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: d7ef19bafd0788ed15094979141679625e4e992f
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012236"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96993841"
 ---
 # <a name="how-to-add-a-dependency-to-a-vsix-package"></a>Nasıl yapılır: VSıX paketine bağımlılık ekleme
 
@@ -28,13 +30,13 @@ Hedef bilgisayarda zaten mevcut olmayan bağımlılıkları yükleyen bir VSıX 
 
 1. **Design** görünümünde *Source. Extension. valtmanifest* dosyasını açın. **Bağımlılıklar** sekmesine gidin ve **Yeni**' ye tıklayın.
 
-2. Yüklü bir uzantı eklemek için: **Yeni bağımlılık Ekle** iletişim kutusunda, **yüklü uzantı** ' ı seçin ve ardından **ad**için listeden bir uzantı seçin.
+2. Yüklü bir uzantı eklemek için: **Yeni bağımlılık Ekle** iletişim kutusunda, **yüklü uzantı** ' ı seçin ve ardından **ad** için listeden bir uzantı seçin.
 
 3. Yüklü olmayan başka bir VSıX eklemek için: **Yeni bağımlılık Ekle** iletişim kutusunda **dosya sistemindeki dosya** ' yı seçin ve ardından VSIX ' i seçmek için, **tarayıcı** düğmesini kullanın.
 
 ## <a name="require-a-specific-visual-studio-release"></a>Belirli bir Visual Studio sürümü gerektir
 
-Uzantınız Visual Studio 2017 ' nin belirli bir sürümünü gerektiriyorsa, örneğin, 15,3 ' de yayınlanan bir özelliğe bağlı olarak, VSıX **ınstalyüklemi Hedefinizdeki**derleme numarasını belirtebilirsiniz. Örneğin, Release 15,3 ' 15.0.26730.3 ' derleme numarasına sahiptir. Sürüm numaralarını [burada](../install/visual-studio-build-numbers-and-release-dates.md)oluşturmak için bu sürümlerin eşlemesini görebilirsiniz. ' 15,3 ' yayın numarasını kullanmanın doğru şekilde çalışmadığına unutmayın.
+Uzantınız Visual Studio 2017 ' nin belirli bir sürümünü gerektiriyorsa, örneğin, 15,3 ' de yayınlanan bir özelliğe bağlı olarak, VSıX **ınstalyüklemi Hedefinizdeki** derleme numarasını belirtebilirsiniz. Örneğin, Release 15,3 ' 15.0.26730.3 ' derleme numarasına sahiptir. Sürüm numaralarını [burada](../install/visual-studio-build-numbers-and-release-dates.md)oluşturmak için bu sürümlerin eşlemesini görebilirsiniz. ' 15,3 ' yayın numarasını kullanmanın doğru şekilde çalışmadığına unutmayın.
 
 Uzantınız 15,3 veya daha yüksek bir sürüm gerektiriyorsa, **ınstalyüklemehedef sürümünü** [15.0.26730.3, 16,0) olarak bildirebilirsiniz:
 

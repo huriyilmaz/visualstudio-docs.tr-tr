@@ -1,5 +1,7 @@
 ---
 title: Grup öğesi | Microsoft Docs
+description: Group öğesi VSPackage komut grubunu tanımlar. Bu makalede öznitelikler, alt öğeler ve üst öğeler açıklanır.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +13,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 26479257511d74f122dd4064330f5b6a1e8dadd3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d0d39d4e4f795ddecab21765db43ba1a2f629dd7
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80711228"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96993861"
 ---
 # <a name="group-element"></a>Group öğesi
 VSPackage komut grubunu tanımlar.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Sözdizimi
 
 ```xml
 <Group guid="guidMyCommandSet" id="MyGroup" priority="0x101">

@@ -1,5 +1,6 @@
 ---
 title: Yanlış yapılandırılmış işlem hattı nedeniyle nesneler eksik
+description: Yanlış yapılandırılmış bir işlem hattı bulan araştırmayı izleyin. Grafik olay listesini kullan, grafik ardışık düzen aşamaları ve grafik olay çağrı yığınını gösterir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -9,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 64c00c10b8b7207e1162aa0041145000126fde87
-ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
+ms.openlocfilehash: e099d94479183e795a2ad3c8fc8db03fa969111c
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96189855"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995024"
 ---
 # <a name="walkthrough-missing-objects-due-to-misconfigured-pipeline"></a>İzlenecek yol: Yanlış Yapılandırılmış Ardışık Düzen Nedeniyle Eksik Nesneler
 Bu izlenecek yol, bir geçersiz bir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] piksel gölgelendiricisi nedeniyle eksik olan bir nesneyi araştırmak için grafik tanılama araçlarının nasıl kullanılacağını gösterir.

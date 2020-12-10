@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: uzantı performansını tanılama | Microsoft Docs'
+description: Visual Studio, yavaş uzantıları kullanıcılarına bildirir. Uzantı etkisinin nasıl hesaplanacağını ve uzantı etkisinin yerel olarak nasıl çözümlenebileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/08/2016
 ms.topic: how-to
 ms.assetid: 46b0a1e3-7e69-47c9-9d8d-a1815d6c3896
@@ -8,12 +10,12 @@ ms.author: bertaygu
 manager: jillfra
 ms.workload:
 - bertaygu
-ms.openlocfilehash: 542d8a6d6d90091aa7a800ef18f847fea6b1a81c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 03721f2aedd231dd9d4c4edaadf5eeb3a89389c2
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905905"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994205"
 ---
 # <a name="measuring-extension-impact-in-startup"></a>Başlangıçta uzantı etkisini ölçme
 
@@ -149,7 +151,7 @@ Koleksiyonu durdurmadan önce, Visual Studio 'Nun tamamen başlatılmış olduğ
 
 Kayıt tamamlandığında PerfView, izlemeyi otomatik olarak açar ve seçenekleri genişletir.
 
-Bu örneğin amaçları doğrultusunda, temel olarak **Gelişmiş Grup**altında bulabileceğiniz **Iş parçacığı zaman yığınları** görünümü ile ilgileniyoruz. Bu görünüm, bir iş parçacığında harcanan toplam süreyi, hem CPU süresi hem de engelleme süresi (örneğin, disk GÇ veya işleyiciler bekleniyor) dahil bir yöntemle gösterir.
+Bu örneğin amaçları doğrultusunda, temel olarak **Gelişmiş Grup** altında bulabileceğiniz **Iş parçacığı zaman yığınları** görünümü ile ilgileniyoruz. Bu görünüm, bir iş parçacığında harcanan toplam süreyi, hem CPU süresi hem de engelleme süresi (örneğin, disk GÇ veya işleyiciler bekleniyor) dahil bir yöntemle gösterir.
 
  ![iş parçacığı zaman yığınları](media/perfview-thread-time-stacks.png)
 
@@ -172,7 +174,7 @@ Yukarıdaki örnek için bazı ilginç çağrı yığınları şöyle olacaktır
 
    ![çağrı çerçevelerini engelleme](media/perfview-blocking-call-frames.png)
 
-İzlem içindeki diğer görünümlerden biri, etkiyi tespit etmek için yararlı olacak **görüntü yükleme yığınları**olacaktır. **Iş parçacığı zaman yığınları** görünümüne uygulanan aynı filtreleri uygulayabilir ve otomatik olarak yüklenen pakette yürütülen kod nedeniyle yüklenen tüm derlemeleri bulabilirsiniz.
+İzlem içindeki diğer görünümlerden biri, etkiyi tespit etmek için yararlı olacak **görüntü yükleme yığınları** olacaktır. **Iş parçacığı zaman yığınları** görünümüne uygulanan aynı filtreleri uygulayabilir ve otomatik olarak yüklenen pakette yürütülen kod nedeniyle yüklenen tüm derlemeleri bulabilirsiniz.
 
 Her ek derleme, daha yavaş makinelerde başlatmayı önemli ölçüde yavaşlatabilecek ek disk g/ç 'yi içereceği için, bir paket başlatma yordamı içinde yüklü derlemelerin sayısını en aza indirmek önemlidir.
 

@@ -1,5 +1,7 @@
 ---
 title: Proje özelliklerini alma | Microsoft Docs
+description: Proje özelliklerini bir araç penceresinde görüntülemeyi öğrenin. Bu örnekte, araç penceresindeki ağaç denetimi gösterilmektedir.
+ms.custom: SEO-VS-2020
 ms.date: 3/16/2019
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9ddfd48827bc762c9189f9b7600cfe9200e5c866
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dd8e23b859577301d28cf23ac59462d08ad9a447
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80711406"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994465"
 ---
 # <a name="get-project-properties"></a>Proje özelliklerini al
 
@@ -30,7 +32,7 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
 
 1. Her Visual Studio uzantısı, uzantı varlıklarını içeren bir VSıX dağıtım projesiyle başlar. Adlı bir [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] VSIX projesi oluşturun `ProjectPropertiesExtension` . "VSIX" araması yaparak VSıX proje şablonunu **Yeni proje** iletişim kutusunda bulabilirsiniz.
 
-2. Adlı özel bir araç penceresi öğe şablonu ekleyerek bir araç penceresi ekleyin `ProjectPropertiesToolWindow` . **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve **Add**  >  **Yeni öğe**Ekle ' yi seçin. **Yeni öğe Ekle iletişim kutusunda**, **Visual C# öğeleri**  >  **genişletilebilirliği** ' ne gidin ve **özel araç penceresi**' ni seçin. İletişim kutusunun alt kısmındaki **ad** alanında, dosya adını olarak değiştirin `ProjectPropertiesToolWindow.cs` . Özel bir araç penceresi oluşturma hakkında daha fazla bilgi için bkz. [bir araç penceresi ile uzantı oluşturma](../extensibility/creating-an-extension-with-a-tool-window.md).
+2. Adlı özel bir araç penceresi öğe şablonu ekleyerek bir araç penceresi ekleyin `ProjectPropertiesToolWindow` . **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve   >  **Yeni öğe** Ekle ' yi seçin. **Yeni öğe Ekle iletişim kutusunda**, **Visual C# öğeleri**  >  **genişletilebilirliği** ' ne gidin ve **özel araç penceresi**' ni seçin. İletişim kutusunun alt kısmındaki **ad** alanında, dosya adını olarak değiştirin `ProjectPropertiesToolWindow.cs` . Özel bir araç penceresi oluşturma hakkında daha fazla bilgi için bkz. [bir araç penceresi ile uzantı oluşturma](../extensibility/creating-an-extension-with-a-tool-window.md).
 
 3. Çözümü oluşturun ve hata olmadan derlendiğini doğrulayın.
 
@@ -44,9 +46,9 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
 
     ```
 
-2. *ProjectPropertiesToolWindowControl. xaml*dosyasında, var olan düğmeyi kaldırın ve araç kutusundan bir TreeView ekleyin. Ayrıca, Click olay işleyicisini *ProjectPropertiesToolWindowControl.xaml.cs* dosyasından kaldırabilirsiniz.
+2. *ProjectPropertiesToolWindowControl. xaml* dosyasında, var olan düğmeyi kaldırın ve araç kutusundan bir TreeView ekleyin. Ayrıca, Click olay işleyicisini *ProjectPropertiesToolWindowControl.xaml.cs* dosyasından kaldırabilirsiniz.
 
-3. *ProjectPropertiesToolWindowCommand.cs*içinde, `ShowToolWindow()` projeyi açmak ve özelliklerini okumak için yöntemini kullanın, sonra özellikleri TreeView öğesine ekleyin. ShowToolWindow için kod aşağıdaki gibi görünmelidir:
+3. *ProjectPropertiesToolWindowCommand.cs* içinde, `ShowToolWindow()` projeyi açmak ve özelliklerini okumak için yöntemini kullanın, sonra özellikleri TreeView öğesine ekleyin. ShowToolWindow için kod aşağıdaki gibi görünmelidir:
 
     ```csharp
     private void ShowToolWindow(object sender, EventArgs e)
@@ -97,6 +99,6 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
 
 5. Deneysel örnekte bir proje açın.
 
-6. **View**  >  **Diğer pencereleri** görüntüle ' de **ProjectPropertiesToolWindow**' ye tıklayın.
+6.   >  **Diğer pencereleri** görüntüle ' de **ProjectPropertiesToolWindow**' ye tıklayın.
 
   Araç penceresinde ağaç denetimini, ilk projenin adı ve tüm proje özellikleri ile birlikte görmeniz gerekir.

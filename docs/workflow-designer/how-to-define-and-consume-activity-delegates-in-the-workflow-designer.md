@@ -1,6 +1,6 @@
 ---
-title: 'İş Akışı Tasarımcısı: etkinlik temsilcilerini tanımlama ve kullanma'
-description: .NET Framework 4,5 ' nin, etkinlik temsilcilerini tanımlamak ve tüketmek için kullanabileceğiniz InvokeDelegate etkinliğinin kullanıma hazır bir tasarımcısını nasıl içerdiğini öğrenin.
+title: Etkinlik temsilcilerini tanımlama ve tüketme
+description: İş Akışı Tasarımcısı .NET Framework 4,5 ' de, etkinlik temsilcilerini tanımlamak ve tüketmek için kullanabileceğiniz InvokeDelegate etkinliğinin hazır olmayan bir tasarımcısını nasıl içerdiğini öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -10,12 +10,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: TerryGLee
-ms.openlocfilehash: c59c828f380e47a06f8feb7b72788e76ad7ee08f
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 48cab69de11ce006792e0fda72245048c6897acf
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94437924"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96993282"
 ---
 # <a name="how-to-define-and-consume-activity-delegates-in-the-workflow-designer"></a>Nasıl yapılır: İş Akışı Tasarımcısında etkinlik temsilcileri tanımlama ve kullanma
 
@@ -28,19 +28,19 @@ ms.locfileid: "94437924"
    > [!NOTE]
    > **Iş akışı** proje şablonlarını görmüyorsanız, önce Visual Studio 'nun **Windows Workflow Foundation** bileşenini yüklemeniz gerekir. Ayrıntılı yönergeler için bkz. [ınstall Windows Workflow Foundation](developing-applications-with-the-workflow-designer.md#install-windows-workflow-foundation).
 
-3. **Çözüm Gezgini** projeye sağ tıklayın ve **Add**  >  **Yeni öğe** Ekle ' yi seçin. **Iş akışı** kategorisini seçin ve ardından **etkinlik** öğesi şablonunu seçin. Yeni etkinliği **MyForEach. xaml** olarak adlandırın ve ardından **Tamam** ' ı seçin.
+3. **Çözüm Gezgini** projeye sağ tıklayın ve   >  **Yeni öğe** Ekle ' yi seçin. **Iş akışı** kategorisini seçin ve ardından **etkinlik** öğesi şablonunu seçin. Yeni etkinliği **MyForEach. xaml** olarak adlandırın ve ardından **Tamam**' ı seçin.
 
    Etkinlik, iş akışı Tasarımcısı 'nda açılır.
 
 4. İş Akışı Tasarımcısı, **bağımsız değişkenler** sekmesine tıklayın.
 
-5. **Bağımsız değişken Oluştur** ' a tıklayın. Yeni bağımsız değişken **öğelerini** adlandırın.
+5. **Bağımsız değişken Oluştur**' a tıklayın. Yeni bağımsız değişken **öğelerini** adlandırın.
 
 6. **Bağımsız değişken türü** sütununda, **[T] dizisini** seçin.
 
-7. Tür tarayıcısında, **nesne** ' yi seçin ve ardından **Tamam** ' ı seçin.
+7. Tür tarayıcısında, **nesne** ' yi seçin ve ardından **Tamam**' ı seçin.
 
-8. **Bağımsız değişken Oluştur** ' a tekrar tıklayın. Yeni bağımsız değişken **gövdesini** adlandırın. Yeni bağımsız değişkenin **Yön** sütununda **özellik** ' i seçin.
+8. **Bağımsız değişken Oluştur** ' a tekrar tıklayın. Yeni bağımsız değişken **gövdesini** adlandırın. Yeni bağımsız değişkenin **Yön** sütununda **özellik**' i seçin.
 
 9. Bağımsız değişken türü sütununda **türler Için araştır** ' ı seçin.
 
@@ -50,13 +50,13 @@ ms.locfileid: "94437924"
 
 12. Etkinliği seçin <xref:System.Activities.Statements.While> ve **değişkenler** sekmesini seçin.
 
-13. **Değişken Oluştur** ' u seçin. Yeni değişken **dizinini** adlandırın.
+13. **Değişken Oluştur**' u seçin. Yeni değişken **dizinini** adlandırın.
 
-14. **Değişken türü** sütununda **Int32** ' yi seçin. **Kapsamı** **sırasında** ve **varsayılan** sütunu boş bırakın.
+14. **Değişken türü** sütununda **Int32**' yi seçin. **Kapsamı** **sırasında** ve **varsayılan** sütunu boş bırakın.
 
 15. Etkinliğin **Condition** özelliğini <xref:System.Activities.Statements.While> **< Items. length; dizinine** göre ayarlayın.
 
-16. <xref:System.Activities.Statements.InvokeDelegate>Araç kutusu ' ndan bir **Primitives** etkinliği etkinliğin **gövdesine** sürükleyin <xref:System.Activities.Statements.While> .
+16. <xref:System.Activities.Statements.InvokeDelegate>Araç kutusu ' ndan bir  etkinliği etkinliğin **gövdesine** sürükleyin <xref:System.Activities.Statements.While> .
 
 17. Temsilci açılan kutusunda **gövde** ' yi seçin.
 
@@ -74,7 +74,7 @@ ms.locfileid: "94437924"
 
 1. **CTRL** + **SHIFT** + **B** tuşlarına basarak projeyi derleyin.
 
-2. **Çözüm Gezgini** , tasarımcıda **Workflow1. xaml** ' yi açın.
+2. **Çözüm Gezgini**, tasarımcıda **Workflow1. xaml** ' yi açın.
 
 3. Araç kutusundan bir **MyForEach** etkinliğini tasarımcı yüzeyine sürükleyin. Etkinlik, araç kutusunun bir bölümünde projeyle aynı adı taşıyan bir bölümdür.
 

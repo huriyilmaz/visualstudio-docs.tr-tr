@@ -1,5 +1,6 @@
 ---
 title: HLSL gölgelendirici hata ayıklayıcısı | Microsoft Docs
+description: HLSL kodunuzun uygulamanızda nasıl çalıştığını öğrenmek için grafik Çözümleyicisi 'ndeki HLSL hata ayıklayıcısını kullanın. Hata ayıklayıcı, sizi ilgilendiren tam HLSL iş parçacığını taklit edebilir.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -10,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 164c404f3bce6b8216092635e3489843039fb1eb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 65f643d0f03f9754d580de8be95fb5c1f65a940d
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72735296"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995141"
 ---
 # <a name="hlsl-shader-debugger"></a>HLSL Gölgelendirici Hata Ayıklayıcısı
 Visual Studio Grafik Çözümleyicisi içindeki HLSL hata ayıklayıcı, HLSL gölgelendirici kodunuzun uygulamanızın gerçek koşullarında nasıl çalıştığını anlamanıza yardımcı olur.
@@ -63,7 +64,7 @@ Visual Studio Grafik Çözümleyicisi içindeki HLSL hata ayıklayıcı, HLSL g�
 
 2. Çizim çağrısı ayrıntılarında, elde edilen renk katkısı gölgelendirici kodunda bir hata olduğunu gösteren bir temel öğeyi genişletin. Hata olduğunu ortaya koyan birden fazla temel öğe varsa, soruna tanı koymayı zorlaştırabilecek hata birikiminden kaçınmak için bu duruma işaret eden ilk temel öğeyi seçin.
 
-3. İlkel ayrıntılarda, **köşe gölgelendiricide** mi yoksa **piksel gölgelendiricide**mi hata ayıklama yapılıp yapılmayacağını seçin. Piksel gölgelendiricisinin doğru olduğu, ancak köşe gölgelendiricisinin kendisine yanlış sabitler aktarması nedeniyle yanlış renk katkısı ürettiğinden şüphelendiğiniz durumlarda, köşe gölgelendiricisi için hata ayıklama uygulayın. Aksi durumlarda piksel gölgelendiricisi için hata ayıklama uygulayın.
+3. İlkel ayrıntılarda, **köşe gölgelendiricide** mi yoksa **piksel gölgelendiricide** mi hata ayıklama yapılıp yapılmayacağını seçin. Piksel gölgelendiricisinin doğru olduğu, ancak köşe gölgelendiricisinin kendisine yanlış sabitler aktarması nedeniyle yanlış renk katkısı ürettiğinden şüphelendiğiniz durumlarda, köşe gölgelendiricisi için hata ayıklama uygulayın. Aksi durumlarda piksel gölgelendiricisi için hata ayıklama uygulayın.
 
     Seçilen gölgelendiricinin sağında, küçük yeşil ok olarak görünen **hata ayıklamayı Başlat**' ı seçin.
 

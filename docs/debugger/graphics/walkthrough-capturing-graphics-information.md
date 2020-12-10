@@ -1,5 +1,7 @@
 ---
 title: 'İzlenecek yol: grafik bilgilerini yakalama | Microsoft Docs'
+description: Grafik bilgilerini Direct3D uygulamasından el ile yakalamak için bkz. Visual Studio Grafik Tanılama nasıl kullanılır.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 48f12f6e-57b4-48ec-a145-89fa71a42424
@@ -8,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: aab86d42cd158ad64ebb16497b8d2d9f5a7002df
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3acd9df9dbb5a430171ae7a283bbf4292e07e26a
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72734734"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994985"
 ---
 # <a name="walkthrough-capturing-graphics-information"></a>İzlenecek yol: Grafik Bilgilerini Yakalama
 Bu izlenecek yol, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] grafik bilgilerini Direct3D uygulamasından el ile yakalamak için grafik tanılama nasıl kullanacağınızı gösterir.
@@ -49,7 +51,7 @@ Bu izlenecek yol, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] g
 
    -veya-
 
-   Uygulamadaki uygulamayla birlikte **PRINT Screen**tuşuna basın.
+   Uygulamadaki uygulamayla birlikte **PRINT Screen** tuşuna basın.
 
   Bir çerçeve hakkındaki bilgileri her yakaladığınızda, Grafik Tanılama Direct3D olaylarını ve ilişkili durumunu kaydeder ve bu verileri bir grafik günlüğüne ekler. Her bir Grafik Tanılama oturumu için yeni bir grafik günlüğü oluşturulur. Grafik günlükleri hakkında daha fazla bilgi için bkz. [genel bakış](overview-of-visual-studio-graphics-diagnostics.md).
 

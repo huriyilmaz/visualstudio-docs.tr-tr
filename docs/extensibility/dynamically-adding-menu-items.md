@@ -1,5 +1,7 @@
 ---
 title: Menü öğelerini dinamik olarak ekleme | Microsoft Docs
+description: Çalışma zamanında menü öğeleri eklemek için DynamicItemStart komut bayrağını nasıl kullanacağınızı öğrenin. Bu makalede, bir Visual Studio çözümünde başlangıç projesinin nasıl ayarlanacağı gösterilmektedir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4387c1930e09e49c0ec5c36ccedc1bb83dc273f3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 81fd495c51eff456f66275f33876038d14e43203
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80712063"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994816"
 ---
 # <a name="dynamically-add-menu-items"></a>Menü öğelerini dinamik olarak ekle
 `DynamicItemStart`Visual Studio komut tablosu (*. vsct*) dosyasındaki bir yer tutucu düğme tanımında komut bayrağını belirterek, çalışma zamanında menü öğeleri ekleyebilirsiniz, sonra (kodda) komutları göstermek ve işlemek için menü öğelerinin sayısını tanımlayarak tanımlayabilirsiniz. VSPackage yüklendiğinde, yer tutucu dinamik menü öğeleriyle değiştirilmiştir.
@@ -32,7 +34,7 @@ ms.locfileid: "80712063"
 
 1. Adlı bir VSıX projesi oluşturun `DynamicMenuItems` .
 
-2. Proje açıldığında, özel bir komut öğesi şablonu ekleyin ve onu **DynamicMenu**olarak adlandırın. Daha fazla bilgi için bkz. [bir menü komutuyla uzantı oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md).
+2. Proje açıldığında, özel bir komut öğesi şablonu ekleyin ve onu **DynamicMenu** olarak adlandırın. Daha fazla bilgi için bkz. [bir menü komutuyla uzantı oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md).
 
 ## <a name="setting-up-the-elements-in-the-vsct-file"></a>*. Vsct* dosyasındaki öğeleri ayarlama
  Bir araç çubuğunda dinamik menü öğeleriyle bir menü denetleyicisi oluşturmak için aşağıdaki öğeleri belirtirsiniz:
@@ -43,7 +45,7 @@ ms.locfileid: "80712063"
 
 - İki düğme, bir menü öğeleri için yer tutucu görevi gören diğeri ve araç çubuğunda simge ve araç ipucunu sağlayan diğeri.
 
-1. *Dynamicmenupackage. vsct*içinde, komut kimliklerini tanımlayın. Semboller bölümüne gidin ve **Guiddynamicmenupackagecmdset** GuidSymbol bloğundaki IDSymbol öğelerini değiştirin. İki grup, menü denetleyicisi, yer tutucu komutu ve tutturucu komutu için IDSymbol öğelerini tanımlamanız gerekir.
+1. *Dynamicmenupackage. vsct* içinde, komut kimliklerini tanımlayın. Semboller bölümüne gidin ve **Guiddynamicmenupackagecmdset** GuidSymbol bloğundaki IDSymbol öğelerini değiştirin. İki grup, menü denetleyicisi, yer tutucu komutu ve tutturucu komutu için IDSymbol öğelerini tanımlamanız gerekir.
 
     ```xml
     <GuidSymbol name="guidDynamicMenuPackageCmdSet" value="{ your GUID here }">
@@ -142,7 +144,7 @@ ms.locfileid: "80712063"
 ## <a name="implement-the-dynamic-menu-command"></a>Dinamik menü komutunu uygulama
  Öğesinden devralan dinamik bir menü komut sınıfı oluşturursunuz <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> . Bu uygulamada, Oluşturucu eşleştirme komutları için kullanılacak bir koşul belirtir. <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.DynamicItemMatch%2A>Çağrılacak komutu tanımlayan özelliğini ayarlamak için bu koşulu kullanmak için yöntemini geçersiz kılmanız gerekir <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.MatchedCommandId%2A> .
 
-1. *DynamicItemMenuCommand.cs*adlı yeni bir C# sınıf dosyası oluşturun ve öğesinden devralan **Dynamicıtemmenucommand** adlı bir sınıf ekleyin <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> :
+1. *DynamicItemMenuCommand.cs* adlı yeni bir C# sınıf dosyası oluşturun ve öğesinden devralan **Dynamicıtemmenucommand** adlı bir sınıf ekleyin <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> :
 
     ```csharp
     class DynamicItemMenuCommand : OleMenuCommand
@@ -220,7 +222,7 @@ ms.locfileid: "80712063"
     using System.ComponentModel.Design;
     ```
 
-3. `DynamicMenu`Sınıfında, **DTE2**özel alanını ekleyin.
+3. `DynamicMenu`Sınıfında, **DTE2** özel alanını ekleyin.
 
     ```csharp
     private DTE2 dte2;

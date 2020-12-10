@@ -1,5 +1,6 @@
 ---
 title: Grafik tanılama kayıttan yürütme makinesini Değiştir
+description: Grafik bilgilerini, yerel makinenizi kullanarak veya sorunu daha iyi üreten bir uzak makine veya cihaz kullanarak grafik günlüğünden yürütün.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -9,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a7b7f3f09495b760d4ee3ab8c20781bc337b1bb2
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 8b6ae19fde7397b97ebe087557d71a52303605ec
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810698"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995076"
 ---
 # <a name="how-to-change-the-graphics-diagnostics-playback-machine"></a>Nasıl yapılır: Grafik Tanılama Kayıttan Yürütme Makinesini Değiştirme
 Grafik bilgilerini yerel makinenizi kullanarak veya uzak bir makine ya da cihaz kullanarak çalabilirsiniz.
@@ -26,9 +27,9 @@ Grafik bilgilerini yerel makinenizi kullanarak veya uzak bir makine ya da cihaz 
 
 1. Grafik günlüğü Belgesi penceresinde, **kayıttan yürütme makinesi** bağlantısını seçin. **Uzaktan hata ayıklayıcı bağlantıları** iletişim kutusu görüntülenir.
 
-2. **El Ile yapılandırma**altında, **Adres** özelliğinde, girin `localhost` .
+2. **El Ile yapılandırma** altında, **Adres** özelliğinde, girin `localhost` .
 
-3. **Kimlik doğrulama modu** özelliğini **yok**olarak ayarlayın.
+3. **Kimlik doğrulama modu** özelliğini **yok** olarak ayarlayın.
 
 4. **Seç** düğmesini seçin.
 
@@ -36,13 +37,13 @@ Grafik bilgilerini yerel makinenizi kullanarak veya uzak bir makine ya da cihaz 
 
 1. Grafik günlüğü Belgesi penceresinde, **kayıttan yürütme makinesi** bağlantısını seçin. **Uzaktan hata ayıklayıcı bağlantıları** iletişim kutusu görüntülenir.
 
-2. **El Ile yapılandırma**altında, **Adres** özelliğinde, grafik bilgilerini kayıttan yürütmek için kullanmak Istediğiniz makinenin veya cihazın Windows etkı alanı adını veya IP adresini girin.
+2. **El Ile yapılandırma** altında, **Adres** özelliğinde, grafik bilgilerini kayıttan yürütmek için kullanmak Istediğiniz makinenin veya cihazın Windows etkı alanı adını veya IP adresini girin.
 
 3. Kayıttan yürütme makinesiyle bağlantıyı güvenli hale getirmek için kullanmak istediğiniz yetkilendirme türünü belirtin.
 
-    - Windows kimlik doğrulaması için **kimlik doğrulama modu** özelliğini **Windows**olarak ayarlayın.
+    - Windows kimlik doğrulaması için **kimlik doğrulama modu** özelliğini **Windows** olarak ayarlayın.
 
-    - Kimlik doğrulaması yok için **kimlik doğrulama modu** özelliğini **yok**olarak ayarlayın.
+    - Kimlik doğrulaması yok için **kimlik doğrulama modu** özelliğini **yok** olarak ayarlayın.
 
 4. **Seç** düğmesini seçin.
 

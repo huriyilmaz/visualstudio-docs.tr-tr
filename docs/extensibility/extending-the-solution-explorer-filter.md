@@ -1,5 +1,7 @@
 ---
 title: Çözüm Gezgini filtresini genişletme | Microsoft Docs
+description: Visual Studio SDK 'da farklı dosyaları göstermek veya gizlemek için Çözüm Gezgini filtre işlevini genişletmeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,22 +13,22 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: af0824edd4188481bec8c0703d71043354f5dbcc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cde3377582c3bac0c27371e25f28e5151d641db1
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80711565"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994569"
 ---
 # <a name="extend-the-solution-explorer-filter"></a>Çözüm Gezgini filtresini uzat
-Farklı dosyaları göstermek veya gizlemek için **Çözüm Gezgini** filtre işlevini genişletebilirsiniz. Örneğin, bu kılavuzda gösterdiği gibi yalnızca **Çözüm Gezgini**C# sınıf fabrikası dosyalarını gösteren bir filtre oluşturabilirsiniz.
+Farklı dosyaları göstermek veya gizlemek için **Çözüm Gezgini** filtre işlevini genişletebilirsiniz. Örneğin, bu kılavuzda gösterdiği gibi yalnızca **Çözüm Gezgini** C# sınıf fabrikası dosyalarını gösteren bir filtre oluşturabilirsiniz.
 
 ## <a name="prerequisites"></a>Önkoşullar
  Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yüklememeyin. Visual Studio kurulumuna isteğe bağlı bir özellik olarak dahildir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
 
 ### <a name="create-a-visual-studio-package-project"></a>Visual Studio paket projesi oluşturma
 
-1. Adlı bir VSıX projesi oluşturun `FileFilter` . **FileFilter**adlı özel bir komut öğesi şablonu ekleyin. Daha fazla bilgi için bkz. [bir menü komutuyla uzantı oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md).
+1. Adlı bir VSıX projesi oluşturun `FileFilter` . **FileFilter** adlı özel bir komut öğesi şablonu ekleyin. Daha fazla bilgi için bkz. [bir menü komutuyla uzantı oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md).
 
 2. Ve için bir başvuru `System.ComponentModel.Composition` ekleyin `Microsoft.VisualStudio.Utilities` .
 
@@ -50,9 +52,9 @@ Farklı dosyaları göstermek veya gizlemek için **Çözüm Gezgini** filtre i�
 
 2. **Varlıklar** sekmesinde **Yeni** düğmesini seçin.
 
-3. **Tür** alanında, **Microsoft. VisualStudio. MefComponent**öğesini seçin.
+3. **Tür** alanında, **Microsoft. VisualStudio. MefComponent** öğesini seçin.
 
-4. **Kaynak** alanında, **Geçerli çözümde bir proje**seçin.
+4. **Kaynak** alanında, **Geçerli çözümde bir proje** seçin.
 
 5. **Proje** alanında, **FileFilter**' ı seçin ve ardından **Tamam** düğmesini seçin.
 
@@ -65,7 +67,7 @@ Farklı dosyaları göstermek veya gizlemek için **Çözüm Gezgini** filtre i�
     public const int FileFilterId = 0x100;
     ```
 
-2. *FileNameFilter.cs*adlı FileFilter projesine bir sınıf dosyası ekleyin.
+2. *FileNameFilter.cs* adlı FileFilter projesine bir sınıf dosyası ekleyin.
 
 3. Boş ad alanını ve boş sınıfı aşağıdaki kodla değiştirin.
 
@@ -158,7 +160,7 @@ Farklı dosyaları göstermek veya gizlemek için **Çözüm Gezgini** filtre i�
 
     ```
 
-4. *FileFilter.cs*içinde, komut yerleşimini ve Işleme kodunu FileFilter oluşturucusundan kaldırın. Sonuç şöyle görünmelidir:
+4. *FileFilter.cs* içinde, komut yerleşimini ve Işleme kodunu FileFilter oluşturucusundan kaldırın. Sonuç şöyle görünmelidir:
 
     ```csharp
     private FileFilter(Package package)

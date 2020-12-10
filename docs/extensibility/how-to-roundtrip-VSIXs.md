@@ -1,5 +1,7 @@
 ---
 title: Uzantıları gidiş dönüş
+description: Visual Studio genişletilebilirlik projelerinin Visual Studio 2015 ve Visual Studio 2019 ya da Visual Studio 2017 arasında gidiş dönüş yapmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 06/25/2017
 ms.topic: how-to
 ms.assetid: 2d6cf53c-011e-4c9e-9935-417edca8c486
@@ -8,12 +10,12 @@ ms.author: madsk
 manager: justinclareburt
 ms.workload:
 - willbrown
-ms.openlocfilehash: ca1f367510aa9730c1b3b212438579a8eaeb0e8f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3db3264bf5226b5679452659928e451e7975b001
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86387284"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96993620"
 ---
 # <a name="how-to-make-extensions-compatible-with-visual-studio-20192017-and-visual-studio-2015"></a>Nasıl yapılır: Visual Studio 2019/2017 ve Visual Studio 2015 ile uyumlu uzantılar yapma
 
@@ -29,7 +31,7 @@ Bu belgede, bir VSıX 'i yuvarlamak için tamamlayacağımız adımların bir an
 1. Doğru NuGet paketlerini içeri aktarın.
 2. Uzantı bildirimini güncelleştir:
     * Yükleme hedefi
-    * Ön koşullar
+    * Önkoşullar
 3. CSProj güncelleştir:
     * Güncelleştirin `<MinimumVisualStudioVersion>` .
     * Özelliği ekleyin `<VsixType>` .
@@ -51,10 +53,10 @@ Visual Studio 2019 veya 2017 yerine Visual Studio 2015 ile bu yükseltmeyi başl
 
 ## <a name="ensure-there-is-no-reference-to-projectjson"></a>project.jsiçin bir başvuru olmadığından emin olun
 
-Bu belgede daha sonra, **. csproj* dosyanıza koşullu içeri aktarma deyimleri ekleyeceğiz. NuGet başvurularınız * üzerindeproject.js*depolanıyorsa bu çalışmaz. Bu nedenle, tüm NuGet başvurularını *packages.config* dosyasına taşımanız önerilir.
+Bu belgede daha sonra, **. csproj* dosyanıza koşullu içeri aktarma deyimleri ekleyeceğiz. NuGet başvurularınız *üzerindeproject.js* depolanıyorsa bu çalışmaz. Bu nedenle, tüm NuGet başvurularını *packages.config* dosyasına taşımanız önerilir.
 Projeniz dosyada bir *project.js* içeriyorsa:
 
-* *project.jsüzerindeki*başvuruları bir yere göz atın.
+* *project.jsüzerindeki* başvuruları bir yere göz atın.
 * **Çözüm Gezgini**, projedeki *project.js* dosya silin. Bu, dosyadaki *project.js* siler ve projeden kaldırır.
 * NuGet başvurularını projeye geri ekleyin:
   * **Çözüme** sağ tıklayın ve **çözüm Için NuGet Paketlerini Yönet**' i seçin.
@@ -165,7 +167,7 @@ Bu adım yapılırken değiştirilmiş. csproj açık öğesine bir başvuruya s
 
 * `<import>`Microsoft. VSSDK. BuildTools başvurusuna sahip olan etiketlere ek koşullu deyimler ekleyin. `'$(VisualStudioVersion)' != '14.0' And`Koşul ifadesinin önüne ekleyin. Bu deyimler, csproj dosyasının üst bilgisinde ve altbilgisinde görünür.
 
-Örneğin:
+Örnek:
 
 ```xml
 <Import Project="packages\Microsoft.VSSDK.BuildTools.15.0.26201…" Condition="'$(VisualStudioVersion)' != '14.0' And Exists(…" />
@@ -173,7 +175,7 @@ Bu adım yapılırken değiştirilmiş. csproj açık öğesine bir başvuruya s
 
 * `<import>`Microsoft. VisualStudio. SDK. BuildTasks. 14.0 içeren etiketlere ek koşullu deyimler ekleyin. `'$(VisualStudioVersion)' == '14.0' And`Koşul ifadesinin önüne ekleyin. Bu deyimler, csproj dosyasının üst bilgisinde ve altbilgisinde görünür.
 
-Örneğin:
+Örnek:
 
 ```xml
 <Import Project="packages\Microsoft.VisualStudio.Sdk.BuildTasks.14.0.14.0…" Condition="'$(VisualStudioVersion)' == '14.0' And Exists(…" />
@@ -181,7 +183,7 @@ Bu adım yapılırken değiştirilmiş. csproj açık öğesine bir başvuruya s
 
 * `<Error>`Microsoft. VSSDK. BuildTools başvurusuna sahip olan etiketlere ek koşullu deyimler ekleyin. Bunu `'$(VisualStudioVersion)' != '14.0' And` koşul ifadesinin önüne ekleyerek yapın. Bu deyimler csproj dosyasının altbilgisinde görünür.
 
-Örneğin:
+Örnek:
 
 ```xml
 <Error Condition="'$(VisualStudioVersion)' != '14.0' And Exists('packages\Microsoft.VSSDK.BuildTools.15.0.26201…" />
@@ -189,7 +191,7 @@ Bu adım yapılırken değiştirilmiş. csproj açık öğesine bir başvuruya s
 
 * `<Error>`Microsoft. VisualStudio. SDK. BuildTasks. 14.0 içeren etiketlere ek koşullu deyimler ekleyin. `'$(VisualStudioVersion)' == '14.0' And`Koşul ifadesinin önüne ekleyin. Bu deyimler csproj dosyasının altbilgisinde görünür.
 
-Örneğin:
+Örnek:
 
 ```xml
 <Error Condition="'$(VisualStudioVersion)' == '14.0' And Exists('packages\Microsoft.VisualStudio.Sdk.BuildTasks.14.0.14.0…" />
@@ -207,10 +209,10 @@ Bu noktada, projeniz hem Visual Studio 2015 hem de Visual Studio 2017 üzerine y
 * Proje dizininize gidin.
 * *\Bin\debug* klasörünü açın.
 * VSıX dosyasına çift tıklayın ve uzantınızı Visual Studio 2015 ve Visual Studio 2019/2017 ' ye yükler.
-* Uzantıyı, yüklü bölümünde yer alan **Araçlar**  >  **Uzantılar ve güncelleştirmeler** ' de görediğinizden emin **Installed** olun.
+* Uzantıyı, yüklü bölümünde yer alan **Araçlar**  >  **Uzantılar ve güncelleştirmeler** ' de görediğinizden emin  olun.
 * Çalıştığını denetlemek için uzantıyı çalıştırmayı/kullanmayı deneyin.
 
 ![VSıX bulma](media/finding-a-VSIX-example.png)
 
 > [!NOTE]
-> Projeniz **dosyayı açan**iletiyle yanıt vermezse, Visual Studio 'yu kapatmayı zorla, proje dizininiz ' ne gidin, gizli klasörleri gösterin ve *. vs* klasörünü silin.
+> Projeniz **dosyayı açan** iletiyle yanıt vermezse, Visual Studio 'yu kapatmayı zorla, proje dizininiz ' ne gidin, gizli klasörleri gösterin ve *. vs* klasörünü silin.

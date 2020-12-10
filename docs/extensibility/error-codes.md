@@ -1,5 +1,7 @@
 ---
 title: Hata kodları | Microsoft Docs
+description: Bu makale, kaynak denetimi eklentisi API işlevlerine yönelik hata kodlarının, değerlerin ve açıklamaların bir listesini içerir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 34072f6ddbd632f83dd308c6cb63427e02bb110b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a77f869936531dbc41cc3bd1d9b510bf44c35cec
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80711835"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994725"
 ---
 # <a name="error-codes"></a>Hata kodları
 Bir kaynak denetimi eklentisi API işlevi bir hata döndürdüğünde, aşağıdaki hata kodlarından biri olması beklenir. Tüm hatalar negatif, uyarılar veya bilgilendirici hata kodları pozitif ve başarılı 0 ' dır.

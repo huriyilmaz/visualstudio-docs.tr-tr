@@ -1,5 +1,7 @@
 ---
 title: Grafik durumu | Microsoft Docs
+description: Her çizim çağrısının grafik durumunu görerek işleme sorunlarını giderin. Önceki çağrıdan değiştirilen durum bölümleri vurgulanır.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a07e198c6ff4e432f708ac1751e69bbef77a22c4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: de8f3c356cfe05aade3e4f2197b3f7429967a259
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "67823765"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96994023"
 ---
 # <a name="graphics-state"></a>Grafik Durumu
 Visual Studio grafik tanılama 'daki durum penceresi, çizim çağrısı gibi geçerli olay sırasında etkin olan grafik durumunu anlamanıza yardımcı olur.
@@ -26,7 +28,7 @@ Visual Studio grafik tanılama 'daki durum penceresi, çizim çağrısı gibi ge
 ### <a name="state-views"></a>Durum görünümleri
  Durum tablosunu birkaç farklı yolla görüntüleyebilirsiniz:
 
-|Görünüm|Description|
+|Görüntüle|Açıklama|
 |----------|-----------------|
 |API giriş durumu görünümü|Bu görünüm, durumu oluşturan Direct3D nesnelerine benzer bir düzende durumu gösterir.|
 |Mantıksal giriş durumu görünümü|Bu görünüm, durumu oluşturan Direct3D nesnelerinin yerleşimini yansıtmayan bir mantıksal görünümde durumu gösterir.|
@@ -43,7 +45,7 @@ Visual Studio grafik tanılama 'daki durum penceresi, çizim çağrısı gibi ge
   - **Sabitlenmiş durum görünümünü göster**
 
 > [!IMPORTANT]
-> **API giriş durumunda** durumu sabitleyebilir ya da **sabitlenmiş durum görünümünde**görüntülenmek üzere **mantıksal durum görünümlerini gösterebilirsiniz** .
+> **API giriş durumunda** durumu sabitleyebilir ya da **sabitlenmiş durum görünümünde** görüntülenmek üzere **mantıksal durum görünümlerini gösterebilirsiniz** .
 
 ### <a name="state-table-format"></a>Durum tablosu biçimi
  Durum penceresi birçok bilgi sütununu gösterir.

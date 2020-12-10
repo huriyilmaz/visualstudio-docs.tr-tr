@@ -1,5 +1,6 @@
 ---
 title: Kaynak denetimi eklentileri için uyarıları kapatma
+description: Bir Kullanıcı, Visual Studio 'da kaynak denetimi kullanırken çeşitli uyumluluk uyarıları görebilir. Bu uyarıları devre dışı bırakmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 406d063bd2df6dd1d831c3a8220d8d513596a79a
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: f5607f4a92a14b692f20d509e014991d461815bd
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037191"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96993555"
 ---
 # <a name="how-to-turn-off-compatibility-warnings-for-source-control-plug-ins"></a>Nasıl yapılır: kaynak denetimi eklentileri için uyumluluk uyarılarını kapatma
 
@@ -27,7 +28,7 @@ Bir kullanıcı içinde kaynak denetimi kullanırken çeşitli uyumluluk uyarıl
 
 - Aşağıdaki kayıt defteri girdisini ayarlayın (gerekirse değeri ekleyin):
 
-   **HKEY_CURRENT_USER \Software\Microsoft\VisualStudio\8.0\SourceControl\DontDisplayCheckDotNETCompatible = DWORD: 00000001**
+   **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0\SourceControl\DontDisplayCheckDotNETCompatible = DWORD: 00000001**
 
    Bu uyarı tüm eklentiler için görüntülenir [!INCLUDE[vsvss](../extensibility/includes/vsvss_md.md)] .
 
@@ -35,9 +36,9 @@ Bir kullanıcı içinde kaynak denetimi kullanırken çeşitli uyumluluk uyarıl
 
 - Aşağıdaki iki kayıt defteri değerini ayarlayın (gerekirse değerleri ekleyin):
 
-     **HKEY_CURRENT_USER \Software\microsoft\visualstudio\8.0\sourcecontrol\warnedoldmssccıprovider = DWORD: 00000000**
+     **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0\SourceControl\WarnedOldMSSCCIProvider = DWORD: 00000000**
 
-    **HKEY_CURRENT_USER \Software\Microsoft\VisualStudio\8.0\SourceControl\UseOldSCC = DWORD: 00000001**
+    **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0\SourceControl\UseOldSCC = DWORD: 00000001**
 
      Bu uyarı, kaynak denetimi eklentisi birden çok proje için yeniden giriş (tek seferde yalnızca bir dosya ve Proje iade edebilir) açıkça desteklemiyorsa görüntülenir.
 
