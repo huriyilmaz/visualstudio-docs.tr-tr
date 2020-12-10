@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 95e35037ba07dcba1f51da7b47b7fca40a447dfb
-ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
+ms.openlocfilehash: e3633f3084b875974adac17fc27e7ec7a695ed91
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94850032"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96996389"
 ---
 # <a name="run-unit-tests-with-test-explorer"></a>Test Gezgini ile birim testleri çalıştırma
 
@@ -186,7 +186,7 @@ Yönetilen uygulamalar için Microsoft birim testi çerçevesinde, bir özniteli
 |-|-----------------|
 |<xref:Microsoft.VisualStudio.TestTools.UnitTesting.OwnerAttribute>|Sahip kategorisi, birim test çerçevesi tarafından tanımlanır ve sahibin dize değerini sağlamanızı gerektirir.|
 |<xref:Microsoft.VisualStudio.TestTools.UnitTesting.PriorityAttribute>|Öncelik kategorisi, birim test çerçevesi tarafından tanımlanır ve öncelik için bir tamsayı değeri sağlamanızı gerektirir.|
-|<xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute>|TestCategory özniteliği değer olmadan bir kategori sağlamanıza olanak sağlar.|
+|<xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute>|TestCategory özniteliği bir birim testinin kategorisini belirtmenize olanak sağlar.|
 |<xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute>|TestProperty özniteliği nitelik kategori/değer çiftini tanımlamanızı sağlar.|
 
 
@@ -205,7 +205,7 @@ Bkz. [C++ Için Microsoft birim testi çerçevesini kullanma](how-to-use-microso
 
 **Bir çalma listesine test eklemek için**, test Gezgini 'nde bir veya daha fazla test seçin. Sağ tıklama menüsünde, **çalma listesine ekle**' yi seçin ve ardından testleri eklemek istediğiniz çalma listesini seçin.
 
-**Bir çalma listesi açmak için** **Test** > Visual Studio menüsünden test **listesi** ' ni seçin ve son kullanılan çalma listeleri listesinden seçim yapın veya çalma listesini **Aç** ' ı seçerek şarkı listesinin adını ve konumunu belirtin.
+**Bir çalma listesi açmak için**  > Visual Studio menüsünden test **listesi** ' ni seçin ve son kullanılan çalma listeleri listesinden seçim yapın veya çalma listesini **Aç** ' ı seçerek şarkı listesinin adını ve konumunu belirtin.
 
 Bireysel testlerin herhangi bir sırada çalıştırılmasını önleyen bir bağımlılığı yoksa, paralel test yürütme özelliğini ![UTE&#95;parallelicon&#45;küçük](../test/media/ute_parallelicon-small.png) araç çubuğundaki iki durumlu düğme. Bu, tüm testleri çalıştırmak için harcanan süreyi önemli ölçüde azaltabilir.
 ::: moniker-end
@@ -220,7 +220,7 @@ Yeni bir test Gezgini sekmesinde çalma listesi açılır. Bu çalma listesini b
 
 ![Çalma listesi ayrı test Gezgini sekmesinde açılıyor](../test/media/vs-2019/test-explorer-playlist-tab-16-7.png)
 
-**Bir çalma listesi oluşturmak için**, test Gezgini 'nde bir veya daha fazla test seçin. Sağ tıklayın ve yeni çalma listesine **Ekle**' yi seçin  >  **New playlist**.
+**Bir çalma listesi oluşturmak için**, test Gezgini 'nde bir veya daha fazla test seçin. Sağ tıklayın ve yeni çalma listesine **Ekle**' yi seçin  >  .
 
 **Bir çalma listesi açmak için**, Visual Studio araç çubuğunda çalma listesi simgesini seçin ve menüden önceden kaydedilmiş bir çalma listesi dosyası seçin.
 

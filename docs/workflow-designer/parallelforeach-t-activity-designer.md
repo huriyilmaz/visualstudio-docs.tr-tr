@@ -1,6 +1,6 @@
 ---
-title: İş Akışı Tasarımcısı-ParallelForEach &lt; T &gt; etkinlik Tasarımcısı
-description: ParallelForEach <T> etkinliğinin bir koleksiyonun öğelerini nasıl numaralandırılacağını ve her bir koleksiyon öğesi için paralel olarak bir katıştırılmış ifade yürüttüğünü öğrenin.
+title: ParallelForEach &lt; T &gt; etkinlik Tasarımcısı
+description: İş Akışı Tasarımcısı ' de, ParallelForEach <T> etkinliğinin bir koleksiyonun öğelerini nasıl numaralandırdığından ve her bir koleksiyon öğesi için paralel olarak bir Embedded ifadesi yürüttüğünü öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 57c8414637d767a57cf9021d907bfb6e1fe467ef
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: e732c6d9d791d789471c49a319ab9945fdd5dc06
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94435566"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96996181"
 ---
 # <a name="parallelforeach-activity-designer"></a>ParallelForEach Etkinlik Tasarımcısı
 
@@ -45,7 +45,7 @@ Aşağıdaki tabloda en yararlı <xref:System.Activities.Statements.ParallelForE
 
 |Özellik Adı|Gerekli|Kullanım|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|Yanlış|Üst bilgide etkinlik tasarımcısının kolay görünen adını belirtir. Varsayılan değer **ParallelForEach \<Int32>** ' dir. Değer, isteğe bağlı olarak **Özellikler** kılavuzunda veya doğrudan etkinlik Tasarımcısı üstbilgisinde düzenlenebilir.|
+|<xref:System.Activities.Activity.DisplayName%2A>|Yanlış|Üst bilgide etkinlik tasarımcısının kolay görünen adını belirtir. Varsayılan değer **ParallelForEach \<Int32>**' dir. Değer, isteğe bağlı olarak **Özellikler** kılavuzunda veya doğrudan etkinlik Tasarımcısı üstbilgisinde düzenlenebilir.|
 |<xref:System.Activities.Statements.ParallelForEach%601.Body%2A>|Yanlış|Koleksiyondaki her öğe için yürütülecek etkinlik. Etkinliği eklemek için <xref:System.Activities.Statements.ParallelForEach%601.Body%2A> , araç kutusundan bir etkinliği **ParallelForEach \<T>** etkinlik Tasarımcısı ' nın **gövde** kutusuna, ipucu metni "etkinliği buraya bırak" olarak bırakın.|
 |**TypeArgument**|Doğru|<xref:System.Activities.Statements.ParallelForEach%601.Values%2A>Genel parametre *T* tarafından belirtilen koleksiyondaki öğelerin türü. Varsayılan olarak, **TypeArgument** değeri **Int32** olarak ayarlanır. **ParallelForEach<t \>** Etkinlik tasarımcısında t türünü değiştirmek Için, özellik kılavuzunda **TypeArgument** Birleşik giriş kutusunun değerini değiştirin.|
 |<xref:System.Activities.Statements.ParallelForEach%601.Values%2A>|Doğru|Yinelecek öğelerin koleksiyonu. Ayarlamak için <xref:System.Activities.Statements.ParallelForEach%601.Values%2A> , **Özellikler** penceresinde "vb ifadesi girin" veya **değerler** kutusuna "bir vb ifadesi girin" ipucu metnini içeren kutuya **foreach<T \>** etkinlik Tasarımcısı ' nın **değerler** kutusuna bir Visual Basic ifadesi yazın.|

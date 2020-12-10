@@ -1,5 +1,7 @@
 ---
 title: Düzenleyiciyi ve dil hizmetlerini genişletme | Microsoft Docs
+description: Bir düzenleyiciye dil hizmeti özellikleri ekleyebilir ve Visual Studio kod Düzenleyicisi özelliklerini genişletebilirsiniz. Managed Extensibility Framework hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 321bd82eb83ef37dc3981e38cc23d1d4b5685802
-ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
+ms.openlocfilehash: 49d4b76fe7feadb4458ef68acb351b81c6fa494c
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93413950"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995752"
 ---
 # <a name="extend-the-editor-and-language-services"></a>Düzenleyiciyi ve dil hizmetlerini genişletme
 Dil hizmeti özelliklerini (IntelliSense gibi) kendi düzenleyicinize ekleyebilirsiniz ve Visual Studio Code Editor özelliklerinin çoğunu genişletebilirsiniz.  Neyi genişletebileceğinize ilişkin tam bir liste için bkz. [dil hizmeti ve Düzenleyici uzantı noktaları](../extensibility/language-service-and-editor-extension-points.md).

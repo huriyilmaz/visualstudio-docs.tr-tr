@@ -1,6 +1,6 @@
 ---
-title: İş Akışı Tasarımcısı-ReceiveAndSendReply şablon Tasarımcısı
-description: Önceden yapılandırılmış Receive ve SendReply etkinliklerinin çiftini oluşturmak için ReceiveAndSendReply şablonunu nasıl kullanacağınızı öğrenin.
+title: ReceiveAndSendReply Şablon Tasarımcısı
+description: Önceden yapılandırılmış Receive ve SendReply etkinliklerinin çiftini oluşturmak için İş Akışı Tasarımcısı 'da ReceiveAndSendReply şablonunu nasıl kullanacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3b66b403fb5df98bc4a23131b6062b2d06f95719
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 3f11caa831ca3de0684dd49e46a37620eaa6e435
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94434174"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96996220"
 ---
 # <a name="receiveandsendreply-template-designer"></a>ReceiveAndSendReply Şablon Tasarımcısı
 

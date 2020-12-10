@@ -1,5 +1,7 @@
 ---
 title: IDSymbol öğesi | Microsoft Docs
+description: 'IDSymbol öğesi, bir menü, Grup veya komutu temsil eden GUID: ID çiftinin KIMLIĞINI içerir.'
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +13,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d02a26a6874165738d917a14986d16d142c01915
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e4feb477f8507bc3fe57e6db355538ab98ceeeaa
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80710371"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995544"
 ---
 # <a name="idsymbol-element"></a>IDSymbol öğesi
 `IDSymbol`Öğesi, bir menü, Grup veya komutu temsil eden GUID: ID ÇIFTININ kimliğini içerir. GUID üst `GuidSymbol` öğeden gelir. `IDSymbol`Öğesi, `name` özniteliğinde yer alan ID için kolay bir ad sağlayan bir özniteliğe sahiptir `value` .
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Sözdizimi
 
 ```xml
 <IDSymbol name=ElementName value="0x0010" />

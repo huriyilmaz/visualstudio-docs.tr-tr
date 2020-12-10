@@ -1,5 +1,7 @@
 ---
 title: Visual Studio hata ayıklayıcısı genişletilebilirliği | Microsoft Docs
+description: Bu makalede Visual Studio hata ayıklayıcı genişletilebilirliği açıklanmakta ve Visual Studio hata ayıklama hakkındaki makalelere bağlantılar sağlanmaktadır.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ff4222b555fab73914776725fc79581f29fa5e53
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a072373ce0cf7633c595eb549455e6ecd62df887
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80712509"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995999"
 ---
 # <a name="visual-studio-debugger-extensibility"></a>Visual Studio hata ayıklayıcı genişletilebilirliği
 Visual Studio, programınızda hata izlemek için güçlü ve kullanımı kolay bir araç sağlayan tam bir etkileşimli kaynak kodu hata ayıklayıcısı içerir. Hata ayıklayıcı Visual Basic, C#, C/C++ ve JavaScript için kapsamlı desteğe sahiptir. Bununla birlikte, [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] [Microsoft İndirme Merkezi](https://www.microsoft.com/download/details.aspx?id=21835)' nden erişilebilen diğer programlama dilleri, hata ayıklayıcıda aynı zengin özelliklerle desteklenebilir.

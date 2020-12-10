@@ -1,5 +1,7 @@
 ---
 title: Belge kilit tutucusu yönetimi | Microsoft Docs
+description: Kullanıcı bir belge penceresinde açık bir belge görmeden, çalışan belge tablosundaki bir belgeye düzenleme kilidi yerleştirmeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f9dd520f8ad5cab1f0cfee890c4bcc388c204bb1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c15696d81be92f0549069bad354e65356f7b2e7c
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80712130"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995908"
 ---
 # <a name="document-lock-holder-management"></a>Belge kilit tutucusu yönetimi
 
@@ -37,7 +39,7 @@ ms.locfileid: "80712130"
 
 ## <a name="additional-document-edit-lock-considerations"></a>Ek belge düzenleme kilidi konuları
 
-"A" Düzenleyicisi "b" dosyası üzerinde belge düzenleme kilidine sahip tek düzenleyicidir ve "b" Düzenleyicisi "b" dosyasında bir belge düzenleme kilidi de bulunduracaksa farklı bir davranış alırsınız. ' De [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , **Sınıf Tasarımcısı** ilişkili kod dosyasında düzenleme kilidi olmayan bir görsel tasarımcı örneğidir. Diğer bir deyişle, kullanıcının Tasarım görünümünde açık bir sınıf diyagramı varsa ve ilişkili kod dosyası aynı anda açıksa ve Kullanıcı kod dosyasını değiştirirse ancak değişiklikleri KAYDETMEZSE, değişiklikler sınıf diyagramı (. CD) dosyasına da kaybedilir. **Sınıf Tasarımcısı** , kod dosyasında tek belge düzenleme kilidine sahipse, kod dosyasını kapatırken kullanıcının değişiklikleri kaydetmesi istenmez. IDE, kullanıcıdan değişiklikleri yalnızca Kullanıcı **Sınıf Tasarımcısı**kapatıldıktan sonra kaydetmesini ister. Kaydedilen değişiklikler her iki dosyada da yansıtılır. Kod dosyasında hem **Sınıf Tasarımcısı** hem de kod dosyası Düzenleyicisi belge düzenleme kilitlenmeleri tutuluyorsa, kod dosyasını veya formu kapatırken kullanıcıdan kaydetmesi istenir. Bu noktada, kaydedilen değişiklikler hem form hem de kod dosyasında yansıtılır. Sınıf diyagramları hakkında daha fazla bilgi için bkz. [sınıf diyagramları Ile çalışma (sınıf Tasarımcısı)](../ide/class-designer/designing-and-viewing-classes-and-types.md).
+"A" Düzenleyicisi "b" dosyası üzerinde belge düzenleme kilidine sahip tek düzenleyicidir ve "b" Düzenleyicisi "b" dosyasında bir belge düzenleme kilidi de bulunduracaksa farklı bir davranış alırsınız. ' De [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , **Sınıf Tasarımcısı** ilişkili kod dosyasında düzenleme kilidi olmayan bir görsel tasarımcı örneğidir. Diğer bir deyişle, kullanıcının Tasarım görünümünde açık bir sınıf diyagramı varsa ve ilişkili kod dosyası aynı anda açıksa ve Kullanıcı kod dosyasını değiştirirse ancak değişiklikleri KAYDETMEZSE, değişiklikler sınıf diyagramı (. CD) dosyasına da kaybedilir. **Sınıf Tasarımcısı** , kod dosyasında tek belge düzenleme kilidine sahipse, kod dosyasını kapatırken kullanıcının değişiklikleri kaydetmesi istenmez. IDE, kullanıcıdan değişiklikleri yalnızca Kullanıcı **Sınıf Tasarımcısı** kapatıldıktan sonra kaydetmesini ister. Kaydedilen değişiklikler her iki dosyada da yansıtılır. Kod dosyasında hem **Sınıf Tasarımcısı** hem de kod dosyası Düzenleyicisi belge düzenleme kilitlenmeleri tutuluyorsa, kod dosyasını veya formu kapatırken kullanıcıdan kaydetmesi istenir. Bu noktada, kaydedilen değişiklikler hem form hem de kod dosyasında yansıtılır. Sınıf diyagramları hakkında daha fazla bilgi için bkz. [sınıf diyagramları Ile çalışma (sınıf Tasarımcısı)](../ide/class-designer/designing-and-viewing-classes-and-types.md).
 
 Düzenleyici olmayan bir belgeye düzenleme kilidi yerleştirmeniz gerekiyorsa, arayüzü uygulamanız gerektiğini unutmayın <xref:Microsoft.VisualStudio.Shell.Interop.IVsDocumentLockHolder> .
 

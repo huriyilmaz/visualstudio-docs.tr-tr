@@ -1,5 +1,7 @@
 ---
 title: Init | Microsoft Docs
+description: Grafik tanılama 'nın uygulama içi bileşenini grafik bilgilerini günlüğe kaydetmek üzere hazırlamak için VsgDbg öğesinin Init () yöntemini kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: c55ddec8-9101-4673-979b-4109caca9146
@@ -8,17 +10,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0b2ed132e072d9ca8a0b9c98bfc5be6e25931805
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 094f4f3c64570a0af5396e903541c70a919cc0d3
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72734999"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96996194"
 ---
 # <a name="init"></a>Init
 Grafik tanılama 'nın uygulama içi bileşenini, grafik bilgilerini etkin bir şekilde yakalayıp grafik günlüğü dosyasına kaydeder şekilde hazırlar.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
 void Init(

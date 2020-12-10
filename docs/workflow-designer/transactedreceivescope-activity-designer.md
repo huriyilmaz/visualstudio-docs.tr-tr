@@ -1,6 +1,6 @@
 ---
-title: İş Akışı Tasarımcısı-TransactedReceiveScope etkinlik Tasarımcısı
-description: TransactedReceiveScope tasarımcısını kullanarak bir TransactedReceiveScope etkinliği oluşturma ve yapılandırma hakkında bilgi edinin.
+title: TransactedReceiveScope etkinlik Tasarımcısı
+description: İş Akışı Tasarımcısı, TransactedReceiveScope tasarımcısını kullanarak bir TransactedReceiveScope etkinliği oluşturma ve yapılandırma hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 70117ab8b27a23dfb2836800c41ff0844fb8de1c
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 9214d1ce4a873d6caea98b814e8d489f544944c5
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94433784"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96996298"
 ---
 # <a name="transactedreceivescope-activity-designer"></a>TransactedReceiveScope Etkinlik Tasarımcısı
 

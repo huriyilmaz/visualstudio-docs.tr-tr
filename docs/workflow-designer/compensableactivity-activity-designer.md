@@ -1,6 +1,6 @@
 ---
-title: İş Akışı Tasarımcısı-CompensableActivity etkinlik Tasarımcısı
-description: Bir CompensableActivity etkinliği oluşturmak ve yapılandırmak için CompensableActivity etkinlik Tasarımcısı 'nı nasıl kullanabileceğinizi öğrenin.
+title: CompensableActivity Etkinlik Tasarımcısı
+description: Bir CompensableActivity etkinliği oluşturmak ve yapılandırmak için İş Akışı Tasarımcısı ' de CompensableActivity etkinlik tasarımcısını nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9e170bd47af7c84eb9ddb26a4946422c418365d2
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 3d05809b1e370fee2505470be1c06366f76bf9ca
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94434343"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96996233"
 ---
 # <a name="compensableactivity-activity-designer"></a>CompensableActivity Etkinlik Tasarımcısı
 

@@ -1,5 +1,5 @@
 ---
-title: XML şema Gezgininde sıralama, filtreleme ve gruplandırma
+title: Sıralama, filtreleme ve gruplandırma
 description: XML şeması Gezgini araç çubuğunda sıralama, filtreleme ve gruplandırma seçenekleri menüsünde bulunan seçenekler hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -10,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 172226334622b830db79b79f7eaae2c5fe7efc79
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 41f0aff39350b0307db6b02a148fb70022fb51ca
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94351498"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96996259"
 ---
 # <a name="sorting-filtering-and-grouping-xml-schema-explorer"></a>Sıralama, filtreleme ve gruplandırma (XML şema Gezgini)
 

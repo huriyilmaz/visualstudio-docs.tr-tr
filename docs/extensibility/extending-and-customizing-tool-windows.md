@@ -1,5 +1,7 @@
 ---
 title: Araç pencerelerini genişletme ve özelleştirme | Microsoft Docs
+description: Özellikler penceresi, çıkış penceresi ve Görev Listesi penceresi dahil olmak üzere Visual Studio 'Nun sunduğu araç pencerelerini genişletme ve özelleştirme hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 76c094ec73a69baa46a5e8313dd26febd57e5887
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ca7f6aa0c029cd3d85ba569aa93d6ae2087afd52
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80711810"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995869"
 ---
 # <a name="extend-and-customize-tool-windows"></a>Araç pencerelerini genişletme ve özelleştirme
 Visual Studio, araç pencereleri, belge pencereleri ve iletişim kutusu pencereleri gibi birçok farklı pencere türü sağlar. **Özellikler** penceresi, **çıkış** penceresi ve **görev listesi** penceresi gibi diğer pencereler araç pencerelerinin türleridir.
@@ -30,7 +32,7 @@ Visual Studio, araç pencereleri, belge pencereleri ve iletişim kutusu pencerel
 
  Araç pencereleri, varsayılan olarak tek örnekli, yani araç penceresinin yalnızca bir örneğinin aynı anda açık olması anlamına gelir. Tek örnekli bir araç penceresi açıldıktan sonra, IDE kapatılıncaya kadar açık kalır. Tek örnekli bir araç penceresini kapattığınızda yalnızca görünürlük değişir. Aynı zamanda birden çok örnekli araç penceresi de oluşturabilirsiniz. bu şekilde pencerenin birden çok örneği aynı anda açılabilir. Daha fazla bilgi için bkz. [çok örnekli araç penceresi oluşturma](../extensibility/creating-a-multi-instance-tool-window.md) .
 
- Araç pencereleri *dinamik*olabilir, yani ilgili Kullanıcı arabirimi bağlamları her geçerliyse görünür hale gelir. Otomatik görünürlük kullanımı IDE 'deki Windows 'un dağınıklığını azaltabilir. Daha fazla bilgi için bkz. [dinamik araç penceresi açma](../extensibility/opening-a-dynamic-tool-window.md).
+ Araç pencereleri *dinamik* olabilir, yani ilgili Kullanıcı arabirimi bağlamları her geçerliyse görünür hale gelir. Otomatik görünürlük kullanımı IDE 'deki Windows 'un dağınıklığını azaltabilir. Daha fazla bilgi için bkz. [dinamik araç penceresi açma](../extensibility/opening-a-dynamic-tool-window.md).
 
  Araç pencereleri belge çerçevesinde yerleştirilebilir, kayan veya sekmeli olabilir. Araç penceresi çerçevesi IDE tarafından sağlanır ve boyut, konum, yerleştirme durumu ve diğer kalıcı özellikleri denetlemek için kullanılır. Araç penceresi bölmesi içeriği görüntüler. Varsayılan boyut ve konum yalnızca araç penceresi ilk açıldığında geçerlidir; araç penceresi durumu kalıcı olduktan sonra.
 

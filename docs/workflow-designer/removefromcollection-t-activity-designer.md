@@ -1,6 +1,6 @@
 ---
-title: İş Akışı Tasarımcısı-RemoveFromCollection &lt; T &gt; etkinlik Tasarımcısı
-description: RemoveFromCollection <T> etkinlik Tasarımcısı 'nı kullanarak bir RemoveFromCollection etkinliği oluşturma ve yapılandırma hakkında bilgi edinin <T> .
+title: RemoveFromCollection &lt; T &gt; etkinlik Tasarımcısı
+description: İş Akışı Tasarımcısı, RemoveFromCollection <T> etkinlik Tasarımcısı 'nı kullanarak bir RemoveFromCollection etkinliği oluşturma ve yapılandırma hakkında bilgi edinin <T> .
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 61ffa2aaec2cfcc588607bd71c6524ab7c8f39e3
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 069640dccf185f2f2c738efdde6a2311352a04b6
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94434135"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96996103"
 ---
 # <a name="removefromcollectiont-activity-designer"></a>RemoveFromCollection\<T> Etkinlik Tasarımcısı
 
@@ -29,7 +29,7 @@ ms.locfileid: "94434135"
 
 ### <a name="using-the-removefromcollectiont-activity-designer"></a>RemoveFromCollection \<T> etkinlik tasarımcısını kullanma
 
-**Toolbox** 'ın **koleksiyon** kategorisindeki **\<T> RemoveFromCollection** etkinlik tasarımcısına erişin.
+**Toolbox**'ın **koleksiyon** kategorisindeki **\<T> RemoveFromCollection** etkinlik tasarımcısına erişin.
 **RemoveFromCollection \<T>** etkinlik Tasarımcısı **araç kutusundan** sürüklenip, içindeki gibi etkinliklerin genellikle yerleştirildiği iş akışı Tasarımcısı yüzeyine bırakılabilir <xref:System.Activities.Statements.Sequence> . Bu <xref:System.Activities.Statements.RemoveFromCollection%601> , varsayılan bir <xref:System.Activities.Activity.DisplayName%2A> RemoveFromCollection<Int32 ile bir etkinlik oluşturur \> . <xref:System.Activities.Activity.DisplayName%2A>Değer, **RemoveFromCollection<\> T** etkinlik tasarımcısının üst bilgisinde veya özellik kılavuzunun **DisplayName** kutusunda düzenlenebilir. Diğer özellikler, özellik kılavuzunda düzenlenmelidir.
 
 ### <a name="the-removefromcollectiont-properties"></a>RemoveFromCollection<T \> Özellikleri

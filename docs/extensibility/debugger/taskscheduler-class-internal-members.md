@@ -1,5 +1,7 @@
 ---
 title: TaskScheduler sınıfı-Iç Üyeler | Microsoft Docs
+description: Özel bir hata ayıklayıcı uygulamanıza yardımcı olan System. Threading. Tasks. TaskScheduler sınıfının iç üyeleri hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a53abc8b24edb06445c23c19744d00d50de8735d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 10528e57137f8605e7f140d4ab8d4a3399029a5f
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80712575"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96996012"
 ---
 # <a name="taskscheduler-class---internal-members"></a>TaskScheduler sınıfı-Iç Üyeler
 Bu makale, <xref:System.Threading.Tasks.TaskScheduler?displayProperty=fullName> özel bir hata ayıklayıcı uygulamanıza yardımcı olan sınıfın iç üyelerini açıklar. Bu sınıf hakkında genel bilgi için <xref:System.Threading.Tasks.TaskScheduler> başvuru makalesine bakın.
@@ -27,7 +29,7 @@ Bu makale, <xref:System.Threading.Tasks.TaskScheduler?displayProperty=fullName> 
 
  Bu iç üyelere .NET Framework erişemediği için, ortak ara dil (CıL) içinde aşağıdaki sözdizimi sunulmaktadır.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Sözdizimi
 
 ```csharp
 .class public abstract auto ansi beforefieldinit System.Threading.Tasks.TaskScheduler

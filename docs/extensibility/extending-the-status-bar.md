@@ -1,5 +1,7 @@
 ---
 title: Durum çubuğunu genişletme | Microsoft Docs
+description: IDE 'nin altında, bilgi görüntüleyen Visual Studio durum çubuğunu genişletmeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: aa62326d82d81f7ee4d10a838209364355cc488e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ddce0cdf62d803dac1a5981442424a45d6550193
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80711537"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995700"
 ---
 # <a name="extend-the-status-bar"></a>Durum çubuğunu genişletme
 Bilgileri göstermek için IDE 'nin altındaki Visual Studio durum çubuğunu kullanabilirsiniz.
@@ -32,9 +34,9 @@ Bilgileri göstermek için IDE 'nin altındaki Visual Studio durum çubuğunu ku
 
 ### <a name="read-and-write-to-the-status-bar"></a>Durum çubuğunu oku ve yaz
 
-1. **TestStatusBarExtension** ADLı bir VSIX projesi oluşturun ve **TestStatusBarCommand**adlı bir menü komutu ekleyin.
+1. **TestStatusBarExtension** ADLı bir VSIX projesi oluşturun ve **TestStatusBarCommand** adlı bir menü komutu ekleyin.
 
-2. *TestStatusBarCommand.cs*içinde, komut işleyici yöntemi kodunu ( `MenuItemCallback` ) aşağıdaki kodla değiştirin:
+2. *TestStatusBarCommand.cs* içinde, komut işleyici yöntemi kodunu ( `MenuItemCallback` ) aşağıdaki kodla değiştirin:
 
     ```csharp
     private void MenuItemCallback(object sender, EventArgs e)
@@ -112,7 +114,7 @@ Bilgileri göstermek için IDE 'nin altındaki Visual Studio durum çubuğunu ku
 
 1. Durum çubuğu, uzun süre çalışan bir işlem (örneğin, bir çözümde birden çok proje oluşturma) gösteren bir döngü animasyonu görüntüler. Bu animasyonu görmüyorsanız, doğru **Araçlar**  >  **seçenekleri** ayarlarına sahip olduğunuzdan emin olun:
 
-     **Araçlar**  >  **Seçenekler**  >  **genel** sekmesine gidin ve **istemci performansına göre görsel deneyimi otomatik olarak ayarla**seçeneğinin işaretini kaldırın. Ardından **zengin istemci görsel deneyimini etkinleştir**alt seçeneğini işaretleyin. Şimdi Visual Studio 'nun deneysel örneğinde projeyi derlediğinizde animasyonu görebilmeniz gerekir.
+     **Araçlar**  >  **Seçenekler**  >  **genel** sekmesine gidin ve **istemci performansına göre görsel deneyimi otomatik olarak ayarla** seçeneğinin işaretini kaldırın. Ardından **zengin istemci görsel deneyimini etkinleştir** alt seçeneğini işaretleyin. Şimdi Visual Studio 'nun deneysel örneğinde projeyi derlediğinizde animasyonu görebilmeniz gerekir.
 
      Bu yordamda, bir proje veya çözüm oluşturmayı temsil eden standart Visual Studio animasyonunu görüntüliyoruz.
 

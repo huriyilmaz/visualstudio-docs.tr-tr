@@ -1,5 +1,7 @@
 ---
 title: Öğeyi tanımla | Microsoft Docs
+description: Define öğesi bir sembol adı ve değer çifti tanımlar. Bu simge koşullu öznitelikler tarafından değerlendirilebilirler.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +13,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: fc09de1d822f41b25397c7a56c7cce4449a9e551
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a427371afe55b6ea4ee20f658e683b9dcdb8fbe2
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80712268"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96996246"
 ---
 # <a name="define-element"></a>Öğe tanımla
 Bir sembol adı ve değer çifti tanımlar. Bu simge koşullu öznitelikler tarafından değerlendirilebilirler. Daha fazla bilgi için bkz. [koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md). Ayrıca bkz. [Semboller öğesi](../extensibility/symbols-element.md).
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Sözdizimi
 
 ```
 <Define name="Mode" value="Standard" />

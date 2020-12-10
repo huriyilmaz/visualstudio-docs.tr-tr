@@ -1,5 +1,5 @@
 ---
-title: XAML Tasarımcısı’nda nesneleri düzen kapsayıcılarına yerleştirme
+title: Nesneleri düzen kapsayıcılarına yerleştirme
 description: Bir sayfada, kılavuz, tuval, kenarlık ve Viewbox gibi nesneleri düzenlemek için kullanılan XAML Tasarımcısı düzen bölmeleri ve denetimleri hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 07/17/2020
@@ -8,12 +8,12 @@ ms.assetid: 29c80c38-0fa3-48d6-b3a8-3b864f482e44
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 6df200c5adb4993d13e896eaa6d2041e0e9db044
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: 1dbde9c270e0b83a5d85ef3b95c8fb438e43e1b1
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93047347"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995531"
 ---
 # <a name="organize-objects-into-layout-containers-in-xaml-designer"></a>XAML Tasarımcısı’nda nesneleri düzen kapsayıcılarına yerleştirme
 
@@ -93,13 +93,13 @@ Bir penceredeki kullanıcılara bilgi veya seçenek göster. Bir **açılan penc
 
 ### <a name="scrollviewer"></a>ScrollViewer
 
-Kullanıcıların bir sayfanın sayfa veya alanını aşağı kaydırıp kaydırmaya izin vermez. Bir **ScrollViewer** 'ya yalnızca bir nesne ekleyebilirsiniz, bu yüzden **Grid** veya **StackPanel** gibi bir Düzen paneli eklemek mantıklı olur.
+Kullanıcıların bir sayfanın sayfa veya alanını aşağı kaydırıp kaydırmaya izin vermez. Bir **ScrollViewer**'ya yalnızca bir nesne ekleyebilirsiniz, bu yüzden **Grid** veya **StackPanel** gibi bir Düzen paneli eklemek mantıklı olur.
 
 ![ScrollViewer düzen denetimi](../designers/media/06b326d4-f23d-41a6-b26b-e1aff37572a7.png)
 
 ### <a name="viewbox"></a>Viewbox
 
-Nesneleri yakınlaştırma denetimiyle yaptığınız gibi ölçeklendirin. **Viewbox** 'a yalnızca bir nesne ekleyebilirsiniz. Bu etkiyi birden fazla nesneye uygulamak istiyorsanız, **Viewbox** 'a bir Düzen paneli ekleyin ve ardından denetimlerinizi bu düzen paneline ekleyin.
+Nesneleri yakınlaştırma denetimiyle yaptığınız gibi ölçeklendirin. **Viewbox**'a yalnızca bir nesne ekleyebilirsiniz. Bu etkiyi birden fazla nesneye uygulamak istiyorsanız, **Viewbox**'a bir Düzen paneli ekleyin ve ardından denetimlerinizi bu düzen paneline ekleyin.
 
 ![ViewBox düzen denetimi](../designers/media/f5b13c66-d918-4141-8a16-bd8f8628687a.png)
 

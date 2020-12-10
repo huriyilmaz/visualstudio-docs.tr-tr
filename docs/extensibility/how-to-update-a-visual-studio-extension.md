@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: Visual Studio uzantısını güncelleştirme | Microsoft Docs'
+description: Güncelleştirilmiş sürümü yüklemek için uzantıları ve güncelleştirmeleri kullanarak sisteminizdeki bir Visual Studio uzantısını güncelleştirmeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ee81fe30e10253239bc51dd9d2f199340debc65a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: be22ca13fd5af8df88501835c8a030cc6469e179
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905627"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995611"
 ---
 # <a name="how-to-update-a-visual-studio-extension"></a>Nasıl yapılır: Visual Studio uzantısını güncelleştirme
 Güncelleştirilmiş sürümü yüklemek için **uzantıları ve güncelleştirmeleri** kullanarak sisteminizdeki bir Visual Studio uzantısını güncelleştirebilirsiniz. Bir uzantının güncelleştirilmiş bir sürümünü oluşturursanız VSıX bildirimindeki sürüm numarasını artırarak onu güncelleştirilmiş olarak belirtebilirsiniz.
@@ -53,12 +55,12 @@ Güncelleştirilmiş sürümü yüklemek için **uzantıları ve güncelleştirm
 
 5. Yeni *. vsix* dosyasını (projenin * \bin\Debug \* klasöründe) [Visual Studio Market](https://marketplace.visualstudio.com/vs) Web sitesine yükleyin.
 
-     Uzantının önceki bir sürümüne sahip olan bir Kullanıcı **uzantıları ve güncelleştirmeleri**açtığında yeni sürüm **güncelleştirmeler** listesinde görünür ve araç, güncelleştirmeleri otomatik olarak aramak üzere ayarlanır.
+     Uzantının önceki bir sürümüne sahip olan bir Kullanıcı **uzantıları ve güncelleştirmeleri** açtığında yeni sürüm **güncelleştirmeler** listesinde görünür ve araç, güncelleştirmeleri otomatik olarak aramak üzere ayarlanır.
 
-     **Güncelleştirmeler bölmesinin alt** kısmındaki güncelleştirmeler için otomatik denetlemeyi etkinleştirebilir veya devre dışı bırakabilirsiniz (**kullanılabilir güncelleştirmelerin otomatik algılanmasını etkinleştir/devre dışı bırak**), bu, **Araçlar** **Check for updates**  >  **Seçenekler**  >  **ortam**  >  **uzantıları ve güncelleştirmeler**'deki güncelleştirme denetimi ayarını değiştirir.
+     **Güncelleştirmeler bölmesinin alt** kısmındaki güncelleştirmeler için otomatik denetlemeyi etkinleştirebilir veya devre dışı bırakabilirsiniz (**kullanılabilir güncelleştirmelerin otomatik algılanmasını etkinleştir/devre dışı bırak**), bu, **Araçlar**   >  **Seçenekler**  >  **ortam**  >  **uzantıları ve güncelleştirmeler**'deki güncelleştirme denetimi ayarını değiştirir.
 
     > [!NOTE]
-    > Visual Studio 2015 güncelleştirme 2 ' den başlayarak, **Tools**  >  **Options**  >  **Environment**  >  Kullanıcı başına uzantılar, tüm Kullanıcı Uzantıları veya her ikisi için de otomatik güncelleştirme isteyip istemediğinizi (Araçlar Seçenekler ortam**uzantıları ve güncelleştirmeler**' de) belirtebilirsiniz (varsayılan ayar).
+    > Visual Studio 2015 güncelleştirme 2 ' den başlayarak,   >    >    >  Kullanıcı başına uzantılar, tüm Kullanıcı Uzantıları veya her ikisi için de otomatik güncelleştirme isteyip istemediğinizi (Araçlar Seçenekler ortam **uzantıları ve güncelleştirmeler**' de) belirtebilirsiniz (varsayılan ayar).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [VSıX paketinin anatomumu](../extensibility/anatomy-of-a-vsix-package.md)

@@ -1,5 +1,7 @@
 ---
 title: ToggleHUD | Microsoft Docs
+description: Uygulama çalıştığında grafik tanılama baş ekran (HUD) görüntülenip görüntülenmeyeceğini değiştirmek için VsgDbg öğesinin ToggleHUD () yöntemini kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 7261e01d-3c72-46ce-9fb3-5f33b2ddb901
@@ -8,17 +10,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cb05bb6a424b5639e0ee98e96c80315c51081ace
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 60bee5a89be0fc1503595a36cfc48a692711d40a
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62848464"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96996077"
 ---
 # <a name="togglehud"></a>ToggleHUD
 Grafik tanılama *HUD* (baş ekran görüntüsü) kaplamayı açık veya kapalı olarak değiştirir.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
 void ToggleHUD();

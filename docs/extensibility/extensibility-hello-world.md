@@ -1,5 +1,7 @@
 ---
 title: Merhaba Dünya uzantısı öğreticisi | Microsoft Docs
+description: Visual Studio 'ya bir proje oluşturmayı, bir komut eklemeyi ve kaynak kodu değiştirmeyi kapsayan yeni bir komut ekleme hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 03/14/2019
 ms.topic: tutorial
 ms.assetid: f74e1ad1-1ee5-4360-9bd5-d82467b884ca
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 796cb53ea5124662c695cce55241794802f042c0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6ba4d6cbca8d55cdaceb04a1a773fde376a8670a
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905930"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995726"
 ---
 # <a name="tutorial---create-your-first-extension-hello-world"></a>Öğretici-ilk uzantınızı oluşturun: Merhaba Dünya
 
@@ -33,7 +35,7 @@ Bu örnekte, "deyin Merhaba Dünya!" adlı özel bir menü düğmesi eklemek Iç
 > [!NOTE]
 > Bu makale Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için bkz. [Mac için Visual Studio genişletilebilirlik](/visualstudio/mac/extending-visual-studio-mac-walkthrough)Kılavuzu.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Başlamadan önce, ihtiyacınız olan VSıX şablonunu ve örnek kodu içeren **Visual Studio uzantısı geliştirme** iş yükünü yüklediğinizden emin olun.
 
@@ -74,13 +76,13 @@ Adım 1. *. Valtmanifest* bildirim dosyasını seçerseniz, açıklama, yazar ve
 
 Adım 2. Projeye sağ tıklayın (çözüme değil). Bağlam menüsünde **Ekle**' yi ve ardından **Yeni öğe**' yi seçin.
 
-3. Adım **Genişletilebilirlik** bölümünü ve ardından **komut**öğesini seçin.
+3. Adım **Genişletilebilirlik** bölümünü ve ardından **komut** öğesini seçin.
 
-4. Adım: Alttaki **ad** alanında, *Command.cs*gibi bir dosya adı girin.
+4. Adım: Alttaki **ad** alanında, *Command.cs* gibi bir dosya adı girin.
 
 ![özel komut](media/hello-world-vsix-command.png)
 
-Yeni komut dosyanız **Çözüm Gezgini**görünür. **Kaynaklar** düğümü altında komutlarınızla ilgili diğer dosyaları bulacaksınız. Örneğin, görüntüyü değiştirmek istiyorsanız PNG dosyası burada bulunur.
+Yeni komut dosyanız **Çözüm Gezgini** görünür. **Kaynaklar** düğümü altında komutlarınızla ilgili diğer dosyaları bulacaksınız. Örneğin, görüntüyü değiştirmek istiyorsanız PNG dosyası burada bulunur.
 
 ## <a name="modify-the-source-code"></a>Kaynak kodunu değiştirme
 
@@ -92,7 +94,7 @@ Bu noktada, komut ve düğme metni otomatik olarak oluşturulur ve çok ilginç 
 
 ::: moniker range="vs-2017"
 
-Adım 1. **Çözüm Gezgini**' de, yeni komutunuz IÇIN vsct dosyasını bulun. Bu durumda, *Commandpackage. vsct*olarak adlandırılacaktır.
+Adım 1. **Çözüm Gezgini**' de, yeni komutunuz IÇIN vsct dosyasını bulun. Bu durumda, *Commandpackage. vsct* olarak adlandırılacaktır.
 
 ![komut paketi vsct](media/hello-world-command-package-vsct.png)
 
@@ -100,7 +102,7 @@ Adım 1. **Çözüm Gezgini**' de, yeni komutunuz IÇIN vsct dosyasını bulun. 
 
 ::: moniker range=">=vs-2019"
 
-Adım 1. **Çözüm Gezgini**' de, uzantı vs paketinizin vsct dosyasını bulun. Bu durumda, *Merhaba Dünya Package. vsct*olarak adlandırılacaktır.
+Adım 1. **Çözüm Gezgini**' de, uzantı vs paketinizin vsct dosyasını bulun. Bu durumda, *Merhaba Dünya Package. vsct* olarak adlandırılacaktır.
 
 ::: moniker-end
 
@@ -146,7 +148,7 @@ Değişikliklerinizi her dosyaya kaydettiğinizden emin olun.
 
 Artık kaynak kodu Visual Studio deneysel örneğinde çalıştırabilirsiniz.
 
-Adım 1. **Hata ayıklamayı Başlat** komutunu çalıştırmak için **F5** tuşuna basın. Bu komut, projenizi oluşturur ve hata ayıklayıcıyı başlatır ve **deneysel örnek**olarak adlandırılan yeni bir Visual Studio örneğini başlatır.
+Adım 1. **Hata ayıklamayı Başlat** komutunu çalıştırmak için **F5** tuşuna basın. Bu komut, projenizi oluşturur ve hata ayıklayıcıyı başlatır ve **deneysel örnek** olarak adlandırılan yeni bir Visual Studio örneğini başlatır.
 
 ::: moniker range="vs-2017"
 

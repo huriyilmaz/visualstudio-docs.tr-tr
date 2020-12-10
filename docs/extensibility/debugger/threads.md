@@ -1,5 +1,7 @@
 ---
 title: İş parçacıkları | Microsoft Docs
+description: Bu makalede, Visual Studio 'daki hata ayıklayıcı mimarisinde bir iş parçacığının tanımı ve rolü açıklanır.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8ed5c06e0c42dac1f0539cc2c7c5886d95b23ae1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b259ffd7814b42145489ee5990cee6da891a9d10
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80712474"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96995960"
 ---
 # <a name="threads"></a>İş Parçacıkları
 Hata ayıklayıcı mimarisinde bir *iş parçacığı*:

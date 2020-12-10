@@ -1,5 +1,7 @@
 ---
-title: VSPackage geliştirmesi için Devenv komut satırı anahtarları | Microsoft Docs
+title: VSPackage geliştirmesi için devenv Command-Line anahtarları | Microsoft Docs
+description: Geliştiricilerin, Visual Studio IDE 'yi Başlatan dosyayı devenv.exe yürütürken komut satırından görevleri nasıl otomatikleştirebileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 12/10/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +20,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ad3a5125a730b9230959bbf9342b4c0a4823c4d3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b6e2784066c98f8fac696306e455e7cf26b65907
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80712188"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96996155"
 ---
 # <a name="devenv-command-line-switches-for-vspackage-development"></a>VSPackage geliştirmesi için Devenv komut satırı anahtarları
 
@@ -41,7 +43,7 @@ Visual Studio `devenv.exe` , Visual STUDIO IDE 'yi Başlatan dosyayı yürütür
 
 Visual Studio belgeleri, Kullanıcı düzeyi `devenv` komut satırı anahtarlarını açıklar. Daha fazla bilgi için bkz. [Devenv komut satırı anahtarları](../ide/reference/devenv-command-line-switches.md). `devenv`Araç ayrıca VSPackage geliştirme, dağıtım ve hata ayıklama ile yararlı olan ek komut satırı anahtarlarını da destekler.
 
-| Komut satırı anahtarı | Description |
+| Komut satırı anahtarı | Açıklama |
 |---------------------| - |
 | `/ResetSkipPkgs` | Sorunlu VSPackages yüklemeden kaçınmak isteyen kullanıcılar tarafından eklenmiş tüm atlama yükleme seçeneklerini temizler ve sonra Visual Studio 'Yu başlatır. Bir Skipyükleme etiketinin varlığı, VSPackage yüklemesini devre dışı bırakır. Etiketi temizlemek, VSPackage yüklemesini yeniden etkinleştirilir.<br /><br /> Bu anahtar bağımsız değişken almaz. |
 | `/RootSuffix` | Visual Studio 'Yu alternatif bir konum kullanarak başlatır. Aşağıdaki komut, Visual Studio SDK yükleyicisi tarafından oluşturulan kısayol tarafından çalıştırılır:<br /><br /> `devenv /RootSuffix exp`<br /><br /> Bu durumda, `exp` belirli bir sonekine sahip bir konum tanımlar (örneğin, `10.0Exp` yerine `10.0` ). Deneysel örnek, bir VSPackage 'ın kod yazmak için kullandığınız Visual Studio örneğinden ayrı olarak hata ayıklamanıza olanak tanır.<br /><br /> Bu anahtar, VSRegEx.exe kullanarak oluşturduğunuz bir konumu tanımlayan herhangi bir dizeyi alabilir. Daha fazla bilgi için bkz. [deneysel örnek](../extensibility/the-experimental-instance.md). |

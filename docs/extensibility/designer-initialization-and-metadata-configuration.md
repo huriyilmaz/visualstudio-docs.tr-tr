@@ -1,5 +1,7 @@
 ---
 title: Tasarımcı başlatma ve meta veri yapılandırması | Microsoft Docs
+description: Visual Studio SDK 'sının bir tasarımcının veya tasarımcı bileşeninin başlatma ve meta verisinin bir VSPackage denetimini nasıl kolaylaştırması gerektiğini öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f48d8ebb285bdc8211f590f49e615042b7029d70
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: 9907298cf730d6e51c108dc92f633d0b50451f12
+ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90011715"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96996168"
 ---
 # <a name="designer-initialization-and-metadata-configuration"></a>Tasarımcı başlatması ve meta veri yapılandırması
 
