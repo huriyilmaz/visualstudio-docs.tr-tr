@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e3633f3084b875974adac17fc27e7ec7a695ed91
-ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
+ms.openlocfilehash: 58faf100c61a25ae014bdcc0b09d161e924ad5c9
+ms.sourcegitcommit: 21ac4a0c8ffac3964b75604678b12e0955e0159b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "96996389"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97098533"
 ---
 # <a name="run-unit-tests-with-test-explorer"></a>Test Gezgini ile birim testleri çalıştırma
 
@@ -88,7 +88,7 @@ Testlerinizi çalıştırırken, yazarken ve yeniden çalıştırdığınızda, 
 
 ### <a name="run-tests-after-every-build"></a>Her derlemeden sonra Testleri Çalıştır
 ::: moniker range="vs-2017"
-|Düğme|Açıklama|
+|Düğme|Description|
 |-|-|
 |![Derlemeden sonra Çalıştır](../test/media/ute_runafterbuild_btn.png)|Her yerel derlemeden sonra birim testlerinizi çalıştırmak için standart menüdeki **Test** ' i seçin ve ardından **Test Gezgini** araç çubuğunda **derlemeden sonra Testleri Çalıştır** ' ı seçin.|
 
@@ -182,7 +182,7 @@ Bir nitelik genellikle kategori adı/değer çiftidir, ancak tek bir kategori de
 
 Yönetilen uygulamalar için Microsoft birim testi çerçevesinde, bir öznitelikte nitelik ad/değer çifti tanımlarsınız  <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute> . Test çerçevesi aşağıdaki önceden tanımlı nitelikleri de içerir:
 
-|Nitelik|Açıklama|
+|Nitelik|Description|
 |-|-----------------|
 |<xref:Microsoft.VisualStudio.TestTools.UnitTesting.OwnerAttribute>|Sahip kategorisi, birim test çerçevesi tarafından tanımlanır ve sahibin dize değerini sağlamanızı gerektirir.|
 |<xref:Microsoft.VisualStudio.TestTools.UnitTesting.PriorityAttribute>|Öncelik kategorisi, birim test çerçevesi tarafından tanımlanır ve öncelik için bir tamsayı değeri sağlamanızı gerektirir.|
@@ -234,7 +234,16 @@ Ayrıca hiyerarşideki üst grupların kutularını denetleyebilir veya işareti
 
 ![Playlist XML dosyası](../test/media/vs-2019/test-explorer-playlist-xml-file.png)
 
-Benzer bir şekilde bir çalma listesi oluşturmak istiyorsanız aşağıdaki biçimi kullanın. Adınız ve ile arasında bir boşluk olduğundan emin olun `TestCategory` `[Value]` .
+Benzer bir şekilde bir çalma listesi oluşturmak isterseniz, MSTest için aşağıdaki biçimi kullanın.
+```xml
+<Playlist Version="2.0">
+    <Rule Name="Includes" Match="Any">
+        <Property Name="Trait" Value="SchemaUpdateBasic" />
+    </Rule>
+</Playlist>
+```
+
+XUnit için aşağıdaki biçimi kullanın. Adınız ve ile arasında bir boşluk olduğundan emin olun `TestCategory` `[Value]` .
 ```xml
 <Playlist Version="2.0">
   <Rule Name="Includes" Match="Any">
@@ -296,7 +305,7 @@ Farklı ölçütlere göre filtrelemek için:
 > Aramalar büyük/küçük harfe duyarlıdır ve belirtilen dizeyle ölçüt değerinin herhangi bir bölümüyle eşleşir.
 
 ::: moniker range="vs-2017"
-|Leyicisini|Açıklama|
+|Leyicisini|Description|
 |-|-----------------|
 |**Nitelik**|Hem nitelik kategorisini hem de eşleşme değerlerini arar. Nitelik kategorilerini ve değerlerini belirten sözdizimi, birim test çerçevesi tarafından tanımlanır.|
 |**Project**|Test projesi adlarını eşleşmeler için arar.|
@@ -307,7 +316,7 @@ Farklı ölçütlere göre filtrelemek için:
 |**Sonucu**|Test Gezgini kategori adlarını eşleşmeler için arar: **başarısız testler**, **Atlanan testler**, **başarılı testler**.|
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-|Leyicisini|Açıklama|
+|Leyicisini|Description|
 |-|-----------------|
 |**Durum**|Test Gezgini kategori adlarını eşleşmeler için arar: **başarısız testler**, **Atlanan testler**, **başarılı testler**.|
 |**Lerdir**|Hem nitelik kategorisini hem de eşleşme değerlerini arar. Nitelik kategorilerini ve değerlerini belirten sözdizimi, birim test çerçevesi tarafından tanımlanır.|

@@ -9,12 +9,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d8e0718eb01f422ad435492304e77d73c14b4dee
-ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
+ms.openlocfilehash: 2956372882d4449345d026e691a12afb2988054a
+ms.sourcegitcommit: 6ef4e46c786c5bbcc52cd9c30e5ddfca12ea8b3c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91211181"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97050839"
 ---
 # <a name="how-to-report-a-problem-with-visual-studio-or-visual-studio-installer"></a>Visual Studio veya Visual Studio Yükleyicisi ilgili bir sorunu bildirme
 
@@ -23,7 +23,7 @@ ms.locfileid: "91211181"
 
 Visual Studio 'dan veya yükleyicisinden bir sorun rapor edebilirsiniz. Yerleşik geri bildirim aracı, Visual Studio ekiplerinin sorunları tanılamanıza ve düzeltmesine yardımcı olan tanılama bilgilerini kolayca eklemenize olanak tanır. Sorun bildirme adımları aşağıda verilmiştir.
 
-1. **Visual Studio 'da**sağ üst köşedeki geri bildirim simgesini seçin ve sorun bildir ' i seçin. Ayrıca, geri bildirim **aracına menü aracılığıyla**da erişebilirsiniz  >  .**geri bildirim gönder**  >  **sorun bildir**.
+1. **Visual Studio 'da** sağ üst köşedeki geri bildirim simgesini seçin ve sorun bildir ' i seçin. Ayrıca, geri bildirim **aracına menü aracılığıyla** da erişebilirsiniz  >  .**geri bildirim gönder**  >  **sorun bildir**.
 ![Visual Studio Geliştirici topluluğu 'nda sorun raporu oluşturma ](media/feedback-button.png) , Visual Studio 'yu yükleyemezseniz **Visual Studio yükleyicisi** bir sorun bildirin veya Visual Studio içindeki geri bildirim aracına erişemedik.  Yükleyicide, sağ üst köşedeki geri bildirim simgesini seçin ve sorun bildir ' i seçin.
 ![Visual Studio Geliştirici topluluğu 'nda bir sorun açılır penceresi bildirin](media/installer.png)
 
@@ -65,7 +65,7 @@ Visual Studio 'dan veya yükleyicisinden bir sorun rapor edebilirsiniz. Yerleşi
 
 Bir sorun için önemli bilgiler eksik olduğunda, **Ihtiyaçları daha fazla bilgi** durumuna atacağız. İhtiyaç duyduğumuz belirli bilgilerle ilgili sorun hakkında yorum yaptık ve bir e-posta bildirimi alacaksınız. Bilgileri yedi gün içinde almadığımızda size bir anımsatıcı göndereceğiz. Bundan sonra, 14 gün etkin olmama sonrasında bilet kapattık.
 
-1. Sorun raporuna e-postadaki bağlantıyı izleyin veya **gereksinimler daha fazla bilgi** durumunda tüm raporları görmek Için geri bildirimime gidin.
+1. Sorun raporundaki e-postadaki bağlantıyı izleyin veya **daha fazla bilgi** durumunda tüm raporları görmek için giriş sayfasına gidin.
 
     ![Geri bildirimim](../ide/media/feedback-my-feedback.png)
 
@@ -77,7 +77,7 @@ Bir sorun için önemli bilgiler eksik olduğunda, **Ihtiyaçları daha fazla bi
 
 1. İstekte bulunan Microsoft mühendis, sunulan ek bilgiler hakkında bir bildirim alır. Araştırmak için yeterli bilgi varsa, sorun durumu değişir. Aksi takdirde mühendis daha da fazla bilgi ister.
 
-Bu istekleri, tüm diğer **sorun** ve **önerilerinizle birlikte geri bildirim** ekranında görebilirsiniz. **Suggestions**
+Bu istekleri, tüm diğer **sorun** ve **önerilerinizle birlikte geri bildirim** ekranında görebilirsiniz. 
 
 ## <a name="search-for-solutions-or-provide-feedback"></a>Çözüm arayın veya geri bildirim sağlayın
 
