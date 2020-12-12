@@ -1,5 +1,7 @@
 ---
 title: Derleme Sürecinde Kod Oluşturma
+description: Bir Visual Studio çözümünün derleme sürecinin bir parçası olarak metin dönüşümünün nasıl çağrılacağını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 03/22/2018
 ms.topic: how-to
 helpviewer_keywords:
@@ -13,12 +15,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: af0039fb8c945062bc19fa647b477c40c44d5346
-ms.sourcegitcommit: a876fcc75321f9c30729121cae83f400973f9d9d
+ms.openlocfilehash: 3000a02621f7e2c274522a199cfe499e2335c4c2
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92298198"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363568"
 ---
 # <a name="invoke-text-transformation-in-the-build-process"></a>Yapı işleminde metin dönüşümünü çağır
 
@@ -258,7 +260,7 @@ Dim value = Host.ResolveParameterValue("-", "-", "parameterName")
 
 **$ (SolutionDir)** gibi Visual Studio makroları MSBuild 'de çalışmıyor. Bunun yerine, proje özelliklerini kullanabilirsiniz.
 
-Bir proje özelliği tanımlamak için *. csproj* veya *. vbproj* dosyanızı düzenleyin. Bu örnek, **Mylibfolder**adlı bir özelliği tanımlar:
+Bir proje özelliği tanımlamak için *. csproj* veya *. vbproj* dosyanızı düzenleyin. Bu örnek, **Mylibfolder** adlı bir özelliği tanımlar:
 
 ```xml
 <!-- Define a project property, myLibFolder: -->

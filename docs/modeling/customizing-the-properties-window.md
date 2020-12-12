@@ -1,5 +1,7 @@
 ---
 title: Özellikler Penceresini Özelleştirme
+description: Visual Studio 'da etki alanına özgü dilinizdeki (DSL) Özellikler penceresinin görünümünü ve davranışını nasıl özelleştirebileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4dac40177c3df2a346039a08cf557b6083ed9fc2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3f7d4ac76b8b10fde0c193e3eda73cec611c1441
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85548284"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362883"
 ---
 # <a name="customize-the-properties-window"></a>Özellikler penceresi özelleştirme
 
@@ -40,13 +42,13 @@ Grafik öğelerinin bazı dinamik özellikleri, etki alanı *özellikleri olarak
 
 DSL tanımında bir şekil sınıfına sağ tıklayın, **gösterilen Ekle**' nin üzerine gelin ve ardından bir özellik seçin.
 
-Şekiller üzerinde, **FillColor**, **OutlineColor**, **TextColor**, **outlinetirestyle**, **outlinekalınlığı** ve **FillGradientMode** özelliklerini kullanıma sunabilirsiniz. Bağlayıcılar üzerinde, **Color** `,` **TextColor**, **çizgi stili**ve **kalınlığı** özelliklerini kullanıma sunabilirsiniz. Diyagramlarda, **FillColor** ve **TextColor** özelliklerini kullanıma sunabilirsiniz.
+Şekiller üzerinde, **FillColor**, **OutlineColor**, **TextColor**, **outlinetirestyle**, **outlinekalınlığı** ve **FillGradientMode** özelliklerini kullanıma sunabilirsiniz. Bağlayıcılar üzerinde, **Color** `,` **TextColor**, **çizgi stili** ve **kalınlığı** özelliklerini kullanıma sunabilirsiniz. Diyagramlarda, **FillColor** ve **TextColor** özelliklerini kullanıma sunabilirsiniz.
 
 ## <a name="forwarding-display-properties-of-related-elements"></a>İletme: ilgili öğelerin özelliklerini görüntüle
 
 DSL 'niz Kullanıcı bir modelde bir öğe seçtiğinde, bu öğenin özellikleri Özellikler penceresinde görüntülenir. Bununla birlikte, belirtilen ilişkili öğelerin özelliklerini de görüntüleyebilirsiniz. Birlikte çalışarak bir öğe grubunu tanımlamış olmanız durumunda bu yararlı olur. Örneğin, bir ana öğe ve isteğe bağlı bir eklenti öğesi tanımlayabilirsiniz. Ana öğe bir şekle eşlenmişse ve diğeri değilse, tüm özelliklerini tek bir öğe gibi görmek yararlıdır.
 
-Bu efekt, *özellik iletme*olarak adlandırılır ve çeşitli durumlarda otomatik olarak gerçekleşir. Diğer durumlarda, bir etki alanı türü tanımlayıcısı tanımlayarak özellik iletme elde edebilirsiniz.
+Bu efekt, *özellik iletme* olarak adlandırılır ve çeşitli durumlarda otomatik olarak gerçekleşir. Diğer durumlarda, bir etki alanı türü tanımlayıcısı tanımlayarak özellik iletme elde edebilirsiniz.
 
 ### <a name="default-property-forwarding-cases"></a>Varsayılan özellik iletme durumları
 
@@ -71,9 +73,9 @@ Aşağıdaki yordamda bir DSL oluşturduğunuzu varsayılmaktadır. İlk birkaç
 
 #### <a name="forward-a-property-from-another-element"></a>Bir özelliği başka bir öğeden ilet
 
-1. [!INCLUDE[dsl](../modeling/includes/dsl_md.md)]Bu örnekte **kitap** ve **Yazar**olarak adlandırılan en az iki sınıf içeren bir çözüm oluşturun. **Kitap** ve **Yazar**arasında her iki türden bir ilişki olmalıdır.
+1. [!INCLUDE[dsl](../modeling/includes/dsl_md.md)]Bu örnekte **kitap** ve **Yazar** olarak adlandırılan en az iki sınıf içeren bir çözüm oluşturun. **Kitap** ve **Yazar** arasında her iki türden bir ilişki olmalıdır.
 
-    Kaynak rolün çoğulluğu ( **kitap** tarafındaki rol) 0.. 1 veya 1.. 1 olmalıdır, böylece her **kitapta** bir **Yazar**bulunur.
+    Kaynak rolün çoğulluğu ( **kitap** tarafındaki rol) 0.. 1 veya 1.. 1 olmalıdır, böylece her **kitapta** bir **Yazar** bulunur.
 
 2. **DSL Gezgini**' nde, **kitap** etki alanı sınıfına sağ tıklayın ve sonra **Yeni DomainTypeDescriptor Ekle**' ye tıklayın.
 
@@ -89,7 +91,7 @@ Aşağıdaki yordamda bir DSL oluşturduğunuzu varsayılmaktadır. İlk birkaç
 
 5. **Özelliği** , **yazarın** **Name** Domain özelliğine ayarlayın.
 
-6. **Görünen adı** **Yazar adı**olarak ayarlayın.
+6. **Görünen adı** **Yazar adı** olarak ayarlayın.
 
 7. Tüm şablonları dönüştürün, DSL derleyin ve çalıştırın.
 
@@ -163,7 +165,7 @@ Kendi düzenleyicinizi veya ya da gibi bir .NET düzenleyicisini belirtebilirsin
 
     ```
 
-3. Domain özelliğinin türünü varsayılan **dize**ayarında bırakın.
+3. Domain özelliğinin türünü varsayılan **dize** ayarında bırakın.
 
 4. Düzenleyiciyi test etmek için, kullanıcıların etki alanı özelliğini düzenlemek üzere dosya adı düzenleyicisini açabildiğini doğrulayın.
 

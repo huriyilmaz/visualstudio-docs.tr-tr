@@ -1,5 +1,7 @@
 ---
 title: DSL 'de standart menü komutunu değiştirme
+description: DSL 'niz içinde otomatik olarak tanımlanan bazı standart komutlardan oluşan davranışı nasıl değiştirebileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a7236c074bda17023c989c744042db2de4046558
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e04d3d2c5572c0d0b3dbaa25912b7ec59a3bc0fa
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85532502"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363893"
 ---
 # <a name="how-to-modify-a-standard-menu-command-in-a-domain-specific-language"></a>Nasıl yapılır: Etki Alanına Özgü bir Dilde Standart Menü Komutunu Değiştirme
 
@@ -53,7 +55,7 @@ Komut kümesi sınıfının kısmi bildirimini içeren yeni bir dosya oluşturun
 
      `{ ...  internal partial class Language1CommandSet : ...`
 
-2. **DslPackage**' de, **özel kod**adlı bir klasör oluşturun. Bu klasörde adlı yeni bir sınıf dosyası oluşturun `CommandSet.cs` .
+2. **DslPackage**' de, **özel kod** adlı bir klasör oluşturun. Bu klasörde adlı yeni bir sınıf dosyası oluşturun `CommandSet.cs` .
 
 3. Yeni dosyada, oluşturulan kısmi sınıfla aynı ad alanına ve ada sahip kısmi bir bildirim yazın. Örneğin:
 

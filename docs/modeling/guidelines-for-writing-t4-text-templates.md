@@ -1,5 +1,7 @@
 ---
 title: T4 Metin Şablonları Yazma Yönergeleri
+description: Visual Studio 'da program kodu veya diğer uygulama kaynakları oluştururken yararlı olan genel yönergeleri öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 author: JoshuaPartlow
@@ -7,18 +9,18 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 24c8afd5e34d4957dac3d9f4d5b0e4409ad20895
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f5f7be4ce9b8beb7699844397de3e1fc206d017c
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75596547"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363412"
 ---
 # <a name="guidelines-for-writing-t4-text-templates"></a>T4 Metin Şablonları Yazma Yönergeleri
 
 Bu genel yönergeler, Visual Studio 'da program kodu veya diğer uygulama kaynakları oluşturuyorsanız yararlı olabilir. Bunlar sabit kurallar değildir.
 
-## <a name="guidelines-for-design-time-t4-templates"></a>Tasarım zamanı T4 şablonları için yönergeler
+## <a name="guidelines-for-design-time-t4-templates"></a>T4 şablonları Design-Time yönergeleri
 
 Tasarım zamanı T4 şablonları, Visual Studio projenizde tasarım zamanında kod üreten şablonlardır. Daha fazla bilgi için bkz. [T4 Metin şablonları kullanarak tasarım zamanı kodu oluşturma](../modeling/design-time-code-generation-by-using-t4-text-templates.md).
 
@@ -76,7 +78,7 @@ Kod oluşturmanın tam avantajlarından yararlanabilmek için yapılandırma dos
 
 Oluşturulmuş bir kod klasörü kullanın.
 
-Şablonları ve oluşturulan dosyaları **oluşturulan kod**adlı bir proje klasörüne yerleştirin, bunların doğrudan düzenlenmesi gereken dosyalar olmadığını net bir şekilde yapın. Oluşturulan sınıflara geçersiz kılmak veya bunları eklemek için özel kod oluşturursanız, bu sınıfları **özel kod**olarak adlandırılan bir klasöre yerleştirin. Tipik bir projenin yapısı şöyle görünür:
+Şablonları ve oluşturulan dosyaları **oluşturulan kod** adlı bir proje klasörüne yerleştirin, bunların doğrudan düzenlenmesi gereken dosyalar olmadığını net bir şekilde yapın. Oluşturulan sınıflara geçersiz kılmak veya bunları eklemek için özel kod oluşturursanız, bu sınıfları **özel kod** olarak adlandırılan bir klasöre yerleştirin. Tipik bir projenin yapısı şöyle görünür:
 
 ```
 MyProject
@@ -91,7 +93,7 @@ MyProject
    AnotherClass.cs
 ```
 
-## <a name="guidelines-for-run-time-preprocessed-t4-templates"></a>Çalışma zamanı (önceden Işlenmiş) T4 şablonları için yönergeler
+## <a name="guidelines-for-run-time-preprocessed-t4-templates"></a>Run-Time (önceden Işlenmiş) T4 şablonları için yönergeler
 
 Ortak malzemeleri devralınan şablonlara taşıyın.
 
@@ -105,11 +107,11 @@ Her çalışma zamanı şablonu, şablonla aynı ada sahip kısmi bir sınıf ta
 
 Bunu yapmanın avantajı, IntelliSense 'in kullanılabildiği için kodun daha kolay yazılması. Ayrıca, sunum ve temel alınan mantık arasında daha iyi bir ayrım elde edebilirsiniz.
 
-Örneğin, **MyReportText.tt**içinde:
+Örneğin, **MyReportText.tt** içinde:
 
 `The total is: <#= ComputeTotal() #>`
 
-**MyReportText-Methods.cs**içinde:
+**MyReportText-Methods.cs** içinde:
 
 `private string ComputeTotal() { ... }`
 

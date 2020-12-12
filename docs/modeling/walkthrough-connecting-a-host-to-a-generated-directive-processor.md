@@ -1,5 +1,7 @@
 ---
 title: Konağı oluşturulan yönerge işlemcisine bağlama
+description: Özel ana bilgisayarınızı, yönerge işlemcileri çağıran metin şablonlarını destekleyecek şekilde nasıl genişletebileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.workload:
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 8dfca47159192c1f6fe25f703b54745b55d8e384
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a98e432c7eb9508d32f52e51acc1447035b9058b
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88238003"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362502"
 ---
 # <a name="walkthrough-connect-a-host-to-a-generated-directive-processor"></a>İzlenecek yol: Konağı Oluşturulan bir Yönerge İşlemcisine Bağlama
 
@@ -51,9 +53,9 @@ Bir DSL tanımlamak için aşağıdaki bileşenleri yüklemiş olmanız gerekir:
 
 Ayrıca, [Izlenecek yol: özel metin şablonu Konağı oluşturma](../modeling/walkthrough-creating-a-custom-text-template-host.md)bölümünde özel metin şablonu dönüşümünün oluşturulmuş olması gerekir.
 
-## <a name="use-domain-specific-language-tools-to-generate-a-directive-processor"></a>Yönerge Işlemcisi oluşturmak için Alana Özgü Dil Araçları kullanma
+## <a name="use-domain-specific-language-tools-to-generate-a-directive-processor"></a>Yönerge Işlemcisi oluşturmak için Domain-Specific dil araçları kullanma
 
-Bu kılavuzda, DSLMinimalTest çözümü için etki alanına özgü bir dil oluşturmak üzere Alana Özgü Dil Tasarımcısı Sihirbazı 'nı kullanırsınız.
+Bu kılavuzda, DSLMinimalTest çözümü için etki alanına özgü bir dil oluşturmak üzere Domain-Specific Language Designer sihirbazını kullanırsınız.
 
 1. Aşağıdaki özelliklere sahip, etki alanına özgü bir dil çözümü oluşturun:
 
@@ -65,7 +67,7 @@ Bu kılavuzda, DSLMinimalTest çözümü için etki alanına özgü bir dil olu�
 
    - Şirket adı: fabrikam
 
-   Etki alanına özgü dil çözümü oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: etki alanına özgü dil çözümü oluşturma](../modeling/how-to-create-a-domain-specific-language-solution.md).
+   Etki alanına özgü dil çözümü oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Domain-Specific dil çözümü oluşturma](../modeling/how-to-create-a-domain-specific-language-solution.md).
 
 2. **Yapı** menüsünde **Yapı Çözümü**’ne tıklayın.
 
@@ -76,13 +78,13 @@ Bu kılavuzda, DSLMinimalTest çözümü için etki alanına özgü bir dil olu�
 
     Visual Studio 'nun ikinci bir örneği açılır.
 
-4. Deneysel derlemede, **Çözüm Gezgini**' de, **Sample. min**dosyasına çift tıklayın.
+4. Deneysel derlemede, **Çözüm Gezgini**' de, **Sample. min** dosyasına çift tıklayın.
 
     Dosya tasarımcıda açılır. Modelin iki öğesi olduğunu, ExampleElement1 ve ExampleElement2 ve aralarında bir bağlantı olduğunu unutmayın.
 
 5. Visual Studio 'nun ikinci örneğini kapatın.
 
-6. Çözümü kaydedin ve sonra Alana Özgü Dil Tasarımcısı kapatın.
+6. Çözümü kaydedin ve Domain-Specific dil tasarımcısını kapatın.
 
 ## <a name="connect-a-custom-text-template-host-to-a-directive-processor"></a>Özel metin şablonu konağını yönerge Işlemcisine bağlama
 

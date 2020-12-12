@@ -2,7 +2,7 @@
 title: Çözümler ve projeler
 description: Visual Studio projeleri ve çözümleri hakkında bilgi edinin ve Çözüm Gezgini aracı ile yeni bir proje oluşturmayı öğrenin.
 ms.custom: SEO-VS-2020
-ms.date: 06/26/2020
+ms.date: 12/11/2020
 ms.topic: conceptual
 f1_keywords:
 - vs.addnewitem
@@ -22,12 +22,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 949da02ac074e9740038fef7917655ca552a12f6
-ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
+ms.openlocfilehash: 42250d4b60cf272f041fea6f44abd24f99645b93
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96480713"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363464"
 ---
 # <a name="solutions-and-projects-in-visual-studio"></a>Visual Studio 'da çözümler ve projeler
 
@@ -60,13 +60,17 @@ Visual Studio, çözümlerin ayarlarını depolamak için iki dosya türü (*. s
 |. sln|Visual Studio çözümü|Çözümdeki projeleri, proje öğelerini ve çözüm öğelerini düzenler.|
 |. suo|Çözüm Kullanıcı seçenekleri|Kesme noktaları gibi kullanıcı düzeyindeki ayarları ve özelleştirmeleri depolar.|
 
+### <a name="solution-folder"></a>Çözüm klasörü
+
+Bu bağlamda, bir "Çözüm klasörü" yalnızca **Çözüm Gezgini** olan ve bir çözümdeki projeleri gruplamak için kullanabileceğiniz sanal bir klasördür. Projelerin bilgisayarınızda nerede depolandığını bulmak istiyorsanız **Araçlar**  >  **Seçenekler**  >  **Projeler ve çözümler**  >  **konumlar**' a gidin.
+
 ## <a name="create-new-projects"></a>Yeni projeler oluştur
 
 Yeni bir proje oluşturmanın en kolay yolu, belirli bir uygulama veya Web sitesi türü için proje şablonundan başlamadır. Proje şablonu, önceden oluşturulmuş temel bir kod dosyaları, yapılandırma dosyaları, varlıklar ve ayarlar kümesinden oluşur. Bu şablonlar, yeni bir proje oluşturduğunuz iletişim kutusunda (**Dosya**  >  **Yeni**  >  **Proje**) kullanılabilir. Daha fazla bilgi için bkz. [Visual Studio 'da yeni proje oluşturma](create-new-project.md) ve [çözüm ve proje oluşturma](../ide/creating-solutions-and-projects.md).
 
 Projelerinizi genellikle belirli bir şekilde özelleştirirseniz, daha sonra yeni projeler oluşturmak için kullanabileceğiniz özel bir proje şablonu oluşturabilirsiniz. Daha fazla bilgi için bkz. [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md).
 
-Yeni bir proje oluşturduğunuzda, varsayılan olarak *%USERPROFILE%\source\repos dizinine* kaydedilir. Bu konumu, **Araçlar** **Projects location**  >  **Seçenekler**  >  **Projeler ve çözüm**  >  **konumları** altındaki projeler konum ayarında değiştirebilirsiniz. Daha fazla bilgi için bkz. [Projeler ve çözümler sayfası, Seçenekler iletişim kutusu](../ide/reference/projects-and-solutions-options-dialog-box.md).
+Yeni bir proje oluşturduğunuzda, varsayılan olarak *%USERPROFILE%\source\repos dizinine* kaydedilir. Bu konumu, **Araçlar**   >  **Seçenekler**  >  **Projeler ve çözüm**  >  **konumları** altındaki projeler konum ayarında değiştirebilirsiniz. Daha fazla bilgi için bkz. [Projeler ve çözümler sayfası, Seçenekler iletişim kutusu](../ide/reference/projects-and-solutions-options-dialog-box.md).
 
 ## <a name="solution-explorer"></a>Çözüm Gezgini
 

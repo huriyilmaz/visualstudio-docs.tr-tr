@@ -1,5 +1,7 @@
 ---
 title: DGML dosyalarını düzenleyerek kod haritalarını özelleştirme
+description: Yönlendirilmiş grafik biçimlendirme dili (. dgml) dosyasını düzenleyerek bir kod haritasını özelleştirmeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -20,18 +22,18 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 24afbfcfe31de52ac51329bb67df41cc59dd6f1e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2e9b1126b258e36c0aeffd18b9319b15da2b4639
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547283"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363438"
 ---
 # <a name="customize-code-maps-by-editing-the-dgml-files"></a>DGML dosyalarını düzenleyerek kod haritalarını özelleştirme
 
 Bir kod eşlemesini özelleştirmek için, onun yönlendirilmiş grafik biçimlendirme dili (. dgml) dosyasını düzenleyebilirsiniz. Örneğin, özel stilleri belirlemek, kod öğelerine ve bağlantılarına Özellikler ve kategoriler atamak ya da belge veya URL 'Leri kod öğelerine ya da bağlantılara bağlamak için öğeleri düzenleyebilirsiniz. DGML öğeleri hakkında daha fazla bilgi için bkz. [yönlendirilmiş grafik biçimlendirme dili (DGML) başvurusu](../modeling/directed-graph-markup-language-dgml-reference.md).
 
-Kod haritasının. dgml dosyasını bir metin veya XML düzenleyicisinde düzenleyin. Eşleme, Visual Studio çözümünüzün bir parçasıysa, **Çözüm Gezgini**seçin, kısayol menüsünü açın ve **birlikte Aç**, **XML (metin) Düzenleyicisi**' ni seçin.
+Kod haritasının. dgml dosyasını bir metin veya XML düzenleyicisinde düzenleyin. Eşleme, Visual Studio çözümünüzün bir parçasıysa, **Çözüm Gezgini** seçin, kısayol menüsünü açın ve **birlikte Aç**, **XML (metin) Düzenleyicisi**' ni seçin.
 
 > [!NOTE]
 > Kod eşlemeleri oluşturmak için Visual Studio Enterprise sürüme sahip olmanız gerekir. Visual Studio 'da bir kod haritasını düzenlediğinizde,. dgml dosyasını kaydettiğinizde kullanılmayan DGML öğelerini ve özniteliklerini temizler. Ayrıca, el ile yeni bağlantılar eklediğinizde kod öğeleri otomatik olarak oluşturulur. .dgml dosyasını kaydettiğinizde, bir öğeye eklediğiniz tüm öznitelikler kendilerini alfabetik sırada yeniden düzenleyebilir.

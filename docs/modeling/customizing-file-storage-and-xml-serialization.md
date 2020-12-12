@@ -1,5 +1,7 @@
 ---
 title: Dosya Depolamayı ve XML Serileştirmeyi Özelleştirme
+description: Visual Studio 'da etki alanına özgü dil (DSL) için bir örnek veya model kaydettiğinizde oluşturulan veya güncellenen XML dosyası hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -11,31 +13,31 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 07592247e0afb870f3c4774c6f2023a6e8141cd1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e889bb81b4c13d003beb15f733d053ef159b197f
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85542746"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362944"
 ---
 # <a name="customize-file-storage-and-xml-serialization"></a>Dosya Depolama ve XML Serileştirmeyi Özelleştirme
 
-Kullanıcı, Visual Studio 'da alana özgü dilin (DSL) bir örneğini veya *modelini*kaydettiğinde, bir XML dosyası oluşturulur veya güncelleştirilir. Dosyayı depoda yeniden oluşturmak için dosya yeniden yüklenebilir.
+Kullanıcı, Visual Studio 'da alana özgü dilin (DSL) bir örneğini veya *modelini* kaydettiğinde, bir XML dosyası oluşturulur veya güncelleştirilir. Dosyayı depoda yeniden oluşturmak için dosya yeniden yüklenebilir.
 
 DSL Gezgini 'nde **XML serileştirme davranışı** altındaki ayarları ayarlayarak serileştirme şemasını özelleştirebilirsiniz. Her etki alanı sınıfı, özelliği ve ilişkisi için **XML serileştirme davranışı** altında bir düğüm vardır. İlişkiler, kaynak sınıflarının altında bulunur. Ayrıca şekil, bağlayıcı ve diyagram sınıflarına karşılık gelen düğümler de vardır.
 
 Ayrıca, daha gelişmiş özelleştirme için program kodu yazabilirsiniz.
 
 > [!NOTE]
-> Modeli belirli bir biçimde kaydetmek istiyorsanız ancak bu formdan yeniden yüklemeniz gerekmiyorsa, özel bir serileştirme düzeni yerine modelden çıkış oluşturmak için metin şablonları kullanmayı düşünün. Daha fazla bilgi için bkz. [etki alanına özgü dilden kod oluşturma](../modeling/generating-code-from-a-domain-specific-language.md).
+> Modeli belirli bir biçimde kaydetmek istiyorsanız ancak bu formdan yeniden yüklemeniz gerekmiyorsa, özel bir serileştirme düzeni yerine modelden çıkış oluşturmak için metin şablonları kullanmayı düşünün. Daha fazla bilgi için bkz. [Domain-Specific dilden kod üretme](../modeling/generating-code-from-a-domain-specific-language.md).
 
 ## <a name="model-and-diagram-files"></a>Model ve diyagram dosyaları
 
 Her model genellikle iki dosyada kaydedilir:
 
-- Model dosyası **Model1. mydsl**gibi bir ada sahiptir. Model öğelerini ve ilişkilerini ve bunların özelliklerini depolar. **. Mydsl** gibi dosya UZANTıSı, dsl tanımındaki **Düzenleyici** düğümünün **FileExtension** özelliği tarafından belirlenir.
+- Model dosyası **Model1. mydsl** gibi bir ada sahiptir. Model öğelerini ve ilişkilerini ve bunların özelliklerini depolar. **. Mydsl** gibi dosya UZANTıSı, dsl tanımındaki **Düzenleyici** düğümünün **FileExtension** özelliği tarafından belirlenir.
 
-- Diyagram dosyası **Model1. mydsl. Diagram**gibi bir ada sahiptir. Şekilleri, bağlayıcıları ve bunların konumlarını, renklerini, satır kalınlıklarda ve diyagramın görünümünün diğer ayrıntılarını depolar. Kullanıcı bir **. Diagram** dosyasını silerse, modeldeki önemli bilgiler kaybedilmez. Yalnızca diyagramın yerleşimi kaybolur. Model dosyası açıldığında, varsayılan bir şekil ve bağlayıcılar kümesi oluşturulur.
+- Diyagram dosyası **Model1. mydsl. Diagram** gibi bir ada sahiptir. Şekilleri, bağlayıcıları ve bunların konumlarını, renklerini, satır kalınlıklarda ve diyagramın görünümünün diğer ayrıntılarını depolar. Kullanıcı bir **. Diagram** dosyasını silerse, modeldeki önemli bilgiler kaybedilmez. Yalnızca diyagramın yerleşimi kaybolur. Model dosyası açıldığında, varsayılan bir şekil ve bağlayıcılar kümesi oluşturulur.
 
 ### <a name="to-change-the-file-extension-of-a-dsl"></a>DSL dosya uzantısını değiştirmek için
 
@@ -43,7 +45,7 @@ Her model genellikle iki dosyada kaydedilir:
 
 2. Özellikler penceresi, **FileExtension** özelliğini düzenleyin. Dosya adı uzantısının ilk "." ni eklemeyin.
 
-3. Çözüm Gezgini, **Dslpackage\projectıtemtemplates**içindeki iki öğe şablonu dosyasının adını değiştirin. Bu dosyalar şu biçimi izleyen adlara sahiptir:
+3. Çözüm Gezgini, **Dslpackage\projectıtemtemplates** içindeki iki öğe şablonu dosyasının adını değiştirin. Bu dosyalar şu biçimi izleyen adlara sahiptir:
 
      `myDsl.diagram`
 
@@ -79,7 +81,7 @@ Bu model kaydedildi ve sonra XML metin düzenleyicisinde yeniden açıldı:
 
 Serileştirilmiş model hakkında aşağıdaki noktalara dikkat edin:
 
-- Her XML düğümü, bir etki alanı sınıf adı ile aynı bir ada sahiptir, ancak ilk harf küçük harfle yazılmalıdır. Örneğin `familyTreeModel` ve `person`.
+- Her XML düğümü, bir etki alanı sınıf adı ile aynı bir ada sahiptir, ancak ilk harf küçük harfle yazılmalıdır. Örneğin, `familyTreeModel` ve `person`.
 
 - Ad ve Doğum yılı gibi etki alanı özellikleri, XML düğümlerinde öznitelikler olarak serileştirilir. Yeniden, özellik adının ilk karakteri küçük harfe dönüştürülür.
 
@@ -89,7 +91,7 @@ Serileştirilmiş model hakkında aşağıdaki noktalara dikkat edin:
 
 - Her katıştırma ilişkisinin hedef sonu, ilişki altında iç içe geçmiş bir düğüm olarak serileştirilir. Örneğin, `people` düğüm birkaç `person` düğüm içerir.
 
-- Her başvuru ilişkisinin hedef sonu, hedef öğeye bir başvuruyu kodlayan bir *bilinen ad*olarak serileştirilir.
+- Her başvuru ilişkisinin hedef sonu, hedef öğeye bir başvuruyu kodlayan bir *bilinen ad* olarak serileştirilir.
 
      Örneğin, bir düğüm altında bir `person` `children` ilişki olabilir. Bu düğüm aşağıdaki gibi bilinen adlar içerir:
 
@@ -116,15 +118,15 @@ Takma adlar, model ve diyagram dosyalarının farklı parçaları arasındaki ç
     <songMoniker title="/My Favorites/Jazz after Teatime/Hot tea" />
     ```
 
-     Hedef sınıfın, **bilinen** bir etki alanı özelliği varsa ve bu seçenek, `true` **XML serileştirme davranışı**olarak ayarlandığında, tam anahtar takma adları kullanılacaktır. Örnekte bu seçenek, "albüm" ve "Song" etki alanı sınıflarında "title" adlı etki alanı özellikleri için ayarlanır.
+     Hedef sınıfın, **bilinen** bir etki alanı özelliği varsa ve bu seçenek, `true` **XML serileştirme davranışı** olarak ayarlandığında, tam anahtar takma adları kullanılacaktır. Örnekte bu seçenek, "albüm" ve "Song" etki alanı sınıflarında "title" adlı etki alanı özellikleri için ayarlanır.
 
 Nitelikli anahtar adları, KIMLIK adlarıyla daha kolay okunabilir. Model dosyalarınızın XML 'sini kişiler tarafından okunacak şekilde düşünüyorsanız, tam anahtar adları kullanmayı göz önünde bulundurun. Ancak, kullanıcının aynı ad anahtarına sahip olacak birden fazla öğe ayarlaması mümkündür. Yinelenen anahtarlar dosyanın doğru şekilde yeniden çalışmamasına neden olabilir. Bu nedenle, tam anahtar takma adları kullanılarak başvurulan bir etki alanı sınıfı tanımlarsanız, kullanıcının yinelenen adlar içeren bir dosyayı kaydetmesini engelleyen yollar göz önünde bulundurmanız gerekir.
 
 ### <a name="to-set-a-domain-class-to-be-referenced-by-id-monikers"></a>Bir etki alanı sınıfını KIMLIK adlarıyla başvurulacak şekilde ayarlamak için
 
-1. **Is Moniker Key** `false` Sınıfın ve temel sınıflarının her etki alanı özelliği Için bilinen ad anahtarı olduğundan emin olun.
+1.  `false` Sınıfın ve temel sınıflarının her etki alanı özelliği Için bilinen ad anahtarı olduğundan emin olun.
 
-    1. DSL Gezgini 'nde **XML serileştirme Behavior\Class Data \\ \<the domain class> \element Data**öğesini genişletin.
+    1. DSL Gezgini 'nde **XML serileştirme Behavior\Class Data \\ \<the domain class> \element Data** öğesini genişletin.
 
     2. Her etki alanı özelliği için **bilinen ad anahtarının** olduğunu doğrulayın `false` .
 
@@ -132,13 +134,13 @@ Nitelikli anahtar adları, KIMLIK adlarıyla daha kolay okunabilir. Model dosyal
 
 2. Alan sınıfı için **seri hale getirme kimliği** ayarlayın  =  `true` .
 
-     Bu özellik, **XML serileştirme davranışı**altında bulunabilir.
+     Bu özellik, **XML serileştirme davranışı** altında bulunabilir.
 
 ### <a name="to-set-a-domain-class-to-be-referenced-by-qualified-key-monikers"></a>Bir etki alanı sınıfını tam anahtar adlarıyla başvurulacak şekilde ayarlamak için
 
 - Set, var olan bir etki alanı sınıfının bir Domain özelliği için **bilinen ad anahtarıdır** . Özelliğin türü olmalıdır `string` .
 
-    1. DSL Gezgini 'nde **XML serileştirme Behavior\Class Data \\ \<the domain class> \element Data**öğesini genişletin ve ardından domain özelliğini seçin.
+    1. DSL Gezgini 'nde **XML serileştirme Behavior\Class Data \\ \<the domain class> \element Data** öğesini genişletin ve ardından domain özelliğini seçin.
 
     2. Özellikler penceresi, için **bilinen ad anahtarı** ' nı belirleyin `true` .
 
@@ -158,7 +160,7 @@ Nitelikli anahtar adlar kullanırsanız, bir kullanıcının modelindeki iki ö�
 
 Bu durumdan kaçınmaya yardımcı olacak birkaç yöntem vardır:
 
-- **Is Element Name**  =  `true` Anahtar alanı özelliği için bir öğe adı belirleyin. DSL tanımı diyagramında etki alanı özelliğini seçin ve Özellikler penceresi değeri ayarlayın.
+-   =  `true` Anahtar alanı özelliği için bir öğe adı belirleyin. DSL tanımı diyagramında etki alanı özelliğini seçin ve Özellikler penceresi değeri ayarlayın.
 
      Kullanıcı, sınıfın yeni bir örneğini oluşturduğunda, bu değer etki alanı özelliğine otomatik olarak farklı bir değer atanmasına neden olur. Varsayılan davranış, sınıf adının sonuna bir sayı ekler. Bu, kullanıcının adı yinelenen olarak değiştirmesini engellemez, ancak kullanıcı modeli kaydetmeden önce değeri ayarlamadan bu durumda yardımcı olur.
 
@@ -166,7 +168,7 @@ Bu durumdan kaçınmaya yardımcı olacak birkaç yöntem vardır:
 
      Belirsizlikleri için denetleyen otomatik olarak oluşturulan bir doğrulama yöntemi vardır. Yöntemi `Load` doğrulama kategorisinde bulunur. Bu, kullanıcının dosyayı yeniden açmak mümkün olmadığını belirten bir uyarı olacaktır.
 
-     Daha fazla bilgi için bkz. [etki alanına özgü bir dilde doğrulama](../modeling/validation-in-a-domain-specific-language.md).
+     Daha fazla bilgi için bkz. [Domain-Specific dilinde doğrulama](../modeling/validation-in-a-domain-specific-language.md).
 
 ### <a name="moniker-paths-and-qualifiers"></a>Bilinen ad yolları ve niteleyicileri
 
@@ -244,11 +246,11 @@ Aşağıdaki özelleştirmeleri yapmak için, DSL Gezgini 'ndeki **XML serileşt
 
 Tüm serileştirme algoritmalarının parçalarını veya tümünü değiştirebilirsiniz.
 
-**Dsl\generated Code\Serializer.cs** ve **SerializationHelper.cs**içindeki kodu inceetmenizi öneririz.
+**Dsl\generated Code\Serializer.cs** ve **SerializationHelper.cs** içindeki kodu inceetmenizi öneririz.
 
 ### <a name="to-customize-the-serialization-of-a-particular-class"></a>Belirli bir sınıfın serileştirmesini özelleştirmek için
 
-1. Küme, **XML serileştirme davranışı**altındaki bu sınıfın düğümünde **özel** olarak ayarlanır.
+1. Küme, **XML serileştirme davranışı** altındaki bu sınıfın düğümünde **özel** olarak ayarlanır.
 
 2. Tüm şablonları dönüştürün, çözümü derleyin ve ortaya çıkan derleme hatalarını araştırın. Her hatanın yakınında bulunan açıklamalar, hangi kodun sağlamanız gerektiğini açıklar.
 
@@ -264,7 +266,7 @@ Aşağıdaki tabloda DSL tanımının bu bölümünde ayarlayabileceğiniz seçe
 
 ### <a name="xml-class-data"></a>XML sınıfı verileri
 
-Bu öğeler, **XML serileştirme Behavior\Class verileri**altında DSL Gezgini 'nde bulunur.
+Bu öğeler, **XML serileştirme Behavior\Class verileri** altında DSL Gezgini 'nde bulunur.
 
 |Özellik|Açıklama|
 |-|-|

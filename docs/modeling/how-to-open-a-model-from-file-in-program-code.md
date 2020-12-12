@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: Program Kodunda Dosyadan Model Açma'
+description: ModelBus 'ın bir modeldeki model veya öğelere başvurmak için standart mekanizmayı ve taşındığını varsa modeli bulmasını sağlar.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 19cec066d66b08d3f02f3885908722aad047172b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f854edc45724f0e1f3db5bda22cb6aa006d77e60
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85532489"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363880"
 ---
 # <a name="how-to-open-a-model-from-file-in-program-code"></a>Nasıl yapılır: Program Kodunda Dosyadan Model Açma
 
@@ -31,7 +33,7 @@ Uygulama projenizin **hedef çerçevesini** .NET Framework 4 veya üzeri olarak 
 3. Proje Özellikleri penceresinde, **uygulama** sekmesinde, **hedef Framework** alanını **.NET Framework 4** (veya üzeri) olarak ayarlayın.
 
 > [!NOTE]
-> Hedef Framework **.NET Framework 4 Istemci profili**olmamalıdır.
+> Hedef Framework **.NET Framework 4 Istemci profili** olmamalıdır.
 
 ## <a name="references"></a>Başvurular
 
@@ -45,7 +47,7 @@ Bu başvuruları Visual Studio uygulama projenize ekleyin:
 
 ## <a name="important-classes-in-the-dsl"></a>DSL 'deki önemli sınıflar
 
-DSL 'yi okuyan kodu yazmadan önce, DSL 'niz tarafından oluşturulan sınıfların bazılarının adlarını bilmeniz gerekir. DSL çözümünüzde **DSL** projesini açın ve **GeneratedCode** klasörüne bakın. Alternatif olarak, proje **başvurularında**DSL derlemesine çift tıklayın ve **nesne TARAYıCıSı**' de dsl ad alanını açın.
+DSL 'yi okuyan kodu yazmadan önce, DSL 'niz tarafından oluşturulan sınıfların bazılarının adlarını bilmeniz gerekir. DSL çözümünüzde **DSL** projesini açın ve **GeneratedCode** klasörüne bakın. Alternatif olarak, proje **başvurularında** DSL derlemesine çift tıklayın ve **nesne TARAYıCıSı**' de dsl ad alanını açın.
 
 Şunları belirlemeniz gereken sınıflardır:
 

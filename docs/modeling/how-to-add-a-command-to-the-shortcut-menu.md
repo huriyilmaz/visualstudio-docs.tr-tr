@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: kısayol menüsüne komut ekleme'
+description: Kullanıcılarınızın DSL 'nize özgü görevler gerçekleştirebilmesi için, etki alanına özgü dil (DSL) menüsüne menü komutları ekleme hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6aac779a3c165d10262c078ff431731d9d248f3a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7dc51de28162471262d8c4bd35ddd09bc156896e
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85545723"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363347"
 ---
 # <a name="how-to-add-a-command-to-the-shortcut-menu"></a>Nasıl yapılır: kısayol menüsüne komut ekleme
 
@@ -157,7 +159,7 @@ Komut kümesi sınıfı öğesinden türetilir <xref:Microsoft.VisualStudio.Mode
 
      `{ ...  internal partial class Language1CommandSet : ...`
 
-2. **DslPackage**' de, **özel kod**adlı bir klasör oluşturun. Bu klasörde, adlı yeni bir sınıf dosyası oluşturun `CommandSet.cs` .
+2. **DslPackage**' de, **özel kod** adlı bir klasör oluşturun. Bu klasörde, adlı yeni bir sınıf dosyası oluşturun `CommandSet.cs` .
 
 3. Yeni dosyada, oluşturulan kısmi sınıfla aynı ad alanına ve ada sahip kısmi bir bildirim yazın. Örneğin:
 
@@ -292,7 +294,7 @@ private const int grpidMyMenuGroup = 0x01001;
 private const int cmdidMyContextMenuCommand = 1;
 ```
 
- **Commands. vsct**IÇINE eklediğiniz GUID değerini kullanın.
+ **Commands. vsct** IÇINE eklediğiniz GUID değerini kullanın.
 
 > [!NOTE]
 > VSCT dosyasının semboller bölümünü değiştirirseniz bu bildirimleri eşleşecek şekilde de değiştirmeniz gerekir. Ayrıca, Package.tt içindeki sürüm numarasını da artırmanız gerekir
@@ -333,7 +335,7 @@ protected override IList<MenuCommand> GetMenuCommands()
 
 **Komut menüde görünmüyor:**
 
-- Bu komut, DSL paketini yükleyene kadar yalnızca Visual Studio 'daki hata ayıklama örneklerinde görünür. Daha fazla bilgi için bkz. [etki alanına özgü dil çözümlerini dağıtma](msi-and-vsix-deployment-of-a-dsl.md).
+- Bu komut, DSL paketini yükleyene kadar yalnızca Visual Studio 'daki hata ayıklama örneklerinde görünür. Daha fazla bilgi için bkz. [Domain-Specific dil çözümlerini dağıtma](msi-and-vsix-deployment-of-a-dsl.md).
 
 - Deneysel örneklerinizin bu DSL için doğru dosya adı uzantısına sahip olduğundan emin olun. Dosya adı uzantısını denetlemek için, Visual Studio 'nun ana örneğinde DslDefinition. dsl dosyasını açın. Ardından DSL Gezgini ' nde düzenleyici düğümüne sağ tıklayın ve ardından Özellikler ' e tıklayın. Özellikler penceresi FileExtension özelliğini inceleyin.
 

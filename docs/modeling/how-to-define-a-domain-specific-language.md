@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: Etki Alanına Özgü bir Dili Tanımlama'
+description: Bir şablondan, etki alanına özgü dil (DSL) tanımlamak için bir Visual Studio çözümü oluşturmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -16,17 +18,17 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ca9cc6b853ea95cedcb0ce109b9618fc0eb455ba
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 40dcba1cb83e695f2b02468bdd83a5faa8c25a38
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85542759"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363321"
 ---
 # <a name="how-to-define-a-domain-specific-language"></a>Nasıl yapılır: Etki Alanına Özgü bir Dili Tanımlama
 Bir etki alanına özgü dil (DSL) tanımlamak için, bir şablondan bir Visual Studio çözümü oluşturursunuz. Çözümün anahtar bölümü DslDefinition. dsl ' de depolanan DSL tanımı diyagramıdır. DSL tanımı, DSL 'nin sınıflarını ve şekillerini tanımlar. Bu öğelere değiştirdikten ve ekledikten sonra, DSL 'yi daha ayrıntılı şekilde özelleştirmek için program kodu ekleyebilirsiniz.
 
-DSLs 'yi yeni Deneyiyorsanız, bu sitede bulabileceğiniz **dsl araçları Laboratuvarı**aracılığıyla çalışmanızı öneririz: [görselleştirme ve modelleme SDK 'sı](https://code.msdn.microsoft.com/Visualization-and-Modeling-313535db)
+DSLs 'yi yeni Deneyiyorsanız, bu sitede bulabileceğiniz **dsl araçları Laboratuvarı** aracılığıyla çalışmanızı öneririz: [görselleştirme ve modelleme SDK 'sı](https://code.msdn.microsoft.com/Visualization-and-Modeling-313535db)
 
 ## <a name="selecting-a-template-solution"></a><a name="templates"></a> Şablon çözümü seçme
 
@@ -38,7 +40,7 @@ Bir DSL tanımlamak için aşağıdaki bileşenleri yüklemiş olmanız gerekir:
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
-Yeni bir etki alanına özgü dil oluşturmak için, etki alanına özgü dil proje şablonunu kullanarak yeni bir Visual Studio çözümü oluşturun.
+Yeni bir etki alanına özgü dil oluşturmak için Domain-Specific Language proje şablonunu kullanarak yeni bir Visual Studio çözümü oluşturun.
 
 ### <a name="to-create-a-dsl-solution"></a>DSL çözümü oluşturmak için
 
@@ -76,11 +78,11 @@ Yeni bir etki alanına özgü dil oluşturmak için, etki alanına özgü dil pr
 
    - Bilgisayarınızdaki herhangi bir uygulamayla veya DSL 'yi yüklemek istediğiniz herhangi bir bilgisayarda ilişkilendirilmemiş bir dosya adı uzantısı seçin. Örneğin, **docx** ve **htm** kabul edilemez dosya adı uzantıları olacaktır.
 
-   - Girdiğiniz uzantı DSL olarak kullanılıyorsa, sihirbaz sizi uyarır. Farklı bir dosya adı uzantısı kullanmayı düşünün. Ayrıca, eski deneysel tasarımcıları temizlemek için Visual Studio SDK Deneysel örneğini de sıfırlayabilirsiniz. **Başlat**' a tıklayın, **tüm programlar**, **Microsoft Visual Studio 2010 SDK**ve **araçlar**' a tıklayın ve ardından **Microsoft Visual Studio 2010 Deneysel örneğini sıfırlayın**.
+   - Girdiğiniz uzantı DSL olarak kullanılıyorsa, sihirbaz sizi uyarır. Farklı bir dosya adı uzantısı kullanmayı düşünün. Ayrıca, eski deneysel tasarımcıları temizlemek için Visual Studio SDK Deneysel örneğini de sıfırlayabilirsiniz. **Başlat**' a tıklayın, **tüm programlar**, **Microsoft Visual Studio 2010 SDK** ve **araçlar**' a tıklayın ve ardından **Microsoft Visual Studio 2010 Deneysel örneğini sıfırlayın**.
 
 4. Diğer sayfalardaki ayarları ayarlayabilir ya da varsayılan değerleri bırakabilirsiniz.
 
-5. **Son**'a tıklayın.
+5. **Finish (Son)** düğmesine tıklayın.
 
     Sihirbaz iki veya üç proje içeren bir çözüm oluşturur ve DSL tanımından kod üretir.
 
@@ -88,7 +90,7 @@ Yeni bir etki alanına özgü dil oluşturmak için, etki alanına özgü dil pr
 
    ![DSL Tasarımcısı](../modeling/media/dsl_designer.png)
 
-   Bu çözüm, etki alanına özgü bir dili tanımlar. Daha fazla bilgi için bkz. [alana özgü dil Araçları Kullanıcı arabirimine genel bakış](../modeling/overview-of-the-domain-specific-language-tools-user-interface.md).
+   Bu çözüm, etki alanına özgü bir dili tanımlar. Daha fazla bilgi için bkz. [Domain-Specific dil Araçları Kullanıcı arabirimine genel bakış](../modeling/overview-of-the-domain-specific-language-tools-user-interface.md).
 
 ### <a name="test-the-solution"></a>Çözümü test etme
  Şablon çözümü, farklı şekilde değiştirebileceğiniz veya kullanabileceğiniz bir çalışan DSL sağlar.
@@ -113,9 +115,9 @@ Yeni bir etki alanına özgü dil oluşturmak için, etki alanına özgü dil pr
 
  Bu sınıfların tutulması özellikle yararlıdır:
 
-- Kök sınıf, **sınıflar ve ilişkiler**altında DSL tanımı diyagramının sol üst kısmında görünür. Bunu DSL 'den farklı bir adla yeniden adlandırın. Örneğin, **MusicLibrary** ADLı bir DSL **müzik**adlı bir kök sınıfa sahip olabilir.
+- Kök sınıf, **sınıflar ve ilişkiler** altında DSL tanımı diyagramının sol üst kısmında görünür. Bunu DSL 'den farklı bir adla yeniden adlandırın. Örneğin, **MusicLibrary** ADLı bir DSL **müzik** adlı bir kök sınıfa sahip olabilir.
 
-- Diyagram sınıfı, DSL tanımı diyagramının sağ alt kısmında, **diyagram öğeleri** sütununda görünür. Görmek için sağa kaydırmanız gerekebilir. Genellikle _DSL_**Diyagramı**olarak adlandırılır.
+- Diyagram sınıfı, DSL tanımı diyagramının sağ alt kısmında, **diyagram öğeleri** sütununda görünür. Görmek için sağa kaydırmanız gerekebilir. Genellikle _DSL_**Diyagramı** olarak adlandırılır.
 
 - **Görev akışı** şablonunu kullandıysanız ve kulvarlar ile diyagramlar oluşturmak istiyorsanız aktör etki alanı sınıfını ve Actorkulvar şeklini tutun ve yeniden adlandırın.
 
@@ -149,7 +151,7 @@ Yeni bir etki alanına özgü dil oluşturmak için, etki alanına özgü dil pr
 > "Model", kullanıcıların oluşturduðu bir DSL örneğine başvurur ve genellikle diyagram olarak görüntülenir. Bu konuda hem DSL tanımı diyagramı hem de DSL kullanıldığında görüntülenen model diyagramları ele alınmaktadır.
 
 ## <a name="defining-domain-classes"></a><a name="classes"></a> Etki alanı sınıfları tanımlama
- Etki alanı sınıfları DSL kavramlarını temsil eder. Örnekler *model öğeleridir*. Örneğin, bir **MusicLibrary** DSL 'de, **Albüm** ve **şarkı**adında etki alanı sınıfları olabilir.
+ Etki alanı sınıfları DSL kavramlarını temsil eder. Örnekler *model öğeleridir*. Örneğin, bir **MusicLibrary** DSL 'de, **Albüm** ve **şarkı** adında etki alanı sınıfları olabilir.
 
  Bir etki alanı sınıfı oluşturmak için, **adlandırılmış alan sınıfı** aracından diyagrama sürükleyebilir ve sonra sınıfı yeniden adlandırabilirsiniz.
 
@@ -199,7 +201,7 @@ Yeni bir etki alanına özgü dil oluşturmak için, etki alanına özgü dil pr
 
  **Devralma** aracına tıklayın, türetilmiş sınıfa tıklayın ve ardından temel sınıfa tıklayın.
 
- Taban sınıfın **Devralma değiştiricisini** **soyut**olarak ayarlamayı düşünün. Temel sınıfın örneklerine ihtiyacınız olabileceğini düşünüyorsanız, bunun yerine ayrı bir türetilmiş sınıf oluşturmayı düşünün.
+ Taban sınıfın **Devralma değiştiricisini** **soyut** olarak ayarlamayı düşünün. Temel sınıfın örneklerine ihtiyacınız olabileceğini düşünüyorsanız, bunun yerine ayrı bir türetilmiş sınıf oluşturmayı düşünün.
 
  Türetilmiş sınıflar, temel sınıflarının özelliklerini ve rollerini devralınır.
 
@@ -220,7 +222,7 @@ Yeni bir etki alanına özgü dil oluşturmak için, etki alanına özgü dil pr
 
      Gezgin, modelin ağaç görünümünü sunar.
 
-4. **Yeni öğeler oluşturun.** Üstteki kök düğüme sağ tıklayın ve ardından **Yeni**_YourClass_Ekle ' ye tıklayın.
+4. **Yeni öğeler oluşturun.** Üstteki kök düğüme sağ tıklayın ve ardından **Yeni**_YourClass_ Ekle ' ye tıklayın.
 
      Dil Gezgininde sınıfınızın yeni bir örneği görüntülenir.
 
@@ -235,7 +237,7 @@ Yeni bir etki alanına özgü dil oluşturmak için, etki alanına özgü dil pr
 
 #### <a name="to-define-a-class-of-elements-that-appear-as-shapes-on-a-diagram"></a>Diyagramda şekil olarak görünen öğelerin bir sınıfını tanımlamak için
 
-1. Etki alanı[sınıflarını tanımlama](#classes) **bölümünde açıklandığı gibi bir etki alanı sınıfını tanımlayın ve test**edin **.**  
+1. Etki alanı [sınıflarını tanımlama](#classes) **bölümünde açıklandığı gibi bir etki alanı sınıfını tanımlayın ve test** edin **.**  
 
    - Sınıfın üst öğesi kök sınıf olmalıdır. Diğer bir deyişle, kök sınıf ve yeni etki alanı sınıfı arasında bir katıştırma ilişkisi olmalıdır.
 
@@ -267,7 +269,7 @@ Yeni bir etki alanına özgü dil oluşturmak için, etki alanına özgü dil pr
 
     Model öğesinin adını veya başlığını göstermek için muhtemelen en az bir metin dekoratörü gerekir.
 
-    Şekil sınıfının üstbilgisine sağ tıklayın, **Ekle**' nin üzerine gelin ve ardından **metin dekoratörü**' ne tıklayın. Dekoratörün adını ayarlayın ve Özellikler penceresi **konumunu**ayarlayın.
+    Şekil sınıfının üstbilgisine sağ tıklayın, **Ekle**' nin üzerine gelin ve ardından **metin dekoratörü**' ne tıklayın. Dekoratörün adını ayarlayın ve Özellikler penceresi **konumunu** ayarlayın.
 
 5. **Her şekli bir diyagram öğesi eşlemesi görüntülenecek olan etki alanı sınıfına bağlayın**.
 
@@ -279,7 +281,7 @@ Yeni bir etki alanına özgü dil oluşturmak için, etki alanına özgü dil pr
 
    2. **DSL ayrıntıları** penceresinde **dekoratör haritaları** sekmesine tıklayın. **DSL ayrıntıları** penceresini görmüyorsanız, **Görünüm** menüsünde **diğer pencereler** ' in üzerine gelin ve **DSL ayrıntıları**' na tıklayın. Tüm içeriğini görmek için bu pencerenin en üstünü yükseltmek sık sık gereklidir.
 
-   3. Bir dekoratörün adını seçin. **Display özelliği**altında, Domain sınıfının bir özelliğinin adını seçin. Her dekoratör için bunu tekrarlayın.
+   3. Bir dekoratörün adını seçin. **Display özelliği** altında, Domain sınıfının bir özelliğinin adını seçin. Her dekoratör için bunu tekrarlayın.
 
        İlişkili bir öğenin bir özelliğini göstermek istiyorsanız, **özelliği görüntüle**' nin altındaki açılır ağaç Gezgininde tıklayın.
 
@@ -294,11 +296,11 @@ Yeni bir etki alanına özgü dil oluşturmak için, etki alanına özgü dil pr
    2. DSL ile aynı ada sahip **araç kutusu sekmeleri** altındaki düğüme sağ tıklayın, örneğin, MusicLibrary. **Öğe Ekle aracı**' na tıklayın.
 
        > [!NOTE]
-       > **Araçlar** düğümüne sağ tıklarsanız, **öğe Ekle aracını**görmezsiniz. Bunun yerine, yukarıdaki düğüme tıklayın.
+       > **Araçlar** düğümüne sağ tıklarsanız, **öğe Ekle aracını** görmezsiniz. Bunun yerine, yukarıdaki düğüme tıklayın.
 
    3. Yeni öğe aracı seçiliyken Özellikler penceresi, **sınıfı** en son eklediğiniz etki alanı sınıfına ayarlayın.
 
-   4. **Açıklamalı altyazı** ve **araç ipucu**ayarlayın.
+   4. **Açıklamalı altyazı** ve **araç ipucu** ayarlayın.
 
    5. **Araç kutusu simgesini** araç kutusunda görünecek bir simgeye ayarlayın. Bunu yeni bir simge veya başka bir araç için zaten kullanılan bir simge olarak ayarlayabilirsiniz.
 
@@ -324,7 +326,7 @@ Yeni bir etki alanına özgü dil oluşturmak için, etki alanına özgü dil pr
 
    2. Özelliği Özellikler penceresi veya dekoratör içinde düzenlediğinizde, diğer görünüm güncellenir.
 
-   Bir şekli ilk kez test ettikten sonra bazı özelliklerini ayarlamak ve daha gelişmiş özellikler eklemek isteyebilirsiniz. Daha fazla bilgi için bkz. [etki alanına özgü dili özelleştirme ve genişletme](../modeling/customizing-and-extending-a-domain-specific-language.md).
+   Bir şekli ilk kez test ettikten sonra bazı özelliklerini ayarlamak ve daha gelişmiş özellikler eklemek isteyebilirsiniz. Daha fazla bilgi için bkz. [Domain-Specific dilini özelleştirme ve genişletme](../modeling/customizing-and-extending-a-domain-specific-language.md).
 
 ## <a name="defining-reference-relationships"></a><a name="references"></a> Başvuru Ilişkileri tanımlama
  Herhangi bir kaynak etki alanı sınıfı ve herhangi bir hedef etki alanı sınıfı arasında bir başvuru ilişkisi tanımlayabilirsiniz. Başvuru ilişkileri genellikle diyagramda, şekiller arasında çizgiler olan bağlayıcılar olarak görüntülenir.
@@ -344,7 +346,7 @@ Yeni bir etki alanına özgü dil oluşturmak için, etki alanına özgü dil pr
 
  Gerekirse **Her rolün çeşitlilimlerini ayarlayın**. Her kişinin en fazla bir yöneticiye sahip olmasını istiyorsanız, diyagramdaki yönetici etiketinin altında görüntülenen çoğulluğu 0.. 1 olarak ayarlayın.
 
- **İlişkiye etki alanı özellikleri ekleyin.** Şekilde, sanatçı-albüm ilişkisinin rolü bir özelliği vardır.
+ **İlişkiye etki alanı özellikleri ekleyin.** Şekilde, Artist-Album ilişkisinde rolün bir özelliği vardır.
 
  Aynı sınıfa ait birden fazla bağlantı, aynı model öğesi çifti arasında mevcutsa **Ilişkinin yinelemelerini Izin verir özelliğini ayarlayın** . Örneğin, öğretmende aynı öğrenciye birden fazla konu öğretin.
 
@@ -374,7 +376,7 @@ Yeni bir etki alanına özgü dil oluşturmak için, etki alanına özgü dil pr
 
  Yeni araç seçiliyken Özellikler penceresi:
 
-- **Resim yazısını** ve **araç ipucunu**ayarlayın.
+- **Resim yazısını** ve **araç ipucunu** ayarlayın.
 
 - **Bağlantı Oluşturucu** ' ya tıklayın ve yeni ilişki için uygun oluşturucuyu seçin.
 
@@ -406,7 +408,7 @@ Yeni bir etki alanına özgü dil oluşturmak için, etki alanına özgü dil pr
 
    2. Özelliği Özellikler penceresi veya dekoratör içinde düzenlediğinizde, diğer görünüm güncellenir.
 
-   Bir bağlayıcıyı ilk kez test ettikten sonra bazı özelliklerini ayarlamak ve daha gelişmiş özellikler eklemek isteyebilirsiniz. Daha fazla bilgi için bkz. [etki alanına özgü dili özelleştirme ve genişletme](../modeling/customizing-and-extending-a-domain-specific-language.md).
+   Bir bağlayıcıyı ilk kez test ettikten sonra bazı özelliklerini ayarlamak ve daha gelişmiş özellikler eklemek isteyebilirsiniz. Daha fazla bilgi için bkz. [Domain-Specific dilini özelleştirme ve genişletme](../modeling/customizing-and-extending-a-domain-specific-language.md).
 
 ## <a name="defining-shapes-that-contain-lists-compartment-shapes"></a><a name="compartments"></a> Listeler Içeren şekilleri tanımlama: bölme şekilleri
  Bir bölme şekli bir veya daha fazla öğe listesi içerir. Örneğin, bir müzik kitaplığı DSL 'de, müzik albümlerini temsil etmek için bölme şekillerini kullanabilirsiniz. Her albümdeki şarkıların bir listesi vardır.
@@ -435,7 +437,7 @@ Yeni bir etki alanına özgü dil oluşturmak için, etki alanına özgü dil pr
 
      Göstermek istediğiniz her bir liste için başka bir liste öğesi alan sınıfı ekleyin.
 
-3. **Listedeki birçok öğe türünü karıştırmak için**, liste sınıfından kalıtımla alan sınıflar oluşturun. **Devralma değiştiricisini**ayarlayarak liste sınıfını soyut hale getirin.
+3. **Listedeki birçok öğe türünü karıştırmak için**, liste sınıfından kalıtımla alan sınıflar oluşturun. **Devralma değiştiricisini** ayarlayarak liste sınıfını soyut hale getirin.
 
      Örneğin, klasik müziğin sanatçı yerine besteci olarak sıralanmasını istiyorsanız, bir şarkının iki alt sınıfı, ClassicalSong ve NonClassicalSong oluşturabilirsiniz.
 
@@ -451,7 +453,7 @@ Yeni bir etki alanına özgü dil oluşturmak için, etki alanına özgü dil pr
 
 7. Etki alanı sınıfı ve şekil arasındaki diyagram öğe eşleme bağlantısını seçin. **DSL ayrıntıları** penceresinde:
 
-    1. **Dekoratörler** sekmesine tıklayın. Dekoratör adına tıklayın ve ardından **görüntü özelliği**altında uygun öğeyi seçin. Dekoratör adının yanında bir onay işaretinin göründüğünden emin olun.
+    1. **Dekoratörler** sekmesine tıklayın. Dekoratör adına tıklayın ve ardından **görüntü özelliği** altında uygun öğeyi seçin. Dekoratör adının yanında bir onay işaretinin göründüğünden emin olun.
 
     2. **Bölme haritaları** sekmesine tıklayın.
 
@@ -459,7 +461,7 @@ Yeni bir etki alanına özgü dil oluşturmak için, etki alanına özgü dil pr
 
          **Görüntülenmiş öğeler koleksiyonu yolu**' nun altında, liste öğesi sınıfına (Song) gidin. Açılan oka tıklayarak gezgin aracını kullanın.
 
-         **Görüntü özelliği**altında, listede gösterilmesi gereken özelliği seçin. Örnekte, bu başlıktır.
+         **Görüntü özelliği** altında, listede gösterilmesi gereken özelliği seçin. Örnekte, bu başlıktır.
 
 > [!NOTE]
 > Dekoratör eşleme ve bölme eşleme alanlarındaki yol alanlarını kullanarak, etki alanı sınıfları ve bölme şekli arasında daha karmaşık ilişkiler yapabilirsiniz.
@@ -473,11 +475,11 @@ Yeni bir etki alanına özgü dil oluşturmak için, etki alanına özgü dil pr
 3. DSL ile aynı ada sahip **araç kutusu sekmeleri** altındaki düğüme sağ tıklayın, örneğin, MusicLibrary. **Öğe Ekle aracı**' na tıklayın.
 
     > [!NOTE]
-    > **Araçlar** düğümüne sağ tıklarsanız, **öğe Ekle aracını**görmezsiniz. Bunun yerine, yukarıdaki düğüme tıklayın.
+    > **Araçlar** düğümüne sağ tıklarsanız, **öğe Ekle aracını** görmezsiniz. Bunun yerine, yukarıdaki düğüme tıklayın.
 
 4. Yeni öğe aracı seçiliyken Özellikler penceresi, **sınıfı** en son eklediğiniz etki alanı sınıfına ayarlayın.
 
-5. **Açıklamalı altyazı** ve **araç ipucu**ayarlayın.
+5. **Açıklamalı altyazı** ve **araç ipucu** ayarlayın.
 
 6. **Araç kutusu simgesini** araç kutusunda görünecek bir simgeye ayarlayın. Bunu yeni bir simge veya başka bir araç için zaten kullanılan bir simge olarak ayarlayabilirsiniz.
 
@@ -507,7 +509,7 @@ Yeni bir etki alanına özgü dil oluşturmak için, etki alanına özgü dil pr
 
    ![DSL Gezgini oluşturuldu](../modeling/media/music_explorer.png)
 
-   Bir bölme şeklini ilk kez test ettikten sonra bazı özelliklerini ayarlamak ve daha gelişmiş özellikler eklemek isteyebilirsiniz. Daha fazla bilgi için bkz. [etki alanına özgü dili özelleştirme ve genişletme](../modeling/customizing-and-extending-a-domain-specific-language.md).
+   Bir bölme şeklini ilk kez test ettikten sonra bazı özelliklerini ayarlamak ve daha gelişmiş özellikler eklemek isteyebilirsiniz. Daha fazla bilgi için bkz. [Domain-Specific dilini özelleştirme ve genişletme](../modeling/customizing-and-extending-a-domain-specific-language.md).
 
 ### <a name="displaying-a-reference-link-in-a-compartment"></a>Bir bölme içinde başvuru bağlantısı görüntüleme
  Genellikle, bir bölme içinde görüntülenen bir öğe, bölme şekli tarafından temsil edilen öğenin bir alt öğesidir. Ancak bazen bir başvuru ilişkisiyle bağlantılı bir öğeyi göstermek istersiniz.
@@ -528,7 +530,7 @@ Yeni bir etki alanına özgü dil oluşturmak için, etki alanına özgü dil pr
 
 3. Hedef öğeye olan bağlantıdan gezinmek için **görüntülenecek özelliğin yolunu** ayarlayın. Örnekte, bu **sanatçı**' dır.
 
-4. **Display özelliğini** , örneğin **Name**gibi Target öğesinin uygun özelliğine ayarlayın.
+4. **Display özelliğini** , örneğin **Name** gibi Target öğesinin uygun özelliğine ayarlayın.
 
 5. **Tüm şablonları dönüştürün**, DSL oluşturup çalıştırın ve bir test modeli açın.
 
@@ -584,7 +586,7 @@ Yeni bir etki alanına özgü dil oluşturmak için, etki alanına özgü dil pr
 ### <a name="external-types"></a>Dış türler
  Bir etki alanı özelliğinin türünü ayarladığınızda, **tür** açılır listesinde istediğiniz türü bulamazsanız, bir dış tür ekleyebilirsiniz. Örneğin, **System. Drawing. Color** türünü listeye ekleyebilirsiniz.
 
- Bir tür eklemek için, DSL Gezgini ' nde modelin köküne sağ tıklayın ve sonra **yeni dış tür Ekle**' ye tıklayın. Özellikler penceresi, adı **Color** ve ad alanı olarak **System. Drawing**olarak ayarlayın. Bu tür artık DSL Gezgini 'nde **etki alanı türleri**altında görüntülenir. Bir etki alanı özelliğinin türünü her ayarladığınızda bunu seçebilirsiniz.
+ Bir tür eklemek için, DSL Gezgini ' nde modelin köküne sağ tıklayın ve sonra **yeni dış tür Ekle**' ye tıklayın. Özellikler penceresi, adı **Color** ve ad alanı olarak **System. Drawing** olarak ayarlayın. Bu tür artık DSL Gezgini 'nde **etki alanı türleri** altında görüntülenir. Bir etki alanı özelliğinin türünü her ayarladığınızda bunu seçebilirsiniz.
 
 ## <a name="customizing-the-dsl"></a><a name="custom"></a> DSL 'yi özelleştirme
  Bu konuda açıklanan teknikleri kullanarak, bir diagrammatik gösterimi, okunabilir bir XML formu ve kod ve diğer yapıtları oluşturmak için gereken temel araçları kullanarak hızlı bir şekilde DSL oluşturabilirsiniz.
@@ -593,9 +595,9 @@ Yeni bir etki alanına özgü dil oluşturmak için, etki alanına özgü dil pr
 
 1. DSL tanımının daha fazla özelliğini kullanarak DSL 'yi hassas olarak ayarlayın. Örneğin, birden çok bağlayıcı türü oluşturabileceğiniz tek bir bağlayıcı aracı oluşturabilirsiniz ve bir öğenin silinmesi ile ilgili öğeleri de sildiği kuralları kontrol edebilirsiniz. Bu teknikler, genellikle DSL tanımındaki değerler ayarlanarak elde edilir ve bazıları bazı program kodu satırları gerektirir.
 
-     Daha fazla bilgi için bkz. [etki alanına özgü dili özelleştirme ve genişletme](../modeling/customizing-and-extending-a-domain-specific-language.md).
+     Daha fazla bilgi için bkz. [Domain-Specific dilini özelleştirme ve genişletme](../modeling/customizing-and-extending-a-domain-specific-language.md).
 
-2. Daha gelişmiş etkiler elde etmek için program kodunu kullanarak modelleme araçlarınızı genişletin. Örneğin, modeli değiştirecek menü komutları oluşturabilir ve iki veya daha fazla DSLs 'yi tümleştiren araçlar oluşturabilirsiniz. VMSDK, uzantılarınızı DSL tanımından oluşturulan kodla tümleştirmeyi kolaylaştırmak için özel olarak tasarlanmıştır.  Daha fazla bilgi için bkz. [etki alanına özgü dili özelleştirmek Için kod yazma](../modeling/writing-code-to-customise-a-domain-specific-language.md).
+2. Daha gelişmiş etkiler elde etmek için program kodunu kullanarak modelleme araçlarınızı genişletin. Örneğin, modeli değiştirecek menü komutları oluşturabilir ve iki veya daha fazla DSLs 'yi tümleştiren araçlar oluşturabilirsiniz. VMSDK, uzantılarınızı DSL tanımından oluşturulan kodla tümleştirmeyi kolaylaştırmak için özel olarak tasarlanmıştır.  Daha fazla bilgi için bkz. [Domain-Specific dilini özelleştirmek Için kod yazma](../modeling/writing-code-to-customise-a-domain-specific-language.md).
 
 ### <a name="changing-the-dsl-definition"></a>DSL tanımını değiştirme
  Bir DSL tanımında herhangi bir öğe oluşturduğunuzda, çoğu varsayılan değer otomatik olarak ayarlanır. Ayarlandıklarında, bunları değiştirebilirsiniz. Bu, bir DSL geliştirmeyi basitleştirir, ancak yine de güçlü özelleştirmeler sağlar.
@@ -604,7 +606,7 @@ Yeni bir etki alanına özgü dil oluşturmak için, etki alanına özgü dil pr
 
  Bu nedenle, DSL tanımınızdaki bazı ilişkileri değiştirdiğiniz zaman, tanımı kaydettiğinizde ya da tüm şablonları dönüştürdüğünüzde hatalar için olağandışı değildir. Bu hataların çoğunun düzeltilmesi kolay bir işlemdir. Hatanın konumunu görmek için hata raporuna çift tıklayın.
 
- Ayrıca bkz. [nasıl yapılır: etki alanına özgü dilin ad alanını değiştirme](../modeling/how-to-change-the-namespace-of-a-domain-specific-language.md).
+ Ayrıca bkz. [nasıl yapılır: Domain-Specific dilin ad alanını değiştirme](../modeling/how-to-change-the-namespace-of-a-domain-specific-language.md).
 
 ## <a name="troubleshooting"></a><a name="trouble"></a> Sorunu
  Aşağıdaki tabloda, bir DSL tasarlarken karşılaşılan en yaygın sorunların bazıları, çözümüne yönelik önerilerle birlikte listelenmiştir. [Görselleştirme araçları genişletilebilirlik forumundan](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=dslvsarchx)daha fazla öneri bulabilirsiniz.
@@ -612,13 +614,13 @@ Yeni bir etki alanına özgü dil oluşturmak için, etki alanına özgü dil pr
 | Sorun | Öneri |
 |-|-|
 | DSL tanımı dosyasında yaptığım değişikliklerin etkisi yoktur. | Çözüm Gezgini yukarıdaki araç çubuğundan **Tüm Şablonları Dönüştür** ' e tıklayın ve ardından çözümü yeniden derleyin. |
-| Şekiller, özellik değeri yerine bir dekoratörün adını gösterir. | Dekoratör eşlemesini ayarlayın. DSL tanımı diyagramında, alan sınıfı ve şekil sınıfı arasındaki gri çizgi olan diyagram öğe haritasına tıklayın.<br /><br /> **DSL ayrıntıları** penceresini açın. Bunu göremiyorsanız, Görünüm menüsünde **diğer pencereler**' in üzerine gelin ve **DSL ayrıntıları**' na tıklayın.<br /><br /> **Dekoratör haritaları** sekmesine tıklayın. Dekoratör adını seçin. Yanındaki kutunun işaretli olduğundan emin olun. **Görüntü özelliği**altında, bir etki alanı özelliğinin adını seçin.<br /><br /> Daha fazla bilgi için bkz. [diyagramdaki şekiller](#shapes). |
+| Şekiller, özellik değeri yerine bir dekoratörün adını gösterir. | Dekoratör eşlemesini ayarlayın. DSL tanımı diyagramında, alan sınıfı ve şekil sınıfı arasındaki gri çizgi olan diyagram öğe haritasına tıklayın.<br /><br /> **DSL ayrıntıları** penceresini açın. Bunu göremiyorsanız, Görünüm menüsünde **diğer pencereler**' in üzerine gelin ve **DSL ayrıntıları**' na tıklayın.<br /><br /> **Dekoratör haritaları** sekmesine tıklayın. Dekoratör adını seçin. Yanındaki kutunun işaretli olduğundan emin olun. **Görüntü özelliği** altında, bir etki alanı özelliğinin adını seçin.<br /><br /> Daha fazla bilgi için bkz. [diyagramdaki şekiller](#shapes). |
 | DSL Gezgini 'nde bir koleksiyona ekleyemiyorum. Örneğin, araçlara sağ tıkladığınızda menüdeki "araç ekle" komutu yoktur.<br /><br /> DSL için Gezgininde bir listeye öğe ekleyemiyorum. | Denediğiniz düğümün üstündeki öğeye sağ tıklayın. Bir listeye eklemek istediğinizde, Add komutu liste düğümünde değil, kendi sahibidir. |
 | Bir etki alanı sınıfı oluşturdum, ancak dil Gezgini 'nde örnek oluşturamıyorum. | Kök hariç her etki alanı sınıfı, bir katıştırma ilişkisinin hedefi olmalıdır. |
 | DSL için Gezgininde öğeler yalnızca tür adlarıyla gösterilir. | DSL tanımında, sınıfının bir etki alanı özelliğini seçin ve Özellikler penceresi, **öğe adı** ' nı true ' olarak ayarlayın. |
 | DSL her zaman XML düzenleyicisinde açılır. | Dosya okunurken bir hata nedeniyle bu durum oluşabilir. Ancak, bu hatayı düzelttikten sonra bile düzenleyiciyi DSL tasarımcısı olarak açıkça sıfırlamanız gerekir.<br /><br /> Proje öğesine sağ tıklayın, **birlikte Aç** ' a tıklayın ve * YourLanguage ***Tasarımcı (varsayılan)** seçeneğini belirleyin. |
-| Derleme adlarını değiştirdikten sonra DSL 'nin araç kutusu görünmüyor. | İnceleme ve güncelleştirme **DslPackage\GeneratedCode\Package.tt** daha fazla bilgi için bkz. [nasıl yapılır: etki alanına özgü dilin ad alanını değiştirme](../modeling/how-to-change-the-namespace-of-a-domain-specific-language.md). |
-| DSL araç kutusu görünmüyor, ancak derleme adını değiştirdim.<br /><br /> Ya da bir uzantı yükleme başarısızlığını bildiren bir ileti kutusu görüntülenir. | Deneysel örneği sıfırlayın ve çözümünüzü yeniden derleyin.<br /><br /> 1. Windows Başlat menüsünde, **tüm programlar**' ın altında, Araçlar ' ı genişletin [!INCLUDE[vssdk_current_long](../misc/includes/vssdk_current_long_md.md)] ve ardından **Microsoft Visual Studio deneysel örneği Sıfırla**' ya tıklayın. **Tools**<br />2. **Yapı** menüsünde **çözümü yeniden derle**' ye tıklayın. |
+| Derleme adlarını değiştirdikten sonra DSL 'nin araç kutusu görünmüyor. | İnceleme ve güncelleştirme **DslPackage\GeneratedCode\Package.tt** daha fazla bilgi için bkz. [nasıl yapılır: Domain-Specific dilin ad alanını değiştirme](../modeling/how-to-change-the-namespace-of-a-domain-specific-language.md). |
+| DSL araç kutusu görünmüyor, ancak derleme adını değiştirdim.<br /><br /> Ya da bir uzantı yükleme başarısızlığını bildiren bir ileti kutusu görüntülenir. | Deneysel örneği sıfırlayın ve çözümünüzü yeniden derleyin.<br /><br /> 1. Windows Başlat menüsünde, **tüm programlar**' ın altında, Araçlar ' ı genişletin [!INCLUDE[vssdk_current_long](../misc/includes/vssdk_current_long_md.md)] ve ardından **Microsoft Visual Studio deneysel örneği Sıfırla**' ya tıklayın. <br />2. **Yapı** menüsünde **çözümü yeniden derle**' ye tıklayın. |
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

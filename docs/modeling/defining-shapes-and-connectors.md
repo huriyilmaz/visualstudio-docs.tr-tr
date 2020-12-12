@@ -1,5 +1,7 @@
 ---
 title: Şekiller ve Bağlayıcıları Tanımlama
+description: Bir diyagram üzerinde, etki alanına özgü bir dilde (DSL) bilgi göstermek için kullanabileceğiniz çeşitli temel şekil türleri hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bd95c467f0cfcc997fe419abacb1811e02b468b2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fd98e449f674d2841dd41aa88e320468698f4736
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75589675"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363828"
 ---
 # <a name="define-shapes-and-connectors"></a>Şekilleri ve bağlayıcıları tanımlama
 
@@ -20,7 +22,7 @@ Bir diyagramda, etki alanına özgü dil (DSL) içindeki bilgileri göstermek i�
 
 ## <a name="basic-types-of-shapes-and-connectors"></a><a name="shapeTypes"></a> Temel şekil ve bağlayıcı türleri
 
-DSL diyagramı çizgiler veya *Bağlayıcılar*ile birbirine bağlanmış *şekillerin* bir koleksiyonunu gösterir. Genellikle, ancak her zaman değildir:
+DSL diyagramı çizgiler veya *Bağlayıcılar* ile birbirine bağlanmış *şekillerin* bir koleksiyonunu gösterir. Genellikle, ancak her zaman değildir:
 
 - Şekiller model öğelerinin görünür gösterimidir.
 

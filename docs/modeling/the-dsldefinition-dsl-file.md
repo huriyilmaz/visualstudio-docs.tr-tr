@@ -1,5 +1,7 @@
 ---
 title: DslDefinition.dsl Dosyası
+description: Bir DSL araçları çözümünün DSL projesinde, etki alanına özgü bir dili tanımlayan DslDefinition. dsl dosyasının yapısı hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -9,20 +11,20 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 893f39149a9000f3672c5b3043551bcbd53e6b87
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: c5db379447f39ed3d0c2b82aee23c1ac94aad34d
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808961"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362788"
 ---
 # <a name="the-dsldefinitiondsl-file"></a>DslDefinition.dsl Dosyası
 
-Bu konu, [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] *etki alanına özgü bir dili*tanımlayan bir çözümün DSL projesindeki DslDefinition. dsl dosyasının yapısını açıklar. DslDefinition. dsl dosyası, etki alanına özgü dilin sınıflarını ve ilişkilerini, etki alanına özgü dilin ve onun düzen araçlarının **araç kutusunu** ile birlikte açıklar. Etki alanına özgü bir dil çözümünde, bu araçları tanımlayan kod DslDefinition. dsl dosyasındaki bilgilere göre oluşturulur.
+Bu konu, [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] *etki alanına özgü bir dili* tanımlayan bir çözümün DSL projesindeki DslDefinition. dsl dosyasının yapısını açıklar. DslDefinition. dsl dosyası, etki alanına özgü dilin sınıflarını ve ilişkilerini, etki alanına özgü dilin ve onun düzen araçlarının **araç kutusunu** ile birlikte açıklar. Etki alanına özgü bir dil çözümünde, bu araçları tanımlayan kod DslDefinition. dsl dosyasındaki bilgilere göre oluşturulur.
 
 Genellikle, DslDefinition. dsl dosyasını düzenlemek için *alana özgü dil Tasarımcısı* kullanırsınız. Ancak ham biçimi XML 'dir ve bir DslDefinition. dsl dosyasını bir XML düzenleyicisinde açabilirsiniz. Dosyanın hangi bilgileri içerdiğini ve hata ayıklama ve genişletme amaçları için nasıl düzenlendiğini anlamak yararlı olabilir.
 
-Bu konudaki örnekler bileşen diyagramı çözüm şablonundan alınmıştır. Örnek görmek için, bileşen modelleri çözüm şablonunu temel alan, etki alanına özgü bir dil çözümü oluşturun. Çözümü oluşturduktan sonra DslDefinition. dsl dosyası Alana Özgü Dil Tasarımcısı görüntülenir. Dosyayı kapatın, **Çözüm Gezgini**' de sağ tıklayın, **birlikte Aç**' ın üzerine gelin, **XML Düzenleyicisi**' ne tıklayın ve ardından **Tamam**' a tıklayın.
+Bu konudaki örnekler bileşen diyagramı çözüm şablonundan alınmıştır. Örnek görmek için, bileşen modelleri çözüm şablonunu temel alan, etki alanına özgü bir dil çözümü oluşturun. Çözümü oluşturduktan sonra, DslDefinition. dsl dosyası Domain-Specific dili tasarımcısında görünür. Dosyayı kapatın, **Çözüm Gezgini**' de sağ tıklayın, **birlikte Aç**' ın üzerine gelin, **XML Düzenleyicisi**' ne tıklayın ve ardından **Tamam**' a tıklayın.
 
 ## <a name="sections-of-the-dsldefinitiondsl-file"></a>DslDefinition. dsl dosyasının bölümleri
 
@@ -166,7 +168,7 @@ Her sınıfın bir özellikler kümesi vardır ve bir temel sınıfa sahip olabi
 
 Her etki alanı sınıfı (ilişkiler, şekiller, bağlayıcılar ve diyagramlar dahil) bu özniteliklere ve alt düğümlere sahip olabilir:
 
-- **Kimliği.** Bu öznitelik bir GUID 'dir. Dosyada bir değer sağlamazsanız Alana Özgü Dil Tasarımcısı bir değer oluşturacaktır. (Bu belgedeki çizimlerde, bu öznitelik genellikle alan kazanmak için atlanır.)
+- **Kimliği.** Bu öznitelik bir GUID 'dir. Dosyada bir değer sağlamazsanız Domain-Specific dil Tasarımcısı bir değer oluşturur. (Bu belgedeki çizimlerde, bu öznitelik genellikle alan kazanmak için atlanır.)
 
 - **Ad ve ad alanı.** Bu öznitelikler, oluşturulan koddaki sınıfın adını ve ad alanını belirtir. Bunların birlikte, etki alanına özgü dil içinde benzersiz olması gerekir.
 
@@ -267,7 +269,7 @@ Tüm sınıfların kullanabildiği özniteliklerin ve alt düğümlerin yanı s�
 
 ## <a name="designer-and-toolbox-tabs"></a>Tasarımcı ve araç kutusu sekmeleri
 
-DslDefinition. dsl dosyasının **Tasarımcı** bölümünün ana bölümü **ToolboxTab** öğeleridir. Bir tasarımcıda, her biri oluşturulan tasarımcı **araç kutusundaki**bir uçlu bölümü temsil eden bu öğelerden birkaçı olabilir. Her **ToolboxTab** öğesi bir veya daha fazla **ElementTool** öğesi, **ConnectionTool** öğesi veya her ikisini içerebilir.
+DslDefinition. dsl dosyasının **Tasarımcı** bölümünün ana bölümü **ToolboxTab** öğeleridir. Bir tasarımcıda, her biri oluşturulan tasarımcı **araç kutusundaki** bir uçlu bölümü temsil eden bu öğelerden birkaçı olabilir. Her **ToolboxTab** öğesi bir veya daha fazla **ElementTool** öğesi, **ConnectionTool** öğesi veya her ikisini içerebilir.
 
 Öğe araçları, belirli bir etki alanı sınıfının örneklerini oluşturabilir. Kullanıcı diyagram üzerine bir öğe aracı sürüklediğinde, sonuç, bu konunun ilerleyen kısımlarında bulunan öğe birleştirme yönergeleri hakkında bölümünde açıklandığı gibi öğe birleştirme yönergeleri tarafından belirlenir.
 
@@ -296,7 +298,7 @@ Bu örnekte, InPort, ComponentPort 'un bir alt sınıfıdır ve bir ilişki Comp
 C# ' ı bu modele göre yazarken, ilişkinin her bir sınıf üzerinde oluşturduğu özelliği kullanarak tek bir adımda bir bağlantı üzerinden atlayabilirsiniz:
 
 ```
-     InPort port; ...  Component c = port.Component;
+     InPort port; ...  Component c = port.Component;
 ```
 
 Ancak, her iki durağı de yol sözdiziminde açıkça yapmanız gerekir. Bu gereksinim nedeniyle, ara bağlantıyı daha kolay bir şekilde erişebilirsiniz. Aşağıdaki kod, bileşene olan bağlantıdan atlama işlemini tamamlar:
@@ -465,7 +467,7 @@ Serileştirilmiş dosya şunları içerir:
 
 (Bağlantı Ilişkisinin kendi öğesi ve öznitelik adlarını sağlayan kendi XML sınıfı verileri vardır.)
 
-**OmitElement** özniteliği true olarak ayarlanırsa, ilişki rolü adı atılır, bu, serileştirilmiş dosyayı abbreviates ve iki sınıfın birden fazla ilişkisi yoksa çok büyük olur. Örnek:
+**OmitElement** özniteliği true olarak ayarlanırsa, ilişki rolü adı atılır, bu, serileştirilmiş dosyayı abbreviates ve iki sınıfın birden fazla ilişkisi yoksa çok büyük olur. Örneğin:
 
 ```xml
 <component name="Component3">
@@ -474,13 +476,13 @@ Serileştirilmiş dosya şunları içerir:
      <targets> ...
 ```
 
-### <a name="serialization-of-a-domain-specific-language-definition"></a>Etki alanına özgü dil tanımının serileştirilmesi
+### <a name="serialization-of-a-domain-specific-language-definition"></a>Domain-Specific dil tanımının serileştirilmesi
 
 DslDefinition. dsl dosyası bir seri hale getirilmiş dosyadır ve alana özgü dil tanımına uyar. Aşağıda XML serileştirme tanımlarının bazı örnekleri verilmiştir:
 
 - **DSL** , RootClass düğümüdür ve diyagram sınıfıdır. DomainClass, DomainRelationship ve diğer öğeler altına katıştırılır `Dsl` .
 
-- **Sınıflar** , etki alanına özgü dil ve DomainClass arasındaki Ilişkinin **RoleElementName** ' dir.
+- **Sınıflar** , Domain-Specific Language ve DomainClass arasındaki Ilişkinin **RoleElementName** ' dir.
 
 ```xml
 <Dsl Name="CmptDsl5" ...>

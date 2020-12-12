@@ -1,5 +1,7 @@
 ---
 title: T4 İçe Aktarma Yönergesi
+description: Visual Studio T4 metin şablonunda içeri aktarma yönergesinin, tam nitelikli ad sağlamadan başka bir ad alanındaki öğelere başvurabileceğiniz hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2a28bedd01e3a4f6a7a87b025ac9a9a6184da9b2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2dbd42f42213e475452185475a69b1dd9fe5f8e0
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75591872"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363698"
 ---
 # <a name="t4-import-directive"></a>T4 İçe Aktarma Yönergesi
 

@@ -1,5 +1,7 @@
 ---
 title: Modeli Yansıtacak Şekilleri ve Bağlayıcıları Güncelleştirme
+description: Visual Studio 'da alana özgü bir dilde, bir şeklin görünümünün temel alınan modelin durumunu yansıttığından emin olun.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 83a43e8570ea65373b8cac0bd3e3e7a8dc1f5791
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e3d16cbc35c468c0101db479799215bcccf64ef6
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76115030"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362606"
 ---
 # <a name="update-shapes-and-connectors-to-reflect-the-model"></a>Şekilleri ve Bağlayıcıları Modeli Yansıtacak Şekilde Güncelleştirin
 
@@ -27,11 +29,11 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 
 ## <a name="set-shape-map-properties-to-control-the-visibility-of-a-decorator"></a>Bir dekoratörün görünürlüğünü denetlemek için şekil eşleme özelliklerini ayarlama
 
-Bir dekoratın görünürlüğünü, bir program kodu yazmadan denetleyebilir ve bu, DSL tanımındaki şekil ile alan sınıfı arasındaki eşlemeyi yapılandırarak kontrol edebilirsiniz. Daha fazla bilgi için bkz. [etki alanına özgü dil tanımlama](../modeling/how-to-define-a-domain-specific-language.md).
+Bir dekoratın görünürlüğünü, bir program kodu yazmadan denetleyebilir ve bu, DSL tanımındaki şekil ile alan sınıfı arasındaki eşlemeyi yapılandırarak kontrol edebilirsiniz. Daha fazla bilgi için bkz. [Domain-Specific dil tanımlama](../modeling/how-to-define-a-domain-specific-language.md).
 
 ## <a name="expose-the-color-and-style-of-a-shape-as-properties"></a>Şeklin rengini ve stilini özellikler olarak kullanıma sunma
 
-DSL tanımında, şekil sınıfına sağ tıklayın, **gösterilen Ekle**' nin üzerine gelin ve ardından **Fill Color**gibi öğelerden birine tıklayın.
+DSL tanımında, şekil sınıfına sağ tıklayın, **gösterilen Ekle**' nin üzerine gelin ve ardından **Fill Color** gibi öğelerden birine tıklayın.
 
 Artık şekil, program kodunda veya Kullanıcı olarak ayarlayabileceğiniz bir etki alanı özelliğine sahiptir. Örneğin, bunu bir komutun veya kuralın program kodunda ayarlamak için şunu yazabilirsiniz:
 

@@ -1,5 +1,7 @@
 ---
 title: Bir Çözümde Birden Çok DSL
+description: Tek bir çözümün bir parçası olarak, etki alanına özgü birkaç dili (DSLs) birlikte yüklenmek üzere nasıl paketleyeceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f2eef29db24da3be0a9376ea76a9a1a551af9e1a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1fbadc93f6245427284ea10c1cdd7cf99c5a7f68
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85542603"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363098"
 ---
 # <a name="multiple-dsls-in-one-solution"></a>Bir Çözümde Birden Çok DSL
 
@@ -32,7 +34,7 @@ Birden çok DSLs 'yi bütünleştirmek için birkaç teknik kullanabilirsiniz. D
 
    - **DSL** ve **DslPackage** projelerinin adlarını farklı olacak şekilde değiştirin. Örneğin: `Dsl1` ,, `DslPackage1` `Dsl2` , `DslPackage2` .
 
-   - Her **DslPackage \* \ Source.Extension.tt**içinde, bu satırı doğru DSL projesi adına güncelleştirin:
+   - Her **DslPackage \* \ Source.Extension.tt** içinde, bu satırı doğru DSL projesi adına güncelleştirin:
 
       `string dslProjectName = "Dsl2";`
 
@@ -40,7 +42,7 @@ Birden çok DSLs 'yi bütünleştirmek için birkaç teknik kullanabilirsiniz. D
 
 2. DSLs 'lerin VSıX bildirimlerini birleştirin:
 
-   1. _Yourvaltıproject_**\Source.Extension.manifest**açın.
+   1. _Yourvaltıproject_**\Source.Extension.manifest** açın.
 
    2. Her DSL için **Içerik Ekle** ve Ekle ' yi seçin:
 

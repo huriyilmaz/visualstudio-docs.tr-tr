@@ -1,5 +1,7 @@
 ---
 title: Modelleri, Sınıfları ve İlişkileri Anlama
+description: Bir etki alanına özgü dilin (DSL) DSL tanım dosyası tarafından nasıl tanımlandığını ve DSL çözümünde program kodunun çoğunun bu dosyadan nasıl oluşturulduğunu öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 08981e4f63c84d19d4086c75fe33a8b19a515ccf
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: d912e98d01448a378acbed79e2278f70f62436e7
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809982"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362697"
 ---
 # <a name="understanding-models-classes-and-relationships"></a>Modelleri, Sınıfları ve İlişkileri Anlama
 Bir etki alanına özgü dil (DSL), yazılabilir olabilecek özel program kodları ile birlikte DSL tanım dosyası tarafından tanımlanır. DSL çözümünde program kodunun çoğu bu dosyadan oluşturulur.
@@ -37,7 +39,7 @@ Bir etki alanına özgü dil (DSL), yazılabilir olabilecek özel program kodlar
 ### <a name="models-are-instances-of-dsls"></a>Modeller DSLs örnekleridir
  *Model* , bir kullanıcı tarafından oluşturulan DSL 'nin bir örneğidir. Bir model, tanımladığınız etki alanı sınıflarının örnekleri olan model öğelerini ve tanımladığınız etki alanı ilişkilerinin örnekleri olan öğeler arasındaki bağlantıları içerir. Bir modelde model öğeleri ve bir diyagram üzerinde bağlantıları görüntüleyen şekiller ve bağlayıcılar da bulunabilir. DSL tanımı, şekil sınıfları, bağlayıcı sınıfları ve diyagram için bir sınıf içerir.
 
- Bir DSL tanımı, *etki alanı modeli*olarak da bilinir. DSL tanımı veya etki alanı modeli, etki alanına özgü dilin tasarım zamanı gösterimidir, ancak model alana özgü dilin çalışma zamanı örneklemedir.
+ Bir DSL tanımı, *etki alanı modeli* olarak da bilinir. DSL tanımı veya etki alanı modeli, etki alanına özgü dilin tasarım zamanı gösterimidir, ancak model alana özgü dilin çalışma zamanı örneklemedir.
 
 ## <a name="domain-classes-define-model-elements"></a>Etki alanı sınıfları model öğelerini tanımlar
  Etki alanı sınıfları, etki alanındaki çeşitli öğeleri oluşturmak için kullanılır ve etki alanı ilişkileri, öğeler arasındaki bağlantılardır. Bunlar, modellerini oluştururken tasarıma özgü dilin kullanıcıları tarafından örneklendirilecektir öğelerin ve bağlantıların tasarım zamanı gösterimidir.
@@ -77,7 +79,7 @@ Bir etki alanına özgü dil (DSL), yazılabilir olabilecek özel program kodlar
 ## <a name="domain-relationships"></a>Etki alanı Ilişkileri
  Model öğeleri ilişkilerle bağlanabilir. Bağlantılar her zaman binary; tam olarak iki öğe bağlar. Ancak, herhangi bir öğe diğer nesnelere birçok bağlantıya sahip olabilir ve aynı öğe çifti arasında birden fazla bağlantı bile olabilir.
 
- Farklı öğe sınıfları tanımlayabileceğiniz gibi, farklı bağlantı sınıfları tanımlayabilirsiniz. Bir bağlantının sınıfına *etki alanı ilişkisi*denir. Bir etki alanı ilişkisi, örneklerinin hangi öğe sınıflarının bağlanabileceği belirler. Bir ilişkinin her ucuna *rol*adı verilir ve etki alanı ilişkisi, ilişkinin kendisi için ve olmak üzere iki rolün adlarını tanımlar.
+ Farklı öğe sınıfları tanımlayabileceğiniz gibi, farklı bağlantı sınıfları tanımlayabilirsiniz. Bir bağlantının sınıfına *etki alanı ilişkisi* denir. Bir etki alanı ilişkisi, örneklerinin hangi öğe sınıflarının bağlanabileceği belirler. Bir ilişkinin her ucuna *rol* adı verilir ve etki alanı ilişkisi, ilişkinin kendisi için ve olmak üzere iki rolün adlarını tanımlar.
 
  İki tür etki alanı ilişkisi vardır: ilişkileri ve başvuru ilişkilerini katıştırma. DSL tanımı diyagramında, katıştırma ilişkilerinin her bir rolde düz satırları vardır ve başvuru ilişkilerinde kesikli çizgiler vardır.
 
@@ -128,7 +130,7 @@ Bir etki alanına özgü dil (DSL), yazılabilir olabilecek özel program kodlar
  Bir DSL tanımında ilişki oluşturduğunuzda, özellik ve ilişki adlarına varsayılan değerler verilir. Ancak, bunları değiştirebilirsiniz.
 
 ## <a name="multiplicities"></a>Çeşitlilimler
- Çoğullılıklar, bir etki alanı ilişkisinde kaç öğenin aynı role sahip olduğunu belirtir. Örnekte, Katalog rolünde bulunan sıfırdan çok (0.. \* ) çoğulluk ayarı, **Yayımcı** etki alanı **Catalog** sınıfının herhangi bir örneğinin, vermek istediğiniz kadar çok **PublisherCatalog** ilişki bağlantılarına sahip olduğunu belirtir.
+ Çoğullılıklar, bir etki alanı ilişkisinde kaç öğenin aynı role sahip olduğunu belirtir. Örnekte, Katalog rolünde bulunan sıfırdan çok (0.. \* ) çoğulluk ayarı, **Yayımcı** etki alanı  sınıfının herhangi bir örneğinin, vermek istediğiniz kadar çok **PublisherCatalog** ilişki bağlantılarına sahip olduğunu belirtir.
 
  Diyagram üzerine yazarak veya `Multiplicity` **Özellikler** penceresinde özelliğini değiştirerek bir rolün çoğulluğu yapılandırın. Aşağıdaki tabloda bu özelliğin ayarları açıklanmaktadır.
 

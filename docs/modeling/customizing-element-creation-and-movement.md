@@ -1,5 +1,7 @@
 ---
 title: Öğe Oluşturma ve Hareketini Özelleştirme
+description: Bir öğenin, araç kutusundan veya bir yapıştırma ya da taşıma işleminde diğerine nasıl sürüklendiğini öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -11,18 +13,18 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a94f1e3321d846578ea42c69e50d48713ff618fb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 96ef956980b08e688970ad0a00d7d1a0804da7c3
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547270"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363126"
 ---
 # <a name="customizing-element-creation-and-movement"></a>Öğe Oluşturma ve Hareketini Özelleştirme
 
 Bir öğenin, araç kutusundan veya bir yapıştırma ya da taşıma işleminde diğerine sürüklenmesi için izin verebilirsiniz. Taşınan öğelerin, belirttiğiniz ilişkileri kullanarak hedef öğelere bağlı olmasını sağlayabilirsiniz.
 
-Bir öğe birleştirme yönergesi (EMD), bir model öğe başka bir model öğesiyle *birleştirildiğinde* ne olacağını belirtir. Bunun nedeni:
+Bir öğe birleştirme yönergesi (EMD), bir model öğe başka bir model öğesiyle *birleştirildiğinde* ne olacağını belirtir. Aşağıdaki durumlarda bu gerçekleşir:
 
 - Kullanıcı araç kutusundan diyagrama veya bir şekle sürükler.
 
@@ -97,7 +99,7 @@ Kullanıcılar ayrıca öğeleri diğer öğelere de yapıştırabilirsiniz.
 
     Dizin oluşturma sınıfının DSL Gezgini 'nde EMTıD 'nin adı olduğuna dikkat edin.
 
-4. **Bağlantılar oluşturarak işlem birleştirme**altında iki yol ekleyin:
+4. **Bağlantılar oluşturarak işlem birleştirme** altında iki yol ekleyin:
 
    - Bir yol, yeni öğeyi üst modele bağlar. Girmeniz gereken yol ifadesi, ana modele eklenen ilişki aracılığıyla varolan öğeden gider. Son olarak, yeni öğenin atanacağı yeni bağlantıda rolü belirtir. Yol aşağıdaki gibidir:
 
@@ -109,7 +111,7 @@ Kullanıcılar ayrıca öğeleri diğer öğelere de yapıştırabilirsiniz.
 
       Yol gezintisi aracını her bir yolu oluşturmak için kullanabilirsiniz:
 
-      1. **Yollarda bağlantılar oluşturarak işlem birleştirme**altında öğesine tıklayın **\<add path>** .
+      1. **Yollarda bağlantılar oluşturarak işlem birleştirme** altında öğesine tıklayın **\<add path>** .
 
       2. Liste öğesinin sağ tarafındaki aşağı açılan oka tıklayın. Ağaç görünümü görüntülenir.
 
@@ -224,11 +226,11 @@ EMD 'ye özel kod ekleyerek, daha karmaşık birleştirme davranışı tanımlay
 
      Örneğin, en düşük dil çözümünden oluşturulan bir DSL 'de öğesini seçin `ExampleModel` .
 
-3. **Özellikler** penceresinde, **çift türetilmiş** öğesini **true**olarak ayarlayın.
+3. **Özellikler** penceresinde, **çift türetilmiş** öğesini **true** olarak ayarlayın.
 
 4. Çözümü yeniden derleyin.
 
-5. **Dsl\generated Files\DomainClasses.cs**içeriğini inceleyin. Adlı yöntemleri arayın `MergeRelate` ve içeriklerini inceleyin. Bu, kendi sürümlerinizi yazmanıza yardımcı olur.
+5. **Dsl\generated Files\DomainClasses.cs** içeriğini inceleyin. Adlı yöntemleri arayın `MergeRelate` ve içeriklerini inceleyin. Bu, kendi sürümlerinizi yazmanıza yardımcı olur.
 
 6. Yeni bir kod dosyasında, alıcı sınıf için kısmi bir sınıf yazın ve yöntemi geçersiz kılın `MergeRelate` . Temel yöntemi çağırmayı unutmayın. Örneğin:
 
@@ -258,7 +260,7 @@ EMD 'ye özel kod ekleyerek, daha karmaşık birleştirme davranışı tanımlay
 
 ### <a name="to-write-custom-merge-code"></a>Özel birleştirme kodu yazmak için
 
-1. **Dsl\generated Code\DomainClasses.cs**içinde adlı yöntemleri inceleyin `MergeRelate` . Bu yöntemler yeni bir öğe ve var olan model arasında bağlantılar oluşturur.
+1. **Dsl\generated Code\DomainClasses.cs** içinde adlı yöntemleri inceleyin `MergeRelate` . Bu yöntemler yeni bir öğe ve var olan model arasında bağlantılar oluşturur.
 
     Ayrıca, adlı yöntemleri inceleyin `MergeDisconnect` . Bu yöntemler, silinecek bir öğenin modelden bağlantısını kaldırın.
 
@@ -290,7 +292,7 @@ Bileşen modeli çözümünde bir ileriye doğru birleştirme yönergesi oluştu
 
 3. **DSL Gezgini**' nde, **etki alanı sınıfları**' nı genişletin.
 
-4. **ComponentPort** soyut etki alanı sınıfı, hem **InPort** hem de **OutPort**temel sınıfıdır. **ComponentPort** öğesine sağ tıklayın ve ardından **Yeni öğe birleştirme yönergesi Ekle**' ye tıklayın.
+4. **ComponentPort** soyut etki alanı sınıfı, hem **InPort** hem de **OutPort** temel sınıfıdır. **ComponentPort** öğesine sağ tıklayın ve ardından **Yeni öğe birleştirme yönergesi Ekle**' ye tıklayın.
 
     **Öğe birleştirme yönergeleri** düğümünün altında yeni bir **öğe birleştirme yönergesi** düğümü görüntülenir.
 
@@ -298,7 +300,7 @@ Bileşen modeli çözümünde bir ileriye doğru birleştirme yönergesi oluştu
 
 6. Dizin oluşturma sınıfı listesinde, **ComponentPort**' ı seçin.
 
-7. **Farklı bir etki alanı sınıfına ileri birleştirme**seçeneğini belirleyin.
+7. **Farklı bir etki alanı sınıfına ileri birleştirme** seçeneğini belirleyin.
 
 8. Yol seçimi listesinde, **ComponentPort**' ı genişletin, **ComponentHasPorts**' yi genişletin ve **bileşen**' i seçin.
 
@@ -314,7 +316,7 @@ Bileşen modeli çözümünde bir ileriye doğru birleştirme yönergesi oluştu
 
 12. **Araç kutusundan** bir **giriş bağlantı noktasını** başka bir **giriş bağlantı noktasına sürükleyin.** Ardından, bir **outputport** değerini bir **ınputport** 'a ve sonra başka bir **outputport**'a sürükleyin.
 
-     Kullanılamayan işaretçiyi görmemelisiniz ve yeni **giriş bağlantı noktasını** var olan bir üzerine bırakabilirsiniz. Yeni **giriş bağlantı noktasını** seçin ve **bileşen**üzerindeki başka bir noktaya sürükleyin.
+     Kullanılamayan işaretçiyi görmemelisiniz ve yeni **giriş bağlantı noktasını** var olan bir üzerine bırakabilirsiniz. Yeni **giriş bağlantı noktasını** seçin ve **bileşen** üzerindeki başka bir noktaya sürükleyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

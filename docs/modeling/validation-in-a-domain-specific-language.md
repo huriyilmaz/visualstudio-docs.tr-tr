@@ -1,5 +1,7 @@
 ---
 title: Etki Alanına Özgü bir Dilde Doğrulama
+description: Kullanıcı tarafından oluşturulan modelin anlamlı olduğunu doğrulamak için doğrulama kısıtlamalarını nasıl tanımlayabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7a37dbb4d9754641b4bcca826ff0ec77c7298d9b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cb9baced0a4cc38ae175146d3f3779c5b9c28dd2
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75594012"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362541"
 ---
 # <a name="validation-in-a-domain-specific-language"></a>Etki Alanına Özgü bir Dilde Doğrulama
 Etki alanına özgü dilin (DSL) yazarı olarak, Kullanıcı tarafından oluşturulan modelin anlamlı olduğunu doğrulamak için doğrulama kısıtlamaları tanımlayabilirsiniz. Örneğin, DSL 'niz kullanıcıların bir kişi ve üst öğelerinden oluşan aile ağacını çizmesini sağlamasına izin veriyorsa, alt öğelerinden sonra Doğum tarihleri olmasını sağlayan bir kısıtlama yazabilirsiniz.
@@ -125,7 +127,7 @@ public partial class ParentsHaveChildren
 
  Bu kodla ilgili aşağıdaki noktalara dikkat edin:
 
-- , Etki alanı sınıflarına veya etki alanı ilişkilerine doğrulama yöntemleri ekleyebilirsiniz. Bu türlerin kodu **Dsl\generated Code\Domain \* . cs**dosyasında bulunur.
+- , Etki alanı sınıflarına veya etki alanı ilişkilerine doğrulama yöntemleri ekleyebilirsiniz. Bu türlerin kodu **Dsl\generated Code\Domain \* . cs** dosyasında bulunur.
 
 - Her doğrulama yöntemi, sınıfının ve alt sınıflarının her örneğine uygulanır. Bir etki alanı ilişkisi söz konusu olduğunda, her örnek iki model öğesi arasında bir bağlantıdır.
 
@@ -189,11 +191,11 @@ if (erroneousLinks.Count < 5) { context.LogError( ... ); }
 ```
 
 ## <a name="validation-of-multiplicities"></a>Çeşitlilimler doğrulaması
- Minimum çoğulluğu denetlemek için doğrulama yöntemleri DSL 'niz için otomatik olarak oluşturulur. Kod **Dsl\generated Code\MultiplicityValidation.cs dizinine**yazılır. Bu yöntemler, DSL Explorer 'daki **Editor\validation** düğümünde doğrulamayı etkinleştirdiğinizde geçerli olur.
+ Minimum çoğulluğu denetlemek için doğrulama yöntemleri DSL 'niz için otomatik olarak oluşturulur. Kod **Dsl\generated Code\MultiplicityValidation.cs dizinine** yazılır. Bu yöntemler, DSL Explorer 'daki **Editor\validation** düğümünde doğrulamayı etkinleştirdiğinizde geçerli olur.
 
  Bir etki alanı ilişkisinin bir rolünün çokluğunu 1.. * veya 1.. 1 olacak şekilde ayarlarsanız, Kullanıcı bu ilişkinin bir bağlantısını oluşturmaz, bir doğrulama hata iletisi görüntülenir.
 
- Örneğin, DSL 'niz kişi ve kasalara sahipse ve ilişki 1 olan bir ilişkiye sahip olan bir ilişki **. \\ ** * Town rolünde, şehir olmayan her kişi için bir hata mesajı görüntülenir.
+ Örneğin, DSL 'niz kişi ve kasalara sahipse ve ilişki 1 olan bir ilişkiye sahip olan bir ilişki **. \\** _ Town rolünde, şehir olmayan her kişi için bir hata mesajı görüntülenir.
 
 ## <a name="running-validation-from-program-code"></a>Program kodundan doğrulama çalıştırma
  Doğrulaması, bir ValidationController 'a erişerek veya oluşturarak çalıştırabilirsiniz. Hataların hata penceresinde kullanıcıya görüntülenmesini istiyorsanız, diyagramınızın DocData 'a eklenmiş olan ValidationController ' ı kullanın. Örneğin, bir menü komutu yazıyorsanız, `CurrentDocData.ValidationController` komut kümesi sınıfında kullanılabilir:
@@ -233,7 +235,7 @@ if (!validator.Validate(store, ValidationCategories.Save))
 ## <a name="running-validation-when-a-change-occurs"></a>Değişiklik gerçekleştiğinde doğrulama çalıştırma
  Modelin geçersiz hale gelmesi durumunda kullanıcının hemen uyarı olduğundan emin olmak istiyorsanız, doğrulamayı çalıştıran bir depo olayı tanımlayabilirsiniz. Mağaza olayları hakkında daha fazla bilgi için bkz. [olay Işleyicileri değişiklikleri model dışında yayma](../modeling/event-handlers-propagate-changes-outside-the-model.md).
 
- Doğrulama koduna ek olarak, aşağıdaki örneğe benzer içeriğe sahip **DslPackage** projenize özel bir kod dosyası ekleyin. Bu kod, `ValidationController` belgeye eklenmiş olan öğesini kullanır. Bu denetleyici, Visual Studio hata listesindeki doğrulama hatalarını görüntüler.
+ Doğrulama koduna ek olarak, aşağıdaki örneğe benzer şekilde, _ *DslPackage** projenize özel bir kod dosyası ekleyin. Bu kod, `ValidationController` belgeye eklenmiş olan öğesini kullanır. Bu denetleyici, Visual Studio hata listesindeki doğrulama hatalarını görüntüler.
 
 ```csharp
 using System;

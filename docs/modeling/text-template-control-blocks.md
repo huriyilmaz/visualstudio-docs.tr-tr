@@ -1,5 +1,7 @@
 ---
 title: Metin Şablonu Denetim Blokları
+description: Metin şablonu denetim blokları ve denetim bloklarının çıktıyı değiştirmek için metin şablonunuza kod yazmanıza nasıl izin vereceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ef39e82ea1abe95b3bea799545ed7fbf5b766fd3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 11cc289f668a674707c584396998ea7abb9e7ea9
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75591794"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363594"
 ---
 # <a name="text-template-control-blocks"></a>Metin Şablonu Denetim Blokları
 Denetim blokları çıktıyı değiştirmek için metin şablonunuza kod yazmanızı sağlar. Sol köşeli ayraçlarına göre ayırt edilen üç tür denetim bloğu vardır:

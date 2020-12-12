@@ -1,5 +1,7 @@
 ---
 title: MEF kullanarak DSL'nizi genişletme
+description: Managed Extensibility Framework (MEF) kullanarak etki alanına özgü dili (DSL) nasıl genişletebileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 04d14b3b17953ef30620d9f616bb471b186e9c9f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 20dc9b6ac1bd4e565fd10793889c611f9b039778
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547647"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363178"
 ---
 # <a name="extend-your-dsl-by-using-mef"></a>MEF kullanarak DSL'nizi genişletme
 
@@ -95,7 +97,7 @@ MEF hakkında daha fazla bilgi için bkz. [Managed Extensibility Framework (MEF)
     <#@ include file="Dsl\GestureExtensionController.tt" #>
     ```
 
-3. Aşağıdaki satırı **Dslpackage\commands.vsct**adlı mevcut dosyaya ekleyin:
+3. Aşağıdaki satırı **Dslpackage\commands.vsct** adlı mevcut dosyaya ekleyin:
 
     ```xml
     <Include href="MefExtension\CommandExtensionVSCT.vsct"/>
@@ -129,7 +131,7 @@ Kendiniz veya başka biri tarafından oluşturulan MEF özellikli bir DSL 'ye er
 
    - Bu derleme genellikle ".Dsl.dll" ile biten bir ada sahiptir.
 
-   - DSL projesine erişiminiz varsa, derleme dosyasını Dizin **DSL \\ bin \\ \* ** altında bulabilirsiniz.
+   - DSL projesine erişiminiz varsa derleme dosyasını **DSL \\ bin \\ \** _ dizininde bulabilirsiniz.
 
    - DSL VSıX dosyasına erişiminiz varsa, VSıX dosyasının dosya adı uzantısını ". zip" olarak değiştirerek derlemeyi bulabilirsiniz. . Zip dosyasını sıkıştırmasını açın.
 
@@ -145,23 +147,23 @@ Kendiniz veya başka biri tarafından oluşturulan MEF özellikli bir DSL 'ye er
 
    - System.Windows.Forms.dll
 
-4. Yeni bir **VSIX proje** projesi oluşturun.
+4. Yeni bir _ *VSIX proje** projesi oluşturun.
 
 5. **Çözüm Gezgini**, VSIX projesine sağ tıklayın ve **Başlangıç projesi olarak ayarla**' yı seçin.
 
 6. Yeni projede, açık **kaynak. Extension. valtmanifest**' i açın.
 
-7. **Içerik Ekle**' ye tıklayın. İletişim kutusunda, **Içerik türünü** **MEF bileşeni**ve **kaynak proje** ' yi sınıf kitaplığı projenize ayarlayın.
+7. **Içerik Ekle**' ye tıklayın. İletişim kutusunda, **Içerik türünü** **MEF bileşeni** ve **kaynak proje** ' yi sınıf kitaplığı projenize ayarlayın.
 
 8. DSL 'ye bir VSıX başvurusu ekleyin.
 
-   1. **Source. Extension. valtmanifest**Içinde **Başvuru Ekle** ' ye tıklayın.
+   1. **Source. Extension. valtmanifest** Içinde **Başvuru Ekle** ' ye tıklayın.
 
-   2. İletişim kutusunda **Yük Ekle** ' ye tıklayın ve ardından dsl dosyasının VSIX dosyasını bulun. VSıX dosyası, **DslPackage \\ bin \\ \* **' de DSL çözümünde yerleşiktir.
+   2. İletişim kutusunda **Yük Ekle** ' ye tıklayın ve ardından dsl dosyasının VSIX dosyasını bulun. VSıX dosyası, **DslPackage \\ bin \\ \** _ içindeki DSL çözümünde oluşturulmuştur.
 
        Bu, kullanıcıların DSL 'yi ve uzantınızı aynı anda yüklemesine olanak tanır. Kullanıcı DSL 'yi zaten yüklemiştir, yalnızca uzantınızın yüklenmesi gerekir.
 
-9. **Kaynak. Extension. valtmanifest**'in diğer alanlarını gözden geçirin ve güncelleştirin. **Sürümleri Seç** ' e tıklayın ve doğru Visual Studio sürümlerinin ayarlandığını doğrulayın.
+9. _ * Kaynak. Extension. valtmanifest * * diğer alanlarını gözden geçirin ve güncelleştirin. **Sürümleri Seç** ' e tıklayın ve doğru Visual Studio sürümlerinin ayarlandığını doğrulayın.
 
 10. Sınıf kitaplığı projesine kod ekleyin. Bir sonraki bölümdeki örnekleri kılavuz olarak kullanın.
 
@@ -175,7 +177,7 @@ Ayrı bir DSL uzantısı çözümünün derleme kodu projesinde uzantı yazabili
 
 ### <a name="menu-commands"></a>Menü Komutları
 
-Bir menü komutu yazmak için, bir sınıfı, uygulayan <xref:Microsoft.VisualStudio.Modeling.ExtensionEnablement.ICommandExtension> ve DSL ADLı DSL adında tanımlanmış olan özniteliğe önek olarak tanımlayın *YourDsl* `CommandExtension` . Birden fazla menü komut sınıfı yazabilirsiniz.
+Bir menü komutu yazmak için, bir sınıfı, uygulayan <xref:Microsoft.VisualStudio.Modeling.ExtensionEnablement.ICommandExtension> ve DSL ADLı DSL adında tanımlanmış olan özniteliğe önek olarak tanımlayın  `CommandExtension` . Birden fazla menü komut sınıfı yazabilirsiniz.
 
 `QueryStatus()` kullanıcının diyagrama sağ tıkladığı her zaman çağrılır. Geçerli seçimi incelemelidir ve `command.Enabled` komutun ne zaman geçerli olduğunu belirtecek şekilde ayarlanmalıdır.
 
@@ -323,7 +325,7 @@ namespace MefExtension
 
 Doğrulama yöntemleri `ValidationExtension` DSL tarafından oluşturulan öznitelik tarafından ve ayrıca tarafından işaretlenir <xref:Microsoft.VisualStudio.Modeling.Validation.ValidationMethodAttribute> . Yöntemi bir öznitelik tarafından işaretlenmemiş herhangi bir sınıfta bulunabilir.
 
-Daha fazla bilgi için bkz. [etki alanına özgü bir dilde doğrulama](../modeling/validation-in-a-domain-specific-language.md).
+Daha fazla bilgi için bkz. [Domain-Specific dilinde doğrulama](../modeling/validation-in-a-domain-specific-language.md).
 
 ```csharp
 using Company.MyDsl;

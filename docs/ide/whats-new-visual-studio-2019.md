@@ -15,12 +15,12 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: de5027024956c03341ac3e2d851bf85430f48f18
-ms.sourcegitcommit: f78960320798e2c6b33145cee77a2221f031603c
+ms.openlocfilehash: 69fb3d8b5e8af13ec8781e65e60bd060ad69d365
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94878302"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362398"
 ---
 # <a name="whats-new-in-visual-studio-2019"></a>Visual Studio 2019’daki yenilikler
 
@@ -114,7 +114,7 @@ Daha fazla bilgi için bkz. [Visual Studio 2019 blog gönderisi Ile daha iyi ço
 
 Daha fazla bilgi için bkz. [.NET Core 3,0](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0/) blog gönderisi duyurusu.
 
-## <a name="collaborate"></a>İşbirliği yapma
+## <a name="collaborate"></a>İşbirliği
 
 Sorunları çözmek için nasıl ekip sağlayabileceğiniz hakkında daha fazla bilgi edinmek için aşağıdaki videoyu görüntüleyin. <br><br>*Video uzunluğu: 4,22 dakika*
 
@@ -136,9 +136,9 @@ Daha fazla bilgi için bkz. [Get to Code: yeni Visual Studio başlangıç pencer
 
 ### <a name="git-productivity"></a>Git verimliliği
 
-**16,8 ' de yeni** Git artık Visual Studio 2019 ' de varsayılan sürüm denetimi deneyimidir. Son iki yayın sırasında geri bildirimlerinizi temel alarak, özellik kümesini geliştirdik ve bu, yineleyecek şekilde serbest bırakıldı. Yeni deneyim artık herkes için varsayılan olarak açıktır. Yeni Git menüsünde depoları kopyalayabilir, oluşturabilir veya açabilirsiniz. Kodunuzda değişiklikleri yürütmek ve göndermek, dalları yönetmek, uzak depolarınızda güncel kalmak ve birleştirme çakışmalarını çözmek için tümleşik git araç pencerelerini kullanın.
+**16,8 ' deki yenilikler**: git artık Visual Studio 2019 ' de varsayılan sürüm denetimi deneyimidir. Son iki yayın sırasında geri bildirimlerinizi temel alarak, özellik kümesini geliştirdik ve bu, yineleyecek şekilde serbest bırakıldı. Yeni deneyim artık herkes için varsayılan olarak açıktır. Yeni Git menüsünde depoları kopyalayabilir, oluşturabilir veya açabilirsiniz. Kodunuzda değişiklikleri yürütmek ve göndermek, dalları yönetmek, uzak depolarınızda güncel kalmak ve birleştirme çakışmalarını çözmek için tümleşik git araç pencerelerini kullanın.
 
-Daha fazla bilgi için bkz. [Visual Studio 'Da git üretkenlik](git-with-visual-studio.md) sayfası.
+Daha fazla bilgi için bkz. [Visual Studio 'Da git deneyimi](git-with-visual-studio.md) sayfası.
 
 ### <a name="live-share"></a>Live Share
 
@@ -226,7 +226,7 @@ Bu sırada, şu anda çalışmadaki yeni özelliklerden bazıları aşağıda ve
 
    Yeni git sürüm denetimi deneyimi artık Visual Studio 2019 [sürüm 16,8](/visualstudio/releases/2019/release-notes/)' de varsayılan olarak açık olsa da, deneyimi en yeni önizleme sürümünde iyileştirmek için özellikler eklemeye devam ediyoruz.
 
-   Daha fazla bilgi için bkz. [Visual Studio 'Da git üretkenlik](git-with-visual-studio.md) sayfası.
+   Daha fazla bilgi için bkz. [Visual Studio 'Da git deneyimi](git-with-visual-studio.md) sayfası.
 
 Önizleme sürümü ve bir indirme bağlantısı hakkında daha fazla bilgi için &mdash; &mdash; bkz. **[Visual Studio önizleme](https://aka.ms/vspreview/)** sayfası.
 
@@ -240,6 +240,7 @@ Visual Studio ekibine neden geri bildirim gönderilsin? Müşteri geri bildiriml
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
+* [Visual Studio docs 'taki yenilikler](whats-new-visual-studio-docs.md)
 * [Visual Studio 2019 sürüm notları](/visualstudio/releases/2019/release-notes/)
 * [Mac için Visual Studio 2019 sürüm notları](/visualstudio/releasenotes/vs2019-mac-relnotes/)
 * [Visual Studio 2019 SDK 'daki yenilikler](../extensibility/whats-new-visual-studio-2019-sdk.md)

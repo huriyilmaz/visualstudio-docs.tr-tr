@@ -1,5 +1,7 @@
 ---
 title: Modelleme çözümünüzün yapısını oluşturma
+description: Uygulamayı, genel bir katman diyagramındaki katmanlara karşılık gelen farklı bölümlere bölmek için modelleme şeması öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cc4eba7dc4d185cbd8eb4f1b073fce8b0c9fb07e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9d2f865cf66da0bb4496a3d754a49d1f4dcc70ff
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85545047"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363737"
 ---
 # <a name="structure-your-modeling-solution"></a>Modelleme çözümünüzün yapısını oluşturma
 

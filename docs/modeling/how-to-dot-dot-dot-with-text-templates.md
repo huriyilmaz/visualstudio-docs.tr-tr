@@ -1,5 +1,7 @@
 ---
 title: Nasıl yapılır ... Metin Şablonları ile
+description: Metin oluşturmak için metin şablonları kullanırken karşılaşılan yaygın soruların yanıtlarını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a7ecabc00f37cb199f203bcd71a1b72bdbfbe1a4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 50844ce8c6943fcf6b2a0b91c7fd2cfcb6184094
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75594662"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363191"
 ---
 # <a name="how-to--with-text-templates"></a>Nasıl yapılır ... Metin Şablonları ile
 Visual Studio 'daki metin şablonları, herhangi bir türde metin oluşturmanın yararlı bir yolunu sağlar. Metin şablonlarını, uygulamanızın bir parçası olarak çalışma zamanında metin oluşturmak için ve tasarım zamanında proje kodunuzun bazılarını oluşturmak için kullanabilirsiniz. Bu konu, en sık sorulan "Nasıl yaparım?...?" öğesini özetler. UL.
@@ -75,7 +77,7 @@ Yöntemleri kendiniz yazıyorsanız:
 
      `foreach (Book book in this.Library) { ... }`
 
-     Daha fazla bilgi için bkz. [etki alanına özgü dilleri](../modeling/getting-started-with-domain-specific-languages.md) kullanmaya başlama ve [etki alanına özgü dilden kod oluşturma](../modeling/generating-code-from-a-domain-specific-language.md).
+     Daha fazla bilgi için bkz. [Domain-Specific dillerle çalışmaya](../modeling/getting-started-with-domain-specific-languages.md) başlama ve [bir Domain-Specific dilinden kod üretme](../modeling/generating-code-from-a-domain-specific-language.md).
 
 ### <a name="get-data-from-visual-studio"></a>Visual Studio 'dan veri al
  Visual Studio 'da sunulan hizmetleri kullanmak için, `hostSpecific` özniteliğini ayarlayıp `EnvDTE` derlemeyi yükleyin. Örneğin:

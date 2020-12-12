@@ -1,5 +1,7 @@
 ---
 title: Görselleştirme ve SDK modelleme için desteklenen Visual Studio sürümleri
+description: Yazma ve dağıtım ortamlarında DSL araçlarıyla desteklenen Visual Studio sürümleri hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -10,12 +12,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 908a224feb9f6ad463ae14812b3a8550bf932e35
-ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
+ms.openlocfilehash: 714b3d018e2522c9f6acf3b15ffec82a0b5d49ec
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "92298552"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363724"
 ---
 # <a name="supported-visual-studio-editions-for-visualization--modeling-sdk"></a>Görselleştirme ve Modelleme SDK’sı için Desteklenen Visual Studio Sürümleri
 

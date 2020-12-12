@@ -1,5 +1,7 @@
 ---
 title: Kopyalama Davranışını Özelleştirme
+description: Visual Studio görselleştirme ve modelleme SDK 'Sı ile oluşturulan bir DSL 'de, kullanıcı öğeleri kopyaladığında ve yapıştırdığında ne olacağını değiştirebilirsiniz.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b189d3dbd5c1872094b0c1be2a64eb2c02bf1e2e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8eee81440c0dda7f193d3e37eab700ada3ff259f
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547348"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363113"
 ---
 # <a name="customizing-copy-behavior"></a>Kopyalama Davranışını Özelleştirme
 Visual Studio görselleştirme ve modelleme SDK 'Sı ile oluşturulan, etki alanına özgü bir dilde (DSL), kullanıcı öğeleri kopyaladığında ve yapıştırdığında ne olacağını değiştirebilirsiniz.
@@ -43,10 +45,10 @@ Visual Studio görselleştirme ve modelleme SDK 'Sı ile oluşturulan, etki alan
 DSL Gezgini ' nde **Düzenleyici** düğümünün **kopyalama Yapıştır özelliğini etkinleştir** ' i ayarlayın.
 
  **Bağlantıları aynı hedefe kopyalayın.** Örneğin, aynı konu öğesine bağlanmış bir kopyalanmış yorum kutusu eklemek için.
-Rolü **yalnızca bağlantıya yaymak**Için rolün **yayan Copy** özelliğini ayarlayın. Daha fazla bilgi için bkz. [bağlantı kopyalama davranışını özelleştirme](#customizeLinks).
+Rolü **yalnızca bağlantıya yaymak** Için rolün **yayan Copy** özelliğini ayarlayın. Daha fazla bilgi için bkz. [bağlantı kopyalama davranışını özelleştirme](#customizeLinks).
 
  Bağlantılı öğeleri kopyala. Örneğin, yeni bir öğesi kopyaladığınızda, bağlantılı açıklama kutularının kopyaları da yapılır.
-**Kopyayı bağlantı ve karşıt rol oyuncusuna yaymak**Için rolün **yayan Copy** özelliğini ayarlayın. Daha fazla bilgi için bkz. [bağlantı kopyalama davranışını özelleştirme](#customizeLinks).
+**Kopyayı bağlantı ve karşıt rol oyuncusuna yaymak** Için rolün **yayan Copy** özelliğini ayarlayın. Daha fazla bilgi için bkz. [bağlantı kopyalama davranışını özelleştirme](#customizeLinks).
 
  **Öğeleri kopyalayıp yapıştırarak hızla çoğaltın.** Normal olarak, yeni kopyaladığınız öğe hala seçilidir ve aynı öğe türünü üzerine yapıştıramazsınız.
 Etki alanı sınıfına bir öğe birleştirme yönergesi ekleyin ve birleştirme Işlemini üst sınıfa ilet olarak ayarlayın. Bu, sürükleme işlemlerinde aynı etkiye sahip olacaktır. Daha fazla bilgi için bkz. [öğe oluşturma ve hareketini özelleştirme](../modeling/customizing-element-creation-and-movement.md).
@@ -80,10 +82,10 @@ Hedef etki alanı sınıfına bir öğe birleştirme yönergesi ekleyin ve bağl
  `ClipboardCommandSet.ProcessOnPasteCommand()`Temel yöntemi çağırdıktan sonra ek bağlantılar oluşturmak için geçersiz kılın.
 
  **Öğelerin dış uygulamalara kopyalanabilen biçimleri** (örneğin, bit eşlem biçimine bir kenarlık eklemek) özelleştirin.
-*MyDsl* `ClipboardCommandSet.ProcessOnMenuCopyCommand()` DslPackage projesinde MyDSL 'yi geçersiz kılın.
+ `ClipboardCommandSet.ProcessOnMenuCopyCommand()` DslPackage projesinde MyDSL 'yi geçersiz kılın.
 
  **Öğelerin Pano 'ya kopyalama komutu tarafından nasıl kopyalanacağını özelleştirin, ancak bir sürükleme işleminde değildir.**
-*MyDsl* `ClipboardCommandSet.CopyModelElementsIntoElementGroupPrototype()` DslPackage projesinde MyDSL 'yi geçersiz kılın.
+ `ClipboardCommandSet.CopyModelElementsIntoElementGroupPrototype()` DslPackage projesinde MyDSL 'yi geçersiz kılın.
 
  **Kopyala ve Yapıştır ile şekil yerleşimini koruyun.**
 Kullanıcı birden çok şekli kopyalarken, bu kişilerin yapıştırıldığı zaman ilgili konumlarını koruyabilirsiniz. Bu teknik, [VMSDK: devre şemaları örneğindeki](https://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)örnekle gösterilmiştir.
@@ -242,7 +244,7 @@ Bkz. [nasıl yapılır: sürükle ve bırak Işleyicisi ekleme](../modeling/how-
 
 1. DSL projenizdeki yeni bir dosyada, öğesinden türetilmiş bir sınıf oluşturun <xref:Microsoft.VisualStudio.Modeling.Diagrams.DesignSurfaceElementOperations> .
 
-2. Diyagram sınıfınız için kısmi bir sınıf tanımı ekleyin. Bu sınıfın adı **Dsl\GeneratedCode\Diagrams.cs**içinde bulunabilir.
+2. Diyagram sınıfınız için kısmi bir sınıf tanımı ekleyin. Bu sınıfın adı **Dsl\GeneratedCode\Diagrams.cs** içinde bulunabilir.
 
     Diyagram sınıfında,  <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.ElementOperations%2A> ElementOperations alt sınıfınızın bir örneğini döndürmek için geçersiz kılın. Her çağrıda aynı örneği döndürmelidir.
 

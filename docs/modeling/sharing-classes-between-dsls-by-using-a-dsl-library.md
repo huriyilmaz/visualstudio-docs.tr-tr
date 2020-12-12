@@ -1,5 +1,7 @@
 ---
 title: DSL Kitaplığı Kullanarak DSL'ler Arasında Sınıfları Paylaşma
+description: Visual Studio görselleştirme ve modelleme SDK 'sında, başka bir DSL 'ye aktarabileceğiniz tamamlanmamış bir DSL tanımı oluşturabileceğiniz hakkında bilgi edinebilirsiniz.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 38496141d6fcdd33f3bf5185c3f50b1bf961d832
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e1685fe4fc7db6728ebc1ca6a12e27bb6f42589b
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85542551"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363763"
 ---
 # <a name="sharing-classes-between-dsls-by-using-a-dsl-library"></a>DSL Kitaplığı Kullanarak DSL'ler Arasında Sınıfları Paylaşma
 Visual Studio görselleştirme ve modelleme SDK 'sında, başka bir DSL 'ye aktarabileceğiniz tamamlanmamış bir DSL tanımı oluşturabilirsiniz. Bu, benzer modellerin ortak parçalarını çarpanlara katmanızı sağlar.

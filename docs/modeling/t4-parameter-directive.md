@@ -1,5 +1,7 @@
 ---
 title: T4 Parametre Yönergesi
+description: Visual Studio 'da parametre yönergesinin, dış bağlamdan geçirilen değerlerden başlatılan şablon kodunuzda Özellikler bildirdiği hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9f833eb651efda0edb837515e1bf2b3567e1a759
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: df739f10764f20b415ac74ee4b4e529433c7dc96
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75591807"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363633"
 ---
 # <a name="t4-parameter-directive"></a>T4 Parametre Yönergesi
 
@@ -82,7 +84,7 @@ string result = t4.ProcessTemplate("",
 //     Test 32 test
 ```
 
-## <a name="passing-values-to-a-run-time-preprocessed-text-template"></a>Çalışma zamanı (önceden Işlenmiş) metin şablonuna değer geçirme
+## <a name="passing-values-to-a-run-time-preprocessed-text-template"></a>Run-Time (önceden Işlenmiş) metin şablonuna değer geçirme
  `<#@parameter#>`Çalışma zamanı (önceden işlenmiş) metin şablonlarıyla yönergesini kullanmak genellikle gerekli değildir. Bunun yerine, ek bir Oluşturucu veya oluşturulmuş kod için parametre değerlerini geçirdiğiniz ayarlanabilir bir özellik tanımlayabilirsiniz. Daha fazla bilgi için bkz. [T4 metin şablonlarıyla çalışma zamanı metin üretimi](../modeling/run-time-text-generation-with-t4-text-templates.md).
 
  Ancak, `<#@parameter>` bir çalışma zamanı şablonunda kullanmak istiyorsanız, oturum sözlüğünü kullanarak değerleri geçirebilirsiniz. Örnek olarak, dosyayı önceden işlenmiş bir şablon olarak oluşturduğunuzu varsayalım `PreTextTemplate1` . Aşağıdaki kodu kullanarak programınızdaki şablonu çağırabilirsiniz.

@@ -1,5 +1,7 @@
 ---
 title: DSL Tanım Diyagramı ile Çalışma
+description: DSL araçları tanımının diyagramının, etki alanına özgü bir dili tanımlamaya yönelik önemli bir araç olduğunu öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +18,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7ec9e6fa7262fd389be7f1bb66ed2ed7005d6811
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: d489bfde8b095e35bc652f1cdb7588b07458e48e
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810802"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362840"
 ---
 # <a name="working-with-the-dsl-definition-diagram"></a>DSL Tanım Diyagramı ile Çalışma
 Bir tanımın diyagramı, [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] etki alanına özgü dili tanımlamaya yönelik önemli bir araçtır. Etki alanı modelinize öğeler ekleyebilir ve diyagramda ilişkiler tanımlayabilir ve diyagramın yerleşimini daha okunabilir hale getirmek için değiştirebilirsiniz.

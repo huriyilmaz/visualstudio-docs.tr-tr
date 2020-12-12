@@ -1,5 +1,7 @@
 ---
 title: Metin Şablonu Dönüştürme Süreci
+description: Metin şablonu dönüştürme işleminin girdi olarak bir metin şablonu dosyası aldığını ve çıktı olarak yeni bir metin dosyası oluşturmadığını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6d6cca9a4a98c4afcffa8322acb75a4cef8a7527
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f0caadfe9abf38b2d83995da7efa32d618b4bfe0
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75565870"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362658"
 ---
 # <a name="the-text-template-transformation-process"></a>Metin Şablonu Dönüştürme Süreci
 Metin şablonu dönüştürme işlemi, girdi olarak bir metin şablonu dosyası alır ve çıktı olarak yeni bir metin dosyası oluşturur. Örneğin, Visual Basic veya C# kodu oluşturmak için metin şablonlarını kullanabilir veya bir HTML raporu oluşturabilirsiniz.
@@ -28,7 +30,7 @@ Metin şablonu dönüştürme işlemi, girdi olarak bir metin şablonu dosyası 
 |Bileşen|Açıklama|Özelleştirilebilir (Evet/Hayır)|
 |-|-|-|
 |Altyapı|Motor bileşeni, metin şablonu dönüştürme işlemini denetler|Hayır.|
-|Konak|Konak, motor ve Kullanıcı ortamı arasındaki arabirimdir. Visual Studio, metin dönüştürme sürecinin bir konağından oluşur.|Evet. Özel bir ana bilgisayar yazabilirsiniz.|
+|Yönetici|Konak, motor ve Kullanıcı ortamı arasındaki arabirimdir. Visual Studio, metin dönüştürme sürecinin bir konağından oluşur.|Evet. Özel bir ana bilgisayar yazabilirsiniz.|
 |Yönerge Işlemcileri|Yönerge işlemcileri, metin şablonlarındaki yönergeleri işleyen sınıflardır. Giriş kaynağından bir metin şablonuna veri sağlamak için yönergelerini kullanabilirsiniz.|Evet. Özel yönerge işlemcileri yazabilirsiniz|
 
 ## <a name="the-engine"></a>Motor

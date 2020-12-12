@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: Etki Alanına Özgü Dil Çözümü Oluşturma'
+description: Özelleştirilmiş bir Visual Studio çözümü kullanarak etki alanına özgü dil (DSL) oluşturmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -13,17 +15,17 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c47b16bbb9fe5eb352171e6e1cf4c13890890265
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: c913f3015c56f7872dfe5ef3471578de7075b7d0
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "92298663"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363282"
 ---
 # <a name="how-to-create-a-domain-specific-language-solution"></a>Nasıl yapılır: Etki Alanına Özgü Dil Çözümü Oluşturma
 Özel bir Visual Studio çözümü kullanılarak, etki alanına özgü dil (DSL) oluşturulur.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Bu yordamı başlatabilmeniz için önce şu bileşenleri yükleyebilirsiniz:
 
@@ -48,11 +50,11 @@ Bu yordamı başlatabilmeniz için önce şu bileşenleri yükleyebilirsiniz:
 
 2. DSL şablonu seçin.
 
-    **Domain-Specific dil seçeneklerini seçin** sayfasında, **en az dil**gibi çözüm şablonlarından birini seçin. Oluşturmak istediğiniz DSL 'ye benzer bir şablon seçin.
+    **Domain-Specific dil seçeneklerini seçin** sayfasında, **en az dil** gibi çözüm şablonlarından birini seçin. Oluşturmak istediğiniz DSL 'ye benzer bir şablon seçin.
 
     Çözüm şablonları hakkında daha fazla bilgi için bkz. [Domain-Specific Language çözüm şablonu seçme](../modeling/choosing-a-domain-specific-language-solution-template.md).
 
-3. **Dosya Uzantısı** sayfasında bir dosya adı uzantısı girin. Bu, bilgisayarınızda ve DSL 'yi yüklemek istediğiniz herhangi bir bilgisayarda benzersiz olmalıdır. **Hiçbir uygulama veya Visual Studio Düzenleyicisi bu uzantıyı kullanmamalıdır**iletisini görmeniz gerekir.
+3. **Dosya Uzantısı** sayfasında bir dosya adı uzantısı girin. Bu, bilgisayarınızda ve DSL 'yi yüklemek istediğiniz herhangi bir bilgisayarda benzersiz olmalıdır. **Hiçbir uygulama veya Visual Studio Düzenleyicisi bu uzantıyı kullanmamalıdır** iletisini görmeniz gerekir.
 
    - Tam yüklenmemiş olan önceki deneysel DSLs 'de dosya adı uzantısını kullandıysanız, Visual Studio SDK menüsünde bulunan **deneysel örneği Sıfırla** aracını kullanarak bunları temizleyebilirsiniz.
 
@@ -60,7 +62,7 @@ Bu yordamı başlatabilmeniz için önce şu bileşenleri yükleyebilirsiniz:
 
 4. Sihirbazın kalan sayfalarındaki alanları inceleyin ve gerekirse ayarlayın. Ayarlarla ilgili memnun olduğunuzda **son**' a tıklayın. Ayarlar hakkında daha fazla bilgi için bkz. [DSL Tasarımcısı Sihirbazı sayfaları](#settings).
 
-    Sihirbaz, **DSL** ve **DslPackage**adlı iki projeye sahip bir çözüm oluşturur.
+    Sihirbaz, **DSL** ve **DslPackage** adlı iki projeye sahip bir çözüm oluşturur.
 
    > [!NOTE]
    > Güvenilmeyen kaynaklardan metin şablonlarını çalıştıracağınızı belirten bir ileti görürseniz, **Tamam**' a tıklayın. Bu iletiyi tekrar görünmeyecek şekilde ayarlayabilirsiniz.
@@ -81,7 +83,7 @@ Yeni bir dosya uzantısı yazın.
 
  Bu dosya uzantısının bu bilgisayarda kullanılmak üzere zaten kayıtlı olmadığından emin olun:
 
- **Bu uzantıyı işlemek için kayıtlı diğer araç ve uygulamalar**bölümüne bakın. **Hiçbir uygulama veya Visual Studio Düzenleyicisi tarafından bu uzantıyı kullanan**bir ileti görürseniz, bu dosya uzantısını kullanabilirsiniz.
+ **Bu uzantıyı işlemek için kayıtlı diğer araç ve uygulamalar** bölümüne bakın. **Hiçbir uygulama veya Visual Studio Düzenleyicisi tarafından bu uzantıyı kullanan** bir ileti görürseniz, bu dosya uzantısını kullanabilirsiniz.
 
  Araçların veya paketlerin bir listesini görürseniz, aşağıdakilerden birini yapmalısınız:
 
@@ -89,7 +91,7 @@ Yeni bir dosya uzantısı yazın.
 
      \- veya
 
-- Visual Studio Deneysel örneğini sıfırlayın. Bu, daha önce oluşturduğunuz tüm DSLs 'lerin kaydını siler. **Başlat** menüsünde, **tüm programlar**, **Microsoft Visual Studio 2010 SDK**ve **araçlar**' a tıklayın ve ardından **Microsoft Visual Studio 2010 Deneysel örneğini sıfırlayın**. Yeniden kullanmak istediğiniz tüm diğer DSLs 'leri yeniden oluşturabilirsiniz.
+- Visual Studio Deneysel örneğini sıfırlayın. Bu, daha önce oluşturduğunuz tüm DSLs 'lerin kaydını siler. **Başlat** menüsünde, **tüm programlar**, **Microsoft Visual Studio 2010 SDK** ve **araçlar**' a tıklayın ve ardından **Microsoft Visual Studio 2010 Deneysel örneğini sıfırlayın**. Yeniden kullanmak istediğiniz tüm diğer DSLs 'leri yeniden oluşturabilirsiniz.
 
      \- veya
 

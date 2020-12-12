@@ -1,5 +1,7 @@
 ---
 title: Özel Yönerge İşlemcisi Dağıtma
+description: Visual Studio 'da veya herhangi bir bilgisayarda özel bir yönerge işlemcisi dağıtmaya yönelik yöntemler hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4762ad21f117bebe22ecfce1c846f15d154b1bf5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 638367f2c3a1238edc257a255280c5197e11d3f0
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85536025"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363932"
 ---
 # <a name="deploying-a-custom-directive-processor"></a>Özel Yönerge İşlemcisi Dağıtma
 
@@ -48,7 +50,7 @@ Bir .vsix dosyası oluşturmanın birkaç yolu vardır. Aşağıdaki yordam bir 
 
 1. Yeni bir **VSIX proje** projesi oluşturun.
 
-2. **Source. Extension. valtmanifest**içinde, içerik türünü ve desteklenen sürümleri ayarlayın.
+2. **Source. Extension. valtmanifest** içinde, içerik türünü ve desteklenen sürümleri ayarlayın.
 
     1. VSıX bildirim düzenleyicisinde, **varlıklar** sekmesinde **Yeni** ' yi seçin ve yeni öğenin özelliklerini ayarlayın:
 
@@ -124,7 +126,7 @@ Bir .vsix dosyası oluşturmanın birkaç yolu vardır. Aşağıdaki yordam bir 
 
 - `IsDirectiveSupported`Yönteminizin adı geçirildiğinde, uygulamanız döndürmelidir `true` `CustomDirective` .
 
-- Uzantıyı uzantı Yöneticisi 'nde göremiyorsanız, ancak sistem bunu yüklemenize izin vermeyecektir, bu uzantıyı **%LocalAppData%\microsoft\visualstudio \\ \* 0 \ Extensions \\ **konumundan silin.
+- Uzantıyı uzantı Yöneticisi 'nde göremiyorsanız, ancak sistem bunu yüklemenize izin vermeyecektir, bu uzantıyı **%LocalAppData%\microsoft\visualstudio \\ \* 0 \ Extensions \\** konumundan silin.
 
 - .Vsix dosyasını açın ve içeriğini inceleyin. Açmak için, dosya adı uzantısını .zip olarak değiştirin. .dll, .pkgdef ve extension.vsixmanifest dosyalarını içerdiğini doğrulayın. .vsixmanifest uzantı dosyası SupportedProducts düğümü için uygun listeyi içermelidir ve buna ek olarak İçerik düğümü altında bir VsPackage düğümü içermelidir:
 
@@ -160,11 +162,11 @@ Bir .vsix dosyası oluşturmanın birkaç yolu vardır. Aşağıdaki yordam bir 
 
 #### <a name="to-register-a-directive-processor-by-setting-a-registry-key"></a>Bir kayıt defteri anahtarı ayarlayarak bir yönerge işlemcisi kaydetmek için
 
-1. `regedit` öğesini çalıştırın.
+1. Şu komutu çalıştırın: `regedit`.
 
 2. Regedit içinde şuraya gidin:
 
-    **HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio \\ \* . 0 \ Texttemplating\directiveiþlemcileri**
+    **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\ \* . 0 \ Texttemplating\directiveiþlemcileri**
 
     Visual Studio 'nun deneysel sürümüne yönerge işlemcisini yüklemek isterseniz "11,0" sonrasına "exp" ekleyin.
 

@@ -1,5 +1,7 @@
 ---
 title: Etki Alanı İlişkilerinin Özellikleri
+description: Erişim değiştiricisi, custome öznitelikleri gibi bir etki alanı ilişki dükkanı ile ilişkili özellikler hakkında bilgi edinin ve çift türetilmiş bir üretir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -9,15 +11,15 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0e432e9738009c84b6930b0363ae4048c925d0a6
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 88c5db50432947b99a2667280fe7861e7acd95ac
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810008"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362463"
 ---
 # <a name="properties-of-domain-relationships"></a>Etki Alanı İlişkilerinin Özellikleri
-Aşağıdaki tabloda yer alan Özellikler bir etki alanı ilişkisiyle ilişkilendirilir. Etki alanı ilişkileri hakkında daha fazla bilgi için bkz. [modelleri, sınıfları ve Ilişkileri anlama](../modeling/understanding-models-classes-and-relationships.md). Bu özelliklerin nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [etki alanına özgü dili özelleştirme ve genişletme](../modeling/customizing-and-extending-a-domain-specific-language.md).
+Aşağıdaki tabloda yer alan Özellikler bir etki alanı ilişkisiyle ilişkilendirilir. Etki alanı ilişkileri hakkında daha fazla bilgi için bkz. [modelleri, sınıfları ve Ilişkileri anlama](../modeling/understanding-models-classes-and-relationships.md). Bu özelliklerin nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [Domain-Specific dilini özelleştirme ve genişletme](../modeling/customizing-and-extending-a-domain-specific-language.md).
 
 |Özellik|Açıklama|Varsayılan|
 |-|-|-|
@@ -29,7 +31,7 @@ Aşağıdaki tabloda yer alan Özellikler bir etki alanı ilişkisiyle ilişkile
 |Yinelemelere izin verir|İse `True` , aynı iki öğe arasında etki alanı ilişkisinin Yinelenen bağlantıları oluşturulabilir.|`False`|
 |Temel Ilişkiler|Etki alanı ilişkisi türetildiyse, etki alanı ilişkisinin temel ilişkisi.|\<none>|
 |Ekleniyor|İse `True` , etki alanı ilişkisi bir katıştırma ilişkisidir. İse `False` , ilişki bir başvuru ilişkisidir.|\<both>|
-|Name|Etki alanı ilişkisinin adı.|Geçerli ad|
+|Ad|Etki alanı ilişkisinin adı.|Geçerli ad|
 |Ad Alanı|Etki alanı ilişkisiyle bağlantılı olan ad alanı.|Geçerli ad alanı|
 |Notlar|Etki alanı ilişkisiyle ilişkili resmi olmayan notlar.|\<none>|
 |Açıklama|Kodu belgelemek için kullanılan açıklama ve oluşturulan tasarımcının Kullanıcı arabiriminde kullanılır.|\<none>|

@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: Sürükle ve Bırak İşleyicisi Ekleme'
+description: Kullanıcıların diğer diyagramlardan diyagramınıza öğe sürükleyebilmeleri için DSL 'ye sürükle ve bırak olayları için işleyiciler nasıl ekleyebileceğiniz hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
@@ -7,16 +9,16 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9272a530eaa15f902a2e295aeaa6d8b34c4eccdd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 337fd73dbe46a97b6f154dfba1714ede834f1e69
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85545671"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363334"
 ---
 # <a name="how-to-add-a-drag-and-drop-handler"></a>Nasıl yapılır: Sürükle ve Bırak İşleyicisi Ekleme
 
-Kullanıcıların diğer diyagramlardan veya Visual Studio 'nun diğer bölümlerinden öğe diyagramınıza sürükleyebilmeleri için, DSL 'ye sürükle ve bırak olayları için işleyiciler ekleyebilirsiniz. Çift tıklama gibi olaylar için de işleyiciler ekleyebilirsiniz. Birlikte, sürükle ve bırak ve çift tıklama işleyicileri *hareket işleyicileri*olarak bilinir.
+Kullanıcıların diğer diyagramlardan veya Visual Studio 'nun diğer bölümlerinden öğe diyagramınıza sürükleyebilmeleri için, DSL 'ye sürükle ve bırak olayları için işleyiciler ekleyebilirsiniz. Çift tıklama gibi olaylar için de işleyiciler ekleyebilirsiniz. Birlikte, sürükle ve bırak ve çift tıklama işleyicileri *hareket işleyicileri* olarak bilinir.
 
 Bu konu, diğer diyagramlardaki sürükle ve bırak hareketlerini ele alır. Tek bir diyagram içindeki taşıma ve kopyalama olayları için, bir alt sınıfı tanımlamanın alternatifini düşünün `ElementOperations` . Daha fazla bilgi için bkz. [kopyalama davranışını özelleştirme](../modeling/customizing-copy-behavior.md). Ayrıca DSL tanımını özelleştirebilirsiniz.
 
@@ -160,7 +162,7 @@ Sürüklenen öğe bir DSL öğesi ise, kaynak modeli açıp öğeye erişebilir
 
 Kaynak DSL 'yi Visual Studio Model veri yolu tarafından erişilebilir yapın:
 
-1. DSL Tasarımcısı ' de kaynak DSL 'nin DSL tanım dosyasını açın. Tasarım yüzeyine sağ tıklayın ve sonra **ModelBus 'ı etkinleştir**' e tıklayın. İletişim kutusunda seçeneklerden birini veya her ikisini birden seçin.  **Tamam**’a tıklayın. DSL çözümüne yeni bir proje "ModelBus" eklenir.
+1. DSL Tasarımcısı ' de kaynak DSL 'nin DSL tanım dosyasını açın. Tasarım yüzeyine sağ tıklayın ve sonra **ModelBus 'ı etkinleştir**' e tıklayın. İletişim kutusunda seçeneklerden birini veya her ikisini birden seçin.  **Tamam** düğmesine tıklayın. DSL çözümüne yeni bir proje "ModelBus" eklenir.
 
 2. **Tüm Şablonları Dönüştür** ' e tıklayın ve çözümü yeniden oluşturun.
 
@@ -405,7 +407,7 @@ namespace Company.CompartmentDrag  // EDIT.
 
  /// <summary>
  /// Override some methods of the compartment shape.
- /// *** GenerateDoubleDerived must be set for this shape in DslDefinition.dsl. ****
+ /// **_ GenerateDoubleDerived must be set for this shape in DslDefinition.dsl. _***
  /// </summary>
  public partial class ClassShape
  {

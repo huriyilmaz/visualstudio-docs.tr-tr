@@ -1,5 +1,7 @@
 ---
 title: Kodunuz aracılığıyla bağımlılık diyagramları oluşturma
+description: Yazılım sisteminizin üst düzey, mantıksal mimarisini görselleştirmek için Visual Studio 'da bir bağımlılık diyagramı oluşturmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 463e73a989deecf90e6bbfb7e8b92409b15695a5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ea19089fe8660b1169d790e25ed7ccf845404238
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85545736"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363529"
 ---
 # <a name="create-dependency-diagrams-from-your-code"></a>Kodunuz aracılığıyla bağımlılık diyagramları oluşturma
 
@@ -25,7 +27,7 @@ Yazılım sisteminizin üst düzey, mantıksal mimarisini görselleştirmek içi
 
 ![Bağımlılık diyagramı oluşturma](../modeling/media/layerdiagramvisualizecode.png)
 
-Bağımlılık diyagramı, Visual Studio çözüm öğelerini *Katmanlar*olarak adlandırılan mantıksal, soyut gruplar halinde düzenlemenize olanak tanır. Bu yapıların gerçekleştirdiği temel görevleri veya sistemin ana bileşenlerini açıklamak için katmanları kullanabilirsiniz. Her katman, daha ayrıntılı görevleri açıklayan başka katmanlar içerebilir. Katmanlar arasında amaçlanan veya var olan *bağımlılıkları* da belirtebilirsiniz. Oklar olarak temsil edilen bu bağımlılıklar, hangi katmanların diğer katmanlar tarafından temsil edilen işlevi kullanabileceğini veya kullanmakta olduğunu gösterir. Kodunun mimari denetimini sağlamak için diyagram üzerinde hedeflenen bağımlılıkları gösterin ve ardından kodu diyagrama karşı doğrulayın.
+Bağımlılık diyagramı, Visual Studio çözüm öğelerini *Katmanlar* olarak adlandırılan mantıksal, soyut gruplar halinde düzenlemenize olanak tanır. Bu yapıların gerçekleştirdiği temel görevleri veya sistemin ana bileşenlerini açıklamak için katmanları kullanabilirsiniz. Her katman, daha ayrıntılı görevleri açıklayan başka katmanlar içerebilir. Katmanlar arasında amaçlanan veya var olan *bağımlılıkları* da belirtebilirsiniz. Oklar olarak temsil edilen bu bağımlılıklar, hangi katmanların diğer katmanlar tarafından temsil edilen işlevi kullanabileceğini veya kullanmakta olduğunu gösterir. Kodunun mimari denetimini sağlamak için diyagram üzerinde hedeflenen bağımlılıkları gösterin ve ardından kodu diyagrama karşı doğrulayın.
 
 [Video: mimari bağımlılıklarınızı gerçek zamanlı olarak doğrulama](https://sec.ch9.ms/sessions/69613110-c334-4f25-bb36-08e5a93456b5/170ValidateArchitectureDependenciesWithVisualStudio.mp4)
 
@@ -45,7 +47,7 @@ Bağımlılık diyagramı oluşturmadan önce çözümünüzün bir modelleme pr
 
 1. **Mimari** menüsünde **Yeni bağımlılık diyagramı**' nı seçin.
 
-2. **Şablonlar**altında **bağımlılık diyagramı**' nı seçin.
+2. **Şablonlar** altında **bağımlılık diyagramı**' nı seçin.
 
 3. Diyagrama ad verin.
 
@@ -70,7 +72,7 @@ Bağımlılık diyagramı oluşturmadan önce çözümünüzün bir modelleme pr
 
 4. **Mimari** menüsünü kullanarak çözüm için yeni bir bağımlılık diyagramı oluşturun
 
-5. Kod eşlemesindeki tüm düğümleri seçin ( _CTRL_  +  _A_kullanın veya tıklamadan, sürüklemeden ve serbest bırakmadan önce _SHIFT_ tuşuna basarak lastik bant seçimini kullanın.
+5. Kod eşlemesindeki tüm düğümleri seçin ( _CTRL_  +  _A_ kullanın veya tıklamadan, sürüklemeden ve serbest bırakmadan önce _SHIFT_ tuşuna basarak lastik bant seçimini kullanın.
 
 6. Seçilen öğeleri sürükleyip bırakma veya kopyalama ve yapıştırma yeni bağımlılık doğrulama diyagramına.
 
@@ -85,9 +87,9 @@ Bağımlılık diyagramı oluşturmadan önce çözümünüzün bir modelleme pr
 
  Bağlı bir öğenin doğrulamayı destekleyip desteklemediğini görmek için **Katman Gezgini** ' ni açın ve öğenin **doğrulamayı destekler** özelliğini inceleyin. Bkz. [yapıtlara bağlantıları yönetme](#Managing).
 
-|**Amaç**|**Bu adımları izleyin**|
+|**Hedef**|**Buradaki adımları izleyin**|
 |-|-|
-|Tek bir yapı için katman oluşturma|<ol><li>Öğeyi şu kaynaklardaki bağımlılık diyagramına sürükleyin:<br /><br /> <ul><li>**Çözüm Gezgini**<br /><br />         Örneğin, dosyaları veya projeleri sürükleyebilirsiniz.</li><li>Kod eşlemeleri<br /><br />         Bkz. [çözümlerinizde harita bağımlılıkları](../modeling/map-dependencies-across-your-solutions.md) ve [uygulamalarınızda hata ayıklamak Için kod haritaları kullanın](../modeling/use-code-maps-to-debug-your-applications.md).</li><li>**Sınıf görünümü** veya **nesne tarayıcısı**</li></ul><br />     Katman, diyagramda görünür ve yapıya bağlanır.</li><li>İlişkili kodun veya yapıların sorumluluklarını yansıtmak için katmanı yeniden adlandırın.</li></ol> **Önemli:**  İkili dosyaları bağımlılık diyagramına sürüklemek, başvurularını otomatik olarak modelleme projesine eklemez. Doğrulamak istediğiniz ikili dosyaları el ile modelleme projesine eklemeniz gerekir. **Modelleme projesine ikili dosyalar eklemek için** <ol><li>**Çözüm Gezgini**, modelleme projesi için kısayol menüsünü açın ve ardından **Varolan öğe Ekle**' yi seçin.</li><li>**Varolan öğe Ekle** iletişim kutusunda, ikili dosyalar ' a gidin, bunları seçin ve ardından **Tamam**' ı seçin.     İkili dosyalar modelleme projesinde görünür.</li><li>**Çözüm Gezgini**, eklediğiniz bir ikili dosyayı seçin ve ardından **Özellikler** penceresini açmak için **F4** tuşuna basın.</li><li>Her ikili dosyada, **derleme eylemi** özelliğini **doğrulanacak**olarak ayarlayın.</li></ol>|
+|Tek bir yapı için katman oluşturma|<ol><li>Öğeyi şu kaynaklardaki bağımlılık diyagramına sürükleyin:<br /><br /> <ul><li>**Çözüm Gezgini**<br /><br />         Örneğin, dosyaları veya projeleri sürükleyebilirsiniz.</li><li>Kod eşlemeleri<br /><br />         Bkz. [çözümlerinizde harita bağımlılıkları](../modeling/map-dependencies-across-your-solutions.md) ve [uygulamalarınızda hata ayıklamak Için kod haritaları kullanın](../modeling/use-code-maps-to-debug-your-applications.md).</li><li>**Sınıf görünümü** veya **nesne tarayıcısı**</li></ul><br />     Katman, diyagramda görünür ve yapıya bağlanır.</li><li>İlişkili kodun veya yapıların sorumluluklarını yansıtmak için katmanı yeniden adlandırın.</li></ol> **Önemli:**  İkili dosyaları bağımlılık diyagramına sürüklemek, başvurularını otomatik olarak modelleme projesine eklemez. Doğrulamak istediğiniz ikili dosyaları el ile modelleme projesine eklemeniz gerekir. **Modelleme projesine ikili dosyalar eklemek için** <ol><li>**Çözüm Gezgini**, modelleme projesi için kısayol menüsünü açın ve ardından **Varolan öğe Ekle**' yi seçin.</li><li>**Varolan öğe Ekle** iletişim kutusunda, ikili dosyalar ' a gidin, bunları seçin ve ardından **Tamam**' ı seçin.     İkili dosyalar modelleme projesinde görünür.</li><li>**Çözüm Gezgini**, eklediğiniz bir ikili dosyayı seçin ve ardından **Özellikler** penceresini açmak için **F4** tuşuna basın.</li><li>Her ikili dosyada, **derleme eylemi** özelliğini **doğrulanacak** olarak ayarlayın.</li></ol>|
 |Seçilen tüm yapılar için tek bir katman oluşturma|Tüm yapıtları aynı anda bağımlılık diyagramına sürükleyin.<br /><br /> Katman diyagramda görünür ve tüm yapılara bağlıdır.|
 |Seçilen her yapı için bir katman oluşturma|Tüm yapıtları aynı anda bağımlılık diyagramına sürüklerken **SHIFT** tuşuna basın ve basılı tutun. **Note:**  Bir dizi öğeyi seçmek için **SHIFT** tuşunu kullanırsanız, yapıtları seçtikten sonra anahtarı bırakın. Yapıları diyagrama sürüklerken tuşu tekrar basılı tutun. <br /><br /> Katman her yapı için diyagramda görünür ve her yapıya bağlanır.|
 |Katmana yapı ekleme|Yapıyı katmana sürükleyin.|
@@ -115,7 +117,7 @@ Bağımlılık diyagramı oluşturmadan önce çözümünüzün bir modelleme pr
 
 2. Bu bağlantıları yönetmek için aşağıdaki görevleri kullanın.
 
-|**Amaç**|**Katman Gezgini 'nde**|
+|**Hedef**|**Katman Gezgini 'nde**|
 |-|-|
 |Katman ve yapı arasındaki bağlantıyı silme|Yapıt bağlantısının kısayol menüsünü açın ve **Sil**' i seçin.|
 |Bağlantıyı bir katmandan diğerine taşıma|Yapı bağlantısını diyagramda varolan bir katmana sürükleyin.<br /><br /> - veya -<br /><br /> 1. yapıt bağlantısının kısayol menüsünü açın ve **Kes**' i seçin.<br />2. bağımlılık diyagramında katmanın kısayol menüsünü açın ve **Yapıştır**' ı seçin.|
@@ -127,7 +129,7 @@ Bağımlılık diyagramı oluşturmadan önce çözümünüzün bir modelleme pr
  Bir bağımlılık, bir katman ile ilişkili yapının başka bir katman ile ilişkili bir yapıya başvurusu olduğu yerde var olur. Örneğin, bir katmandaki sınıf başka bir katmanda sınıfı olan değişkeni bildirir. Diyagramdaki katmanlara bağlanmış yapılar için varolan bağımlılıklara ters mühendislik uygulayabilirsiniz.
 
 > [!NOTE]
-> Bağımlılıklarda belirli türdeki yapılar için ters mühendislik uygulanamaz. Örneğin, hiçbir bağımlılıkta metin dosyasına bağlı katmandan veya katmana ters mühendislik uygulanmaz. Hangi yapıların tersine mühendislik uygulayabileceğiniz bağımlılıklara sahip olduğunu görmek için, bir veya birden çok katmanın kısayol menüsünü açın ve **bağlantıları görüntüle**' yi seçin. **Katman Gezgini**' nde **doğrulamayı destekler** sütununu inceleyin. Bağımlılıklar, bu sütunun **yanlış**gösterdiği yapıtlar için ters mühendislik uygulanmaz.
+> Bağımlılıklarda belirli türdeki yapılar için ters mühendislik uygulanamaz. Örneğin, hiçbir bağımlılıkta metin dosyasına bağlı katmandan veya katmana ters mühendislik uygulanmaz. Hangi yapıların tersine mühendislik uygulayabileceğiniz bağımlılıklara sahip olduğunu görmek için, bir veya birden çok katmanın kısayol menüsünü açın ve **bağlantıları görüntüle**' yi seçin. **Katman Gezgini**' nde **doğrulamayı destekler** sütununu inceleyin. Bağımlılıklar, bu sütunun **yanlış** gösterdiği yapıtlar için ters mühendislik uygulanmaz.
 
 - Bir veya birden çok katman seçin, seçili katmanın kısayol menüsünü açın ve ardından **Bağımlılıklar Oluştur**' u seçin.
 
@@ -136,7 +138,7 @@ Bağımlılık diyagramı oluşturmadan önce çözümünüzün bir modelleme pr
 ## <a name="edit-layers-and-dependencies-to-show-the-intended-design"></a><a name="EditDependencies"></a> Tasarlanan tasarımı göstermek için katmanları ve bağımlılıkları düzenleyin
  Sisteminizde veya amaçlanan mimaride yapmayı planladığınız değişiklikleri anlatmak için, bağımlılık diyagramını düzenleyin:
 
-|**Amaç**|**Bu adımları gerçekleştirin**|
+|**Hedef**|**Bu adımları gerçekleştirin**|
 |-|-|
 |Bağımlılık yönünü değiştirme veya kısıtlama|**Direction** özelliğini ayarlayın.|
 |Yeni bağımlılıklar oluşturma|**Bağımlılık** ve **çift yönlü bağımlılık** araçlarını kullanın.<br /><br /> Çoklu bağımlılıklar çizmek için araca çift tıklayın. İşiniz bittiğinde **işaretçi** aracını seçin veya **ESC** tuşuna basın.|
@@ -148,7 +150,7 @@ Bağımlılık diyagramı oluşturmadan önce çözümünüzün bir modelleme pr
  Özelliklerini düzenleyerek katmanların boyutunu, şeklini, rengini ve konumunu veya bağımlılıkların rengini değiştirebilirsiniz.
 
 ## <a name="discover-patterns-and-dependencies-on-a-code-map"></a><a name="Codemaps"></a> Kod haritasında desenleri ve bağımlılıkları bulma
- Bağımlılık diyagramları oluştururken, **Kod eşlemeleri**de oluşturabilirsiniz. Bu diyagramlar, kodu araştırırken desenleri ve bağımlılıkları keşfetmenize yardımcı olabilir. Derlemeleri, ad alanlarını ve sınıfları araştırmak için Çözüm Gezgini, Sınıf Görünümü veya Nesne Tarayıcısı kullanın; Bu, genellikle mevcut katmanlara iyi karşılık gelir. Kod eşlemeleri hakkında daha fazla bilgi için bkz.
+ Bağımlılık diyagramları oluştururken, **Kod eşlemeleri** de oluşturabilirsiniz. Bu diyagramlar, kodu araştırırken desenleri ve bağımlılıkları keşfetmenize yardımcı olabilir. Derlemeleri, ad alanlarını ve sınıfları araştırmak için Çözüm Gezgini, Sınıf Görünümü veya Nesne Tarayıcısı kullanın; Bu, genellikle mevcut katmanlara iyi karşılık gelir. Kod eşlemeleri hakkında daha fazla bilgi için bkz.
 
 - [Çözümlerinizdeki bağımlılıkları eşleme](../modeling/map-dependencies-across-your-solutions.md)
 

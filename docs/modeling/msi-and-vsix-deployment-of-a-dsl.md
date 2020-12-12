@@ -1,5 +1,7 @@
 ---
 title: DSL'nin MSI ve VSIX Dağıtımı
+description: Kendi bilgisayarınıza veya diğer bilgisayarlara bir etki alanına özgü dili (DSL) nasıl yükleyebileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6d4de8d7560cb43115a30e29516e0e88b4d02d21
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 623cbdcfaae6acd1889e265fecafec805e5a9440
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85542622"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363139"
 ---
 # <a name="msi-and-vsix-deployment-of-a-dsl"></a>DSL'nin MSI ve VSIX Dağıtımı
 Kendi bilgisayarınıza veya diğer bilgisayarlara, etki alanına özgü bir dil yükleyebilirsiniz. Visual Studio 'Nun hedef bilgisayarda zaten yüklü olması gerekir.
@@ -35,13 +37,13 @@ Bu yöntem tarafından DSL yüklendiğinde, Kullanıcı Visual Studio içinden b
 
    1. **Çözüm Gezgini**, **DslPackage** projesine sağ tıklayın ve ardından **Dosya Gezgini 'nde klasörü aç**' a tıklayın.
 
-   2. Dosya ** \\ \* bin \\ **_projesini_bulun **. DslPackage. vsix**
+   2. Dosya **\\ \* bin \\**_projesini_ bulun **. DslPackage. vsix**
 
 2. **. Vsix** dosyasını, DSL 'yi yüklemek istediğiniz hedef bilgisayara kopyalayın. Bu, kendi bilgisayarınız veya başka bir tane olabilir.
 
    - Hedef bilgisayarda, [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] çalışma zamanında DSLs 'yi destekleyen sürümlerinden biri olmalıdır. Daha fazla bilgi için bkz. [görselleştirme Için desteklenen Visual Studio sürümleri & modelleme SDK](../modeling/supported-visual-studio-editions-for-visualization-amp-modeling-sdk.md).
 
-   - Hedef bilgisayar, **DslPackage\source.Extensions.manifest**Içinde belirtilen Visual Studio sürümlerinden birine sahip olmalıdır.
+   - Hedef bilgisayar, **DslPackage\source.Extensions.manifest** Içinde belirtilen Visual Studio sürümlerinden birine sahip olmalıdır.
 
 3. Hedef bilgisayarda **. vsix** dosyasına çift tıklayın.
 
@@ -55,7 +57,7 @@ Bu yöntem tarafından DSL yüklendiğinde, Kullanıcı Visual Studio içinden b
 
 1. **Araçlar** menüsünde **Uzantılar ve güncelleştirmeler**' i seçin.
 
-2. **Yüklü uzantıları**genişletin.
+2. **Yüklü uzantıları** genişletin.
 
 3. DSL 'nin tanımlandığı uzantıyı seçin ve ardından **Kaldır**' a tıklayın.
 
@@ -92,15 +94,15 @@ Bu yöntem tarafından DSL yüklendiğinde, Kullanıcı Visual Studio içinden b
 
        - Sürüm
 
-   - **Düzenleyici** düğümüne tıklayın ve Özellikler penceresi **simgesine**tıklayın. Değeri **Dslpackage\resources**içindeki **File. ico** gibi bir simge dosyasına başvuracak şekilde ayarlayın.
+   - **Düzenleyici** düğümüne tıklayın ve Özellikler penceresi **simgesine** tıklayın. Değeri **Dslpackage\resources** içindeki **File. ico** gibi bir simge dosyasına başvuracak şekilde ayarlayın.
 
-   - **Yapı** menüsünde **Configuration Manager**açın ve derlemek istediğiniz yapılandırmayı (örneğin, **yayın** veya **hata ayıklama**) seçin.
+   - **Yapı** menüsünde **Configuration Manager** açın ve derlemek istediğiniz yapılandırmayı (örneğin, **yayın** veya **hata ayıklama**) seçin.
 
-4. [Görselleştirme ve modelleme SDK 'sı giriş sayfasına](https://code.msdn.microsoft.com/Visualization-and-Modeling-313535db)gidin ve **indirmeler** sekmesinden **CreateMsiSetupProject.tt**indirin.
+4. [Görselleştirme ve modelleme SDK 'sı giriş sayfasına](https://code.msdn.microsoft.com/Visualization-and-Modeling-313535db)gidin ve **indirmeler** sekmesinden **CreateMsiSetupProject.tt** indirin.
 
 5. DSL projenize **CreateMsiSetupProject.tt** ekleyin.
 
-    Visual Studio, **CreateMsiSetupProject. VDPROJ**adlı bir dosya oluşturur.
+    Visual Studio, **CreateMsiSetupProject. VDPROJ** adlı bir dosya oluşturur.
 
 6. Windows Gezgini 'nde, DSL \\ *. VDPROJ öğesini Setup adlı yeni bir klasöre kopyalayın.
 
@@ -112,7 +114,7 @@ Bu yöntem tarafından DSL yüklendiğinde, Kullanıcı Visual Studio içinden b
 
     **Proje bağımlılıkları** iletişim kutusunda Kurulum projesini seçin.
 
-    **DslPackage**seçeneğinin yanındaki kutuyu seçin.
+    **DslPackage** seçeneğinin yanındaki kutuyu seçin.
 
 9. Çözümü yeniden derleyin.
 

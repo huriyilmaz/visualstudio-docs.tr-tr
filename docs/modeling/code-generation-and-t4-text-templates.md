@@ -1,5 +1,7 @@
 ---
 title: Kod Oluşturma ve T4 Metin Şablonları
+description: Bir T4 metin şablonunun bir metin dosyası oluşturabilen metin blokları ve denetim mantığının nasıl karışımı olduğunu öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: overview
 f1_keywords:
@@ -15,12 +17,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fbcd41461ab57e3bbb5fb48849ddde8593c587fb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 871aa20fe4fc95ea1641b7f478cb9b01d71284aa
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85548245"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363581"
 ---
 # <a name="code-generation-and-t4-text-templates"></a>Kod Oluşturma ve T4 Metin Şablonları
 
@@ -50,13 +52,13 @@ string webResponseText = new MyTemplate().TransformText();
 
 Uygulamanız, Visual Studio yüklü olmayan bir bilgisayarda çalışabilir.
 
-Çalışma zamanı şablonu oluşturmak için projenize **önceden işlenmiş bir metin şablonu** dosyası ekleyin. Alternatif olarak, düz metin dosyası ekleyebilir ve **özel araç** özelliğini **Texttemplatingfileönişlemci**olarak ayarlayabilirsiniz.
+Çalışma zamanı şablonu oluşturmak için projenize **önceden işlenmiş bir metin şablonu** dosyası ekleyin. Alternatif olarak, düz metin dosyası ekleyebilir ve **özel araç** özelliğini **Texttemplatingfileönişlemci** olarak ayarlayabilirsiniz.
 
 Daha fazla bilgi için bkz. [T4 metin şablonlarıyla çalışma zamanı metin üretimi](../modeling/run-time-text-generation-with-t4-text-templates.md). Şablonların sözdizimi hakkında daha fazla bilgi için bkz. [T4 metin şablonu yazma](../modeling/writing-a-t4-text-template.md).
 
 ## <a name="design-time-t4-text-templates"></a>Tasarım zamanı T4 Metin şablonları
 
-Tasarım zamanı şablonları, kaynak kodun ve uygulamanızın diğer kaynaklarının bir parçasını tanımlar. Genellikle, tek bir giriş dosyası veya veritabanındaki verileri okuyan çeşitli şablonlar kullanır ve *. cs*, *. vb*veya diğer kaynak dosyalarından bazılarını oluşturabilirsiniz. Her şablon bir dosya oluşturur. Bunlar Visual Studio veya MSBuild içinde yürütülür.
+Tasarım zamanı şablonları, kaynak kodun ve uygulamanızın diğer kaynaklarının bir parçasını tanımlar. Genellikle, tek bir giriş dosyası veya veritabanındaki verileri okuyan çeşitli şablonlar kullanır ve *. cs*, *. vb* veya diğer kaynak dosyalarından bazılarını oluşturabilirsiniz. Her şablon bir dosya oluşturur. Bunlar Visual Studio veya MSBuild içinde yürütülür.
 
 Örneğin, giriş verileriniz bir XML dosyası yapılandırma verileri olabilir. Geliştirme sırasında XML dosyasını düzenlediğinizde metin şablonları, uygulama kodunun bir parçasını yeniden oluşturun. Şablonlardan biri aşağıdaki örneğe benzeyebilir:
 
@@ -85,14 +87,14 @@ Başka bir örnek olarak, giriş bir iş etkinliğinde iş akışının diyagram
 
 Tasarım zamanı şablonları, gereksinimler değiştiğinde yapılandırmanın değiştirilmesini daha hızlı ve daha güvenilir hale getirir. Genellikle giriş, iş akışı örneğinde olduğu gibi iş gereksinimlerine göre tanımlanır. Bu, değişiklikleri kullanıcılarınız ile tartışmanızı kolaylaştırır. Bu nedenle, tasarım zamanı şablonları Çevik bir geliştirme sürecinde yararlı bir araçtır.
 
-Tasarım zamanı şablonu oluşturmak için projenize bir **metin şablonu** dosyası ekleyin. Alternatif olarak, düz metin dosyası ekleyebilir ve **özel araç** özelliğini **TextTemplatingFileGenerator**olarak ayarlayabilirsiniz.
+Tasarım zamanı şablonu oluşturmak için projenize bir **metin şablonu** dosyası ekleyin. Alternatif olarak, düz metin dosyası ekleyebilir ve **özel araç** özelliğini **TextTemplatingFileGenerator** olarak ayarlayabilirsiniz.
 
 Daha fazla bilgi için bkz. [T4 Metin şablonları kullanarak tasarım zamanı kodu oluşturma](../modeling/design-time-code-generation-by-using-t4-text-templates.md). Şablonların sözdizimi hakkında daha fazla bilgi için bkz. [T4 metin şablonu yazma](../modeling/writing-a-t4-text-template.md).
 
 > [!NOTE]
-> *Model* terimi bazen bir veya daha fazla şablon tarafından okunan verileri tanımlamakta kullanılır. Model herhangi bir biçimde herhangi bir dosya veya veritabanı türünde olabilir. Bir UML modeli veya etki alanına özgü dil modeli olması gerekmez. ' Model ' yalnızca verilerin koda benzer değil iş kavramları açısından tanımlanamayacağını gösterir.
+> *Model* terimi bazen bir veya daha fazla şablon tarafından okunan verileri tanımlamakta kullanılır. Model herhangi bir biçimde herhangi bir dosya veya veritabanı türünde olabilir. Bir UML modeli veya Domain-Specific dil modeli olması gerekmez. ' Model ' yalnızca verilerin koda benzer değil iş kavramları açısından tanımlanamayacağını gösterir.
 
-Metin şablonu dönüştürme özelliği *T4*olarak adlandırılır.
+Metin şablonu dönüştürme özelliği *T4* olarak adlandırılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

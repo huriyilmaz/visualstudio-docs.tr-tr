@@ -1,5 +1,7 @@
 ---
 title: Bir Simgenin veya Dekoratörün Görünürlüğünü Denetleme
+description: Modeldeki özelliklerin durumuna bağlı olarak bir simgenin veya dekoratörün görünürlüğünü nasıl denetleyebileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
@@ -7,18 +9,18 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1d2082f7e26d3e335ed88bbced0f59d6d6c4780c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bdf97cc10543f066665506d3e238386dc39f0d4f
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85546658"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363503"
 ---
 # <a name="controlling-the-visibility-of-an-icon-or-decorator"></a>Bir Simgenin veya Dekoratörün Görünürlüğünü Denetleme
 *Dekoratör* , etki alanına özgü DILDE (DSL) bir şekil üzerinde görüntülenen bir simge veya metin satırıdır. Modelin özelliklerinin durumuna bağlı olarak dekoratörün görünmesini ve kaybolmasını sağlayabilirsiniz. Örneğin, bir kişiyi temsil eden bir şekil üzerinde, kişinin cinsiyetine, alt öğe sayısına ve buna bağlı olarak görünen farklı simgelere sahip olabilirsiniz.
 
 ## <a name="controlling-the-visibility-of-an-icon-or-decorator"></a>Bir simgenin veya dekoratörün görünürlüğünü denetleme
- Aşağıdaki yordam bir şekli ve bir etki alanı sınıfıyla eşlemesini tanımlamış olduğunuzu varsayar. Daha fazla bilgi için bkz. [etki alanına özgü dil tanımlama](../modeling/how-to-define-a-domain-specific-language.md).
+ Aşağıdaki yordam bir şekli ve bir etki alanı sınıfıyla eşlemesini tanımlamış olduğunuzu varsayar. Daha fazla bilgi için bkz. [Domain-Specific dil tanımlama](../modeling/how-to-define-a-domain-specific-language.md).
 
 #### <a name="to-control-the-visibility-of-an-icon-or-text-decorator"></a>Bir simgenin veya metin dekoratörün görünürlüğünü denetlemek için
 
@@ -76,7 +78,7 @@ ms.locfileid: "85546658"
 
     3. **Filter özelliğinde**, denetim özelliği **dekoratorcontrol**' u seçin.
 
-    4. **Görünürlük girişleri**altında girin `True` .
+    4. **Görünürlük girişleri** altında girin `True` .
 
 3. **Çözüm Gezgini** araç çubuğunda **Tüm Şablonları Dönüştür** ' e tıklayın.
 

@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: Geçerli Seçime Erişme ve Seçimi Kısıtlama'
+description: Etki alanına özgü diliniz için bir komut veya hareket işleyicisi yazdığınızda kullanıcının sağ tıkladığını nasıl belirleyebileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b1f5aaa106e00f9b10eb88892bcc978b92a01c79
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0ba656793b630dd55fc2ebc7242e5d45484b0f8e
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85545697"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363399"
 ---
 # <a name="how-to-access-and-constrain-the-current-selection"></a>Nasıl yapılır: Geçerli Seçime Erişme ve Seçimi Kısıtlama
 
@@ -30,7 +32,7 @@ Komuta bağlı olarak, komut işleyicisinin model tasarımcısında, model Gezgi
 
 1. <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>Sınıfı, geçerli seçime erişmek için kullanılabilecek aşağıdaki üyeleri tanımlar.
 
-    |Üye|Description|
+    |Üye|Açıklama|
     |-|-|
     |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsAnyDocumentSelectionCompartment%2A> yöntemi|`true`Model tasarımcısında seçili öğelerden herhangi biri bir bölme şekli ise, aksi takdirde, döndürür `false` .|
     |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsDiagramSelected%2A> yöntemi|`true`Şema, model tasarımcısında seçiliyse döndürür; Aksi takdirde, `false` .|

@@ -1,5 +1,7 @@
 ---
 title: Bağımlılık diyagramları ile kod doğrulama
+description: Kodun tasarımıyla çakışmadıklarından emin olmak için, Visual Studio 'daki bağımlılık diyagramlarıyla kodunuzu doğrulamanız gerektiğini öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 09/28/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +21,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 975fe8eac5657e245027a4811e50bbc93528cfe5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bc8b36768cbac4249b964b167988119b5700d5c7
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80759706"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362554"
 ---
 # <a name="validate-code-with-dependency-diagrams"></a>Bağımlılık diyagramları ile kod doğrulama
 
@@ -59,11 +61,11 @@ Kodu, Visual Studio 'da veya bir komut isteminden açık bir bağımlılık diya
 
 ## <a name="live-dependency-validation"></a>Canlı bağımlılık doğrulaması
 
-Bağımlılık doğrulaması gerçek zamanlı olarak gerçekleşir ve hatalar hemen **hata listesi**görüntülenir.
+Bağımlılık doğrulaması gerçek zamanlı olarak gerçekleşir ve hatalar hemen **hata listesi** görüntülenir.
 
 * Canlı doğrulama C# ve Visual Basic için desteklenir.
 
-* Canlı bağımlılık doğrulaması kullanırken tam çözüm analizini etkinleştirmek için, **hata listesi**görüntülenen altın çubuktan seçenekler ayarlarını açın.
+* Canlı bağımlılık doğrulaması kullanırken tam çözüm analizini etkinleştirmek için, **hata listesi** görüntülenen altın çubuktan seçenekler ayarlarını açın.
 
   - Çözümünüzde tüm mimari sorunları görmekten ilgileniyorsanız, altın rengi kalıcı olarak kapatabilirsiniz.
   - Tam çözüm analizini etkinleştirmezseniz, analiz yalnızca düzenlenmekte olan dosyalar için yapılır.
@@ -92,7 +94,7 @@ Katmanları birden çok uygulama arasında paylaşılan Web sitelerine, Office b
 
 ## <a name="validate-code-manually"></a>Kodu el ile doğrulama
 
-Çözüm öğelerine bağlı açık bir bağımlılık diyagramınız varsa, diyagramdaki kısayolu **Doğrula** komutunu çalıştırabilirsiniz. Ayrıca, **/p: ValidateArchitecture** özel özelliği **true**olarak ayarlanmış şekilde **MSBuild** komutunu çalıştırmak için komut istemi ' ni de kullanabilirsiniz. Örneğin, kodda değişiklik yaparken bağımlılık çakışmalarını önceden yakalayabilmek için düzenli olarak katman doğrulama gerçekleştirin.
+Çözüm öğelerine bağlı açık bir bağımlılık diyagramınız varsa, diyagramdaki kısayolu **Doğrula** komutunu çalıştırabilirsiniz. Ayrıca, **/p: ValidateArchitecture** özel özelliği **true** olarak ayarlanmış şekilde **MSBuild** komutunu çalıştırmak için komut istemi ' ni de kullanabilirsiniz. Örneğin, kodda değişiklik yaparken bağımlılık çakışmalarını önceden yakalayabilmek için düzenli olarak katman doğrulama gerçekleştirin.
 
 ### <a name="validate-code-from-an-open-dependency-diagram"></a>Açık bağımlılık diyagramından kodu doğrulama
 
@@ -161,7 +163,7 @@ Geliştirme işlemi sırasında, doğrulama esnasında bildirilen çakışmalar�
 
 **Hata listesi** penceresindeki doğrulama hatalarını yönetmek için bu görevleri kullanın:
 
-|**Amaç**|**Bu adımları izleyin**|
+|**Hedef**|**Buradaki adımları izleyin**|
 |-|-|
 |Doğrulama sırasında seçili hataları gizleme|Seçilen bir veya birden çok hataya sağ tıklayın, **doğrulama hatalarını Yönet**' in üzerine gelin ve ardından **hataları Gizle**' ye tıklayın.<br /><br /> Gizlenen hatalar üstü çizili biçimde görünür. Doğrulamayı daha sonra çalıştırdığınızda bu hatalar görünmez.<br /><br /> Gizlenen hatalar, ilgili bağımlılık diyagramı dosyası için bir. suppressions dosyasında izlenir.|
 |Seçili hataların gizlenmesini durdurma|Seçili gizlenen hata veya hatalara sağ tıklayın, **doğrulama hatalarını Yönet**' in üzerine gelin ve ardından hataları gizlemeyi **Durdur**' a tıklayın.<br /><br /> Doğrulamayı daha sonra çalıştırdığınızda seçili gizlenen hatalar görünecektir.|
@@ -184,13 +186,13 @@ Modelleme projesi (.modelproj) dosyası açmak için metin düzenleyicisi kullan
 
 1. **Çözüm Gezgini**' de, bağımlılık diyagramı veya diyagramlarını içeren modelleme projesine sağ tıklayın ve ardından **Özellikler**' e tıklayın.
 
-2. **Özellikler** penceresinde, modelleme projesinin **Mimariyi Doğrula** özelliğini **doğru**olarak ayarlayın.
+2. **Özellikler** penceresinde, modelleme projesinin **Mimariyi Doğrula** özelliğini **doğru** olarak ayarlayın.
 
     Bu, doğrulama işlemi içinde modelleme projesini içerir.
 
 3. **Çözüm Gezgini**, doğrulama için kullanmak istediğiniz bağımlılık diyagramı (. layerdiagram) dosyasına tıklayın.
 
-4. **Özellikler** penceresinde diyagramın **Build Action** özelliğinin **Validate**olarak ayarlandığından emin olun.
+4. **Özellikler** penceresinde diyagramın **Build Action** özelliğinin **Validate** olarak ayarlandığından emin olun.
 
     Bu, doğrulama işlemindeki bağımlılık diyagramını içerir.
 
@@ -200,7 +202,7 @@ Hata Listesi penceresindeki hataları yönetmek için bkz. [katman doğrulama ha
 
 Aşağıdaki tabloda katman doğrulama sorunları ve bunların çözümü açıklanmaktadır. Bu sorunlar, kod ve tasarım arasındaki çakışmalarla sonuçlanan hatalardan ayrılır. Bu hatalar hakkında daha fazla bilgi için bkz. [katman doğrulama sorunlarını giderme](#troubleshoot-layer-validation-issues).
 
-|**Sorun**|**Olası neden**|**Çözünürlük**|
+|**Konuda**|**Olası neden**|**Çözünürlük**|
 |-|-|-|
 |Doğrulama hataları beklendiği gibi gerçekleşmez.|Doğrulama, Çözüm Gezgini ' deki diğer bağımlılık diyagramlarından kopyalanmış ve aynı modelleme projesinde olan bağımlılık diyagramlarında çalışmaz. Bu şekilde kopyalanmış bağımlılık diyagramları, özgün bağımlılık diyagramı ile aynı başvuruları içerir.|Modelleme projesine yeni bir bağımlılık diyagramı ekleyin.<br /><br /> Öğeleri kaynak bağımlılığı diyagramından yeni diyagrama kopyalayın.|
 
@@ -218,10 +220,10 @@ Aşağıdaki bölümde, bu hatalarda kullanılan sözdizimi belirtilmekte, bu ha
 
 |**Syntax**|**Açıklama**|
 |-|-|
-|*ArtifactN*(*ArtifactTypeN*)|*ArtifactN* , bağımlılık diyagramındaki bir katmanla ilişkili bir yapıdır.<br /><br /> *ArtifactTypeN* , bir **sınıf** veya **Yöntem**gibi *ArtifactN*türüdür, örneğin:<br /><br /> MySolution.MyProject.MyClass.MyMethod(Method)|
+|*ArtifactN*(*ArtifactTypeN*)|*ArtifactN* , bağımlılık diyagramındaki bir katmanla ilişkili bir yapıdır.<br /><br /> *ArtifactTypeN* , bir **sınıf** veya **Yöntem** gibi *ArtifactN* türüdür, örneğin:<br /><br /> MySolution.MyProject.MyClass.MyMethod(Method)|
 |*NamespaceNameN*|Bir ad alanının adı.|
 |*Layernamence*|Bağımlılık diyagramındaki bir katmanın adı.|
-|*DependencyType*|*Artifact1* ve *Artifact2*arasındaki bağımlılık ilişkisinin türü. Örneğin, *Artifact1* , *Artifact2*ile bir **çağrı** ilişkisine sahiptir.|
+|*DependencyType*|*Artifact1* ve *Artifact2* arasındaki bağımlılık ilişkisinin türü. Örneğin, *Artifact1* , *Artifact2* ile bir **çağrı** ilişkisine sahiptir.|
 
 | **Hata sözdizimi** | **Hata açıklaması** |
 |-|-|

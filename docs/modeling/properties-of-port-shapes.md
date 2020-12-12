@@ -1,5 +1,7 @@
 ---
 title: Bağlantı Noktası Şekillerinin Özellikleri
+description: Bağlantı noktası şekilleri ve oluşturulan tasarımcıda etki alanı sınıflarını göstermek için bağlantı noktası şekillerini nasıl kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,17 +13,17 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 58f0b35b54ddb383111ee060225528d5942b1058
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: c51d770392fd219478b3e8f8aa428cdcbab6ef3e
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90811155"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362827"
 ---
 # <a name="properties-of-port-shapes"></a>Bağlantı Noktası Şekillerinin Özellikleri
 Oluşturulan tasarımcıda etki alanı sınıflarını göstermek için bağlantı noktası şekillerini kullanabilirsiniz.
 
- Daha fazla bilgi için bkz. [etki alanına özgü dil tanımlama](../modeling/how-to-define-a-domain-specific-language.md). Bu özelliklerin nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [etki alanına özgü dili özelleştirme ve genişletme](../modeling/customizing-and-extending-a-domain-specific-language.md).
+ Daha fazla bilgi için bkz. [Domain-Specific dil tanımlama](../modeling/how-to-define-a-domain-specific-language.md). Bu özelliklerin nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [Domain-Specific dilini özelleştirme ve genişletme](../modeling/customizing-and-extending-a-domain-specific-language.md).
 
  Bağlantı noktası şekilleri aşağıdaki tabloda listelenen özelliklere sahiptir.
 
@@ -35,13 +37,13 @@ Oluşturulan tasarımcıda etki alanı sınıflarını göstermek için bağlant
 |Ana hat kesik çizgi stili|Bu şeklin ana hat kesik çizgi stili (düz, kesik çizgi, nokta, çizgi nokta, çizgi dotdot veya özel).|Düz|
 |Ana hat kalınlığı|Bu şeklin ana hat kalınlığı.|0,03125|
 |Metin rengi|Bu şekille ilişkilendirilen metin Dekoratörleri için kullanılan renk.|Siyahi|
-|Erişim değiştiricisi|Sınıfın erişim düzeyi ( `public` veya `internal` ).|Ortak|
+|Erişim değiştiricisi|Sınıfın erişim düzeyi ( `public` veya `internal` ).|Genel|
 |Özel Öznitelikler|Bu şekilden oluşturulan kaynak kodu sınıfına öznitelikler eklemek için kullanılır.|\<none>|
 |Double türevi üretir|Eğer `True` bir temel sınıf ve kısmi bir sınıf (geçersiz kılmaları özelleştirmeyi desteklemek için) oluşturulur. Daha fazla bilgi için bkz [. oluşturulan sınıfları geçersiz kılma ve genişletme](../modeling/overriding-and-extending-the-generated-classes.md)|Yanlış|
 |Özel Oluşturucusu vardır|İse `True` , kaynak kodda özel bir Oluşturucu sağlanacaktır. Daha fazla bilgi için bkz. [oluşturulan sınıfları geçersiz kılma ve genişletme](../modeling/overriding-and-extending-the-generated-classes.md).|Yanlış|
 |Devralma değiştiricisi|Bağlantı noktasından (veya) oluşturulan kaynak kodu sınıfının devralım türünü açıklar `none` `abstract` `sealed` .|yok|
 |Temel bağlantı noktası|Bu şeklin temel sınıfı.|(yok)|
-|Name|Bu şeklin adı.|Geçerli ad|
+|Ad|Bu şeklin adı.|Geçerli ad|
 |Ad Alanı|Bu şekille ilişkili ad alanı.|Geçerli ad alanı|
 |Araç Ipucu türü|Araç ipucu nasıl tanımlanır (sabit, değişken veya yok). Düzeltildiğinde, `Fixed Tooltip Text` özelliğin değeri araç ipucu olarak kullanılır; değişken ise, araç ipucu özel kodda tanımlanır.|yok|
 |Notlar|Bu şekille ilişkili resmi olmayan notlar.|\<none>|

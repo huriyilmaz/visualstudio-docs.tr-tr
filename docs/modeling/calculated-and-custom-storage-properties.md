@@ -1,5 +1,7 @@
 ---
 title: Hesaplanan ve Özel Depolama Özellikleri
+description: Etki alanına özgü dil (DSL) içindeki tüm etki alanı özelliklerinin diyagramda ve dil Gezgininde kullanıcıya nasıl görüntülenebileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 52915f0bac2bd172daf909541ecfa86396d90a5d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2c50d205745917b3af7de638a17921f4bcdca509
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76115192"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363555"
 ---
 # <a name="calculated-and-custom-storage-properties"></a>Hesaplanan ve Özel Depolama Özellikleri
 Etki alanına özgü dil (DSL) içindeki tüm etki alanı özellikleri, diyagramda ve dil gezgininizde kullanıcıya görüntülenebilir ve program kodu tarafından erişilebilir. Ancak özellikler, değerlerinin depolandığı şekilde farklılık gösterir.
@@ -22,7 +24,7 @@ Etki alanına özgü dil (DSL) içindeki tüm etki alanı özellikleri, diyagram
 ## <a name="kinds-of-domain-properties"></a>Etki alanı özelliklerinin türleri
  DSL tanımında, aşağıdaki tabloda listelendiği gibi bir etki alanı özelliği **türünü** ayarlayabilirsiniz:
 
-|Alan özelliği türü|Description|
+|Alan özelliği türü|Açıklama|
 |-|-|
 |**Standart** (varsayılan)|*Depoya* kaydedilen ve dosyaya serileştirilmiş bir alan özelliği.|
 |**Hesaplanmış**|Depoda kaydedilmemiş ancak diğer değerlerden hesaplanan salt bir salt okunurdur.<br /><br /> Örneğin, `Person.Age` öğesinden hesaplanabilir `Person.BirthDate` .<br /><br /> Hesaplamayı gerçekleştiren kodu sağlamanız gerekir. Genellikle, diğer etki alanı özelliklerinden değeri hesaplayabilirsiniz. Ancak dış kaynakları da kullanabilirsiniz.|
@@ -35,19 +37,19 @@ Etki alanına özgü dil (DSL) içindeki tüm etki alanı özellikleri, diyagram
 
 1. DslDefinition. dsl ' de, diyagramda veya **DSL Gezgini**' nde etki alanı özelliğini seçin.
 
-2. **Özellikler** penceresinde, **tür** alanını **hesaplanan** veya **özel depolama**olarak ayarlayın.
+2. **Özellikler** penceresinde, **tür** alanını **hesaplanan** veya **özel depolama** olarak ayarlayın.
 
      Ayrıca **türünü** istediğiniz gibi ayarladığınızdan emin olun.
 
-3. **Çözüm Gezgini**araç çubuğundan **Tüm Şablonları Dönüştür** ' e tıklayın.
+3. **Çözüm Gezgini** araç çubuğundan **Tüm Şablonları Dönüştür** ' e tıklayın.
 
 4. **Yapı** menüsünde **Yapı Çözümü**’ne tıklayın.
 
-     Şu hata iletisini alıyorsunuz: "*YourClass* , Get*yourproperty*için bir tanım içermiyor."
+     Şu hata iletisini alıyorsunuz: "*YourClass* , Get *yourproperty* için bir tanım içermiyor."
 
 5. Hata iletisine çift tıklayın.
 
-     Dsl\GeneratedCode\DomainClasses.cs veya DomainRelationships.cs açılır. Vurgulanan yöntem çağrısının üzerinde, bir yorum Get*Yourproperty*() için bir uygulama sağlamanızı ister.
+     Dsl\GeneratedCode\DomainClasses.cs veya DomainRelationships.cs açılır. Vurgulanan yöntem çağrısının üzerinde, bir yorum Get *Yourproperty*() için bir uygulama sağlamanızı ister.
 
     > [!NOTE]
     > Bu dosya DslDefinition. dsl 'den oluşturulur. Bu dosyayı düzenlerseniz, **Tüm Şablonları Dönüştür**' e tıkladığınızda yaptığınız değişiklikler kaybedilir. Bunun yerine, gerekli yöntemi ayrı bir dosyaya ekleyin.
@@ -66,7 +68,7 @@ Etki alanına özgü dil (DSL) içindeki tüm etki alanı özellikleri, diyagram
     }  }
     ```
 
-8. **Türü** **özel depolama**olarak ayarlarsanız, bir yöntemi de belirtmeniz gerekir `Set` . Örneğin:
+8. **Türü** **özel depolama** olarak ayarlarsanız, bir yöntemi de belirtmeniz gerekir `Set` . Örneğin:
 
     ```
     void SetAgeValue(int value)
@@ -79,7 +81,7 @@ Etki alanına özgü dil (DSL) içindeki tüm etki alanı özellikleri, diyagram
 
 9. Çözümü derleyin ve çalıştırın.
 
-10. Özelliği test edin. **Geri almayı** ve **yinelemeyi**denediğinizden emin olun.
+10. Özelliği test edin. **Geri almayı** ve **yinelemeyi** denediğinizden emin olun.
 
 ## <a name="transactions-and-custom-setters"></a><a name="setters"></a> İşlemler ve özel ayarlayıcılar
  Özel depolama özelliğinin set yönteminde bir işlem açmanız gerekmez, çünkü Yöntem genellikle etkin bir işlem içinde çağırılır.

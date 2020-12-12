@@ -1,5 +1,7 @@
 ---
 title: T4 Metin Şablonları Kullanarak Tasarım Zamanı Kodu Oluşturma
+description: Tasarım zamanı T4 metin şablonlarının, Visual Studio projenizde program kodu ve diğer dosyalar oluşturmanıza nasıl olanak sağladığını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -15,35 +17,35 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8c392862f884fd8082b30cbb673aab116756fdfe
-ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
+ms.openlocfilehash: 698dde24cb66d27a12a0f8785c8ac97e4cfb0eb0
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89426778"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363815"
 ---
 # <a name="design-time-code-generation-by-using-t4-text-templates"></a>T4 Metin Şablonları Kullanarak Tasarım Zamanı Kodu Oluşturma
 
-Tasarım zamanı T4 Metin şablonları, Visual Studio projenizde program kodu ve diğer dosyaları oluşturmanıza olanak tanır. Genellikle, şablonları bir *modelden*verilere göre oluşturdukları kodu değiştirecek şekilde yazarsınız. Model, uygulamanızın gereksinimleriyle ilgili anahtar bilgileri içeren bir dosya veya veritabanıdır.
+Tasarım zamanı T4 Metin şablonları, Visual Studio projenizde program kodu ve diğer dosyaları oluşturmanıza olanak tanır. Genellikle, şablonları bir *modelden* verilere göre oluşturdukları kodu değiştirecek şekilde yazarsınız. Model, uygulamanızın gereksinimleriyle ilgili anahtar bilgileri içeren bir dosya veya veritabanıdır.
 
 Örneğin, bir tablo veya diyagram olarak iş akışını tanımlayan bir modelinize sahip olabilirsiniz. Modelden, iş akışını yürüten yazılımı oluşturabilirsiniz. Kullanıcılarınızın gereksinimleri değiştiğinde, kullanıcılarla yeni iş akışını tartışmak kolaydır. Kodu iş akışından yeniden oluşturma işlemi, kodu el ile güncelleştirmeden daha güvenilirdir.
 
 > [!NOTE]
-> *Model* , bir uygulamanın belirli bir yönlerini açıklayan bir veri kaynağıdır. Herhangi bir dosya veya veritabanı türü gibi herhangi bir biçimde olabilir. UML model veya etki alanına özgü dil modeli gibi belirli bir biçimde olmak zorunda değildir. Tipik modeller tablo veya XML dosyaları biçiminde bulunur.
+> *Model* , bir uygulamanın belirli bir yönlerini açıklayan bir veri kaynağıdır. Herhangi bir dosya veya veritabanı türü gibi herhangi bir biçimde olabilir. UML model veya Domain-Specific dil modeli gibi belirli bir biçimde olması gerekmez. Tipik modeller tablo veya XML dosyaları biçiminde bulunur.
 
 Büyük olasılıkla kod üretimi hakkında zaten bilgi sahibisiniz. Visual Studio çözümünüzdeki bir **. resx** dosyasında kaynak tanımladığınızda, bir dizi sınıf ve yöntem otomatik olarak oluşturulur. Kaynak dosyası, sınıfları ve yöntemleri düzenlemeniz gerekdiğinizden, kaynakları düzenlemeyi çok daha kolay ve güvenilir hale getirir. Metin şablonlarıyla, kendi tasarımınızın bir kaynağından aynı şekilde kod oluşturabilirsiniz.
 
 Metin şablonu, oluşturmak istediğiniz metnin bir karışımını ve metnin değişken parçalarını oluşturan program kodunu içerir. Program kodu, oluşturulan metnin parçalarını yinelemenize veya koşullu olarak atlamanızı sağlar. Oluşturulan metin, uygulamanızın bir kısmını oluşturacak program kodu olabilir.
 
-## <a name="create-a-design-time-t4-text-template"></a>Tasarım zamanı T4 metin şablonu oluşturma
+## <a name="create-a-design-time-t4-text-template"></a>Design-Time T4 metin şablonu oluşturma
 
 1. Yeni bir Visual Studio projesi oluşturun veya var olan bir projeyi açın.
 
-2. Projenize bir metin şablonu dosyası ekleyin ve **. tt**uzantısına sahip bir ad verin.
+2. Projenize bir metin şablonu dosyası ekleyin ve **. tt** uzantısına sahip bir ad verin.
 
-    Bunu yapmak için, **Çözüm Gezgini**, projenizin kısayol menüsünde **Add**  >  **Yeni öğe**Ekle ' yi seçin. **Yeni öğe Ekle** iletişim kutusunda Orta bölmeden **metin şablonu** ' nu seçin.
+    Bunu yapmak için, **Çözüm Gezgini**, projenizin kısayol menüsünde   >  **Yeni öğe** Ekle ' yi seçin. **Yeni öğe Ekle** iletişim kutusunda Orta bölmeden **metin şablonu** ' nu seçin.
 
-    Dosyanın **özel araç** özelliğinin **TextTemplatingFileGenerator**olduğunu unutmayın.
+    Dosyanın **özel araç** özelliğinin **TextTemplatingFileGenerator** olduğunu unutmayın.
 
 3. Dosyayı açın. Zaten aşağıdaki yönergeleri içerir:
 
@@ -62,9 +64,9 @@ Metin şablonu, oluşturmak istediğiniz metnin bir karışımını ve metnin de
 
 5. Dosyayı kaydedin.
 
-    Şablonu çalıştırmak istediğinizi onaylamanızı isteyen bir **güvenlik uyarısı** ileti kutusu görebilirsiniz. **Tamam**’a tıklayın.
+    Şablonu çalıştırmak istediğinizi onaylamanızı isteyen bir **güvenlik uyarısı** ileti kutusu görebilirsiniz. **Tamam** düğmesine tıklayın.
 
-6. **Çözüm Gezgini**' de, şablon dosyası düğümünü genişletin ve **. txt**uzantılı bir dosya görürsünüz. Dosya şablondan oluşturulan metni içerir.
+6. **Çözüm Gezgini**' de, şablon dosyası düğümünü genişletin ve **. txt** uzantılı bir dosya görürsünüz. Dosya şablondan oluşturulan metni içerir.
 
    > [!NOTE]
    > Projeniz bir Visual Basic projesi ise, çıkış dosyasını görmek için **tüm dosyaları göster** ' e tıklamanız gerekir.
@@ -119,7 +121,7 @@ Metin şablonları, oluşturulan dosyanın içeriğini değiştirmek için progr
 
    İçinde üretilen kodu yazarsanız [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] , `template` yönergesinin içermesi gerekir `language="VB"` . `"C#"` varsayılan değerdir.
 
-## <a name="debugging-a-design-time-t4-text-template"></a>Tasarım zamanı T4 metin şablonunda hata ayıklama
+## <a name="debugging-a-design-time-t4-text-template"></a>Design-Time T4 metin şablonunda hata ayıklama
 
 Metin şablonunda hata ayıklamak için:
 
@@ -221,7 +223,7 @@ Bir model dosyasına veya veritabanına erişmek için, şablon kodunuz System.X
 
 `assembly`Yönergesi, belirtilen derlemeyi, Visual Studio projesinin başvurular bölümüyle aynı şekilde şablon kodunuz için kullanılabilir hale getirir. Otomatik olarak başvurulan System.dll bir başvuru eklemeniz gerekmez. `import`Yönergesi, `using` normal bir program dosyasındaki yönergeyle aynı şekilde tam nitelikli adlarını kullanmadan türleri kullanmanıza olanak sağlar.
 
-Örneğin, **System.IO**içeri aktardıktan sonra şunu yazabilirsiniz:
+Örneğin, **System.IO** içeri aktardıktan sonra şunu yazabilirsiniz:
 
 ```csharp
 
@@ -346,7 +348,7 @@ Warning("A warning message");
 
 2. Çalıştığından emin olmak için yeni dosyayı test edin.
 
-3. Çözüm Gezgini, dosya adı uzantısını **. tt**olarak değiştirin.
+3. Çözüm Gezgini, dosya adı uzantısını **. tt** olarak değiştirin.
 
 4. **. Tt** dosyasının aşağıdaki özelliklerini doğrulayın:
 

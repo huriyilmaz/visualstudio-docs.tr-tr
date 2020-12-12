@@ -1,5 +1,7 @@
 ---
 title: 'Bağımlılık Diyagramları: Yönergeler'
+description: Visual Studio 'da bağımlılık diyagramları oluşturarak uygulamanızın mimarisini yüksek düzeyde nasıl tanımlacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 09/28/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9f8ec90d045259cd5d10533db6096154376d48fe
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5bfef2f9397fbe8dfeceaa8789cf8d118315b26d
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75594636"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97363971"
 ---
 # <a name="dependency-diagrams-guidelines"></a>Bağımlılık diyagramları: yönergeler
 
@@ -30,7 +32,7 @@ Hangi Visual Studio sürümlerini bu özelliği desteklediğini görmek için bk
 
 ## <a name="what-is-a-dependency-diagram"></a>Bağımlılık diyagramı nedir?
 
-Geleneksel mimari diyagramı gibi bir bağımlılık diyagramı, tasarımın ana bileşenlerini veya işlevsel birimlerini ve bunların bağımlılıklarını tanımlar. Diyagramdaki *Katman*olarak adlandırılan her düğüm, bir dizi ad alanı, proje veya diğer yapıtları temsil eder. Tasarımınızda bulunması gereken bağımlılıkları çizebilirsiniz. Geleneksel mimari diyagramlarından farklı olarak, kaynak kodundaki gerçek bağımlılıkların belirttiğiniz hedeflenen bağımlılıklara uygun olduğunu doğrulayabilirsiniz. Üzerinde düzenli bir yapılandırmanın doğrulama parçasını yaparak [!INCLUDE[esprtfs](../code-quality/includes/esprtfs_md.md)] , program kodunun sonraki değişikliklerle sistem mimarisine uymaya devam etmesini sağlayabilirsiniz. Bkz. [bağımlılık diyagramları: başvuru](../modeling/layer-diagrams-reference.md).
+Geleneksel mimari diyagramı gibi bir bağımlılık diyagramı, tasarımın ana bileşenlerini veya işlevsel birimlerini ve bunların bağımlılıklarını tanımlar. Diyagramdaki *Katman* olarak adlandırılan her düğüm, bir dizi ad alanı, proje veya diğer yapıtları temsil eder. Tasarımınızda bulunması gereken bağımlılıkları çizebilirsiniz. Geleneksel mimari diyagramlarından farklı olarak, kaynak kodundaki gerçek bağımlılıkların belirttiğiniz hedeflenen bağımlılıklara uygun olduğunu doğrulayabilirsiniz. Üzerinde düzenli bir yapılandırmanın doğrulama parçasını yaparak [!INCLUDE[esprtfs](../code-quality/includes/esprtfs_md.md)] , program kodunun sonraki değişikliklerle sistem mimarisine uymaya devam etmesini sağlayabilirsiniz. Bkz. [bağımlılık diyagramları: başvuru](../modeling/layer-diagrams-reference.md).
 
 ## <a name="how-to-design-or-update-your-app-with-dependency-diagrams"></a>Uygulamanızı bağımlılık diyagramlarıyla tasarlama veya güncelleştirme
 
@@ -41,7 +43,7 @@ Aşağıdaki adımlarda, geliştirme sürecinde bağımlılık diyagramlarının
 
 1. Tüm uygulama için veya içindeki bir katman için [bir bağımlılık diyagramı oluşturun](#Create) .
 
-2. [Birincil işlevsel alanların veya uygulamanızın bileşenlerinin temsil edilebilmesi için katmanları tanımlayın](#CreateLayers) . Bu katmanları işlevine göre adlandırın, örneğin, "sunum" veya "Hizmetler". Visual Studio çözümünüz varsa, her katmanı projeler, ad alanları, dosyalar vb. gibi *yapıtlar*koleksiyonuyla ilişkilendirebilirsiniz.
+2. [Birincil işlevsel alanların veya uygulamanızın bileşenlerinin temsil edilebilmesi için katmanları tanımlayın](#CreateLayers) . Bu katmanları işlevine göre adlandırın, örneğin, "sunum" veya "Hizmetler". Visual Studio çözümünüz varsa, her katmanı projeler, ad alanları, dosyalar vb. gibi *yapıtlar* koleksiyonuyla ilişkilendirebilirsiniz.
 
 3. Katmanlar arasında [var olan bağımlılıkları bulur](#Generate) .
 
@@ -68,7 +70,7 @@ Bkz. [kodunuzda bağımlılık diyagramları oluşturma](../modeling/create-laye
 
 ## <a name="define-layers-to-represent-functional-areas-or-components"></a><a name="CreateLayers"></a> İşlevsel alan veya bileşenleri temsil etmek için katmanları tanımlama
 
-Katmanlar, projeler, kod dosyaları, ad alanları, sınıflar ve yöntemler gibi mantıksal *yapıt*gruplarını temsil eder. Visual C# ve Visual Basic projelerinden yapıtlardan katmanlar oluşturabilir veya Word dosyaları ya da PowerPoint sunuları gibi belgeleri bağlayarak bir katmana özellikler veya planlar ekleyebilirsiniz. Her katman diyagramda dikdörtgen olarak görünür ve onunla bağlantılı yapıların sayısını gösterir. Katman, daha belirli görevleri tanımlayan iç içe katmanlar içerebilir.
+Katmanlar, projeler, kod dosyaları, ad alanları, sınıflar ve yöntemler gibi mantıksal *yapıt* gruplarını temsil eder. Visual C# ve Visual Basic projelerinden yapıtlardan katmanlar oluşturabilir veya Word dosyaları ya da PowerPoint sunuları gibi belgeleri bağlayarak bir katmana özellikler veya planlar ekleyebilirsiniz. Her katman diyagramda dikdörtgen olarak görünür ve onunla bağlantılı yapıların sayısını gösterir. Katman, daha belirli görevleri tanımlayan iç içe katmanlar içerebilir.
 
 Genel bir kılavuz olarak, "sunum" veya "Hizmetler" gibi işlevleri işlevine göre adlandırın. Yapıtlar yakından bağımlıysa, bunları aynı katmana yerleştirin. Yapıtlar ayrı ayrı güncelleştirilebiliyorsanız veya ayrı uygulamalarda kullanılıyorsa, bunları farklı katmanlara yerleştirin. Katman desenleri hakkında bilgi edinmek için konusundaki desenler & uygulamalar sitesini ziyaret edin [http://go.microsoft.com/fwlink/?LinkId=145794](https://archive.codeplex.com/?p=apparch) .
 
@@ -90,7 +92,7 @@ Bkz.
 Bir bağımlılık, bir katman ile ilişkili yapının başka bir katman ile ilişkili bir yapıya başvurusu olduğu yerde var olur. Örneğin, bir katmandaki sınıf başka bir katmanda sınıfı olan değişkeni bildirir. Mevcut bağımlılıkları tersine mühendislik yaparak keşfedebilirsiniz.
 
 > [!NOTE]
-> Bağımlılıklarda belirli türdeki yapılar için ters mühendislik uygulanamaz. Örneğin, hiçbir bağımlılıkta metin dosyasına bağlı katmandan veya katmana ters mühendislik uygulanmaz. Hangi yapıların tersine mühendislik uygulayabileceğiniz bağımlılıklara sahip olduğunu görmek için, bir veya birden fazla katmana sağ tıklayıp **bağlantıları görüntüle**' ye tıklayın. **Katman Gezgini**' nde **doğrulamayı destekler** sütununu inceleyin. Bağımlılıklar, bu sütunun **yanlış**gösterdiği yapıtlar için ters mühendislik uygulanmaz.
+> Bağımlılıklarda belirli türdeki yapılar için ters mühendislik uygulanamaz. Örneğin, hiçbir bağımlılıkta metin dosyasına bağlı katmandan veya katmana ters mühendislik uygulanmaz. Hangi yapıların tersine mühendislik uygulayabileceğiniz bağımlılıklara sahip olduğunu görmek için, bir veya birden fazla katmana sağ tıklayıp **bağlantıları görüntüle**' ye tıklayın. **Katman Gezgini**' nde **doğrulamayı destekler** sütununu inceleyin. Bağımlılıklar, bu sütunun **yanlış** gösterdiği yapıtlar için ters mühendislik uygulanmaz.
 
 ### <a name="to-reverse-engineer-existing-dependencies-between-layers"></a>Katmanlar arasında varolan bağımlılıklara ters mühendislik uygulamak için
 
@@ -102,9 +104,9 @@ Genellikle var olmaması gereken bazı bağımlılıklar göreceksiniz. Bu bağ�
 
 Sisteminizde veya amaçlanan mimaride yapmayı planladığınız değişiklikleri anlatmak için, bağımlılık diyagramını düzenlemek üzere aşağıdaki adımları kullanın. Ayrıca, kod yapısını genişletmeden önce geliştirmek için bazı yeniden düzenleme değişiklikleri yapmayı düşünebilirsiniz. Bkz. [kodun yapısını geliştirme](#Improving).
 
-|**Amaç**|**Bu adımları gerçekleştirin**|
+|**Hedef**|**Bu adımları gerçekleştirin**|
 |-|-|
-|Olmaması gereken bir bağımlılığı silme|Bağımlılığa tıklayın ve ardından **Delete**tuşuna basın.|
+|Olmaması gereken bir bağımlılığı silme|Bağımlılığa tıklayın ve ardından **Delete** tuşuna basın.|
 |Bağımlılık yönünü değiştirme veya kısıtlama|**Direction** özelliğini ayarlayın.|
 |Yeni bağımlılıklar oluşturma|**Bağımlılık** ve **çift yönlü bağımlılık** araçlarını kullanın.<br /><br /> Çoklu bağımlılıklar çizmek için araca çift tıklayın. İşiniz bittiğinde **işaretçi** aracına tıklayın veya **ESC** tuşuna basın.|
 |Bir katman ile ilişkili yapıların belirli ad alanlarına bağlı olamayacağını belirtme|Katmanın **yasak ad alanı bağımlılıkları** özelliğindeki ad alanlarını yazın. Ad alanlarını ayırmak için noktalı virgül (**;**) kullanın.|
