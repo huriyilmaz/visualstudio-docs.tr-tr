@@ -1,5 +1,7 @@
 ---
 title: Geliştirme sırasında sisteminizi doğrulama
+description: Visual Studio 'Nun, yazılımınızın Kullanıcı gereksinimleriyle ve sisteminizin mimarisiyle tutarlı kalmasına nasıl yardımcı olabileceğini öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ae2b7d81b1f166e6cc97debc3291661d59ee6960
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a803b2fb7eb7c682e29ae0d17698ef673927d751
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75594038"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361410"
 ---
 # <a name="validate-your-system-during-development"></a>Geliştirme sırasında sisteminizi doğrulama
 

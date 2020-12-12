@@ -1,5 +1,7 @@
 ---
 title: DSL Kodunu Anlama
+description: Domain-Specific Language (DSL) çözümünün, Visual Studio 'da DSL örneklerini okumak ve güncelleştirmek için kullanabileceğiniz bir API oluşturma hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,23 +11,23 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1196faa5831ae44a93f21ab1808915357690a0ac
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cd739a7780a2a2c858efc14aa72205e9be161900
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75565948"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361462"
 ---
 # <a name="understanding-the-dsl-code"></a>DSL Kodunu Anlama
 
-Etki alanına özgü dil (DSL) çözümü, Visual Studio 'da DSL örneklerini okumak ve güncelleştirmek için kullanabileceğiniz bir API oluşturur. Bu API, DSL tanımından oluşturulan kodda tanımlanmıştır. Bu konuda, oluşturulan API açıklanmaktadır.
+Domain-Specific Language (DSL) çözümü, Visual Studio 'da DSL örneklerini okumak ve güncelleştirmek için kullanabileceğiniz bir API oluşturur. Bu API, DSL tanımından oluşturulan kodda tanımlanmıştır. Bu konuda, oluşturulan API açıklanmaktadır.
 
 ## <a name="the-example-solution-component-diagrams"></a>Örnek çözüm: Bileşen diyagramları
 
 Bu konudaki örneklerin çoğunun kaynağı olan çözümü oluşturmak için **bileşen modelleri** çözüm ŞABLONUNDAN bir DSL oluşturun. Bu, yeni bir DSL çözümü oluştururken görüntülenen standart şablonlardan biridir.
 
 > [!NOTE]
-> Bileşen diyagramları DSL şablonuna **alana özgü dil Tasarımcısı**denir.
+> Bileşen diyagramları DSL şablonuna **alana özgü dil Tasarımcısı** denir.
 
 Bu çözüm şablonu hakkında bilginiz yoksa **F5** tuşuna basın ve deneyin. Özellikle bir bağlantı noktası aracını bir bileşene sürükleyerek ve bağlantı noktalarıyla bağlantı kurmak için bağlantı noktaları oluştururuz olduğuna dikkat edin.
 
@@ -60,13 +62,13 @@ Bu çözüm şablonu hakkında bilginiz yoksa **F5** tuşuna basın ve deneyin. 
 
  *Yourdsl*`Schema.xsd`
 
- DSL örneklerini içeren dosyalar için şema. Bu dosya, derleme (**bin**) dizinine kopyalanır. DSL 'yi yüklediğinizde, model dosyalarının doğrulanması için bu dosyayı **\Program Files\Microsoft Visual Studio 11.0 \ Xml\Schemas dizinine** kopyalayabilirsiniz. Daha fazla bilgi için bkz. [etki alanına özgü dil çözümlerini dağıtma](msi-and-vsix-deployment-of-a-dsl.md).
+ DSL örneklerini içeren dosyalar için şema. Bu dosya, derleme (**bin**) dizinine kopyalanır. DSL 'yi yüklediğinizde, model dosyalarının doğrulanması için bu dosyayı **\Program Files\Microsoft Visual Studio 11.0 \ Xml\Schemas dizinine** kopyalayabilirsiniz. Daha fazla bilgi için bkz. [Domain-Specific dil çözümlerini dağıtma](msi-and-vsix-deployment-of-a-dsl.md).
 
  DSL Gezgini 'ndeki seçenekleri ayarlayarak serileştirme 'i özelleştirirseniz, şema buna uygun olarak değişir. Ancak, kendi serileştirme kodunuzu yazarsanız, bu dosya artık gerçek şemayı temsil edemeyebilir. Daha fazla bilgi için bkz. [Dosya depolamayı ve XML Serileştirmeyi özelleştirme](../modeling/customizing-file-storage-and-xml-serialization.md).
 
  `ConnectionBuilders.cs`
 
- Bağlantı Oluşturucu, ilişki oluşturan bir sınıftır. Bu, bir bağlantı aracının arkasındaki koddur. Bu dosya, her bağlantı aracı için bir çift sınıf içerir. Adları, etki alanı ilişkisi ve bağlantı aracının adlarından türetilir: *ilişki*Oluşturucu ve *connectortool*ConnectAction.
+ Bağlantı Oluşturucu, ilişki oluşturan bir sınıftır. Bu, bir bağlantı aracının arkasındaki koddur. Bu dosya, her bağlantı aracı için bir çift sınıf içerir. Adları, etki alanı ilişkisi ve bağlantı aracının adlarından türetilir: *ilişki* Oluşturucu ve *connectortool* ConnectAction.
 
  (Bileşen çözümü örneğinde, bağlantı oluşturucularının birine ConnectionBuilder denir, bu bir rastlantı, çünkü etki alanı ilişkisi bağlantı olarak adlandırılmaktadır.)
 
@@ -102,7 +104,7 @@ Bu çözüm şablonu hakkında bilginiz yoksa **F5** tuşuna basın ve deneyin. 
 
  Bu yönerge işlemcisi, kullanıcılarınızın DSL örneğini okuyan metin şablonları yazmasına yardımcı olur. Yönerge işlemcisi, DSL 'niz için derlemeleri (dll 'Ler) yükler ve `using` ad alanınız için etkin bir şekilde deyimler ekler. Bu, metin şablonlarındaki kodun DSL 'de tanımladığınız sınıfları ve ilişkileri kullanmasına izin verir.
 
- Daha fazla bilgi için bkz. [etki alanına özgü dilden kod oluşturma](../modeling/generating-code-from-a-domain-specific-language.md) ve [özel T4 metin şablonu yönerge işlemcileri oluşturma](../modeling/creating-custom-t4-text-template-directive-processors.md).
+ Daha fazla bilgi için, bkz. [Domain-Specific dilden kod üretme](../modeling/generating-code-from-a-domain-specific-language.md) ve [özel T4 metin şablonu yönerge işlemcileri oluşturma](../modeling/creating-custom-t4-text-template-directive-processors.md).
 
  `DomainClasses.cs`
 
@@ -122,7 +124,7 @@ Bu çözüm şablonu hakkında bilginiz yoksa **F5** tuşuna basın ve deneyin. 
 
 - Öğe grubu prototipi (EGP) işleyici yöntemleri. Bu, Kullanıcı bu sınıfın örneklerine başka bir öğe *birleştirecan* (eklemek) için gereklidir. Genellikle Kullanıcı bunu bir öğe aracından veya başka bir şekilden sürükleyerek veya yapıştırarak yapar.
 
-   Örnek DSL 'de, bir giriş bağlantı noktası veya çıkış bağlantı noktası bir bileşen üzerinde birleştirilebilir. Ayrıca, bileşenler ve açıklamalar model üzerinde birleştirilebilir. Sanal Makineye (VM) bağlı bir veya birden çok işletim sistemi diski içerdiği için
+   Örnek DSL 'de, bir giriş bağlantı noktası veya çıkış bağlantı noktası bir bileşen üzerinde birleştirilebilir. Ayrıca, bileşenler ve açıklamalar model üzerinde birleştirilebilir. Bu
 
    Bileşen sınıfındaki EGP işleyici yöntemleri, bir bileşenin bağlantı noktalarını kabul etmesine izin vermez, ancak açıklamaları kabul etmez. Kök model sınıfındaki EGP işleyicisi açıklamaları ve bileşenleri kabul eder, ancak bağlantı noktalarını kabul etmez.
 
@@ -139,7 +141,7 @@ Bu çözüm şablonu hakkında bilginiz yoksa **F5** tuşuna basın ve deneyin. 
 
  Bu, etki alanı sınıfları ve özellikler, özellik adları, araç kutusu etiketleri, standart hata iletileri ve kullanıcıya görüntülenebilecek diğer dizeler gibi dizeler içerir. Ayrıca, görüntü şekilleri için araç simgeleri ve görüntüler içerir.
 
- Bu dosya, oluşturulan derlemeye bağlanır ve bu kaynakların varsayılan değerlerini sağlar. Kaynakların yerelleştirilmiş bir sürümünü içeren bir uydu derlemesi oluşturarak DSL 'nizi yerelleştirebilirsiniz. Bu sürüm, DSL yerelleştirilmiş kaynaklarla eşleşen bir kültüre yüklendiğinde kullanılacaktır. Daha fazla bilgi için bkz. [etki alanına özgü dil çözümlerini dağıtma](msi-and-vsix-deployment-of-a-dsl.md).
+ Bu dosya, oluşturulan derlemeye bağlanır ve bu kaynakların varsayılan değerlerini sağlar. Kaynakların yerelleştirilmiş bir sürümünü içeren bir uydu derlemesi oluşturarak DSL 'nizi yerelleştirebilirsiniz. Bu sürüm, DSL yerelleştirilmiş kaynaklarla eşleşen bir kültüre yüklendiğinde kullanılacaktır. Daha fazla bilgi için bkz. [Domain-Specific dil çözümlerini dağıtma](msi-and-vsix-deployment-of-a-dsl.md).
 
  `DomainRelationships.cs`
 
@@ -153,7 +155,7 @@ Bu çözüm şablonu hakkında bilginiz yoksa **F5** tuşuna basın ve deneyin. 
 
  1... 1 veya 1.. * çokluğunu belirttiğiniz ilişki rollerinde, Kullanıcı ilişkinin en az bir örneğinin gerekli olduğu konusunda uyarılmalıdır. Bu dosya, bu uyarıları uygulayan doğrulama kısıtlamalarını sağlar. 1.. 1 gömme üst öğesine bağlantı doğrulanmadı.
 
- Bu kısıtlamaların yürütülmesi için DSL Gezgini 'ndeki **Editor\validation** düğümündeki **...** seçeneklerinden birini ayarlamış olmanız gerekir. Daha fazla bilgi için bkz. [etki alanına özgü bir dilde doğrulama](../modeling/validation-in-a-domain-specific-language.md).
+ Bu kısıtlamaların yürütülmesi için DSL Gezgini 'ndeki **Editor\validation** düğümündeki **...** seçeneklerinden birini ayarlamış olmanız gerekir. Daha fazla bilgi için bkz. [Domain-Specific dilinde doğrulama](../modeling/validation-in-a-domain-specific-language.md).
 
  `PropertiesGrid.cs`
 
@@ -169,7 +171,7 @@ Bu çözüm şablonu hakkında bilginiz yoksa **F5** tuşuna basın ve deneyin. 
 
   Her etki alanı sınıfı, ilişki, şekil, bağlayıcı, Diyagram ve model için seri hale getirici sınıfı.
 
-  Bu sınıfların özelliklerinin birçoğu, **XML serileştirme davranışı**altında DSL Gezgini 'ndeki ayarlar tarafından denetlenebilir.
+  Bu sınıfların özelliklerinin birçoğu, **XML serileştirme davranışı** altında DSL Gezgini 'ndeki ayarlar tarafından denetlenebilir.
 
   `Shapes.cs`
 
@@ -342,11 +344,11 @@ explorerWindow.TreeContainer.ObjectModelBrowser.SelectedNode = treeNode;
 > [!WARNING]
 > . Tt dosyasını simgeler veya görüntüler gibi kaynakları içerecek şekilde düzenlerseniz, kaynağın VSıX derlemesinde bulunduğundan emin olun. Çözüm Gezgini, dosyayı seçin ve **VSIX 'e dahil et** özelliğinin olduğundan emin olun `True` .
 
- Bu dosya, DSL 'nin bir Visual Studio Tümleştirme Uzantısı 'na (VSıX) nasıl paketlendiğini denetler. Daha fazla bilgi için bkz. [etki alanına özgü dil çözümlerini dağıtma](msi-and-vsix-deployment-of-a-dsl.md).
+ Bu dosya, DSL 'nin bir Visual Studio Tümleştirme Uzantısı 'na (VSıX) nasıl paketlendiğini denetler. Daha fazla bilgi için bkz. [Domain-Specific dil çözümlerini dağıtma](msi-and-vsix-deployment-of-a-dsl.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Nasıl yapılır: Etki Alanına Özgü bir Dili Tanımlama](../modeling/how-to-define-a-domain-specific-language.md)
 - [Modelleri, Sınıfları ve İlişkileri Anlama](../modeling/understanding-models-classes-and-relationships.md)
 - [Etki Alanına Özgü Dili Özelleştirme ve Genişletme](../modeling/customizing-and-extending-a-domain-specific-language.md)
-- [Etki alanına özgü dili özelleştirmek için kod yazma](../modeling/writing-code-to-customise-a-domain-specific-language.md)
+- [Domain-Specific dilini özelleştirmek için kod yazma](../modeling/writing-code-to-customise-a-domain-specific-language.md)

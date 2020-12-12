@@ -1,5 +1,7 @@
 ---
 title: Etki Alanına Özgü Dili Özelleştirme ve Genişletme
+description: Visual Studio modelleme ve görselleştirme SDK 'sının (VMSDK), modelleme araçlarını tanımlayabilmeniz için çeşitli düzeyler sağladığını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,22 +11,22 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9040e65d3e9acce101ee6b481c2cd27d24285169
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 912c8fc9b5920411304310c44cdc264968472d4e
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75597171"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97360728"
 ---
 # <a name="customize-and-extend-a-domain-specific-language"></a>Etki alanına özgü dili özelleştirme ve genişletme
 
 Visual Studio modelleme ve görselleştirme SDK 'Sı (VMSDK), modelleme araçlarını tanımlayabilmeniz için çeşitli düzeyler sağlar:
 
-1. DSL tanımı diyagramını kullanarak etki alanına özgü dil (DSL) tanımlayın. Bir diagrammatik gösterimi, okunabilir bir XML formu ve kod ve diğer yapıtlar oluşturmak için gereken temel araçları kullanarak hızlı bir şekilde DSL oluşturabilirsiniz. Daha fazla bilgi için bkz. [etki alanına özgü dil tanımlama](../modeling/how-to-define-a-domain-specific-language.md).
+1. DSL tanımı diyagramını kullanarak etki alanına özgü dil (DSL) tanımlayın. Bir diagrammatik gösterimi, okunabilir bir XML formu ve kod ve diğer yapıtlar oluşturmak için gereken temel araçları kullanarak hızlı bir şekilde DSL oluşturabilirsiniz. Daha fazla bilgi için bkz. [Domain-Specific dil tanımlama](../modeling/how-to-define-a-domain-specific-language.md).
 
 2. DSL tanımının daha gelişmiş özelliklerini kullanarak DSL 'yi hassas olarak ayarlayın. Örneğin, Kullanıcı bir öğe oluşturduğunda ek bağlantıların görüntülenmesini sağlayabilirsiniz. Bu teknikler genellikle DSL tanımında elde edilir ve bazıları bazı program kodu satırları gerektirir.
 
-3. Program kodunu kullanarak modelleme araçlarınızı genişletin. VMSDK, uzantılarınızı DSL tanımından oluşturulan kodla tümleştirmeyi kolaylaştırmak için özel olarak tasarlanmıştır. Daha fazla bilgi için bkz. [etki alanına özgü dili özelleştirmek Için kod yazma](../modeling/writing-code-to-customise-a-domain-specific-language.md).
+3. Program kodunu kullanarak modelleme araçlarınızı genişletin. VMSDK, uzantılarınızı DSL tanımından oluşturulan kodla tümleştirmeyi kolaylaştırmak için özel olarak tasarlanmıştır. Daha fazla bilgi için bkz. [Domain-Specific dilini özelleştirmek Için kod yazma](../modeling/writing-code-to-customise-a-domain-specific-language.md).
 
 > [!NOTE]
 > DSL tanımları dosyasını güncelleştirdiyseniz, çözümünüzü yeniden oluşturmadan önce **Çözüm Gezgini** araç çubuğundaki **Tüm Şablonları Dönüştür** ' e tıklamasını unutmayın.
@@ -42,7 +44,7 @@ Visual Studio modelleme ve görselleştirme SDK 'Sı (VMSDK), modelleme araçlar
 |Şekilleri herhangi bir derinliğe iç içe geçme|Özyinelemeli bir ekleme ağacı ayarlayın. Şekilleri içerecek BoundsRules tanımlayın.|
 |Bir öğenin sınırında sabit noktalara bağlayıcılar ekleyin.|Diyagramda küçük bağlantı noktalarıyla temsil edilen gömülü Terminal öğelerini tanımlayın. Bağlantı noktalarını yerinde onarmak için BoundsRules kullanın. [Görselleştirme ve modelleme SDK](https://code.msdn.microsoft.com/Visualization-and-Modeling-313535db)'Sindeki devre diyagramı örneğine bakın.|
 |Metin alanı diğer değerlerden türetilmiş bir değeri görüntüler.|Metin dekoratörü hesaplanan veya özel bir depolama alanı özelliği ile eşleyin. Daha fazla bilgi için bkz. [hesaplanan ve özel depolama özellikleri](../modeling/calculated-and-custom-storage-properties.md).|
-|Değişiklikleri model öğeleri veya şekiller arasında yayma|Bkz. [etki alanına özgü bir dilde doğrulama](../modeling/validation-in-a-domain-specific-language.md).|
+|Değişiklikleri model öğeleri veya şekiller arasında yayma|[Domain-Specific dilde doğrulamaya](../modeling/validation-in-a-domain-specific-language.md)bakın.|
 |Mağaza dışındaki diğer Visual Studio uzantıları gibi kaynaklardaki değişiklikleri yayın.|Bkz. [olay Işleyicileriyle değişiklikleri model dışına yayın](../modeling/event-handlers-propagate-changes-outside-the-model.md).|
 |Özellik penceresi, ilgili bir öğenin özelliklerini görüntüler.|Özellik Iletmeyi ayarlayın. Bkz. [Özellikler penceresini özelleştirme](../modeling/customizing-the-properties-window.md).|
 |Özellik kategorileri|Özellikler penceresi Kategoriler adlı bölümlere ayrılmıştır. Etki alanı özelliklerinin **kategorisini** ayarlayın. Aynı kategori adına sahip özellikler aynı bölümde görüntülenir. Bir ilişki rolü **kategorisini** de ayarlayabilirsiniz.|
@@ -50,7 +52,7 @@ Visual Studio modelleme ve görselleştirme SDK 'Sı (VMSDK), modelleme araçlar
 |DSL model Gezgininde düğümlerin adını, simgesini ve görünürlüğünü değiştirin.|Bkz. [model Gezginini özelleştirme](../modeling/customizing-the-model-explorer.md).|
 |Kopyalama, kesme ve yapıştırmayı etkinleştir|DSL Gezgini 'ndeki **Düzenleyici** düğümünün **kopyalama Yapıştır özelliğini etkinleştir** ' i ayarlayın.|
 |Her öğe kopyalanırken başvuru bağlantılarını ve bunların hedeflerini kopyalayın. Örneğin, bir öğeye ekli açıklamaları kopyalayın.|Kaynak rolün **yayar kopyalama** özelliğini AYARLAYıN (DSL tanım diyagramında etki alanı ilişkisinin bir tarafındaki satırla temsil edilir).<br /><br /> Daha karmaşık etkileri elde etmek için ProcessOnCopy 'i geçersiz kılmak üzere kod yazın.<br /><br /> Bkz. [kopyalama davranışını özelleştirme](../modeling/customizing-copy-behavior.md).|
-|Bir öğe silindiğinde, ilgili öğeleri silin, yeniden üst üste veya yeniden bağlayın.|Bir ilişki rolünün **yayar silme** değerini ayarlayın. Daha karmaşık efektler için, `ShouldVisitRelationship` `ShouldVisitRolePlayer` `MyDslDeleteClosure` **DomainModel.cs**içinde tanımlanan, sınıfında geçersiz kılın ve yöntemleri.|
+|Bir öğe silindiğinde, ilgili öğeleri silin, yeniden üst üste veya yeniden bağlayın.|Bir ilişki rolünün **yayar silme** değerini ayarlayın. Daha karmaşık efektler için, `ShouldVisitRelationship` `ShouldVisitRolePlayer` `MyDslDeleteClosure` **DomainModel.cs** içinde tanımlanan, sınıfında geçersiz kılın ve yöntemleri.|
 |Kopyalama ve sürükleme bırakma üzerinde şekil mizanpajını ve görünümünü koruyun.|Kopyalanacak şekilleri ve bağlayıcıları ekleyin `ElementGroupPrototype` . Geçersiz kılınacak en kullanışlı Yöntem `ElementOperations.CreateElementGroupPrototype()`<br /><br /> Bkz. [kopyalama davranışını özelleştirme](../modeling/customizing-copy-behavior.md).|
 |Şekilleri seçili bir konuma (örneğin, geçerli imleç konumu) yapıştırın.|`ClipboardCommandSet.ProcessOnCopy()`Konuma özgü sürümü kullanmak için geçersiz kılma `ElementOperations.Merge().` [kopyalama davranışını özelleştirme](../modeling/customizing-copy-behavior.md).|
 |Yapıştırma sırasında ek bağlantılar oluştur|ClipboardCommandSet. ProcessOnPasteCommand () öğesini geçersiz kıl|
@@ -61,17 +63,17 @@ Visual Studio modelleme ve görselleştirme SDK 'Sı (VMSDK), modelleme araçlar
 |Çeşitli ilişki türlerini örneklemek için bir bağlantı aracı kullanın.|Araç tarafından çağrılan bağlantı oluşturucusuna bağlantı bağlama yönergeleri (LCD) ekleyin. LCD 'Ler, iki öğenin türünden ilişki türünü tespit. Bunu, öğelerin durumlarına bağlı yapmak için özel kod ekleyebilirsiniz. Bkz. [araçları ve araç kutusunu özelleştirme](../modeling/customizing-tools-and-the-toolbox.md).|
 |Yapışkan araçlar-Kullanıcı, art arda birçok şekil veya bağlayıcı oluşturmak için herhangi bir araca çift tıklaedebilir.|DSL Gezgini ' nde düğümünü seçin `Editor` . Özellikler penceresi, kümesi **yapışkan araç kutusu öğelerini kullanır**.|
 |Menü komutlarını tanımlama|Bkz [. nasıl yapılır: standart menü komutunu değiştirme](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)|
-|Modeli doğrulama kurallarıyla kısıtlama|Bkz. [etki alanına özgü bir dilde doğrulama](../modeling/validation-in-a-domain-specific-language.md)|
+|Modeli doğrulama kurallarıyla kısıtlama|[Domain-Specific dilde doğrulamaya](../modeling/validation-in-a-domain-specific-language.md) bakın|
 |DSL 'den kod, yapılandırma dosyaları veya belgeler oluşturun.|[Etki Alanına Özgü Dilden Kod Oluşturma](../modeling/generating-code-from-a-domain-specific-language.md)|
 |Modellerin dosyaya nasıl kaydedildiğini özelleştirin.|Bkz. [Dosya depolamayı ve XML Serileştirmeyi özelleştirme](../modeling/customizing-file-storage-and-xml-serialization.md)|
-|Modelleri veritabanlarına veya diğer ortamlara kaydedin.|DocData *dilini*geçersiz kılın<br /><br /> Bkz. [Dosya depolamayı ve XML Serileştirmeyi özelleştirme](../modeling/customizing-file-storage-and-xml-serialization.md)|
+|Modelleri veritabanlarına veya diğer ortamlara kaydedin.|DocData *dilini* geçersiz kılın<br /><br /> Bkz. [Dosya depolamayı ve XML Serileştirmeyi özelleştirme](../modeling/customizing-file-storage-and-xml-serialization.md)|
 |Birden çok DSLs 'yi bir uygulamanın parçası olarak çalışacak şekilde tümleştirin.|Bkz. [Visual Studio ModelBus kullanarak modelleri tümleştirme](../modeling/integrating-models-by-using-visual-studio-modelbus.md).|
 |DSL 'nizin üçüncü taraflarca uzatılarak ve uzantıyı denetlemesine izin verin.|[MEF kullanarak DSL'nizi genişletme](../modeling/extend-your-dsl-by-using-mef.md)<br /><br /> [DSL Kitaplığı Kullanarak DSL'ler Arasında Sınıfları Paylaşma](../modeling/sharing-classes-between-dsls-by-using-a-dsl-library.md)<br /><br /> [Salt Okunur Kesimler Oluşturmak için Kilitleme İlkesi Tanımlama](../modeling/defining-a-locking-policy-to-create-read-only-segments.md)|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Nasıl yapılır: Etki Alanına Özgü bir Dili Tanımlama](../modeling/how-to-define-a-domain-specific-language.md)
-- [Etki alanına özgü dili özelleştirmek için kod yazma](../modeling/writing-code-to-customise-a-domain-specific-language.md)
+- [Domain-Specific dilini özelleştirmek için kod yazma](../modeling/writing-code-to-customise-a-domain-specific-language.md)
 - [Visual Studio için Modelleme SDK'sı - Etki Alanına Özgü Diller](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md)
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]

@@ -1,5 +1,7 @@
 ---
 title: Bir T4 Metin Şablonuna İlişkin Hata Ayıklama
+description: Tasarım zamanı metin şablonunda hata ayıklamak için metin şablonu dosyasını kaydedin ve ardından Çözüm Gezgini dosyanın kısayol menüsünde T4 şablonunda Hata Ayıkla ' yı seçin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1570061feb5da034e2e8fab7168658577f6f990d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 26ad1545918a02fbcf530b439e801a656a425864
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75589688"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361475"
 ---
 # <a name="debugging-a-t4-text-template"></a>Bir T4 Metin Şablonuna İlişkin Hata Ayıklama
 Kesme noktaları metin şablonlarında ayarlayabilirsiniz. Tasarım zamanı metin şablonunda hata ayıklamak için metin şablonu dosyasını kaydedin ve ardından Çözüm Gezgini dosyanın kısayol menüsünde **T4 şablonunda hata ayıkla** ' yı seçin. Çalışma zamanı metin şablonunda hata ayıklamak için, ait olduğu uygulamada hata ayıklaması yapmanız yeterlidir.
@@ -35,7 +37,7 @@ Kesme noktaları metin şablonlarında ayarlayabilirsiniz. Tasarım zamanı meti
 ## <a name="common-errors-and-fixes"></a>Sık karşılaşılan hatalar ve düzeltmeler
  Aşağıdaki tabloda en yaygın hatalar ve bunların düzeltmeleri listelenmektedir.
 
-|Hata İletisi|Description|Çözüm|
+|Hata İletisi|Açıklama|Çözüm|
 |-|-|-|
 |{0}Dönüştürme sınıfının devraldığı ' ' temel sınıfı yüklenemedi.|Bir şablon yönergesinde parametresinde belirtilen temel sınıfı bulamıyorsanız oluşur `inherits` . İleti, şablon yönergesinin satır numarasını sağlar.|Belirtilen sınıfın var olduğundan ve içinde bulunduğu derlemenin derleme yönergesinde belirtildiğinden emin olun.|
 |Dosya için içerme metni çözümlenemedi:{0}|Dahil edilen bir şablon bulamıyorsanız oluşur. İleti, istenen içerme dosyasının adını sağlar.|Dosya yolunun özgün şablon yoluyla göreli olduğundan veya dosyanın konakla kaydedilmiş bir konumda olduğundan ya da dosyanın tam yolu olduğundan emin olun.|
@@ -49,7 +51,7 @@ Kesme noktaları metin şablonlarında ayarlayabilirsiniz. Tasarım zamanı meti
 ## <a name="warning-descriptions-and-fixes"></a>Uyarı açıklamaları ve düzeltmeler
  Aşağıdaki tabloda, varsa düzeltmelerle birlikte en sık kullanılan uyarılar listelenmektedir.
 
-|Uyarı Iletisi|Description|Çözüm|
+|Uyarı Iletisi|Açıklama|Çözüm|
 |-|-|-|
 |İçerme dosyasını yükleme ' {0} ', null veya boş bir dize döndürdü.|Eklenen bir metin şablonu dosyası boşsa gerçekleşir. İleti, eklenen dosyanın dosya adını sağlar.|Include yönergesini kaldırın ya da dosyanın bazı içeriklere sahip olduğundan emin olun.|
 |Dönüştürme derleniyor:|Bu dizeyi, dönüştürmeyi derlediğinde derleyicinin kaynaklandığı tüm hatalara veya uyarılara ekleyin. Bu dize, derleyicinin bir hata veya uyarı oluşturduğu anlamına gelir.|DLL 'yi bulmakta bir sorun yaşıyorsanız, DLL GAC 'deyse tam yolu veya tam nitelikli bir ad belirtmeniz gerekebilir.|

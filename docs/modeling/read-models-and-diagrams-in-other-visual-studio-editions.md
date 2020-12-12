@@ -1,5 +1,7 @@
 ---
 title: Diğer Visual Studio sürümlerindeki modelleri ve diyagramları okuma
+description: Visual Studio 'da modelleri ve diyagramları okuma ve model oluşturmayı desteklemeyen bir Visual Studio sürümü kullanılırken salt okuma davranışı hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -10,12 +12,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ebe4cdcefb7b823090cca8976055de5a3ebb9b1a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ffbf39421f507338d14a6b05a667ec4301375067
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75595416"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97360695"
 ---
 # <a name="read-models-and-diagrams-in-other-visual-studio-editions"></a>Diğer Visual Studio sürümlerindeki modelleri ve diyagramları okuma
 
@@ -37,7 +39,7 @@ Bir bağımlılık diyagramını okumak için, ihtiyacınız olan minimum dosya 
 - Okumak istediğiniz diyagram için iki Diyagram dosyası; örneğin, **MyDiagram. classdiagram ve MyDiagram. classdiagram. Layout**.
 
     > [!NOTE]
-    > Bağımlılık diyagramlarında, _MyDiagram_**. layerdiagram. suppressions**adlı dosyaya da sahip olmanız gerekir.
+    > Bağımlılık diyagramlarında, _MyDiagram_**. layerdiagram. suppressions** adlı dosyaya da sahip olmanız gerekir.
 
 - Modelleme proje dosyası (**MyModel. modelproj**)
 
@@ -45,7 +47,7 @@ Bir bağımlılık diyagramını okumak için, ihtiyacınız olan minimum dosya 
 
 - Diyagramda başvurulan herhangi bir paket için paket dosyaları (**Modeldefinition\mypackage.exe**)
 
-## <a name="changes-that-you-can-make-in-read-only-mode"></a>Salt okuma modunda yapabileceğiniz değişiklikler
+## <a name="changes-that-you-can-make-in-read-only-mode"></a>Read-Only modunda yapabileceğiniz değişiklikler
 
 Model oluşturmayı desteklemeyen bir Visual Studio sürümünde model ve diyagramlarını açarsanız modeli değiştiremezsiniz. Diğer bir deyişle, diyagramlarda veya model Gezgininde görüntülenen öğeleri ve ilişkileri değiştiremezsiniz. Ancak, diyagramların düzeninde bazı değişiklikler yapabilirsiniz:
 

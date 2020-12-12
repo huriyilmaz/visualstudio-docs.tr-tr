@@ -1,5 +1,7 @@
 ---
 title: Etki Alanına Özgü Dil Gezgini ile Çalışma
+description: Bir ağaç görünümünde çeşitli bilgi türlerini görüntüleyen ve etki alanına özgü bir dili tanımlamaya yönelik birden çok düğüm içeren DSL Gezgini hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,15 +11,15 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 971114a95fa43dbbcda985587d08f03ac3c7fd72
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 0bb08f7d6dc6ea41c64cfc9aeb6898eac4df0ae5
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810789"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97360929"
 ---
 # <a name="working-with-the-domain-specific-language-explorer"></a>Etki Alanına Özgü Dil Gezgini ile Çalışma
-**DSL Gezgini** bir ağaç görünümünde çeşitli bilgi türlerini görüntüler. DSL Gezgini 'ndeki öğelerin birçoğu hakkında daha fazla bilgi için bkz. [etki alanına özgü dil tanımlama](../modeling/how-to-define-a-domain-specific-language.md).
+**DSL Gezgini** bir ağaç görünümünde çeşitli bilgi türlerini görüntüler. DSL Gezgini 'ndeki öğelerin birçoğu hakkında daha fazla bilgi için bkz. [nasıl Domain-Specific dili tanımlama](../modeling/how-to-define-a-domain-specific-language.md).
 
  Aşağıdaki düğümlere sahiptir:
 
@@ -33,7 +35,7 @@ ms.locfileid: "90810789"
 
 - **Etki alanı türleri**. Modelde kullanılan yerleşik ve dış türlerin listesi.
 
-- **Düzenleyici**. **Araç kutusu** sekmelerinin ve içerdikleri öğelerin listesi ve model için doğrulama ayarları. Doğrulama hakkında daha fazla bilgi için bkz. [etki alanına özgü bir dilde doğrulama](../modeling/validation-in-a-domain-specific-language.md).
+- **Düzenleyici**. **Araç kutusu** sekmelerinin ve içerdikleri öğelerin listesi ve model için doğrulama ayarları. Doğrulama hakkında daha fazla bilgi için bkz. [Domain-Specific dilinde doğrulama](../modeling/validation-in-a-domain-specific-language.md).
 
 - **Gezgin davranışı**. Oluşturulan tasarımcıda gezgin davranışını belirleyen ayarlar. Gezgin 'in nasıl özelleştirileceği hakkında daha fazla bilgi için bkz. [model Gezginini özelleştirme](../modeling/customizing-the-model-explorer.md).
 

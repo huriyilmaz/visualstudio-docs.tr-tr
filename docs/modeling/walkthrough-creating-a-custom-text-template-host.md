@@ -1,5 +1,7 @@
 ---
 title: 'İzlenecek yol: Özel Metin Şablonu Konağı Oluşturma'
+description: Visual Studio dışında metin şablonu dönüştürme işlevini kullanmak istiyorsanız nasıl özel bir ana bilgisayar yazabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.workload:
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 3979f93de6040078a5b1e4315cadc4f7faa4728e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1cc1681d7c761aca123217cbf28cc33b0dbb584c
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85532229"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361059"
 ---
 # <a name="walkthrough-create-a-custom-text-template-host"></a>İzlenecek yol: Özel Metin Şablonu Konağı Oluşturma
 

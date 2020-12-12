@@ -1,5 +1,7 @@
 ---
 title: 'İzlenecek Yol: Metin Şablonları Kullanarak Kod Oluşturma'
+description: Kod oluşturma 'nın kesin olarak yazılmış program kodu üretmesine, ancak kaynak model değiştiğinde kolayca değiştirilebilmesini sağlar.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 181c1ccbeaff0aadee1b3d5ebd255b854b915277
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a39630f8a12ad2c1d7d2bc89f6830fc694e89087
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85532070"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97360994"
 ---
 # <a name="walkthrough-generate-code-by-using-text-templates"></a>Metin Şablonları kullanarak Kod Oluşturma
 
@@ -129,7 +131,7 @@ Daha kapsamlı bir test, bu test işlevinin çıkışını örnek XML dosyasın�
 
 ### <a name="add-a-text-template-file"></a>Metin şablonu dosyası Ekle
 
-Bir metin şablonu dosyası ekleyin ve çıktı uzantısını *. cs*olarak ayarlayın.
+Bir metin şablonu dosyası ekleyin ve çıktı uzantısını *. cs* olarak ayarlayın.
 
 1. **Çözüm Gezgini**, projeye sağ tıklayın, **Ekle**' ye tıklayın ve ardından **Yeni öğe**' ye tıklayın.
 
@@ -412,7 +414,7 @@ XML şeması değiştiğinde yeni sınıflar kolayca oluşturulabilir. Derleyici
 
 Bu izlenecek yol, kod oluşturmanın çeşitli tekniklerini ve avantajlarını göstermektedir:
 
-- *Kod üretimi* , bir *modelden*uygulamanızın kaynak kodunun bir kısmının oluşturulması. Model, uygulama etki alanına uygun bir formda bilgi içerir ve uygulamanın kullanım ömrü boyunca değişebilir.
+- *Kod üretimi* , bir *modelden* uygulamanızın kaynak kodunun bir kısmının oluşturulması. Model, uygulama etki alanına uygun bir formda bilgi içerir ve uygulamanın kullanım ömrü boyunca değişebilir.
 
 - Güçlü yazma kod oluşturmanın bir avantajıdır. Model, bir formdaki bilgileri kullanıcıya daha uygun bir biçimde temsil ederken, oluşturulan kod uygulamanın diğer bölümlerinin bir tür kümesi kullanarak bilgilerle ilgilenmesi için izin verir.
 
@@ -426,7 +428,7 @@ Bu kılavuzda, program kodu aslında modelin bir örneğinden oluşturulur ve uy
 
 ## <a name="troubleshoot-the-text-template"></a>Metin şablonunda sorun giderme
 
-**Hata listesi**şablon dönüştürme veya derleme hatalarıyla karşılaşdıysanız veya çıkış dosyası doğru şekilde oluşturulmediyse, metin şablonunda, [TextTransform yardımcı programıyla dosya oluşturma](../modeling/generating-files-with-the-texttransform-utility.md)bölümünde açıklanan tekniklerle sorun giderebilirsiniz.
+**Hata listesi** şablon dönüştürme veya derleme hatalarıyla karşılaşdıysanız veya çıkış dosyası doğru şekilde oluşturulmediyse, metin şablonunda, [TextTransform yardımcı programıyla dosya oluşturma](../modeling/generating-files-with-the-texttransform-utility.md)bölümünde açıklanan tekniklerle sorun giderebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

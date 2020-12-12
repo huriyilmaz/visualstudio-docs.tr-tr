@@ -1,5 +1,7 @@
 ---
 title: Bölme Şekillerinin Özellikleri
+description: Bölme şekillerinin, etki alanına özgü bir dilde bir etki alanı sınıfını göstermek için kullanabileceğiniz şekillerden biri olduğunu öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,17 +13,17 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 27263e596c1e0e6e34f62e5125ffb070fc0f2fbb
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 54b6e42a46fc60dd981d9a103a4303b44fb0f909
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810086"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97360500"
 ---
 # <a name="properties-of-compartment-shapes"></a>Bölme Şekillerinin Özellikleri
 Bölme şekilleri, etki alanına özgü bir dilde bir etki alanı sınıfını göstermek için kullanabileceğiniz şekillerden biridir. Bölmeleri genişletebilir ve daraltabilirsiniz.
 
- Daha fazla bilgi için bkz. [etki alanına özgü dil tanımlama](../modeling/how-to-define-a-domain-specific-language.md). Bu özelliklerin nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [etki alanına özgü dili özelleştirme ve genişletme](../modeling/customizing-and-extending-a-domain-specific-language.md).
+ Daha fazla bilgi için bkz. [Domain-Specific dil tanımlama](../modeling/how-to-define-a-domain-specific-language.md). Bu özelliklerin nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [Domain-Specific dilini özelleştirme ve genişletme](../modeling/customizing-and-extending-a-domain-specific-language.md).
 
  Bölme şekilleri aşağıdaki tabloda listelenen özelliklere sahiptir.
 
@@ -37,13 +39,13 @@ Bölme şekilleri, etki alanına özgü bir dilde bir etki alanı sınıfını g
 |Ana hat kesik çizgi stili|Bu şeklin ana hat kesik çizgi stili (düz, kesik çizgi, nokta, çizgi nokta, çizgi Noktanoktası, özel).|Düz|
 |Ana hat kalınlığı|Bu şeklin ana hat kalınlığı.|0,03125|
 |Metin rengi|Bu şekille ilişkilendirilen metin Dekoratörleri için kullanılan renk.|Siyahi|
-|Erişim değiştiricisi|Bölme şeklinin ( `public` veya) erişim düzeyi `internal` .|Ortak|
+|Erişim değiştiricisi|Bölme şeklinin ( `public` veya) erişim düzeyi `internal` .|Genel|
 |Özel Öznitelikler|Bu bölme şeklinden oluşturulan kaynak kodu sınıfına öznitelikler eklemek için kullanılır|\<none>|
 |Double türevi üretir|Eğer `True` bir temel sınıf ve kısmi bir sınıf (geçersiz kılmaları özelleştirmeyi desteklemek için) oluşturulur. Daha fazla bilgi için bkz. [oluşturulan sınıfları geçersiz kılma ve genişletme](../modeling/overriding-and-extending-the-generated-classes.md).|Yanlış|
 |Özel Oluşturucusu vardır|İse `True` , kaynak kodda özel bir Oluşturucu sağlanacaktır. Daha fazla bilgi için bkz. [oluşturulan sınıfları geçersiz kılma ve genişletme](../modeling/overriding-and-extending-the-generated-classes.md).|Yanlış|
-|Devralma değiştiricisi|Bölme şeklinden oluşturulan kaynak kodu sınıfının devralım türünü açıklar ( `none` `abstract` veya `sealed` ).|Hiçbiri|
+|Devralma değiştiricisi|Bölme şeklinden oluşturulan kaynak kodu sınıfının devralım türünü açıklar ( `none` `abstract` veya `sealed` ).|Yok|
 |Temel bölme şekli|Bu şeklin temel sınıfı.|(yok)|
-|Name|Bu şeklin adı.|Geçerli ad|
+|Ad|Bu şeklin adı.|Geçerli ad|
 |Ad Alanı|Bu şekille ilişkili ad alanı.|Geçerli ad alanı|
 |Araç ipucu türü|Araç ipucu nasıl tanımlanır (sabit, değişken veya yok). Düzeltildiğinde, `Fixed Tooltip Text` özelliğin değeri araç ipucu olarak kullanılır; değişken ise, araç ipucu özel kodda tanımlanır.|yok|
 |Notlar|Bu şekille ilişkili resmi olmayan notlar.|\<none>|

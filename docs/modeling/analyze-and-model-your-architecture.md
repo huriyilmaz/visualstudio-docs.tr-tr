@@ -1,5 +1,7 @@
 ---
 title: Mimarinizi çözümleme ve mimarinizin modelini oluşturma
+description: Uygulamanızın mimari gereksinimleri karşıladığından emin olmak için uygulamanızı tasarlamak ve modellemek üzere Visual Studio mimarisi ve modelleme araçlarını nasıl kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: overview
 helpviewer_keywords:
@@ -17,12 +19,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e1db28867ea47752aa74b7898c44e797c0704594
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 71296b9ccb2e442d1bd9bc13865e0086821bf030
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85544228"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361163"
 ---
 # <a name="analyze-and-model-your-architecture"></a>Mimarinizi çözümleme ve mimarinizin modelini oluşturma
 
@@ -43,7 +45,7 @@ Bkz. [Senaryo: görselleştirme ve modelleme kullanarak tasarımınızı değiş
 |**Kodu görselleştirin**:<br /><br />-Kod haritaları oluşturarak kodun kuruluşuna ve ilişkilerine bakın. Derlemeler, ad alanları, sınıflar, yöntemler vb. arasındaki bağımlılıkları görselleştirin.<br />-Koddan sınıf diyagramları oluşturarak belirli bir proje için sınıf yapısına ve üyelere bakın.<br />-Kodu doğrulamak için bağımlılık diyagramları oluşturarak kodunuz ve tasarımı arasında çakışmalar bulun.|- [Kodu görselleştirme](../modeling/visualize-code.md)<br />- [Sınıflarla ve diğer türlerle çalışma (Sınıf Tasarımcısı)](../ide/class-designer/designing-and-viewing-classes-and-types.md)<br />- [Video: Visual Studio 2015 kod haritaları ile koddan tasarımı anlama](https://channel9.msdn.com/Events/Visual-Studio/Connect-event-2015/502)<br />- [Video: mimari bağımlılıklarınızı gerçek zamanlı olarak doğrulama](https://sec.ch9.ms/sessions/69613110-c334-4f25-bb36-08e5a93456b5/170ValidateArchitectureDependenciesWithVisualStudio.mp4)|
 |**Mimariyi tanımlayın**:<br /><br />-Bağımlılık diyagramları oluşturarak kodunuzun bileşenleri arasındaki bağımlılıklarda kısıtlama belirleyin ve uygulayın.|- [Video: Visual Studio ile mimari bağımlılıklarını doğrulama (Channel 9)](https://channel9.msdn.com/Events/Connect/2016/170)|
 |**Gereksinimleri ve hedeflenen tasarımı kullanarak sisteminizi doğrulayın:**<br /><br />-Hedeflenen mimariyi betimleyen ve tasarımla çakışabilecek değişiklikleri önleyen bağımlılık diyagramlarıyla kod bağımlılıklarını doğrulayın.|- [Video: Visual Studio ile mimari bağımlılıklarını doğrulama (Channel 9)](https://channel9.msdn.com/Events/Connect/2016/170)|
-|**Modelleri ve diyagramları özelleştirme**:<br /><br />-Kendi etki alanına özgü dillerinizi oluşturun.|- [Visual Studio için modelleme SDK 'Sı-etki alanına özgü diller](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md)|
+|**Modelleri ve diyagramları özelleştirme**:<br /><br />-Kendi etki alanına özgü dillerinizi oluşturun.|- [Visual Studio için modelleme SDK-Domain-Specific dilleri](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md)|
 |**T4 şablonlarını kullanarak metin oluştur**:<br /><br />-Metin tabanlı dosyalar oluşturmak için şablonlar içindeki metin bloklarını ve denetim mantığını kullanın.<br /> -T4 şablonu Visual Studio 'Ya dahil edilen MSBuild ile derleme|- [Kod oluşturma ve T4 Metin şablonları](../modeling/code-generation-and-t4-text-templates.md)|
 |**Team Foundation sürüm denetimi 'ni kullanarak modelleri, diyagramları ve kod eşlemelerini paylaşma**:<br /><br />-Bunları paylaşmak için, Team Foundation sürüm denetimi altına kod haritaları, projeler ve bağımlılık diyagramları koyun.| |
 

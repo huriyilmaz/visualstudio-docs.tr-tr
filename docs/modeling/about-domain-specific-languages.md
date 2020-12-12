@@ -1,5 +1,7 @@
 ---
 title: Etki Alanına Özgü Diller Hakkında
+description: Belirli bir sorun alanındaki veya etki alanındaki deyimleri ifade etmek için bir etki alanına özgü dilin (DSL) nasıl tasarlandığını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bfd073b07902e3c0a9e33dfe9ae50d4947a50ef2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7a1e9b1f853ad540f65101bffabea922f8fdcef1
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75597275"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97360903"
 ---
 # <a name="about-domain-specific-languages"></a>Etki Alanına Özgü Diller Hakkında
 
@@ -54,11 +56,11 @@ Genellikle, bir geliştirme ekibinin çeşitli ürünler için benzer kod yazmas
 
 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] kendi grafik tasarlamanızı ve kendi diyagram gösteriminizi içeren, etki alanına özgü bir dil oluşturmanızı sağlar ve ardından bu dili kullanarak her proje için uygun kaynak kodu oluşturabilirsiniz.
 
-## <a name="domain-specific-development"></a>Etki alanına özgü geliştirme
+## <a name="domain-specific-development"></a>Domain-Specific geliştirme
 
 Etki alanına özgü geliştirme, etki alanına özgü bir dili kullanarak modellenebilir uygulamalarınızın parçalarını belirleme ve sonra dili oluşturup uygulama geliştiricilerine dağıtma işlemidir. Geliştiriciler, uygulamalarına özel modeller oluşturmak için etki alanına özgü dili kullanır, kaynak kodu oluşturmak için modelleri kullanır ve ardından uygulama geliştirmek için kaynak kodunu kullanır.
 
-## <a name="aspects-of-graphical-domain-specific-development"></a>Grafik etki alanına özgü geliştirme yönleri
+## <a name="aspects-of-graphical-domain-specific-development"></a>Grafik Domain-Specific geliştirmenin yönleri
 
 Grafik etki alanına özgü dil aşağıdaki özellikleri içermelidir:
 
@@ -94,7 +96,7 @@ Düzenlenebilen, kaydedilebilen, kapatılan ve yeniden yüklenmiş bir biçimde,
 
 Ayrıca, etki alanına özgü diliniz için bir model veri yolu bağdaştırıcısı da oluşturabilirsiniz. Bu bağdaştırıcı, bir model içindeki model ve öğelere başvurmanıza ve DSL örneğine erişebilen ve güncelleştiren bir kod yazmanıza olanak tanır. Güçlü model veri yolu mekanizmasını kullanarak, birden çok modelle çalışan Visual Studio uzantıları yazabilirsiniz. Ayrıca, modellerle çalışan tek başına uygulamalar yazabilirsiniz. Daha fazla bilgi için bkz. [Visual Studio ModelBus kullanarak modelleri tümleştirme](../modeling/integrating-models-by-using-visual-studio-modelbus.md).
 
-## <a name="benefits-of-domain-specific-development"></a>Etki alanına özgü geliştirme avantajları
+## <a name="benefits-of-domain-specific-development"></a>Domain-Specific geliştirmenin avantajları
 
 Etki alanına özgü bir dil aşağıdaki avantajları sağlayabilir:
 
@@ -110,7 +112,7 @@ Etki alanına özgü bir dil aşağıdaki avantajları sağlayabilir:
 
      Geliştiriciler, istemcilerinin istemcilere gösterebilecekleri bir prototip uygulaması oluşturmak için kendi modelinin oluşturduğu kodu kullanabilir.
 
-## <a name="the-process-of-domain-specific-development"></a>Etki alanına özgü geliştirme Işlemi
+## <a name="the-process-of-domain-specific-development"></a>Domain-Specific geliştirme Işlemi
 
 Etki alanına özgü diller kullanan çoğu yazılım geliştirme ekibi, modellerini oluşturmak ve kullanmak için aşağıdaki adımları izler:
 

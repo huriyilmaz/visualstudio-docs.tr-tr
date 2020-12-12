@@ -1,5 +1,7 @@
 ---
 title: Etki Alanı Özellik Değeri Değişiklik İşleyicileri
+description: Visual Studio etki alanına özgü bir dilde kullanılabilen etki alanı özellik değeri değişiklik işleyicileri hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 03/22/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2f23984d6c4723b020b361e1da30363442966ea7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 34f7dcf97498895f841f2a68fd3bc1abac224824
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75594714"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361735"
 ---
 # <a name="domain-property-value-change-handlers"></a>Etki alanı özellik değeri değişiklik işleyicileri
 
@@ -22,7 +24,7 @@ Bir Visual Studio etki alanına özgü dilde, bir etki alanı özelliğinin değ
 
 ## <a name="override-the-property-handler-methods"></a>Özellik Işleyici yöntemlerini geçersiz kıl
 
-Etki alanına özgü dilinizin her etki alanı özelliği, üst etki alanı sınıfının içinde iç içe yerleştirilmiş bir sınıf tarafından işlenir. Adı *PropertyName*propertyhandler biçimini izler. Bu özellik işleyicisi sınıfını **Dsl\generated Code\DomainClasses.cs**dosyasında inceleyebilirsiniz. Sınıfında, `OnValueChanging()` değer değiştirilmeden hemen önce çağrılır ve `OnValueChanged()` değer değiştirildikten hemen sonra çağrılır.
+Etki alanına özgü dilinizin her etki alanı özelliği, üst etki alanı sınıfının içinde iç içe yerleştirilmiş bir sınıf tarafından işlenir. Adı *PropertyName* propertyhandler biçimini izler. Bu özellik işleyicisi sınıfını **Dsl\generated Code\DomainClasses.cs** dosyasında inceleyebilirsiniz. Sınıfında, `OnValueChanging()` değer değiştirilmeden hemen önce çağrılır ve `OnValueChanged()` değer değiştirildikten hemen sonra çağrılır.
 
 Örneğin, adında bir `Comment` dize alanı özelliği ve adlı bir tamsayı özelliği olan adlı bir etki alanı sınıfınız olduğunu varsayalım `Text` `TextLengthCount` . `TextLengthCount`Her zaman dize uzunluğunu içermesine neden olmak için `Text` aşağıdaki kodu DSL projesindeki ayrı bir dosyaya yazabilirsiniz:
 

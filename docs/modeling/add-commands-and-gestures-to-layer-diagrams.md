@@ -1,5 +1,7 @@
 ---
 title: Bağımlılık diyagramlarına komut ve hareket ekleme
+description: Visual Studio 'da bağımlılık diyagramlarında sağ tıklama menü komutlarını ve hareket işleyicilerini nasıl tanımlayabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4ff23e07bd6e81b11d94a8256c33b57b4b0c558c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bc91e2c160d2081db868daf8d8dbaeb041172297
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85531397"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362229"
 ---
 # <a name="add-commands-and-gestures-to-dependency-diagrams"></a>Bağımlılık diyagramlarına komut ve hareket ekleme
 
@@ -38,7 +40,7 @@ Uzantı oluşturmanın en hızlı yöntemi, proje şablonunu kullanmaktır. Bu, 
 
    Şablon küçük bir çalışma örneği içeren bir proje oluşturur.
 
-2. Uzantıyı test etmek için **CTRL** + **F5** veya **F5**tuşlarına basın.
+2. Uzantıyı test etmek için **CTRL** + **F5** veya **F5** tuşlarına basın.
 
     Visual Studio 'nun deneysel bir örneği başlar. Bu örnekte, bir bağımlılık diyagramı oluşturun. Komut veya hareket uzantınızın bu diyagramda çalışması gerekir.
 
@@ -71,15 +73,15 @@ Komutları, katman Doğrulayıcıları ve diğer uzantıları içeren bir VSıX 
    > [!NOTE]
    > Tek bir sınıf kitaplığında birden fazla komut veya hareket işleyicisi sınıfı tanımlayabilirsiniz, ancak katman doğrulama sınıflarını ayrı bir sınıf kitaplığında tanımlamanız gerekir.
 
-2. Çözümünüze VSıX projesi ekleyin veya oluşturun. VSıX projesi **kaynak. Extension. valtmanifest**adlı bir dosya içerir.
+2. Çözümünüze VSıX projesi ekleyin veya oluşturun. VSıX projesi **kaynak. Extension. valtmanifest** adlı bir dosya içerir.
 
 3. **Çözüm Gezgini**, VSIX projesine sağ tıklayın ve **Başlangıç projesi olarak ayarla**' yı seçin.
 
-4. **Source. Extension. valtmanifest**Içinde, **varlıklar**altında, komut veya hareket işleyicisi projesini MEF bileşeni olarak ekleyin.
+4. **Source. Extension. valtmanifest** Içinde, **varlıklar** altında, komut veya hareket işleyicisi projesini MEF bileşeni olarak ekleyin.
 
     1. **Varlıklar**. sekmesinde **Yeni**' yi seçin.
 
-    2. **Türünde**, **Microsoft. VisualStudio. MefComponent**öğesini seçin.
+    2. **Türünde**, **Microsoft. VisualStudio. MefComponent** öğesini seçin.
 
     3. **Kaynakta**, **Geçerli çözümde proje** ' yi seçin ve komut veya hareket işleyicisi projenizin adını seçin.
 
@@ -102,7 +104,7 @@ Komutları, katman Doğrulayıcıları ve diğer uzantıları içeren bir VSıX 
 
      [Hareket Işleyicisi tanımlama](#gesture)
 
-7. Özelliği test etmek için **CTRL** + **F5** veya **F5**tuşlarına basın.
+7. Özelliği test etmek için **CTRL** + **F5** veya **F5** tuşlarına basın.
 
    Visual Studio 'nun deneysel bir örneği açılır. Bu örnekte, bir bağımlılık diyagramı oluşturun veya açın.
 

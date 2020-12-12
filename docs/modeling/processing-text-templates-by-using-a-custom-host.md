@@ -1,5 +1,7 @@
 ---
 title: Bir Özel Ana Bilgisayar kullanarak Metin Şablonlarını İşleme
+description: Metin şablonu dönüştürme işleminin girdi olarak bir metin şablonu dosyasını aldığını ve çıktı olarak bir metin dosyası ürettiğini öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,16 +12,16 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f7ecd6508df780f570d10b3d615094fae15209d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3dbaa7cf80ba281f085590802127e3ab96776aa6
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75591690"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97360591"
 ---
 # <a name="process-text-templates-by-using-a-custom-host"></a>Özel bir Konak kullanarak Metin Şablonlarını İşleme
 
-*Metin şablonu dönüştürme* işlemi, girdi olarak bir *metin şablonu* dosyası alır ve çıktı olarak bir metin dosyası üretir. Bir Visual Studio uzantısı 'ndan veya Visual Studio 'Nun yüklü olduğu bir makinede çalışan tek başına uygulamadan metin dönüştürme altyapısını çağırabilirsiniz. Ancak, bir *metin şablonu oluşturma Konağı*sağlamanız gerekir. Bu sınıf, derlemeler ve ekleme dosyaları gibi kaynakları bularak ve çıktı ve hata iletilerini işleme alarak şablonu ortama bağlar.
+*Metin şablonu dönüştürme* işlemi, girdi olarak bir *metin şablonu* dosyası alır ve çıktı olarak bir metin dosyası üretir. Bir Visual Studio uzantısı 'ndan veya Visual Studio 'Nun yüklü olduğu bir makinede çalışan tek başına uygulamadan metin dönüştürme altyapısını çağırabilirsiniz. Ancak, bir *metin şablonu oluşturma Konağı* sağlamanız gerekir. Bu sınıf, derlemeler ve ekleme dosyaları gibi kaynakları bularak ve çıktı ve hata iletilerini işleme alarak şablonu ortama bağlar.
 
 > [!TIP]
 > Visual Studio içinde çalışacak bir paket veya uzantı yazıyorsanız, kendi ana bilgisayarınızı yazmak yerine metin şablonu oluşturma hizmetini kullanmayı göz önünde bulundurun. Daha fazla bilgi için bkz. [BIR vs uzantısında metin dönüştürmeyi çağırma](../modeling/invoking-text-transformation-in-a-vs-extension.md).
@@ -48,7 +50,7 @@ string output = engine.ProcessTemplate(templateString, host);
 
  Ana bilgisayar hataları günlüğe kaydedebilmeli, derleme ve ekleme dosyalarına yapılan başvuruları çözümleyebilmeli, şablonun yürütülebileceği bir Uygulama Etki Alanı sağlayabilmeli ve her yönerge için uygun işlemciyi çağırabilmelidir.
 
- <xref:Microsoft.VisualStudio.TextTemplating.Engine?displayProperty=fullName> , Microsoft. **VisualStudio. Textşablon oluşturma. \*.0.dll**ve [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110)) , **Microsoft. VisualStudio. textşablon. Interfaces. \*.0.dll**içinde tanımlanmıştır.
+ <xref:Microsoft.VisualStudio.TextTemplating.Engine?displayProperty=fullName> , Microsoft. **VisualStudio. Textşablon oluşturma. \*.0.dll** ve [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110)) , **Microsoft. VisualStudio. textşablon. Interfaces. \*.0.dll** içinde tanımlanmıştır.
 
 ## <a name="in-this-section"></a>Bu Bölümde
  [Izlenecek yol: özel metin şablonu Konağı oluşturma](../modeling/walkthrough-creating-a-custom-text-template-host.md) Metin şablonu işlevselliğinin Visual Studio dışında kullanılabilir olmasını sağlayan bir özel metin şablonu ana bilgisayarı oluşturmayı gösterir.

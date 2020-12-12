@@ -1,5 +1,7 @@
 ---
 title: T4 Metin Şablonu Yazma
+description: T4 Metin şablonları ve yönergeler, metin blokları ve denetim blokları içeren bir metin şablonunun nasıl yazılacağı hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1990377bffe0c663a70520c07bd3ab60b91f8bbd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 086e7ecf568d043142cdc80f020897ed1793b86c
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75593492"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361228"
 ---
 # <a name="writing-a-t4-text-template"></a>T4 Metin Şablonu Yazma
 Bir metin şablonu, bundan oluşturulacak metni içerir. Örneğin, bir Web sayfası oluşturan bir şablon, " \<html> ..." HTML sayfasının diğer tüm standart parçaları. Şablona eklenen, program kodu parçaları olan *Denetim bloklarıdır*. Denetim blokları, değişen değerler sağlar ve metnin bölümlerinin koşullu ve yinelenebilir olmasını sağlar.
@@ -238,7 +240,7 @@ private void WriteSquareLine(int i)
 
  **Bir dosyayı gezinebilir model olarak yükleyin**. Daha güçlü bir yöntem, metin şablonu kodunuzun gezinebileceği bir model olarak verileri okumalıdır. Örneğin, bir XML dosyası yükleyebilir ve XPath ifadeleriyle gidebilirsiniz. Ayrıca, XML verilerini okuyabilmeniz için bir sınıf kümesi oluşturmak üzere [xsd.exe](/dotnet/standard/serialization/xml-schema-definition-tool-xsd-exe) de kullanabilirsiniz.
 
- **Model dosyasını diyagram veya formda düzenleyin.** [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] bir modeli diyagram veya Windows formu olarak düzenlemenize olanak sağlayan araçlar sağlar. Bu, modeli oluşturulan uygulamanın kullanıcılarıyla tartışmanızı kolaylaştırır. [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] Ayrıca, modelin yapısını yansıtan kesin türü belirtilmiş sınıfların bir kümesini oluşturur. Daha fazla bilgi için bkz. [etki alanına özgü dilden kod oluşturma](../modeling/generating-code-from-a-domain-specific-language.md).
+ **Model dosyasını diyagram veya formda düzenleyin.** [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] bir modeli diyagram veya Windows formu olarak düzenlemenize olanak sağlayan araçlar sağlar. Bu, modeli oluşturulan uygulamanın kullanıcılarıyla tartışmanızı kolaylaştırır. [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] Ayrıca, modelin yapısını yansıtan kesin türü belirtilmiş sınıfların bir kümesini oluşturur. Daha fazla bilgi için bkz. [Domain-Specific dilden kod üretme](../modeling/generating-code-from-a-domain-specific-language.md).
 
 ### <a name="relative-file-paths-in-design-time-templates"></a>Tasarım zamanı şablonlarındaki göreli dosya yolları
  [Tasarım zamanı metin şablonunda](../modeling/design-time-code-generation-by-using-t4-text-templates.md), metin şablonuna göre konumdaki bir dosyaya başvurmak istiyorsanız kullanın `this.Host.ResolvePath()` . Yönergede de ayarlamanız gerekir `hostspecific="true"` `template` :

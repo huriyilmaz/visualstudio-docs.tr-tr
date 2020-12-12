@@ -1,5 +1,7 @@
 ---
 title: Kod eşlemeleri
+description: Kod eşlemelerinin dosya ve kod satırları arasında okuma yapmadan nasıl bir araya oturduğunu görmenizi nasıl yardımcı olduğunu öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 05/16/2018
 ms.topic: how-to
 f1_keywords:
@@ -16,12 +18,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 771a6ccf4749a3464204d3da75f4d403d1ab2dd5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 39b34bb124d663d81769c6d3086d6b36803d60eb
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85532723"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362242"
 ---
 # <a name="map-dependencies-with-code-maps"></a>Bağımlılıkları kod eşlemeleriyle eşleyin
 
@@ -43,13 +45,13 @@ Bu dillerdeki kod bağımlılıklarını eşleyebilirsiniz:
 - X + + projeleri ve Microsoft Dynamics AX için .NET modüllerinden oluşturulan derlemeler
 
 > [!NOTE]
-> C# veya Visual Basic dışındaki projeler için, bir kod eşlemesi başlatmak veya varolan bir kod eşlemesine öğe eklemek için daha az seçenek vardır. Örneğin, bir C++ projesinin metin düzenleyicisinde bir nesneye sağ tıklayıp bir kod haritasına ekleyebilirsiniz. Ancak, **Çözüm Gezgini**, **sınıf görünümü**ve **nesne tarayıcısı**bağımsız kod öğelerini veya dosyalarını sürükleyip bırakabilirsiniz.
+> C# veya Visual Basic dışındaki projeler için, bir kod eşlemesi başlatmak veya varolan bir kod eşlemesine öğe eklemek için daha az seçenek vardır. Örneğin, bir C++ projesinin metin düzenleyicisinde bir nesneye sağ tıklayıp bir kod haritasına ekleyebilirsiniz. Ancak, **Çözüm Gezgini**, **sınıf görünümü** ve **nesne tarayıcısı** bağımsız kod öğelerini veya dosyalarını sürükleyip bırakabilirsiniz.
 
 ## <a name="install-code-map-and-live-dependency-validation"></a>Kod haritasını ve canlı bağımlılık doğrulamasını yükler
 
 Visual Studio 'da bir kod haritası oluşturmak için önce **kod haritasını** ve **canlı bağımlılık doğrulama** bileşenlerini yüklemeniz gerekir:
 
-1. **Visual Studio yükleyicisi**açın. Windows Başlat menüsünden veya Visual Studio içinde **Araçlar**  >  **Al araçlar ve Özellikler**' i seçerek açabilirsiniz.
+1. **Visual Studio yükleyicisi** açın. Windows Başlat menüsünden veya Visual Studio içinde **Araçlar**  >  **Al araçlar ve Özellikler**' i seçerek açabilirsiniz.
 
 1. **Ayrı bileşenler** sekmesini seçin.
 
@@ -67,9 +69,9 @@ Derleme başvuruları, dosyalar ve klasörler de dahil olmak üzere boş bir kod
 
 Boş bir kod eşlemesi eklemek için:
 
-1. **Çözüm Gezgini**' de, en üst düzey çözüm Düğümünüzün kısayol menüsünü açın. **Add**  >  **Yeni öğe**Ekle ' yi seçin.
+1. **Çözüm Gezgini**' de, en üst düzey çözüm Düğümünüzün kısayol menüsünü açın.   >  **Yeni öğe** Ekle ' yi seçin.
 
-2. **Yeni öğe Ekle** iletişim kutusunda, **yüklü**altında **genel** kategorisini seçin.
+2. **Yeni öğe Ekle** iletişim kutusunda, **yüklü** altında **genel** kategorisini seçin.
 
 3. **Yönlendirilmiş grafik belgesi (. dgml)** şablonunu seçin ve ardından **Ekle**' yi seçin.
 
@@ -78,13 +80,13 @@ Boş bir kod eşlemesi eklemek için:
 
    Çözümünüzün **Çözüm öğeleri** klasöründe boş bir harita görüntülenir.
 
-Benzer şekilde, **mimari**  >  **Yeni kod eşlemesi** veya **Dosya**  >  **Yeni**  >  **Dosya dosyası**seçerek çözümünüze eklemeden yeni bir kod eşleme dosyası oluşturabilirsiniz.
+Benzer şekilde, **mimari**  >  **Yeni kod eşlemesi** veya **Dosya**  >  **Yeni**  >  **Dosya dosyası** seçerek çözümünüze eklemeden yeni bir kod eşleme dosyası oluşturabilirsiniz.
 
 ## <a name="generate-a-code-map-for-your-solution"></a>Çözümünüz için bir kod Haritası oluşturma
 
 Çözümünüzdeki tüm bağımlılıkları görmek için:
 
-1. Menü çubuğunda, **mimari**  >  **çözüm için kod Haritası Oluştur**' u seçin. Kodunuz son kez derlenmeden bu yana değiştirilmediyse, **Architecture**  >  bunun yerine**Yapı olmadan çözüm için kod Haritası üret** ' i seçebilirsiniz.
+1. Menü çubuğunda, **mimari**  >  **çözüm için kod Haritası Oluştur**' u seçin. Kodunuz son kez derlenmeden bu yana değiştirilmediyse,   >  bunun yerine **Yapı olmadan çözüm için kod Haritası üret** ' i seçebilirsiniz.
 
    ![Kod Haritası komutu oluştur](../modeling/media/codemapsarchitecturemenu.png)
 
@@ -94,7 +96,7 @@ Benzer şekilde, **mimari**  >  **Yeni kod eşlemesi** veya **Dosya**  >  **Yeni
 
    ![Derlemelerin en üst düzey bağımlılık grafiği](../modeling/media/dependencygraph_toplevelassemblies.png)
 
-   Bu örnek çözüm, Çözüm klasörlerini (**testler** ve **Bileşenler**), test projelerini, Web projelerini ve derlemeleri içerir. Varsayılan olarak, tüm kapsama ilişkileri *Grup*olarak görünür ve bu, genişletebilir ve daraltabilirsiniz. **Dışlar** grubu, platform bağımlılıkları da dahil olmak üzere çözümünüzün dışındaki her şeyi içerir. Dış derlemeler yalnızca kullanılan öğeleri gösterir. Varsayılan olarak, sistem tabanlı türler, dağınıklığı azaltmak için haritada gizlidir.
+   Bu örnek çözüm, Çözüm klasörlerini (**testler** ve **Bileşenler**), test projelerini, Web projelerini ve derlemeleri içerir. Varsayılan olarak, tüm kapsama ilişkileri *Grup* olarak görünür ve bu, genişletebilir ve daraltabilirsiniz. **Dışlar** grubu, platform bağımlılıkları da dahil olmak üzere çözümünüzün dışındaki her şeyi içerir. Dış derlemeler yalnızca kullanılan öğeleri gösterir. Varsayılan olarak, sistem tabanlı türler, dağınıklığı azaltmak için haritada gizlidir.
 
 3. Haritanın detayına gitmek için, projeleri ve derlemeleri temsil eden grupları genişletin. Tüm düğümleri seçmek için **CTRL + A** tuşlarına basarak her şeyi genişletebilir ve ardından **Grup**' u seçerek kısayol menüsünden ' i **genişletin** .
 
@@ -164,7 +166,7 @@ Bekleyen değişikliklerle bazı dosyalarda gerçekleştirilecek bir kod incelem
 
 1. **Çözüm Gezgini** araç çubuğunda, **kod eşlemesinde göster** ' i seçerek ![ seçili düğümlerden yeni grafik oluştur düğmesini seçin ](../modeling/media/createnewgraphfromselectedbutton.gif) . Ya da bir grup öğe için kısayol menüsünü açın ve **kod eşlemesinde göster '** i seçin.
 
-   Ayrıca **Çözüm Gezgini**, **sınıf görünümü**veya **nesne tarayıcısı**öğeleri [Yeni](#add-a-code-map) veya varolan bir kod haritasına sürükleyebilirsiniz. Öğelerinizin üst hiyerarşisini dahil etmek için, öğeleri sürüklerken **CTRL** tuşuna basın ve basılı tutun ya da varsayılan eylemi belirtmek için kod Haritası araç çubuğundaki **üst öğeleri dahil et** düğmesini kullanın. Ayrıca, derleme dosyalarını **Windows Gezgini**gibi Visual Studio 'nun dışından da sürükleyebilirsiniz.
+   Ayrıca **Çözüm Gezgini**, **sınıf görünümü** veya **nesne tarayıcısı** öğeleri [Yeni](#add-a-code-map) veya varolan bir kod haritasına sürükleyebilirsiniz. Öğelerinizin üst hiyerarşisini dahil etmek için, öğeleri sürüklerken **CTRL** tuşuna basın ve basılı tutun ya da varsayılan eylemi belirtmek için kod Haritası araç çubuğundaki **üst öğeleri dahil et** düğmesini kullanın. Ayrıca, derleme dosyalarını **Windows Gezgini** gibi Visual Studio 'nun dışından da sürükleyebilirsiniz.
 
    > [!NOTE]
    > Birden çok uygulama genelinde paylaşılan bir projeden (Windows Phone veya Microsoft Store gibi) öğeler eklediğinizde, bu öğeler geçerli etkin uygulama projesiyle haritada görüntülenir. Bağlamı başka bir uygulama projesi olarak değiştirirseniz ve paylaşılan projeden daha fazla öğe eklerseniz, bu öğeler yeni etkin olan uygulama projesiyle görünür. Eşleme üzerinde bir öğeyle gerçekleştirdiğiniz işlemler, yalnızca aynı bağlamı paylaşılan öğeler için geçerlidir.
@@ -183,20 +185,20 @@ Bekleyen değişikliklerle bazı dosyalarda gerçekleştirilecek bir kod incelem
 
    ![Grupları sınıfa ve üye düzeyine Genişlet](../modeling/media/codemapsexpandtoclassandmember.png)
 
-   Koddaki, ancak haritada görünmeyen üyeleri görmek için, **Refetch Children** ![ ](../modeling/media/dependencygraph_deletednodesicon.png) bir grubun sol üst köşesindeki tekrar al Children Icon tekrar al Children simgesine tıklayın.
+   Koddaki, ancak haritada görünmeyen üyeleri görmek için,  ![ ](../modeling/media/dependencygraph_deletednodesicon.png) bir grubun sol üst köşesindeki tekrar al Children Icon tekrar al Children simgesine tıklayın.
 
 6. Haritadaki öğelerle ilgili daha fazla öğe görmek için, bir tane seçin ve kod Haritası araç çubuğunda **ilgili öğe göster** ' i seçin, ardından haritaya eklenecek ilgili öğelerin türünü seçin. Alternatif olarak, bir veya daha fazla öğe seçin, kısayol menüsünü açın ve ardından haritaya eklenecek ilgili öğelerin türünün **göster** seçeneğini seçin. Örneğin:
 
-    Bir **derleme**için şunları seçin:
+    Bir **derleme** için şunları seçin:
 
     |Seçenek|Açıklama|
     |-|-|
     |**Bu başvuruların derlemelerini göster**|Bu derlemenin başvurduğu derlemeleri ekleyin. Dış derlemeler **dışlar** grubunda görünür.|
     |**Buna başvuran derlemeleri göster**|Çözümde bu derlemeye başvuran derlemeleri ekleyin.|
 
-    Bir **ad alanı**için, görünür değilse, **içerilen derlemeyi göster**' i seçin.
+    Bir **ad alanı** için, görünür değilse, **içerilen derlemeyi göster**' i seçin.
 
-    Bir **sınıf** veya **arabirim**için şunları seçin:
+    Bir **sınıf** veya **arabirim** için şunları seçin:
 
     |Seçenek|Açıklama|
     |-|-|
@@ -209,7 +211,7 @@ Bekleyen değişikliklerle bazı dosyalarda gerçekleştirilecek bir kod incelem
     |**Tüm temel türleri göster**|Yinelemeli olarak taban sınıf veya arabirim hiyerarşisi ekleyin.|
     |**Tüm türetilmiş türleri göster**|Bir sınıf için tüm türetilmiş sınıfları yinelemeli olarak ekleyin.<br /><br /> Bir arabirim için türetilmiş tüm arabirimleri ve uygulama sınıflarını veya yapılarını yinelemeli olarak ekleyin.|
 
-     Bir **Yöntem**için şunları seçin:
+     Bir **Yöntem** için şunları seçin:
 
     |Seçenek|Açıklama|
     |-|-|
@@ -219,7 +221,7 @@ Bekleyen değişikliklerle bazı dosyalarda gerçekleştirilecek bir kod incelem
     |**Kapsayan türü, ad alanını ve derlemeyi göster**|Üst kapsayıcı hiyerarşisini ekleyin.|
     |**Geçersiz kılınan yöntemleri göster**|Diğer yöntemleri geçersiz kılan veya bir arabirimin yöntemini uygulayan bir yöntem için geçersiz kılınan taban sınıflardaki tüm soyut ya da sanal yöntemleri ve varsa arabirimin uygulanan yöntemini ekleyin.|
 
-     Bir **alan** veya **özellik**için şunları seçin:
+     Bir **alan** veya **özellik** için şunları seçin:
 
     |Seçenek|Açıklama|
     |-|-|

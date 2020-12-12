@@ -1,5 +1,7 @@
 ---
 title: Değişikliklere Yanıt Verme ve Değişiklikleri Yayma
+description: Bir öğe oluşturulduğunda, silindiğinde veya güncelleniyorsa, değişikliği modelin diğer bölümlerine veya dış kaynaklara yayan bir kod yazabilirsiniz.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7c51aeea4a1637e5b1b9d2de0d8b92920334e2fc
-ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
+ms.openlocfilehash: 9e44def032854e46b00638cff77c8bea91eb0f09
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93414522"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97360618"
 ---
 # <a name="respond-to-and-propagate-changes"></a>Değişiklikleri yanıtlama ve yayma
 

@@ -1,5 +1,7 @@
 ---
 title: Metin Şablonlarından Modellere Erişme
+description: Rapor dosyaları, kaynak kodu dosyaları ve etki alanına özgü dil modellerine dayalı diğer metin dosyaları oluşturmak için metin şablonlarını nasıl kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -9,19 +11,19 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a66f160d25ccacbdaaaf2238dfc738ade4a4200f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 64d937f9a63207e16664bbd9254ae60470caeb41
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85531475"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362294"
 ---
 # <a name="access-models-from-text-templates"></a>Metin şablonlarından modellere erişin
 
 Metin şablonlarını kullanarak, rapor dosyaları, kaynak kodu dosyaları ve etki alanına özgü dil modellerini temel alan diğer metin dosyaları oluşturabilirsiniz. Metin şablonları hakkında temel bilgiler için bkz. [kod oluşturma ve T4 Metin şablonları](../modeling/code-generation-and-t4-text-templates.md). DSL 'niz hata ayıklaması yaparken metin şablonları deneysel modda çalışacaktır ve ayrıca DSL dağıttığınız bir bilgisayarda da çalışacaktır.
 
 > [!NOTE]
-> Bir DSL çözümü oluşturduğunuzda, hata ayıklama projesinde örnek metin şablonu ** \* . tt** dosyaları oluşturulur. Etki alanı sınıflarının adlarını değiştirdiğinizde, bu şablonlar artık çalışmayacaktır. Bununla birlikte, ihtiyacınız olan temel yönergeleri içerirler ve DSL ile eşleşecek şekilde güncelleştirebilecekleri örnekler sağlayabilirsiniz.
+> Bir DSL çözümü oluşturduğunuzda, hata ayıklama projesinde örnek metin şablonu **\* . tt** dosyaları oluşturulur. Etki alanı sınıflarının adlarını değiştirdiğinizde, bu şablonlar artık çalışmayacaktır. Bununla birlikte, ihtiyacınız olan temel yönergeleri içerirler ve DSL ile eşleşecek şekilde güncelleştirebilecekleri örnekler sağlayabilirsiniz.
 
  Bir metin şablonundan bir modele erişmek için:
 
@@ -72,7 +74,7 @@ Here is a list of elements in the model:
 <#@ MyLanguage processor="MyLanguageDirectiveProcessor" requires="fileName='Sample.myDsl1'" #>
 ```
 
- Yönergesinin adı ( `MyLanguage` Bu örnekte) DSL 'nizin adından türetilir. DSL 'nin bir parçası olarak oluşturulan bir *yönerge işlemcisini* çağırır. Kaynak kodunu **Dsl\GeneratedCode\DirectiveProcessor.cs**içinde bulabilirsiniz.
+ Yönergesinin adı ( `MyLanguage` Bu örnekte) DSL 'nizin adından türetilir. DSL 'nin bir parçası olarak oluşturulan bir *yönerge işlemcisini* çağırır. Kaynak kodunu **Dsl\GeneratedCode\DirectiveProcessor.cs** içinde bulabilirsiniz.
 
  DSL yönergesi işlemcisi iki ana görevi gerçekleştirir:
 
@@ -87,7 +89,7 @@ Here is a list of elements in the model:
 <#@ MyLanguage processor="MyLanguageDirectiveProcessor" requires="fileName='Sample.myDsl1';validation='open|load|save|menu'" #>
 ```
 
- Dikkat edin:
+ Şunlara dikkat edin:
 
 1. `filename`Ve `validation` parametreleri ";" ile ayrılır ve başka ayırıcı veya boşluk olmamalıdır.
 

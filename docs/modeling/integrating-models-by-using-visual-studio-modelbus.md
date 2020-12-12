@@ -1,5 +1,7 @@
 ---
 title: ModelBus kullanarak modelleri tümleştirme
+description: Visual Studio ModelBus modeller ve diğer araçlardan modeller arasında bağlantı oluşturmak için bir yöntem sağladığını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a222d5f69d19d2891b4aa20239c1874f55a056e0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 46705c7a614cd67d81c9e55c03e937f72c29a2fe
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85536948"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97360734"
 ---
 # <a name="integrate-models-by-using-visual-studio-modelbus"></a>Visual Studio ModelBus kullanarak modelleri tümleştirme
 
@@ -40,7 +42,7 @@ Ek bilgi ve örnek kod için bkz.:
 
 2. İletişim kutusunda **Bu DSL 'Yi ModelBus**' a göstermek istiyorum ' u seçin. Bu DSL 'nin modellerini sergilemesini ve diğer DSLs başvurularını kullanmasını istiyorsanız her iki seçeneği de belirleyebilirsiniz.
 
-3. **Tamam**’a tıklayın. DSL çözümüne yeni bir "ModelBusAdapter" projesi eklenir.
+3. **Tamam** düğmesine tıklayın. DSL çözümüne yeni bir "ModelBusAdapter" projesi eklenir.
 
 4. DSL 'ye bir metin şablonundan erişmek istiyorsanız, yeni projedeki AdapterManager.tt öğesini değiştirmeniz gerekir. DSL 'ye komutlar ve olay işleyicileri gibi diğer koddan erişmek istiyorsanız bu adımı atlayın. Daha fazla bilgi için bkz. [bir metin şablonunda Visual Studio ModelBus kullanma](../modeling/using-visual-studio-modelbus-in-a-text-template.md).
 
@@ -50,7 +52,7 @@ Ek bilgi ve örnek kod için bkz.:
 
        `[Microsoft.VisualStudio.Modeling.Integration.HostSpecific(HostName)]`
 
-   3. ModelBusAdapter projesi başvuruları ' nda, **Microsoft. VisualStudio. Textşablon. model. 11.0**ekleyin.
+   3. ModelBusAdapter projesi başvuruları ' nda, **Microsoft. VisualStudio. Textşablon. model. 11.0** ekleyin.
 
       DSL 'ye hem metin şablonlarından hem de diğer koddan erişmek istiyorsanız, biri değiştirilmiş ve bir değiştirilmemiş iki bağdaştırıcıya ihtiyacınız vardır.
 
@@ -303,7 +305,7 @@ using (FamilyTreeAdapter adapter =
 
 1. Erişmek istediğiniz DSL 'nin metin şablonları tarafından erişim için yapılandırılmış bir ModelBus bağdaştırıcısı olmalıdır. Daha fazla bilgi için bkz. [DSL 'ye erişim sağlama](#provide).
 
-2. Genellikle, bir kaynak DSL 'de depolanan model veri yolu başvurusunu (MBR) kullanarak bir hedef DSL 'ye erişirsiniz. Bu nedenle, şablonunuz kaynak DSL yönergesini ve MBR 'yi çözecek kodu içerir. Metin şablonları hakkında daha fazla bilgi için bkz. [etki alanına özgü dilden kod üretme](../modeling/generating-code-from-a-domain-specific-language.md).
+2. Genellikle, bir kaynak DSL 'de depolanan model veri yolu başvurusunu (MBR) kullanarak bir hedef DSL 'ye erişirsiniz. Bu nedenle, şablonunuz kaynak DSL yönergesini ve MBR 'yi çözecek kodu içerir. Metin şablonları hakkında daha fazla bilgi için bkz. [Domain-Specific dilden kod üretme](../modeling/generating-code-from-a-domain-specific-language.md).
 
    ```
    <#@ template debug="true" hostspecific="true"
@@ -486,7 +488,7 @@ DSL tanımı diyagramına sağ tıkladığınızda, **ModelBus 'ı etkinleştir*
 
 - DSL tanımında, bir dış tür başvurusu eklenir: `Microsoft.VisualStudio.Modeling.Integration.ModelBusReference` .
 
-   Başvuruyu, **etki alanı türleri**altında **DSL Gezgini**'nde görebilirsiniz. Dış tür başvurularını el ile eklemek için kök düğümüne sağ tıklayın.
+   Başvuruyu, **etki alanı türleri** altında **DSL Gezgini**'nde görebilirsiniz. Dış tür başvurularını el ile eklemek için kök düğümüne sağ tıklayın.
 
 - Yeni bir şablon dosyası eklenmiştir, **Dsl\GeneratedCode\ModelBusReferencesSerialization.tt**.
 
@@ -506,13 +508,13 @@ Bir etki alanı özelliğinin türünü ModelBusReference olarak belirlediğiniz
     ("Choose a model file", "Target model|*.target")]
   ```
 
-DSL tanımı diyagramına sağ tıkladıktan sonra ModelBus 'ı etkinleştir ' e tıklayın ve **Bu DSL 'Yi ModelBus**' a **etkin hale**getirebilir:
+DSL tanımı diyagramına sağ tıkladıktan sonra ModelBus 'ı etkinleştir ' e tıklayın ve **Bu DSL 'Yi ModelBus**' a **etkin hale** getirebilir:
 
 - Çözüme yeni bir proje `ModelBusAdapter` eklenir.
 
 - Projeye bir başvuru `ModelBusAdapter` eklenir `DslPackage` . `ModelBusAdapter` projeye bir başvuru içerir `Dsl` .
 
-- **DslPackage\source.Extention.tt**IÇINDE, `|ModelBusAdapter|` MEF bileşeni olarak eklenmiştir.
+- **DslPackage\source.Extention.tt** IÇINDE, `|ModelBusAdapter|` MEF bileşeni olarak eklenmiştir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,5 +1,7 @@
 ---
 title: Üretilen Sınıfları Geçersiz Kılma ve Genişletme
+description: DSL tanımınızın, etki alanına özgü bir dili temel alan güçlü bir araç kümesi oluşturabileceğiniz bir platform olduğunu öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c3374f67f4fba11543e3dbbca47fef621dd2e714
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c1b36a7524530df7f9a18ce9abe1de2d430156d6
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75595897"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362099"
 ---
 # <a name="override-and-extend-the-generated-classes"></a>Oluşturulan sınıfları geçersiz kılma ve genişletme
 
@@ -46,7 +48,7 @@ public partial class Book
 
 Geçersiz kılabileceğiniz yöntemleri öğrenmek için, sınıfa **geçersiz kılma** yazın ve ardından bir boşluk girin. IntelliSense araç ipucu size hangi yöntemlerin geçersiz kılınabileceğini söyleyecektir.
 
-### <a name="double-derived-classes"></a>Çift türetilmiş sınıflar
+### <a name="double-derived-classes"></a>Double-Derived sınıfları
 
 Oluşturulan sınıflarda yöntemlerin çoğu, modelleme ad alanlarındaki sabit bir sınıf kümesinden devralınır. Ancak, bazı yöntemler oluşturulan kodda tanımlanmıştır. Normalde bu, bunları geçersiz kılamazsınız demektir; aynı sınıfın başka bir kısmi tanımında tanımlanan yöntemlerin tek bir kısmi sınıfta geçersiz kılınamaz.
 

@@ -1,5 +1,7 @@
 ---
 title: Etki Alanı Rollerinin Özellikleri
+description: Koleksiyon türü, custome öznitelikleri gibi bir etki alanı rolüyle ilişkili özellikler hakkında bilgi edinin ve özelliğe gözatılabilir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 author: JoshuaPartlow
@@ -7,15 +9,15 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6c1c62126d65107bb25e3c4a475a794116c47193
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6dda8e7c5538b0517c181a451072c4f8a9544965
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85544150"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362346"
 ---
 # <a name="properties-of-domain-roles"></a>Etki Alanı Rollerinin Özellikleri
-Aşağıdaki tabloda yer alan Özellikler bir etki alanı rolüyle ilişkilendirilir. Etki alanı rolleri hakkında daha fazla bilgi için bkz. [modelleri, sınıfları ve Ilişkileri anlama](../modeling/understanding-models-classes-and-relationships.md). Bu özelliklerin nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [etki alanına özgü dili özelleştirme ve genişletme](../modeling/customizing-and-extending-a-domain-specific-language.md).
+Aşağıdaki tabloda yer alan Özellikler bir etki alanı rolüyle ilişkilendirilir. Etki alanı rolleri hakkında daha fazla bilgi için bkz. [modelleri, sınıfları ve Ilişkileri anlama](../modeling/understanding-models-classes-and-relationships.md). Bu özelliklerin nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [Domain-Specific dilini özelleştirme ve genişletme](../modeling/customizing-and-extending-a-domain-specific-language.md).
 
 |Özellik|Açıklama|Varsayılan|
 |-|-|-|
@@ -26,7 +28,7 @@ Aşağıdaki tabloda yer alan Özellikler bir etki alanı rolüyle ilişkilendir
 |Özellik alıcısı erişim değiştiricisi|Oluşturulan özelliğin ( `public` , `internal` ,, `private` `protected` veya `protected internal` ) alıcı için erişim değiştiricisi.|`public`|
 |Özellik ayarlayıcı erişim değiştiricisi|Oluşturulan özelliğin ( `public` , `internal` ,, `private` `protected` veya `protected internal` ) ayarlayıcı için erişim değiştiricisi.|`public`|
 |Çokluk|Karşıt rolü ( `0..1` , `1..1` ,, `0..*` veya) çalabilen model öğelerinin sayısı `1..*` . Çoğulluk veya ise `0..*` `1..*` , oluşturulan özellik bir koleksiyonu temsil eder; Aksi takdirde, oluşturulan özellik tek bir model öğesini temsil eder.|İlişki türüne ve bu ilişkide kaynak veya hedef rol olup olmamasına bağlıdır.|
-|Name|Etki alanı rolünün adı. Bu özellik boşluk içeremez.|Bu rolün rol oyuncusunun etki alanı sınıfının adı.|
+|Ad|Etki alanı rolünün adı. Bu özellik boşluk içeremez.|Bu rolün rol oyuncusunun etki alanı sınıfının adı.|
 |Kopyayı yayar|`DoNotPropagateCopy` -Kopyalanmış rol oyuncusunun bu bağlantının bir kopyası olmayacaktır.<br /><br /> `PropagateCopyToLinkOnly` -Kopyalanmış bağlantı var olan karşı rol oyuncusuna işaret eder.<br /><br /> `PropagateCopyToLinkAndOppositeRolePlayer` -Kopyalanmış bağlantı, karşı rol yürütücüsünün bir kopyasına işaret eder.|`PropagateCopyToLinkAndOppositeRolePlayer` eklenebilir kaynak roller için.<br /><br /> `DoNotPropagateCopy` diğer roller için.<br /><br /> Daha fazla bilgi için bkz. [kopyalama davranışını özelleştirme](../modeling/customizing-copy-behavior.md)|
 |Silmeyi yayar|`True` ilişkili bağlantı silindiğinde bu rolü yürüten öğeyi silmek için.|`True` bir katıştırma rolünün hedefi için.<br /><br /> `False` diğer roller için.|
 |Özellik Adı|Rol oyuncusunun kodunda oluşturulan özelliğin adı. Bu ad boşluk içeremez.|Bu rol sıfırdan bir veya bire bir çokluğa sahipse ters rolün adı; Aksi takdirde, karşıt rolün plurlaştırılan adı.|

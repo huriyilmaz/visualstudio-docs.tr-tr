@@ -1,5 +1,7 @@
 ---
 title: Model aracılığıyla test geliştirme
+description: Sisteminizin ve bileşenlerinin testlerini düzenlemenize yardımcı olması için gereksinimleri ve mimari modelleri nasıl kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 22c18fd457d4827d3abf3a3494ad622873eb5c7b
-ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
+ms.openlocfilehash: 1f49b52bece0c1dddc65da919d266c4f21b1bf69
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92099303"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361839"
 ---
 # <a name="develop-tests-from-a-model"></a>Model aracılığıyla test geliştirme
 Sistem ve bileşenlerinin testlerini düzenlemenize yardımcı olması için gereksinimleri ve mimari modelleri kullanabilirsiniz. Bu uygulama, kullanıcılar ve diğer paydaşlar için önemli olan gereksinimleri test etmenize yardımcı olur ve gereksinimler değiştiğinde testleri hızlı bir şekilde güncelleştirmenize yardımcı olur. Kullanıyorsanız [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)] , modeller ve testler arasındaki bağlantıları da koruyabilirsiniz.
@@ -22,7 +24,7 @@ Sistem ve bileşenlerinin testlerini düzenlemenize yardımcı olması için ger
  Visual Studio 'nun hangi sürümlerinin bu özellikleri desteklediğini görmek için bkz. [mimari ve modelleme araçları Için sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
 ## <a name="system-and-subsystem-testing"></a>Sistem ve alt sistem testi
- *Kabul testi*olarak da bilinen *sistem testi* , kullanıcıların ihtiyaçlarını karşılamakta olup olmadığını test ediyor demektir. Bu tür testler, iç tasarım yerine sistemin dışarıdan görünür davranışına ilişkin kaygılardır.
+ *Kabul testi* olarak da bilinen *sistem testi* , kullanıcıların ihtiyaçlarını karşılamakta olup olmadığını test ediyor demektir. Bu tür testler, iç tasarım yerine sistemin dışarıdan görünür davranışına ilişkin kaygılardır.
 
  Sistem testleri sistemi genişletirken veya yeniden tasarlarken çok değerlidir. Kodu değiştirirken hata getirmekten kaçınmanıza yardımcı olurlar.
 

@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: Etki Alanına Özgü Dil Tasarımcısını Genişletme'
+description: Tasarımcıya, etki alanına özgü dil (DSL) tanımlarını düzenlemek için kullanılan uzantıları nasıl oluşturabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: aa5b3166606312bb74560f207e6e1d0e6065bb2c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1a7a48c5a314dd52893bc7f0675915f0d68297ab
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85532592"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361514"
 ---
 # <a name="how-to-extend-the-domain-specific-language-designer"></a>Nasıl yapılır: Etki Alanına Özgü Dil Tasarımcısını Genişletme
 
@@ -36,7 +38,7 @@ Uzantınızın kodunu içeren bir proje ve projeyi dışarı aktaran bir VSıX p
 
 3. Içerik alanının üzerinde **Içerik Ekle**' ye tıklayın.
 
-4. **Içerik Ekle** iletişim kutusunda, **MEF bileşeni**Için **bir içerik türü seçin** ' i ayarlayın ve **projeyi** sınıf kitaplığı projeniz olarak ayarlayın.
+4. **Içerik Ekle** iletişim kutusunda, **MEF bileşeni** Için **bir içerik türü seçin** ' i ayarlayın ve **projeyi** sınıf kitaplığı projeniz olarak ayarlayın.
 
 5. **Sürümleri Seç** ' e tıklayın ve **Visual Studio Enterprise** işaretli olduğundan emin olun.
 

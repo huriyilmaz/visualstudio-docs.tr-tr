@@ -1,5 +1,7 @@
 ---
 title: Bağımlılık diyagramları başvurusu
+description: Visual Studio 'da, sisteminizin üst düzey, mantıksal mimarisini görselleştirmek için bir bağımlılık diyagramı kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 09/28/2018
 ms.topic: reference
 f1_keywords:
@@ -20,16 +22,16 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 774716dff6562b7792c6fa885c40db2a0a133136
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 265bb31dd95aa3a84bdb497a3306278acfd8838e
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75594571"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97360578"
 ---
 # <a name="dependency-diagrams-reference"></a>Bağımlılık diyagramları: başvuru
 
-Visual Studio 'da, sisteminizin üst düzey, mantıksal mimarisini görselleştirmek için bir *bağımlılık diyagramı* kullanabilirsiniz. Bağımlılık diyagramı, sisteminizdeki fiziksel yapıtları *Katman*olarak adlandırılan mantıksal, soyut gruplar halinde düzenler. Bu katmanlar, yapıtların gerçekleştirdiği ana görevleri veya sisteminizin ana bileşenlerini anlatmaktadır. Her katman, daha ayrıntılı görevleri tanımlayan iç içe katmanlar da içerebilir.
+Visual Studio 'da, sisteminizin üst düzey, mantıksal mimarisini görselleştirmek için bir *bağımlılık diyagramı* kullanabilirsiniz. Bağımlılık diyagramı, sisteminizdeki fiziksel yapıtları *Katman* olarak adlandırılan mantıksal, soyut gruplar halinde düzenler. Bu katmanlar, yapıtların gerçekleştirdiği ana görevleri veya sisteminizin ana bileşenlerini anlatmaktadır. Her katman, daha ayrıntılı görevleri tanımlayan iç içe katmanlar da içerebilir.
 
 Hangi Visual Studio sürümlerini bu özelliği desteklediğini görmek için bkz. [mimari ve modelleme araçları Için sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
@@ -56,7 +58,7 @@ Bu konu başlığı altında, bir bağımlılık diyagramında kullanabileceğin
 
 Aşağıdaki tabloda, bir bağımlılık diyagramında kullanabileceğiniz öğeler açıklanmaktadır.
 
-|**Şekil**|**Öğe**|**Açıklama**|
+|**Şekil**|**Dosyalarında**|**Açıklama**|
 |-|-|-|
 |1|**Katman**|Sisteminizdeki fiziksel yapıların mantıksal grubu. Bu yapıtlar ad alanları, projeler, sınıflar, yöntemler vb. olabilir.<br /><br /> Bir katmana bağlı yapıtları görmek için katmanın kısayol menüsünü açın ve sonra **Katman Gezgini**'ni açmak Için **bağlantıları görüntüle** ' yi seçin.<br /><br /> Daha fazla bilgi için bkz. [Katman Gezgini](#Explorer).<br /><br /> -   **Yasak ad alanı bağımlılıkları** -bu katmanla ilişkili yapıtların belirtilen ad alanlarına bağlı olduğunu belirtir.<br />-   **Yasak ad alanları** -bu katman ile ilişkili yapıtların belirtilen ad alanlarına ait olmaması gerektiğini belirtir.<br />-   **Gerekli ad alanları** -bu katman ile ilişkili yapıtların belirtilen ad alanlarından birine ait olması gerektiğini belirtir.|
 |2|**Bağımlılık**|Bir katmanın işlevselliği başka bir katmanda kullanabilir, ancak tersi anlamına gelir.<br /><br /> -   **Yön** -bağımlılığın yönünü belirtir.|
@@ -93,7 +95,7 @@ Bağımlılık diyagramında bir veya daha fazla katmanın kısayol menüsünü 
 |-|-|
 |**Kategoriler**|Sınıf, ad alanı, kaynak dosya vb. gibi yapıt türü|
 |**Katman**|Yapıtı bağlayan katman|
-|**Doğrulamayı destekler**|**Doğru**ise, katman doğrulama işlemi projenin bu öğeden veya bu öğeden bağımlılıklara uygun olduğunu doğrulayabilirler.<br /><br /> **Yanlışsa**, bağlantı katman doğrulama işlemine katılmaz.<br /><br /> Daha fazla bilgi için bkz. [bağımlılık diyagramları: yönergeler](../modeling/layer-diagrams-guidelines.md).|
+|**Doğrulamayı destekler**|**Doğru** ise, katman doğrulama işlemi projenin bu öğeden veya bu öğeden bağımlılıklara uygun olduğunu doğrulayabilirler.<br /><br /> **Yanlışsa**, bağlantı katman doğrulama işlemine katılmaz.<br /><br /> Daha fazla bilgi için bkz. [bağımlılık diyagramları: yönergeler](../modeling/layer-diagrams-guidelines.md).|
 |**Tanımlayıcı**|Bağlı yapıt başvurusu|
 
 ## <a name="see-also"></a>Ayrıca bkz.

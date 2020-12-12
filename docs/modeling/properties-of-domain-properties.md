@@ -1,5 +1,7 @@
 ---
 title: Etki Alanı Özelliklerinin Özellikleri
+description: Bir etki alanı özelliğinin bir değeri tutabilecek bir model öğesinin özelliği olduğunu ve etki alanı özelliklerinin diyagramdaki etki alanı sınıfı kutusunda nasıl listeleneceğini öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -9,18 +11,18 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1d5ecb87fa23dbf2705eb1df39e3e19e1b2bf578
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 97bfbcf73a950692d5736b7a6e0b529cfe658caa
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810021"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361527"
 ---
 # <a name="properties-of-domain-properties"></a>Etki Alanı Özelliklerinin Özellikleri
-Bir *alan özelliği* , bir değeri tutabilecek bir model öğesinin özelliğidir. Örneğin, `Person` etki alanı sınıfının özellikleri `Name` ve olabilir `BirthDate` . DSL tanımında etki alanı özellikleri, diyagramdaki etki alanı sınıfı kutusunda ve DSL Gezgini 'ndeki etki alanı sınıfında listelenir. Daha fazla bilgi için bkz. [etki alanına özgü dil tanımlama](../modeling/how-to-define-a-domain-specific-language.md).
+Bir *alan özelliği* , bir değeri tutabilecek bir model öğesinin özelliğidir. Örneğin, `Person` etki alanı sınıfının özellikleri `Name` ve olabilir `BirthDate` . DSL tanımında etki alanı özellikleri, diyagramdaki etki alanı sınıfı kutusunda ve DSL Gezgini 'ndeki etki alanı sınıfında listelenir. Daha fazla bilgi için bkz. [Domain-Specific dil tanımlama](../modeling/how-to-define-a-domain-specific-language.md).
 
 > [!NOTE]
-> "Property" sözcüğünün iki kullanımı vardır. Bir *etki alanı özelliği* , bir etki alanı sınıfında tanımladığınız bir özelliktir. Buna karşılık, bir DSL 'nin birçok öğesi DSL tanımındaki **Özellikler** penceresinde listelenen *özelliklere*sahiptir. Örneğin, her etki alanı özelliği, bu konuda açıklanan bir dizi özellik içerir.
+> "Property" sözcüğünün iki kullanımı vardır. Bir *etki alanı özelliği* , bir etki alanı sınıfında tanımladığınız bir özelliktir. Buna karşılık, bir DSL 'nin birçok öğesi DSL tanımındaki **Özellikler** penceresinde listelenen *özelliklere* sahiptir. Örneğin, her etki alanı özelliği, bu konuda açıklanan bir dizi özellik içerir.
 
  Çalışma zamanında, bir kullanıcı etki alanı sınıfının örneklerini oluşturduğunda, etki alanı özelliklerinin değerleri Özellikler penceresi görünebilir ve şekiller üzerinde görüntülenebilir.
 
@@ -30,7 +32,7 @@ Bir *alan özelliği* , bir değeri tutabilecek bir model öğesinin özelliğid
 
 - İşlemler tutarsız durumları önlemeye yardımcı olur. Daha fazla bilgi için bkz. [program kodunda modeli gezinme ve güncelleştirme](../modeling/navigating-and-updating-a-model-in-program-code.md).
 
-  Bir diyagramda veya DSL Gezgininde bir etki alanı özelliği seçtiğinizde, Özellikler penceresi aşağıdaki öğeleri görebilirsiniz. Bu öğelerin nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [etki alanına özgü dili özelleştirme ve genişletme](../modeling/customizing-and-extending-a-domain-specific-language.md).
+  Bir diyagramda veya DSL Gezgininde bir etki alanı özelliği seçtiğinizde, Özellikler penceresi aşağıdaki öğeleri görebilirsiniz. Bu öğelerin nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [Domain-Specific dilini özelleştirme ve genişletme](../modeling/customizing-and-extending-a-domain-specific-language.md).
 
 |Özellik|Açıklama|Varsayılan değer|
 |-|-|-|
@@ -41,7 +43,7 @@ Bir *alan özelliği* , bir değeri tutabilecek bir model öğesinin özelliğid
 |**Help anahtar sözcüğü**|Bu etki alanı özelliği için F1 yardımını dizine eklemek için kullanılan isteğe bağlı anahtar sözcük.|\<none>|
 |**Göz atılamaz**|Varsa `True` , bu DSL modelleri açık olduğunda, Özellikler penceresindeki kullanıcıya etki alanı özelliği görüntülenir.<br /><br /> İse `False` , etki alanı özelliği Kullanıcı arabiriminde gizlidir.<br /><br /> Etki alanı özelliğini görünür halde salt okunurdur, küme **yalnızca kullanıcı arabirimi salt okunurdur**.|`True`|
 |**Öğe adı**|`True`Bu etki alanı özelliği, DSL Gezgini 'ndeki model öğesinin adı olarak görüntülenecektir.<br /><br /> Yeni model öğeleri, bu özellik için benzersiz bir varsayılan değer alacaktır. Bu değerlerin nasıl oluşturulduğunu denetlemek istiyorsanız, **öğe adı sağlayıcısı**' nı ayarlayın.|`False`|
-|**UI salt okunurdur**|İse `True` , Domain özelliğinin değeri kullanıcı arabirimi kullanılarak değiştirilemez. Hala programlar tarafından ayarlanabilir ve Özellikler penceresi görünür olur.<br /><br /> Etki alanı özelliğini kullanıcıdan gizlemek istiyorsanız, **Bu ayarı göz atılamaz olarak**ayarlayın. Erişimi programlara göre denetlemek istiyorsanız, **ayarlayıcı erişim değiştiricisi**' ni ayarlayın.|`False`|
+|**UI salt okunurdur**|İse `True` , Domain özelliğinin değeri kullanıcı arabirimi kullanılarak değiştirilemez. Hala programlar tarafından ayarlanabilir ve Özellikler penceresi görünür olur.<br /><br /> Etki alanı özelliğini kullanıcıdan gizlemek istiyorsanız, **Bu ayarı göz atılamaz olarak** ayarlayın. Erişimi programlara göre denetlemek istiyorsanız, **ayarlayıcı erişim değiştiricisi**' ni ayarlayın.|`False`|
 |**Tür**|Etki alanı özelliği türü ( `Normal` , `Calculated` veya `CustomStorage` ). Daha fazla bilgi için bkz. [hesaplanan ve özel depolama özellikleri](../modeling/calculated-and-custom-storage-properties.md).|`Normal`|
 |**Ad**|Bu etki alanı özelliğinin adı. Bunun geçerli bir tanımlayıcı olması gerekir, örneğin **SongTitle**.|\<none>|
 |**Notlar**|Bu etki alanı özelliği ile ilişkili resmi olmayan notlar.|\<none>|

@@ -1,5 +1,7 @@
 ---
 title: 'İzlenecek yol: Özel Yönerge İşlemcisi Oluşturma'
+description: Metin şablonlarınızı özelleştirmek için özel yönerge işlemcileri yazmak üzere Visual Studio 'Yu nasıl kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -13,16 +15,16 @@ ms.workload:
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 4efe12b9871dc07bd7427e1567973701d3c6c527
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: efe32db6f8d5aadb815d845bdc9f06be36ec06c9
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85532242"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361891"
 ---
 # <a name="walkthrough-create-a-custom-directive-processor"></a>İzlenecek yol: Özel Yönerge İşlemcisi Oluşturma
 
-*Yönerge işlemcileri* , *oluşturulan dönüştürme sınıfına*kod ekleyerek çalışır. Bir *metin şablonundan*bir *yönerge* çağırırsanız, metin şablonunuzda yazdığınız kodun geri kalanı, yönergesinin sağladığı işlevselliğe bağlı olabilir.
+*Yönerge işlemcileri* , *oluşturulan dönüştürme sınıfına* kod ekleyerek çalışır. Bir *metin şablonundan* bir *yönerge* çağırırsanız, metin şablonunuzda yazdığınız kodun geri kalanı, yönergesinin sağladığı işlevselliğe bağlı olabilir.
 
 Kendi özel yönerge işlemcilerinizi yazabilirsiniz. Bu metin şablonlarınızı özelleştirmenize olanak sağlar. Özel bir yönerge işlemcisi oluşturmak için ya da veya ' den devralan bir sınıf oluşturursunuz <xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor> .
 
@@ -599,7 +601,7 @@ End Property
     End Namespace
     ```
 
-4. Yalnızca Visual Basic için, **Proje** menüsünü açın ve **CustomDP özellikleri**' ne tıklayın. **Uygulama** sekmesinde, **kök ad alanında**varsayılan değeri silin `CustomDP` .
+4. Yalnızca Visual Basic için, **Proje** menüsünü açın ve **CustomDP özellikleri**' ne tıklayın. **Uygulama** sekmesinde, **kök ad alanında** varsayılan değeri silin `CustomDP` .
 
 5. **Dosya** menüsünde **Tümünü Kaydet**’e tıklayın.
 
@@ -637,9 +639,9 @@ Bu bölümde, özel bir yönerge işlemciniz için aynı konumda kayıt defterin
 
 1. `regedit`Başlat menüsünü veya komut satırını kullanarak komutu çalıştırın.
 
-2. **HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio \\ \* 0 \ Texttemplating\directiveişlemcilerle**konumuna göz atın ve düğüme tıklayın.
+2. **\\ \* 0 \ Texttemplating\directiveiþlemcileriHKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio** konumuna göz atın ve düğüme tıklayın.
 
-   64 bit sistemlerde, **HKEY_LOCAL_MACHINE \SOFTWARE\Wow6432Node\Microsoft\VisualStudio \\ \* . 0 \ Texttemplating\directiveişlemcilerle** kullanın
+   64 bit sistemlerde **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\\ \* . 0 \ Texttemplating\directiveiþlemcilerini** kullanın
 
 3. CustomDirectiveProcessor adlı yeni bir anahtar ekleyin.
 
@@ -959,7 +961,7 @@ Bu örnekte, metin şablonu yönergeyi çağırır ve bir sınıf dosyasının b
     </body></html>
     ```
 
-2. **Dosya** menüsünde **TestDP.txtkaydet **' e tıklayın.
+2. **Dosya** menüsünde **TestDP.txtkaydet**' e tıklayın.
 
 3. Çıktıyı bir tarayıcıda görüntülemek için, **Çözüm Gezgini**, TestDP.htm ' a sağ tıklayın ve **Tarayıcıda görüntüle**' ye tıklayın.
 

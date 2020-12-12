@@ -1,5 +1,7 @@
 ---
 title: DSL tanımına izleme özelliği Ekle
+description: İzleme etki alanı özelliği ve bir etki alanı modeline izleme özelliği ekleme hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bfa6c63d9f43c465e5632d40281c1f48fb9d0f0b
-ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
+ms.openlocfilehash: 6709ede3de16a78e0042d035a87a715b9ce4c80c
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91830717"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361215"
 ---
 # <a name="add-a-tracking-property-to-a-domain-specific-language-definition"></a>Alana Özgü Dil Tanımına İzleme Özelliği ekleme
 
@@ -24,7 +26,7 @@ Bu izlenecek yol, bir izleme özelliğinin bir etki alanı modeline nasıl eklen
 
 Bir *izleme etki alanı* özelliği, Kullanıcı tarafından güncelleştirilebilen ancak diğer etki alanı özelliklerinin veya öğelerinin değerleri kullanılarak hesaplanan bir varsayılan değere sahip olan bir özelliktir.
 
-Örneğin, Alana Özgü Dil Araçları (DSL araçları), bir etki alanı sınıfının görünen ad özelliği, etki alanı sınıfının adı kullanılarak hesaplanan bir varsayılan değere sahiptir, ancak kullanıcı tasarım zamanında değeri değiştirebilir veya hesaplanan değere sıfırlayabilir.
+Örneğin, Domain-Specific dil araçlarında (DSL araçları), bir etki alanı sınıfının görünen ad özelliği, etki alanı sınıfının adı kullanılarak hesaplanan bir varsayılan değere sahiptir, ancak kullanıcı tasarım zamanında değeri değiştirebilir veya hesaplanan değere sıfırlayabilir.
 
 Bu kılavuzda, modelin varsayılan ad alanı özelliğini temel alan varsayılan değere sahip bir ad alanı izleme özelliğine sahip bir etki alanına özgü dil (DSL) oluşturursunuz. İzleme özellikleri hakkında daha fazla bilgi için bkz. [Izleme özelliklerini tanımlama](/previous-versions/cc825929(v=vs.100)).
 
@@ -54,7 +56,7 @@ Bu yönergeyi başlatabilmeniz için önce şu bileşenleri yüklemeniz gerekir:
 
 ## <a name="create-the-project"></a>Proje oluşturma
 
-1. Alana Özgü Dil Tasarımcısı projesi oluşturun. Bunu, `TrackingPropertyDSL` olarak adlandırın.
+1. Domain-Specific Language Designer projesi oluşturun. Bunu, `TrackingPropertyDSL` olarak adlandırın.
 
 2. **Alana özgü dil Tasarımcısı sihirbazında**, aşağıdaki seçenekleri ayarlayın:
 
@@ -93,19 +95,19 @@ Bu yönergeyi başlatabilmeniz için önce şu bileşenleri yüklemeniz gerekir:
 
     1. Yeni özelliği adlandırın `DefaultNamespace` .
 
-    2. Yeni özelliğin **Özellikler** penceresinde, **varsayılan değeri** olarak ayarlayın `DefaultNamespace` ve **Type** öğesini **String**olarak ayarlayın.
+    2. Yeni özelliğin **Özellikler** penceresinde, **varsayılan değeri** olarak ayarlayın `DefaultNamespace` ve **Type** öğesini **String** olarak ayarlayın.
 
 2. **ExampleModel** etki alanı sınıfına, adlı bir etki alanı özelliği ekleyin `CustomElements` .
 
-     Yeni özellik için **Özellikler** penceresinde, **tür** ' ü **hesaplanacak**olarak ayarlayın.
+     Yeni özellik için **Özellikler** penceresinde, **tür** ' ü **hesaplanacak** olarak ayarlayın.
 
 3. **ExampleElement** etki alanı sınıfına, adlı bir etki alanı özelliği ekleyin `Namespace` .
 
-     Yeni özellik için **Özellikler** penceresinde, set **yanlış**olarak **gözatılabilir** ve **tür** ' i **CustomStorage**olarak ayarlayın.
+     Yeni özellik için **Özellikler** penceresinde, set **yanlış** olarak **gözatılabilir** ve **tür** ' i **CustomStorage** olarak ayarlayın.
 
 4. **ExampleElement** etki alanı sınıfına, adlı bir etki alanı özelliği ekleyin `IsNamespaceTracking` .
 
-     Yeni özellik için **Özellikler** penceresinde **, Ayarla özelliği** **yanlış**olarak, **varsayılan değeri** olarak ayarlayın `true` ve **tür** ' i **Boolean**olarak ayarlayın.
+     Yeni özellik için **Özellikler** penceresinde **, Ayarla özelliği** **yanlış** olarak, **varsayılan değeri** olarak ayarlayın `true` ve **tür** ' i **Boolean** olarak ayarlayın.
 
 ### <a name="to-update-the-diagram-elements-and-dsl-details"></a>Diyagram öğelerini ve DSL ayrıntılarını güncelleştirmek için
 
@@ -113,23 +115,23 @@ Bu yönergeyi başlatabilmeniz için önce şu bileşenleri yüklemeniz gerekir:
 
     1. Yeni metin dekoratisini adlandırın `NamespaceDecorator` .
 
-    2. Metin dekoratörü için **Özellikler** penceresinde, **konumu** **InnerBottomLeft**olarak ayarlayın.
+    2. Metin dekoratörü için **Özellikler** penceresinde, **konumu** **InnerBottomLeft** olarak ayarlayın.
 
 2. DSL Tasarımcısı ' nda **ExampleElement** sınıfını **ExampleShape** şekline bağlayan çizgiyi seçin.
 
     1. **DSL ayrıntıları** penceresinde **dekoratör haritalar** sekmesini seçin.
 
-    2. **Dekoratörler** listesinde **NamespaceDecorator**öğesini seçin, onay kutusunu işaretleyin ve ardından **görüntü özelliği** listesinde **ad alanı**' nı seçin.
+    2. **Dekoratörler** listesinde **NamespaceDecorator** öğesini seçin, onay kutusunu işaretleyin ve ardından **görüntü özelliği** listesinde **ad alanı**' nı seçin.
 
 3. **DSL Gezgini**' nde, **etki alanı sınıfları** klasörünü genişletin, **ExampleElement** düğümüne sağ tıklayın ve ardından **yeni etki alanı türü tanımlayıcısı Ekle**' ye tıklayın.
 
     1. **ExampleElement** düğümünü genişletin ve **özel tür tanımlayıcısı (etki alanı türü tanımlayıcısı)** düğümünü seçin.
 
-    2. Etki alanı türü tanımlayıcısının **Özellikler** penceresinde, **özel kodlamalı** ' i **true**olarak ayarlayın.
+    2. Etki alanı türü tanımlayıcısının **Özellikler** penceresinde, **özel kodlamalı** ' i **true** olarak ayarlayın.
 
 4. **DSL Gezgini**' nde **XML serileştirme davranışı** düğümünü seçin.
 
-    1. **Özellikler** penceresinde, **Özel gönderi yükleme** ' yi **true**olarak ayarlayın.
+    1. **Özellikler** penceresinde, **Özel gönderi yükleme** ' yi **true** olarak ayarlayın.
 
 ## <a name="transform-templates"></a>Dönüştürme şablonları
 
@@ -724,7 +726,7 @@ Sonraki adım, [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_s
 
 3. **Çözüm Gezgini**, test. trackingPropertyDsl dosyasına çift tıklayarak tasarımcı içinde açın ve tasarım yüzeyine tıklayın.
 
-    Diyagramın **Özellikler** penceresinde, **varsayılan ad alanı** özelliği **defaultnamespace**ve **özel öğeler** özelliği **0/0**olduğunu fark edersiniz.
+    Diyagramın **Özellikler** penceresinde, **varsayılan ad alanı** özelliği **defaultnamespace** ve **özel öğeler** özelliği **0/0** olduğunu fark edersiniz.
 
 4. **Araç kutusundan** bir **ExampleElement** öğesini Diyagram yüzeyine sürükleyin.
 
@@ -734,11 +736,11 @@ Sonraki adım, [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_s
 
 6. **Özellikler** penceresinde, **öğe ad alanı**' na sağ tıklayın ve ardından **Sıfırla**' ya tıklayın.
 
-    Özelliğin değeri **DefaultNamespace**olarak değiştirilir ve değer normal bir yazı tipinde gösterilir.
+    Özelliğin değeri **DefaultNamespace** olarak değiştirilir ve değer normal bir yazı tipinde gösterilir.
 
     **Öğe ad alanını** yeniden sağ tıklatın. Özelliği şu anda izleme durumunda olduğundan, **Reset** komutu artık devre dışı bırakıldı.
 
-7. **Araç kutusundan** başka bir **ExampleElement öğesini** Diyagram yüzeyine sürükleyin ve **öğe ad alanını** **OtherNamespace**olarak değiştirin.
+7. **Araç kutusundan** başka bir **ExampleElement öğesini** Diyagram yüzeyine sürükleyin ve **öğe ad alanını** **OtherNamespace** olarak değiştirin.
 
 8. Tasarım yüzeyine tıklayın.
 
@@ -746,7 +748,7 @@ Sonraki adım, [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_s
 
 9. **DefaultNamespace** öğesinden **NewNamespace**'e diyagramın **varsayılan ad alanını** değiştirin.
 
-     İlk öğenin **ad** alanı **varsayılan ad alanı** özelliğini izler, ancak Ikinci öğenin **ad alanı** **diğer**ad alanının kullanıcı tarafından güncelleştirilmiş değerini korur.
+     İlk öğenin **ad** alanı **varsayılan ad alanı** özelliğini izler, ancak Ikinci öğenin **ad alanı** **diğer** ad alanının kullanıcı tarafından güncelleştirilmiş değerini korur.
 
 10. Çözümü kaydedin ve deneysel derlemeyi kapatın.
 

@@ -1,5 +1,7 @@
 ---
 title: Modelleme SDK 'Sı için API başvurusu
+description: Visual Studio görselleştirme ve modelleme SDK 'sının, etki alanına özgü dillerinizin (DSLs) araçlarınızın oluşturulduğu platformu nasıl sağladığını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0e4be65a94892aa87dbc7f146ce3671336a37558
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 721527b71e12b2c6143fa952d663cccc2786b34f
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76113739"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361085"
 ---
 # <a name="api-reference-for-modeling-sdk-for-visual-studio"></a>Visual Studio için Modelleme SDK'sı için API Başvurusu
 
@@ -20,7 +22,7 @@ Visual Studio görselleştirme ve modelleme SDK 'Sı, etki alanına özgü dille
 
 Bu bölüm, "Microsoft. VisualStudio. Modellendirme" ile başlayan adlara sahip ad alanları için başvuru malzemeleri içerir.
 
-|Ad Alanı|Content|
+|Ad Alanı|İçerik|
 |-|-|
 |<xref:Microsoft.VisualStudio.Modeling?displayProperty=fullName>|Bir DSL içinde tanımladığınız tüm etki alanı sınıflarının temel sınıfı olan ModelElement gibi sınıflar.|
 |<xref:Microsoft.VisualStudio.Modeling.Design?displayProperty=fullName>|DSL tanımının bir kısmını oluşturan sınıflar.|

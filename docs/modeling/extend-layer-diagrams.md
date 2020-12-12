@@ -1,5 +1,7 @@
 ---
 title: Bağımlılık diyagramlarını genişletme
+description: Bağımlılık diyagramları oluşturmak ve güncelleştirmek için nasıl kod yazabilir ve Visual Studio 'daki bağımlılık diyagramlarına karşı program kodunuzun yapısını nasıl doğrulayabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 305c562c7600dc6955ce0307db92f4e257fc1c21
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d78b7005875f0544354c845cd27d187bdbf40d6d
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "92298429"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361631"
 ---
 # <a name="extend-dependency-diagrams"></a>Bağımlılık diyagramlarını genişletme
 

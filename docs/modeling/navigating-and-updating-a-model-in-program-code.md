@@ -1,5 +1,7 @@
 ---
 title: Program Kodunda Modeli Gezinme ve Güncelleştirme
+description: Model öğeleri oluşturmak ve silmek, özelliklerini ayarlamak ve öğeler arasında bağlantı oluşturmak ve silmek için nasıl kod yazabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 521ad703b92133f56d38e061123bf13db13d6375
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fb7c78351ccd03247d458ca403c81d379ec18d29
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75566182"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362216"
 ---
 # <a name="navigate-and-update-a-model-in-program-code"></a>Program Kodunda Modelde Gezinme ve Modeli Güncelleştirme
 
@@ -70,7 +72,7 @@ Model öğeleri oluşturmak ve silmek, özelliklerini ayarlamak ve öğeler aras
 
  `&& p.Parents.All(parent => parent.Children.Contains(p));`
 
- **ElementLinks**. İlişki Ayrıca, etki alanı ilişki türünün bir örneği olan *bağlantı*adlı model öğesiyle temsil edilir. Bağlantının her zaman bir kaynak öğesi ve bir hedef öğesi vardır. Kaynak öğe ve hedef öğe aynı olabilir.
+ **ElementLinks**. İlişki Ayrıca, etki alanı ilişki türünün bir örneği olan *bağlantı* adlı model öğesiyle temsil edilir. Bağlantının her zaman bir kaynak öğesi ve bir hedef öğesi vardır. Kaynak öğe ve hedef öğe aynı olabilir.
 
  Bir bağlantıya ve özelliklerine erişebilirsiniz:
 
@@ -288,7 +290,7 @@ Bazı durumlarda, silme işlemi veya öğe üzerinde ya da yayma tarafından sil
 ## <a name="locks"></a><a name="locks"></a> Kaynaktaki
  Değişiklikleriniz bir kilit ile engellenebilir. Kilitler tek tek öğeler üzerinde, bölümlerde ve depoda ayarlanabilir. Bu düzeylerin herhangi birinde, yapmak istediğiniz değişiklik türünü önleyen bir kilit varsa, bunu denediğinizde bir özel durum oluşturulabilir. Kilitleri öğesi kullanarak ayarlanmış olup olmadığını keşfedebilirsiniz. Ad alanında tanımlanan genişletme yöntemi olan Getkilitler () <xref:Microsoft.VisualStudio.Modeling.Immutability> .
 
- Daha fazla bilgi için bkz. [salt okuma kesimleri oluşturmak Için kilitleme Ilkesi tanımlama](../modeling/defining-a-locking-policy-to-create-read-only-segments.md).
+ Daha fazla bilgi için bkz. [Read-Only segmentleri oluşturmak Için kilitleme Ilkesi tanımlama](../modeling/defining-a-locking-policy-to-create-read-only-segments.md).
 
 ## <a name="copy-and-paste"></a><a name="copy"></a> Kopyala ve Yapıştır
  Öğeleri veya öğe gruplarını bir öğesine kopyalayabilirsiniz <xref:System.Windows.Forms.IDataObject> :
@@ -381,7 +383,7 @@ FamilyTreeDiagram diagram =
 
  `connector.FromShape, connector.ToShape`
 
- Birçok şekil Birleşik siteler; Bunlar bir üst şekilden ve alt öğelerin bir veya daha fazla katmanlarından oluşur. Başka bir şekle göre konumlandırılmış şekillerin *alt öğesi*olduğu söylenir. Üst Şekil taşındığında, alt öğeler onunla birlikte taşınır.
+ Birçok şekil Birleşik siteler; Bunlar bir üst şekilden ve alt öğelerin bir veya daha fazla katmanlarından oluşur. Başka bir şekle göre konumlandırılmış şekillerin *alt öğesi* olduğu söylenir. Üst Şekil taşındığında, alt öğeler onunla birlikte taşınır.
 
  *Göreli alt öğeler* , üst şeklin sınırlayıcı kutusunun dışında görünebilir. *Iç Içe yerleştirilmiş* alt öğeler tamamen üst öğenin sınırları içinde görünür.
 

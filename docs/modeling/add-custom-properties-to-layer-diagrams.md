@@ -1,5 +1,7 @@
 ---
 title: Bağımlılık diyagramlarına özel özellikler ekleme
+description: Bağımlılık diyagramları için uzantı kodu yazdığınızda bir bağımlılık diyagramında herhangi bir öğeyle değerleri nasıl depolayabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3c68d8a75ca8203a790684506ffd44b3d890648a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d3073a42faf0dcc6fbf586847382ba3a83d88ed4
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85546931"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97360773"
 ---
 # <a name="add-custom-properties-to-dependency-diagrams"></a>Bağımlılık diyagramlarına özel özellikler ekleme
 
@@ -31,7 +33,7 @@ Yalnızca kodunuzun bir bağımlılık diyagramında herhangi bir öğeye değer
 > [!IMPORTANT]
 > Özellikleri açmak için, katman özelliklerinin görünmesini istediğiniz her bilgisayarda aşağıdaki değişikliği yapın:
 >
-> 1. **Yönetici olarak çalıştır**'ı kullanarak not defteri 'ni çalıştırın. *%ProgramFiles%\Microsoft Visual Studio [Version] \Common7\IDE\Extensions\Microsoft\Architecture Tools\ExtensibilityRuntime\extension.vsixmanifest*öğesini açın.
+> 1. **Yönetici olarak çalıştır**'ı kullanarak not defteri 'ni çalıştırın. *%ProgramFiles%\Microsoft Visual Studio [Version] \Common7\IDE\Extensions\Microsoft\Architecture Tools\ExtensibilityRuntime\extension.vsixmanifest* öğesini açın.
 > 2. **İçerik** öğesinin içinde şunu ekleyin:
 >
 >     ```xml

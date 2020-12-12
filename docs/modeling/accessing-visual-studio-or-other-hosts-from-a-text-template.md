@@ -1,5 +1,7 @@
 ---
 title: Metin Şablonundan Visual Studio'ya veya diğer Ana Bilgisayarlara Erişme
+description: Bir şablonu yürüten ana bilgisayar tarafından açığa çıkarılan bir metin şablonunda yöntemleri ve özellikleri nasıl kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -8,12 +10,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 068de3c14240bc7e13be0e2e564c2c4e6034f987
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4c0f19f96ee5f6879ccc3328c29d0e1fa1d2a6d0
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85531423"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97362255"
 ---
 # <a name="access-visual-studio-or-other-hosts-from-a-text-template"></a>Metin şablonundan Visual Studio 'Ya veya diğer konaklara erişme
 
@@ -44,7 +46,7 @@ Content of myFile is:
 
 ### <a name="display-error-messages"></a>Hata Iletilerini görüntüle
 
-Bu örnek, şablonu dönüştürdüğünüzde iletileri günlüğe kaydeder. Konak Visual Studio ise, hatalar **hata listesi**eklenir.
+Bu örnek, şablonu dönüştürdüğünüzde iletileri günlüğe kaydeder. Konak Visual Studio ise, hatalar **hata listesi** eklenir.
 
 ```csharp
 <#@ template hostspecific="true" language="C#" #>

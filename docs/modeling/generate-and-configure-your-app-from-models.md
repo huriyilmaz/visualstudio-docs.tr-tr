@@ -1,5 +1,7 @@
 ---
 title: Uygulamanızı modeller aracılığıyla oluşturma ve yapılandırma
+description: Bir modelin ne şekilde temsil ettiğini ve bir modelden uygulamanızın parçalarını nasıl oluşturabileceğiniz veya yapılandırabileceğiniz hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 author: JoshuaPartlow
@@ -7,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8ea3fe0027827396a49eec4c6b245a9ea59652b7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 25a0b83d3ac7be95c42ca0c4e53a188569bb5770
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76114892"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361878"
 ---
 # <a name="generate-and-configure-your-app-from-models"></a>Uygulamanızı modeller aracılığıyla oluşturma ve yapılandırma
 Bir modelden uygulamanızın parçalarını oluşturabilir veya yapılandırabilirsiniz.
@@ -20,7 +22,7 @@ Bir modelden uygulamanızın parçalarını oluşturabilir veya yapılandırabil
  Model, gereksinimleri doğrudan koddan daha fazla temsil eder. Uygulamanın davranışını doğrudan modelden türeterek, kodu güncelleştirerek değiştirilen gereksinimlere çok daha hızlı ve güvenilir bir şekilde yanıt verebilirsiniz. Türetmenin ayarlanması için bazı ilk işler gerekli olsa da, gereksinimlerde değişiklikler veya ürünün çeşitli türevlerini yapmayı düşünüyorsanız bu yatırım döndürülür.
 
 ## <a name="generating-the-code-of-your-application-from-a-model"></a>Bir modelden uygulamanızın kodunu oluşturma
- Kod oluşturmanın en kolay yolu, metin şablonlarını kullanmaktır. Aynı Visual Studio çözümünde, modeli tutabilmeniz için kod oluşturabilirsiniz. Daha fazla bilgi için bkz.
+ Kod oluşturmanın en kolay yolu, metin şablonlarını kullanmaktır. Aynı Visual Studio çözümünde, modeli tutabilmeniz için kod oluşturabilirsiniz. Daha fazla bilgi için bkz:
 
 - [T4 Metin Şablonları Kullanarak Tasarım Zamanı Kodu Oluşturma](../modeling/design-time-code-generation-by-using-t4-text-templates.md)
 
@@ -35,7 +37,7 @@ Bir modelden uygulamanızın parçalarını oluşturabilir veya yapılandırabil
   Ancak, var olan bir uygulamayla başlatırsanız, model tarafından yönetilen farklı davranışları birbirinden bağımsız olarak farklılaştırabilmeleri için ayırmak üzere çok sayıda yeniden düzenleme gerektiğini fark edebilirsiniz. Projenizin maliyetini tahmin ettiğinizde uygulamanın bu yönünü değerlendirmenizi öneririz.
 
 ## <a name="configuring-your-application-from-a-model"></a>Uygulamanızı bir modelden yapılandırma
- Çalışma zamanında uygulamanızın davranışını değiştirmek istiyorsanız, uygulama derlenmesinden önce kaynak kodu oluşturan kod oluşturmayı kullanamazsınız. Bunun yerine, modeli okumak ve davranışını uygun şekilde değiştirmek için uygulamanızı tasarlayabiliyor olabilirsiniz. Daha fazla bilgi için bkz.
+ Çalışma zamanında uygulamanızın davranışını değiştirmek istiyorsanız, uygulama derlenmesinden önce kaynak kodu oluşturan kod oluşturmayı kullanamazsınız. Bunun yerine, modeli okumak ve davranışını uygun şekilde değiştirmek için uygulamanızı tasarlayabiliyor olabilirsiniz. Daha fazla bilgi için bkz:
 
 - [Nasıl yapılır: Program Kodunda Dosyadan Model Açma](../modeling/how-to-open-a-model-from-file-in-program-code.md)
 

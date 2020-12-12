@@ -1,5 +1,7 @@
 ---
 title: Diyagramları görüntü olarak dışarı aktarma
+description: Modelleme diyagramlarını, Visual Studio 'nun aynı sürümünü kullanmayan kişilerle paylaşabilmeniz için salt okuma biçimlerinde kaydedebileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2e433e47d04a2beb1521aba65be664f7c7efd44f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 12e0036377ed5b67e092ff0cf4588acc39c23525
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547608"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361644"
 ---
 # <a name="export-diagrams-as-images"></a>Diyagramları görüntü olarak dışarı aktarma
 

@@ -1,5 +1,7 @@
 ---
 title: Uygulamalarınızda hata ayıklamak için kod eşlemelerini kullanma
+description: Büyük kod tabanlarında, bilmediğiniz kodda veya eski kodda kaybolmadığınız önlemenize yardımcı olması için kod eşlemelerini nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 09/28/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +18,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e01857878f927c619529d3bbfc63728f84f0b81d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7af24dbbb510fb1d5c9c62b40d5986ea5c74d35b
+ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75594116"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97361657"
 ---
 # <a name="use-code-maps-to-debug-your-applications"></a>Uygulamalarınızda hata ayıklamak için kod eşlemelerini kullanma
 
@@ -58,7 +60,7 @@ Kod eşlemeleriyle çalışırken kullanabileceğiniz komutların ve eylemlerin 
  ![Kod Haritası &#45; araç ipuçlarını gösterme](../modeling/media/codemapstoryboardpaint4.png)
 
 ## <a name="navigate-and-examine-code-from-the-map"></a>Eşlemeden koda gitme ve kodu inceleme
- Her bir alanın kod tanımını görmek için, haritadaki alana çift tıklayın veya alanı seçip **F12**tuşuna basın. Yeşil ok eşlemedeki öğeler arasında hareket eder. Ayrıca kod düzenleyicisindeki imleciniz de otomatik olarak hareket eder.
+ Her bir alanın kod tanımını görmek için, haritadaki alana çift tıklayın veya alanı seçip **F12** tuşuna basın. Yeşil ok eşlemedeki öğeler arasında hareket eder. Ayrıca kod düzenleyicisindeki imleciniz de otomatik olarak hareket eder.
 
  ![Kod eşlemesi &#45; alanı tanımını ıncele](../modeling/media/codemapstoryboardpaint5.png)
 
@@ -82,11 +84,11 @@ Kod eşlemeleriyle çalışırken kullanabileceğiniz komutların ve eylemlerin 
  ![Kod Haritası &#45; düzeni değiştirme](../modeling/media/codemapstoryboardpaint7a.png)
 
 > [!TIP]
-> Varsayılan olarak, **artımlı düzen** açıktır. Yeni öğeler eklediğinizde, bu eşlemeyi mümkün olduğunca az yeniden düzenler. Her yeni öğe eklediğinizde eşlemenin tamamını yeniden düzenlemek için, **artımlı düzeni**kapatın.
+> Varsayılan olarak, **artımlı düzen** açıktır. Yeni öğeler eklediğinizde, bu eşlemeyi mümkün olduğunca az yeniden düzenler. Her yeni öğe eklediğinizde eşlemenin tamamını yeniden düzenlemek için, **artımlı düzeni** kapatın.
 
  ![Kod Haritası &#45; düzeni değiştirme](../modeling/media/codemapstoryboardpaint7.png)
 
- Bu yöntemleri inceleyelim. Haritada **PaintCanvas yöntemine** yöntemine çift tıklayın veya bu yöntemi seçin ve **F12**tuşuna basın. Bu yöntemin boş listeler oluşturduğunu ve bu şekilde olduğunu öğrenirsiniz `history` `paintObjects` .
+ Bu yöntemleri inceleyelim. Haritada **PaintCanvas yöntemine** yöntemine çift tıklayın veya bu yöntemi seçin ve **F12** tuşuna basın. Bu yöntemin boş listeler oluşturduğunu ve bu şekilde olduğunu öğrenirsiniz `history` `paintObjects` .
 
  ![Kod eşlemesi &#45; yöntemi tanımını Inceleyin](../modeling/media/codemapstoryboardpaint8.png)
 
@@ -131,7 +133,7 @@ Kod eşlemeleriyle çalışırken kullanabileceğiniz komutların ve eylemlerin 
 
  ![Kod eşlemesi, eksik yöntem çağrısıyla güncelleştirme haritasını &#45;](../modeling/media/codemapstoryboardpaint16.png)
 
- Haritanız artık **geri alma** ve yeniden **çizmeyi**arasında bir bağlantı gösterir.
+ Haritanız artık **geri alma** ve yeniden **çizmeyi** arasında bir bağlantı gösterir.
 
  ![Kod eşlemesi &#45; metot çağrısıyla Haritayı güncelleştirmiş](../modeling/media/codemapstoryboardpaint17.png)
 
