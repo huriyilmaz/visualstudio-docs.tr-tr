@@ -1,6 +1,7 @@
 ---
 title: C++ erişim ihlalinde hata ayıklama | Microsoft Docs
-ms.custom: seodec18
+description: Birden fazla işaretçi aday olduğunda erişim ihlaline sorun giderme ipuçlarına bakın. Visual Studio 'nun son sürümleri errant işaretçisini adlandırın.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 02/05/2019
 ms.topic: how-to
 f1_keywords:
@@ -19,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 803f81d1a26438c2134349a85369d341353e17cf
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b0fb7e6f5ae71cf336f9fe206bc7b0208566b615
+ms.sourcegitcommit: 40d758f779d42c66cb02ae7face8a62763a8662b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350426"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97398577"
 ---
 # <a name="how-can-i-debug-a-c-access-violation"></a>C++ erişim Ihlalinde nasıl hata ayıklayabilirim?
 
@@ -80,4 +81,4 @@ Bu kodu Visual Studio 2015 güncelleştirme 1 ' de çalıştırırsanız, aşağ
 İşaretçinin erişim ihlaline neden neden olduğunu belirleyemediğiniz takdirde, soruna neden olan işaretçinin doğru şekilde atandığından emin olmak için kodu izleyin.  Parametre olarak geçirildiyse, doğru şekilde geçirildiğinden ve yanlışlıkla [basit bir kopya](https://stackoverflow.com/questions/184710/what-is-the-difference-between-a-deep-copy-and-a-shallow-copy)oluşturmadığınızdan emin olun. Daha sonra, söz konusu işaretçinin programın başka bir yerinde değiştirilmediğinden emin olmak için söz konusu işaretçi için bir veri kesme noktası oluşturarak, bu değerlerin programda bir yerde yanlışlıkla değiştirilmediğini doğrulayın. Veri kesme noktaları hakkında daha fazla bilgi için [kesme noktaları kullanma](../debugger/using-breakpoints.md)içindeki veri kesme noktası bölümüne bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Yerel Kod Hata Ayıklaması SSS](../debugger/debugging-native-code-faqs.md)
+- [Yerel kod SSS hatalarını ayıklama](../debugger/debugging-native-code-faqs.md)

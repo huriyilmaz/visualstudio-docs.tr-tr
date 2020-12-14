@@ -1,6 +1,7 @@
 ---
 title: Yanlış parametre değerini geçen kişileri öğrenin | Microsoft Docs
-ms.custom: seodec18
+Description: İşlevinizi hangi kodun çağırmasının ve yanlış parametre değeri geçirdiklerinizin olduğunu fark edebilirsiniz. Bunu yapmak için koşullu kesme noktası kullanmayı öğrenin.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -22,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7bd6aaa912a384acbb41c42bfa4785eda52ae78a
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: de87da994dfab59d5df618671737003beea9678b
+ms.sourcegitcommit: 40d758f779d42c66cb02ae7face8a62763a8662b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89599879"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97398317"
 ---
 # <a name="how-can-i-find-out-who-is-passing-a-wrong-parameter-value"></a>Kimin Yanlış Parametre Değeri Geçirdiğini Nasıl Bulabilirim?
 ## <a name="problem-description"></a>Sorun Açıklaması
@@ -52,6 +53,6 @@ ms.locfileid: "89599879"
 7. Çağırma işlevini bulmak ve kaynak koduna gitmek için çağrı yığını penceresini kullanın. Daha fazla bilgi için bkz. [nasıl yapılır: çağrı yığını penceresini kullanma](../debugger/how-to-use-the-call-stack-window.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Yerel Kod Hata Ayıklaması SSS](../debugger/debugging-native-code-faqs.md)
+- [Yerel kod SSS hatalarını ayıklama](../debugger/debugging-native-code-faqs.md)
 - [Kesme noktaları](/previous-versions/ktf38f66(v=vs.100))
 - [Yerel Kodda Hata Ayıklama](../debugger/debugging-native-code.md)

@@ -1,6 +1,7 @@
 ---
 title: Ön plan uygulamasında hata ayıklarken hata ayıklayıcı pencerelerini kullanma | Microsoft Docs
-ms.custom: seodec18
+Description: Ön planda kalması gereken bir programda hata ayıklaması yapıyorsanız, arka planda yerleştirmekten kaçınmak için uzaktan hata ayıklamayı kullanın.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -22,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1c74ca2c01f55778930e2cab1ccf38011bba868d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f39f7dfbd463c48675f4b8c98612dfab3f33de3c
+ms.sourcegitcommit: 40d758f779d42c66cb02ae7face8a62763a8662b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350335"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97398746"
 ---
 # <a name="how-can-i-use-debugger-windows-while-debugging-a-foreground-program"></a>Ön Plan Programında Hata Ayıklarken Hata Ayıklayıcı Penceresini Nasıl Kullanabilirim?
 ## <a name="problem-description"></a>Sorun Açıklaması
@@ -37,5 +38,5 @@ ms.locfileid: "85350335"
  İkinci bir bilgisayarınız varsa, uzaktan hata ayıklamayı kullanabilirsiniz. İki bilgisayarlı bir kurulumla, ana bilgisayarda hata ayıklayıcıyı çalıştırırken uzak bilgisayar üzerinde ekran boyamayı izleyebilirsiniz. Uzaktan hata ayıklama hakkında daha fazla bilgi için bkz. [Uzaktan hata ayıklama](../debugger/remote-debugging.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Yerel Kod Hata Ayıklaması SSS](../debugger/debugging-native-code-faqs.md)
+- [Yerel kod SSS hatalarını ayıklama](../debugger/debugging-native-code-faqs.md)
 - [Yerel Kodda Hata Ayıklama](../debugger/debugging-native-code.md)

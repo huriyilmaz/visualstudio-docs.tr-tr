@@ -1,5 +1,7 @@
 ---
 title: Denetim Iletileri görünümü | Microsoft Docs
+Description: Iletiler görünümü penceresinde gösterilen Windows ve ileti türlerini ve ileti çizgilerinin görüntüleme biçimini seçebilirsiniz. Ayrıntılar için bu makaleye bakın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 917fc2af5ab09544201a6aa35c34611a89d7a277
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 58c99f0db1686a9f1dd8dcb13949eb6fe47f3fdc
+ms.sourcegitcommit: 40d758f779d42c66cb02ae7face8a62763a8662b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90850975"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97398642"
 ---
 # <a name="how-to-control-messages-view"></a>Nasıl yapılır: İletiler Görünümünü Denetleme
 Spy + + ile bir [Iletiler görünümü](../debugger/messages-view.md) penceresinin içeriği üzerinde önemli bir denetiminiz vardır. Her zaman iletileri görüntülemeyi [başlatabilir ve durdurabilirsiniz](../debugger/how-to-start-and-stop-the-message-log-display.md) ve şunları belirtebilirsiniz:

@@ -1,6 +1,7 @@
 ---
 title: Düzenle ve devam et ile kesme modunda düzenlemeleri uygulama | Microsoft Docs
-ms.custom: seodec18
+Description: Kesme modundayken Visual Basic kodunuzu düzenlemek için Düzenle ve devam et ' i kullanma bölümüne bakın. Kesme moduna girmek için çeşitli yollar vardır.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -23,12 +24,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: acdd5b85c77b177dfb5f6d8129594967e902337c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7b8e6ef8c41fbaf5aafa6b1fc9ef4216c773e75e
+ms.sourcegitcommit: 40d758f779d42c66cb02ae7face8a62763a8662b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350310"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97398694"
 ---
 # <a name="how-to-apply-edits-in-break-mode-with-edit-and-continue-visual-basic"></a>Nasıl yapılır: Düzenle ve devam et ile kesme modunda düzenleme uygulama (Visual Basic)
 Kodunuzu kesme modunda düzenlemek için Düzenle ve devam et ' i kullanabilir ve sonra yürütmeyi durdurup yeniden başlatmadan devam edebilirsiniz.
@@ -47,7 +48,7 @@ Hata ayıklama sırasında Düzenle ve devam et ile ilgili sınırlamalar için 
 
          -veya-
 
-    - Bir özel durum oluştuğunda, **özel durum Yardımcısı**üzerinde **düzenlemesi etkinleştir** ' i seçin.
+    - Bir özel durum oluştuğunda, **özel durum Yardımcısı** üzerinde **düzenlemesi etkinleştir** ' i seçin.
 
 2. İstediğiniz ve desteklenen kod değişikliklerini yapın.
 

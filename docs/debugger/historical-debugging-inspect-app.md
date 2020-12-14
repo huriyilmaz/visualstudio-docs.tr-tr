@@ -1,5 +1,7 @@
 ---
 title: Geçmiş hata ayıklama ile uygulamanızı inceleyin | Microsoft Docs
+description: Bir C# konsol uygulamasında bir hatayı izlemek için IntelliTrace geçmiş hata ayıklama kullanan bir araştırmayı izleyin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 629b5d93-39b2-430a-b8ba-d2a47fdf2584
@@ -8,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: efabc8cd185daed4f018e3e4209e391b5bc39f44
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d51327f67429071d08f6dfd02c0ec0a1fc55822f
+ms.sourcegitcommit: 40d758f779d42c66cb02ae7face8a62763a8662b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350452"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97398707"
 ---
 # <a name="inspect-your-app-with-intellitrace-historical-debugging-in-visual-studio-c-visual-basic-c"></a>Visual Studio 'da IntelliTrace geçmiş hata ayıklama ile uygulamanızı İnceleme (C#, Visual Basic, C++)
 
@@ -51,7 +53,7 @@ private static int AddInt(int add)
 }
 ```
 
-Çağırma sonrasında beklenen değerin 20 olduğunu varsayacağız `resultInt` `AddAll()` (20 kat arttırılmasının sonucu `testInt` ). (Ayrıca, içinde hatayı göremedik `AddInt()` ). Ancak sonuç aslında 44 ' dir. Hatayı 10 kez adımla nasıl bulabiliriz `AddAll()` ? Hatayı daha hızlı ve daha kolay bulmak için geçmiş hata ayıklamayı kullanabiliriz. Bunu yapmak için:
+Çağırma sonrasında beklenen değerin 20 olduğunu varsayacağız `resultInt` `AddAll()` (20 kat arttırılmasının sonucu `testInt` ). (Ayrıca, içinde hatayı göremedik `AddInt()` ). Ancak sonuç aslında 44 ' dir. Hatayı 10 kez adımla nasıl bulabiliriz `AddAll()` ? Hatayı daha hızlı ve daha kolay bulmak için geçmiş hata ayıklamayı kullanabiliriz. Aşağıdaki adımları uygulayın:
 
 1. **Araçlar > seçenekler > ıntellitrace > Genel**, IntelliTrace 'in etkinleştirildiğinden emin olun ve **IntelliTrace olayları ve çağrı bilgileri**' ni seçin. Bu seçeneği seçmezseniz, gezinti Cilt payının (aşağıda açıklandığı gibi) görümeyeceksiniz.
 
@@ -71,7 +73,7 @@ private static int AddInt(int add)
 
     ![geçmiş hata ayıklama modundaki kod penceresi](../debugger/media/historicaldebuggingback.png "HistoricalDebuggingBack")
 
-6. Şimdi, `AddAll()` Gezinti cilt payındaki yönteme (**F11**veya **Step into** düğmesine) erişebilirsiniz. İleri (**F10**) veya gezinti cilt payındaki **sonraki çağrıya git** . Pembe çizgi artık `j = AddInt(j);` satır üzerinde. Bu durumda **F10** , sonraki kod satırına ilerlemez. Bunun yerine, sonraki işlev çağrısının adımları vardır. Geçmiş hata ayıklama çağrıdan çağrıya gider ve bir işlev çağrısı içermeyen kod satırlarını atlar.
+6. Şimdi, `AddAll()` Gezinti cilt payındaki yönteme (**F11** veya **Step into** düğmesine) erişebilirsiniz. İleri (**F10**) veya gezinti cilt payındaki **sonraki çağrıya git** . Pembe çizgi artık `j = AddInt(j);` satır üzerinde. Bu durumda **F10** , sonraki kod satırına ilerlemez. Bunun yerine, sonraki işlev çağrısının adımları vardır. Geçmiş hata ayıklama çağrıdan çağrıya gider ve bir işlev çağrısı içermeyen kod satırlarını atlar.
 
 7. Şimdi yöntemine adımlayın `AddInt()` . Hatayı Bu kodda hemen görmeniz gerekir.
 

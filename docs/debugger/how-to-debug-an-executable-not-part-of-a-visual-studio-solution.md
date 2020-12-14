@@ -1,7 +1,8 @@
 ---
 title: Visual Studio çözümünün parçası olmayan bir uygulamada hata ayıklama
 titleSuffix: ''
-ms.custom: ''
+Description: Visual Studio çözümünün bir parçası olmayan bir uygulamada hata ayıklamayı öğrenin. Visual Studio hata ayıklayıcısını iliştirebilirsiniz.
+ms.custom: SEO-VS-2020
 ms.date: 02/21/2020
 ms.topic: how-to
 dev_langs:
@@ -20,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c8cb71acb9c1c332f269f77129fa2d11a9a874f8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fd4d5497a4c29502fe4d7e4825b1767991c79298
+ms.sourcegitcommit: 40d758f779d42c66cb02ae7face8a62763a8662b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350153"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97398668"
 ---
 # <a name="debug-an-app-that-isnt-part-of-a-visual-studio-solution-c-c-visual-basic-f"></a>Visual Studio çözümünün parçası olmayan bir uygulamada hata ayıklama (C++, C#, Visual Basic, F #)
 
@@ -56,7 +57,7 @@ Visual Studio çözümünün parçası olmayan bir uygulamada (*. exe* dosyası)
 
    Dosya, yeni, geçici bir Visual Studio çözümünde görüntülenir.
 
-1. **Hata ayıklama menüsünden hata** **ayıklamayı Başlat**gibi bir yürütme komutu seçerek uygulamada hata ayıklamayı başlatın.
+1. **Hata ayıklama menüsünden hata** **ayıklamayı Başlat** gibi bir yürütme komutu seçerek uygulamada hata ayıklamayı başlatın.
 
 ### <a name="to-import-an-app-into-an-existing-visual-studio-solution"></a>Bir uygulamayı var olan bir Visual Studio çözümüne aktarmak için
 
@@ -68,9 +69,9 @@ Visual Studio çözümünün parçası olmayan bir uygulamada (*. exe* dosyası)
 
    Dosya, geçerli çözüm altında yeni bir proje olarak görünür.
 
-1. Yeni dosya seçili **olduğunda hata ayıklama menüsünden hata** **ayıklamayı Başlat**gibi bir yürütme komutu seçerek uygulamada hata ayıklamayı başlatın.
+1. Yeni dosya seçili **olduğunda hata ayıklama menüsünden hata** **ayıklamayı Başlat** gibi bir yürütme komutu seçerek uygulamada hata ayıklamayı başlatın.
 
 ### <a name="see-also"></a>Ayrıca bkz.
-- [Hata ayıklayıcı ayarları ve hazırlığı](../debugger/debugger-settings-and-preparation.md)
-- [Hata ayıklayıcı güvenliği](../debugger/debugger-security.md)
+- [Hata ayıklayıcısı ayarları ve hazırlığı](../debugger/debugger-settings-and-preparation.md)
+- [Hata ayıklayıcısı güvenliği](../debugger/debugger-security.md)
 - [DBG dosyaları](/previous-versions/visualstudio/visual-studio-2010/da528y14(v=vs.100))

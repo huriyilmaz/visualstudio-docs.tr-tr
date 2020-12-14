@@ -1,5 +1,7 @@
 ---
 title: Hata ayıklama ASP.NET özel durumları | Microsoft Docs
+Description: Hata ayıklayıcının ASP.NET uygulamanızda işlenmeyen özel durumlar için durması için yapılandırmayı öğrenin. Sistemin sistem dışı kodda gerçekleşmesinden emin olabilirsiniz.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - aspnet
-ms.openlocfilehash: 011094eed88245e3cd83b092a3f1b2e47bc77ae8
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 945e289f3da55c8884f4ec2cd115c65dbe3be237
+ms.sourcegitcommit: 40d758f779d42c66cb02ae7face8a62763a8662b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852158"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97398655"
 ---
 # <a name="how-to-debug-aspnet-exceptions"></a>Nasıl Yapılır: ASP.NET Özel Durumlarında Hata Ayıklama
 Hata ayıklama özel durumları, güçlü bir uygulama geliştirmesinin önemli bir parçasıdır [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] . Özel durumların hata ayıklamasına ilişkin genel bilgiler [hata ayıklayıcı Ile özel durumları yönetmektir](../debugger/managing-exceptions-with-the-debugger.md).
@@ -45,7 +47,7 @@ Hata ayıklama özel durumları, güçlü bir uygulama geliştirmesinin önemli 
 
 ### <a name="to-use-best-practices-for-aspnet-exception-handling"></a>ASP.NET özel durum işleme için en iyi yöntemleri kullanma
 
-- `try ... catch`Kod etrafına blokları, tahmin ettiğiniz ve nasıl işleneceğini bildiğiniz özel durumlar oluşturabilecek şekilde yerleştirin. Örneğin, uygulama bir XML Web hizmetine ya da doğrudan bir SQL Server çağrılar yapıyor, bu kod TRY içinde olmalıdır **... ** oluşabilecek çok sayıda özel durum olduğundan catch blokları.
+- `try ... catch`Kod etrafına blokları, tahmin ettiğiniz ve nasıl işleneceğini bildiğiniz özel durumlar oluşturabilecek şekilde yerleştirin. Örneğin, uygulama bir XML Web hizmetine ya da doğrudan bir SQL Server çağrılar yapıyor, bu kod TRY içinde olmalıdır **...** oluşabilecek çok sayıda özel durum olduğundan catch blokları.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [ASP.NET uygulamalarında hata ayıklama](../debugger/how-to-enable-debugging-for-aspnet-applications.md)

@@ -1,5 +1,7 @@
 ---
 title: ActiveX denetiminde hata ayıklama | Microsoft Docs
+Description: ActiveX denetiminde hata ayıklamayı öğrenin. Proje özellik sayfalarında yapabileceğiniz veya hata ayıklamaya başladığınızda kullanabileceğiniz bir içeren yürütülebilir dosya belirtmeniz gerekir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -24,12 +26,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fc15d42aa2984a7257687eeb051ce754bace9e81
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: a0458fb4981642d3f8386edd4c3605ae7b902a14
+ms.sourcegitcommit: 40d758f779d42c66cb02ae7face8a62763a8662b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852171"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97398681"
 ---
 # <a name="how-to-debug-an-activex-control"></a>Nasıl Yapılır: ActiveX Denetiminde Hata Ayıklama
 
@@ -44,7 +46,7 @@ ActiveX denetimi hata ayıklaması yapmak için denetimin içinde çalışacağ�
 
 2. **Görünüm** menüsünde **Özellik sayfaları**' nı seçin.
 
-3. **Proje özellik sayfaları** iletişim kutusunda, **yapılandırma özellikleri** klasörünü açın ve **hata ayıklama**öğesini seçin.
+3. **Proje özellik sayfaları** iletişim kutusunda, **yapılandırma özellikleri** klasörünü açın ve **hata ayıklama** öğesini seçin.
 
 4. **Hata ayıklama** kategorisi altında, **komut** özelliğini bulun.
 
@@ -52,7 +54,7 @@ ActiveX denetimi hata ayıklaması yapmak için denetimin içinde çalışacağ�
 
 6. Kapsayıcı olarak Internet Explorer 'ı belirtirseniz ve etkin masaüstü kullanıyorsanız, `/new` **komut bağımsız değişkenleri** kutusuna yazın.
 
-7. **Tamam**’a tıklayın.
+7. **Tamam** düğmesine tıklayın.
 
      **Proje özellik sayfaları** iletişim kutusunda bir kapsayıcı belirtmezseniz, hata ayıklamaya başladığınızda kapsayıcıyı belirtebilirsiniz. Hata ayıklamayı başlatmak için bir yürütme komutu seçtiğinizde, [hata ayıklama oturumu Için yürütülebilir Iletişim kutusu](../debugger/executable-for-debugging-session-dialog-box.md) görüntülenir. İletişim kutusunda kapsayıcının yol adını belirtin.
 
@@ -60,6 +62,6 @@ ActiveX denetimi hata ayıklaması yapmak için denetimin içinde çalışacağ�
 
 - [ActiveX denetimleri](/cpp/mfc/activex-controls)
 - [Test kapsayıcısı ile özellikleri ve olayları test etme](/cpp/mfc/testing-properties-and-events-with-test-container)
-- [COM ve ActiveX Hata Ayıklaması](../debugger/com-and-activex-debugging.md)
+- [COM ve ActiveX hata ayıklaması](../debugger/com-and-activex-debugging.md)
 - [Visual Studio'da Hata Ayıklama](../debugger/index.yml)
 - [Hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md)

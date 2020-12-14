@@ -1,5 +1,7 @@
 ---
 title: DLL projesinden hata ayıkla | Microsoft Docs
+Description: Proje özelliklerinde çağıran uygulamayı belirterek, bir DLL projesinin hata ayıklamasını projenin kendisinden başlatabilirsiniz. Ayrıntılar için bu makaleye bakın.
+ms.custom: SEO-VS-2020
 ms.date: 10/10/2018
 ms.topic: how-to
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d1102eb61f6cfda42f6e4e879f5c592c0c064ce0
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 723f35142ec125c016caa3653be450b61fb05d02
+ms.sourcegitcommit: 40d758f779d42c66cb02ae7face8a62763a8662b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852145"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97398565"
 ---
 # <a name="how-to-debug-from-a-dll-project-in-visual-studio-c-c-visual-basic-f"></a>Nasıl yapılır: Visual Studio 'da DLL projesinde hata ayıklama (C#, C++, Visual Basic, F #)
 
@@ -35,11 +37,11 @@ Yerel ve yönetilen DLL projelerinin çağıran uygulamaları belirtmek için fa
 
 ## <a name="specify-a-calling-app-in-a-native-dll-project"></a>Yerel DLL projesinde çağıran uygulama belirtme
 
-1. **Çözüm Gezgini**' de C++ DLL projesini seçin. **Özellikler** simgesini seçin, **alt** + **ENTER**tuşuna basın veya sağ tıklayıp **Özellikler**' i seçin.
+1. **Çözüm Gezgini**' de C++ DLL projesini seçin. **Özellikler** simgesini seçin, **alt** + **ENTER** tuşuna basın veya sağ tıklayıp **Özellikler**' i seçin.
 
-1. ** \<Project> Özellik sayfaları** iletişim kutusunda pencerenin üst kısmındaki **yapılandırma** alanının **hata ayıklama**olarak ayarlandığından emin olun.
+1. **\<Project> Özellik sayfaları** iletişim kutusunda pencerenin üst kısmındaki **yapılandırma** alanının **hata ayıklama** olarak ayarlandığından emin olun.
 
-1. **Yapılandırma özellikleri**  >  **hata ayıklamayı**seçin.
+1. **Yapılandırma özellikleri**  >  **hata ayıklamayı** seçin.
 
 1. **Başlatmak Için hata ayıklayıcı** listesinde, **yerel Windows hata ayıklayıcısı** veya **uzak Windows hata ayıklayıcısı**' nı seçin.
 
@@ -53,11 +55,11 @@ Yerel ve yönetilen DLL projelerinin çağıran uygulamaları belirtmek için fa
 
 ## <a name="specify-a-calling-app-in-a-managed-dll-project"></a>Yönetilen DLL projesinde çağıran uygulama belirtme
 
-1. **Çözüm Gezgini**' de C# veya Visual Basic DLL projesi seçin. **Özellikler** simgesini seçin, **alt** + **ENTER**tuşuna basın veya sağ tıklayıp **Özellikler**' i seçin.
+1. **Çözüm Gezgini**' de C# veya Visual Basic DLL projesi seçin. **Özellikler** simgesini seçin, **alt** + **ENTER** tuşuna basın veya sağ tıklayıp **Özellikler**' i seçin.
 
-1. Pencerenin üst kısmındaki **yapılandırma** alanının **hata ayıklama**olarak ayarlandığından emin olun.
+1. Pencerenin üst kısmındaki **yapılandırma** alanının **hata ayıklama** olarak ayarlandığından emin olun.
 
-1. **Başlangıç eylemi**altında:
+1. **Başlangıç eylemi** altında:
 
    - .NET Framework dll 'Ler için **dış program Başlat**' ı seçin ve çağıran uygulamanın tam yolunu ve adını ekleyin.
 
@@ -69,7 +71,7 @@ Yerel ve yönetilen DLL projelerinin çağıran uygulamaları belirtmek için fa
 
    ![C# hata ayıklama Özellikler penceresi](../debugger/media/dbg-debugging-properties-dll-csharp.png "C# hata ayıklama Özellikler penceresi")
 
-1. **File**  >  Değişiklikleri kaydetmek için**Seçili öğeleri kaydet** veya **CTRL** + **S** dosyalarını kullanın.
+1.   >  Değişiklikleri kaydetmek için **Seçili öğeleri kaydet** veya **CTRL** + **S** dosyalarını kullanın.
 
 ## <a name="debug-from-the-dll-project"></a>DLL projesinden hata ayıkla
 
@@ -77,9 +79,9 @@ Yerel ve yönetilen DLL projelerinin çağıran uygulamaları belirtmek için fa
 
 1. DLL projesine sağ tıklayın ve **Başlangıç projesi olarak ayarla**' yı seçin.
 
-1. **Çözüm yapılandırma** alanının **Hata Ayıkla**olarak ayarlandığından emin olun. **F5**tuşuna basın, yeşil **Başlangıç** okuna tıklayın veya hata ayıklama **Debug**  >  **başlatma hata ayıklaması**' nı seçin.
+1. **Çözüm yapılandırma** alanının **Hata Ayıkla** olarak ayarlandığından emin olun. **F5** tuşuna basın, yeşil **Başlangıç** okuna tıklayın veya hata ayıklama   >  **başlatma hata ayıklaması**' nı seçin.
 
-Hata ayıklama kesme noktalarınız isabet aldıysa, DLL çıkışlarınızın (varsayılan olarak, * \<project> \debug* klasörü) çağıran uygulamanın çağrıldığı konum olduğundan emin olun.
+Hata ayıklama kesme noktalarınız isabet aldıysa, DLL çıkışlarınızın (varsayılan olarak, *\<project> \debug* klasörü) çağıran uygulamanın çağrıldığı konum olduğundan emin olun.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [DLL projelerinde hata ayıklama](../debugger/debugging-dll-projects.md)

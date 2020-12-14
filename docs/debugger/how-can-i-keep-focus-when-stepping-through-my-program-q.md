@@ -1,6 +1,7 @@
 ---
 title: Uygulamamda adımla odağı koruyun | Microsoft Docs
-ms.custom: seodec18
+Description: Bir pencere etkinleştirme sorununa hata ayıkladığınızda programınızın odağı kaybetmesini önlemek için uzaktan hata ayıklamayı kullanın.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -21,12 +22,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d41a1bf5f71624751fc94f4a72f06e6da5c39630
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0d533d524effe5ba055116d926d7cc5ba9632a6b
+ms.sourcegitcommit: 40d758f779d42c66cb02ae7face8a62763a8662b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350387"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97398330"
 ---
 # <a name="how-can-i-keep-focus-when-stepping-through-my-app"></a>Uygulamamda adımlarken odağı nasıl devam edebilirim?
 ## <a name="description"></a>Description
@@ -36,6 +37,6 @@ ms.locfileid: "85350387"
  İkinci bir bilgisayarınız varsa, uzaktan hata ayıklamayı kullanın. Hata ayıklayıcıyı konakta çalıştırırken, programınızı uzak bilgisayarda çalıştırabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: uzak bilgisayar seçme](/previous-versions/visualstudio/visual-studio-2010/w8wtw2f3(v=vs.100)).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Yerel Kod Hata Ayıklaması SSS](../debugger/debugging-native-code-faqs.md)
+- [Yerel kod SSS hatalarını ayıklama](../debugger/debugging-native-code-faqs.md)
 - [Çalıştırma İşlemine İliştirme](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)
 - [Yerel Kodda Hata Ayıklama](../debugger/debugging-native-code.md)
