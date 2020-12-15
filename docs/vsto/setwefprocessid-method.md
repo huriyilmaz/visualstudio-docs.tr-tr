@@ -1,5 +1,7 @@
 ---
 title: SetWefProcessId yöntemi
+description: SetWefProcessId yönteminin, Web uzantıları çerçevesi (WEF) içeriğini çalıştıracak işlem tanımlayıcısını nasıl sağladığını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: reference
 dev_langs:
@@ -10,17 +12,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 13a6748e2e3b66f581a3c72c1f847e0329189e64
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 523279d70215af90ea070ea8272a5221d9947582
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85537338"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524328"
 ---
 # <a name="setwefprocessid-method"></a>SetWefProcessId yöntemi
   Web uzantıları çerçevesi (WEF) içeriğini çalıştıracak işlem tanımlayıcısı sağlar.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```csharp
 HRESULT SetWefProcessId(

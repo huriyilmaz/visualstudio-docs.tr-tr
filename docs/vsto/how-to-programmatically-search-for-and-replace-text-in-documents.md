@@ -1,5 +1,7 @@
 ---
 title: Belgelerde program aracılığıyla metin bulma ve değiştirme
+description: Visual Studio 'Yu kullanarak bir Microsoft Word belgesinde metin arama ve değiştirme hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 18a50d6d4ef52a0c50be0b72b4cab5706da4e2db
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5ad77da419f70a8e513bf152ced41cccdd0474a8
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547049"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524601"
 ---
 # <a name="how-to-programmatically-search-for-and-replace-text-in-documents"></a>Nasıl yapılır: belgelerde metni program aracılığıyla arama ve değiştirme
   <xref:Microsoft.Office.Interop.Word.Find>Nesnesi hem hem de nesnelerinin bir üyesidir <xref:Microsoft.Office.Interop.Word.Selection> <xref:Microsoft.Office.Interop.Word.Range> ve Microsoft Office Word belgelerinde metin aramak için bunlardan birini kullanabilirsiniz. Replace komutu Find komutunun bir uzantısıdır.
@@ -74,7 +76,7 @@ ms.locfileid: "85547049"
     [!code-vb[Trin_VstcoreWordAutomationAddIn#72](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#72)]
     [!code-csharp[Trin_VstcoreWordAutomationAddIn#72](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#72)]
 
-2. <xref:Microsoft.Office.Interop.Word.Range.Find%2A>Nesnesinin özelliğini kullanarak <xref:Microsoft.Office.Interop.Word.Range> , önce var olan biçimlendirme seçeneklerini temizleyin ve ardından **Find beni bul**dizesini arayın.
+2. <xref:Microsoft.Office.Interop.Word.Range.Find%2A>Nesnesinin özelliğini kullanarak <xref:Microsoft.Office.Interop.Word.Range> , önce var olan biçimlendirme seçeneklerini temizleyin ve ardından **Find beni bul** dizesini arayın.
 
     [!code-vb[Trin_VstcoreWordAutomation#73](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#73)]
     [!code-csharp[Trin_VstcoreWordAutomation#73](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#73)]
@@ -97,7 +99,7 @@ ms.locfileid: "85547049"
    [!code-csharp[Trin_VstcoreWordAutomationAddIn#71](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#71)]
 
 ## <a name="search-for-and-replace-text-in-documents"></a>Belgelerde metin ara ve Değiştir
- Aşağıdaki kod, geçerli seçimi arar ve dize **bul** 'un tüm tekrarlarının **bulduğu**dize ile yerini alır.
+ Aşağıdaki kod, geçerli seçimi arar ve dize **bul** 'un tüm tekrarlarının **bulduğu** dize ile yerini alır.
 
 ### <a name="to-search-for-and-replace-text-in-documents"></a>Belgelerde metin aramak ve değiştirmek için
 

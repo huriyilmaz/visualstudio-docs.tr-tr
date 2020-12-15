@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: devre dışı bırakılmış bir VSTO eklentisini yeniden etkinleştirme'
+description: Microsoft Office uygulamasında devre dışı bırakılmış bir VSTO eklentisini yeniden etkinleştirmek için Visual Studio 'Yu nasıl kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 3575e119f4da3ca3050a28243104fb4773089cf3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d03a03494b149a761910ddbdaa1d41592704f969
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85541264"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524481"
 ---
 # <a name="how-to-re-enable-a-vsto-add-in-that-has-been-disabled"></a>Nasıl yapılır: devre dışı bırakılmış bir VSTO eklentisini yeniden etkinleştirme
   Microsoft Office uygulamalar, beklenmedik şekilde davranan VSTO eklentilerini devre dışı bırakabilir. Bir uygulama, hata ayıklamaya çalıştığınızda VSTO eklentisini yüklemezse, uygulama, VSTO eklentisini devre dışı bırakmış veya geçici olarak devre dışı bırakmış olabilir.
@@ -71,7 +73,7 @@ ms.locfileid: "85541264"
 
 6. **Com eklentileri** iletişim kutusunda, devre DıŞı bırakılmış VSTO eklentisinin yanındaki onay kutusunu işaretleyin.
 
-7. **Tamam**’a tıklayın.
+7. **Tamam** düğmesine tıklayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Office çözümleri oluşturma](../vsto/building-office-solutions.md)

@@ -1,5 +1,7 @@
 ---
 title: Outlook 'ta e-posta iletileriyle özel görev bölmelerini görüntüleme
+description: Oluşturulan veya açılan Microsoft Outlook 'taki her bir e-posta iletisiyle özel bir görev bölmesinin benzersiz bir örneğini görüntülemeyi öğrenin.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 00a8eae3f0beea7482c5fd7a1ac1ebd1994b9c35
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: ac14eff05c6f776181c20acde4cff4e2ed7a87b6
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584288"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97522709"
 ---
 # <a name="walkthrough-display-custom-task-panes-with-email-messages-in-outlook"></a>İzlenecek yol: Outlook 'ta e-posta iletileriyle özel görev bölmelerini görüntüleme
   Bu izlenecek yol, oluşturulan veya açılan her bir e-posta iletisiyle özel bir görev bölmesinin benzersiz bir örneğinin nasıl görüntüleneceğini gösterir. Kullanıcılar, her bir e-posta iletisinin şeridinde bir düğme kullanarak özel görev bölmesini görüntüleyebilir veya gizleyebilir.
@@ -63,9 +65,9 @@ ms.locfileid: "91584288"
 
 ### <a name="to-create-a-new-project"></a>Yeni bir proje oluşturmak için
 
-1. **OutlookMailItemTaskPane**adlı bir **Outlook eklenti** projesi oluşturun. **Outlook eklentisi** proje şablonunu kullanın. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
+1. **OutlookMailItemTaskPane** adlı bir **Outlook eklenti** projesi oluşturun. **Outlook eklentisi** proje şablonunu kullanın. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]*ThisAddIn.cs* veya *ThisAddIn. vb* kod dosyasını açar ve **outlookmailıtemtaskpane** projesini **Çözüm Gezgini**ekler.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]*ThisAddIn.cs* veya *ThisAddIn. vb* kod dosyasını açar ve **outlookmailıtemtaskpane** projesini **Çözüm Gezgini** ekler.
 
 ## <a name="design-the-user-interface-of-the-custom-task-pane"></a>Özel görev bölmesinin kullanıcı arabirimini tasarlama
  Özel görev bölmeleri için görsel tasarımcı yoktur, ancak istediğiniz kullanıcı ARABIRIMINI kullanarak bir kullanıcı denetimi tasarlayabilirsiniz. Bu VSTO eklentisinin özel görev bölmesinde bir denetim içeren basit bir UI vardır <xref:System.Windows.Forms.TextBox> . Bu izlenecek yolda daha sonra Kullanıcı denetimini özel görev bölmesine ekleyeceksiniz.
@@ -76,7 +78,7 @@ ms.locfileid: "91584288"
 
 2. **Proje** menüsünde **Kullanıcı denetimi Ekle**' ye tıklayın.
 
-3. **Yeni öğe Ekle** iletişim kutusunda, Kullanıcı denetiminin adını **TaskPaneControl**olarak değiştirin ve ardından **Ekle**' ye tıklayın.
+3. **Yeni öğe Ekle** iletişim kutusunda, Kullanıcı denetiminin adını **TaskPaneControl** olarak değiştirin ve ardından **Ekle**' ye tıklayın.
 
      Kullanıcı denetimi tasarımcıda açılır.
 
@@ -91,19 +93,19 @@ ms.locfileid: "91584288"
 
 2. **Yeni öğe Ekle** Iletişim kutusunda **Şerit (görsel Tasarımcı)** öğesini seçin.
 
-3. Yeni şeridin adını **ManageTaskPaneRibbon**olarak değiştirin ve **Ekle**' ye tıklayın.
+3. Yeni şeridin adını **ManageTaskPaneRibbon** olarak değiştirin ve **Ekle**' ye tıklayın.
 
      *ManageTaskPaneRibbon.cs* veya *ManageTaskPaneRibbon. vb* dosyası Şerit Tasarımcısı 'nda açılır ve varsayılan bir sekme ve grup görüntüler.
 
 4. Şerit tasarımcısında, **grup1**' e tıklayın.
 
-5. **Özellikler** penceresinde, **etiket** özelliğini **görev bölmesi Yöneticisi**olarak ayarlayın.
+5. **Özellikler** penceresinde, **etiket** özelliğini **görev bölmesi Yöneticisi** olarak ayarlayın.
 
 6. **Araç kutusunun** **Office Şerit denetimleri** sekmesinden bir ToggleButton denetimini **görev bölmesi Yöneticisi** grubuna sürükleyin.
 
-7. **ToggleButton1**tıklayın.
+7. **ToggleButton1** tıklayın.
 
-8. **Özellikler** penceresinde, **etiket** özelliğini **görev bölmesini göster**olarak ayarlayın.
+8. **Özellikler** penceresinde, **etiket** özelliğini **görev bölmesini göster** olarak ayarlayın.
 
 ## <a name="display-the-custom-ribbon-user-interface-with-email-messages"></a>E-posta iletileriyle özel şerit kullanıcı arabirimini görüntüleme
  Bu kılavuzda oluşturduğunuz özel görev bölmesi, yalnızca e-posta iletileri içeren Inspector pencereleri ile görüntülenecek şekilde tasarlanmıştır. Bu nedenle, özellikleri özel şerit Kullanıcı arabiriminizi yalnızca bu pencereler ile görüntüleyecek şekilde ayarlayın.
@@ -134,7 +136,7 @@ ms.locfileid: "91584288"
      [!code-csharp[Trin_OutlookMailItemTaskPane#2](../vsto/codesnippet/CSharp/Trin_OutlookMailItemTaskPane/ThisAddIn.cs#2)]
      [!code-vb[Trin_OutlookMailItemTaskPane#2](../vsto/codesnippet/VisualBasic/Trin_OutlookMailItemTaskPane/ThisAddIn.vb#2)]
 
-3. Aşağıdaki kodu, sınıfının dışında ( *ThisAddIn.cs* Visual C# için, bu kodu ad alanı içine ekleyin) ThisAddIn.cs veya *ThisAddIn. vb* dosyasına ekleyin `ThisAddIn` `OutlookMailItemTaskPane` . `InspectorWrapper`Sınıfı, <xref:Microsoft.Office.Interop.Outlook.Inspector> ve nesnelerini yönetir <xref:Microsoft.Office.Tools.CustomTaskPane> . Aşağıdaki adımlarda bu sınıfın tanımını tamamlayacaksınız.
+3. Aşağıdaki kodu, sınıfının dışında (  Visual C# için, bu kodu ad alanı içine ekleyin) ThisAddIn.cs veya *ThisAddIn. vb* dosyasına ekleyin `ThisAddIn` `OutlookMailItemTaskPane` . `InspectorWrapper`Sınıfı, <xref:Microsoft.Office.Interop.Outlook.Inspector> ve nesnelerini yönetir <xref:Microsoft.Office.Tools.CustomTaskPane> . Aşağıdaki adımlarda bu sınıfın tanımını tamamlayacaksınız.
 
      [!code-csharp[Trin_OutlookMailItemTaskPane#3](../vsto/codesnippet/CSharp/Trin_OutlookMailItemTaskPane/ThisAddIn.cs#3)]
      [!code-vb[Trin_OutlookMailItemTaskPane#3](../vsto/codesnippet/VisualBasic/Trin_OutlookMailItemTaskPane/ThisAddIn.vb#3)]
@@ -226,7 +228,7 @@ ms.locfileid: "91584288"
 
 ### <a name="to-test-the-vsto-add-in"></a>VSTO eklentisini test etmek için
 
-1. **F5**tuşuna basın.
+1. **F5** tuşuna basın.
 
 2. Outlook 'ta yeni bir e-posta iletisi oluşturmak için **Yeni** ' ye tıklayın.
 
@@ -242,7 +244,7 @@ ms.locfileid: "91584288"
 
 6. **Görev bölmesini göster** düğmesine tekrar tıklayın.
 
-    Görev bölmesinin açıldığını ve metin kutusunun hala dize **ilk görev bölmesini**içerdiğini doğrulayın.
+    Görev bölmesinin açıldığını ve metin kutusunun hala dize **ilk görev bölmesini** içerdiğini doğrulayın.
 
 7. Outlook 'ta, ikinci bir e-posta iletisi oluşturmak için **Yeni** ' ye tıklayın.
 

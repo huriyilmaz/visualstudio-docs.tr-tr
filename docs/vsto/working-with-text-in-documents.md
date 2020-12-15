@@ -1,5 +1,7 @@
 ---
 title: Belgelerde metinle çalışma
+description: Office projelerinde metinle çalışmak üzere Microsoft Word 'ün nesne modelini kullanmaya yönelik adım adım yordamlar ve kod örnekleri hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: cdb38bcb8a86900cae7eb596c48b5765bc247eac
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8314752b5d1be6d1d86dcf35cf78851bcb45cb3c
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62815094"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97523389"
 ---
 # <a name="work-with-text-in-documents"></a>Belgelerde metinle çalışma
   Bu bölümdeki konularda, Office projelerinde metinle çalışmak üzere Microsoft Office Word nesne modelini kullanmak için adım adım yordamlar ve kod örnekleri sağlanmaktadır.

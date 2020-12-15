@@ -1,5 +1,7 @@
 ---
 title: Word kullanarak izlenecek yollar
+description: Microsoft Word 'Ü otomatikleştirmek ve Kullanıcı arabirimini (UI) özelleştirmek için belge düzeyi özelleştirmelerini ve VSTO Eklentilerini nasıl kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c6d3b4ece92bf278ef8d43dca7e449272982381c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cd2685b7fee0534e56c55e2c865d1d7f16423de5
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71254987"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97522586"
 ---
 # <a name="walkthroughs-using-word"></a>Word kullanarak izlenecek yollar
   Aşağıdaki izlenecek yollarda, Word Microsoft Office otomatikleştirebilmek ve Kullanıcı arabirimini (UI) özelleştirmek için belge düzeyi özelleştirmeleri ve VSTO eklentilerini kullanma yolları gösterilmektedir.

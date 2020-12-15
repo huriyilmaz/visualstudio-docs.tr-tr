@@ -1,5 +1,7 @@
 ---
 title: VSTO eklentisinin performansını iyileştirme
+description: Office uygulamaları için oluşturduğunuz VSTO Eklentilerini, hızlı bir başlangıç, kapatma, öğeleri açma ve diğer görevleri gerçekleştirmeye yönelik olarak nasıl iyileştiriceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -10,12 +12,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7529c69270b5f33cde32e8a7907f1b80589c43b7
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 83ba2e9cc2cd55b3e3f6362250ffc1e9489b1626
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "92298518"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524437"
 ---
 # <a name="improve-the-performance-of-a-vsto-add-in"></a>VSTO eklentisinin performansını iyileştirme
   Office uygulamaları için oluşturduğunuz VSTO Eklentilerini en iyi duruma getirerek daha iyi bir deneyim verebilirsiniz. bu sayede, öğeleri hızlı bir şekilde başlatabilir, kapatabilir, açık öğeler açabilir ve diğer görevleri gerçekleştirebilirsiniz. VSTO eklentisi Outlook için ise, VSTO eklentisinin kötü performans nedeniyle devre dışı bırakılabilme olasılığını da azaltabilirsiniz. Aşağıdaki stratejileri uygulayarak VSTO eklentisinin performansını artırabilirsiniz:
@@ -37,13 +39,13 @@ ms.locfileid: "92298518"
 
 - Uygulamanın, sonraki bir zamanda uygulama başladıktan sonra VSTO eklentisi ile ilk kez etkileşime geçtiğinde.
 
-  Örneğin, Kullanıcı verilerimi **Al**etiketli özel bir düğme seçtiğinde VSTO eklentisi bir çalışma sayfasını verilerle doldurabilir. Uygulamanın, **veri al** düğmesinin şeritte GÖRÜNEBILMESI Için VSTO eklentisini en az bir kez yüklemesi gerekir. Ancak, Kullanıcı uygulamayı bir sonraki sefer başlattığında VSTO eklentisi yeniden yüklenmez. VSTO eklentisi yalnızca Kullanıcı verilerimi **Al** düğmesini seçtiğinde yüklenir.
+  Örneğin, Kullanıcı verilerimi **Al** etiketli özel bir düğme seçtiğinde VSTO eklentisi bir çalışma sayfasını verilerle doldurabilir. Uygulamanın, **veri al** düğmesinin şeritte GÖRÜNEBILMESI Için VSTO eklentisini en az bir kez yüklemesi gerekir. Ancak, Kullanıcı uygulamayı bir sonraki sefer başlattığında VSTO eklentisi yeniden yüklenmez. VSTO eklentisi yalnızca Kullanıcı verilerimi **Al** düğmesini seçtiğinde yüklenir.
 
 ### <a name="to-configure-a-clickonce-solution-to-load-vsto-add-ins-on-demand"></a>VSTO Eklentilerini isteğe bağlı olarak yüklemek üzere bir ClickOnce çözümü yapılandırmak için
 
 1. **Çözüm Gezgini**, proje düğümünü seçin.
 
-2. Menü çubuğunda, **View**  >  **özellik sayfalarını**görüntüle ' yi seçin.
+2. Menü çubuğunda,   >  **özellik sayfalarını** görüntüle ' yi seçin.
 
 3. **Yayımla** sekmesinde **Seçenekler** düğmesini seçin.
 
@@ -51,13 +53,13 @@ ms.locfileid: "92298518"
 
 ### <a name="to-configure-a-windows-installer-solution-to-load-vsto-add-ins-on-demand"></a>VSTO Eklentilerini isteğe bağlı olarak yüklemek üzere bir Windows Installer çözümü yapılandırmak için
 
-1. Kayıt defterinde `LoadBehavior` ** _kök_\Software\microsoft\office \\ _ApplicationName_\addıns \\ _eklenti kimliği_ ** anahtarının girdisini **0x10**olarak ayarlayın.
+1. Kayıt defterinde `LoadBehavior` **_kök_\Software\microsoft\office \\ _ApplicationName_\addıns \\ _eklenti kimliği_** anahtarının girdisini **0x10** olarak ayarlayın.
 
      Daha fazla bilgi için bkz. [VSTO eklentileri Için kayıt defteri girişleri](../vsto/registry-entries-for-vsto-add-ins.md).
 
 ### <a name="to-configure-a-solution-to-load-vsto-add-ins-on-demand-while-you-debug-the-solution"></a>Çözümde hata ayıklarken VSTO Eklentilerini isteğe bağlı olarak yüklemek üzere bir çözüm yapılandırmak için
 
-1. `LoadBehavior` ** _Kök_\Software\microsoft\office \\ _ApplicationName_\ eklentileri \\ _eklenti kimliği_ ** anahtarının **0x10**' a girişini ayarlayan bir betik oluşturun.
+1. `LoadBehavior` **_Kök_\Software\microsoft\office \\ _ApplicationName_\ eklentileri \\ _eklenti kimliği_** anahtarının **0x10**' a girişini ayarlayan bir betik oluşturun.
 
      Aşağıdaki kod bu betiğin bir örneğini gösterir.
 

@@ -1,5 +1,7 @@
 ---
 title: Office çözümleri için belirli güvenlik konuları
+description: Microsoft .NET Framework ve Microsoft Office tarafından sağlanan güvenlik özelliklerinin, Office çözümlerini güvenlik tehditlerine karşı korumaya nasıl yardımcı olabileceğini öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 571b604b87fb7fac4e78c83a791c265d910fae94
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0da77067931d35ee63a9ccc9b0de85752157772b
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72985588"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524292"
 ---
 # <a name="specific-security-considerations-for-office-solutions"></a>Office çözümleri için belirli güvenlik konuları
   Microsoft .NET Framework ve Microsoft Office tarafından sağlanan güvenlik özellikleri, Office çözümlerinizi olası güvenlik tehditlerine karşı korumaya yardımcı olabilir. Bu konu, bu tehditlerin bazılarını açıklar ve bunlara karşı koruma sağlamaya yardımcı olmak için öneriler sağlar. Ayrıca, Microsoft Office güvenlik ayarlarının Office çözümlerini nasıl etkilediği hakkında bilgi içerir.
@@ -89,7 +91,7 @@ ms.locfileid: "72985588"
 ## <a name="trust-center-settings-in-the-microsoft-office-system-do-not-affect-add-ins-or-document-level-customizations"></a>Microsoft Office sistemindeki güven Merkezi ayarları, eklentileri veya belge düzeyi özelleştirmelerini etkilemez
  Kullanıcılar, **Güven Merkezi**'nde bir seçenek ayarlayarak VSTO eklentilerinin yüklenmesini engelleyebilir. Ancak, Visual Studio 'da Office çözümleri kullanılarak oluşturulan VSTO eklentileri ve belge düzeyi özelleştirmeleri bu güven ayarlarından etkilenmez.
 
- Kullanıcı, VSTO eklentilerinin **güven merkezini**kullanarak yüklenmesini engelliyorsa, aşağıdaki VSTO eklentileri türleri yüklenmeyecektir:
+ Kullanıcı, VSTO eklentilerinin **güven merkezini** kullanarak yüklenmesini engelliyorsa, aşağıdaki VSTO eklentileri türleri yüklenmeyecektir:
 
 - Yönetilen ve yönetilmeyen COM VSTO eklentileri.
 

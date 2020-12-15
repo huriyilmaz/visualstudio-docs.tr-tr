@@ -1,5 +1,7 @@
 ---
 title: Office çözümlerinde sorun giderme
+description: Visual Studio 'da Office geliştirme araçları 'nı kullanarak çözüm oluştururken karşılaşabileceğiniz yaygın sorunları çözmeye yönelik bazı ipuçları hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: troubleshooting
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 82fbb41bb1bf0d7ba3da046eb7d22eb8606a7529
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3ee25ea397af3805ac88b51d12a862bffdb20a00
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87234724"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97522832"
 ---
 # <a name="troubleshoot-office-solutions"></a>Office çözümlerinde sorun giderme
   Bu bölüm, Visual Studio 'da Office geliştirme araçları 'nı kullanarak çözüm oluştururken karşılaşabileceğiniz yaygın sorunları çözmeye yönelik ipuçları içerir.

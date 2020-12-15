@@ -1,5 +1,7 @@
 ---
 title: Çalışma sayfalarıyla çalışma
+description: Çalışma sayfası ve çalışma sayfası sınıflarının, çalışma sayfalarıyla görevleri gerçekleştirmek için kullandığınız yöntemleri ve özellikleri içerdiğini öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 1f518a3d6e271c4f457e50ad6f9affcc3afccdf9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d58576c999d11441122bb0b2115d2367b7ce04ce
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62814597"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97522536"
 ---
 # <a name="work-with-worksheets"></a>Çalışma sayfalarıyla çalışma
   <xref:Microsoft.Office.Tools.Excel.Worksheet>Ve <xref:Microsoft.Office.Interop.Excel.Worksheet> sınıfları, çalışma sayfalarıyla görevleri gerçekleştirmek için kullandığınız yöntemleri ve özellikleri içerir.

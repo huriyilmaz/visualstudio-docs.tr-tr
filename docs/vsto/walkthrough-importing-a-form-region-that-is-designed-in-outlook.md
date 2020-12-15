@@ -1,5 +1,7 @@
 ---
 title: "İzlenecek yol: Outlook 'ta tasarlanan form bölgesini Içeri aktarma"
+description: Microsoft Outlook 'ta form bölgesi tasarlamayı öğrenin ve ardından yeni form bölgesi Sihirbazı 'nı kullanarak form bölgesini bir Outlook VSTO eklentisi projesine içeri aktarın.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 2a0de1a25a5309e99193b7be8bce2819808665b8
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 9b65502bbf29f6e0df7435f6a27d3c51e8082e41
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584982"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97522667"
 ---
 # <a name="walkthrough-import-a-form-region-that-is-designed-in-outlook"></a>İzlenecek yol: Outlook 'ta tasarlanan form bölgesini Içeri aktarma
   Bu izlenecek yol, Outlook Microsoft Office bir form bölgesinin nasıl tasarlanacağını ve **Yeni form bölgesi** Sihirbazı 'nı kullanarak form bölgesini BIR Outlook VSTO eklentisi projesine aktarmayı gösterir. Form bölgesini Outlook 'ta tasarlamak, Outlook verilerine bağlanan form bölgesine yerel Outlook denetimleri eklemenize olanak tanır. Form bölgesini içeri aktardıktan sonra her bir denetimin olaylarını işleyebilirsiniz.
@@ -65,37 +67,37 @@ ms.locfileid: "91584982"
 
 5. **Konu** alanını ve **Tamamlanma yüzdesi** alanını **alan seçicinden** form bölgesine sürükleyin.
 
-6. **Araç**kutusunu açmak için **Araçlar** grubunda **Denetim araç kutusu** ' na tıklayın.
+6. **Araç** kutusunu açmak için **Araçlar** grubunda **Denetim araç kutusu** ' na tıklayın.
 
 7. **Araç kutusundan** bir etiketi form bölgesine sürükleyin. Etiketi **konunun** altına ve **Tamamlanma yüzdesi** alanlarının altına yerleştirin.
 
 8. Etikete sağ tıklayın ve ardından **Gelişmiş Özellikler**' e tıklayın.
 
-9. **Özellikler** penceresinde, **başlık** özelliğini bu görev olarak ayarlayın, **aşağıdaki görevlere bağlıdır**, **Width** özelliğini **200**olarak ayarlayın ve **Uygula**' ya tıklayın.
+9. **Özellikler** penceresinde, **başlık** özelliğini bu görev olarak ayarlayın, **aşağıdaki görevlere bağlıdır**, **Width** özelliğini **200** olarak ayarlayın ve **Uygula**' ya tıklayın.
 
 10. **Araç kutusu** ' ndan form bölgesine bir ListBox denetimi sürükleyin. Liste kutusunun bu görevin altına konumu **aşağıdaki görevler etiketine bağlıdır** .
 
 11. Yeni eklediğiniz liste kutusunu seçin.
 
-12. **Özellikler** penceresinde, **genişliği** **300**olarak ayarlayın ve ardından **Uygula**' ya tıklayın.
+12. **Özellikler** penceresinde, **genişliği** **300** olarak ayarlayın ve ardından **Uygula**' ya tıklayın.
 
 13. **Araç kutusundan** bir etiketi form bölgesine sürükleyin. Etiketi liste kutusunun altına konumlandırın.
 
 14. Yeni eklediğiniz etiketi seçin.
 
-15. **Özellikler** penceresinde, **başlık** özelliğini, **Bağımlı görevler listesine eklenecek bir görevi seçmek**için ayarlayın, **Width** özelliğini **200**olarak ayarlayın ve **Uygula**' ya tıklayın.
+15. **Özellikler** penceresinde, **başlık** özelliğini, **Bağımlı görevler listesine eklenecek bir görevi seçmek** için ayarlayın, **Width** özelliğini **200** olarak ayarlayın ve **Uygula**' ya tıklayın.
 
 16. **Araç kutusu** ' ndan form bölgesine bir ComboBox denetimi sürükleyin. **Bağımlı görevler etiketi listesine eklemek için bir görev seçin ' in** altındaki açılan kutuyu konumlandırın.
 
 17. Yeni eklediğiniz Birleşik giriş kutusunu seçin.
 
-18. **Özellikler** penceresinde, **Width** özelliğini **300**olarak ayarlayın ve ardından **Uygula**' ya tıklayın.
+18. **Özellikler** penceresinde, **Width** özelliğini **300** olarak ayarlayın ve ardından **Uygula**' ya tıklayın.
 
 19. **Araç kutusundan** bir CommandButton denetimini form bölgesine sürükleyin. Açılan kutunun yanındaki komut düğmesini konumlandırın.
 
 20. Yeni eklediğiniz komut düğmesini seçin.
 
-21. **Özellikler** penceresinde, **adı** **AddDependentTask**olarak ayarlayın, alt **yazı başlığını** **bağımlı görev eklemek**için ayarlayın, **genişliği** **100**olarak ayarlayın ve ardından **Uygula**' ya tıklayın.
+21. **Özellikler** penceresinde, **adı** **AddDependentTask** olarak ayarlayın, alt **yazı başlığını** **bağımlı görev eklemek** için ayarlayın, **genişliği** **100** olarak ayarlayın ve ardından **Uygula**' ya tıklayın.
 
 22. **Alan Seçicisi**' nde **Yeni**' ye tıklayın.
 
@@ -103,13 +105,13 @@ ms.locfileid: "91584982"
 
 24. **Alan seçicinden** **HiddenField** alanını form bölgesine sürükleyin.
 
-25. **Özellikler** penceresinde, **Visible** ' ı **0-false**olarak ayarlayın ve ardından **Uygula**' ya tıklayın.
+25. **Özellikler** penceresinde, **Visible** ' ı **0-false** olarak ayarlayın ve ardından **Uygula**' ya tıklayın.
 
 26. Outlook 'ta, **Geliştirici** sekmesinde, **Tasarım** grubunda **Kaydet** düğmesine tıklayın ve ardından **form bölgesini farklı kaydet**' e tıklayın.
 
      Form bölgesini **TaskFormRegion** olarak adlandırın ve bilgisayarınızdaki yerel bir dizine kaydedin.
 
-     Outlook, form bölgesini bir Outlook form depolama (*. ofs*) dosyası olarak kaydeder. Form bölgesi *TaskFormRegion. ofs*adıyla kaydedilir.
+     Outlook, form bölgesini bir Outlook form depolama (*. ofs*) dosyası olarak kaydeder. Form bölgesi *TaskFormRegion. ofs* adıyla kaydedilir.
 
 27. Outlook 'tan çıkın.
 
@@ -118,7 +120,7 @@ ms.locfileid: "91584982"
 
 ### <a name="to-create-a-new-outlook-vsto-add-in-project"></a>Yeni bir Outlook VSTO eklentisi projesi oluşturmak için
 
-1. İçinde [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , **taskaddin**ADLı bir Outlook VSTO eklentisi projesi oluşturun.
+1. İçinde [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , **taskaddin** ADLı bir Outlook VSTO eklentisi projesi oluşturun.
 
 2. **Yeni proje** iletişim kutusunda, **çözüm için dizin oluştur**' u seçin.
 
@@ -133,7 +135,7 @@ ms.locfileid: "91584982"
 
 1. **Çözüm Gezgini**, **taskaddin** projesine sağ tıklayın, **Ekle**' nin üzerine gelin ve ardından **Yeni öğe**' ye tıklayın.
 
-2. **Şablonlar** bölmesinde **Outlook form bölgesi**' ni seçin, dosyayı **TaskFormRegion**olarak adlandırın ve **Ekle**' ye tıklayın.
+2. **Şablonlar** bölmesinde **Outlook form bölgesi**' ni seçin, dosyayı **TaskFormRegion** olarak adlandırın ve **Ekle**' ye tıklayın.
 
      **Newoutlook form bölgesi** Sihirbazı başlar.
 
@@ -147,7 +149,7 @@ ms.locfileid: "91584982"
 
 6. **Açıklayıcı metin girin ve görüntüleme tercihlerini seçin** sayfasında **İleri**' ye tıklayın.
 
-7. **Bu form bölgesini görüntüleyecek ileti sınıflarını tanımla** sayfasında, **hangi özel ileti sınıflarında bu form bölgesini görüntüleyecek** ? alanına **IPM yazın. Task. TaskFormRegion**ve ardından **son**' a tıklayın.
+7. **Bu form bölgesini görüntüleyecek ileti sınıflarını tanımla** sayfasında, **hangi özel ileti sınıflarında bu form bölgesini görüntüleyecek** ? alanına **IPM yazın. Task. TaskFormRegion** ve ardından **son**' a tıklayın.
 
      Projenize bir *TaskFormRegion.cs* veya *TaskFormRegion. vb* dosyası eklenir.
 
@@ -158,7 +160,7 @@ ms.locfileid: "91584982"
 
 ### <a name="to-handle-the-events-of-controls-on-the-form-region"></a>Form bölgesindeki denetimlerin olaylarını işlemek için
 
-1. **Çözüm Gezgini**, *TaskFormRegion.cs* veya *TaskFormRegion. vb*öğesine sağ tıklayın ve ardından **kodu görüntüle**' ye tıklayın.
+1. **Çözüm Gezgini**, *TaskFormRegion.cs* veya *TaskFormRegion. vb* öğesine sağ tıklayın ve ardından **kodu görüntüle**' ye tıklayın.
 
     Kod düzenleyicisinde *TaskFormRegion.cs* veya *TaskFormRegion. vb* açılır.
 
@@ -187,7 +189,7 @@ ms.locfileid: "91584982"
 
    - Form bölgesindeki liste kutusunu, her bağımlı görevin geçerli tamamlanma durumuyla yeniler.
 
-   - Her bağımlı görevin konusunu almak için gizli metin alanını ayrıştırır. Ardından, her biri `Microsoft.Office.Interop.Outlook.TaskItem` *Tasks* `FindTaskBySubjectName` yardımcı yöntemini çağırarak ve her görevin konusunu geçirerek görevler klasöründeki her birini bulur.
+   - Her bağımlı görevin konusunu almak için gizli metin alanını ayrıştırır. Ardından, her biri `Microsoft.Office.Interop.Outlook.TaskItem`  `FindTaskBySubjectName` yardımcı yöntemini çağırarak ve her görevin konusunu geçirerek görevler klasöründeki her birini bulur.
 
    - `Microsoft.Office.Interop.Outlook.TaskItem.Subject` `Microsoft.Office.Interop.Outlook.TaskItem.PercentComplete` Bağımlı görev liste kutusuna ve değerlerini ekler.
 
@@ -224,7 +226,7 @@ ms.locfileid: "91584982"
 
      **TaskFormRegion** form bölgesi belirir. Bu form tüm görev formunu değiştirir. **Bağımlı görevler listesine eklemek için bir görev seçin** Birleşik giriş kutusu, görevler klasöründeki diğer görevlerle doldurulur.
 
-7. Görev formunda, **Konu** alanına **birincil görev**yazın.
+7. Görev formunda, **Konu** alanına **birincil görev** yazın.
 
 8. **Bağımlı görevler listesine eklemek için bir görev seçin** Birleşik giriş kutusunda **bağımlı görev**' i seçin ve ardından **bağımlı görev ekle**' ye tıklayın.
 
@@ -234,7 +236,7 @@ ms.locfileid: "91584982"
 
 10. Outlook 'ta bağımlı görev öğesini yeniden açın.
 
-11. Bağımlı görev formunda, **Tamamlanma yüzdesi** alanını% **50**olarak değiştirin.
+11. Bağımlı görev formunda, **Tamamlanma yüzdesi** alanını% **50** olarak değiştirin.
 
 12. Bağımlı görev şeridinin **görev** sekmesinde, **Eylemler** grubunda, **Kaydet & kapat**' a tıklayın.
 

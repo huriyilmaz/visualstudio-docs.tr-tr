@@ -1,5 +1,7 @@
 ---
 title: Çalışma zamanında VSTO eklenti projesindeki çalışma sayfasına denetimler ekleme
+description: Kullanıcıların çalışma sayfasına bir düğme, NamedRange ve ListObject eklemesini sağlamak için şeridi nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ec1d1361d7ca58d4292cbbb7bc4ea3b707a748ff
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: e9987e9427c0fe982cf3ddcb88ce8071caab04b0
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584353"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97522781"
 ---
 # <a name="walkthrough-add-controls-to-a-worksheet-at-run-time-in-vsto-add-in-project"></a>İzlenecek yol: çalışma zamanında VSTO eklenti projesindeki çalışma sayfasına denetimler ekleme
   Excel VSTO eklentisini kullanarak, herhangi bir açık çalışma sayfasına denetim ekleyebilirsiniz. Bu izlenecek yol, kullanıcıların <xref:Microsoft.Office.Tools.Excel.Controls.Button> çalışma sayfasına bir, a ve bir eklemek Için şerit 'in nasıl kullanılacağını gösterir <xref:Microsoft.Office.Tools.Excel.NamedRange> <xref:Microsoft.Office.Tools.Excel.ListObject> . Daha fazla bilgi için bkz. [çalışma zamanında Office belgelerine denetim ekleme](../vsto/adding-controls-to-office-documents-at-run-time.md).
@@ -50,7 +52,7 @@ ms.locfileid: "91584353"
 
 ### <a name="to-create-a-new-excel-vsto-add-in-project"></a>Yeni bir Excel VSTO eklentisi projesi oluşturmak için
 
-1. İçinde [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , **Exceldynamiccontrols**ADLı bir Excel VSTO eklenti projesi oluşturun. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
+1. İçinde [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , **Exceldynamiccontrols** ADLı bir Excel VSTO eklenti projesi oluşturun. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
 2. **Microsoft.Office.Tools.Excel.v4.0.Utilities.dll** derlemesine bir başvuru ekleyin. Bu izlenecek yolda daha sonra çalışma sayfasına bir Windows Forms denetimi eklemek için bu başvuru gerekir.
 
@@ -65,7 +67,7 @@ ms.locfileid: "91584353"
 
      Şerit tasarımcısında **Ribbon1.cs** veya **Ribbon1. vb** adlı bir dosya açılır ve varsayılan bir sekme ve grup görüntüler.
 
-3. **Araç kutusunun** **Office Şerit denetimleri** sekmesinden **Group1**üzerine bir CheckBox denetimi sürükleyin.
+3. **Araç kutusunun** **Office Şerit denetimleri** sekmesinden **Group1** üzerine bir CheckBox denetimi sürükleyin.
 
 4. Seçmek için **CheckBox1** öğesine tıklayın.
 
@@ -76,14 +78,14 @@ ms.locfileid: "91584353"
     |**Ad**|**Düğme**|
     |**Etiketle**|**Düğme**|
 
-6. **Group1**öğesine ikinci bir onay kutusu ekleyin ve ardından aşağıdaki özellikleri değiştirin.
+6. **Group1** öğesine ikinci bir onay kutusu ekleyin ve ardından aşağıdaki özellikleri değiştirin.
 
     |Özellik|Değer|
     |--------------|-----------|
     |**Ad**|**NamedRange**|
     |**Etiketle**|**NamedRange**|
 
-7. **Group1**öğesine üçüncü onay kutusu ekleyin ve ardından aşağıdaki özellikleri değiştirin.
+7. **Group1** öğesine üçüncü onay kutusu ekleyin ve ardından aşağıdaki özellikleri değiştirin.
 
     |Özellik|Değer|
     |--------------|-----------|
@@ -95,7 +97,7 @@ ms.locfileid: "91584353"
 
 ### <a name="to-add-controls-to-a-worksheet"></a>Çalışma sayfasına denetim eklemek için
 
-1. Şerit Tasarımcısı ' nda, **düğmesine**çift tıklayın.
+1. Şerit Tasarımcısı ' nda, **düğmesine** çift tıklayın.
 
      <xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.Click> **Düğme** onay kutusunun olay işleyicisi kod düzenleyicisinde açılır.
 
@@ -138,7 +140,7 @@ ms.locfileid: "91584353"
 
 ### <a name="to-remove-controls-from-the-worksheet"></a>Çalışma sayfasından denetimleri kaldırmak için
 
-1. **Çözüm Gezgini**' de *ThisAddIn.cs* veya *ThisAddIn. vb*öğesini seçin.
+1. **Çözüm Gezgini**' de *ThisAddIn.cs* veya *ThisAddIn. vb* öğesini seçin.
 
 2. **Görünüm** menüsünde **kod**' a tıklayın.
 

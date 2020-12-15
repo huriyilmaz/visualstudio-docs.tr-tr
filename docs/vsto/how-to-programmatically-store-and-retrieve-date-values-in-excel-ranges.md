@@ -1,5 +1,7 @@
 ---
 title: Excel aralıklarında program aracılığıyla tarih değerlerini depolama & alma
+description: Microsoft Excel aralıklarında tarih değerlerini programlı bir şekilde depolamak ve almak için Visual Studio 'Yu nasıl kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -20,12 +22,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c2bd76d37a9c9b6e51de7bbe01b54d1be6c93128
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 673969e13b2f49b91416d730533be0f075813781
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91583781"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97523581"
 ---
 # <a name="how-to-programmatically-store-and-retrieve-date-values-in-excel-ranges"></a>Nasıl yapılır: program aracılığıyla Excel aralıklarında tarih değerlerini depolama ve alma
   Bir <xref:Microsoft.Office.Tools.Excel.NamedRange> denetimde veya yerel Excel Aralık nesnesinde değerleri saklayabilir ve alabilirsiniz.
@@ -43,7 +45,7 @@ ms.locfileid: "91583781"
 
 ### <a name="to-store-a-date-value-in-a-named-range"></a>Adlandırılmış bir aralıkta bir tarih değeri depolamak için
 
-1. <xref:Microsoft.Office.Tools.Excel.NamedRange> **A1**hücresinde bir denetim oluştur.
+1. <xref:Microsoft.Office.Tools.Excel.NamedRange> **A1** hücresinde bir denetim oluştur.
 
      [!code-csharp[Trin_VstcoreExcelAutomation#50](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#50)]
      [!code-vb[Trin_VstcoreExcelAutomation#50](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#50)]
@@ -64,7 +66,7 @@ ms.locfileid: "91583781"
 
 ### <a name="to-store-a-date-value-in-a-native-excel-range-object"></a>Yerel Excel Aralık nesnesinde bir tarih değeri depolamak için
 
-1. <xref:Microsoft.Office.Interop.Excel.Range> **A1**hücresini temsil eden bir oluştur.
+1. <xref:Microsoft.Office.Interop.Excel.Range> **A1** hücresini temsil eden bir oluştur.
 
      [!code-csharp[Trin_VstcoreExcelAutomationAddIn#25](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#25)]
      [!code-vb[Trin_VstcoreExcelAutomationAddIn#25](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#25)]

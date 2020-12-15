@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: program aracılığıyla çalışma kitaplarını açma'
+description: Visual Studio 'Yu kullanarak bir Microsoft Excel çalışma kitabını programlı bir şekilde açabilir veya var olan bir çalışma kitabıyla nasıl çalışacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 10a849d8545565e450cd099b32a9e3e8f7f11b56
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f7de4072df177bd9a7c6ae23bf59e44e50d56e32
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85537910"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97523890"
 ---
 # <a name="how-to-programmatically-open-workbooks"></a>Nasıl yapılır: program aracılığıyla çalışma kitaplarını açma
   <xref:Microsoft.Office.Interop.Excel.Workbooks>Microsoft Office Excel 'deki koleksiyon, tüm açık çalışma kitapları ile çalışmayı ve çalışma kitaplarını açmayı olanaklı kılar.

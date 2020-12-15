@@ -1,5 +1,7 @@
 ---
 title: Office çözüm dağıtımı sorunlarını giderme
+description: Office çözümlerini dağıtırken karşılaşabileceğiniz yaygın sorunları nasıl çözebileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: troubleshooting
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4c7db4a699fcc8b28e4f2f423f612738de6a6836
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: b70b03e8342564de828059d1a335f6347c19b5a3
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90806739"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97522968"
 ---
 # <a name="troubleshoot-office-solution-deployment"></a>Office çözüm dağıtımı sorunlarını giderme
   Bu konu, Office çözümlerini dağıtırken karşılaşabileceğiniz yaygın sorunları çözme hakkında bilgi içerir.
@@ -45,7 +47,7 @@ ms.locfileid: "90806739"
 
 1. Kayıt defterinde aşağıdaki anahtara gidin:
 
-     **HKEY_CURRENT_USER \Software\Microsoft\VSTA**
+     **HKEY_CURRENT_USER\Software\Microsoft\VSTA**
 
 2. **AddInTimeout** alt anahtarında, zaman aşımı değerini milisaniye cinsinden ayarlayın.
 
@@ -73,7 +75,7 @@ ms.locfileid: "90806739"
 
 2. **Uygulama** sayfasında, **derleme bilgileri**' ni seçin.
 
-3. **Derleme sürümünün**Düzeltme numarasını, üçüncü alanını bir joker karakter () olarak ayarlayın \* . Örneğin, "1,0. *".  Ardından **Tamam** düğmesini seçin.
+3. **Derleme sürümünün** Düzeltme numarasını, üçüncü alanını bir joker karakter () olarak ayarlayın \* . Örneğin, "1,0. *".  Ardından **Tamam** düğmesini seçin.
 
    Derleme sürümünü değiştirdikten sonra, derlemenizi tanımlayıcı bir adla imzalamaya devam edebilir ve Fusion özelleştirmenin en son sürümünü yükler.
 
@@ -123,7 +125,7 @@ ms.locfileid: "90806739"
 
  IIS 7 ' de MIME türü tanımlama hakkında daha fazla bilgi için bkz. [MIME türü ekleme (IIS7)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc725608(v=ws.10)).
 
- Uzantıyı **. VSTO** ve MIME türü olarak **Application/x-MS-VSTO**olarak ayarlayın.
+ Uzantıyı **. VSTO** ve MIME türü olarak **Application/x-MS-VSTO** olarak ayarlayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

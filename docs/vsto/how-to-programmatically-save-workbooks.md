@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: program aracılığıyla çalışma kitaplarını kaydetme'
+description: Yol değiştirmeden Microsoft Excel çalışma kitaplarını program aracılığıyla kaydedin ve çalışma kitabının bir kopyasını bellekte değişiklik yapmadan kaydedin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 6b45449f72275ac154a433cad725a2867062cc5e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dbc228a703d6c9224fda545a93132ccb45c94b0f
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547088"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524623"
 ---
 # <a name="how-to-programmatically-save-workbooks"></a>Nasıl yapılır: program aracılığıyla çalışma kitaplarını kaydetme
   Çalışma kitabını kaydetmek için birkaç yol vardır. Yolu değiştirmeden bir çalışma kitabını kaydedebilirsiniz. Çalışma kitabı daha önce kaydedilmemişken, bir yol belirterek çalışma kitabını kaydetmeniz gerekir. Açık bir yol olmadan, Microsoft Office Excel dosyayı oluşturulduğu sırada verilen adla geçerli klasöre kaydeder. Çalışma kitabının bir kopyasını bellekte bulunan açık çalışma kitabında değişiklik yapmadan da kaydedebilirsiniz.
@@ -80,7 +82,7 @@ ms.locfileid: "85547088"
      [!code-vb[Trin_VstcoreExcelAutomationAddIn#5](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#5)]
 
 ## <a name="robust-programming"></a>Güçlü programlama
- Çalışma kitabını kaydetme veya kopyalama yöntemini etkileşimli olarak iptal etmek kodunuzda bir çalışma zamanı hatası oluşturur. Örneğin, yordamınız yöntemi çağırırsa, <xref:Microsoft.Office.Tools.Excel.Workbook.SaveAs%2A> ancak Excel 'den istemleri devre dışı bırakmazsa ve istendiğinde, Excel bir çalışma **Cancel** zamanı hatası oluşturur.
+ Çalışma kitabını kaydetme veya kopyalama yöntemini etkileşimli olarak iptal etmek kodunuzda bir çalışma zamanı hatası oluşturur. Örneğin, yordamınız yöntemi çağırırsa, <xref:Microsoft.Office.Tools.Excel.Workbook.SaveAs%2A> ancak Excel 'den istemleri devre dışı bırakmazsa ve istendiğinde, Excel bir çalışma  zamanı hatası oluşturur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Çalışma kitaplarında çalışma](../vsto/working-with-workbooks.md)

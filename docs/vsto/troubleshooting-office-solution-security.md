@@ -1,5 +1,7 @@
 ---
 title: Office çözüm güvenliği sorunlarını giderme
+description: Microsoft Office çözümlerini güvenli hale getirirken karşılaşabileceğiniz yaygın sorunları çözmeye yönelik bazı ipuçları hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: troubleshooting
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8825f1f4393d93df6a621fd71b6782c6652a9c0c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 89ca980b378ee71d1db9b373459c8b7309f0ecc2
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87234815"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97522889"
 ---
 # <a name="troubleshoot-office-solution-security"></a>Office çözüm güvenliği sorunlarını giderme
   Bu konu, Office çözümlerini güvenli hale getirirken karşılaşabileceğiniz yaygın sorunları çözmeye yönelik ipuçları içerir.

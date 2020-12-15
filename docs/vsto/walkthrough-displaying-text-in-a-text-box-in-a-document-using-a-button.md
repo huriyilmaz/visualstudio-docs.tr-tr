@@ -1,5 +1,7 @@
 ---
 title: Düğmeye metin kutusunda metin kutusu kullanarak metni görüntüleme
+description: Microsoft Word için belge düzeyi özelleştirmesindeki düğmeleri ve metin kutularını nasıl kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8f3c467abcee8fb4faafd2da06ba261e7f3039fe
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1cda1fe3e7430ff30dcc3b3921eb2bcd4d31b699
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "67328747"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97522745"
 ---
 # <a name="walkthrough-display-text-in-a-text-box-in-a-document-using-a-button"></a>İzlenecek yol: düğme kullanarak bir belgedeki metin kutusunda metin görüntüleme
   Bu izlenecek yol, Microsoft Office Word için belge düzeyi özelleştirmesinde düğmelerin ve metin kutularının nasıl kullanılacağını gösterir.
@@ -32,7 +34,7 @@ ms.locfileid: "67328747"
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]
@@ -44,11 +46,11 @@ ms.locfileid: "67328747"
 
 ### <a name="to-create-a-new-project"></a>Yeni bir proje oluşturmak için
 
-1. **My Word düğmesini**kullanarak bir Word belgesi projesi oluşturun. Sihirbazda **Yeni belge oluştur**' u seçin.
+1. **My Word düğmesini** kullanarak bir Word belgesi projesi oluşturun. Sihirbazda **Yeni belge oluştur**' u seçin.
 
      Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-     Visual Studio tasarımcıda yeni Word belgesini açar ve **Çözüm Gezgini**Için **My Word düğme** projesini ekler.
+     Visual Studio tasarımcıda yeni Word belgesini açar ve **Çözüm Gezgini** Için **My Word düğme** projesini ekler.
 
 ## <a name="add-controls-to-the-word-document"></a>Word belgesine denetim ekleme
  Kullanıcı arabirimi denetimleri, Word belgesindeki bir düğmeden ve metin kutusundan oluşur.
@@ -64,7 +66,7 @@ ms.locfileid: "67328747"
 
 3. **Görünüm** menüsünde **Özellikler penceresi**' ne tıklayın.
 
-4. **Özellikler** penceresi açılan kutusunda **textBox1** ' i bulun ve metin kutusunun Name özelliğini **metinadı** olarak değiştirin. **displayText**
+4. **Özellikler** penceresi açılan kutusunda **textBox1** ' i bulun ve metin kutusunun Name özelliğini **metinadı** olarak değiştirin. 
 
 5. Bir **düğme** denetimini belgeye sürükleyin ve aşağıdaki özellikleri değiştirin.
 

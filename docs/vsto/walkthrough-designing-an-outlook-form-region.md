@@ -1,5 +1,7 @@
 ---
 title: 'İzlenecek yol: Outlook form bölgesi tasarlama'
+description: Bir kişi öğesinin Inspector penceresinde yeni bir sayfa olarak görünen özel bir Microsoft Outlook form bölgesini nasıl tasarlayabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 01cfe55964a1d61c2ad200c9538ced9ff0aa5599
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e306814512c6cab2d331a26128f22bb94d7dbbf4
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72985464"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524201"
 ---
 # <a name="walkthrough-design-an-outlook-form-region"></a>İzlenecek yol: Outlook form bölgesi tasarlama
   Özel form bölgeleri, standart veya özel Microsoft Office Outlook formlarını genişletir. Bu kılavuzda, bir kişi öğesinin Inspector penceresinde yeni bir sayfa olarak görünen özel bir form bölgesi tasarlayacaksınız. Bu form bölgesi, adres bilgilerini Windows Live Yerel arama Web sitesine göndererek, iletişim için listelenen her bir adresin haritasını görüntüler. Form bölgeleri hakkında daha fazla bilgi için bkz. [Outlook form bölgeleri oluşturma](../vsto/creating-outlook-form-regions.md).
@@ -53,7 +55,7 @@ ms.locfileid: "72985464"
 
 ### <a name="to-create-a-new-outlook-vsto-add-in-project"></a>Yeni bir Outlook VSTO eklentisi projesi oluşturmak için
 
-1. İçinde [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , **MapItAddIn**ADLı bir Outlook VSTO eklentisi projesi oluşturun.
+1. İçinde [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , **MapItAddIn** ADLı bir Outlook VSTO eklentisi projesi oluşturun.
 
 2. **Yeni proje** iletişim kutusunda, **çözüm için dizin oluştur**' u seçin.
 
@@ -70,7 +72,7 @@ ms.locfileid: "72985464"
 
 2. **Proje** menüsünde **Yeni öğe Ekle**' ye tıklayın.
 
-3. **Yeni öğe Ekle** Iletişim kutusunda **Outlook form bölgesi**' ni seçin, dosyayı **MapIt**olarak adlandırın ve **Ekle**' ye tıklayın.
+3. **Yeni öğe Ekle** Iletişim kutusunda **Outlook form bölgesi**' ni seçin, dosyayı **MapIt** olarak adlandırın ve **Ekle**' ye tıklayın.
 
      **Newoutlook form bölgesi** Sihirbazı başlar.
 
@@ -86,12 +88,12 @@ ms.locfileid: "72985464"
 
 7. Yazma modunda olan **Inspectors** ve **okuma modundaki** **denetçiler**' i seçin ve ardından İleri ' ye tıklayın.
 
-8. **Bu form bölgesini görüntüleyecek ileti sınıflarını belirleyin** sayfasında, **posta Iletisini**temizleyin, **iletişim**' i seçin ve ardından **son**' a tıklayın.
+8. **Bu form bölgesini görüntüleyecek ileti sınıflarını belirleyin** sayfasında, **posta Iletisini** temizleyin, **iletişim**' i seçin ve ardından **son**' a tıklayın.
 
      Projenize bir *MapIt.cs* veya *mapit. vb* dosyası eklenir.
 
 ## <a name="design-the-layout-of-the-form-region"></a>Form bölgesinin yerleşimini tasarlama
- Form *bölgesi tasarımcısını*kullanarak form bölgelerini görsel olarak geliştirin. Yönetilen denetimleri form bölgesi tasarımcı yüzeyine sürükleyebilirsiniz. Denetim düzeni ve görünümünü ayarlamak için tasarımcı ve **Özellikler** penceresini kullanın.
+ Form *bölgesi tasarımcısını* kullanarak form bölgelerini görsel olarak geliştirin. Yönetilen denetimleri form bölgesi tasarımcı yüzeyine sürükleyebilirsiniz. Denetim düzeni ve görünümünü ayarlamak için tasarımcı ve **Özellikler** penceresini kullanın.
 
 ### <a name="to-design-the-layout-of-the-form-region"></a>Form bölgesinin yerleşimini tasarlamak için
 
@@ -99,7 +101,7 @@ ms.locfileid: "72985464"
 
 2. Tasarımcı öğesine sağ tıklayın ve ardından **Özellikler**' e tıklayın.
 
-3. **Özellikler** penceresinde, **boyutu** **664, 469**olarak ayarlayın.
+3. **Özellikler** penceresinde, **boyutu** **664, 469** olarak ayarlayın.
 
      Bu, form bölgesinin bir Haritayı görüntülemesi için yeterince büyük olacağını sağlar.
 
@@ -114,7 +116,7 @@ ms.locfileid: "72985464"
 
 ### <a name="to-customize-the-behavior-of-the-form-region"></a>Form bölgesinin davranışını özelleştirmek için
 
-1. **Çözüm Gezgini**, *MapIt.cs* veya *mapit. vb*öğesine sağ tıklayın ve ardından **kodu görüntüle**' ye tıklayın.
+1. **Çözüm Gezgini**, *MapIt.cs* veya *mapit. vb* öğesine sağ tıklayın ve ardından **kodu görüntüle**' ye tıklayın.
 
     *MapIt.cs* veya *mapit. vb* , kod düzenleyicisinde açılır.
 
@@ -154,18 +156,18 @@ ms.locfileid: "72985464"
     |Adres Türü|Adres|
     |------------------|-------------|
     |**İş**|**4567 Main St. Buffalo, NY**|
-    |**Giriş**|**1234 Kuzey St. Buffalo, NY**|
+    |**Giriş Ekranı**|**1234 Kuzey St. Buffalo, NY**|
     |**Diğer**|**3456 Main St. Seattle, WA**|
 
 4. Kişi öğesini kaydedin ve kapatın.
 
 5. **Ann beeto** kişi öğesini yeniden açın.
 
-    Outlook 'ta, bu, kişiler için adres defterini açarak **bul** grubunda yapılabilir veya Ann Bee, **arama kişilere**da girebilir.
+    Outlook 'ta, bu, kişiler için adres defterini açarak **bul** grubunda yapılabilir veya Ann Bee, **arama kişilere** da girebilir.
 
 6. Öğenin şerit 'inin **göster** grubunda, Map It form bölgesini açmak Için **Haritayı eşle** ' ye tıklayın.
 
-     Map It form bölgesi görünür ve yerel arama Web sitesini görüntüler. **İş**, **giriş**ve **diğer** adresler karalama panelinde görüntülenir. Karalama panelinde, eşlemek istediğiniz bir adres seçin.
+     Map It form bölgesi görünür ve yerel arama Web sitesini görüntüler. **İş**, **giriş** ve **diğer** adresler karalama panelinde görüntülenir. Karalama panelinde, eşlemek istediğiniz bir adres seçin.
 
 ## <a name="next-steps"></a>Sonraki adımlar
  Aşağıdaki konulardan bir Outlook uygulamasının Kullanıcı arabirimini nasıl özelleştireceğiniz hakkında daha fazla bilgi edinebilirsiniz:

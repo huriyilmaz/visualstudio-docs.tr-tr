@@ -1,5 +1,7 @@
 ---
 title: 'İzlenecek yol: yer işaretleri için kısayol menüleri oluşturma'
+description: Microsoft Word için belge düzeyi özelleştirmesindeki yer Işareti denetimleri için kısayol menüleri oluşturmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9b4b412d2e9456142c1be1af388e2803634d15c0
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 8b018687ec10eb725ece7d776277ea1c699dbbec
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "64834307"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524217"
 ---
 # <a name="walkthrough-create-shortcut-menus-for-bookmarks"></a>İzlenecek yol: yer işaretleri için kısayol menüleri oluşturma
   Bu izlenecek yol <xref:Microsoft.Office.Tools.Word.Bookmark> , Word için belge düzeyi özelleştirmesindeki denetimler için kısayol menülerinin nasıl oluşturulacağını gösterir. Bir Kullanıcı bir yer işareti içindeki metne sağ tıkladığında, bir kısayol menüsü görünür ve metin biçimlendirme için Kullanıcı seçeneklerini verir.
@@ -39,7 +41,7 @@ ms.locfileid: "64834307"
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]
@@ -51,9 +53,9 @@ ms.locfileid: "64834307"
 
 ### <a name="to-create-a-new-project"></a>Yeni bir proje oluşturmak için
 
-- **My Bookmark kısayol Menu**adlı bir Word belgesi projesi oluşturun. Sihirbazda **Yeni belge oluştur**' u seçin. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
+- **My Bookmark kısayol Menu** adlı bir Word belgesi projesi oluşturun. Sihirbazda **Yeni belge oluştur**' u seçin. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-     Visual Studio tasarımcıda yeni Word belgesini açar ve **Çözüm Gezgini**Için **yer işareti kısayol menü** projesini ekler.
+     Visual Studio tasarımcıda yeni Word belgesini açar ve **Çözüm Gezgini** Için **yer işareti kısayol menü** projesini ekler.
 
 ## <a name="add-text-and-bookmarks-to-the-document"></a><a name="BKMK_addtextandbookmarks"></a> Belgeye metin ve yer işaretleri ekleme
  Belgenize bazı metinler ekleyin ve ardından iki çakışan yer işareti ekleyin.
@@ -90,9 +92,9 @@ ms.locfileid: "64834307"
 
 1. Projeye bir **ŞERIT XML** öğesi ekleyin. Daha fazla bilgi için bkz. [nasıl yapılır: Şeriti özelleştirmeye başlama](../vsto/how-to-get-started-customizing-the-ribbon.md).
 
-2. **Çözüm Gezgini**' de **ThisDocument.cs** veya **ThisDocument. vb**öğesini seçin.
+2. **Çözüm Gezgini**' de **ThisDocument.cs** veya **ThisDocument. vb** öğesini seçin.
 
-3. Menü çubuğunda kodu **görüntüle**' yi seçin  >  **Code**.
+3. Menü çubuğunda kodu **görüntüle**' yi seçin  >  .
 
      **ThisDocument** sınıfı dosyası kod düzenleyicisinde açılır.
 
@@ -103,7 +105,7 @@ ms.locfileid: "64834307"
 
 5. **Çözüm Gezgini**, Şerit XML dosyasını seçin. Varsayılan olarak, Şerit XML dosyası Ribbon1.xml olarak adlandırılır.
 
-6. Menü çubuğunda kodu **görüntüle**' yi seçin  >  **Code**.
+6. Menü çubuğunda kodu **görüntüle**' yi seçin  >  .
 
      Şerit XML dosyası kod düzenleyicisinde açılır.
 
@@ -132,9 +134,9 @@ ms.locfileid: "64834307"
      [!code-csharp[Trin_Word_Document_Menus#2](../vsto/codesnippet/CSharp/trin_word_document_menus.cs/thisdocument.cs#2)]
      [!code-vb[Trin_Word_Document_Menus#2](../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/thisdocument.vb#2)]
 
-10. **Çözüm Gezgini**, Şerit kod dosyasını seçin. Varsayılan olarak, Şerit kod dosyası **Ribbon1.cs** veya **Ribbon1. vb**olarak adlandırılır.
+10. **Çözüm Gezgini**, Şerit kod dosyasını seçin. Varsayılan olarak, Şerit kod dosyası **Ribbon1.cs** veya **Ribbon1. vb** olarak adlandırılır.
 
-11. Menü çubuğunda kodu **görüntüle**' yi seçin  >  **Code**.
+11. Menü çubuğunda kodu **görüntüle**' yi seçin  >  .
 
      Şerit kod dosyası kod düzenleyicisinde açılır.
 
@@ -152,9 +154,9 @@ ms.locfileid: "64834307"
      [!code-csharp[Trin_Word_Document_Menus#6](../vsto/codesnippet/CSharp/trin_word_document_menus.cs/ribbon1.cs#6)]
      [!code-vb[Trin_Word_Document_Menus#6](../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/ribbon1.vb#6)]
 
-2. **Çözüm Gezgini**, **ThisDocument.cs** veya **ThisDocument. vb**öğesini seçin.
+2. **Çözüm Gezgini**, **ThisDocument.cs** veya **ThisDocument. vb** öğesini seçin.
 
-3. Menü çubuğunda kodu **görüntüle**' yi seçin  >  **Code**.
+3. Menü çubuğunda kodu **görüntüle**' yi seçin  >  .
 
      **ThisDocument** sınıfı dosyası kod düzenleyicisinde açılır.
 

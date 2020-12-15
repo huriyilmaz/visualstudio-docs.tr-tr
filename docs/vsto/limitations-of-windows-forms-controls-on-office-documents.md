@@ -1,5 +1,7 @@
 ---
 title: Office belgelerindeki Windows Forms denetimlerinin sınırlamaları
+description: Microsoft Office belgelerindeki Windows Forms denetim yöntemlerinin ve özelliklerinin sınırlamaları hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -21,12 +23,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ade7da21a8d07fbd429a88303ad2be375877c1ec
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 63459f4daf1f9fe717946491a997ba47510fbab8
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91583742"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524454"
 ---
 # <a name="limitations-of-windows-forms-controls-on-office-documents"></a>Office belgelerindeki Windows Forms denetimlerinin sınırlamaları
 
@@ -83,7 +85,7 @@ Windows Forms denetimleri, bir Office belgesi üzerinde genellikle aynı davran�
 |Denetim özelliği değerleri|Bir Windows formundaki denetimlerin özellikleri bir tamsayı değerine ayarlanmış olsa da, bir Word belgesindeki denetimler için tek bir olarak ayarlanır. Excel 'de denetimlerin özellik değerleri Double olarak ayarlanır. `Height` `Width` Çalışma sayfasındaki bir denetimin ve özelliği çalışma sayfasının veya ekranın boyutunu aşarsa, değer kesilir.|
 |Yeniden boyutlandırma denetimi|Belgedeki bir denetimi sekiz boyutlandırma tutamaçlarından birini kullanarak yeniden boyutlandırırsanız, yeni denetim boyutları denetim yeniden seçilene kadar **Özellikler** penceresinde yansıtılmaz.|
 |Denetim davranışı|Excel çalışma sayfasındaki denetimler, çalışma sayfası penceresi bölündüğünde tahmin edilemeyecek şekilde çalışmayabilir. Örneğin, çalışma sayfasındaki bir öğesine erişim <xref:Microsoft.Office.Tools.Excel.Controls.TextBox> yalnızca pencerelerin birinde kullanılabilir olabilir.|
-|Denetim adlandırması|Denetimleri adlandırmak için ayrılmış sözcükler kullanamazsınız. Örneğin, bir çalışma sayfasına bir ekler <xref:Microsoft.Office.Tools.Excel.Controls.Button> ve adı **sistem**olarak değiştirirseniz, projeyi oluşturduğunuzda hatalar oluşur.|
+|Denetim adlandırması|Denetimleri adlandırmak için ayrılmış sözcükler kullanamazsınız. Örneğin, bir çalışma sayfasına bir ekler <xref:Microsoft.Office.Tools.Excel.Controls.Button> ve adı **sistem** olarak değiştirirseniz, projeyi oluşturduğunuzda hatalar oluşur.|
 |Programlı olarak denetim ekleme|Çalışma zamanında belgenize denetim eklemek için denetimin oluşturucusunu kullanmayın. Bunun yerine, tarafından sağlanmış olan yardımcı yöntemlerini kullanın [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] . Örneğin, <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddButton%2A> bir çalışma sayfasına düğme eklemek için yöntemini kullanın. Bu yardımcı yöntemler tarafından desteklenmeyen bir denetim eklemek istiyorsanız, `AddControl` yöntemini kullanabilirsiniz. Daha fazla bilgi için bkz. [çalışma zamanında Office belgelerine denetim ekleme](../vsto/adding-controls-to-office-documents-at-run-time.md).|
 |Denetimleri kopyalama|Bir Windows Forms denetimini kopyalayıp çalışma zamanında bir belgeye yapıştırırsanız, boş bir kapsayıcı ActiveX denetimi belgeye yapıştırılır. Windows Forms denetimi yeni konumda görünmez ve özgün denetimin arkasındaki kod kapsayıcı ActiveX denetimine kopyalanmaz.|
 
@@ -101,7 +103,7 @@ Visual Studio tasarımcısında bir Excel çalışma sayfası veya Word belgesi 
 > [!NOTE]
 > Üçüncü taraf denetimleri, <xref:System.Runtime.InteropServices.ComVisibleAttribute> bir Office çözümünde kullanılabilmesi için özniteliği **true** olarak ayarlanmış olmalıdır.
 
-Aşağıdaki denetimler ve bileşenler **araç kutusunda**kullanılamaz:
+Aşağıdaki denetimler ve bileşenler **araç kutusunda** kullanılamaz:
 
 - <xref:System.Windows.Forms.BindingNavigator>
 

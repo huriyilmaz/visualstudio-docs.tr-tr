@@ -1,5 +1,7 @@
 ---
 title: Word nesne modeline genel bakış
+description: Word nesne modeli, Word için birincil birlikte çalışma derlemesinde sunulan ve Word ad alanında tanımlanmış sınıflardan ve arabirimlerden oluşur.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 71e66d6cda802b2b1243911e1927af751e2cdbe9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6d8ca92fdebb3504331ec38937dd79786fdb8b42
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72985385"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97523496"
 ---
 # <a name="word-object-model-overview"></a>Word nesne modeline genel bakış
   Visual Studio 'da Word çözümleri geliştirirken Word nesne modeliyle etkileşime geçin. Bu nesne modeli, Word için birincil birlikte çalışma derlemesinde sunulan sınıflardan ve arabirimlerden oluşur ve <xref:Microsoft.Office.Interop.Word> ad alanında tanımlanır.
@@ -111,7 +113,7 @@ ms.locfileid: "72985385"
 
 - <xref:Microsoft.Office.Interop.Word.Bookmark> nesneler, belgeyle birlikte kaydedilir ve bu nedenle kod çalışmayı durdurduğu veya belgeniz kapalıyken silinmez.
 
-- Yer işaretleri, <xref:Microsoft.Office.Interop.Word.View.ShowBookmarks%2A> <xref:Microsoft.Office.Interop.Word.View> nesnenin özelliği **false** veya **true**olarak ayarlanarak gizlenebilir veya görünebilir hale getirilebilir.
+- Yer işaretleri, <xref:Microsoft.Office.Interop.Word.View.ShowBookmarks%2A> <xref:Microsoft.Office.Interop.Word.View> nesnenin özelliği **false** veya **true** olarak ayarlanarak gizlenebilir veya görünebilir hale getirilebilir.
 
   Visual Studio, <xref:Microsoft.Office.Interop.Word.Bookmark> konak denetimini sağlayarak nesneyi genişletir <xref:Microsoft.Office.Tools.Word.Bookmark> . <xref:Microsoft.Office.Tools.Word.Bookmark>Konak denetimi yerel gibi davranır <xref:Microsoft.Office.Interop.Word.Bookmark> , ancak ek olaylara ve veri bağlama yeteneklerine sahiptir. Verileri bir belge üzerinde bir yer işareti denetimine, verileri bir Windows formunda metin kutusu denetimine bağladığınızda aynı şekilde bağlayabilirsiniz. Daha fazla bilgi için bkz. [Bookmark Control](../vsto/bookmark-control.md).
 

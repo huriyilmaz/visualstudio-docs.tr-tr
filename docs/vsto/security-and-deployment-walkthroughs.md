@@ -1,5 +1,7 @@
 ---
 title: Güvenlik ve dağıtım talimatları
+description: Çözümünüzün çalışmasına ve Office çözümünüzü nasıl dağıtabileceğinizi sağlayacak güvenlik ilkesi 'ni nasıl ayarlayabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 014b59efb945f6390877a2e9764e24b6c4cd639b
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 0a750aa97c371ce25c7b6797ee773e82d8ab8eb6
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810947"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524380"
 ---
 # <a name="security-and-deployment-walkthroughs"></a>Güvenlik ve dağıtım talimatları
   Aşağıdaki konularda, çözümünüzün çalışmasına ve Office çözümünüzü nasıl dağıtabileceğinizi sağlayacak güvenlik ilkesini nasıl ayarlayabileceğiniz gösterilmektedir.
@@ -41,7 +43,7 @@ ms.locfileid: "90810947"
 
 - [Nasıl yapılır: Office çözümlerini dağıtmak IÇIN IIS 'Yi hazırlama](/previous-versions/bb608629(v=vs.110)) Dağıtım bildirimi için Microsoft Internet Information Services (IIS) üzerinde MIME türünün nasıl yapılandırılacağını açıklar.
 
-- [Nasıl yapılır: dağıtılan Office çözümlerini güncelleştirme](/previous-versions/bb157871(v=vs.110)) **Yayımlama sihirbazını**kullanarak bir Office çözümünü güncelleştirme hakkında bilgi sağlar.
+- [Nasıl yapılır: dağıtılan Office çözümlerini güncelleştirme](/previous-versions/bb157871(v=vs.110)) **Yayımlama sihirbazını** kullanarak bir Office çözümünü güncelleştirme hakkında bilgi sağlar.
 
 - [Nasıl yapılır: bir Office çözümünün yükleme yolunu değiştirme](/previous-versions/bb608626(v=vs.110)) Bir Office çözümünün yükleme yolunun nasıl değiştirileceği hakkında bilgi sağlar.
 

@@ -1,5 +1,7 @@
 ---
 title: 'İzlenecek yol: Outlook için ilk VSTO eklentisini oluşturma'
+description: Microsoft Outlook için uygulama düzeyi eklentisi oluşturun. Bu özellik, hangi Outlook öğesinin açık olduğuna bakılmaksızın uygulamanın kendisi tarafından kullanılabilir.
+ms.custom: SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: baedd24b7eba14b3f2fa6496a7a681773b81cb9b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7950858d3205cf910eb09e5b0a99b5f67c71c4bd
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "69547982"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524228"
 ---
 # <a name="walkthrough-create-your-first-vsto-add-in-for-outlook"></a>İzlenecek yol: Outlook için ilk VSTO eklentisini oluşturma
   Bu izlenecek yol, Outlook Microsoft Office için VSTO eklentisi oluşturmayı gösterir. Bu tür çözümde oluşturduğunuz özellikler, hangi Outlook öğesinin açık olduğuna bakılmaksızın uygulamanın kendisi tarafından kullanılabilir. Daha fazla bilgi için bkz. [Office çözümleri geliştirmeye genel bakış &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md).
@@ -62,9 +64,9 @@ ms.locfileid: "69547982"
 
 5. Proje şablonları listesinde bir Outlook VSTO eklentisi projesi seçin.
 
-6. **Ad** kutusuna **FirstOutlookAddIn**yazın.
+6. **Ad** kutusuna **FirstOutlookAddIn** yazın.
 
-7. **Tamam**’a tıklayın.
+7. **Tamam** düğmesine tıklayın.
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**FirstOutlookAddIn** projesini oluşturur ve **ThisAddIn** kod dosyasını düzenleyicide açar.
 

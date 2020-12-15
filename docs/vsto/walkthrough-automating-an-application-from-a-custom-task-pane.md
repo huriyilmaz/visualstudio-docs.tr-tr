@@ -1,5 +1,7 @@
 ---
 title: 'İzlenecek yol: bir uygulamayı özel görev bölmesinden otomatikleştirme'
+description: Kullanıcı özel görev bölmesinde bir MonthCalendar denetimine tıkladığında bir slayda tarihler ekleyerek Microsoft PowerPoint 'i otomatikleştiren özel bir görev bölmesi oluşturun.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 52474aeebfbc03fba2a2e119e1b3366c30cf6959
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 7bb53d56a83c74a0ab1719f62377e2da426a83fd
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585086"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97522805"
 ---
 # <a name="walkthrough-automate-an-application-from-a-custom-task-pane"></a>İzlenecek yol: bir uygulamayı özel görev bölmesinden otomatikleştirme
   Bu izlenecek yol, PowerPoint 'i otomatikleştiren özel bir görev bölmesinin nasıl oluşturulacağını gösterir. Özel görev bölmesi, Kullanıcı özel görev bölmesindeki bir denetime tıkladığında tarihleri bir slayda ekler <xref:System.Windows.Forms.MonthCalendar> .
@@ -55,9 +57,9 @@ ms.locfileid: "91585086"
 
 ### <a name="to-create-a-new-project"></a>Yeni bir proje oluşturmak için
 
-1. PowerPoint eklentisi proje şablonunu kullanarak, **mdın**adlı BIR PowerPoint VSTO eklentisi projesi oluşturun. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
+1. PowerPoint eklentisi proje şablonunu kullanarak, **mdın** adlı BIR PowerPoint VSTO eklentisi projesi oluşturun. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**ThisAddIn.cs** veya **ThisAddIn. vb** kod dosyasını açar ve **Çözüm Gezgini**için **mdın** projesini ekler.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**ThisAddIn.cs** veya **ThisAddIn. vb** kod dosyasını açar ve **Çözüm Gezgini** için **mdın** projesini ekler.
 
 ## <a name="design-the-user-interface-of-the-custom-task-pane"></a>Özel görev bölmesinin kullanıcı arabirimini tasarlama
  Özel görev bölmeleri için görsel tasarımcı yoktur, ancak istediğiniz düzende bir kullanıcı denetimi tasarlayabilirsiniz. Bu izlenecek yolda daha sonra Kullanıcı denetimini özel görev bölmesine ekleyeceksiniz.
@@ -66,7 +68,7 @@ ms.locfileid: "91585086"
 
 1. **Proje** menüsünde **Kullanıcı denetimi Ekle**' ye tıklayın.
 
-2. **Yeni öğe Ekle** iletişim kutusunda, Kullanıcı denetiminin adını **MyUserControl**olarak değiştirin ve **Ekle**' ye tıklayın.
+2. **Yeni öğe Ekle** iletişim kutusunda, Kullanıcı denetiminin adını **MyUserControl** olarak değiştirin ve **Ekle**' ye tıklayın.
 
      Kullanıcı denetimi tasarımcıda açılır.
 

@@ -1,5 +1,7 @@
 ---
 title: Office 'te iş parçacığı desteği
+description: İş parçacığı Microsoft Office nesne modelinde desteklenir. Office nesne modeli iş parçacığı açısından güvenli değildir, ancak bir Office çözümünde birden çok iş parçacığı ile çalışabilir.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 3218a12add86739c76cd50f82fdda5d845e2b069
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5d44c86e17b5df79c44f85cd555b3036e925ae61
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62978773"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524187"
 ---
 # <a name="threading-support-in-office"></a>Office 'te iş parçacığı desteği
   Bu makalede, iş parçacığı Microsoft Office nesne modelinde nasıl desteklenmiş hakkında bilgi sağlanır. Office nesne modeli iş parçacığı açısından güvenli değildir, ancak bir Office çözümünde birden çok iş parçacığı ile çalışmak mümkündür. Office uygulamaları bileşen nesne modeli (COM) sunucularıdır. COM, istemcilerin rastgele iş parçacıklarında COM sunucuları çağırmasını sağlar. COM, iş parçacığı güvenli olmayan COM sunucuları için, aynı anda yalnızca bir mantıksal iş parçacığının sunucuda yürütüldüğü şekilde eşzamanlı çağrıları seri hale getirmek için bir mekanizma sağlar. Bu mekanizma tek iş parçacıklı Apartment (STA) modeli olarak bilinir. Çağrılar serileştirildiği için, sunucu meşgul olduğu veya bir arka plan iş parçacığında diğer çağrıları işlediği için çağıranlar zaman dilimleri engellenebilir.

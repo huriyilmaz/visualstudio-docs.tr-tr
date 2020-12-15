@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: program aracılığıyla Visio belgelerini açma'
+description: Visual Studio 'Yu kullanarak Open veya OpenEx yöntemleriyle bir Visio belgesini programlı bir şekilde nasıl kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: eb21d201c282461cbe82005f56bed023bb022209
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ec46f4fd7be136d16e15e9fa366b7a4cb921b62e
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85519996"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97523844"
 ---
 # <a name="how-to-programmatically-open-visio-documents"></a>Nasıl yapılır: program aracılığıyla Visio belgelerini açma
   Mevcut Microsoft Office Visio belgelerini açmak için iki yöntem vardır: Open ve OpenEx. OpenEx yöntemi, Open yöntemiyle aynıdır, ancak çağıranın belgenin nasıl açıldığını belirtebileceğiniz bağımsız değişkenler sağlar.
@@ -46,7 +48,7 @@ ms.locfileid: "85519996"
 ## <a name="compile-the-code"></a>Kodu derle
  Bu kod örneği şunları gerektirir:
 
-- Adlı bir Visio belgesi `myDrawing.vsd` `Test` , Belgelerim klasöründe (Windows XP ve önceki sürümler *My Documents* için) veya *Belgeler* klasöründe (Windows Vista için) adlı bir dizinde bulunmalıdır.
+- Adlı bir Visio belgesi `myDrawing.vsd` `Test` , Belgelerim klasöründe (Windows XP ve önceki sürümler  için) veya *Belgeler* klasöründe (Windows Vista için) adlı bir dizinde bulunmalıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visio çözümleri](../vsto/visio-solutions.md)

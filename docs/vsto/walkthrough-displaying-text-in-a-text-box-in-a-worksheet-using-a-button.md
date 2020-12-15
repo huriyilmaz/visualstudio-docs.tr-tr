@@ -1,5 +1,7 @@
 ---
 title: Düğme kullanarak çalışma sayfasındaki metin kutusu içinde metni görüntüle
+description: Microsoft Excel çalışma sayfalarında düğme ve metin kutusu kullanmayla ilgili temel bilgileri öğrenin. Visual Studio 'da Office geliştirme araçları 'nı kullanarak da Excel projeleri oluşturun.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b30eea0152b75cdd0869ececac674ee5aeee7933
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c499800efa783ce252dbf925f307bc64e814420f
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "67328713"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97522649"
 ---
 # <a name="walkthrough-display-text-in-a-text-box-in-a-worksheet-using-a-button"></a>İzlenecek yol: düğme kullanarak çalışma sayfasındaki metin kutusunda metin görüntüleme
   Bu izlenecek yol, Excel çalışma sayfalarında düğme ve metin Microsoft Office kutusu kullanmanın temel bilgilerini ve Visual Studio 'da Office geliştirme araçları 'nı kullanarak Excel projeleri oluşturmayı gösterir. Sonucu tamamlanmış bir örnek olarak görmek için bkz. [Office geliştirme örnekleri ve izlenecek yollar](../vsto/office-development-samples-and-walkthroughs.md): Excel denetimleri örneği.
@@ -38,7 +40,7 @@ ms.locfileid: "67328713"
 > [!NOTE]
 > Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Daha fazla bilgi için bkz. [Visual STUDIO IDE 'Yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]
@@ -50,9 +52,9 @@ ms.locfileid: "67328713"
 
 ### <a name="to-create-a-new-project"></a>Yeni bir proje oluşturmak için
 
-1. Excel 'i Adlandır **düğmesini**kullanarak bir Excel çalışma kitabı projesi oluşturun. **Yeni belge oluştur** ' un seçili olduğundan emin olun. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
+1. Excel 'i Adlandır **düğmesini** kullanarak bir Excel çalışma kitabı projesi oluşturun. **Yeni belge oluştur** ' un seçili olduğundan emin olun. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-     Visual Studio tasarımcıda yeni Excel çalışma kitabını açar ve **Excel düğme** projesini **Çözüm Gezgini**ekler.
+     Visual Studio tasarımcıda yeni Excel çalışma kitabını açar ve **Excel düğme** projesini **Çözüm Gezgini** ekler.
 
 ## <a name="add-controls-to-the-worksheet"></a>Çalışma sayfasına denetimler ekleme
  Bu kılavuzda, ilk çalışma sayfasında bir düğmeye ve bir metin kutusuna ihtiyacınız olacaktır.
@@ -65,7 +67,7 @@ ms.locfileid: "67328713"
 
 3. **Görünüm** menüsünde **Özellikler penceresi**' ni seçin.
 
-4. **Özellikler** penceresi açılır kutusunda **textBox1** ' in göründüğünden emin olun ve metin kutusunun **Name özelliğini metinadı** olarak değiştirin. **displayText**
+4. **Özellikler** penceresi açılır kutusunda **textBox1** ' in göründüğünden emin olun ve metin kutusunun **Name özelliğini metinadı** olarak değiştirin. 
 
 5. Bir **düğme** denetimini üzerine sürükleyin `Sheet1` ve aşağıdaki özellikleri değiştirin:
 

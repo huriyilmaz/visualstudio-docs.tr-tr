@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: çalışma sayfası aralıklarında program aracılığıyla metin arama'
+description: Visual Studio 'Yu, Microsoft Excel çalışma sayfası aralıklarında program aracılığıyla metin aramak için nasıl kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f69a0b2c7191f608e4d18c6c3990c1ce19f1ed7e
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 01ce01e76aa56a834f4f63cd2bd0f6f16c4ab03a
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584761"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524562"
 ---
 # <a name="how-to-programmatically-search-for-text-in-worksheet-ranges"></a>Nasıl yapılır: çalışma sayfası aralıklarında program aracılığıyla metin arama
   <xref:Microsoft.Office.Interop.Excel.Range.Find%2A>Nesnesinin yöntemi, <xref:Microsoft.Office.Interop.Excel.Range> Aralık içinde metin aramanızı sağlar. Bu metin, veya gibi bir çalışma sayfası hücresinde görünebilen hata dizelerinden herhangi biri de olabilir `#NULL!` `#VALUE!` . Hata dizeleri hakkında daha fazla bilgi için bkz. [hücre hata değerleri](/office/vba/excel/Concepts/Cells-and-Ranges/cell-error-values).
@@ -49,7 +51,7 @@ ms.locfileid: "91584761"
     [!code-csharp[Trin_VstcoreExcelAutomation#60](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#60)]
     [!code-vb[Trin_VstcoreExcelAutomation#60](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#60)]
 
-4. Bulunan ilk aralığı ( `firstFind` ) **hiçbir şey**ile karşılaştırın. `firstFind`Değer içermiyorsa, kod bulunan aralığı () yerine depolar `currentFind` .
+4. Bulunan ilk aralığı ( `firstFind` ) **hiçbir şey** ile karşılaştırın. `firstFind`Değer içermiyorsa, kod bulunan aralığı () yerine depolar `currentFind` .
 
     [!code-csharp[Trin_VstcoreExcelAutomation#61](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#61)]
     [!code-vb[Trin_VstcoreExcelAutomation#61](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#61)]

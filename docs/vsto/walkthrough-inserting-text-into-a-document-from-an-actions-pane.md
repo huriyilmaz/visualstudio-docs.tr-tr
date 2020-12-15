@@ -1,5 +1,7 @@
 ---
 title: 'İzlenecek yol: Eylemler bölmesinden belgeye metin ekleme'
+description: Bir Microsoft Word belgesinde bir eylemler bölmesi oluşturun. Eylemler bölmesinin girişi toplayıp belgeyi belgeye gönderdiğini iki denetim içerdiğini öğrenin.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5c65027d7670c4d6789f32eb4d9080df061d904a
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 44fd876dfad99e1a1320a5e5d743ea8e30dfdb98
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584969"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524162"
 ---
 # <a name="walkthrough-insert-text-into-a-document-from-an-actions-pane"></a>İzlenecek yol: Eylemler bölmesinden belgeye metin ekleme
   Bu izlenecek yol, bir Microsoft Office Word belgesinde bir eylemler bölmesinin nasıl oluşturulacağını göstermektedir. Eylemler bölmesi girişi toplayıp metni belgeye gönderen iki denetim içerir.
@@ -49,9 +51,9 @@ ms.locfileid: "91584969"
 
 ### <a name="to-create-a-new-project"></a>Yeni bir proje oluşturmak için
 
-1. **Temel eylemler Bölmesimi**Içeren bir Word belgesi projesi oluşturun. Sihirbazda **Yeni belge oluştur**' u seçin. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
+1. **Temel eylemler Bölmesimi** Içeren bir Word belgesi projesi oluşturun. Sihirbazda **Yeni belge oluştur**' u seçin. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-     Visual Studio tasarımcıda yeni Word belgesini açar ve **temel eylemler bölmesi** projesini **Çözüm Gezgini**ekler.
+     Visual Studio tasarımcıda yeni Word belgesini açar ve **temel eylemler bölmesi** projesini **Çözüm Gezgini** ekler.
 
 ## <a name="add-text-and-bookmarks-to-the-document"></a>Belgeye metin ve yer işaretleri ekleme
  Eylemler bölmesi belgedeki yer işaretlerine metin gönderir. Belgeyi tasarlamak için, temel form oluşturmak üzere bir metin yazın.
@@ -76,14 +78,14 @@ ms.locfileid: "91584969"
 
      **Yer Işareti denetimi Ekle** iletişim kutusu görünür.
 
-2. Paragraf işaretini seçmeden bir sözcük **adı**seçin ve **Tamam**' ı tıklatın.
+2. Paragraf işaretini seçmeden bir sözcük **adı** seçin ve **Tamam**' ı tıklatın.
 
     > [!NOTE]
     > Paragraf işareti, yer işaretinin dışında olmalıdır. Paragraf işaretleri belgede görünmüyorsa, **Araçlar** menüsüne tıklayın, **Microsoft Office Word araçları** ' nın üzerine gelin ve ardından **Seçenekler**' e tıklayın. **Görünüm** sekmesine tıklayın ve **Seçenekler** iletişim kutusunun **Biçimlendirme işaretleri** bölümündeki **paragraf işaretleri** onay kutusunu seçin.
 
-3. **Özellikler** penceresinde, **Bookmark1** öğesinin **Name** özelliğini **ShowName**olarak değiştirin.
+3. **Özellikler** penceresinde, **Bookmark1** öğesinin **Name** özelliğini **ShowName** olarak değiştirin.
 
-4. Paragraf işaretini seçmeden, sözcük **adresini**seçin.
+4. Paragraf işaretini seçmeden, sözcük **adresini** seçin.
 
 5. Şeridin **Ekle** sekmesinde, **Bağlantılar** grubunda **yer işareti**' ne tıklayın.
 
@@ -94,7 +96,7 @@ ms.locfileid: "91584969"
 
 ### <a name="to-add-an-actions-pane-control"></a>Eylemler bölmesi denetimi eklemek için
 
-1. **Çözüm Gezgini**Içinde **temel eylemler bölmesi** projesini seçin.
+1. **Çözüm Gezgini** Içinde **temel eylemler bölmesi** projesini seçin.
 
 2. **Proje** menüsünde **Yeni öğe Ekle**' ye tıklayın.
 
@@ -102,11 +104,11 @@ ms.locfileid: "91584969"
 
 #### <a name="to-add-windows-form-controls-to-the-actions-pane-control"></a>Eylemler bölmesi denetimine Windows form denetimleri eklemek için
 
-1. Eylemler bölmesi denetimi tasarımcıda görünür değilse, **InsertTextControl**öğesine çift tıklayın.
+1. Eylemler bölmesi denetimi tasarımcıda görünür değilse, **InsertTextControl** öğesine çift tıklayın.
 
 2. **Araç kutusunun** **ortak denetimler** sekmesinden, bir **etiket** denetimini eylemler bölmesi denetimine sürükleyin.
 
-3. Etiket denetiminin **Text** özelliğini **Name**olarak değiştirin.
+3. Etiket denetiminin **Text** özelliğini **Name** olarak değiştirin.
 
 4. Eylemler bölmesi denetimine bir **TextBox** denetimi ekleyin ve aşağıdaki özellikleri değiştirin.
 
@@ -115,7 +117,7 @@ ms.locfileid: "91584969"
     |**Ad**|**getName**|
     |**Boyut**|**130, 20**|
 
-5. Eylemler bölmesi denetimine ikinci bir **etiket** denetimi ekleyin ve **Text** özelliğini **Address**olarak değiştirin.
+5. Eylemler bölmesi denetimine ikinci bir **etiket** denetimi ekleyin ve **Text** özelliğini **Address** olarak değiştirin.
 
 6. Eylemler bölmesi denetimine ikinci bir **TextBox** denetimi ekleyin ve aşağıdaki özellikleri değiştirin.
 

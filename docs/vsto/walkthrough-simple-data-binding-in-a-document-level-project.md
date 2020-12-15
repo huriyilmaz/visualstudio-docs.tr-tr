@@ -1,5 +1,7 @@
 ---
 title: 'İzlenecek yol: belge düzeyi projede basit veri bağlama'
+description: Belge düzeyindeki bir projede veri bağlamanın temellerini öğrenin ve bir SQL Server veritabanındaki tek bir veri alanı Microsoft Excel 'de adlandırılmış bir aralığa bağlanır.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0c22947e572a29c2b49a5ce9bb808c3cf2fe2902
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 868a120baa8207d922d3dee55e10c8e903381e19
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584930"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524105"
 ---
 # <a name="walkthrough-simple-data-binding-in-a-document-level-project"></a>İzlenecek yol: belge düzeyi projede basit veri bağlama
   Bu izlenecek yol, belge düzeyindeki bir projede veri bağlamanın temellerini gösterir. SQL Server veritabanındaki tek bir veri alanı, Microsoft Office Excel içindeki bir adlandırılmış aralığa bağlanır. İzlenecek yol Ayrıca, tablodaki tüm kayıtlarda kaydırmanıza imkan tanıyan denetimlerin nasıl ekleneceğini gösterir.
@@ -50,23 +52,23 @@ ms.locfileid: "91584930"
 
 - SQL Server veritabanına okuma ve yazma izinleri.
 
-## <a name="create-a-new-project"></a>Yeni bir proje oluşturma
+## <a name="create-a-new-project"></a>Yeni proje oluşturma
  Bu adımda, bir Excel çalışma kitabı projesi oluşturacaksınız.
 
 ### <a name="to-create-a-new-project"></a>Yeni bir proje oluşturmak için
 
-1. Visual Basic veya C# kullanarak **basit veri bağlamamı**adlı bir Excel çalışma kitabı projesi oluşturun. **Yeni belge oluştur** ' un seçili olduğundan emin olun. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
+1. Visual Basic veya C# kullanarak **basit veri bağlamamı** adlı bir Excel çalışma kitabı projesi oluşturun. **Yeni belge oluştur** ' un seçili olduğundan emin olun. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-   Visual Studio tasarımcıda yeni Excel çalışma kitabını açar ve **basit veri bağlama projem** **Çözüm Gezgini**ekler.
+   Visual Studio tasarımcıda yeni Excel çalışma kitabını açar ve **basit veri bağlama projem** **Çözüm Gezgini** ekler.
 
 ## <a name="create-the-data-source"></a>Veri kaynağını oluşturma
  Projenize türü belirtilmiş bir veri kümesi eklemek için **veri kaynakları** penceresini kullanın.
 
 ### <a name="to-create-the-data-source"></a>Veri kaynağı oluşturmak için
 
-1. **Veri kaynakları** penceresi görünür değilse, menü çubuğunda, **View**  >  **diğer Windows**  >  **veri kaynaklarını**görüntüle ' yi seçerek bunu görüntüleyin.
+1. **Veri kaynakları** penceresi görünür değilse, menü çubuğunda,   >  **diğer Windows**  >  **veri kaynaklarını** görüntüle ' yi seçerek bunu görüntüleyin.
 
-2. **Veri kaynağı Yapılandırma Sihirbazı 'nı**başlatmak Için **Yeni veri kaynağı Ekle** ' yi seçin.
+2. **Veri kaynağı Yapılandırma Sihirbazı 'nı** başlatmak Için **Yeni veri kaynağı Ekle** ' yi seçin.
 
 3. **Veritabanı** ' nı seçin ve ardından **İleri**' ye tıklayın.
 
@@ -80,12 +82,12 @@ ms.locfileid: "91584930"
 
 8. **Müşteriler** tablosunun yanındaki onay kutusunu işaretleyin.
 
-9. **Son**'a tıklayın.
+9. **Finish (Son)** düğmesine tıklayın.
 
-   Sihirbaz, **müşteriler** tablosunu **veri kaynakları** penceresine ekler. Ayrıca, projenize **Çözüm Gezgini**görünür bir veri kümesi de ekler.
+   Sihirbaz, **müşteriler** tablosunu **veri kaynakları** penceresine ekler. Ayrıca, projenize **Çözüm Gezgini** görünür bir veri kümesi de ekler.
 
 ## <a name="add-controls-to-the-worksheet"></a>Çalışma sayfasına denetimler ekleme
- Bu izlenecek yol için, ilk çalışma sayfasında iki adlandırılmış aralığa ve dört düğmeye ihtiyacınız vardır. İlk olarak, veri kaynağına otomatik olarak bağlanması için **veri kaynakları** penceresinden iki adlandırılmış aralığı ekleyin. Sonra, **araç kutusundan**düğmeleri ekleyin.
+ Bu izlenecek yol için, ilk çalışma sayfasında iki adlandırılmış aralığa ve dört düğmeye ihtiyacınız vardır. İlk olarak, veri kaynağına otomatik olarak bağlanması için **veri kaynakları** penceresinden iki adlandırılmış aralığı ekleyin. Sonra, **araç kutusundan** düğmeleri ekleyin.
 
 ### <a name="to-add-two-named-ranges"></a>İki adlandırılmış aralık eklemek için
 
@@ -95,15 +97,15 @@ ms.locfileid: "91584930"
 
 3. **CompanyName** sütununu seçin ve ardından görüntülenen aşağı açılan oka tıklayın.
 
-4. Açılan listede **NamedRange** ' i seçin ve ardından **CompanyName** sütununu **a1**hücresine sürükleyin.
+4. Açılan listede **NamedRange** ' i seçin ve ardından **CompanyName** sütununu **a1** hücresine sürükleyin.
 
-     <xref:Microsoft.Office.Tools.Excel.NamedRange>A1 hücresinde adlı bir denetim `companyNameNamedRange` oluşturulur. **A1** Aynı zamanda, <xref:System.Windows.Forms.BindingSource> adlandırılmış `customersBindingSource` , bir tablo bağdaştırıcısı ve <xref:System.Data.DataSet> projeye bir örnek eklenir. Denetim öğesine bağlanır <xref:System.Windows.Forms.BindingSource> , bu da <xref:System.Data.DataSet> örneğe bağlanır.
+     <xref:Microsoft.Office.Tools.Excel.NamedRange>A1 hücresinde adlı bir denetim `companyNameNamedRange` oluşturulur.  Aynı zamanda, <xref:System.Windows.Forms.BindingSource> adlandırılmış `customersBindingSource` , bir tablo bağdaştırıcısı ve <xref:System.Data.DataSet> projeye bir örnek eklenir. Denetim öğesine bağlanır <xref:System.Windows.Forms.BindingSource> , bu da <xref:System.Data.DataSet> örneğe bağlanır.
 
 5. **Veri kaynakları** penceresinde **MüşteriNo** sütununu seçin ve ardından görüntülenen aşağı açılan oka tıklayın.
 
-6. Açılan listede **NamedRange** ' e tıklayın ve sonra **CustomerID** sütununu **B1**hücresine sürükleyin.
+6. Açılan listede **NamedRange** ' e tıklayın ve sonra **CustomerID** sütununu **B1** hücresine sürükleyin.
 
-7. Adlı başka bir <xref:Microsoft.Office.Tools.Excel.NamedRange> Denetim `customerIDNamedRange` **B1**hücresinde oluşturulur ve öğesine bağlanır <xref:System.Windows.Forms.BindingSource> .
+7. Adlı başka bir <xref:Microsoft.Office.Tools.Excel.NamedRange> Denetim `customerIDNamedRange` **B1** hücresinde oluşturulur ve öğesine bağlanır <xref:System.Windows.Forms.BindingSource> .
 
 ### <a name="to-add-four-buttons"></a>Dört düğme eklemek için
 
@@ -126,7 +128,7 @@ ms.locfileid: "91584930"
 
 ### <a name="to-initialize-the-controls"></a>Denetimleri başlatmak için
 
-1. **Çözüm Gezgini**, **Sheet1. vb** veya **Sheet1.cs**öğesine sağ tıklayın ve ardından kısayol menüsünde **kodu görüntüle** ' ye tıklayın.
+1. **Çözüm Gezgini**, **Sheet1. vb** veya **Sheet1.cs** öğesine sağ tıklayın ve ardından kısayol menüsünde **kodu görüntüle** ' ye tıklayın.
 
 2. Aşağıdaki kodu `Sheet1_Startup` yöntemine ekleyerek her düğme için metni ayarlayın.
 
@@ -177,9 +179,9 @@ ms.locfileid: "91584930"
 
 1. Projenizi çalıştırmak için **F5** tuşuna basın.
 
-2. İlk kaydın **a1** ve **B1**hücrelerinde göründüğünü onaylayın.
+2. İlk kaydın **a1** ve **B1** hücrelerinde göründüğünü onaylayın.
 
-3. **>**( `Button3` ) Düğmesine tıklayın ve sonraki kaydın **a1** ve **B1**hücresinde göründüğünü onaylayın.
+3. **>**( `Button3` ) Düğmesine tıklayın ve sonraki kaydın **a1** ve **B1** hücresinde göründüğünü onaylayın.
 
 4. Kaydın beklendiği gibi değiştiği onaylamak için diğer kaydırma düğmelerine tıklayın.
 

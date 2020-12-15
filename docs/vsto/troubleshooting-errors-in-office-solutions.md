@@ -1,5 +1,7 @@
 ---
 title: Office çözümlerinde hata giderme sorunları
+description: Visual Studio 'da Microsoft Office çözümleri geliştirirken oluşabilecek hataları nasıl giderebileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: troubleshooting
 f1_keywords:
@@ -20,12 +22,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4f0d4eee6714d29a1609f6f6531ab18c132d5527
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fd12c3dd9cd3c90564351dd1c64cebfe5df6e99d
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87234698"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97523033"
 ---
 # <a name="troubleshoot-errors-in-office-solutions"></a>Office çözümlerinde hata giderme sorunları
   Visual Studio 'da Office çözümleri geliştirirken aşağıdaki görevleri gerçekleştirirken sorunlarla karşılaşabilirsiniz:
@@ -111,11 +113,11 @@ ms.locfileid: "87234698"
 ### <a name="some-events-of-office-objects-are-not-accessible-when-using-c"></a>C kullanırken Office nesnelerinin bazı olaylarına erişilemez\#
  Bazı durumlarda, bir Visual C# projesinde Office birincil birlikte çalışma derlemesi (PIA) türünün bir örneğinin belirli bir olayına erişmeye çalıştığınızda aşağıdakine benzer bir derleyici hatası görebilirsiniz.
 
- "' Microsoft. Office. Interop. Excel. _Application. NewWorkbook ' ve ' Microsoft. Office. Interop. Excel. AppEvents_Event. NewWorkbook '" arasındaki belirsizlik
+ "' Microsoft.Office.Interop.Excel._Application. NewWorkbook ' ve ' Microsoft.Office.Interop.Excel.AppEvents_Event. NewWorkbook '" arasında belirsizlik
 
- Bu hata, nesnenin başka bir özelliği veya yöntemiyle aynı ada sahip bir olaya erişmeye çalıştığınız anlamına gelir. Olaya erişmek için, nesneyi *olay arabirimine*atamalısınız.
+ Bu hata, nesnenin başka bir özelliği veya yöntemiyle aynı ada sahip bir olaya erişmeye çalıştığınız anlamına gelir. Olaya erişmek için, nesneyi *olay arabirimine* atamalısınız.
 
- Olayları olan Office PIA türleri iki arabirim uygular: tüm özellikleri ve yöntemleri içeren bir çekirdek arabirim ve nesne tarafından açığa çıkarılan olayları içeren bir olay arabirimi. Bu olay arabirimleri, ve gibi, *ObjectName*olayları*n*_Event adlandırma kuralını kullanır <xref:Microsoft.Office.Interop.Excel.AppEvents_Event> <xref:Microsoft.Office.Interop.Word.ApplicationEvents2_Event> . Bir nesne üzerinde bulmayı düşündüğünüz bir olaya erişemiyorsanız, nesneyi olay arabirimine atayın.
+ Olayları olan Office PIA türleri iki arabirim uygular: tüm özellikleri ve yöntemleri içeren bir çekirdek arabirim ve nesne tarafından açığa çıkarılan olayları içeren bir olay arabirimi. Bu olay arabirimleri, ve gibi, *ObjectName* olayları *n* _Event adlandırma kuralını kullanır <xref:Microsoft.Office.Interop.Excel.AppEvents_Event> <xref:Microsoft.Office.Interop.Word.ApplicationEvents2_Event> . Bir nesne üzerinde bulmayı düşündüğünüz bir olaya erişemiyorsanız, nesneyi olay arabirimine atayın.
 
  Örneğin, <xref:Microsoft.Office.Interop.Excel.Application> nesneler bir <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.NewWorkbook> olaya ve bir özelliğe sahiptir <xref:Microsoft.Office.Interop.Excel._Application.NewWorkbook%2A> . Olayı işlemek için <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.NewWorkbook> , <xref:Microsoft.Office.Interop.Excel.Application> <xref:Microsoft.Office.Interop.Excel.AppEvents_Event> arabirimini arabirimine atayın. Aşağıdaki kod örneği, Excel için belge düzeyindeki bir projede bunun nasıl yapılacağını göstermektedir.
 
@@ -124,7 +126,7 @@ ms.locfileid: "87234698"
  Office PIA 'leri içindeki olay arabirimleri hakkında daha fazla bilgi için bkz. [Office birincil birlikte çalışma derlemelerindeki sınıflara ve arabirimlere genel bakış](/previous-versions/office/office-12//ms247299(v=office.12)).
 
 ### <a name="cannot-reference-office-pia-classes-in-projects-that-target-the-net_v40_short-or-the-net_v45"></a>Veya öğesini hedefleyen projelerde Office PIA sınıflarına başvuramaz [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)][!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]
- [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]Ya da [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] ' i hedefleyen projelerde, BIR Office PIA ' de tanımlanan bir sınıfa başvuruda bulunan kod varsayılan olarak derlenmeyecektir. PIA 'ler içindeki sınıflar, ve gibi adlandırma kuralı *ObjectName*sınıfını kullanır <xref:Microsoft.Office.Interop.Word.DocumentClass> <xref:Microsoft.Office.Interop.Excel.WorkbookClass> . Örneğin, bir Word VSTO eklenti projesinden aşağıdaki kod derlenmeyecektir.
+ [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]Ya da [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] ' i hedefleyen projelerde, BIR Office PIA ' de tanımlanan bir sınıfa başvuruda bulunan kod varsayılan olarak derlenmeyecektir. PIA 'ler içindeki sınıflar, ve gibi adlandırma kuralı *ObjectName* sınıfını kullanır <xref:Microsoft.Office.Interop.Word.DocumentClass> <xref:Microsoft.Office.Interop.Excel.WorkbookClass> . Örneğin, bir Word VSTO eklenti projesinden aşağıdaki kod derlenmeyecektir.
 
 ```vb
 Dim document As Word.DocumentClass = Globals.ThisAddIn.Application.ActiveDocument
@@ -153,7 +155,7 @@ Word.Document document = Globals.ThisAddIn.Application.ActiveDocument;
  Veya öğesini hedefleyen projeler [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] , varsayılan olarak tüm birlikte çalışma türlerini Office PIA 'ları 'ndan otomatik olarak katıştırın. Bu derleme hatası, gömülü birlikte çalışma türleri özelliği sınıflarla değil arabirimlerle birlikte çalışacağından oluşur. Office PIA 'Ları içindeki arabirimler ve sınıflar hakkında daha fazla bilgi için bkz. [Office birincil birlikte çalışma derlemelerindeki sınıflara ve arabirimlere genel bakış](/previous-versions/office/office-12/ms247299(v=office.12)). Office projelerinde gömülü birlikte çalışma türleri özelliği hakkında daha fazla bilgi için bkz. [Office çözümleri tasarlama ve oluşturma](../vsto/designing-and-creating-office-solutions.md).
 
 ### <a name="references-to-office-classes-are-not-recognized"></a>Office sınıflarına yönelik başvurular tanınmıyor
- Örneğin, uygulama gibi bazı sınıf adları, ve gibi birden çok ad alanında <xref:Microsoft.Office.Interop.Word> bulunur <xref:System.Windows.Forms> . Bu nedenle, **Imports** / proje şablonlarının en üstündeki Imports**using** deyimleri, bir kısayol niteleyen sabiti içerir, örneğin:
+ Örneğin, uygulama gibi bazı sınıf adları, ve gibi birden çok ad alanında <xref:Microsoft.Office.Interop.Word> bulunur <xref:System.Windows.Forms> . Bu nedenle,  / proje şablonlarının en üstündeki Imports **using** deyimleri, bir kısayol niteleyen sabiti içerir, örneğin:
 
  [!code-csharp[Trin_VstcoreTroubleshootingWord#2](../vsto/codesnippet/CSharp/Trin_VstcoreTroubleshootingWordCS/ThisDocument.cs#2)]
  [!code-vb[Trin_VstcoreTroubleshootingWord#2](../vsto/codesnippet/VisualBasic/Trin_VstcoreTroubleshootingWordVB/ThisDocument.vb#2)]
@@ -197,7 +199,7 @@ Word.Document document = Globals.ThisAddIn.Application.ActiveDocument;
  Bir UNC ağ konumunda Excel veya Word için belge düzeyi projesi oluşturursanız, belgenin konumunu Excel veya Word 'deki güvenilir konumlar listesine eklemeniz gerekir. Aksi takdirde, Visual Studio 'da Projeyi çalıştırmaya veya hata ayıklamanıza çalıştığınızda özelleştirme yüklenmez. Güvenilen konumlar hakkında daha fazla bilgi için bkz. [belgelere güven verme](../vsto/granting-trust-to-documents.md).
 
 ### <a name="threads-are-not-stopped-correctly-after-debugging"></a>Hata ayıkladıktan sonra iş parçacıkları doğru şekilde durdurulmaz
- Visual Studio 'da Office projeleri, hata ayıklayıcının programı doğru şekilde kapatmasını sağlayan bir iş parçacığı adlandırma kuralı izler. Çözümünüzde iş parçacıkları oluşturursanız, hata ayıklamayı durdurduğunuzda bu iş parçacıklarının doğru şekilde işlendiğinden emin olmak için her bir iş parçacığını önek VSTA_ olarak adlandırın. Örneğin, `Name` bir ağ olayını bekleyen bir iş parçacığının özelliğini **VSTA_NetworkListener**olarak ayarlayabilirsiniz.
+ Visual Studio 'da Office projeleri, hata ayıklayıcının programı doğru şekilde kapatmasını sağlayan bir iş parçacığı adlandırma kuralı izler. Çözümünüzde iş parçacıkları oluşturursanız, hata ayıklamayı durdurduğunuzda bu iş parçacıklarının doğru şekilde işlendiğinden emin olmak için her bir iş parçacığını önek VSTA_ olarak adlandırın. Örneğin, `Name` bir ağ olayını bekleyen bir iş parçacığının özelliğini **VSTA_NetworkListener** olarak ayarlayabilirsiniz.
 
 ### <a name="cannot-run-or-debug-any-office-solution-on-the-development-computer"></a>Geliştirme bilgisayarında herhangi bir Office çözümü çalıştırılamaz veya hata ayıklaması yapılamaz
  Geliştirme bilgisayarınızda bir Office projesi çalıştıramayabilir veya geliştirirseniz, aşağıdaki hata iletisini görebilirsiniz.
