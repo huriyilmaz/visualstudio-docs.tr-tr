@@ -1,5 +1,7 @@
 ---
 title: Web sitesi destek şablonları | Microsoft Docs
+description: Web sitesi destek şablonları hakkında bilgi edinin. Visual Studio Web sitesi projesi ve öğe şablonları, yeniden kullanılabilir ve özelleştirilebilir Web sitesi projesi ve öğe saplamaları sağlar.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0e3c139ae6f2f9ec618e6382a1551a9e35eee7ec
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d7bb3d669dadf7c33fa81231adf26ae30e999c51
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80703462"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97487861"
 ---
 # <a name="web-site-support-templates"></a>Web Sitesi Destek Şablonları
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Web sitesi projesi ve öğe şablonları, yeni Web sitesi projeleri ve öğeleri sıfırdan oluşturma gereksinimini ortadan kaldırarak geliştirme sürecini hızlandıran, yeniden kullanılabilir ve özelleştirilebilir Web sitesi projesi ve öğe saplamaları sağlar. Şablonlar hakkında daha fazla bilgi için [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] bkz. [Proje ve öğe şablonları oluşturma](../../ide/creating-project-and-item-templates.md).
@@ -40,7 +42,7 @@ ms.locfileid: "80703462"
 - Web hizmeti projeleri
 
 ### <a name="empty-web-site-projects"></a>Boş Web sitesi projeleri
- Bu dosyalar, **Dosya**yeni Web sitesi ' ni seçtikten sonra kullanılabilen **boş Web sitesi** komutuna yanıt olarak yeni bir boş Web sitesi oluşturur  >  **New Web Site**:
+ Bu dosyalar, **Dosya** yeni Web sitesi ' ni seçtikten sonra kullanılabilen **boş Web sitesi** komutuna yanıt olarak yeni bir boş Web sitesi oluşturur  >  :
 
 - EmptyWeb. vstemplate
 
@@ -51,7 +53,7 @@ ms.locfileid: "80703462"
      Bu dosya, proje şablonu sisteminin yapıtıdır. EmptyWeb. vstemplate dosyasındaki proje dosyası başvurusunu karşılar.
 
 ### <a name="web-site-projects"></a>Web sitesi projeleri
- Bu dosyalar, **Dosya**yeni Web sitesi ' ni seçtikten sonra kullanılabilir olan **ASP.NET Web sitesi** komutuna yanıt olarak yeni bir Web sitesi oluşturur  >  **New Web Site**:
+ Bu dosyalar, **Dosya** yeni Web sitesi ' ni seçtikten sonra kullanılabilir olan **ASP.NET Web sitesi** komutuna yanıt olarak yeni bir Web sitesi oluşturur  >  :
 
 - Default.aspx
 
@@ -74,7 +76,7 @@ ms.locfileid: "80703462"
      Bu dosya, proje şablonu sisteminin yapıtıdır. WebApplication. vstemplate dosyasındaki proje dosyası başvurusunu karşılar.
 
 ### <a name="web-service-projects"></a>Web hizmeti projeleri
- Bu dosyalar, **Dosya**yeni Web sitesi ' ni seçtikten sonra kullanılabilir olan **ASP.NET Web hizmeti** komutuna yanıt olarak yeni bir Web sitesi oluşturur  >  **New Web Site**:
+ Bu dosyalar, **Dosya** yeni Web sitesi ' ni seçtikten sonra kullanılabilir olan **ASP.NET Web hizmeti** komutuna yanıt olarak yeni bir Web sitesi oluşturur  >  :
 
 - Service. asmx
 

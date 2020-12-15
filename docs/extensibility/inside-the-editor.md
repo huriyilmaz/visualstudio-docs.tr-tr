@@ -1,5 +1,7 @@
 ---
 title: Düzenleyicinin İçinde
+description: Düzenleyicinin alt sistemleri ve özellikleri hakkında bilgi edinin. Visual Studio düzenleyicisinin özelliklerini genişletebilirsiniz.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: bba0b5192df53b6ec837b0030c7b236bf8e08dea
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 14193c0806c4b45f721ee97b101969de8437448d
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80710323"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97487536"
 ---
 # <a name="inside-the-editor"></a>Düzenleyicinin içinde
 
@@ -59,13 +61,13 @@ Metin modeli alt sistemi, metni temsil eden ve işlemesini etkinleştirmeye soru
 
 Metin modeli alt sistemi, Kullanıcı arabirimi (UI) kavramlarından muaf değildir. Örneğin, metin biçimlendirme veya metin düzeninden sorumlu değildir ve metinle ilişkili olabilecek görsel donatılarla ilgili bir bilgi içermez.
 
-Metin modeli alt sisteminin ortak türleri *Microsoft.VisualStudio.Text.Data.dll* ve *Microsoft.VisualStudio.CoreUtility.dll*bulunur ve yalnızca .NET Framework temel sınıf KITAPLıĞıNA ve Managed Extensibility Framework (MEF) bağımlıdır.
+Metin modeli alt sisteminin ortak türleri *Microsoft.VisualStudio.Text.Data.dll* ve *Microsoft.VisualStudio.CoreUtility.dll* bulunur ve yalnızca .NET Framework temel sınıf KITAPLıĞıNA ve Managed Extensibility Framework (MEF) bağımlıdır.
 
 ### <a name="text-view-subsystem"></a>Metin görünümü alt sistemi
 
 Metin görünümü alt sistemi, metin biçimlendirme ve görüntüleme sorumludur. Bu alt sistemdeki türler, türlerin Windows Presentation Foundation (WPF) bağımlı olmasına bağlı olarak iki katmana bölünür. En önemli türler, <xref:Microsoft.VisualStudio.Text.Editor.ITextView> <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextView> görüntülenecek metin satırları kümesini ve ayrıca giriş işaretini, SEÇIMI ve WPF Kullanıcı arabirimi öğelerini kullanarak metni donatma özelliklerini denetleyen ve ' dir. Bu alt sistem ayrıca metin görüntüleme alanı etrafında kenar boşlukları sağlar. Bu kenar boşlukları genişletilebilir ve farklı türde içerik ve görsel etkiler içerebilir. Kenar boşluklarının örnekleri satır numarası ekranları ve kaydırma çubuklardır.
 
-Metin görünümü alt sisteminin ortak türleri *Microsoft.VisualStudio.Text.UI.dll* ve *Microsoft.VisualStudio.Text.UI.Wpf.dll*içindedir. İlk derleme, platformdan bağımsız öğeleri içerir ve ikincisi WPF 'e özgü öğeleri içerir.
+Metin görünümü alt sisteminin ortak türleri *Microsoft.VisualStudio.Text.UI.dll* ve *Microsoft.VisualStudio.Text.UI.Wpf.dll* içindedir. İlk derleme, platformdan bağımsız öğeleri içerir ve ikincisi WPF 'e özgü öğeleri içerir.
 
 ### <a name="classification-subsystem"></a>Sınıflandırma alt sistemi
 
@@ -264,9 +266,9 @@ Açılır donatılanlar, metin görünümünün üzerinde küçük bir pencerede
 
 ### <a name="projection"></a><a name="projection"></a> Yansıtma
 
-Projeksiyon, aslında metin depolayamayan farklı bir tür metin arabelleği oluşturmak için kullanılan bir tekniktir, bunun yerine metni diğer metin arabelleğinden birleştirir. Örneğin, bir yansıtma arabelleği iki diğer arabellekten metin birleştirmek ve sonucu yalnızca bir arabellekte olduğu gibi sunmak ya da bir arabellekteki metnin parçalarını gizlemek için kullanılabilir. Projeksiyon arabelleği, başka bir yansıtma arabelleğine kaynak arabelleği olarak davranabilir. Projeksiyon ile ilişkili bir arabellek kümesi, metni birçok farklı şekilde yeniden düzenlemek için oluşturulabilir. (Böyle bir küme, *arabellek grafiği*olarak da bilinir.) Visual Studio metin anahat oluşturma özelliği, daraltılmış metni gizlemek için bir yansıtma arabelleği kullanılarak uygulanır ve ASP.NET Pages için Visual Studio Düzenleyicisi, Visual Basic ve C# gibi gömülü dilleri desteklemek için projeksiyonu kullanır.
+Projeksiyon, aslında metin depolayamayan farklı bir tür metin arabelleği oluşturmak için kullanılan bir tekniktir, bunun yerine metni diğer metin arabelleğinden birleştirir. Örneğin, bir yansıtma arabelleği iki diğer arabellekten metin birleştirmek ve sonucu yalnızca bir arabellekte olduğu gibi sunmak ya da bir arabellekteki metnin parçalarını gizlemek için kullanılabilir. Projeksiyon arabelleği, başka bir yansıtma arabelleğine kaynak arabelleği olarak davranabilir. Projeksiyon ile ilişkili bir arabellek kümesi, metni birçok farklı şekilde yeniden düzenlemek için oluşturulabilir. (Böyle bir küme, *arabellek grafiği* olarak da bilinir.) Visual Studio metin anahat oluşturma özelliği, daraltılmış metni gizlemek için bir yansıtma arabelleği kullanılarak uygulanır ve ASP.NET Pages için Visual Studio Düzenleyicisi, Visual Basic ve C# gibi gömülü dilleri desteklemek için projeksiyonu kullanır.
 
-<xref:Microsoft.VisualStudio.Text.Projection.IProjectionBuffer>Kullanılarak oluşturulur <xref:Microsoft.VisualStudio.Text.Projection.IProjectionBufferFactoryService> . Projeksiyon arabelleği, <xref:Microsoft.VisualStudio.Text.ITrackingSpan> *kaynak yayılmaları*olarak bilinen sıralı nesne dizisiyle temsil edilir. Bu yayılmalar içeriği bir dizi karakter olarak sunulur. Kaynak yayılma alanlarının çizildiği metin arabelleklerinin adı *kaynak arabelleklerdir*. Bir yansıtma arabelleğinin istemcilerinin, sıradan bir metin arabelleğinden farklı olduğunu farkında olması gerekmez.
+<xref:Microsoft.VisualStudio.Text.Projection.IProjectionBuffer>Kullanılarak oluşturulur <xref:Microsoft.VisualStudio.Text.Projection.IProjectionBufferFactoryService> . Projeksiyon arabelleği, <xref:Microsoft.VisualStudio.Text.ITrackingSpan> *kaynak yayılmaları* olarak bilinen sıralı nesne dizisiyle temsil edilir. Bu yayılmalar içeriği bir dizi karakter olarak sunulur. Kaynak yayılma alanlarının çizildiği metin arabelleklerinin adı *kaynak arabelleklerdir*. Bir yansıtma arabelleğinin istemcilerinin, sıradan bir metin arabelleğinden farklı olduğunu farkında olması gerekmez.
 
 Projeksiyon arabelleği, kaynak arabelleklerindeki metin değiştirme olaylarını dinler. Bir kaynak yayılma alanındaki metin değiştiğinde, projeksiyon arabelleği değiştirilen metin koordinatlarını kendi koordinatlarına eşler ve uygun metin değişikliği olaylarını yükseltir. Örneğin, şu içeriğe sahip olan A ve B kaynak arabelleklerini göz önünde bulundurun:
 

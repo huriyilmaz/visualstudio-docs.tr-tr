@@ -1,5 +1,7 @@
 ---
 title: 'Test alanı 6: silme | Microsoft Docs'
+description: Bu kaynak denetimi test alanı, Visual Studio kaynak denetimi eklentiniz için Çözüm Gezgini silme eylemlerini içerir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +13,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9902ab9d1cb9c28ddf67b83590a4cccd5f6562f2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1371472a4dec265b5e476d96a32cb725e91ce7fe
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80704503"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97487562"
 ---
 # <a name="test-area-6-delete"></a>Test Alanı 6: Sil
 Bu kaynak denetimi eklentisi test alanı silme eylemlerini içerir.
 
- Kaynak denetimi **Çözüm Gezgini**eylemleri silme işlemlerine yanıt verir.
+ Kaynak denetimi **Çözüm Gezgini** eylemleri silme işlemlerine yanıt verir.
 
  Silinebilecek öğelerin listesi aşağıda verilmiştir:
 
@@ -31,12 +33,12 @@ Bu kaynak denetimi eklentisi test alanı silme eylemlerini içerir.
 
 - Project
 
-  Proje türüne bağlı olarak, projeyi kaldırma (dosyaları diskte bırakır) veya projeyi **silme** (diskteki dosyaları **kaldırma** ) seçeneğiniz olabilir. Her iki eylem de **Çözüm Gezgini**proje veya öğeyi kaldırır.
+  Proje türüne bağlı olarak, projeyi kaldırma (dosyaları diskte bırakır) veya projeyi **silme** (diskteki dosyaları **kaldırma** ) seçeneğiniz olabilir. Her iki eylem de **Çözüm Gezgini** proje veya öğeyi kaldırır.
 
 ## <a name="expected-behavior"></a>Beklenen davranış
  Silme testi alanındaki test çalışmaları için beklenen davranış:
 
-- Silinen öğe artık **Çözüm Gezgini**içinde görünür değil.
+- Silinen öğe artık **Çözüm Gezgini** içinde görünür değil.
 
 - Silinen projenin veya öğenin üst öğesi gerektiğinde kullanıma alındı (muhtemelen bir istem ile.)
 

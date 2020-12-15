@@ -1,5 +1,7 @@
 ---
 title: VSPackage kaydı | Microsoft Docs
+description: Paketlerin, Visual Studio 'Nun yüklendikleri ve kayıt defterine bilgi yazarak yüklenmesi gereken VSPackage kaydı hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5941a0bc5d9f9f983a616dcc22cf1260d0911fa8
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: 88c8294042bb61939a52f4053f5b27ae915e01df
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012132"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97487991"
 ---
 # <a name="vspackage-registration"></a>VSPackage Kaydı
 VSPackages [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , yüklü olmaları ve yüklenmesi gerektiğini tavsiye etmelidir. Bu işlem, kayıt defterine bilgi yazılarak gerçekleştirilir. Bu, bir yükleyicinin tipik bir işidir.
@@ -40,7 +42,7 @@ VSPackages [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , yükl�
 > [!NOTE]
 > RegPkg aracı yeniden dağıtılabilir değildir ve kullanıcının sistemine VSPackage kaydetmek için kullanılamaz.
 
-## <a name="why-vspackages-should-not-self-register-at-install-time"></a>Neden VSPackages, yüklemesinin zamanında kendiliğinden Kaydolmamalıdır
+## <a name="why-vspackages-should-not-self-register-at-install-time"></a>Neden VSPackages, yüklemesi sırasında Self-Register olmamalıdır
  VSPackage yükleyicileriniz kendi kendine kayda dayanmamalıdır. İlk bakışta, VSPackage 'un kayıt defteri değerlerinin yalnızca VSPackage içinde tutulması iyi bir fikir gibi görünüyor. Geliştiricilerin rutin iş ve test için kullanılabilir kayıt defteri değerlerine ihtiyacı verildiğinden, yükleyicideki kayıt defteri verilerinin ayrı bir kopyasının korunmasından kaçınmak mantıklı olur. Yükleyici, kayıt defteri değerlerini yazmak için VSPackage 'un kendisini kullanır.
 
  Teorik olarak, kendi kendine kayıt, VSPackage yüklemesine uygun olmayan birçok kusura sahiptir:

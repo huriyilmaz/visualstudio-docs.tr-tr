@@ -1,5 +1,7 @@
 ---
 title: VSıX renk derleyicisi | Microsoft Docs
+description: Visual Studio temalarının renklerini bir. pkgdef dosyasına bağlayan bir konsol uygulaması olan Visual Studio Uzantı rengi derleyicisi aracı hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 99395da7-ec34-491d-9baa-0590d23283ce
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5059a15c483f648c2248321c7ba8271a634d0c69
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e50cd1f1c8c3ff7f86cd00e4b384f548c7ec9d21
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85536103"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97488004"
 ---
 # <a name="vsix-color-compiler"></a>VSIX Renk Derleyicisi
 Visual Studio Uzantı rengi derleyici aracı, var olan Visual Studio temaları için renkleri temsil eden bir. xml dosyası alan ve bu renklerin Visual Studio 'da kullanılabilmesi için bir. pkgdef dosyasına bağlayan bir konsol uygulamasıdır. . Xml dosyaları arasındaki farkları karşılaştırmak çok kolay olduğundan, bu araç kaynak denetimindeki özel renkleri yönetmek için yararlıdır. Ayrıca derleme ortamlarına, derleme çıkışının geçerli bir. pkgdef dosyası olması için de bağlanabilir.
@@ -79,7 +81,7 @@ Visual Studio Uzantı rengi derleyici aracı, var olan Visual Studio temaları i
 |Name|Istenir Kategorinin adı|
 |GUID|Istenir Kategorinin GUID 'SI (GUID biçimlendirmesine uymalıdır)|
 
- **Color**
+ **Renk**
 
  \<Color>Öğesi bir bileşen veya Kullanıcı arabirimi durumu için bir renk tanımlar. Bir renk için tercih edilen adlandırma şeması [UI türü] [State]. Gereksiz olduğu için "Color" sözcüğünü kullanmayın. Renk, öğe türünü ve durumları ya da rengin uygulanacağı "durumu" açıkça göstermelidir. Bir renk boş olmamalı ve bir ve öğelerinin bir veya her ikisini de içermelidir \<Background> \<Foreground> . Renk öğeleri şöyle tanımlanır:
 

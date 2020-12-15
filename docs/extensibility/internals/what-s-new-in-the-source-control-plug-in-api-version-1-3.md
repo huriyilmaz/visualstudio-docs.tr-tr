@@ -1,5 +1,6 @@
 ---
 title: "&apos;Kaynak denetimi EKLENTISI apı 1,3 ' deki yenilikler"
+description: Daha gelişmiş denetim sağlamak için yeni işlevleri sunan kaynak denetimi eklentisi API 'SI sürüm 1,3 ' deki yenilikler hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ac171a4ba33ed7941f2f5887ccf61ca589c31fd3
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 491c35a1a99af9b3271e8b2036f7d0c6f8f57908
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037614"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97487796"
 ---
 # <a name="what39s-new-in-the-source-control-plug-in-api-version-13"></a>Kaynak denetimi eklentisi API sürüm 1,3 ' deki yenilikler&#39;
 Kaynak denetimi eklentisi API sürümü 1,3, daha gelişmiş denetim sağlamak için aşağıdaki yeni işlevleri sunmaktadır.

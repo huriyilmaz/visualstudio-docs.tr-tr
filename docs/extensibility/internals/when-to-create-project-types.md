@@ -1,5 +1,7 @@
 ---
 title: Proje türleri ne zaman oluşturulur | Microsoft Docs
+description: Kullanıcılarınız için Visual Studio 'Yu özelleştirmek üzere yeni bir proje türünün gerekli olup olmadığını belirlemeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: cd5caea4d07ff34af8c8cee83c24ae20e8b8f108
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: 458ca77ebcd8017b9834a8925edec255ca04cc13
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012015"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97487835"
 ---
 # <a name="when-to-create-project-types"></a>Proje Türlerinin Oluşturulacağı Durumlar
 Yeni bir proje türü oluşturmak, kullanıcılarınız için özelleştirme için temel sağlar [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Ancak, yeni bir proje türü oluşturmak tüm özelleştirmeler için gerekli değildir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Aşağıdaki kılavuzlar, senaryonuz için yeni bir proje türünün gerekli olup olmadığını belirlemenize yardımcı olmalıdır.
@@ -27,7 +29,7 @@ Yeni bir proje türü oluşturmak, kullanıcılarınız için özelleştirme iç
 
 - Hata ayıklama desteği sunar.
 
-- Proje öğelerini **Çözüm Gezgini**görüntüleyin.
+- Proje öğelerini **Çözüm Gezgini** görüntüleyin.
 
 - Proje veya **Yeni proje** **Aç** iletişim kutusunu kullanın.
 

@@ -2,19 +2,19 @@
 title: Performansı artırmaya yönelik ipuçları
 description: Performansı artırmaya yardımcı olmak için kullanmadığınız belirli Visual Studio özelliklerini iyileştirmeyi öğrenin.
 ms.custom: SEO-VS-2020
-ms.date: 08/13/2020
+ms.date: 12/14/2020
 ms.topic: conceptual
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6f4c36987e198be576d843b984be14ddea824919
-ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
+ms.openlocfilehash: b3655407ce94395f74ebe5362e7006075ef1e790
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96479621"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97488186"
 ---
 # <a name="visual-studio-performance-tips-and-tricks"></a>Visual Studio performans ipuçları ve püf noktaları
 
@@ -35,17 +35,17 @@ Visual Studio, önceki oturumda açık kalan belgeleri otomatik olarak yeniden a
 
 Otomatik belge geri yükleme bir çözümün önemli ölçüde daha yavaş yüklenmesine neden olduğunda, Visual Studio sizi sarı bir çubukta bilgilendirir. Aşağıdaki adımları izleyerek otomatik dosya yeniden açmayı devre dışı bırakabilirsiniz:
 
-1. **Tools**  >  **Seçenekler** iletişim kutusunu açmak için Araçlar **seçeneklerini** belirleyin.
+1.   >  **Seçenekler** iletişim kutusunu açmak için Araçlar **seçeneklerini** belirleyin.
 
 1. **Projeler ve çözüm**  >  **genel** sayfasında, **çözüm yükünden belgeleri yeniden aç** seçimini kaldırın.
 
 Otomatik dosya geri yüklemeyi devre dışı bırakırsanız, açmak istediğiniz dosyalara gitmenin hızlı bir yolu [Şu komutlardan birini](../ide/go-to.md) kullanmaktır:
 
-- İşlevlere genel **Git** ' **i seçerek**  >  **Go To**  >  **Tümünü git**' i seçin veya **CTRL** + **T**' ye basın.
+- İşlevlere genel **Git** ' **i seçerek**  >    >  **Tümünü git**' i seçin veya **CTRL** + **T**' ye basın.
 
-- **Düzenle** git ' i kullanarak bir çözümdeki son düzenleme konumuna atlayın  >  **Go To**  >  ve **son düzenleme konumuna gidin** veya **CTRL** + **SHIFT** + **Backspace** tuşuna basın.
+- **Düzenle** git ' i kullanarak bir çözümdeki son düzenleme konumuna atlayın  >    >  ve **son düzenleme konumuna gidin** veya **CTRL** + **SHIFT** + **Backspace** tuşuna basın.
 
-- Bir çözümde son ziyaret edilen dosyaların listesini görmek için **en son dosyayı git** ' i kullanın. **Edit**  >  **Go To**  >  **Son dosyaya gitmek** için Düzenle git ' i seçin veya **CTRL** + **1**, **CTRL** + **R** tuşlarına basın.
+- Bir çözümde son ziyaret edilen dosyaların listesini görmek için **en son dosyayı git** ' i kullanın.   >    >  **Son dosyaya gitmek** için Düzenle git ' i seçin veya **CTRL** + **1**, **CTRL** + **R** tuşlarına basın.
 
 ## <a name="configure-debugging-options"></a>Hata ayıklama seçeneklerini yapılandırma
 
@@ -55,7 +55,7 @@ Genellikle hata ayıklama oturumları sırasında belleği azaldıysanız, bir v
 
     En basit iyileştirme, yalnızca projeniz için sembolleri yükleyen **yalnızca kendi kodum** özelliğini etkinleştirmektir. Bu özelliğin etkinleştirilmesi, yönetilen uygulamalarda hata ayıklama (.NET) için önemli miktarda bellek kaydedilmesine neden olabilir. Bu seçenek, bazı proje türlerinde varsayılan olarak zaten etkindir.
 
-    **Yalnızca kendi kodum** etkinleştirmek için **Araçlar**  >  **Seçenekler**  >  **Genel hata ayıklama**  >  **General**' ı seçin ve ardından **yalnızca kendi kodum etkinleştir**' i seçin.
+    **Yalnızca kendi kodum** etkinleştirmek için **Araçlar**  >  **Seçenekler**  >  **Genel hata ayıklama**  >  ' ı seçin ve ardından **yalnızca kendi kodum etkinleştir**' i seçin.
 
 - **Yüklenecek sembolleri belirtin**
 
@@ -71,7 +71,7 @@ Genellikle hata ayıklama oturumları sırasında belleği azaldıysanız, bir v
 
     Kullandıktan sonra CPU profil oluşturmayı devre dışı bırakmanız önerilir. Bu özellik, büyük miktarlarda kaynak tüketebilir. CPU profili oluşturma etkinleştirildikten sonra, bu durum sonraki hata ayıklama oturumlarında kalıcı hale getirilir, bu nedenle tamamlandığında açıkça devre dışı bırakır. Belirtilen özelliklere ihtiyacınız yoksa hata ayıklarken tanılama araçlarını devre dışı bırakarak bazı kaynakları kaydedebilirsiniz.
 
-    **Tanılama araçları** devre dışı bırakmak için bir hata ayıklama oturumu başlatın, **Araçlar**  >  **Seçenekler**  >  **Tanılama araçları etkinleştir**' i seçin ve seçeneğin seçimini kaldırın.
+    **Tanılama araçları** devre dışı bırakmak için bir hata ayıklama oturumu başlatın,   >  genel olarak hata ayıklama Araçlar **seçeneklerini** belirleyin  >    >  ve ardından **hata ayıklama sırasında tanılama araçları etkinleştir** seçeneğini kaldırın.
 
     Daha fazla bilgi için bkz. [profil oluşturma araçları](../profiling/profiling-feature-tour.md).
 
@@ -129,7 +129,7 @@ Bazı araçlar veya uzantılar, performansı artırmak için kapatılabilir.
 
     [**Sözcük kaydırması**](./reference/how-to-manage-word-wrap-in-the-editor.md) , kod Düzenleyicisi penceresinin geçerli genişliğinin ötesinde uzun bir kod satırının bölümünü görüntüler. Sözcük kaydırması varsayılan olarak açık.
 
-    Üzerinde çalışmakta olduğunuz bir proje için sözcük kaydırmayı devre dışı bırakmak için **Edit**  >  **Gelişmiş**  >  **sözcük kaydırmayı** Düzenle ' ye gidin. (Aynı menü komutlarını kullanarak bu ayarı değiştirebilirsiniz.)
+    Üzerinde çalışmakta olduğunuz bir proje için sözcük kaydırmayı devre dışı bırakmak için   >  **Gelişmiş**  >  **sözcük kaydırmayı** Düzenle ' ye gidin. (Aynı menü komutlarını kullanarak bu ayarı değiştirebilirsiniz.)
 
     Tüm projeler için sözcük kaydırmayı devre dışı bırakmak için, **Araçlar**  >  **Seçenekler**  >  **genel**  >  **metin Düzenleyicisi**  >  **tüm diller**  >  **genel**' e gidin ve **Ayarlar** bölümünde, **sözcük kaydır** seçeneğinin seçimini kaldırın.
 
@@ -137,7 +137,7 @@ Bazı araçlar veya uzantılar, performansı artırmak için kapatılabilir.
 
     XAML Tasarımcısı varsayılan olarak etkindir, ancak yalnızca bir *. xaml* dosyası açarsanız kaynakları tüketir. XAML dosyaları ile çalışıyorsanız ancak tasarımcı işlevselliğini kullanmak istemiyorsanız, bazı belleği boşaltmak için bu özelliği devre dışı bırakın.
 
-    XAML Tasarımcısı devre dışı bırakmak için, **Tools**  >  **Options**  >  **XAML Designer**  >  **XAML Tasarımcısı etkinleştirmek** XAML Tasarımcısı Araçlar Seçenekler ' e gidin ve seçeneğin seçimini kaldırın.
+    XAML Tasarımcısı devre dışı bırakmak için,   >    >    >  **XAML Tasarımcısı etkinleştirmek** XAML Tasarımcısı Araçlar Seçenekler ' e gidin ve seçeneğin seçimini kaldırın.
 
 - **İş yüklerini kaldır**
 

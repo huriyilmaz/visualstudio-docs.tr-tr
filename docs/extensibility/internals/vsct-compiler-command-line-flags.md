@@ -1,5 +1,7 @@
 ---
-title: VSCT derleyici komut satırı bayrakları | Microsoft Docs
+title: VSCT derleyicisi Command-Line bayrakları | Microsoft Docs
+description: Visual Studio komut tablosu derleyicisi,. vsct dosyalarının başarıyla derlemesini sağlamak için komut satırı seçenekleri sağlar.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e4ee29710049453c3163c366eccf96e257b6028d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8d60b248a4941d176ac6ba4e808a94dbc67efbe7
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80703963"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97488017"
 ---
 # <a name="vsct-compiler-command-line-flags"></a>VSCT Derleyici Komut Satırı Bayrakları
 Visual Studio komut tablosu (VSCT) derleyicisi,. vsct dosyalarının başarıyla derlemesini sağlamak için komut satırı anahtarları sağlar.
@@ -59,7 +61,7 @@ Syntax: vsct <infile> [<outfile>] [-S[symbols file]] [-D<preprocessor-define>]*
 |-D|Ek tanımlanmış sembolleri belirtin.|
 |-I|Dosya başvurularını çözümlerken kullanılması gereken ek ekleme yollarını belirtin.|
 |-L|<xref:System.Globalization.CultureInfo>Kültür adını (örneğin, "en-US") belirtin.|
-|-E|C# nesnelerini, komut öğeleri için belirtilen ad alanında, izleyen [C&#124;H&#124;N]:*filename*WHERE C = C#, H = C++ üstbilgisi, N = Namespace. C# için ad alanı gereklidir.|
+|-E|C# nesnelerini, komut öğeleri için belirtilen ad alanında, izleyen [C&#124;H&#124;N]:*filename* WHERE C = C#, H = C++ üstbilgisi, N = Namespace. C# için ad alanı gereklidir.|
 |-v|Ayrıntılı çıkış.|
 
  -L anahtarı derleyiciye, belirtilen kültür adına karşılık gelen binary. CTO dosyasını oluşturmak için bir dize grubu seçmesini söyler <xref:System.Globalization.CultureInfo> . Belirtilen kültür adı,. vsct dosyasındaki bir veya daha fazla [dize öğesinin](../../extensibility/strings-element.md) dil özniteliğiyle eşleşmelidir. Bir dizeler öğesinin Language özniteliği yoksa, kapsayan [CommandTable öğesinden](../../extensibility/commandtable-element.md)devralınır.

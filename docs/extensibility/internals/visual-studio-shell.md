@@ -1,5 +1,7 @@
 ---
 title: Visual Studio Kabuğu | Microsoft Docs
+description: Visual Studio Kabuğu, Visual Studio 'daki tümleştirme birincil aracısıdır ve temel işlevleri sağlar ve VSPackages 'ler arasında çapraz iletişimi destekler.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: fb89fc3b82dc7f142714608d8a669e368216c729
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 546a76d1533efaef28ddafb14b04514f64e9d4f9
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80704000"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97488056"
 ---
 # <a name="visual-studio-shell"></a>Visual Studio Kabuğu
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Kabuk, ' deki tümleştirme birincil aracısıdır [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Kabuk, VSPackages 'ın ortak hizmetleri paylaşmasını sağlamak için gerekli işlevleri sağlar. Öğesinin mimari hedefi [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] VSPackages içindeki birincil işlevselliğe Vest çünkü kabuk, temel işlevleri sağlamak ve bileşen VSPackages 'ler arasında çapraz iletişim desteği sağlamak için bir çerçevedir.

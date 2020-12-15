@@ -1,5 +1,7 @@
 ---
 title: Visual Studio SDK 'sını yükleme | Microsoft Docs
+description: Visual Studio yükleme sırasında, Visual Studio yazılım geliştirme seti 'ni yükleme seçenekleri hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 07/12/2018
 ms.topic: overview
 ms.assetid: c730edb6-5099-4c16-85a8-08def09f1455
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 31df92b011336320d759461ed16ce2a3c8f61017
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: edab24396f5a3ae5527b76a58db90c19796c4240
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905549"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97487575"
 ---
 # <a name="install-the-visual-studio-sdk"></a>Visual Studio SDK’yı Yükleme
 
@@ -21,7 +23,7 @@ Visual Studio SDK (yazılım geliştirme seti), Visual Studio kurulumunda isteğ
 
 ## <a name="install-the-visual-studio-sdk-as-part-of-a-visual-studio-installation"></a>Visual Studio SDK 'sını bir Visual Studio yüklemesinin parçası olarak yükleme
 
-Visual Studio yüklemenize VS SDK eklemek için, **Visual Studio uzantısı geliştirme** Iş yükünü **diğer araç kümeleri**altına yüklemeniz gerekir. Bu iş yükü, Visual Studio SDK 'sını ve gerekli önkoşulları yükler. **Özet** görünümünden bileşen seçerek veya seçimi kaldırarak yüklemeyi daha da ayarlayabilirsiniz.
+Visual Studio yüklemenize VS SDK eklemek için, **Visual Studio uzantısı geliştirme** Iş yükünü **diğer araç kümeleri** altına yüklemeniz gerekir. Bu iş yükü, Visual Studio SDK 'sını ve gerekli önkoşulları yükler. **Özet** görünümünden bileşen seçerek veya seçimi kaldırarak yüklemeyi daha da ayarlayabilirsiniz.
 
 ## <a name="install-the-visual-studio-sdk-after-installing-visual-studio"></a>Visual Studio 'Yu yükledikten sonra Visual Studio SDK 'sını yükleme
 

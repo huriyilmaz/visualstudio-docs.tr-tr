@@ -1,5 +1,7 @@
 ---
 title: Web projesi temelleri | Microsoft Docs
+description: Web projelerinin Visual Studio 'da nasıl çalıştığı hakkında iç ayrıntıları öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 09e33248ca264fefa79a8d5d5fa5d0cfa3d2da1d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1bf16582cdc9bba6529d237d74d56ebded299fb9
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80703546"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97487926"
 ---
 # <a name="web-project-essentials"></a>Web Projesi Temel Bileşenleri
 Web projeleri Web uygulamaları oluşturur. Web projesini, akıllı Web sayfaları olan bir Web uygulaması oluşturmak için kullanabilirsiniz. Akıllı bir Web sayfasında, Web sayfasını istek üzerine işleyen sunucu tarafı kodu vardır.
@@ -32,7 +34,7 @@ Web projeleri Web uygulamaları oluşturur. Web projesini, akıllı Web sayfalar
 
   - Web uygulaması projesi (WAP), tüm akıllı Web sayfaları için kodu ve/App_Code klasöründeki tüm kaynak dosyaları birleştiren tek bir yürütülebilir dosya oluşturur.
 
-- Web projesinin çözüm dosyası, Web sitesinden ayrı olarak bulunur. Varsayılan olarak, çözüm dosyaları \Documents yolunda ve Settings \\ *YourAccount* \\ *\<Visual Studio ####>* \Documents \projects \\ *yourwebsite*konumundadır.
+- Web projesinin çözüm dosyası, Web sitesinden ayrı olarak bulunur. Varsayılan olarak, çözüm dosyaları \Documents yolunda ve Settings \\  \\ *\<Visual Studio ####>* \Documents \projects \\ *yourwebsite* konumundadır.
 
   > [!NOTE]
   > Çözüm dosyasını Web sitesiyle birlikte tutmak istiyorsanız, dosyayı buraya taşıyın ve yeniden açın.

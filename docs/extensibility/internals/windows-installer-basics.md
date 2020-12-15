@@ -1,5 +1,7 @@
 ---
 title: Windows Installer temel bilgiler | Microsoft Docs
+description: VSPackage özelliklerinizi Windows Installer bileşenlere düzenleme da dahil olmak üzere VSPackage yükleme konusunda Windows Installer hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: aeea0b17a3c234bb7670642fb9ae0a442c9d60cd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1f4ca1908fbd54c0e8d12212bed19fc77e1dff51
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80703411"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97487783"
 ---
 # <a name="windows-installer-basics"></a>Temel Windows Installer Bilgileri
 Windows Installer, bir kullanıcının bilgisayarındaki uygulamaları veya yazılım ürünlerini yükleyip kaldırır ve bu görevleri, Windows Installer bileşenleri olarak adlandırılan birimlerde (bazen WICs veya yalnızca bileşenler olarak adlandırılır) gerçekleştirerek. Bir GUID, Windows Installer kullanarak kurulumların temel yükleme birimi ve başvuru sayımı olan her bir WIC 'yi tanımlar.
@@ -55,13 +57,13 @@ Windows Installer, bir kullanıcının bilgisayarındaki uygulamaları veya yaz�
 > [!NOTE]
 > Windows Installer kuralları zorlaması yalnızca. msi dosyanızın doğrulanmasını çalıştırırsanız oluşur. Bununla birlikte, bu kuralları en iyi uygulamalar olarak değerlendirmek için dikkatli olmanız gerekir. Daha fazla bilgi için bkz. [yükleme veritabanını](/windows/desktop/Msi/validating-an-installation-database) ve [paket doğrulamasını doğrulama](/windows/desktop/Msi/package-validation).
 
-#### <a name="installer-enforced-rules"></a>Yükleyici tarafından zorlanan kurallar
+#### <a name="installer-enforced-rules"></a>Installer-Enforced kuralları
 
 - Belirli bir bileşendeki tüm dosyaların aynı dizine yüklenmesi gerekir. Buna karşılık, ayrı klasörlere yüklenen dosyalar ayrı bileşenlere ait olmalıdır.
 
 - Bileşen başına yalnızca bir anahtar yolu olabilir. Anahtar yolu, tüm bileşeni temsil eden bir dosya veya kayıt defteri anahtarıdır.
 
-#### <a name="component-provider-responsibilities"></a>Bileşen-sağlayıcı sorumlulukları
+#### <a name="component-provider-responsibilities"></a>Component-Provider sorumlulukları
 
 - Sonraki sürümlerde ayrı olarak sevk edebilen tüm iki kaynak ayrı bileşenlerde bulunmalıdır. Kaynakların aynı bileşen halinde gruplanmaması gerekir, ancak bu kaynakların hiçbir zaman ayrı olarak teslim etmeyeceğinden emin olmalısınız. Aslında, tüm birincil kaynakların (örneğin, dll 'Ler) her zaman ayrı WCS 'lerde mevcut olması önerilir. Daha fazla bilgi için bkz. [Yükleyici bileşenlerini tanımlama](/windows/desktop/Msi/defining-installer-components).
 

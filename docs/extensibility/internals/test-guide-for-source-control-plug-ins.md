@@ -1,5 +1,7 @@
 ---
 title: Kaynak denetimi eklentileri için test Kılavuzu | Microsoft Docs
+description: Visual Studio ile kaynak denetimi eklentisini test etme hakkında bilgi edinin. Bu genel bakışta ortak test bölgeleri bulunur.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: overview
 helpviewer_keywords:
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 321d61175068f135aae87bff73f13ac800f4793c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a288beb618b0b539f53270928366349f47aee9e9
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905152"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97487731"
 ---
 # <a name="test-guide-for-source-control-plug-ins"></a>Kaynak Denetimi Eklentileri için Test Kılavuzu
 Bu bölüm, kaynak denetimi eklentisini ile test etmek için rehberlik sağlar [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . En yaygın test alanlarının kapsamlı bir genel bakışı ve sorunlu olabilecek daha karmaşık alanlardan bazıları sağlanır. Bu genel bakış, test çalışmalarının ayrıntılı bir listesi olmak üzere tasarlanmamıştır.

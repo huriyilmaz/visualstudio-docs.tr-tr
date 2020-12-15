@@ -1,5 +1,7 @@
 ---
 title: 'İzlenecek yol: eski dil hizmeti oluşturma | Microsoft Docs'
+description: Visual C# ' de bir dil hizmeti uygulamak için yönetilen paket çerçevesi dil sınıflarını nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: dbdad85dd1c0f62b22bb33b5ed6ab2c597e62164
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4fcc4004542f9a566d6c6bfa820cbb8c2e1846fa
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905990"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97487939"
 ---
 # <a name="walkthrough-creating-a-legacy-language-service"></a>İzlenecek yol: Eski Dil Hizmeti oluşturma
 ' De bir dil hizmetini uygulamak için yönetilen paket çerçevesi (MPF) dil sınıflarının kullanılması [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] basittir. Dil hizmetini, dil hizmetini ve diliniz için bir ayrıştırıcısı barındırmak üzere bir VSPackage gerekir.
@@ -46,17 +48,17 @@ ms.locfileid: "85905990"
 
 4. Uygun şirket ve paket bilgilerini girin. **İleri**’ye tıklayın.
 
-5. **Menü komutunu**seçin. **İleri**’ye tıklayın.
+5. **Menü komutunu** seçin. **İleri**’ye tıklayın.
 
     Kod parçacıklarını desteklemeyi düşünmüyorsanız, yalnızca son ' a tıklayabilir ve sonraki adımı yoksayabilirsiniz.
 
-6. Komut **adı** ve komut kimliği olarak **ekleme kod parçacığını** girin `cmdidInsertSnippet` **Command ID**. **Son**'a tıklayın.
+6. Komut **adı** ve komut kimliği olarak **ekleme kod parçacığını** girin `cmdidInsertSnippet` . **Finish (Son)** düğmesine tıklayın.
 
     **Komut adı** ve **komut kimliği** istediğiniz şey olabilir. bunlar yalnızca örnektir.
 
 ### <a name="create-the-language-service-class"></a>Dil hizmeti sınıfını oluşturma
 
-1. **Çözüm Gezgini**, MyLanguagePackage projesine sağ tıklayın, **Ekle**, **başvuru**ve ardından **Yeni Başvuru Ekle** düğmesini seçin.
+1. **Çözüm Gezgini**, MyLanguagePackage projesine sağ tıklayın, **Ekle**, **başvuru** ve ardından **Yeni Başvuru Ekle** düğmesini seçin.
 
 2. **Başvuru Ekle** iletişim kutusunda, **.net** sekmesinde **Microsoft. VisualStudio. Package. LanguageService** ' i seçin ve **Tamam**' ı tıklatın.
 

@@ -1,5 +1,6 @@
 ---
 title: Proje türü için yönetilen paket çerçevesini kullanma (C#)
+description: Kendi proje türlerinizi uygulamak için kullanabileceğiniz veya buradan kalýtýmla uygulayabileceğiniz .NET sınıfları sağlayan yönetilen paket çerçevesi hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -13,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: fca3f95780d548b4482c502f5b3eaa44005fd2e2
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 4b425962ed0f664b8255b6489ac8f0d38be7c13c
+ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90038653"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97487549"
 ---
 # <a name="using-the-managed-package-framework-to-implement-a-project-type-c"></a>Yönetilen Paket Çerçevesini Kullanarak Proje Türü Uygulama (C#)
 Yönetilen paket çerçevesi (MPF), kendi proje türlerinizi uygulamak için kullanabileceğiniz veya buradan kalýtýmla kullanabileceğiniz C# sınıfları sağlar. MPF, Visual Studio 'nun sağlaması için bir proje türünün sağlamasını beklediği ve proje türünün bununla uygulama üzerinde yoğunlaşmaya odaklanmanızı sağlayan birçok arabirimi uygular.
@@ -28,7 +29,7 @@ Yönetilen paket çerçevesi (MPF), kendi proje türlerinizi uygulamak için kul
 
  Bu projeyi VSPackage çözümünüze eklemek için aşağıdakileri yapın:
 
-1. MPFProj dosyalarını *MPFProjectDir*öğesine indirin.
+1. MPFProj dosyalarını *MPFProjectDir* öğesine indirin.
 
 2. *MPFProjectDir*\Dev10\src\csharp\projectbase.exe dosyasında aşağıdaki bloğu değiştirin:
 
@@ -84,7 +85,7 @@ Yönetilen paket çerçevesi (MPF), kendi proje türlerinizi uygulamak için kul
 |`Microsoft.VisualStudio.Package.AssemblyReferenceNode`|
 |`Microsoft.VisualStudio.Package.BuildDependency`|
 
-## <a name="document-handling-classes"></a>Belge Işleme sınıfları
+## <a name="document-handling-classes"></a>Document-Handling sınıfları
  Aşağıdaki tabloda, MPF 'de belge işlemeyi destekleyen sınıflar listelenmektedir. Daha fazla bilgi için bkz. [Proje öğelerini açma ve kaydetme](../../extensibility/internals/opening-and-saving-project-items.md).
 
 |Sınıf adı|
@@ -103,7 +104,7 @@ Yönetilen paket çerçevesi (MPF), kendi proje türlerinizi uygulamak için kul
 |`Microsoft.VisualStudio.Package.OutputGroup`|
 |`Microsoft.VisualStudio.Package.ProjectElement`|
 
-## <a name="automation-support-classes"></a>Otomasyon-destek sınıfları
+## <a name="automation-support-classes"></a>Automation-Support sınıfları
  Aşağıdaki tabloda, proje türü kullanıcıların eklentiler yazabilmesi için otomasyonu destekleyen MPF içindeki sınıflar listelenmektedir.
 
 |Sınıf adı|
