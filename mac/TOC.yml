@@ -202,6 +202,8 @@
       href: visual-studio-experience-improvement-program.md
     - name: Sorun Bildirme
       href: report-a-problem.md
+    - name: 'Sorun Giderme: Mevcut uzantımın yeni sürümünü nasıl yayınlarım?'
+      href: migrate-extensions.md
     - name: 'Sorun Giderme: Mac için Visual Studio, Team Foundation Sürüm Denetimi’ni destekler mi?'
       href: tf-version-control.md
     - name: 'Sorun Giderme: Neden tüm şablonları göremiyorum?'
