@@ -1,5 +1,5 @@
 ---
-title: Projeler ve çözümler oluşturma
+title: Çözüm ve projelerle çalışma
 description: Çözümler ve projeler arasındaki fark ve bunları Visual Studio 'da nasıl kullanacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/06/2018
@@ -16,14 +16,14 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7bd893c06da9bc2c2c8d95fc4c085affa815edd2
-ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
+ms.openlocfilehash: 9bbfa16273dc323d2ad175e965a19a22ad0d17ce
+ms.sourcegitcommit: 6f37100d4b8c15a21d3858335ded3c26ab275b93
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95006451"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97599485"
 ---
-# <a name="create-solutions-and-projects"></a>Projeler ve çözümler oluşturma
+# <a name="work-with-solutions-and-projects"></a>Çözüm ve projelerle çalışma
 
 *Projeler* , Visual Studio 'da kaynak kodu dosyaları, bit eşlemler, simgeler ve bileşen ve hizmet başvuruları gibi uygulamanızı oluşturmak için gereken öğeleri tutar. Yeni bir proje oluşturduğunuzda, Visual Studio projeyi içeren bir *çözüm* oluşturur. İsterseniz çözüme başka yeni veya mevcut projeler ekleyebilirsiniz. Çözümler, belirli bir projeye bağlı olmayan dosyaları da içerebilir.
 
@@ -48,7 +48,7 @@ Bu şekilde, Visual Studio 'da uygulama geliştirmek için çözümler ve projel
 
 Bir kod kaynağı dosyası koleksiyonunuz varsa, bunları bir projeye kolayca ekleyebilirsiniz.
 
-1. Menüde, **File**  >  **New**  >  **Varolan koddan** dosya yeni proje ' yi seçin.
+1. Menüde,   >    >  **Varolan koddan** dosya yeni proje ' yi seçin.
 
 1. **Varolan kod dosyalarından proje oluştur** sihirbazında, **ne tür proje oluşturmak** istediğiniz proje türünü seçin? açılan liste kutusu ve sonra **İleri** düğmesini seçin.
 
@@ -59,7 +59,7 @@ Bir kod kaynağı dosyası koleksiyonunuz varsa, bunları bir projeye kolayca ek
 
 ## <a name="add-files-to-a-solution"></a>Bir çözüme dosya ekleme
 
-Çözüme yönelik bir Benioku dosyası veya belirli bir proje altında mantıksal olarak çözüm düzeyine ait olan diğer dosyalar gibi birden çok proje için geçerli bir dosyanız varsa, bunları çözüme ekleyebilirsiniz. Bir çözüme öğe eklemek için **Çözüm Gezgini** çözüm düğümünün bağlam (sağ tıklama) menüsünde, **Add**  >  **Yeni öğe** Ekle ' yi seçin veya **Add**  >  **varolan öğeyi** ekleyin.
+Çözüme yönelik bir Benioku dosyası veya belirli bir proje altında mantıksal olarak çözüm düzeyine ait olan diğer dosyalar gibi birden çok proje için geçerli bir dosyanız varsa, bunları çözüme ekleyebilirsiniz. Bir çözüme öğe eklemek için **Çözüm Gezgini** çözüm düğümünün bağlam (sağ tıklama) menüsünde,   >  **Yeni öğe** Ekle ' yi seçin veya   >  **varolan öğeyi** ekleyin.
 
 ## <a name="create-a-net-project-that-targets-a-specific-version-of-the-net-framework"></a>.NET Framework belirli bir sürümünü hedefleyen bir .NET projesi oluşturma
 

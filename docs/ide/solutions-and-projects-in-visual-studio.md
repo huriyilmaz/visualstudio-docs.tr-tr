@@ -22,12 +22,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6504d3e7fe278e8713a897ffacefa1f22cec6a09
-ms.sourcegitcommit: f43e669f3597a4b07975b2bd2dce362a41a2e83f
+ms.openlocfilehash: ebe6e5c7479ce4e3cda435c51a883c4d5db8cc45
+ms.sourcegitcommit: 6f37100d4b8c15a21d3858335ded3c26ab275b93
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 12/16/2020
-ms.locfileid: "97578259"
+ms.locfileid: "97599505"
 ---
 # <a name="solutions-and-projects-in-visual-studio"></a>Visual Studio 'da çözümler ve projeler
 
@@ -68,11 +68,11 @@ Bir "Çözüm klasörü", yalnızca **Çözüm Gezgini** olan ve bir çözümdek
 
 ## <a name="create-new-projects"></a>Yeni projeler oluştur
 
-Yeni bir proje oluşturmanın en kolay yolu, belirli bir uygulama veya Web sitesi türü için proje şablonundan başlamadır. Proje şablonu, önceden oluşturulmuş temel bir kod dosyaları, yapılandırma dosyaları, varlıklar ve ayarlar kümesinden oluşur. Bu şablonlar, yeni bir proje oluşturduğunuz iletişim kutusunda (**Dosya**  >  **Yeni**  >  **Proje**) kullanılabilir. Daha fazla bilgi için bkz. [Visual Studio 'da yeni proje oluşturma](create-new-project.md) ve [çözüm ve proje oluşturma](../ide/creating-solutions-and-projects.md).
+Yeni bir proje oluşturmanın en kolay yolu, belirli bir uygulama veya Web sitesi türü için proje şablonundan başlamadır. Proje şablonu, önceden oluşturulmuş temel bir kod dosyaları, yapılandırma dosyaları, varlıklar ve ayarlar kümesinden oluşur. Bu şablonlar, yeni bir proje oluşturduğunuz iletişim kutusunda (**Dosya**  >  **Yeni**  >  **Proje**) kullanılabilir. Daha fazla bilgi için bkz. [Yeni proje oluşturma](create-new-project.md) ve [çözümlerle ve projelerle çalışma](../ide/creating-solutions-and-projects.md).
 
 Projelerinizi genellikle belirli bir şekilde özelleştirirseniz, daha sonra yeni projeler oluşturmak için kullanabileceğiniz özel bir proje şablonu oluşturabilirsiniz. Daha fazla bilgi için bkz. [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md).
 
-Yeni bir proje oluşturduğunuzda, varsayılan olarak *%USERPROFILE%\source\repos dizinine* kaydedilir. Bu konumu, **Araçlar**   >  **Seçenekler**  >  **Projeler ve çözüm**  >  **konumları** altındaki projeler konum ayarında değiştirebilirsiniz. Daha fazla bilgi için bkz. [Projeler ve çözümler sayfası, Seçenekler iletişim kutusu](./reference/projects-and-solutions-options-dialog-box.md).
+Yeni bir proje oluşturduğunuzda, varsayılan olarak *%USERPROFILE%\source\repos dizinine* kaydedilir. Bu konumu, **Araçlar**   >  **Seçenekler**  >  **Projeler ve çözüm**  >  **konumları** altındaki projeler konum ayarında değiştirebilirsiniz. Bu ve diğer projeler ve çözüm ayarları hakkında daha fazla bilgi için bkz. [Projeler ve çözümler sayfası, Seçenekler iletişim kutusu](./reference/projects-and-solutions-options-dialog-box.md).
 
 ## <a name="solution-explorer"></a>Çözüm Gezgini
 
