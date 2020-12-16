@@ -1,5 +1,7 @@
 ---
 title: Kullanıcı arabirimi başvurusu (Visual Studio 'da Office geliştirme)
+description: Visual Studio 'da Office geliştirme ve hangi kullanıcı arabirimi öğelerinin Office projelerinin parçası olduğu hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 17366c4901c6fa28036d089f74402768721e1a8d
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: dc58e106a24b857f4702876085a8ab986b6c5c92
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584392"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526542"
 ---
 # <a name="user-interface-reference-office-development-in-visual-studio"></a>Kullanıcı arabirimi başvurusu (Visual Studio 'da Office geliştirme)
   Aşağıdaki kullanıcı arabirimi öğeleri, Visual Studio 'da Office projelerinin bir parçasıdır.

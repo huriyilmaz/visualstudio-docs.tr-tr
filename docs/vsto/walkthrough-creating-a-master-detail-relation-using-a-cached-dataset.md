@@ -1,5 +1,7 @@
 ---
 title: Önbelleğe alınmış veri kümesini kullanarak ana ayrıntı ilişkisi oluşturma
+description: Çalışma sayfasında ana/ayrıntı ilişkisi oluşturma ve çözümün çevrimdışı kullanılabilmesi için verileri önbelleğe alma hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0acf84dd983a8c10f2af526ae0bb904eaa90a360
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: de7bf3ba34a2a7dd3e7db9ff549e4a839800d524
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "67328361"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524867"
 ---
 # <a name="walkthrough-create-a-master-detail-relation-using-a-cached-dataset"></a>İzlenecek yol: önbelleğe alınmış bir veri kümesini kullanarak ana ayrıntı ilişkisi oluşturma
   Bu izlenecek yol, bir çalışma sayfasında ana/ayrıntı ilişkisi oluşturmayı ve çözümün çevrimdışı kullanılabilmesi için verileri önbelleğe almayı gösterir.
@@ -38,7 +40,7 @@ ms.locfileid: "67328361"
 > [!NOTE]
 > Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Daha fazla bilgi için bkz. [Visual STUDIO IDE 'Yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]
@@ -49,23 +51,23 @@ ms.locfileid: "67328361"
 
 - SQL Server veritabanına okuma ve yazma izinleri.
 
-## <a name="create-a-new-project"></a>Yeni bir proje oluşturma
+## <a name="create-a-new-project"></a>Yeni proje oluşturma
  Bu adımda, bir Excel çalışma kitabı projesi oluşturacaksınız.
 
 ### <a name="to-create-a-new-project"></a>Yeni bir proje oluşturmak için
 
-1. Visual Basic veya C# kullanarak **ana ayrıntım**adlı bir Excel çalışma kitabı projesi oluşturun. **Yeni belge oluştur** ' un seçili olduğundan emin olun. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
+1. Visual Basic veya C# kullanarak **ana ayrıntım** adlı bir Excel çalışma kitabı projesi oluşturun. **Yeni belge oluştur** ' un seçili olduğundan emin olun. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-   Visual Studio tasarımcıda yeni Excel çalışma kitabını açar ve **Çözüm Gezgini**için **Master-Detail** projesini ekler.
+   Visual Studio tasarımcıda yeni Excel çalışma kitabını açar ve **Çözüm Gezgini** için **Master-Detail** projesini ekler.
 
 ## <a name="create-the-data-source"></a>Veri kaynağını oluşturma
  Projenize türü belirtilmiş bir veri kümesi eklemek için **veri kaynakları** penceresini kullanın.
 
 ### <a name="to-create-the-data-source"></a>Veri kaynağı oluşturmak için
 
-1. **Veri kaynakları** penceresi görünür değilse, menü çubuğunda, **View**  >  **diğer Windows**  >  **veri kaynaklarını**görüntüle ' yi seçerek bunu görüntüleyin.
+1. **Veri kaynakları** penceresi görünür değilse, menü çubuğunda,   >  **diğer Windows**  >  **veri kaynaklarını** görüntüle ' yi seçerek bunu görüntüleyin.
 
-2. **Veri kaynağı Yapılandırma Sihirbazı 'nı**başlatmak Için **Yeni veri kaynağı Ekle** ' yi seçin.
+2. **Veri kaynağı Yapılandırma Sihirbazı 'nı** başlatmak Için **Yeni veri kaynağı Ekle** ' yi seçin.
 
 3. **Veritabanı** ' nı seçin ve ardından **İleri**' ye tıklayın.
 
@@ -79,12 +81,12 @@ ms.locfileid: "67328361"
 
 8. **Siparişler** tablosu ve **sipariş ayrıntıları** tablosunu seçin.
 
-9. **Son**'a tıklayın.
+9. **Finish (Son)** düğmesine tıklayın.
 
-   Sihirbaz, **veri kaynakları** penceresine iki tablo ekler. Ayrıca, projenize **Çözüm Gezgini**görünür bir veri kümesi de ekler.
+   Sihirbaz, **veri kaynakları** penceresine iki tablo ekler. Ayrıca, projenize **Çözüm Gezgini** görünür bir veri kümesi de ekler.
 
 ## <a name="add-controls-to-the-worksheet"></a>Çalışma sayfasına denetimler ekleme
- Bu adımda, ilk çalışma sayfasına adlandırılmış bir Aralık, liste nesnesi ve iki düğme ekleyeceksiniz. İlk olarak, adlandırılmış aralığı ve liste nesnesini **veri kaynakları** penceresinden, otomatik olarak veri kaynağına bağlanacak şekilde ekleyin. Sonra, **araç kutusundan**düğmeleri ekleyin.
+ Bu adımda, ilk çalışma sayfasına adlandırılmış bir Aralık, liste nesnesi ve iki düğme ekleyeceksiniz. İlk olarak, adlandırılmış aralığı ve liste nesnesini **veri kaynakları** penceresinden, otomatik olarak veri kaynağına bağlanacak şekilde ekleyin. Sonra, **araç kutusundan** düğmeleri ekleyin.
 
 ### <a name="to-add-a-named-range-and-a-list-object"></a>Adlandırılmış bir Aralık ve bir liste nesnesi eklemek için
 
@@ -94,15 +96,15 @@ ms.locfileid: "67328361"
 
 3. **OrderID** sütununu seçin ve ardından görüntülenen aşağı açılan oka tıklayın.
 
-4. Açılan listede **NamedRange** ' e tıklayın ve ardından **OrderID** sütununu **a2**hücresine sürükleyin.
+4. Açılan listede **NamedRange** ' e tıklayın ve ardından **OrderID** sütununu **a2** hücresine sürükleyin.
 
-     <xref:Microsoft.Office.Tools.Excel.NamedRange>Adlandırılmış bir denetim `OrderIDNamedRange` , **a2**hücresinde oluşturulur. Aynı zamanda, <xref:System.Windows.Forms.BindingSource> adlandırılmış `OrdersBindingSource` , bir tablo bağdaştırıcısı ve <xref:System.Data.DataSet> projeye bir örnek eklenir. Denetim öğesine bağlanır <xref:System.Windows.Forms.BindingSource> , bu da <xref:System.Data.DataSet> örneğe bağlanır.
+     <xref:Microsoft.Office.Tools.Excel.NamedRange>Adlandırılmış bir denetim `OrderIDNamedRange` , **a2** hücresinde oluşturulur. Aynı zamanda, <xref:System.Windows.Forms.BindingSource> adlandırılmış `OrdersBindingSource` , bir tablo bağdaştırıcısı ve <xref:System.Data.DataSet> projeye bir örnek eklenir. Denetim öğesine bağlanır <xref:System.Windows.Forms.BindingSource> , bu da <xref:System.Data.DataSet> örneğe bağlanır.
 
 5. **Siparişler** tablosunun altındaki sütunları aşağı kaydırın. Listenin en altında **sipariş ayrıntıları** tablosu bulunur; burada, **siparişler** tablosunun bir alt öğesi olduğu için burada yer verilmiştir. **Orders** tablosuyla aynı düzeyde değil, bu **sipariş ayrıntıları** tablosunu seçin ve ardından görüntülenen aşağı açılan oka tıklayın.
 
-6. Açılan listede **ListObject** ' e tıklayın ve ardından **OrderDetails** tablosunu **a6**hücresine sürükleyin.
+6. Açılan listede **ListObject** ' e tıklayın ve ardından **OrderDetails** tablosunu **a6** hücresine sürükleyin.
 
-7. <xref:Microsoft.Office.Tools.Excel.ListObject> **Order_DetailsListObject** adlı bir denetim, **a6**hücresinde oluşturulur ve öğesine bağlanır <xref:System.Windows.Forms.BindingSource> .
+7. <xref:Microsoft.Office.Tools.Excel.ListObject> **Order_DetailsListObject** adlı bir denetim, **a6** hücresinde oluşturulur ve öğesine bağlanır <xref:System.Windows.Forms.BindingSource> .
 
 ### <a name="to-add-two-buttons"></a>İki düğme eklemek için
 
@@ -123,11 +125,11 @@ ms.locfileid: "67328361"
 
 1. Bileşen tepsisinde **NorthwindDataSet** ' i seçin.
 
-2. **Özellikler** penceresinde, **değiştiriciler** özelliğini **Public**olarak değiştirin.
+2. **Özellikler** penceresinde, **değiştiriciler** özelliğini **Public** olarak değiştirin.
 
     Önbelleğe alma etkinleştirilmeden önce veri kümelerinin ortak olması gerekir.
 
-3. **CacheInDocument** özelliğini **true**olarak değiştirin.
+3. **CacheInDocument** özelliğini **true** olarak değiştirin.
 
    Sonraki adım düğmelere metin eklemektir ve C# ' ta olay işleyicilerini bağlamak için kod ekler.
 
@@ -136,7 +138,7 @@ ms.locfileid: "67328361"
 
 ### <a name="to-initialize-the-data-and-the-controls"></a>Verileri ve denetimleri başlatmak için
 
-1. **Çözüm Gezgini**, **Sheet1. vb** veya **Sheet1.cs**öğesine sağ tıklayın ve ardından kısayol menüsünde **kodu görüntüle** ' ye tıklayın.
+1. **Çözüm Gezgini**, **Sheet1. vb** veya **Sheet1.cs** öğesine sağ tıklayın ve ardından kısayol menüsünde **kodu görüntüle** ' ye tıklayın.
 
 2. `Sheet1_Startup`Düğme metnini ayarlamak için yöntemine aşağıdaki kodu ekleyin.
 
@@ -167,7 +169,7 @@ ms.locfileid: "67328361"
 
 ### <a name="to-test-the-data-caching"></a>Verilerin önbelleğe alınmasını test etmek için
 
-1. **F5**tuşuna basın.
+1. **F5** tuşuna basın.
 
 2. Adlandırılmış aralığın ve liste nesnesinin veri kaynağından alınan verilerle doldurulduğunu doğrulayın.
 
@@ -177,7 +179,7 @@ ms.locfileid: "67328361"
 
 5. Veritabanına bağlantıyı devre dışı bırakın. Veritabanı bir sunucuda bulunuyorsa ağ kablosunu bilgisayarınızdan çıkarın veya veritabanı geliştirme bilgisayarınızda ise SQL Server hizmeti 'ni durdurun.
 
-6. Excel 'i açın ve ardından **Master-Detail.xlsx** *\bin* dizininden (Visual Basic*Master-Detail\bin* veya Master-Detail\bin\debug \ C# ' de *\* ) açın.
+6. Excel 'i açın ve ardından **Master-Detail.xlsx** *\bin* dizininden (Visual Basic *Master-Detail\bin* veya Master-Detail\bin\debug \ C# ' de *\* ) açın.
 
 7. Çalışma sayfasının, bağlantısı kesildiğinde normal şekilde çalıştığını görmek için bazı kayıtlardan ilerleyin.
 

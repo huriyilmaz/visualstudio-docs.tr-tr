@@ -1,5 +1,7 @@
 ---
 title: Office çözümlerinde WPF denetimlerini kullanma
+description: Visual Studio 'da Kullanıcı arabirimleri tasarlamak için Windows Presentation Foundation (WPF) denetimlerini nasıl kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 717e24315d1f6e57eda224ef17cc4ea5b5d550c9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e041cda914cbf8aced4b19adfc80c601984c30e0
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "73189755"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526445"
 ---
 # <a name="use-wpf-controls-in-office-solutions"></a>Office çözümlerinde WPF denetimlerini kullanma
 
@@ -45,7 +47,7 @@ Office çözümlerinde doğrudan UI öğelerine WPF denetimleri ekleyemezsiniz. 
 
 2. Projenize bir **Kullanıcı denetimi (WPF)** öğesi ekleyin.
 
-3. **Araç kutusundan**WPF Kullanıcı denetimi TASARıM yüzeyine WPF denetimleri ekleyin.
+3. **Araç kutusundan** WPF Kullanıcı denetimi TASARıM yüzeyine WPF denetimleri ekleyin.
 
      Varsayılan olarak, WPF Kullanıcı denetimi Tasarımcısı açık olduğunda, **araç kutusu** yalnızca WPF denetimleri içerir.
 
@@ -71,7 +73,7 @@ Office çözümlerinde doğrudan UI öğelerine WPF denetimleri ekleyemezsiniz. 
 
 2. Projenize bir **Kullanıcı denetimi (WPF)** öğesi ekleyin.
 
-3. **Araç kutusundan**WPF Kullanıcı denetimi TASARıM yüzeyine WPF denetimleri ekleyin.
+3. **Araç kutusundan** WPF Kullanıcı denetimi TASARıM yüzeyine WPF denetimleri ekleyin.
 
 4. Projeyi derleyin.
 
@@ -92,7 +94,7 @@ Office çözümlerinde doğrudan UI öğelerine WPF denetimleri ekleyemezsiniz. 
 
 ## <a name="host-wpf-controls-by-using-the-elementhost-class"></a>ElementHost sınıfını kullanarak WPF denetimleri barındırma
 
-Visual Studio, Office çözümlerinizde Windows Forms denetimleri kullanmanıza yardımcı olan özellikler sağlar, ancak WPF denetimleri için benzer özellikler sağlamaz. Örneğin, denetimleri **araç kutusundan**sürükleyerek veya çalışma zamanında yardımcı yöntemler kullanarak belgelere ve çalışma sayfalarına Windows Forms denetimleri ekleyebilirsiniz. Ancak, bu araçlar WPF denetimleri için kullanılamaz.
+Visual Studio, Office çözümlerinizde Windows Forms denetimleri kullanmanıza yardımcı olan özellikler sağlar, ancak WPF denetimleri için benzer özellikler sağlamaz. Örneğin, denetimleri **araç kutusundan** sürükleyerek veya çalışma zamanında yardımcı yöntemler kullanarak belgelere ve çalışma sayfalarına Windows Forms denetimleri ekleyebilirsiniz. Ancak, bu araçlar WPF denetimleri için kullanılamaz.
 
 WPF denetimleri, <xref:System.Windows.Forms.Integration.ElementHost> bir Windows Forms denetimi veya formu Ile WPF denetimleri arasında bir tümleştirme katmanı olarak sınıfını kullanır. Çözümünüze tasarım zamanında WPF denetimleri eklediğinizde, Visual Studio sizin için otomatik olarak bir <xref:System.Windows.Forms.Integration.ElementHost> nesne oluşturur.
 

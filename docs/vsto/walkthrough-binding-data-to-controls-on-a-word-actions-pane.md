@@ -1,5 +1,7 @@
 ---
 title: 'İzlenecek yol: Word Eylemler bölmesindeki denetimlere veri bağlama'
+description: Microsoft Word 'de bir eylemler bölmesindeki denetimlere veri bağlama. Denetimler SQL Server veritabanındaki tablolar arasında bir ana/ayrıntı ilişkisi gösterir.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 05df38bf6056b392c0b991617316ba2c1c657306
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 76dffda9b332b9b76d6c0e0a423073959bcc7a56
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585073"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526202"
 ---
 # <a name="walkthrough-bind-data-to-controls-on-a-word-actions-pane"></a>İzlenecek yol: Word Eylemler bölmesindeki denetimlere veri bağlama
   Bu izlenecek yol, Word 'de bir eylemler bölmesindeki denetimlere veri bağlamayı gösterir. Denetimler SQL Server veritabanındaki tablolar arasında bir ana/ayrıntı ilişkisi gösterir.
@@ -57,11 +59,11 @@ ms.locfileid: "91585073"
 
 ### <a name="to-create-a-new-project"></a>Yeni bir proje oluşturmak için
 
-1. **Word eylemlerimi Adlandır bölmesiyle**bir Word belgesi projesi oluşturun. Sihirbazda **Yeni belge oluştur**' u seçin.
+1. **Word eylemlerimi Adlandır bölmesiyle** bir Word belgesi projesi oluşturun. Sihirbazda **Yeni belge oluştur**' u seçin.
 
      Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-     Visual Studio, tasarımcıda yeni Word belgesini açar ve **Çözüm Gezgini**Için **My Word Actions Pane** projesini ekler.
+     Visual Studio, tasarımcıda yeni Word belgesini açar ve **Çözüm Gezgini** Için **My Word Actions Pane** projesini ekler.
 
 ## <a name="add-controls-to-the-actions-pane"></a>Eylemler bölmesine denetim ekleme
  Bu izlenecek yol için, veri bağlantılı Windows Forms denetimleri içeren bir eylemler bölmesi denetimine ihtiyacınız vardır. Projeye bir veri kaynağı ekleyin ve ardından **veri kaynakları** penceresinden denetimleri Eylemler bölmesi denetimine sürükleyin.
@@ -72,16 +74,16 @@ ms.locfileid: "91585073"
 
 2. **Proje** menüsünde **Yeni öğe Ekle**' ye tıklayın.
 
-3. **Yeni öğe Ekle** iletişim kutusunda, **Eylemler bölmesi denetimi**' ni seçin, **ActionsControl**olarak adlandırın ve ardından **Ekle**' ye tıklayın.
+3. **Yeni öğe Ekle** iletişim kutusunda, **Eylemler bölmesi denetimi**' ni seçin, **ActionsControl** olarak adlandırın ve ardından **Ekle**' ye tıklayın.
 
 ### <a name="to-add-a-data-source-to-the-project"></a>Projeye bir veri kaynağı eklemek için
 
-1. **Veri kaynakları** penceresi görünür değilse, menü çubuğunda, **View**  >  **diğer Windows**  >  **veri kaynaklarını**görüntüle ' yi seçerek bunu görüntüleyin.
+1. **Veri kaynakları** penceresi görünür değilse, menü çubuğunda,   >  **diğer Windows**  >  **veri kaynaklarını** görüntüle ' yi seçerek bunu görüntüleyin.
 
    > [!NOTE]
    > **Veri kaynaklarını göster** yoksa, Word belgesine tıklayın ve sonra yeniden kontrol edin.
 
-2. **Veri kaynağı Yapılandırma Sihirbazı 'nı**başlatmak Için **Yeni veri kaynağı Ekle** ' ye tıklayın.
+2. **Veri kaynağı Yapılandırma Sihirbazı 'nı** başlatmak Için **Yeni veri kaynağı Ekle** ' ye tıklayın.
 
 3. **Veritabanı** ' nı seçin ve ardından **İleri**' ye tıklayın.
 
@@ -95,9 +97,9 @@ ms.locfileid: "91585073"
 
 8. **Üreticiler** ve **Ürünler** tablolarının yanındaki onay kutusunu işaretleyin.
 
-9. **Son**'a tıklayın.
+9. **Finish (Son)** düğmesine tıklayın.
 
-   Sihirbaz, **tedarikçiler** tablosu ve **Ürünler** tablosunu **veri kaynakları** penceresine ekler. Ayrıca, projenize **Çözüm Gezgini**görünür bir veri kümesi de ekler.
+   Sihirbaz, **tedarikçiler** tablosu ve **Ürünler** tablosunu **veri kaynakları** penceresine ekler. Ayrıca, projenize **Çözüm Gezgini** görünür bir veri kümesi de ekler.
 
 ### <a name="to-add-data-bound-windows-forms-controls-to-an-actions-pane-control"></a>Eylemler bölmesi denetimine veriye dayalı Windows Forms denetimleri eklemek için
 
@@ -114,7 +116,7 @@ ms.locfileid: "91585073"
     > [!NOTE]
     > Öğesinin silinmesi, `SuppliersBindingNavigator` kendisi için oluşturulan tüm kodu kaldırmaz. Bu kodu kaldırabilirsiniz.
 
-5. Birleşik giriş kutusunu etiketin altında olacak şekilde taşıyın ve **size** özelliğini **171, 21**olarak değiştirin.
+5. Birleşik giriş kutusunu etiketin altında olacak şekilde taşıyın ve **size** özelliğini **171, 21** olarak değiştirin.
 
 6. **Veri kaynakları** penceresinde, **Üreticiler** tablosunun bir alt öğesi olan **Ürünler** tablosunu genişletin.
 
@@ -124,7 +126,7 @@ ms.locfileid: "91585073"
 
      <xref:System.Windows.Forms.ListBox>Eylemler bölmesi denetiminde bir denetim oluşturulur. Aynı zamanda, <xref:System.Windows.Forms.BindingSource> `ProductBindingSource` bileşen tepsisinde projeye adlandırılmış ve bir tablo bağdaştırıcısı eklenir.
 
-9. Liste kutusunu etiketin altında olacak şekilde taşıyın ve **size** özelliğini **171, 95**olarak değiştirin.
+9. Liste kutusunu etiketin altında olacak şekilde taşıyın ve **size** özelliğini **171, 95** olarak değiştirin.
 
 10. <xref:System.Windows.Forms.Button> **Araç kutusundan** bir öğesini eylemler bölmesi denetimine sürükleyin ve liste kutusunun altına yerleştirin.
 
@@ -202,7 +204,7 @@ ms.locfileid: "91585073"
 
 ### <a name="to-show-the-actions-pane"></a>Eylemler bölmesini göstermek için
 
-1. **Çözüm Gezgini**' de, **ThisDocument. vb** veya **ThisDocument.cs**öğesine sağ tıklayın ve ardından kısayol menüsünde **kodu görüntüle** ' ye tıklayın.
+1. **Çözüm Gezgini**' de, **ThisDocument. vb** veya **ThisDocument.cs** öğesine sağ tıklayın ve ardından kısayol menüsünde **kodu görüntüle** ' ye tıklayın.
 
 2. Aşağıdaki örneğe benzer şekilde görünmesi için sınıfın en üstünde denetimin yeni bir örneğini oluşturun `ThisDocument` .
 

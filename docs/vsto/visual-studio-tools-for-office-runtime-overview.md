@@ -1,5 +1,7 @@
 ---
 title: Office çalışma zamanına genel bakış için Visual Studio Araçları
+description: Microsoft Office geliştirici araçları kullanılarak oluşturulan çözümleri çalıştırmak için, Office çalışma zamanı için Visual Studio 2010 araçları 'nın son kullanıcı bilgisayarlarında yüklü olması gerekir.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -26,12 +28,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 31d2244796282aaad56011d5b9963232d3438ce9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 16431a9ba2fe56b88f9f6b7f2c874c75bfad61c3
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71253993"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526269"
 ---
 # <a name="visual-studio-tools-for-office-runtime-overview"></a>Office çalışma zamanına genel bakış için Visual Studio Araçları
   Visual Studio 'da Microsoft Office geliştirici araçları kullanılarak oluşturulan çözümleri çalıştırmak için, son kullanıcı bilgisayarlarında Office çalışma zamanı için Visual Studio 2010 araçları 'nın yüklü olması gerekir. Daha fazla bilgi için bkz. [nasıl yapılır: Office çalışma zamanı yeniden dağıtılabilir için Visual Studio Araçları yüklemesi](../vsto/how-to-install-the-visual-studio-tools-for-office-runtime-redistributable.md). Office çalışma zamanı için Visual Studio 2010 araçları iki ana bileşenden oluşur:
@@ -53,14 +55,14 @@ ms.locfileid: "71253993"
  Çoğu durumda, Office çözümlerinde yazdığınız kod, çözümünüzün 3,5 .NET Framework veya ' i hedeflemesinden bağımsız olarak aynıdır [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] . Ancak belirli özellikler, .NET Framework'ün farklı sürümlerini hedeflediğinizde farklı kod gerektirir. Daha fazla bilgi için bkz. [Office çözümlerini .NET Framework 4 veya sonraki bir sürüme geçirme](../vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later.md).
 
 ### <a name="interfaces-in-the-office-extensions-for-the-net-framework-4-or-later"></a>.NET Framework 4 veya üzeri için Office uzantılarında arabirimler
- Veya üzeri için Office uzantılarında arabirimlerin çoğunun [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] Kullanıcı kodu tarafından uygulanması amaçlanmamıştır. Doğrudan uygulayabileceğiniz tek arabirimler **ı**harfiyle başlayan adlara sahiptir, örneğin <xref:Microsoft.Office.Tools.Excel.ISmartTagExtension> .
+ Veya üzeri için Office uzantılarında arabirimlerin çoğunun [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] Kullanıcı kodu tarafından uygulanması amaçlanmamıştır. Doğrudan uygulayabileceğiniz tek arabirimler **ı** harfiyle başlayan adlara sahiptir, örneğin <xref:Microsoft.Office.Tools.Excel.ISmartTagExtension> .
 
  **I** harfiyle başlamayan tüm arabirimler, Office çalışma zamanı Için Visual Studio 2010 araçları tarafından dahili olarak uygulanır ve bu arabirimler gelecek sürümlerde değişebilir. Bu arabirimleri uygulayan nesneler oluşturmak için, projenizdeki nesne tarafından sunulan yöntemleri kullanın `Globals.Factory` . Örneğin, arabirimini uygulayan bir nesne almak için <xref:Microsoft.Office.Tools.Excel.SmartTag> `Globals.Factory.CreateSmartTag` yöntemini kullanın. Hakkında daha fazla bilgi için `Globals.Factory` bkz. [Office Projelerindeki Nesnelere Genel erişim](../vsto/global-access-to-objects-in-office-projects.md).
 
 ### <a name="enable-type-equivalence-and-embedded-types-in-projects-that-target-the-net-framework-4-or-later"></a>.NET Framework 4 veya üstünü hedefleyen projelerde tür denklik ve gömülü türleri etkinleştirin
  Veya sonraki bir sürümü için Office uzantılarının nesne modeli [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] arabirimlere dayalı olduğundan, içindeki tür bilgilerini çözümünüze eklemek için Visual Studio 'daki tür denklik özelliğini ve Visual Studio 'da Visual Basic kullanabilirsiniz [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] . Bu özellik, Office çözümlerini ve ' [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] nin birbirinden bağımsız olarak sürümlerini sağlar. Örneğin, çözümünüz <xref:Microsoft.Office.Tools.Word.Document> arabirimini gömülü bir tür olarak kullanıyorsa ve çalışma zamanının bir sonraki sürümü arabirimine üye eklerse <xref:Microsoft.Office.Tools.Word.Document> , çözümünüz çalışma zamanının sonraki sürümüyle çalışmaya devam edecektir. Çözümünüz <xref:Microsoft.Office.Tools.Word.Document> yerleşik bir tür olarak arabirimini kullanmıyorsa, çözümünüz artık çalışma zamanının sonraki sürümüyle çalışmaz.
 
- Varsayılan olarak, veya üstünü hedefleyen bir Office projesi oluşturduğunuzda tür denklik özelliği etkin değildir [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] . Bu özelliği etkinleştirmek istiyorsanız, projenizdeki aşağıdaki derleme başvurularının herhangi birinin **birlikte çalışma türlerini katıştır** özelliğini **doğru**olarak ayarlayın:
+ Varsayılan olarak, veya üstünü hedefleyen bir Office projesi oluşturduğunuzda tür denklik özelliği etkin değildir [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] . Bu özelliği etkinleştirmek istiyorsanız, projenizdeki aşağıdaki derleme başvurularının herhangi birinin **birlikte çalışma türlerini katıştır** özelliğini **doğru** olarak ayarlayın:
 
 - Microsoft.Office.Tools.dll
 

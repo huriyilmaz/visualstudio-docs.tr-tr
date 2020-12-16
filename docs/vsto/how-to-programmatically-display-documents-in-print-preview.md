@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: belgeleri baskı önizlemede program aracılığıyla görüntüleme'
+description: Microsoft Word belgesinde baskı önizlemede belgeleri program aracılığıyla görüntülemeyi öğrenin.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 17671ab5d544341cbd3a02713a8b29b55863f5ac
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 69c5014958d137b534a283b0d07fa048966092be
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585216"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525856"
 ---
 # <a name="how-to-programmatically-display-documents-in-print-preview"></a>Nasıl yapılır: belgeleri baskı önizlemede program aracılığıyla görüntüleme
   Çözümünüz bir rapor oluşturursa, raporu kullanıcıya baskı önizleme modunda görüntülemek isteyebilirsiniz.
@@ -37,7 +39,7 @@ ms.locfileid: "91585216"
 
 ### <a name="to-display-a-document-in-print-preview-by-setting-the-printpreview-property"></a>PrintPreview özelliğini ayarlayarak bir belgeyi baskı önizlemede görüntülemek için
 
-1. <xref:Microsoft.Office.Interop.Word._Application.PrintPreview%2A> <xref:Microsoft.Office.Interop.Word.Application> Nesnesinin özelliğini **true**olarak ayarlayın.
+1. <xref:Microsoft.Office.Interop.Word._Application.PrintPreview%2A> <xref:Microsoft.Office.Interop.Word.Application> Nesnesinin özelliğini **true** olarak ayarlayın.
 
      [!code-vb[Trin_VstcoreWordAutomation#14](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#14)]
      [!code-csharp[Trin_VstcoreWordAutomation#14](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#14)]
@@ -53,7 +55,7 @@ ms.locfileid: "91585216"
 
 ### <a name="to-display-a-document-in-print-preview-by-setting-the-printpreview-property"></a>PrintPreview özelliğini ayarlayarak bir belgeyi baskı önizlemede görüntülemek için
 
-1. <xref:Microsoft.Office.Interop.Word._Application.PrintPreview%2A> <xref:Microsoft.Office.Interop.Word.Application> Nesnesinin özelliğini **true**olarak ayarlayın.
+1. <xref:Microsoft.Office.Interop.Word._Application.PrintPreview%2A> <xref:Microsoft.Office.Interop.Word.Application> Nesnesinin özelliğini **true** olarak ayarlayın.
 
      [!code-vb[Trin_VstcoreWordAutomation#14](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#14)]
      [!code-csharp[Trin_VstcoreWordAutomation#14](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#14)]

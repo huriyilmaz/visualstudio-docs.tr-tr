@@ -1,5 +1,7 @@
 ---
 title: 'İzlenecek yol: VSTO eklenti projesinde basit veri bağlama'
+description: Bir Microsoft Word belgesine nasıl denetim ekleyebileceğiniz ve çalışma zamanında denetimleri verilere nasıl bağlayabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 67264800fd2baa1ca685bcc578fb4d400e6538dd
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: bc0b4f18e0f9a45f19148fde9e3d289ccad9e73f
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584917"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526160"
 ---
 # <a name="walkthrough-simple-data-binding-in-vsto-add-in-project"></a>İzlenecek yol: VSTO eklenti projesinde basit veri bağlama
 
@@ -52,17 +54,17 @@ Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vard�
 
   - Komut satırını kullanarak bir veritabanı eklemek için, bkz. [nasıl yapılır: SQL Server Express veritabanı dosyası iliştirme](/previous-versions/sql/).
 
-## <a name="create-a-new-project"></a>Yeni bir proje oluşturma
+## <a name="create-a-new-project"></a>Yeni proje oluşturma
 
 İlk adım, bir Word VSTO eklenti projesi oluşturmaktır.
 
 ### <a name="to-create-a-new-project"></a>Yeni bir proje oluşturmak için
 
-1. Visual Basic veya C# kullanarak **bir veritabanından belge doldurma**adlı BIR Word VSTO eklentisi projesi oluşturun.
+1. Visual Basic veya C# kullanarak **bir veritabanından belge doldurma** adlı BIR Word VSTO eklentisi projesi oluşturun.
 
      Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-     Visual Studio, *ThisAddIn. vb* veya *ThisAddIn.cs* dosyasını açar ve **belgeyi bir veritabanı projesinden doldurma** **Çözüm Gezgini**ekler.
+     Visual Studio, *ThisAddIn. vb* veya *ThisAddIn.cs* dosyasını açar ve **belgeyi bir veritabanı projesinden doldurma** **Çözüm Gezgini** ekler.
 
 2. Projeniz [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] veya [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] ' i hedefliyorsa, *Microsoft.Office.Tools.Word.v4.0.Utilities.dll* derlemesine bir başvuru ekleyin. Bu izlenecek yolda daha sonra belgeye Windows Forms denetimleri eklemek için bu başvuru gerekir.
 
@@ -72,9 +74,9 @@ Projenize türü belirtilmiş bir veri kümesi eklemek için **veri kaynakları*
 
 ### <a name="to-add-a-typed-dataset-to-the-project"></a>Projeye türü belirtilmiş bir veri kümesi eklemek için
 
-1. **Veri kaynakları** penceresi görünür değilse, menü çubuğunda, **View**  >  **diğer Windows**  >  **veri kaynaklarını**görüntüle ' yi seçerek bunu görüntüleyin.
+1. **Veri kaynakları** penceresi görünür değilse, menü çubuğunda,   >  **diğer Windows**  >  **veri kaynaklarını** görüntüle ' yi seçerek bunu görüntüleyin.
 
-2. **Veri kaynağı Yapılandırma Sihirbazı 'nı**başlatmak Için **Yeni veri kaynağı Ekle** ' yi seçin.
+2. **Veri kaynağı Yapılandırma Sihirbazı 'nı** başlatmak Için **Yeni veri kaynağı Ekle** ' yi seçin.
 
 3. **Veritabanı**' na ve ardından **İleri**' ye tıklayın.
 
@@ -86,9 +88,9 @@ Projenize türü belirtilmiş bir veri kümesi eklemek için **veri kaynakları*
 
 6. **Veritabanı nesnelerinizi seçin** sayfasında **Tablolar** ' ı genişletin ve müşteri ' yi **(SalesLT)** seçin.
 
-7. **Son**'a tıklayın.
+7. **Finish (Son)** düğmesine tıklayın.
 
-    *AdventureWorksLTDataSet. xsd* dosyası **Çözüm Gezgini**eklenir. Bu dosya aşağıdaki öğeleri tanımlar:
+    *AdventureWorksLTDataSet. xsd* dosyası **Çözüm Gezgini** eklenir. Bu dosya aşağıdaki öğeleri tanımlar:
 
    - Adında bir türü belirtilmiş veri kümesi `AdventureWorksLTDataSet` . Bu veri kümesi AdventureWorksLT veritabanındaki **Customer (SalesLT)** tablosunun içeriğini temsil eder.
 
@@ -145,7 +147,7 @@ Word 'Ü açtığınızda içerik denetimi veri kümesinden verileri görüntül
 
 ### <a name="to-test-the-vsto-add-in"></a>VSTO eklentisini test etmek için
 
-1. **F5**tuşuna basın.
+1. **F5** tuşuna basın.
 
      Adlı bir içerik denetimi `customerContentControl` oluşturulur ve verilerle doldurulur. Aynı zamanda, adlı ve adlı bir veri kümesi nesnesi `adventureWorksLTDataSet` <xref:System.Windows.Forms.BindingSource> `customerBindingSource` projeye eklenir. , <xref:Microsoft.Office.Tools.Word.ContentControl> ' A bağlanır ve <xref:System.Windows.Forms.BindingSource> veri kümesi nesnesine bağlanır.
 

@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: program aracılığıyla e-posta gönderme'
+description: Microsoft Outlook 'tan programlı bir şekilde e-posta göndermek için Visual Studio 'Yu kullanın. Bu örnek, example.com etki alanı adına sahip kişilere bir e-posta iletisi gönderir.
+ms.custom: SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: how-to
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c56527f18857ad3c4ac82060ffd5794b72ac017c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5f31fdb92a5acff16b1d6e8001ea88931a9a22ab
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85543266"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525381"
 ---
 # <a name="how-to-programmatically-send-email"></a>Nasıl yapılır: program aracılığıyla e-posta gönderme
   Bu örnek, e-posta adreslerinde **example.com** etki alanı adına sahip kişilere bir e-posta iletisi gönderir.
@@ -38,7 +40,7 @@ ms.locfileid: "85543266"
 - **Example.com** etki alanı adına sahip kişiler, e-posta adresleridir.
 
 ## <a name="robust-programming"></a>Güçlü programlama
- **Example.com**etki alanı adını arayan filtre kodunu kaldırmayın. Filtreyi kaldırırsanız çözümünüz tüm kişilerinize e-posta iletileri gönderir.
+ **Example.com** etki alanı adını arayan filtre kodunu kaldırmayın. Filtreyi kaldırırsanız çözümünüz tüm kişilerinize e-posta iletileri gönderir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Posta öğeleriyle çalışma](../vsto/working-with-mail-items.md)

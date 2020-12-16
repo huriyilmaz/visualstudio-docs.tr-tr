@@ -1,5 +1,7 @@
 ---
 title: 'İzlenecek yol: çalışma zamanında Şeritteki denetimleri güncelleştirme'
+description: Şerit 'i Office uygulamasına yükledikten sonra Şeritteki denetimleri güncelleştirmek için şerit nesne modelini nasıl kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9c2e870f028b3337fd162adde881281d7050e142
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 2246dcdca1e754c885dd610f98986306a256228c
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "92298057"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526056"
 ---
 # <a name="walkthrough-update-the-controls-on-a-ribbon-at-run-time"></a>İzlenecek yol: çalışma zamanında Şeritteki denetimleri güncelleştirme
 
@@ -46,7 +48,7 @@ Bu izlenecek yol aşağıdaki görevleri gösterir:
 > [!NOTE]
 > Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Daha fazla bilgi için bkz. [Visual STUDIO IDE 'Yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
@@ -60,7 +62,7 @@ Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vard�
 
 ### <a name="to-create-a-new-outlook-vsto-add-in-project"></a>Yeni bir Outlook VSTO eklentisi projesi oluşturmak için
 
-1. İçinde [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , **Ribbon_Update_At_Runtime**ADLı bir Outlook VSTO eklentisi projesi oluşturun.
+1. İçinde [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , **Ribbon_Update_At_Runtime** ADLı bir Outlook VSTO eklentisi projesi oluşturun.
 
 2. **Yeni proje** iletişim kutusunda, **çözüm için dizin oluştur**' u seçin.
 
@@ -78,7 +80,7 @@ Bir Kullanıcı yeni bir posta iletisi yazdığında bu örnek için şerit gör
 
 2. **Yeni öğe Ekle** Iletişim kutusunda **Şerit (görsel Tasarımcı)** öğesini seçin.
 
-3. Yeni şerit 'in adını **CustomerRibbon**olarak değiştirin ve **Ekle**' ye tıklayın.
+3. Yeni şerit 'in adını **CustomerRibbon** olarak değiştirin ve **Ekle**' ye tıklayın.
 
      *CustomerRibbon.cs* veya *CustomerRibbon. vb* dosyası Şerit Tasarımcısı 'nda açılır ve varsayılan bir sekme ve grup görüntüler.
 
@@ -90,19 +92,19 @@ Bir Kullanıcı yeni bir posta iletisi yazdığında bu örnek için şerit gör
 
 6. Şerit tasarımcısında, seçmek için **grup1** ' e tıklayın.
 
-7. **Özellikler** penceresinde, **etiketi** **müşteri satın alımları**olarak ayarlayın.
+7. **Özellikler** penceresinde, **etiketi** **müşteri satın alımları** olarak ayarlayın.
 
 8. **Araç kutusunun** **Office Şerit denetimleri** sekmesinden **Müşteri Harcamaları** grubuna bir **açılan kutu** sürükleyin.
 
 9. Seçmek için **ComboBox1** öğesine tıklayın.
 
-10. **Özellikler** penceresinde, **etiketi** **müşterilere**ayarlayın.
+10. **Özellikler** penceresinde, **etiketi** **müşterilere** ayarlayın.
 
 11. **Araç kutusunun** **Office Şerit denetimleri** sekmesinden bir **menüyü** **Müşteri satınalmaları** grubuna sürükleyin.
 
-12. **Özellikler** penceresinde **etiket** ' i **satın alınan ürün**olarak ayarlayın.
+12. **Özellikler** penceresinde **etiket** ' i **satın alınan ürün** olarak ayarlayın.
 
-13. **Dynamic** **değerini true**olarak ayarlayın.
+13. **Dynamic** **değerini true** olarak ayarlayın.
 
      Bu, Şerit Office uygulamasına yüklendikten sonra çalışma zamanında menüdeki denetimleri eklemenize ve kaldırmanıza olanak sağlar.
 
@@ -114,7 +116,7 @@ Yerleşik sekme, zaten bir Outlook Gezgini veya Inspector şeridinde bulunan bir
 
 1. **TabAddins (yerleşik)** sekmesine tıklayarak seçin.
 
-2. **Özellikler** penceresinde **ControlID** özelliğini genişletin ve ardından **OfficeId** 'yi **TabNewMailMessage**olarak ayarlayın.
+2. **Özellikler** penceresinde **ControlID** özelliğini genişletin ve ardından **OfficeId** 'yi **TabNewMailMessage** olarak ayarlayın.
 
      Bu, **müşteri satın alımları** grubunu yeni bir posta iletisinde görünen şeridin **iletiler** sekmesine ekler.
 
@@ -122,7 +124,7 @@ Yerleşik sekme, zaten bir Outlook Gezgini veya Inspector şeridinde bulunan bir
 
 4. **Özellikler** penceresinde, **konum** özelliğini genişletin, **PositionType** özelliğinin yanındaki açılan oka tıklayın ve ardından **BeforeOfficeId**' ye tıklayın.
 
-5. **OfficeId** özelliğini **GroupClipboard**olarak ayarlayın.
+5. **OfficeId** özelliğini **GroupClipboard** olarak ayarlayın.
 
      Bu, **iletiler** sekmesinin **Pano** grubundan önce **müşterinin satın** alma grubunu konumlandırır.
 
@@ -134,7 +136,7 @@ Projenize türü belirtilmiş bir veri kümesi eklemek için **veri kaynakları*
 
 1. **Veri** menüsünde **Yeni veri kaynağı Ekle**' ye tıklayın.
 
-     Bu, **veri kaynağı Yapılandırma Sihirbazı 'nı**başlatır.
+     Bu, **veri kaynağı Yapılandırma Sihirbazı 'nı** başlatır.
 
 2. **Veritabanı**' nı seçin ve ardından **İleri**' ye tıklayın.
 

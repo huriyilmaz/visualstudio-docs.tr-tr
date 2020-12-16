@@ -1,5 +1,7 @@
 ---
 title: Proje yükseltme, Seçenekler iletişim kutusu
+description: Visual Studio 'nun, geliştirme bilgisayarındaki Office sürümünü hedeflemek için VSTO eklenti projelerini otomatik olarak değiştirsin öğesini belirtmek için proje yükseltme sayfasını kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: bd1b3b90cf4e284e558be02608cac953dc71584b
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 75bf6d5f7a3a6d45ba4313bbe70f8595f65c4632
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90811012"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525056"
 ---
 # <a name="project-upgrade-options-dialog-box"></a>Proje yükseltme, Seçenekler iletişim kutusu
   Visual Studio 'Nun VSTO eklenti projelerini, geliştirme bilgisayarında yüklü Office sürümünü hedeflemek üzere otomatik olarak değiştirmeyeceğini belirtmek için **Proje yükseltme** sayfasını kullanın.

@@ -1,5 +1,7 @@
 ---
 title: Program VSTO eklentileri
+description: Microsoft Office ana bilgisayar uygulamasının nesne modeline erişim gibi görevleri gerçekleştirmek için ThisAddIn sınıfını nasıl kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -32,12 +34,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 240995eb744f8107503c108cbcdbbb8522748b79
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7c3a4b14a1935d1d276f0884234fcd121b838f39
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87115338"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525110"
 ---
 # <a name="program-vsto-add-ins"></a>Program VSTO eklentileri
   Bir Microsoft Office uygulamasını bir VSTO eklentisi oluşturarak genişlettiğinizde, doğrudan projenizdeki sınıfa karşı kod yazarsınız `ThisAddIn` . Bu sınıfı, Microsoft Office ana bilgisayar uygulamasının nesne modeline erişim, uygulamanın kullanıcı arabirimini (UI) özelleştirme ve VSTO eklentiinizdeki nesneleri diğer Office çözümlerine sunma gibi görevleri gerçekleştirmek için kullanabilirsiniz.

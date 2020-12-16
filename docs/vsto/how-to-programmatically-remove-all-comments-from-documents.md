@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: belgelerden tüm açıklamaları program aracılığıyla kaldırma'
+description: Visual Studio 'Yu kullanarak bir Microsoft Word belgesinden tüm açıklamaları programlı bir şekilde nasıl kaldırabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ee30cb7d4083adfff18261e3267dea1d8a96626f
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: cdb2d7b61efc1e40bf08b6b38ea6564892a04a33
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584826"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526645"
 ---
 # <a name="how-to-programmatically-remove-all-comments-from-documents"></a>Nasıl yapılır: belgelerden tüm açıklamaları program aracılığıyla kaldırma
   `DeleteAllComments`Microsoft Office Word belgesinden tüm açıklamaları kaldırmak için yöntemini kullanın.

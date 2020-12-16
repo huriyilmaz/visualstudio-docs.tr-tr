@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: koddaki çalışma sayfası aralıklarına program aracılığıyla başvurma'
+description: Visual Studio 'Yu, bir Microsoft Excel çalışma sayfasındaki NamedRange denetimi veya yerel Excel Range nesnesinin içeriğine programlı bir şekilde başvurmak için nasıl kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 319be5ad6c878e08a862d1e20e826c2800c33512
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 9756123038de33e8f8e69bd9a824822c26e2dc00
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584839"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526675"
 ---
 # <a name="how-to-programmatically-refer-to-worksheet-ranges-in-code"></a>Nasıl yapılır: koddaki çalışma sayfası aralıklarına program aracılığıyla başvurma
   Bir <xref:Microsoft.Office.Tools.Excel.NamedRange> denetimin veya yerel Excel Aralık nesnesinin içeriğine başvurmak için benzer bir işlem kullanırsınız.

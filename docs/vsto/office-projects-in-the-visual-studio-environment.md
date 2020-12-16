@@ -1,5 +1,7 @@
 ---
 title: Visual Studio ortamında Office projeleri
+description: Microsoft Office projelerinin, Visual Studio 'da Windows Forms projeleri gibi diğer proje türlerine benzer bir geliştirme deneyimine sahip olduğunu öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -41,15 +43,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 65f3a3abfe7e49872c7131a247d74612200bf42a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0e183d5aca3fa856f45f322c2b79a76524b28005
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62978064"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525149"
 ---
 # <a name="office-projects-in-the-visual-studio-environment"></a>Visual Studio ortamında Office projeleri
-  Microsoft Office projeleri, Visual Studio'daki diğer proje türlerine (Windows Forms projeleri gibi) benzer bir geliştirme deneyimine sahiptir. Bir Office projesi oluşturduğunuzda veya açtığınızda, proje öğeleri **Çözüm Gezgini**görüntülenir. Belge düzeyinde projeler için, belge (yani, Word belgesi veya Excel çalışma kitabı) Visual Studio'da açılır ve belge bir görsel tasarımcı gibi davranır.
+  Microsoft Office projeleri, Visual Studio'daki diğer proje türlerine (Windows Forms projeleri gibi) benzer bir geliştirme deneyimine sahiptir. Bir Office projesi oluşturduğunuzda veya açtığınızda, proje öğeleri **Çözüm Gezgini** görüntülenir. Belge düzeyinde projeler için, belge (yani, Word belgesi veya Excel çalışma kitabı) Visual Studio'da açılır ve belge bir görsel tasarımcı gibi davranır.
 
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]
 
@@ -64,14 +66,14 @@ ms.locfileid: "62978064"
 
   VSTO eklenti projesinde, **Çözüm Gezgini** aşağıdaki varsayılan öğeleri görüntüler:
 
-- Uygulama düğümü. Bu düğüm, **Word**, **Excel**veya **Outlook**gibi ana bilgisayar uygulamasıyla aynı ada sahiptir. Bu uygulama düğümü ThisAddIn kod dosyasını içerir. Ayrıca **konak öğesi özelliği Için ad alanı** sağlar. Bu özellik hakkında daha fazla bilgi için bkz. [Office projelerindeki Özellikler](../vsto/properties-in-office-projects.md).
+- Uygulama düğümü. Bu düğüm, **Word**, **Excel** veya **Outlook** gibi ana bilgisayar uygulamasıyla aynı ada sahiptir. Bu uygulama düğümü ThisAddIn kod dosyasını içerir. Ayrıca **konak öğesi özelliği Için ad alanı** sağlar. Bu özellik hakkında daha fazla bilgi için bkz. [Office projelerindeki Özellikler](../vsto/properties-in-office-projects.md).
 
 - ThisAddIn kod dosyası. Bu dosya, `ThisAddIn` VSTO eklentisi için oluşturulan sınıfı içerir. Bu sınıf hakkında daha fazla bilgi için bkz. [Program VSTO eklentileri](../vsto/programming-vsto-add-ins.md).
 
 - Doğrudan düzenlemeniz için tasarlanmamış gizli proje dosyaları. Daha fazla bilgi için bkz. [gizli proje dosyaları](#hiddenfiles).
 
 ### <a name="temporary-certificates"></a>Geçici Sertifikalar
- Office projeleri ayrıca *Proje adı*_TemporaryKey. pfx adlı geçici bir sertifika içerir. Bu sertifika, geliştirme sırasında projenin uygulama ve dağıtım bildirimlerini imzalamak için kullanılır. Daha fazla bilgi için bkz. [Office çözümlerine güven verme](../vsto/granting-trust-to-office-solutions.md) ve [Office çözümlerini güvenli hale getirme](../vsto/securing-office-solutions.md).
+ Office projeleri ayrıca *Proje adı* _TemporaryKey. pfx adlı geçici bir sertifika içerir. Bu sertifika, geliştirme sırasında projenin uygulama ve dağıtım bildirimlerini imzalamak için kullanılır. Daha fazla bilgi için bkz. [Office çözümlerine güven verme](../vsto/granting-trust-to-office-solutions.md) ve [Office çözümlerini güvenli hale getirme](../vsto/securing-office-solutions.md).
 
 ### <a name="hidden-project-files"></a><a name="hiddenfiles"></a> Gizli proje dosyaları
  Bazı proje dosyaları varsayılan olarak gizlidir. Bu dosyalar Visual Studio tarafından oluşturulur ve proje türüne göre farklılık gösterir. Gizli dosyaları görüntülemek için **Çözüm Gezgini** **tüm dosyaları göster** ' e tıklayın.
@@ -105,7 +107,7 @@ ms.locfileid: "62978064"
 ### <a name="design-mode-vs-runtime-mode"></a>Tasarım modu ile çalışma zamanı modu
  Visual Studio ortamında bir belge açıldığında, her zaman *Tasarım modundadır*. Bazı görevler (örneğin, belge yüzeyine bir konak denetimi sürüklemek gibi) sadece tasarım modunda gerçekleştirebilir.
 
- Belgeyi *çalışma zamanı modunda*görüntülemek için, uygulamayı ve belgeyi Visual Studio 'nun dışında açmanız gerekir. Ayrıca, projeyi derleyip çalıştırabilirsiniz ve böylece, belge ve uygulama otomatik olarak Visual Studio'nun dışında açılır.
+ Belgeyi *çalışma zamanı modunda* görüntülemek için, uygulamayı ve belgeyi Visual Studio 'nun dışında açmanız gerekir. Ayrıca, projeyi derleyip çalıştırabilirsiniz ve böylece, belge ve uygulama otomatik olarak Visual Studio'nun dışında açılır.
 
 ## <a name="code-editor"></a>Kod Düzenleyicisi
  Kod Düzenleyicisi çözümünüzdeki görünür kod dosyalarını görüntüleyip değiştirebilmenizi sağlar. Bu dosyalar çözümünüzün davranışını tanımlayan kodu içerir.

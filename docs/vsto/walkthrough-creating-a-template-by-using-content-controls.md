@@ -1,5 +1,6 @@
 ---
 title: 'İzlenecek yol: içerik denetimlerini kullanarak şablon oluşturma'
+description: Bir Microsoft Word şablonunda yapılandırılmış ve yeniden kullanılabilir içerik oluşturmak için içerik denetimleri kullanan belge düzeyi özelleştirmesi oluşturmayı öğrenin.
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -15,19 +16,19 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 30f2443c724d547afe3c510e64f2c50fd9dd4db9
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 2dd7e75048a84a4e235390b99d17d48dfad039ec
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585034"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524986"
 ---
 # <a name="walkthrough-create-a-template-by-using-content-controls"></a>İzlenecek yol: içerik denetimlerini kullanarak şablon oluşturma
   Bu izlenecek yol, bir Microsoft Office sözcük şablonunda yapılandırılmış ve yeniden kullanılabilir içerik oluşturmak için içerik denetimleri kullanan belge düzeyi özelleştirmesi oluşturmayı gösterir.
 
  [!INCLUDE[appliesto_wdalldoc](../vsto/includes/appliesto-wdalldoc-md.md)]
 
- Word, *derleme blokları*adlı yeniden kullanılabilir belge bölümlerinin bir koleksiyonunu oluşturmanızı sağlar. Bu izlenecek yol, derleme blokları olarak iki tablo oluşturmayı gösterir. Her tablo, düz metin veya tarihler gibi farklı türlerde içerik içerebilen çeşitli içerik denetimleri içerir. Tablolardan biri bir çalışanla ilgili bilgiler içerir ve diğer tablo müşteri geri bildirimi içerir.
+ Word, *derleme blokları* adlı yeniden kullanılabilir belge bölümlerinin bir koleksiyonunu oluşturmanızı sağlar. Bu izlenecek yol, derleme blokları olarak iki tablo oluşturmayı gösterir. Her tablo, düz metin veya tarihler gibi farklı türlerde içerik içerebilen çeşitli içerik denetimleri içerir. Tablolardan biri bir çalışanla ilgili bilgiler içerir ve diğer tablo müşteri geri bildirimi içerir.
 
  Şablondan bir belge oluşturduktan sonra, <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl> şablonda kullanılabilir yapı taşlarını görüntüleyen birkaç nesne kullanarak, tabloya her birini ekleyebilirsiniz.
 
@@ -57,9 +58,9 @@ ms.locfileid: "91585034"
 
 ### <a name="to-create-a-new-word-template-project"></a>Yeni bir Word şablonu projesi oluşturmak için
 
-1. **MyBuildingBlockTemplate**adlı bir Word şablonu projesi oluşturun. Sihirbazda, çözümde yeni bir belge oluşturun. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
+1. **MyBuildingBlockTemplate** adlı bir Word şablonu projesi oluşturun. Sihirbazda, çözümde yeni bir belge oluşturun. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]tasarımcıda yeni Word şablonunu açar ve **Çözüm Gezgini**Için **MyBuildingBlockTemplate** projesini ekler.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]tasarımcıda yeni Word şablonunu açar ve **Çözüm Gezgini** Için **MyBuildingBlockTemplate** projesini ekler.
 
 ## <a name="create-the-employee-table"></a>Çalışan tablosu oluşturma
  Kullanıcının bir çalışanla ilgili bilgi girebileceği, dört farklı içerik denetimi türü içeren bir tablo oluşturun.
@@ -138,7 +139,7 @@ ms.locfileid: "91585034"
 
 ### <a name="to-modify-the-ui-of-the-content-controls-programmatically"></a>İçerik denetimlerinin Kullanıcı arabirimini program aracılığıyla değiştirmek için
 
-1. **Çözüm Gezgini**' de, **ThisDocument.cs** veya **ThisDocument. vb**öğesine sağ tıklayın ve ardından **kodu görüntüle**' ye tıklayın.
+1. **Çözüm Gezgini**' de, **ThisDocument.cs** veya **ThisDocument. vb** öğesine sağ tıklayın ve ardından **kodu görüntüle**' ye tıklayın.
 
 2. Aşağıdaki kodu `ThisDocument` sınıfına ekleyin. Bu kod, Bu izlenecek yolda daha sonra kullanacağınız birkaç nesne bildirir.
 

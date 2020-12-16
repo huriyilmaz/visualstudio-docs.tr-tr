@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: program aracılığıyla belgeleri kaydetme'
+description: Belge adını değiştirmeden veya yeni bir adla belgeyi programlı bir şekilde kaydetmek için Visual Studio 'Yu nasıl kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 464d131261ecfb0a64a3ca279007ff9332cdb2e4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2221ec6576e7ac0de399613a1cda3cdcb8dcea6c
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85537598"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525460"
 ---
 # <a name="how-to-programmatically-save-documents"></a>Nasıl yapılır: program aracılığıyla belgeleri kaydetme
 
@@ -56,7 +58,7 @@ Microsoft Office Word belgelerini kaydetmek için birkaç yol vardır. Belge ad�
 Yeni bir `SaveAs` ada sahip bir belgeyi kaydetmek için yöntemini kullanın. <xref:Microsoft.Office.Tools.Word.Document>Bir belge düzeyi Word projesinde veya herhangi bir Word projesindeki yerel bir nesne için konak öğesinin bu yöntemini kullanabilirsiniz <xref:Microsoft.Office.Interop.Word.Document> . Bu yöntem, yeni dosya adını belirtmenizi gerektirir, ancak diğer bağımsız değişkenler isteğe bağlıdır.
 
 > [!NOTE]
-> Olay işleyicisinin içinde **SaveAs** iletişim kutusunu gösterip <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentBeforeSave> `ThisDocument` *Cancel* parametresini **false**olarak ayarlarsanız uygulama beklenmedik şekilde çıkabilir. *Cancel* parametresini **true**olarak ayarlarsanız, otomatik kaydetme 'nin devre dışı bırakıldığını belirten bir hata iletisi görüntülenir.
+> Olay işleyicisinin içinde **SaveAs** iletişim kutusunu gösterip <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentBeforeSave> `ThisDocument` *Cancel* parametresini **false** olarak ayarlarsanız uygulama beklenmedik şekilde çıkabilir. *Cancel* parametresini **true** olarak ayarlarsanız, otomatik kaydetme 'nin devre dışı bırakıldığını belirten bir hata iletisi görüntülenir.
 
 ### <a name="to-save-the-document-associated-with-a-document-level-customization-with-a-new-name"></a>Belge düzeyi özelleştirmesiyle ilişkili belgeyi yeni bir adla kaydetmek için
 
@@ -75,7 +77,7 @@ Yeni bir `SaveAs` ada sahip bir belgeyi kaydetmek için yöntemini kullanın. <x
      Aşağıdaki kod örneği, etkin belgeyi yeni bir adla kaydeder. Bu kod örneğini kullanmak için, `ThisDocument` `ThisAddIn` projenizdeki veya sınıfından çalıştırın.
 
     > [!NOTE]
-    > Bir <xref:Microsoft.Office.Interop.Word._Document.SaveAs%2A> hedef dizin yoksa veya dosya kaydetme ile ilgili başka sorunlar varsa yöntemi bir özel durum oluşturur. TRY kullanmak iyi bir uygulamadır **... ** <xref:Microsoft.Office.Interop.Word._Document.SaveAs%2A> yöntemi etrafında veya çağırma yöntemi içinde catch bloğu.
+    > Bir <xref:Microsoft.Office.Interop.Word._Document.SaveAs%2A> hedef dizin yoksa veya dosya kaydetme ile ilgili başka sorunlar varsa yöntemi bir özel durum oluşturur. TRY kullanmak iyi bir uygulamadır **...** <xref:Microsoft.Office.Interop.Word._Document.SaveAs%2A> yöntemi etrafında veya çağırma yöntemi içinde catch bloğu.
 
      [!code-vb[Trin_VstcoreWordAutomationAddIn#10](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#10)]
      [!code-csharp[Trin_VstcoreWordAutomationAddIn#10](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#10)]

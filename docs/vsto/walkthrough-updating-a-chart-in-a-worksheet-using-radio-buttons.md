@@ -1,5 +1,7 @@
 ---
 title: Radyo düğmelerini kullanarak çalışma sayfasındaki grafiği güncelleştirme
+description: Kullanıcılara seçenekler arasında hızla geçiş yapmak için bir yol sağlamak üzere Microsoft Excel çalışma sayfasındaki radyo düğmelerini kullanmanın temellerini öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e63d7d09a09fe4c051d8137428fdae90490cbae5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4e375f394cd3d8be35ace8e3df07920fb824a07e
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88238822"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526062"
 ---
 # <a name="walkthrough-updating-a-chart-in-a-worksheet-using-radio-buttons"></a>İzlenecek Yol: Radyo Düğmelerini Kullanarak Çalışma Sayfasında Grafik Güncelleme
   Bu izlenecek yol, kullanıcıya seçenekler arasında hızlı bir şekilde geçiş yapmak için bir yol sağlamak üzere Microsoft Office Excel çalışma sayfasındaki radyo düğmelerinin kullanımıyla ilgili temel bilgileri gösterir. Bu durumda, Seçenekler grafiğin stilini değiştirir.
@@ -37,7 +39,7 @@ ms.locfileid: "88238822"
 > [!NOTE]
 > Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Daha fazla bilgi için bkz. [Visual STUDIO IDE 'Yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]
@@ -45,7 +47,7 @@ ms.locfileid: "88238822"
 - [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] veya [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)].
 
 ## <a name="add-a-chart-to-a-worksheet"></a>Çalışma sayfasına grafik ekleme
- Var olan bir çalışma kitabını özelleştiren bir Excel çalışma kitabı projesi oluşturabilirsiniz. Bu kılavuzda, bir çalışma kitabına bir grafik ekleyecek ve ardından bu çalışma kitabını yeni bir Excel çözümünde kullanacaksınız. Bu izlenecek yolda veri kaynağı, **grafik Için veri**adlı bir çalışma sayfasıdır.
+ Var olan bir çalışma kitabını özelleştiren bir Excel çalışma kitabı projesi oluşturabilirsiniz. Bu kılavuzda, bir çalışma kitabına bir grafik ekleyecek ve ardından bu çalışma kitabını yeni bir Excel çözümünde kullanacaksınız. Bu izlenecek yolda veri kaynağı, **grafik Için veri** adlı bir çalışma sayfasıdır.
 
 ### <a name="to-add-the-data"></a>Verileri eklemek için
 
@@ -53,7 +55,7 @@ ms.locfileid: "88238822"
 
 2. **Sheet3** sekmesine sağ tıklayın ve sonra kısayol menüsünde **Yeniden Adlandır** ' a tıklayın.
 
-3. **Grafik için sayfayı veri**olarak yeniden adlandırın.
+3. **Grafik için sayfayı veri** olarak yeniden adlandırın.
 
 4. Aşağıdaki verileri, A4 hücresi sol üst köşesinden ve sağ alt köşedeki E8 **grafik Için verilere** ekleyin.
 
@@ -80,24 +82,24 @@ ms.locfileid: "88238822"
 
 6. **Veri kaynağı seç** Iletişim kutusunda **Tamam**' a tıklayın.
 
-7. Sağ üst köşedeki **E2**hücresi ile hizalanacak şekilde grafiği yeniden konumlandırın.
+7. Sağ üst köşedeki **E2** hücresi ile hizalanacak şekilde grafiği yeniden konumlandırın.
 
-8. Dosyanızı C sürücüsüne kaydedin ve **ExcelChart.xlsx**adlandırın.
+8. Dosyanızı C sürücüsüne kaydedin ve **ExcelChart.xlsx** adlandırın.
 
 9. Excel 'den çıkın.
 
-## <a name="create-a-new-project"></a>Yeni bir proje oluşturma
+## <a name="create-a-new-project"></a>Yeni proje oluşturma
  Bu adımda, **ExcelChart** çalışma kitabını temel alan bir Excel çalışma kitabı projesi oluşturacaksınız.
 
 ### <a name="to-create-a-new-project"></a>Yeni bir proje oluşturmak için
 
-1. **Excel grafiğim**adına sahip bir Excel çalışma kitabı projesi oluşturun. Sihirbazda, **var olan bir belgeyi Kopyala**' yı seçin.
+1. **Excel grafiğim** adına sahip bir Excel çalışma kitabı projesi oluşturun. Sihirbazda, **var olan bir belgeyi Kopyala**' yı seçin.
 
      Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
 2. **Gözden geçirme düğmesine tıklayın** ve bu kılavuzda daha önce oluşturduğunuz çalışma kitabına gidin.
 
-3. **Tamam**’a tıklayın.
+3. **Tamam** düğmesine tıklayın.
 
      Visual Studio tasarımcıda yeni Excel çalışma kitabını açar ve **Çözüm Gezgini**'e **Excel Chart projem** ekler.
 
@@ -120,7 +122,7 @@ ms.locfileid: "88238822"
 
 ### <a name="to-add-a-user-control"></a>Kullanıcı denetimi eklemek için
 
-1. **Çözüm Gezgini**Içinde **Excel grafik projem** ' i seçin.
+1. **Çözüm Gezgini** Içinde **Excel grafik projem** ' i seçin.
 
 2. **Proje** menüsünde **Yeni öğe Ekle**' ye tıklayın.
 
@@ -199,21 +201,21 @@ ms.locfileid: "88238822"
      [!code-cs[Trin_VstcoreProgrammingControlsExcel#18](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/ChartOptions.cs#18)]
 
 ## <a name="add-the-user-control-to-the-worksheet"></a>Çalışma sayfasına kullanıcı denetimini ekleme
- Çözümü oluşturduğunuzda, Yeni Kullanıcı denetimi **araç kutusuna**otomatik olarak eklenir. Daha sonra denetimi **araç kutusundan** çalışma sayfanıza sürükleyebilirsiniz.
+ Çözümü oluşturduğunuzda, Yeni Kullanıcı denetimi **araç kutusuna** otomatik olarak eklenir. Daha sonra denetimi **araç kutusundan** çalışma sayfanıza sürükleyebilirsiniz.
 
 ### <a name="to-add-the-user-control-your-worksheet"></a>Çalışma sayfanıza Kullanıcı denetimi eklemek için
 
 1. **Yapı** menüsünde **Yapı Çözümü**’ne tıklayın.
 
-     **ChartOptions** Kullanıcı denetimi **araç kutusuna**eklenir.
+     **ChartOptions** Kullanıcı denetimi **araç kutusuna** eklenir.
 
-2. **Çözüm Gezgini**, **Sheet1. vb** veya **Sheet1.cs**öğesine sağ tıklayın ve ardından **tasarımcıyı görüntüle**' ye tıklayın.
+2. **Çözüm Gezgini**, **Sheet1. vb** veya **Sheet1.cs** öğesine sağ tıklayın ve ardından **tasarımcıyı görüntüle**' ye tıklayın.
 
 3. **Araç kutusundan** **ChartOptions** denetimini çalışma sayfasına sürükleyin.
 
      Adlı yeni bir denetim `my_Excel_Chart_ChartOptions1` projenize eklenir.
 
-4. Denetimin adını **ChartOptions1**olarak değiştirin.
+4. Denetimin adını **ChartOptions1** olarak değiştirin.
 
 ## <a name="change-the-chart-type"></a>Grafik türünü değiştirme
  Grafik türünü değiştirmek için, Kullanıcı denetiminde seçilen seçeneğe göre stili ayarlayan bir olay işleyicisi oluşturun.

@@ -1,5 +1,7 @@
 ---
 title: Office çözümlerinde kod yazma
+description: Microsoft Office çözümlerinde kod yazmayı öğrenin ve Office nesne modellerinin yönetilen koda sunulma şeklini öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -33,12 +35,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: cead0569ae067fcc503f7f2074807c609e6eed75
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 40ea589cb4406a383876b1f16721f18fc48ebadd
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71255037"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526031"
 ---
 # <a name="write-code-in-office-solutions"></a>Office çözümlerinde kod yazma
   Office projelerinde, Visual Studio 'daki diğer proje türlerinden farklı kod yazmanın bazı yönleri vardır. Bu farklılıkların birçoğu, Office nesne modellerinin yönetilen koda sunulma yöntemiyle ilgilidir. Diğer farklar Office projelerinin tasarımı ile ilgilidir.

@@ -1,5 +1,7 @@
 ---
 title: 'İzlenecek yol: Şerit XML kullanarak özel sekme oluşturma'
+description: Add-Ins sekmesine nasıl düğme ekleyebileceğiniz ve şerit (XML) kullanarak Microsoft Word 'Ü otomatikleştirebileceğiniz hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e05bd9173b83ec3303a058dcf61ea48a7ef7675c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e81d20dc179df76b759223c1460ca13bfceb5706
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64785943"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524882"
 ---
 # <a name="walkthrough-create-a-custom-tab-by-using-ribbon-xml"></a>İzlenecek yol: Şerit XML kullanarak özel sekme oluşturma
   Bu izlenecek yol, **Şerit (XML)** öğesini kullanarak nasıl özel Şerit sekmesinin oluşturulduğunu gösterir.
@@ -50,7 +52,7 @@ ms.locfileid: "64785943"
 
 ### <a name="to-create-a-new-project"></a>Yeni bir proje oluşturmak için
 
-1. **MyRibbonAddIn**adlı bir **Word eklenti** projesi oluşturun.
+1. **MyRibbonAddIn** adlı bir **Word eklenti** projesi oluşturun.
 
      Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
@@ -65,11 +67,11 @@ ms.locfileid: "64785943"
 
 2. **Yeni öğe Ekle** Iletişim kutusunda **Şerit (XML)** öğesini seçin.
 
-3. Yeni şeridin adını **MyRibbon**olarak değiştirin ve **Ekle**' ye tıklayın.
+3. Yeni şeridin adını **MyRibbon** olarak değiştirin ve **Ekle**' ye tıklayın.
 
      **MyRibbon.cs** veya **MyRibbon. vb** dosyası tasarımcıda açılır. **MyRibbon.xml** ADLı bir XML dosyası projenize de eklenir.
 
-4. **Çözüm Gezgini**, **ThisAddin.cs** veya **ThisAddIn. vb**öğesine sağ tıklayın ve ardından **kodu görüntüle**' ye tıklayın.
+4. **Çözüm Gezgini**, **ThisAddin.cs** veya **ThisAddIn. vb** öğesine sağ tıklayın ve ardından **kodu görüntüle**' ye tıklayın.
 
 5. Aşağıdaki kodu **ThisAddIn** sınıfına ekleyin. Bu kod, yöntemini geçersiz kılar `CreateRibbonExtensibilityObject` ve ŞERIT XML sınıfını Office uygulamasına döndürür.
 
@@ -85,7 +87,7 @@ ms.locfileid: "64785943"
 
 1. **Çözüm Gezgini**' de, **MyRibbon.xml** ' a sağ tıklayın ve sonra **Aç**' a tıklayın.
 
-2. **Tab** öğesinin IÇERIĞINI aşağıdaki XML ile değiştirin. Bu XML, varsayılan denetim grubunun etiketini **içerik**olarak değiştirir ve Etiketler **metin ekle** ve **Tablo Ekle**şeklinde iki yeni düğme ekler.
+2. **Tab** öğesinin IÇERIĞINI aşağıdaki XML ile değiştirin. Bu XML, varsayılan denetim grubunun etiketini **içerik** olarak değiştirir ve Etiketler **metin ekle** ve **Tablo Ekle** şeklinde iki yeni düğme ekler.
 
     ```xml
     <tab idMso="TabAddIns">
@@ -105,7 +107,7 @@ ms.locfileid: "64785943"
 
 ### <a name="to-add-callback-methods-for-the-buttons"></a>Düğmelere geri çağırma yöntemleri eklemek için
 
-1. **Çözüm Gezgini**' de, **MyRibbon.cs** veya **MyRibbon. vb**öğesine sağ tıklayın ve sonra **Aç**' a tıklayın.
+1. **Çözüm Gezgini**' de, **MyRibbon.cs** veya **MyRibbon. vb** öğesine sağ tıklayın ve sonra **Aç**' a tıklayın.
 
 2. Aşağıdaki kodu **MyRibbon.cs** veya **MyRibbon. vb** dosyasının en üstüne ekleyin. Bu kod, ad alanı için bir diğer ad oluşturur <xref:Microsoft.Office.Interop.Word> .
 

@@ -1,5 +1,7 @@
 ---
 title: Excel çalışma sayfalarında Windows Forms denetimleri kullanma
+description: Windows Forms denetimleri ekleyeceğiniz şekilde Microsoft Excel çalışma kitaplarınıza Windows Forms denetimleri nasıl ekleyebileceğiniz hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 032ee551ff04590ccdb8744c1274b137dec0b756
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 015fffa51358c3a7a13d98950392d0749560c089
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62982314"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526519"
 ---
 # <a name="use-windows-forms-controls-on-excel-worksheets"></a>Excel çalışma sayfalarında Windows Forms denetimleri kullanma
   Microsoft Office Excel çalışma kitaplarına Windows Forms denetimleri eklediğiniz gibi Windows Forms denetimleri ekleyebilirsiniz. Belgelerde denetimlerle çalışma hakkında genel bilgi için bkz. [Office belgelerindeki Windows Forms denetimleri genel bakış](../vsto/windows-forms-controls-on-office-documents-overview.md).

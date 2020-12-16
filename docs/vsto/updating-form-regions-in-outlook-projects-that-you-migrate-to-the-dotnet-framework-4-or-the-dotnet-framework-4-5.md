@@ -1,5 +1,7 @@
 ---
 title: .NET Framework 4,5 ' e geçirildiğinde Outlook form bölgelerini Güncelleştir
+description: Bir form bölgesi olan bir Outlook VSTO eklentisi projesinin hedef çatısı .NET Framework 4 ' e veya sonraki bir sürüme değiştirilmişse kodunuzu değiştirmeniz gerekir.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9d8978703630e99ecb930e18e7d128eddff8792f
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 507132a28526e4ce008957fa0b988c23c09d686f
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584405"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526588"
 ---
 # <a name="update-outlook-form-regions-when-migrated-to-net-framework-45"></a>.NET Framework 4,5 ' e geçirildiğinde Outlook form bölgelerini Güncelleştir
 
@@ -29,7 +31,7 @@ ms.locfileid: "91584405"
 
 ### <a name="to-update-the-generated-code-for-a-form-region-that-you-designed-in-visual-studio"></a>Visual Studio 'da tasarladığınız bir form bölgesinin oluşturulan kodunu güncelleştirmek için
 
-1. Kod düzenleyicisinde form bölgesi arka plan kod dosyasını açın. Bu dosya *YourFormRegion*olarak adlandırılır. Designer.cs veya *YourFormRegion*. Designer. vb. Bu dosyayı Visual Basic projelerinde görmek için, **Çözüm Gezgini** **tüm dosyaları göster** düğmesine tıklayın.
+1. Kod düzenleyicisinde form bölgesi arka plan kod dosyasını açın. Bu dosya *YourFormRegion* olarak adlandırılır. Designer.cs veya *YourFormRegion*. Designer. vb. Bu dosyayı Visual Basic projelerinde görmek için, **Çözüm Gezgini** **tüm dosyaları göster** düğmesine tıklayın.
 
 2. Form bölgesi sınıfının bildirimini yerine öğesinden türeten önce değiştirin <xref:Microsoft.Office.Tools.Outlook.FormRegionBase> `Microsoft.Office.Tools.Outlook.FormRegionControl` .
 
@@ -115,7 +117,7 @@ ms.locfileid: "91584405"
 
 #### <a name="to-update-the-generated-code-for-a-form-region-that-you-imported-from-outlook"></a>Outlook 'tan içeri aktardığınız bir form bölgesinin oluşturulan kodunu güncelleştirmek için
 
-1. Kod düzenleyicisinde form bölgesi arka plan kod dosyasını açın. Bu dosya *YourFormRegion*olarak adlandırılır. Designer.cs veya *YourFormRegion*. Designer. vb. Bu dosyayı Visual Basic projelerinde görmek için, **Çözüm Gezgini** **tüm dosyaları göster** düğmesine tıklayın.
+1. Kod düzenleyicisinde form bölgesi arka plan kod dosyasını açın. Bu dosya *YourFormRegion* olarak adlandırılır. Designer.cs veya *YourFormRegion*. Designer. vb. Bu dosyayı Visual Basic projelerinde görmek için, **Çözüm Gezgini** **tüm dosyaları göster** düğmesine tıklayın.
 
 2. Form bölgesi sınıfının bildirimini yerine öğesinden türeten önce değiştirin <xref:Microsoft.Office.Tools.Outlook.ImportedFormRegionBase> `Microsoft.Office.Tools.Outlook.ImportedFormRegion` .
 

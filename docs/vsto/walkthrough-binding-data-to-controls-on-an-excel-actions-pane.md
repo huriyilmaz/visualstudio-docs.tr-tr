@@ -1,5 +1,7 @@
 ---
 title: 'İzlenecek yol: Excel eylemler bölmesindeki denetimlere veri bağlama'
+description: Microsoft Excel 'de bir eylemler bölmesindeki denetimlere veri bağlama. Denetimler SQL Server veritabanındaki tablolar arasında bir ana/ayrıntı ilişkisi gösterir.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 3801aff53a5bf9a9a8d77263ab74127c1b2a9846
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 6c53f4c1dfe9838fe4522dcc71b675a7f6b868d4
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585060"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524968"
 ---
 # <a name="walkthrough-bind-data-to-controls-on-an-excel-actions-pane"></a>İzlenecek yol: Excel eylemler bölmesindeki denetimlere veri bağlama
   Bu izlenecek yol, Excel Microsoft Office bir eylemler bölmesindeki denetimlere veri bağlamayı gösterir. Denetimler SQL Server veritabanındaki tablolar arasında bir ana/ayrıntı ilişkisi gösterir.
@@ -59,17 +61,17 @@ ms.locfileid: "91585060"
 
 ### <a name="to-create-a-new-project"></a>Yeni bir proje oluşturmak için
 
-1. **Excel eylemlerimi Adlandır bölmesiyle**bir Excel çalışma kitabı projesi oluşturun. Sihirbazda **Yeni belge oluştur**' u seçin. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
+1. **Excel eylemlerimi Adlandır bölmesiyle** bir Excel çalışma kitabı projesi oluşturun. Sihirbazda **Yeni belge oluştur**' u seçin. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-     Visual Studio tasarımcıda yeni Excel çalışma kitabını açar ve **Çözüm Gezgini**Için **Excel eylemler bölmesi** projesini ekler.
+     Visual Studio tasarımcıda yeni Excel çalışma kitabını açar ve **Çözüm Gezgini** Için **Excel eylemler bölmesi** projesini ekler.
 
 ## <a name="add-a-new-data-source-to-the-project"></a>Projeye yeni bir veri kaynağı ekleyin
 
 ### <a name="to-add-a-new-data-source-to-the-project"></a>Projeye yeni bir veri kaynağı eklemek için
 
-1. **Veri kaynakları** penceresi görünür değilse, menü çubuğunda, **View**  >  **diğer Windows**  >  **veri kaynaklarını**görüntüle ' yi seçerek bunu görüntüleyin.
+1. **Veri kaynakları** penceresi görünür değilse, menü çubuğunda,   >  **diğer Windows**  >  **veri kaynaklarını** görüntüle ' yi seçerek bunu görüntüleyin.
 
-2. **Veri kaynağı Yapılandırma Sihirbazı 'nı**başlatmak Için **Yeni veri kaynağı Ekle** ' yi seçin.
+2. **Veri kaynağı Yapılandırma Sihirbazı 'nı** başlatmak Için **Yeni veri kaynağı Ekle** ' yi seçin.
 
 3. **Veritabanı** ' nı seçin ve ardından **İleri**' ye tıklayın.
 
@@ -83,11 +85,11 @@ ms.locfileid: "91585060"
 
 8. **Üreticiler** tablosunun yanındaki onay kutusunu işaretleyin.
 
-9. **Products** tablosunu genişletin ve **ProductName**, **SupplierID**, **quantityPerUnit**ve **BirimFiyat**' ı seçin.
+9. **Products** tablosunu genişletin ve **ProductName**, **SupplierID**, **quantityPerUnit** ve **BirimFiyat**' ı seçin.
 
-10. **Son**'a tıklayın.
+10. **Finish (Son)** düğmesine tıklayın.
 
-    Sihirbaz, **tedarikçiler** tablosu ve **Ürünler** tablosunu **veri kaynakları** penceresine ekler. Ayrıca, projenize **Çözüm Gezgini**görünür bir veri kümesi de ekler.
+    Sihirbaz, **tedarikçiler** tablosu ve **Ürünler** tablosunu **veri kaynakları** penceresine ekler. Ayrıca, projenize **Çözüm Gezgini** görünür bir veri kümesi de ekler.
 
 ## <a name="add-controls-to-the-worksheet"></a>Çalışma sayfasına denetimler ekleme
  Sonra, <xref:Microsoft.Office.Tools.Excel.NamedRange> <xref:Microsoft.Office.Tools.Excel.ListObject> ilk çalışma sayfasına bir denetim ve denetim ekleyin.
@@ -102,13 +104,13 @@ ms.locfileid: "91585060"
 
 4. **Şirket adı** ' nı **veri kaynakları** penceresinden **a2** hücresine sürükleyin `Sheet1` .
 
-     <xref:Microsoft.Office.Tools.Excel.NamedRange>Adlı bir denetim `CompanyNameNamedRange` oluşturulur ve metin \<CompanyName> **a2**hücresinde görüntülenir. Aynı zamanda, bir <xref:System.Windows.Forms.BindingSource> adlandırılmış `suppliersBindingSource` , bir tablo bağdaştırıcısı ve bir <xref:System.Data.DataSet> projeye eklenir. Denetim öğesine bağlanır <xref:System.Windows.Forms.BindingSource> , bu da <xref:System.Data.DataSet> örneğe bağlanır.
+     <xref:Microsoft.Office.Tools.Excel.NamedRange>Adlı bir denetim `CompanyNameNamedRange` oluşturulur ve metin \<CompanyName> **a2** hücresinde görüntülenir. Aynı zamanda, bir <xref:System.Windows.Forms.BindingSource> adlandırılmış `suppliersBindingSource` , bir tablo bağdaştırıcısı ve bir <xref:System.Data.DataSet> projeye eklenir. Denetim öğesine bağlanır <xref:System.Windows.Forms.BindingSource> , bu da <xref:System.Data.DataSet> örneğe bağlanır.
 
 5. **Veri kaynakları** penceresinde, **Üreticiler** tablosunun altındaki sütunları aşağı kaydırın. Listenin en altında **Products** tablosu vardır; Bu, **tedarikçiler** tablosunun bir alt öğesi olduğundan burada yer alabilir. **Üreticiler** tablosuyla aynı düzeyde değil, bu **Ürünler** tablosunu seçin ve ardından görüntülenen aşağı açılan oka tıklayın.
 
 6. Açılan listede **ListObject** ' e tıklayın ve ardından **Ürünler** tablosunu **a6** hücresine sürükleyin `Sheet1` .
 
-     <xref:Microsoft.Office.Tools.Excel.ListObject>A6 hücresinde adlı bir denetim `ProductNameListObject` oluşturulur. **A6** Aynı zamanda, bir <xref:System.Windows.Forms.BindingSource> adlandırılmış `productsBindingSource` ve bir tablo bağdaştırıcısı projeye eklenir. Denetim öğesine bağlanır <xref:System.Windows.Forms.BindingSource> , bu da <xref:System.Data.DataSet> örneğe bağlanır.
+     <xref:Microsoft.Office.Tools.Excel.ListObject>A6 hücresinde adlı bir denetim `ProductNameListObject` oluşturulur.  Aynı zamanda, bir <xref:System.Windows.Forms.BindingSource> adlandırılmış `productsBindingSource` ve bir tablo bağdaştırıcısı projeye eklenir. Denetim öğesine bağlanır <xref:System.Windows.Forms.BindingSource> , bu da <xref:System.Data.DataSet> örneğe bağlanır.
 
 7. Yalnızca C# için bileşen tepsisinde **suppliersBindingSource** ' ı seçin ve **değiştiriciler** özelliğini **Özellikler** penceresinde **iç** olarak değiştirin.
 
@@ -117,7 +119,7 @@ ms.locfileid: "91585060"
 
 ### <a name="to-add-an-actions-pane-control"></a>Eylemler bölmesi denetimi eklemek için
 
-1. **Çözüm Gezgini**Içinde **Excel eylemler bölmesi** projesini seçin.
+1. **Çözüm Gezgini** Içinde **Excel eylemler bölmesi** projesini seçin.
 
 2. **Proje** menüsünde **Yeni öğe Ekle**' ye tıklayın.
 
@@ -127,7 +129,7 @@ ms.locfileid: "91585060"
 
 1. **Araç kutusunun** **ortak denetimler** sekmelerinden, <xref:System.Windows.Forms.ComboBox> Eylemler bölmesi denetimine bir denetim sürükleyin.
 
-2. **Boyut** özelliğini **171, 21**olarak değiştirin.
+2. **Boyut** özelliğini **171, 21** olarak değiştirin.
 
 3. Kullanıcı denetimini açılan kutuya sığacak şekilde yeniden boyutlandırın.
 
@@ -152,7 +154,7 @@ ms.locfileid: "91585060"
 
 #### <a name="to-show-the-actions-pane"></a>Eylemler bölmesini göstermek için
 
-1. **Çözüm Gezgini**, *ThisWorkbook. vb* veya *ThisWorkbook.cs*öğesine sağ tıklayın ve ardından **kodu görüntüle**' ye tıklayın.
+1. **Çözüm Gezgini**, *ThisWorkbook. vb* veya *ThisWorkbook.cs* öğesine sağ tıklayın ve ardından **kodu görüntüle**' ye tıklayın.
 
 2. Sınıfında kullanıcı denetiminin yeni bir örneğini oluşturun `ThisWorkbook` .
 

@@ -1,5 +1,7 @@
 ---
 title: Office çözümlerinde yerel veritabanı dosyalarını kullanma genel bakış
+description: Office çözümünüzdeki SQL Server Express (. mdf) dosya veya Microsoft Office erişim (. mdb) dosyası gibi bir veritabanı dosyasını nasıl kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ea260a6286c8a923d56ab7a5088b55de57004489
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1a3166a88080eaee1042187c171c4938d236058a
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62982246"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526556"
 ---
 # <a name="use-local-database-files-in-office-solutions-overview"></a>Office çözümlerinde yerel veritabanı dosyalarını kullanma genel bakış
   Office çözümünüzde SQL Server Express (*. mdf*) dosyası veya Microsoft Office erişim (*. mdb*) dosyası gibi bir veritabanı dosyası ekleyebilirsiniz. Bu, son kullanıcıların, örneğin tek bir bilgisayarda kullanılan yerel bir envanter çözümünde, merkezi bir veritabanının saklanması gerekmediği durumlarda yerel bir veritabanını korumalarını sağlar.

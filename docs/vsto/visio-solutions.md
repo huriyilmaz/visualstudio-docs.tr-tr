@@ -1,5 +1,7 @@
 ---
 title: Visio çözümleri
+description: Visio 'Yu otomatikleştirebilmek, Visio özelliklerini genişletmek veya Visio Kullanıcı arabirimini (UI) özelleştirmek için VSTO Eklentilerini nasıl kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: conceptual
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a79b3c9964a24daf0a12ab90f47fb5903d89cdd0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d5b4cbdfe6cceff279ae20518edf83b4f4ec8912
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72985505"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526373"
 ---
 # <a name="visio-solutions"></a>Visio çözümleri
   Visual Studio, Microsoft Office Visio için VSTO eklentileri oluşturmak için kullanabileceğiniz proje şablonları sağlar. Visio 'Yu otomatikleştirmek, Visio özelliklerini genişletmek veya Visio Kullanıcı arabirimini (UI) özelleştirmek için VSTO Eklentilerini kullanabilirsiniz.

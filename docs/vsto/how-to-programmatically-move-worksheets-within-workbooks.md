@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: çalışma kitaplarını program aracılığıyla çalışma kitapları içinde taşıma'
+description: Microsoft Excel çalışma kitabındaki diğer çalışma sayfalarına göre çalışma sayfalarının konumunu programlı bir şekilde nasıl değiştirebileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: fca9d466f3af8a0dd3191f2845613fc9b43ec549
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 165ac8f440b33d68dc70530731a5528ae23726b0
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584223"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525588"
 ---
 # <a name="how-to-programmatically-move-worksheets-within-workbooks"></a>Nasıl yapılır: çalışma kitaplarını program aracılığıyla çalışma kitapları içinde taşıma
   Çalışma sayfalarındaki diğer çalışma sayfalarına göre çalışma sayfalarının konumunu programlı bir şekilde değiştirebilirsiniz. Taşınan sayfa için bir konum belirtmezseniz, Excel bu dosyayı içeren yeni bir çalışma kitabı oluşturur.

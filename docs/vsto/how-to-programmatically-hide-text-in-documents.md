@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: belgelerde metni program aracılığıyla gizleme'
+description: Belirli bir metin aralığı için yazı tipinin gizli özelliğini ayarlayarak bir Microsoft Word belgesindeki metni nasıl gizleyebileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4dae19d196f830e5187fa395473c0a5482cb1d03
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a375e8b844f82b5d310841d7b4cdc092b18ff6c3
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85543318"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525699"
 ---
 # <a name="how-to-programmatically-hide-text-in-documents"></a>Nasıl yapılır: belgelerde metni program aracılığıyla gizleme
   <xref:Microsoft.Office.Interop.Word._Font.Hidden%2A> <xref:Microsoft.Office.Interop.Word.Range.Font%2A> Belirli bir metin aralığı için özelliğini ayarlayarak bir belgedeki metni gizleyebilirsiniz.

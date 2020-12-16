@@ -1,5 +1,7 @@
 ---
 title: VSTO eklentisinin çalışma zamanında belgeye denetim ekleme
+description: Kullanıcıların bir düğmeye bir düğme sınıfı veya bir zengin Textcontentcontrol arabirimi eklemesini sağlamak için Şeriti nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9e8cde57ece3774e94f923387e1a8f7ca71cf797
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dbf6313f4788a0bd224d04639d3ab588a6469842
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71254166"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526284"
 ---
 # <a name="walkthrough-add-controls-to-a-document-at-run-time-in-a-vsto-add-in"></a>İzlenecek yol: bir VSTO eklentisinin çalışma zamanında belgeye denetim ekleme
   Bir VSTO eklentisi kullanarak herhangi bir açık Microsoft Office Word belgesine denetim ekleyebilirsiniz. Bu izlenecek yol, kullanıcıların bir <xref:Microsoft.Office.Tools.Word.Controls.Button> belgeye veya bir belge eklemesine olanak tanımak için şerit 'in nasıl kullanılacağını gösterir <xref:Microsoft.Office.Tools.Word.RichTextContentControl> .
@@ -51,7 +53,7 @@ ms.locfileid: "71254166"
 
 ### <a name="to-create-a-new-word-vsto-add-in-project"></a>Yeni bir Word VSTO eklentisi projesi oluşturmak için
 
-1. Word için, **WordDynamicControls**ADLı bir VSTO eklenti projesi oluşturun. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
+1. Word için, **WordDynamicControls** ADLı bir VSTO eklenti projesi oluşturun. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
 2. **Microsoft.Office.Tools.Word.v4.0.Utilities.dll** derlemesine bir başvuru ekleyin. Bu izlenecek yolda daha sonra belgeye Windows Forms bir denetim eklemek için bu başvuru gerekir.
 
@@ -64,15 +66,15 @@ ms.locfileid: "71254166"
 
 2. **Yeni öğe Ekle** Iletişim kutusunda **Şerit (görsel Tasarımcı)** öğesini seçin.
 
-3. Yeni şeridin adını **MyRibbon**olarak değiştirin ve **Ekle**' ye tıklayın.
+3. Yeni şeridin adını **MyRibbon** olarak değiştirin ve **Ekle**' ye tıklayın.
 
     **MyRibbon.cs** veya **MyRibbon. vb** dosyası Şerit Tasarımcısı 'nda açılır ve varsayılan bir sekme ve grup görüntüler.
 
 4. Şerit tasarımcısında, **grup1** grubuna tıklayın.
 
-5. **Özellikler** penceresinde, **grup1** Için **Label** özelliğini, **Denetimler Ekle**olarak değiştirin.
+5. **Özellikler** penceresinde, **grup1** Için **Label** özelliğini, **Denetimler Ekle** olarak değiştirin.
 
-6. **Araç kutusunun** **Office Şerit denetimleri** sekmesinden **Group1**üzerine bir **CheckBox** denetimi sürükleyin.
+6. **Araç kutusunun** **Office Şerit denetimleri** sekmesinden **Group1** üzerine bir **CheckBox** denetimi sürükleyin.
 
 7. Seçmek için **CheckBox1** öğesine tıklayın.
 
@@ -83,14 +85,14 @@ ms.locfileid: "71254166"
    | **Ad** | **addButtonCheckBox** |
    | **Etiketle** | **Düğme Ekle** |
 
-9. **Group1**öğesine ikinci bir onay kutusu ekleyin ve ardından aşağıdaki özellikleri değiştirin.
+9. **Group1** öğesine ikinci bir onay kutusu ekleyin ve ardından aşağıdaki özellikleri değiştirin.
 
    | Özellik | Değer |
    |-----------|---------------------------|
    | **Ad** | **addRichTextCheckBox** |
    | **Etiketle** | **Zengin metin denetimi ekleme** |
 
-10. Şerit Tasarımcısı ' nda, **Ekle düğmesine**çift tıklayın.
+10. Şerit Tasarımcısı ' nda, **Ekle düğmesine** çift tıklayın.
 
      <xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.Click> **Düğme Ekle** onay kutusunun olay işleyicisi kod düzenleyicisinde açılır.
 
@@ -109,7 +111,7 @@ ms.locfileid: "71254166"
 
 1. **Çözüm Gezgini**, dosyayı kod düzenleyicisinde açmak için *ThisAddIn.cs* veya *ThisAddIn. vb* öğesine çift tıklayın.
 
-2. Sınıfına aşağıdaki kodu ekleyin `ThisAddIn` . Bu kod, <xref:Microsoft.Office.Tools.Word.Controls.Button> <xref:Microsoft.Office.Tools.Word.RichTextContentControl> belgeye eklenecek denetimleri temsil eden nesneler bildirir.
+2. Aşağıdaki kodu `ThisAddIn` sınıfına ekleyin. Bu kod, <xref:Microsoft.Office.Tools.Word.Controls.Button> <xref:Microsoft.Office.Tools.Word.RichTextContentControl> belgeye eklenecek denetimleri temsil eden nesneler bildirir.
 
      [!code-vb[Trin_WordAddInDynamicControlsWalkthrough#1](../vsto/codesnippet/VisualBasic/Trin_WordAddInDynamicControlsWalkthrough/ThisAddIn.vb#1)]
      [!code-csharp[Trin_WordAddInDynamicControlsWalkthrough#1](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControlsWalkthrough/ThisAddIn.cs#1)]
@@ -161,7 +163,7 @@ ms.locfileid: "71254166"
 
 4. **Eklentiler** sekmesine tıklayın.
 
-5. **Denetimleri Ekle** grubunda, **Ekle düğmesine**tıklayın.
+5. **Denetimleri Ekle** grubunda, **Ekle düğmesine** tıklayın.
 
      İlk paragrafta bir düğme belirir.
 
@@ -178,7 +180,7 @@ ms.locfileid: "71254166"
 ## <a name="next-steps"></a>Sonraki adımlar
  Aşağıdaki konulardan VSTO Eklentilerindeki denetimler hakkında daha fazla bilgi edinebilirsiniz:
 
-- Çalışma zamanında bir belgeye birçok farklı denetim türünün nasıl ekleneceğini ve belgeyi yeniden açtığınızda denetimleri yeniden oluşturmayı gösteren bir örnek için, bkz. [Office geliştirme örnekleri ve izlenecek yollar](../vsto/office-development-samples-and-walkthroughs.md): Word eklentisi dinamik denetimleri örneği.
+- Çalışma zamanında bir belgeye birçok farklı denetim türünün nasıl ekleneceğini ve belgeyi yeniden açtığınızda denetimleri yeniden oluşturmayı gösteren bir örnek için, bkz. [Office geliştirme örnekleri ve izlenecek yollar](../vsto/office-development-samples-and-walkthroughs.md): Word Add-In dinamik denetimler örneği.
 
 - Excel için VSTO eklentisini kullanarak çalışma sayfasına nasıl denetim ekleneceğini gösteren bir izlenecek yol için bkz. [Izlenecek yol: çalışma ZAMANıNDA VSTO eklenti projesindeki denetimleri ekleme](../vsto/walkthrough-adding-controls-to-a-worksheet-at-run-time-in-vsto-add-in-project.md).
 

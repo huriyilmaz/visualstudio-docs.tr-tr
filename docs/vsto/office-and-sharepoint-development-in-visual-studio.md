@@ -1,5 +1,7 @@
 ---
 title: Visual Studio 'da Office ve SharePoint geliştirme
+description: Kullanıcıların Office mağazasından indirerek bir basit uygulama veya eklenti oluşturarak Microsoft Office ve SharePoint 'i nasıl genişletebileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -21,12 +23,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: bc1241a39707eedc4b34e0ef3531ab65e49b8238
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: abd9d3aac289df702554790673cb6561a6e2488d
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90811038"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525337"
 ---
 # <a name="office-and-sharepoint-development-in-visual-studio"></a>Visual Studio 'da Office ve SharePoint geliştirme
   Kullanıcıların [Office mağazasından](https://store.office.com/) veya bir kuruluş kataloğundan indirerek bir basit uygulama ya da eklenti oluşturarak ya da kullanıcıların bir bilgisayara yükleyen .NET Framework tabanlı bir çözüm oluşturarak Microsoft Office ve SharePoint 'i genişletebilirsiniz.

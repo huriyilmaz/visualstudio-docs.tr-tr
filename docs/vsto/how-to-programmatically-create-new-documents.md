@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: program aracılığıyla yeni belgeler oluşturma'
+description: Visual Studio kullanarak Microsoft Word 'de program aracılığıyla yeni belgeler oluşturma hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8e82c5ca62c407481b73de9394c584c3039a8f57
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a7168c6b80657fe0e5ba7c8ae8511c1e000db4cb
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85545996"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525877"
 ---
 # <a name="how-to-programmatically-create-new-documents"></a>Nasıl yapılır: program aracılığıyla yeni belgeler oluşturma
   Programlı olarak bir belge oluşturduğunuzda, yeni belge yerel bir <xref:Microsoft.Office.Interop.Word.Document> nesnedir. Bu nesne, bir konak öğesinin ek olaylarına ve veri bağlama özelliklerine sahip değil <xref:Microsoft.Office.Tools.Word.Document> . Daha fazla bilgi için bkz. [konak öğelerinin ve konak denetimlerinin programlama sınırlamaları](../vsto/programmatic-limitations-of-host-items-and-host-controls.md).

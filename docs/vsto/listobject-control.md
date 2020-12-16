@@ -1,5 +1,7 @@
 ---
 title: ListObject denetimi
+description: ListObject denetimi, olayları ortaya çıkaran ve verilere bağlanabilen bir listesidir. Ayrıca, tasarım zamanında veya çalışma zamanında bir çalışma sayfasına ListObject denetimi ekleyebilirsiniz.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 3b5286a4bddff2b529abd0a565bb4dbeef7ffaf3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1a80b56134f59975a39d24e824b6c83b2513b163
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71251862"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526598"
 ---
 # <a name="listobject-control"></a>ListObject denetimi
   <xref:Microsoft.Office.Tools.Excel.ListObject>Denetim, olayları ortaya çıkaran ve verilere bağlanabilen bir listesidir. Çalışma sayfasına bir liste eklediğinizde, Visual Studio <xref:Microsoft.Office.Tools.Excel.ListObject> Microsoft Office Excel nesne modelinde geçiş yapmak zorunda kalmadan doğrudan programlama yapabileceğiniz bir denetim oluşturur.

@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: program aracılığıyla çalışma sayfalarını koruma'
+description: Kullanıcıların ve kodun bir çalışma sayfasındaki nesneleri değiştirmesini engellemek için Microsoft Excel 'de koruma özelliğini nasıl kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: d51a6557b2204d7b6ff3d8865c82de091f5a59d0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6b4fe6d314763c7b0d6a8b4c1ed9e8e7198e508c
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85545905"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526760"
 ---
 # <a name="how-to-programmatically-protect-worksheets"></a>Nasıl yapılır: program aracılığıyla çalışma sayfalarını koruma
   Microsoft Office Excel 'deki koruma özelliği, kullanıcıların ve kodun bir çalışma sayfasındaki nesneleri değiştirmelerini önlemeye yardımcı olur. Varsayılan olarak, korumayı etkinleştirdikten sonra tüm hücreler kilitlenir.
@@ -36,7 +38,7 @@ ms.locfileid: "85545905"
 
 ### <a name="to-protect-a-worksheet-in-the-designer"></a>Tasarımcıda çalışma sayfasını korumak için
 
-1. **İnceleme** sekmesinin **değişiklikler** grubunda, **sayfayı koru ' ya**tıklayın.
+1. **İnceleme** sekmesinin **değişiklikler** grubunda, **sayfayı koru ' ya** tıklayın.
 
     **Sayfayı koru** iletişim kutusu görüntülenir. Bir parola ayarlayabilir ve isteğe bağlı olarak, çalışma sayfası ile izin verilen belirli eylemleri (hücreleri biçimlendirme veya satır ekleme gibi) belirtebilirsiniz.
 
@@ -44,7 +46,7 @@ ms.locfileid: "85545905"
 
 ### <a name="to-allow-editing-in-specific-ranges"></a>Belirli aralıklarda düzenlenmesine izin vermek için
 
-1. **İnceleme** sekmesinin **değişiklikler** grubunda, **Kullanıcıların aralıkları düzenlemesine izin ver ' e**tıklayın.
+1. **İnceleme** sekmesinin **değişiklikler** grubunda, **Kullanıcıların aralıkları düzenlemesine izin ver ' e** tıklayın.
 
      **Kullanıcıların aralıkları düzenlemesine Izin ver** iletişim kutusu görüntülenir. Parola ile kilitsiz olan aralıkları ve parola olmadan aralıkları düzenleyebilen kullanıcıları belirtebilirsiniz.
 

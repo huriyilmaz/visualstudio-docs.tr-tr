@@ -1,5 +1,7 @@
 ---
 title: 'İzlenecek yol: PowerPoint için ilk VSTO eklentisini oluşturma'
+description: Microsoft PowerPoint için uygulama düzeyi eklentisi oluşturun. Bu özellik, hangi sunuların açık olduğuna bakılmaksızın uygulamanın kendisi tarafından kullanılabilir.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a50a47a813891151427707c371f1ebf3f75c336f
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 3e02da3484ce7c2beb35e643d3d90d8e37225e11
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584314"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97524859"
 ---
 # <a name="walkthrough-create-your-first-vsto-add-in-for-powerpoint"></a>İzlenecek yol: PowerPoint için ilk VSTO eklentisini oluşturma
   Bu izlenecek yol, PowerPoint Microsoft Office için VSTO eklentisi oluşturmayı gösterir. Bu tür çözümde oluşturduğunuz özellikler, hangi sunuların açık olduğuna bakılmaksızın uygulamanın kendisi için kullanılabilir. Daha fazla bilgi için bkz. [Office çözümleri geliştirmeye genel bakış &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md).
@@ -61,9 +63,9 @@ ms.locfileid: "91584314"
 
 5. Proje şablonları listesinde bir PowerPoint VSTO eklentisi projesi seçin.
 
-6. **Ad** kutusuna **FirstPowerPointAddIn**yazın.
+6. **Ad** kutusuna **FirstPowerPointAddIn** yazın.
 
-7. **Tamam**'a tıklayın.
+7. **Tamam** düğmesine tıklayın.
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**FirstPowerPointAddIn** projesini oluşturur ve **ThisAddIn** kod dosyasını düzenleyicide açar.
 
@@ -76,14 +78,14 @@ ms.locfileid: "91584314"
 
 ### <a name="to-add-a-text-box-to-each-new-slide"></a>Her yeni slayda metin kutusu eklemek için
 
-1. ThisAddIn kod dosyasında, sınıfına aşağıdaki kodu ekleyin `ThisAddIn` . Bu kod, [uygulama](/previous-versions/office/developer/office-2010/ff764034(v=office.14)) nesnesinin [Microsoft. Office. Interop. PowerPoint. EApplication_Event. PresentationNewSlide](/previous-versions/office/developer/office-2010/ff762876(v%3doffice.14)) olayı için bir olay işleyicisini tanımlar.
+1. ThisAddIn kod dosyasında, sınıfına aşağıdaki kodu ekleyin `ThisAddIn` . Bu kod, [uygulama](/previous-versions/office/developer/office-2010/ff764034(v=office.14)) nesnesinin [Microsoft.Office.Interop.PowerPoint.EApplication_Event. PresentationNewSlide](/previous-versions/office/developer/office-2010/ff762876(v%3doffice.14)) olayı için bir olay işleyicisi tanımlar.
 
     Kullanıcı etkin sunuya yeni bir slayt eklediğinde, bu olay işleyicisi yeni slaydın üst kısmına bir metin kutusu ekler ve metin kutusuna bazı metinler ekler.
 
     [!code-vb[Trin_PowerPointAddInTutorial#1](../vsto/codesnippet/VisualBasic/Trin_PowerPointAddInTutorial/ThisAddIn.vb#1)]
     [!code-csharp[Trin_PowerPointAddInTutorial#1](../vsto/codesnippet/CSharp/Trin_PowerPointAddInTutorial/ThisAddIn.cs#1)]
 
-2. C# kullanıyorsanız, olay işleyicisine aşağıdaki kodu ekleyin `ThisAddIn_Startup` . Bu kod, `Application_PresentationNewSlide` olay Işleyicisini [Microsoft. Office. Interop. PowerPoint. EApplication_Event. PresentationNewSlide](/previous-versions/office/developer/office-2010/ff762876(v%3doffice.14)) olayına bağlamak için gereklidir.
+2. C# kullanıyorsanız, olay işleyicisine aşağıdaki kodu ekleyin `ThisAddIn_Startup` . `Application_PresentationNewSlide`Olay işleyicisini [Microsoft.Office.Interop.PowerPoint.EApplication_Event. PresentationNewSlide](/previous-versions/office/developer/office-2010/ff762876(v%3doffice.14)) olayına bağlamak için bu kod gereklidir.
 
     [!code-csharp[Trin_PowerPointAddInTutorial#2](../vsto/codesnippet/CSharp/Trin_PowerPointAddInTutorial/ThisAddIn.cs#2)]
 
@@ -91,7 +93,7 @@ ms.locfileid: "91584314"
 
 - `Application` `ThisAddIn` Sınıfının alanı. `Application`Alan, PowerPoint 'in geçerli örneğini temsil eden bir [uygulama](/previous-versions/office/developer/office-2010/ff764034(v=office.14)) nesnesi döndürür.
 
-- `Sld` [Microsoft. Office. Interop. PowerPoint. EApplication_Event. PresentationNewSlide](/previous-versions/office/developer/office-2010/ff762876(v%3doffice.14)) olayına yönelik olay işleyicisinin parametresi. `Sld`Parametresi, yeni slaytı temsil eden bir [Slayt](/previous-versions/office/developer/office-2010/ff763417(v=office.14)) nesnesidir. Daha fazla bilgi için bkz. [PowerPoint çözümleri](../vsto/powerpoint-solutions.md).
+- `Sld` [Microsoft.Office.Interop.PowerPoint.EApplication_Event. PresentationNewSlide](/previous-versions/office/developer/office-2010/ff762876(v%3doffice.14)) olayı için olay işleyicisinin parametresi. `Sld`Parametresi, yeni slaytı temsil eden bir [Slayt](/previous-versions/office/developer/office-2010/ff763417(v=office.14)) nesnesidir. Daha fazla bilgi için bkz. [PowerPoint çözümleri](../vsto/powerpoint-solutions.md).
 
 ## <a name="test-the-project"></a>Projeyi test etme
  Projeyi derleyip çalıştırdığınızda, metin kutusunun bir sunuya eklediğiniz yeni slaytlarda göründüğünü doğrulayın.

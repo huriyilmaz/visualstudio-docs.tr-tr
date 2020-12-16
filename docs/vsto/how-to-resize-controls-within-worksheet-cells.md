@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: çalışma sayfası hücreleri içinde denetimleri yeniden boyutlandırma'
+description: Visual Studio 'Yu, Microsoft Excel çalışma sayfası hücrelerinin içindeki denetimleri tasarım zamanında ve çalışma zamanında yeniden boyutlandırmak için nasıl kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f2d22973e13ee77b66de303041f8b6a765b4b93a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ba2a77dc44618c0415e645718aff3ead542b4b48
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85545879"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525345"
 ---
 # <a name="how-to-resize-controls-within-worksheet-cells"></a>Nasıl yapılır: çalışma sayfası hücreleri içinde denetimleri yeniden boyutlandırma
   Çalışma sayfasındaki sütunları veya satırları yeniden boyutlandırdığınızda, hücrelerdeki tüm konak denetimleri yeniden boyutlandırıldı hücrenin Yükseklik veya genişliğine otomatik olarak yeniden boyutlandırılır. Windows Forms denetimleri varsayılan olarak otomatik olarak yeniden boyutlandırılır.
@@ -35,13 +37,13 @@ ms.locfileid: "85545879"
 
 ### <a name="to-make-controls-resize-with-cells-at-design-time"></a>Denetimlerin tasarım zamanında hücrelerle yeniden boyutlandırılmasını sağlamak için
 
-1. **Araç kutusundan**bir Windows Forms denetimini çalışma sayfasına sürükleyin.
+1. **Araç kutusundan** bir Windows Forms denetimini çalışma sayfasına sürükleyin.
 
 2. Denetime sağ tıklayın ve sonra **Biçim denetimi**' ne tıklayın.
 
 3. **Biçim denetimi** Iletişim kutusunda **Özellikler** sekmesine tıklayın.
 
-4. **Nesne konumlandırma**altında, **Hücrelerle taşı ve Boyutlandır** seçeneğini belirleyin ve ardından **Tamam**' a tıklayın.
+4. **Nesne konumlandırma** altında, **Hücrelerle taşı ve Boyutlandır** seçeneğini belirleyin ve ardından **Tamam**' a tıklayın.
 
      Denetimi içeren hücreyi yeniden boyutlandırdığınızda, denetim hücreye sığacak şekilde yeniden boyutlandırılır.
 

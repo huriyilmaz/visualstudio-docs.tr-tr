@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: program aracılığıyla Visio belgelerini kaydetme'
+description: Visual Studio 'Yu kullanarak Microsoft Visio mevcut belgelerini ve henüz kaydedilmemiş yeni belgeleri program aracılığıyla nasıl kaydedebileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 891a5c44159d10aacbb767cbc5376ae1d62252b0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 29f8cbc8aa7b2ea796109a8143d348905df671f7
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547062"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525394"
 ---
 # <a name="how-to-programmatically-save-visio-documents"></a>Nasıl yapılır: program aracılığıyla Visio belgelerini kaydetme
   Microsoft Office Visio belgelerini kaydetmek için çeşitli yollar vardır:
@@ -72,7 +74,7 @@ ms.locfileid: "85547062"
 ## <a name="compile-the-code"></a>Kodu derle
  Bu kod örneği şunları gerektirir:
 
-- Yeni bir ada sahip bir belgeyi kaydetmek için, adlı bir dizin Belgelerim `Test` klasöründe (WINDOWS XP ve *My Documents* önceki sürümler Için) veya *Belgeler* klasöründe (Windows Vista için) bulunmalıdır.
+- Yeni bir ada sahip bir belgeyi kaydetmek için, adlı bir dizin Belgelerim `Test` klasöründe (WINDOWS XP ve  önceki sürümler Için) veya *Belgeler* klasöründe (Windows Vista için) bulunmalıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visio çözümleri](../vsto/visio-solutions.md)

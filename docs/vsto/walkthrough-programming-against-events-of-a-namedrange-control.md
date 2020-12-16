@@ -1,5 +1,7 @@
 ---
 title: 'İzlenecek yol: NamedRange denetimi olaylarına karşı programlama'
+description: Visual Studio 'da Office geliştirme araçları 'nı kullanarak Microsoft Excel çalışma sayfasına ve programına yönelik olarak bir NamedRange denetimini nasıl ekleyebileceğiniz hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 2e5ce12e2de8274afd2c27d4ece36529563a6386
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 9e311a567d32ee083bcc13f417c248f5f3d3ee5a
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584943"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526125"
 ---
 # <a name="walkthrough-program-against-events-of-a-namedrange-control"></a>İzlenecek yol: NamedRange denetimi olaylarına karşı programlama
   Bu izlenecek yol <xref:Microsoft.Office.Tools.Excel.NamedRange> , Visual Studio 'Da Office geliştirme araçları 'nı kullanarak Microsoft Office Excel çalışma sayfasına ve programına yönelik bir denetimin nasıl ekleneceğini gösterir.
@@ -52,14 +54,14 @@ ms.locfileid: "91584943"
 
 ### <a name="to-create-a-new-project"></a>Yeni bir proje oluşturmak için
 
-1. **Adlandırılmış Aralık olaylarım**adlı bir Excel çalışma kitabı projesi oluşturun. **Yeni belge oluştur** ' un seçili olduğundan emin olun. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
+1. **Adlandırılmış Aralık olaylarım** adlı bir Excel çalışma kitabı projesi oluşturun. **Yeni belge oluştur** ' un seçili olduğundan emin olun. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
      Visual Studio tasarımcıda yeni Excel çalışma kitabını açar ve **Çözüm Gezgini** **Adlandırılmış Aralık olayları** projesini ekler.
 
 ## <a name="add-text-and-named-ranges-to-the-worksheet"></a>Çalışma sayfasına metin ve adlandırılmış aralıklar ekleme
  Konak denetimleri genişletilmiş Office nesneleri olduğundan, bunları belgenize yerel nesneyi ekleyeceğiniz şekilde ekleyebilirsiniz. Örneğin, <xref:Microsoft.Office.Tools.Excel.NamedRange> **Ekle** menüsünü açıp **ad**' ın üzerine gelip **Tanımla**' yı seçerek bir çalışma sayfasına Excel denetimi ekleyebilirsiniz. Ayrıca, <xref:Microsoft.Office.Tools.Excel.NamedRange> **araç kutusundan** çalışma sayfasına sürükleyerek bir denetim ekleyebilirsiniz.
 
- Bu adımda, **araç kutusunu**kullanarak çalışma sayfasına iki adlandırılmış aralık denetimi ekleyecek ve ardından çalışma sayfasına metin ekleyeceksiniz.
+ Bu adımda, **araç kutusunu** kullanarak çalışma sayfasına iki adlandırılmış aralık denetimi ekleyecek ve ardından çalışma sayfasına metin ekleyeceksiniz.
 
 ### <a name="to-add-a-range-to-your-worksheet"></a>Çalışma sayfanıza bir Aralık eklemek için
 
@@ -71,21 +73,21 @@ ms.locfileid: "91584943"
 
 3. **$A $1** ' nin düzenlenebilir metin kutusunda göründüğünü ve **a1** hücresinin seçildiğini doğrulayın. Aksi takdirde, seçmek için **a1** hücresini tıklatın.
 
-4. **Tamam**'a tıklayın.
+4. **Tamam** düğmesine tıklayın.
 
      **A1** hücresi adlı bir aralığa dönüşür `namedRange1` . Çalışma sayfasında görünür bir gösterge yoktur, ancak `namedRange1` **a1** hücresi seçildiğinde **ad** kutusunda (sol taraftaki çalışma sayfasının hemen üzerinde bulunur) görünür.
 
-5. <xref:Microsoft.Office.Tools.Excel.NamedRange> **B3**hücresine başka bir denetim ekleyin.
+5. <xref:Microsoft.Office.Tools.Excel.NamedRange> **B3** hücresine başka bir denetim ekleyin.
 
 6. **$B $3** ' nin düzenlenebilir metin kutusunda göründüğünü ve **B3** hücresinin seçildiğini doğrulayın. Aksi takdirde, seçmek için hücre **B3** ' e tıklayın.
 
-7. **Tamam**'a tıklayın.
+7. **Tamam** düğmesine tıklayın.
 
      **B3** hücresi adlı bir aralığa dönüşür `namedRange2` .
 
 ### <a name="to-add-text-to-your-worksheet"></a>Çalışma sayfanıza metin eklemek için
 
-1. **A1**hücresinde aşağıdaki metni yazın:
+1. **A1** hücresinde aşağıdaki metni yazın:
 
     **Bu, NamedRange denetimine bir örnektir.**
 

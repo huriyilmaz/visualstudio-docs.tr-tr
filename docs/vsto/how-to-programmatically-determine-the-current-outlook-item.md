@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: program aracılığıyla geçerli Outlook öğesini belirleme'
+description: Geçerli Microsoft Outlook öğesini programlı bir şekilde nasıl belirleyebileceğinizi öğrenin. Bu örnek Explorer. SelectionChange olayını kullanır.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 428dccf09235e2feea528bcdaef0a447e02ef58d
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 10b8bd8103e80040519b9e3c5546f892da326202
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585242"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526787"
 ---
 # <a name="how-to-programmatically-determine-the-current-outlook-item"></a>Nasıl yapılır: program aracılığıyla geçerli Outlook öğesini belirleme
   Bu örnek, `Explorer.SelectionChange` geçerli klasörün adını ve seçili öğe hakkında bazı bilgileri göstermek için olayını kullanır. Kod daha sonra seçili öğeyi görüntüler.

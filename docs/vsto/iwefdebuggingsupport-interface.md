@@ -1,5 +1,7 @@
 ---
 title: IWefDebuggingSupport arabirimi
+description: Microsoft Office uygulamalarında hata ayıklamayı kolaylaştırmak için Visual Studio gibi bir hata ayıklama ortamını nasıl kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: interface
 dev_langs:
@@ -10,12 +12,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0a4883d36c1833c66a2539380184521b070f5c2a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6a818973bdc2f62194d6ed0026c0798806fe5f2a
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85544735"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525327"
 ---
 # <a name="iwefdebuggingsupport-interface"></a>IWefDebuggingSupport arabirimi
   Office uygulamalarında hata ayıklamayı kolaylaştırmak için Visual Studio gibi bir hata ayıklama ortamı tarafından uygulanır. Word veya Excel gibi Office uygulaması, bu arabirimi Visual Studio 'dan alır ve ardından hata ayıklama oturumu sırasında belirli noktalarda arabirimdeki yöntemleri çağırır.

@@ -1,5 +1,7 @@
 ---
 title: Office Excel Klavyesi, ayarlar, Seçenekler iletişim kutusu
+description: Belge odaklanıldığında, dinamik klavye düzeni seçerek Microsoft Excel 'In kısayol tuşu komutlarını nasıl alacağını öğrenin.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -17,15 +19,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8b590f82d5f28c3a71e86e18dfe16b1c3e6c4c5a
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: b3422cb53fb454b3585e0b8ba936ce692dfc68a4
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584522"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525307"
 ---
 # <a name="microsoft-office-excel-keyboard-settings-options-dialog-box"></a>Microsoft Office Excel Klavyesi, ayarlar, Seçenekler iletişim kutusu
-  Excel ve Visual Studio 'Nun her ikisi de kısayol tuşlarını işler. Microsoft Office Aynı kısayol tuşu birleşimi Excel ve Visual Studio 'daki farklı komutlar için de kullanılabilir. Excel, Visual Studio 'daki belge düzeyi bir projede açıldığında, kısayol tuşu komutlarını yalnızca bir seferde tek bir uygulama alır. Varsayılan olarak, Visual Studio tüm kısayol tuşu komutlarını alır, ancak belge odağa sahip olduğunda, **dinamik klavye düzeni**seçerek Excel 'in bunları almasını sağlayabilirsiniz.
+  Excel ve Visual Studio 'Nun her ikisi de kısayol tuşlarını işler. Microsoft Office Aynı kısayol tuşu birleşimi Excel ve Visual Studio 'daki farklı komutlar için de kullanılabilir. Excel, Visual Studio 'daki belge düzeyi bir projede açıldığında, kısayol tuşu komutlarını yalnızca bir seferde tek bir uygulama alır. Varsayılan olarak, Visual Studio tüm kısayol tuşu komutlarını alır, ancak belge odağa sahip olduğunda, **dinamik klavye düzeni** seçerek Excel 'in bunları almasını sağlayabilirsiniz.
 
  Şu anda kısayol tuşlarını işleyen uygulamada bir komuta atanmamış bir kısayol tuşu kullanırsanız, kısayol tuşu diğer uygulamaya geçirilir.
 

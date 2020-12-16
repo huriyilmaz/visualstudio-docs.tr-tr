@@ -1,5 +1,7 @@
 ---
 title: Yayımlama sayfası, proje Tasarımcısı (Office geliştirme)
+description: Visual Studio 'da proje Tasarımcısı 'nın yayımlama sayfasının, dağıtım özelliklerini yapılandırmak için nasıl kullanıldığını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4dfa575bea4e629c7521cc7f4c5a79707462714c
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 7f68ab8f0ee9efde903148d4702e85e99aad77d2
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810999"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525016"
 ---
 # <a name="publish-page-project-designer-office-development-in-visual-studio"></a>Yayımlama sayfası, proje Tasarımcısı (Visual Studio 'da Office geliştirme)
   **Proje Tasarımcısı** ' nın **Yayımla** sayfası, dağıtımın özelliklerini yapılandırmak için kullanılır.
@@ -36,15 +38,15 @@ ms.locfileid: "90810999"
 
  Yayımlama klasörü konumu, Visual Studio 'Nun bildirim, derleme ve diğer dosyalar gibi çözüm dosyalarını, derlemeden kopyaladığı dizindir. Bu dizine yazma erişiminizin olması gerekir.
 
- Seçenekler yerel bilgisayar, UNC dosya paylaşma veya bir HTTP/HTTPS Web sitesi içerir. Yol yerel (*c:\folder\\publishfolder*), göreli (*Yayımla \\ *) veya tam bir konum (* \\ \SunucuAdı* \ KlasörAdı veya http://<em>ServerName/KlasörAdı</em>) olabilir.
+ Seçenekler yerel bilgisayar, UNC dosya paylaşma veya bir HTTP/HTTPS Web sitesi içerir. Yol yerel (*c:\folder\\publishfolder*), göreli (*Yayımla \\*) veya tam bir konum (*\\ \SunucuAdı* \ KlasörAdı veya http://<em>ServerName/KlasörAdı</em>) olabilir.
 
- Varsayılan olarak, yayımlama konumu *http://localhost/projectname/* IIS yüklü veya IIS yüklü değilse * \\ Yayımla* dizinidir.
+ Varsayılan olarak, yayımlama konumu *http://localhost/projectname/* IIS yüklü veya IIS yüklü değilse *\\ Yayımla* dizinidir.
 
  **Yükleme klasörü URL 'si** Seçim.
 
  Yükleme klasörü URL 'SI, son kullanıcının özelleştirmeyi yükleyeceksiniz. Ayrıca, çözümün güncelleştirmeleri denetlemek için kullanacağı yoldur. Yol, yayımlama klasörü konumuyla aynı olabilir, ancak bu bir gereksinim değildir.
 
- Seçenekler yerel bilgisayar, UNC dosya paylaşma veya bir HTTP/HTTPS Web sitesi içerir. Yol yerel (*c:\folder\\publishfolder*), göreli (*Yayımla \\ *) veya tam bir konum (* \\ \SunucuAdı* \ KlasörAdı veya http://<em>ServerName/KlasörAdı</em>) olabilir. Tüm HTTP/HTTPS konumları US-ASCII karakterlerle oluşturulmalıdır. Unicode karakterler desteklenmez.
+ Seçenekler yerel bilgisayar, UNC dosya paylaşma veya bir HTTP/HTTPS Web sitesi içerir. Yol yerel (*c:\folder\\publishfolder*), göreli (*Yayımla \\*) veya tam bir konum (*\\ \SunucuAdı* \ KlasörAdı veya http://<em>ServerName/KlasörAdı</em>) olabilir. Tüm HTTP/HTTPS konumları US-ASCII karakterlerle oluşturulmalıdır. Unicode karakterler desteklenmez.
 
  Yükleme yolu ayarlandıysa, kullanıcıların özelleştirmeyi yüklemesi için bu konumda özelleştirme dosyaları olmalıdır. Konum yalnızca son dağıtım konumunu biliyorsanız ayarlanmalıdır.
 
@@ -64,15 +66,15 @@ ms.locfileid: "90810999"
 
   Her belge düzeyi özelleştirmesi veya VSTO eklentisi yüklendiğinde güncelleştirmeleri denetlemek, ancak başlangıç performansını etkiler.
 
-  Bir CD veya çıkarılabilir sürücü kullanarak dağıtıyorsanız, bu ayarı **hiçbir şekilde güncelleştirmeleri denetmeme**olarak ayarlayın.
+  Bir CD veya çıkarılabilir sürücü kullanarak dağıtıyorsanız, bu ayarı **hiçbir şekilde güncelleştirmeleri denetmeme** olarak ayarlayın.
 
   **Seçenekler (Açıklama)** Aşağıdaki özellikler için yayımlama seçenekleri ayarlanabilir:
 
 - Yayımlama dili: Office çözümünün yerel ayarı.
 
-- Yayımcı adı: **Program Ekle/Kaldır** veya **Programlar ve Özellikler**bölümünde göründüğü gibi şirket veya geliştirici adı.
+- Yayımcı adı: **Program Ekle/Kaldır** veya **Programlar ve Özellikler** bölümünde göründüğü gibi şirket veya geliştirici adı.
 
-- Ürün adı: Office çözümünün **Program Ekle/Kaldır** veya **Programlar ve Özellikler**bölümünde göründüğü şekilde adı.
+- Ürün adı: Office çözümünün **Program Ekle/Kaldır** veya **Programlar ve Özellikler** bölümünde göründüğü şekilde adı.
 
 - Destek URL 'SI: son kullanıcıların Office çözümü için teknik desteğe başvurumu.
 
@@ -90,7 +92,7 @@ ms.locfileid: "90810999"
 
   **Yayımlama dili** Bu seçenek, Microsoft yazılımı lisans koşullarının dilini ayarlar ve Önkoşullar listesindeki dil paketlerini içerir. Özelleştirmenin dilini etkilemez. Kurulum programındaki dil, Visual Studio 'nun yüklü dilleri tarafından belirlenir.
 
-  **Yayımlama dilini**değiştirme hakkında daha fazla bilgi için bkz. [nasıl yapılır: ClickOnce uygulaması Için yayımlama dilini değiştirme](../deployment/how-to-change-the-publish-language-for-a-clickonce-application.md).
+  **Yayımlama dilini** değiştirme hakkında daha fazla bilgi için bkz. [nasıl yapılır: ClickOnce uygulaması Için yayımlama dilini değiştirme](../deployment/how-to-change-the-publish-language-for-a-clickonce-application.md).
 
   **Yayımlama sürümü** Özelleştirme için sürüm numarasını ayarlar. Sürüm numarası değiştirildiğinde, uygulama bir güncelleştirme olarak yayımlanır. Derleme işlemi sırasında, daha önce yayımlanan sürümün üzerine yazılmasını engellemek için her bir sürüm için yeni bir klasör oluşturulur. Yayımla sürümünün her bölümü (**ana**, **İkincil**, **derleme**, **Düzeltme**) en fazla beş basamak içerebilir.
 

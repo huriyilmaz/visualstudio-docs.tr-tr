@@ -1,5 +1,7 @@
 ---
 title: "Nasıl yapılır: Outlook 'ta program aracılığıyla öğeleri taşıma"
+description: Microsoft Outlook 'ta nasıl program aracılığıyla öğe taşıyabileceğinizi öğrenin. Bu örnek, okunmamış e-posta iletilerini gelen kutusundan test adlı bir klasöre taşır.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -12,15 +14,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 97f686a47d18fa91909de489f12f9c7a8c1306d1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7b247df68827767a53d8d066f4750dfa9da52ac7
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85519918"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97525576"
 ---
 # <a name="how-to-programmatically-move-items-in-outlook"></a>Nasıl yapılır: Outlook 'ta program aracılığıyla öğeleri taşıma
-  Bu örnek, okunmamış e-posta iletilerini **gelen kutusundan** **Test**adlı bir klasöre taşır. Örnek yalnızca alan içindeki bir kelime **testine** sahip iletileri taşıdır `Subject` .
+  Bu örnek, okunmamış e-posta iletilerini **gelen kutusundan** **Test** adlı bir klasöre taşır. Örnek yalnızca alan içindeki bir kelime **testine** sahip iletileri taşıdır `Subject` .
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 
@@ -30,7 +32,7 @@ ms.locfileid: "85519918"
 ## <a name="compile-the-code"></a>Kodu derle
  Bu örnek şunları gerektirir:
 
-- **Test**adlı Outlook posta klasörü.
+- **Test** adlı Outlook posta klasörü.
 
 - Alanda sözcük **testine** ulaşan bir e-posta iletisi `Subject` .
 
