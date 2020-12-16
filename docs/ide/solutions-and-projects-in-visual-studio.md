@@ -1,8 +1,8 @@
 ---
 title: Çözümler ve projeler
-description: Visual Studio projeleri ve çözümleri hakkında bilgi edinin ve Çözüm Gezgini aracı ile yeni bir proje oluşturmayı öğrenin.
+description: Visual Studio projeleri ve çözümleri hakkında, bir şablondan yeni projeler oluşturma ve Çözüm Gezgini projeleri görüntüleme & yönetme hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
-ms.date: 12/11/2020
+ms.date: 12/15/2020
 ms.topic: conceptual
 f1_keywords:
 - vs.addnewitem
@@ -22,12 +22,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7a24f56d94d470ca5ff04a99f524af3c76df3a15
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 6504d3e7fe278e8713a897ffacefa1f22cec6a09
+ms.sourcegitcommit: f43e669f3597a4b07975b2bd2dce362a41a2e83f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97524061"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97578259"
 ---
 # <a name="solutions-and-projects-in-visual-studio"></a>Visual Studio 'da çözümler ve projeler
 
@@ -53,6 +53,8 @@ Proje dosyaları [MSBUILD XML şemasını](../msbuild/msbuild-project-file-schem
 
 Bir proje bir *çözüm* içinde yer alır. Adına rağmen çözüm bir "yanıt" değildir. Yalnızca bir veya daha fazla ilişkili projenin kapsayıcısı, derleme bilgileri, Visual Studio pencere ayarları ve belirli bir projeyle ilişkilendirilmemiş çeşitli dosyalar için bir kapsayıcıdır. Bir çözüm, bir metin dosyası (uzantısı *. sln*) tarafından kendine özgü benzersiz biçimde tanımlanır; el ile düzenlenmesi amaçlanmamıştır.
 
+### <a name="solution-file"></a>Çözüm dosyası
+
 Visual Studio, çözümlerin ayarlarını depolamak için iki dosya türü (*. sln* ve *. suo*) kullanır:
 
 |Dahili numara|Ad|Açıklama|
@@ -62,7 +64,7 @@ Visual Studio, çözümlerin ayarlarını depolamak için iki dosya türü (*. s
 
 ### <a name="solution-folder"></a>Çözüm klasörü
 
-Bu bağlamda, bir "Çözüm klasörü" yalnızca **Çözüm Gezgini** olan ve bir çözümdeki projeleri gruplamak için kullanabileceğiniz sanal bir klasördür. Bir bilgisayarda çözüm dosyası bulmak istiyorsanız, **Araçlar**  >  **Seçenekler**  >  **Projeler ve çözümler**  >  **konumlar**' a gidin. Daha fazla bilgi için bkz. [Seçenekler iletişim kutusu: projeler ve çözümler > konumları](./reference/projects-solutions-locations-options.md).
+Bir "Çözüm klasörü", yalnızca **Çözüm Gezgini** olan ve bir çözümdeki projeleri gruplamak için kullanabileceğiniz sanal bir klasördür. Bir bilgisayarda çözüm dosyası bulmak istiyorsanız, **Araçlar**  >  **Seçenekler**  >  **Projeler ve çözümler**  >  **konumlar**' a gidin. Daha fazla bilgi için bkz. [Seçenekler iletişim kutusu: projeler ve çözümler > konumları](./reference/projects-solutions-locations-options.md).
 
 ## <a name="create-new-projects"></a>Yeni projeler oluştur
 
