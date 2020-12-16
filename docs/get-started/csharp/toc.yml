@@ -16,9 +16,9 @@
     - name: İlk C# uygulamanızı oluşturma
       expanded: true
       items:
-        - name: 'Bölüm 1: C# konsol uygulaması oluşturma'
+        - name: C# konsol uygulaması oluşturma
           href: tutorial-console.md
-        - name: 'Bölüm 2: C# konsol uygulamanızı genişletme'
+        - name: C# konsol uygulamanızı genişletme
           href: tutorial-console-part-2.md
     - name: Web uygulaması oluşturma
       href: tutorial-aspnet-core.md
