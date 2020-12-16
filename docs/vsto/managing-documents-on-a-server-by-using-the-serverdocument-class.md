@@ -1,5 +1,7 @@
 ---
 title: ServerDocument sınıfını kullanarak bir sunucudaki belgeleri yönetme
+description: Belge düzeyi özelleştirmelerinin çeşitli yönlerini yönetmek için Office çalışma zamanının Visual Studio Araçları ServerDocument sınıfını nasıl kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e91653734b804693584808478e44443563cdb823
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 585ec1842daeb4e4c4c59047383e5d53b3599bcf
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "92298277"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528494"
 ---
 # <a name="manage-documents-on-a-server-by-using-the-serverdocument-class"></a>ServerDocument sınıfını kullanarak bir sunucudaki belgeleri yönetme
   `ServerDocument` [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Microsoft Office Word ve Microsoft Office Excel yüklenmemiş olsa bile belge düzeyi özelleştirmelerinin çeşitli yönlerini yönetmek için içindeki sınıfını kullanabilirsiniz. Şu görevleri gerçekleştirebilirsiniz:

@@ -1,5 +1,7 @@
 ---
 title: Şerit nesne modeline genel bakış
+description: Office çalışma zamanı Visual Studio Araçları, çalışma zamanında Şerit denetimlerinin özelliklerini almak ve ayarlamak için kullanabileceğiniz, türü kesin belirlenmiş bir nesne modelini nasıl kullanıma sunduğunu öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 6ca22704345fefb4944bda7dd9f71942fe8dfb50
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f97bbbab4b867f503e5b5befff27844df8a4b4bc
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71256011"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527991"
 ---
 # <a name="ribbon-object-model-overview"></a>Şerit nesne modeline genel bakış
   , [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Çalışma zamanında Şerit denetimlerinin özelliklerini almak ve ayarlamak için kullanabileceğiniz, türü kesin belirlenmiş bir nesne modeli sunar. Örneğin, menü denetimlerini dinamik olarak doldurabilir veya bağlamsal olarak denetimlerini gösterebilir ve gizleyebilirsiniz. Ayrıca, şerit 'e sekmeler, gruplar ve denetimler ekleyebilirsiniz, ancak yalnızca Şerit Office uygulaması tarafından yüklenmeden önce. Bilgi için bkz. [Salt okunabilir olan özellikleri ayarlama](#SettingReadOnlyProperties).
@@ -60,7 +62,7 @@ ms.locfileid: "71256011"
 |**Menü**|<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu>|
 |**Ayırıcı**|<xref:Microsoft.Office.Tools.Ribbon.RibbonSeparator>|
 |**SplitButton**|<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>|
-|**Sekmesinde**|<xref:Microsoft.Office.Tools.Ribbon.RibbonTab>|
+|**Sekme**|<xref:Microsoft.Office.Tools.Ribbon.RibbonTab>|
 |**ToggleButton**|<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton>|
 
  Ad alanı, ad <xref:Microsoft.Office.Tools.Ribbon> alanındaki denetim sınıflarının adlarıyla ad çarpışmasını önlemek için bu türler için "Ribbon" önekini kullanır <xref:System.Windows.Forms> .
@@ -114,7 +116,7 @@ ms.locfileid: "71256011"
 
  Visual Studio 2008 ' den yükselttiğiniz Visual C# projelerinde, Oluşturucu Şerit kod dosyasında görünür.
 
- Visual Basic projelerinde veya içinde oluşturduğunuz Visual C# projelerinde, [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] Oluşturucu Şerit Tasarımcı kod dosyasında görünür. Bu dosya *YourRibbonItem*olarak adlandırılmıştır. Designer.cs veya *YourRibbonItem*. Designer. vb. Bu dosyayı Visual Basic projelerinde görmek için, önce Çözüm Gezgini **tüm dosyaları göster** düğmesini tıklamalısınız.
+ Visual Basic projelerinde veya içinde oluşturduğunuz Visual C# projelerinde, [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] Oluşturucu Şerit Tasarımcı kod dosyasında görünür. Bu dosya *YourRibbonItem* olarak adlandırılmıştır. Designer.cs veya *YourRibbonItem*. Designer. vb. Bu dosyayı Visual Basic projelerinde görmek için, önce Çözüm Gezgini **tüm dosyaları göster** düğmesini tıklamalısınız.
 
 ### <a name="set-properties-in-the-createribbonextensibilityobject-method"></a>CreateRibbonExtensibilityObject yönteminde özellikleri ayarlama
  Bir denetimin özelliklerini,, `Ribbon` `CreateRibbonExtensibilityObject` veya projenizin içindeki yöntemini geçersiz kılarsınız şekilde ayarlayabilirsiniz `ThisAddin` `ThisWorkbook` `ThisDocument` . Yöntemi hakkında daha fazla bilgi için `CreateRibbonExtensibilityObject` bkz. [Şerit 'e genel bakış](../vsto/ribbon-overview.md).

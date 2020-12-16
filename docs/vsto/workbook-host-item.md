@@ -1,5 +1,7 @@
 ---
 title: Çalışma kitabı konak öğesi
+description: Çalışma kitabı konak öğesinin, Microsoft Excel için birincil birlikte çalışma derlemesinden çalışma kitabı türünü genişleten bir tür olduğunu öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -20,12 +22,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 797f1a55ec7632114e411bf0ba08e7f4e0cc146e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8d3d5b7efadefd77be7ce25026c8f485ee0ef133
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71255078"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528357"
 ---
 # <a name="workbook-host-item"></a>Çalışma kitabı konak öğesi
   <xref:Microsoft.Office.Tools.Excel.Workbook>Konak öğesi, <xref:Microsoft.Office.Interop.Excel.Workbook> Excel için birincil birlikte çalışma derlemesinden türü genişleten bir türdür. <xref:Microsoft.Office.Tools.Excel.Workbook>Konak öğesi, aynı özellikleri, yöntemleri ve olayları bir nesne olarak sağlar <xref:Microsoft.Office.Interop.Excel.Workbook> , ancak ek özellikler de sağlar.

@@ -1,5 +1,7 @@
 ---
 title: "İzlenecek yol: Visual Basic projesindeki VBA 'dan kod çağırma"
+description: Belgedeki Microsoft Word Visual Basic for Applications (VBA) kodu için belge düzeyi özelleştirmesinde bir yöntemi çağırmayı öğrenin.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -20,12 +22,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ad50ed0f55a148a05c0fedc6fe0ccb0dd5b890b9
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 6016dbf53413f6e55c88edfe930af677472bdaf5
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "92298268"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527376"
 ---
 # <a name="walkthrough-call-code-from-vba-in-a-visual-basic-project"></a>İzlenecek yol: Visual Basic projesindeki VBA 'dan kod çağırma
   Bu izlenecek yol, belgedeki Visual Basic for Applications (VBA) kodundan Microsoft Office Word için belge düzeyi özelleştirmesinde bir yöntemin nasıl çağrılacağını gösterir. Yordamda üç temel adım vardır: konak öğesi sınıfına bir yöntem ekleyin `ThisDocument` , YÖNTEMI VBA koduna sunun ve sonra BELGEDEKI VBA kodundan yöntemi çağırın.
@@ -49,7 +51,7 @@ ms.locfileid: "92298268"
 > [!NOTE]
 > Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Daha fazla bilgi için bkz. [Visual STUDIO IDE 'Yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]
@@ -65,7 +67,7 @@ ms.locfileid: "92298268"
 
 1. Word 'Ü başlatın.
 
-2. Etkin belgeyi makro içerebilen bir **belge ( \* . docm)** olarak **DocumentWithVBA**adlı bir belge olarak kaydedin. Masaüstü gibi uygun bir konuma kaydedin.
+2. Etkin belgeyi makro içerebilen bir **belge ( \* . docm)** olarak **DocumentWithVBA** adlı bir belge olarak kaydedin. Masaüstü gibi uygun bir konuma kaydedin.
 
 3. Şeritte **Geliştirici** sekmesine tıklayın.
 
@@ -104,9 +106,9 @@ ms.locfileid: "92298268"
 
 5. Proje şablonları listesinde, **word 2010 belgesi** veya **Word 2013 belge** projesi ' ni seçin.
 
-6. **Ad** kutusuna **CallingCodeFromVBA**yazın.
+6. **Ad** kutusuna **CallingCodeFromVBA** yazın.
 
-7. **Tamam**'a tıklayın.
+7. **Tamam** düğmesine tıklayın.
 
      **Office proje sihirbazı Visual Studio Araçları** açılır.
 
@@ -114,7 +116,7 @@ ms.locfileid: "92298268"
 
 9. **Finish (Son)** düğmesine tıklayın.
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]tasarımcıda **DocumentWithVBA** belgesini açar ve **Çözüm Gezgini**Için **CallingCodeFromVBA** projesini ekler.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]tasarımcıda **DocumentWithVBA** belgesini açar ve **Çözüm Gezgini** Için **CallingCodeFromVBA** projesini ekler.
 
 ## <a name="trust-the-location-of-the-document"></a>Belgenin konumuna güven
  Çözümünüzdeki kodu belgedeki VBA kodunda kullanıma sunmadan önce, çalıştırmak için belgede VBA 'ya güvenmelisiniz. Bunu yapmanın birkaç yolu vardır. Bu anlatım için, Word 'de **Güven Merkezi** 'nde belgenin konumuna güvenin.
@@ -152,7 +154,7 @@ ms.locfileid: "92298268"
 
 ### <a name="to-add-a-method-to-the-thisdocument-class"></a>ThisDocument sınıfına bir yöntem eklemek için
 
-1. **Çözüm Gezgini**, **ThisDocument. vb**öğesine sağ tıklayın ve ardından **kodu görüntüle**' ye tıklayın.
+1. **Çözüm Gezgini**, **ThisDocument. vb** öğesine sağ tıklayın ve ardından **kodu görüntüle**' ye tıklayın.
 
      **ThisDocument. vb** dosyası kod düzenleyicisinde açılır.
 
@@ -163,15 +165,15 @@ ms.locfileid: "92298268"
 3. Projeyi derleyin.
 
 ## <a name="expose-the-method-to-vba-code"></a>Yöntemi VBA koduna sunun
- `CreateTable`BELGEDEKI VBA kodunda yöntemi göstermek için, konak öğesi Için **EnableVbaCallers** özelliğini `ThisDocument` **true**olarak ayarlayın.
+ `CreateTable`BELGEDEKI VBA kodunda yöntemi göstermek için, konak öğesi Için **EnableVbaCallers** özelliğini `ThisDocument` **true** olarak ayarlayın.
 
 ### <a name="to-expose-the-method-to-vba-code"></a>Yöntemi VBA koduna göstermek için
 
-1. **Çözüm Gezgini**, **ThisDocument. vb**öğesine çift tıklayın.
+1. **Çözüm Gezgini**, **ThisDocument. vb** öğesine çift tıklayın.
 
      **DocumentWithVBA** dosyası tasarımcıda açılır.
 
-2. **Özellikler** penceresinde, **EnableVbaCallers** özelliğini seçin ve değeri **true**olarak değiştirin.
+2. **Özellikler** penceresinde, **EnableVbaCallers** özelliğini seçin ve değeri **true** olarak değiştirin.
 
 3. Görüntülenen iletide **Tamam** ' a tıklayın.
 
@@ -203,7 +205,7 @@ ms.locfileid: "92298268"
     End Sub
     ```
 
-5. **F5**tuşuna basın.
+5. **F5** tuşuna basın.
 
 6. Belgeye yeni bir tablo eklendiğini doğrulayın.
 

@@ -1,5 +1,7 @@
 ---
 title: Office çözümü için yapılandırma bilgilerini ayarlama
+description: Microsoft Office çözümlerinize özgü ayarları yapılandırmak için yapılandırma dosyalarını nasıl kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e47ad00e3f9e90913784196894d514a755699864
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 3cff5e6f559245e361eda0db6623312917891969
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91581045"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528152"
 ---
 # <a name="how-to-set-up-configuration-information-for-an-office-solution"></a>Nasıl yapılır: bir Office çözümü için yapılandırma bilgilerini ayarlama
   Yapılandırma dosyalarını, Office çözümlerinize özgü ayarları yapılandırmak için kullanabilirsiniz. Derleme bağlama ilkesi, uzaktan iletişim nesneleri, hata ayıklama ve izleme ayarları gibi ayarları belirtebilirsiniz.
@@ -36,7 +38,7 @@ ms.locfileid: "91581045"
 
 3. **Şablonlar** bölmesinde, **uygulama yapılandırma dosyası**' nı seçin.
 
-4. **Ad** kutusuna derleme ile aynı adı ve *. config*uzantısını yazın. Örneğin, *ExcelWorkbook1.dll* adlı bir Excel projesi derlemesinin yapılandırma dosyası *ExcelWorkbook1.dll.config*olarak adlandırılır.
+4. **Ad** kutusuna derleme ile aynı adı ve *. config* uzantısını yazın. Örneğin, *ExcelWorkbook1.dll* adlı bir Excel projesi derlemesinin yapılandırma dosyası *ExcelWorkbook1.dll.config* olarak adlandırılır.
 
 5. **Ekle**'ye tıklayın.
 

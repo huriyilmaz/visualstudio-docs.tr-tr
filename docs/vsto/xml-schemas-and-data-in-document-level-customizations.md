@@ -1,5 +1,7 @@
 ---
 title: Belge düzeyi özelleştirmelerde XML şemaları ve verileri
+description: Microsoft Excel ve Word, şemaları belgelerinize eşleme yeteneği sağlar ve XML verilerini belgeye içeri ve dışarı aktarmayı basitleştirebilirler.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: eb8bc9b9d3149112517d893cd3a704826b6d92d1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 57fad7982f762c4837399e12552cd109c9a9086c
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64808388"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527858"
 ---
 # <a name="xml-schemas-and-data-in-document-level-customizations"></a>Belge düzeyi özelleştirmelerde XML şemaları ve verileri
   **Önemli** Microsoft Word ile ilgili bu konu başlığı altında verilen bilgiler, Microsoft Word 'deki özel XML ile ilgili belirli bir işlevselliğin uygulanmasını kaldırdıkları zaman, Birleşik Devletler ve bölgeleri dışında bulunan veya Microsoft tarafından Microsoft tarafından lisanslanan Microsoft Word ürünleri, Microsoft 'un Microsoft Word ile ilgili belirli işlevlerin bir uygulamasını kaldırdığınızda Microsoft 'un 2010 Ocak 'tan önce lisanslı olduğu kişiler ve kuruluşların avantajı ve kullanımı için özel olarak sunulur. Microsoft Word ile ilgili bu bilgiler, Birleşik Devletler veya şirket içinde çalışan ya da Microsoft tarafından, 10 Ocak 2010 ' den sonra Microsoft tarafından lisanslanan Microsoft Word ürünlerini kullanan bireyler veya kuruluşlar tarafından okunamaz veya kullanılmıyor olabilir. Bu ürünler, bu tarihten önce lisanslanan ürünlerle aynı veya satın alınmadan ve Birleşik Devletler dışında kullanılmak üzere lisanslanmaz.
@@ -40,9 +42,9 @@ ms.locfileid: "64808388"
 
  İki ana nesne vardır:
 
-- XML şeması (XSD dosyası). Visual Studio, çalışma kitabındaki her şema için projeye bir şema ekler. Bu, **Çözüm Gezgini**içinde xsd uzantılı bir proje öğesi olarak görünür.
+- XML şeması (XSD dosyası). Visual Studio, çalışma kitabındaki her şema için projeye bir şema ekler. Bu, **Çözüm Gezgini** içinde xsd uzantılı bir proje öğesi olarak görünür.
 
-- Türü belirtilmiş bir <xref:System.Data.DataSet> sınıf. Bu sınıf, şemaya göre oluşturulur. Bu veri kümesi sınıfı **sınıf görünümü**görünür.
+- Türü belirtilmiş bir <xref:System.Data.DataSet> sınıf. Bu sınıf, şemaya göre oluşturulur. Bu veri kümesi sınıfı **sınıf görünümü** görünür.
 
 ## <a name="objects-created-when-schema-elements-are-mapped-to-excel-worksheets"></a>Şema öğeleri Excel çalışma sayfalarına eşlendiğinde oluşturulan nesneler
  **XML kaynağı** görev bölmesinden bir şema öğesini bir çalışma sayfasına eşlediğinizde, Visual Studio otomatik olarak birkaç nesne oluşturur ve bunları projenize ekler:

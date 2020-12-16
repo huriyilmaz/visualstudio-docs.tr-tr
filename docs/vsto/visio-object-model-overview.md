@@ -1,5 +1,7 @@
 ---
 title: Visio nesne modeline genel bakış
+description: Microsoft Visio için Office çözümleri geliştirmek üzere Visio nesne modeliyle nasıl etkileşim kurabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 88695511d22e38262dc969d66e469441c9c3ac47
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9278cede2dc7f105b2741d5d63b01b4cd966c790
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72985475"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528379"
 ---
 # <a name="visio-object-model-overview"></a>Visio nesne modeline genel bakış
   Microsoft Office Visio için Office çözümleri geliştirmek üzere Visio nesne modeliyle etkileşim kurabilirsiniz. Bu nesne modeli, Visio için birincil birlikte çalışma derlemesinde sunulan sınıflardan ve arabirimlerden oluşur ve `Microsoft.Office.Interop.Visio` ad alanında tanımlanır.

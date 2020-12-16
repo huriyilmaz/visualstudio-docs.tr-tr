@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: program aracılığıyla çalışma sayfaları seçme'
+description: Çalışma sayfası konak öğesi veya Excel çalışma kitabının sayfalar koleksiyonuyla Microsoft Excel çalışma sayfalarını programlı bir şekilde seçmek için Visual Studio 'Yu kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 6134b23e7b398794529ee43a428ee8b8962ccf38
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5ddef833feeb4e59f5e9e9b2c95a2170ee3c2530
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547010"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528553"
 ---
 # <a name="how-to-programmatically-select-worksheets"></a>Nasıl yapılır: program aracılığıyla çalışma sayfaları seçme
   <xref:Microsoft.Office.Tools.Excel.Worksheet.Select%2A>Yöntemi, kullanıcının seçimini yeni nesneye taşırken belirtilen nesneyi seçer. <xref:Microsoft.Office.Tools.Excel.Worksheet.Activate%2A>Kullanıcının seçimini değiştirmeden nesneye odağı getirmek istiyorsanız yöntemini kullanın.

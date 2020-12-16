@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: program aracılığıyla özel bir takvim oluşturma'
+description: Bu örneği, Kişisel takvim adlı yeni bir takvim klasörü kullanarak programlı bir şekilde oluşturun ve ardından yeni bir randevu öğesi oluşturup Takvim klasörüne ekleyin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,15 +16,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: aab9e14c7fa4b4c70b2e61eca382af2ce787148c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6d0a76189e96a6551408abe49b6e08a26c91ffa8
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85546061"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527837"
 ---
 # <a name="how-to-programmatically-create-a-custom-calendar"></a>Nasıl yapılır: program aracılığıyla özel bir takvim oluşturma
-  Bu örnek, **Kişisel takvim**adlı yeni bir takvim klasörü oluşturur ve yeni bir randevu öğesi oluşturur ve bunu Takvim klasörüne ekler. Kod daha sonra Takvim klasörünü görüntüler.
+  Bu örnek, **Kişisel takvim** adlı yeni bir takvim klasörü oluşturur ve yeni bir randevu öğesi oluşturur ve bunu Takvim klasörüne ekler. Kod daha sonra Takvim klasörünü görüntüler.
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 

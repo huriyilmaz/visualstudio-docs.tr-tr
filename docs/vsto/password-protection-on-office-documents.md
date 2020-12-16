@@ -1,5 +1,7 @@
 ---
 title: Office belgelerinde parola koruması
+description: Microsoft Word belgeleriniz ve Excel çalışma kitaplarında, yetkisiz kullanıcılar tarafından açılabilmeleri için bir parola ayarlamayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -16,21 +18,21 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e3c9521389ce348a482f35ec95c9766edea49f5f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b6beaf85000438846e5d440e48c9722b9660f9bd
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62977906"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528069"
 ---
 # <a name="password-protection-on-office-documents"></a>Office belgelerinde parola koruması
-  Microsoft Office Word belgelerinizi ve Microsoft Office Excel çalışma kitaplarını, parolayı kullanmayan birisi tarafından açılabilmeleri için bir parola ayarlamak mümkündür. Bu seçeneğe **açık parola**adı verilir.
+  Microsoft Office Word belgelerinizi ve Microsoft Office Excel çalışma kitaplarını, parolayı kullanmayan birisi tarafından açılabilmeleri için bir parola ayarlamak mümkündür. Bu seçeneğe **açık parola** adı verilir.
 
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
  **Açık etkin üzerinde parola** bulunan mevcut belge ve çalışma kitaplarını kullanarak belge düzeyinde projeler oluşturabilirsiniz. Visual Studio 'daki davranış, **açık etkin parolası** olan Word ve Excel belgeleri için farklıdır.
 
- **Açık parola**etkinleştirme hakkında daha fazla bilgi için bkz. Word veya Excel 'de yardım.
+ **Açık parola** etkinleştirme hakkında daha fazla bilgi için bkz. Word veya Excel 'de yardım.
 
 ## <a name="behavior-of-excel-and-word"></a>Excel ve Word davranışı
  Visual Studio 'da **açık etkin parola** bulunan bir Excel çalışma kitabını her açışınızda, Excel sizden parolayı ister. Çözümünüzü oluştururken, belge derleme sırasında açıldığından parolayı yeniden girmeniz istenir.

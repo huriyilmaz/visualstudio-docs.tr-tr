@@ -1,5 +1,7 @@
 ---
 title: VSTO eklenti projesindeki hizmetten veriye bağlama
+description: Microsoft Word belgesine denetim eklemeyi, denetimleri MSDN Içerik hizmetinden alınan verilere bağlamayı ve çalışma zamanında olaylara yanıt vermeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 75d984617b56525e640a74aa4badd6f520c0b892
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6b65308cfc0ba4dee33dd6b20d3fd4028e9ea22e
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72381314"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527481"
 ---
 # <a name="walkthrough-bind-to-data-from-a-service-in-a-vsto-add-in-project"></a>İzlenecek yol: VSTO eklenti projesindeki bir hizmetten veriye bağlama
   VSTO eklenti projelerinde verileri konak denetimlerine bağlayabilirsiniz. Bu izlenecek yol, Microsoft Office bir Word belgesine nasıl denetim ekleneceğini, denetimlerin MSDN Içerik hizmetinden alınan verilere nasıl bağlanacağını ve çalışma zamanında olaylara nasıl yanıt verileceğini gösterir.
@@ -43,16 +45,16 @@ ms.locfileid: "72381314"
 
 - [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)] veya [!INCLUDE[Word_14_short](../vsto/includes/word-14-short-md.md)].
 
-## <a name="create-a-new-project"></a>Yeni bir proje oluşturma
+## <a name="create-a-new-project"></a>Yeni proje oluşturma
  İlk adım, bir Word VSTO eklenti projesi oluşturmaktır.
 
 ### <a name="to-create-a-new-project"></a>Yeni bir proje oluşturmak için
 
-1. Visual Basic veya C# kullanarak **MTPS Içerik hizmeti**adlı BIR Word VSTO eklentisi projesi oluşturun.
+1. Visual Basic veya C# kullanarak **MTPS Içerik hizmeti** adlı BIR Word VSTO eklentisi projesi oluşturun.
 
      Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-     Visual Studio, `ThisAddIn.vb` veya `ThisAddIn.cs` dosyasını açar ve projeyi **Çözüm Gezgini**ekler.
+     Visual Studio, `ThisAddIn.vb` veya `ThisAddIn.cs` dosyasını açar ve projeyi **Çözüm Gezgini** ekler.
 
 ## <a name="add-a-web-service"></a>Web hizmeti Ekle
  Bu izlenecek yol için, MTPS Içerik hizmeti adlı bir Web hizmeti kullanın. Bu Web hizmeti, bir XML dizesi veya düz metin biçiminde belirtilen bir MSDN makalesindeki bilgileri döndürür. Daha sonraki bir adımda, döndürülen bilgilerin bir içerik denetiminde nasıl görüntüleneceği gösterilmektedir.
@@ -69,7 +71,7 @@ ms.locfileid: "72381314"
 
 4. **Git**' e tıklayın.
 
-5. **Ad alanı** alanında **contentservice**yazın ve **Tamam**' a tıklayın.
+5. **Ad alanı** alanında **contentservice** yazın ve **Tamam**' a tıklayın.
 
 6. **Başvuru ekleme Sihirbazı** Iletişim kutusunda **son**' a tıklayın.
 
@@ -108,7 +110,7 @@ ms.locfileid: "72381314"
 
 ### <a name="to-test-the-vsto-add-in"></a>VSTO eklentisini test etmek için
 
-1. **F5**tuşuna basın.
+1. **F5** tuşuna basın.
 
 2. İçerik denetiminin içine tıklayın.
 

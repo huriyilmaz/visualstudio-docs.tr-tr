@@ -1,5 +1,7 @@
 ---
 title: .NET Framework 4,5 ' e geçirilen Excel veya Word projesini güncelleştir
+description: Belirli özellikleri kullanan bir Excel veya Word projeniz olduğunda, hedef Framework .NET Framework 4 ' e veya daha yeni bir sürüme değiştiyse, kodunuzu değiştirmelisiniz.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 06f4742317e3702273c5fe7c91ccc76a153c1b3e
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 7bc79a53b62cf9fb0ca0ba533a2ce0d542b08c72
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584418"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528430"
 ---
 # <a name="update-excel-and-word-projects-that-you-migrate-to-the-net-framework-45"></a>.NET Framework 4,5 ' ye geçirebileceğiniz Excel ve Word projelerini güncelleştirme
   Aşağıdaki özelliklerden herhangi birini kullanan bir Excel veya Word projeniz varsa, hedef Framework veya daha yeni olarak değiştirilirse kodunuzu değiştirmeniz gerekir [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] :
@@ -44,7 +46,7 @@ ms.locfileid: "91584418"
 
 ### <a name="to-remove-the-excellocale1033attribute"></a>ExcelLocale1033Attribute 'yi kaldırmak için
 
-1. Visual Studio 'da proje açıkken **Çözüm Gezgini**açın.
+1. Visual Studio 'da proje açıkken **Çözüm Gezgini** açın.
 
 2. **Özellikler** düğümü (C# için) veya **projem** düğümü altında (Visual Basic Için), AssemblyInfo kod dosyasına çift tıklayarak kodu düzenleyici 'de açın.
 
@@ -66,7 +68,7 @@ ms.locfileid: "91584418"
 
 ### <a name="to-remove-the-reference-to-the-excellocal1033proxy-class"></a>ExcelLocal1033Proxy sınıfına başvuruyu kaldırmak için
 
-1. Projeyi Visual Studio 'da açın ve **Çözüm Gezgini**açın.
+1. Projeyi Visual Studio 'da açın ve **Çözüm Gezgini** açın.
 
 2. **Çözüm Gezgini**' de, *ThisAddin.cs* (C# için) veya *ThisAddIn. vb* (Visual Basic Için) kısayol menüsünü açın ve **kodu görüntüle**' yi seçin.
 
@@ -193,7 +195,7 @@ private void DoSomethingToSheet(Microsoft.Office.Tools.Excel.Worksheet worksheet
 
  .NET Framework 3,5 ' i hedefleyen projelerde, Windows Forms denetimleri (yöntemi gibi) ekleyen Yöntemler `AddButton` <xref:Microsoft.Office.Tools.Excel.ControlCollection> ve <xref:Microsoft.Office.Tools.Word.ControlCollection> sınıflarında tanımlanmıştır.
 
- [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]Veya daha sonra hedeflenen projelerde, bu yöntemler denetimler özelliğinde kullanılabilen genişletme yöntemleridir. Bu uzantı yöntemlerini kullanmak için, yöntemlerini kullandığınız kod dosyası **using** veya **Imports** <xref:Microsoft.Office.Tools.Excel> <xref:Microsoft.Office.Tools.Word> ad alanı için bir using veya Imports bildirimine sahip olmalıdır. Bu ifade, veya daha sonra hedeflenen yeni projelerde otomatik olarak oluşturulur [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] . Ancak, bu ifade .NET Framework 3,5 ' i hedefleyen projelerde otomatik olarak eklenmez, bu nedenle projeyi yeniden hedeflediğinizde eklemeniz gerekir.
+ [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]Veya daha sonra hedeflenen projelerde, bu yöntemler denetimler özelliğinde kullanılabilen genişletme yöntemleridir. Bu uzantı yöntemlerini kullanmak için, yöntemlerini kullandığınız kod dosyası  veya  <xref:Microsoft.Office.Tools.Excel> <xref:Microsoft.Office.Tools.Word> ad alanı için bir using veya Imports bildirimine sahip olmalıdır. Bu ifade, veya daha sonra hedeflenen yeni projelerde otomatik olarak oluşturulur [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] . Ancak, bu ifade .NET Framework 3,5 ' i hedefleyen projelerde otomatik olarak eklenmez, bu nedenle projeyi yeniden hedeflediğinizde eklemeniz gerekir.
 
  Daha fazla bilgi için bkz. [çalışma zamanında Office belgelerine denetim ekleme](../vsto/adding-controls-to-office-documents-at-run-time.md).
 

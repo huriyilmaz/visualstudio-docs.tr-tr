@@ -1,5 +1,6 @@
 ---
 title: Word için ilk belge düzeyi özelleştirmeyi oluşturma
+description: Microsoft Word için belge düzeyi özelleştirmesi oluşturun. Bu tür çözümde oluşturduğunuz özellikler yalnızca belirli bir belge açık olduğunda kullanılabilir.
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -15,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c1f5d1d6d373a5bbcd3f10d600175a88e88823ad
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: c1f827346c30720cefd781dade3039416504b9c0
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584995"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527084"
 ---
 # <a name="walkthrough-create-your-first-document-level-customization-for-word"></a>İzlenecek yol: Word için ilk belge düzeyi özelleştirmeyi oluşturma
 
@@ -64,9 +65,9 @@ ms.locfileid: "91584995"
 
 5. Proje şablonları listesinde bir Word VSTO belge projesi seçin.
 
-6. **Ad** kutusuna **FirstDocumentCustomization**yazın.
+6. **Ad** kutusuna **FirstDocumentCustomization** yazın.
 
-7. **Tamam**'a tıklayın.
+7. **Tamam** düğmesine tıklayın.
 
 8. **Office projesi için Visual Studio Araçları** **Yeni belge oluştur** ' u seçin ve **Tamam**' ı tıklatın.
 ::: moniker-end
@@ -117,7 +118,7 @@ ms.locfileid: "91584995"
 
 ### <a name="to-add-a-second-paragraph-of-text-to-the-document-by-using-code"></a>Kodu kullanarak belgeye ikinci bir metin paragrafı eklemek için
 
-1. **Çözüm Gezgini**, **ThisDocument**öğesine sağ tıklayın ve ardından **kodu görüntüle**' ye tıklayın.
+1. **Çözüm Gezgini**, **ThisDocument** öğesine sağ tıklayın ve ardından **kodu görüntüle**' ye tıklayın.
 
      Kod dosyası Visual Studio 'da açılır.
 

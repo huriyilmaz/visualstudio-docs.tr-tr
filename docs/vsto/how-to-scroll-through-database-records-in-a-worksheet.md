@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: çalışma sayfasındaki veritabanı kayıtlarını kaydırma'
+description: Tasarımcıyı Microsoft Excel çalışma sayfasındaki veritabanı tablosundan tek bir alan göstermek için nasıl kullanabileceğinizi öğrenin
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8127a5f61e292fb777be4854796535bbe01226aa
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 536a3cca0337e8879e64cbc3ffc15b8411c201b6
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85545801"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528174"
 ---
 # <a name="how-to-scroll-through-database-records-in-a-worksheet"></a>Nasıl yapılır: çalışma sayfasındaki veritabanı kayıtlarını kaydırma
   Aşağıdaki yordamda, Microsoft Office bir Excel çalışma sayfasındaki veritabanı tablosundan, son kullanıcının tüm kayıtlarda gezindiğini etkinleştiren denetimlerle tek bir alan göstermek için tasarımcının nasıl kullanılacağı gösterilmektedir.

@@ -1,5 +1,7 @@
 ---
 title: 'İzlenecek yol: belge düzeyi projede karmaşık veri bağlama'
+description: Microsoft Excel çalışma sayfasındaki birden çok hücreyi Northwind SQL Server veritabanındaki alanlara nasıl bağlayabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7aba307bcd76cc055e42c11418d42f3dd0cfba1f
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 988394595e8aa4710a22e1fedf22a921481c7396
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584327"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527117"
 ---
 # <a name="walkthrough-complex-data-binding-in-a-document-level-project"></a>İzlenecek yol: belge düzeyi projede karmaşık veri bağlama
   Bu izlenecek yol, belge düzeyindeki bir projede karmaşık veri bağlamanın temellerini gösterir. Microsoft Office Excel çalışma sayfasındaki birden çok hücreyi Northwind SQL Server veritabanındaki alanlara bağlayabilirsiniz.
@@ -49,25 +51,25 @@ ms.locfileid: "91584327"
 
 - SQL Server veritabanına okuma ve yazma izinleri.
 
-## <a name="create-a-new-project"></a>Yeni bir proje oluşturma
+## <a name="create-a-new-project"></a>Yeni proje oluşturma
  İlk adım bir Excel çalışma kitabı projesi oluşturmaktır.
 
 ### <a name="to-create-a-new-project"></a>Yeni bir proje oluşturmak için
 
-1. **Karmaşık veri bağlamamı**adlı bir Excel çalışma kitabı projesi oluşturun. Sihirbazda **Yeni belge oluştur**' u seçin.
+1. **Karmaşık veri bağlamamı** adlı bir Excel çalışma kitabı projesi oluşturun. Sihirbazda **Yeni belge oluştur**' u seçin.
 
      Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-     Visual Studio tasarımcıda yeni Excel çalışma kitabını açar ve **karmaşık veri bağlama** projesini **Çözüm Gezgini**ekler.
+     Visual Studio tasarımcıda yeni Excel çalışma kitabını açar ve **karmaşık veri bağlama** projesini **Çözüm Gezgini** ekler.
 
 ## <a name="create-the-data-source"></a>Veri kaynağını oluşturma
  Projenize türü belirtilmiş bir veri kümesi eklemek için **veri kaynakları** penceresini kullanın.
 
 ### <a name="to-create-the-data-source"></a>Veri kaynağı oluşturmak için
 
-1. **Veri kaynakları** penceresi görünür değilse, menü çubuğunda, **View**  >  **diğer Windows**  >  **veri kaynaklarını**görüntüle ' yi seçerek bunu görüntüleyin.
+1. **Veri kaynakları** penceresi görünür değilse, menü çubuğunda,   >  **diğer Windows**  >  **veri kaynaklarını** görüntüle ' yi seçerek bunu görüntüleyin.
 
-2. **Veri kaynağı Yapılandırma Sihirbazı 'nı**başlatmak Için **Yeni veri kaynağı Ekle** ' yi seçin.
+2. **Veri kaynağı Yapılandırma Sihirbazı 'nı** başlatmak Için **Yeni veri kaynağı Ekle** ' yi seçin.
 
 3. **Veritabanı** ' nı seçin ve ardından **İleri**' ye tıklayın.
 
@@ -81,14 +83,14 @@ ms.locfileid: "91584327"
 
 8. **Çalışanlar** tablosunun yanındaki onay kutusunu işaretleyin.
 
-9. **Son**'a tıklayın.
+9. **Finish (Son)** düğmesine tıklayın.
 
-   Sihirbaz, **çalışanlar** tablosunu **veri kaynakları** penceresine ekler. Ayrıca, projenize **Çözüm Gezgini**görünür bir veri kümesi de ekler.
+   Sihirbaz, **çalışanlar** tablosunu **veri kaynakları** penceresine ekler. Ayrıca, projenize **Çözüm Gezgini** görünür bir veri kümesi de ekler.
 
 ## <a name="add-controls-to-the-worksheet"></a>Çalışma sayfasına denetimler ekleme
  Çalışma kitabı açıldığında, çalışma sayfasında **çalışanlar** tablosu görüntülenir. Kullanıcılar verilerde değişiklik yapabilirler ve ardından bir düğmeye tıklayarak bu değişiklikleri veritabanına geri kaydedebilecektir.
 
- Çalışma sayfasını tabloya otomatik olarak bağlamak için <xref:Microsoft.Office.Tools.Excel.ListObject> **veri kaynakları** penceresinden çalışma sayfasına bir denetim ekleyebilirsiniz. Kullanıcıya değişiklikleri kaydetme seçeneğini vermek için <xref:System.Windows.Forms.Button> **araç kutusundan**bir denetim ekleyin.
+ Çalışma sayfasını tabloya otomatik olarak bağlamak için <xref:Microsoft.Office.Tools.Excel.ListObject> **veri kaynakları** penceresinden çalışma sayfasına bir denetim ekleyebilirsiniz. Kullanıcıya değişiklikleri kaydetme seçeneğini vermek için <xref:System.Windows.Forms.Button> **araç kutusundan** bir denetim ekleyin.
 
 #### <a name="to-add-a-list-object"></a>Bir liste nesnesi eklemek için
 
@@ -100,9 +102,9 @@ ms.locfileid: "91584327"
 
 4. Açılan listede **ListObject** ' i seçin.
 
-5. **Çalışanlar** tablosunu **a6**hücresine sürükleyin.
+5. **Çalışanlar** tablosunu **a6** hücresine sürükleyin.
 
-     <xref:Microsoft.Office.Tools.Excel.ListObject>A6 hücresinde adlı bir denetim `EmployeesListObject` oluşturulur. **A6** Aynı zamanda, <xref:System.Windows.Forms.BindingSource> adlandırılmış `EmployeesBindingSource` , bir tablo bağdaştırıcısı ve <xref:System.Data.DataSet> projeye bir örnek eklenir. Denetim öğesine bağlanır <xref:System.Windows.Forms.BindingSource> , bu da <xref:System.Data.DataSet> örneğe bağlanır.
+     <xref:Microsoft.Office.Tools.Excel.ListObject>A6 hücresinde adlı bir denetim `EmployeesListObject` oluşturulur.  Aynı zamanda, <xref:System.Windows.Forms.BindingSource> adlandırılmış `EmployeesBindingSource` , bir tablo bağdaştırıcısı ve <xref:System.Data.DataSet> projeye bir örnek eklenir. Denetim öğesine bağlanır <xref:System.Windows.Forms.BindingSource> , bu da <xref:System.Data.DataSet> örneğe bağlanır.
 
 ### <a name="to-add-a-button"></a>Düğme eklemek için
 
@@ -115,7 +117,7 @@ ms.locfileid: "91584327"
 
 ### <a name="to-initialize-the-control"></a>Denetimi başlatmak için
 
-1. **Çözüm Gezgini**, **Sheet1. vb** veya **Sheet1.cs**öğesine sağ tıklayın ve ardından kısayol menüsünde **kodu görüntüle** ' ye tıklayın.
+1. **Çözüm Gezgini**, **Sheet1. vb** veya **Sheet1.cs** öğesine sağ tıklayın ve ardından kısayol menüsünde **kodu görüntüle** ' ye tıklayın.
 
 2. `Sheet1_Startup`B için metin ayarlamak üzere yöntemine aşağıdaki kodu ekleyin `utton` .
 
@@ -143,21 +145,21 @@ ms.locfileid: "91584327"
 
 ### <a name="to-test-the-data-binding"></a>Veri bağlamayı test etmek için
 
-- **F5**tuşuna basın.
+- **F5** tuşuna basın.
 
      Çalışma kitabı açıldığında, liste nesnesinin **çalışanlar** tablosundan alınan verilerle doldurulduğunu doğrulayın.
 
 ### <a name="to-modify-data"></a>Verileri değiştirmek için
 
-1. **Etikan**adını Içermesi gereken **B7**hücresini tıklatın.
+1. **Etikan** adını Içermesi gereken **B7** hücresini tıklatın.
 
-2. **Anderson**adını yazın ve **ENTER**tuşuna basın.
+2. **Anderson** adını yazın ve **ENTER** tuşuna basın.
 
 ### <a name="to-modify-a-column-header"></a>Bir sütun üst bilgisini değiştirmek için
 
-1. **Soyadı**sütun başlığını içeren hücreye tıklayın.
+1. **Soyadı** sütun başlığını içeren hücreye tıklayın.
 
-2. İki sözcükten oluşan bir boşluk da dahil olmak üzere **Soyadı**yazın ve ardından **ENTER**tuşuna basın.
+2. İki sözcükten oluşan bir boşluk da dahil olmak üzere **Soyadı** yazın ve ardından **ENTER** tuşuna basın.
 
 ### <a name="to-save-data"></a>Verileri kaydetmek için
 
@@ -169,13 +171,13 @@ ms.locfileid: "91584327"
 
      Liste nesnesi, **çalışanlar** tablosundan alınan verilerle doldurulur.
 
-4. **B7** hücresindeki adın hala **Anderson**olduğunu ve bu durumda, yaptığınız ve veritabanına geri kaydettiğiniz veri değişikliği olduğunu unutmayın. Sütun üst bilgisi veritabanına bağlanmadığından ve çalışma sayfasında yaptığınız değişiklikleri kaydetmediyseniz, **LastName** sütunu, boşluk olmadan özgün biçimine geri değiştirilmiştir.
+4. **B7** hücresindeki adın hala **Anderson** olduğunu ve bu durumda, yaptığınız ve veritabanına geri kaydettiğiniz veri değişikliği olduğunu unutmayın. Sütun üst bilgisi veritabanına bağlanmadığından ve çalışma sayfasında yaptığınız değişiklikleri kaydetmediyseniz, **LastName** sütunu, boşluk olmadan özgün biçimine geri değiştirilmiştir.
 
 ### <a name="to-add-new-rows"></a>Yeni satırlar eklemek için
 
 1. Liste nesnesi içinde bir hücre seçin.
 
-    Yeni satırın ilk hücresinde bir yıldız işareti () ile listenin en altında yeni bir satır görüntülenir **\*** .
+    Yeni satırın ilk hücresinde bir yıldız işareti (* _) olan listenin en altında yeni bir satır görüntülenir *\** .
 
 2. Aşağıdaki bilgileri boş satıra ekleyin.
 
@@ -185,7 +187,7 @@ ms.locfileid: "91584327"
 
 ### <a name="to-delete-rows"></a>Satırları silmek için
 
-- Çalışma sayfasının sol tarafında bulunan 16 ' ya (satır 16) sağ tıklayın ve ardından **Sil**' e tıklayın.
+- Çalışma sayfasının sol tarafında bulunan 16 ' ya (satır 16) sağ tıklayın ve ardından _ * Sil * * ' e tıklayın.
 
 ### <a name="to-sort-the-rows-in-the-list"></a>Listedeki satırları sıralamak için
 

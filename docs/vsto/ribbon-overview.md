@@ -1,5 +1,7 @@
 ---
 title: Şerite genel bakış
+description: Şeridin, daha kolay bulması ve komutların şeritte denetimler olarak görünmesi için ilgili komutları düzenlemenin bir yolu olduğunu öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 668517705caa7ba6baef0b85305bf4470bc3b26b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ca7f7757cddf89b97f7a374385ea834728f0e975
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72985607"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527971"
 ---
 # <a name="ribbon-overview"></a>Şerite genel bakış
   Şerit, daha kolay bulabilmeniz için ilgili komutları düzenlemenin bir yoludur. Komutlar şeritte denetimler olarak görünür. Denetimler, bir uygulama penceresinin üst kenarındaki yatay bir şerit üzerinde *gruplar* halinde düzenlenir. İlgili gruplar sekmeler üzerinde düzenlenmiştir.
@@ -84,7 +86,7 @@ ms.locfileid: "72985607"
  Şeriti XML 'e aktarma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Şerit Tasarımcısından ŞERIT XML 'ine nasıl bir şerit dışarı aktarma](../vsto/how-to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml.md).
 
 ### <a name="update-the-code"></a>Kodu güncelleştirme
- **Çözüm Gezgini**yeni bir Şerit kod dosyası eklenir. Bu dosya Ribbon XML sınıfını içerir. `Ribbon Callbacks`Bir düğmeye tıklanması gibi kullanıcı eylemlerini işlemek için bu sınıfın bölgesinde geri çağırma yöntemleri oluşturmanız gerekir. Olay işleyicilerindeki kodunuzu bu geri çağırma yöntemlerine taşıyın ve şerit genişletilebilirliği (RibbonX) programlama modeliyle çalışmak için kodu değiştirin. Daha fazla bilgi için bkz. [ŞERIT XML](../vsto/ribbon-xml.md).
+ **Çözüm Gezgini** yeni bir Şerit kod dosyası eklenir. Bu dosya Ribbon XML sınıfını içerir. `Ribbon Callbacks`Bir düğmeye tıklanması gibi kullanıcı eylemlerini işlemek için bu sınıfın bölgesinde geri çağırma yöntemleri oluşturmanız gerekir. Olay işleyicilerindeki kodunuzu bu geri çağırma yöntemlerine taşıyın ve şerit genişletilebilirliği (RibbonX) programlama modeliyle çalışmak için kodu değiştirin. Daha fazla bilgi için bkz. [ŞERIT XML](../vsto/ribbon-xml.md).
 
  Ayrıca `ThisAddIn` , `ThisWorkbook` yöntemi geçersiz kılan, veya sınıfına kod eklemeniz gerekir `ThisDocument` `CreateRibbonExtensibilityObject` ve Office uygulamasına Şerit XML sınıfını geri döndürür.
 
@@ -93,7 +95,7 @@ ms.locfileid: "72985607"
 ## <a name="add-multiple-ribbon-items-to-a-project"></a>Projeye birden çok şerit öğesi ekleme
  Tek bir projeye birden fazla şerit öğesi ekleyebilirsiniz. Aşağıdaki iki görevden birini gerçekleştirmek istiyorsanız bu yararlı olur:
 
-- Outlook *Inspector*için şeritler oluşturun. Daha fazla bilgi için bkz. [Outlook için bir şeridi özelleştirme](../vsto/customizing-a-ribbon-for-outlook.md).
+- Outlook *Inspector* için şeritler oluşturun. Daha fazla bilgi için bkz. [Outlook için bir şeridi özelleştirme](../vsto/customizing-a-ribbon-for-outlook.md).
 
     > [!NOTE]
     > Inspector, kullanıcılar e-posta iletisi oluşturma gibi belirli görevleri gerçekleştirirken açılan bir penceredir.
@@ -127,7 +129,7 @@ ms.locfileid: "72985607"
 |[Çalışma zamanında Şerite erişin](../vsto/accessing-the-ribbon-at-run-time.md)|Şerit 'in nasıl gösterileceğini, gizleneceğini ve değiştirileceğini gösterir ve kullanıcıların kodu özel bir görev bölmesinde, Eylemler bölmesinde veya Outlook form bölgesindeki denetimlerden çalıştırmasına olanak tanır.|
 |[Nasıl yapılır: Şeritteki sekmenin konumunu değiştirme](../vsto/how-to-change-the-position-of-a-tab-on-the-ribbon.md)|Şeritteki sekmelerin sırasının nasıl değiştirileceğini gösterir.|
 |[Nasıl yapılır: yerleşik bir sekmeyi özelleştirme](../vsto/how-to-customize-a-built-in-tab.md)|Yerleşik bir sekmeye grupların ve denetimlerin nasıl ekleneceğini gösterir.|
-|[Nasıl yapılır: Backstage görünümüne denetimler ekleme](../vsto/how-to-add-controls-to-the-backstage-view.md)|**Dosyaya**tıkladığınızda açılan menüye denetimlerin nasıl ekleneceğini gösterir.|
+|[Nasıl yapılır: Backstage görünümüne denetimler ekleme](../vsto/how-to-add-controls-to-the-backstage-view.md)|**Dosyaya** tıkladığınızda açılan menüye denetimlerin nasıl ekleneceğini gösterir.|
 |[Nasıl yapılır: Şerit grubuna iletişim kutusu Başlatıcısı Ekleme](../vsto/how-to-add-a-dialog-box-launcher-to-a-ribbon-group.md)|Şeritteki herhangi bir gruba bir iletişim kutusu Başlatıcısı ekleneceğini gösterir.|
 |[Nasıl yapılır: Şerit Tasarımcısından Şerit XML 'ine şerit aktarma](../vsto/how-to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml.md)|Şeriti tasarımcıdan Şerit XML 'ine dışa aktararak, şeridin gelişmiş yollarla nasıl özelleştirileceğini gösterir.|
 |[Şerit XML](../vsto/ribbon-xml.md)|Şerit XML kullanarak bir şeridi nasıl özelleştirebileceğinizi açıklar.|

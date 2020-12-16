@@ -1,5 +1,7 @@
 ---
 title: "Nasıl yapılır: Word 'de program aracılığıyla arama seçeneklerini ayarlama"
+description: Visual Studio 'Yu kullanarak Microsoft Word 'de seçimler için arama seçeneklerini programlama yoluyla nasıl ayarlayabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 434dfc85ed6c4e03c7c610a497bd063ce1826c62
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 45af6a801a146838919402c31be502cf4825e718
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85546997"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528555"
 ---
 # <a name="how-to-programmatically-set-search-options-in-word"></a>Nasıl yapılır: Word 'de program aracılığıyla arama seçeneklerini ayarlama
   Microsoft Office Word belgelerindeki seçimler için arama seçeneklerini kurmanın iki yolu vardır:
@@ -38,7 +40,7 @@ ms.locfileid: "85546997"
 
 ### <a name="to-set-search-options-using-a-find-object"></a>Find nesnesi kullanarak arama seçeneklerini ayarlamak için
 
-1. Bir nesnenin özelliklerini, <xref:Microsoft.Office.Interop.Word.Find> **beni bul**metin için bir seçimi ileri doğru arayacak şekilde ayarlayın.
+1. Bir nesnenin özelliklerini, <xref:Microsoft.Office.Interop.Word.Find> **beni bul** metin için bir seçimi ileri doğru arayacak şekilde ayarlayın.
 
      [!code-vb[Trin_VstcoreWordAutomation#76](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#76)]
 
@@ -47,7 +49,7 @@ ms.locfileid: "85546997"
 
 ### <a name="to-set-search-options-using-execute-method-arguments"></a>Execute metodu bağımsız değişkenlerini kullanarak arama seçeneklerini ayarlamak için
 
-1. Arama ölçütünü, <xref:Microsoft.Office.Interop.Word.Find.Execute%2A> **beni bul**metin için bir seçimi ileri doğru aramak üzere metodun parametreleri olarak geçirin.
+1. Arama ölçütünü, <xref:Microsoft.Office.Interop.Word.Find.Execute%2A> **beni bul** metin için bir seçimi ileri doğru aramak üzere metodun parametreleri olarak geçirin.
 
      [!code-vb[Trin_VstcoreWordAutomation#77](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#77)]
      [!code-csharp[Trin_VstcoreWordAutomation#77](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#77)]

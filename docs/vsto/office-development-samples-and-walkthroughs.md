@@ -1,5 +1,7 @@
 ---
 title: Office geliştirme örnekleri ve izlenecek yollar
+description: Örnek uygulamalar, örnek kod ve Office çözümleri oluşturmak için kullanılan söz dizimi, yapı ve teknikleri gösteren adım adım yönergeler hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: conceptual
 dev_langs:
@@ -20,12 +22,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a9a8e71395190647fa7a908949a186c511b24610
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5b5b1c34ef295558c42d181032dcf3dd7c456289
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "69551676"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527731"
 ---
 # <a name="office-development-samples-and-walkthroughs"></a>Office geliştirme örnekleri ve izlenecek yollar
   Bu bölüm örnek uygulamalar, örnek kod ve Microsoft Office çözümleri oluşturmak için kullanılan sözdizimi, yapı ve teknikleri gösteren adım adım yönergeler içerir.

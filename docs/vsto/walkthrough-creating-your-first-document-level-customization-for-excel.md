@@ -1,5 +1,7 @@
 ---
 title: Excel için ilk belge düzeyi özelleştirmeyi oluşturma
+description: Microsoft Excel için belge düzeyi özelleştirmesi oluşturun. Bu tür çözümde oluşturduğunuz özellikler yalnızca belirli bir çalışma kitabı açık olduğunda kullanılabilir.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b75bf6894bff4e5fa8d6ac17ed537f15041b3ede
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 4183e84a930957b7cf87a6cc1e6fabcb21420785
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91585008"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527948"
 ---
 # <a name="walkthrough-create-your-first-document-level-customization-for-excel"></a>İzlenecek yol: Excel için ilk belge düzeyi özelleştirmeyi oluşturma
 
@@ -64,9 +66,9 @@ ms.locfileid: "91585008"
 
 5. Proje şablonları listesinde bir Excel VSTO çalışma kitabı projesi seçin.
 
-6. **Ad** kutusuna **FirstWorkbookCustomization**yazın.
+6. **Ad** kutusuna **FirstWorkbookCustomization** yazın.
 
-7. **Tamam**'a tıklayın.
+7. **Tamam** düğmesine tıklayın.
 
 8. **Office projesi için Visual Studio Araçları** **Yeni belge oluştur** ' u seçin ve **Tamam**' ı tıklatın.
 ::: moniker-end
@@ -115,12 +117,12 @@ ms.locfileid: "91585008"
 
 ### <a name="to-add-text-to-a-worksheet-by-using-the-designer"></a>Tasarımcıyı kullanarak çalışma sayfasına metin eklemek için
 
-1. Tasarımcıda açık olan çalışma sayfasında **a1**hücresini seçin ve ardından aşağıdaki metni yazın.
+1. Tasarımcıda açık olan çalışma sayfasında **a1** hücresini seçin ve ardından aşağıdaki metni yazın.
 
      **Bu metin, tasarımcı kullanılarak eklenmiştir.**
 
 > [!WARNING]
-> Bu metin satırını **a2**hücresine eklerseniz, bu örnekteki diğer kodla üzerine yazılır.
+> Bu metin satırını **a2** hücresine eklerseniz, bu örnekteki diğer kodla üzerine yazılır.
 
 ## <a name="add-text-to-a-worksheet-programmatically"></a>Çalışma sayfasına programlamayla metin ekleme
 

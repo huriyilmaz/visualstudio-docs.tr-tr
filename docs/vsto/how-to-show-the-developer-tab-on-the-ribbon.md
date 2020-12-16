@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: Şeritte Geliştirici sekmesini gösterme'
+description: Visual Studio 'Yu kullanarak bir Microsoft Word belgesindeki Şeritteki Geliştirici sekmesini programlı bir şekilde gösterme hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 41070c92d0c27c1ee8fbf480f7461c22421b8fdc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4dc38b941d27cab0653b923ddd03ba8b78eeab58
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85545853"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528139"
 ---
 # <a name="how-to-show-the-developer-tab-on-the-ribbon"></a>Nasıl yapılır: Şeritte Geliştirici sekmesini gösterme
   Bir Office uygulamasının şeridinde **Geliştirici** sekmesine erişmek için, varsayılan olarak görünmediğinden bu sekmeyi gösterecek şekilde yapılandırmanız gerekir. Örneğin, <xref:Microsoft.Office.Tools.Word.GroupContentControl> Word için belge düzeyi özelleştirmeye eklemek istiyorsanız bu sekmeyi göstermeli.

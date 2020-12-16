@@ -1,5 +1,7 @@
 ---
 title: Outlook çözümleri
+description: Outlook 'U otomatik hale getirmek, Outlook özelliklerini genişletmek veya Outlook Kullanıcı arabirimini (UI) özelleştirmek için VSTO Eklentilerini nasıl kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: conceptual
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 21e6478bb0f02383066a2c63dad1bdaf980a0b5b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ded4652704a47252f0839aed151f0557ae5e6766
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72985680"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527544"
 ---
 # <a name="outlook-solutions"></a>Outlook çözümleri
   Visual Studio, Outlook Microsoft Office için VSTO eklentileri oluşturmak için kullanabileceğiniz proje şablonları sağlar. Outlook 'U otomatikleştirmek, Outlook özelliklerini genişletmek veya Outlook Kullanıcı arabirimini (UI) özelleştirmek için VSTO Eklentilerini kullanabilirsiniz. VSTO eklentileri hakkında daha fazla bilgi için bkz. [VSTO eklentileri mimarisi](../vsto/architecture-of-vsto-add-ins.md).
@@ -70,5 +72,5 @@ ms.locfileid: "72985680"
 |-----------|-----------------|
 |[Outlook nesne modeline genel bakış](../vsto/outlook-object-model-overview.md)|Outlook nesne modeli tarafından sağlanan nesnelere genel bakış sağlar.|
 |[Outlook form bölgeleri oluşturma](../vsto/creating-outlook-form-regions.md)|Form bölgelerini tasarlamanıza, geliştirmenize ve hata ayıklamanıza daha kolay hale getirerek Visual Studio tarafından sunulan araçları açıklar.|
-|[İzlenecek yol: Outlook için ilk VSTO eklentisini oluşturma](../vsto/walkthrough-creating-your-first-vsto-add-in-for-outlook.md)|Outlook Microsoft Office için bir VSTO eklentisi oluşturmayı gösterir.|
+|[İzlenecek yol: Outlook için ilk VSTO Add-In oluşturma](../vsto/walkthrough-creating-your-first-vsto-add-in-for-outlook.md)|Outlook Microsoft Office için bir VSTO eklentisi oluşturmayı gösterir.|
 |[Office geliştirmede Outlook 2010](/previous-versions/office/developer/office-2010/ff458122(v=office.14))|MSDN Kitaplığı 'nın, Outlook çözümlerini geliştirme (Visual Studio kullanarak Office geliştirmeye özgü değil) hakkında makaleler ve başvuru belgeleri bulabileceğiniz alanı.|

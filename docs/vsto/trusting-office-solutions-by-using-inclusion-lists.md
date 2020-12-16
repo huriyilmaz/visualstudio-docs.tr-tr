@@ -1,5 +1,7 @@
 ---
 title: Ekleme listelerini kullanarak Office çözümlerine güvenme
+description: Ekleme listelerinin, kullanıcıların yayımcıyı tanımlayan bir sertifikayla imzalanmış Office çözümlerine güven vermesini sağlama hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a4787831be31e2f91d668d4e3e7ca91496d7595a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3bb5c111b4c75298ee55bc64dfbb2d0dd4b6c8b5
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72985545"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527469"
 ---
 # <a name="trust-office-solutions-by-using-inclusion-lists"></a>Ekleme listelerini kullanarak Office çözümlerine güvenme
   Ekleme listeleri, kullanıcıların yayımcıyı tanımlayan bir sertifikayla imzalanmış Office çözümlerine güven vermesini sağlar. Ekleme listeleri kullanıcıya özeldir ve belge düzeyinde özelleştirmeler ve VSTO eklentileri için kullanılabilirler.

@@ -1,5 +1,7 @@
 ---
 title: 'İzlenecek yol: proje için ilk VSTO eklentisini oluşturma'
+description: Microsoft Project için uygulama düzeyi eklentisi oluşturun. Bu özellik, hangi projelerin açık olduğuna bakılmaksızın uygulamanın kendisi için kullanılabilir.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4a84d295a47d3391f27e7101ad815dca0c910aa6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6f4774b8f5ba55d54e05e3a9ef18f8ea13fd48fc
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62981418"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527902"
 ---
 # <a name="walkthrough-create-your-first-vsto-add-in-for-project"></a>İzlenecek yol: proje için ilk VSTO eklentisini oluşturma
   Bu izlenecek yol, Microsoft Office projesi için bir VSTO eklentisi oluşturmayı gösterir. Bu tür çözümde oluşturduğunuz özellikler, hangi projelerin açık olduğuna bakılmaksızın uygulamanın kendisi için kullanılabilir. Daha fazla bilgi için bkz. [Office çözümleri geliştirmeye genel bakış &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md).
@@ -60,9 +62,9 @@ ms.locfileid: "62981418"
 
 5. Proje şablonları listesinde **project 2010 eklentisi** veya **Project 2013 eklentisi**' ni seçin.
 
-6. **Ad** kutusuna **FirstProjectAddIn**yazın.
+6. **Ad** kutusuna **FirstProjectAddIn** yazın.
 
-7. **Tamam**’a tıklayın.
+7. **Tamam** düğmesine tıklayın.
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**FirstProjectAddIn** projesini oluşturur ve **ThisAddIn** kod dosyasını düzenleyicide açar.
 

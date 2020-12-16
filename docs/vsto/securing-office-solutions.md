@@ -1,5 +1,7 @@
 ---
 title: Güvenli Office çözümleri
+description: Office çözümleri için güvenlik modelinin, Office çalışma zamanı ve ClickOnce için Visual Studio Araçları dahil olmak üzere birkaç teknolojiyi nasıl kullandığını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 31a17fdf51e838405c93efca79d7994cd40ece5c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bedb49a6d5d17e3c9f79a652183c2b4cd748ff6c
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62978619"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528480"
 ---
 # <a name="secure-office-solutions"></a>Güvenli Office çözümleri
   Office çözümleri için güvenlik modeli çeşitli teknolojiler içerir:,, [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] Microsoft Office Güven Merkezi ve Internet Explorer kısıtlı siteler bölgesi. Aşağıdaki bölümlerde farklı güvenlik özelliklerinin nasıl çalıştığı açıklanır:
@@ -62,7 +64,7 @@ ms.locfileid: "62978619"
 ### <a name="document-level-solutions"></a>Belge düzeyi çözümler
  Aşağıdaki proje türlerini geliştiriyorsanız, bir belgenin tam yolu Microsoft Office uygulamasındaki güvenilir konumlar listesine eklenmelidir:
 
-- * \\ \ Sunucuadı \ PaylaşımAdı*gibi bir ağ dosya paylaşımında bulunan belge düzeyi çözümler.
+- *\\ \ Sunucuadı \ PaylaşımAdı* gibi bir ağ dosya paylaşımında bulunan belge düzeyi çözümler.
 
 - *. Doc* veya *. docm* dosyalarını kullanan Word için belge düzeyi çözümleri.
 
@@ -71,7 +73,7 @@ ms.locfileid: "62978619"
 ### <a name="temporary-certificates"></a>Geçici sertifikalar
  İmzalama sertifikası zaten yoksa, Visual Studio geçici bir sertifika oluşturur. Bu geçici sertifikayı yalnızca geliştirme sırasında kullanmanız ve dağıtım için resmi bir sertifika satın almanız gerekir.
 
- Geçici sertifika, bir Office projesi ilk kez derlendikten sonra oluşturulur. **F5**tuşuna bastığınızda proje yeniden oluşturulur çünkü proje, sertifika eklendiğinde değişiklik olarak işaretlenir.
+ Geçici sertifika, bir Office projesi ilk kez derlendikten sonra oluşturulur. **F5** tuşuna bastığınızda proje yeniden oluşturulur çünkü proje, sertifika eklendiğinde değişiklik olarak işaretlenir.
 
  Bir süre sonra çok sayıda geçici sertifika olabilir, bu nedenle geçici sertifikaları bazen temizlemeniz gerekir.
 
@@ -84,7 +86,7 @@ ms.locfileid: "62978619"
 ### <a name="sequence-of-security-checks-during-installation"></a>Yükleme sırasında güvenlik denetimlerinin sırası
  Bir Office çözümü yüklendiğinde veya güncelleştirilirken, [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] güven kararı vermek için belirli bir sırada bir dizi güvenlik denetimi gerçekleştirir. Bir çözüm, yalnızca çalışma zamanı çözümün güvenilir olduğunu belirlerse yüklenir veya güncelleştirilir.
 
- Yükleme işlemini dört şekilde başlatabilirsiniz: Kurulum programını çalıştırarak, Microsoft Office uygulama konağını açarak veya *VSTOInstaller.exe*çalıştırarak dağıtım bildirimini açarak.
+ Yükleme işlemini dört şekilde başlatabilirsiniz: Kurulum programını çalıştırarak, Microsoft Office uygulama konağını açarak veya *VSTOInstaller.exe* çalıştırarak dağıtım bildirimini açarak.
 
  İlk güvenlik denetimi yalnızca belge düzeyi çözümler için geçerlidir. Belge düzeyi çözümünün belgesi, güvenilir bir konumda olmalıdır. Belge, uzak bir ağ dosya paylaşımındaysa veya *. doc* veya *. docm* dosya adı uzantısına sahipse, belgenin konumu güvenilir konumlar listesine eklenmelidir. Daha fazla bilgi için bkz. [belgelere güven verme](../vsto/granting-trust-to-documents.md).
 

@@ -10,17 +10,18 @@ ms.devlang: CSharp
 author: ghogen
 ms.author: ghogen
 manager: jillfra
+monikerRange: '>=vs-2019'
 dev_langs:
 - CSharp
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4f2d5bf573da940c39790d6868a94d588e5efb7b
-ms.sourcegitcommit: ae9145b32fc8e1e663e504c315a5df5dd302fee9
+ms.openlocfilehash: 55b1e30d214ff85bfc1b7e9c00ebff7e76a95f12
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92918219"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527884"
 ---
 # <a name="tutorial-extend-a-simple-c-console-app"></a>Öğretici: basit bir C# konsol uygulamasını genişletme
 
@@ -32,21 +33,21 @@ Bu serinin [ilk bölümünü](tutorial-console.md) henüz tamamladıysanız, hes
 
 Gerçek dünyada kod, bir çözümde birlikte çalışan çok sayıda proje içerir. Şimdi, hesaplayıcı uygulamasına başka bir proje ekleyelim. Bu, bazı Hesaplayıcı işlevlerini sağlayan bir sınıf kitaplığı olacaktır.
 
-1. Visual Studio 'da yeni proje eklemek için en üst düzey menü komut **dosyasını**  >  **Add**  >  **Yeni proje** Ekle ' yi kullanabilirsiniz, ancak aynı proje adına ("proje düğümü" olarak adlandırılır) sağ tıklayıp projenin kısayol menüsünü (veya bağlam menüsünü) açabilirsiniz. Bu kısayol menüsü, projelerinize işlevsellik eklemenin birçok yolunu içerir. Bu nedenle, **Çözüm Gezgini** ' de proje düğümüne sağ tıklayın ve **Add**  >  **Yeni proje** Ekle ' yi seçin.
+1. Visual Studio 'da yeni proje eklemek için en üst düzey menü komut **dosyasını**  >    >  **Yeni proje** Ekle ' yi kullanabilirsiniz, ancak aynı proje adına ("proje düğümü" olarak adlandırılır) sağ tıklayıp projenin kısayol menüsünü (veya bağlam menüsünü) açabilirsiniz. Bu kısayol menüsü, projelerinize işlevsellik eklemenin birçok yolunu içerir. Bu nedenle, **Çözüm Gezgini**' de proje düğümüne sağ tıklayın ve   >  **Yeni proje** Ekle ' yi seçin.
 
 1. C# proje şablonu **sınıf kitaplığını (.NET Standard)** seçin.
 
    ![Sınıf kitaplığı proje şablonu seçiminin ekran görüntüsü](media/vs-2019/calculator2-add-project-dark.png)
 
-1. Proje adı **Hesaplakitaplığı** ' nı yazıp **Oluştur** ' u seçin. Visual Studio yeni projeyi oluşturur ve çözüme ekler.
+1. Proje adı **Hesaplakitaplığı**' nı yazıp **Oluştur**' u seçin. Visual Studio yeni projeyi oluşturur ve çözüme ekler.
 
    ![Hesaplatorlibrary sınıf kitaplığı projesi eklenen Çözüm Gezgini ekran görüntüsü](media/vs-2019/calculator2-solution-explorer-with-class-library-dark2.png)
 
-1. *Class1.cs* yerine **CalculatorLibrary.cs** dosyasını yeniden adlandırın. Yeniden adlandırmak için **Çözüm Gezgini** adına tıklayabilir veya sağ tıklayıp **Yeniden Adlandır** ' ı seçebilir veya **F2** tuşuna basabilirsiniz.
+1. *Class1.cs* yerine **CalculatorLibrary.cs** dosyasını yeniden adlandırın. Yeniden adlandırmak için **Çözüm Gezgini** adına tıklayabilir veya sağ tıklayıp **Yeniden Adlandır**' ı seçebilir veya **F2** tuşuna basabilirsiniz.
 
    Dosyadaki tüm başvuruları yeniden adlandırmak isteyip istemediğiniz sorulur `Class1` . Daha sonraki bir adımda kodu değiştirdiğinizden, yanıt sizin için önemlidir.
 
-1. Şimdi, ilk projenin yeni sınıf kitaplığı tarafından kullanıma sunulan API 'Leri kullanabilmesi için bir proje başvurusu eklememiz gerekir.  İlk projedeki **Başvurular** düğümüne sağ tıklayın ve **proje başvurusu Ekle** ' yi seçin.
+1. Şimdi, ilk projenin yeni sınıf kitaplığı tarafından kullanıma sunulan API 'Leri kullanabilmesi için bir proje başvurusu eklememiz gerekir.  İlk projedeki **Başvurular** düğümüne sağ tıklayın ve **proje başvurusu Ekle**' yi seçin.
 
    ![Proje başvurusu Ekle menü öğesinin ekran görüntüsü](media/vs-2019/calculator2-add-project-reference-dark.png)
 
@@ -54,11 +55,11 @@ Gerçek dünyada kod, bir çözümde birlikte çalışan çok sayıda proje içe
 
    ![Başvuru Yöneticisi iletişim kutusunun ekran görüntüsü](media/vs-2019/calculator2-ref-manager-dark.png)
 
-1. **Başvuru Yöneticisi** iletişim kutusunda, **Hesaplayıt kitaplığı** projesinin onay kutusunu seçin ve **Tamam** ' ı seçin.  Proje başvurusu **Çözüm Gezgini** Içindeki bir **Projeler** düğümü altında görüntülenir.
+1. **Başvuru Yöneticisi** iletişim kutusunda, **Hesaplayıt kitaplığı** projesinin onay kutusunu seçin ve **Tamam**' ı seçin.  Proje başvurusu **Çözüm Gezgini** Içindeki bir **Projeler** düğümü altında görüntülenir.
 
    ![Proje başvurusuyla Çözüm Gezgini ekran görüntüsü](media/vs-2019/calculator2-solution-explorer-with-project-reference-dark2.png)
 
-1. *Program.cs* içinde, `Calculator` sınıfı ve tüm kodunu seçin ve **CTRL + X** tuşlarına basarak program.cs öğesinden kesin. Ardından, *CalculatorLibrary.cs* ' de **hesaplamadı** ' da kodu `CalculatorLibrary` ad alanına yapıştırın. Daha sonra, hesaplayıcı sınıfını `public` kitaplığın dışına çıkarmak için oluşturun. *CalculatorLibrary.cs* içindeki kod artık aşağıdaki koda benzemelidir:
+1. *Program.cs* içinde, `Calculator` sınıfı ve tüm kodunu seçin ve **CTRL + X** tuşlarına basarak program.cs öğesinden kesin. Ardından, *CalculatorLibrary.cs*' de **hesaplamadı**' da kodu `CalculatorLibrary` ad alanına yapıştırın. Daha sonra, hesaplayıcı sınıfını `public` kitaplığın dışına çıkarmak için oluşturun. *CalculatorLibrary.cs* içindeki kod artık aşağıdaki koda benzemelidir:
 
    ```csharp
    using System;
@@ -193,7 +194,7 @@ Gerçek dünyada kod, bir çözümde birlikte çalışan çok sayıda proje içe
    result = calculator.DoOperation(cleanNum1, cleanNum2, op);
    ```
 
-1. Programı yeniden çalıştırın ve işiniz bittiğinde proje düğümüne sağ tıklayın ve **Dosya Gezgini 'nde klasörü aç** ' ı seçin ve ardından Dosya Gezgini ' nde çıkış klasörüne gidin. *Bin/Debug/netcoreapp 3.1* olabilir ve *Hesaplayıcı. log* dosyasını açabilirsiniz.
+1. Programı yeniden çalıştırın ve işiniz bittiğinde proje düğümüne sağ tıklayın ve **Dosya Gezgini 'nde klasörü aç**' ı seçin ve ardından Dosya Gezgini ' nde çıkış klasörüne gidin. *Bin/Debug/netcoreapp 3.1* olabilir ve *Hesaplayıcı. log* dosyasını açabilirsiniz.
 
     ```output
     Starting Calculator Log
@@ -204,7 +205,7 @@ Gerçek dünyada kod, bir çözümde birlikte çalışan çok sayıda proje içe
 
 ## <a name="add-a-nuget-package-write-to-a-json-file"></a>NuGet paketi ekleme: JSON dosyasına yazma
 
-1. Artık, nesne verilerini depolamak için popüler ve taşınabilir bir biçimdeki işlemleri bir JSON biçiminde çıkarmak istediğinizi varsayalım. Bu işlevselliği uygulamak için, üzerinde Newtonsoft.JsNuGet paketine başvuracağız. NuGet paketleri .NET sınıf kitaplıklarının dağıtılması için birincil araçtır. **Çözüm Gezgini** , hesap \ yönetim projesi için **Başvurular** düğümüne sağ tıklayın ve **NuGet Paketlerini Yönet** ' i seçin.
+1. Artık, nesne verilerini depolamak için popüler ve taşınabilir bir biçimdeki işlemleri bir JSON biçiminde çıkarmak istediğinizi varsayalım. Bu işlevselliği uygulamak için, üzerinde Newtonsoft.JsNuGet paketine başvuracağız. NuGet paketleri .NET sınıf kitaplıklarının dağıtılması için birincil araçtır. **Çözüm Gezgini**, hesap \ yönetim projesi için **Başvurular** düğümüne sağ tıklayın ve **NuGet Paketlerini Yönet**' i seçin.
 
    ![Kısayol menüsünde NuGet paketlerinin yönetilmesi ekran görüntüsü](media/vs-2019/calculator2-manage-nuget-packages-dark2.png)
 
@@ -299,7 +300,7 @@ Gerçek dünyada kod, bir çözümde birlikte çalışan çok sayıda proje içe
     }
    ```
 
-1. *Program.cs* ' de, sonunda bitirmek için bir çağrı ekleyin.
+1. *Program.cs*' de, sonunda bitirmek için bir çağrı ekleyin.
 
    ```csharp
             // And call to close the JSON writer before return
@@ -333,7 +334,7 @@ Gerçek dünyada kod, bir çözümde birlikte çalışan çok sayıda proje içe
 
 Visual Studio hata ayıklayıcı, programlama sırasında hata yaptığınız kesin noktayı bulmak için kodunuzu adım adım çalıştırmanıza olanak tanıyan güçlü bir araçtır. Kodunuzda yapmanız gereken düzeltmeleri anlamış olursunuz. Visual Studio, programı çalıştırmaya devam edebilmeniz için geçici değişiklikler yapmanıza olanak sağlar.
 
-1. *Program.cs* ' de, aşağıdaki kodun solundaki kenar boşluğuna tıklayın (veya kısayol menüsünü açın ve **kesme** noktası  >  **Ekle kesme noktası** ' nı seçin veya **F9** tuşuna basın):
+1. *Program.cs*' de, aşağıdaki kodun solundaki kenar boşluğuna tıklayın (veya kısayol menüsünü açın ve **kesme** noktası  >  **Ekle kesme noktası**' nı seçin veya **F9** tuşuna basın):
 
    ```csharp
    result = calculator.DoOperation(cleanNum1, cleanNum2, op);
@@ -379,7 +380,7 @@ Visual Studio hata ayıklayıcı, programlama sırasında hata yaptığınız ke
 
 ## <a name="debug-step-through-code"></a>Hata Ayıkla: kod içinde adımla
 
-1. **F11** tuşuna basın (veya **hata ayıklama**  >  **adımı** ).
+1. **F11** tuşuna basın (veya **hata ayıklama**  >  **adımı**).
 
    Step Into komutunu kullanarak, uygulama geçerli ifadeyi yürütür ve sonraki yürütülebilir ifadeye (genellikle bir sonraki kod satırına) ilerler. Sol taraftaki sarı işaretçi her zaman geçerli ifadeyi gösterir.
 
@@ -387,7 +388,7 @@ Visual Studio hata ayıklayıcı, programlama sırasında hata yaptığınız ke
 
    Yalnızca sınıfındaki yöntemine bir adım daha gördünüz `DoOperation` `Calculator` .
 
-1. Program akışınız hakkında hiyerarşik bir görünüm almak için **çağrı yığını** penceresine bakın. (Kapalıysa, **Hata Ayıkla**  >  ' yı seçin. **Windows**  >  **Çağrı yığını** .)
+1. Program akışınız hakkında hiyerarşik bir görünüm almak için **çağrı yığını** penceresine bakın. (Kapalıysa, **Hata Ayıkla**  >  ' yı seçin. **Windows**  >  **Çağrı yığını**.)
 
    ![Çağrı yığınının ekran görüntüsü](media/vs-2019/calculator-2-debug-call-stack.png)
 
@@ -427,7 +428,7 @@ Visual Studio hata ayıklayıcı, programlama sırasında hata yaptığınız ke
 
    C# ' de, `Infinity` sıfıra böldüğünüzde sonuç olur.
 
-1. **F5** tuşuna basın (veya **Debug** hata ayıklama  >  **devam** Ayıkla).
+1. **F5** tuşuna basın (veya hata ayıklama  >  **devam** Ayıkla).
 
    Sonsuzluk sembolü, matematik işleminin sonucu olarak konsolunda görünür.
 

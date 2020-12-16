@@ -1,5 +1,7 @@
 ---
 title: Program belge düzeyi özelleştirmeleri
+description: Bir belge düzeyi özelleştirmesi kullanarak Microsoft Word veya Excel 'i genişletmeyi öğrenin, böylece çeşitli görevleri gerçekleştirebilirsiniz.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -27,12 +29,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7d1908f72bce01956bbb2eeb62bb9bbc30a64b0d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 58dd8e1803fc0bd06f5c2295b29e9586e1f8eb68
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71254028"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527521"
 ---
 # <a name="program-document-level-customizations"></a>Program belge düzeyi özelleştirmeleri
   Belge düzeyi özelleştirmesi kullanarak Microsoft Office Word veya Excel Microsoft Office genişlettiğinizde, aşağıdaki görevleri gerçekleştirebilirsiniz:
@@ -153,14 +155,14 @@ Globals.ThisDocument.Save();
 ## <a name="get-extended-objects-from-native-office-objects-in-document-level-customizations"></a>Belge düzeyi özelleştirmelerde yerel Office nesnelerinden genişletilmiş nesneleri Al
  Office olayları için pek çok olay işleyicisi, olayı oluşturan çalışma kitabını, çalışma sayfasını veya belgeyi temsil eden yerel bir Office nesnesi alır. Bazı durumlarda, yalnızca belge düzeyi özelleştirmesindeki çalışma kitabı veya belge olayı harekete çıktığında bazı kodları çalıştırmak isteyebilirsiniz. Örneğin, Excel için belge düzeyi özelleştirmesinde, Kullanıcı özelleştirilmiş çalışma kitabındaki çalışma sayfalarından birini etkinleştirdiğinde, ancak kullanıcı aynı anda açık olan başka bir çalışma kitabındaki çalışma sayfasını etkinleştirdiğinde, bazı kodları çalıştırmak isteyebilirsiniz.
 
- Yerel bir Office nesneniz varsa, bu nesnenin bir belge düzeyi özelleştirmesinde *konak öğesine* veya *konak denetimine* genişletilmiş olup olmadığını test edebilirsiniz. Konak öğeleri ve konak denetimleri, [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Word veya Excel nesne modelleriyle ( *yerel Office nesneleri*olarak adlandırılır) yerel olarak var olan nesnelere işlev ekleyen, tarafından sunulan türlerdir. Toplu olarak, ana bilgisayar öğelerine ve konak denetimlerine de *Genişletilmiş nesneler*denir. Konak öğeleri ve konak denetimleri hakkında daha fazla bilgi için bkz. [konak öğeleri ve konak denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md).
+ Yerel bir Office nesneniz varsa, bu nesnenin bir belge düzeyi özelleştirmesinde *konak öğesine* veya *konak denetimine* genişletilmiş olup olmadığını test edebilirsiniz. Konak öğeleri ve konak denetimleri, [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Word veya Excel nesne modelleriyle ( *yerel Office nesneleri* olarak adlandırılır) yerel olarak var olan nesnelere işlev ekleyen, tarafından sunulan türlerdir. Toplu olarak, ana bilgisayar öğelerine ve konak denetimlerine de *Genişletilmiş nesneler* denir. Konak öğeleri ve konak denetimleri hakkında daha fazla bilgi için bkz. [konak öğeleri ve konak denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md).
 
 ## <a name="understand-the-getvstoobject-and-hasvstoobject-methods"></a>GetVstoObject ve HasVstoObject yöntemlerini anlayın
  Yerel bir Office nesnesini test etmek için, `HasVstoObject` projenizdeki ve `GetVstoObject` yöntemlerini kullanın:
 
 - `HasVstoObject`Yerel Office nesnesinin özelleştirmenizin genişletilmiş bir nesne içerip içermediğini anlamak istiyorsanız yöntemini kullanın. Bu yöntem, yerel Office nesnesi genişletilmiş bir nesne içeriyorsa **true** , aksi durumda **false** değerini döndürür.
 
-- `GetVstoObject`Yerel bir Office nesnesi için genişletilmiş nesneyi almak istiyorsanız yöntemini kullanın. Bu yöntem, <xref:Microsoft.Office.Tools.Excel.ListObject> <xref:Microsoft.Office.Tools.Excel.Workbook> <xref:Microsoft.Office.Tools.Excel.Worksheet> <xref:Microsoft.Office.Tools.Word.Document> belirtilen yerel Office nesnesinde bir,, veya nesnesi döndürür. Aksi takdirde `GetVstoObject` , **null**döndürür. Örneğin, `GetVstoObject` <xref:Microsoft.Office.Tools.Word.Document> <xref:Microsoft.Office.Interop.Word.Document> nesne Word belge projenizde belge için temeldeki nesnese, yöntemi döndürür.
+- `GetVstoObject`Yerel bir Office nesnesi için genişletilmiş nesneyi almak istiyorsanız yöntemini kullanın. Bu yöntem, <xref:Microsoft.Office.Tools.Excel.ListObject> <xref:Microsoft.Office.Tools.Excel.Workbook> <xref:Microsoft.Office.Tools.Excel.Worksheet> <xref:Microsoft.Office.Tools.Word.Document> belirtilen yerel Office nesnesinde bir,, veya nesnesi döndürür. Aksi takdirde `GetVstoObject` , **null** döndürür. Örneğin, `GetVstoObject` <xref:Microsoft.Office.Tools.Word.Document> <xref:Microsoft.Office.Interop.Word.Document> nesne Word belge projenizde belge için temeldeki nesnese, yöntemi döndürür.
 
   Belge düzeyi projelerinde, `GetVstoObject` <xref:Microsoft.Office.Tools.Excel.Workbook> <xref:Microsoft.Office.Tools.Excel.Worksheet> çalışma zamanında yeni, veya konak öğesi oluşturmak için yöntemini kullanamazsınız <xref:Microsoft.Office.Tools.Word.Document> . Bu yöntemi yalnızca, tasarım zamanında projenizde oluşturulan mevcut konak öğelerine erişmek için kullanabilirsiniz. Çalışma zamanında yeni konak öğeleri oluşturmak istiyorsanız, bir VSTO eklentisi projesi geliştirmeniz gerekir. Daha fazla bilgi için bkz. [konak öğeleri ve konak denetimleri Için programlama sınırlamaları](../vsto/programmatic-limitations-of-host-items-and-host-controls.md) ve [çalışma zamanında VSTO Eklentilerindeki Word belgelerini ve Excel çalışma kitaplarını genişletme](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md).
 

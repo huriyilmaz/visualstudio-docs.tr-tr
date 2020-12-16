@@ -1,5 +1,7 @@
 ---
 title: Klasörlerle çalışma
+description: Mapifeski sınıfının, klasörlere erişmek, oluşturmak ve özelleştirmek için kullandığınız yöntemleri ve özellikleri içerdiğini öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -16,19 +18,19 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 32dca296ef286e4c892791a1e71cfc765df80f19
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1ca2d6c690e094884313bc128291dd7295103d54
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62815503"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526972"
 ---
 # <a name="work-with-folders"></a>Klasörlerle çalışma
   <xref:Microsoft.Office.Interop.Outlook.MAPIFolder>Sınıfı, klasörlere erişmek, oluşturmak ve özelleştirmek için kullandığınız yöntemleri ve özellikleri içerir.
 
 |Görev|Yordam|
 |----------|---------------|
-|**Gelen kutusundaki**iletilerin konu alanında dizeler için arama yapın.|[Nasıl yapılır: belirli bir klasör içinde program aracılığıyla arama](../vsto/how-to-programmatically-search-within-a-specific-folder.md)|
+|**Gelen kutusundaki** iletilerin konu alanında dizeler için arama yapın.|[Nasıl yapılır: belirli bir klasör içinde program aracılığıyla arama](../vsto/how-to-programmatically-search-within-a-specific-folder.md)|
 |Bir klasöre başvuru alın ve içerikleri görüntüleyin.|[Nasıl yapılır: program aracılığıyla bir klasörü ada göre alma](../vsto/how-to-programmatically-retrieve-a-folder-by-name.md)|
 |Önizleme bölmesinde bir Web sayfası görüntüleyen bir klasör oluşturun.|[Nasıl yapılır: program aracılığıyla bir Web sayfasını Outlook klasörüyle ilişkilendirme](../vsto/how-to-programmatically-associate-a-web-page-with-an-outlook-folder.md)|
 |Bir ad için geçerli kullanıcı KIMLIĞINE sahip bir klasör oluşturun.|[Nasıl yapılır: program aracılığıyla özel klasör öğeleri oluşturma](../vsto/how-to-programmatically-create-custom-folder-items.md)|

@@ -1,5 +1,7 @@
 ---
 title: Office çözümlerinde isteğe bağlı parametreler
+description: Varsayılan değerler eksik her parametre için otomatik olarak kullanıldığından, isteğe bağlı parametreler için bir değer geçirmeniz gerekmez.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -18,22 +20,22 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e8684ad4b9429a5499660ef4ad6fdd8133dccaa5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7567f43dfa79e6a1e5d92b9ecddbf7918a6edef3
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64818057"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527573"
 ---
 # <a name="optional-parameters-in-office-solutions"></a>Office çözümlerinde isteğe bağlı parametreler
-  Microsoft Office uygulamaların nesne modellerindeki birçok yöntem isteğe bağlı parametreleri kabul eder. Visual Studio 'da bir Office çözümü geliştirmek için Visual Basic kullanıyorsanız, varsayılan değerler eksik her parametre için otomatik olarak kullanıldığından isteğe bağlı parametreler için bir değer geçirmeniz gerekmez. Çoğu durumda, Visual C# projelerinde isteğe bağlı parametreleri de atlayabilirsiniz. Ancak, **ref** `ThisDocument` belge düzeyi Word projelerinde sınıfının isteğe bağlı başvuru parametrelerini atlayamazsınız.
+  Microsoft Office uygulamaların nesne modellerindeki birçok yöntem isteğe bağlı parametreleri kabul eder. Visual Studio 'da bir Office çözümü geliştirmek için Visual Basic kullanıyorsanız, varsayılan değerler eksik her parametre için otomatik olarak kullanıldığından isteğe bağlı parametreler için bir değer geçirmeniz gerekmez. Çoğu durumda, Visual C# projelerinde isteğe bağlı parametreleri de atlayabilirsiniz. Ancak,  `ThisDocument` belge düzeyi Word projelerinde sınıfının isteğe bağlı başvuru parametrelerini atlayamazsınız.
 
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]
 
  Visual C# ve Visual Basic projelerinde isteğe bağlı parametrelerle çalışma hakkında daha fazla bilgi için, bkz. [adlandırılmış ve isteğe bağlı bağımsız değişkenler &#40;C&#35; programlama kılavuzu&#41;](/dotnet/csharp/programming-guide/classes-and-structs/named-and-optional-arguments) ve [isteğe bağlı parametreler &#40;](/dotnet/visual-basic/programming-guide/language-features/procedures/optional-parameters)Visual Basic&#41;.
 
 > [!NOTE]
-> Visual Studio 'nun önceki sürümlerinde, Visual C# projelerindeki her isteğe bağlı parametre için bir değer geçirmeniz gerekir. Kolaylık olması için bu projeler, `missing` parametresinin varsayılan değerini kullanmak istediğinizde isteğe bağlı bir parametreye geçirebilmeniz adlı genel bir değişken içerir. Visual Studio 'da Office için Visual C# projeleri hala değişkeni içerir `missing` , ancak [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] **ref** `ThisDocument` Word için belge düzeyi projelerindeki isteğe bağlı başvuru parametrelerine sahip yöntemleri çağırdığınızda, genellikle ' de Office çözümlerini geliştirirken kullanmanız gerekmez.
+> Visual Studio 'nun önceki sürümlerinde, Visual C# projelerindeki her isteğe bağlı parametre için bir değer geçirmeniz gerekir. Kolaylık olması için bu projeler, `missing` parametresinin varsayılan değerini kullanmak istediğinizde isteğe bağlı bir parametreye geçirebilmeniz adlı genel bir değişken içerir. Visual Studio 'da Office için Visual C# projeleri hala değişkeni içerir `missing` , ancak [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)]  `ThisDocument` Word için belge düzeyi projelerindeki isteğe bağlı başvuru parametrelerine sahip yöntemleri çağırdığınızda, genellikle ' de Office çözümlerini geliştirirken kullanmanız gerekmez.
 
 ## <a name="example-in-excel"></a>Excel 'de örnek
  <xref:Microsoft.Office.Tools.Excel.Worksheet.CheckSpelling%2A>Yönteminde birçok isteğe bağlı parametre vardır. Bazı parametrelerin değerlerini belirtebilir ve aşağıdaki kod örneğinde gösterildiği gibi başkalarının varsayılan değerini kabul edebilirsiniz. Bu örnek, adlı bir çalışma sayfası sınıfına sahip bir belge düzeyi projesi gerektirir `Sheet1` .
@@ -48,7 +50,7 @@ ms.locfileid: "64818057"
  [!code-csharp[Trin_VstrefGeneralWord#1](../vsto/codesnippet/CSharp/worddocument1/ThisDocument.cs#1)]
 
 ## <a name="use-optional-parameters-of-methods-in-the-thisdocument-class-in-visual-c-document-level-projects-for-word"></a>Word için Visual C# belge düzeyi projelerindeki ThisDocument sınıfında isteğe bağlı yöntemlerin parametrelerini kullanın
- Word nesne modeli, değerleri kabul eden isteğe bağlı **başvuru** parametrelerine sahip birçok yöntem içerir <xref:System.Object> . Ancak **ref** `ThisDocument` Word Için Visual C# belge düzeyi projelerinde oluşturulan sınıfın yöntemlerinin isteğe bağlı başvuru parametrelerini atlayamazsınız. Visual C# isteğe bağlı **başvuru** parametrelerini yalnızca sınıfların değil arayüzlerin yöntemlerine atlamanızı sağlar. Örneğin, aşağıdaki kod örneği derlenmez, çünkü sınıfının yönteminin isteğe bağlı **başvuru** parametrelerini atlayamazsınız <xref:Microsoft.Office.Tools.Word.DocumentBase.CheckSpelling%2A> `ThisDocument` .
+ Word nesne modeli, değerleri kabul eden isteğe bağlı **başvuru** parametrelerine sahip birçok yöntem içerir <xref:System.Object> . Ancak  `ThisDocument` Word Için Visual C# belge düzeyi projelerinde oluşturulan sınıfın yöntemlerinin isteğe bağlı başvuru parametrelerini atlayamazsınız. Visual C# isteğe bağlı **başvuru** parametrelerini yalnızca sınıfların değil arayüzlerin yöntemlerine atlamanızı sağlar. Örneğin, aşağıdaki kod örneği derlenmez, çünkü sınıfının yönteminin isteğe bağlı **başvuru** parametrelerini atlayamazsınız <xref:Microsoft.Office.Tools.Word.DocumentBase.CheckSpelling%2A> `ThisDocument` .
 
  [!code-csharp[Trin_VstrefGeneralWord#3](../vsto/codesnippet/CSharp/worddocument1/ThisDocument.cs#3)]
 

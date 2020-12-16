@@ -1,5 +1,7 @@
 ---
 title: Office belgelerinde dinamik denetimleri kalıcı hale getirme
+description: Kullanıcı kapalı bir belgeyi yeniden açtığında kalıcı dinamik denetimleri yeniden oluşturmak için çözümünüze nasıl kod ekleyebileceğiniz hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -18,18 +20,18 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5d48dfab18ec2165753ac19330f7fbe18c923da9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b6efb00571a9f594de6045860621fb840076e8f5
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71255999"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527529"
 ---
 # <a name="persist-dynamic-controls-in-office-documents"></a>Office belgelerinde dinamik denetimleri kalıcı hale getirme
 
 Çalışma zamanında eklenen denetimler belge veya çalışma kitabı kaydedilip kapatıldığında kalıcı olmaz. Tam davranış konak denetimleri ve Windows Forms denetimleri için farklıdır. Her iki durumda da, Kullanıcı belgeyi yeniden açtığında denetimleri yeniden oluşturmak için çözümünüze kod ekleyebilirsiniz.
 
-Çalışma zamanında belgelere eklediğiniz denetimlere *Dinamik denetimler*denir. Dinamik denetimler hakkında daha fazla bilgi için bkz. [çalışma zamanında Office belgelerine denetim ekleme](../vsto/adding-controls-to-office-documents-at-run-time.md).
+Çalışma zamanında belgelere eklediğiniz denetimlere *Dinamik denetimler* denir. Dinamik denetimler hakkında daha fazla bilgi için bkz. [çalışma zamanında Office belgelerine denetim ekleme](../vsto/adding-controls-to-office-documents-at-run-time.md).
 
 [!INCLUDE[appliesto_controls](../vsto/includes/appliesto-controls-md.md)]
 

@@ -1,5 +1,7 @@
 ---
 title: Birincil birlikte çalışma Derlemeleriyle Office uygulamalarını hedefleme
+description: Visual Studio 'Yu, birincil birlikte çalışma derlemeleri aracılığıyla Microsoft Office uygulamaları programlı bir şekilde hedeflemek için nasıl kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 60e351a15af4994d2bf64a800e3019501cf0571d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 81c2852a92124a7cf9fb6078b196982d22100be7
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85545775"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528101"
 ---
 # <a name="how-to-target-office-applications-through-primary-interop-assemblies"></a>Nasıl yapılır: birincil birlikte çalışma Derlemeleriyle Office uygulamalarını hedefleme
   Yeni bir Office projesi oluşturduğunuzda, Visual Studio, projenizi oluşturmak için gereken Microsoft Office birincil birlikte çalışma derlemesine (PIA 'lar) otomatik olarak başvurular ekler. Aşağıdaki senaryolarda diğer PIA 'lara başvuru eklemeniz gerekir:
@@ -36,7 +38,7 @@ ms.locfileid: "85545775"
 
 ## <a name="to-add-a-reference-to-a-primary-interop-assembly"></a>Birincil birlikte çalışma derlemesine başvuru eklemek için
 
-1. Office projenizi açın ve **Çözüm Gezgini**proje adını seçin.
+1. Office projenizi açın ve **Çözüm Gezgini** proje adını seçin.
 
 2. **Proje** menüsünde, **Başvuru Ekle**' ye tıklayın.
 
@@ -47,7 +49,7 @@ ms.locfileid: "85545775"
     > [!NOTE]
     > Office projelerinde, **com** sekmesi yerine **Başvuru Ekle** iletişim kutusunun **.net** sekmesini kullanarak her zaman Office PIA 'lara başvurular ekleyin. Daha fazla bilgi için bkz. [Office birincil birlikte çalışma derlemeleri](../vsto/office-primary-interop-assemblies.md).
 
-4. **Tamam**’a tıklayın.
+4. **Tamam** düğmesine tıklayın.
 
      Derleme adı, **Çözüm Gezgini** **References** klasöründe görünür.
 

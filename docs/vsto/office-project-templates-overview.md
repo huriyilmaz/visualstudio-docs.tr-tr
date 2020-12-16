@@ -1,5 +1,7 @@
 ---
 title: Office proje şablonlarına genel bakış
+description: Visual Studio 'daki Microsoft Office Geliştirici araçlarının farklı türlerde Office çözümleri oluşturmak için proje şablonları nasıl dahil edileceğini öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -30,12 +32,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: d83b04795386cfec80a8a309a9a84da04f6df105
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5e3203eb4bbd7339f5e59ecffea8436b02180b8b
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "68926596"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528085"
 ---
 # <a name="office-project-templates-overview"></a>Office proje şablonlarına genel bakış
   Visual Studio 'daki Microsoft Office geliştirici araçları, aşağıdaki türlerde Office çözümlerini oluşturmaya yönelik proje şablonları içerir:
@@ -164,7 +166,7 @@ ms.locfileid: "68926596"
  Bir Microsoft Office Word şablonunun yönetilen kod uzantıları varsa, şablonun bir genel şablon olarak iliştirilmesi veya Word'ün başlangıç dizininden yüklenmesi durumunda proje derlemesi çağrılmaz. Ayrıca belge, bir Office çözümünün parçası olan şablonun biçimini tanımaz.
 
 ## <a name="excel-add-ins-xla-files"></a>Excel eklentileri (. xla dosyaları)
- Excel VSTO eklentisi (*. xla* dosyası) oluşturmaya yönelik bir Office projesi yok. Bir çalışma kitabını .xla dosyası olarak kaydetmek mümkündür, ancak bu desteklenen bir işlem değildir ve önerilmez. Yönetilen kod uzantılarına sahip bir çalışma kitabını **Microsoft Office Excel eklentisi ( \* . xla)** dosyası olarak kaydederseniz, başka bir çalışma kitabına uygulamak için **Eklentiler** iletişim kutusunda bunu seçebilirsiniz. Bazı durumlarda, VSTO eklentisi uygulandıktan sonra kodunuz hedef çalışma kitabında çalışır, ancak bu tür Office çözümünün kullanılması desteklenmez.
+ Excel VSTO eklentisi (*. xla* dosyası) oluşturmaya yönelik bir Office projesi yok. Bir çalışma kitabını .xla dosyası olarak kaydetmek mümkündür, ancak bu desteklenen bir işlem değildir ve önerilmez. Yönetilen kod uzantılarına sahip bir çalışma kitabını **Microsoft Office Excel Add-In ( \* . xla)** dosyası olarak kaydederseniz, başka bir çalışma kitabına uygulamak için **Eklentiler** iletişim kutusunda bunu seçebilirsiniz. Bazı durumlarda, VSTO eklentisi uygulandıktan sonra kodunuz hedef çalışma kitabında çalışır, ancak bu tür Office çözümünün kullanılması desteklenmez.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Office çözümleri tasarlama ve oluşturma](../vsto/designing-and-creating-office-solutions.md)

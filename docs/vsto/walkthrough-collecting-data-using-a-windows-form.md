@@ -1,5 +1,7 @@
 ---
 title: 'İzlenecek yol: Windows formu kullanarak veri toplama'
+description: Microsoft Excel için belge düzeyi özelleştirmesindeki bir Windows formu açın, kullanıcıdan bilgi toplayın ve bu bilgileri bir çalışma sayfası hücresine yazın.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 893418ca5eb82e9466ea13a12088b38fd496e695
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 58d6f58f732d4a52aade6ff3678842900f1c29cd
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64789837"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527163"
 ---
 # <a name="walkthrough-collect-data-by-using-a-windows-form"></a>İzlenecek yol: Windows formu kullanarak veri toplama
   Bu izlenecek yol, Excel Microsoft Office için belge düzeyi özelleştirmede bir Windows formu açmayı, kullanıcıdan bilgi toplamayı ve bu bilgileri bir çalışma sayfası hücresine yazmayı gösterir.
@@ -39,12 +41,12 @@ ms.locfileid: "64789837"
 > [!NOTE]
 > Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Daha fazla bilgi için bkz. [Visual STUDIO IDE 'Yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
 
-## <a name="create-a-new-project"></a>Yeni bir proje oluşturma
+## <a name="create-a-new-project"></a>Yeni proje oluşturma
  İlk adım bir Excel çalışma kitabı projesi oluşturmaktır.
 
 ### <a name="to-create-a-new-project"></a>Yeni bir proje oluşturmak için
 
-1. **Winforminput**adlı bir Excel çalışma kitabı projesi oluşturun ve sihirbazda **Yeni belge oluştur** ' u seçin. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
+1. **Winforminput** adlı bir Excel çalışma kitabı projesi oluşturun ve sihirbazda **Yeni belge oluştur** ' u seçin. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
      Visual Studio tasarımcıda yeni Excel çalışma kitabını açar ve **Çözüm Gezgini** **Winforminput** projesini ekler.
 
@@ -54,13 +56,13 @@ ms.locfileid: "64789837"
 
 1. **A1** hücresini seçin `Sheet1` .
 
-2. **Ad** kutusuna **forminput**yazın.
+2. **Ad** kutusuna **forminput** yazın.
 
      **Ad** kutusu, formül çubuğunun solunda, çalışma sayfasının yalnızca **bir** sütununda bulunur.
 
 3.  **Enter** tuşuna basın.
 
-     <xref:Microsoft.Office.Tools.Excel.NamedRange> **A1**hücresine bir denetim eklenir. Çalışma sayfasında görünür bir işaret yoktur, ancak **Forminput** , **ad** kutusunda (sağ taraftaki çalışma sayfasının hemen üzerinde) ve **a1** hücresi seçildiğinde **Özellikler** penceresinde görünür.
+     <xref:Microsoft.Office.Tools.Excel.NamedRange> **A1** hücresine bir denetim eklenir. Çalışma sayfasında görünür bir işaret yoktur, ancak **Forminput** , **ad** kutusunda (sağ taraftaki çalışma sayfasının hemen üzerinde) ve **a1** hücresi seçildiğinde **Özellikler** penceresinde görünür.
 
 ## <a name="add-a-windows-form-to-the-project"></a>Projeye bir Windows formu ekleme
  Kullanıcıdan bilgi istemek için bir Windows formu oluşturun.
@@ -71,7 +73,7 @@ ms.locfileid: "64789837"
 
 2. **Proje** menüsünde **Windows formu Ekle**' ye tıklayın.
 
-3. **GetInputString. vb** veya **GetInputString.cs**formunu adlandırın ve ardından **Ekle**' ye tıklayın.
+3. **GetInputString. vb** veya **GetInputString.cs** formunu adlandırın ve ardından **Ekle**' ye tıklayın.
 
     Yeni form tasarımcıda açılır.
 
@@ -96,7 +98,7 @@ ms.locfileid: "64789837"
     [!code-csharp[Trin_VstcoreProgrammingCollectingData#1](../vsto/codesnippet/CSharp/WinFormInputCS/ThisWorkbook.cs#1)]
     [!code-vb[Trin_VstcoreProgrammingCollectingData#1](../vsto/codesnippet/VisualBasic/WinFormInput/ThisWorkbook.vb#1)]
 
-3. Adlandırılmış bir aralığa metin yazan adlı bir yöntem oluşturun `WriteStringToCell` . Bu yöntem formdan çağrılır ve kullanıcının girişi, <xref:Microsoft.Office.Tools.Excel.NamedRange> `formInput` **a1**hücresinde, denetime geçirilir.
+3. Adlandırılmış bir aralığa metin yazan adlı bir yöntem oluşturun `WriteStringToCell` . Bu yöntem formdan çağrılır ve kullanıcının girişi, <xref:Microsoft.Office.Tools.Excel.NamedRange> `formInput` **a1** hücresinde, denetime geçirilir.
 
     [!code-csharp[Trin_VstcoreProgrammingCollectingData#2](../vsto/codesnippet/CSharp/WinFormInputCS/ThisWorkbook.cs#2)]
     [!code-vb[Trin_VstcoreProgrammingCollectingData#2](../vsto/codesnippet/VisualBasic/WinFormInput/ThisWorkbook.vb#2)]
@@ -116,7 +118,7 @@ ms.locfileid: "64789837"
      [!code-csharp[Trin_VstcoreProgrammingCollectingData#3](../vsto/codesnippet/CSharp/WinFormInputCS/GetInputString.cs#3)]
      [!code-vb[Trin_VstcoreProgrammingCollectingData#3](../vsto/codesnippet/VisualBasic/WinFormInput/GetInputString.vb#3)]
 
-## <a name="test"></a>Test et
+## <a name="test"></a>Test etme
  Artık projeyi çalıştırabilirsiniz. Windows formu görünür ve giriş çalışma sayfasında görünür.
 
 ### <a name="to-test-your-workbook"></a>Çalışma kitabınızı test etmek için

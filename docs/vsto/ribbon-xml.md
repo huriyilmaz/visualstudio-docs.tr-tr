@@ -1,5 +1,7 @@
 ---
 title: Şerit XML
+description: Şerit (görsel Tasarımcı) öğesi tarafından desteklenmeyen bir şekilde özelleştirmek istiyorsanız şerit (XML) öğesini nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -23,12 +25,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e9ce2388dbf61ef3af524f0debc776891dca004f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1c9e1cf4c6af266495b3d85d96aa8cce1697cca7
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64792756"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528413"
 ---
 # <a name="ribbon-xml"></a>Şerit XML
   Şerit (XML) öğesi, XML kullanarak bir şeridi özelleştirmenize olanak sağlar. Şeriti şerit (görsel Tasarımcı) öğesi tarafından desteklenmeyen bir şekilde özelleştirmek istiyorsanız şerit (XML) öğesini kullanın. Her öğe ile yapabileceklerinize ilişkin bir karşılaştırma için bkz. [Şerit 'e genel bakış](../vsto/Ribbon-overview.md).
@@ -40,12 +42,12 @@ ms.locfileid: "64792756"
 
 - Şerit XML dosyası. Bu dosya, Şerit kullanıcı arabirimini (UI) tanımlar. Sekmeler, gruplar ve denetimler gibi kullanıcı arabirimi öğelerini eklemek için bu dosyayı kullanın. Ayrıntılar için bu konunun ilerleyen kısımlarında yer alarak [ŞERIT XML dosya başvurusu](#RibbonDescriptorFile) bölümüne bakın.
 
-- Şerit kod dosyası. Bu dosya *Şerit sınıfını*içerir. Bu sınıf, **Yeni öğe Ekle** Iletişim kutusunda **Şerit (XML)** öğesi için belirttiğiniz ada sahiptir. Microsoft Office uygulamalar özel şeridi yüklemek için bu sınıfın bir örneğini kullanır. Ayrıntılar için bu konunun ilerleyen kısımlarında yer alarak [Ribbon Class Reference](#RibbonExtensionClass) bölümüne bakın.
+- Şerit kod dosyası. Bu dosya *Şerit sınıfını* içerir. Bu sınıf, **Yeni öğe Ekle** Iletişim kutusunda **Şerit (XML)** öğesi için belirttiğiniz ada sahiptir. Microsoft Office uygulamalar özel şeridi yüklemek için bu sınıfın bir örneğini kullanır. Ayrıntılar için bu konunun ilerleyen kısımlarında yer alarak [Ribbon Class Reference](#RibbonExtensionClass) bölümüne bakın.
 
   Varsayılan olarak, bu dosyalar Şeritteki **Eklentiler sekmesine özel bir grup ekler.**
 
 ## <a name="display-the-custom-ribbon-in-a-microsoft-office-application"></a>Microsoft Office uygulamasında özel şeridi görüntüleme
- Projenize **Şerit (XML)** öğesi ekledikten sonra, yöntemi geçersiz kılan **ThisAddIn**, **ThisWorkbook**veya **THISDOCUMENT** sınıfına kod eklemeniz gerekir `CreateRibbonExtensibilityObject` ve Şerit XML sınıfını Office uygulamasına geri döndürür.
+ Projenize **Şerit (XML)** öğesi ekledikten sonra, yöntemi geçersiz kılan **ThisAddIn**, **ThisWorkbook** veya **THISDOCUMENT** sınıfına kod eklemeniz gerekir `CreateRibbonExtensibilityObject` ve Şerit XML sınıfını Office uygulamasına geri döndürür.
 
  Aşağıdaki kod örneği, yöntemini geçersiz kılar `CreateRibbonExtensibilityObject` ve MyRibbon adlı bir ŞERIT XML sınıfı döndürür.
 
@@ -53,7 +55,7 @@ ms.locfileid: "64792756"
  [!code-vb[Trin_Ribbon_Custom_Tab_XML#1](../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab_XML_O12/ThisAddIn.vb#1)]
 
 ## <a name="define-the-behavior-of-the-custom-ribbon"></a>Özel şeridin davranışını tanımlama
- *Geri çağırma yöntemleri*oluşturarak Şeritteki bir düğmeye tıklanması gibi kullanıcı eylemlerine yanıt verebilirsiniz. Geri çağırma yöntemleri Windows Forms denetimlerindeki olaylara benzer, ancak UI öğesinin XML dosyasındaki bir öznitelik tarafından tanımlanır. Yöntemleri şerit sınıfına yazdığınızda, bir denetim öznitelik değeriyle aynı ada sahip olan yöntemi çağırır. Örneğin, bir Kullanıcı Şeritteki bir düğmeye tıkladığında çağrılan bir geri çağırma yöntemi oluşturabilirsiniz. Bir geri çağırma yöntemi oluşturmak için iki adım gereklidir:
+ *Geri çağırma yöntemleri* oluşturarak Şeritteki bir düğmeye tıklanması gibi kullanıcı eylemlerine yanıt verebilirsiniz. Geri çağırma yöntemleri Windows Forms denetimlerindeki olaylara benzer, ancak UI öğesinin XML dosyasındaki bir öznitelik tarafından tanımlanır. Yöntemleri şerit sınıfına yazdığınızda, bir denetim öznitelik değeriyle aynı ada sahip olan yöntemi çağırır. Örneğin, bir Kullanıcı Şeritteki bir düğmeye tıkladığında çağrılan bir geri çağırma yöntemi oluşturabilirsiniz. Bir geri çağırma yöntemi oluşturmak için iki adım gereklidir:
 
 - Kodunuzda bir geri çağırma yöntemi tanımlayan Şerit XML dosyasındaki bir denetime öznitelik atayın.
 

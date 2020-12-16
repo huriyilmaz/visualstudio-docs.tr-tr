@@ -1,5 +1,7 @@
 ---
 title: "İzlenecek yol: Visual C# projesinde VBA 'dan kod çağırma"
+description: Çalışma kitabındaki Visual Basic for Applications (VBA) kodundan Microsoft Excel için belge düzeyi özelleştirmesindeki bir yöntemi çağırmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -19,12 +21,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 1c089a3156d005da7d49976f6c96bb10daac0662
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: daf25a1e2e80d2c5918d0d11c4b31c75a2e40c87
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "92297935"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527301"
 ---
 # <a name="walkthrough-call-code-from-vba-in-a-visual-c-project"></a>İzlenecek yol: Visual C# projesinde VBA 'dan kod çağırma
   Bu izlenecek yol, çalışma kitabındaki Visual Basic for Applications (VBA) kodundan Excel Microsoft Office için belge düzeyi özelleştirmesinde bir yöntemin nasıl çağrılacağını gösterir. Yordamda üç temel adım vardır: konak öğesi sınıfına bir yöntem ekleyin `Sheet1` , yöntemi çalışma KITABıNDA VBA kodu olarak kullanıma sunun ve sonra çalışma KITABıNDAKI VBA kodundan yöntemi çağırın.
@@ -50,7 +52,7 @@ ms.locfileid: "92297935"
 > [!NOTE]
 > Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Daha fazla bilgi için bkz. [Visual STUDIO IDE 'Yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]
@@ -66,7 +68,7 @@ ms.locfileid: "92297935"
 
 1. Excel 'i başlatın.
 
-2. Etkin belgeyi, **WorkbookWithVBA**adlı bir **Excel Macro-Enabled çalışma kitabı ( \* . xlsm)** olarak kaydedin. Masaüstü gibi uygun bir konuma kaydedin.
+2. Etkin belgeyi, **WorkbookWithVBA** adlı bir **Excel Macro-Enabled çalışma kitabı ( \* . xlsm)** olarak kaydedin. Masaüstü gibi uygun bir konuma kaydedin.
 
 3. Şeritte **Geliştirici** sekmesine tıklayın.
 
@@ -105,9 +107,9 @@ ms.locfileid: "92297935"
 
 5. Proje şablonları listesinde, **excel 2010 çalışma** kitabı veya **Excel 2013 çalışma kitabı** projesini seçin.
 
-6. **Ad** kutusuna **CallingCodeFromVBA**yazın.
+6. **Ad** kutusuna **CallingCodeFromVBA** yazın.
 
-7. **Tamam**'a tıklayın.
+7. **Tamam** düğmesine tıklayın.
 
      **Office proje sihirbazı Visual Studio Araçları** açılır.
 
@@ -115,7 +117,7 @@ ms.locfileid: "92297935"
 
 9. **Finish (Son)** düğmesine tıklayın.
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]tasarımcıda **WorkbookWithVBA** çalışma kitabını açar ve **Çözüm Gezgini**Için **CallingCodeFromVBA** projesini ekler.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]tasarımcıda **WorkbookWithVBA** çalışma kitabını açar ve **Çözüm Gezgini** Için **CallingCodeFromVBA** projesini ekler.
 
 ## <a name="trust-the-location-of-the-workbook"></a>Çalışma kitabının konumuna güvenin
  Çözümünüzdeki kodu çalışma kitabındaki VBA koduna göre açığa çıkarmak için önce çalışma kitabındaki VBA 'Yı çalıştırmak üzere güvenmelisiniz. Bunu yapmanın birkaç yolu vardır. Bu kılavuzda, Excel 'deki **güven merkezindeki** çalışma kitabının konumuna güvenerek bu görevi tamamlayacaksınız.
@@ -180,7 +182,7 @@ ms.locfileid: "92297935"
 
 3. **Arabirimi Ayıkla** iletişim kutusunda, **arabirim oluşturmak Için ortak Üyeler seçin** kutusunda, yöntemi için girişe tıklayın `CreateVstoNamedRange` .
 
-4. **Tamam**'a tıklayın.
+4. **Tamam** düğmesine tıklayın.
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] adlı yeni bir arabirim oluşturur `ISheet1` ve bu arabirimi `Sheet1` arabirimini uygulayan şekilde sınıfın tanımını değiştirir `ISheet1` . [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Ayrıca kod düzenleyicisinde **ISheet1.cs** dosyasını açar.
 
@@ -191,7 +193,7 @@ ms.locfileid: "92297935"
 6. Projeyi derleyin.
 
 ## <a name="expose-the-method-to-vba-code"></a>Yöntemi VBA koduna sunun
- `CreateVstoNamedRange`Çalışma KITABıNDAKI VBA kodunda yöntemi göstermek için, konak öğesi Için **ReferenceAssemblyFromVbaProject** özelliğini `Sheet1` **true**olarak ayarlayın.
+ `CreateVstoNamedRange`Çalışma KITABıNDAKI VBA kodunda yöntemi göstermek için, konak öğesi Için **ReferenceAssemblyFromVbaProject** özelliğini `Sheet1` **true** olarak ayarlayın.
 
 ### <a name="to-expose-the-method-to-vba-code"></a>Yöntemi VBA koduna göstermek için
 
@@ -199,7 +201,7 @@ ms.locfileid: "92297935"
 
      **WorkbookWithVBA** dosyası, Sheet1 görünür ile tasarımcıda açılır.
 
-2. **Özellikler** penceresinde, **ReferenceAssemblyFromVbaProject** özelliğini seçin ve değeri **true**olarak değiştirin.
+2. **Özellikler** penceresinde, **ReferenceAssemblyFromVbaProject** özelliğini seçin ve değeri **true** olarak değiştirin.
 
 3. Görüntülenen iletide **Tamam** ' a tıklayın.
 
@@ -233,9 +235,9 @@ ms.locfileid: "92297935"
     End Sub
     ```
 
-5. **F5**tuşuna basın.
+5. **F5** tuşuna basın.
 
-6. Açık çalışma kitabında **Sheet1**hücresinde **a1** ' e tıklayın. İleti kutusunun göründüğünü doğrulayın.
+6. Açık çalışma kitabında **Sheet1** hücresinde **a1** ' e tıklayın. İleti kutusunun göründüğünü doğrulayın.
 
 7. Değişikliklerinizi kaydetmeden Excel 'den çıkın.
 

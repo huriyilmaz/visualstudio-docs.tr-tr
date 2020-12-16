@@ -1,5 +1,7 @@
 ---
 title: Güvenli dağıtım
+description: Çözümü bir sertifikayla imzalayarak veya ClickOnce güven istemi anahtarını kullanarak bir güven kararı temelleyen bir kanıt nasıl sağlayacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c838eddea5b3118c28fb33411a8c58a19d7b4a2d
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: b47a18aa3e791d446abc2a57b6aad1f139924ebf
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810960"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528464"
 ---
 # <a name="secure-deployment"></a>Güvenli dağıtım
   Bir Office çözümü oluşturduğunuzda, projenizdeki kodun çalışmasına izin vermek için geliştirme bilgisayarınız otomatik olarak güncelleştirilir. Bununla birlikte, çözümünüzü dağıtırken, çözümü bir sertifikayla imzalayarak veya güven istemi anahtarını kullanarak bir güven kararı temelleyen kanıt sağlamanız gerekir [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Daha fazla bilgi için bkz. [Office çözümlerine güven verme](../vsto/granting-trust-to-office-solutions.md).
@@ -32,9 +34,9 @@ ms.locfileid: "90810960"
 ## <a name="prevent-office-solutions-from-running-code"></a>Office çözümlerinin kod çalıştırmasını engelle
  Yöneticiler, tüm Office çözümlerinin bir bilgisayarda çalıştırılmasını engellemek için kayıt defterini kullanabilir. Yönetilen kod uzantılarına sahip bir Office çözümü açıldığında, Office çalışma zamanı Visual Studio Araçları, `Disabled` bilgisayardaki aşağıdaki kayıt defteri anahtarlarından biri altında ada sahip bir girdinin olup olmadığını denetler:
 
-- **HKEY_CURRENT_USER \Software\Microsoft\VSTO**
+- **HKEY_CURRENT_USER\Software\Microsoft\VSTO**
 
-- **HKEY_LOCAL_MACHINE \Software\Microsoft\VSTO**
+- **HKEY_LOCAL_MACHINE\Software\Microsoft\VSTO**
 
   Office çözümlerinin kod çalıştırmasını engellemek için, `Disabled` Bu kayıt defteri anahtarlarının bir veya her ikisinde de bir giriş oluşturun ve aşağıdaki veri türlerinden birini ve değerlerini belirtin `Disabled` :
 

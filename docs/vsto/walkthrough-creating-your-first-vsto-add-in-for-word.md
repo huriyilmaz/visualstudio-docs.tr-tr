@@ -1,5 +1,7 @@
 ---
 title: 'İzlenecek yol: Word için ilk VSTO eklentisini oluşturma'
+description: Microsoft Word için uygulama düzeyi eklentisi oluşturun. Bu özellik, hangi belgelerin açık olduğuna bakılmaksızın uygulamanın kendisi için kullanılabilir.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ed5c5e5b03ce7ee0ffbd361b896f288f6b93a806
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6dc136b1c58f9c627787045b1259d07e27a6b8ad
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64783408"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527877"
 ---
 # <a name="walkthrough-create-your-first-vsto-add-in-for-word"></a>İzlenecek yol: Word için ilk VSTO eklentisini oluşturma
   Bu açıklayıcı izlenecek yol, Microsoft Office Word için VSTO eklentisi oluşturmayı gösterir. Bu tür çözümde oluşturduğunuz özellikler, hangi belgelerin açık olduğuna bakılmaksızın uygulamanın kendisi için kullanılabilir.
@@ -39,7 +41,7 @@ ms.locfileid: "64783408"
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]
@@ -60,9 +62,9 @@ ms.locfileid: "64783408"
 
 5. Proje şablonları listesinde bir Word VSTO eklenti projesi seçin.
 
-6. **Ad** kutusuna **FirstWordAddIn**yazın.
+6. **Ad** kutusuna **FirstWordAddIn** yazın.
 
-7. **Tamam**’a tıklayın.
+7. **Tamam** düğmesine tıklayın.
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**FirstWordAddIn** projesini oluşturur ve ThisAddIn kod dosyasını düzenleyicide açar.
 

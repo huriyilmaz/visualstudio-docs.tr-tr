@@ -1,5 +1,7 @@
 ---
 title: 'İzlenecek yol: radyo düğmelerini kullanarak bir belgedeki grafiği güncelleştirme'
+description: Kullanıcılara belgedeki grafik stillerini seçme seçeneği sunmak üzere Microsoft Word için belge düzeyi özelleştirmesinde radyo düğmelerini nasıl kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f4b39949deb3bcbf3d9330ca8d820a5841b0f4c4
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: df2996d99e752fbe0f7f36bcab537ee8c19d4f06
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584301"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528388"
 ---
 # <a name="walkthrough-update-a-chart-in-a-document-using-radio-buttons"></a>İzlenecek yol: radyo düğmelerini kullanarak bir belgedeki grafiği güncelleştirme
   Bu izlenecek yol, kullanıcılara belgedeki grafik stillerini seçme seçeneği sunmak üzere Microsoft Office Word için belge düzeyi özelleştirmesinde radyo düğmelerinin nasıl kullanılacağını gösterir.
@@ -50,9 +52,9 @@ ms.locfileid: "91584301"
 
 ### <a name="to-create-a-new-project"></a>Yeni bir proje oluşturmak için
 
-1. **Grafiğim**adıyla bir Word belgesi projesi oluşturun. Sihirbazda **Yeni belge oluştur**' u seçin. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
+1. **Grafiğim** adıyla bir Word belgesi projesi oluşturun. Sihirbazda **Yeni belge oluştur**' u seçin. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-     Visual Studio tasarımcıda yeni Word belgesini açar ve **Çözüm Gezgini**Için **My Chart Options** projesini ekler.
+     Visual Studio tasarımcıda yeni Word belgesini açar ve **Çözüm Gezgini** Için **My Chart Options** projesini ekler.
 
 ## <a name="add-a-chart-to-the-document"></a>Belgeye grafik ekleme
 
@@ -79,7 +81,7 @@ ms.locfileid: "91584301"
 
 ### <a name="to-add-a-user-control"></a>Kullanıcı denetimi eklemek için
 
-1. **Çözüm Gezgini**Içindeki **My Chart Options** projesini seçin.
+1. **Çözüm Gezgini** Içindeki **My Chart Options** projesini seçin.
 
 2. **Proje** menüsünde **Yeni öğe Ekle**' ye tıklayın.
 
@@ -167,15 +169,15 @@ ms.locfileid: "91584301"
      [!code-csharp[Trin_VstcoreProgrammingControlsWord#14](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ChartOptions.cs#14)]
 
 ## <a name="add-the-user-control-to-the-document"></a>Belgeye Kullanıcı denetimini ekleyin
- Çözümü oluşturduğunuzda, Yeni Kullanıcı denetimi **araç kutusuna**otomatik olarak eklenir. Daha sonra denetimi **araç kutusundan** belgenize sürükleyebilirsiniz.
+ Çözümü oluşturduğunuzda, Yeni Kullanıcı denetimi **araç kutusuna** otomatik olarak eklenir. Daha sonra denetimi **araç kutusundan** belgenize sürükleyebilirsiniz.
 
 ### <a name="to-add-the-user-control-your-document"></a>Belgenize Kullanıcı denetimi eklemek için
 
 1. **Yapı** menüsünde **Yapı Çözümü**’ne tıklayın.
 
-     **ChartOptions** Kullanıcı denetimi **araç kutusuna**eklenir.
+     **ChartOptions** Kullanıcı denetimi **araç kutusuna** eklenir.
 
-2. **Çözüm Gezgini**, **ThisDocument. vb** veya **ThisDocument.cs**öğesine sağ tıklayın ve ardından **tasarımcıyı görüntüle**' ye tıklayın.
+2. **Çözüm Gezgini**, **ThisDocument. vb** veya **ThisDocument.cs** öğesine sağ tıklayın ve ardından **tasarımcıyı görüntüle**' ye tıklayın.
 
 3. `ChartOptions` **Araç kutusundaki** denetimi belgeye sürükleyin.
 

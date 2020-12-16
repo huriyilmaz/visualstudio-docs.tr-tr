@@ -1,5 +1,7 @@
 ---
 title: 'İzlenecek yol: sunucudaki çalışma kitabında bulunan önbelleğe alınmış verileri değiştirme'
+description: Microsoft Excel çalışma kitabında önbelleğe alınmış bir veri kümesini, ServerDocument sınıfını kullanarak Excel 'i başlatmadan nasıl değiştireceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 08/14/2019
 ms.topic: conceptual
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 16d3d69482476149b9a340cabe81e957f39ef6f8
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 01ae4894d76e22f619bf498b4ac6a53f1232b5d5
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584340"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527279"
 ---
 # <a name="walkthrough-change-cached-data-in-a-workbook-on-a-server"></a>İzlenecek yol: sunucudaki çalışma kitabında bulunan önbelleğe alınmış verileri değiştirme
   Bu izlenecek yol, Microsoft Office bir Excel çalışma kitabında önbelleğe alınmış bir veri kümesinin sınıfını kullanarak Excel 'i başlatmadan nasıl değiştirileceğini gösterir <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> .
@@ -70,21 +72,21 @@ ms.locfileid: "91584340"
 
 2. **Dosya** menüsünde, **Yeni**' nin üzerine gelin ve ardından **Proje**' ye tıklayın.
 
-3. Şablonlar bölmesinde, **Visual C#** veya **Visual Basic**öğesini genişletin ve ardından **Windows**' a tıklayın.
+3. Şablonlar bölmesinde, **Visual C#** veya **Visual Basic** öğesini genişletin ve ardından **Windows**' a tıklayın.
 
 4. Proje şablonları listesinde, **sınıf kitaplığı**' nı seçin.
 
-5. **Ad** kutusuna **AdventureWorksDataSet**yazın.
+5. **Ad** kutusuna **AdventureWorksDataSet** yazın.
 
 6. **Araştır**' a tıklayın, *%USERPROFILE%\My BELGELERINIZE* (Windows XP ve önceki sürümler için) veya *%UserProfile%\Documents* (Windows Vista Için) klasörüne gidin ve ardından **Klasör Seç**' e tıklayın.
 
 7. **Yeni proje** iletişim kutusunda, **çözüm için dizin oluştur** onay kutusunun seçili olmadığından emin olun.
 
-8. **Tamam**'a tıklayın.
+8. **Tamam** düğmesine tıklayın.
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**Çözüm Gezgini** Için bir **AdventureWorksDataSet** projesi ekler ve **Class1.cs** veya **Class1. vb** kod dosyasını açar.
 
-9. **Çözüm Gezgini**' de, **Class1.cs** veya **Class1. vb**öğesine sağ tıklayın ve ardından **Sil**' e tıklayın. Bu izlenecek yol için bu dosyaya ihtiyacınız yoktur.
+9. **Çözüm Gezgini**' de, **Class1.cs** veya **Class1. vb** öğesine sağ tıklayın ve ardından **Sil**' e tıklayın. Bu izlenecek yol için bu dosyaya ihtiyacınız yoktur.
 
 ## <a name="define-a-dataset-in-the-class-library-project"></a>Sınıf kitaplığı projesinde bir veri kümesi tanımlama
  SQL Server 2005 için AdventureWorksLT veritabanından veri içeren bir türü belirtilmiş veri kümesi tanımlayın. Bu izlenecek yolda daha sonra, bu veri kümesine bir Excel çalışma kitabı projesinden ve konsol uygulaması projesinden başvurabileceksiniz.
@@ -95,9 +97,9 @@ ms.locfileid: "91584340"
 
 1. **Çözüm Gezgini**' de, **AdventureWorksDataSet** projesine tıklayın.
 
-2. **Veri kaynakları** penceresi görünür değilse, menü çubuğunda, **View**  >  **diğer Windows**  >  **veri kaynaklarını**görüntüle ' yi seçerek bunu görüntüleyin.
+2. **Veri kaynakları** penceresi görünür değilse, menü çubuğunda,   >  **diğer Windows**  >  **veri kaynaklarını** görüntüle ' yi seçerek bunu görüntüleyin.
 
-3. **Veri kaynağı Yapılandırma Sihirbazı 'nı**başlatmak Için **Yeni veri kaynağı Ekle** ' yi seçin.
+3. **Veri kaynağı Yapılandırma Sihirbazı 'nı** başlatmak Için **Yeni veri kaynağı Ekle** ' yi seçin.
 
 4. **Veritabanı**' na ve ardından **İleri**' ye tıklayın.
 
@@ -109,7 +111,7 @@ ms.locfileid: "91584340"
 
 7. **Veritabanı nesnelerinizi seçin** sayfasında **Tablolar** ' ı genişletin ve **ürün (SalesLT)** öğesini seçin.
 
-8. **Son**'a tıklayın.
+8. **Finish (Son)** düğmesine tıklayın.
 
     *AdventureWorksLTDataSet. xsd* dosyası, **AdventureWorksDataSet** projesine eklenir. Bu dosya aşağıdaki öğeleri tanımlar:
 
@@ -136,9 +138,9 @@ ms.locfileid: "91584340"
 
 4. Proje şablonları listesinde, Excel çalışma kitabı projesini seçin.
 
-5. **Ad** kutusuna **AdventureWorksReport**yazın. Konumu değiştirmeyin.
+5. **Ad** kutusuna **AdventureWorksReport** yazın. Konumu değiştirmeyin.
 
-6. **Tamam**'a tıklayın.
+6. **Tamam** düğmesine tıklayın.
 
      **Office proje sihirbazı Visual Studio Araçları** açılır.
 
@@ -174,7 +176,7 @@ ms.locfileid: "91584340"
 
 ### <a name="to-create-a-listobject-that-is-bound-to-an-instance-of-the-dataset"></a>Veri kümesinin bir örneğine bağlanan bir ListObject oluşturmak için
 
-1. **Veri kaynakları** penceresinde, **AdventureWorksDataSet**altındaki **AdventureWorksLTDataSet** düğümünü genişletin.
+1. **Veri kaynakları** penceresinde, **AdventureWorksDataSet** altındaki **AdventureWorksLTDataSet** düğümünü genişletin.
 
 2. **Ürün** düğümünü seçin, görüntülenen aşağı açılan oka tıklayın ve açılan listeden **ListObject** ' i seçin.
 
@@ -191,9 +193,9 @@ ms.locfileid: "91584340"
 
 1. Tasarımcıda **AdventureWorksLTDataSet**' e tıklayın.
 
-2. **Özellikler** penceresinde **değiştiriciler** özelliğini **Public**olarak ayarlayın.
+2. **Özellikler** penceresinde **değiştiriciler** özelliğini **Public** olarak ayarlayın.
 
-3. **CacheInDocument** özelliğini **true**olarak ayarlayın.
+3. **CacheInDocument** özelliğini **true** olarak ayarlayın.
 
 ## <a name="initialize-the-dataset-in-the-workbook"></a>Çalışma kitabındaki veri kümesini başlatma
  Konsol uygulamasını kullanarak önbelleğe alınmış veri kümesinden verileri almak için önce önbelleğe alınmış veri kümesini verilerle doldurmanız gerekir.
@@ -231,13 +233,13 @@ ms.locfileid: "91584340"
 
 1. **Çözüm Gezgini**, **AdventureWorksDataSet** çözümüne sağ tıklayın, **Ekle**' nin üzerine gelin ve ardından **Yeni proje**' ye tıklayın.
 
-2. **Proje türleri** bölmesinde, **Visual C#** veya **Visual Basic**öğesini genişletin ve ardından **Windows**' a tıklayın.
+2. **Proje türleri** bölmesinde, **Visual C#** veya **Visual Basic** öğesini genişletin ve ardından **Windows**' a tıklayın.
 
 3. **Şablonlar** bölmesinde **konsol uygulaması**' nı seçin.
 
-4. **Ad** kutusuna **DataWriter**yazın. Konumu değiştirmeyin.
+4. **Ad** kutusuna **DataWriter** yazın. Konumu değiştirmeyin.
 
-5. **Tamam**'a tıklayın.
+5. **Tamam** düğmesine tıklayın.
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**DataWriter** projesini **Çözüm Gezgini** ekler ve **program.cs** veya **Module1. vb** kod dosyasını açar.
 
@@ -250,7 +252,7 @@ ms.locfileid: "91584340"
 
 2. **.Net** sekmesinde, **Microsoft. VisualStudio. Tools. Applications**' ı seçin.
 
-3. **Tamam**'a tıklayın.
+3. **Tamam** düğmesine tıklayın.
 
 4. **Çözüm Gezgini**, **DataWriter** projesine sağ tıklayın ve **Başvuru Ekle**' ye tıklayın.
 

@@ -1,5 +1,7 @@
 ---
 title: Outlook nesne modeline genel bakış
+description: Microsoft Outlook için VSTO eklentileri geliştirmek üzere Outlook nesne modeli tarafından sunulan nesnelerle nasıl etkileşim kurabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 6545815a0a24a3ba8579298151194fdd81edee77
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 83ada85ba346e83e5bc5ebc01e91b11be0e844e1
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72985686"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528059"
 ---
 # <a name="outlook-object-model-overview"></a>Outlook nesne modeline genel bakış
   Outlook Microsoft Office için VSTO eklentileri geliştirmek üzere Outlook nesne modeli tarafından sunulan nesnelerle etkileşim kurabilirsiniz. Outlook nesne modeli, Kullanıcı arabirimindeki öğeleri temsil eden sınıflar ve arabirimler sağlar. Örneğin, <xref:Microsoft.Office.Interop.Outlook.Application> nesnesi tüm uygulamayı temsil ediyorsa, <xref:Microsoft.Office.Interop.Outlook.Folder> nesnesi e-posta iletileri veya diğer öğeleri içeren bir klasörü temsil eder ve <xref:Microsoft.Office.Interop.Outlook.MailItem> nesne bir e-posta iletisini temsil eder.
@@ -97,7 +99,7 @@ ms.locfileid: "72985686"
  Bir varsayılana nasıl erişekullanacağınızı <xref:Microsoft.Office.Interop.Outlook.Folder> ve yeni bir oluşturma örneği için <xref:Microsoft.Office.Interop.Outlook.Folder> bkz. [nasıl yapılır: program aracılığıyla özel klasör öğeleri oluşturma](../vsto/how-to-programmatically-create-custom-folder-items.md).
 
 ### <a name="mailitem-object"></a>MailItem nesnesi
- <xref:Microsoft.Office.Interop.Outlook.MailItem>Nesne bir e-posta iletisini temsil eder. <xref:Microsoft.Office.Interop.Outlook.MailItem> nesneler genellikle **gelen kutusu**, **Gönderilen öğeler**ve **Giden kutusu**gibi klasörlerdir. <xref:Microsoft.Office.Interop.Outlook.MailItem> , e-posta iletileri oluşturmak ve göndermek için kullanılabilen özellikleri ve yöntemleri sunar.
+ <xref:Microsoft.Office.Interop.Outlook.MailItem>Nesne bir e-posta iletisini temsil eder. <xref:Microsoft.Office.Interop.Outlook.MailItem> nesneler genellikle **gelen kutusu**, **Gönderilen öğeler** ve **Giden kutusu** gibi klasörlerdir. <xref:Microsoft.Office.Interop.Outlook.MailItem> , e-posta iletileri oluşturmak ve göndermek için kullanılabilen özellikleri ve yöntemleri sunar.
 
  E-posta iletisinin nasıl oluşturulacağını gösteren bir örnek için bkz. [nasıl yapılır: program aracılığıyla e-posta öğesi oluşturma](../vsto/how-to-programmatically-create-an-e-mail-item.md).
 
@@ -127,7 +129,7 @@ ms.locfileid: "72985686"
 ### <a name="vba-object-model-reference"></a>VBA nesne modeli başvurusu
  VBA nesne modeli başvurusu, Outlook nesne modelini Visual Basic for Applications (VBA) koduna açık olarak belgeler. Daha fazla bilgi için bkz. [Outlook 2010 nesne modeli başvurusu](/office/vba/api/overview/Outlook/object-model).
 
- VBA nesne modeli başvurusundaki tüm nesneler ve Üyeler Outlook PIA içindeki türlere ve üyelere karşılık gelir. Örneğin, VBA nesne modeli başvurusundaki Inspector nesnesi <xref:Microsoft.Office.Interop.Outlook.Inspector> Outlook PIA içindeki nesneye karşılık gelir. VBA nesne modeli başvurusu birçok özellik, yöntem ve olay için kod örnekleri sağlasa da, bunları Visual Studio kullanarak oluşturduğunuz bir Outlook VSTO eklentisi projesinde kullanmak istiyorsanız bu başvurudaki VBA kodunu Visual Basic veya Visual C# ' ye çevirmeniz gerekir.
+ VBA nesne modeli başvurusundaki tüm nesneler ve Üyeler Outlook PIA içindeki türlere ve üyelere karşılık gelir. Örneğin, VBA nesne modeli başvurusundaki Inspector nesnesi <xref:Microsoft.Office.Interop.Outlook.Inspector> Outlook PIA içindeki nesneye karşılık gelir. VBA nesne modeli başvurusu birçok özellik, yöntem ve olay için kod örnekleri sağlasa da, bunları Visual Studio kullanarak oluşturduğunuz bir Outlook VSTO Add-In projesinde kullanmak istiyorsanız bu başvurudaki VBA kodunu Visual Basic veya Visual C# ' ye çevirmeniz gerekir.
 
 ### <a name="related-topics"></a>İlgili konular
 

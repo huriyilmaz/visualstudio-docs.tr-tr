@@ -1,5 +1,7 @@
 ---
 title: 'İzlenecek yol: içerik denetimlerini özel XML bölümlerine bağlama'
+description: Word için belge düzeyi özelleştirmesindeki içerik denetimlerini belgede depolanan XML verilerine bağlamayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -17,19 +19,19 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a80488408f680530ed3c9b4094b2997e97484ce3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a82a8fd98bbf1a735661f3e1cf01e2452eb7ee58
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85544449"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527962"
 ---
 # <a name="walkthrough-bind-content-controls-to-custom-xml-parts"></a>İzlenecek yol: içerik denetimlerini özel XML bölümlerine bağlama
   Bu izlenecek yol, Word için belge düzeyi özelleştirmesindeki içerik denetimlerini belgede depolanan XML verilerine nasıl bağlayabileceğinizi gösterir.
 
  [!INCLUDE[appliesto_wdalldoc](../vsto/includes/appliesto-wdalldoc-md.md)]
 
- Word, bir belgede *özel XML parçaları*olarak adlandırılan XML verilerini depolamanıza olanak sağlar. İçerik denetimlerini özel bir XML parçasındaki öğelere bağlayarak bu verilerin görüntülenmesini denetleyebilirsiniz. Bu izlenecek yolda örnek belge, özel bir XML bölümünde depolanan çalışan bilgilerini görüntüler. Belgeyi açtığınızda, içerik denetimleri XML öğelerinin değerlerini görüntüler. İçerik denetimlerindeki metinde yaptığınız tüm değişiklikler özel XML bölümüne kaydedilir.
+ Word, bir belgede *özel XML parçaları* olarak adlandırılan XML verilerini depolamanıza olanak sağlar. İçerik denetimlerini özel bir XML parçasındaki öğelere bağlayarak bu verilerin görüntülenmesini denetleyebilirsiniz. Bu izlenecek yolda örnek belge, özel bir XML bölümünde depolanan çalışan bilgilerini görüntüler. Belgeyi açtığınızda, içerik denetimleri XML öğelerinin değerlerini görüntüler. İçerik denetimlerindeki metinde yaptığınız tüm değişiklikler özel XML bölümüne kaydedilir.
 
  Bu izlenecek yol aşağıdaki görevleri gösterir:
 
@@ -59,9 +61,9 @@ ms.locfileid: "85544449"
 
 ### <a name="to-create-a-new-word-document-project"></a>Yeni bir Word belgesi projesi oluşturmak için
 
-1. **EmployeeControls**adlı bir Word belgesi projesi oluşturun. Çözüm için yeni bir belge oluşturun. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
+1. **EmployeeControls** adlı bir Word belgesi projesi oluşturun. Çözüm için yeni bir belge oluşturun. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] tasarımcıda yeni Word belgesini açar ve **EmployeeControls** projesini **Çözüm Gezgini**ekler.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] tasarımcıda yeni Word belgesini açar ve **EmployeeControls** projesini **Çözüm Gezgini** ekler.
 
 ## <a name="add-content-controls-to-the-document"></a>Belgeye içerik denetimleri ekleme
  Kullanıcının bir çalışanla ilgili bilgileri görüntüleyebileceği veya düzenleyebileceği üç farklı türde içerik denetimi içeren bir tablo oluşturun.
@@ -110,7 +112,7 @@ ms.locfileid: "85544449"
 
 2. **Şablonlar** bölmesinde **XML dosyası**' nı seçin.
 
-3. **employees.xml**dosyayı adlandırın ve ardından **Ekle** düğmesini seçin.
+3. **employees.xml** dosyayı adlandırın ve ardından **Ekle** düğmesini seçin.
 
      **employees.xml** dosyası kod düzenleyicisinde açılır.
 
@@ -129,7 +131,7 @@ ms.locfileid: "85544449"
 
 5. **Çözüm Gezgini** **employees.xml** dosyasını seçin.
 
-6. **Özellikler** penceresinde **derleme eylemi** özelliğini seçin ve ardından değeri **gömülü kaynak**olarak değiştirin.
+6. **Özellikler** penceresinde **derleme eylemi** özelliğini seçin ve ardından değeri **gömülü kaynak** olarak değiştirin.
 
      Bu adım, projeyi derlediğinizde XML dosyasını derlemeye bir kaynak olarak katıştırır. Bu, çalışma zamanında XML dosyasının içeriğine erişmenizi sağlar.
 
@@ -148,7 +150,7 @@ ms.locfileid: "85544449"
 
      Şema Tasarımcısı açılır.
 
-4. **Çözüm Gezgini**, **employees. xsd**için kısayol menüsünü açın ve **kodu görüntüle**' yi seçin.
+4. **Çözüm Gezgini**, **employees. xsd** için kısayol menüsünü açın ve **kodu görüntüle**' yi seçin.
 
 5. **Employees. xsd** dosyasının içeriğini aşağıdaki şema ile değiştirin.
 
@@ -225,7 +227,7 @@ ms.locfileid: "85544449"
 
 ### <a name="to-add-a-custom-xml-part-to-the-document"></a>Belgeye özel bir XML bölümü eklemek için
 
-1. **Çözüm Gezgini**' de, **ThisDocument.cs** veya **ThisDocument. vb**kısayol menüsünü açın ve **kodu görüntüle**' yi seçin.
+1. **Çözüm Gezgini**' de, **ThisDocument.cs** veya **ThisDocument. vb** kısayol menüsünü açın ve **kodu görüntüle**' yi seçin.
 
 2. Sınıfına aşağıdaki bildirimleri ekleyin `ThisDocument` . Bu kod, belgeye özel bir XML bölümü eklemek için kullanacağınız birkaç nesne bildirir.
 
@@ -277,7 +279,7 @@ ms.locfileid: "85544449"
     |-|-|
     |**Çalışan adı**|**Karina Taal**|
     |**İşe Giriş Tarihi**|**1 Nisan 1999**|
-    |**Başlık**|**Manager**|
+    |**Başlık**|**Yönetici**|
 
 3. **Çalışan adı** hücresinin sağ tarafındaki hücreyi seçin ve farklı bir ad yazın.
 
@@ -291,7 +293,7 @@ ms.locfileid: "85544449"
 
 8. **EmployeeControls.docx** için kısayol menüsünü açın ve **Yeniden Adlandır**' ı seçin.
 
-9. Dosyayı **EmployeeControls.docx.zip**olarak adlandırın.
+9. Dosyayı **EmployeeControls.docx.zip** olarak adlandırın.
 
      **EmployeeControls.docx** belge Open XML biçiminde kaydedilir. Bu belgeyi *. zip* dosya adı uzantısıyla yeniden adlandırarak belgenin içeriğini inceleyebilirsiniz. Open XML hakkında daha fazla bilgi için bkz. [Office (2007) Open XML dosya biçimlerini tanıtma](/previous-versions/office/developer/office-2007/aa338205(v=office.12))teknik makalesi.
 

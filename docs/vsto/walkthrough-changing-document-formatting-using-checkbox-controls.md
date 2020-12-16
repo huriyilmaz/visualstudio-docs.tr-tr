@@ -1,5 +1,7 @@
 ---
 title: CheckBox denetimlerini kullanarak belge biçimlendirmesini değiştirme
+description: Metin biçimlendirmesini değiştirmek üzere Microsoft Word için belge düzeyi özelleştirmesinde Windows Forms denetimlerini nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 24c3cb8d76551bb477f9c13cc56c313519f3b617
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 931e9554a10e0e1525d9ee4a10505633b211610b
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "67328719"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527243"
 ---
 # <a name="walkthrough-change-document-formatting-using-checkbox-controls"></a>İzlenecek yol: CheckBox denetimlerini kullanarak belge biçimlendirmesini değiştirme
   Bu izlenecek yol, metin biçimlendirmesini değiştirmek için Microsoft Office Word için belge düzeyi özelleştirmesinde Windows Forms denetimlerinin nasıl kullanılacağını gösterir.
@@ -38,7 +40,7 @@ ms.locfileid: "67328719"
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]
@@ -48,13 +50,13 @@ ms.locfileid: "67328719"
 ## <a name="create-the-project"></a>Proje oluşturma
  İlk adım bir Word belgesi projesi oluşturmaktır.
 
-### <a name="create-a-new-project"></a>Yeni bir proje oluşturma
+### <a name="create-a-new-project"></a>Yeni proje oluşturma
 
-1. **Word Biçimme**adlı bir Word belgesi projesi oluşturun. Sihirbazda **Yeni belge oluştur**' u seçin.
+1. **Word Biçimme** adlı bir Word belgesi projesi oluşturun. Sihirbazda **Yeni belge oluştur**' u seçin.
 
      Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-     Visual Studio tasarımcıda yeni Word belgesini açar ve **Çözüm Gezgini**Için **My Word biçimlendirme** projesini ekler.
+     Visual Studio tasarımcıda yeni Word belgesini açar ve **Çözüm Gezgini** Için **My Word biçimlendirme** projesini ekler.
 
 ## <a name="add-text-and-controls-to-the-word-document"></a>Word belgesine metin ve denetimler ekleme
  Bu izlenecek yol için, Word belgesine üç onay kutusu ve bir denetimdeki bazı metinler ekleyin <xref:Microsoft.Office.Tools.Word.Bookmark> . Onay kutuları kullanıcıya metni biçimlendirmek için seçenekler sunar.
@@ -113,7 +115,7 @@ ms.locfileid: "67328719"
 
 ### <a name="change-formatting-when-a-check-box-is-selected"></a>Onay kutusu seçildiğinde biçimlendirmeyi Değiştir
 
-1. Çözüm Gezgini ' ye sağ tıklayın `ThisDocument` ve ardından kısayol menüsünde **kodu görüntüle** ' ye tıklayın. **Solution Explorer**
+1. Çözüm Gezgini ' ye sağ tıklayın `ThisDocument` ve ardından kısayol menüsünde **kodu görüntüle** ' ye tıklayın. 
 
 2. Yalnızca C# için, **ThisDocument** sınıfına aşağıdaki sabitleri ekleyin.
 

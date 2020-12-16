@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: yer Işareti denetimlerini yeniden boyutlandırma'
+description: Visual Studio 'Yu bir Microsoft Word belgesine eklediğinizde bir yer Işareti denetiminin boyutunu ayarlamak için nasıl kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 6cc7b26bb767c233ed8699519261d4b5b708306b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0d577f825337862de4ef967bb4f92f61ebbb0b45
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85545866"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528195"
 ---
 # <a name="how-to-resize-bookmark-controls"></a>Nasıl yapılır: yer Işareti denetimlerini yeniden boyutlandırma
   Bir <xref:Microsoft.Office.Tools.Word.Bookmark> denetimin boyutunu Microsoft Office bir Word belgesine eklediğinizde ayarlarsınız. Ayrıca, daha sonra yeniden boyutlandırabilirsiniz.

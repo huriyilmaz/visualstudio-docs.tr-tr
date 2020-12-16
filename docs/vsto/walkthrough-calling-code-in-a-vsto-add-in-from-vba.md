@@ -1,5 +1,7 @@
 ---
 title: "İzlenecek yol: bir VSTO eklentisinde VBA 'dan kod çağırma"
+description: VSTO Eklentilerindeki bir nesneyi Visual Basic for Applications (VBA) ve COM VSTO eklentileri dahil olmak üzere diğer Microsoft Office çözümlerinde kullanıma sunma hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 6fdbd2cf85086bac0aa7bb56c128a7ad6fe36f94
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0cbf03ef234ea6cf4eab790d96082d23b7ed5199
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72650781"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527292"
 ---
 # <a name="walkthrough-call-code-in-a-vsto-add-in-from-vba"></a>İzlenecek yol: bir VSTO eklentisinde VBA 'dan kod çağırma
   Bu izlenecek yol, VSTO Eklentilerindeki bir nesneyi Visual Basic for Applications (VBA) ve COM VSTO eklentileri dahil diğer Microsoft Office çözümlerine nasıl kullanıma sunılacağını gösterir.
@@ -54,9 +56,9 @@ ms.locfileid: "72650781"
 
 ### <a name="to-create-a-new-project"></a>Yeni bir proje oluşturmak için
 
-1. Excel VSTO eklentisi proje şablonunu kullanarak **Excelimportdata**adlı BIR Excel VSTO eklentisi projesi oluşturun. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
+1. Excel VSTO eklentisi proje şablonunu kullanarak **Excelimportdata** adlı BIR Excel VSTO eklentisi projesi oluşturun. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**ThisAddIn.cs** veya **ThisAddIn. vb** kod dosyasını açar ve **Çözüm Gezgini**için **ExcelImportData** projesini ekler.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**ThisAddIn.cs** veya **ThisAddIn. vb** kod dosyasını açar ve **Çözüm Gezgini** için **ExcelImportData** projesini ekler.
 
 ## <a name="define-a-class-that-you-can-expose-to-other-office-solutions"></a>Diğer Office çözümlerine sergilemek için kullanabileceğiniz bir sınıf tanımlayın
  Bu izlenecek yolun amacı, `ImportData` `AddInUtilities` VBA kodundan VSTO eklentiinizdeki adlı bir sınıf yöntemine çağrı sağlamaktır. Bu yöntem, etkin çalışma sayfasının A1 hücresine bir dize yazar.
@@ -67,7 +69,7 @@ ms.locfileid: "72650781"
 
 1. **Proje** menüsünde **Sınıf Ekle**' ye tıklayın.
 
-2. **Yeni öğe Ekle** iletişim kutusunda, yeni sınıfın adını **AddInUtilities**olarak değiştirin ve **Ekle**' ye tıklayın.
+2. **Yeni öğe Ekle** iletişim kutusunda, yeni sınıfın adını **AddInUtilities** olarak değiştirin ve **Ekle**' ye tıklayın.
 
      **AddInUtilities.cs** veya **AddInUtilities. vb** dosyası kod düzenleyicisinde açılır.
 
@@ -90,9 +92,9 @@ ms.locfileid: "72650781"
 
 1. **Çözüm Gezgini**, **Excel**' i genişletin.
 
-2. **ThisAddIn.cs** veya **ThisAddIn. vb**öğesine sağ tıklayın ve ardından **kodu görüntüle**' ye tıklayın.
+2. **ThisAddIn.cs** veya **ThisAddIn. vb** öğesine sağ tıklayın ve ardından **kodu görüntüle**' ye tıklayın.
 
-3. Sınıfına aşağıdaki kodu ekleyin `ThisAddIn` .
+3. Aşağıdaki kodu `ThisAddIn` sınıfına ekleyin.
 
      [!code-csharp[Trin_AddInInteropWalkthrough#1](../vsto/codesnippet/CSharp/Trin_AddInInteropWalkthrough/ThisAddIn.cs#1)]
      [!code-vb[Trin_AddInInteropWalkthrough#1](../vsto/codesnippet/VisualBasic/Trin_AddInInteropWalkthrough/ThisAddIn.vb#1)]
@@ -108,7 +110,7 @@ ms.locfileid: "72650781"
 
 1. Projenizi çalıştırmak için **F5** tuşuna basın.
 
-2. Excel 'de, etkin çalışma kitabını Excel makro içerebilen bir çalışma kitabı (*. xlsm) olarak kaydedin. Masaüstü gibi uygun bir konuma kaydedin.
+2. Excel 'de, etkin çalışma kitabını Excel Macro-Enabled çalışma kitabı (*. xlsm) olarak kaydedin. Masaüstü gibi uygun bir konuma kaydedin.
 
 3. Şeritte **Geliştirici** sekmesine tıklayın.
 
@@ -135,9 +137,9 @@ ms.locfileid: "72650781"
     End Sub
     ```
 
-7. **F5**tuşuna basın.
+7. **F5** tuşuna basın.
 
-8. Çalışma kitabına yeni bir **Içeri aktarılan veri** sayfası eklendiğini doğrulayın. Ayrıca, A1 hücresindeki dizenin **Bu**dize olduğunu doğrulayın.
+8. Çalışma kitabına yeni bir **Içeri aktarılan veri** sayfası eklendiğini doğrulayın. Ayrıca, A1 hücresindeki dizenin **Bu** dize olduğunu doğrulayın.
 
 9. Excel 'den çıkın.
 

@@ -1,5 +1,7 @@
 ---
 title: Gelen kutusundan program aracılığıyla okunmamış iletiler al
+description: Microsoft Outlook 'taki gelen kutunuzdaki okunmamış iletileri programlı bir şekilde almak için Visual Studio 'Yu nasıl kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: dc913379546c80eef70671ea0ecbd441001e6ab5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b6dae629c008c04f7ee9fb66b9dbc5f8f31e53d4
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85537611"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528256"
 ---
 # <a name="how-to-programmatically-retrieve-unread-messages-from-the-inbox"></a>Nasıl yapılır: gelen kutusundan program aracılığıyla okunmamış iletileri alma
   Bu örnekte Outlook **gelen kutusundan** okunmamış e-posta iletileri alınır ve öğe sayısı görüntülenir.

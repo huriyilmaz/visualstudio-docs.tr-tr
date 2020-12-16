@@ -1,5 +1,7 @@
 ---
 title: Şerit Tasarımcısı
+description: Bir Microsoft Office uygulamasının şeritlerine özel sekmeler, gruplar ve denetimler eklemek için şerit tasarımcısını nasıl kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -26,12 +28,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e1c2941b0c088a832540fd3380c993fe2c380b44
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b72270da75d27ed2837540369f74e9c5e87b417b
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72985620"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528007"
 ---
 # <a name="ribbon-designer"></a>Şerit Tasarımcısı
   Şerit Tasarımcısı görsel tasarım tuvaldir. Bir Microsoft Office uygulamasının şeritlerine özel sekmeler, gruplar ve denetimler eklemek için şerit tasarımcısını kullanın.
@@ -71,7 +73,7 @@ ms.locfileid: "72985620"
 
 - **Çözüm Gezgini**, Şerit kod dosyasını seçin ve ardından **Görünüm** menüsünde **Tasarımcı** ' ya tıklayın.
 
-  Şerit Tasarımcısı varsayılan bir sekme ve grup içerir. Varsayılan sekmeyi ve grubunu Şerit Tasarımcısından kaldırabilirsiniz. Varsayılan grubu kaldırmak için **Group1**öğesine sağ tıklayın ve ardından **Sil**' e tıklayın. Varsayılan sekmeyi kaldırmak için tasarım yüzeyinde boş bir alana sağ tıklayın ve ardından **Şerit sekmesini kaldır**' a tıklayın.
+  Şerit Tasarımcısı varsayılan bir sekme ve grup içerir. Varsayılan sekmeyi ve grubunu Şerit Tasarımcısından kaldırabilirsiniz. Varsayılan grubu kaldırmak için **Group1** öğesine sağ tıklayın ve ardından **Sil**' e tıklayın. Varsayılan sekmeyi kaldırmak için tasarım yüzeyinde boş bir alana sağ tıklayın ve ardından **Şerit sekmesini kaldır**' a tıklayın.
 
   Ayrıca Şerit Tasarımcısına özel sekmeler, gruplar ve denetimler ekleyebilirsiniz. Bu denetimleri **araç kutusu**'Nda **Office Şerit denetimleri** grubunda bulabilirsiniz. Şerit Tasarımcısına **Office Şerit denetimleri** grubundan denetim eklemenin üç yolu vardır:
 
@@ -79,7 +81,7 @@ ms.locfileid: "72985620"
 
 - Bir denetime tıklayın ve ardından Şerit Tasarımcısında uygun bir alana tıklayın.
 
-- Tasarımcıda uygun bir alanı seçin ve ardından **araç kutusunda**bir denetime çift tıklayın.
+- Tasarımcıda uygun bir alanı seçin ve ardından **araç kutusunda** bir denetime çift tıklayın.
 
 ### <a name="ribbon-design-workflow"></a>Şerit tasarım iş akışı
  Şerit yerleşimini tasarlamak için aşağıdaki temel adımları izleyin:
@@ -99,13 +101,13 @@ ms.locfileid: "72985620"
 ### <a name="add-custom-tabs-to-the-ribbon"></a><a name="AddTabToRibbon"></a> Şerite özel sekmeler ekleme
  Şerite özel sekme eklemenin üç yolu vardır:
 
-- **Araç kutusundan**bir sekme ekleyin.
+- **Araç kutusundan** bir sekme ekleyin.
 
 - Şerit Tasarımcısına sağ tıklayın ve ardından **Şerit sekmesi Ekle**' ye tıklayın.
 
-- **Sekme koleksiyonu düzenleyicisini**açın ve **Ekle**' ye tıklayın.
+- **Sekme koleksiyonu düzenleyicisini** açın ve **Ekle**' ye tıklayın.
 
-   **Sekme koleksiyonu düzenleyicisini**açmak Için, **Özellikler** penceresinde, **Sekmeler** özelliğini seçin ve ardından üç nokta düğmesini ![ASP.NET mobil tasarımcı elips](../sharepoint/media/mwellipsis.gif "ASP.NET Mobile Designer elips")' e tıklayın.
+   **Sekme koleksiyonu düzenleyicisini** açmak Için, **Özellikler** penceresinde, **Sekmeler** özelliğini seçin ve ardından üç nokta düğmesini ![ASP.NET mobil tasarımcı elips](../sharepoint/media/mwellipsis.gif "ASP.NET Mobile Designer elips")' e tıklayın.
 
   Bir sekme ekledikten sonra, denetimleri içeren gruplar ekleyebilirsiniz.
 
@@ -116,7 +118,7 @@ ms.locfileid: "72985620"
 
 - **Özellikler** penceresinin **Komutlar** bölmesinde, **Şerit sekmesini kaldır**' ı tıklatın.
 
-- **Sekme koleksiyonu düzenleyicisini**açın, sekmesini seçin ve **Kaldır**' ı tıklatın.
+- **Sekme koleksiyonu düzenleyicisini** açın, sekmesini seçin ve **Kaldır**' ı tıklatın.
 
 #### <a name="change-the-position-of-a-tab-on-the-ribbon"></a>Şeritteki sekmenin konumunu değiştirme
  Şeritteki özel sekmelerin sırasını değiştirebilirsiniz. Şeritteki yerleşik bir sekmeden önce veya sonra özel sekmeler de yerleştirebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: Şeritteki sekmenin konumunu değiştirme](../vsto/how-to-change-the-position-of-a-tab-on-the-ribbon.md).
@@ -179,14 +181,14 @@ ms.locfileid: "72985620"
 |------------|-----------------------|
 |Listedeki bir denetimi önceki denetimden önce taşıyın.|**CTRL** + **Yukarı**<br /><br /> **CTRL** + **Sol**|
 |Bir denetimi listedeki bir sonraki denetimden sonra taşıyın.|**CTRL** + **Aşağı**<br /><br /> **CTRL** + **Sağ**|
-|Seçimi aynı gruptaki bir denetimden diğerine taşıyın. Açılır panel için, açılan paneldeki üst denetim ve denetimler arasında geçiş yapın.|**Yukarı**<br /><br /> **Kapatılıp**|
-|Tüm denetimlerde ileri doğru yineleyin.|**Sekmesinde**|
+|Seçimi aynı gruptaki bir denetimden diğerine taşıyın. Açılır panel için, açılan paneldeki üst denetim ve denetimler arasında geçiş yapın.|**Yukarı**<br /><br /> **Aşağı**|
+|Tüm denetimlerde ileri doğru yineleyin.|**Sekme**|
 |Tüm denetimler boyunca ters yönde yineleme yapın.|**SHIFT** + **Sekme**|
 |Seçili denetimi veya denetim kümesini silin.|**Silme**|
 |Seçili denetimleri kopyalayın.|**CTRL** + **C**|
 |Seçili denetimleri kesin.|**CTRL** + **X**|
 |Denetimleri panodan yapıştırın.|**CTRL** + **V**|
-|**Araç kutusunu**seçin.|**CTRL** + **Alt** + **X**|
+|**Araç kutusunu** seçin.|**CTRL** + **Alt** + **X**|
 |Ana bileşeni seçin.|**Esc**|
 
  Yalnızca Microsoft Office menüsüne uygulanan klavye kısayolları <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu> <xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton> Aşağıdaki tabloda gösterilmiştir.

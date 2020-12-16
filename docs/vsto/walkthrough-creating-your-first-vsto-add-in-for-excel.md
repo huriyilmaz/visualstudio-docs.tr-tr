@@ -1,5 +1,7 @@
 ---
 title: 'İzlenecek yol: Excel için ilk VSTO eklentisini oluşturma'
+description: Microsoft Excel için uygulama düzeyi eklentisi oluşturma. Oluşturduğunuz özellikler, hangi çalışma kitaplarının açık olduğuna bakılmaksızın uygulamanın kendisi tarafından kullanılabilir.
+ms.custom: SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 52b683b1f75f2967807f171c204fbf02a2e5db69
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0f04532e627a694e8a234f1842995b92a707e537
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "69548007"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527904"
 ---
 # <a name="walkthrough-create-your-first-vsto-add-in-for-excel"></a>İzlenecek yol: Excel için ilk VSTO eklentisini oluşturma
   Bu açıklayıcı izlenecek yol, Excel Microsoft Office için uygulama düzeyi eklentisi oluşturmayı gösterir. Bu tür çözümde oluşturduğunuz özellikler, hangi çalışma kitaplarının açık olduğuna bakılmaksızın uygulamanın kendisi tarafından kullanılabilir.
@@ -41,7 +43,7 @@ ms.locfileid: "69548007"
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]
@@ -62,9 +64,9 @@ ms.locfileid: "69548007"
 
 5. Proje şablonları listesinde, **excel 2010 eklentisi** veya **Excel 2013 eklentisi**' ni seçin.
 
-6. **Ad** kutusuna **FirstExcelAddIn**yazın.
+6. **Ad** kutusuna **FirstExcelAddIn** yazın.
 
-7. **Tamam**’a tıklayın.
+7. **Tamam** düğmesine tıklayın.
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**FirstExcelAddIn** projesini oluşturur ve ThisAddIn kod dosyasını düzenleyicide açar.
 

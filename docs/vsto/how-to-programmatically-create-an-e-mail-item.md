@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: program aracılığıyla e-posta öğesi oluşturma'
+description: Visual Studio 'Yu kullanarak Microsoft Outlook 'ta program aracılığıyla bir e-posta iletisi oluşturma hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: d22808b8d68c0fdb3b6a2374985ae25a539f0e8c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 786526841d5ffc5cdd6241f93043284a4be515fd
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85546048"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527825"
 ---
 # <a name="how-to-programmatically-create-an-email-item"></a>Nasıl yapılır: program aracılığıyla e-posta öğesi oluşturma
   Bu örnek Outlook Microsoft Office bir e-posta iletisi oluşturur.

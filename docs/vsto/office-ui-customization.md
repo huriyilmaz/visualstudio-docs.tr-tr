@@ -1,5 +1,7 @@
 ---
 title: Office UI özelleştirmesi
+description: Visual Studio 'da Office geliştirici araçlarını kullanarak Microsoft Office uygulamalarının Kullanıcı arabirimini (UI) nasıl özelleştirebileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 257f87aedf5d4337e81fb6f251cc8df07f4e577c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 289b055ab84dd9c2c440b55f3d64fe1fe39b8e1b
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88041070"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527583"
 ---
 # <a name="office-ui-customization"></a>Office UI özelleştirmesi
   Visual Studio 'da Office geliştirici araçlarını kullanarak Microsoft Office uygulamalarının Kullanıcı arabirimini (UI) özelleştirebilirsiniz. Bu konuda, aşağıdaki bölümlerde özelleştirebileceğiniz Kullanıcı arabirimi özellikleri açıklanmaktadır:
@@ -43,7 +45,7 @@ ms.locfileid: "88041070"
 ## <a name="comparison-of-ui-features"></a><a name="Comparison"></a> UI özelliklerinin karşılaştırması
  Aşağıdaki tabloda, Microsoft Office projelerinde özelleştirebileceğiniz ana UI özellikleri karşılaştırılmaktadır.
 
-|Öne çıkan özelliği|Desteklenen proje türleri|Desteklenen Microsoft Office uygulamalar|
+|Özellik|Desteklenen proje türleri|Desteklenen Microsoft Office uygulamalar|
 |-------------|-----------------------------|---------------------------------------------|
 |Eylemler bölmesi|Belge düzeyinde özelleştirmeler|Excel<br /><br /> Word|
 |Özel görev bölmeleri|VSTO eklentileri|Excel<br /><br /> [!INCLUDE[InfoPath_15_short](../vsto/includes/infopath-15-short-md.md)]<br /><br /> [!INCLUDE[InfoPath_14_short](../vsto/includes/infopath-14-short-md.md)]<br /><br /> Outlook<br /><br /> PowerPoint<br /><br /> Word|

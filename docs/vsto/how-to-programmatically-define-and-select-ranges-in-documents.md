@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: belgelerde aralıkları program aracılığıyla tanımlama ve seçme'
+description: Aralık nesnesini kullanarak Microsoft Word belgelerindeki aralıkları programlı bir şekilde tanımlama ve seçme hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5af4ceeb37574fef6eb55d80f3c173b71ac090e0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d1cc0475f7b25550b85018477d7c842f012445e2
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85545957"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528323"
 ---
 # <a name="how-to-programmatically-define-and-select-ranges-in-documents"></a>Nasıl yapılır: belgelerde aralıkları program aracılığıyla tanımlama ve seçme
   Bir nesne kullanarak Microsoft Office Word belgesinde bir Aralık tanımlayabilirsiniz <xref:Microsoft.Office.Interop.Word.Range> . Tüm belgeyi, örneğin, <xref:Microsoft.Office.Interop.Word.Range.Select%2A> nesnesinin yöntemini kullanarak <xref:Microsoft.Office.Interop.Word.Range> veya sınıfının içerik özelliğini <xref:Microsoft.Office.Tools.Word.Document> (belge düzeyi özelleştirmesinde) ya da <xref:Microsoft.Office.Interop.Word.Document> sınıfını (VSTO eklentisi içinde) kullanarak seçebilirsiniz (örneğin, nesne).

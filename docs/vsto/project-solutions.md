@@ -1,5 +1,7 @@
 ---
 title: Proje çözümleri
+description: Projeyi otomatikleştirebilmek, proje özelliklerini genişletmek veya proje Kullanıcı arabirimini (UI) özelleştirmek için VSTO Eklentilerini nasıl kullanabileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: conceptual
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 84dfe7cf86df2139b06a320d1c6441665a08a1b1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c44e1208daaef11cb7fd9bd22e3e3ae574ca610d
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72985633"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527513"
 ---
 # <a name="project-solutions"></a>Proje çözümleri
   [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] , Microsoft Office projesi için VSTO eklentileri oluşturmak için kullanabileceğiniz proje şablonları sağlar. Projeyi otomatikleştirmek, proje özelliklerini genişletmek veya proje Kullanıcı arabirimini (UI) özelleştirmek için VSTO Eklentilerini kullanabilirsiniz.

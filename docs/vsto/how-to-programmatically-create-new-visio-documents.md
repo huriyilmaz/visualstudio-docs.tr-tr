@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: program aracılığıyla yeni Visio belgeleri oluşturma'
+description: Program aracılığıyla yeni bir Microsoft Visio çizim belgesi oluşturup açık Visio belgelerinin belgeler koleksiyonuna nasıl ekleyebileceğiniz hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 171ad93caf6b5c13d000073a0d7f7e82282b9b4a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 59c1fe0264a294692bea04b05e5e143fa28be801
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85541537"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526847"
 ---
 # <a name="how-to-programmatically-create-new-visio-documents"></a>Nasıl yapılır: program aracılığıyla yeni Visio belgeleri oluşturma
   Yeni bir Microsoft Office Visio çizim belgesi oluşturduğunuzda, bu dosyayı `Microsoft.Office.Interop.Visio.Documents` Açık Visio belgeleri koleksiyonuna eklersiniz. Sonuç olarak, `Microsoft.Office.Interop.Visio.Documents.Add` yöntemi yeni bir Visio çizim belgesi oluşturur. Daha fazla bilgi için,Microsoft.Office.Interop.Visio.Documtları için VBA başvuru belgelerine bakın [ . Yöntem ekleyin](/office/vba/api/Visio.Documents.Add) .
@@ -65,11 +67,11 @@ ms.locfileid: "85541537"
 ## <a name="compile-the-code"></a>Kodu derle
  Bu kod örneği şunları gerektirir:
 
-- Adlı bir Visio belgesi `myDrawing.vsd` `Test` , Belgelerim klasöründe (Windows XP ve önceki sürümler *My Documents* için) veya *Belgeler* klasöründe (Windows Vista için) adlı bir dizinde bulunmalıdır.
+- Adlı bir Visio belgesi `myDrawing.vsd` `Test` , Belgelerim klasöründe (Windows XP ve önceki sürümler  için) veya *Belgeler* klasöründe (Windows Vista için) adlı bir dizinde bulunmalıdır.
 
-- Adlı bir Visio belgesi `myStencil.vss` `Test` , Belgelerim klasöründe (Windows XP ve önceki sürümler *My Documents* için) veya *Belgeler* klasöründe (Windows Vista için) adlı bir dizinde bulunmalıdır.
+- Adlı bir Visio belgesi `myStencil.vss` `Test` , Belgelerim klasöründe (Windows XP ve önceki sürümler  için) veya *Belgeler* klasöründe (Windows Vista için) adlı bir dizinde bulunmalıdır.
 
-- Adlı bir Visio belgesi `myTemplate.vst` `Test` , Belgelerim klasöründe (Windows XP ve önceki sürümler *My Documents* için) veya *Belgeler* klasöründe (Windows Vista için) adlı bir dizinde bulunmalıdır.
+- Adlı bir Visio belgesi `myTemplate.vst` `Test` , Belgelerim klasöründe (Windows XP ve önceki sürümler  için) veya *Belgeler* klasöründe (Windows Vista için) adlı bir dizinde bulunmalıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visio çözümleri](../vsto/visio-solutions.md)

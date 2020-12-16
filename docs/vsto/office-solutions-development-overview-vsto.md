@@ -1,5 +1,7 @@
 ---
 title: Office çözümleri geliştirmesine genel bakış (VSTO)
+description: Word 'deki sözcük işleme özellikleri ve Excel 'in veri analizi özellikleri gibi tanıdık Microsoft Office Kullanıcı arabirimleri ve araçları için özelleştirmeler geliştirmeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5c1e9ce9ff2ab0a55de0a7e51325885d86c2fbf1
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 9bb964e90c44c4e0b41e0f09df8931665426dc70
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90811025"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97527718"
 ---
 # <a name="office-solutions-development-overview-vsto"></a>Office çözümleri geliştirmesine genel bakış (VSTO)
   Çözüm için ön uç olarak Microsoft Office kullanarak, Word 'deki sözcük işleme özellikleri, Excel 'in veri analizi özellikleri ve Outlook 'un e-posta yönetimi özellikleri gibi tanıdık Microsoft Office Kullanıcı arabirimleri ve araçlarından faydalanabilirsiniz. Visual Studio 'da Office uygulamalarını özelleştirmek ve iş işlemleriniz için gereken belirli özellikleri eklemek için çözümler geliştirebilirsiniz. Örneğin, Word 'Ü, düzenlenebilir veya düzenlenemez hale getirilen, önceden var olan parçaların dışına çeviren sözleşmeleri bir sözleşme oluşturucusuna dönüştürebilirsiniz. Excel ile, farklı projeler için özelleştirilmiş bir otomatik bütçe çalışma sayfası oluşturabilirsiniz. Kullanıcılarınız Ayrıca, Web tabanlı bir mimari kullanıyorsanız, karmaşık çözümlerin daha pratik olmasını sağlayan Office çözümlerini çevrimdışına alabilir.

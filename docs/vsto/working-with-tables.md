@@ -1,5 +1,7 @@
 ---
 title: Tablolarla çalışma
+description: Office projelerinde tablolarla çalışmak üzere Microsoft Word 'ün nesne modelini kullanmaya yönelik adım adım yordamlar ve kod örnekleri hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f1102a996f06634396f8bec3a02400fa952810e5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 27fdc776589879af6757967b18a7cac47f9f66df
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62815358"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97526852"
 ---
 # <a name="work-with-tables"></a>Tablolarla çalışma
   Bu bölümdeki konularda, Office projelerinde tablolarla çalışmak üzere Microsoft Office Word nesne modelini kullanmak için adım adım yordamlar ve kod örnekleri sağlanmaktadır. Bazı durumlarda, bu görevleri VSTO eklentilerinde gerçekleştirdiğiniz yollar, belge düzeyi özelleştirmelerde gerçekleştirdiğiniz yöntemlerle farklıdır.

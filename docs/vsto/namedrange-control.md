@@ -1,5 +1,7 @@
 ---
 title: NamedRange denetimi
+description: NamedRange denetiminin benzersiz bir ada sahip, olayları açığa çıkaran ve verilere bağlanabilen bir Aralık olduğunu öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e2b5b5d246e1033148bc199da6e7d2bdfb7aa9b3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f1881afb0dd718eec3815ab9de3becbeaf070f5d
+ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71254721"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97528093"
 ---
 # <a name="namedrange-control"></a>NamedRange denetimi
   <xref:Microsoft.Office.Tools.Excel.NamedRange>Denetim, benzersiz bir ada sahip, olayları ortaya çıkaran ve verilere bağlanabilen bir aralıktır. Daha fazla bilgi için bkz. [Excel nesne modeline genel bakış](../vsto/excel-object-model-overview.md).
@@ -50,7 +52,7 @@ ms.locfileid: "71254721"
  Bir denetime uygulanabilen biçimlendirme <xref:Microsoft.Office.Interop.Excel.Range> , bir <xref:Microsoft.Office.Tools.Excel.NamedRange> denetime uygulanabilir. Bu, kenarlıkları, yazı tiplerini, sayı biçimlerini ve stilleri içerir.
 
 ## <a name="rename-the-control"></a>Denetimi yeniden adlandırma
- <xref:Microsoft.Office.Tools.Excel.NamedRange> **Araç kutusundan**çalışma sayfanıza bir denetim eklediğinizde, Visual Studio otomatik olarak denetim için bir ad oluşturur. **Özellikler** penceresinde adı değiştirebilirsiniz.
+ <xref:Microsoft.Office.Tools.Excel.NamedRange> **Araç kutusundan** çalışma sayfanıza bir denetim eklediğinizde, Visual Studio otomatik olarak denetim için bir ad oluşturur. **Özellikler** penceresinde adı değiştirebilirsiniz.
 
 ## <a name="events"></a>Ekinlikler
  Denetim için aşağıdaki olaylar mevcuttur <xref:Microsoft.Office.Tools.Excel.NamedRange> :
