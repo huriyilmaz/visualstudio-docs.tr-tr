@@ -1,5 +1,7 @@
 ---
 title: Yan yana dosya Ilişkilendirmelerini yönetme | Microsoft Docs
+description: VSPackage, dosya ilişkilendirmeleri sağlıyorsa, Visual Studio 'nun belirli bir sürümünün bir dosyayı açtığı yan yana yüklemelerin nasıl işleneceğini belirleyin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6c284fe7ef4c2d07051a8524860583cb634e13bf
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 477afbd5bc4586d8c46db11b036364f8058133b0
+ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80702757"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97616350"
 ---
 # <a name="manage-side-by-side-file-associations"></a>Yan yana dosya ilişkilendirmelerini yönetme
 
@@ -23,7 +25,7 @@ VSPackage, dosya ilişkilendirmeleri sağlıyorsa, bir dosyayı açmak için bel
 
 Kullanıcılar bir ürünün yeni bir sürümünü önceki sürümlerle uyumlu olmasını bekler, böylece mevcut dosyalar verileri kaybetmeden yeni bir sürüme yüklenebilir. İdeal olarak, VSPackage, önceki sürümlerin dosya biçimlerini yükleyebilir ve kaydedebilir. Bu doğru değilse, dosya biçimini VSPackage 'ın yeni sürümüne yükseltmeniz gerekir. Bu yaklaşımın dezavantajı, yükseltilen dosyanın önceki sürümde açılamıdır.
 
-Bu sorundan kaçınmak için, dosya biçimleri uyumsuz hale geldiğinde uzantıları değiştirebilirsiniz. Örneğin, VSPackage 'ın 1. sürümü, *. mypkg10*uzantısını kullanabilir ve sürüm 2 ' yi kullanabilir. *mypkg20*. Bu fark, belirli bir dosyayı açan VSPackage 'ı tanımlar. Eski bir uzantıyla ilişkili programlar listesine daha yeni VSPackages eklerseniz, kullanıcılar dosyaya sağ tıklayıp daha yeni bir VSPackage içinde açmayı seçebilir. Bu noktada, VSPackage, dosyayı yeni biçime yükseltebilir veya dosyayı açıp VSPackage 'ın önceki sürümleriyle uyumluluğu sürdürmenize olanak sağlayabilir.
+Bu sorundan kaçınmak için, dosya biçimleri uyumsuz hale geldiğinde uzantıları değiştirebilirsiniz. Örneğin, VSPackage 'ın 1. sürümü, *. mypkg10* uzantısını kullanabilir ve sürüm 2 ' yi kullanabilir. *mypkg20*. Bu fark, belirli bir dosyayı açan VSPackage 'ı tanımlar. Eski bir uzantıyla ilişkili programlar listesine daha yeni VSPackages eklerseniz, kullanıcılar dosyaya sağ tıklayıp daha yeni bir VSPackage içinde açmayı seçebilir. Bu noktada, VSPackage, dosyayı yeni biçime yükseltebilir veya dosyayı açıp VSPackage 'ın önceki sürümleriyle uyumluluğu sürdürmenize olanak sağlayabilir.
 
 > [!NOTE]
 > Bu yaklaşımları birleştirebilirsiniz. Örneğin, daha eski bir dosyayı yükleyerek ve Kullanıcı dosyayı kaydettiğinde dosya biçimini yükseltmek için bir geri uyumluluk sunabilirsiniz.
@@ -65,7 +67,7 @@ Birden çok yan yana VSPackages 'ın aynı uzantıyı kullanmasını istiyorsan�
   |CA_SetDevenvLatest_2003|DEVENV_EXE_2003 DEVENV_EXE_2005 DEĞIL|420|
   |CA_SetDevenvLatest_2005|DEVENV_EXE_2005|430|
 
-   Windows Installer paketinin kayıt defteri tablosundaki DEVENV_EXE_LATEST özelliğini kullanarak **HKEY_CLASSES_ROOT*ProgID*shellopencommand** anahtarının varsayılan değerini yazın, [DEVENV_EXE_LATEST] "%1"
+   Windows Installer paketinin kayıt defteri tablosundaki DEVENV_EXE_LATEST özelliğini kullanarak **HKEY_CLASSES_ROOT *ProgID* shellopencommand** anahtarının varsayılan değerini yazın, [DEVENV_EXE_LATEST] "%1"
 
 - Kullanılabilir VSPackage sürümlerinden en iyi seçimi yapasağlayan bir paylaşılan Başlatıcı programı çalıştırın.
 

@@ -1,5 +1,5 @@
 ---
-title: Çözümler ve projeler
+title: Çözümler ve projelere genel bakış
 description: Visual Studio projeleri ve çözümleri hakkında, bir şablondan yeni projeler oluşturma ve Çözüm Gezgini projeleri görüntüleme & yönetme hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 12/15/2020
@@ -22,12 +22,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ebe6e5c7479ce4e3cda435c51a883c4d5db8cc45
-ms.sourcegitcommit: 6f37100d4b8c15a21d3858335ded3c26ab275b93
+ms.openlocfilehash: 1981bc5c9d1c2589607f355528c332d01284917e
+ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97599505"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97615759"
 ---
 # <a name="solutions-and-projects-in-visual-studio"></a>Visual Studio 'da çözümler ve projeler
 
@@ -68,11 +68,11 @@ Bir "Çözüm klasörü", yalnızca **Çözüm Gezgini** olan ve bir çözümdek
 
 ## <a name="create-new-projects"></a>Yeni projeler oluştur
 
-Yeni bir proje oluşturmanın en kolay yolu, belirli bir uygulama veya Web sitesi türü için proje şablonundan başlamadır. Proje şablonu, önceden oluşturulmuş temel bir kod dosyaları, yapılandırma dosyaları, varlıklar ve ayarlar kümesinden oluşur. Bu şablonlar, yeni bir proje oluşturduğunuz iletişim kutusunda (**Dosya**  >  **Yeni**  >  **Proje**) kullanılabilir. Daha fazla bilgi için bkz. [Yeni proje oluşturma](create-new-project.md) ve [çözümlerle ve projelerle çalışma](../ide/creating-solutions-and-projects.md).
+Yeni bir proje oluşturmanın en kolay yolu, istediğiniz proje türü için bir proje şablonu kullanmaktır. Proje şablonu, önceden oluşturulmuş temel bir kod dosyaları, yapılandırma dosyaları, varlıklar ve ayarlar kümesi içerir. **Dosya**  >  **Yeni**  >  **Proje** ' yi kullanarak bir proje şablonu seçin. Daha fazla bilgi için bkz. [Yeni proje oluşturma](create-new-project.md).
 
-Projelerinizi genellikle belirli bir şekilde özelleştirirseniz, daha sonra yeni projeler oluşturmak için kullanabileceğiniz özel bir proje şablonu oluşturabilirsiniz. Daha fazla bilgi için bkz. [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md).
+Ayrıca, ' den yeni projeler oluşturmak için kullanabileceğiniz özel bir proje şablonu da oluşturabilirsiniz. Daha fazla bilgi için bkz. [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md).
 
-Yeni bir proje oluşturduğunuzda, varsayılan olarak *%USERPROFILE%\source\repos dizinine* kaydedilir. Bu konumu, **Araçlar**   >  **Seçenekler**  >  **Projeler ve çözüm**  >  **konumları** altındaki projeler konum ayarında değiştirebilirsiniz. Bu ve diğer projeler ve çözüm ayarları hakkında daha fazla bilgi için bkz. [Projeler ve çözümler sayfası, Seçenekler iletişim kutusu](./reference/projects-and-solutions-options-dialog-box.md).
+Yeni bir proje oluşturduğunuzda, Visual Studio onu varsayılan konumuna, *%userprofile%\source\repos dizinine* kaydeder. Bu konumu değiştirmek için **Araçlar**  >  **Seçenekler**  >  **Projeler ve çözümler**  >  **konumlar**' a gidin. Daha fazla bilgi için bkz. [Seçenekler iletişim kutusu: projeler ve çözümler > konumları](./reference/projects-solutions-locations-options.md).
 
 ## <a name="solution-explorer"></a>Çözüm Gezgini
 
@@ -94,4 +94,3 @@ ASP.NET Core projeleri için, dosyaların **Çözüm Gezgini** nasıl iç içe y
 - [Visual Studio IDE](../get-started/visual-studio-ide.md)
 - [Projeleri taşıma, geçirme ve yükseltme](../porting/port-migrate-and-upgrade-visual-studio-projects.md)
 - [Projeler ve çözümler (Mac için Visual Studio)](/visualstudio/mac/projects-and-solutions)
-- [Proje öğeleri ekleme ve kaldırma (Mac için Visual Studio)](/visualstudio/mac/add-and-remove-project-items)

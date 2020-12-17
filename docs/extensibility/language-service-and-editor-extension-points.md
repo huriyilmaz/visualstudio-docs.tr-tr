@@ -1,5 +1,7 @@
 ---
 title: Dil hizmeti ve Düzenleyici uzantı noktaları | Microsoft Docs
+description: Visual Studio kod düzenleyicisinde, çoğu dil hizmeti özelliği de dahil olmak üzere genişletebilmeniz gereken uzantı noktaları hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 28bb086eb99e4b8128c04f62f9b370eb2eab8fa3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 06329fcfcefe3ea75b772495f6a7e0dd14ced087
+ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80703053"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97615557"
 ---
 # <a name="language-service-and-editor-extension-points"></a>Dil hizmeti ve Düzenleyici uzantı noktaları
 Düzenleyici, çoğu dil hizmeti özelliği de dahil olmak üzere Managed Extensibility Framework (MEF) bileşen parçaları olarak genişletebileceğinizi uzantı noktaları sağlar. Bunlar ana uzantı noktası kategorileridir:

@@ -6,12 +6,12 @@ ms.author: dominicn
 ms.date: 05/06/2018
 ms.assetid: 852B6A9D-AEFA-4EF4-A5DD-94A506019D20
 ms.custom: video
-ms.openlocfilehash: 33148c5202251525504864f26177da4497b5fabe
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 31e38d728eb3c336b1d3160a920ef18055de1b1f
+ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74983563"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97616307"
 ---
 # <a name="working-with-git"></a>Git ile çalışma
 
@@ -27,9 +27,9 @@ Aşağıdaki görüntüde sürüm denetim menüsü öğesi tarafından Mac için
 
 ## <a name="push-and-pull"></a>Gönderim ve çekme
 
-Git içinde en sık kullanılan eylemlerden biri gönderiliyor ve çekiliyor. Diğer kişilerin uzak depoya yaptığı değişiklikleri eşleştirmek için Buradan **çekmeniz** gerekir. Bu, **sürüm denetimi > güncelleştirme çözümü**seçilerek Mac için Visual Studio yapılır.
+Git içinde en sık kullanılan eylemlerden biri gönderiliyor ve çekiliyor. Diğer kişilerin uzak depoya yaptığı değişiklikleri eşleştirmek için Buradan **çekmeniz** gerekir. Bu, **sürüm denetimi > güncelleştirme çözümü** seçilerek Mac için Visual Studio yapılır.
 
-Dosyalarınızı güncelleştirdikten sonra gözden geçirdikten ve kaydettikten sonra başkalarının değişikliklere erişmesine izin vermek **için bunları uzak** depoya göndermeniz gerekir. Bu, **sürüm denetimi > gönderme değişiklikleri**seçilerek Mac için Visual Studio yapılır. Bu, anında Iletme iletişim kutusunu görüntüleyerek, kaydedilen değişiklikleri görüntülemenize ve şu şekilde gönderim yapılacak dalı seçmenizi sağlar:
+Dosyalarınızı güncelleştirdikten sonra gözden geçirdikten ve kaydettikten sonra başkalarının değişikliklere erişmesine izin vermek **için bunları uzak** depoya göndermeniz gerekir. Bu, **sürüm denetimi > gönderme değişiklikleri** seçilerek Mac için Visual Studio yapılır. Bu, anında Iletme iletişim kutusunu görüntüleyerek, kaydedilen değişiklikleri görüntülemenize ve şu şekilde gönderim yapılacak dalı seçmenizi sağlar:
 
 ![Yürütülecek dalı gösteren iletişim kutusu](media/version-control-gitPush.png)
 
@@ -61,7 +61,7 @@ Bunlar aşağıdaki eylemlere izin verir:
 
 Varsayılan olarak, bir depoda oluşturulan ilk dal, **ana** dal olarak bilinir. Ana dal ile diğeri arasında teknik açıdan farklılık yoktur, ancak ana dal, geliştirme ekiplerinde en sık ' Live ' veya ' üretim ' dalı olarak düşündük.
 
-Bağımsız bir geliştirme hattı, ana öğe (veya başka bir dal) üzerinde dallandırarak oluşturulabilir. Bu, ana dalın zaman içinde yeni bir sürümünü sağlar ve ' canlı ' ' den bağımsız olarak geliştirmeye olanak tanır. Dalları bu şekilde kullanmak, genellikle yazılım geliştirmede özellikler için kullanılır
+Bağımsız bir geliştirme hattı, ana (veya başka bir dalın bu şekilde) dallandırarak oluşturulabilir. Bu, bir noktada ana dalın yeni bir sürümünü sağlar ve ' canlı ' ' den bağımsız olarak geliştirmeye olanak tanır. Dalları bu şekilde kullanmak, genellikle yazılım geliştirmede özellikler için kullanılır
 
 Kullanıcılar her depo için istedikleri kadar çok dal oluşturabilir, ancak bir dalı kullanmayı bitirdikten sonra depoyu düzenli tutmak üzere silmiş olması önerilir.
 

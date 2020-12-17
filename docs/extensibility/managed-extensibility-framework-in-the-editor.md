@@ -1,5 +1,7 @@
 ---
 title: Düzenleyicide Managed Extensibility Framework | Microsoft Docs
+description: Visual Studio SDK 'da düzenleyiciyi genişletmek için kendi bileşenlerinizi oluşturmanıza olanak sağlayan Managed Extensibility Framework hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 888c5206b87079cf9fa91cb68e9801cb3c4f8c1a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dd6ed0e495056bf2924e46bfdfcd074daf1faf87
+ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80702876"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97615596"
 ---
 # <a name="managed-extensibility-framework-in-the-editor"></a>Düzenleyicide Managed Extensibility Framework
 Düzenleyici, Managed Extensibility Framework (MEF) bileşenleri kullanılarak oluşturulur. Düzenleyiciyi genişletmek için kendi MEF bileşenlerinizi oluşturabilirsiniz ve kodunuz da düzenleyici bileşenlerini kullanabilir.
@@ -82,7 +84,7 @@ internal IClassificationTypeRegistryService ClassificationRegistry;
 
 #### <a name="to-consume-editor-functionality-from-a-mef-component-part"></a>Bir MEF bileşeni bölümünden düzenleyici işlevlerini kullanmak için
 
-1. Genel derleme önbelleğinde (GAC) ve düzenleyici derlemelerindeki *System.Composition.ComponentModel.dll*başvuruları ekleyin.
+1. Genel derleme önbelleğinde (GAC) ve düzenleyici derlemelerindeki *System.Composition.ComponentModel.dll* başvuruları ekleyin.
 
 2. İlgili using yönergelerini ekleyin.
 

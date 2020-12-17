@@ -1,5 +1,7 @@
 ---
 title: Bir çözümde proje yüklemeyi yönetme | Microsoft Docs
+description: Geliştiricilerin çözüm yükleme sürelerini nasıl azaltabileceğini ve bir çözüm yük Yöneticisi oluşturarak proje yükleme davranışını nasıl yönetebileceğini öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 21cd5e7e557e795db49aea7a14e8e4cc7caa0422
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 093db17990d538bf72ddeab9ba9da2b8db30d8f0
+ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80702726"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97616363"
 ---
 # <a name="manage-project-loading-in-a-solution"></a>Bir çözümde proje yüklemeyi yönetme
 Visual Studio çözümleri, çok sayıda proje içerebilir. Varsayılan Visual Studio davranışı, çözüm açıldığı sırada bir Çözümdeki tüm projeleri yüklemek ve tümünün yüklemeyi bitirene kadar herhangi bir projede erişime izin vermek değildir. Proje yükleme işleminin süresi iki dakikadan uzun sürer, yüklenen proje sayısını ve toplam proje sayısını gösteren bir ilerleme çubuğu görüntülenir. Kullanıcı birden çok projeyle oluşan bir çözümde çalışırken projeleri kaldırabilirler, ancak bu yordamın bazı dezavantajları vardır: kaldırılan projeler, yeniden derleme çözümünün bir parçası olarak derlenmez ve kapalı projelerin türlerin ve üyelerinin IntelliSense açıklamaları gösterilmez.
@@ -65,7 +67,7 @@ pSolution.SetProperty((int)__VSPROPID4.VSPROPID_ActiveSolutionLoadManager, objLo
 
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents.OnAfterBackgroundSolutionLoadComplete%2A>: Bu olay, bir çözüm yükleme yöneticisi olup olmadığına bakılmaksızın, bir çözüm başlangıçta tamamen yüklendikten sonra tetiklenir. Ayrıca, çözüm tam olarak yüklendiğinde arka plan yükleme veya talep yükleme sonrasında da tetiklenir. Aynı zamanda yeniden <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionExistsAndFullyLoaded_guid> etkinleştirilir.
 
-- <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents.OnQueryBackgroundLoadProjectBatch%2A>: Bu olay bir proje (veya projeleri) yüklenmeden önce tetiklenir. Projeler yüklenmeden önce diğer arka plan işlemlerinin tamamlandığından emin olmak için, `pfShouldDelayLoadToNextIdle` **true**olarak ayarlayın.
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents.OnQueryBackgroundLoadProjectBatch%2A>: Bu olay bir proje (veya projeleri) yüklenmeden önce tetiklenir. Projeler yüklenmeden önce diğer arka plan işlemlerinin tamamlandığından emin olmak için, `pfShouldDelayLoadToNextIdle` **true** olarak ayarlayın.
 
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents.OnBeforeLoadProjectBatch%2A>: Bu olay bir proje toplu işi yüklenirken tetiklenir. `fIsBackgroundIdleBatch`True ise, projeler arka planda yüklenir; `fIsBackgroundIdleBatch` yanlışsa, bir Kullanıcı isteği sonucunda projeler zaman uyumlu olarak yüklenir; Örneğin, Kullanıcı Çözüm Gezgini bekleyen bir projeyi genişlediğinde. Bu olayı, aksi takdirde ' de gerçekleştirilmesi gereken pahalı bir iş yapmak için işleyebilirsiniz <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnAfterOpenProject%2A> .
 

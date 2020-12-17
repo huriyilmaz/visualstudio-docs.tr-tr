@@ -1,5 +1,7 @@
 ---
 title: Visual Studio 'Yu bulma | Microsoft Docs
+description: Aynı Visual Studio sürümünün birden fazla örneğini yükleyebilirsiniz. İstediğiniz örneği bulmak için bir COM sorgu API 'sini nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 08/21/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: heaths
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 93a6f39a9240002cd8008c9368799e10ab63b78d
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: 8935af62b16ed6dd6d0d5d61412f347a95f32f23
+ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012483"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97616294"
 ---
 # <a name="locate-visual-studio"></a>Visual Studio’yu Bulma
 

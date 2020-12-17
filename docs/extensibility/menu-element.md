@@ -1,5 +1,7 @@
 ---
 title: Menü öğesi | Microsoft Docs
+description: Menü öğesi bir menü öğesi tanımlar. Menü türleri bağlam, menü, MenuController, Menucontrollerlalenmiş, Toolbar ve ToolWindowToolbar.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 020098a3026f600629b8ab186431a1d2d5d7795a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f20e05c50bf208490edd237299653a3caa6b559f
+ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87453660"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97616084"
 ---
 # <a name="menu-element"></a>Menü öğesi
 Bir menü öğesini tanımlar. Bunlar arasında altı menü türü bulunur: bağlam, menü, MenuController, Menucontrollerlalenmiş, Toolbar ve ToolWindowToolbar.

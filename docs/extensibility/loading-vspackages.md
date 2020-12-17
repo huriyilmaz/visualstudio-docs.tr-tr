@@ -1,5 +1,7 @@
 ---
 title: VSPackages yükleniyor | Microsoft Docs
+description: Performansı artırmak için mümkün olduğunda kullanılan Gecikmeli yükleme dahil olmak üzere Visual Studio 'da VSPackages yükleme hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b1c221bf06ef3b7e37e2afc1856f3e54fe5ad95e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0aeab78a2f64be2df6f601ad8ed224f13071eb8c
+ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80702962"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97616110"
 ---
 # <a name="load-vspackages"></a>VSPackages yükleme
 VSPackages, yalnızca işlevleri gerekli olduğunda Visual Studio 'ya yüklenir. Örneğin, Visual Studio bir proje fabrikası veya VSPackage 'ın uyguladığı bir hizmet kullandığında VSPackage yüklenir. Bu özellik Gecikmeli yükleme olarak adlandırılır ve performansı artırmak için kullanılır.
@@ -35,7 +37,7 @@ VSPackages, yalnızca işlevleri gerekli olduğunda Visual Studio 'ya yüklenir.
     [PackageRegistration(UseManagedResourcesOnly = true)]
     [ProvideAutoLoad(UIContextGuids80.SolutionExists)]
     [Guid("00000000-0000-0000-0000-000000000000")] // your specific package GUID
-    public class MyAutoloadedPackage : Package
+    public class MyAutoloadedPackage : Package
     {. . .}
     ```
 

@@ -1,5 +1,7 @@
 ---
 title: VSPackages 'yi yönetme | Microsoft Docs
+description: Visual Studio tarafından sunulan varsayılan VSPackage yönetimini ne zaman kullanabileceğinizi ve nasıl ve ne zaman özelleştirildiğini bilmeniz için VSPackages 'yi yönetme hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 60745d07679ae53b85d169473ed37ab314b67624
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6a040777671a5d6a4378e9b2ad68b2ffa2fabaeb
+ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80702646"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97615746"
 ---
 # <a name="manage-vspackages"></a>VSPackage’ları Yönetme
 Çoğu durumda, proje ve öğe şablonları paketi otomatik olarak kaydedip yüklerken VSPackages 'leri yönetme konusunda endişelenmenize gerek kalmaz. Ancak, bazı durumlarda paketinizi yönetmek için biraz daha fazla bilgi almanız gerekebilir.

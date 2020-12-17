@@ -6,12 +6,12 @@ ms.author: jomatthi
 ms.date: 11/09/2020
 ms.assetid: 852B6A9D-AEFA-4EF4-A5DD-94A506019D20
 ms.custom: video
-ms.openlocfilehash: 148a72fb13ff34e3fa15f0c56e145a70fa16608d
-ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
+ms.openlocfilehash: dc865ec593f53149d9c004f252015def32325d18
+ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94493237"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97616183"
 ---
 # <a name="working-with-git"></a>Git ile çalışma
 
@@ -61,11 +61,11 @@ Bunlar aşağıdaki eylemlere izin verir:
 
 Varsayılan olarak, bir depoda oluşturulan ilk dal, **ana** dal olarak bilinir. Ana dal ile diğeri arasında teknik açıdan farklılık yoktur, ancak ana dal, geliştirme ekiplerinde en sık ' Live ' veya ' üretim ' dalı olarak düşündük.
 
-Bağımsız bir geliştirme hattı, ana öğe (veya başka bir dal) üzerinde dallandırarak oluşturulabilir. Bu, ana dalın zaman içinde yeni bir sürümünü sağlar ve ' canlı ' ' den bağımsız olarak geliştirmeye olanak tanır. Dalları bu şekilde kullanmak, genellikle yazılım geliştirmede özellikler için kullanılır
+Bağımsız bir geliştirme hattı, ana (veya başka bir dalın bu şekilde) dallandırarak oluşturulabilir. Bu, bir noktada ana dalın yeni bir sürümünü sağlar ve ' canlı ' ' den bağımsız olarak geliştirmeye olanak tanır. Dalları bu şekilde kullanmak, genellikle yazılım geliştirmede özellikler için kullanılır
 
 Kullanıcılar her depo için istedikleri kadar çok dal oluşturabilir, ancak bir dalı kullanmayı bitirdikten sonra depoyu düzenli tutmak üzere silmiş olması önerilir.
 
-Dallar, sürüm denetimine göz atarak Mac için Visual Studio **ve uzak dalları yönetmek > görüntülenir...** :
+Dallar, sürüm denetimine göz atarak Mac için Visual Studio **ve uzak dalları yönetmek > görüntülenir...**:
 
 ![Dallar görünümü](media/version-control-gitBranch2.png)
 
@@ -91,7 +91,7 @@ Sürüm denetimine göz atarak, **çözüm ve COMMIT menü öğesini gözden ge�
 
 Bu, bir proje dosyasındaki tüm değişikliklerin, alma, düzeltme eki oluşturma veya tamamlama seçeneğiyle görüntülenmesine olanak sağlar.
 
-Uzak depoya bir dosyayı kaydetmek için, **Kaydet** ' e basın, bir teslim iletisi girin ve Kaydet düğmesini kullanarak onaylayın:
+Uzak depoya bir dosyayı kaydetmek için, **Kaydet**' e basın, bir teslim iletisi girin ve Kaydet düğmesini kullanarak onaylayın:
 
 ![Dosya yürütülüyor](media/version-control-gitCommit.png)
 

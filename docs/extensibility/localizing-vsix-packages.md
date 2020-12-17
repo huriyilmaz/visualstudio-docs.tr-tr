@@ -1,5 +1,7 @@
 ---
 title: VSıX paketlerini yerelleştirme | Microsoft Docs
+description: Her hedef dil için bir Extension. valtlangpack dosyası oluşturarak ve bunları doğru klasöre yerleştirerek bir VSıX paketini nasıl yerelleştirebileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 10/26/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7d2d4222e45d56447951e86d558af9983a0d1cc9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cc9f7055145748e0625788e7487bb978911bae7f
+ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80702895"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97615544"
 ---
 # <a name="localizing-vsix-packages"></a>VSIX Paketlerini Yerelleştirme
 
@@ -41,7 +43,7 @@ VSıX paketinizin içeriği menü komutları veya diğer kullanıcı arabirimi e
 ```
 
 > [!NOTE]
-> VSıX için desteklenen proje şablonları [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)] BIR VSIX bildirimi oluşturur ve bunu *kaynak. Extension. valtmanifest*olarak adlandırın. Visual Studio projeyi oluşturduğunda, bu dosyanın içeriğini VSıX paketindeki. Valtmanifest uzantısına kopyalar.
+> VSıX için desteklenen proje şablonları [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)] BIR VSIX bildirimi oluşturur ve bunu *kaynak. Extension. valtmanifest* olarak adlandırın. Visual Studio projeyi oluşturduğunda, bu dosyanın içeriğini VSıX paketindeki. Valtmanifest uzantısına kopyalar.
 
 ## <a name="the-extensionvsixlangpack-file"></a>. Valtlangpack dosyası uzantısı
 

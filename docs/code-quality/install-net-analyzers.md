@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: f7dfa1c79af832cc54d9aee72eeafbf20bbde707
-ms.sourcegitcommit: 40d758f779d42c66cb02ae7face8a62763a8662b
+ms.openlocfilehash: ea13fde64f6214cf3c219de45c79458b75e1caf8
+ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97398422"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97615531"
 ---
 # <a name="enable-or-install-first-party-net-analyzers"></a>Birinci taraf .NET çözümleyicilerinin etkinleştirilmesi veya yüklenmesi
 
@@ -31,7 +31,7 @@ Birinci taraf .NET Çözümleyicileri 'ni aşağıdaki yollarla etkinleştirebil
 - **NuGet paketi olarak yükleyebilirsiniz**: .NET 5 + SDK ' ya geçmek istemiyorsanız veya bir NuGet paket tabanlı modeli tercih ediyorsanız, çözümleyiciler `Microsoft.CodeAnalysis.NetAnalyzers` Visual Studio 2019 üzerinde [NuGet paketinde](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers) de mevcuttur.  İsteğe bağlı sürüm güncelleştirmeleri için paket tabanlı bir model tercih edebilirsiniz. Visual Studio 2017 kullanıyorsanız, `2.9.x` `Microsoft.CodeAnalysis.FxCopAnalyzers` bunun yerine [NuGet paketinin](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/) en son sürümünü yükleyebilirsiniz.
 
 > [!NOTE]
-> `Microsoft.CodeAnalysis.NetAnalyzers`Mümkün olduğunda, [NuGet paketini](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers)yüklemek yerine, çözümleyiciler .NET SDK 'dan etkinleştirmeniz önerilir. .NET SDK 'dan Çözümleyicileri etkinleştirmek, SDK 'Yı güncelleştirdikten hemen sonra otomatik olarak çözümleyici hata düzeltmeleri ve yeni çözümleyiciler almanızı sağlar.
+> `Microsoft.CodeAnalysis.NetAnalyzers`Mümkün olduğunda, [NuGet paketini](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers)yüklemek yerine, çözümleyiciler .NET SDK 'dan etkinleştirmeniz önerilir. .NET SDK 'dan Çözümleyicileri etkinleştirmek, SDK 'Yı güncelleştirdikten hemen sonra otomatik olarak çözümleyici hata düzeltmeleri ve yeni çözümleyiciler almanızı sağlar. NuGet modelinde, en son hata düzeltmelerini istediğiniz her seferinde NuGet paketini güncelleştirmeniz gerekir. NuGet paketi daha sık güncelleştirilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

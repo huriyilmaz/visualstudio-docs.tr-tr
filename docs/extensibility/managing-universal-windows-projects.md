@@ -1,5 +1,7 @@
 ---
 title: Evrensel Windows projelerini yönetme | Microsoft Docs
+description: Evrensel Windows uygulamalarını desteklemek için, projeleri yöneten Visual Studio uzantıları, Evrensel Windows uygulaması proje yapısına dikkat edilmelidir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 47926aa1-3b41-410d-bca8-f77fc950cbe7
@@ -8,24 +10,24 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 83e3b07bc3373070953709ffe913f37529e74bc7
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: f86edd33e7719dc326aa2c5d252d11322509de64
+ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012314"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97615570"
 ---
 # <a name="manage-universal-windows-projects"></a>Evrensel Windows projelerini yönetme
 
 Evrensel Windows uygulamaları, geliştiricilerin her iki platformda de kod ve diğer varlıkları kullanmasına izin veren Windows 8.1 ve Windows Phone 8,1 ' i hedefleyen uygulamalardır. Paylaşılan kod ve kaynaklar paylaşılan bir projede tutulur, ancak platforma özgü kod ve kaynaklar bir diğeri Windows ve diğeri de Windows Phone ayrı projelerde tutulur. Evrensel Windows uygulamaları hakkında daha fazla bilgi için bkz. [Evrensel Windows uygulamaları](/windows/uwp/get-started/create-uwp-apps). Projeleri yöneten Visual Studio uzantıları, Evrensel Windows uygulama projelerinin tek platformlu uygulamalardan farklı bir yapıya sahip olduğunu bilmelidir. Bu izlenecek yol, paylaşılan projenin nasıl gezindiğini ve paylaşılan öğelerin nasıl yönetileceğini gösterir.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yüklememeyin. Visual Studio kurulumunda isteğe bağlı bir özellik olarak eklenmiştir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
 
 ### <a name="navigate-the-shared-project"></a>Paylaşılan projede gezin
 
-1. **Testüniversalproject**ADLı BIR C# VSIX projesi oluşturun. (**Dosya**  >  **Yeni**  >  **Project** ve sonra **C#**  >  **genişletilebilirliği**  >  **Visual Studio paketi**). Özel bir **komut** projesi öğe şablonu ekleyin ( **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve **Add**  >  **Yeni öğe**Ekle ' yi seçin, ardından **genişletilebilirlik**'e gidin). **Testüniversalproject**dosyasını adlandırın.
+1. **Testüniversalproject** ADLı BIR C# VSIX projesi oluşturun. (**Dosya**  >  **Yeni**  >  **Project** ve sonra **C#**  >  **genişletilebilirliği**  >  **Visual Studio paketi**). Özel bir **komut** projesi öğe şablonu ekleyin ( **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve   >  **Yeni öğe** Ekle ' yi seçin, ardından **genişletilebilirlik**'e gidin). **Testüniversalproject** dosyasını adlandırın.
 
 2. *Microsoft.VisualStudio.Shell.Interop.12.1.DesignTime.dll* ve *Microsoft.VisualStudio.Shell.Interop.14.0.DesignTime.dll* ( **Uzantılar** bölümünde) bir başvuru ekleyin.
 
@@ -126,7 +128,7 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
     }
     ```
 
-9. `ShowMessageBox`Yönteminde, paylaşılan projenin başlık ( **Çözüm Gezgini**görüntülenen proje adı) başlığını çıkış.
+9. `ShowMessageBox`Yönteminde, paylaşılan projenin başlık ( **Çözüm Gezgini** görüntülenen proje adı) başlığını çıkış.
 
     ```csharp
     private void ShowMessageBox(object sender, EventArgs e)
@@ -304,7 +306,7 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
 
 ### <a name="manage-the-shared-items-in-the-platform-project"></a>Platform projesindeki paylaşılan öğeleri yönetme
 
-1. Platform projesinde paylaşılan öğeleri bulun. Paylaşılan projedeki öğeler, platform projesinde paylaşılan öğeler olarak görüntülenir. Bunları **Çözüm Gezgini**göremez, ancak proje hiyerarşisine onları bulmak için bu adımları izleyebilirsiniz. Aşağıdaki yöntem hiyerarşiyi açıklar ve tüm paylaşılan öğeleri toplar. Bu, isteğe bağlı olarak her öğenin başlığını verir. Paylaşılan öğeler yeni özellik tarafından tanımlanır <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID7.VSHPROPID_IsSharedItem> .
+1. Platform projesinde paylaşılan öğeleri bulun. Paylaşılan projedeki öğeler, platform projesinde paylaşılan öğeler olarak görüntülenir. Bunları **Çözüm Gezgini** göremez, ancak proje hiyerarşisine onları bulmak için bu adımları izleyebilirsiniz. Aşağıdaki yöntem hiyerarşiyi açıklar ve tüm paylaşılan öğeleri toplar. Bu, isteğe bağlı olarak her öğenin başlığını verir. Paylaşılan öğeler yeni özellik tarafından tanımlanır <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID7.VSHPROPID_IsSharedItem> .
 
     ```csharp
     private void InspectHierarchyItems(IVsHierarchy hier, uint itemid, int level, List<uint> itemIds, bool getSharedItems, bool printItems)
@@ -417,13 +419,13 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
 
    2. Proje dosyası, dosyanın yeni adını içerecek şekilde güncelleştirilir.
 
-      Hiyerarşi olayları (örneğin, <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents> ), **Çözüm Gezgini**gibi Kullanıcı arabiriminde görünen değişiklikleri genellikle izler. Hiyerarşi olayları, dosya silmeyi ve sonra dosya eklemeyi bir dosya yeniden adlandırma işlemini ele alalım. Ancak, görünmeyen öğeler değiştirildiğinde, hiyerarşi olay sistemi bir olayı harekete vermez, <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> ancak <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A> olay vermez. Bu nedenle, bir platform projesindeki bir dosyayı yeniden adlandırırsanız, her ikisini de alırsınız <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A> , ancak paylaşılan bir projede bir dosyayı yeniden adlandırırsanız yalnızca alırsınız <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> .
+      Hiyerarşi olayları (örneğin, <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents> ), **Çözüm Gezgini** gibi Kullanıcı arabiriminde görünen değişiklikleri genellikle izler. Hiyerarşi olayları, dosya silmeyi ve sonra dosya eklemeyi bir dosya yeniden adlandırma işlemini ele alalım. Ancak, görünmeyen öğeler değiştirildiğinde, hiyerarşi olay sistemi bir olayı harekete vermez, <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> ancak <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A> olay vermez. Bu nedenle, bir platform projesindeki bir dosyayı yeniden adlandırırsanız, her ikisini de alırsınız <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A> , ancak paylaşılan bir projede bir dosyayı yeniden adlandırırsanız yalnızca alırsınız <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> .
 
       Proje öğelerindeki değişiklikleri izlemek için, DTE proje öğesi olaylarını (içinde bulunan <xref:EnvDTE.ProjectItemsEventsClass> ) işleyebilirsiniz. Ancak, çok sayıda olayı işliyorsa, içindeki olayları daha iyi işleme alabilirsiniz <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2> . Bu kılavuzda yalnızca hiyerarşi olayları ve DTE olayları gösterilmektedir. Bu yordamda paylaşılan bir projeye ve bir platform projesine bir olay dinleyicisi eklersiniz. Ardından, paylaşılan bir projedeki bir dosyayı ve bir platform projesindeki başka bir dosyayı yeniden adlandırdığınızda, her yeniden adlandırma işlemi için tetiklenen olayları görebilirsiniz.
 
       Bu yordamda paylaşılan bir projeye ve bir platform projesine bir olay dinleyicisi eklersiniz. Ardından, paylaşılan bir projedeki bir dosyayı ve bir platform projesindeki başka bir dosyayı yeniden adlandırdığınızda, her yeniden adlandırma işlemi için tetiklenen olayları görebilirsiniz.
 
-2. Olay dinleyicisi ekleyin. Projeye yeni bir sınıf dosyası ekleyin ve *HierarchyEventListener.cs*çağırın.
+2. Olay dinleyicisi ekleyin. Projeye yeni bir sınıf dosyası ekleyin ve *HierarchyEventListener.cs* çağırın.
 
 3. *HierarchyEventListener.cs* dosyasını açın ve aşağıdaki using yönergelerini ekleyin:
 

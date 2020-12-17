@@ -1,5 +1,7 @@
 ---
 title: 'Nasıl yapılır: yönetilen kodda birden çok Iş parçacığını yönetme | Microsoft Docs'
+description: Yönetilen VSPackage uzantınız zaman uyumsuz yöntemleri çağırırsa veya Visual Studio UI iş parçacığı üzerinde işlemler varsa, kodda birden çok iş parçacığını yönetmeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 59730063-cc29-4dae-baff-2234ad8d0c8f
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1fe5cef9f7aebcbfc93ffd057a109647e45b5967
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 480b42c13d13cdbdb299b629fd777e3346fcd67c
+ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86387076"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97616337"
 ---
 # <a name="how-to-manage-multiple-threads-in-managed-code"></a>Nasıl yapılır: yönetilen kodda birden çok iş parçacığını yönetme
 Zaman uyumsuz yöntemleri çağıran veya Visual Studio UI iş parçacığı dışındaki iş parçacıklarında yürütülen işlemler içeren bir yönetilen VSPackage uzantınız varsa, aşağıda verilen yönergeleri izlemelisiniz. Başka bir iş parçacığında çalışmanın tamamlanmasını beklemek zorunda olmadığından UI iş parçacığını yanıt vermeye devam edebilirsiniz. Yığın alanı alan ek iş parçacıklarından ve hata ayıklamadan ve yanıt vermeyen koddan emin olmadığınız için kodunuzu daha verimli hale getirebilirsiniz.

@@ -1,5 +1,7 @@
 ---
 title: Menüler öğesi | Microsoft Docs
+description: Menüler öğesi, VSPackage 'ın uyguladığı tüm menüleri ve araç çubuklarını tanımlar. Bu makale bir örnek içerir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a6382abed36aba66087066bf5664ae55682e39e2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: abc5621784579c295393d77c792013dd0c737871
+ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80702585"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97615583"
 ---
 # <a name="menus-element"></a>Menüler öğesi
 VSPackage 'ın uyguladığı tüm menüleri ve araç çubuklarını tanımlar.

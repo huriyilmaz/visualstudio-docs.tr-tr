@@ -1,5 +1,7 @@
 ---
 title: Menü komutlarını yerelleştirme | Microsoft Docs
+description: VSPackage için yerelleştirilmiş. vsct dosyaları ve yerelleştirilmiş. resx dosyaları oluşturarak menü ve araç çubuğu komutları için yerelleştirilmiş metin sağlamayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 10/08/2019
 ms.topic: how-to
 helpviewer_keywords:
@@ -15,12 +17,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1c1c158fd689cbcae18fec5d3306e6d6fadb169f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 51f3692a4539eddbf35e24de8024eadd39031080
+ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904556"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97615609"
 ---
 # <a name="localize-menu-commands"></a>Yerelleştirmek menü komutları
 
@@ -32,7 +34,7 @@ Yükleme deneyiminin yerelleştirilmesi hakkında daha fazla bilgi için bkz. [Y
 
 VSPackages 'de, menü komutları ve araç çubuğu düğmeleri *. vsct* dosyasında tanımlanmıştır.
 
-1. **Çözüm Gezgini**, *. vsct* dosyasının adını *filename. vsct* konumundan *filename. en-US. vsct*olarak değiştirin.
+1. **Çözüm Gezgini**, *. vsct* dosyasının adını *filename. vsct* konumundan *filename. en-US. vsct* olarak değiştirin.
 
 2. Her yerelleştirilmiş dil için *filename. en-US. vsct* kopyasını oluşturun.
 
@@ -78,13 +80,13 @@ VSPackages 'de, menü komutları ve araç çubuğu düğmeleri *. vsct* dosyası
 
 Komut adlarından farklı metin kaynakları kaynak (*. resx*) dosyalarında tanımlanır.
 
-1. *VSPackage. resx* ' i *VSPackage. en-US. resx*olarak yeniden adlandırın.
+1. *VSPackage. resx* ' i *VSPackage. en-US. resx* olarak yeniden adlandırın.
 
 2. Her yerelleştirilmiş dil için *VSPackage. en-US. resx* dosyasının bir kopyasını oluşturun.
 
      Her kopya *VSPackage olarak adlandırın. { Locale}. resx*, burada *{locale}* belirli bir kültür adıdır.
 
-3. *Resources. resx* ' i *Resources. en-US. resx*olarak yeniden adlandırın.
+3. *Resources. resx* ' i *Resources. en-US. resx* olarak yeniden adlandırın.
 
 4. Her yerelleştirilmiş dil için *Resources. en-US. resx* dosyasını bir kopyasını oluşturun.
 
@@ -138,7 +140,7 @@ Yerelleştirilmiş kaynakları birleştirmek için *Assemblyinfo.cs* dosyasını
 
 6. `ItemGroup`Öğeleri içeren öğeyi bulun `EmbeddedResource` .
 
-7. `EmbeddedResource` *VSPackage. en-US. resx*öğesini çağıran öğede, `ManifestResourceName` öğesini `LogicalName` şöyle ayarlanmış bir öğeyle değiştirin `VSPackage.en-US.Resources` :
+7. `EmbeddedResource` *VSPackage. en-US. resx* öğesini çağıran öğede, `ManifestResourceName` öğesini `LogicalName` şöyle ayarlanmış bir öğeyle değiştirin `VSPackage.en-US.Resources` :
 
     ```xml
     <EmbeddedResource Include="VSPackage.en-US.resx">
