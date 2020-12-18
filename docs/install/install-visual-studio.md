@@ -3,7 +3,7 @@ title: Visual Studio'yu yükleme
 titleSuffix: ''
 description: Visual Studio 'Yu nasıl yükleyeceğinizi adım adım öğrenin.
 ms.date: 12/13/2019
-ms.custom: contperfq1
+ms.custom: contperf-fy21q1
 ms.topic: conceptual
 f1_keywords:
 - vs.about
@@ -20,12 +20,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 3f0d17fcaf856799ded82ebe684d671b358cb8df
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7dee7965d1c98dbdb05f0edc83c6c8799047acde
+ms.sourcegitcommit: c558d8a0f02ed2c932c8d6f70756d8d2cedb10b3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88114277"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97684052"
 ---
 # <a name="install-visual-studio"></a>Visual Studio'yu yükleme
 
@@ -139,7 +139,7 @@ Yükleyici yüklendikten sonra, istediğiniz özellik kümelerini (veya iş yük
 
  ::: moniker range="vs-2017"
 
-1. **Visual Studio yükleyicisi**istediğiniz iş yükünü bulun.
+1. **Visual Studio yükleyicisi** istediğiniz iş yükünü bulun.
 
    ![Visual Studio 2017: iş yükü yüklemesi](../install/media/vs-installer-installing-workloads.png)
 
@@ -153,7 +153,7 @@ Yükleyici yüklendikten sonra, istediğiniz özellik kümelerini (veya iş yük
 
 ::: moniker range="vs-2019"
 
-1. **Visual Studio yükleyicisi**istediğiniz iş yükünü bulun.
+1. **Visual Studio yükleyicisi** istediğiniz iş yükünü bulun.
 
    ![Visual Studio 2019: iş yükü yüklemesi](../install/media/vs-2019/vs-installer-workloads.png)
 

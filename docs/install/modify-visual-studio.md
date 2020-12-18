@@ -4,7 +4,7 @@ titleSuffix: ''
 description: Visual Studio 'Yu nasıl değiştireceğinizi adım adım öğrenin.
 ms.date: 10/12/2020
 ms.topic: how-to
-ms.custom: contperfq2
+ms.custom: contperf-fy21q2
 helpviewer_keywords:
 - modify Visual Studio
 - change visual studio
@@ -18,12 +18,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: dad71e4f52350357106ee9a9ef9ce90d18204bfb
-ms.sourcegitcommit: 4eb8fe6eb7f1dc639f1d213db05a7a3007e8087e
+ms.openlocfilehash: 17a02fb8c05c6f1720aa1b352e30c46e04a8b69d
+ms.sourcegitcommit: c558d8a0f02ed2c932c8d6f70756d8d2cedb10b3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92157381"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97684092"
 ---
 # <a name="modify-visual-studio-by-adding-or-removing-workloads-and-components"></a>İş yüklerini ve bileşenleri ekleyerek veya kaldırarak Visual Studio 'Yu değiştirme
 
@@ -55,12 +55,12 @@ Aşağıdaki adımları uygulayın:
 
 1. Bilgisayarınızda Visual Studio Yükleyicisi bulun.
 
-     Örneğin, Windows 10 çalıştıran bir bilgisayarda **Başlat**' ı seçin ve ardından **Visual Studio yükleyicisi**olarak listelendiği **V**harfine gidin.
+     Örneğin, Windows 10 çalıştıran bir bilgisayarda **Başlat**' ı seçin ve ardından **Visual Studio yükleyicisi** olarak listelendiği **V** harfine gidin.
 
      ![Visual Studio Yükleyicisi](media/locate-the-visual-studio-installer.png "Microsoft Visual Studio yükleyicisini bulun")
 
      >[!TIP]
-     >Bazı bilgisayarlarda Visual Studio Yükleyicisi, **Microsoft Visual Studio yükleyicisi**olarak **"d"** harfi altında listelenmiş olabilir.<br/><br/> Alternatif olarak, Visual Studio Yükleyicisi aşağıdaki konumda bulabilirsiniz: `C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe`
+     >Bazı bilgisayarlarda Visual Studio Yükleyicisi, **Microsoft Visual Studio yükleyicisi** olarak **"d"** harfi altında listelenmiş olabilir.<br/><br/> Alternatif olarak, Visual Studio Yükleyicisi aşağıdaki konumda bulabilirsiniz: `C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe`
 
 1. Yükleyiciyi açın ve ardından **Değiştir**' i seçin.
 

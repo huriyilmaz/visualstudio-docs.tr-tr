@@ -4,7 +4,7 @@ titleSuffix: ''
 description: Yayımla aracını kullanarak uygulamanız için yayımlama seçenekleri hakkında daha fazla bilgi edinin.
 ms.custom:
 - SEO-VS-2020
-- contperfq1
+- contperf-fy21q1
 ms.date: 08/21/2020
 ms.topic: troubleshooting
 dev_langs:
@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 45fc0a58262a533416f630ede795d0060f9fc909
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 86a771b1eae096227a46378c8146e6aa5d9e2a06
+ms.sourcegitcommit: c558d8a0f02ed2c932c8d6f70756d8d2cedb10b3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94434499"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97683928"
 ---
 # <a name="deploy-your-app-to-a-folder-iis-azure-or-another-destination"></a>Uygulamanızı bir klasöre, IIS 'ye, Azure 'a veya başka bir hedefe dağıtın
 
@@ -221,7 +221,7 @@ IIS 'de sorun giderme ASP.NET Core konusunda yardım için bkz. [Azure App Servi
 
 ## <a name="import-profile"></a>Profili içeri aktar
 
-IIS 'de veya Azure App Service yayımlarken bir profili içeri aktarabilirsiniz. Dağıtımı, bir *Yayımlama ayarları dosyası* ( *\* . publishsettings* ) kullanarak yapılandırabilirsiniz. Bir yayımlama ayarları dosyası IIS veya Azure App Service tarafından oluşturulur veya el ile oluşturulabilir ve sonra Visual Studio 'ya aktarılabilir.
+IIS 'de veya Azure App Service yayımlarken bir profili içeri aktarabilirsiniz. Dağıtımı, bir *Yayımlama ayarları dosyası* (*\* . publishsettings*) kullanarak yapılandırabilirsiniz. Bir yayımlama ayarları dosyası IIS veya Azure App Service tarafından oluşturulur veya el ile oluşturulabilir ve sonra Visual Studio 'ya aktarılabilir.
 
 Bir yayımlama ayarları dosyası kullanımı, dağıtım yapılandırmasını basitleştirecek ve her dağıtım profilini el ile yapılandırarak bir ekip ortamında daha iyi çalışabilir.
 

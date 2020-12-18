@@ -3,17 +3,17 @@ title: F1 Yardım tuşunu değiştirme
 description: F1 anahtar eşlemesinin nasıl yeniden eşlendiğini veya kaldırılacağını açıklar
 ms.date: 08/20/2020
 ms.topic: how-to
-ms.custom: contperfq1
+ms.custom: contperf-fy21q1
 robots: noindex,nofollow
 manager: jillfra
 author: mikejo5000
 ms.author: mikejo
-ms.openlocfilehash: debf469248a8ec1906f3692c37835d9f96476f54
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d9add6996949a97d6140ab6d063f13e02b677e79
+ms.sourcegitcommit: c558d8a0f02ed2c932c8d6f70756d8d2cedb10b3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88802283"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97684078"
 ---
 # <a name="change-the-f1-help-key-in-visual-studio"></a>Visual Studio 'da F1 Yardım anahtarını değiştirme
 
@@ -24,7 +24,7 @@ F1 Yardım hizmetinden farklı bir işlev için F1 tuşunu kullanmak istiyorsan�
 
 **F1 yardımını devre dışı bırakmak için:**
 
-1. Visual Studio 'da **Araçlar**  >  **Seçenekler**' i seçin ve ardından **ortam**altında **klavye**' yi seçin.
+1. Visual Studio 'da **Araçlar**  >  **Seçenekler**' i seçin ve ardından **ortam** altında **klavye**' yi seçin.
 
 1. Komutları **içeren komutları göster** metin kutusunda, komutların görünümünü filtrelemek için **help. F1** yazın.
 
@@ -34,6 +34,6 @@ F1 Yardım hizmetinden farklı bir işlev için F1 tuşunu kullanmak istiyorsan�
 
 1. Kısayol tuşuna **basın** metin kutusunu seçin.
 
-1. Klavyenizde, **alt + F1**gibi F1 yardımı için yeni bir anahtara veya tuş birleşimine basın, **ata**' yı seçin ve ardından **Tamam**' ı seçin.
+1. Klavyenizde, **alt + F1** gibi F1 yardımı için yeni bir anahtara veya tuş birleşimine basın, **ata**' yı seçin ve ardından **Tamam**' ı seçin.
 
 Klavye kısayollarını ayarlama hakkında daha fazla bilgi için bkz. [klavye kısayollarını belirleme ve özelleştirme](../../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md).

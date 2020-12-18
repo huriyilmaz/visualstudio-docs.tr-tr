@@ -1,8 +1,8 @@
 ---
 title: Çözümler ve projeler hakkında bilgi edinin
 description: Visual Studio projeleri ve çözümleri hakkında, bir şablondan yeni projeler oluşturma ve Çözüm Gezgini projeleri görüntüleme & yönetme hakkında bilgi edinin.
-ms.custom: SEO-VS-2020
-ms.date: 12/15/2020
+ms.custom: SEO-VS-2020, contperf-fy21q2
+ms.date: 12/17/2020
 ms.topic: conceptual
 f1_keywords:
 - vs.addnewitem
@@ -22,12 +22,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 19d0d2fc862572fdf7226a78e0b34d0af0d57541
-ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
+ms.openlocfilehash: 51a2f9683dd2285cc71dfff67020687f0c48afa4
+ms.sourcegitcommit: c558d8a0f02ed2c932c8d6f70756d8d2cedb10b3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 12/18/2020
-ms.locfileid: "97668098"
+ms.locfileid: "97683916"
 ---
 # <a name="solutions-and-projects-in-visual-studio"></a>Visual Studio 'da çözümler ve projeler
 
@@ -77,11 +77,14 @@ Ayrıca, ' den yeni projeler oluşturmak için kullanabileceğiniz özel bir pro
 
 Yeni bir proje oluşturduğunuzda, Visual Studio onu varsayılan konumuna, *%userprofile%\source\repos dizinine* kaydeder. Bu konumu değiştirmek için **Araçlar**  >  **Seçenekler**  >  **Projeler ve çözümler**  >  **konumlar**' a gidin. Daha fazla bilgi için bkz. [Seçenekler iletişim kutusu: projeler ve çözümler > konumları](./reference/projects-solutions-locations-options.md).
 
+> [!TIP]
+> Sıfırdan oluşturulmuş bir proje ve çözüm örneği için adım adım yönergeler ve örnek kodla birlikte, bkz. [projelere ve çözümlere giriş](../get-started/tutorial-projects-solutions.md).
+
 ## <a name="solution-explorer"></a>Çözüm Gezgini
 
 Yeni bir proje oluşturduktan sonra, projeyi ve çözümü ve ilişkili öğelerini görüntülemek ve yönetmek için **Çözüm Gezgini** kullanabilirsiniz. Aşağıdaki çizimde, iki proje içeren bir C# çözümü ile **Çözüm Gezgini** gösterilmektedir:
 
-![Çözüm Gezgini](../ide/media/vs2015_solution_explorer.png)
+![Çözüm Gezgini ekran görüntüsü.](../ide/media/vs2015_solution_explorer.png)
 
 Birçok menü komutu, **Çözüm Gezgini** çeşitli öğelerde sağ tıklama menüsünde bulunur. Bu komutlar bir proje oluşturma, NuGet paketlerini yönetme, bir başvuru ekleme, bir dosyayı yeniden adlandırma ve Testleri çalıştırma, yalnızca birkaç kez adlandırma içerir. **Çözüm Gezgini** üstündeki araç çubuğunda, bir çözüm görünümünden klasör görünümüne geçiş yapmak, gizli dosyaları göstermek, tüm düğümleri daraltmak ve daha fazlası için düğmeler bulunur.
 
