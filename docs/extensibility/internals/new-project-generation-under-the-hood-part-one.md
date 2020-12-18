@@ -1,5 +1,6 @@
 ---
 title: 'Yeni proje oluşturma: devlet, birinci bölüm | Microsoft Docs'
+description: Visual Studio tümleşik geliştirme ortamında (IDE), kendi proje türünü (2. bölüm) oluştururken ayrıntılı bir bakış alın.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: aca35e85e57a07a2b411a23d81b99cff9983b9c2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ec16895e71788f160e0ce6025f35b4dff02d7d2f
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80707062"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668891"
 ---
 # <a name="new-project-generation-under-the-hood-part-one"></a>Yeni Proje Oluşturma: Arka Plan, 1. Bölüm
 Kendi proje türünü nasıl oluşturacağınız hakkında düşündük? Yeni bir proje oluşturduğunuzda gerçekten ne olduğunu merak ediyor musunuz? Ayrıca, aşın altında bir göz atalım ve nelerin gerçekten devam ettiğinin yanı sıra.
@@ -36,11 +37,11 @@ Kendi proje türünü nasıl oluşturacağınız hakkında düşündük? Yeni bi
 ## <a name="the-new-project-dialog-box"></a>Yeni proje Iletişim kutusu
  Yeni proje için bir proje türü seçtiğinizde, hepsi başlar. **Dosya** menüsünde **Yeni proje ' ye** tıklayarak başlayalım. **Yeni proje** iletişim kutusu görünür ve aşağıdakine benzer şekilde görünür:
 
- ![Yeni Proje iletişim kutusu](../../extensibility/internals/media/newproject.gif "NewProject")
+ ![Yeni Proje iletişim kutusunun ekran görüntüsü.](../../extensibility/internals/media/newproject.gif)
 
- Şimdi bunlara daha yakından bakalım. **Proje türleri** ağacı, oluşturabileceğiniz çeşitli proje türlerini listeler. **Visual C# pencereleri**gibi bir proje türü seçtiğinizde, başlamanızı sağlamak için uygulama şablonlarının bir listesini görürsünüz. Visual **Studio yüklü şablonlar** , Visual Studio tarafından yüklenir ve bilgisayarınızın tüm kullanıcıları tarafından kullanılabilir. Oluşturduğunuz veya topladığınız yeni şablonlar **Şablonlarıma** eklenebilir ve yalnızca sizin için kullanılabilir.
+ Şimdi bunlara daha yakından bakalım. **Proje türleri** ağacı, oluşturabileceğiniz çeşitli proje türlerini listeler. **Visual C# pencereleri** gibi bir proje türü seçtiğinizde, başlamanızı sağlamak için uygulama şablonlarının bir listesini görürsünüz. Visual **Studio yüklü şablonlar** , Visual Studio tarafından yüklenir ve bilgisayarınızın tüm kullanıcıları tarafından kullanılabilir. Oluşturduğunuz veya topladığınız yeni şablonlar **Şablonlarıma** eklenebilir ve yalnızca sizin için kullanılabilir.
 
- **Windows uygulaması**gibi bir şablon seçtiğinizde, iletişim kutusunda uygulama türünün bir açıklaması görüntülenir; Bu durumda, bir **Windows Kullanıcı arabirimiyle uygulama oluşturmaya yönelik bir proje**.
+ **Windows uygulaması** gibi bir şablon seçtiğinizde, iletişim kutusunda uygulama türünün bir açıklaması görüntülenir; Bu durumda, bir **Windows Kullanıcı arabirimiyle uygulama oluşturmaya yönelik bir proje**.
 
  **Yeni proje** iletişim kutusunun en altında, daha fazla bilgi toplayan birkaç denetim görürsünüz. Gördüğünüz denetimler proje türüne bağlıdır, ancak genellikle bir proje **adı** metin kutusu, bir **konum** metin kutusu ve ilgili **göz at** düğmesi ve bir **çözüm adı** metin kutusu ve **çözüm için ilgili dizin oluştur** onay kutusunu içerirler.
 
@@ -60,10 +61,10 @@ devenv /installvstemplates
 ```
 
 ### <a name="project-types"></a>Proje Türleri
- **Visual C#** ve **diğer diller**gibi **Proje türleri** kök düğümlerinin konumu ve adları sistem kayıt defteri girdilerine göre belirlenir. **Veritabanı** ve **akıllı cihaz**gibi alt düğümlerin organizasyonu, karşılık gelen. vstemplate dosyalarını içeren klasörlerin hiyerarşisini yansıtır. Önce kök düğümlere göz atalım.
+ **Visual C#** ve **diğer diller** gibi **Proje türleri** kök düğümlerinin konumu ve adları sistem kayıt defteri girdilerine göre belirlenir. **Veritabanı** ve **akıllı cihaz** gibi alt düğümlerin organizasyonu, karşılık gelen. vstemplate dosyalarını içeren klasörlerin hiyerarşisini yansıtır. Önce kök düğümlere göz atalım.
 
 #### <a name="project-type-root-nodes"></a>Proje türü kök düğümleri
- Başlatıldığında [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , **Proje türleri** ağacının kök düğümlerini derlemek ve adlandırmak için HKEY_LOCAL_MACHINE \software\microsoft\visualstudio\14.0\NewProjectTemplates\TemplateDirs sistem kayıt defteri anahtarının alt anahtarlarından geçer. Bu bilgiler daha sonra kullanılmak üzere önbelleğe alınır. TemplateDirs \\ {FAE04EC1-301F-11D3-BF4B-00C04F79EFBC} \\ /1 anahtarına bakın. Her giriş bir VSPackage GUID 'sidir. Alt anahtarın adı (/1) yoksayıldı, ancak varlığı bunun bir **Proje türü** kök düğümü olduğunu gösterir. Kök düğüm, **Proje türleri** ağacındaki görünümünü denetleyen birkaç alt anahtarda bulunabilir. Şimdi bunlara göz atalım.
+ Başlatıldığında [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , **Proje türleri** ağacının kök düğümlerini derlemek ve adlandırmak için HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\14.0\NewProjectTemplates\TemplateDirs sistem kayıt defteri anahtarının alt anahtarlarından geçer. Bu bilgiler daha sonra kullanılmak üzere önbelleğe alınır. TemplateDirs \\ {FAE04EC1-301F-11D3-BF4B-00C04F79EFBC} \\ /1 anahtarına bakın. Her giriş bir VSPackage GUID 'sidir. Alt anahtarın adı (/1) yoksayıldı, ancak varlığı bunun bir **Proje türü** kök düğümü olduğunu gösterir. Kök düğüm, **Proje türleri** ağacındaki görünümünü denetleyen birkaç alt anahtarda bulunabilir. Şimdi bunlara göz atalım.
 
 ##### <a name="default"></a>(Varsayılan)
  Bu, kök düğümü isimeden yerelleştirilmiş dizenin kaynak KIMLIĞIDIR. Dize kaynağı, VSPackage GUID tarafından seçilen uydu DLL 'sinde bulunur.
@@ -92,25 +93,25 @@ devenv /installvstemplates
 
  DeveloperActivity REG_SZ VC #
 
- Visual Studio 'nun geliştirme için ayarlanmış olması halinde, Visual C# ' nin bir kök düğüm olacağını gösterir [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] . Aksi takdirde, **diğer dillerin**alt düğümü olur.
+ Visual Studio 'nun geliştirme için ayarlanmış olması halinde, Visual C# ' nin bir kök düğüm olacağını gösterir [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] . Aksi takdirde, **diğer dillerin** alt düğümü olur.
 
 ##### <a name="folder"></a>Klasör
  Bu alt anahtar varsa, kök düğüm belirtilen klasörün bir alt düğümü haline gelir. Anahtar altında olası klasörlerin listesi görüntülenir
 
- HKEY_LOCAL_MACHINE \Software\microsoft\visualstudio\11.0\newprojecttemplates\sözde klasörler
+ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\11.0\NewProjectTemplates\PseudoFolders
 
- Örneğin, veritabanı projeleri girdisi, sözde klasörlerdeki diğer proje türleri girişiyle eşleşen bir klasör anahtarına sahiptir. Bu nedenle, **Proje türleri** ağacında, **veritabanı projeleri** **diğer proje türlerinin**bir alt düğümü olacaktır.
+ Örneğin, veritabanı projeleri girdisi, sözde klasörlerdeki diğer proje türleri girişiyle eşleşen bir klasör anahtarına sahiptir. Bu nedenle, **Proje türleri** ağacında, **veritabanı projeleri** **diğer proje türlerinin** bir alt düğümü olacaktır.
 
 #### <a name="project-type-child-nodes-and-vstdir-files"></a>Proje türü alt düğümleri ve. vstdir dosyaları
- **Proje türleri** ağacındaki alt düğümlerin konumu, ProjectTemplates klasörlerindeki klasörlerin hiyerarşisini izler. Makine şablonları (**Visual Studio yüklü şablonlar**) için, normal konum \Program Files\Microsoft Visual Studio 14.0 \ common7\ıde\projecttemplates\ ve Kullanıcı şablonları (Şablonlarım) için, tipik konum**\sitestudio**14.0 \ templates\projecttemplates olur \\ . Bu iki konumdaki klasör hiyerarşileri, **Proje türleri** ağacı oluşturmak için birleştirilir.
+ **Proje türleri** ağacındaki alt düğümlerin konumu, ProjectTemplates klasörlerindeki klasörlerin hiyerarşisini izler. Makine şablonları (**Visual Studio yüklü şablonlar**) için, normal konum \Program Files\Microsoft Visual Studio 14.0 \ common7\ıde\projecttemplates\ ve Kullanıcı şablonları (Şablonlarım) için, tipik konum **\sitestudio** 14.0 \ templates\projecttemplates olur \\ . Bu iki konumdaki klasör hiyerarşileri, **Proje türleri** ağacı oluşturmak için birleştirilir.
 
  C# Geliştirici ayarları içeren Visual Studio için, **Proje türleri** ağacı şuna benzer:
 
- ![Proje Türleri](../../extensibility/internals/media/projecttypes.png "ProjectTypes")
+ ![Visual Studio 'da C# Geliştirici ayarlarıyla proje türleri klasör ağacının ekran görüntüsü.](../../extensibility/internals/media/projecttypes.png)
 
  Karşılık gelen ProjectTemplates klasörü şöyle görünür:
 
- ![Proje şablonları](../../extensibility/internals/media/projecttemplates.png "ProjectTemplates")
+ ![Visual Studio 'da C# Geliştirici ayarlarıyla proje şablonları klasör ağacının ekran görüntüsü.](../../extensibility/internals/media/projecttemplates.png)
 
  **Yeni proje** iletişim kutusu açıldığında, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ProjectTemplates klasörü ' ne geçer ve yapıyı **Proje türleri** ağacında bazı değişikliklerle yeniden oluşturur:
 
@@ -140,7 +141,7 @@ devenv /installvstemplates
 <LocalizedName Package="{462b036f-7349-4835-9e21-bec60e989b9c}" ID="4598"/>
 ```
 
- Bu, kök düğümü, bu durumda **veritabanı**olarak isimleştirilmiş yerelleştirilmiş DIZENIN uydu dll 'sini ve kaynak kimliğini belirler. Yerelleştirilmiş ad, **.net**gibi klasör adları için kullanılamayan özel karakterler içerebilir.
+ Bu, kök düğümü, bu durumda **veritabanı** olarak isimleştirilmiş yerelleştirilmiş DIZENIN uydu dll 'sini ve kaynak kimliğini belirler. Yerelleştirilmiş ad, **.net** gibi klasör adları için kullanılamayan özel karakterler içerebilir.
 
  Hiçbir \<LocalizedName> etiket yoksa, proje türü klasör tarafından adlandırılır, **SmartPhone2003**.
 
@@ -208,7 +209,7 @@ devenv /installvstemplates
 
 10. **Yeni proje** iletişim kutusunu açın ve **Visual C#** proje düğümünü genişletin.
 
-    ![MyProjectNode](../../extensibility/internals/media/myprojectnode.png "MyProjectNode")
+    ![Genişletilmiş Visual C# proje düğümü altında MyProjectNode ile yeni proje iletişim kutusundaki Proje türleri klasör ağacının ekran görüntüsü.](../../extensibility/internals/media/myprojectnode.png)
 
     **MyProjectNode** , Visual C# ' nin bir alt düğümü olarak yalnızca Windows düğümünün altında görünür.
 

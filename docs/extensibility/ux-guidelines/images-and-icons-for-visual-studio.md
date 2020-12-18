@@ -1,5 +1,6 @@
 ---
 title: Visual Studio için görüntüler ve simgeler | Microsoft Docs
+description: Visual Studio görüntülerini ve simgelerini oluşturmak için kullanılan tasarım kavramları hakkında bilgi edinin.
 ms.date: 04/26/2017
 ms.topic: overview
 ms.assetid: f410325e-9cf2-4f39-b6d7-b672121c2691
@@ -8,12 +9,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: edbf1542277189f37565e7ff415a52025094e595
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f29fd0a69ceafa33c00593b67f6775a723780c26
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85906116"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668657"
 ---
 # <a name="images-and-icons-for-visual-studio"></a>Visual Studio İçin Görüntüler ve Simgeler
 ## <a name="image-use-in-visual-studio"></a><a name="BKMK_ImageUseInVisualStudio"></a> Visual Studio 'da görüntü kullanımı
@@ -293,7 +294,7 @@ ms.locfileid: "85906116"
 
  Mavi, "Aç", "Next," "Previous," "Import," ve "Export" gibi en yaygın olarak oklar olarak temsil edilen bağımsız eylem değiştiricilerine uygulanır.
 
-|Alana git|Toplu Iade etme|Adres Düzenleyicisi|İlişkilendirme Düzenleyicisi|
+|Alana git|Toplu Check-In|Adres Düzenleyicisi|İlişkilendirme Düzenleyicisi|
 |-|-|-|-|
 |![Alan simgesine git](../../extensibility/ux-guidelines/media/0405-11_gotofield.png "0405-11_GoToField")|![Toplu denetim&#45;simgesi](../../extensibility/ux-guidelines/media/0405-12_batchedcheckin.png "0405-12_BatchedCheckIn")|![Adres Düzenleyicisi simgesi](../../extensibility/ux-guidelines/media/0405-13_addresseditor.png "0405-13_AddressEditor")|![İlişkilendirme düzenleyici simgesi](../../extensibility/ux-guidelines/media/0405-14_associationeditor.png "0405-14_AssociationEditor")|
 
@@ -308,7 +309,7 @@ ms.locfileid: "85906116"
 
 |Çalıştır|Durdur|Sil|Kaydet|Geri git|
 |-|-|-|-|-|
-|![Çalıştır simgesi](../../extensibility/ux-guidelines/media/0405-03_actionmodifierrun.png "0405-03_ActionModifierRun")|![Durdur simgesi](../../extensibility/ux-guidelines/media/0405-19_stop.png "0405-19_Stop")|![Simgeyi Sil](../../extensibility/ux-guidelines/media/0405-20_delete.png "0405-20_Delete")|![Kaydet simgesi](../../extensibility/ux-guidelines/media/0405-21_save.png "0405-21_Save")|![Geri git simgesi](../../extensibility/ux-guidelines/media/0405-22_navigateback.png "0405-22_NavigateBack")|
+|![Çalıştır simgesi](../../extensibility/ux-guidelines/media/0405-03_actionmodifierrun.png "0405-03_ActionModifierRun")|![Durdur simgesi-düz kırmızı kare.](../../extensibility/ux-guidelines/media/0405-19_stop.png "0405-19_Stop")|![Simgeyi Sil](../../extensibility/ux-guidelines/media/0405-20_delete.png "0405-20_Delete")|![Kaydet simgesi](../../extensibility/ux-guidelines/media/0405-21_save.png "0405-21_Save")|![Geri git simgesi](../../extensibility/ux-guidelines/media/0405-22_navigateback.png "0405-22_NavigateBack")|
 
 ### <a name="code-hierarchy-palette"></a>Kod hiyerarşisi paleti
 
@@ -380,4 +381,4 @@ ms.locfileid: "85906116"
 
 |Uyarı|Uyarı|Tamamla|Durdur|
 |-|-|-|-|
-|![Uyarı simgesi](../../extensibility/ux-guidelines/media/0405-45_alert.png "0405-45_Alert")|![Uyarı simgesi](../../extensibility/ux-guidelines/media/0405-48_warning.png "0405-48_Warning")|![Tamam simgesi](../../extensibility/ux-guidelines/media/0405-46_complete.png "0405-46_Complete")|![Durdur simgesi](../../extensibility/ux-guidelines/media/0405-47_stop.png "0405-47_Stop")|
+|![Uyarı simgesi](../../extensibility/ux-guidelines/media/0405-45_alert.png "0405-45_Alert")|![Uyarı simgesi](../../extensibility/ux-guidelines/media/0405-48_warning.png "0405-48_Warning")|![Tamam simgesi](../../extensibility/ux-guidelines/media/0405-46_complete.png "0405-46_Complete")|![Ortadaki beyaz kareyle düz kırmızı daire simgesini durdur.](../../extensibility/ux-guidelines/media/0405-47_stop.png "0405-47_Stop")|

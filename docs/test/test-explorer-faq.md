@@ -16,12 +16,12 @@ ms.workload:
 - multiple
 author: kendrahavens
 manager: jillfra
-ms.openlocfilehash: ef6c6bf3cedcccd156e7ae9ae02c2e5f70805521
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+ms.openlocfilehash: b69274058ea939251a772dfb30ddf7b42861542c
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96330179"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668592"
 ---
 # <a name="visual-studio-test-explorer-faq"></a>Visual Studio Test Gezgini hakkında SSS
 
@@ -97,13 +97,13 @@ Projenin, ad alanının ve sınıf Gruplandırmaların yanındaki simgeler, bu g
 
 **Test Gezgini arama kutusunda artık bir "dosya yolu" filtresi yoktur.**
 
-**Test Gezgini** arama kutusundaki dosya yolu filtresi, Visual Studio 2017 sürüm 15,7 ' de kaldırılmıştır. Bu özelliğin kullanımı düşük ve test Gezgini bu özelliği bırakarak test yöntemlerini hızlı bir şekilde alabilir. Bu değişiklik geliştirme akışınızı kesintiye uğratır, [Geliştirici topluluğu](https://developercommunity.visualstudio.com/)hakkında geri bildirim göndererek bize bilgi verin.
+**Test Gezgini** arama kutusundaki dosya yolu filtresi, Visual Studio 2017 sürüm 15,7 ' de kaldırılmıştır. Bu özelliğin kullanımı düşük ve test Gezgini bu özelliği bırakarak test yöntemlerini hızlı bir şekilde alabilir. Bu değişiklik geliştirme akışınızı kesintiye uğratır, [Geliştirici topluluğu](https://aka.ms/feedback/suggest?space=8)hakkında geri bildirim göndererek bize bilgi verin.
 
 ## <a name="remove-undocumented-interfaces"></a>Belgelenmemiş arabirimleri kaldır
 
 **Visual Studio 2019 ' de test ile ilgili bazı API 'Ler artık mevcut değildir. Ne değişti?**
 
-Visual Studio 2019 ' de, daha önce genel olarak işaretlenmiş ancak hiç resmi olarak belgelenmeyen bazı test penceresi API 'Leri kaldırılacaktır. Uzantıya bir erken uyarı vermek için Visual Studio 2017 ' de "kullanım dışı" olarak işaretlenmişler. Bilgimize çok az sayıda uzantı bu API 'Leri bulmuştur ve bunlara bir bağımlılık aldı. Bunlar,,,,, `IGroupByProvider` `IGroupByProvider<T>` ve içerir `KeyComparer` `ISearchFilter` `ISearchFilterToken` `ISearchToken` `SearchFilterTokenType` . Bu değişiklik uzantınızı etkiliyorsa, [Geliştirici topluluğu](https://developercommunity.visualstudio.com)'nda bir hata kaydederek bize bilgi verin.
+Visual Studio 2019 ' de, daha önce genel olarak işaretlenmiş ancak hiç resmi olarak belgelenmeyen bazı test penceresi API 'Leri kaldırılacaktır. Uzantıya bir erken uyarı vermek için Visual Studio 2017 ' de "kullanım dışı" olarak işaretlenmişler. Bilgimize çok az sayıda uzantı bu API 'Leri bulmuştur ve bunlara bir bağımlılık aldı. Bunlar,,,,, `IGroupByProvider` `IGroupByProvider<T>` ve içerir `KeyComparer` `ISearchFilter` `ISearchFilterToken` `ISearchToken` `SearchFilterTokenType` . Bu değişiklik uzantınızı etkiliyorsa, [Geliştirici topluluğu](https://aka.ms/feedback/suggest?space=8)'nda bir hata kaydederek bize bilgi verin.
 
 ## <a name="test-adapter-nuget-reference"></a>Test bağdaştırıcısı NuGet başvurusu
 

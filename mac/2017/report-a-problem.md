@@ -6,20 +6,20 @@ author: jmatthiesen
 ms.author: jomatthi
 ms.date: 11/16/2018
 ms.assetid: 1C7AC52E-754E-473F-A5B5-00C3A40DAACD
-ms.openlocfilehash: 3513f4e120db3bab61348f0ee1f0f452d09ded15
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0b474e39f03663a38bf84c3fb82ed2a3006a4e60
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "66501005"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668696"
 ---
 # <a name="how-to-report-a-problem-in-visual-studio-for-mac"></a>Mac için Visual Studio bir sorunu bildirme
 
-Mac için Visual Studio bir sorunla karşılaşırsanız, bunun hakkında bilgi edinmek istiyoruz. Sorunu tanılayıp çözebilmemiz için sorunu [Geliştirici topluluğu](https://developercommunity.visualstudio.com/spaces/41/index.html) 'na bildirme hakkında daha fazla bilgiyi burada bulabilirsiniz.
+Mac için Visual Studio bir sorunla karşılaşırsanız, bunun hakkında bilgi edinmek istiyoruz. Sorunu tanılayıp çözebilmemiz için sorunu [Geliştirici topluluğu](https://aka.ms/feedback/report?space=41) 'na bildirme hakkında daha fazla bilgiyi burada bulabilirsiniz.
 
 ## <a name="how-to-report-a-problem"></a>Sorun bildirme
 
-Mac için Visual Studio bir sorun bildirmek için en iyi seçenek, raporun Mac için Visual Studio başlatılmalıdır. Mac için Visual Studio aracılığıyla raporlama, tanılama bilgilerinin rapora otomatik olarak eklenmesini sağlar. Mac için Visual Studio kullanamıyoruz (örneğin kilitlenme nedeniyle), sorunu doğrudan [Geliştirici topluluğu](https://developercommunity.visualstudio.com/content/problem/post.html?space=41) sitesinde rapor edebilirsiniz.
+Mac için Visual Studio bir sorun bildirmek için en iyi seçenek, raporun Mac için Visual Studio başlatılmalıdır. Mac için Visual Studio aracılığıyla raporlama, tanılama bilgilerinin rapora otomatik olarak eklenmesini sağlar. Mac için Visual Studio kullanamıyoruz (örneğin kilitlenme nedeniyle), sorunu doğrudan [Geliştirici topluluğu](https://aka.ms/feedback/report?space=41) sitesinde rapor edebilirsiniz.
 
 Mac için Visual Studio bir sorun bildirmek için Yardım ' ı, menü çubuğundan **sorun bildir >** ' i seçin:
 
@@ -44,7 +44,7 @@ Mac için Visual Studio bir sorun bildirmek için Yardım ' ı, menü çubuğund
 1. Karşılaştığınız sorunu bulamazsanız, ekranın yanında **Yeni bir sorun bildir** ' i seçin.
 
    > [!NOTE]
-   > **Yeni bir sorun bildir** düğmesi yalnızca geliştirici topluluğu için Mac için Visual Studio Arabiriminde görüntülenir. Doğrudan [Geliştirici topluluğu](https://developercommunity.visualstudio.com/) Web sitesinde sorun bildiremiyoruz.
+   > **Yeni bir sorun bildir** düğmesi yalnızca geliştirici topluluğu için Mac için Visual Studio Arabiriminde görüntülenir. Doğrudan [Geliştirici topluluğu](https://aka.ms/feedback/report?space=41/) Web sitesinde sorun bildiremiyoruz.
 
 1. Sorun için doğru Mac için Visual Studio ekibine yönlendirmemize yardımcı olacak açıklayıcı bir başlık oluşturun.
 
@@ -62,9 +62,9 @@ Mac için Visual Studio bir sorun bildirmek için Yardım ' ı, menü çubuğund
 
 ## <a name="search-for-solutions-or-provide-feedback"></a>Çözüm arayın veya geri bildirim sağlayın
 
-Bir sorunu bildirmek için Mac için Visual Studio kullanmak istemiyorsanız, sorunun zaten bildirilmiş olması ve [Visual Studio Geliştirici topluluğu](https://developercommunity.visualstudio.com/) sayfasında bir çözümün gönderilmesini sağlayabilirsiniz.
+Bir sorunu bildirmek için Mac için Visual Studio kullanmak istemiyorsanız, sorunun zaten bildirilmiş olması ve [Visual Studio Geliştirici topluluğu](https://aka.ms/feedback/report?space=41/) sayfasında bir çözümün gönderilmesini sağlayabilirsiniz.
 
-Rapor almak için bir sorununuz yoksa ancak bir özellik önermek istiyorsanız, bunun de bir yerinde olabilir. Daha fazla bilgi için bkz. [özellik önerme](https://developercommunity.visualstudio.com/content/idea/post.html?space=41) sayfası.
+Rapor almak için bir sorununuz yoksa ancak bir özellik önermek istiyorsanız, bunun de bir yerinde olabilir. Daha fazla bilgi için bkz. [özellik önerme](https://aka.ms/feedback/suggest?space=41) sayfası.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b2410974ed95b1aa8dca3dc3e31a39c39df2d4a0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bfe2b73f7f2ba771875355279043558f3c4cf105
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88801444"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97667916"
 ---
 # <a name="how-to-change-fonts-colors-and-themes-in-visual-studio"></a>Nasıl yapılır: Visual Studio 'da yazı tiplerini, renkleri ve temaları değiştirme
 
@@ -72,7 +72,7 @@ Tüm IDE çerçevesi ve araç pencereleri için ya da yalnızca belirli pencerel
 
 1. **Yazı** tipi ve **Boyut** seçeneklerini değiştirerek IDE için yazı tipini ve metin boyutunu değiştirin.
 
-1. **Görüntüleme öğelerinde**uygun öğeyi seçin ve ardından **öğe ön** planı ve **öğe arka plan** seçeneklerini değiştirin.
+1. **Görüntüleme öğelerinde** uygun öğeyi seçin ve ardından **öğe ön** planı ve **öğe arka plan** seçeneklerini değiştirin.
 
 ### <a name="to-change-the-font-and-text-size-in-the-editor"></a>Düzenleyicideki yazı tipini ve metin boyutunu değiştirmek için
 
@@ -86,7 +86,7 @@ Tüm IDE çerçevesi ve araç pencereleri için ya da yalnızca belirli pencerel
 
 1. Düzenleyicinin yazı tipini ve metin boyutunu değiştirmek için **yazı tipi** ve **Boyut** seçeneklerini değiştirin.
 
-1. **Görüntüleme öğelerinde**uygun öğeyi seçin ve ardından **öğe ön** planı ve **öğe arka plan** seçeneklerini değiştirin.
+1. **Görüntüleme öğelerinde** uygun öğeyi seçin ve ardından **öğe ön** planı ve **öğe arka plan** seçeneklerini değiştirin.
 
 Daha fazla bilgi için bkz. [Düzenleyici için yazı tiplerini ve renkleri değiştirme](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md) sayfası.
 
@@ -116,7 +116,7 @@ Visual Studio fazladan karşıtlık seçeneğini değiştirmek için aşağıdak
 Kullanabileceğiniz diğer Visual Studio erişilebilirlik seçenekleri hakkında daha fazla bilgi edinmek için bkz. [Visual Studio 'Nun erişilebilirlik özellikleri](../ide/reference/accessibility-features-of-visual-studio.md) sayfası.
 
 > [!TIP]
-> Yararlı olabilecek ancak Visual Studio 'da Şu anda kullanılamayan renkler veya yazı tiplerinde erişilebilirlik seçeneği varsa lütfen [Visual Studio Geliştirici topluluğu](https://developercommunity.visualstudio.com/)'nda **bir özellik öner** ' i seçerek bize bildirin. Bu forum ve nasıl çalıştığı hakkında daha fazla bilgi için, [özellik önerme](../ide/suggest-a-feature.md) sayfasına bakın.
+> Yararlı olabilecek ancak Visual Studio 'da Şu anda kullanılamayan renkler veya yazı tiplerinde erişilebilirlik seçeneği varsa lütfen [Visual Studio Geliştirici topluluğu](https://aka.ms/feedback/suggest?space=8)'nda **bir özellik öner** ' i seçerek bize bildirin. Bu forum ve nasıl çalıştığı hakkında daha fazla bilgi için, [özellik önerme](../ide/suggest-a-feature.md) sayfasına bakın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

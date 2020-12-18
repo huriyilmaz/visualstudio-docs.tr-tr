@@ -8,12 +8,12 @@ ms.author: svukel
 manager: viveis
 ms.workload:
 - vssdk
-ms.openlocfilehash: d213a7add358c46f7088f504d8c54352cda44a1c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 964b360806f6f834aa57c475d2117c124f2cf8af
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905973"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668644"
 ---
 # <a name="open-folder-extensibility"></a>Açık klasör genişletilebilirliği
 
@@ -51,7 +51,7 @@ Aşağıdaki türleri kullanan özelliklerin, açık klasörü desteklemek için
 
 ## <a name="feedback-comments-issues"></a>Geri bildirim, açıklamalar, sorunlar
 
-Klasörü açın ve `Microsoft.VisualStudio.Workspace.*` API 'ler etkin geliştirme aşamasındadır. Beklenmeyen davranışlar görürseniz, ilgilendiğiniz yayın için bilinen sorunlara bakın. [Geliştirici topluluğu](https://developercommunity.visualstudio.com) , oylamak ve sorun oluşturmak için önerilen yerdir. Her geri bildirimde, sorununuzun ayrıntılı bir açıklamasını kesinlikle öneririz. Geliştirmekte olduğunuz Visual Studio sürümünü, kullandığınız API 'Leri (her ikisi de ne uyguladığınızı, ne ile etkileşimde bulundudığınızı), beklenen sonucu ve gerçek sonucu dahil edin. Mümkünse devenv.exe işlemin bir dökümünü ekleyin. Bu ve ilgili belgelerde geri bildirimde bulunmak için GitHub 'ın sorun izlemesini kullanın.
+Klasörü açın ve `Microsoft.VisualStudio.Workspace.*` API 'ler etkin geliştirme aşamasındadır. Beklenmeyen davranışlar görürseniz, ilgilendiğiniz yayın için bilinen sorunlara bakın. [Geliştirici topluluğu](https://aka.ms/feedback/suggest?space=8) , oylamak ve sorun oluşturmak için önerilen yerdir. Her geri bildirimde, sorununuzun ayrıntılı bir açıklamasını kesinlikle öneririz. Geliştirmekte olduğunuz Visual Studio sürümünü, kullandığınız API 'Leri (her ikisi de ne uyguladığınızı, ne ile etkileşimde bulundudığınızı), beklenen sonucu ve gerçek sonucu dahil edin. Mümkünse devenv.exe işlemin bir dökümünü ekleyin. Bu ve ilgili belgelerde geri bildirimde bulunmak için GitHub 'ın sorun izlemesini kullanın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

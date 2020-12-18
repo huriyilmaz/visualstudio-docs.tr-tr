@@ -11,16 +11,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 16d55c4e729a39f46b4b038490e92f7cb43bf98d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 64ea7f1ea1f665f5180851e42814ad4e8c12c8c5
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84182878"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668527"
 ---
 # <a name="troubleshooting-and-known-issues-for-snapshot-debugging-in-visual-studio"></a>Visual Studio 'da anlık görüntü hata ayıklaması için sorun giderme ve bilinen sorunlar
 
-Bu makalede açıklanan adımlar sorununuzu gidermezse, [Geliştirici topluluğu](https://developercommunity.visualstudio.com/spaces/8/index.html) 'nda sorunu arayın veya **Help**  >  **Send Feedback**  >  Visual Studio 'da**sorun bildir** hakkında yardım gönder ' i seçerek yeni bir sorun bildirin.
+Bu makalede açıklanan adımlar sorununuzu gidermezse, [Geliştirici topluluğu](https://aka.ms/feedback/suggest?space=8) 'nda sorunu arayın veya   >    >  Visual Studio 'da **sorun bildir** hakkında yardım gönder ' i seçerek yeni bir sorun bildirin.
 
 ## <a name="issue-attach-snapshot-debugger-encounters-an-http-status-code-error"></a>Sorun: "Attach Snapshot Debugger" bir HTTP durum kodu hatası ile karşılaştı
 
@@ -59,7 +59,7 @@ App Service kimlik doğrulaması/yetkilendirme 'yi (EasyAuth) etkinleştirdiysen
 }
 ```
 
-İlk yol, **[IdentityProvider] Ile oturum**açmaya benzer şekilde uygulama etki alanınızı etkin bir şekilde korur. İkinci yol, snapshotdebugger 'ın önceden yüklenmiş site uzantısı App Service için *etkinleştirilmişse, snapshotdebugger tanılama aracısını başlatma* ön tanımlı eylemini gerçekleştiren, Snapshotdebugger agentlaunch uç noktasını kimlik doğrulama dışında kullanıma sunar. Yapılandırma authorization.jshakkında daha fazla bilgi için lütfen bkz. [URL Yetkilendirme kuralları](https://azure.github.io/AppService/2016/11/17/URL-Authorization-Rules.html).
+İlk yol, **[IdentityProvider] Ile oturum** açmaya benzer şekilde uygulama etki alanınızı etkin bir şekilde korur. İkinci yol, snapshotdebugger 'ın önceden yüklenmiş site uzantısı App Service için *etkinleştirilmişse, snapshotdebugger tanılama aracısını başlatma* ön tanımlı eylemini gerçekleştiren, Snapshotdebugger agentlaunch uç noktasını kimlik doğrulama dışında kullanıma sunar. Yapılandırma authorization.jshakkında daha fazla bilgi için lütfen bkz. [URL Yetkilendirme kuralları](https://azure.github.io/AppService/2016/11/17/URL-Authorization-Rules.html).
 
 ### <a name="403-forbidden"></a>(403) yasak
 
@@ -67,7 +67,7 @@ Bu hata, iznin reddedildiğini gösterir. Bunun nedeni birçok farklı sorun ola
 
 Şu adımları uygulayın:
 
-* Visual Studio hesabınızın, kaynak için gerekli rol tabanlı Access Control (RBAC) izinlerine sahip geçerli bir Azure aboneliğine sahip olduğunu doğrulayın. AppService için, uygulamanızı barındıran App Service planını [sorgulama](/rest/api/appservice/appserviceplans/get) izniniz olup olmadığını denetleyin.
+* Visual Studio hesabınızın kaynak için gerekli Role-Based Access Control (RBAC) izinlerine sahip geçerli bir Azure aboneliğine sahip olduğunu doğrulayın. AppService için, uygulamanızı barındıran App Service planını [sorgulama](/rest/api/appservice/appserviceplans/get) izniniz olup olmadığını denetleyin.
 * İstemci makinenizin zaman damgasının doğru ve güncel olduğunu doğrulayın. İstek zaman damgasından 15 dakikadan uzun zaman damgalarına sahip sunucular genellikle bu hatayı üretir.
 * Bu hata devam ederse, bu makalenin başlangıcında açıklanan geri bildirim kanallarından birini kullanın.
 
@@ -202,7 +202,7 @@ Aracı günlüğünü etkinleştirmek ve devre dışı bırakmak için, Visual S
 Aracı günlükleri aşağıdaki konumlarda bulunabilir:
 
 - Uygulama Hizmetleri:
-  - App Service kudu sitenize (yani, yourappservice) gidin.** SCM**. azurewebsites.net) ve hata ayıklama konsolu 'na gidin.
+  - App Service kudu sitenize (yani, yourappservice) gidin.**SCM**. azurewebsites.net) ve hata ayıklama konsolu 'na gidin.
   - Aracı günlükleri şu dizinde depolanır: D:\home\LogFiles\SiteExtensions\DiagnosticsAgentLogs\
 - VM/VMSS:
   - SANAL makinenizde oturum açın, Aracı günlükleri şu şekilde depolanır: C:\WindowsAzure\Logs\Plugins\Microsoft.Azure.Diagnostics.IaaSDiagnostics \<Version> \ SnapshotDebuggerAgent_ *. txt
@@ -218,7 +218,7 @@ Aracı günlükleri aşağıdaki konumlarda bulunabilir:
 - VM/VMSS:
   - SANAL makinenizde oturum açın ve Olay Görüntüleyicisi açın.
   - Aşağıdaki görünümü açın: *Windows günlükleri uygulama>*.
-  - *Üretim kesme noktalarını* veya *Izleme altyapısını*kullanarak *geçerli günlüğü* *olay kaynağına* göre filtreleyin.
+  - *Üretim kesme noktalarını* veya *Izleme altyapısını* kullanarak *geçerli günlüğü* *olay kaynağına* göre filtreleyin.
 - AKS
   - İzleme altyapısı günlük/t MP/diag/log.txt (DockerFile içinde MicrosoftInstrumentationEngine_FileLogPath ayarla)
   - /Tmp/diag/shLog.txt 'de üretim kesme noktası günlüğü
@@ -227,7 +227,7 @@ Aracı günlükleri aşağıdaki konumlarda bulunabilir:
 
 - Birden çok Visual Studio istemcisi ile aynı App Service karşı anlık görüntü hata ayıklaması Şu anda desteklenmemektedir.
 - Roslyn Il iyileştirmeleri ASP.NET Core projelerinde tam olarak desteklenmez. Bazı ASP.NET Core projeleri için bazı değişkenleri görmeyebilirsiniz veya Koşullu deyimlerde bazı değişkenler kullanamazsınız.
-- *$FUNCTION* veya *$Caller*gibi özel değişkenler, ASP.NET Core projeler için Koşullu deyimlerde veya günlüğe kaydetme noktaları 'de değerlendirilemiyor.
+- *$FUNCTION* veya *$Caller* gibi özel değişkenler, ASP.NET Core projeler için Koşullu deyimlerde veya günlüğe kaydetme noktaları 'de değerlendirilemiyor.
 - Anlık görüntü hata ayıklaması, [yerel önbelleğe alma](/azure/app-service/app-service-local-cache) özelliği açık olan uygulama hizmetleri üzerinde çalışmaz.
 - Anlık görüntü hata ayıklama API Apps Şu anda desteklenmiyor.
 

@@ -12,14 +12,14 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 48fb0f1c22b2f7055005640baff2239a0ad4a32a
-ms.sourcegitcommit: fed8782b2fb2ca18a90746b6e7e0b33f3fde10f1
+ms.openlocfilehash: 8cdc30b34c85a799827519af3cd2bba2c9f1735a
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97646417"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668813"
 ---
-# <a name="learn-about-projects-and-solutions"></a>Projeler ve çözümler hakkında bilgi edinin
+# <a name="introduction-to-projects-and-solutions"></a>Projelere ve çözümlere giriş
 
 Bu giriş makalesinde, Visual Studio 'da bir *çözüm* ve *Proje* oluşturmak için ne anlama geldiğini keşfedeceğiz. Bir çözüm, bir veya daha fazla ilgili kod projesini (örneğin, bir sınıf kitaplığı projesi ve karşılık gelen bir test projesi) düzenlemek için kullanılan bir kapsayıcıdır. Projenin özelliklerine ve içerdikleri bazı dosyalara bakacağız. Ayrıca bir projeden diğerine bir başvuru oluşturacağız.
 
@@ -93,7 +93,7 @@ Boş bir çözüm oluşturarak araştırmayla başlayacağız. Visual Studio 'Yu
 
    **Yeni Proje Ekle** iletişim kutusu açılır.
 
-1. Sol bölmede, **Visual C#** ' yi genişletin ve **Windows Masaüstü**' nu seçin. Ardından Ortadaki bölmede **boş proje (.NET Framework)** şablonunu seçin. Proje **Quickdate** olarak adlandırın ve ardından **Tamam**' ı seçin.
+1. Sol bölmede, **Visual C#** ' yi genişletin ve **Windows Masaüstü**' nü seçin. Ardından Ortadaki bölmede **boş proje (.NET Framework)** şablonunu seçin. Proje **Quickdate** olarak adlandırın ve ardından **Tamam**' ı seçin.
 
    QuickDate adlı bir proje, **Çözüm Gezgini** çözümünün altında görünür. Şu anda *App.config* adlı tek bir dosya içerir.
 
@@ -207,11 +207,11 @@ Boş bir projem var. Bir kod dosyası ekleyelim.
 
    **Başvuru Yöneticisi** iletişim kutusu açılır.
 
-1. Sol bölmede, **Projeler** ' i genişletin ve **çözüm**' ü seçin. Orta bölmede, **Quickdate** seçeneğinin yanındaki onay kutusunu seçin ve ardından **Tamam**' ı seçin.
+1. Sol bölmede, **Projeler** ' i genişletin ve **çözüm**' ü seçin. Orta bölmede, **Quickdate** seçeneğinin yanındaki onay kutusunu işaretleyin ve ardından **Tamam**' ı seçin.
 
    **Quickdate** projesine bir başvuru eklenir.
 
-   ![Visual Studio 2019 Çözüm Gezgini proje başvurusunu gösterme](media/vs-2019/tutorial-projects-solution-explorer-reference.png "Visual Studio 'da bir proje başvurusunu göstermek Çözüm Gezgini.")
+   ![Visual Studio 'da proje başvurusunu gösteren Çözüm Gezgini ekran görüntüsü](media/vs-2019/tutorial-projects-solution-explorer-reference.png "Visual Studio 'da bir proje başvurusunu gösteren Çözüm Gezgini ekran görüntüsü.")
 
 ::: moniker-end
 
@@ -221,12 +221,12 @@ Boş bir projem var. Bir kod dosyası ekleyelim.
 
    **Başvuru Yöneticisi** iletişim kutusu açılır.
 
-1. Sol bölmede, **Projeler** ' i genişletin ve **çözüm**' ü seçin. Orta bölmede, **Quickdate** seçeneğinin yanındaki onay kutusunu seçin ve ardından **Tamam**' ı seçin.
+1. Sol bölmede **Projeler**' i genişletin ve **çözüm**' ü seçin. Orta bölmede, **Quickdate** seçeneğinin yanındaki onay kutusunu işaretleyin ve ardından **Tamam**' ı seçin.
 
    **Quickdate** projesine bir başvuru eklenir.
 
-   ![Visual Studio 2019 Çözüm Gezgini proje başvurusunu gösterme](media/vs-2019/tutorial-projects-solution-explorer-reference.png)
-   
+   ![Visual Studio 2019 ' de bir proje başvurusunu gösteren Çözüm Gezgini ekran görüntüsü](media/vs-2019/tutorial-projects-solution-explorer-reference.png)
+
 ::: moniker-end
 
 ## <a name="add-test-code"></a>Test kodu ekle
@@ -279,7 +279,7 @@ Boş bir projem var. Bir kod dosyası ekleyelim.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Birim testinizin çalıştığını denetlemek isterseniz,   >    >  menü çubuğundan **tüm testleri** Çalıştır test ' i seçin. **Test Gezgini** adlı bir pencere açılır ve **TestGetCurrentDate** testin başarılı olduğunu görmeniz gerekir.
+Birim testinizin çalışıp çalışmadığını denetlemek isterseniz, **Test** et  >    >  **tüm testleri** menü çubuğundan Çalıştır ' ı seçin. **Test Gezgini** adlı bir pencere açılır ve **TestGetCurrentDate** testin başarılı olduğunu görmeniz gerekir.
 
 ![Başarılı testi gösteren Visual Studio 'da test Gezgini](media/tutorial-projects-test-explorer.png "Başarılı bir testi gösteren Visual Studio 'da test Gezgini.")
 
@@ -299,7 +299,7 @@ Birim testinizin çalıştığını denetlemek isterseniz,   >    >  menü çubu
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Proje ve çözüm oluşturma](../ide/creating-solutions-and-projects.md)
+- [Projelerle ve çözümlerle çalışma](../ide/creating-solutions-and-projects.md)
 - [Proje ve çözüm özelliklerini yönetme](../ide/managing-project-and-solution-properties.md)
 - [Bir projedeki başvuruları yönetme](../ide/managing-references-in-a-project.md)
 - [Visual Studio’da projeler veya çözümler olmadan kod geliştirme](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md)

@@ -15,12 +15,12 @@ ms.author: waan
 manager: caslan
 ms.workload:
 - multiple
-ms.openlocfilehash: c9f06b72673ea73e68f6c224ec9734568d70e25a
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 4cded3bfdb6adc206f02ef54402964f4e7276f93
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852263"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668787"
 ---
 # <a name="troubleshooting-data-breakpoint-errors"></a>Veri kesme noktası hatalarında sorun giderme
 Bu sayfa, "değer değiştiğinde kes" kullanırken görülen yaygın hataları çözme konusunda size kılavuzluk eder
@@ -81,7 +81,7 @@ Programınızın üzerinde çalıştığı mimari (Platform yapılandırması), 
 
 ## <a name="provide-feedback"></a>Geri bildirimde bulunma
 
-Bu özellikle ilgili herhangi bir sorun veya öneri için, lütfen yardım > bir sorun bildirmek > IDE 'de veya [Geliştirici topluluğu](https://developercommunity.visualstudio.com/)'Nda [bir sorun bildirmek](../ide/how-to-report-a-problem-with-visual-studio.md) için lütfen bize bilgi verin.
+Bu özellikle ilgili herhangi bir sorun veya öneri için, lütfen yardım > bir sorun bildirmek > IDE 'de veya [Geliştirici topluluğu](https://aka.ms/feedback/suggest?space=8)'Nda [bir sorun bildirmek](../ide/how-to-report-a-problem-with-visual-studio.md) için lütfen bize bilgi verin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

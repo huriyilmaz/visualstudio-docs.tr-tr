@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-ms.openlocfilehash: 3b50ec910c6d5880ead2df48db2ef763753379bb
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 11caf55a8412477ac94d290add667b9393435fb6
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90807891"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668748"
 ---
 # <a name="visual-studio-feedback-options"></a>Visual Studio geri bildirim seçenekleri
 
@@ -30,21 +30,21 @@ Neden bize geri bildirim gönderilsin? Müşteri geri bildirimi önemli bir işl
 
 ::: moniker range="vs-2019"
 
-Visual Studio ile &mdash; kilitlenmeler, yavaş performans veya beklenmedik davranış gibi sorunlarla karşılaşırsanız &mdash; **sorun bildir** aracını kullanarak bize bilgi verin. Visual Studio 'da, sağ üst köşedeki geri bildirim simgesini seçin veya **Help**  >  menü çubuğundan sorun bildir Yardım**geri bildirim gönder**' i seçin  >  **Report a Problem** .
+Visual Studio ile &mdash; kilitlenmeler, yavaş performans veya beklenmedik davranış gibi sorunlarla karşılaşırsanız &mdash; **sorun bildir** aracını kullanarak bize bilgi verin. Visual Studio 'da, sağ üst köşedeki geri bildirim simgesini seçin veya   >  menü çubuğundan sorun bildir Yardım **geri bildirim gönder**' i seçin  >   .
 
 ![Visual Studio 2019 IDE 'de geri bildirim gönder simgesi](./media/vs-2019/send-feedback-icon.png)
 
-Ardından, Visual Studio, sorunu bildirmek için oturum açabileceğiniz [Geliştirici topluluğu](https://developercommunity.visualstudio.com) arabirimini açar. Daha fazla bilgi için bkz. [Visual Studio ile sorun bildirme](how-to-report-a-problem-with-visual-studio.md).
+Ardından, Visual Studio, sorunu bildirmek için oturum açabileceğiniz [Geliştirici topluluğu](https://aka.ms/feedback/suggest?space=8) arabirimini açar. Daha fazla bilgi için bkz. [Visual Studio ile sorun bildirme](how-to-report-a-problem-with-visual-studio.md).
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-Visual Studio ile &mdash; kilitlenmeler, yavaş performans veya beklenmedik davranış gibi sorunlarla karşılaşırsanız &mdash; **sorun bildir** aracını kullanarak bize bilgi verin. Visual Studio 'da, arama kutusunun yanındaki geri bildirim simgesini seçin veya **Help**  >  menü çubuğundan sorun bildir Yardım**geri bildirim gönder**' i seçin  >  **Report a Problem** .
+Visual Studio ile &mdash; kilitlenmeler, yavaş performans veya beklenmedik davranış gibi sorunlarla karşılaşırsanız &mdash; **sorun bildir** aracını kullanarak bize bilgi verin. Visual Studio 'da, arama kutusunun yanındaki geri bildirim simgesini seçin veya   >  menü çubuğundan sorun bildir Yardım **geri bildirim gönder**' i seçin  >   .
 
 ![Visual Studio 2019 IDE 'de geri bildirim gönder simgesi](./media/send-feedback-icon.png)
 
-Ardından, Visual Studio, sorunu bildirmek için oturum açabileceğiniz [Geliştirici topluluğu](https://developercommunity.visualstudio.com) arabirimini açar. Daha fazla bilgi için bkz. [Visual Studio ile sorun bildirme](how-to-report-a-problem-with-visual-studio.md).
+Ardından, Visual Studio, sorunu bildirmek için oturum açabileceğiniz [Geliştirici topluluğu](https://aka.ms/feedback/suggest?space=8) arabirimini açar. Daha fazla bilgi için bkz. [Visual Studio ile sorun bildirme](how-to-report-a-problem-with-visual-studio.md).
 
 ::: moniker-end
 
@@ -52,17 +52,17 @@ Ardından, Visual Studio, sorunu bildirmek için oturum açabileceğiniz [Geliş
 
 ::: moniker range="vs-2019"
 
-Visual Studio 'Yu daha iyi hale getirmek için bir fikir veya öneriniz varsa, **bir özellik öner** aracını kullanarak bize bilgi verin. Visual Studio 'da, sağ üst köşedeki geri bildirim simgesini seçin veya **Help**  >  menü çubuğunda bir özellik önermek için Yardım**geri bildirim gönder**' i seçin  >  **Suggest a Feature** .
+Visual Studio 'Yu daha iyi hale getirmek için bir fikir veya öneriniz varsa, **bir özellik öner** aracını kullanarak bize bilgi verin. Visual Studio 'da, sağ üst köşedeki geri bildirim simgesini seçin veya   >  menü çubuğunda bir özellik önermek için Yardım **geri bildirim gönder**' i seçin  >   .
 
-Daha sonra, Visual Studio, fikir paylaşmak için oturum açabilmeniz için kullanabileceğiniz [Geliştirici topluluğu](https://developercommunity.visualstudio.com) arabirimini açar. Daha fazla bilgi için bkz. [Visual Studio için bir özellik önerme](suggest-a-feature.md).
+Daha sonra, Visual Studio, fikir paylaşmak için oturum açabilmeniz için kullanabileceğiniz [Geliştirici topluluğu](https://aka.ms/feedback/suggest?space=8) arabirimini açar. Daha fazla bilgi için bkz. [Visual Studio için bir özellik önerme](suggest-a-feature.md).
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-Visual Studio 'Yu daha iyi hale getirmek için bir fikir veya öneriniz varsa, **öneri sağla** aracını kullanarak bize bilgi verin. Visual Studio 'da arama kutusunun yanındaki geri bildirim simgesini seçin veya **Yardım**  >  **Gönder geri bildirimi**  >  menü çubuğundan**bir öneri sağlayın** ' ı seçin.
+Visual Studio 'Yu daha iyi hale getirmek için bir fikir veya öneriniz varsa, **öneri sağla** aracını kullanarak bize bilgi verin. Visual Studio 'da arama kutusunun yanındaki geri bildirim simgesini seçin veya **Yardım**  >  **Gönder geri bildirimi**  >  menü çubuğundan **bir öneri sağlayın** ' ı seçin.
 
-Ardından, Visual Studio, fikir paylaşmak için oturum açmak üzere kullanabileceğiniz [Geliştirici topluluğu](https://developercommunity.visualstudio.com) sayfasını açar. Daha fazla bilgi için bkz. [Visual Studio için bir özellik önerme](suggest-a-feature.md).
+Ardından, Visual Studio, fikir paylaşmak için oturum açmak üzere kullanabileceğiniz [Geliştirici topluluğu](https://aka.ms/feedback/suggest?space=8) sayfasını açar. Daha fazla bilgi için bkz. [Visual Studio için bir özellik önerme](suggest-a-feature.md).
 
 ::: moniker-end
 
@@ -71,7 +71,7 @@ Ardından, Visual Studio, fikir paylaşmak için oturum açmak üzere kullanabil
 Belgeleri iyileştirmemize yardımcı olmak için iki yol vardır:
 
 * Herhangi bir belge sayfasının sağ üst kısmında **Bu sayfa faydalı?** yanıt aracını kullanın.
-* [Docs.Microsoft.com](../index.yml)üzerindeki tüm Visual Studio sayfaları için geri bildirim sağlamak için GitHub hesabınızı kullanın. Bunu yapmak için **Send feedback about**  >  herhangi bir belge sayfasının altındaki**Bu sayfayla** ilgili geri bildirim gönder düğmesini seçin.
+* [Docs.Microsoft.com](../index.yml)üzerindeki tüm Visual Studio sayfaları için geri bildirim sağlamak için GitHub hesabınızı kullanın. Bunu yapmak için   >  herhangi bir belge sayfasının altındaki **Bu sayfayla** ilgili geri bildirim gönder düğmesini seçin.
 
 ## <a name="contact-microsoft-support"></a>Microsoft desteğine başvurma
 

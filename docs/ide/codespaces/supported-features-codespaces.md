@@ -11,12 +11,12 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 monikerRange: vs-2019
-ms.openlocfilehash: f253ba9b7e46f809bc107aa2b3e26f635d778770
-ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
+ms.openlocfilehash: 84be6698c62e3a2a205ceb9d404673ee1d0c6f64
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91928560"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668618"
 ---
 # <a name="supported-visual-studio-features-preview"></a>Desteklenen Visual Studio özellikleri (Önizleme)
 
@@ -27,7 +27,7 @@ Geçerli GitHub Codespaces [genel beta](https://github.com/features/codespaces)s
 Bu, geniş **kapsamlı bir liste olması anlamına gelir**, ancak bir codespace 'e bağlandığında Visual Studio 'nun genel yeteneklerini açıklamaktadır.
 
 > [!NOTE]
-> Visual Studio ile codespaces kullanırken eksik bir özellik varsa, lütfen üzerinde bir sorun açarak bize bildirin https://developercommunity.visualstudio.com/ . Bu, en çok istenen özellikleri önceliklendirmemize yardımcı olur.
+> Visual Studio ile codespaces kullanırken eksik bir özellik varsa lütfen [Visual Studio Geliştirici topluluğu](https://aka.ms/feedback/suggest?space=8)'nda bir sorun açarak bize bildirin. Bu, en çok istenen özellikleri önceliklendirmemize yardımcı olur.
 
 > [!NOTE]
 > Aşağıda açıklanan özellikler, diğer iki GitHub Codespaces istemcisi değil, Visual Studio içindir; Visual Studio Code ve tarayıcı içi düzenleyici.
@@ -109,7 +109,7 @@ Henüz kullanılabilir değil:
 Bir codespace 'e bağlı Visual Studio ile çalışırken, yerel olarak çalışırken aynı erişilebilirlik özelliklerini alırsınız.
 
 * Kaynak denetimi-yeni [Git penceresi](https://devblogs.microsoft.com/visualstudio/improved-git-experience-in-visual-studio-2019/)aracılığıyla tam git desteği.
-* Erişilebilirlik-yardımcı teknolojide, bir hata ayıklama uygulamasının appatama 'ya erişemediği bilinen bir sorun var. Bu sınırlamanın yanı sıra, yerel Visual Studio deneyiminde zaten mevcut olmayan başka uyumluluk sorunları olduğunu düşünmedik. [Geliştirici topluluğu](https://developercommunity.visualstudio.com/)'nda bir sorun oluşturarak hataları algılamadıysanız lütfen bize bildirin.
+* Erişilebilirlik-yardımcı teknolojide, bir hata ayıklama uygulamasının appatama 'ya erişemediği bilinen bir sorun var. Bu sınırlamanın yanı sıra, yerel Visual Studio deneyiminde zaten mevcut olmayan başka uyumluluk sorunları olduğunu düşünmedik. [Geliştirici topluluğu](https://aka.ms/feedback/suggest?space=8)'nda bir sorun oluşturarak hataları algılamadıysanız lütfen bize bildirin.
 * Yayımlama-GitHub eylemleri aracılığıyla Azure 'da yayımlayın.
 * Bağlı hizmetler-Application Insights, Keykasası, Storage, SQL, Redsıs, Cosmos, Openapı ve gRPC kısmen desteklenmektedir.
 * Test Gezgini *-çoğunlukla desteklenir.

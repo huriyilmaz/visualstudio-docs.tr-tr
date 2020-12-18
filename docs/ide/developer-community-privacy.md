@@ -12,16 +12,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 82c89f2f6ec2a1a9bc6c87a600c355226b2f3da4
-ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
+ms.openlocfilehash: dccf962aef39227388f86134a9dd1f8c96440a3c
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95005944"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668553"
 ---
 # <a name="developer-community-data-privacy"></a>Geliştirici Topluluğu veri gizliliği
 
-Varsayılan olarak, herhangi bir yorum ve yanıt dahil olmak üzere [Geliştirici topluluğu](https://developercommunity.visualstudio.com/)'nda sorunlu tüm bilgiler herkese açık bir şekilde görünür. Tüm topluluğun diğer kullanıcıların bulduğu sorunları, çözümleri ve geçici çözümleri görmesini sağladığından bu faydalıdır. Bununla birlikte, verilerinizin veya kimliğinizin gizliliğiyle ilgili endişeniz varsa seçenekleriniz vardır.
+Varsayılan olarak, herhangi bir yorum ve yanıt dahil olmak üzere [Geliştirici topluluğu](https://aka.ms/feedback/suggest?space=8)'nda sorunlu tüm bilgiler herkese açık bir şekilde görünür. Tüm topluluğun diğer kullanıcıların bulduğu sorunları, çözümleri ve geçici çözümleri görmesini sağladığından bu faydalıdır. Bununla birlikte, verilerinizin veya kimliğinizin gizliliğiyle ilgili endişeniz varsa seçenekleriniz vardır.
 
 ## <a name="identity-privacy"></a>Kimlik gizliliği
 

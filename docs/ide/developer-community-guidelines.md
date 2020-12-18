@@ -8,12 +8,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dfcdcfc309fb951b2f7e490f0d03dcfe9d381b83
-ms.sourcegitcommit: 54ec951bcfa87fd80a42e3ab4539084634a5ceb4
+ms.openlocfilehash: 3e30dcb6a9d65cb562851ed90e350530759975d2
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92116156"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668566"
 ---
 # <a name="developer-community-guidelines"></a>Geliştirici Topluluğu yönergeleri
 
@@ -21,13 +21,13 @@ Geliştirici topluluğu, Visual Studio için sorunları ve özellik önerilerini
 
 ## <a name="submitting-problems-and-suggestions"></a>Sorunları ve önerileri gönderme
 
-[Visual Studio Geliştirici topluluğu](https://developercommunity.visualstudio.com/) , Visual Studio için sorunları ve özellik önerilerini izler.
+[Visual Studio Geliştirici topluluğu](https://aka.ms/feedback/suggest?space=8) , Visual Studio için sorunları ve özellik önerilerini izler.
 
 ### <a name="before-submitting-an-issue"></a>Bir sorunu göndermeden önce
 
 Daha önce mevcut olmadığından emin olmak için Visual Studio Geliştirici topluluğu 'nda sorununuzu arayın. Sorununuzu zaten var buldıysanız, ilgili yorumlarınızı yapın ve oyunuzu atayın.
 
-Sorununuz bir sorunuz ise, topluluktan _Visual-Studio_etiketini kullanarak [Stack Overflow](https://stackoverflow.com/questions/tagged/visual-studio?tab=Newest) isteyin. Müşteri desteği personeli bu etiketi izliyor ve soruları yanıtlamaya yardımcı olacak.
+Sorununuz bir sorunuz ise, topluluktan _Visual-Studio_ etiketini kullanarak [Stack Overflow](https://stackoverflow.com/questions/tagged/visual-studio?tab=Newest) isteyin. Müşteri desteği personeli bu etiketi izliyor ve soruları yanıtlamaya yardımcı olacak.
 
 Hata veya özelliğinizi açıklayan mevcut bir sorunu bulamazsanız, aşağıdaki yönergeleri kullanarak bir sorun gönderin.
 
@@ -99,7 +99,7 @@ Karar verme sürecimizde, özellik önerisi hakkında aşağıdaki özelliklere 
 
 Bu sorulardan herhangi birine "Evet" Yanıt vermiyoruz. Ancak genellikle öneri, daha fazla topluluk geri bildirimi toplamak için _Gözden geçirme bölümünde_ açık kalır.
 
-Bir öneri genel ürün yönümüzle eşleşmezse, bunu *kapsam dışı*olarak kapalarız. Örneğin, Visual Studio ürün ailesinin diğer üyelerinde benzer yatırımları olabilir. Ya da önerilen özellik yalnızca birkaç kişiyle ilgili olabilir, bu da uzantının sağlanması daha uygun hale gelir.
+Bir öneri genel ürün yönümüzle eşleşmezse, bunu *kapsam dışı* olarak kapalarız. Örneğin, Visual Studio ürün ailesinin diğer üyelerinde benzer yatırımları olabilir. Ya da önerilen özellik yalnızca birkaç kişiyle ilgili olabilir, bu da uzantının sağlanması daha uygun hale gelir.
 
 [Öneri durumlarına ve SSS](./report-a-problem.md)'ye başvurarak Özellik önerinizin ilerlemesini izleyin.
 
@@ -117,4 +117,4 @@ Açıklamalar ve yanıtlar herkese açık bir şekilde görünür, ancak ekli do
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Sorunları bildirmek, Özellikler önermek veya mevcut biletlere gözatmak için [Visual Studio Geliştirici topluluğu](https://developercommunity.visualstudio.com/) 'na gidin. Keyfini çıkarın!
+Sorunları bildirmek, Özellikler önermek veya mevcut biletlere gözatmak için [Visual Studio Geliştirici topluluğu](https://aka.ms/feedback/suggest?space=8) 'na gidin. Keyfini çıkarın!

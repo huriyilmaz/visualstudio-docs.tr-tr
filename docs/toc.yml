@@ -182,11 +182,11 @@
       href: ide/visual-studio-search.md
     - name: Çözümler ve projeler
       items:
-        - name: Çözüm ve projelerle çalışma
+        - name: Çözümler ve projeler hakkında bilgi edinin
           href: ide/solutions-and-projects-in-visual-studio.md
-        - name: Yeni bir proje oluşturma
+        - name: Yeni proje oluşturma
           href: ide/create-new-project.md
-        - name: Projeler ve çözümler oluşturma
+        - name: Çözüm ve projelerle çalışma
           href: ide/creating-solutions-and-projects.md
         - name: Bir depodan proje açma
           href: get-started/tutorial-open-project-from-repo.md

@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 418cc9f75842cb4f3e9d8c0c0753084e2f0633c2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 54bd53f5c63a2f126f4aeae264c4dff745633cf6
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350816"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668319"
 ---
 # <a name="troubleshoot-visual-studio-installation-and-upgrade-issues"></a>Visual Studio yükleme ve yükseltme sorunlarını giderme
 
@@ -53,7 +53,7 @@ Onarma birçok yaygın güncelleştirme sorununu düzeltir. Visual Studio 'da on
 
 ### <a name="step-3---check-with-the-developer-community"></a>3. adım-geliştirici topluluğuyla denetleme
 
-[Visual Studio Geliştirici topluluğu](https://developercommunity.visualstudio.com/spaces/8/index.html)ile hata iletinizde arama yapın. Topluluğun diğer üyeleri sorununuz için bir çözüm belgelenmiş olabilir.
+[Visual Studio Geliştirici topluluğu](https://aka.ms/feedback/suggest?space=8)ile hata iletinizde arama yapın. Topluluğun diğer üyeleri sorununuz için bir çözüm belgelenmiş olabilir.
 
 ### <a name="step-4---delete-the-visual-studio-installer-directory-to-fix-upgrade-problems"></a>4. adım-yükseltme sorunlarını giderecek Visual Studio Yükleyicisi dizini silme
 

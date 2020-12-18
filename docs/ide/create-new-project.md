@@ -1,5 +1,5 @@
 ---
-title: Yeni bir proje oluşturma
+title: Yeni proje oluşturma
 description: Visual Studio 'da yeni bir proje oluşturmayı öğrenin, adım adım.
 ms.custom: SEO-VS-2020
 ms.date: 03/19/2019
@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7cba3c19ae939396132af8bb3c2ffee318b7007e
-ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
+ms.openlocfilehash: c46ad7630717ca6500ddbedf284125e085ddb780
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95006529"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668177"
 ---
 # <a name="create-a-new-project-in-visual-studio"></a>Visual Studio 'da yeni proje oluşturma
 
@@ -99,8 +99,8 @@ Yeni projeyi oluşturmak için **Oluştur** ' a tıklayın.
 
 ## <a name="add-additional-projects-to-a-solution"></a>Çözüme ek projeler ekleme
 
-Bir çözüme ek bir proje eklemek istiyorsanız, **Çözüm Gezgini** çözüm düğümüne sağ tıklayın ve **Add**  >  **Yeni proje** Ekle ' yi seçin.
+Bir çözüme ek bir proje eklemek istiyorsanız, **Çözüm Gezgini** çözüm düğümüne sağ tıklayın ve   >  **Yeni proje** Ekle ' yi seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Projeler ve çözümler oluşturma](creating-solutions-and-projects.md)
+- [Çözüm ve projelerle çalışma](creating-solutions-and-projects.md)

@@ -10,12 +10,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 6aacd4639e440998a5123dae8c38a64c84ebb948
-ms.sourcegitcommit: d9dd86c421532cfca6c0c5761d160f35829419c6
+ms.openlocfilehash: 367b3681d2ff8a828ee45f59359043b5fede3d26
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90026293"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668111"
 ---
 # <a name="visual-studio-on-arm-powered-devices"></a>ARM destekli cihazlarda Visual Studio
 
@@ -42,4 +42,4 @@ Uzak cihazda çalışan bir uygulamada hata ayıklamak için, ARM için [Uzak ar
 Tüm Visual Studio projeleri, bir ARM cihazından hata ayıklamayı başlattığınızda (**F5**) projeleri yerel olarak başlatacak şekilde yapılandırılmamıştır. Uygulamanız yerel olarak çalışıyor olsa bile, Visual Studio 'Yu uzaktan hata ayıklama için yapılandırmanız gerekebilir. Daha fazla bilgi için bkz. [Uzaktan hata ayıklama](../debugger/remote-debugging.md).
 
 ## <a name="we-need-your-help"></a>Yardımımız olması gerekir!
-Visual Studio 'Nun ARM cihazlarda yerel olarak çalışmasını istiyorsanız, gerekli senaryolar ve destek hakkında bilgi almak istiyoruz. [Geliştirici topluluğu](https://developercommunity.visualstudio.com/idea/1161018/native-arm-support-for-visual-studio.html)' na giderek bizimle iletişime ulaşabilirsiniz. 
+Visual Studio 'Nun ARM cihazlarda yerel olarak çalışmasını istiyorsanız, gerekli senaryolar ve destek hakkında bilgi almak istiyoruz. [Geliştirici topluluğu](https://developercommunity.visualstudio.com/idea/1161018/native-arm-support-for-visual-studio.html)' na giderek bizimle iletişime ulaşabilirsiniz.

@@ -17,20 +17,20 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 52eee3535590842db53cd80ac761286fb4a23fa9
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 1fc40c826499b36d5d713d0842a2c0e8dae462d1
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93399001"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668371"
 ---
 # <a name="install-and-use-visual-studio-and-azure-services-behind-a-firewall-or-proxy-server"></a>Visual Studio ve Azure hizmetlerini bir güvenlik duvarı veya proxy sunucusunun arkasında yükleyip kullanma
 
 Siz veya kuruluşunuz bir güvenlik duvarı veya proxy sunucusu gibi güvenlik önlemleri kullanıyorsa, Visual Studio ve Azure hizmetlerini yükleyip kullandığınızda en iyi deneyimlere sahip olmanız için, açmak isteyebileceğiniz bir "izin verilenler listesine" ve bağlantı noktalarına ve protokollere eklemek isteyebileceğiniz etki alanı URL 'Leri vardır.
 
-* **[Visual Studio 'Yu yüklemek](#install-visual-studio)** : Bu tablolar, istediğiniz tüm bileşenlere ve iş yüklerine erişebilmek için bir izin verilenler listesine eklenecek etki alanı URL 'lerini içerir.
+* **[Visual Studio 'Yu yüklemek](#install-visual-studio)**: Bu tablolar, istediğiniz tüm bileşenlere ve iş yüklerine erişebilmek için bir izin verilenler listesine eklenecek etki alanı URL 'lerini içerir.
 
-* **[Visual Studio ve Azure hizmetlerini kullanın](#use-visual-studio-and-azure-services)** : Bu tablo, bir izin verilenler listesine eklemek için etki alanı URL 'lerini ve açılacak bağlantı noktalarını ve protokolleri içerir. böylece, istediğiniz tüm özelliklere ve hizmetlere erişebilirsiniz.
+* **[Visual Studio ve Azure hizmetlerini kullanın](#use-visual-studio-and-azure-services)**: Bu tablo, bir izin verilenler listesine eklemek için etki alanı URL 'lerini ve açılacak bağlantı noktalarını ve protokolleri içerir. böylece, istediğiniz tüm özelliklere ve hizmetlere erişebilirsiniz.
 
 > [!NOTE]
 > Bu makale Windows üzerinde Visual Studio için yazılmıştır, ancak bazı bilgiler bir güvenlik duvarı veya proxy sunucusunun arkasında [Mac için Visual Studio yüklemek](/visualstudio/mac/install-behind-a-firewall-or-proxy-server) için de geçerlidir.
@@ -95,11 +95,11 @@ Bir güvenlik duvarı veya proxy sunucusu arkasında Visual Studio veya Azure hi
 | URL<br>çözüm | go.microsoft.com<br><br>aka.ms | | URL 'Leri kısaltmak için kullanılır ve daha uzun URL 'Ler olarak çözümlenir |
 | Başlangıç Sayfası | vsstartpage.blob.core.windows.net | 443 | Başlangıç sayfasında gösterilen geliştirici haberlerini göstermek için kullanılır (yalnızca Visual Studio 2017) |
 | Hedeflenen<br> Bildirim <br>Hizmet | targetednotifications-tm.trafficmanager.net <br><br>www.research.net | 443<br><br>443 | Yalnızca belirli makine/kullanım senaryosu türleri için geçerli olan bir listeye yönelik genel bildirim listesini filtrelemek için kullanılır |
-| Uzantı <br>Güncelleştirme denetimi | marketplace.visualstudio.com<br><br>&#42;. windows.net <br>&#42;. microsoftonline.com <br>&#42;. live.com | 443 | Yüklü bir uzantının kullanılabilir bir güncelleştirmesi olduğunda bildirim sağlamak için kullanılır <br><br> Oturum açma konumu olarak kullanılır |
+| Dahili numara <br>Güncelleştirme denetimi | marketplace.visualstudio.com<br><br>&#42;. windows.net <br>&#42;. microsoftonline.com <br>&#42;. live.com | 443 | Yüklü bir uzantının kullanılabilir bir güncelleştirmesi olduğunda bildirim sağlamak için kullanılır <br><br> Oturum açma konumu olarak kullanılır |
 | AI projesi <br>Tümleştirme | az861674.vo.msecnd.net | 443<br> | Yeni projeleri kayıtlı Application Insights hesabınıza kullanım verilerini gönderecek şekilde yapılandırmak için kullanılır |
 | Kod lens | codelensprodscus1su0. app.<br>codelens.visualstudio.com | 443 | Bir dosyanın en son ne zaman güncelleştirildiği, değişiklikler zaman çizelgesi, değişen iş öğeleri, yazarlar ve daha fazlası ile ilgili düzenleyicide bilgi sağlamak için kullanılır |
 | Deneysel <br>özellik etkinleştirme | visualstudio-devdiv-c2s.msedge.net | 80 | Deneysel yeni özellikleri veya özellik değişikliklerini etkinleştirmek için kullanılır |
-| "Rozet" kimliği <br>(Kullanıcı adı ve avatar)<br>reservedStorageGb <br>Dolaşım ayarları | app.vssps.visualstudio.com <br><br>app.vsspsext.visualstudio.com<br><br>app.vssps.visualstudio.com<br><br> ns-sb2-prod-ch1-002.cloudapp.net <br><br>az700632.vo.msecnd.net<br><br>api.vstsusers.visualstudio.com/profiles/* | 443 | IDE 'de kullanıcının adını ve avatarını göstermek için kullanılır <br><br> Ayar değişikliklerinin bir makineden diğerine dolaşımını sağlamak için kullanılır |
+| "Rozet" kimliği <br>(Kullanıcı adı ve avatar)<br>ve <br>Dolaşım ayarları | app.vssps.visualstudio.com <br><br>app.vsspsext.visualstudio.com<br><br>app.vssps.visualstudio.com<br><br> ns-sb2-prod-ch1-002.cloudapp.net <br><br>az700632.vo.msecnd.net<br><br>api.vstsusers.visualstudio.com/profiles/* | 443 | IDE 'de kullanıcının adını ve avatarını göstermek için kullanılır <br><br> Ayar değişikliklerinin bir makineden diğerine dolaşımını sağlamak için kullanılır |
 | Uzak ayarlar | az700632.vo.msecnd.net | 443 | Visual Studio 'da sorunlara neden olan bilinen uzantıları kapatmak için kullanılır |
 | Windows araçları | developer.microsoft.com <br><br>dev.windows.com  <br><br>appdev.microsoft.com | https/443 | Windows uygulama mağazası senaryoları için kullanılır |
 | JSON şeması <br>Bulma <br><br>JSON şeması <br>Tanım<br><br>JSON şeması <br>İçin destek <br>Azure Kaynakları | json.schemastore.org <br>schemastoreorg.azurewebsites.net<br><br>json-schema.org<br><br>schema.management.azure.com | http/80<br>https/443<br><br>http/80<br><br>https/443 | Kullanıcının JSON belgelerini düzenlenirken kullanabileceği JSON şemalarını bulma ve indirme için kullanılır <br><br>JSON için meta doğrulama şemasını almak için kullanılır<br><br>Azure Resource Manager dağıtım şablonlarının geçerli şemasını almak için kullanılır |
@@ -148,14 +148,14 @@ Bir güvenlik duvarı veya proxy sunucusu arkasında Visual Studio veya Azure hi
 
 Bazen, Visual Studio 'Yu bir güvenlik duvarı veya proxy sunucusu arkasında yüklerken veya kullandığınızda ağ veya ara sunucu ile ilgili hatalara de karşılaşabilirsiniz. Bu tür hata iletileri için çözümler hakkında daha fazla bilgi için bkz. [Visual Studio 'yu yüklerken veya kullanırken ağla ilgili hatalara sorun giderme](troubleshooting-network-related-errors-in-visual-studio.md) sayfası.
 
-## <a name="get-support"></a>Destek alma
+## <a name="get-support"></a>Destek alın
 
 Yükleme ile ilgili sorunlar için bir [**yükleme sohbeti**](https://visualstudio.microsoft.com/vs/support/#talktous) (yalnızca İngilizce) için destek seçeneği sunuyoruz.
 
 İşte daha fazla destek seçeneği aşağıda verilmiştir:
 
 * Hem Visual Studio Yükleyicisi hem de Visual Studio IDE içinde görüntülenen [sorun bildir](../ide/how-to-report-a-problem-with-visual-studio.md) aracını kullanarak ürün sorunlarını bize bildirin.
-* [Visual Studio Geliştirici topluluğu](https://developercommunity.visualstudio.com/)'nda bir özellik önerin, ürün sorunlarını izleyebilir ve yanıt bulabilirsiniz.
+* [Visual Studio Geliştirici topluluğu](https://aka.ms/feedback/suggest?space=8)'nda bir özellik önerin, ürün sorunlarını izleyebilir ve yanıt bulabilirsiniz.
 * [Gitter Community 'Deki Visual Studio görüşmesinde](https://gitter.im/Microsoft/VisualStudio)bizimle ve diğer Visual Studio geliştiricileriyle konuşmak için [GitHub](https://github.com/) hesabınızı kullanın.
 
 ## <a name="see-also"></a>Ayrıca bkz.

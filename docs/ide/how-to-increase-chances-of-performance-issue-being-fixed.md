@@ -7,12 +7,12 @@ ms.author: madsk
 manager: jillfra
 ms.date: 11/19/2019
 ms.topic: conceptual
-ms.openlocfilehash: 1567e75d5e0a6f27aee68cd783b9ebd4a70815f4
-ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
+ms.openlocfilehash: 57009326857672ea648bdf8f531f9509cf8487ff
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91211194"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668450"
 ---
 # <a name="how-to-increase-the-chances-of-a-performance-issue-being-fixed"></a>Bir performans sorununun düzeltilme olasılığını artırma
 
@@ -28,7 +28,7 @@ Bildirilmekte olan soruna yönelik ayrı imzalar bulun ve başlıkta mümkün ol
 
 **Şüpheli olduğunda, yeni bir sorun raporu Kaydet**
 
-Birçok sorun için herhangi bir farklı imza veya yeniden oluşturma adımı bulunmayabilir. Bu gibi durumlarda, yeni bir rapor, bir veya daha fazla rapor üzerinde, benzer bir dışa dönük *belirti*bildiren bir açıklamadan daha iyidir. Raporun türüne bağlı olarak, bu belgenin ilerleyen kısımlarında açıklandığı gibi Raporunuza ek tanılama dosyaları ekleyin.
+Birçok sorun için herhangi bir farklı imza veya yeniden oluşturma adımı bulunmayabilir. Bu gibi durumlarda, yeni bir rapor, bir veya daha fazla rapor üzerinde, benzer bir dışa dönük *belirti* bildiren bir açıklamadan daha iyidir. Raporun türüne bağlı olarak, bu belgenin ilerleyen kısımlarında açıklandığı gibi Raporunuza ek tanılama dosyaları ekleyin.
 
 **Soruna özgü en iyi yöntemler**
 
@@ -96,7 +96,7 @@ Döküm sayısını ve döküm klasörünü uygun şekilde özelleştirin. Bu ay
 > [!NOTE]
 > Bu yöntem tarafından üretilen her döküm dosyası boyutu 4 GB 'a kadar olacaktır. DumpFolder 'ı yeterli sürücü alanına sahip bir konuma ayarladığınızdan emin olun veya DumpCount sayısını uygun şekilde ayarlayın.
 
-Visual Studio her kilitlendiğinde,devenv.exe bir döküm dosyası oluşturacaktır ** . [ Number]. dmp** dosyası yapılandırılmış konumda.
+Visual Studio her kilitlendiğinde,devenv.exe bir döküm dosyası oluşturacaktır **. [ Number]. dmp** dosyası yapılandırılmış konumda.
 
 Ardından, Visual Studio 'nun "sorun bildir..." seçeneğini kullanın. Özellik. Uygun dökümü eklemenize olanak sağlayacak.
 
@@ -191,12 +191,12 @@ Bu tür sorunların en çok eyleme neden olduğu, aşağıdaki adımları izleye
     - Sorunu yeniden üretin.
 
 2. Microsoft Visual Studio ve .NET Framework günlük toplama aracını [buraya](https://www.microsoft.com/download/details.aspx?id=12493)indirin.
-3. Aracı çalıştırın. Bu, **% Temp%/vslogs.zip**dosyasına bir ZIP dosyası verir. Lütfen bu dosyayı geri bildiriminiz için bağlayın.
+3. Aracı çalıştırın. Bu, **% Temp%/vslogs.zip** dosyasına bir ZIP dosyası verir. Lütfen bu dosyayı geri bildiriminiz için bağlayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 * [Visual Studio geri bildirim seçenekleri](../ide/feedback-options.md)
 * [Mac için Visual Studio sorun bildirme](/visualstudio/mac/report-a-problem)
 * [C++ ile ilgili sorun bildirme](/cpp/how-to-report-a-problem-with-the-visual-cpp-toolset)
-* [Visual Studio Geliştirici topluluğu](https://developercommunity.visualstudio.com/)
+* [Visual Studio Geliştirici topluluğu](https://aka.ms/feedback/suggest?space=8)
 * [Geliştirici Topluluğu veri gizliliği](developer-community-privacy.md)

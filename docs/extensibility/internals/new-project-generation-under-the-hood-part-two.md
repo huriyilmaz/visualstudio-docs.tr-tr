@@ -1,5 +1,6 @@
 ---
 title: 'Yeni proje oluşturma: devlet, Ikinci bölüm | Microsoft Docs'
+description: Visual Studio tümleşik geliştirme ortamında (IDE), kendi proje türünü (2. bölüm) oluştururken ayrıntılı bir görünüme göz atın.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,16 +12,16 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8692f2012e5f2733982f04e35a7fed415e49c636
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9e45c9643a1fd2e6dcf9d5520fbb2982736b5109
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80707015"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668852"
 ---
 # <a name="new-project-generation-under-the-hood-part-two"></a>Yeni Proje Oluşturma: Arka Plan, 2. Bölüm
 
-[Yeni proje oluşturma bölümünde: birinci bölüm bölümünde](../../extensibility/internals/new-project-generation-under-the-hood-part-one.md) **Yeni proje** iletişim kutusunun nasıl doldurulduğu gördünüz. Bir **Visual C# Windows uygulaması**seçtiğinizi, **ad** ve **konum** metin kutularını doldurduktan ve Tamam ' a tıkladığınızı varsayalım.
+[Yeni proje oluşturma bölümünde: birinci bölüm bölümünde](../../extensibility/internals/new-project-generation-under-the-hood-part-one.md) **Yeni proje** iletişim kutusunun nasıl doldurulduğu gördünüz. Bir **Visual C# Windows uygulaması** seçtiğinizi, **ad** ve **konum** metin kutularını doldurduktan ve Tamam ' a tıkladığınızı varsayalım.
 
 ## <a name="generating-the-solution-files"></a>Çözüm dosyalarını oluşturma
  Uygulama şablonu seçme [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , unzip ve ilgili. vstemplate dosyasını açmak ve bu DOSYADAKI xml komutlarını yorumlamak için bir şablon başlatmak üzere yönlendirir. Bu komutlar yeni veya mevcut çözümde projeler ve proje öğeleri oluşturur.
@@ -68,7 +69,7 @@ namespace Simple
  Temel bir. vstemplate dosyası bu biçime sahiptir
 
 ```xml
-<VSTemplate Version="2.0.0"     xmlns="http://schemas.microsoft.com/developer/vstemplate/2005"     Type="Project">
+<VSTemplate Version="2.0.0"     xmlns="http://schemas.microsoft.com/developer/vstemplate/2005"     Type="Project">
     <TemplateData>
     </TemplateData>
     <TemplateContent>
@@ -90,13 +91,13 @@ namespace Simple
     <ProjectItem TargetFileName="Properties\Resources.resx">
       Resources.resx
     </ProjectItem>
-    <ProjectItem ReplaceParameters="true"       TargetFileName="Properties\Resources.Designer.cs">
+    <ProjectItem ReplaceParameters="true"       TargetFileName="Properties\Resources.Designer.cs">
       Resources.Designer.cs
     </ProjectItem>
     <ProjectItem TargetFileName="Properties\Settings.settings">
       Settings.settings
     </ProjectItem>
-    <ProjectItem ReplaceParameters="true"       TargetFileName="Properties\Settings.Designer.cs">
+    <ProjectItem ReplaceParameters="true"       TargetFileName="Properties\Settings.Designer.cs">
       Settings.Designer.cs
     </ProjectItem>
     <ProjectItem ReplaceParameters="true" OpenInEditor="true">
@@ -118,7 +119,7 @@ namespace Simple
 
  Ortaya çıkan Windows uygulama klasörü yapısı şöyle görünür:
 
- ![SimpleSolution](../../extensibility/internals/media/simplesolution.png "SimpleSolution")
+ ![Visual Studio Çözüm Gezgini ' basit ' çözümü için Windows uygulama klasörü yapısının ekran görüntüsü.](../../extensibility/internals/media/simplesolution.png)
 
  Şablondaki ilk ve tek \<Project> etiket şunu okur:
 
@@ -157,4 +158,4 @@ namespace Simple
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Yeni Proje Oluşturma: Arka Plan, 1. Bölüm](../../extensibility/internals/new-project-generation-under-the-hood-part-one.md)
-- [MSBUILD](../../msbuild/msbuild.md)
+- [MSBuild](../../msbuild/msbuild.md)

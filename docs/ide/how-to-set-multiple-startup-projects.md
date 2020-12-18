@@ -13,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 348e3997f5136ab343639062f2b1d4dbdda08e78
-ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
+ms.openlocfilehash: 99d8f93dc21925b997828adb541b7ee2f0337b6c
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92136998"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668683"
 ---
 # <a name="how-to-set-multiple-startup-projects"></a>Nasıl yapılır: Çoklu başlangıç projeleri ayarlama
 
@@ -37,5 +37,5 @@ Visual Studio, hata ayıklayıcıyı başlattığınızda birden çok projenin n
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Derleme ve oluşturma](../ide/compiling-and-building-in-visual-studio.md)
-- [Projeler ve çözümler oluşturma](../ide/creating-solutions-and-projects.md)
+- [Çözüm ve projelerle çalışma](../ide/creating-solutions-and-projects.md)
 - [Proje ve çözüm özelliklerini yönetme](../ide/managing-project-and-solution-properties.md)

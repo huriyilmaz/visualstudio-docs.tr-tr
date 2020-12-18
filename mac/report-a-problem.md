@@ -6,20 +6,20 @@ author: therealjohn
 ms.author: johmil
 ms.date: 06/18/2019
 ms.assetid: 1C7AC52E-754E-473F-A5B5-00C3A40DAACD
-ms.openlocfilehash: 2b5fd2fd115c4461659ba1b4f211e645367851d2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c104e4d819e58630f894405b3b56a8a442576816
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "67691226"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668722"
 ---
 # <a name="how-to-report-a-problem-in-visual-studio-for-mac"></a>Mac için Visual Studio bir sorunu bildirme
 
-Mac için Visual Studio bir sorunla karşılaşırsanız, bunun hakkında bilgi edinmek istiyoruz. Sorunu tanılayıp çözebilmemiz için sorunu [Geliştirici topluluğu](https://developercommunity.visualstudio.com/spaces/41/index.html) 'na bildirme hakkında daha fazla bilgiyi burada bulabilirsiniz.
+Mac için Visual Studio bir sorunla karşılaşırsanız, bunun hakkında bilgi edinmek istiyoruz. Sorunu tanılayıp çözebilmemiz için sorunu [Geliştirici topluluğu](https://aka.ms/feedback/report?space=41) 'na bildirme hakkında daha fazla bilgiyi burada bulabilirsiniz.
 
 ## <a name="how-to-report-a-problem"></a>Sorun bildirme
 
-Mac için Visual Studio bir sorun bildirmek için en iyi seçenek, raporun Mac için Visual Studio başlatılmalıdır. Mac için Visual Studio aracılığıyla raporlama, tanılama bilgilerinin rapora otomatik olarak eklenmesini sağlar. Mac için Visual Studio kullanamıyoruz (örneğin kilitlenme nedeniyle), sorunu doğrudan [Geliştirici topluluğu](https://developercommunity.visualstudio.com/content/problem/post.html?space=41) sitesinde rapor edebilirsiniz.
+Mac için Visual Studio bir sorun bildirmek için en iyi seçenek, raporun Mac için Visual Studio başlatılmalıdır. Mac için Visual Studio aracılığıyla raporlama, tanılama bilgilerinin rapora otomatik olarak eklenmesini sağlar. Mac için Visual Studio kullanamıyoruz (örneğin kilitlenme nedeniyle), sorunu doğrudan [Geliştirici topluluğu](https://aka.ms/feedback/report?space=41) sitesinde rapor edebilirsiniz.
 
 Mac için Visual Studio bir sorun bildirmek için Yardım ' ı, menü çubuğundan **sorun bildir >** ' i seçin:
 
@@ -59,9 +59,9 @@ Mac için Visual Studio bir sorun bildirmek için Yardım ' ı, menü çubuğund
 
 ## <a name="search-for-solutions-or-provide-feedback"></a>Çözüm arayın veya geri bildirim sağlayın
 
-Bir sorunu bildirmek için Mac için Visual Studio kullanmak istemiyorsanız, sorunun zaten bildirilmiş olması ve [Visual Studio Geliştirici topluluğu](https://developercommunity.visualstudio.com/) sayfasında bir çözümün gönderilmesini sağlayabilirsiniz.
+Bir sorunu bildirmek için Mac için Visual Studio kullanmak istemiyorsanız, sorunun zaten bildirilmiş olması ve [Visual Studio Geliştirici topluluğu](https://aka.ms/feedback/report?space=41/) sayfasında bir çözümün gönderilmesini sağlayabilirsiniz.
 
-Rapor almak için bir sorununuz yoksa ancak bir özellik önermek istiyorsanız, bunun de bir yerinde olabilir. Daha fazla bilgi için bkz. [özellik önerme](https://developercommunity.visualstudio.com/content/idea/post.html?space=41) sayfası.
+Rapor almak için bir sorununuz yoksa ancak bir özellik önermek istiyorsanız, bunun de bir yerinde olabilir. Daha fazla bilgi için bkz. [özellik önerme](https://aka.ms/feedback/suggest?space=41) sayfası.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

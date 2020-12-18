@@ -8,12 +8,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b6c785b755b64f0dd7e367a01d9c05c1981ea558
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: eae7e4726f720b1c9974682525bbe2a28ee38d5f
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71693009"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97667942"
 ---
 # <a name="visual-studio-customer-experience-improvement-program"></a>Visual Studio Müşteri Deneyimini Geliştirme Programı
 
@@ -43,17 +43,17 @@ VSCEıP varsayılan olarak açıktır. Bu yönergeleri izleyerek devre dışı b
 
 ::: moniker range="vs-2017"
 
-- 64 bitlik bir IŞLETIM sisteminde anahtar = **HKEY_LOCAL_MACHINE \SOFTWARE\Wow6432Node\Microsoft\VSCommon\15.0\SQM**
-- 32 bitlik bir IŞLETIM sisteminde anahtar = **HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VSCommon\15.0\SQM**
-- Grup ilkesi etkinleştirildiğinde anahtar = **HKEY_LOCAL_MACHINE \Software\Policies\Microsoft\VisualStudio\SQM**
+- 64 bitlik bir IŞLETIM sisteminde anahtar = **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VSCommon\15.0\SQM**
+- 32 bitlik bir IŞLETIM sisteminde anahtar = **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VSCommon\15.0\SQM**
+- Grup ilkesi etkinleştirildiğinde anahtar = **HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM**
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-- 64 bitlik bir IŞLETIM sisteminde anahtar = **HKEY_LOCAL_MACHINE \SOFTWARE\Wow6432Node\Microsoft\VSCommon\16.0\SQM**
-- 32 bitlik bir IŞLETIM sisteminde anahtar = **HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VSCommon\16.0\SQM**
-- Grup ilkesi etkinleştirildiğinde anahtar = **HKEY_LOCAL_MACHINE \Software\Policies\Microsoft\VisualStudio\SQM**
+- 64 bitlik bir IŞLETIM sisteminde anahtar = **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VSCommon\16.0\SQM**
+- 32 bitlik bir IŞLETIM sisteminde anahtar = **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VSCommon\16.0\SQM**
+- Grup ilkesi etkinleştirildiğinde anahtar = **HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM**
 
 ::: moniker-end
 
@@ -74,5 +74,5 @@ VSCEıP tarafından toplanan, işlenen veya aktarılan bilgiler hakkında daha f
 * [Visual Studio tarafından toplanan tanılama bilgileri](diagnostic-data-collection.md)
 * [Visual Studio geri bildirim seçenekleri](../ide/feedback-options.md)
 * [Visual Studio ile ilgili sorun bildirme](../ide/how-to-report-a-problem-with-visual-studio.md)
-* [Visual Studio Geliştirici topluluğu](https://developercommunity.visualstudio.com/)
+* [Visual Studio Geliştirici topluluğu](https://aka.ms/feedback/suggest?space=8)
 * [Microsoft Gizlilik Bildirimi](https://privacy.microsoft.com/privacystatement)

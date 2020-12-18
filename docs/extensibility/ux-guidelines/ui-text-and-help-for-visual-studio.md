@@ -1,5 +1,6 @@
 ---
 title: Visual Studio için Kullanıcı arabirimi metni ve yardımı | Microsoft Docs
+description: Visual Studio için yardım bilgilerinde kullanılan Kullanıcı arabirimi metni ve terminoloji hakkında bilgi edinin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: e8747d07-6c90-46cc-b425-55b589f7e9e4
@@ -8,12 +9,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b3247aeaa702b59722471c7d28e98957f04f3e07
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2795d766c43d6119fa50a12c4dcd1e2c72d79186
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80698293"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668605"
 ---
 # <a name="ui-text-and-help-for-visual-studio"></a>Visual Studio İçin UI Metni ve Yardımı
 ## <a name="ui-text-and-terminology"></a><a name="BKMK_UITextAndTerminology"></a> UI metni ve terminolojisi
@@ -60,11 +61,11 @@ ms.locfileid: "80698293"
 #### <a name="supplemental-instructions"></a>Ek yönergeler
  Ek yönergeler, kullanıcının denetimleri veya denetim gruplamalarını anlamasına yardımcı olan ek bilgiler sağlar. Bu, giriş denetiminin hangi biçimin beklenmekte olduğunu anlamak için gereken ipucu metnini de içerebilir. Ek yönergeleri gelişigüzel bir şekilde kullanın. Kullanıcının yaptıkları seçimin kollarını tam olarak anlayamayabileceği durumlar için onları ayırın.
 
- ![Visual Studio 'da ek metin](../../extensibility/ux-guidelines/media/0601-b_supplementaltext1.png "0601-b_SupplementalText1")
+ ![Seçenek ayarlarının değiştirilmesinin etkisini açıklayan, aşağıdaki ek metinle Internet Explorer Seçenekler düğmesini gösteren ekran görüntüsü.](../../extensibility/ux-guidelines/media/0601-b_supplementaltext1.png "0601-b_SupplementalText1")
 
  **Visual Studio 'da ek metin**
 
- ![Visual Studio 'da ek metin](../../extensibility/ux-guidelines/media/0601-c_supplementaltext2.png "0601-c_SupplementalText2")
+ ![Kaynak denetim sistemi seçeneklerinin her birini açıklayan ek metni gösteren Visual Studio 'da kaynak denetimi seçme iletişim kutusunun ekran görüntüsü.](../../extensibility/ux-guidelines/media/0601-c_supplementaltext2.png "0601-c_SupplementalText2")
 
  **Visual Studio 'da ek metin**
 
@@ -123,7 +124,7 @@ ms.locfileid: "80698293"
 
 - "Burada" sözcüğünü hiçbir şekilde bağlamayın. Bu, bazı ekran okuyucular için sorunlu olan ve yalnızca köprü uygulanmış kelimeyi seslendirilecektir.
 
-     Yanlış **: "Windows**Azure hakkında bilgi edinin Mobile Services
+     Yanlış **: "Windows** Azure hakkında bilgi edinin Mobile Services
 
      Doğru: "Windows Azure Mobile Services için hangi fiyatlandırma seçenekleri mevcuttur?"
 
@@ -136,15 +137,15 @@ ms.locfileid: "80698293"
 
 - Denetim etiketinin yerine:
 
-     ![Visual Studio 'da ipucu metni](../../extensibility/ux-guidelines/media/0601-f_hinttext1.png "0601-f_HintText1")
+     !["Arama Çözüm Gezgini (Ctrl +;)" okuyan denetim etiketinin yerine ipucu metniyle birlikte açılan bir denetimin ekran görüntüsü.](../../extensibility/ux-guidelines/media/0601-f_hinttext1.png "0601-f_HintText1")
 
 - Bir fiil ile yönergeler vererek:
 
-     ![Visual Studio 'da ipucu metni](../../extensibility/ux-guidelines/media/0601-g_hinttext2.png "0601-g_HintText2")
+     !["Adınızı gir" i okuyan denetimdeki ipucu metniyle bir metin kutusunun ekran görüntüsü.](../../extensibility/ux-guidelines/media/0601-g_hinttext2.png "0601-g_HintText2")
 
 - Gerekli bir girişi belirten metinle:
 
-     ![Visual Studio 'da ipucu metni](../../extensibility/ux-guidelines/media/0601-h_hinttext3.png "0601-h_HintText3")
+     ![Denetimde "gerekli" okuyan ipucu metni içeren bir metin kutusunun ekran görüntüsü \< \> .](../../extensibility/ux-guidelines/media/0601-h_hinttext3.png "0601-h_HintText3")
 
 #### <a name="watermark-text"></a>Filigran metni
  Boş bir tasarım yüzeyinde metin, ne yapılacağını göstermelidir ve uygunsa diğer ilgili pencereleri açmak için bağlantılar sağlar:
@@ -217,7 +218,7 @@ ms.locfileid: "80698293"
 ### <a name="components-of-a-well-written-error-message"></a>İyi yazılmış bir hata iletisinin bileşenleri
 
 #### <a name="use-the-shell-dialog-service-for-error-messages"></a>Hata iletileri için kabuk iletişim kutusu hizmetini kullanın.
- Kabuk iletişim hizmetinin kullanılması, tek tek öğelerde büyük değişiklikler yapmadan iletinin görünüşünü, özellikle de yazı tiplerini denetlemenize olanak tanır. **IErrorInfo** mekanizmalarını kullanın ve **ısuishell:: SetErrorInfo/ReportErrorInfo**kullanarak bunları raporlayın.
+ Kabuk iletişim hizmetinin kullanılması, tek tek öğelerde büyük değişiklikler yapmadan iletinin görünüşünü, özellikle de yazı tiplerini denetlemenize olanak tanır. **IErrorInfo** mekanizmalarını kullanın ve **ısuishell:: SetErrorInfo/ReportErrorInfo** kullanarak bunları raporlayın.
 
 #### <a name="choose-an-effective-and-appropriate-notification-presentation"></a>Etkili ve uygun bir bildirim sunumu seçin.
  Veri kaybını önlemek için acil eylem gerekliyse, kritik bir uyarı ile kalıcı iletişim kutusu kullanın (zaman uyumlu bildirim). Kritik simgeler, iletiyi okumadan kapatmak, olumsuz sonuçlara yol açabilecek durumlar için ayrılmıştır. Veri kaybı, alarm düzeyinde bir yanıt gerektiren kritik bir durumdur. Kritik simgenin desensitizes kullanıcıları önem derecesine göre aşırı kullanımı. Hata iletisi doğası halinde bilgi alıyorsa, kalıcı iletişim kutusu (zaman uyumsuz bildirim) için alternatifleri göz önünde bulundurun.
@@ -247,7 +248,7 @@ ms.locfileid: "80698293"
 
 - **Korkusuz.** Kullanıcı yapmayın veya onları STUPID hissetmeyin. Saldırgan veya kötü amaçlı dil kullanmaktan kaçının (KILL, Execute, Terminate, önemli, geçersiz). Genellikle, görünen ve okunabilir olmayan büyük harfli metinden kaçının. Humor kullanmayın.
 
-- **Düzeltmeye.** Doğru yazım ve dilbilgisi (Alpin içinde bile) kullanın. Yazım hataları, profesyonel olmayan ve embaranet.
+- **Doğru.** Doğru yazım ve dilbilgisi (Alpin içinde bile) kullanın. Yazım hataları, profesyonel olmayan ve embaranet.
 
 - **Bağlamsal olarak uygun.** Uygun düğme metnini kullanın. "Tamam" düğmesini kullanmaktan kaçının ve bunun yerine "Continue" veya "Yes/No" kullanın.
 
@@ -300,9 +301,9 @@ ms.locfileid: "80698293"
 ##### <a name="dialogs-created-through-the-environment"></a>Ortam üzerinden oluşturulan iletişim kutuları
  Birçok kabuk iletişim kutusu, **Vbdialogboxparam** işlevi aracılığıyla oluşturulur. Bu paylaşılan işlev **Yardım** düğmesini iletişim kutusu 'ndan öğesine taşımaya yardımcı olacak şekilde **güncelleştirildi.** düğmesini basılı tutarak, geriye dönük olarak uyumlu ve genişletilebilir bir mimari tutarken.
 
- Özellikle, **Vbdialogboxparam** IşLEVI, kimliği **IDHELP** (9) veya etiket **Yardım** veya **&yardım**olan bir düğmenin iletişim şablonuna bakar. Bir Yardım düğmesi bulunursa, gizlenir ve **ws_ex_contexthelp** stili iletişim kutusuna eklenir ve **Bu, öğesini yerleştiriyor.** düğmesine basın.
+ Özellikle, **Vbdialogboxparam** IşLEVI, kimliği **IDHELP** (9) veya etiket **Yardım** veya **&yardım** olan bir düğmenin iletişim şablonuna bakar. Bir Yardım düğmesi bulunursa, gizlenir ve **ws_ex_contexthelp** stili iletişim kutusuna eklenir ve **Bu, öğesini yerleştiriyor.** düğmesine basın.
 
- İletişim kutusu oluşturulduğunda iletişim kutusu proc öğesini bir yığına gönderir ve iletişim kutusunu, **Iletişimpreproc**adlı bir işlem öncesi iletişim kutusu proc ile çağırır. Ne zaman **?** düğmesine tıklandığında, iletişim kutusuna **SC_CONTEXTHELP** **WM_SYSCOMMAND** gönderir. **Dialogpreproc** bu komutu yakalar ve özgün iletişim kutusu proc öğesine geçirilen bir **wm_help** iletisiyle değiştirir.
+ İletişim kutusu oluşturulduğunda iletişim kutusu proc öğesini bir yığına gönderir ve iletişim kutusunu, **Iletişimpreproc** adlı bir işlem öncesi iletişim kutusu proc ile çağırır. Ne zaman **?** düğmesine tıklandığında, iletişim kutusuna **SC_CONTEXTHELP** **WM_SYSCOMMAND** gönderir. **Dialogpreproc** bu komutu yakalar ve özgün iletişim kutusu proc öğesine geçirilen bir **wm_help** iletisiyle değiştirir.
 
  Ortam tarafından oluşturulan birçok iletişim kutusu, iletişim kutusunda bir Yardım düğmesi vardır. İletişim kutusu görüntülendiğinde, Yardım düğmesi otomatik olarak gizlenir ve yalnızca **?** düğme işe yarar. **Mi?** düğme Windows 'ta kaldırılır veya değiştirildiğinde, bu çözüm özgün yardım düğmelerine hızlıca geri taşımanızı sağlar.
 
@@ -316,7 +317,7 @@ ms.locfileid: "80698293"
 
 - İletişim kutusu başka bir iletişim kutusunun içine katıştırılmamış.
 
-  İletişim kutusu Msenv içinde bulunuyorsa ve **Vbdialogboxparam**kullanmıyorsa, kendi işleyicinizi uygulamadan önce **vbdialogboxparam** ' ı araştırın.
+  İletişim kutusu Msenv içinde bulunuyorsa ve **Vbdialogboxparam** kullanmıyorsa, kendi işleyicinizi uygulamadan önce **vbdialogboxparam** ' ı araştırın.
 
 ##### <a name="dialogs-created-through-other-packages"></a>Diğer paketlerle oluşturulan iletişim kutuları
  Msenv dışında bulunan iletişim kutuları için kendi çözümünüzü uygulayabilirsiniz. VSPackage içindeki paylaşılan bir iletişim kutusu sınıfı için, düğmeyi başlık çubuğuna taşımayı veya her iletişim kutusunda bir işleyici uygulamayı düşünün. Aşağıdaki kod, başlamanıza yardımcı olması için bir uygulamanın iskelet 'udır:

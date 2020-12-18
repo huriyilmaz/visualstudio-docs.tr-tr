@@ -11,12 +11,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: bdb053218b65924abfa64053a8a3c7e9e0543d49
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+ms.openlocfilehash: 2ca1cdcc1da97f8fa0d5def89e4f437607b36dd9
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96329516"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668761"
 ---
 # <a name="settings-waterfall"></a>Ayarlar şelalesi
 
@@ -26,7 +26,7 @@ Ayarlar şelale kavramı, kullanıcının **derlemeyi**, **armatürü** ve **ara
 * Fixture- [PexClass](attribute-glossary.md#pexclass)
 * Araştırma- [Pexaraştırması Ationattributebase](attribute-glossary.md#pexexplorationattributebase)
 
-**Derleme** düzeyinde belirtilen ayarlar, bu derleme altındaki tüm armatürleri ve araştırmayı etkiler. **Fixture** düzeyinde belirtilen ayarlar, bu armaün altındaki tüm araştırmaları etkiler. Alt ayarlar Win &mdash; bir ayar derleme ve **armadeğer** düzeylerinde tanımlandıysa, **armakod** ayarları kullanılır. **Fixture**
+**Derleme** düzeyinde belirtilen ayarlar, bu derleme altındaki tüm armatürleri ve araştırmayı etkiler. **Fixture** düzeyinde belirtilen ayarlar, bu armaün altındaki tüm araştırmaları etkiler. Alt ayarlar Win &mdash; bir ayar derleme ve **armadeğer** düzeylerinde tanımlandıysa, **armakod** ayarları kullanılır. 
 
 Bazı ayarların **derleme** düzeyi veya **armatürü** düzeyine özgü olduğunu unutmayın.
 
@@ -50,4 +50,4 @@ namespace MyTests
 
 ## <a name="got-feedback"></a>Geri bildirimde mi bulunmak istiyorsunuz?
 
-Fikirlerinizi ve özellik isteklerinizi [Geliştirici Topluluğu](https://developercommunity.visualstudio.com/content/idea/post.html?space=8)’na gönderin.
+Fikirlerinizi ve özellik isteklerinizi [Geliştirici Topluluğu](https://aka.ms/feedback/suggest?space=8)’na gönderin.

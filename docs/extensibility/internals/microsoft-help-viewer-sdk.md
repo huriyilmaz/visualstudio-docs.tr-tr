@@ -8,12 +8,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4181fd11e6f1ba86e2965991aab704995210e6bc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 901a5a5eea7835720ab9d5963f0ab1be36df3685
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88168742"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668865"
 ---
 # <a name="microsoft-help-viewer-sdk"></a>Microsoft Yardım Görüntüleyicisi SDK’sı
 
@@ -296,13 +296,13 @@ Satıcı yardım içeriği için F1 geri dönüşü etkinleştirmek üzere aşa�
 
    - 32 bit işletim sistemleri için:
 
-        HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Help\v2.3\Catalogs\VisualStudio15
+        HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v2.3\Catalogs\VisualStudio15
 
         "VendorContent" = DWORD: 00000001
 
    - 64 bit işletim sistemleri için:
 
-        HKEY_LOCAL_MACHINE \SOFTWARE\Wow6432Node\Microsoft\Help\v2.3\Catalogs\VisualStudio15
+        HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Help\v2.3\Catalogs\VisualStudio15
 
         "VendorContent" = DWORD: 00000001
 
@@ -310,13 +310,13 @@ Satıcı yardım içeriği için F1 geri dönüşü etkinleştirmek üzere aşa�
 
    - 32 bit işletim sistemleri için:
 
-      HKEY_LOCAL_MACHINE \Software\microsoft\help\v2,3\partner<em> \\<ad \> alanı</em>
+      HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v2.3\Partner<em> \\<ad \> alanı</em>
 
       "konum" = "çevrimdışı"
 
    - 64 bit işletim sistemleri için:
 
-      HKEY_LOCAL_MACHINE \Software\wow6432node\microsoft\help\v2,3\partner<em> \\<ad \> alanı</em>
+      HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Help\v2.3\Partner<em> \\<ad \> alanı</em>
 
       "konum" = "çevrimdışı"
 
@@ -324,7 +324,7 @@ Satıcı yardım içeriği için F1 geri dönüşü etkinleştirmek üzere aşa�
 
 Temel yerel ad alanı ayrıştırmayı açmak için, kayıt defterinde şu ada sahip yeni bir DWORD ekleyin: BaseNativeNamespaces ve değerini 1 olarak ayarlayın (desteklemek istedikleri Katalog anahtarı altında).  Örneğin, Visual Studio kataloğunu kullanmak istiyorsanız, anahtarı yola ekleyebilirsiniz:
 
-HKEY_LOCAL_MACHINE \SOFTWARE\Wow6432Node\Microsoft\Help\v2.3\Catalogs\VisualStudio15
+HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Help\v2.3\Catalogs\VisualStudio15
 
 ÜST BILGIDE/YÖNTEMDE bir F1 anahtar kelimesiyle karşılaşıldığında, '/' karakteri ayrıştırılır ve bu da aşağıdaki yapının oluşmasına neden olur:
 
@@ -342,13 +342,13 @@ Aşağıdaki kayıt defteri anahtarını ve değerini ekleyin:
 
 ::: moniker range="vs-2017"
 
-**HKEY_CURRENT_USER \Software\Microsoft\VisualStudio\15.0\Dynamic yardım**
+**HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\15.0\Dynamic Help**
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-**HKEY_CURRENT_USER \Software\Microsoft\VisualStudio\16.0\Dynamic yardım**
+**HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\16.0\Dynamic Help**
 
 ::: moniker-end
 
@@ -449,12 +449,12 @@ Not: "{n}" tarafından belirtilen değişkenlerin kod bağımlılıkları vardı
 | - | - |
 | Özellik | **CollapsibleArea** |
 | Kullanırsınız | Genişlet içerik denetimi metnini Genişlet |
-| **Öğe** | **Değer** |
+| **Dosyalarında** | **Değer** |
 | ExpandText | Genişlet |
 | CollapseText | Daralt |
 | Özellik | **CodeSnippet** |
 | Kullanırsınız | Kod parçacığı denetim metni.  Note: "bölünmez" boşluk ile kod parçacığı içeriği, boşluk olarak değiştirilecek. |
-| **Öğe** | **Değer** |
+| **Dosyalarında** | **Değer** |
 | CopyToClipboard | Panoya kopyala |
 | ViewColorizedText | Renklendirilmiş görüntüleme |
 | CombinedVBTabDisplayLanguage | Visual Basic (örnek) |
@@ -462,16 +462,16 @@ Not: "{n}" tarafından belirtilen değişkenlerin kod bağımlılıkları vardı
 | VBUsage | Kullanım |
 | Özellik | **Geri bildirim, altbilgi ve logo** |
 | Kullanırsınız | Müşterinin, e-posta ile geçerli konu hakkında geri bildirim sağlaması için bir geri bildirim denetimi sağlayın.  İçerik için telif hakkı metni.  Logo tanımı. |
-| **Öğe** | **Değer (Bu dizeler, içerik benimseme gereksinimini karşılayacak şekilde değiştirilebilir.)** |
+| **Dosyalarında** | **Değer (Bu dizeler, içerik benimseme gereksinimini karşılayacak şekilde değiştirilebilir.)** |
 | Yaptırımlar | © 2013 Microsoft Corporation. All rights reserved. |
 | SendFeedback | \<a href="{0}" {1}>\</a>Bu konuda Microsoft 'A geri bildirim gönderin. |
 | FeedbackLink | |
 | Logo başlığı | [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)] |
 | LogoFileName | vs_logo_bk.gif |
 | LogoFileNameHC | vs_logo_wh.gif |
-| Özellik | **Disclaimer** |
+| Özellik | **Sorumluluk reddi** |
 | Kullanırsınız | Makine çevirisi içeriği için büyük/küçük harfe özgü bildirimler kümesi. |
-| **Öğe** | **Değer** |
+| **Dosyalarında** | **Değer** |
 | MT_Editable | Bu makale makine çevirisi yapıldı. Bir Internet bağlantınız varsa, bu sayfayı orijinal Ingilizce içeriğiyle aynı anda düzenlenebilir modda görüntülemek için "Bu konuyu çevrimiçi görüntüle" seçeneğini belirleyin. |
 | MT_NonEditable | Bu makale makine çevirisi yapıldı. Bir Internet bağlantınız varsa, bu sayfayı orijinal Ingilizce içeriğiyle aynı anda düzenlenebilir modda görüntülemek için "Bu konuyu çevrimiçi görüntüle" seçeneğini belirleyin. |
 | MT_QualityEditable | Bu makale el ile çevrilmiştir. Bir Internet bağlantınız varsa, bu sayfayı orijinal Ingilizce içeriğiyle aynı anda düzenlenebilir modda görüntülemek için "Bu konuyu çevrimiçi görüntüle" seçeneğini belirleyin. |
@@ -480,14 +480,14 @@ Not: "{n}" tarafından belirtilen değişkenlerin kod bağımlılıkları vardı
 | MT_BetaRecycledContents | Bu makale, ön sürüm için el ile çevrilmiştir. Bir Internet bağlantınız varsa, bu sayfayı orijinal Ingilizce içeriğiyle aynı anda düzenlenebilir modda görüntülemek için "Bu konuyu çevrimiçi görüntüle" seçeneğini belirleyin. |
 | Özellik | **LinkTable** |
 | Kullanırsınız | Çevrimiçi konu bağlantıları desteği |
-| **Öğe** | **Değer** |
+| **Dosyalarında** | **Değer** |
 | LinkTableTitle | Tablo bağla |
 | Topicenulınktext | \</a>Bilgisayarınızda mevcut olan bu konunun İngilizce sürümünü görüntüleyin. |
 | Topiconlinelink metni | Bu konuyu \<a href="{0}" {1}> çevrimiçi görüntüleyin\</a> |
 | OnlineText | Çevrimiçi |
 | Özellik | **Video ses denetimi** |
 | Kullanırsınız | Video içeriği için öğeleri ve metni görüntüleme |
-| **Öğe** | **Değer** |
+| **Dosyalarında** | **Değer** |
 | MultiMediaNotSupported | İçeriği desteklemek için Internet Explorer 9 veya üzeri yüklü olmalıdır {0} . |
 | VideoText | videoyu görüntüleme |
 | AudioText | ses akışı |
@@ -495,25 +495,25 @@ Not: "{n}" tarafından belirtilen değişkenlerin kod bağımlılıkları vardı
 | Onlinesesolınktext | \<p>Bu konuyla ilişkili sesi dinlemek için {0} \<a href="{1}"> {2} buraya tıklayın \</a> .\</p> |
 | Özellik | **İçerik yüklü değil denetimi** |
 | Kullanırsınız | contentnotinstalled.htm işleme için kullanılan metin öğeleri (dizeler) |
-| **Öğe** | **Değer** |
+| **Dosyalarında** | **Değer** |
 | Contentnotınstalınstalınstalde başlığı | Bilgisayarınızda içerik bulunamadı. |
 | Contentnotınstalınstaldownloadcontenttext | \<p>İçeriği bilgisayarınıza indirmek için \<a href="{0}" {1}> Yönet sekmesine tıklayın \</a> .\</p> |
 | Contentnotınstalınstalınstalde metni | \<p>Bilgisayarınızda yüklü içerik yok. Yerel Yardım içeriği yüklemesi için yöneticinize başvurun.\</p> |
 | Özellik | **Konu bulunamadı denetimi** |
 | Kullanırsınız | topicnotfound.htm işleme için kullanılan metin öğeleri (dizeler) |
-| **Öğe** | **Değer** |
+| **Dosyalarında** | **Değer** |
 | Topınotfoundtitle | İstenen konu bilgisayarınızda bulunamıyor. |
 | Topınotfoundviewonlinetext | \<p>İstediğiniz konu bilgisayarınızda bulunamadı, ancak \<a href="{0}" {1}> konuyu çevrimiçi olarak görebilirsiniz \</a> .\</p> |
 | TopicNotFoundDownloadContentText | \<p>Benzer konuların bağlantıları için gezinti bölmesine bakın veya \<a href="{0}" {1}> \</a> içeriği bilgisayarınıza Indirmek için Yönet sekmesine tıklayın.\</p> |
 | Topınotfoundmetni | \<p>İstediğiniz konu bilgisayarınızda bulunamadı.\</p> |
 | Özellik | **Konu başlığı bozuk denetimi** |
 | Kullanırsınız | topiccorrupted.htm işleme için kullanılan metin öğeleri (dizeler) |
-| **Öğe** | **Değer** |
+| **Dosyalarında** | **Değer** |
 | Topıbozuk Tedtitle | İstenen konu gösterilemiyor. |
 | Topıboztedviewonlinetext | \<p>Yardım Görüntüleyicisi istenen konuyu görüntüleyemiyor. Konunun içeriğinde veya temeldeki sistem bağımlılığında bir hata olabilir.\</p> |
 | Özellik | **Giriş sayfası denetimi** |
 | Kullanırsınız | Yardım Görüntüleyicisi üst düzey düğüm içeriğinin görüntülenmesini destekleyen metin. |
-| **Öğe** | **Değer** |
+| **Dosyalarında** | **Değer** |
 | HomePageTitle | Yardım Görüntüleyicisi giriş sayfası |
 | Homepagetanıtımı | \<p>Microsoft araçları, ürünleri, teknolojileri ve hizmetleri kullanan herkese yönelik önemli bir bilgi kaynağı olan Microsoft Yardım Görüntüleyicisi hoş geldiniz. Yardım Görüntüleyicisi, nasıl yapılır ve başvuru bilgilerine, örnek koda, teknik makalelere ve daha fazlasına erişmenizi sağlar. İhtiyacınız olan içeriği bulmak için içindekiler tablosuna göz atarak tam metin aramasını kullanın veya anahtar sözcük dizinini kullanarak içerik üzerinde gezinin.\</p> |
 | Homepagecontentınstalltext | \<p>\<br />\<a href="{0}" {1}>İçeriği Yönet sekmesini kullanarak \</a> şunları yapın: \<ul> \<li> bilgisayarınıza içerik ekleyin. \</li> \<li> Yerel içeriklerinizin güncelleştirmelerini denetleyin. \</li> \<li> İçeriği bilgisayarınızdan kaldırın.\</li>\</ul>\</p> |
@@ -563,7 +563,7 @@ branding.js dosyası, Visual Studio Yardım Görüntüleyicisi markalama öğele
 
 Marka paketi, içerik kullanıcılarına yardımcı olmak üzere anahtar bilgilerini iletişim için senaryoları destekleyen bir dizi HTM dosyası içerir. Örneğin, hangi içerik kümelerinin yükleneceğini açıklayan bir bölüm ve yerel konu başlıklarında konular bulunamadığında kullanıcıya söyleyen sayfalar. Bu HTM dosyaları her ürün için değiştirilebilir.  ISO kabuğu satıcıları, varsayılan marka paketini alabilir ve bu sayfaların davranışını ve içeriğini, ihtiyacını pakete göre değiştirebilir.  Bu dosyalar, marka etiketlerinin branding.xml dosyasından ilgili içeriği alması için kendi marka paketine başvurur.
 
-|**Dosya**|**Kullanırsınız**|**Görünen Içerik kaynağı**|
+|**Dosya**|**Kullanım**|**Görünen Içerik kaynağı**|
 |-|-|-|
 |homepage.htm|Bu, şu anda yüklü olan içeriği görüntüleyen ve kullanıcıya içerik hakkında sunmanız gereken diğer tüm iletileri gösteren bir sayfasıdır.  Bu dosya, "Microsoft.Help.Id" content = "-1" ek meta veri özniteliğine sahiptir ve bu içeriği TOC yerel içeriğinin üst kısmına koyar.||
 ||<META_HOME_PAGE_TITLE_ADD/>|Branding.xml, etiket \<HomePageTitle>|
@@ -597,7 +597,7 @@ Marka. css dosyaları Visual Studio konu sunumu için tanımları içerir (deste
 
 Visual Studio içeriği, Visual Studio logosunun yanı sıra diğer grafikleri de görüntüler.  Visual Studio Yardım Görüntüleyicisi markalama paketindeki grafik dosyalarının tüm listesi aşağıda gösterilmiştir.
 
-|**Dosya**|**Kullanırsınız**|**Örnekler**|
+|**Dosya**|**Kullanım**|**Örnekler**|
 |-|-|-|
 |clear.gif|Daraltılabilir alanı işlemek için kullanılır||
 |footer_slice.gif|Alt bilgi sunumu||
@@ -704,7 +704,7 @@ Bu izlenecek yol, yardım içeriğinin bir Visual Studio Kabuğu uygulamasına n
 
 2. [Yalıtılmış Kabuk yeniden dağıtım Visual Studio 2013](https://visualstudio.microsoft.com/vs/older-downloads/isolated-shell/)
 
-**Genel bakış**
+**Genel Bakış**
 
 [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)]Kabuk, [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)] bir uygulamayı temel alan IDE 'nin bir sürümüdür. Bu tür uygulamalar, oluşturduğunuz uzantılarla birlikte yalıtılmış Kabuğu içerir. Uzantıları derlemek için SDK 'ya dahil olan yalıtılmış Kabuk proje şablonlarını kullanın [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)] .
 
@@ -741,11 +741,11 @@ Kayıt defterinde içerik deposunu tanımlayın. Tümleşik Kabuk için VisualSt
 
 Yalıtılmış Kabuk uzantısı oluşturmak için:
 
-1. Visual Studio 'da, **Dosya**altında **Yeni proje**' yi seçin, **diğer proje türleri** altında **genişletilebilirlik**' i seçin ve ardından  **Visual Studio Kabuğu yalıtılmış**' i seçin. Projeyi, `ContosoHelpShell` Visual Studio yalıtılmış Kabuk şablonunu temel alan bir genişletilebilirlik projesi oluşturacak şekilde adlandırın.
+1. Visual Studio 'da, **Dosya** altında **Yeni proje**' yi seçin, **diğer proje türleri** altında **genişletilebilirlik**' i seçin ve ardından  **Visual Studio Kabuğu yalıtılmış**' i seçin. Projeyi, `ContosoHelpShell` Visual Studio yalıtılmış Kabuk şablonunu temel alan bir genişletilebilirlik projesi oluşturacak şekilde adlandırın.
 
 2. Çözüm Gezgini, ContosoHelpShellUI projesinde, kaynak dosyaları klasöründe ApplicationCommands. vsct öğesini açın. Bu satırın açıklama olarak belirlendiğinden emin olun ("No_Help" araması yapın): `<!-- <define name="No_HelpMenuCommands"/> -->`
 
-3. **Hata ayıklamayı**derlemek ve çalıştırmak için F5 tuşunu seçin. Yalıtılmış Kabuk IDE 'nin deneysel örneğinde **Yardım** menüsünü seçin. **Görünüm yardım**, **Yardım Içeriği ekleme ve kaldırma**ve **Yardım tercihi** komutlarının göründüğünden emin olun.
+3. **Hata ayıklamayı** derlemek ve çalıştırmak için F5 tuşunu seçin. Yalıtılmış Kabuk IDE 'nin deneysel örneğinde **Yardım** menüsünü seçin. **Görünüm yardım**, **Yardım Içeriği ekleme ve kaldırma** ve **Yardım tercihi** komutlarının göründüğünden emin olun.
 
 4. Çözüm Gezgini ' de, ContosHelpShell projesinde, kabuk özelleştirme klasöründe ContosoHelpShell. pkgdef ' yi açın. Contoso Yardım kataloğunu tanımlamak için aşağıdaki satırları ekleyin:
 
@@ -773,7 +773,7 @@ Yalıtılmış Kabuk uzantısı oluşturmak için:
     @="{4A791146-19E4-11D3-B86B-00C04F79F802}"
     ```
 
-6. Çözüm Gezgini, ContosoHelpShell çözümünün bağlam menüsünde **Özellikler** menü öğesini seçin. **Yapılandırma özellikleri**altında **Configuration Manager**' yi seçin. **Yapılandırma** sütununda, her "Debug" değerini "Release" olarak değiştirin.
+6. Çözüm Gezgini, ContosoHelpShell çözümünün bağlam menüsünde **Özellikler** menü öğesini seçin. **Yapılandırma özellikleri** altında **Configuration Manager**' yi seçin. **Yapılandırma** sütununda, her "Debug" değerini "Release" olarak değiştirin.
 
 7. Çözümü derleyin. Bu, bir sonraki bölümde kullanılacak olan bir yayın klasöründe bir dosya kümesi oluşturur.
 
@@ -820,9 +820,9 @@ Bunu dağıtıldıktan sonra test etmek için:
 
      "C:\Program Files (x86) \Microsoft Help Viewer\v2.3\HlpViewer.exe"/katalogadı VisualStudio15/helpQuery method = "Page&ID = ContosoTopic0"/launchingApp Microsoft, VisualStudio, 12.0
 
-10. Contoso uygulamasını başlatın (contoso uygulama kökünden). ISO kabuğu 'nda **Yardım** menü öğesini seçin ve **yerel yardım 'ı kullanmak**için **Yardım tercihini ayarla** ' yı değiştirin.
+10. Contoso uygulamasını başlatın (contoso uygulama kökünden). ISO kabuğu 'nda **Yardım** menü öğesini seçin ve **yerel yardım 'ı kullanmak** için **Yardım tercihini ayarla** ' yı değiştirin.
 
-11. Kabuk içinde **Yardım** menü öğesini seçin ve ardından **Yardım 'ı görüntüleyin**. Yerel Yardım Görüntüleyicisi başlatması gerekir. **Içeriği Yönet** sekmesini seçin. **Yükleme kaynağı**altında **disk** seçenek düğmesini seçin. **...** Düğmesini seçin ve contoso içeriğini içeren yerel klasöre (Yukarıdaki adımda yerel klasöre kopyalanmış) gidin. HelpContentSetup. msha ' ı seçin. Contoso artık kitap seçimlerinde kitap olarak görünür olmalıdır. **Ekle**' yi seçin ve ardından **Güncelleştir** düğmesini (sağ alt köşedeki) seçin.
+11. Kabuk içinde **Yardım** menü öğesini seçin ve ardından **Yardım 'ı görüntüleyin**. Yerel Yardım Görüntüleyicisi başlatması gerekir. **Içeriği Yönet** sekmesini seçin. **Yükleme kaynağı** altında **disk** seçenek düğmesini seçin. **...** Düğmesini seçin ve contoso içeriğini içeren yerel klasöre (Yukarıdaki adımda yerel klasöre kopyalanmış) gidin. HelpContentSetup. msha ' ı seçin. Contoso artık kitap seçimlerinde kitap olarak görünür olmalıdır. **Ekle**' yi seçin ve ardından **Güncelleştir** düğmesini (sağ alt köşedeki) seçin.
 
 12. Contoso IDE içinde F1 işlevini test etmek için F1 tuşunu seçin.
 
@@ -832,4 +832,4 @@ Bunu dağıtıldıktan sonra test etmek için:
 
 Yardım API 'sinin nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [Yardım Görüntüleyicisi kod örnekleri](https://marketplace.visualstudio.com/items?itemName=RobChandlerHelpMVP.HelpViewer20CodeExamples).
 
-[Geliştirici topluluğu](https://developercommunity.visualstudio.com/content/idea/post.html?space=8)'nda özellik önerileri gönderebilirsiniz.
+[Geliştirici topluluğu](https://aka.ms/feedback/suggest?space=8)'nda özellik önerileri gönderebilirsiniz.

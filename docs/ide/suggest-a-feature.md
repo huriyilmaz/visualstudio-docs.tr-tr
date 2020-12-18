@@ -8,16 +8,16 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2d8106463f306ddbc3fe6aefb337935cbe0d316c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a17f196f48b053f8b834b8fd25b8c0295e42b547
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88114223"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668904"
 ---
 # <a name="suggest-a-feature-for-visual-studio"></a>Visual Studio için özellik önerin
 
-[Visual Studio Geliştirici topluluğu](https://developercommunity.visualstudio.com)'nda sorunları bildirme özelliği hakkında yeni bir deneyim sunduk. Bu, doğrudan Visual Studio 'nun mühendislik iş akışıyla etkileşim kurmak için kullanabileceğiniz yeni bir yoldur.
+[Visual Studio Geliştirici topluluğu](https://aka.ms/feedback/suggest?space=8)'nda sorunları bildirme özelliği hakkında yeni bir deneyim sunduk. Bu, doğrudan Visual Studio 'nun mühendislik iş akışıyla etkileşim kurmak için kullanabileceğiniz yeni bir yoldur.
 
 ![Geliştirici topluluğu 'nda özellik düğmesi önerme](media/suggest-a-feature/suggest-feature-button.png)
 
@@ -25,7 +25,7 @@ Ayrıca, ana Visual Studio penceresinin sağ üst köşesinde bulunan **geribild
 
 ![Visual Studio 'da öneri menüsü sağlama](media/suggest-a-feature/provide-suggestion.png)
 
-**Öneri sağla** ' yı seçtiğinizde, önerinizi girebileceğiniz [Geliştirici topluluğu](https://developercommunity.visualstudio.com)' na gidersiniz.
+**Öneri sağla** ' yı seçtiğinizde, önerinizi girebileceğiniz [Geliştirici topluluğu](https://aka.ms/feedback/suggest?space=8)' na gidersiniz.
 
 ## <a name="user-voice"></a>User Voice
 
@@ -91,7 +91,7 @@ Bakdığımız bilgiler bulundu mu? Ek bilgilere sahip olduğunuzda bileti yenid
 
 ![Geliştirici topluluğu önerilerine yönelik öneriler için kapalı kapsam durumu](../ide/media/SuggestStates/closed-out-of-scope.png)
 
-**Kapalı kapsam dışı** Bir öneri genel ürün yönümüzle eşleşmezse, bunu *kapsam dışı*olarak kapalarız. Örneğin, Visual Studio ürün ailesinin diğer üyelerinde benzer yatırımları olabilir. Ya da önerilen özellik yalnızca birkaç kişiyle ilgili olabilir, bu da uzantının sağlanması daha uygun hale gelir.
+**Kapalı kapsam dışı** Bir öneri genel ürün yönümüzle eşleşmezse, bunu *kapsam dışı* olarak kapalarız. Örneğin, Visual Studio ürün ailesinin diğer üyelerinde benzer yatırımları olabilir. Ya da önerilen özellik yalnızca birkaç kişiyle ilgili olabilir, bu da uzantının sağlanması daha uygun hale gelir.
 
 
 - - -

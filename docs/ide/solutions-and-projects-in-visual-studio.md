@@ -1,5 +1,5 @@
 ---
-title: Çözümler ve projelere genel bakış
+title: Çözümler ve projeler hakkında bilgi edinin
 description: Visual Studio projeleri ve çözümleri hakkında, bir şablondan yeni projeler oluşturma ve Çözüm Gezgini projeleri görüntüleme & yönetme hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 12/15/2020
@@ -22,12 +22,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1981bc5c9d1c2589607f355528c332d01284917e
-ms.sourcegitcommit: d485b18e46ec4cf08704b5a8d0657bc716ec8393
+ms.openlocfilehash: 19d0d2fc862572fdf7226a78e0b34d0af0d57541
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97615759"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668098"
 ---
 # <a name="solutions-and-projects-in-visual-studio"></a>Visual Studio 'da çözümler ve projeler
 
@@ -51,7 +51,7 @@ Proje dosyaları [MSBUILD XML şemasını](../msbuild/msbuild-project-file-schem
 
 ## <a name="solutions"></a>Çözümler
 
-Bir proje bir *çözüm* içinde yer alır. Adına rağmen çözüm bir "yanıt" değildir. Yalnızca bir veya daha fazla ilişkili projenin kapsayıcısı, derleme bilgileri, Visual Studio pencere ayarları ve belirli bir projeyle ilişkilendirilmemiş çeşitli dosyalar için bir kapsayıcıdır. Bir çözüm, bir metin dosyası (uzantısı *. sln*) tarafından kendine özgü benzersiz biçimde tanımlanır; el ile düzenlenmesi amaçlanmamıştır.
+Bir proje bir *çözüm* içinde yer alır. Adına rağmen çözüm bir "yanıt" değildir. Yalnızca bir veya daha fazla ilişkili projenin kapsayıcısı, derleme bilgileri, Visual Studio pencere ayarları ve belirli bir projeyle ilişkilendirilmemiş çeşitli dosyalar için bir kapsayıcıdır.
 
 ### <a name="solution-file"></a>Çözüm dosyası
 
@@ -61,6 +61,9 @@ Visual Studio, çözümlerin ayarlarını depolamak için iki dosya türü (*. s
 |---------------|----------|-----------------|
 |. sln|Visual Studio çözümü|Çözümdeki projeleri, proje öğelerini ve çözüm öğelerini düzenler.|
 |. suo|Çözüm Kullanıcı seçenekleri|Kesme noktaları gibi kullanıcı düzeyindeki ayarları ve özelleştirmeleri depolar.|
+
+> [!IMPORTANT]
+> Bir çözüm, bir metin dosyası (uzantısı *. sln*) tarafından kendine özgü benzersiz biçimde tanımlanır; el ile düzenlenmesi amaçlanmamıştır. Buna karşılık, *. suo* dosyası varsayılan dosya Gezgini ayarları altında görüntülenmeyen gizli bir dosyadır. Gizli dosyaları göstermek için dosya Gezgini 'ndeki **Görünüm** menüsünde **gizli öğeler** onay kutusunu seçin.
 
 ### <a name="solution-folder"></a>Çözüm klasörü
 

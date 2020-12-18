@@ -12,12 +12,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 7b2fd0a49a235827d3a9094aad6cc0f59a0cd403
-ms.sourcegitcommit: 172aaf05596a9d8ded298b7b104569c1cce6160e
+ms.openlocfilehash: f27ccf9440d0f01a5a41d69e753a6d83f81c5263
+ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92007105"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97668540"
 ---
 # <a name="repair-visual-studio"></a>Visual Studio’yu onarın
 
@@ -32,17 +32,17 @@ Bazen Visual Studio yüklemenizin hasar görmüş veya bozuk hale gelir. Güncel
 > Bu yüklemede, Windows Installer gibi temel bir Windows hizmetindeki bir sorun neden olduysa, onarım aynı soruna karşı daha fazla sürebilir. Systemik sorunları bozuk bir Windows Installer veya kararsız bir internet bağlantısı içerebilir. Bir systemik sorunu denetlemek için, yükleme işleminden oluşturulan hata raporunu kullanın.
 
 > [!NOTE] 
-> Visual Studio 'Yu onarma Kullanıcı ayarlarını sıfırlar ve zaten sahip olduğunuz derlemeleri yeniden kurar. Bir ürün sorunu yaşıyorsanız, onarma sorunu çözemediğinden bir [Visual Studio geri bildirim bileti](https://developercommunity.visualstudio.com/content/problem/post.html?space=8)oluşturun.
+> Visual Studio 'Yu onarma Kullanıcı ayarlarını sıfırlar ve zaten sahip olduğunuz derlemeleri yeniden kurar. Bir ürün sorunu yaşıyorsanız, onarma sorunu çözemediğinden bir [Visual Studio geri bildirim bileti](https://aka.ms/feedback/suggest?space=8)oluşturun.
 
 ## <a name="how-to-repair"></a>Onarma
 ::: moniker range="vs-2017"
 
 1. Bilgisayarınızda **Visual Studio yükleyicisi** bulun.
 
-     Örneğin, Windows 10 yıldönümü güncelleştirmesi veya üzerini çalıştıran bir bilgisayarda **Başlat**' ı seçin ve ardından **Visual Studio yükleyicisi**olarak listelendiği **V**harfine gidin.
+     Örneğin, Windows 10 yıldönümü güncelleştirmesi veya üzerini çalıştıran bir bilgisayarda **Başlat**' ı seçin ve ardından **Visual Studio yükleyicisi** olarak listelendiği **V** harfine gidin.
 
    > [!NOTE]
-   > Bazı bilgisayarlarda Visual Studio Yükleyicisi, **Microsoft Visual Studio yükleyicisi**olarak **"d"** harfi altında listelenmiş olabilir.
+   > Bazı bilgisayarlarda Visual Studio Yükleyicisi, **Microsoft Visual Studio yükleyicisi** olarak **"d"** harfi altında listelenmiş olabilir.
    >
    > Alternatif olarak, Visual Studio Yükleyicisi aşağıdaki konumda bulabilirsiniz: `C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe`
 
