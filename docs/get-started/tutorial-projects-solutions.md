@@ -12,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8b22695dac3f75b9e90950ee5428bb906436d661
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: 48fb0f1c22b2f7055005640baff2239a0ad4a32a
+ms.sourcegitcommit: fed8782b2fb2ca18a90746b6e7e0b33f3fde10f1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94903942"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97646417"
 ---
 # <a name="learn-about-projects-and-solutions"></a>Projeler ve çözümler hakkında bilgi edinin
 
@@ -89,7 +89,7 @@ Boş bir çözüm oluşturarak araştırmayla başlayacağız. Visual Studio 'Yu
 
 ::: moniker range="vs-2017"
 
-1. **Çözüm Gezgini** **' hızlı çözüm ' çözümünün** sağ tıklama veya bağlam menüsünden **Add** > **Yeni proje** Ekle ' yi seçin.
+1. **Çözüm Gezgini** **' hızlı çözüm ' çözümünün** sağ tıklama veya bağlam menüsünden  > **Yeni proje** Ekle ' yi seçin.
 
    **Yeni Proje Ekle** iletişim kutusu açılır.
 
@@ -106,7 +106,7 @@ Boş bir çözüm oluşturarak araştırmayla başlayacağız. Visual Studio 'Yu
 
 ::: moniker range=">=vs-2019"
 
-1. **Çözüm Gezgini** **' hızlı çözüm ' çözümünün** sağ tıklama veya bağlam menüsünden **Add** > **Yeni proje** Ekle ' yi seçin.
+1. **Çözüm Gezgini** **' hızlı çözüm ' çözümünün** sağ tıklama veya bağlam menüsünden  > **Yeni proje** Ekle ' yi seçin.
 
    **Yeni bir proje ekleyen** bir iletişim kutusu açılır.
 
@@ -131,7 +131,7 @@ Boş bir çözüm oluşturarak araştırmayla başlayacağız. Visual Studio 'Yu
 
 Boş bir projem var. Bir kod dosyası ekleyelim.
 
-1. **Çözüm Gezgini** içindeki **quickdate** projesinin sağ tıklama veya kısayol menüsünden **Add**  >  **Yeni öğe** Ekle ' yi seçin.
+1. **Çözüm Gezgini** içindeki **quickdate** projesinin sağ tıklama veya kısayol menüsünden   >  **Yeni öğe** Ekle ' yi seçin.
 
    **Yeni öğe Ekle** iletişim kutusu açılır.
 
@@ -171,7 +171,7 @@ Boş bir projem var. Bir kod dosyası ekleyelim.
 
 Çözümünüze bir birim testi projesi ekleyelim. Bu kez bir proje şablonundan başlayacağız, böylece projeye ek bir kod dosyası eklememiz gerekmez.
 
-1. **Çözüm Gezgini** **' hızlı çözüm ' çözümünün** sağ tıklama veya bağlam menüsünden **Add**  >  **Yeni proje** Ekle ' yi seçin.
+1. **Çözüm Gezgini** **' hızlı çözüm ' çözümünün** sağ tıklama veya bağlam menüsünden   >  **Yeni proje** Ekle ' yi seçin.
 
 ::: moniker range="vs-2017"
 
@@ -201,6 +201,8 @@ Boş bir projem var. Bir kod dosyası ekleyelim.
 
 **Hızlı Tarih** projesindeki yöntemizi test etmek için yeni birim testi projesini kullanacağız, bu nedenle bu projeye bir başvuru eklememiz gerekiyor. Bu, iki proje arasında bir *derleme bağımlılığı* oluşturur. Bu, çözümü oluşturduğunuzda hızlı **Test** öncesinde hızlı bir **Tarih** oluşturulur.
 
+::: moniker range="vs-2017"
+
 1. **Hızlı test** projesinde **Bağımlılıklar** düğümünü seçin ve sağ tıklama ya da bağlam menüsünden **Başvuru Ekle**' yi seçin.
 
    **Başvuru Yöneticisi** iletişim kutusu açılır.
@@ -210,6 +212,22 @@ Boş bir projem var. Bir kod dosyası ekleyelim.
    **Quickdate** projesine bir başvuru eklenir.
 
    ![Visual Studio 2019 Çözüm Gezgini proje başvurusunu gösterme](media/vs-2019/tutorial-projects-solution-explorer-reference.png "Visual Studio 'da bir proje başvurusunu göstermek Çözüm Gezgini.")
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+1. **Hızlı test** projesinde **Bağımlılıklar** düğümünü seçin ve sağ tıklama ya da bağlam menüsünden **proje başvurusu Ekle...** seçeneğini belirleyin.
+
+   **Başvuru Yöneticisi** iletişim kutusu açılır.
+
+1. Sol bölmede, **Projeler** ' i genişletin ve **çözüm**' ü seçin. Orta bölmede, **Quickdate** seçeneğinin yanındaki onay kutusunu seçin ve ardından **Tamam**' ı seçin.
+
+   **Quickdate** projesine bir başvuru eklenir.
+
+   ![Visual Studio 2019 Çözüm Gezgini proje başvurusunu gösterme](media/vs-2019/tutorial-projects-solution-explorer-reference.png)
+   
+::: moniker-end
 
 ## <a name="add-test-code"></a>Test kodu ekle
 
@@ -261,14 +279,14 @@ Boş bir projem var. Bir kod dosyası ekleyelim.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Birim testinizin çalıştığını denetlemek isterseniz, **Test**  >  **Run**  >  menü çubuğundan **tüm testleri** Çalıştır test ' i seçin. **Test Gezgini** adlı bir pencere açılır ve **TestGetCurrentDate** testin başarılı olduğunu görmeniz gerekir.
+Birim testinizin çalıştığını denetlemek isterseniz,   >    >  menü çubuğundan **tüm testleri** Çalıştır test ' i seçin. **Test Gezgini** adlı bir pencere açılır ve **TestGetCurrentDate** testin başarılı olduğunu görmeniz gerekir.
 
 ![Başarılı testi gösteren Visual Studio 'da test Gezgini](media/tutorial-projects-test-explorer.png "Başarılı bir testi gösteren Visual Studio 'da test Gezgini.")
 
 ::: moniker range="vs-2017"
 
 > [!TIP]
-> **Test Gezgini** otomatik olarak açılmazsa, **Test**  >  **Windows**  >  menü çubuğundan Windows **Test Gezgini** 'ni test et ' i seçerek açın.
+> **Test Gezgini** otomatik olarak açılmazsa,   >    >  menü çubuğundan Windows **Test Gezgini** 'ni test et ' i seçerek açın.
 
 ::: moniker-end
 

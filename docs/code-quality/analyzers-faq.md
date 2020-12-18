@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 567af541b819186bda3dc869628c2812be9888b8
-ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
+ms.openlocfilehash: 48dcb2d01e53502c371595048666fd94c267b6ec
+ms.sourcegitcommit: fed8782b2fb2ca18a90746b6e7e0b33f3fde10f1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96039594"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97646391"
 ---
 # <a name="code-analysis-faq"></a>Kod Analizi hakkında SSS
 
@@ -100,7 +100,7 @@ Y **: kod** Analizi uyarılarının hata olarak değerlendirilmesini engellemek 
 
 **S**: çözüm Için kod analizi Özellik sayfası nerede?
 
-Y **: çözüm** düzeyindeki kod analizi Özellik sayfası, daha güvenilir paylaşılan özellik grubunun kullanım aşamasında kaldırılmıştır. Proje düzeyinde kod analizini yönetmek için, kod analizi Özellik sayfası hala kullanılabilir. (Yönetilen projeler için kural yapılandırması için RuleSets 'ten EditorConfig 'e geçiş de öneriyoruz.)  Bir çözüm ya da depodaki birden çok/tüm projede kural kümelerini paylaştırmak için, paylaşılan bir props/targets dosyasında veya dizin. props/Directory. targets dosyasında CodeAnalysisRuleSet özelliği ile bir özellik grubu tanımlamayı öneririz. Tüm projelerinizi içeri aktardıkları böyle bir ortak props veya hedefiniz yoksa, bu [tür bir özellik grubunu bir dizin. props veya bir dizin. targets, dizinde veya alt dizinlerinde tanımlanan tüm proje dosyalarına otomatik olarak içeri aktarılan bir en üst düzey çözüm dizinine eklemeyi](../msbuild/customize-your-build.md)göz önünde bulundurmanız gerekir.
+Y **: çözüm** düzeyindeki kod analizi Özellik sayfası, daha güvenilir paylaşılan özellik grubunun kullanım aşamasında kaldırılmıştır. Proje düzeyinde kod analizini yönetmek için, kod analizi Özellik sayfası hala kullanılabilir. (Yönetilen projeler için kural yapılandırması için RuleSets 'ten EditorConfig 'e geçiş de öneriyoruz.)  Bir çözüm ya da depodaki birden çok/tüm projede kural kümelerini paylaştırmak için, paylaşılan bir props/targets dosyasında veya *Dizin. props/Directory. targets* dosyasında [CodeAnalysisRuleSet](../code-quality/using-rule-sets-to-group-code-analysis-rules.md#specify-a-rule-set-for-a-project) özelliği ile bir özellik grubu tanımlamayı öneririz. Tüm projeleriniz tarafından içeri aktarılan böyle bir ortak props veya hedefiniz yoksa, bu tür bir özellik grubunu bir [Dizin. props veya bir dizin. targets dosyasına](../msbuild/customize-your-build.md) eklemeyi göz önünde bulundurmanız gerekir. Bu, dizinde veya alt dizinlerinde tanımlanan tüm proje dosyalarına otomatik olarak içeri aktarılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -22,15 +22,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 529c19753d09d6335e5c9fc5e839cdb7cd0c118c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 824c711fc0ebb26a78338a65808c6fdbed768919
+ms.sourcegitcommit: fed8782b2fb2ca18a90746b6e7e0b33f3fde10f1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72745784"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97646404"
 ---
 # <a name="assertions-in-managed-code"></a>Yönetilen Koddaki Onaylar
-Bir onaylama veya `Assert` bildirim, deyimi için bağımsız değişken olarak belirttiğiniz bir koşulu sınar `Assert` . Koşul true olarak değerlendirilirse, hiçbir eylem gerçekleşmez. Koşul false olarak değerlendirilirse onaylama işlemi başarısız olur. Hata ayıklama derlemesi ile çalıştırıyorsanız, programınız kesme moduna girer.
+Bir onay veya `Assert` deyimi, `Assert` deyimine bağımsız değişken olarak belirttiğiniz bir koşulu test eder. Koşul true olarak değerlendirilirse işlem yapmanız gerekmez. Koşul false olarak değerlendirilirse onay başarısız olur. Hata ayıklama derlemesiyle çalışıyorsanız programınız kesme moduna girer.
 
 ## <a name="in-this-topic"></a><a name="BKMK_In_this_topic"></a> Bu konuda
  [System. Diagnostics ad alanındaki onaylar](#BKMK_Asserts_in_the_System_Diagnostics_Namespace)
@@ -48,14 +48,14 @@ Bir onaylama veya `Assert` bildirim, deyimi için bağımsız değişken olarak 
  [Yapılandırma dosyalarında onayları ayarlama](#BKMK_Setting_assertions_in_configuration_files)
 
 ## <a name="asserts-in-the-systemdiagnostics-namespace"></a><a name="BKMK_Asserts_in_the_System_Diagnostics_Namespace"></a> System. Diagnostics ad alanındaki onaylar
- Visual Basic ve Visual C# ' de, `Assert` <xref:System.Diagnostics.Debug> ad alanındaki veya ' den yöntemini kullanabilirsiniz <xref:System.Diagnostics.Trace> <xref:System.Diagnostics> . <xref:System.Diagnostics.Debug> sınıf yöntemleri programınızın yayın sürümüne dahil değildir, bu nedenle boyutu artırmaz veya sürüm kodunuzun hızını azaltmazlar.
+ Visual Basic ve Visual C# ' de, `Assert` <xref:System.Diagnostics.Debug> ad alanındaki veya ' den yöntemini kullanabilirsiniz <xref:System.Diagnostics.Trace> <xref:System.Diagnostics> . <xref:System.Diagnostics.Debug> sınıf yöntemleri programınızın yayın sürümüne dahil edilmediğinden, yayın kodunuzun boyutunu artırmaz veya hızını azaltmaz.
 
  C++, <xref:System.Diagnostics.Debug> sınıf yöntemlerini desteklemez. Aynı etkiyi, <xref:System.Diagnostics.Trace> koşullu derleme ile, örneğin `#ifdef DEBUG` . `#endif` .. ile kullanarak elde edebilirsiniz.
 
  [Bu konuda](#BKMK_In_this_topic)
 
 ## <a name="the-debugassert-method"></a><a name="BKMK_The_Debug_Assert_method"></a> Debug. onaylama yöntemi
- <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName>Kodunuzun doğru olması durumunda doğru olması gereken koşulları test etmek için ücretsiz yöntemini kullanın. Örneğin, bir tamsayı bölme işlevi yazdığınızı varsayın. Matematik kuralları tarafından, bölen hiçbir şekilde sıfır olamaz. Bunu bir onaylama işlemi kullanarak test edebilirsiniz:
+ <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName>Kodunuzun doğru olması durumunda doğru olması gereken koşulları test etmek için ücretsiz yöntemini kullanın. Örneğin, bir tamsayı bölme işlevi yazdığınızı varsayalım. Matematik kurallarına göre, bölen asla sıfır olamaz. Bunu bir onay deyimi kullanarak test edebilirsiniz:
 
 ```VB
 Function IntegerDivide(ByVal dividend As Integer, ByVal divisor As Integer) As Integer
@@ -66,11 +66,13 @@ End Function
 
 ```csharp
 int IntegerDivide ( int dividend , int divisor )
-    { Debug.Assert ( divisor != 0 );
-        return ( dividend / divisor ); }
+{
+    Debug.Assert ( divisor != 0 );
+    return ( dividend / divisor );
+}
 ```
 
- Hata ayıklayıcı altında bu kodu çalıştırdığınızda, onaylama deyimi değerlendirilir, ancak yayın sürümünde karşılaştırma yapılmaz, bu nedenle ek yük yoktur.
+ Bu kodu hata ayıklayıcıda çalıştırdığınızda onay deyimi değerlendirilir. Ancak Yayın sürümünde karşılaştırma yapılmadığından ek yük oluşmaz.
 
  Aşağıda başka bir örnek verilmiştir. Bir denetleme hesabı uygulayan bir sınıfınız aşağıda gösterildiği gibi:
 
@@ -109,7 +111,7 @@ savingsAccount.Withdraw ( amount );
  [Bu konuda](#BKMK_In_this_topic)
 
 ## <a name="side-effects-of-debugassert"></a><a name="BKMK_Side_effects_of_Debug_Assert"></a> Hata ayıklama. onaylama 'nın yan etkileri
- Kullandığınızda <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName> , içinde herhangi bir kodun, `Assert` kaldırılırsa programın sonuçlarını değiştirmediğinden emin olun `Assert` . Aksi takdirde, yanlışlıkla yalnızca programınızın yayın sürümünde görüntülenen bir hata ortaya çıkabilir. Aşağıdaki örnek gibi işlev veya yordam çağrılarını içeren onaylar hakkında özellikle dikkatli olun:
+ Kullandığınızda <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName> , içinde herhangi bir kodun, `Assert` kaldırılırsa programın sonuçlarını değiştirmediğinden emin olun `Assert` . Aksi takdirde, yalnızca programınızın Yayın sürümünde ortaya çıkan bir hatayı yanlışlıkla ekleyebilirsiniz. Aşağıdaki örnek gibi işlev veya yordam çağrılarını içeren onaylar hakkında özellikle dikkatli olun:
 
 ```VB
 ' unsafe code
@@ -154,7 +156,7 @@ Debug.Assert ( temp != 0 );
 
   Bir C# veya Visual Basic sürüm derlemesinde hata ayıklama yöntemlerini kullanmanız gerekiyorsa, sürüm yapılandırmanızda hata ayıklama sembolünü tanımlamanız gerekir.
 
-  C++, <xref:System.Diagnostics.Debug> sınıf yöntemlerini desteklemez. Aynı etkiyi, <xref:System.Diagnostics.Trace> koşullu derleme ile, örneğin `#ifdef DEBUG` . `#endif` .. ile kullanarak elde edebilirsiniz. Bu sembolleri ** \<Project> Özellik sayfaları** iletişim kutusunda tanımlayabilirsiniz. Daha fazla bilgi için bkz. [Visual Basic hata ayıklama yapılandırması Için proje ayarlarını değiştirme](../debugger/project-settings-for-a-visual-basic-debug-configuration.md) veya [bir C veya C++ hata ayıklama yapılandırması Için proje ayarlarını değiştirme](../debugger/project-settings-for-a-cpp-debug-configuration.md).
+  C++, <xref:System.Diagnostics.Debug> sınıf yöntemlerini desteklemez. Aynı etkiyi, <xref:System.Diagnostics.Trace> koşullu derleme ile, örneğin `#ifdef DEBUG` . `#endif` .. ile kullanarak elde edebilirsiniz. Bu sembolleri **\<Project> Özellik sayfaları** iletişim kutusunda tanımlayabilirsiniz. Daha fazla bilgi için bkz. [Visual Basic hata ayıklama yapılandırması Için proje ayarlarını değiştirme](../debugger/project-settings-for-a-visual-basic-debug-configuration.md) veya [bir C veya C++ hata ayıklama yapılandırması Için proje ayarlarını değiştirme](../debugger/project-settings-for-a-cpp-debug-configuration.md).
 
 ## <a name="assert-arguments"></a><a name="BKMK_Assert_arguments"></a> Onaylama bağımsız değişkenleri
  <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=fullName> ve <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName> en çok üç bağımsız değişken alın. Zorunlu olan ilk bağımsız değişken, denetlemek istediğiniz durumdur. <xref:System.Diagnostics.Trace.Assert(System.Boolean)?displayProperty=fullName>Veya <xref:System.Diagnostics.Debug.Assert(System.Boolean)?displayProperty=fullName> yalnızca bir bağımsız değişken kullanırsanız, `Assert` yöntemi koşulu denetler ve sonuç yanlış ise, çağrı yığınının içeriğini **Çıkış** penceresine çıkarır. Aşağıdaki örnek ve gösterir <xref:System.Diagnostics.Trace.Assert(System.Boolean)?displayProperty=fullName> <xref:System.Diagnostics.Debug.Assert(System.Boolean)?displayProperty=fullName> :
@@ -216,7 +218,7 @@ Trace.Assert ( stacksize > 0, "Out of stack space", "Failed in inctemp" );
 
 - <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName>
 - <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=fullName>
-- [Hata Ayıklama Güvenliği](../debugger/debugger-security.md)
+- [Hata ayıklayıcı güvenliği](../debugger/debugger-security.md)
 - [Uygulamaları izleme ve İşaretleme](/dotnet/framework/debug-trace-profile/tracing-and-instrumenting-applications)
 - [Nasıl yapılır: İzleme ve Hata Ayıklama ile Koşullu Derleme](/dotnet/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug)
 - [C#, F# ve Visual Basic Proje Türleri](../debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md)
