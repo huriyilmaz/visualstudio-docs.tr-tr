@@ -1,7 +1,7 @@
 ---
 title: Çözüm ve projelerle çalışma
 description: Çözümler ve projeler arasındaki fark ve bunları Visual Studio 'da nasıl kullanacağınızı öğrenin.
-ms.custom: SEO-VS-2020
+ms.custom: SEO-VS-2020, contperf-fy21q2
 ms.date: 02/06/2018
 ms.topic: how-to
 f1_keywords:
@@ -16,12 +16,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9bbfa16273dc323d2ad175e965a19a22ad0d17ce
-ms.sourcegitcommit: 6f37100d4b8c15a21d3858335ded3c26ab275b93
+ms.openlocfilehash: c6649b313d4ab03c1f096a6bcbc466cb338f427c
+ms.sourcegitcommit: c558d8a0f02ed2c932c8d6f70756d8d2cedb10b3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97599485"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97684024"
 ---
 # <a name="work-with-solutions-and-projects"></a>Çözüm ve projelerle çalışma
 
@@ -50,7 +50,7 @@ Bir kod kaynağı dosyası koleksiyonunuz varsa, bunları bir projeye kolayca ek
 
 1. Menüde,   >    >  **Varolan koddan** dosya yeni proje ' yi seçin.
 
-1. **Varolan kod dosyalarından proje oluştur** sihirbazında, **ne tür proje oluşturmak** istediğiniz proje türünü seçin? açılan liste kutusu ve sonra **İleri** düğmesini seçin.
+1. **Varolan kod dosyalarından proje oluştur** sihirbazında, **ne tür proje oluşturmak istersiniz?** açılan liste kutusunu seçin ve ardından **İleri** düğmesini seçin.
 
 1. Sihirbazda, dosyaların konumuna gidin ve ardından **ad** kutusuna yeni proje için bir ad girin. İşiniz bittiğinde **son** düğmesini seçin.
 
