@@ -1,5 +1,7 @@
 ---
 title: Eski dilde parametre bilgisi Service1 | Microsoft Docs
+description: Kullanıcılara eski bir dil hizmetinde ipuçları sağlayan IntelliSense parametre bilgisi araç ipucunu nasıl uygulayacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8f8e5664634d189e8463376761d8fb59543740df
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0cd49644e670df42f4630af987a5e9152b4f6c95
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88238081"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876811"
 ---
 # <a name="parameter-info-in-a-legacy-language-service-1"></a>Eski dil hizmeti 1 ' de parametre bilgisi
 IntelliSense parametre bilgisi araç ipucu kullanıcılara bir dil yapısında oldukları yerleri hakkında ipuçları sağlar.

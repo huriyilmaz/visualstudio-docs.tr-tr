@@ -1,5 +1,7 @@
 ---
 title: 'Test alanı 5: kaynak denetimini değiştirme | Microsoft Docs'
+description: Bu kaynak denetimi eklentisi test alanı, kaynak denetimini Değiştir komutunu kullanarak kaynak denetiminin değiştirilmesini içerir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d1c0df31fbecd532e6a5f7f317730cd995cd8225
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3c4b0f33f0c898d4b9992acad6ed4035e350df2b
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80704520"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876278"
 ---
 # <a name="test-area-5-change-source-control"></a>Test Alanı 5: Kaynak Denetimini Değiştirme
 Bu kaynak denetimi eklentisi test alanı, kaynak denetimini **Değiştir** komutunu kullanarak kaynak denetiminin değiştirilmesini içerir.
@@ -52,7 +54,7 @@ Bu kaynak denetimi eklentisi test alanı, kaynak denetimini **Değiştir** komut
 | İstemcisiyle eşitlenmiş konuma bağlama | 1. bir proje oluşturun.<br />2. çözümü kaynak denetimine ekleyin.<br />3. sürüm deposunda çözüm ve proje yinelemesi oluşturun (Eğer kullanıyorsanız, paylaşma ve dalı [!INCLUDE[vsvss](../../extensibility/includes/vsvss_md.md)] ).<br />4. **kaynak denetimini Değiştir** iletişim kutusunu açın (**Dosya**, **kaynak denetimi**, **kaynak denetimini değiştirin**).<br />5. tümünün bağlantısını kaldır.<br />6. **Tamam** 'A tıklayarak **kaynak denetimini Değiştir** iletişim kutusunu kapatın.<br />7. **kaynak denetimini Değiştir** iletişim kutusunu yeniden açın.<br />8. tümünü seçin.<br />9. **bağla**'yı tıklatın.<br />10. çözümün ve projenin dallanmış konumuna gidin (adım 3 ' ten)<br />11. **kaynak denetimini Değiştir** iletişim kutusunu kapatmak için **Tamam** 'a tıklayın.<br />12. tüm öğeler için yinelemeli olarak en son alın. | Get öğesinden sonra dosya içeriği, Get öncesindeki ile aynı olur. |
 | İstemci ile eşitlenmemiş konuma bağlama | 1. bir proje oluşturun.<br />2. çözümü kaynak denetimine ekleyin.<br />3. sürüm deposunda çözüm ve proje yinelemesi oluşturun (Eğer kullanıyorsanız, paylaşma ve dalı [!INCLUDE[vsvss](../../extensibility/includes/vsvss_md.md)] ).<br />4. Sürüm deposundaki dallanmış projedeki dosyaları değiştirin.<br />5. **kaynak denetimini Değiştir** iletişim kutusunu açın (**Dosya**, **kaynak denetimi**, **kaynak denetimini değiştirin**).<br />6. tümünün bağlantısını kaldır.<br />7. **Tamam** 'A tıklayarak **kaynak denetimini Değiştir** iletişim kutusunu kapatın.<br />8. **kaynak denetimini Değiştir** iletişim kutusunu yeniden açın.<br />9. tümünü seçin.<br />10. **bağla**' ya tıklayın.<br />11. çözüm ve proje için dallanmış konuma gidin.<br />12. **kaynak denetimini Değiştir** iletişim kutusunu kapatmak için **Tamam** 'a tıklayın.<br />13. görüntülenirse uyarı iletişim kutusunu kabul edin.<br />14. tüm öğeler için en son özyinelemeli alın. | Adım 4 ' te değiştirilen dosyalar da yerel olarak değiştirilir. |
 | Kaynak denetimi altında hiç bir şekilde bağlama çözümü | 1. kaynak denetiminde boş bir klasör oluşturun.<br />2. bir istemci projesi oluşturun.<br />3. **kaynak denetimini Değiştir** iletişim kutusunu açın (**Dosya**, **kaynak denetimi**, **kaynak denetimini değiştirin**).<br />4. çözümü kaynak denetimindeki boş konuma bağlayın.<br />5. **kaynak denetimini Değiştir** iletişim kutusunu kapatmak için **Tamam** 'a tıklayın.<br />6. onay iletişim kutusunda **Bu bağlamalara devam et** ' e tıklayın.<br />7. görüntülenirse, uyarı iletişim kutusunda **Tamam** ' a tıklayın. | Çözüm, kaynak denetimine eklenir.<br /><br /> Çözüm ve proje kullanıma alındı. |
-| Bağlamayı iptal et | 1. bir proje oluşturun.<br />2. çözümü kaynak denetimine ekleyin.<br />3. kaynak denetimini Değiştir iletişim kutusunu açın.<br />4. tümünün bağlantısını kaldır.<br />5. iletişim kutusunu kapatmak için **Tamam** düğmesine tıklayın. Bu adım başarılı olursa sonraki adımla devam edin.<br />6. **kaynak denetimini Değiştir** iletişim kutusunu yeniden açın.<br />7. ilişkisiz konuma bağlayın.<br />8. **Iptal 'e**tıklayın. | `Result from Step 5:`<br /><br /> Çözüm artık kaynak denetimi altında değil<br /><br /> `Result from Step 8:`<br /><br /> Çözüm hala kaynak denetimi altında DEĞIL. |
+| Bağlamayı iptal et | 1. bir proje oluşturun.<br />2. çözümü kaynak denetimine ekleyin.<br />3. kaynak denetimini Değiştir iletişim kutusunu açın.<br />4. tümünün bağlantısını kaldır.<br />5. iletişim kutusunu kapatmak için **Tamam** düğmesine tıklayın. Bu adım başarılı olursa sonraki adımla devam edin.<br />6. **kaynak denetimini Değiştir** iletişim kutusunu yeniden açın.<br />7. ilişkisiz konuma bağlayın.<br />8. **Iptal 'e** tıklayın. | `Result from Step 5:`<br /><br /> Çözüm artık kaynak denetimi altında değil<br /><br /> `Result from Step 8:`<br /><br /> Çözüm hala kaynak denetimi altında DEĞIL. |
 
 ### <a name="case-5b-unbind"></a>Case 5B: ciltten çıkar
  Ciltten Çıkar, projelerden ve çözümlerinin kaynak kodu denetim bilgilerini kaldırır. Etkilenen projeler ve çözüm, Kullanıcı seçiminin bir karışımını ve öğelerin kaynak denetimine Eklenme şeklini temel alır.
@@ -60,7 +62,7 @@ Bu kaynak denetimi eklentisi test alanı, kaynak denetimini **Değiştir** komut
 |Eylem|Test adımları|Doğrulanacak beklenen sonuçlar|
 |------------|----------------|--------------------------------|
 |Bir dosya sistemi veya yerel IIS Web projesi ve bir istemci projesi içeren çözümün bağlantısını kaldır|1. bir dosya sistemi veya yerel IIS Web projesi oluşturun.<br />2. çözümü kaynak denetimine ekleyin.<br />3. çözüme yeni bir istemci projesi ekleyin.<br />4. istenirse çözümü kullanıma alma kabul edin.<br />5. **kaynak denetimini Değiştir** iletişim kutusunu açın.<br />6. **ciltten çıkar**'a tıklayın.<br />7. iletişim kutusunu kapatmak için **Tamam 'ı** tıklatın.<br />8. çözümü, projeyi, çözüm öğelerini, proje öğelerini kullanıma alma girişimi.|Çözüm ve projeler kaynak denetimi altında DEĞIL.<br /><br /> Kaynak denetimi menü komutları görünmüyor.|
-|Kesme bağlantısını iptal et|1. bir proje oluşturun.<br />2. çözümü kaynak denetimine ekleyin.<br />3. **kaynak denetimini Değiştir** iletişim kutusunu açın.<br />4. **Tümünü çöz**' e tıklayın.<br />5. **Iptal 'e**tıklayın.|Çözüm, kaynak denetimi altında.|
+|Kesme bağlantısını iptal et|1. bir proje oluşturun.<br />2. çözümü kaynak denetimine ekleyin.<br />3. **kaynak denetimini Değiştir** iletişim kutusunu açın.<br />4. **Tümünü çöz**' e tıklayın.<br />5. **Iptal 'e** tıklayın.|Çözüm, kaynak denetimi altında.|
 
 ### <a name="case-5c-rebind"></a>Case 5c: yeniden bağlama
  Yeniden bağlama, daha önce kaynak denetimi altında olan ve bağlantısı olmayan bir projeyi/çözümü yeniden bağlama işleminin yalnızca ciltten ve bağlamaya yönelik bir birleşimidir.

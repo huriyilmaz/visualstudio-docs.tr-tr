@@ -1,5 +1,7 @@
 ---
 title: Çıkış için proje yapılandırması | Microsoft Docs
+description: Her yapılandırmanın destekleyebileceği derleme işlemi ve çıkış öğelerinin kullanılabilir duruma getirilme arabirimlerini ve yöntemlerini öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 78b95457af4c5d806fdfcc20f49ac4e82df36488
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ffe5cb6477808f892b8d36aa5fd616a5a0ea7969
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80706665"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876330"
 ---
 # <a name="project-configuration-for-output"></a>Çıkış için Proje Yapılandırması
 Her yapılandırma, çalıştırılabilir veya kaynak dosyaları gibi çıkış öğeleri üreten bir yapı işlemi kümesini destekleyebilir. Bu çıkış öğeleri kullanıcıya özeldir ve yürütülebilir dosyalar (. exe,. dll,. lib) ve kaynak dosyaları (. IDL,. h dosyaları) gibi ilgili çıkış türlerini bağlayan gruplara yerleştirilebilir.
@@ -47,4 +49,4 @@ Her yapılandırma, çalıştırılabilir veya kaynak dosyaları gibi çıkış 
 - [Yapılandırma Seçeneklerini Yönetme](../../extensibility/internals/managing-configuration-options.md)
 - [Derleme için Proje Yapılandırması](../../extensibility/internals/project-configuration-for-building.md)
 - [Proje Yapılandırması Nesnesi](../../extensibility/internals/project-configuration-object.md)
-- [Çözüm Yapılandırması](../../extensibility/internals/solution-configuration.md)
+- [Çözüm yapılandırması](../../extensibility/internals/solution-configuration.md)

@@ -1,5 +1,7 @@
 ---
 title: Kaynak denetimi tümleştirmesine genel bakış | Microsoft Docs
+description: 'Kaynak denetimini Visual Studio ile tümleştirmenin iki yolu arasındaki farklar hakkında bilgi edinin: kaynak denetimi eklentisi ve VSPackage.'
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d80363286f5f0cac9a5ceb2e8ac9d20345df9e6f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6bbd385c7089504949d2437091b0a2ea002fafdd
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705118"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876018"
 ---
 # <a name="source-control-integration-overview"></a>Kaynak Denetimini Tümleştirmeye Genel Bakış
 Bu bölüm, Visual Studio kaynak denetimiyle tümleştirmenin iki yolunu karşılaştırır; Kaynak denetimi eklentisi ve kaynak denetim çözümü sağlayan ve yeni kaynak denetimi özelliklerini vurgulayan bir VSPackage. Visual Studio, kaynak denetimi VSPackages ve kaynak denetimi eklentilerinin yanı sıra otomatik çözüm tabanlı geçiş arasında el ile geçiş yapılmasına imkan tanır.

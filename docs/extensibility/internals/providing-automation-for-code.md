@@ -1,5 +1,7 @@
 ---
 title: Kod için Otomasyon sağlama | Microsoft Docs
+description: İç veri yapınız tarafından belirlenen arabirimlerin uygulanması için bir kod modeli uygulama hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: bd13b7db2065069ff1540dbfc921570c2b230b8a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dd8d0745ae971f4039ffccf3431614325236e63f
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705986"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875862"
 ---
 # <a name="providing-automation-for-code"></a>Kod için Otomasyon Sağlama
 Kodunuz için bir otomasyon modeli oluşturmak gerekli değildir. Ortam SDK 'Sı bu işlemi gerçekleştirmek için bir örnek sağlamaz. Kod modellerine ilişkin Öngörüler için, nesnesine bakın <xref:EnvDTE.CodeModel> .

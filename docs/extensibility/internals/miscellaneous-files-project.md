@@ -1,5 +1,7 @@
 ---
 title: Çeşitli dosyalar projesi | Microsoft Docs
+description: Bir Visual Studio projesindeki dosyaları açmak için kullanılabilecek iki Düzenleyici türü hakkında bilgi edinin ve hangi düzenleyiciyi kullanacağınızı belirleyen proje rolü.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,19 +15,19 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 95cc1312fb7b381e1e20df834698480295fadcc8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a963b4d452a5d8ea9e0556b232f488e93dc0a29c
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80707093"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876785"
 ---
 # <a name="miscellaneous-files-project"></a>Çeşitli Dosyalar Projesi
 Bir kullanıcı proje öğelerini açtığında, IDE çeşitli dosyalar projesine bir çözümdeki projelerin üyesi olmayan tüm öğeleri atar.
 
  Projeler, bir Kullanıcı bir proje öğesi açtığında hangi düzenleyicinin kullanıldığını belirlemek için önemli bir rol oynar. Bir proje, belirli dosyaları projeye özgü bir düzenleyici veya standart bir düzenleyici kullanılarak açılacak şekilde tasarlanabilir.
 
- Projeye özgü bir düzenleyici, genellikle kullanıcının özel bilgiye sahip olmasını veya projeden özel arabirimler kullanmasını gerektirir. Daha fazla bilgi için bkz. [nasıl yapılır: projeye özgü düzenleyicilerin açık](../../extensibility/how-to-open-project-specific-editors.md)olması.
+ Projeye özgü bir düzenleyici, genellikle kullanıcının özel bilgiye sahip olmasını veya projeden özel arabirimler kullanmasını gerektirir. Daha fazla bilgi için bkz. [nasıl yapılır: Project-Specific düzenleyicileri açma](../../extensibility/how-to-open-project-specific-editors.md).
 
  Standart bir düzenleyici, herhangi bir projede belirli bir uzantının herhangi bir dosyasını açabilir. Kullanıcı, projeler için metin Düzenleyicisi gibi bazı standart düzenleyicileri özelleştirebilir, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ancak yine de ortak karakterlerini koruyabilir. Standart düzenleyiciler yöntemi kullanılarak oluşturulur <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> .
 

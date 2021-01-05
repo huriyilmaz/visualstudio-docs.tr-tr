@@ -1,5 +1,7 @@
 ---
 title: Eski dilde parametre bilgisi Service2 | Microsoft Docs
+description: Yöntem bir eski dil hizmetinde yazıldığında yöntem imzasını görüntülemek için IntelliSense parametre bilgisi işlemini nasıl destekleyeceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: dff6e871320d0727ed2fbec4188e8f7af2e5c5fe
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fc239d5b0d580d420683c6940ac2bbd5198335d7
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88237964"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875953"
 ---
 # <a name="parameter-info-in-a-legacy-language-service-2"></a>Eski dil hizmetinde parametre bilgisi 2
 IntelliSense parametre bilgisi, Kullanıcı parametre listesi başlangıç karakterini (genellikle açık bir parantez), yöntem parametre listesi için yazdığında bir yöntemin imzasını görüntüleyen bir araç ipucudur. Her parametre girildiği ve parametre ayırıcısı (genellikle virgül) yazıldığında araç ipucu, sonraki parametreyi kalın olarak göstermek için güncelleştirilir.

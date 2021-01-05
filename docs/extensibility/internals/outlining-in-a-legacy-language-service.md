@@ -1,5 +1,7 @@
 ---
 title: Eski dil hizmetinde ana hat oluşturma | Microsoft Docs
+description: Eski dil hizmetindeki gizli bölgelerin uygulanmasıyla ana hattı oluşturmayı nasıl destekleyeceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: be485a0e7406d49c4dcce77958c720e0b62504b6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ca457c32751fb1f9179a9c09b624c444efab627d
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80706804"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876840"
 ---
 # <a name="outlining-in-a-legacy-language-service"></a>Eski Dil Hizmetinde Ana Hat Oluşturma
 Anahat oluşturma karmaşık bir programı bir genel bakış veya anahatta daraltmak mümkün kılar. Örneğin, C# ' de tüm yöntemler tek bir satıra daraltılabilir ve yalnızca Yöntem imzası gösteriliyor. Ayrıca, yapılar ve sınıflar yalnızca yapıların ve sınıfların adlarını gösterecek şekilde daraltılabilirler. Tek bir yöntemin içinde,, ve gibi yalnızca ilk bir deyim göstererek genel akışı göstermek için karmaşık mantık daraltılabilir `foreach` `if` `while` .

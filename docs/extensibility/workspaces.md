@@ -1,5 +1,7 @@
 ---
 title: Visual Studio 'daki çalışma alanları | Microsoft Docs
+description: Visual Studio 'Nun, çalışma alanı sağlayıcıları ve hizmetleri de dahil olmak üzere açık klasördeki dosya koleksiyonunu temsil etmek için çalışma alanı nasıl kullandığını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 02/21/2018
 ms.topic: conceptual
 author: vukelich
@@ -7,12 +9,12 @@ ms.author: svukel
 manager: viveis
 ms.workload:
 - vssdk
-ms.openlocfilehash: 011781b434c4d005e473c5f97c60a9269dc5d034
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1ed660a5f52aba548d087b28f7caea4d1966fe45
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62952769"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876954"
 ---
 # <a name="workspaces"></a>Çalışma alanları
 
@@ -49,7 +51,7 @@ Bir çalışma alanının kapatılması sırasında, genişleticilerin zaman uyu
 
 Çalışma alanları <xref:Microsoft.VisualStudio.Workspace.Settings.IWorkspaceSettingsManager> , bir çalışma alanı üzerinde basit ancak güçlü denetime sahip bir hizmete sahiptir. Ayarlara temel bir genel bakış için bkz. [Yapı ve hata ayıklama görevlerini özelleştirme](../ide/customize-build-and-debug-tasks-in-visual-studio.md).
 
-Çoğu tür için ayarlar `SettingsType` , _VSWorkspaceSettings.json_ ve _tasks.vs.js_gibi _. JSON_ dosyalarıdır.
+Çoğu tür için ayarlar `SettingsType` , _VSWorkspaceSettings.json_ ve _tasks.vs.js_ gibi _. JSON_ dosyalarıdır.
 
 Çalışma alanı ayarlarının gücü, yalnızca çalışma alanı içindeki yollar olan "kapsamlar" etrafında ortalar. Bir tüketici çağırdığında <xref:Microsoft.VisualStudio.Workspace.Settings.IWorkspaceSettingsManager.GetAggregatedSettings%2A> , istenen yolu ve ayar türünü içeren tüm kapsamlar toplanır. Kapsam toplama önceliği aşağıdaki gibidir:
 
@@ -76,7 +78,7 @@ Sonuç bir örneğidir <xref:Microsoft.VisualStudio.Workspace.Settings.IWorkspac
 }
 ```
 
-Bu ayarların kullanıcının _VSWorkspaceSettings.js_olduğu varsayıldığında, verilere şu şekilde erişilebilir:
+Bu ayarların kullanıcının _VSWorkspaceSettings.js_ olduğu varsayıldığında, verilere şu şekilde erişilebilir:
 
 ```csharp
 using System.Collections.Generic;
@@ -179,13 +181,13 @@ Bir kullanıcı arabirimi bağlamı, paketinizi otomatik yüklemek için kullan�
 
 ::: moniker range="vs-2017"
 
-Hata ayrıntıları _%LocalAppData%\microsoft\visualstudio\15.0_id \componentmodelcache\microsoft.VisualStudio.default.err_içinde bulunabilir. Uzantınızın uyguladığı türler için hataları çözün.
+Hata ayrıntıları, _%localappdata%\microsoft\visualstudio\ 15.0_Id \componentmodelcache\microsoft.VisualStudio.default.err_ içinde bulunabilir. Uzantınızın uyguladığı türler için hataları çözün.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Hata ayrıntıları, _%LocalAppData%\microsoft\visualstudio\16.0_id \componentmodelcache\microsoft.VisualStudio.default.err_içinde bulunabilir. Uzantınızın uyguladığı türler için hataları çözün.
+Hata ayrıntıları, _%localappdata%\microsoft\visualstudio\ 16.0_Id \componentmodelcache\microsoft.VisualStudio.default.err_ içinde bulunabilir. Uzantınızın uyguladığı türler için hataları çözün.
 
 ::: moniker-end
 

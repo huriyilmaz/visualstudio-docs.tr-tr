@@ -1,5 +1,7 @@
 ---
 title: Proje kalıcılığı | Microsoft Docs
+description: Hem dosya hem de dosya tabanlı olmayan proje nesnelerini kalıcı hale getirmek için IPersistFileFormat kullanımı dahil olmak üzere, projenizin tasarımında Kalıcılık hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +13,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 10a9cde91c0181fbfefbaa353c7c3702f4b36819
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b6ffa60508eba02a4442bacb63b05abb39202ab9
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80706455"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877448"
 ---
 # <a name="project-persistence"></a>Proje Kalıcılığı
 Kalıcılık, projeniz için önemli bir tasarım konusudur. Çoğu proje, dosyaları temsil eden proje öğelerini kullanır; [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , verileri dosya tabanlı olmayan projeleri de destekler. Projenin ve proje dosyasının sahip olduğu dosyaların kalıcı olması gerekir. IDE, projeye kendisini veya bir proje öğesini kaydetmesini söyler.
 
- Projeler için şablonlar proje fabrikasına geçirilir. Şablonlar, belirli proje türünün gereksinimlerine göre tüm proje öğelerinin başlatılmasını desteklemelidir. Bu şablonlar daha sonra proje dosyaları olarak kaydedebilir ve çözüm aracılığıyla IDE tarafından yönetilebilir. Daha fazla bilgi için bkz. [Proje fabrikalarını ve çözümlerini kullanarak proje örnekleri oluşturma](../../extensibility/internals/creating-project-instances-by-using-project-factories.md) . [Solutions](../../extensibility/internals/solutions-overview.md)
+ Projeler için şablonlar proje fabrikasına geçirilir. Şablonlar, belirli proje türünün gereksinimlerine göre tüm proje öğelerinin başlatılmasını desteklemelidir. Bu şablonlar daha sonra proje dosyaları olarak kaydedebilir ve çözüm aracılığıyla IDE tarafından yönetilebilir. Daha fazla bilgi için bkz. [Proje fabrikalarını ve çözümlerini kullanarak proje örnekleri oluşturma](../../extensibility/internals/creating-project-instances-by-using-project-factories.md) . [](../../extensibility/internals/solutions-overview.md)
 
  Proje öğeleri dosya tabanlı veya dosya tabanlı olabilir:
 

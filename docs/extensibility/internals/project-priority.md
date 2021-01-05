@@ -1,5 +1,7 @@
 ---
 title: Proje önceliği | Microsoft Docs
+description: Visual Studio IDE 'nin kullandığı öncelik şeması, öğe birden fazla projenin üyesiyse bir öğeyi açmak için en iyi projeyi tespit edin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a75c1c333d88e1bf5524281bee8b2a683ca6c98e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1389668bbcd1239fbb1ae0e865478bf0e0f6a7e8
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80706414"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877383"
 ---
 # <a name="project-priority"></a>Proje Önceliği
 Proje öğesi genellikle çözümdeki yalnızca bir projenin üyesidir. Bu nedenle, IDE, öğeyi açmak için hangi projenin kullanıldığını kolayca belirleyebilir. Ancak, bir öğe birden fazla projenin üyesiyse, IDE, öğeyi açmak için en iyi projeyi belirlemede bir öncelik şeması kullanır.

@@ -1,5 +1,7 @@
 ---
 title: VSPackages 'teki kaynaklar | Microsoft Docs
+description: Hangi tür yerelleştirilmiş kaynakların VSPackages 'e katıştırılabileceği hakkında bilgi edinin. Ayrıca yerel uydu UI dll 'Leri veya yönetilen uydu dll 'Lerine kaynak ekleyebilirsiniz.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 493e9834e3d7cf6d82cebb8dd93d5369678c7be0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2693d25e0b175a075bcc644077895076b75b7578
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705598"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875732"
 ---
 # <a name="resources-in-vspackages"></a>VSPackage’lardaki Kaynaklar
 Yerelleştirilmiş kaynakları yerel uydu UI dll 'Lerine, yönetilen uydu dll 'Lerine veya yönetilen bir VSPackage 'a ekleyebilirsiniz.

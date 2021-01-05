@@ -1,5 +1,7 @@
 ---
 title: Standart bir belge kaydetme | Microsoft Docs
+description: Visual Studio IDE 'ye eklediğiniz proje türü için standart bir belge için gerçekleşen işlem hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,15 +14,15 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e8d50a9e62e69f925564717020a51f88620f5f3b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 81c79ece83bc8aaaf7ca4dd28642de5973ad94c1
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705547"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875672"
 ---
 # <a name="saving-a-standard-document"></a>Standart Belge Kaydetme
-Ortam Kaydet, farklı Kaydet ve Tümünü Kaydet komutlarını işler. Kullanıcı **Kaydet**, **farklı kaydet**veya **Dosya** menüsünden **Tümünü** Kaydet ' i seçtiğinde veya çözümü kapatdığında, bir **bütün kaydetme**işlemine neden olur.
+Ortam Kaydet, farklı Kaydet ve Tümünü Kaydet komutlarını işler. Kullanıcı **Kaydet**, **farklı kaydet** veya **Dosya** menüsünden **Tümünü** Kaydet ' i seçtiğinde veya çözümü kapatdığında, bir **bütün kaydetme** işlemine neden olur.
 
  ![Standart düzenleyici](../../extensibility/internals/media/public.gif "Genel") Standart bir düzenleyici için Kaydet, farklı Kaydet ve tüm komut işlemesini Kaydet
 

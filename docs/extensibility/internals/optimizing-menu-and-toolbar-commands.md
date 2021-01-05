@@ -1,5 +1,7 @@
 ---
 title: Menü ve araç çubuğu komutlarını iyileştirme | Microsoft Docs
+description: Visual Studio 'Nun VSPackages ve bunlara karşılık gelen komutları ekleyerek oluşan komut karmaşıklığına nasıl en aza indireceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4932a4404c3d76b089468864f84d011524e9cfa0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b35f3a87f819885685b54888031883f4c2776d04
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80706912"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877604"
 ---
 # <a name="optimizing-menu-and-toolbar-commands"></a>Menü ve Araç Çubuğu Komutlarını En İyi Duruma Getirme
 VSPackages ve bunlara karşılık gelen komutları ekleme, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kalabalık bir kullanıcı arabirimine neden olabilir. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] UI komut karışıklığına en aza indirmeye yardımcı olmak için yollar sağlar.

@@ -1,5 +1,7 @@
 ---
 title: Proje modeli çekirdek bileşenleri | Microsoft Docs
+description: Bu makale, proje modeli çekirdeği ve nesnelerle ilişkili arabirimler ve hizmetler için tanımlanan arabirimlerin ve hizmetlerin açıklamalarını içerir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +13,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8e29a9d40531b32f127054fe02f61c72738e508e
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: c6aeb24b2aee5b0abb3e5d803004ba97725bb707
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012418"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876902"
 ---
 # <a name="project-model-core-components"></a>Proje Modeli Çekirdek Bileşenleri
 Aşağıdaki tablolar proje modelinde genişletilir. Tablolarda, modelde tanımlanan arabirimlerin ve hizmetlerin yanı sıra belirli nesnelerle ilişkili arabirimler ve hizmetler bulunur. Ayrıca, tablolar, belirli proje türünün gereksinimlerine bağlı olarak, proje oluşturma ve bakım için isteğe bağlı diğer arabirimleri de ayrıntılandırır.
 
- Daha fazla bilgi için bkz. [simge tarama araçlarını destekleme](../../extensibility/internals/supporting-symbol-browsing-tools.md).
+ Daha fazla bilgi için bkz. [destekleyici Symbol-Browsing araçları](../../extensibility/internals/supporting-symbol-browsing-tools.md).
 
 ### <a name="package-object"></a>Paket nesnesi
 

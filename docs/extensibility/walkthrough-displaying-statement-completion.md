@@ -1,5 +1,7 @@
 ---
 title: 'İzlenecek yol: deyimin tamamlanmasını görüntüleme | Microsoft Docs'
+description: Bu kılavuzu kullanarak düz metin içeriği için dil tabanlı deyimin tamamlanmasını nasıl uygulayacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -13,17 +15,17 @@ dev_langs:
 - VB
 ms.workload:
 - vssdk
-ms.openlocfilehash: 472ff8c10e1346f25e7bc72ed5fd4ee9f31bbafa
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d05d33074f48e59e365792fda63897b1d38cd585
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904787"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877162"
 ---
 # <a name="walkthrough-display-statement-completion"></a>İzlenecek yol: görüntüleme ifadesinin tamamlanması
 Tamamlanmasını sağlamak istediğiniz tanımlayıcıları tanımlayarak ve ardından bir tamamlanma oturumu tetikleyerek, dil tabanlı ifade tamamlamayı uygulayabilirsiniz. Bir dil hizmeti bağlamında deyimin tamamlanmasını tanımlayabilir, kendi dosya adı uzantınızı ve içerik türünü tanımlayabilir ve ardından yalnızca bu tür için tamamlamayı görüntüleyebilirsiniz. Ya da, var olan bir içerik türü için tamamlamayı (örneğin, "düz metin") tetikleyebilirsiniz. Bu izlenecek yol, metin dosyalarının içerik türü olan "düz metin" içerik türü için deyimin tamamlanmasının nasıl tetikleneceğini gösterir. "Metin" içerik türü, kod ve XML dosyaları da dahil olmak üzere diğer tüm içerik türlerinin üst öğesi.
 
- Deyimin tamamlanması genellikle belirli karakterler yazılarak tetiklenir — Örneğin, "Using" gibi bir tanımlayıcının başlangıcını yazarak tetiklenir. Bir seçimi yürütmek için **boşluk çubuğu**, **sekme**veya **ENTER** tuşuna basılarak genellikle kapatılır. Tuş vuruşları ( <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> arabirim) ve arabirimi uygulayan bir işleyici sağlayıcısı için bir komut işleyicisi kullanarak, bir karakter yazarken tetiklenecek IntelliSense özelliklerini uygulayabilirsiniz <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener> . Tamamlanma aşamasında yer alan tanımlayıcıların listesi olan tamamlama kaynağını oluşturmak için, <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSource> arabirimi ve tamamlanma kaynak sağlayıcısını ( <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSourceProvider> arabirim) uygulayın. Sağlayıcılar Managed Extensibility Framework (MEF) bileşen bölümleridir. Bunlar, kaynak ve denetleyici sınıflarını dışa ve hizmet ve aracıları içeri aktarmaktan sorumludur — Örneğin, <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService> metin arabelleğinde gezinmeyi sağlayan ve <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionBroker> tamamlanma oturumunu tetikleyen olan.
+ Deyimin tamamlanması genellikle belirli karakterler yazılarak tetiklenir — Örneğin, "Using" gibi bir tanımlayıcının başlangıcını yazarak tetiklenir. Bir seçimi yürütmek için **boşluk çubuğu**, **sekme** veya **ENTER** tuşuna basılarak genellikle kapatılır. Tuş vuruşları ( <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> arabirim) ve arabirimi uygulayan bir işleyici sağlayıcısı için bir komut işleyicisi kullanarak, bir karakter yazarken tetiklenecek IntelliSense özelliklerini uygulayabilirsiniz <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener> . Tamamlanma aşamasında yer alan tanımlayıcıların listesi olan tamamlama kaynağını oluşturmak için, <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSource> arabirimi ve tamamlanma kaynak sağlayıcısını ( <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSourceProvider> arabirim) uygulayın. Sağlayıcılar Managed Extensibility Framework (MEF) bileşen bölümleridir. Bunlar, kaynak ve denetleyici sınıflarını dışa ve hizmet ve aracıları içeri aktarmaktan sorumludur — Örneğin, <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService> metin arabelleğinde gezinmeyi sağlayan ve <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionBroker> tamamlanma oturumunu tetikleyen olan.
 
  Bu izlenecek yol, sabit kodlanmış bir tanımlayıcı kümesi için nasıl ifade tamamlanmasının uygulanacağını gösterir. Tam uygulamalarda, dil hizmeti ve dil belgeleri bu içeriği sağlamaktan sorumludur.
 
@@ -81,7 +83,7 @@ Tamamlanmasını sağlamak istediğiniz tanımlayıcıları tanımlayarak ve ard
      [!code-csharp[VSSDKCompletionTest#4](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_4.cs)]
      [!code-vb[VSSDKCompletionTest#4](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_4.vb)]
 
-6. <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSource.AugmentCompletionSession%2A>Bağlam içinde sağlamak istediğiniz tamamlamaların bulunduğu bir tamamlanma kümesi ekleyerek yöntemini uygulayın. Her tamamlama kümesi bir tamamlama kümesi içerir <xref:Microsoft.VisualStudio.Language.Intellisense.Completion> ve tamamlanma penceresinin sekmesine karşılık gelir. (Visual Basic projelerinde, tamamlama pencere sekmeleri **ortak** ve **hepsi**olarak adlandırılır.) `FindTokenSpanAtPosition` Yöntemi bir sonraki adımda tanımlanmıştır.
+6. <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSource.AugmentCompletionSession%2A>Bağlam içinde sağlamak istediğiniz tamamlamaların bulunduğu bir tamamlanma kümesi ekleyerek yöntemini uygulayın. Her tamamlama kümesi bir tamamlama kümesi içerir <xref:Microsoft.VisualStudio.Language.Intellisense.Completion> ve tamamlanma penceresinin sekmesine karşılık gelir. (Visual Basic projelerinde, tamamlama pencere sekmeleri **ortak** ve **hepsi** olarak adlandırılır.) `FindTokenSpanAtPosition` Yöntemi bir sonraki adımda tanımlanmıştır.
 
      [!code-csharp[VSSDKCompletionTest#5](../extensibility/codesnippet/CSharp/walkthrough-displaying-statement-completion_5.cs)]
      [!code-vb[VSSDKCompletionTest#5](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-statement-completion_5.vb)]
@@ -172,7 +174,7 @@ Tamamlanmasını sağlamak istediğiniz tanımlayıcıları tanımlayarak ve ard
 
    - Karakterin arabelleğe yazılmasına izin verin ve ardından tetikleme veya filtre tamamlamayı izleyin. (Yazdırma karakterleri bunu yapın.)
 
-   - Tamamlamayı işleyin, ancak karakterin arabelleğe yazılmasına izin vermeyin. (Boşluk, **sekme**ve **ENTER** , bir tamamlama oturumu görüntülenirken bunu yapın.)
+   - Tamamlamayı işleyin, ancak karakterin arabelleğe yazılmasına izin vermeyin. (Boşluk, **sekme** ve **ENTER** , bir tamamlama oturumu görüntülenirken bunu yapın.)
 
    - Komutun bir sonraki işleyiciye geçirilmesine izin verin. (Diğer tüm komutlar.)
 
@@ -202,7 +204,7 @@ Tamamlanmasını sağlamak istediğiniz tanımlayıcıları tanımlayarak ve ard
 
 3. Bir metin dosyası oluşturun ve "Ekle" sözcüğünü içeren bir metin yazın.
 
-4. İlk "a" ve ardından "d" yazdığınızda, "ekleme" ve "uyarlama" içeren bir liste görünmelidir. Ek olarak seçili olduğuna dikkat edin. Başka bir "d" yazdığınızda, liste yalnızca seçili olan "ek" i içermelidir. **Ara çubuğu**, **sekme**veya **ENTER** tuşuna basarak veya ESC ya da başka bir anahtar yazarak listeyi kapatabilmeniz için "ekleme" gerçekleştirebilirsiniz.
+4. İlk "a" ve ardından "d" yazdığınızda, "ekleme" ve "uyarlama" içeren bir liste görünmelidir. Ek olarak seçili olduğuna dikkat edin. Başka bir "d" yazdığınızda, liste yalnızca seçili olan "ek" i içermelidir. **Ara çubuğu**, **sekme** veya **ENTER** tuşuna basarak veya ESC ya da başka bir anahtar yazarak listeyi kapatabilmeniz için "ekleme" gerçekleştirebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [İzlenecek yol: bir içerik türünü bir dosya adı uzantısına bağlama](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)

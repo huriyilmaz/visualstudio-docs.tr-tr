@@ -1,5 +1,7 @@
 ---
 title: Proje türleri | Microsoft Docs
+description: Visual Studio, Visual C# ve Visual Basic gibi diller için birçok proje türü içerir. Visual Studio, kendi proje türlerinizi oluşturmanıza de olanak tanır.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6b343eeeee0912a6e9cad57ca6d35c33845e4dd4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 35e38649f825e0dfa554d9fbc90c57f63370b31f
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80706258"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877201"
 ---
 # <a name="project-types"></a>Proje Türleri
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , ve gibi diller için birçok proje türü [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] içerir [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] . [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Ayrıca kendi proje türlerinizi oluşturmanıza imkan tanır.
@@ -52,7 +54,7 @@ ms.locfileid: "80706258"
 
 - [Projeleri İç İçe Geçirme](../../extensibility/internals/nesting-projects.md)
 
- Proje türlerinizi *iç içe geçirmeyi*nasıl destekleyebileceğini açıklar, böylece projeler **Çözüm Gezgini**birlikte gruplandırılabilir.
+ Proje türlerinizi *iç içe geçirmeyi* nasıl destekleyebileceğini açıklar, böylece projeler **Çözüm Gezgini** birlikte gruplandırılabilir.
 
 - [Projeleri Yükseltme](../../extensibility/internals/upgrading-projects.md)
 

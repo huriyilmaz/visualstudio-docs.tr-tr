@@ -1,5 +1,7 @@
 ---
 title: Çözüm yapılandırması | Microsoft Docs
+description: Başlangıç (F5) anahtar ve derleme komutlarının davranışını yönlendirerek, proje türü tarafından desteklenen çözüm yapılandırmalarının nasıl uygulanacağını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7c96b73747ef8b136a74a7256cde7fef8d1c42de
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5ad298a44eedea0681a554add74bd67ed22cad41
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705384"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876034"
 ---
 # <a name="solution-configuration"></a>Çözüm Yapılandırması
 Çözüm yapılandırması, çözüm düzeyi özellikleri depolar. **Başlat** (F5) anahtar ve **derleme** komutlarının davranışını yönlendirir. Varsayılan olarak, bu komutlar hata ayıklama yapılandırmasını oluşturur ve başlatır. Her iki komut de bir çözüm yapılandırması bağlamında yürütülür. Bu, kullanıcının F5 ' i başlatıp etkin çözümün ayarlar aracılığıyla yapılandırıldığı her şeyi oluşturmasını beklebileceği anlamına gelir. Ortam, oluşturmak ve çalıştırmak için olduğu zaman projeler yerine çözümleri iyileştirmek üzere tasarlanmıştır.
@@ -45,7 +47,7 @@ ms.locfileid: "80705384"
 
    Bir proje platformları desteklemiyorsa, söz konusu projenin platform sütunu hiçbiri ' ni görüntüler ve devre dışı bırakılır.
 
-- Oluşturma
+- Yapı
 
    Projenin geçerli çözüm yapılandırması tarafından oluşturulup oluşturulmayacağını belirtir. Hiçbir proje bağımlılığı olsa da çözüm düzeyinde derleme komutları çağrıldığında seçilmemiş projeler derlenmez. Derlenmeye seçili olmayan projeler, çözümün hata ayıklaması, çalıştırılması, paketlenmesi ve dağıtılması ile hala dahil edilmiştir.
 

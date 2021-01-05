@@ -1,5 +1,7 @@
 ---
 title: Proje öğelerini açma ve kaydetme | Microsoft Docs
+description: Visual Studio IDE 'de yeni proje türü için dosyaları açmak ve kaydetmek üzere farklı yaklaşımlar hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: bbb89d99e401be6bae7d8ee9be8ee33fa7574723
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 971fef7939c91bdcdea9098da530c7ecb2daf9ec
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80706965"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877643"
 ---
 # <a name="opening-and-saving-project-items"></a>Proje Öğelerini Açma ve Kaydetme
 Yeni bir proje türü eklediğinizde, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Tümleşik geliştirme ortamında (IDE) proje dosyalarınızın açılmasını ve kaydedilmesini yönetmeniz gerekir. Aşağıdaki konularda, dosyaları açma ve kaydetme ile ilgili farklı yaklaşımlar ele alınmaktadır.
@@ -45,11 +47,11 @@ Yeni bir proje türü eklediğinizde, [!INCLUDE[vsprvs](../../code-quality/inclu
 
 - [Standart Belge Kaydetme](../../extensibility/internals/saving-a-standard-document.md)
 
- IDE 'nin **Kaydet**, **farklı kaydet**ve standart düzenleyicide açılan bir belge için **tüm komutları kaydet** hakkında ayrıntılı bir açıklama sağlar.
+ IDE 'nin **Kaydet**, **farklı kaydet** ve standart düzenleyicide açılan bir belge için **tüm komutları kaydet** hakkında ayrıntılı bir açıklama sağlar.
 
 - [Özel Belge Kaydetme](../../extensibility/internals/saving-a-custom-document.md)
 
- Bir diyagram ve IDE 'nin **Kaydet**, **farklı kaydet**ve özel bir düzenleyicide açılan belgeler için tüm komutları **Kaydet** hakkında ayrıntılı açıklamalar sağlar.
+ Bir diyagram ve IDE 'nin **Kaydet**, **farklı kaydet** ve özel bir düzenleyicide açılan belgeler için tüm komutları **Kaydet** hakkında ayrıntılı açıklamalar sağlar.
 
 - [Projedeki Bir Dosyayı Hangi Düzenleyicinin Açacağını Belirleme](../../extensibility/internals/determining-which-editor-opens-a-file-in-a-project.md)
 

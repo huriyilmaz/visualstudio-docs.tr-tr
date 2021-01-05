@@ -1,5 +1,7 @@
 ---
 title: Kaynak denetimi paketleri için model | Microsoft Docs
+description: Bu model bir kaynak denetim uygulamasını temsil eder. Makale, kaynak denetiminin nasıl yapıldığını görmeyi kolaylaştırmak için sınıfların adlarını gösterir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 46845be1bc22a67d6703af12933945bdfcfa7f4b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9ece2a7df1aeb2ec44f7b21075d2945a93d51838
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80707067"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876695"
 ---
 # <a name="model-for-source-control-packages"></a>Kaynak Denetimi Paketleri için Model
 Aşağıdaki model, kaynak denetimi uygulamasına bir örnek temsil eder. Modelinde, uygulamanız gereken arabirimleri ve çağırmanız gereken ortam hizmetlerini görürsünüz. Tüm hizmetler gibi, aslında hizmet yoluyla elde ettiğiniz belirli bir arabirimin yöntemlerini çağırabilirsiniz. Sınıfların adları, kaynak denetiminin nasıl yapıldığını görmeyi kolaylaştırmak için tanımlanır.

@@ -1,5 +1,6 @@
 ---
 title: Bir düzenleyici uzantısıyla kısayol tuşu kullanma
+description: Bir kısayol tuşu kullanarak bir metin görünümüne Görünüm kenarlığı ekleme hakkında bilgi edinin. Bu izlenecek yol, görünüm penceresinin kenarlığı düzenleyici şablonunu temel alır.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -11,17 +12,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 78bbf84f6b11451c8b1a09e6883ba76b19cec757
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 4c939328e1ef8e517821db8622e7383cab90c384
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037464"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875849"
 ---
 # <a name="walkthrough-use-a-shortcut-key-with-an-editor-extension"></a>İzlenecek yol: bir düzenleyici uzantısıyla kısayol tuşu kullanma
 Düzenleyici uzantıdaki kısayol tuşlarına yanıt verebilirsiniz. Aşağıdaki izlenecek yol, bir kısayol tuşu kullanarak bir metin görünümüne Görünüm kenarlığı nasıl ekleneceğini gösterir. Bu izlenecek yol, görünüm penceresinin kenarlığı düzenleyici şablonunu temel alır ve + karakterini kullanarak kenarlığı eklemenize olanak tanır.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
  Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yükleyemezsiniz. Visual Studio kurulumunda isteğe bağlı bir özellik olarak eklenmiştir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-a-managed-extensibility-framework-mef-project"></a>Managed Extensibility Framework (MEF) projesi oluşturma
@@ -40,13 +41,13 @@ Düzenleyici uzantıdaki kısayol tuşlarına yanıt verebilirsiniz. Aşağıdak
 
     Microsoft. VisualStudio. TextManager. Interop
 
-   KeyBindingTest sınıfı dosyasında, sınıf adını Purpleköşeli kutusu olarak değiştirin. Diğer uygun değişiklikleri yapmak için sol kenar boşluğunda görünen ampul ' i kullanın. Oluşturucunun içinde, kenarlığı katmanının adını **KeyBindingTest** öğesinden **purpleucu kutusuna**değiştirin:
+   KeyBindingTest sınıfı dosyasında, sınıf adını Purpleköşeli kutusu olarak değiştirin. Diğer uygun değişiklikleri yapmak için sol kenar boşluğunda görünen ampul ' i kullanın. Oluşturucunun içinde, kenarlığı katmanının adını **KeyBindingTest** öğesinden **purpleucu kutusuna** değiştirin:
 
 ```csharp
 this.layer = view.GetAdornmentLayer("PurpleCornerBox");
 ```
 
-KeyBindingTestTextViewCreationListener.cs sınıf dosyasında, **KeyBindingTest** ' den Purnmentlayer ' ın adını **Espleköşeli kutusuna**değiştirin:
+KeyBindingTestTextViewCreationListener.cs sınıf dosyasında, **KeyBindingTest** ' den Purnmentlayer ' ın adını **Espleköşeli kutusuna** değiştirin:
 
 ```csharp
 [Export(typeof(AdornmentLayerDefinition))]
@@ -78,7 +79,7 @@ Visual Studio 2017 sürüm 15,6 ' den önce, bir düzenleyici uzantısında komu
 3. KeyBindingCommandFilter adlı sınıf öğesinden devralması gerekir <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> .
 
     ```csharp
-    internal class KeyBindingCommandFilter : IOleCommandTarget
+    internal class KeyBindingCommandFilter : IOleCommandTarget
     ```
 
 4. Metin görünümü için özel alanlar, komut zincirindeki bir sonraki komut ve komut filtresinin zaten eklenip eklenmeyeceğini temsil eden bir bayrak ekleyin.
@@ -86,8 +87,8 @@ Visual Studio 2017 sürüm 15,6 ' den önce, bir düzenleyici uzantısında komu
     ```csharp
     private IWpfTextView m_textView;
     internal IOleCommandTarget m_nextTarget;
-    internal bool m_added;
-    internal bool m_adorned;
+    internal bool m_added;
+    internal bool m_adorned;
     ```
 
 5. Metin görünümünü ayarlayan bir Oluşturucu ekleyin.

@@ -1,5 +1,7 @@
 ---
 title: 'İzlenecek yol: Imza yardımını görüntüleme | Microsoft Docs'
+description: Bu yönergeyi kullanarak metin içerik türü için Imza yardımını görüntülemeyi öğrenin. İmza yardımı bir araç ipucunda bir yöntemin imzasını görüntüler.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,15 +12,15 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b88c8555904bb31c2804579459ad3096d640b0c2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: be324ab48d42e859678ccf01d8c75faae6cea381
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904822"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876252"
 ---
 # <a name="walkthrough-display-signature-help"></a>İzlenecek yol: Imza yardımını görüntüle
-İmza yardımı ( *parametre bilgisi*olarak da bilinir), bir Kullanıcı parametre listesi başlangıç karakterini (genellikle bir açılış ayracı) yazdığında bir araç ipucunda bir yöntemin imzasını görüntüler. Bir parametre ve parametre ayırıcısı (genellikle virgül) yazıldığında araç ipucu, sonraki parametreyi kalın olarak göstermek için güncelleştirilir. Aşağıdaki yollarla Imza yardımını tanımlayabilirsiniz: bir dil hizmeti bağlamında kendi dosya adı uzantınızı ve içerik türünü tanımlayabilir ve yalnızca bu tür için Imza yardımını görüntüleyebilir ya da mevcut bir içerik türü için Imza yardımını (örneğin, "metin") görüntüleyin. Bu izlenecek yol, "metin" içerik türü için Imza yardımını görüntülemeyi gösterir.
+İmza yardımı ( *parametre bilgisi* olarak da bilinir), bir Kullanıcı parametre listesi başlangıç karakterini (genellikle bir açılış ayracı) yazdığında bir araç ipucunda bir yöntemin imzasını görüntüler. Bir parametre ve parametre ayırıcısı (genellikle virgül) yazıldığında araç ipucu, sonraki parametreyi kalın olarak göstermek için güncelleştirilir. Aşağıdaki yollarla Imza yardımını tanımlayabilirsiniz: bir dil hizmeti bağlamında kendi dosya adı uzantınızı ve içerik türünü tanımlayabilir ve yalnızca bu tür için Imza yardımını görüntüleyebilir ya da mevcut bir içerik türü için Imza yardımını (örneğin, "metin") görüntüleyin. Bu izlenecek yol, "metin" içerik türü için Imza yardımını görüntülemeyi gösterir.
 
  İmza yardımı genellikle belirli bir karakter yazılarak tetiklenir, örneğin "(" (parantez açma) ve başka bir karakter yazılarak, örneğin ")" (kapatma parantezi). Bir karakter yazılarak tetiklenen IntelliSense özellikleri, tuş vuruşları ( <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> arabirim) ve arabirimi uygulayan bir işleyici sağlayıcısı için bir komut işleyicisi kullanılarak uygulanabilir <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener> . Imza yardımına katılan imzaların listesi olan Imza yardım kaynağını oluşturmak için, arabirimi <xref:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpSource> ve arabirimi çalıştıran bir kaynak sağlayıcıyı uygulayın <xref:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpSourceProvider> . Sağlayıcılar Managed Extensibility Framework (MEF) bileşen bölümleridir ve kaynak ve denetleyici sınıflarını dışa aktarıp, hizmet ve aracıları içeri aktarmaktan sorumludur; Örneğin, <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService> metin arabelleğinde gezinmenizi sağlar ve <xref:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpBroker> imza Yardım oturumunu tetikleyen ' dir.
 

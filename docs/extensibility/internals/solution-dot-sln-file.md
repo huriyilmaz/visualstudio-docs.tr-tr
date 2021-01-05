@@ -1,5 +1,7 @@
 ---
 title: Çözüm (. Sln) dosyası
+description: Visual Studio 'da bir proje için durum bilgilerini tutan dosyalardan biri olan. sln dosyası hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 03/15/2019
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9f4eee1f0a5e8371d239b3c33d10e1d9d7998095
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 903b33d72d3a97eb4ed3f7ad0bc865999bee54cf
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705325"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877513"
 ---
 # <a name="solution-sln-file"></a>Çözüm (. sln) dosyası
 

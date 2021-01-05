@@ -1,5 +1,7 @@
 ---
 title: Kaynak denetimi | Microsoft Docs
+description: Bu makaleler, bir eklenti veya VSPackage aracılığıyla Visual Studio 'nun tümleşik bir özelliği olarak kaynak denetimi uygulamaya yönelik seçenekleri tartışır.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8ff7904e9abc3df8ed36f8c196ce4c1175b4d9af
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 33437994770ee78327d130f288d9d2e9689774fe
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80704996"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876109"
 ---
 # <a name="source-control"></a>Kaynak Denetimi
 Bu bölümde kaynak denetimi, kaynak denetimi [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] eklentisi veya kaynak denetimi VSPackage aracılığıyla tümleşik bir özelliği olarak uygulama seçenekleri açıklanmaktadır.

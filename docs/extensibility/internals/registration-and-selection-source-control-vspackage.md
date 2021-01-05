@@ -1,5 +1,7 @@
 ---
 title: Kayıt ve seçim (kaynak denetimi VSPackage) | Microsoft Docs
+description: Visual Studio ile bir kaynak denetimi VSPackage kaydetme ve birden çok kayıtlı kaynak denetimi paketinden hangi paketin yükleneceğini seçme hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 973eb19916a737dfa775fe79ee62cb3d11fe0123
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 76f0bd737eff52706cf73c9a1105b79e08c556f0
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705714"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877370"
 ---
 # <a name="registration-and-selection-source-control-vspackage"></a>Kayıt ve Seçim (Kaynak Denetimi VSPackage’ı)
 Kaynak denetimi VSPackage, içinde kullanıma sunmak için kaydedilmelidir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Birden fazla kaynak denetimi VSPackage kayıtlıysa, Kullanıcı hangi VSPackage 'ın uygun zamanlarda yükleneceğini seçebilir. VSPackages hakkında daha fazla ayrıntı ve bunların nasıl kaydedileceği hakkında bilgi için bkz. [VSPackages](../../extensibility/internals/vspackages.md) .
@@ -24,7 +26,7 @@ Kaynak denetimi VSPackage, içinde kullanıma sunmak için kaydedilmelidir [!INC
 ## <a name="registering-a-source-control-package"></a>Kaynak denetim paketini kaydetme
  Kaynak denetim paketi, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ortamın onu bulabileceği ve desteklenen özelliklerini sorgulayabilmesi için kaydedilir. Bu, bir paket örneğinin yalnızca özellikleri veya komutları gerekli olduğunda ya da açıkça istendiği zaman oluşturulduğu bir gecikme yükleme şemasına göre yapılır.
 
- VSPackages, bilgileri sürüme özgü bir kayıt defteri anahtarına, HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio \\ *X. Y*' dir; burada *X* , ana sürüm numarası ve *Y* ise ikincil sürüm numarasıdır. Bu uygulama, uygulamasının birden çok sürümünü yan yana yüklemeyi destekleme yeteneği sağlar [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
+ VSPackages, bilgileri sürüme özgü bir kayıt defteri anahtarına HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\ *x. Y*, burada *x* büyük sürüm numarası ve *Y* ise ikincil sürüm numarasıdır. Bu uygulama, uygulamasının birden çok sürümünü yan yana yüklemeyi destekleme yeteneği sağlar [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
 
  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Kullanıcı arabirimi (UI), birden fazla yüklü kaynak denetimi eklentisi arasından (kaynak denetim bağdaştırıcısı paketi aracılığıyla) seçim yapın ve kaynak denetimi VSPackages 'yi destekler. Tek seferde yalnızca bir etkin kaynak denetimi eklentisi veya VSPackage olabilir. Bununla birlikte, aşağıda açıklandığı gibi IDE, otomatik çözüm tabanlı bir paket değiştirme mekanizması aracılığıyla kaynak denetimi eklentileri ve VSPackages arasında geçiş yapılmasına izin verir. Bu seçim mekanizmasını etkinleştirmek için VSPackage kaynak denetiminin bölümünde bazı gereksinimler vardır.
 
@@ -60,7 +62,7 @@ Kaynak denetimi VSPackage, içinde kullanıma sunmak için kaydedilmelidir [!INC
   Kaynak denetimi VSPackage, ihtiyaç duydukları tüm bileşenleri yalnızca gerçekten kullanılacaksa (yani Gecikmeli yükleme olarak bilinir) yüklemesi gerekir.
 
 ### <a name="automatic-solution-based-vspackage-swapping"></a>Otomatik çözüm tabanlı VSPackage takas
- Kaynak denetimi [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kategorisi altındaki **Seçenekler** iletişim kutusundan, kaynak denetimi VSPackages 'leri el ile **Source Control** takas edebilirsiniz. Otomatik çözüm tabanlı paket değiştirme, belirli bir çözüm için belirlenmiş olan bir kaynak denetimi paketinin, bu çözüm açıldığında otomatik olarak etkin olarak ayarlandığı anlamına gelir. Her kaynak denetim paketinin ve uygulaması <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProvider.SetActive%2A> gerekir <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProvider.SetInactive%2A> . [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Kaynak denetimi eklentileri (kaynak denetimi eklentisi API 'sini uygulama) ve kaynak denetimi VSPackages arasındaki anahtarı işler.
+ Kaynak denetimi [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kategorisi altındaki **Seçenekler** iletişim kutusundan, kaynak denetimi VSPackages 'leri el ile  takas edebilirsiniz. Otomatik çözüm tabanlı paket değiştirme, belirli bir çözüm için belirlenmiş olan bir kaynak denetimi paketinin, bu çözüm açıldığında otomatik olarak etkin olarak ayarlandığı anlamına gelir. Her kaynak denetim paketinin ve uygulaması <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProvider.SetActive%2A> gerekir <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProvider.SetInactive%2A> . [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Kaynak denetimi eklentileri (kaynak denetimi eklentisi API 'sini uygulama) ve kaynak denetimi VSPackages arasındaki anahtarı işler.
 
  Kaynak denetim bağdaştırıcısı paketi herhangi bir kaynak denetimi eklentisi API tabanlı eklentiye geçiş yapmak için kullanılır. Ara kaynak denetim bağdaştırıcısı paketini değiştirme ve hangi kaynak denetimi eklentisinin etkin veya devre dışı olarak ayarlanması gerektiğini belirleme işlemi kullanıcı için saydamdır. Herhangi bir kaynak denetimi eklentisi etkin olduğunda bağdaştırıcı paketi her zaman etkindir. Yalnızca eklenti DLL 'sini yüklemek ve kaldırmak için iki kaynak denetimi eklentisi miktarı arasında geçiş yapın. Ancak, bir kaynak denetimi VSPackage 'a geçiş yapmak, uygun VSPackage 'ı yüklemek için IDE ile etkileşimde bulunmayı içerir.
 

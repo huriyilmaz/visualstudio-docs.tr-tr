@@ -1,5 +1,7 @@
 ---
 title: Eski dil hizmetinde ana hat ve gizli metin | Microsoft Docs
+description: Bu makale, eski dil hizmetinde ana hat ve gizli metin uygulamak için kaynaklara bağlantı sağlar.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b1f05d42de0201a7556046d19baf55830fa62c22
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1bd0b48292a448d70b266e598df561fdff2e8ab4
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80706821"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877409"
 ---
 # <a name="outlining-and-hidden-text-in-a-legacy-language-service"></a>Eski Dil Hizmetinde Ana Hat Oluşturma ve Gizli Metin
 Anahat oluşturma, bir metin satırı dizisini tek bir satıra daraltmanızı olanaklı kılar. Örneğin, C++ ' ta tüm yöntemler yalnızca yöntem imzasını gösteren tek bir satıra daraltılabilirler. Gizli metin, gösterilebilecek veya gizli olabilecek metin çizgilerinin sırasıdır.

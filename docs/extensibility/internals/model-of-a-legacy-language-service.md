@@ -1,5 +1,7 @@
 ---
 title: Eski dil hizmeti modeli | Microsoft Docs
+description: Visual Studio Core Düzenleyicisi için en düşük dil hizmetinin bu modelini kendi dil hizmetinizi oluşturmaya yönelik bir kılavuz olarak kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7f024a02641902843f673ce3ff8583a4bce3b135
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2928d3c09a54ea8e9548f7751381279f153643e5
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80707044"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876746"
 ---
 # <a name="model-of-a-legacy-language-service"></a>Eski Dil Hizmetinin Modeli
 Dil hizmeti, belirli bir dilin öğelerini ve özelliklerini tanımlar ve düzenleyiciye bu dile özgü bilgiler sağlamak için kullanılır. Örneğin, düzenleyicinin sözdizimi renklendirmesini desteklemek için, dilin öğelerini ve dil anahtar sözcüklerini bilmesi gerekir.
@@ -33,9 +35,9 @@ Dil hizmeti, belirli bir dilin öğelerini ve özelliklerini tanımlar ve düzen
 
   ![Dil hizmeti modeli grafiği](../../extensibility/media/vslanguageservicemodel.gif "vsLanguageServiceModel") Temel dil hizmet modeli
 
-  Belge penceresi, bu örnekte çekirdek Düzenleyici olan düzenleyicinin *belge görünümünü* barındırır [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Belge görünümü ve metin arabelleğinin, düzenleyiciye aittir. Bu nesneler, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] *kod penceresi*olarak adlandırılan özelleştirilmiş bir belge penceresi aracılığıyla ile çalışır. Kod penceresi, <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame> IDE tarafından oluşturulup denetlenen bir nesne içindedir.
+  Belge penceresi, bu örnekte çekirdek Düzenleyici olan düzenleyicinin *belge görünümünü* barındırır [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Belge görünümü ve metin arabelleğinin, düzenleyiciye aittir. Bu nesneler, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] *kod penceresi* olarak adlandırılan özelleştirilmiş bir belge penceresi aracılığıyla ile çalışır. Kod penceresi, <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame> IDE tarafından oluşturulup denetlenen bir nesne içindedir.
 
-  Belirli bir uzantıya sahip bir dosya yüklendiğinde, düzenleyici bu uzantıyla ilişkili dil hizmetini bulur ve yöntemini çağırarak kodu penceresine geçirir <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo.GetCodeWindowManager%2A> . Dil hizmeti, arabirimini uygulayan bir *kod penceresi Yöneticisi*döndürür <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager> .
+  Belirli bir uzantıya sahip bir dosya yüklendiğinde, düzenleyici bu uzantıyla ilişkili dil hizmetini bulur ve yöntemini çağırarak kodu penceresine geçirir <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo.GetCodeWindowManager%2A> . Dil hizmeti, arabirimini uygulayan bir *kod penceresi Yöneticisi* döndürür <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager> .
 
   Aşağıdaki tabloda, modeldeki nesnelere genel bir bakış sağlanmaktadır.
 

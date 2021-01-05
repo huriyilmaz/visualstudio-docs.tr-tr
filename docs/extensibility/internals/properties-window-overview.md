@@ -1,5 +1,7 @@
 ---
 title: Özellikler penceresine genel bakış | Microsoft Docs
+description: Bu genel bakışta Visual Studio IDE 'de Özellikler penceresi etkileşimde bulunmak için kullanılan arabirimler hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 445a43cec976f363873c89dfe9b8e05429aebaf2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 712c3c5b5c0b94932abba602a841977e0601d3b3
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80706024"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875901"
 ---
 # <a name="properties-window-overview"></a>Özellikler Penceresine Genel Bakış
 **Özellikler** penceresi, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Tümleşik GELIŞTIRME ortamında (IDE) kullanılabilen iki ana Windows türünde seçilen nesneler için özellikleri göstermek üzere kullanılır. Bu iki tür pencere şunlardır:

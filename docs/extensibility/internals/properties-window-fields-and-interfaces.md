@@ -1,5 +1,7 @@
 ---
 title: Özellikler penceresi alanları ve arabirimleri | Microsoft Docs
+description: Visual Studio IDE 'de odaklanmış pencereye göre Özellikler penceresi hangi bilgilerin görüntülendiğini belirleyen seçim hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9529708c781e7fdb04c3b4c5ee143b7605857e84
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 21bc3a7f1d46a1afe579a67afa09097fd04458ff
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80706160"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875771"
 ---
 # <a name="properties-window-fields-and-interfaces"></a>Özellikler Penceresi Alanları ve Arabirimleri
 **Özellikler** penceresinde hangi bilgilerin görüntülendiğini belirlemek için seçim MODELI, IDE 'ye odaklanılmış pencereyi temel alır. Seçili penceredeki her pencere ve nesnenin seçim bağlamı nesnesi genel seçim bağlamına itilmiş olabilir. Bu pencere odağa sahip olduğunda, ortam, genel seçim bağlamını bir pencere çerçevesindeki değerlerle güncelleştirir. Odak değiştiğinde seçim bağlamını de yapar.

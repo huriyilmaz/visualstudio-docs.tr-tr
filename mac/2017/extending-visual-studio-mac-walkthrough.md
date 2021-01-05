@@ -1,22 +1,24 @@
 ---
 title: Mac için Visual Studio Izlenecek yolu genişletme
+description: Mac için Visual Studio için basit bir uzantı paketi oluşturmayı öğrenin ve bu, düzenleme menüsünde Yeni bir komut oluşturur.
+ms.custom: SEO-VS-2020
 author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 04/14/2017
 ms.technology: vs-ide-sdk
 ms.assetid: 7D00512B-9688-4D8D-87A7-F04F207E3D02
-ms.openlocfilehash: c5b3b759b32acfc86b4b584b3f3d52298c138a2c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9274f86e8ade5b49b5db0c7f4773cf6fd57ea353
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74985031"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876200"
 ---
 # <a name="extending-visual-studio-for-mac-walkthrough"></a>Mac için Visual Studio Izlenecek yolu genişletme
 
 Bu konu, [basit bir uzantı paketi](https://github.com/mjh4/AddIns/tree/master/DateInserter)oluşturma konusunda size rehberlik eder. Uzantı paketi Mac için Visual Studio düzenleme menüsünde, kullanıcının geçerli tarih ve saati açık metin belgesine eklemesini sağlayan yeni bir komut oluşturur.
 
-Bu örnek, eklenti Oluşturucu 'yu kullanır. Eklenti Oluşturucu yeni bir proje şablonu oluşturur ve bunu özel uzantı paketimiz için gereken dosyalarla doldurur.
+Bu örnek, eklenti Oluşturucu 'yu kullanır. Add-In Oluşturucu yeni bir proje şablonu oluşturur ve bunu özel uzantı paketimiz için gerekli dosyalarla doldurur.
 
 1. Zaten açık değilse Mac için Visual Studio başlatarak başlayın:
 
@@ -57,7 +59,7 @@ Bu örnek, eklenti Oluşturucu 'yu kullanır. Eklenti Oluşturucu yeni bir proje
       </ExtensionModel>
    ```
 
-8. Şimdi metin düzenleyicisine tarih ve saat eklemeyi işleyecek dosyaları ayarlamanız gerekir. Proje düğümüne sağ tıklayın ve yeni bir dosya ekleyin. **Genel > boş sınıfı** ' nı seçin ve yeni dosya *ınsertdatehandler*olarak adlandırın:
+8. Şimdi metin düzenleyicisine tarih ve saat eklemeyi işleyecek dosyaları ayarlamanız gerekir. Proje düğümünde Right-Click ve yeni bir dosya ekleyin. **Genel > boş sınıfı** ' nı seçin ve yeni dosya *ınsertdatehandler* olarak adlandırın:
 
    ![Tarih Işleyicisi Ekle](media/extending-visual-studio-mac-addin9.png)
 
@@ -88,7 +90,7 @@ Bu örnek, eklenti Oluşturucu 'yu kullanır. Eklenti Oluşturucu yeni bir proje
 
    Bu iki yer tutucu yöntemini daha sonra genişleteceğiz.
 
-10. **Dateınserter** projesine sağ tıklayın ve **> yeni dosya Ekle**' yi seçin. **Genel > boş sabit listesi**' ni seçin ve ardından yeni dosya *Dateınsertercommands*olarak adlandırın:
+10. **Dateınserter** projesine sağ tıklayın ve **> yeni dosya Ekle**' yi seçin. **Genel > boş sabit listesi**' ni seçin ve ardından yeni dosya *Dateınsertercommands* olarak adlandırın:
 
     ![Dateınsertercommands](media/extending-visual-studio-mac-addin10.png)
 
@@ -106,7 +108,7 @@ Bu örnek, eklenti Oluşturucu 'yu kullanır. Eklenti Oluşturucu yeni bir proje
     }
     ```
 
-12. Bu noktada, bir çalışma uzantısı paketiniz olmalıdır. İşinizi kaydederek ve uygulamayı çalıştırarak test edebilirsiniz. IDE yeni uzantı paketi yüklüyken Mac için Visual Studio yeni bir örneğini başlatır. **Düzenleme menüsüne**gittiğinizde, Mac için Visual Studio aşağıdaki ekran görüntüsünde gösterildiği gibi **ekleme tarihi**adlı yeni bir seçeneğe sahip olduğunu görürsünüz:
+12. Bu noktada, bir çalışma uzantısı paketiniz olmalıdır. İşinizi kaydederek ve uygulamayı çalıştırarak test edebilirsiniz. IDE yeni uzantı paketi yüklüyken Mac için Visual Studio yeni bir örneğini başlatır. **Düzenleme menüsüne** gittiğinizde, Mac için Visual Studio aşağıdaki ekran görüntüsünde gösterildiği gibi **ekleme tarihi** adlı yeni bir seçeneğe sahip olduğunu görürsünüz:
 
     ![Tarih Ekle komutu](media/extending-visual-studio-mac-addin11.png)
 

@@ -1,5 +1,7 @@
 ---
 title: Kaynak denetimi VSPackage tasarım öğeleri | Microsoft Docs
+description: Kaynak denetimi VSPackage 'ın uygulamanız gereken yapı ve kaynak denetimi VSPackage 'in uygulayamayacağı arabirimler ve hizmetler hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b5e94829f781c058d9b0ea56cdec6c03c71ffe0c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e586470208989dce070c92963fc215f1053559a4
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705005"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877656"
 ---
 # <a name="source-control-vspackage-design-elements"></a>Kaynak Denetimi VSPackage’ı Tasarım Öğeleri
 Bu bölümdeki konular, VSPackage kaynak denetiminin derin tümleştirme için uygulanması gereken yapıyı özetler. Ayrıca, kaynak denetimi VSPackage 'ın uygulayamayacağı arabirimleri ve hizmetleri ve kaynak denetimi VSPackage 'un [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kaynak denetimi modelini ve işlevselliğini desteklemek için diğer bileşenlerden kullanabileceği arabirim ve hizmetleri de listeler.

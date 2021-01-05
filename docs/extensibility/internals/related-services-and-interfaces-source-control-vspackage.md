@@ -1,6 +1,7 @@
 ---
 title: İlgili Hizmetler ve Arabirimler (Kaynak Denetimi VSPackage’ı)
 titleSuffix: ''
+description: Visual Studio SDK içindeki kaynak denetimi VSPackage ile ilgili arabirimler hakkında bilgi edinin. Paket bazı arabirimleri uygular ve kaynak denetimi için diğerlerini kullanır.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -13,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: af08c8e0ea15751f5d8e6c0a1a01549fdb9227c3
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: af5c971b804e1c288bf710f6627c0e769e790ee1
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90034800"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876356"
 ---
 # <a name="related-services-and-interfaces-source-control-vspackage"></a>İlgili Hizmetler ve Arabirimler (Kaynak Denetimi VSPackage’ı)
 
@@ -53,8 +54,8 @@ Bu bölümde, içindeki tüm kaynak denetimi VSPackage ile ilgili arabirimlerin 
 | <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccEnlistmentPathTranslation> | Bu arabirim, Web projeleri için kayıt yönetimi desteği sağlar. | Kaynak denetimi VSPackage | Önerilen |
 | <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccManagerTooltip> | Bu arabirim, projelerdeki kaynak denetimli dosyalar için araç Ipuçlarını almak için kullanılır. | Kaynak denetimi VSPackage | İsteğe Bağlı |
 | <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccOpenFromSourceControl> | Bu arabirim, ad alanı uzantısı desteği sağlar. | Kaynak denetimi VSPackage | İsteğe Bağlı |
-| <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccControlNewSolution> | VSPackage, bir ad alanı uzantısını **Yeni**, **Aç**veya **Kaydet** iletişim kutularıyla bütünleştirmek için bu arabirimi kullanır. Sonuç olarak, projeler oluşturma sırasında kaynak denetimine otomatik olarak eklenebilir veya bir Kaydet işlemi etkin olduğunda kaynak denetimine eklenebilir. | Kaynak denetimi VSPackage | İsteğe Bağlı |
-| <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccGlyphs> | VSPackage, **Çözüm Gezgini**içindeki düğümler için kaynak denetim glifleri olarak ek Glifler tanımlamak üzere bu arabirimi kullanır. | Kaynak denetimi VSPackage | İsteğe Bağlı |
+| <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccControlNewSolution> | VSPackage, bir ad alanı uzantısını **Yeni**, **Aç** veya **Kaydet** iletişim kutularıyla bütünleştirmek için bu arabirimi kullanır. Sonuç olarak, projeler oluşturma sırasında kaynak denetimine otomatik olarak eklenebilir veya bir Kaydet işlemi etkin olduğunda kaynak denetimine eklenebilir. | Kaynak denetimi VSPackage | İsteğe Bağlı |
+| <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccGlyphs> | VSPackage, **Çözüm Gezgini** içindeki düğümler için kaynak denetim glifleri olarak ek Glifler tanımlamak üzere bu arabirimi kullanır. | Kaynak denetimi VSPackage | İsteğe Bağlı |
 | <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccAddWebProjectFromSourceControl> | Web projeleri için **Ekle** iletişim kutusu bu arabirimi kullanır. Kaynak denetim konumuna göz atmak ve bu konumdaki kaynak denetim deposuna daha önce eklenmiş bir Web projesini açmak için yöntemler sağlar. | Kaynak denetimi VSPackage | Önerilen |
 | <xref:Microsoft.VisualStudio.Shell.Interop.IVsAsynchOpenFromScc> | Bu arabirim, kaynak denetiminden projelerin zaman uyumsuz (arka plan) yüklemesi için destek sağlar. | Kaynak denetimi VSPackage | İsteğe Bağlı |
 | <xref:Microsoft.VisualStudio.Shell.Interop.IVsAsynchOpenFromSccProjectEvents> | Bu arabirim, projelerin tarafından başlatılan zaman uyumsuz yüklemenin ilerlemesini izlemesini sağlar <xref:Microsoft.VisualStudio.Shell.Interop.IVsAsynchOpenFromScc> . | Project | İsteğe Bağlı |

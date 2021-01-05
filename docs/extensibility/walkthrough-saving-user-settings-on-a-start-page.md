@@ -1,5 +1,7 @@
 ---
 title: 'İzlenecek yol: bir başlangıç sayfasına kullanıcı ayarlarını kaydetme | Microsoft Docs'
+description: Bu yönergeyi kullanarak bir ayarı kayıt defterine kaydederek başlangıç sayfanız için Kullanıcı ayarlarını nasıl kalıcı hale getirebileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 754b9bf3-8681-4c77-b0a4-09146a4e1d2d
@@ -9,20 +11,20 @@ manager: jillfra
 ms.workload:
 - vssdk
 monikerRange: vs-2017
-ms.openlocfilehash: 8dd20513defd1db8848cf6a80a29e04c127c9dd4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 17dfb844733a15b1607d2daa2ce24a8f6e0be420
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85903164"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876187"
 ---
 # <a name="walkthrough-save-user-settings-on-a-start-page"></a>İzlenecek yol: bir başlangıç sayfasına kullanıcı ayarlarını kaydetme
 
 Başlangıç sayfanız için Kullanıcı ayarlarını kalıcı hale getirebilirsiniz. Bu izlenecek yolu izleyerek, Kullanıcı bir düğmeye tıkladığında kayıt defterine bir ayar kaydeden ve sonra başlangıç sayfası her yüklendiğinde bu ayarı alan bir denetim oluşturabilirsiniz. Başlangıç sayfası proje şablonu özelleştirilebilir bir kullanıcı denetimi içerdiğinden ve varsayılan başlangıç sayfası XAML bu denetimi çağırırsa, başlangıç sayfasının kendisini değiştirmeniz gerekmez.
 
-Bu izlenecek yolda oluşturulan ayarlar deposu, bir <xref:Microsoft.VisualStudio.Shell.Interop.IVsWritableSettingsStore> arabirimin örneğidir ve çağrıldığında aşağıdaki kayıt defteri konumunu okur ve yazar: **Hkcu\software\microsoft\visualstudio\14.exe \\ \<CollectionName> **
+Bu izlenecek yolda oluşturulan ayarlar deposu, bir <xref:Microsoft.VisualStudio.Shell.Interop.IVsWritableSettingsStore> arabirimin örneğidir ve çağrıldığında aşağıdaki kayıt defteri konumunu okur ve yazar: **Hkcu\software\microsoft\visualstudio\14.exe \\ \<CollectionName>**
 
-Visual Studio 'nun deneysel örneğinde çalışırken, ayarlar deposu **Hkcu\software\microsoft\visualstudio\14.0Exp \\ \<CollectionName> ** ' ye okur ve yazar.
+Visual Studio 'nun deneysel örneğinde çalışırken, ayarlar deposu **Hkcu\software\microsoft\visualstudio\14.0Exp \\ \<CollectionName>** ' ye okur ve yazar.
 
 Ayarları kalıcı hale getirme hakkında daha fazla bilgi için bkz. [Kullanıcı ayarlarını ve seçeneklerini genişletme](../extensibility/extending-user-settings-and-options.md).
 
@@ -35,7 +37,7 @@ Ayarları kalıcı hale getirme hakkında daha fazla bilgi için bkz. [Kullanıc
 
 ## <a name="set-up-the-project"></a>Projeyi ayarlama
 
-1. [Özel başlangıç sayfası oluşturma](creating-a-custom-start-page.md)bölümünde açıklandığı gibi bir başlangıç sayfası projesi oluşturun. Projeyi **SaveMySettings**olarak adlandırın.
+1. [Özel başlangıç sayfası oluşturma](creating-a-custom-start-page.md)bölümünde açıklandığı gibi bir başlangıç sayfası projesi oluşturun. Projeyi **SaveMySettings** olarak adlandırın.
 
 2. **Çözüm Gezgini**' de, StartPageControl projesine aşağıdaki derleme başvurularını ekleyin:
 
@@ -59,7 +61,7 @@ Ayarları kalıcı hale getirme hakkında daha fazla bilgi için bkz. [Kullanıc
 
      Bu adım <xref:System.Windows.Controls.Border> öğeyi ve içindeki her şeyi kaldırır ve yalnızca en üst düzey <xref:System.Windows.Controls.Grid> öğeyi bırakır.
 
-6. **Araç kutusundan**bir <xref:System.Windows.Controls.StackPanel> denetimi kılavuza sürükleyin.
+6. **Araç kutusundan** bir <xref:System.Windows.Controls.StackPanel> denetimi kılavuza sürükleyin.
 
 7. Şimdi bir <xref:System.Windows.Controls.TextBlock> , a <xref:System.Windows.Controls.TextBox> ve bir düğmesini öğesine sürükleyin <xref:System.Windows.Controls.StackPanel> .
 
@@ -152,7 +154,7 @@ Ayarları kalıcı hale getirme hakkında daha fazla bilgi için bkz. [Kullanıc
 
 7. **Çözüm Gezgini**, *kaynak. Extension. valtmanifest*' i açın.
 
-8. Bildirim düzenleyicisinde, **ürün adı** ' nı ayarlarımı **Kaydet başlangıç sayfası**olarak ayarlayın.
+8. Bildirim düzenleyicisinde, **ürün adı** ' nı ayarlarımı **Kaydet başlangıç sayfası** olarak ayarlayın.
 
      Bu özellik, başlangıç sayfasının adını **Seçenekler** Iletişim kutusundaki **Başlangıç sayfası Özelleştir** listesinde görünecek şekilde ayarlar.
 
@@ -160,7 +162,7 @@ Ayarları kalıcı hale getirme hakkında daha fazla bilgi için bkz. [Kullanıc
 
 ## <a name="test-the-control"></a>Denetimi test etme
 
-1. **F5**tuşuna basın.
+1. **F5** tuşuna basın.
 
      Visual Studio 'nun deneysel örneği açılır.
 
@@ -174,7 +176,7 @@ Ayarları kalıcı hale getirme hakkında daha fazla bilgi için bkz. [Kullanıc
 
 5. Başlangıç sayfasında, **MyControl** sekmesine tıklayın.
 
-6. Metin kutusuna **Cat**yazın ve sonra **ayarımı kaydet**' e tıklayın.
+6. Metin kutusuna **Cat** yazın ve sonra **ayarımı kaydet**' e tıklayın.
 
 7. Başlangıç sayfasını kapatın ve yeniden açın.
 

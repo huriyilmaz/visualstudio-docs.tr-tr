@@ -1,5 +1,7 @@
 ---
 title: Hizmet temelleri | Microsoft Docs
+description: Başka bir VSPackage 'ın tüketmesi için arabirimler olan hizmetler hakkında bilgi edinin. VSPackage içindeki hizmetler, yerleşik veya diğer hizmetleri geçersiz kılabilir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0e2947cb4cd6a347d8e010340f8689eb1907a28a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 54d785d665122fd5c5fa1709aa9348777e3c730b
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705495"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875810"
 ---
 # <a name="service-essentials"></a>Hizmet Temel Bileşenleri
 Hizmet iki VSPackages arasında bir sözleşmedir. Bir VSPackage, başka bir VSPackage kullanması için belirli bir arabirim kümesi sağlar. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , diğer VSPackages 'e hizmet sağlayan VSPackages koleksiyonudur.

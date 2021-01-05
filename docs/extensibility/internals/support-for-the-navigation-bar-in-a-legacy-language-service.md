@@ -1,5 +1,6 @@
 ---
 title: Eski dil hizmetinde gezinti çubuğunu destekleme
+description: Eski dil hizmetinde gezinti çubuğunu desteklemeyi öğrenin. Düzenleyici görünümündeki gezinti çubuğu, dosyadaki türleri ve üyeleri görüntüler.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0011e9dac5438715571d1df76ba379fb9ed122df
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 325789c3b7210c87d5c1b0414434af27c266c31c
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036567"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876551"
 ---
 # <a name="support-for-the-navigation-bar-in-a-legacy-language-service"></a>Eski Dil Hizmetinde Gezinti Çubuğu için Destek
 Düzenleyici görünümünün en üstündeki gezinti çubuğu, dosyadaki türleri ve üyeleri görüntüler. Türler sol açılır kutuda gösterilir ve Üyeler sağ tarafta gösterilir. Kullanıcı bir tür seçtiğinde, giriş işareti, türün ilk satırına yerleştirilir. Kullanıcı bir üye seçtiğinde, giriş işareti üyenin tanımına yerleştirilir. Açılan kutular, giriş işaretinin geçerli konumunu yansıtacak şekilde güncelleştirilir.

@@ -1,5 +1,7 @@
 ---
 title: Kullanıcı ayarları desteği | Microsoft Docs
+description: Visual Studio SDK 'daki ayarlar API 'Lerini kullanarak ayarlar kategorilerinin kalıcılığını nasıl etkinleştireceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 02bb2450196de76917e9cffc2f5f5acc6c8ee7b7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b9f6ee52e9ba87eb2f570a6e388dc98c050989c9
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80704784"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876542"
 ---
 # <a name="support-for-user-settings"></a>Kullanıcı Ayarları için Destek
 VSPackage, bir Kullanıcı **Araçlar** menüsündeki **Içeri/dışarı aktarma ayarlarını** seçtiğinde devam eden durum değişkenlerinin grupları olan bir veya daha fazla ayar kategorisi tanımlayabilir. Bu kalıcılığı etkinleştirmek için içindeki ayarlar API 'Lerini kullanın [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] .
@@ -34,7 +36,7 @@ VSPackage, bir Kullanıcı **Araçlar** menüsündeki **Içeri/dışarı aktarma
  Özel ayar noktaları, aşağıdaki konumdaki bir kayıt defteri girişinde oluşturulur: HKLM\Software\Microsoft\VisualStudio \\ *\<Version>* \UserSettings \\ `<CSPName>` , burada `<CSPName>` VSPackage 'ın desteklediği özel ayarlar noktasının adıdır ve *\<Version>* sürümüdür [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Örneğin, 8,0.
 
 > [!NOTE]
-> \\ *\<Version>* [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Tümleşik GELIŞTIRME ortamı (ıde) başlatıldığında HKEY_LOCAL_MACHINE \software\microsoft\visualstudio 'in kök yolu alternatif bir kökle geçersiz kılınabilir. Daha fazla bilgi için bkz. [komut satırı anahtarları](../../extensibility/command-line-switches-visual-studio-sdk.md).
+> \\ *\<Version>* [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Tümleşik GELIŞTIRME ortamı (ıde) başlatıldığında HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudiokök yolu alternatif bir kökle geçersiz kılınabilir. Daha fazla bilgi için bkz. [komut satırı anahtarları](../../extensibility/command-line-switches-visual-studio-sdk.md).
 
  Kayıt defteri girdisinin yapısı aşağıda gösterilmektedir:
 

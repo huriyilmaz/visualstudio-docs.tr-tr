@@ -1,5 +1,7 @@
 ---
 title: Proje ve yapılandırma özellikleri için destek | Microsoft Docs
+description: Visual Studio IDE 'de, proje ve yapılandırma genişletilmiş özelliklerini görüntüleyebilen kendi proje türü için bir özellik sayfası sağlamayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,15 +13,15 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: be9d9a6e0976ab1ff336fc6754fa44d26c031378
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: fd5f15f16894faf6d47700e34db4d99a1fa3cb5a
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012028"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97876603"
 ---
 # <a name="support-for-project-and-configuration-properties"></a>Proje ve Yapılandırma Özellikleri için Destek
-**Properties** [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Tümleşik GELIŞTIRME ortamındaki (IDE) Özellikler penceresi, proje ve yapılandırma özelliklerini görüntüleyebilir. Kullanıcının uygulamanızın özelliklerini ayarlayabilmesi için kendi proje türüne yönelik bir özellik sayfası sağlayabilirsiniz.
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Tümleşik GELIŞTIRME ortamındaki (IDE) Özellikler penceresi, proje ve yapılandırma özelliklerini görüntüleyebilir. Kullanıcının uygulamanızın özelliklerini ayarlayabilmesi için kendi proje türüne yönelik bir özellik sayfası sağlayabilirsiniz.
 
  **Çözüm Gezgini** ' de bir proje düğümü seçip **Proje** menüsünde **Özellikler** ' e tıklayarak, proje ve yapılandırma özelliklerini içeren bir iletişim kutusu açabilirsiniz. [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]Ve içinde [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] ve bu dillerden türetilmiş proje türlerinde, bu Iletişim kutusu [Genel, ortam, Seçenekler iletişim kutusunda](../../ide/reference/general-environment-options-dialog-box.md)sekmeli bir sayfa olarak görünür. Daha fazla bilgi için bkz. [derlemede değil: Izlenecek yol: proje ve yapılandırma özelliklerini gösterme (C#)](/previous-versions/bb166517(v=vs.100)).
 
@@ -75,7 +77,7 @@ ms.locfileid: "90012028"
 
  Özniteliğin eklendiği VSPackage önemli değildir. Bir VSPackage ile kaydettirilirse [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , oluşturulabilecek herhangi bir nesnenin sınıf kimliği (CLSID), bir çağrısının oluşturulabilmesi için kaydedilir <xref:Microsoft.VisualStudio.Shell.Interop.ILocalRegistry.CreateInstance%2A> .
 
- Oluşturulabilen bir nesnenin kayıt defteri yolu <xref:Microsoft.VisualStudio.Shell.Package.UserRegistryRoot%2A> ,, sözcük, CLSID ve nesne türünün GUID 'si birleştirilerek belirlenir. `MyProjectPropertyPage`Sınıfında {3c693da2-5bca-49B3-bd95-ffe0a39dd723} GUID 'si varsa ve UserRegistryRoot HKEY_CURRENT_USER \Software\Microsoft\VisualStudio\8.0Exp ise, ardından kayıt defteri yolu HKEY_CURRENT_USER \Software\microsoft\visualstudio\8.0exp\clsıd \\ {3c693da2-5bca-49B3-bd95-ffe0a39dd723} olur.
+ Oluşturulabilen bir nesnenin kayıt defteri yolu <xref:Microsoft.VisualStudio.Shell.Package.UserRegistryRoot%2A> ,, sözcük, CLSID ve nesne türünün GUID 'si birleştirilerek belirlenir. `MyProjectPropertyPage`Sınıfında {3c693da2-5bca-49B3-bd95-ffe0a39dd723} ve UserRegistryRoot HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0Exp bir GUID varsa, kayıt defteri yolu HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0Exp\CLSID\\ {3c693da2-5bca-49B3-bd95-ffe0a39dd723} olur.
 
 ## <a name="project-and-configuration-property-attributes-and-layout"></a>Proje ve yapılandırma özelliği öznitelikleri ve düzeni
  <xref:System.ComponentModel.CategoryAttribute>, <xref:System.ComponentModel.DisplayNameAttribute> Ve öznitelikleri, <xref:System.ComponentModel.DescriptionAttribute> bir genel özellik sayfasında proje ve yapılandırma özelliklerinin yerleşimini, etiketlenmesini ve açıklamasını tespit ediyor. Bu öznitelikler, sırasıyla bu seçeneğin kategorisini, görünen adını ve açıklamasını tespit edin.
@@ -88,7 +90,7 @@ ms.locfileid: "90012028"
  [!code-vb[VSSDKSupportProjectConfigurationProperties#2](../../extensibility/internals/codesnippet/VisualBasic/support-for-project-and-configuration-properties_2.vb)]
  [!code-csharp[VSSDKSupportProjectConfigurationProperties#2](../../extensibility/internals/codesnippet/CSharp/support-for-project-and-configuration-properties_2.cs)]
 
- `MyConfigProp`Yapılandırma özelliği, yapılandırma özelliği sayfasında, kategorisinde, **My My** **config özelliği** olarak görünür. Seçenek **belirlenmişse açıklama panelinde**açıklama açıklaması görüntülenir.
+ `MyConfigProp`Yapılandırma özelliği, yapılandırma özelliği sayfasında, kategorisinde, **My My** **config özelliği** olarak görünür. Seçenek **belirlenmişse açıklama panelinde** açıklama açıklaması görüntülenir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Özellik Sayfaları Ekleme ve Kaldırma](../../extensibility/adding-and-removing-property-pages.md)

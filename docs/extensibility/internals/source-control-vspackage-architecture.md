@@ -1,5 +1,7 @@
 ---
 title: Kaynak denetimi VSPackage mimarisi | Microsoft Docs
+description: Kaynak denetimi hizmeti olarak Visual Studio işlevselliği sağlayan bir VSPackage olan kaynak denetimi paketinin mimarisi hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,19 +12,19 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d6e62aa9e2d725e982f0605e2721f0bfeb3cc5ee
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c03482ff489c356ddcbe28ccc26c69c5936be6c5
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705078"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877682"
 ---
 # <a name="source-control-vspackage-architecture"></a>Kaynak Denetimi VSPackage’ı Mimarisi
 Kaynak denetimi paketi, IDE 'nin sağladığı Hizmetleri kullanan bir VSPackage [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Sonuç olarak, kaynak denetimi paketi işlevlerini kaynak denetimi hizmeti olarak sağlar. Ayrıca, kaynak denetimi paketi, kaynak denetimi ile tümleştirme için bir kaynak denetimi eklentisinin daha çok yönlü bir alternatifidir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
 
  Katı bir sözleşmeye göre kaynak denetimi eklentisi API 'leri uygulayan bir kaynak denetimi eklentisi. Örneğin, bir eklenti varsayılan [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Kullanıcı arabirimini (UI) değiştirmez. Üstelik, kaynak denetimi eklentisi API 'SI, bir eklentinin kendi kaynak denetim modelini uygulamasına izin vermez. Ancak, bir kaynak denetimi paketi, bu sınırlamaların her ikisini de içerir. Bir kaynak denetimi paketi, bir kullanıcının kaynak denetimi deneyimi üzerinde tam denetime sahiptir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Ayrıca, bir kaynak denetimi paketi kendi kaynak denetim modelini ve mantığını kullanabilir ve kaynak denetimi ile ilgili tüm kullanıcı arabirimlerini tanımlayabilir.
 
-## <a name="source-control-package-components"></a>Kaynak denetimi paket bileşenleri
+## <a name="source-control-package-components"></a>Paket bileşenlerini Source-Control
  Mimari diyagramında gösterildiği gibi, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kaynak denetimi saplaması adlı bir bileşen, ile bir kaynak denetimi paketini tümleştiren bir VSPackage ' dır [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
 
  Kaynak denetimi saplaması aşağıdaki görevleri gerçekleştirir.
@@ -37,7 +39,7 @@ Kaynak denetimi paketi, IDE 'nin sağladığı Hizmetleri kullanan bir VSPackage
 
   Kaynak denetim bağdaştırıcısı paketi, sağlayan özel bir kaynak denetimi paketidir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Bu paket, kaynak denetimi eklentisi API 'sine bağlı olarak kaynak denetimi eklentilerini desteklemek için merkezi bileşendir. Bir kaynak denetimi eklentisi etkin eklentidir, kaynak denetimi saplaması, olaylarını kaynak denetimi bağdaştırıcı paketine gönderir. Kaynak denetim bağdaştırıcısı paketi, kaynak denetimi eklentisi API 'sini kullanarak kaynak denetim eklentisi ile iletişim kurar ve ayrıca tüm kaynak denetimi eklentileri için ortak olan varsayılan bir kullanıcı arabirimi sağlar.
 
-  Kaynak denetimi paketi etkin paket olduğunda, diğer yandan kaynak denetimi saplaması, kaynak denetimi paket arabirimlerini kullanarak doğrudan paketiyle iletişim kurar [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] . Kaynak denetimi paketi kendi kaynak denetimi kullanıcı arabirimini barındırmaktan sorumludur.
+  Kaynak denetimi paketi etkin paket olduğunda, diğer yandan kaynak denetimi saplaması, Source-Control paketi arabirimlerini kullanarak doğrudan paketle iletişim kurar [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] . Kaynak denetimi paketi kendi kaynak denetimi kullanıcı arabirimini barındırmaktan sorumludur.
 
   ![Kaynak Denetim Mimarisi grafiği](../../extensibility/internals/media/vsipsccarch.gif "VSIPSCCArch")
 

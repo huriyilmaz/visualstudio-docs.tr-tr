@@ -1,5 +1,7 @@
 ---
 title: 'İzlenecek yol: kod parçacıklarını uygulama | Microsoft Docs'
+description: Kod parçacıkları oluşturabilir ve bunları bir düzenleyici uzantısına dahil edebilirsiniz. Bu yönergeyi kullanarak kod parçacıkları oluşturmayı/kaydetmeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: adbc5382-d170-441c-9fd0-80faa1816478
@@ -11,17 +13,17 @@ dev_langs:
 - VB
 ms.workload:
 - vssdk
-ms.openlocfilehash: e06e97acc77b4701e02b0ca54de589830a768669
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5a36590c0e56f1e1a2c01f8e084f0b95442607a5
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904708"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877123"
 ---
 # <a name="walkthrough-implement-code-snippets"></a>İzlenecek yol: kod parçacıklarını uygulama
 Kod parçacıkları oluşturabilir ve bunları bir düzenleyici uzantısına ekleyerek uzantı kullanıcılarının bunları kendi koduna ekleyebilmesini sağlayabilirsiniz.
 
- Kod parçacığı, bir kod parçası veya bir dosyaya dahil edilebilir başka bir metindir. Belirli programlama dilleri için kaydedilmiş tüm kod parçacıklarını görüntülemek için, **Araçlar** menüsünde **kod parçacığı Yöneticisi**' ne tıklayın. Bir dosyaya kod parçacığı eklemek için, kod parçacığını istediğiniz yere sağ tıklayın, kod parçacığı Ekle ' ye tıklayın veya **Ile çevreleyin**, istediğiniz kod parçacığını bulun ve ardından çift tıklayın. Kod **Tab** **Shift** + parçacığının ilgili bölümlerini değiştirmek için Tab veya SHIFT**Tab** tuşlarına basın ve ardından kabul etmek için **ENTER** veya **ESC** tuşuna basın. Daha fazla bilgi için bkz. [kod parçacıkları](../ide/code-snippets.md).
+ Kod parçacığı, bir kod parçası veya bir dosyaya dahil edilebilir başka bir metindir. Belirli programlama dilleri için kaydedilmiş tüm kod parçacıklarını görüntülemek için, **Araçlar** menüsünde **kod parçacığı Yöneticisi**' ne tıklayın. Bir dosyaya kod parçacığı eklemek için, kod parçacığını istediğiniz yere sağ tıklayın, kod parçacığı Ekle ' ye tıklayın veya **Ile çevreleyin**, istediğiniz kod parçacığını bulun ve ardından çift tıklayın. Kod   + parçacığının ilgili bölümlerini değiştirmek için Tab veya SHIFT **Tab** tuşlarına basın ve ardından kabul etmek için **ENTER** veya **ESC** tuşuna basın. Daha fazla bilgi için bkz. [kod parçacıkları](../ide/code-snippets.md).
 
  Kod parçacığı,. parçacığının * dosya adı uzantısına sahip bir XML dosyasında bulunur. Bir kod parçacığı, kullanıcının onları bulabileceği ve değiştirebilmeleri için kod parçacığı eklendikten sonra vurgulanan alanları içerebilir. Kod parçacığı oluşturma dosyası aynı zamanda **kod parçacığı Yöneticisi** için bilgi sağlar, böylece kod parçacığı adı doğru kategoride de görüntülenebilir. Kod parçacığı şeması hakkında daha fazla bilgi için bkz. [kod parçacıkları şema başvurusu](../ide/code-snippets-schema-reference.md).
 
@@ -49,7 +51,7 @@ Kod parçacıkları oluşturabilir ve bunları bir düzenleyici uzantısına ekl
 
     Burada *% InstallDir%* , Visual Studio yükleme klasörüdür. (Bu yol genellikle kod parçacıklarını yüklemek için kullanılsa da, herhangi bir yol belirtebilirsiniz.)
 
-2. \ 1033 \ klasöründe bir *. xml* dosyası oluşturun ve **TestSnippets.xml**adlandırın. (Bu ad genellikle bir kod parçacığı Dizin dosyası için kullanılsa da, bir *. xml* dosya adı uzantısına sahip olduğu sürece herhangi bir ad belirtebilirsiniz.) Aşağıdaki metni ekleyin ve ardından yer tutucu GUID 'INI silin ve kendinizinkini ekleyin.
+2. \ 1033 \ klasöründe bir *. xml* dosyası oluşturun ve **TestSnippets.xml** adlandırın. (Bu ad genellikle bir kod parçacığı Dizin dosyası için kullanılsa da, bir *. xml* dosya adı uzantısına sahip olduğu sürece herhangi bir ad belirtebilirsiniz.) Aşağıdaki metni ekleyin ve ardından yer tutucu GUID 'INI silin ve kendinizinkini ekleyin.
 
    ```xml
    <?xml version="1.0" encoding="utf-8" ?>
@@ -126,7 +128,7 @@ Kod parçacıkları oluşturabilir ve bunları bir düzenleyici uzantısına ekl
 
 4. **Varlıklar** sekmesinin **VSPackage** içerik türünü içerdiğinden ve bu **projenin** projenin adına ayarlandığından emin olun.
 
-5. CompletionTest projesini seçin Özellikler penceresi set **Generate pkgdef dosyasını** **true**olarak ayarlayın. Projeyi kaydedin.
+5. CompletionTest projesini seçin Özellikler penceresi set **Generate pkgdef dosyasını** **true** olarak ayarlayın. Projeyi kaydedin.
 
 6. Projeye statik bir `SnippetUtilities` sınıf ekleyin.
 
@@ -160,7 +162,7 @@ Kod parçacıkları oluşturabilir ve bunları bir düzenleyici uzantısına ekl
 2. Projeyi derleyin ve çalıştırın. Deneysel örnekte, *. zzz* dosya adı uzantısına sahip bir dosya açın ve ardından içinde herhangi bir yere sağ tıklayın. **Kod parçacığı Ekle** komutu, kısayol menüsünde görünmelidir.
 
 ## <a name="implement-snippet-expansion-in-the-snippet-picker-ui"></a>Kod parçacığı seçici Kullanıcı arabiriminde kod parçacığı genişletmeyi Uygula
- Bu bölümde, kısayol menüsünde kod **parçacığı Ekle** tıklandığında Parçacık Seçici Kullanıcı arabiriminin görüntülenmesi için kod parçacığı genişletmesinin nasıl uygulanacağı gösterilmektedir. Bir Kullanıcı kod parçacığı kısayolunu yazdığında ve sonra **sekme**tuşuna bastığında bir kod parçacığı de genişletilir.
+ Bu bölümde, kısayol menüsünde kod **parçacığı Ekle** tıklandığında Parçacık Seçici Kullanıcı arabiriminin görüntülenmesi için kod parçacığı genişletmesinin nasıl uygulanacağı gösterilmektedir. Bir Kullanıcı kod parçacığı kısayolunu yazdığında ve sonra **sekme** tuşuna bastığında bir kod parçacığı de genişletilir.
 
  Kod parçacığı seçici Kullanıcı arabirimini göstermek ve gezinti ve ekleme sonrası kod parçacığı kabulünü etkinleştirmek için <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> yöntemini kullanın. Ekleme yöntemi tarafından işlenir <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionClient.OnItemChosen%2A> .
 
@@ -203,7 +205,7 @@ Kod parçacıkları oluşturabilir ve bunları bir düzenleyici uzantısına ekl
      [!code-csharp[VSSDKCompletionTest#32](../extensibility/codesnippet/CSharp/walkthrough-implementing-code-snippets_11.cs)]
      [!code-vb[VSSDKCompletionTest#32](../extensibility/codesnippet/VisualBasic/walkthrough-implementing-code-snippets_11.vb)]
 
-8. Kullanıcı ilgili kısayolu yazdığında ve sonra **sekme**tuşuna bastığında kod parçacığını eklemek için yöntemine kod ekleyin <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> . Parçacığı ekleyen özel yöntem sonraki bir adımda gösterilir. Önceki adımda eklediğiniz gezinti kodundan sonra aşağıdaki kodu ekleyin.
+8. Kullanıcı ilgili kısayolu yazdığında ve sonra **sekme** tuşuna bastığında kod parçacığını eklemek için yöntemine kod ekleyin <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> . Parçacığı ekleyen özel yöntem sonraki bir adımda gösterilir. Önceki adımda eklediğiniz gezinti kodundan sonra aşağıdaki kodu ekleyin.
 
      [!code-csharp[VSSDKCompletionTest#33](../extensibility/codesnippet/CSharp/walkthrough-implementing-code-snippets_12.cs)]
      [!code-vb[VSSDKCompletionTest#33](../extensibility/codesnippet/VisualBasic/walkthrough-implementing-code-snippets_12.vb)]
@@ -232,7 +234,7 @@ Kod parçacıkları oluşturabilir ve bunları bir düzenleyici uzantısına ekl
 
 3. Metinde bir yere sağ tıklayın ve **kod parçacığı Ekle**' ye tıklayın.
 
-4. Kod parçacığı seçici Kullanıcı arabirimi, **Test değiştirme alanlarını**belirten bir açılır pencere ile görüntülenmelidir. Açılır pencerede çift tıklayın.
+4. Kod parçacığı seçici Kullanıcı arabirimi, **Test değiştirme alanlarını** belirten bir açılır pencere ile görüntülenmelidir. Açılır pencerede çift tıklayın.
 
      Aşağıdaki kod parçacığı eklenmelidir.
 
@@ -241,12 +243,12 @@ Kod parçacıkları oluşturabilir ve bunları bir düzenleyici uzantısına ekl
     MessageBox.Show("second");
     ```
 
-     **ENTER** veya **ESC**tuşuna basmayın.
+     **ENTER** veya **ESC** tuşuna basmayın.
 
-5. " **Tab** **Shift** + First" ve "Second" arasında geçiş yapmak için Tab ve Shift**Tab** tuşlarına basın.
+5. "   + First" ve "Second" arasında geçiş yapmak için Tab ve Shift **Tab** tuşlarına basın.
 
-6. **ENTER** veya **ESC**tuşuna basarak ekleme işlemini kabul edin.
+6. **ENTER** veya **ESC** tuşuna basarak ekleme işlemini kabul edin.
 
-7. Metnin farklı bir bölümünde "test" yazın ve ardından **sekme**tuşuna basın. "Test" kod parçacığı kısayolu olduğundan, kod parçacığı yeniden eklenmelidir.
+7. Metnin farklı bir bölümünde "test" yazın ve ardından **sekme** tuşuna basın. "Test" kod parçacığı kısayolu olduğundan, kod parçacığı yeniden eklenmelidir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
