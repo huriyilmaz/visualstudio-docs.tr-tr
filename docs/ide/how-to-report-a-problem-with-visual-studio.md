@@ -9,12 +9,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5c6c09bbf74cca803156842d185b5bf86ff52439
-ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
+ms.openlocfilehash: a6f0d126853c518692725d495586b3adfa57c9aa
+ms.sourcegitcommit: 3c571f44bfd6402efea5187af43df287bac5b6ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97668826"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97761361"
 ---
 # <a name="how-to-report-a-problem-with-visual-studio-or-visual-studio-installer"></a>Visual Studio veya Visual Studio Yükleyicisi ilgili bir sorunu bildirme
 
@@ -24,8 +24,9 @@ ms.locfileid: "97668826"
 Visual Studio 'dan veya yükleyicisinden bir sorun rapor edebilirsiniz. Yerleşik geri bildirim aracı, Visual Studio ekiplerinin sorunları tanılamanıza ve düzeltmesine yardımcı olan tanılama bilgilerini kolayca eklemenize olanak tanır. Sorun bildirme adımları aşağıda verilmiştir.
 
 1. **Visual Studio 'da** sağ üst köşedeki geri bildirim simgesini seçin ve sorun bildir ' i seçin. Ayrıca, geri bildirim **aracına menü aracılığıyla** da erişebilirsiniz  >  .**geri bildirim gönder**  >  **sorun bildir**.
-![Visual Studio Geliştirici topluluğu 'nda sorun raporu oluşturma ](media/feedback-button.png) , Visual Studio 'yu yükleyemezseniz **Visual Studio yükleyicisi** bir sorun bildirin veya Visual Studio içindeki geri bildirim aracına erişemedik.  Yükleyicide, sağ üst köşedeki geri bildirim simgesini seçin ve sorun bildir ' i seçin.
-![Yükleyicide Visual Studio Geliştirici topluluğu 'nda bir sorun açılır penceresi bildirin](media/installer.png)
+![Visual Studio penceresinin sağ üst köşesinde bulunan geri bildirim simgesini gösteren ekran görüntüsü ve bağlam menüsünde bir sorun raporu seçili.](media/feedback-button.png)
+Alternatif olarak, Visual Studio 'Yu yükleyemezseniz **Visual Studio yükleyicisi** bir sorun bildirin veya Visual Studio içindeki geri bildirim aracına erişemedik.  Yükleyicide, sağ üst köşedeki geri bildirim simgesini seçin ve sorun bildir ' i seçin.
+![Visual Studio Yükleyicisi sağ üst köşesinde bulunan geri bildirim simgesini gösteren ekran görüntüsü ve bağlam menüsünde bir sorun raporu seçili.](media/installer.png)
 
 1. **Sorun bildir** ' e tıkladığınızda varsayılan tarayıcınız açılır ve Visual Studio 'da oturum açmak için kullandığınız hesabı kullanarak oturumunuzu açacaksınız
 
@@ -67,11 +68,11 @@ Bir sorun için önemli bilgiler eksik olduğunda, **Ihtiyaçları daha fazla bi
 
 1. Sorun raporundaki e-postadaki bağlantıyı izleyin veya **daha fazla bilgi** durumunda tüm raporları görmek için giriş sayfasına gidin.
 
-    ![Geri bildirimim](../ide/media/feedback-my-feedback.png)
+    ![Visual Studio geri bildirim penceresinin ana sayfasının ekran görüntüsü. Bir geri bildirim öğesi listelenir ve kırmızı renkte "daha fazla bilgi gerekiyor" etiketiyle işaretlenir.](../ide/media/feedback-my-feedback.png)
 
 1. Sorun raporundaki daha fazla bilgi sağla bağlantısı seçildiğinde sizi yeni bir ekrana götürür. Burada, hangi bilgileri istendiğini görebilirsiniz.
 
-   ![Microsoft 'a gönderilecek bilgi ayrıntıları](../ide/media/feedback-need-more-info.png)
+   ![Sorunu çözmek için Microsoft tarafından istenen bilgileri gösteren Visual Studio geri bildirim penceresinin ekran görüntüsü.](../ide/media/feedback-need-more-info.png)
 
 1. Açıklamalar, ekler veya kayıt adımları ekleyerek daha fazla bilgi sağlayabilirsiniz. Bu deneyim, yeni bir sorunu raporlamaya veya bir sorun üzerinde oylama yaparken ek bilgi sağlamaya benzer.
 

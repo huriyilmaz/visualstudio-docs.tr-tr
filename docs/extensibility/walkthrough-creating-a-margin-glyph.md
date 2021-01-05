@@ -1,5 +1,7 @@
 ---
 title: 'İzlenecek yol: kenar boşluğu karakteri oluşturma | Microsoft Docs'
+description: Bu kılavuzu kullanarak, özel Düzenleyici uzantıları kullanarak Düzenleyici kenar boşluklarının görünümünü nasıl özelleştireceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b94ab61f56d74537758c189adc9c104516f67f92
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d8a2ac481ebf76fc2b34be841cd20d15b97fcfa9
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905046"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863079"
 ---
 # <a name="walkthrough-create-a-margin-glyph"></a>İzlenecek yol: kenar boşluğu karakteri oluşturma
 Özel Düzenleyici uzantıları kullanarak Düzenleyici kenar boşluklarının görünümünü özelleştirebilirsiniz. Bu izlenecek yol, bir kod açıklamasında "Todo" sözcüğünün göründüğü her zaman gösterge marjına özel bir karakter koyar.
@@ -132,7 +134,7 @@ ms.locfileid: "85905046"
 
 1. Çözümü derleyin.
 
-2. **F5**tuşuna basarak projeyi çalıştırın. Visual Studio 'nun ikinci bir örneği başlar.
+2. **F5** tuşuna basarak projeyi çalıştırın. Visual Studio 'nun ikinci bir örneği başlar.
 
 3. Gösterge kenar boşluğunun göründüğünden emin olun. ( **Araçlar** menüsünde **Seçenekler**' e tıklayın. **Metin Düzenleyicisi** sayfasında **Gösterge kenar boşluğunun** seçildiğinden emin olun.)
 

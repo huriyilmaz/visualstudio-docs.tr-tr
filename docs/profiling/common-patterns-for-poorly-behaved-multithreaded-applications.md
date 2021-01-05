@@ -1,5 +1,6 @@
 ---
 title: Kötü iş parçacıklı uygulamalar için ortak desenler
+description: Visual Studio eşzamanlılık görselleştiricisi aracında bulunan, kötü davranmış çok iş parçacıklı uygulamalar için ortak desenler hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f45c22684ef737de7235caebd4ad0b1b4189155
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 36e14640da4d66134ca961607f66f6a355f6b9d9
+ms.sourcegitcommit: 105e7b5a486262bc92939980383ceee068098a11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808948"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "97815795"
 ---
 # <a name="common-patterns-for-poorly-behaved-multithreaded-applications"></a>Hatalı davranan çok iş parçacıklı uygulamalar için ortak desenler
 
@@ -27,7 +28,7 @@ Eşzamanlılık görselleştiricisi, geliştiricilerin çok iş parçacıklı bi
 
 ![Seri hale getirilmiş yürütmeye neden olan kilit çakışması](../profiling/media/lockcontention_serialized.png "LockContention_Serialized")
 
-Bazı durumlarda, çok sayıda iş parçacığı olmasına rağmen bilgisayar yeterli sayıda mantıksal çekirdeğe sahip olsa bile, paralel bir uygulama stubbornly bir şekilde yürütülmeye devam eder. İlk belirti, büyük olasılıkla bir seri uygulamadan biraz daha yavaş olan çok iş parçacıklı performanstır. Iş parçacıkları görünümünde paralel olarak çalışan birden çok iş parçacığı görmezsiniz; Bunun yerine, herhangi bir zamanda yalnızca bir iş parçacığının yürütüğünü görürsünüz. Bu noktada, bir iş parçacığında bir eşitleme segmentine tıklarsanız, engellenen iş parçacığı (çağrı yığınını engelleme) ve engelleme koşulunu kaldıran iş parçacığı (çağrı yığınının engellemesini kaldırma) için çağrı yığınını görebilirsiniz. Ayrıca, analiz ettiğiniz işlemde engellemeyi kaldırma çağrı yığını gerçekleşirse, Iş parçacığı için kullanılabilir bir bağlayıcı görüntülenir. Bu noktadan sonra, bir serileştirme nedenini daha da araştırmak için engelleme ve çağrı yığınlarını engellemeyi kaldırma ' dan kodunuza gidebilirsiniz.
+Bazı durumlarda, çok sayıda iş parçacığı olmasına rağmen bilgisayar yeterli sayıda mantıksal çekirdeğe sahip olsa bile, paralel bir uygulama stubbornly bir şekilde yürütülmeye devam eder. İlk belirti, büyük olasılıkla bir seri uygulamadan biraz daha yavaş olan çok iş parçacıklı performanstır. Iş parçacıkları görünümünde paralel olarak çalışan birden çok iş parçacığı görmezsiniz; Bunun yerine, herhangi bir zamanda yalnızca bir iş parçacığının yürütüğünü görürsünüz. Bu noktada, bir iş parçacığında bir eşitleme segmentine tıklarsanız, engellenen iş parçacığı (çağrı yığınını engelleme) ve engelleme koşulunu kaldıran iş parçacığı (çağrı yığınının engellemesini kaldırma) için çağrı yığınını görebilirsiniz. Ayrıca, analiz ettiğiniz işlemde engellemeyi kaldırma çağrı yığını gerçekleşirse, bir Thread-Ready Bağlayıcısı görüntülenir. Bu noktadan sonra, bir serileştirme nedenini daha da araştırmak için engelleme ve çağrı yığınlarını engellemeyi kaldırma ' dan kodunuza gidebilirsiniz.
 
 Aşağıdaki çizimde gösterildiği gibi eşzamanlılık görselleştiricisi de bu belirtiyi CPU kullanımı görünümünde kullanıma sunabileceğinden, burada birden çok iş parçacığı varlığına rağmen uygulama yalnızca bir mantıksal çekirdek tüketir.
 
@@ -37,17 +38,17 @@ Daha fazla bilgi için, bkz. MSDN Magazine makalesi [Iş parçacığı performan
 
 ## <a name="uneven-workload-distribution"></a>Düzensiz iş yükü dağıtımı
 
-![Düzensiz iş yükü](../profiling/media/unevenworkload_1.png "UnevenWorkLoad_1")
+![Eşzamanlılık görselleştiricisi içindeki paralel iş parçacıkları için bir iş yükü grafiğinin ekran görüntüsü. İş parçacıkları, bir merdiven adımı deseninin gösterildiği farklı zamanlarda sona erdir.](../profiling/media/unevenworkload_1.png)
 
 Bir uygulamadaki çeşitli paralel iş parçacıkları arasında düzensiz bir iş dağıtımı gerçekleştiğinde, önceki çizimde gösterildiği gibi, her bir iş parçacığının çalışmasını tamamlarsa, tipik bir merdiven adımı görüntülenir. Eşzamanlılık görselleştiricisi genellikle her bir eşzamanlı iş parçacığı için çok yakın başlangıç zamanlarını gösterir. Ancak, bu iş parçacıkları genellikle aynı anda sona ermek yerine düzensiz bir şekilde sona eriyor. Bu model, bir dizi paralel iş parçacığı arasında düzensiz bir şekilde bir dağıtım olduğunu gösterir. Bu, performansın düşmesine neden olabilir. Bu tür bir soruna en iyi yaklaşım, çalışmanın paralel iş parçacıkları arasında bölündüğü algoritmayı yeniden değerlendirmelidir.
 
 Aşağıdaki çizimde gösterildiği gibi eşzamanlılık görselleştiricisi ayrıca CPU kullanımı görünümünde bu belirtiyi CPU kullanımında aşamalı bir adım olarak kullanıma sunabilir.
 
-![Düzensiz iş yükü](../profiling/media/unevenworkload_2.png "UnevenWorkload_2")
+![Eşzamanlılık görselleştiricisi içindeki CPU kullanımı görünümünün ekran görüntüsü, CPU kullanımı grafiğinin sonunda bir merdiven adımı deseninin gösterilmesi.](../profiling/media/unevenworkload_2.png)
 
 ## <a name="oversubscription"></a>Aşırı abonelik
 
-![Aşırı abonelik](../profiling/media/oversubscription.png "Aşırı abonelik")
+![Eşzamanlılık görselleştiricisi içindeki tüm etkin iş parçacıkları için bir iş yükü grafiğinin ekran görüntüsü. Bir gösterge, yürütme ve önalım ile harcanan süreyi gösterir.](../profiling/media/oversubscription.png)
 
 Fazla abonelik durumunda, bir işlemdeki etkin iş parçacıklarının sayısı sistemdeki kullanılabilir mantıksal çekirdek sayısından daha büyük. Önceki çizimde, tüm etkin iş parçacıklarında önemli önalım bantlarla fazla abonelik sonuçları gösterilmektedir. Ayrıca, göstergede büyük bir yüzde önalım (Bu örnekte yüzde 84) harcandığını gösterir. Bu, işlemin sisteme, mantıksal çekirdek sayısından daha fazla eşzamanlı iş parçacığı yürütmesini isteyeceğini gösteriyor olabilir. Bununla birlikte, bu durum sistemdeki diğer işlemlerin bu işlem için kullanılabilir kabul edilen kaynakları kullandığını da belirtebilir.
 

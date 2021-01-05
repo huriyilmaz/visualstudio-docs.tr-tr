@@ -12,12 +12,12 @@ ms.assetid: 92dff25c-36ee-4135-acdd-315c4962fa11
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 713d711847d798c617074d2d620e09f914c1a147
-ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
+ms.openlocfilehash: 9f670c9cf543ae209ebed63ce185fadfbbe253d0
+ms.sourcegitcommit: 105e7b5a486262bc92939980383ceee068098a11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96190245"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "97815730"
 ---
 # <a name="fix-non-detectable-dynamic-parameters-in-a-web-performance-test"></a>Web performans testindeki dinamik parametreleri algılayamama sorununu çözme
 
@@ -124,7 +124,7 @@ Hem algılanabilir hem de algılanamaz dinamik bir parametreyi göstermek için,
 
      ![QueryString. aspx üzerinde başlangıç sayfasını ayarla](../test/media/web_test_dynamicparameter_setstartpage.png)
 
-15. **Ctrl** + Tarayıcıda Web uygulamasını çalıştırmak için CTRL **F5** tuşuna basın. URL'yi kopyalayın. Testinizi kaydettiğinizde buna ihtiyaç duyarsınız.
+15.  + Tarayıcıda Web uygulamasını çalıştırmak için CTRL **F5** tuşuna basın. URL'yi kopyalayın. Testinizi kaydettiğinizde buna ihtiyaç duyarsınız.
 
 16. Her iki bağlantıyı da deneyin. Her biri "başarılı" iletisini görüntülemelidir. Dinamik QueryString parametresi bulundu. "
 
@@ -190,13 +190,13 @@ Hem algılanabilir hem de algılanamaz dinamik bir parametreyi göstermek için,
 
 3. Web performans Test Sonuçları görüntüleyicisine dönün ve başarısız olan *JScriptQuery. aspx* sayfasını seçin. Ardından, istek sekmesini seçin, ham verileri göster onay kutusunun işaretli olduğunu doğrulayın, aşağı kaydırın ve CustomQueryString üzerinde hızlı bul ' u seçin.
 
-     ![Dinamik parametreyi yalıtmak için hızlı bul kullanın](../test/media/web_test_dynamicparameter_runresultsquckfind.png)
+     ![Web performans metin sonuçları görüntüleyicisinde Istek sekmesinin ekran görüntüsü. Bir QueryString parametresi seçilir ve hızlı bul bir bağlam menüsünde vurgulanır.](../test/media/web_test_dynamicparameter_runresultsquckfind.png)
 
 4. Test düzenleyicisine bakmadan, *JScriptQuery. aspx* Isteğinin CustomQueryString değerine bir değer atandığını `jScriptQueryString___1v0yhyiyr0raa2w4j4pwf5zl` ve şüphelenilen dinamik bölümün "1v0yhyiyr0ka2w4j4pwf5zl" olduğunu biliyoruz. Aranan açılan listesinde, arama dizesinin şüpheli kısmını kaldırın. Dize "CustomQueryString = jScriptQueryString___" olmalıdır.
 
      Dinamik parametrelere, hataya sahip istekten önce gelen isteklerden birindeki değerler atanır. Bu nedenle, ara onay kutusunu seçin ve istek panelinde *QueryString. aspx* için önceki isteği görene kadar Sonrakini Bul ' u seçin. Sonraki üç kez bul seçeneğini belirledikten sonra bu durum gerçekleşmelidir.
 
-     ![Dinamik parametreyi yalıtmak için hızlı bul kullanın](../test/media/web_test_dynamicparameter_runresultsquckfind4.png)
+     ![Web performans metin sonuçları görüntüleyicisinde ekran görüntüsü. Bir sorgu dizesi seçilidir ve bir bul iletişim kutusu, SearchUp ve Sonrakini Bul seçiliyken gösterilir.](../test/media/web_test_dynamicparameter_runresultsquckfind4.png)
 
      Yanıt sekmesinde ve aşağıda gösterildiği gibi daha önce uygulanan JavaScript 'de gösterildiği gibi, CustomQueryString sorgu dizesi parametresi bir "jScriptQueryString___" değeri atanır ve aynı zamanda var SessionID 'den döndürülen değerle birleştirilir.
 

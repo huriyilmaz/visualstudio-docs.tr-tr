@@ -1,5 +1,5 @@
 ---
-title: Birim Testi
+title: Birim test araçları & görevleri
 description: Geliştiricilere ve test edicilere kodunuzda mantık hataları aramak için hızlı bir yol sağlamak üzere kullanabileceğiniz birim testi araçları hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 8f48a50b39c04df9abab7c11b3b85cc0d2670025
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+ms.openlocfilehash: ba3db5b74a415d3736c37f54fdb708fde3436d92
+ms.sourcegitcommit: 4e28314dc2be59b4c5fd44545c0653f625e74489
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96330140"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97756597"
 ---
-# <a name="unit-test-your-code"></a>Kodunuzun birim testi
+# <a name="unit-test-tools-and-tasks"></a>Birim testi araçları ve görevleri
 
 Birim testleri, geliştiricilere ve test edicilere C#, Visual Basic ve C++ projelerindeki sınıfların yöntemlerinde mantık hataları aramak için hızlı bir yol sağlar.
 
@@ -34,7 +34,7 @@ Birim testi araçları şunları içerir:
 
 * **Kod kapsamı araçları** &mdash; Test Gezgini 'nde, birim testlerinizin çalıştıracağı ürün kodu miktarını bir komuttan belirleyebilirsiniz.
 
-* **Microsoft Fakes yalıtım çerçevesi** &mdash; Microsoft Fakes yalıtım çerçevesi, test edilen kodda bağımlılıklar oluşturan üretim ve sistem kodu için alternatif sınıflar ve Yöntemler oluşturabilir. Bir işlev için sahte temsilciler uygulayarak, bağımlılık nesnesinin davranışını ve çıkışını denetlersiniz.
+* **Microsoft Fakes yalıtım çerçevesi** &mdash; Microsoft Fakes yalıtım çerçevesi, test edilen kodda bağımlılıklar oluşturan üretim ve sistem .NET kodu için alternatif sınıflar ve Yöntemler oluşturabilir. Bir işlev için sahte temsilciler uygulayarak, bağımlılık nesnesinin davranışını ve çıkışını denetlersiniz.
 
 Ayrıca, test verileri ve birim testleri paketi oluşturmak üzere .NET kodunuzu araştırmak için [IntelliTest](../test/generate-unit-tests-for-your-code-with-intellitest.md) ' i de kullanabilirsiniz. Koddaki her deyimin için, bu ifadeyi yürütecek bir test girişi oluşturulur. Koddaki her koşullu dal için bir olay Analizi gerçekleştirilir.
 
@@ -44,12 +44,12 @@ Birim testlerini anlama ve oluşturmayla ilgili yardım almak için aşağıdaki
 
 |Görevler|İlişkili Konular|
 |-|-----------------------|
-|**Hızlı başlangıç ve izlenecek yollar:** Kod örneklerinden Visual Studio 'da birim testi hakkında bilgi edinin.|- [İzlenecek yol: yönetilen kod için birim testleri oluşturma ve çalıştırma](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)<br />- [Hızlı başlangıç: Test Gezgini ile test odaklı geliştirme](../test/quick-start-test-driven-development-with-test-explorer.md)<br />- [Nasıl yapılır: C++ uygulamalarına birim testleri ekleme](../test/how-to-use-microsoft-test-framework-for-cpp.md)|
+|**Hızlı başlangıç ve izlenecek yollar:** Kod örneklerinden Visual Studio 'da birim testi hakkında bilgi edinin.|- [İzlenecek yol: .NET kodu için birim testleri oluşturma ve çalıştırma](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)<br />- [İzlenecek yol: Test Gezgini ile test odaklı geliştirme](../test/quick-start-test-driven-development-with-test-explorer.md)<br />- [Nasıl yapılır: C++ uygulamalarına birim testleri ekleme](../test/how-to-use-microsoft-test-framework-for-cpp.md)|
 |**Test Gezgini Ile birim testi:** Test Gezgini 'nin daha üretken ve verimli birim testleri oluşturmaya nasıl yardımcı olabileceğini öğrenin.|- [Birim testi temelleri](../test/unit-test-basics.md)<br />- [Birim testi projesi oluşturma](../test/create-a-unit-test-project.md)<br />- [Test Gezgini ile birim testleri çalıştırma](../test/run-unit-tests-with-test-explorer.md)<br />- [Üçüncü taraf birim testi çerçeveleri 'ni yükler](../test/install-third-party-unit-test-frameworks.md)|
 |**Birim testi C++ kodu**|- [C/C++ için birim testleri yazma](../test/writing-unit-tests-for-c-cpp.md)|
-|**Birim testlerini yalıtma**|- [Microsoft Fakes ile test edilen kodu yalıtma](../test/isolating-code-under-test-with-microsoft-fakes.md)|
 |**Projenizin kodunun ne oranda test edildiğini belirlemek için kod kapsamını kullanın:** Visual Studio test araçlarının kod kapsamı özelliği hakkında bilgi edinin.|- [Ne kadar kodun test edildiğini öğrenmek için kod kapsamını kullanın](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)|
-|**Yük testlerini kullanarak stres ve performans analizi gerçekleştirin:** Uygulamanızdaki performans ve stres sorunlarını yalıtmaya yardımcı olmak için yük testleri oluşturmayı öğrenin.|- [Hızlı başlangıç: yük testi projesi oluşturma](../test/quickstart-create-a-load-test-project.md)<br />- [Yük testi (Azure Test Plans ve TFS)](/azure/devops/test/load-test/index?view=vsts&preserve-view=true)|
+|**Birim testlerini yalıtma**|- [Microsoft Fakes ile test edilen .NET kodunu yalıtın](../test/isolating-code-under-test-with-microsoft-fakes.md)|
+|**Yük testlerini kullanarak stres ve performans analizi gerçekleştirin:** Uygulamanızdaki performans ve stres sorunlarını yalıtmaya yardımcı olmak için yük testleri oluşturmayı öğrenin (kullanım dışı).|- [Hızlı başlangıç: yük testi projesi oluşturma](../test/quickstart-create-a-load-test-project.md)<br />- [Yük testi (Azure Test Plans ve TFS)](/azure/devops/test/load-test/index?view=vsts&preserve-view=true)|
 |**Kalite kapıları ayarla:** Kod iade edilene veya birleştirilmeden önce testlerin çalıştırılmasını zorlamak için kalite kapıları oluşturma hakkında bilgi edinin.|- [İade ilkeleri (Azure Repos TFVC)](/azure/devops/repos/tfvc/add-check-policies?view=vsts&preserve-view=true)|
 |**Test seçeneklerini ayarla:** Test seçeneklerini yapılandırma hakkında bilgi edinin, örneğin, test sonuçlarının depolandığı yer.|[.runsettings dosyasını kullanarak birim testlerini yapılandırma](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md)|
 

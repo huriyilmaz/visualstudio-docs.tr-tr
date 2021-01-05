@@ -1,5 +1,7 @@
 ---
 title: Tam zamanında hata ayıklayıcı kullanarak hata ayıklayın | Microsoft Docs
+description: Visual Studio 'da tam zamanında hata ayıklayıcı kullanarak hata ayıklayın. Tam zamanında hata ayıklama, bir uygulama hataları veya kilitlenmeleri sırasında Visual Studio 'Yu otomatik olarak başlatabilir.
+ms.custom: SEO-VS-2020
 ms.date: 09/24/2018
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 40b6a0e43a8d0980615087c946e5dd14deef1b0b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a03afa64d19e3ccd0efbb170b4305049f6bfee30
+ms.sourcegitcommit: 3c571f44bfd6402efea5187af43df287bac5b6ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350582"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97761348"
 ---
 # <a name="debug-using-the-just-in-time-debugger-in-visual-studio"></a>Visual Studio 'da tam zamanında hata ayıklayıcı kullanarak hata ayıklayın
 
@@ -35,11 +37,11 @@ Visual Studio **Araçlar**  >  **Seçenekler** (veya **hata ayıklama**  >  **se
 
 **Tam zamanında hata ayıklamayı etkinleştirmek veya devre dışı bırakmak için:**
 
-1. **Araçlar** veya **Hata Ayıkla** menüsünde, **Options**  >  **Debugging**  >  **tam zamanında**hata ayıklama seçenekleri ' ni seçin.
+1. **Araçlar** veya **Hata Ayıkla** menüsünde,   >    >  **tam zamanında** hata ayıklama seçenekleri ' ni seçin.
 
    ![JıT hata ayıklamayı etkinleştirme veya devre dışı bırakma](../debugger/media/dbg-jit-enable-or-disable.png "JıT hata ayıklamayı etkinleştirme veya devre dışı bırakma")
 
-1. **Bu kod türleri Için tam zamanında hata ayıklamayı etkinleştir** kutusunda hata ayıklamada tam zamanında hata ayıklamayı istediğiniz kod türlerini seçin: **yönetilen**, **Yerel**ve/veya **betiği**.
+1. **Bu kod türleri Için tam zamanında hata ayıklamayı etkinleştir** kutusunda hata ayıklamada tam zamanında hata ayıklamayı istediğiniz kod türlerini seçin: **yönetilen**, **Yerel** ve/veya **betiği**.
 
 1. **Tamam**’ı seçin.
 
@@ -55,17 +57,17 @@ Visual Studio artık bilgisayarınızda yüklü olmasa bile tam zamanında hata 
 
 2. **Kayıt defteri Düzenleyicisi** penceresinde, aşağıdaki kayıt defteri girdilerini bulun ve silin:
 
-    - **HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft \\ . NETFramework\DbgManagedDebugger**
+    - **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\ . NETFramework\DbgManagedDebugger**
 
-    - **HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Windows NT\CurrentVersion\AeDebug\Debugger**
+    - **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AeDebug\Debugger**
 
     ![JıT kayıt defteri anahtarı](../debugger/media/dbg-jit-registry.png "JıT kayıt defteri anahtarı")
 
 3. Bilgisayarınızda 64 bitlik bir işletim sistemi çalışıyorsa, aşağıdaki kayıt defteri girdilerini de silin:
 
-    - **HKEY_LOCAL_MACHINE \SOFTWARE\Wow6432Node\Microsoft \\ . NETFramework\DbgManagedDebugger**
+    - **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\ . NETFramework\DbgManagedDebugger**
 
-    - **HKEY_LOCAL_MACHINE \SOFTWARE\Wow6432Node\Microsoft\Windows NT\CurrentVersion\AeDebug\Debugger**
+    - **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows NT\CurrentVersion\AeDebug\Debugger**
 
     Diğer kayıt defteri anahtarlarını sildiğinizden veya değiştirmediğinden emin olun.
 
@@ -79,7 +81,7 @@ Varsayılan olarak, Windows form uygulamalarının kurtarabilmesi durumunda uygu
 
 Standart Windows form hatası işleme yerine tam zamanında hata ayıklamayı etkinleştirmek için şu ayarları ekleyin:
 
-- `system.windows.forms` *machine.config* veya * \<app name>.exe.config* dosyasının bölümünde `jitDebugging` değeri şu şekilde ayarlayın `true` :
+- `system.windows.forms` *machine.config* veya *\<app name>.exe.config* dosyasının bölümünde `jitDebugging` değeri şu şekilde ayarlayın `true` :
 
     ```xml
     <configuration>
@@ -100,11 +102,11 @@ Bu örnek, bir uygulama hata oluşturduğunda tam zamanında hata ayıklama işl
 
 - Bu adımları izlemek için Visual Studio yüklü olmalıdır. Visual Studio yoksa, ücretsiz [Visual Studio Community Edition](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&rel=15)'ı indirebilirsiniz.
 
-- **Araç**seçeneklerinde tam zamanında hata ayıklamanın [etkinleştirildiğinden](#BKMK_Enabling) emin olun  >  **Options**  >  **Debugging**  >  **Just-In-Time**.
+- **Araç** seçeneklerinde tam zamanında hata ayıklamanın [etkinleştirildiğinden](#BKMK_Enabling) emin olun  >    >    >  .
 
 Bu örnek için, Visual Studio 'da bir [NullReferenceException](/dotnet/api/system.nullreferenceexception)öğesini oluşturan bir C# konsol uygulaması oluşturacaksınız.
 
-1. Visual Studio 'da, ThrowsNullException adlı bir C# konsol uygulaması (**Dosya**  >  **Yeni**  >  **Proje**  >  **Visual C#**  >  **konsol uygulaması**) *ThrowsNullException*oluşturun. Visual Studio 'da proje oluşturma hakkında daha fazla bilgi için bkz. [Izlenecek yol: basit bir uygulama oluşturma](../get-started/csharp/tutorial-wpf.md).
+1. Visual Studio 'da, ThrowsNullException adlı bir C# konsol uygulaması (**Dosya**  >  **Yeni**  >  **Proje**  >  **Visual C#**  >  **konsol uygulaması**) oluşturun. Visual Studio 'da proje oluşturma hakkında daha fazla bilgi için bkz. [Izlenecek yol: basit bir uygulama oluşturma](../get-started/csharp/tutorial-wpf.md).
 
 1. Proje Visual Studio 'da açıldığında, *program.cs* dosyasını açın. Main () yöntemini bir satırı konsola yazdıran aşağıdaki kodla değiştirin ve ardından bir NullReferenceException şunu oluşturur:
 
@@ -120,7 +122,7 @@ Bu örnek için, Visual Studio 'da bir [NullReferenceException](/dotnet/api/syst
 
    > [!NOTE]
    > - Tam hata ayıklama deneyimi için **hata ayıklama** yapılandırması ' nı seçin.
-   > - [Yayın](../debugger/how-to-set-debug-and-release-configurations.md) yapılandırması ' nı seçerseniz, bu yordamın çalışması için [yalnızca kendi kodum](../debugger/just-my-code.md) kapatmanız gerekir. **Araç**  >  **seçenekleri**  >  **hata ayıklama**altında **yalnızca kendi kodum etkinleştir**seçimini kaldırın.
+   > - [Yayın](../debugger/how-to-set-debug-and-release-configurations.md) yapılandırması ' nı seçerseniz, bu yordamın çalışması için [yalnızca kendi kodum](../debugger/just-my-code.md) kapatmanız gerekir. **Araç**  >  **seçenekleri**  >  **hata ayıklama** altında **yalnızca kendi kodum etkinleştir** seçimini kaldırın.
 
    Derleme konfigürasyonları hakkında daha fazla bilgi için bkz. [derleme yapılandırmasını anlama](../ide/understanding-build-configurations.md).
 
@@ -128,19 +130,19 @@ Bu örnek için, Visual Studio 'da bir [NullReferenceException](/dotnet/api/syst
 
    Aşağıdaki komut penceresini görmeniz gerekir:
 
-   ![ThrowsNullExceptionConsole](../debugger/media/throwsnullexceptionconsole.png "ThrowsNullExceptionConsole")
+   ![ThrowsNullException.exe için konsolun ekran görüntüsü, işlenmemiş bir null başvurusu özel durumu (System. NullReferenceException) oluşturur.](../debugger/media/throwsnullexceptionconsole.png)
 
 1. **Tam zamanında hata ayıklayıcı Seç** iletişim kutusu açılır.
 
-   ![JustInTimeDialog](../debugger/media/justintimedialog.png "JustInTimeDialog")
+   ![ThrowsNullException.exe konsolu penceresinde özel durum görüntülendikten sonra görünen tam zamanında hata ayıklayıcı Seç iletişim kutusunun ekran görüntüsü.](../debugger/media/justintimedialog.png)
 
-   **Kullanılabilir hata ayıklayıcılar**altında, henüz seçilmediyse **Yeni \<your preferred Visual Studio version/edition> örneği **' ni seçin.
+   **Kullanılabilir hata ayıklayıcılar** altında, henüz seçilmediyse **Yeni \<your preferred Visual Studio version/edition> örneği**' ni seçin.
 
 1. **Tamam**’ı seçin.
 
    ThrowsNullException projesi Visual Studio 'nun yeni bir örneğinde açılarak yürütme, özel durumu oluşturan satırda durdurulur:
 
-   ![Nullreferencesecondınstance](../debugger/media/nullreferencesecondinstance.png "Nullreferencesecondınstance")
+   ![Visual Studio 'da ThrowsNullException projesinin, özel durumu oluşturan kaynak kodu satırı vurgulaması ile ekran görüntüsü.](../debugger/media/nullreferencesecondinstance.png)
 
 Bu noktada hata ayıklamayı başlatabilirsiniz. Gerçek bir uygulamada hata ayıklaması yaptıysanız kodun özel durumu nasıl yayımladığına ilişkin bilgi almanız gerekir.
 
@@ -153,11 +155,11 @@ Visual Studio 'da etkinleştirilmiş olsa bile, bir uygulama kilitlenirse tam za
 
 - Windows Hata Bildirimi bilgisayarınızdaki hata işleme üzerinden alınıyor.
 
-  Bu sorunu onarmak için kayıt defteri Düzenleyicisi 'ni kullanarak, **Değer verisi** **1**olan **devre dışı**bir **DWORD değerini** aşağıdaki kayıt defteri anahtarlarına ekleyin:
+  Bu sorunu onarmak için kayıt defteri Düzenleyicisi 'ni kullanarak, **Değer verisi** **1** olan **devre dışı** bir **DWORD değerini** aşağıdaki kayıt defteri anahtarlarına ekleyin:
 
-  - **HKEY_LOCAL_MACHINE \Software\Microsoft\Windows\Windows hata bildirimi**
+  - **HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\Windows Error Reporting**
 
-  - (64 bit makineler için): **HKEY_LOCAL_MACHINE \Software\WOW6432Node\Microsoft\Windows\Windows hata bildirimi**
+  - (64 bit makineler için): **HKEY_LOCAL_MACHINE\Software\WOW6432Node\Microsoft\Windows\Windows Error Reporting**
 
   Daha fazla bilgi için bkz [.. WER ayarları](/windows/desktop/wer/wer-settings).
 
@@ -165,9 +167,9 @@ Visual Studio 'da etkinleştirilmiş olsa bile, bir uygulama kilitlenirse tam za
 
   Bu, aşağıdaki kayıt defteri anahtarlarına **1** **değerli verileri** içeren **Auto** **DWORD değeri** eklemektir:
 
-  - **HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Windows NT\CurrentVersion\AeDebug**
+  - **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AeDebug**
 
-  - (64 bit makineler için): **HKEY_LOCAL_MACHINE \Software\WOW6432Node\Microsoft\Windows NT\CurrentVersion\AeDebug**
+  - (64 bit makineler için): **HKEY_LOCAL_MACHINE\Software\WOW6432Node\Microsoft\Windows NT\CurrentVersion\AeDebug**
 
 Anında hata ayıklama sırasında aşağıdaki hata iletilerini görebilirsiniz:
 
@@ -191,7 +193,7 @@ Anında hata ayıklama sırasında aşağıdaki hata iletilerini görebilirsiniz
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata ayıklayıcı güvenliği](../debugger/debugger-security.md)
+- [Hata ayıklayıcısı güvenliği](../debugger/debugger-security.md)
 - [Hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md)
 - [Seçenekler, hata ayıklama, tam zamanında iletişim kutusu](../debugger/just-in-time-debugging-options-dialog-box.md)
 - [Güvenlik Uyarısı: güvenilmeyen bir kullanıcının sahip olduğu bir işleme ekleme tehlikeli olabilir. Aşağıdaki bilgiler şüpheli görünüyorsa veya emin değilseniz, bu işleme eklemeyin](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user.md)

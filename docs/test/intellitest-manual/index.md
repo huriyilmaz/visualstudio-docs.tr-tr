@@ -11,16 +11,19 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 6317f7a1f81e6eb6916c10b2f8ce0df91f57a7de
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
-ms.translationtype: HT
+ms.openlocfilehash: 6853ef6040df943ac3050621a5b3a2528d599d9f
+ms.sourcegitcommit: 4e28314dc2be59b4c5fd44545c0653f625e74489
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96329958"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97756623"
 ---
 # <a name="overview-of-microsoft-intellitest"></a>Microsoft IntelliTest’e Genel Bakış
 
 IntelliTest, hataları erkenden bulmanıza olanak sağlar ve test bakımı maliyetlerini düşürür. IntelliTest, otomatikleştirilmiş ve şeffaf bir test yaklaşımı kullanarak .NET kodunuz için bir aday test paketi oluşturabilir. Belirttiğiniz *doğruluk özellikleri*, test paketi oluşturma işlemine daha fazla yol gösterebilir. IntelliTest, test edilen kod geliştikçe, otomatik olarak test paketini de geliştirir.
+
+> [!NOTE]
+> IntelliTest yalnızca Enterprise sürümünde kullanılabilir. .NET Framework hedefleyen C# kodu için desteklenir. .NET Core ve .NET Standard Şu anda desteklenmiyor.
 
 **Karakterizasyon testleri** IntelliTest, geleneksel birim testi paketi açısından kodun davranışını belirlemenize olanak sağlar.
 Böyle bir test paketi, gerileme paketi olarak kullanılabilir ve eski veya bilindik olmayan kodun yeniden düzenlenmesiyle ilişkili karmaşıklığın giderilmesinde temeli oluşturur.

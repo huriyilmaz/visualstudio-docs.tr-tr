@@ -9,35 +9,35 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 7b36b7e2469aa5d4ef6e11cff2580e0fb0c8ff03
-ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
+ms.openlocfilehash: 76224ce191354e05c2220af23aabe010403b35cb
+ms.sourcegitcommit: 105e7b5a486262bc92939980383ceee068098a11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95441410"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "97815769"
 ---
 # <a name="enable-coded-ui-testing-of-your-controls"></a>Denetimlerinizin kodlanmış UI testlerini etkinleştirme
 
 Denetiminizi daha kararlı hale getirmek için kodlanmış UI test çerçevesi için destek uygulayın. Artan destek düzeylerini artımlı olarak ekleyebilirsiniz. Kayıt ve kayıttan yürütme ve özellik doğrulamasını destekleyerek başlatın. Daha sonra, kodlanmış UI test oluşturucusunun denetiminizin özel özelliklerini tanımasını sağlamak için bunu oluşturun. Oluşturulan koddan Bu özelliklere erişmek için özel sınıflar sağlayın. Ayrıca, kodlanmış UI Test Oluşturucusu yakalama eylemlerine, kaydedilen eylemin amacına daha yakın bir şekilde de yardımcı olabilirsiniz.
 
-![CUıT&#95;dolu](../test/media/cuit_full.png)
+! ChartControl içindeki sınıfların ChartControlExtensionPackage içindeki sınıflara Createaccessabilityınstance sınıfı aracılığıyla nasıl genişletilmişse gösteren diyagram.] (.. /test/Media/cuit_full.png)
 
-[!INCLUDE [coded-ui-test-deprecation](includes/coded-ui-test-deprecation.md)]
+[!INCLUDE[coded-ui-test-deprecation](../test/includes/coded-ui-test-deprecation.md)]
 
 ## <a name="support-record-and-playback-and-property-validation-by-implementing-accessibility"></a>Erişilebilirliği uygulayarak kaydı ve kayıttan yürütmeyi ve özellik doğrulamasını destekleme
 
 Kodlanmış UI Test Oluşturucusu bir kayıt sırasında karşılaştığı denetimlerle ilgili bilgileri yakalar ve ardından bu oturumu yeniden oynatmak için kod üretir. Denetiminiz erişilebilirliği desteklemiyorsa, kodlanmış UI Test Oluşturucusu, ekran koordinatlarını kullanarak eylemleri (fare tıklamaları gibi) yakalar. Test kayıttan yürütüldüğünde, oluşturulan kod aynı Ekran koordinatlarındaki eylemleri yayınlar. Test kayıttan yürütüldüğünde denetiminiz ekran üzerinde farklı bir yerde görünürse, oluşturulan kod bu eylemi gerçekleştiremez. Denetiminiz için erişilebilirliği uygulamadığında, test, farklı ortamlarda veya Kullanıcı arabirimi düzeni değiştiğinde farklı ekran yapılandırmalarında kayıttan oynanabilir test hatalarıyla karşılaşabilirsiniz.
 
-![CUıT&#95;RecordNoSupport](../test/media/cuit_recordnosupport.png)
+![Kodlanmış UI Test Oluşturucusu 'ndaki kayıt penceresinin ekran görüntüsü. Duraklat düğmesi vurgulanır ve araç ipucunda ' ChartControl ' istemcisi görüntülenir.](../test/media/cuit_recordnosupport.png)
 
 Erişilebilirlik uygularsanız, kodlanmış UI Test Oluşturucusu bir testi kaydederken denetiminiz hakkındaki bilgileri yakalamak için bunu kullanır. Daha sonra, testi çalıştırdığınızda, Kullanıcı arabiriminde başka bir yerde olsa bile, oluşturulan kod bu olayları denetiinize karşı yeniden oynayacaktır. Test yazarları, denetiminizin temel özelliklerini kullanarak onaylar de oluşturabilir.
 
-![CUıT&#95;kaydı](../test/media/cuit_record.png)
+![Kodlanmış UI Test Oluşturucusu 'ndaki kayıt penceresinin ekran görüntüsü. Duraklat düğmesi vurgulanır ve araç ipucunda ' A ' etiketi görünür.](../test/media/cuit_record.png)
 
 ### <a name="to-support-record-and-playback-property-validation-and-navigation-for-a-windows-forms-control"></a>Windows Forms denetimine yönelik kayıt ve kayıttan yürütmeyi, özellik doğrulamayı ve gezintiyi desteklemek için
 Aşağıdaki yordamda gösterildiği gibi denetiminiz için erişilebilirlik uygulayın ve ' de ayrıntılı olarak açıklanmıştır <xref:System.Windows.Forms.AccessibleObject> .
 
-![CUıT&#95;erişilebilir](../test/media/cuit_accessible.png)
+![Createaccessabilityınstance ve ChartControl. CurveLegend sınıfı arasındaki ilişkiyi gösteren ChartControl içindeki sınıfların diyagramı.](../test/media/cuit_accessible.png)
 
 1. Sınıfından türetilen bir sınıf uygulayın <xref:System.Windows.Forms.Control.ControlAccessibleObject> ve <xref:System.Windows.Forms.Control.AccessibilityObject%2A> sınıfınızın bir nesnesini döndürmek için özelliği geçersiz kılın.
 
@@ -77,11 +77,11 @@ Aşağıdaki yordamda gösterildiği gibi denetiminiz için erişilebilirlik uyg
 
 Kayıt ve kayıttan yürütme ve Özellik doğrulama için temel desteği uyguladıktan sonra, bir eklenti uygulayarak denetiminizin özel özelliklerini kodlanmış UI testleri için kullanılabilir hale getirebilirsiniz <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider> . Örneğin, aşağıdaki yordam, kodlanmış UI testlerinin grafik denetiminin CurveLegend alt denetimlerinin State özelliğine erişmesine izin veren bir özellik sağlayıcısı oluşturur:
 
-![CUIT&#95;CustomProps](../test/media/cuit_customprops.png)
+![Kodlanmış UI Test Oluşturucusu ana penceresinin, bir metin denetiminin State özelliği olan bir onaylama ekleme penceresi tarafından kısmen ele alınan ekran görüntüsü.](../test/media/cuit_customprops.png)
 
 ### <a name="to-support-custom-property-validation"></a>Özel özellik doğrulamasını desteklemek için
 
-![CUıT&#95;props](../test/media/cuit_props.png)
+![ChartControlExtensionPackage ve Chartcontrolıpropertyprovider sınıfları vurgulanmış şekilde ChartControl ve Chartcontrolexgerlein içindeki sınıfların diyagramı.](../test/media/cuit_props.png)
 
 1. <xref:System.Windows.Forms.AccessibleObject.Description%2A>Açıklama dizesinde zengin özellik değerlerini geçirmek için eğri göstergesi erişilebilir nesnenin özelliğini geçersiz kılın. Birden çok değeri noktalı virgülle ayırın (;).
 
@@ -149,7 +149,7 @@ Denetiminizin özel özelliklerine erişim sağlamak için bir özellik sağlay�
 
 ### <a name="to-add-a-specialized-class-to-access-your-control"></a>Denetime erişmek için özel bir sınıf eklemek için
 
-![CUıT&#95;CodeGen](../test/media/cuit_codegen.png)
+![ChartControlExtensionPackage altında vurgulanmış olan CurveLegend sınıfı ile ChartControl ve Chartcontrolexlıve içindeki sınıfların diyagramı.](../test/media/cuit_codegen.png)
 
 1. Öğesinden türetilmiş bir sınıf uygulayın <xref:Microsoft.VisualStudio.TestTools.UITesting.WinControls.WinControl> ve denetimin türünü oluşturucuda arama özellikleri koleksiyonuna ekleyin.
 
@@ -165,7 +165,7 @@ Visual Studio bir testi kaydeder, her fare ve klavye olayını yakalar. Ancak ba
 
 ### <a name="to-support-intent-aware-actions"></a>Amaç kullanan eylemleri desteklemek için
 
-![CUıT&#95;eylemleri](../test/media/cuit_actions.png)
+![ChartControlExtensionPackage altında vurgulanmış Chartcontrollactionfilter sınıfıyla birlikte ChartControl ve ChartControlExtensionPackage sınıflarının diyagramı.](../test/media/cuit_actions.png)
 
 1. [Uitestactionfilter](/previous-versions/visualstudio/visual-studio-2012/dd985757(v=vs.110))öğesinden türetilmiş bir eylem filtresi sınıfı uygulayıp [ApplyTimeout](/previous-versions/visualstudio/visual-studio-2012/dd984649%28v%3dvs.110%29), [Kategori](/previous-versions/visualstudio/visual-studio-2012/dd986905(v=vs.110)), [etkin](/previous-versions/visualstudio/visual-studio-2012/dd985633(v=vs.110)), [FilterType](/previous-versions/visualstudio/visual-studio-2012/dd778726(v=vs.110)), [Grup](/previous-versions/visualstudio/visual-studio-2012/dd779219(v=vs.110)) ve [ad](/previous-versions/visualstudio/visual-studio-2012/dd998334(v=vs.110))özelliklerini geçersiz kılar.
 

@@ -14,12 +14,12 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 1873c11d8f2e6243a0dc0f867e579f1927cd1607
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7e7c6eec178d0ba3b2934e390cc02310044c4dfa
+ms.sourcegitcommit: d526af3642163180e0cc3e1e73b0a00f02542683
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77579969"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97833357"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-aspnet-core-web-app"></a>Hızlı başlangıç: ilk ASP.NET Core Web uygulamanızı oluşturmak için Visual Studio 'Yu kullanma
 
@@ -75,7 +75,7 @@ Başlamak için bir ASP.NET Core Web uygulaması projesi oluşturacaksınız. Pr
    ![Yeni ASP.NET Core Web uygulaması iletişim kutusu](../ide/media/aspnet-core-2dot1.png)
 
    > [!NOTE]
-   > **ASP.NET Core 2,1**görmüyorsanız, Visual Studio 'nun en son sürümünü çalıştırdığınızdan emin olun. Yüklemenizi güncelleştirme hakkında daha fazla bilgi için bkz. [Visual Studio 'yu en son sürüm sayfasına güncelleştirme](../install/update-visual-studio.md) .
+   > **ASP.NET Core 2,1** görmüyorsanız, Visual Studio 'nun en son sürümünü çalıştırdığınızdan emin olun. Yüklemenizi güncelleştirme hakkında daha fazla bilgi için bkz. [Visual Studio 'yu en son sürüm sayfasına güncelleştirme](../install/update-visual-studio.md) .
 
 Yakında, Visual Studio proje dosyanızı açar.
 
@@ -124,7 +124,7 @@ Yakında, Visual Studio proje dosyanızı açar.
 
 1. **Çözüm Gezgini**, **Sayfalar** klasörünü genişletin ve ardından **. cshtml**' yi seçin.
 
-   ![Çözüm Gezgini. cshtml dosyasını seçin.](../ide/media/csharp-aspnet-about-page-html-file.png)
+   ![HelloWorld projesindeki dosyaları gösteren Visual Studio Çözüm Gezgini ekran görüntüsü. Sayfalar klasörü genişletilir ve. cshtml hakkında seçilidir.](../ide/media/csharp-aspnet-about-page-html-file.png)
 
    Bu dosya, bir Web tarayıcısında çalışan Web uygulamasında **hakkında** adlı bir sayfaya karşılık gelir.
 
@@ -140,7 +140,7 @@ Yakında, Visual Studio proje dosyanızı açar.
 
 1. **Çözüm Gezgini** **. cshtml**' i genişletin ve ardından **About.cshtml.cs**' ı seçin. (Bu dosya Ayrıca, bir Web tarayıcısında **hakkında hakkında** sayfasına karşılık gelir.)
 
-   ![Çözüm Gezgini. cshtml dosyasını seçin.](../ide/media/csharp-aspnet-about-page-code-file.png)
+   ![HelloWorld projesindeki dosyaları gösteren Visual Studio Çözüm Gezgini ekran görüntüsü. . Cshtml hakkında genişletilmiş ve About.cshtml.cs seçilidir.](../ide/media/csharp-aspnet-about-page-code-file.png)
 
    Düzenleyicide, **hakkında** sayfasının "uygulama açıklaması" alanı için metin Içeren C# kodu görürsünüz.
 
@@ -150,12 +150,12 @@ Yakında, Visual Studio proje dosyanızı açar.
 
    ![Visual Studio Düzenleyicisi 'nde uygulama açıklaması alanı için varsayılan ileti metnini değiştirme](../ide/media/csharp-aspnet-about-cshtml-cs-message.png)
 
-1. Uygulamayı **IIS Express** **Ctrl** + çalıştırmak ve bir Web tarayıcısında açmak için IIS Express seçin veya CTRL**F5** tuşuna basın.
+1. Uygulamayı   + çalıştırmak ve bir Web tarayıcısında açmak için IIS Express seçin veya CTRL **F5** tuşuna basın.
 
    ![Visual Studio 'da IIS Express düğmesini seçin](../ide/media/csharp-aspnet-helloworld-iisbutton.png)
 
    > [!NOTE]
-   > **' IIS Express ' Web sunucusuna**veya bir SSL sertifikasıyla ilgili bir hata iletisine bağlanmadığını belirten bir hata iletisi alırsanız, Visual Studio 'yu kapatın. Ardından, sağ tıklama bağlam menüsünde **yönetici olarak çalıştır** seçeneğini kullanarak Visual Studio 'yu açın. Sonra, uygulamayı yeniden çalıştırın.
+   > **' IIS Express ' Web sunucusuna** veya bir SSL sertifikasıyla ilgili bir hata iletisine bağlanmadığını belirten bir hata iletisi alırsanız, Visual Studio 'yu kapatın. Ardından, sağ tıklama bağlam menüsünde **yönetici olarak çalıştır** seçeneğini kullanarak Visual Studio 'yu açın. Sonra, uygulamayı yeniden çalıştırın.
 
 1. Web tarayıcısında, **hakkında** sayfasının güncelleştirilmiş metninizi içerdiğini doğrulayın.
 
@@ -191,12 +191,12 @@ Tebrikler, bu hızlı başlangıcı Tamamlanıyor! C#, ASP.NET Core ve Visual St
 
    ![Visual Studio Düzenleyicisi 'nde, bunun yerine Merhaba Dünya e-Welcome 'a hoş geldiniz varsayılan HTML kodunu değiştirin](../ide/media/vs-2019/csharp-aspnet-index-cshtml-page-hello-world.png)
 
-1. Uygulamayı **IIS Express** **Ctrl** + çalıştırmak ve bir Web tarayıcısında açmak için IIS Express seçin veya CTRL**F5** tuşuna basın.
+1. Uygulamayı   + çalıştırmak ve bir Web tarayıcısında açmak için IIS Express seçin veya CTRL **F5** tuşuna basın.
 
    ![Visual Studio 'da IIS Express düğmesini seçin](../ide/media/vs-2019/csharp-aspnet-generic-iisbutton.png)
 
    > [!NOTE]
-   > **' IIS Express ' Web sunucusuna**veya bir SSL sertifikasıyla ilgili bir hata iletisine bağlanmadığını belirten bir hata iletisi alırsanız, Visual Studio 'yu kapatın. Ardından, sağ tıklama bağlam menüsünde **yönetici olarak çalıştır** seçeneğini kullanarak Visual Studio 'yu açın. Sonra, uygulamayı yeniden çalıştırın.
+   > **' IIS Express ' Web sunucusuna** veya bir SSL sertifikasıyla ilgili bir hata iletisine bağlanmadığını belirten bir hata iletisi alırsanız, Visual Studio 'yu kapatın. Ardından, sağ tıklama bağlam menüsünde **yönetici olarak çalıştır** seçeneğini kullanarak Visual Studio 'yu açın. Sonra, uygulamayı yeniden çalıştırın.
 
 1. Web tarayıcısında, **ana** sayfanın güncelleştirilmiş metninizi içerdiğini doğrulayın.
 

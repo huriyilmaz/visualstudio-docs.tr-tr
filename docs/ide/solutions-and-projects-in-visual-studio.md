@@ -2,7 +2,7 @@
 title: Çözümler ve projeler hakkında bilgi edinin
 description: Visual Studio projeleri ve çözümleri hakkında, bir şablondan yeni projeler oluşturma ve Çözüm Gezgini projeleri görüntüleme & yönetme hakkında bilgi edinin.
 ms.custom: SEO-VS-2020, contperf-fy21q2
-ms.date: 12/17/2020
+ms.date: 12/31/2020
 ms.topic: conceptual
 f1_keywords:
 - vs.addnewitem
@@ -22,12 +22,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 51a2f9683dd2285cc71dfff67020687f0c48afa4
-ms.sourcegitcommit: c558d8a0f02ed2c932c8d6f70756d8d2cedb10b3
+ms.openlocfilehash: 3b34d96f49370a71a63e986a79584caffbc00adf
+ms.sourcegitcommit: d577818d3d8e365baa55c6108fa8159c46ed8b43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97683916"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97847048"
 ---
 # <a name="solutions-and-projects-in-visual-studio"></a>Visual Studio 'da çözümler ve projeler
 
@@ -49,6 +49,14 @@ Proje dosyaları [MSBUILD XML şemasını](../msbuild/msbuild-project-file-schem
 > [!NOTE]
 > Kodu düzenlemek, derlemek ve hata ayıklamak için Visual Studio 'da çözüm veya proje kullanmanız gerekmez. Yalnızca kaynak dosyalarınızı içeren klasörü Visual Studio 'da açabilir ve düzenleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio 'da projeler veya çözümler olmadan kod geliştirme](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md).
 
+### <a name="create-new-projects"></a>Yeni projeler oluştur
+
+Yeni bir proje oluşturmanın en kolay yolu, istediğiniz proje türü için bir proje şablonu kullanmaktır. Proje şablonu, önceden oluşturulmuş temel bir kod dosyaları, yapılandırma dosyaları, varlıklar ve ayarlar kümesi içerir. **Dosya**  >  **Yeni**  >  **Proje** ' yi kullanarak bir proje şablonu seçin. Daha fazla bilgi için bkz. [Yeni proje oluşturma](create-new-project.md).
+
+Ayrıca, ' den yeni projeler oluşturmak için kullanabileceğiniz özel bir proje şablonu da oluşturabilirsiniz. Daha fazla bilgi için bkz. [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md).
+
+Yeni bir proje oluşturduğunuzda, Visual Studio onu varsayılan konumuna, *%userprofile%\source\repos dizinine* kaydeder. Bu konumu değiştirmek için **Araçlar**  >  **Seçenekler**  >  **Projeler ve çözümler**  >  **konumlar**' a gidin. Daha fazla bilgi için bkz. [Seçenekler iletişim kutusu: projeler ve çözümler > konumları](./reference/projects-solutions-locations-options.md).
+
 ## <a name="solutions"></a>Çözümler
 
 Bir proje bir *çözüm* içinde yer alır. Adına rağmen çözüm bir "yanıt" değildir. Yalnızca bir veya daha fazla ilişkili projenin kapsayıcısı, derleme bilgileri, Visual Studio pencere ayarları ve belirli bir projeyle ilişkilendirilmemiş çeşitli dosyalar için bir kapsayıcıdır.
@@ -69,14 +77,6 @@ Visual Studio, çözümlerin ayarlarını depolamak için iki dosya türü (*. s
 
 Bir "Çözüm klasörü", yalnızca **Çözüm Gezgini** olan ve bir çözümdeki projeleri gruplamak için kullanabileceğiniz sanal bir klasördür. Bir bilgisayarda çözüm dosyası bulmak istiyorsanız, **Araçlar**  >  **Seçenekler**  >  **Projeler ve çözümler**  >  **konumlar**' a gidin. Daha fazla bilgi için bkz. [Seçenekler iletişim kutusu: projeler ve çözümler > konumları](./reference/projects-solutions-locations-options.md).
 
-## <a name="create-new-projects"></a>Yeni projeler oluştur
-
-Yeni bir proje oluşturmanın en kolay yolu, istediğiniz proje türü için bir proje şablonu kullanmaktır. Proje şablonu, önceden oluşturulmuş temel bir kod dosyaları, yapılandırma dosyaları, varlıklar ve ayarlar kümesi içerir. **Dosya**  >  **Yeni**  >  **Proje** ' yi kullanarak bir proje şablonu seçin. Daha fazla bilgi için bkz. [Yeni proje oluşturma](create-new-project.md).
-
-Ayrıca, ' den yeni projeler oluşturmak için kullanabileceğiniz özel bir proje şablonu da oluşturabilirsiniz. Daha fazla bilgi için bkz. [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md).
-
-Yeni bir proje oluşturduğunuzda, Visual Studio onu varsayılan konumuna, *%userprofile%\source\repos dizinine* kaydeder. Bu konumu değiştirmek için **Araçlar**  >  **Seçenekler**  >  **Projeler ve çözümler**  >  **konumlar**' a gidin. Daha fazla bilgi için bkz. [Seçenekler iletişim kutusu: projeler ve çözümler > konumları](./reference/projects-solutions-locations-options.md).
-
 > [!TIP]
 > Sıfırdan oluşturulmuş bir proje ve çözüm örneği için adım adım yönergeler ve örnek kodla birlikte, bkz. [projelere ve çözümlere giriş](../get-started/tutorial-projects-solutions.md).
 
@@ -84,19 +84,34 @@ Yeni bir proje oluşturduğunuzda, Visual Studio onu varsayılan konumuna, *%use
 
 Yeni bir proje oluşturduktan sonra, projeyi ve çözümü ve ilişkili öğelerini görüntülemek ve yönetmek için **Çözüm Gezgini** kullanabilirsiniz. Aşağıdaki çizimde, iki proje içeren bir C# çözümü ile **Çözüm Gezgini** gösterilmektedir:
 
-![Çözüm Gezgini ekran görüntüsü.](../ide/media/vs2015_solution_explorer.png)
+::: moniker range="vs-2017"
 
-Birçok menü komutu, **Çözüm Gezgini** çeşitli öğelerde sağ tıklama menüsünde bulunur. Bu komutlar bir proje oluşturma, NuGet paketlerini yönetme, bir başvuru ekleme, bir dosyayı yeniden adlandırma ve Testleri çalıştırma, yalnızca birkaç kez adlandırma içerir. **Çözüm Gezgini** üstündeki araç çubuğunda, bir çözüm görünümünden klasör görünümüne geçiş yapmak, gizli dosyaları göstermek, tüm düğümleri daraltmak ve daha fazlası için düğmeler bulunur.
+![İki projeyle Çözüm Gezgini ekran görüntüsü.](../ide/media/vs2015_solution_explorer.png)
+
+**Çözüm Gezgini** üstündeki araç çubuğunda, bir çözüm görünümünden klasör görünümüne geçiş yapmak, gizli dosyaları göstermek, tüm düğümleri daraltmak ve daha fazlası için düğmeler bulunur.
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+![Visual Studio 2019 ' de iki projeyle Çözüm Gezgini ekran görüntüsü.](../ide/media/solution-explorer.png)
+
+**Çözüm Gezgini** üst kısmında bulunan araç çubuğu, bir çözüm görünümünden klasör görünümüne geçiş yapmak, bekleyen değişiklikleri filtrelemek, tüm dosyaları göstermek, tüm düğümleri daraltmak, [özellik](managing-project-and-solution-properties.md) sayfalarını görüntülemek, [kod düzenleyicisinde](writing-code-in-the-code-and-text-editor.md)önizleme kodu ve daha fazlası için düğmeler içerir.
+
+::: moniker-end
+
+Birçok menü komutu, **Çözüm Gezgini** çeşitli öğelerde sağ tıklama bağlam menüsünden kullanılabilir. Bu komutlar bir proje oluşturma, NuGet paketlerini yönetme, bir başvuru ekleme, bir dosyayı yeniden adlandırma ve Testleri çalıştırma, yalnızca birkaç kez adlandırma içerir.
 
 > [!TIP]
 > Çözüm Gezgini kapattıysanız ve yeniden açmak istiyorsanız, menü çubuğundan **pencere**  >  **düzeni penceresini Sıfırla** ' yı seçin.
 
 ASP.NET Core projeleri için, dosyaların **Çözüm Gezgini** nasıl iç içe yerleşdiğini özelleştirebilirsiniz. Daha fazla bilgi için bkz. [Çözüm Gezgini dosya iç içe geçirmeyi özelleştirme](file-nesting-solution-explorer.md).
 
-Çözüm Gezgini görünen simgelerin bir listesini görüntülemek için, bkz. [sınıf görünümü ve nesne tarayıcısı simgeleri](class-view-and-object-browser-icons.md).
-
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio IDE](../get-started/visual-studio-ide.md)
+- [Projelere ve çözümlere giriş](../get-started/tutorial-projects-solutions.md)
+- [Proje ve çözüm özelliklerini yönetme](managing-project-and-solution-properties.md)
+- [Visual Studio 'da filtrelenmiş çözümler](filtered-solutions.md)
 - [Projeleri taşıma, geçirme ve yükseltme](../porting/port-migrate-and-upgrade-visual-studio-projects.md)
+- [Visual Studio IDE hatalarında sorun giderme kaynakları](./reference/resources-for-troubleshooting-integrated-development-environment-errors.md)
 - [Projeler ve çözümler (Mac için Visual Studio)](/visualstudio/mac/projects-and-solutions)

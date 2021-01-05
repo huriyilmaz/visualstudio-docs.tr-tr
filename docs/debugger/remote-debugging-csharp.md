@@ -1,5 +1,6 @@
 ---
 title: C# veya VB projesinde uzaktan hata ayıklama | Microsoft Docs
+description: Bu adım adım yönergeleri izleyerek Visual Studio C# veya Visual Basic uygulamasının bir uzak bilgisayardan nasıl hata ayıklaması yapılacağını öğrenin.
 ms.custom:
 - remotedebugging"=
 - seodec18
@@ -19,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5f147acae956ad380c6e85984de29d5316394c0a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 76364dd6817774c38daa62463cd5bc635075ba73
+ms.sourcegitcommit: 105e7b5a486262bc92939980383ceee068098a11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "92298718"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "97815704"
 ---
 # <a name="remote-debugging-a-c-or-visual-basic-project-in-visual-studio"></a>Visual Studio 'da C# veya Visual Basic projesi üzerinde uzaktan hata ayıklama
 Farklı bir bilgisayara dağıtılan bir Visual Studio uygulamasında hata ayıklamak için, uygulamanızı dağıttığınız bilgisayara Uzak araçları yükleyip çalıştırın, projenizi Visual Studio 'dan uzak bilgisayara bağlanacak şekilde yapılandırın ve ardından uygulamanızı çalıştırın.
@@ -55,9 +56,9 @@ Uzaktan hata ayıklayıcı, Windows 7 ve Windows Server 2008 Service Pack 2 ' de
 > Ek kullanıcılar için izinler eklemeniz gerekiyorsa, kimlik doğrulama modunu veya uzaktan hata ayıklayıcı bağlantı noktası numarasını değiştirin, bkz. [Uzaktan hata ayıklayıcıyı yapılandırma](../debugger/remote-debugging.md#configure_msvsmon).
 
 ## <a name="remote-debug-the-project"></a><a name="remote_csharp"></a> Projede uzaktan hata ayıkla
-Hata ayıklayıcı, Visual C# veya Visual Basic masaüstü uygulamalarını uzak bir makineye dağıtabamaz, ancak yine de aşağıdaki gibi uzaktan hata ayıklaması yapabilirsiniz. Aşağıdaki yordamda, aşağıdaki çizimde gösterildiği gibi **Mjo-DL**adlı bir bilgisayarda hata ayıklamak istediğinizi varsayılmaktadır.
+Hata ayıklayıcı, Visual C# veya Visual Basic masaüstü uygulamalarını uzak bir makineye dağıtabamaz, ancak yine de aşağıdaki gibi uzaktan hata ayıklaması yapabilirsiniz. Aşağıdaki yordamda, aşağıdaki çizimde gösterildiği gibi **Mjo-DL** adlı bir bilgisayarda hata ayıklamak istediğinizi varsayılmaktadır.
 
-1. **MyWpf**ADLı bir WPF projesi oluşturun.
+1. **MyWpf** ADLı bir WPF projesi oluşturun.
 
 2. Kodu kolayca erişilen kodda bir yere kesme noktası ayarlayın.
 
@@ -67,7 +68,7 @@ Hata ayıklayıcı, Visual C# veya Visual Basic masaüstü uygulamalarını uzak
 
 4. **Özellikler** sayfasında **Hata Ayıkla** sekmesini seçin.
 
-    ![RemoteDebuggerCSharp](../debugger/media/remotedebuggercsharp.png "RemoteDebuggerCSharp")
+    ![Visual Studio Çözüm Gezgini özelliklerindeki hata ayıklama sekmesinin ekran görüntüsü. Uzak makine Kullan özelliği ' MJO-DL: 4022 ' olarak ayarlandı.](../debugger/media/remotedebuggercsharp.png)
 
 5. **Çalışma dizini** metin kutusunun boş olduğundan emin olun.
 
@@ -85,20 +86,20 @@ Hata ayıklayıcı, Visual C# veya Visual Basic masaüstü uygulamalarını uzak
 
 8. Projeyi derleyin.
 
-9. Uzak bilgisayarda, Visual Studio bilgisayarınızdaki **hata ayıklama** klasörüyle aynı yol olan bir klasör oluşturun: ** \<source path> \MyWPF\MyWPF\bin\Debug**.
+9. Uzak bilgisayarda, Visual Studio bilgisayarınızdaki **hata ayıklama** klasörüyle aynı yol olan bir klasör oluşturun: **\<source path> \MyWPF\MyWPF\bin\Debug**.
 
 10. Visual Studio bilgisayarınızdan oluşturduğunuz yürütülebilir dosyayı uzak bilgisayardaki yeni oluşturulan klasöre kopyalayın.
 
     > [!CAUTION]
     > Kodda değişiklik yapmayın veya yeniden derleyin (veya bu adımı tekrarlamanız gerekir). Uzak makineye kopyaladığınız yürütülebilir dosya yerel kaynak ve sembollerle tam olarak eşleşmelidir.
 
-    Projeyi el ile kopyalayabilir, xcopy, Robocopy, PowerShell veya diğer seçenekleri kullanabilirsiniz.
+    Projeyi el ile kopyalayabilir, XCopy, Robocopy, PowerShell veya diğer seçenekleri kullanabilirsiniz.
 
 11. Uzaktan hata ayıklayıcının hedef makinede çalıştığından emin olun (yoksa, **Başlat** menüsünde **Uzaktan hata ayıklayıcı** için arama yapın). Uzaktan hata ayıklayıcı penceresi şuna benzer.
 
-     ![RemoteDebuggerWindow](../debugger/media/remotedebuggerwindow.png "RemoteDebuggerWindow")
+     ![Visual Studio 2017 uzaktan hata ayıklayıcı penceresinin ekran görüntüsü. Hata ayıklayıcının hedef makinede çalıştığını gösteren bir eylem listelenir.](../debugger/media/remotedebuggerwindow.png)
 
-12. Visual Studio 'da hata ayıklamayı başlatın (hata ayıklama **> başlatın**veya **F5**).
+12. Visual Studio 'da hata ayıklamayı başlatın (hata ayıklama **> başlatın** veya **F5**).
 
 13. İstenirse, uzak makineye bağlanmak için ağ kimlik bilgilerini girin.
 
@@ -110,7 +111,7 @@ Hata ayıklayıcı, Visual C# veya Visual Basic masaüstü uygulamalarını uzak
 
 15. Visual Studio makinesinde yürütmenin kesme noktasında durdurulduğunu görmeniz gerekir.
 
-    Uygulama tarafından kullanılması gereken kod olmayan dosyalarınız varsa, bunları Visual Studio projesine dahil etmeniz gerekir. Ek dosyalar için bir proje klasörü oluşturun ( **Çözüm Gezgini** **> yeni klasör ekle**' ye tıklayın). Ardından dosyaları klasöre ekleyin ( **Çözüm Gezgini**, **var olan > Ekle**' ye tıklayın ve ardından dosyaları seçin). Her bir dosyanın **Özellikler** sayfasında, her **zaman kopyalamak**için **Çıkış Dizinine Kopyala** ' yı ayarlayın.
+    Uygulama tarafından kullanılması gereken kod olmayan dosyalarınız varsa, bunları Visual Studio projesine dahil etmeniz gerekir. Ek dosyalar için bir proje klasörü oluşturun ( **Çözüm Gezgini** **> yeni klasör ekle**' ye tıklayın). Ardından dosyaları klasöre ekleyin ( **Çözüm Gezgini**, **var olan > Ekle**' ye tıklayın ve ardından dosyaları seçin). Her bir dosyanın **Özellikler** sayfasında, her **zaman kopyalamak** için **Çıkış Dizinine Kopyala** ' yı ayarlayın.
 
 ## <a name="set-up-debugging-with-remote-symbols"></a>Uzak simgelerle hata ayıklamayı ayarlama
 
@@ -119,7 +120,7 @@ Hata ayıklayıcı, Visual C# veya Visual Basic masaüstü uygulamalarını uzak
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio'da Hata Ayıklama](../debugger/index.yml)
 - [Hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md)
-- [Windows Güvenlik Duvarı’nı Uzaktan Hata Ayıklama İçin Yapılandırma](../debugger/configure-the-windows-firewall-for-remote-debugging.md)
-- [Uzaktan Hata Ayıklayıcı Bağlantı Noktası Atamaları](../debugger/remote-debugger-port-assignments.md)
+- [Uzaktan hata ayıklama için Windows güvenlik duvarını yapılandırma](../debugger/configure-the-windows-firewall-for-remote-debugging.md)
+- [Uzaktan hata ayıklayıcı bağlantı noktası atamaları](../debugger/remote-debugger-port-assignments.md)
 - [Uzak IIS Bilgisayarında Uzaktan ASP.NET ile Hata Ayıklama](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md)
-- [Uzaktan Hata Ayıklama Hataları ve Sorun Giderme](../debugger/remote-debugging-errors-and-troubleshooting.md)
+- [Uzaktan hata ayıklama hataları ve sorun giderme](../debugger/remote-debugging-errors-and-troubleshooting.md)

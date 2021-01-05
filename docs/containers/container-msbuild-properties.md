@@ -1,23 +1,23 @@
 ---
 title: Visual Studio kapsayıcı araçları derleme özellikleri
 author: ghogen
-description: Kapsayıcı araçları derleme işlemine genel bakış
+description: Visual Studio 'Nun bir kapsayıcı projesini nasıl oluşturup yürüttüleceğini özelleştirmek için kapsayıcı araçları derleme özelliklerini nasıl düzenleyeceğinizi öğrenin.
 ms.author: ghogen
 ms.date: 06/06/2019
 ms.technology: vs-azure
 ms.topic: reference
-ms.openlocfilehash: 427a70d9bc4f6ef326ffb16e7d26df9d8fae2365
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4e8675bd0ea12b30ce678ce454bcedee457ddacd
+ms.sourcegitcommit: d577818d3d8e365baa55c6108fa8159c46ed8b43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85283209"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97846735"
 ---
 # <a name="container-tools-build-properties"></a>Kapsayıcı araçları derleme özellikleri
 
 MSBuild 'in projenizi oluşturmak için kullandığı özellikleri ayarlayarak, Visual Studio 'Nun kapsayıcı projelerinizi nasıl derlemediğini özelleştirebilirsiniz. Örneğin, Dockerfile adını değiştirebilir, görüntüleriniz için Etiketler ve Etiketler belirtebilir, Docker komutlarına geçirilen ek bağımsız değişkenleri sağlayabilir ve Visual Studio 'Nun kapsayıcı ortamının dışında oluşturma gibi belirli performans iyileştirmeleri yapıp getirmediğini kontrol edebilirsiniz. Ayrıca, başlatılacak yürütülebilir dosyanın adı ve sağlanacak komut satırı bağımsız değişkenleri gibi hata ayıklama özelliklerini de ayarlayabilirsiniz.
 
-Bir özelliğin değerini ayarlamak için proje dosyasını düzenleyin. Örneğin, Dockerfile adlı dosyanın *Mydockerfile*olduğunu varsayalım. `DockerfileFile`Proje dosyasındaki özelliğini aşağıdaki gibi ayarlayabilirsiniz.
+Bir özelliğin değerini ayarlamak için proje dosyasını düzenleyin. Örneğin, Dockerfile adlı dosyanın *Mydockerfile* olduğunu varsayalım. `DockerfileFile`Proje dosyasındaki özelliğini aşağıdaki gibi ayarlayabilirsiniz.
 
 ```xml
 <PropertyGroup>
@@ -29,7 +29,7 @@ Bir özelliğin değerini ayarlamak için proje dosyasını düzenleyin. Örneğ
 
 Aşağıdaki tabloda kapsayıcı projeleri için kullanılabilen MSBuild özellikleri gösterilmektedir. NuGet paketi sürümü [Microsoft. VisualStudio. Azure. containers. Tools. targets](https://www.nuget.org/packages/Microsoft.VisualStudio.Azure.Containers.Tools.Targets/)için geçerlidir.
 
-| Özellik adı | Description | Varsayılan değer  | NuGet paket sürümü|
+| Özellik adı | Açıklama | Varsayılan değer  | NuGet paket sürümü|
 |---------------|-------------|----------------|----------------------|
 | ContainerDevelopmentMode | "Konak oluşturma" iyileştirmesi ("hızlı mod" hata ayıklama) etkin olup olmadığını denetler.  İzin verilen değerler **hızlı** ve **normal**. | Hızlı |1.0.1872750 veya daha yeni|
 | ContainerVsDbgPath | VSDBG hata ayıklayıcısı için yol. | `%USERPROFILE%\vsdbg\vs2017u5` |1.0.1985401 veya daha yeni|

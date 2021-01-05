@@ -1,5 +1,7 @@
 ---
 title: 'İzlenecek yol: özel düzenleyiciye özellikler ekleme | Microsoft Docs'
+description: Bu yönergeyi kullanarak düzenleyiciyi oluşturduktan sonra özel bir düzenleyiciye daha fazla özellik eklemeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 12f585a3e7dd4a8182d7ed80cf65a20d0a82da83
-ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
+ms.openlocfilehash: c08af63eaf68701f1a6703ac41fec20368d78931
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93414028"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863204"
 ---
 # <a name="walkthrough-add-features-to-a-custom-editor"></a>İzlenecek yol: özel düzenleyiciye özellikler ekleme
 Özel bir düzenleyici oluşturduktan sonra, ona daha fazla özellik ekleyebilirsiniz.
@@ -73,7 +75,7 @@ ms.locfileid: "93414028"
 
     1. `IDropTarget`Düzenleyicinize bir bırakma hedefi olduğunu IDE 'yi uyarmak için düzenleyicinize uygulayın.
 
-    2. <xref:Microsoft.VisualStudio.Shell.Interop.IVsToolboxUser>Düzenleyiciniz **araç kutusu** 'ndaki öğeleri etkinleştirip devre dışı bırakabilmeniz için, bu arabirimi görünümde uygulayın.
+    2. <xref:Microsoft.VisualStudio.Shell.Interop.IVsToolboxUser>Düzenleyiciniz **araç kutusu**'ndaki öğeleri etkinleştirip devre dışı bırakabilmeniz için, bu arabirimi görünümde uygulayın.
 
     3. <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.ResetDefaults%2A> `QueryService` <xref:Microsoft.VisualStudio.Shell.Interop.SVsToolbox> <xref:Microsoft.VisualStudio.Shell.Interop.IVsToolbox2> Ve arayüzlerinin bir işaretçisini almak için hizmetini uygulayın ve çağırın <xref:Microsoft.VisualStudio.Shell.Interop.IVsToolbox3> .
 
@@ -138,7 +140,7 @@ ms.locfileid: "93414028"
   > [!NOTE]
   > `IOleInPlaceComponent`Arabirim, OLE 2 menüsünü birleştirmeyi önlemek için kullanılır.
 
-   `IOleCommandTarget`Uygulamanız **Kes** , **Kopyala** ve **Yapıştır** gibi komutları işler. Uygulamasını uygularken `IOleCommandTarget` , Düzenleyicinizde kendi komut menü yapısını tanımlamak için kendi *. vsct* dosyasını gerektirip gerektirmediğini veya tarafından tanımlanan standart komutları uygulayamayacağını belirleyin [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Genellikle düzenleyiciler IDE menülerini kullanır ve genişletir ve kendi araç çubuklarını tanımlar. Bununla birlikte, genellikle bir düzenleyicinin IDE 'nin standart komut kümesini kullanmaya ek olarak kendi belirli komutlarını tanımlanması gerekir. Düzenleyiciniz, kullandığı standart komutları bildirmelidir ve sonra bir *. vsct* dosyasındaki yeni komutları, bağlam menülerini, üst düzey menüleri ve araç çubuklarını tanımlar. Yerinde etkinleştirme Düzenleyicisi oluşturursanız, <xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponent> OLE 2 menü birleştirme kullanmak yerine bir *. vsct* dosyasında düzenleyici için menüleri ve araç çubuklarını uygulayın ve tanımlayın.
+   `IOleCommandTarget`Uygulamanız **Kes**, **Kopyala** ve **Yapıştır** gibi komutları işler. Uygulamasını uygularken `IOleCommandTarget` , Düzenleyicinizde kendi komut menü yapısını tanımlamak için kendi *. vsct* dosyasını gerektirip gerektirmediğini veya tarafından tanımlanan standart komutları uygulayamayacağını belirleyin [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Genellikle düzenleyiciler IDE menülerini kullanır ve genişletir ve kendi araç çubuklarını tanımlar. Bununla birlikte, genellikle bir düzenleyicinin IDE 'nin standart komut kümesini kullanmaya ek olarak kendi belirli komutlarını tanımlanması gerekir. Düzenleyiciniz, kullandığı standart komutları bildirmelidir ve sonra bir *. vsct* dosyasındaki yeni komutları, bağlam menülerini, üst düzey menüleri ve araç çubuklarını tanımlar. Yerinde etkinleştirme Düzenleyicisi oluşturursanız, <xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponent> OLE 2 menü birleştirme kullanmak yerine bir *. vsct* dosyasında düzenleyici için menüleri ve araç çubuklarını uygulayın ve tanımlayın.
 
 - Kullanıcı arabiriminde menü komutunun kalabonu engellemek için, yeni komutları oluşturmadan önce IDE 'de var olan komutları kullanmanız gerekir. Paylaşılan komutlar *SharedCmdDef. vsct* ve *ShellCmdDef. vsct* içinde tanımlanır. Bu dosyalar, yüklemenizin VisualStudioIntegration\Common\Inc alt dizininde varsayılan olarak yüklenir [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)] .
 

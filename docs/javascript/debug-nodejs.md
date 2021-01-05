@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 801ea23430d13dbefd9498c57b07881235275961
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 369fa3c080705f552aed25ecef6bd87a3db43a64
+ms.sourcegitcommit: 105e7b5a486262bc92939980383ceee068098a11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85285198"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "97815626"
 ---
 # <a name="debug-a-javascript-or-typescript-app-in-visual-studio"></a>Visual Studio 'da JavaScript veya TypeScript uygulamasında hata ayıklama
 
@@ -29,17 +29,17 @@ Visual Studio kullanarak JavaScript ve TypeScript kodunda hata ayıklaması yapa
 
 1. Projenizi Visual Studio 'da açtığınızda, sunucu tarafı bir JavaScript dosyası (örneğin, *server.js*) açın, bir kesme noktası ayarlamak için sol Cilt payının cilt payından tıklayın:
 
-    ![Kesme noktası ayarlama](../javascript/media/tutorial-nodejs-react-set-breakpoint.png)
+    ![JavaScript kodunu gösteren Visual Studio Code penceresinin ekran görüntüsü. Sol cilt Paydaki kırmızı nokta, bir kesme noktasının ayarlandığını gösterir.](../javascript/media/tutorial-nodejs-react-set-breakpoint.png)
 
     Kesme noktaları, güvenilir hata ayıklamanın en temel ve temel özelliğidir. Bir kesme noktası, Visual Studio 'Nun çalışan kodunuzu askıya alması gerektiğini gösterir; böylece değişkenlerin değerlerine veya bellek davranışına veya kodun bir dalının çalıştırılıp çalıştırılmayacağı konusunda bir görünüm elde edebilirsiniz.
 
-1. Uygulamanızı çalıştırmak için **F5** tuşuna basın (**hata**ayıklama  >  **başlatma hata ayıklaması**).
+1. Uygulamanızı çalıştırmak için **F5** tuşuna basın (**hata** ayıklama  >  **başlatma hata ayıklaması**).
 
     Hata ayıklayıcı ayarladığınız kesme noktasında duraklatılır (geçerli ifade sarı olarak işaretlenir). Artık, şu anda kapsamda olan değişkenlerin üzerine giderek, **Yereller** ve **izleme** pencereleri gibi hata ayıklayıcı pencereleri kullanarak uygulamanızın durumunu inceleyebilirsiniz.
 
 1. Uygulamaya devam etmek için **F5** tuşuna basın.
 
-1. Chrome Geliştirici Araçları veya F12 araçlarını kullanmak istiyorsanız **F12**tuşuna basın. Bu araçları, DOM 'ı incelemek ve JavaScript konsolunu kullanarak uygulamayla etkileşim kurmak için kullanabilirsiniz.
+1. Chrome Geliştirici Araçları veya F12 araçlarını kullanmak istiyorsanız **F12** tuşuna basın. Bu araçları, DOM 'ı incelemek ve JavaScript konsolunu kullanarak uygulamayla etkileşim kurmak için kullanabilirsiniz.
 
 ## <a name="debug-client-side-script"></a>İstemci tarafı komut dosyasında hata ayıkla
 
@@ -78,7 +78,7 @@ Bu senaryo için Chrome ' ı kullanın.
 2. Hata ayıklama etkinken tarayıcınızı başlatın.
 
     ::: moniker range=">=vs-2019"
-    Visual Studio 2019 ' den başlayarak, `--remote-debugging-port=9222` **hata ayıklama** araç çubuğundan **.** .. > ve ardından **Ekle**' yi seçerek ve sonra da **bağımsız değişkenler** alanında bayrağını ayarlayarak tarayıcı başlatma sırasında bayrağı ayarlayabilirsiniz. Hata **ayıklamayla**hata ayıklama veya Chrome **ile kenar** gibi farklı bir kolay ad kullanın. Ayrıntılar için bkz. [sürüm notları](/visualstudio/releases/2019/release-notes-v16.2).
+    Visual Studio 2019 ' den başlayarak, `--remote-debugging-port=9222` **hata ayıklama** araç çubuğundan **.** .. > ve ardından **Ekle**' yi seçerek ve sonra da **bağımsız değişkenler** alanında bayrağını ayarlayarak tarayıcı başlatma sırasında bayrağı ayarlayabilirsiniz. Hata **ayıklamayla** hata ayıklama veya Chrome **ile kenar** gibi farklı bir kolay ad kullanın. Ayrıntılar için bkz. [sürüm notları](/visualstudio/releases/2019/release-notes-v16.2).
 
     ![Tarayıcınızı hata ayıklama etkinken açılacak şekilde ayarlama](../javascript/media/tutorial-nodejs-react-edge-with-debugging.png)
 
@@ -107,13 +107,13 @@ Hata ayıklayıcıyı Visual Studio 'dan iliştirmek ve istemci tarafı kodda is
 
 1. Visual Studio 'ya geçin ve kaynak kodunuzda bir JavaScript dosyası, TypeScript dosyası veya JSX dosyası olabilecek bir kesme noktası ayarlayın. (Dönüş bildirimi veya var bildirimi gibi kesme noktalarına izin veren bir kod satırında kesme noktası ayarlayın.)
 
-    ![Kesme noktası ayarlama](../javascript/media/tutorial-nodejs-react-set-breakpoint-client-code.png)
+    ![Visual Studio Code penceresinin ekran görüntüsü. Bir dönüş ekstresi seçilir ve sol cilt Paydaki kırmızı nokta bir kesme noktasının ayarlandığını gösterir.](../javascript/media/tutorial-nodejs-react-set-breakpoint-client-code.png)
 
     Belirli kodu bir transpiled dosyasında bulmak için **CTRL** + **F** 'yi (**Düzenle**  >  **Bul ve Değiştir**  >  **hızlı bul**) kullanın.
 
-    İstemci tarafı kod için, bir TypeScript dosyasında bir kesme noktasına isabet etmek üzere *. Vue*veya JSX dosyası genellikle [kaynak eşlemelerinin](#generate_source_maps)kullanılmasını gerektirir. Visual Studio 'da hata ayıklamayı desteklemek için bir kaynak eşlemesinin doğru şekilde yapılandırılması gerekir.
+    İstemci tarafı kod için, bir TypeScript dosyasında bir kesme noktasına isabet etmek üzere *. Vue* veya JSX dosyası genellikle [kaynak eşlemelerinin](#generate_source_maps)kullanılmasını gerektirir. Visual Studio 'da hata ayıklamayı desteklemek için bir kaynak eşlemesinin doğru şekilde yapılandırılması gerekir.
 
-2. Visual Studio 'da hata ayıklama hedefi olarak hedef tarayıcınızı seçin ve **Ctrl** + uygulamayı tarayıcıda çalıştırmak için CTRL**F5** tuşuna basın (**hata ayıklama**  >  **olmadan Başlat**).
+2. Visual Studio 'da hata ayıklama hedefi olarak hedef tarayıcınızı seçin ve  + uygulamayı tarayıcıda çalıştırmak için CTRL **F5** tuşuna basın (**hata ayıklama**  >  **olmadan Başlat**).
 
     ::: moniker range=">=vs-2019"
     Kolay ada sahip bir tarayıcı yapılandırması oluşturduysanız, hata ayıklama hedefi olarak bunu seçin.
@@ -121,14 +121,14 @@ Hata ayıklayıcıyı Visual Studio 'dan iliştirmek ve istemci tarafı kodda is
 
     Uygulama yeni bir tarayıcı sekmesinde açılır.
 
-3. İşleme **Ekle hata ayıkla**öğesini seçin  >  **Attach to Process**.
+3. İşleme **Ekle hata ayıkla** öğesini seçin  >  .
 
     > [!TIP]
-    > Visual Studio 2017 ' den başlayarak, bu adımları izleyerek işleme ilk kez iliştirdikten sonra, **Debug**  >  **işlemek için**hata ayıklama yeniden iliştirme ' yi seçerek aynı işleme hızlıca tekrar iliştirebilirsiniz.
+    > Visual Studio 2017 ' den başlayarak, bu adımları izleyerek işleme ilk kez iliştirdikten sonra,   >  **işlemek için** hata ayıklama yeniden iliştirme ' yi seçerek aynı işleme hızlıca tekrar iliştirebilirsiniz.
 
 4. **Işleme İliştir** iletişim kutusunda, ekleyebileceğiniz tarayıcı örneklerinin filtrelenmiş bir listesini alın.
     ::: moniker range=">=vs-2019"
-    Visual Studio 2019 ' de, arama sonuçlarını filtrelemek için hedef **edge** tarayıcınız, **JavaScript (Chrome)** veya **chrome** **JavaScript (Microsoft Edge-ku)** için doğru hata ayıklayıcıyı **Attach to** seçin.
+    Visual Studio 2019 ' de, arama sonuçlarını filtrelemek için hedef  tarayıcınız, **JavaScript (Chrome)** veya  **JavaScript (Microsoft Edge-ku)** için doğru hata ayıklayıcıyı  seçin.
     ::: moniker-end
     ::: moniker range="vs-2017"
     Visual Studio 2017 ' de, **Ekle** alanına **WebKit Code** ' u seçin, arama sonuçlarını filtrelemek için filtre kutusuna **Chrome** yazın.
@@ -141,10 +141,10 @@ Hata ayıklayıcıyı Visual Studio 'dan iliştirmek ve istemci tarafı kodda is
     ::: moniker range=">=vs-2019"
     Aşağıdaki örnekte bunun Microsoft Edge (Kmıum) tarayıcısı için nasıl göründüğü gösterilmektedir.
 
-    ![İşleme İliştir](../javascript/media/tutorial-nodejs-react-attach-to-process-edge.png)
+    ![İşleme ekle](../javascript/media/tutorial-nodejs-react-attach-to-process-edge.png)
     ::: moniker-end
     ::: moniker range="vs-2017"
-    ![İşleme İliştir](../javascript/media/tutorial-nodejs-react-attach-to-process.png)
+    ![İşleme ekle](../javascript/media/tutorial-nodejs-react-attach-to-process.png)
 
     Visual Studio 'da DOM Gezgini ve JavaScript konsolu açıldığında hata ayıklayıcının doğru şekilde eklenmiş olduğunu bilirsiniz. Bu hata ayıklama araçları, Microsoft Edge için Chrome Geliştirici Araçları ve F12 araçlarına benzerdir.
     ::: moniker-end
@@ -154,13 +154,13 @@ Hata ayıklayıcıyı Visual Studio 'dan iliştirmek ve istemci tarafı kodda is
 
 6. Kesme noktasına sahip kod zaten yürütülmüş olabileceğinden, tarayıcı sayfanızı yenileyin. Gerekirse, kesme noktasıyla birlikte kodun yürütülmesine neden olacak şekilde işlem yapın.
 
-    Hata ayıklayıcıda duraklalarken, değişkenlerin üzerine giderek ve hata ayıklayıcı pencerelerini kullanarak uygulamanızın durumunu inceleyebilirsiniz. Kod aracılığıyla (**F5**, **F10**ve **F11**) hata ayıklayıcıyı ilerleyebilirsiniz. Temel hata ayıklama özellikleri hakkında daha fazla bilgi için bkz. [hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md).
+    Hata ayıklayıcıda duraklalarken, değişkenlerin üzerine giderek ve hata ayıklayıcı pencerelerini kullanarak uygulamanızın durumunu inceleyebilirsiniz. Kod aracılığıyla (**F5**, **F10** ve **F11**) hata ayıklayıcıyı ilerleyebilirsiniz. Temel hata ayıklama özellikleri hakkında daha fazla bilgi için bkz. [hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md).
 
     Uygulama türüne, daha önce izlediğiniz adımlara ve tarayıcı durumunuza benzer diğer faktörlere bağlı olarak bir transpiled *. js* dosyası ya da kaynak dosyasında kesme noktasına ulaşırsınız. Her iki durumda da kodun içinde ilerleyebileceğiniz değişkenleri inceleyebilirsiniz.
 
    * TypeScript, JSX veya *. Vue* kaynak dosyasındaki kodu kesmeniz gerekiyorsa ve bunu yapamadığından, [sorun giderme](#troubleshooting_source_maps) bölümünde açıklandığı gibi ortamınızın doğru şekilde ayarlandığından emin olun.
 
-   * Bir transpiled JavaScript dosyasındaki kodu kesmeniz gerekiyorsa (örneğin, *app-bundle.js*) ve bunu yapamadığından, *filename.js. map*kaynak eşleme dosyasını kaldırın.
+   * Bir transpiled JavaScript dosyasındaki kodu kesmeniz gerekiyorsa (örneğin, *app-bundle.js*) ve bunu yapamadığından, *filename.js. map* kaynak eşleme dosyasını kaldırın.
 
 ### <a name="troubleshooting-breakpoints-and-source-maps"></a><a name="troubleshooting_source_maps"></a> Kesme noktaları ve kaynak haritaları sorunlarını giderme
 
@@ -170,7 +170,7 @@ Bir TypeScript veya JSX kaynak dosyasındaki kodu kesmeniz gerekirse ve bunu yap
       
 * [Tarayıcıyı hata ayıklama modunda başlattığınızdan](#prepare_the_browser_for_debugging)emin olun.
 
-* Kaynak eşleme dosyanızın kaynak dosyanıza doğru göreli yolu içerdiğinden ve Visual Studio hata ayıklayıcının kaynak dosyayı bulmasını önleyen *WebPack:///* gibi desteklenmeyen ön ekler içermediğinden emin olun. Örneğin, *WebPack:///.app.TSX* gibi bir başvuru, *./app5tsx*olarak düzeltilemeyebilir. Bunu kaynak eşleme dosyasında (test için yararlı olan) veya özel bir yapı yapılandırması aracılığıyla el ile yapabilirsiniz. Daha fazla bilgi için bkz. [hata ayıklama için kaynak haritaları oluşturma](#generate_source_maps).
+* Kaynak eşleme dosyanızın kaynak dosyanıza doğru göreli yolu içerdiğinden ve Visual Studio hata ayıklayıcının kaynak dosyayı bulmasını önleyen *WebPack:///* gibi desteklenmeyen ön ekler içermediğinden emin olun. Örneğin, *WebPack:///.app.TSX* gibi bir başvuru, *./app5tsx* olarak düzeltilemeyebilir. Bunu kaynak eşleme dosyasında (test için yararlı olan) veya özel bir yapı yapılandırması aracılığıyla el ile yapabilirsiniz. Daha fazla bilgi için bkz. [hata ayıklama için kaynak haritaları oluşturma](#generate_source_maps).
 
 Alternatif olarak, bir kaynak dosyada (örneğin, *app. TSX*) kodu kesmeniz gerekiyorsa ve bunu yapamazsanız, `debugger;` kaynak dosyadaki ifadesini kullanmayı deneyin veya bunun yerine Chrome Geliştirici Araçları (veya Microsoft Edge için F12 araçları) kesme noktaları ayarlayın.
 
@@ -187,7 +187,7 @@ Visual Studio, JavaScript kaynak dosyalarında kaynak haritaları kullanma ve ol
 
 Kaynak eşlemelerinin gelişmiş ayarlarını yapılandırmak için bir TypeScript projesinde *tsconfig.js* veya proje ayarlarını kullanın, ancak her ikisini birden kullanmayın.
 
-Visual Studio kullanarak hata ayıklamayı etkinleştirmek için, oluşturulan kaynak haritadaki kaynak dosyanıza yönelik başvurunun doğru olduğundan emin olmanız gerekir (Bu işlem test gerektirebilir). Örneğin, WebPack kullanıyorsanız, kaynak eşleme dosyasındaki başvurular, Visual Studio 'Nun bir TypeScript veya JSX kaynak dosyası bulmasını önleyen *WebPack:///* önekini içerir. Özellikle, hata ayıklama amacıyla bunu Düzeltmediğiniz zaman, kaynak dosyasına ( *app. TSX*gibi) yapılan başvuru, *WebPack:///./app.TSX* gibi bir şekilde değiştirilmelidir *.* bu, hata ayıklamayı (yol, kaynak dosyanıza görelidir) sağlar. Aşağıdaki örnek, Visual Studio ile çalışmak için en yaygın paketleyiciler olan WebPack 'te kaynak eşlemelerini nasıl yapılandırabildiğini gösterir.
+Visual Studio kullanarak hata ayıklamayı etkinleştirmek için, oluşturulan kaynak haritadaki kaynak dosyanıza yönelik başvurunun doğru olduğundan emin olmanız gerekir (Bu işlem test gerektirebilir). Örneğin, WebPack kullanıyorsanız, kaynak eşleme dosyasındaki başvurular, Visual Studio 'Nun bir TypeScript veya JSX kaynak dosyası bulmasını önleyen *WebPack:///* önekini içerir. Özellikle, hata ayıklama amacıyla bunu Düzeltmediğiniz zaman, kaynak dosyasına ( *app. TSX* gibi) yapılan başvuru, *WebPack:///./app.TSX* gibi bir şekilde değiştirilmelidir *.* bu, hata ayıklamayı (yol, kaynak dosyanıza görelidir) sağlar. Aşağıdaki örnek, Visual Studio ile çalışmak için en yaygın paketleyiciler olan WebPack 'te kaynak eşlemelerini nasıl yapılandırabildiğini gösterir.
 
 (Yalnızca WebPack) Kesme noktasını JSX dosyasında (bir transpiled JavaScript dosyası yerine) bir TypeScript olarak ayarlıyorsanız, WebPack yapılandırmanızı güncelleştirmeniz gerekir. Örneğin, *webpack-config.js*, aşağıdaki kodu değiştirmeniz gerekebilir:
 
@@ -264,17 +264,17 @@ Ancak, Razor söz dizimi (cshtml, vbhtml) ile oluşturulan dosyalarda otomatik o
 * **Kesmek istediğiniz `debugger;` ifadeyi yerleştirin**: Bu, dinamik betiğin yürütmeyi durdurmasına ve Oluşturulma sırasında anında hata ayıklamayı başlatmasına neden olur.
 * **Visual Studio 'da sayfayı yükleyin ve dinamik belgeyi açın**: hata ayıklama sırasında dinamik dosyayı açmanız, kesme noktasını ayarlamanız ve bu yöntemin çalışması için sayfayı yenilemeniz gerekir. Chrome veya Internet Explorer kullanıyor olmanıza bağlı olarak, aşağıdaki stratejilerden birini kullanarak dosyayı bulacaksınız:
 
-   Chrome için, **YourPageName > Çözüm Gezgini > betik belgelerini**ziyaret edin.
+   Chrome için, **YourPageName > Çözüm Gezgini > betik belgelerini** ziyaret edin.
 
     > [!NOTE]
-    > Chrome kullanırken, ** \<script> Etiketler arasında kullanılabilir kaynak olmadığını**bir ileti alabilirsiniz. Bu Tamam, hata ayıklamaya devam et.
+    > Chrome kullanırken, **\<script> Etiketler arasında kullanılabilir kaynak olmadığını** bir ileti alabilirsiniz. Bu Tamam, hata ayıklamaya devam et.
 
    ::: moniker range=">=vs-2019"
    Microsoft Edge (Kmıum) için Chrome ile aynı yordamı kullanın.
    ::: moniker-end
 
    ::: moniker range="vs-2017"
-   Internet Explorer için, **Windows Internet explorer > YourPageName > Çözüm Gezgini > betik belgelerine**gidin.
+   Internet Explorer için, **Windows Internet explorer > YourPageName > Çözüm Gezgini > betik belgelerine** gidin.
    ::: moniker-end
 
 Daha fazla bilgi için bkz. [Google Chrome 'da ASP.net projelerinde istemci tarafı hata ayıklama](https://devblogs.microsoft.com/aspnet/client-side-debugging-of-asp-net-projects-in-google-chrome/).

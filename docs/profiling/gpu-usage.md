@@ -1,5 +1,6 @@
 ---
 title: GPU kullanımı | Microsoft Docs
+description: Direct3D uygulamanızın üst düzey donanım kullanımını daha iyi anlamak için performans Profiler 'daki GPU kullanımı aracını nasıl kullanacağınızı öğrenin.
 ms.date: 11/01/2018
 ms.topic: conceptual
 author: mikejo5000
@@ -7,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1a738490933c6f2d1cdf89e7e974a268540af991
-ms.sourcegitcommit: 14637be49401f56341c93043eab560a4ff6b57f6
+ms.openlocfilehash: a6b143cc0b3001f0a182de43f1b6eea554025eda
+ms.sourcegitcommit: 105e7b5a486262bc92939980383ceee068098a11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90074975"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "97815661"
 ---
 # <a name="gpu-usage"></a>GPU kullanımı
 
@@ -62,11 +63,11 @@ GPU kullanım raporunu oluşturmak ve görüntülemek için:
 
 1. Tanılama oturumu penceresinin alt bölümünde, **koleksiyonu durdur** bağlantısını seçin veya sol üst köşedeki **Durdur** ' u seçin.
 
-   ![Tanılama oturumu penceresinin ekran görüntüsü](media/gfx_diag_gpu_usage_collect.png "gfx_diag_gpu_usage_collect")
+   ![GPU kullanım aracında bir Tanılama oturumu penceresinin ekran görüntüsü, saniyedeki kare sayısı, GPU kullanımı, durdur düğmesi ve koleksiyonu durdur bağlantısı.](media/gfx_diag_gpu_usage_collect.png "gfx_diag_gpu_usage_collect")
 
 2. Raporun üst kısmında, araştırmak istediğiniz sorunu gösteren grafiklerden birindeki bir bölümü seçin. Seçiminiz en fazla 3 saniye uzunluğunda olabilir. Daha uzun bölümler başlangıca doğru kesiliyor.
 
-   ![Tanılama oturumu penceresinin ekran görüntüsü](media/gfx_diag_gpu_usage_select1.png "gfx_diag_gpu_usage_select1")
+   ![Tanılama oturumu zaman çizelgesinin bir parçası olan GPU kullanımı aracında bir Tanılama oturumu penceresinin ekran görüntüsü.](media/gfx_diag_gpu_usage_select1.png "gfx_diag_gpu_usage_select1")
 
 3. Seçiminizin ayrıntılı bir zaman çizelgesini görüntülemek için, raporun alt bölümünde, **... Bu Aralık iletisi için GPU kullanımının ayrıntılarını görüntülemek için buraya tıklayın** , **Ayrıntıları görüntüle**' yi seçin.
 
@@ -84,7 +85,7 @@ Visual Studio 2017 ile başlayarak, bu verileri [Gpuview](/windows-hardware/driv
 
 ## <a name="use-the-gpu-usage-report"></a>GPU kullanımı raporunu kullanma
 
-GPU kullanımı raporunun üst bölümü, CPU işleme etkinliği, GPU işleme etkinliği ve GPU kopyalama etkinliği için zaman çizelgelerini gösterir. Bu zaman çizelgeleri, ekran vsync öğesini belirten açık gri, dikey çubuklar tarafından bölünür. Çubukların sıklığı, GPU kullanım verilerinin toplandığı bir **Görünüm (görüntü** açılan listesini kullanarak seçilir) ile eşleşen yenileme oranıyla eşleşir.
+GPU kullanımı raporunun üst bölümü, CPU işleme etkinliği, GPU işleme etkinliği ve GPU kopyalama etkinliği için zaman çizelgelerini gösterir. Bu zaman çizelgeleri, ekran dikey eşitlemesini (VSync) gösteren açık gri, dikey çubuklar tarafından bölünür. Çubukların sıklığı, GPU kullanım verilerinin toplandığı bir **Görünüm (görüntü** açılan listesini kullanarak seçilir) ile eşleşen yenileme oranıyla eşleşir.
 
 Görüntüleme, uygulamanızın performans hedefinden daha yüksek bir yenileme hızına sahip olabileceğinden, vsync ile uygulamanızın elde olmasını istediğiniz kare hızı arasında 1-1 arasında bir ilişki olmayabilir. Bir uygulamanın, performans hedefini karşılamak için tüm işlemleri tamamlaması, işleme yapması ve `Present()` hedeflenen kare hızına çağrı yapması gerekir. Oluşturulan çerçeve, sonraki vsync 'tan sonra gösterilmez `Present()` , ancak.
 
@@ -116,7 +117,7 @@ GPU kullanımı raporunun alt bölümündeki olayların listesi, her bir olayın
 |**İş parçacığı KIMLIĞI**|Olayın geldiği iş parçacığı KIMLIĞI.|
 
 > [!IMPORTANT]
-> GPU veya sürücünüz gerekli olan izleme özelliklerini desteklemiyorsa, tüm olaylar *öznitelik*yok olarak görünür. Bu sorunla karşılaşırsanız, GPU sürücünüzü güncelleştirip yeniden deneyin. Daha fazla bilgi için bu belgenin sonundaki [donanım ve sürücü desteği](#hwsupport) bölümüne bakın.
+> GPU veya sürücünüz gerekli olan izleme özelliklerini desteklemiyorsa, tüm olaylar *öznitelik* yok olarak görünür. Bu sorunla karşılaşırsanız, GPU sürücünüzü güncelleştirip yeniden deneyin. Daha fazla bilgi için bu belgenin sonundaki [donanım ve sürücü desteği](#hwsupport) bölümüne bakın.
 
 ## <a name="gpu-usage-settings"></a>GPU kullanım ayarları
 
@@ -128,7 +129,7 @@ Profil oluşturma işlemini uygulamanın başından ertelemek için:
 
 2. **Performans ve tanılama** hub 'ında **GPU kullanımı**' nın yanındaki **Ayarlar** bağlantısını seçin.
 
-3. **GPU profil oluşturma yapılandırması**altında, **genel** Özellik sayfasında, profil oluşturmayı ertelemek için **Uygulama başlangıcında profil oluşturmayı** Başlat onay kutusunu temizleyin.
+3. **GPU profil oluşturma yapılandırması** altında, **genel** Özellik sayfasında, profil oluşturmayı ertelemek için **Uygulama başlangıcında profil oluşturmayı** Başlat onay kutusunu temizleyin.
 
    ![Nesne özellik sayfalarının, koleksiyon seçeneklerini gösteren ekran görüntüsü](media/gfx_diag_gpu_usage_config.png "gfx_diag_gpu_usage_config")
 

@@ -1,5 +1,6 @@
 ---
 title: typeof ifadesini nameof ifadesine dönüştürme
+description: Visual Studio 'daki hızlı eylemler ve yeniden düzenlemeler menüsünü kullanarak Visual Basic typeof for C# ve GetType ' deki NameOf öğesinin NameOf öğesine nasıl dönüştüreceğiniz hakkında bilgi edinin.
 ms.date: 08/12/2020
 ms.topic: reference
 author: m-redding
@@ -10,12 +11,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 96bd4d67302fb09e5c1cb7837ad73b345ad88c81
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: ce76b82e2ebc68634be7cf4d463f6b8216d81e06
+ms.sourcegitcommit: 3c571f44bfd6402efea5187af43df287bac5b6ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400330"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97761205"
 ---
 # <a name="convert-typeof-to-nameof"></a>Dönüştür `typeof``nameof`
 
@@ -39,10 +40,10 @@ Bu yeniden düzenleme için geçerlidir:
 3. Aşağıdaki seçeneklerden birini belirleyin:
 
     - C#
-      <br>**' Typeof ' öğesini ' NameOf ' olarak Dönüştür** ' ü seçin: ![ typeof 'ı NameOf olarak Dönüştür](media/convert-type-of.PNG)
+      <br>' **Typeof ' öğesini ' NameOf ' olarak Dönüştür**' ![ ü seçin: ' typeof ' öğesini ' NameOf ' olarak Dönüştür ve Visual Studio 'daki hızlı eylemler ve yeniden düzenlemeler menüsünün ekran görüntüsü ' NameOf ' seçili ve C# kod değişiklikleri gösteriliyor.](media/convert-type-of.PNG)
 
     - Visual Basic
-      <br>**' GetType ' öğesini ' NameOf ' öğesine Dönüştür** ' ü seçin: ![ typeof adını NameOf olarak Dönüştür](media/convert-get-type.PNG)
+      <br>' **GetType ' öğesini ' NameOf ' öğesine Dönüştür**' i seçin: ![ Visual Studio 'daki hızlı eylemler ve yeniden düzenlemeler menüsünün ekran görüntüsü ' ' NameOf ' seçili ve Visual Basic kod değişikliği gösteriliyor.](media/convert-get-type.PNG)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

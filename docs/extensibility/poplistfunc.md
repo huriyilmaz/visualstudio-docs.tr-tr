@@ -1,5 +1,7 @@
 ---
 title: POPLISTFUNC | Microsoft Docs
+description: Dosya veya dizinlerin listesini güncelleştirmek için kaynak denetim eklentisi tarafından kullanılan POPLISTFUNC callback işlevi hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,17 +14,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6c5f8c1683a993915476ff23f1f5d5f2c2aba462
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 239f1aa5a55c3a5ce3a0f2a3ec9145f3cdb0630e
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80702071"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863160"
 ---
 # <a name="poplistfunc"></a>POPLISTFUNC
 Bu geri çağırma, IDE tarafından [SccPopulateList](../extensibility/sccpopulatelist-function.md) için sağlanır ve kaynak denetim eklentisi tarafından, bir dosya veya dizinlerin listesini güncelleştirmek için kullanılır (işleve de sağlanır `SccPopulateList` ).
 
- Bir Kullanıcı IDE 'de **Get** komutunu SEÇTIĞINDE, IDE kullanıcının alabilir tüm dosyaların bir liste kutusunu görüntüler. Ne yazık ki IDE, kullanıcının alabilir tüm dosyaların tam listesini bilmez; yalnızca eklentide bu liste vardır. Diğer kullanıcılar kaynak kodu denetim projesine dosya eklemiş ise, bu dosyalar listede görünmelidir, ancak IDE bunun hakkında bilgi sahibi değildir. IDE, kullanıcının alabilir olduğunu düşündüğü dosyaların bir listesini oluşturur. Bu listeyi kullanıcıya görüntülemeden önce, [SccPopulateList](../extensibility/sccpopulatelist-function.md) `,` kaynak denetimi eklentisine, listeden dosya ekleme ve silme şansı sağlayan SccPopulateList öğesini çağırır.
+ Bir Kullanıcı IDE 'de **Get** komutunu SEÇTIĞINDE, IDE kullanıcının alabilir tüm dosyaların bir liste kutusunu görüntüler. Ne yazık ki IDE, kullanıcının alabilir tüm dosyaların tam listesini bilmez; yalnızca eklentide bu liste vardır. Diğer kullanıcılar kaynak kodu denetim projesine dosya eklemiş ise, bu dosyalar listede görünmelidir, ancak IDE bunun hakkında bilgi sahibi değildir. IDE, kullanıcının alabilir olduğunu düşündüğü dosyaların bir listesini oluşturur. Bu listeyi kullanıcıya görüntülemeden önce, [](../extensibility/sccpopulatelist-function.md) `,` kaynak denetimi eklentisine, listeden dosya ekleme ve silme şansı sağlayan SccPopulateList öğesini çağırır.
 
 ## <a name="signature"></a>İmza
  Kaynak denetimi eklentisi, aşağıdaki prototiple IDE uygulanmış bir işlev çağırarak listeyi değiştirir:

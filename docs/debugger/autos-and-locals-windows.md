@@ -1,6 +1,7 @@
 ---
 title: Değişkenleri İnceleme-oto ve Yereller Windows | Microsoft Docs
-ms.custom: seodec18
+description: Visual Studio 'da hata ayıklarken, oto ve Yereller pencerelerinde değişkenleri inceleyin. Hata ayıklarken, oto ve Locals pencereleri değişken değerlerini gösterir.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 10/18/2018
 ms.topic: how-to
 f1_keywords:
@@ -15,22 +16,25 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3ae67fadf5d9710f2088f47617b74eeeb8212826
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b57c27d038193a5c73bee48814a2aa457a94b6a6
+ms.sourcegitcommit: 3c571f44bfd6402efea5187af43df287bac5b6ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350751"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97760919"
 ---
 # <a name="inspect-variables-in-the-autos-and-locals-windows"></a>Oto ve Yereller pencerelerinde değişkenleri İnceleme
 
-Hata ayıklarken, **oto** ve **Locals** pencereleri değişken değerlerini gösterir. Pencereler yalnızca hata ayıklama oturumu sırasında kullanılabilir. **Oto** penceresi, geçerli kesme noktası etrafında kullanılan değişkenleri gösterir. **Yereller** penceresi, genellikle geçerli işlev veya yöntem olan yerel kapsamda tanımlanan değişkenleri gösterir. Kodu ilk kez ayıklamaya çalıştığınızda, bu makaleye geçmeden önce mutlak yeni başlayanlar ve [hata ayıklama teknikleri ve araçları](../debugger/write-better-code-with-visual-studio.md) [için hata ayıklamayı](../debugger/debugging-absolute-beginners.md) okumak isteyebilirsiniz.
+Hata ayıklarken, **oto** ve **Locals** pencereleri değişken değerlerini gösterir. Pencereler yalnızca hata ayıklama oturumu sırasında kullanılabilir. **Oto** penceresi, geçerli kesme noktası etrafında kullanılan değişkenleri gösterir. **Yereller** penceresi, genellikle geçerli işlev veya yöntem olan yerel kapsamda tanımlanan değişkenleri gösterir.
+
+> [!NOTE]
+> Kodu ilk kez ayıklamaya çalıştığınızda, bu makaleye geçmeden önce mutlak yeni başlayanlar ve [hata ayıklama teknikleri ve araçları](../debugger/write-better-code-with-visual-studio.md) [için hata ayıklamayı](../debugger/debugging-absolute-beginners.md) okumak isteyebilirsiniz.
 
  Bu **pencere,** JavaScript veya F # Için değil C#, Visual Basic, C++ ve Python kodu için kullanılabilir.
 
-Hata ayıklama sırasında **oto** penceresini açmak için Windows oto **hatalarını ayıkla**  >  **Windows**  >  **Autos**' yı seçin veya **CTRL** + **alt** + **V**  >  **A**tuşlarına basın.
+Hata ayıklama sırasında **oto** penceresini açmak için Windows oto **hatalarını ayıkla**  >    >  ' yı seçin veya **CTRL** + **alt** + **V**  >  **A** tuşlarına basın.
 
-**Yereller** penceresini açmak için hata ayıklama sırasında **Debug**  >  **Windows**  >  **yerelleri**Hata Ayıkla ' yı seçin veya **alt** + **4**' e basın.
+**Yereller** penceresini açmak için hata ayıklama sırasında   >  **Windows**  >  **yerelleri** Hata Ayıkla ' yı seçin veya **alt** + **4**' e basın.
 
 > [!NOTE]
 > Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için bkz. [Mac için Visual Studio veri görselleştirmeleri](/visualstudio/mac/data-visualizations).
@@ -39,7 +43,7 @@ Hata ayıklama sırasında **oto** penceresini açmak için Windows oto **hatala
 
 Diziler ve nesneler, ağaç denetimleri olarak **oto** ve **Yereller** pencerelerinde gösterilir. Alanı ve özellikleri göstermek üzere görünümü genişletmek için bir değişken adının solundaki oku seçin. <xref:System.IO.FileStream?displayProperty=fullName> **Locals** penceresinde bir nesne örneği aşağıda verilmiştir:
 
-![Yereller-FILESTREAM](../debugger/media/locals-filestream.png "Yereller-FILESTREAM")
+![Yereller penceresinin, dosyanın bir System. ıO. FILESTREAM değeri olarak ayarlandığı ekran görüntüsü.](../debugger/media/locals-filestream.png)
 
 **Yereller** veya **oto** penceresinde kırmızı bir değer, en son değerlendirmeden bu yana değerin değiştiği anlamına gelir. Değişiklik, önceki bir hata ayıklama oturumundan veya penceredeki değeri değiştirdiğiniz için olabilir.
 
@@ -91,7 +95,7 @@ Ayrıca, oto veya yerel öğeler pencerelerinde nesnenin özellik listesini gör
 
 **Hata ayıklama konumu** araç çubuğunu, **oto** ve **Yereller** pencerelerinin bağlamını değiştiren istenen bir işlevi, iş parçacığını veya işlemi seçmek için kullanabilirsiniz.
 
-**Hata ayıklama konumu** araç çubuğunu etkinleştirmek için, araç çubuğu alanının boş bir bölümüne tıklayın ve açılan menüden **hata ayıklama konumu** ' nu seçin ya da **View**  >  **araç çubuğu**  >  **hata ayıklama konumunu**görüntüle ' yi seçin.
+**Hata ayıklama konumu** araç çubuğunu etkinleştirmek için, araç çubuğu alanının boş bir bölümüne tıklayın ve açılan menüden **hata ayıklama konumu** ' nu seçin ya da   >  **araç çubuğu**  >  **hata ayıklama konumunu** görüntüle ' yi seçin.
 
 Bir kesme noktası ayarlayın ve hata ayıklamayı başlatın. Kesme noktası isabet edildiğinde, yürütme duraklatılır ve konumu **hata ayıklama konumu** araç çubuğunda görebilirsiniz.
 
@@ -116,7 +120,7 @@ Farklı kod dilleri, **oto** penceresinde farklı değişkenler görüntüler.
 
    Satırda bir kesme noktası ayarlayın `c = 3;` ve hata ayıklayıcıyı başlatın. Yürütme durakladığında, **oto** penceresi görüntülenecektir:
 
-   ![Oto 'lar-CSharp](../debugger/media/autos-csharp.png "Oto 'lar-CSharp")
+   ![C değerinin 0 olarak ayarlandığı, oto s penceresinin ekran görüntüsü.](../debugger/media/autos-csharp.png)
 
    `c`Satırı henüz yürütülmediği için değeri 0 ' dır `c = 3` .
 
@@ -136,7 +140,7 @@ Farklı kod dilleri, **oto** penceresinde farklı değişkenler görüntüler.
 
     Satırda bir kesme noktası ayarlayın `e = 5;` ve hata ayıklayıcıyı çalıştırın. Yürütme durdurulduğunda, **oto** penceresi görüntülenecektir:
 
-    ![Oto s-C + +](../debugger/media/autos-cplus.png "Oto s-C + +")
+    ![Bir değeri 3 olan int c 'yi gösteren vurgulanmış çizgi ile, oto penceresinin ekran görüntüsü.](../debugger/media/autos-cplus.png)
 
     `e`Satır `e = 5` henüz yürütülmediği için değişken başlatılmamış.
 
@@ -171,7 +175,7 @@ private static int subtractVars(int i, int j)
 
 1. Satırda bir kesme noktası ayarlayın `int x = sumVars(a, b) + subtractVars(c, d);` .
 
-1. Hata ayıklamayı başlatın ve yürütme kesme noktasında durakladığında, **Atla** ' yı seçin veya **F10**tuşuna basın. Aşağıdaki dönüş değerlerini, **oto s** penceresinde görmeniz gerekir:
+1. Hata ayıklamayı başlatın ve yürütme kesme noktasında durakladığında, **Atla** ' yı seçin veya **F10** tuşuna basın. Aşağıdaki dönüş değerlerini, **oto s** penceresinde görmeniz gerekir:
 
   ![Cs dönüş değeri C #](../debugger/media/autosreturnvaluecsharp2.png "Cs dönüş değeri C #")
 

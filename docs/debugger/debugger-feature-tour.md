@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ffaeff850c739cd81569a88ae980acf837c413c1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c6d451735042374f0e3c6fb2154cd54520a069fc
+ms.sourcegitcommit: 3c571f44bfd6402efea5187af43df287bac5b6ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84184217"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97761439"
 ---
 # <a name="first-look-at-the-visual-studio-debugger"></a>Visual Studio hata ayıklayıcısına ilk bakış
 
@@ -33,7 +33,7 @@ Kod Düzenleyicisi 'nde açık bir dosyanız varsa, bir kod satırının solunda
 
 ![Kesme noktası ayarlama](../debugger/media/dbg-tour-set-a-breakpoint.gif "Kesme noktası ayarlama")
 
-**F5** tuşuna basın (hata ayıklama **> başlatma hata**ayıklaması) veya hata **ayıklamayı Başlat** düğmesi hata ayıklama araç çubuğunda ![başlatılır](../debugger/media/dbg-tour-start-debugging.png "Hata ayıklamayı Başlat") ve hata ayıklayıcı karşılaştığı ilk kesme noktasına çalışır. Uygulama henüz çalışmıyorsa, F5 hata ayıklayıcıyı başlatır ve ilk kesme noktasında durmaktadır.
+**F5** tuşuna basın (hata ayıklama **> başlatma hata** ayıklaması) veya hata **ayıklamayı Başlat** düğmesi hata ayıklama araç çubuğunda ![başlatılır](../debugger/media/dbg-tour-start-debugging.png "Hata ayıklamayı Başlat") ve hata ayıklayıcı karşılaştığı ilk kesme noktasına çalışır. Uygulama henüz çalışmıyorsa, F5 hata ayıklayıcıyı başlatır ve ilk kesme noktasında durmaktadır.
 
 Kod satırını veya kodun ayrıntılı olarak incelemek istediğiniz bölümünü bildiğiniz kesme noktaları yararlı bir özelliktir.
 
@@ -50,7 +50,7 @@ Sarı ok, hata ayıklayıcının duraklatıldığı ifadeyi temsil eder ve aynı
 F11, yürütme akışını en ayrıntılı incelemek için iyi bir yoldur. (Kod üzerinden daha hızlı hareket etmek için diğer bazı seçenekleri de göstereceğiz.) Varsayılan olarak, hata ayıklayıcı kullanıcı olmayan koddan atlar (daha fazla ayrıntı istiyorsanız, bkz. [yalnızca kendi kodum](../debugger/just-my-code.md)).
 
 >[!NOTE]
-> Yönetilen kodda, özellikleri ve işleçleri (varsayılan davranış) üzerinde otomatik olarak adımla uyarılmak isteyip istemediğinizi soran bir iletişim kutusu görürsünüz. Ayarı daha sonra değiştirmek istiyorsanız, **hata ayıklama**altındaki **Araçlar > seçenekler** menüsünde **Özellikler ve işleçler üzerinde adımla** ayarını devre dışı bırakın.
+> Yönetilen kodda, özellikleri ve işleçleri (varsayılan davranış) üzerinde otomatik olarak adımla uyarılmak isteyip istemediğinizi soran bir iletişim kutusu görürsünüz. Ayarı daha sonra değiştirmek istiyorsanız, **hata ayıklama** altındaki **Araçlar > seçenekler** menüsünde **Özellikler ve işleçler üzerinde adımla** ayarını devre dışı bırakın.
 
 ## <a name="step-over-code-to-skip-functions"></a>İşlevleri atlamak için kodun üzerinde adımla
 
@@ -64,17 +64,17 @@ Daha önce belirtildiği gibi, hata ayıklayıcı yönetilen özellikleri ve ala
 
 Bir özellik veya alana sağ tıklayın ve **belirli bir adımla**' i seçin, sonra da kullanılabilir seçeneklerden birini belirleyin.
 
-![Belirli bir adımla](../debugger/media/dbg-tour-step-into-specific.png "Belirli bir adımla")
+![Visual Studio hata ayıklayıcının bir kod satırı vurgulanmış ekran görüntüsü. Bağlam menüsünde belirli bir adımla seçilir ve Path. set yöntemi seçilidir.](../debugger/media/dbg-tour-step-into-specific.png)
 
 Bu örnekte, **belirli bir adımla** ilgili kodu bize alır `Path.set` .
 
-![Belirli bir adımla](../debugger/media/dbg-tour-step-into-specific-2.png "Belirli bir adımla")
+![Visual Studio hata ayıklayıcının, Path. set kodunu gösteren ekran görüntüsü. Küme işlevini çevreleyen küme ayraçları sarı renkle vurgulanır.](../debugger/media/dbg-tour-step-into-specific-2.png)
 
 ## <a name="run-to-a-point-in-your-code-quickly-using-the-mouse"></a>Fareyi kullanarak kodunuzda bir noktaya hızla çalışma
 
-Hata ayıklayıcı sırasında, **tıklayana** kadar Çalıştır (yürütmeyi buraya kadar Çalıştır) düğmesine tıklayana kadar bir kod satırının üzerine gelin ve ![sol tarafta görünür](../debugger/media/dbg-tour-run-to-click.png "RunToClick") .
+Hata ayıklayıcı sırasında, Visual Studio hata ayıklayıcısından tıklama düğmesine **tıklayarak** (yürütmeyi buraya Çalıştır) düğme ekran görüntüsü olan bir kod satırının üzerine gelin ![ . Düğme, yürütmenin düğmenin yerleştirildiği satıra çalışacağını belirtir.](../debugger/media/dbg-tour-run-to-click.png) Sol tarafta görüntülenir.
 
-![Tıklanan Satıra Kadar Çalıştır](../debugger/media/dbg-tour-run-to-click-2.png "Tıklanan Satıra Kadar Çalıştır")
+![Visual Studio hata ayıklayıcının, yalnızca Update işlevine yapılan çağrının solunda görüntülenen tıklama düğmesini gösteren ekran görüntüsü.](../debugger/media/dbg-tour-run-to-click-2.png)
 
 > [!NOTE]
 > **Tıklama Için Çalıştır** (yürütmeyi buraya kadar Çalıştır) düğmesi, ' den itibaren kullanılabilir [!include[vs_dev15](../misc/includes/vs_dev15_md.md)] .
@@ -99,7 +99,7 @@ Kodu düzenlediğinizde (hata ayıklayıcıda duraklama yerine), uygulamanızdak
 
 Kesme noktaları ayarladıysanız, hata ayıklayıcı, isabet eden ilk kesme noktasında duraklatılır.
 
-**Imlece çalıştırmayı**seçtiğiniz kod satırına ulaşana kadar **F5** tuşuna basın.
+**Imlece çalıştırmayı** seçtiğiniz kod satırına ulaşana kadar **F5** tuşuna basın.
 
 Bu komut, kodu düzenlediğinizde ve hızlı bir şekilde geçici bir kesme noktası ayarlamak ve hata ayıklayıcıyı aynı anda başlatmak istediğinizde yararlıdır.
 
@@ -112,11 +112,11 @@ Hata ayıklama araç çubuğundaki uygulamayı **yeniden** ![Başlat](../debugge
 
 **Yeniden Başlat**'a bastığınızda, uygulamanın durdurulması ve hata ayıklayıcının yeniden başlatılması ile zaman kazandırır. Hata ayıklayıcı, kodu yürüterek vuran ilk kesme noktasında duraklatılır.
 
-Hata ayıklayıcıyı durdurmak ve kod düzenleyicisine geri dönmek istiyorsanız, **Yeniden Başlat**yerine kırmızı Durdur ![hata ayıklamayı Durdur](../debugger/media/dbg-tour-stop-debugging.png "Hata ayıklamayı Durdur") düğmesine basabilirsiniz.
+Hata ayıklayıcıyı durdurmak ve kod düzenleyicisine geri dönmek istiyorsanız, **Yeniden Başlat** yerine kırmızı Durdur ![hata ayıklamayı Durdur](../debugger/media/dbg-tour-stop-debugging.png "Hata ayıklamayı Durdur") düğmesine basabilirsiniz.
 
 ## <a name="edit-your-code-and-continue-debugging-c-vb-c-xaml"></a>Kodunuzu düzenleyin ve hata ayıklamaya devam edin (C#, VB, C++, XAML)
 
-Visual Studio 'nun desteklediği çoğu dilde kodunuzu bir hata ayıklama oturumunun ortasında düzenleyebilir ve hata ayıklamaya devam edebilirsiniz. Bu özelliği kullanmak için, hata ayıklayıcıda duraklama, düzenleme yapın ve hata ayıklamaya devam etmek için **F5**, **F10**veya **F11** tuşuna basın.
+Visual Studio 'nun desteklediği çoğu dilde kodunuzu bir hata ayıklama oturumunun ortasında düzenleyebilir ve hata ayıklamaya devam edebilirsiniz. Bu özelliği kullanmak için, hata ayıklayıcıda duraklama, düzenleme yapın ve hata ayıklamaya devam etmek için **F5**, **F10** veya **F11** tuşuna basın.
 
 ![Düzenle ve hata ayıklamayı Sürdür](../debugger/media/dbg-tips-edit-and-continue.gif "EditAndContinue")
 

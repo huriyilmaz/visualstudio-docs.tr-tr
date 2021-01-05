@@ -15,12 +15,12 @@ dev_langs:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: b28d87cc0842d5a3de8634ae50378915196366ff
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 484cb82a3659e306bd4c6bd14a3133c4677160db
+ms.sourcegitcommit: d526af3642163180e0cc3e1e73b0a00f02542683
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97527918"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97833344"
 ---
 # <a name="tutorial-create-a-simple-c-console-app-in-visual-studio"></a>Öğretici: Visual Studio 'da basit bir C# konsol uygulaması oluşturma
 
@@ -282,7 +282,7 @@ Birkaç ortak kullanıcı girişi hatasını gözden geçirelim, orada görünti
 
 Bir sayıyı sıfıra bölmeye çalıştığınızda, konsol uygulaması donabilir ve ardından kod düzenleyicisinde neyin yanlış olduğunu gösterebilir.
 
-   ![Visual Studio kod Düzenleyicisi, sıfıra bölme hatasını gösterir](./media/csharp-console-calculator-dividebyzero-error.png)
+   ![Visual Studio kod Düzenleyicisi 'nin sarı renkle vurgulanmış bir satırı ve ' sıfıra bölme girişimi ' için bir özel durum Işlenmemiş hatası gösteren ekran görüntüsü.](./media/csharp-console-calculator-dividebyzero-error.png)
 
 > [!NOTE]
 > Bazen uygulama dondurmaz ve hata ayıklayıcı sıfıra bölme hatası göstermez. Bunun yerine, uygulama sonsuz bir simge gibi beklenmedik bir sayısal sonuç döndürebilir. Aşağıdaki kod düzeltilmesi hala geçerlidir.
@@ -311,7 +311,7 @@ Bu hatayı işlemek için kodu değiştirelim.
 
 Böylece, herhangi bir sayıyı sıfıra böldüğünüzde, uygulama başka bir sayı ister. Daha da iyisi: sıfır dışında bir sayı sağlamadan önce sorma ' ı durdurmaz.
 
-   ![Sıfıra bölme hatası düzeltildi](./media/csharp-console-calculator-dividebyzero.png)
+   ![Visual Studio kod Düzenleyicisi 'nin, sıfır olmayan bir bölen girişi denetimi ile birlikte switch ifadesinin kodunu gösteren ekran görüntüsü.](./media/csharp-console-calculator-dividebyzero.png)
 
 ### <a name="fix-the-format-error"></a>"Biçim" hatasını çözme
 

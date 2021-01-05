@@ -1,5 +1,6 @@
 ---
 title: Performans profil oluşturucusu 'nda bellek kullanımını analiz etme
+description: Uygulamanızın bellek kullanımını izlemek için Visual Studio performans Profiler 'da hata ayıklayıcı olmadan bellek kullanımı aracını nasıl kullanacağınızı öğrenin.
 ms.custom: ''
 ms.date: 04/02/2020
 ms.topic: how-to
@@ -13,18 +14,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e6e1bd3d38e6303f11ec5da0e88816d56dd43d98
-ms.sourcegitcommit: ae9145b32fc8e1e663e504c315a5df5dd302fee9
+ms.openlocfilehash: 65ac088d52b4e7a288965bb75e1bc6a00da40f7b
+ms.sourcegitcommit: 105e7b5a486262bc92939980383ceee068098a11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92918233"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "97815821"
 ---
 # <a name="analyze-memory-usage-without-debugging-in-the-performance-profiler"></a>Performans Profiler 'da hata ayıklama olmadan bellek kullanımını analiz etme
 
 **Bellek kullanımı** Aracı, uygulamanızın bellek kullanımını izler. Visual Studio 'da etkin bir şekilde geliştirmekte olduğunuz senaryoların gerçek zamanlı bellek efektlerini incelemek için aracını kullanabilirsiniz. Uygulamanın bellek durumlarının ayrıntılı anlık görüntülerini alabilir ve bellek sorunlarının ana nedenlerini bulmak için anlık görüntüleri karşılaştırabilirsiniz. Bellek kullanımı aracı .NET, ASP.NET, C++ veya karma mod (.NET ve yerel) uygulamalarında desteklenir.
 
-Bellek kullanımı aracı, [hata ayıklayıcı ile veya olmadan](../profiling/running-profiling-tools-with-or-without-the-debugger.md)çalıştırılabilir. Bu makalede, sürüm derlemeleri için önerilen Visual Studio **performans Profiler** 'da hata ayıklayıcı olmadan bellek kullanımı aracının nasıl kullanılacağını göstereceğiz.
+Bellek kullanımı aracı, [hata ayıklayıcı ile veya olmadan](../profiling/running-profiling-tools-with-or-without-the-debugger.md)çalıştırılabilir. Bu makalede, sürüm derlemeleri için önerilen Visual Studio **performans Profiler**'da hata ayıklayıcı olmadan bellek kullanımı aracının nasıl kullanılacağını göstereceğiz.
 
 ## <a name="memory-usage-diagnostic-sessions"></a>Bellek kullanımı tanılama oturumları
 
@@ -34,11 +35,11 @@ Bellek kullanımı aracı, [hata ayıklayıcı ile veya olmadan](../profiling/ru
 
    Bellek kullanımı aracı .NET, ASP.NET, C++ veya karma mod (.NET ve yerel) uygulamalarını destekler.
 
-1. Hata Ayıkla menüsünde, çözüm yapılandırmasını **yayınlama** olarak ayarlayın ve dağıtım hedefi olarak **yerel Windows hata ayıklayıcısı** 'Nı (veya **yerel makine** ) seçin.
+1. Hata Ayıkla menüsünde, çözüm yapılandırmasını **yayınlama** olarak ayarlayın ve dağıtım hedefi olarak **yerel Windows hata ayıklayıcısı** 'Nı (veya **yerel makine**) seçin.
 
-1. Menü çubuğunda, **Hata Ayıkla**  >  **performans profil oluşturucusu** ' nu seçin.
+1. Menü çubuğunda, **Hata Ayıkla**  >  **performans profil oluşturucusu**' nu seçin.
 
-1. **Kullanılabilir araçlar** ' ın altında **bellek kullanımı** ' nı seçin ve ardından **Başlat** ' ı seçin.
+1. **Kullanılabilir araçlar**' ın altında **bellek kullanımı**' nı seçin ve ardından **Başlat**' ı seçin.
 
    ![Bellek kullanımı Tanılama oturumu başlatma](../profiling/media/memuse_start_diagnosticssession.png "Bellek kullanımı Tanılama oturumu başlatma")
 
@@ -46,7 +47,7 @@ Bellek kullanımı aracı, [hata ayıklayıcı ile veya olmadan](../profiling/ru
 
 Bir Tanılama oturumu başlattığınızda, uygulamanız başlar ve **Tanılama araçları** penceresi, uygulamanızın bellek kullanımı için bir zaman çizelgesi grafiği görüntüler.
 
-![Bellek kullanımına genel bakış sayfası](../profiling/media/memuse__reportoverview.png "MEMUSE__ReportOverview")
+![Visual Studio performans Profiler 'daki Tanılama Araçları penceresinin ekran görüntüsü, uygulamanın bellek kullanımı için bir zaman çizelgesi grafiği gösterir.](../profiling/media/memuse__reportoverview.png "MEMUSE__ReportOverview")
 
 Zaman çizelgesi grafiği, uygulamanın çalıştırıldığı şekilde bellek dalgalanmalarını gösterir. Grafikteki ani artışlar genellikle bazı kodların veri toplamasını veya oluşturmasını ve işlem tamamlandığında bu dosyayı atmaya işaret ediyor. Büyük ani artışlar, iyileştirebilecek olan bölgeleri gösterir. Daha fazla sorun, yetersiz bellek kullanımı veya hatta bellek sızıntısı belirtebileceğinden, döndürülmemiş bellek tüketimine sahiptir.
 
@@ -58,7 +59,7 @@ Anlık görüntü toplamak için bellek verilerini yakalamak istediğinizde **an
 
 ### <a name="close-the-diagnostic-session"></a><a name="BKMK_Close_a_monitoring_session"></a> Tanılama oturumunu kapat
 
-Bir rapor oluşturmadan izleme oturumunu durdurmak için, yalnızca tanılama penceresini kapatmanız yeterlidir. Anlık görüntü toplamayı bitirdiğinizde rapor oluşturmak için, **toplamayı durdur** ' u seçin.
+Bir rapor oluşturmadan izleme oturumunu durdurmak için, yalnızca tanılama penceresini kapatmanız yeterlidir. Anlık görüntü toplamayı bitirdiğinizde rapor oluşturmak için, **toplamayı durdur**' u seçin.
 
 ![Toplamayı durdur](../profiling/media/memuse__stopcollection.png "Toplamayı durdur")
 
@@ -66,7 +67,7 @@ Bir rapor oluşturmadan izleme oturumunu durdurmak için, yalnızca tanılama pe
 
 Veri toplamayı durdurduktan sonra, **bellek kullanımı** Aracı uygulamayı durdurur ve **bellek kullanımı** genel bakış sayfasını görüntüler.
 
-![Bellek kullanımına genel bakış sayfası](../profiling/media/memuse__reportoverview1.png "Bellek kullanımına genel bakış sayfası")
+![Bir bellek kullanımı grafiği ve iki anlık görüntü bölmesi gösteren, Visual Studio performans Profiler 'daki bellek kullanımı aracındaki Genel Bakış sayfasının ekran görüntüsü.](../profiling/media/memuse__reportoverview1.png "Bellek kullanımına genel bakış sayfası")
 
 ### <a name="memory-usage-snapshots"></a><a name="BKMK_Memory_Usage_snapshot_views"></a> Bellek kullanımı anlık görüntüleri
 
@@ -201,7 +202,7 @@ Anlık görüntü farkı raporundaki **yönetilen yığın** ağacı aşağıdak
 
 ![Fark raporundaki başvurulan türler](../profiling/media/memuse_snapshotdiff_referencedtypes.png "Fark raporundaki başvurulan türler")
 
-Bir anlık görüntü farkı raporundaki **başvurulan türler** ağacı aşağıdaki sütunlara sahiptir. **Başvurulan nesneler** ağacının **örneği** , **boyutu (bayt)** , **kapsamlı boyut (bayt)** ve **Modül** sütunları vardır.
+Bir anlık görüntü farkı raporundaki **başvurulan türler** ağacı aşağıdaki sütunlara sahiptir. **Başvurulan nesneler** ağacının **örneği**, **boyutu (bayt)**, **kapsamlı boyut (bayt)** ve **Modül** sütunları vardır.
 
 |Ad|Açıklama|
 |-|-|

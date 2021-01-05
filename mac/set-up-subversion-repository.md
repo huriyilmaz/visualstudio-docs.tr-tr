@@ -1,17 +1,17 @@
 ---
 title: Subversion Deposu Ayarlama
-description: Mac için Visual Studio alt sürüm kullanılıyor.
+description: Mac için Visual Studio ' de bir merkezi sürüm denetim sistemi olarak alt sürüm yüklemeyi ve ayarlamayı öğrenin.
 author: jmatthiesen
 ms.author: jomatthi
 ms.date: 05/06/2018
 ms.assetid: 0D58FB37-530E-495B-BED6-FD499477A9B6
 ms.topic: how-to
-ms.openlocfilehash: 78a5dd2abbef177e2eb949d25d779a46ecc65bda
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b5230958fa1624acf7609d6cad7d885e43c013d0
+ms.sourcegitcommit: d577818d3d8e365baa55c6108fa8159c46ed8b43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85950694"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97847075"
 ---
 # <a name="set-up-a-subversion-repository"></a>Bir alt sürüm deposu ayarlama
 
@@ -25,7 +25,7 @@ svn --version
 
 Bu komut, sürüm numarasını döndürür.
 
-Alt sürüm zaten yüklü değilse, _Xcode komut satırı araçlarının_yüklenmesi en kolay yoldur. Xcode komut satırı araçlarını ve alt sürümünü yüklemek için aşağıdaki komutu kullanın.
+Alt sürüm zaten yüklü değilse, _Xcode komut satırı araçlarının_ yüklenmesi en kolay yoldur. Xcode komut satırı araçlarını ve alt sürümünü yüklemek için aşağıdaki komutu kullanın.
 
 ```bash
 xcode-select --install

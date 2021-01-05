@@ -1,5 +1,6 @@
 ---
 title: IntelliTrace ile olayları görüntüleme | Microsoft Docs
+description: Belirli olaylar, olay kategorileri ve tek işlev çağrıları hakkında veri toplamak için Visual Studio Enterprise IntelliTrace 'i kullanmayı öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: e1c9c91a-0009-4c4e-9b4f-c9ab3a6022a7
@@ -8,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0ffbe0b8365948dc5a69edca390f308cb55ba5a3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6fef839b5473881450581db77a885da158e67bbc
+ms.sourcegitcommit: 105e7b5a486262bc92939980383ceee068098a11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62929389"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "97815756"
 ---
 # <a name="view-events-with-intellitrace-in-visual-studio-enterprise-c-visual-basic"></a>Visual Studio Enterprise IntelliTrace ile olayları görüntüleme (C#, Visual Basic)
 
@@ -53,32 +54,32 @@ Yalnızca IntelliTrace olayları ile hata ayıklamayı deneyebilirsiniz. Intelli
 
 ## <a name="start-debugging-and-view-intellitrace-events"></a>Hata ayıklamayı Başlat ve IntelliTrace olaylarını görüntüle
 
-1. Hata ayıklamayı her zamanki gibi başlatın. ( **F5** tuşuna basın veya hata **ayıklamayı başlatmak > hata ayıkla**seçeneğine tıklayın.)
+1. Hata ayıklamayı her zamanki gibi başlatın. ( **F5** tuşuna basın veya hata **ayıklamayı başlatmak > hata ayıkla** seçeneğine tıklayın.)
 
     > [!TIP]
     > Bu Windows 'daki değerleri görmek ve kaydetmek için, hata ayıklama sırasında **Yereller** ve **oto** pencerelerini açık tutun.
 
 2. Yürütme kesme noktasında durmaktadır. **Tanılama araçları** penceresini görmüyorsanız, **Windows > IntelliTrace olayları > hata ayıkla**' ya tıklayın.
 
-    **Tanılama araçları** penceresinde **Olaylar** sekmesini bulun (3 sekme, **olay**, **bellek kullanımı**ve **CPU kullanımı**görmeniz gerekir). **Olaylar** sekmesi, hata ayıklayıcının yürütmeden önce son olayla biten kronolojik bir olay listesini gösterir. **Erişim WordSearchInputs.txt**adlı bir olay görmeniz gerekir.
+    **Tanılama araçları** penceresinde **Olaylar** sekmesini bulun (3 sekme, **olay**, **bellek kullanımı** ve **CPU kullanımı** görmeniz gerekir). **Olaylar** sekmesi, hata ayıklayıcının yürütmeden önce son olayla biten kronolojik bir olay listesini gösterir. **Erişim WordSearchInputs.txt** adlı bir olay görmeniz gerekir.
 
     Aşağıdaki ekran görüntüsü, Visual Studio 2015 güncelleştirme 1 ' dir.
 
-    ![IntelliTrace&#45;güncelleştirme 1](../debugger/media/intellitrace-update1.png "IntelliTrace-güncelleştirme 1")
+    ![Visual Studio Code penceresinin ekran görüntüsü. Yürütme bir kesme noktasında durdurulur ve Tanılama Araçları penceresindeki Olaylar sekmesinde olaylar listelenir.](../debugger/media/intellitrace-update1.png)
 
 3. Ayrıntılarını genişletmek için olayı seçin.
 
     Aşağıdaki ekran görüntüsü, Visual Studio 2015 güncelleştirme 1 ' dir.
 
-    ![IntelliTraceUpdate1&#45;SingleEvent](../debugger/media/intellitraceupdate1-singleevent.png "IntelliTraceUpdate1-SingleEvent")
+    ![Visual Studio Tanılama Araçları penceresindeki olaylar sekmesinin ekran görüntüsü. Bir olay seçilir ve ayrıntılarını göstermek için genişletilir.](../debugger/media/intellitraceupdate1-singleevent.png)
 
     Dosya yolu bağlantısını seçerek dosyayı açabilirsiniz. Tam yol adı kullanılabilir değilse, **Dosya Aç** iletişim kutusu görüntülenir.
 
-    Hata **ayıklamayı etkinleştir**' e tıklayarak hata ayıklayıcının bağlamını seçili olayın toplandığı zamana ayarlar, **çağrı yığınında**geçmiş verileri, **Yereller** ve diğer katılan hata ayıklayıcı pencerelerini gösterir. Kaynak kodu kullanılabiliyorsa, Visual Studio bunu incelemenize olanak sağlamak için işaretçiyi kaynak penceresinde karşılık gelen koda taşıdır.
+    Hata **ayıklamayı etkinleştir**' e tıklayarak hata ayıklayıcının bağlamını seçili olayın toplandığı zamana ayarlar, **çağrı yığınında** geçmiş verileri, **Yereller** ve diğer katılan hata ayıklayıcı pencerelerini gösterir. Kaynak kodu kullanılabiliyorsa, Visual Studio bunu incelemenize olanak sağlamak için işaretçiyi kaynak penceresinde karşılık gelen koda taşıdır.
 
     Aşağıdaki ekran görüntüsü, Visual Studio 2015 güncelleştirme 1 ' dir.
 
-    ![HistoricalDebugging&#45;güncelleştirme 1](../debugger/media/historicaldebugging-update1.png "HistoricalDebugging-güncelleştirme 1")
+    ![Visual Studio Code penceresinin ekran görüntüsü. Yürütme bir kesme noktasında durdurulur, bir olay seçilir ve karşılık gelen kod satırı vurgulanır.](../debugger/media/historicaldebugging-update1.png)
 
 4. Hatayı bulamazsanız, hataya en önde gelen diğer olayları incelemeyi deneyin. Ayrıca, işlev çağrıları arasında ilerlemek için IntelliTrace kayıt çağrı bilgilerine sahip olabilirsiniz.
 

@@ -9,14 +9,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3e1e6951aebac63494aada4e64c5c072eb79c6a9
-ms.sourcegitcommit: 14637be49401f56341c93043eab560a4ff6b57f6
+ms.openlocfilehash: 3d259c6fa69821d1fecd26944227bff86cc82104
+ms.sourcegitcommit: 105e7b5a486262bc92939980383ceee068098a11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90074988"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "97815860"
 ---
-# <a name="measure-memory-usage-in-visual-studio"></a>Visual Studio 'da bellek kullanımını ölçme
+# <a name="measure-memory-usage-in-visual-studio"></a>Visual Studio’da bellek kullanımını ölçme
 
 Hata ayıklayıcı ile tümleşik **bellek kullanımı** Tanılama aracı ile hata ayıklarken bellek sızıntılarını ve verimsiz belleği bulun. Bellek kullanımı aracı, nesne türlerinin bellek kullanımının etkisini anlamanıza yardımcı olmak için yönetilen ve yerel bellek yığınının bir veya daha fazla *anlık görüntüsünü* almanızı sağlar. Ayrıca, bir hata ayıklayıcı ekli veya çalışan bir uygulamayı hedefleyerek bellek kullanımını çözümleyebilirsiniz. Daha fazla bilgi için bkz. [hata ayıklayıcı ile veya olmayan profil oluşturma araçlarını çalıştırma](../profiling/running-profiling-tools-with-or-without-the-debugger.md).
 
@@ -124,7 +124,7 @@ Bellek kullanımını analiz etmek için, ayrıntılı bellek kullanımı raporu
 
  Sol bölmede seçilen bir türün örneklerini göstermek için ![örnek simgesi](../profiling/media/dbgdiag_mem_instanceicon.png "DBGDIAG_MEM_InstanceIcon") simgesini seçin.
 
- ![Örnek görünümü](../profiling/media/dbgdiag_mem_managedtypesreport_instances.png "DBGDIAG_MEM_ManagedTypesReport_Instances")
+ ![Visual Studio bellek kullanımı aracındaki örnekler görünümünün ekran görüntüsü, örnekler bölmesi ve kök ve başvurulan nesneler bölmesine yönelik yollar.](../profiling/media/dbgdiag_mem_managedtypesreport_instances.png "DBGDIAG_MEM_ManagedTypesReport_Instances")
 
  **Örnekler** görünümü, alt görüntüdeki seçili nesnenin örneklerini üst bölmede görüntüler. Kök ve **başvurulan nesneler** **için yollar** bölmesi, seçilen örneğe ve seçili Örneğin başvurduğu türlere başvuran nesneleri görüntüler. Hata ayıklayıcı anlık görüntünün alındığı noktada durdurulduğunda, bir araç ipucunda nesnenin değerlerini göstermek için **değer** hücresinin üzerine gelin.
 
@@ -139,7 +139,7 @@ Bellek kullanımını analiz etmek için, ayrıntılı bellek kullanımı raporu
 
      **Örnekler** görünümü seçili türün her örneğini görüntüler. Örnek seçildiğinde, **ayırma çağrı yığını** bölmesinde örneğin oluşturulmasına neden olan çağrı yığını görüntülenir.
 
-     ![Örnek görünümü](../profiling/media/dbgdiag_mem_native_instances.png "DBGDIAG_MEM_Native_Instances")
+     ![Visual Studio bellek kullanımı aracında örnekler bölmesinin ve ayırma çağrı yığını bölmesinin gösterildiği örnekler görünümünün ekran görüntüsü.](../profiling/media/dbgdiag_mem_native_instances.png "DBGDIAG_MEM_Native_Instances")
 
 - Seçili türe ait ayırma yığınını görmek için, **görünüm modu** listesinde **yığınlar görünümü** ' ne tıklayın.
 

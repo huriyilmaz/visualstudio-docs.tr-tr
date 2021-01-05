@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c3da0a3868b410fbb78ed98265eb8f0920e6482b
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+ms.openlocfilehash: 68d6d2823a4944ec74aaa477fb7b3913943a7296
+ms.sourcegitcommit: d526af3642163180e0cc3e1e73b0a00f02542683
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96330114"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97833279"
 ---
 # <a name="use-coded-ui-test-to-test-your-code"></a>Kodunuzu test etmek için kodlanmış UI testi kullanın
 
@@ -46,7 +46,7 @@ Kodlanmış UI testleri tarafından desteklenen platformlar ve Konfigürasyonlar
 
 Kodlanmış UI test araçlarına ve şablonlarına erişmek için, Visual Studio 'nun **KODLANMıŞ UI test** bileşenini yükler.
 
-1. Araçlar **Visual Studio Installer** **Tools**  >  **ve Özellikler Al ' i** seçerek Visual Studio yükleyicisi başlatın.
+1. Araçlar    >  **ve Özellikler Al ' i** seçerek Visual Studio yükleyicisi başlatın.
 
 1. **Visual Studio yükleyicisi**, **tek tek bileşenler** sekmesini seçin ve ardından aşağı kaydırarak **hata ayıklama ve test** bölümüne gidin. **KODLANMıŞ UI test** bileşeni seçin.
 
@@ -71,7 +71,7 @@ Kodlanmış UI test araçlarına ve şablonlarına erişmek için, Visual Studio
 
 2. Kodlanmış UI test dosyası ekleyin.
 
-     Yalnızca kodlanmış bir UI projesi oluşturduysanız, ilk CUIT dosyası otomatik olarak eklenir. Başka bir test dosyası eklemek için, **Çözüm Gezgini**' de kodlanmış UI testi projesinde kısayol menüsünü açın ve sonra **Add**  >  **kodlanmış UI testi** Ekle ' yi seçin.
+     Yalnızca kodlanmış bir UI projesi oluşturduysanız, ilk CUIT dosyası otomatik olarak eklenir. Başka bir test dosyası eklemek için, **Çözüm Gezgini**' de kodlanmış UI testi projesinde kısayol menüsünü açın ve sonra   >  **kodlanmış UI testi** Ekle ' yi seçin.
 
      **Kodlanmış UI testi için kod üret** iletişim kutusunda, **kayıt eylemleri**  >  **Kullanıcı Arabirimi eşlemesini Düzenle veya onaylama Ekle** seçeneklerini belirleyin.
 
@@ -217,7 +217,7 @@ Seçmek istediğiniz denetim odağı kaybeder ve **KODLANMıŞ UI Test Oluşturu
 
 Bazen, denetimler eklediğinizde ve özelliklerini doğruladıktan sonra klavyeyi kullanmanız gerekebilir. Örneğin, sağ tıklama menü denetimini kullanan bir kodlanmış UI testini kaydetmeye çalıştığınızda, denetimdeki menü öğelerinin listesi odağı kaybeder ve **KODLANMıŞ UI Test Oluşturucusu**'Ndan onay **Ekle** aracını seçmeyi denediğinizde kaybolur. Bu, Internet Explorer 'daki sağ tıklama menüsünün odağı kaybetmesi ve onay **Ekle** aracı ile seçmeyi denerseniz kaybolur, aşağıdaki çizimde gösterilmiştir.
 
-![CodedUITest&#95;SelectControlKeyboard](../test/media/codeduitest_selectcontrolkeyboard.png)
+![Kodlanmış UI Test Oluşturucusu 'nda, Internet Explorer 'ın sağ tıklama menüsünden çakışan onaylama Ekle aracını gösteren ekran görüntüsü.](../test/media/codeduitest_selectcontrolkeyboard.png)
 
 Bir UI denetimi seçmek üzere klavyeyi kullanmak için fare ile denetimin üzerine gelin. Ardından **CTRL** tuşunu ve **ı** tuşunu aynı anda basılı tutun. Anahtarları serbest bırakın. Denetim, **KODLANMıŞ UI Test Oluşturucusu** tarafından kaydedilir.
 
@@ -229,7 +229,7 @@ Bazı durumlarda, kodlanmış UI testinde kullanılan belirli bir denetim, fare 
 
 Kodlanmış UI testinizi gerçekleştirdiğinizde, denetimin üzerine gelin. Ardından, klavyenizde **Shift** ve **R** tuşlarını basılı tutarken **CTRL** tuşunu basılı tutun. Anahtarları serbest bırakın. Bir fare üzerine gelme olayı, **KODLANMıŞ UI Test Oluşturucusu** tarafından kaydedilir.
 
-![CodedUI&#95;üzerine gelme](../test/media/codedui_hover.png)
+![Kodlanmış UI Test Oluşturucusu komut çubuğunun duraklatma simgesi seçiliyken ekran görüntüsü. Bir araç ipucu penceresi, fare üzerine gelme olayının konumunu gösterir.](../test/media/codedui_hover.png)
 
 Test yöntemini oluşturduktan sonra, aşağıdaki örneğe benzer bir kod *UIMap.Designer.cs* dosyasına eklenecektir:
 
@@ -242,7 +242,7 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
 
 Fare üzerine gelme olaylarını yakalamaya yönelik anahtar ataması ortammda başka bir yerde kullanılıyorsa:
 
-Gerekirse, **Ctrl** + **Shift** + kodlanmış UI testlerinizde fare üzerine gelme olaylarını uygulamak için kullanılan CTRL SHIFT **R** 'nin varsayılan klavye ataması farklı anahtarlar kullanacak şekilde yapılandırılabilir.
+Gerekirse,  +  + kodlanmış UI testlerinizde fare üzerine gelme olaylarını uygulamak için kullanılan CTRL SHIFT **R** 'nin varsayılan klavye ataması farklı anahtarlar kullanacak şekilde yapılandırılabilir.
 
 > [!WARNING]
 > Normal koşullarda fare üzerine gelme olayları için klavye atamalarını değiştirmeniz gerekmez. Klavye atamasını yeniden atayarak dikkatli olun. Seçiminiz, Visual Studio içinde başka bir yerde veya test edilmekte olan uygulamanın zaten kullanılıyor olabilir.

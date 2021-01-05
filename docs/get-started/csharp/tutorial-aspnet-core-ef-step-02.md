@@ -16,12 +16,12 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 6852ac1148c9a8001476eb9bb68e9e97d66e3eed
-ms.sourcegitcommit: a778dffddb05d2f0f15969eadaf9081c9b466196
+ms.openlocfilehash: 21052d59205c7ddc14247f180348fea3b8d5652a
+ms.sourcegitcommit: d526af3642163180e0cc3e1e73b0a00f02542683
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91780992"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97833253"
 ---
 # <a name="step-2-create-your-first-aspnet-core-web-app"></a>2. Adım: ilk ASP.NET Core Web uygulamanızı oluşturma
 
@@ -68,11 +68,11 @@ Bu dosya, uygulama için giriş noktası işlevi görür. Uygulama çalıştır�
 
 ### <a name="indexcshtml"></a>Index.cshtml
 
-Sitenin ana sayfası, bazı HTML biçimlendirmeleri ve bazı sunucu tarafı Razor kodlarını içerir. `IndexModel`İlişkili *Index.cshtml.cs* dosyasında bulunan sayfa modelini belirtmek için Razor kullanır. Ayrıca, ViewData içindeki bir değeri ayarlayarak sayfa başlığını ayarlar. Bu ViewData değeri, sayfalar klasörünün içindeki paylaşılan klasörde bulunan * \_ Layout. cshtml* dosyasında okunurdur. Düzen dosyası pek çok Razor Pages paylaşılır ve uygulama için ortak görünüm sağlar. Her sayfanın içeriği, düzen dosyasının HTML 'si içinde işlenir.
+Sitenin ana sayfası, bazı HTML biçimlendirmeleri ve bazı sunucu tarafı Razor kodlarını içerir. `IndexModel`İlişkili *Index.cshtml.cs* dosyasında bulunan sayfa modelini belirtmek için Razor kullanır. Ayrıca, ViewData içindeki bir değeri ayarlayarak sayfa başlığını ayarlar. Bu ViewData değeri, sayfalar klasörünün içindeki paylaşılan klasörde bulunan *\_ Layout. cshtml* dosyasında okunurdur. Düzen dosyası pek çok Razor Pages paylaşılır ve uygulama için ortak görünüm sağlar. Her sayfanın içeriği, düzen dosyasının HTML 'si içinde işlenir.
 
 ## <a name="run-the-application"></a>Uygulamayı çalıştırma
 
-Şimdi uygulamayı çalıştırın ve tarayıcıda görüntüleyin. Uygulamayı **CTRL** + **F5** ile veya **Debug**  >  Visual Studio 'nun menüsünden**hata ayıklama olmadan Başlat** ' a tıklayarak çalıştırabilirsiniz.
+Şimdi uygulamayı çalıştırın ve tarayıcıda görüntüleyin. Uygulamayı **CTRL** + **F5** ile veya   >  Visual Studio 'nun menüsünden **hata ayıklama olmadan Başlat** ' a tıklayarak çalıştırabilirsiniz.
 
 ## <a name="customize-the-application"></a>Uygulamayı özelleştirme
 
@@ -92,9 +92,9 @@ public void OnGet()
 <h2>It's @Model.Time right now on the server!</h2>
 ```
 
-Uygulamayı yeniden çalıştırın. Sayfanın şimdi geçerli saati görüntülediğini görmeniz gerekir, ancak her zaman gece yarısı! Bu doğru değildir.
+Uygulamayı yeniden çalıştırın. Sayfanın şimdi geçerli saati görüntülediğini görmeniz gerekir, ancak her zaman gece yarısı! Burada bir sorun var.
 
-![Visual Studio 2019 ASP.NET Core tarayıcıda proje](media/vs-2019/vs2019-app-in-browser.png)
+![Tarayıcı penceresinde uygulama giriş sayfasının ekran görüntüsü. Sayfanın içeriği şunu okur: "Şu anda sunucusunda 12:00.](media/vs-2019/vs2019-app-in-browser.png)
 
 ## <a name="debug-the-application"></a>Uygulamada hata ayıklama
 
@@ -102,7 +102,7 @@ Bir `OnGet` değer atadığımızda yöntemine bir kesme noktası ekleyin `Time`
 
 Yürütme satırda duraklar ve `DateTime.Today` tarihi de içerir, ancak saat verisi içermediğinden saat her zaman gece yarısı olur.
 
-![Visual Studio 2019 ASP.NET Core tarayıcıda proje](media/vs-2019/vs2019-breakpoint.png)
+![Visual Studio 'da Index.cshtml.cs için kodu gösteren ekran görüntüsü. ' Time = DateTime. bugün. ToShortTimeString (); ' satırında bir kesme noktası ayarlandı.](media/vs-2019/vs2019-breakpoint.png)
 
 Kullanılacak şekilde değiştirin `DateTime.Now` ve yürütülmeye devam edin. Yeni kod şu `OnGet` olmalıdır:
 
@@ -118,7 +118,7 @@ Uygulamaya gittiğinizde, şimdi tarayıcıda gerçek sunucu saatini görmeniz g
 > [!NOTE]
 > ToShortDateTimeString 'in çıkış biçimi geçerli kültür ayarına bağlı olduğundan, çıktınızın görüntüsü farklılık gösterebilir. Bkz. <xref:System.DateTime.ToShortTimeString>.
 
-![Visual Studio 2019 ASP.NET Core tarayıcıda proje](media/vs-2019/vs2019-app-fixed-in-browser.png)
+![Tarayıcı penceresinde uygulama giriş sayfasının ekran görüntüsü. Sayfanın içeriği şunu okur: "Şu anda sunucusunda 1:46.](media/vs-2019/vs2019-app-fixed-in-browser.png)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

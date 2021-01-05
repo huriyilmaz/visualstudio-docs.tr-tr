@@ -2,7 +2,7 @@
 title: Çözüm ve projelerle çalışma
 description: Çözümler ve projeler arasındaki fark ve bunları Visual Studio 'da nasıl kullanacağınızı öğrenin.
 ms.custom: SEO-VS-2020, contperf-fy21q2
-ms.date: 02/06/2018
+ms.date: 12/23/2020
 ms.topic: how-to
 f1_keywords:
 - vs.openprojectfromweb
@@ -16,25 +16,25 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c6649b313d4ab03c1f096a6bcbc466cb338f427c
-ms.sourcegitcommit: c558d8a0f02ed2c932c8d6f70756d8d2cedb10b3
+ms.openlocfilehash: 88bbead675bcf8001e17fe731bc141ab90c42b98
+ms.sourcegitcommit: d577818d3d8e365baa55c6108fa8159c46ed8b43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97684024"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97847061"
 ---
 # <a name="work-with-solutions-and-projects"></a>Çözüm ve projelerle çalışma
 
 *Projeler* , Visual Studio 'da kaynak kodu dosyaları, bit eşlemler, simgeler ve bileşen ve hizmet başvuruları gibi uygulamanızı oluşturmak için gereken öğeleri tutar. Yeni bir proje oluşturduğunuzda, Visual Studio projeyi içeren bir *çözüm* oluşturur. İsterseniz çözüme başka yeni veya mevcut projeler ekleyebilirsiniz. Çözümler, belirli bir projeye bağlı olmayan dosyaları da içerebilir.
 
-![Çözüm/proje hiyerarşisi](./media/vside-proj-soln.png)
+![Çözüm ve proje hiyerarşisini gösteren diyagram.](./media/vside-proj-soln.png)
 
 > [!NOTE]
 > Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için bkz. [Mac için Visual Studio proje oluşturma](/visualstudio/mac/create-new-projects).
 
 Çözümlerinizi ve projelerinizi, **Çözüm Gezgini** adlı bir araç penceresinde görüntüleyebilirsiniz. Aşağıdaki ekran görüntüsünde, iki proje içeren **Çözüm Gezgini** (**Bıkesharing. Xamarin-UWP**) içinde örnek bir çözüm gösterilmektedir: **Bıkesharing. clients. Core** ve **Bıkesharing. clients. Windows**. Her proje birden çok dosya, klasör ve başvuru içerir. Kalın yazı tipiyle proje adı *Başlangıç projem*' dir; diğer bir deyişle, uygulamayı çalıştırdığınızda Başlatan projem. Hangi projenin başlangıç projesi olduğunu belirtebilirsiniz.
 
-![Projelerle Çözüm Gezgini](./media/vside-solution-explorer-projects.png)
+![İki projeyle Çözüm Gezgini ekran görüntüsü.](./media/vside-solution-explorer-projects.png)
 
 Gerekli dosyaları ona ekleyerek bir projeyi kendiniz de oluşturabilirsiniz. Visual Studio size bir baş başlangıç sağlamak için proje şablonlarının bir seçimini sunar. Şablondan yeni bir proje oluşturmak, bu proje türü için temel bilgiler içeren bir proje sağlar ve gerektiğinde dosyaları yeniden adlandırabilir veya yeni ya da var olan kodu ve diğer kaynakları ekleyebilirsiniz.
 
@@ -42,7 +42,7 @@ Bu şekilde, Visual Studio 'da uygulama geliştirmek için çözümler ve projel
 
 ## <a name="create-a-project-from-a-project-template"></a>Proje şablonundan proje oluşturma
 
-Şablondan yeni bir proje oluşturma hakkında daha fazla bilgi için bkz. [Visual Studio 'da yeni proje oluşturma](create-new-project.md).
+Yeni bir proje oluşturmak için şablon seçme hakkında daha fazla bilgi için bkz. [Visual Studio 'da yeni proje oluşturma](create-new-project.md). Ayrıca, sıfırdan oluşturulmuş bir proje ve çözüm örneği için adım adım yönergeler ve örnek kodla birlikte, bkz. [projelere ve çözümlere giriş](../get-started/tutorial-projects-solutions.md).
 
 ## <a name="create-a-project-from-existing-code-files"></a>Varolan kod dosyalarından bir proje oluşturma
 
@@ -61,6 +61,9 @@ Bir kod kaynağı dosyası koleksiyonunuz varsa, bunları bir projeye kolayca ek
 
 Çözüme yönelik bir Benioku dosyası veya belirli bir proje altında mantıksal olarak çözüm düzeyine ait olan diğer dosyalar gibi birden çok proje için geçerli bir dosyanız varsa, bunları çözüme ekleyebilirsiniz. Bir çözüme öğe eklemek için **Çözüm Gezgini** çözüm düğümünün bağlam (sağ tıklama) menüsünde,   >  **Yeni öğe** Ekle ' yi seçin veya   >  **varolan öğeyi** ekleyin.
 
+> [!TIP]
+> Çözüm dosyası, Visual Studio 'da proje düzenlemek için bir yapıdır. Bu bilgilerin durumunu iki dosyada içerir: *. sln* (metin tabanlı, paylaşılan) dosya ve bir *. suo* (ikili, gizli, kullanıcıya özel çözüm seçenekleri) dosyası. Bu nedenle, çözüm kopyalanmaları ve yeniden adlandırılması gereken bir şey değildir; Bunun yerine, yeni bir çözüm oluşturmak ve var olan öğeleri buna eklemek en iyisidir.
+
 ## <a name="create-a-net-project-that-targets-a-specific-version-of-the-net-framework"></a>.NET Framework belirli bir sürümünü hedefleyen bir .NET projesi oluşturma
 
 Bir .NET Framework projesi oluşturduğunuzda, projenin kullanmasını istediğiniz .NET Framework belirli bir sürümünü belirtebilirsiniz. (Bir .NET Core projesi oluşturduğunuzda Framework sürümü belirtemezsiniz.)
@@ -69,7 +72,7 @@ Bir .NET Framework projesi oluşturduğunuzda, projenin kullanmasını istediği
 
 .NET Framework sürümünü belirtmek için **Yeni proje** Iletişim kutusunda **çerçeve** açılan menüsünü seçin.
 
-![Yeni proje iletişim kutusunda çerçeve açılan menüsü](./media/vside-newproject-framework.png)
+![Yeni proje iletişim kutusunda çerçeve açılan ekranının ekran görüntüsü.](./media/vside-newproject-framework.png)
 
 > [!NOTE]
 > .NET Framework 4 ' ten önceki .NET Framework sürümlerine erişmek için sisteminizde .NET Framework 3,5 yüklü olmalıdır.
@@ -80,7 +83,7 @@ Bir .NET Framework projesi oluşturduğunuzda, projenin kullanmasını istediği
 
 .NET Framework sürümünü belirtmek için **Yeni proje oluştur** sayfasında **çerçeve** açılan menüsünü seçin.
 
-![Yeni proje yapılandırma içindeki çerçeve Seçicisi](media/vs-2019/configure-new-project-framework.png)
+![' Yeni proje Yapılandır ' iletişim kutusunda çerçeve seçicinin ekran görüntüsü.](media/vs-2019/configure-new-project-framework.png)
 
 ::: moniker-end
 
@@ -130,12 +133,16 @@ Geçici bir proje oluşturmak için önce **Araçlar**  >  **Seçenekler**  >  *
 
 ## <a name="delete-a-solution-project-or-item"></a>Bir çözümü, projeyi veya öğeyi silme
 
-Çözümleri ve içeriklerini kalıcı olarak silebilirsiniz, ancak Visual Studio IDE 'yi kullanarak bunları kullanamazsınız. Visual Studio içindeki öğelerin silinmesi yalnızca geçerli çözüm veya projeden kaldırılır. Bir çözümü veya başka bir bileşeni sisteminizden kalıcı olarak silmek için dosya Gezgini 'ni kullanarak *. sln* ve *. suo* çözüm dosyalarını içeren klasörü silin. Ancak, bir çözümü kalıcı olarak silmeden önce, bunları yeniden yapmanız gereken herhangi bir projeyi veya dosyayı yedeklemeniz önerilir.
+Sağ tıklama bağlam menüsünü, Visual Studio 'daki çözümleri, projeleri veya öğeleri silmek ya da kaldırmak için kullanabilirsiniz, ancak bu yalnızca geçerli çözüm veya projeden kaldırır.
+
+Bir çözümü veya diğer bileşenleri sisteminizden kalıcı olarak silmek için, Windows 'da **Dosya Gezgini** 'ni kullanarak *. sln* ve *. suo* çözüm dosyalarını içeren klasörü silin. (Bir çözümü silmeden önce, projelerinizi ve dosyalarınızı tekrar ihtiyacınız olduğunda yedeklemek isteyebilirsiniz.)
 
 > [!NOTE]
 > *. Suo* dosyası, varsayılan dosya Gezgini ayarları altında görüntülenmeyen gizli bir dosyadır. Gizli dosyaları göstermek için dosya Gezgini 'ndeki **Görünüm** menüsünde **gizli öğeler** onay kutusunu seçin.
 
 ### <a name="permanently-delete-a-solution"></a>Bir çözümü kalıcı olarak silme
+
+Visual Studio 'da Çözüm Gezgini kullanarak Windows 'da dosya Gezgini 'ne erişebilirsiniz. Aşağıdaki adımları uygulayın:
 
 1. **Çözüm Gezgini**, silmek istediğiniz çözümün sağ tıklama menüsünde (bağlam menüsü), **Dosya Gezgini 'nde klasörü aç**' ı seçin.
 
@@ -145,7 +152,9 @@ Geçici bir proje oluşturmak için önce **Araçlar**  >  **Seçenekler**  >  *
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çözümler ve projeler](../ide/solutions-and-projects-in-visual-studio.md)
+- [Projelere ve çözümlere giriş](../get-started/tutorial-projects-solutions.md)
+- [Proje ve çözüm özelliklerini yönetme](managing-project-and-solution-properties.md)
+- [Visual Studio 'da filtrelenmiş çözümler](filtered-solutions.md)
 - [GitHub 'da Microsoft 'un açık kaynak depoları](https://github.com/Microsoft)
 - [Geliştirici kodu örnekleri](https://code.msdn.microsoft.com/)
-- [Proje oluşturma (Mac için Visual Studio)](/visualstudio/mac/create-new-projects)
+- [Visual Studio IDE hatalarında sorun giderme kaynakları](./reference/resources-for-troubleshooting-integrated-development-environment-errors.md)

@@ -1,5 +1,7 @@
 ---
 title: 'İzlenecek yol: başlangıç sayfasına özel XAML ekleme | Microsoft Docs'
+description: Bu yönergeyi kullanarak Web tarayıcısı içeren özel bir Visual Studio başlangıç sayfası oluşturmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +14,12 @@ manager: jillfra
 ms.workload:
 - vssdk
 monikerRange: vs-2017
-ms.openlocfilehash: 85cc6520ea86db664de676232e8d61a643483ca4
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: 8f23b1331b2c083a38f6b11d9a4a3647474b2f04
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012080"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97862780"
 ---
 # <a name="walkthrough-add-custom-xaml-to-the-start-page"></a>İzlenecek yol: başlangıç sayfasına özel XAML ekleme
 
@@ -61,7 +63,7 @@ Bu izlenecek yol, bir Web tarayıcısı içeren özel bir Visual Studio başlang
 
 ## <a name="test-the-custom-start-page"></a>Özel başlangıç sayfasını test etme
 
-1. **F5**tuşuna basın.
+1. **F5** tuşuna basın.
 
      Visual Studio 'nun deneysel örneği, özel başlangıç sayfası yüklenmiş ancak seçilmemiş olarak açılır.
 

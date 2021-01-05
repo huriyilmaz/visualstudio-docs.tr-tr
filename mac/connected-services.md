@@ -1,17 +1,17 @@
 ---
 title: Bağlı Hizmetler
-description: Mac için Visual Studio içinden mobil uygulamalara Azure veri depolama, kimlik doğrulaması ve anında iletme bildirimleri ekleyin
+description: Azure veri depolama, kimlik doğrulaması ve Mac için Visual Studio içinden bir platformlar arası uygulamaya anında iletme bildirimleri eklemeyi öğrenin.
 ms.assetid: 41CB62FF-0F39-4CE8-8917-6A77F058719F
 author: sayedihashimi
 ms.author: sayedha
 ms.date: 11/06/2018
 ms.topic: how-to
-ms.openlocfilehash: 8a1287d82096677d20a498756de3d2a9f5af259b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 69ad6007283b3c56a8d0e5902cc2b9bdc445f220
+ms.sourcegitcommit: d577818d3d8e365baa55c6108fa8159c46ed8b43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85938761"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97847090"
 ---
 # <a name="connected-services-walkthrough"></a>Bağlı hizmetler izlenecek yolu
 
@@ -19,8 +19,8 @@ Bağlı hizmetler iş akışı, Azure portal iş akışını Mac için Visual St
 
 Bu izlenecek yol, bulut veri depolama, kimlik doğrulama ve platformlar arası bir Xamarin. Forms taşınabilir sınıf kitaplığı (PCL) uygulamasına anında iletme bildirimleri getiren bir Azure arka uç hizmetinin nasıl ekleneceğini gösterir.
 
-1. ' Yi, çözüm içindeki **bağlı hizmetler** düğümüne çift tıklayarak başlatın, bu, **Hizmetler galerisini**getirir.
-  Bu, uygulama türü için kullanılabilir tüm hizmetlerin bir listesidir. Üzerine tıklayarak bir hizmet ( **Azure App Service Ile mobil arka uç**gibi) seçin.
+1. ' Yi, çözüm içindeki **bağlı hizmetler** düğümüne çift tıklayarak başlatın, bu, **Hizmetler galerisini** getirir.
+  Bu, uygulama türü için kullanılabilir tüm hizmetlerin bir listesidir. Üzerine tıklayarak bir hizmet ( **Azure App Service Ile mobil arka uç** gibi) seçin.
 
     [![Mac için Visual Studio bağlı hizmetler düğümü](media/connected-services-image001-sml.png "Mac için Visual Studio bağlı hizmetler düğümü")](media/connected-services-image001.png#lightbox)
 

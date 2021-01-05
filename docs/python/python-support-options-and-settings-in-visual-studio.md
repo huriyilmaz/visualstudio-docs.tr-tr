@@ -17,12 +17,12 @@ manager: jillfra
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 99274d3884d002f6dee29a632f8a7c08ac90a56f
-ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
+ms.openlocfilehash: fc6260bdac6f4313daddc1ca59f8541bc4fda7c8
+ms.sourcegitcommit: 3c571f44bfd6402efea5187af43df287bac5b6ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91211134"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97761309"
 ---
 # <a name="options-for-python-in-visual-studio"></a>Visual Studio 'da Python seçenekleri
 
@@ -35,7 +35,7 @@ Python seçeneklerini görüntülemek için, **Araçlar**  >  **Seçenekler** me
 ![Python seçenekleri iletişim kutusu, Genel sekmesi](media/options-general-2019.png)
 ::: moniker-end
 
-**Metin düzenleyici**  >  **Python**  >  **Gelişmiş** sekmesinde ve **Environment**  >  **metin düzenleyici** grubunun içindeki ortam**yazı tipi ve renkler** sekmesinde ek Python 'a özgü seçenekler de vardır.
+**Metin düzenleyici**  >  **Python**  >  **Gelişmiş** sekmesinde ve   >  **metin düzenleyici** grubunun içindeki ortam **yazı tipi ve renkler** sekmesinde ek Python 'a özgü seçenekler de vardır.
 
 > [!Note]
 > **Deneysel** Grup, hala geliştirme aşamasında olan ve burada açıklanmayan özellikler için seçenekler içerir. Bunlar genellikle [Microsoft blogu 'Ndaki Python mühendisliğinde](https://devblogs.microsoft.com/python/)gönderilerde ele alınmıştır.
@@ -50,14 +50,14 @@ Python seçeneklerini görüntülemek için, **Araçlar**  >  **Seçenekler** me
 | **Paketleri yüklerken veya kaldırırken Çıkış Penceresi göster** | Açık | **Çıkış** penceresinin görünmesini engellemek için işaretini kaldırın. |
 | **Ortam oluşturmak için bildirim çubuğunu göster** | Açık | *Yalnızca Visual Studio 2019.* Bu seçenek ayarlandığında ve Kullanıcı *requirements.txt* veya *ortam. yıml* dosyası içeren bir proje açtığında, Visual Studio varsayılan genel ortamı kullanmak yerine, sırasıyla sanal ortam veya Conda ortamı oluşturma önerilerine sahip bir bilgi çubuğu görüntüler. |
 | **Paketleri yüklemek için bildirim çubuğunu göster** | Açık | *Yalnızca Visual Studio 2019.* Bu seçenek ayarlandığında ve Kullanıcı bir *requirements.txt* dosyası içeren (ve varsayılan genel ortamı kullanmayan) bir proje açtığında, Visual Studio bu gereksinimleri geçerli ortamda yüklü paketlerle karşılaştırır. Herhangi bir paket eksikse, Visual Studio bu bağımlılıkları yüklemek için bir istem görüntüler. |
-| **Paket yöneticilerini her zaman yönetici olarak çalıştır** | Kapalı | `pip install`Tüm ortamlar için her zaman ve benzer Paket Yöneticisi işlemlerini yükseltir. Paketler yüklenirken, ortam dosya sisteminin *C:\Program Files*gibi korumalı bir alanında yer alıyorsa, Visual Studio yönetici ayrıcalıkları ister. Bu istem içinde, yalnızca bir ortam için install komutunu her zaman yükseltmeyi seçebilirsiniz. Bkz. [Paketler sekmesi](python-environments-window-tab-reference.md#packages-tab). |
+| **Paket yöneticilerini her zaman yönetici olarak çalıştır** | Kapalı | `pip install`Tüm ortamlar için her zaman ve benzer Paket Yöneticisi işlemlerini yükseltir. Paketler yüklenirken, ortam dosya sisteminin *C:\Program Files* gibi korumalı bir alanında yer alıyorsa, Visual Studio yönetici ayrıcalıkları ister. Bu istem içinde, yalnızca bir ortam için install komutunu her zaman yükseltmeyi seçebilirsiniz. Bkz. [Paketler sekmesi](python-environments-window-tab-reference.md#packages-tab). |
 | **İlk kullanımda tamamlanma DB 'yi otomatik olarak oluştur** | Açık | *Bir IntelliSense veritabanı kullanılırken Visual Studio 2017 sürüm 15,5 ve önceki sürümleri ve sonraki sürümler için geçerlidir.* Onu kullanan kodu yazdığınızda, bir kitaplık için veritabanının tamamlanmasını önceliklendirir. Daha fazla bilgi için bkz. [IntelliSense sekmesi](python-environments-window-tab-reference.md?view=vs-2017&preserve-view=true#intellisense-tab). |
 | **Sistem genelinde PYTHONPATH değişkenlerini yoksay** | Açık | PYTHONPATH varsayılan olarak yok sayılır, çünkü Visual Studio ortamlar ve projelerde arama yolları belirtmek için daha doğrudan bir yol sağlar. Ayrıntılar için bkz. [arama yolları](search-paths.md) . |
 | **Bağlı dosyalar eklenirken arama yollarını Güncelleştir** | Açık | Ayarlandığında, bir projeye [bağlı dosya](managing-python-projects-in-visual-studio.md#linked-files) eklemek, IntelliSense 'in bağlantılı dosyanın klasörünün içeriğini tamamlanma veritabanına dahil edebilmesi için [arama yollarına](search-paths.md) ekler. Bu tür içerikleri tamamlama veritabanından dışlamak için bu seçeneği temizleyin. |
 | **İçeri aktarılan modül bulunamadığında uyar** | Açık | İçeri aktarılan bir modülün Şu anda kullanılabilir olmadığını bildiğiniz halde kod işlemini etkilemediği durumlarda uyarıları bastırmak için bu seçeneği temizleyin. |
 | **Tutarsız Girintiyi şöyle raporla** | **Uyarılar** | Python yorumlayıcı kapsamı belirlemek için uygun girintide büyük ölçüde bağlı olduğundan, Visual Studio varsayılan olarak, kodlama hatalarını gösterebilen tutarsız girintili girintiler algıladığında uyarılar verir. Bu tür durumlarda programın çıkmasına neden olan, daha sıkı olması için **hatalara** ayarlanır. Bu davranışı tamamen devre dışı bırakmak için **değil**' i seçin. |
-| **Anketi/haberleri denetle** | **Haftada bir kez** | *Visual Studio 2017 ve öncesi.* Visual Studio 'Nun, varsa Python ile ilgili anketler ve haber öğeleriyle Web sayfası içeren bir pencere açmasına izin verilen sıklığı ayarlar. Seçenekler **hiçbir**şekilde, **günde bir**kez, **haftada**bir ve **ayda bir**kez. |
-| **Kalıcı olarak gizli iletişim kutularını Sıfırla** düğmesi | yok | Farklı iletişim kutuları **bunu bir daha gösterme**gibi seçenekler sağlar. Bu seçenekleri temizlemek ve iletişim kutularının yeniden görüntülenmesine neden olmak için bu düğmeyi kullanın. |
+| **Anketi/haberleri denetle** | **Haftada bir kez** | *Visual Studio 2017 ve öncesi.* Visual Studio 'Nun, varsa Python ile ilgili anketler ve haber öğeleriyle Web sayfası içeren bir pencere açmasına izin verilen sıklığı ayarlar. Seçenekler **hiçbir** şekilde, **günde bir** kez, **haftada** bir ve **ayda bir** kez. |
+| **Kalıcı olarak gizli iletişim kutularını Sıfırla** düğmesi | yok | Farklı iletişim kutuları **bunu bir daha gösterme** gibi seçenekler sağlar. Bu seçenekleri temizlemek ve iletişim kutularının yeniden görüntülenmesine neden olmak için bu düğmeyi kullanın. |
 
 ::: moniker range="vs-2017"
 ![Python seçenekleri iletişim kutusu, Genel sekmesi](media/options-general.png)
@@ -75,7 +75,7 @@ Python seçeneklerini görüntülemek için, **Araçlar**  >  **Seçenekler** me
 | --- | --- | --- |
 | **Conda çalıştırılabilir yolu** | adet | Python iş yüküne dahil olan varsayılan Miniconda yüklemesine güvenmek yerine *conda.exe* yürütülebilirinin tam yolunu belirtir. Burada başka bir yol verilirse, bu, kayıt defterinde belirtilen varsayılan yükleme ve diğer conda.exe yürütülebilirlerin önüne geçer. Anaconda veya Miniconda 'ın daha yeni bir sürümünü el ile yüklüyorsanız veya varsayılan 64-bit dışında bir 32-bit ayırıcı kullanmak istiyorsanız bu ayarı değiştirebilirsiniz. |
 
-![Python seçenekleri iletişim kutusu, dil sunucusu sekmesi](media/options-conda.png)
+![Python seçeneklerinde ve sağ bölmede gösterilen Conda çalıştırılabilir yolu alanına Visual Studio Araçları seçenekleri iletişim kutusunun ekran görüntüsü.](media/options-conda.png)
 
 ::: moniker-end
 
@@ -118,7 +118,7 @@ Python seçeneklerini görüntülemek için, **Araçlar**  >  **Seçenekler** me
 
 | Seçenek | Varsayılan | Açıklama |
 | --- | --- | --- |
-| **Betikler** | yok | Tüm ortamlarda **etkileşimli** Windows için uygulanacak başlangıç betikleri için genel bir klasör belirtir. Bkz. [Başlangıç betikleri](python-environments-window-tab-reference.md#startup-scripts). Ancak, bu özelliğin şu anda çalışmadığına not edin. |
+| **Betikleri** | yok | Tüm ortamlarda **etkileşimli** Windows için uygulanacak başlangıç betikleri için genel bir klasör belirtir. Bkz. [Başlangıç betikleri](python-environments-window-tab-reference.md#startup-scripts). Ancak, bu özelliğin şu anda çalışmadığına not edin. |
 | **Yukarı/aşağı okları geçmişe gider** | Açık | **Etkileşimli** penceredeki geçmiş arasında gezinmek için ok tuşlarını kullanır. Bunun yerine **etkileşimli** pencerenin çıktısı içinde gezinmek için ok tuşlarını kullanmak üzere bu ayarı temizleyin. |
 | **Tamamlama modu** | **Yalnızca işlev çağrıları olmayan ifadeleri değerlendir** | **Etkileşimli** penceredeki bir ifadede kullanılabilir üyeleri belirleme işlemi, geçerli tamamlanmamış ifadenin değerlendirilmesi gerektirebilir, bu da yan etkiler veya işlevlerin birden çok kez çağrılmasına neden olabilir. Varsayılan ayar, **yalnızca işlev çağrıları olmadan ifadeleri değerlendir** işlevi çağıran ifadeleri hariç tutar, ancak diğer ifadeleri değerlendirir. Örneğin, değerlendirir `a.b` ancak vermez `a().b` .  **Ifadeleri hiçbir şekilde değerlendirme** , öneriler için yalnızca normal IntelliSense altyapısı kullanılarak tüm yan etkileri engeller. **Tüm Ifadeleri değerlendir** , yan etkilerden bağımsız olarak öneriler almak için tüm ifadeyi değerlendirir. |
 | **Statik analiz önerilerini gizle** | Kapalı | Ayarlandığında, yalnızca ifade hesaplanarak elde edilen önerileri görüntüler. **Tamamlama modu** değeri ile birleştirildiğinde **ifadeleri hiçbir şekilde değerlendirirse** **etkileşimli** pencerede hiçbir yararlı tamamlama görünmez. |
@@ -135,7 +135,7 @@ Python seçeneklerini görüntülemek için, **Araçlar**  >  **Seçenekler** me
 | **Türden tamamlanmış işlemleri devre dışı bırak** | Kapalı | Visual Studio IntelliSense normalde, her ikisi de Python 2 ve Python 3 için standart kitaplık ve üçüncü taraf kitaplıklar için tür ipuçları bulmak üzere yazı tipinde (bir *. Pyi* dosyaları kümesi) paketlenmiş bir sürümünü kullanır. Bu seçeneğin ayarlanması, paketlenmiş yazı davranışını devre dışı bırakır. |
 | **Özel Türleştirilmiş yol** | adet | Ayarlanırsa, Visual Studio paketlenmiş sürümü yerine bu yoldaki yazı dosyalarını kullanır. **Türden tamamlanmayı devre dışı bırak** ayarlandıysa yoksay. |
 
-![Python seçenekleri iletişim kutusu, dil sunucusu sekmesi](media/options-language-server.png)
+![Python seçeneklerinde ve sağ bölmede gösterilen dil sunucusu seçeneklerinde dil sunucusu seçiliyken Visual Studio Araçları seçenekleri iletişim kutusunun ekran görüntüsü.](media/options-language-server.png)
 
 ::: moniker-end
 
@@ -157,7 +157,7 @@ Python seçeneklerini görüntülemek için, **Araçlar**  >  **Seçenekler** me
 | --- | --- | --- |
 | **Aşağıdaki karakterler yazılarak işlendi** | **{}\[\]().,:; +-*/% &&#124;^ ~ =<> #@\\** | Bu karakterler tipik olarak bir tamamlanma listesinden seçim yaptığı bir tanımlayıcıyı izler, bu nedenle tamamlama işleminin yalnızca bir karakter yazarak yürütülmesi uygun olabilir. İstediğiniz gibi listeye belirli karakterleri kaldırabilir veya ekleyebilirsiniz.  |
 | **İşlemeleri geçerli tamamlamayı girin** | Açık | Ayarlandığında, **ENTER** tuşu yukarıdaki karakterlerle birlikte seçili olan tamamlamayı seçer ve uygular (ancak elbette, bu listeye doğrudan gidememesi **için bir** karakter yok). |
-| **Tam yazılmış kelimenin sonunda ENTER 'a yeni satır ekle** | Kapalı | Varsayılan olarak, tamamlama açılır penceresinde görüntülenen tüm sözcüğü yazarsanız ve **ENTER**tuşuna basarsanız, bu tamamlamayı işleyin. Bu seçeneği ayarlayarak, tanımlayıcıyı yazmayı tamamladığınızda, yeni bir **satır ekler gibi** tamamlama işlemleri etkili bir şekilde tamamlanır. |
+| **Tam yazılmış kelimenin sonunda ENTER 'a yeni satır ekle** | Kapalı | Varsayılan olarak, tamamlama açılır penceresinde görüntülenen tüm sözcüğü yazarsanız ve **ENTER** tuşuna basarsanız, bu tamamlamayı işleyin. Bu seçeneği ayarlayarak, tanımlayıcıyı yazmayı tamamladığınızda, yeni bir **satır ekler gibi** tamamlama işlemleri etkili bir şekilde tamamlanır. |
 
 ### <a name="miscellaneous-options"></a>Çeşitli seçenekler
 
@@ -173,6 +173,6 @@ Python seçeneklerini görüntülemek için, **Araçlar**  >  **Seçenekler** me
 
 (**Ortam**  >  **Metin düzenleyici** grubu Içindeki **yazı tipleri ve renkler** sekmesi.)
 
-Python seçeneklerinin adları **Python** ile önek olarak eklenir ve kendine açıklayıcı bir şekilde yapılır. Tüm Visual Studio renk temaları için varsayılan yazı tipi 10pt Consolas Regular (kalın değildir). Varsayılan renkler temaya göre farklılık gösterir. Genellikle, varsayılan ayarlarla metin okumayı zorlaştırdıysanız bir yazı tipi veya rengi değiştirirsiniz.
+Python seçeneklerinin adları **Python** ile önek olarak eklenir ve kendine açıklayıcı bir şekilde yapılır. Tüm Visual Studio renk temaları için varsayılan yazı tipi 10 pt Consolas Regular (kalın değil). Varsayılan renkler temaya göre farklılık gösterir. Genellikle, varsayılan ayarlarla metin okumayı zorlaştırdıysanız bir yazı tipi veya rengi değiştirirsiniz.
 
 ![Python yazı tipi ve renk seçenekleri](media/options-fonts-and-colors.png)

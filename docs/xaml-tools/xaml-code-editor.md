@@ -7,12 +7,12 @@ monikerRange: vs-2019
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 6421fd0139b04262ac5f1e835f010c1372c034ee
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 29fa854ab00764fc0166a53d8b48989f2c74f036
+ms.sourcegitcommit: d526af3642163180e0cc3e1e73b0a00f02542683
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85329173"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97833305"
 ---
 # <a name="xaml-code-editor"></a>XAML kod düzenleyici
 
@@ -103,16 +103,16 @@ Tek bir eylem ile kodu yeniden düzenlemek, oluşturmak veya başka şekilde de�
 
 Örneğin, hızlı eylemleri kullanarak gerçekleştirebileceğiniz yararlı bir görev, **MainWindow.xaml.cs** sekmesindeki C# kodundan **gereksiz kullanımlar kaldırmak** içindir.
 
-Bunu yapmak için:
+Aşağıdaki adımları uygulayın:
 
 1. Bir using ifadesinin üzerine gelin, ampul simgesini seçin ve ardından açılan listeden gereksiz kullanımları **Kaldır** ' ı seçin.
 
     ![Hızlı Eylemler menüsünde IDE düzenleyicisinin "gereksiz kullanımları kaldır" seçeneği](media/xaml-code-editor-remove-usings.png "Hızlı Eylemler menüsünde IDE düzenleyicisinin gereksiz kullanımları kaldırma seçeneğinin ekran görüntüsü")
 
-1. **Belge**, **Proje**veya **çözüm**içindeki tüm oluşumları mı onarmak istediğinizi seçin.
+1. **Belge**, **Proje** veya **çözüm** içindeki tüm oluşumları mı onarmak istediğinizi seçin.
 1. **Önizleme** iletişim kutusunu görüntüleyin ve ardından **Uygula**' yı seçin.
 
-Bu özelliğe menü çubuğundan de erişebilirsiniz. Bunu yapmak için, **Edit**  >  **IntelliSense**'i  >  **Kaldır ve Sırala deyimlerini**Düzenle ' yi seçin.
+Bu özelliğe menü çubuğundan de erişebilirsiniz. Bunu yapmak için,   >  **IntelliSense**'i  >  **Kaldır ve Sırala deyimlerini** Düzenle ' yi seçin.
 
 Using ayarları hakkında daha fazla bilgi için bkz. [using using](../ide/reference/sort-usings.md) Page. IntelliSense hakkında daha fazla bilgi için bkz. [Visual Studio 'Da IntelliSense](../ide/using-intellisense.md) sayfası. Geliştiricilerin hızlı eylemleri kullandığı tipik bazı yollarla ilgili daha fazla bilgi için bkz. [ortak hızlı eylemler](../ide/common-quick-actions.md) sayfası.
 
@@ -124,11 +124,11 @@ Sol kenar boşluğunun rengi, bir dosyada yaptığınız değişiklikleri izleme
 
     ![Sarı çubukla kod düzenleyici düzenleme](media/code-editor-edit-yellow.png "Seçim kenar boşluğunda sarı çubukla işaretlenmiş bir değişikliği olan kod düzenleyicisinin ekran görüntüsü.")
 
-- Değişiklikleri kaydettikten sonra (ancak dosyayı kapatmadan önce), çubuk **yeşile**döner.
+- Değişiklikleri kaydettikten sonra (ancak dosyayı kapatmadan önce), çubuk **yeşile** döner.
 
     ![Yeşil çubukla kod Düzenleyicisi düzenleme](media/code-editor-edit-green.png "Seçim kenar boşluğunda yeşil çubukla işaretlenmiş bir değişikliği olan kod düzenleyicisinin ekran görüntüsü.")
 
-Bu özelliği devre dışı bırakmak ve açmak için **metin Düzenleyicisi** ayarları 'ndaki (**Araçlar** **Track changes**  >  **Seçenekler**  >  **metin Düzenleyicisi**) değişiklikleri izle seçeneğini değiştirin.
+Bu özelliği devre dışı bırakmak ve açmak için **metin Düzenleyicisi** ayarları 'ndaki (**Araçlar**   >  **Seçenekler**  >  **metin Düzenleyicisi**) değişiklikleri izle seçeneğini değiştirin.
 
 &mdash;Kod dizeleri altında görünen dalgalı çizgileri ("dalgalı çizgiler" olarak da bilinir) içerecek şekilde değişiklik izleme hakkında daha fazla bilgi için, &mdash; [Visual Studio kod Düzenleyicisi sayfasının özelliklerinin](../ide/writing-code-in-the-code-and-text-editor.md) **[Düzenleyici özellikleri](../ide/writing-code-in-the-code-and-text-editor.md#editor-features)** bölümüne bakın.
 
@@ -136,7 +136,7 @@ Bu özelliği devre dışı bırakmak ve açmak için **metin Düzenleyicisi** a
 
 Kodunuzu XAML kod düzenleyicisinde düzenlediğinizde, sağ tıklama bağlam menüsünü kullanarak erişebileceğiniz çeşitli özellikler vardır. Bu özelliklerin çoğu, Visual Studio IDE 'de evrensel olarak kullanılabilir, ancak bazıları bir tasarım penceresiyle birlikte kod Düzenleyicisi kullanmaya özgüdür.
 
-![Visual Studio 'da XAML kod düzenleyicisinin sağ tıklama bağlam menüsü](media/xaml-code-editor-right-click-menu.png "Visual Studio 2019 ' de XAML kod düzenleyicisinin sağ tıklama bağlam menüsünün ekran görüntüsü")
+![Visual Studio 2019 ' de XAML kod Düzenleyicisi 'nin sağ tıklama bağlam menüsünün ekran görüntüsü.](media/xaml-code-editor-right-click-menu.png)
 
 Her bir özelliğin ne olduğu ve nasıl yararlı olduğu aşağıda verilmiştir:
 
@@ -163,7 +163,7 @@ Kaydırma çubuğu, kodunuzda ilerleyerek daha fazlasını yapabilir. Başka bir
 
 Kod düzenleyicisinin kaydırma çubuğunda, sağ üst kısımdaki bir **bölünmüş** düğme vardır. Bunu seçtiğinizde, başka bir kod Düzenleyicisi bölmesi açabilirsiniz. Bu, birbirinden bağımsız olarak çalıştıkları için yararlıdır, böylece bunları farklı konumlarda kod üzerinde çalışmak için kullanabilirsiniz.
 
-![Visual Studio 'da yalnızca orta bölme olan XAML kod Düzenleyicisi](media/code-editor-split-window-button.png "Visual Studio 2019 ' de yalnızca orta bölme olan XAML kod Düzenleyicisi 'nin ekran görüntüsü")
+![Bölmenin sağ üst köşesinde bulunan bölünmüş düğme ile Visual Studio 2019 ' de XAML kod düzenleyicisinin orta bölmesini gösteren ekran görüntüsü.](media/code-editor-split-window-button.png)
 
 Bir düzenleyici penceresinin nasıl bölüneceği hakkında daha fazla bilgi için, [düzenleyici pencerelerini yönetme](../ide/how-to-manage-editor-windows.md) sayfasına bakın.
 
@@ -171,7 +171,7 @@ Bir düzenleyici penceresinin nasıl bölüneceği hakkında daha fazla bilgi i�
 
 Ayrıca, kaydırma çubuğunun görünümünü ve içerdiği ek özellikleri değiştirebilirsiniz. Örneğin, çok sayıda kişi, kod değişiklikleri, kesme noktaları, yer işaretleri, hatalar ve giriş işareti konumu gibi görsel ipuçları sağlayan kaydırma çubuğuna *ek açıklamalar* eklemek gibi.
 
-Diğerleri, kaydırma çubuğunda küçük bir kod satırını görüntüleyen *harita modunu*kullanarak daha fazla teşekkür ederiz. Bir dosyada çok fazla kod bulunan geliştiriciler, eşleme modunun, varsayılan kaydırma çubuğunu kullanmaktan daha etkili şekilde kod satırlarına izlemelerinin ne olduğunu fark edebilir.
+Diğerleri, kaydırma çubuğunda küçük bir kod satırını görüntüleyen *harita modunu* kullanarak daha fazla teşekkür ederiz. Bir dosyada çok fazla kod bulunan geliştiriciler, eşleme modunun, varsayılan kaydırma çubuğunu kullanmaktan daha etkili şekilde kod satırlarına izlemelerinin ne olduğunu fark edebilir.
 
 Kaydırma çubuğunun varsayılan ayarlarının nasıl değiştirileceği hakkında daha fazla bilgi için,  [kaydırma çubuğunu özelleştirme](../ide/how-to-track-your-code-by-customizing-the-scrollbar.md) sayfasına bakın.
 
@@ -216,7 +216,7 @@ Geliştiriciler genellikle yorumlarını kullanarak kodlarını belgelemek terci
 
   ![IDE araç çubuğundaki yorum düğmesi ve Açıklama Ekle düğmesi](media/comment-undo-comment-buttons.png "IDE araç çubuğundaki yorum düğmesinin ve açıklama düğmesinin ekran görüntüsü")
 
-- Bir yorum ile çevrelemek istediğiniz kodu seçin ve ardından **CTRL** + **K**, **CTRL** + **C**tuşlarına basın. Seçili kodun açıklamasını eklemek için **CTRL** + **K**, **CTRL** + **U**tuşlarına basın.
+- Bir yorum ile çevrelemek istediğiniz kodu seçin ve ardından **CTRL** + **K**, **CTRL** + **C** tuşlarına basın. Seçili kodun açıklamasını eklemek için **CTRL** + **K**, **CTRL** + **U** tuşlarına basın.
 
 **MainWindow.xaml.cs** sekmesindeki C# kodunda açıklamaları kullanma hakkında daha fazla bilgi Için, [belge açıklamaları](/dotnet/csharp/language-reference/language-specification/documentation-comments/) sayfasına bakın.
 
@@ -230,7 +230,7 @@ XAML kodlama deneyiminize nasıl yararlanabileceği hakkında birkaç örnek aş
 
   ![XAML kod Düzenleyicisi 'nin gereksiz ad alanlarını kaldırma hızlı eylem ampul seçeneğinden](media/xaml-code-editor-dimmed-namespaces-preview.png "Hızlı eylem ampul kullanılarak görüntülenen XAML kod düzenleyicisinin gereksiz ad alanlarını kaldır seçeneğinin ekran görüntüsü")
 
-- **Ad alanını yeniden adlandır**. Bir ad alanını vurguladıktan sonra sağ tıklama bağlam menüsünde bulunan bu özellik, bir ayarın birden çok örneğini tek seferde değiştirmeyi kolaylaştırır. Bu özelliğe ayrıca menü çubuğunu kullanarak, yeniden düzenleme **Edit**  >  **Refactor**  >  **yeniden adlandırma**' yı düzenleyerek veya **CTRL** + **r**tuşuna basarak ve sonra da **CTRL** + **r** tuşuna basarak erişebilirsiniz.
+- **Ad alanını yeniden adlandır**. Bir ad alanını vurguladıktan sonra sağ tıklama bağlam menüsünde bulunan bu özellik, bir ayarın birden çok örneğini tek seferde değiştirmeyi kolaylaştırır. Bu özelliğe ayrıca menü çubuğunu kullanarak, yeniden düzenleme   >    >  **yeniden adlandırma**' yı düzenleyerek veya **CTRL** + **r** tuşuna basarak ve sonra da **CTRL** + **r** tuşuna basarak erişebilirsiniz.
 
   ![Sağ tıklama bağlam menüsünden XAML kod düzenleyicisinin ad alanını yeniden adlandır seçeneği](media/code-editor-rename-namespace.png "Sağ tıklama bağlam menüsü kullanılarak görüntülenen XAML kod Düzenleyicisi 'nin ad alanı değiştirme seçeneğinin ekran görüntüsü")
 
@@ -269,7 +269,7 @@ XAML kod Düzenleyicisi için varsayılan ayarları değiştirmek üzere [Seçen
 ![XAML metin Düzenleyicisi için seçenekler listesi](media/xaml-tools-options.png "XAML metin Düzenleyicisi için seçenekler listesinin ekran görüntüsü")
 
 > [!NOTE]
-> Ayrıca, Seçenekler iletişim kutusuna erişmek için klavye kısayollarını da kullanabilirsiniz. Şöyle açıklanmaktadır: **Ctrl** + IDE aramak için CTRL**Q** tuşlarına basın, **Seçenekler**yazın ve ardından **ENTER**tuşuna basın. Sonra, **Ctrl** + Seçenekler iletişim kutusunda CTRL**E** ' ye basın, **metin düzenleyici**yazın, **ENTER**tuşuna basın, **xaml**yazın ve ardından **ENTER**tuşuna basın.
+> Ayrıca, Seçenekler iletişim kutusuna erişmek için klavye kısayollarını da kullanabilirsiniz. Şöyle açıklanmaktadır:  + IDE aramak için CTRL **Q** tuşlarına basın, **Seçenekler** yazın ve ardından **ENTER** tuşuna basın. Sonra,  + Seçenekler iletişim kutusunda CTRL **E** ' ye basın, **metin düzenleyici** yazın, **ENTER** tuşuna basın, **xaml** yazın ve ardından **ENTER** tuşuna basın.
 >  
 > Klavye kısayolları hakkında daha fazla bilgi için bkz. [Visual Studio Için kısayol ipuçları](../ide/productivity-shortcuts.md#code-editor) sayfası.
 
@@ -277,7 +277,7 @@ XAML kod Düzenleyicisi için varsayılan ayarları değiştirmek üzere [Seçen
 
 XAML için [Seçenekler](../ide/reference/options-text-editor-xaml-formatting.md) iletişim kutusunda, aşağıdaki ilk üç öğe, VISUAL Studio IDE 'nin desteklediği tüm programlama dillerinde evrendir. Bu seçenekler ve bunların nasıl kullanılacağı hakkında daha fazla bilgi edinmek için aşağıdaki tablodaki bağlantılı bilgileri ziyaret edin.
 
-|Name  |Daha fazla bilgi  |
+|Ad  |Daha fazla bilgi  |
 |---------|---------|
 |Genel  | [Seçenekler iletişim kutusu: tüm diller > metin Düzenleyicisi](../ide/reference/options-text-editor-all-languages.md) |
 |Kaydırma çubukları | [Seçenekler, metin düzenleyici, tüm diller, kaydırma çubukları](../ide/reference/options-text-editor-all-languages-scroll-bars.md) |
@@ -287,7 +287,7 @@ XAML için [Seçenekler](../ide/reference/options-text-editor-xaml-formatting.md
 
 Aşağıdaki tabloda, XAML tabanlı uygulamalar geliştirirken, düzen deneyiminizi geliştirebileceğiniz [Seçenekler](../ide/reference/options-text-editor-xaml-formatting.md) iletişim kutusundaki ayarlar listelenmektedir. Bu seçenekler ve bunların nasıl kullanılacağı hakkında daha fazla bilgi edinmek için bağlantılı bilgileri ziyaret edin.
 
-|Name  |Daha fazla bilgi  |
+|Ad  |Daha fazla bilgi  |
 |---------|---------|
 |Biçimlendirme | [Seçenekler, Metin Düzenleyici, XAML, Biçimlendirme](../ide/reference/options-text-editor-xaml-formatting.md) |
 |Çeşitli |  [Seçenekler, metin düzenleyici, XAML, çeşitli](../ide/reference/options-text-editor-xaml-miscellaneous.md) |

@@ -1,5 +1,6 @@
 ---
 title: Eşzamanlılık görselleştiricisi Işaretleyicileri SDK 'sını kullanma | Microsoft Docs
+description: Yayılma ve yazma bayrakları, iletiler ve uyarılar oluşturmak için Visual Studio 'da eşzamanlılık görselleştiricisi işaretleyicileri SDK 'sını nasıl kullanacağınızı öğrenin.
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 19a45032-f8a7-4137-890e-2ceeec938b8d
@@ -8,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9cf33ad094716ee0f8f4c8cc4bb06220db1237e5
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 24659a101da59ed3a8ca6389debfde6c08a038ed
+ms.sourcegitcommit: 105e7b5a486262bc92939980383ceee068098a11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851586"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "97815613"
 ---
 # <a name="how-to-use-the-concurrency-visualizer-markers-sdk"></a>Nasıl yapılır: eşzamanlılık görselleştiricisi işaretçileri SDK 'sını kullanma
 Bu konu başlığı altında, yayılma ve yazma bayrakları, iletiler ve uyarılar oluşturmak için Eşzamanlılık Görselleştiricisi SDK 'sının nasıl kullanılacağı gösterilmektedir.
@@ -70,7 +71,7 @@ Bu konu başlığı altında, yayılma ve yazma bayrakları, iletiler ve uyarıl
 
 6. Eşzamanlılık Görselleştiricisini göstermek için geçerli projeyi başlatın. İki işaretleyici serisi, Iş parçacıkları görünümündeki kendi kulvarları içinde görüntülenir. Aşağıdaki çizimde, iki yeni yayılma gösterilmektedir.
 
-     ![3 özel işaret serisiyle eşzamanlılık görselleştiricisi](../profiling/media/cvmarkerseriesnative.png "CvMarkerSeriesNative")
+     ![Eşzamanlılık görselleştiricisi içindeki Iş parçacığı görünümünün ekran görüntüsü; bir işaret, bayrak ve ileti serisini, bayrak yayılım ve ileti yayılımı ile gösterir.](../profiling/media/cvmarkerseriesnative.png "CvMarkerSeriesNative")
 
 ### <a name="to-use-visual-basic-or-c"></a>Visual Basic veya C 'yi kullanmak için\#
 
@@ -164,7 +165,7 @@ Bu konu başlığı altında, yayılma ve yazma bayrakları, iletiler ve uyarıl
 
 6. Eşzamanlılık Görselleştiricisini göstermek için geçerli projeyi başlatın. Üç markör serisi, Iş parçacıkları görünümündeki kendi kulvarları içinde görüntülenir. Aşağıdaki çizimde üç yeni yayılma gösterilmektedir.
 
-     ![3 özel işaret serisiyle eşzamanlılık görselleştiricisi](../profiling/media/cvmarkerseriesmanaged.png "Cvmarkerseriesyönetiliyor")
+     ![Eşzamanlılık görselleştiricisi içindeki Iş parçacıkları görünümünün, bir ileti, uyarı ve bayrak yayılma ile bir işaret, bayrak ve ileti serisi gösteren ekran görüntüsü.](../profiling/media/cvmarkerseriesmanaged.png "Cvmarkerseriesyönetiliyor")
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Eşzamanlılık Görselleştiricisi SDK](../profiling/concurrency-visualizer-sdk.md)

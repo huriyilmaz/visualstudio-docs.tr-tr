@@ -1,6 +1,6 @@
 ---
 title: NPM kullanarak TypeScript kodu derleme ve derleme
-description: Visual Studio 'da TypeScript 'i derlemeyi ve derlemeyi öğrenin.
+description: Node Package Manager 'ı (NPM) kullanarak Visual Studio projelerinize TypeScript desteği eklemeyi öğrenin.
 ms.date: 7/23/2020
 ms.topic: conceptual
 author: mikejo5000
@@ -10,12 +10,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: add67535c0c3c9e4a48b95c2b9d5fe0717511797
-ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
+ms.openlocfilehash: be7bc30f260a492fbc783a8e730b1e550fcb4671
+ms.sourcegitcommit: d577818d3d8e365baa55c6108fa8159c46ed8b43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93414387"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97846802"
 ---
 # <a name="compile-typescript-code-nodejs"></a>TypeScript kodunu derle (Node.js)
 
@@ -35,11 +35,11 @@ ASP.NET Core projeleri için, bunun yerine [NuGet paketini](../javascript/compil
 
    Çözüm Gezgini (sağ bölme) menüsünde, proje kökünde *package.js* açın. Listelenen paketler, Çözüm Gezgini NPM düğümü altındaki paketlere karşılık gelir. Daha fazla bilgi için bkz. [NPM paketlerini yönetme](../javascript/npm-package-management.md).
 
-   Node.js bir proje için, komut satırını veya IDE 'yi kullanarak TypeScript NPM paketini yükleyebilirsiniz. IDE kullanarak yüklemek için Çözüm Gezgini NPM düğümüne sağ tıklayın, **Yeni NPM paketi yüklensin** ' i seçin, **TypeScript** için arama yapın ve paketi yüklemek için.
+   Node.js bir proje için, komut satırını veya IDE 'yi kullanarak TypeScript NPM paketini yükleyebilirsiniz. IDE kullanarak yüklemek için Çözüm Gezgini NPM düğümüne sağ tıklayın, **Yeni NPM paketi yüklensin**' i seçin, **TypeScript** için arama yapın ve paketi yüklemek için.
 
    Paket yükleme ilerlemesini görmek için **Çıkış** penceresindeki **NPM** seçeneğini işaretleyin. Yüklü paket, Çözüm Gezgini **NPM** düğümünün altında görüntülenir.
 
-1. Projeniz zaten içermiyorsa, proje köküne bir *. tsconfig* dosyası ekleyin. Dosyayı eklemek için, proje düğümüne sağ tıklayın ve **> yeni öğe Ekle** ' yi seçin. **TYPESCRIPT JSON yapılandırma dosyasını** seçin ve ardından **Ekle** ' ye tıklayın.
+1. Projeniz zaten içermiyorsa, proje köküne bir *. tsconfig* dosyası ekleyin. Dosyayı eklemek için, proje düğümüne sağ tıklayın ve **> yeni öğe Ekle**' yi seçin. **TYPESCRIPT JSON yapılandırma dosyasını** seçin ve ardından **Ekle**' ye tıklayın.
 
    Visual Studio *tsconfig.js* dosyayı proje köküne ekler. TypeScript derleyicisi [seçeneklerini yapılandırmak](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) için bu dosyayı kullanabilirsiniz.
 
@@ -72,14 +72,14 @@ ASP.NET Core projeleri için, bunun yerine [NuGet paketini](../javascript/compil
 
 ## <a name="build-the-application"></a>Uygulama oluşturma
 
-1. Projenize TypeScript ( *. TS* ) veya TypeScript JSX ( *. TSX* ) dosyaları ekleyin ve ardından TypeScript kodu ekleyin. TypeScript 'in basit bir örneği için aşağıdakileri kullanın:
+1. Projenize TypeScript (*. TS*) veya TypeScript JSX (*. TSX*) dosyaları ekleyin ve ardından TypeScript kodu ekleyin. TypeScript 'in basit bir örneği için aşağıdakileri kullanın:
 
    ```typescript
    let message: string = 'Hello World';
    console.log(message);
    ```
 
-1. *package.js* , aşağıdaki komut dosyalarını kullanarak Visual Studio Build ve Clean komutları için destek ekleyin.
+1. *package.js*, aşağıdaki komut dosyalarını kullanarak Visual Studio Build ve Clean komutları için destek ekleyin.
 
    ```json
    "scripts": {
@@ -100,7 +100,7 @@ ASP.NET Core projeleri için, bunun yerine [NuGet paketini](../javascript/compil
 
    TypeScript ile Vue.js kullanmayla ilgili bir örnek için bkz. [Vue.js uygulaması oluşturma](/javascript/create-application-with-vuejs).
 
-1. Başlangıç sayfası, Node.js çalışma zamanı, uygulama bağlantı noktası veya çalışma zamanı bağımsız değişkenlerinin yolu gibi seçenekleri yapılandırmanız gerekirse, Çözüm Gezgini proje düğümüne sağ tıklayın ve **Özellikler** ' i seçin.
+1. Başlangıç sayfası, Node.js çalışma zamanı, uygulama bağlantı noktası veya çalışma zamanı bağımsız değişkenlerinin yolu gibi seçenekleri yapılandırmanız gerekirse, Çözüm Gezgini proje düğümüne sağ tıklayın ve **Özellikler**' i seçin.
 
    >[!NOTE]
    > Üçüncü taraf araçları yapılandırırken Node.js projeler, **Araçlar**  >  **Seçenekler**  >  **Projeler ve çözümler**  >  **Web paket yönetimi**  >  **dış Web araçları** altında yapılandırılan yolları kullanmaz. Bu ayarlar diğer proje türleri için kullanılır.

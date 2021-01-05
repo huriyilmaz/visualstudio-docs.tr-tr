@@ -1,5 +1,6 @@
 ---
 title: OnStart yönteminde hata ayıkla | Microsoft Docs
+description: Hata ayıklayıcıyı yöntemin içinden başlatarak Visual Studio 'da bir Windows hizmetinin OnStart yönteminde hata ayıklamanın nasıl yapılacağını öğrenin.
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -19,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d695e4d22c728eb256aeb0e1350819ba23b93385
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 27cb5a870166e1d8909c80dc617ca16690bf6619
+ms.sourcegitcommit: 3c571f44bfd6402efea5187af43df287bac5b6ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852380"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97761413"
 ---
 # <a name="how-to-debug-the-onstart-method"></a>Nasıl Yapılır: OnStart Yönteminde Hata Ayıklama
 Hizmeti başlatarak ve hata ayıklayıcıyı hizmet sürecine ekleyerek bir Windows hizmetinde hata ayıklaması yapabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: Windows hizmet uygulamalarında hata ayıklama](/dotnet/framework/windows-services/how-to-debug-windows-service-applications). Ancak, <xref:System.ServiceProcess.ServiceBase.OnStart%2A?displayProperty=fullName> bir Windows hizmeti yönteminde hata ayıklamak için, hata ayıklayıcıyı yöntemin içinden başlatmanız gerekir.
@@ -42,16 +43,16 @@ Hizmeti başlatarak ve hata ayıklayıcıyı hizmet sürecine ekleyerek bir Wind
 
     Aşağıdakine benzer bir iletişim kutusu görmeniz gerekir:
 
-    ![OnStartDebug](../debugger/media/onstartdebug.png "OnStartDebug")
+    ![Bir Visual Studio tam zamanında hata ayıklayıcı iletişim kutusunun, WindowsService-Asis.exe içinde işlenmemiş bir .NET Framework özel durumu gösteren ekran görüntüsü.](../debugger/media/onstartdebug.png)
 
 3. **Evet, hata ayıkla ' yı seçin \<service name> .**
 
 4. Tam zamanında hata ayıklayıcı penceresinde, hata ayıklama için kullanmak istediğiniz Visual Studio sürümünü seçin.
 
-    ![Ettintimedebugger](../debugger/media/justintimedebugger.png "Ettintimedebugger")
+    ![Olası hata ayıklayıcılar listesinde ' Microsoft Visual Studio 2015 ' yeni örneğini içeren bir Visual Studio tam zamanında hata ayıklayıcı penceresinin ekran görüntüsü.](../debugger/media/justintimedebugger.png)
 
 5. Visual Studio 'nun yeni bir örneği başlar ve yöntem sırasında yürütme durdurulur `Debugger.Launch()` .
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Hata Ayıklama Güvenliği](../debugger/debugger-security.md)
+- [Hata ayıklayıcı güvenliği](../debugger/debugger-security.md)
 - [Yönetilen Kodda Hata Ayıklama](../debugger/debugging-managed-code.md)

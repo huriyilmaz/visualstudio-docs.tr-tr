@@ -1,5 +1,7 @@
 ---
 title: Dosya adı uzantıları için fiiller kaydetme | Microsoft Docs
+description: Bir kabuk anahtarı kullanarak bir dosya adı uzantısı için programlı tanımlayıcıyla ilişkili bir fiil kaydetmeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,28 +12,28 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ac2854f1799075cc14d9beb557335be5228be21d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: df0dfe90bd5e3bccbb6bb0f9dab400082f539fbf
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80701528"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863043"
 ---
 # <a name="register-verbs-for-file-name-extensions"></a>Dosya adı uzantıları için fiilleri kaydetme
 Bir dosya adı uzantısının uygulamayla ilişkilendirilmesi genellikle Kullanıcı bir dosyayı çift tıkladığında oluşan tercih edilen bir eyleme sahiptir. Bu tercih edilen eylem, eyleme karşılık gelen, örneğin açık olan bir fiil ile bağlantılıdır.
 
- Bir uzantı için programlı tanımlayıcı (ProgID) ile ilişkili fiilleri **HKEY_CLASSES_ROOT \{ ProgID} \Shell**konumunda bulunan kabuk anahtarını kullanarak kaydedebilirsiniz. Daha fazla bilgi için bkz. [dosya türleri](/windows/desktop/shell/fa-file-types).
+ Bir uzantı için programlı tanımlayıcı (ProgID) ile ilişkili fiilleri **HKEY_CLASSES_ROOT \{ ProgID} \Shell** konumunda bulunan kabuk anahtarını kullanarak kaydedebilirsiniz. Daha fazla bilgi için bkz. [dosya türleri](/windows/desktop/shell/fa-file-types).
 
 ## <a name="register-standard-verbs"></a>Standart fiilleri Kaydet
  İşletim sistemi aşağıdaki standart fiilleri tanır:
 
-- Açık
+- Aç
 
 - Düzenle
 
 - Oynama
 
-- Yazdırma
+- Yazdır
 
 - Önizleme
 

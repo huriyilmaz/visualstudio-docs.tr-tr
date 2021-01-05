@@ -8,12 +8,12 @@ ms.topic: include
 ms.date: 05/23/2018
 ms.author: mikejo
 ms.custom: include file
-ms.openlocfilehash: 3fa0569739ee81ec4b2aa0eec8157068ffc949cd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1d049bc8b74b83028e04fe92e7ce96f45907d042
+ms.sourcegitcommit: 3c571f44bfd6402efea5187af43df287bac5b6ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89324724"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97762630"
 ---
 1. **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve **Yayımla** ' yı (Web Forms, **Web uygulaması Yayımla**) seçin.
 
@@ -21,7 +21,7 @@ ms.locfileid: "89324724"
 
 1. **Yayımla** Iletişim kutusunda **klasör**' i seçin, **Araştır**' a tıklayın ve yeni bir klasör oluşturun, **C:\publish**.
 
-    ![RemoteDBG_Publish_Local](../media/remotedbg_publish_local.png "RemoteDBG_Publish_Local")
+    ![Yayımla hedefi olarak seçili ' bin\Release\Publish ' klasörünü içeren Visual Studio 'da bir Yayımla hedefi seç iletişim kutusunun ekran görüntüsü.](../media/remotedbg_publish_local.png)
 
     Web Forms uygulama için Yayımla iletişim kutusunda **özel** ' i seçin, bir profil adı girin ve **Tamam**' ı seçin.
 
@@ -29,14 +29,14 @@ ms.locfileid: "89324724"
 
 1. **Yayımla** Iletişim kutusunda **Ayarlar** bağlantısına tıklayın ve ardından **Ayarlar** sekmesini seçin.
 
-1. Yapılandırmayı **Hata Ayıkla**olarak ayarlayın, **yayımlamadan önce tüm mevcut dosyaları sil**' i seçin ve ardından **Kaydet**' e tıklayın.
+1. Yapılandırmayı **Hata Ayıkla** olarak ayarlayın, **yayımlamadan önce tüm mevcut dosyaları sil**' i seçin ve ardından **Kaydet**' e tıklayın.
 
     > [!NOTE]
     > Yayın derlemesi kullanıyorsanız, yayımladığınızda web.config dosyasında hata ayıklamayı devre dışı bırakabilirsiniz.
 
 1. **Yayımla**’ya tıklayın.
 
-    ![RemoteDBG_Publish_Debug_Config](../media/remotedbg_publish_debug_config.png "RemoteDBG_Publish_Debug_Config")
+    ![Yayımla iletişim kutusundaki ayarlar sekmesinin ekran görüntüsü. Yapılandırma hata ayıklama olarak ayarlanır ve Yayımla düğmesi seçilidir.](../media/remotedbg_publish_debug_config.png)
 
     Uygulama, projenin **hata ayıklama** yapılandırmasını yerel klasöre yayımlar. İlerleme, çıkış penceresinde görüntülenir.
 

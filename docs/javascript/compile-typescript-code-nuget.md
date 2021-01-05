@@ -1,6 +1,6 @@
 ---
 title: NuGet kullanarak TypeScript kodu derleme ve derleme
-description: Visual Studio 'da TypeScript 'i derlemeyi ve derlemeyi öğrenin.
+description: NuGet paketini kullanarak Visual Studio projelerinize TypeScript desteğinin nasıl ekleneceğini öğrenin.
 ms.date: 7/23/2020
 ms.topic: conceptual
 author: mikejo5000
@@ -10,12 +10,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 16ff335fdf8ca76889562cfd94807ec1adc516d2
-ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
+ms.openlocfilehash: 929c17c9cbd2a0987bebca02c70b3b751c19fc9a
+ms.sourcegitcommit: d577818d3d8e365baa55c6108fa8159c46ed8b43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91927932"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97846823"
 ---
 # <a name="compile-typescript-code-aspnet-core"></a>TypeScript kodunu derle (ASP.NET Core)
 
@@ -44,7 +44,7 @@ Visual Studio yüklüyse, onunla paketlenmiş node.exe Visual Studio tarafından
    </PackageReference>
    ```
 
-1. Proje düğümüne sağ tıklayın ve **> yeni öğe Ekle**' yi seçin. **TYPESCRIPT JSON yapılandırma dosyasını**seçin ve ardından **Ekle**' ye tıklayın.
+1. Proje düğümüne sağ tıklayın ve **> yeni öğe Ekle**' yi seçin. **TYPESCRIPT JSON yapılandırma dosyasını** seçin ve ardından **Ekle**' ye tıklayın.
 
    Visual Studio *tsconfig.js* dosyayı proje köküne ekler. TypeScript derleyicisi [seçeneklerini yapılandırmak](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) için bu dosyayı kullanabilirsiniz.
 
@@ -86,7 +86,7 @@ Visual Studio yüklüyse, onunla paketlenmiş node.exe Visual Studio tarafından
 
 1. SDK olmayan eski bir stil projesi kullanıyorsanız, derlemeden önce [varsayılan içeri aktarmaları kaldır](#remove-default-imports) ' daki yönergeleri izleyin.
 
-1. **Build > Build Solution**öğesini seçin.
+1. **Build > Build Solution** öğesini seçin.
 
    Uygulamayı çalıştırdığınızda otomatik olarak oluştursa da, yapı işlemi sırasında gerçekleşen bir şeye göz atmak istiyoruz:
 
@@ -106,7 +106,7 @@ Visual Studio yüklüyse, onunla paketlenmiş node.exe Visual Studio tarafından
 
 Uygulamanızı derlemek için görev Çalıştırıcısı ile Gulp kullanma örneği için bkz. [ASP.NET Core ve TypeScript](https://www.typescriptlang.org/docs/handbook/asp-net-core.html).
 
-Visual Studio 'nun Node.js bir sürümünü veya sizin beklediğiniz sürümden farklı bir üçüncü taraf aracını kullandığı sorunlarla karşılaşırsanız, Visual Studio 'nun yolunu kullanacak şekilde ayarlamanız gerekebilir. **Araçlar**  >  **seçeneklerini**belirleyin. **Projeler ve çözümler**altında **Web paket yönetimi**  >  **dış Web araçları**' nı seçin.
+Visual Studio 'nun Node.js bir sürümünü veya sizin beklediğiniz sürümden farklı bir üçüncü taraf aracını kullandığı sorunlarla karşılaşırsanız, Visual Studio 'nun yolunu kullanacak şekilde ayarlamanız gerekebilir. **Araçlar**  >  **seçeneklerini** belirleyin. **Projeler ve çözümler** altında **Web paket yönetimi**  >  **dış Web araçları**' nı seçin.
 
 ### <a name="run-the-application"></a>Uygulamayı çalıştırma
 
@@ -123,7 +123,7 @@ Derlemeden sonra uygulamayı çalıştırma yönergeleri için, bkz. [ilk Node.j
 
     1. *Microsoft. TypeScript. MSBuild. targets*
 
-        Bu dosya, *Araçlar* klasöründen *Microsoft. TypeScript. targets* almadan önce *TypeScript.Tasks.dll*yolu gibi çalışma zamanı platformunu belirten değişkenleri ayarlar.
+        Bu dosya, *Araçlar* klasöründen *Microsoft. TypeScript. targets* almadan önce *TypeScript.Tasks.dll* yolu gibi çalışma zamanı platformunu belirten değişkenleri ayarlar.
 
     2. *Microsoft. TypeScript. MSBuild. props*
 
@@ -163,7 +163,7 @@ Bir proje için MSBuild desteği için NuGet paketini kullanıyorsanız, proje d
 
 1. Projeye sağ tıklayın ve **Projeyi Kaldır**' ı seçin.
 
-1. Projeye sağ tıklayın ve **Düzenle \<*project file name*\> **' yi seçin.
+1. Projeye sağ tıklayın ve **Düzenle \<*project file name*\>**' yi seçin.
 
    Proje dosyası açılır.
 

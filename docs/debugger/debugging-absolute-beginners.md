@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5c3cf9d5e4d72ed316344d1bda930d0416e9efe5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6202fa019aed8e6fc9eb9ff93bdb390bf22f2911
+ms.sourcegitcommit: 3c571f44bfd6402efea5187af43df287bac5b6ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77416404"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97761257"
 ---
 # <a name="how-to-debug-for-absolute-beginners"></a>Mutlak yeni başlayanlar için hata ayıklama
 
@@ -62,13 +62,13 @@ Varsayımlarınızı sorgarak kodunuzda bir sorun bulmak için geçen süreyi az
 
 Bir uygulamayı normalde çalıştırdığınızda, yalnızca kod çalıştıktan sonra hatalar ve hatalı sonuçlar görürsünüz. Ayrıca, bir program neden sizi bildirmeden beklenmedik şekilde sonlandırılabilir.
 
-Hata ayıklayıcı içinde, *hata ayıklama modu*olarak da adlandırılan bir uygulama çalıştırmak, hata ayıklayıcının program çalışırken meydana gelen her şeyi etkin bir şekilde izlediği anlamına gelir. Ayrıca, durumu incelemek için uygulamayı dilediğiniz zaman duraklatıp, ardından her ayrıntıyı olduğu gibi izlemek için kod satırlarınızın satıra göre ilerleyebileceğiniz bir işlem yapabilirsiniz.
+Hata ayıklayıcı içinde, *hata ayıklama modu* olarak da adlandırılan bir uygulama çalıştırmak, hata ayıklayıcının program çalışırken meydana gelen her şeyi etkin bir şekilde izlediği anlamına gelir. Ayrıca, durumu incelemek için uygulamayı dilediğiniz zaman duraklatıp, ardından her ayrıntıyı olduğu gibi izlemek için kod satırlarınızın satıra göre ilerleyebileceğiniz bir işlem yapabilirsiniz.
 
 Visual Studio 'da, hata ayıklama modunu **F5** ( **veya hata**  >  **ayıklamayı Başlat** menü komutu) veya hata **ayıklamayı** Başlat düğmesine hata ayıklama araç çubuğundan ![Başlat](../debugger/media/dbg-tour-start-debugging.png "Hata ayıklamayı Başlat") ' ı kullanarak girersiniz. Herhangi bir özel durum oluşursa, Visual Studio 'nun özel durum Yardımcısı sizi özel durumun gerçekleştiği kesin noktaya götürür ve diğer yararlı bilgileri sağlar. Kodunuzda özel durumların nasıl işleneceği hakkında daha fazla bilgi için bkz. [hata ayıklama teknikleri ve araçları](../debugger/write-better-code-with-visual-studio.md).
 
 Bir özel durum almadıysanız, büyük olasılıkla kodunuzda sorunu nerede aramanız gerektiği konusunda iyi bir fikir sahibi olabilirsiniz. Bu, kendinize kodunuzu daha dikkatli bir şekilde incelemenize olanak tanımak için hata ayıklayıcı ile *kesme noktaları* kullanırsınız. Kesme noktaları, güvenilir hata ayıklamanın en temel ve temel özelliğidir. Bir kesme noktası, Visual Studio 'Nun çalışan kodunuzu duraklatıp, değişkenlerin değerlerine veya bellek davranışına ya da kodun çalıştığı diziye göz atabilmenizi sağlayacak şekilde belirtir.
 
-Visual Studio 'da, bir kod satırının yanındaki sol kenar boşluğuna tıklayarak hızlı bir kesme noktası ayarlayabilirsiniz. Ya da imleci bir satıra yerleştirip **F9**tuşuna basın.
+Visual Studio 'da, bir kod satırının yanındaki sol kenar boşluğuna tıklayarak hızlı bir kesme noktası ayarlayabilirsiniz. Ya da imleci bir satıra yerleştirip **F9** tuşuna basın.
 
 Bu kavramları göstermeye yardımcı olmak için, daha önce birkaç hata içeren bazı örnek kodlar aracılığıyla sizi ele aldık. C# kullanıyorum, ancak hata ayıklama özellikleri Visual Basic, C++, JavaScript, Python ve diğer desteklenen diller için geçerlidir.
 
@@ -78,7 +78,7 @@ Daha sonra, birkaç hata içeren bir uygulama oluşturacağız.
 
 1. Oluşturmak istediğiniz uygulama türüne bağlı olarak, Visual Studio 'Nun yüklü olması ve **.net masaüstü geliştirme** iş yükü ya da **.NET Core platformlar arası geliştirme** iş yükü yüklemiş olmanız gerekir.
 
-    Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads/)   sayfasına giderek ücretsiz olarak yükleme yapın.
+    Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads/) sayfasına giderek ücretsiz olarak yükleme yapın.
 
     İş yükünü yüklemeniz gerekir, ancak Visual Studio zaten varsa **Araçlar**  >  **ve Özellikler al**' a tıklayın. Visual Studio Yükleyicisi başlatılır. **.Net masaüstü geliştirme** (veya **.NET Core platformlar arası geliştirme**) iş yükünü seçin ve ardından **Değiştir**' i seçin.
 
@@ -91,7 +91,7 @@ Daha sonra, birkaç hata içeren bir uygulama oluşturacağız.
     Üstteki menü çubuğundan **Dosya**  >  **Yeni**  >  **Proje**' yi seçin. **Yeni proje** iletişim kutusunun sol bölmesinde, **Visual C#** altında, **konsol uygulaması**' nı seçin ve ardından Ortadaki bölmede **konsol uygulaması (.NET Framework)** veya **konsol uygulaması (.NET Core)** seçeneğini belirleyin. **Consoleapp-FirstApp** gibi bir ad yazın ve **Tamam**' a tıklayın.
     ::: moniker-end
 
-    **Konsol uygulaması (.NET Framework)** veya **konsol uygulaması (.NET Core)** proje şablonunu görmüyorsanız, **Araçlar**' a gidin  >  ve Visual Studio yükleyicisi açan araçlar**ve Özellikler**' e gidin. **.NET Core platformlar arası geliştirme** veya **.net masaüstü geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
+    **Konsol uygulaması (.NET Framework)** veya **konsol uygulaması (.NET Core)** proje şablonunu görmüyorsanız, **Araçlar**' a gidin  >  ve Visual Studio yükleyicisi açan araçlar **ve Özellikler**' e gidin. **.NET Core platformlar arası geliştirme** veya **.net masaüstü geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
 
     Visual Studio, sağ bölmedeki Çözüm Gezgini görüntülenen konsol projesini oluşturur.
 
@@ -229,17 +229,17 @@ Daha sonra, birkaç hata içeren bir uygulama oluşturacağız.
 
 1. `GalaxyType`Sağ taraftaki değişkenin üzerine gelin ve ardından, İngiliz anahtarı simgesinin solunda öğesini genişletin `theGalaxy.GalaxyType` . `GalaxyType`Bir özellik içerdiğini `MyGType` ve özellik değeri olarak ayarlandığını görürsünüz `Spiral` .
 
-    ![Bir değişkeni inceleyin](../debugger/media/beginners-inspect-variable.png)
+    ![Visual Studio hata ayıklayıcının, sarı renkli bir kod satırı ve satırın sonundaki theGalaxy. GalaxyType özelliğinin altında genişletilmiş bir menü ekran görüntüsü.](../debugger/media/beginners-inspect-variable.png)
 
     "Sarmal" Aslında konsola yazdırmak beklediğiniz doğru değerdir! Bu nedenle, uygulamayı çalıştırırken bu kodda bu değere erişebiliyor olmanız iyi bir başlangıç. Bu senaryoda, yanlış API kullandık. Hata ayıklayıcıda kod çalıştırırken bunu çözebiliriz.
 
 1. Aynı kodda, hala hata ayıklarken imlecinizi sonuna koyun `theGalaxy.GalaxyType` ve olarak değiştirin `theGalaxy.GalaxyType.MyGType` . Bu değişikliği yapabilseniz de, kod Düzenleyicisi bu kodu derleyemeyeceğini belirten bir hata gösterir.
 
-    ![Söz dizimi hatası](../debugger/media/beginners-edit.png)
+    ![Visual Studio hata ayıklayıcının, kırmızı renkle vurgulanmış bir kod satırı ile ekran görüntüsü ve Düzenle ve devam et ileti kutusu seçili Düzenle düğmesi seçili.](../debugger/media/beginners-edit.png)
 
 1. **Düzenle ve devam et** Ileti kutusunda **Düzenle** ' ye tıklayın. **Hata listesi** penceresinde şimdi bir hata mesajı görürsünüz. Hata, öğesinin `'object'` için bir tanım içermediğini gösterir `MyGType` .
 
-    ![Söz dizimi hatası](../debugger/media/beginners-no-definition.png)
+    ![Kırmızı renkle vurgulanmış bir kod satırıyla Visual Studio hata ayıklayıcının ekran görüntüsü ve listede iki hata bulunan bir Hata Listesi penceresi.](../debugger/media/beginners-no-definition.png)
 
     Her Galaxy 'yi türünde bir nesne `GType` (özelliğine sahiptir) olarak ayarladığımızda `MyGType` , hata ayıklayıcı `theGalaxy` nesneyi türünde bir nesne olarak tanımıyor `GType` . Neler oluyor? Galaxy türünü ayarlayan herhangi bir koda bakmak istiyorsunuz. Bunu yaptığınızda, `GType` sınıfının özelliği kesinlikle olduğunu görürsünüz `MyGType` ancak bir şey doğru değildir. Bir hata iletisi, `object` Clue olmak üzere şu şekilde görünür; dil Yorumlayıcısına, türü türünde bir nesne yerine türünde bir nesne gibi görünüyor `object` `GType` .
 
@@ -255,11 +255,11 @@ Daha sonra, birkaç hata içeren bir uygulama oluşturacağız.
     public GType GalaxyType { get; set; }
     ```
 
-1. Kodu yeniden **Restart** ![Restart App](../debugger/media/dbg-tour-restart.png "RestartApp") **Ctrl**  +  **Shift**  +  derlemek ve yeniden başlatmak için hata ayıklama araç çubuğundaki uygulamayı yeniden Başlat (CTRL SHIFT**F5**) düğmesine tıklayın.
+1. Kodu yeniden  ![](../debugger/media/dbg-tour-restart.png "RestartApp")   +    +  derlemek ve yeniden başlatmak için hata ayıklama araç çubuğundaki uygulamayı yeniden Başlat (CTRL SHIFT **F5**) düğmesine tıklayın.
 
     Artık hata ayıklayıcı üzerinde durakladığında, üzerine `Console.WriteLine` gelin `theGalaxy.GalaxyType.MyGType` ve değerin düzgün şekilde ayarlandığını görebilirsiniz.
 
-1. Sol kenar boşluğunda kesme noktası çemberuna tıklayarak kesme noktasını kaldırın (veya sağ tıklayıp **kesme**noktası  >  **Sil kesme noktası**' nı seçin ve sonra devam etmek için **F5** ' e basın.
+1. Sol kenar boşluğunda kesme noktası çemberuna tıklayarak kesme noktasını kaldırın (veya sağ tıklayıp **kesme** noktası  >  **Sil kesme noktası**' nı seçin ve sonra devam etmek için **F5** ' e basın.
 
     Uygulama çalışır ve çıktıyı görüntüler. Şimdi oldukça iyi görünüyor, ancak bir şey fark edersiniz. Küçük Magellanic bulutu Galaxy 'nin konsol çıkışında düzensiz bir Galaxy olarak gösterilmesini bekliyorduk, ancak hiç Galaxy türü göstermemektedir.
 
@@ -288,13 +288,13 @@ Daha sonra, birkaç hata içeren bir uygulama oluşturacağız.
 
 1. **F5** tuşuna basın ve değişkenin üzerine gelin `type` . Değişkende bir değer görene kadar bu adımı yineleyin `I` `type` .
 
-    ![Bir değişkeni inceleyin](../debugger/media/beginners-inspecting-data.png)
+    ![Visual Studio hata ayıklayıcının, sarı renkli bir kod satırı ve tür değişkeninin değerini 73 ' I ' olarak gösteren küçük bir pencere ekran görüntüsü.](../debugger/media/beginners-inspecting-data.png)
 
 1. Şimdi, hata ayıklama araç çubuğundaki **F11** (**Hata Ayıkla**  >  **adımla** veya **adımla** düğmesine basın) tuşuna basın.
 
     **F11** hata ayıklayıcıyı ilerletir (ve kodu yürütür). **F10** (**Adımlama**), benzer bir komuttur ve her ikisi de hata ayıklayıcıyı nasıl kullanacağınızı öğrenirken son derece yararlıdır.
 
-1. **F11** `switch` ' I ' değeri için deyimdeki kod satırında durana kadar F11 tuşuna basın. Burada, bir typo 'dan kaynaklanan açık bir sorun görürsünüz. Kodun düzensiz bir Galaxy türü olarak ayarlandığı yere ilerletmesini bekliyorduk `MyGType` , ancak bunun yerine hata ayıklayıcı bu kodu tamamen atlar ve `default` deyimin bölümünde duraklatılır `switch` .
+1.  `switch` ' I ' değeri için deyimdeki kod satırında durana kadar F11 tuşuna basın. Burada, bir typo 'dan kaynaklanan açık bir sorun görürsünüz. Kodun düzensiz bir Galaxy türü olarak ayarlandığı yere ilerletmesini bekliyorduk `MyGType` , ancak bunun yerine hata ayıklayıcı bu kodu tamamen atlar ve `default` deyimin bölümünde duraklatılır `switch` .
 
     ![Yazım hatası bulma](../debugger/media/beginners-typo.png)
 

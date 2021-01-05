@@ -1,7 +1,7 @@
 ---
 title: Visual Studio Professional iş yükü ve bileşen kimlikleri
 titleSuffix: ''
-description: Komut satırını kullanarak Visual Studio 'Yu yüklemek veya bir VSıX bildiriminde bağımlılık olarak belirtmek için iş yükü ve bileşen kimliklerini kullanma
+description: Komut satırından Visual Studio 'Yu yüklemek veya VSıX bildiriminde bir bağımlılık belirtmek için Visual Studio Professional iş yükü ve bileşen kimlikleri kullanın.
 keywords: ''
 author: ornellaalt
 ms.author: ornella
@@ -16,12 +16,12 @@ ms.assetid: 5719032b-2c2e-416e-a281-a4573ec74e38
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 open_to_public_contributors: false
-ms.openlocfilehash: 6ac189de45248d277969be3f38e60daba2985ebc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6274396d35756682ad929b051d155897bcafb8e7
+ms.sourcegitcommit: d577818d3d8e365baa55c6108fa8159c46ed8b43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84184346"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97846995"
 ---
 # <a name="visual-studio-professional-component-directory"></a>Visual Studio Professional bileşen dizini
 

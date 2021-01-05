@@ -9,12 +9,12 @@ manager: jillfra
 ms.workload:
 - dotnet
 author: mikejo5000
-ms.openlocfilehash: 6badbb7723bf4d8ed0c9385558204c2dc4907574
-ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
+ms.openlocfilehash: 3f90a3d42eb1390adbb242242172aea152a0a54f
+ms.sourcegitcommit: d526af3642163180e0cc3e1e73b0a00f02542683
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95441254"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97833240"
 ---
 # <a name="how-to-configure-unit-tests-to-target-an-earlier-version-of-the-net-framework"></a>Nasıl yapılır: birim testlerini .NET Framework önceki bir sürümünü hedeflemek için yapılandırma
 
@@ -62,7 +62,7 @@ Yukarıda listelenen yetenekler, Visual Studio kullanarak SharePoint uygulamalar
 
 4. Hedef Framework 'ü **.NET Framework 3,5** veya sonraki bir sürümü, aşağıdaki çizimde yer alarak B çağrısında gösterildiği gibi değiştirmek için **hedef Framework (tüm yapılandırma)** açılan listesini kullanın. İstemci sürümü belirtmemelisiniz.
 
-     ![Hedef çerçeve bırakma&#45;aşağı açılan listesi](../test/media/howtoconfigureunitest35frameworkstepb.png)
+     ![Gelişmiş derleyici ayarları iletişim kutusunun ekran görüntüsü. Hedef çerçeve açılır listesi vurgulanır ve değer ' .NET Frameowrk 3,5 ' olarak ayarlanır.](../test/media/howtoconfigureunitest35frameworkstepb.png)
 
 ## <a name="retargeting-for-c-unit-test-projects"></a>C# birim testi projeleri için yeniden hedefleme
 
@@ -74,7 +74,7 @@ Yukarıda listelenen yetenekler, Visual Studio kullanarak SharePoint uygulamalar
 
 3. **Uygulama** sekmesinde **hedef çerçeve**' yi seçin. Aşağı açılan listeden, aşağıdaki çizimde gösterildiği gibi **.NET Framework 3,5** veya sonraki bir sürümü seçin. İstemci sürümü belirtmemelisiniz.
 
-   ![Hedef çerçeve bırakma&#45;aşağı açılan listesi](../test/media/howtoconfigureunittest35frameworkcsharp.png)
+   ![Hedef çerçeve açılan listesinin konumunu vurgulayan Çözüm Gezgini Özellikler bölmesindeki uygulama sekmesinin çizimi.](../test/media/howtoconfigureunittest35frameworkcsharp.png)
 
 ## <a name="retargeting-for-ccli-unit-test-projects"></a>C++/CLı birim testi projeleri için yeniden hedefleme
 

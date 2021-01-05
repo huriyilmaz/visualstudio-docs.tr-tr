@@ -1,7 +1,7 @@
 ---
 title: Live ASP.NET Azure uygulamalarında hata ayıklama
 titleSuffix: Visual Studio Enterprise
-description: Snapshot Debugger ile anlık görüntü noktalarını ayarlamayı ve anlık görüntüleri görüntülemeyi öğrenin.
+description: Visual Studio 'da Snapshot Debugger kullanarak, canlı ASP.NET Azure uygulamalarında hata ayıklama sırasında anlık görüntü noktalarını ayarlama ve anlık görüntü alma işlemlerinin nasıl yapılacağını öğrenin.
 ms.custom: ''
 ms.date: 03/16/2018
 ms.topic: how-to
@@ -13,12 +13,12 @@ manager: jillfra
 ms.workload:
 - aspnet
 - azure
-ms.openlocfilehash: 526f7b7cc1af3dd5a370c74baa09cbab50b3d866
-ms.sourcegitcommit: dfbbf041e68ec3a4cd97196b19c9226a4793e702
+ms.openlocfilehash: 3393328999793a7e34fb3af9f7abea7430838f76
+ms.sourcegitcommit: d577818d3d8e365baa55c6108fa8159c46ed8b43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91879092"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97846987"
 ---
 # <a name="debug-live-aspnet-azure-apps-using-the-snapshot-debugger"></a>Snapshot Debugger kullanarak canlı ASP.NET Azure uygulamalarında hata ayıklama
 
@@ -35,13 +35,13 @@ Bu öğreticide şunları yapacaksınız:
 
 ## <a name="prerequisites"></a>Ön koşullar
 
-* Snapshot Debugger, **Azure geliştirme iş yükü**Ile yalnızca Visual Studio 2017 Enterprise sürüm 15,5 veya üzeri sürümlerde kullanılabilir. ( **Tek tek bileşenler** sekmesinde, **hata ayıklama ve test**  >  altında bulabilirsiniz **Anlık görüntü hata ayıklayıcısı**.)
+* Snapshot Debugger, **Azure geliştirme iş yükü** Ile yalnızca Visual Studio 2017 Enterprise sürüm 15,5 veya üzeri sürümlerde kullanılabilir. ( **Tek tek bileşenler** sekmesinde, **hata ayıklama ve test**  >  altında bulabilirsiniz **Anlık görüntü hata ayıklayıcısı**.)
 
    ::: moniker range=">=vs-2019"
-   Henüz yüklenmemişse, [Visual Studio 2019](https://visualstudio.microsoft.com/downloads)' i yükleme. Önceki bir Visual Studio yüklemesinden güncelleştirme yapıyorsanız, Visual Studio Yükleyicisi çalıştırın ve **ASP.net ve Web geliştirme iş**yükünde Snapshot Debugger bileşenini denetleyin.
+   Henüz yüklenmemişse, [Visual Studio 2019](https://visualstudio.microsoft.com/downloads)' i yükleme. Önceki bir Visual Studio yüklemesinden güncelleştirme yapıyorsanız, Visual Studio Yükleyicisi çalıştırın ve **ASP.net ve Web geliştirme iş** yükünde Snapshot Debugger bileşenini denetleyin.
    ::: moniker-end
    ::: moniker range="<=vs-2017"
-   Henüz yüklenmemişse, [Visual Studio 2017 Enterprise sürüm 15,5](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) veya üstünü yüklersiniz. Önceki bir Visual Studio 2017 yüklemesinden güncelleştirme yapıyorsanız, Visual Studio Yükleyicisi çalıştırın ve **ASP.net ve Web geliştirme iş**yükünde Snapshot Debugger bileşenini kontrol edin.
+   Henüz yüklenmemişse, [Visual Studio 2017 Enterprise sürüm 15,5](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) veya üstünü yüklersiniz. Önceki bir Visual Studio 2017 yüklemesinden güncelleştirme yapıyorsanız, Visual Studio Yükleyicisi çalıştırın ve **ASP.net ve Web geliştirme iş** yükünde Snapshot Debugger bileşenini kontrol edin.
    ::: moniker-end
 
 * Temel veya daha yüksek Azure App Service planı.
@@ -121,7 +121,7 @@ Bir anlık görüntü noktası ayarlandıktan sonra, Web sitenizin tarayıcı g�
 
    ![Anlık görüntü verilerini İnceleme](../debugger/media/snapshot-inspect-data.png)
 
-   Bu görünümden, veri Ipuçlarını görüntülemek, **Yereller**, **Izler**ve **çağrı yığını** pencerelerini kullanmak ve ayrıca Ifadeleri değerlendirmek için değişkenlerin üzerine geldiğinizde arama yapabilirsiniz.
+   Bu görünümden, veri Ipuçlarını görüntülemek, **Yereller**, **Izler** ve **çağrı yığını** pencerelerini kullanmak ve ayrıca Ifadeleri değerlendirmek için değişkenlerin üzerine geldiğinizde arama yapabilirsiniz.
 
    Web sitesinin kendisi de canlı ve son kullanıcılar etkilenmemektedir. Varsayılan olarak, anlık görüntü noktası başına yalnızca bir anlık görüntü yakalanır: bir anlık görüntü yakalandıktan sonra, anlık görüntü açılır. Anlık görüntü noktasında başka bir anlık görüntü yakalamak istiyorsanız, **koleksiyonu Güncelleştir**' e tıklayarak anlık görüntü noktasını yeniden açabilirsiniz.
 

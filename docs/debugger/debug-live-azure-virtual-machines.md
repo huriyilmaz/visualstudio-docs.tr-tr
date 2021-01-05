@@ -1,6 +1,6 @@
 ---
 title: Live ASP.NET Azure VM ve ölçek kümelerinde hata ayıklama
-description: Snapshot Debugger ile anlık görüntü noktalarını ayarlamayı ve anlık görüntüleri görüntülemeyi öğrenin.
+description: Azure VM 'lerinde ve ölçek kümelerinde canlı ASP.NET uygulamalarında hata ayıklarken anlık görüntü alma ve anlık görüntü alma işlemlerinin nasıl yapılacağını öğrenmek için Visual Studio 'daki Snapshot Debugger nasıl kullanacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/06/2019
 ms.topic: how-to
@@ -13,12 +13,12 @@ monikerRange: '>= vs-2019'
 ms.workload:
 - aspnet
 - azure
-ms.openlocfilehash: 040fdee43262279a834978a4619b62fb62b10345
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 9ed85616080859cd69c44c66b442f3f46d81f51a
+ms.sourcegitcommit: d577818d3d8e365baa55c6108fa8159c46ed8b43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809563"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97846954"
 ---
 # <a name="debug-live-aspnet-apps-on-azure-virtual-machines-and-azure-virtual-machine-scale-sets-using-the-snapshot-debugger"></a>Snapshot Debugger kullanarak Azure sanal makinelerinde ve Azure sanal makine ölçek kümelerinde canlı ASP.NET uygulamalarında hata ayıklayın
 
@@ -33,9 +33,9 @@ Bu öğreticide şunları yapacaksınız:
 > * Anlık görüntü noktası ayarlama ve anlık görüntü görüntüleme
 > * Günlüğe kaydetme noktası ayarlama
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
-* Azure sanal makineler (VM) ve Azure sanal makine ölçek kümeleri için Snapshot Debugger yalnızca **Azure geliştirme iş yüküyle**Visual Studio 2019 Enterprise veya üzeri sürümlerde kullanılabilir. ( **Tek tek bileşenler** sekmesinde, **hata ayıklama ve test**  >  altında bulabilirsiniz **Anlık görüntü hata ayıklayıcısı**.)
+* Azure sanal makineler (VM) ve Azure sanal makine ölçek kümeleri için Snapshot Debugger yalnızca **Azure geliştirme iş yüküyle** Visual Studio 2019 Enterprise veya üzeri sürümlerde kullanılabilir. ( **Tek tek bileşenler** sekmesinde, **hata ayıklama ve test**  >  altında bulabilirsiniz **Anlık görüntü hata ayıklayıcısı**.)
 
     Henüz yüklenmemişse, [Visual Studio 2019 Enterprise](https://visualstudio.microsoft.com/vs/)'ı yükleme.
 
@@ -104,7 +104,7 @@ Bir anlık görüntü noktası ayarlandıktan sonra, Web sitenizin tarayıcı g�
 
     ![Anlık görüntü verilerini İnceleme](../debugger/media/snapshot-inspect-data.png)
 
-    Bu görünümden, veri Ipuçlarını görüntülemek, **Yereller**, **Izler**ve **çağrı yığını** pencerelerini kullanmak ve ayrıca Ifadeleri değerlendirmek için değişkenlerin üzerine geldiğinizde arama yapabilirsiniz.
+    Bu görünümden, veri Ipuçlarını görüntülemek, **Yereller**, **Izler** ve **çağrı yığını** pencerelerini kullanmak ve ayrıca Ifadeleri değerlendirmek için değişkenlerin üzerine geldiğinizde arama yapabilirsiniz.
 
     Web sitesinin kendisi de canlı ve son kullanıcılar etkilenmemektedir. Varsayılan olarak, anlık görüntü noktası başına yalnızca bir anlık görüntü yakalanır: bir anlık görüntü yakalandıktan sonra, anlık görüntü açılır. Anlık görüntü noktasında başka bir anlık görüntü yakalamak istiyorsanız, **koleksiyonu Güncelleştir**' e tıklayarak anlık görüntü noktasını yeniden açabilirsiniz.
 

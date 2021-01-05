@@ -11,12 +11,12 @@ ms.workload:
 - python
 - data-science
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: a7bf174191a6a2fb013aa3d25880b01bc2e7f070
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d11ffcb2c43d2c519d75d43afad6383e0bfaa44a
+ms.sourcegitcommit: 3c571f44bfd6402efea5187af43df287bac5b6ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88801678"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97761283"
 ---
 # <a name="quickstart-open-and-run-python-code-in-a-folder"></a>Hızlı başlangıç: bir klasörde Python kodunu açma ve çalıştırma
 
@@ -35,7 +35,7 @@ ms.locfileid: "88801678"
 
     ![Klasörü aç komutundan Klasör Seç iletişim kutusu](media/quickstart-open-folder/02-select-folder.png)
 
-1. Visual Studio, klasör **görünümü**olarak adlandırılan **Çözüm Gezgini** klasörü görüntüler. Klasör adlarının sol kenarlarındaki okları kullanarak klasörleri genişletebilir ve daraltabilirsiniz:
+1. Visual Studio, klasör **görünümü** olarak adlandırılan **Çözüm Gezgini** klasörü görüntüler. Klasör adlarının sol kenarlarındaki okları kullanarak klasörleri genişletebilir ve daraltabilirsiniz:
 
     ![Çözüm Gezgini klasörleri genişletme ve daraltma denetimleri](media/quickstart-open-folder/03-expand-collapse-folders.png)
 
@@ -43,7 +43,7 @@ ms.locfileid: "88801678"
 
     ![Çözüm Gezgini içindeki gizli klasörlerin görünümü](media/quickstart-open-folder/05-view-hidden-folders.png)
 
-1. Kodu çalıştırmak için öncelikle başlangıç veya birincil program dosyasını belirlemeniz gerekir. Burada gösterilen örnekte, *Contemplate-koans.py*başlangıç dosyası. Bu dosyaya sağ tıklayın ve **Başlangıç öğesi olarak ayarla**' yı seçin.
+1. Kodu çalıştırmak için öncelikle başlangıç veya birincil program dosyasını belirlemeniz gerekir. Burada gösterilen örnekte, *Contemplate-koans.py* başlangıç dosyası. Bu dosyaya sağ tıklayın ve **Başlangıç öğesi olarak ayarla**' yı seçin.
 
     ![Çözüm Gezgini bir başlangıç öğesi ayarlama](media/quickstart-open-folder/06-set-as-startup-item-command.png)
 
@@ -70,16 +70,16 @@ Bu gibi durumlarda, çalışma dizinini belirtmek için başlatma yapılandırma
 
 1. **Çözüm Gezgini** ' de Python (*. Kopyala*) başlangıç dosyasına sağ tıklayın ve **Hata Ayıkla ve başlatma ayarları**' nı seçin.
 
-    ![Python dosyası için hata ayıklama ve başlatma ayarları komutu](media/quickstart-open-folder/09-debug-launch-settings-menu-command.png)
+    ![Contemplate-koans.py dosyası seçili olan Çözüm Gezgini klasör görünümünün ekran görüntüsü ve bağlam menüsünde hata ayıklama ve başlatma ayarları seçili.](media/quickstart-open-folder/09-debug-launch-settings-menu-command.png)
 
 1. Görüntülenen **hata ayıklayıcı Seç** iletişim kutusunda, **varsayılan** ' ı seçin ve ardından **Seç**' i seçin.
 
-    ![Python dosyası için hata ayıklama ve başlatma ayarları komutu](media/quickstart-open-folder/10-select-debugger.png)
+    ![Varsayılan hata ayıklayıcı seçiliyken hata ayıklayıcı Seç iletişim kutusunun ekran görüntüsü ve Seç düğmesi seçili.](media/quickstart-open-folder/10-select-debugger.png)
 
     > [!Note]
     > **Varsayılan** olarak bir seçenek olarak görmüyorsanız, **hata ayıklama ve başlatma ayarları** komutunu seçerken bir Python *. Kopyala* dosyası seçtiğinizden emin olun. Visual Studio, görüntülenecek hata ayıklayıcı seçeneklerini belirleyen dosya türünü kullanır.
 
-1. Visual Studio, Hidden *. vs* klasöründe bulunan *launch.vs.jsüzerinde*adlı bir dosya açar. Bu dosya, projenin hata ayıklama bağlamını açıklar. Çalışma dizini belirtmek için, `"workingDirectory"`  `"workingDirectory": "python3"` Python-koans örneğinde olduğu gibi için bir değer ekleyin:
+1. Visual Studio, Hidden *. vs* klasöründe bulunan *launch.vs.jsüzerinde* adlı bir dosya açar. Bu dosya, projenin hata ayıklama bağlamını açıklar. Çalışma dizini belirtmek için, `"workingDirectory"`  `"workingDirectory": "python3"` Python-koans örneğinde olduğu gibi için bir değer ekleyin:
 
     ```json
     {

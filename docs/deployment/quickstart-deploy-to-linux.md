@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - azure
-ms.openlocfilehash: 4e474cc96e4b950aee2f509a8e2879b0c31f912a
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 27002d9360d36330249167b2cc8b75b7cd832135
+ms.sourcegitcommit: 105e7b5a486262bc92939980383ceee068098a11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94350731"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "97815639"
 ---
 # <a name="publish-an-aspnet-core-app-to-app-service-on-linux-using-visual-studio"></a>Visual Studio kullanarak Linux 'ta App Service için ASP.NET Core uygulaması yayımlama
 
@@ -36,9 +36,9 @@ Bu makalede, tek seferlik dağıtım için **Yayımla** aracının nasıl kullan
 
     ![Çözüm Gezgini içindeki proje bağlam menüsündeki Yayımla komutu](../deployment/media/quickstart-publish.png "Yayımla ' yı seçin")
 
-1. Daha önce herhangi bir yayımlama profili yapılandırdıysanız, **Yayımla** penceresi görüntülenir. **Yeni** 'yi seçin.
+1. Daha önce herhangi bir yayımlama profili yapılandırdıysanız, **Yayımla** penceresi görüntülenir. **Yeni**'yi seçin.
 
-1. **Yayımla** penceresinde **Azure** ' ı seçin.
+1. **Yayımla** penceresinde **Azure**' ı seçin.
 
     ![Yayımlama hedefini seçin](../deployment/media/quickstart-publish-azure-new.png)
 
@@ -50,24 +50,24 @@ Bu makalede, tek seferlik dağıtım için **Yayımla** aracının nasıl kullan
 
     ![Azure App Service yeni bir örneğini oluşturmak için bağlantı](../deployment/media/quickstart-publish-linux-create-new-link.png)
 
-1. **Azure App Service oluştur (Linux)** iletişim kutusunda, **uygulama adı** , **kaynak grubu** ve **App Service planı** giriş alanları doldurulur. Bu adları koruyabilir veya değiştirebilirsiniz. Hazırlanıyor, **Oluştur** ' u seçin.
+1. **Azure App Service oluştur (Linux)** iletişim kutusunda, **uygulama adı**, **kaynak grubu** ve **App Service planı** giriş alanları doldurulur. Bu adları koruyabilir veya değiştirebilirsiniz. Hazırlanıyor, **Oluştur**' u seçin.
 
-    ![Azure App Service seçin](../deployment/media/quickstart-publish-linux-create-new-dialog.png)
+    ![Ad, abonelik, kaynak grubu ve barındırma planı alanları doldurulmuş Azure App Service oluştur (Linux) iletişim kutusunun ekran görüntüsü.](../deployment/media/quickstart-publish-linux-create-new-dialog.png)
 
-1. **Yayımla** iletişim kutusunda yeni oluşturulan örnek otomatik olarak seçilmiştir. Hazırlık sırasında **son** ' a tıklayın.
+1. **Yayımla** iletişim kutusunda yeni oluşturulan örnek otomatik olarak seçilmiştir. Hazırlık sırasında **son**' a tıklayın.
 
-    ![Azure App Service seçin](../deployment/media/quickstart-publish-linux-select-instance.png)
+    ![Yayımlama için App Service olarak yeni oluşturulan MyASpCoreWebAppOnAzure hizmeti ile Yayımla iletişim kutusunun ekran görüntüsü.](../deployment/media/quickstart-publish-linux-select-instance.png)
 
-1. **Yayımla** ’yı seçin. Visual Studio uygulamayı Azure App Service dağıtır ve Web uygulaması tarayıcınıza yüklenir. Proje özellikleri **Yayımlama** bölmesi, site URL 'sini ve diğer ayrıntıları gösterir.
+1. **Yayımla**’yı seçin. Visual Studio uygulamayı Azure App Service dağıtır ve Web uygulaması tarayıcınıza yüklenir. Proje özellikleri **Yayımlama** bölmesi, site URL 'sini ve diğer ayrıntıları gösterir.
 
     ![Profil özetini gösteren özellik bölmesini Yayımla](../deployment/media/quickstart-publish-linux-summary-page.png)
 
 ## <a name="clean-up-resources"></a>Kaynakları temizleme
 
 Önceki adımlarda, bir kaynak grubunda Azure kaynakları oluşturdunuz. İleride bu kaynaklara ihtiyaç duymayacağınızı düşünüyorsanız kaynakları silmek için kaynak grubunu silebilirsiniz.
-Azure portalında sol taraftaki menüden **Kaynak grupları** 'nı seçin ve ardından **myResourceGroup** seçeneğini belirleyin.
+Azure portalında sol taraftaki menüden **Kaynak grupları**'nı seçin ve ardından **myResourceGroup** seçeneğini belirleyin.
 Kaynak grubu sayfasındaki listede yer alan kaynakların silmek istediğiniz kaynaklar olduğundan emin olun.
-**Sil** 'i seçin, metin kutusuna **myResourceGroup** yazın ve ardından **Sil** 'e tıklayın.
+**Sil**'i seçin, metin kutusuna **myResourceGroup** yazın ve ardından **Sil**'e tıklayın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

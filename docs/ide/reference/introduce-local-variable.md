@@ -8,12 +8,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0fbd5ed752b28cc3f8c0dd734ed2b3ce09e80b78
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 564ba133074af3749bd909f1b0a7fe32822f5d75
+ms.sourcegitcommit: d526af3642163180e0cc3e1e73b0a00f02542683
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75568821"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97833266"
 ---
 # <a name="introduce-a-local-variable-in-visual-studio"></a>Visual Studio 'da yerel bir değişken tanıtma
 
@@ -44,10 +44,10 @@ Bu kod üretimi için geçerlidir:
 2. Sonra, aşağıdakilerden birini yapın:
 
    - **Klavye**
-      - **CTRL**tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
+      - **CTRL** tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
    - **Fare**
       - Sağ tıklayın ve **Hızlı Eylemler ve yeniden düzenlemeler** menüsünü seçin.
-      - Sağ üst köşedeki ![Screwdriver](media/screwdriver.png) Sol kenar boşluğunda görüntülenen simge, metin imleç zaten vurgulanan ifade ile satırda varsa görüntülenir.
+      - Sağ üst köşedeki ![Hızlı Eylemler ve yeniden düzenlemeler menüsünün sol kenar boşluğunda görünen screwdriver simgesinin ekran görüntüsü.](media/screwdriver.png) Sol kenar boşluğunda görüntülenen simge, metin imleç zaten vurgulanan ifade ile satırda varsa görüntülenir.
 
    ![Yerel Önizlemeyi göster](media/local-preview-cs.png)
 
@@ -67,7 +67,7 @@ Bu kod üretimi için geçerlidir:
        ![Arabirim sonucunu Uygula VB](media/local-result-vb.png)
 
    > [!NOTE]
-   > Kullanabilirsiniz... ** tüm oluşumları..** . yalnızca özel olarak vurguladığınız bir ifadeyi değil, seçili ifadenin her örneğini değiştirmek için menü seçeneği.
+   > Kullanabilirsiniz... **tüm oluşumları..** . yalnızca özel olarak vurguladığınız bir ifadeyi değil, seçili ifadenin her örneğini değiştirmek için menü seçeneği.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

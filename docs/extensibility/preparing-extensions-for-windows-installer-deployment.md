@@ -1,5 +1,7 @@
 ---
 title: Windows Installer dağıtımı için Uzantılar hazırlanıyor | Microsoft Docs
+description: Varsayılan çıktısı bir kurulum projesine eklemek için VSıX paketi olan bir projeyi nasıl hazırlayacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0084cfc6c08db1c1d15013362a186fec175b4ee4
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: ba494af91d3d40720493b27e7381660ece3fba69
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012223"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97862908"
 ---
 # <a name="prepare-extensions-for-windows-installer-deployment"></a>Windows Installer dağıtımı için uzantıları hazırlama
 Bir VSıX paketini dağıtmak için bir Windows Installer paketi (MSI) kullanamazsınız. Ancak, MSI dağıtımı için bir VSıX paketinin içeriğini ayıklayabilirsiniz. Bu belgede, varsayılan çıktısı bir kurulum projesine eklemek için VSıX paketi olan bir projenin nasıl hazırlanacağı gösterilir.
@@ -44,7 +46,7 @@ Bir VSıX paketini dağıtmak için bir Windows Installer paketi (MSI) kullanama
 
 ### <a name="to-extract-files-from-an-existing-vsix-package"></a>Mevcut bir VSıX paketinden dosyaları ayıklamak için
 
-1. Yeniden adlandırın *. * Dosya *adı. vsix* ' den *filename.zip*için uzantıyı içeren VSIX dosyası.
+1. Yeniden adlandırın *.* Dosya *adı. vsix* ' den *filename.zip* için uzantıyı içeren VSIX dosyası.
 
 2. *. Zip* dosyasının içeriğini bir dizine kopyalayın.
 

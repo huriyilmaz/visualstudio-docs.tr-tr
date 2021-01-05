@@ -1,6 +1,6 @@
 ---
 title: Live ASP.NET Azure Kubernetes hizmetlerinde hata ayıklama
-description: Snapshot Debugger ile anlık görüntü noktalarını ayarlamayı ve anlık görüntüleri görüntülemeyi öğrenin.
+description: Visual Studio 'da Snapshot Debugger kullanarak, canlı ASP.NET Azure Kubernetes hizmetlerinde hata ayıklama sırasında anlık görüntü noktalarını ayarlama ve anlık görüntü alma işlemlerini nasıl kullanacağınızı öğrenin.
 ms.custom: ''
 ms.date: 02/11/2019
 ms.topic: how-to
@@ -13,12 +13,12 @@ monikerRange: '>= vs-2019'
 ms.workload:
 - aspnet
 - azure
-ms.openlocfilehash: e0f062108f19b38c6bf6514eda78098f493b3f78
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 823da6da0a842766739cb50c700bb723a47d0309
+ms.sourcegitcommit: d577818d3d8e365baa55c6108fa8159c46ed8b43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350660"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97846969"
 ---
 # <a name="debug-live-aspnet-azure-kubernetes-services-using-the-snapshot-debugger"></a>Snapshot Debugger kullanarak canlı ASP.NET Azure Kubernetes hizmetlerinde hata ayıklayın
 
@@ -35,7 +35,7 @@ Bu öğreticide şunları yapacaksınız:
 
 ## <a name="prerequisites"></a>Ön koşullar
 
-* Azure Kubernetes Hizmetleri için Snapshot Debugger yalnızca **Azure geliştirme iş yüküyle**Visual Studio 2019 Enterprise veya üzeri sürümlerde kullanılabilir. ( **Tek tek bileşenler** sekmesinde, **hata ayıklama ve test**  >  altında bulabilirsiniz **Anlık görüntü hata ayıklayıcısı**.)
+* Azure Kubernetes Hizmetleri için Snapshot Debugger yalnızca **Azure geliştirme iş yüküyle** Visual Studio 2019 Enterprise veya üzeri sürümlerde kullanılabilir. ( **Tek tek bileşenler** sekmesinde, **hata ayıklama ve test**  >  altında bulabilirsiniz **Anlık görüntü hata ayıklayıcısı**.)
 
     Henüz yüklenmemişse, [Visual Studio 2019 Enterprise](https://visualstudio.microsoft.com/vs/)'ı yükleme.
 
@@ -54,7 +54,7 @@ Bu öğreticide şunları yapacaksınız:
     > [!IMPORTANT]
     > Hata ayıklamanın anlık görüntüsünü almak için Azure Kubernetes hizmetinize yayınlanan *kaynak kodu sürümünü* açmanız gerekir.
 
-1. **Hata ayıkla > Snapshot Debugger Ekle...** seçeneğini belirleyin. Web uygulamanızın dağıtıldığı AKS kaynağını ve bir Azure Depolama hesabını seçin ve ardından **Ekle**' ye tıklayın. Snapshot Debugger Ayrıca, [Azure App Service](debug-live-azure-applications.md) [sanal makine ölçek kümelerini & Azure App Service ve Azure sanal makinelerini (VM)](debug-live-azure-virtual-machines.md)destekler.
+1. **Hata ayıkla > Snapshot Debugger Ekle...** seçeneğini belirleyin. Web uygulamanızın dağıtıldığı AKS kaynağını ve bir Azure Depolama hesabını seçin ve ardından **Ekle**' ye tıklayın. Snapshot Debugger Ayrıca, [](debug-live-azure-applications.md) [sanal makine ölçek kümelerini & Azure App Service ve Azure sanal makinelerini (VM)](debug-live-azure-virtual-machines.md)destekler.
 
     ![Hata ayıklama menüsünden Snapshot Debugger 'ı başlatın](../debugger/media/snapshot-debug-menu-attach.png)
 
@@ -98,7 +98,7 @@ Bir anlık görüntü noktası ayarlandıktan sonra, Web sitenizin tarayıcı g�
 
     ![Anlık görüntü verilerini İnceleme](../debugger/media/snapshot-inspect-data.png)
 
-    Bu görünümden, veri Ipuçlarını görüntülemek, **Yereller**, **Izler**ve **çağrı yığını** pencerelerini kullanmak ve ayrıca Ifadeleri değerlendirmek için değişkenlerin üzerine geldiğinizde arama yapabilirsiniz.
+    Bu görünümden, veri Ipuçlarını görüntülemek, **Yereller**, **Izler** ve **çağrı yığını** pencerelerini kullanmak ve ayrıca Ifadeleri değerlendirmek için değişkenlerin üzerine geldiğinizde arama yapabilirsiniz.
 
     Web sitesinin kendisi de canlı ve son kullanıcılar etkilenmemektedir. Varsayılan olarak, anlık görüntü noktası başına yalnızca bir anlık görüntü yakalanır: bir anlık görüntü yakalandıktan sonra, anlık görüntü açılır. Anlık görüntü noktasında başka bir anlık görüntü yakalamak istiyorsanız, **koleksiyonu Güncelleştir**' e tıklayarak anlık görüntü noktasını yeniden açabilirsiniz.
 

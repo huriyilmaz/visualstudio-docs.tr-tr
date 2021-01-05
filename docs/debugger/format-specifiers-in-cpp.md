@@ -26,12 +26,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64166768dea1da015c223a74c74440ae09a0d106
-ms.sourcegitcommit: 47da50a74fcd3db66d97cb20accac983bc41912f
+ms.openlocfilehash: 74b6b6b6a8f7a9f5f234a9b46c799e6e0580536f
+ms.sourcegitcommit: 3c571f44bfd6402efea5187af43df287bac5b6ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96863042"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97761335"
 ---
 # <a name="format-specifiers-for-c-in-the-visual-studio-debugger"></a>Visual Studio hata ayıklayıcısında C++ için biçim belirticileri
 Biçim belirticilerini kullanarak, bir değerin **Watch**, **oto** ve **Yereller** pencerelerinde görüntüleneceği biçimi değiştirebilirsiniz.
@@ -52,9 +52,9 @@ int main() {
 }
 ```
 
-`my_var1`Hata ayıklama sırasında değişkeni **izleme** penceresine ekleyin, Windows Watch 'da **hata ayıklama**  >  **Windows**  >  **Watch**  >  **1**' i izleyin. Sonra, değişkene sağ tıklayıp **onaltılık görüntü**' i seçin. Şimdi **İzle** penceresinde 0x0065 değeri gösterilir. Bu değeri bir tamsayı yerine bir karakter olarak ifade etmek için, önce sağ tıklayıp **onaltılık ekran** seçimini kaldırın. Ardından, değişken adından sonra **ad** sütununa **c** karakter Biçim belirleyicisi ekleyin. **Değer** sütununda şimdi **101 ' e '** gösterilmektedir.
+`my_var1`Hata ayıklama sırasında değişkeni **izleme** penceresine ekleyin, Windows Watch 'da **hata ayıklama**  >    >    >  **1**' i izleyin. Sonra, değişkene sağ tıklayıp **onaltılık görüntü**' i seçin. Şimdi **İzle** penceresinde 0x0065 değeri gösterilir. Bu değeri bir tamsayı yerine bir karakter olarak ifade etmek için, önce sağ tıklayıp **onaltılık ekran** seçimini kaldırın. Ardından, değişken adından sonra **ad** sütununa **c** karakter Biçim belirleyicisi ekleyin. **Değer** sütununda şimdi **101 ' e '** gösterilmektedir.
 
-![WatchFormatCPlus1](../debugger/media/watchformatcplus1.png "WatchFormatCPlus1")
+![Visual Studio izleme penceresi ekran görüntüsü, bir değeri 101 ' e ' ve bir int türü olan my_var1. c ' i gösteren seçili bir satırla görüntüler.](../debugger/media/watchformatcplus1.png)
 
 ::: moniker range=">= vs-2019" 
 **İzleme** penceresindeki değere bir virgül (,) ekleyerek kullanılabilir biçim belirticileri listesinden görüntüleyebilir ve seçim yapabilirsiniz. 
@@ -73,7 +73,7 @@ Aşağıdaki tablolarda, Visual Studio 'da kullanabileceğiniz biçim belirticil
 |d|ondalık tamsayı|0x00000066|102|
 |o|işaretsiz sekizlik tamsayı|0x00000066|000000000146|
 |x<br /><br /> **h**|onaltılı tamsayı|102|0xcccccccc|
-|X<br /><br /> **H**|onaltılı tamsayı|102|0xCCCCCCCC|
+|X<br /><br /> **Olsun**|onaltılı tamsayı|102|0xCCCCCCCC|
 |XB<br /><br /> **HB**|onaltılık tamsayı (baştaki 0x olmadan)|102|cccccccc|
 |XB<br /><br /> **HB**|onaltılık tamsayı (baştaki 0x olmadan)|102|CCCCCCCC|
 |b|işaretsiz ikili tamsayı|25|0b00000000000000000000000000011001|
@@ -111,7 +111,7 @@ Aşağıdaki tablolarda, Visual Studio 'da kullanabileceğiniz biçim belirticil
 |d|ondalık tamsayı|0x00000066|102|
 |o|işaretsiz sekizlik tamsayı|0x00000066|000000000146|
 |x<br /><br /> **h**|onaltılı tamsayı|102|0xcccccccc|
-|X<br /><br /> **H**|onaltılı tamsayı|102|0xCCCCCCCC|
+|X<br /><br /> **Olsun**|onaltılı tamsayı|102|0xCCCCCCCC|
 |c|tek karakter|0x0065, c|101 ' e '|
 |s|const char * dizesi (tırnak işaretleriyle birlikte)|\<location> "Merhaba Dünya"|"Merhaba Dünya"|
 |**ise**|const char * dizesi (tırnak işareti yok)|\<location> "Merhaba Dünya"|Merhaba Dünya|
