@@ -1,5 +1,7 @@
 ---
 title: Sınıf sekmesi, pencere özellikleri Iletişim kutusu | Microsoft Docs
+description: Visual Studio 'da Sınıf sekmesini seçin, odağı Windows Görünümü penceresine taşıyın, bir pencere düğümü seçin ve pencere özellikleri iletişim kutusunu görmek için > özellikleri görüntüle ' yi seçin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0917c9a038b42e6302ec1f1782f095ca397a92ef
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3bf37d9e5d672f0ecce262699fdd5d704cde9efe
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62565019"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97729034"
 ---
 # <a name="class-tab-window-properties-dialog-box"></a>Sınıf Sekmesi, Pencere Özellikleri İletişim Kutusu
 Seçili pencerenin sınıfındaki bilgileri göstermek için **sınıf** sekmesini kullanın. [Pencere özellikleri Iletişim kutusunu](../debugger/window-properties-dialog-box.md)görüntülemek Için odağı [Windows görünümü](../debugger/windows-view.md) penceresine taşıyın. Ağaçta herhangi bir pencere düğümünü seçin, sonra **Görünüm** menüsünden **Özellikler** ' i seçin.

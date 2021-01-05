@@ -7,12 +7,12 @@ ms.author: ghogen
 ms.date: 01/10/2020
 ms.technology: vs-azure
 ms.topic: include
-ms.openlocfilehash: 0fa7d186623b69fd83c3ed7e4ab9cc12128847d2
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 93f9d5ba8bd84341e1b314c1fabca07690114e39
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037217"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97729294"
 ---
 # <a name="tutorial-create-a-multi-container-app-with-docker-compose"></a>Öğretici: Docker Compose ile çok kapsayıcılı bir uygulama oluşturma
 
@@ -46,17 +46,17 @@ Visual Studio 'da adlı bir **ASP.NET Core Web uygulaması** projesi oluşturun 
 
 ::: moniker range="vs-2019"
 
-![Web projesi oluşturma ekran görüntüsü](./media/tutorial-multicontainer/vs-2019/new-aspnet-core-project1.png)
+![Yeni projenizi yapılandırma ekranının ekran görüntüsü ASP.NET Core Web uygulaması için, proje adı ve çözüm adı alanları "Webön uç" olarak ayarlanır.](./media/tutorial-multicontainer/vs-2019/new-aspnet-core-project1.png)
 
 **Docker desteğini etkinleştir**' i seçmeyin. Docker desteğini daha sonra ekleyeceksiniz.
 
-![Web projesi oluşturma ekran görüntüsü](./media/tutorial-multicontainer/vs-2019/new-aspnet-core-project.png)
+![Web uygulaması seçiliyken yeni bir ASP.NET Core Web uygulaması oluşturma ekranının ekran görüntüsü. Docker desteğini etkinleştirme seçeneği seçili değil.](./media/tutorial-multicontainer/vs-2019/new-aspnet-core-project.png)
 
 ::: moniker-end
 
 ## <a name="create-a-web-api-project"></a>Web API projesi oluşturma
 
-Aynı çözüme bir proje ekleyin ve *Mywebapi*olarak çağırın. Proje türü olarak **API** ' yi SEÇIN ve **https için yapılandırma**onay kutusunu temizleyin. Bu tasarımda, aynı Web uygulamasındaki kapsayıcılar arasında iletişim için değil, yalnızca istemciyle iletişim için SSL kullandık. Yalnızca `WebFrontEnd` https gerektirir ve örneklerdeki kod bu onay kutusunu temizlemiş olduğunu varsayar. Genellikle, Visual Studio tarafından kullanılan .NET Geliştirici sertifikaları, kapsayıcı istekleri için değil, yalnızca dış kapsayıcı istekleri için desteklenir.
+Aynı çözüme bir proje ekleyin ve *Mywebapi* olarak çağırın. Proje türü olarak **API** ' yi SEÇIN ve **https için yapılandırma** onay kutusunu temizleyin. Bu tasarımda, aynı Web uygulamasındaki kapsayıcılar arasında iletişim için değil, yalnızca istemciyle iletişim için SSL kullandık. Yalnızca `WebFrontEnd` https gerektirir ve örneklerdeki kod bu onay kutusunu temizlemiş olduğunu varsayar. Genellikle, Visual Studio tarafından kullanılan .NET Geliştirici sertifikaları, kapsayıcı istekleri için değil, yalnızca dış kapsayıcı istekleri için desteklenir.
 
 ::: moniker range="vs-2017"
    ![Web API projesi oluşturma ekran görüntüsü](./media/tutorial-multicontainer/docker-tutorial-mywebapi.png)
@@ -107,7 +107,7 @@ Aynı çözüme bir proje ekleyin ve *Mywebapi*olarak çağırın. Proje türü 
       </div>
       ```
 
-1. (Yalnızca ASP.NET 2. x) Şimdi Web API projesinde, *webön*ucunda eklediğiniz çağrı için API tarafından döndürülen iletiyi özelleştirmek üzere değerler denetleyicisine kod ekleyin.
+1. (Yalnızca ASP.NET 2. x) Şimdi Web API projesinde, *webön* ucunda eklediğiniz çağrı için API tarafından döndürülen iletiyi özelleştirmek üzere değerler denetleyicisine kod ekleyin.
     
       ```csharp
         // GET api/values/5
@@ -118,7 +118,7 @@ Aynı çözüme bir proje ekleyin ve *Mywebapi*olarak çağırın. Proje türü 
         }
       ```
 
-    .NET Core 3,1 ile, zaten orada olan dalgalı tahmin API 'sini kullanabilmeniz için buna ihtiyacınız yoktur. Ancak, <xref:Microsoft.AspNetCore.Builder.HttpsPolicyBuilderExtensions.UseHttpsRedirection*> `Configure` Web API 'sini çağırmak için, bu kod https değil http 'yi kullandığından, *Startup.cs*içindeki yönteminde öğesine yapılan çağrıyı açıklamanız gerekir.
+    .NET Core 3,1 ile, zaten orada olan dalgalı tahmin API 'sini kullanabilmeniz için buna ihtiyacınız yoktur. Ancak, <xref:Microsoft.AspNetCore.Builder.HttpsPolicyBuilderExtensions.UseHttpsRedirection*> `Configure` Web API 'sini çağırmak için, bu kod https değil http 'yi kullandığından, *Startup.cs* içindeki yönteminde öğesine yapılan çağrıyı açıklamanız gerekir.
 
     ```csharp
                 //app.UseHttpsRedirection();
@@ -126,7 +126,7 @@ Aynı çözüme bir proje ekleyin ve *Mywebapi*olarak çağırın. Proje türü 
 
 1. `WebFrontEnd`Projede **> kapsayıcı Orchestrator desteği ekle**' yi seçin. **Docker destek seçenekleri** iletişim kutusu görüntülenir.
 
-1. **Docker Compose**seçin.
+1. **Docker Compose** seçin.
 
 1. Hedef işletim sistemini (örneğin, Linux) seçin.
 
@@ -153,7 +153,7 @@ Aynı çözüme bir proje ekleyin ve *Mywebapi*olarak çağırın. Proje türü 
 
    Çalıştırılmakta olan komutların ayrıntıları için çıkış bölmesinin **kapsayıcı araçları** bölümüne bakın.  Docker-Compose, çalışma zamanı kapsayıcılarını yapılandırmak ve oluşturmak için kullanılan komut satırı aracını görebilirsiniz.
 
-1. Web API projesinde, proje düğümüne sağ tıklayın ve **Add**  >  **kapsayıcı Orchestrator desteği**Ekle ' yi seçin. **Docker Compose**öğesini seçin ve ardından aynı hedef işletim sistemini seçin.  
+1. Web API projesinde, proje düğümüne sağ tıklayın ve   >  **kapsayıcı Orchestrator desteği** Ekle ' yi seçin. **Docker Compose** öğesini seçin ve ardından aynı hedef işletim sistemini seçin.  
 
     > [!NOTE]
     > Bu adımda, Visual Studio bir Dockerfile oluşturmaya yönelik olarak sunulur. Bunu zaten Docker desteği olan bir projede yaparsanız, var olan Dockerfile dosyasının üzerine yazmak isteyip istemediğiniz sorulur. Sürdürmek istediğiniz Dockerfile dosyanızda değişiklik yaptıysanız Hayır ' ı seçin.

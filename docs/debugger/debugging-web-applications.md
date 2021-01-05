@@ -1,5 +1,7 @@
 ---
 title: Web uygulamalarında hata ayıklama | Microsoft Docs
+description: ASP.NET Apps, JavaScript ve TypeScript uygulamaları veya AJAX betik uygulamaları gibi farklı türlerde Web uygulamalarında hata ayıklamanıza yardımcı olacak bağlantılar bulabilirsiniz.
+ms.custom: SEO-VS-2020
 ms.date: 11/05/2019
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e2f54e80059896345abb00e955a827a00b5a35a5
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 63c5409f14fde2805e80f35f498cb57d68b1f58b
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89600118"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728141"
 ---
 # <a name="debugging-web-applications"></a>Web Uygulamalarında Hata Ayıklama
 
@@ -38,7 +40,7 @@ Bu makalede, farklı türlerde Web uygulamalarında hata ayıklamanıza yardımc
 
 - Betik belgelerini görüntüleme
 
-  Görüntülenecek **Çözüm Gezgini** sunucu tarafı ve istemci tarafı komut dosyası belgelerinin listesini görebilirsiniz. **Çözüm Gezgini**herhangi bir betik belgesini açabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: betik belgelerini görüntüleme](../debugger/how-to-view-script-documents.md).
+  Görüntülenecek **Çözüm Gezgini** sunucu tarafı ve istemci tarafı komut dosyası belgelerinin listesini görebilirsiniz. **Çözüm Gezgini** herhangi bir betik belgesini açabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: betik belgelerini görüntüleme](../debugger/how-to-view-script-documents.md).
 
 - AJAX betik uygulamalarında hata ayıklama
 
@@ -46,6 +48,6 @@ Bu makalede, farklı türlerde Web uygulamalarında hata ayıklamanıza yardımc
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklayıcısı Ayarları ve Hazırlığı](../debugger/debugger-settings-and-preparation.md)
+- [Hata ayıklayıcı ayarları ve hazırlığı](../debugger/debugger-settings-and-preparation.md)
 - [Hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md)
 - [Visual Studio'da Hata Ayıklama](../debugger/index.yml)

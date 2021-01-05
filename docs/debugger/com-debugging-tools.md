@@ -1,5 +1,7 @@
 ---
 title: COM hata ayıklama araçları | Microsoft Docs
+description: OLE/COM Nesne Görüntüleyicisi gibi COM programlarını test etmenize ve incelemenize yardımcı olabilecek hata ayıklama araçlarının açıklamalarını alın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -21,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e6a3c0961d541aaac1f2fd81fee7a0a8e06583dd
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 216d820e455ad9902f19fe3c48caa927b21a2f0f
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89600177"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728995"
 ---
 # <a name="com-debugging-tools"></a>COM Hata Ayıklama Araçları
 
@@ -42,8 +44,8 @@ MFC ActiveX örnekleri OCLIENT ve SUPERPANEL, uygulamalarınızı karşı test e
 
 ### <a name="see-also"></a>Ayrıca bkz.
 
-- [COM ve ActiveX Hata Ayıklaması](../debugger/com-and-activex-debugging.md)
-- [COM Hata Ayıklama Araçları](../debugger/com-debugging-tools.md)
+- [COM ve ActiveX hata ayıklaması](../debugger/com-and-activex-debugging.md)
+- [COM hata ayıklama araçları](../debugger/com-debugging-tools.md)
 - [Visual Studio'da Hata Ayıklama](../debugger/index.yml)
 - [Hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md)
 - [OCLIENT örneği: bir görsel düzenlenme kapsayıcısı uygulamasını gösterir](/previous-versions/c2f86tzd(v=vs.100))

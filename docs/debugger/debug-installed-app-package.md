@@ -1,6 +1,7 @@
 ---
 title: Yüklü UWP uygulama paketinde hata ayıklama | Microsoft Docs
-ms.custom: ''
+description: Windows 10 bilgisayarlar, Xbox ve Nesnelerin İnterneti (IoT) cihazlarındaki Visual Studio 'da yüklü bir Evrensel Windows Platformu (UWP) uygulama paketinin hatalarını ayıklayın.
+ms.custom: SEO-VS-2020
 ms.date: 11/07/2018
 ms.topic: how-to
 f1_keywords:
@@ -20,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: eabc694665bede7d193a360a01c42366568e33c5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 04ed043dbcb09c862fcdfc5f34d77fd938bd24dc
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350738"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728930"
 ---
 # <a name="debug-an-installed-uwp-app-package-in-visual-studio"></a>Visual Studio 'da yüklü UWP uygulama paketinde hata ayıklama
 
@@ -38,15 +39,15 @@ UWP uygulamalarında hata ayıklama hakkında daha fazla bilgi için bkz. [yükl
 
 ## <a name="debug-an-installed-uwp-app-on-a-local-machine"></a>Yerel makinede yüklü bir UWP uygulamasında hata ayıklama
 
-1. Visual Studio 'da hata ayıkla **Debug**  >  **diğer hata ayıklama hedefleri**  >  **yüklü uygulama paketinde**Hata Ayıkla ' yı seçin.
+1. Visual Studio 'da hata ayıkla   >  **diğer hata ayıklama hedefleri**  >  **yüklü uygulama paketinde** Hata Ayıkla ' yı seçin.
 
-1. **Yüklü uygulama paketi hatalarını ayıkla** iletişim kutusunda, **bağlantı türü**altında **yerel makine**' yi seçin.
+1. **Yüklü uygulama paketi hatalarını ayıkla** iletişim kutusunda, **bağlantı türü** altında **yerel makine**' yi seçin.
 
-1. **Yüklü uygulama paketleri**altında, hata ayıklamak istediğiniz uygulamayı seçin veya arama kutusuna adını yazın. Çalışır olmayan yüklü uygulama paketleri **çalışmıyor** **ve çalışan uygulamalar çalışıyor.**
+1. **Yüklü uygulama paketleri** altında, hata ayıklamak istediğiniz uygulamayı seçin veya arama kutusuna adını yazın. Çalışır olmayan yüklü uygulama paketleri **çalışmıyor** **ve çalışan uygulamalar çalışıyor.**
 
    ![Debugınstaltadapppackage](../debugger/media/debug-installed-app-pkg.png "Debugınstaltadapppackage")
 
-1. Gerekirse, **Bu kod türünde hata ayıkla**altındaki kod türünü değiştirin ve diğer seçenekleri belirleyin.
+1. Gerekirse, **Bu kod türünde hata ayıkla** altındaki kod türünü değiştirin ve diğer seçenekleri belirleyin.
    - Başlatma, ancak uygulama başladığında hata ayıklamayı başlatmaya **başladığında kodumdaki Hata Ayıkla ' yı** seçin. Uygulama başlatıldığında hata ayıklamanın başlatılması, özel parametrelerle protokol etkinleştirme gibi [farklı başlatma yöntemlerinden](/windows/uwp/xbox-apps/automate-launching-uwp-apps)denetim yollarının hata ayıklamanın etkili bir yoludur.
 
 1. **Başlat**' ı seçin veya uygulama çalışıyorsa, **Ekle**' yi seçin.
@@ -62,13 +63,13 @@ Visual Studio 'da bir Windows 10 cihazında veya uzak bir oluşturucunun güncel
 
 1. Windows 10 ' un ön oluşturanın güncelleştirme çalıştıran bir uzak bilgisayara bağlanıyorsanız uzak bilgisayara [Uzaktan hata ayıklayıcıyı el ile yükleyip başlatın](../debugger/remote-debugging.md) .
 
-1. Visual Studio bilgisayarında, **hata**Ayıkla  >  **diğer hata ayıklama hedefleri**  >  **yüklü uygulama paketi**hatalarını ayıkla ' yı seçin.
+1. Visual Studio bilgisayarında, **hata** Ayıkla  >  **diğer hata ayıklama hedefleri**  >  **yüklü uygulama paketi** hatalarını ayıkla ' yı seçin.
 
-1. **Yüklü uygulama paketi hatalarını ayıkla** iletişim kutusunda, **bağlantı türü**altında **uzak makine** veya **cihaz**' ı seçin.
+1. **Yüklü uygulama paketi hatalarını ayıkla** iletişim kutusunda, **bağlantı türü** altında **uzak makine** veya **cihaz**' ı seçin.
 
    **Cihaz**' ı seçerseniz, bilgisayarınızın bir Windows 10 cihazına fiziksel olarak bağlı olması gerekir.
 
-   Uzak makine için, bilgisayar adresi **Adres**seçeneğinin yanında görünmezse, **Değiştir**' i seçin.
+   Uzak makine için, bilgisayar adresi **Adres** seçeneğinin yanında görünmezse, **Değiştir**' i seçin.
 
    1. **Uzaktan bağlantı** Iletişim kutusunda **Adres**' in yanında, bağlanmak ISTEDIĞINIZ bilgisayarın adını veya IP adresini yazın.
 
@@ -80,9 +81,9 @@ Visual Studio 'da bir Windows 10 cihazında veya uzak bir oluşturucunun güncel
       Çoğu uygulama için varsayılan değeri **Evrensel (şifrelenmemiş protokol)** tutun.
    1. **Seç**’i seçin.
 
-1. **Yüklü uygulama paketleri**altında, hata ayıklamak istediğiniz uygulamayı seçin veya arama kutusuna adını yazın. Çalışır olmayan yüklü uygulama paketleri **çalışmıyor** **ve çalışan uygulamalar çalışıyor.**
+1. **Yüklü uygulama paketleri** altında, hata ayıklamak istediğiniz uygulamayı seçin veya arama kutusuna adını yazın. Çalışır olmayan yüklü uygulama paketleri **çalışmıyor** **ve çalışan uygulamalar çalışıyor.**
 
-1. Gerekirse, **Bu kod türünde hata ayıkla**altındaki kod türünü değiştirin ve diğer seçenekleri belirleyin.
+1. Gerekirse, **Bu kod türünde hata ayıkla** altındaki kod türünü değiştirin ve diğer seçenekleri belirleyin.
    - Başlatma, ancak uygulama başladığında hata ayıklamayı başlatmaya **başladığında kodumdaki Hata Ayıkla ' yı** seçin. Uygulama başlatıldığında hata ayıklamanın başlatılması, özel parametrelerle protokol etkinleştirme gibi [farklı başlatma yöntemlerinden](/windows/uwp/xbox-apps/automate-launching-uwp-apps)denetim yollarının hata ayıklamanın etkili bir yoludur.
 
 1. **Başlat**' ı seçin veya uygulama çalışıyorsa, **Ekle**' yi seçin.
@@ -99,6 +100,6 @@ UWP uygulamalarının uzaktan dağıtımı hakkında daha fazla bilgi için bkz.
 - [Visual Studio'da Hata Ayıklama](../debugger/index.yml)
 - [Hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md)
 - [Uzaktan hata ayıklama](../debugger/remote-debugging.md)
-- [Uzaktan hata ayıklama için Windows güvenlik duvarını yapılandırma](../debugger/configure-the-windows-firewall-for-remote-debugging.md)
+- [Windows Güvenlik Duvarı’nı uzaktan hata ayıklama için yapılandırma](../debugger/configure-the-windows-firewall-for-remote-debugging.md)
 - [Uzaktan hata ayıklayıcı bağlantı noktası atamaları](../debugger/remote-debugger-port-assignments.md)
 - [Uzaktan hata ayıklama hataları ve sorun giderme](../debugger/remote-debugging-errors-and-troubleshooting.md)

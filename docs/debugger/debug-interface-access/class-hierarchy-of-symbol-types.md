@@ -1,5 +1,7 @@
 ---
 title: Sembol türlerinin sınıf hiyerarşisi | Microsoft Docs
+description: Visual Studio hata ayıklama arabirimi erişim SDK 'sının sınıf hiyerarşisinde sembol türleri listesini gözden geçirin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -12,19 +14,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ed6817c5c01b66143739b2f81899f2b58886d8e8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 36f97702f41f72efab970617da2a40a70f339e2a
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85462276"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728797"
 ---
 # <a name="class-hierarchy-of-symbol-types"></a>Simge Türlerinin Sınıf Hiyerarşisi
 Aşağıdaki tablo, sınıf hiyerarşisindeki sembol türlerini açıklar.
 
 ## <a name="symbol-types"></a>Sembol türleri
 
-|Sembol türü|Description|
+|Sembol türü|Açıklama|
 |-----------------|-----------------|
 |[UDT](../../debugger/debug-interface-access/udt.md)|Her bir sınıfı, yapıyı ve birleşimi temsil etmek için kullanılan simge.|
 |[Enum (Arabirim Erişimi SDK'sında Hata Ayıklama)](../../debugger/debug-interface-access/enum-debug-interface-access-sdk.md)|Numaralandırılmış türlerin simgesi.|

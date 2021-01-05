@@ -1,5 +1,7 @@
 ---
 title: Grafik bilgilerini yakalama | Microsoft Docs
+description: Oluşturma sorunlarını ve performans sorunlarını tanılamak için Visual Studio Grafik Çözümleyicisi kullanabilmeniz için Direct3D uygulamanızdan grafik bilgilerini yakalayın.
+ms.custom: SEO-VS-2020
 ms.date: 02/09/2017
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b38dd994eca30bfee071f00431f3b111c2ea444a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a11a5dc3a02959ff7bec4cfaac9aac2ca231b2ba
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72736200"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97727930"
 ---
 # <a name="capturing-graphics-information"></a>Grafik Bilgilerini Yakalama
 Oluşturma sorunlarını ve performans sorunlarını tanılamak için Visual Studio Grafik Çözümleyicisi kullanabilmeniz için Direct3D uygulamanızdan grafik bilgilerini yakalayın.
@@ -40,7 +42,7 @@ Oluşturma sorunlarını ve performans sorunlarını tanılamak için Visual Stu
 - Klavyede PRINT Screen tuşuna basın.
 
   > [!NOTE]
-  > Bir uygulama **Grafik tanılama**altında çalışırken, yazdırma ekranı anahtarı yalnızca bir grafik bilgileri çerçevesini yakalamak için kullanılabilir; normal işlevini gerçekleştirmez. Başka bir uygulama odakta olsa bile, grafik bilgilerini yakalamayı durduruncaya kadar (genellikle hata ayıklamayı durdurarak veya uygulamadan normal yolla çıkarak) bu durum devam eder.
+  > Bir uygulama **Grafik tanılama** altında çalışırken, yazdırma ekranı anahtarı yalnızca bir grafik bilgileri çerçevesini yakalamak için kullanılabilir; normal işlevini gerçekleştirmez. Başka bir uygulama odakta olsa bile, grafik bilgilerini yakalamayı durduruncaya kadar (genellikle hata ayıklamayı durdurarak veya uygulamadan normal yolla çıkarak) bu durum devam eder.
 
 - Visual Studio yakalama arabiriminde, **Tanılama oturumu** zaman çizelgesinin altında bulunan **yakalama çerçevesi** düğmesini seçin ya da **saniye başına alınan karelerin** ve daha önce yakalanan çerçevelerin sağındaki büyük **yakalama çerçevesi** düğmesini seçin. Aşağıdaki görüntüde her iki düğme de vurgulanır.
 

@@ -1,6 +1,7 @@
 ---
 title: Web uygulamalarında hata ayıklama-sorun giderme | Microsoft Docs
-ms.custom: seodec18
+description: Web uygulamalarındaki hataları ayıklamak ve çözümlemek için kullanılabilen ortak yordamların bağlantılarını bulun.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -18,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6907ba5f0b48721646c57964012bf0aaa0838b60
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 569b967a91ea3a93ff75bc45aec8974f5474ce84
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "73188320"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728167"
 ---
 # <a name="debugging-web-applications-troubleshooting"></a>Web Uygulamalarında Hata Ayıklama: Sorun Giderme
 Bu bölüm, hataları çözmek için kullanılabilen yaygın yordamları içerir.

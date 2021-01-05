@@ -1,5 +1,7 @@
 ---
 title: Zaman uyumlu bir şekilde otomatik yüklenen uzantılar
+description: Visual Studio 2019 ' den başlayarak, zaman uyumlu olarak yüklenen paketleri herhangi bir uzantıdan engelleyen Varsayılan davranış hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 12/11/2019
 ms.topic: conceptual
 ms.assetid: 822e3cf8-f723-4ff1-8467-e0fb42358a1f
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ab62d235fd6ed4e47e765fc23868acd5c56efcb2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 506c098f1f385ddf39c5d000f4571a8ee92c09fc
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699380"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97715450"
 ---
 # <a name="synchronously-autoloaded-extensions"></a>Zaman uyumlu bir şekilde otomatik yüklenen uzantılar
 
@@ -21,7 +23,7 @@ Zaman uyumlu olarak yüklenen uzantılar, Visual Studio 'nun performansı üzeri
 
 ![Uzantı uyumluluk uyarısı](media/extension-compatibility-warning-16-1.png.png)
 
-Seçenekleriniz şunlardır:
+Şunları yapabilirsiniz:
 
 - Uzantıların oto yüklemesine izin vermek için **zaman uyumlu bir oto yüküne Izin ver** ' e tıklayın. Visual Studio seçeneklerinde bu ayarı değiştirmek için, ortam ' a ve ardından Uzantılar ' a tıklayın ve ardından "uzantıların zaman uyumlu olarak yeniden yüklenmesine Izin ver" onay kutusunu seçin. 
 
@@ -42,7 +44,7 @@ Tüm Kullanıcı oturumlarındaki paketleri eşzamanlı olarak yükleyen tüm uz
 
 Yöneticiler, zaman uyumlu bir oto yüküne izin vermek için grup ilkesi etkinleştirebilir. Bunu yapmak için, aşağıdaki anahtarda bir kayıt defteri tabanlı ilke ayarlayın:
 
-**HKEY_LOCAL_MACHINE \Software\policies\microsoft\visualstudio\synchronousoto Load**
+**HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\VisualStudio\SynchronousAutoload**
 
 Giriş = **Izin verildi**
 

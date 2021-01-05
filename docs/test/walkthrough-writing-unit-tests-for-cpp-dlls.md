@@ -9,12 +9,12 @@ manager: markl
 ms.workload:
 - cplusplus
 author: corob-msft
-ms.openlocfilehash: 178fef548bc52346a78c7f9e4607aad7b1c56f65
-ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
+ms.openlocfilehash: 2d145e1383e8f6c0d7c25ae72232fdbe2a8d703d
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95598412"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97727547"
 ---
 # <a name="how-to-write-unit-tests-for-c-dlls"></a>Nasıl yapılır: C++ dll 'Leri için birim testleri yazma
 
@@ -74,7 +74,7 @@ Bu izlenecek yol, test-First yöntemini kullanarak yerel C++ DLL 'nin nasıl gel
 
          `Assert`Sınıfının, test yöntemlerinde sonuçları doğrulamak için kullanabileceğiniz çeşitli statik yöntemler sağladığını unutmayın.
 
-    2. **Test** menüsünde **Run**  >  **tüm testleri** Çalıştır ' ı seçin.
+    2. **Test** menüsünde   >  **tüm testleri** Çalıştır ' ı seçin.
 
          Test derlemeleri ve çalıştırmaları.
 
@@ -90,7 +90,7 @@ Bu izlenecek yol, test-First yöntemini kullanarak yerel C++ DLL 'nin nasıl gel
 
 Aşağıdaki adımlarda, Visual Studio 2019 ' de bir DLL projesi oluşturma gösterilmektedir.
 
-1. **Windows Masaüstü Sihirbazı 'nı** kullanarak bir C++ projesi oluşturma: **Çözüm Gezgini** çözüm adına sağ tıklayın ve **Add**  >  **Yeni proje** Ekle ' yi seçin. **Dili** C++ olarak ayarlayın ve arama kutusuna "Windows" yazın. Sonuçlar listesinden **Windows Masaüstü Sihirbazı** ' nı seçin.
+1. **Windows Masaüstü Sihirbazı 'nı** kullanarak bir C++ projesi oluşturma: **Çözüm Gezgini** çözüm adına sağ tıklayın ve   >  **Yeni proje** Ekle ' yi seçin. **Dili** C++ olarak ayarlayın ve arama kutusuna "Windows" yazın. Sonuçlar listesinden **Windows Masaüstü Sihirbazı** ' nı seçin.
 
      Bu kılavuzda, proje adlandırılır `RootFinder` .
 
@@ -154,7 +154,7 @@ Aşağıdaki adımlarda, Visual Studio 2017 ' de bir DLL projesi oluşturma gös
 
 1. DLL projesini test projesinin proje başvurularına ekleyin:
 
-   1. **Çözüm Gezgini** ' deki test projesi düğümüne sağ tıklayın ve başvuru **Ekle**' yi seçin  >  **Reference**.
+   1. **Çözüm Gezgini** ' deki test projesi düğümüne sağ tıklayın ve başvuru **Ekle**' yi seçin  >  .
 
    2. **Başvuru Ekle** iletişim kutusunda, DLL projesini seçin ve **Ekle**' yi seçin.
 
@@ -328,7 +328,7 @@ Aşağıdaki adımlarda, Visual Studio 2017 ' de bir DLL projesi oluşturma gös
 ::: moniker range="vs-2017"
 
 > [!TIP]
-> Bireysel testlerin herhangi bir sırada çalıştırılmasını engelleyen bir bağımlılığı yoksa, ![ araç çubuğunda sırasıyla&#95;parallelicon&#45;küçük ](../test/media/ute_parallelicon-small.png) iki durumlu düğmesiyle paralel test yürütmeyi etkinleştirin. Bu, tüm testleri çalıştırmak için harcanan süreyi önemli ölçüde azaltabilir.
+> Bireysel testlerin herhangi bir sırada çalıştırılmasını engelleyen bir bağımlılığı yoksa, ![ Test Gezgini araç çubuğundaki paralel test yürütme geçiş düğmesi ekran görüntüsü ile paralel test yürütmeyi açın. Bu düğme seçildiğinde, testler paralel olarak çalışır.](../test/media/ute_parallelicon-small.png) araç çubuğundaki iki durumlu düğme. Bu, tüm testleri çalıştırmak için harcanan süreyi önemli ölçüde azaltabilir.
 
 ::: moniker-end
 

@@ -1,5 +1,7 @@
 ---
 title: Yazmaçları penceresi hakkında | Microsoft Docs
+description: Yalnızca Seçenekler iletişim kutusunda, hata ayıklama düğümünde adres düzeyi hata ayıklama etkinse kullanılabilir olan Visual Studio 'daki kayıt penceresi hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 10b370b653590dd5061dc98d31d74d3351180dc6
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: f62425913e65207953554a35054399fb8a6d2af4
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89600312"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728479"
 ---
 # <a name="about-the-registers-window-in-visual-studio-c-c-visual-basic-f"></a>Visual Studio 'da Yazmaçları penceresi hakkında (C#, C++, Visual Basic, F #)
 

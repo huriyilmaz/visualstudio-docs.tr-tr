@@ -1,5 +1,7 @@
 ---
 title: Birden çok işlemde hata ayıkla | Microsoft Docs
+description: Visual Studio 'da birden çok işlemde hata ayıklayın. Süreçler arasında geçiş yapın, sonlandırın, devam edin, kaynak adımla ve ayrı işlemlerden ayrılın veya ayrılın.
+ms.custom: SEO-VS-2020
 ms.date: 11/20/2018
 ms.topic: how-to
 f1_keywords:
@@ -19,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 94a61e0083b17fa095b419a2066a4f8b9c39dfb7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 214025c2d128443223594fdb00fcf730e5a8091a
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350608"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728637"
 ---
 # <a name="debug-multiple-processes-c-visual-basic-c"></a>Birden çok işlemde hata ayıklama (C#, Visual Basic, C++)
 
@@ -32,7 +34,7 @@ Visual Studio, birkaç işlem içeren bir çözümde hata ayıklama yapabilir. �
 
 ## <a name="start-debugging-with-multiple-processes"></a>Birden çok işlemle hata ayıklamayı başlatma
 
-Visual Studio çözümünde birden fazla proje bağımsız olarak çalıştırılabileceği zaman, hata ayıklayıcının başlayacağı projeyi seçebilirsiniz. Geçerli başlangıç projesi **Çözüm Gezgini**kalın olarak görünür.
+Visual Studio çözümünde birden fazla proje bağımsız olarak çalıştırılabileceği zaman, hata ayıklayıcının başlayacağı projeyi seçebilirsiniz. Geçerli başlangıç projesi **Çözüm Gezgini** kalın olarak görünür.
 
 Başlangıç projesini değiştirmek için, **Çözüm Gezgini**, farklı bir projeye sağ tıklayın ve **Başlangıç projesi olarak ayarla**' yı seçin.
 
@@ -46,9 +48,9 @@ Başlangıç projesini değiştirmek için, **Çözüm Gezgini**, farklı bir pr
 
    ![Projenin başlangıç türünü değiştirme](../debugger/media/dbg_execution_startmultipleprojects.png "DBG_Execution_StartMultipleProjects")
 
-1. **Geçerli seçim**, **tek bir başlangıç projesi** ve proje dosyası ya da **birden çok başlangıç**projesi seçin.
+1. **Geçerli seçim**, **tek bir başlangıç projesi** ve proje dosyası ya da **birden çok başlangıç** projesi seçin.
 
-   **Birden çok başlangıç projesi**seçerseniz, her proje için gerçekleştirilecek başlangıç sırasını ve eylemini değiştirebilirsiniz: **Başlat**, **hata ayıklama olmadan Başlat**veya **hiçbiri**.
+   **Birden çok başlangıç projesi** seçerseniz, her proje için gerçekleştirilecek başlangıç sırasını ve eylemini değiştirebilirsiniz: **Başlat**, **hata ayıklama olmadan Başlat** veya **hiçbiri**.
 
 1. **Uygula**' yı seçin veya **Tamam** ' a tıklayın ve iletişim kutusunu kapatın.
 
@@ -60,7 +62,7 @@ Daha fazla bilgi için bkz. [çalışan Işlemlere iliştirme](../debugger/attac
 
 **Çalışan bir işleme eklemek için:**
 
-1. Uygulama çalışırken, **Debug**  >  **işleme Ekle**Hata Ayıkla ' yı seçin.
+1. Uygulama çalışırken,   >  **işleme Ekle** Hata Ayıkla ' yı seçin.
 
    ![Işleme İliştir iletişim kutusu](../debugger/media/dbg_attachtoprocessdlg.png "Işleme İliştir iletişim kutusu")
 
@@ -73,9 +75,9 @@ Daha fazla bilgi için bkz. [çalışan Işlemlere iliştirme](../debugger/attac
 
 Bazen, başka bir işlem tarafından başlatılan bir uygulama için başlangıç kodunda hata ayıklaması yapmanız gerekebilir. Örnekler, hizmetler ve özel kurulum eylemleri içerir. Hata ayıklayıcı başlatma ve uygulamaya otomatik olarak iliştirme sağlayabilirsiniz.
 
-1. *regedit.exe*çalıştırarak Windows kayıt defteri düzenleyicisini başlatın.
+1. *regedit.exe* çalıştırarak Windows kayıt defteri düzenleyicisini başlatın.
 
-1. Kayıt Defteri Düzenleyicisi 'nde **HKEY_LOCAL_MACHINE \Software\Microsoft\Windows Nt\currentversion\ımage dosya yürütme seçenekleri**' ne gidin.
+1. Kayıt Defteri Düzenleyicisi 'nde **HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Image File Execution Options**' a gidin.
 
 1. Hata ayıklayıcıda başlamasını istediğiniz uygulamanın klasörünü seçin.
 
@@ -100,7 +102,7 @@ Birkaç işlemle bir uygulamada hata ayıklarken, kesme, Adımlama ve devam etti
 
 **Bir işlem kesildiğinde tüm işlemlerin askıya alınıp alınmayacağını değiştirmek için:**
 
-- **Araçlar** (veya **hata ayıklama**>) **Options**' ın  >  **Genel hata ayıklama**seçenekleri altında  >  **General**, **bir işlem kesildiğinde tüm işlemleri kes** onay kutusunu seçin veya temizleyin.
+- **Araçlar** (veya **hata ayıklama**>) ' ın  >  **Genel hata ayıklama** seçenekleri altında  >  , **bir işlem kesildiğinde tüm işlemleri kes** onay kutusunu seçin veya temizleyin.
 
 ### <a name="break-step-and-continue-commands"></a><a name="BKMK_Break__step__and_continue_commands"></a> Kes, adımla ve Continue komutları
 
@@ -110,8 +112,8 @@ Aşağıdaki tabloda, **bir işlem kesilmediğinde tüm Işlemleri kes** onay ku
 |-|-|-|
 |**Hata Ayıkla**   >  **Tümünü kes**|Tüm süreçler kesilir.|Tüm süreçler kesilir.|
 |**Hata Ayıkla**  >  **Devam et**|Tüm süreçler sürdürülür.|Tüm askıya alınmış süreçler sürdürülür.|
-|**Hata Ayıkla**  >  **Adımla**, **adımla**veya **adımla**|Tüm işlemler geçerli işlem adımları sırasında çalışır. <br />Sonra tüm süreçler kesilir.|Geçerli işlem adımları. <br />Askıya alınan işlem özgeçmişi. <br />Çalışan süreçler devam eder.|
-|**Hata Ayıkla**  >  **Geçerli Işleme adımla**, **geçerli Işleme adımla**veya **geçerli işlemi adımla**|Yok|Geçerli işlem adımları.<br />Diğer süreçler mevcut durumlarını (askıya alındı veya çalışıyor) korur.|
+|**Hata Ayıkla**  >  **Adımla**, **adımla** veya **adımla**|Tüm işlemler geçerli işlem adımları sırasında çalışır. <br />Sonra tüm süreçler kesilir.|Geçerli işlem adımları. <br />Askıya alınan işlem özgeçmişi. <br />Çalışan süreçler devam eder.|
+|**Hata Ayıkla**  >  **Geçerli Işleme adımla**, **geçerli Işleme adımla** veya **geçerli işlemi adımla**|Yok|Geçerli işlem adımları.<br />Diğer süreçler mevcut durumlarını (askıya alındı veya çalışıyor) korur.|
 |Kaynak pencere **kesme noktası**|Tüm süreçler kesilir.|Yalnızca kaynak pencere işlem sonları.|
 |Kaynak pencereyi **imlece kadar Çalıştır**<br />Kaynak pencere geçerli işlemde olmalıdır.|Tüm işlemler, kaynak pencere işlemi imlece ve sonra kesilir.<br />Diğer tüm süreçler kesilir.|Kaynak pencere işlemi imleç için çalışır.<br />Diğer süreçler mevcut durumlarını (askıya alındı veya çalışıyor) korur.|
 |**İşlemler** penceresi > **kesme işlemi**|Yok|Seçilen işlem sonları.<br />Diğer süreçler mevcut durumlarını (askıya alındı veya çalışıyor) korur.|
@@ -128,7 +130,7 @@ Hata ayıklarken birden çok işleme iliştirebilirsiniz, ancak belirli bir zama
 
 **Geçerli işlemi hata ayıklama konumu araç çubuğundan ayarlamak için:**
 
-1. **Hata ayıklama konumu** araç çubuğunu açmak için **View**  >  **araç çubukları**  >  **hata ayıklama konumunu**görüntüle ' yi seçin.
+1. **Hata ayıklama konumu** araç çubuğunu açmak için   >  **araç çubukları**  >  **hata ayıklama konumunu** görüntüle ' yi seçin.
 
 1. Hata ayıklama sırasında, **hata ayıklama konumu** araç çubuğunda, **işlem** açılır listesinden geçerli işlem olarak ayarlamak istediğiniz işlemi seçin.
 
@@ -136,7 +138,7 @@ Hata ayıklarken birden çok işleme iliştirebilirsiniz, ancak belirli bir zama
 
 **Işlemler penceresinden geçerli işlemi ayarlamak için:**
 
-1. **İşlem** penceresini açmak için hata ayıklama sırasında Windows işlemlerini **Hata Ayıkla**' yı seçin  >  **Windows**  >  **Processes**.
+1. **İşlem** penceresini açmak için hata ayıklama sırasında Windows işlemlerini **Hata Ayıkla**' yı seçin  >    >  .
 
 1. **İşlemler** penceresinde, geçerli işlem sarı bir ok ile işaretlenir. Geçerli işlem olarak ayarlamak istediğiniz işleme çift tıklayın.
 
@@ -146,7 +148,7 @@ Bir işleme geçiş yapmak, hata ayıklama amacıyla geçerli işlem olarak ayar
 
 ## <a name="stop-debugging-with-multiple-processes"></a>Birden çok işlemle hata ayıklamayı Durdur
 
-Varsayılan olarak **, hata**  >  **ayıklamayı Durdur hata ayıklamayı**seçtiğinizde, hata ayıklayıcı tüm işlemlerden sonlanır veya ayırır.
+Varsayılan olarak **, hata**  >  **ayıklamayı Durdur hata ayıklamayı** seçtiğinizde, hata ayıklayıcı tüm işlemlerden sonlanır veya ayırır.
 
 - Geçerli işlem hata ayıklayıcıda başlatılmışsa, işlem sonlandırılır.
 
@@ -170,7 +172,7 @@ Aşağıdaki tabloda, birden çok işlemle hata ayıklayıcı durdur, sonlandır
 |**Hata Ayıkla**  >  **Tümünü Ayır**|Hata ayıklayıcı tüm işlemlerden ayırır.|
 |**İşlemler** penceresi > **ayırma işlemi**|Hata ayıklayıcı seçili işlemden ayırır.<br />Diğer süreçler mevcut durumlarını (askıya alındı veya çalışıyor) korur.|
 |**Işlemleri** **sona erdirmek > işlem** penceresi|Seçilen işlem sona erdi.<br />Diğer süreçler mevcut durumlarını (askıya alındı veya çalışıyor) korur.|
-|**Hata ayıklama durdurulduğunda** pencere > ayır 'ı **işler**|Seçilirse, **hata**ayıklama  >  Seçili işlemden ayrıldığında hata**ayıklamayı durdurur** . <br />Seçili **değilse, hata**  >  **ayıklamayı Durdur hata ayıklamayı Durdur** seçili işlemi sonlandırır. |
+|**Hata ayıklama durdurulduğunda** pencere > ayır 'ı **işler**|Seçilirse, **hata** ayıklama  >  Seçili işlemden ayrıldığında hata **ayıklamayı durdurur** . <br />Seçili **değilse, hata**  >  **ayıklamayı Durdur hata ayıklamayı Durdur** seçili işlemi sonlandırır. |
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -178,4 +180,4 @@ Aşağıdaki tabloda, birden çok işlemle hata ayıklayıcı durdur, sonlandır
 - [Çalışan işlemlere iliştirme](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)
 - [Hata ayıklayıcı ile kod arasında gezinme](../debugger/navigating-through-code-with-the-debugger.md)
 - [Tam zamanında hata ayıklama](../debugger/just-in-time-debugging-in-visual-studio.md)
-- [Çok iş parçacıklı uygulamalarda hata ayıklama](../debugger/debug-multithreaded-applications-in-visual-studio.md)
+- [Çok iş parçacıklı uygulamaların hatalarını ayıklama](../debugger/debug-multithreaded-applications-in-visual-studio.md)

@@ -1,6 +1,8 @@
 ---
 title: Uzak bilgisayara erişilmeye çalışılırken DCOM hatası oluştu. Erişim reddedildi.
 titleSuffix: ''
+description: "' Uzak bilgisayara bağlanmaya çalışırken bir DCOM hatası oluştu. Erişim engellendi. ' Bu Visual Studio uzaktan hata ayıklama hata başvurusuyla ilgili bilgileri görüntüleyin."
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -21,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 093f2e46178d8734e7499c9f7a340396bbbdc9ed
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: c430462a224cb4604c09984a5397e540ce752b8a
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851638"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97729203"
 ---
 # <a name="a-dcom-error-occurred-trying-to-contact-the-remote-computer-access-is-denied"></a>Uzak bilgisayara erişilmeye çalışılırken DCOM hatası oluştu. Erişim reddedildi.
 Uzaktan hata ayıklama, aşağıdaki durumlarda yerel ve uzak bilgisayarlar arasında iletişim kurmak için DCOM kullanır:
@@ -41,7 +43,7 @@ Uzaktan hata ayıklama, aşağıdaki durumlarda yerel ve uzak bilgisayarlar aras
 
   Bu hata, Visual Studio işleminin kimlik doğrulaması yapamadığında (veya sağlanan kimlik bilgileri yetersiz olduğu kabul edildiğinde) DCOM üzerinden uzaktan hata ayıklayıcı işlemi için oluşur. Aşağıdaki geçici çözümlerden biri veya birkaçı sorunu çözebilir:
 
-- **Yerel uyumluluk modunu** ve **yönetilen uyumluluk modunu**kapatın.
+- **Yerel uyumluluk modunu** ve **yönetilen uyumluluk modunu** kapatın.
 
 - Visual Studio 2013, **yerel düzenlemeyi etkinleştir ve devam et**' i kapatın.
 
@@ -51,5 +53,5 @@ Uzaktan hata ayıklama, aşağıdaki durumlarda yerel ve uzak bilgisayarlar aras
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Uzaktan Hata Ayıklama Hataları ve Sorun Giderme](../debugger/remote-debugging-errors-and-troubleshooting.md)
+- [Uzaktan hata ayıklama hataları ve sorun giderme](../debugger/remote-debugging-errors-and-troubleshooting.md)
 - [Uzaktan hata ayıklama](../debugger/remote-debugging.md)

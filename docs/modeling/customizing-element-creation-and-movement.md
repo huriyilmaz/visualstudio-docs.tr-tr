@@ -13,12 +13,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 96ef956980b08e688970ad0a00d7d1a0804da7c3
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: b84f638876270658be2f08a7e375540f0329a1d6
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97363126"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97729346"
 ---
 # <a name="customizing-element-creation-and-movement"></a>Öğe Oluşturma ve Hareketini Özelleştirme
 
@@ -40,7 +40,7 @@ Oluşturma işlemleri kopyalama işlemlerinden farklı görünse de, bu işlemle
 
 EMD 'nin sorumluluğu, bir nesne veya nesne grubunun modelde belirli bir konuma birleştirilmesi gerektiğine karar vermektedir. Özellikle, birleştirilmiş grubu modele bağlamak için hangi ilişkilerin oluşturulması gerektiğine karar verir. Ayrıca, özellikleri ayarlamak ve ek nesneler oluşturmak için özelleştirebilirsiniz.
 
-![DSL&#45;EMD&#95;birleştirme](../modeling/media/dsl-emd_merge.png)
+![Bir E M D, yeni bir öğenin nasıl ekleneceğini belirleyen bir öğe ve bunların başvuru ilişkilerine göre daha önce ve sonra gösteren diyagram.](../modeling/media/dsl-emd_merge.png)
 
 Bir katıştırma ilişkisi tanımladığınızda bir EMD otomatik olarak oluşturulur. Bu varsayılan EMD, kullanıcılar üst öğeye yeni alt örnekler eklerken ilişki örneği oluşturur. Bu varsayılan kullanıcıları, örneğin özel kod ekleyerek değiştirebilirsiniz.
 
@@ -50,7 +50,7 @@ Ayrıca, kullanıcıların birleştirilmiş ve alan sınıfların farklı kombin
 
 Etki alanı sınıflarına, etki alanı ilişkilerine, şekillere, bağlayıcılara ve diyagramlara öğe birleştirme yönergeleri ekleyebilirsiniz. Bunları, alıcı etki alanı sınıfı altında DSL Gezgini 'ne ekleyebilir veya bulabilirsiniz. Alan sınıfı, zaten modelde olan ve yeni veya kopyalanmış öğenin birleştirileceği öğenin etki alanı sınıfıdır.
 
-![DSL&#45;EMD&#95;ayrıntıları](../modeling/media/dsl-emd_details.png)
+![Dizin oluşturma sınıfı ve alt sınıflar için geçerlidir seçeneği belirlenmiş olan ExampleElement ile eklenmekte olan bir E M D 'yi gösteren DSL Gezgini ekran görüntüsü.](../modeling/media/dsl-emd_details.png)
 
 **Dizin oluşturma sınıfı** , alıcı sınıfının üyeleriyle birleştirilebilen öğelerin alan sınıfıdır. Alt **sınıflar Için geçerli** olarak ayarlanmadığınız müddetçe, dizin oluşturma sınıfının alt sınıflarının örnekleri de bu EMD tarafından birleştirilir.
 

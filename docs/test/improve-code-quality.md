@@ -12,12 +12,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: f5eff2257988a4210e7f4cd8a8a37c66c57c185d
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+ms.openlocfilehash: 0029321ddfc3ff12bb9c40dac9de64a9eb067a95
+ms.sourcegitcommit: 4e28314dc2be59b4c5fd44545c0653f625e74489
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96328697"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97756649"
 ---
 # <a name="first-look-at-testing-tools-in-visual-studio"></a>Visual Studio 'da test araçlarına ilk bakış
 
@@ -51,11 +51,17 @@ Visual Studio da genişletilebilir ve NUnit ve xUnit.net gibi üçüncü taraf b
 
 [Live Unit Testing](../test/live-unit-testing.md) arka planda birim testlerini otomatik olarak çalıştırır ve Visual Studio kod düzenleyicisinde kod kapsamını ve test sonuçlarını grafiksel olarak görüntüler.
 
+> [!NOTE]
+> Canlı birim testi yalnızca Enterprise Edition 'da kullanılabilir ve yalnızca .NET kodu için desteklenir.
+
 ## <a name="intellitest"></a>IntelliTest
 
 IntelliTest, yönetilen kodunuz için birim testlerini ve test verilerini otomatik olarak oluşturur. IntelliTest kapsamı geliştirir ve yeni veya mevcut kod için birim testleri oluşturma ve sürdürme çabaları önemli ölçüde azaltır.
 
 ![IntelliTest eylemde](media/devtest-intellitest.png)
+
+> [!NOTE]
+> IntelliTest yalnızca Enterprise sürümünde kullanılabilir. .NET Framework hedefleyen C# kodu için desteklenir. .NET Core ve .NET Standard Şu anda desteklenmiyor.
 
 * [Intellitest ile kodunuz için birim testleri oluşturma](generate-unit-tests-for-your-code-with-intellitest.md)
 * [IntelliTest – tümünü kurala göre bir test](https://devblogs.microsoft.com/devops/intellitest-one-test-to-rule-them-all/)
@@ -64,6 +70,9 @@ IntelliTest, yönetilen kodunuz için birim testlerini ve test verilerini otomat
 ## <a name="code-coverage"></a>Kod kapsamı
 
 [Kod kapsamı](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md) , proje kodunuzun birim testleri gibi kodlanmış testler tarafından ne oranda test edildiğini belirler. Hatalara karşı etkili bir şekilde koruma sağlamak için, testleriniz kodunuzun büyük bir oranını "ele almalıdır" veya "kapsamalıdır".
+
+> [!NOTE]
+> Kod kapsamı yalnızca Enterprise Edition 'da kullanılabilir.
 
 Kod kapsamı analizi, hem yönetilen hem de yönetilmeyen (yerel) koda uygulanabilir.
 
@@ -77,9 +86,15 @@ Test yöntemlerini Test Gezgini'ni kullanarak çalıştırdığınızda kod kaps
 
 [Microsoft Fakes](../test/isolating-code-under-test-with-microsoft-fakes.md) , uygulamanın diğer bölümlerini saplamalar veya parçalar ile değiştirerek test ettiğiniz kodu yalıtmanıza yardımcı olur.
 
+> [!NOTE]
+> Microsoft Fakes yalnızca Enterprise Edition 'da bulunur ve yalnızca .NET kodu için desteklenir.
+
 ## <a name="user-interface-testing-with-coded-ui-and-selenium"></a>Kodlanmış UI ve Selenium ile Kullanıcı Arabirimi testi
 
 Kodlanmış UI testleri, uygulamanızın kullanıcı arabiriminin işlevselliğini ve davranışını doğrulamak için tam otomatikleştirilmiş testlerin oluşturulması için bir yol sağlar. XAML tabanlı UWP uygulamaları, tarayıcı uygulamaları ve SharePoint uygulamaları da dahil olmak üzere çeşitli teknolojiler genelinde UI testini otomatik hale getirebilir.
+
+> [!NOTE]
+> Kodlanmış UI kullanım dışı olan bir özelliktir.
 
 Selenium ile, en iyi kodlanmış UI testlerini veya genel tarayıcı tabanlı UI testini tercih etmeksizin, Visual Studio ihtiyacınız olan tüm araçları sağlar.
 
@@ -89,10 +104,6 @@ Selenium ile, en iyi kodlanmış UI testlerini veya genel tarayıcı tabanlı UI
 * [Kodlanmış UI testi oluşturmaya, düzenlemesine ve sürdürme ile çalışmaya başlama](walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)
 * [Kodlanmış UI Testleriyle UWP uygulamalarını test etme](test-uwp-app-with-coded-ui-test.md)
 * [Visual Studio Enterprise (Lab) ile kodlanmış UI testlerine giriş](https://www.boost.org/doc/libs/1_71_0/libs/test/doc/html/index.html)
-
-## <a name="load-testing"></a>Yük test etme
-
-[Yük testi](../test/quickstart-create-a-load-test-project.md) , birim testlerini ve Web performans testlerini çalıştırarak bir sunucu uygulamasındaki yükün benzetimini yapar.
 
 ## <a name="related-scenarios"></a>İlgili senaryolar
 

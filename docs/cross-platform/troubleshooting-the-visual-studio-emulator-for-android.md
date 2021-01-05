@@ -13,12 +13,12 @@ manager: crdun
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 24af3c279115322b0592faa3b9fa6049bc0c0b62
-ms.sourcegitcommit: dfbbf041e68ec3a4cd97196b19c9226a4793e702
+ms.openlocfilehash: 62c2b69edf6868d1559df2a861a85e286f8ffa15
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91878923"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97729216"
 ---
 # <a name="troubleshoot-the-visual-studio-emulator-for-android"></a>Android için Visual Studio Öykünücüsü’nde Sorun Giderme
 Bu konu, Android için Visual Studio öykünücüsü 'nü kullanırken karşılaşabileceğiniz sorunları çözmenize yardımcı olacak bilgiler içerir.
@@ -70,7 +70,7 @@ Bu konu, Android için Visual Studio öykünücüsü 'nü kullanırken karşıla
 ## <a name="emulator-fails-to-install"></a><a name="NoInstall"></a> Öykünücü yüklenemiyor
  Hyper-V yüklü değilse, öykünücüyü yüklemeye çalıştığınızda aşağıdaki iletiyi görürsünüz. HyperV 'yi destekleyen bir makineniz olmalıdır ve bu makinenin etkinleştirilmesi gerekir.
 
- ![Android&#95;EMU&#95;Install&#95;sorunu](../cross-platform/media/android_emu_install_issue.png "Android_Emu_Install_Issue")
+ ![Bilgisayar Hyper-V ' y i desteklemiyorsa, kurulum 'un Android için Microsoft Visual Studio Öykünücüsü için engellendiğini söyleyen bir Visual Studio iletisinin ekran görüntüsü.](../cross-platform/media/android_emu_install_issue.png "Android_Emu_Install_Issue")
 
 > [!NOTE]
 > Bu ileti hem Android için Visual Studio öykünücüsü hem de Windows Phone öykünücüsü için geçerlidir. Windows 8.1 ve Windows 10 öykünücüsü destekler.
@@ -135,7 +135,7 @@ Bu konu, Android için Visual Studio öykünücüsü 'nü kullanırken karşıla
 
 - Hyper-V Yöneticisi 'nde sanal anahtar yöneticisini açın ve iki ağ anahtarınız olup olmadığını denetleyin; birincinin iç anahtar olduğunu ve ikincisi 'nin dış olduğunu doğrulayın.
 
-     ![Android&#95;EMU&#95;V&#95;Switch&#95;Man](../cross-platform/media/android_emu_v_switch_man.png "Android_Emu_V_Switch_Man")
+     ![Hyper-V Yöneticisi 'nde sanal anahtar Yöneticisi ekran görüntüsü. Yeni bir sanal anahtar vurgulanır ve bu özellikler bir dış ağ anahtarı olduğunu gösterir.](../cross-platform/media/android_emu_v_switch_man.png "Android_Emu_V_Switch_Man")
 
      Kurulum yanlışsa ve Windows 10 kullanıyorsanız, [netcfg-d komutunu (Bölüm 6) kullanarak ağ aygıtlarını yeniden yüklemeyi](https://support.microsoft.com/help/10741/windows-fix-network-connection-issues) deneyebilirsiniz.
 
@@ -182,7 +182,7 @@ Bu konu, Android için Visual Studio öykünücüsü 'nü kullanırken karşıla
 
   6. Windows 8 Professional veya daha iyi bir sürümü çalıştırdığınızdan emin olun (Windows Server 2008 desteklenmez). Windows Server 2012 desteklenir, ancak masaüstü deneyimini etkinleştirmeniz gerekir.
 
-     Herhangi bir hiper yönetici hatası olup olmadığını görmek için Olay Görüntüleyicisi inceleyebilirsiniz. Bunu yapmak için Olay Görüntüleyicisi açın (**anahtar** + **R**'yi başlatın, sonra yazın `eventvwr` ) ve ardından **Windows günlükleri**, **sistem**' i seçin. Ardından, günlüğü olay kaynağına göre filtreleyin, kaynağı **Hyper-V-hiper yönetici**olarak ayarlar. Kök nedeni belirlemenize yardımcı olması için hata olup olmadığını denetleyin.
+     Herhangi bir hiper yönetici hatası olup olmadığını görmek için Olay Görüntüleyicisi inceleyebilirsiniz. Bunu yapmak için Olay Görüntüleyicisi açın (**anahtar** + **R**'yi başlatın, sonra yazın `eventvwr` ) ve ardından **Windows günlükleri**, **sistem**' i seçin. Ardından, günlüğü olay kaynağına göre filtreleyin, kaynağı **Hyper-V-hiper yönetici** olarak ayarlar. Kök nedeni belirlemenize yardımcı olması için hata olup olmadığını denetleyin.
 
      İşlemcinizin en düşük gereksinimleri karşılaması ancak hiper yönetici hala başarısız olursa, bilgisayarınız için bir BIOS yükseltmesi olup olmadığını bulmayı göz önünde bulundurun. Bir tane varsa ve yükseltmeyi seçerseniz, BIOS 'U yükseltirken üreticiden tüm önlemleri gözlemlediğinizden emin olun (BIOS üretici yazılımı yükseltmesinin, BIOS 'un kalıcı olarak bozulmasına neden olabilecek bir güç kaybı nedeniyle kesilmediğinden emin olma gibi).
 
@@ -196,7 +196,7 @@ Bu konu, Android için Visual Studio öykünücüsü 'nü kullanırken karşıla
 
    Aşağıdaki ürünler Windows 8 uyumluluğu için yükseltme gerektirebilir: VirtualBox, Virtual PC 7, VMWare, bazı VPN istemcileri, yazılım güvenlik duvarları, Cisco VPN istemcilerinin bazı sürümleri ve diğer sanallaştırma sistemleri. Şüpheli sanallaştırma yazılımının geliştiriciyle birlikte çalışarak, yazılımı Windows 8 ve Hyper-V ile uyumlu hale getirmek üzere yükseltmeyi teşvik edin.
 
-   Geçici bir *çözüm*olarak, öykünücü tarafından Visual Studio ile iletişim kurmak için kullanılan sanal ağla kesintiye uğraabilecek tüm üçüncü taraf sürücüleri ve uygulamaları devre dışı bırakabilirsiniz. Bu uygulamalar şunlar olabilir:
+   Geçici bir *çözüm* olarak, öykünücü tarafından Visual Studio ile iletişim kurmak için kullanılan sanal ağla kesintiye uğraabilecek tüm üçüncü taraf sürücüleri ve uygulamaları devre dışı bırakabilirsiniz. Bu uygulamalar şunlar olabilir:
 
   - Virüsten koruma uygulamaları (ağ yığınına kanca)
 
@@ -242,7 +242,7 @@ Bu konu, Android için Visual Studio öykünücüsü 'nü kullanırken karşıla
 
      Üçüncü taraf ürünleri kaldırdıktan sonra, Windows Phone öykünücü Iç anahtarını geri yüklemeniz gerekebilir. Bunu gerçekleştirmek için:
 
-  - Hyper V ' i açın ve sanal anahtar Yöneticisi ' ne gidin. "Windows Phone öykünücü Iç anahtarı" adlı bir sanal anahtar oluşturun ve bağlantı türünü **iç ağ**olarak ayarlayın.
+  - Hyper V ' i açın ve sanal anahtar Yöneticisi ' ne gidin. "Windows Phone öykünücü Iç anahtarı" adlı bir sanal anahtar oluşturun ve bağlantı türünü **iç ağ** olarak ayarlayın.
 
      ![Sanal Anahtar Yöneticisi](../cross-platform/media/android_emu_virtual_switch_manager.png "Android_Emu_Virtual_Switch_Manager")
 
@@ -292,9 +292,9 @@ Bu konu, Android için Visual Studio öykünücüsü 'nü kullanırken karşıla
 
 4. İşlemci düğümünü genişletin ve **Uyumluluk**' i seçin.
 
-5. **Farklı bir işlemci sürümü olan fiziksel bir bilgisayara geçişi**etkinleştirin.
+5. **Farklı bir işlemci sürümü olan fiziksel bir bilgisayara geçişi** etkinleştirin.
 
-6. Hizmeti yeniden başlatın ( **Eylemler**altında) ve yeniden deneyin.
+6. Hizmeti yeniden başlatın ( **Eylemler** altında) ve yeniden deneyin.
 
 ## <a name="emulator-fails-to-run-app-that-uses-google-play-services"></a><a name="GooglePlay"></a> Öykünücü Google Play Hizmetleri kullanan uygulamayı çalıştıramıyor
  Öykünücü, Google Play Hizmetleri kitaplıklarıyla birlikte gelmez. Ancak öykünücü, düz ZIP dosyalarını sürükleyip bırakma yüklemesini destekler.

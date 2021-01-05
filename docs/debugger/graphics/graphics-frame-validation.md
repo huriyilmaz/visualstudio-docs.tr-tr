@@ -1,5 +1,7 @@
 ---
 title: Grafik çerçeve doğrulaması | Microsoft Docs
+description: Visual Studio 'da grafikler için çerçeve doğrulama aracı hakkında bilgi edinin. Bu araç, olay listesiyle ilişkili hata ve uyarıları görüntüler.
+ms.custom: SEO-VS-2020
 ms.date: 03/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 49248c6209f9e56e51551f6cd3d4af66ecac8b56
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0fe9b1ed3acbe588b342ba6550bc45558a2070d2
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72735493"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97727651"
 ---
 # <a name="graphics-frame-validation"></a>Grafik çerçeve doğrulaması
 <!-- VERSIONLESS -->
@@ -25,10 +27,10 @@ Visual Studio 2017 ve üzeri **çerçeve doğrulama** aracını destekler.  Çer
 
 Analizi başlatmak için sol üst köşedeki **doğrulama Çalıştır** düğmesine tıklayın.  Çerçevenin karmaşıklığına bağlı olarak tamamlanması birkaç dakika sürebilir.  Burada görüntülenen veriler iki kaynaktan bir birleşimidir: Bu, D3D 'nın kendisini [SDK katmanları](/windows/desktop/direct3d11/overviews-direct3d-11-devices-layers) etkinken ve aracın kendi iç durum izlemesiyle toplanan verileri yayar. İşlem tamamlandıktan sonra birkaç veri sütunu görürsünüz:
 
-| **Column** | **Açıklama** |
+| **Sütun** | **Açıklama** |
 |------------| - |
 | Olay kimliği | [Olay listesi](graphics-event-list.md) penceresindeki bir GIRDIYLE eşlenen kimlik. |
-| Önem Derecesi | Bozulma, hata, uyarı, bilgi veya Ileti. |
+| Önem derecesi | Bozulma, hata, uyarı, bilgi veya Ileti. |
 | Kategori | Uygulama tanımlı, çeşitli, başlatma, Temizleme, derleme, durum oluşturma, durum ayarı, durum alma, yürütme, kaynak Işleme, gölgelendirici, yedekli ve kullanılmıyor. |
 | İleti | Olayla ilişkili ileti. |
 | Olay | Hata veya uyarıyla ilişkili olay. |

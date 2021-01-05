@@ -1,5 +1,7 @@
 ---
 title: Visual Studio için bileşik desenler | Microsoft Docs
+description: Visual Studio 'da tutarlılık için önemli Birleşik desenler hakkında bilgi edinin. Bileşik desenler, etkileşim ve tasarım öğelerini birleştirir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: e48ecfb2-f4b5-4d3a-b4a2-7a4d62fa4ec0
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ebc8f4f6c17af54f4dfdcfc0d0d05c5da9d2d88b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 719ce0ac88761599fbed7da90643fd8a9d79db69
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88114082"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97715827"
 ---
 # <a name="composite-patterns-for-visual-studio"></a>Visual Studio İçin Bileşik Desenler
 Bileşik desenler, etkileşim ve tasarım öğelerini ayrı yapılandırmalarda birleştirir. Tutarlılığa göre Visual Studio 'daki en önemli bileşik desenlerden bazıları şunlardır:
@@ -213,7 +215,7 @@ Bileşik desenler, etkileşim ve tasarım öğelerini ayrı yapılandırmalarda 
 
 3. **Gezinti:** bazı nesneler arası kullanıcı arabirimi kapsayıcıları, kullanıcıyı kullanıcının Web TARAYıCıSıNDA bir MSDN makalesini açmak gibi başka bir pencere veya uygulamaya alan bağlantılar içerir.
 
-    - **Always** Tüm gezinme bağlantılarını "açık" olarak ekleyin, böylece kullanıcılar başka bir içeriğe gezinerek şaşırmaz.
+    -  Tüm gezinme bağlantılarını "açık" olarak ekleyin, böylece kullanıcılar başka bir içeriğe gezinerek şaşırmaz.
 
     - Gezinti bağlantılarını **her zaman** eyleme dönüştürülebilir bağlantılardan ayırın.
 
@@ -270,7 +272,7 @@ Bileşik desenler, etkileşim ve tasarım öğelerini ayrı yapılandırmalarda 
 
 - Kopuk
 
-- Bölge
+- Region
 
 #### <a name="scope"></a>Kapsam
  Seçimin en önemli bileşeni, kullanıcının hangi pencerede çalıştığını (etkinleştirme) ve odağın nerede bulunduğunu (seçim) bilmesini sağlamaktır. Visual Studio, Windows 'daki pencere yönetimi işlevselliğini genişletir, ancak etkinleştirme düzeni aynıdır: bir pencereyle etkileşim, odağı pencereye taşır. Visual Studio 'Da etkinleştirme için iki gösterge bulunur: bir belge penceresi, diğeri de araç pencereleri içindir.
@@ -310,7 +312,7 @@ Bileşik desenler, etkileşim ve tasarım öğelerini ayrı yapılandırmalarda 
  **Visual Studio 'da bölge (Box) seçimi**
 
 #### <a name="text-selection-appearance"></a>Metin seçimi görünümü
- Düzenleyicide etkin ve etkin olmayan seçim için kullanılan renkler özelleştirilebilir. Düzenleyicinin görsel görünümünü özelleştirmek için, bir Kullanıcı **araçlar > seçeneklere**gidebilir ve ardından **ortam > yazı tipi ve renkler > metin Düzenleyicisi**' ne bakın.
+ Düzenleyicide etkin ve etkin olmayan seçim için kullanılan renkler özelleştirilebilir. Düzenleyicinin görsel görünümünü özelleştirmek için, bir Kullanıcı **araçlar > seçeneklere** gidebilir ve ardından **ortam > yazı tipi ve renkler > metin Düzenleyicisi**' ne bakın.
 
 ### <a name="graphical-selection"></a>Grafik seçimi
 
@@ -439,7 +441,7 @@ Bileşik desenler, etkileşim ve tasarım öğelerini ayrı yapılandırmalarda 
 |--------|------------|
 | Liste | Peşe |
 | Liste | Kopuk |
-| Liste | Bölge |
+| Liste | Region |
 
  Bir listede bir kez tıklamak, tıklama gerçekleştiği satırı seçer. Kullanıcı yerinde düzenlemeden desteklenen bir liste hücresinde tıklamaya çalışıyorsa, hücre yerinde düzenlemede de hemen etkinleştirilir. Aksi takdirde, tüm satır hemen seçilir ve bir vurgu gösterir.
 

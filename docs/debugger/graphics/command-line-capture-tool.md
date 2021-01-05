@@ -1,5 +1,7 @@
 ---
-title: Komut satırı yakalama aracı | Microsoft Docs
+title: Command-Line yakalama aracı | Microsoft Docs
+description: Grafik tanılama yakalama ve kayıttan yürütme için, tüm özellik düzeylerinde Direct3D 12 aracılığıyla Direct3D 10 ' u destekleyen bir komut satırı aracı olan DXCap.exe hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: db75b3a7-80b2-4a74-91d2-fd6e0f73b45d
@@ -8,17 +10,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c4d88e62b1520677ddac3ff66a6891eb805af30d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3618c1d6e929d40108abd5fd0b0cc3a3361964bf
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64808461"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97727883"
 ---
 # <a name="command-line-capture-tool"></a>Komut Satırı Yakalama Aracı
 DXCap.exe, grafik tanılama yakalama ve kayıttan yürütme için bir komut satırı aracıdır. Tüm özellik düzeylerinde Direct3D 12 aracılığıyla Direct3D 10 ' da desteklenir.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cmd
 DXCap.exe [-file filename] [-frame frames | -period periods | -manual] -c app [args...]
@@ -137,7 +139,7 @@ DXCap.exe -e map
 
  Yukarıdaki komut, "map" ile eşleşen UWP uygulamalarını numaralandırır; çıktı şöyledir:
 
- **Paket "Microsoft. BingMaps":** **InstallDirectory: C:\Program Files\WindowsApps\Microsoft. BingMaps_2.1.2914.1734_X64__8wekyb3d8bbwe** **FullName: Microsoft. BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe** **UserSid: S-1-5-21-2127521184-1604012920-1887927527-5603533** **adı: Microsoft. Bingmaps** **yayımcısı: CN = Microsoft Corporation, O = Microsoft Corporation, L = Redmond, S = Washington, C = US** **Sürüm: 2.1.2914.1734** **launchable** Apps: **ID: appexmaps** **exe: C:\Program Files\WindowsApps\Microsoft.BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe\Map.exe** **ıswwa:** **appspec (başlatmak için): DXCap.exe-C Microsoft. BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe, appexmaps** her numaralandırılmış uygulama için çıktının son satırını, bu bilgisayardan grafik bilgilerini yakalamak için kullanabileceğiniz komutu görüntüler.
+ **"Microsoft. BingMaps" paketi:** **InstallDirectory: C: \ Program Files \ WindowsApps \ Microsoft. BingMaps_2.1.2914.1734_x64__8wekyb3d8bbbu** **FullName: Microsoft. BingMaps_2.1.2914.1734 _x64__8wekyb3d8bbwe** **Kullanıcı SID: S-1-5-21-2127521184-1604012920-1887927527-5603533** **ad: Microsoft. Bingmaps** **yayımcısı: CN = Microsoft Corporation, O = Microsoft Corporation, L = Redmond, S = Washington, C = US** **Sürüm: 2.1.2914.1734** **launchable uygulamalar:** **ID: appexmaps** **exe: C: \ Program Files\WindowsApps\Microsoft.BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe\Map.exe** **IWWA:** **appspec (başlatmak için): DXCap.exe-C Microsoft. BingMaps_2.1.2914.1734 _x64__8wekrivbwe,** her numaralandırılmış uygulama için çıktının son satırını, bundan sonra grafik bilgilerini yakalamak için kullanabileceğiniz komutu görüntüler.
 
 ### <a name="capture-specific-frames-or-frames-between-specific-times"></a>Belirli saatler arasında belirli çerçeveler veya çerçeveler yakalayın.
  `-frame`Virgüller ve aralıklar kullanarak yakalamak istediğiniz çerçeveleri belirtmek için kullanın:
@@ -225,7 +227,7 @@ DXCap.exe -p BasicHLSL11.vsglog -screenshot -frame 5, 7-9
 DXCap.exe -p regression_test_12.vsglog -toXML
 ```
 
- Varsayılan olarak, XML çıktısı grafik günlüğü ile aynı ada sahip bir dosyaya yazılır, ancak buna bir. xml uzantısı verilir. Yukarıdaki örnekte, XML dosyası **regression_test_12.xml**olarak adlandırılır. XML dosyasına farklı bir ad vermek için, daha sonra belirtin `-toXML` .
+ Varsayılan olarak, XML çıktısı grafik günlüğü ile aynı ada sahip bir dosyaya yazılır, ancak buna bir. xml uzantısı verilir. Yukarıdaki örnekte, XML dosyası **regression_test_12.xml** olarak adlandırılır. XML dosyasına farklı bir ad vermek için, daha sonra belirtin `-toXML` .
 
 ```cmd
 DXCap.exe -p regression_test_12.vsglog -toXML temp.xml

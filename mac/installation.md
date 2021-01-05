@@ -8,12 +8,12 @@ ms.technology: vs-ide-install
 ms.assetid: 22B1F2CD-32AE-464D-80AC-C8AB4786B015
 ms.custom: video
 ms.topic: how-to
-ms.openlocfilehash: f971237ecc829fcc4ab660263a1b66c701f86f62
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 5155c37a89f566841fc342bbd8213f5a38eb399d
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91583963"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97727573"
 ---
 # <a name="install-visual-studio-2019-for-mac"></a>Mac için Visual Studio 2019 'yi yükler
 
@@ -38,7 +38,7 @@ MacOS 'ta yerel, platformlar arası .NET uygulamaları geliştirmeye başlamak i
 
     [![Yüklemeyi başlatmak için büyük oka tıklayın](media/install-installer-sml.png)](media/install-installer.png#lightbox)
 
-3. Internet 'ten indirilen uygulamayla ilgili bir uyarı alabilirsiniz. **Aç**'a tıklayın.
+3. Internet 'ten indirilen uygulamayla ilgili bir uyarı alabilirsiniz. **Aç**’a tıklayın.
 4. Yükleyici sisteminizi denetlerken bekleyin:
 
     [![Yükleyici, sisteminizde yüklü bileşenleri denetler](media/install-checking-sml.png)](media/install-checking.png#lightbox)
@@ -49,7 +49,7 @@ MacOS 'ta yerel, platformlar arası .NET uygulamaları geliştirmeye başlamak i
 
 6. Kullanılabilir iş yüklerinin listesi görüntülenir. Kullanmak istediğiniz bileşenleri seçin:
 
-    [![Yüklemek istediğiniz isteğe bağlı iş yükü özelliklerini seçin](media/install-selection.png)](media/install-selection.png#lightbox)
+    [![Visual Studio Mac yükleyicisinde, yükleme için kullanılabilen bileşenlerin bir listesini gösteren "ne yüklemek istiyorsunuz?" ekranının ekran görüntüsü.](media/install-selection.png)](media/install-selection.png#lightbox)
 
    Tüm platformları yüklemek istemiyorsanız, hangi platformları yükleyeceğinize karar vermenize yardımcı olması için aşağıdaki kılavuzu kullanın:
 
@@ -67,7 +67,7 @@ MacOS 'ta yerel, platformlar arası .NET uygulamaları geliştirmeye başlamak i
 7. Seçimlerinizi yaptıktan sonra, **Install** düğmesine basın.
 8. Yükleyici, Mac için Visual Studio ve seçilen iş yüklerini indirdiği ve yükleyen ilerlemeyi görüntüler. Yükleme için gerekli ayrıcalıkları vermek üzere parolanızı girmeniz istenir.:
 
-    [![Yüklemek istediğiniz isteğe bağlı iş yükü özelliklerini seçin](media/installation-progress.png)](media/installation-progress.png#lightbox)
+    [![Mac için .NET Geliştirici araç seti için bir yükleme ilerleme ekranı gösteren Visual Studio Mac yükleyicisi 'nin ekran görüntüsü.](media/installation-progress.png)](media/installation-progress.png#lightbox)
 
 9. Mac için Visual Studio, yükledikten sonra oturum açarak ve kullanmak istediğiniz anahtar bağlamalarını seçerek yüklemenizi kişiselleştirmenizi ister:
 

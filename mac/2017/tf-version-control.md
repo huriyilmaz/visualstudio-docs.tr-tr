@@ -7,12 +7,12 @@ ms.date: 06/25/2019
 ms.technology: vs-ide-general
 ms.assetid: 52D3D26A-4D01-4FD1-AAA1-AE7D7BD39746
 ms.topic: troubleshooting
-ms.openlocfilehash: d2ba7f5d044b82c44d719b251a7d803212cf7b07
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: b9aa9b718ad4618502a58185c27333d689c74300
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91860560"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97729385"
 ---
 # <a name="connecting-to-team-foundation-version-control"></a>Team Foundation Sürüm Denetimi bağlanılıyor
 
@@ -21,7 +21,7 @@ ms.locfileid: "91860560"
 >
 > Mac için Visual Studio için TFVC uzantısının önizleme sürümünü daha önce kullandıysanız, Mac için Visual Studio 2019 ' e yükseltirken artık bu desteklenmez.
 
-Azure Repos, bir merkezi sürüm denetim sistemi olan [Git](/azure/devops/repos/git/?view=azure-devops), dağıtılmış sürüm denetim sistemi ve [Team Foundation sürüm denetimi](/azure/devops/repos/tfvc/index?view=azure-devops) (TFVC) olmak üzere iki model sürümü sağlar.
+Azure Repos, bir merkezi sürüm denetim sistemi olan [Git](/azure/devops/repos/git/?view=azure-devops&preserve-view=true), dağıtılmış sürüm denetim sistemi ve [Team Foundation sürüm denetimi](/azure/devops/repos/tfvc/index?view=azure-devops&preserve-view=true) (TFVC) olmak üzere iki model sürümü sağlar.
 
 Mac için Visual Studio, git depoları için tam destek sağlar, ancak TFVC ile çalışmak için bazı geçici çözümler gerektirir. Sürüm denetimi için TFVC 'yi bugün kullanıyorsanız, TFVC 'de barındırılan kaynak kodunuza erişmek için kullanabileceğiniz bazı çözümler aşağıda verilmiştir:
 
@@ -60,7 +60,7 @@ En kolay çözüm, macOS için bir paket yöneticisi olan **HomeBrew**' ı kulla
 1. Terminal ve [homebrew giriş sayfasındaki](https://brew.sh/)yönergeleri kullanarak Homebrew 'ı yükler.
 1. Homebrew yüklendikten sonra Terminalinizden aşağıdaki komutu çalıştırın: `brew install tee-clc`
 
-**T-CLC ' i el ile ayarlamak**için:
+**T-CLC ' i el ile ayarlamak** için:
 
 1. Team Explorer Everywhere GitHub deposunun yayınlar sayfasından [t-CLC ' un en son sürümünü indirin](https://github.com/Microsoft/team-explorer-everywhere/releases) (örneğin, bu yazma sırasında tee-clc-14.134.0.zip).
 1. . Zip içeriğini diskteki bir klasöre ayıklayın.
@@ -69,7 +69,7 @@ En kolay çözüm, macOS için bir paket yöneticisi olan **HomeBrew**' ı kulla
 
 T-CLC yüklendikten sonra, `tf eula` istemcinin lisans sözleşmesini görüntülemek ve kabul etmek için komutunu çalıştırabilirsiniz.
 
-Son olarak, TFS/Azure DevOps ortamınızdan kimlik doğrulamak için sunucuda bir kişisel erişim belirteci oluşturmanız gerekir. [Kişisel erişim belirteçleriyle kimlik doğrulama](/azure/devops/integrate/get-started/authentication/pats?view=azure-devops)hakkında daha fazla bilgi edinin. TFVC ile kullanmak için bir kişisel erişim belirteci oluştururken, belirteci yapılandırırken tam erişim sağladığınızdan emin olun.
+Son olarak, TFS/Azure DevOps ortamınızdan kimlik doğrulamak için sunucuda bir kişisel erişim belirteci oluşturmanız gerekir. [Kişisel erişim belirteçleriyle kimlik doğrulama](/azure/devops/integrate/get-started/authentication/pats?view=azure-devops&preserve-view=true)hakkında daha fazla bilgi edinin. TFVC ile kullanmak için bir kişisel erişim belirteci oluştururken, belirteci yapılandırırken tam erişim sağladığınızdan emin olun.
 
 ### <a name="using-the-tee-clc-to-connect-to-your-repo"></a>Depoya bağlanmak için t-CLC kullanma
 
@@ -176,7 +176,7 @@ Listeden sağlayıcıyı seçin ve kimlik bilgilerinizi girin:
 
 ### <a name="creating-a-new-workspace"></a>Yeni bir çalışma alanı oluşturma
 
-Bir projeyle çalışmaya başlamak için bir _çalışma alanınız_olması gerekir. Zaten bir çalışma alanınız yoksa, **kaynak denetiminden Aç** Iletişim kutusunda **çalışma alanı** açılan kutusundan bir tane oluşturabilirsiniz:
+Bir projeyle çalışmaya başlamak için bir _çalışma alanınız_ olması gerekir. Zaten bir çalışma alanınız yoksa, **kaynak denetiminden Aç** Iletişim kutusunda **çalışma alanı** açılan kutusundan bir tane oluşturabilirsiniz:
 
 ![Yeni çalışma alanı oluştur ComboBox seçeneği](media/tfvc-create-new-workspace.png)
 
@@ -186,7 +186,7 @@ Yeni çalışma alanınız için ad ve yerel yolu ayarlayın ve **çalışma ala
 
 ### <a name="using-the-source-code-explorer"></a>Kaynak kodu Gezginini Kullanma
 
-Bir çalışma alanı oluşturup projenizi eşleştirdikten sonra _kaynak kodu Gezgini_ile çalışmaya başlayabilirsiniz.
+Bir çalışma alanı oluşturup projenizi eşleştirdikten sonra _kaynak kodu Gezgini_ ile çalışmaya başlayabilirsiniz.
 
 Kaynak kodu Gezginini açmak için, **sürüm denetimi > TFS/Azure DevOps > Kaynak Denetim Gezgini** menü öğesini seçin.
 
@@ -247,11 +247,11 @@ Temel kimlik doğrulamasını kullanmak için aşağıdaki adımları izleyerek 
 
 2. Kuruluş araç çubuğunuzda dişli simgesini seçin ve **ilke**' yi seçin:
 
-    ![İlke ayarları seçeneği seçildi](media/tfvc-auth2.png)
+    ![Azure DevOps kuruluş araç çubuğunun dişli simgesi seçiliyken ve açılan menüde Ilke seçiliyken ekran görüntüsü.](media/tfvc-auth2.png)
 
 3. Uygulama bağlantı ayarlarınızı gözden geçirin. Güvenlik ilkelerinize bağlı olarak bu ayarları değiştirin:
 
-    ![İlke ayarları seçeneği seçildi](media/tfvc-auth.png)
+    ![Uygulama bağlantı Ilkelerine yönelik ayarları gösteren Azure DevOps Services Ilke ekranının ekran görüntüsü.](media/tfvc-auth.png)
 
 #### <a name="i-do-not-see-anything-in-tfvc"></a>TFVC 'de hiçbir şey görmüyorum
 

@@ -1,5 +1,7 @@
 ---
 title: Dosya adı uzantıları için dosya Işleyicileri belirtme | Microsoft Docs
+description: OpenWithList ve Openwithprogıds kullanarak Visual Studio SDK 'da hangi uygulamanın bir dosya uzantısını işlediğini nasıl belirleyebileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: af195aea09c91696843c6be42c20053bb8c095a2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 421244cd88af43e7602298e7384a632c8aa51833
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699749"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97715606"
 ---
 # <a name="specifying-file-handlers-for-file-name-extensions"></a>Dosya Adı Uzantıları için Dosya İşleyicileri Belirtme
 Belirli bir dosya uzantısına sahip olan bir dosyayı işleyen uygulamayı belirlemenin çeşitli yolları vardır. OpenWithList ve Openwithprogıd fiilleri, dosya uzantısının kayıt defteri girişi altında dosya işleyicilerini belirtmek için iki yol sunar.
@@ -34,7 +36,7 @@ HKEY_CLASSES_ROOT\
 ```
 
 > [!NOTE]
-> Uygulamaları belirten anahtarlar HKEY_CLASSES_ROOT \Applications. altındaki listeden alınır.
+> Uygulamaları belirten anahtarlar HKEY_CLASSES_ROOT\Applications altındaki listeden alınır.
 
  Bir OpenWithList anahtarı ekleyerek, başka bir uygulama uzantının sahipliğini alıp alsa bile uygulamanızın bir dosya uzantısını desteklediğini bildirirsiniz. Bu, uygulamanızın veya başka bir uygulamanın gelecek bir sürümü olabilir.
 
@@ -47,12 +49,12 @@ HKEY_CLASSES_ROOT\
 |--------------------|----------------------|
 |. Extension|ProductName. . VersionAna. versionMinor uzantısı|
 
- Sürümlü ProgID 'leri HKEY_CLASSES_ROOT \\ \Openwithprogıds anahtarına değer olarak ekleyerek belirli bir dosya uzantısını açabiliyor olan farklı uygulamaları kaydedebilirsiniz *\<extension>* . Bu kayıt defteri anahtarı, dosya uzantısıyla ilişkili alternatif ProgID listesini içerir. Listelenen ProgID 'ler ile ilişkili uygulamalar,_ürün adı_ **ile aç**alt menüsünde görüntülenir. Aynı uygulama hem hem de `OpenWithList` `OpenWithProgids` anahtarında belirtilmişse, işletim sistemi yinelenenleri birleştirir.
+ Sürümlü ProgID 'leri HKEY_CLASSES_ROOT \\ \Openwithprogıds anahtarına değer olarak ekleyerek belirli bir dosya uzantısını açabiliyor olan farklı uygulamaları kaydedebilirsiniz *\<extension>* . Bu kayıt defteri anahtarı, dosya uzantısıyla ilişkili alternatif ProgID listesini içerir. Listelenen ProgID 'ler ile ilişkili uygulamalar,_ürün adı_ **ile aç** alt menüsünde görüntülenir. Aynı uygulama hem hem de `OpenWithList` `OpenWithProgids` anahtarında belirtilmişse, işletim sistemi yinelenenleri birleştirir.
 
 > [!NOTE]
 > `OpenWithProgids`Anahtar yalnızca WINDOWS XP 'de desteklenir. Diğer işletim sistemleri bu anahtarı yoksaydığı için dosya işleyicileri için tek kayıt olarak kullanmayın. Windows XP 'de daha iyi bir kullanıcı deneyimi sağlamak için bu anahtarı kullanın.
 
- İstenen ProgID 'leri REG_NONE türü değerler olarak ekleyin. Aşağıdaki kod, bir dosya uzantısı için ProgID 'leri kaydetme örneği sağlar (.* ext*).
+ İstenen ProgID 'leri REG_NONE türü değerler olarak ekleyin. Aşağıdaki kod, bir dosya uzantısı için ProgID 'leri kaydetme örneği sağlar (.*ext*).
 
 ```
 HKEY_CLASSES_ROOT\

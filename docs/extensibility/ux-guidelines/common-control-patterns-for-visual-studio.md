@@ -1,5 +1,7 @@
 ---
 title: Visual Studio için ortak denetim desenleri | Microsoft Docs
+description: Visual Studio ortak denetimlerinin Windows Masaüstü etkileşim yönergelerini nasıl izlediği ve bu yönergeleri geliştiren özel durumlar hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 04/26/2017
 ms.topic: conceptual
 ms.assetid: 3e893949-6398-42f1-9eab-a8d8c2b7f02d
@@ -8,17 +10,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b0b5a1904c01f5688a00e45de7feed7ae326d9b3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3c1caccebf1dc14146bef214a4d33e1216243780
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80698709"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97715892"
 ---
 # <a name="common-control-patterns-for-visual-studio"></a>Visual Studio İçin Yaygın Denetim Desenleri
 ## <a name="common-controls"></a><a name="BKMK_CommonControls"></a> Ortak denetimler
 
-### <a name="overview"></a>Genel bakış
+### <a name="overview"></a>Genel Bakış
 Ortak denetimler, Visual Studio 'daki Kullanıcı arabiriminin çoğunu yapar. Visual Studio arabiriminde kullanılan çoğu ortak denetim, [Windows Masaüstü etkileşim yönergeleri](/windows/desktop/uxguide/controls)' ni izlemelidir. Bu konu, Visual Studio 'ya özeldir ve bu Windows kılavuzlarını geliştiren özel durumları veya ayrıntıları içerir.
 
 #### <a name="common-controls-in-this-topic"></a>Bu konudaki ortak denetimler
@@ -41,7 +43,7 @@ Ortak denetimler, Visual Studio 'daki Kullanıcı arabiriminin çoğunu yapar. V
 
 - [Ağaç görünümleri](../../extensibility/ux-guidelines/common-control-patterns-for-visual-studio.md#BKMK_TreeViews)
 
-#### <a name="visual-style"></a>Görsel stil
+#### <a name="visual-style"></a>Görsel stili
 Stil oluşturma denetimlerinde göz önünde bulundurmanız gereken ilk şey, denetimlerin temalı Kullanıcı arabiriminde kullanılıp kullanılmayacağını belirtir. Standart Kullanıcı arabirimindeki denetimler, temalı Kullanıcı arabirimi ve [normal Windows Masaüstü stilini](/windows/desktop/uxguide/controls)izlemelidir, yani bu değerler yeniden Şablonsuz ve varsayılan denetim görünümünde görünür olmalıdır.
 
 - **Standart (yardımcı program) iletişim kutuları:** temalı değildir. Yeniden şablon yapmayın. Temel denetim stili varsayılanlarını kullanın.
@@ -54,7 +56,7 @@ Stil oluşturma denetimlerinde göz önünde bulundurmanız gereken ilk şey, de
 ### <a name="input-fields"></a><a name="BKMK_InputFields"></a> Giriş alanları
  Tipik etkileşim davranışı için, [metin kutuları Için Windows Masaüstü yönergeleri](/windows/desktop/uxguide/ctrl-text-boxes)' ni izleyin.
 
-#### <a name="visual-style"></a>Görsel stil
+#### <a name="visual-style"></a>Görsel stili
 
 - Giriş alanları, yardımcı program iletişim kutularında stilleştirmemelidir. Denetimin iç temel stilini kullanın.
 
@@ -77,7 +79,7 @@ Stil oluşturma denetimlerinde göz önünde bulundurmanız gereken ilk şey, de
 ### <a name="combo-boxes-and-drop-down-lists"></a><a name="BKMK_ComboBoxesAndDropDowns"></a> Birleşik giriş kutuları ve açılan listeler
 Tipik etkileşim davranışı için, [açılan listeler ve Birleşik giriş kutuları Için Windows Masaüstü yönergeleri](/windows/desktop/uxguide/ctrl-drop)' ni izleyin.
 
-#### <a name="visual-style"></a>Görsel stil
+#### <a name="visual-style"></a>Görsel stili
 
 - Yardımcı program iletişim kutularında denetimi yeniden şablon yapmayın. Denetimin iç temel stilini kullanın.
 
@@ -93,7 +95,7 @@ Birleşik giriş kutuları ve açılan kutulamalar, gösterilen pencerenin geni�
 ### <a name="check-boxes"></a><a name="BKMK_CheckBoxes"></a> Onay kutuları
 Tipik etkileşim davranışı için, [onay kutuları Için Windows Masaüstü yönergeleri](/windows/desktop/uxguide/ctrl-check-boxes)' ni izleyin.
 
-#### <a name="visual-style"></a>Görsel stil
+#### <a name="visual-style"></a>Görsel stili
 
 - Yardımcı program iletişim kutularında denetimi yeniden şablon yapmayın. Denetimin iç temel stilini kullanın.
 
@@ -112,7 +114,7 @@ Tipik etkileşim davranışı için, [onay kutuları Için Windows Masaüstü y�
 ### <a name="radio-buttons"></a><a name="BKMK_RadioButtons"></a> Radyo düğmeleri
 Tipik etkileşim davranışı için, [radyo düğmeleri Için Windows Masaüstü yönergeleri](/windows/desktop/uxguide/ctrl-radio-buttons)' ni izleyin.
 
-#### <a name="visual-style"></a>Görsel stil
+#### <a name="visual-style"></a>Görsel stili
 Yardımcı program iletişim kutularında radyo düğmelerine stil kullanmayın. Denetimin iç temel stilini kullanın.
 
 #### <a name="specialized-interactions"></a>Özelleştirilmiş etkileşimler
@@ -121,7 +123,7 @@ Grup ayrımını sıkı bir düzende korumanız gerekmiyorsa, radyo seçenekleri
 ### <a name="group-frames"></a><a name="BKMK_GroupFrames"></a> Grup çerçeveleri
 Tipik etkileşim davranışı için, [Grup çerçevelerine yönelik Windows Masaüstü yönergelerini](/windows/desktop/uxguide/ctrl-group-boxes)izleyin.
 
-#### <a name="visual-style"></a>Görsel stil
+#### <a name="visual-style"></a>Görsel stili
 Yardımcı program iletişim kutularında, Grup çerçevelerinden stil oluşturmayın. Denetimin iç temel stilini kullanın.
 
 #### <a name="layout"></a>Layout
@@ -185,7 +187,7 @@ Yardımcı metin için ortak konumları izleyin ve yeni alanlara giriş yapmak i
 
 - Hiçbir içeriğin neden görünmediğini açıklamak için boş araç pencereleri veya iletişim kutularında filigran metni.
 
-- **Özellikler penceresi**alt kısmında olduğu gibi bir açıklama bölmesi.
+- **Özellikler penceresi** alt kısmında olduğu gibi bir açıklama bölmesi.
 
 - Kullanıcının başlamak için yapması gereken eylemi açıklamak için boş bir düzenleyicide filigran metni.
 
@@ -215,7 +217,7 @@ Kullanıcıların bilgileri kopyalama yeteneğine sahip olmasını istiyorsanız
 
 ## <a name="buttons-and-hyperlinks"></a><a name="BKMK_ButtonsAndHyperlinks"></a> Düğmeler ve köprüler
 
-### <a name="overview"></a>Genel bakış
+### <a name="overview"></a>Genel Bakış
 Düğmeler ve bağlantı denetimleri (köprüler), kullanım, ifade, boyutlandırma ve aralığa yönelik [köprülerde temel Windows Masaüstü kılavuzumuzu](/windows/desktop/uxguide/ctrl-links) izlemelidir.
 
 ### <a name="choosing-between-buttons-and-links"></a>Düğmeler ve bağlantılar arasında seçim yapma
@@ -255,7 +257,7 @@ Araç pencerelerindeki komut düğmelerinden kaçının veya etiket için ikiden
 #### <a name="text"></a>Metin
 [Kullanıcı arabirimi metin ve terminolojisi](../../extensibility/ux-guidelines/ui-text-and-help-for-visual-studio.md#BKMK_UITextAndTerminology)yazma yönergelerini izleyin.
 
-#### <a name="visual-style"></a>Görsel stil
+#### <a name="visual-style"></a>Görsel stili
 
 ##### <a name="standard-unthemed"></a>Standart (temalı)
 Visual Studio 'daki birçok düğme yardımcı program iletişim kutularında görünür ve stillendirilecektir. Bunlar, işletim sistemi tarafından dikte edildiği gibi düğmelerin standart görünümünü yansıtmalıdır.
@@ -320,7 +322,7 @@ Köprüler, yardım konusu, kalıcı iletişim kutusu veya sihirbaz açma gibi g
 #### <a name="writing-style"></a>Yazma stili
 [Kullanıcı arabirimi metni Için Windows Masaüstü Kılavuzu](/windows/desktop/uxguide/text-ui)' nu izleyin. "Daha fazla bilgi edinin," "Bu konuda daha fazla bilgi ver" veya "Bu ifade hakkında yardım al" seçeneğini kullanmayın. Bunun yerine, tümcecik, yardım içeriği tarafından yanıtlanan birincil soru açısından metin bağlantısı sağlanmasına yardımcı olur. Örneğin, "**Nasıl yaparım? Sunucu Gezgini bir sunucu eklemek istiyor musunuz?**"
 
-#### <a name="visual-style"></a>Görsel stil
+#### <a name="visual-style"></a>Görsel stili
 
 - Köprüler her zaman [Vscrenkli hizmetini](../../extensibility/ux-guidelines/colors-and-styling-for-visual-studio.md#BKMK_TheVSColorService)kullanmalıdır. Köprü doğru şekilde stilsiz değilse, etkin olduğunda kırmızı yanıp sönmez veya ziyaret edildikten sonra farklı bir renk gösterir.
 

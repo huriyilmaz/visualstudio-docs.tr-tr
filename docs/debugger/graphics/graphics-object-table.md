@@ -1,5 +1,7 @@
 ---
 title: Grafik nesne tablosu | Microsoft Docs
+description: Visual Studio grafik analizinde bir oyun veya uygulamanın çerçevesini destekleyen Direct3D nesnelerini anlamanıza yardımcı olan grafik nesne tablosu hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ea80420b2146bd8c604a95d71012009dcb940ef5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b7e746d37edaca87abfca42f315a65a470369e7e
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72735442"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97727586"
 ---
 # <a name="graphics-object-table"></a>Grafik Nesnesi Tablosu
 Visual Studio grafik analizinde grafik nesne tablosu, oyununuzun veya uygulamanızın çerçevesini destekleyen Direct3D nesnelerini anlamanıza yardımcı olur.
@@ -31,21 +33,21 @@ Visual Studio grafik analizinde grafik nesne tablosu, oyununuzun veya uygulaman�
 
  Nesne tablosu kopyalamayı ve yapıştırmayı destekler, böylece başka bir araç (örneğin, Microsoft Excel) kullanarak içeriğini inceleyebilirsiniz.
 
- Ayrıca, sol üst köşedeki **tür** açılan listesini kullanarak, tür **arabelleklerinin**, **gölgelendiricilerin** veya **dokuların**veya bu öğelerin tümünün aynı anda görüntülenmesini sağlayabilirsiniz.  Ayrıca, gösterilen tüm veriler genelinde belirli satırları bulmak için sağ üst köşedeki arama kutusunu da kullanabilirsiniz.  Örneğin, listedeki bu biçimdeki tüm nesne örneklerini bulmak için *D32_FLOAT* araması yapabilirsiniz.
+ Ayrıca, sol üst köşedeki **tür** açılan listesini kullanarak, tür **arabelleklerinin**, **gölgelendiricilerin** veya **dokuların** veya bu öğelerin tümünün aynı anda görüntülenmesini sağlayabilirsiniz.  Ayrıca, gösterilen tüm veriler genelinde belirli satırları bulmak için sağ üst köşedeki arama kutusunu da kullanabilirsiniz.  Örneğin, listedeki bu biçimdeki tüm nesne örneklerini bulmak için *D32_FLOAT* araması yapabilirsiniz.
 
 ### <a name="graphics-object-table-format"></a>Grafik nesne tablosu biçimi
  Nesne tablosu, seçili olayla ilişkili çerçeveyi destekleyen Direct3D nesne ve kaynaklarını (örneğin, durum nesneleri, arabellekler, gölgelendiriciler, dokular ve diğer kaynaklar) görüntüler. Önceki çerçevede oluşturulan ancak yakalanan çerçeve sırasında kullanılmayan nesneler nesne tablosundan çıkarılır. Yakalanan çerçeve sırasında önceki olaylar tarafından yok edilmiş nesneler sonraki olaylarda atlanır. D3D10Device veya D3D11DeviceContext üzerinde ayarlı olmayan nesneler gri metin olarak görüntülenir. Nesneler tablo biçiminde görüntülenir.
 
 |Sütun|Açıklama|
 |------------|-----------------|
-|**Tanımlayıcı**|Nesne KIMLIĞI.|
+|**Tanımlayıcısını**|Nesne KIMLIĞI.|
 |**Ad**|Nesnesinde Direct3D işlevi kullanılarak ayarlanan uygulamaya özgü bilgiler, `SetPrivateData` genellikle bir nesne hakkında ek tanımlayıcı bilgi sağlamak için.|
 |**Tür**|Nesne türü.|
 |**Etkin**|Yakalanan çerçeve sırasında D3D10Device veya D3D11DeviceContext üzerinde ayarlanan bir nesne için "*" görüntüler.<br /><br /> Bu, gri metin olarak görüntülenen nesnelere karşılık gelir, ancak nesne tablosunun sıralanmasını sağlamak için kullanabileceğiniz bir sütun girişi sağlar.|
 |**Boyut**|Nesnenin bayt cinsinden boyutu.|
 |**Biçimlendir**|Nesnenin biçimi. Örneğin, bir doku nesnesinin biçimi veya bir gölgelendirici nesnesinin gölgelendirici modeli.|
-|**Width**|Bir doku nesnesinin genişliği. Diğer nesne türleri için de geçerlidir.|
-|**Height**|Bir doku nesnesinin yüksekliği. Diğer nesne türleri için de geçerlidir.|
+|**Genişlik**|Bir doku nesnesinin genişliği. Diğer nesne türleri için de geçerlidir.|
+|**Yükseklik**|Bir doku nesnesinin yüksekliği. Diğer nesne türleri için de geçerlidir.|
 |**Derinliğini**|3-b doku nesnesinin derinliği. Doku 3-D değilse, değer 0 ' dır. Diğer nesne türleri için de geçerlidir.|
 |**MIPS**|Bir doku nesnesinin sahip olduğu MıP düzeylerinin sayısı. Diğer nesne türleri için de geçerlidir.|
 |**Dizi boyutu**|Bir doku dizisindeki dokuların sayısı. Aralık 1 ile geçerli özellik düzeyi tarafından tanımlanan bir üst sınırdır. Küp eşleme için, bu değer dizideki küp haritaları sayısının 6 katından fazla olur.|
@@ -78,7 +80,7 @@ Visual Studio grafik analizinde grafik nesne tablosu, oyununuzun veya uygulaman�
 
  Ayrıca, arabellekteki her bir öğenin sapmasını gizlemek veya görüntülemek için de kaydırmayı **göster** onay kutusunu işaretleyebilirsiniz.
 
-|Tür|Description|
+|Tür|Açıklama|
 |----------|-----------------|
 |**float**|32 bitlik kayan nokta değeri.|
 |**float2**|2 32 bitlik kayan nokta değerlerini içeren bir vektör.|
@@ -86,27 +88,27 @@ Visual Studio grafik analizinde grafik nesne tablosu, oyununuzun veya uygulaman�
 |**float4**|4 32 bitlik kayan nokta değerlerini içeren bir vektör.|
 |**bayt**|8 bit işaretli tamsayı değeri.|
 |**2 bayt**|16 bit işaretli tamsayı değeri.|
-|**4 bayt**|32 bitlik işaretli bir tamsayı değeri. **İnt**ile aynı.|
-|**8 bayt**|64 bitlik işaretli bir tamsayı değeri. **Int64**ile aynıdır.|
+|**4 bayt**|32 bitlik işaretli bir tamsayı değeri. **İnt** ile aynı.|
+|**8 bayt**|64 bitlik işaretli bir tamsayı değeri. **Int64** ile aynıdır.|
 |**xbyte**|8 bit onaltılı değer.|
 |**x2byte**|16 bit onaltılı değer.|
-|**x4byte**|32 bitlik bir onaltılık değer. **XINT**ile aynı.|
-|**x8byte**|64 bitlik bir onaltılık değer. **Xint64**ile aynı.|
+|**x4byte**|32 bitlik bir onaltılık değer. **XINT** ile aynı.|
+|**x8byte**|64 bitlik bir onaltılık değer. **Xint64** ile aynı.|
 |**ubde**|8 bit işaretsiz tamsayı değeri.|
 |**u2byte**|16 bit işaretsiz tamsayı değeri.|
-|**u4byte**|32 bitlik işaretsiz bir tamsayı değeri. **Uint**ile aynı.|
-|**u8byte**|64 bitlik işaretsiz bir tamsayı değeri. **Uint64**ile aynı.|
+|**u4byte**|32 bitlik işaretsiz bir tamsayı değeri. **Uint** ile aynı.|
+|**u8byte**|64 bitlik işaretsiz bir tamsayı değeri. **Uint64** ile aynı.|
 |**yarısını**|16 bit kayan nokta değeri.|
 |**half2**|2 16 bitlik kayan nokta değerlerini içeren bir vektör.|
 |**half3**|3 16 bitlik kayan nokta değerlerini içeren bir vektör.|
 |**half4**|4 16 bitlik kayan nokta değerlerini içeren bir vektör.|
 |**double**|64 bitlik kayan nokta değeri.|
-|**int**|32 bitlik işaretli bir tamsayı değeri. **4byte**ile aynıdır.|
-|**tutulamaz**|64 bitlik işaretli bir tamsayı değeri. **8byte**ile aynıdır.|
-|**xint**|32 bitlik bir onaltılık değer. **X4byte**ile aynı.|
-|**xint64**|64 bitlik bir onaltılık değer. **X8byte**ile aynı.|
-|**uint**|32 bitlik işaretsiz bir tamsayı değeri. **U4byte**ile aynı.|
-|**Int64**|64 bitlik işaretsiz bir tamsayı değeri. **U8byte**ile aynı.|
+|**int**|32 bitlik işaretli bir tamsayı değeri. **4byte** ile aynıdır.|
+|**tutulamaz**|64 bitlik işaretli bir tamsayı değeri. **8byte** ile aynıdır.|
+|**xint**|32 bitlik bir onaltılık değer. **X4byte** ile aynı.|
+|**xint64**|64 bitlik bir onaltılık değer. **X8byte** ile aynı.|
+|**uint**|32 bitlik işaretsiz bir tamsayı değeri. **U4byte** ile aynı.|
+|**Int64**|64 bitlik işaretsiz bir tamsayı değeri. **U8byte** ile aynı.|
 |**bool**|Boole ( `true` veya `false` ) değeri. Her Boole değeri 32 bitlik bir değer ile temsil edilir.|
 
 ## <a name="see-also"></a>Ayrıca bkz.

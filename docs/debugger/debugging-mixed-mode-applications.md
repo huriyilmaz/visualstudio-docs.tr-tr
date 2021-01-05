@@ -1,5 +1,7 @@
 ---
-title: Karışık modda uygulamalarda hata ayıklama | Microsoft Docs
+title: Mixed-Mode uygulamalarda hata ayıklama | Microsoft Docs
+description: Visual Studio 'da ortak dil çalışma zamanında çalışan yönetilen kodla yerel kodu birleştiren bir uygulama olan Karma modlu bir uygulamada hata ayıklayın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -21,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6ba41447af829a378f70d2286ed7a7b9295ed109
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4137e7a73032a34276416b9640dd608b96b660a4
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75916284"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728336"
 ---
 # <a name="debugging-mixed-mode-applications"></a>Karışık Mod Uygulamalarında Hata Ayıklama
 Bir karma mod uygulaması yerel kod (C++)'yı yönetilen kodla (örneğin, Visual Basic, Visual C# veya ortak dil çalışma zamanında çalışan C++) bir araya getiren herhangi bir uygulamadır. Karma mod uygulamalarının hata ayıklaması büyük ölçüde saydamdır [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ; tek modlu bir uygulamada hata ayıklamadan çok farklı değildir. Ancak birkaç özel nokta vardır.

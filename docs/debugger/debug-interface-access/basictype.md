@@ -1,5 +1,7 @@
 ---
 title: BasicType | Microsoft Docs
+description: Visual Studio hata ayıklama arabirimi erişim SDK 'sında bir sembolün temel türünü belirten BasicType numaralandırması hakkında başvuru bilgileri bulun.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -12,17 +14,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b7d9df59d5a3075bf63d619a03e8fe31da6991a1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 27fd166b094f74cfbf9b6a37a87804031dedcbc7
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85462283"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728882"
 ---
 # <a name="basictype"></a>BasicType
 Simgenin temel türünü belirtir.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
 enum BasicType {

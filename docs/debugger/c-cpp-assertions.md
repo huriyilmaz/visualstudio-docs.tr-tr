@@ -1,5 +1,7 @@
 ---
 title: C/C++ Onayları | Microsoft Docs
+description: C/C++ onaylamaları 'nın Visual Studio Hata ayıklamasında nasıl çalıştığı hakkında bilgi edinin. Bir onaylama işlemi, programınızdaki bir noktada doğru olması beklenen bir koşulu belirtir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -28,12 +30,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abea0f45609c74e02cd95d6c21bbe8879d46eea1
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 0b585ce001692ab5b4451acc8d2938741bfacd78
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89600210"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97729073"
 ---
 # <a name="cc-assertions"></a>C/C++ Onayları
 Bir onaylama deyimi, programınızdaki bir noktada doğru olması beklenen bir koşulu belirtir. Bu koşul doğru değilse, onaylama başarısız olur, programınızın yürütülmesi kesintiye uğrar ve [onaylama başarısız iletişim kutusu](../debugger/assertion-failed-dialog-box.md) görüntülenir.
@@ -339,6 +341,6 @@ Bu kod, hata koşulunu işlemek için assertion deyimine bağımlıdır. Sonuç 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Güvenliği](../debugger/debugger-security.md)
+- [Hata ayıklayıcı güvenliği](../debugger/debugger-security.md)
 - [Yerel Kodda Hata Ayıklama](../debugger/debugging-native-code.md)
-- [Yönetilen Koddaki Onaylar](../debugger/assertions-in-managed-code.md)
+- [Yönetilen koddaki Onaylamalar](../debugger/assertions-in-managed-code.md)

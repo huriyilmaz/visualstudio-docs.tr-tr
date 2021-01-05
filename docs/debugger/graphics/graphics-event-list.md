@@ -1,5 +1,7 @@
 ---
 title: Grafik olay listesi | Microsoft Docs
+description: Oyununuzun veya uygulamanızın bir çerçevesini işlerken kaydedilen Direct3D olaylarını araştırmak için Visual Studio Grafik Çözümleyicisi 'deki grafik olay listesini kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d5c4e8f39ff77779985536e53d98ddc2785b109b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d7f987d8dc6decf90e44eef0123f6ad4fc194805
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89312736"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97727769"
 ---
 # <a name="graphics-event-list"></a>Grafik Olay Listesi
 Oyununuzun veya uygulamanızın bir çerçevesini işlerken kaydedilen Direct3D olaylarını araştırmak için Visual Studio Grafik Çözümleyicisi 'deki grafik olay listesini kullanın.
@@ -103,7 +105,7 @@ Visual Studio 2017 ve üzeri, **kaynak geçmişi** penceresini içerir.  ![ ](me
 
 ![Kaynak geçmişi](media/gfx_diag_resource_history.png)
 
-Bu pencere, etkinlik listesindeki seçili öğenin geçmişini görüntülemenize olanak sağlar.  Üstteki açılan menü, geçmişini görüntülemek için diğer öğeleri seçmek üzere kullanılabilir.  Pencerenin üst yarısında **çerçeve kurulum olayları**bulunur.  Bunlar, *oluşturma* türü kategorisine giren olaylardır ve genellikle kaynağı başlatıp oluşturan çağrılardır.  Pencerenin alt yarısında **çerçeve olayları** bölümü bulunur.  Bunlar, kaynağın kullanımı sırasında oluşan normal okuma ve yazma olaylardır.
+Bu pencere, etkinlik listesindeki seçili öğenin geçmişini görüntülemenize olanak sağlar.  Üstteki açılan menü, geçmişini görüntülemek için diğer öğeleri seçmek üzere kullanılabilir.  Pencerenin üst yarısında **çerçeve kurulum olayları** bulunur.  Bunlar, *oluşturma* türü kategorisine giren olaylardır ve genellikle kaynağı başlatıp oluşturan çağrılardır.  Pencerenin alt yarısında **çerçeve olayları** bölümü bulunur.  Bunlar, kaynağın kullanımı sırasında oluşan normal okuma ve yazma olaylardır.
 
 | Sütun | Açıklama |
 |-----------| - |

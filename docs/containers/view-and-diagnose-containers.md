@@ -7,29 +7,29 @@ ms.topic: how-to
 ms.date: 01/20/2020
 ms.technology: vs-azure
 monikerRange: vs-2019
-ms.openlocfilehash: 626666fc912fcff85fcfcc49425d59018778d1f6
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: fd876e86cefcd0ce50aab02de8e7f4cf37d3ab51
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89742784"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97729229"
 ---
 # <a name="how-to-view-and-diagnose-containers-and-images-in-visual-studio"></a>Visual Studio 'da kapsayıcıları ve görüntüleri görüntüleme ve tanılama
 
 **Kapsayıcılar** penceresini kullanarak uygulamanızı barındıran kapsayıcılar içinde neler olduğunu görüntüleyebilirsiniz. Kapsayıcılarınız ile neler olduğunu görüntülemek ve tanılamak için Docker komutlarını çalıştırmak üzere komut istemi 'ni kullanmak üzere kullandıysanız, bu pencere, Visual Studio IDE 'den çıkmadan Kapsayıcılarınızı izlemeye yönelik daha uygun bir yol sağlar.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 - [Docker Masaüstü](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 - [Visual studio 2019 sürüm 16,4 Preview 2](https://visualstudio.microsoft.com/downloads) veya üzeri ya da visual Studio 2019 ' nin önceki bir sürümünü kullanıyorsanız [kapsayıcılar pencere uzantısını](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vs-containers-tools-extensions)yükleyebilirsiniz.
 
 ## <a name="view-information-about-your-containers"></a>Kapsayıcılarınız hakkındaki bilgileri görüntüleyin
 
-Kapsayıcılı bir .NET projesi başlattığınızda **kapsayıcılar** penceresi otomatik olarak açılır. İstediğiniz zaman, Visual Studio 'da kapsayılarınızı görüntülemek için, **CTRL** + **Q** ' ı kullanarak Visual Studio arama kutusunu etkinleştirin ve `Containers` ilk öğeyi yazın ve seçin. Ayrıca, ana menüden **kapsayıcılar** penceresini açabilirsiniz. **View**  >  **Diğer Windows**  >  **kapsayıcılarını**görüntülemek için menü yolunu kullanın.  
+Kapsayıcılı bir .NET projesi başlattığınızda **kapsayıcılar** penceresi otomatik olarak açılır. İstediğiniz zaman, Visual Studio 'da kapsayılarınızı görüntülemek için, **CTRL** + **Q** ' ı kullanarak Visual Studio arama kutusunu etkinleştirin ve `Containers` ilk öğeyi yazın ve seçin. Ayrıca, ana menüden **kapsayıcılar** penceresini açabilirsiniz.   >  **Diğer Windows**  >  **kapsayıcılarını** görüntülemek için menü yolunu kullanın.  
 
-![Kapsayıcılar penceresindeki ortam sekmesinin ekran görüntüsü](media/view-and-diagnose-containers/container-window.png)
+![Sol bölmede seçili bir kapsayıcı ve sağ bölmede seçilen ortam sekmesi bulunan Visual Studio 'daki kapsayıcılar penceresinin ekran görüntüsü.](media/view-and-diagnose-containers/container-window.png)
 
-Sol tarafta, yerel makinenizde kapsayıcı listesini görürsünüz. Çözümünüz ile ilişkili kapsayıcılar **çözüm kapsayıcıları**altında gösterilir. Sağ tarafta, **ortam**, **bağlantı noktaları**, **Günlükler**ve **dosyalar**için sekmeler içeren bir bölme görürsünüz.
+Sol tarafta, yerel makinenizde kapsayıcı listesini görürsünüz. Çözümünüz ile ilişkili kapsayıcılar **çözüm kapsayıcıları** altında gösterilir. Sağ tarafta, **ortam**, **bağlantı noktaları**, **Günlükler** ve **dosyalar** için sekmeler içeren bir bölme görürsünüz.
 
 > [!TIP]
 > **Kapsayıcılar** araç penceresinin Visual Studio 'ya yerleştirilmiş olduğu yeri kolayca özelleştirebilirsiniz. Bkz. [Visual Studio 'da pencere düzenlerini özelleştirme](../ide/customizing-window-layouts-in-visual-studio.md). Varsayılan olarak, **kapsayıcı** penceresi, hata ayıklayıcı çalışırken **izleme** penceresiyle birlikte yerleştirilir.
@@ -38,7 +38,7 @@ Sol tarafta, yerel makinenizde kapsayıcı listesini görürsünüz. Çözümün
 
 **Ortam** sekmesi, kapsayıcıdaki ortam değişkenlerini gösterir. Uygulamanızın kapsayıcısı için, bu değişkenleri birçok şekilde ayarlayabilirsiniz. Örneğin, Dockerfile, bir. env dosyası veya bir Docker komutu kullanarak bir kapsayıcı başlattığınızda-e seçeneğini kullanabilirsiniz.
 
-![Kapsayıcılar penceresindeki ortam sekmesinin ekran görüntüsü](media/view-and-diagnose-containers/containers-environment-vars.png)
+![WebApplication11 kapsayıcısının ortam değişkenlerini gösteren Visual Studio 'daki kapsayıcılar penceresinin ekran görüntüsü.](media/view-and-diagnose-containers/containers-environment-vars.png)
 
 > [!NOTE]
 > Ortam değişkenlerinde yapılan değişiklikler gerçek zamanlı olarak yansıtılmaz. Ayrıca, bu sekmedeki ortam değişkenleri, kapsayıcıdaki sistem ortam değişkenleridir ve yerel olarak, uygulamanın kullanıcı ortam değişkenlerini yansıtmaz.
@@ -60,7 +60,7 @@ Sol tarafta, yerel makinenizde kapsayıcı listesini görürsünüz. Çözümün
 Günlükleri temizlemek için **Günlükler** sekmesindeki **Temizle** düğmesini kullanın.  Tüm günlükleri almak için **Yenile** düğmesini kullanın.
 
 > [!NOTE]
-> Visual Studio, Windows kapsayıcıları ile hata ayıklamadan çalıştırdığınızda stdout ve stderr 'yi **Çıkış** penceresine otomatik olarak yönlendirir. bu nedenle, Visual Studio 'dan başlatılan Windows **Ctrl** + **kapsayıcıları,** Bu sekmede günlükleri görüntülemez; bunun yerine **Çıkış** penceresini kullanın.
+> Visual Studio, Windows kapsayıcıları ile hata ayıklamadan çalıştırdığınızda stdout ve stderr 'yi **Çıkış** penceresine otomatik olarak yönlendirir. bu nedenle, Visual Studio 'dan başlatılan Windows  + **kapsayıcıları,** Bu sekmede günlükleri görüntülemez; bunun yerine **Çıkış** penceresini kullanın.
 
 ## <a name="view-the-filesystem"></a>Dosya sistemini görüntüleme
 

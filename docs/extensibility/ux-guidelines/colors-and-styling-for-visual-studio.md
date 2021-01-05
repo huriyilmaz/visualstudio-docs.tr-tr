@@ -1,5 +1,7 @@
 ---
 title: Visual Studio için renkler ve stil oluşturma | Microsoft Docs
+description: Visual Studio kullanıcı deneyiminin yalnızca Aesthetic Characteristics nedenleri yerine bir iletişim aracı olarak renk nasıl kullandığını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 07/31/2017
 ms.topic: conceptual
 ms.assetid: 0e384ea1-4d9e-4307-8884-6e183900732c
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2f9123117144d12babd97264090f16899f392954
-ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
+ms.openlocfilehash: 99e33ae67e0fd18ecd9a1a40a8b8075cd22d4bf7
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93414275"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97715671"
 ---
 # <a name="colors-and-styling-for-visual-studio"></a>Visual Studio İçin Renkler ve Stil
 
@@ -382,7 +384,7 @@ Kayıt defterinde belirtilen hizmetin, <xref:Microsoft.VisualStudio.Shell.Intero
 
 ### <a name="to-implement-ide-support"></a>IDE desteğini uygulamak için
 
-Bir [GetObject](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaultsprovider.getobject) [IVsFontAndColorDefaults](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults) arabirimini veya <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorGroup> sağlanan her bir kategori ya da grup GUID 'Si için bir arabirim döndüren GetObject 'i uygulayın.
+Bir [](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaultsprovider.getobject) [IVsFontAndColorDefaults](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults) arabirimini veya <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorGroup> sağlanan her bir kategori ya da grup GUID 'Si için bir arabirim döndüren GetObject 'i uygulayın.
 
 Desteklediği her kategori için, VSPackage [IVsFontAndColorDefaults](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults) arabiriminin ayrı bir örneğini uygular.
 

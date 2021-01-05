@@ -1,5 +1,7 @@
 ---
 title: Yerel kodda hata ayıklama | Microsoft Docs
+description: Visual Studio 'daki yerel uygulamalar için ortak hata ayıklama sorunları ve üst düzey teknikler hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 04/11/2017
 ms.topic: conceptual
 f1_keywords:
@@ -20,12 +22,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f98b99a31d9215d661879aa7fa52d4b671024496
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4fee3044e4eaa1e7dd3549923082f9b843951b28
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72738162"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728323"
 ---
 # <a name="debugging-native-code"></a>Yerel Kodda Hata Ayıklama
 Bu bölümde, yerel uygulamalar için bazı yaygın hata ayıklama sorunları ve teknikleri ele alınmaktadır. Bu bölümde ele alınan teknikler, üst düzey tekniklerdir. Visual Studio hata ayıklayıcısını kullanmanın mekanizması için bkz. [ilk olarak hata ayıklayıcıya](../debugger/debugger-feature-tour.md)bakın.
@@ -41,7 +43,7 @@ Bu bölümde, yerel uygulamalar için bazı yaygın hata ayıklama sorunları ve
 
  [MFC hata ayıklama teknikleri](../debugger/mfc-debugging-techniques.md) MFC programları için hata ayıklama tekniklerine bağlantı sağlar: afxDebugBreak, Izleme makrosu, MFC 'de bellek sızıntılarını algılama, MFC onayları ve MFC hata ayıklama derlemeleri boyutunu azaltma.
 
- [CRT hata ayıklama teknikleri](../debugger/crt-debugging-techniques.md) CRT hata ayıklama kitaplığı, raporlama için makrolar, malloc ve _malloc_dbg arasındaki farklılıklar, hata ayıklama kanca işlevleri yazma ve CRT hata ayıklama yığını gibi, C çalışma zamanı kitaplığı için hata ayıklama tekniklerine bağlantı sağlar.
+ [CRT hata ayıklama teknikleri](../debugger/crt-debugging-techniques.md) CRT hata ayıklama kitaplığı, raporlama için makrolar, malloc ve _malloc_dbg arasındaki farklılıklar, hata ayıklama kanca işlevleri yazma ve CRT hata ayıklama yığını gibi, C Run-Time kitaplığı için hata ayıklama tekniklerine bağlantı sağlar.
 
  [Yerel kod SSS hatalarını ayıklama](../debugger/debugging-native-code-faqs.md) C++ programlarında hata ayıklama hakkında sık sorulan soruların yanıtlarını sağlar
 
@@ -60,5 +62,5 @@ Bu bölümde, yerel uygulamalar için bazı yaygın hata ayıklama sorunları ve
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Güvenliği](../debugger/debugger-security.md)
+- [Hata ayıklayıcı güvenliği](../debugger/debugger-security.md)
 - [Visual Studio'da Hata Ayıklama](../debugger/index.yml)

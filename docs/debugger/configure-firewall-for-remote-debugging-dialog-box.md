@@ -1,5 +1,7 @@
 ---
 title: Uzaktan hata ayıklama için güvenlik duvarını yapılandırma Iletişim kutusu | Microsoft Docs
+description: Uzaktan hata ayıklama için güvenlik duvarını Yapılandır iletişim kutusu hakkında bilgi edinmek için Windows Güvenlik Duvarı hata ayıklayıcının ağ üzerinden veri almasını durdurduğu zaman görüntülenir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -20,12 +22,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8a2511fc2adfa63ff28f8459f48cbdf4b4623ff5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 86a0cac2e42e1271e689f2b1880eef8ca6d14644
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72745657"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728969"
 ---
 # <a name="configure-firewall-for-remote-debugging-dialog-box"></a>Uzaktan Hata Ayıklama İçin Güvenlik Duvarını Yapılandır İletişim Kutusu
 Windows Güvenlik Duvarı hata ayıklayıcının ağ üzerinden bilgi almasını engelliyorsa, bu iletişim kutusu görüntülenir. Uzaktan hata ayıklamaya devam etmek için, hata ayıklayıcının bilgi alabilmesi için güvenlik duvarında bir delik açmanız gerekir.
@@ -42,6 +44,6 @@ Windows Güvenlik Duvarı hata ayıklayıcının ağ üzerinden bilgi almasını
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Güvenliği](../debugger/debugger-security.md)
+- [Hata ayıklayıcı güvenliği](../debugger/debugger-security.md)
 - [Uzaktan hata ayıklama](../debugger/remote-debugging.md)
 - [Kullanıcı Arabirim Başvurusunda Hata Ayıklama](../debugger/debugging-user-interface-reference.md)

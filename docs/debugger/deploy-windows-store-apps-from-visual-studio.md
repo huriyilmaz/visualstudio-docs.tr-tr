@@ -1,6 +1,7 @@
 ---
 title: UWP uygulamalarını dağıtma | Microsoft Docs
-ms.custom: seodec18
+description: Visual Studio 'dan Evrensel Windows Platformu (UWP) uygulamaları dağıtın. Dağıtım için yerel veya uzak bir hedef cihaz belirtin. Dağıtım seçeneklerini anlayın.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 01/16/2018
 ms.topic: conceptual
 dev_langs:
@@ -13,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 4c58dbb32ef0a476ac7e22a840e27e389c710f97
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 70b4d862b69eeb34028fb0f782cc5c8d6acbdbce
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "73188287"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728206"
 ---
 # <a name="deploy-uwp-apps-from-visual-studio"></a>Visual Studio’dan UWP uygulamaları dağıtma
 
@@ -66,9 +67,9 @@ Dağıtım, uzak cihaza uygulama dosyalarını göndermek için uzaktan hata ay�
 
 3. Sonra özellik sayfaları penceresinde **hata ayıklama** düğümünü seçin.
 
-4. **Hedef cihaz**Için **uzak makine**' yi seçin.
+4. **Hedef cihaz** Için **uzak makine**' yi seçin.
 
-5. **Uzak makine**altında **bul**' a tıklayın.
+5. **Uzak makine** altında **bul**' a tıklayın.
 
 6. Uzak cihazın adını veya IP adresini yazabilir veya **uzak bağlantı** iletişim kutusundan cihazı seçebilirsiniz.
 
@@ -104,7 +105,7 @@ Uygulamadan ağ geri döngü muafiyetini kaldırmak için:
 
 - C# ve Visual Basic hata ayıklama özelliği sayfasında, **ağ geri döngüsüne Izin ver** onay kutusunu temizleyin.
 
-- C++ hata ayıklama özelliği sayfasında, **ağ geri döngü değerini Izin ver** olarak **Hayır**olarak ayarlayın.
+- C++ hata ayıklama özelliği sayfasında, **ağ geri döngü değerini Izin ver** olarak **Hayır** olarak ayarlayın.
 
 **Başlatma, ancak başlatıldığında kodumun hatalarını ayıklama (C# ve Visual Basic)/uygulamayı başlatma (C++)**
 
@@ -112,7 +113,7 @@ Dağıtımı, uygulama başlatıldığında otomatik olarak bir hata ayıklama o
 
 - C# ve Visual Basic hata ayıklama özelliği sayfasında, **başlatılmayın ' i işaretleyin, ancak başladığında kodumdaki hata ayıkla** onay kutusunu işaretleyin.
 
-- C++ hata ayıklama özelliği sayfasında, **Uygulamayı Başlat** değerini **Evet**olarak ayarlayın.
+- C++ hata ayıklama özelliği sayfasında, **Uygulamayı Başlat** değerini **Evet** olarak ayarlayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

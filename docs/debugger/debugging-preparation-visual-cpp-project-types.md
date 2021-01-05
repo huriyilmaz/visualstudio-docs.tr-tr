@@ -1,6 +1,7 @@
 ---
 title: C++ projelerinde hata ayıklamaya hazırlanma | Microsoft Docs
-ms.custom: seodec18
+description: Visual Studio 'da Visual C++ proje şablonları tarafından oluşturulan temel proje türlerinde hata ayıklamaya hazırlanma hakkında bilgi alın.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -19,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc663115e98d7553e03a186874d59b75eb68cb90
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1e399b28d3ddce07cae263550b536c21ad1db028
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75916317"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728310"
 ---
 # <a name="debugging-preparation-c-project-types"></a>Hata Ayıklama Hazırlığı: C++ proje türleri
 Bu bölümde, proje şablonları tarafından oluşturulan temel proje türlerinde hata ayıklama işlemlerinin nasıl yapılacağı açıklanmaktadır [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] .
@@ -80,7 +81,7 @@ Bu bölümde, proje şablonları tarafından oluşturulan temel proje türlerind
 
 2. Henüz yoksa açmak için **yapılandırma özellikleri** düğümüne tıklayın
 
-3. **Genel**' i seçin ve **Çıkış** satırının değerini **Hata Ayıkla**olarak ayarlayın.
+3. **Genel**' i seçin ve **Çıkış** satırının değerini **Hata Ayıkla** olarak ayarlayın.
 
 4. **C/C++** düğümünü açın ve **genel**' i seçin.
 
@@ -90,7 +91,7 @@ Bu bölümde, proje şablonları tarafından oluşturulan temel proje türlerind
 
     Üretilen yönergeler doğrudan kaynak kodunuza karşılık gelmediğinden, iyileştirilmiş kodun hata ayıklama işlemi daha zordur. Programınızın yalnızca en iyi duruma getirilmiş kodda görüntülenen bir hata olduğunu fark ederseniz, bu ayarı açabilirsiniz, ancak ayrıştırma penceresinde gösterilen kodun, kaynak pencerenize gördüklerinize uygun olmayan en iyi duruma getirilmiş kaynaktan oluşturulduğunu unutmayın. Adımlama gibi özellikler büyük olasılıkla kesme noktaları ve yürütme noktası yanlış gösterilebilir.
 
-6. **Bağlayıcı** düğümünü açın ve **hata ayıklama**öğesini seçin. İlk **Oluştur** satırında, açılan listeden **Evet (/Debug)** öğesini seçin. Hata ayıklama sırasında her zaman ayarlayın.
+6. **Bağlayıcı** düğümünü açın ve **hata ayıklama** öğesini seçin. İlk **Oluştur** satırında, açılan listeden **Evet (/Debug)** öğesini seçin. Hata ayıklama sırasında her zaman ayarlayın.
 
    Daha fazla bilgi için bkz.[C++ hata ayıklama yapılandırması Için proje ayarları](../debugger/project-settings-for-a-cpp-debug-configuration.md).
 
@@ -101,7 +102,7 @@ Bu bölümde, proje şablonları tarafından oluşturulan temel proje türlerind
 
  İçindeki bu tür bir uygulama hata ayıklaması [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , yönetilen Windows Forms uygulamalarında benzerdir.
 
- Proje şablonuyla bir Windows Forms projesi oluşturduğunuzda, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] otomatik olarak hata ayıklama ve sürüm yapılandırması için gerekli ayarları oluşturur. Gerekirse, bu ayarları ** \<project name> Özellik sayfaları** iletişim kutusunda değiştirebilirsiniz. Daha fazla bilgi için bkz. [hata ayıklama ve yayın yapılandırması](../debugger/how-to-set-debug-and-release-configurations.md).
+ Proje şablonuyla bir Windows Forms projesi oluşturduğunuzda, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] otomatik olarak hata ayıklama ve sürüm yapılandırması için gerekli ayarları oluşturur. Gerekirse, bu ayarları **\<project name> Özellik sayfaları** iletişim kutusunda değiştirebilirsiniz. Daha fazla bilgi için bkz. [hata ayıklama ve yayın yapılandırması](../debugger/how-to-set-debug-and-release-configurations.md).
 
  Daha fazla bilgi için bkz. [C++ hata ayıklama yapılandırması Için proje ayarları](../debugger/project-settings-for-a-cpp-debug-configuration.md).
 
@@ -111,7 +112,7 @@ Bu bölümde, proje şablonları tarafından oluşturulan temel proje türlerind
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md)
-- [C++ Hata Ayıklama Yapılandırması Proje Ayarları](../debugger/project-settings-for-a-cpp-debug-configuration.md)
+- [C++ hata ayıklama yapılandırması proje ayarları](../debugger/project-settings-for-a-cpp-debug-configuration.md)
 - [Çalışan bir programa veya birden çok programa ekleme](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)
 - [Hata ayıklama ve sürüm yapılandırması](../debugger/how-to-set-debug-and-release-configurations.md)
 - [Nasıl yapılır: Windows uygulaması projesi oluşturma](/previous-versions/visualstudio/visual-studio-2010/42wc9kk5(v=vs.100))

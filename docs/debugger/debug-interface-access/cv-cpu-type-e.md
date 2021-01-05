@@ -1,5 +1,7 @@
 ---
 title: CV_CPU_TYPE_e | Microsoft Docs
+description: Hata ayıklama arabirimi erişim SDK 'sında hedef işlemciyi belirten CV_CPU_TYPE_e numaralandırma türü hakkında başvuru bilgileri alın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 82a482b570d3ed22d1b9dfe2ca3c8248a0185911
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 44b076caffe4bc92bb62b63aa9d5d5e3dc464786
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85462116"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728571"
 ---
 # <a name="cv_cpu_type_e"></a>CV_CPU_TYPE_e
 Hedef işlemciyi belirtir.
@@ -25,7 +27,7 @@ Hedef işlemciyi belirtir.
 > [!NOTE]
 > İşlemci, ön ek sonrasında Enumeration öğesinde tanımlanır `CV_CFL_*` .
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
 typedef enum CV_CPU_TYPE_e {

@@ -1,5 +1,7 @@
 ---
 title: CompilandDetails | Microsoft Docs
+description: Visual Studio hata ayıklama arabirimi erişim SDK 'sında CompilandDetails sembol türü (SymTagCompilandDetails) hakkında başvuru bilgileri bulabilirsiniz.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: da102a8968bc3e29091f6b4b58ee6ef78c6c3fb3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 04687eb58ecee2211f098c0f432afc28e0465305
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85462255"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728783"
 ---
 # <a name="compilanddetails"></a>CompilandDetails
 Compiland bilgileri, bir `SymTagCompiland` etiketle (düşük ayrıntı) ve bir `SymTagCompilandDetails` etiketle (yüksek ayrıntı) simgeler arasında bölünür. `SymTagCompilandDetails` bir sembol ile kullanılamayan compiland hakkında çok fazla bilgi sağlar `SymTagCompiland` .

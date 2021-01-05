@@ -1,5 +1,7 @@
 ---
 title: Hata ayıklama HTML ve CSS örnek kodu | Microsoft Docs
+description: Hızlı başlangıç hata ayıklama makalesinde kullanılan HTML ve CSS örnek kodunu bulun. Hızlı başlangıçta tasarıma sahip olan hatalar bu makalede düzeltilmiştir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +16,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 460419d976211747c44f156a5821b88b75aa2e6b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 245676d084485ee46647112f5409cdb1854d6913
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72745542"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728917"
 ---
 # <a name="debug-html-and-css-sample-code"></a>HTML ve CSS örnek kod hatalarını ayıklama
 

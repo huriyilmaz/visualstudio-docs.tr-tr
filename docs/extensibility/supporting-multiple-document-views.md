@@ -1,5 +1,7 @@
 ---
 title: Çoklu belge görünümlerini destekleme | Microsoft Docs
+description: Visual Studio SDK 'da Özel düzenleyiciniz için ayrı belge verileri ve belge görünümü nesneleri kullanarak bir belgenin birden fazla görünümünü nasıl sağlayacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a952414fa7156d80675564e519e556ccedd524a3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1c1d99f4beb000d4b48435b9215a01f31ef8e936
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699548"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97716100"
 ---
 # <a name="supporting-multiple-document-views"></a>Birden Çok Belge Görünümünü Destekleme
 Düzenleyicinizde ayrı belge verileri ve belge görünümü nesneleri oluşturarak bir belgenin birden fazla görünümünü sağlayabilirsiniz. Ek belge görünümü yararlı olabilecek bazı durumlar şunlardır:

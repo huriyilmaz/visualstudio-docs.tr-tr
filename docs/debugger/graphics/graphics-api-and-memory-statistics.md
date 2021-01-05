@@ -1,5 +1,7 @@
 ---
 title: Grafik API 'SI ve bellek Istatistikleri | Microsoft Docs
+description: Direct3D API 'SI kullanımı ve çeşitli kaynakların GPU bellek tüketimi hakkındaki bilgileri gösteren grafik API 'SI Istatistiklerini ve bellek Istatistikleri araçlarını gözden geçirin.
+ms.custom: SEO-VS-2020
 ms.date: 03/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -11,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fa808e76e6655c5d57108c923b19794d0398b80c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0e0ad2bc48e1e15e1b061cdb600ce65773523e70
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72735571"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97727896"
 ---
 # <a name="graphics-api-and-memory-statistics"></a>Grafik API 'SI ve bellek Istatistikleri
 <!-- VERSIONLESS -->

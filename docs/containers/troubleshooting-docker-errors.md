@@ -11,12 +11,12 @@ ms.topic: troubleshooting
 ms.workload: multiple
 ms.date: 01/27/2020
 ms.author: ghogen
-ms.openlocfilehash: 31b9d8649abed0f9901aa872ff3939c25e3025b8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9535a7d88cb375d97867092eddf969095c327329
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87235114"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97729260"
 ---
 # <a name="troubleshoot-visual-studio-development-with-docker"></a>Docker ile Visual Studio geliştirme sorunlarını giderme
 
@@ -24,22 +24,15 @@ Visual Studio kapsayıcı araçlarıyla çalışırken, uygulamanızı oluşturu
 
 ## <a name="volume-sharing-is-not-enabled-enable-volume-sharing-in-the-docker-ce-for-windows-settings--linux-containers-only"></a>Birim paylaşımı etkin değil. Docker CE for Windows ayarları 'nda birim paylaşımını etkinleştir (yalnızca Linux kapsayıcıları)
 
-Bu sorunu çözmek için:
+Dosya paylaşımının yalnızca Docker ile Hyper-V kullanıyorsanız yönetilmesi gerekir. WSL 2 kullanıyorsanız, aşağıdaki adımlar gerekli değildir ve dosya paylaşımı seçeneği görünür olmayacaktır. Bu sorunu çözmek için:
 
 1. Bildirim alanında **Docker for Windows** sağ tıklatın ve ardından **Ayarlar**' ı seçin.
-1. **Paylaşılan sürücüler** ' i seçin ve sistem sürücüsünü projenin bulunduğu sürücüyle birlikte paylaşabilirsiniz.
+1. **Kaynak**  >  **Dosya Paylaşımı ' nı** seçin ve erişilmesi gereken klasörü paylaşabilirsiniz. Tüm sistem sürücünüzü paylaşma olasılığı vardır ancak önerilmez.
 
-> [!NOTE]
-> Dosyalar paylaşılan görünüyorsa, yine de "kimlik bilgilerini Sıfırla..." düğmesine tıklamanız gerekebilir. birim paylaşımını yeniden etkinleştirmek için iletişim kutusunun alt kısmındaki bağlantıyı kullanın. Kimlik bilgilerini sıfırladıktan sonra devam etmek için Visual Studio 'Yu yeniden başlatmanız gerekebilir.
-
-![paylaşılan sürücüler](media/troubleshooting-docker-errors/shareddrives.png)
+    ![paylaşılan sürücüler](media/troubleshooting-docker-errors/docker-settings-image.png)
 
 > [!TIP]
-> **Paylaşılan sürücüler** yapılandırılmadığında visual Studio 2017 sürüm 15,6 ' den sonraki Visual Studio sürümleri istemi.
-
-### <a name="container-type"></a>Kapsayıcı türü
-
-Bir projeye Docker desteği eklerken bir Windows ya da Linux kapsayıcısı seçersiniz. Docker ana bilgisayarı aynı kapsayıcı türünü çalıştırıyor olmalıdır. Çalışan Docker örneğindeki kapsayıcı türünü değiştirmek için, sistem tepsisinin Docker simgesine sağ tıklayın ve **Windows kapsayıcılarına geç...** ' i seçin veya **Linux kapsayıcılarına geç..**..
+> Visual Studio 2017 sürüm 15,6 ' den sonraki Visual Studio sürümleri, **paylaşılan sürücülerin** yapılandırılmadığı zaman sorar.
 
 ## <a name="unable-to-start-debugging"></a>Hata ayıklama başlatılamıyor
 
@@ -54,7 +47,7 @@ Konuk makinenizde ağla ilgili bileşenleri yenileyecek şekilde, [Temizleme kap
 
 ## <a name="mounts-denied"></a>Bağlama reddedildi
 
-MacOS için Docker kullanırken,/usr/local/share/DotNet/SDK/nugetfallbackfolder klasörüne başvurarak bir hatayla karşılaşabilirsiniz. Klasörü Docker 'daki dosya paylaşma sekmesine ekleyin
+MacOS için Docker kullanırken,/usr/local/share/DotNet/SDK/nugetfallbackfolder klasörüne başvurarak bir hatayla karşılaşabilirsiniz. Klasörü Docker 'daki dosya paylaşma sekmesine ekleyin.
 
 ## <a name="docker-users-group"></a>Docker kullanıcıları grubu
 
@@ -83,15 +76,29 @@ PowerShell 'de [Add-LocalGroupMember](/powershell/module/microsoft.powershell.lo
 
 ## <a name="low-disk-space"></a>Yetersiz disk alanı
 
-Docker, varsayılan olarak, görüntüleri genellikle sistem sürücüsünde, * C:\ProgramData\Docker üzerinde bulunan *% ProgramData%/Docker/* klasöründe depolar \* . Görüntülerin sistem sürücüsünde değerli alan almasını engellemek için, görüntü klasörü konumunu değiştirebilirsiniz.  Görev çubuğundaki Docker simgesinden Docker ayarlarını açın, **Daemon**' ı seçin ve **temel** ' ten **Gelişmiş**' e geçin. Düzen bölmesinde, `graph` Docker görüntüleri için istediğiniz konumun değeri ile özellik ayarını ekleyin:
+Docker, varsayılan olarak, görüntüleri genellikle sistem sürücüsünde, * C:\ProgramData\Docker üzerinde bulunan *% ProgramData%/Docker/* klasöründe depolar \* . Görüntülerin sistem sürücüsünde değerli alan almasını engellemek için, görüntü klasörü konumunu değiştirebilirsiniz. Bunun için:
+
+ 1. Görev çubuğundaki Docker simgesine sağ tıklayın ve **Ayarlar**' ı seçin.
+ 1. **Docker altyapısını** seçin. 
+ 1. Düzen bölmesinde, `graph` Docker görüntüleri için istediğiniz konumun değeri ile özellik ayarını ekleyin:
 
 ```json
     "graph": "D:\\mypath\\images"
 ```
 
-![Docker görüntüsü konum ayarının ekran görüntüsü](media/troubleshooting-docker-errors/docker-settings-image-location.png)
+![Docker dosya paylaşımının ekran görüntüsü](media/troubleshooting-docker-errors/docker-daemon-settings.png)
 
-Docker 'ı yeniden başlatmak için **Uygula** ' ya tıklayın. Bu adımlar *üzerinde% ProgramData% \docker\config\daemon.js*yapılandırma dosyasını değiştirir. Önceden oluşturulmuş görüntüler taşınmaz.
+**& yeniden başlatmak Için Uygula**' ya tıklayın. Bu adımlar *üzerinde% ProgramData% \docker\config\daemon.js* yapılandırma dosyasını değiştirir. Önceden oluşturulmuş görüntüler taşınmaz.
+
+## <a name="container-type-mismatch"></a>Kapsayıcı türü uyumsuzluğu
+
+Bir projeye Docker desteği eklerken bir Windows ya da Linux kapsayıcısı seçersiniz. Docker sunucu Konağı, proje hedefi ile aynı kapsayıcı türünü çalıştıracak şekilde yapılandırılmamışsa, büyük olasılıkla aşağıdakine benzer bir hata görürsünüz:
+
+![Docker Konağı ve proje uyumsuzluğu ekran görüntüsü](media/troubleshooting-docker-errors/docker-host-config-change-linux-to-windows.png)
+
+Bu sorunu çözmek için:
+
+- Sistem tepsisindeki Docker for Windows simgesine sağ tıklayın ve **Windows kapsayıcılarına geç...** ' i seçin veya **Linux kapsayıcılarına geç..**..
 
 ## <a name="microsoftdockertools-github-repo"></a>Microsoft/DockerTools GitHub deposu
 

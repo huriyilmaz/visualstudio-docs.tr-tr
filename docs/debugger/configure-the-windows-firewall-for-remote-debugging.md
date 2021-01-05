@@ -1,5 +1,7 @@
 ---
 title: Uzaktan hata ayıklama için Windows güvenlik duvarını yapılandırma | Microsoft Docs
+description: Uzaktan hata ayıklama için Windows güvenlik duvarını yapılandırın. Uzaktan hata ayıklama için bağlantı noktalarını yapılandırın. Uzaktan hata ayıklama bağlantısında sorun giderin.
+ms.custom: SEO-VS-2020
 ms.date: 10/31/2018
 ms.topic: how-to
 ms.assetid: 66e3230a-d195-4473-bbce-8ca198516014
@@ -8,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0fa5d60d7fe662cff31b54bf3a13c203f4b6d8c9
-ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
+ms.openlocfilehash: be73b8392f6b92bf48bd9150197be9bf8fe380dd
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "95970085"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728956"
 ---
 # <a name="configure-windows-firewall-for-remote-debugging"></a>Uzaktan hata ayıklama için Windows güvenlik duvarını yapılandırma
 
@@ -72,7 +74,7 @@ Uzaktan hata ayıklama için, uzak bilgisayarda aşağıdaki bağlantı noktalar
 
 ::: moniker-end
 
-**Araçlar** seçenekler hata ayıklama bölümünde **yönetilen uyumluluk modunu kullan**  >  **Options**  >  **Debugging**' ı seçerseniz, bu ek uzaktan hata ayıklayıcı bağlantı noktalarını açın. Hata ayıklayıcı yönetilen uyumluluk modu, hata ayıklayıcının eski, Visual Studio 2010 sürümünü sunar.
+**Araçlar** seçenekler hata ayıklama bölümünde **yönetilen uyumluluk modunu kullan**  >    >  ' ı seçerseniz, bu ek uzaktan hata ayıklayıcı bağlantı noktalarını açın. Hata ayıklayıcı yönetilen uyumluluk modu, hata ayıklayıcının eski, Visual Studio 2010 sürümünü sunar.
 
 |**Bağlantı noktaları**|**Gelen/giden**|**Protokol**|**Açıklama**|
 |-|-|-|-|

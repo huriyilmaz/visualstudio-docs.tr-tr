@@ -1,5 +1,7 @@
 ---
 title: Grafik Çerçeve Çözümlemesi | Microsoft Docs
+description: Direct3D oyununuzun veya uygulamanızın işleme performansını çözümlemek ve iyileştirmek için Visual Studio Grafik Çözümleyicisi Grafik Çerçeve Çözümlemesi kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 02/09/2017
 ms.topic: conceptual
 f1_keywords:
@@ -9,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 943436a64f50523905a03ed2a87e91508d1b7471
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f87686290842e0bbc3c575b5c72e3d1eeb24f351
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72911476"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97727729"
 ---
 # <a name="graphics-frame-analysis"></a>Grafik Çerçeve Analizi
 Direct3D oyununuzun veya uygulamanızın işleme performansını çözümlemek ve iyileştirmek için Visual Studio Grafik Çözümleyicisi Grafik Çerçeve Çözümlemesi kullanın.
@@ -171,9 +173,9 @@ Direct3D oyununuzun veya uygulamanızın işleme performansını çözümlemek v
  Çerçeve Analizi, gerçek donanımda işleme performansının profilini oluşturmak ve bu performansı geliştirmek için kullanılmak üzere tasarlanmıştır. WARP cihazlarında çerçeve analizini çalıştırmak engellenmez, ancak yüksek kaliteli bir CPU üzerinde çalışan WARP, en az özellikli modern GPU 'lara eşit olduğundan ve bu genellikle bir adım adım daha yavaş olduğundan, bu genellikle bir adım daha düşüktür.
 
 ## <a name="variants"></a><a name="Variants"></a> Değişken
- Çerçeve analizine ait her değişiklik, oynatma sırasında bir karenin işlenme şeklini *değişken*olarak bilinir. Çerçeve analizinin incelediği çeşitler, uygulamanızın işleme performansını veya görsel kalitesini geliştirmek için yapabileceğiniz yaygın, oldukça kolay değişikliklere karşılık gelir. Örneğin, dokuların boyutunu azaltarak, doku sıkıştırmayı kullanarak veya farklı türlerde kenar yumuşatma sağlayabilirsiniz. Çeşitler, uygulamanızın normal işleme bağlamını ve parametrelerini geçersiz kılar. Özet:
+ Çerçeve analizine ait her değişiklik, oynatma sırasında bir karenin işlenme şeklini *değişken* olarak bilinir. Çerçeve analizinin incelediği çeşitler, uygulamanızın işleme performansını veya görsel kalitesini geliştirmek için yapabileceğiniz yaygın, oldukça kolay değişikliklere karşılık gelir. Örneğin, dokuların boyutunu azaltarak, doku sıkıştırmayı kullanarak veya farklı türlerde kenar yumuşatma sağlayabilirsiniz. Çeşitler, uygulamanızın normal işleme bağlamını ve parametrelerini geçersiz kılar. Özet:
 
-|Değişken|Description|
+|Değişken|Açıklama|
 |-------------|-----------------|
 |**1x1 Görünüm penceresi boyutu**|Tüm işleme hedeflerindeki Görünüm penceresi boyutunu 1x1 piksele düşürür.<br /><br /> Daha fazla bilgi için bkz. [1x1 Görünüm penceresi boyut varyantı](1x1-viewport-size-variant.md)|
 |**0x MSAA**|Tüm işleme hedeflerinde çok örnekli kenar yumuşatmayı (MSAA) devre dışı bırakır.<br /><br /> Daha fazla bilgi için bkz. [0x/2x/4X MSAA çeşitleri](0x-2x-4x-msaa-variants.md)|

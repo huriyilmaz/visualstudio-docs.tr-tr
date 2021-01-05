@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3f3a5e97153997908a0360bc123fd1b88fb5c009
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8716e980581ffe1103adddbc3c776def1166ff94
+ms.sourcegitcommit: 4e28314dc2be59b4c5fd44545c0653f625e74489
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75596846"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97756610"
 ---
 # <a name="live-unit-testing-overview"></a>Live Unit Testing genel bakış
 
@@ -23,10 +23,10 @@ Live Unit Testing, kod değişiklikleri yaptığınızda birim testlerinizi otom
 
 Live Unit Testing, birim testlerinizin kodunuzu yeterince kapsamadığını gösterir. Kod kapsamını gerçek zamanlı olarak grafiksel olarak gösterir. Her bir kod satırını kapsayan ve hangi satırların herhangi bir birim testi kapsamında olmadığını bir bakışta görebilirsiniz.
 
-Bir veya daha fazla birim testi projesi içeren bir çözümünüz varsa, **Test**  >  **Live Unit Testing**  >  Visual Studio 'da en üst düzey menü çubuğundan test Live Unit Testing**Başlat** ' ı seçerek Live Unit Testing etkinleştirebilirsiniz.
+Bir veya daha fazla birim testi projesi içeren bir çözümünüz varsa,   >    >  Visual Studio 'da en üst düzey menü çubuğundan test Live Unit Testing **Başlat** ' ı seçerek Live Unit Testing etkinleştirebilirsiniz.
 
 > [!NOTE]
-> Live Unit Testing yalnızca Visual Studio Enterprise sürümünde kullanılabilir.
+> Live Unit Testing yalnızca Visual Studio Enterprise sürümünde kullanılabilir ve yalnızca .NET sürümünde desteklenir.
 
 Live Unit Testing hakkında daha fazla bilgi edinmek için:
 

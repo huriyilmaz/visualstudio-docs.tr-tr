@@ -1,5 +1,7 @@
 ---
 title: Tasarımcılara geri alma desteği sağlama | Microsoft Docs
+description: Otomatik olarak veya Visual Studio SDK 'daki özellikleri kullanarak tasarımcılarda geri alma desteği sağlamayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0580f974c362a71c3e400946f2ad34f565ad1232
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4108e259fb0a2e60c2719df8a7fb76f273634799
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699671"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97715581"
 ---
 # <a name="supply-undo-support-to-designers"></a>Tasarımcı için geri alma desteğini sağlama
 
@@ -29,7 +31,7 @@ Geri alma özelliği için destek sağlaması gereken Tasarımcı uygulamaları:
 
 - Ve sınıflarını uygulayarak Kalıcılık ve CodeDOM desteği sağlayın <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationService>  <xref:System.ComponentModel.Design.IComponentChangeService> .
 
-.NET Framework kullanarak tasarımcı yazma hakkında daha fazla bilgi için bkz. [Tasarım zamanı desteğini genişletme](/previous-versions/37899azc(v=vs.140)).
+.NET Framework kullanarak tasarımcı yazma hakkında daha fazla bilgi için bkz. [genişletme Design-Time desteği](/previous-versions/37899azc(v=vs.140)).
 
 , [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)] Tarafından varsayılan bir geri alma altyapısı sağlar:
 
@@ -103,4 +105,4 @@ Bir <xref:Microsoft.VisualStudio.Shell.Design.OleUndoEngine> tabanlı geri alma 
 
 - <xref:System.ComponentModel.Design.UndoEngine>
 - <xref:Microsoft.VisualStudio.Shell.Design.OleUndoEngine>
-- [Tasarım zamanı desteğini genişletme](/previous-versions/37899azc(v=vs.140))
+- [Design-Time desteğini uzat](/previous-versions/37899azc(v=vs.140))

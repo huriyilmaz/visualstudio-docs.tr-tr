@@ -1,5 +1,7 @@
 ---
 title: COM ve ActiveX hata ayıklaması | Microsoft Docs
+description: Visual Studio 'da COM uygulamalarında ve ActiveX denetimlerinde hata ayıklama ipuçları bulun. COM sunucusu ve kapsayıcı hata ayıklama hakkında bilgi edinin. COM hata ayıklama araçları bulun.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -21,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0a818cfde2996b26bd9d5f31b128e41f2a9fe2e1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1df80e8486cb8f8667494137392fadb0a9754e8b
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "73188690"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97729008"
 ---
 # <a name="com-and-activex-debugging"></a>COM ve ActiveX Hata Ayıklaması
 Bu bölümde, COM uygulamalarında ve ActiveX denetimlerinde hata ayıklama hakkında ipuçları verilmektedir.
@@ -43,7 +45,7 @@ Bu bölümde, COM uygulamalarında ve ActiveX denetimlerinde hata ayıklama hakk
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Güvenliği](../debugger/debugger-security.md)
+- [Hata ayıklayıcı güvenliği](../debugger/debugger-security.md)
 - [COM'a Giriş](/cpp/atl/introduction-to-com)
 - [ActiveX denetimleri](/cpp/mfc/activex-controls)
 - [SDI Sunucu Uygulamaları](com-server-and-container-debugging.md)

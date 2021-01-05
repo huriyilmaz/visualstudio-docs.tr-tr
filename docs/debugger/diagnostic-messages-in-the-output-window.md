@@ -1,5 +1,7 @@
 ---
 title: İletileri çıkış penceresine gönder | Microsoft Docs
+description: Visual Studio 'daki çıkış penceresine, System. Diagnostics sınıf kitaplığının bir parçası olan Trace sınıfını kullanarak çalışma zamanı iletileri yazın.
+ms.custom: SEO-VS-2020
 ms.date: 11/08/2018
 ms.topic: how-to
 helpviewer_keywords:
@@ -21,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 85d3c146775ac06b3118186738ee74932a4c452a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 345efabedca63187fd9f16b4ed9622de8e320e89
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350478"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728089"
 ---
 # <a name="send-messages-to-the-output-window"></a>Çıkış penceresine ileti gönderme
 
@@ -52,7 +54,7 @@ ms.locfileid: "85350478"
 - Çıkış yapan iş parçacıkları.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Hata ayıklayıcı güvenliği](../debugger/debugger-security.md)
+- [Hata ayıklayıcısı güvenliği](../debugger/debugger-security.md)
 - [Çıktı penceresi](../ide/reference/output-window.md)
 - [İzleme ve işaretleme uygulamaları](/dotnet/framework/debug-trace-profile/tracing-and-instrumenting-applications)
 - [C#, F # ve Visual Basic proje türleri](../debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md)

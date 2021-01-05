@@ -1,5 +1,7 @@
 ---
 title: CV_access_e | Microsoft Docs
+description: Hata ayıklama arabirimi erişim SDK 'sında üyelerin görünürlük (erişim düzeyi) kapsamını belirten CV_access_e numaralandırma türü hakkında bilgi alın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -12,17 +14,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 00be9f52b8cac067e1d8482fe0378737c68909c4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 39b2cfea273d0b98c178c3cf9bcf3894042f760f
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85462150"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728697"
 ---
 # <a name="cv_access_e"></a>CV_access_e
 Üye işlevlerinin ve değişkenlerinin görünürlük kapsamını (erişim düzeyi) belirtir.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
 typedef enum CV_access_e {

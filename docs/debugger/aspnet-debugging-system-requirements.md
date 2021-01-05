@@ -1,5 +1,7 @@
 ---
 title: 'ASP.NET hata ayıklama: sistem gereksinimleri | Microsoft Docs'
+description: Visual Studio ve Web uygulamasının aynı bilgisayarda çalıştığı ve uzaktan hata ayıklamanın ASP.NET yerel hata ayıklama için yazılım ve güvenlik gereksinimlerini gözden geçirin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - aspnet
-ms.openlocfilehash: 78f947c7ab9fcc1031d457526240ecdd7e9119a3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2002d6ccbbe8f2cd3e186c49aca7a846568eedb2
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72745803"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97729125"
 ---
 # <a name="aspnet-debugging-system-requirements"></a>ASP.NET Hata Ayıklama: Sistem Gereksinimleri
 Bu konuda, hata ayıklama senaryolarında yazılım ve güvenlik gereksinimleri açıklanmaktadır [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] :
@@ -37,7 +39,7 @@ Bu konuda, hata ayıklama senaryolarında yazılım ve güvenlik gereksinimleri 
 ## <a name="security-requirements"></a>Güvenlik Gereksinimleri
  Uzaktan hata ayıklama için yerel ve uzak bilgisayarların bir etki alanı kurulumunda veya bir çalışma grubu kurulumunda olması gerekir.
 
- Çalışan işlemde hata ayıklamak için [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] (bir uygulama havuzu tarafından barındırılan), bu işlemde hata ayıklamak için izninizin olması gerekir. Varsayılan olarak, [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] ııs 6,0 ' den önceki uygulamalar **ASPNET** kullanıcısı olarak çalışır. IIS 6,0 ve IIS 7,0 ' de, **ağ hizmeti** hesabı varsayılandır. Çalışan işlemi **ASPNET**veya **ağ hizmeti**olarak çalışıyorsa, hata ayıklamak için yönetici ayrıcalıklarına sahip olmanız gerekir.
+ Çalışan işlemde hata ayıklamak için [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] (bir uygulama havuzu tarafından barındırılan), bu işlemde hata ayıklamak için izninizin olması gerekir. Varsayılan olarak, [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] ııs 6,0 ' den önceki uygulamalar **ASPNET** kullanıcısı olarak çalışır. IIS 6,0 ve IIS 7,0 ' de, **ağ hizmeti** hesabı varsayılandır. Çalışan işlemi **ASPNET** veya **ağ hizmeti** olarak çalışıyorsa, hata ayıklamak için yönetici ayrıcalıklarına sahip olmanız gerekir.
 
  > [!IMPORTANT]
  > Windows Server 2008 R2 'den başlayarak, her uygulama havuzu için kimlik olarak [Applicationpokaydentity](/iis/manage/configuring-security/application-pool-identities) kullanılması önerilir.

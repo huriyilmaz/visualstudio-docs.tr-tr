@@ -1,5 +1,7 @@
 ---
 title: COM sunucusu ve kapsayıcı hata ayıklaması | Microsoft Docs
+description: COM sunucusu ve kapsayıcı hata ayıklama hakkında bilgi edinin. Aynı çözümde bir COM sunucusunda ve kapsayıcıda hata ayıklayın, kapsayıcı bilgileri olmayan bir sunucu uygulaması veya bir SDI uygulaması.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -21,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ec5ed51c72ad7fd64bbdfd0135f53a13bb8c6e4b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9b1d4ceecae385ac6e5444c60f6634b260f2e887
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72745671"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728982"
 ---
 # <a name="com-server-and-container-debugging"></a>COM Sunucusunda ve Kapsayıcısında Hata Ayıklama
 COM uygulamaları, programcının doğrudan denetimi dışında çeşitli görevler gerçekleştirir. Dll 'Ler, nesnelerde kullanım sayıları ve Pano işlemlerinde iletişim, beklenmeyen davranışlarla karşılaşabileceğiniz alanlardan yalnızca birkaçı. Bu durumda, ilk adımınız sorunun kaynağını izlemenizde olur.
@@ -56,4 +58,4 @@ COM uygulamaları, programcının doğrudan denetimi dışında çeşitli görev
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [COM ve ActiveX Hata Ayıklaması](../debugger/com-and-activex-debugging.md)
+- [COM ve ActiveX hata ayıklaması](../debugger/com-and-activex-debugging.md)

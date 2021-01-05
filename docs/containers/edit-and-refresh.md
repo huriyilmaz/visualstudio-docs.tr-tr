@@ -9,12 +9,12 @@ ms.topic: how-to
 ms.workload: multiple
 ms.date: 07/25/2019
 ms.technology: vs-azure
-ms.openlocfilehash: 32f6535e92f41d8030b6e060960940339da91fc9
-ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
+ms.openlocfilehash: de7065ebdf5426077418e50d2c03118de9f9d68f
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92298214"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97729307"
 ---
 # <a name="debug-apps-in-a-local-docker-container"></a>Yerel bir Docker kapsayıcısında uygulamalarda hata ayıklama
 
@@ -94,12 +94,12 @@ Değişiklikleri hızlıca yinelemek için, uygulamanızı bir kapsayıcıda ba�
 
    Daha fazla bilgi için bkz. [ASP.NET Core Razor dosyası derlemesi](/aspnet/core/mvc/views/view-compilation?view=aspnetcore-3.1&preserve-view=true).
 
-1. **Çözüm yapılandırmasını** **hata ayıklama**olarak ayarlayın. Ardından, **Ctrl** + Docker görüntünüzü derlemek ve yerel olarak çalıştırmak için CTRL**F5** tuşuna basın.
+1. **Çözüm yapılandırmasını** **hata ayıklama** olarak ayarlayın. Ardından,  + Docker görüntünüzü derlemek ve yerel olarak çalıştırmak için CTRL **F5** tuşuna basın.
 
     Kapsayıcı görüntüsü bir Docker kapsayıcısında oluşturulup çalıştırıldığında, Visual Studio varsayılan tarayıcınızda Web uygulamasını başlatır.
 
 1. *Dizin* sayfasına gidin. Bu sayfada değişiklik yapacağız.
-1. Visual Studio 'ya dönün ve *Index. cshtml*dosyasını açın.
+1. Visual Studio 'ya dönün ve *Index. cshtml* dosyasını açın.
 1. Aşağıdaki HTML içeriğini dosyanın sonuna ekleyin ve değişiklikleri kaydedin.
 
     ```html
@@ -120,7 +120,7 @@ Değişiklikleriniz uygulandı!
 Genellikle, değişiklikler daha fazla inceleme gerektirir. Bu görev için Visual Studio 'nun hata ayıklama özelliklerini kullanabilirsiniz.
 
 1. Visual Studio 'da *Index.cshtml.cs*' yi açın.
-2. `OnGet`Yönteminin içeriğini aşağıdaki kodla değiştirin:
+2. `OnGet` yönteminin içeriğini aşağıdaki kodla değiştirin:
 
    ```csharp
        ViewData["Message"] = "Your application description page from within a container";
@@ -130,19 +130,19 @@ Genellikle, değişiklikler daha fazla inceleme gerektirir. Bu görev için Visu
 4. Hata ayıklamayı başlatmak ve kesme noktasına isabet etmek için F5 'e basın.
 5. Kesme noktasını görüntülemek için Visual Studio 'ya geçin. Değerleri inceleyin.
 
-   ![Ilı](media/edit-and-refresh/breakpoint.png)
+   ![Visual Studio 'da Index.cshtml.cs için kodun bir bölümünü, sarı renkle vurgulanmış bir kod satırının soluna ayarlanmış bir kesme noktası ile gösteren ekran görüntüsü.](media/edit-and-refresh/breakpoint.png)
 
 ## <a name="create-a-net-framework-console-app"></a>.NET Framework konsol uygulaması oluşturma
 
 .NET Framework konsol uygulaması projelerini kullandığınızda, düzenleme olmadan Docker desteği ekleme seçeneği desteklenmez. Yalnızca tek bir Docker projesi kullanıyor olsanız bile aşağıdaki yordamı kullanabilirsiniz.
 
 1. Yeni bir .NET Framework konsol uygulaması projesi oluşturun.
-1. Çözüm Gezgini, proje düğümüne sağ tıklayın ve ardından **Add**  >  **kapsayıcı düzenleme desteği**Ekle ' yi seçin.  Görüntülenen iletişim kutusunda **Docker Compose**' yi seçin. Projenize bir Dockerfile eklenir ve ilişkili destek dosyalarına sahip bir Docker Compose projesi eklenir.
+1. Çözüm Gezgini, proje düğümüne sağ tıklayın ve ardından   >  **kapsayıcı düzenleme desteği** Ekle ' yi seçin.  Görüntülenen iletişim kutusunda **Docker Compose**' yi seçin. Projenize bir Dockerfile eklenir ve ilişkili destek dosyalarına sahip bir Docker Compose projesi eklenir.
 
 ### <a name="debug-with-breakpoints"></a>Kesme noktalarıyla hata ayıkla
 
 1. Çözüm Gezgini ' de, *program.cs*' yi açın.
-2. `Main`Yönteminin içeriğini aşağıdaki kodla değiştirin:
+2. `Main` yönteminin içeriğini aşağıdaki kodla değiştirin:
 
    ```csharp
        System.Console.WriteLine("Hello, world!");
@@ -152,7 +152,7 @@ Genellikle, değişiklikler daha fazla inceleme gerektirir. Bu görev için Visu
 4. Hata ayıklamayı başlatmak için F5 tuşuna basın ve kesme noktasına gidin.
 5. Kesme noktası ve İnceleme değerlerini görüntülemek için Visual Studio 'ya geçin.
 
-   ![Ilı](media/edit-and-refresh/breakpoint-console.png)
+   ![Visual Studio 'da Program.cs için kod penceresinin, sarı renkle vurgulanmış bir kod satırının soluna ayarlanmış bir kesme noktası ile ekran görüntüsü.](media/edit-and-refresh/breakpoint-console.png)
 
 ## <a name="container-reuse"></a>Kapsayıcı yeniden kullanımı
 

@@ -18,12 +18,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7af24dbbb510fb1d5c9c62b40d5986ea5c74d35b
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: d935ee5c4341a2d625c6f85226cc649d696d6e6e
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97361657"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97729398"
 ---
 # <a name="use-code-maps-to-debug-your-applications"></a>Uygulamalarınızda hata ayıklamak için kod eşlemelerini kullanma
 
@@ -62,9 +62,9 @@ Kod eşlemeleriyle çalışırken kullanabileceğiniz komutların ve eylemlerin 
 ## <a name="navigate-and-examine-code-from-the-map"></a>Eşlemeden koda gitme ve kodu inceleme
  Her bir alanın kod tanımını görmek için, haritadaki alana çift tıklayın veya alanı seçip **F12** tuşuna basın. Yeşil ok eşlemedeki öğeler arasında hareket eder. Ayrıca kod düzenleyicisindeki imleciniz de otomatik olarak hareket eder.
 
- ![Kod eşlemesi &#45; alanı tanımını ıncele](../modeling/media/codemapstoryboardpaint5.png)
+ ![Seçili geçmiş alanı ve tüm geçmiş örneklerinin vurgulandığı bir kod Düzenleyicisi penceresi içeren bir kod Haritası penceresinin ekran görüntüsü.](../modeling/media/codemapstoryboardpaint5.png)
 
- ![Kod eşlemesi &#45; alanı tanımını ıncele](../modeling/media/codemapstoryboardpaint5a.png)
+ ![Bir kod Haritası penceresinin, Boytobjects alanı seçili ve tüm Boytobjects örneklerinin vurgulandığı bir kod Düzenleyicisi penceresi ekran görüntüsü.](../modeling/media/codemapstoryboardpaint5a.png)
 
 > [!TIP]
 > Kod düzenleyicisinde imleci hareket ettirerek yeşil oku eşlemede taşıyabilirsiniz.
@@ -81,24 +81,24 @@ Kod eşlemeleriyle çalışırken kullanabileceğiniz komutların ve eylemlerin 
 
  İlişkilerin akışını yeniden düzenlemek ve eşlemenin okunmasını kolaylaştırmak için düzeni değiştirin. Ayrıca, öğeleri sürükleyerek de eşleme etrafında taşıyabilirsiniz.
 
- ![Kod Haritası &#45; düzeni değiştirme](../modeling/media/codemapstoryboardpaint7a.png)
+ ![Düzen menüsü açık ve soldan Rgiht komutu seçiliyken bir kod Haritası penceresinin ekran görüntüsü.](../modeling/media/codemapstoryboardpaint7a.png)
 
 > [!TIP]
 > Varsayılan olarak, **artımlı düzen** açıktır. Yeni öğeler eklediğinizde, bu eşlemeyi mümkün olduğunca az yeniden düzenler. Her yeni öğe eklediğinizde eşlemenin tamamını yeniden düzenlemek için, **artımlı düzeni** kapatın.
 
- ![Kod Haritası &#45; düzeni değiştirme](../modeling/media/codemapstoryboardpaint7.png)
+ ![Soldan sağa işaret eden alanlar arasındaki relationshiop oklarıyla bir kod Haritası penceresinin ekran görüntüsü.](../modeling/media/codemapstoryboardpaint7.png)
 
  Bu yöntemleri inceleyelim. Haritada **PaintCanvas yöntemine** yöntemine çift tıklayın veya bu yöntemi seçin ve **F12** tuşuna basın. Bu yöntemin boş listeler oluşturduğunu ve bu şekilde olduğunu öğrenirsiniz `history` `paintObjects` .
 
- ![Kod eşlemesi &#45; yöntemi tanımını Inceleyin](../modeling/media/codemapstoryboardpaint8.png)
+ ![PaintCanvas yöntemine yöntemi seçilen ve bir kod parçacığı görüntüsü olan bir kod eşleme penceresinin ekran görüntüsü ve Boytuval Yöntem adının vurgulandığı şekilde gösterir.](../modeling/media/codemapstoryboardpaint8.png)
 
  Şimdi yöntem tanımını incelemek için aynı adımları yineleyin `clear` . `clear`Ve ile bazı görevler gerçekleştireceğini öğrenirsiniz `paintObjects` `history` . Daha sonra yöntemini çağırır `Repaint` .
 
- ![Kod eşlemesi &#45; yöntemi tanımını Inceleyin](../modeling/media/codemapstoryboardpaint9.png)
+ ![Clear yöntemi seçiliyken kod eşleme penceresinin ekran görüntüsü ve Clear yönteminin kodunu gösteren bir kod parçacığı görüntüsü.](../modeling/media/codemapstoryboardpaint9.png)
 
  Şimdi `addPaintObject` yöntem tanımını inceleyin. Ayrıca, ve ile bazı görevler `history` gerçekleştirir `paintObjects` . Ayrıca çağırır `Repaint` .
 
- ![Kod eşlemesi &#45; yöntemi tanımını Inceleyin](../modeling/media/codemapstoryboardpaint10.png)
+ ![Addboytobject yöntemi seçiliyken bir kod Haritası penceresinin ekran görüntüsü ve Addboytobject yöntemi için kodu gösteren bir kod parçacığı görüntüsü.](../modeling/media/codemapstoryboardpaint10.png)
 
 ## <a name="find-the-problem-by-examining-the-map"></a>Eşlemeyi inceleyerek sorunu bulma
  Bu, değiştiren ve çağıran tüm yöntemler gibi `history` görünüyor `paintObjects` `Repaint` . Yine de `undo` Yöntem `Repaint` çağrılamasa da `undo` aynı alanları değiştirir. Bu nedenle, ' den arayarak bu sorunu giderebilirsiniz `Repaint` `undo` .

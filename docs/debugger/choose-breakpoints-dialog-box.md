@@ -1,5 +1,7 @@
 ---
 title: Kesme noktaları Seç Iletişim kutusu | Microsoft Docs
+description: Visual Studio 'da yeni kesme noktası iletişim kutusunda belirsiz girişten bir kesme noktası ayarlamaya çalışırsanız açılan kesme noktaları Seç iletişim kutusu hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -21,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fdec8c8d1b53f87e14700f5c14099cf0d2e6e392
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 876cc88756f6230585dce72b984b7ac40390a7f4
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72745725"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97729047"
 ---
 # <a name="choose-breakpoints-dialog-box"></a>Kesme Noktaları Seç İletişim Kutusu
 **Yeni kesme noktası** iletişim kutusunda belirsiz girişten bir kesme noktası ayarlamaya çalıştığınızda **kesme noktaları Seç** iletişim kutusu açılır. Belirsiz girişin ortak bir örneği, aşırı yüklenmiş bir işlev adıdır.
@@ -39,4 +41,4 @@ ms.locfileid: "72745725"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kesme Noktalarını Kullanma](../debugger/using-breakpoints.md)
+- [Kesme noktaları kullanma](../debugger/using-breakpoints.md)

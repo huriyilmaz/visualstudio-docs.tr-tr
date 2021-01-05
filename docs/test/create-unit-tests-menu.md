@@ -11,20 +11,20 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8afbc73e8c778829a9a1ce5a59d30df6de2f0daa
-ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
+ms.openlocfilehash: c9bdbd545a3509927dd13a800e22b9aaaab2cb2b
+ms.sourcegitcommit: 4e28314dc2be59b4c5fd44545c0653f625e74489
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95441865"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97756636"
 ---
-# <a name="create-unit-test-method-stubs-with-the-create-unit-tests-command"></a>Birim Testleri Oluştur komutuyla birim testi yöntemi saplamaları oluşturma
+# <a name="create-unit-test-method-stubs-from-code"></a>Koddan birim testi yöntemi saplamaları oluştur
 
 **Birim Testleri Oluştur** komutu birim testi yöntemi saplamaları oluşturur. Bu özellik bir test projesinin, test sınıfının ve içindeki test yönteminin Saplamasının kolay yapılandırılmasını sağlar.
 
 ::: moniker range="vs-2017"
 > [!NOTE]
-> **Birim Testleri Oluştur** menü komutu yalnızca .NET Framework (.NET Core değil) hedefleyen C# kodu için kullanılabilir.
+> **Birim Testleri Oluştur** menü komutu yalnızca .NET Framework (.NET Core veya .NET Standard değil) hedefleyen C# kodu için kullanılabilir.
 ::: moniker-end
 ::: moniker range=">=vs-2019"
 > [!NOTE]
@@ -33,11 +33,13 @@ ms.locfileid: "95441865"
 
 **Birim Testleri Oluştur** menü komutu genişletilebilir ve MSTest, MSTest v2, NUnit ve xUnit için testler oluşturmak üzere kullanılabilir.
 
-## <a name="get-started"></a>Kullanmaya başlayın
+## <a name="get-started"></a>başlarken
 
 Başlamak için, test etmek istediğiniz projedeki kod düzenleyicisinde bir yöntem, bir tür veya ad alanı seçin, sağ tıklayın ve ardından **Birim Testleri Oluştur**' u seçin. , Testlerin nasıl oluşturulmasını istediğinizi yapılandırabileceğiniz **Birim Testleri Oluştur** iletişim kutusu açılır.
 
 ![Birim Testleri Oluştur komutunu kullanma](media/createunittestcommand.png)
+
+NUnit veya xUnit için test çerçevesi seçeneklerini görmüyorsanız bkz. [üçüncü taraf birim testi çerçeveleri kullanma](#use-third-party-unit-test-frameworks).
 
 ## <a name="set-unit-test-traits"></a>Birim testi nitelikleri ayarla
 

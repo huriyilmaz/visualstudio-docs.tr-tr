@@ -7,12 +7,12 @@ ms.date: 04/14/2017
 ms.assetid: 5C800815-0B13-4B27-B017-95FCEF1A0EA2
 ms.custom: video
 ms.topic: how-to
-ms.openlocfilehash: 58d749a1d014288754dcd9eb7e620730933d742a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 274e8defe25fa78c30aee72834e486b302a9af4e
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85950404"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97729437"
 ---
 # <a name="include-a-nuget-package-in-your-project"></a>Projenize bir NuGet paketi ekleyin
 
@@ -24,7 +24,7 @@ Bu makalede, bir projeye NuGet paketinin nasıl dahil edileceğini ve işlemin s
 
 NuGet paket işlevini göstermek için, ilk olarak yeni bir uygulama oluşturma ve buna paket ekleme adımlarını inceleyeceğiz. Daha sonra paketlerin yönetilmesine yardımcı olan IDE özellikleri ele alınacaktır.
 
-## <a name="create-a-new-project"></a>Yeni bir proje oluşturma
+## <a name="create-a-new-project"></a>Yeni proje oluşturma
 
 İlk olarak, aşağıda gösterildiği gibi adlı bir proje oluşturun `HelloNuget` . Bu örnekte iOS tek görünüm uygulama şablonu gösterilmektedir, ancak desteklenen tüm proje türleri çalışır:
 
@@ -76,7 +76,7 @@ Paket güncelleştirmeleri tek seferde, **paketler** düğümüne sağ tıklayar
 
 Bağlam menüsüne erişmek için **paketlere** sağ tıklayın:
 
-![Paketler menüsü](media/nuget-walkthrough-PackagesMenu.png)
+![Seçilen paketler düğümünü gösteren ekran görüntüsü ve sağ tıklama bağlam menüsü, paket Ekle, Güncelleştir, geri yükle ve Yenile komutlarıyla birlikte açılır.](media/nuget-walkthrough-PackagesMenu.png)
 
 * **Paket Ekle** -projeye daha fazla paket eklemek için pencereyi açar.
 * **Güncelleştir** -kaynak sunucuyu her bir paket için denetler ve daha yeni sürümleri indirir.
@@ -86,7 +86,7 @@ Güncelleştirme ve geri yükleme seçenekleri de çözüm düzeyinde bulunur ve
 
 Ayrıca, bir bağlam menüsüne erişmek için tek tek paketlere sağ tıklayabilirsiniz:
 
-![Paketler menüsü](media/nuget-walkthrough-PackageMenu.png)
+![Seçili tek bir paketi gösteren ekran görüntüsü ve sağ tıklama bağlam menüsü, güncelleştirme, kaldırma ve yenileme komutlarıyla birlikte açılır.](media/nuget-walkthrough-PackageMenu.png)
 
 * **Sürüm numarası** -sürüm numarası devre dışı bir menü öğesi; yalnızca bilgilendirme amacıyla sağlanır.
 * **Güncelleştir** -kaynak sunucuyu denetler ve daha yeni bir sürümü indirir (varsa).
@@ -102,11 +102,11 @@ Mac için Visual Studio, paket kaynakları listesini görüntülemek ve düzenle
 
 Yeni bir kaynak kurmak için **Ekle** ' ye tıklayın. Paket kaynağına kolay bir ad ve URL (ya da dosya yolu) girin. Kaynak güvenli bir Web sunucusu ise, Kullanıcı adını ve parolayı da girin, aksi takdirde bu girdileri boş bırakın:
 
-![Paket kaynakları ekle](media/nuget-walkthrough-PackageSource2.png)
+![Ad, konum, Kullanıcı adı ve parola alanlarını içeren paket kaynağı Ekle iletişim kutusunun ekran görüntüsü.](media/nuget-walkthrough-PackageSource2.png)
 
 Paketler aranırken farklı kaynaklar seçilebilir:
 
-![Paket kaynakları ekle](media/nuget-walkthrough-PackageSource3.png)
+![Paket ekleme ekranının, paketler aranırken seçilemeyen kaynakların açılan listesini gösteren ekran görüntüsü.](media/nuget-walkthrough-PackageSource3.png)
 
 ## <a name="version-control"></a>Sürüm Denetimi
 

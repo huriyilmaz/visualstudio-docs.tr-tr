@@ -1,6 +1,6 @@
 ---
-title: Hata ayıklama görevinizi bulma
-description: Uygulamanızda hata ayıklamanıza yardımcı olacak hata ayıklayıcı özelliğini belirler
+title: SSS-hata ayıklama özelliğini bulma
+description: Uygulamanızda hata ayıklamanıza yardımcı olacak hata ayıklayıcı özelliğini belirlemenize yardımcı olmak için sık sorulan sorular
 ms.custom: ''
 ms.date: 10/01/2019
 ms.topic: conceptual
@@ -11,126 +11,126 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 792b5e2d40f7299bf019fd3f9c86697bf008c391
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a34aa926fca081a498173cd5fcc439a6b3886ba7
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89314907"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728037"
 ---
-# <a name="find-your-debugging-task-in-visual-studio"></a>Visual Studio 'da hata ayıklama görevinizi bulma
+# <a name="faq---find-the-debugging-feature-you-need-in-visual-studio"></a>SSS-Visual Studio 'da ihtiyacınız olan hata ayıklama özelliğini bulma
 
 Hata ayıklama görevinizi ilgili Visual Studio hata ayıklayıcının doğru özelliğine eşlemek için yardıma ihtiyacınız varsa, bu makalede sağlanan bağlantıları kullanın. Buradaki görev listesi, hata ayıklama, değişkenleri İnceleme ve **Çıkış** penceresine ileti gönderme gibi genel görevleri içerir. Hata ayıklayıcı özelliklerine genel bir bakış gerekirse, bkz. bunun yerine [hata ayıklayıcıya](debugger-feature-tour.md) bakın.
 
+## <a name="fix-an-exception"></a>Özel durumu çözme
+
+- Bkz. [bir özel durumu giderme](write-better-code-with-visual-studio.md#fix-an-exception).
+
 ## <a name="pause-running-code"></a>Çalışan kodu Duraklat
 
-### <a name="pause-running-code-to-inspect-a-line-of-code-that-may-contain-a-bug"></a>Bir hata içerebilecek kod satırını incelemek için kodu çalıştırmayı duraklatın
+- **Bir hata içerebilecek kod satırını incelemek için kodu çalıştırmayı duraklatın**
 
-Bir kesme noktası ayarlayın. Daha fazla bilgi için bkz. [kesme noktaları kullanma](using-breakpoints.md).
+  Bir kesme noktası ayarlayın. Daha fazla bilgi için bkz. [kesme noktaları kullanma](using-breakpoints.md).
 
-### <a name="pause-and-inspect-your-app-when-it-reaches-a-specific-state"></a>Uygulamanızı belirli bir duruma ulaştığında duraklatın ve inceleyin
+- **Uygulamanızı belirli bir duruma ulaştığında duraklatın ve inceleyin**
 
-Bir kesme noktasının koşullu mantık kullanarak nerede ve ne zaman etkin olduğunu denetlemek için koşullu bir kesme noktası deneyin. Daha fazla bilgi için bkz. [kesme noktası koşulları](using-breakpoints.md#breakpoint-conditions).
+  Bir kesme noktasının koşullu mantık kullanarak nerede ve ne zaman etkin olduğunu denetlemek için koşullu bir kesme noktası deneyin. Daha fazla bilgi için bkz. [kesme noktası koşulları](using-breakpoints.md#breakpoint-conditions).
 
-### <a name="pause-code-only-when-a-specific-objects-property-or-value-changes"></a>Kodu yalnızca belirli bir nesnenin özelliği veya değeri değiştiğinde Duraklat
+- **Kodu yalnızca belirli bir nesnenin özelliği veya değeri değiştiğinde Duraklat**
 
-C++ için bir [veri kesme noktası](using-breakpoints.md#BKMK_set_a_data_breakpoint_native_cplusplus)ayarlayın. 
-::: moniker range=">= vs-2019"
-.NET Core 3 kullanan uygulamalar için bir [veri kesme noktası](using-breakpoints.md#BKMK_set_a_data_breakpoint_managed)da ayarlayabilirsiniz.
-::: moniker-end
+  C++ için bir [veri kesme noktası](using-breakpoints.md#BKMK_set_a_data_breakpoint_native_cplusplus)ayarlayın. 
+  ::: moniker range=">= vs-2019"
+  .NET Core 3 kullanan uygulamalar için bir [veri kesme noktası](using-breakpoints.md#BKMK_set_a_data_breakpoint_managed)da ayarlayabilirsiniz.
+  ::: moniker-end
 
-Aksi halde, yalnızca C# ve F # için bir [nesne kimliğini koşullu kesme noktasıyla izleyebilirsiniz](using-breakpoints.md#using-object-ids-in-breakpoint-conditions-c-and-f).
+  Aksi halde, yalnızca C# ve F # için bir [nesne kimliğini koşullu kesme noktasıyla izleyebilirsiniz](using-breakpoints.md#using-object-ids-in-breakpoint-conditions-c-and-f).
 
-### <a name="pause-code-inside-a-loop-at-a-certain-iteration"></a>Belirli bir yinelemede döngü içindeki kodu duraklatma
+- **Belirli bir yinelemede döngü içindeki kodu duraklatma**
 
-**İsabet sayısı** ' nı koşul olarak kullanarak bir kesme noktası ayarlayın. Daha fazla bilgi için bkz. [isabet sayısı](using-breakpoints.md#set-a-hit-count-condition).
+  **İsabet sayısı** ' nı koşul olarak kullanarak bir kesme noktası ayarlayın. Daha fazla bilgi için bkz. [isabet sayısı](using-breakpoints.md#set-a-hit-count-condition).
 
-### <a name="pause-code-at-the-start-of-a-function-when-you-know-the-function-name-but-not-its-location"></a>İşlev adını bildiğiniz ancak konumunu not ettiğinizde bir işlevin başlangıcında kodu duraklatma
+- **İşlev adını bildiğiniz ancak konumunu not ettiğinizde bir işlevin başlangıcında kodu duraklatma**
 
-Bunu bir işlev kesme noktası ile yapabilirsiniz. Daha fazla bilgi için bkz. [işlev kesme noktalarını ayarlama](using-breakpoints.md#BKMK_Set_a_breakpoint_in_a_source_file).
+  Bunu bir işlev kesme noktası ile yapabilirsiniz. Daha fazla bilgi için bkz. [işlev kesme noktalarını ayarlama](using-breakpoints.md#BKMK_Set_a_breakpoint_in_a_source_file).
 
-### <a name="pause-code-at-the-start-of-multiple-functions-with-the-same-name"></a>Aynı ada sahip birden çok işlevin başlangıcında kodu Duraklat
+- **Aynı ada sahip birden çok işlevin başlangıcında kodu Duraklat**
 
-Aynı ada sahip birden fazla işleviniz varsa (farklı projelerde aşırı yüklenmiş işlevler veya işlevler), bir [işlev kesme noktası](using-breakpoints.md#BKMK_Set_a_breakpoint_in_a_source_file)kullanabilirsiniz.
+  Aynı ada sahip birden fazla işleviniz varsa (farklı projelerde aşırı yüklenmiş işlevler veya işlevler), bir [işlev kesme noktası](using-breakpoints.md#BKMK_Set_a_breakpoint_in_a_source_file)kullanabilirsiniz.
 
-### <a name="manage-and-keep-track-of-your-breakpoints"></a>Kesme noktalarınızı yönetin ve izleyin
+- **Kesme noktalarınızı yönetin ve izleyin**
 
-**Kesme noktaları** penceresini kullanın. Daha fazla bilgi için bkz. [kesme noktalarını yönetme](using-breakpoints.md#BKMK_Specify_advanced_properties_of_a_breakpoint_).
+  **Kesme noktaları** penceresini kullanın. Daha fazla bilgi için bkz. [kesme noktalarını yönetme](using-breakpoints.md#BKMK_Specify_advanced_properties_of_a_breakpoint_).
 
-### <a name="pause-code-and-debug-when-a-specific-handled-or-unhandled-exception-is-thrown"></a>Belirli bir işlenmiş veya işlenmemiş özel durum oluştuğunda kodu duraklatma ve hata ayıklama
+- **Belirli bir işlenmiş veya işlenmemiş özel durum oluştuğunda kodu duraklatma ve hata ayıklama**
 
-Özel durum Yardımcısı sizi bir hata oluştuğunu gösteriyor olsa da, belirli bir hatayı duraklatmak ve hata ayıklamak istiyorsanız, [bir özel durum oluştuğunda hata ayıklayıcıya kesilmesini söyleyebilirsiniz](managing-exceptions-with-the-debugger.md#tell-the-debugger-to-break-when-an-exception-is-thrown).
+  Özel durum Yardımcısı sizi bir hata oluştuğunu gösteriyor olsa da, belirli bir hatayı duraklatmak ve hata ayıklamak istiyorsanız, [bir özel durum oluştuğunda hata ayıklayıcıya kesilmesini söyleyebilirsiniz](managing-exceptions-with-the-debugger.md#tell-the-debugger-to-break-when-an-exception-is-thrown).
 
-### <a name="set-a-breakpoint-from-the-call-stack"></a>Çağrı yığınından bir kesme noktası ayarlayın
+- **Çağrı yığınından bir kesme noktası ayarlayın**
 
-Yürütme akışını incelerken veya **çağrı yığını** pencerelerinin işlevlerini görüntülerken kodu duraklatmak ve hata ayıklamak istiyorsanız, bkz. [çağrı yığını penceresinde bir kesme noktası ayarlama](using-breakpoints.md#BKMK_Set_a_breakpoint_from_debugger_windows).
+  Yürütme akışını incelerken veya **çağrı yığını** pencerelerinin işlevlerini görüntülerken kodu duraklatmak ve hata ayıklamak istiyorsanız, bkz. [çağrı yığını penceresinde bir kesme noktası ayarlama](using-breakpoints.md#BKMK_Set_a_breakpoint_from_debugger_windows).
 
-### <a name="pause-code-at-a-specific-assembly-instruction"></a>Belirli bir derleme yönergesinde kodu duraklatma
+- **Belirli bir derleme yönergesinde kodu duraklatma**
 
-Bunu, [ayrıştırma penceresinden bir kesme noktası ayarlayarak](using-breakpoints.md#BKMK_Set_a_breakpoint_from_debugger_windows)yapabilirsiniz.
+  Bunu, [ayrıştırma penceresinden bir kesme noktası ayarlayarak](using-breakpoints.md#BKMK_Set_a_breakpoint_from_debugger_windows)yapabilirsiniz.
 
 ## <a name="execute-code"></a>Kodu Yürüt
 
-### <a name="learn-the-commands-to-step-through-your-code-while-debugging"></a>Hata ayıklarken kodunuzda adım adım ilerme komutlarını öğrenin
+- **Hata ayıklarken kodunuzda adım adım ilerme komutlarını öğrenin**
 
-Daha fazla bilgi için bkz. [hata ayıklayıcıyla koda gitme](navigating-through-code-with-the-debugger.md).
+  Daha fazla bilgi için bkz. [hata ayıklayıcıyla koda gitme](navigating-through-code-with-the-debugger.md).
 
 ## <a name="inspect-data"></a>Verileri inceleme
 
-### <a name="check-the-value-of-variables-while-running-your-app"></a>Uygulamanızı çalıştırırken değişkenlerin değerini denetleyin
+- **Uygulamanızı çalıştırırken değişkenlerin değerini denetleyin**
 
-[Veri ipuçlarını](view-data-values-in-data-tips-in-the-code-editor.md) kullanarak değişkenlerin üzerine gelin veya [oto ve Yereller penceresinde değişkenleri inceleyin](autos-and-locals-windows.md).
+  [Veri ipuçlarını](view-data-values-in-data-tips-in-the-code-editor.md) kullanarak değişkenlerin üzerine gelin veya [oto ve Yereller penceresinde değişkenleri inceleyin](autos-and-locals-windows.md).
 
-### <a name="observe-the-changing-value-of-a-specific-variable"></a>Belirli bir değişkenin değişen değerini gözlemleyin
+- **Belirli bir değişkenin değişen değerini gözlemleyin**
 
-Değişkende bir izleme ayarlayın. Daha fazla bilgi için bkz. [değişkenlerde Izleme ayarlama](watch-and-quickwatch-windows.md).
+  Değişkende bir izleme ayarlayın. Daha fazla bilgi için bkz. [değişkenlerde Izleme ayarlama](watch-and-quickwatch-windows.md).
 
-### <a name="view-strings-that-are-too-long-for-the-debugger-window"></a>Hata ayıklayıcı penceresi için çok uzun olan dizeleri görüntüleme
+- **Hata ayıklayıcı penceresi için çok uzun olan dizeleri görüntüleme**
 
-Hata ayıklama sırasında yerleşik [dize görselleştiricisi](view-strings-visualizer.md) ' i açın.
+  Hata ayıklama sırasında yerleşik [dize görselleştiricisi](view-strings-visualizer.md) ' i açın.
+
+## <a name="debug-an-app-that-is-already-running"></a>Zaten çalışan bir uygulamada hata ayıklama
+
+- Bkz. [çalışan Işlemlere iliştirme](attach-to-running-processes-with-the-visual-studio-debugger.md).
+
+## <a name="debug-multithreaded-applications"></a>Çok iş parçacıklı uygulamaların hatalarını ayıklama
+
+- Bkz. çok [iş parçacıklı uygulamalarda hata ayıklama](debug-multithreaded-applications-in-visual-studio.md).
 
 ## <a name="configure-debugging"></a>Hata ayıklamayı yapılandırma
 
-### <a name="customize-information-shown-in-the-debugger"></a>Hata ayıklayıcıda gösterilen bilgileri özelleştirme
+- **Hata ayıklayıcı ayarlarını yapılandırma**
 
-Nesne türü dışındaki bilgileri farklı hata ayıklayıcı pencerelerinin değeri olarak göstermek isteyebilirsiniz. C#, Visual Basic, F # ve C++/CLı kodu için [DebuggerDisplay](using-the-debuggerdisplay-attribute.md) özniteliğini kullanın. Daha gelişmiş seçenekler için [özel bir Görselleştirici](create-custom-visualizers-of-data.md)oluşturarak Kullanıcı arabirimini de özelleştirebilirsiniz.
+  Hata ayıklayıcı seçeneklerini ve hata ayıklayıcı proje ayarlarını yapılandırmak için bkz. [hata ayıklayıcı ayarları ve hazırlığı](debugger-settings-and-preparation.md).
 
-Yerel C++ için [Natvis çerçevesini](create-custom-views-of-native-objects.md)kullanın.
+- **Hata ayıklayıcıda gösterilen bilgileri özelleştirme**
 
-### <a name="configure-debugger-settings"></a>Hata ayıklayıcı ayarlarını yapılandırma
+  Nesne türü dışındaki bilgileri farklı hata ayıklayıcı pencerelerinin değeri olarak göstermek isteyebilirsiniz. C#, Visual Basic, F # ve C++/CLı kodu için [DebuggerDisplay](using-the-debuggerdisplay-attribute.md) özniteliğini kullanın. Daha gelişmiş seçenekler için [özel bir Görselleştirici](create-custom-visualizers-of-data.md)oluşturarak Kullanıcı arabirimini de özelleştirebilirsiniz.
 
-Hata ayıklayıcı seçeneklerini ve hata ayıklayıcı proje ayarlarını yapılandırmak için bkz. [hata ayıklayıcı ayarları ve hazırlığı](debugger-settings-and-preparation.md).
+  Yerel C++ için [Natvis çerçevesini](create-custom-views-of-native-objects.md)kullanın.
 
 ## <a name="additional-tasks"></a>Ek görevler
 
-### <a name="fix-an-exception"></a>Özel durumu çözme
+- **Hata ayıklama oturumu sırasında kodu düzenleme**
 
-Bkz. [bir özel durumu giderme](write-better-code-with-visual-studio.md#fix-an-exception).
+  [Düzenle ve devam et ' i](edit-and-continue.md)kullanın. XAML için [xaml etkin yeniden yükleme](../xaml-tools/xaml-hot-reload.md)kullanın.
 
-### <a name="edit-code-during-a-debugging-session"></a>Hata ayıklama oturumu sırasında kodu düzenleme
+- **Kod değiştirmeden çıkış penceresine ileti gönderme**
 
-[Düzenle ve devam et ' i](edit-and-continue.md)kullanın. XAML için [xaml etkin yeniden yükleme](../xaml-tools/xaml-hot-reload.md)kullanın.
+  İzleme noktası ayarlayın. Daha fazla bilgi için bkz. [izleme noktalarını kullanma](using-tracepoints.md).
 
-### <a name="send-messages-to-the-output-window-without-modifying-code"></a>Kod değiştirmeden çıkış penceresine ileti gönderme
+- **İşlevlerin çağrıldığı sırayı görüntüleme**
 
-İzleme noktası ayarlayın. Daha fazla bilgi için bkz. [izleme noktalarını kullanma](using-tracepoints.md).
+  Bkz. [çağrı yığınını görüntüleme](how-to-use-the-call-stack-window.md).
 
-## <a name="view-the-order-in-which-functions-are-called"></a>İşlevlerin çağrıldığı sırayı görüntüleme
+- **Uzak makinelerde hata ayıkla**
 
-Bkz. [çağrı yığınını görüntüleme](how-to-use-the-call-stack-window.md).
+  Bkz. [Uzaktan hata ayıklama](remote-debugging.md).
 
-### <a name="debug-on-remote-machines"></a>Uzak makinelerde hata ayıkla
+- **Performans sorunlarını çözme**
 
-Bkz. [Uzaktan hata ayıklama](remote-debugging.md).
-
-### <a name="debug-an-app-that-is-already-running"></a>Zaten çalışan bir uygulamada hata ayıklama
-
-Bkz. [çalışan Işlemlere iliştirme](attach-to-running-processes-with-the-visual-studio-debugger.md).
-
-### <a name="debug-multithreaded-applications"></a>Çok iş parçacıklı uygulamaların hatalarını ayıklama
-
-Bkz. çok [iş parçacıklı uygulamalarda hata ayıklama](debug-multithreaded-applications-in-visual-studio.md).
-
-### <a name="fix-performance-issues"></a>Performans sorunlarını çözme
-
-Bkz [. profil oluşturma araçlarına ilk bakış](../profiling/profiling-feature-tour.md)
+  Bkz [. profil oluşturma araçlarına ilk bakış](../profiling/profiling-feature-tour.md)

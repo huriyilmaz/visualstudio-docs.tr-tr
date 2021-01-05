@@ -1,5 +1,7 @@
 ---
 title: LINQ hata ayıklama | Microsoft Docs
+description: Visual Studio 'da dil tümleşik sorgu (LINQ) hatalarını ayıklayın. LINQ sonuçlarını görüntüleyin. LINQ koduna adımla davranış farklarını anlayın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -19,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 146519b33be19da1103aed958e42ec5ffaee8bd0
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: 903ffb5d3187da3bda961caca42cf7436a816b6d
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89509776"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728375"
 ---
 # <a name="debugging-linq"></a>LINQ'de Hata Ayıklama
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , dil ile tümleşik sorgu (LINQ) kodunda hata ayıklamayı destekler, bazı sınırlamalar vardır. Çoğu hata ayıklama özelliğinin adım adım, kesme noktaları ayarlama ve sonuçları hata ayıklayıcı penceresinde görüntüleme dahil olmak üzere LINQ deyimleriyle birlikte çalışır. Bu konu, LINQ hata ayıklamanın başlıca sınırlamalarını açıklamaktadır.
@@ -43,7 +45,7 @@ ms.locfileid: "89509776"
 ## <a name="stepping-and-linq"></a><a name="BKMK_SteppingAndLinq"></a> Adımlama ve LINQ
  LINQ Code hata ayıklarken, adımlamayı bilmeniz gereken bazı davranış farklılıkları vardır.
 
-### <a name="linq-to-sql"></a>LINQ - SQL
+### <a name="linq-to-sql"></a>LINQ to SQL
  LINQ to SQL sorgularda, koşul kodu hata ayıklayıcı denetiminin ötesinde olur. Bu nedenle, koşul koduna ilerlenemez. Bir ifade ağacına derlenen herhangi bir sorgu, hata ayıklayıcının denetiminin ötesinde bir kod üretir.
 
 ### <a name="stepping-in-visual-basic"></a>Visual Basic adımla

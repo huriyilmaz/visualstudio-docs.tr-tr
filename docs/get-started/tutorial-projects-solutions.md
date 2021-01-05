@@ -12,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8cdc30b34c85a799827519af3cd2bba2c9f1735a
-ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
+ms.openlocfilehash: 3aa347b7f789e24e7cdd3baa19a6267f0ecdf2e5
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97668813"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97727527"
 ---
 # <a name="introduction-to-projects-and-solutions"></a>Projelere ve çözümlere giriş
 
@@ -279,7 +279,17 @@ Boş bir projem var. Bir kod dosyası ekleyelim.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Birim testinizin çalışıp çalışmadığını denetlemek isterseniz, **Test** et  >    >  **tüm testleri** menü çubuğundan Çalıştır ' ı seçin. **Test Gezgini** adlı bir pencere açılır ve **TestGetCurrentDate** testin başarılı olduğunu görmeniz gerekir.
+::: moniker range="vs-2017"
+
+Birim testinizin çalıştığını denetlemek isterseniz,   >    >  menü çubuğundan **tüm testleri** Çalıştır test ' i seçin. **Test Gezgini** adlı bir pencere açılır ve **TestGetCurrentDate** testin başarılı olduğunu görmeniz gerekir.
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+Birim testinizin çalıştığını denetlemek isterseniz,   >  menü çubuğundan **Tüm Testleri Çalıştır** test ' i seçin. **Test Gezgini** adlı bir pencere açılır ve **TestGetCurrentDate** testin başarılı olduğunu görmeniz gerekir.
+
+::: moniker-end
 
 ![Başarılı testi gösteren Visual Studio 'da test Gezgini](media/tutorial-projects-test-explorer.png "Başarılı bir testi gösteren Visual Studio 'da test Gezgini.")
 

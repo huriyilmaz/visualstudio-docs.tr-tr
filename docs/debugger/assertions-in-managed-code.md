@@ -1,5 +1,7 @@
 ---
 title: Yönetilen koddaki Onaylamalar | Microsoft Docs
+description: "Visual Studio 'da C#, Visual Basic veya F # yönetilen kodu için hata ayıklama aracı olarak onaylar hakkında bilgi edinin."
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -22,12 +24,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 824c711fc0ebb26a78338a65808c6fdbed768919
-ms.sourcegitcommit: fed8782b2fb2ca18a90746b6e7e0b33f3fde10f1
+ms.openlocfilehash: 2d546beb45be7f1473992ab9c2afc5f02ced1a1b
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97646404"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97729099"
 ---
 # <a name="assertions-in-managed-code"></a>Yönetilen Koddaki Onaylar
 Bir onay veya `Assert` deyimi, `Assert` deyimine bağımsız değişken olarak belirttiğiniz bir koşulu test eder. Koşul true olarak değerlendirilirse işlem yapmanız gerekmez. Koşul false olarak değerlendirilirse onay başarısız olur. Hata ayıklama derlemesiyle çalışıyorsanız programınız kesme moduna girer.

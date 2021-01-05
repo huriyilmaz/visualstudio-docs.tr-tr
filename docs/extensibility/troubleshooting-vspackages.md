@@ -1,5 +1,7 @@
 ---
 title: VSPackages sorunlarını giderme | Microsoft Docs
+description: Sorunları çözmek için VSPackage ve sorun giderme ipuçlarına sahip olabileceğiniz yaygın sorunlar hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: troubleshooting
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f79bfcb73749992365b167bae84a15de17d2440d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0c1e85c59d49f4079172cfb098701b09d461bdf3
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87235036"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97716061"
 ---
 # <a name="troubleshooting-vspackages"></a>VSPackage Sorunlarını Giderme
 Bu sorunları çözmek için VSPackage ve ipuçlarınız ile sahip olabileceğiniz yaygın sorunlar aşağıda verilmiştir.
@@ -25,7 +27,7 @@ Bu sorunları çözmek için VSPackage ve ipuçlarınız ile sahip olabileceğin
 
 - [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]Güvenli modda başlatın.
 
-   [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]Güvenli modda başlamak için, bir komut isteminde **devenv.exe/safemode**yazın.
+   [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]Güvenli modda başlamak için, bir komut isteminde **devenv.exe/safemode** yazın.
 
    Bu işlem sırasında, ile birlikte gelen VSPackages 'lar hariç hiçbir VSPackages yüklenmez [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .
 
@@ -43,7 +45,7 @@ Bu sorunları çözmek için VSPackage ve ipuçlarınız ile sahip olabileceğin
 
     Daha fazla bilgi için bkz. [VSPackages 'Yi kaydetme](registering-and-unregistering-vspackages.md) ve [VSPackages 'i yönetme](../extensibility/managing-vspackages.md).
 
-4. **Output** [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] VSPackage yüklemesi başarısız olan örneğinin çıkış penceresini açın. VSPackage 'ın neden yükleme başarısız olduğuna ilişkin bilgiler bu pencerede görüntülenebilir.
+4.  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] VSPackage yüklemesi başarısız olan örneğinin çıkış penceresini açın. VSPackage 'ın neden yükleme başarısız olduğuna ilişkin bilgiler bu pencerede görüntülenebilir.
 
    > [!NOTE]
    > ' In Deneysel sürümünü [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Tümleşik geliştirme ORTAMıNDAN (IDE) başlatıyorsanız, her iki sürümün de **Çıkış** penceresini inceleyin.
@@ -97,7 +99,7 @@ Bu sorunları çözmek için VSPackage ve ipuçlarınız ile sahip olabileceğin
 
     1. **Araçlar/Seçenekler** menüsünden **hata ayıklama/Semboller** iletişim kutusuna gidin.
 
-    2. Bu **sembol dosyası (. pdb) konumunu**ekleyin:
+    2. Bu **sembol dosyası (. pdb) konumunu** ekleyin:
 
          `https://msdl.microsoft.com/download/symbols`
 

@@ -1,5 +1,7 @@
 ---
 title: CV_HREG_e | Microsoft Docs
+description: Hata ayıklama arabirimi erişim SDK 'sında bir hedef kaydı belirten CV_HREG_e numaralandırma türü hakkında başvuru bilgileri alın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ee15d5b4d6a0959397d8d62753455c7a26f01f78
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f24476bc00293f204dfa28d57ca2d961c2d55d9d
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85462109"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728562"
 ---
 # <a name="cv_hreg_e"></a>CV_HREG_e
 Bir hedef kayıt belirtir.
@@ -25,7 +27,7 @@ Bir hedef kayıt belirtir.
 > [!NOTE]
 > `CV_HREG_e`Sabit listesi tamamen çoğaltılamayacak kadar büyük olduğundan, kısaltılmış bir sürüm başvuru olarak sağlanır. Eksik girişler italik olarak oluşturulur. Tüm sabit listesi, cvconst. h üstbilgi dosyasında bulunur.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
 enum CV_HREG_e {

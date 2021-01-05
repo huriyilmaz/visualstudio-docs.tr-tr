@@ -1,5 +1,7 @@
 ---
 title: Sabitler (hata ayıklama arabirimi erişim SDK 'Sı) | Microsoft Docs
+description: Hata ayıklama arabirimi erişimi (DIA) SDK 'Sı aracılığıyla bir program hata ayıklama veritabanı (PDB) dosyasının çeşitli bölümlerini belirlemek için kullanılabilecek dize sabitleri listesini görüntüleyin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3fa6037253141df1111ef3bc57fac9c718d826dc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 806eb9207fa60b7147d1e0d7df75871b23f8850d
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85462241"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728756"
 ---
 # <a name="constants-debug-interface-access-sdk"></a>Sabitler (Arabirim Erişimi SDK'sında Hata Ayıklama)
 Bu dize sabitleri, bir program hata ayıklama veritabanı (PDB) dosyasının DIA SDK aracılığıyla çeşitli bölümlerini belirlemek için kullanılabilir.

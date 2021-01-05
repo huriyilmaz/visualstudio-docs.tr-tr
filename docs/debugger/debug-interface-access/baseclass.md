@@ -1,5 +1,7 @@
 ---
 title: BaseClass | Microsoft Docs
+description: BaseClass sembol türü hakkında başvuru bilgileri bulun. Kullanıcı tanımlı tür (UDT) sembolleri için bir temel sınıf, SymTagBaseClass etiketiyle bir alt öğe tarafından tanımlanır.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 48fcf4e7db87ecf8f0b1041dd013e4b1d8571533
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6d813955c8b61965b41cd252aaa35cb7ca323234
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85462304"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97728890"
 ---
 # <a name="baseclass"></a>BaseClass
 Kullanıcı tanımlı tür (UDT) simgesi için her temel sınıf, etiketiyle bir alt öğe tarafından tanımlanır `SymTagBaseClass` . [IDiaSymbol:: get_type](../../debugger/debug-interface-access/idiasymbol-get-type.md) özelliği, temeldeki udt 'nin sembolünü içerir ve temel alınan udt 'nin tüm özellikleri bu BaseClass sembolünün bir parçası olarak kullanılabilir.
