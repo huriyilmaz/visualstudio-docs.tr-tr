@@ -1,5 +1,7 @@
 ---
 title: VSTextBuffer nesnesi | Microsoft Docs
+description: VSTextBuffer nesnesi, genellikle bir dosyayla ilişkili olan Unicode metin akışını temsil eder. Bu makalede VSTextBuffer arabirimleri listelenmektedir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 193d96be91839143893ac0798db723f3e94ea26c
-ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
+ms.openlocfilehash: e5c2afa08e9c480342bff95d417dfb9174250b83
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93413924"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863958"
 ---
 # <a name="vstextbuffer-object"></a>VSTextBuffer nesnesi
 Metin buffer nesnesi, genellikle bir dosyayla ilişkili olan Unicode metin akışını temsil eder. Bir <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer> nesnesi, bir sihirbaz içinde olduğu gibi çekirdek Düzenleyici 'nin bağlamı dışında kullanılabilir.

@@ -1,5 +1,7 @@
 ---
 title: Visual Studio için Düzen | Microsoft Docs
+description: Temalı iletişim kutuları ve temalı görünümü olan yeni iletişim kutuları dahil olmak üzere Visual Studio iletişim kutularına yönelik düzen hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: c19e3022-047c-43b6-a046-a82717efed4f
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4eb8eb7468751d46b922c15530389c554a8d3e36
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3e6c90831c39f0e378dd9060397c68592ec73384
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80698401"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863668"
 ---
 # <a name="layout-for-visual-studio"></a>Visual Studio İçin Düzen
 Visual Studio iletişim kutularının çoğunluğu, standart [Windows Masaüstü iletişim kutusu düzen ilkelerini](/windows/desktop/uxguide/win-dialog-box)izleyen temalı iletişim kutuları olan [araç kutusu yerleşimidir](../../extensibility/ux-guidelines/layout-for-visual-studio.md#BKMK_UtilityDialogLayout). Visual Studio, Kullanıcı arabirimini yenilemeye yönelik olarak taşındıkça, daha belirgin birçok iletişim kutusu, bunları ürün tanımlama deneyimleri olarak belirleyen yeni bir tasarıma sahiptir. Bu [temalı iletişim kutusu düzeninde](../../extensibility/ux-guidelines/layout-for-visual-studio.md#BKMK_ThemedDialogLayout) temalı bir görünüm vardır.
@@ -103,9 +105,9 @@ Visual Studio iletişim kutularının çoğunluğu, standart [Windows Masaüstü
 #### <a name="interior-command-buttons"></a><a name="BKMK_InteriorCommandButtons"></a> İç komut düğmeleri
  Daha karmaşık iletişim kutularında, iç denetim kendi ilgili düğmelerine sahip olabilir ve bu da iletişim kutusunun tamamlama düğmelerinin nerede olduğunu etkileyebilir.
 
-- **OK** / Sağ alt köşede, Tamam**iptali** yatay olarak yönlendirildiğinizde, iç düğmelerden oluşan dikey bir hizalama (sütun) kullanın.
+-  / Sağ alt köşede, Tamam **iptali** yatay olarak yönlendirildiğinizde, iç düğmelerden oluşan dikey bir hizalama (sütun) kullanın.
 
-- **OK** / Sağ üst köşede, Tamam**iptali** dikey olarak yönlendirildiğinden, iç düğmelerin yatay hizalamasını (satır) kullanın. Bu durum daha az yaygındır.
+-  / Sağ üst köşede, Tamam **iptali** dikey olarak yönlendirildiğinden, iç düğmelerin yatay hizalamasını (satır) kullanın. Bu durum daha az yaygındır.
 
 - İç düğme boyutu, mümkün olduğunda **Tamam** / **iptal** düğmelerinin boyutuyla eşleşen 75x23 piksellik standart düğme boyutunu hedeflemelidir. Düğme etiketi, düğmeyi standart düğme boyutunu aşarsa, bu küme içindeki diğer düğmelerin bu geniş boyutla hizalanması gerekir.
 
@@ -129,13 +131,13 @@ Visual Studio iletişim kutularının çoğunluğu, standart [Windows Masaüstü
 
 3. İletişim kutusu başlığı artık bir başlık çubuğunda yer alınmaz, ancak görsel ilgi ve daha büyük bir nokta boyutunda vurgu sağlar. ( [Metin stilindeki](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md#BKMK_TextStyle)yazı tipi boyutu bölümüne bakın.)
 
-4. Açıklama gibi ek metinle bağlanmış Etiketler, **ortam yazı tipi + kalın**olmalıdır.
+4. Açıklama gibi ek metinle bağlanmış Etiketler, **ortam yazı tipi + kalın** olmalıdır.
 
 5. İç sütunlar, açık gri olan 1 piksellik bir kuralla ayrılır.
 
 6. Varsayılan bağlantıların alt çizgi yoktur. Üzerine gelme ve basılan durumlar renk değişikliğine ve alt çizgilere sahiptir.
 
-7. Sağ alt köşedeki kaydet düğmeleri ( **Tamam** / **iptal**gibi).
+7. Sağ alt köşedeki kaydet düğmeleri ( **Tamam** / **iptal** gibi).
 
 ### <a name="themed-dialog-layout-examples"></a>Temalı iletişim kutusu düzen örnekleri
  ![Temalı iletişim kutusu düzeni](../../extensibility/ux-guidelines/media/0801-h_themeddialog.png "0801-h_ThemedDialog")

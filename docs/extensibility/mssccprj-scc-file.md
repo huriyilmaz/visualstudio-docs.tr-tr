@@ -1,5 +1,7 @@
 ---
 title: Mssccprj. SCC dosyası | Microsoft Docs
+description: MSSCCPRJ hakkında bilgi edinin. Visual Studio SDK ile birlikte çalışarak kaynak denetimi eklentisi tarafından kullanılan yerel, istemci tarafı bir dosya olan SCC dosyası.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 89511b7c8b69c5793eceef7d58153dde253a4f47
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 253482f840350ae1d3cf7ee83e03a88ace15a6cd
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80702462"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863478"
 ---
 # <a name="mssccprjscc-file"></a>Mssccprj. SCC dosyası
 IDE kullanarak bir Visual Studio çözümü veya projesi kaynak denetimi altına yerleştirdiğinizde, IDE iki önemli bilgi parçasını alır. Bilgiler, dizeler biçimindeki kaynak denetimi eklentisinden gelir. Bu dizeler, "AuxPath" ve "ProjName", IDE 'nin opaktır, ancak eklenti tarafından sürüm denetimindeki çözümü veya projeyi bulmak için kullanılır. IDE genellikle bu dizeleri, [SccGetProjPath](../extensibility/sccgetprojpath-function.md)öğesini çağırarak ilk kez alır ve ardından bunları çözüm veya proje dosyasına daha sonra [SccOpenProject](../extensibility/sccopenproject-function.md)'e çağrılar için kaydeder. Çözüm ve proje dosyalarına gömülü olduğunda, bir Kullanıcı dalı, çatallar veya kopya ve proje dosyalarını sürüm denetiminde olan bir Kullanıcı daldığında, "AuxPath" ve "ProjName" dizeleri otomatik olarak güncellenmez. Çözümün ve proje dosyalarının sürüm denetimindeki doğru konumlarına işaret ettiğinizden emin olmak için, kullanıcıların dizeleri el ile güncelleştirmesi gerekir. Dizelerin donuk olması amaçlıyordu, bu durum her zaman nasıl güncellenmeleri gerektiğini hiç temizlemeyebilir.

@@ -1,5 +1,7 @@
 ---
 title: VisibilityItem öğesi | Microsoft Docs
+description: VisibilityItem öğesi, komutların ve araç çubuklarının statik görünürlüğünü belirler. Girdiler bir komutu veya menüyü ve ilişkili bir komut UI bağlamını belirler.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9129d64e430d661bbdd8f7682e64c93650570211
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 637fea7d203e58c59f85794eeb0f8894eb62e777
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80698156"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863893"
 ---
 # <a name="visibilityitem-element"></a>VisibilityItem öğesi
 `VisibilityItem`Öğesi, komutların ve araç çubuklarının statik görünürlüğünü belirler. Her giriş bir komutu veya menüyü ve ayrıca ilişkili bir komut UI bağlamını tanımlar. Visual Studio, bunları tanımlayan VSPackages 'ları yüklemeden komutları, menüleri ve araç çubuklarını ve bunların görünürlüğünü algılar. IDE, <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection.IsCmdUIContextActive%2A> bir komut UI bağlamının etkin olup olmadığını anlamak için yöntemini kullanır.
@@ -27,7 +29,7 @@ ms.locfileid: "80698156"
 
  `VisibilityItem`Öğe yalnızca komutlar, menüler ve araç çubukları için geçerlidir, gruplar için geçerli değildir. İlişkili bir öğesi olmayan bir öğe, `VisibilityItem` üst menüsü etkin olduğunda görünür olur.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Sözdizimi
 
 ```xml
 <VisibilityItem
@@ -64,7 +66,7 @@ ms.locfileid: "80698156"
 
 ```xml
 <VisibilityConstraints>
-  <VisibilityItem guid="cmdSetGuidMyProductCommands"     id="cmdidAddWidget"
+  <VisibilityItem guid="cmdSetGuidMyProductCommands"     id="cmdidAddWidget"
     context="guidNotViewSourceMode"/>
 </VisibilityConstraints>
 ```

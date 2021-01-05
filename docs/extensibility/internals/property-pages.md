@@ -1,5 +1,7 @@
 ---
 title: Özellik sayfaları | Microsoft Docs
+description: Visual Studio SDK 'da, kullanıcıların proje özelliklerini görüntülemesine ve değiştirmesine izin veren yeni proje türü için özellikler sayfalarıyla çalışma hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ac788f51bcdc52cd39469a272909890333c5016b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5d446e731c08b85c2c903c2414528ac2a7370c26
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80706053"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875538"
 ---
 # <a name="property-pages"></a>Özellik Sayfaları
 Kullanıcılar, özellik sayfalarını kullanarak proje yapılandırmasına bağımlı ve bağımsız özellikleri görüntüleyebilir ve değiştirebilir. **Özellikler** penceresinde veya seçili nesnenin özellik sayfası görünümünü sağlayan nesneler için Çözüm Gezgini araç çubuğunda **Özellik sayfaları** düğmesi etkinleştirilir. Özellik sayfaları, ortam tarafından oluşturulur ve çözümler ve projeler için kullanılabilir. Bununla birlikte, yapılandırma bağımlı özelliklerden oluşan proje öğeleri için de kullanılabilir hale getirilebilir. Bu özellik bir proje içindeki dosyalar doğru bir şekilde derlemek için farklı derleyici anahtarı ayarları gerektirdiğinde kullanılabilir.
@@ -81,4 +83,4 @@ Kullanıcılar, özellik sayfalarını kullanarak proje yapılandırmasına bağ
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsPropertyPage>
 - [Yapılandırma Seçeneklerini Yönetme](../../extensibility/internals/managing-configuration-options.md)
 - [Proje Yapılandırması Nesnesi](../../extensibility/internals/project-configuration-object.md)
-- [Çözüm Yapılandırması](../../extensibility/internals/solution-configuration.md)
+- [Çözüm yapılandırması](../../extensibility/internals/solution-configuration.md)

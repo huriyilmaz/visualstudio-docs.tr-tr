@@ -1,5 +1,7 @@
 ---
 title: Başvuru Eklerken NuGet veya Uzantı SDK Kullanma Karşılaştırması
+description: Bir Visual Studio projesinde başvuruluyorsa, bir NuGet paketi veya yazılım geliştirme seti olarak paketleme yazılımı arasındaki farklar hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 08/02/2019
 ms.topic: conceptual
 author: acangialosi
@@ -7,12 +9,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ad7fc9132647988aee46a2bb07e992505109d33c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 50197eeda1828156113fbbfa507447484618861a
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80702426"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863774"
 ---
 # <a name="nuget-versus-sdk-as-a-project-reference"></a>Proje başvurusu olarak NuGet ile SDK karşılaştırması
 
@@ -26,13 +28,13 @@ Bu makale, geliştiricilerin yazılımlarını bir NuGet paketi olarak veya bir 
 
 Aşağıdaki tablo, bir SDK 'nın başvuru özelliklerini NuGet 'in başvuru özellikleriyle karşılaştırmanıza yardımcı olur.
 
-| Öne çıkan özelliği | SDK desteği | SDK notları | NuGet desteği | NuGet notları |
+| Özellik | SDK desteği | SDK notları | NuGet desteği | NuGet notları |
 | - | - | - |---------------| - |
 | Mekanizma bir varlığa başvurur ve tüm dosya ve işlevler kullanılabilir. | Y | **Başvuru Yöneticisi** iletişim kutusunu kullanarak bir SDK eklersiniz ve geliştirme iş akışı sırasında tüm dosya ve işlevler kullanılabilir. | Y | |
 | MSBuild derlemeleri ve Windows meta veri (*. winmd*) dosyalarını otomatik olarak tüketir. | Y | SDK 'daki başvurular otomatik olarak derleyiciye geçirilir. | Y | |
 | MSBuild,. h veya. lib dosyalarını otomatik olarak kullanır. | Y | *SDKName. props* dosyası, Visual Studio 'nun Visual C++ dizinini nasıl ayarlanacağını ve bu nedenle otomatik *. h* veya *. lib* dosya tüketimi için nasıl yapılacağını söyler. | N | |
 | MSBuild otomatik olarak  *. js* veya *. css* dosyalarını kullanır. | Y | **Çözüm Gezgini**, JavaScript SDK başvuru düğümünü genişleterek tek bir *. js* veya *. css* dosyasını gösterebilir ve ardından `<source include/>` Bu dosyaları kaynak dosyalarına sürükleyerek Etiketler oluşturabilirsiniz. SDK, F5 ve otomatik paket kurulumunu destekler. | Y | |
-| MSBuild, denetimi **araç kutusuna**otomatik olarak ekler. | Y | **Araç kutusu** SDK 'ları kullanabilir ve belirlediğiniz sekmelerde denetimleri gösterebilir. | N | |
+| MSBuild, denetimi **araç kutusuna** otomatik olarak ekler. | Y | **Araç kutusu** SDK 'ları kullanabilir ve belirlediğiniz sekmelerde denetimleri gösterebilir. | N | |
 | Mekanizması, uzantılar (VSıX) için Visual Studio Yükleyicisi destekler. | Y | VSıX SDK paketleri oluşturmak için özel bir bildirime ve mantığa sahiptir | Y | VSıX başka bir kurulum programına katıştırılabilir. |
 | **Nesne tarayıcısı** , başvuruları numaralandırır. | Y | **Nesne tarayıcısı** SDK 'larda başvuruların listesini otomatik olarak alır ve sıralar. | N | |
 | Dosyalar ve bağlantılar otomatik olarak **başvuru Yöneticisi** iletişim kutusuna eklenir (Yardım bağlantıları, vb. otomatik doldurma) | Y | **Başvuru Yöneticisi** iletişim kutusu, yardım BAĞLANTıLARı ve SDK bağımlılıklarının listesi Ile birlikte SDK 'ları otomatik olarak numaralandırır. | N | NuGet kendi **NuGet Paketlerini Yönet** iletişim kutusunu sağlar. |
@@ -42,7 +44,7 @@ Aşağıdaki tablo, bir SDK 'nın başvuru özelliklerini NuGet 'in başvuru öz
 | Yerelleştirilmiş dosyalarda içerik görüntülenir. | Y | SDK 'larda yerelleştirilmiş XML belgeleri, daha iyi bir tasarım zamanı deneyimi için otomatik olarak eklenir. | N | |
 | MSBuild aynı anda bir SDK 'nın birden çok sürümünü kullanmayı destekler. | Y | SDK birden çok sürümü aynı anda kullanmayı destekler. | N | Bu başvuru değildir. Projenizde aynı anda birden fazla NuGet dosyası sürümü olamaz. |
 | Mekanizması, geçerli hedef çerçeveleri, Visual Studio sürümlerini ve proje türlerini belirtmeyi destekler. | Y | **Başvuru Yöneticisi** iletişim kutusu ve **araç kutusu** yalnızca bir projeye uygulanan SDK 'ları gösterir, böylece kullanıcılar uygun SDK 'ları daha kolay seçebilirler. | Y (kısmi) | Özet, hedef çerçevedir. Kullanıcı arabiriminde filtreleme yok. Yükleme sırasında bir hata döndürebilir. |
-| Mekanizması yerel Wınmds için kayıt bilgilerini belirtmeyi destekler. | Y | *SDKManifest.xml*içindeki. winmd dosyası ve. dll dosyası arasında bağıntı belirtebilirsiniz. | N | |
+| Mekanizması yerel Wınmds için kayıt bilgilerini belirtmeyi destekler. | Y | *SDKManifest.xml* içindeki. winmd dosyası ve. dll dosyası arasında bağıntı belirtebilirsiniz. | N | |
 | Mekanizması diğer SDK 'larda bağımlılıkları belirtmeyi destekler. | Y | SDK yalnızca kullanıcıya bildirir; Kullanıcı yine de onları yükleyip el ile başvurmalıdır. | Y | NuGet bunları otomatik olarak çeker; Kullanıcı bilgilendirilmez. |
 | Mekanizması,  [!INCLUDE[win8_appstore_long](../debugger/includes/win8_appstore_long_md.md)] uygulama bildirimi ve çerçeve kimliği gibi kavramlarla tümleştirilir. | Y | SDK, [!INCLUDE[win8_appstore_short](../ide/includes/win8_appstore_short_md.md)] paketleme ve F5 ' de bulunan SDK 'lar ile doğru şekilde çalışması için öğesine özgü kavramları iletmelidir [!INCLUDE[win8_appstore_short](../ide/includes/win8_appstore_short_md.md)] . | N | |
 | Mekanizması, uygulamalar için uygulama hata ayıklama işlem hattı ile tümleşir [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] . | Y | SDK [!INCLUDE[win8_appstore_short](../ide/includes/win8_appstore_short_md.md)] 'nın, paketlenmesi ve F5 'in ' de bulunan SDK 'lar ile düzgün çalışması için özel kavramlara sahip olması gerekir [!INCLUDE[win8_appstore_short](../ide/includes/win8_appstore_short_md.md)] . | Y | NuGet içeriği projenin bir parçası haline gelir. Özel bir F5 değerlendirmesi gerekmez. |
@@ -56,7 +58,7 @@ Aşağıdaki tablo, bir SDK 'nın başvuru özelliklerini NuGet 'in başvuru öz
 | Mekanizması, paket oluşturma ve tüketim için sürekli tümleştirme yapı sunucularıyla tümleştirilir. | Y | SDK, komut satırındaki iade edilme konumunu (SDKReferenceDirectoryRoot özelliği) MSBuild 'e iletmelidir. | Y | |
 | Mekanizması hem kararlı hem de yayın öncesi paket sürümlerini destekler. | Y | SDK, birden çok sürüme başvuru eklemeyi destekler. | Y | |
 | Mekanizması yüklü paketler için otomatik güncelleştirmeyi destekler. | Y | VSıX olarak veya Visual Studio otomatik güncelleştirme 'nin bir parçası olarak gönderilmemişse, SDK otomatik bildirimler sağlar. | Y | |
-| Mekanizması, paket oluşturmak ve kullanmak için tek başına bir *. exe* dosyası içerir. | Y | SDK *MSBuild.exe*içerir. | Y | |
+| Mekanizması, paket oluşturmak ve kullanmak için tek başına bir *. exe* dosyası içerir. | Y | SDK *MSBuild.exe* içerir. | Y | |
 | Paketler sürüm denetimine iade edilebilir. | Y | Belge düğümü dışında bir şey iade edemeyebilirsiniz, bu da Uzantı SDK 'larının iade yapılmadığı anlamına gelir. Uzantı SDK 'sının boyutu büyük olabilir. | Y | |
 | Paketleri oluşturmak ve kullanmak için bir PowerShell arabirimi kullanabilirsiniz. | Y (tüketim), N (oluşturma) | SDK oluşturmak için araç yok. Tüketim, komut satırında MSBuild 'i yürütüyor. | Y | |
 | Hata ayıklama desteği için bir sembol paketi kullanabilirsiniz. | Y | *. Pdb* dosyalarını SDK 'ya düşürürsanız dosyalar otomatik olarak alınır. | Y | |

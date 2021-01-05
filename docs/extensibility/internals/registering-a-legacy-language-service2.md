@@ -1,5 +1,7 @@
 ---
 title: Eski dil Service2 kaydetme | Microsoft Docs
+description: Bu makalede, Visual Studio 'da kullanılabilen çeşitli dil hizmeti seçenekleri için kayıt defteri girişleri listelenmektedir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,22 +14,22 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0a41f3f507579cbd2649e33e81d1368fb5404799
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 08b9e88440fcb7b488e479e4188279d82a526e4c
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88238848"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875189"
 ---
 # <a name="registering-a-legacy-language-service-2"></a>Eski dil hizmeti kaydetme 2
 Aşağıdaki bölümler, ' de kullanılabilen çeşitli dil hizmeti seçenekleri için kayıt defteri girişlerinin listesini sağlar [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
 
- Aşağıdaki kayıt defteri girdileri listesinde, *vs reg Root* HKEY_LOCAL_MACHINE \Software\microsoft\visualstudio \\ *X. y*' ye eşittir; burada *X. Y* [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] sürüm numarasıdır.
+ Aşağıdaki kayıt defteri girdileri listesinde, *vs reg Root* HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\ *x. y* değerine eşittir; burada *x. y* [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] sürüm numarasıdır.
 
 ## <a name="registry-entries-for-language-service-options"></a>Dil hizmeti seçenekleri için kayıt defteri girişleri
  *Vs reg root*\ Languages\language Services \\ *dil adı* anahtarı aşağıdaki değerleri içerebilir.
 
-|Ad|Tür|Aralık|Description|
+|Ad|Tür|Aralık|Açıklama|
 |----------|----------|-----------|-----------------|
 |(Varsayılan)|REG_SZ|*\<GUID>*|Dil hizmetinin GUID 'SI.|
 |Dil dili|REG_DWORD|0x0-0xFFFF|Dilin yerelleştirilmiş metin adı için dize kaynak tanımlayıcısı (resd).|
@@ -38,9 +40,9 @@ Aşağıdaki bölümler, ' de kullanılabilen çeşitli dil hizmeti seçenekleri
 |ShowHotURLs|REG_DWORD|0-1|Kullanıcının URL 'ye tıklayıp tıklaamayacağını belirtir.|
 |Varsayılan değer, etkin olmayan URL 'Ler|REG_DWORD|0-1|**Seçenekler** iletişim kutusunda **tek tıklama URL 'si gezintisini etkinleştir** seçeneğinin başlangıç ayarını belirtir.|
 |Defaulttoınsertspaces|REG_DWORD|0-1|Dil hizmetinin varsayılan sekme seçeneği olarak "boşluk Ekle" olup olmadığını belirtir.|
-|ShowDropdownBarOption|REG_DWORD|0-1|**Gezinti çubuğunu**gösteren veya gizleyen **Seçenekler** iletişim kutusunda **Gezinti çubuğu** seçeneğini sunar veya devre dışı bırakır.|
+|ShowDropdownBarOption|REG_DWORD|0-1|**Gezinti çubuğunu** gösteren veya gizleyen **Seçenekler** iletişim kutusunda **Gezinti çubuğu** seçeneğini sunar veya devre dışı bırakır.|
 |Yalnızca tek kod penceresi|REG_DWORD|0-1|Dil hizmeti için **pencere** menüsündeki **yeni pencere** seçeneğini devre dışı bırakır veya devre dışı bırakır.|
-|EnableAdvancedMembersOption|REG_DWORD|0-1|**Gelişmiş üyeleri Gizle**Için bir **seçenek** iletişim kutusu ayarını etkinleştirilir veya devre dışı bırakır.|
+|EnableAdvancedMembersOption|REG_DWORD|0-1|**Gelişmiş üyeleri Gizle** Için bir **seçenek** iletişim kutusu ayarını etkinleştirilir veya devre dışı bırakır.|
 |Destek CF_HTML|REG_DWORD|0-1|Düzenleyicinin HTML verilerinin kopyalanmasını ve yapıştırmasını etkinleştirilip etkinleştirilmeyeceğini belirtir.|
 |EnableLineNumbersOption|REG_DWORD|0-1|**Seçenekler** Iletişim kutusundaki **satır numaraları** seçeneklerinin bir dil hizmeti için etkinleştirilip etkinleştirilmeyeceğini belirtir.|
 |HideAdvancedMembersByDefault|REG_DWORD|0-1|Özel alanlar gibi gelişmiş üyelerin tamamlanma listelerinde gizli olup olmadığını belirtir.|
@@ -64,7 +66,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\
 ## <a name="registry-entries-for-debugger-languages-options"></a>Hata ayıklayıcı dilleri için kayıt defteri girişleri seçenekleri
  *Vs reg root*\Languages\language Services \\ *dil adı*\debugger dilleri \\ *GUID*\ Key aşağıdaki değerleri içerebilir.
 
-|Ad|Tür|Aralık|Description|
+|Ad|Tür|Aralık|Açıklama|
 |----------|----------|-----------|-----------------|
 |(Varsayılan)|REG_SZ|metin|Varsayılan değer dilin adını belgelemek için kullanılabilir. Bu anahtarın adı, \Ad7metrics\expression değerlendirici içinde karşılık gelen bir girişe sahip bir ifade değerlendirici GUID 'sidir *\<VS Reg Root>* .|
 
@@ -83,7 +85,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\
 ## <a name="registry-entries-for-editor-tools-options"></a>Düzenleyici araçları seçenekleri için kayıt defteri girişleri
  Özellik sayfaları ve özellik düğümleri için Editoraraçları seçenekler anahtarının altına kayıt defteri anahtarları ekleyebilirsiniz. Bu anahtarlar ve değerleri, dil hizmetini yapılandırmak için kullanılan **Seçenekler** iletişim kutusundaki ( **Araçlar** menüsünde) özellik sayfalarını belirler. Aşağıdaki örnekte, *sayfa adı* bir özellik sayfasının adıdır ve *düğüm adı* , **Seçenekler** iletişim kutusundaki ağaçtaki bir düğümün adıdır. Sayfa girişi ve düğüm girdisi ayrı olarak belirtilmelidir.
 
-|Ad|Tür|Aralık|Description|
+|Ad|Tür|Aralık|Açıklama|
 |----------|----------|-----------|-----------------|
 |(Varsayılan)|REG_SZ|RESID|Bu seçenek sayfasının yerelleştirilmiş görünen adı. Ad, `nnn` `nnn` belirtilen VSPackage 'ın uydu dll 'sinde bir DIZE kaynak kimliği olan harflerden oluşan bir metin veya # olabilir.|
 |Paket|REG_SZ|*'INI*|Bu seçenekler sayfasını uygulayan VSPackage GUID 'ı.|
@@ -117,7 +119,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\
 ## <a name="registry-entries-for-file-name-extension-options"></a>Dosya adı uzantısı seçenekleri için kayıt defteri girişleri
  Dosya uzantısının girdisi, ". myext" gibi önde gelen süreyi içermelidir.
 
-|Ad|Tür|Aralık|Description|
+|Ad|Tür|Aralık|Açıklama|
 |----------|----------|-----------|-----------------|
 |(Varsayılan)|REG_SZ|*'INI*|Bu dosya adı uzantısı türü için varsayılan dil hizmeti için hizmet GUID 'SI.|
 
@@ -134,7 +136,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\
 ## <a name="registry-entries-for-editor-options"></a>Düzenleyici seçenekleri için kayıt defteri girişleri
  *Vs reg root*\düzenleyiciler anahtarı aşağıdaki değerleri içerebilir:
 
-|Ad|Tür|Aralık|Description|
+|Ad|Tür|Aralık|Açıklama|
 |----------|----------|-----------|-----------------|
 |(Varsayılan)|REG_SZ|""|Kullanılmayan belgelerinizi buraya yerleştirebilirsiniz.|
 |DefaultToolboxTab|REG_SZ|""|Düzenleyici etkin olduğunda varsayılan hale getirmek için araç kutusu sekmesinin adı.|
@@ -159,7 +161,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\
 ## <a name="registry-entries-for-logical-view-options"></a>Mantıksal Görünüm seçenekleri için kayıt defteri girişleri
  *Vs reg root*\Düzenleyiciler \\ *Düzenleyicisi GUI>* \logicalviews anahtarı aşağıdaki değerleri içerebilir.
 
-|Ad|Tür|Aralık|Description|
+|Ad|Tür|Aralık|Açıklama|
 |----------|----------|-----------|-----------------|
 |(Varsayılan)|REG_SZ||Kullanılmıyor.|
 |*\<GUID>*|REG_SZ|""|Desteklenen mantıksal görünümlere yönelik anahtar. İhtiyaç duyduğunuz kadar çok sayıda sahip olabilirsiniz. Kayıt defteri girişinin adı, her zaman boş bir dize olan değer değil önemli şeydir.|
@@ -181,12 +183,12 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\
 ## <a name="registry-entries-for-editor-extension-options"></a>Düzenleyici uzantısı seçenekleri için kayıt defteri girişleri
  *Vs reg root*\Düzenleyiciler \\ *Düzenleyicisi GUID*\Extensions anahtarı aşağıdaki değerleri içerebilir. Dosya adı uzantısı, önde gelen dönemi içermez.
 
-|Ad|Tür|Aralık|Description|
+|Ad|Tür|Aralık|Açıklama|
 |----------|----------|-----------|-----------------|
 |(Varsayılan)|REG_SZ||Kullanılmıyor.|
 |*\<ext>*|REG_DWORD|0-0xFFFFFFFF|Uzantıların göreli önceliği. İki veya daha fazla dil aynı uzantıyı paylaşıyorsa, daha yüksek öncelikli dil seçilir.|
 
- Ayrıca, geçerli kullanıcının bir düzenleyici için varsayılan seçimi HKEY_Current_User \Software\Microsoft\VisualStudio \\ *X. Y*\ varsayılan düzenleyiciler EXT ' da depolanır \\ *ext*. Seçilen dil hizmetinin GUID 'SI özel girişte. Bu, geçerli kullanıcı için öncelik alır.
+ Ayrıca, geçerli kullanıcının bir düzenleyici için varsayılan seçimi HKEY_Current_User \Software\Microsoft\VisualStudio \\ *X. Y*\ varsayılan düzenleyiciler EXT ' da depolanır \\ . Seçilen dil hizmetinin GUID 'SI özel girişte. Bu, geçerli kullanıcı için öncelik alır.
 
 ### <a name="example"></a>Örnek
 
@@ -207,7 +209,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0\
 
  Bu kayıt defteri girişlerine sınıfı aracılığıyla erişilir <xref:Microsoft.VisualStudio.Package.LanguagePreferences> .
 
-|Ad|Tür|Aralık|Description|
+|Ad|Tür|Aralık|Açıklama|
 |----------|----------|-----------|-----------------|
 |CodeSense|REG_DWORD|0-1|IntelliSense işlemleri için destek.|
 |Matchparantezleri|REG_DWORD|0-1|Parantez, parantezler ve köşeli ayraç gibi eşleşen dil çiftleri için destek.|

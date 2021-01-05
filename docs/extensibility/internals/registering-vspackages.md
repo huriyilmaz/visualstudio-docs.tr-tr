@@ -1,5 +1,7 @@
 ---
 title: VSPackages 'yi kaydetme | Microsoft Docs
+description: Bir. pkgdef dosyası, aksi durumda sistem kayıt defterine eklenecek bilgiler içerir. Visual Studio 'Nun VSPackage 'ı belirlemek/bulmak için. pkgdef dosyalarını nasıl kullandığını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b40793a5ab317b6a467e55df13302f19cec82640
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ae4d7ae70766b7e0d2d8eedb5d79d97159839146
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705740"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875121"
 ---
 # <a name="registering-vspackages"></a>VSPackage’ları Kaydetme
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , bir VSPackage 'ı belirlemek ve bulmak için. pkgdef dosyalarını kullanır. Bir. pkgdef dosyası, aksi durumda sistem kayıt defterine eklenecek tüm kayıt bilgilerini içerir. Yönetilen VSPackages, kaynak koda öznitelikler eklenerek ve sonra bir. pkgdef dosyası oluşturmak için elde edilen derlemede [CreatePkgDef yardımcı programı](../../extensibility/internals/createpkgdef-utility.md) çalıştırılarak kaydedilir.

@@ -1,5 +1,7 @@
 ---
 title: VSPackages için Otomasyon sağlama | Microsoft Docs
+description: VSPackage 'a özgü nesneler uygulayarak ve standart otomasyon nesnelerini uygulayarak VSPackages için nasıl Otomasyon sağlayacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +13,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6364f9cbaf3409e076eeb77365e5d793c7be96cb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 939de72d672b750d2f2fc61a6c412368df5523d8
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705958"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875408"
 ---
 # <a name="providing-automation-for-vspackages"></a>VSPackage’lar için Otomasyon Sağlama
 VSPackages için Otomasyon sağlamanın iki ana yolu vardır: VSPackage 'a özgü nesneler uygulayarak ve standart otomasyon nesnelerini uygulayarak. Genellikle, bu, ortamın otomasyon modelini genişletmek için birlikte kullanılır.
 
-## <a name="vspackage-specific-objects"></a>VSPackage 'a özgü nesneler
+## <a name="vspackage-specific-objects"></a>VSPackage-Specific nesneleri
  Otomasyon modeli içindeki belirli konumlar, VSPackage için benzersiz olan Otomasyon nesneleri sağlamanızı gerektirir. Örneğin, yeni projeler yalnızca VSPackage 'un sağladığı ayrı nesneler gerektirir. Bu nesnelerin adları kayıt defterine girilir ve ortam nesnesine çağrılar aracılığıyla elde edilir `DTE` .
 
  Bir Otomasyon tüketicisi standart bir nesnenin Object özelliği aracılığıyla sağlanmış nesneyi kullandığında VSPackage 'a özgü nesneler de elde edilebilir. Örneğin, standart nesne, `Window` `Object` genellikle özelliği olarak bilinen bir özelliğine sahiptir `Windows.Object` . Tüketiciler `Window.Object` VSPackage 'da uygulanan bir pencerede öğesini çağırdıklarında, kendi tasarımınızın belirli bir Otomasyon nesnesini geri geçitirsiniz.

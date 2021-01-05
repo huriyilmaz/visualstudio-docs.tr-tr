@@ -1,5 +1,7 @@
 ---
 title: Proje ve öğe şablonlarını kaydetme | Microsoft Docs
+description: Yeni Proje Ekle ve yeni öğe Ekle iletişim kutularında nelerin gösterileceğini belirlemek için, Visual Studio 'Nun proje türleriniz için kayıt bilgilerini nasıl kullandığını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b64504c39b1fc3c4a82530b265cfd0e96832b4f2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 999b435719113883201b7619daca9a84d095294e
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705820"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875277"
 ---
 # <a name="registering-project-and-item-templates"></a>Proje ve Öğe Şablonlarını Kaydetme
 Proje türleri, proje ve proje öğesi şablonlarının bulunduğu dizinleri kaydetmelidir. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , **Yeni Proje Ekle** ve **Yeni öğe Ekle** iletişim kutularında nelerin gösterileceğini belirlemek için proje türleriniz ile ilişkili kayıt bilgilerini kullanır.
@@ -27,7 +29,7 @@ Proje türleri, proje ve proje öğesi şablonlarının bulunduğu dizinleri kay
  Şablonlar hakkında daha fazla bilgi için bkz. [Proje ve proje öğesi şablonları ekleme](../../extensibility/internals/adding-project-and-project-item-templates.md).
 
 ## <a name="registry-entries-for-projects"></a>Projeler için kayıt defteri girişleri
- Aşağıdaki örneklerde HKEY_LOCAL_MACHINE \software\microsoft\visualstudio \\ < *Sürüm*> altında kayıt defteri girişleri gösterilmektedir. Eşlik eden tablolar örneklerde kullanılan öğeleri açıklar.
+ Aşağıdaki örneklerde HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\\ < *Sürüm*> altında kayıt defteri girişleri gösterilmektedir. Eşlik eden tablolar örneklerde kullanılan öğeleri açıklar.
 
 ```
 [Projects\{ProjectGUID}]
@@ -37,7 +39,7 @@ Proje türleri, proje ve proje öğesi şablonlarının bulunduğu dizinleri kay
 "ProjectTemplatesDir"="C:\\MyProduct\\MyProjectTemplates"
 ```
 
-|Ad|Tür|Description|
+|Ad|Tür|Açıklama|
 |----------|----------|-----------------|
 |@|REG_SZ|Bu türden projelerin varsayılan adı.|
 |DisplayName|REG_SZ|Paketler altında kayıtlı olan uydu DLL 'sinden alınacak adın kaynak KIMLIĞI.|
@@ -55,7 +57,7 @@ Proje türleri, proje ve proje öğesi şablonlarının bulunduğu dizinleri kay
 "SortPriority"=dword:00000064
 ```
 
-| Ad | Tür | Description |
+| Ad | Tür | Açıklama |
 |--------------------------|-----------| - |
 | @ | REG_SZ | Öğe şablonları eklemek için kaynak KIMLIĞI. |
 | Templates dizini | REG_SZ | **Yeni öğe Ekle** sihirbazının iletişim kutusunda görünen proje öğelerinin yolu. |
@@ -67,7 +69,7 @@ Proje türleri, proje ve proje öğesi şablonlarının bulunduğu dizinleri kay
 
  **Visual C# dosyaları ( \* . cs, \* . resx, \* . Settings, \* . xsd, \* . wsdl); \* . CS, \* . resx, \* . Settings, \* . xsd, \* . wsdl)**
 
- Birden çok filtrenin kaydedilmesini desteklemek için, her bir filtre HKEY_LOCAL_MACHINE \software\microsoft\visualstudio \\ < *sürümü*> \projects \\ { \<*ProjectGUID*> } \filters \\ < *AltAnahtar*> altında kendi alt anahtarına kaydedilir. Alt anahtar adı rastgele; [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] alt anahtarın adını yoksayar ve yalnızca kendi değerlerini kullanır.
+ Birden çok filtrenin kaydedilmesini desteklemek için, her bir filtre HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\\ < *Sürüm*> \projects \\ { \<*ProjectGUID*> } \filters \\ < *AltAnahtar*> altında kendi alt anahtarına kaydedilir. Alt anahtar adı rastgele; [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] alt anahtarın adını yoksayar ve yalnızca kendi değerlerini kullanır.
 
  Aşağıdaki tabloda gösterilen bayraklar ayarlanarak bir filtrenin kullanıldığı bağlamların denetimini yapabilirsiniz. Bir filtrenin bayrak ayarlanmamışsa, **Varolan öğe Ekle** iletişim kutusunda ve **Dosya Aç** iletişim kutusunda ortak filtrelerden sonra listelenir, ancak **dosyalarda bul** iletişim kutusunda kullanılmaz.
 
@@ -82,7 +84,7 @@ Proje türleri, proje ve proje öğesi şablonlarının bulunduğu dizinleri kay
 "SortPriority"=dword:00000064
 ```
 
-|Ad|Tür|Description|
+|Ad|Tür|Açıklama|
 |----------|----------|-----------------|
 |Commonfindfilesfiltresi|REG_DWORD|**Dosyalarda bul** iletişim kutusunda ortak filtrelerden birine filtre uygular. Ortak filtreler, filtreler ortak olarak işaretlenmeden önce filtre listesinde listelenir.|
 |Commonopenfilesfiltresi|REG_DWORD|**Dosya Aç** iletişim kutusunda ortak filtrelerden birine filtre uygular. Ortak filtreler, filtreler ortak olarak işaretlenmeden önce filtre listesinde listelenir.|

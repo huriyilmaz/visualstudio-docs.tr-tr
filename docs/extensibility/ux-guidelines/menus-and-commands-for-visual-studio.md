@@ -1,5 +1,7 @@
 ---
 title: Visual Studio için menüler ve komutlar | Microsoft Docs
+description: Visual Studio için yeni özellikler oluşturduğunuzda, komut çubuklarının Kullanıcı arabiriminde esneklik için nasıl izin sağladığını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 0a1ed675-2bd1-4603-ba3a-f40dfb5cfb69
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c1f22b7ac4377b600208c079b6af1eff7fc3cbfc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7abb0249efc1a8da5d7e65572777e192e72c25e7
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80698380"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863535"
 ---
 # <a name="menus-and-commands-for-visual-studio"></a>Visual Studio İçin Menüler ve Komutlar
 ## <a name="command-usage"></a>Komut kullanımı
@@ -49,13 +51,13 @@ ms.locfileid: "80698380"
  Komutları kullanıcının odağının alanına yakın bir yere yerleştirmek yararlı olur. Bunu yapmanın bir yolu, araç pencerenizin veya belge düzenleyicisinin en üstünde gömülü bir araç çubuğu oluşturmaktır. Araç çubuğuna yerleştirilmiş komutlar, pencere içindeki içerik bölgesine özgü olmalıdır. Bu araç çubuklarında paylaşılan komutları çoğaltmayın. Örneğin, gömülü bir araç çubuğuna hiçbir yerde "Kaydet" simgesi yerleştirmeyin.
 
 ### <a name="content-and-command-visibility"></a>İçerik ve komut görünürlüğü
- Aşağıdaki kapsamlarda komutlar var: **ortam**, **hiyerarşi**ve **belge**. Her kapsamı, komut yerleşimine güven sağlamak için öğrenin.
+ Aşağıdaki kapsamlarda komutlar var: **ortam**, **hiyerarşi** ve **belge**. Her kapsamı, komut yerleşimine güven sağlamak için öğrenin.
 
- **Ortam** kapsamındaki komutlar birincil bağlam oluştururlar ve birden çok bağlam arasında paylaşılır. Belgeler ve araç pencerelerinin görünürlüğünü veya düzenlemesini değiştirir. Ortam kapsamındaki komutlar arasında **Yeni proje**, **sunucuya bağlanma**, **işlem iliştirme**, **kesme**, **kopyalama**, **Yapıştırma**, **bulma**, **Seçenekler**, **Özelleştirme**, **yeni pencere**ve **Yardım görüntüleme**.
+ **Ortam** kapsamındaki komutlar birincil bağlam oluştururlar ve birden çok bağlam arasında paylaşılır. Belgeler ve araç pencerelerinin görünürlüğünü veya düzenlemesini değiştirir. Ortam kapsamındaki komutlar arasında **Yeni proje**, **sunucuya bağlanma**, **işlem iliştirme**, **kesme**, **kopyalama**, **Yapıştırma**, **bulma**, **Seçenekler**, **Özelleştirme**, **yeni pencere** ve **Yardım görüntüleme**.
 
- **Hiyerarşi** kapsamındaki komutlar, Visual Studio 'da **Proje**, **Takım**ve **veri**dahil hiyerarşileri yönetir. Bunlar, bir projenin alt içeriğiyle ilgilidir; Örneğin, **hata ayıklama**, **derleme**, **Test**, **mimari**veya **analiz**. Hiyerarşi kapsamındaki komutlar arasında **Yeni öğe ekleme**, **Yeni sorgu**, **proje ayarları**, **Yeni veri kaynağı ekleme**, **performansı Başlatma Sihirbazı**ve **Yeni Diyagram**bulunur.
+ **Hiyerarşi** kapsamındaki komutlar, Visual Studio 'da **Proje**, **Takım** ve **veri** dahil hiyerarşileri yönetir. Bunlar, bir projenin alt içeriğiyle ilgilidir; Örneğin, **hata ayıklama**, **derleme**, **Test**, **mimari** veya **analiz**. Hiyerarşi kapsamındaki komutlar arasında **Yeni öğe ekleme**, **Yeni sorgu**, **proje ayarları**, **Yeni veri kaynağı ekleme**, **performansı Başlatma Sihirbazı** ve **Yeni Diyagram** bulunur.
 
- **Belge** kapsamındaki komutlar, kod, tasarım veya iş öğesi sorgusu (WIQ) gibi bir belgenin içeriğine göre davranır. Ayrıca araç penceresinin görünümü üzerinde çalışır veya başka bir araç penceresine özgü değildir. Belge kapsamı komutları Ayrıca, **projeden kaldır**gibi kendi hiyerarşilerine özgü dosya nesnelerine de davranır. Belge kapsamındaki komutlar arasında **yeniden düzenleme >**, **iş öğesinin kopyasını oluştur**, **Tümünü Genişlet**, **Tümünü Daralt**ve **Kullanıcı oluştur görevi**.
+ **Belge** kapsamındaki komutlar, kod, tasarım veya iş öğesi sorgusu (WIQ) gibi bir belgenin içeriğine göre davranır. Ayrıca araç penceresinin görünümü üzerinde çalışır veya başka bir araç penceresine özgü değildir. Belge kapsamı komutları Ayrıca, **projeden kaldır** gibi kendi hiyerarşilerine özgü dosya nesnelerine de davranır. Belge kapsamındaki komutlar arasında **yeniden düzenleme >**, **iş öğesinin kopyasını oluştur**, **Tümünü Genişlet**, **Tümünü Daralt** ve **Kullanıcı oluştur görevi**.
 
 ### <a name="command-placement-decisions"></a>Komut yerleştirme kararları
  Bir komut oluşturmaya karar verdikten sonra, uygun yerleştirmesini ve klavye kısayolunun oluşturulup oluşturulmayacağını belirlemeniz gerekir. Komutun nereye yerleştirileceğini belirlemek için bu karar yolunu izleyin:
@@ -101,7 +103,7 @@ ms.locfileid: "80698380"
 
 - Veriler
 
-- Test etme
+- Test
 
 - Mimari
 
@@ -257,10 +259,10 @@ ms.locfileid: "80698380"
 
 - **Erişim anahtarları** (Hızlandırıcılar olarak da bilinir), komut için menüler ve iletişim kutusu kullanıcı arabirimindeki her bir etikete aracılığıyla klavye erişimine izin verir. Erişim tuşları çoğunlukla erişilebilirlik amaçlıdır, tüm menülere ve çoğu iletişim kutusu denetimine atanır, bu, yalnızca geçerli pencereyi etkiler ve yerelleştirilir.
 
-- **Kısayol tuşları** çoğunlukla Control (Ctrl) ve function (fn) anahtar dizilerini kullanır. Bunlar, gelişmiş kullanıcılar için daha fazla tasarlanırlar ve verimliliğine yardımcı olur. Bunlar yalnızca en sık kullanılan komutlara atanır ve ana menüyü atlayarak hızlı erişime izin verir. Kısayol tuşlarının yeniden başlatılması amaçlanmıştır ve bu nedenle, profil düzeni ile tutarlı bir şekilde atanması gerekir. Kısayol tuş düzenleri profilden profile farklılık gösterebilir. Kullanıcı, kısayol tuşlarını **araçlar > seçenekler > klavyeden**özelleştirebilir.
+- **Kısayol tuşları** çoğunlukla Control (Ctrl) ve function (fn) anahtar dizilerini kullanır. Bunlar, gelişmiş kullanıcılar için daha fazla tasarlanırlar ve verimliliğine yardımcı olur. Bunlar yalnızca en sık kullanılan komutlara atanır ve ana menüyü atlayarak hızlı erişime izin verir. Kısayol tuşlarının yeniden başlatılması amaçlanmıştır ve bu nedenle, profil düzeni ile tutarlı bir şekilde atanması gerekir. Kısayol tuş düzenleri profilden profile farklılık gösterebilir. Kullanıcı, kısayol tuşlarını **araçlar > seçenekler > klavyeden** özelleştirebilir.
 
 ### <a name="assigning-access-keys"></a>Erişim anahtarları atanıyor
- Erişim tuşları alt ve alfasayısal anahtarlardan oluşur. Her menü öğesine özel durum olmadan bir erişim anahtarı atayın. Erişim anahtarları atamak için Windows ve ortak kuralları izleyin. Örneğin, **> yeni dosya** için erişim anahtarı her zaman **alt, F, N**olmalıdır.
+ Erişim tuşları alt ve alfasayısal anahtarlardan oluşur. Her menü öğesine özel durum olmadan bir erişim anahtarı atayın. Erişim anahtarları atamak için Windows ve ortak kuralları izleyin. Örneğin, **> yeni dosya** için erişim anahtarı her zaman **alt, F, N** olmalıdır.
 
  ' I ' (büyük veya küçük harf) veya küçük harf ' l ' gibi tek pikselli harfler kullanmayın ve bunları ayırt etmek zor olacak şekilde harflerin (g, j, p, q ve y) karakterlerini kullanmaktan kaçının.
 

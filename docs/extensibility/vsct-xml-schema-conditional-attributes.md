@@ -1,5 +1,7 @@
 ---
 title: VSCT XML şeması Koşullu öznitelikleri | Microsoft Docs
+description: VSCT XML şema listelerine ve öğelerine koşullu öznitelikler uygulamayı öğrenin. Öznitelikler doğru veya yanlış olarak değerlendirilir ve sonuçta elde edilen çıktıyı kontrol edin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f2b1fb3ee1b2cd396f25ec5591a585f8d87648d0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e5f9f51e9380585d4191c5969d96fbb3a93ea42a
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80697940"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863728"
 ---
 # <a name="vsct-xml-schema-conditional-attributes"></a>VSCT XML şeması Koşullu öznitelikleri
 Koşullu öznitelikleri tüm listelerine ve öğelere uygulayabilirsiniz. Mantıksal işleçler ve sembol genişletme ifadeleri true veya false olarak değerlendirilir. True ise, ilişkili liste veya öğe ortaya çıkan çıktıya dahil edilir.

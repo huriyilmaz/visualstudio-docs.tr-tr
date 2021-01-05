@@ -1,5 +1,7 @@
 ---
 title: Kaynak denetimi yapılandırma ayrıntıları | Microsoft Docs
+description: Visual Studio 'da, proje sisteminizin veya düzenleyicinizin izin istemek üzere yapılandırılmasını içeren bir proje türü için kaynak denetimi uygulama hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7cf4a5c55e8093e5dcd6406cde1c60f642188495
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: efed4592bfa0b697d66f377430cc5998d3e9e5d3
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705290"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875511"
 ---
 # <a name="source-control-configuration-details"></a>Kaynak Denetimi Yapılandırma Ayrıntıları
 Kaynak denetimi uygulamak için, aşağıdakileri yapmak üzere proje sisteminizi veya düzenleyiciyi doğru şekilde yapılandırmanız gerekir:

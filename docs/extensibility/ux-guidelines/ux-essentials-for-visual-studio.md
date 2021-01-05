@@ -1,5 +1,7 @@
 ---
 title: Visual Studio için UX Essentials | Microsoft Docs
+description: Visual Studio için geliştirirsiniz ve ekran çözünürlüğü hakkında bilgi de dahil olmak üzere, bu kullanıcı deneyimi için en iyi uygulamaları gözden geçirin.
+ms.custom: SEO-VS-2020
 ms.date: 04/26/2017
 ms.topic: conceptual
 ms.assetid: a793cf7a-f230-43ce-88d0-fa5d6f1aa9c7
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c6c329eda477d77ab73be2ad913ac18d67ff3c08
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 616837c358c804198818df659cb7b7ee76716305
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80698337"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97864052"
 ---
 # <a name="ux-essentials-for-visual-studio"></a>Visual Studio İçin UX Temel Bileşenleri
 
@@ -59,7 +61,7 @@ ms.locfileid: "80698337"
 
 - Visual Studio için hedef çözümleme, **1366x768**' dir. Bu, *iyi* bir kullanıcı deneyimi taahhüdünü taahhüt eden en düşük çözünürlüğünüz.
 
-- İlk iletişim kutusu yüksekliği **700 pikselden daha küçük**olmalıdır, bu nedenle IDE çerçevesinin en düşük çözünürlüğüne 96 DPI ile sığar.
+- İlk iletişim kutusu yüksekliği **700 pikselden daha küçük** olmalıdır, bu nedenle IDE çerçevesinin en düşük çözünürlüğüne 96 DPI ile sığar.
 
 ### <a name="high-density-displays"></a>Yüksek yoğunluklu ekranlar
  Visual Studio 'daki Kullanıcı arabirimi, Windows 'un şu kutudan birini desteklediği tüm DPı ölçeklendirme faktörlerinde iyi çalışmalıdır: %150, 200% ve %250.

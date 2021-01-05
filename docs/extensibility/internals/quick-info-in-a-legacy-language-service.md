@@ -1,5 +1,7 @@
 ---
 title: Eski dil hizmetinde hızlı bilgi | Microsoft Docs
+description: Bir tanımlayıcı hakkında bilgi görüntülemek için IntelliSense hızlı bilgi işlem desteği hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1d070c607313b406f036a5b6f071eaa371070408
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 255022c2722104d3790d1c417eee644730ddc1e8
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705939"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875082"
 ---
 # <a name="quick-info-in-a-legacy-language-service"></a>Eski Dil Hizmetinde Hızlı Bilgiler
 **IntelliSense hızlı** bilgi, Kullanıcı giriş işaretini tanımlayıcıya **yerleştirdikçe veya** fare imlecini tanımlayıcı üzerinde tuttuğunda, kaynaktaki bir tanımlayıcı hakkındaki bilgileri gösterir. Bu, bir araç ipucunun tanımlayıcı hakkında bilgi ile görünmesine neden olur. Bu bilgiler genellikle tanımlayıcı türünden oluşur. Hata ayıklama altyapısı etkin olduğunda, bu bilgiler geçerli değeri içerebilir. Hata ayıklama altyapısı, yalnızca tanımlayıcıları işlerken, ifade değerleri sağlar.

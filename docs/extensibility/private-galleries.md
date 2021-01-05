@@ -1,5 +1,7 @@
 ---
 title: Özel Galeriler | Microsoft Docs
+description: Visual Studio SDK 'da geliştirerek yönettiğiniz denetimleri, şablonları ve araçları özel bir galeri 'ye göndererek nasıl paylaşacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,14 +13,14 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: afd1d79d7f1846e60386d2a9478466bf7eae72e4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1ec7390acf753af20bc0edbe20194ba17c2d9d80
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "81444654"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863506"
 ---
-# <a name="private-galleries"></a>Özel Galeriler
+# <a name="private-galleries"></a>Özel galeriler
 Yönettiğiniz denetimleri, şablonları ve araçları, kuruluşunuz için intranetteki *özel bir galeride* , aşağıdaki gibi paylaşabilirsiniz:
 
 - İntranetinizdeki uygun şekilde ile yapılandırılmış bir merkezi konuma (depoya) bir atom (RSS) akışı oluşturun. Daha fazla bilgi için bkz. [nasıl yapılır: özel galeri Için Atom akışı oluşturma](../extensibility/how-to-create-an-atom-feed-for-a-private-gallery.md).
@@ -51,7 +53,7 @@ Yönettiğiniz denetimleri, şablonları ve araçları, kuruluşunuz için intra
 
 ```
 [$RootKey$\ExtensionManager\Repositories\{UniqueGUID}]
-@={URI}  (REG_SZ)
+@={URI}  (REG_SZ)
 Disabled=0 | 1 (DWORD)
 Priority=0 (highest priority) ... MaxInt (lowest priority) (DWORD) (uint)
 Protocol=Atom|Sharepoint (REG_SZ)
@@ -85,7 +87,7 @@ DisplayNamePackageGuid={GUID} (REG_SZ)
 
 1. Menü çubuğunda **Araçlar**  >  **Uzantılar ve güncelleştirmeler**' i seçin.
 
-2. Sol bölmede, **güncelleştirmeler**' i seçin ve sonra **deponuzu**seçin.
+2. Sol bölmede, **güncelleştirmeler**' i seçin ve sonra **deponuzu** seçin.
 
 3. Sağ bölmede bir uzantı seçin ve ardından **Güncelleştir** düğmesini seçin.
 

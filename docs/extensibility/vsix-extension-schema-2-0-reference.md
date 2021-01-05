@@ -1,5 +1,7 @@
 ---
 title: VSıX uzantı Şeması 2,0 başvurusu | Microsoft Docs
+description: VSIX uzantı Şeması 2,0, bir VSIX paketinin içeriğini açıklayan bir VSıX dağıtım bildirim dosyası için dosya biçimini tanımlar.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 78e260c62d67afc10fea25d52169c48b64c82f72
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b2edd0349555380f6d98d24f7a40c22e48797d12
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80697924"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863756"
 ---
 # <a name="vsix-extension-schema-20-reference"></a>VSıX uzantı Şeması 2,0 başvurusu
 VSıX dağıtımı bildirim dosyası bir VSıX paketinin içeriğini açıklar. Dosya biçimi bir şemaya tabidir. Bu şemanın sürüm 2,0, özel türlerin ve özniteliklerin eklenmesini destekler.  Bildirimin şeması genişletilebilir. Bildirim yükleyicisi, anladığı XML öğelerini ve özniteliklerini yoksayar.
@@ -49,7 +51,7 @@ VSıX dağıtımı bildirim dosyası bir VSıX paketinin içeriğini açıklar. 
 
   - `Version` -Bu paketin ve içeriğinin sürümünü tanımlar. Bu öznitelik CLR derleme sürümü oluşturma biçimini izler: Ana. Ikincil. derleme. Düzeltme (1.2.40308.00). Daha yüksek sürüm numarasına sahip bir paket, paket için güncelleştirmeler olarak değerlendirilir ve var olan yüklü sürümü üzerine yüklenebilir.
 
-  - `Language` -Bu öznitelik, paket için varsayılan dildir ve bu bildirimdeki metin verilerine karşılık gelir. Bu öznitelik, kaynak derlemeleri için CLR yerel ayar kod kuralına uyar, örneğin: en-US, en, fr-fr. `neutral`Visual Studio 'nun herhangi bir sürümünde çalışacak dilden bağımsız bir uzantı bildirmek için öğesini belirtebilirsiniz. Varsayılan değer: `neutral`.
+  - `Language` -Bu öznitelik, paket için varsayılan dildir ve bu bildirimdeki metin verilerine karşılık gelir. Bu öznitelik, kaynak derlemeleri için CLR yerel ayar kod kuralına uyar, örneğin: en-US, en, fr-fr. `neutral`Visual Studio 'nun herhangi bir sürümünde çalışacak dilden bağımsız bir uzantı bildirmek için öğesini belirtebilirsiniz. `neutral` varsayılan değerdir.
 
   - `Publisher` -Bu öznitelik, bu paketin yayımcısını bir şirket veya tek bir ad olarak tanımlar. `Publisher`Öznitelik 100 karakterle sınırlıdır.
 
@@ -131,7 +133,7 @@ VSıX dağıtımı bildirim dosyası bir VSıX paketinin içeriğini açıklar. 
 
     Visual Studio 2017 sürüm numaraları, [Visual Studio derleme numaralarında ve sürüm tarihlerinde](../install/visual-studio-build-numbers-and-release-dates.md)bulunabilir.
 
-    Visual Studio 2017 sürümleri için sürüm ifade edildiğinde, ikincil sürüm her zaman **0**olmalıdır. Örneğin, Visual Studio 2017 sürüm 15.3.26730.0, [15.0.26730.0, 16.0) olarak ifade edilmelidir. Bu yalnızca Visual Studio 2017 ve üzeri sürüm numaraları için gereklidir.
+    Visual Studio 2017 sürümleri için sürüm ifade edildiğinde, ikincil sürüm her zaman **0** olmalıdır. Örneğin, Visual Studio 2017 sürüm 15.3.26730.0, [15.0.26730.0, 16.0) olarak ifade edilmelidir. Bu yalnızca Visual Studio 2017 ve üzeri sürüm numaraları için gereklidir.
 
   - `AnyAttribute*` - `<InstallationTarget>` Öğesi, çalışma zamanında bir ad-değer çifti sözlüğü olarak ortaya çıkarılan bir açık uçlu öznitelikler kümesine izin verir.
 

@@ -1,5 +1,7 @@
 ---
 title: Araç penceresi kaydetme | Microsoft Docs
+description: ProvideToolWindowAttribute ve ProvideToolWindowVisibilityAttribute kullanarak araç pencerelerini Visual Studio ile nasıl kaydedebileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d70924ea503bc4e230eb30b0551b59bc5f45ae6d
-ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
+ms.openlocfilehash: 140375c3c708957343762b72102dcb8920628aba
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93414351"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863797"
 ---
 # <a name="register-a-tool-window"></a>Araç penceresi kaydetme
 Araç pencerelerini ve kullanarak kaydedebilirsiniz <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute>  <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowVisibilityAttribute> .

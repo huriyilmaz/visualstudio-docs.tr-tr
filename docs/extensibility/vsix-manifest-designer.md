@@ -1,5 +1,7 @@
 ---
 title: VSıX bildirim Tasarımcısı | Microsoft Docs
+description: VSıX bildirim Tasarımcısı 'nın bir Visual Studio uzantısı için yükleme davranışını ayarlayan bir VSıX paketi bildirim dosyasını nasıl değiştirdiği hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -14,19 +16,19 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 30620e0fe91d0e90995d2d2f721950f878c65fdc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6323b4330279848bc0453bdc7413904e2582d13a
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80697889"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863968"
 ---
 # <a name="vsix-manifest-designer"></a>VSIX Bildirim Tasarımcısı
 Bir Visual Studio uzantısı için yükleme davranışını ayarlayan bir VSıX paketi bildirim dosyasını değiştirir.
 
  **VSIX bildirim Tasarımcısı** , temel alınan VSIX şemasına eşlenir. Şemadaki her öğe, tasarımcıda karşılık gelen bir denetim kullanılarak ayarlanabilir. Şema hakkında daha fazla bilgi için bkz. [VSIX uzantı şeması 2,0 başvurusu](../extensibility/vsix-extension-schema-2-0-reference.md).
 
- **VSIX bildirim tasarımcısını**açmak için **Çözüm Gezgini**bir *kaynak. Extension. valtmanifest* dosyası bulun ve dosyayı açın. Dosya geçerli XML içermiyorsa, bildirim Tasarımcısı açılmaz.
+ **VSIX bildirim tasarımcısını** açmak için **Çözüm Gezgini** bir *kaynak. Extension. valtmanifest* dosyası bulun ve dosyayı açın. Dosya geçerli XML içermiyorsa, bildirim Tasarımcısı açılmaz.
 
 > [!NOTE]
 > *Kaynak. Extension. valtmanifest* dosyası, paket oluşturulduğunda *. valtmanifest uzantısına* çıktıdır.

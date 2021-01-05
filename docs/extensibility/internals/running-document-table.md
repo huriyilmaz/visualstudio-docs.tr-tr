@@ -1,5 +1,7 @@
 ---
 title: Belge tablosu çalıştırılıyor | Microsoft Docs
+description: Visual Studio IDE 'nin bellekteki tüm açık belgeleri içeren çalışan belge tablosunu nasıl koruduğu hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9e6aa882921786b1592922372581beae8c4c2443
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bd166626d6043da4ac94658bdd35219efc7a37c2
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705562"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875654"
 ---
 # <a name="running-document-table"></a>Çalıştırılan Belge Tablosu
 IDE, çalışmakta olan belge tablosu (RDT) adlı dahili bir yapıda açık olan tüm belgelerin listesini tutar. Bu liste, bu belgelerin Şu anda düzenlenip düzenlenmediğine bakılmaksızın bellekteki tüm açık belgeleri içerir. Belge, proje veya ana proje dosyası (örneğin, bir. vcxproj dosyası) dahil olmak üzere kalıcı olan herhangi bir öğedir.

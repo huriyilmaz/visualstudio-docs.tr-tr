@@ -1,5 +1,7 @@
 ---
 title: SEÇENEKADı < PFN | Microsoft Docs
+description: Kaynak denetim eklentisinden Visual Studio IDE 'ye olan ad değişikliklerine iletişim kuran SEÇENEKNAMECHANGEPFN callback işlevi hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 603bd08c1ec3832bf732e0b33101076738d009e3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e18a3e5004a86bb96ad77112f4c81ebca3e59cbf
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80702246"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863431"
 ---
 # <a name="optnamechangepfn"></a>OPTNAMECHANGEPFN
 Bu, [SccSetOption](../extensibility/sccsetoption-function.md) (kullanma seçeneği) çağrısında belirtilen bir geri çağırma işlevidir `SCC_OPT_NAMECHANGEPFN` ve kaynak denetimi eklentisi tarafından YAPıLAN ad değişikliklerini IDE 'ye geri bildirmek için kullanılır.

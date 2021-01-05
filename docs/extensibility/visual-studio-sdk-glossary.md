@@ -1,5 +1,7 @@
 ---
 title: Visual Studio SDK sözlüğü | Microsoft Docs
+description: Bu sözlük, Visual Studio SDK belgelerinde kullanılan terimler için tanımlar sağlar.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 332e606e689e9394f2fcdc8cbc902e2d4a6e5ab5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ec8f6508c6b387ec51872f6e5b59b3f72a57d432
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80698165"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863901"
 ---
 # <a name="visual-studio-sdk-glossary"></a>Visual Studio SDK sözlüğü
 Bu sözlük, belgelerde kullanılan terimlere yönelik tanımlar sağlar [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)] .
@@ -73,7 +75,7 @@ Bu sözlük, belgelerde kullanılan terimlere yönelik tanımlar sağlar [!INCLU
 
   bağımsız en üst düzey bileşene, kalıcı bir en üst düzey pencere kullanan ve tek başına uygulama penceresi olarak etkili bir şekilde çalışabilen ancak işlem içi bir nesne olarak uygulanan bir bileşen. Bu nedenle, bağımsız bir en üst düzey bileşen, IDE ile moditesi ve ileti döngüsü hizmetlerini koordine etmelidir. İşlem içi nesneler kendi ileti döngüsüne sahip değildir.
 
-  bilgi sağlayıcısı bilgi sağlayıcısı, anahtar sözcükleri arayabileceği ve bir konu başlığı listesi döndüren bir modüldür `IVsUserContextItem` . Bilgi sağlayıcısına **F1** ve arama anahtar sözcük öğeleri sağlamak için, derlenen yardım dosyanızı kaydedin (*. HxS*) sistemle birlikte. Bu dosyalardaki yardım konuları, dinamik Yardım penceresinde gösterilen konuların listesini sağlar ve bir kullanıcının **F1**tuşuna bastığı gösterilmediğini belirtir.
+  bilgi sağlayıcısı bilgi sağlayıcısı, anahtar sözcükleri arayabileceği ve bir konu başlığı listesi döndüren bir modüldür `IVsUserContextItem` . Bilgi sağlayıcısına **F1** ve arama anahtar sözcük öğeleri sağlamak için, derlenen yardım dosyanızı kaydedin (*. HxS*) sistemle birlikte. Bu dosyalardaki yardım konuları, dinamik Yardım penceresinde gösterilen konuların listesini sağlar ve bir kullanıcının **F1** tuşuna bastığı gösterilmediğini belirtir.
 
   yerinde bileşen, `IOleInPlaceComponent` IDE 'nin sahip olduğu bir belge penceresi içinde görsel olarak bulunan bir pencereyi yönetmek için arabirimini uygulayan bir VSPackage nesnesi. Yerinde bileşenler standart OLE menüsüne katılmaz-birleştirme; Bunun yerine, Kullanıcı arabirimi öğelerini IDE ile tümleştirirler.
 

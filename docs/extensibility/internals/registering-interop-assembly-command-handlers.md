@@ -1,5 +1,7 @@
 ---
 title: Birlikte çalışma bütünleştirilmiş kodu komut Işleyicilerini kaydetme | Microsoft Docs
+description: Birlikte çalışma derlemelerini kullanarak tüm VSPackages uygulama komutları tarafından kullanılan temel komut sözleşmesi hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: dfff8e4e6cc8ba3974ec70e6466b25e9ff7432e4
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: b45fe06722b190569e067dccd325ba4acac4fb0f
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012054"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875178"
 ---
 # <a name="registering-interop-assembly-command-handlers"></a>Birlikte Çalışma Bütünleştirilmiş Kodu Komut İşleyicilerini Kaydetme
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Tümleşik geliştirme ortamı (IDE) komutlarının düzgün şekilde yönlendirildiği için bir VSPackage ile kaydolmalıdır.
@@ -28,10 +30,10 @@ ms.locfileid: "90012054"
 - [Komut tablosu biçimi başvuru](/previous-versions/bb164647(v=vs.100)) kaynakları, YÖNETILMEYEN uydu UI dll 'lerinde bulunur.
 
 ## <a name="command-handler-registration-of-a-vspackage"></a>VSPackage komut Işleyicisi kaydı
- Kullanıcı arabirimi (UI) tabanlı komutlar için işleyici olarak davranan bir VSPackage, VSPackage 'tan sonra adlı bir kayıt defteri girişi gerektirir `GUID` . Bu kayıt defteri girdisi, VSPackage 'un Kullanıcı arabirimi kaynak dosyasının ve bu dosya içindeki menü kaynağının konumunu belirtir. Kayıt defteri girişinin kendisi HKEY_LOCAL_MACHINE \Software\Microsoft\VisualStudio \\ *\<Version>* \Menus altında bulunur *\<Version>* [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . örneğin, sürümü, 9,0.
+ Kullanıcı arabirimi (UI) tabanlı komutlar için işleyici olarak davranan bir VSPackage, VSPackage 'tan sonra adlı bir kayıt defteri girişi gerektirir `GUID` . Bu kayıt defteri girdisi, VSPackage 'un Kullanıcı arabirimi kaynak dosyasının ve bu dosya içindeki menü kaynağının konumunu belirtir. Kayıt defteri girişinin kendisi HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\\ *\<Version>* \Menus altında bulunur *\<Version>* [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . örneğin, sürümü, 9,0.
 
 > [!NOTE]
-> HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio 'ın kök yolu, \\ *\<Version>* kabuk başlatıldığında alternatif bir kökle geçersiz kılınabilir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Kök yolu hakkında daha fazla bilgi için, [Windows Installer Ile VSPackages yükleme](../../extensibility/internals/installing-vspackages-with-windows-installer.md)bölümüne bakın.
+> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudiokök yolu, \\ *\<Version>* kabuk başlatıldığında alternatif bir kökle geçersiz kılınabilir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Kök yolu hakkında daha fazla bilgi için, [Windows Installer Ile VSPackages yükleme](../../extensibility/internals/installing-vspackages-with-windows-installer.md)bölümüne bakın.
 
 ### <a name="the-ctmenu-resource-registry-entry"></a>CTMENU kaynak kayıt defteri girdisi
  Kayıt defteri girişinin yapısı:

@@ -1,5 +1,7 @@
 ---
 title: Üst öğe | Microsoft Docs
+description: Üst öğe, bir öğenin bir düğme, Birleşik giriş kutusu, menü veya grubun üst öğesi olduğunu belirtir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +13,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8c018505ba06762bf8426f266b24ee1835313c29
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 03f1709184126d31845bfe1145afdebfeffcd1d1
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80702227"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863336"
 ---
 # <a name="parent-element"></a>Üst öğe
 Bir düğme veya Birleşik giriş kutusunun üst öğesi yalnızca bir grup olabilir. Bir menünün veya grubun üstü başka bir menü veya grup olabilir. [Commandyerleştirme öğesinde](../extensibility/commandplacement-element.md)bu öğe gereklidir; diğer tüm örneklerde, bu isteğe bağlıdır. Bu öğe atlanırsa, üst öğesi de `Group_Undefined:0` kapsanır.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Sözdizimi
 
 ```xml
 <Parent guid="guidMyCommandSet" id="MyParentGroupOrMenu" />

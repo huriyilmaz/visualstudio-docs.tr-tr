@@ -1,5 +1,7 @@
 ---
 title: Proje türünü kaydetme | Microsoft Docs
+description: Visual Studio 'Nun yeni proje türünü tanımasını ve ile çalışmasını sağlayan kayıt defteri girişlerini oluşturma hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7267060f2207b0842885dc3001c3926874be30a9
-ms.sourcegitcommit: 023f52f10fb91850824558478cbfd2ec965054f0
+ms.openlocfilehash: 9a34f5c7f1ae3a214a0a72932ae80dbc44845a45
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94407737"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875208"
 ---
 # <a name="registering-a-project-type"></a>Proje Türü Kaydetme
 Yeni bir proje türü oluşturduğunuzda, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Proje türü tanımak ve bunlarla çalışmak için etkinleştirilecek kayıt defteri girişleri oluşturmanız gerekir. Genellikle bu kayıt defteri girdilerini bir kayıt defteri betiği (. RGS) dosyası kullanarak oluşturursunuz.
@@ -193,7 +195,7 @@ Yeni bir proje türü oluşturduğunuzda, [!INCLUDE[vsprvs](../../code-quality/i
 
 |Ad|Tür|Veriler|Açıklama|
 |----------|----------|----------|-----------------|
-|`@`|REG_SZ|Yok|Diğer dosyalar proje girdileri için aşağıdaki girdilerin olduğunu gösteren varsayılan değer.|
+|`@`|REG_SZ|Hiçbiri|Diğer dosyalar proje girdileri için aşağıdaki girdilerin olduğunu gösteren varsayılan değer.|
 |`@`|REG_SZ|`#%IDS_ADDITEM_TEMPLATES_ENTRY%`|Yeni öğe Ekle şablon dosyaları için kaynak KIMLIĞI değeri.|
 |`TemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjectItems`|**Yeni öğe Ekle** iletişim kutusunda görüntülenecek olan öğelerin varsayılan yolu.|
 |`SortPriority`|REG_DWORD|`100 (vcprx64)`|**Yeni öğe Ekle** iletişim kutusunun ağaç düğümünde görüntülenmek üzere sıralama düzeni oluşturur.|

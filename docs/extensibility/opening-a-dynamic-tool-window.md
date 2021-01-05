@@ -1,5 +1,7 @@
 ---
 title: Dinamik araç penceresi açılıyor | Microsoft Docs
+description: Belirli bir kullanıcı arabirimi bağlamı geçerli olduğunda açılan dinamik araç pencereleri hakkında bilgi edinin ve Kullanıcı arabirimi bağlamı artık geçerli olmadığında kapanır.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,15 +12,15 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9a06cea6d9de4271572457dc9fe6473b5c969b66
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 12b08f676e02a9023374c709aa18edfc0e8815db
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85903712"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863512"
 ---
 # <a name="open-a-dynamic-tool-window"></a>Dinamik araç penceresi aç
-Araç pencereleri genellikle menüdeki bir komuttan veya eşdeğer bir klavye kısayoluna açılır. Ancak, her zaman belirli bir kullanıcı arabirimi bağlamı geçerli olduğunda açılan bir araç penceresine gerek duyabilirsiniz ve Kullanıcı arabirimi bağlamı artık geçerli olmadığında kapanır. Bu tür araç pencereleri *dinamik* veya *Otomatik görünür*olarak adlandırılır.
+Araç pencereleri genellikle menüdeki bir komuttan veya eşdeğer bir klavye kısayoluna açılır. Ancak, her zaman belirli bir kullanıcı arabirimi bağlamı geçerli olduğunda açılan bir araç penceresine gerek duyabilirsiniz ve Kullanıcı arabirimi bağlamı artık geçerli olmadığında kapanır. Bu tür araç pencereleri *dinamik* veya *Otomatik görünür* olarak adlandırılır.
 
 > [!NOTE]
 > Önceden tanımlanmış UI bağlamlarının bir listesi için bkz <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT> ..
@@ -32,7 +34,7 @@ Araç pencereleri genellikle menüdeki bir komuttan veya eşdeğer bir klavye k�
 
 ## <a name="to-open-a-dynamic-tool-window"></a>Dinamik bir araç penceresi açmak için
 
-1. **DynamicToolWindow** ADLı bir VSIX projesi oluşturun ve *DynamicWindowPane.cs*adlı bir araç penceresi öğe şablonu ekleyin. Daha fazla bilgi için bkz. [bir araç penceresi ile uzantı oluşturma](../extensibility/creating-an-extension-with-a-tool-window.md).
+1. **DynamicToolWindow** ADLı bir VSIX projesi oluşturun ve *DynamicWindowPane.cs* adlı bir araç penceresi öğe şablonu ekleyin. Daha fazla bilgi için bkz. [bir araç penceresi ile uzantı oluşturma](../extensibility/creating-an-extension-with-a-tool-window.md).
 
 2. *DynamicWindowPanePackage.cs* dosyasında, Dynamicwindowbölmesi paket bildirimini bulun. <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowVisibilityAttribute> Araç penceresini kaydetmek için ve özniteliklerini ekleyin.
 

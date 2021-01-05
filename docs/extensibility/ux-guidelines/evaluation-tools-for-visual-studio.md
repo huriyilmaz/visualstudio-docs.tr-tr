@@ -1,5 +1,7 @@
 ---
 title: Visual Studio için değerlendirme araçları | Microsoft Docs
+description: Visual Studio için Tasarlayabileceğiniz yeni özelliklerle ilgili görsel ve etkileşim ayrıntıları için Kullanıcı deneyimi kalitesini değerlendirmek üzere bu denetim listesini kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 94e0e9a3-440c-4943-ad7b-772ed742e034
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6ae5ae2d3be49a797ff1d594aab4517efab53330
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 42c8ef3033d1c9f897f891310c4ddea89ab0074e
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80698425"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863467"
 ---
 # <a name="evaluation-tools-for-visual-studio"></a>Visual Studio İçin Değerlendirme Araçları
 ## <a name="craftsmanship-checklist-for-visual-studio"></a>Visual Studio için craftsmansevkiyat denetim listesi

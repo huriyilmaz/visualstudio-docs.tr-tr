@@ -1,5 +1,7 @@
 ---
 title: Eski dil Service1 kaydetme | Microsoft Docs
+description: Kayıt defteri anahtarları ve girişleri ekleyerek, Visual Studio ile VSPackage 'tan eski dil hizmeti kaydetme hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f0076eeee0ebcb0a80925efdde212097a3ec3e7e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e92c831ad3d2f4d75d57c48cfc7ba666d19b7a5e
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88238887"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97875229"
 ---
 # <a name="registering-a-legacy-language-service-1"></a>Eski dil hizmeti 1 kaydediliyor
 Yönetilen paket çerçevesi 'nde (MPF), dil hizmeti bir VSPackage (bkz. [VSPackages](../../extensibility/internals/vspackages.md)) tarafından sağlanır ve [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kayıt defteri anahtarları ve girişleri eklenerek ile kaydedilir. Bu kayıt işlemi kısmen yükleme sırasında ve kısmen çalışma zamanında yapılır.
@@ -128,7 +130,7 @@ namespace TestLanguagePackage
  Bu öznitelik, **metin düzenleyici** kategorisi altındaki **Seçenekler** iletişim kutusunda görüntülenmek üzere bir özellik sayfası kaydeder. Dil hizmetiniz için görüntülenecek her sayfa için bu özniteliklerden birini kullanın. Sayfalarınızı bir ağaç yapısında düzenlemeniz gerekiyorsa, ağacın her düğümünü tanımlamak için ek öznitelikler kullanın.
 
 ### <a name="example"></a>Örnek
- Bu örnekte, iki özellik sayfası, **Seçenekler** ve **girintileme**ve ikinci özellik sayfasını içeren bir düğüm gösterilmektedir.
+ Bu örnekte, iki özellik sayfası, **Seçenekler** ve **girintileme** ve ikinci özellik sayfasını içeren bir düğüm gösterilmektedir.
 
 ```csharp
 using Microsoft.VisualStudio.Shell;

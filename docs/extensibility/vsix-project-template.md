@@ -1,5 +1,7 @@
 ---
 title: VSıX proje şablonu | Microsoft Docs
+description: VSIX projesinde Visual Studio uzantılarını kaydırmak için VSıX proje şablonunu kullanmayı öğrenin ve sonra paketi Visual Studio Market yayımlayın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 74791a77ee1c720fb60876a1efa6bd58fa94f68b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 76e4301843cc318b60940948fee4b618860e7bae
+ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80697929"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97863881"
 ---
 # <a name="vsix-project-template"></a>VSıX proje şablonu
 
@@ -52,7 +54,7 @@ Mevcut bir uzantıyı veya VSıX desteği olmayan bir uzantıyı boş bir VSıX 
 
 2. **VSIX proje** şablonunu kullanarak bir VSIX projesi oluşturun.
 
-    *Source. Extension. valtmanifest* , **bildirim tasarımcısında**açılır.
+    *Source. Extension. valtmanifest* , **bildirim tasarımcısında** açılır.
 
 3. **Varlıklar** sekmesinde **Yeni** düğmesini seçin.
 
@@ -62,7 +64,7 @@ Mevcut bir uzantıyı veya VSıX desteği olmayan bir uzantıyı boş bir VSıX 
 
 5. Geçerli çözüme (örneğin, bir öğe şablonu veya derlenmiş derleme) dahil olan bir uzantı veya içerik öğesi eklemek için aşağıdaki adımları uygulayın:
 
-   1. **Kaynak** listesinde, **Geçerli çözümde bir proje**seçin.
+   1. **Kaynak** listesinde, **Geçerli çözümde bir proje** seçin.
 
    2. **Proje** listesinde, uzantının adını seçin.
 
