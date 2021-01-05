@@ -7,12 +7,12 @@ ms.date: 05/06/2018
 ms.technology: vs-ide-install
 ms.assetid: 25CD47A4-5B32-4734-8EF3-E24A02AABF29
 ms.topic: how-to
-ms.openlocfilehash: 009df6525696405914aeeb224e3817bbfbe27155
-ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
+ms.openlocfilehash: 63793548bd3ea1098cc1113724cd9a3b513adbf5
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96189803"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97727469"
 ---
 # <a name="introduction-to-azure-functions"></a>Azure İşlevleri’ne Giriş
 
@@ -91,10 +91,10 @@ Mac için Visual Studio Azure Işlevleri desteğiyle, işlevinizi yerel gelişti
 
 ## <a name="publish-to-azure"></a>Azure’da Yayımlama
 
-1. Proje adına sağ tıklayıp **yayımla > Azure**'da Yayımla ' yı seçin: Azure 'da  ![ Yayımla menü seçeneği](media/azure-functions-image5.png)
+1. Proje adına sağ tıklayın ve **Azure 'Da yayımla > Yayımla**' yı seçin: Azure  ![ işlevleri 'nden, bu seçili olan AF-httptrigger projesini gösteren ekran görüntüsü ve bağlam menüsünde Azure 'Da Yayımla ve Yayımla komutları vurgulanır.](media/azure-functions-image5.png)
 2. Azure hesabınızı Mac için Visual Studio için zaten bağladıysanız, kullanılabilir uygulama hizmetlerinin bir listesi görüntülenir. Oturum açmadıysanız bunu yapmanız istenir.
 3. **Azure App Service Yayımla** iletişim kutusunda, var olan bir uygulama hizmetini seçebilir veya **Yeni**' ye tıklayarak yeni bir tane oluşturabilirsiniz.
-4. **Yeni App Service oluştur** iletişim kutusunda ayarlarınızı girin: ![ Azure 'a Yayımla menü seçeneği](media/azure-functions-image7.png)
+4. **Yeni App Service oluştur** iletişim kutusunda, Azure ![ 'da yeni bir App Service oluşturma ayarlarını gösteren Azure işlevleri 'nde yeni App Service penceresinin ekran görüntüsü yazın.](media/azure-functions-image7.png)
 
     |Ayar  |Açıklama  |
     |---------|---------|
@@ -108,13 +108,13 @@ Mac için Visual Studio Azure Işlevleri desteğiyle, işlevinizi yerel gelişti
 
 5. Bir depolama hesabı oluşturmak için **İleri** ' ye tıklayın. İşlevler çalışma zamanı için bir Azure depolama hesabı gereklidir. Genel amaçlı bir depolama hesabı oluşturmak için **özel** ' e tıklayın veya var olan birini kullanın:
 
-    ![Azure 'da Yayımla menü seçeneği](media/azure-functions-image8.png)
+    ![Azure Işlevleri 'nde depolama hesabı yapılandırma ekranının ekran görüntüsü. Özel depolama hesabı için seçilir ve hesap adı ve hesap türü doldurulur.](media/azure-functions-image8.png)
 
 6. **Oluştur**'a tıklayarak Azure'da bu ayarlarla bir işlev uygulaması ve ilgili kaynaklar oluşturun ve işlev proje kodunuzu dağıtın.
 
 7. Yayımlama sırasında bir iletişim kutusu istenebilir, "Azure 'da Işlevleri güncelleştirme" konusunda sizi bilgilendiren bir iletişim kutusu görüntülenebilir. **Evet**' e tıklayın:
 
-    ![Azure 'da Yayımla menü seçeneği](media/azure-functions-image12.png)
+    ![Azure iletişim kutusunda güncelleştirme Işlevleri sürümünün ekran görüntüsü, "yerel Işlev sürümlerini eşleştirmek için Azure uygulama ayarlarını güncelleştirme" isteyip istemediğinizi sorar.](media/azure-functions-image12.png)
 
 > [!CAUTION]
 > Mac için Visual Studio sürümünde, `FUNCTIONS_EXTENSION_VERSION` doğru şekilde "Beta" olarak ayarlanmayan, işlevinizin çalıştırılmamasına neden olan bir 7,6 hata vardır. Bu işlemi onarmak için, [işlev uygulaması ayarlarınıza](#function-app-settings) gidin ve `FUNCTIONS_EXTENSION_VERSION` "-1" iken "Beta" olarak ayarlayın.

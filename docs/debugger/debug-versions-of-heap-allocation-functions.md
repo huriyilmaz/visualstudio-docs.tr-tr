@@ -1,5 +1,7 @@
 ---
 title: Yığın ayırma Işlevlerinin hata ayıklama sürümleri | Microsoft Docs
+description: C çalışma zamanı kitaplığındaki yığın ayırma işlevlerinin hata ayıklama sürümlerini kullanın. Bu işlevler, _dbg eklenen sürüm sürümleriyle aynı ada sahiptir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -23,12 +25,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d0fde776e9f2bd48aca92c7ba6d7f1fe1e23f01a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e4be03c96f9c6ffdf8745ab8890e524ca98b4f4f
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72738367"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97727079"
 ---
 # <a name="debug-versions-of-heap-allocation-functions"></a>Öbek Atama İşlevleri Hata Ayıklama Sürümleri
 C çalışma zamanı kitaplığı, yığın ayırma işlevlerinin özel hata ayıklama sürümlerini içerir. Bu işlevler, _dbg eklenen sürüm sürümleriyle aynı ada sahiptir. Bu konu, bir CRT işlevinin yayın sürümü ve _dbg sürümü arasındaki farkları `malloc` ve örnekleri kullanılarak açıklar `_malloc_dbg` .
@@ -41,7 +43,7 @@ C çalışma zamanı kitaplığı, yığın ayırma işlevlerinin özel hata ay�
 
 - Kaynak dosya ve ayırma isteğinin gerçekleştiği satır numarası depolanıyor.
 
-  Çağrılarınızı öğesine dönüştürmek istemiyorsanız, Önişlemci 'nin `malloc` `_malloc_dbg` [_CRTDBG_MAP_ALLOC](/cpp/c-runtime-library/crtdbg-map-alloc) `malloc` `_malloc_dbg` çevresindeki bir sarmalayıcı temelinde tüm çağrıları öğesine doğrudan eşlemesine neden olan _CRTDBG_MAP_ALLOC tanımlayarak kaynak dosya bilgilerini elde edebilirsiniz `malloc` .
+  Çağrılarınızı öğesine dönüştürmek istemiyorsanız, Önişlemci 'nin `malloc` `_malloc_dbg` [](/cpp/c-runtime-library/crtdbg-map-alloc) `malloc` `_malloc_dbg` çevresindeki bir sarmalayıcı temelinde tüm çağrıları öğesine doğrudan eşlemesine neden olan _CRTDBG_MAP_ALLOC tanımlayarak kaynak dosya bilgilerini elde edebilirsiniz `malloc` .
 
   İstemci bloklarında ayrı ayırma türlerini izlemek için, `_malloc_dbg` doğrudan çağırmanız ve `blockType` parametresini olarak ayarlamanız gerekir `_CLIENT_BLOCK` .
 
@@ -49,4 +51,4 @@ C çalışma zamanı kitaplığı, yığın ayırma işlevlerinin özel hata ay�
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [CRT Hata Ayıklama Teknikleri](../debugger/crt-debugging-techniques.md)
+- [CRT hata ayıklama teknikleri](../debugger/crt-debugging-techniques.md)

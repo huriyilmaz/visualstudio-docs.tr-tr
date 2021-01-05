@@ -11,12 +11,12 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 monikerRange: vs-2019
-ms.openlocfilehash: 84be6698c62e3a2a205ceb9d404673ee1d0c6f64
-ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
+ms.openlocfilehash: 68fbdef0e86b125971480ae1bd6a7ba6d3108cd8
+ms.sourcegitcommit: 74b67f102d243e3b74a93563e834f49df298e4b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97668618"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97696538"
 ---
 # <a name="supported-visual-studio-features-preview"></a>Desteklenen Visual Studio özellikleri (Önizleme)
 
@@ -108,8 +108,8 @@ Henüz kullanılabilir değil:
 
 Bir codespace 'e bağlı Visual Studio ile çalışırken, yerel olarak çalışırken aynı erişilebilirlik özelliklerini alırsınız.
 
-* Kaynak denetimi-yeni [Git penceresi](https://devblogs.microsoft.com/visualstudio/improved-git-experience-in-visual-studio-2019/)aracılığıyla tam git desteği.
-* Erişilebilirlik-yardımcı teknolojide, bir hata ayıklama uygulamasının appatama 'ya erişemediği bilinen bir sorun var. Bu sınırlamanın yanı sıra, yerel Visual Studio deneyiminde zaten mevcut olmayan başka uyumluluk sorunları olduğunu düşünmedik. [Geliştirici topluluğu](https://aka.ms/feedback/suggest?space=8)'nda bir sorun oluşturarak hataları algılamadıysanız lütfen bize bildirin.
+* Kaynak denetimi-yeni [Tümleşik git deneyimi](../git-with-visual-studio.md)aracılığıyla tam git desteği.
+* Erişilebilirlik-yardımcı teknolojide, bir hata ayıklama uygulamasının appatama 'ya erişemediği bilinen bir sorun var. Bu sınırlamanın yanı sıra, yerel Visual Studio deneyiminde zaten mevcut olmayan başka uyumluluk sorunları olduğunu düşünmedik. [Geliştirici topluluğu](https://aka.ms/feedback/report?space=8)'nda bir sorun oluşturarak hataları algılamadıysanız lütfen bize bildirin.
 * Yayımlama-GitHub eylemleri aracılığıyla Azure 'da yayımlayın.
 * Bağlı hizmetler-Application Insights, Keykasası, Storage, SQL, Redsıs, Cosmos, Openapı ve gRPC kısmen desteklenmektedir.
 * Test Gezgini *-çoğunlukla desteklenir.

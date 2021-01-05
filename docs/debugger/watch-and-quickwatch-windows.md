@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6ab66089de25b7648b13e1ba05f88ab55b7868df
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d7e2a05fe84b023a60ef75f0cb262a08fc02587a
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85348034"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97727430"
 ---
 # <a name="watch-variables-with-watch-windows-and-quickwatch"></a>Pencereleri Izle ve hızlı Gözcü ile değişkenleri izleyin
 
@@ -30,7 +30,8 @@ Hata ayıklarken, değişkenleri ve ifadeleri izlemek için Windows 'u ve **hız
 
 **İzleme** pencereleri, hata ayıklama sırasında her seferinde birkaç değişken görüntüleyebilir. **QuickWatch** iletişim kutusu her seferinde tek bir değişken görüntüler ve hata ayıklamanın devam edebilmesi için kapatılması gerekir.
 
-Kodu ilk kez ayıklamaya çalıştığınızda, bu makaleye geçmeden önce mutlak yeni başlayanlar ve [hata ayıklama teknikleri ve araçları](../debugger/write-better-code-with-visual-studio.md) [için hata ayıklamayı](../debugger/debugging-absolute-beginners.md) okumak isteyebilirsiniz.
+> [!NOTE]
+> Kodu ilk kez ayıklamaya çalıştığınızda, bu makaleye geçmeden önce mutlak yeni başlayanlar ve [hata ayıklama teknikleri ve araçları](../debugger/write-better-code-with-visual-studio.md) [için hata ayıklamayı](../debugger/debugging-absolute-beginners.md) okumak isteyebilirsiniz.
 
 ## <a name="observe-variables-with-a-watch-window"></a>izleme penceresi değişkenleri gözlemleyin
 
@@ -58,19 +59,19 @@ int main()
 
 ```
 
-1. `c = a + b;`Sol kenar boşluğuna tıklayarak, **Hata Ayıkla**  >  **geçiş noktasını**seçerek veya **F9**tuşuna basarak satırda bir kesme noktası ayarlayın.
+1. `c = a + b;`Sol kenar boşluğuna tıklayarak, **Hata Ayıkla**  >  **geçiş noktasını** seçerek veya **F9** tuşuna basarak satırda bir kesme noktası ayarlayın.
 
-1. Yeşil **Başlangıç** okunu seçerek hata ayıklamayı **başlatın veya hata**  >  **ayıklamayı başlatın**veya **F5**'e basın. Yürütme kesme noktasında duraklatılır.
+1. Yeşil **Başlangıç** okunu seçerek hata ayıklamayı **başlatın veya hata**  >  **ayıklamayı başlatın** veya **F5**'e basın. Yürütme kesme noktasında duraklatılır.
 
-1. **Watch** **Hata Ayıkla**  >  **Windows**  >  **izleme**  >  **1**' i seçerek veya **CTRL** + **alt** + **W**  >  **1**tuşlarına basarak bir Gözcü penceresi açın.
+1.  **Hata Ayıkla**  >  **Windows**  >  **izleme**  >  **1**' i seçerek veya **CTRL** + **alt** + **W**  >  **1** tuşlarına basarak bir Gözcü penceresi açın.
 
-   Windows **2**, **3**veya **4**' ü seçerek daha fazla **izleme** penceresi açabilirsiniz.
+   Windows **2**, **3** veya **4**' ü seçerek daha fazla **izleme** penceresi açabilirsiniz.
 
 1. **İzle** penceresinde boş bir satır seçin ve değişken yazın `a` . Ve için aynısını yapın `b` `c` .
 
    ![Değişkenleri izleme](../debugger/media/watchvariables.png "WatchVariables")
 
-1. **Hata**ayıklama  >  **adımını** seçerek veya ilerlemek için gerektiğinde **F11** tuşuna basarak hata ayıklamaya devam edin. **İzleme** penceresindeki değişken değerleri, döngüde yineleme yaparken değişir `for` .
+1. **Hata** ayıklama  >  **adımını** seçerek veya ilerlemek için gerektiğinde **F11** tuşuna basarak hata ayıklamaya devam edin. **İzleme** penceresindeki değişken değerleri, döngüde yineleme yaparken değişir `for` .
 
 >[!NOTE]
 >Yalnızca C++ için,
@@ -82,7 +83,7 @@ int main()
 
 Hata ayıklayıcı tarafından tanınan geçerli bir ifadeyi bir **Gözcü** penceresinde gözlemleyebilirsiniz.
 
-Örneğin, önceki bölümdeki kod için, Izleme penceresine girerek üç değerin ortalamasını alabilirsiniz `(a + b + c) / 3` : **Watch**
+Örneğin, önceki bölümdeki kod için, Izleme penceresine girerek üç değerin ortalamasını alabilirsiniz `(a + b + c) / 3` : 
 
 ![Gözcü ifadesi](../debugger/media/watchexpression.png "Gözcü ifadesi")
 
@@ -130,11 +131,11 @@ Yenileme simgesinin üzerine gelin veya ifadenin değerlendirilmemesi nedeniyle 
 
 - Özelliklerin otomatik değerlendirilmesi ve örtük işlev çağrıları devre dışı bırakıldı.
 
-Özellikler ve örtük işlev çağrılarının otomatik değerlendirilmesi devre dışı bırakıldığı için Yenile simgesi görüntülenirse, özellik değerlendirmesini etkinleştir ' i ve **Araçlar**seçenekler hata ayıklama genel ' de **diğer örtük işlev çağrılarını etkinleştir** ' i seçerek etkinleştirebilirsiniz  >  **Options**  >  **Debugging**  >  **General**.
+Özellikler ve örtük işlev çağrılarının otomatik değerlendirilmesi devre dışı bırakıldığı için Yenile simgesi görüntülenirse, özellik değerlendirmesini etkinleştir ' i ve **Araçlar** seçenekler hata ayıklama genel ' de **diğer örtük işlev çağrılarını etkinleştir** ' i seçerek etkinleştirebilirsiniz  >    >    >  .
 
 Yenileme simgesini kullanmayı göstermek için:
 
-1. **Araçlar**  >  **Seçenekler**  >  **Genel hata ayıklama**bölümünde  >  **General**, **özellik değerlendirmesini etkinleştir ve diğer örtük işlev çağrılarını etkinleştir** onay kutusunu temizleyin.
+1. **Araçlar**  >  **Seçenekler**  >  **Genel hata ayıklama** bölümünde  >  , **özellik değerlendirmesini etkinleştir ve diğer örtük işlev çağrılarını etkinleştir** onay kutusunu temizleyin.
 
 1. Aşağıdaki kodu girin ve **İzle** penceresinde, özelliği üzerinde bir izleme ayarlayın `list.Count` .
 
@@ -165,7 +166,7 @@ Bu kod, [yan etkiye](https://en.wikipedia.org/wiki/Side_effect_\(computer_scienc
 
 Yan etkileri olan bir ifade yalnızca bir kez değerlendirilir, ilk girdiğinizde. Bundan sonra ifade, **Gözcü** penceresinde gri renkte görünür ve daha fazla değerlendirme devre dışı bırakılır. Araç ipucu veya **değer** sütunu, ifadenin bir yan etkiye neden olduğunu açıklar. Değerin yanında görünen yenileme simgesini seçerek, yeniden değerlemeyi zorlayabilirsiniz.
 
-Yan efekt atamasını önlemenin bir yolu otomatik işlev değerlendirmesini devre dışı bırakmak. **Araçlar**  >  **Seçenekler**  >  **Genel hata ayıklama**bölümünde  >  **General** **özellik değerlendirmesini ve diğer örtük işlev çağrılarını etkinleştir**seçimini kaldırın.
+Yan efekt atamasını önlemenin bir yolu otomatik işlev değerlendirmesini devre dışı bırakmak. **Araçlar**  >  **Seçenekler**  >  **Genel hata ayıklama** bölümünde  >   **özellik değerlendirmesini ve diğer örtük işlev çağrılarını etkinleştir** seçimini kaldırın.
 
 Yalnızca C# için, özellikler veya örtük işlev çağrıları değerlendirmesi kapalıyken, **izleme** penceresindeki bir değişken **adına** **AC** biçim değiştiricisi ekleyerek değerlendirmeyi zorlayabilirsiniz. Bkz. [C# içindeki biçim belirticileri](../debugger/format-specifiers-in-csharp.md).
 
@@ -217,7 +218,7 @@ Yönteminin adını bulmak için `Person` `DoSomething()` , `Person` **izleme** 
 
 1. Hata ayıklamayı başlatın.
 
-1. Yürütme kesme noktasında durakladığında, **Locals** Windows **Debug**  >  **Windows**  >  **yerelleri**Hata Ayıkla ' yı seçerek Yereller penceresini açın.
+1. Yürütme kesme noktasında durakladığında,  Windows   >    >  **yerelleri** Hata Ayıkla ' yı seçerek Yereller penceresini açın.
 
 1. **Yereller** penceresinde değişkenine sağ TıKLAYıP `Person` **nesne kimliğini yap**' ı seçin.
 
@@ -230,7 +231,7 @@ Yönteminin adını bulmak için `Person` `DoSomething()` , `Person` **izleme** 
 1. Hata ayıklamaya devam edin. Bu yöntemde Yürütme durakladığında `DoSomething()` , **Gözcü** penceresi `Person` nesneyi görüntüler.
 
    > [!NOTE]
-   > Gibi nesnenin özelliklerini görmek isterseniz, `Person.Name` **araç**  >  **seçenekleri**  >  **hata ayıklama**  >  **genel**  >  **Etkinleştir Özellik değerlendirmesini ve diğer örtük işlev çağrılarını**seçerek Özellik değerlendirmesini etkinleştirmeniz gerekir.
+   > Gibi nesnenin özelliklerini görmek isterseniz, `Person.Name` **araç**  >  **seçenekleri**  >  **hata ayıklama**  >  **genel**  >  **Etkinleştir Özellik değerlendirmesini ve diğer örtük işlev çağrılarını** seçerek Özellik değerlendirmesini etkinleştirmeniz gerekir.
 
 ## <a name="dynamic-view-and-the-watch-window"></a>Dinamik görünüm ve izleme penceresi
 
@@ -247,17 +248,17 @@ Bir nesnenin yalnızca **dinamik görünümünü** görüntülemek Için, **izle
 
 >[!NOTE]
 >- Bir sonraki kod satırına adımlamak için C# hata ayıklayıcısı **dinamik görünümdeki** değerleri otomatik olarak yeniden değerlendirmez.
->- Visual Basic hata ayıklayıcı **Dinamik görünüm**aracılığıyla eklenen ifadeleri otomatik olarak yeniler.
+>- Visual Basic hata ayıklayıcı **Dinamik görünüm** aracılığıyla eklenen ifadeleri otomatik olarak yeniler.
 >- **Dinamik bir görünümün** üyelerini değerlendirmek [yan etkilere](https://en.wikipedia.org/wiki/Side_effect_\(computer_science\))sahip olabilir.
 
 **Bir nesneyi dinamik bir nesneye bağlayan yeni bir izleme değişkeni eklemek için:**
 
-1. **Dinamik görünümün**herhangi bir alt öğesine sağ tıklayın.
+1. **Dinamik görünümün** herhangi bir alt öğesine sağ tıklayın.
 1. **Gözcü Ekle**' yi seçin. `object.name`Olur `((dynamic) object).name` ve yeni bir **Gözcü** penceresinde görünür.
 
-Hata ayıklayıcı Ayrıca, nesnenin **Dinamik görünüm** alt düğümünü **ekler penceresine ekler** . Hata ayıklama sırasında **oto** penceresini açmak için Windows oto **hatalarını ayıkla**' yı seçin  >  **Windows**  >  **Autos**.
+Hata ayıklayıcı Ayrıca, nesnenin **Dinamik görünüm** alt düğümünü **ekler penceresine ekler** . Hata ayıklama sırasında **oto** penceresini açmak için Windows oto **hatalarını ayıkla**' yı seçin  >    >  .
 
-**Dinamik görünüm** , com nesneleri için hata ayıklamayı da geliştirir. Hata ayıklayıcı, **System. __ComObject**SARMALANAN bir com nesnesine geldiğinde, nesne için dinamik bir **Görünüm** düğümü ekler.
+**Dinamik görünüm** , com nesneleri için hata ayıklamayı da geliştirir. Hata ayıklayıcı **System.__ComObject** SARMALANAN bir com nesnesine aldığında, nesne için **dinamik bir görünüm** düğümü ekler.
 
 ## <a name="observe-a-single-variable-or-expression-with-quickwatch"></a>QuickWatch ile tek bir değişken veya ifadeyi gözlemleyin
 
@@ -286,13 +287,13 @@ Değişkeni gözlemlemek için `a`
 
 1. Koddaki değişkeni seçin `a` .
 
-1. **Debug**  >  **Hızlı izleme**Hata Ayıkla ' yı seçin, **Shift** + **F9**tuşuna basın veya sağ tıklayıp **hızlı izleme**' yi seçin.
+1.   >  **Hızlı izleme** Hata Ayıkla ' yı seçin, **Shift** + **F9** tuşuna basın veya sağ tıklayıp **hızlı izleme**' yi seçin.
 
    **QuickWatch** iletişim kutusu görüntülenir. `a`Değişken, **1** **değeri** olan **ifade** kutusudur.
 
    ![QuickWatch değişkeni](../debugger/media/quickwatchvariable.png "QuickWatch değişkeni")
 
-1. Değişkeni kullanarak bir ifadeyi değerlendirmek için, Ifade kutusuna gibi bir ifade yazın `a + b` ve yeniden **Expression** değerlendir ' i seçin. **Reevaluate**
+1. Değişkeni kullanarak bir ifadeyi değerlendirmek için, Ifade kutusuna gibi bir ifade yazın `a + b` ve yeniden  değerlendir ' i seçin. 
 
    ![QuickWatch ifadesi](../debugger/media/quickwatchexpression.png "QuickWatch ifadesi")
 

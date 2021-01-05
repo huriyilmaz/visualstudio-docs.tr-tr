@@ -1,5 +1,7 @@
 ---
 title: '[Content_types]. xml dosyasının yapısı | Microsoft Docs'
+description: VSıX paketindeki içerik türleri hakkında bilgi içeren içerik türleri dosyasının yapısı hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1e96af4936f27d869409a7215c720d9bb64e4128
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: 7117845e4756f8b0e09a8fa603e66448e705b903
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012523"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97715229"
 ---
 # <a name="the-structure-of-the-content_typesxml-file"></a>[Content_types].xml Dosyasının Yapısı
 VSıX paketindeki içerik türleri hakkında bilgi içerir. Visual Studio, paketi yüklemek için [Content_Types]. xml dosyasını kullanır, ancak dosyanın kendisini yüklemez.

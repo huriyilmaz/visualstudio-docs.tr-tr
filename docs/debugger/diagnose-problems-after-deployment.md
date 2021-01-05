@@ -1,5 +1,7 @@
 ---
 title: Dağıtımdan sonra sorunları tanılama | Microsoft Docs
+description: Visual Studio 'da IntelliTrace kullanarak dağıtımdan sonra sorunları tanılayın. Yayın ile derleme bilgilerini ekleyin. Sorunu bulmak için uygulamanızı serbest bırakın ve izleyin.
+ms.custom: SEO-VS-2020
 ms.date: 04/10/2018
 ms.topic: how-to
 ms.assetid: a3463eab-a352-4d17-8551-adbaad526db0
@@ -8,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 97499a88a04b2ae7b61b847c4aec133d297e613a
-ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
+ms.openlocfilehash: 9be00d1ad040f6daca52417e4ab6dfa93f0f44cf
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91928062"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97726832"
 ---
 # <a name="diagnose-problems-after-deployment-using-intellitrace-c-visual-basic"></a>IntelliTrace kullanarak dağıtımdan sonra sorunları tanılama (C#, Visual Basic)
 
@@ -23,7 +25,7 @@ IntelliTrace kullanarak dağıtımdan sonra ASP.NET Web uygulamanızdaki sorunla
 
  ![Kod, derleme, yayınlama, izleme, tanılama, onarma](../debugger/media/ffr_cycle.png "FFR_Cycle")
 
- **Şunlara ihtiyacınız var:**
+ **Şunlara ihtiyacınız vardır:**
 
 - Derlemenizi ayarlamak için Visual Studio, Azure DevOps veya Team Foundation Server 2017, 2015, 2013, 2012 veya 2010
 
@@ -44,7 +46,7 @@ Visual Studio 2017 ve sonraki sürümleri, kullanım dışı bırakılmış ve k
 
 * Azure 'a dağıtım için [Application Insights](/azure/application-insights/)kullanın.
 
-* IntelliTrace kullanmanız gerekiyorsa, projeyi Visual Studio 'da açın ve sembol dosyalarını eşleşen derlemeden yükleyin. Sembol dosyalarını **modüller** penceresinden veya **araç**  >  **seçenekleri**  >  **hata ayıklama**  >  **sembollerinde**sembolleri yapılandırarak yükleyebilirsiniz.
+* IntelliTrace kullanmanız gerekiyorsa, projeyi Visual Studio 'da açın ve sembol dosyalarını eşleşen derlemeden yükleyin. Sembol dosyalarını **modüller** penceresinden veya **araç**  >  **seçenekleri**  >  **hata ayıklama**  >  **sembollerinde** sembolleri yapılandırarak yükleyebilirsiniz.
 
 #### <a name="team-foundation-server-2013"></a><a name="TFS2013"></a> Team Foundation Server 2013
  Oluşturma bildirimine (BuildInfo.config dosyasına) kaynak, derleme ve sembollerinizin konumlarını eklemek için derleme işlem hattınızı ayarlayın. Team Foundation derlemesi bu dosyayı otomatik olarak oluşturur ve projenin çıkış klasörüne koyar.
@@ -169,7 +171,7 @@ Visual Studio 2017 ve sonraki sürümleri, kullanım dışı bırakılmış ve k
 
 2. Proje çözümün bir parçası olarak oluşturulmadıysa, Visual Studio 'Nun eşleşen çözümü veya projeyi otomatik olarak açması için **çözümü aç** ' ı seçin. [S: IntelliTrace günlüğünde, dağıtılan Uygulamam hakkında bilgiler eksik. Bunun nedeni neden oldu? Ne yapmalıyım?](#InvalidConfigFile)
 
-     Visual Studio, eşleşen çözümü ya da projeyi açtığında, bekleyen tüm değişiklikleri otomatik olarak rafla. Bu raf kümesi hakkında daha fazla bilgi edinmek için **Çıkış** penceresine veya **Takım Gezgini**bakın.
+     Visual Studio, eşleşen çözümü ya da projeyi açtığında, bekleyen tüm değişiklikleri otomatik olarak rafla. Bu raf kümesi hakkında daha fazla bilgi edinmek için **Çıkış** penceresine veya **Takım Gezgini** bakın.
 
      Herhangi bir değişiklik yapmadan önce doğru kaynağa sahip olduğunu doğrulayın. Dallandırma kullanıyorsanız, Visual Studio 'Nun yayın dalı gibi eşleşen kaynağı bulduğu farklı bir dalda çalışıyor olabilirsiniz.
 
@@ -191,7 +193,7 @@ Visual Studio 2017 ve sonraki sürümleri, kullanım dışı bırakılmış ve k
 
 ### <a name="diagnose-a-performance-problem"></a>Performans sorunu tanıla
 
-1. **Performans ihlalleri**altında, kaydedilen performans olaylarını, bunların toplam yürütme sürelerini ve diğer olay bilgilerini gözden geçirin. Sonra belirli performans olayı sırasında çağrılan yöntemlerde fazla araştırma yapın.
+1. **Performans ihlalleri** altında, kaydedilen performans olaylarını, bunların toplam yürütme sürelerini ve diğer olay bilgilerini gözden geçirin. Sonra belirli performans olayı sırasında çağrılan yöntemlerde fazla araştırma yapın.
 
      ![Performans olayı ayrıntılarını görüntüleme](../debugger/media/ffr_itsummarypageperformance.png "FFR_ITSummaryPagePerformance")
 
@@ -219,7 +221,7 @@ Visual Studio 2017 ve sonraki sürümleri, kullanım dışı bırakılmış ve k
 
 ### <a name="diagnose-an-exception"></a>Bir özel durumu tanıla
 
-1. **Özel durum verileri**altında, kaydedilen özel durum olaylarını, türleri, iletileri ve özel durumların ne zaman oluştuğunu gözden geçirin. Kodu daha ayrıntılı incelemek için özel durumlar grubu içindeki en son olaydan başlayın.
+1. **Özel durum verileri** altında, kaydedilen özel durum olaylarını, türleri, iletileri ve özel durumların ne zaman oluştuğunu gözden geçirin. Kodu daha ayrıntılı incelemek için özel durumlar grubu içindeki en son olaydan başlayın.
 
      ![Özel durum olayından hata ayıklamayı Başlat](../debugger/media/ffr_itsummarypageexception.png "FFR_ITSummaryPageException")
 

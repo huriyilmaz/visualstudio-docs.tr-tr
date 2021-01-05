@@ -1,5 +1,7 @@
 ---
 title: Döküm dosyası Özeti genişletilebilirlik API 'SI | Microsoft Docs
+description: Visual Studio 'da kendi özel hata ayıklama altyapıınızla çalışmak için. exe proje sistemi ve döküm Özeti sayfasını genişletmek için döküm dosyası Özeti genişletilebilirlik API 'sini kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d34e60b0b932470dec8a69874e28b99ebe76316b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2a91f262c34d9bdc69d5ce3319f05cdb3f0b952f
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72737974"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97726533"
 ---
 # <a name="dump-file-summary-extensibility-api"></a>Döküm Dosyası Özeti Genişletilebilirlik API
 Bu bölümde genişletilebilirlik API 'Lerini kullanarak öğesini genişletebilirsiniz. Kendi özel hata ayıklama altyapınız ile kullanmak için exe proje sistemi ve **döküm Özeti** sayfası.

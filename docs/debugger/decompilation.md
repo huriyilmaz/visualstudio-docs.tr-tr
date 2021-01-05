@@ -1,5 +1,7 @@
 ---
 title: Hata ayıklarken .NET kodunu derlemeyi kaldırma | Microsoft Docs
+description: Visual Studio 'da hata ayıklarken .NET derlemelerinden kaynak kodu oluşturun ve ekleyin. Gömülü kaynak kodu ayıklayın ve görüntüleyin.
+ms.custom: SEO-VS-2020
 ms.date: 2/2/2020
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ manager: jillfra
 ms.workload:
 - multiple
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: 87f8fbec389e3735b6f1c39cdd671a391c7334d7
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 8ad919b14642dff98746c194ad8c05bbb3aea529
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89600110"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97726741"
 ---
 # <a name="generate-source-code-from-net-assemblies-while-debugging"></a>Hata ayıklama sırasında .NET derlemelerinden kaynak kodu oluşturma
 
@@ -61,7 +63,7 @@ Ayıklanan kaynak dosyalar çözüme [çeşitli dosyalar](../ide/reference/misce
 
 ![Çeşitli dosyalar seçeneğinin etkinleştirildiği araçlar seçenek sayfasının ekran görüntüsü.](media/decompilation-tools-options-misc-files.png)
 
-Ayıklanan kaynak dosyaları **Çözüm Gezgini**içindeki çeşitli dosyalarda görüntülenir.
+Ayıklanan kaynak dosyaları **Çözüm Gezgini** içindeki çeşitli dosyalarda görüntülenir.
 
 ![Çeşitli dosyalarla Çözüm Gezgini 'nin ekran görüntüsü.](media/decompilation-solution-explorer.png)
 
@@ -101,7 +103,7 @@ GitHub sorunu: [pdb Oluşturucu durumu](https://github.com/icsharpcode/ILSpy/iss
 
 [Yalnızca kendi kodum (JMC)](./just-my-code.md) ayarları, Visual Studio 'nun sistem, çerçeve, kitaplık ve diğer kullanıcı olmayan çağrılar üzerinde ilermasına olanak tanır. Bir hata ayıklama oturumu sırasında **modüller** penceresi, hata ayıklayıcının kodum (Kullanıcı kodu) olarak hangi kod modüllerine davranılması gerektiğini gösterir.
 
-En iyileştirilmiş veya yayın modüllerinin derlenmesi Kullanıcı olmayan kod üretir. Hata ayıklayıcı, derlenmiş Kullanıcı olmayan kodunuzda kaparsa **kaynak** penceresi görünmez. Yalnızca kendi kodum devre dışı bırakmak için, **Tools**  >  Genel hata ayıklama > Araçlar**Seçenekler** (veya **hata ayıklama**  >  **seçenekleri**) bölümüne gidin **Debugging**  >  **General**ve **yalnızca kendi kodum etkinleştir**seçimini kaldırın.
+En iyileştirilmiş veya yayın modüllerinin derlenmesi Kullanıcı olmayan kod üretir. Hata ayıklayıcı, derlenmiş Kullanıcı olmayan kodunuzda kaparsa **kaynak** penceresi görünmez. Yalnızca kendi kodum devre dışı bırakmak için,   >  Genel hata ayıklama > Araçlar **Seçenekler** (veya **hata ayıklama**  >  **seçenekleri**) bölümüne gidin   >  ve **yalnızca kendi kodum etkinleştir** seçimini kaldırın.
 
 ### <a name="extracted-sources"></a>Ayıklanan kaynaklar
 

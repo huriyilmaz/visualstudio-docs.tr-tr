@@ -1,5 +1,7 @@
 ---
 title: Kaynak denetimi eklentisi API Işlevleri | Microsoft Docs
+description: Kaynak denetimi eklentisi API 'sinin sağladığı ve kaynak denetimi eklentisi tarafından uygulanması gereken işlevler hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ce685729dda8750d772e244398b736cff4951b72
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 114862bb3358cc2a5400d6f40031deb030e4e4df
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699918"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97715996"
 ---
 # <a name="source-control-plug-in-api-functions"></a>Kaynak Denetimi Eklentisi API İşlevleri
 Kaynak denetimi eklentisi API 'si, bu API 'ye uygun olarak kaynak denetimi eklentisi tarafından uygulanması gereken aşağıdaki işlevleri sağlar. Her bir işlevin imzaları ve bit bayraklarıyla ve diğer parametrelerle ilişkili semantik bu başvuruda ayrıntılı olarak açıklanmaktadır.

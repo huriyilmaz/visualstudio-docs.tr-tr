@@ -7,12 +7,12 @@ ms.assetid: c2853359-18fd-4be4-97a6-02230c862f92
 ms.date: 10/22/2020
 ms.topic: how-to
 description: Yöneticilerin toplu ekleme özelliğini veya Microsoft Azure Active Directory gruplarını kullanarak birden çok aboneye nasıl lisans atayabileceği hakkında bilgi edinin
-ms.openlocfilehash: 6cb3613d76faca2adc9c6e946f6a8ec2c73770f1
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: e9d4cd5c7e73cdc3b71768a498a7c02546d3e1fc
+ms.sourcegitcommit: 74b67f102d243e3b74a93563e834f49df298e4b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2020
-ms.locfileid: "92467550"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97696604"
 ---
 # <a name="assign-subscriptions-to-multiple-users"></a>Birden çok kullanıcıya abonelik atama
 Abonelikler yönetim portalı, kullanıcıları tek seferde veya büyük gruplar halinde eklemenize olanak tanır.  Bireysel kullanıcı eklemek için bkz. [tek kullanıcı ekleme](assign-license.md).
@@ -35,7 +35,7 @@ Büyük Kullanıcı gruplarını eklemek için toplu ekleme özelliğini kullana
    > [!NOTE]
    > Bu şablonun en son sürümünü her zaman indirin. Daha eski bir sürüm kullanıyorsanız toplu karşıya yükleme işlemi başarısız olabilir.
 
-1. Excel elektronik tablosunda, abonelik atamak istediğiniz kişilerin bilgilerini içeren alanları doldurun. ( *Başvuru* isteğe bağlı bir alandır.) İşiniz bittiğinde dosyayı yerel olarak kaydedin.
+1. Excel elektronik tablosunda, abonelik atamak istediğiniz kişilerin bilgilerini içeren alanları doldurun. (*Başvuru* isteğe bağlı bir alandır.) İşiniz bittiğinde dosyayı yerel olarak kaydedin.
 
     > [!NOTE]
     > Şablondaki alanlardan biri yöneticilerin, abonelerin yazılım indirme yeteneğini etkinleştirmesine veya devre dışı bırakmasına olanak sağlar.  İndirmelerin devre dışı bırakılması, ürün anahtarlarına erişimini de devre dışı bırakır.
@@ -48,11 +48,11 @@ Büyük Kullanıcı gruplarını eklemek için toplu ekleme özelliğini kullana
     - Tüm gerekli alanların tamamlandığından emin olun. 
     - **Hata iletisi** sütununu kontrol edin.  Herhangi bir hata listeleniyorsa, dosyayı karşıya yüklemeyi denemeden önce bunları çözün. 
 
-1. Visual Studio abonelikleri yönetim portalına dönün. **Birden çok aboneyi karşıya yükle** iletişim kutusunda, **Araştır** ' ı seçin.
+1. Visual Studio abonelikleri yönetim portalına dönün. **Birden çok aboneyi karşıya yükle** iletişim kutusunda, **Araştır**' ı seçin.
    > [!div class="mx-imgBorder"]
    > ![Birden çok aboneyi karşıya yüklemek için kaydedilmiş şablonunuz 'na gidin](media/bulk-add-browse-saved-template.png "Dosya konumuna gidebilir veya bu iletişim kutusuna sürükleyip bırakabilirsiniz.")
 
-1. Kaydettiğiniz Excel dosyasına gidin ve ardından **Tamam** ' ı seçin.
+1. Kaydettiğiniz Excel dosyasına gidin ve ardından **Tamam**' ı seçin.
    > [!div class="mx-imgBorder"]
    > ![Birden çok aboneyi karşıya yüklemek için Excel şablonunu karşıya yükleyin](media/bulk-upload-subscribers.png "Verilerinize sahip şablon burada görünür.  Karşıya yüklemeyi başlatmak için Tamam ' ı seçin.")
 
@@ -65,10 +65,10 @@ Büyük Kullanıcı gruplarını eklemek için toplu ekleme özelliğini kullana
    Bir hatayla karşılaşırsanız, şu adımları izleyin:
    1. Oluşturduğunuz Excel dosyasını açın, sorunları düzeltin ve dosyayı kaydedin.
    0. Yönetim portalına dönün ve hata iletisini kapatın.
-   0. **Ekle** ' yi seçin.
-   0. **Toplu Ekle** ' yi seçin.
-   0. Excel dosyası zaten kaydedildiğinden, şablonu indirmeniz gerekmez.  **Araştır** ' ı seçin, yeni kaydettiğiniz dosyayı bulun ve **Aç** ' ı seçin.
-   0. **Tamam** ’ı seçin.
+   0. **Ekle**' yi seçin.
+   0. **Toplu Ekle**' yi seçin.
+   0. Excel dosyası zaten kaydedildiğinden, şablonu indirmeniz gerekmez.  **Araştır**' ı seçin, yeni kaydettiğiniz dosyayı bulun ve **Aç**' ı seçin.
+   0. **Tamam**’ı seçin.
 
 
     Karşıya yükleme başarılı olduğunda, aboneler listesini ve bir onay iletisi görürsünüz.
@@ -86,7 +86,7 @@ Bu özelliğin kullanılması, abonelik atamalarınızın üstünde kalmasını 
 > - Grupların en az bir üye içermesi gerekir.  Boş gruplar desteklenmiyor.
 > - Gruplar 1.000 'den az kullanıcı içermelidir. 
 > - Tüm kullanıcılar grubun en üst düzeyinde olmalıdır.  İç içe gruplar desteklenmiyor.
-> - Yalnızca güvenilen anlaşmalar desteklenir.
+> - Yalnızca güvenilen anlaşmalar desteklenir. (Yalnızca ' fazla ayırabilecek ' abonelikler olan anlaşmalar güvenilirdir.)
 > - Grubun tüm üyelerinin Azure AD hesabıyla ilişkilendirilmiş bir e-posta adresi olmalıdır.
 > - Azure AD grupları kullanılarak eklenen abonelikler için bildirimler için ayrı e-posta adresleri desteklenmez.  
 
@@ -111,7 +111,7 @@ Azure Active Directory grubu özelliğini kullanarak abone ekleme hakkında daha
    > [!div class="mx-imgBorder"]
    > ![Azure AD grubunuzu seçin](_img/assign-license-bulk/bulk-add-aad-details.png "Bu gruptan aboneler eklemek için Azure AD grubunuzun adını seçin.")
 
-6. **Ekle** ' yi ve ardından **Onayla** ' yı seçin. 
+6. **Ekle** ' yi ve ardından **Onayla**' yı seçin. 
 
 7. Eklenen grubu görmek için, Kullanıcı listenizin en altına gidin.  
 
@@ -129,6 +129,12 @@ Y: Hayır-gruptaki herkes aynı aboneliği alır.
 
 ### <a name="q-can-i-edit-subscriber-details-of-individuals-added-in-an-azure-ad-group"></a>S: bir Azure AD grubuna eklenen kişilerin abone ayrıntılarını düzenleyebilir miyim?  
 Y: Hayır-bireysel bir abonenin bilgilerini değiştirmek Için bunları Azure AD güvenlik grubundan kaldırmanız ve ayrı ayrı tek bir aboneliğe atamanız gerekir.  
+
+### <a name="q-why-cant-i-see-the-option-to-use-azure-active-directory-groups-to-add-subscribers"></a>S: aboneler eklemek için Azure Active Directory gruplarını kullanma seçeneğini neden göremiyorum?
+Y: Bu özellik şu anda yalnızca güvenilen sözleşmeleri olan kuruluşlar tarafından kullanılabilir.  Anlaşma bilgilerinizi göstermek için **Ayrıntılar** düğmesini seçin.
+
+   > [!div class="mx-imgBorder"]
+   > ![Ayrıntılar düğmesine tıklayın](_img/assign-license-bulk/bulk-add-agreement.png "Ne tür bir anlaşma olduğunu görmek için Ayrıntılar düğmesine tıklayın")
 
 ### <a name="q-i-added-someone-to-my-azure-ad-security-group-but-i-dont-see-them-added-in-the-subscriptions-administration-portal-and-they-dont-have-a-subscription-why-not"></a>S: birini Azure AD güvenlik grubumu ekledim, ancak bunları abonelikler yönetim portalına ekledim ve bir aboneliği yok. Neden olmasın?  
 Y: kuruluşunuzun Azure AD 'yi nasıl yapılandırdığına bağlı olarak, kullanıcının eklenebilmesi için en fazla 24 saat gecikmeyle karşılaşabilirsiniz. 24 saatten uzun bir süredir, [desteğe başvurun](https://visualstudio.microsoft.com/support/support-overview-vs).  

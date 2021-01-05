@@ -10,12 +10,12 @@ ms.date: 11/13/2017
 ms.topic: how-to
 ms.workload:
 - multiple
-ms.openlocfilehash: 15e788cca7cb27b36e3f3567aff96cd33bf5aaae
-ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
+ms.openlocfilehash: 28eccd9c564b7d368e823288311a823fdff86fb3
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92099238"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97726404"
 ---
 # <a name="create-an-ai-project-from-a-template-in-visual-studio"></a>Visual Studio 'da bir şablondan bir AI projesi oluşturma
 
@@ -37,10 +37,10 @@ ms.locfileid: "92099238"
 
 6. Projenizde Ayrıca, komut satırı bağımsız değişkenlerini otomatik olarak bu giriş parametrelerine geçirerek uygulamanızda hata ayıklamayı kolaylaştırmak için bazı özellikler oluşturulmuş. Projenize sağ tıklayın ve ardından **Özellikler** **' i** seçin
 
-    ![Özellikler](media/create-project/project-properties.png)
+    ![Visual Studio 'nun seçili özelliklerle birlikte TensorFlowApplication1 için bağlam menüsünü gösteren Çözüm Gezgini ekran görüntüsü.](media/create-project/project-properties.png)
 
 7. Otomatik olarak eklenen betik bağımsız değişkenlerini görmek için **Hata Ayıkla** sekmesine tıklayın. Bunları, giriş verilerinizin bulunduğu yere ve çıktının depolanacağı yere göre değiştirebilirsiniz.
 
-    ![Özellikler](media/create-project//project-properties_1.png)
+    ![Proje için betik bağımsız değişkenlerini gösteren TensorFlowApplication1 için özellikler ayarlarındaki hata ayıklama sekmesinin ekran görüntüsü.](media/create-project//project-properties_1.png)
 
 8. CTRL + F5 tuşlarına basarak veya menüden **hata ayıklama > başla** ' yı seçerek programı çalıştırın. Sonuçlar konsol penceresinde görüntülenir.

@@ -10,12 +10,12 @@ ms.date: 11/13/2017
 ms.topic: how-to
 ms.workload:
 - multiple
-ms.openlocfilehash: 4bcc1932bad5b34d9695257feb163654f6b99514
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a6813e834af00330b4018f16d4a19be945be2be9
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85371631"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97726650"
 ---
 # <a name="create-an-ai-project-from-the-azure-machine-learning-gallery-in-visual-studio"></a>Visual Studio 'da Azure Machine Learning galerisinden bir AI projesi oluşturma
 
@@ -52,12 +52,12 @@ Azure Machine Learning Visual Studio Tools for AI tümleşiktir. Azure sanal mak
 
 5. Visual Studio, `.pyproj` örnek içinde tanımlanan diğer dosyalarla birlikte proje dosyasını (diskte bulunan bir dosya) oluşturur. "MNIST" şablonuyla, proje birkaç dosya içerir.
 
-    ![mnıst veritabanını kullanacaksınız](media/create-project-gallery/azml-mnist.png)
+    ![TensorFlowMNIST projesi dosyalarını gösteren Visual Studio Çözüm Gezgini ekran görüntüsü. Tf_mnist. Kopyala için kod ana pencerede gösterilir.](media/create-project-gallery/azml-mnist.png)
 
 6. İşi Azure Machine Learning gönder.
 
-    ![mnıst veritabanını kullanacaksınız](media/create-project-gallery/submit-azml.png)
+    !["Işi gönder..." ile TensorFlowMNIST projesinin bağlam menüsünü gösteren Visual Studio Çözüm Gezgini ekran görüntüsü seçildiğinde.](media/create-project-gallery/submit-azml.png)
 
 7. Bir Docker kapsayıcısında veya yerel makinenizde çalıştırın
 
-    ![mnıst veritabanını kullanacaksınız](media/create-project-gallery/azml-local.png)
+    ![Use kümesi ile Iş Gönder iletişim kutusunun ekran görüntüsü "azureml:/yerel" olarak ayarlanmış ve başlangıç betiği "tf_mnist. Kopyala" olarak ayarlandı.](media/create-project-gallery/azml-local.png)

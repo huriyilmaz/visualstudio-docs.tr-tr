@@ -1,5 +1,7 @@
 ---
 title: BC doku sıkıştırma varyantı | Microsoft Docs
+description: B8G8R8X8, B8G8R8A8 veya R8G8B8A8 varyasyonuna sahip bir piksel biçimine sahip dokuların blok sıkıştırmaya (BC) izin vermek için BC doku sıkıştırma türevini kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 2d0f5305-585b-4b01-bc9a-7a32d6e991da
@@ -8,17 +10,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c5faf19632d746105deed3a36af6943627594175
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e767268073f896de590386854a0d2c9ce2803073
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72736157"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97726455"
 ---
 # <a name="bc-texture-compression-variant"></a>BC Doku Sıkıştırma Çeşidi
 B8G8R8X8, B8G8R8A8 veya R8G8B8A8 çeşitlemesi olan bir piksel biçimi olan dokuların blok sıkıştırmasını sunar.
 
-## <a name="interpretation"></a>Yorumlama
+## <a name="interpretation"></a>Yorum
  BC1, BC2 ve BC3 gibi blok tabanlı sıkıştırma biçimleri, sıkıştırılmamış görüntü biçimlerinden önemli ölçüde daha az bellek kaplar ve bu nedenle önemli ölçüde daha az bellek bant genişliği tüketir. Piksel başına 32 bit kullanan sıkıştırılmamış bir biçime kıyasla, BC1 (eski adıyla DXT1) 8:1 Compression ve BC3 (eski adıyla, daha önce DXT5 olarak bilinirdi) 4:1. BC1 ve BC3 arasındaki fark BC1 bir alfa kanalını desteklemekte olsa da, BC3 blok ile sıkıştırılmış bir alfa kanalını destekler. Yüksek sıkıştırma oranlarına rağmen, tipik dokuların görüntü kalitesinde yalnızca küçük bir azalma vardır. Bununla birlikte, belirli dokuların (örneğin, küçük bir alanda önemli renk çeşitlemelerine sahip olanlar) sıkıştırılması, kabul edilemez sonuçlara neden olabilir.
 
  Dokularınız blok tabanlı sıkıştırma için uygun ise ve kusursuz renge uygunluk gerekmiyorsa, bellek kullanımını azaltmak ve daha az bant genişliği kullanmak için blok ile sıkıştırılmış bir biçim kullanmayı düşünün.

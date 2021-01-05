@@ -1,5 +1,7 @@
 ---
 title: Bir olaya abone olma | Microsoft Docs
+description: Visual Studio SDK 'da çalışan bir belge tablosundaki olaylara yanıt veren bir araç penceresi oluşturmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,24 +13,24 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6aefe2efce897aefc26f63835844b0cc705fb5b1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c739dad7be8d2a000662eca478bc117699694c8a
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699681"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97715879"
 ---
 # <a name="subscribing-to-an-event"></a>Bir Olaya Abone Olma
 Bu izlenecek yol, çalışan bir belge tablosundaki (RDT) olaylara yanıt veren bir araç penceresinin nasıl oluşturulacağını açıklar. Bir araç penceresi, uygulayan bir kullanıcı denetimini barındırır <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents> . <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.AdviseRunningDocTableEvents%2A>Yöntemi, arabirimini olaylara bağlar.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
  Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yüklememeyin. Visual Studio kurulumuna isteğe bağlı bir özellik olarak dahildir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yükleme](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="subscribing-to-rdt-events"></a>RDT olaylarına abone olma
 
 #### <a name="to-create-an-extension-with-a-tool-window"></a>Bir araç penceresi ile uzantı oluşturmak için
 
-1. VSıX şablonunu kullanarak **rdmpl** adlı bir proje oluşturun ve **RDTExplorerWindow**adlı özel bir araç penceresi öğesi şablonu ekleyin.
+1. VSıX şablonunu kullanarak **rdmpl** adlı bir proje oluşturun ve **RDTExplorerWindow** adlı özel bir araç penceresi öğesi şablonu ekleyin.
 
      Araç penceresiyle uzantı oluşturma hakkında daha fazla bilgi için bkz. [bir araç penceresi Ile uzantı oluşturma](../extensibility/creating-an-extension-with-a-tool-window.md).
 

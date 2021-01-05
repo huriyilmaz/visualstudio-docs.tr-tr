@@ -1,5 +1,7 @@
 ---
 title: Symbols öğesi | Microsoft Docs
+description: Symbols öğesi, diğer VSCT öğeleri tarafından kullanılan GUID 'Leri ve kimlikleri tanımlar. Bu makale bir örnek içerir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5c24c3f84df23a07b6b16272b66b29e32ad7b911
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8e86406c4c10c2f65e8e43d8f3cb67f413ed3c63
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699345"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97715567"
 ---
 # <a name="symbols-element"></a>Symbols Öğesi
 Diğer VSCT öğeleri tarafından kullanılan GUID 'Leri ve kimlikleri tanımlar. Yönetilmeyen kod için bu bilgiler genellikle [extern öğesi](../extensibility/extern-element.md)tarafından belirtilen başlık dosyalarından gelir. Yönetilen kod, bu bilgileri tanımlamak için semboller öğesinin alt öğelerini kullanır.
@@ -25,7 +27,7 @@ Diğer VSCT öğeleri tarafından kullanılan GUID 'Leri ve kimlikleri tanımlar
 
  Sembol öğesi, Önişlemci tarafından kullanılmak üzere ad-değer çiftlerini tanımlayan [define öğesiyle](../extensibility/define-element.md)karıştırılmamalıdır.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Sözdizimi
 
 ```
 <Symbols>

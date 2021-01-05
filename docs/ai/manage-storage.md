@@ -10,12 +10,12 @@ ms.date: 11/13/2017
 ms.topic: how-to
 ms.workload:
 - multiple
-ms.openlocfilehash: ae419c67b493ef03b08f6fcf627ad0fbe42ca6d0
-ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
+ms.openlocfilehash: b145c4acf4047356b8996d09d746679900314f1b
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92099212"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97726572"
 ---
 # <a name="browse-storage-to-upload-data-or-download-models-and-logs"></a>Verileri karşıya yüklemek veya modelleri ve günlükleri indirmek için depolamaya gözatamıyorum
 
@@ -23,11 +23,11 @@ Verileri karşıya yüklemeyi veya modelleri ve günlükleri indirmeyi sağlamak
 
 ## <a name="to-access-all-data-on-the-remote-machine-or-file-share"></a>Uzak makinedeki veya dosya paylaşımındaki tüm verilere erişmek için
 
-1. **Sunucu Gezgini**açın.
+1. **Sunucu Gezgini** açın.
 2. Uzak makineyi veya Batch AI işlem bağlamını genişletin.
 3. **Depolama alanı**' na sağ tıklayın; ardından, **Araştır**' a tıklayın.
 
-    ![depolama](media/manage-storage/browse-storage.png)
+    ![Uzak makineler klasörü genişletilmiş Sunucu Gezgini ekran görüntüsü. Depolama alanı, klasör ağacında vurgulanır ve bağlam menüsünde tarama seçilidir.](media/manage-storage/browse-storage.png)
 
 ## <a name="to-access-job-specific-data-on-the-remote-machine-or-file-share"></a>Uzak makinedeki veya dosya paylaşımındaki işe özgü verilere erişmek için
 
@@ -35,4 +35,4 @@ Verileri karşıya yüklemeyi veya modelleri ve günlükleri indirmeyi sağlamak
 2. İşi seçin.
 3. Bu önemli günlük dosyalarına hızlı erişim için **çalışma klasörü** ' ne veya **stdout/stderr** ' e tıklayın.
 
-    ![depolama](media/manage-storage/job-workingfolder.png)
+    ![Sunucu Gezgini 'de Iş tarayıcısı penceresinin ekran görüntüsü. Train_mnist işi seçilidir ve çalışma klasörü bağlantısı Iş ayrıntıları altında seçilidir.](media/manage-storage/job-workingfolder.png)

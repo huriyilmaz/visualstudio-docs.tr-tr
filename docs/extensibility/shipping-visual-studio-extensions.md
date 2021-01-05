@@ -1,5 +1,7 @@
 ---
 title: Visual Studio uzantılarını aktarma | Microsoft Docs
+description: Visual Studio SDK uzantınızı yayımlama ve bakımını yapma hakkında bilgi edinin. VSIX dosyaları, yayımlama, yerelleştirme ve güncelleştirme gibi.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 767bb24bb5cb47f1af1452aa04ebdc91c778e284
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 812fc4f4e2f8dcf54876e2764f0c091f16348496
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80700119"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97716009"
 ---
 # <a name="shipping-visual-studio-extensions"></a>Visual Studio Uzantıları Gönderme
 Uzantınızı geliştirmeyi bitirdikten sonra, diğer makinelere yükleyebilir, arkadaşlarınızla ve iş arkadaşlarınızla paylaşabilir veya Visual Studio Market yayımlayabilirsiniz. Bu bölümde, uzantınızı yayımlamak ve sürdürmek için ihtiyacınız olan tüm şeyleri açıkladık:. vsix dosyaları, yayımlama, yerelleştirme ve güncelleştirme ile çalışma.
@@ -30,7 +32,7 @@ Uzantınızı geliştirmeyi bitirdikten sonra, diğer makinelere yükleyebilir, 
  VSıX biçimi, kod parçacıklarının yüklenmesini desteklemez. Ayrıca, genel derleme önbelleği 'ne (GAC) veya sistem kayıt defterine yazma gibi bazı diğer senaryoları da desteklemez. Yüklemede GAC veya kayıt defterine yazmanız gerekiyorsa Windows Installer kullanmanız gerekir. Daha fazla bilgi için bkz. [Windows Installer dağıtım Için uzantıları hazırlama](../extensibility/preparing-extensions-for-windows-installer-deployment.md).
 
 ## <a name="publishing-your-extension-to-the-visual-studio-marketplace"></a>Uzantınızı Visual Studio Market Yayımlama
- Uzantınızı diğer kişilere,. vsix dosyasını postayla göndererek veya sunucuya yerleştirerek dağıtabilirsiniz. Ancak, kodunuzu çok sayıda kişinin elsinden elde etmenin en iyi yolu, [Visual Studio Market](https://marketplace.visualstudio.com/vs). Visual Studio Market uzantıları, **Uzantılar ve güncelleştirmeler**aracılığıyla Visual Studio kullanıcıları tarafından kullanılabilir. Daha fazla bilgi için bkz. [Visual Studio uzantılarını bulma ve kullanma](../ide/finding-and-using-visual-studio-extensions.md).
+ Uzantınızı diğer kişilere,. vsix dosyasını postayla göndererek veya sunucuya yerleştirerek dağıtabilirsiniz. Ancak, kodunuzu çok sayıda kişinin elsinden elde etmenin en iyi yolu, [Visual Studio Market](https://marketplace.visualstudio.com/vs). Visual Studio Market uzantıları, **Uzantılar ve güncelleştirmeler** aracılığıyla Visual Studio kullanıcıları tarafından kullanılabilir. Daha fazla bilgi için bkz. [Visual Studio uzantılarını bulma ve kullanma](../ide/finding-and-using-visual-studio-extensions.md).
 
  Bir uzantının Visual Studio Market nasıl yükleneceğini gösteren tam bir örnek için bkz. [Izlenecek yol: Visual Studio uzantısı yayımlama](../extensibility/walkthrough-publishing-a-visual-studio-extension.md).
 

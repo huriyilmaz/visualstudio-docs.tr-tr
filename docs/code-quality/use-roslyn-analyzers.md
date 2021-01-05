@@ -13,12 +13,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: f5ca27d44e611ab3b541dfb5992ef37d230513c3
-ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
+ms.openlocfilehash: fc74a556fe6baf21b6270b21951018fc246aa962
+ms.sourcegitcommit: 74b67f102d243e3b74a93563e834f49df298e4b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96040647"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97696630"
 ---
 # <a name="overview"></a>Genel Bakış
 
@@ -46,7 +46,7 @@ Aşağıdaki tabloda farklı önem derecesi seçenekleri gösterilmektedir:
 | Uyarı | `warning` | İhlaller Hata Listesi ve komut satırı derleme çıkışında *Uyarı* olarak görünür, ancak derlemelerin başarısız olmasına neden olmaz. | Sorunlu kodun yeşil bir dalgalı çizgi ile altı çizilir ve kaydırma çubuğunda küçük bir yeşil kutu ile işaretlenir. |
 | Bilgi | `suggestion` | İhlaller, komut satırı derleme çıktısında değil, Hata Listesi *iletiler* olarak görünür. | Sorunlu kodun gri dalgalı çizgi ile altı çizilir ve kaydırma çubuğundaki küçük bir gri kutusuyla işaretlenir. |
 | Gizli | `silent` | Kullanıcıya görünür değil. | Kullanıcıya görünür değil. Ancak tanılama, IDE tanılama altyapısına bildirilir. |
-| Yok | `none` | Tamamen gizlendi. | Tamamen gizlendi. |
+| Hiçbiri | `none` | Tamamen gizlendi. | Tamamen gizlendi. |
 | Varsayılan | `default` | Kuralın varsayılan önem derecesine karşılık gelir. Bir kural için varsayılan değerin ne olduğunu belirlemek için Özellikler penceresi bakın. | Kuralın varsayılan önem derecesine karşılık gelir. |
 
 Kural ihlalleri bir çözümleyici tarafından bulunursa, bunlar kod düzenleyicisinde (sorunlu kod altında bir *dalgalı çizgi* olarak) ve hata listesi penceresinde raporlanır.
@@ -261,7 +261,7 @@ dotnet_diagnostic.CA2231.severity = warning
 
 ### <a name="set-rule-severity-from-solution-explorer"></a>Kural önem derecesini Çözüm Gezgini ayarla
 
-1. Çözüm Gezgini, **başvuru**  >  **Çözümleyicileri** (veya **Dependencies**  >  .NET Core projeleri için bağımlılıklar **Çözümleyicileri** ) öğesini genişletin.
+1. Çözüm Gezgini, **başvuru**  >  **Çözümleyicileri** (veya   >  .NET Core projeleri için bağımlılıklar **Çözümleyicileri** ) öğesini genişletin.
 
 2. Önem derecesini ayarlamak istediğiniz kuralı içeren derlemeyi genişletin.
 
@@ -286,7 +286,7 @@ dotnet_diagnostic.CA2231.severity = warning
 
 1. Etkin kural kümesi dosyasını aşağıdaki yollarla açın:
 
-- **Çözüm Gezgini**' de, dosyaya **çift tıklayın,** çözümleyiciler öğesine sağ tıklayın  >  **Analyzers** ve **etkin kural kümesini aç**' ı seçin.
+- **Çözüm Gezgini**' de, dosyaya **çift tıklayın,** çözümleyiciler öğesine sağ tıklayın  >   ve **etkin kural kümesini aç**' ı seçin.
 - Projenin **Kod Analizi** Özellik sayfasında **Aç** ' ı seçin.
 
   Kural kümesini ilk kez düzenliyorsanız, Visual Studio varsayılan kural kümesi dosyasının bir kopyasını oluşturur, *\<projectname> . RuleSet* olarak adlandırır ve bunu projenize ekler. Bu özel kural kümesi, projeniz için etkin kural kümesi de olur.
@@ -333,7 +333,7 @@ Kural ihlallerini bastırmak için birden çok yol vardır:
 
 - **Çözümle** menüsünden
 
-  **Analyze**  >  Geçerli ihlallerin tümünü bastırmak için derlemeyi çözümle ve menü çubuğunda **etkin sorunları Gizle** ' yi seçin. Bu bazen "taban çizgisi" olarak adlandırılır.
+    >  Geçerli ihlallerin tümünü bastırmak için derlemeyi çözümle ve menü çubuğunda **etkin sorunları Gizle** ' yi seçin. Bu bazen "taban çizgisi" olarak adlandırılır.
 
 ::: moniker-end
 
@@ -341,7 +341,7 @@ Kural ihlallerini bastırmak için birden çok yol vardır:
 
 - **Çözümle** menüsünden
 
-  **Analyze**  >  Geçerli ihlallerin tümünü bastırmak için,**Kod analizini Çalıştır ve menü çubuğunda etkin sorunları Gizle** ' yi seçin. Bu bazen "taban çizgisi" olarak adlandırılır.
+    >  Geçerli ihlallerin tümünü bastırmak için,**Kod analizini Çalıştır ve menü çubuğunda etkin sorunları Gizle** ' yi seçin. Bu bazen "taban çizgisi" olarak adlandırılır.
 
 ::: moniker-end
 
@@ -355,13 +355,13 @@ Kural ihlallerini bastırmak için birden çok yol vardır:
 
 - **Kod düzenleyicisinden**
 
-  İmleci kod satırına yerleştirin ve **Ctrl** + **hızlı eylemler** menüsünü açmak için CTRL **dönemi (.)** tuşuna basın. **Suppress CAXXXX**  >  **Kaynak/gizleme dosyasında** caxxxx 'i Gizle ' yi seçin.
+  İmleci kod satırına yerleştirin ve  + **hızlı eylemler** menüsünü açmak için CTRL **dönemi (.)** tuşuna basın.   >  **Kaynak/gizleme dosyasında** caxxxx 'i Gizle ' yi seçin.
 
   ![Hızlı Eylemler menüsünden tanılamayı gösterme](media/suppress-diagnostic-from-editor.png)
 
 - **Hata listesi**
 
-  Gizlemek istediğiniz kuralları seçin ve ardından sağ tıklayıp **Suppress**  >  **kaynak/gizleme dosyasında** Gizle ' yi seçin.
+  Gizlemek istediğiniz kuralları seçin ve ardından sağ tıklayıp   >  **kaynak/gizleme dosyasında** Gizle ' yi seçin.
 
   - **Kaynakta** bastırdığınızda, **Değişiklikleri Önizle** iletişim kutusu açılır ve C# [#pragma warning](/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning) veya kaynak koda eklenen Visual Basic [#Disable uyarı](/dotnet/visual-basic/language-reference/directives/directives) yönergesinin önizlemesini gösterir.
 
@@ -382,7 +382,9 @@ Kural ihlallerini bastırmak için birden çok yol vardır:
 
 Projenizi komut satırında oluşturduğunuzda, aşağıdaki koşullar karşılanıyorsa, yapı çıkışında kural ihlalleri görüntülenir:
 
-- Çözümleyiciler VSıX uzantısı olarak değil, bir NuGet paketi olarak yüklenir.
+- Çözümleyiciler, .NET SDK veya VSıX uzantısı olarak değil, bir NuGet paketi olarak yüklenir.
+
+  .NET SDK kullanılarak yüklenen çözümleyiciler için [çözümleyicilerin etkinleştirilmesi](../code-quality/install-net-analyzers.md)gerekebilir. Kod stilleri için, MSBuild özelliğini ayarlayarak [derleme üzerinde kod stilleri](/dotnet/fundamentals/code-analysis/overview#code-style-analysis) de uygulayabilirsiniz.
 
 - Projenin kodunda bir veya daha fazla kural ihlal edildi.
 

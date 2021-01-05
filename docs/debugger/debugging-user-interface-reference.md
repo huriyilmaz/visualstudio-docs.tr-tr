@@ -1,5 +1,7 @@
 ---
 title: Kullanıcı arabirimi başvurusunda hata ayıklama | Microsoft Docs
+description: Visual Studio 'nun hata ayıklama Kullanıcı arabiriminde karşılaşabileceğiniz çeşitli iletişim kutuları hakkındaki başvuru bilgilerine yönelik bağlantıları gözden geçirin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,27 +20,27 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 318ab9263b530ac283d210f59aa8ca29733c6e8d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6bfd91e91b89e5a6409bf0c34245a6d37eba905e
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72738064"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97726806"
 ---
 # <a name="debugging-user-interface-reference"></a>Kullanıcı Arabirim Başvurusunda Hata Ayıklama
 Uygulamanızda hata ayıklarken aşağıdaki iletişim kutularıyla karşılaşabilirsiniz.
 
  Visual Studio genişletilebilirlik modelini kullanarak pek çok hata ayıklayıcı özelliğini otomatikleştirebilirsin. Daha fazla bilgi için bkz. Visual Studio hata ayıklama SDK.
 
-- [Kesme Noktaları Seç İletişim Kutusu](../debugger/choose-breakpoints-dialog-box.md)
+- [Kesme noktaları Seç Iletişim kutusu](../debugger/choose-breakpoints-dialog-box.md)
 
-- [Kaynak Dosyalarda Hata Ayıklama, Ortak Özellikler, Çözüm Özellik Sayfaları İletişim Kutusu](../debugger/debug-source-files-common-properties-solution-property-pages-dialog-box.md)
+- [Kaynak dosyalarında hata ayıkla, ortak özellikler, çözüm Özellik sayfaları Iletişim kutusu](../debugger/debug-source-files-common-properties-solution-property-pages-dialog-box.md)
 
-- [Hata Ayıklama, Seçenekler İletişim Kutusu](../debugger/debugging-options-dialog-box.md)
+- [Hata ayıklama, Seçenekler Iletişim kutusu](../debugger/debugging-options-dialog-box.md)
 
-- [Düzenle ve Devam Et İletişim Kutusu](../debugger/edit-and-continue-dialog-box.md)
+- [Düzenle ve devam et Iletişim kutusu](../debugger/edit-and-continue-dialog-box.md)
 
-- [Devam Eden Hata Ayıklamayı Durdur İletişim Kutusu](../debugger/stop-debugging-in-progress-dialog-box.md)
+- [Devam eden hata ayıklamayı Durdur Iletişim kutusu](../debugger/stop-debugging-in-progress-dialog-box.md)
 
 - [Hataları Ayıklama ve Uyarı İletişim Kutuları](../debugger/debugging-errors-and-warning-dialog-boxes.md)
 

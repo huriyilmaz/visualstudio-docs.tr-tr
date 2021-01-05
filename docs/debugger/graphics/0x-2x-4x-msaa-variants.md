@@ -1,5 +1,7 @@
 ---
 title: 0x-2x-4X MSAA çeşitleri | Microsoft Docs
+description: 0x, 2x veya 4X MSAA türevlerini kullanarak tüm işleme hedefleri ve takas zincirlerinde çok örnekli düzgünleştirme (MSAA) ayarlarını nasıl geçersiz kılacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 668a6603-5082-4c78-98e6-f3dc871aa55b
@@ -8,17 +10,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e77c0d7b5cbba2faf73fcca85ffcd0db063d618e
-ms.sourcegitcommit: 023f52f10fb91850824558478cbfd2ec965054f0
+ms.openlocfilehash: 1d4de52fb135e465e7adc938bb29c571bfcc1973
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94407555"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97726559"
 ---
 # <a name="0x2x4x-msaa-variants"></a>0x/2x/4x MSAA Çeşitleri
 Tüm işleme hedefleri ve takas zincirlerinde çok örnekli düzgünleştirme (MSAA) ayarlarını geçersiz kılar.
 
-## <a name="interpretation"></a>Yorumlama
+## <a name="interpretation"></a>Yorum
  Çoklu örnek kenar yumuşatma, her pikselde birden çok konumda örnek alarak görsel kaliteyi artırır; daha fazla MSAA düzeyi daha fazla örnek alır ve MSAA olmadan, pikselin merkezinden yalnızca bir örnek alınır. Uygulamanızda MSAA 'nın etkinleştirilmesi, genellikle işleme performansında düşük bir maliyetle oluşur ancak bazı iş yükleri veya belirli GPU 'Larda, neredeyse hiçbir etkisi yoktur.
 
  Uygulamanızda zaten MSAA etkinse, daha az MSAA çeşitlemeleri mevcut, daha üst düzey MSAA 'nın ilgili performans maliyetini gösterir. Özellikle, 0x MSAA değişkeni, MSAA olmadan uygulamanızın göreli performansını gösterir.

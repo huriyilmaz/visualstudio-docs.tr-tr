@@ -1,5 +1,7 @@
 ---
 title: Deneysel örnek | Microsoft Docs
+description: Visual Studio SDK 'nın test edilmemiş uygulamaları hata ayıklama modunda çalıştırmak için deneysel alan nasıl sağladığını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8e2284767a0aa6be58c0f7e38c912783728914cb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4786f450b108c8a6c1eaefc6f86f7adf57e9269e
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699035"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97715866"
 ---
 # <a name="the-experimental-instance"></a>Deneysel Örnek
 Visual Studio geliştirme ortamınızı, onu değiştirebilen test edilmemiş uygulamalardan korumak için, VSSDK, denemek için kullanabileceğiniz bir deneysel alan sağlar. Visual Studio 'Yu her zamanki gibi kullanarak yeni uygulamalar geliştirirsiniz, ancak bunları bu deneysel örneği kullanarak çalıştırırsınız.

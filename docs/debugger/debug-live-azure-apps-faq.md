@@ -1,5 +1,7 @@
 ---
 title: Anlık görüntü hata ayıklaması hakkında SSS | Microsoft Docs
+description: Visual Studio 'daki Snapshot Debugger kullanarak canlı Azure uygulamalarında hata ayıklarken oluşabilecek sık sorulan sorular (SSS) listesini gözden geçirin.
+ms.custom: SEO-VS-2020
 ms.date: 11/07/2017
 ms.topic: reference
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f8afc67b92a943dd571847bb1a00fb7e4db4514b
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 5276127f0d6755b9fdabdfa965b5c1b8c4d94823
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851105"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97727209"
 ---
 # <a name="frequently-asked-questions-for-snapshot-debugging-in-visual-studio"></a>Visual Studio 'da anlık görüntü hata ayıklaması için sık sorulan sorular
 
@@ -50,7 +52,7 @@ Evet, anlık görüntü hata ayıklaması yük altındaki sunucular için çalı
 App Service Snapshot Debugger site uzantısını aşağıdaki adımlarla kaldırabilirsiniz:
 
 1. App Service, Visual Studio veya Azure portal bulut Gezgini aracılığıyla kapatın.
-1. App Service kudu sitenize (yani, yourappservice) gidin.** SCM**. azurewebsites.net) ve **site uzantılarına**gidin.
+1. App Service kudu sitenize (yani, yourappservice) gidin.**SCM**. azurewebsites.net) ve **site uzantılarına** gidin.
 1. Kaldırmak için Snapshot Debugger site uzantısında X öğesine tıklayın.
 
 #### <a name="why-are-ports-opened-during-a-snapshot-debugger-session"></a>Snapshot Debugger oturumu sırasında bağlantı noktaları neden açıldı?
@@ -62,7 +64,7 @@ Snapshot Debugger, Azure 'da alınan anlık görüntülerde hata ayıklamak içi
 Uygulama Hizmetleri için:
 1. App Service için Azure portal uzaktan hata ayıklayıcı uzantısını devre dışı bırakın.
 2. Uygulama *ayarlarını* > uygulama hizmeti kaynak dikey penceresini > Azure Portal
-3. *Hata ayıklama* bölümüne gidin ve *Uzaktan hata ayıklama*için *kapalı* düğmesine tıklayın.
+3. *Hata ayıklama* bölümüne gidin ve *Uzaktan hata ayıklama* için *kapalı* düğmesine tıklayın.
 
 AKS için:
 1. [Docker görüntülerinde Visual Studio Snapshot Debugger](https://github.com/Microsoft/vssnapshotdebugger-docker)karşılık gelen bölümleri kaldırmak Için Dockerfile dosyanızı güncelleştirin.

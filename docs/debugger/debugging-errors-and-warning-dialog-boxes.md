@@ -1,5 +1,7 @@
 ---
 title: Hata ayıklama hataları ve uyarı Iletişim kutuları | Microsoft Docs
+description: Visual Studio 'da uygulamanızda hata ayıklarken karşılaşabileceğiniz hata ve uyarı iletişim kutularının listesini görüntüleyin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -21,38 +23,38 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: beeba55c873e008b3e096da66f888695d719c882
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 73432c1693db1543095643a998396967b7aa2bdf
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89599946"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97726988"
 ---
 # <a name="debugging-errors-and-warning-dialog-boxes"></a>Hataları Ayıklama ve Uyarı İletişim Kutuları
 Uygulamanızda hata ayıklarken karşılaşabileceğiniz hatalar ve uyarı iletişim kutuları aşağıda verilmiştir.
 
 ## <a name="in-this-section"></a>Bu Bölümde
- [Onaylama Başarısız İletişim Kutusu](../debugger/assertion-failed-dialog-box.md)
+ [Onaylama başarısız Iletişim kutusu](../debugger/assertion-failed-dialog-box.md)
 
- [Değer Değiştirilemez İletişim Kutusu](../debugger/cannot-change-value-dialog-box.md)
+ [Değer değiştirilemez Iletişim kutusu](../debugger/cannot-change-value-dialog-box.md)
 
  [Hata Ayıklayıcı Kaynak Kodu veya Ayrıştırılmış Kodu Görüntüleyemez](../debugger/debugger-cannot-display-source-code-or-disassembly.md)
  
  [Belleği Dolan Hata Ayıklayıcı Hizmetleri](../debugger/error-debugger-services-no-memory.md)
 
- [Hata Ayıklama Oturumu İçin Yürütülebilir İletişim Kutusu](../debugger/executable-for-debugging-session-dialog-box.md)
+ [Hata ayıklama oturumu için yürütülebilir Iletişim kutusu](../debugger/executable-for-debugging-session-dialog-box.md)
 
  [Kod değişiklikleri uygulanamadı Iletişim kutusu](../debugger/edit-and-continue-dialog-box-cpp.md)
 
- [Microsoft Visual Studio Hata Ayıklayıcısı (Özel Durum Oluştu) İletişim Kutusu](../debugger/microsoft-visual-studio-debugger-exception-thrown-dialog-box.md)
+ [Microsoft Visual Studio hata ayıklayıcı (özel durum oluştu) Iletişim kutusu](../debugger/microsoft-visual-studio-debugger-exception-thrown-dialog-box.md)
 
  [Geçerli konum Iletişim kutusu için kullanılabilir kaynak kodu yok](../debugger/no-source-available.md)
 
  [Sembolik bilgi yok Iletişim kutusu](/previous-versions/d493t3ew(v=vs.100))
 
- [Belirsizliği Çöz İletişim Kutusu](../debugger/resolve-ambiguity-dialog-box.md)
+ [Belirsizliği çöz Iletişim kutusu](../debugger/resolve-ambiguity-dialog-box.md)
 
- [Eski Kod Uyarısı İletişim Kutusu](../debugger/stale-code-warning-dialog-box.md)
+ [Eski kod uyarısı Iletişim kutusu](../debugger/stale-code-warning-dialog-box.md)
 
  [Makineye bağlanılamıyor](../debugger/error-unable-to-connect-to-the-machine-name-the-machine-cannot-be-found-on-the-network.md)
 
@@ -67,6 +69,6 @@ Uygulamanızda hata ayıklarken karşılaşabileceğiniz hatalar ve uyarı ileti
 
  [SQL hata ayıklama kurulumu sorunlarını giderme](/previous-versions/visualstudio/visual-studio-2010/s7ahaxtd(v=vs.100))
 
- [Yerel kod SSS hatalarını ayıklama](../debugger/debugging-native-code-faqs.md)
+ [Yerel kodda hata ayıklama SSS](../debugger/debugging-native-code-faqs.md)
 
- [Hata Ayıklama Güvenliği](../debugger/debugger-security.md)
+ [Hata ayıklayıcı güvenliği](../debugger/debugger-security.md)

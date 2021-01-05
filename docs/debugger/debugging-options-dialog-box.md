@@ -1,5 +1,7 @@
 ---
 title: Hata ayıklama, Seçenekler Iletişim kutusu | Microsoft Docs
+description: Genel hata ayıklama, tam zamanında hata ayıklama, çıkış penceresi hata ayıklama ve Visual Studio 'da sembol hata ayıklama için Seçenekler iletişim kutusunu tanımlayan bağlantıları bulun.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -21,26 +23,26 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 407da10e5a10ea08a75618046189a87a4ad6c5f3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ae93f22249540da0121472ce07db52e3747abf85
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72738145"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97726910"
 ---
 # <a name="debugging-options-dialog-box"></a>Hata Ayıklama, Seçenekler İletişim Kutusu
 **Hata ayıklama** klasörü, **Araçlar** menüsündeki **Seçenekler** iletişim kutusunda, hata ayıklayıcı araç seçeneklerini belirtmenizi sağlayan aşağıdaki sayfaları sağlar.
 
-- [Genel, Hata Ayıklama, Seçenekler İletişim Kutusu](../debugger/general-debugging-options-dialog-box.md)
+- [Genel, hata ayıklama, Seçenekler Iletişim kutusu](../debugger/general-debugging-options-dialog-box.md)
 
-- [Tam Zamanında, Hata Ayıklama, Seçenekler İletişim Kutusu](../debugger/just-in-time-debugging-options-dialog-box.md)
+- [Tam zamanında, hata ayıklama, Seçenekler Iletişim kutusu](../debugger/just-in-time-debugging-options-dialog-box.md)
 
-- [Çıkış Penceresi, Hata Ayıklama, Seçenekler İletişim Kutusu](../debugger/output-window-debugging-options-dialog-box.md)
+- [Çıkış Penceresi, hata ayıklama, Seçenekler Iletişim kutusu](../debugger/output-window-debugging-options-dialog-box.md)
 
 - [Semboller, hata ayıklama, Seçenekler Iletişim kutusu](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Hata Ayıklama Güvenliği](../debugger/debugger-security.md)
+- [Hata ayıklayıcı güvenliği](../debugger/debugger-security.md)
 - [Visual Studio'da Hata Ayıklama](../debugger/index.yml)
 - [Hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md)
 - [Kullanıcı Arabirim Başvurusunda Hata Ayıklama](../debugger/debugging-user-interface-reference.md)

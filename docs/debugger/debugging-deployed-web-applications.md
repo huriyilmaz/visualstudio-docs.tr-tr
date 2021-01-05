@@ -1,5 +1,7 @@
 ---
 title: Dağıtılan ASP.NET uygulamalarında hata ayıklama | Microsoft Docs
+description: Çalışan işleme ekleyerek ve hata ayıklayıcının uygulama için simgelere erişimine sahip olduğundan, dağıtılan bir ASP.NET uygulamasında hata ayıklamak için Visual Studio 'Yu kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 06/30/2018
 ms.topic: how-to
 dev_langs:
@@ -20,12 +22,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - aspnet
-ms.openlocfilehash: 8d787e6586a9dcce2ca4d2c840f67e652bfc5714
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1e8c99f1988ef1aa2e14c7b0a4d6ed46e10f6f1e
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350556"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97727054"
 ---
 # <a name="debugging-deployed-aspnet-applications"></a>Dağıtılan ASP.NET uygulamalarında hata ayıklama
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]Dağıtılan bir uygulamada hata ayıklamak için kullanmak üzere, çalışan işleme iliştirmeli [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] ve hata ayıklayıcının uygulama için simgelere erişimi olduğundan emin olmanız gerekir. Ayrıca, uygulamanın kaynak dosyalarını bulup açmanız gerekir. Daha fazla bilgi için bkz. [simge (. pdb) ve kaynak dosyaları belirtme](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md), [nasıl yapılır: ASP.NET işleminin adını bulma](../debugger/how-to-find-the-name-of-the-aspnet-process.md)ve [sistem gereksinimleri](../debugger/aspnet-debugging-system-requirements.md).

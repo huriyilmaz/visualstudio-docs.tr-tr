@@ -1,6 +1,7 @@
 ---
 title: Çok iş parçacıklı uygulamalarda hata ayıklama | Microsoft Docs
-ms.custom: seodec18
+description: Visual Studio 'da çok iş parçacıklı uygulamalarda hata ayıklayın. Çoklu iş parçacıklı uygulamalarda hata ayıklama hakkında araçları ve diğer makaleleri gözden geçirin.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/06/2018
 ms.topic: conceptual
 f1_keywords:
@@ -22,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b99f7b44168a451e8e927e5e0d2ca1a7f8d0bf93
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 4fed6580219964ab71f5a5010060c1af193375df
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89600327"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97727144"
 ---
 # <a name="debug-multithreaded-applications-in-visual-studio"></a>Visual Studio 'da çok iş parçacıklı uygulamalarda hata ayıklama
 İş parçacığı, işletim sisteminin işlemci zamanı verdiği bir yönergeler dizisidir. İşletim sisteminde çalışan her işlem en az bir iş parçacığından oluşur. Birden fazla iş parçacığına sahip işlemlere çok iş parçacığı denir.
@@ -86,7 +87,7 @@ Hata ayıklama sırasında özel dikkat sağlamak istediğiniz iş parçacıklar
 
 Yüksek performanslı kümede çalışan bir uygulamada hata ayıklama teknikleri.
 
- [Yerel koddaki iş parçacıkları hata ayıklama ipuçları](../debugger/tips-for-debugging-threads-in-native-code.md)
+ [Yerel kod iş parçacıklarında hata ayıklama ipuçları](../debugger/tips-for-debugging-threads-in-native-code.md)
 
 Yerel iş parçacıkları için hata ayıklama yararlı olabilecek basit teknikler.
 
@@ -104,5 +105,5 @@ Yerel iş parçacıkları için hata ayıklama yararlı olabilecek basit teknikl
 - [İş Parçacığı Oluşturma](/dotnet/standard/threading/index)
 - [Bileşenlerde çoklu iş parçacığı](/previous-versions/3es4b6yy(v=vs.140))
 - [Eski kod için çoklu iş parçacığı desteği](/cpp/parallel/multithreading-support-for-older-code-visual-cpp)
-- [Hata ayıklama iş parçacıkları ve süreçler](../debugger/debug-threads-and-processes.md)
+- [İş parçacıklarında ve işlemlerde hata ayıklama](../debugger/debug-threads-and-processes.md)
 - [Uzaktan hata ayıklama](../debugger/remote-debugging.md)

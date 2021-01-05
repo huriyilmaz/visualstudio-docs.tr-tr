@@ -1,6 +1,7 @@
 ---
 title: UWP uygulamalarında hata ayıklama | Microsoft Docs
-ms.custom: ''
+description: Visual Studio hata ayıklayıcısında Evrensel Windows Platformu (UWP) uygulamaları için hata ayıklama görevleri hakkındaki makaleleri bulun.
+ms.custom: SEO-VS-2020
 ms.date: 10/22/2019
 ms.topic: conceptual
 dev_langs:
@@ -13,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 73b9b78be6a6325a422c945db8c51caa7a11b487
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 111a84471ca20659b9a8a4a00345c1c027a0472e
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "73188272"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97726715"
 ---
 # <a name="debug-universal-windows-apps-uwp-in-visual-studio"></a>Visual Studio 'da Evrensel Windows uygulamalarında (UWP) hata ayıklama
 

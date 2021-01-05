@@ -1,6 +1,7 @@
 ---
 title: 'C#, F # ve VB projelerinde hata ayıklamaya hazırlanma | Microsoft Docs'
-ms.custom: seodec18
+description: 'Visual Studio proje şablonları tarafından oluşturulan C#, F # ve Visual Basic proje türlerinde hata ayıklamaya hazırlanma hakkında bilgi alın.'
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -21,12 +22,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 90e108ddd64a9b520c8ae1d0c86e416dea64e5be
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1536c00f68232bb9e4aa92102b605b59ec58b196
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72738127"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97726858"
 ---
 # <a name="debugging-preparation-c-f-and-visual-basic-project-types"></a>Hata Ayıklama Hazırlığı: C#, F# ve Visual Basic Proje Türleri
 Bu bölümdeki konularda C#, F # ve [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] Proje şablonları tarafından oluşturulan proje türlerinin hatalarını ayıklama işlemi açıklanır [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .
@@ -48,4 +49,4 @@ Bu bölümdeki konularda C#, F # ve [!INCLUDE[vbprvb](../code-quality/includes/v
  [Yönetilen kodda hata ayıklama](../debugger/debugging-managed-code.md) Yönetilen kodda yazılan uygulamalar için ortak hata ayıklama sorunlarını ve tekniklerini ele alır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Hata Ayıklama Güvenliği](../debugger/debugger-security.md)
+- [Hata ayıklayıcı güvenliği](../debugger/debugger-security.md)

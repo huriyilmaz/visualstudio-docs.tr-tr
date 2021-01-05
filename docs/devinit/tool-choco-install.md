@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: d26b2aa89ad295b63f0115acae11148c505720a5
-ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
+ms.openlocfilehash: 586f503569f7218e78cda79e7a40e33f7ec30ff6
+ms.sourcegitcommit: 74b67f102d243e3b74a93563e834f49df298e4b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95440512"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97696532"
 ---
 # <a name="choco-install"></a>choco-install
 
@@ -32,13 +32,16 @@ Hem hem de `input` `additionalOptions` özellikleri atlanırsa veya boşsa araç
 | [**girişinin**](#input)                              | string | Evet       | Yüklenecek paket. Ayrıntılar için aşağıdaki [girişi](#input) inceleyin.                                                 |
 | [**additionalOptions**](#additional-options)     | dize | No        | Araca geçirilecek ek seçenekler. Ayrıntılar için aşağıdaki [ek seçeneklere](#additional-options) bakın.       |
 
-### <a name="input"></a>Giriş
+### <a name="input"></a>Girdi
 
-`input`Özelliği, Yüklenecek paketin adını (örneğin ' MongoDB ') veya aşağıdaki biçimlerdeki bir yapılandırma dosyasının yolunu belirtmek için kullanılır _packages.config_, _. nuspec_ ve _. nupkg_. Değeri, `input` öğesine `choco install` `choco install mongodb` özgü bağımsız değişkenlerle birlikte (örneğin,) [`additionalOptions`](#additional-options) ve yerleşik `choco` seçeneklere ( [aşağıda](#built-in-options)tanımlanmıştır) eklenir. Paketler [Chocolatey paket galerisinde](https://chocolatey.org/packages)bulunabilir. Bir yapılandırma dosyası kullanırken, bu dosyanın yolunu, `input` Örneğin, özelliğinde geçirebilirsiniz `"input":"packages.config"` .
+`input`Özelliği, Yüklenecek paketin adını (örneğin ' MongoDB ') veya aşağıdaki biçimlerdeki bir yapılandırma dosyasının yolunu belirtmek için kullanılır _packages.config_, _. nuspec_ ve _. nupkg_. Değeri, `input` öğesine `choco install` `choco install mongodb` özgü bağımsız değişkenlerle birlikte (örneğin,) [`additionalOptions`](#additional-options) ve yerleşik `choco` seçeneklere ( [aşağıda](#built-in-options)tanımlanmıştır) eklenir. Paketler [Chocolatey paket galerisinde](https://chocolatey.org/packages)bulunur. Bir yapılandırma dosyası kullanırken, bu dosyanın yolunu, `input` Örneğin, özelliğinde geçirebilirsiniz `"input":"packages.config"` .
 
 ### <a name="additional-options"></a>Ek seçenekler
 
 Ek yapılandırma seçenekleri ' ın bir değeri olarak geçirilebilir `additionalOptions` . Bu bağımsız değişkenler tarafından kullanılan bağımsız değişkenlere doğrudan geçiş yapılır [`choco install`](https://chocolatey.org/docs/commands-install) ve Chocolatey belgelerinde tanımlanmıştır.
+
+#### <a name="adding-new-feeds-to-chocolatey"></a>Chocolatey 'e yeni akışlar ekleme
+Bir komuta benzer şekilde Chocolatey 'e yeni bir akış eklemek istiyorsanız `choco source add` , `additionalOptions` bunu yapmak için uygulamasına geçiş yapabilirsiniz. Yeni bir akış ekleme örneği [örnek kullanımdır](#example-usage). Özel bir akış eklemek istiyorsanız, bu aracı komut isteminde, kimlik bilgileri gerektirdiğinden çalıştırmayı öneririz. Örneğin,,,,,,,, `devinit run -t choco-install -i {package} -s "{feed link}" -u {user} -p {password}` `{package}` `{feed link}` `{user}` ve `{password}` özel paketinizi, akış bağlantısını, Kullanıcı adınızı ve parolanızı ifade eder. Daha fazla bilgi, yukarıda başvurulan Chocolatey belgelerinde bulunur. 
 
 ### <a name="built-in-options"></a>Yerleşik Seçenekler
 
@@ -92,6 +95,20 @@ Kullanarak nasıl çalıştırılacağını gösteren örnekler aşağıda veril
             "tool": "choco-install",
             "input": "mongodb",
             "additionalOptions": "--version 4.2.7"
+        }
+    ]
+}
+```
+
+#### <a name="devinitjson-that-adds-a-new-feed-to-chocolatey"></a>Chocolatey 'e yeni bir akış ekleyen .devinit.js:
+```json
+{
+    "$schema": "https://json.schemastore.org/devinit.schema-3.0",
+    "run": [
+        {
+            "tool": "choco-install",
+            "input": "packages.config",
+            "additionalOptions": "-s '{feed link}'"
         }
     ]
 }

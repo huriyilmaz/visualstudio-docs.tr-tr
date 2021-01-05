@@ -1,5 +1,7 @@
 ---
 title: Uygulamalarda hata ayıklama | Microsoft Docs
+description: UWP uygulamaları, yönetilen kod, yerel kod, GPU kodu ve Web uygulamaları gibi farklı türlerde uygulamalar için Visual Studio 'da hata ayıklamayı nasıl kullanacağınızı anlayın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1849d6918c1fd5607c97b82c17e385d3c6521fc4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dfe7bb45d2979a62d07e34b2ee44076394ff936c
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85535167"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97727014"
 ---
 # <a name="debugging-applications"></a>Uygulamalarda Hata Ayıklama
 Aşağıdaki bölümler, belirli türde uygulamalar için hata ayıklama ile ilgilenir. Farklı uygulama türleri ve farklı diller, farklı ayarlar ve teknikler gerektirir ve hataları ayıklanmanız gereken farklı sorunlar sunar.

@@ -1,8 +1,8 @@
 ---
-title: Sorun giderme için kaynaklar
+title: IDE hataları için sorun giderme kaynakları
 description: Bilgi Bankası makalelerini, forumları veya ürün desteğini kullanarak bir sorunu çözmenize yardımcı olmak için yeterince bilgilendirici olmayan IDE hatalarında sorun giderme hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
-ms.date: 07/23/2020
+ms.date: 12/18/2020
 ms.topic: troubleshooting
 f1_keywords:
 - VS.Message.0x00005A89
@@ -95,16 +95,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f3fdf18c67be8188bd03c498778fe8e6ad9409ee
-ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
+ms.openlocfilehash: 081b36767388da4f78e1fd8f1e0f279d7ca201c9
+ms.sourcegitcommit: 74b67f102d243e3b74a93563e834f49df298e4b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96616596"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97696552"
 ---
-# <a name="resources-for-troubleshooting-integrated-development-environment-errors"></a>Tümleşik geliştirme ortamı hatalarında sorun giderme kaynakları
+# <a name="resources-for-troubleshooting-ide-errors"></a>IDE hataları için sorun giderme kaynakları
 
-Tüm hata iletilerinde ilişkili belirli bir yardım konusu yoktur. Hata iletisindeki bilgiler sorunu çözmenize yardımcı değilse, Bilgi Bankası makaleleri, Forumlar veya ürün desteği gibi diğer kaynaklara da başvurabilirsiniz.
+Tüm hata iletilerinde ilişkili belirli bir yardım konusu yoktur. Bir hata iletisindeki bilgiler sorunu çözmenize yardımcı değilse, Bilgi Bankası makaleleri, Forumlar veya ürün desteği gibi diğer kaynaklara da başvurabilirsiniz.
 
 > [!NOTE]
 > Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için bkz. [Mac için Visual Studio sorunlarını giderme](/visualstudio/mac/troubleshooting).
@@ -115,9 +115,14 @@ Tüm hata iletilerinde ilişkili belirli bir yardım konusu yoktur. Hata iletisi
 
 ## <a name="developer-forums"></a>Geliştirici forumları
 
-Forumlar, diğer geliştiriciler ve aynı zamanda Microsoft çalışanları ile etkileşimde bulunmanızı sağlar. Çözüm bulamadığınız bir hata ile karşılaşırsanız, bu sorunla ilgili sorularınızı bir forumda paylaşabilirsiniz. Ayrıca, başkalarının aynı sorunla ilgili paylaşım yapıp yapmadığını görmek için haber gruplarında da arama yapabilirsiniz.
+Forumlar, diğer geliştiriciler ve aynı zamanda Microsoft çalışanları ile etkileşimde bulunmanızı sağlar. Çözüm bulamadığınız bir hata ile karşılaşırsanız, bu sorunla ilgili sorularınızı bir forumda paylaşabilirsiniz. Ayrıca, diğer kişilerin aynı sorun hakkında nakledilip nakledilmediğini görmek için forumlarda arama yapabilirsiniz.
 
-[Microsoft Teknik topluluklar](https://techcommunity.microsoft.com/t5/Communities/ct-p/communities) Web sitesinde forumları, blogları, sohbetleri ve diğer kaynaklara erişebilirsiniz.
+Forum kaynaklarının listesi aşağıdadır:
+
+- [Soru-cevap&A 'da Visual Studio](/answers/products/vs/)
+- [Visual Studio MSDN Forumu](https://social.msdn.microsoft.com/Forums/vstudio)
+- [Stack Overflow](https://stackoverflow.com/search?q=%22visual+studio%22)
+- [Reddit](https://www.reddit.com/r/VisualStudio)
 
 ## <a name="product-support"></a>Ürün desteği
 

@@ -1,6 +1,7 @@
 ---
 title: Kodu Düzenle ve hata ayıklamaya devam et | Microsoft Docs
-ms.custom: seodec18
+description: Visual Studio 'da hata ayıklarken Düzenle ve devam et komutunu kullanın, böylece programınız kesme modundayken kaynak kodunuzda değişiklik yapabilirsiniz.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 05/31/2018
 ms.topic: conceptual
 f1_keywords:
@@ -21,15 +22,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3d3da21a833764745a7b6fc7dd001eeb4995f44d
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: c335ce5a394454daacd86338a96ba51d04c88c0e
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89599639"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97726546"
 ---
 # <a name="edit-code-and-continue-debugging-in-visual-studio-c-vb-c"></a>Visual Studio 'da kod düzenleme ve hata ayıklamaya devam etme (C#, VB, C++)
-Düzenle ve devam et, programınız kesme modundayken kaynak kodunuzda değişiklik yapmanızı sağlayan bir zaman tasarrufu özelliğidir. **Devam et** veya **adım**gibi bir yürütme komutu seçerek program yürütmeye devam ettiğinizde, Düzenle ve devam et, kod değişikliklerini bazı sınırlamalara göre otomatik olarak uygular. Bu, hata ayıklama oturumu sırasında kodunuzda değişiklik yapmanıza, tüm programınızı yeniden derlemenize ve hata ayıklama oturumunu yeniden başlatmanıza olanak tanır.
+Düzenle ve devam et, programınız kesme modundayken kaynak kodunuzda değişiklik yapmanızı sağlayan bir zaman tasarrufu özelliğidir. **Devam et** veya **adım** gibi bir yürütme komutu seçerek program yürütmeye devam ettiğinizde, Düzenle ve devam et, kod değişikliklerini bazı sınırlamalara göre otomatik olarak uygular. Bu, hata ayıklama oturumu sırasında kodunuzda değişiklik yapmanıza, tüm programınızı yeniden derlemenize ve hata ayıklama oturumunu yeniden başlatmanıza olanak tanır.
 
  Bu bölüm şu konuları içerir:
 
@@ -43,8 +44,8 @@ Düzenle ve devam et, programınız kesme modundayken kaynak kodunuzda değişik
 
  [Düzenle ve Devam Et (Visual Basic)](../debugger/edit-and-continue-visual-basic.md)
 
- [Düzenle ve Devam Et F#'de Desteklenmez](../debugger/edit-and-continue-not-supported-for-f-hash.md)
+ [F için Düzenle ve devam et desteklenmiyor #](../debugger/edit-and-continue-not-supported-for-f-hash.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Hata Ayıklama Güvenliği](../debugger/debugger-security.md)
+- [Hata ayıklayıcı güvenliği](../debugger/debugger-security.md)
 - [Hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md)

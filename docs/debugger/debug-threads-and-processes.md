@@ -1,5 +1,7 @@
 ---
 title: İş parçacıklarında ve işlemlerde hata ayıklama için Araçlar | Microsoft Docs
+description: Visual Studio 'da iş parçacıklarında ve işlemlerde hata ayıklama için araçları gözden geçirin. İş parçacıkları ve süreçler belirli bir sırada yürütülmesi gereken yönergelerin dizilerini temsil eder.
+ms.custom: SEO-VS-2020
 ms.date: 04/21/2018
 ms.topic: conceptual
 dev_langs:
@@ -19,21 +21,21 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dcdaf083462b75485449cae05894681e2bb5c900
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 51917065e8764f7edbebbdb3bfcc7a03cc9723d4
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72738386"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97727157"
 ---
 # <a name="tools-to-debug-threads-and-processes-in-visual-studio"></a>Visual Studio 'da iş parçacıklarında ve işlemlerde hata ayıklama araçları
 *Iş parçacıkları* ve *süreçler* , bilgisayar bilimi 'ndeki ilgili kavramlardır. Her ikisi de belirli bir sırada yürütülmesi gereken yönergelerin dizilerini temsil eder. Ancak, ayrı iş parçacıkları veya süreçlerdeki yönergeler paralel olarak çalıştırılabilir.
 
- İşletim sisteminde süreçler bulunur ve kullanıcıların program veya uygulama olarak gördükleri kullanıcılara karşılık gelir. Bir işlem içinde, diğer yandan bir iş parçacığı bulunur. Bu nedenle, iş parçacıkları bazen *hafif süreçler*olarak adlandırılır. Her işlem bir veya daha fazla iş parçacığından oluşur.
+ İşletim sisteminde süreçler bulunur ve kullanıcıların program veya uygulama olarak gördükleri kullanıcılara karşılık gelir. Bir işlem içinde, diğer yandan bir iş parçacığı bulunur. Bu nedenle, iş parçacıkları bazen *hafif süreçler* olarak adlandırılır. Her işlem bir veya daha fazla iş parçacığından oluşur.
 
  Birden çok işlemin varlığı, bir bilgisayarın bir seferde birden fazla görev gerçekleştirmesini sağlar. Birden çok iş parçacığının varlığı, bir işlemin bir işi paralel olarak gerçekleştirilmesine olanak sağlar. Çok işlemcili bir bilgisayarda, süreçler veya iş parçacıkları farklı işlemcilerde çalışabilir. Bu, doğru paralel işlemeyi mümkün bir şekilde sunar.
 
- Kusursuz paralel işleme her zaman mümkün değildir. İş parçacıkları bazen eşitlenmelidir. Bir iş parçacığının bir sonucu başka bir iş parçacığından beklemek zorunda kalabilir veya bir iş parçacığının başka bir iş parçacığının kullandığı bir kaynağa özel erişime ihtiyacı olabilir. Eşitleme sorunları, çok iş parçacıklı uygulamalardaki hataların yaygın bir nedendir. Bazen iş parçacıkları hiçbir zaman kullanılamayan bir kaynağı bekliyor olabilir. Bu, *kilitlenme*adlı bir koşula neden olur.
+ Kusursuz paralel işleme her zaman mümkün değildir. İş parçacıkları bazen eşitlenmelidir. Bir iş parçacığının bir sonucu başka bir iş parçacığından beklemek zorunda kalabilir veya bir iş parçacığının başka bir iş parçacığının kullandığı bir kaynağa özel erişime ihtiyacı olabilir. Eşitleme sorunları, çok iş parçacıklı uygulamalardaki hataların yaygın bir nedendir. Bazen iş parçacıkları hiçbir zaman kullanılamayan bir kaynağı bekliyor olabilir. Bu, *kilitlenme* adlı bir koşula neden olur.
 
  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]Hata ayıklayıcı, iş parçacıkları ve süreçlerinde hata ayıklamak için güçlü ancak kullanımı kolay araçlar sağlar.
 
@@ -65,5 +67,5 @@ ms.locfileid: "72738386"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Çalıştırma İşlemine İliştirme](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)
-- [Çok İş Parçacıklı Uygulamalarda Hata Ayıklama](../debugger/debug-multithreaded-applications-in-visual-studio.md)
+- [Çok Iş parçacıklı uygulamalarda hata ayıklama](../debugger/debug-multithreaded-applications-in-visual-studio.md)
 - [GPU Kodunda Hata Ayıklama](../debugger/debugging-gpu-code.md)

@@ -1,5 +1,7 @@
 ---
 title: Yönetilen kodda hata ayıklama | Microsoft Docs
+description: Yönetilen uygulamalar için bkz. Visual Studio 'da ortak hata ayıklama sorunları ve teknikleri veya ortak dil çalışma zamanını hedefleyen dillerde yazılmış uygulamalar.
+ms.custom: SEO-VS-2020
 ms.date: 09/23/2019
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 76b841d94aee93a1bc88f6d01161239828dee166
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e7dadfbc6a02382165b623aeff9d866e9edc975a
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "73188417"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97727027"
 ---
 # <a name="debug-managed-code-c-visual-basic-f-ccli"></a>Yönetilen kodda hata ayıklama (C#, Visual Basic, F #, C++/CLı)
 
@@ -82,6 +84,6 @@ Betiklerin ve Web uygulamalarında hata ayıklarken karşılaşabileceğiniz yay
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [İzlenecek yol: tasarım zamanında özel Windows Forms Denetimlerinde hata ayıklama](/dotnet/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time)
-- [Hata Ayıklama Güvenliği](../debugger/debugger-security.md)
+- [Hata ayıklayıcı güvenliği](../debugger/debugger-security.md)
 - [Visual Studio'da Hata Ayıklama](../debugger/index.yml)
 - [Hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md)

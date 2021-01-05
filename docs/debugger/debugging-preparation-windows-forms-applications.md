@@ -1,6 +1,7 @@
 ---
 title: Windows Forms uygulamalarda hata ayıklamaya hazırlanma | Microsoft Docs
-ms.custom: seodec18
+description: Visual Studio 'da Windows Forms proje şablonu tarafından oluşturulan Windows Forms uygulamalarda hata ayıklamak için hazırlık adımları gerçekleştirin.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -20,17 +21,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e9e98411a009ea4345b567cbc38e6cf94c037323
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3ccb195d6c4a35e4ca3b89c5505ab14c45a5d555
+ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75916391"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97726819"
 ---
 # <a name="debugging-preparation-windows-forms-applications"></a>Hata Ayıklama Hazırlığı: Windows Forms Uygulamaları
 Windows Forms proje şablonu Windows Forms bir uygulama oluşturur. İçinde bu tür bir uygulama hata ayıklaması [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] basittir. Daha fazla bilgi için bkz. [Windows uygulaması projesi oluşturma](/previous-versions/visualstudio/visual-studio-2010/42wc9kk5(v=vs.100)).
 
- Proje şablonuyla bir Windows Forms projesi oluşturduğunuzda, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] otomatik olarak hata ayıklama ve sürüm yapılandırması için gerekli ayarları oluşturur. Gerekirse, bu ayarları değiştirebilirsiniz. Bu ayarlar, ** \<project name> Özellik sayfaları** iletişim kutusunda (Visual Basic**projem** ) değiştirilebilir.
+ Proje şablonuyla bir Windows Forms projesi oluşturduğunuzda, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] otomatik olarak hata ayıklama ve sürüm yapılandırması için gerekli ayarları oluşturur. Gerekirse, bu ayarları değiştirebilirsiniz. Bu ayarlar, **\<project name> Özellik sayfaları** iletişim kutusunda (Visual Basic **projem** ) değiştirilebilir.
 
  Daha fazla bilgi için bkz. [Önerilen özellik ayarları](../debugger/managed-debugging-recommended-property-settings.md).
 
@@ -68,7 +69,7 @@ Windows Forms proje şablonu Windows Forms bir uygulama oluşturur. İçinde bu 
 - [Yönetilen Kodda Hata Ayıklama](../debugger/debugging-managed-code.md)
 - [C#, F# ve Visual Basic Proje Türleri](../debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md)
 - [Nasıl yapılır: hata ayıklama ve yayın yapılandırmasını ayarlama](../debugger/how-to-set-debug-and-release-configurations.md)
-- [C# Hata Ayıklama Yapılandırması Proje Ayarları](../debugger/project-settings-for-csharp-debug-configurations.md)
-- [Visual Basic Hata Ayıklama Yapılandırması Proje Ayarları](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)
+- [C# hata ayıklama yapılandırması proje ayarları](../debugger/project-settings-for-csharp-debug-configurations.md)
+- [Visual Basic hata ayıklama yapılandırması proje ayarları](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)
 - [Çalıştırma İşlemine İliştirme](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)
 - [Windows Forms](/dotnet/framework/winforms/index)

@@ -1,5 +1,7 @@
 ---
 title: Visual Studio uzantıları geliştirmeye başlama | Microsoft Docs
+description: Visual Studio uzantısı yazmaya ilk kez başladığınızda kullanabileceğiniz bazı yaygın sorulardan bazıları hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 09/18/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,16 +13,16 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 812c5b2366e40226011a15acfc1cae2327e4b897
-ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
+ms.openlocfilehash: da8bd850413d32e5453b7dc312e863832e5f5218
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92099394"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97715268"
 ---
 # <a name="starting-to-develop-visual-studio-extensions"></a>Visual Studio Uzantıları Geliştirmeye Başlama
 
-Daha önce hiç bir Visual Studio uzantısı yazmadıysanız büyük olasılıkla bazı sorularınız olabilir. En yaygın olanlardan bazılarını burada listeliyoruz. Aradığınız bilgileri görmüyorsanız, istediğiniz şeyi sormak için geri bildirim düğmelerini kullanın (ekranın sağ üst kısmında**Bu sayfa yardımcı** olur).
+Daha önce hiç bir Visual Studio uzantısı yazmadıysanız büyük olasılıkla bazı sorularınız olabilir. En yaygın olanlardan bazılarını burada listeliyoruz. Aradığınız bilgileri görmüyorsanız, istediğiniz şeyi sormak için geri bildirim düğmelerini kullanın (ekranın sağ üst kısmında **Bu sayfa yardımcı** olur).
 
 > [!NOTE]
 > Bu makale Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için bkz. [genişletme Mac için Visual Studio](/visualstudio/mac/extending-visual-studio-mac). Visual Studio Code için, bkz. [Visual Studio Code uzantı API 'si](https://code.visualstudio.com/api).
@@ -49,7 +51,7 @@ Uygulamada, en çok kişilerin genişletmek istediği özelliklerin komutlar, me
 
 - [Menüleri ve komutları genişletme](../extensibility/extending-menus-and-commands.md): Visual Studio menülerine ve araç çubuklarına kendi öğelerinizi ekleyin. Bunları, yeni Visual Studio işlevselliği veya kendi dış yardımcı uygulamalarınızı başlatmak için kullanabilirsiniz. Menü öğeleriniz için özel kısayollar da sağlayabilirsiniz.
 
-- [Araç pencerelerini genişletme ve özelleştirme](../extensibility/extending-and-customizing-tool-windows.md): var olan araç pencerelerini genişletme veya kendi araç pencerelerini oluşturma. Örneğin, **özelliklere**yeni özellikler ekleyebilir veya ek özellikler eklemek için yeni bir araç penceresi oluşturabilirsiniz.
+- [Araç pencerelerini genişletme ve özelleştirme](../extensibility/extending-and-customizing-tool-windows.md): var olan araç pencerelerini genişletme veya kendi araç pencerelerini oluşturma. Örneğin, **özelliklere** yeni özellikler ekleyebilir veya ek özellikler eklemek için yeni bir araç penceresi oluşturabilirsiniz.
 
 - [Düzenleyici ve dil hizmeti uzantıları](../extensibility/editor-and-language-service-extensions.md): Visual Studio dilleri Için sunulan IntelliSense 'e kendi özelleştirmelerinizi ekleyin veya yeni programlama dilleri için destek oluşturun. Tamamlama, öneriler ve yeni hızlı bilgi araç ipuçları oluşturabilirsiniz. Hafif bulbs sayesinde, yeni programlama dillerini desteklemek için yeniden düzenleme önerileri ve kod düzeltmeleri ekleyebilirsiniz.
 

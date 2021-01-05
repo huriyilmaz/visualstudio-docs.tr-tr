@@ -1,5 +1,7 @@
 ---
 title: UsedCommand öğesi | Microsoft Docs
+description: UsedCommand öğesi, VSPackage 'ın başka bir. vsct dosyasında tanımlanan bir komuta erişmesini sağlar.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +13,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 65030c3fe24c3456b0c4c99a667362d2a4c67703
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6d1dcef25413bddbb1eb5c35a47a9dc0d30f4a8f
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80698834"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97715970"
 ---
 # <a name="usedcommand-element"></a>UsedCommand Öğesi
 Bir VSPackage 'ın, başka bir. vsct dosyasında tanımlı bir komuta erişmesine olanak sağlar. Örneğin, VSPackage, kabuk tarafından tanımlanan standart **kopyalama** komutunu kullanıyorsa [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , komutu yeniden uygulamadan bir menü veya araç çubuğuna ekleyebilirsiniz.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Sözdizimi
 
 ```
 <UsedCommand guid="guidMyCommandGroup" id="MyCommand" />

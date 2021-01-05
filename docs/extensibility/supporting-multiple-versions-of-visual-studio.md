@@ -1,5 +1,7 @@
 ---
 title: Visual Studio 'nun birden çok sürümünü destekleme | Microsoft Docs
+description: Vspackaları farklı sürümlere yükleyebilmeleri için Visual Studio 'nun çeşitli sürümlerini nasıl destekleyebileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1d571f1be4da45ff5ed6b2538cfb515930bde1de
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5d1309c6fcda2b27efdc78e7b31189d3a58edfb8
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699483"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97715632"
 ---
 # <a name="supporting-multiple-versions-of-visual-studio"></a>Visual Studio'nun Birden Çok Sürümünü Destekleme
 *Yan yana* terimi, bir ürünün birden çok sürümünü aynı bilgisayara yükleyip koruyabilmeniz anlamına gelir. VSPackages için, bir kullanıcının aynı bilgisayarda birçok Visual Studio sürümü yüklü olabileceği anlamına gelir. Ancak, VSPackages 'ın tek bir Visual Studio sürümüne yüklenmiş yan yana sürümlerine sahip olabilirsiniz.

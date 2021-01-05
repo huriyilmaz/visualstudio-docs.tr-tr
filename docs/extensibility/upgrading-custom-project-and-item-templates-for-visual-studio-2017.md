@@ -1,6 +1,8 @@
 ---
 title: Visual Studio 2017 için özel proje ve öğe şablonlarını yükseltme
 titleSuffix: ''
+description: Visual Studio 2017 ve sonraki sürümlerle kullanılmak üzere Visual Studio SDK 'sının önceki sürümlerinden özel proje ve öğe şablonunuzu güncelleştirmeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: ad02477b-e101-4f32-aeb7-292bf95d5c2f
@@ -10,12 +12,12 @@ manager: jillfra
 ms.workload:
 - vssdk
 monikerRange: vs-2017
-ms.openlocfilehash: 5f807e142b376d05e5a44600e8f6b24ddb3593be
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 089baadcb60afcc8b32e287095b10ab30196ce17
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80698855"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97715983"
 ---
 # <a name="upgrade-custom-project-and-item-templates-for-visual-studio-2017"></a>Yükseltme özel Visual Studio için Proje ve Öğe Şablonları 2017
 
@@ -27,9 +29,9 @@ Bir VSıX uzantısının parçası olarak bir proje veya öğe şablonu oluştur
 
 ## <a name="template-scanning"></a>Şablon tarama
 
-Visual Studio 'nun önceki sürümlerinde, **devenv/setup** veya **devenv/ınstallvstempsyonlar** proje ve öğe şablonlarını bulmak için yerel disk tarandı. Visual Studio 2017 ' den başlayarak, tarama yalnızca Kullanıcı düzeyinde konum için gerçekleştirilir. Varsayılan Kullanıcı düzeyi konumu, ** \\ Visual Studio Sürüm \> \ şablonları \\<%UserProfile%\Documents dizinidir**. Bu konum, **Project**  >  sihirbazda **şablonu Visual Studio 'ya otomatik olarak içeri aktar** seçeneği belirlenmişse proje**dışarı aktarma şablonları...** komutu tarafından oluşturulan şablonlar için kullanılır.
+Visual Studio 'nun önceki sürümlerinde, **devenv/setup** veya **devenv/ınstallvstempsyonlar** proje ve öğe şablonlarını bulmak için yerel disk tarandı. Visual Studio 2017 ' den başlayarak, tarama yalnızca Kullanıcı düzeyinde konum için gerçekleştirilir. Varsayılan Kullanıcı düzeyi konumu, **\\ Visual Studio Sürüm \> \ şablonları \\<%UserProfile%\Documents dizinidir**. Bu konum,   >  sihirbazda **şablonu Visual Studio 'ya otomatik olarak içeri aktar** seçeneği belirlenmişse proje **dışarı aktarma şablonları...** komutu tarafından oluşturulan şablonlar için kullanılır.
 
-Diğer (Kullanıcı olmayanlar) konumları için, şablonun konumunu ve diğer özelliklerini belirten bir manifest (. vstman) dosyası eklemeniz gerekir. . Vstman dosyası, şablonlar için kullanılan. vstemplate dosyası ile birlikte oluşturulur. Uzantınızı bir. vsix kullanarak yüklerseniz, uzantıyı Visual Studio 2017 ' de yeniden derleyerek bunu yapabilirsiniz. Ancak. msi kullanıyorsanız, değişiklikleri el ile yapmanız gerekir. Bu değişiklikleri yapmak için yapmanız gerekenler listesi için, bkz  **. Ile yüklenen uzantılar Için yükseltmeler. ** Daha sonra bu sayfada MSI.
+Diğer (Kullanıcı olmayanlar) konumları için, şablonun konumunu ve diğer özelliklerini belirten bir manifest (. vstman) dosyası eklemeniz gerekir. . Vstman dosyası, şablonlar için kullanılan. vstemplate dosyası ile birlikte oluşturulur. Uzantınızı bir. vsix kullanarak yüklerseniz, uzantıyı Visual Studio 2017 ' de yeniden derleyerek bunu yapabilirsiniz. Ancak. msi kullanıyorsanız, değişiklikleri el ile yapmanız gerekir. Bu değişiklikleri yapmak için yapmanız gerekenler listesi için, bkz  **. Ile yüklenen uzantılar Için yükseltmeler.** Daha sonra bu sayfada MSI.
 
 ## <a name="how-to-update-a-vsix-extension-with-project-or-item-templates"></a>Proje veya öğe şablonlarıyla VSıX uzantısını güncelleştirme
 
@@ -49,7 +51,7 @@ Diğer (Kullanıcı olmayanlar) konumları için, şablonun konumunu ve diğer �
 
          **Reg add hklm\software\microsoft\visualstudio\15.0\VSTemplate/v DisableTemplateScanning/t REG_DWORD/d 1/reg: 32**
 
-    2. Anahtarı ekledikten sonra, **devenv/ınstallvstempsyonlar**komutunu çalıştırın.
+    2. Anahtarı ekledikten sonra, **devenv/ınstallvstempsyonlar** komutunu çalıştırın.
 
     3. Visual Studio 'Yu yeniden açın. Şablonunuzun beklenen konumda bulunması gerekir.
 

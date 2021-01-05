@@ -1,5 +1,7 @@
 ---
 title: Dizeler öğesi | Microsoft Docs
+description: Dizeler öğesi bir ButtonText alt öğesi ve diğer isteğe bağlı alt öğeleri içerir. Metin dizesindeki bir ve işareti klavye kısayolunu belirtir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,19 +13,19 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: db44db8926b523665a21c00b710dcee55749ab89
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f517d350f3383dcaeb99d651872ffb8ed09814fe
+ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699728"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97715255"
 ---
 # <a name="strings-element"></a>Strings Öğesi
 Dizeler öğesi en az bir **ButtonText** alt öğesi içermelidir. Diğer tüm alt öğeler isteğe bağlıdır. ' & ' ve ' < ' gibi geçersiz XML karakterleri, varlıklar (' &amp; ' ve ' ' vb.) olarak kodlanmalıdır &lt; .
 
  Metin dizesindeki bir ve işareti, komutun klavye kısayolunu belirtir.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Sözdizimi
 
 ```
 <Strings>
