@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: b47b59c8d45d76fae1e61584510ae39fe5a91784
-ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
+ms.openlocfilehash: 6e6a37301477b43063169143456fc21a3c783968
+ms.sourcegitcommit: 4976419fae731860295dbcd072e6778832f7255d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94973808"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97917918"
 ---
 # <a name="profile-python-code"></a>Profil Python kodu
 
@@ -23,7 +23,7 @@ Cpyıthon tabanlı yorumlayıcıları kullanırken bir Python uygulaması profil
 
 ## <a name="profiling-for-cpython-based-interpreters"></a>Cpyıthon tabanlı yorumlayıcılar için profil oluşturma
 
-Profil oluşturma **Debug**  >  , bir yapılandırma iletişim kutusu açılan hata ayıklama **Python profil oluşturma** menü komutuyla başlatılır:
+Profil oluşturma   >  , bir yapılandırma iletişim kutusu açılan hata ayıklama **Python profil oluşturma** menü komutuyla başlatılır:
 
 ![Profil oluşturma yapılandırması iletişim kutusu](media/profiling-start.png)
 
@@ -32,7 +32,7 @@ Profil oluşturma **Debug**  >  , bir yapılandırma iletişim kutusu açılan h
 ![Profil oluşturma performans raporu](media/profiling-results.png)
 
 > [!Note]
-> Mevcut olduğunda, Visual Studio yalnızca bu tam uygulama profil oluşturma düzeyini destekler, ancak gelecekteki özelliklerde geri bildirimlerinizi duymak istiyoruz. Bu sayfanın altındaki **ürün geri bildirim** düğmesini kullanın.
+> Bir Python uygulamasını profil oluştururken Visual Studio, işlemin ömrü boyunca verileri toplar. Mevcut olduğunda, profil oluşturmayı duraklatmak mümkün değildir. Gelecekteki özelliklerde geri bildirimlerinizi duymak istiyoruz. Bu sayfanın altındaki **ürün geri bildirim** düğmesini kullanın.
 
 ## <a name="profiling-for-ironpython"></a>IronPython için profil oluşturma
 

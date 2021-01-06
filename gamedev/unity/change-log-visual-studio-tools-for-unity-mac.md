@@ -2,7 +2,7 @@
 title: Değişiklik günlüğü (Unity için Visual Studio Araçları, Mac) | Microsoft Docs
 description: Unity için Visual Studio Araçları, Mac için değişiklik günlüğünü görüntüleyin. 2.7.0.0 ve dışında 1.0.0.0 sürümündeki değişikliklere bakın.
 ms.custom: ''
-ms.date: 11/13/2020
+ms.date: 12/18/2020
 ms.technology: vs-unity-tools
 ms.prod: visual-studio-dev16
 ms.topic: conceptual
@@ -12,16 +12,25 @@ ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 2f026c9d33f5aa49ebb7e974a507c85b87073897
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: 53aade9880686746d11fb899b377e81174915bfa
+ms.sourcegitcommit: 4976419fae731860295dbcd072e6778832f7255d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94672853"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97917905"
 ---
 # <a name="change-log-visual-studio-tools-for-unity-mac"></a>Değişiklik Günlüğü (Unity için Visual Studio Araçları, Mac)
 
 Unity için Visual Studio Araçları değişiklik günlüğü.
+
+## <a name="2840"></a>2.8.4.0
+Yayın tarihi, 15 Aralık 2020
+
+### <a name="bug-fixes"></a>Hata düzeltmeleri
+
+- **Tümleştirme**
+
+  - Unity olay oluşturma Sihirbazı kapatılırken bir güvenilirlik sorunu düzeltildi.
 
 ## <a name="2830"></a>2.8.3.0
 Yayın tarihi 10 Kasım 2020
