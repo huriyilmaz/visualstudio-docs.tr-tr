@@ -1,5 +1,7 @@
 ---
 title: Seçenekler ve Seçenekler sayfası | Microsoft Docs
+description: Bir VSPackage durumunu belirleyen seçeneklerin değerlerini değiştirmenize olanak sağlayan seçenek sayfaları için destek hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7d21bf6d5ab7e23047a02e1188fff9a47d0cbd58
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c4699063d753539c72c373266b3fce9a0fdf8f00
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80706836"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877877"
 ---
 # <a name="options-and-options-pages"></a>Seçenekler ve Seçenekler Sayfaları
 **Araçlar** menüsünde **Seçenekler** ' i tıklatmak **Seçenekler** iletişim kutusunu açar. Bu iletişim kutusundaki seçenekler topluca seçenek sayfaları olarak adlandırılır. Gezinti bölmesindeki ağaç denetimi seçenek kategorilerini içerir ve her kategorinin seçenek sayfaları vardır. Bir sayfa seçtiğinizde, seçenekleri sağ bölmede görünür. Bu sayfalar, VSPackage 'un durumunu belirten seçeneklerin değerlerini değiştirmenize olanak sağlar.
@@ -37,9 +39,9 @@ ms.locfileid: "80706836"
  [!code-csharp[VSSDKSupportForOptionsPages#1](../../extensibility/internals/codesnippet/CSharp/options-and-options-pages_1.cs)]
  [!code-vb[VSSDKSupportForOptionsPages#1](../../extensibility/internals/codesnippet/VisualBasic/options-and-options-pages_1.vb)]
 
- <xref:Microsoft.VisualStudio.Shell.Package.UserRegistryRoot%2A>HKEY_CURRENT_USER \Software\Microsoft\VisualStudio\8.0Exp ise, özellik adı ve değer çiftleri HKEY_CURRENT_USER \software\microsoft\visualstudio\8.0exp\dialogpage\company.optionsPage.OptionsPageGeneral. alt anahtarlardır
+ HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0Exp, <xref:Microsoft.VisualStudio.Shell.Package.UserRegistryRoot%2A> özellik adı ve değer çiftleri HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0Exp\DialogPage\Company.OptionsPage.OptionsPageGeneral alt anahtarlardır.
 
- Seçenekler sayfasının kayıt defteri yolu <xref:Microsoft.VisualStudio.Shell.Package.ApplicationRegistryRoot%2A> , sözcük, araçları seçenekleri sayfaları ve Seçenekler sayfası kategorisi ve adı birleştirilerek belirlenir. Örneğin, Özel Seçenekler sayfasında kategori, seçenek sayfaları ve <xref:Microsoft.VisualStudio.Shell.Package.ApplicationRegistryRoot%2A> HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio\8.0Exp ise, Seçenekler sayfasında kayıt defteri anahtarı HKEY_LOCAL_MACHINE \Software\microsoft\visualstudio\8.0exp\tools\optionspages\option Pages\Custom.
+ Seçenekler sayfasının kayıt defteri yolu <xref:Microsoft.VisualStudio.Shell.Package.ApplicationRegistryRoot%2A> , sözcük, araçları seçenekleri sayfaları ve Seçenekler sayfası kategorisi ve adı birleştirilerek belirlenir. Örneğin, Özel Seçenekler sayfasında kategori, seçenek sayfaları ve <xref:Microsoft.VisualStudio.Shell.Package.ApplicationRegistryRoot%2A> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp varsa, Seçenekler sayfası HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\ToolsOptionsPages\My Option Pages\Custom kayıt defteri anahtarına sahiptir.
 
 ## <a name="toolsoptions-page-attributes-and-layout"></a>Araçlar/Seçenekler sayfası öznitelikleri ve düzeni
  <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute>Öznitelik, Özel Seçenekler sayfasının, **Seçenekler** iletişim kutusunun Gezinti ağacındaki Kategoriler ' e gruplandırılmasını belirler. <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute>Özniteliği bir Seçenekler sayfasını arabirimini sağlayan VSPackage ile ilişkilendirir. Aşağıdaki kod parçasını göz önünde bulundurun:
@@ -47,7 +49,7 @@ ms.locfileid: "80706836"
  [!code-csharp[VSSDKSupportForOptionsPages#2](../../extensibility/internals/codesnippet/CSharp/options-and-options-pages_2.cs)]
  [!code-vb[VSSDKSupportForOptionsPages#2](../../extensibility/internals/codesnippet/VisualBasic/options-and-options-pages_2.vb)]
 
- Bu, MyPackage 'ın iki seçenek sayfası sağladığını, Options Pagegeneral ve Optionspageczel olduğunu bildirir. **Seçenekler** iletişim kutusunda her iki seçenek sayfası sırasıyla **genel** ve **özel**olarak **seçenek sayfaları** kategorisinde görünür.
+ Bu, MyPackage 'ın iki seçenek sayfası sağladığını, Options Pagegeneral ve Optionspageczel olduğunu bildirir. **Seçenekler** iletişim kutusunda her iki seçenek sayfası sırasıyla **genel** ve **özel** olarak **seçenek sayfaları** kategorisinde görünür.
 
 ## <a name="option-attributes-and-layout"></a>Seçenek öznitelikleri ve düzeni
  Sayfanın sağladığı Kullanıcı arabirimi (UI), seçeneklerin görünümünü özel seçenekler sayfasında belirler. Genel Seçenekler sayfasındaki seçeneklerin düzeni, etiketlenmesi ve açıklaması aşağıdaki özniteliklere göre belirlenir:
@@ -66,7 +68,7 @@ ms.locfileid: "80706836"
   [!code-csharp[VSSDKSupportForOptionsPages#3](../../extensibility/internals/codesnippet/CSharp/options-and-options-pages_3.cs)]
   [!code-vb[VSSDKSupportForOptionsPages#3](../../extensibility/internals/codesnippet/VisualBasic/options-and-options-pages_3.vb)]
 
-  Seçenektamsayı seçeneği, Seçenekler sayfasında, **My Options** kategorisindeki **tamsayı seçeneği** olarak görünür. Seçenek işaretliyse, Açıklama kutusunda açıklama, **tamsayı seçeneği**görüntülenir.
+  Seçenektamsayı seçeneği, Seçenekler sayfasında, **My Options** kategorisindeki **tamsayı seçeneği** olarak görünür. Seçenek işaretliyse, Açıklama kutusunda açıklama, **tamsayı seçeneği** görüntülenir.
 
 ## <a name="accessing-options-pages-from-another-vspackage"></a>Başka bir VSPackage 'tan seçenek sayfalarına erişme
  Seçenekler sayfasını barındıran ve yöneten bir VSPackage otomasyon modeli kullanılarak programlı bir şekilde başka bir VSPackage 'tan erişilebilir. Örneğin, aşağıdaki kodda bir VSPackage, bir seçenek sayfası barındırmak olarak kaydedilir.
@@ -81,7 +83,7 @@ ms.locfileid: "80706836"
 
  <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute>Öznitelik bir seçenekler sayfası kaydettiğinde, `SupportsAutomation` öznitelik bağımsız değişkeni ise, sayfa AutomationProperties anahtarının altına kaydedilir `true` . Otomasyon, ilişkili VSPackage 'ı bulmak için bu kayıt defteri girişini inceler ve Otomasyon daha sonra barındırılan Seçenekler sayfası, bu durumda kılavuzum sayfam aracılığıyla özelliğe erişir.
 
- Automation özelliğinin kayıt defteri yolu <xref:Microsoft.VisualStudio.Shell.Package.ApplicationRegistryRoot%2A> , sözcük, AutomationProperties ve Seçenekler sayfası kategorisi ve adı birleştirilerek belirlenir. Örneğin, Seçenekler sayfasında kategorim kategorisi, My Grid Sayfamın adı ve <xref:Microsoft.VisualStudio.Shell.Package.ApplicationRegistryRoot%2A> HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio\8.0Exp varsa, Automation özelliğinin kayıt defteri anahtarı, HKEY_LOCAL_MACHINE \Software\microsoft\visualstudio\8.0exp\automationproperties\my Category\grid sayfası vardır.
+ Automation özelliğinin kayıt defteri yolu <xref:Microsoft.VisualStudio.Shell.Package.ApplicationRegistryRoot%2A> , sözcük, AutomationProperties ve Seçenekler sayfası kategorisi ve adı birleştirilerek belirlenir. Örneğin, Seçenekler sayfasında kategorim kategorisi, My Grid Sayfamın adı ve <xref:Microsoft.VisualStudio.Shell.Package.ApplicationRegistryRoot%2A> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp, ardından Automation özelliği, HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\AutomationProperties\My Category\My Grid Page kayıt defteri anahtarına sahiptir.
 
 > [!NOTE]
 > Kurallı ad, My Category.My Grid sayfam, bu anahtarın Name alt anahtarının değeridir.

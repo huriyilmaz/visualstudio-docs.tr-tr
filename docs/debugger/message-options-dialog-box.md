@@ -1,5 +1,6 @@
 ---
 title: İleti seçenekleri Iletişim kutusu | Microsoft Docs
+description: İleti seçeneklerinde hangi iletilerin listelendiğini ve hangi ileti verilerinin görüntüleneceğini belirten Ileti seçeneklerini belirtin.
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -11,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 97704675e1135959744e60724e4e3381bccf2b30
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f066dd687f4bfbb6b286667abe0bb67224a7b763
+ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62931320"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97903590"
 ---
 # <a name="message-options-dialog-box"></a>İleti Seçenekleri İletişim Kutusu
 [Iletiler görünümünde](../debugger/messages-view.md)hangi iletilerin listelendiğini seçmek için bu iletişim kutusunu kullanın. Bu iletişim kutusunu göstermek için **Spy** menüsünde **günlük iletileri** ' ni seçin.

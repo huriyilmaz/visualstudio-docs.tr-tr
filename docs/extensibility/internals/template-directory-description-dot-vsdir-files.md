@@ -1,5 +1,7 @@
 ---
 title: Şablon dizin açıklaması (. Vsdir) dosyaları | Microsoft Docs
+description: Bir şablon Dizin açıklama dosyasının, Visual Studio IDE 'nin, proje ile ilişkili klasörleri,. vsz dosyalarını ve şablonları görüntülemesini nasıl etkinleştirdiğinden öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 16ba609d5b05d565a12b38bd19e9a777851ced5b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: edc4b4bcfe1ac1a85524517ba467e207a792e3cd
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80704696"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877734"
 ---
 # <a name="template-directory-description-vsdir-files"></a>Şablon Dizin Açıklaması (.Vsdir) Dosyaları
 Şablon dizin açıklama dosyası (. vsdir), tümleşik geliştirme ortamının (IDE), iletişim kutularındaki projenizle ilişkili klasörleri, sihirbaz. vsz dosyalarını ve şablon dosyalarını görüntülemesini sağlayan bir metin dosyasıdır. İçerikler dosya veya klasör başına bir kayıt içerir. Başvurulan bir konumdaki tüm. VSDir dosyaları birleştirilir, ancak birden çok klasörü, Sihirbazı veya şablon dosyasını anlatmak için genellikle yalnızca bir. vsdir dosyası sağlanır.

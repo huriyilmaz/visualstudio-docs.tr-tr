@@ -1,5 +1,7 @@
 ---
 title: Özellikler görüntü Kılavuzu | Microsoft Docs
+description: Özellik adları ve özellik değerleri alanlarının Özellikler penceresi kılavuzda nerede olduğunu ve özellikleri genişletme bölümünde kılavuzla nasıl çalışacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d094c32ba8a64fc636f3fb6dfb2944dc3955628a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 418501ada340614d084e9796a59a46f8612aa743
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80706183"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97878033"
 ---
 # <a name="properties-display-grid"></a>Özellikler görüntü Kılavuzu
 
@@ -29,7 +31,7 @@ ms.locfileid: "80706183"
 
 2. `pfHide`Parametresini <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.HideProperty%2A> olarak ayarlayın `TRUE` .
 
-**Özellikler** penceresine bilgi göndermek için IDE 'yi kullanır <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> . <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> , **Özellikler** penceresinde görüntülenecek ilgili özelliklerle birlikte seçilebilir nesneler içeren her bir pencere Için VSPackages tarafından çağırılır. **Çözüm Gezgini**, <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> __VSHPROPID kullanılarak yapılan çağrıların uygulanması `GetProperty` [. ](<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID.VSHPROPID_BrowseObject>) Browseable nesnelerini hiyerarşide almak için proje hiyerarşinizdeki VSHPROPID_BrowseObject.
+**Özellikler** penceresine bilgi göndermek için IDE 'yi kullanır <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> . <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> , **Özellikler** penceresinde görüntülenecek ilgili özelliklerle birlikte seçilebilir nesneler içeren her bir pencere Için VSPackages tarafından çağırılır. **Çözüm Gezgini**, <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> __VSHPROPID kullanılarak yapılan çağrıların uygulanması `GetProperty` [.](<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID.VSHPROPID_BrowseObject>) Browseable nesnelerini hiyerarşide almak için proje hiyerarşinizdeki VSHPROPID_BrowseObject.
 
 VSPackage [__VSHPROPID desteklemiyorsa. VSHPROPID_BrowseObject](<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID.VSHPROPID_BrowseObject>), ıde <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> __VSHPROPID değerini kullanarak kullanmaya çalışır [. ](<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID.VSHPROPID_SelContainer>) Hiyerarşi öğesi veya öğelerinin tedarik VSHPROPID_SelContainer.
 

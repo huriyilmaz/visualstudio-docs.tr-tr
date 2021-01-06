@@ -1,5 +1,7 @@
 ---
 title: 'İzlenecek yol: Visual Studio uzantısı yayımlama | Microsoft Docs'
+description: Visual Studio uzantısının Visual Studio Market, geliştiricilerin yeni ve güncelleştirilmiş uzantılara gözatmasına izin veren bir Visual Studio uzantısı yayımlamayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d6bd7a5d9622f7aea7382522dcf69ce660b61ae7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cbdd283c5d147c53e7d82843207b48d0dbf6e6e9
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904734"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877890"
 ---
 # <a name="walkthrough-publish-a-visual-studio-extension"></a>İzlenecek yol: Visual Studio uzantısı yayımlama
 
@@ -66,7 +68,7 @@ Bu makale varsayılan VSPackage uzantısını kullanır, ancak adımlar her tür
 
    ![Market 'e yükle](media/upload-to-marketplace.png)
 
-6. Uzantınızı karşıya yüklemek için kullanmak istediğiniz yayımcıyı seçin. Sol tarafta listelenen yayımcı adlarına tıklayarak yayımcıları değiştirebilirsiniz. **Yeni uzantıya** tıklayın ve **Visual Studio 'yu**seçin.
+6. Uzantınızı karşıya yüklemek için kullanmak istediğiniz yayımcıyı seçin. Sol tarafta listelenen yayımcı adlarına tıklayarak yayımcıları değiştirebilirsiniz. **Yeni uzantıya** tıklayın ve **Visual Studio 'yu** seçin.
 
 7. **1: uzantıyı karşıya yükleyin**, bir VSIX dosyasını doğrudan Visual Studio Market veya yalnızca kendi web sitenize bir bağlantı eklemek üzere yüklemeyi seçebilirsiniz. Bu örnekte, *TestPublish. vsix* uzantısı karşıya yüklenir. Uzantınızı sürükleyip bırakın veya dosyaya gitmek için **tıklama** bağlantısını kullanın. Uzantınızı projenin \bin\Release klasöründe bulun.  **Devam**’a tıklayın.
 
@@ -90,7 +92,7 @@ Bu makale varsayılan VSPackage uzantısını kullanır, ancak adımlar her tür
 
     * * * Desteklenen Visual Studio sürümü, uzantınızın hangi Visual Studio sürümlerini üzerinde çalışabileceği seçmenize olanak sağlar. Uzantınız yalnızca bu sürümlere yüklenir.
 
-    * **Yazın**. En yaygın uzantı türleri **araçlardan**oluşur.
+    * **Yazın**. En yaygın uzantı türleri **araçlardan** oluşur.
 
     * **Kategoriler**. Uzantınıza en uygun olan en fazla üç seçin.
 
@@ -118,7 +120,7 @@ Market, bir yayımcı hesabına erişmek ve bunları yönetmek için ek kullanı
 
    ![Ek Kullanıcı ekleme](media/add-users.png)
 
-3. Ardından, eklemek istediğiniz kullanıcının e-posta adresini belirtebilir ve **Rol Seç**altında doğru erişim düzeyine sahip olabilirsiniz.  Aşağıdaki seçeneklerden birini belirtebilirsiniz:
+3. Ardından, eklemek istediğiniz kullanıcının e-posta adresini belirtebilir ve **Rol Seç** altında doğru erişim düzeyine sahip olabilirsiniz.  Aşağıdaki seçeneklerden birini belirtebilirsiniz:
 
    * **Oluşturucu**: Kullanıcı Uzantıları yayımlayabilir, ancak diğer kullanıcılar tarafından yayımlanan uzantıları görüntüleyemez veya yönetemez.
 
@@ -134,9 +136,9 @@ Artık uzantı yayımlandığına göre, Visual Studio 'Ya yükleyip test edin.
 
 1. Visual Studio 'da, **Araçlar** menüsünde **Uzantılar ve güncelleştirmeler**' e tıklayın.
 
-2. **Çevrimiçi** ' e tıklayın ve ardından **TestPublish**için arama yapın.
+2. **Çevrimiçi** ' e tıklayın ve ardından **TestPublish** için arama yapın.
 
-3. **İndir**'e tıklayın. Uzantı daha sonra yüklenmek üzere zamanlanır.
+3. **İndir**’e tıklayın. Uzantı daha sonra yüklenmek üzere zamanlanır.
 
 4. Yüklemeyi gerçekleştirmek için Visual Studio 'nun tüm örneklerini kapatın.
 
@@ -148,7 +150,7 @@ Uzantıyı Visual Studio Market ve bilgisayarınızdan kaldırabilirsiniz.
 
 1. [Visual Studio Market](https://marketplace.visualstudio.com/vs) Web sitesini açın.
 
-2. Sağ üst köşede bulunan uzantıları **Yayımla** ' ya tıklayın. **TestPublish**yayımlamak için kullandığınız yayımcıyı seçin. **TestPublish** listesi görüntülenir.
+2. Sağ üst köşede bulunan uzantıları **Yayımla** ' ya tıklayın. **TestPublish** yayımlamak için kullandığınız yayımcıyı seçin. **TestPublish** listesi görüntülenir.
 
 3. Uzantı girişine sağ tıklayın ve **Kaldır**' a tıklayın. Uzantıyı kaldırmak isteyip istemediğinizi onaylamanız istenir. **Tamam**’a tıklayın.
 

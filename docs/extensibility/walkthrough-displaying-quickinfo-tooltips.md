@@ -1,5 +1,7 @@
 ---
 title: 'İzlenecek yol: QuickInfo araç Ipuçlarını görüntüleme | Microsoft Docs'
+description: Bu yönergeyi kullanarak metin içeriği için hızlı bilgi görüntülemeyi öğrenin. QuickInfo bir yöntem adı için yöntem imzalarını ve açıklamalarını görüntüler.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.workload:
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 0eb70e5d39708ffd532fe39d6d597043621158d5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 34e1bb2c92cd387e979fdaa5746a34ea8d3995fc
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904834"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877942"
 ---
 # <a name="walkthrough-display-quickinfo-tooltips"></a>İzlenecek yol: hızlı bilgi araç ipuçlarını görüntüle
 QuickInfo, Kullanıcı işaretçiyi bir yöntem adı üzerine taşırken Yöntem imzalarını ve açıklamalarını görüntüleyen bir IntelliSense özelliğidir. QuickInfo gibi dil tabanlı özellikleri, hızlı bilgi açıklamaları sağlamak istediğiniz tanımlayıcıları tanımlayarak ve sonra içeriğin görüntüleneceği bir araç ipucu oluşturmak için uygulayabilirsiniz. Hızlı bilgileri bir dil hizmeti bağlamında tanımlayabilir veya kendi dosya adı uzantınızı ve içerik türünü tanımlayabilir ve yalnızca bu tür için hızlı bilgileri görüntüleyebilir veya var olan bir içerik türü için QuickInfo görüntüleyebilirsiniz (örneğin, "metin"). Bu izlenecek yol, "metin" içerik türü için hızlı bilgi görüntülemeyi gösterir.
@@ -37,7 +39,7 @@ QuickInfo, Kullanıcı işaretçiyi bir yöntem adı üzerine taşırken Yöntem
 
   Bu örnekte, QuickInfo kaynağı yöntem adlarının ve açıklamalarının sabit kodlanmış bir listesini kullanır, ancak tam uygulamalarda, dil hizmeti ve dil belgeleri bu içeriği sağlamaktan sorumludur.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
  Visual Studio 2015 ' den başlayarak, indirme merkezinden Visual Studio SDK 'yı yüklemeniz gerekmez. Visual Studio kurulumunda isteğe bağlı bir özellik olarak eklenmiştir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-a-mef-project"></a>MEF projesi oluşturma
@@ -57,7 +59,7 @@ QuickInfo, Kullanıcı işaretçiyi bir yöntem adı üzerine taşırken Yöntem
 
 1. Bir sınıf dosyası ekleyin ve adlandırın `TestQuickInfoSource` .
 
-2. *Microsoft. VisualStudio. Language. IntelliSense*için bir başvuru ekleyin.
+2. *Microsoft. VisualStudio. Language. IntelliSense* için bir başvuru ekleyin.
 
 3. Aşağıdaki içeri aktarmaları ekleyin.
 

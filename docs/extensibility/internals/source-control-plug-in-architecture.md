@@ -1,5 +1,7 @@
 ---
 title: Kaynak denetimi eklentisi mimarisi | Microsoft Docs
+description: Kaynak denetimi eklentisini uygulayarak ve ekleyerek Visual Studio IDE 'ye kaynak denetimi desteğinin nasıl ekleneceğini öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,15 +12,15 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f549ad2c4ee456860a08fbf20ccda813934a8582
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e154e91ce552df9e54d45ea9210a0679edae5f28
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705105"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97878072"
 ---
 # <a name="source-control-plug-in-architecture"></a>Kaynak Denetimi Eklentisi Mimarisi
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Kaynak denetimi eklentisini uygulayarak ve ekleyerek tümleşik geliştirme ortamına (IDE) kaynak denetimi desteği ekleyebilirsiniz. IDE, kaynak denetimi eklentisine, iyi tanımlanmış kaynak denetimi eklentisi API 'SI aracılığıyla bağlanır. IDE, araç çubukları ve menü komutlarından oluşan bir kullanıcı arabirimi (UI) sağlayarak kaynak denetim sisteminin sürüm denetim özelliklerini kullanıma sunar. Kaynak denetimi eklentisi, kaynak denetimi işlevini uygular.
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Kaynak denetimi eklentisini uygulayarak ve ekleyerek tümleşik geliştirme ortamına (IDE) kaynak denetimi desteği ekleyebilirsiniz. IDE, kaynak denetimi eklentisine, iyi tanımlanmış kaynak denetimi Plug-In API 'SI aracılığıyla bağlanır. IDE, araç çubukları ve menü komutlarından oluşan bir kullanıcı arabirimi (UI) sağlayarak kaynak denetim sisteminin sürüm denetim özelliklerini kullanıma sunar. Kaynak denetimi eklentisi, kaynak denetimi işlevini uygular.
 
 ## <a name="source-control-plug-in-resources"></a>Kaynak denetimi eklentisi kaynakları
  Kaynak denetimi eklentisi, sürüm oluşturma uygulamanızı oluşturmaya ve IDE 'ye bağlamaya yardımcı olmak için kaynak sağlar [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Kaynak denetimi eklentisi, IDE ile tümleştirilebilmesi için bir kaynak denetimi eklentisi tarafından uygulanması gereken API belirtimini içerir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Ayrıca, kaynak denetimi eklentisi API 'siyle uyumlu işlevlerin uygulanmasını gösteren bir iskelet kaynak denetimi eklentisi uygulayan bir kod örneği (C++ dilinde yazılmıştır) de bulunur.

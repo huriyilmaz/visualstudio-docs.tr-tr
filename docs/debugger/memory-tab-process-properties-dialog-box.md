@@ -1,5 +1,7 @@
 ---
 title: Bellek sekmesi, Işlem özellikleri Iletişim kutusu | Microsoft Docs
+description: İşlemin nasıl bellek kullandığını görüntülemek için Işlem özelliklerinin bellek sekmesini kullanın. Kullanılan boşlukla, paylaşılan alana ve kullanılan sanal alana ilişkin bilgiler vardır.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6bdfc2740094c807818922f09ca3fef0a21c9e1a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 10fd47127abfd9cc476ed7029edd0dbbeb5501de
+ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62931286"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97903733"
 ---
 # <a name="memory-tab-process-properties-dialog-box"></a>Bellek Sekmesi, İşlem Özellikleri İletişim Kutusu
 Bir işlemin belleği nasıl kullandığını göstermek için **bellek** sekmesini kullanın. [Işlem özellikleri Iletişim kutusunu](../debugger/process-properties-dialog-box.md)görüntülemek için odağı bir [işlem görünümü](../debugger/processes-view.md) penceresine taşıyın. Ağaçta herhangi bir işlem düğümünü seçin, sonra **Görünüm** menüsünden **Özellikler** ' i seçin.

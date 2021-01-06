@@ -1,7 +1,7 @@
 ---
 title: ASP.NET uygulamaları için hata ayıklamayı etkinleştirme | Microsoft Docs
-description: Visual Studio 'da ASP.NET ve ASP.NET Core uygulamaları için hata ayıklamayı etkinleştirmeyi ve işlemi bir IIS Express sunucusunda veya yerel bir IIS sunucusunda çalıştırmayı öğrenin.
-ms.custom: ''
+description: Visual Studio 'da ASP.NET ve ASP.NET Core uygulamaları için hata ayıklamayı etkinleştirmeyi öğrenin. İşlemi bir IIS Express sunucuda veya yerel bir IIS sunucusunda çalıştırabilirsiniz.
+ms.custom: SEO-VS-2020
 ms.date: 10/29/2020
 ms.topic: how-to
 dev_langs:
@@ -19,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - aspnet
-ms.openlocfilehash: c5256def84f15fae535ac409349ce21cdd5c80ba
-ms.sourcegitcommit: 3c571f44bfd6402efea5187af43df287bac5b6ac
+ms.openlocfilehash: 28f74c449e196d5eb0b3380d0ff1392db17e0b23
+ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97761387"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97903603"
 ---
 # <a name="debug-aspnet-or-aspnet-core-apps-in-visual-studio"></a>Visual Studio'da ASP.NET veya ASP.NET Core uygulamalarının hatalarını ayıklama
 

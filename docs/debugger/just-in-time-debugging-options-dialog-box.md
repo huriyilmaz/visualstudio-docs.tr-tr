@@ -1,5 +1,7 @@
 ---
 title: Tam zamanında, hata ayıklama, Seçenekler Iletişim kutusu | Microsoft Docs
+description: Tam zamanında hata ayıklama, Visual Studio dışında başlayan programlarda hata ayıklamanıza olanak sağlar. Çeşitli program türleri için tam zamanında hata ayıklamayı nasıl etkinleştirebileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -20,12 +22,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c27ec66c8165995c6877b9a9e65802813140c7f2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b346cfdae8671f8f647d41065d5793184fefd3fb
+ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72731603"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97903877"
 ---
 # <a name="just-in-time-debugging-options-dialog-box"></a>Tam Zamanında, Hata Ayıklama, Seçenekler İletişim Kutusu
 **Tam zamanında** sayfasına erişmek için **Araçlar** menüsüne gidin ve **Seçenekler**' e tıklayın. **Seçenekler** iletişim kutusunda, **hata ayıklama** düğümünü genişletin ve **tam zamanında**' ı seçin. Bu sayfa, yönetilen kod, yerel kod ve komut dosyası için tam zamanında hata ayıklamayı etkinleştirmenizi sağlar. Daha fazla bilgi için bkz. [tam zamanında hata ayıklama](../debugger/just-in-time-debugging-in-visual-studio.md).
@@ -56,5 +58,5 @@ ms.locfileid: "72731603"
  **Erişim reddedildi. Bir yöneticiye tam zamanında hata ayıklamayı etkinleştirme veya Visual Studio yüklemenizi onarma.**
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Hata Ayıklama, Seçenekler İletişim Kutusu](../debugger/debugging-options-dialog-box.md)
+- [Hata ayıklama, Seçenekler Iletişim kutusu](../debugger/debugging-options-dialog-box.md)
 - [Nasıl yapılır: hata ayıklayıcı ayarlarını belirtme](../debugger/how-to-specify-debugger-settings.md)

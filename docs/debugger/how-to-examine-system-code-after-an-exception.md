@@ -1,6 +1,7 @@
 ---
 title: Bir özel durumdan sonra sistem kodunu inceleme | Microsoft Docs
-ms.custom: seodec18
+description: Özel durumun nedenini bulmak için bir sistem çağrısında kodu İnceleme hakkında bilgi edinin. Bu yordam, sistem kodu sembolleri yüklenmemiş olsa bile geçerlidir.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -17,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9fe2dcc283f84bbcd5cd0b5a04dd5d1c300d9e14
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: eceb9f898b4329940408e4063dc73d81e2a604a4
+ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85349659"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97903461"
 ---
 # <a name="how-to-examine-system-code-after-an-exception"></a>Nasıl Yapılır: Özel Durumdan Sonra Sistem Kodunu İnceleme
 Bir özel durum oluştuğunda, özel durumun nedenini öğrenmek için bir sistem çağrısının içindeki kodu incelemeniz gerekebilir. Aşağıdaki yordamda, sistem kodu için simge yüklü değilse veya Yalnızca kendi kodum etkinse bunun nasıl yapılacağı açıklanmaktadır.

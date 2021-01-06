@@ -1,5 +1,7 @@
 ---
-title: 'Test alanı 1: kaynak denetiminden açmaya Ekle | Microsoft Docs'
+title: 'Test alanı 1: kaynak denetiminden To-Open ekleme | Microsoft Docs'
+description: Bu kaynak denetimi eklentisi test alanı, çözümlerin veya projelerin kaynak denetimi altına yerleştirilmesi ve bunları kaynak denetiminden almasını içerir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6ac7b8e5a60fe25ac22272cc28fc3ed6f903b058
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 608d3489f657cf38d310e67a17bdd48a529de3e5
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80704675"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877747"
 ---
 # <a name="test-area-1-add-toopen-from-source-control"></a>Test Alanı 1: Kaynak Denetimine Ekleme/Kaynak Denetiminden Açma
 Bu kaynak denetimi eklentisi test alanı, çözümlerin veya projelerin kaynak denetimi altına yerleştirilmesi ve bunları kaynak denetiminden almasını içerir.
@@ -28,7 +30,7 @@ Bu kaynak denetimi eklentisi test alanı, çözümlerin veya projelerin kaynak d
 
 - Diğer kaynak denetimi eklentileri için kaynak denetiminden Aç: **Dosya**, **kaynak denetimi**, **kaynak denetiminden Aç**.
 
-- Kaynak denetimine Ekle: **Dosya**, **kaynak denetimi**, **kaynak denetim dosyasına çözüm ekleme**, **kaynak**denetimi, **Seçili projeleri kaynak denetimine ekleme**.
+- Kaynak denetimine Ekle: **Dosya**, **kaynak denetimi**, **kaynak denetim dosyasına çözüm ekleme**, **kaynak** denetimi, **Seçili projeleri kaynak denetimine ekleme**.
 
 - Kısayol menüsü (proje/çözüm), **kaynak denetimine çözüm ekleyin**.
 
@@ -62,7 +64,7 @@ Bu kaynak denetimi eklentisi test alanı, çözümlerin veya projelerin kaynak d
 |Kaynak denetimine istemci projesi içeren çözüm ekleme|1. bir istemci projesi oluşturun.<br />2. çözümü kaynak denetimine ekleyin (**Dosya**, **kaynak denetimi**, **kaynak denetimine çözüm ekleme**).|Çözüm/proje kaynak denetimine eklendi.|
 |Kaynak denetimine bir dosya sistemi veya yerel IIS Web projesi içeren çözüm ekleme|1. bir dosya sistemi veya yerel IIS Web projesi oluşturun (projenin konumuna işaret etmek için gözatmayı kullanın; yol, ne tür bir Web projesi oluşturulacağını belirler).<br />2. çözümü kaynak denetimine ekleyin (**Dosya**, **kaynak denetimi**, **kaynak denetimine çözüm ekleme**).|Çözüm/proje kaynak denetimine eklendi.|
 |Kaynak denetimine uzak site Web projesi içeren çözüm ekleme|1. bir uzak site Web projesi oluşturun.<br />2. çözümü kaynak denetimine ekleyin (**Dosya**, **kaynak denetimi**, **kaynak denetimine çözüm ekleme**).<br />3. FrontPage erişim Uyarısı iletişim kutusunda **Tamam** ' a tıklayın.|Çözüm, kaynak denetimine eklendi.<br /><br /> Uzak site projesi kaynak denetimi altında DEĞIL. (Uzak site projelerinin kendi IIS sunucusundan denetlenmesi gerekir.)|
-|Kaynak denetimine **Seçili projeler Ekle**öğesini kullanarak kaynak denetimine tek bir proje çözümü ekleyin.|1. tek bir proje çözümü oluşturun.<br />2. yalnızca bir seçim olarak kaynak denetimine çözüm ekleyin (**Dosya**, **kaynak denetimi**, **Seçili projeleri kaynak denetimine Ekle**). Bu adım başarılı olursa sonraki adımla devam edin.<br />3. projeyi kaynak denetimine seçim olarak ekleyin (**Dosya**, **kaynak denetimi**, **Seçili projeleri kaynak denetimine Ekle**).<br />4. projeyi aynı konuma eklemek için **Evet** 'e tıklayın.<br />5. **düzenleme için kullanıma alma** Iletişim kutusunda **kullanıma** alma ' ya tıklayın.|`Result from Step 2:`<br /><br /> Projenin ve proje içindeki tüm dosyaların kullanıma alınmış kaynak denetimi göstergesi vardır ve araç Ipucu "kaynak denetimi altında değil" olarak görüntülenir.<br /><br /> `Result from Step 5:`<br /><br /> Proje ve çözüm dosyası kaynak denetimindeki aynı klasörslardır.|
+|Kaynak denetimine **Seçili projeler Ekle** öğesini kullanarak kaynak denetimine tek bir proje çözümü ekleyin.|1. tek bir proje çözümü oluşturun.<br />2. yalnızca bir seçim olarak kaynak denetimine çözüm ekleyin (**Dosya**, **kaynak denetimi**, **Seçili projeleri kaynak denetimine Ekle**). Bu adım başarılı olursa sonraki adımla devam edin.<br />3. projeyi kaynak denetimine seçim olarak ekleyin (**Dosya**, **kaynak denetimi**, **Seçili projeleri kaynak denetimine Ekle**).<br />4. projeyi aynı konuma eklemek için **Evet** 'e tıklayın.<br />5. **düzenleme için kullanıma alma** Iletişim kutusunda **kullanıma** alma ' ya tıklayın.|`Result from Step 2:`<br /><br /> Projenin ve proje içindeki tüm dosyaların kullanıma alınmış kaynak denetimi göstergesi vardır ve araç Ipucu "kaynak denetimi altında değil" olarak görüntülenir.<br /><br /> `Result from Step 5:`<br /><br /> Proje ve çözüm dosyası kaynak denetimindeki aynı klasörslardır.|
 |Kaynak denetimine çözüm eklemeyi iptal et|1. tek bir proje çözümü oluşturun.<br />2. kaynak denetimine proje ve çözüm eklemeyi deneyin. Bu adım başarılı olursa sonraki adımla devam edin.<br />3. kaynak denetim sisteminden sonra iptal edin.|`Result from Step 2:`<br /><br /> Proje konumu kaynak denetimini ayarla iletişim kutusu yalnızca bir kez görünür.<br /><br /> `Result from Step 3:`<br /><br /> Proje ekleme iptal edildi, proje/çözüm kaynak denetimi altında DEĞIL ve tüm kaynak denetimi menüleri hala kullanılabilir.|
 
 ### <a name="case-1b-open-solution-from-source-control"></a>Durum 1B. Kaynak denetiminden çözüm aç

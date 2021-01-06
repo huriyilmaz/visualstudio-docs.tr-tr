@@ -1,5 +1,7 @@
 ---
 title: Proje türleri mimarisi | Microsoft Docs
+description: Bu makalede, Visual Studio 'daki proje türleri mimarisiyle ilgili ayrıntılı bilgiler içeren makalelere bağlantı bulunur.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e53929b1ec2ed9c73191bf16f1cedc84a53b58f2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ecde348ce52bdd354df61855d9907acf85900be2
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80706316"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877786"
 ---
 # <a name="project-types-architecture"></a>Proje Türleri Mimarisi
 Bu bölüm, içindeki proje türlerinin mimarisi hakkında ayrıntılı bilgiler içerir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .

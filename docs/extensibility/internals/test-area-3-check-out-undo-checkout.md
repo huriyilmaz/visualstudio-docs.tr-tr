@@ -1,5 +1,7 @@
 ---
-title: 'Test alanı 3: kullanıma alma-kullanıma almayı geri alma | Microsoft Docs'
+title: 'Test alanı 3: Out-Undo kullanıma almayı denetle | Microsoft Docs'
+description: Bu kaynak denetimi eklentisi test alanı, kullanıma alma ve geri alma komutlarını kullanarak sürüm deposundaki öğeleri düzenlemenizi ve geri döndürmeyi içerir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5365da1e342df5aea9c1b1cd2ae5a446baea57f1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b6292051e6ddf11e3ce4b56648574e0207bb5a41
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80704611"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877695"
 ---
 # <a name="test-area-3-check-outundo-checkout"></a>Test Alanı 3: Kullanıma Alma/Kullanıma Almayı Geri Alma
 Bu kaynak denetimi eklentisi test alanı **, kullanıma alma ve** **geri alma** komutlarını kullanarak sürüm deposundan öğeleri düzenlemenizi ve geri döndürmeyi içerir.
@@ -104,7 +106,7 @@ Kullanıcı sürüm deposuna yeniden bağlandığında, tüm kayıtlı çözüml
 |İade edilmiş bir proje dosyasını düzenleme|Önceki testte açıklanan adımları yineleyin, ancak bir metin dosyasını değiştirmek yerine proje özelliklerini değiştirerek projeyi değiştirin.|Önceki testle aynı.|
 
 ### <a name="case-3d-silent-check-out"></a>Durum 3B: sessiz kullanıma alma
- Bu alt alan, kullanıma **alma** iletişim kutusunun Kullanıcı **araçları**, **Seçenekler**, **kaynak denetimi ayarları**başına görünmediğinden, kullanıma alma senaryolarını ele alır.
+ Bu alt alan, kullanıma **alma** iletişim kutusunun Kullanıcı **araçları**, **Seçenekler**, **kaynak denetimi ayarları** başına görünmediğinden, kullanıma alma senaryolarını ele alır.
 
 #### <a name="expected-behavior"></a>Beklenen davranış
 
@@ -118,8 +120,8 @@ Kullanıcı sürüm deposuna yeniden bağlandığında, tüm kayıtlı çözüml
 
 |Eylem|Test adımları|Doğrulanacak beklenen sonuçlar|
 |------------|----------------|--------------------------------|
-|Dosya için sessiz kullanıma alma|1. **dosyaları düzenleme sırasında otomatik olarak kullanıma**almak için **Araçlar**, **Seçenekler**, **kaynak denetimi** ayarlayın.<br />2. bir dosya ile yeni bir proje oluşturun.<br />3. çözümü kaynak denetimine ekleyin.<br />4. dosyaya göz atın.|Dosya sessizce kullanıma alındı (Kullanıcı arabirimi yok).|
-|Bir proje için sessiz kullanıma alma|1. **dosyaları düzenleme sırasında otomatik olarak kullanıma**almak için **Araçlar**, **Seçenekler**, **kaynak denetimi** ayarlayın.<br />2. yeni bir proje oluşturun.<br />3. çözümü kaynak denetimine ekleyin.<br />4. projeye göz atın.|Dosya sessizce kullanıma alındı (Kullanıcı arabirimi yok).|
+|Dosya için sessiz kullanıma alma|1. **dosyaları düzenleme sırasında otomatik olarak kullanıma** almak için **Araçlar**, **Seçenekler**, **kaynak denetimi** ayarlayın.<br />2. bir dosya ile yeni bir proje oluşturun.<br />3. çözümü kaynak denetimine ekleyin.<br />4. dosyaya göz atın.|Dosya sessizce kullanıma alındı (Kullanıcı arabirimi yok).|
+|Bir proje için sessiz kullanıma alma|1. **dosyaları düzenleme sırasında otomatik olarak kullanıma** almak için **Araçlar**, **Seçenekler**, **kaynak denetimi** ayarlayın.<br />2. yeni bir proje oluşturun.<br />3. çözümü kaynak denetimine ekleyin.<br />4. projeye göz atın.|Dosya sessizce kullanıma alındı (Kullanıcı arabirimi yok).|
 
 ### <a name="case-3e-undo-check-out"></a>Durum 3e: kullanıma almayı geri alma
  Kullanıma **almayı geri alma** , bir dosyanın kullanıma alınmış durumunu iptal etmek ve dosyada yapılan değişiklikleri iade etmeyi önlemek için kullanılır.

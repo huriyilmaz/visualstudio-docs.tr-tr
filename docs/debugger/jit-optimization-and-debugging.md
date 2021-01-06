@@ -1,5 +1,7 @@
 ---
 title: JıT Iyileştirme ve hata ayıklama | Microsoft Docs
+description: İyileştirilmiş kod, hata ayıklama için olmayan koddan daha zordur. JıT iyileştirmesi ve ne zaman ve nasıl bastırılamıyor hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ae11860aaa64448cd4d23b5602cf4c2da1575ce3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 66f63c7232b52ebe849722147e007ab70527c311
+ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75916215"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97903928"
 ---
 # <a name="jit-optimization-and-debugging"></a>JIT İyileştirmesi ve Hata Ayıklaması
 Kodda hata ayıklamaya çalışıyorsanız, bu kod en iyi duruma **getirilmeyen** daha kolay olur. Kod iyileştirildiğinde, derleyici ve çalışma zamanı, daha hızlı çalışacak, ancak özgün kaynak koda daha az bir doğrudan eşlemeye sahip olacak şekilde, verilmiş CPU kodunda değişiklikler yapar. Eşleme daha az doğrudan ise, hata ayıklayıcılar genellikle yerel değişkenlerin değerini söyleyebilir ve kod Adımlama ve kesme noktaları beklemiş gibi çalışmayabilir.
@@ -59,9 +61,9 @@ Bu seçeneği **açmak, bu** iki durum vardır:
     > .NET Core 'un .NET Framework veya daha eski bir sürümünü (2. x veya daha düşük) hedefliyorsanız, ' COMPlus_ZapDisable ' ortam değişkenini de ekleyin ve ' 1 ' olarak ayarlayın
 
     **Visual Studio 'da .NET Core projesi için bir ortam değişkeni ayarlamak için:**
-    1. **Çözüm Gezgini**, proje dosyasına **sağ tıklayın ve Özellikler ' i** seçin. **Properties**
-    2. **Hata Ayıkla** sekmesine gidin ve **ortam değişkenleri**altında **Ekle** düğmesine tıklayın.
-    3. Adı (anahtar) **COMPlus_ReadyToRun** olarak ayarlayın ve değeri **0**olarak ayarlayın.
+    1. **Çözüm Gezgini**, proje dosyasına **sağ tıklayın ve Özellikler ' i** seçin. 
+    2. **Hata Ayıkla** sekmesine gidin ve **ortam değişkenleri** altında **Ekle** düğmesine tıklayın.
+    3. Adı (anahtar) **COMPlus_ReadyToRun** olarak ayarlayın ve değeri **0** olarak ayarlayın.
 
     ![COMPlus_ReadyToRun ortam değişkenini ayarla](../debugger/media/environment-variables-debug-menu.png "COMPlus_ReadyToRun ortam değişkenini ayarla")
 

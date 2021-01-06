@@ -1,5 +1,7 @@
 ---
 title: SDK Microsoft Yardım Görüntüleyicisi | Microsoft Docs
+description: Bir makale oluşturma, Yardım Görüntüleyicisi içeriği oluşturma ve bir makale kümesi dağıtma gibi Visual Studio Yardım Görüntüleyicisi görevleri hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 620d7dcd-d462-475e-a449-fbfa06ff12c5
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 901a5a5eea7835720ab9d5963f0ab1be36df3685
-ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
+ms.openlocfilehash: 9e77d06900a17aca4c2630587a45a9b144accde2
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97668865"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877851"
 ---
 # <a name="microsoft-help-viewer-sdk"></a>Microsoft Yardım Görüntüleyicisi SDK’sı
 
@@ -360,7 +362,7 @@ IDE 'de, yardım menüsü öğesi altında **Hata Ayıkla yardım bağlamı**' n
 
 Aşağıdaki tabloda, köşeli ayraçlar arasında görünen tüm dizeler, tanınan bir değerle değiştirilmelidir. Örneğin, \<meta name="Microsoft.Help.Locale" content="[language code]" /> "[Language Code]", "en-US" gibi bir değer ile değiştirilmelidir.
 
-| Özellik (HTML temsili) | Description |
+| Özellik (HTML temsili) | Açıklama |
 | - | - |
 | \< meta name="Microsoft.Help.Locale" content="[language-code]" /> | Bu konu için bir yerel ayar ayarlar. Bu etiket bir konu başlığında kullanılıyorsa, yalnızca bir kez kullanılması gerekir ve diğer Microsoft Yardım etiketlerinin üzerine eklenmelidir. Bu etiket kullanılmazsa, konunun gövde metni, belirtilen ürün yerel ayarıyla ilişkili sözcük kesici kullanılarak dizinlenir; Aksi halde, en-US sözcük kesici kullanılır. Bu etiket, ıSOC RFC 4646 ' e uygundur. Microsoft Yardım 'ın doğru şekilde çalıştığından emin olmak için, genel dil özniteliği yerine bu özelliği kullanın. |
 | \< meta name="Microsoft.Help.TopicLocale" content="[language-code]" /> | Diğer yerel ayarlar da kullanıldığında, bu konu için bir yerel ayar ayarlar. Bu etiket bir konu başlığında kullanılıyorsa, yalnızca bir kez kullanılmalıdır. Katalog birden fazla dilde içerik içerdiğinde bu etiketi kullanın. Bir katalogdaki birden çok konu aynı KIMLIĞE sahip olabilir, ancak her birinin benzersiz bir Topılocale belirtmesi gerekir. Kataloğun yerel ayarıyla eşleşen bir Topılocale belirten konu, içindekiler tablosunda görüntülenen konudur. Ancak, konunun tüm dil sürümleri arama sonuçlarında görüntülenir. |

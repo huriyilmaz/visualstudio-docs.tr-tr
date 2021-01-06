@@ -1,5 +1,7 @@
 ---
 title: 'İzlenecek yol: Ana hat | Microsoft Docs'
+description: Bir dil hizmeti bağlamında veya kendi dosya adı uzantınız ve içerik türü için anahat bölgelerini tanımlama ve görüntüleme hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.workload:
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 6e3e60fe873d7bcb512e56c844e76fcbef037d42
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: ea0f16deee17e2cd249c0ee1de0861a936abc75c
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89508931"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877903"
 ---
 # <a name="walkthrough-outlining"></a>İzlenecek Yol: Ana Hat Oluşturma
 Genişletmek veya daraltmak istediğiniz metin bölgesi türlerini tanımlayarak anahat oluşturma gibi dil tabanlı özellikleri ayarlayın. Bir dil hizmeti bağlamında bölgeleri tanımlayabilir veya kendi dosya adı uzantınızı ve içerik türünü tanımlayabilir ve bölge tanımını yalnızca bu türe uygulayabilir ya da bölge tanımlarını varolan bir içerik türüne (örneğin, "metin") uygulayabilirsiniz. Bu izlenecek yol, ana hat bölgelerini tanımlama ve görüntüleme işlemlerinin nasıl yapılacağını gösterir.

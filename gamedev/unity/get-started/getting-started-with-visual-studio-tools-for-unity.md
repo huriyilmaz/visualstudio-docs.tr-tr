@@ -13,12 +13,12 @@ manager: crdun
 ms.workload:
 - unity
 zone_pivot_groups: platform
-ms.openlocfilehash: ba95e15be083e0bb1274e01a986f4139d9443240
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 1f8cbe1629aab6a177a46888fe25cf8e3565d91d
+ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "94341791"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97903759"
 ---
 # <a name="get-started-with-visual-studio-and-unity"></a>Visual Studio ve Unity ile çalışmaya başlama
 
@@ -34,7 +34,7 @@ Unity için Visual Studio Araçları, C# ve daha fazlasını yazmak ve hataları
 > [!NOTE]
 > Bu yükleme kılavuzu, Visual Studio içindir. Visual Studio Code kullanıyorsanız, lütfen [vs Code belgeler Ile Unity geliştirmeyi](https://code.visualstudio.com/docs/other/unity)ziyaret edin.
 
-1. [Visual Studio yükleyicisini indirin](/docs/install/install-visual-studio.md)veya zaten yüklüyse çalıştırın.
+1. [Visual Studio yükleyicisini indirin](/visualstudio/docs/install/install-visual-studio.md)veya zaten yüklüyse çalıştırın.
 2. İstediğiniz Visual Studio sürümünüz için **Değiştir** (zaten yüklüyse) veya **yükleme** (yeni yüklemeler için) seçeneğine tıklayın.
 3. **Iş yükleri** sekmesinde, **oyun** bölümüne gidin ve Unity iş yüküyle **oyun geliştirmeyi** seçin.
 
@@ -84,7 +84,7 @@ Varsayılan olarak, Unity, Visual Studio 'Yu veya bir betik düzenleyicisi olara
 
     ![Windows 'da Unity düzenleyicisinde dış araçlar tercih menüsü](../media/vs/preferences-external-tools.png)
 
-4. Eğer **gözatamıyorum...** seçilirse, Visual Studio yükleme dizininizin içindeki **Common7/IDE** dizinine gidin ve **devenv.exe** ' yi seçin. Ardından **Aç** ' a tıklayın.
+4. Eğer **gözatamıyorum...** seçilirse, Visual Studio yükleme dizininizin içindeki **Common7/IDE** dizinine gidin ve **devenv.exe**' yi seçin. Ardından **Aç**' a tıklayın.
 5. **Dış betik Düzenleyicisi** listesinde Visual Studio seçildikten sonra, **Düzenleyici iliştirme** onay kutusunun seçili olduğundan emin olun.
 6. Yapılandırma işlemini gerçekleştirmek için **Tercihler** iletişim kutusunu kapatın.
 

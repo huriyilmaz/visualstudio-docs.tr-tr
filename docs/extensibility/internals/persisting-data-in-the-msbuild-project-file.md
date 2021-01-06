@@ -1,5 +1,7 @@
 ---
 title: MSBuild proje dosyasındaki verileri kalıcı hale getirme | Microsoft Docs
+description: Proje dosyasında verileri kalıcı hale getirme ve proje dosyası toplama düzeylerinde verileri sürdürmek için IPersistXMLFragment kullanma hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e83526007f676ae94ddce57936b627bcb4308c2a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 20c6d79e6ea59b4993b4d6bfc5e165bdd952a3f9
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80706690"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97878085"
 ---
 # <a name="persisting-data-in-the-msbuild-project-file"></a>MSBuild Proje Dosyasında Verileri Kalıcı Hale Getirme
 Bir proje alt türünün, daha sonra kullanmak üzere, alt türe özgü verileri proje dosyasında kalıcı hale getirmeniz gerekebilir. Proje alt türü, aşağıdaki gereksinimleri karşılamak için proje dosyası kalıcılığını kullanır:
@@ -36,7 +38,7 @@ Bir proje alt türünün, daha sonra kullanmak üzere, alt türe özgü verileri
 
     2. Yapılandırmaya bağlı veriler.
 
-## <a name="persisting-build-related-information"></a>Derleme ile Ilgili kalıcı bilgiler
+## <a name="persisting-build-related-information"></a>Build-Related bilgileri kalıcı hale getirme
  Bir proje oluşturmak için faydalı verilerin kalıcılığı MSBuild aracılığıyla işlenir. MSBuild sistemi, derleme ile ilgili bilgilerin ana tablosunu tutar. Proje alt türleri, özellik değerlerini almak ve ayarlamak için bu verilere erişmenin sorumluluğundadır. Proje alt türleri ayrıca, kalıcı olacak ek özellikler ekleyerek ve kalıcı olmadıkları için özellikleri kaldırarak derleme ile ilgili veri tablosunu da artırabilir.
 
  MSBuild verilerini değiştirmek için bir proje alt türü, ile temel proje sisteminden MSBuild özellik nesnesini almaktan sorumludur <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage> . <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage> , temel proje sisteminde uygulanan bir arabirimdir ve, toplanan proje alt türü tarafından çalıştırılarak sorgular `QueryInterface` .

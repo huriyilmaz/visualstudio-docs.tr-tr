@@ -1,6 +1,7 @@
 ---
 title: JavaScript konsol komutları | Microsoft Docs
-ms.custom: ''
+description: JavaScript Konsol penceresinde ileti göndermek ve diğer görevleri yapmak için komutları kullanın. Bu makale Node.js uygulamalar, UWP uygulamaları ve Apache Cordova uygulamalar için geçerlidir.
+ms.custom: SEO-VS-2020
 ms.date: 10/17/2019
 ms.topic: reference
 helpviewer_keywords:
@@ -14,18 +15,18 @@ monikerRange: vs-2017
 ms.workload:
 - uwp
 - cordova
-ms.openlocfilehash: 301461caa15321b5a77f42872c93f52f3ec2c9c1
-ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
+ms.openlocfilehash: 2877b3ca9fb644ae4dae1af27e79e6ee52423b97
+ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91211280"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97903915"
 ---
 # <a name="javascript-console-commands-in-visual-studio"></a>Visual Studio 'da JavaScript konsol komutları
 
 Komutları kullanarak, Visual Studio 'nun JavaScript Konsol penceresinde ileti gönderebilir ve diğer görevleri gerçekleştirebilirsiniz. Bu pencerenin nasıl kullanılacağını gösteren örnekler için bkz. [hızlı başlangıç: JavaScript hata ayıklama](../debugger/quickstart-debug-javascript-using-the-console.md?view=vs-2017&preserve-view=true). Bu konudaki bilgiler, Apache Cordova için Visual Studio Araçları kullanılarak oluşturulan Node.js App, UWP uygulamaları ve uygulamalar için geçerlidir.
 
-JavaScript Konsolu penceresi kapalıysa, Visual Studio 'da hata ayıklama sırasında **Debug**  >  **Windows**  >  **JavaScript Konsolu**Hata Ayıkla ' yı seçerek açabilirsiniz.
+JavaScript Konsolu penceresi kapalıysa, Visual Studio 'da hata ayıklama sırasında   >  **Windows**  >  **JavaScript Konsolu** Hata Ayıkla ' yı seçerek açabilirsiniz.
 
 > [!NOTE]
 > Pencere hata ayıklama oturumu sırasında kullanılamıyorsa, hata ayıklayıcı türünün projenin hata ayıklama özelliklerinde **betik** olarak ayarlandığından emin olun.
@@ -43,7 +44,7 @@ Bu tabloda `console` JavaScript Konsol penceresinde kullanabileceğiniz nesne ko
 
 |Komut|Açıklama|Örnek|
 |-------------|-----------------|-------------|
-|`assert(expression, message)`|`expression` **False**olarak değerlendirilirse bir ileti gönderir.|`console.assert((x == 1), "assert message: x != 1");`|
+|`assert(expression, message)`|`expression` **False** olarak değerlendirilirse bir ileti gönderir.|`console.assert((x == 1), "assert message: x != 1");`|
 |`clear()`|Komut dosyası hata iletileri de dahil olmak üzere konsol penceresinden iletileri temizler ve ayrıca konsol penceresinde görünen betiği de temizler. Konsol giriş istemine girdiğiniz betiği temizlemez.|`console.clear();`|
 |`count(title)`|Count komutunun konsol penceresine çağrılme sayısını gönderir. Count çağrısı her bir isteğe bağlı tarafından benzersiz şekilde tanımlanır `title` .<br /><br /> Konsol penceresinde Varolan giriş, `title` (varsa) parametresi tarafından tanımlanır ve sayı komutu tarafından güncelleştirilir. Yeni bir giriş oluşturulmaz.|`console.count();`<br /><br /> `console.count("inner loop");`|
 |`debug(message)`|`message`Konsol penceresine gönderir.<br /><br /> Bu komut, Console. log ile aynıdır.<br /><br /> Komutu kullanılarak geçirilen nesneler bir dize değerine dönüştürülür.|`console.debug("logging message");`|
@@ -87,7 +88,7 @@ if (console && console.log) {
 ```
 
 ## <a name="examining-objects-in-the-javascript-console-window"></a>JavaScript Konsol penceresinde nesneleri İnceleme
-JavaScript Konsol penceresini kullanırken kapsam içinde olan herhangi bir nesneyle etkileşime geçebilirsiniz. Konsol penceresinde kapsam dışı bir nesneyi incelemek için, `console.log` `console.dir` veya kodunuzda diğer komutları kullanın. Alternatif olarak, kodunuzda bir kesme noktası ayarlayarak (**kesme**noktası Ekle kesme noktası), nesne kapsam içinde olduğunda, nesne ile etkileşim kurabilirsiniz  >  **Insert Breakpoint**.
+JavaScript Konsol penceresini kullanırken kapsam içinde olan herhangi bir nesneyle etkileşime geçebilirsiniz. Konsol penceresinde kapsam dışı bir nesneyi incelemek için, `console.log` `console.dir` veya kodunuzda diğer komutları kullanın. Alternatif olarak, kodunuzda bir kesme noktası ayarlayarak (**kesme** noktası Ekle kesme noktası), nesne kapsam içinde olduğunda, nesne ile etkileşim kurabilirsiniz  >  .
 
 ## <a name="formatting-consolelog-output"></a><a name="ConsoleLog"></a> Biçimlendirme konsolu. log çıktısı
 ' A birden çok bağımsız değişken geçirirseniz `console.log` , konsol bağımsız değişkenleri bir dizi olarak değerlendirir ve çıktıyı birleştirir.

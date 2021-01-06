@@ -1,6 +1,7 @@
 ---
 title: Hata ayıklayıcı ile özel durumları yönetme | Microsoft Docs
-ms.custom: seodec18
+description: Hata ayıklayıcının hangi özel durumları, hangi noktada kesilmesini istediğinizi ve kesilmelerinin nasıl işleneceğini nasıl belirteceğinizi öğrenin.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 10/09/2018
 ms.topic: how-to
 f1_keywords:
@@ -33,12 +34,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ff28944a36d338230a17cd533a4832452e42885b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 210f2b2fc3e037f58fed19031d7ae9762185a640
+ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85348463"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97903854"
 ---
 # <a name="manage-exceptions-with-the-debugger-in-visual-studio"></a>Visual Studio 'da hata ayıklayıcı ile özel durumları yönetme
 
@@ -64,7 +65,7 @@ Bir özel durum oluştuğunda, hata ayıklayıcı **Çıkış** penceresine bir 
 
 Hata ayıklayıcı, bir özel durumun oluşturulduğu noktada yürütmeyi bölebilir, bu nedenle özel durumu bir işleyici çağrılmadan önce inceleyebilirsiniz.
 
-**Özel durum ayarları** penceresinde (**hata ayıkla > Windows > özel durum ayarları**), **ortak dil çalışma zamanı özel durumları**gibi özel durumlar kategorisi için düğümünü genişletin. Daha sonra bu kategoride yer alan **sistem. AccessViolationException**gibi belirli bir özel durum için onay kutusunu işaretleyin. Tüm özel durumlar kategorisini de seçebilirsiniz.
+**Özel durum ayarları** penceresinde (**hata ayıkla > Windows > özel durum ayarları**), **ortak dil çalışma zamanı özel durumları** gibi özel durumlar kategorisi için düğümünü genişletin. Daha sonra bu kategoride yer alan **sistem. AccessViolationException** gibi belirli bir özel durum için onay kutusunu işaretleyin. Tüm özel durumlar kategorisini de seçebilirsiniz.
 
 ![Denetlenen AccessViolationException](../debugger/media/exceptionsettingscheckaccess.png "ExceptionSettingsCheckAccess")
 
@@ -145,7 +146,7 @@ Hata ayıklayıcı, bir özel durumun oluşturulduğu noktada yürütmeyi böleb
 
 [Yalnızca kendi kodum](../debugger/just-my-code.md)ile .NET veya JavaScript kodunda hata ayıklaması yapıyorsanız, hata ayıklayıcıya Kullanıcı kodunda işlenmemiş ancak başka bir yerde işlenen özel durumların kesilmesini engellemesini söyleyebilirsiniz.
 
-1. **Özel durum ayarları** penceresinde, bir sütun etiketine sağ tıklayarak kısayol menüsünü açın ve ardından **sütunları göster > ek eylemler**' i seçin. ( **Yalnızca kendi kodum**kapalıysa, bu komutu görmezsiniz.) **Ek eylemler** adlı üçüncü bir sütun görüntülenir.
+1. **Özel durum ayarları** penceresinde, bir sütun etiketine sağ tıklayarak kısayol menüsünü açın ve ardından **sütunları göster > ek eylemler**' i seçin. ( **Yalnızca kendi kodum** kapalıysa, bu komutu görmezsiniz.) **Ek eylemler** adlı üçüncü bir sütun görüntülenir.
 
    ![Ek eylemler sütunu](../debugger/media/additionalactionscolumn.png "Adtionalactionscolumn")
 
@@ -180,11 +181,11 @@ Hata ayıklayıcı, bir özel durumun oluşturulduğu noktada yürütmeyi böleb
 GPU bellek erişimi özel durumları, JavaScript çalışma zamanı özel durumları veya Win32 özel durumlar kategorilerine bir özel durum eklemek için, hata kodunu ve açıklamayı ekleyin.
 
 > [!TIP]
-> Yazılışını inceleyin! **Özel durum ayarları** penceresi, eklenen bir özel durumun varlığını denetlemez. Bu nedenle, **Sydıtem. UriTemplateMatchException**yazarsanız, bu özel durum için bir giriş alırsınız ( **System. UriTemplateMatchException**için değil).
+> Yazılışını inceleyin! **Özel durum ayarları** penceresi, eklenen bir özel durumun varlığını denetlemez. Bu nedenle, **Sydıtem. UriTemplateMatchException** yazarsanız, bu özel durum için bir giriş alırsınız ( **System. UriTemplateMatchException** için değil).
 
 Özel durum ayarları çözümün. suo dosyasında kalıcı hale getirilir, bu nedenle belirli bir çözüme uygulanır. Belirli özel durum ayarlarını çözümler genelinde yeniden kullanamazsınız. Artık yalnızca eklenen özel durumlar kalıcıdır; Silinen özel durumlar değildir. Bir özel durum ekleyebilir, çözümü kapatıp yeniden açabilirsiniz ve özel durum hala orada olacaktır. Ancak bir özel durumu siler ve çözümü kapatabilir/yeniden açarsanız, özel durum yeniden görüntülenir.
 
-**Özel durum ayarları** penceresi C# dilinde genel özel durum türlerini destekler, ancak Visual Basic. Gibi özel durumları kesmek için `MyNamespace.GenericException<T>` , özel durumu **MyNamespace. GenericException ' 1**olarak eklemeniz gerekir. Diğer bir deyişle, şu kod gibi bir özel durum oluşturduysanız:
+**Özel durum ayarları** penceresi C# dilinde genel özel durum türlerini destekler, ancak Visual Basic. Gibi özel durumları kesmek için `MyNamespace.GenericException<T>` , özel durumu **MyNamespace. GenericException ' 1** olarak eklemeniz gerekir. Diğer bir deyişle, şu kod gibi bir özel durum oluşturduysanız:
 
 ```csharp
 public class GenericException<T> : Exception
@@ -216,9 +217,9 @@ Koşullu özel durumlar eklemek için:
 
    ![Özel durum için ek koşullar](../debugger/media/extraconditionsforanexception.png "ExtraConditionsForAnException")
 
-3. Her bir koşul satırı için, modülün adını yazın ve karşılaştırma operatörü listesini **eşittir** veya **eşit**olarak değiştirin. **\\\*** Adında birden fazla modül belirtmek için joker karakterler () belirtebilirsiniz.
+3. Her bir koşul satırı için, modülün adını yazın ve karşılaştırma operatörü listesini **eşittir** veya **eşit** olarak değiştirin. Birden *\\\** fazla modül belirtmek için adında joker karakterler (* _) belirtebilirsiniz.
 
-4. Bir koşulu silmeniz gerekiyorsa, koşul satırının sonundaki **X** seçeneğini belirleyin.
+4. Bir koşulu silmeniz gerekiyorsa, koşul satırının sonundaki _ *X** öğesini seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

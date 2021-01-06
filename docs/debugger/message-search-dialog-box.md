@@ -1,5 +1,7 @@
 ---
 title: İleti arama Iletişim kutusu | Microsoft Docs
+description: Ileti arama ' yı kullanarak Iletiler görünümünde belirli bir ileti için düğüm bulun ve seçin. Tanıtıcı, ileti türü ve ileti KIMLIĞI ile arama yapabilirsiniz.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8fed7fe9bf9e10bf893159a11d28f991a255791c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3d100b36ff706752f1855939d4c45b5b7793ccfa
+ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62931291"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97903057"
 ---
 # <a name="message-search-dialog-box"></a>İleti Arama İletişim Kutusu
 [Iletiler görünümünde](../debugger/messages-view.md)belirli bir iletinin düğümünü bulmak ve seçmek için bu iletişim kutusunu kullanın. Bu iletişim kutusunu görüntülemek için odağı bir Iletiler Görünümü penceresine taşıyın. Sonra **arama** menüsünden **ileti bul** ' u seçin.

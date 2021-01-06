@@ -1,5 +1,7 @@
 ---
 title: 'Test alanı 2: kaynak denetiminden al | Microsoft Docs'
+description: Bu test alanı, Al ile sürüm deposundan öğeleri almaya yönelik test çalışmalarını ele alır. Bu test çalışmaları, hem yerel hem de Web projelerine uygulanabilir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c213e2774730596db8b8e4f2d0691472495222e7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 98ed765f78a9e7330e5e1d3864c8a91b63239a3f
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80704598"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877708"
 ---
 # <a name="test-area-2-get-from-source-control"></a>Test Alanı 2: Kaynak Denetiminden Alma
 Bu test alanı, Al komutu aracılığıyla sürüm deposundan öğeleri almaya yönelik test çalışmalarını ele alır. Bu test çalışmaları, hem yerel hem de Web projelerine uygulanabilir.

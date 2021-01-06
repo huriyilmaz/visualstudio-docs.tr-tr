@@ -1,5 +1,6 @@
 ---
 title: Bir içerik türünü dosya adı uzantısına bağlama
+description: Bu izlenecek yolda düzenleyici Managed Extensibility Framework uzantılarını kullanarak kendi içerik türünü bir dosya adı uzantısına bağlamayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -11,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3d59ae0b5eb2411ff9e41466e8b87dbe20b835ba
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 478ecc6c2238703d1cacc8e649072d669a41c590
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90034669"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877916"
 ---
 # <a name="walkthrough-link-a-content-type-to-a-file-name-extension"></a>İzlenecek yol: bir içerik türünü bir dosya adı uzantısına bağlama
 Kendi içerik türünü tanımlayabilir ve düzenleyici Managed Extensibility Framework (MEF) uzantılarını kullanarak bir dosya adı uzantısı ile bağlantı oluşturabilirsiniz. Bazı durumlarda, dosya adı uzantısı zaten bir dil hizmeti tarafından tanımlandı. Ancak, MEF ile kullanmak için yine de onu bir içerik türüne bağlamanız gerekir.
@@ -28,7 +29,7 @@ Kendi içerik türünü tanımlayabilir ve düzenleyici Managed Extensibility Fr
 
 1. C# VSıX projesi oluşturun. ( **Yeni proje** iletişim kutusunda, **Visual C#/genişletilebilirliği**, sonra **VSIX projesi**' ni seçin.) Çözümü adlandırın `ContentTypeTest` .
 
-2. **Source. Extension. valtmanifest** dosyasında, **varlıklar** sekmesine gidin ve **tür** alanını **Microsoft. VisualStudio. MefComponent**, **kaynak** alanını ise **geçerli çözümdeki bir projeye**ve **proje alanını projenin** adına ayarlayın.
+2. **Source. Extension. valtmanifest** dosyasında, **varlıklar** sekmesine gidin ve **tür** alanını **Microsoft. VisualStudio. MefComponent**, **kaynak** alanını ise **geçerli çözümdeki bir projeye** ve **proje alanını projenin** adına ayarlayın.
 
 ## <a name="define-the-content-type"></a>İçerik türünü tanımlama
 

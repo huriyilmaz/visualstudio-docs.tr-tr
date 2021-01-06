@@ -1,5 +1,7 @@
 ---
 title: Satır Içi derleme kodunda hata ayıkla | Microsoft Docs
+description: Satır içi derleme kodunda hata ayıklarken, derleme yönergelerini görmek için ayrıştırma penceresini kullanın ve kayıt değerlerini görüntülemek için Yazmaçları penceresini kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -19,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b4366c84c87823d052452fa3fa81a3353e0c9e32
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: c40b8e35cd572c0075bb87f28fa1eda424cb2e8e
+ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852406"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97903941"
 ---
 # <a name="how-to-debug-inline-assembly-code"></a>Nasıl Yapılır: Satır İçi Derleme Kodunda Hata Ayıklama
 
@@ -41,5 +43,5 @@ Hata ayıklayıcı, satır içi derleme kodu, **ayrıştırma** penceresi ve **Y
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Güvenliği](../debugger/debugger-security.md)
+- [Hata ayıklayıcı güvenliği](../debugger/debugger-security.md)
 - [Yerel Kodda Hata Ayıklama](../debugger/debugging-native-code.md)

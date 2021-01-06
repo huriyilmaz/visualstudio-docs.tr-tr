@@ -1,5 +1,7 @@
 ---
 title: Proje türü temelleri | Microsoft Docs
+description: Proje türünü ne zaman oluşturmanız gerektiğini ve proje alt türlerini kullanarak var olan bir proje türünü genişletebileceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b7634802899d72eb6abcb0aa837b8fb6a532b966
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: d55a4be044c44567f65e312d013ebdb61314ea00
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012067"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877812"
 ---
 # <a name="project-type-essentials"></a>Proje Türü Temel Bileşenleri
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , veya gibi diller için birçok proje türü [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] içerir [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] . [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Ayrıca kendi proje türlerinizi oluşturmanıza imkan tanır.
@@ -32,7 +34,7 @@ ms.locfileid: "90012067"
 
   [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] Aşağıdakilerden birini veya birkaçını desteklemek istiyorsanız, dışındaki bir dili temel alan projeler için yeni bir proje türü oluşturmanız gerekir:
 
-- Oluşturma
+- Yapı
 
 - Dağıtım
 
@@ -58,7 +60,7 @@ ms.locfileid: "90012067"
 
 - Proje türü, dosyaları kullanmak zorunda değildir. Örneğin, bir proje türü tüm verilerini bir veritabanında saklayabilir. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] proje türlerine, projelere ve proje öğelerine yönelik verileri nasıl kalıcı hale getirebileceği üzerinde tüm denetim sağlar. Daha fazla bilgi için bkz. [Proje türü tasarım kararları](../../extensibility/internals/project-type-design-decisions.md).
 
-- Proje türleri bir proje *fabrikası*sağlamalıdır ve [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Bu proje türünü temel alan bir proje açmak veya oluşturmak için her zaman proje türünün bir örneğini oluşturan bir nesne olmalıdır. Daha fazla bilgi için bkz. [Proje fabrikalarını kullanarak proje örnekleri oluşturma](../../extensibility/internals/creating-project-instances-by-using-project-factories.md).
+- Proje türleri bir proje *fabrikası* sağlamalıdır ve [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Bu proje türünü temel alan bir proje açmak veya oluşturmak için her zaman proje türünün bir örneğini oluşturan bir nesne olmalıdır. Daha fazla bilgi için bkz. [Proje fabrikalarını kullanarak proje örnekleri oluşturma](../../extensibility/internals/creating-project-instances-by-using-project-factories.md).
 
 - Proje türleri, projeler ve proje öğeleri için şablon sağlamalıdır. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Kullanıcılar yeni projeler oluştururken ve varolan projelere yeni öğeler eklerken şablonları kullanır. Daha fazla bilgi için bkz. [Proje ve proje öğesi şablonları ekleme](../../extensibility/internals/adding-project-and-project-item-templates.md).
 

@@ -1,5 +1,7 @@
 ---
 title: Eski dil hizmetinde söz dizimi renklendirme | Microsoft Docs
+description: Sözcük temelli öğelerin veya belirteçlerin türlerini belirleyebilen bir Ayrıştırıcı veya tarayıcı sağlayarak eski dil hizmetinde söz dizimi renklendirmesi desteği sağlamayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 02723a09254255b98291cb921ae5ec091d8b9859
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c51885e593fabffab80d11c930100f3cc719dff8
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80704702"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877760"
 ---
 # <a name="syntax-colorizing-in-a-legacy-language-service"></a>Eski Dil Hizmetinde Söz Dizimi Renklendirmesi
 Sözdizimi renklendirme, farklı renklerde ve stillerde bir programlama dilinin farklı öğelerinin bir kaynak dosyada görüntülenmesine neden olan bir özelliktir. Bu özelliği desteklemek için, dosyadaki sözcük öğelerinin veya belirteçlerin türlerini belirleyebilen bir Ayrıştırıcı veya tarayıcı sağlamanız gerekir. Birçok dil, anahtar sözcükleri, sınırlayıcıları (parantezler veya küme ayraçları gibi) ve açıklamaları farklı yollarla renklendirileyerek yorumlar.

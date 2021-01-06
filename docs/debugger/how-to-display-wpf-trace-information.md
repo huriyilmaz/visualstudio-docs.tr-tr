@@ -1,5 +1,7 @@
 ---
 title: WPF Izleme bilgilerini görüntüleme | Microsoft Docs
+description: Visual Studio, WPF uygulamalarından hata ayıklama izleme bilgilerini alabilir ve çıkış penceresinde görüntüleyebilir. WPF izlemeyi yönetmeyi ve özelleştirmeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 086dc96051323941b25766fb836b5020bca0ec43
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 0e4800c2ca44c2c52b2059685d9c5bc4fe38ed08
+ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852302"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97903980"
 ---
 # <a name="how-to-display-wpf-trace-information"></a>Nasıl Yapılır: WPF İzleme Bilgilerini Görüntüleme
 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] , WPF uygulamalarından hata ayıklama izleme bilgilerini alabilir ve bu bilgileri **Çıkış** penceresinde görüntüler. Hata ayıklama izleme bilgilerini göstermek için WPF izlemenin etkinleştirilmesi gerekir.
@@ -34,19 +36,19 @@ ms.locfileid: "90852302"
 
 2. **Seçenekler** iletişim kutusunda, soldaki kutudan **hata ayıklama** düğümünü açın.
 
-3. **Hata ayıklama**altında **Çıkış penceresi**' ye tıklayın.
+3. **Hata ayıklama** altında **Çıkış penceresi**' ye tıklayın.
 
-4. **Genel çıkış ayarları**altında **tüm hata ayıklama çıktısı**' nı seçin.
+4. **Genel çıkış ayarları** altında **tüm hata ayıklama çıktısı**' nı seçin.
 
 5. Sağ taraftaki kutuda **WPF Izleme ayarları**' na bakın.
 
 6. **WPF Izleme ayarları** düğümünü açın.
 
-7. **WPF Izleme ayarları**altında, etkinleştirmek istediğiniz ayar kategorisine tıklayın (örneğin, **veri bağlama**).
+7. **WPF Izleme ayarları** altında, etkinleştirmek istediğiniz ayar kategorisine tıklayın (örneğin, **veri bağlama**).
 
      **Veri bağlamanın** yanındaki ayarlar sütununda veya tıklattığınız kategoride açılan liste denetimi görünür.
 
-8. Aşağı açılan listeye tıklayın ve görmek istediğiniz izleme bilgisi türünü seçin: **Tümü**, **kritik**, **hata**, **Uyarı**, **bilgi**, **ayrıntılı**veya **etkinlik izleme**.
+8. Aşağı açılan listeye tıklayın ve görmek istediğiniz izleme bilgisi türünü seçin: **Tümü**, **kritik**, **hata**, **Uyarı**, **bilgi**, **ayrıntılı** veya **etkinlik izleme**.
 
      **Kritik** yalnızca kritik olayları izlemeye izin vermez.
 
@@ -70,13 +72,13 @@ ms.locfileid: "90852302"
 
 2. **Seçenekler** iletişim kutusunda, soldaki kutudan **hata ayıklama** düğümünü açın.
 
-3. **Hata ayıklama**altında **Çıkış penceresi**' ye tıklayın.
+3. **Hata ayıklama** altında **Çıkış penceresi**' ye tıklayın.
 
 4. Sağ taraftaki kutuda **WPF Izleme ayarları**' na bakın.
 
 5. **WPF Izleme ayarları** düğümünü açın.
 
-6. **WPF Izleme ayarları**altında, etkinleştirmek istediğiniz ayar kategorisine tıklayın (örneğin, **veri bağlama**).
+6. **WPF Izleme ayarları** altında, etkinleştirmek istediğiniz ayar kategorisine tıklayın (örneğin, **veri bağlama**).
 
      **Veri bağlamanın** yanındaki ayarlar sütununda veya tıklattığınız kategoride açılan liste denetimi görünür.
 

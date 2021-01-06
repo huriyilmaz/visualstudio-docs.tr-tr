@@ -1,6 +1,7 @@
 ---
 title: C#, VB için önerilen hata ayıklayıcı özellik ayarları | Microsoft Docs
-ms.custom: seodec18
+description: Tüm yönetilen hata ayıklama için aynı olması gereken derleme ve derleme özellik ayarlarına bakın. Diğer ayarlar proje türüne göre değişiklik gösterebilir.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -17,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 07c63a70de9d633ccd73d1d0d3bd23196d421543
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 57740c05e31bde2ae4e5143735e3bba1f3fc112c
+ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72731381"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97903811"
 ---
 # <a name="managed-debugging-recommended-property-settings"></a>Yönetilen Hata Ayıklama: Önerilen Özellik Ayarları
 Tüm yönetilen hata ayıklama senaryoları için bazı özellikler aynı şekilde ayarlanmalıdır.

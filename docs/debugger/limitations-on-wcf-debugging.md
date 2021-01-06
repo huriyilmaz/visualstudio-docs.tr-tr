@@ -1,5 +1,7 @@
 ---
 title: WCF hata ayıklama sınırlamaları | Microsoft Docs
+description: WCF hizmetinde hata ayıklamaya başlama yollarını, gerekli koşulları ve hata ayıklama sınırlamalarını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e8612bd2423849c61f21a5c184a3e1d39da0302b
-ms.sourcegitcommit: 023f52f10fb91850824558478cbfd2ec965054f0
+ms.openlocfilehash: 30ca43483c352a4f102ab196dc5ea8e8650cdf81
+ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94407750"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97903863"
 ---
 # <a name="limitations-on-wcf-debugging"></a>WCE Hata Ayıklamasında Sınırlamalar
 WCF hizmetinde hata ayıklamaya başlayabilmeniz için kullanabileceğiniz üç yol vardır:
@@ -32,7 +34,7 @@ WCF hizmetinde hata ayıklamaya başlayabilmeniz için kullanabileceğiniz üç 
 
 - Şu anda çalışmakta olan bir hizmete iliştirmek için **Ekle işlemini** kullanırsınız. Hata ayıklama, hizmet içinde başlar.
 
-  Bu konuda bu senaryolara ilişkin sınırlamalar açıklanmaktadır.
+Bu konuda bu senaryolara ilişkin sınırlamalar açıklanmaktadır.
 
 ## <a name="limitations-on-stepping-into-a-service"></a>Bir hizmeti adımla ilgili sınırlamalar
  Hata ayıkladığınız istemci uygulamalarından bir hizmete geçmek için aşağıdaki koşulların karşılanması gerekir:
@@ -51,10 +53,10 @@ WCF hizmetinde hata ayıklamaya başlayabilmeniz için kullanabileceğiniz üç 
     </system.web>
     ```
 
-     Bu kod yalnızca bir kez eklenmelidir. Bu kodu,. config dosyasını düzenleyerek veya **Işleme İliştir** ' i kullanarak hizmete ekleyerek ekleyebilirsiniz. Bir hizmette **Işleme ekleme** kullandığınızda, hata ayıklama kodu otomatik olarak. config dosyasına eklenir. Bundan sonra,. config dosyasını düzenlemek zorunda kalmadan hata ayıklamanıza ve hizmette ilerme yapabilirsiniz.
+     Bu kod yalnızca bir kez eklenmelidir. Bu kodu,. config dosyasını düzenleyerek veya **Işleme İliştir**' i kullanarak hizmete ekleyerek ekleyebilirsiniz. Bir hizmette **Işleme ekleme** kullandığınızda, hata ayıklama kodu otomatik olarak. config dosyasına eklenir. Bundan sonra,. config dosyasını düzenlemek zorunda kalmadan hata ayıklamanıza ve hizmette ilerme yapabilirsiniz.
 
 ## <a name="limitations-on-stepping-out-of-a-service"></a>Bir hizmetten atlama sınırlamaları
- Bir hizmetin ve istemciye geri dönme işlemi, bir hizmetin adımlaması için açıklanan sınırlamalara sahiptir. Buna ek olarak, hata ayıklayıcı istemciye eklenmelidir. Bir istemcide hata ayıklaması yapıyorsanız ve bir hizmete adımla, hata ayıklayıcı hizmete bağlı kalır. Bu, istemciyi, **hata ayıklamayı Başlat** ' i kullanarak veya istemciye Iliştirerek, **İşleme İliştir** ' i kullanarak başlatmış olmanız durumunda geçerlidir. Hizmete ekleyerek hata ayıklamaya başladıysanız, hata ayıklayıcı henüz istemciye eklenmez. Bu durumda, hizmeti kullanıma almak ve istemciye geri dönmek istiyorsanız, öncelikle istemciye el ile eklemek için **Ekle işlemini** kullanmanız gerekir.
+ Bir hizmetin ve istemciye geri dönme işlemi, bir hizmetin adımlaması için açıklanan sınırlamalara sahiptir. Buna ek olarak, hata ayıklayıcı istemciye eklenmelidir. Bir istemcide hata ayıklaması yapıyorsanız ve bir hizmete adımla, hata ayıklayıcı hizmete bağlı kalır. Bu, istemciyi, **hata ayıklamayı Başlat** ' i kullanarak veya istemciye Iliştirerek, **İşleme İliştir**' i kullanarak başlatmış olmanız durumunda geçerlidir. Hizmete ekleyerek hata ayıklamaya başladıysanız, hata ayıklayıcı henüz istemciye eklenmez. Bu durumda, hizmeti kullanıma almak ve istemciye geri dönmek istiyorsanız, öncelikle istemciye el ile eklemek için **Ekle işlemini** kullanmanız gerekir.
 
 ## <a name="limitations-on-automatic-attach-to-a-service"></a>Bir hizmete otomatik Iliştirme sınırlamaları
  Bir hizmete otomatik iliştirme aşağıdaki sınırlamalara sahiptir:

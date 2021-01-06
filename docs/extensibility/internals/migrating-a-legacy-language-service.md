@@ -1,5 +1,7 @@
 ---
 title: Eski dil hizmetini geçirme | Microsoft Docs
+description: Projeyi güncelleştirerek ve kaynak. Extension. valtmanifest dosyası ekleyerek bir dil hizmetini Visual Studio 'nun en son sürümüne güncelleştirmeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9e2eff3f3a27b7d8a276c8ed776c1e11d5ce332e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ced200ff24b17f312e63642c8083f038a6fc6a4d
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80707106"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877838"
 ---
 # <a name="migrating-a-legacy-language-service"></a>Eski Dil Hizmetini Geçirme
 Projeyi güncelleştirerek ve projeye bir Source. Extension. valtmanifest dosyası ekleyerek eski bir dil hizmetini Visual Studio 'nun sonraki bir sürümüne geçirebilirsiniz. Dil hizmetinin kendisi, daha önce olduğu gibi çalışmaya devam eder, çünkü Visual Studio Düzenleyicisi tarafından uyum sağlar.
@@ -53,13 +55,13 @@ Projeyi güncelleştirerek ve projeye bir Source. Extension. valtmanifest dosyas
 
 5. **Tek yönlü yükseltme** penceresi görüntülenir. **Tamam**’a tıklayın.
 
-6. Proje özelliklerini güncelleştirin. **Çözüm Gezgini**proje düğümünü seçip, sağ tıklayıp **Özellikler**' i seçerek **Proje özellikleri** penceresini açın.
+6. Proje özelliklerini güncelleştirin. **Çözüm Gezgini** proje düğümünü seçip, sağ tıklayıp **Özellikler**' i seçerek **Proje özellikleri** penceresini açın.
 
-    - **Uygulama** sekmesinde **hedef Framework 'ü** **4.6.1**olarak değiştirin.
+    - **Uygulama** sekmesinde **hedef Framework 'ü** **4.6.1** olarak değiştirin.
 
-    - **Hata Ayıkla** sekmesinde, **dış program Başlat** kutusuna ** \<Visual Studio installation path>\Common7\IDE\devenv.exe yazın.**
+    - **Hata Ayıkla** sekmesinde, **dış program Başlat** kutusuna **\<Visual Studio installation path>\Common7\IDE\devenv.exe yazın.**
 
-         **Komut satırı bağımsız değişkenleri** kutusunda/**rootsuffix exp**yazın.
+         **Komut satırı bağımsız değişkenleri** kutusunda/**rootsuffix exp** yazın.
 
 7. Aşağıdaki başvuruları güncelleştirin:
 
@@ -83,13 +85,13 @@ Projeyi güncelleştirerek ve projeye bir Source. Extension. valtmanifest dosyas
 
 10. Bir Source. Extension. valtmanifest dosyası eklemeniz gerekir.
 
-    - Bu dosyayı varolan bir uzantıdan proje dizininize kopyalayın. (Bu dosyayı almanın bir yolu, bir VSıX projesi oluşturmaktır ( **Dosya**altında **Yeni**' ye ve ardından **Proje**' ye tıklayın. Visual Basic veya C# altında **genişletilebilirlik**' e ve ardından **VSIX projesi**' ni seçin.)
+    - Bu dosyayı varolan bir uzantıdan proje dizininize kopyalayın. (Bu dosyayı almanın bir yolu, bir VSıX projesi oluşturmaktır ( **Dosya** altında **Yeni**' ye ve ardından **Proje**' ye tıklayın. Visual Basic veya C# altında **genişletilebilirlik**' e ve ardından **VSIX projesi**' ni seçin.)
 
     - Dosyayı projenize ekleyin.
 
-    - Dosyanın **özelliklerinde**, **derleme eylemini** **none**olarak ayarlayın.
+    - Dosyanın **özelliklerinde**, **derleme eylemini** **none** olarak ayarlayın.
 
-    - Dosyayı **VSIX bildirim Düzenleyicisi**ile açın.
+    - Dosyayı **VSIX bildirim Düzenleyicisi** ile açın.
 
     - Aşağıdaki alanları değiştirin:
 
@@ -99,11 +101,11 @@ Projeyi güncelleştirerek ve projeye bir Source. Extension. valtmanifest dosyas
 
     - **Açıklama**: normal ifade dili hizmeti.
 
-    - **Varlıklar**altında **Yeni**' ye tıklayın, **Microsoft. VisualStudio. VSPackage** **türünü** seçin, **kaynağı** **geçerli çözümdeki bir proje**olarak ayarlayın ve ardından **projeyi** **RegExLangServ**olarak ayarlayın.
+    - **Varlıklar** altında **Yeni**' ye tıklayın, **Microsoft. VisualStudio. VSPackage** **türünü** seçin, **kaynağı** **geçerli çözümdeki bir proje** olarak ayarlayın ve ardından **projeyi** **RegExLangServ** olarak ayarlayın.
 
     - Dosyayı kaydedin ve kapatın.
 
-11. Çözümü derleyin. Oluşturulan dosyalar **%USERPROFILE%\appdata\local\microsoft\visualstudio\14.0exp\extensions\msit\ RegExLangServ \\ **öğesine dağıtılır.
+11. Çözümü derleyin. Oluşturulan dosyalar **%USERPROFILE%\appdata\local\microsoft\visualstudio\14.0exp\extensions\msit\ RegExLangServ \\** öğesine dağıtılır.
 
 12. Hata ayıklamayı başlatın. Visual Studio 'nun ikinci bir örneği açıldı.
 

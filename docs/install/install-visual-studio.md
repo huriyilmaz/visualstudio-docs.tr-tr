@@ -20,12 +20,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 7dee7965d1c98dbdb05f0edc83c6c8799047acde
-ms.sourcegitcommit: c558d8a0f02ed2c932c8d6f70756d8d2cedb10b3
+ms.openlocfilehash: 2c3302499ec44d7a97ca66532428e0af117e3a7e
+ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97684052"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97903785"
 ---
 # <a name="install-visual-studio"></a>Visual Studio'yu yükleme
 
@@ -267,3 +267,4 @@ Daha fazla bilgi için bkz. [yükleme konumlarını seçme](change-installation-
 * [Visual Studio’nun çevrimdışı yüklemesini oluşturma](create-an-offline-installation-of-visual-studio.md)
 * [Komut satırı parametrelerini kullanarak Visual Studio'yu yükleme](use-command-line-parameters-to-install-visual-studio.md)
 * [Mac için Visual Studio’yu yükleyin](/visualstudio/mac/installation)
+ 

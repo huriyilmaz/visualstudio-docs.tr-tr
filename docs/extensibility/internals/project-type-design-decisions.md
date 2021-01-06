@@ -1,5 +1,7 @@
 ---
 title: Proje türü tasarım kararları | Microsoft Docs
+description: Yeni bir proje türü oluşturarak Visual Studio 'Yu genişletmenizin önüne bir öğe, proje dosyası kalıcılığı ve taahhüt mekanizması tasarım kararları hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5e33ac1c4168593b881f799dfdfb94005fb55fc1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ab29fbe79b474aa7b640faf81de812b7571de861
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80706368"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877803"
 ---
 # <a name="project-type-design-decisions"></a>Proje Türü Tasarım Kararları
 Yeni bir proje türü oluşturmadan önce, proje türü ile ilgili çeşitli tasarım kararları almanız gerekir. Projelerinize hangi öğe türlerinin ekleneceğini, proje dosyalarının nasıl kalıcı olacağını ve hangi taahhüt modelinin kullanılacağını karar vermelisiniz.

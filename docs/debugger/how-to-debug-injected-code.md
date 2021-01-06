@@ -1,5 +1,7 @@
 ---
 title: Eklenen kodda hata ayıkla | Microsoft Docs
+description: "Birleştirme penceresinde Visual Studio 'Nun eklenen kodu görüntülemek için sağladığı iki yolu öğrenin: 1). 2) eklenen ve özgün koda sahip bir kaynak dosyada."
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -24,12 +26,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e2dfcd81def9b3662f410120f370566354726498
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 5bce49eebf430ccaca9919c74966fb9efd00b09b
+ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852106"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97903954"
 ---
 # <a name="how-to-debug-injected-code"></a>Nasıl Yapılır: Püskürtülen Kodda Hata Ayıklama
 
@@ -68,5 +70,5 @@ ms.locfileid: "90852106"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Güvenliği](../debugger/debugger-security.md)
+- [Hata ayıklayıcı güvenliği](../debugger/debugger-security.md)
 - [Yerel Kodda Hata Ayıklama](../debugger/debugging-native-code.md)

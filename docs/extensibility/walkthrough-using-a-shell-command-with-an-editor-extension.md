@@ -1,5 +1,6 @@
 ---
 title: Bir kabuk komutunu düzenleyici uzantısıyla kullanma
+description: Bir menü komutunu çağırarak düzenleyicide bir metin görünümüne kenarlığı eklemeyi öğrenin. VSPackage 'da, düzenleyiciye menü komutları gibi özellikler ekleyebilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -11,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 33886b170a8e0138a199f5d7cb51467875c8c3c5
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 38d855ebe34c54d06159ecd958a8b1d31ae0131f
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037477"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877825"
 ---
 # <a name="walkthrough-use-a-shell-command-with-an-editor-extension"></a>İzlenecek yol: Düzenleyici uzantısı ile bir Shell komutu kullanma
 VSPackage 'da, düzenleyiciye menü komutları gibi özellikler ekleyebilirsiniz. Bu izlenecek yol, bir menü komutunu çağırarak düzenleyicide bir metin görünümüne nasıl kenarlığı ekleneceğini gösterir.
@@ -29,7 +30,7 @@ VSPackage 'da, düzenleyiciye menü komutları gibi özellikler ekleyebilirsiniz
 ## <a name="create-an-extension-with-a-menu-command"></a>Menü komutuyla uzantı oluşturma
  **Araçlar** menüsüne **Add kenarlığı** adlı bir menü komutu koyan VSPackage oluşturun.
 
-1. Adlı bir C# VSıX projesi oluşturun `MenuCommandTest` ve özel bir komut öğesi şablon adı **AddAdornment**ekleyin. Daha fazla bilgi için bkz. [bir menü komutuyla uzantı oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md).
+1. Adlı bir C# VSıX projesi oluşturun `MenuCommandTest` ve özel bir komut öğesi şablon adı **AddAdornment** ekleyin. Daha fazla bilgi için bkz. [bir menü komutuyla uzantı oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md).
 
 2. MenuCommandTest adlı bir çözüm açılır. MenuCommandTestPackage dosyası, menü komutunu oluşturan ve **Araçlar** menüsüne yerleştiren koda sahiptir. Bu noktada, komut yalnızca bir ileti kutusunun görünmesine neden olur. Sonraki adımlarda, kenarlığı yorumunu görüntülemek için bunun nasıl değiştirileceği gösterilmektedir.
 
@@ -39,7 +40,7 @@ VSPackage 'da, düzenleyiciye menü komutları gibi özellikler ekleyebilirsiniz
 
 ## <a name="add-a-mef-extension-to-the-command-extension"></a>Komut uzantısına bir MEF uzantısı ekleyin
 
-1. **Çözüm Gezgini**, çözüm düğümüne sağ tıklayın, **Ekle**' ye tıklayın ve ardından **Yeni proje**' ye tıklayın. **Yeni Proje Ekle** iletişim kutusunda, **Visual C#**, sonra **VSIX projesi**altında **genişletilebilirlik** ' e tıklayın. Projeyi adlandırın `CommentAdornmentTest` .
+1. **Çözüm Gezgini**, çözüm düğümüne sağ tıklayın, **Ekle**' ye tıklayın ve ardından **Yeni proje**' ye tıklayın. **Yeni Proje Ekle** iletişim kutusunda, **Visual C#**, sonra **VSIX projesi** altında **genişletilebilirlik** ' e tıklayın. Projeyi adlandırın `CommentAdornmentTest` .
 
 2. Bu proje, tanımlayıcı adlı VSPackage derlemesi ile etkileşime gireceğinden, derlemeyi imzalamanız gerekir. VSPackage derlemesi için önceden oluşturulmuş olan anahtar dosyasını yeniden kullanabilirsiniz.
 
@@ -47,7 +48,7 @@ VSPackage 'da, düzenleyiciye menü komutları gibi özellikler ekleyebilirsiniz
 
     2. **Derlemeyi imzala**' yı seçin.
 
-    3. **Tanımlayıcı ad anahtar dosyası seçin**altında, MenuCommandTest derlemesi Için oluşturulan *Key. snk* dosyasını seçin.
+    3. **Tanımlayıcı ad anahtar dosyası seçin** altında, MenuCommandTest derlemesi Için oluşturulan *Key. snk* dosyasını seçin.
 
 ## <a name="refer-to-the-mef-extension-in-the-vspackage-project"></a>VSPackage projesindeki MEF uzantısına bakın
  VSPackage 'a bir MEF bileşeni ekliyorsanız, bildirimde her iki varlık türünü de belirtmeniz gerekir.
@@ -61,9 +62,9 @@ VSPackage 'da, düzenleyiciye menü komutları gibi özellikler ekleyebilirsiniz
 
 2. **Varlıklar** sekmesinde **Yeni**' ye tıklayın.
 
-3. **Tür** listesinde, **Microsoft. VisualStudio. MefComponent**öğesini seçin.
+3. **Tür** listesinde, **Microsoft. VisualStudio. MefComponent** öğesini seçin.
 
-4. **Kaynak** listesinde, **Geçerli çözümde bir proje**seçin.
+4. **Kaynak** listesinde, **Geçerli çözümde bir proje** seçin.
 
 5. **Proje** listesinde **Yorumtadornmenttest**' i seçin.
 
@@ -71,7 +72,7 @@ VSPackage 'da, düzenleyiciye menü komutları gibi özellikler ekleyebilirsiniz
 
 7. MenuCommandTest projesinin Yorumtadornmenttest projesine bir başvurusu olduğundan emin olun.
 
-8. Yorumtadornmenttest projesinde, projeyi derleme oluşturacak şekilde ayarlayın. **Çözüm Gezgini**, projeyi seçin ve **derleme çıkışını OutputDirectory 'ye Kopyala** özelliğinin **Özellikler** penceresine bakın ve bunu **true**olarak ayarlayın.
+8. Yorumtadornmenttest projesinde, projeyi derleme oluşturacak şekilde ayarlayın. **Çözüm Gezgini**, projeyi seçin ve **derleme çıkışını OutputDirectory 'ye Kopyala** özelliğinin **Özellikler** penceresine bakın ve bunu **true** olarak ayarlayın.
 
 ## <a name="define-a-comment-adornment"></a>Yorum kenarlığı tanımlama
  Kenarlığı yorumu, <xref:Microsoft.VisualStudio.Text.ITrackingSpan> Seçilen metni izleyen bir, ve yazarı temsil eden bazı dizeleri ve metin açıklamasını içerir.
@@ -109,7 +110,7 @@ VSPackage 'da, düzenleyiciye menü komutları gibi özellikler ekleyebilirsiniz
 4. Dosya adında bir sınıf içermelidir `CommentAdornment` .
 
     ```csharp
-    internal class CommentAdornment
+    internal class CommentAdornment
     ```
 
 5. `CommentAdornment`, Yazarı ve açıklaması için sınıfına üç alan ekleyin <xref:Microsoft.VisualStudio.Text.ITrackingSpan> .
@@ -162,9 +163,9 @@ VSPackage 'da, düzenleyiciye menü komutları gibi özellikler ekleyebilirsiniz
     ```csharp
     private Geometry textGeometry;
     private Grid commentGrid;
-    private static Brush brush;
-    private static Pen solidPen;
-    private static Pen dashPen;
+    private static Brush brush;
+    private static Pen solidPen;
+    private static Pen dashPen;
     ```
 
 5. Kenarlığı yorumunu tanımlayan ve ilgili metni ekleyen bir Oluşturucu ekleyin.
@@ -239,7 +240,7 @@ VSPackage 'da, düzenleyiciye menü komutları gibi özellikler ekleyebilirsiniz
 6. Ayrıca <xref:System.Windows.Controls.Panel.OnRender%2A> , kenarlığı çizen bir olay işleyicisi de uygular.
 
     ```csharp
-    protected override void OnRender(DrawingContext dc)
+    protected override void OnRender(DrawingContext dc)
     {
         base.OnRender(dc);
         if (this.textGeometry != null)
@@ -276,7 +277,7 @@ VSPackage 'da, düzenleyiciye menü komutları gibi özellikler ekleyebilirsiniz
 4. <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener.TextViewCreated%2A>Yöntemini, ' nin statik olayını çağıracak şekilde uygulayın `Create()` `CommentAdornmentManager` .
 
     ```csharp
-    public void TextViewCreated(IWpfTextView textView)
+    public void TextViewCreated(IWpfTextView textView)
     {
         CommentAdornmentManager.Create(textView);
     }
@@ -285,16 +286,16 @@ VSPackage 'da, düzenleyiciye menü komutları gibi özellikler ekleyebilirsiniz
 5. Komutu yürütmek için kullanabileceğiniz bir yöntem ekleyin.
 
     ```csharp
-    static public void Execute(IWpfTextViewHost host)
+    static public void Execute(IWpfTextViewHost host)
     {
         IWpfTextView view = host.TextView;
-        //Add a comment on the selected text. 
+        //Add a comment on the selected text. 
         if (!view.Selection.IsEmpty)
         {
             //Get the provider for the comment adornments in the property bag of the view.
             CommentAdornmentProvider provider = view.Properties.GetProperty<CommentAdornmentProvider>(typeof(CommentAdornmentProvider));
 
-            //Add some arbitrary author and comment text. 
+            //Add some arbitrary author and comment text. 
             string author = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
             string comment = "Four score....";
 
@@ -356,7 +357,7 @@ VSPackage 'da, düzenleyiciye menü komutları gibi özellikler ekleyebilirsiniz
     private CommentAdornmentProvider(ITextBuffer buffer)
     {
         this.buffer = buffer;
-        //listen to the Changed event so we can react to deletions. 
+        //listen to the Changed event so we can react to deletions. 
         this.buffer.Changed += OnBufferChanged;
     }
 
@@ -365,9 +366,9 @@ VSPackage 'da, düzenleyiciye menü komutları gibi özellikler ekleyebilirsiniz
 6. Yöntemini ekleyin `Create()` .
 
     ```csharp
-    public static CommentAdornmentProvider Create(IWpfTextView view)
+    public static CommentAdornmentProvider Create(IWpfTextView view)
     {
-        return view.Properties.GetOrCreateSingletonProperty<CommentAdornmentProvider>(delegate { return new CommentAdornmentProvider(view.TextBuffer); });
+        return view.Properties.GetOrCreateSingletonProperty<CommentAdornmentProvider>(delegate { return new CommentAdornmentProvider(view.TextBuffer); });
     }
 
     ```
@@ -375,11 +376,11 @@ VSPackage 'da, düzenleyiciye menü komutları gibi özellikler ekleyebilirsiniz
 7. Yöntemini ekleyin `Detach()` .
 
     ```csharp
-    public void Detach()
+    public void Detach()
     {
         if (this.buffer != null)
         {
-            //remove the Changed listener 
+            //remove the Changed listener 
             this.buffer.Changed -= OnBufferChanged;
             this.buffer = null;
         }
@@ -394,25 +395,25 @@ VSPackage 'da, düzenleyiciye menü komutları gibi özellikler ekleyebilirsiniz
 9. Bir olay için bildirim ekleyin `CommentsChanged` .
 
     ```csharp
-    public event EventHandler<CommentsChangedEventArgs> CommentsChanged;
+    public event EventHandler<CommentsChangedEventArgs> CommentsChanged;
     ```
 
 10. `Add()`Kenarlığı eklemek için bir yöntem oluşturun.
 
     ```csharp
-    public void Add(SnapshotSpan span, string author, string text)
+    public void Add(SnapshotSpan span, string author, string text)
     {
         if (span.Length == 0)
-            throw new ArgumentOutOfRangeException("span");
+            throw new ArgumentOutOfRangeException("span");
         if (author == null)
-            throw new ArgumentNullException("author");
+            throw new ArgumentNullException("author");
         if (text == null)
-            throw new ArgumentNullException("text");
+            throw new ArgumentNullException("text");
 
         //Create a comment adornment given the span, author and text.
         CommentAdornment comment = new CommentAdornment(span, author, text);
 
-        //Add it to the list of comments. 
+        //Add it to the list of comments. 
         this.comments.Add(comment);
 
         //Raise the changed event.
@@ -426,19 +427,19 @@ VSPackage 'da, düzenleyiciye menü komutları gibi özellikler ekleyebilirsiniz
 11. Bir `RemoveComments()` Yöntem ekleyin.
 
     ```csharp
-    public void RemoveComments(SnapshotSpan span)
+    public void RemoveComments(SnapshotSpan span)
     {
         EventHandler<CommentsChangedEventArgs> commentsChanged = this.CommentsChanged;
 
         //Get a list of all the comments that are being kept
         IList<CommentAdornment> keptComments = new List<CommentAdornment>(this.comments.Count);
 
-        foreach (CommentAdornment comment in this.comments)
+        foreach (CommentAdornment comment in this.comments)
         {
-            //find out if the given span overlaps with the comment text span. If two spans are adjacent, they do not overlap. To consider adjacent spans, use IntersectsWith. 
+            //find out if the given span overlaps with the comment text span. If two spans are adjacent, they do not overlap. To consider adjacent spans, use IntersectsWith. 
             if (comment.Span.GetSpan(span.Snapshot).OverlapsWith(span))
             {
-                //Raise the change event to delete this comment. 
+                //Raise the change event to delete this comment. 
                 if (commentsChanged != null)
                     commentsChanged(this, new CommentsChangedEventArgs(null, comment));
             }
@@ -456,24 +457,24 @@ VSPackage 'da, düzenleyiciye menü komutları gibi özellikler ekleyebilirsiniz
     public Collection<CommentAdornment> GetComments(SnapshotSpan span)
     {
         IList<CommentAdornment> overlappingComments = new List<CommentAdornment>();
-        foreach (CommentAdornment comment in this.comments)
+        foreach (CommentAdornment comment in this.comments)
         {
             if (comment.Span.GetSpan(span.Snapshot).OverlapsWith(span))
                 overlappingComments.Add(comment);
         }
 
-        return new Collection<CommentAdornment>(overlappingComments);
+        return new Collection<CommentAdornment>(overlappingComments);
     }
     ```
 
 13. Adlı bir sınıfı `CommentsChangedEventArgs` aşağıdaki şekilde ekleyin.
 
     ```csharp
-    internal class CommentsChangedEventArgs : EventArgs
+    internal class CommentsChangedEventArgs : EventArgs
     {
-        public readonly CommentAdornment CommentAdded;
+        public readonly CommentAdornment CommentAdded;
 
-        public readonly CommentAdornment CommentRemoved;
+        public readonly CommentAdornment CommentRemoved;
 
         public CommentsChangedEventArgs(CommentAdornment added, CommentAdornment removed)
         {
@@ -510,9 +511,9 @@ VSPackage 'da, düzenleyiciye menü komutları gibi özellikler ekleyebilirsiniz
 4. Bazı özel alanlar ekleyin.
 
     ```csharp
-    private readonly IWpfTextView view;
-    private readonly IAdornmentLayer layer;
-    private readonly CommentAdornmentProvider provider;
+    private readonly IWpfTextView view;
+    private readonly IAdornmentLayer layer;
+    private readonly CommentAdornmentProvider provider;
     ```
 
 5. Yöneticiyi <xref:Microsoft.VisualStudio.Text.Editor.ITextView.LayoutChanged> ve <xref:Microsoft.VisualStudio.Text.Editor.ITextView.Closed> olayları ve ayrıca olayına abone olan bir Oluşturucu ekleyin `CommentsChanged` . Yönetici statik yöntem tarafından örneklendiği için Oluşturucu özeldir `Create()` .
@@ -534,22 +535,22 @@ VSPackage 'da, düzenleyiciye menü komutları gibi özellikler ekleyebilirsiniz
 6. `Create()`Sağlayıcıyı alan veya gerekirse bir sağlayıcı oluşturan yöntemi ekleyin.
 
     ```csharp
-    public static CommentAdornmentManager Create(IWpfTextView view)
+    public static CommentAdornmentManager Create(IWpfTextView view)
     {
-        return view.Properties.GetOrCreateSingletonProperty<CommentAdornmentManager>(delegate { return new CommentAdornmentManager(view); });
+        return view.Properties.GetOrCreateSingletonProperty<CommentAdornmentManager>(delegate { return new CommentAdornmentManager(view); });
     }
     ```
 
 7. İşleyiciyi ekleyin `CommentsChanged` .
 
     ```csharp
-    private void OnCommentsChanged(object sender, CommentsChangedEventArgs e)
+    private void OnCommentsChanged(object sender, CommentsChangedEventArgs e)
     {
-        //Remove the comment (when the adornment was added, the comment adornment was used as the tag). 
+        //Remove the comment (when the adornment was added, the comment adornment was used as the tag). 
         if (e.CommentRemoved != null)
             this.layer.RemoveAdornmentsByTag(e.CommentRemoved);
 
-        //Draw the newly added comment (this will appear immediately: the view does not need to do a layout). 
+        //Draw the newly added comment (this will appear immediately: the view does not need to do a layout). 
         if (e.CommentAdded != null)
             this.DrawComment(e.CommentAdded);
     }
@@ -558,7 +559,7 @@ VSPackage 'da, düzenleyiciye menü komutları gibi özellikler ekleyebilirsiniz
 8. İşleyiciyi ekleyin <xref:Microsoft.VisualStudio.Text.Editor.ITextView.Closed> .
 
     ```csharp
-    private void OnClosed(object sender, EventArgs e)
+    private void OnClosed(object sender, EventArgs e)
     {
         this.provider.Detach();
         this.view.LayoutChanged -= OnLayoutChanged;
@@ -569,19 +570,19 @@ VSPackage 'da, düzenleyiciye menü komutları gibi özellikler ekleyebilirsiniz
 9. İşleyiciyi ekleyin <xref:Microsoft.VisualStudio.Text.Editor.ITextView.LayoutChanged> .
 
     ```csharp
-    private void OnLayoutChanged(object sender, TextViewLayoutChangedEventArgs e)
+    private void OnLayoutChanged(object sender, TextViewLayoutChangedEventArgs e)
     {
         //Get all of the comments that intersect any of the new or reformatted lines of text.
         List<CommentAdornment> newComments = new List<CommentAdornment>();
 
-        //The event args contain a list of modified lines and a NormalizedSpanCollection of the spans of the modified lines.  
-        //Use the latter to find the comments that intersect the new or reformatted lines of text. 
+        //The event args contain a list of modified lines and a NormalizedSpanCollection of the spans of the modified lines.  
+        //Use the latter to find the comments that intersect the new or reformatted lines of text. 
         foreach (Span span in e.NewOrReformattedSpans)
         {
             newComments.AddRange(this.provider.GetComments(new SnapshotSpan(this.view.TextSnapshot, span)));
         }
 
-        //It is possible to get duplicates in this list if a comment spanned 3 lines, and the first and last lines were modified but the middle line was not. 
+        //It is possible to get duplicates in this list if a comment spanned 3 lines, and the first and last lines were modified but the middle line was not. 
         //Sort the list and skip duplicates.
         newComments.Sort(delegate(CommentAdornment a, CommentAdornment b) { return a.GetHashCode().CompareTo(b.GetHashCode()); });
 

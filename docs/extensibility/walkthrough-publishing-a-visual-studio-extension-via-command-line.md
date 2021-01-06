@@ -1,5 +1,7 @@
 ---
 title: Uzantı komut satırını kullanarak Yayımla
+description: Visual Studio Market bir uzantıyı kullanarak, geliştiricilerin yeni ve güncelleştirilmiş uzantılara gözatmasına olanak tanıyan bir uzantı yayımlamak için komut satırını nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 07/12/2018
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5108f4afa382c00376424432d2086f0494e34a03
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c4132d878ff1ec7689be890446a1849577fafd30
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904679"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877929"
 ---
 # <a name="walkthrough-publishing-a-visual-studio-extension-via-command-line"></a>İzlenecek yol: komut satırı aracılığıyla Visual Studio uzantısı yayımlama
 
@@ -30,7 +32,7 @@ VsixPublisher.exe, Market 'e Visual Studio uzantıları yayımlamaya yönelik ko
 
 Market 'e bir uzantı yayımlar. Uzantı bir VSIX, bir exe/MSI dosyası ya da bir bağlantı olabilir. Aynı sürüme sahip uzantı zaten varsa, uzantının üzerine yazar. Uzantı yoksa, yeni bir uzantı oluşturacaktır.
 
-|Komut seçenekleri |Description |
+|Komut seçenekleri |Açıklama |
 |---------|---------|
 |Yük (gerekli) | Yayımlanacak yükün yolu veya "daha fazla bilgi URL 'SI" olarak kullanılacak bir bağlantı. |
 |publishManifest (gerekli) | Kullanılacak yayımlama bildirimi dosyasının yolu. |
@@ -45,7 +47,7 @@ VsixPublisher.exe publish -payload "{path to vsix}" -publishManifest "{path to v
 
 Market 'te bir Yayımcı oluşturur. Ayrıca, gelecekteki eylemler için yayımcıyı makineye de kaydeder (örneğin, bir uzantıyı silme/yayımlama).
 
-|Komut seçenekleri |Description |
+|Komut seçenekleri |Açıklama |
 |---------|---------|
 |displayName (gerekli) | Yayımcının görünen adı. |
 |publisherName (gerekli) | Yayımcının adı (örneğin, tanımlayıcı). |
@@ -61,7 +63,7 @@ VsixPublisher.exe createPublisher -publisherName "{Publisher Name}" -displayName
 
 Market 'teki bir yayımcıyı siler.
 
-|Komut seçenekleri |Description |
+|Komut seçenekleri |Açıklama |
 |---------|---------|
 |publisherName (gerekli) | Yayımcının adı (örneğin, tanımlayıcı). |
 |personalAccessToken (gerekli) | Yayımcının kimliğini doğrulamak için kullanılan kişisel erişim belirteci. |
@@ -74,7 +76,7 @@ VsixPublisher.exe deletePublisher -publisherName "{Publisher Name}" -personalAcc
 
 Marketten bir uzantıyı siler.
 
-|Komut seçenekleri |Description |
+|Komut seçenekleri |Açıklama |
 |---------|---------|
 |extensionName (gerekli) | Silinecek uzantının adı. |
 |publisherName (gerekli) | Yayımcının adı (örneğin, tanımlayıcı). |
@@ -88,7 +90,7 @@ VsixPublisher.exe deleteExtension -extensionName "{Extension Name}" -publisherNa
 
 Bir yayımcıyı makineye kaydeder.
 
-|Komut seçenekleri |Description |
+|Komut seçenekleri |Açıklama |
 |---------|---------|
 |personalAccessToken (gerekli | Yayımcının kimliğini doğrulamak için kullanılan kişisel erişim belirteci. |
 |publisherName (gerekli) | Yayımcının adı (örneğin, tanımlayıcı). |
@@ -102,7 +104,7 @@ VsixPublisher.exe login -personalAccessToken "{Personal Access Token}" -publishe
 
 Makinenin bir yayımcısını günlüğe kaydeder.
 
-|Komut seçenekleri |Description |
+|Komut seçenekleri |Açıklama |
 |---------|---------|
 |publisherName (gerekli) | Yayımcının adı (örneğin, tanımlayıcı). |
 |ıgnoremissingpublisher | Belirtilen yayımcı zaten oturum açmadıysa aracın hata olmaması gerektiğini belirtir. |
@@ -266,7 +268,7 @@ Artık uzantı yayımlandığına göre, Visual Studio 'Ya yükleyip test edin.
 
 2. **Çevrimiçi** ' e tıklayın ve ardından TestPublish için arama yapın.
 
-3. **İndir**'e tıklayın. Uzantı daha sonra yüklenmek üzere zamanlanır.
+3. **İndir**’e tıklayın. Uzantı daha sonra yüklenmek üzere zamanlanır.
 
 4. Yüklemeyi gerçekleştirmek için Visual Studio 'nun tüm örneklerini kapatın.
 

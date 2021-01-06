@@ -1,5 +1,7 @@
 ---
 title: 'İzlenecek yol: ampul önerilerini görüntüleme | Microsoft Docs'
+description: Visual Studio Düzenleyicisi 'nde geçerli sözcükte görüntülenen ve bu izlenecek yolu kullanarak önerilen iki eyleme sahip bir ampul oluşturmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 99e5566d-450e-4660-9bca-454e1c056a02
@@ -8,17 +10,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 86412b82b291ee395b35d654d3cde6d326e956f0
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: 8d8d498c1d9a5e5142672bcd561ac0749bbf8d75
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89508957"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877968"
 ---
 # <a name="walkthrough-display-light-bulb-suggestions"></a>İzlenecek yol: ampul önerilerini görüntüleme
 Hafif bulbs, Visual Studio düzenleyicisinde, yerleşik kod Çözümleyicileri veya kod yeniden düzenleme tarafından tanımlanan sorunlara yönelik düzeltmeler gibi bir dizi eylemi görüntüleyecek şekilde genişlettiğinde simgeler.
 
- Visual C# ve Visual Basic düzenleyicilerinde Ayrıca, açık bulbs 'leri otomatik olarak görüntüleyen eylemlerle kendi kod Çözümleyicileri yazmak ve paketlemek için .NET Compiler Platform ("Roslyn") de kullanabilirsiniz. Daha fazla bilgi için bkz.
+ Visual C# ve Visual Basic düzenleyicilerinde Ayrıca, açık bulbs 'leri otomatik olarak görüntüleyen eylemlerle kendi kod Çözümleyicileri yazmak ve paketlemek için .NET Compiler Platform ("Roslyn") de kullanabilirsiniz. Daha fazla bilgi için bkz:
 
 - [Nasıl yapılır: C# tanısı ve kod onarımı yazma](https://github.com/dotnet/roslyn/blob/master/docs/wiki/How-To-Write-a-C%23-Analyzer-and-Code-Fix.md)
 
@@ -51,7 +53,7 @@ Hafif bulbs, Visual Studio düzenleyicisinde, yerleşik kod Çözümleyicileri v
 
      *Microsoft. VisualStudio. Language. IntelliSense*
 
-5. Yeni bir sınıf dosyası ekleyin ve onu **Lightbulbtest**olarak adlandırın.
+5. Yeni bir sınıf dosyası ekleyin ve onu **Lightbulbtest** olarak adlandırın.
 
 6. Aşağıdaki using yönergelerini ekleyin:
 
@@ -222,8 +224,8 @@ Hafif bulbs, Visual Studio düzenleyicisinde, yerleşik kod Çözümleyicileri v
 2. İlk adlandırılmış `UpperCaseSuggestedAction` ve ikinci adlı iki sınıf oluşturun `LowerCaseSuggestedAction` . Her iki sınıf de uygular <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction> .
 
     ```csharp
-    internal class UpperCaseSuggestedAction : ISuggestedAction
-    internal class LowerCaseSuggestedAction : ISuggestedAction
+    internal class UpperCaseSuggestedAction : ISuggestedAction
+    internal class LowerCaseSuggestedAction : ISuggestedAction
     ```
 
      Her iki sınıf de tek bir çağrı <xref:System.String.ToUpper%2A> ve diğer çağrılar dışında benzer <xref:System.String.ToLower%2A> . Aşağıdaki adımlar yalnızca büyük harfli eylem sınıfını kapsar, ancak her iki sınıfı da uygulamanız gerekir. Büyük harfli eylemi, küçük harfli eylemi uygulamak için bir model olarak uygulama adımlarını kullanın.
@@ -243,8 +245,8 @@ Hafif bulbs, Visual Studio düzenleyicisinde, yerleşik kod Çözümleyicileri v
 
     ```csharp
     private ITrackingSpan m_span;
-    private string m_upper;
-    private string m_display;
+    private string m_upper;
+    private string m_display;
     private ITextSnapshot m_snapshot;
     ```
 
@@ -288,7 +290,7 @@ Hafif bulbs, Visual Studio düzenleyicisinde, yerleşik kod Çözümleyicileri v
     {
         get { return false; }
     }
-    public string DisplayText
+    public string DisplayText
     {
         get { return m_display; }
     }
@@ -319,7 +321,7 @@ Hafif bulbs, Visual Studio düzenleyicisinde, yerleşik kod Çözümleyicileri v
 9. <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction.Invoke%2A>Yayılma alanındaki metni büyük harfli eşdeğerleriyle değiştirerek yöntemini uygulayın.
 
     ```csharp
-    public void Invoke(CancellationToken cancellationToken)
+    public void Invoke(CancellationToken cancellationToken)
     {
         m_span.TextBuffer.Replace(m_span.GetSpan(m_snapshot), m_upper);
     }

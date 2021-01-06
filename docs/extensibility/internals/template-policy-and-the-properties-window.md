@@ -1,5 +1,7 @@
 ---
 title: Şablon Ilkesi ve Özellikler penceresi | Microsoft Docs
+description: Özellikler için varsayılan değerleri ayarlamak için şablon İlkesi kullanma, özellikleri gizleme ve Özellikler penceresi özellikler ekleme hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 08ed6f416441d06767661e63b5e32454dbe07f93
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 105a90699689ff6eab6ea5bdfa3d4037e700ecb5
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80704660"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877721"
 ---
 # <a name="template-policy-and-the-properties-window"></a>Şablon İlkesi ve Özellikler Penceresi
 Bir proje kurumsal şablon projesinde yer aldığı zaman, bu kurumsal şablon proje ilkeyi uygulayabilir. Şablon İlkesi, özellikler için varsayılan değerleri ayarlamak, özellikleri gizlemek, özellik eklemek vb. için kullanılabilen bir kısıtlayan sistem haline gelir.

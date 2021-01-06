@@ -1,6 +1,7 @@
 ---
 title: Hata ayıklayıcıda değişkenler için belleği görüntüleme | Microsoft Docs
-ms.custom: ''
+description: Uygulamanızın kullandığı bellek alanını görmek için hata ayıklama sırasında bellek pencerelerini nasıl kullanacağınızı öğrenin. Diğer Windows, değişkenleri ve bellekte bulundukları yerleri gösterir.
+ms.custom: SEO-VS-2020
 ms.date: 10/04/2018
 ms.topic: how-to
 f1_keywords:
@@ -24,18 +25,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 51070e06f684c2e873ded76ec8797ed7587745ff
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0c39024e32c899310b88c1b0583d5b292b063937
+ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85348333"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97903135"
 ---
 # <a name="use-the-memory-windows-in-the-visual-studio-debugger-c-c-visual-basic-f"></a>Visual Studio hata ayıklayıcısında bellek pencerelerini kullanma (C#, C++, Visual Basic, F #)
 
 Hata ayıklama sırasında, **bellek** penceresi, uygulamanızın kullandığı bellek alanını gösterir.
 
-**İzleme**, **oto**'ler, **Yereller**ve **hızlı izleme** iletişim kutusu gibi hata ayıklayıcı pencereleri, bellekteki belirli konumlarda depolanan değişkenleri gösterir. **Bellek** penceresi size genel resmi gösterir. Bellek görünümü, diğer pencerelerin iyi şekilde göstermeyecek büyük veri parçalarını (örneğin, arabellek veya büyük dizeler) incelemek için uygundur.
+**İzleme**, **oto**'ler, **Yereller** ve **hızlı izleme** iletişim kutusu gibi hata ayıklayıcı pencereleri, bellekteki belirli konumlarda depolanan değişkenleri gösterir. **Bellek** penceresi size genel resmi gösterir. Bellek görünümü, diğer pencerelerin iyi şekilde göstermeyecek büyük veri parçalarını (örneğin, arabellek veya büyük dizeler) incelemek için uygundur.
 
 **Bellek** penceresi, verileri görüntüleme ile sınırlı değildir. Veri, kod ve atanmamış belleğin rastgele bitleri dahil olmak üzere bellek alanında her şeyi görüntüler.
 
@@ -46,15 +47,15 @@ Hata ayıklama sırasında, **bellek** penceresi, uygulamanızın kullandığı 
 Diğer hata ayıklayıcı pencereleri gibi, **bellek** pencereleri yalnızca hata ayıklama oturumu sırasında kullanılabilir.
 
 >[!IMPORTANT]
->**Bellek** pencerelerini etkinleştirmek için, **Tools**genel hata ayıklama > araç seçeneklerinde (veya hata ayıklama seçeneklerinde) **Adres düzeyinde hata ayıklamayı etkinleştir** seçeneğinin belirlenmiş olması gerekir  >  **Options** **Debug**  >  **Options** **Debugging**  >  **General**.
+>**Bellek** pencerelerini etkinleştirmek için, genel hata ayıklama > araç seçeneklerinde (veya hata ayıklama seçeneklerinde) **Adres düzeyinde hata ayıklamayı etkinleştir** seçeneğinin belirlenmiş olması gerekir  >     >     >  .
 
 **Bellek penceresi açmak için**
 
-1. **Enable address-level debugging** **Tools**  >  **Options** **Debug**  >  **Options** **Hata ayıklama**  >  **genel**> araç seçeneklerinde (veya hata ayıklama seçeneklerinde) Adres düzeyinde hata ayıklamayı etkinleştir ' in seçildiğinden emin olun.
+1.    >     >   **Hata ayıklama**  >  **genel**> araç seçeneklerinde (veya hata ayıklama seçeneklerinde) Adres düzeyinde hata ayıklamayı etkinleştir ' in seçildiğinden emin olun.
 
-1. Yeşil oku seçerek, **F5**tuşuna basarak **veya hata ayıklama**  >  **başlatma hata ayıklamayı**seçerek hata ayıklamayı başlatın.
+1. Yeşil oku seçerek, **F5** tuşuna basarak **veya hata ayıklama**  >  **başlatma hata ayıklamayı** seçerek hata ayıklamayı başlatın.
 
-2. Windows **belleğini hata ayıkla**altında  >  **Windows**  >  **Memory** **bellek 1**, **bellek 2**, **bellek 3**veya **bellek 4**' ü seçin. (Bazı sürümleri [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] yalnızca bir **bellek** penceresi sunar.)
+2. Windows **belleğini hata ayıkla** altında  >    >   **bellek 1**, **bellek 2**, **bellek 3** veya **bellek 4**' ü seçin. (Bazı sürümleri [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] yalnızca bir **bellek** penceresi sunar.)
 
 ## <a name="move-around-in-the-memory-window"></a>Bellek penceresinde gezinme
 
@@ -76,7 +77,7 @@ Varsayılan olarak, **bellek** penceresi **Adres** ifadelerini, uygulama çalı�
 
 **Adres alanına girerek bir bellek konumuna geçmek için:**
 
-- **Adres alanına adres** veya ifade yazın veya yapıştırın, **ENTER**tuşuna basın veya **Adres** alanındaki açılır listeden seçin. **Bellek** penceresi, bu adresi en üstte görüntüleyecek şekilde ayarlar.
+- **Adres alanına adres** veya ifade yazın veya yapıştırın, **ENTER** tuşuna basın veya **Adres** alanındaki açılır listeden seçin. **Bellek** penceresi, bu adresi en üstte görüntüleyecek şekilde ayarlar.
 
 ## <a name="customize-the-memory-window"></a>Bellek penceresini özelleştirme
 
@@ -115,7 +116,7 @@ Yerel kod uygulamalarında, YAZMAÇ adlarını canlı ifadeler olarak kullanabil
 
 2.  **Enter** tuşuna basın.
 
-   **Adım**gibi bir hata ayıklama komutu kullandığınızda, **Adres** alanında ve **bellek** penceresinin en üstünde görünen bellek adresi, işaretçi değiştiğinde otomatik olarak değişir.
+   **Adım** gibi bir hata ayıklama komutu kullandığınızda, **Adres** alanında ve **bellek** penceresinin en üstünde görünen bellek adresi, işaretçi değiştiğinde otomatik olarak değişir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Hata ayıklayıcıda verileri görüntüleme](../debugger/viewing-data-in-the-debugger.md)

@@ -1,5 +1,7 @@
 ---
 title: 'İzlenecek yol: eşleşen ayraçları görüntüleme | Microsoft Docs'
+description: Bu kılavuzu kullanarak, metin içeriği türüne parantez ile eşleşen Etiketler uygulayarak bir dilin bağlamında küme ayraçları tanımlama hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 65a0bc2c53d5d6e970b4aaa956170bc06c24e7c9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ce40f5673a8aba4ab3f7714a3aafdc3de4697cc4
+ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904848"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97877955"
 ---
 # <a name="walkthrough-display-matching-braces"></a>İzlenecek yol: eşleşen ayraçları görüntüle
 Eşleştirmek istediğiniz küme ayraçlarını tanımlayarak, parantez eşleştirme ile eşleşen dil tabanlı özellikleri uygulayın ve şapka işareti ayraçlarından birinde olduğunda, eşleşen ayraçların içine bir metin işaretçisi etiketi ekleyin. Bir dilin bağlamında küme ayraçları tanımlayabilir, kendi dosya adı uzantınızı ve içerik türünü tanımlayabilir ve etiketleri yalnızca o türe uygulayabilir ya da etiketleri varolan bir içerik türüne (örneğin "metin") uygulayabilirsiniz. Aşağıdaki izlenecek yol, "metin" içerik türüne parantez ile eşleşen etiketlerin nasıl uygulanacağını gösterir.

@@ -1,5 +1,7 @@
 ---
 title: Işlem özelliklerini görüntüle | Microsoft Docs
+description: Süreçler görünümü sisteminizdeki tüm etkin işlemlerin ağacını görüntüler. Işlemler görünümünde görüntülenen bir işlemin özelliklerini görüntülemeyi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,19 +12,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6dee3bf419470a41ce31b1f1a1ea9164acdbe5bd
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 731036cb59891f9dd9093431200a1152ed35ff2a
+ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852341"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97903343"
 ---
 # <a name="how-to-display-process-properties"></a>Nasıl yapılır: İşlem Özelliklerini Görüntüleme
 [Işlemler görünümünde](../debugger/processes-view.md)listelenen bir işlem hakkında daha fazla bilgi edinmek Için [Işlem özellikleri iletişim kutusunu](../debugger/process-properties-dialog-box.md)kullanın.
 
 ### <a name="to-open-a-process-properties-dialog-box"></a>Işlem özellikleri iletişim kutusunu açmak için
 
-1. **İşlemler görünümünde**görüntülenden bir işlem seçin.
+1. **İşlemler görünümünde** görüntülenden bir işlem seçin.
 
 2. **Görünüm** menüsünde **Özellikler**' i seçin.
 

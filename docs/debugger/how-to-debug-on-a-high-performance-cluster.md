@@ -1,5 +1,7 @@
 ---
-title: Yüksek performanslı bir kümede hata ayıklama | Microsoft Docs
+title: High-Performance kümesinde hata ayıklama | Microsoft Docs
+description: Yüksek performanslı bir kümede çok işlemli bir programda hata ayıklamanın ne olduğunu öğrenin. İki pencere özellikle yararlıdır ve özel teknikler vardır.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -16,14 +18,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f5f33fe5fd556830d0276f3e7cbfef3731dfe7db
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 6b19f1d919095f30e4408056e49847c3c9ba5671
+ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852458"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97903133"
 ---
-# <a name="how-to-debug-on-a-high-performance-cluster-c-visual-basic-c"></a>Nasıl yapılır: yüksek performanslı kümede hata ayıklama (C#, Visual Basic, C++)
+# <a name="how-to-debug-on-a-high-performance-cluster-c-visual-basic-c"></a>Nasıl yapılır: High-Performance kümesinde hata ayıklama (C#, Visual Basic, C++)
 
 Yüksek performanslı bir kümede çok İşlemsiz bir programın hata ayıklaması, uzak bir bilgisayardaki sıradan bir programın hata ayıklamasına benzer. Ancak bazı ek hususlar vardır. Genel uzaktan kurulum gereksinimleri için bkz. [Uzaktan hata ayıklama](../debugger/remote-debugging.md).
 
@@ -39,7 +41,7 @@ Yüksek performanslı bir kümede çok İşlemsiz bir programın hata ayıklamas
 
 1. Kaynak penceresinde, **ayrıştırma** penceresinde, **çağrı yığını** penceresinde veya **kesme noktaları** penceresinde bir kesme noktası glifi ' ne sağ tıklayın.
 
-2. Kısayol menüsünde **filtre**' ye tıklayın. Bu seçenek en üst düzeyde veya **kesme noktaları**altındaki alt menüde görünebilir.
+2. Kısayol menüsünde **filtre**' ye tıklayın. Bu seçenek en üst düzeyde veya **kesme noktaları** altındaki alt menüde görünebilir.
 
 ### <a name="to-set-a-breakpoint-on-a-specific-computer"></a>Belirli bir bilgisayarda bir kesme noktası ayarlamak için
 
@@ -97,9 +99,9 @@ Yüksek performanslı bir kümede çok İşlemsiz bir programın hata ayıklamas
 `(MachineName = marvin) & (ThreadName = fourier1)`
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Çok İş Parçacıklı Uygulamalarda Hata Ayıklama](../debugger/debug-multithreaded-applications-in-visual-studio.md)
+- [Çok Iş parçacıklı uygulamalarda hata ayıklama](../debugger/debug-multithreaded-applications-in-visual-studio.md)
 - [Uzaktan hata ayıklama](../debugger/remote-debugging.md)
 - [Nasıl yapılır: süreçler penceresini kullanma](/previous-versions/visualstudio/visual-studio-2010/7h8h5sdw(v=vs.100))
 - [Çoklu Iş parçacıklı uygulamalarda hata ayıklamaya başlayın](../debugger/get-started-debugging-multithreaded-apps.md)
 - [İş parçacıkları ve süreçler](/previous-versions/visualstudio/visual-studio-2010/ms164740(v=vs.100))
-- [Kesme Noktalarını Kullanma](../debugger/using-breakpoints.md)
+- [Kesme noktaları kullanma](../debugger/using-breakpoints.md)
