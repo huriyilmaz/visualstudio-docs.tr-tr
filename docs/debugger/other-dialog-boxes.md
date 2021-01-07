@@ -1,5 +1,7 @@
 ---
 title: Diğer Iletişim kutuları | Microsoft Docs
+description: 'Bu bölüm iki iletişim kutusunu belgelemektedir: Microsoft Spy + + hakkında ve Spy + + Yardımı için telif hakkı bildirimi.'
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6eda65a49fce09dbbb085da7258a8536484af174
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e0db14b7aa641bd7da2d611b9f5156fb1da52f86
+ms.sourcegitcommit: c67dece5ded82a5867148e1f94396954c1ec4398
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62905112"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97975179"
 ---
 # <a name="other-dialog-boxes"></a>Diğer İletişim Kutuları
 Bu iletişim kutularında Spy + + programı hakkında bilgiler görüntülenir.

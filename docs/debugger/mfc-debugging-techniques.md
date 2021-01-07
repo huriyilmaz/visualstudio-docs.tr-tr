@@ -1,5 +1,7 @@
 ---
 title: MFC hata ayıklama teknikleri | Microsoft Docs
+description: MFC programlarında hata ayıklama tekniklerini, örneğin, kodlanmış kesme noktaları, izleme, bellek sızıntısı algılama, nesne bellek dökümleri ve program boyutu azaltma gibi teknikler hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -25,12 +27,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 06b42dbf31a8b5f4cb66de047bc1e08a4f840353
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 5cf00191aff408b1133c281e10eea17e3a923215
+ms.sourcegitcommit: c67dece5ded82a5867148e1f94396954c1ec4398
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89600236"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97975127"
 ---
 # <a name="mfc-debugging-techniques"></a>MFC Hata Ayıklama Teknikleri
 MFC programında hata ayıklaması yapıyorsanız, bu hata ayıklama teknikleri yararlı olabilir.
@@ -117,7 +119,7 @@ MFC, ayrılan ancak serbest bırakılmakta olan belleği algılamaya yönelik s�
 ### <a name="tracking-memory-allocations"></a><a name="BKMK_Tracking_memory_allocations"></a> Bellek ayırmalarını izleme
 MFC 'de, bellek sızıntılarını bulmaya yardımcı olması için **Yeni** işlecin yerine makro [DEBUG_NEW](/previous-versions/tz7sxz99(v=vs.140)) kullanabilirsiniz. Programınızın hata ayıklama sürümünde, `DEBUG_NEW` ayırdığı her bir nesne için dosya adını ve satır numarasını izler. Programınızın bir yayın sürümünü derlerken `DEBUG_NEW` dosya adı ve satır numarası bilgisi olmadan basit bir **Yeni** işlem olarak çözümlenir. Bu nedenle, programınızın yayın sürümünde hiçbir hızda ceza puanı ödeyin.
 
-Yeni bir yerde kullanmak üzere tüm programınızı yeniden yazmak istemiyorsanız `DEBUG_NEW` , bu makroyu kaynak dosyalarınızda **new**tanımlayabilirsiniz:
+Yeni bir yerde kullanmak üzere tüm programınızı yeniden yazmak istemiyorsanız `DEBUG_NEW` , bu makroyu kaynak dosyalarınızda tanımlayabilirsiniz:
 
 ```cpp
 #define new DEBUG_NEW
@@ -138,7 +140,7 @@ Bellek Tanılama tesislerini kullanabilmeniz için, tanılama izlemeyi etkinleş
 
   **AfxMemDF ile belirli bellek tanılama özelliklerini seçmek için**
 
-- Bellek tanılama özellikleri üzerinde daha kesin bir denetim istiyorsanız, [afxMemDF](/previous-versions/ahe4a83t(v=vs.140))MFC genel değişkeninin değerini ayarlayarak, tek tek Bellek Tanılama özelliklerini seçmeli şekilde açıp kapatabilirsiniz. Bu değişken, sıralanmış tür **afxMemDF**tarafından belirtilen şekilde aşağıdaki değerlere sahip olabilir.
+- Bellek tanılama özellikleri üzerinde daha kesin bir denetim istiyorsanız, [afxMemDF](/previous-versions/ahe4a83t(v=vs.140))MFC genel değişkeninin değerini ayarlayarak, tek tek Bellek Tanılama özelliklerini seçmeli şekilde açıp kapatabilirsiniz. Bu değişken, sıralanmış tür **afxMemDF** tarafından belirtilen şekilde aşağıdaki değerlere sahip olabilir.
 
   |Değer|Açıklama|
   |-----------|-----------------|
@@ -430,7 +432,7 @@ MFC hata ayıklama kitaplıklarıyla seçili modüllerin oluşturulması, bu mod
 
 3. İlk olarak yeni bir proje yapılandırması oluşturacaksınız.
 
-   1. ** \<Project> Özellik sayfaları** iletişim kutusunda **Configuration Manager** düğmesine tıklayın.
+   1. **\<Project> Özellik sayfaları** iletişim kutusunda **Configuration Manager** düğmesine tıklayın.
 
    2. [Configuration Manager iletişim kutusunda](/previous-versions/visualstudio/visual-studio-2010/t1hy4dhz(v=vs.100)), kılavuzdaki projenizi bulun. **Yapılandırma** sütununda, öğesini seçin **\<New...>** .
 
@@ -448,11 +450,11 @@ MFC hata ayıklama kitaplıklarıyla seçili modüllerin oluşturulması, bu mod
 
    2. Proje ayarları kılavuzunda, **Proje Varsayılanları** ' nı genişletin (gerekirse).
 
-   3. **Proje Varsayılanları**altında **MFC kullanımını**bulun. Geçerli ayar kılavuzun sağ sütununda görünür. Geçerli ayara tıklayın ve **MFC 'Yi statik bir kitaplıkta kullanmak**üzere değiştirin.
+   3. **Proje Varsayılanları** altında **MFC kullanımını** bulun. Geçerli ayar kılavuzun sağ sütununda görünür. Geçerli ayara tıklayın ve **MFC 'Yi statik bir kitaplıkta kullanmak** üzere değiştirin.
 
    4. **Özellikler sayfaları** iletişim kutusunun sol bölmesinde **C/C++** klasörünü açın ve **Önişlemci**' yi seçin. Özellikler kılavuzunda **Önişlemci tanımlarını** bulun ve "ndebug" öğesini "_DEBUG" ile değiştirin.
 
-   5. **Özellikler sayfaları** iletişim kutusunun sol bölmesinde, **bağlayıcı** klasörünü açın ve **giriş** kategorisini seçin. Özellikler kılavuzunda **ek bağımlılıklar**bulun. **Ek bağımlılıklar** ayarında "NAFXCWD" yazın. LIB "ve" LIBCMT. "
+   5. **Özellikler sayfaları** iletişim kutusunun sol bölmesinde, **bağlayıcı** klasörünü açın ve **giriş** kategorisini seçin. Özellikler kılavuzunda **ek bağımlılıklar** bulun. **Ek bağımlılıklar** ayarında "NAFXCWD" yazın. LIB "ve" LIBCMT. "
 
    6. Yeni derleme seçeneklerini kaydetmek ve **Özellik sayfaları** iletişim kutusunu kapatmak için **Tamam** ' ı tıklatın.
 
@@ -472,7 +474,7 @@ MFC hata ayıklama kitaplıklarıyla seçili modüllerin oluşturulması, bu mod
 
    6. Hata ayıklama **bilgileri biçim** ayarlarına tıklayın ve hata ayıklama bilgileri için istediğiniz seçeneği (genellikle **/Zi**) seçin.
 
-   7. Uygulama Sihirbazı tarafından oluşturulan bir uygulama kullanıyorsanız veya önceden derlenmiş üstbilgilere sahipseniz, önceden derlenmiş üstbilgileri kapatmanız veya diğer modülleri derlerken önce yeniden derlemeniz gerekir. Aksi takdirde, uyarı C4650 ve hata iletisi C2855 alırsınız. ** \<Project> Özellikler** Iletişim kutusundaki **önceden derlenmiş üst bilgileri oluştur/kullan** ayarını değiştirerek (**yapılandırma özellikleri** klasörü, **C/C++** alt klasörü, **önceden derlenmiş üstbilgiler** kategorisi), önceden derlenmiş üst bilgileri devre dışı bırakabilirsiniz.
+   7. Uygulama Sihirbazı tarafından oluşturulan bir uygulama kullanıyorsanız veya önceden derlenmiş üstbilgilere sahipseniz, önceden derlenmiş üstbilgileri kapatmanız veya diğer modülleri derlerken önce yeniden derlemeniz gerekir. Aksi takdirde, uyarı C4650 ve hata iletisi C2855 alırsınız. **\<Project> Özellikler** Iletişim kutusundaki **önceden derlenmiş üst bilgileri oluştur/kullan** ayarını değiştirerek (**yapılandırma özellikleri** klasörü, **C/C++** alt klasörü, **önceden derlenmiş üstbilgiler** kategorisi), önceden derlenmiş üst bilgileri devre dışı bırakabilirsiniz.
 
 7. **Oluşturma** menüsünde, güncel olmayan proje dosyalarını yeniden derlemek için **Oluştur** ' u seçin.
 

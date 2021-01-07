@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.topic: overview
 ms.date: 03/20/2019
 ms.technology: vs-azure
-ms.openlocfilehash: f1473c731dbf9413cf695e1b2331039c3880b8d7
-ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
+ms.openlocfilehash: 4f8c1c265f49b600880cd1278b51095fda9cfb1d
+ms.sourcegitcommit: c67dece5ded82a5867148e1f94396954c1ec4398
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91829876"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97975153"
 ---
 # <a name="container-tools-in-visual-studio"></a>Visual Studio’da Kapsayıcı Araçları
 
@@ -76,7 +76,7 @@ Aşağıdaki ekran görüntüsünde gösterildiği gibi yeni bir proje oluşturu
 > [!NOTE]
 > .NET Framework projeler (.NET Core değil) için yalnızca Windows kapsayıcıları kullanılabilir.
 
-**Add**  >  **Çözüm Gezgini**' de**Docker desteği** Ekle ' ye tıklayarak mevcut bir projeye Docker desteği ekleyebilirsiniz. **> Docker desteği ekleme** ve **ekleme > kapsayıcı Orchestrator destek** komutları, aşağıdaki ekran görüntüsünde gösterildiği gibi, **Çözüm Gezgini**içindeki bir ASP.NET Core projesi için proje düğümünün sağ tıklama menüsünde (veya bağlam menüsü) bulunur:
+  >  **Çözüm Gezgini**' de **Docker desteği** Ekle ' ye tıklayarak mevcut bir projeye Docker desteği ekleyebilirsiniz. **> Docker desteği ekleme** ve **ekleme > kapsayıcı Orchestrator destek** komutları, aşağıdaki ekran görüntüsünde gösterildiği gibi, **Çözüm Gezgini** içindeki bir ASP.NET Core projesi için proje düğümünün sağ tıklama menüsünde (veya bağlam menüsü) bulunur:
 
 ![Visual Studio 'da Docker desteği Ekle menü seçeneği](./media/overview/add-docker-support-menu.png)
 
@@ -103,9 +103,9 @@ Docker desteği eklediğinizde çözüm şöyle görünür:
 
 Docker Compose kullanarak çok kapsayıcılı bir çözüm oluşturmak istediğinizde, projelerinize kapsayıcı düzenleme desteği ekleyin. Bu, aynı *Docker-Compose. yıml* dosyasında tanımlandıklarında bir kapsayıcı grubunu (bir bütün çözüm veya proje grubu) aynı anda çalıştırmanızı ve hata ayıklamanıza olanak tanır.
 
-Docker Compose kullanarak kapsayıcı düzenleme desteği eklemek için, **Çözüm Gezgini**çözüm veya proje düğümüne sağ tıklayın ve **> kapsayıcı düzenleme desteği ekle**' yi seçin. Sonra kapsayıcıları yönetmek için **Docker Compose** öğesini seçin.
+Docker Compose kullanarak kapsayıcı düzenleme desteği eklemek için, **Çözüm Gezgini** çözüm veya proje düğümüne sağ tıklayın ve **> kapsayıcı düzenleme desteği ekle**' yi seçin. Sonra kapsayıcıları yönetmek için **Docker Compose** öğesini seçin.
 
-Projenize kapsayıcı düzenleme desteğini ekledikten sonra, burada gösterildiği gibi, projeye bir *Dockerfile* (zaten bir tane yoksa) ve **Çözüm Gezgini**çözüme eklenen bir **Docker-Compose** klasörü görürsünüz:
+Projenize kapsayıcı düzenleme desteğini ekledikten sonra, burada gösterildiği gibi, projeye bir *Dockerfile* (zaten bir tane yoksa) ve **Çözüm Gezgini** çözüme eklenen bir **Docker-Compose** klasörü görürsünüz:
 
 ![Visual Studio 'da Çözüm Gezgini Docker dosyaları](media/overview/docker-support-solution-explorer.png)
 
@@ -119,9 +119,9 @@ Docker Compose kullanarak denetlemek istediğiniz diğer projelerle işlemi tekr
 Kubernetes desteği eklemek için [Kubernetes için Visual Studio Araçları](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vs-tools-for-kubernetes)' yi çalıştırın.
 ::: moniker-end
 
-Kubernetes desteğiyle, [Azure Kubernetes Service 'te (aks)](/azure/aks)çalışan yerel projeniz Ile Kubernetes kümesi arasında bir bağlantıyı etkinleştirebilir ve böylece Visual Studio kullanarak aks 'te çalışan hizmetlerinizi değiştirebilir ve hatalarını ayıklayabilirsiniz.  Bu hizmet [Azure dev Spaces](/azure/dev-spaces/quickstart-netcore-visualstudio)tarafından sağlanır. Azure Dev Spaces Ayrıca, geliştirme amacıyla *dev alanları* adında Kubernetes hizmetlerinizin ayrı dallarını ayarlamanıza olanak tanıyarak, üretim hizmetlerini geliştirme sırasında çalışma sürümlerinden verimli bir şekilde ayırabilmeniz ve farklı değişiklikleri birbirinden düzgün bir şekilde ayrı tutmanız gerekir.
+Kubernetes desteğiyle, [Azure Kubernetes Service 'te (AKS)](/azure/aks)çalışan yerel projeniz Ile bir Kubernetes kümesi arasında bir bağlantıyı etkinleştirebilir ve böylece Visual Studio 'yu kullanarak çalıştırdığınız hizmetlerden değişiklik ve hata ayıklama yapabilirsiniz.  Bu hizmet, [Kubernetes Köprüsü](overview-bridge-to-kubernetes.md)tarafından sağlanır. Kubernetes Köprüsü, geliştirme amacıyla Kubernetes hizmetlerinizin ayrı dallarını ayarlamanıza olanak tanıyarak, üretim hizmetlerini geliştirme amacıyla çalışma sürümlerinden verimli bir şekilde ayırabilmeniz ve farklı değişiklikleri birbirinden düzgün bir şekilde ayrı tutmanız gerekir.
 
-Projelerinize Kubernetes desteği eklemek için, kapsayıcı düzenleme desteği eklediğinizde **Kubernetes/Held** öğesini seçin. Projenize, Kubernetes hizmetlerinizin yapısını açıklayan Azure Dev Spaces ve Held grafiklerini yapılandıran *azds. YAML*dahil olmak üzere birkaç dosya eklenir.
+Projelerinize Kubernetes desteği eklemek için, kapsayıcı düzenleme desteği eklediğinizde **Kubernetes/Held** öğesini seçin. Projenize, Kubernetes hizmetlerinizin yapısını açıklayan Held grafikleri de dahil olmak üzere birkaç dosya eklenir. Kubernetes Köprüsü ile çalışmaya başlamak için bkz. [Kubernetes Için köprü kullanma](bridge-to-kubernetes.md).
 
 ## <a name="service-fabric-support"></a>Service Fabric desteği
 

@@ -1,5 +1,7 @@
 ---
 title: İşlem sekmesi, pencere özellikleri Iletişim kutusu | Microsoft Docs
+description: Seçili pencereyi oluşturan iş parçacığının KIMLIĞINI ve iş parçacığının sahibi olan işlemin KIMLIĞINI görüntülemek için pencere özelliklerinin Işlem sekmesini kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ecd6bc2c5612424b91a9b2cd121de780848be8bd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4056308f033ef61aa41456d287e7088c8bc6348b
+ms.sourcegitcommit: c67dece5ded82a5867148e1f94396954c1ec4398
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62903749"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97975075"
 ---
 # <a name="process-tab-window-properties-dialog-box"></a>İşlem Sekmesi, Pencere Özellikleri İletişim Kutusu
 Seçili pencerenin işlemini belirlemek için **işlem** sekmesini kullanın. [Pencere özellikleri Iletişim kutusunu](../debugger/window-properties-dialog-box.md)görüntülemek Için odağı [Windows görünümü](../debugger/windows-view.md) penceresine taşıyın. Ağaçta herhangi bir pencere düğümünü seçin, sonra **Görünüm** menüsünden **Özellikler** ' i seçin.

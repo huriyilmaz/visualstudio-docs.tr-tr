@@ -1,6 +1,7 @@
 ---
 title: C++ hata ayıklama yapılandırması proje ayarları
-ms.custom: seodec18
+description: Özellik sayfalarında C ve C++ hata ayıklamayı yapılandırın. Bu makale, ayarları açıklar ve kategorilerini size bildirir.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/26/2018
 ms.topic: reference
 f1_keywords:
@@ -112,12 +113,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bca39b97f6363d8b8fefcfd691b69baf85c32170
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6130b49beecb3411c275fc5d2005b7aabee262fd
+ms.sourcegitcommit: c67dece5ded82a5867148e1f94396954c1ec4398
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72450380"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97975296"
 ---
 # <a name="project-settings-for-a-c-debug-configuration"></a>C++ hata ayıklama yapılandırması proje ayarları
 **Özellik sayfaları** iletişim kutusunda bir C veya C++ hata ayıklama yapılandırması için proje ayarlarını, [nasıl yapılır: ayarlama hata ayıklama ve yayın yapılandırmalarını](../debugger/how-to-set-debug-and-release-configurations.md)açıklandığı gibi değiştirebilirsiniz. Aşağıdaki tablolarda, **Özellik sayfaları** iletişim kutusunda hata ayıklayıcı ile ilgili ayarların nerede bulunacağı gösterilmektedir.
@@ -181,13 +182,13 @@ ms.locfileid: "72450380"
 
 ## <a name="other-project-settings"></a>Diğer proje ayarları
 
-Statik kitaplıklar ve DLL 'Ler gibi proje türlerinde hata ayıklamak için, Visual Studio projenizin doğru dosyaları bulabilmeleri gerekir. Kaynak kodu kullanılabilir olduğunda, hata ayıklamayı daha kolay hale getirmek için aynı çözüme ayrı projeler olarak statik kitaplıklar ve DLL 'Ler ekleyebilirsiniz. Bu proje türlerini oluşturma hakkında bilgi için, bkz. [dinamik bağlantı kitaplığı (dll) oluşturma ve kullanma](/cpp/build/walkthrough-creating-and-using-a-dynamic-link-library-cpp) ve [statik kitaplık kullanarak oluşturma](/cpp/windows/walkthrough-creating-and-using-a-static-library-cpp). Kaynak kodu kullanılabilir olduğunda, **File**  >  **New**  >  **mevcut koddan**dosya yeni proje ' yi seçerek yeni bir Visual Studio projesi de oluşturabilirsiniz.
+Statik kitaplıklar ve DLL 'Ler gibi proje türlerinde hata ayıklamak için, Visual Studio projenizin doğru dosyaları bulabilmeleri gerekir. Kaynak kodu kullanılabilir olduğunda, hata ayıklamayı daha kolay hale getirmek için aynı çözüme ayrı projeler olarak statik kitaplıklar ve DLL 'Ler ekleyebilirsiniz. Bu proje türlerini oluşturma hakkında bilgi için, bkz. [dinamik bağlantı kitaplığı (dll) oluşturma ve kullanma](/cpp/build/walkthrough-creating-and-using-a-dynamic-link-library-cpp) ve [statik kitaplık kullanarak oluşturma](/cpp/windows/walkthrough-creating-and-using-a-static-library-cpp). Kaynak kodu kullanılabilir olduğunda,   >    >  **mevcut koddan** dosya yeni proje ' yi seçerek yeni bir Visual Studio projesi de oluşturabilirsiniz.
 
 Projenizin dışındaki dll 'Lerde hata ayıklamak için bkz. [DLL projelerinde hata ayıklama](../debugger/debugging-dll-projects.md#vxtskdebuggingdllprojectsexternal). Kendi DLL projenizde hata ayıklaması yapmanız, ancak çağıran uygulama için projeye erişiminiz yoksa, bkz. [DLL projesinden hata ayıklama](../debugger/how-to-debug-from-a-dll-project.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yerel kodda hata ayıklama](../debugger/debugging-native-code.md)
-- [Hata ayıklayıcı ayarları ve hazırlığı](../debugger/debugger-settings-and-preparation.md)
+- [Hata ayıklayıcısı ayarları ve hazırlığı](../debugger/debugger-settings-and-preparation.md)
 - [C++ projeleri oluşturma ve yönetme](/cpp/ide/creating-and-managing-visual-cpp-projects)
 - [/ASSEMBLYDEBUG (DebuggableAttribute Ekleme)](/cpp/build/reference/assemblydebug-add-debuggableattribute)
 - [Derleme komutları ve özellikleri için genel makrolar](/cpp/ide/common-macros-for-build-commands-and-properties)

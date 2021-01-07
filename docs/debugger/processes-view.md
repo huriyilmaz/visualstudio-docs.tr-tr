@@ -1,5 +1,7 @@
 ---
 title: İşlem görünümü | Microsoft Docs
+description: Süreçler görünümü sisteminizdeki tüm etkin işlemlerin ağacını görüntüler. İçeriği ve kullanımları hakkında bilgi edinin ve daha fazla bilgi için bağlantıları izleyin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 99ba60021410f1965e05f7c5479231013d53cb71
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a52da28d01eac4f04081497888fbbfccaf4495e2
+ms.sourcegitcommit: c67dece5ded82a5867148e1f94396954c1ec4398
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62904241"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97975140"
 ---
 # <a name="processes-view"></a>İşlemler Görünümü
 Süreçler görünümü sisteminizdeki tüm etkin işlemlerin ağacını görüntüler. İşlem KIMLIĞI ve modül adı gösterilir. Genellikle yürütülen bir programa karşılık gelen belirli bir sistem işlemini incelemek istiyorsanız Işlemler görünümünü kullanın. Süreçler modül adlarıyla tanımlanır veya "sistem süreçler" olarak belirlenir.

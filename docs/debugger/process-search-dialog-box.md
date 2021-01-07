@@ -1,5 +1,7 @@
 ---
 title: İşlem arama Iletişim kutusu | Microsoft Docs
+description: Işlemler görünümündeki belirli bir işlemin düğümünü bulmak ve seçmek için Işlem arama ' yı kullanın. İşlem KIMLIĞI, modül dizesi ve arama yönü belirtebilirsiniz.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 190ec35d014e6b443a9f80bf79433ac14b8fb8ad
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 889c6bac2f00041af6578d31bc0c6e036d82afe1
+ms.sourcegitcommit: c67dece5ded82a5867148e1f94396954c1ec4398
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62903775"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97975101"
 ---
 # <a name="process-search-dialog-box"></a>İşlem Arama İletişim Kutusu
 [Işlemler görünümündeki](../debugger/processes-view.md)belirli bir işlemin düğümünü bulmak ve seçmek için bu iletişim kutusunu kullanın. Bu iletişim kutusunu görüntülemek için odağı bir **işlem** Görünümü penceresine taşıyın. Sonra **arama** menüsünden **işlemi bul** ' u seçin.
