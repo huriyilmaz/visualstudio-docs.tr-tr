@@ -33,6 +33,8 @@
       href: azure-sql-database-add-connected-service.md
     - name: Azure Depolama ekleme
       href: vs-azure-tools-connected-services-storage.md
+    - name: Azure Uygulama Yapılandırması ekleme
+      href: vs-azure-tools-connected-services-app-configuration.md
 - name: Azure Cloud Services geliştirme
   expanded: false
   items:

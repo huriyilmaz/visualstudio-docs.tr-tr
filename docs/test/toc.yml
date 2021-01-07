@@ -4,17 +4,19 @@
   items:
     - name: Test araçlarına ilk bakış
       href: improve-code-quality.md
+    - name: Birim testi araçları ve görevleri
+      href: unit-test-your-code.md
+- name: Öğreticiler
+  items:
+    - name: başlarken
+      href: getting-started-with-unit-testing.md
 - name: Birim testi
   items:
-    - name: Birim testi araçlarına genel bakış
-      href: unit-test-your-code.md
-    - name: Kullanmaya başlayın
-      href: getting-started-with-unit-testing.md
     - name: Birim testi temel bilgileri
       href: unit-test-basics.md
     - name: Birim testi projesi oluşturma
       href: create-a-unit-test-project.md
-    - name: Birim Testleri Oluştur komutu
+    - name: Koddan birim testi oluşturma
       href: create-unit-tests-menu.md
     - name: IntelliTest
       items:

@@ -6,8 +6,6 @@
       href: what-is-debugging.md
     - name: Hata ayıklama teknikleri ve araçları
       href: write-better-code-with-visual-studio.md
-    - name: Hata ayıklama görevinizi bulma
-      href: find-your-debugging-task.md
 - name: Hızlı Başlangıçlar
   items:
     - name: Hata ayıklayıcıya ilk bakış
@@ -944,5 +942,7 @@
                   href: copyright-notice-for-spy-increment-help.md
 - name: Kaynaklar
   items:
+    - name: SSS - Hata ayıklama özelliğinizi bulma
+      href: find-your-debugging-task.md
     - name: Visual Studio’da hata ayıklayıcısı yenilikleri
       href: what-s-new-for-the-debugger-in-visual-studio.md
