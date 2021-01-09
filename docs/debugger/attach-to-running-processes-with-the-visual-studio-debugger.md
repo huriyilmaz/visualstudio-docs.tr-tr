@@ -29,12 +29,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1fd1ff5ff0f8c7510185236c425ddd870f8b500f
-ms.sourcegitcommit: 3c571f44bfd6402efea5187af43df287bac5b6ac
+ms.openlocfilehash: 6fb2fde5d5629b84ccd0e136c132a200b154ea71
+ms.sourcegitcommit: dc71e9030ff35bb26916572b431d4d9e78df3d6f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97760932"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98031048"
 ---
 # <a name="attach-to-running-processes-with-the-visual-studio-debugger"></a>Visual Studio hata ayıklayıcısı ile çalıştırma işlemleri iliştirme
 
@@ -199,7 +199,7 @@ Eklemek üzere bir çalışan işlemi hızlı bir şekilde seçmek için, Visual
 |Yerel makinede bir C#, Visual Basic veya C++ uygulamasında hata ayıklama|Standart hata ayıklama (**F5**) veya **İşleme İliştir**|*\<appname>]*|Çoğu senaryoda standart hata ayıklama kullanın ve **Işleme iliştirilemiyor**.|
 |Windows masaüstü uygulamasında uzaktan hata ayıklama|Uzak araçlar|Yok| Bkz. [bir C# veya Visual Basic uygulamasında uzaktan hata ayıklama](../debugger/remote-debugging-csharp.md) veya [C++ uygulamasında uzaktan hata ayıklama](../debugger/remote-debugging-cpp.md)|
 |Linux’ta .NET Core hatalarını ayıklama|**İşlemek Için İliştir** kullanın|*dotnet.exe* veya benzersiz bir işlem adı|SSH kullanmak için bkz. [SSH kullanarak Linux üzerinde çalışan uzaktan hata ayıklama .NET Core](../debugger/remote-debugging-dotnet-core-linux-with-ssh.md). Kapsayıcılı uygulamalar için bkz. [Docker kapsayıcısında çalışan bir Işleme iliştirme](../debugger/attach-to-process-running-in-docker-container.md#attach-to-a-process-running-on-a-linux-docker-container).|
-|Kapsayıcılı bir uygulamada hata ayıklama|*dotnet.exe* veya benzersiz bir işlem adı|Bkz. [Docker kapsayıcısında çalışan bir Işleme iliştirme](../debugger/attach-to-process-running-in-docker-container.md)|
+|Kapsayıcılı bir uygulamada hata ayıklama|**İşlemek Için İliştir** kullanın|*dotnet.exe* veya benzersiz bir işlem adı|Bkz. [Docker kapsayıcısında çalışan bir Işleme iliştirme](../debugger/attach-to-process-running-in-docker-container.md)|
 |Linux üzerinde uzaktan hata ayıklama Python|**İşlemek Için İliştir** kullanın|*hata ayıklama GPY*|Bkz. [Python araçlarından uzaktan iliştirme](../python/debugging-python-code-on-remote-linux-machines.md#attach-remotely-from-python-tools)|
 |Uygulamayı hata ayıklayıcı olmadan başlattıktan sonra yerel makinede bir ASP.NET uygulamasında hata ayıklayın|**İşlemek Için İliştir** kullanın|*iiexpress.exe*|Bu, uygulamanızın profil oluşturma sırasında (örneğin) daha hızlı yüklenmesini sağlamak için yararlı olabilir. |
 |Sunucu işlemindeki desteklenen diğer uygulama türlerinde hata ayıkla|Sunucu uzakta ise uzak Araçlar 'ı kullanın ve **Işleme ekleyin**|*chrome.exe*, *iexplore.exe* veya diğer süreçler|Gerekirse, işlemi tanımlamada yardımcı olması için Kaynak İzleyicisi kullanın. Bkz. [Uzaktan hata ayıklama](../debugger/remote-debugging.md).|
