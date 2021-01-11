@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9c72e53266eae11fb060ac117c4a6dc0a1c37e2e
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 631ce51df5d985e02e8ccabca258c0ef1c1318f4
+ms.sourcegitcommit: b1f7e7d7a0550d5c6f46adff3bddd44bc1d6ee1c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94434798"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98069480"
 ---
 # <a name="how-to-generate-code-metrics-data"></a>Nasıl yapılır: kod ölçümleri verileri oluşturma
 
@@ -26,7 +26,7 @@ Kod ölçümleri verilerini üç şekilde oluşturabilirsiniz:
 
 - [.NET kod kalitesi Çözümleyicileri](#net-code-quality-analyzers-code-metrics-rules) etkinleştirerek ve içerdiği dört kod ölçümü (bakım) kurallarını etkinleştirerek.
 
-- Visual Studio içindeki [ **Analyze**  >  **kod ölçümlerini hesapla**](#calculate-code-metrics-menu-command) menü komutunu seçerek.
+- Visual Studio içindeki [   >  **kod ölçümlerini hesapla**](#calculate-code-metrics-menu-command) menü komutunu seçerek.
 
 - C# ve Visual Basic projeleri için [komut satırından](#command-line-code-metrics) .
 
@@ -39,15 +39,10 @@ Kod ölçümleri verilerini üç şekilde oluşturabilirsiniz:
 - [CA1505](/dotnet/fundamentals/code-analysis/quality-rules/ca1505)
 - [CA1506](/dotnet/fundamentals/code-analysis/quality-rules/ca1506)
 
-Bu kurallar varsayılan olarak devre dışıdır, ancak bunları [**Çözüm Gezgini**](use-roslyn-analyzers.md#set-rule-severity-from-solution-explorer) veya bir [kural kümesi](using-rule-sets-to-group-code-analysis-rules.md) dosyasında etkinleştirebilirsiniz. Örneğin, kural CA1502 bir uyarı olarak etkinleştirmek için,. RuleSet dosyanız aşağıdaki girişi içerir:
+Bu kurallar varsayılan olarak devre dışıdır, ancak bunları [**Çözüm Gezgini**](use-roslyn-analyzers.md#set-rule-severity-from-solution-explorer) veya bir [editorconfig](use-roslyn-analyzers.md#set-rule-severity-in-an-editorconfig-file) dosyasında etkinleştirebilirsiniz. Örneğin, CA1502 kuralını bir uyarı olarak etkinleştirmek için, EditorConfig dosyanız aşağıdaki girişi içerir:
 
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<RuleSet Name="Rules" Description="Rules" ToolsVersion="16.0">
-  <Rules AnalyzerId="Microsoft.CodeQuality.Analyzers" RuleNamespace="Microsoft.CodeQuality.Analyzers">
-    <Rule Id="CA1502" Action="Warning" />
-  </Rules>
-</RuleSet>
+```cs
+dotnet_diagnostic.CA1502.severity = warning
 ```
 
 ### <a name="configuration"></a>Yapılandırma
@@ -74,15 +69,15 @@ Kod ölçümü kurallarının tetikleneceği eşikleri yapılandırabilirsiniz.
 
 ## <a name="calculate-code-metrics-menu-command"></a>Kod ölçümlerini hesapla menü komutu
 
-**Analyze**  >  **Kod ölçümlerini hesapla** menüsünü analiz ederek IDE 'deki açık projelerinizden biri veya tümü için kod ölçümleri oluşturun.
+  >  **Kod ölçümlerini hesapla** menüsünü analiz ederek IDE 'deki açık projelerinizden biri veya tümü için kod ölçümleri oluşturun.
 
 ### <a name="generate-code-metrics-results-for-an-entire-solution"></a>Tüm çözüm için kod ölçümleri sonuçları oluşturma
 
 Tüm çözüm için aşağıdaki yollarla kod ölçümleri sonuçları oluşturabilirsiniz:
 
-- Menü çubuğundan **Analyze**  >  çözüm için **kod ölçümlerini hesapla** Çözümle ' yi seçin  >  **For Solution**.
+- Menü çubuğundan   >  çözüm için **kod ölçümlerini hesapla** Çözümle ' yi seçin  >  .
 
-- **Çözüm Gezgini** , çözüme sağ tıklayın ve ardından **kod ölçümlerini hesapla** ' yı seçin.
+- **Çözüm Gezgini**, çözüme sağ tıklayın ve ardından **kod ölçümlerini hesapla**' yı seçin.
 
 - **Kod ölçümleri sonuçları** penceresinde, **çözüm Için kod ölçümlerini hesapla** düğmesini seçin.
 
@@ -90,9 +85,9 @@ Sonuçlar oluşturulur ve **Kod ölçümleri sonuçları** penceresi görüntül
 
 ### <a name="generate-code-metrics-results-for-one-or-more-projects"></a>Bir veya daha fazla proje için kod ölçümleri sonuçları oluşturma
 
-1. **Çözüm Gezgini** , bir veya daha fazla proje seçin.
+1. **Çözüm Gezgini**, bir veya daha fazla proje seçin.
 
-1. Menü çubuğundan, **Analyze**  >  Seçili proje (ler) için **kod ölçümlerini hesapla** analiz ' i seçin  >  **For Selected Project(s)**.
+1. Menü çubuğundan,   >  Seçili proje (ler) için **kod ölçümlerini hesapla** analiz ' i seçin  >  .
 
 Sonuçlar oluşturulur ve **Kod ölçümleri sonuçları** penceresi görüntülenir. Sonuç ayrıntılarını görüntülemek için **hiyerarşideki** ağacı genişletin.
 

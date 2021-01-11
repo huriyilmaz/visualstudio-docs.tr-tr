@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 660fc893eb22d0c40805a8bf7b2efc86fd83c3b1
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: cf02fda50678d9de4eb01dc28b4825844e33063e
+ms.sourcegitcommit: b1f7e7d7a0550d5c6f46adff3bddd44bc1d6ee1c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94350874"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98069506"
 ---
 # <a name="ltinstallchecksgt-element-bootstrapper"></a>&lt;Installdenetimlerin &gt; öğesi (önyükleyici)
 `InstallChecks`Öğesi, bir uygulamaya yönelik tüm uygun önkoşulların yüklendiğinden emin olmak için yerel bilgisayara karşı çeşitli testlerin başlatılmasını destekler.
@@ -105,7 +105,7 @@ ms.locfileid: "94350874"
 | `FileName` | Gereklidir. Bulunacak dosyanın adı. |
 | `SearchPath` | Gereklidir. Dosyanın aranacağı disk veya klasör. Bu, atanmışsa göreli bir yol olmalıdır `SpecialFolder` ; Aksi takdirde, mutlak bir yol olmalıdır. |
 | `SpecialFolder` | İsteğe bağlı. Windows ya da ile özel anlamlı bir klasör [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . Varsayılan değer `SearchPath` mutlak yol olarak yorumlanamıyor. Geçerli değerler şunlardır:<br /><br /> `AppDataFolder`. Bu [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama için geçerli kullanıcıya özgü uygulama verileri klasörü.<br /><br /> `CommonAppDataFolder`. Tüm kullanıcılar tarafından kullanılan uygulama verileri klasörü.<br /><br /> `CommonFilesFolder`. Geçerli Kullanıcı için ortak dosyalar klasörü.<br /><br /> `LocalDataAppFolder`. Dolaşım olmayan uygulamalar için veri klasörü.<br /><br /> `ProgramFilesFolder`. 32 bitlik uygulamalar için standart program dosyaları klasörü.<br /><br /> `StartUpFolder`. Sistem başlangıcında başlatılan tüm uygulamaları içeren klasör.<br /><br /> `SystemFolder`. 32 bitlik sistem dll 'Leri içeren klasör.<br /><br /> `WindowsFolder`. Windows sistem yüklemesini içeren klasör.<br /><br /> `WindowsVolume`. Windows sistem yüklemesini içeren sürücü veya bölüm. |
-| `SearchDepth` | İsteğe bağlı. Adlandırılmış dosya için alt klasörlerin aranacağı derinlik. Arama öncelikle derinlemesine bir değer. Varsayılan değer 0 ' dır. Bu, aramayı ve SearchPath tarafından belirtilen en üst düzey klasöre `SpecialFolder` kısıtlar **SearchPath**. |
+| `SearchDepth` | İsteğe bağlı. Adlandırılmış dosya için alt klasörlerin aranacağı derinlik. Arama öncelikle derinlemesine bir değer. Varsayılan değer 0 ' dır. Bu, aramayı ve SearchPath tarafından belirtilen en üst düzey klasöre `SpecialFolder` kısıtlar . |
 
 ## <a name="msiproductcheck"></a>MsiProductCheck
  Bu öğe, öğesinin isteğe bağlı bir alt öğesidir `InstallChecks` . Önyükleyici, her bir örneği için `MsiProductCheck` , belirtilen Microsoft Windows Installer yüklemesinin tamamlanana kadar çalıştırılıp çalıştırılmadığını kontrol eder. Özellik değeri, yüklü ürünün durumuna bağlı olarak ayarlanır. Pozitif bir değer ürünün yüklü olduğunu, 0 veya-1 olduğunu gösterir. (Daha fazla bilgi için lütfen bkz. MsiQueryFeatureState Windows Installer SDK işlevi.) . Windows Installer bilgisayarda yüklü değilse, `Property` ayarlı değildir.
@@ -158,7 +158,7 @@ ms.locfileid: "94350874"
 ## <a name="installconditions"></a>InstallConditions
  `InstallChecks`Değerlendirildiğinde, özellikler üretir. Daha sonra Özellikler tarafından `InstallConditions` , bir paketin yüklenmesi, Atlanmasının veya başarısız olup olmadığını anlamak için kullanılır. Aşağıdaki tabloda şunları listelenmektedir `InstallConditions` :
 
-|Koşul|Description|
+|Koşul|Açıklama|
 |-|-|
 |`FailIf`|Herhangi bir `FailIf` koşul true olarak değerlendirilirse, paket başarısız olur. Koşulların geri kalanı değerlendirilmeyecektir.|
 |`BypassIf`|Herhangi bir `BypassIf` koşul true olarak değerlendirilirse, paket atlanır. Koşulların geri kalanı değerlendirilmeyecektir.|
@@ -177,9 +177,19 @@ ms.locfileid: "94350874"
  Örneğin, Windows 95 çalıştıran bir bilgisayarda yüklemeyi engellemek için aşağıdaki gibi bir kod kullanın:
 
 ```xml
-<!-- Block install on Windows 95 -->
+    <!-- Block install on Windows 95 -->
     <FailIf Property="Version9X" Compare="VersionLessThan" Value="4.10" String="InvalidPlatform"/>
 ```
+
+ Bir FailIf veya BypassIf koşulu karşılanıyorsa, yük denetimlerini çalıştırmayı atlamak için Beforeınstalldenetimleri özniteliğini kullanın.  Örneğin:
+
+```xml
+    <!-- Block install and do not evaluate install checks if user does not have admin privileges -->
+    <FailIf Property="AdminUser" Compare="ValueEqualTo" Value="false" String="AdminRequired" BeforeInstallChecks="true"/>
+```
+
+>[!NOTE]
+>`BeforeInstallChecks`Özniteliği, Visual Studio 2019 güncelleştirme 9 sürümünden başlayarak desteklenir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [\<Commands> dosyalarında](../deployment/commands-element-bootstrapper.md)
