@@ -453,6 +453,12 @@
           href: how-to-generate-code-metrics-data.md
         - name: Kod ölçümü verileri ile çalışma
           href: working-with-code-metrics-data.md
+        - name: Kaynaklar
+          items:
+            - name: Bakım endeksi aralığı ve anlamı
+              href: code-metrics-maintainability-index-range-and-meaning.md
+            - name: Sınıf ilişkilendirme
+              href: code-metrics-class-coupling.md
 - name: C++ kod analizi
   items:
     - name: C ve C++ kodunu analiz etme
