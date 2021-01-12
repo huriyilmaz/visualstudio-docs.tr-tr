@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b934c6cb7c2a6ba98113a5e68091ab53f54b1423
-ms.sourcegitcommit: d526af3642163180e0cc3e1e73b0a00f02542683
+ms.openlocfilehash: 1bb738e0e12598fd31c51c6b3cf2fa684badae40
+ms.sourcegitcommit: fdc21fc21d4a05d9ad8627b06aab7f072bfeb0a6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/31/2020
-ms.locfileid: "97833370"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98113611"
 ---
 # <a name="run-unit-tests-with-test-explorer"></a>Test Gezgini ile birim testleri çalıştırma
 
@@ -167,7 +167,7 @@ Hiyerarşi ve gruplama düzeylerini **tanımlayabilir ve sonra** tercih ettiğin
 |Grup|Açıklama|
 |-|-----------------|
 |**Süre**|Testleri yürütme zamanına göre gruplandırır: **hızlı**, **Orta** ve **yavaş**.|
-|**Durumunda**|Testleri yürütme sonuçlarına göre gruplandırır: **başarısız testler**, **Atlanan testler**, **başarılı testler**, **çalıştırılmadı**|
+|**Durum**|Testleri yürütme sonuçlarına göre gruplandırır: **başarısız testler**, **Atlanan testler**, **başarılı testler**, **çalıştırılmadı**|
 |**Hedef Çerçeve** | Testleri, projeleri hedeflerine göre gruplandırır |
 |**Ad Alanı**|Testleri içerilen ad alanına göre gruplandırır.|
 |**Project**|Testleri içeren proje tarafından gruplandırır.|
@@ -318,7 +318,7 @@ Farklı ölçütlere göre filtrelemek için:
 ::: moniker range=">=vs-2019"
 |Leyicisini|Açıklama|
 |-|-----------------|
-|**Durumunda**|Test Gezgini kategori adlarını eşleşmeler için arar: **başarısız testler**, **Atlanan testler**, **başarılı testler**.|
+|**Durum**|Test Gezgini kategori adlarını eşleşmeler için arar: **başarısız testler**, **Atlanan testler**, **başarılı testler**.|
 |**Lerdir**|Hem nitelik kategorisini hem de eşleşme değerlerini arar. Nitelik kategorilerini ve değerlerini belirten sözdizimi, birim test çerçevesi tarafından tanımlanır.|
 |**Tam nitelikli ad**|Test ad alanları, sınıflar ve yöntemlerin tam adını eşleşmeler için arar.|
 |**Project**|Test projesi adlarını eşleşmeler için arar.|
@@ -376,6 +376,14 @@ Testler test Gezgini 'nden, test üzerindeki kod düzenleyicisine sağ tıklayı
 
 > [!NOTE]
 > Testler yalnızca soyut sınıflarda tanımlandığından ve örneklenmemiş olduğundan, bir testi soyut bir sınıfta çalıştıramazsınız. Testleri soyut sınıflarda çalıştırmak için soyut sınıftan türeten bir sınıf oluşturun.
+
+## <a name="test-audio-cue"></a>Test ses destesi
+Test Gezgini, bir test çalıştırması tamamlandığında bir ses oynayabilir. İki ses vardır: Test çalıştırmasının tüm geçen testlerle başarılı olduğunu belirten bir ses ve Test çalıştırmasının en az bir başarısız test ile tamamlandığını belirten ikinci bir ses. Bu sesleri varsayılan Windows 10 Ses iletişim kutusunda ayarlayabilirsiniz. Bu özellik Visual Studio 2019 güncelleştirme 16,9 Preview 3 ' te başlayarak kullanılabilir.
+
+1. Varsayılan Windows 10 Ses iletişim kutusunu açın.
+2. **Sesler** sekmesine gidin.
+3. **Microsoft Visual Studio** kategorisini bulun. Önceden ayarlanmış sesleri seçmek veya kendi ses dosyanıza gitmek için **test çalıştırması başarılı** veya **test çalıştırması başarısız** sesler ' i seçin.  
+![Windows 10 Ses iletişim kutusu](../test/media/default-windows-10-sound-dialog.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
