@@ -1,5 +1,7 @@
 ---
 title: IIS özellik ayarlarını doğrulama | Microsoft Docs
+description: IIS yönetim aracını kullanarak bir Web uygulaması için ayarladığınız IIS özellik ayarlarını doğrulama hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -19,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4c883257abf48601f5131bdae239df61ea64ba77
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: b627fbd3d4875699faa28f551d68f5a99bd63340
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851053"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150554"
 ---
 # <a name="how-to-verify-iis-property-settings"></a>Nasıl Yapılır: IIS Özellik Ayarlarını Doğrulama
 
@@ -43,7 +45,7 @@ IIS yönetim aracını kullanarak bir Web uygulamasının özelliklerini ayarlay
 
    - Windows Server 2003 ' de **Sunucunuzu Yönetin**' e çift tıklayın.
 
-        **Sunucunuzu yönetme** penceresi açılır. **Uygulama sunucusu**altında **Bu uygulama sunucusunu yönet**' e tıklayın.
+        **Sunucunuzu yönetme** penceresi açılır. **Uygulama sunucusu** altında **Bu uygulama sunucusunu yönet**' e tıklayın.
 
         **Uygulama sunucusu** penceresi açılır. Sol bölmedeki **Internet Information Services (IIS) Yöneticisi** düğümünü açın.
 
@@ -61,7 +63,7 @@ IIS yönetim aracını kullanarak bir Web uygulamasının özelliklerini ayarlay
 
 5. Bir ATL sunucu uygulaması için, hata ayıklama fiilinin ISAPI uzantınızın ilişkili olduğunu doğrulayın. Daha fazla bilgi için bkz. [nasıl yapılır: uzantı Ile hata ayıklama fiilini ilişkilendirme](/previous-versions/ms165022(v=vs.100)).
 
-6. Bir uygulama için, [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] uygulamanın sanal klasörünün **Internet INFORMATION SERVICES (IIS) yöneticisi**, **İnternet Hizmetleri Yöneticisi** veya **Internet Information Services**bir uygulama adı ayarlanmış olduğundan emin olun.
+6. Bir uygulama için, [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] uygulamanın sanal klasörünün **Internet INFORMATION SERVICES (IIS) yöneticisi**, **İnternet Hizmetleri Yöneticisi** veya **Internet Information Services** bir uygulama adı ayarlanmış olduğundan emin olun.
 
    1. Web uygulaması **Özellikler** penceresinde, uygulama bir sanal dizinde ise veya uygulama bir Web sitesi Ise **giriş dizini** sekmesinde **Dizin** sekmesini seçin.
 
@@ -75,7 +77,7 @@ IIS yönetim aracını kullanarak bir Web uygulamasının özelliklerini ayarlay
 
 8. **Özellikler** iletişim kutusunu kapatmak için **Tamam** ' ı tıklatın.
 
-9. **Internet Information Services (IIS) Yöneticisi**, **İnternet Hizmetleri Yöneticisi**veya **Internet Information Services** iletişim kutusunu kapatmak için **Tamam** ' ı tıklatın.
+9. **Internet Information Services (IIS) Yöneticisi**, **İnternet Hizmetleri Yöneticisi** veya **Internet Information Services** iletişim kutusunu kapatmak için **Tamam** ' ı tıklatın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

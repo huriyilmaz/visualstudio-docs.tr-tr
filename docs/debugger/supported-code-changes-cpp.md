@@ -1,5 +1,7 @@
 ---
 title: Desteklenen kod değişiklikleri (C++) | Microsoft Docs
+description: Visual Studio 'da bir C++ projesinde hata ayıklarken Düzenle ve devam et özelliğini kullanırken hangi kod değişikliklerinin desteklendiğini anlayın.
+ms.custom: SEO-VS-2020
 ms.date: 02/18/2020
 ms.topic: conceptual
 dev_langs:
@@ -20,12 +22,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af6c0d88dd230bee768641905e200f1f47749d77
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d693753cbcc9844ff602ab4d20e90fdc6de7dae5
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77629592"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150502"
 ---
 # <a name="supported-code-changes-c"></a>Desteklenen Kod Değişiklikleri (C++)
 C++ projeleri için Düzenle ve devam et çoğu kod değişikliği türünü işler. Ancak, bazı değişiklikler program yürütmesi sırasında uygulanamaz. Bu değişiklikleri uygulamak için yürütmeyi durdurmanız ve kodun yeni bir sürümünü oluşturmanız gerekir.
@@ -116,10 +118,10 @@ C++ projeleri için Düzenle ve devam et çoğu kod değişikliği türünü iş
 ### <a name="linker-options-that-disable-edit-and-continue"></a><a name="BKMK_Linker_options_that_disable_Edit_and_Continue"></a> Düzenle ve devam et özelliğini devre dışı bırakan bağlayıcı seçenekleri
  Aşağıdaki bağlayıcı seçenekleri Düzenle ve devam et devre dışı bırak:
 
-- **/OPT: ref**, **/OPT: ICF**veya **/ıncresetting** ayarları ayarı devre dışı bırakır ve şu uyarıyla devam et:  
+- **/OPT: ref**, **/OPT: ICF** veya **/ıncresetting** ayarları ayarı devre dışı bırakır ve şu uyarıyla devam et:  
      `LINK : warning LNK4075: ignoring /EDITANDCONTINUE due to /OPT specification`
 
-- **/Order**, **/Release**veya **/Force** ayarı, düzenlemeyi devre dışı bırakır ve aşağıdaki uyarıyla devam eder:  
+- **/Order**, **/Release** veya **/Force** ayarı, düzenlemeyi devre dışı bırakır ve aşağıdaki uyarıyla devam eder:  
      `LINK : warning LNK4075: ignoring /INCREMENTAL due to /option specification`
 
 - Program veritabanı (. pdb) dosyasının oluşturulmasını engelleyen herhangi bir seçeneğin ayarlanması, düzenlemeyi devre dışı bırakır ve belirli bir uyarı olmadan devam eder.

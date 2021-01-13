@@ -1,5 +1,7 @@
 ---
 title: DebuggerDisplay kullanarak özel bilgileri görüntüle | Microsoft Docs
+description: Bir nesne, özellik veya alanın hata ayıklayıcı değişken pencerelerinin nasıl görüntülendiğini denetlemek için DebuggerDisplayAttribute örneğini kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 01/09/2019
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2387c5e9a920f0811a65ca400d8da48aa81dccd3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1d846fd5e423ed17f7754260f169e32dbef5486b
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85418788"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150762"
 ---
 # <a name="tell-the-debugger-what-to-show-using-the-debuggerdisplay-attribute-c-visual-basic-f-ccli"></a>Hata ayıklayıcıya DebuggerDisplay özniteliği kullanarak neyin gösterileceğini söyleyin (C#, Visual Basic, F #, C++/CLı)
 
@@ -183,5 +185,5 @@ class MyHashtable
 
 - [DebuggerTypeProxy Özniteliğini Kullanma](../debugger/using-debuggertypeproxy-attribute.md)
 - [Yönetilen nesnelerin özel görünümlerini oluşturma](../debugger/create-custom-views-of-managed-objects.md)
-- [C 'de biçim belirticileri #](../debugger/format-specifiers-in-csharp.md)
+- [C# dilinde biçim belirticileri](../debugger/format-specifiers-in-csharp.md)
 - [Hata Ayıklayıcı Görüntü Öznitelikleriyle Hata Ayıklamayı Geliştirme](/dotnet/framework/debug-trace-profile/enhancing-debugging-with-the-debugger-display-attributes)

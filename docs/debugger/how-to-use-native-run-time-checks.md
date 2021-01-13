@@ -1,5 +1,7 @@
 ---
-title: Yerel çalışma zamanı denetimlerini kullanma | Microsoft Docs
+title: Yerel Run-Time denetimleri kullan | Microsoft Docs
+description: Yığın işaretçisi bozulması, yerel dizilerin aşımları ve yığın bozulması gibi yaygın çalışma zamanı hatalarını yakalamak için Visual Studio 'daki yerel çalışma zamanı denetimlerini kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -37,12 +39,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 586f43f14a8638ab9c3c67f8ffef52ef52a70c53
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 7e46e2253c5664fff9cf456250d375993a0a0c9a
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852673"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150645"
 ---
 # <a name="how-to-use-native-run-time-checks"></a>Nasıl Yapılır: Yerel Çalışma Zamanı Denetimlerini Kullanma
 Visual Studio C++ projesinde, şu gibi yaygın çalışma zamanı hatalarını yakalamak için yerel [runtime_checks](/cpp/preprocessor/runtime-checks) kullanabilirsiniz:
@@ -65,9 +67,9 @@ Visual Studio C++ projesinde, şu gibi yaygın çalışma zamanı hatalarını y
 
   Bu bölümdeki diğer konular hakkında bilgi sağlar:
 
-- [C çalışma zamanı kitaplığıyla çalışma zamanı denetimlerini özelleştirme](../debugger/native-run-time-checks-customization.md)
+- [C Run-Time kitaplığıyla Run-Time denetimlerini özelleştirme](../debugger/native-run-time-checks-customization.md)
 
-- [C çalışma zamanı kitaplığı olmadan çalışma zamanı denetimlerini kullanma](../debugger/using-run-time-checks-without-the-c-run-time-library.md)
+- [C Run-Time kitaplığı olmadan Run-Time denetimleri kullanma](../debugger/using-run-time-checks-without-the-c-run-time-library.md)
 
 ### <a name="to-enable-native-run-time-checks-in-a-debug-build"></a>Bir hata ayıklama derlemesinde yerel çalışma zamanı denetimlerini etkinleştirmek için
 

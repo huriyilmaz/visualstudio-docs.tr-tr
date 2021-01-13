@@ -1,5 +1,7 @@
 ---
 title: Çağrı ağacı görünümü | Microsoft Docs
+description: Profili oluşturulmuş uygulamada geçen işlev yürütme yollarını görüntüleyen çağrı ağacı görünümünü anlayın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +18,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 0b932d5f9e4a178c94f3e490c66cec64648ce4f6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 386f8e85c02fe73eab9801b3edf79ec0d0b178fc
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74773341"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150788"
 ---
 # <a name="call-tree-view"></a>Çağrı Ağacı görünümü
 Çağrı ağacı görünümü, profili oluşturulmuş uygulamada geçen işlev yürütme yollarını görüntüler. Ağacın kökü, uygulamanın veya bileşenin giriş noktasıdır. Her işlev düğümü, çağırdığı tüm işlevleri ve bu işlev çağrıları hakkındaki performans verilerini listeler.
@@ -32,7 +34,7 @@ ms.locfileid: "74773341"
 
  Kök düğümü ayarladığınızda, seçili düğümün alt ağacı hariç diğer tüm girişleri görünümden ortadan kaldırabilirsiniz. Kök düğümü, görüntülemekte olduğunuz düğüme geri sıfırlayabilirsiniz. Çağrı ağacı görünümü penceresinde, sağ tıklayın ve ardından **kökü Sıfırla**' yı seçin.
 
- Çağrı ağacı görünümü sütun eklemek veya kaldırmak için özelleştirilebilir. **Sütun adı başlık çubuğuna**sağ tıklayın ve ardından **sütun Ekle/Kaldır**' ı seçin.
+ Çağrı ağacı görünümü sütun eklemek veya kaldırmak için özelleştirilebilir. **Sütun adı başlık çubuğuna** sağ tıklayın ve ardından **sütun Ekle/Kaldır**' ı seçin.
 
  Çağrı ağacı görünümü, sunulan veri miktarını sınırlayarak gürültü azaltma için yapılandırılabilir. Gürültü azaltmasıyla, performans sorunları görünümde daha belirgin. Performans sorunlarının ayırt edilmesi kolay olduğunda, analiz daha kolay olur. Daha fazla bilgi için bkz. [nasıl yapılır: rapor görünümlerinde gürültü azaltılması yapılandırma](../profiling/how-to-configure-noise-reduction-in-report-views.md).
 

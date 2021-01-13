@@ -1,6 +1,7 @@
 ---
 title: Hata ayıklayıcıda kesme noktaları kullan | Microsoft Docs
-ms.custom: ''
+description: En önemli hata ayıklama tekniklerinden biri olan kesme noktaları hakkında bilgi edinin. Makale kesme noktası eylemleri, izleme noktaları, koşullar ve çok daha fazlasını içerir.
+ms.custom: SEO-VS-2020
 ms.date: 06/30/2020
 ms.topic: how-to
 f1_keywords:
@@ -34,12 +35,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 52c95749d5d7e2909fbff6da0a3a45bc36cd73c6
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: c8487482b1d87ba87dfc3a8b1e07be1360227a2f
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97729333"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150450"
 ---
 # <a name="use-breakpoints-in-the-visual-studio-debugger"></a>Visual Studio hata ayıklayıcıda kesme noktaları kullanma
 

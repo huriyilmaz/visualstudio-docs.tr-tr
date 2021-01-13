@@ -1,5 +1,7 @@
 ---
 title: Veri kesme noktası ayarlanamıyor | Microsoft Docs
+description: "\"Değer değiştiğinde kes\" kullanılırken gerçekleşen \"veri kesme noktası hataları ayarlanamıyor\" açıklamalarını, çözümlerini ve geçici çözümlerini bulun."
+ms.custom: SEO-VS-2020
 ms.date: 12/3/2019
 ms.topic: error-reference
 f1_keywords:
@@ -15,12 +17,12 @@ ms.author: waan
 manager: caslan
 ms.workload:
 - multiple
-ms.openlocfilehash: 4cded3bfdb6adc206f02ef54402964f4e7276f93
-ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
+ms.openlocfilehash: 4e90c3d4af8e568f1bb2e6987c66c7fbc0856c57
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97668787"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150463"
 ---
 # <a name="troubleshooting-data-breakpoint-errors"></a>Veri kesme noktası hatalarında sorun giderme
 Bu sayfa, "değer değiştiğinde kes" kullanırken görülen yaygın hataları çözme konusunda size kılavuzluk eder
@@ -79,7 +81,7 @@ Programınızın üzerinde çalıştığı mimari (Platform yapılandırması), 
 | ARM | 1 | 4 |
 | ARM64 | 2 | 8 |
 
-## <a name="provide-feedback"></a>Geri bildirimde bulunma
+## <a name="provide-feedback"></a>Geribildirim gönderme
 
 Bu özellikle ilgili herhangi bir sorun veya öneri için, lütfen yardım > bir sorun bildirmek > IDE 'de veya [Geliştirici topluluğu](https://aka.ms/feedback/suggest?space=8)'Nda [bir sorun bildirmek](../ide/how-to-report-a-problem-with-visual-studio.md) için lütfen bize bilgi verin.
 

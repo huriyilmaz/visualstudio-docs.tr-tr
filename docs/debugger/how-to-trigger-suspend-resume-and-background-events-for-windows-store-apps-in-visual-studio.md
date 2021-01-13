@@ -1,5 +1,7 @@
 ---
 title: UWP hata ayıklarken askıya alma/sürdürülme/arka plan olaylarını Tetikle
+description: Visual Studio 'da Evrensel Windows Platformu (UWP) uygulamalarında hata ayıklama sırasında askıya alma, sürdürülme ve arka plan olaylarının nasıl tetikleneceğini inceleyin.
+ms.custom: SEO-VS-2020
 ms.date: 01/16/2018
 ms.topic: how-to
 f1_keywords:
@@ -14,18 +16,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 5cbdfb443d07b01f4de6f43fb98103339566cde2
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 87b2718b6cd9db5b66635ca165253bd1e93f17d5
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808200"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150684"
 ---
 # <a name="how-to-trigger-suspend-resume-and-background-events-while-debugging-uwp-apps-in-visual-studio"></a>Visual Studio 'da UWP uygulamalarında hata ayıklama sırasında askıya alma, sürdürülme ve arka plan olaylarını tetikleme
 
 Hata ayıkladığınızda, Windows **Işlem ömür yönetimi** (PLM) uygulamanızın yürütme durumunu denetler — kullanıcı eylemlerine ve cihazın durumuna yanıt olarak uygulamayı başlatma, askıya alma, sürdürme ve sonlandırma. Hata ayıklarken, Windows bu etkinleştirme olaylarını devre dışı bırakır. Bu konuda, hata ayıklayıcıda bu olayların nasıl tetikleneceği açıklanmaktadır.
 
-Bu konu ayrıca **arka plan görevlerinin**hatalarını ayıklama işlemini açıklar. Arka plan görevleri, uygulamanız çalışmıyor olsa bile, bir arka plan işleminde belirli işlemleri gerçekleştirmenize olanak tanır. Hata ayıklayıcıyı kullanarak uygulamanızı hata ayıklama moduna alabilir ve ardından, Kullanıcı arabirimini başlatmadan, arka plan görevini başlatıp hata ayıklayın.
+Bu konu ayrıca **arka plan görevlerinin** hatalarını ayıklama işlemini açıklar. Arka plan görevleri, uygulamanız çalışmıyor olsa bile, bir arka plan işleminde belirli işlemleri gerçekleştirmenize olanak tanır. Hata ayıklayıcıyı kullanarak uygulamanızı hata ayıklama moduna alabilir ve ardından, Kullanıcı arabirimini başlatmadan, arka plan görevini başlatıp hata ayıklayın.
 
 Işlem ömrü yönetimi ve arka plan görevleri hakkında daha fazla bilgi için bkz. [başlatma, sürdürme ve çoklu görev](/windows/uwp/launch-resume/index).
 
@@ -72,9 +74,9 @@ Işlem ömrü yönetimi ve arka plan görevleri hakkında daha fazla bilgi için
 
 2. Başlangıç projesi için hata ayıklama özellik sayfasını açın. Çözüm Gezgini, projeyi seçin. **Hata Ayıkla** menüsünde **Özellikler**' i seçin.
 
-     C++ projeleri için **yapılandırma özellikleri** ' ni genişletin ve **hata ayıklama**öğesini seçin.
+     C++ projeleri için **yapılandırma özellikleri** ' ni genişletin ve **hata ayıklama** öğesini seçin.
 
-3. Şunlardan birini yapın:
+3. Aşağıdakilerden birini yapın:
 
     - Visual C# ve Visual Basic projeleri için başlatma ' **yı seçin, ancak başladığında kodumdaki hata ayıklayın**
 

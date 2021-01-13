@@ -1,5 +1,7 @@
 ---
-title: Arayan-Aranan Görünümü-Izleme verileri | Microsoft Docs
+title: Caller-Callee görünümü-Izleme verileri | Microsoft Docs
+description: Arayan/çağrılan görünümünün, Performans Gezgini arama ağacındaki izleme bilgilerini görüntüleme hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 551c183dd9c368b1af16c1fe52b36762f4e71504
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3cd9f65fbce6f0326fab89acfef601652c9bc7b9
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74773302"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150892"
 ---
 # <a name="callercallee-view---instrumentation-data"></a>Arayan/çağrılan görünümü-izleme verileri
 Arayan/çağrılan görünümü seçili bir işlevle ilgili profil oluşturma bilgilerini ve çağrı ağacındaki üst ve alt işlevlerini görüntüler. Arayan/çağrılan görünümü üç kılavuz içerir.
@@ -37,7 +39,7 @@ Arayan/çağrılan görünümü seçili bir işlevle ilgili profil oluşturma bi
 |**İşlev satır numarası**|Kaynak dosyada bu işlevin başlangıcına ait satır numarası.|
 |**Çağrı Sayısı**|Bu işleve yapılan çağrıların toplam sayısı.|
 |**Kaynak Dosya**|Bu işlevin tanımını içeren kaynak dosya.|
-|**Modül Adı**|İşlevi içeren modülün adı.|
+|**Modül adı**|İşlevi içeren modülün adı.|
 |**Modül yolu**|İşlevi içeren modülün yolu.|
 |**İşlem Kimliği**|Profil oluşturma çalıştırmasının işlem KIMLIĞI (PID).|
 |**İşlem adı**|Sürecin adı.|

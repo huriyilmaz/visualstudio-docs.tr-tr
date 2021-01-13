@@ -1,5 +1,7 @@
 ---
 title: Çağrı ağacı görünümü-Izleme verileri | Microsoft Docs
+description: Çağrı ağacı görünümünün, Performans Gezgini arama ağacındaki izleme bilgilerini görüntüleme hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 7497f455ad3868f53758555aa28d305b6068e30d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9c846910da4dec636c073446ae63cffb7cb2a682
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74773517"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150801"
 ---
 # <a name="call-tree-view---instrumentation-data"></a>Çağrı ağacı görünümü-izleme verileri
 Çağrı ağacındaki bir işlevin değerleri, çağrı ağacındaki üst işlev tarafından çağrılan işlev örneklerinin süresini belirtir. Yüzde değerleri, işlev örneklerinin değeri, profil oluşturma çalıştırışında tüm işlevlerin toplam geçen dahil süresi ile karşılaştırılarak hesaplanır.
@@ -31,7 +33,7 @@ ms.locfileid: "74773517"
 |**İşlev satır numarası**|Kaynak dosyada bu işlevin başlangıcına ait satır numarası.|
 |**Çağrı Sayısı**|Bu işleve yapılan çağrıların toplam sayısı.|
 |**Kaynak Dosya**|Bu işlevin tanımını içeren kaynak dosya.|
-|**Modül Adı**|İşlevi içeren modülün adı.|
+|**Modül adı**|İşlevi içeren modülün adı.|
 |**Modül yolu**|İşlevi içeren modülün yolu.|
 |**İşlem Kimliği**|Profil oluşturma çalıştırmasının işlem KIMLIĞI (PID).|
 |**İşlem adı**|İşleme atanan ad.|

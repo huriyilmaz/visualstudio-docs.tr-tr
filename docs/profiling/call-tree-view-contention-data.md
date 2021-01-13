@@ -1,5 +1,7 @@
 ---
 title: Çağrı ağacı görünümü-çekişme verileri | Microsoft Docs
+description: Profili oluşturulmuş uygulamada geçen işlev yürütme yolları için çekişme verilerini gösteren çağrı ağacı görünümünü gözden geçirin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: e91e231f72b006d2020c8b4d5d96c7e24fa1dd9c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 974eeccbb1f4691c00fafad65fadef7c909a7ed2
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74779785"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150424"
 ---
 # <a name="call-tree-view---contention-data"></a>Çağrı ağacı görünümü-çakışma verileri
 Çağrı ağacı görünümü, profili oluşturulmuş uygulamada geçen işlev yürütme yollarını görüntüler. Ağacın kökü, uygulamanın veya bileşenin giriş noktasıdır. Her işlev düğümü, çağırdığı tüm işlevleri, işlevin engellenme sayısını ve diğer iş parçacıkları veya süreçlerine sahip bir kaynak için devam ettiğinden işlevin engellendiğini belirten süreyi listeler.
@@ -47,7 +49,7 @@ ms.locfileid: "74779785"
 |**Kapsamlı çekişmeler yüzdesi**|Bu yürütme yolundaki bu işlevin örneklerinin dahil olduğu, profil oluşturma çalıştırmasının tüm çekişmelerinin yüzdesi.|
 |**Düzeyde**|Çağrı ağacındaki işlevin düzeyi. Yalnızca VSReport komut satırı raporlarında. Daha fazla bilgi için bkz. [VSPerfReport](../profiling/vsperfreport.md).|
 |**İşlev satır numarası**|Kaynak dosyada bu işlevin başlangıcına ait satır numarası.|
-|**Modül Adı**|İşlevi içeren modülün adı.|
+|**Modül adı**|İşlevi içeren modülün adı.|
 |**Modül yolu**|İşlevi içeren modülün yolu.|
 |**İşlem Kimliği**|Profil oluşturma çalıştırmasının işlem KIMLIĞI (PID).|
 |**İşlem adı**|Sürecin adı.|

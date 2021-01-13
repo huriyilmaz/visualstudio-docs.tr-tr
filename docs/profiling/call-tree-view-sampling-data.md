@@ -1,5 +1,7 @@
 ---
 title: Çağrı ağacı görünümü-örnekleme verileri | Microsoft Docs
+description: Çağrı ağacı görünümünün, Performans Gezgini içindeki profili oluşturulan uygulamada geçen işlev yürütme yollarının örnekleme verilerini nasıl görüntülediğini okuyun.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 558cef408ceca48a55563ae31f2399da0e951b8e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1fc7493d20d09ebd606e3a6ec8e5271981fb6f62
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74779759"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150528"
 ---
 # <a name="call-tree-view---sampling-data"></a>Çağrı ağacı görünümü-örnekleme verileri
 Çağrı ağacı görünümü, profili oluşturulmuş uygulamada geçen işlev yürütme yollarını görüntüler.
@@ -41,7 +43,7 @@ ms.locfileid: "74779759"
 |------------|-----------------|
 |**İşlem Kimliği**|Profil oluşturma çalıştırmasının işlem KIMLIĞI (PID).|
 |**İşlem adı**|Sürecin adı.|
-|**Modül Adı**|İşlevi içeren modülün adı.|
+|**Modül adı**|İşlevi içeren modülün adı.|
 |**Modül yolu**|İşlevi içeren modülün yolu.|
 |**Kaynak Dosya**|Bu işlevin tanımını içeren kaynak dosya.|
 |**İşlev adı**|İşlevin tam adı.|

@@ -1,5 +1,7 @@
 ---
 title: Arayan-Aranan Görünümü-çekişme verileri | Microsoft Docs
+description: Çağıran/çağrılan görünümünün, seçili bir işlev ve Performans Gezgini üst ve alt işlevleri için çekişme bilgilerini nasıl görüntüleyeceğini öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 083386a808f7b91a18b3ea685ae657118c723978
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5b51504d029c1e723321c8c92df28a2ecad1fd1a
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74779746"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150918"
 ---
 # <a name="callercallee-view----contention-data"></a>Arayan/çağrılan görünümü-çekişme verileri
 Arayan/çağrılan görünümü seçili bir işlev ve üst ve alt işlevleri için çekişme bilgilerini görüntüler. Arayan/çağrılan görünümü üç kılavuz içerir.
@@ -41,7 +43,7 @@ Arayan/çağrılan görünümü seçili bir işlev ve üst ve alt işlevleri iç
 |**Kapsamlı çekişmeler**|-Geçerli işlev için, bu işlevin veya işlev tarafından çağrılan işlevlerin kaç kez yürütülmesi engellenmiş. İşlev tarafından çağrılan işlevlerde gerçekleşen çekişmeler dahildir.<br />-Bir çağıran işlevi için, bu işlev geçerli işlevi çağırdığında gerçekleşen geçerli işlevin dahil olduğu çekişmelerin sayısı.<br />-Bir çağrılan işlev için, bu işlevin veya işlev tarafından çağrılan işlevlerden birinin, bu işlev geçerli işlev tarafından çağrıldığında yürütülmesi engellenmiş olduğu zaman sayısı. Çağrılan işlev tarafından çağrılan işlevlerde gerçekleşen çekişmeler dahil edilmiştir.|
 |**Kapsamlı çekişmeler yüzdesi**|Bu bağlamda bu işlev için özel çekişmeler olan profil oluşturma çalıştırmasında tüm çekişmelerin yüzdesi.|
 |**İşlev satır numarası**|Kaynak dosyada bu işlevin başlangıcına ait satır numarası.|
-|**Modül Adı**|İşlevi içeren modülün adı.|
+|**Modül adı**|İşlevi içeren modülün adı.|
 |**Modül yolu**|İşlevi içeren modülün yolu.|
 |**İşlem Kimliği**|Çekişmelerin gerçekleştiği işlemin işlem KIMLIĞI (PID).|
 |**İşlem adı**|Sürecin adı.|

@@ -1,5 +1,7 @@
 ---
 title: Kayıtlı IntelliTrace verilerini kullanma | Microsoft Docs
+description: Belirli bir yürütme noktasında hata ayıklamayı başlatmak için bir IntelliTrace dosyası (. iTrace) kullanın. Dosya, uygulamanın bir çalıştırağından kaydedilen IntelliTrace 'in bilgilerini içerir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -15,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cb79e2f1a9ffd84f48910637deaff85329c3d91e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 42f355a0a8d04e48a2b9d14d0d62edf2cd949a87
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72911324"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150944"
 ---
 # <a name="using-saved-intellitrace-data-c-visual-basic-c"></a>Kayıtlı IntelliTrace verilerini kullanma (C#, Visual Basic, C++)
 
@@ -56,11 +58,11 @@ IntelliTrace günlük (. iTrace) dosyasından hata ayıklamayı başlattığın�
 
 - . İTrace dosyası Team Foundation Server iş öğesine eklenmişse, iş öğesinde şu adımları izleyin:
 
-  - **Tüm bağlantılar**altında. iTrace dosyasını bulun. Açın.
+  - **Tüm bağlantılar** altında. iTrace dosyasını bulun. Açın.
 
     \- veya
 
-  - Yeniden **üretme adımları**altında **IntelliTrace** bağlantısını seçin.
+  - Yeniden **üretme adımları** altında **IntelliTrace** bağlantısını seçin.
 
 > [!TIP]
 > Hata ayıklama sırasında IntelliTrace dosyasını kapattıysanız, kolayca yeniden açabilirsiniz. **Hata Ayıkla** menüsüne gidin, **IntelliTrace**' i ve **günlük özetini göster**' i seçin. **IntelliTrace** penceresinde **günlük özetini göster** ' i de seçebilirsiniz. Bu yalnızca IntelliTrace ile hata ayıklarken kullanılabilir.
@@ -95,7 +97,7 @@ IntelliTrace günlük (. iTrace) dosyasından hata ayıklamayı başlattığın�
 
 ##### <a name="to-start-debugging-from-a-performance-event"></a>Bir performans olayından hata ayıklamayı başlatmak için
 
-1. **Performans ihlalleri**altında, kaydedilen performans olaylarını, bunların toplam yürütme sürelerini ve diğer olay bilgilerini gözden geçirin. Sonra belirli performans olayı sırasında çağrılan yöntemlerde fazla araştırma yapın.
+1. **Performans ihlalleri** altında, kaydedilen performans olaylarını, bunların toplam yürütme sürelerini ve diğer olay bilgilerini gözden geçirin. Sonra belirli performans olayı sırasında çağrılan yöntemlerde fazla araştırma yapın.
 
      ![Performans olayı ayrıntılarını görüntüleme](../debugger/media/ffr_itsummarypageperformance.png "FFR_ITSummaryPagePerformance")
 
@@ -126,7 +128,7 @@ IntelliTrace günlük (. iTrace) dosyasından hata ayıklamayı başlattığın�
 
 ##### <a name="to-start-debugging-from-an-exception"></a>Bir özel durumdan hata ayıklamayı başlatmak için
 
-1. **Özel durum verileri**altında, kaydedilen özel durum olaylarını, türleri, iletileri ve özel durumların ne zaman oluştuğunu gözden geçirin. Kodu daha ayrıntılı incelemek için özel durumlar grubu içindeki en son olaydan başlayın.
+1. **Özel durum verileri** altında, kaydedilen özel durum olaylarını, türleri, iletileri ve özel durumların ne zaman oluştuğunu gözden geçirin. Kodu daha ayrıntılı incelemek için özel durumlar grubu içindeki en son olaydan başlayın.
 
      ![Özel durum olayından hata ayıklamayı Başlat](../debugger/media/ffr_itsummarypageexception.png "FFR_ITSummaryPageException")
 
@@ -138,7 +140,7 @@ IntelliTrace günlük (. iTrace) dosyasından hata ayıklamayı başlattığın�
 
      Artık kaydedilen diğer değerleri, çağrı yığınını gözden geçirebilir veya diğer kayıtlı olaylar, ilgili kod ve bu noktalarda kaydedilmiş değerler [arasında "zamanda" geriye veya ileri doğru gitmek](../debugger/intellitrace.md)için **IntelliTrace** penceresini kullanabilirsiniz.
 
-    |**Column**|**Şunu gösterir**|
+    |**Sütun**|**Şunu gösterir**|
     |----------------|-------------------|
     |**Tür**|Özel durumun .NET türü|
     |Gruplandırılabilen özel durumlar veya Gruplandırılmamış özel durumlar için **ileti** Için **en yeni ileti**|Özel durum tarafından girilen ileti|
@@ -158,7 +160,7 @@ IntelliTrace günlük (. iTrace) dosyasından hata ayıklamayı başlattığın�
 
 1. SharePoint bağıntı KIMLIĞINI kaynağından kopyalayın.
 
-    Örneğin:
+    Örnek:
 
     ![IntelliTrace &#45; SharePoint hatası &#45; bağıntı KIMLIĞI](../debugger/media/sharepointerror_intellitrace.png "SharePointError_IntelliTrace")
 
@@ -211,15 +213,15 @@ IntelliTrace günlük (. iTrace) dosyasından hata ayıklamayı başlattığın�
 
 ##### <a name="to-start-debugging-from-a-specific-thread"></a>Belirli bir iş parçacığından hata ayıklamaya başlamak için
 
-1. **Iş parçacıkları listesinde**bir iş parçacığı seçin.
+1. **Iş parçacıkları listesinde** bir iş parçacığı seçin.
 
-2. **Iş parçacıkları listesinin**en altında, **hata ayıklamayı Başlat**' ı seçin. Ayrıca, bir iş parçacığına çift tıklayabilirsiniz.
+2. **Iş parçacıkları listesinin** en altında, **hata ayıklamayı Başlat**' ı seçin. Ayrıca, bir iş parçacığına çift tıklayabilirsiniz.
 
     Uygulamanın başladığı yerden hata ayıklamaya başlamak için **ana Iş parçacığı**' ne çift tıklayın. [IntelliTrace özelliklerine](../debugger/intellitrace-features.md)bakın.
 
    Kullanıcının oluşturduğu iş parçacığı verileri, bir sunucunun oluşturduğu ve IIS tarafından barındırılan Web uygulamaları için yönettiği iş parçacıklarından daha faydalı olabilir.
 
-|**Column**|**Şunu gösterir**|
+|**Sütun**|**Şunu gösterir**|
 |----------------|-------------------|
 |**ID**|İş parçacığı KIMLIK numarası|
 |**Ad**|İş parçacığı adı. Adlandırılmamış iş parçacıkları "" olarak görünür \<No Name> .|
@@ -228,9 +230,9 @@ IntelliTrace günlük (. iTrace) dosyasından hata ayıklamayı başlattığın�
 
 ##### <a name="to-start-debugging-from-a-specific-test-step"></a>Belirli bir test adımından hata ayıklamayı başlatmak için
 
-1. **Test adımları kılavuzunu**genişlet. Bir test adımı seçin.
+1. **Test adımları kılavuzunu** genişlet. Bir test adımı seçin.
 
-2. **Test adımları kılavuzunun**en altında, **hata ayıklamayı Başlat**' ı seçin. Ayrıca, bir test adımına çift tıklayabilirsiniz.
+2. **Test adımları kılavuzunun** en altında, **hata ayıklamayı Başlat**' ı seçin. Ayrıca, bir test adımına çift tıklayabilirsiniz.
 
      Bu, seçilen test adımından sonra ilk geçerli IntelliTrace olayından hata ayıklamayı başlatır.
 
@@ -248,9 +250,9 @@ IntelliTrace günlük (. iTrace) dosyasından hata ayıklamayı başlattığın�
 ### <a name="modules"></a><a name="Modules"></a> Modüler
  Bu bölümde, hedef işlemin yüklendiği modüller gösterilmektedir. Modüller yüklendikleri sırada görüntülenir.
 
-|**Column**|**Şunu gösterir**|
+|**Sütun**|**Şunu gösterir**|
 |----------------|-------------------|
-|**Modül Adı**|Modül dosyası adı|
+|**Modül adı**|Modül dosyası adı|
 |**Modül yolu**|Modülün yüklendiği disk konumu|
 |**Modül KIMLIĞI**|Sürüme özgü olan modülün benzersiz tanıtıcısı ve eşleşen sembol (PDB) dosyalarına katkıda bulunur. Bkz. [simge (. pdb) dosyalarını ve kaynak dosyaları bulma](specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).|
 

@@ -1,5 +1,7 @@
 ---
 title: Microsoft Visual Studio Uzaktan Hata Ayıklama İzleyicisi'ne Bağlanılamıyor.
+description: "\"Microsoft Visual Studio Uzaktan Hata Ayıklama İzleyicisi bağlanılamıyor\", olası nedenler ve çözümler hakkında bilgi edinin."
+ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 04/14/2020
 ms.topic: reference
@@ -16,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1863caeaa3d3b0457d89913186337fa74ad5d8de
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: dc34a5f58f8bc3c47526cc8ba8516311e94f0631
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852250"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150840"
 ---
 # <a name="unable-to-connect-to-the-microsoft-visual-studio-remote-debugging-monitor"></a>Microsoft Visual Studio Uzaktan Hata Ayıklama İzleyicisi'ne Bağlanılamıyor.
 Bu ileti, uzaktan hata ayıklama İzleyicisi uzak makinede düzgün şekilde ayarlanmadığından veya ağ sorunları veya bir güvenlik duvarının varlığı nedeniyle uzak makineye erişilemediğinden oluşabilir.
@@ -59,7 +61,7 @@ Bu ileti, uzaktan hata ayıklama İzleyicisi uzak makinede düzgün şekilde aya
 3. Hedef makinede çalışan uzaktan hata ayıklayıcı sürümünün Visual Studio sürümünüz ile eşleştiğinden emin olun. Uzaktan hata ayıklayıcının doğru sürümünü almak için bkz. [Uzaktan hata ayıklama](../debugger/remote-debugging.md).
 
     > [!TIP]
-    > İşleme iliştiriyorsanız ve başarıyla bağlanıyorsanız ancak istediğiniz işlemi görmüyorsanız, **tüm kullanıcılardan Işlemleri göster onay kutusunu**seçin. Bu, farklı bir kullanıcı hesabı altına bağlıysanız süreçler gösterir.
+    > İşleme iliştiriyorsanız ve başarıyla bağlanıyorsanız ancak istediğiniz işlemi görmüyorsanız, **tüm kullanıcılardan Işlemleri göster onay kutusunu** seçin. Bu, farklı bir kullanıcı hesabı altına bağlıysanız süreçler gösterir.
 
 4. Bu adımlar bu hatayı gidermezse, [uzak makineye ulaşılamıyor](#dns)' a bakın.
 
@@ -71,7 +73,7 @@ Bu değerler doğruysa ve ileti **Windows kimlik doğrulama** modundan bahsetsin
 
 ## <a name="connection-with-the-remote-endpoint-was-terminated"></a><a name="connection_terminated"></a> Uzak uç nokta ile bağlantı sonlandırıldı
 
-Azure App Service bir uygulamada hata ayıklaması yapıyorsanız, **Işleme Ekle**yerine Cloud Explorer 'dan veya Sunucu Gezgini [hata ayıklayıcı Ekle](../debugger/remote-debugging-azure.md#remote_debug_azure_app_service) komutunu kullanmayı deneyin.
+Azure App Service bir uygulamada hata ayıklaması yapıyorsanız, **Işleme Ekle** yerine Cloud Explorer 'dan veya Sunucu Gezgini [hata ayıklayıcı Ekle](../debugger/remote-debugging-azure.md#remote_debug_azure_app_service) komutunu kullanmayı deneyin.
 
 Hata ayıklama Işlemi için **İliştir** öğesini kullanıyorsanız:
 
@@ -153,7 +155,7 @@ Bunu, aşağıdaki yollarla çözebilirsiniz:
     > [!NOTE]
     > Uzaktan hata ayıklayıcı 'yı uzak bir sunucuda çalıştırıyorsanız, uzaktan hata ayıklayıcı uygulamasına sağ tıklayın ve **yönetici olarak çalıştır** ' ı seçin (veya uzaktan hata ayıklayıcıyı bir hizmet olarak çalıştırabilirsiniz). Uzak bir sunucuda çalıştırmıyorsanız, normal olarak başlatmanız yeterlidir.
 
-- Uzaktan hata ayıklayıcıyı komut satırından **/Allow \<username> ** parametresiyle başlatabilirsiniz: `msvsmon /allow <username@computer>` .
+- Uzaktan hata ayıklayıcıyı komut satırından **/Allow \<username>** parametresiyle başlatabilirsiniz: `msvsmon /allow <username@computer>` .
 
 - Alternatif olarak, herhangi bir kullanıcının uzaktan hata ayıklama yapmasına izin verebilirsiniz. Uzaktan hata ayıklayıcı penceresinde, **araçlar > seçenekleri** iletişim kutusuna gidin. **Kimlik doğrulaması yok**' u seçtiğinizde, **herhangi bir kullanıcının hata ayıklamasına izin ver**' i kontrol edebilirsiniz. Ancak, bu seçeneği yalnızca diğer seçenekler başarısız olursa veya özel bir ağınız üzerinde olduğunuzda denemeniz gerekir.
 

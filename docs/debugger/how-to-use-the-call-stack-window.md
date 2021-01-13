@@ -1,6 +1,7 @@
 ---
 title: Hata ayıklayıcıda çağrı yığınını görüntüle | Microsoft Docs
-ms.custom: seodec18
+description: Şu anda Visual Studio 'daki yığında olan işlev veya yordam çağrılarını görüntülemek için çağrı yığını penceresini kullanın.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 10/29/2018
 ms.topic: how-to
 f1_keywords:
@@ -29,12 +30,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: aa91807459ea5c2d8f576891d0eafc35336347bc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 206c79a47ec59e02206332d80d1afe935fb72bdc
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85348750"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150632"
 ---
 # <a name="view-the-call-stack-and-use-the-call-stack-window-in-the-debugger"></a>Çağrı yığınını görüntüleyin ve hata ayıklayıcıda çağrı yığını penceresini kullanın
 
@@ -56,7 +57,7 @@ ms.locfileid: "85348750"
 
   ![Çağrı yığını penceresi](../debugger/media/dbg_basics_callstack_window.png "CallStackWindow")
 
-Sarı bir ok, yürütme işaretçisinin Şu anda bulunduğu yığın çerçevesini tanımlar. Varsayılan olarak, bu yığın çerçevesinin bilgileri kaynak, **Yereller**, **oto**'Ler, **İzle**ve **ayrıştırma** pencerelerinde görüntülenir. Hata ayıklayıcı bağlamını yığındaki başka bir çerçeveye değiştirmek için [başka bir yığın çerçevesine geçin](#bkmk_switch).
+Sarı bir ok, yürütme işaretçisinin Şu anda bulunduğu yığın çerçevesini tanımlar. Varsayılan olarak, bu yığın çerçevesinin bilgileri kaynak, **Yereller**, **oto**'Ler, **İzle** ve **ayrıştırma** pencerelerinde görüntülenir. Hata ayıklayıcı bağlamını yığındaki başka bir çerçeveye değiştirmek için [başka bir yığın çerçevesine geçin](#bkmk_switch).
 
 ## <a name="display-non-user-code-in-the-call-stack-window"></a>Çağrı yığını penceresinde Kullanıcı olmayan kodu görüntüle
 
@@ -108,7 +109,7 @@ Visual Studio Enterprise (yalnızca) ' de, hata ayıklarken çağrı yığını 
 
 ## <a name="change-the-optional-information-displayed"></a>Gösterildiği isteğe bağlı bilgileri değiştirme
 
-- **Çağrı yığını** penceresine sağ tıklayıp **göster \<**_the information that you want_**> **' i ayarlayın veya temizleyin.
+- **Çağrı yığını** penceresine sağ tıklayıp **göster \<**_the information that you want_**>**' i ayarlayın veya temizleyin.
 
 ## <a name="load-symbols-for-a-module-c-c-visual-basic-f"></a><a name="bkmk_symbols"></a> Modül için yükleme sembolleri (C#, C++, Visual Basic, F #)
 
@@ -140,7 +141,7 @@ Bkz. [simge (. pdb) ve kaynak dosyaları belirtme](../debugger/specify-symbol-do
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çağrı yığını penceresinde karışık kod ve eksik bilgiler](../debugger/mixed-code-and-missing-information-in-the-call-stack-window.md)
+- [Çağrı Yığını penceresinde karışık kod ve eksik bilgiler](../debugger/mixed-code-and-missing-information-in-the-call-stack-window.md)
 - [Hata ayıklayıcıda verileri görüntüleme](../debugger/viewing-data-in-the-debugger.md)
 - [Sembol (. pdb) ve kaynak dosyaları belirtme](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)
-- [Kesme noktaları kullanma](../debugger/using-breakpoints.md)
+- [Kesme noktalarını kullanma](../debugger/using-breakpoints.md)

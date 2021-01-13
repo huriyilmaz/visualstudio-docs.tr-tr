@@ -1,7 +1,8 @@
 ---
 title: Dll 'Leri ve yürütülebilir dosyaları görüntüleme
+description: Visual Studio 'da hata ayıklama oturumu sırasında uygulamanızın modüller penceresinde kullandığı dll 'Leri ve yürütülebilir dosyaları (. exe dosyaları) görüntüleyin.
+ms.custom: SEO-VS-2020, seodec18
 titleSuffix: Visual Studio Modules window
-ms.custom: seodec18
 ms.date: 11/04/2018
 ms.topic: how-to
 f1_keywords:
@@ -25,12 +26,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4fa284a44f75503a2890a15981d2b4f9947be2fa
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0471aa25b14111271e6f9219e8e849eed49f113f
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85348684"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150567"
 ---
 # <a name="view-dlls-and-executables-in-the-modules-window-c-c-visual-basic-f"></a>Modüller penceresinde dll 'Leri ve yürütülebilir dosyaları görüntüleme (C#, C++, Visual Basic, F #)
 
@@ -41,13 +42,13 @@ Visual Studio hata ayıklaması sırasında **modüller** penceresi, uygulamanı
 
 ## <a name="use-the-modules-window"></a>Modüller penceresini kullanma
 
-Modüller penceresini açmak için hata ayıklama sırasında Windows modülleri **Hata Ayıkla**' yı seçin  >  **Windows**  >  **Modules** (veya **Ctrl + Alt + U**tuşlarına basın).
+Modüller penceresini açmak için hata ayıklama sırasında Windows modülleri **Hata Ayıkla**' yı seçin  >    >   (veya **Ctrl + Alt + U** tuşlarına basın).
 
 Varsayılan olarak **modüller** penceresi modülleri yükleme sırasına göre sıralar. Herhangi bir pencere sütununa göre sıralamak için sütunun en üstündeki üstbilgiyi seçin.
 
 ## <a name="load-symbols"></a>Sembolleri yükle
 
-**Modüller** penceresindeki **sembol durumu** sütununda, hangi modüllerin hata ayıklama sembolleri yüklü olduğunu gösterir. Durum, **sembolleri yükleme Işleminin atlandığı**takdirde **pdb dosyasını bulamaz veya açamaz**, ya da **Include/exclude ayarı tarafından devre dışı**olarak yükleyebilirsiniz. sembolleri el ile yükleyebilirsiniz. Sembolleri yükleme ve kullanma hakkında daha fazla bilgi için bkz. [simge (. pdb) ve kaynak dosyaları belirtme](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).
+**Modüller** penceresindeki **sembol durumu** sütununda, hangi modüllerin hata ayıklama sembolleri yüklü olduğunu gösterir. Durum, **sembolleri yükleme Işleminin atlandığı** takdirde **pdb dosyasını bulamaz veya açamaz**, ya da **Include/exclude ayarı tarafından devre dışı** olarak yükleyebilirsiniz. sembolleri el ile yükleyebilirsiniz. Sembolleri yükleme ve kullanma hakkında daha fazla bilgi için bkz. [simge (. pdb) ve kaynak dosyaları belirtme](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).
 
 **Sembolleri el ile yüklemek için:**
 

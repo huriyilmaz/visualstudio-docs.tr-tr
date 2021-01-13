@@ -1,5 +1,7 @@
 ---
 title: Spy + + Başlat | Microsoft Docs
+description: Bir çözümde hata ayıklamak istediğinizde, Visual Studio 'dan veya bir komut isteminden Spy + + aracının nasıl başlatılacağını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 12/16/2018
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7743d36671e1c651b9bcfa89b315399c0696e26d
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 79796ec8984f9baee1d6b3e6c760d41297d70701
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851911"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150697"
 ---
 # <a name="how-to-start-spy"></a>Nasıl Yapılır: Spy++ Hizmetini Başlatma
 
@@ -26,7 +28,7 @@ Spy + + ' ya Visual Studio 'dan veya bir komut isteminde başlatabilirsiniz.
 > [!NOTE]
 > Spy + + ' un yalnızca bir örneğini çalıştırabilirsiniz. İkinci bir örnek başlatmaya çalışırsanız, yalnızca şu anda çalışan örneğin odağı almasına neden olur.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Spy + + aşağıdaki bileşenleri gerektirir. **Tek tek bileşenler** sekmesini seçerek ve ardından aşağıdaki bileşenleri seçerek Visual Studio yükleyicisi bu bileşenleri seçebilirsiniz.
 
@@ -48,7 +50,7 @@ Spy + + bağımsız olarak çalıştığı için, başlattıktan sonra Visual St
 
 1. Bir komut Istemi penceresinde dizinleri spyxx.exe içeren klasör olarak değiştirin. Genellikle, bu klasörün yolu... \\ *Visual Studio yükleme klasörü*\Common7\Tools \\ .
 
-2. **spyxx.exe**girin.
+2. **spyxx.exe** girin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Spy++ Kullanma](../debugger/using-spy-increment.md)

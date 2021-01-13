@@ -1,6 +1,7 @@
 ---
 title: Çalışma zamanı hata raporlama işlevi yazma | Microsoft Docs
-ms.custom: seodec18
+description: Visual Studio 'da özel çalışma zamanı hata raporlama işlevi yazma örneklerine bakın. _CrtDbgReportW aynı bildirime sahip olmalıdır ve 1 değerini döndürür.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -18,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 22445868cca1533cad3d7e395452a6b19e102952
-ms.sourcegitcommit: 023f52f10fb91850824558478cbfd2ec965054f0
+ms.openlocfilehash: 046384e664ab4aa9c031b76a1ecd6285a9de5502
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94407646"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150476"
 ---
 # <a name="how-to-write-a-run-time-error-reporting-function-c"></a>Nasıl yapılır: Run-Time hata raporlama Işlevi yazma (C++)
 Çalışma zamanı hataları için özel bir raporlama işlevi, ile aynı bildirime sahip olmalıdır `_CrtDbgReportW` . Hata ayıklayıcıya 1 değerini döndürmelidir.
@@ -123,4 +124,4 @@ int main()
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-[Yerel Çalışma Zamanı Denetimlerini Özelleştirme](../debugger/native-run-time-checks-customization.md)
+[Yerel Run-Time denetimleri özelleştirmesi](../debugger/native-run-time-checks-customization.md)

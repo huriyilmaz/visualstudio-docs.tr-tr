@@ -1,6 +1,7 @@
 ---
 title: Hata ayıklayıcıda ayrıştırılmış kodu görüntüle | Microsoft Docs
-ms.custom: seodec18
+description: Derleyici tarafından oluşturulan yönergelere karşılık gelen derleme kodunu göstermek için Visual Studio 'daki ayrıştırma penceresini kullanın.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 10/30/2018
 ms.topic: how-to
 f1_keywords:
@@ -22,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 23f297aa3fc549714a9b6327232a8a0b69c6138f
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 733eb439808d6cab2d290615751cf44ccd711022
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808174"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150619"
 ---
 # <a name="view-disassembly-code-in-the-visual-studio-debugger-c-c-visual-basic-f"></a>Visual Studio hata ayıklayıcısında ayrıştırılmış kodu görüntüleme (C#, C++, Visual Basic, F #)
 
@@ -50,7 +51,7 @@ Bütünleştirilmiş kod yönergelerine ek olarak, **ayrıştırılmış** bir p
 
 - Kaynak koda karşılık gelen satır numaraları.
 
-Derleme dili yönergeleri, yönerge adları için kısaltmalar ve değişkenler, Yazmaçları ve sabitler için *semboller* olan *anımsatıcıları*içerir. Her makine dili yönergesi, isteğe bağlı olarak bir veya daha fazla sembol tarafından bir derleme dili anımsatıcı tarafından temsil edilir.
+Derleme dili yönergeleri, yönerge adları için kısaltmalar ve değişkenler, Yazmaçları ve sabitler için *semboller* olan *anımsatıcıları* içerir. Her makine dili yönergesi, isteğe bağlı olarak bir veya daha fazla sembol tarafından bir derleme dili anımsatıcı tarafından temsil edilir.
 
 Derleme kodu, işlemci kayıtlarına veya yönetilen kod, ortak dil çalışma zamanı saklayıcıları için yoğun bir şekilde bağımlıdır. **Ayrıştırma** penceresini, kayıt içeriğini incelemenize olanak sağlayan **Yazmaçları** penceresiyle birlikte kullanabilirsiniz.
 
@@ -58,7 +59,7 @@ Makine kodu yönergelerini, derleme dili yerine ham sayısal biçiminde görünt
 
 ## <a name="use-the-disassembly-window"></a>Ayrıştırma penceresini kullanma
 
-**Ayrıştırma** penceresini etkinleştirmek için, **Araçlar**  >  **Seçenekler**  >  **hata ayıklama**altında **Adres düzeyinde hata ayıklamayı etkinleştir**' i seçin.
+**Ayrıştırma** penceresini etkinleştirmek için, **Araçlar**  >  **Seçenekler**  >  **hata ayıklama** altında **Adres düzeyinde hata ayıklamayı etkinleştir**' i seçin.
 
 Hata ayıklama sırasında **ayrıştırma** penceresini açmak için **Windows**  >  **ayrıştırılmış derleme** ' yi seçin veya **alt** + **8**' e basın.
 

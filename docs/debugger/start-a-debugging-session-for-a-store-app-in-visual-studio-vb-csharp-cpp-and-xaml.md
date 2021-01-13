@@ -1,6 +1,7 @@
 ---
 title: UWP uygulaması için hata ayıklama oturumu başlatma | Microsoft Docs
-ms.custom: seodec18
+description: Evrensel Windows Platformu (UWP) uygulaması için bir Visual Studio hata ayıklama oturumu başlatın. Hata ayıklama oturumunu yapılandırın ve uygulamayı başlatmak için kullanılacak yöntemi seçin.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/20/2018
 ms.topic: how-to
 f1_keywords:
@@ -35,12 +36,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: c4e025603fef11e278aee21b3c44f8d35d7cd34b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 003eaa7eefffaab9ff2b3c8c25a5ce5c0d41d43b
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85536558"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150372"
 ---
 # <a name="start-a-debugging-session-for-a-uwp-app"></a>UWP uygulaması için hata ayıklama oturumu başlatma
 
@@ -66,7 +67,7 @@ Hata ayıklamayı yapılandırmanın ve başlatmanın en kolay yolu, standart Vi
 
 1. Yeşil okun yanındaki açılan listeden hata ayıklama hedefini seçin. Yerel bir makine, doğrudan bağlı bir cihaz, yerel Visual Studio simülatör, uzak cihaz veya öykünücü seçebilirsiniz.
 
-1. Hata ayıklamayı başlatmak için, araç çubuğunda yeşil **Başlangıç** okunu veya hata **Debug**  >  **ayıklamayı Başlat hata**Ayıkla ' yı seçin veya **F5**tuşuna basın.
+1. Hata ayıklamayı başlatmak için, araç çubuğunda yeşil **Başlangıç** okunu veya hata   >  **ayıklamayı Başlat hata** Ayıkla ' yı seçin veya **F5** tuşuna basın.
 
    Visual Studio, hata ayıklayıcı ekli olarak uygulamayı oluşturur ve başlatır.
 
@@ -78,7 +79,7 @@ Visual Studio araç çubuğunda veya projenin hata ayıklama özelliği sayfası
 
 |Ad|Açıklama|
 |-|-|
-|**Yerel Makine**|Yerel makinenizdeki geçerli oturumdaki uygulamada hata ayıklayın.|
+|**Yerel makine**|Yerel makinenizdeki geçerli oturumdaki uygulamada hata ayıklayın.|
 |**Simülatör**|UWP uygulamaları için Visual Studio benzeticisinde uygulamada hata ayıklayın. Simülatör, yerel makinede mevcut olmayan dokunma hareketleri ve cihaz döndürme gibi cihaz işlevlerine benzetim yapan bir masaüstü penceresidir. Simülatör seçeneği, yalnızca uygulamanızın **hedef platformunun min. Version** değeri yerel makinedeki işletim sistemine eşit veya ondan küçükse kullanılabilir. Daha fazla bilgi için bkz. [simülatörde UWP uygulamaları çalıştırma](../debugger/run-windows-store-apps-in-the-simulator.md).|
 |**Uzak makine**|Ağ veya Ethernet kablosu üzerinden yerel makineye bağlı bir cihazdaki uygulamada hata ayıklayın. Visual Studio için Uzak Araçlar uzak cihazda yüklü ve çalışıyor olmalıdır. Daha fazla bilgi için bkz. [uzak MAKINEDE UWP uygulamaları çalıştırma](../debugger/run-windows-store-apps-on-a-remote-machine.md).|
 |**Cihaz**|USB bağlantılı bir cihazda uygulamada hata ayıklayın. Cihazın, geliştirici kilidi açılmış ve ekranın kilidinin açık olması gerekir.|
@@ -118,8 +119,8 @@ C++ uygulamalarında, Visual Studio varsayılan olarak yerel kod ile hata ayıkl
 |-|-|
 |**Yalnızca yönetilen**|Uygulamanızdaki yönetilen kodda hata ayıklayın. JavaScript kodu ve yerel C/C++ kodu yok sayılır.|
 |**Yalnızca yerel**|Uygulamanızda Yerel C/C++ kodunda hata ayıklayın. Yönetilen kod ve JavaScript kodu yok sayılır.|
-|**Karışık (yönetilen ve yerel)**|Uygulamanızda Yerel C/C++ kodu ve yönetilen kod hatalarını ayıklayın. JavaScript kodu yoksayıldı. C++ projelerinde, bu seçenek **yönetilen ve yerel**olarak adlandırılır.|
-|**Komut Dosyası**|Uygulamanızdaki JavaScript kodunda hata ayıklayın. Yönetilen kod ve yerel kod yok sayılır.|
+|**Karışık (yönetilen ve yerel)**|Uygulamanızda Yerel C/C++ kodu ve yönetilen kod hatalarını ayıklayın. JavaScript kodu yoksayıldı. C++ projelerinde, bu seçenek **yönetilen ve yerel** olarak adlandırılır.|
+|**SCRIPT**|Uygulamanızdaki JavaScript kodunda hata ayıklayın. Yönetilen kod ve yerel kod yok sayılır.|
 |**Betiği ile yerel**|Uygulamanızda Yerel C/C++ kodunda ve JavaScript kodunda hata ayıklayın. Yönetilen kod yok sayılır. Yalnızca C++ projelerinde veya arka plan görevlerinde kullanılabilir.|
 |**Yalnızca GPU (C++ AMP)**|Grafik işleme birimi (GPU) üzerinde çalışan yerel C++ kodunda hata ayıklayın. Yalnızca C++ projelerinde kullanılabilir.|
 
@@ -144,16 +145,16 @@ Varsayılan olarak, dağıtım hedefi olarak **uzak makine** ' yi seçtiğinizde
 
 **Kimlik doğrulama yöntemini değiştirmek için:**
 
-- C# ve Visual Basic uygulamaları için, **hata ayıklama** özelliği sayfasında, **hedef cihaz**olarak **uzak makine** ' yi seçin. Ardından, **kimlik doğrulama modu**için **hiçbiri** veya **Evrensel (şifrelenmemiş protokol)** seçeneğini belirleyin.
+- C# ve Visual Basic uygulamaları için, **hata ayıklama** özelliği sayfasında, **hedef cihaz** olarak **uzak makine** ' yi seçin. Ardından, **kimlik doğrulama modu** için **hiçbiri** veya **Evrensel (şifrelenmemiş protokol)** seçeneğini belirleyin.
 
-- C++ uygulamaları için hata ayıklayıcı altında **uzak makine** ' yi seçerek **hata ayıklama** Özellik sayfasında **başlatın** . Ardından **kimlik doğrulama türü**Için **kimlik doğrulaması yok** veya **Evrensel (şifrelenmemiş protokol)** seçeneğini belirleyin.
+- C++ uygulamaları için hata ayıklayıcı altında **uzak makine** ' yi seçerek **hata ayıklama** Özellik sayfasında **başlatın** . Ardından **kimlik doğrulama türü** Için **kimlik doğrulaması yok** veya **Evrensel (şifrelenmemiş protokol)** seçeneğini belirleyin.
 
 > [!CAUTION]
 > Uzaktan hata ayıklayıcı 'yı **none** veya **Universal (şifrelenmemiş protokol)** modlarında çalıştırdığınızda ağ güvenliği yoktur. Bu modları yalnızca güvenilir ağlarda, kötü amaçlı koddan veya saldırgan trafiğinden risk altında olduğunuzdan emin olun.
 
 ## <a name="debugging-start-options"></a><a name="BKMK_Start_the_debugging_session"></a> Hata ayıklama başlatma seçenekleri
 
-**Hata**  >  **ayıklamayı Başlat** ' ı seçtiğinizde ve **F5**tuşuna basarsanız, Visual Studio uygulamayı hata ayıklayıcı ekli olarak başlatır. Yürütme, kesme noktasına ulaşılana kadar devam eder, yürütmeyi el ile askıya alın, işlenmeyen bir özel durum oluşur veya uygulama sonlanır.
+**Hata**  >  **ayıklamayı Başlat** ' ı seçtiğinizde ve **F5** tuşuna basarsanız, Visual Studio uygulamayı hata ayıklayıcı ekli olarak başlatır. Yürütme, kesme noktasına ulaşılana kadar devam eder, yürütmeyi el ile askıya alın, işlenmeyen bir özel durum oluşur veya uygulama sonlanır.
 
 ### <a name="start-debugging-but-delay-app-start"></a><a name="BKMK_Start_debugging__F5__but_delay_the_app_start"></a> Hata ayıklamayı Başlat, ancak uygulama başlangıcını geciktir
 
@@ -173,7 +174,7 @@ Yerel veya uzak bir cihazda zaten yüklü olan veya çalışan bir UWP uygulamas
 
 Yüklü uygulamayı hemen başlatabilir veya başka bir yöntemle başlatıldığında hata ayıklayıcıda çalışacak şekilde ayarlayabilirsiniz. Daha fazla bilgi için bkz. [UWP uygulamaları için askıya alma, sürdürülme ve arka plan olaylarını tetikleme](../debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio.md).
 
-Hata ayıklayıcıda yüklü veya çalışan bir UWP uygulamasını başlatmak için **hata**Ayıkla  >  **diğer hata ayıklama hedefleri**  >  **yüklü uygulama paketi**hatalarını ayıkla ' yı seçin. Daha fazla yönerge için bkz. [yüklü uygulama paketinin hatalarını ayıklama](../debugger/debug-installed-app-package.md).
+Hata ayıklayıcıda yüklü veya çalışan bir UWP uygulamasını başlatmak için **hata** Ayıkla  >  **diğer hata ayıklama hedefleri**  >  **yüklü uygulama paketi** hatalarını ayıkla ' yı seçin. Daha fazla yönerge için bkz. [yüklü uygulama paketinin hatalarını ayıklama](../debugger/debug-installed-app-package.md).
 
 ### <a name="attach-the-debugger-to-a-running-windows-8x-app"></a><a name="BKMK_Attach_the_debugger_to_a_running_app_"></a> Hata ayıklayıcıyı çalışan bir Windows 8. x uygulamasına iliştirme
 
@@ -191,7 +192,7 @@ Hata ayıklayıcıyı bir uygulamaya eklemek için [!INCLUDE[win8_appname_long](
 
    1. PowerShell komut isteminde `Enable-AppxDebug <PackageFullName>` ,, \<PackageFullName> uygulamasının PackageFullName tanımlayıcısı olan öğesini girin.
 
-1. İşleme **Ekle hata ayıkla**öğesini seçin  >  **Attach to Process**.
+1. İşleme **Ekle hata ayıkla** öğesini seçin  >  .
 
 1. **Işleme İliştir** iletişim kutusunda, uzak cihazı **bağlantı hedefi** kutusunda belirtin.
 
@@ -200,8 +201,8 @@ Hata ayıklayıcıyı bir uygulamaya eklemek için [!INCLUDE[win8_appname_long](
 1. Hata ayıklamak istediğiniz kod türünü belirtmek için, **Ekle** kutusunun yanındaki **Seç**' i seçin.
 
 1. **Kod türünü seç** iletişim kutusunda şunlardan birini seçin:
-   - **Hata ayıklaması yapılacak kodun türünü otomatik olarak belirleme**veya
-   - **Bu kod türlerinde hata ayıklayın**ve ardından listeden bir veya daha fazla kod türü seçin.
+   - **Hata ayıklaması yapılacak kodun türünü otomatik olarak belirleme** veya
+   - **Bu kod türlerinde hata ayıklayın** ve ardından listeden bir veya daha fazla kod türü seçin.
 
 1. **Kullanılabilir işlemler** listesinde, hata ayıklamak için uygulama işlemini seçin.
 

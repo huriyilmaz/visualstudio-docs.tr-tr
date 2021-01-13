@@ -1,5 +1,7 @@
 ---
 title: Düzenle ve devam et (C#) | Microsoft Docs
+description: Visual Studio 'da hata ayıklama oturumunu durdurup yeniden başlatmadan hata ayıklama sırasında kodunuzda değişiklik yapmak ve değişiklikleri yapmak için Düzenle ve devam et ' i kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 10/04/2018
 ms.topic: how-to
 dev_langs:
@@ -15,17 +17,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 18d11f552d486fd9ebd7a95323e327324de14108
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: a0f8126689c0874c984a679da9b6debcb66a3075
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851859"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150658"
 ---
 # <a name="how-to-use-edit-and-continue-c"></a>Nasıl Yapılır: Düzenle ve Devam Et'i Kullanma (C#)
 Düzenle ve devam et ile, hata ayıklama sırasında kodunuzda, hata ayıklama oturumunu durdurup yeniden başlatmaya gerek kalmadan, değişiklikleri hata ayıklama sırasında kesme modunda yapabilirsiniz.
 
-Kod değişikliklerini kesme modunda yaptığınızda C# için Düzenle ve devam et, sonra **devam**et, **adımla**veya **sonraki ifadeyi ayarla**ya da bir hata ayıklayıcı penceresindeki bir işlevi değerlendir ' i kullanarak hata ayıklamaya devam edin.
+Kod değişikliklerini kesme modunda yaptığınızda C# için Düzenle ve devam et, sonra **devam** et, **adımla** veya **sonraki ifadeyi ayarla** ya da bir hata ayıklayıcı penceresindeki bir işlevi değerlendir ' i kullanarak hata ayıklamaya devam edin.
 
 Daha fazla bilgi için bkz. [Düzenle ve devam et (Visual C#)](../debugger/edit-and-continue-visual-csharp.md).
 
@@ -34,9 +36,9 @@ Daha fazla bilgi için bkz. [Düzenle ve devam et (Visual C#)](../debugger/edit-
 
 **Düzenle ve devam et 'i etkinleştirmek veya devre dışı bırakmak için:**
 
-1. Hata ayıklama oturumundaysanız, hata ayıklamayı**durdurun (hata ayıklama**  >  **durdurma** veya **SHIFT** + **F5**).
+1. Hata ayıklama oturumundaysanız, hata ayıklamayı **durdurun (hata ayıklama**  >  **durdurma** veya **SHIFT** + **F5**).
 
-1. **Araç**  >  **seçeneklerinde** (veya **hata ayıklama**  >  **seçeneklerinde**) genel **hata ayıklama**>,  >  **General** **Düzenle ve devam et 'i etkinleştir** onay kutusunu seçin veya temizleyin.
+1. **Araç**  >  **seçeneklerinde** (veya **hata ayıklama**  >  **seçeneklerinde**) genel **hata ayıklama**>,  >   **Düzenle ve devam et 'i etkinleştir** onay kutusunu seçin veya temizleyin.
 
 Ayar, hata ayıklama oturumunu başlattığınızda veya yeniden başlattığınızda devreye girer.
 
@@ -44,7 +46,7 @@ Ayar, hata ayıklama oturumunu başlattığınızda veya yeniden başlattığın
 
 1. Hata ayıklama sırasında kesme modunda, kaynak kodunuzda bir değişiklik yapın.
 
-1. **Hata ayıklama** menüsünde **devam et**, **adımla**veya **sonraki ifadeyi ayarla**' ya tıklayın veya bir hata ayıklayıcı penceresindeki bir işlevi değerlendirin.
+1. **Hata ayıklama** menüsünde **devam et**, **adımla** veya **sonraki ifadeyi ayarla**' ya tıklayın veya bir hata ayıklayıcı penceresindeki bir işlevi değerlendirin.
 
    Hata ayıklama yeni, derlenmiş kodla devam eder.
 

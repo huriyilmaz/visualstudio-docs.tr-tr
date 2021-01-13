@@ -1,5 +1,7 @@
 ---
 title: DebuggerTypeProxy kullanarak özel tür görüntüle | Microsoft Docs
+description: Bir tür için proxy (tek başına) belirtmek için bir DebuggerTypeProxyAttribute örneğini kullanın, türün hata ayıklayıcı penceresinde nasıl görüntüleneceğini değiştirin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -17,16 +19,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b98481cb1727ecad9289f63136291d500c0d577e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 94551605581890692f8a1366fa2235811ccdc5f2
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85347969"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150385"
 ---
 # <a name="tell-the-debugger-what-type-to-show-using-debuggertypeproxy-attribute-c-visual-basic-ccli"></a>Hata ayıklayıcıya DebuggerTypeProxy özniteliği kullanarak hangi türün gösterileceğini söyleyin (C#, Visual Basic, C++/CLı)
 
-<xref:System.Diagnostics.DebuggerTypeProxyAttribute> bir ara sunucu veya bir tür için tek başına belirtir ve türün hata ayıklayıcı penceresinde görüntülenme şeklini değiştirir. Proxy 'si olan bir değişkeni görüntülediğinizde, proxy, **ekranda**orijinal tür için temsil eder. Hata ayıklayıcı değişkeni penceresi yalnızca proxy türünün ortak üyelerini görüntüler. Özel Üyeler gösterilmez.
+<xref:System.Diagnostics.DebuggerTypeProxyAttribute> bir ara sunucu veya bir tür için tek başına belirtir ve türün hata ayıklayıcı penceresinde görüntülenme şeklini değiştirir. Proxy 'si olan bir değişkeni görüntülediğinizde, proxy, **ekranda** orijinal tür için temsil eder. Hata ayıklayıcı değişkeni penceresi yalnızca proxy türünün ortak üyelerini görüntüler. Özel Üyeler gösterilmez.
 
 Bu öznitelik, öğesine uygulanabilir:
 

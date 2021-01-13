@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1bb738e0e12598fd31c51c6b3cf2fa684badae40
-ms.sourcegitcommit: fdc21fc21d4a05d9ad8627b06aab7f072bfeb0a6
+ms.openlocfilehash: c992a1a4fca536f219a69b9ab629f6f602b4dfb0
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "98113611"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150515"
 ---
 # <a name="run-unit-tests-with-test-explorer"></a>Test Gezgini ile birim testleri çalıştırma
 
@@ -88,7 +88,7 @@ Testlerinizi çalıştırırken, yazarken ve yeniden çalıştırdığınızda, 
 
 ### <a name="run-tests-after-every-build"></a>Her derlemeden sonra Testleri Çalıştır
 ::: moniker range="vs-2017"
-|Düğme|Açıklama|
+|Düğme|Description|
 |-|-|
 |![Derlemeden sonra Çalıştır](../test/media/ute_runafterbuild_btn.png)|Her yerel derlemeden sonra birim testlerinizi çalıştırmak için standart menüdeki **Test** ' i seçin ve ardından **Test Gezgini** araç çubuğunda **derlemeden sonra Testleri Çalıştır** ' ı seçin.|
 
@@ -182,7 +182,7 @@ Bir nitelik genellikle kategori adı/değer çiftidir, ancak tek bir kategori de
 
 Yönetilen uygulamalar için Microsoft birim testi çerçevesinde, bir öznitelikte nitelik ad/değer çifti tanımlarsınız  <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute> . Test çerçevesi aşağıdaki önceden tanımlı nitelikleri de içerir:
 
-|Nitelik|Açıklama|
+|Nitelik|Description|
 |-|-----------------|
 |<xref:Microsoft.VisualStudio.TestTools.UnitTesting.OwnerAttribute>|Sahip kategorisi, birim test çerçevesi tarafından tanımlanır ve sahibin dize değerini sağlamanızı gerektirir.|
 |<xref:Microsoft.VisualStudio.TestTools.UnitTesting.PriorityAttribute>|Öncelik kategorisi, birim test çerçevesi tarafından tanımlanır ve öncelik için bir tamsayı değeri sağlamanızı gerektirir.|
@@ -305,7 +305,7 @@ Farklı ölçütlere göre filtrelemek için:
 > Aramalar büyük/küçük harfe duyarlıdır ve belirtilen dizeyle ölçüt değerinin herhangi bir bölümüyle eşleşir.
 
 ::: moniker range="vs-2017"
-|Leyicisini|Açıklama|
+|Leyicisini|Description|
 |-|-----------------|
 |**Nitelik**|Hem nitelik kategorisini hem de eşleşme değerlerini arar. Nitelik kategorilerini ve değerlerini belirten sözdizimi, birim test çerçevesi tarafından tanımlanır.|
 |**Project**|Test projesi adlarını eşleşmeler için arar.|
@@ -316,7 +316,7 @@ Farklı ölçütlere göre filtrelemek için:
 |**Sonucu**|Test Gezgini kategori adlarını eşleşmeler için arar: **başarısız testler**, **Atlanan testler**, **başarılı testler**.|
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-|Leyicisini|Açıklama|
+|Leyicisini|Description|
 |-|-----------------|
 |**Durum**|Test Gezgini kategori adlarını eşleşmeler için arar: **başarısız testler**, **Atlanan testler**, **başarılı testler**.|
 |**Lerdir**|Hem nitelik kategorisini hem de eşleşme değerlerini arar. Nitelik kategorilerini ve değerlerini belirten sözdizimi, birim test çerçevesi tarafından tanımlanır.|
@@ -377,6 +377,7 @@ Testler test Gezgini 'nden, test üzerindeki kod düzenleyicisine sağ tıklayı
 > [!NOTE]
 > Testler yalnızca soyut sınıflarda tanımlandığından ve örneklenmemiş olduğundan, bir testi soyut bir sınıfta çalıştıramazsınız. Testleri soyut sınıflarda çalıştırmak için soyut sınıftan türeten bir sınıf oluşturun.
 
+::: moniker range=">=vs-2019"
 ## <a name="test-audio-cue"></a>Test ses destesi
 Test Gezgini, bir test çalıştırması tamamlandığında bir ses oynayabilir. İki ses vardır: Test çalıştırmasının tüm geçen testlerle başarılı olduğunu belirten bir ses ve Test çalıştırmasının en az bir başarısız test ile tamamlandığını belirten ikinci bir ses. Bu sesleri varsayılan Windows 10 Ses iletişim kutusunda ayarlayabilirsiniz. Bu özellik Visual Studio 2019 güncelleştirme 16,9 Preview 3 ' te başlayarak kullanılabilir.
 
@@ -385,6 +386,7 @@ Test Gezgini, bir test çalıştırması tamamlandığında bir ses oynayabilir.
 3. **Microsoft Visual Studio** kategorisini bulun. Önceden ayarlanmış sesleri seçmek veya kendi ses dosyanıza gitmek için **test çalıştırması başarılı** veya **test çalıştırması başarısız** sesler ' i seçin.  
 ![Windows 10 Ses iletişim kutusu](../test/media/default-windows-10-sound-dialog.png)
 
+::: moniker-end
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Kodunuzun birim testi](../test/unit-test-your-code.md)

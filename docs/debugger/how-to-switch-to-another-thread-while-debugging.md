@@ -1,6 +1,7 @@
 ---
 title: Hata ayıklarken başka bir iş parçacığına geçme
-ms.custom: seodec18
+description: Visual Studio 'da çok iş parçacıklı bir uygulamada hata ayıklarken başka bir iş parçacığına geçmek için farklı yöntemleri gözden geçirin.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 04/27/2017
 ms.topic: how-to
 dev_langs:
@@ -16,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9306e68c7d8906c6956eb5e3810327898bc56567
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8df37beafe7a6c8f88631568ea9eb36394c105a5
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85348918"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150723"
 ---
 # <a name="how-to-switch-to-another-thread-while-debugging-in-visual-studio-c-visual-basic-c"></a>Nasıl yapılır: Visual Studio 'da hata ayıklarken başka bir Iş parçacığına geçme (C#, Visual Basic, C++)
 Çok iş parçacıklı bir uygulamada hata ayıklarken, çalışmakta olduğunuz iş parçacığından başka bir iş parçacığına geçiş yapmak için birkaç yöntemden birini kullanabilirsiniz.
@@ -48,4 +49,4 @@ Kod düzenleyicisinde iş parçacıklarını ve farklı çok iş parçacıklı h
 2. Listede, değiştirmek istediğiniz iş parçacığına tıklayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Çok İş Parçacıklı Uygulamalarda Hata Ayıklama](../debugger/debug-multithreaded-applications-in-visual-studio.md)
+- [Çok Iş parçacıklı uygulamalarda hata ayıklama](../debugger/debug-multithreaded-applications-in-visual-studio.md)

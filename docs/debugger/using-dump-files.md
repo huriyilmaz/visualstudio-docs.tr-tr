@@ -1,6 +1,7 @@
 ---
 title: Hata ayıklayıcıda döküm dosyalarını kullanma | Microsoft Docs
-ms.custom: seodec18
+description: Döküm dosyası, yürütülen bir uygulamanın ve yüklü modüllerin anlık görüntüsüdür. Uygulamaya hata ayıklama erişiminizin olmadığı durumlar için bir döküm dosyası oluşturmayı düşünün.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/05/2018
 ms.topic: conceptual
 f1_keywords:
@@ -22,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dbfd8ac877fce4b1808a76e3bb2a66ac595693de
-ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
+ms.openlocfilehash: 8bcd225bb64096d8a8e58e3cffd15e7bc94bf5cc
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "95970615"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150879"
 ---
 # <a name="dump-files-in-the-visual-studio-debugger"></a>Visual Studio hata ayıklayıcısındaki döküm dosyaları
 
@@ -67,7 +68,7 @@ Visual Studio 'da bir işlemde hata ayıklarken, hata ayıklayıcı bir özel du
 
 **Bir döküm dosyasını kaydetmek için:**
 
-1. Hata ayıklama sırasında bir hata veya kesme noktasında durdurulduğunda, **Debug**  >  **döküm kaydet**' i farklı Ayıkla ' yı seçin.
+1. Hata ayıklama sırasında bir hata veya kesme noktasında durdurulduğunda,   >  **döküm kaydet**' i farklı Ayıkla ' yı seçin.
 
 1. **Dökümü farklı kaydet** iletişim kutusunda, **farklı kaydet**' in altında, yığın Ile **mini döküm** veya **mini döküm** ' i seçin (varsayılan).
 
@@ -107,7 +108,7 @@ Visual Studio, döküm dosyasına dahil olmayan *. exe* dosyaları için bu konu
 
 1. Döküm dosyasını içeren klasör.
 2. Döküm dosyasının belirttiği modül yolu, dökümü toplayan makinedeki modül yoludur.
-3. **Araç** (veya **hata ayıklama**) seçeneklerinde belirtilen sembol yolları > **Options**  >  **hata ayıklama**  >  **sembolleri**. Ayrıca, **döküm dosyası Özeti** penceresinin **Eylemler** bölmesindeki **semboller** sayfasını açabilirsiniz. Bu sayfada, aramaya daha fazla konum ekleyebilirsiniz.
+3. **Araç** (veya **hata ayıklama**) seçeneklerinde belirtilen sembol yolları >   >  **hata ayıklama**  >  **sembolleri**. Ayrıca, **döküm dosyası Özeti** penceresinin **Eylemler** bölmesindeki **semboller** sayfasını açabilirsiniz. Bu sayfada, aramaya daha fazla konum ekleyebilirsiniz.
 
 ### <a name="use-the-no-binary-no-symbols-or-no-source-found-pages"></a>Hiçbir binary, simge yok veya hiçbir kaynak bulunamadı sayfası kullanın
 

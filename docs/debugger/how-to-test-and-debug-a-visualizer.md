@@ -1,5 +1,7 @@
 ---
 title: Görselleştiriciyi test etme ve hata ayıklama | Microsoft Docs
+description: Bir test sürücüsünden (Görselleştirici geliştirme ana bilgisayarı) çalıştırarak veya Visual Studio 'Ya yükleyerek ve bir hata ayıklayıcı penceresinden çağırarak Görselleştirici test edin ve hatalarını ayıklayın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -17,19 +19,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: df45b1f81430e733d6116768bf7c8823911ead59
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 1326fe9731a9d938678eb9397b106ab9e71b4fd5
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851872"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150671"
 ---
 # <a name="how-to-test-and-debug-a-visualizer"></a>Nasıl Yapılır: Görselleştiriciyi Test Etme ve Hata Ayıklama
 Görselleştirici yazdıktan sonra hata ayıklaması yapmanız ve test etmeniz gerekir.
 
 Görselleştirici test etmenin bir yolu, Visual Studio 'ya yüklenerek hata ayıklayıcı penceresinden çağırarak. (Bkz. [nasıl yapılır: Görselleştirici yüklemesi](../debugger/how-to-install-a-visualizer.md).) Bunu yaparsanız, hata ayıklayıcının ilk örneğinde çalışan görselleştiricisi eklemek ve hatalarını ayıklamak için Visual Studio 'nun ikinci bir örneğini kullanmanız gerekir.
 
-Görselleştirici hata ayıklamanın daha kolay bir yolu, Görselleştirici bir test sürücüsünden çalıştırılmaktır. Görselleştiricisi API 'Leri, *görselleştiricisi geliştirme Konağı*olarak adlandırılan böyle bir sürücü oluşturmayı kolaylaştırır.
+Görselleştirici hata ayıklamanın daha kolay bir yolu, Görselleştirici bir test sürücüsünden çalıştırılmaktır. Görselleştiricisi API 'Leri, *görselleştiricisi geliştirme Konağı* olarak adlandırılan böyle bir sürücü oluşturmayı kolaylaştırır.
 
 ### <a name="to-create-a-visualizer-development-host"></a>Görselleştiricisi geliştirme konağı oluşturmak için
 

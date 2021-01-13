@@ -1,5 +1,7 @@
 ---
 title: Paralel Iş parçacıklarında değişkenler için bir Izleme ayarlama | Microsoft Docs
+description: Visual Studio 'da paralel iş parçacıklarında değişkenler için bir izleme ayarlayın. Aynı anda birden çok iş parçacığında bir ifadenin tuttuğu değerleri görüntüler.
+ms.custom: SEO-VS-2020
 ms.date: 04/25/2017
 ms.topic: how-to
 f1_keywords:
@@ -17,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9fb0d5ac60ea5ab89b02a624488b5df4f8a7164b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 28aeffb629a44c296fb9a349e165c7ce88f70b0c
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85348632"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150580"
 ---
 # <a name="set-a-watch-on-variables-in-parallel-threads-in-visual-studio-c-visual-basic-c"></a>Visual Studio 'da paralel Iş parçacıklarında değişkenler için bir Izleme ayarlama (C#, Visual Basic, C++)
 Paralel izleme penceresi, bir ifadenin birden çok iş parçacığında tuttuğu değerleri aynı anda görüntüleyebilirsiniz. Her satır bir uygulamada çalışan bir iş parçacığını temsil eder, ancak bir iş parçacığı birden çok satırda gösterilebilir. Daha belirgin olarak, her satır, işlev imzası geçerli yığın çerçevesindeki işlevle eşleşen bir işlev çağrısını temsil eder. Sütunlardaki öğeleri sıralayabilir, yeniden sıralayabilir, kaldırabilir ve gruplandırabilirsiniz. İş parçacıklarını bayrak, unbayrak, dondurma (askıya al) ve çözme (devam etme). **Paralel izleme** penceresinde aşağıdaki sütunlar görüntülenir:
@@ -74,7 +76,7 @@ Paralel izleme penceresi, bir ifadenin birden çok iş parçacığında tuttuğu
 
 ### <a name="to-freeze-or-thaw-threads"></a>İş parçacıklarını dondurmak veya çözme
 
-- Satır için kısayol menüsünü açın ve **dondurma** veya **çözme**seçeneğini belirleyin.
+- Satır için kısayol menüsünü açın ve **dondurma** veya **çözme** seçeneğini belirleyin.
 
 ### <a name="to-export-the-data-in-the-parallel-watch-window"></a>Verileri paralel izleme penceresi dışarı aktarmak için
 
@@ -85,6 +87,6 @@ Paralel izleme penceresi, bir ifadenin birden çok iş parçacığında tuttuğu
 - **Boole ifadesine göre filtrele** kutusuna bir Boole ifadesi girin. Hata ayıklayıcı, her bir iş parçacığı bağlamı için ifadeyi değerlendirir. Yalnızca değerin `true` görüntülendiği satırlar görüntülenir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Çok İş Parçacıklı Uygulamalarda Hata Ayıklama](../debugger/debug-multithreaded-applications-in-visual-studio.md)
+- [Çok Iş parçacıklı uygulamalarda hata ayıklama](../debugger/debug-multithreaded-applications-in-visual-studio.md)
 - [Nasıl yapılır: GPU Iş parçacıkları penceresini kullanma](../debugger/how-to-use-the-gpu-threads-window.md)
 - [İzlenecek yol: C++ AMP uygulamasında hata ayıklama](/cpp/parallel/amp/walkthrough-debugging-a-cpp-amp-application)

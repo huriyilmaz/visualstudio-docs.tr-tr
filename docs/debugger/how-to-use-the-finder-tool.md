@@ -1,5 +1,7 @@
 ---
 title: Bulucu aracını kullanma | Microsoft Docs
+description: Hata ayıklama oturumu sırasında pencere özelliklerini veya iletilerini göstermek için Spy + + aracının pencereyi bul iletişim kutusunda Bulucu aracını kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2e92223359c6bc78b2a98c234c03ee139c052f86
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 41ca277962f81b3cd1c35ebcf8a940e8168a6803
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851846"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150606"
 ---
 # <a name="how-to-use-the-finder-tool"></a>Nasıl yapılır: Bulucu Aracı Kullanma
 Pencere özelliklerini veya iletilerini göstermek için **pencereyi bul** Iletişim kutusunda Bulucu aracını kullanabilirsiniz. Finder aracı devre dışı bırakılan alt pencereleri de bulabilir ve devre dışı bırakılan alt pencereler çakıştığında, hangi pencerenin vurgulanmasını ayırt edebilir.
@@ -43,7 +45,7 @@ Pencere özelliklerini veya iletilerini göstermek için **pencereyi bul** Ileti
    > [!TIP]
    > Ekran dağınıklığını azaltmak için Spy 'ı **Gizle** seçeneğini belirleyin. Bu seçenek, ana Spy + + penceresini gizleme ve yalnızca diğer uygulamalarınızın üzerine görünen **pencereyi bul** iletişim kutusunu bırakır. **Tamam** ' ı veya **iptal**' i tıklattığınızda veya **Spy + +** seçeneğini belirlediğinizde, Spy + + ana penceresi geri yüklenir.
 
-4. **Göster**altında **Özellikler** veya **iletiler**' i seçin.
+4. **Göster** altında **Özellikler** veya **iletiler**' i seçin.
 
 5. **Tamam**'a basın.
 

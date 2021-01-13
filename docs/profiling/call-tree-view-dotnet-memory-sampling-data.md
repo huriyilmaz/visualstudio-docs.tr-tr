@@ -1,5 +1,7 @@
 ---
 title: Çağrı ağacı görünümü-.NET Bellek Örnekleme verileri | Microsoft Docs
+description: Çağrı ağacı görünümü, profili oluşturulmuş uygulamada geçen işlev yürütme yolları için .NET Bellek Örnekleme verilerini görüntüleme hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: 76ea78f37cbc8c5e2b6df900aa0e3f320346300a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c1a36f4661abb5535c71fcebcf9e486408a56b22
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74779772"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150814"
 ---
 # <a name="call-tree-view---net-memory-sampling-data"></a>Çağrı ağacı görünümü-.NET Bellek Örnekleme verileri
 Çağrı ağacı görünümü, profili oluşturulmuş uygulamada geçen işlev yürütme yollarını görüntüler. Ağacın kökü, uygulamanın veya bileşenin giriş noktasıdır. Her işlev düğümü, çağırdığı tüm işlevleri ve bu işlev çağrıları hakkındaki .NET bellek ayırma verilerini listeler.
@@ -35,7 +37,7 @@ ms.locfileid: "74779772"
 |------------|-----------------|
 |**İşlem Kimliği**|Profil oluşturma çalıştırmasının işlem KIMLIĞI (PID).|
 |**İşlem adı**|Sürecin adı.|
-|**Modül Adı**|İşlevi içeren modülün adı.|
+|**Modül adı**|İşlevi içeren modülün adı.|
 |**Modül yolu**|İşlevi içeren modülün yolu.|
 |**Kaynak Dosya**|Bu işlevin tanımını içeren kaynak dosya.|
 |**İşlev adı**|İşlevin tam adı.|

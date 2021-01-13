@@ -1,5 +1,7 @@
 ---
-title: Arayan-Aranan görünümü-.NET Bellek Örnekleme verileri | Microsoft Docs
+title: Caller-Callee görünümü-.NET Bellek Örnekleme verileri | Microsoft Docs
+description: Çağıran/çağrılan görünümü, seçilen bir işlev için .NET Bellek Örnekleme verilerini ve Performans Gezgini içindeki üst ve alt işlevlerini görüntüleme hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: 50e278e858ea086c83b29ef4eebf6b48ee8e477e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a5f0e3613dc9b122a6fac915f4683d9f7b859ee3
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74773315"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150905"
 ---
 # <a name="callercallee-view---net-memory-sampling-data"></a>Arayan/Aranan görünümü-.NET Bellek Örnekleme verileri
 Arayan/çağrılan görünümü seçili bir işlev ve üst ve alt işlevleri için .NET bellek profili oluşturma verilerini görüntüler. Arayan/çağrılan görünümü üç kılavuz içerir.
@@ -33,7 +35,7 @@ Arayan/çağrılan görünümü seçili bir işlev ve üst ve alt işlevleri iç
 |------------|-----------------|
 |**İşlem Kimliği**|Profil oluşturma çalıştırmasının işlem KIMLIĞI (PID).|
 |**İşlem adı**|Sürecin adı.|
-|**Modül Adı**|İşlevi içeren modülün adı.|
+|**Modül adı**|İşlevi içeren modülün adı.|
 |**Modül yolu**|İşlevi içeren modülün yolu.|
 |**Kaynak Dosya**|Bu işlevin tanımını içeren kaynak dosya.|
 |**İşlev adı**|İşlevin tam adı.|

@@ -1,5 +1,7 @@
 ---
 title: Hata ayıklayıcıda GPU Iş parçacıklarını görüntüleme | Microsoft Docs
+description: Visual Studio 'da hata ayıklaması yaptığınız uygulamada GPU üzerinde çalışan iş parçacıklarını incelemek ve bunlarla çalışmak için GPU Iş parçacıkları penceresini kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cbbb49a1017fb0bc65300f3c16050db4954e1103
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5919ac657d828e87e48b8cfb3f4f643e1187f701
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85348723"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150593"
 ---
 # <a name="how-to-use-the-gpu-threads-window-c"></a>Nasıl yapılır: GPU Iş parçacıkları penceresini kullanma (C++)
 GPU Iş parçacıkları penceresinde, hata ayıklaması yaptığınız uygulamadaki GPU üzerinde çalışan iş parçacıklarını inceleyebilir ve bunlarla çalışabilirsiniz. GPU üzerinde çalışan uygulamalar hakkında daha fazla bilgi için bkz. [C++ amp genel bakış](/cpp/parallel/amp/cpp-amp-overview).
@@ -54,7 +56,7 @@ GPU Iş parçacıkları penceresinde, hata ayıklaması yaptığınız uygulamad
 
 1. **Çözüm Gezgini**' de, proje için kısayol menüsünü açın ve ardından **Özellikler**' i seçin.
 
-2. Projenin **Özellik sayfaları** penceresinde, **yapılandırma özellikleri**altında **hata ayıklama**öğesini seçin.
+2. Projenin **Özellik sayfaları** penceresinde, **yapılandırma özellikleri** altında **hata ayıklama** öğesini seçin.
 
 3. **Başlatmak Için hata ayıklayıcı** listesinde, **yerel Windows hata ayıklayıcısı**' nı seçin. **Hata ayıklayıcı türü** listesinde **yalnızca GPU**' yı seçin. GPU üzerinde çalışan koddaki kesme noktalarına bölmek için bu hata ayıklayıcıyı seçmeniz gerekir.
 
@@ -92,7 +94,7 @@ GPU Iş parçacıkları penceresinde, hata ayıklaması yaptığınız uygulamad
 
 ### <a name="to-freeze-or-thaw-a-row-of-threads"></a>İş parçacığı satırını dondurmak veya çözme
 
-- Satır için kısayol menüsünü açın ve **dondurma** veya **çözme**seçeneğini belirleyin.
+- Satır için kısayol menüsünü açın ve **dondurma** veya **çözme** seçeneğini belirleyin.
 
 ### <a name="to-flag-or-unflag-a-row-of-threads"></a>İş parçacıklarının bir satırına bayrak eklemek veya bayrak kaldırmak için
 
@@ -103,6 +105,6 @@ GPU Iş parçacıkları penceresinde, hata ayıklaması yaptığınız uygulamad
 - GPU Iş parçacıkları penceresinde bayrak düğmesini seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Çok İş Parçacıklı Uygulamalarda Hata Ayıklama](../debugger/debug-multithreaded-applications-in-visual-studio.md)
+- [Çok Iş parçacıklı uygulamalarda hata ayıklama](../debugger/debug-multithreaded-applications-in-visual-studio.md)
 - [Nasıl yapılır: paralel Izleme penceresini kullanma](../debugger/how-to-use-the-parallel-watch-window.md)
 - [İzlenecek yol: C++ AMP uygulamasında hata ayıklama](/cpp/parallel/amp/walkthrough-debugging-a-cpp-amp-application)

@@ -1,5 +1,7 @@
 ---
-title: C çalışma zamanı kitaplığı olmadan çalışma zamanı denetimlerini kullanma | Microsoft Docs
+title: C Run-Time kitaplığı olmadan Run-Time denetimleri kullanma | Microsoft Docs
+description: /NODEFAULTLIB' i kullanarak programınızı C çalışma zamanı kitaplığı olmadan bağlayabilirsiniz. Bunu yaparsanız ve çalışma zamanı denetimlerini kullanmak istiyorsanız RunTmChk. lib ile bağlantı oluşturmanız gerekir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -23,15 +25,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 029aafa634ba0e6837cdc7d4304d0419420dd912
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bfa83533b1ae929bf443dd6c3eb7f7dc3e7db165
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72728657"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150866"
 ---
 # <a name="using-run-time-checks-without-the-c-run-time-library"></a>C Çalışma Zamanı Kitaplığını Kullanmadan Çalışma Zamanı Denetimlerini Kullanma
-Programınızı, **/nodefaultlib**kullanarak C çalışma zamanı kitaplığı olmadan bağlantılandırdıysanız ve çalışma zamanı denetimlerini kullanmak Istiyorsanız RunTmChk. lib ile bağlantı oluşturmanız gerekir.
+Programınızı, **/nodefaultlib** kullanarak C çalışma zamanı kitaplığı olmadan bağlantılandırdıysanız ve çalışma zamanı denetimlerini kullanmak Istiyorsanız RunTmChk. lib ile bağlantı oluşturmanız gerekir.
 
 `_RTC_Initialize` programınızı çalışma zamanı denetimleri için başlatır. C çalışma zamanı kitaplığıyla bağlantı yapmazsanız, aşağıdaki gibi, çağrılmadan önce programınızın çalışma zamanı hata denetimleri ile derlenip derlenmediğini denetlemeniz gerekir `_RTC_Initialize` :
 
@@ -64,4 +66,4 @@ extern "C" _RTC_error_fnW __cdecl _CRT_RTC_INITW(
 Varsayılan hata raporlama işlevini yükledikten sonra, ile ek hata raporlama işlevlerini yükleyebilirsiniz `_RTC_SetErrorFuncW` . Daha fazla bilgi için bkz. [_RTC_SetErrorFuncW](/cpp/c-runtime-library/reference/rtc-seterrorfuncw).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-[Nasıl yapılır: yerel çalışma zamanı denetimlerini kullanma](../debugger/how-to-use-native-run-time-checks.md)
+[Nasıl yapılır: yerel Run-Time denetimleri kullanma](../debugger/how-to-use-native-run-time-checks.md)
