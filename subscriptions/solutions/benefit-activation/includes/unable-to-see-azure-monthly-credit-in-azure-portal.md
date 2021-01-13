@@ -10,12 +10,12 @@ user.type: subscriber
 tags: benefit, azure
 subscription.type: vl, cloud, retail, partner
 sap.id: 8dedd10e-cb1c-2eb1-bcda-fe00b07ac903
-ms.openlocfilehash: f12da1b45520de87bfd94f5b4597d10820968a11
-ms.sourcegitcommit: 60e5a8a7ee91854356797d05f3b502572c4a4884
+ms.openlocfilehash: 48f52f1381bb890942e6f5ed3f1772c0735b1fb8
+ms.sourcegitcommit: cd7f122c6850cf442a4ca42d51d05c7a8fe9038d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96916316"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98147370"
 ---
 ## <a name="im-unable-to-see-my-azure-monthly-credit-in-the-azure-portal"></a>Azure portal Azure aylık kredimi göremiyorum.
 
@@ -29,10 +29,12 @@ Ayrıca, [alternatif bir hesabı](https://docs.microsoft.com/visualstudio/subscr
 
 Hesabı ile ayarladığınız e-postayla [Azure Portal](https://portal.azure.com/) oturum açmanız gerekir. Örneğin, aylık kredinizi alternatif hesabınızla etkinleştirdiyseniz, bu e-posta ile her zaman Azure aboneliğinizde oturum açmanız gerekir. 
 
-## <a name="azure-directories"></a>Azure dizinleri 
+## <a name="azure-directories"></a>Azure dizinleri
+ 
 Azure aboneliğinizin bir parçası olarak birden çok dizine sahip olabilirsiniz. Azure aboneliğini ayarladığınız dizini kullandığınızdan emin olun. Azure portal, sağ üst köşedeki hesap simgesine tıklayarak dizinleri görüntüleyebilir ve değiştirebilirsiniz. 
 
-## <a name="how-to-activate"></a>Etkinleştirme
+## <a name="how-to-activate-your-azure-monthly-credit"></a>Azure aylık kredinizi etkinleştirme
+
 1. [Abonelikler portalında](https://my.visualstudio.com/benefits) oturum açın  
 1. Avantajlar sayfasındaki Araçlar bölümünde yer alan Azure geliştirme/test kredisi kutucuğunu bulun ve avantaj kutucuğunun altındaki bağlantıyı etkinleştir ' e tıklayın. Azure aylık kredi kutucuğunu bulamıyorsanız, aboneliğinizin aylık kredi içerdiğini doğrulamak için lütfen [avantajlar karşılaştırma sayfasını](https://visualstudio.microsoft.com/vs/benefits/#azure?cat=visual-studio-enterprise-subscription) kullanın. 
 1. Mevcut bir Azure aboneliğiniz yoksa, bir tane oluşturmak için gerekli kişisel bilgileri doldurmanız istenir.  
@@ -42,7 +44,7 @@ Azure aboneliğinizin bir parçası olarak birden çok dizine sahip olabilirsini
 
 Visual Studio abonelikleri avantajı aracılığıyla oluşturulan Azure abonelikleri, ücretli aboneliklere uygulanmayan kısıtlamalardan etkilenebilir. VM’leri ve Azure hizmetlerini oluşturmak için bazı coğrafi bölgeler kullanılamayabilir ve bazı hizmet türleri sağlanamayabilir. Varsayılan kota ücretli aboneliklerden daha düşük olabilir. 
 
-## <a name="more-information"></a>Daha fazla bilgi 
+## <a name="more-information-about-azure-monthly-credits"></a>Azure aylık krediler hakkında daha fazla bilgi
 
 Etkinleştirme, uygunluk ve diğer destek kaynakları hakkında [daha fazla bilgi edinin](https://docs.microsoft.com/visualstudio/subscriptions/vs-azure) .  
 

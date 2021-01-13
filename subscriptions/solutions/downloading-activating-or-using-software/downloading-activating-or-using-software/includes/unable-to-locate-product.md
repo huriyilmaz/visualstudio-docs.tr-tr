@@ -10,12 +10,12 @@ user.type: subscriber
 tags: download, activate
 subscription.type: vl, cloud, retail, partner
 sap.id: 53a7a6d4-7755-352a-5a65-715d78af84bf
-ms.openlocfilehash: c862de5bc5006abc60650a26132453f260a51a89
-ms.sourcegitcommit: 60e5a8a7ee91854356797d05f3b502572c4a4884
+ms.openlocfilehash: e4d24412ab4e3aee22a9184d23ddbefb6ceb35fa
+ms.sourcegitcommit: cd7f122c6850cf442a4ca42d51d05c7a8fe9038d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96916328"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98147508"
 ---
 ## <a name="im-unable-to-locate-the-product-i-need-to-download"></a>İndirmem gereken ürünü bulamıyor.
 
@@ -30,8 +30,8 @@ Tüm Abonelik türleri için kullanılabilir yazılım başlıklarının [kapsam
 1. Burada, popüler indirmelerin bir listesini görebilir veya belirli bir ürünün arama yapabileceksiniz. Note: aynı oturum açma adresiyle ilişkili birden fazla aboneliğiniz varsa, hangi aboneliğin görüntülediğine bakmaksızın en üst düzey aboneliğe dahil edilen İndirmeleri görürsünüz.
 1. İndirmek istediğiniz ürün için kullanılabilir olan tüm anahtarları görmek için "anahtar al" düğmesine tıklayın. Ardından, indirme başlamak için bir anahtar gerektiriyorsa ürün anahtarı talep etmek için "talep anahtarı" na tıklayın. 
 
-## <a name="product-keys-page"></a>Ürün anahtarları sayfası 
+## <a name="find-available-product-keys"></a>Kullanılabilir ürün anahtarlarını bulun
 Ayrıca, [](https://my.visualstudio.com/productkeys)   Tüm anahtarların toplama Işleminde kullanılabildiği ürün anahtarları sayfasını da ziyaret edebilirsiniz. Anahtarın ne zaman ve neden talep edildiğinizi belirlemek için Notlar sütununu düzenleyebilirsiniz. 
 
-## <a name="more-information"></a>Daha fazla bilgi 
+## <a name="more-information-about-product-keys"></a>Ürün anahtarları hakkında daha fazla bilgi
 Ürün anahtarları ve İndirmeleri bulma ve oluşturma hakkında [daha fazla bilgi edinin](https://docs.microsoft.com/visualstudio/subscriptions/find-keys) .  

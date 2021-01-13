@@ -10,12 +10,12 @@ user.type: subscriber
 tags: renewing
 subscription.type: retail
 sap.id: b324c31f-5d44-4cc2-537a-9c354bc5fbfc
-ms.openlocfilehash: c888f89c7fa6a02a18539493e2fda5afc5298712
-ms.sourcegitcommit: 60e5a8a7ee91854356797d05f3b502572c4a4884
+ms.openlocfilehash: f518f4458181d39a140ee5652b08ea861f2130ee
+ms.sourcegitcommit: cd7f122c6850cf442a4ca42d51d05c7a8fe9038d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96916340"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98147384"
 ---
 ## <a name="renewing-subscriptions-through-microsoft-store"></a>Microsoft Store aracılığıyla abonelikleri yenileme 
 
@@ -23,7 +23,7 @@ Dahil edilen geliştirici araçlarına ve yazılımına erişimi sağlamak için
 
 Aboneliğinizin süresi dolmamışsa, aboneliklerinizi [abonelikler portalındaki](https://my.visualstudio.com/subscriptions)görüntüleyerek zaman aşımı tarihi bulacaksınız. 
 
-## <a name="subscriptions-available"></a>Abonelikler kullanılabilir 
+## <a name="subscriptions-available-for-renewal"></a>Abonelikler yenileme için kullanılabilir
 
 Microsoft Store aracılığıyla yenilemek için kullanılabilen perakende Visual Studio abonelikleri şunlardır: 
 

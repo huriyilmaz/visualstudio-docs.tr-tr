@@ -10,12 +10,12 @@ user.type: subscriber, admin
 tags: purchasing
 subscription.type: vl, cloud, retail, partner
 sap.id: c374762c-640b-8b2c-d049-bda9545e903c
-ms.openlocfilehash: b16123ef691036c027ac6046616699624e53b10a
-ms.sourcegitcommit: 60e5a8a7ee91854356797d05f3b502572c4a4884
+ms.openlocfilehash: 90c56d7be8e4f3e687ff602619b5eda80807b030
+ms.sourcegitcommit: cd7f122c6850cf442a4ca42d51d05c7a8fe9038d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96916344"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98147601"
 ---
 ## <a name="purchase-subscriptions-through-microsoft-store"></a>Microsoft Store aracılığıyla abonelikleri satın alma 
 
@@ -37,7 +37,7 @@ Bu aboneliğin her biri, ilk satın alma veya mevcut bir aboneliği yenileme se�
 1. "Indir-yeni" seçeneğine tıklayın ve sepete ekleyin. Note: bazen mağaza varsayılan olarak yenileme fiyatını gösterir, lütfen yeni bir abonelik satın aldığınızdan emin olun. Mağaza, yenileme fiyatındaki satın alma sırasında geçerli bir aboneliğiniz olduğunu doğrulamaz. Geçerli bir eşleşen abonelik olmadan yenilemeyi etkinleştiremeyeceksiniz.
 1. Kontrol etme. Onay sayfasında, aboneliği etkinleştirmek için kullanmanız gereken bir ürün anahtarı sağlanacaktır. Aşağıdaki yönergelere bakın. 
 
-## <a name="how-to-activate"></a>Etkinleştirme  
+## <a name="how-to-activate-your-subscription"></a>Aboneliğinizi etkinleştirme 
 
 Microsoft Store aracılığıyla bir Visual Studio aboneliği satın aldıktan sonra, satın alma sürecinizden sonra aldığınız ödeme onayı sayfasından veya onay e-postalarından etkinleştirme işlemini başlatabilirsiniz. 
 
@@ -47,7 +47,7 @@ Microsoft Store aracılığıyla bir Visual Studio aboneliği satın aldıktan s
 
 Abonelik artık [abonelikler sayfasında](https://my.visualstudio.com/subscriptions) görünür olmalıdır ve tüm abonelik avantajlarınıza erişiminizin olması gerekir. 
 
-## <a name="more-information"></a>Daha fazla bilgi 
+## <a name="compare-subscription-benefits"></a>Abonelik avantajlarını karşılaştırın
 
 [Her Visual Studio aboneliğinin avantajlarını anlamak için](https://visualstudio.microsoft.com/vs/pricing/) abonelik avantajlarını ve fiyatlandırmasını karşılaştırın. 
 

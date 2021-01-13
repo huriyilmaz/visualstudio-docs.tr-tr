@@ -10,12 +10,12 @@ user.type: subscriber
 tags: benefit, ems
 subscription.type: vl, cloud, retail, partner
 sap.id: 8dedd10e-cb1c-2eb1-bcda-fe00b07ac903
-ms.openlocfilehash: df582df95932ae82e9be319f347f79745e1ad277
-ms.sourcegitcommit: 60e5a8a7ee91854356797d05f3b502572c4a4884
+ms.openlocfilehash: 065527c86384e6eef46149ecc7d9606268bc1695
+ms.sourcegitcommit: cd7f122c6850cf442a4ca42d51d05c7a8fe9038d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96916317"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98147693"
 ---
 ## <a name="im-unable-to-activate-my-enterprise-mobility--security-ems-benefit"></a>Enterprise Mobility + Security (EMS) avantajımı etkinleştiremiyorum.
 
@@ -40,6 +40,6 @@ Yeni Microsoft 365 E5 geliştirici aboneliğinizi almak için panonuza gidin ve 
 
 Office 365 E3 aboneliğinizi sildikten ve değiştirme Microsoft 365 E5 aboneliğinizi oluşturduktan sonra, verilerinizi geçirebilmeniz için Office 365 E3 kiracınız 60 gün boyunca kullanılabilir olacaktır. 
 
-## <a name="more-information"></a>Daha fazla bilgi 
+## <a name="more-information-about-office-365-e3-subscriptions"></a>Office 365 E3 abonelikleri hakkında daha fazla bilgi
 
 Uygunluk hakkında [daha fazla bilgi edinin](https://docs.microsoft.com/visualstudio/subscriptions/vs-m365) , Office 365 E3 'den Microsoft 365 ve SSS 'ye nasıl geçiş yapılacağını öğrenin.  

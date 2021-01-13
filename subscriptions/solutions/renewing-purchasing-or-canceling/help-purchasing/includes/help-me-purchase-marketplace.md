@@ -10,18 +10,18 @@ user.type: subscriber, admin
 tags: purchasing
 subscription.type: vl, cloud, retail, partner
 sap.id: c374762c-640b-8b2c-d049-bda9545e903c
-ms.openlocfilehash: 21555c11df2671a86d97d6f6c855756cd7e2d3b4
-ms.sourcegitcommit: 60e5a8a7ee91854356797d05f3b502572c4a4884
+ms.openlocfilehash: 2cb74dda511efbed7a204ef11a163097efc2f54b
+ms.sourcegitcommit: cd7f122c6850cf442a4ca42d51d05c7a8fe9038d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96916345"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98147637"
 ---
 ## <a name="purchase-monthly-subscriptions-through-visual-studio-marketplace"></a>Visual Studio Market aracılığıyla aylık abonelikler satın alın 
 
 Aylık bulut abonelikleriyle, uzun vadeli bir sözleşme yapmadan Visual Studio ve Azure DevOps 'u kiralayabilirsiniz. Bu abonelikler [Visual Studio Market](https://marketplace.visualstudio.com/subscriptions)aracılığıyla satın alınabilir.  
 
-## <a name="visual-studio-marketplace"></a>Visual Studio Market 
+## <a name="billing-in-the-visual-studio-marketplace"></a>Visual Studio Market faturalama 
 
 Faturalandırma, Microsoft Azure aboneliğiniz üzerinden sağlanır. Henüz bir Azure aboneliğiniz yoksa ilk satın alımınızı yaparken ücretsiz bir şekilde oluşturabilirsiniz.  
 
@@ -30,7 +30,7 @@ Faturalandırma, Microsoft Azure aboneliğiniz üzerinden sağlanır. Henüz bir
 
 Aylık Visual Studio abonelikleri Azure faturalaması hakkında [daha fazla bilgi edinin](https://docs.microsoft.com/visualstudio/subscriptions/vscloud-billing-faq) . 
 
-## <a name="more-information"></a>Daha fazla bilgi 
+## <a name="more-information-about-subscription-benefits"></a>Abonelik avantajları hakkında daha fazla bilgi
 
 [Her Visual Studio aboneliğinin avantajlarını anlamak için](https://visualstudio.microsoft.com/vs/pricing/) abonelik avantajlarını ve fiyatlandırmasını karşılaştırın. 
 
