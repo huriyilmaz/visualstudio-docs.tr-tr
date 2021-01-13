@@ -13,12 +13,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 50f14cc2a7eafe5d65e0c6a6af54bafa2ebb5a1f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 21f6ac868268c40ea6df837596546f86fd9a3a44
+ms.sourcegitcommit: cd7f122c6850cf442a4ca42d51d05c7a8fe9038d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75569705"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98129477"
 ---
 # <a name="extract-a-method-refactoring"></a>Bir yöntemi yeniden düzenlemeyi Ayıkla
 
@@ -40,17 +40,17 @@ Bu yeniden düzenleme için geçerlidir:
 
    - C#:
 
-       ![Vurgulanan kod-C #](media/extractmethod-highlight-cs.png)
+       ! Program sınıfı için C# kodunu gösteren ekran görüntüsü. Bu sınıfın ana işlevinde, bir kod satırı vurgulanır.] (medya/extractmethod-highlight-cs.png)
 
    - Visual Basic:
 
-       ![Vurgulanan kod Visual Basic](media/extractmethod-highlight-vb.png)
+       ![Ana Sub için Visual Basic kodu gösteren ekran görüntüsü. Bu alt öğesinde, bir kod satırı vurgulanır.](media/extractmethod-highlight-vb.png)
 
 2. Sonra, aşağıdakilerden birini yapın:
 
    - **Klavye**
-      - **CTRL + R**, ardından **CTRL + M**tuşlarına basın. (Klavye kısayolunuzun seçtiğiniz profile göre farklı olabileceğini unutmayın.)
-      - **CTRL**tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek ve Önizleme penceresi açılır penceresinden **yöntemi Ayıkla** ' yı seçin.
+      - **CTRL + R**, ardından **CTRL + M** tuşlarına basın. (Klavye kısayolunuzun seçtiğiniz profile göre farklı olabileceğini unutmayın.)
+      - **CTRL** tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek ve Önizleme penceresi açılır penceresinden **yöntemi Ayıkla** ' yı seçin.
    - **Fare**
       - **> ayıkla > Düzenle**' yi seçin.
       - Koda sağ tıklayın ve **> Ayıkla metodunu ayıkla > yeniden Düzenle**' yi seçin.
@@ -63,11 +63,11 @@ Bu yeniden düzenleme için geçerlidir:
 
    - C#:
 
-      ![Rename Yöntemi-C #](media/extractmethod-rename-cs.png)
+      ![Program sınıfı için C# kodunu gösteren ekran görüntüsü. Bir yöntem adı vurgulanır ve açılan pencereyi yeniden adlandır penceresi açıktır.](media/extractmethod-rename-cs.png)
 
    - Visual Basic:
 
-      ![Yöntemi yeniden adlandır-Visual Basic](media/extractmethod-rename-vb.png)
+      ![Ana Sub için Visual Basic kodu gösteren ekran görüntüsü. Bir yöntem adı vurgulanır ve açılan pencereyi yeniden adlandır penceresi açıktır.](media/extractmethod-rename-vb.png)
 
 3. Değişikliğin ne kadar memnunsanız **Uygula** düğmesini seçin veya **ENTER** tuşuna basın ve değişiklikler uygulanır.
 

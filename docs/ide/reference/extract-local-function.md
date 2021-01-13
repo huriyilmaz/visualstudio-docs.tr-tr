@@ -1,6 +1,6 @@
 ---
 title: Yerel işlevi ayıklama
-description: Kodu seçip CTRL + R, CTRL + M yazarak kodun bir parçasını kendi yöntemine dönüştürün.
+description: Kodu seçip CTRL + R, CTRL + M yazarak kodun bir parçasını kendi işlevine dönüştürün.
 ms.date: 02/19/2020
 ms.topic: reference
 author: mikadumont
@@ -10,12 +10,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: 031fbe22ec61837d489df7a6af923ef0cd2454c7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e007246b85671a0f4606bbdb3d1e9c4e0dc83541
+ms.sourcegitcommit: cd7f122c6850cf442a4ca42d51d05c7a8fe9038d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77515332"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98129464"
 ---
 # <a name="extract-local-function-refactoring"></a>Yerel işlev yeniden düzenlemesi Ayıkla
 
@@ -33,11 +33,11 @@ Bu yeniden düzenleme için geçerlidir:
 
 1. Ayıklanacak kodu vurgulayın.
 
-2. **CTRL**tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için. 
+2. **CTRL** tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için. 
 
 3. **Yerel işlevi ayıkla** seçeneğini belirleyin.
 
-    ![Yerel işlevi ayıklama](media/extract-local-function.png)
+    ![Bir çizgi vurgulanmış şekilde Visual Studio Code penceresinin ekran görüntüsü. Hızlı Eylemler ve yeniden düzenlemeler menüsü açık ve yerel işlevi Ayıkla seçilidir.](media/extract-local-function.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

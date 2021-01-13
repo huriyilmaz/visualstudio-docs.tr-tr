@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 58e3557d260b821055c533fc703a1f47949c5bfb
-ms.sourcegitcommit: a778dffddb05d2f0f15969eadaf9081c9b466196
+ms.openlocfilehash: ef287616f5b214566a273817c229d9105bf253c5
+ms.sourcegitcommit: cd7f122c6850cf442a4ca42d51d05c7a8fe9038d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91781052"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98129490"
 ---
 # <a name="tutorial-create-an-aspnet-core-app-with-typescript-in-visual-studio"></a>Öğretici: Visual Studio 'da TypeScript ile ASP.NET Core uygulaması oluşturma
 
@@ -34,7 +34,7 @@ Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://
 
 ::: moniker-end
 
-Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
+Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
 > [!div class="checklist"]
 > * ASP.NET Core projesi oluşturma
 > * TypeScript desteği için NuGet paketini ekleyin
@@ -47,17 +47,17 @@ Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 * Visual Studio 'Nun yüklü olması ve ASP.NET Web geliştirme iş yüküne sahip olmanız gerekir.
 
     ::: moniker range=">=vs-2019"
-    Visual Studio 2019 ' ü henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads/)   sayfasına giderek ücretsiz olarak yükleme yapın.
+    Visual Studio 2019 ' ü henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads/) sayfasına giderek ücretsiz olarak yükleme yapın.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Visual Studio 2017 ' ü henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads/)   sayfasına giderek ücretsiz olarak yükleme yapın.
+    Visual Studio 2017 ' ü henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads/) sayfasına giderek ücretsiz olarak yükleme yapın.
     ::: moniker-end
 
     İş yükünü yüklemeniz gerekir, ancak zaten Visual Studio 'ya sahipseniz **Araçlar**  >  **ve Özellikler al.**.. ' a giderek Visual Studio yükleyicisi açılır. **ASP.net ve Web geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
 
 ## <a name="create-a-new-aspnet-core-mvc-project"></a>Yeni bir ASP.NET Core MVC projesi oluşturma
 
-Visual Studio, *projedeki*tek bir uygulama için dosyaları yönetir. Proje kaynak kodu, kaynakları ve yapılandırma dosyalarını içerir.
+Visual Studio, *projedeki* tek bir uygulama için dosyaları yönetir. Proje kaynak kodu, kaynakları ve yapılandırma dosyalarını içerir.
 
 >[!NOTE]
 > Boş bir ASP.NET Core projesiyle başlamak ve bir TypeScript ön ucu eklemek için, bkz. [TypeScript ile ASP.NET Core](https://www.typescriptlang.org/docs/handbook/asp-net-core.html) .
@@ -69,12 +69,12 @@ Bu öğreticide, ASP.NET Core MVC uygulaması için kod içeren basit bir proje 
 1. Yeni bir proje oluşturma.
 
     ::: moniker range=">=vs-2019"
-    Başlangıç penceresi açık değilse **Dosya**  >  **Başlangıç penceresi**' ni seçin. Başlangıç penceresinde **Yeni proje oluştur**' u seçin. Dil açılan listesinde **C#**' ı seçin. Arama kutusuna **ASP.net**yazın ve ardından **ASP.NET Core Web uygulaması**' nı seçin. **İleri**’yi seçin.
+    Başlangıç penceresi açık değilse **Dosya**  >  **Başlangıç penceresi**' ni seçin. Başlangıç penceresinde **Yeni proje oluştur**' u seçin. Dil açılan listesinde **C#**' ı seçin. Arama kutusuna **ASP.net** yazın ve ardından **ASP.NET Core Web uygulaması**' nı seçin. **İleri**’yi seçin.
 
     Proje için bir ad yazın ve **Oluştur**' u seçin.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Üstteki menü çubuğundan **Dosya**  >  **Yeni**  >  **Proje**' yi seçin. **Yeni proje** iletişim kutusunun sol bölmesinde, **Visual C#**' ı genişletin ve ardından **.NET Core**' u seçin. Orta bölmede, **Web uygulaması-C# ASP.NET Core**seçin ve ardından **Tamam**' ı seçin.
+    Üstteki menü çubuğundan **Dosya**  >  **Yeni**  >  **Proje**' yi seçin. **Yeni proje** iletişim kutusunun sol bölmesinde, **Visual C#**' ı genişletin ve ardından **.NET Core**' u seçin. Orta bölmede, **Web uygulaması-C# ASP.NET Core** seçin ve ardından **Tamam**' ı seçin.
     ::: moniker-end
     **ASP.NET Core Web uygulaması** proje şablonunu görmüyorsanız, **ASP.net ve Web geliştirme** iş yükünü eklemeniz gerekir. Ayrıntılı yönergeler için bkz. [Önkoşullar](#prerequisites).
 
@@ -92,7 +92,7 @@ Bu öğreticide, ASP.NET Core MVC uygulaması için kod içeren basit bir proje 
 
    Visual Studio, NuGet paketini Çözüm Gezgini içindeki **Bağımlılıklar** düğümüne ekler.
 
-1. Proje düğümüne sağ tıklayın ve **> yeni öğe Ekle**' yi seçin. **TYPESCRIPT JSON yapılandırma dosyasını**seçin ve ardından **Ekle**' ye tıklayın.
+1. Proje düğümüne sağ tıklayın ve **> yeni öğe Ekle**' yi seçin. **TYPESCRIPT JSON yapılandırma dosyasını** seçin ve ardından **Ekle**' ye tıklayın.
 
    Visual Studio *tsconfig.js* dosyayı proje köküne ekler. TypeScript derleyicisi [seçeneklerini yapılandırmak](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) için bu dosyayı kullanabilirsiniz.
 
@@ -100,6 +100,7 @@ Bu öğreticide, ASP.NET Core MVC uygulaması için kod içeren basit bir proje 
 
    ```json
    {
+     "compileOnSave": true,
      "compilerOptions": {
        "noImplicitAny": false,
        "noEmitOnError": true,
@@ -116,11 +117,11 @@ Bu öğreticide, ASP.NET Core MVC uygulaması için kod içeren basit bir proje 
 
    *OutDir* seçeneği, TypeScript derleyicisi tarafından transpiled olan düz JavaScript dosyaları için çıkış klasörünü belirtir.
 
-   Bu yapılandırma, TypeScript kullanımına yönelik temel bir giriş sağlar. Diğer senaryolarda, örneğin, [Gulp veya WebPack](https://www.typescriptlang.org/docs/handbook/asp-net-core.html)kullanırken, transpiled JavaScript dosyaları için *Wwwroot/js*yerine araçlar ve yapılandırma tercihlerinize bağlı olarak farklı bir ara konum isteyebilirsiniz.
+   Bu yapılandırma, TypeScript kullanımına yönelik temel bir giriş sağlar. Diğer senaryolarda, örneğin, [Gulp veya WebPack](https://www.typescriptlang.org/docs/handbook/asp-net-core.html)kullanırken, transpiled JavaScript dosyaları için *Wwwroot/js* yerine araçlar ve yapılandırma tercihlerinize bağlı olarak farklı bir ara konum isteyebilirsiniz.
 
 1. Çözüm Gezgini, proje düğümüne sağ tıklayın ve **> yeni klasör ekle**' yi seçin. Yeni klasör için ad *betikleri* kullanın.
 
-1. *Betikler* klasörüne sağ tıklayın ve **> yeni öğe Ekle**' yi seçin. **TypeScript dosyasını**seçin, dosya adı için *app. TS* adını yazın ve ardından **Ekle**' ye tıklayın.
+1. *Betikler* klasörüne sağ tıklayın ve **> yeni öğe Ekle**' yi seçin. **TypeScript dosyasını** seçin, dosya adı için *app. TS* adını yazın ve ardından **Ekle**' ye tıklayın.
 
    Visual Studio, *Scripts* klasörüne *app. TS* ekler.
 
@@ -159,7 +160,7 @@ Bu öğreticide, ASP.NET Core MVC uygulaması için kod içeren basit bir proje 
 
     `lastName`Son adı koda geri eklemeyi seçin.
 
-1. *Görünümler/giriş* klasörünü açın ve *Index. cshtml*dosyasını açın.
+1. *Görünümler/giriş* klasörünü açın ve *Index. cshtml* dosyasını açın.
 
 1. Aşağıdaki HTML kodunu dosyanın sonuna ekleyin.
 
@@ -172,7 +173,7 @@ Bu öğreticide, ASP.NET Core MVC uygulaması için kod içeren basit bir proje 
     </div>
     ```
 
-1. *Görünümler/paylaşılan* klasörünü açın ve ardından *_Layout. cshtml*dosyasını açın.
+1. *Görünümler/paylaşılan* klasörünü açın ve ardından *_Layout. cshtml* dosyasını açın.
 
 1. Çağrısının önüne şu komut dosyası başvurusunu ekleyin `@RenderSection("Scripts", required: false)` :
 
@@ -182,7 +183,7 @@ Bu öğreticide, ASP.NET Core MVC uygulaması için kod içeren basit bir proje 
 
 ## <a name="build-the-application"></a>Uygulama oluşturma
 
-1. **Build > Build Solution**öğesini seçin.
+1. **Build > Build Solution** öğesini seçin.
 
    Uygulamayı çalıştırdığınızda otomatik olarak oluştursa da, yapı işlemi sırasında gerçekleşen bir şeye göz atmak istiyoruz.
 
@@ -192,7 +193,7 @@ Bu öğreticide, ASP.NET Core MVC uygulaması için kod içeren basit bir proje 
 
 ## <a name="run-the-application"></a>Uygulamayı çalıştırma
 
-1. Uygulamayı çalıştırmak için **F5** tuşuna**basın (hata ayıklama**  >  **başlatma hata**ayıklaması).
+1. Uygulamayı çalıştırmak için **F5** tuşuna **basın (hata ayıklama**  >  **başlatma hata** ayıklaması).
 
     Uygulama bir tarayıcıda açılır.
 
@@ -234,11 +235,11 @@ Bu öğreticide, ASP.NET Core MVC uygulaması için kod içeren basit bir proje 
 1. Çözüm Gezgini paket yüklü değilse, NPM düğümüne sağ tıklayın ve **paketleri geri yükle**' yi seçin.
 
    >[!NOTE]
-   > Bazı senaryolarda Çözüm Gezgini, [burada](https://github.com/aspnet/Tooling/issues/479)açıklanan bilinen bir sorun nedeniyle bir NPM paketinin *package.js* eşitlenmemiş olduğunu gösteriyor olabilir. Örneğin, paket yüklendiğinde yüklü değil olarak görünebilir. Çoğu durumda, *package.js*Çözüm Gezgini güncelleştirebilir, Visual Studio 'yu yeniden başlatarak ve bu makalede daha önce anlatıldığı gibi *package.js* dosyaya yeniden ekleyebilirsiniz.
+   > Bazı senaryolarda Çözüm Gezgini, [burada](https://github.com/aspnet/Tooling/issues/479)açıklanan bilinen bir sorun nedeniyle bir NPM paketinin *package.js* eşitlenmemiş olduğunu gösteriyor olabilir. Örneğin, paket yüklendiğinde yüklü değil olarak görünebilir. Çoğu durumda, *package.js* Çözüm Gezgini güncelleştirebilir, Visual Studio 'yu yeniden başlatarak ve bu makalede daha önce anlatıldığı gibi *package.js* dosyaya yeniden ekleyebilirsiniz.
 
-1. Çözüm Gezgini, betikler klasörüne sağ tıklayın ve **Add**  >  **Yeni öğe**Ekle ' yi seçin.
+1. Çözüm Gezgini, betikler klasörüne sağ tıklayın ve   >  **Yeni öğe** Ekle ' yi seçin.
 
-1. **TypeScript dosyası**' nı seçin, *Library. TS*yazın ve **Ekle**' yi seçin.
+1. **TypeScript dosyası**' nı seçin, *Library. TS* yazın ve **Ekle**' yi seçin.
 
 1. *Library. TS*' de aşağıdaki kodu ekleyin.
 
@@ -276,7 +277,7 @@ Bu öğreticide, ASP.NET Core MVC uygulaması için kod içeren basit bir proje 
    </div>
    ```
 
-1. Uygulamayı çalıştırmak için **F5** tuşuna**basın (hata ayıklama**  >  **başlatma hata**ayıklaması).
+1. Uygulamayı çalıştırmak için **F5** tuşuna **basın (hata ayıklama**  >  **başlatma hata** ayıklaması).
 
     Uygulama tarayıcıda açılır.
 
