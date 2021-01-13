@@ -1,5 +1,7 @@
 ---
 title: Kanalları Paralel Yığınlar penceresinde görüntüleme | Microsoft Docs
+description: Çoklu iş parçacıklı uygulamalarda hata ayıklamaya yardımcı olması için paralel yığınları kullanın. Tüm iş parçacıkları ve görev merkezli çağrı yığını bilgileri için yığın bilgilerini görüntüleyebilirsiniz.
+ms.custom: SEO-VS-2020
 ms.date: 11/20/2018
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e9728346bc4c6d805bb0febd3a0d5bef0ed809a5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 55a004e65a39f4a2b7bbf972cec36d689bf88d97
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62902427"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150177"
 ---
 # <a name="view-threads-and-tasks-in-the-parallel-stacks-window-c-visual-basic-c"></a>Paralel Yığınlar penceresinde iş parçacıklarını ve görevleri görüntüleme (C#, Visual Basic, C++)
 
@@ -38,7 +40,7 @@ ms.locfileid: "62902427"
 
 ## <a name="use-the-parallel-stacks-window"></a>Paralel Yığınlar penceresini kullanma
 
-**Paralel Yığınlar** penceresini açmak için bir hata ayıklama oturumunda olması gerekir. **Debug**  >  **Windows**  >  **paralel yığınları**Hata Ayıkla ' yı seçin.
+**Paralel Yığınlar** penceresini açmak için bir hata ayıklama oturumunda olması gerekir.   >  **Windows**  >  **paralel yığınları** Hata Ayıkla ' yı seçin.
 
 ### <a name="toolbar-controls"></a>Araç çubuğu denetimleri
 
@@ -46,18 +48,18 @@ ms.locfileid: "62902427"
 
 ![Paralel Yığınlar penceresinde araç çubuğu](../debugger/media/parallel_stackstoolbar.png "Paralel Yığınlar araç çubuğu")
 
-|Simge|Denetim|Açıklama|
+|Simge|Denetim|Description|
 |-|-|-|
 |![İş parçacıkları/görevler açılan kutusu](media/parallel_toolbar1.png "İş parçacıkları/görevler açılan kutusu")|**Iş parçacıkları** / **Görevler** açılan kutusu|Görünümü iş parçacıklarının çağrı yığınları ve görev yığınları arasında geçirir. Daha fazla bilgi için bkz. [Görevler Görünümü](#tasks-view) ve [iş parçacıkları görünümü](#threads-view).|
 |![Yalnızca bayraklı simgeyi göster](media/parallel_toolbar2.png "Yalnızca bayraklı simgeyi göster")|Yalnızca bayraklı göster|Yalnızca **GPU Iş parçacıkları** penceresi ve **paralel izleme** penceresi gibi diğer hata ayıklayıcı pencerelerinin bayrak eklenmiş iş parçacıkları için çağrı yığınlarını gösterir.|
-|![Değiştirme yöntemi görünümü simgesi](media/parallel_toolbar3.png "Değiştirme yöntemi görünümü simgesi")|**Yöntem görünümünü** değiştirme|Çağrı yığını görünümleri ve **Yöntem görünümü**arasında geçiş yapar. Daha fazla bilgi için bkz. [Yöntem görünümü](#method-view).|
+|![Değiştirme yöntemi görünümü simgesi](media/parallel_toolbar3.png "Değiştirme yöntemi görünümü simgesi")|**Yöntem görünümünü** değiştirme|Çağrı yığını görünümleri ve **Yöntem görünümü** arasında geçiş yapar. Daha fazla bilgi için bkz. [Yöntem görünümü](#method-view).|
 |![Geçerli simgeye Otomatik Kaydır](media/parallel_toolbar4.png "Geçerli simgeye Otomatik Kaydır")|Geçerli yığın çerçevesine Otomatik Kaydır|Grafiği geçerli yığın çerçevesinin görünümü olacak şekilde oto kaydır. Bu özellik, geçerli yığın çerçevesini diğer pencerelerin veya büyük grafiklerde yeni bir kesme noktasına vurdığınızda yararlı olur.|
-|![Yakınlaştır simgesini değiştirme](media/parallel_toolbar5.png "Yakınlaştır simgesini değiştirme")|Yakınlaştırma denetimini değiştirme|Pencerenin sol tarafındaki Yakınlaştırma denetimini gösterir veya gizler. <br /><br />Yakınlaştırma denetiminin görünürlüğüne bakılmaksızın, **CTRL** tuşuna basarak ve fare tekerleğini açıp veya **CTRL** + **+ SHIFT** tuşlarına basarak yakınlaştırarak yakınlaştırabilirsiniz + **+** **Ctrl** + **Shift** + **-** . |
+|![Yakınlaştır simgesini değiştirme](media/parallel_toolbar5.png "Yakınlaştır simgesini değiştirme")|Yakınlaştırma denetimini değiştirme|Pencerenin sol tarafındaki Yakınlaştırma denetimini gösterir veya gizler. <br /><br />Yakınlaştırma denetiminin görünürlüğüne bakılmaksızın, **CTRL** tuşuna basarak ve fare tekerleğini açıp veya **CTRL** + **+ SHIFT** tuşlarına basarak yakınlaştırarak yakınlaştırabilirsiniz + **+**  +  + **-** . |
 
 ### <a name="stack-frame-icons"></a>Yığın çerçevesi simgeleri
 Aşağıdaki simgeler, tüm görünümlerde etkin ve geçerli yığın çerçeveleri hakkında bilgi sağlar:
 
-|Simge|Açıklama|
+|Simge|Description|
 |-|-|
 |![Sarı ok](media/icon_parallelyellowarrow.gif)|Geçerli iş parçacığının geçerli konumunu (etkin yığın çerçevesi) gösterir.|
 |![İş parçacıkları simgesi](media/icon_parallelthreads.gif)|Geçerli olmayan bir iş parçacığının geçerli konumunu (etkin yığın çerçevesi) gösterir.|
@@ -68,7 +70,7 @@ Aşağıdaki kısayol menü öğeleri, **Iş parçacıkları** görünümü veya
 
 ![Paralel Yığınlar penceresinde kısayol menüsü](../debugger/media/parallel_contmenu.png "Paralel Yığınlar penceresinde kısayol menüsü")
 
-|Menü öğesi|Açıklama|
+|Menü öğesi|Description|
 |-|-|
 |**Bayrak**|Seçili öğeyi bayraklar.|
 |**İşaretsiz**|Seçili öğenin bayraklarını kaldır.|

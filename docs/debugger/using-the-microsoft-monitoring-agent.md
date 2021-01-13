@@ -1,5 +1,7 @@
 ---
 title: Microsoft Monitoring Agent kullanma | Microsoft Docs
+description: Hatalar, performans sorunları ve diğer sorunlar için, ASP.NET Web uygulamalarını ve SharePoint 2010 ve 2013 uygulamalarını izlemek için Microsoft Monitoring Agent kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: fd0a86b9-015d-408e-aa58-59a0a97826ac
@@ -8,19 +10,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f110af9aab6ae2ea01137043c834d38b29c4d1f9
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 16c0655cdd55a1825f0a872ef013392bc9e5db79
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89600011"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150112"
 ---
 # <a name="using-the-microsoft-monitoring-agent-c-visual-basic"></a>Microsoft Monitoring Agent kullanma (C#, Visual Basic)
 
-**Microsoft Monitoring Agent**kullanarak IIS ile barındırılan ASP.NET Web uygulamalarını ve SharePoint 2010 veya 2013 uygulamalarını hatalara, performans sorunlarına veya diğer sorunlar için yerel olarak izleyebilirsiniz. Tanılama olaylarını aracıdan bir IntelliTrace günlük (.iTrace) dosyasına kaydedebilirsiniz. Daha sonra, tüm Visual Studio tanılama araçlarıyla ilgili sorunları ayıklamak için Visual Studio Enterprise (profesyonel veya Community Edition değil) oturumunu açabilirsiniz. Ayrıca, aracıyı **izleme** modunda çalıştırarak IntelliTrace Tanılama verileri ve yöntem verileri toplayabilirsiniz. Microsoft Monitoring Agent, [Application Insights](/azure/application-insights/) ve [System Center Operation Manager](/previous-versions/system-center/system-center-2012-R2/hh205987(v=sc.12))ile tümleştirilebilir. Microsoft Monitoring Agent, yüklendiğinde hedef sistemin ortamını değiştirir.
+**Microsoft Monitoring Agent** kullanarak IIS ile barındırılan ASP.NET Web uygulamalarını ve SharePoint 2010 veya 2013 uygulamalarını hatalara, performans sorunlarına veya diğer sorunlar için yerel olarak izleyebilirsiniz. Tanılama olaylarını aracıdan bir IntelliTrace günlük (.iTrace) dosyasına kaydedebilirsiniz. Daha sonra, tüm Visual Studio tanılama araçlarıyla ilgili sorunları ayıklamak için Visual Studio Enterprise (profesyonel veya Community Edition değil) oturumunu açabilirsiniz. Ayrıca, aracıyı **izleme** modunda çalıştırarak IntelliTrace Tanılama verileri ve yöntem verileri toplayabilirsiniz. Microsoft Monitoring Agent, [Application Insights](/azure/application-insights/) ve [System Center Operation Manager](/previous-versions/system-center/system-center-2012-R2/hh205987(v=sc.12))ile tümleştirilebilir. Microsoft Monitoring Agent, yüklendiğinde hedef sistemin ortamını değiştirir.
 
 > [!NOTE]
-> Ayrıca, **IntelliTrace tek başına toplayıcıyı**kullanarak hedef ortamı değiştirmeden uzak makinelerde web, SHAREPOINT, WPF ve Windows form uygulamaları için IntelliTrace Tanılama ve yöntem verileri toplayabilirsiniz. Tek başına toplayıcı, Microsoft Monitoring Agent **izleme** modunda çalıştırmadan daha fazla performans etkisine sahiptir. Bkz. [IntelliTrace tek başına toplayıcıyı kullanma](../debugger/using-the-intellitrace-stand-alone-collector.md).
+> Ayrıca, **IntelliTrace tek başına toplayıcıyı** kullanarak hedef ortamı değiştirmeden uzak makinelerde web, SHAREPOINT, WPF ve Windows form uygulamaları için IntelliTrace Tanılama ve yöntem verileri toplayabilirsiniz. Tek başına toplayıcı, Microsoft Monitoring Agent **izleme** modunda çalıştırmadan daha fazla performans etkisine sahiptir. Bkz. [IntelliTrace tek başına toplayıcıyı kullanma](../debugger/using-the-intellitrace-stand-alone-collector.md).
 
  System Center 2012 kullanıyorsanız, sorunlarla ilgili uyarı almak ve kayıtlı IntelliTrace günlük dosyalarının bağlantılarını içeren Team Foundation Server iş öğeleri oluşturmak için Microsoft İzleme Aracısı'nı İşlem Yöneticisi ile birlikte kullanın. Ardından, bu iş öğelerini daha ayrıntılı hata ayıklama için başkalarına atayabilirsiniz. Bkz. [Operations Manager geliştirme Işlemleriyle tümleştirme](/previous-versions/system-center/system-center-2012-R2/jj614609(v=sc.12)) ve [Microsoft Monitoring Agent ile izleme](/previous-versions/system-center/system-center-2012-R2/dn465153(v=sc.12)).
 
@@ -50,7 +52,7 @@ ms.locfileid: "89600011"
 
     - Microsoft İzleme Aracısı'nın önceki sürümlerini kaldırdınız.
 
-2. 32 bit sürümü **MMASetup-i386.exe** veya 64 bit sürümü **MMASetup-AMD64.exe**olan [ücretsiz Microsoft Monitoring Agent](https://www.microsoft.com/download/details.aspx?id=40316), Microsoft İndirme Merkezi 'nden Web sunucunuza indirin.
+2. 32 bit sürümü **MMASetup-i386.exe** veya 64 bit sürümü **MMASetup-AMD64.exe** olan [ücretsiz Microsoft Monitoring Agent](https://www.microsoft.com/download/details.aspx?id=40316), Microsoft İndirme Merkezi 'nden Web sunucunuza indirin.
 
 3. İndirdiğiniz yürütebilen dosyayı çalıştırarak yükleme sihirbazını başlatın.
 
@@ -77,7 +79,7 @@ ms.locfileid: "89600011"
 3. En son yardım içeriğini almak için [TechNet sitesini ziyaret edin](/previous-versions/system-center/developer/cc817313(v=msdn.10)) .
 
 #### <a name="q-how-do-i-set-up-permissions-for-the-application-pool"></a><a name="FullPermissionsITLog"></a> S: uygulama havuzu için izinleri ayarla Nasıl yaparım??
- Y **:** Windows **ıccacls** komutunu kullanın veya Windows Gezgini (veya dosya Gezgini) kullanın. Örneğin:
+ Y **:** Windows **ıccacls** komutunu kullanın veya Windows Gezgini (veya dosya Gezgini) kullanın. Örnek:
 
 - Windows **ıccacls** komutuyla izinleri ayarlamak için:
 
@@ -103,7 +105,7 @@ ms.locfileid: "89600011"
 
   5. **Seçilecek nesne adlarını girin** kutusunda, Web uygulaması veya SharePoint uygulaması için uygulama havuzunu ekleyin.
 
-  6. Adı çözümlemek için **adları denetle** ' yi seçin. **Tamam ' ı**seçin.
+  6. Adı çözümlemek için **adları denetle** ' yi seçin. **Tamam ' ı** seçin.
 
   7. Uygulama havuzunun **okuma & yürütme** izinlerine sahip olduğundan emin olun.
 
@@ -118,15 +120,15 @@ ms.locfileid: "89600011"
 
      Kısa sözdizimi şu şekildedir:
 
-     **Start-WebApplicationMonitoring** *" \<appName> "* " *\<monitoringMode>* * \<outputPath> "* *\<UInt32>* *" \<collectionPlanPathAndFileName> "*
+     **Start-WebApplicationMonitoring** *" \<appName> "* " *\<monitoringMode>* *\<outputPath> "* *\<UInt32>* *" \<collectionPlanPathAndFileName> "*
 
      Yalnızca Web uygulaması adı ve basit **izleme** modunu kullanan bir örnek aşağıda verilmiştir:
 
-     **PS C: >start-WebApplicationMonitoring "FabrikamFabrikamFiber. Web" Monitor "C:IntelliTraceLogs"**
+     **PS C: >Start-WebApplicationMonitoring "FabrikamFabrikamFiber. Web" Monitor "C:IntelliTraceLogs"**
 
      IIS yolu ve basit **izleme** modunu kullanan bir örnek aşağıda verilmiştir:
 
-     **PS C: >start-WebApplicationMonitoring "IIS: sitesFabrikamFabrikamFiber. Web" Monitor "C:IntelliTraceLogs"**
+     **PS C: >Start-WebApplicationMonitoring "IIS: sitesFabrikamFabrikamFiber. Web" Monitor "C:IntelliTraceLogs"**
 
      İzlemeye başladıktan sonra, uygulamalarınız yeniden başlatılırken Microsoft İzleme Aracısı'nın durakladığını görebilirsiniz.
 
@@ -134,13 +136,13 @@ ms.locfileid: "89600011"
 
     |Ad|Açıklama|
     |-|-|
-    |*"\<appName>"*|IIS içinde web sitesinin yolunu ve web uygulamasının adını belirtin. İsterseniz IIS yolunu da ekleyebilirsiniz.<br /><br /> *" \<IISWebsiteName> \\<ııswebappname \> "*<br /><br /> -veya-<br /><br /> **"IIS: \ siteler** * \\<ııswebsitename \> \\<iiswebappname \> "*<br /><br /> Bu yolu IIS Yöneticisi'nde bulabilirsiniz. Örneğin:<br /><br /> ![IIS Web sitesi ve Web uygulaması yolu](../debugger/media/ffr_iismanager.png "FFR_IISManager")<br /><br /> [Get-website](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee807832(v=technet.10)) ve [Get WebApplication](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee790554(v=technet.10)) komutlarını da kullanabilirsiniz.|
+    |*"\<appName>"*|IIS içinde web sitesinin yolunu ve web uygulamasının adını belirtin. İsterseniz IIS yolunu da ekleyebilirsiniz.<br /><br /> *" \<IISWebsiteName> \\<ııswebappname \> "*<br /><br /> -veya-<br /><br /> **"IIS: \ siteler** *\\<ııswebsitename \> \\<iiswebappname \> "*<br /><br /> Bu yolu IIS Yöneticisi'nde bulabilirsiniz. Örnek:<br /><br /> ![IIS Web sitesi ve Web uygulaması yolu](../debugger/media/ffr_iismanager.png "FFR_IISManager")<br /><br /> [Get-website](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee807832(v=technet.10)) ve [Get WebApplication](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee790554(v=technet.10)) komutlarını da kullanabilirsiniz.|
     |*\<monitoringMode>*|İzleme modunu belirtin:<br /><br /> <ul><li>**İzleme**: özel durum olayları ve performans olayları hakkında en az ayrıntıları kaydedin. Bu mod varsayılan toplama planını kullanır.</li><li>**Trace**: belirtilen koleksiyon planını kullanarak işlev düzeyi ayrıntılarını kaydedin veya SharePoint 2010 ve SharePoint 2013 uygulamalarını izleyin. Bu mod, uygulamanızın daha yavaş çalışmasına neden olabilir.<br /><br /> <ul><li>[S: uygulama havuzu için izinleri ayarla Nasıl yaparım??](#FullPermissionsITLog)</li><li>[S: uygulamamı yavaşlatmadan en çok veriyi almak Nasıl yaparım??](#Minimizing)</li></ul><br />     Bu örnek, bir SharePoint sitesi üzerindeki SharePoint uygulaması için olayları kaydeder:<br /><br />     **Start-WebApplicationMonitoring "FabrikamSharePointSite\FabrikamSharePointApp" Trace "C:\Program Files\Microsoft Monitoring Agent\Agent\IntelliTraceCollector\collection_plan.ASP.NET.default.xml" "C:\IntelliTraceLogs"**</li><li>**Özel**: belirtilen özel toplama planını kullanarak özel ayrıntıları kaydedin. İzleme başladıktan sonra toplama planını değiştirirseniz izlemeyi yeniden başlatmanız gerekir.</li></ul>|
     |*"\<outputPath>"*|IntelliTrace günlüklerinin depolanacağı tam dizin yolunu belirtin. Bu dizini izlemeye başlamadan önce oluşturduğunuzdan emin olun.|
     |*\<UInt32>*|IntelliTrace günlüğünün çıkabileceği en büyük boyutu belirtin. IntelliTrace günlüğü için varsayılan en büyük boyut 250 MB'tır.<br /><br /> Günlük bu sınıra ulaştığında, aracı yeni girişlere yer açmak için en eski girişlerin üzerine yazar. Bu sınırı değiştirmek için **-maximumfilesizeınmegabayt** seçeneğini kullanın veya `MaximumLogFileSize` koleksiyon planındaki özniteliği düzenleyin.|
     |*"\<collectionPlanPathAndFileName>"*|Toplama planının tam yolunu veya göreli yolunu ve dosya adını belirtin. Bu plan, aracı için ayarları yapılandıran bir .xml dosyasıdır.<br /><br /> Bu planlar aracıyla birlikte gelir ve web uygulamaları ve SharePoint uygulamalarıyla çalışır:<br /><br /> -   **collection_plan.ASP.NET.default.xml**<br />     Yalnızca özel durumlar, performans olayları, veritabanı çağrıları ve Web sunucusu istekleri gibi olayları toplar.<br />-   **collection_plan.ASP.NET.trace.xml**<br />     Varsayılan toplama planındaki verilere ek olarak işlev düzeyi çağrıları toplar. Bu plan ayrıntılı analiz için iyidir ancak uygulamanızı yavaşlatabilir.<br /><br /> Bu planların yerelleştirilmiş sürümlerini aracının alt klasörlerinde bulabilirsiniz. Ayrıca, uygulamanızı yavaşlatmayı önlemek için [Bu planları özelleştirebilir veya kendi planlarınızı oluşturabilirsiniz](https://devblogs.microsoft.com/devops/modifying-an-intellitrace-collection-plan-for-the-stand-alone-collector/) . Özel planları aracıyla aynı güvenli konuma yerleştirin.<br /><br /> [S: uygulamamı yavaşlatmadan en çok veriyi almak Nasıl yaparım??](#Minimizing)|
 
-     Tam sözdizimi ve diğer örnekler hakkında daha fazla bilgi için **Get-Help Start-WebApplicationMonitoring-Detailed** komutunu veya **Get-Help Start-WebApplicationMonitoring-examples** komutunu çalıştırın.
+     Tam sözdizimi ve diğer örnekler hakkında daha fazla bilgi için **get-help Start-WebApplicationMonitoring-Detailed** komutunu veya **get-help Start-WebApplicationMonitoring-examples** komutunu çalıştırın.
 
 3. Tüm izlenen Web uygulamalarının durumunu denetlemek için [Get-WebApplicationMonitoringStatus](/previous-versions/system-center/powershell/system-center-2012-r2/dn472751(v=sc.20)) komutunu çalıştırın.
 
@@ -159,7 +161,7 @@ ms.locfileid: "89600011"
 
    `enabled`Öznitelik yoksa, olay etkinleştirilir.
 
-   Örneğin:
+   Örnek:
 
   - Windows Workflow kullanmayan uygulamalar için Windows Workflow olaylarını devre dışı bırakın.
 
@@ -242,9 +244,9 @@ Aracı `id`, `Employee.Id` ve `Employee.Name` değerlerini ve `Employee` yöntem
 
     \- veya
 
-    **Checkpoint-WebApplicationMonitoring "IIS: \ Sites** * \\<ııswebsitename \> \\<iiswebappname \> "*
+    **Checkpoint-WebApplicationMonitoring "IIS: \ Sites** *\\<ııswebsitename \> \\<iiswebappname \> "*
 
-    Örneğin:
+    Örnek:
 
     **PS C: \\>Checkpoint-WebApplicationMonitoring "Fabrikam\FabrikamFiber.Web"**
 
@@ -252,7 +254,7 @@ Aracı `id`, `Employee.Id` ve `Employee.Name` değerlerini ve `Employee` yöntem
 
     **PS C: >Checkpoint-WebApplicationMonitoring "IIS: sitesFabrikamFabrikamFiber. Web"**
 
-    Daha fazla bilgi için **Get-Help Checkpoint-WebApplicationMonitoring-Detailed** komutunu veya **Get-Help Checkpoint-WebApplicationMonitoring-examples** komutunu çalıştırın.
+    Daha fazla bilgi için **get-help Checkpoint-WebApplicationMonitoring-Detailed** komutunu veya **get-help Checkpoint-WebApplicationMonitoring-examples** komutunu çalıştırın.
 
 3. Günlüğü güvenli bir paylaşılan klasöre kopyalayın ve ardından Visual Studio Enterprise (Professional veya Community Edition değil) olan bir bilgisayardan günlüğü açın.
 
@@ -272,13 +274,13 @@ Aracı `id`, `Employee.Id` ve `Employee.Name` değerlerini ve `Employee` yöntem
 
     \- veya
 
-    **Stop-WebApplicationMonitoring "IIS: \ Sites** * \\<ııswebsitename \> \\<iiswebappname \> "*
+    **Stop-WebApplicationMonitoring "IIS: \ Sites** *\\<ııswebsitename \> \\<iiswebappname \> "*
 
     Ya da tüm Web uygulamalarının izlenmesini durdurmak için:
 
     **Stop-WebApplicationMonitoring-tümü**
 
-    Örneğin:
+    Örnek:
 
     **PS C: \\>Stop-WebApplicationMonitoring "Fabrikam\iFabrikamFiber.Web"**
 
@@ -286,7 +288,7 @@ Aracı `id`, `Employee.Id` ve `Employee.Name` değerlerini ve `Employee` yöntem
 
     **PS C: \\>Stop-WebApplicationMonitoring "IIS: \ sites\Fabrikam\FabrikamFiber.Web"**
 
-    Daha fazla bilgi için **Get-Help Stop-WebApplicationMonitoring-Detailed** komutunu veya **Get-Help Stop-WebApplicationMonitoring-examples** komutunu çalıştırın.
+    Daha fazla bilgi için **get-help Stop-WebApplicationMonitoring-Detailed** komutunu veya **get-help Stop-WebApplicationMonitoring-examples** komutunu çalıştırın.
 
 3. Günlüğü güvenli bir paylaşılan klasöre kopyalayın ve ardından Visual Studio Enterprise olan bir bilgisayardan günlüğü açın.
 

@@ -1,5 +1,7 @@
 ---
 title: Pencere özellikleri Iletişim kutusu | Microsoft Docs
+description: Windows görünümünde listelenen bir pencerenin özelliklerini görüntülemeyi öğrenin. Bu makalede, özellikleri belgeleyen diğer makalelerin bağlantıları bulunur.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c27f10298f3a5621bc68e31bc2b150663955d6c9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5bd6c8a7f3b07cdd0667ae8d2c33aeb96d6d7679
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62929209"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149228"
 ---
 # <a name="window-properties-dialog-box"></a>Pencere Özellikleri İletişim Kutusu
 Belirli bir pencere hakkında daha fazla bilgi edinmek için bu iletişim kutusunu kullanın. Bu iletişim kutusunu görüntülemek için odağı [Windows görünümü](../debugger/windows-view.md) penceresine taşıyın. Ağaçta herhangi bir pencere düğümünü seçin, sonra **Görünüm** menüsünden **Özellikler** ' i seçin.

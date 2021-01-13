@@ -1,5 +1,7 @@
 ---
-title: Arayan-Aranan Görünümü-NET bellek Izleme verileri | Microsoft Docs
+title: Caller-Callee görünümü-NET bellek Izleme verileri | Microsoft Docs
+description: Seçilen bir işlev için ayırma ve zamanlama verilerini ve bunun üst ve alt işlevlerini gösteren .NET bellek profili oluşturma verilerinin arayan/çağrılan görünümünü gözden geçirin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 3c51f4bc1e823f565670bf1f6df77553ff4658d6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3fa4928f9da81b2141eec76e54bce7887f50a074
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74779733"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148084"
 ---
 # <a name="callercallee-view---net-memory-instrumentation-data"></a>Arayan/Aranan görünümü-.NET bellek izleme verileri
 İzleme yöntemi kullanılarak toplanan .NET bellek profili oluşturma verilerinin arayan/çağrılan görünümü seçili bir işlev için ayırma ve zamanlama verilerini ve seçilen işlevin üst ve alt işlevlerini görüntüler. Arayan/çağrılan görünümü üç kılavuz içerir.
@@ -38,7 +40,7 @@ ms.locfileid: "74779733"
 |**İşlev satır numarası**|Kaynak dosyada bu işlevin başlangıcına ait satır numarası.|
 |**Çağrı Sayısı**|Bu işleve yapılan çağrıların toplam sayısı.|
 |**Kaynak Dosya**|Bu işlevin tanımını içeren kaynak dosya.|
-|**Modül Adı**|İşlevi içeren modülün adı.|
+|**Modül adı**|İşlevi içeren modülün adı.|
 |**Modül yolu**|İşlevi içeren modülün yolu.|
 |**İşlem Kimliği**|Profil oluşturma çalıştırmasının işlem KIMLIĞI.|
 |**İşlem adı**|İşleme atanan ad.|
@@ -94,7 +96,7 @@ ms.locfileid: "74779733"
 |**En az uygulama kapsamlı süre**|Bu bağlamda bu işleve yapılan çağrının en düşük uygulama kapsamlı süresi.|
 
 ## <a name="application-exclusive-values"></a>Uygulamanın dışlamalı değerleri
- Uygulama dışlamalı değerleri, alt işlevlerde harcanan zamanı hariç olmak üzere işlevinde harcanan süreyi belirtir. Belirtilen zaman, bağlam anahtarları ve giriş/çıkış işlemleri gibi işletim sistemine dönmek için harcanan süreyi de dışlar.
+ Uygulama dışlamalı değerleri, alt işlevlerde harcanan zamanı hariç olmak üzere işlevinde harcanan süreyi belirtir. Belirtilen zaman, bağlam anahtarları ve giriş/çıkış işlemleri gibi işletim sistemi çağrılarında harcanan süreyi de dışlar.
 
 |Sütun|Açıklama|
 |------------|-----------------|

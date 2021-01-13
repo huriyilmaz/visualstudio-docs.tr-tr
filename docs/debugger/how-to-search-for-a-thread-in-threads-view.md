@@ -1,5 +1,7 @@
 ---
 title: İş parçacığı görünümünde Iş parçacığı arama | Microsoft Docs
+description: Visual Studio 'da hata ayıklarken iş parçacığı KIMLIĞINI veya modül dizesini arama ölçütü olarak kullanarak, Spy + + aracının Iş parçacıkları görünümünde belirli bir iş parçacığını arayın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 99a2b4fe491939b6cf4224c211dcd03ec609be27
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 92864c9d3c66a7547ef52a2694f6307d57a43304
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851989"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148539"
 ---
 # <a name="how-to-search-for-a-thread-in-threads-view"></a>Nasıl Yapılır: İş Parçacıkları Görünümünde İş Parçacığı Arama
 İş parçacığı KIMLIĞINI veya modül dizesini arama ölçütü olarak kullanarak Iş parçacıkları görünümünde belirli bir iş parçacığını arayabilirsiniz. Aramanın başlangıç yönünü de belirtebilirsiniz. İletişim kutusundaki alanlar, iş parçacığı ağacındaki seçili iş parçacığının özniteliklerini gösterir.
@@ -37,6 +39,6 @@ ms.locfileid: "90851989"
 
 5. Aramanın ilk yönü için **yukarı** veya **aşağı** seçeneğini belirleyin.
 
-6. **Tamam**’a tıklayın.
+6. **Tamam**'a tıklayın.
 
    Eşleşen bir iş parçacığı bulunursa, Iş parçacıkları görünümü penceresinde vurgulanır.

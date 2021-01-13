@@ -1,5 +1,7 @@
 ---
 title: IntelliTrace | Microsoft Docs
+description: Visual Studio 'da kodunuzun yürütme geçmişini kaydetmek ve izlemek için IntelliTrace 'i kullanın. Belirli olayları kaydedin, ilgili kodu inceleyin ve hata ayıklayın.
+ms.custom: SEO-VS-2020
 ms.date: 09/19/2018
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 878c2481164bc87d4af5e79a0a978e822e7baafe
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 518043a38f3a0f6945840a36a1f7fcade5a313d7
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89600256"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149007"
 ---
 # <a name="intellitrace-for-visual-studio-enterprise-c-visual-basic-c"></a>Visual Studio Enterprise için IntelliTrace (C#, Visual Basic, C++)
 
@@ -106,7 +108,7 @@ Varsayılan olarak, IntelliTrace yalnızca IntelliTrace olaylarını kaydeder: h
 
   - Kaynak penceresinde değerini görmek için bir değişkenin üzerine fare işaretçisini getirdiğinizde görüntülenen DataTips değerleri. IntelliTrace sabitlenmiş DataTips değerlerini toplamaz.
 
-    IntelliTrace olayları ve anlık görüntü modu etkinleştirildiğinde, IntelliTrace her hata ayıklayıcı **kesme noktası** ve **adım** olayında uygulamanın işleminin anlık görüntüsünü alır. Bu işlem, Windows 'un açık olup olmamasına bakılmaksızın **Yereller**, **oto**ve pencereleri **izlemek** için değerleri kaydeder. Sabitlenmiş veri ipuçlarında bulunan değerler de toplanacak.
+    IntelliTrace olayları ve anlık görüntü modu etkinleştirildiğinde, IntelliTrace her hata ayıklayıcı **kesme noktası** ve **adım** olayında uygulamanın işleminin anlık görüntüsünü alır. Bu işlem, Windows 'un açık olup olmamasına bakılmaksızın **Yereller**, **oto** ve pencereleri **izlemek** için değerleri kaydeder. Sabitlenmiş veri ipuçlarında bulunan değerler de toplanacak.
 
 - **Özel durumlar**
 
@@ -165,7 +167,7 @@ IntelliTrace'in ne kadar çağrı bilgisi topladığını denetlemek için, yaln
 
 Varsayılan olarak, IntelliTrace yalnızca seçili IntelliTrace olaylarının verilerini toplar. Bu, kodunuzun yapısına ve kuruluşuna bağlı olarak uygulamanızı yavaşlatabilecek ya da yavaşlatmayabilir. Örneğin, IntelliTrace bir olayı sıklıkla kaydediyorsa, bu durum uygulamanızı yavaşlatabilir. Uygulamanızı yeniden düzenlemeyi de düşünebilirsiniz.
 
-Çağrı bilgilerinin toplanması uygulamanızı önemli ölçüde yavaşlatabilir. Diske kaydettiğiniz IntelliTrace herhangi bir günlük dosyasının (.iTrace dosyaları) boyutunu da artırabilir. Bu etkileri en aza indirmek için yalnızca ilginiz dahilinde olan modüller için çağrı bilgilerini toplayın.  . İTrace dosyalarınızın en büyük boyutunu değiştirmek için **Araçlar**, **Seçenekler**, **IntelliTrace**, **Gelişmiş**öğesine gidin.
+Çağrı bilgilerinin toplanması uygulamanızı önemli ölçüde yavaşlatabilir. Diske kaydettiğiniz IntelliTrace herhangi bir günlük dosyasının (.iTrace dosyaları) boyutunu da artırabilir. Bu etkileri en aza indirmek için yalnızca ilginiz dahilinde olan modüller için çağrı bilgilerini toplayın.  . İTrace dosyalarınızın en büyük boyutunu değiştirmek için **Araçlar**, **Seçenekler**, **IntelliTrace**, **Gelişmiş** öğesine gidin.
 
 ### <a name="blogs"></a>Bloglar
 

@@ -1,6 +1,7 @@
 ---
 title: C# dilinde bir Görselleştirici Yazma | Microsoft Docs
-ms.custom: seodec18
+description: C# dilinde basit Görselleştirici oluşturmak için bir yönergeyi izleyin. Görselleştirici öğe şablonu kullanılmadan, ve ile gereken adımları gösterir.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 05/27/2020
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: b3b8a67d1b01d7f3a3ada7b391423676b9294e8d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8caf1be3c10c0d89ce8780213c0914944ae87842
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85286329"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149722"
 ---
 # <a name="walkthrough-writing-a-visualizer-in-c"></a>İzlenecek yol: C 'de Görselleştirici Yazma\#
 
@@ -39,10 +40,10 @@ Görselleştirici oluşturmak için aşağıdaki görevleri izleyin.
 1. Yeni bir sınıf kitaplığı projesi oluşturun.
 
     ::: moniker range=">=vs-2019"
-    Başlangıç penceresini kapatmak için **ESC** tuşuna basın. **CTRL + Q** yazarak arama kutusunu açın, **sınıf kitaplığı**yazın, **Şablonlar**' ı seçin ve ardından **Yeni bir sınıf kitaplığı oluştur (.NET Framework)** seçeneğini belirleyin. Görüntülenen iletişim kutusunda **Oluştur**' u seçin.
+    Başlangıç penceresini kapatmak için **ESC** tuşuna basın. **CTRL + Q** yazarak arama kutusunu açın, **sınıf kitaplığı** yazın, **Şablonlar**' ı seçin ve ardından **Yeni bir sınıf kitaplığı oluştur (.NET Framework)** seçeneğini belirleyin. Görüntülenen iletişim kutusunda **Oluştur**' u seçin.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Üstteki menü çubuğundan **Dosya**  >  **Yeni**  >  **Proje**' yi seçin. **Yeni proje** iletişim kutusunun sol bölmesinde, **Visual C#** altında, **.NET Framework**öğesini seçin ve ardından Ortadaki bölmede **sınıf kitaplığı (.NET Framework)** öğesini seçin.
+    Üstteki menü çubuğundan **Dosya**  >  **Yeni**  >  **Proje**' yi seçin. **Yeni proje** iletişim kutusunun sol bölmesinde, **Visual C#** altında, **.NET Framework** öğesini seçin ve ardından Ortadaki bölmede **sınıf kitaplığı (.NET Framework)** öğesini seçin.
     ::: moniker-end
 
 2. Sınıf kitaplığı için, gibi uygun bir ad yazın `MyFirstVisualizer` ve ardından **Oluştur** veya **Tamam**' a tıklayın.
@@ -62,9 +63,9 @@ Görselleştirici oluşturmak için aşağıdaki görevleri izleyin.
 
 4. **Başvuru Ekle** iletişim kutusunda, **Araştır** sekmesinde, **araştır** ' ı seçin ve Microsoft.VisualStudio.DebuggerVisualizers.DLL bulun.
 
-    DLL 'yi, Visual Studio 'nun yükleme dizininin * \<Visual Studio Install Directory> \Common7\IDE\PublicAssemblies* alt dizininde bulabilirsiniz.
+    DLL 'yi, Visual Studio 'nun yükleme dizininin *\<Visual Studio Install Directory> \Common7\IDE\PublicAssemblies* alt dizininde bulabilirsiniz.
 
-5. **Tamam**’a tıklayın.
+5. **Tamam**'a tıklayın.
 
 6. DebuggerSide.cs içinde aşağıdaki `using` yönergelere ekleyin:
 
@@ -108,9 +109,9 @@ Görselleştirici oluşturmak için aşağıdaki görevleri izleyin.
 
 2. **Başvuru Ekle** iletişim kutusunda, **Araştır** sekmesinde, **araştır**' ı seçin ve System.Windows.Forms.DLL bulun.
 
-    DLL 'yi *C:\Windows\Microsoft.NET\Framework\v4.0.30319*içinde bulabilirsiniz.
+    DLL 'yi *C:\Windows\Microsoft.NET\Framework\v4.0.30319* içinde bulabilirsiniz.
 
-3. **Tamam**’a tıklayın.
+3. **Tamam**'a tıklayın.
 
 4. DebuggerSide.cs içinde aşağıdaki `using` yönergelere ekleyin:
 
@@ -173,7 +174,7 @@ Hata ayıklayıcı tarafında bulunan kodda, özniteliği kullanılarak hata ay�
 1. Çözüm Gezgini, çözüme sağ tıklayın, **Ekle**' yi seçin ve ardından **Yeni proje**' ye tıklayın.
 
     ::: moniker range=">=vs-2019"
-    Arama kutusunda **konsol uygulaması**yazın, **Şablonlar**' ı seçin ve ardından **Yeni bir konsol uygulaması oluştur (.NET Framework)** öğesini seçin. Görüntülenen iletişim kutusunda **Oluştur**' u seçin.
+    Arama kutusunda **konsol uygulaması** yazın, **Şablonlar**' ı seçin ve ardından **Yeni bir konsol uygulaması oluştur (.NET Framework)** öğesini seçin. Görüntülenen iletişim kutusunda **Oluştur**' u seçin.
     ::: moniker-end
     ::: moniker range="vs-2017"
     Üstteki menü çubuğundan **Dosya**  >  **Yeni**  >  **Proje**' yi seçin. **Yeni proje** iletişim kutusunun sol bölmesinde, **Visual C#** altında **Windows Masaüstü**' nün ardından orta bölmedeki **konsol uygulaması (.NET Framework)** seçeneğini belirleyin.
@@ -189,13 +190,13 @@ Hata ayıklayıcı tarafında bulunan kodda, özniteliği kullanılarak hata ay�
 
 2. **Başvuru Ekle** iletişim kutusunda, sekme sekmesine **gidip** Microsoft.VisualStudio.DebuggerVisualizers.DLL öğesini seçin.
 
-3. **Tamam**’a tıklayın.
+3. **Tamam**'a tıklayın.
 
 4. **MyTestConsole** ' a sağ tıklayın ve **Başvuru Ekle** ' yi seçin.
 
 5. **Başvuru Ekle** iletişim kutusunda, **Projeler** sekmesine tıklayın ve ardından myfirstgörselleştiricisi ' e tıklayın.
 
-6. **Tamam**’a tıklayın.
+6. **Tamam**'a tıklayın.
 
    Şimdi, test bandı sona ermesini sağlayacak kodu ekleyeceksiniz.
 
@@ -253,7 +254,7 @@ Hata ayıklayıcı tarafında bulunan kodda, özniteliği kullanılarak hata ay�
 
 4. **Ad** kutusuna, sınıf kitaplığı Için MySecondVisualizer gibi uygun bir ad yazın.
 
-5. **Tamam**’a tıklayın.
+5. **Tamam**'a tıklayın.
 
    Şimdi, buna bir Görselleştirici öğesi ekleyebilirsiniz:
 
@@ -263,7 +264,7 @@ Hata ayıklayıcı tarafında bulunan kodda, özniteliği kullanılarak hata ay�
 
 2. Kısayol menüsünde **Ekle** ' yi ve ardından **Yeni öğe**' yi seçin.
 
-3. **Yeni öğe Ekle** iletişim kutusunda, **Visual C# öğeleri**altında, **hata ayıklayıcı görselleştiricisi**' ı seçin.
+3. **Yeni öğe Ekle** iletişim kutusunda, **Visual C# öğeleri** altında, **hata ayıklayıcı görselleştiricisi**' ı seçin.
 
 4. **Ad** kutusuna, SecondVisualizer.cs gibi uygun bir ad yazın.
 
@@ -274,6 +275,6 @@ Hata ayıklayıcı tarafında bulunan kodda, özniteliği kullanılarak hata ay�
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Görselleştirici Mimarisi](../debugger/visualizer-architecture.md)
+- [Görselleştiricisi mimarisi](../debugger/visualizer-architecture.md)
 - [Nasıl yapılır: Görselleştirici yüklemesi](../debugger/how-to-install-a-visualizer.md)
 - [Özel Görselleştirici Oluşturma](../debugger/create-custom-visualizers-of-data.md)

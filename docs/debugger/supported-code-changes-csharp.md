@@ -1,5 +1,7 @@
 ---
 title: Desteklenen kod değişiklikleri (C# ve Visual Basic) | Microsoft Docs
+description: Visual Studio 'da C# veya Visual Basic projesinde hata ayıklarken Düzenle ve devam et özelliğini kullanırken hangi kod değişikliklerinin desteklendiğini anlayın.
+ms.custom: SEO-VS-2020
 ms.date: 10/11/2018
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: c480fad064cad602ea3fd19153d53f0276815d30
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: 267d9097ebe53b4074bed6c5caf4077006c946eb
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89509425"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149215"
 ---
 # <a name="supported-code-changes-c-and-visual-basic"></a>Desteklenen kod değişiklikleri (C# ve Visual Basic)
 Düzenle ve devam et, yöntem gövdelerinde birçok kod değişikliği türünü işler. Ancak Yöntem gövdelerinin dışındaki değişiklikler ve Yöntem gövdelerinin içindeki birkaç değişiklik, hata ayıklama sırasında uygulanamaz. Bu desteklenmeyen değişiklikleri uygulamak için, hata ayıklamayı durdurmanız ve kodun yeni bir sürümüyle yeniden başlatmanız gerekir.
@@ -33,9 +35,9 @@ Aşağıdaki tabloda, oturum yeniden başlatmadan hata ayıklama oturumu sıras�
 |Dil öğesi/özelliği|Desteklenen düzenleme işlemi|Sınırlamalar|
 |-|-|-|
 |Türler|Yöntemler, alanlar, oluşturucular, et al|[Evet](https://github.com/dotnet/roslyn/blob/master/docs/wiki/EnC-Supported-Edits.md)|
-|Yineleyiciler|Ekleme veya değiştirme|Hayır|
+|Yineleyiciler|Ekleme veya değiştirme|No|
 |zaman uyumsuz/await ifadeleri|Ekleme veya değiştirme|[Evet](https://github.com/dotnet/roslyn/blob/master/docs/wiki/EnC-Supported-Edits.md)|
-|Dinamik nesneler|Ekleme veya değiştirme|Hayır|
+|Dinamik nesneler|Ekleme veya değiştirme|No|
 |lambda ifadeleri|Ekleme veya değiştirme|[Evet](https://github.com/dotnet/roslyn/blob/master/docs/wiki/EnC-Supported-Edits.md)|
 |LINQ ifadeleri|Ekleme veya değiştirme|[Lambda ifadeleriyle aynı](https://github.com/dotnet/roslyn/blob/master/docs/wiki/EnC-Supported-Edits.md)|
 
@@ -56,7 +58,7 @@ Aşağıdaki tabloda, oturum yeniden başlatmadan hata ayıklama oturumu sıras�
 |Dil öğesi/özelliği|Desteklenmeyen düzenleme işlemi|
 |-|-|
 |Tüm kod öğeleri|Adlandırıl|
-|Ad Alanları|Ekle|
+|Ad alanları|Ekle|
 |Ad alanları, türler, Üyeler|Sil|
 |Genel Türler|Ekleme veya değiştirme|
 |Arabirimler|Değiştir|

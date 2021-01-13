@@ -1,5 +1,7 @@
 ---
 title: Iletiler görünümünde Ileti arama | Microsoft Docs
+description: Visual Studio 'da hata ayıklama sırasında tanıtıcı, tür veya ileti KIMLIĞINI arama ölçütü olarak kullanarak, Spy + + aracının Iletiler görünümündeki belirli bir iletiyi arayın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7c4b597870d7a87b396b4c6e828da814c49f9bfb
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: c351eacc6fc3793065bcd11eb5456eebdc1864f3
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852015"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148591"
 ---
 # <a name="how-to-search-for-a-message-in-messages-view"></a>Nasıl Yapılır: İletiler Görünümünde İleti Arama
 İleti görünümünde belirli bir iletiyi, tanıtıcı, tür veya ileti KIMLIĞINI arama ölçütü olarak kullanarak arayabilirsiniz. Bunlardan herhangi biri veya bir bileşim, geçerli arama ölçütleri olacaktır. Aramanın başlangıç yönü de belirtilebilir. İletişim kutusundaki alanlar, seçili durumdaki iletinin öznitelikleriyle önceden yüklenir.
@@ -47,6 +49,6 @@ ms.locfileid: "90852015"
 
 5. Aramanın ilk yönü için **yukarı** veya **aşağı** seçeneğini belirleyin.
 
-6. **Tamam**’a tıklayın.
+6. **Tamam**'a tıklayın.
 
    Eşleşen bir ileti bulunursa, Iletiler görünümü penceresinde vurgulanır. Bkz. [Iletiler görünümü](../debugger/messages-view.md).

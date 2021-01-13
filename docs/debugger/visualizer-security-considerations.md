@@ -1,5 +1,7 @@
 ---
 title: Görselleştirici güvenlik konuları | Microsoft Docs
+description: Visual Studio hata ayıklayıcısı için Görselleştirici tam güvenle çalıştırılmalıdır. Siz yazarken, olası güvenlik tehditlerine karşı haberdar olun ve uygun önlemleri alın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c1c18ec84a6a62da6cd564c69ef4b83ea76bcfd6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2db18a1443b0c4faaa288a887a22d935d243f678
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "73187152"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149748"
 ---
 # <a name="visualizer-security-considerations"></a>Görselleştirici Güvenlik Konuları
 Görselleştiricisi yazmak olası güvenlik tehditlerini içerir. Bu olası tehditler için şu anda bilinen bir Exploit yok, ancak geliştiriciler bunların farkında olmalıdır ve gelecekte aşağıda açıklandığı gibi uygun güvenlik önlemleri almalıdır.
@@ -38,7 +40,7 @@ Görselleştiricisi yazmak olası güvenlik tehditlerini içerir. Bu olası tehd
  Bu güvenlik açığını azaltmak için Görselleştiricinizi açığa çıkarması gereken arabirimlerin en az olması gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Görselleştirici Mimarisi](../debugger/visualizer-architecture.md)
+- [Görselleştiricisi mimarisi](../debugger/visualizer-architecture.md)
 - [Nasıl Yapılır: Görselleştirici Yazma](create-custom-visualizers-of-data.md)
 - [Özel Görselleştirici Oluşturma](../debugger/create-custom-visualizers-of-data.md)
 - [Hata Ayıklayıcıda Verileri Görüntüleme](../debugger/viewing-data-in-the-debugger.md)

@@ -1,5 +1,7 @@
 ---
 title: Win32 Hata Kodlarına Nereden Bakabilirim? | Microsoft Belgeleri
+description: Bir Win32 hata kodu aramak için, bunu Watch veya QuickWatch 'a girin. Örneğin, "0x80000004, HR". Hata kodu tanımları ıNCLUDE\WINERROR.exe şeklindedir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -18,20 +20,20 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a8e3dda1b728cd631efe8a84913af3d5c475138d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 44a006be3b6ecad3ef723c00154354cb35df0049
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72728029"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149293"
 ---
 # <a name="where-can-i-look-up-win32-error-codes"></a>Win32 Hata Kodlarına Nereden Bakabilirim?
 WINERROR. Varsayılan sistem yüklemenizin IÇERME dizinindeki H, Win32 API işlevleri için hata kodu tanımlarını içerir.
 
- **İzleme** penceresinde veya **QuickWatch** iletişim kutusunda kodu yazarak bir hata kodu arayabilirsiniz. Örneğin:
+ **İzleme** penceresinde veya **QuickWatch** iletişim kutusunda kodu yazarak bir hata kodu arayabilirsiniz. Örnek:
 
 `0x80000004,hr`
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Yerel Kod Hata Ayıklaması SSS](../debugger/debugging-native-code-faqs.md)
+- [Yerel kod SSS hatalarını ayıklama](../debugger/debugging-native-code-faqs.md)
 - [Yerel Kodda Hata Ayıklama](../debugger/debugging-native-code.md)

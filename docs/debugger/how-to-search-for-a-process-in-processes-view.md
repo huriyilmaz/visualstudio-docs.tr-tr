@@ -1,5 +1,7 @@
 ---
 title: Işlemler görünümünde bir Işlem arayın | Microsoft Docs
+description: Visual Studio 'da hata ayıklarken işlem KIMLIĞI veya modül dizesini arama ölçütü olarak kullanarak, Spy + + aracının Işlemler görünümünde belirli bir işlemi arayın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3b94a052f7cb50df676140b45a43f49b92283903
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 2f6c51276bea76fe77455d13e011aa85efa8f6fd
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852002"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148565"
 ---
 # <a name="how-to-search-for-a-process-in-processes-view"></a>Nasıl Yapılır: İşlemler Görünümünde İşlem Arama
 İşlem KIMLIĞINI veya modül dizesini arama ölçütü olarak kullanarak, Işlemler görünümündeki belirli bir işlemi arayabilirsiniz. Aramanın başlangıç yönünü de belirtebilirsiniz. İletişim kutusundaki alanlar, işlem ağacındaki seçili işlemin özniteliklerini gösterir.
@@ -38,6 +40,6 @@ ms.locfileid: "90852002"
 
 5. Aramanın ilk yönü için **yukarı** veya **aşağı** seçeneğini belirleyin.
 
-6. **Tamam**’a tıklayın.
+6. **Tamam**'a tıklayın.
 
    Eşleşen bir işlem bulunursa, **işlem görünümü** penceresinde vurgulanır.

@@ -1,5 +1,7 @@
 ---
 title: IntelliTrace tek başına toplayıcıyı kullanma | Microsoft Docs
+description: Visual Studio 'Yu yüklemeden ve hedef sistemin ortamını değiştirmeden veri toplamak için IntelliTrace tek başına toplayıcıyı kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 07/30/2019
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6f0e0ce657c1cc0ed79d56e3daa90480ed0c1381
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cbdd7e948aaafff8e90aa8e67907c9a53471b05c
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85536499"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150086"
 ---
 # <a name="using-the-intellitrace-stand-alone-collector-c-visual-basic"></a>IntelliTrace tek başına toplayıcıyı kullanma (C#, Visual Basic)
 
@@ -28,7 +30,7 @@ ms.locfileid: "85536499"
 > [!NOTE]
 > Ayrıca, **izleme** modundaki **Microsoft Monitoring Agent** kullanarak uzak makinelerde çalışan Web ve SharePoint uygulamaları için aynı IntelliTrace verilerini toplayabilirsiniz.
 >
-> Aracıyı **izleyici** modunda çalıştırarak, IntelliTrace verilerinde performansla ilgili olayları toplayabilirsiniz. **İzleyici** modunun, **Izleme** modundan veya **IntelliTrace tek başına toplayıcısından**daha az performans etkisi vardır. Microsoft Monitoring Agent, yüklendiğinde hedef sistemin ortamını değiştirir. Bkz. [Microsoft Monitoring Agent kullanımı](../debugger/using-the-microsoft-monitoring-agent.md).
+> Aracıyı **izleyici** modunda çalıştırarak, IntelliTrace verilerinde performansla ilgili olayları toplayabilirsiniz. **İzleyici** modunun, **Izleme** modundan veya **IntelliTrace tek başına toplayıcısından** daha az performans etkisi vardır. Microsoft Monitoring Agent, yüklendiğinde hedef sistemin ortamını değiştirir. Bkz. [Microsoft Monitoring Agent kullanımı](../debugger/using-the-microsoft-monitoring-agent.md).
 > IntelliTrace tek başına toplayıcı, Işlem anlık görüntülerini desteklemez.
 
  **Gereksinimler**
@@ -121,7 +123,7 @@ ms.locfileid: "85536499"
 
 1. Uygulamanızın sunucusunda, yönetici olarak bir komut istemi penceresi açın.
 
-2. Sunucu yöneticisine toplayıcı dizinine tam izinler vermek için Windows **ıccacls** komutunu kullanın. Örneğin:
+2. Sunucu yöneticisine toplayıcı dizinine tam izinler vermek için Windows **ıccacls** komutunu kullanın. Örnek:
 
      `icacls "C:\IntelliTraceCollector" /grant "` *\<Domain\AdministratorID>* `":F`
 
@@ -129,13 +131,13 @@ ms.locfileid: "85536499"
 
     1. IntelliTrace PowerShell cmdlet 'lerini çalıştıracak kişiye Toplayıcı dizini için tam izinleri verin.
 
-         Örneğin:
+         Örnek:
 
          `icacls "C:\IntelliTraceCollector" /grant "` *\<Domain\UserID>* `":F`
 
     2. Web uygulaması veya SharePoint uygulaması için uygulama havuzuna Toplayıcı dizini için okuma ve yürütme izinleri verin.
 
-         Örneğin:
+         Örnek:
 
         - **DefaultAppPool** uygulama havuzundaki bir Web uygulaması için:
 
@@ -155,17 +157,17 @@ ms.locfileid: "85536499"
 
     1. Yönetici olarak bir PowerShell komut penceresi açın.
 
-        1. **Başlat**, **tüm programlar**, **Donatılar**, **Windows PowerShell**seçeneklerini belirleyin.
+        1. **Başlat**, **tüm programlar**, **Donatılar**, **Windows PowerShell** seçeneklerini belirleyin.
 
         2. Aşağıdaki adımlardan birini seçin:
 
-            - 64 bit işletim sistemlerinde, **Windows PowerShell**için kısayol menüsünü açın. **Yönetici olarak çalıştır**' ı seçin.
+            - 64 bit işletim sistemlerinde, **Windows PowerShell** için kısayol menüsünü açın. **Yönetici olarak çalıştır**' ı seçin.
 
             - 32 bit işletim sistemlerinde, **Windows PowerShell (x86)** için kısayol menüsünü açın. **Yönetici olarak çalıştır**' ı seçin.
 
-    2. PowerShell komut penceresinde, **Microsoft.VisualStudio.IntelliTrace.PowerShell.dll**içeri aktarmak için **Import-Module** komutunu kullanın.
+    2. PowerShell komut penceresinde, **Microsoft.VisualStudio.IntelliTrace.PowerShell.dll** içeri aktarmak için **Import-Module** komutunu kullanın.
 
-         Örneğin:
+         Örnek:
 
          `Import-Module "C:\IntelliTraceCollector\Microsoft.VisualStudio.IntelliTrace.PowerShell.dll"`
 
@@ -183,7 +185,7 @@ ms.locfileid: "85536499"
 
 2. Bir Web uygulaması veya SharePoint uygulaması için, uygulama havuzuna. iTrace dosya dizinine tam izinleri verin. Windows **ıccacls** komutunu veya Windows Gezgini 'ni (veya dosya Gezgini) kullanabilirsiniz.
 
-    Örneğin:
+    Örnek:
 
    - Windows **ıccacls** komutuyla izinleri ayarlamak için:
 
@@ -209,9 +211,9 @@ ms.locfileid: "85536499"
 
      5. **Seçilecek nesne adlarını girin** kutusunda, Web uygulaması veya SharePoint uygulaması için uygulama havuzunu ekleyin.
 
-     6. Adı çözümlemek için **adları denetle** ' yi seçin. **Tamam ' ı**seçin.
+     6. Adı çözümlemek için **adları denetle** ' yi seçin. **Tamam ' ı** seçin.
 
-     7. Uygulama havuzunun **tam denetime**sahip olduğundan emin olun.
+     7. Uygulama havuzunun **tam denetime** sahip olduğundan emin olun.
 
 ## <a name="collect-data-from-a-web-app-or-sharepoint-application"></a><a name="BKMK_Collect_Data_from_IIS_Application_Pools"></a> Bir Web uygulamasından veya SharePoint uygulamasından veri topla
 
@@ -261,7 +263,7 @@ ms.locfileid: "85536499"
 
      *\<FullPathToIntelliTraceCollectorExecutable>* `\IntelliTraceSC.exe launch /cp:` *\<PathToCollectionPlan>* `/f:` *\<FullPathToITraceFileDirectoryAndFileName>* *\<PathToAppExecutableFileAndFileName>*
 
-     Örneğin, **MyApp**adlı bir uygulamadan veri toplamak için:
+     Örneğin, **MyApp** adlı bir uygulamadan veri toplamak için:
 
      `C:IntelliTraceCollectorIntelliTraceSC.exe launch /cp:"C:IntelliTraceCollectorcollection_plan.ASP.NET.default.xml" /f:"C:IntelliTraceLogFilesMyApp.itrace" "C:MyAppMyApp.exe"`
 

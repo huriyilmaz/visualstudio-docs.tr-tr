@@ -1,5 +1,7 @@
 ---
 title: Windows görünümünde pencere ara | Microsoft Docs
+description: Visual Studio 'da tanıtıcısını, başlığını, sınıfını veya başlık ve sınıfının bir birleşimini kullanarak Spy + + aracının Windows görünümündeki belirli bir pencereyi arayın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 880f6ec3ea0882d92f5376859ed629e23781f5f9
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 3449abf5ff1b9bdb4d4873a0cf3beb0b184734fc
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851976"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148513"
 ---
 # <a name="how-to-search-for-a-window-in-windows-view"></a>Nasıl Yapılır: Pencereler Görünümünde Pencere Arama
 Windows görünümündeki belirli bir pencereyi, onun tanıtıcısını, başlığını, sınıfını veya başlık ve sınıfının bir birleşimini arama ölçütü olarak kullanarak arayabilirsiniz. Aramanın başlangıç yönünü de belirtebilirsiniz. İletişim kutusundaki alanlar, pencere ağacındaki seçili pencerenin özniteliklerini gösterir.
@@ -45,6 +47,6 @@ Windows görünümündeki belirli bir pencereyi, onun tanıtıcısını, başlı
 
 4. Aramanın ilk yönü için **yukarı** veya **aşağı** seçeneğini belirleyin.
 
-5. **Tamam**’a tıklayın.
+5. **Tamam**'a tıklayın.
 
     Eşleşen bir pencere bulunursa, [Windows görünümü](../debugger/windows-view.md) penceresinde vurgulanır.

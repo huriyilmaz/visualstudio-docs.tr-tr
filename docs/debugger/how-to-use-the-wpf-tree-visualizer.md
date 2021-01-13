@@ -1,5 +1,7 @@
 ---
 title: WPF Ağacı Görselleştiricisini Kullanma | Microsoft Docs
+description: WPF nesnesinin görsel ağacını araştırmak ve Visual Studio 'da WPF bağımlılığı özelliklerini görüntülemek için Windows Presentation Foundation (WPF) görselleştiricisi kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -16,17 +18,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1ebe49365d5854a363b49ba0bde6431ae2121ebd
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 83b11ec1c091d2a63ed89cd3089bc3b507b0db8f
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851066"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149033"
 ---
 # <a name="how-to-use-the-wpf-tree-visualizer"></a>Nasıl Yapılır: WPF Ağacı Görselleştiricisini Kullanma
 WPF nesnesinin görsel ağacını araştırmak ve söz konusu ağaçta yer alan nesneler için WPF bağımlılık özelliklerini görüntülemek için WPF ağacı görselleştiricisi ' ni kullanabilirsiniz. Görsel ağaçlar hakkında daha fazla bilgi için bkz. [WPF Içindeki ağaçlar](/dotnet/framework/wpf/advanced/trees-in-wpf). Bağımlılık özellikleri hakkında daha fazla bilgi için bkz. [bağımlılık özelliklerine genel bakış](/dotnet/framework/wpf/advanced/dependency-properties-overview).
 
- WPF ağaç görselleştiricisi öğesini açtığınızda, iki bölme _görürsünüz: sol_taraftaki **görsel ağaç** ve sağdaki **Özellikler** **:**_tür_ bölmesi. **Görsel ağaç** bölmesindeki herhangi bir nesneyi seçin ve _ad_**:**_tür_ bölmesi **özellikleri** , bu nesnenin özelliklerini gösterecek şekilde otomatik olarak güncelleştirilir.
+ WPF ağaç görselleştiricisi öğesini açtığınızda, iki bölme _görürsünüz: sol_ taraftaki **görsel ağaç** ve sağdaki **Özellikler** **:**_tür_ bölmesi. **Görsel ağaç** bölmesindeki herhangi bir nesneyi seçin ve _ad_**:**_tür_ bölmesi **özellikleri** , bu nesnenin özelliklerini gösterecek şekilde otomatik olarak güncelleştirilir.
 
  > [!NOTE]
  > Ayrıca, [canlı görsel ağacı ve canlı Özellik Gezgini '](../xaml-tools/inspect-xaml-properties-while-debugging.md) nı kullanarak WPF nesnelerinin görsel ağacını inceleyebilirsiniz. WPF ağacı görselleştiricisi eski bir özelliktir ve etkin geliştirme aşamasındadır.
@@ -37,7 +39,7 @@ WPF nesnesinin görsel ağacını araştırmak ve söz konusu ağaçta yer alan 
 
      Görselleştiricilerin bir listesi görüntülenir.
 
-2. **WPF ağaç görselleştiricisi**öğesine tıklayın.
+2. **WPF ağaç görselleştiricisi** öğesine tıklayın.
 
 ### <a name="to-search-the-visual-tree"></a>Görsel ağacı aramak için
 

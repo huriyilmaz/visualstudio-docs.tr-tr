@@ -1,5 +1,7 @@
 ---
 title: Bul penceresinden Iletiler görünümünü aç | Microsoft Docs
+description: Bir hedef pencere seçmek için Spy + + ' daki pencere bul iletişim kutusunu kullanın ve ardından bu pencere için bir Iletiler görünümü açın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9b6240807eb82313182278251b353894545b957d
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 0e66e3e1200e1e08776853f2ac8308537e4b4a17
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852276"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148916"
 ---
 # <a name="how-to-open-messages-view-from-find-window"></a>Nasıl yapılır: Bul Penceresinden İletiler Görünümünü Açma
 Bir hedef pencere seçmek için **pencere bul** iletişim kutusunu kullanmayı ve ardından söz konusu pencerenin iletiler görünümünü açmayı kullanışlı bulabilirsiniz.
@@ -35,7 +37,7 @@ Bir hedef pencere seçmek için **pencere bul** iletişim kutusunu kullanmayı v
 
      İncelemek istediğiniz pencerenin işleyicisine sahipseniz (örneğin, hata ayıklayıcıdan kopyalanmış), bunu **tanıtıcı** metin kutusuna yazabilirsiniz.
 
-4. **Göster**altında **iletiler**' i seçin.
+4. **Göster** altında **iletiler**' i seçin.
 
 5. **Tamam**'a basın.
 

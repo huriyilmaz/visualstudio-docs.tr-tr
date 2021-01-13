@@ -1,6 +1,7 @@
 ---
 title: Web formunda hata ayıklama | Microsoft Docs
-ms.custom: seodec18
+description: Kesme noktalarını ayarlama ve değişkenleri inceleme dahil olmak üzere bir ASP.NET Web uygulamasında (Web formu) hata ayıklamanın nasıl yapılacağını görmek için bir yönergeyi izleyin.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -23,12 +24,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fa2632e7d9b8103b5a89c49e5f44464a658fadc3
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 007a63ea16ab044292f451d8d9c427f4358e3f13
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89599485"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148240"
 ---
 # <a name="walkthrough-debugging-a-web-form"></a>İzlenecek yol: Web Formunda Hata Ayıklama
 Bu izlenecek yolda bulunan adımlarda [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] , Web formu olarak da bilinen bir Web uygulamasının hatalarını ayıklama işlemleri gösterilir. Yürütmeyi başlatma ve durdurma, kesme noktaları ayarlama ve **izleme** penceresinde değişkenleri inceleme işlemlerinin nasıl yapılacağını gösterir.
@@ -112,7 +113,7 @@ Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve
 
 5. **Hata Ayıkla** menüsünde **Windows**' a ve ardından **Izle**' ye ve ardından **Watch1**' e tıklayın.
 
-6. **Gözcü** penceresinde **TextBox1. Text**yazın.
+6. **Gözcü** penceresinde **TextBox1. Text** yazın.
 
     **Gözcü** penceresi, değişkenin değerini gösterir `TextBox1.Text` :
 

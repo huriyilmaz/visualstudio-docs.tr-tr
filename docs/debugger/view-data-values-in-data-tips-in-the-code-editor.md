@@ -1,6 +1,7 @@
 ---
 title: Veri Ipuçlarında değişken değerlerini görüntüle | Microsoft Docs
-ms.custom: seodec18
+description: Hata ayıklama sırasında diziler ve yapılar dahil olmak üzere değişkenler hakkındaki bilgileri rahat bir şekilde görüntülemek için DataTips kullanın. Değerleri de değiştirebilirsiniz.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/21/2018
 ms.topic: conceptual
 dev_langs:
@@ -18,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bf5eda8205dbe0629d0b2801473de83c2f91257e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 432fd50d30347972d7b1fc8222a430fc90a9e590
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75404275"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149969"
 ---
 # <a name="view-data-values-in-datatips-in-the-code-editor"></a>Kod düzenleyicisinde DataTips 'daki veri değerlerini görüntüleme
 
@@ -35,13 +36,13 @@ DataTips yalnızca kesme modunda ve yalnızca geçerli yürütme kapsamındaki d
 
 ### <a name="display-a-datatip"></a>Bir veri Ipucu görüntüleme
 
-1. Kodunuzda bir kesme noktası ayarlayın ve **F5** tuşuna basarak **veya hata ayıklama**  >  **Başlat hata ayıklamayı**seçerek hata ayıklamayı başlatın.
+1. Kodunuzda bir kesme noktası ayarlayın ve **F5** tuşuna basarak **veya hata ayıklama**  >  **Başlat hata ayıklamayı** seçerek hata ayıklamayı başlatın.
 
 1. Kesme noktasında duraklatıldığında, geçerli kapsamdaki herhangi bir değişkenin üzerine gelin. Değişkenin adını ve geçerli değerini gösteren bir veri Ipucu görünür.
 
 ### <a name="make-a-datatip-transparent"></a>DataTip saydam yapma
 
-Veri ipucundaki kodun altında bulunan kodu görmek üzere saydam hale getirmek için **CTRL**tuşuna basın. **CTRL** tuşunu basılı tuttuğunuz sürece datatıp saydam kalır. Bu, sabitlenmiş veya kayan veri Ipuçları için çalışmaz.
+Veri ipucundaki kodun altında bulunan kodu görmek üzere saydam hale getirmek için **CTRL** tuşuna basın. **CTRL** tuşunu basılı tuttuğunuz sürece datatıp saydam kalır. Bu, sabitlenmiş veya kayan veri Ipuçları için çalışmaz.
 ### <a name="pin-a-datatip"></a>Veri Ipucunu sabitleme
 
 Bir veri Ipucunu açık kalacak şekilde sabitlemek için raptiye 'yi **kaynağa sabitle** simgesine tıklayın.
@@ -75,7 +76,7 @@ Tüm veri Ipuçlarını kapatmak için, **Hata Ayıkla** menüsünde **tüm veri
 
 ### <a name="close-all-datatips-for-a-specific-file"></a>Belirli bir dosya için tüm veri Ipuçlarını kapat
 
-Belirli bir dosyanın tüm veri Ipuçlarını kapatmak için, **Hata Ayıkla** menüsünde, **üzerine \<Filename> sabitlenmiş tüm veri ipuçlarını temizle **' yi seçin.
+Belirli bir dosyanın tüm veri Ipuçlarını kapatmak için, **Hata Ayıkla** menüsünde, **üzerine \<Filename> sabitlenmiş tüm veri ipuçlarını temizle**' yi seçin.
 
 ## <a name="expand-and-edit-information"></a>Bilgileri Genişlet ve Düzenle
 Üyelerini görüntülemek için bir diziyi, yapıyı veya nesneyi genişletmek üzere DataTips kullanabilirsiniz. Bir değişkenin değerini bir veri Ipucundan de düzenleyebilirsiniz.
@@ -92,7 +93,7 @@ Ayrıca, genişletilmiş öğeleri, üzerine gelip raptiye simgesini seçerek sa
 
 ### <a name="edit-the-value-of-a-variable"></a>Bir değişkenin değerini düzenleme
 
-Bir veri Ipucunda bir değişkenin veya öğenin değerini düzenlemek için, değeri seçin, yeni bir değer yazın ve **ENTER**tuşuna basın. Seçim salt okuma değerleri için devre dışı bırakıldı.
+Bir veri Ipucunda bir değişkenin veya öğenin değerini düzenlemek için, değeri seçin, yeni bir değer yazın ve **ENTER** tuşuna basın. Seçim salt okuma değerleri için devre dışı bırakıldı.
 
 ::: moniker range=">= vs-2019"
 
@@ -127,13 +128,13 @@ Bir metin düzenleyicisi kullanarak paylaşabileceğiniz veya düzenleyebileceğ
 
 **Veri Ipuçlarını dışarı aktarmak için:**
 
-1. **Debug**  >  **Dışarı aktarma veri ipuçlarını**Hata Ayıkla ' yı seçin.
+1.   >  **Dışarı aktarma veri ipuçlarını** Hata Ayıkla ' yı seçin.
 
 1. **Veri Ipuçlarını dışarı aktar** iletişim kutusunda, XML dosyasını kaydetmek için konuma gidin, dosya için bir ad yazın ve ardından **Kaydet**' i seçin.
 
 **Veri Ipuçlarını içeri aktarmak için:**
 
-1. **Hata ayıklama**  >  **veri ipuçlarını**seçin.
+1. **Hata ayıklama**  >  **veri ipuçlarını** seçin.
 
 1. **Veri Ipuçlarını Içeri aktar** iletişim kutusunda, açmak Istediğiniz DATATIPS XML dosyasını seçin ve **Aç**' ı seçin.
 

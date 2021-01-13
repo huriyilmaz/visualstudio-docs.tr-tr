@@ -1,6 +1,7 @@
 ---
 title: Windows formunda hata ayıklama | Microsoft Docs
-ms.custom: seodec18
+description: 'Ortak yönetilen bir uygulama olan Windows formu oluşturma ve hata ayıklama işlemlerini görmek için bir yönergeyi izleyin. C#, Visual Basic, C++ veya F # kullanabilirsiniz.'
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -23,12 +24,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6cec7b9bc2c56e16d1a5d59701d0953797ae00f4
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 31c1bc9e65eb63877d8f8a42902d8ec47a61fd22
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89599467"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148110"
 ---
 # <a name="walkthrough-debugging-a-windows-form"></a>İzlenecek yol: Windows Formunda hata ayıklama
 Bir Windows formülü en yaygın yönetilen uygulamalardan biridir. Bir Windows formu, standart bir Windows uygulaması oluşturur. Bu adım adım işlemleri Visual Basic, C# ya da C++ kullanarak tamamlayabilirsiniz.
@@ -112,7 +113,7 @@ Bir Windows formülü en yaygın yönetilen uygulamalardan biridir. Bir Windows 
      Kırmızı bir nokta belirir ve satırdaki metin kırmızıyla vurgulanır. Kırmızı nokta bir kesme noktası temsil eder. Daha fazla bilgi için bkz. [kesme noktaları](/previous-versions/ktf38f66(v=vs.100)). Uygulamayı hata ayıklayıcısı altında çalıştırdığınızda, hata ayıklayıcısı koda ulaşıldığında, yürütmeyi o konumda keser. Ardından uygulamanızın durumunu görüntüleyebilir ve ona hata ayıklama yapabilirsiniz.
 
     > [!NOTE]
-    > Ayrıca herhangi bir kod satırına sağ tıklayıp **kesme**noktası üzerine gelin ve ardından bu satıra bir kesme noktası eklemek Için **kesme noktası Ekle** ' ye tıklayabilirsiniz.
+    > Ayrıca herhangi bir kod satırına sağ tıklayıp **kesme** noktası üzerine gelin ve ardından bu satıra bir kesme noktası eklemek Için **kesme noktası Ekle** ' ye tıklayabilirsiniz.
 
 2. **Hata Ayıkla** menüsünde **Başlat**' ı seçin.
 
@@ -185,4 +186,4 @@ Bir Windows formülü en yaygın yönetilen uygulamalardan biridir. Bir Windows 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yönetilen Kodda Hata Ayıklama](../debugger/debugging-managed-code.md)
-- [Hata Ayıklama Güvenliği](../debugger/debugger-security.md)
+- [Hata ayıklayıcı güvenliği](../debugger/debugger-security.md)

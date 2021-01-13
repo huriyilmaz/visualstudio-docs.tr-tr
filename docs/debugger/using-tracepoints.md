@@ -1,5 +1,7 @@
 ---
 title: İzleme noktalarıyla bilgileri günlüğe kaydet | Microsoft Docs
+description: Kodunuzu değiştirmeden veya durdurmadan çıktıyı günlüğe kaydetmek için izleme noktalarını ayarlayın. Kesme noktası ayarları ' nda eylem onay kutusunun altında bir çıktı dizesi belirtmeniz yeterlidir.
+ms.custom: SEO-VS-2020
 ms.date: 10/28/2019
 ms.topic: how-to
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: sashe
 manager: AndSter
 ms.workload:
 - multiple
-ms.openlocfilehash: 33b471122318038ab66bc4f73e437209c6da2ffe
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: 144f83b1be0c3a21aa5cb244f8498f61e3ef380a
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2020
-ms.locfileid: "89561344"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150099"
 ---
 # <a name="log-info-to-the-output-window-using-tracepoints-in-visual-studio"></a>Visual Studio 'da izleme noktalarını kullanarak çıkış penceresinde bilgi günlük kaydı
 
@@ -53,7 +55,7 @@ Aşağıdaki örnek program, bir `for` sayaç değişkeni olan ve döngünün ba
 
    ![Denetlenen koşullar kutusu](../debugger/media/checkedconditionsbox.png "Denetlenen koşullar kutusu")
 
-   Koşullar için üç seçeneğiniz vardır: **koşullu ifade** , **filtre** ve **isabet sayısı** .
+   Koşullar için üç seçeneğiniz vardır: **koşullu ifade**, **filtre** ve **isabet sayısı**.
 
 ## <a name="actions-menu"></a>Eylemler menüsü
 
@@ -63,7 +65,7 @@ Bu menü, çıkış penceresine bir ileti kaydetmenize izin verir. İleti kutusu
 
 ![Sayaç çıkış Iletisi](../debugger/media/counteroutputmessage.png "Sayaç çıkış Iletisi")
 
-**Kapat** ' a tıklayıp programda hata ayıklaması yaparsanız ( **F5** ) çıkış penceresinde aşağıdaki çıktıyı görürsünüz.
+**Kapat** ' a tıklayıp programda hata ayıklaması yaparsanız (**F5**) çıkış penceresinde aşağıdaki çıktıyı görürsünüz.
 
 ![Çıkış Penceresi eylemler Iletisi](../debugger/media/actionsmessageinoutputwindow.png "Çıkış Penceresi eylemler Iletisi")
 
@@ -140,6 +142,6 @@ Canlı bir uygulamada hata ayıklamaya ve benzer bir özelliği aramaya çalış
 - [Hata ayıklama nedir?](../debugger/what-is-debugging.md)
 - [Visual Studio kullanarak daha iyi C# kodu yazma](../debugger/write-better-code-with-visual-studio.md)
 - [Hata ayıklama bölümüne ilk bakış](../debugger/debugger-feature-tour.md)
-- [Hata Ayıklayıcıdaki İfadeler](expressions-in-the-debugger.md)
+- [Hata ayıklayıcısındaki ifadeler](expressions-in-the-debugger.md)
 - [Kesme noktalarını kullanma](../debugger/using-breakpoints.md)
 - [Canlı Azure uygulamalarında hata ayıklama](../debugger/debug-live-azure-applications.md)

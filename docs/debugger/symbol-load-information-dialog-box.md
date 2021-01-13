@@ -1,5 +1,7 @@
 ---
 title: Sembol yükleme bilgileri Iletişim kutusu | Microsoft Docs
+description: Modüller penceresine sağ tıklayıp sembol yükleme bilgileri ' ni seçtiğinizde, Visual Studio hata ayıklayıcısında açılan sembol yükleme bilgileri iletişim kutusunu gözden geçirin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -15,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c6bc7a795d45caf712b837f7d59e3ce6a0f9c8aa
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a2412aeade894b32ce3c42855ecf3f3dacf9bc16
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72729006"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149150"
 ---
 # <a name="symbol-load-information-dialog-box"></a>Simge Yükleme Bilgileri İletişim Kutusu
 **Sembol yükleme bilgileri** iletişim kutusu, **modüller** penceresine sağ tıklayıp **sembol yükleme bilgileri**' ni seçtiğinizde açılır.

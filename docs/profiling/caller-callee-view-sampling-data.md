@@ -1,5 +1,7 @@
 ---
 title: Arayan-çağrılan görünümü-örnekleme verileri | Microsoft Docs
+description: Çağıran/çağrılan görünümünün seçili bir işlev için profil oluşturma bilgilerini ve onun üst ve alt işlevlerini Performans Gezgini nasıl görüntülediğini okuyun.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 008aa6bd9402cde760ffc61a613aba778c8ec96f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e5f01d2b9fbff4864c8e3fa4d96dccdda54da7e0
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74773276"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148357"
 ---
 # <a name="callercallee-view---sampling-data"></a>Çağıran/çağrılan görünümü-örnekleme verileri
 Arayan/çağrılan görünümü seçili bir işlev ve üst ve alt işlevleri için profil oluşturma bilgilerini görüntüler. Arayan/çağrılan görünümü üç kılavuz içerir.
@@ -35,7 +37,7 @@ Arayan/çağrılan görünümü seçili bir işlev ve üst ve alt işlevleri iç
 |------------|-----------------|
 |**İşlem Kimliği**|Profil oluşturma çalıştırmasının işlem KIMLIĞI (PID).|
 |**İşlem adı**|Sürecin adı.|
-|**Modül Adı**|İşlevi içeren modülün adı.|
+|**Modül adı**|İşlevi içeren modülün adı.|
 |**Modül yolu**|İşlevi içeren modülün yolu.|
 |**Kaynak Dosya**|Bu işlevin tanımını içeren kaynak dosya.|
 |**İşlev adı**|İşlevin tam adı.|

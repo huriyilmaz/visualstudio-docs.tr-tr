@@ -1,5 +1,6 @@
 ---
 title: Bir işlevi birçok kez çağırırken çağrı hatası bul
+description: Bir işlevde kesme noktası ayarlamaya yönelik bir tekniktir ve bu, break 'in yalnızca işlevin başarısız olduğu çağrıda gerçekleşmesinden kaynaklanır.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -28,12 +29,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: de3d186b7800efc3e807e3f775b48d91b44072b4
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 567450f11572cc998f952117c33992cdba33570d
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810490"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149306"
 ---
 # <a name="when-calling-a-function-hundreds-of-times-how-do-i-know-which-call-failed"></a>İşlevi Yüzlerce Kere Çağırırken Hangi Çağrının Başarısız Olduğunu Nasıl Bilebilirim?
 ## <a name="problem-description"></a>Sorun Açıklaması
@@ -49,6 +50,6 @@ CnvtV(int) (no condition) when hit count is equal to 1000 (currently 101)
  Artık, bu işlevin 101 çağrısında başarısız olduğunu bilirsiniz. Kesme noktasını 101 olan bir isabet sayısıyla sıfırlayıp programı yeniden çalıştırırsanız program, `CnvtV` başarısız olmasına neden olan çağrıya yanıt vermez.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Yerel Kod Hata Ayıklaması SSS](../debugger/debugging-native-code-faqs.md)
+- [Yerel kod SSS hatalarını ayıklama](../debugger/debugging-native-code-faqs.md)
 - [Kesme noktalarını ayarlama](/previous-versions/ktf38f66(v=vs.100))
 - [Yerel Kodda Hata Ayıklama](../debugger/debugging-native-code.md)

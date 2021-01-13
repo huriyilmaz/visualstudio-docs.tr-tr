@@ -1,6 +1,7 @@
 ---
 title: Bir kullanıcı hesabı altında bir çalışan işlemi çalıştırın | Microsoft Docs
-ms.custom: seodec18
+description: Bilgisayarınızı, ASP.NET çalışan işlemini (aspnet_wp.exe veya w3wp.exe) Visual Studio 'da bir kullanıcı hesabı altında çalıştırabilmeniz için ayarlayın.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -20,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6ac5bee0ffa05aa275782c57fc9b7b1c369bf65d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 24dc3be78534610492dfada954f74a883808b40b
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85349412"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148695"
 ---
 # <a name="how-to-run-the-worker-process-under-a-user-account"></a>Nasıl Yapılır: Çalışan İşlemi Kullanıcı Hesabı Altında Çalıştırma
 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]Bir kullanıcı hesabı altında çalışan işlemini (aspnet_wp.exe veya w3wp.exe) çalıştırabilmeniz için bilgisayarınızı ayarlamak için aşağıdaki adımları izleyin.
@@ -80,7 +81,7 @@ ms.locfileid: "85349412"
 
 10. **Seçilecek nesne adını girin** kutusuna kullanıcı adını yazın ve ardından **Tamam**' a tıklayın. Kullanıcı adının şu biçimde olması gerekir: etkialanı \ KullanıcıAdı
 
-11. **Geçici ASP.NET dosyaları Için Izin girdisi** iletişim kutusunda, kullanıcıya **tam denetim**verin ve ardından **tamam** ' a tıklayarak **Geçici ASP.NET dosyaları için girişi** iletişim kutusunu kapatın.
+11. **Geçici ASP.NET dosyaları Için Izin girdisi** iletişim kutusunda, kullanıcıya **tam denetim** verin ve ardından **tamam** ' a tıklayarak **Geçici ASP.NET dosyaları için girişi** iletişim kutusunu kapatın.
 
 12. Bir **güvenlik** iletişim kutusu görüntülenir ve bir sistem klasöründeki izinleri gerçekten değiştirmek isteyip istemediğinizi sorar. **Evet**'e tıklayın.
 

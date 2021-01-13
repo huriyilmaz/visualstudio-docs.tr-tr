@@ -1,5 +1,7 @@
 ---
 title: Yönetilen kodda bir Iş parçacığı adı ayarlama | Microsoft Docs
+description: Visual Studio 'da çok iş parçacıklı uygulama hata ayıklaması sırasında yönetilen kodda bir iş parçacığı adı ayarlayın. İş parçacığı adlandırması iş parçacıkları penceresinde iş parçacıklarını izlemek için kullanılır.
+ms.custom: SEO-VS-2020
 ms.date: 04/27/2017
 ms.topic: how-to
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: dd8662bb437ef25627fb8e8bd2a33ff132e42d7b
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: c52d2ae3407833594049459a489641135bba172c
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851963"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148448"
 ---
 # <a name="how-to-set-a-thread-name-in-managed-code"></a>Nasıl Yapılır: Yönetilen Kodda İş Parçacığı Adı Ayarlama
 Visual Studio 'nun herhangi bir sürümünde iş parçacığı adlandırması mümkündür. İş parçacığı adlandırması **, iş parçacıkları penceresinde iş** parçacıklarını izlemek için yararlıdır.
@@ -76,5 +78,5 @@ End Sub
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Çok İş Parçacıklı Uygulamalarda Hata Ayıklama](../debugger/debug-multithreaded-applications-in-visual-studio.md)
+- [Çok Iş parçacıklı uygulamalarda hata ayıklama](../debugger/debug-multithreaded-applications-in-visual-studio.md)
 - [Nasıl Yapılır: Yerel Kodda İş Parçacığı Adı Ayarlama](../debugger/how-to-set-a-thread-name-in-native-code.md)

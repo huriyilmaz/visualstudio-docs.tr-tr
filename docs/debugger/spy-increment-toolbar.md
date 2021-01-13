@@ -1,5 +1,7 @@
 ---
 title: Spy + + araç çubuğu | Microsoft Docs
+description: Menü çubuğunun altında görüntülenen Spy + + araç çubuğunda Kullanıcı arabirimi öğelerini anlayın. Araç çubuğunu görüntülemek veya gizlemek için, Görünüm menüsünde Araç Çubuğu ' na tıklayın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4fa1dfe0917fece3c814678295c5abd6013b426b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9dc2564a69c291055d53e358c084e7dd9c4d0506
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72729733"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148201"
 ---
 # <a name="spy-toolbar"></a>Spy++ Araç Çubuğu
 Araç çubuğu Spy + + ' daki menü çubuğunun altında görüntülenir. Araç çubuğunu görüntülemek veya gizlemek için, **Görünüm** menüsünde **araç çubuğu**' na tıklayın.

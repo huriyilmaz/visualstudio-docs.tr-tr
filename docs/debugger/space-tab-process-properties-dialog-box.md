@@ -1,5 +1,7 @@
 ---
 title: Boşluk sekmesi, Işlem özellikleri Iletişim kutusu | Microsoft Docs
+description: Hata ayıklama sırasında Spy + + içinde Işlem özellikleri iletişim kutusunu görüntülemeyi öğrenin. Boşluk sekmesinde kullanılabilir olan ayarları gözden geçirin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,19 +12,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 563d54c39b4d9ce3bb2d76a9e531161c2c4ee5b3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fe168f34baf65b00eab59e94afb30e07dfe89b50
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62929815"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149085"
 ---
 # <a name="space-tab-process-properties-dialog-box"></a>Alan Sekmesi, İşlem Özellikleri İletişim Kutusu
 Bir işlemin adres alanını incelemek için **boşluk** sekmesini kullanın. [Işlem özellikleri Iletişim kutusunu](../debugger/process-properties-dialog-box.md)görüntülemek için odağı bir [işlem görünümü](../debugger/processes-view.md) penceresine taşıyın. Ağaçta herhangi bir işlem düğümünü seçin, sonra **Görünüm** menüsünden **Özellikler** ' i seçin.
 
  **Boşluk** sekmesinde aşağıdaki ayarlar kullanılabilir:
 
-|Giriş|Açıklama|
+|Giriş|Description|
 |-----------|-----------------|
 |**Boşluk olarak işaretlenen alanı göster**|Alan kategorisini (görüntü, eşlenmiş, ayrılmış veya atanmamış) seçmek için bu liste kutusunu kullanın.|
 |**Yürütülebilir baytlar**|Seçili Kategori için, bu işlemin kullandığı tüm adres alanı toplamı. Yürütülebilir bellek, programlar tarafından yürütülebilecek, ancak okunmayabilir veya yazılamaz bellektir.|

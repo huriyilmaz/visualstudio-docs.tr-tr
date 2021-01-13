@@ -1,5 +1,7 @@
 ---
 title: Dize görselleştiricisi içindeki dizeleri görüntüleme | Microsoft Docs
+description: Metin dizelerini, XML, HTML ve JSON görüntülemek için Visual Studio hata ayıklayıcısında dize görselleştiricisi kullanın. Veri kümesi ve DataTable dahil diğer nesne türlerini görüntüleyebilirsiniz.
+ms.custom: SEO-VS-2020
 ms.date: 04/08/2019
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 33e1cbd4b1c754498d7e2bd6c354e874ae8cdad5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d13e5f5c3ee5a82a56dd8c98fa37e3e13e5169d5
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72450386"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149943"
 ---
 # <a name="view-strings-in-a-string-visualizer-in-visual-studio"></a>Visual Studio 'da dize görselleştiricisi içindeki dizeleri görüntüleme
 

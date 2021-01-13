@@ -1,5 +1,7 @@
 ---
 title: İş parçacıkları görünümü | Microsoft Docs
+description: Spy + + hata ayıklama aracında Iş parçacıkları görünümünü anlayın. Iş parçacıkları görünümü, sisteminizdeki Windows ile ilişkili tüm iş parçacıklarının düz bir listesidir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 82c8bb229a0781f299b5fa8c3a8c73670be8c4fc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 356db0f3ad8308edae2910e060b5b08731f9aabb
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62929959"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150216"
 ---
 # <a name="threads-view"></a>İş Parçacıkları Görünümü
 Iş parçacıkları görünümü, sisteminizdeki Windows ile ilişkili tüm iş parçacıklarının düz bir listesidir. Her iş parçacığının Iş parçacığı KIMLIĞI ve modül adı gösterilir. İşlemler dahil değildir, ancak seçili bir iş parçacığına sahip olan işlemi kolayca bulabilirsiniz.

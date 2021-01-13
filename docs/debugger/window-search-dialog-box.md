@@ -1,5 +1,7 @@
 ---
 title: Pencere arama Iletişim kutusu | Microsoft Docs
+description: Windows görünümünde listelenen belirli bir pencerenin düğümünü bulmak ve seçmek için pencere arama ' yı kullanın. Ayarların açıklamaları için bu makaleye bakın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3ca04cadbfce26319a9ed72b85071d7ab139a85a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f83469d6bd97e493a704282aa1fca1fbec96962d
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62900929"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148994"
 ---
 # <a name="window-search-dialog-box"></a>Pencere Arama İletişim Kutusu
 [Windows görünümünde](../debugger/windows-view.md)belirli bir pencerenin düğümünü bulmak ve seçmek için bu iletişim kutusunu kullanın. Bu iletişim kutusunu görüntülemek için odağı Windows Görünümü penceresine taşıyın. Ardından **arama** menüsünden **pencereyi bul** ' u seçin.

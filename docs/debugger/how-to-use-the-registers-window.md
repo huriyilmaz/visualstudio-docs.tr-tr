@@ -1,6 +1,7 @@
 ---
 title: Hata ayıklayıcıda kayıt değerlerini görüntüle | Microsoft Docs
-ms.custom: seodec18
+description: Kayıt değerlerini Visual Studio 'daki Yazmaçları penceresinde görüntüleyin. Hata ayıklama sırasında, uygulamanızda kod yürütme olarak değişiklik kaydeder.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/19/2018
 ms.topic: how-to
 f1_keywords:
@@ -24,12 +25,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ed60b21d7c8e90e18b389a29c3343713ac8ece3d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8422738b5c46b5482ac65cd24ccc903acdb4506e
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85348580"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148045"
 ---
 # <a name="view-register-values-in-the-registers-window-c-c-visual-basic-f"></a>Kayıt değerlerini Yazmaçları penceresinde görüntüleme (C#, C++, Visual Basic, F #)
 
@@ -48,7 +49,7 @@ Kayıt değerlerini düzenleyebilirsiniz. Daha fazla bilgi için bkz. [nasıl ya
 
 **Yazmaçları penceresini açmak için**
 
-1. **Araçlar** (veya **hata ayıklama**) > **seçeneklerde**hata ayıklama için **Adres düzeyinde hata ayıklamayı etkinleştir** ' i seçerek Adres düzeyinde hata ayıklamayı etkinleştirin  >  **Debugging**.
+1. **Araçlar** (veya **hata ayıklama**) > **seçeneklerde** hata ayıklama için **Adres düzeyinde hata ayıklamayı etkinleştir** ' i seçerek Adres düzeyinde hata ayıklamayı etkinleştirin  >  .
 
 1. Hata ayıklama çalışırken veya bir kesme noktasında, **Hata Ayıkla**  >  **Windows**  >  **Yazmaçları**' nı seçin veya **alt** + **5**' e basın.
 

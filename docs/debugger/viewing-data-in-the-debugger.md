@@ -1,5 +1,7 @@
 ---
 title: Hata ayıklayıcıda verilerin özel görünümlerini oluşturma | Microsoft Docs
+description: Visual Studio hata ayıklayıcısında program durumunu inceleme ve değiştirme yöntemlerinin çeşitli yollarını öğrenin. Bunlar, oto ve Izleme pencereleri, veri Ipuçları ve Görselleştiriciler gibi öğeleri içerir.
+ms.custom: SEO-VS-2020
 ms.date: 01/09/2019
 ms.topic: conceptual
 f1_keywords:
@@ -19,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 63dc11736e92013719fcda2bae0ba9599a8835aa
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5acac83a6d461f6b7301ff2bfe89d92dc78d00ee
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72568994"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149917"
 ---
 # <a name="create-custom-views-of-data-in-the-visual-studio-debugger-c-visual-basic-c"></a>Visual Studio hata ayıklayıcısında verilerin özel görünümlerini oluşturma (C#, Visual Basic, C++)
 
@@ -42,4 +44,4 @@ ms.locfileid: "72568994"
 
 - [Hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md)
 - [Komut penceresi](../ide/reference/command-window.md)
-- [Hata ayıklayıcı güvenliği](../debugger/debugger-security.md)
+- [Hata ayıklayıcısı güvenliği](../debugger/debugger-security.md)

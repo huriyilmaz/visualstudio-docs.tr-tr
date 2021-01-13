@@ -1,5 +1,6 @@
 ---
 title: Windows Hizmetleri için istatistikleri toplama-profil oluşturucu örnekleme yöntemi
+description: Komut satırından profil oluşturma örnekleme yöntemini kullanarak Windows Hizmetleri için performans istatistikleri toplamak için yordamları ve seçenekleri gözden geçirin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -10,12 +11,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 28b614868ad8080f9b4cbe5359a54c814022089c
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: f4c686de4128d655b5b8146925529e6a280bb754
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809969"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148344"
 ---
 # <a name="collect-application-statistics-for-services-by-using-the-profiler-sampling-method"></a>Profil Oluşturucu örnekleme yöntemini kullanarak hizmetler için uygulama istatistikleri toplama
 Bu bölümde, komut satırından örnekleme yöntemi kullanılarak Windows Hizmetleri için performans istatistiklerini toplamaya yönelik yordamlar ve seçenekler açıklanmaktadır.

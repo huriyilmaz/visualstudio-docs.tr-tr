@@ -1,5 +1,7 @@
 ---
 title: Görselleştiricisi mimarisi | Microsoft Docs
+description: Görselleştirici belirli bir veri öğesi türünü görüntüler ve ayrıca düzenlenmesine izin verebilir. Görselleştirici mimarisi hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a6dfbc8c57ff2e78bf0c6ebbd4e9899c372d7084
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9166cc3c98f72e43042a26c0787d1cbf45223a74
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "73187165"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149761"
 ---
 # <a name="visualizer-architecture"></a>Görselleştirici Mimarisi
 Bir hata ayıklayıcı görselleştiricisi mimarisi iki bölümden oluşur:
@@ -90,4 +92,4 @@ Bir hata ayıklayıcı görselleştiricisi mimarisi iki bölümden oluşur:
 - [İzlenecek Yol: C# ile Görselleştirici Yazma](../debugger/walkthrough-writing-a-visualizer-in-csharp.md)
 - [İzlenecek Yol: Visual Basic'de Görselleştirici Yazma](../debugger/walkthrough-writing-a-visualizer-in-visual-basic.md)
 - [İzlenecek Yol: Visual Basic'de Görselleştirici Yazma](../debugger/walkthrough-writing-a-visualizer-in-visual-basic.md)
-- [Görselleştirici Güvenlik Konuları](../debugger/visualizer-security-considerations.md)
+- [Görselleştirici güvenlik konuları](../debugger/visualizer-security-considerations.md)

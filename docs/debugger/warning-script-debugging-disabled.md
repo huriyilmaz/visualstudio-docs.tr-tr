@@ -1,5 +1,7 @@
 ---
 title: 'Uyarı: betik hata ayıklaması devre dışı | Microsoft Docs'
+description: Internet Explorer 'da betik hata ayıklamasını etkinleştirmeden komut dosyasında hata ayıklamaya çalıştığınızda bir "betik hata ayıklaması devre dışı" uyarısı oluşur. Etkinleştirme adımlarına bakın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -15,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 15de1a1e516cb3d84c24428ef04dd87baedaed9e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7cc2e03a4efcf9a88675fd3c80f374ff78ba35bb
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "81648498"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149566"
 ---
 # <a name="warning-script-debugging-disabled"></a>Uyarı: Betik Hata Ayıklaması Devre Dışı
 Internet Explorer 'da betik hata ayıklaması Şu anda devre dışı
@@ -37,7 +39,7 @@ Internet Explorer 'da betik hata ayıklaması Şu anda devre dışı
 
 4. **Betik hata ayıklamayı devre dışı bırak (Internet Explorer)** seçimini kaldırın.
 
-5. **Tamam**’a tıklayın.
+5. **Tamam**'a tıklayın.
 
 6. Çık ve Internet Explorer 'ı yeniden Başlat.
 

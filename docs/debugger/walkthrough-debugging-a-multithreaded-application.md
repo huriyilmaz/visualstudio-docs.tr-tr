@@ -1,5 +1,7 @@
 ---
 title: Hata Ayıklayıcıdaki iş parçacıklarını görüntüle | Microsoft Docs
+description: İş parçacıklarını incelemek ve denetlemek için Iş parçacıklarını kullanın. İş parçacıklarını gruplandırabilir, sıralayabilir, düzenleyebilir, dondurabilir ve arayabilir, sütunları seçebilir ve çağrı yığınlarını görüntüleyebilirsiniz.
+ms.custom: SEO-VS-2020
 ms.date: 10/29/2018
 ms.topic: conceptual
 f1_keywords:
@@ -23,12 +25,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4f65bd7a904f30f132f654b6dd718532d9d0e66e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b02d980292eaed40c7c1598c772b52f695bf23e2
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "67821584"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149710"
 ---
 # <a name="view-threads-in-the-visual-studio-debugger-by-using-the-threads-window-c-visual-basic-c"></a>Iş parçacıkları penceresini kullanarak Visual Studio hata ayıklayıcısındaki iş parçacıklarını görüntüleme (C#, Visual Basic, C++)
 **Iş parçacıkları** penceresinde, hata ayıklaması yaptığınız uygulamadaki iş parçacıklarını inceleyebilir ve bunlarla çalışabilirsiniz. **Iş parçacıkları** penceresini kullanma hakkında adım adım yönergeler için bkz. [Izlenecek yol: iş parçacıkları penceresini kullanarak hata ayıklama](../debugger/how-to-use-the-threads-window.md).
@@ -89,7 +91,7 @@ ms.locfileid: "67821584"
 
 ### <a name="to-freeze-or-thaw-execution-of-a-thread"></a>Bir iş parçacığının yürütülmesini dondurmak veya çözme
 
-- **Iş parçacıkları** penceresinin en üstündeki araç çubuğunda, **iş parçacıklarını dondur** veya **çözme iş**parçacıklarını seçin.
+- **Iş parçacıkları** penceresinin en üstündeki araç çubuğunda, **iş parçacıklarını dondur** veya **çözme iş** parçacıklarını seçin.
 
      Bu eylem yalnızca **Iş parçacıkları** penceresinde seçili olan iş parçacıklarını etkiler.
 
@@ -106,7 +108,7 @@ Sarı ok geçerli iş parçacığını (ve yürütme işaretçisinin konumunu) g
   - Bir iş parçacığına sağ tıklayıp **Iş parçacığına geç**' i seçin.
 
 ## <a name="group-and-sort-threads"></a>İş parçacıklarını gruplandırma ve sıralama
- İş parçacıklarını gruplandırdığınızda her grup için tabloda bir başlık görünür. Başlık, **çalışan Iş parçacığı** veya **bayrak edilmemiş iş parçacıkları**gibi bir grup açıklaması ve bir ağaç denetimi içerir. Her bir grubun üye iş parçacıkları grup başlığının altında görünür. Bir grup için üye iş parçacıklarını gizlemek istiyorsanız, Grup daraltmak için ağaç denetimini kullanın.
+ İş parçacıklarını gruplandırdığınızda her grup için tabloda bir başlık görünür. Başlık, **çalışan Iş parçacığı** veya **bayrak edilmemiş iş parçacıkları** gibi bir grup açıklaması ve bir ağaç denetimi içerir. Her bir grubun üye iş parçacıkları grup başlığının altında görünür. Bir grup için üye iş parçacıklarını gizlemek istiyorsanız, Grup daraltmak için ağaç denetimini kullanın.
 
  Gruplandırma sıralamaya göre öncelikli olduğundan, iş parçacıklarını kategoriye göre gruplandırabilir, örneğin, bunları her bir kategorinin içindeki KIMLIĞE göre sıralayabilirsiniz.
 
@@ -143,7 +145,7 @@ Sarı ok geçerli iş parçacığını (ve yürütme işaretçisinin konumunu) g
 
 1. **Iş parçacıkları** penceresinin en üstündeki araç çubuğunda, **arama** kutusuna gidin ve şunlardan birini yapın:
 
-     - Bir arama dizesi girin ve ardından **ENTER**tuşuna basın.
+     - Bir arama dizesi girin ve ardından **ENTER** tuşuna basın.
 
      \- veya
 
@@ -168,5 +170,5 @@ Sarı ok geçerli iş parçacığını (ve yürütme işaretçisinin konumunu) g
 - **Iş parçacıkları** penceresinin en üstündeki araç çubuğunda, **çağrı yığınlarını Genişlet** veya **çağrı yığınlarını Daralt**' ı seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Çok iş parçacıklı uygulamalarda hata ayıklama](../debugger/debug-multithreaded-applications-in-visual-studio.md)
+- [Çok iş parçacıklı uygulamaların hatalarını ayıklama](../debugger/debug-multithreaded-applications-in-visual-studio.md)
 - [Çok iş parçacıklı uygulamalarda hata ayıklamaya başlama](../debugger/get-started-debugging-multithreaded-apps.md)

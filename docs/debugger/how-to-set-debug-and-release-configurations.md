@@ -1,5 +1,7 @@
 ---
 title: Hata ayıklama ve yayın yapılandırmasını ayarlama | Microsoft Docs
+description: Visual Studio 'da hata ayıklama ve yayın yapılandırmasını ayarlayın. Hata ayıklama için hata ayıklama sürümü ve son sürüm dağıtımı için yayın sürümü oluşturursunuz.
+ms.custom: SEO-VS-2020
 ms.date: 10/05/2018
 ms.topic: how-to
 f1_keywords:
@@ -31,12 +33,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e85f7c67f8dc25bb69f7de07a19286b5c63e938a
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 51237a9b73825620c77c7f2a10ad1efe367cdd37
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89599897"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149553"
 ---
 # <a name="set-debug-and-release-configurations-in-visual-studio"></a>Visual Studio 'da hata ayıklama ve yayın yapılandırmasını ayarlama
 
@@ -77,7 +79,7 @@ C# veya Visual Basic hata ayıklama yapılandırmalarının proje ayarları hakk
 
 1. Çözüm Gezgini, projeyi seçin.
 
-2. **Özellikler** simgesini seçin (veya **Alt + Enter**tuşlarına basın).
+2. **Özellikler** simgesini seçin (veya **Alt + Enter** tuşlarına basın).
 
 3. Yan bölmede, **Oluştur** (veya Visual Basic **Derle** ) öğesini seçin.
 
@@ -85,7 +87,7 @@ C# veya Visual Basic hata ayıklama yapılandırmalarının proje ayarları hakk
 
 5. **Gelişmiş** düğmesini (veya Visual Basic) **Gelişmiş derleme seçenekleri** düğmesini seçin.
 
-6. **Hata ayıklama bilgileri** listesinde (veya Visual Basic **hata ayıklama bilgileri oluştur** ' da), **tam**, **pdb-salt**veya **Taşınabilir**' ı seçin.
+6. **Hata ayıklama bilgileri** listesinde (veya Visual Basic **hata ayıklama bilgileri oluştur** ' da), **tam**, **pdb-salt** veya **Taşınabilir**' ı seçin.
 
    Taşınabilir biçim, .NET Core için en son platformlar arası biçimdir. Seçenekler hakkında daha fazla bilgi için bkz. [Gelişmiş derleme ayarları iletişim kutusu (C#)](../ide/reference/advanced-build-settings-dialog-box-csharp.md).
 
@@ -99,15 +101,15 @@ C# veya Visual Basic hata ayıklama yapılandırmalarının proje ayarları hakk
 
 1. Çözüm Gezgini, projeyi seçin.
 
-2. **Özellikler** simgesini seçin (veya **Alt + Enter**tuşlarına basın).
+2. **Özellikler** simgesini seçin (veya **Alt + Enter** tuşlarına basın).
 
 3. **Yapılandırma** listesinde **Hata Ayıkla** veya **Yayınla**' yı seçin.
 
-4. Yan bölmede, **hata ayıklama > bağlayıcı**' yı seçin, ardından **hata ayıklama bilgisi oluştur**seçeneklerini belirleyin.
+4. Yan bölmede, **hata ayıklama > bağlayıcı**' yı seçin, ardından **hata ayıklama bilgisi oluştur** seçeneklerini belirleyin.
 
    C++ ' da hata ayıklama yapılandırmalarının proje ayarları hakkında ayrıntılı bilgi için bkz. [c++ hata ayıklama yapılandırması Için proje ayarları](../debugger/project-settings-for-a-cpp-debug-configuration.md).
 
-5. **Program veritabanı dosyaları oluştur**seçeneklerini yapılandırın.
+5. **Program veritabanı dosyaları oluştur** seçeneklerini yapılandırın.
 
    Çoğu C++ projesinde, varsayılan değer `$(OutDir)$(TargetName).pdb` . pdb dosyalarını çıkış klasöründe oluşturur.
 
@@ -120,7 +122,7 @@ C# veya Visual Basic hata ayıklama yapılandırmalarının proje ayarları hakk
 ## <a name="see-also"></a><a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Studio hata ayıklayıcısında simge (. pdb) dosyalarını ve kaynak dosyaları belirtme](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)<br/>
-- [Hata ayıklayıcı ayarları ve hazırlığı](../debugger/debugger-settings-and-preparation.md)<br/>
+- [Hata ayıklayıcısı ayarları ve hazırlığı](../debugger/debugger-settings-and-preparation.md)<br/>
 - [C++ hata ayıklama yapılandırması proje ayarları](../debugger/project-settings-for-a-cpp-debug-configuration.md)<br/>
 - [C# hata ayıklama yapılandırması proje ayarları](../debugger/project-settings-for-csharp-debug-configurations.md)<br/>
 - [Visual Basic hata ayıklama yapılandırması proje ayarları](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)<br/>

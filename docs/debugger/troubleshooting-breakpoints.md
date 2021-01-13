@@ -1,6 +1,7 @@
 ---
 title: Hata ayıklayıcıda kesme noktaları sorunlarını giderme | Microsoft Docs
-ms.custom: seodec18
+description: Kesme noktası devre dışıysa veya ayarlanmamışsa, boş bir daire olarak görüntülenir. Kesme noktaları ayarlanırken oluşabilecek sorunlar hakkında buraya bakın.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 01/23/2018
 ms.topic: troubleshooting
 author: mikejo5000
@@ -8,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7c11741cb9bb9a0b0c64b9452b54daa6ac226b92
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a07f92eccd7884ea3cc3871d04285a82cb5cb62e
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72535932"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148058"
 ---
 # <a name="troubleshoot-breakpoints-in-the-visual-studio-debugger"></a>Visual Studio hata ayıklayıcısında kesme noktaları sorunlarını giderme
 
@@ -25,7 +26,7 @@ Aşağıdaki iki bölümde belirgin uyarılar ve bunların nasıl düzeltileceğ
 
 ### <a name="no-symbols-have-been-loaded-for-this-document"></a>"Bu belge için sembol yüklenmedi"
 
-**Modüller** penceresine gidin (Windows modüllerine**hata ayıklayın**  >  **Windows**  >  **Modules**) ve modülünüzün yüklenip yüklenmediğini denetleyin.
+**Modüller** penceresine gidin (Windows modüllerine **hata ayıklayın**  >    >  ) ve modülünüzün yüklenip yüklenmediğini denetleyin.
 * Modülünüz yüklüyse, simgelerin yüklenip yüklenmediğini görmek için **sembol durumu** sütununu kontrol edin.
   * Semboller yüklü değilse, sorunu tanılamak için sembol durumunu kontrol edin. **Modüller** penceresindeki bir modülün bağlam menüsünde **sembol yükleme bilgileri...** ' ya tıklayarak hata ayıklayıcının sembolleri denemek ve yüklemek için baktığı yeri görüntüleyin. Sembolleri yükleme hakkında daha fazla bilgi için bkz. [simge (. pdb) ve kaynak dosyaları belirtme](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).
   * Semboller yüklüyse PDB, kaynak dosyalarınız hakkında bilgi içermez. Bunlar olası nedenleri şunlardır:
@@ -35,7 +36,7 @@ Aşağıdaki iki bölümde belirgin uyarılar ve bunların nasıl düzeltileceğ
 
 * Modülünüzün yüklü olmaması durumunda nedenini bulmak için aşağıdakileri denetleyin:
   * Doğru işlemde hata ayıklatığınızdan emin olun.
-  * Doğru kod türünde hata ayıklamanın olup olmadığını kontrol edin. Hata ayıklayıcının, **işlem** penceresinde hata ayıklamak için ne tür bir kod ile yapılandırıldığını öğrenebilirsiniz (Windows işlemlerinde**Hata Ayıkla**  >  **Windows**  >  **Processes**). Örneğin, C# kodunda hata ayıklamaya çalışıyorsanız, hata ayıklayıcının .NET 'in uygun türü ve sürümü (örneğin, yönetilen (v4) ile yönetilen ( \* v2 \* /v3 \* ) Ile yönetilen (CoreCLR)) için yapılandırıldığını doğrulayın.
+  * Doğru kod türünde hata ayıklamanın olup olmadığını kontrol edin. Hata ayıklayıcının, **işlem** penceresinde hata ayıklamak için ne tür bir kod ile yapılandırıldığını öğrenebilirsiniz (Windows işlemlerinde **Hata Ayıkla**  >    >  ). Örneğin, C# kodunda hata ayıklamaya çalışıyorsanız, hata ayıklayıcının .NET 'in uygun türü ve sürümü (örneğin, yönetilen (v4) ile yönetilen ( \* v2 \* /v3 \* ) Ile yönetilen (CoreCLR)) için yapılandırıldığını doğrulayın.
 
 ### <a name="-the-current-source-code-is-different-from-the-version-built-into"></a>"… geçerli kaynak kodu, yerleşik sürümünden farklı... "
 
@@ -44,7 +45,7 @@ Bir kaynak dosya değiştiyse ve kaynak artık hata ayıkladığınız kodla eş
 Nadir senaryolarda, eşleşen kaynak kodu olmadan hata ayıklaması yapmak isteyebilirsiniz. Eşleşen kaynak kodu olmadan hata ayıklama, kafa karıştırıcı bir hata ayıklama deneyimine yol açabilir, bu nedenle bunun nasıl devam etmek istediğinize emin olun.
 
 Bu güvenlik denetimlerini devre dışı bırakmak için aşağıdakilerden birini yapın:
-* Tek bir kesme noktasını değiştirmek için, düzenleyicide kesme noktası simgesinin üzerine gelin ve ayarlar (dişli) simgesine tıklayın. Düzenleyiciye bir göz atma penceresi eklenir. Göz atma penceresinin üst kısmında, kesme noktasının konumunu gösteren bir köprü bulunur. Kesme noktası konumunun değiştirilmesine izin vermek için köprüye tıklayın ve **kaynak kodun orijinalden farklı olmasını**sağlar.
+* Tek bir kesme noktasını değiştirmek için, düzenleyicide kesme noktası simgesinin üzerine gelin ve ayarlar (dişli) simgesine tıklayın. Düzenleyiciye bir göz atma penceresi eklenir. Göz atma penceresinin üst kısmında, kesme noktasının konumunu gösteren bir köprü bulunur. Kesme noktası konumunun değiştirilmesine izin vermek için köprüye tıklayın ve **kaynak kodun orijinalden farklı olmasını** sağlar.
 * Tüm kesme noktaları için bu ayarı değiştirmek üzere **hata ayıklama**  >  **seçenekleri ve ayarlar**'a gidin. **Hata ayıklama/genel** sayfasında, **özgün sürümle tam olarak eşleşen kaynak dosyalarını gerektir** seçeneğini temizleyin. Hata ayıklamayı bitirdiğinizde bu seçeneği yeniden etkinleştirdiğinizden emin olun.
 
 ## <a name="the-breakpoint-was-successfully-set-no-warning-but-didnt-hit"></a>Kesme noktası başarıyla ayarlandı (uyarı yok), ancak isabet etmedi

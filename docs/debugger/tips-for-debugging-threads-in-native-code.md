@@ -1,5 +1,7 @@
 ---
 title: Yerel koddaki Iş parçacıkları hata ayıklama ipuçları | Microsoft Docs
+description: Visual Studio 'da çok iş parçacıklı uygulamalarda hata ayıklaması yapıyorsanız yerel koddaki iş parçacıklarında hata ayıklama ipuçları listesini okuyun.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7dde94e28f378f0630a78f32ae5e58533729ce0f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9249e1527a7dd2ae720ab575b1d443c10b85376e
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72729002"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150060"
 ---
 # <a name="tips-for-debugging-threads-in-native-code"></a>Yerel Kod İş Parçacıklarında Hata Ayıklama İpuçları
 Yerel koddaki iş parçacıklarında hata ayıklarken kullanabileceğiniz bazı ipuçları şunlardır:
@@ -30,8 +32,8 @@ Yerel koddaki iş parçacıklarında hata ayıklarken kullanabileceğiniz bazı 
 
 - Geçerli iş parçacığının son hata kodunu `@Err` **izleme** penceresinde veya **QuickWatch** iletişim kutusunda girerek görüntüleyebilirsiniz.
 
-- C çalışma zamanı kitaplıkları (CRT) işlevleri, çok iş parçacıklı bir uygulamada hata ayıklamak için yararlı olabilir. Daha fazla bilgi için bkz. [_malloc_dbg](/cpp/c-runtime-library/reference/malloc-dbg).
+- C Run-Time kitaplıkları (CRT) işlevleri çok iş parçacıklı bir uygulamada hata ayıklamak için yararlı olabilir. Daha fazla bilgi için bkz. [_malloc_dbg](/cpp/c-runtime-library/reference/malloc-dbg).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Çok İş Parçacıklı Uygulamalarda Hata Ayıklama](../debugger/debug-multithreaded-applications-in-visual-studio.md)
+- [Çok Iş parçacıklı uygulamalarda hata ayıklama](../debugger/debug-multithreaded-applications-in-visual-studio.md)
 - [Yerel Kodda Hata Ayıklama](../debugger/debugging-native-code.md)

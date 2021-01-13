@@ -1,5 +1,7 @@
 ---
 title: Görselleştirici yüklemesi | Microsoft Docs
+description: Visual Studio 'da hata ayıklama kullanımı için kullanılabilir olacak şekilde bir Görselleştirici yüklemeyi anlayın.
+ms.custom: SEO-VS-2020
 ms.date: 06/10/2020
 ms.topic: how-to
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6410e9ba1250da5a0a247c786e4aada310186c4a
-ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
+ms.openlocfilehash: 37b2da9418361144c740bed633eb755f7057936c
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91211371"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148968"
 ---
 # <a name="how-to-install-a-visualizer"></a>Nasıl Yapılır: Görselleştiriciyi Yükleme
 Görselleştirici oluşturduktan sonra, ' de kullanılabilir olacak şekilde Görselleştirici 'yı yüklemelisiniz [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Görselleştirici yüklenmesi basit bir işlemdir.
@@ -35,7 +37,7 @@ Görselleştirici oluşturduktan sonra, ' de kullanılabilir olacak şekilde Gö
 
 1. Oluşturduğunuz Görselleştiriciyi içeren DLL dosyasını bulun.
 
-   Genellikle, hem hata ayıklayıcı tarafında DLL hem de hata ayıklanan tarafı DLL 'SI hedef platform olarak **herhangi BIR CPU** belirtse en iyisidir. Hata ayıklayıcı-yan DLL, **herhangi BIR CPU** veya **32 bit**olmalıdır. Hata ayıklanan tarafı DLL için hedef platform, hata ayıklayıcı ayıklanan işleme karşılık gelmelidir.
+   Genellikle, hem hata ayıklayıcı tarafında DLL hem de hata ayıklanan tarafı DLL 'SI hedef platform olarak **herhangi BIR CPU** belirtse en iyisidir. Hata ayıklayıcı-yan DLL, **herhangi BIR CPU** veya **32 bit** olmalıdır. Hata ayıklanan tarafı DLL için hedef platform, hata ayıklayıcı ayıklanan işleme karşılık gelmelidir.
 
 2. [Hata ayıklayıcı yan](create-custom-visualizers-of-data.md#to-create-the-debugger-side) dll 'sini (ve bağımlı olduğu dll 'leri) aşağıdaki konumlardan birine kopyalayın:
 

@@ -1,5 +1,7 @@
 ---
 title: Spy + + tanıtımı | Microsoft Docs
+description: Spy + + hata ayıklama aracı hakkında bilgi edinin. Sistem nesnesi ilişkilerinin grafik ağacını görüntüler. Seçilen pencereler, iş parçacıkları, süreçler veya iletiler için özellikler alın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4d04b2e9e04e1f2b952baadbdf0cca32cc3b301b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fb8debef874dd32f52994d0edd4a27d81b340834
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72731815"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148799"
 ---
 # <a name="introducing-spy"></a>Spy++'a Giriş
 Spy + + aşağıdaki görevleri gerçekleştirmenize olanak tanır:
@@ -40,7 +42,7 @@ Spy + + aşağıdaki görevleri gerçekleştirmenize olanak tanır:
 > Spy + +: PView gibi, süreçler ve iş parçacıklarının ayrıntılarını gösteren ve DDESPY.EXE dinamik veri değişimi (DDE) iletilerini izlemenize olanak tanıyan iki diğer yardımcı program vardır.
 
 ## <a name="64-bit-operating-systems"></a>64 bit Işletim sistemleri
- Spy + + uygulamasının iki sürümü vardır. Spy + + (spyxx.exe) adlı ilk sürüm, 32 bitlik bir işlemde çalışan bir pencereye gönderilen iletileri görüntüleyecek şekilde tasarlanmıştır. Örneğin, Visual Studio 32 bitlik bir işlemde çalışır. Bu nedenle, **Çözüm Gezgini**gönderilen iletileri göstermek için Spy + + kullanabilirsiniz. Visual Studio 'da çoğu derleme için varsayılan yapılandırma, 32 bitlik bir işlemde çalıştırmak olduğundan, Spy + + ' un bu ilk sürümü, [gerekli bileşenler yüklenmişse](../debugger/how-to-start-spy-increment.md)Visual Studio 'daki **Araçlar** menüsünde kullanılabilir olan bir sürümdür.
+ Spy + + uygulamasının iki sürümü vardır. Spy + + (spyxx.exe) adlı ilk sürüm, 32 bitlik bir işlemde çalışan bir pencereye gönderilen iletileri görüntüleyecek şekilde tasarlanmıştır. Örneğin, Visual Studio 32 bitlik bir işlemde çalışır. Bu nedenle, **Çözüm Gezgini** gönderilen iletileri göstermek için Spy + + kullanabilirsiniz. Visual Studio 'da çoğu derleme için varsayılan yapılandırma, 32 bitlik bir işlemde çalıştırmak olduğundan, Spy + + ' un bu ilk sürümü, [gerekli bileşenler yüklenmişse](../debugger/how-to-start-spy-increment.md)Visual Studio 'daki **Araçlar** menüsünde kullanılabilir olan bir sürümdür.
 
  Spy + + (64-bit) (spyxx_amd64.exe) adlı ikinci sürüm, 64 bit işlemde çalışan bir pencereye gönderilen iletileri görüntüleyecek şekilde tasarlanmıştır. Örneğin, 64 bitlik bir işletim sisteminde Not defteri, 64 bit süreçte çalışır. Bu nedenle, Notepad 'e gönderilen iletileri göstermek için Spy + + (64-bit) kullanabilirsiniz. Spy + + (64-bit) genellikle içinde bulunur
 

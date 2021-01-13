@@ -1,5 +1,6 @@
 ---
 title: 'Profil oluşturucu komut satırı: tek başına uygulama istatistiklerini toplama'
+description: Visual Studio 'da profil oluşturucu komut satırını kullanarak tek başına uygulamalar için uygulama istatistikleri toplayın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -13,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 150a1a010a33a3b4fcfe0954ec70db2ff4de7816
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 6567b0116227bf259eb3591bc6880a6841252869
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808922"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148307"
 ---
 # <a name="collect-application-statistics-for-stand-alone-applications-by-using-the-profiler-command-line"></a>Profil oluşturucu komut satırını kullanarak bağımsız uygulamalar için uygulama istatistikleri toplama
 Bu bölümde, komut satırından örnekleme yöntemi kullanılarak bir istemci (tek başına) uygulamasının performans istatistiklerini toplamaya yönelik yordamlar ve seçenekler açıklanmaktadır.

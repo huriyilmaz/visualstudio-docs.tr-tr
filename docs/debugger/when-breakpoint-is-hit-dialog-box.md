@@ -1,5 +1,7 @@
 ---
 title: Kesme noktası Isabet edildiğinde Iletişim kutusu | Microsoft Docs
+description: Kesme üzerine bir eylem belirtmek için kesme noktası Isabet edildiğinde kullanın. Bir iletinin yazdırılmasını belirtebilir ve bu yürütmenin daha sonra devam etmesi gerekir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 53b19f4dd0d4b0cb97bb33e4895f36c4dc8f670c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a528709769f599219a7b3df2b8157b0ee3a605b1
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72728140"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149319"
 ---
 # <a name="when-breakpoint-is-hit-dialog-box"></a>Kesme Noktası İsabet Edildiğinde İletişim Kutusu
 Bu iletişim kutusu ile bir kesme noktasına gelindiğinde gerçekleşen eylemi özelleştirebilirsiniz.
@@ -35,5 +37,5 @@ Bu iletişim kutusu ile bir kesme noktasına gelindiğinde gerçekleşen eylemi 
  **Yürütmeye devam et** Bu denetim yalnızca **bir Ileti Yazdır** seçildiğinde etkindir. Bu denetim seçildiğinde, bir kesme noktasını, konuma ulaşıldığında kesmek yerine, program yürütmenizi izlemek üzere bir izleme noktası olarak kullanabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Kesme Noktalarını Kullanma](../debugger/using-breakpoints.md)
+- [Kesme noktaları kullanma](../debugger/using-breakpoints.md)
 - [DebuggerDisplay Özniteliğini Kullanma](../debugger/using-the-debuggerdisplay-attribute.md)

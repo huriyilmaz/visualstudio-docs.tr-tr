@@ -1,5 +1,7 @@
 ---
 title: Spy + + Yardımı | Microsoft Docs
+description: Spy + + ve Spy + + Görünümlerini kullanma hakkındaki bağlantıları görüntüleyin. Kullanılabilir her bir Spy + + menü komutu ve iletişim kutusuyla ilgili ayrıntıları sağlayan başvuru bağlantılarına bakın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 118096d536b9a4db50568ab138cd4695e1f3dcbe
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0f5e9caecb6d5ae2023bce9c1ef2ea0d73c66be3
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62929798"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148032"
 ---
 # <a name="spy-help"></a>Spy++ Yardımı
 Spy + + yardımcı programına yönelik belgeler, Spy + + ve Spy + + görünümlerinde kullanılan iki genel konu grubunu içerir. Bunlar, kullanılabilir her menü komutu ve iletişim kutusu hakkında daha fazla ayrıntı sağlayan Spy + + başvurusu tarafından izlenir.

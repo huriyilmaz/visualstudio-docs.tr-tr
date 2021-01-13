@@ -1,5 +1,7 @@
 ---
 title: Devam eden hata ayıklamayı Durdur Iletişim kutusu | Microsoft Docs
+description: Hata ayıklayıcı bir hata ayıklama oturumunu durdurmayı denediğinde görünen hata ayıklamayı Durdur iletişim kutusunu gezin, ancak oturumu durdurmak zaman alır.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -19,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3beefe16f8883eb64d7d0a2641cabf9eb1f702fa
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3c3ff46a8cd9b8e5a4ab80b0af1296348ca788d9
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72729664"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98150229"
 ---
 # <a name="stop-debugging-in-progress-dialog-box"></a>Devam Eden Hata Ayıklamayı Durdur İletişim Kutusu
 Hata ayıklayıcı bir hata ayıklama oturumunu durdurmayı denerken bu iletişim kutusu görüntülenir, ancak oturum durdurulduğunda bir süre sürer. Hata ayıklama oturumunun durdurulması genellikle çok hızlıdır ve bu iletişim kutusu görünmez. Ancak bazen, hata ayıklamakta olan tüm işlemlerin ayrılması ek bir zaman alır. Oturumun durdurulması birkaç saniyeden uzun sürerse (veya bir ayırma hatası oluşursa), bu iletişim kutusu görüntülenir. Bu sıklıkla oluşursa, bunun nedeni bir iç sorun olabilir ve ürün destek hizmetleri ile iletişim kurmak isteyebilirsiniz.
@@ -34,5 +36,5 @@ Hata ayıklayıcı bir hata ayıklama oturumunu durdurmayı denerken bu iletişi
  **Şimdi durdur** Hata ayıklama oturumunu hemen sonlandırmak için bu düğmeye tıklayın. **Şimdi durdur** 'un kullanılması, hata ayıklamakta olan işlemlerin ayrılması yerine sonlandırılır. Sistem işlemlerinde hata ayıklaması yapıyorsanız, **Şimdi durdur** ile bu işlemlerin sonlandırmasında beklenmedik ve istenmeyen etkileri olabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Hata Ayıklama Güvenliği](../debugger/debugger-security.md)
+- [Hata ayıklayıcı güvenliği](../debugger/debugger-security.md)
 - [Programları ayırma](/previous-versions/visualstudio/visual-studio-2010/x1thkxez(v=vs.100))

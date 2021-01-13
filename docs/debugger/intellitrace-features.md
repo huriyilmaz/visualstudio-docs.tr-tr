@@ -1,5 +1,7 @@
 ---
 title: IntelliTrace Özellikleri | Microsoft Docs
+description: Visual Studio 'da IntelliTrace özellikleri hakkında bilgi edinin. Uygulamanızdaki olayları ve Yöntem çağrılarını kaydetmek için IntelliTrace kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 09/19/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +22,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1ac7ca0e59a479aff3386486d2ceaf061038db68
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2f5d4603e052cd5968055304290559b8a8d5a56a
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85536584"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148643"
 ---
 # <a name="intellitrace-features-c-visual-basic-c"></a>IntelliTrace Özellikleri (C#, Visual Basic, C++)
 
@@ -82,7 +84,7 @@ Gezinti cilt payı, geçmiş hata ayıklama modundaki Yöntem çağrıları ve o
 
 ### <a name="search-for-a-line-or-method-in-intellitrace"></a>IntelliTrace içinde bir hat veya yöntem arayın
 
-Metotları yalnızca Yöntem çağrı bilgileri etkinleştirildiğinde arayabilirsiniz. IntelliTrace geçmişine belirli bir satır veya yöntem için arama yapabilirsiniz. Hata ayıklayıcı yürütmesi durdurulduğunda, bağlam menüsünü görmek için işlevin gövdesinin içine sağ tıklayın ve **Bu satırı IntelliTrace Içinde ara** ' ya tıklayın veya **IntelliTrace içinde bu yöntemi**arayın.
+Metotları yalnızca Yöntem çağrı bilgileri etkinleştirildiğinde arayabilirsiniz. IntelliTrace geçmişine belirli bir satır veya yöntem için arama yapabilirsiniz. Hata ayıklayıcı yürütmesi durdurulduğunda, bağlam menüsünü görmek için işlevin gövdesinin içine sağ tıklayın ve **Bu satırı IntelliTrace Içinde ara** ' ya tıklayın veya **IntelliTrace içinde bu yöntemi** arayın.
 
 ### <a name="control-how-much-call-information-intellitrace-records"></a><a name="ControlCallData"></a> Ne kadar çağrı bilgisi IntelliTrace kaydı olduğunu denetleme
 

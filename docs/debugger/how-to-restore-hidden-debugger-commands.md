@@ -1,5 +1,7 @@
 ---
 title: Gizli hata ayıklayıcı komutlarını geri yükleme | Microsoft Docs
+description: Visual Studio 'da gizli hata ayıklayıcı komutlarını geri yüklemeyi öğrenin. Bazı diller için varsayılan IDE ayarları, bazı hata ayıklayıcı komutlarını gizleyebilir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -18,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 295d04aa33f7f6602d536a69baafae9105a51fe5
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: e761a9bcbbf2f35555ae30065cd239f4d7587ff4
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852028"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148604"
 ---
 # <a name="how-to-restore-hidden-debugger-commands"></a>Nasıl Yapılır: Gizli Hata Ayıklayıcı Komutlarını Geri Yükleme
 Visual Studio 'yu ayarlarken, birincil programlama diliniz için bir varsayılan IDE ayarları kümesi seçmeniz istenir. Bazı diller için varsayılan IDE ayarları, bazı hata ayıklayıcı komutlarını gizleyebilir.
@@ -60,18 +62,18 @@ Visual Studio 'yu ayarlarken, birincil programlama diliniz için bir varsayılan
 
 3. **Geçerli ayarları Kaydet** sayfasında, mevcut ayarlarınızın kaydedilip edilmeyeceğini belirleyin ve ardından **İleri**' ye tıklayın.
 
-4. **İçeri aktarılacak ayarların bir koleksiyonunu seçin** sayfasında, **varsayılan ayarlar** klasörü altında kullanmak istediğiniz komutları içeren bir geliştirme ayarları koleksiyonu seçin. Hangi koleksiyonun seçeceğimizi görmüyorsanız, en çok hata ayıklayıcı komutlarını sağlayan **genel geliştirme ayarlarını** veya **Visual C++ geliştirme ayarlarını**deneyin.
+4. **İçeri aktarılacak ayarların bir koleksiyonunu seçin** sayfasında, **varsayılan ayarlar** klasörü altında kullanmak istediğiniz komutları içeren bir geliştirme ayarları koleksiyonu seçin. Hangi koleksiyonun seçeceğimizi görmüyorsanız, en çok hata ayıklayıcı komutlarını sağlayan **genel geliştirme ayarlarını** veya **Visual C++ geliştirme ayarlarını** deneyin.
 
 5. **İleri**’ye tıklayın.
 
-6. **İçeri aktarılacak ayarları seçin** sayfasında, **Seçenekler**altında, **hata ayıklamayı** seçtiğinizden emin olun. Bu ayarları da içeri aktarmak istemediğiniz sürece diğer onay kutularını temizleyin.
+6. **İçeri aktarılacak ayarları seçin** sayfasında, **Seçenekler** altında, **hata ayıklamayı** seçtiğinizden emin olun. Bu ayarları da içeri aktarmak istemediğiniz sürece diğer onay kutularını temizleyin.
 
-7. **Son**'a tıklayın.
+7. **Finish (Son)** düğmesine tıklayın.
 
-8. **Içeri aktarma Tamam** sayfasında, **Ayrıntılar**altında ayarlarınızı sıfırlamayla ilişkili tüm hataları gözden geçirin.
+8. **Içeri aktarma Tamam** sayfasında, **Ayrıntılar** altında ayarlarınızı sıfırlamayla ilişkili tüm hataları gözden geçirin.
 
 9. **Kapat**’a tıklayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Hata Ayıklama Güvenliği](../debugger/debugger-security.md)
+- [Hata ayıklayıcı güvenliği](../debugger/debugger-security.md)
 - [Hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md)

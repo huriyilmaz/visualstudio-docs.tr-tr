@@ -1,6 +1,7 @@
 ---
 title: Visual Basic bir Görselleştirici yazın | Microsoft Docs
-ms.custom: seodec18
+description: Visual Basic basit bir Görselleştirici oluşturmak için izlenecek yolu izleyin. Görselleştiriciyi test etmek için bir test bandı da oluşturursunuz.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 05/27/2020
 ms.topic: conceptual
 dev_langs:
@@ -17,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 25720f31c721cae44ed5425631a86b3a41bf475e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4354a226503ef11b8e596cff609912afa7fd34f0
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84180551"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98149644"
 ---
 # <a name="walkthrough-writing-a-visualizer-in-visual-basic"></a>İzlenecek Yol: Visual Basic'de Görselleştirici Yazma
 
@@ -40,10 +41,10 @@ Görselleştiricisi kodu, hata ayıklayıcı tarafından okunacak bir DLL 'ye ye
 1. Yeni bir sınıf kitaplığı projesi oluşturun.
 
     ::: moniker range=">=vs-2019"
-    Başlangıç penceresini kapatmak için **ESC** tuşuna basın. **CTRL + Q** yazarak arama kutusunu açın, **Visual Basic**yazın, **Şablonlar**' ı seçin ve ardından **Yeni bir sınıf kitaplığı oluştur (.NET Framework)** seçeneğini belirleyin. Görüntülenen iletişim kutusunda **Oluştur**' u seçin.
+    Başlangıç penceresini kapatmak için **ESC** tuşuna basın. **CTRL + Q** yazarak arama kutusunu açın, **Visual Basic** yazın, **Şablonlar**' ı seçin ve ardından **Yeni bir sınıf kitaplığı oluştur (.NET Framework)** seçeneğini belirleyin. Görüntülenen iletişim kutusunda **Oluştur**' u seçin.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Üstteki menü çubuğundan **Dosya**  >  **Yeni**  >  **Proje**' yi seçin. **Yeni proje** iletişim kutusunun sol bölmesinde, **Visual Basic**altında **.NET Standard**' i seçin ve ardından Ortadaki bölmede **sınıf kitaplığı (.NET Standard)** öğesini seçin.
+    Üstteki menü çubuğundan **Dosya**  >  **Yeni**  >  **Proje**' yi seçin. **Yeni proje** iletişim kutusunun sol bölmesinde, **Visual Basic** altında **.NET Standard**' i seçin ve ardından Ortadaki bölmede **sınıf kitaplığı (.NET Standard)** öğesini seçin.
     ::: moniker-end
 
 2. Sınıf kitaplığı için, gibi uygun bir ad yazın `MyFirstVisualizer` ve ardından **Oluştur** veya **Tamam**' a tıklayın.
@@ -52,7 +53,7 @@ Görselleştiricisi kodu, hata ayıklayıcı tarafından okunacak bir DLL 'ye ye
 
 ### <a name="to-rename-class1vb-and-add-microsoftvisualstudiodebuggervisualizers"></a>Class1. vb ' i yeniden adlandırmak ve Microsoft. VisualStudio. Debuggervisualiciler eklemek için
 
-1. **Çözüm Gezgini**, **Class1. vb**öğesine sağ tıklayın ve kısayol menüsünde **Yeniden Adlandır**' a tıklayın.
+1. **Çözüm Gezgini**, **Class1. vb** öğesine sağ tıklayın ve kısayol menüsünde **Yeniden Adlandır**' a tıklayın.
 
 2. Name. vb olan adı DebuggerSide. vb gibi bir anlamlı olacak şekilde değiştirin.
 
@@ -63,9 +64,9 @@ Görselleştiricisi kodu, hata ayıklayıcı tarafından okunacak bir DLL 'ye ye
 
 4. **Başvuru Ekle** iletişim kutusunda, **Araştır** sekmesinde, **araştır** ' ı seçin ve Microsoft.VisualStudio.DebuggerVisualizers.DLL bulun.
 
-    DLL 'yi, Visual Studio 'nun yükleme dizininin * \<Visual Studio Install Directory> \Common7\IDE\PublicAssemblies* alt dizininde bulabilirsiniz.
+    DLL 'yi, Visual Studio 'nun yükleme dizininin *\<Visual Studio Install Directory> \Common7\IDE\PublicAssemblies* alt dizininde bulabilirsiniz.
 
-5. **Tamam**’a tıklayın.
+5. **Tamam**'a tıklayın.
 
 6. DebuggerSide. vb içinde, aşağıdaki deyimi `Imports` deyimlere ekleyin:
 
@@ -111,9 +112,9 @@ Görselleştiricisi kodu, hata ayıklayıcı tarafından okunacak bir DLL 'ye ye
 
 2. **Başvuru Ekle** iletişim kutusunda, **Araştır** sekmesinde, **araştır**' ı seçin ve System.Windows.Forms.DLL bulun.
 
-    DLL 'yi *C:\Windows\Microsoft.NET\Framework\v4.0.30319*içinde bulabilirsiniz.
+    DLL 'yi *C:\Windows\Microsoft.NET\Framework\v4.0.30319* içinde bulabilirsiniz.
 
-3. **Tamam**’a tıklayın.
+3. **Tamam**'a tıklayın.
 
 4. DebuggerSide.cs ' de, aşağıdaki deyimi `Imports` deyimlere ekleyin:
 
@@ -174,10 +175,10 @@ Hata ayıklayıcı tarafında bulunan kodda, özniteliği kullanılarak hata ay�
 1. Çözüm Gezgini, çözüme sağ tıklayın, **Ekle**' yi seçin ve ardından **Yeni proje**' ye tıklayın.
 
     ::: moniker range=">=vs-2019"
-    Arama kutusunda, **Visual Basic**yazın, **Şablonlar**' ı seçin ve ardından **Yeni bir konsol uygulaması oluştur (.NET Framework)** öğesini seçin. Görüntülenen iletişim kutusunda **Oluştur**' u seçin.
+    Arama kutusunda, **Visual Basic** yazın, **Şablonlar**' ı seçin ve ardından **Yeni bir konsol uygulaması oluştur (.NET Framework)** öğesini seçin. Görüntülenen iletişim kutusunda **Oluştur**' u seçin.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Üstteki menü çubuğundan **Dosya**  >  **Yeni**  >  **Proje**' yi seçin. **Yeni proje** iletişim kutusunun sol bölmesinde, **Visual Basic**altında **Windows Masaüstü**' nün ardından orta bölmedeki **konsol uygulaması ' nı (.NET Framework)** seçin.
+    Üstteki menü çubuğundan **Dosya**  >  **Yeni**  >  **Proje**' yi seçin. **Yeni proje** iletişim kutusunun sol bölmesinde, **Visual Basic** altında **Windows Masaüstü**' nün ardından orta bölmedeki **konsol uygulaması ' nı (.NET Framework)** seçin.
     ::: moniker-end
 
 2. Sınıf kitaplığı için, gibi uygun bir ad yazın `MyTestConsole` ve ardından **Oluştur** veya **Tamam**' a tıklayın.
@@ -190,22 +191,22 @@ Hata ayıklayıcı tarafında bulunan kodda, özniteliği kullanılarak hata ay�
 
 2. **Başvuru Ekle** iletişim kutusunda, **Araştır** sekmesinde, Microsoft. VisualStudio. debuggervisualiciler ' ı tıklatın.
 
-3. **Tamam**’a tıklayın.
+3. **Tamam**'a tıklayın.
 
 4. **MyTestConsole**' a sağ tıklayın ve ardından **Başvuru Ekle** ' ye tıklayın.
 
 5. **Başvuru Ekle** iletişim kutusunda, **Projeler** sekmesine tıklayın ve ardından myfirstgörselleştirici ' ı seçin.
 
-6. **Tamam**’a tıklayın.
+6. **Tamam**'a tıklayın.
 
 ## <a name="finish-your-test-harness-and-test-your-visualizer"></a>Test ortamınızı tamamlayın ve Görselleştiriciyi test edin
  Şimdi, test bandı sona ermesini sağlayacak kodu ekleyeceksiniz.
 
 ### <a name="to-add-code-to-mytestconsole"></a>MyTestConsole 'a kod eklemek için
 
-1. **Çözüm Gezgini**, **program. vb**öğesine sağ tıklayın ve kısayol menüsünde **Yeniden Adlandır**' a tıklayın.
+1. **Çözüm Gezgini**, **program. vb** öğesine sağ tıklayın ve kısayol menüsünde **Yeniden Adlandır**' a tıklayın.
 
-2. Bu adı, Module1. vb olan **TestConsole. vb**gibi bir değere düzenleyin.
+2. Bu adı, Module1. vb olan **TestConsole. vb** gibi bir değere düzenleyin.
 
     [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]TestConsole. vb içindeki sınıf bildirimini yeni dosya adıyla eşleşecek şekilde otomatik olarak değiştirdiğine dikkat edin.
 
@@ -238,6 +239,6 @@ Hata ayıklayıcı tarafında bulunan kodda, özniteliği kullanılarak hata ay�
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Görselleştirici Mimarisi](../debugger/visualizer-architecture.md)
+- [Görselleştiricisi mimarisi](../debugger/visualizer-architecture.md)
 - [Nasıl yapılır: Görselleştirici yüklemesi](../debugger/how-to-install-a-visualizer.md)
 - [Özel Görselleştirici Oluşturma](../debugger/create-custom-visualizers-of-data.md)

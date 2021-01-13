@@ -1,5 +1,7 @@
 ---
 title: İş parçacığı arama Iletişim kutusu | Microsoft Docs
+description: Spy + + hata ayıklama aracında Iş parçacığı arama iletişim kutusu hakkında bilgi edinin. Iş parçacıkları görünümündeki belirli bir iş parçacığının düğümünü bulmak ve seçmek için bu iletişim kutusunu kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2fddbb589a6978f72dc5926a78c9eb13f21b3a4b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 895241a99131c31e2fab73b9799f6203db7259e0
+ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62901868"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98148760"
 ---
 # <a name="thread-search-dialog-box"></a>İş Parçacığı Arama İletişim Kutusu
 [Iş parçacıkları görünümündeki](../debugger/threads-view.md)belirli bir iş parçacığının düğümünü bulmak ve seçmek için bu iletişim kutusunu kullanın. Bu iletişim kutusunu görüntülemek için odağı bir **Iş parçacığı** Görünümü penceresine taşıyın. Sonra **arama** menüsünden **iş parçacığı bul** ' u seçin.
