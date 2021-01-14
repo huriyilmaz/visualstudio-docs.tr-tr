@@ -12,12 +12,12 @@ author: mikejo5000
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 98d58b745b35870d287b6e81aa0a14fcdaeac921
-ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
+ms.openlocfilehash: 0dc266b43d9a4634fe8cfbc05a3a070ae72cdaa9
+ms.sourcegitcommit: 1ceb58e3a1afa80a3211911ada4e5adaa1b1d439
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95598529"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98192869"
 ---
 # <a name="vstestconsoleexe-command-line-options"></a>VSTest.Console.exe komut satırı seçenekleri
 
@@ -44,7 +44,7 @@ Aşağıdaki tabloda *VSTest.Console.exe* ve bunların kısa açıklamaları iç
 |**/Inısolation**|Testleri yalıtılmış bir işlemde çalıştırır.<br />Bu yalıtım, testlerin bir hata üzerinde *vstest.console.exe* işlemini daha düşük bir hale getirir, ancak testler daha yavaş çalışabilir.|
 |**/UseVsixExtensions**|Bu seçenek, *vstest.console.exe* işleminin Test çalıştırmasında yüklü olan (varsa) VSIX uzantılarını kullanmasını veya atlamasını sağlar.<br />Bu seçenek kullanım dışıdır. Visual Studio 'nun bir sonraki ana sürümünden itibaren bu seçenek kaldırılabilir. NuGet paketi olarak kullanılabilir hale getirilen genişletme uzantılarına taşıyın.<br />Örnek: `/UseVsixExtensions:true`|
 |**/TestAdapterPath: [*yol*]**|*vstest.console.exe* işlemini, Test çalıştırmasında belirtilen yoldan (varsa) özel test bağdaştırıcılarını kullanacak şekilde zorlar.<br />Örnek: `/TestAdapterPath:[pathToCustomAdapters]`|
-|**/Platform: [*Platform türü*]**|Test yürütmesi için kullanılacak hedef platform mimarisi.<br />Geçerli değerler x86, x64 ve ARM 'dir.|
+|**/Platform: [*Platform türü*]**|, Geçerli çalışma zamanından belirlenen platform yerine, verilen platformu kullanmak üzere zorlar. Bu seçenek Windows üzerinde yalnızca x86 ve x64 platformları zorlayabilir. ARM seçeneği bozulur ve çoğu sistemde x64 ile sonuçlanır.<br />ARM64 gibi geçerli değerler listesinde olmayan çalışma zamanları üzerinde çalıştırmak için bu seçeneği belirtmeyin.<br />Geçerli değerler x86, x64 ve ARM 'dir.<br /> 
 |**/Framework: [*Framework sürümü*]**|Test yürütmesi için kullanılacak hedef .NET sürümü.<br />Örnek değerler şunlardır,,, `Framework35` `Framework40` `Framework45` `FrameworkUap10` , `.NETCoreApp,Version=v1.1` .<br />TargetFrameworkAttribute, bu seçeneği derlemeinizden otomatik olarak algılamak için kullanılır ve özniteliği mevcut olmadığında varsayılan olarak öğesine ayarlanır `Framework40` . [TargetFrameworkAttribute](/dotnet/api/system.runtime.versioning.targetframeworkattribute) 'Yi .NET Core derlemelerinden kaldırırsanız bu seçeneği açıkça belirtmeniz gerekir.<br />Hedef çerçeve **Framework35** olarak belirtilmişse, testler CLR 4,0 "uyumluluk modunda" çalışır.<br />Örnek: `/Framework:framework40`|
 |**/TestCaseFilter: [*ifade*]**|Verilen ifadeyle eşleşen testleri çalıştırın.<br /><Ifade \> <özellik \> =<değer \> [ \|<ifadesi \> ] biçimindedir.<br />Örnek: `/TestCaseFilter:"Priority=1"`<br />Örnek: `/TestCaseFilter:"TestCategory=Nightly|FullyQualifiedName=Namespace.ClassName.MethodName"`<br />**/TestCaseFilter** komut satırı seçeneği **/Tests** komut satırı seçeneğiyle birlikte kullanılamaz. <br />İfadeleri oluşturma ve kullanma hakkında daha fazla bilgi için bkz. [TestCase filtresi](https://github.com/Microsoft/vstest-docs/blob/master/docs/filter.md).|
 |**/?**|Kullanım bilgilerini görüntüler.|
@@ -88,7 +88,7 @@ Aşağıdaki komut birkaç seçenekten *vstest.console.exe* çalışır. *myTest
 vstest.console.exe myTestFile.dll /Settings:Local.RunSettings /InIsolation /TestCaseFilter:"Priority=1" /Logger:trx
 ```
 
-Aşağıdaki komut, *vstest.console.exe* `/blame` Test kitaplığı *myTestProject.dll* seçeneğiylevstest.console.exeçalışır:
+Aşağıdaki komut,  `/blame` Test kitaplığı *myTestProject.dll* seçeneğiylevstest.console.exeçalışır:
 
 ```cmd
 vstest.console.exe myTestFile.dll /blame
