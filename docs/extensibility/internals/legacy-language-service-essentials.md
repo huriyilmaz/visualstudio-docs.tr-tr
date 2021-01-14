@@ -1,5 +1,7 @@
 ---
 title: Eski dil hizmeti temelleri | Microsoft Docs
+description: Bir programlama dilini Visual Studio ile tümleştirmenize olanak tanıyan eski dil hizmetlerinde sunulan temel özellikler hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 501bccf755293e86e8a9dc23fce125a10c882376
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ffa21b619ef17be3fa649732a2b6e3bcd700dda6
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80707420"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205157"
 ---
 # <a name="legacy-language-service-essentials"></a>Eski Dil Hizmeti Temel Bileşenleri
 Programlama dilini Visual Studio ile tümleştirebilmek için bir dil hizmeti sağlamanız gerekir. Bu konuda, eski dil hizmetlerinde kullanılabilen özellikler açıklanmaktadır.
@@ -45,4 +47,4 @@ Programlama dilini Visual Studio ile tümleştirebilmek için bir dil hizmeti sa
 | Özellik | Açıklama |
 |-----------------------| - |
 | İfade değerlendiricileri | [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Kesme noktalarını doğrulayarak ve **oto** hata ayıklama penceresinde görüntülenecek ifadelerin bir listesini sağlayarak hata ayıklayıcıyı destekler.<br /><br /> Daha fazla bilgi için bkz. [hata ayıklama Için dil hizmeti desteği](../../extensibility/internals/language-service-support-for-debugging.md). |
-| Sembol tarama araçları | **Nesne tarayıcısı**, **sınıf görünümü**, **çağrı tarayıcısı**destekler ve **sembol sonuçlarını bulur**. |
+| Sembol tarama araçları | **Nesne tarayıcısı**, **sınıf görünümü**, **çağrı tarayıcısı** destekler ve **sembol sonuçlarını bulur**. |

@@ -1,5 +1,7 @@
 ---
 title: Komut satırından katman etkileşim verileri ekleme | Microsoft Docs
+description: Bir veya daha fazla veritabanıyla iletişim kuran çok katmanlı uygulamalarda, zaman uyumlu çağrılar için yürütme zaman bilgileri için katman etkileşim profili oluşturma kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 20b8438243382b28cccb510894d1674aa5872946
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e5e3dc7fc3ebbb3d06e85f7322237ecb72b22b0e
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74779876"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205547"
 ---
 # <a name="add-tier-interaction-data-from-the-command-line"></a>Komut satırından katman etkileşim verileri ekleme
 
@@ -32,7 +34,7 @@ Katman etkileşimi profili oluşturma, herhangi bir Visual Studio sürümü kull
 
 **Uzak makinede Ipucu verileri toplama**
 
-Uzak bir makinedeki katman etkileşimi verilerini toplamak için, ** \_ vs_profiler** _\<Platform>_ **\_** _\<Language>_ **. exe** dosyasını bir Visual Studio makinesinin _% VSInstallDir%_**\Team Tools\Performance tools\kurulumları** klasöründen uzak bilgisayara kopyalamanız ve kurmanız gerekir. [Uzaktan hata ayıklama](../debugger/remote-debugging.md) indirme paketindeki profil oluşturma araçlarını kullanamazsınız.
+Uzak bir makinedeki katman etkileşimi verilerini toplamak için, **\_ vs_profiler** _\<Platform>_ **\_** _\<Language>_ **. exe** dosyasını bir Visual Studio makinesinin _% VSInstallDir%_**\Team Tools\Performance tools\kurulumları** klasöründen uzak bilgisayara kopyalamanız ve kurmanız gerekir. [Uzaktan hata ayıklama](../debugger/remote-debugging.md) indirme paketindeki profil oluşturma araçlarını kullanamazsınız.
 
 **Ipucu raporları**
 

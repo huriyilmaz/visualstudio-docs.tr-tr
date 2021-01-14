@@ -1,5 +1,7 @@
 ---
 title: Sözde değişkenler | Microsoft Docs
+description: Visual Studio hata ayıklayıcısında sahte değişkenleri gözden geçirin. Sözde değişkenler, belirli verileri bir değişken penceresinde veya QuickWatch iletişim kutusunda göstermek için kullanılan terimlerdir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -17,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b5b0369a30e69fc69782bbc4a0f5b0c4518cac07
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c5a76bf799eabd29b778c2dec867cc7e50aa45ee
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75776095"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205534"
 ---
 # <a name="pseudovariables-in-the-visual-studio-debugger"></a>Visual Studio hata ayıklayıcısında sahte değişkenler
 Sözde değişkenler, belirli bilgileri bir değişken penceresinde veya **QuickWatch** iletişim kutusunda göstermek için kullanılan terimlerdir. Bir sözde değişkeni, normal bir değişkene girebileceğiniz şekilde girebilirsiniz. Ancak sözde değişkenler, değişken değildir ve programınızdaki değişken adlarına karşılık gelmez.
@@ -64,7 +66,7 @@ Sözde değişkenler, belirli bilgileri bir değişken penceresinde veya **Quick
 |`$exception`|Son özel durum hakkındaki bilgileri görüntüler. Bir özel durum oluştuysa, değerlendirmek `$exception` bir hata mesajı görüntüler.|
 |`$delete` veya `$$delete`|**Komut** penceresinde oluşturulan örtük bir değişkeni siler. Söz dizimi `$delete,` *değişken* veya `$delete,` *değişkendir*`.`|
 |`$objectids` veya `$listobjectids`|Tüm etkin nesne kimliklerini belirtilen ifadenin alt öğesi olarak görüntüler. Söz dizimi `$objectid,` *ifade* veya `$listobjectids,` *ifadedir*`.`|
-|`$` *N* `#`|Nesne KIMLIĞIYLE birlikte *N*değerine eşit olan nesneyi görüntüler.|
+|`$`*N*`#`|Nesne KIMLIĞIYLE birlikte *N* değerine eşit olan nesneyi görüntüler.|
 |`$dynamic`|Uygulayan bir nesne için özel **Dinamik görünüm** düğümünü görüntüler `IDynamicMetaObjectProvider` . Arayüz. Sözdizimi `$dynamic,` *Object*. Bu özellik yalnızca .NET Framework sürüm 4 veya üstünü kullanan kod için geçerlidir.|
 
 ## <a name="see-also"></a>Ayrıca bkz.

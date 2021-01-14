@@ -1,6 +1,7 @@
 ---
 title: VB hata ayıklama yapılandırması için proje ayarları | Microsoft Docs
-ms.custom: seodec18
+description: Visual Studio 'nun Özellik sayfaları penceresinde bir Visual Basic hata ayıklama yapılandırması için proje ayarlarını değiştirmeyi öğrenin.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -23,12 +24,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bcac88c2faf1af7378ce25597789700df61648a9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 277d78b225afae13d73e091c1228e181df30e532
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72730613"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205599"
 ---
 # <a name="project-settings-for-a-visual-basic-debug-configuration"></a>Visual Basic Hata Ayıklama Yapılandırması Proje Ayarları
 Hata [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] [ayıklama ve sürüm yapılandırmalarında](../debugger/how-to-set-debug-and-release-configurations.md)açıklanan şekilde, **Özellik sayfaları** penceresinde bir hata ayıklama yapılandırması için proje ayarlarını değiştirebilirsiniz. Aşağıdaki tablolarda, **Özellik sayfaları** penceresinde hata ayıklayıcı ile ilgili ayarların nerede bulunacağı gösterilmektedir.
@@ -40,7 +41,7 @@ Hata [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] [ayıklama ve sü
 
 | Ayar | Açıklama |
 |------------------------------| - |
-| **Yapılandırma** | Uygulamayı derlemek için modu ayarlar. **Etkin (hata ayıklama)**, **hata ayıklama**, **yayın**, **Tüm yapılandırmaların**arasından seçim yapın. |
+| **Yapılandırma** | Uygulamayı derlemek için modu ayarlar. **Etkin (hata ayıklama)**, **hata ayıklama**, **yayın**, **Tüm yapılandırmaların** arasından seçim yapın. |
 | **Başlatma eylemi** | Bu denetim grubu, hata ayıklama menüsünden Başlat ' ı seçtiğinizde gerçekleştirilecek eylemi belirtir.<br /><br /> -   **Projeyi Başlat** varsayılandır ve başlangıç projesini hata ayıklama için başlatır. <br />-   **Dış programı Başlat** , bir projenin parçası olmayan bir programı başlatıp eklemenize olanak sağlar [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Daha fazla bilgi için bkz. [çalışan Işlemlere iliştirme](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md).<br />-   **URL 'de tarayıcıyı Başlat** bir Web uygulamasında hata ayıklamanıza olanak sağlar. |
 | **Komut satırı bağımsız değişkenleri** | Hata Ayıklanacak programın komut satırı bağımsız değişkenlerini belirtir. Komut adı, dış program Başlat bölümünde belirtilen program adıdır. Başlat eylemi başlangıç URL 'SI olarak ayarlandıysa komut satırı bağımsız değişkenleri yok sayılır. |
 | **Çalışma dizini** | Hata ayıklanan programın çalışma dizinini belirtir. [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]' De, çalışma dizini, uygulamanın başlatıldığı dizindir. Geçerli yapılandırmaya bağlı olarak, varsayılan çalışma dizini \bin\Debug veya \bin\Release ' dir. |
@@ -58,4 +59,4 @@ Hata [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] [ayıklama ve sü
 | **Izleme sabitini tanımlama** | Bu sembolün tanımlanması, [Trace sınıfından](/dotnet/api/system.diagnostics.trace)çıkış işlevlerinin koşullu derlemesini mümkün bir şekilde sunar. Bu sembol tanımlanmış olarak, Trace class yöntemleri [Çıkış penceresinde](../ide/reference/output-window.md)çıktı oluşturur. Bu sembol olmadan, Izleme sınıfı yöntemleri derlenmez ve hiçbir Izleme çıkışı oluşturulmaz. Bu simge, hem hata ayıklama hem de yayın sürümleri için varsayılan olarak tanımlanmıştır. |
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Hata Ayıklayıcısı Ayarları ve Hazırlığı](../debugger/debugger-settings-and-preparation.md)
+- [Hata ayıklayıcı ayarları ve hazırlığı](../debugger/debugger-settings-and-preparation.md)

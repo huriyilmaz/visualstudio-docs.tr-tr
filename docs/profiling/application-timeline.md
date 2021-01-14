@@ -1,6 +1,7 @@
 ---
 title: XAML uygulamalarında kaynak tüketimini analiz etme
-ms.custom: seodec18
+description: XAML uygulamalarında performans sorunlarını bulmak için Uygulama Zaman Çizelgesi Profiler 'ı kullanın. Çeşitli senaryolarda çeşitli görevler için harcanan süreyi analiz edebilirsiniz.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/01/2018
 ms.topic: conceptual
 ms.assetid: df7d854b-0a28-45a9-8a64-c015a4327701
@@ -9,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 6d7f3d943d621708efab8df1e2f69402a0c5f26c
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 8fc482e10ae1ca08230feb38eb2997d0c4dcab00
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90038354"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205742"
 ---
 # <a name="analyze-resource-consumption-and-ui-thread-activity-xaml"></a>Kaynak tüketimini ve UI iş parçacığı etkinliğini çözümleme (XAML)
 
@@ -45,14 +46,14 @@ Temel adımlar şunlardır:
 
 1. XAML uygulamanızı açın.
 
-2. **Hata ayıklama/performans profil Oluşturucu ' ya**tıklayın. . Diagsession penceresinde profil oluşturma araçlarının bir listesini görmeniz gerekir.
+2. **Hata ayıklama/performans profil Oluşturucu ' ya** tıklayın. . Diagsession penceresinde profil oluşturma araçlarının bir listesini görmeniz gerekir.
 
 3. **Uygulama zaman çizelgesi** öğesini seçin ve ardından pencerenin alt kısmındaki **Başlat** ' a tıklayın.
 
    ![Uygulama Zaman Çizelgesi araç seçildi](../profiling/media/apptimelineselect.png "Uygulama Zaman Çizelgesi Aracı")
 
    > [!NOTE]
-   > *VsEtwCollector.exe*çalıştırmak için izninizi ısteyen bir kullanıcı hesabı denetim penceresi görebilirsiniz. **Evet**'e tıklayın.
+   > *VsEtwCollector.exe* çalıştırmak için izninizi ısteyen bir kullanıcı hesabı denetim penceresi görebilirsiniz. **Evet**'e tıklayın.
 
 4. Performans verilerini toplamak için uygulamanızdaki profil oluşturma konusunda ilgilendiğiniz senaryoyu çalıştırın.
 

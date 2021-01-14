@@ -1,6 +1,7 @@
 ---
 title: Yeni başlayanlar için CPU örneklemesi Kılavuzu
-ms.custom: seodec18
+description: Visual Studio profil oluşturma araçlarının uygulamanızdaki işlevler tarafından ne kadar süre kullanıldığını ortaya çıkarmayı, uygulamayı hızlandırmaya yönelik alanlara kılavuzluk ederek öğrenin.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 02/27/2017
 ms.topic: how-to
 f1_keywords:
@@ -16,12 +17,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: a58803747e0da411012226325c390352edf4e919
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c61d407247910131deee9585d19a921f8cf76cca
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85330600"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205365"
 ---
 # <a name="beginners-guide-to-cpu-sampling"></a>Yeni başlayanlar için CPU örneklemesi Kılavuzu
 Uygulamanızdaki performans sorunlarını analiz etmek için Visual Studio profil oluşturma araçları 'nı kullanabilirsiniz. Bu yordamda **örnekleme** verilerinin nasıl kullanılacağı gösterilmektedir.
@@ -31,7 +32,7 @@ Uygulamanızdaki performans sorunlarını analiz etmek için Visual Studio profi
 
  **Örnekleme** , uygulamada Kullanıcı modu işinin çoğunu yapan işlevleri gösteren istatistiksel bir profil oluşturma yöntemidir. Örnekleme, uygulamanızı hızlandırmak için alanlara bakmak üzere başlamak için iyi bir yerdir.
 
- Belirtilen aralıklarda **örnekleme** yöntemi, uygulamanızda yürütülen işlevlerle ilgili bilgiler toplar. Profil oluşturma çalıştırmasını tamamladıktan sonra, profil oluşturma verilerinin **Özet** görünümü, uygulamadaki çalışmanın büyük bir kısmında gerçekleştirilen etkin **yol**olarak adlandırılan en etkin işlev çağrı ağacını gösterir. Görünüm Ayrıca en bireysel çalışmayı gerçekleştiren işlevleri listeler ve örnekleme oturumunun belirli kesimlerine odaklanmak için kullanabileceğiniz bir zaman çizelgesi grafiği sağlar.
+ Belirtilen aralıklarda **örnekleme** yöntemi, uygulamanızda yürütülen işlevlerle ilgili bilgiler toplar. Profil oluşturma çalıştırmasını tamamladıktan sonra, profil oluşturma verilerinin **Özet** görünümü, uygulamadaki çalışmanın büyük bir kısmında gerçekleştirilen etkin **yol** olarak adlandırılan en etkin işlev çağrı ağacını gösterir. Görünüm Ayrıca en bireysel çalışmayı gerçekleştiren işlevleri listeler ve örnekleme oturumunun belirli kesimlerine odaklanmak için kullanabileceğiniz bir zaman çizelgesi grafiği sağlar.
 
  **Örnekleme** size ihtiyacınız olan verileri sağlamıyorsa, diğer profil oluşturma araçları koleksiyon yöntemleri sizin için yararlı olabilecek farklı türde bilgiler sağlar. Bu diğer yöntemler hakkında daha fazla bilgi için bkz. [nasıl yapılır: koleksiyon yöntemlerini seçme](../profiling/how-to-choose-collection-methods.md).
 
@@ -45,7 +46,7 @@ Uygulamanızdaki performans sorunlarını analiz etmek için Visual Studio profi
 
 #### <a name="to-create-and-run-a-performance-session"></a>Bir performans oturumu oluşturmak ve çalıştırmak için
 
-1. Visual Studio 'da çözümü açın. Yapılandırmayı serbest olarak ayarlayın. (Varsayılan olarak **Hata Ayıkla** olarak ayarlanan araç çubuğunda **çözüm konfigürasyonları** kutusunu bulun. **Yayın**olarak değiştirin.)
+1. Visual Studio 'da çözümü açın. Yapılandırmayı serbest olarak ayarlayın. (Varsayılan olarak **Hata Ayıkla** olarak ayarlanan araç çubuğunda **çözüm konfigürasyonları** kutusunu bulun. **Yayın** olarak değiştirin.)
 
     > [!IMPORTANT]
     > Kullandığınız bilgisayarda yönetici değilseniz, profil oluşturucuyu kullanırken Visual Studio 'Yu yönetici olarak çalıştırmalısınız. (Visual Studio uygulaması simgesine sağ tıklayın ve ardından **yönetici olarak çalıştır**' a tıklayın.
@@ -67,7 +68,7 @@ Uygulamanızdaki performans sorunlarını analiz etmek için Visual Studio profi
 ## <a name="step-2-analyze-sampling-data"></a>2. Adım: örnekleme verilerini çözümleme
  Bir performans oturumu çalıştırmayı bitirdiğinizde, Visual Studio 'da ana pencerede profil oluşturma raporunun **Özet** görünümü görüntülenir.
 
- **Sık kullanılan yolu inceleyerek,** en çok iş yapan işlevlerin listesini ve son olarak **Özet zaman çizelgesini**kullanarak diğer işlevlere odaklanarak verilerinizi analiz etmeye başlamanızı öneririz. Ayrıca, **hata listesi** penceresinde profil oluşturma önerilerini ve uyarıları görüntüleyebilirsiniz.
+ **Sık kullanılan yolu inceleyerek,** en çok iş yapan işlevlerin listesini ve son olarak **Özet zaman çizelgesini** kullanarak diğer işlevlere odaklanarak verilerinizi analiz etmeye başlamanızı öneririz. Ayrıca, **hata listesi** penceresinde profil oluşturma önerilerini ve uyarıları görüntüleyebilirsiniz.
 
  Örnekleme yönteminin size ihtiyacınız olan bilgileri sunmayabilir. Örneğin, örnekler yalnızca uygulama kullanıcı modu kodu yürütürken toplanır. Bu nedenle, giriş ve çıkış işlemleri gibi bazı işlevler, örneklemeye göre yakalanmaz. Profil Oluşturma Araçları, önemli verilere odaklanabilmenizi sağlayan birkaç koleksiyon yöntemi sağlar. Diğer yöntemler hakkında daha fazla bilgi için bkz. [nasıl yapılır: koleksiyon yöntemlerini seçme](../profiling/how-to-choose-collection-methods.md).
 
@@ -93,7 +94,7 @@ Uygulamanızdaki performans sorunlarını analiz etmek için Visual Studio profi
 
     - **Işlev ayrıntıları** pencerelerinin alt bölmesi işlev kodunun kendisini görüntüler. Kodu inceleyebilir ve performansını iyileştirmek için bir fırsat bulursanız kaynak dosya adına tıklayarak dosyayı Visual Studio düzenleyicisinde açın.
 
-3. Analize devam etmek için **Görünüm** açılır listesinden **Özet** ' i seçerek **Özet** görünümüne geri dönün. Ardından, **en bireysel Işleri yapan işlevlerdeki**işlevleri inceleyin. Bu liste, en yüksek dışlamalı örneklere sahip işlevleri görüntüler. Bu işlevlerin işlev gövdesindeki kod önemli çalışmalar gerçekleştiriyor ve onu iyileştirebiliyor olabilirsiniz. Belirli bir işlevi daha fazla analiz etmek için işlev adına tıklayarak işlevin **Ayrıntılar** görünümünde görüntüleyin.
+3. Analize devam etmek için **Görünüm** açılır listesinden **Özet** ' i seçerek **Özet** görünümüne geri dönün. Ardından, **en bireysel Işleri yapan işlevlerdeki** işlevleri inceleyin. Bu liste, en yüksek dışlamalı örneklere sahip işlevleri görüntüler. Bu işlevlerin işlev gövdesindeki kod önemli çalışmalar gerçekleştiriyor ve onu iyileştirebiliyor olabilirsiniz. Belirli bir işlevi daha fazla analiz etmek için işlev adına tıklayarak işlevin **Ayrıntılar** görünümünde görüntüleyin.
 
      ![En çok iş yapan işlevlerin listesi](../profiling/media/functions_mostwork.png "Functions_MostWork")
 
@@ -116,11 +117,11 @@ Uygulamanızdaki performans sorunlarını analiz etmek için Visual Studio profi
 
 1. Kodunuzu değiştirin.
 
-2. **Performans Gezgini**açmak Için, **hata ayıklama** menüsünde **profil oluşturucu**' ya ve ardından **Performans Gezgini** **Performans Gezgini göster**' e tıklayın.
+2. **Performans Gezgini** açmak Için, **hata ayıklama** menüsünde **profil oluşturucu**' ya ve ardından **Performans Gezgini** **Performans Gezgini göster**' e tıklayın.
 
 3. **Performans Gezgini**, yeniden çalıştırmak istediğiniz oturuma sağ tıklayın ve ardından **profil oluşturma ile Başlat** ' a tıklayın.
 
-4. Oturumu yeniden çalıştırdıktan sonra, **Performans Gezgini**oturum için *raporlar* klasörüne başka bir veri dosyası eklenir. Hem özgün hem de yeni profil oluşturma verilerini seçin, seçime sağ tıklayın ve ardından **performans raporlarını karşılaştır**' a tıklayın.
+4. Oturumu yeniden çalıştırdıktan sonra, **Performans Gezgini** oturum için *raporlar* klasörüne başka bir veri dosyası eklenir. Hem özgün hem de yeni profil oluşturma verilerini seçin, seçime sağ tıklayın ve ardından **performans raporlarını karşılaştır**' a tıklayın.
 
      Karşılaştırma sonuçlarını görüntüleyen yeni bir rapor penceresi açılır. Karşılaştırma görünümünü kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: performans veri dosyalarını karşılaştırma](../profiling/how-to-compare-performance-data-files.md).
 

@@ -1,6 +1,7 @@
 ---
 title: Bellek kullanımını analiz etme
-ms.custom: seodec18
+description: Bellek sızıntılarını ve verimsiz bellek kullanımını bulmak için kullanabileceğiniz araçlar, bellek kullanımı aracı ve .NET nesne ayırma aracı gibi araçlar hakkında bilgi edinin.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 10/12/2020
 ms.topic: conceptual
 author: mikejo5000
@@ -8,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 53d8e33555530eacf482f3f99752ea4c42f8d827
-ms.sourcegitcommit: ae9145b32fc8e1e663e504c315a5df5dd302fee9
+ms.openlocfilehash: 675636b7abca10fb2f9f1898d753155235830f86
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92918103"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205729"
 ---
 # <a name="analyze-memory-usage"></a>Bellek kullanımını analiz etme
 
@@ -31,7 +32,7 @@ C++ geliştiricileri, hata ayıklayıcı ile tümleşik veya hata ayıklayıcı 
 - [Hata ayıklayıcı ile bellek kullanımını analiz etme](../profiling/memory-usage.md)
 - [Hata ayıklayıcı olmadan bellek kullanımını analiz etme](../profiling/memory-usage-without-debugging2.md)
 
-Profil oluşturma araçlarını Windows 7 ve üzeri bir hata ayıklayıcı olmadan kullanabilirsiniz. Hata ayıklayıcı ( **Tanılama araçları** penceresi) ile profil oluşturma araçlarını çalıştırmak için Windows 8 ve üzeri gereklidir.
+Profil oluşturma araçlarını Windows 7 ve üzeri bir hata ayıklayıcı olmadan kullanabilirsiniz. Hata ayıklayıcı (**Tanılama araçları** penceresi) ile profil oluşturma araçlarını çalıştırmak için Windows 8 ve üzeri gereklidir.
 
 ## <a name="blogs-and-videos"></a>Blogların ve videoların
 

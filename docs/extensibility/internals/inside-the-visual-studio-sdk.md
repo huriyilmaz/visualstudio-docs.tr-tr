@@ -1,5 +1,7 @@
 ---
 title: Visual Studio SDK içinde | Microsoft Docs
+description: Visual Studio mimarisi, bileşenler, hizmetler, şemalar ve yardımcı programlar dahil Visual Studio SDK 'daki uzantılar hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0e72020795bc3181e11f0f90eff580a2365d4000
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 73bbb1beb30677711b8b517262b48465e7529585
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80707584"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205339"
 ---
 # <a name="inside-the-visual-studio-sdk"></a>Visual Studio SDK’nın İçinde
 
@@ -47,11 +49,11 @@ Bu bölümde Visual Studio mimarisi, bileşenler, hizmetler, şemalar, yardımc�
  Daha fazla bilgi için bkz. [Komutlar, menüler ve araç çubukları](../../extensibility/internals/commands-menus-and-toolbars.md).
 
 ## <a name="menus-and-toolbars"></a>Menüler ve araç çubukları
- Menüler ve araç çubukları, kullanıcıların komutları çağırmasına yönelik bir yol sağlar. Menüler, genellikle en üstteki bir araç penceresinde tek metin öğeleri olarak görüntülenen komut satırlarıdır. Alt menüler, Kullanıcı küçük bir ok içeren komutlara tıkladığında görünen ikincil menülerdir. Bağlam menüleri, bir Kullanıcı belirli kullanıcı arabirimi öğelerini sağ tıklattığında görüntülenir. Bazı ortak menü adları **Dosya**, **düzenleme**, **görüntüleme**ve **pencere**. Daha fazla bilgi için bkz. [genişletme menüleri ve komutları](../../extensibility/extending-menus-and-commands.md).
+ Menüler ve araç çubukları, kullanıcıların komutları çağırmasına yönelik bir yol sağlar. Menüler, genellikle en üstteki bir araç penceresinde tek metin öğeleri olarak görüntülenen komut satırlarıdır. Alt menüler, Kullanıcı küçük bir ok içeren komutlara tıkladığında görünen ikincil menülerdir. Bağlam menüleri, bir Kullanıcı belirli kullanıcı arabirimi öğelerini sağ tıklattığında görüntülenir. Bazı ortak menü adları **Dosya**, **düzenleme**, **görüntüleme** ve **pencere**. Daha fazla bilgi için bkz. [genişletme menüleri ve komutları](../../extensibility/extending-menus-and-commands.md).
 
  Araç çubukları, düğme ve açılan kutular, liste kutuları ve metin kutuları gibi düğmelerin ve diğer denetimlerin satır veya sütunlarıdır. Araç çubuğu düğmeleri genellikle **Açık dosya** komutu için klasör simgesi veya **Print** komutu için bir yazıcı gibi simge görüntülerine sahiptir. Tüm araç çubuğu öğeleri komutlarla ilişkilendirilir. Bir araç çubuğu düğmesine tıkladığınızda, ilişkili komutu çalışır. Açılan bir denetim olması durumunda, açılan listedeki her öğe farklı bir komutla ilişkilendirilir. Splitter denetimi gibi bazı araç çubuğu denetimleri hybrilar. Denetimin bir tarafı bir araç çubuğu düğmesidir ve diğer kenar tıklandığında birkaç komut görüntüleyen aşağı oktur.
 
-## <a name="tool-windows"></a>Araç pencereleri
+## <a name="tool-windows"></a>Araç Pencereleri
  Araç pencereleri, bilgileri göstermek için IDE 'de kullanılır. **Araç kutusu**, **Çözüm Gezgini**, **Özellikler** penceresi ve **Web tarayıcısı** araç pencerelerinin örnekleridir.
 
  Araç pencereleri genellikle kullanıcının etkileşime girebileceği çeşitli denetimler sunar. Örneğin, **Özellikler** penceresi, kullanıcının belirli bir amaca yönelik nesnelerin özelliklerini ayarlayabilmenizi sağlar. **Özellikler** penceresi bu anlamda özelleştirilmiştir, ancak aynı zamanda genel olarak birçok farklı durumda kullanılabilir. Benzer şekilde, metin tabanlı çıkış sağladığından **Çıkış** penceresi özelleştirilmiştir, ancak Visual Studio 'daki pek çok alt sistemi Visual Studio kullanıcısına çıkış sağlamak üzere kullanabileceğinden, genel olarak.
@@ -62,7 +64,7 @@ Bu bölümde Visual Studio mimarisi, bileşenler, hizmetler, şemalar, yardımc�
 
  Bazı araç pencereleri, Çözüm Gezgini araç penceresini görüntüleyen ve diğer araç pencerelerini gizleyen ve sekmeler ' i tıklatarak kullanılabilir hale getiren tek bir bölmede birlikte yerleştirildi. Resimde, tek bir bölmede birlikte yerleştirilen **hata listesi** ve **Çıkış** penceresi olmak üzere iki diğer araç pencereleri gösterilmektedir.
 
- Ayrıca, çeşitli düzenleyici pencereleri gösteren ana belge bölmesi de gösterilir. Araç pencereleri genellikle yalnızca bir örneğe sahip olsa da (örneğin, yalnızca bir **Çözüm Gezgini**açabilirsiniz), düzenleyici pencerelerinin her biri ayrı bir belgeyi düzenlemek için kullanılan ancak hepsi aynı bölmeye yerleştirilmiş olan birden fazla örneğe sahip olabilir. Resimde, tek form Tasarımcısı penceresi olmak üzere iki düzenleyici Windows içeren bir belge bölmesi görüntülenir. Belge bölmesindeki tüm pencereler sekmeler ' i tıklatarak kullanılabilir, ancak EditorPane.cs dosyasını içeren Düzenleyici penceresi görünür ve etkin olur.
+ Ayrıca, çeşitli düzenleyici pencereleri gösteren ana belge bölmesi de gösterilir. Araç pencereleri genellikle yalnızca bir örneğe sahip olsa da (örneğin, yalnızca bir **Çözüm Gezgini** açabilirsiniz), düzenleyici pencerelerinin her biri ayrı bir belgeyi düzenlemek için kullanılan ancak hepsi aynı bölmeye yerleştirilmiş olan birden fazla örneğe sahip olabilir. Resimde, tek form Tasarımcısı penceresi olmak üzere iki düzenleyici Windows içeren bir belge bölmesi görüntülenir. Belge bölmesindeki tüm pencereler sekmeler ' i tıklatarak kullanılabilir, ancak EditorPane.cs dosyasını içeren Düzenleyici penceresi görünür ve etkin olur.
 
  Visual Studio 'Yu genişlettiğinizde, Visual Studio kullanıcılarının uzantlarınızla etkileşime girmesine izin veren araç pencereleri oluşturabilirsiniz. Ayrıca, Visual Studio kullanıcılarının belgeleri düzenlemesine izin veren kendi düzenleyicilerinizi de oluşturabilirsiniz. Araç pencereleri ve düzenleyicilerimizin Visual Studio ile tümleştirileceği için, onları sabitlemek veya bir sekmede doğru bir şekilde görünmesi için programlayabilirsiniz. Visual Studio 'da doğru şekilde kaydedildiğinde, Visual Studio 'daki araç pencereleri ve Belge pencerelerinin tipik özellikleri otomatik olarak olur. Daha fazla bilgi için bkz. [araç pencerelerini genişletme ve özelleştirme](../../extensibility/extending-and-customizing-tool-windows.md).
 
@@ -87,7 +89,7 @@ Bu bölümde Visual Studio mimarisi, bileşenler, hizmetler, şemalar, yardımc�
 
 Visual Studio 'da, projeler, geliştiricilerin kaynak kodu ve diğer kaynakları düzenlemek ve derlemek için kullandığı kapsayıcılardır. Projeler, kaynak kodu, Web Hizmetleri ve veritabanlarına yönelik başvuruları ve diğer kaynakları düzenlemenize, oluşturmanıza, hata ayıklamanıza ve dağıtmanıza olanak tanır. VSPackages, proje türleri, proje alt türleri ve özel araçlar sağlayarak Visual Studio proje sistemini genişletebilir.
 
-Projeler aynı zamanda bir uygulama oluşturmak için birlikte çalışan bir veya daha fazla proje gruplandırması olan bir *çözümde*birlikte toplanabilir. Çözümle ilgili proje ve durum bilgileri, metin tabanlı [Çözüm (. sln) dosyası](solution-dot-sln-file.md) ve ikili [çözüm Kullanıcı seçeneği (. suo) dosyası](solution-user-options-dot-suo-file.md)olmak üzere iki çözüm dosyasında depolanır. Bu dosyalar, önceki Visual Basic sürümlerinde kullanılan grup (. vbg) dosyalarına ve C++ ' ın önceki sürümlerinde kullanılan çalışma alanı (. DSW) ve Kullanıcı seçenekleri (. opt) dosyalarına benzer.
+Projeler aynı zamanda bir uygulama oluşturmak için birlikte çalışan bir veya daha fazla proje gruplandırması olan bir *çözümde* birlikte toplanabilir. Çözümle ilgili proje ve durum bilgileri, metin tabanlı [Çözüm (. sln) dosyası](solution-dot-sln-file.md) ve ikili [çözüm Kullanıcı seçeneği (. suo) dosyası](solution-user-options-dot-suo-file.md)olmak üzere iki çözüm dosyasında depolanır. Bu dosyalar, önceki Visual Basic sürümlerinde kullanılan grup (. vbg) dosyalarına ve C++ ' ın önceki sürümlerinde kullanılan çalışma alanı (. DSW) ve Kullanıcı seçenekleri (. opt) dosyalarına benzer.
 
 Daha fazla bilgi için bkz. [Projeler](../../extensibility/internals/projects.md) ve [çözümler](../../extensibility/internals/solutions-overview.md).
 

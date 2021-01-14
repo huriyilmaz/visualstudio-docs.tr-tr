@@ -1,5 +1,7 @@
 ---
-title: Linux 'ta .NET Core hatalarını ayıklama
+title: Linux’ta .NET Core hatalarını ayıklama
+description: Bir işleme ekleyerek Linux üzerinde .NET Core 'a hata ayıklayın Secure Shell (SSH) kullanarak. Uygulamanızı hata ayıklama için hazırlayın. Uygulamayı derleyin ve dağıtın. Hata ayıklayıcıyı iliştirin.
+ms.custom: SEO-VS-2020
 ms.date: 02/26/2020
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,18 +11,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 39b77d68e7f8876f7e0d038166f4b2a6517bb3cb
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: bde5bb8722e0f95a10991019bdc9cba9c8a48ec3
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94671512"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98204897"
 ---
 # <a name="debug-net-core-on-linux-using-ssh-by-attaching-to-a-process"></a>Bir işleme ekleyerek SSH kullanarak Linux 'ta .NET Core hatalarını ayıklama
 
 Visual Studio 2017 ' den başlayarak, SSH üzerinden yerel veya uzak bir Linux dağıtımında çalışan .NET Core işlemlerine iliştirebilirsiniz. Bu makalede hata ayıklamayı ayarlama ve hata ayıklama işlemlerinin nasıl yapılacağı açıklanır. Docker kapsayıcılarını kullanarak hata ayıklama senaryolarında bkz. bunun yerine [Docker kapsayıcısı üzerinde çalışan bir Işleme iliştirme](../debugger/attach-to-process-running-in-docker-container.md) .
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 - Visual Studio bilgisayarında, **ASP.net ve Web geliştirme** iş yükünü ya da **.NET Core platformlar arası geliştirme** iş yükünü yüklemeniz gerekir.
 
@@ -40,7 +42,7 @@ Uygulamanızı hata ayıklamaya hazırlamak için:
 
 - Uygulamayı oluştururken bir hata ayıklama yapılandırması kullanmayı düşünün. Hata ayıklama derlenen koddan perakende koda derlenmiş kodun (sürüm yapılandırması) hata ayıklaması çok daha zordur. Sürüm yapılandırması kullanmanız gerekiyorsa Yalnızca kendi kodum önce devre dışı bırakın. Bu ayarı devre dışı bırakmak için **Araçlar**  >  **Seçenekler**  >  **hata ayıklama**' ı seçin ve ardından **yalnızca kendi kodum etkinleştir**' i kaldırın.
 
-- Projenizin [Taşınabilir pdb 'leri](https://github.com/OmniSharp/omnisharp-vscode/wiki/Portable-PDBs) (varsayılan ayar) olarak yapılandırıldığından ve PDB 'LERI 'in dll ile aynı konumda olduğundan emin olun. Visual Studio 'da yapılandırmak için projeye sağ tıklayın ve ardından **Özellikler**  >  **Build**  >  **Gelişmiş**  >  **hata ayıklama bilgileri** oluştur ' u seçin.
+- Projenizin [Taşınabilir pdb 'leri](https://github.com/OmniSharp/omnisharp-vscode/wiki/Portable-PDBs) (varsayılan ayar) olarak yapılandırıldığından ve PDB 'LERI 'in dll ile aynı konumda olduğundan emin olun. Visual Studio 'da yapılandırmak için projeye sağ tıklayın ve ardından **Özellikler**  >    >  **Gelişmiş**  >  **hata ayıklama bilgileri** oluştur ' u seçin.
 
 ## <a name="build-and-deploy-the-application"></a>Uygulama derleme ve dağıtma
 

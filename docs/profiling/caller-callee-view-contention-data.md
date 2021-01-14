@@ -1,6 +1,6 @@
 ---
 title: Arayan-Aranan Görünümü-çekişme verileri | Microsoft Docs
-description: Çağıran/çağrılan görünümünün, seçili bir işlev ve Performans Gezgini üst ve alt işlevleri için çekişme bilgilerini nasıl görüntüleyeceğini öğrenin.
+description: Çağıran/çağrılan görünümün, Performans Gezgini ' de, üst ve alt işlevleri için, seçili bir işlev için çekişme bilgilerini ve üst ve alt işlevlerini görüntüleme hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -13,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 5b51504d029c1e723321c8c92df28a2ecad1fd1a
-ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
+ms.openlocfilehash: ab622ffda91e6ea9020fb8caa6af2fb460128f17
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98150918"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98204806"
 ---
 # <a name="callercallee-view----contention-data"></a>Arayan/çağrılan görünümü-çekişme verileri
 Arayan/çağrılan görünümü seçili bir işlev ve üst ve alt işlevleri için çekişme bilgilerini görüntüler. Arayan/çağrılan görünümü üç kılavuz içerir.

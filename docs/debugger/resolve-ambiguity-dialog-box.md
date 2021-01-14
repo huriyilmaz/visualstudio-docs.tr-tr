@@ -1,5 +1,7 @@
 ---
 title: Belirsizlik Iletişim kutusunu çöz | Microsoft Docs
+description: Hata ayıklayıcı görüntülenecek konumu seçemezse görüntülenen Visual Studio 'nun belirsizlik Çöz iletişim kutusunu inceleyin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -19,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4257fd213d6401de381e25c74c126b8468b76057
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c6f7156a43bc8c5c60415680b4380600e9e695cc
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72729838"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205612"
 ---
 # <a name="resolve-ambiguity-dialog-box"></a>Belirsizliği Çöz İletişim Kutusu
 `Resolve Ambiguity`Hata ayıklayıcı görüntülenecek konumu seçeolmadığında iletişim kutusu görüntülenir. Örneğin, C++ şablonları kullanıyorsanız, tek bir işlev şablonundan birden çok işlev oluşturabilirsiniz. Hata ayıklayıcı şablondaki bir kaynak konumda durakalıyorsa ve `Go To Disassembly` ' yi seçerseniz, hata ayıklayıcıda birden çok seçenek bulunur. Şablondan oluşturulan her bir işlev kendi ayrıştırma koduna sahiptir ve hata ayıklayıcı hangi kodu görüntülemek istediğinizi bilmez. `Resolve Ambiguity`İletişim kutusu, tüm karşılık gelen konumların listesinden istediğiniz konumu seçmenizi sağlar.

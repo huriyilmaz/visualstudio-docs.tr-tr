@@ -1,5 +1,7 @@
 ---
 title: Gelişmiş ayarlar Iletişim kutusu (eşzamanlılık görselleştiricisi) | Microsoft Docs
+description: İzleme içeriğini denetlemek için eşzamanlılık görselleştiricisi içindeki gelişmiş ayarları kullanın. Semboller, Yalnızca kendi kodum, arabelleğe alma ve daha fazlası için sekmeler vardır.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fa9d6658ae14c4b84aae9361f73e4701e758f975
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fc7d3464fd05b1fe99fcbfa8773e64bca4cb95e7
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72911218"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205508"
 ---
 # <a name="advanced-settings-dialog-box-concurrency-visualizer"></a>Gelişmiş ayarlar iletişim kutusu (eşzamanlılık görselleştiricisi)
 Eşzamanlılık Görselleştiricisinin **Gelişmiş ayarlar** iletişim kutusunu kullanarak, izlemelerin nasıl toplandığını kontrol edebilirsiniz.  İletişim kutusunda semboller, Yalnızca kendi kodum, arabelleğe alma, filtreleme, CLR olayları, işaretçiler, sağlayıcılar ve dosyalar için sekmeler bulunur.
@@ -52,7 +54,7 @@ Eşzamanlılık Görselleştiricisinin **Gelişmiş ayarlar** iletişim kutusunu
 ### <a name="file-io-events"></a>Dosya g/ç olayları
  Dosya g/ç olayları, geçerli işlem adına disk erişimlerini temsil eder.  Dosya g/ç olaylarını devre dışı bırakırsanız, izlemenin boyutu azalır, ancak Iş parçacıkları görünümü disk kanalları veya disk Işlemleriyle ilgili herhangi bir bilgi bildirmeyecektir.
 
-## <a name="markers"></a>İşaretleyiciler
+## <a name="markers"></a>İşaretler
  **İşaretleyiciler** sekmesinde, eşzamanlılık görselleştiricisi içinde işaret olarak gösterilen etw sağlayıcıları kümesini yapılandırabilirsiniz.  Ayrıca, Işaret koleksiyonunu önem düzeyi ve ETW kategorisine göre filtreleyebilirsiniz.  [Eşzamanlılık Görselleştiricisi SDK 'sını](../profiling/concurrency-visualizer-sdk.md) kullanıyorsanız ve kendi işaretleyici sağlayıcınızı kullanıyorsanız, Iş parçacıkları görünümünde görünmesi için buraya kaydolabilirsiniz.
 
 ### <a name="add-a-new-provider"></a>Yeni Sağlayıcı Ekle

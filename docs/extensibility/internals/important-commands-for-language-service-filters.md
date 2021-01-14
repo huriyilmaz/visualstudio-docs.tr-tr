@@ -1,5 +1,7 @@
 ---
 title: Dil hizmeti filtreleri için önemli komutlar | Microsoft Docs
+description: Visual Studio 'da tam özellikli dil hizmeti filtresi oluştururken desteklemeniz gereken önemli komutlar hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: bb29ee5b5a5359d6cfe34911656dfe9be015262e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 13014d61450897897029750b012833cf93a57729
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80707622"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98204624"
 ---
 # <a name="important-commands-for-language-service-filters"></a>Dil Hizmeti Filtreleri için Önemli Komutlar
 Tam özellikli bir dil hizmeti filtresi oluşturmak istiyorsanız aşağıdaki komutları işlemeyi göz önünde bulundurun. Komut tanımlayıcılarının tam listesi, <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID> yönetilen kod için numaralandırmada ve yönetilmeyen kod Için Stdidcmd. h üst bilgi dosyasına tanımlanmıştır [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] . Stdidcmd. h dosyasını *Visual STUDIO SDK yükleme yolu*\VisualStudioIntegration\Common\Inc. ' de bulabilirsiniz.

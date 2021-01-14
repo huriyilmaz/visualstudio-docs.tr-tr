@@ -1,5 +1,7 @@
 ---
 title: .NET zaman uyumsuz kodunun performansını çözümleme | Microsoft Docs
+description: Zaman uyumsuz kodun performansını çözümlemek için .NET Async aracını kullanın. Listelenen her görev için zamanlama vardır. Kodu görmek için kaynak dosyasına git ' i kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 5/5/2020
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,19 +11,19 @@ ms.author: esherrer
 manager: AndSter
 ms.workload:
 - multiple
-ms.openlocfilehash: e6f690b77b7e573fdf1c54fdaeca6237c6bbc146
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 86575cd71c41ac8ac874e9b62f8273ee46e02c57
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037549"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205495"
 ---
 # <a name="analyze-performance-of-net-asynchronous-code"></a>.NET zaman uyumsuz kodunun performansını çözümleme
 
 Uygulamanızda zaman uyumsuz kodun performansını çözümlemek için .NET Async aracını kullanın.
 
 > [!NOTE]
-> .NET Async Aracı, Visual Studio 2019 sürüm 16,7 veya üzeri ve **Async** ve **await**kullanan bir .NET projesi gerektirir.
+> .NET Async Aracı, Visual Studio 2019 sürüm 16,7 veya üzeri ve **Async** ve **await** kullanan bir .NET projesi gerektirir.
 
 ## <a name="setup"></a>Kurulum
 

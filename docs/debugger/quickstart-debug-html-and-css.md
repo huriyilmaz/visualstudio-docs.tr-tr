@@ -1,5 +1,7 @@
 ---
 title: UWP uygulamalarında HTML ve CSS hatalarını ayıklama | Microsoft Docs
+description: Visual Studio 'da Evrensel Windows Platformu (UWP) uygulamalarında HTML ve CSS 'yi hata ayıklamanın nasıl yapılacağını öğrenin. UWP uygulamaları için JavaScript hata ayıklama özellikleri desteklenir.
+ms.custom: SEO-VS-2020
 ms.date: 07/17/2018
 ms.topic: how-to
 f1_keywords:
@@ -17,12 +19,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - uwp
-ms.openlocfilehash: 5e270956fc6c8f1d7432cb65e1eaf37fdc58907c
-ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
+ms.openlocfilehash: fafab7a2cbf660987de0365549aaa823a4e3445d
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91211095"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205482"
 ---
 # <a name="debug-html-and-css-in-uwp-apps-in-visual-studio"></a>Visual Studio 'da UWP uygulamalarında HTML ve CSS hatalarını ayıklama
 
@@ -49,7 +51,7 @@ DOM Gezgini 'ni kullanarak şunları yapabilirsiniz:
   Uygulamalarda hata ayıklarken, genellikle DOM Gezgini 'nde öğe seçmeniz gerekir. Bir öğe seçtiğinizde, DOM Gezgini 'nin sağ tarafındaki sekmelerde görüntülenen değerler, DOM Gezgini 'nde seçilen öğeyi yansıtacak şekilde otomatik olarak güncelleşilir. Sekmeler şunlardır: **Stiller**, **hesaplanan**, **Düzen**. UWP uygulamaları ayrıca **olayları** ve **değişiklik** sekmelerini destekler. Öğe seçme hakkında daha fazla bilgi için bkz. [öğeleri seçme](#SelectingElements).
 
 > [!TIP]
-> DOM Gezgini penceresi kapalıysa, **Debug** > **Windows**  >  yeniden açmak için Windows**DOM Gezgini 'nde** Hata Ayıkla ' yı seçin. Pencere yalnızca bir betik hata ayıklama oturumu sırasında görüntülenir.
+> DOM Gezgini penceresi kapalıysa,  >   >  yeniden açmak için Windows **DOM Gezgini 'nde** Hata Ayıkla ' yı seçin. Pencere yalnızca bir betik hata ayıklama oturumu sırasında görüntülenir.
 
 Aşağıdaki yordamda, DOM Gezgini 'ni kullanarak bir uygulamada etkileşimli olarak hata ayıklama işlemini öğreneceksiniz. Bir `FlipView` denetimi kullanan ve sonra hata ayıkladığımız bir uygulama oluşturacağız. Uygulama birkaç hata içeriyor.
 
@@ -149,7 +151,7 @@ Aşağıdaki yordamda, DOM Gezgini 'ni kullanarak bir uygulamada etkileşimli ol
 
     ![Hata ayıklama hedef listesini seçin](../debugger/media/js_select_target.png "JS_Select_Target")
 
-8. Uygulamanızı **Debug**hata ayıklama  >  modunda çalıştırmak için hata**ayıklamayı Başlat**' ı seçin veya F5 tuşuna basın.
+8. Uygulamanızı hata ayıklama  >  modunda çalıştırmak için hata **ayıklamayı Başlat**' ı seçin veya F5 tuşuna basın.
 
     Bu, uygulamayı çalıştırır, ancak stil içinde birkaç hata olduğu için çoğunlukla boş bir ekran görürsünüz. İlk `FlipView` görüntü, ekranın ortasında küçük bir karede görünür.
 
@@ -179,10 +181,10 @@ Aşağıdaki yordamda, DOM Gezgini 'ni kullanarak bir uygulamada etkileşimli ol
 
 13. Ana DOM Gezgini penceresinde, DIV öğesinin yükseklik ve genişlik için satır içi stile çift tıklayın `fView` . Artık değerleri burada düzenleyebilirsiniz. Bu senaryoda, bunları tamamen kaldırmak istiyoruz.
 
-14. Ana pencerede, çift tıklayın `width: 100px;height: 100px;` , **Delete** tuşuna basın ve ardından **ENTER**tuşuna basın. ENTER tuşuna bastıktan sonra, hata ayıklama oturumunuzu durdurmadığınız halde yeni değerler uygulamaya hemen yansıtılır.
+14. Ana pencerede, çift tıklayın `width: 100px;height: 100px;` , **Delete** tuşuna basın ve ardından **ENTER** tuşuna basın. ENTER tuşuna bastıktan sonra, hata ayıklama oturumunuzu durdurmadığınız halde yeni değerler uygulamaya hemen yansıtılır.
 
     > [!IMPORTANT]
-    > DOM Gezgini penceresinde öznitelikleri güncelleştirebilmeniz için, **Stiller**, **hesaplanan**ve **Düzen** sekmelerinde görüntülenen değerleri de güncelleştirebilirsiniz.
+    > DOM Gezgini penceresinde öznitelikleri güncelleştirebilmeniz için, **Stiller**, **hesaplanan** ve **Düzen** sekmelerinde görüntülenen değerleri de güncelleştirebilirsiniz.
 
 15. Uygulamayı seçerek veya alt + TAB tuşlarını kullanarak uygulamaya geçiş yapın.
 

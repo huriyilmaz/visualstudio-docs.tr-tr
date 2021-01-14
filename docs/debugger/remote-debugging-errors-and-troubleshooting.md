@@ -1,5 +1,7 @@
 ---
 title: Uzaktan hata ayıklama hataları ve sorun giderme | Microsoft Docs
+description: Visual Studio 'da ortak uzaktan hata ayıklama hatalarının bağlantılarını görüntüleyin. Uzaktan hata ayıklayıcı 'yı yönetici olarak çalıştırmayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -20,12 +22,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8b413ce193e6761d515de5bc5ef30fae8e18a3a3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0260f939c8f6b7e5bed77ec42a4720adf0a4c720
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89316143"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205664"
 ---
 # <a name="remote-debugging-errors-and-troubleshooting"></a>Uzaktan Hata Ayıklama Hataları ve Sorun Giderme
 
@@ -35,7 +37,7 @@ Uzaktan hata ayıklamaya çalışırken aşağıdaki hatalarda karşılaşabilir
 
 - [Hata: Microsoft Visual Studio Uzaktan Hata Ayıklama İzleyicisi (MSVSMON.EXE) uzak bilgisayar üzerinde çalışıyor görünmüyor.](error-remote-debugging-monitor-msvsmon-exe-does-not-appear-to-be-running.md)
 
-- [Microsoft Visual Studio Uzaktan Hata Ayıklama İzleyicisi'ne Bağlanılamıyor.](../debugger/unable-to-connect-to-the-microsoft-visual-studio-remote-debugging-monitor.md)
+- [Microsoft Visual Studio bağlantı kurulamıyor Uzaktan Hata Ayıklama İzleyicisi](../debugger/unable-to-connect-to-the-microsoft-visual-studio-remote-debugging-monitor.md)
 
 - [Hata: Uzak Makine, Uzaktan Bağlantılar iletişim kutusunda görünmüyor](../debugger/error-remote-machine-does-not-appear-in-a-remote-connections-dialog.md)
 

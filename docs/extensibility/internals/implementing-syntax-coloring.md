@@ -1,5 +1,7 @@
 ---
 title: Sözdizimi renklendirme uygulama | Microsoft Docs
+description: Yönetilen paket çerçevesinin (MPF) dil hizmeti özelliklerini kullanarak Visual Studio 'da söz dizimi renklendirmesini uygulamayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: bb3f26f59d7cbc994da1d2537e0ab352ce12205e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 195cf7a26b1615b7c56f3f0d06cfd9e0d44a4384
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905207"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98204676"
 ---
 # <a name="implementing-syntax-coloring"></a>Söz Dizimi Renklendirmesi Uygulama
 Dil hizmeti söz dizimi renklendirmesi sağlıyorsa, ayrıştırıcı bir metin satırını renklenebilir öğelerin dizisine dönüştürür ve bu renklenebilir öğelere karşılık gelen belirteç türlerini döndürür. Ayrıştırıcı, renklenebilir öğeler listesine ait olan belirteç türlerini döndürmelidir. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] renk penceresindeki her renklenebilir öğeyi, uygun belirteç türüne Colorizer nesnesi tarafından atanan özniteliklere göre görüntüler.

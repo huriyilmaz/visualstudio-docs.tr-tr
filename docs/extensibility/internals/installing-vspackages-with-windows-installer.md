@@ -1,5 +1,7 @@
 ---
 title: Windows Installer Ile VSPackages yükleme | Microsoft Docs
+description: Bir VSPackage ve bağımlı dosyalarını yüklemek ve bunları Visual Studio 'ya kaydettirmek ve bütünleştirmek için Microsoft Windows Installer nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8a7ace9203cd8f21a9e9ab5dc525bf604aeff678
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: ec49e5184071e0640d671ba0baaad8ac049fea25
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012210"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205248"
 ---
 # <a name="installing-vspackages-with-windows-installer"></a>Windows Installer ile VSPackage Yükleme
 VSPackage ile tümleştirme, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] dosyaları yalnızca bir kullanıcının bilgisayarına kopyalamaktan daha fazlasını gerektirir. VSPackage yükleyicinizin VSPackage ve bağımlı dosyalarını yüklemesi ve bunları kaydedip tümleştirmeleri gerekir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . VSPackage, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Giriş ekranında ve hakkında iletişim kutusunda bir simge görüntüleme gibi tümleştirme özelliklerinden yararlanabilir.

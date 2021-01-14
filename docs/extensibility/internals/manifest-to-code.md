@@ -1,5 +1,7 @@
 ---
 title: Manifest to Code | Microsoft Docs
+description: Visual Studio Image hizmeti ile kullanmak üzere bir. ımagemanifest dosyası alan kod aracından bildirimi nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 17ecacea-397d-4a97-b003-01bd5d56e936
@@ -8,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e21f266cc0dea39cfbaba660ef3557af6023c104
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5ca43ac07bbdcec98cd204cb2720ac9f2cdef1f1
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85536129"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98204559"
 ---
 # <a name="manifest-to-code"></a>Manifest to Code
 Manifest to Code Aracı, Visual Studio Image hizmeti için bir. ımagemanifest dosyası alan ve Visual Studio uzantıları için C++, C#, VB veya. vsct dosyalarındaki görüntü bildiriminin değerlerine başvurmak için bir sarmalayıcı dosyası ya da dosyaları oluşturan bir konsol uygulamasıdır. Bu araç, doğrudan Visual Studio görüntü hizmetinden görüntü istemek için veya kod kendi Kullanıcı arabirimini ve işlemesini karşılamıyorsa API 'Ler aracılığıyla bildirim değerlerini iletmek için kullanılabilecek sarmalayıcı dosyalar oluşturur.
@@ -23,7 +25,7 @@ Manifest to Code Aracı, Visual Studio Image hizmeti için bir. ımagemanifest d
 
  ManifestToCode/manifest: \<Image Manifest file> /Language: \<Code Language>\<Optional Args>
 
- **Arguments**
+ **Bağımsız değişkenler**
 
 |**Anahtar adı**|**Notlar**|**Gerekli veya Isteğe bağlı**|
 |-|-|-|

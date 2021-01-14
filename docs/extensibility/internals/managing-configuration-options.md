@@ -1,5 +1,7 @@
 ---
 title: Yapılandırma seçeneklerini yönetme | Microsoft Docs
+description: Visual Studio 'da proje ve çözüm yapılandırma ayarlarını yönetme hakkında bilgi edinmek için, projenizin nasıl oluşturulduğunu, paketleneceğini, dağıtılacağını ve çalıştırılacağını denetleyin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e18c308d74f8c20267c286c47d0e89bf82cd2850
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a34f772b780cda825861e11e6816d1d88405f74e
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80707306"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98204538"
 ---
 # <a name="managing-configuration-options"></a>Yapılandırma Seçeneklerini Yönetme
 Yeni bir proje türü oluşturduğunuzda, projenizin nasıl oluşturulup paketlenceğini, dağıtıldığını, dağıtılacağını ve çalıştırılacağını belirleyecek proje ve çözüm yapılandırma ayarlarını yönetmeniz gerekir. Aşağıdaki konularda proje ve çözüm yapılandırması ele alınmaktadır.
@@ -29,7 +31,7 @@ Yeni bir proje türü oluşturduğunuzda, projenizin nasıl oluşturulup paketle
 
  Kullanıcıların, özellik sayfalarını kullanarak proje yapılandırmasına bağımlı özellikleri ve bağımsız özellikleri görüntüleyebileceği ve değiştirebileceği açıklanmaktadır.
 
-- [Çözüm Yapılandırması](../../extensibility/internals/solution-configuration.md)
+- [Çözüm yapılandırması](../../extensibility/internals/solution-configuration.md)
 
  Çözüm yapılandırmalarında nelerin depolanabileceği ve çözüm yapılandırmalarının **Start** ve **Build** komutlarının davranışını nasıl yönlendirdikleriniz hakkında bilgi sağlar.
 

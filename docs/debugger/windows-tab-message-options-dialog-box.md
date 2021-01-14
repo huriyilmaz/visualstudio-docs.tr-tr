@@ -1,5 +1,7 @@
 ---
 title: Windows sekmesi, Ileti seçenekleri Iletişim kutusu | Microsoft Docs
+description: Hangi pencerelerin iletilerinin görüntülendiğini belirtmek için Ileti seçeneklerinin Windows sekmesini kullanın. Ayarların açıklamaları için bu makaleye bakın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9f60201bacd928b4744795e644cb1d9e5de55b75
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 320a31afcbe4d99518ce92002e8e2733fded9164
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62929177"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205417"
 ---
 # <a name="windows-tab-message-options-dialog-box"></a>Pencereler Sekmesi, İleti Seçenekleri İletişim Kutusu
 [Iletiler görünümünde](../debugger/messages-view.md)listelenen iletilerin kapsamını ayarlamak için **Windows** sekmesini kullanın. [Ileti seçenekleri Iletişim kutusunu](../debugger/message-options-dialog-box.md)göstermek için **Spy** menüsünde **günlük iletileri** ' ni seçin.

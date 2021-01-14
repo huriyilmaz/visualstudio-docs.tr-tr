@@ -1,5 +1,7 @@
 ---
 title: Pencereler sekmesi, pencere özellikleri Iletişim kutusu | Microsoft Docs
+description: Seçili pencereyle ilişkili Windows hakkındaki bilgileri göstermek için Windows özelliklerinin Windows sekmesini kullanın. Ayarlar için bu makaleye bakın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,19 +12,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ce1015741b2a1e7ba1608eea7f198b726e808f7f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 03cbcee265855c0e3ee26f75d5937315d64661a2
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62900789"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205404"
 ---
 # <a name="windows-tab-window-properties-dialog-box"></a>Pencereler Sekmesi, Pencere Özellikleri İletişim Kutusu
 Seçili pencereyle ilgili Windows hakkındaki bilgileri göstermek için **Windows** sekmesini kullanın. [Pencere özellikleri Iletişim kutusunu](../debugger/window-properties-dialog-box.md)görüntülemek Için odağı [Windows görünümü](../debugger/windows-view.md) penceresine taşıyın. Ağaçta herhangi bir pencere düğümünü seçin, sonra **Görünüm** menüsünden **Özellikler** ' i seçin.
 
  **Windows** sekmesinde aşağıdaki ayarlar mevcuttur:
 
-|Giriş|Açıklama|
+|Giriş|Description|
 |-----------|-----------------|
 |**Sonraki pencere**|Bir sonraki eşdüzey pencerenin, pencere ağaç görünümünde (bir sonraki pencere yoksa "hiçbiri") gösterilen aynı dizide (Z-Order) tanıtıcısı. Sonraki pencerenin özelliklerini görüntülemek için bu girişi seçin.|
 |**Önceki pencere**|Önceki eşdüzey pencerenin, pencere ağaç görünümünde (önceki bir pencere yoksa "hiçbiri") gösterilen aynı sırada (Z-Order) tanıtıcısı. Önceki pencerenin özelliklerini görüntülemek için bu girişi seçin.|

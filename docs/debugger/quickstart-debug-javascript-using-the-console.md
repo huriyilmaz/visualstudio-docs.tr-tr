@@ -1,5 +1,7 @@
 ---
 title: Konsolunu kullanarak JavaScript hatalarını ayıklama | Microsoft Docs
+description: JavaScript kullanılarak oluşturulan Evrensel Windows Platformu (UWP) uygulamalarıyla etkileşim kurmak için Visual Studio 'da JavaScript Konsol penceresini kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -16,12 +18,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: aca36c56bfeed4fd5d8b240cce6bea5b55b75d85
-ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
+ms.openlocfilehash: 8a2b2e82e664abea1a53112776dc0ec3ec5f1259
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91211082"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205014"
 ---
 # <a name="debug-javascript-using-the-console-in-visual-studio"></a>Visual Studio 'da Konsolu kullanarak JavaScript hata ayıklama
 
@@ -42,7 +44,7 @@ JavaScript Konsolu penceresi şunları yapmanıza olanak sağlar:
 - Ekranı temizleme gibi diğer görevleri gerçekleştirin. Komutların tam listesi için bkz. [JavaScript konsol komutları](../debugger/javascript-console-commands.md?view=vs-2017&preserve-view=true) .
 
 > [!TIP]
-> JavaScript Konsolu penceresi kapalıysa, **Debug** >  **Windows**  >  yeniden açmak için Windows**JavaScript Konsolu** Hata Ayıkla ' yı seçin. Pencere yalnızca bir betik hata ayıklama oturumu sırasında görüntülenir.
+> JavaScript Konsolu penceresi kapalıysa,  >    >  yeniden açmak için Windows **JavaScript Konsolu** Hata Ayıkla ' yı seçin. Pencere yalnızca bir betik hata ayıklama oturumu sırasında görüntülenir.
 
 JavaScript Konsol penceresini kullanarak, hata ayıklayıcıyı durdurup yeniden başlatmadan uygulamanız ile etkileşime geçebilirsiniz. Daha fazla bilgi için bkz. [uygulamayı yenileme (JavaScript)](../debugger/refresh-an-app-javascript.md). DOM Gezginini kullanma ve kesme noktaları ayarlama gibi diğer JavaScript hata ayıklama özellikleri hakkında bilgi için bkz. [hızlı başlangıç: Visual Studio 'DA HTML ve CSS](../debugger/quickstart-debug-html-and-css.md) ve [hata ayıklama uygulamalarında](debugging-windows-store-and-windows-universal-apps.md)hata ayıklama.
 
@@ -199,11 +201,11 @@ Bir program kesme modundayken JavaScript Konsol penceresini kullanarak geçerli 
 
 #### <a name="to-set-a-breakpoint-and-debug-the-app"></a>Bir kesme noktası ayarlamak ve uygulamada hata ayıklamak için
 
-1. `FlipView`Daha önce oluşturduğunuz uygulamanın default.html dosyasında, işlevin kısayol menüsünü açın ve kesme noktası Ekle kesme noktası ' nı `updateImages()` seçin **Breakpoint**  >  **Insert Breakpoint**.
+1. `FlipView`Daha önce oluşturduğunuz uygulamanın default.html dosyasında, işlevin kısayol menüsünü açın ve kesme noktası Ekle kesme noktası ' nı `updateImages()` seçin   >  .
 
 2. **Hata ayıklama** araç çubuğundaki **hata ayıklamayı Başlat** düğmesinin yanındaki açılan listede **yerel makine** ' yi seçin.
 
-3. **Hata**  >  **ayıklamayı Başlat hata**Ayıkla ' yı seçin veya F5 tuşuna basın.
+3. **Hata**  >  **ayıklamayı Başlat hata** Ayıkla ' yı seçin veya F5 tuşuna basın.
 
     Uygulama, yürütme işlevine ulaştığında kesme moduna girer `updateImages()` ve geçerli program yürütme satırı sarı renkle vurgulanır.
 

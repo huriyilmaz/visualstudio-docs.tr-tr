@@ -1,5 +1,7 @@
 ---
 title: Komutları kullanılabilir hale getirme | Microsoft Docs
+description: Gecikmeli yükleme, bağlam ve görünürlük kullanılarak VSPackages içindeki Visual Studio IDE 'ye eklenen komutların kullanılabilirliğini nasıl denetleyeceğinizi öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 03/22/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +15,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2d64df85516e0a1ac326f8d40558755718c4644c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d17fd0b63438183b10b1ecb0e5eb6abb9f5d7f46
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80707328"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98204546"
 ---
 # <a name="making-commands-available"></a>Komutları kullanılabilir hale getirme
 
@@ -55,7 +57,7 @@ VSPackage komutlarının geçerli durumuna veya şu anda ilgili eylemlere bağl�
 
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Proje yükleme veya düzenlemeden oluşturmaya bağlanma gibi kullanıcı eylemlerinden kaynaklanan değişiklikleri izler. Değişiklikler gerçekleştiğinde IDE görünümü otomatik olarak değiştirilir. Aşağıdaki tabloda, izleyen IDE değişikliğinin dört ana bağlamı gösterilmektedir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
 
-| Bağlam türü | Açıklama |
+| Bağlam türü | Description |
 |-------------------------| - |
 | Etkin proje türü | Çoğu proje türü için bu `GUID` değer, projeyi uygulayan VSPackage 'un GUID 'si ile aynıdır. Ancak, [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] projeler proje türünü `GUID` değer olarak kullanır. |
 | Etkin pencere | Genellikle, bu, anahtar bağlamaları için geçerli kullanıcı arabirimi bağlamını kuran son etkin belge penceresidir. Bununla birlikte, iç Web tarayıcısına benzer bir anahtar bağlama tablosuna sahip bir araç penceresi de olabilir. HTML Düzenleyicisi gibi çok sekmeli belge pencereleri için her sekmenin farklı bir komut bağlamı vardır `GUID` . |

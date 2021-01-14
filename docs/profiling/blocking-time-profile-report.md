@@ -1,5 +1,7 @@
 ---
 title: Engelleme zamanı profil raporu | Microsoft Docs
+description: 'Engelleme zamanı profil raporları, toplu engelleme zaman verileri sağlar. Altı rapor türü vardır: eşitleme, uyku, g/ç, bellek, önalım ve Kullanıcı arabirimi.'
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c3ed24dce0779b9bc7ea9cfd7bedcaa5ca181c68
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 74cfeb0b93b1819b4491b18b8e455b3c8d49be4d
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "68926307"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98204585"
 ---
 # <a name="blocking-time-profile-report"></a>Engelleme zamanı profil raporu
 Profil raporları, her engelleme kategorisine özgü çağrı yığınları için toplu engelleme zaman verileri sağlar (örneğin, "g/ç" veya "eşitleme"). Önalım raporu, önalım örneklerinin sayısıyla birlikte geçerli işlemi içeren işlemleri listeler. Engelleme profili raporunu oluşturmak için araç, API çağrılarını engellemeyi ve bunları bir çağrı yığını ağacına biriktirir. Bu raporlarda gösterilen veriler, geçerli zaman aralığına, gizli iş parçacıklarına ve uygulanabilecek aşağıdaki iki filtreye göre farklılık gösterir:
@@ -31,7 +33,7 @@ Profil raporları, her engelleme kategorisine özgü çağrı yığınları içi
 ## <a name="blocking-time-report-columns"></a>Engelleme zamanı rapor sütunları
  Aşağıdaki tabloda her engelleme zamanı raporunun sütunları gösterilmektedir.
 
-|Sütun adı|Açıklama|
+|Sütun adı|Description|
 |-----------------|-----------------|
 |**Ad**|Çağrı yığınının her bir düzeyi için işlevin adı.|
 |**Örnekler**|Görünen zaman aralığı için engelleme çağrısının örnek sayısı.|

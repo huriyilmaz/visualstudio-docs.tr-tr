@@ -1,5 +1,7 @@
 ---
 title: Hata Ayıklama Sayfası, Proje Tasarımcısı
+description: Visual Basic veya C# projesindeki hata ayıklama özelliklerini ayarlamak için proje Tasarımcısı 'nın hata ayıklama sayfasını kullanın. Ayarların açıklamaları için bu makaleye bakın.
+ms.custom: SEO-VS-2020
 ms.date: 06/27/2018
 ms.technology: vs-ide-debug
 ms.topic: reference
@@ -14,18 +16,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 406b3ecdc0e4e3f0d45c22fc9201bd37c6031152
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8567b762e9858205e3ca8d6aafa8a3dba17a90fe
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85418749"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205781"
 ---
 # <a name="debug-page-project-designer"></a>Hata Ayıklama Sayfası, Proje Tasarımcısı
 
 Visual Basic veya C# projesindeki hata ayıklama davranışının özelliklerini ayarlamak için **Proje Tasarımcısı** ' nın **hata ayıklama** sayfasını kullanın.
 
-**Hata ayıklama** sayfasına erişmek için **Çözüm Gezgini**bir proje düğümü seçin. **Proje** menüsünde ** \<ProjectName> Özellikler**' i seçin. **Proje Tasarımcısı** göründüğünde, **Hata Ayıkla** sekmesine tıklayın.
+**Hata ayıklama** sayfasına erişmek için **Çözüm Gezgini** bir proje düğümü seçin. **Proje** menüsünde **\<ProjectName> Özellikler**' i seçin. **Proje Tasarımcısı** göründüğünde, **Hata Ayıkla** sekmesine tıklayın.
 
 > [!NOTE]
 > Bu konu, UWP uygulamaları için geçerlidir. UWP uygulamaları için [hata ayıklama oturumu başlatma (vb, C#, C++ ve XAML)](../../debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md) konusuna bakın.
@@ -36,15 +38,15 @@ Aşağıdaki seçenekler, görüntülenecek veya değiştirilecek olan yapıland
 
 **Yapılandırma**
 
-Görüntülenecek veya değiştirilecek yapılandırma ayarlarını belirtir. Ayarlar **hata ayıklama** (varsayılan), **yayın**veya **Tüm yapılandırmalarda**olabilir.
+Görüntülenecek veya değiştirilecek yapılandırma ayarlarını belirtir. Ayarlar **hata ayıklama** (varsayılan), **yayın** veya **Tüm yapılandırmalarda** olabilir.
 
 **Platform**
 
-Görüntülenecek veya değiştirilecek platform ayarlarını belirtir. Seçenekler **herhangi BIR CPU** (varsayılan), **x64**ve **x86**içerebilir.
+Görüntülenecek veya değiştirilecek platform ayarlarını belirtir. Seçenekler **herhangi BIR CPU** (varsayılan), **x64** ve **x86** içerebilir.
 
 ## <a name="start-action"></a>Başlatma eylemi
 
-**Başlangıç eylemi** , uygulamanın hatası ayıklandığında başlatılacak öğeyi gösterir: proje, özel program, URL veya Nothing. Varsayılan olarak, bu seçenek **Project 'ı başlatacak**şekilde ayarlanır. **Hata ayıklama** sayfasındaki **Başlangıç eylemi** ayarı özelliğin değerini belirler `StartAction` .
+**Başlangıç eylemi** , uygulamanın hatası ayıklandığında başlatılacak öğeyi gösterir: proje, özel program, URL veya Nothing. Varsayılan olarak, bu seçenek **Project 'ı başlatacak** şekilde ayarlanır. **Hata ayıklama** sayfasındaki **Başlangıç eylemi** ayarı özelliğin değerini belirler `StartAction` .
 
 **Projeyi Başlat**
 
@@ -85,7 +87,7 @@ Visual Basic uygulamanızdan SQL yordamlarının hata ayıklamasını etkinleşt
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Hata ayıklayıcıya ilk bakış](../../debugger/debugger-feature-tour.md)
-- [C# Hata Ayıklama Yapılandırması Proje Ayarları](../../debugger/project-settings-for-csharp-debug-configurations.md)
-- [Visual Basic Hata Ayıklama Yapılandırması Proje Ayarları](../../debugger/project-settings-for-a-visual-basic-debug-configuration.md)
+- [C# hata ayıklama yapılandırması proje ayarları](../../debugger/project-settings-for-csharp-debug-configurations.md)
+- [Visual Basic hata ayıklama yapılandırması proje ayarları](../../debugger/project-settings-for-a-visual-basic-debug-configuration.md)
 - [Güvenli ClickOnce uygulamaları](../../deployment/securing-clickonce-applications.md)
 - [Nasıl Yapılır: Yapılandırmaları Oluşturma ve Düzenleme](../../ide/how-to-create-and-edit-configurations.md)

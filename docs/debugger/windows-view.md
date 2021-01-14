@@ -1,5 +1,7 @@
 ---
 title: Windows görünümü | Microsoft Docs
+description: Windows görünümü tüm pencerelerin ve denetimlerin ağacını gösterir. İlgilendiğiniz pencereler hakkında bilgi edinmek için bir başlangıç noktası olarak kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fef652cbaa83fde61f098fb8fcef9558473fe19a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 717c0f18d5443f712151a2f8318c56a8e738f6d7
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62900871"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205378"
 ---
 # <a name="windows-view"></a>Pencereler Görünümü
 Spy + + ' ı ilk kez açtığınızda, Windows görünümü sistemdeki tüm pencerelerin ve denetimlerin bir ağacını görüntüler. Pencere tanıtıcısı ve sınıf adı gösterilir. Geçerli masaüstü penceresi ağacın en üstünde bulunur. Diğer tüm pencereler masaüstünün alt öğesi ve standart pencere hiyerarşisine göre listelenir. Eşdüzey pencereler, üst öğelerinin altında girintili listelerde görünür.

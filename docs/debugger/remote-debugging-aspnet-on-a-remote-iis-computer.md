@@ -1,6 +1,7 @@
 ---
 title: Uzak IIS bilgisayarında uzaktan hata ayıklama ASP.NET Core | Microsoft Docs
-ms.custom: remotedebugging
+description: Visual Studio uzaktan hata ayıklayıcı kullanılarak uzak bir Internet Information Services (IIS) bilgisayara dağıtılan ASP.NET Core bir uygulamada hata ayıklayın.
+ms.custom: remotedebugging, SEO-VS-2020
 ms.date: 05/06/2020
 ms.topic: conceptual
 ms.assetid: 573a3fc5-6901-41f1-bc87-557aa45d8858
@@ -10,12 +11,12 @@ manager: jillfra
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 389fe1491a92cacecd772244c2a0facd0d12c887
-ms.sourcegitcommit: a778dffddb05d2f0f15969eadaf9081c9b466196
+ms.openlocfilehash: bc746d5139b897d51d4d038f077906f56aa5d552
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "92298764"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205820"
 ---
 # <a name="remote-debug-aspnet-core-on-a-remote-iis-computer-in-visual-studio"></a>Visual Studio 'da uzak IIS bilgisayarında uzaktan hata ayıklama ASP.NET Core
 
@@ -56,10 +57,10 @@ Bu makalede, Windows Server 'da IIS 'nin temel yapılandırmasını ayarlama ve 
 1. Yeni bir ASP.NET Core Web uygulaması oluşturun.
 
     ::: moniker range=">=vs-2019"
-    Visual Studio 2019 ' de **CTRL + Q** yazarak arama kutusunu açın, **ASP.net**yazın, **Şablonlar**' ı seçin ve sonra **Yeni ASP.NET Core Web uygulaması oluştur**' u seçin. Görüntülenen iletişim kutusunda, projeyi **Myaspapp**olarak adlandırın ve ardından **Oluştur**' u seçin. Ardından **Web uygulaması (Model-View-Controller)** öğesini seçin ve ardından **Oluştur**' u seçin.
+    Visual Studio 2019 ' de **CTRL + Q** yazarak arama kutusunu açın, **ASP.net** yazın, **Şablonlar**' ı seçin ve sonra **Yeni ASP.NET Core Web uygulaması oluştur**' u seçin. Görüntülenen iletişim kutusunda, projeyi **Myaspapp** olarak adlandırın ve ardından **Oluştur**' u seçin. Ardından **Web uygulaması (Model-View-Controller)** öğesini seçin ve ardından **Oluştur**' u seçin.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Visual Studio 2017 ' de **dosya > yeni > proje**' yi seçin ve ardından **Visual C# > web > ASP.NET Core Web uygulaması**' nı seçin. ASP.NET Core Şablonları bölümünde **Web uygulaması (Model-View-Controller)** öğesini seçin. ASP.NET Core 2,1 ' nin seçildiğinden emin olun, **Docker desteğinin etkinleştirilmesi** ve **kimlik** doğrulamasının **kimlik doğrulaması yok**olarak ayarlandığından emin olun. Projeyi **Myaspapp**olarak adlandırın.
+    Visual Studio 2017 ' de **dosya > yeni > proje**' yi seçin ve ardından **Visual C# > web > ASP.NET Core Web uygulaması**' nı seçin. ASP.NET Core Şablonları bölümünde **Web uygulaması (Model-View-Controller)** öğesini seçin. ASP.NET Core 2,1 ' nin seçildiğinden emin olun, **Docker desteğinin etkinleştirilmesi** ve **kimlik** doğrulamasının **kimlik doğrulaması yok** olarak ayarlandığından emin olun. Projeyi **Myaspapp** olarak adlandırın.
     ::: moniker-end
 
 4. About.cshtml.cs dosyasını açın ve yöntemde bir kesme noktası ayarlayın `OnGet` (eski şablonlarda, bunun yerine HomeController.cs ' yi açın ve yöntemde kesme noktasını ayarlayın `About()` ).
@@ -70,7 +71,7 @@ Bu makalede, Windows Server 'da IIS 'nin temel yapılandırmasını ayarlama ve 
 
 ## <a name="update-browser-security-settings-on-windows-server"></a>Windows Server 'da tarayıcı güvenlik ayarlarını güncelleştirme
 
-Internet Explorer 'da artırılmış güvenlik yapılandırması etkinse (varsayılan olarak etkindir), Web sunucusu bileşenlerinden bazılarını indirmeniz için bazı etki alanlarını güvenilen siteler olarak eklemeniz gerekebilir. Güvenilen siteleri, **güvenlik > güvenilen siteler > siteleri > Internet seçeneklerine**giderek ekleyin. Aşağıdaki etki alanlarını ekleyin.
+Internet Explorer 'da artırılmış güvenlik yapılandırması etkinse (varsayılan olarak etkindir), Web sunucusu bileşenlerinden bazılarını indirmeniz için bazı etki alanlarını güvenilen siteler olarak eklemeniz gerekebilir. Güvenilen siteleri, **güvenlik > güvenilen siteler > siteleri > Internet seçeneklerine** giderek ekleyin. Aşağıdaki etki alanlarını ekleyin.
 
 - microsoft.com
 - go.microsoft.com
@@ -108,7 +109,7 @@ Bu seçeneği kullanarak bir yayımlama ayarları dosyası oluşturabilir ve Vis
 
 ### <a name="configure-the-aspnet-core-web-site"></a>ASP.NET Core Web sitesini yapılandırma
 
-1. IIS Yöneticisi 'nde, sol bölmedeki **Bağlantılar**altında **uygulama havuzları**' nı seçin. **DefaultAppPool** ' i açın ve **.NET CLR sürümünü** **yönetilen kod olmadan**ayarlayın. ASP.NET Core için bu gereklidir. Varsayılan Web sitesi, DefaultAppPool 'yi kullanır.
+1. IIS Yöneticisi 'nde, sol bölmedeki **Bağlantılar** altında **uygulama havuzları**' nı seçin. **DefaultAppPool** ' i açın ve **.NET CLR sürümünü** **yönetilen kod olmadan** ayarlayın. ASP.NET Core için bu gereklidir. Varsayılan Web sitesi, DefaultAppPool 'yi kullanır.
 
 2. DefaultAppPool öğesini durdurup yeniden başlatın.
 
@@ -124,7 +125,7 @@ Bu seçeneği kullanarak bir yayımlama ayarları dosyası oluşturabilir ve Vis
 
 [!INCLUDE [install-web-deploy-with-hosting-server](../deployment/includes/import-publish-settings-vs.md)]
 
-Uygulama başarıyla dağıtıldıktan sonra otomatik olarak başlamalıdır. Uygulama Visual Studio 'dan başlamazsa, düzgün çalıştığını doğrulamak için uygulamayı IIS 'de başlatın. ASP.NET Core için, **DefaultAppPool** için uygulama havuzu alanının **yönetilen kod yok**olarak ayarlandığından emin olmanız gerekir.
+Uygulama başarıyla dağıtıldıktan sonra otomatik olarak başlamalıdır. Uygulama Visual Studio 'dan başlamazsa, düzgün çalıştığını doğrulamak için uygulamayı IIS 'de başlatın. ASP.NET Core için, **DefaultAppPool** için uygulama havuzu alanının **yönetilen kod yok** olarak ayarlandığından emin olmanız gerekir.
 
 1. **Ayarlar** iletişim kutusunda, **İleri**' ye tıklayarak hata ayıklamayı etkinleştirin, **hata ayıklama** yapılandırması ' nı seçin ve ardından **dosya yayımlama** seçenekleri altında **Hedefteki ek dosyaları Kaldır** ' ı seçin.
 
@@ -139,19 +140,19 @@ Uygulamayı PowerShell, RoboCopy kullanarak IIS 'e kopyalamak istiyorsanız veya
 
 ### <a name="configure-the-aspnet-core-web-site-on-the-windows-server-computer"></a><a name="BKMK_deploy_asp_net"></a> Windows Server bilgisayarında ASP.NET Core Web sitesini yapılandırma
 
-1. Windows Gezgini 'ni açın ve yeni bir klasör oluşturun **, burada**ASP.NET Core projeyi daha sonra dağıtacaksınız.
+1. Windows Gezgini 'ni açın ve yeni bir klasör oluşturun **, burada** ASP.NET Core projeyi daha sonra dağıtacaksınız.
 
 2. Zaten açık değilse, **Internet Information Services (IIS) Yöneticisi**' ni açın. (Sunucu Yöneticisi sol bölmesinde **IIS**' yi seçin. Sunucuya sağ tıklayın ve **Internet Information Services (IIS) Yöneticisi**' ni seçin.)
 
 3. Sol bölmedeki **Bağlantılar** ' ın altında, **siteler**' e gidin.
 
-4. **Varsayılan Web sitesini**seçin, **temel ayarlar**' ı seçin ve **fiziksel yolu** **C:\publish**olarak ayarlayın.
+4. **Varsayılan Web sitesini** seçin, **temel ayarlar**' ı seçin ve **fiziksel yolu** **C:\publish** olarak ayarlayın.
 
 4. **Varsayılan Web sitesi** düğümüne sağ tıklayın ve **Uygulama Ekle**' yi seçin.
 
-5. **Diğer ad** alanını **Myaspapp**olarak ayarlayın, varsayılan uygulama havuzunu (**DefaultAppPool**) kabul edin ve **fiziksel yolu** **C:\publish**olarak ayarlayın.
+5. **Diğer ad** alanını **Myaspapp** olarak ayarlayın, varsayılan uygulama havuzunu (**DefaultAppPool**) kabul edin ve **fiziksel yolu** **C:\publish** olarak ayarlayın.
 
-6. **Bağlantılar**altında **uygulama havuzları**' nı seçin. **DefaultAppPool** ' i açın ve uygulama havuzu alanını **yönetilen kod olmadan**ayarlayın.
+6. **Bağlantılar** altında **uygulama havuzları**' nı seçin. **DefaultAppPool** ' i açın ve uygulama havuzu alanını **yönetilen kod olmadan** ayarlayın.
 
 7. IIS Yöneticisi 'nde yeni siteye sağ tıklayın, **Izinleri Düzenle**' yi seçin ve Web uygulamasına erişim için yapılandırılmış ıusr, IIS_IUSRS veya kullanıcının okuma & yürütme haklarına sahip yetkili bir kullanıcı olduğundan emin olun.
 
@@ -186,15 +187,15 @@ Uzaktan hata ayıklayıcıyı bir hizmet olarak çalıştırma hakkında bilgi i
     > [!TIP]
     > Visual Studio 2017 ve sonraki sürümlerinde, **hata ayıkla > işlem...** (SHIFT + alt + P) kullanarak daha önce eklediğiniz işleme yeniden iliştirebilirsiniz.
 
-3. Niteleyici alanını olarak ayarlayın **\<remote computer name>** ve **ENTER**tuşuna basın.
+3. Niteleyici alanını olarak ayarlayın **\<remote computer name>** ve **ENTER** tuşuna basın.
 
-    Visual Studio 'Nun gerekli bağlantı noktasını bilgisayar adına eklediğini doğrulayın ve şu biçimde görünür: ** \<remote computer name> :p ort**
+    Visual Studio 'Nun gerekli bağlantı noktasını bilgisayar adına eklediğini doğrulayın ve şu biçimde görünür: **\<remote computer name> :p ort**
 
     ::: moniker range=">=vs-2019"
-    Visual Studio 2019 ' de şunları görmeniz gerekir ** \<remote computer name> : 4024**
+    Visual Studio 2019 ' de şunları görmeniz gerekir **\<remote computer name> : 4024**
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Visual Studio 2017 ' de şunları görmeniz gerekir ** \<remote computer name> : 4022**
+    Visual Studio 2017 ' de şunları görmeniz gerekir **\<remote computer name> : 4022**
     ::: moniker-end
     Bağlantı noktası gereklidir. Bağlantı noktası numarasını görmüyorsanız, el ile ekleyin.
 
@@ -213,7 +214,7 @@ Uzaktan hata ayıklayıcıyı bir hizmet olarak çalıştırma hakkında bilgi i
 
     * Aksi takdirde **dotnet.exe** işlemini seçin. (Bu işlem dışı barındırma modelidir.)
 
-    *w3wp.exe* veya *dotnet.exe*gösteren birden çok Işlem varsa, **Kullanıcı adı** sütununu kontrol edin. Bazı senaryolarda, **Kullanıcı adı** sütunu **IIS APPPOOL\DefaultAppPool**gibi uygulama havuzu adınızı gösterir. Uygulama havuzunu görürseniz, ancak benzersiz değilse, hata ayıklamak istediğiniz uygulama örneği için yeni bir adlandırılmış uygulama havuzu oluşturun ve ardından **Kullanıcı adı** sütununda kolayca bulabilirsiniz.
+    *w3wp.exe* veya *dotnet.exe* gösteren birden çok Işlem varsa, **Kullanıcı adı** sütununu kontrol edin. Bazı senaryolarda, **Kullanıcı adı** sütunu **IIS APPPOOL\DefaultAppPool** gibi uygulama havuzu adınızı gösterir. Uygulama havuzunu görürseniz, ancak benzersiz değilse, hata ayıklamak istediğiniz uygulama örneği için yeni bir adlandırılmış uygulama havuzu oluşturun ve ardından **Kullanıcı adı** sütununda kolayca bulabilirsiniz.
 
     ::: moniker range=">=vs-2019"
     ![RemoteDBG_AttachToProcess](../debugger/media/vs-2019/remotedbg-attachtoprocess-aspnetcore.png "RemoteDBG_AttachToProcess")
@@ -224,7 +225,7 @@ Uzaktan hata ayıklayıcıyı bir hizmet olarak çalıştırma hakkında bilgi i
 
 7. **Ekle**' ye tıklayın.
 
-8. Uzak bilgisayarın Web sitesini açın. Bir tarayıcıda **http:// \<remote computer name> **adresine gidin.
+8. Uzak bilgisayarın Web sitesini açın. Bir tarayıcıda **http:// \<remote computer name>** adresine gidin.
 
     ASP.NET Web sayfasını görmeniz gerekir.
 
@@ -250,18 +251,18 @@ Gerekli bağlantı noktaları:
 ::: moniker-end
 * UDP 3702-(Isteğe bağlı) bulma bağlantı noktası, Visual Studio 'da uzaktan hata ayıklayıcıya eklerken **bul** düğmesine erişmenizi sağlar.
 
-1. Windows Server 'da bir bağlantı noktasını açmak için **Başlat** menüsünü açın, **Gelişmiş Güvenlik Özellikli Windows Güvenlik Duvarı**araması yapın.
+1. Windows Server 'da bir bağlantı noktasını açmak için **Başlat** menüsünü açın, **Gelişmiş Güvenlik Özellikli Windows Güvenlik Duvarı** araması yapın.
 
 2. Sonra **gelen kuralları yeni kural > bağlantı noktası >** seçin ve ardından **İleri**' ye tıklayın. (UDP 3702 için bunun yerine **giden kurallar** ' ı seçin.)
 
-3. **Belirli yerel bağlantı noktaları**altında, bağlantı noktası numarasını girin, **İleri**' ye tıklayın.
+3. **Belirli yerel bağlantı noktaları** altında, bağlantı noktası numarasını girin, **İleri**' ye tıklayın.
 
 4. **Bağlantıya Izin ver**' e tıklayın, **İleri**' ye tıklayın.
 
 5. Bağlantı noktası için etkinleştirilecek bir veya daha fazla ağ türü seçin ve **İleri**' ye tıklayın.
 
     Seçtiğiniz tür, uzak bilgisayarın bağlı olduğu ağı içermelidir.
-6. Gelen kuralı için adı (örneğin, **IIS**, **Web dağıtımı**veya **msvsmon**) ekleyin ve **son**' a tıklayın.
+6. Gelen kuralı için adı (örneğin, **IIS**, **Web dağıtımı** veya **msvsmon**) ekleyin ve **son**' a tıklayın.
 
     Yeni kuralınızı gelen kurallar veya giden kurallar listesinde görmeniz gerekir.
 

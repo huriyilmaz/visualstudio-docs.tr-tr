@@ -1,5 +1,7 @@
 ---
 title: Performans araçları verilerini çözümleme | Microsoft Docs
+description: Performans sorunlarını analiz etmek için Visual Studio Profil Oluşturma Araçları sağladığı performans raporları ve görünümleri hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +19,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 90752fd8e34769530f1b95dd439a46c71fe985a0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7f11873a3e101c0c37d327d6869ee63fe48f5f42
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74779837"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205352"
 ---
 # <a name="analyze-performance-tools-data"></a>Performans araçları verilerini analiz etme
 Profil Oluşturma Araçları performans raporları, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] uygulama performansı sorunlarını görüntülemenizi ve analiz etmenize olanak tanır. Bu bölüm performans raporlarının ve performans verilerini incelemek için kullanılabilecek görünümlere genel bir bakış sağlar.

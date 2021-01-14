@@ -1,5 +1,7 @@
 ---
 title: UWP uygulamalarında enerji kullanımını analiz etme | Microsoft Docs
+description: Pil destekli cihazlarda çalışan UWP uygulamalarının enerji ve güç gereksinimlerini analiz etmek için Visual Studio enerji tüketimi profil oluşturucuyu kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +16,12 @@ manager: jillfra
 ms.workload:
 - uwp
 monikerRange: vs-2017
-ms.openlocfilehash: 2945ef9879e83567f37ebe410ba9f265bfd64760
-ms.sourcegitcommit: 14637be49401f56341c93043eab560a4ff6b57f6
+ms.openlocfilehash: cf55035ba5a05917334b2192067a3273f4930775
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90075463"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205794"
 ---
 # <a name="analyze-energy-use-in-uwp-apps"></a>UWP uygulamalarında enerji kullanımını analiz etme
 
@@ -34,13 +36,13 @@ Enerji Tüketimi profil oluşturucusu, profil oluşturma oturumu sırasında bir
 >
 > Bu model düşük güç tüketen çeşitli cihazlar için iyi tahminler sağlasa da, profilini oluşturduğunuz cihazın gerçek değerleri muhtemelen farklı olur. Diğer kaynaklara göre daha maliyetli ve dolayısıyla optimizasyon için iyi aday olabilecek ekran, CPU ve ağ etkinliklerini bulmak için değerleri kullanın.
 
-Enerji tüketimi Profil Oluşturucusu, bu *Güç* ve *enerji*tanımlarını kullanır:
+Enerji tüketimi Profil Oluşturucusu, bu *Güç* ve *enerji* tanımlarını kullanır:
 
 - *Güç* , bir süre içinde yapılan işleri gerçekleştirmek için zorlamalı kullanım oranını ölçer. Elektrik biliminde standart güç birimi, tek bir volt 'in bir elektrik potansiyel farkı aracılığıyla geçerli akışlardan biri olduğunda çalışmanın oranı olarak tanımlanan bir *vat*'dir. **Güç kullanımı** grafiğinde birimler, bir vat 'nin bir thousandth olan milivat **MW** olarak görüntülenir.
 
    Güç bir miktar olduğundan, bir yönü (bir zaman dilimi içinde artabilir veya azalabilir) ve bir de hızı (işin artış veya azalış miktarı) olduğu unutulmamalıdır.
 
-- *Enerji* , bir pilin güç kapasitesine göre veya bir süre boyunca toplam güç miktarı kadar olan toplam güç miktarını kapasite veya potansiyel olarak ölçer. Enerji birimi watt-saat olup, bir saat boyunca sürekli olarak uygulanan bir watt'lık güç miktarıdır. **Enerji özetinde**birimler milivat-saat **MW-h**olarak görüntülenir.
+- *Enerji* , bir pilin güç kapasitesine göre veya bir süre boyunca toplam güç miktarı kadar olan toplam güç miktarını kapasite veya potansiyel olarak ölçer. Enerji birimi watt-saat olup, bir saat boyunca sürekli olarak uygulanan bir watt'lık güç miktarıdır. **Enerji özetinde** birimler milivat-saat **MW-h** olarak görüntülenir.
 
 ![Enerji kapasitesi, kullanılan güç, kullanılan toplam enerji](../profiling/media/energyprof_capcitypowerused.png)
 
@@ -96,7 +98,7 @@ if (performance && performance.mark) {
 2. **Enerji tüketimini** seçin ve ardından **Başlat**' ı seçin.
 
     > [!NOTE]
-    > **Enerji tüketimi** profil oluşturucuyu başlattığınızda, *VsEtwCollector.exe*çalıştırmak Için Izninizi ısteyen bir **Kullanıcı hesabı denetim** penceresi görebilirsiniz. **Evet**' i seçin.
+    > **Enerji tüketimi** profil oluşturucuyu başlattığınızda, *VsEtwCollector.exe* çalıştırmak Için Izninizi ısteyen bir **Kullanıcı hesabı denetim** penceresi görebilirsiniz. **Evet**' i seçin.
 
 3. Veri toplamak için uygulamanızda alıştırma yapın.
 
@@ -107,7 +109,7 @@ if (performance && performance.mark) {
      Visual Studio toplanan verileri analiz eder ve sonuçları görüntüler.
 
 ## <a name="collect-energy-profile-data-for-an-installed-app"></a>Yüklü bir uygulama için enerji profili verilerini toplama
- Enerji tüketimi aracı yalnızca bir Visual Studio çözümünden başlatılan veya Microsoft Store yüklenen UWP uygulamalarında çalıştırılabilir. Visual Studio 'da bir çözüm açıldığında, varsayılan hedef **Başlangıç projem**tir. Yüklü bir uygulamayı hedeflemek için:
+ Enerji tüketimi aracı yalnızca bir Visual Studio çözümünden başlatılan veya Microsoft Store yüklenen UWP uygulamalarında çalıştırılabilir. Visual Studio 'da bir çözüm açıldığında, varsayılan hedef **Başlangıç projem** tir. Yüklü bir uygulamayı hedeflemek için:
 
 1. **Hedefi Değiştir** ' i seçin ve ardından **yüklü uygulama**' yı seçin.
 
@@ -124,9 +126,9 @@ if (performance && performance.mark) {
 
  ![Enerji profili Oluşturucu rapor sayfası](../profiling/media/energyprof_all.png "ENERGYPROF_All")
 
-|Görüntü|Açıklama|
+|Görüntü|Description|
 |-|-|
-|![1. Adım](../profiling/media/procguid_1.png "ProcGuid_1")|Rapor dosyası, Report*YYYYMMDD-SSMM*. diagsession olarak adlandırılır. Raporu kaydetmeye karar verirseniz adını değiştirebilirsiniz.|
+|![1. Adım](../profiling/media/procguid_1.png "ProcGuid_1")|Rapor dosyası, Report *YYYYMMDD-SSMM*. diagsession olarak adlandırılır. Raporu kaydetmeye karar verirseniz adını değiştirebilirsiniz.|
 |![2. Adım](../profiling/media/procguid_2.png "ProcGuid_2")|Zaman çizelgesi profil oluşturma oturumunun uzunluğunu, uygulama yaşam döngüsü etkinleştirme olaylarını ve kullanıcı işaretlerini gösterir.|
 |![3. Adım](../profiling/media/procguid_3.png "ProcGuid_3")|Mavi çubukları sürükleyip zaman çizelgesinde bir bölgeyi seçerek, raporu zaman çizelgesinin bir bölümüyle sınırlandırabilirsiniz.|
 |![4. adım](../profiling/media/procguid_4.png "ProcGuid_4")|**Güç kullanımı** grafiği, profil oluşturma oturumu sırasında bir cihaz kaynağı nedeniyle oluşan güç çıktısındaki değişikliği görüntüleyen çok satırlı bir grafiktir. Enerji Tüketimi profil oluşturucusu CPU, ağ etkinliği ve ekran görüntüsü tarafından kullanılan gücü izler.|

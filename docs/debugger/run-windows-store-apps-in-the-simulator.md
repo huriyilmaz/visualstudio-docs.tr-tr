@@ -1,5 +1,7 @@
 ---
 title: Simülatörde UWP uygulamaları çalıştırma | Microsoft Docs
+description: UWP uygulamasını taklit eden bir masaüstü uygulaması olan Visual Studio benzeticisinde Evrensel Windows Platformu (UWP) uygulamalarının nasıl çalıştırılacağını anlayın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -13,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 9b46abc4d22ddfdc551669d3bcd4cba5acf7cce4
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 12d2fed62e1a4762c9b92304ff1acfe8374ab976
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89599522"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205638"
 ---
 # <a name="run-uwp-apps-in-the-simulator"></a>Simülatörde UWP uygulamaları çalıştırma
 
@@ -96,7 +98,7 @@ Etkileşim modunu iki parmağınızla bir Pinç ve yakınlaştırma hareketlerin
 ## <a name="change-the-simulated-screen-size-and-resolution"></a><a name="BKMK_Change_the_simulated_screen_size_and_resolution"></a> Sanal ekran boyutunu ve çözünürlüğünü değiştirme
  Sanal ekran boyutunu ve çözünürlüğünü değiştirmek için paletteki **çözümü Değiştir** düğmesini seçin ve listeden yeni bir boyut ve çözünürlük seçin.
 
- Ekran boyutu ve çözümlemesi *, ekran genişliği inç, piksel genişliği X piksel yüksekliği*olarak listelenir. Hem ekran boyutunun hem de çözümlemenin benzetildiğini unutmayın. Simülatörde birlikte bulunan konum, seçilen cihaz boyutuna ve çözümüne çevrilir.
+ Ekran boyutu ve çözümlemesi *, ekran genişliği inç, piksel genişliği X piksel yüksekliği* olarak listelenir. Hem ekran boyutunun hem de çözümlemenin benzetildiğini unutmayın. Simülatör üzerindeki konum koordinatları seçili cihaz boyutuna ve çözümüne çevrilir.
 
 > [!NOTE]
 > Uygulamanıza bit eşlem görüntülerinin ölçeklendirilen sürümlerini kaydedebilir ve Windows geçerli ölçek için doğru görüntüyü yükler. Daha fazla bilgi için bkz. [Tasarım ve UI girişi](/windows/uwp/layout/design-and-ui-intro). Ancak, Windows 'un çözünürlüğe uyacak şekilde farklı bir görüntü görebilmesi için simülatör çözünürlüğünü değiştirirseniz, yeni görüntüyü görüntülemek için hata ayıklama oturumunuzu durdurup yeniden başlatmanız gerekir.
@@ -135,7 +137,7 @@ Ağ özelliklerinin benzetimini yapmak için:
 
 6. **Dolaşım durumu** listesinden [dolaşım](/uwp/api/windows.networking.connectivity.connectioncost) özelliğini ayarlayın.
 
-7. Ön plan [NetworkStatusChanged](/uwp/api/windows.networking.connectivity.networkinformation) olayını tetikleyerek ve **NetworkStateChange**türünde bir arka plan [sistem tetikleyicisi](/uwp/api/windows.applicationmodel.background.systemtrigger) Ile ağ özelliklerinin benzetimini yapmak için **Özellikleri ayarla** ' yı seçin.
+7. Ön plan [NetworkStatusChanged](/uwp/api/windows.networking.connectivity.networkinformation) olayını tetikleyerek ve **NetworkStateChange** türünde bir arka plan [sistem tetikleyicisi](/uwp/api/windows.applicationmodel.background.systemtrigger) Ile ağ özelliklerinin benzetimini yapmak için **Özellikleri ayarla** ' yı seçin.
 
 Ağ bağlantılarını yönetme hakkında daha fazla bilgi için bkz.:
 
@@ -157,7 +159,7 @@ Ağ bağlantılarını yönetme hakkında daha fazla bilgi için bkz.:
 
 Simülatör penceresi simülatör araç çubuğuna odaklanmak için **Ctrl + Alt + Yukarı ok** tuşlarına basarak simülatör araç çubuğuna gidebilirsiniz. Araç çubuğu düğmeleri arasında gezinmek için **yukarı oku** ve **aşağı oku** kullanın.
 
-**Ctrl + Alt + F4**tuşlarına basarak simülatörü kapatabilirsiniz.
+**Ctrl + Alt + F4** tuşlarına basarak simülatörü kapatabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

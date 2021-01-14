@@ -1,5 +1,7 @@
 ---
 title: Eski dil hizmeti ayrıştırıcısı ve tarayıcısı | Microsoft Docs
+description: Görüntülenen kodla ilgili bilgileri seçerek eski dil hizmeti ayrıştırıcısı ve tarayıcısı hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c87f447a4b8bca804d27aae4967f4adaf389c627
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 20c8c58a98887e5509026641ba0295fc167435e3
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80707322"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98204611"
 ---
 # <a name="legacy-language-service-parser-and-scanner"></a>Eski Dil Hizmeti Ayrıştırıcısı ve Tarayıcısı
 Ayrıştırıcı, dil hizmetinin kalbidir. Yönetilen paket çerçevesi (MPF) dil sınıfları, görüntülenmekte olan kodla ilgili bilgileri seçmek için bir dil ayrıştırıcısı gerektirir. Bir Ayrıştırıcı, metni sözcük temelli belirteçlere ayırır ve sonra bu belirteçleri tür ve işlevlere göre tanımlar.
@@ -68,7 +70,7 @@ namespace MyNamespace
 > [!CAUTION]
 > <xref:Microsoft.VisualStudio.Package.ParseRequest>Yapı, nesnesine bir başvuru içerir <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> . Bu <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> nesne arka plan iş parçacığında kullanılamaz. Aslında, temel MPF sınıflarının birçoğu arka plan iş parçacığında kullanılamaz. Bunlar,, <xref:Microsoft.VisualStudio.Package.Source> <xref:Microsoft.VisualStudio.Package.ViewFilter> <xref:Microsoft.VisualStudio.Package.CodeWindowManager> sınıfları ve görünümle doğrudan veya dolaylı olarak iletişim kuran diğer herhangi bir sınıfı içerir.
 
- Bu ayrıştırıcı genellikle ilk kez çağrıldığında veya ayrıştırma neden değeri verildiğinde kaynak dosyanın tamamını ayrıştırır <xref:Microsoft.VisualStudio.Package.ParseReason> . Yöntemine yapılan sonraki çağrılar, <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> ayrıştırılmış kodun küçük bir kısmını işler ve önceki tam Ayrıştırma işleminin sonuçları kullanılarak çok daha hızlı yürütülebilir. <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>Yöntemi, ve nesneleri aracılığıyla ayrıştırma işleminin sonuçlarını iletişim kurar <xref:Microsoft.VisualStudio.Package.AuthoringSink> <xref:Microsoft.VisualStudio.Package.AuthoringScope> . <xref:Microsoft.VisualStudio.Package.AuthoringSink>Nesnesi, belirli bir ayrıştırma nedenine ilişkin bilgileri toplamak için kullanılır; Örneğin, eşleşen küme ayraçları veya parametre listelerine sahip Yöntem imzalarının yayılmaları hakkındaki bilgiler. , <xref:Microsoft.VisualStudio.Package.AuthoringScope> Bildirim ve yöntem imzaları koleksiyonlarını sağlar ve ayrıca gelişmiş Düzenle git seçeneği için de destek sağlar (**tanıma**git, **bildirime**git, **başvuruya git**).
+ Bu ayrıştırıcı genellikle ilk kez çağrıldığında veya ayrıştırma neden değeri verildiğinde kaynak dosyanın tamamını ayrıştırır <xref:Microsoft.VisualStudio.Package.ParseReason> . Yöntemine yapılan sonraki çağrılar, <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> ayrıştırılmış kodun küçük bir kısmını işler ve önceki tam Ayrıştırma işleminin sonuçları kullanılarak çok daha hızlı yürütülebilir. <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>Yöntemi, ve nesneleri aracılığıyla ayrıştırma işleminin sonuçlarını iletişim kurar <xref:Microsoft.VisualStudio.Package.AuthoringSink> <xref:Microsoft.VisualStudio.Package.AuthoringScope> . <xref:Microsoft.VisualStudio.Package.AuthoringSink>Nesnesi, belirli bir ayrıştırma nedenine ilişkin bilgileri toplamak için kullanılır; Örneğin, eşleşen küme ayraçları veya parametre listelerine sahip Yöntem imzalarının yayılmaları hakkındaki bilgiler. , <xref:Microsoft.VisualStudio.Package.AuthoringScope> Bildirim ve yöntem imzaları koleksiyonlarını sağlar ve ayrıca gelişmiş Düzenle git seçeneği için de destek sağlar (**tanıma** git, **bildirime** git, **başvuruya git**).
 
 ### <a name="the-iscanner-scanner"></a>IScanner tarayıcısı
  Ayrıca, uygulayan bir tarayıcı uygulamalısınız <xref:Microsoft.VisualStudio.Package.IScanner> . Bununla birlikte, bu tarayıcı sınıfı aracılığıyla bir satır temelinde çalıştığından <xref:Microsoft.VisualStudio.Package.Colorizer> , genellikle daha kolay bir şekilde uygulanır. Her satırın başlangıcında MPF, <xref:Microsoft.VisualStudio.Package.Colorizer> sınıfa, tarayıcıya geçirilen bir durum değişkeni olarak kullanılacak bir değer verir. Her satırın sonunda, tarayıcı güncelleştirilmiş durum değişkenini döndürür. MPF bu durum bilgilerini her satır için önbelleğe alır, böylece tarayıcı kaynak dosyanın başlangıcında başlatmaya gerek kalmadan herhangi bir satırdan ayrıştırmaya başlayabilir. Tek bir satırın hızlı taraması, düzenleyicinin kullanıcıya hızlı geri bildirim sağlamasına olanak tanır.

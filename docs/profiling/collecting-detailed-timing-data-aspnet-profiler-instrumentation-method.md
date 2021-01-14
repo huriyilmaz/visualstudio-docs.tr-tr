@@ -1,5 +1,6 @@
 ---
 title: İzleme kullanarak ASP.NET için zamanlama verileri toplama
+description: VSPerfCmd kullanarak bir ASP.NET Web uygulaması için ayrıntılı performans verileri nasıl toplayacağınızı öğrenin. Profil Oluşturma Araçları işlevlere tamamen erişim sağlar.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -13,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - aspnet
-ms.openlocfilehash: a73d81eaaef45a9ae97e733a8ae94805106a9ef8
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 1001e10d80b39df5072a6524f445c97418aa603b
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809641"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205755"
 ---
 # <a name="collect-detailed-timing-data-for-an-aspnet-web-application-using-the-profiler-instrumentation-method-from-the-command-line"></a>Komut satırından profil oluşturucu izleme yöntemini kullanarak bir ASP.NET Web uygulaması için ayrıntılı zamanlama verileri toplama
 Bu bölümde, [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] **VSPerfCmd** komut satırı aracını ve izleme yöntemini kullanarak bir Web uygulaması için ayrıntılı performans verileri toplamaya yönelik yordamlar ve seçenekler açıklanmaktadır.

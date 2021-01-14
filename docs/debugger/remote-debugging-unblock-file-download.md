@@ -1,5 +1,7 @@
 ---
 title: Uzak Araçlar indirmenin engellemesini kaldır
+description: Windows Server 'da uzak araçların indirilmesini engellemeyi kaldır ve bu, varsayılan IE güvenlik ayarları nedeniyle zaman alıcı olabilir.
+ms.custom: SEO-VS-2020
 ms.date: 07/19/2018
 ms.topic: troubleshooting
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8a243033bf5831952d83fdf688302651e02b76b7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 54d85ee7df7f4038cc78b10f83be79e524d3bfd2
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62903036"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98205651"
 ---
 # <a name="how-to-unblock-the-download-of-the-remote-tools-on-windows-server"></a>Nasıl yapılır: Windows Server 'da uzak araçların indirilmesini kaldırma
 
@@ -24,19 +26,19 @@ Windows Server 'da Internet Explorer 'daki varsayılan güvenlik ayarları, uzak
 
 * Windows Server 2016 ' de, **Internet seçenekleri**  >  **güvenliği**  >  **Internet**  >  **özel düzeyi**  >  **indirmelerinde** varsayılan ayar dosya indirmelerini devre dışı bırakır. Uzak araçları doğrudan Windows Server 'a indirmeyi seçerseniz, dosya indirmeyi etkinleştirmelisiniz.
 
-Araçları Windows Server 'a indirmek için aşağıdakilerden birini öneririz:
+Araçları Windows Server 'a indirmek için aşağıdaki eylemlerden birini öneririz:
 
 * Uzak araçları, Visual Studio çalıştıran bir bilgisayar gibi farklı bir bilgisayara indirin ve ardından *. exe* dosyasını Windows Server 'a kopyalayın.
 
 * Uzaktan hata ayıklayıcıyı Visual Studio makinenizde [bir dosya paylaşımından](../debugger/remote-debugging.md#fileshare_msvsmon) çalıştırın.
 
-* Uzak araçları doğrudan Windows Server 'a indirin ve güvenilen siteler eklemek için istemleri kabul edin. Modern Web siteleri çoğunlukla birçok üçüncü taraf kaynağı içerir, bu nedenle bu çok sayıda istem oluşmasına neden olabilir. Ayrıca, yeniden yönlendirilen bağlantıların el ile eklenmesi gerekebilir. İndirilmeye başlamadan önce bazı güvenilen siteleri eklemeyi tercih edebilirsiniz. **Güvenlik > güvenilen siteler > siteleri > Internet seçenekleri** ' ne gidin ve aşağıdaki siteleri ekleyin.
+* Uzak araçları doğrudan Windows Server 'a indirin ve güvenilen siteler eklemek için istemleri kabul edin. Modern Web siteleri genellikle birçok üçüncü taraf kaynağı içerir ve bu da birçok istem oluşmasına neden olabilir. Ayrıca, yeniden yönlendirilen bağlantıların el ile eklenmesi gerekebilir. İndirilmeye başlamadan önce bazı güvenilen siteleri eklemeyi tercih edebilirsiniz. **Güvenlik > güvenilen siteler > siteleri > Internet seçenekleri** ' ne gidin ve aşağıdaki siteleri ekleyin.
 
   * visualstudio.microsoft.com
   * download.visualstudio.microsoft.com
   * hakkında: boş
 
-  My.visualstudio.com üzerindeki hata ayıklayıcının eski sürümleri için, oturum açmanın başarılı olduğundan emin olmak için bu ek siteleri ekleyin:
+  My.visualstudio.com üzerindeki hata ayıklayıcının eski sürümleri için, bu diğer siteleri ekleyerek oturum açmanın başarılı olduğundan emin olun:
 
   * microsoft.com
   * go.microsoft.com
@@ -55,4 +57,4 @@ Araçları Windows Server 'a indirmek için aşağıdakilerden birini öneririz:
 
     ![Engellenen içerik iletişim kutusu](../debugger/media/remotedbg-blocked-content.png)
 
-    Yazılımı indirdiğinizde, çeşitli web sitesi betikleri ve kaynakları yüklemeye izin vermek için bazı ek istekler alırsınız. My.visualstudio.com 'de, oturum açma işleminin başarılı olduğundan emin olmak için ek etki alanları eklemenizi öneririz.
+    Yazılımı indirdiğinizde, çeşitli web sitesi betikleri ve kaynakları yükleme izni vermek için daha fazla istek edinirsiniz. My.visualstudio.com 'de, oturum açma işleminin başarılı olduğundan emin olmak için ek etki alanları eklemenizi öneririz.

@@ -1,5 +1,7 @@
 ---
 title: Kullanılabilir Hizmetler listesi | Microsoft Docs
+description: Visual Studio ve Visual Studio SDK tarafından desteklenen kullanılabilir hizmetlerin bir listesini, her hizmet için bir arabirim elde etmek üzere hizmet GUID 'Leri de dahil olmak üzere görüntüleyin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 302d4bcff647a74acc973c47e0b62e66c86e5859
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 53ab3531e67be540f7c66da52b7e5152a510fa27
+ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80707339"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98204650"
 ---
 # <a name="list-of-available-services"></a>Kullanılabilir Hizmetlerin Listesi
 
@@ -54,13 +56,13 @@ Her hizmetle birlikte gösterilen birincil arabirimi veya arabirimleri almak iç
 | <xref:Microsoft.VisualStudio.Shell.Interop.SVsCallBrowser> | <xref:Microsoft.VisualStudio.Shell.Interop.IVsCallBrowser> | Hayır | Yes | Hata ayıklama sırasında kullanılan yeni bir **çağrı tarayıcısı** oluşturmak Için bir VSPackage sağlar. |
 | <xref:Microsoft.VisualStudio.Shell.Interop.SVsClassView> | <xref:Microsoft.VisualStudio.Shell.Interop.IVsClassView> | Yes | Yes | Bir VSPackage 'ın **sınıf görünümü** belirli bir nesneyle eşitlemesini sağlar. |
 | <xref:Microsoft.VisualStudio.Shell.Interop.SVsCmdNameMapping> | <xref:Microsoft.VisualStudio.Shell.Interop.IVsCmdNameMapping> | Yes | Yes | Komut adlarını GUID 'Ler ve geri eşlemek ve tüm kullanılabilir komutların ve adların adlarını belirlemek için destek sağlar. |
-| <xref:Microsoft.VisualStudio.Shell.Interop.SVsCodeDefView> | <xref:Microsoft.VisualStudio.Shell.Interop.IVsCodeDefView> | Hayır | Yes | **Kod tanımı görünümünü**işlemek Için bir VSPackage sağlar. |
+| <xref:Microsoft.VisualStudio.Shell.Interop.SVsCodeDefView> | <xref:Microsoft.VisualStudio.Shell.Interop.IVsCodeDefView> | Hayır | Yes | **Kod tanımı görünümünü** işlemek Için bir VSPackage sağlar. |
 | <xref:Microsoft.VisualStudio.Shell.Interop.SVsCodeShareHandler> | <xref:Microsoft.VisualStudio.Shell.Interop.IVsCodeShareHandler> | Yes | Yes | İç hizmet. Kullanmayın. |
 | <xref:Microsoft.VisualStudio.TextManager.Interop.SVsCodeWindow> | <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow> | Yes | Yes | Bir veya daha fazla belge içerebilen bir kod penceresine erişim sağlar. |
 | <xref:Microsoft.VisualStudio.TextManager.Interop.SVsCodeWindowManager> | <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager> | Yes | Yes | Bir VSPackage 'ın, açılan çubuklar gibi kod penceresine değişiklik eklemesini sağlar. |
-| <xref:Microsoft.VisualStudio.Shell.Interop.SVsCommandWindow> | <xref:Microsoft.VisualStudio.Shell.Interop.IVsCommandWindow><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsCommandWindow2> | Yes | Yes | Bir VSPackage 'ın komut **penceresi** aracılığıyla komut çalıştırmasını ve aksi halde **komut penceresiyle**etkileşime geçmesini sağlar. |
+| <xref:Microsoft.VisualStudio.Shell.Interop.SVsCommandWindow> | <xref:Microsoft.VisualStudio.Shell.Interop.IVsCommandWindow><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsCommandWindow2> | Yes | Yes | Bir VSPackage 'ın komut **penceresi** aracılığıyla komut çalıştırmasını ve aksi halde **komut penceresiyle** etkileşime geçmesini sağlar. |
 | <xref:Microsoft.VisualStudio.Shell.Interop.SVsCommandWindowsCollection> | <xref:Microsoft.VisualStudio.Shell.Interop.IVsCommandWindowsCollection> | Hayır | Yes | Tarafından tutulan **komut** pencerelerinin listesini işlemek Için bir VSPackage sağlar [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . |
-| <xref:Microsoft.VisualStudio.Shell.Interop.SVsComplusLibrary> | <xref:Microsoft.VisualStudio.Shell.Interop.IVsLibraryReferenceManager> | Yes | Yes | Nesne Tarayıcısı, bir VSPackage 'ın **Object Browser**için tarama bilgisi sağlamasına olanak sağlar. |
+| <xref:Microsoft.VisualStudio.Shell.Interop.SVsComplusLibrary> | <xref:Microsoft.VisualStudio.Shell.Interop.IVsLibraryReferenceManager> | Yes | Yes | Nesne Tarayıcısı, bir VSPackage 'ın için tarama bilgisi sağlamasına olanak sağlar. |
 | <xref:Microsoft.VisualStudio.Shell.Interop.SVsComponentSelectorDlg> | <xref:Microsoft.VisualStudio.Shell.Interop.IVsComponentSelectorDlg> | Hayır | Yes | Bir VSPackage 'ın, bir kullanıcının projeye eklenecek dış bileşenleri seçmesini sağlayan **Başvuru Ekle** seçeneğini desteklemesini sağlar. |
 | <xref:Microsoft.VisualStudio.Shell.Interop.SVsComponentSelectorDlg2> | <xref:Microsoft.VisualStudio.Shell.Interop.IVsComponentSelectorDlg2> | Hayır | Yes | Bir VSPackage 'ın, bir kullanıcının projeye eklenecek dış bileşenleri seçmesini sağlayan **Başvuru Ekle** seçeneğini desteklemesini sağlar. İletişim kutusunun bu sürümü, bileşen listesinin gösterilmeden önce önceden doldurulmasına olanak tanır. |
 | <xref:Microsoft.VisualStudio.Shell.Interop.SVsConfigurationManagerDlg> | <xref:Microsoft.VisualStudio.Shell.Interop.IVsConfigurationManagerDlg> | Hayır | Yes | **Configuration Manager** iletişim kutusunu görüntüler. |
@@ -93,7 +95,7 @@ Her hizmetle birlikte gösterilen birincil arabirimi veya arabirimleri almak iç
 | <xref:Microsoft.VisualStudio.TextManager.Interop.SVsLinkedUndoTransactionManager> | <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLinkedUndoTransactionManager> | Yes | Yes | Bağlı geri alma yöneticisi 'ne erişim sağlar. |
 | <xref:Microsoft.VisualStudio.Shell.Interop.SVsMenuEditor> | <xref:Microsoft.VisualStudio.Shell.Interop.IVsMenuEditorFactory> | Yes | Yes | Form tasarımcısının paylaşılan menü düzenleyicisine erişmesine olanak sağlar. İçin ıvsmenueditorfactory sorgulanabilir <xref:Microsoft.VisualStudio.Shell.Interop.IVsMenuEditor> . |
 | <xref:Microsoft.VisualStudio.Shell.Interop.SVsMonitorUserContext> | <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorUserContext> | Yes | Yes | Belirli bir bağlam için Yardım anahtar sözcüklerini ilişkilendirmek üzere kullanılan bir "bağlam paketi" oluşturmak için bir VSPackage sağlar. |
-| <xref:Microsoft.VisualStudio.Shell.Interop.SVsObjBrowser> | <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjBrowser> | Yes | Yes | Bir VSPackage 'ın **nesne tarayıcısı**belirli bir nesneye gitmesini sağlar. |
+| <xref:Microsoft.VisualStudio.Shell.Interop.SVsObjBrowser> | <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjBrowser> | Yes | Yes | Bir VSPackage 'ın **nesne tarayıcısı** belirli bir nesneye gitmesini sağlar. |
 | <xref:Microsoft.VisualStudio.Shell.Interop.SVsObjectManager> | <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager> | Yes | Yes | Bir VSPackage 'ın [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , ad alanları, sınıflar ve numaralandırmalar gibi nesneleri yönetmek için kitaplık yöneticisini ile kaydetmesini sağlar. |
 | <xref:Microsoft.VisualStudio.Shell.Interop.SVsObjectSearch> | <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectSearch> | Yes | Yes | Belirli bir nesneyi aramak için bir VSPackage sağlar. |
 | <xref:Microsoft.VisualStudio.Shell.Interop.SVsOpenProjectOrSolutionDlg> | <xref:Microsoft.VisualStudio.Shell.Interop.IVsOpenProjectOrSolutionDlg> | Hayır | Yes | Bir VSPackage 'ın, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] bir projeyi veya çözümü açmak için standart iletişim kutusunu kullanmasına olanak sağlar. |
@@ -140,9 +142,9 @@ Her hizmetle birlikte gösterilen birincil arabirimi veya arabirimleri almak iç
 | <xref:Microsoft.VisualStudio.TextManager.Interop.SVsTextSpanSet> | <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextSpanSet> | Yes | Yes | Metin görüntüsündeki veya arabellekteki metin yayın listesine erişim sağlar. Bu hizmet genellikle belge kapsayıcısına uygulanır ve geçerli belgeye başvurur. |
 | <xref:Microsoft.VisualStudio.Shell.Interop.SVsThreadedWaitDialog> | <xref:Microsoft.VisualStudio.Shell.Interop.IVsThreadedWaitDialog> | Hayır | Yes | Bir VSPackage 'ın farklı bir iş parçacığında bekleyen bir iletişim kutusu göstermesini sağlar (arka plan görevlerini beklemek için kullanılır). |
 | <xref:Microsoft.VisualStudio.Shell.Interop.SVsThreadPool> | <xref:Microsoft.VisualStudio.Shell.Interop.IVsThreadPool> | Hayır | Yes | Tarafından korunan arka plan görevlerini başlatmak için VSPackage 'ı sağlar [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . |
-| <xref:Microsoft.VisualStudio.Shell.Interop.SVsToolbox> | <xref:Microsoft.VisualStudio.Shell.Interop.IVsToolbox> | Yes | Yes | IDE 'nin **araç kutusuna**erişim sağlar. |
+| <xref:Microsoft.VisualStudio.Shell.Interop.SVsToolbox> | <xref:Microsoft.VisualStudio.Shell.Interop.IVsToolbox> | Yes | Yes | IDE 'nin **araç kutusuna** erişim sağlar. |
 | <xref:Microsoft.VisualStudio.Shell.Interop.SVsToolboxActiveXDataProvider> | <xref:Microsoft.VisualStudio.Shell.Interop.IVsToolboxDataProvider> | Yes | Yes | **Araç kutusu** öğelerinden bilgi almak Için bir VSPackage sağlar. |
-| <xref:Microsoft.VisualStudio.Shell.Interop.SVsToolboxDataProviderRegistry> | <xref:Microsoft.VisualStudio.Shell.Interop.IVsToolboxDataProviderRegistry> | Hayır | Yes | Bir VSPackage 'ın, araç **kutusunun**tamamını önceden yükleme performans maliyetini etkilemeden bir araç kutusu veri sağlayıcısı kaydetmesi için izin sağlar. |
+| <xref:Microsoft.VisualStudio.Shell.Interop.SVsToolboxDataProviderRegistry> | <xref:Microsoft.VisualStudio.Shell.Interop.IVsToolboxDataProviderRegistry> | Hayır | Yes | Bir VSPackage 'ın, araç **kutusunun** tamamını önceden yükleme performans maliyetini etkilemeden bir araç kutusu veri sağlayıcısı kaydetmesi için izin sağlar. |
 | <xref:Microsoft.VisualStudio.Shell.Interop.SVsToolsOptions> | <xref:Microsoft.VisualStudio.Shell.Interop.IVsToolsOptions> | Hayır | Yes | **Seçenekler** iletişim kutusunun açık olup olmadığını ve tüm Seçenekler sayfasının görünürlüğünü yenilemek Için bir VSPackage sağlar. |
 | <xref:Microsoft.VisualStudio.Shell.Interop.SVsTrackProjectDocuments> | <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments3> | Hayır | Yes | Bir projenin dosyalarındaki değişiklikleri izlemek ve bir kaynak denetimi sağlayıcısı üzerinde Batch denetimi sağlamak için bir VSPackage sağlar. |
 | <xref:Microsoft.VisualStudio.Shell.Interop.SVsTrackSelectionEx> | <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackSelectionEx> | Yes | Yes | Bir VSPackage 'ın, seçili proje öğesini etkileyebilecek değişikliklerin IDE 'sini bilgilendirmek için izin sağlar. |
