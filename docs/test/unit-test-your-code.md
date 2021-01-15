@@ -13,12 +13,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: ba3db5b74a415d3736c37f54fdb708fde3436d92
-ms.sourcegitcommit: 4e28314dc2be59b4c5fd44545c0653f625e74489
+ms.openlocfilehash: dc82d72d7c0a333fc28146746a473ed359857490
+ms.sourcegitcommit: 993fca11dc373a10150751bc2a045a9701a9db2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97756597"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98240289"
 ---
 # <a name="unit-test-tools-and-tasks"></a>Birim testi araçları ve görevleri
 
@@ -36,7 +36,7 @@ Birim testi araçları şunları içerir:
 
 * **Microsoft Fakes yalıtım çerçevesi** &mdash; Microsoft Fakes yalıtım çerçevesi, test edilen kodda bağımlılıklar oluşturan üretim ve sistem .NET kodu için alternatif sınıflar ve Yöntemler oluşturabilir. Bir işlev için sahte temsilciler uygulayarak, bağımlılık nesnesinin davranışını ve çıkışını denetlersiniz.
 
-Ayrıca, test verileri ve birim testleri paketi oluşturmak üzere .NET kodunuzu araştırmak için [IntelliTest](../test/generate-unit-tests-for-your-code-with-intellitest.md) ' i de kullanabilirsiniz. Koddaki her deyimin için, bu ifadeyi yürütecek bir test girişi oluşturulur. Koddaki her koşullu dal için bir olay Analizi gerçekleştirilir.
+.NET için, kodunuzu araştırmak ve test verileri ve birim testleri paketi oluşturmak için [IntelliTest](../test/generate-unit-tests-for-your-code-with-intellitest.md) ' i de kullanabilirsiniz. Koddaki her deyimin için, bu ifadeyi yürütecek bir test girişi oluşturulur. Koddaki her koşullu dal için bir olay Analizi gerçekleştirilir.
 
 ## <a name="key-tasks"></a>Ana görevler
 

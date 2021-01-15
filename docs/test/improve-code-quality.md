@@ -12,19 +12,19 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 0029321ddfc3ff12bb9c40dac9de64a9eb067a95
-ms.sourcegitcommit: 4e28314dc2be59b4c5fd44545c0653f625e74489
+ms.openlocfilehash: cc5a1a7b72dcbdba8b874958bbef47ac4b98e936
+ms.sourcegitcommit: 993fca11dc373a10150751bc2a045a9701a9db2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97756649"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98240328"
 ---
 # <a name="first-look-at-testing-tools-in-visual-studio"></a>Visual Studio 'da test araçlarına ilk bakış
 
 Visual Studio test araçları, sizin ve takımınızın kod mükemmelliğinde yüksek standartlar geliştirmenize ve bu standartları sürdürmenize yardımcı olabilir.
 
 > [!NOTE]
-> Birim testi, Visual Studio 'nun tüm sürümlerinde kullanılabilir. Live Unit Testing, IntelliTest ve kodlanmış UI testi gibi diğer test araçları yalnızca Visual Studio Enterprise sürümünde kullanılabilir. Sürümler hakkında daha fazla bilgi için bkz. [Visual Studio Ides 'ı karşılaştırın](https://visualstudio.microsoft.com/vs/compare/).
+> Birim testi, Visual Studio 'nun tüm sürümlerinde kullanılabilir. Live Unit Testing ve IntelliTest gibi diğer test araçları yalnızca Visual Studio Enterprise sürümünde kullanılabilir. Sürümler hakkında daha fazla bilgi için bkz. [Visual Studio Ides 'ı karşılaştırın](https://visualstudio.microsoft.com/vs/compare/).
 
 ## <a name="test-explorer"></a>Test Gezgini
 
