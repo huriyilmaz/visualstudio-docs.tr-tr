@@ -7,6 +7,7 @@ ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor
 - vs.toolsoptionspages.text_editor
+- VS.ToolsOptionsPages.Text_Editor.Advanced
 - VS.ToolsOptionsPages.Text_Editor.CSharp.Formatting
 - VS.ToolsOptionsPages.Text_Editor.CSharp.Outlining
 - VS.ToolsOptionsPages.Text_Editor.General
@@ -35,12 +36,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1665db5fff414227c18fd8de4224302cb6d43c2a
-ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
+ms.openlocfilehash: c76ea1729fa84bee97458f131e18f64281b76567
+ms.sourcegitcommit: 4ee20054afe7bcf5c0aed504dec01e18059fbbd0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96040608"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98226506"
 ---
 # <a name="options-dialog-box-text-editor--general"></a>Seçenekler iletişim kutusu: metin düzenleyici \> genel
 
@@ -70,7 +71,7 @@ Seçildiğinde, projenin belirtilen kodlama kuralları kişisel projelerinizde k
 
 ### <a name="enable-mouse-click-to-perform-go-to-definition"></a>Tanıma Git işlemini gerçekleştirmek için fare tıklamasını etkinleştir
 
-Seçildiğinde, **CTRL** tuşuna basabilir ve fareyle tıklarken bir öğenin üzerine geldiğinizde üzerine gelebilmeniz gerekir. Bunun yapılması sizi seçili öğenin tanımına götürür. **Alt** **Ctrl**  +  **Değiştirici tuşu kullan** açılır listesinden alt veya CTRL **alt** tuşlarını da seçebilirsiniz.
+Seçildiğinde, **CTRL** tuşuna basabilir ve fareyle tıklarken bir öğenin üzerine geldiğinizde üzerine gelebilmeniz gerekir. Bunun yapılması sizi seçili öğenin tanımına götürür.    +  **Değiştirici tuşu kullan** açılır listesinden alt veya CTRL **alt** tuşlarını da seçebilirsiniz.
 
 Öğenin tanımını, kod düzenleyicisinde geçerli konumunuzla uzaklaşmadan bir pencerede görüntülemek için, **görünümü göz atma ' da aç** onay kutusunu seçin.
 
