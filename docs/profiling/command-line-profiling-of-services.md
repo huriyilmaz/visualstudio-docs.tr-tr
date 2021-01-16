@@ -1,5 +1,7 @@
 ---
-title: Hizmetlerin komut satırı profili oluşturma | Microsoft Docs
+title: Hizmet profili oluşturmayı Command-Line | Microsoft Docs
+description: Windows Hizmetleri için performans verilerini toplamak üzere komut satırından Profil Oluşturma Araçları nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: b20835eaf8b81bd64bd90aa75d2efb32975a7c53
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f05ca0a11060e2a9009b38b0caf7ce9172773f36
+ms.sourcegitcommit: 7a5c4f60667b5792f876953d55192b49a73f5fe9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74772837"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98533660"
 ---
 # <a name="command-line-profiling-of-services"></a>Komut satırından hizmetler profili oluşturma
 Bu bölümde, komut satırından Profil Oluşturma Araçları kullanarak Windows Hizmetleri için performans verilerini toplamaya yönelik yordamlar ve seçenekler açıklanmaktadır [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .

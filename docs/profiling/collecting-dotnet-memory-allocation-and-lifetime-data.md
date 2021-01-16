@@ -1,5 +1,6 @@
 ---
 title: .NET bellek ayırma & ömür verileri toplama
+description: .NET uygulamanızda bellekle ilgili performans sorunlarını algılamaya yardımcı olmak için, bellek ayırma ve nesne yaşam süresi verilerini toplamak üzere Profil Oluşturma Araçları kullanın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -12,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1354fb95b543e73a67d19204871f3b79aec9ece9
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: a9321ce83f65d5a7cac95d793d5f635651bef0e7
+ms.sourcegitcommit: 7a5c4f60667b5792f876953d55192b49a73f5fe9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809433"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98533803"
 ---
 # <a name="collect-net-framework-memory-allocation-and-lifetime-data"></a>.NET Framework bellek ayırmayı ve ömür verilerini toplayın
 

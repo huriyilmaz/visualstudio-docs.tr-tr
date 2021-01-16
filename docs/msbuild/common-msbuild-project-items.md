@@ -17,12 +17,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 638f67575a7214047cdb917c994179ac144e60b2
-ms.sourcegitcommit: 49c959911128a733ed2858db7c0e3b565f934b1a
+ms.openlocfilehash: ea072cf3e9a236fdc6a4ad66b1c0cf7ddcda1550
+ms.sourcegitcommit: 7a5c4f60667b5792f876953d55192b49a73f5fe9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93238629"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98533452"
 ---
 # <a name="common-msbuild-project-items"></a>Yaygın MSBuild proje öğeleri
 
@@ -36,7 +36,7 @@ Tüm ortak proje öğelerinin listesi aşağıda verilmiştir.
 
 Projedeki derleme (yönetilen) başvurusunu temsil eder.
 
-|Öğe meta veri adı|Açıklama|
+|Öğe meta veri adı|Description|
 |---------------|-----------------|
 |HintPath|İsteğe bağlı dize. Derlemenin göreli veya mutlak yolu.|
 |Name|İsteğe bağlı dize. Derlemenin görünen adı, örneğin, "System. Windows. Forms."|
@@ -63,7 +63,7 @@ Projedeki COM (yönetilmeyen) bileşen başvurusunu temsil eder. Bu öğe yalnı
 
 `TypeLibFiles` [ResolveComReference](resolvecomreference-task.md) hedefinin parametresine geçirilen tür kitaplıklarının listesini temsil eder. Bu öğe yalnızca .NET projeleri için geçerlidir.
 
-|Öğe meta veri adı|Açıklama|
+|Öğe meta veri adı|Description|
 |---------------|-----------------|
 |WrapperTool|İsteğe bağlı dize. Bileşende kullanılan sarmalayıcı aracının adı, örneğin, "Tlbimp."|
 
@@ -97,7 +97,7 @@ Başka bir projenin başvurusunu temsil eder. `ProjectReference` öğeler, hedef
 
 Derleyicinin kaynak dosyalarını temsil eder.
 
-| Öğe meta veri adı | Açıklama |
+| Öğe meta veri adı | Description |
 |-----------------------| - |
 | DependentUpon | İsteğe bağlı dize. Doğru derlemek için bu dosyanın bağlı olduğu dosyayı belirtir. |
 | Oto gen | İsteğe bağlı Boolean. Visual Studio tümleşik geliştirme ortamı (IDE) tarafından proje için dosyanın oluşturulup oluşturulmayacağını gösterir. |
@@ -109,7 +109,7 @@ Derleyicinin kaynak dosyalarını temsil eder.
 
 Oluşturulan derlemeye gömülebilen kaynakları temsil eder.
 
-| Öğe meta veri adı | Açıklama |
+| Öğe meta veri adı | Description |
 |-----------------------| - |
 | DependentUpon | İsteğe bağlı dize. Doğru derlemek için bu dosyanın bağlı olduğu dosyayı belirtir |
 | Oluşturucu | Gerekli dize. Bu öğede çalıştırılan herhangi bir dosya oluşturucusunun adı. |
@@ -120,11 +120,11 @@ Oluşturulan derlemeye gömülebilen kaynakları temsil eder.
 | CopyToOutputDirectory | İsteğe bağlı dize. Dosyanın çıkış dizinine kopyalanıp kopyalanmayacağını belirler. Değerler şunlardır:<br /><br /> 1. hiçbir şekilde<br />2. her zaman<br />3. Preservenebatı |
 | LogicalName | Gerekli dize. Gömülü kaynağın mantıksal adı. |
 
-### <a name="content"></a>İçerik
+### <a name="content"></a>Content
 
 Projeye derlenmemiş ancak birlikte gömülebilir veya onunla birlikte yayımlanabilir olan dosyaları temsil eder.
 
-| Öğe meta veri adı | Açıklama |
+| Öğe meta veri adı | Description |
 |-----------------------| - |
 | DependentUpon | İsteğe bağlı dize. Doğru derlemek için bu dosyanın bağlı olduğu dosyayı belirtir. |
 | Oluşturucu | Gerekli dize. Bu öğe üzerinde çalışan herhangi bir dosya oluşturucusunun adı. |
@@ -140,7 +140,7 @@ Projeye derlenmemiş ancak birlikte gömülebilir veya onunla birlikte yayımlan
 
 Yapı işleminde rolü olmaması gereken dosyaları temsil eder.
 
-| Öğe meta veri adı | Açıklama |
+| Öğe meta veri adı | Description |
 |-----------------------| - |
 | DependentUpon | İsteğe bağlı dize. Doğru derlemek için bu dosyanın bağlı olduğu dosyayı belirtir. |
 | Oluşturucu | Gerekli dize. Bu öğede çalıştırılan herhangi bir dosya oluşturucusunun adı. |
@@ -154,7 +154,7 @@ Yapı işleminde rolü olmaması gereken dosyaları temsil eder.
 
 Olarak oluşturulacak derleme özniteliklerini temsil eder `[AssemblyMetadata(key, value)]` .
 
-| Öğe meta veri adı | Açıklama |
+| Öğe meta veri adı | Description |
 |-----------------------| - |
 | Şunları Dahil Et: | Öznitelik oluşturucusunda ilk parametre (anahtar) olur `AssemblyMetadataAttribute` . |
 | Değer | Gerekli dize. Öznitelik oluşturucusunda ikinci parametre (değer) olur `AssemblyMetadataAttribute` . |
@@ -166,7 +166,7 @@ Olarak oluşturulacak derleme özniteliklerini temsil eder `[AssemblyMetadata(ke
 
 Derleme öznitelikleri olarak yayınlanedilecek derlemeleri belirtir `[InternalsVisibleTo(..)]` .
 
-| Öğe meta veri adı | Açıklama |
+| Öğe meta veri adı | Description |
 |-----------------------| - |
 | Şunları Dahil Et: | Bütünleştirilmiş kod adı. |
 | Anahtar | İsteğe bağlı dize. Derlemenin ortak anahtarı. |
@@ -189,5 +189,4 @@ Ad alanları Visual Basic Derleyicisi tarafından içeri aktarılması gereken d
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Yaygın MSBuild proje özellikleri](../msbuild/common-msbuild-project-properties.md)
-- [.NET Core SDK projeleri için MSBuild özellikleri](/dotnet/core/project-sdk/msbuild-props)
 - [Yaygın MSBuild öğesi meta verileri](common-msbuild-item-metadata.md)

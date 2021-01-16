@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37bfd1ab57fd0e37f32a55d5bfc3787cb0c0cbd2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 60d817c3600eaa82eb7f67489d5dadadaba3932f
+ms.sourcegitcommit: 7a5c4f60667b5792f876953d55192b49a73f5fe9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88248052"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98533972"
 ---
 # <a name="create-custom-views-of-c-objects-in-the-debugger-using-the-natvis-framework"></a>Natvis çerçevesini kullanarak hata ayıklayıcıda C++ nesnelerinin özel görünümlerini oluşturma
 
@@ -45,7 +45,7 @@ Vurgulanan satır `Text` sınıfının özelliğini gösterir `TextBox` . Karma�
 
 ## <a name="use-natvis-files-in-c-projects"></a><a name="BKMK_Using_Natvis_files"></a>C++ projelerinde. Natvis dosyalarını kullanma
 
-Natvis, görselleştirme kurallarını belirtmek için *. natvis* dosyalarını kullanır. *. Natvis* dosyası. *NATVIS* uzantılı bir XML dosyasıdır. Natvis şeması *%VSInstallDir%\Xml\Schemas\natvis.exe*içinde tanımlanmıştır.
+Natvis, görselleştirme kurallarını belirtmek için *. natvis* dosyalarını kullanır. *. Natvis* dosyası. *NATVIS* uzantılı bir XML dosyasıdır. Natvis şeması *%VSInstallDir%\Xml\Schemas\natvis.exe* içinde tanımlanmıştır.
 
 Bir *. natvis* dosyasının temel yapısı, `Type` görselleştirme girdilerini temsil eden bir veya daha fazla öğe. Her öğenin tam adı `Type` `Name` özniteliğinde belirtilir.
 
@@ -72,27 +72,27 @@ Herhangi bir C++ projesine bir *. natvis* dosyası ekleyebilirsiniz.
 
 **Yeni bir *. natvis* dosyası eklemek için:**
 
-1. **Çözüm Gezgini**' de C++ proje düğümünü seçin ve **Proje**  >  **Yeni öğe Ekle**' yi seçin veya projeye sağ tıklayıp **Add**  >  **Yeni öğe**Ekle ' yi seçin.
+1. **Çözüm Gezgini**' de C++ proje düğümünü seçin ve **Proje**  >  **Yeni öğe Ekle**' yi seçin veya projeye sağ tıklayıp   >  **Yeni öğe** Ekle ' yi seçin.
 
 1. **Yeni öğe Ekle** iletişim kutusunda **Visual C++**  >  **yardımcı program**  >  **ayıklayıcısı görselleştirme dosyası (. natvis)** öğesini seçin.
 
 1. Dosyayı adlandırın ve **Ekle**' yi seçin.
 
-   Yeni dosya **Çözüm Gezgini**eklenir ve Visual Studio belge bölmesinde açılır.
+   Yeni dosya **Çözüm Gezgini** eklenir ve Visual Studio belge bölmesinde açılır.
 
-Visual Studio hata ayıklayıcı, *. natvis* dosyalarını C++ projelerinde otomatik olarak yükler ve varsayılan olarak, proje oluştururken *. pdb* dosyasında da içerir. Oluşturulan uygulamada hata ayıklaması yaparsanız, proje açık olmasa bile, hata ayıklayıcı. *pdb* dosyasından *. natvis* dosyasını yükler. .,. *Natvis* dosyasını *. pdb*dosyasına dahil etmek istemiyorsanız, bunu yerleşik *. pdb* dosyasından hariç bırakabilirsiniz.
+Visual Studio hata ayıklayıcı, *. natvis* dosyalarını C++ projelerinde otomatik olarak yükler ve varsayılan olarak, proje oluştururken *. pdb* dosyasında da içerir. Oluşturulan uygulamada hata ayıklaması yaparsanız, proje açık olmasa bile, hata ayıklayıcı. *pdb* dosyasından *. natvis* dosyasını yükler. .,. *Natvis* dosyasını *. pdb* dosyasına dahil etmek istemiyorsanız, bunu yerleşik *. pdb* dosyasından hariç bırakabilirsiniz.
 
-**. *Natvis* dosyasını bir *. pdb*dosyasından dışlamak için:**
+**. *Natvis* dosyasını bir *. pdb* dosyasından dışlamak için:**
 
 1. **Çözüm Gezgini** *. natvis* dosyasını seçin ve **Özellikler** simgesini seçin ya da dosyaya sağ tıklayıp **Özellikler**' i seçin.
 
 1. **Derlemeden çıkarılan** ' ın yanındaki oku ve **Evet**' i seçin ve ardından **Tamam**' ı seçin.
 
 >[!NOTE]
->Yürütülebilir projelerde hata ayıklama için, kullanılabilir bir C++ projesi bulunmadığından, *. pdb*içinde olmayan *. natvis* dosyalarını eklemek için çözüm öğelerini kullanın.
+>Yürütülebilir projelerde hata ayıklama için, kullanılabilir bir C++ projesi bulunmadığından, *. pdb* içinde olmayan *. natvis* dosyalarını eklemek için çözüm öğelerini kullanın.
 
 >[!NOTE]
->Bir *. pdb* 'den yüklenen Natvis kuralları yalnızca *. pdb* 'nin başvurduğu modüllerde bulunan türlere uygulanır. Örneğin, *Module1. pdb* adlı bir tür için Natvis girişi varsa `Test` , bu yalnızca `Test` *Module1.dll*sınıfı için geçerlidir. Başka bir modül adlı bir sınıfı da tanımlıyorsa `Test` , *Module1. pdb* Natvis girdisi buna uygulanmaz.
+>Bir *. pdb* 'den yüklenen Natvis kuralları yalnızca *. pdb* 'nin başvurduğu modüllerde bulunan türlere uygulanır. Örneğin, *Module1. pdb* adlı bir tür için Natvis girişi varsa `Test` , bu yalnızca `Test` *Module1.dll* sınıfı için geçerlidir. Başka bir modül adlı bir sınıfı da tanımlıyorsa `Test` , *Module1. pdb* Natvis girdisi buna uygulanmaz.
 
 **Bir *. natvis* dosyasını bir VSIX paketi aracılığıyla yüklemek ve kaydetmek için:**
 
@@ -167,6 +167,12 @@ Natvis görselleştirmeleri, görüntülenecek veri öğelerini belirtmek için 
 
 - Bir ifadenin nasıl görüntüleneceğini denetlemek için [C++ ' da biçim tanımlayıcıda](format-specifiers-in-cpp.md#BKMK_Visual_Studio_2012_format_specifiers)açıklanan biçim belirticilerini kullanabilirsiniz. Girdi, `Size` [ArrayItems genişletmesinin](../debugger/create-custom-views-of-native-objects.md#BKMK_ArrayItems_expansion)ifadesi gibi Natvis tarafından dahili olarak kullanıldığında biçim belirticileri yoksayılır.
 
+>[!NOTE]
+> Natvis belgesi XML olduğundan deyimleriniz, ampersan, büyüktür, küçüktür veya SHIFT işleçlerini doğrudan kullanamaz. Bu karakterleri hem öğe gövdesinde hem de koşul deyimlerinde atlamanız gerekir. Örneğin:<br>
+> \<Item Name="HiByte"\>bayt (_flags \& gt; \& > 24), x\</Item\><br>
+> \<Item Name="HiByteStatus" Condition="(_flags \&amp; 0xFF000000) == 0"\>Seçim\</Item\><br>
+> \<Item Name="HiByteStatus" Condition="(_flags \&amp; 0xFF000000) != 0"\>Bölümünü\</Item\>
+
 ## <a name="natvis-views"></a>Natvis görünümleri
 
 Farklı yollarla türleri göstermek için farklı Natvis görünümleri tanımlayabilirsiniz. Örneğin, aşağıda `std::vector` adlı Basitleştirilmiş görünümü tanımlayan bir görselleştirme verilmiştir `simple` . , Ve `DisplayString` `ArrayItems` `simple` `[size]` `[capacity]` öğeleri görünümde gösterilmezseniz, ve öğeleri varsayılan görünümde ve görünümünde gösterilir `simple` .
@@ -195,7 +201,7 @@ Hata ayıklayıcı bir görselleştirme girişinde hatalarla karşılaştığın
 
 **Natvis tanılamayı açmak için:**
 
-- **Araç**  >  **seçenekleri** (veya **hata ayıklama**  >  **seçenekleri**) altında > hata **ayıklama**  >  **Çıkış penceresi**, **Natvis tanılama iletileri (yalnızca C++)** **hata**, **Uyarı**veya **ayrıntılı**olarak ayarlayın ve ardından **Tamam**' ı seçin.
+- **Araç**  >  **seçenekleri** (veya **hata ayıklama**  >  **seçenekleri**) altında > hata **ayıklama**  >  **Çıkış penceresi**, **Natvis tanılama iletileri (yalnızca C++)** **hata**, **Uyarı** veya **ayrıntılı** olarak ayarlayın ve ardından **Tamam**' ı seçin.
 
 Hatalar **Çıkış** penceresinde görüntülenir.
 
@@ -264,7 +270,7 @@ Aşağıdaki örnekte, görselleştirme yalnızca tür için geçerlidir `BaseCl
 
 #### <a name="priority-attribute"></a>Priority özniteliği
 
-İsteğe bağlı `Priority` öznitelik, bir tanım ayrıştıramazsa alternatif tanımlarının kullanılacağı sırayı belirtir. Olası değerleri `Priority` şunlardır: `Low` ,,, `MediumLow` `Medium` `MediumHigh` ve `High` . Varsayılan değer: `Medium`. `Priority`Öznitelik yalnızca aynı *. natvis* dosyasındaki öncelikler arasında ayrım yapar.
+İsteğe bağlı `Priority` öznitelik, bir tanım ayrıştıramazsa alternatif tanımlarının kullanılacağı sırayı belirtir. Olası değerleri `Priority` şunlardır: `Low` ,,, `MediumLow` `Medium` `MediumHigh` ve `High` . `Medium` varsayılan değerdir. `Priority`Öznitelik yalnızca aynı *. natvis* dosyasındaki öncelikler arasında ayrım yapar.
 
 Aşağıdaki örnek öncelikle 2015 STL ile eşleşen girişi ayrıştırır. Bu, ayrıştıramazsa, STL 'nin 2013 sürümü için alternatif girişi kullanır:
 
@@ -353,7 +359,7 @@ Aşağıdaki örnekte, görselleştirme yalnızca `DirectUI::Border` 1,0 sürüm
 
 Ve öğelerinin her ikisine de ihtiyacınız yoktur `Min` `Max` . Bunlar isteğe bağlı özniteliklerdir. Joker karakter desteklenmez.
 
-`Name`Özniteliği, *hello.exe* veya *some.dll*gibi *filename. ext*biçimindedir. Hiçbir yol adına izin verilmez.
+`Name`Özniteliği, *hello.exe* veya *some.dll* gibi *filename. ext* biçimindedir. Hiçbir yol adına izin verilmez.
 
 ### <a name="displaystring-element"></a><a name="BKMK_DisplayString"></a> DisplayString öğesi
 `DisplayString`Öğesi, bir değişkenin değeri olarak göstermek için bir dize belirtir. İfadelerle karışık rastgele dizeler kabul eder. Küme ayraçları içindeki her şey bir ifade olarak yorumlanır. Örneğin, aşağıdaki `DisplayString` giriş:
@@ -400,7 +406,7 @@ Hata ayıklama sırasında, değişkenin yanındaki büyüteç simgesini seçebi
 
  ![StringView görselleştiricisi ile CStringT verileri](../debugger/media/dbg_natvis_stringview_cstringt.png "StringView görselleştiricisi ile CStringT verileri")
 
-İfade, `{m_pszData,su}` değeri bir Unicode dize olarak göstermek için bir C++ Biçim belirleyicisi **su**içerir. Daha fazla bilgi için bkz. [C++ ' da biçim belirticileri](../debugger/format-specifiers-in-cpp.md).
+İfade, `{m_pszData,su}` değeri bir Unicode dize olarak göstermek için bir C++ Biçim belirleyicisi **su** içerir. Daha fazla bilgi için bkz. [C++ ' da biçim belirticileri](../debugger/format-specifiers-in-cpp.md).
 
 ### <a name="expand-element"></a><a name="BKMK_Expand"></a> Öğeyi Genişlet
 
@@ -508,7 +514,7 @@ Dizi alt sınırının varsayılan değeri 0 ' dır. Değeri geçersiz kılmak i
 </Type>
 ```
 
-Ve arasındaki tek fark `ArrayItems` , `IndexListItems` `ValueNode` örtük parametresi olan i. öğesi için tam ifadeyi bekleyen öğesidir<sup>th</sup> `$i` .
+Ve arasındaki tek fark `ArrayItems` , `IndexListItems` `ValueNode` örtük parametresi olan i. öğesi için tam ifadeyi bekleyen öğesidir<sup></sup> `$i` .
 
 >[!NOTE]
 >`[]`İşleci, örneğin `vector[i]` `IndexListItems` kendisi (örneğin `CATLArray` ) bu işlece izin vermediği halde, kullanan herhangi bir tek boyutlu dizi görselleştirmesi ile birlikte kullanabilirsiniz.

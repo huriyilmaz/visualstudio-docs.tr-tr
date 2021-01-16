@@ -1,5 +1,6 @@
 ---
 title: Örnekleme kullanarak performans istatistikleri toplama
+description: İşlemci kullanımı sorunlarını bulmak için Profil Oluşturma Araçları örnekleme yöntemini kullanın. Bu, performans araştırmamının en iyi şekilde başlatılması için önerilen yöntemdir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -12,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 9729bf46b58a9591df7b6470acde0c54ef23f531
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: e5a58ec02fa6bff0dd06ce08b933a381bca37a80
+ms.sourcegitcommit: 7a5c4f60667b5792f876953d55192b49a73f5fe9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810737"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98533738"
 ---
 # <a name="collect-performance-statistics-by-using-sampling"></a>Örnekleme kullanarak performans istatistikleri toplama
 

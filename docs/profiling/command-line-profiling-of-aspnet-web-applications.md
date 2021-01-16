@@ -1,5 +1,7 @@
 ---
-title: ASP.NET Web uygulamalarının komut satırı profili oluşturma | Microsoft Docs
+title: ASP.NET Web uygulamalarının profil oluşturmayı Command-Line | Microsoft Docs
+description: ASP.NET Web uygulamalarına ilişkin performans verilerini toplamak için komut satırından Profil Oluşturma Araçları nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - aspnet
-ms.openlocfilehash: aa184667e5d569bc2662052a29b25bfea6e470a7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c4c95890ae4022b854b76d2e4857fc2a27ce97e5
+ms.sourcegitcommit: 7a5c4f60667b5792f876953d55192b49a73f5fe9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74779577"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98533699"
 ---
 # <a name="command-line-profiling-of-aspnet-web-applications"></a>ASP.NET Web uygulamalarının komut satırı profili oluşturma
 Bu bölümde, [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] komut satırından profil oluşturma araçları kullanarak Web uygulamaları için performans verilerini toplamaya yönelik yordamlar ve seçenekler açıklanmaktadır [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .
@@ -29,7 +31,7 @@ Bu bölümde, [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] komu
 
 | Görev | İlgili İçerik |
 | - | - |
-| **Temel ASP.NET profil oluşturma verilerini kolayca toplayın:** **VSPerfCmd**için gereken yapılandırma gereksinimleri ve Internet INFORMATION SERVICES (IIS) yeniden başlatmaları olmadan örnekleme, izleme, .NET belleği, çekişme veya katman etkileşim verilerini toplamak Için **VSPerfASPNETCmd** aracını kullanın. **VSPerfASPNETCmd** , ek veri toplamanıza veya veri toplamayı denetlemenize izin vermez. **Note:**  **VSPerfASPNETCmd** , ASP.NET Web sitelerini profile için tek başına profil oluşturucuyu kullanacağınızı tercih ettiğiniz araçtır. | -   [VSPerfASPNETCmd ile hızlı web sitesi profili oluşturma](../profiling/rapid-web-site-profiling-with-vsperfaspnetcmd.md) |
+| **Temel ASP.NET profil oluşturma verilerini kolayca toplayın:** **VSPerfCmd** için gereken yapılandırma gereksinimleri ve Internet INFORMATION SERVICES (IIS) yeniden başlatmaları olmadan örnekleme, izleme, .NET belleği, çekişme veya katman etkileşim verilerini toplamak Için **VSPerfASPNETCmd** aracını kullanın. **VSPerfASPNETCmd** , ek veri toplamanıza veya veri toplamayı denetlemenize izin vermez. **Note:**  **VSPerfASPNETCmd** , ASP.NET Web sitelerini profile için tek başına profil oluşturucuyu kullanacağınızı tercih ettiğiniz araçtır. | -   [VSPerfASPNETCmd ile hızlı web sitesi profili oluşturma](../profiling/rapid-web-site-profiling-with-vsperfaspnetcmd.md) |
 | **Uygulama Istatistiklerini topla:** Performans istatistiklerini toplamak için örnekleme yöntemini kullanın. Örnekleme verileri, CPU kullanımı sorunlarını analiz etmek ve bir uygulamanın genel performans özelliklerini anlamak için kullanışlıdır. | -   [Örnekleme kullanarak uygulama istatistikleri toplama](../profiling/collecting-application-statistics-for-aspnet-using-the-profiler-sampling-method.md) |
 | **Ayrıntılı zamanlama verileri toplayın:** Ayrıntılı zamanlama bilgilerini toplamak için izleme yöntemini kullanın. İzleme verileri, GÇ sorunlarını analiz etmek ve uygulama senaryolarına ilişkin ayrıntılı analizler için yararlıdır. | -   [İzleme kullanarak ayrıntılı zamanlama verileri toplama](../profiling/collecting-detailed-timing-data-aspnet-profiler-instrumentation-method.md) |
 | **.Net bellek verilerini toplayın:** Ayrılan nesnelerin boyutunu ve sayısını gösteren .NET bellek ayırma verilerini toplamak için örnekleme veya izleme kullanın. Ayrıca, her çöp toplama oluşturmada geri kazanılan nesne boyutunu ve sayısını gösteren nesne yaşam süresi verilerini toplayabilirsiniz. | -   [Bellek verileri toplama](../profiling/collecting-memory-data-from-an-aspnet-web-application.md) |

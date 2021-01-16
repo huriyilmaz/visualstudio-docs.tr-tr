@@ -1,5 +1,7 @@
 ---
 title: CommentMarkProfile | Microsoft Docs
+description: '*. Vsp* dosyasına bir sayısal işaret ve metin dizesi eklemek Için CommentMarkProfile işlevini kullanın.'
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,17 +14,17 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 2972f9d470bebe3a65b7d525aa2b358d68ad5f1c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e943be08ffd586347ab5de54cb803bcedc8c24d7
+ms.sourcegitcommit: 7a5c4f60667b5792f876953d55192b49a73f5fe9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85546594"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98533595"
 ---
 # <a name="commentmarkprofile"></a>CommentMarkProfile
-`CommentMarkProfile`İşlevi, içinde bir sayısal işaret ve metin dizesi ekler.* VSP* dosyası. İşaret ve Açıklama eklenecek şekilde, işlevi içeren iş parçacığının profil oluşturma `CommentMarkProfile` açık olmalıdır.
+`CommentMarkProfile`İşlevi, *. vsp* dosyasına bir sayısal işaret ve bir metin dizesi ekler. İşaret ve Açıklama eklenecek şekilde, işlevi içeren iş parçacığının profil oluşturma `CommentMarkProfile` açık olmalıdır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
 PROFILE_COMMAND_STATUS PROFILERAPI CommentMarkProfile(
@@ -55,7 +57,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI CommentMarkProfile(
 ## <a name="remarks"></a>Açıklamalar
  İşaret profili işlevini içeren iş parçacığının profil oluşturma durumu, VSInstr Mark komutuyla veya işlevlerle (CommentMarkAtProfile, CommentMarkProfile veya MarkProfile) eklenen işaretler ve açıklamalar olduğunda açık olmalıdır.
 
- Profil işaretleri kapsamda geneldir. Örneğin, bir iş parçacığında yerleştirilen bir profil işareti, içindeki herhangi bir iş parçacığında bir veri segmentinin başlangıcını veya sonunu işaretlemek için kullanılabilir. *VSP* dosyası.
+ Profil işaretleri kapsamda geneldir. Örneğin, bir iş parçacığına yerleştirilmiş bir profil işareti, *. vsp* dosyasındaki herhangi bir iş parçacığında bir veri segmentinin başlangıcını veya sonunu işaretlemek için kullanılabilir.
 
 > [!IMPORTANT]
 > CommentMarkProfile yöntemi, yalnızca izleme ile kullanılabilir.

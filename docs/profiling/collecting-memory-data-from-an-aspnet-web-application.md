@@ -1,5 +1,6 @@
 ---
 title: Profil oluşturucu komut satırı-ASP.NET Web uygulaması bellek verilerini al
+description: VSPerfCmd komut satırı aracını kullanarak bir ASP.NET Web uygulaması için bellek ayırmayı ve nesne ömrü tarihini nasıl toplayacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -13,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - aspnet
-ms.openlocfilehash: 690b3cd03d245281b488f2bb2b77ebdebedd00c2
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: b2cb0e199e543152b9d11da4b4de014c9465c1b7
+ms.sourcegitcommit: 7a5c4f60667b5792f876953d55192b49a73f5fe9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809420"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98533777"
 ---
 # <a name="collect-memory-data-from-an-aspnet-web-application-by-using-the-profiler-command-line"></a>Profil oluşturucu komut satırını kullanarak bir ASP.NET Web uygulamasından bellek verileri toplama
 Bu bölümde, **VSPerfCmd** komut satırı aracını kullanarak bir ASP.NET Web uygulaması için bellek ayırma ve nesne yaşam süresi verilerini toplamaya yönelik yordamlar ve seçenekler açıklanmaktadır.

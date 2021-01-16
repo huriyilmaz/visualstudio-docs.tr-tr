@@ -1,6 +1,6 @@
 ---
 title: Kötü iş parçacıklı uygulamalar için ortak desenler
-description: Visual Studio eşzamanlılık görselleştiricisi aracında bulunan, kötü davranmış çok iş parçacıklı uygulamalar için ortak desenler hakkında bilgi edinin.
+description: Eşzamanlılık görselleştiricisi, çok iş parçacıklı uygulamalar için grafikler ve bir dizi yaygın olarak davranların bir galerisini sağlar.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 36e14640da4d66134ca961607f66f6a355f6b9d9
-ms.sourcegitcommit: 105e7b5a486262bc92939980383ceee068098a11
+ms.openlocfilehash: f6d5139a0327af05f67c2a7429b1055fa80c2175
+ms.sourcegitcommit: 7a5c4f60667b5792f876953d55192b49a73f5fe9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/30/2020
-ms.locfileid: "97815795"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98533556"
 ---
 # <a name="common-patterns-for-poorly-behaved-multithreaded-applications"></a>Hatalı davranan çok iş parçacıklı uygulamalar için ortak desenler
 

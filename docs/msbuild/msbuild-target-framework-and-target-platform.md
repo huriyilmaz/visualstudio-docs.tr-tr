@@ -10,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d29c4e4659e8e6a5564e3fb41f54615bf29171d2
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: 958f33a39126f8f48cf29bad1c25c7d962513ed0
+ms.sourcegitcommit: 7a5c4f60667b5792f876953d55192b49a73f5fe9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93049104"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98533868"
 ---
 # <a name="msbuild-target-framework-and-target-platform"></a>MSBuild hedef çerçevesi ve hedef platformu
 
@@ -78,7 +78,7 @@ Hedef çerçeve, `TargetFrameworkVersion` Proje dosyasındaki özelliğinde beli
 
 - `x86` Intel 80x86 işlemcisi üzerinde veya eşdeğeri olan 32 bitlik bir Windows işletim sistemi belirler.
 
-- `x64` Intel x64 işlemci veya BT eşdeğeri üzerinde çalışan 64 bitlik bir Windows işletim sistemi belirler.
+- `x64` Intel x64 işlemcisinde veya eşdeğer bir bilgisayarda çalışan 64 bitlik bir Windows işletim sistemi belirler.
 
 - `Xbox` Microsoft Xbox 360 platformunu belirtir.
 
@@ -103,4 +103,4 @@ Hedef çerçeve, `TargetFrameworkVersion` Proje dosyasındaki özelliğinde beli
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çoklu sürüm desteği](../msbuild/msbuild-multitargeting-overview.md)
+- [Çoklu Sürüm Desteği](../msbuild/msbuild-multitargeting-overview.md)

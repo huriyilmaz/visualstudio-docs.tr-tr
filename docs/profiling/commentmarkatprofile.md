@@ -1,5 +1,7 @@
 ---
 title: CommentMarkAtProfile | Microsoft Docs
+description: . Vsp dosyasına bir zaman damgası değeri, sayısal bir işaret ve açıklama dizesi eklemek için CommentMarkAtProfile yöntemini kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,20 +14,20 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: ee9eb5353109bcf5df6903e7e607a11b8bfd0536
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 43e8f9806c724da414940c92b6609846486a49c0
+ms.sourcegitcommit: 7a5c4f60667b5792f876953d55192b49a73f5fe9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85545619"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98533530"
 ---
 # <a name="commentmarkatprofile"></a>CommentMarkAtProfile
-`CommentMarkAtProfile`Yöntemi bir zaman damgası değeri, sayısal bir işaret ve içinde bir açıklama dizesi ekler.* VSP* dosyası. Zaman damgası değeri, dış olayları senkronize etmek için kullanılabilir. İşaret ve Açıklama eklenecek şekilde, CommentMarkAtProfile işlevini içeren iş parçacığının profil oluşturma açık olmalıdır.
+`CommentMarkAtProfile`Yöntemi bir zaman damgası değeri, sayısal bir işaret ve *. vsp* dosyasına bir açıklama dizesi ekler. Zaman damgası değeri, dış olayları senkronize etmek için kullanılabilir. İşaret ve Açıklama eklenecek şekilde, CommentMarkAtProfile işlevini içeren iş parçacığının profil oluşturma açık olmalıdır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
-PROFILE_COMMAND_STATUS PROFILERAPI CommentMarkAtProfile (
+PROFILE_COMMAND_STATUS PROFILERAPI CommentMarkAtProfile (
                                    __int64 dnTimestamp,
                                    long lMarker,
                                    LPCTSTR szComment);

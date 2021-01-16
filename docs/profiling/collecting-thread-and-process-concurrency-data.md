@@ -1,5 +1,6 @@
 ---
 title: İş parçacığı toplama & eşzamanlılık verilerini işleme
+description: Bir işlevin kaynak erişimini beklemesine neden olan her eşitleme olayı hakkında veri toplamak için Profil Oluşturma Araçları eşzamanlılık profili oluşturma yöntemini kullanın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -12,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 4f44b7785306fc486c8f550c41bcac199825b8ed
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: c1f6d0dbc8c10c972957e2bcf8092d145bb3651c
+ms.sourcegitcommit: 7a5c4f60667b5792f876953d55192b49a73f5fe9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810724"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98533751"
 ---
 # <a name="collect-thread-and-process-concurrency-data"></a>İş parçacığı ve işlem eşzamanlılık verileri toplama
 
