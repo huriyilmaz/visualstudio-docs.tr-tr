@@ -180,8 +180,6 @@
                   href: native-run-time-checks-customization.md
                 - name: Çalışma zamanı hata raporlama işlevi yazma
                   href: how-to-write-a-run-time-error-reporting-function.md
-                - name: C Çalışma Zamanı Kitaplığını kullanmadan çalışma zamanı denetimlerini kullanma
-                  href: using-run-time-checks-without-the-c-run-time-library.md
         - name: Hata ayıklayıcısında simge (.pdb) ve kaynak dosyaları belirtme
           href: specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md
         - name: Kullanıcı kodunda hata ayıklama
