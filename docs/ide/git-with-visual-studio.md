@@ -8,12 +8,12 @@ ms.author: tglee
 author: TerryGLee
 ms.manager: jillfra
 monikerRange: vs-2019
-ms.openlocfilehash: 7eed02ffda47de9c6a788d186d41dcc087852e64
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 6092b02f5f8f94b3c87b68afe344fffba96c1a7d
+ms.sourcegitcommit: 987ed5f5adf85771d77c0efafc36d939fb9a356f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97524087"
+ms.lasthandoff: 01/19/2021
+ms.locfileid: "98571992"
 ---
 # <a name="git-experience-in-visual-studio"></a>Visual Studio 'da git deneyimi
 
@@ -92,7 +92,7 @@ Git, çalışmanız sırasında deponuzdaki dosya değişikliklerini izler ve de
 
 Değişiklikleri aşamalandırmaya hazırsanız, hazırlamak istediğiniz her bir **+** dosyanın (artı) düğmesine tıklayın veya bir dosyaya sağ tıklayıp **aşama**' ü seçin. Ayrıca, **+** **değişiklikler** bölümünün en üstünde bulunan tümü (artı) düğmesini kullanarak, değiştirdiğiniz tüm dosyaları tek tıklamayla de taşıyabilirsiniz.
 
-Bir değişiklik gerçekleştirdiğinizde, Visual Studio **hazırlanmış bir değişiklikler** bölümü oluşturur. Yalnızca **hazırlanan değişiklikler** bölümündeki değişiklikler, **hazırlanan Yürüt**' i seçerek yapabileceğiniz bir sonraki işlemeye eklenir. Değişiklikler ayrıca **–** (eksi) düğmesine tıklanarak de hazırlanarak çalıştırılabilir. Bu eylem için eşdeğer komut `git commit -m "Your commit message"` .
+Bir değişiklik gerçekleştirdiğinizde, Visual Studio **hazırlanmış bir değişiklikler** bölümü oluşturur. Yalnızca **hazırlanan değişiklikler** bölümündeki değişiklikler, **hazırlanan Yürüt**' i seçerek yapabileceğiniz bir sonraki işlemeye eklenir. Bu eylem için eşdeğer komut `git commit -m "Your commit message"` . Değişiklikler, **–** (eksi) düğmesine tıklanarak de hazırlanarak çalıştırılabilir. Bu eylem için eşdeğer komut, `git reset <file_path>` tek bir dosyayı aşamalandırmaktır veya `git reset <directory_path>` bir dizindeki tüm dosyaların aşamasını kaldırır.
 
 Ayrıca, hazırlama alanını atlayarak, değiştirilen dosyaları aşamalandırmasını da tercih edebilirsiniz. Bu durumda, Visual Studio, yaptığınız değişiklikleri doğrudan yürütmelerine gerek kalmadan uygulamanıza olanak tanır. Yalnızca tamamlama iletinizi girin ve ardından **Tümünü Kaydet**' i seçin. Bu eylem için eşdeğer komut `git commit -a` .
 
