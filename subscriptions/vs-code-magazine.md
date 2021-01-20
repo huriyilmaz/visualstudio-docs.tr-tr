@@ -2,17 +2,17 @@
 title: Visual Studio aboneliklerinde CODE Magazine avantajı | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
-manager: lank
+manager: cabuschl
 ms.assetid: e5768153-2758-46d3-a323-3272def213ee
-ms.date: 12/02/2020
+ms.date: 01/19/2021
 ms.topic: how-to
 description: Visual Studio aboneliğinize dahil edilen kod Magazine avantajı hakkında bilgi edinin.
-ms.openlocfilehash: ff65a47df129eaf59d1404335cd8fd98df7474d6
-ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
+ms.openlocfilehash: a9aabd98fa872846d12e20b3aad3f617d1c97a64
+ms.sourcegitcommit: 59b63039982bb5894eb35d8b544657688731614f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96538117"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597405"
 ---
 # <a name="code-magazine-included-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerine kod Dergisi dahildir
 
@@ -49,15 +49,16 @@ Abonelik siparişinizi tamamladıktan sonra, aldığınız sorunları görmek i�
 ## <a name="eligibility"></a>Önceliği
 | Abonelik düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilenebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standart)   | VL, Azure, perakende, seçili NFR<sup>1</sup> | Kullanılabilir       |  Hayır          |
+| Visual Studio Enterprise (Standart)   | VL, Azure, perakende| Kullanılabilir       |  Hayır          |
 | GitHub Enterprise ile Visual Studio Enterprise aboneliği   | VL| Kullanılabilir       |  Hayır          |
 | Visual Studio Professional (Standart) | VL, Azure, perakende                                       | Kullanılabilir                                                            |  Hayır          |
 | GitHub Enterprise ile Visual Studio Professional aboneliği | VL                                      | Kullanılabilir                                                            |  Hayır          |
 | Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Kullanılabilir                                             |  Hayır          |
 | MSDN Platformları (Standart)                                          | VL, perakende                                              | Kullanılabilir                                              |  Hayır          |
 | Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure | Kullanılamaz | Yok |
+| Visual Studio Enterprise NFR<sup>1</sup> | NFR | Kullanılamaz | Yok |
 
-<sup>1</sup>  *şunları Içerir: SATıLAMAZ (NFR), Visual Studio Endüstri ortağı (VSıP), FTE, BizSpark, Imagine Premium.  Dışlar: Microsoft İş Ortağı Ağı (MPN), en değerli profesyonel (MVP), bölgesel Müdürü (RD), MCT yazılım & Hizmetleri Geliştirici, MCT yazılım & Hizmetleri, Imagine.*
+<sup>1</sup>  *şunları Içerir: for SATıL (NFR), Visual Studio sektör ortağı (VSıP), FTE, BizSpark, Imagine, ımagine Premium, Microsoft iş ortağı ağı (MPN), en DEĞERLI profesyonel (MVP), bölgesel yönetmen (RD), mct Software & Services Geliştirici, mct Software & Services.*
 
 > [!NOTE]
 > Microsoft artık Visual Studio Professional yıllık abonelikler ve Visual Studio Enterprise yıllık abonelikleri bulut aboneliklerinde sunmayacaktır. Mevcut müşteriler deneyiminde değişiklik yapılmaz ve aboneliklerini yenileyebilme, artırma, azaltma veya iptal etme imkanına sahip olmayacaktır. Yeni müşterilerin, [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) Visual Studio 'yu satın almaya yönelik farklı seçeneklere göz atın.
