@@ -1,5 +1,7 @@
 ---
 title: Tanılama ad alanı | Microsoft Docs
+description: Eşzamanlılık görselleştiricisi işaretçilerini göstermek için tanılama ad alanını kullanın. Tanılama ad alanı eşzamanlılık ad alanının bir üyesidir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 680d304a8e4d21365d82f654265ae2f34582b636
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 20b25e2974f4b0e4a6bbf6cf02c411fde3f3de1a
+ms.sourcegitcommit: d13f7050c873b6284911d1f4acf07cfd29360183
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85330257"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98686551"
 ---
 # <a name="diagnostic-namespace"></a>Tanılama ad alanı
 `diagnostics`Ad alanı eşzamanlılık görselleştiricisi işaretçilerini yayma işlevlerini sağlar.
@@ -35,7 +37,7 @@ namespace diagnostic;
 |Ad|Açıklama|
 |----------|-----------------|
 |[marker_series Sınıfı](../profiling/marker-series-class.md)|Tek bir sağlayıcı tarafından oluşturulan olayların seri kanalını temsil eder.|
-|[Span sınıfı](../profiling/span-class.md)|Uygulamanın aşamasını tanımlar.|
+|[span Sınıfı](../profiling/span-class.md)|Uygulamanın aşamasını tanımlar.|
 
 ### <a name="enumerations"></a>Listelemeler
 

@@ -1,5 +1,7 @@
 ---
 title: Ayır | Microsoft Docs
+description: Profil oluşturucunun belirtilen işlemden veya hiçbir belirtilmemişse tüm işlemlerden bağlantısını kesmek için VSPerfCmd.exe Ayır seçeneğini kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: d9d1b52c-7f28-467d-b1e0-512afc4e46c9
@@ -9,24 +11,24 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 3251836959f41a4349851716f58f917943f10b09
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 45225e4478b0a1a3cddc7f74ae223c437bf4226e
+ms.sourcegitcommit: d13f7050c873b6284911d1f4acf07cfd29360183
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85330247"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98686603"
 ---
 # <a name="detach"></a>Ayır
 VSPerfCmd.exe **ayırma** seçeneği, profil oluşturucunun belirtilen işlemlerden veya hiçbiri belirtilmemişse tüm işlemlerden bağlantısını keser. Profil oluşturma, örnekleme yöntemi kullanılarak başlatılmış olmalıdır.
 
- **Başlatma** ya da **iliştirme** seçenekleriyle başlatılan profil oluşturma, **ayırma**ile kesilebilir. Profil Oluşturucu, sonraki **iliştirme** komutları kullanılarak yeniden dağıtılabilir.
+ **Başlatma** ya da **iliştirme** seçenekleriyle başlatılan profil oluşturma, **ayırma** ile kesilebilir. Profil Oluşturucu, sonraki **iliştirme** komutları kullanılarak yeniden iliştirilebilir.
 
  **Ayırma** , profil oluşturma veri dosyasını kapatmaz. Profil oluşturmayı sonlandırmak ve veri dosyasını kapatmak için **Kapat** seçeneğini kullanın.
 
 > [!NOTE]
-> **Başlangıç** seçeneği **CrossSession** seçeneğiyle belirtilmişse, **VSPerfCmd/Attach** veya **VSPerfCmd/detach** öğesine yapılan çağrılar de **CrossSession**belirtmelidir.
+> **Başlangıç** seçeneği **CrossSession** seçeneğiyle belirtilmişse, **VSPerfCmd/Attach** veya **VSPerfCmd/detach** öğesine yapılan çağrılar de **CrossSession** belirtmelidir.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cmd
 VSPerfCmd.exe /Detach[:PIDs|ProcessNames]

@@ -1,5 +1,7 @@
 ---
 title: CvWriteAlert Işlevi | Microsoft Docs
+description: CvWriteAlert (C Kitaplığı) Eşzamanlılık Görselleştiricisi SDK işlevine yönelik başvuru bilgilerine bakın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,17 +20,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 56af9515fb9c066e56dd45a0fb91a95530f09799
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: eb2cc6f7408fc5d9af0215dbccf166477876ac23
+ms.sourcegitcommit: d13f7050c873b6284911d1f4acf07cfd29360183
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85332163"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98686447"
 ---
 # <a name="cvwritealert-function"></a>CvWriteAlert işlevi
 Eşzamanlılık görselleştiricisi izleme dosyasına bir uyarı yazar.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C
 HRESULT CvWriteAlertW(

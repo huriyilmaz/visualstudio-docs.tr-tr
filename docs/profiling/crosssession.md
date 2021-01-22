@@ -1,5 +1,7 @@
 ---
 title: CrossSession | Microsoft Docs
+description: Profiler 'ın herhangi bir konsol oturumundan veri toplamasına izin vermek için VSPerfCmd.exe CrossSession seçeneğini nasıl kullanacağınızı öğrenin. Başlat seçeneğini de belirtmeniz gerekir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: b9fcb9c3-7903-478c-9b7c-dbd94092fcba
@@ -9,19 +11,19 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 019a7b74deb70176f214aefdcec4db86cec86829
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7a20ada8a7ca8d0ca8c34c2c6d730c37cdca09b7
+ms.sourcegitcommit: d13f7050c873b6284911d1f4acf07cfd29360183
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85331172"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98686225"
 ---
 # <a name="crosssession"></a>CrossSession
 *VSPerfCmd.exe* **CrossSession** seçeneği, profil oluşturucunun herhangi bir konsol oturumundan veri toplamasını sağlar. **CrossSession** seçeneği **Start** seçeneğiyle birlikte kullanılmalıdır.
 
- **CrossSession**yerine **CS** kısaltması kullanabilirsiniz.
+ **CrossSession** yerine **CS** kısaltması kullanabilirsiniz.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cmd
 VSPerfCmd.exe /Start:Method /CrossSession [Options]

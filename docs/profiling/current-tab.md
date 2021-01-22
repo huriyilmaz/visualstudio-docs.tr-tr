@@ -1,5 +1,7 @@
 ---
 title: Geçerli sekme | Microsoft Docs
+description: CPU iş parçacığı segmentinin veya engelleme segmentinin çağrı yığınını görmek için Iş parçacıkları görünümünün geçerli sekmesini seçin. DirectX kesimleri hakkında da bilgi de mevcuttur.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f48ba44d41286f1cf5eda6ececb68d21d39abd14
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 65261d6304ead5ade7c28f40495fa68afb0c2171
+ms.sourcegitcommit: d13f7050c873b6284911d1f4acf07cfd29360183
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62552794"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98686226"
 ---
 # <a name="current-tab"></a>Geçerli sekme
 **Geçerli** sekmeye tıklayarak, bir CPU iş parçacığı kesimi seçildiyse, zaman çizelgesinde geçerli seçim noktasına en yakın olan çağrı yığınını (varsa) görebilirsiniz.  Bu durumda seçim noktası, zaman çizelgesinin üzerindeki bir siyah ok veya şapka ile temsil edilir. Engelleyici bir segment seçildiğinde, bir yürütme olmadığından giriş işareti görüntülenmez. Ancak, segment hala vurgulanmıştır ve bir çağrı yığını görüntülenir.

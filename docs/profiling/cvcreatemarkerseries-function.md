@@ -1,5 +1,7 @@
 ---
 title: CvCreateMarkerSeries Işlevi | Microsoft Docs
+description: Eşzamanlılık Görselleştiricisi SDK işlevi CvCreateMarkerSeries (C Kitaplığı) için başvuru bilgilerine bakın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -14,17 +16,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fc44e9e1a9a1d17d3f5b0f31515e2402e9512c55
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8a80d833396644fa6c2a025dc24b6db473b2b393
+ms.sourcegitcommit: d13f7050c873b6284911d1f4acf07cfd29360183
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85332202"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98686174"
 ---
 # <a name="cvcreatemarkerseries-function"></a>CvCreateMarkerSeries işlevi
 Belirli bir sağlayıcı için işaretleyici serisi oluşturur.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C
 _Check_return_ HRESULT CvCreateMarkerSeriesW(

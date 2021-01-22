@@ -1,5 +1,7 @@
 ---
 title: Özel yerel ETW yığın olayları | Microsoft Docs
+description: Ayırma yükünü azaltmak için özel bir yığın kullanmayı öğrenin, ancak yine de ayırma analizi için bellek profil oluşturucuya ayırma bilgileri sağlayın.
+ms.custom: SEO-VS-2020
 ms.date: 02/24/2017
 ms.topic: conceptual
 ms.assetid: 668a6603-5082-4c78-98e6-f3dc871aa55b
@@ -10,12 +12,12 @@ dev_langs:
 - C++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bb6f906cbfb715d67f6e10ddcecf094bc25821f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 61005bf108d0dab16ec419e942e3da97e02cdc7f
+ms.sourcegitcommit: d13f7050c873b6284911d1f4acf07cfd29360183
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62552973"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98686330"
 ---
 # <a name="custom-native-etw-heap-events"></a>Özel yerel ETW yığın olayları
 
@@ -49,7 +51,7 @@ Foo* pFoo3 = (Foo*)mPool.allocate();
 
 ![Windows yığın ayırma](media/heap-example-windows-heap.png)
 
-Aşağıdaki adımları gerçekleştirerek, bu aracı, özel yığındaki bellek usgae 'yi izlemek için de kullanabilirsiniz.
+Aşağıdaki adımları gerçekleştirerek, bu aracı, özel öbekimizde bellek kullanımını izlemek için de kullanabilirsiniz.
 
 ## <a name="how-to-use"></a>Nasıl kullanılır?
 
@@ -61,7 +63,7 @@ Bu kitaplık, C ve C++ ' da kolayca kullanılabilir.
    #include <VSCustomNativeHeapEtwProvider.h>
    ```
 
-1. `__declspec(allocator)`Yeni ayrılan yığın belleğine bir işaretçi döndüren özel yığın yöneticinizin herhangi bir işlevine dekoratör ekleyin.  Bu dekoratör, aracın döndürülen bellek türünü doğru şekilde tanımlamasına olanak sağlar.  Örneğin:
+1. `__declspec(allocator)`Yeni ayrılan yığın belleğine bir işaretçi döndüren özel yığın yöneticinizin herhangi bir işlevine dekoratör ekleyin.  Bu dekoratör, aracın döndürülen bellek türünü doğru şekilde tanımlamasına olanak sağlar.  Örnek:
 
    ```cpp
    __declspec(allocator) void *MyMalloc(size_t size);
@@ -153,7 +155,7 @@ Varsayılan *NT yığın* yığını, nesnemizin eklenmesiyle birlikte daha önc
 Standart Windows yığınında olduğu gibi, anlık görüntüleri karşılaştırmak ve özel yığında, ana [bellek kullanımı](../profiling/memory-usage.md) belgelerinde açıklanan sızıntı ve bozulmaları aramak için de bu aracı kullanabilirsiniz.
 
 > [!TIP]
-> Visual Studio Ayrıca, **hata ayıklama** **Memory Usage** **Performance Profiling**  >  **performansı profil oluşturucu** menü seçeneğinden veya **alt** + **F2** klavye bileşiminin etkin olan performans profili oluşturma araç takımı 'nda bir bellek kullanımı aracı içerir.  Bu özellik yığın izlemeyi içermez ve burada açıklandığı gibi özel öbekinizi göstermez.  Yalnızca **Hata Ayıkla** **Diagnostic Tools**  >  **Windows**  >  **göster tanılama araçları** menüsüyle veya **CTRL** + **alt** + **F2** klavye birleşimi ile etkinleştirilebilen tanılama araçları pencere, bu işlevi içerir.
+> Visual Studio Ayrıca, **hata ayıklama**    >  **performansı profil oluşturucu** menü seçeneğinden veya **alt** + **F2** klavye bileşiminin etkin olan performans profili oluşturma araç takımı 'nda bir bellek kullanımı aracı içerir.  Bu özellik yığın izlemeyi içermez ve burada açıklandığı gibi özel öbekinizi göstermez.  Yalnızca **Hata Ayıkla**   >  **Windows**  >  **göster tanılama araçları** menüsüyle veya **CTRL** + **alt** + **F2** klavye birleşimi ile etkinleştirilebilen tanılama araçları pencere, bu işlevi içerir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 [Profil oluşturma araçlarına](../profiling/profiling-feature-tour.md) 
