@@ -11,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: d7fe5a8b2275248c0fc68f9237e9e259973c567b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8cb9143057bf0cfda85c835131204c6641199b48
+ms.sourcegitcommit: 10cb0b68f8cef219ea08eff9bc5f0afe1545c825
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88801730"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98699336"
 ---
 # <a name="step-4-run-code-in-the-debugger"></a>4. Adım: hata ayıklayıcıda kodu çalıştırma
 
@@ -32,7 +32,7 @@ Visual Studio, bir zengin düzenleme deneyimi ve **etkileşimli** pencere sunan 
     # Create a string with spaces proportional to a cosine of x in degrees
     def make_dot_string(x):
         rad = radians(x)                             # cos works with radians
-        numspaces = int(20 * cos(radians(x)) + 20)   # scale to 0-40 spaces
+        numspaces = int(20 * cos(rad) + 20)          # scale to 0-40 spaces
         st = ' ' * numspaces + 'o'                   # place 'o' after the spaces
         return st
 
@@ -47,7 +47,7 @@ Visual Studio, bir zengin düzenleme deneyimi ve **etkileşimli** pencere sunan 
 1. **F5** tuşuna basarak veya **hata**  >  **ayıklamayı Başlat** menü komutunu seçerek kodun düzgün çalışıp çalışmadığını denetleyin. Bu komut, hata ayıklayıcıdaki kodu çalıştırır, ancak programı çalışırken duraklatmayı tamamlamadığınız için, yalnızca birkaç yineleme için bir dalga deseninin yazdırılmasını sağlar. Çıkış penceresini kapatmak için herhangi bir tuşa basın.
 
     > [!Tip]
-    > Program tamamlandığında çıkış penceresini otomatik olarak kapatmak için, **Araçlar**  >  **Seçenekler** menü komutunu seçin, **Python** düğümünü genişletin, **hata ayıklama**' yi seçin ve ardından **işlem normal bir şekilde çıktığında giriş için bekle**seçeneğini temizleyin:
+    > Program tamamlandığında çıkış penceresini otomatik olarak kapatmak için, **Araçlar**  >  **Seçenekler** menü komutunu seçin, **Python** düğümünü genişletin, **hata ayıklama**' yi seçin ve ardından **işlem normal bir şekilde çıktığında giriş için bekle** seçeneğini temizleyin:
     >
     > ![Normal programda çıkış penceresini kapatmak için Python hata ayıklama seçeneği](media/vs-getting-started-python-22-debugging5.png)
 
@@ -73,17 +73,17 @@ Visual Studio, bir zengin düzenleme deneyimi ve **etkileşimli** pencere sunan 
     - **Adımlama** (**F10**), çağrılan işlevlere girmeden sonraki kod satırını çalıştırır.
     - **Dışarı adımla** (**SHIFT** + **F11**) geçerli işlevin geri kalanını çalıştırır ve çağıran kodda duraklatılır.
 
-1. `for` **Adım adım**kullanarak deyimin üzerine adımlayın. *Adımlama* , hata ayıklayıcının herhangi bir işlev çağrısı dahil olmak üzere geçerli kod satırını çalıştırdığı ve ardından hemen durakladığında oluşur. Değişkenin `i` artık **Yereller** ve **oto** pencerelerinde nasıl tanımlandığına dikkat edin.
+1. `for` **Adım adım** kullanarak deyimin üzerine adımlayın. *Adımlama* , hata ayıklayıcının herhangi bir işlev çağrısı dahil olmak üzere geçerli kod satırını çalıştırdığı ve ardından hemen durakladığında oluşur. Değişkenin `i` artık **Yereller** ve **oto** pencerelerinde nasıl tanımlandığına dikkat edin.
 
 1. Çağıran ve duraklayıp izleyen kod satırının üzerinde ilerleyin `make_dot_string` . **Burada,** hata ayıklayıcının bütün olarak çalıştırıldığı `make_dot_string` ve döndürdüğü süre durakladıkları anlamına gelir. Hata ayıklayıcı, burada ayrı bir kesme noktası bulunmadığı takdirde bu işlevin içinde durmaz.
 
 1. Kodu birkaç kez daha çalıştırmaya devam edin ve **Locals** veya **oto** penceresindeki değerlerin nasıl değiştiğini gözlemleyin.
 
-1. **Yereller** veya **oto** penceresinde, **Value** `i` `s` değeri düzenlemek için ya da değişkenleri için değer sütununa çift tıklayın. Değişiklikleri uygulamak için **ENTER** tuşuna basın veya bu değerin dışındaki herhangi bir alana tıklayın.
+1. **Yereller** veya **oto** penceresinde,  `i` `s` değeri düzenlemek için ya da değişkenleri için değer sütununa çift tıklayın. Değişiklikleri uygulamak için **ENTER** tuşuna basın veya bu değerin dışındaki herhangi bir alana tıklayın.
 
-1. **Adımlamayı**kullanarak koddan çalışmaya devam edin. **Içine adımla** , hata ayıklayıcının, gibi hata ayıklama bilgileri olan herhangi bir işlev çağrısının içine girdiği anlamına gelir `make_dot_string` . İçinde bir kez, `make_dot_string` yerel değişkenlerini inceleyebilir ve özel olarak kendi kodunda ilerleyebileceğiniz.
+1. **Adımlamayı** kullanarak koddan çalışmaya devam edin. **Içine adımla** , hata ayıklayıcının, gibi hata ayıklama bilgileri olan herhangi bir işlev çağrısının içine girdiği anlamına gelir `make_dot_string` . İçinde bir kez, `make_dot_string` yerel değişkenlerini inceleyebilir ve özel olarak kendi kodunda ilerleyebileceğiniz.
 
-1. **Adımla** çalışmaya devam edin ve öğesinin sonuna ulaştığınızda, bir `make_dot_string` sonraki adımın, `for` değişkende yeni dönüş değeri ile döngüye geri döndüğünü unutmayın `s` . Deyimde bir kez daha adım adım `print` , **Step Into** `print` Bu işleve girmediğine dikkat edin. Bunun nedeni, `print` Python 'da yazılmamakta ancak Python çalışma zamanı içinde yerel koddur.
+1. **Adımla** çalışmaya devam edin ve öğesinin sonuna ulaştığınızda, bir `make_dot_string` sonraki adımın, `for` değişkende yeni dönüş değeri ile döngüye geri döndüğünü unutmayın `s` . Deyimde bir kez daha adım adım `print` ,  `print` Bu işleve girmediğine dikkat edin. Bunun nedeni, `print` Python 'da yazılmamakta ancak Python çalışma zamanı içinde yerel koddur.
 
 1. Bir kez daha yeniden gelinceye kadar **adım** kullanmaya devam edin `make_dot_string` . Ardından, **Step Out** kullanın ve döngüye döntiğine dikkat edin `for` . **Adımla**, hata ayıklayıcı işlevin geri kalanını çalıştırır ve ardından çağıran kodda otomatik olarak duraklatılır. Bu, hata ayıklamak istediğiniz uzun bir işlevin bir bölümünü işlediyseniz, ancak geri dönmek ve çağıran kodda açık bir kesme noktası ayarlamak istememeniz durumunda çok yararlı olur.
 
@@ -93,10 +93,10 @@ Visual Studio, bir zengin düzenleme deneyimi ve **etkileşimli** pencere sunan 
 
     ![Kesme noktası koşulu ayarlama](media/vs-getting-started-python-21-debugging4.png)
 
-1. Programı tamamlamak üzere çalıştırmak için kenar boşluğunda noktaya sağ tıklayıp **kesme noktasını devre dışı bırak** (**CTRL** + **F9**) seçeneğini belirleyerek kesme noktasını devre dışı bırakın. Sonra **devam** ' ı seçin (veya **F5**tuşuna basarak) programı çalıştırın. Program sona erdiğinde, Visual Studio hata ayıklama oturumunu keser ve kendi düzen moduna geri döner. Ayrıca, noktasını seçerek veya noktaya sağ tıklayıp **kesme noktasını sil**' i seçerek kesme noktasını da silebileceğinizi unutmayın, ancak bu, ayarlamış olduğunuz koşulu da siler.
+1. Programı tamamlamak üzere çalıştırmak için kenar boşluğunda noktaya sağ tıklayıp **kesme noktasını devre dışı bırak** (**CTRL** + **F9**) seçeneğini belirleyerek kesme noktasını devre dışı bırakın. Sonra **devam** ' ı seçin (veya **F5** tuşuna basarak) programı çalıştırın. Program sona erdiğinde, Visual Studio hata ayıklama oturumunu keser ve kendi düzen moduna geri döner. Ayrıca, noktasını seçerek veya noktaya sağ tıklayıp **kesme noktasını sil**' i seçerek kesme noktasını da silebileceğinizi unutmayın, ancak bu, ayarlamış olduğunuz koşulu da siler.
 
 > [!Tip]
-> Python yorumlayıcı 'nın kendisini başlatma hatası gibi bazı durumlarda, çıkış penceresi yalnızca kısa bir süre içinde görünebilir ve sonra herhangi bir hata iletisi görmeniz için bir şans vermeden otomatik olarak kapatılabilir. Bu durumda **Çözüm Gezgini**' de projeye sağ tıklayın, **Özellikler**' i seçin, **Hata Ayıkla** sekmesini seçin ve ardından `-i` **yorumlayıcı bağımsız değişkenleri** alanına ekleyin. Bu bağımsız değişken, bir program tamamlandıktan sonra yorumlayıcı 'nın etkileşimli moda geçmesine neden olur, böylece **Ctrl** + çıkmak için CTRL**Z**  >  **ENTER** tuşuna girene kadar pencereyi açık tutun.
+> Python yorumlayıcı 'nın kendisini başlatma hatası gibi bazı durumlarda, çıkış penceresi yalnızca kısa bir süre içinde görünebilir ve sonra herhangi bir hata iletisi görmeniz için bir şans vermeden otomatik olarak kapatılabilir. Bu durumda **Çözüm Gezgini**' de projeye sağ tıklayın, **Özellikler**' i seçin, **Hata Ayıkla** sekmesini seçin ve ardından `-i` **yorumlayıcı bağımsız değişkenleri** alanına ekleyin. Bu bağımsız değişken, bir program tamamlandıktan sonra yorumlayıcı 'nın etkileşimli moda geçmesine neden olur, böylece  + çıkmak için CTRL **Z**  >  **ENTER** tuşuna girene kadar pencereyi açık tutun.
 
 ## <a name="next-step"></a>Sonraki adım
 
