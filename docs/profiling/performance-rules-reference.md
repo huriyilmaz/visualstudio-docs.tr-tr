@@ -1,5 +1,6 @@
 ---
 title: Performans kuralları başvurusu | Microsoft Docs
+description: Profil Oluşturma Araçları performans kurallarının uygulamanızın performansı hakkında daha fazla uyarı ve bilgi sağlama hakkında bilgi edinin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 59fc9424-76ca-4365-ae47-bb14a736c9c2
@@ -9,12 +10,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 5280226aaba40de42052d72e58928a53af53f631
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ca20a6a1ad687fde432d0b748aa8b87c823a1da2
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85543643"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98723289"
 ---
 # <a name="performance-rules-reference"></a>Performans Kuralları Başvurusu
 Profil Oluşturma Araçları performans kuralları, uygulamanızın performansı hakkında ek uyarılar ve bilgiler sağlar. Performans kuralları, Windows ve işlemci performans sayaçları gibi kaynaklardan toplanan bir profil oluşturma çalıştırmasında verileri analiz eder. Kural iletileri tümleşik geliştirme ortamının hata çıktısı penceresinde görüntülenir [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] . İletiler aşağıdaki kural düzeylerinden biriyle listelenir:

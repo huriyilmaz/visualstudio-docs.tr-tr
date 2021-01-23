@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 42f355a0a8d04e48a2b9d14d0d62edf2cd949a87
-ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
+ms.openlocfilehash: 070bcc04d79231d074e30d1e87d3ad512ce5dca1
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98150944"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98723042"
 ---
 # <a name="using-saved-intellitrace-data-c-visual-basic-c"></a>Kayıtlı IntelliTrace verilerini kullanma (C#, Visual Basic, C++)
 
@@ -160,7 +160,7 @@ IntelliTrace günlük (. iTrace) dosyasından hata ayıklamayı başlattığın�
 
 1. SharePoint bağıntı KIMLIĞINI kaynağından kopyalayın.
 
-    Örnek:
+    Örneğin:
 
     ![IntelliTrace &#45; SharePoint hatası &#45; bağıntı KIMLIĞI](../debugger/media/sharepointerror_intellitrace.png "SharePointError_IntelliTrace")
 
@@ -261,7 +261,7 @@ IntelliTrace günlük (. iTrace) dosyasından hata ayıklamayı başlattığın�
 
  [IntelliTrace Özellikleri](../debugger/intellitrace-features.md)
 
- [El ile testlerde daha fazla tanılama verisi toplayın](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts)
+ [El ile testlerde daha fazla tanılama verisi toplayın](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts&preserve-view=true)
 
  [IntelliTrace](../debugger/intellitrace.md)
 

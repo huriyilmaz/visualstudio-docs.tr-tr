@@ -1,6 +1,7 @@
 ---
 title: VSInstr uyarıları | Microsoft Docs
 ms.date: 11/04/2016
+description: VSInstr.exe aracı tarafından verilen uyarılar ve uyarının görünmesini engellemek için uyarı numaralarıyla birlikte NOWARN seçeneğini nasıl kullanabileceğinizi öğrenin.
 ms.topic: reference
 helpviewer_keywords:
 - instrumentation, VSInstr tool
@@ -15,17 +16,17 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 3af98372102da49e7553d2f2992f3804cf0a619e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d5510c475ab566e65d2bd152136535fde62f257b
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85330549"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98723133"
 ---
 # <a name="vsinstr-warnings"></a>VSInstr uyarıları
 Aşağıdaki tabloda *VSInstr.exe* aracı tarafından verilen uyarılar listelenmektedir. Uyarının görünmesini engellemek için uyarı numaralarıyla birlikte NOWARN seçeneğini kullanabilirsiniz.
 
-|Uyarı numarası|Description|
+|Uyarı numarası|Açıklama|
 |--------------------|-----------------|
 |**VSP1026**|MSCorLib 'e başvurmayan kitaplıklarda kapsam desteklenmez. Bu durum genellikle taşınabilir kitaplıklar için de kullanılır.<br /><br />.NET Core için [/Enablecodecoverage](../test/vstest-console-options.md) komut satırı seçeneği gereklidir.|
 |**VSP2000**|İç Hata. Bu yürütülebilir dosya için modül dosyası adı alınamıyor.|

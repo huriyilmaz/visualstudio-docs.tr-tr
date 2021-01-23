@@ -1,5 +1,6 @@
 ---
 title: Performans Gezgini penceresi | Microsoft Docs
+description: Visual Studio IDE 'deki Performans Gezgini penceresinin, Visual Studio Profil Oluşturma Araçları kullanarak performans oturumlarını yapılandırmanıza nasıl olanak sağladığını öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: a365892f606da90c608e43b7ccce73b902ec0e98
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 06d2b7e2ad5d5df4022dc78aa06315545d56c0ee
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74772445"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98722821"
 ---
 # <a name="performance-explorer-window"></a>Performans Gezgini Penceresi
 
@@ -32,7 +33,7 @@ Visual Studio IDE 'deki **Performans Gezgini** penceresi, visual Studio profil o
 
 - **Yeni performans oturumu** -performans Gezgini penceresine boş bir performans oturumu ekler.
 
-- **Başlat** - **Başlat** komut düğmesi listesi, profil oluşturma işleminin hemen etkinleştirildiği (**profil oluşturma ile başlatma**) veya profil oluşturma askıya alınmış olarak (profil**oluşturma duraklatılmış şekilde başlatma**) hedef uygulamayı başlatmanıza olanak sağlar.
+- **Başlat** - **Başlat** komut düğmesi listesi, profil oluşturma işleminin hemen etkinleştirildiği (**profil oluşturma ile başlatma**) veya profil oluşturma askıya alınmış olarak (profil **oluşturma duraklatılmış şekilde başlatma**) hedef uygulamayı başlatmanıza olanak sağlar.
 
 - **Yöntem** -oturumun profil oluşturma yönteminin örnekleme veya izleme olup olmadığını belirtir.
 
@@ -46,7 +47,7 @@ Visual Studio IDE 'deki **Performans Gezgini** penceresi, visual Studio profil o
 
 - **Oturum adı** -ağaç denetiminin kökü, oturumun adını içerir. Oturum özelliklerini ayarlamak için oturum adına sağ tıklayın veya hedef uygulamayı ve profil oluşturucuyu başlatın.
 
-- **Hedefler** -oturumda profili oluşturulacak ikili dosyaların adlarını görüntüler. Bir ikili, **Targets** [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Proje veya Web sitesi eklemek veya kaldırmak için hedefler ' e sağ tıklayın. Tek bir ikilinin özelliklerini ayarlamak için bir hedef adına sağ tıklayın.
+- **Hedefler** -oturumda profili oluşturulacak ikili dosyaların adlarını görüntüler. Bir ikili,  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Proje veya Web sitesi eklemek veya kaldırmak için hedefler ' e sağ tıklayın. Tek bir ikilinin özelliklerini ayarlamak için bir hedef adına sağ tıklayın.
 
 - **Raporlar** -oturum için oluşturulan profil oluşturucu veri dosyalarının adlarını görüntüler. Mevcut bir raporu eklemek veya iki profil oluşturucu veri dosyasını karşılaştırmak için **raporlar** ' a sağ tıklayın. Profil Oluşturucu veri dosyasını açmak, kaldırmak veya dışarı aktarmak için bir rapor adına sağ tıklayın.
 

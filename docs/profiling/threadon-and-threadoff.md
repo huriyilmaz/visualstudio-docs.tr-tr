@@ -1,5 +1,6 @@
 ---
 title: ThreadOn ve ThreadOff | Microsoft Docs
+description: VSPerfCmd.exe ThreadOff ve ThreadOn alt komutlarını yalnızca izleme yöntemini kullanan komut satırı profil oluşturma oturumlarında nasıl kullanabileceğinizi öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 5cd5a695-0a14-484a-8952-ed47e13d8e92
@@ -9,17 +10,17 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 906629eb24f6be097f3e24dfca3e6a231f42357f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f8b2e51857fc799c7b60f7650b823b77c9c6a283
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74778160"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98718778"
 ---
 # <a name="threadon-and-threadoff"></a>ThreadOn ve ThreadOff
 *VSPerfCmd.exe* **ThreadOff** ve **ThreadOn** alt komutları yalnızca, izleme yöntemini kullanan komut satırı profil oluşturma oturumlarında kullanılabilir. Belirtilen iş parçacığı için, duraklatma ve devam etmeyi devam ettirmeye yönelik **ThreadOff** ve **Thread.** **ThreadOff** , iş parçacığının profilini oluşturmayı durduruyor ve **üzerinde Threadın** iş parçacığı profilini oluşturmaya başlar.
 
- Çoğu durumda, *VSPerfCmd.exe* komut satırında tek seçenek olarak **ThreadOn** veya **ThreadOff** belirtirsiniz, ancak **globalon**, **globaloff**, **ProcessOn**ve **ProcessOff** alt komutları ile de birleştirilebilir.
+ Çoğu durumda, *VSPerfCmd.exe* komut satırında tek seçenek olarak **ThreadOn** veya **ThreadOff** belirtirsiniz, ancak **globalon**, **globaloff**, **ProcessOn** ve **ProcessOff** alt komutları ile de birleştirilebilir.
 
  **ThreadOn** ve **ThreadOff** alt komutları, bir komut satırı profil oluşturma oturumunda tüm işlemler Için veri toplamayı denetleyen **GlobalOn** ve **globaloff** alt komutları ve belirli bir Işlem Için veri toplamayı denetleyen **ProcessOn** ve **ProcessOff** alt komutları ile etkileşim kurar.
 
@@ -31,7 +32,7 @@ ms.locfileid: "74778160"
 
   Daha fazla bilgi için bkz. [profil oluşturma araçları API 'leri](../profiling/profiling-tools-apis.md).
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cmd
 VSPerfCmd.exe /{ThreadOff|ThreadOn}:TID [Options]
@@ -46,7 +47,7 @@ VSPerfCmd.exe /{ThreadOff|ThreadOn}:TID [Options]
 
  **Başlangıç:** `Method` Komut satırı profil oluşturma oturumunu başlatır ve belirtilen profil oluşturma yöntemini ayarlar.
 
- **GlobalOff** Globalon&#124;**GlobalOn** , komut satırı profil oluşturma oturumunda tüm işlemlerde profil oluşturmayı durduruyor veya başlatır.
+  Globalon&#124;**GlobalOn** , komut satırı profil oluşturma oturumunda tüm işlemlerde profil oluşturmayı durduruyor veya başlatır.
 
  {**ProcessOff**&#124;**ProcessOn**} **:**`TID` Belirtilen işlem için profil oluşturmayı durduruyor veya başlatır.
 

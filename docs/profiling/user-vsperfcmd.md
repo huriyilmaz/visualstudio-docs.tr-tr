@@ -1,5 +1,6 @@
 ---
 title: Kullanıcı (VSPerfCmd) | Microsoft Docs
+description: Kullanıcı seçeneğinin profili oluşturulan işlemin sahibi olan hesabın etki alanını ve Kullanıcı adını nasıl belirttiğinde öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: ee1a478e-374d-4f30-ae28-d260b9d4723a
@@ -9,19 +10,19 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 7dbb1a155e8e0ffd2690b5850299b8075a63ea3d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dbb5490ff9281a7379d74209da15a3a39595bc09
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74779967"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98721170"
 ---
 # <a name="user-vsperfcmd"></a>Kullanıcı (VSPerfCmd)
 **Kullanıcı** seçeneği, profili oluşturulan işlemin sahibi olan hesabın etki alanını ve Kullanıcı adını belirtir. Bu seçenek yalnızca, işlem oturum açmış kullanıcı dışında bir kullanıcı olarak çalışıyorsa gereklidir. İşlem sahibi, Windows Görev Yöneticisi 'nin **işlemler** sekmesinde Kullanıcı adı sütununda listelenir.
 
  **Kullanıcı** seçeneği, yalnızca **Başlangıç** seçeneğini de içeren bir komut satırında belirtilebilir.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cmd
 VSPerfCmd.exe /Start:Method /Output:FileName /User:[Domain\]UserName [Options]

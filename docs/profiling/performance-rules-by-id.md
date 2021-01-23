@@ -1,5 +1,6 @@
 ---
 title: KIMLIĞE göre performans kuralları | Microsoft Docs
+description: 'DA0001 dahil olmak üzere KIMLIĞE göre performans kuralları hakkında bilgi edinin: birleştirmeleri ve DA0011: pahalı CompareTo için StringBuilder kullanın.'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 9a1c934c-4798-4df9-a8ef-eb17ef06b6a2
@@ -9,16 +10,16 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 1762f12d791f220161867af73a823f88b9f86ec0
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 4cbfde146586d8ab10b8ad44ee1294e36221493a
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037334"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98722106"
 ---
 # <a name="performance-rules-by-id"></a>Kimliğe göre performans kuralları
 
-| Uyarı | Description |
+| Uyarı | Açıklama |
 | - | - |
 | [DA0001: Birleştirmeler için StringBuilder kullanma](../profiling/da0001-use-stringbuilder-for-concatenations.md) | System. String. Concat çağrısı, profil oluşturma verilerinin önemli bir orandır. Birden <xref:System.Text.StringBuilder> fazla kesimden dizeler oluşturmak için sınıfını kullanmayı düşünün. |
 | [DA0002: VSPerfCorProf.dll eksik](../profiling/da0002-vsperfcorprof-dll-is-missing.md) | Profil Oluşturucu, profil oluşturma çalışması sırasında VSPerfCorProf.dll bulamadı. Bu uyarı, profil oluşturucu verileri koleksiyonu için komut satırı araçları, gerekli ortam değişkenlerini başlatmak için VSPerfCLREnv. cmd aracı kullanılmadan kullanıldığında oluşur. |

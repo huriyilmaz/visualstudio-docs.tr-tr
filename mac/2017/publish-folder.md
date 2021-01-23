@@ -9,12 +9,12 @@ ms.author: sayedha
 manager: unniravindranathan
 ms.prod: visual-studio-mac
 ms.topic: how-to
-ms.openlocfilehash: a1855b272a774f7c4bd36866555f463525075e2d
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: 98831768dac9f7e57c1bd5f19f0dc088951a6af4
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91862007"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98719792"
 ---
 # <a name="publish-a-web-app-to-a-folder-using-visual-studio-for-mac"></a>Mac için Visual Studio kullanarak bir Web uygulamasını bir klasöre yayımlama
 
@@ -23,7 +23,7 @@ Yayımla aracını bir klasöre ASP.NET Core uygulamalar yayımlamak için kulla
 ## <a name="prerequisites"></a>Ön koşullar
 
 - ASP.NET Core etkinken [Mac Için Visual Studio 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs4mac2017) yüklendi.
-- Bir ASP.NET Core projesi. Zaten bir projeniz yoksa [Yeni bir tane oluşturabilirsiniz](./create-new-projects.md?view=vsmac-2017).
+- Bir ASP.NET Core projesi. Zaten bir projeniz yoksa [Yeni bir tane oluşturabilirsiniz](./create-new-projects.md?view=vsmac-2017&preserve-view=true).
 
 ## <a name="publish-to-folder"></a>Klasöre Yayımlama
 

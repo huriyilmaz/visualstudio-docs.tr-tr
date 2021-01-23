@@ -1,5 +1,6 @@
 ---
 title: Eşzamanlılık görselleştiricisi komut satırı yardımcı programı
+description: Eşzamanlılık Görselleştiricisi ' de görüntüleyebileceğiniz izlemeleri toplamak için CVCollectionCmd.exe komut satırı yardımcı programını kullanın. Visual Studio 'Nun yüklü olması gerekmez.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 762a3563e64a3437c34b9e12e372f5d578e0c7ac
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 6970c582b6f3ac254f5bbb60f0324128dac63cfe
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808909"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98721053"
 ---
 # <a name="concurrency-visualizer-command-line-utility-cvcollectioncmd"></a>Eşzamanlılık görselleştiricisi komut satırı yardımcı programı (CVCollectionCmd)
 Eşzamanlılık görselleştiricisi komut satırı yardımcı programını (*CVCollectionCmd.exe*) kullanarak, bunları Visual Studio Için eşzamanlılık görselleştiricisi içinde görüntüleyebilmeniz için komut satırından izleme toplayabilirsiniz. Araçlar, Visual Studio yüklü olmayan bilgisayarlarda kullanılabilir.
@@ -41,11 +42,11 @@ Eşzamanlılık görselleştiricisi komut satırı yardımcı programını (*CVC
 
 |Seçenek|Açıklama|Parametreler|Dönüş değerleri|
 |------------|-----------------|----------------|-------------------|
-|Sorgu|Koleksiyonun başlatılıp başlatılmayacağını döndürür.|Hiçbiri|koleksiyon başlamaya hazırsanız 0.<br /><br /> 1 koleksiyon zaten devam ediyorsa.<br /><br /> 2 koleksiyon devam etmiyor, ancak bir veya daha fazla gerekli [ETW](/dotnet/framework/wcf/samples/etw-tracing) oturumu zaten etkin.|
+|Sorgu|Koleksiyonun başlatılıp başlatılmayacağını döndürür.|Yok|koleksiyon başlamaya hazırsanız 0.<br /><br /> 1 koleksiyon zaten devam ediyorsa.<br /><br /> 2 koleksiyon devam etmiyor, ancak bir veya daha fazla gerekli [ETW](/dotnet/framework/wcf/samples/etw-tracing) oturumu zaten etkin.|
 |Başlat|Belirtilen işlemi eşzamanlılık görselleştiricisi altında çalıştırır.|Yürütülebilir dosyanın yolu.|çalışma başarılı olursa 0.<br /><br /> 1 hedef uygulama başlatılamadığından çalıştırma başarısız olduysa.<br /><br /> Bu, CVCollectionCmd 'nin belirtilen çıkış dizinine yazmak için yeterli izinlere sahip olduğu için, çalıştırma başarısız olursa 13.|
 |İliştir|Sistem genelinde izleme toplamaya başlar; Aksi takdirde, bir işlem belirtilmişse bir işleme iliştirir.|Yok.|ek başarılı olursa 0.<br /><br /> Belirtilen işlem geçersiz veya belirsiz olduğundan ek başarısız olursa 1.<br /><br /> CVCollectionCmd 'nin belirtilen çıkış dizinine yazmak için izinleri yetersiz olduğundan, ek başarısız olursa 13.|
 |Ayır|Koleksiyonu durduruyor.|Yok.|Bu, kesilmesi başarılı olursa 0 ' dır.<br /><br /> 1 Şu anda devam eden bir dağıtım başarısız olduğu için çıkarılabilir işlem başarısız oldu.<br /><br /> 2, koleksiyon durdurulamadığından gönderilemedi.|
-|Analiz|Belirtilen izlemeyi analiz eder.|CVTrace dosyasının tam yolu.|analiz başarılı olursa 0.<br /><br /> 1 analiz başlatılamıyor, çünkü belirtilen izleme sistem genelinde, ancak hedef işlem belirtilmedi.<br /><br /> 2 analiz başlatılamıyor, çünkü izleme sistem genelinde değil ve bir işlem belirtildi.<br /><br /> 3 belirtilen işlem geçersiz olduğundan analiz başarısız oldu.<br /><br /> 4 belirtilen CVTrace dosyası geçersiz olduğundan analiz başarısız oldu.|
+|Çözümleme|Belirtilen izlemeyi analiz eder.|CVTrace dosyasının tam yolu.|analiz başarılı olursa 0.<br /><br /> 1 analiz başlatılamıyor, çünkü belirtilen izleme sistem genelinde, ancak hedef işlem belirtilmedi.<br /><br /> 2 analiz başlatılamıyor, çünkü izleme sistem genelinde değil ve bir işlem belirtildi.<br /><br /> 3 belirtilen işlem geçersiz olduğundan analiz başarısız oldu.<br /><br /> 4 belirtilen CVTrace dosyası geçersiz olduğundan analiz başarısız oldu.|
 |LaunchArgs|Hedef yürütülebilir bağımsız değişkenleri belirtir. Bu seçenek yalnızca başlatma komutu için geçerlidir.|Uygulamanın komut satırı bağımsız değişkenleri.|Yok.|
 |OutDir|İzleme dosyalarının kaydedileceği dizini belirtir. Başlatma ve Iliştirme komutları için geçerlidir.|Dizin yolu veya göreli yol.|Yok.|
 |İşleme|Attach komutu yürütüldüğünde iliştirilecek veya çözümle komutu yürütüldüğünde analiz edilecek işlem olan işlemi belirtir. Ekle ve çözümle komutları için geçerlidir.|İşlemin PID 'SI veya adı.|Yok.|
@@ -70,9 +71,9 @@ Eşzamanlılık görselleştiricisi komut satırı yardımcı programını (*CVC
 | Includeenvsymbolpath | Ortam sembol yolunun (_NT_SYMBOL_PATH) kullanılıp kullanılmayacağını belirleyen bir değer ayarlar. | -True<br />-False |
 | DeleteEtlsAfterAnalysis | Analiz tamamlandığında ETL dosyalarının silinip silinmediğini belirleyen bir değer ayarlar. | -True<br />-False |
 | SymbolPath | Sembol sunucusunun yolunu belirtir. Daha fazla bilgi için bkz. [hata ayıklama sembol dosyalarını almak Için Microsoft sembol sunucusunu kullanma](/windows/win32/dxtecharts/debugging-with-symbols). | Bir dizin adı veya URL 'SI. |
-| İşaretleyiciler | İşaretleyici sağlayıcılarının listesini içerir. | Sıfır veya daha fazla MarkerProvider öğesi içerebilir. |
+| İşaretler | İşaretleyici sağlayıcılarının listesini içerir. | Sıfır veya daha fazla MarkerProvider öğesi içerebilir. |
 | MarkerProvider | Tek bir işaret sağlayıcısını belirtir. | Şu öğeleri içermelidir:<br /><br /> -Düzey<br />-GUID<br />-Ad<br /><br /> Şu öğeleri içerebilir:<br /><br /> -Kategoriler<br />-IsEnabled |
-| Düzey | Bir MarkerProvider 'ın önem düzeyini ayarlar. | -Düşük<br />-Normal<br />-Yüksek<br />-Kritik<br />-Her şey |
+| Level | Bir MarkerProvider 'ın önem düzeyini ayarlar. | -Düşük<br />-Normal<br />-Yüksek<br />-Kritik<br />-Her şey |
 | Guid | ETW işaretleyici sağlayıcısının genel benzersiz tanımlayıcısı. | BIR GUıD. |
 | Name | İşaret sağlayıcısının açıklamasını belirtir. | Bir dize. |
 | Kategoriler | İşaretleyici sağlayıcısı için toplanan kategorileri belirtir. | Virgülle ayrılmış sayı veya sayı aralığı dizesi. |

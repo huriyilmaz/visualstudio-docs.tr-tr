@@ -1,5 +1,7 @@
 ---
 title: Sayaç | Microsoft Docs
+description: VSPerfCmd.exe sayaç seçeneği hakkında bilgi edinin. Bir örnekleme aralığı belirtir veya izleme profili oluşturma sırasında olay aralıklarının bir ölçümüdür.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: aa4b4cdb-e6ea-433a-9579-56f3785e1385
@@ -9,12 +11,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 64c882514d6bcf27de36a6ca4420fbaf671c72f2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 85ed799cac54d630dfff1b285d3f2257e5eb99b5
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85331187"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98720702"
 ---
 # <a name="counter"></a>Sayaç
 **Sayaç** seçeneği, işlemci (donanım) performans sayaçlarından verileri toplar.
@@ -25,7 +27,7 @@ ms.locfileid: "85331187"
 
   Her işlemci türünün kendi donanım performans sayacı kümesi vardır. Profil Oluşturucu, neredeyse tüm işlemciler için ortak olan genel performans sayaçları kümesini tanımlar. Bilgisayarınızdaki genel ve işlemciye özgü sayaçları listelemek için VSPerfCmd **QueryCounters** komutunu kullanın.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cmd
 VSPerfCmd.exe {/Launch:AppName | /Attach PID} /Counter:Name[,Reload[,FriendlyName]][Options]

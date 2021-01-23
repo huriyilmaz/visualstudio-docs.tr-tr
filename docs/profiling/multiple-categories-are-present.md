@@ -1,5 +1,6 @@
 ---
 title: Birden çok kategori var | Microsoft Docs
+description: Belirli bir zaman aralığı için birden fazla etkinlik türü içeren bir bölüm olduğunda, iki renk görüntülenirken, diğeri dikey olarak yığılmış.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 69b3de3a7f1554bc3ad95874a58b75b809d610a2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 36b120d4433bafb5f248a268b140d940b3c6e2da
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62794668"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98722938"
 ---
 # <a name="multiple-categories-are-present"></a>Birden çok kategori var
 Belirli bir zaman aralığı için birden fazla etkinlik türü içeren bir bölüm seçilir. İki rengin görüntülendiğine, diğeri de dikey bir şekilde yığılmış olduğuna dikkat edin. Bu renkler, belirli bir zaman aralığında yalnızca en sık kullanılan en popüler etkinlikleri temsil eder. Bu iki etkinliğin sıklığı, dikey çubuğun ikisi de ya da üçte biri olarak birbirlerine göre gösterilir. Daha fazla ayrıntı görmek için iş parçacığı görünümünün bu bölümünde yakınlaştırma yapmayı deneyin.

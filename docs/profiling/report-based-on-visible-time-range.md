@@ -1,5 +1,6 @@
 ---
 title: Görünür zaman aralığına dayalı rapor | Microsoft Docs
+description: Profil görünümünün, şu anda görünür olan zaman aralığına ve kanallara göre raporları nasıl görüntülediğini öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fd4758f5484089e58f50462300f48f76f1538381
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 02dc0e009702b25c2204f0a1302931fe941b5f59
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "63002337"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98720377"
 ---
 # <a name="report-based-on-visible-time-range"></a>Görünür zaman aralığına dayalı rapor
 Profil görünümü, şu anda görünür zaman aralığına ve kanallara dayalı raporları görüntüler. Verilerin farklı alt kümelerine ilişkin ayrıntıları görmek için göstergedeki Öğeler ' e tıklayın.

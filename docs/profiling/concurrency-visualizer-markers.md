@@ -1,5 +1,7 @@
 ---
 title: Eşzamanlılık görselleştiricisi Işaretçileri | Microsoft Docs
+description: 'Eşzamanlılık görselleştiricisi içindeki işaretçiler hakkında bilgi edinin. İşaretleyiciler, bir uygulama tarafından oluşturulan olayları temsil eden simgelerdir. Üç tür vardır: bayraklar, iletiler ve yayılma.'
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ab5e4b65db5c3d96b16a68a7b8e21a2786b9110b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fab8108e15f3cbaf81130c2ce8533d00f2a23c7e
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "63001058"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98721001"
 ---
 # <a name="concurrency-visualizer-markers"></a>Eşzamanlılık görselleştiricisi işaretçileri
 Eşzamanlılık görselleştiricisi içinde işaretçiler, bir uygulamadaki olayları temsil eden simgelerdir.  Genellikle uygulama, bir uygulamadaki aşamaları veya oluşumları belirlemek için bu olayları oluşturur.  Olaylar, uygulama tarafından veya uygulama tarafından kullanılan kitaplıklar ve çalışma zamanları tarafından oluşturulabilir.

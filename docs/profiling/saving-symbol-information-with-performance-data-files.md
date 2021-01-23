@@ -1,5 +1,6 @@
 ---
 title: Simge bilgilerini performans veri dosyalarıyla kaydetme | Microsoft Docs
+description: Rapor dosyanızdaki sembolleri kaydetmek veya seri hale getirmek için performans projesi ayarlarını nasıl ayarlayabileceğinizi öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +12,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 74137752900d082c545dd5e5271b7700ec81fa01
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 142e73a65fa9ffd2210719d84f18a25068762acb
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74778303"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98720221"
 ---
 # <a name="saving-symbol-information-with-performance-data-files"></a>Performans Veri Dosyalarıyla Birlikte Sembol Bilgilerini Kaydetme
 
@@ -30,7 +31,7 @@ Visual Studio IDE 'den veya komut satırından sembolleri seri hale getirebilirs
 
 - IDE 'de sembolleri seri hale getirmek için [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] menü çubuğundaki **Araçlar** ' ın üzerine gelin ve ardından **Seçenekler**' e tıklayın. **Seçenekler** penceresinde, **performans araçları**' nı seçin ve ardından **sembol bilgilerini otomatik olarak seri hale getirme** onay kutusunu seçin.
 
-- Rapor dosyalarını kaydettiğinizde, PACKSYMBOLS, eşdeğer komut satırı seçeneğidir. Sembolleri seri hale getirmek için **VSPerfReport/summary: all/packsymbols filename. vsp**yazın.
+- Rapor dosyalarını kaydettiğinizde, PACKSYMBOLS, eşdeğer komut satırı seçeneğidir. Sembolleri seri hale getirmek için **VSPerfReport/summary: all/packsymbols filename. vsp** yazın.
 
 ## <a name="troubleshooting-symbol-problems"></a>Sembol sorunlarını giderme
 

@@ -1,5 +1,6 @@
 ---
 title: VSPerfReport | Microsoft Docs
+description: VSPerfReport komut satırı aracının, Visual Studio Profil Oluşturma Araçları profil oluşturma veri dosyalarını kullanarak rapor oluşturmak için kullanıldığını öğrenin.
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -16,12 +17,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 54d5de2395c0ce95bc0c20c3ae7810b2762122fa
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ed3ba5453976e3f3976aba43bc296c040a86b7a5
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85329964"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98719779"
 ---
 # <a name="vsperfreport"></a>VSPerfReport
 VSPerfReport komut satırı aracı, Profil Oluşturma Araçları profil oluşturma veri dosyalarını kullanarak rapor oluşturmak için kullanılır  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Varsayılan rapor biçimi bir. *CSV* dosyası.
@@ -32,7 +33,7 @@ VSPerfReport komut satırı aracı, Profil Oluşturma Araçları profil oluştur
 VSPerfReport [/U] vspfilename [/options]
 ```
 
- Bunun `filename` geçerli olması gerektiğini unutmayın.* VSP* veya. *vsps* dosyası.
+ Bunun `filename` geçerli olması gerektiğini unutmayın.*VSP* veya. *vsps* dosyası.
 
  VSPerfReport komut satırı aracı, karşılaştırmak için de kullanılır. *VSP* veya. *vsps* dosyaları. Fark ("diff") raporu oluşturmak için aşağıdaki sözdizimini kullanın:
 
@@ -50,14 +51,14 @@ VSPerfReport [/U] /diff vspfilename1 vspfilename2 [/options]
 
 |Seçenekler|Açıklama|
 |-------------|-----------------|
-|**U**|Rapor çıkışı ve yeniden yönlendirilen konsol çıkışı Unicode olarak yazılır. Belirtilen ilk seçenek olmalıdır.|
+|**Larınız**|Rapor çıkışı ve yeniden yönlendirilen konsol çıkışı Unicode olarak yazılır. Belirtilen ilk seçenek olmalıdır.|
 |**Özet:**[*türler*]|Bir veya daha fazla rapor türü oluşturur.<br /><br /> -   `All` -Tüm rapor türleri oluşturulur.<br />-   `CallerCallee` -İşlevler arasındaki üst/alt öğe ilişkileri.<br />-   `Function` -işlevleri çağırılır.<br />-   `CallTree` -çağrılan işlevlerin hiyerarşisi.<br />-   `Counter` -Hepsi Windows performans sayacı değerleriyle birlikte işaretler.<br />-   `Ip` -profil oluşturulan yönergeler.<br />-   `Life` -ayrılan nesnelerin ömrü (ayırma verileri toplandığında kullanılabilir.)<br />-   `Line` kaynak kodu satırı profil verileri.<br />-   `Header` -Rapor dosya üst bilgisi bilgilerini içerir.<br />-   `Mark` Tüm işaretler.<br />-   `Module` -modüller profili oluşturulmuş.<br />-   `Process` -profili oluşturulan işlem.<br />-   `Thread` -profili oluşturulan iş parçacıkları.<br />-   `Type` -ayrılmış türler.<br />-   `Contention` -Kaynak çekişmeleri.<br />-   `RuleWarnings` -performans kuralı sorunları<br />-   `ETW` -profil oluşturma çalıştırmasında toplanan Windows için olay Izleme (ETW) olayları. . Etl veri dosyası özgün konumunda veya. vsp veya. vsps dosyasını içeren dizinde olmalıdır.|
 |**'Sini**|XML biçiminde çıktı raporu.|
 |**CallTrace**|İşlev girdisi listesini oluşturur ve çıkar, ETW olayları ve işaretler.|
 |**ClearPackedSymbols**|Önceden eklenmiş sembolleri profil oluşturucu veri dosyasından kaldırır. PackSymbols komutunu ikinci kez çalıştırmadan önce bu komutu çalıştırın.|
 |**SymbolPath:**`path`|Profil Oluşturucu veri dosyası için semboller içeren bir veya daha fazla arama yolunu veya sembol sunucusunu belirtir.|
 |**DebugSymPath**|Semboller için aranan konumları ve bunların bulunup bulunamadığını listeler. Bu seçenek, sembol çözümleme sorunlarını gidermek için kullanışlıdır.|
-|**PackSymbols**|Sembolleri profil oluşturma verileri (. vsp) dosyasına, simgenin (.* pdb*) dosyaları analiz için gerekli değildir.|
+|**PackSymbols**|Sembolleri profil oluşturma verileri (. vsp) dosyasına, simgenin (.*pdb*) dosyaları analiz için gerekli değildir.|
 |**Çıkış:** *yol*&#124;*dosya adı*|Oluşturulan rapor dosyaları için alternatif bir konum belirtir. Varsayılan olarak, raporlar geçerli dizinde oluşturulur.|
 |**SummaryFile**|Çözümlenen bilgileri bir. vsps özet dosyasında çözümleyin ve kaydedin.|
 |**Printiþaretleri**|Belirtilen rapor dosyasında tüm işaretlerin adlarını ve zaman damgalarını göster.|
@@ -84,7 +85,7 @@ VSPerfReport [/U] /diff vspfilename1 vspfilename2 [/options]
 
 |Seçenekler|Açıklama|
 |-------------|-----------------|
-|**Farklı**  `vspfile1 vspfile2`|İki rapor dosyasını karşılaştırın (.* VSP* veya. *vsps*) dosyalarý. Özet seçenekleri fark seçeneği kullanılarak yok sayılacak.|
+|**Fark**  `vspfile1 vspfile2`|İki rapor dosyasını karşılaştırın (.*VSP* veya. *vsps*) dosyalarý. Özet seçenekleri fark seçeneği kullanılarak yok sayılacak.|
 |**Fark:**[*değer*]|Bu eşik değerinin altında iki değer arasındaki fark yok sayıardı edilir. Ayrıca, bu eşiğin altındaki değerlere sahip yeni veriler gösterilmeyecektir.|
 |**Difftable:**[*tabloadı*]|Dosyaları karşılaştırmak için bu belirli tabloyu kullanın. Varsayılan değer işlevler tablosudur.|
 |**Diffcolumn:**[*ColumnName*]|Bu özel sütun Compare değerlerini kullanın. Varsayılan değer, özel örnek yüzdesi sütunudur.|

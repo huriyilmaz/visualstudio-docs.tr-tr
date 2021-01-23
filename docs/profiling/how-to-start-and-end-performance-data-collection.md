@@ -1,5 +1,6 @@
 ---
 title: Performans verileri toplamayı başlatma ve bitirme | Microsoft Docs
+description: Profil oluşturmaya başlamadan önce, profile istediğiniz hedef ikiliyi, performans oturumuna nasıl ekleyebileceğiniz hakkında bilgi edinin.
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -16,15 +17,15 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 4d1f22a09070aea8d2a63979c9d6d1bd267269cf
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 0db420bbc6da16460e599ff8912569f97b506f22
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851118"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98721729"
 ---
 # <a name="how-to-start-and-end-performance-data-collection"></a>Nasıl yapılır: performans veri toplamayı başlatma ve bitirme
-Profil oluşturmaya başlamadan önce, profil oluşturmak istediğiniz hedef ikiliyi performans oturumuna eklemeniz gerekir. Bir hedef eklemek için **Performans Gezgini**içinde **hedefler** ' e sağ tıklayın ve ardından **hedef ikilisi Ekle**' ye tıklayın. **Hedef Ikili Ekle** iletişim kutusunda, dosya adını seçin ve ardından **Aç**' a tıklayın. Yeni bir ikili eklenir.
+Profil oluşturmaya başlamadan önce, profil oluşturmak istediğiniz hedef ikiliyi performans oturumuna eklemeniz gerekir. Bir hedef eklemek için **Performans Gezgini** içinde **hedefler** ' e sağ tıklayın ve ardından **hedef ikilisi Ekle**' ye tıklayın. **Hedef Ikili Ekle** iletişim kutusunda, dosya adını seçin ve ardından **Aç**' a tıklayın. Yeni bir ikili eklenir.
 
 ### <a name="to-start-profiling"></a>Profil oluşturmayı başlatmak için
 

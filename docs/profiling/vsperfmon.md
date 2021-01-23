@@ -1,5 +1,6 @@
 ---
 title: VSPerfMon | Microsoft Docs
+description: Bir uygulama için performans verilerini toplamak üzere VSPerfMon aracını nasıl kullanabileceğinizi öğrenin. Bu araç genellikle VSPerfCmd.exe tarafından başlatılır.
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -17,15 +18,15 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: ee2423f552c6931b0c8b62181dc44186053c9460
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 919153699299c2f39ad0353ed484a9f9c9f46846
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85329966"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98719181"
 ---
 # <a name="vsperfmon"></a>VSPerfMon
-Bir uygulamanın performans verilerini toplamak için VSPerfMon aracını kullanabilirsiniz; genellikle bu araç *VSPerfCmd.exe*tarafından başlatılır. VSPerfMon, VSPerfCmd aracı kullanılarak kullanılamayan işlem iliştirme veya ayırma hakkında ek bilgiler görüntüler. Bu bilgileri görüntülemek için, VSPerfMon 'yi ayrı bir pencerede başlatın. VSPerfMon 'yi çağırmak için aşağıdaki sözdizimini kullanın:
+Bir uygulamanın performans verilerini toplamak için VSPerfMon aracını kullanabilirsiniz; genellikle bu araç *VSPerfCmd.exe* tarafından başlatılır. VSPerfMon, VSPerfCmd aracı kullanılarak kullanılamayan işlem iliştirme veya ayırma hakkında ek bilgiler görüntüler. Bu bilgileri görüntülemek için, VSPerfMon 'yi ayrı bir pencerede başlatın. VSPerfMon 'yi çağırmak için aşağıdaki sözdizimini kullanın:
 
 ```cmd
 VSPerfMon [/U] </TRACE [/COUNTER:cfg] | /SAMPLE | /COVERAGE> /CROSSSESSION /OUTPUT <file name> [/WINCOUNTER:cfg] [/USER [DOMAIN\]username]
@@ -33,9 +34,9 @@ VSPerfMon [/U] </TRACE [/COUNTER:cfg] | /SAMPLE | /COVERAGE> /CROSSSESSION /OUTP
 
  Aşağıdaki tabloda, VSPerfMon araç seçenekleri açıklanmaktadır:
 
-|Seçenekler|Description|
+|Seçenekler|Açıklama|
 |-------------|-----------------|
-|**U**|Yeniden yönlendirilen konsol çıkışı Unicode olarak yazılmıştır.  Bu, belirtilen ilk seçenek olmalıdır.|
+|**Larınız**|Yeniden yönlendirilen konsol çıkışı Unicode olarak yazılmıştır.  Bu, belirtilen ilk seçenek olmalıdır.|
 |**Çıkış:** `<` *dosya adı*`>`|Çıktıyı belirtilen dosya adına yönlendirir.|
 |**IZLEMESININ**|Araçlı profil oluşturma için performans izleyicisini başlatır.|
 |**SAMPLE**|Örnekleme profili oluşturma için performans izleyicisini başlatır.|

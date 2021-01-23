@@ -1,5 +1,6 @@
 ---
 title: Yönerge Işaretçileri (IP) görünümü | Microsoft Docs
+description: Yönerge Işaretçileri görünümünün örnekleme profili oluşturma sırasında yürütülen belirli talimatları görmenizi nasıl sağladığını öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +19,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 9c90d070a3b7125143eda5fd8666b1a4f64312b3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d00742b1832aebcfff0e008455da98e744a485f7
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74778641"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98721573"
 ---
 # <a name="instruction-pointers-ips-view"></a>Yönerge İşaretçileri (IP) Görünümü
 Yönerge Işaretçileri görünümü örnekleme profili oluşturma sırasında yürütülen belirli talimatları görmenizi sağlar.

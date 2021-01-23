@@ -1,5 +1,6 @@
 ---
 title: Verileri çözümlemek için performans kurallarını kullanma | Microsoft Docs
+description: Visual Studio 'nun performans uyarılarının, program yürütmeyi yavaşlatabilecek profili oluşturulmuş bir uygulamada sorunları nasıl belirteceğinizi öğrenin Profil Oluşturma Araçları.
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 1deed23e-b31b-4714-982f-08ceebfc3096
@@ -9,12 +10,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 3ea0f43b63eb8ec51ad7e8240844a804259374a8
-ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
+ms.openlocfilehash: 9a896e128f949897b64fd6a273784f39543a9663
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91659348"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98721144"
 ---
 # <a name="use-performance-rules-to-analyze-data"></a>Performans kurallarını kullanarak verileri analiz etme
 Profil Oluşturma Araçları performans uyarıları, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] programın yürütülmesini yavaşlatabilecek, profili oluşturulmuş bir uygulamadaki sorunları gösterir. Uyarılar Ayrıca, daha yararlı veriler toplamak için koleksiyon yöntemlerini değiştirmeniz gerekebilecek anlamına da gelebilir. Performans uyarıları, profil oluşturma oturumunda otomatik olarak oluşturulur. Visual Studio 'da bir profil oluşturma veri dosyası açıldığında uyarılar **hata listesi** penceresinde görüntülenir. **Hata listesi** penceresinden, sorunun kaynak kodunu bulabilir ve hata hakkında ayrıntılı bilgileri (örneğin, sorunun nasıl çözüleceği hakkında bilgi) görüntüleyebilirsiniz. İlgilendiğiniz uyarıları da devre dışı bırakabilirsiniz.

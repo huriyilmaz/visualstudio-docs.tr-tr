@@ -7,12 +7,12 @@ ms.date: 09/02/2019
 ms.technology: vs-ide-general
 ms.assetid: 52D3D26A-4D01-4FD1-AAA1-AE7D7BD39746
 ms.topic: troubleshooting
-ms.openlocfilehash: 0808f86f8571210a9048faf2e825b483120e73ca
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 11b0788317cd0a20dd27159aa241db32e3818daf
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584210"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98722132"
 ---
 # <a name="does-visual-studio-for-mac-support-team-foundation-version-control"></a>Mac için Visual Studio, Team Foundation Sürüm Denetimi’ni destekler mi?
 
@@ -59,7 +59,7 @@ En kolay çözüm, macOS için bir paket yöneticisi olan **HomeBrew**' ı kulla
 1. Terminal ve [homebrew giriş sayfasındaki](https://brew.sh/)yönergeleri kullanarak Homebrew 'ı yükler.
 1. Homebrew yüklendikten sonra Terminalinizden aşağıdaki komutu çalıştırın: `brew install tee-clc`
 
-**T-CLC ' i el ile ayarlamak**için:
+**T-CLC ' i el ile ayarlamak** için:
 
 1. Team Explorer Everywhere GitHub deposunun yayınlar sayfasından [t-CLC ' un en son sürümünü indirin](https://github.com/Microsoft/team-explorer-everywhere/releases) (örneğin, bu yazma sırasında tee-clc-14.134.0.zip).
 1. . Zip içeriğini diskteki bir klasöre ayıklayın.
@@ -68,7 +68,7 @@ En kolay çözüm, macOS için bir paket yöneticisi olan **HomeBrew**' ı kulla
 
 T-CLC yüklendikten sonra, `tf eula` istemcinin lisans sözleşmesini görüntülemek ve kabul etmek için komutunu çalıştırabilirsiniz.
 
-Son olarak, TFS/Azure DevOps ortamınızdan kimlik doğrulamak için sunucuda bir kişisel erişim belirteci oluşturmanız gerekir. [Kişisel erişim belirteçleriyle kimlik doğrulama](/azure/devops/integrate/get-started/authentication/pats?view=azure-devops)hakkında daha fazla bilgi edinin. TFVC ile kullanmak için bir kişisel erişim belirteci oluştururken, belirteci yapılandırırken tam erişim sağladığınızdan emin olun.
+Son olarak, TFS/Azure DevOps ortamınızdan kimlik doğrulamak için sunucuda bir kişisel erişim belirteci oluşturmanız gerekir. [Kişisel erişim belirteçleriyle kimlik doğrulama](/azure/devops/integrate/get-started/authentication/pats?view=azure-devops&preserve-view=true)hakkında daha fazla bilgi edinin. TFVC ile kullanmak için bir kişisel erişim belirteci oluştururken, belirteci yapılandırırken tam erişim sağladığınızdan emin olun.
 
 #### <a name="using-the-tee-clc-to-connect-to-your-repo"></a>Depoya bağlanmak için t-CLC kullanma
 

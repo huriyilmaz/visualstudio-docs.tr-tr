@@ -1,5 +1,6 @@
 ---
 title: Performans raporu görünümleri | Microsoft Docs
+description: Profil oluşturma veri dosyaları görünümlerinin Visual Studio tümleşik geliştirme environmentIDE nasıl görüntülendiğini öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: cfb0d9ae2d677b1cc9dc828ffaecd5c0f71bfd5b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 611c31027bd725d8a1a98e6cb2e76d544743c811
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74772294"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98722756"
 ---
 # <a name="performance-report-views"></a>Performans raporu görünümleri
 Bu bölüm Profil Oluşturma Araçları raporları ve görünümleri için başvuru bilgileri sağlar [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Profil oluşturma veri dosyalarının görünümleri [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] Tümleşik geliştirme environmentIDE görüntülenir. Raporlar [VSPerfReport](../profiling/vsperfreport.md) komut satırı aracı tarafından oluşturulur.

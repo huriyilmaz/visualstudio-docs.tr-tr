@@ -1,5 +1,6 @@
 ---
 title: Modüller görünümü-örnekleme verileri | Microsoft Docs
+description: Örnekleme verilerinin modüller görünümünün, profil oluşturma verilerinde örneklendiği modüller tarafından gruplanmış performans verilerini nasıl görüntülediğini öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 7ead219ddf482af5917842118d386c6fefe67973
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0de246e5ecdc51ff6471eeed242d638fee261c8c
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74772720"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98722964"
 ---
 # <a name="modules-view---sampling-data"></a>Modüller görünümü-örnekleme verileri
 Örnekleme verilerinin Modüller görünümü, profil oluşturma verilerinde örneklendiği modüller tarafından gruplanmış performans verilerini görüntüler. Her modül hiyerarşik bir ağacın köküdür. Modülün örneklenmiş işlevleri modül düğümünün altında listelenir.
@@ -32,7 +33,7 @@ ms.locfileid: "74772720"
 |**Ad**|Modülün, işlevin, satır numarasının veya yönerge işaretçisi adresinin adı.|
 |**İşlem Kimliği**|Profil oluşturma çalıştırmasının işlem KIMLIĞI (PID).|
 |**İşlem adı**|Sürecin adı.|
-|**Modül Adı**|İşlevin, çizginin veya yönerge işaretçisinin bulunduğu modül adı.|
+|**Modül adı**|İşlevin, çizginin veya yönerge işaretçisinin bulunduğu modül adı.|
 |**Modül yolu**|Modülün, işlevin, çizginin veya yönerge işaretçisinin bulunduğu modül yolu.|
 |**Kaynak Dosya**|Bu işlevin tanımını içeren kaynak dosya.|
 |**İşlev satır numarası**|Kaynak dosyada bu işlevin başlangıcına ait satır numarası.|

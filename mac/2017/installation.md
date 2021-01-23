@@ -8,17 +8,17 @@ ms.technology: vs-ide-install
 ms.assetid: 22B1F2CD-32AE-464D-80AC-C8AB4786B015
 ms.custom: video
 ms.topic: how-to
-ms.openlocfilehash: c494f8d8543e0aa51b0c2be0ee52c0cb80aba982
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: be799764c3d6913cd2a13c6d631fc3450f8875a0
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91862442"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98719922"
 ---
 # <a name="install-visual-studio-2017-for-mac"></a>Mac için Visual Studio 2017 'yi yükler
 
 > [!NOTE]
-> Mac için Visual Studio 2019 [artık kullanılabilir](installation.md?view=vsmac-2019). Daha eski Mac için Visual Studio sürümleri için bkz. Visual Studio [İndirmeleri sayfası](https://my.visualstudio.com/Downloads?q=Visual%20Studio%202017%20for%20Mac).
+> Mac için Visual Studio 2019 [artık kullanılabilir](installation.md?view=vsmac-2019&preserve-view=true). Daha eski Mac için Visual Studio sürümleri için bkz. Visual Studio [İndirmeleri sayfası](https://my.visualstudio.com/Downloads?q=Visual%20Studio%202017%20for%20Mac).
 
 ## <a name="downgrading-from-visual-studio-2019-for-mac"></a>Mac için Visual Studio 2019 ' den daha eski sürüme mı?
 
@@ -65,7 +65,7 @@ Visual Studio 'da iOS ile çalışmaya yönelik olarak aşağıdaki parçalar ge
       - yalnızca iOS – **iOS** platformunu seçin ( [**Xcode**](https://developer.apple.com/xcode/)'u yüklemeniz gerekeceğini unutmayın).
       - Yalnızca Android – **Android** platformunu seçin (ilgili bağımlılıkları da seçmeniz gerektiğini unutmayın).
       - Yalnızca Mac – **MacOS** platformunu seçin ( [**Xcode**](https://developer.apple.com/xcode/)'u yüklemeniz gerekeceğini unutmayın).
-      - Tam platformlar arası Xamarin uygulamaları – **Android**, **IOS**ve **MacOS** platformları ' nı seçin.
+      - Tam platformlar arası Xamarin uygulamaları – **Android**, **IOS** ve **MacOS** platformları ' nı seçin.
    * **.NET Core uygulamaları** – **.NET Core** platformunu seçin.
    * **Web uygulamalarını ASP.NET Core** – **.NET Core** platformunu seçin.
    * **Platformlar arası Unity oyun geliştirme** – Mac için Visual Studio dışında hiçbir ek platform yüklenmesi gerekmez. Unity uzantısını yükleme hakkında daha fazla bilgi için [Unity kurulum kılavuzuna](./setup-vsmac-tools-unity.md) bakın.

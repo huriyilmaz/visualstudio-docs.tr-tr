@@ -1,5 +1,6 @@
 ---
 title: UWP uygulamalarında HTML UI yanıt hızını çözümleme | Microsoft Docs
+description: Evrensel Windows uygulamaları için kullanılabilen bir performans aracı olan UI yanıt verme profil oluşturucuyu kullanarak uygulamalarınızda performans sorunlarını yalıtmaya nasıl ayıracağınızı öğrenin.
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -17,12 +18,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - uwp
-ms.openlocfilehash: 9fdc2b7fc459d655748444759913cab903dfe782
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6545fb206096c7b74a7016b506ae3bcade7f136c
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85331419"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98721885"
 ---
 # <a name="analyze-html-ui-responsiveness-in-universal-windows-apps"></a>Evrensel Windows uygulamalarında HTML UI yanıt hızını çözümleme
 Bu konuda, Evrensel Windows uygulamaları için kullanılabilen bir performans aracı olan UI yanıtlama hızı Profil Oluşturucusu kullanılarak uygulamalarınızda performans sorunlarının nasıl yalıtılacağı açıklanmaktadır.
@@ -38,7 +39,7 @@ Bu konuda, Evrensel Windows uygulamaları için kullanılabilen bir performans a
 ## <a name="run-the-html-ui-responsiveness-tool"></a>HTML UI yanıt verme aracı 'nı çalıştırın
  Visual Studio 'da açık bir UWP uygulamanız olduğunda HTML UI yanıtlama hızı aracını kullanabilirsiniz.
 
-1. Uygulamayı Visual Studio 'dan çalıştırıyorsanız, **Standart** araç çubuğunda, **hata ayıklamayı Başlat** listesinde, **yerel makine** veya **cihaz**gibi bir dağıtım hedefi seçin.
+1. Uygulamayı Visual Studio 'dan çalıştırıyorsanız, **Standart** araç çubuğunda, **hata ayıklamayı Başlat** listesinde, **yerel makine** veya **cihaz** gibi bir dağıtım hedefi seçin.
 
 2. **Hata Ayıkla** menüsünde, performans profili **Oluşturucu**' yı seçin.
 
@@ -80,7 +81,7 @@ Bu konuda, Evrensel Windows uygulamaları için kullanılabilen bir performans a
 
      Bir sorun bulursanız, sorunun gerçekleştiği zaman çerçevesini daraltmaya veya davranışa neden olan Tetikleyicileri belirlemeyi denemek için teste devam edin.
 
-3. Visual Studio 'ya geçin ( **alt** + **sekmeye**basın) ve uygulamanızı durdurun (**SHIFT** + **F5**).
+3. Visual Studio 'ya geçin ( **alt** + **sekmeye** basın) ve uygulamanızı durdurun (**SHIFT** + **F5**).
 
 4. İsteğe bağlı olarak, [analiz Için Mark Code](#ProfileMark)' u kullanarak kodunuza Kullanıcı işaretleri ekleyin.
 
@@ -188,7 +189,7 @@ if (performance.mark && performance.measure) {
 - Farklı bir sayfaya gittiğinizde oluşan bir gezinti olayı. Olay için bir araç ipucu hedef sayfa URL 'sini gösterir.
 
 ### <a name="view-cpu-utilization"></a><a name="CPUUtilization"></a> CPU kullanımını görüntüle
- CPU kullanımı grafiği, aşırı CPU etkinliğinin zaman aralıklarını tanımlamanızı sağlar. Uygulamanın, bir süre boyunca ortalama CPU kullanımı hakkında bilgi sağlar. Bilgiler, aşağıdaki belirli kategorileri temsil edecek şekilde renk kodludur: **yükleme**, **betik oluşturma**, çöp toplama (**GC**), **Stil**oluşturma, **işleme**ve **görüntü kod çözme**. Bu Kategoriler hakkında daha fazla bilgi için bu konunun ilerleyen kısımlarında [Profil Oluşturucu olay başvurusu](#profiler-event-reference) bölümüne bakın.
+ CPU kullanımı grafiği, aşırı CPU etkinliğinin zaman aralıklarını tanımlamanızı sağlar. Uygulamanın, bir süre boyunca ortalama CPU kullanımı hakkında bilgi sağlar. Bilgiler, aşağıdaki belirli kategorileri temsil edecek şekilde renk kodludur: **yükleme**, **betik oluşturma**, çöp toplama (**GC**), **Stil** oluşturma, **işleme** ve **görüntü kod çözme**. Bu Kategoriler hakkında daha fazla bilgi için bu konunun ilerleyen kısımlarında [Profil Oluşturucu olay başvurusu](#profiler-event-reference) bölümüne bakın.
 
  CPU kullanım grafiğinde, bir veya daha fazla CPU için CPU kullanım değerlerini tek bir yüzde değeri olarak birleştiren tüm uygulama iş parçacıklarında harcanan süre miktarı gösterilir. Birden fazla CPU kullanımda olduğunda CPU kullanım değeri yüzde 100 ' ü aşabilir.
 

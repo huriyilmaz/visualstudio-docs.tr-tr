@@ -1,5 +1,6 @@
 ---
 title: Performans araçları sorunlarını giderme | Microsoft Docs
+description: Profil oluşturma araçları tarafından veri toplandığında, örneğin, performans araçları sorunlarını giderirken kullanabileceğiniz çeşitli sorunlar hakkında bilgi edinin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 0b61cdf7-75b7-4abd-aff2-7bd997717626
@@ -9,12 +10,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 514b910f2c19822dc821b8c9a52ae96b8aac80f0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d079c2fbd41f6a3eff881a544e8b88c50938e3bf
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74778108"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98722418"
 ---
 # <a name="troubleshoot-performance-tools-issues"></a>Performans araçları sorunlarını giderme
 Profil Oluşturma Araçları kullandığınızda aşağıdaki sorunlardan biriyle karşılaşabilirsiniz:
@@ -24,7 +25,7 @@ Profil Oluşturma Araçları kullandığınızda aşağıdaki sorunlardan biriyl
 - [Performans görünümleri ve raporlar işlev adlarının numaralarını görüntüler](#performance-views-and-reports-display-numbers-for-function-names)
 
 ## <a name="no-data-is-collected-by-the-profiling-tools"></a>Profil oluşturma araçları tarafından hiçbir veri toplanmadı
- Bir uygulamayı profilledikten sonra, profil oluşturma verileri (.* VSP*) dosyası oluşturulmaz ve **Çıkış** penceresinde veya komut penceresinde aşağıdaki uyarıyı alırsınız:
+ Bir uygulamayı profilledikten sonra, profil oluşturma verileri (.*VSP*) dosyası oluşturulmaz ve **Çıkış** penceresinde veya komut penceresinde aşağıdaki uyarıyı alırsınız:
 
  PRF0025: veri toplanmadı.
 
@@ -43,7 +44,7 @@ Profil Oluşturma Araçları kullandığınızda aşağıdaki sorunlardan biriyl
 
 - Öğesini bulun. *pdb* dosyaları ve uygulama dosyalarıyla aynı dizine yerleştirin.
 
-- Sembol bilgilerini profil oluşturma verilerine ekleyin (.* VSP*) dosyası. Daha fazla bilgi için bkz. [performans veri dosyalarıyla sembol bilgilerini kaydetme](../profiling/saving-symbol-information-with-performance-data-files.md).
+- Sembol bilgilerini profil oluşturma verilerine ekleyin (.*VSP*) dosyası. Daha fazla bilgi için bkz. [performans veri dosyalarıyla sembol bilgilerini kaydetme](../profiling/saving-symbol-information-with-performance-data-files.md).
 
 > [!NOTE]
 > Analiz altyapısı, için gerektirir. *pdb* dosyası, derlenen uygulama dosyasıyla aynı sürümdür. A. uygulama dosyasının önceki veya sonraki bir derlemeden *pdb* dosyası çalışmayacak.

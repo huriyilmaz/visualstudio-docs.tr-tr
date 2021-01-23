@@ -1,5 +1,6 @@
 ---
 title: Özet görünümü-.NET bellek verileri | Microsoft Docs
+description: Özet görünümünün, en fazla belleği ayrılan .NET işlevleri ve türleri hakkında bilgi görüntülemesini öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +12,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: a67902af99eaee6c75f92f86c2481dfc2afd744e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 590705e7fb55315176d5533a9cd009784430ea4d
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74771562"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98722678"
 ---
 # <a name="summary-view---net-memory-data"></a>Özet görünümü-.NET bellek verileri
 Özet görünümü, en fazla belleği alan .NET işlevleri ve türleri ve profil oluşturma çalıştırmasında en çok oluşturulan türleri görüntüler. Bildirim bağlantılarının ve rapor listelerinin açıklaması dahil daha fazla bilgi için bkz. [Özet görünümü](../profiling/summary-view.md).

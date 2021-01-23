@@ -1,5 +1,6 @@
 ---
 title: Performans verilerini almak için komut satırı profil oluşturma yöntemlerini kullanma
+description: Visual Studio Profil Oluşturma Araçları komut satırı araçlarının ve seçeneklerinin, profil oluşturduğunuz uygulamanın türü gibi etkenlere nasıl bağlı olduğunu öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 5613fafc-f298-4e7a-9a2d-a853b61cdf9c
@@ -9,12 +10,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: b30aa723ea3014aec2bd05d4bd204b9427b3c218
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1796fad03d04ffb79ca1c8aeccc241ee3698f9f1
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74779980"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98723250"
 ---
 # <a name="use-profiling-methods-to-collect-performance-data-from-the-command-line"></a>Komut satırından performans verileri toplamak için profil oluşturma metotlarını kullanma
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]Komut satırı araçları ve seçenekleri profil oluşturma araçları seçiminiz, profil oluşturduğunuz uygulamanın türü, kullanmak istediğiniz profil oluşturma yöntemi ve hedef uygulamanın yerel veya .NET Framework kodunda yazılıp yazılmayacağı gibi faktörlere bağlıdır.

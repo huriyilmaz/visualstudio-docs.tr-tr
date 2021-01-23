@@ -1,5 +1,6 @@
 ---
 title: Kullanım görünümü | Microsoft Docs
+description: Kullanım görünümünün, geçerli işlem tarafından kullanılan CPU, GPU ve diğer sistem kaynaklarıyla ilgili bilgileri görüntüleyeceğini öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,15 +13,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 926c67261f91aa8787d9be4a33dadbd3a890c568
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 047c9ef9d5bb03546eb88372ae43a51c7c8e4d32
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62823536"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98723211"
 ---
 # <a name="utilization-view"></a>Kullanım görünümü
-**Kullanım görünümü** , geçerli işlem tarafından kullanılan CPU, GPU ve diğer sistem kaynaklarıyla ilgili bilgileri görüntüler ( **Analyze**  >  eşzamanlılık Görselleştiriciyi başlatmak için**eşzamanlılık görselleştirmesini** Çözümle ' yi seçin). Analiz edilen işlem, boşta işlem, sistem işlemi ve zaman içinde sistemde çalışan diğer işlemlere göre ortalama temel kullanımı gösterir. Belirli bir zamanda etkin olan belirli bir çekirdeği göstermez. Örneğin, belirli bir süre boyunca her biri yüzde 50 kapasiteye iki çekirdek çalışıyorsa, bu görünüm kullanılan bir mantıksal çekirdeği gösterir. Görünüm, profil oluşturma süresi kısa saat dilimlerine bölünerek oluşturulur. Her segment için grafik, bu Aralık süresince mantıksal çekirdekler üzerinde yürütülen işlem iş parçacıklarının ortalama sayısını çizer.
+**Kullanım görünümü** , geçerli işlem tarafından kullanılan CPU, GPU ve diğer sistem kaynaklarıyla ilgili bilgileri görüntüler (   >  eşzamanlılık Görselleştiriciyi başlatmak için **eşzamanlılık görselleştirmesini** Çözümle ' yi seçin). Analiz edilen işlem, boşta işlem, sistem işlemi ve zaman içinde sistemde çalışan diğer işlemlere göre ortalama temel kullanımı gösterir. Belirli bir zamanda etkin olan belirli bir çekirdeği göstermez. Örneğin, belirli bir süre boyunca her biri yüzde 50 kapasiteye iki çekirdek çalışıyorsa, bu görünüm kullanılan bir mantıksal çekirdeği gösterir. Görünüm, profil oluşturma süresi kısa saat dilimlerine bölünerek oluşturulur. Her segment için grafik, bu Aralık süresince mantıksal çekirdekler üzerinde yürütülen işlem iş parçacıklarının ortalama sayısını çizer.
 
  ![CPU kullanımı görünümü](../profiling/media/vsts_ppacpuutil.png "VSTS_PPAcpuUtil")
 
@@ -46,7 +47,7 @@ ms.locfileid: "62823536"
  GPU 'YU C++ AMP veya DirectX kullanarak kullanıyorsanız, kullanımdaki GPU altyapısının sayısını veya GPU 'nun beklenmedik bir şekilde boşta olduğu bölgeleri tanımlamayı düşünebilirsiniz.
 
 ## <a name="zoom"></a>Zoom
- CPU kullanımı grafiğini veya GPU etkinlik grafiğini yakınlaştırmak için bir bölüm seçin ya da grafiğin üzerindeki yakınlaştırma kaydırıcı aracını kullanın. Diğer görünümlere geçiş yaparken yakınlaştırma ayarı devam ettirir. Yeniden yakınlaştırmak için yakınlaştırma kaydırıcı aracını kullanın. Ayrıca, **CTRL**kaydırma kullanarak da yakınlaştırma yapabilirsiniz + **scroll**.
+ CPU kullanımı grafiğini veya GPU etkinlik grafiğini yakınlaştırmak için bir bölüm seçin ya da grafiğin üzerindeki yakınlaştırma kaydırıcı aracını kullanın. Diğer görünümlere geçiş yaparken yakınlaştırma ayarı devam ettirir. Yeniden yakınlaştırmak için yakınlaştırma kaydırıcı aracını kullanın. Ayrıca, **CTRL** kaydırma kullanarak da yakınlaştırma yapabilirsiniz + .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Eşzamanlılık Görselleştiricisi](../profiling/concurrency-visualizer.md)

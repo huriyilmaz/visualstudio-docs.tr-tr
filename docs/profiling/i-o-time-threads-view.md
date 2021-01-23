@@ -1,5 +1,6 @@
 ---
 title: G-ç zamanı (Iş parçacıkları görünümü) | Microsoft Docs
+description: G/ç olarak kategorilere ayrılan engelleme süreleriyle ilgili olarak g/ç zaman segmentlerinin nasıl ilişkilendirildiğini öğrenin. Bu, bir iş parçacığının g/ç işleminin bitmesini beklediği anlamına gelir.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9d7ba29383ddddc02160967a90b56046128d2f19
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 915ab6aef595fba7e13321d4e23c08bdd2eadaf3
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62995448"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98721638"
 ---
 # <a name="io-time-threads-view"></a>G/Ç zamanı (İş Parçacıkları Görünümü)
 Zaman çizelgesindeki bu segmentler, g/ç olarak kategorilere ayrılan engelleyici sürelerle ilişkilendirilir. Bu, bir iş parçacığının bir g/ç işleminin bitmesini beklediği anlamına gelir. İş parçacığı bir API 'de engellenmiş olabilir veya g/ç ile ilgili bir çekirdek, eşzamanlılık görselleştiricinin g/ç olarak sayımının tamamlanmasını bekler. , Ve gibi API 'Ler `CreateFile()` `ReadFile()` `WSARecv()` Bu gruba girer.

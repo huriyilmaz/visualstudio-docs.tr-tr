@@ -1,5 +1,6 @@
 ---
 title: Süreölçer | Microsoft Docs
+description: VSPerfCmd.exe Zamanlayıcı seçeneğinin, işlemci saati döngülerine örneklendiği profil oluşturma olayını nasıl ayarlacağınızı öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 1971868e-89fa-4452-8ee7-76e4daf31b66
@@ -9,23 +10,23 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: e1bed2715421948385a5b7eb1ddbbac064f3288b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 908685b49a08b3084c31e768675e64bc087bc727
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74778121"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98722444"
 ---
 # <a name="timer"></a>Zamanlayıcı
 *VSPerfCmd.exe* **Zamanlayıcı** seçeneği, işlemci saati döngüleri olarak örneklenen profil oluşturma olayını ayarlar ve isteğe bağlı olarak bir örnekleme aralığındaki döngü sayısını varsayılan 10.000.000 ' dan değiştirir. 1GH (bir gigahertz) işlemcisinde 10.000.000 saat döngüsü yaklaşık 100 örnek/saniye. Belirtime için en az döngü sayısı 50.000 ' dir.
 
  **Süreölçer** yalnızca örnekleme profil oluşturma yöntemini kullandığınızda kullanılabilir ve yalnızca **başlatma** veya **iliştirme** seçeneğini de içeren bir komut satırında kullanılabilir.
 
- Varsayılan olarak, profil oluşturucu örnekleme olayı, işlemci saati döngüleri olarak ayarlanır ve örnekleme aralığı 10.000.000 olarak ayarlanır. **Zamanlayıcı**, **PF**, **sys**ve **sayaç** seçenekleri, örnekleme olayını ve örnekleme aralığını ayarlamanıza olanak sağlar. **GC** seçeneği, her bir ayırma ve çöp toplama olayında .net bellek verilerini toplar. Komut satırında bu seçeneklerden yalnızca biri belirtilebilir.
+ Varsayılan olarak, profil oluşturucu örnekleme olayı, işlemci saati döngüleri olarak ayarlanır ve örnekleme aralığı 10.000.000 olarak ayarlanır. **Zamanlayıcı**, **PF**, **sys** ve **sayaç** seçenekleri, örnekleme olayını ve örnekleme aralığını ayarlamanıza olanak sağlar. **GC** seçeneği, her bir ayırma ve çöp toplama olayında .net bellek verilerini toplar. Komut satırında bu seçeneklerden yalnızca biri belirtilebilir.
 
  Örnekleme olayı ve örnekleme aralığı yalnızca bir **başlatma** veya **iliştirme** seçeneği içeren ilk komut satırında ayarlanabilir.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cmd
 VSPerfCmd.exe {/Launch:AppName|/Attach:PID} /Timer[:Cycles] [Options]
@@ -42,15 +43,15 @@ VSPerfCmd.exe {/Launch:AppName|/Attach:PID} /Timer[:Cycles] [Options]
  **Ekle:** `PID` Profil oluşturucuyu işlem KIMLIĞI () tarafından belirtilen işleme iliştirir `PID` .
 
 ## <a name="invalid-options"></a>Geçersiz seçenekler
- Aşağıdaki seçenekler **Zamanlayıcı**ile aynı komut satırında belirtilemez.
+ Aşağıdaki seçenekler **Zamanlayıcı** ile aynı komut satırında belirtilemez.
 
  **PF**[**:** `Events` ] örnekleme olayını sayfa hatalarına ayarlar ve isteğe bağlı olarak örnekleme aralığını olarak ayarlar `Events` . Varsayılan PF aralığı 10 ' dur.
 
  **Sys**[**:** `Events` ] örnekleme olayını işletim sistemi çağrılarına ayarlar ve isteğe bağlı olarak örnekleme aralığını olarak ayarlar `Events` . Varsayılan sys aralığı 10 ' dur.
 
- **Counter**[**:** `Name,Reload,FriendlyName` ] Sayacı, örnekleme olayını tarafından belirtilen CPU performans sayacına ayarlar `Name` ve örnekleme aralığını olarak ayarlar `Reload` .
+ [**:** `Name,Reload,FriendlyName` ] Sayacı, örnekleme olayını tarafından belirtilen CPU performans sayacına ayarlar `Name` ve örnekleme aralığını olarak ayarlar `Reload` .
 
- **GC**[**:**{**Allocation**&#124;**Lifetime**}] .net bellek verilerini toplar. Varsayılan olarak,**Allocation**veriler her bellek ayırma olayında toplanır. **Ömür** parametresi belirtildiğinde her çöp toplama olayında de veriler toplanır.
+ **GC**[**:**{**Allocation**&#124;**Lifetime**}] .net bellek verilerini toplar. Varsayılan olarak,veriler her bellek ayırma olayında toplanır. **Ömür** parametresi belirtildiğinde her çöp toplama olayında de veriler toplanır.
 
 ## <a name="example"></a>Örnek
  Bu örnekte, profil oluşturucu örnekleme aralığının 1.000.000 işlemci döngüleri olarak nasıl ayarlanacağı gösterilmektedir.

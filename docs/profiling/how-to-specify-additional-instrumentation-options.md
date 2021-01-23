@@ -1,5 +1,6 @@
 ---
 title: Ek Izleme seçeneklerini belirtin | Microsoft Docs
+description: Visual Studio IDE 'yi kullanarak veya komut satırı araçlarını kullanarak ikili dosyaları nasıl kullanabileceğinizi öğrenin.
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -14,12 +15,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 42c5500d03e815bad1666da7b52918479715e861
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: aaa6a222ca320ff9e8e3d117c2218e170d67d683
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851820"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98721859"
 ---
 # <a name="how-to-specify-additional-instrumentation-options"></a>Nasıl yapılır: Ek izleme seçeneklerini belirtme
 
@@ -38,7 +39,7 @@ Visual Studio IDE 'yi kullanarak veya komut satırı araçlarını kullanarak ik
 
      Örneğin, profil oluşturma düzeyini belirtmek için/CONTROL: THREAD komutunu kullanın. Seçeneklerin tamamı listesi için bkz. [vsinstr](../profiling/vsinstr.md).
 
-4. **Tamam**’a tıklayın.
+4. **Tamam**'a tıklayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

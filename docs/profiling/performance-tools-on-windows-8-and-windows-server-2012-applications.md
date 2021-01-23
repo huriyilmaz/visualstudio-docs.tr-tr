@@ -1,5 +1,6 @@
 ---
 title: Windows 8 & WS 2012 uygulamalarında performans araçları
+description: Windows 8 ve Windows Server 2012 ' deki gelişmiş güvenlik özelliklerinin, Visual Studio performans araçları 'nın verileri toplama biçiminde önemli değişiklikler yapması hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 06/19/2017
 ms.topic: conceptual
@@ -9,12 +10,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: cc44eddc2af2e2d85f7c4bb9c876d336ccd1b546
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: ce83684b77d4546915cdcf5980e68be0b6c6a125
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90807839"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98719597"
 ---
 # <a name="performance-tools-on-windows-8-and-windows-server-2012-applications"></a>Windows 8 ve Windows Server 2012 uygulamalarında performans araçları
 
@@ -111,7 +112,7 @@ Katman etkileşim verileri toplama seçeneğini Performans Gezgini bir profil ol
 
 **Uzak makinede Ipucu verileri toplama**
 
-Uzak bir makinedeki katman etkileşimi verilerini toplamak için, **vs \_ Profiler \_ ** _\<Platform>_ **\_** _\<Language>_ **. exe** dosyasını bir Visual Studio makinesinin *%VSInstallDir%\Team Tools\Performance tools\kurulumları* klasöründen uzak bilgisayara kopyalamanız ve kurmanız gerekir. [Uzaktan hata ayıklama](../debugger/remote-debugging.md) indirme paketindeki profil oluşturma araçlarını kullanamazsınız.
+Uzak bir makinedeki katman etkileşimi verilerini toplamak için, **vs \_ Profiler \_** _\<Platform>_ **\_** _\<Language>_ **. exe** dosyasını bir Visual Studio makinesinin *%VSInstallDir%\Team Tools\Performance tools\kurulumları* klasöründen uzak bilgisayara kopyalamanız ve kurmanız gerekir. [Uzaktan hata ayıklama](../debugger/remote-debugging.md) indirme paketindeki profil oluşturma araçlarını kullanamazsınız.
 
 Profil oluşturma verilerini toplamak için [VSPerfCmd](../profiling/vsperfcmd.md) veya [VSPerfASPNETCmd](../profiling/vsperfaspnetcmd.md) kullanabilirsiniz.
 

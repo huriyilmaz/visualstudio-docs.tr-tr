@@ -1,5 +1,6 @@
 ---
 title: Yönerge Işaretçileri (IP) görünümü-.NET Bellek Örnekleme verileri
+description: Örnekleme yöntemi kullanılarak toplanan .NET bellek ayırma profil oluşturma verileri için IP 'Leri görünümü belleği ayrılan derleme yönergelerini listeler.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +12,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6f02c2cea714b6c9688efff217ed546490f61764
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: d89ede5d7b58bf2605413d8e0621d81983549f34
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809956"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98721586"
 ---
 # <a name="instruction-pointers-ips-view---net-memory-sampling-data"></a>Yönerge Işaretçileri (IP) görünümü-.NET Bellek Örnekleme verileri
 Örnekleme yöntemi kullanılarak toplanan .NET bellek ayırma profil oluşturma verileri için IP 'Leri görünümü, profil oluşturma çalışması sırasında belleği ayrılan derleme yönergelerini listeler. Görünüm sütunları Ayrıca, ayırma boyutunu ve sayısını listeler.
@@ -27,7 +28,7 @@ ms.locfileid: "90809956"
 |------------|-----------------|
 |**İşlem Kimliği**|Profil oluşturma çalıştırmasının işlem KIMLIĞI (PID).|
 |**İşlem adı**|Sürecin adı.|
-|**Modül Adı**|Yönergeyi içeren modülün adı.|
+|**Modül adı**|Yönergeyi içeren modülün adı.|
 |**Modül yolu**|Yönergeyi içeren modülün yolu.|
 |**Kaynak Dosya**|Yönergesini içeren kaynak dosya.|
 |**İşlev adı**|İşlevin adı.|

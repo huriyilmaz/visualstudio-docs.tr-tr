@@ -1,5 +1,6 @@
 ---
 title: Yönerge Işaretçileri (IP) görünümü-örnekleme verileri | Microsoft Docs
+description: Örnekleme verileri 'nin IP görünümünün, örnekler toplandığında doğrudan yürütülen derleme yönergelerinin performans verilerini nasıl listeleyeceğinizi öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +12,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 42398e044bfc06e41249b15ac9baeebcaebd19f6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f08821516ca25ed4e1746e13e506b9c0094b0227
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74774262"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98721560"
 ---
 # <a name="instruction-pointers-ips-view---sampling-data"></a>Yönerge Işaretçileri (IP) görünümü-örnekleme verileri
 Örnekleme verilerinin IP 'Leri görünümü, profil oluşturma çalıştırmasında örnek toplandığında doğrudan yürütülen derleme yönergeleri için performans verilerini listeler.
@@ -28,7 +29,7 @@ ms.locfileid: "74774262"
 |------------|-----------------|
 |**İşlem Kimliği**|Profil oluşturma çalıştırmasının işlem KIMLIĞI (PID).|
 |**İşlem adı**|Sürecin adı.|
-|**Modül Adı**|Yönergeyi içeren modülün adı.|
+|**Modül adı**|Yönergeyi içeren modülün adı.|
 |**Modül yolu**|Yönergeyi içeren modülün yolu.|
 |**Kaynak Dosya**|Yönergesini içeren kaynak dosya.|
 |**İşlev adı**|Yönergeyi içeren işlevin adı.|

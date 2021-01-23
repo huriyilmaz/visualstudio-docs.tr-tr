@@ -1,5 +1,6 @@
 ---
 title: Kaynak Ayrıntıları görünümü-çekişme verileri | Microsoft Docs
+description: Kaynak ayrıntıları görünümünün, seçili bir kaynak üzerinde çekişmeler nedeniyle oluşan engelleme olaylarının zaman çizelgesi grafiğini nasıl sunabileceğini öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: e66432fd2f5d8b1532bece9d76e7dfc2a261e4b7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 45babe50e794e0831fd0e93048b32feaf18be87a
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74771614"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98720364"
 ---
 # <a name="resource-details-view---contention-data"></a>Kaynak Ayrıntıları Görünümü - Çakışma Verileri
 Kaynak Ayrıntıları görünümü, seçili bir kaynak üzerinde çekişmeler nedeniyle oluşan engelleme olaylarının bir zaman çizelgesi grafiğini sunar. Başka bir iş parçacığının kaynağa erişimi kilitlendiğinden, bir iş parçacığı yürütmeyi askıya almaya zorlandığında engelleyici bir olay oluşur.

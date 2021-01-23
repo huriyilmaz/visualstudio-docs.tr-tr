@@ -1,5 +1,6 @@
 ---
 title: Genel performans oturumu seçeneklerini ayarlama | Microsoft Docs
+description: Profil Oluşturma Araçları performans oturumu için koleksiyon yöntemini ve profil oluşturma veri adlandırma kurallarını nasıl ayarlayabileceğinizi öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -10,20 +11,20 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 698905f5e924bd8ddd424207a508ceaa4562ec57
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2691d9d8868343291f3be4d9f5b3002e24605b85
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85544475"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98720195"
 ---
 # <a name="set-general-performance-session-options"></a>Genel performans oturumunu ayarlama seçenekleri
 
-Performans oturumunun Özellikler iletişim kutusunun **genel** sayfasında, bir Visual Studio profil oluşturma araçları performans oturumu için koleksiyon yöntemini ve profil oluşturma veri adlandırma kuralları ' nı ayarlayabilirsiniz. Bu iletişim kutusunu **Performans Gezgini**açmak için, performans oturumuna sağ tıklayın ve ardından **Özellikler**' e tıklayın.
+Performans oturumunun Özellikler iletişim kutusunun **genel** sayfasında, bir Visual Studio profil oluşturma araçları performans oturumu için koleksiyon yöntemini ve profil oluşturma veri adlandırma kuralları ' nı ayarlayabilirsiniz. Bu iletişim kutusunu **Performans Gezgini** açmak için, performans oturumuna sağ tıklayın ve ardından **Özellikler**' e tıklayın.
 
 ## <a name="choosing-data-collection-methods"></a>Veri toplama yöntemlerini seçme
 
-**Profil oluşturma koleksiyonu**altındaki seçeneklerden birini seçerek temel toplama yöntemini ayarlarsınız. Seçenekler aşağıdaki tabloda açıklanmıştır:
+**Profil oluşturma koleksiyonu** altındaki seçeneklerden birini seçerek temel toplama yöntemini ayarlarsınız. Seçenekler aşağıdaki tabloda açıklanmıştır:
 
 |Seçenek|Makale|
 |-|-|
@@ -31,7 +32,7 @@ Performans oturumunun Özellikler iletişim kutusunun **genel** sayfasında, bir
 |**İzleme**. İzleme yöntemi, bir profil oluşturma çalışması sırasında modüldeki işlevlerin her bir girdisini, çıkış ve işlev çağrısını kaydeden bir modül profil oluşturma kodunun bir kopyasına çıkartır. Bu yöntem, kodunuzun bir bölümü hakkında ayrıntılı zamanlama bilgileri toplamak ve giriş ve çıkış işlemlerinin uygulama performansı üzerinde etkisini anlamak için yararlıdır.|- [Izleme kullanarak ayrıntılı zamanlama verileri toplama](../profiling/collecting-detailed-timing-data-by-using-instrumentation.md)|
 |**Eşzamanlılık**. Eşzamanlılık yöntemi, kodunuzun yürütülmesini engelleyen her olay için veri toplar; Örneğin, bir iş parçacığı, bir uygulama kaynağına yönelik kilitli erişimin serbest gelmesini bekler. Bu yöntem, çok iş parçacıklı uygulamaların çözümlenmesi için yararlıdır.|- [Iş parçacığını toplama ve eşzamanlılık verilerini Işleme](../profiling/collecting-thread-and-process-concurrency-data.md)|
 
- Örnekleme veya izleme yöntemlerini kullanarak .NET bellek verileri toplayabilirsiniz. **.Net bellek profili oluşturma**altında veri türünü seçersiniz.
+ Örnekleme veya izleme yöntemlerini kullanarak .NET bellek verileri toplayabilirsiniz. **.Net bellek profili oluşturma** altında veri türünü seçersiniz.
 
 |Seçenek|Makale|
 |-|-|

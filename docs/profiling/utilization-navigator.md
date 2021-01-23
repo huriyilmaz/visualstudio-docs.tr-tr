@@ -1,5 +1,6 @@
 ---
 title: Kullanım Gezgini | Microsoft Docs
+description: Bir izlemede zaman aralığı seçmek için eşzamanlılık görselleştiricisi içindeki kullanım Gezginini nasıl kullanabileceğinizi öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -10,19 +11,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 94e2562e86af36d935679916c2bfb9669be1758d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9f209098200333e91f0e5baf9c7a2b73b4a3202f
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62823497"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98723224"
 ---
 # <a name="utilization-navigator"></a>Kullanım Gezgini
 Bir izlemede zaman aralığı seçmek için eşzamanlılık görselleştiricisi içindeki kullanım Gezgini ' ni kullanabilirsiniz. Eşzamanlılık görselleştiricisi, CPU çekirdeklerinin zaman içindeki hedef işleme göre kullanımını gösterir. Bu, CPU kullanım düzenlerini incelemenizi kolaylaştırır ve ayrıca, kullanım verileri ile diğer görünümlerdeki veriler arasında karşılaştırmaya olanak sağlar. Kullanım Gezgini, eşzamanlılık görselleştiricisi içindeki her görünümün en üstünde görünür. Aşağıdaki çizimde kullanım Gezgini gösterilmektedir.
 
  ![Seçili zaman dilimini gösteren kullanım Gezgini](../profiling/media/cvutilizationnavigator.png "Cvkullanımı Zationnavigator") Kullanım Gezgini ve seçilen zaman çerçevesi
 
- Çizimde, seçilen Aralık, *Thumb*olarak bilinen kırmızı bir dikdörtgen tarafından tanımlanır.
+ Çizimde, seçilen Aralık, *Thumb* olarak bilinen kırmızı bir dikdörtgen tarafından tanımlanır.
 
  Kullanım gezginini, görüntülenecek zaman aralığını değiştirmek için nasıl kullanabileceğinizi aşağıda bulabilirsiniz:
 

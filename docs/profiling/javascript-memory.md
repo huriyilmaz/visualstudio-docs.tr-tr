@@ -1,5 +1,6 @@
 ---
 title: UWP uygulamalarında JavaScript bellek kullanımını analiz etme | Microsoft Docs
+description: JavaScript hafıza Çözümleyicisi 'nin bellek kullanımını anlamanıza ve JavaScript kullanarak Windows için tasarlanan UWP uygulamalarınızda bellek sızıntılarını bulmanıza yardımcı olmak için nasıl kullanılabilir olduğunu öğrenin.
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -20,12 +21,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 86a1b857639d8a58ffc7686569ad8e103674f136
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: a29d12a4ca2e6a7a620c5197f76c0ad35ac33a40
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037490"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98721690"
 ---
 # <a name="analyze-javascript-memory-usage-in-uwp-apps"></a>UWP uygulamalarında JavaScript bellek kullanımını analiz etme
 JavaScript hafıza Çözümleyicisi, Visual Studio 'da, bellek kullanımını anlamanıza ve JavaScript kullanarak Windows için tasarlanan UWP uygulamalarınızda bellek sızıntılarını bulmanıza yardımcı olmak için kullanılabilir. Desteklenen uygulamalar, Evrensel Windows uygulamalarına yönelik uygulamalar içerir.
@@ -75,7 +76,7 @@ JavaScript hafıza Çözümleyicisi, Visual Studio 'da, bellek kullanımını an
 
      İlgili bellek kullanımı senaryolarını test etmek ve aşağıdaki bölümlerde açıklandığı gibi bellek grafiğini görüntülemek için uygulamayla etkileşime geçin.
 
-6. **Alt**sekmeye basarak Visual Studio 'ya geçiş yapın + **Tab**.
+6. **Alt** sekmeye basarak Visual Studio 'ya geçiş yapın + .
 
 7. Bellek Çözümleyicisinin toplarken verileri görüntülemek için **yığın anlık görüntüsü al**' ı seçin. Bu konunun ilerleyen kısımlarında [bir anlık görüntü özeti görüntüleyin](#view-a-snapshot-summary) bölümüne bakın.
 
@@ -112,7 +113,7 @@ JavaScript hafıza Çözümleyicisi, Visual Studio 'da, bellek kullanımını an
    > [!TIP]
    > Test senaryosunu birkaç kez tekrarlayarak, başlatma işinin sonuçlardan filtrelenerek filtrelenebilir olmasına yardımcı olabilirsiniz.
 
-5. Visual Studio 'ya geçiş yapın ( **alt** + **sekmeye**basın).
+5. Visual Studio 'ya geçiş yapın ( **alt** + **sekmeye** basın).
 
 6. **Yığın anlık görüntüsü al**' i seçerek temel bir yığın anlık görüntüsü alın.
 
@@ -193,11 +194,11 @@ JavaScript hafıza Çözümleyicisi, Visual Studio 'da, bellek kullanımını an
 
 - Yığın boyutu. Bu sayı, DOM öğelerini ve JavaScript çalışma zamanı altyapısının JavaScript yığınına eklediği nesneleri içerir. Yığın boyutu anlık görüntünün türler görünümüne bağlanır.
 
-- Fark yığın boyutu. Bu değer, geçerli anlık görüntünün yığın boyutu ve önceki anlık görüntünün yığın boyutu arasındaki farkı gösterir. Bellek artışı varsa, bu değerin sonunda kırmızı yukarı ok, bir bellek azalması olursa yeşil aşağı ok gelir. Yığın boyutu anlık görüntüler arasında değişmemişse, metin olarak bir sayı değil **hiçbir değişiklik olmadığını** görürsünüz. İlk anlık görüntü için metin **temelini**görürsünüz. Fark yığın boyutu, anlık görüntü farkı türleri görünümüne bağlanır.
+- Fark yığın boyutu. Bu değer, geçerli anlık görüntünün yığın boyutu ve önceki anlık görüntünün yığın boyutu arasındaki farkı gösterir. Bellek artışı varsa, bu değerin sonunda kırmızı yukarı ok, bir bellek azalması olursa yeşil aşağı ok gelir. Yığın boyutu anlık görüntüler arasında değişmemişse, metin olarak bir sayı değil **hiçbir değişiklik olmadığını** görürsünüz. İlk anlık görüntü için metin **temelini** görürsünüz. Fark yığın boyutu, anlık görüntü farkı türleri görünümüne bağlanır.
 
 - Nesne sayısı. Bu sayı yalnızca uygulamanızda oluşturulan nesneleri gösterir ve JavaScript çalışma zamanı tarafından oluşturulan yerleşik nesneleri filtreler. Nesne sayısı, anlık görüntü ayrıntılarının türler görünümüne bağlanır.
 
-- Türev nesne sayısı. Bu iki değeri gösterir: ilk değer, önceki anlık görüntüden bu yana eklenen yeni nesne sayısıdır; İkinci değer ise önceki anlık görüntüden bu yana kaldırılan nesne sayısıdır. Örneğin, çizim, 1.859 nesnelerinin eklendiğini ve 1.733 nesnelerinin anlık görüntü #1 bu yana kaldırıldığını gösterir. Toplam nesne sayısı artmışsa ve bu bilgiler azaldıysa yeşil aşağı ok, bu bilgilerin ardından kırmızı bir ok ile izlenir. Nesne sayısı değiştirilmediyse, bir sayı yerine **hiçbir değişiklik olmadığını** görürsünüz. İlk anlık görüntü için metin **temelini**görürsünüz. Fark nesnesi sayısı, anlık görüntü farkı türleri görünümüne bağlanır.
+- Türev nesne sayısı. Bu iki değeri gösterir: ilk değer, önceki anlık görüntüden bu yana eklenen yeni nesne sayısıdır; İkinci değer ise önceki anlık görüntüden bu yana kaldırılan nesne sayısıdır. Örneğin, çizim, 1.859 nesnelerinin eklendiğini ve 1.733 nesnelerinin anlık görüntü #1 bu yana kaldırıldığını gösterir. Toplam nesne sayısı artmışsa ve bu bilgiler azaldıysa yeşil aşağı ok, bu bilgilerin ardından kırmızı bir ok ile izlenir. Nesne sayısı değiştirilmediyse, bir sayı yerine **hiçbir değişiklik olmadığını** görürsünüz. İlk anlık görüntü için metin **temelini** görürsünüz. Fark nesnesi sayısı, anlık görüntü farkı türleri görünümüne bağlanır.
 
 - Anlık görüntünün alındığı sırada ekranın ekran görüntüsü.
 
@@ -255,7 +256,7 @@ JavaScript hafıza Çözümleyicisi, Visual Studio 'da, bellek kullanımını an
 
   Anlık görüntüler arasındaki fark bilgilerini filtrelemek için, fark görünümlerinin en üstündeki **kapsam** filtrelerinden birini seçin.
 
-- **Anlık görüntüden kalan nesneler # \<number> **. Bu filtre, yığına eklenen ve taban çizgisi anlık görüntüsüne ve önceki anlık görüntüye kıyasla yığından kaldırılan nesneler arasındaki farkı gösterir. Örneğin, anlık görüntü Özeti nesne sayımında + 205/-195 ' i gösteriyorsa bu filtre, eklenen ancak kaldırılmayan on nesneyi gösterir.
+- **Anlık görüntüden kalan nesneler # \<number>**. Bu filtre, yığına eklenen ve taban çizgisi anlık görüntüsüne ve önceki anlık görüntüye kıyasla yığından kaldırılan nesneler arasındaki farkı gösterir. Örneğin, anlık görüntü Özeti nesne sayımında + 205/-195 ' i gösteriyorsa bu filtre, eklenen ancak kaldırılmayan on nesneyi gösterir.
 
   > [!TIP]
   > Bu filtrede en yararlı bilgileri göstermek için [Bellek sızıntısını ayırma](#isolate-a-memory-leak)bölümünde açıklanan adımları izleyin.

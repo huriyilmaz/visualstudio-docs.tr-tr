@@ -1,5 +1,6 @@
 ---
 title: TargetCLR | Microsoft Docs
+description: Bir uygulamaya CLR 'nin birden fazla sürümü yüklendiğinde, TargetCLR seçeneğinin profil için ortak dil çalışma zamanı sürümünü nasıl belirttiğinden öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: f9732480-287f-40f1-a4ff-b112e143b940
@@ -9,19 +10,19 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: fffcab1d841840c15957e8dae0ff0f87b20de28d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dff098dc5b893ce394698118d53ae6a96fc8b28a
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74771612"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98719818"
 ---
 # <a name="targetclr"></a>TargetCLR
 **Targetclr** seçeneği, BIR uygulamaya CLR 'nin birden fazla sürümü yüklendiğinde profil için ortak dil çalışma zamanı (CLR) sürümünü belirtir.
 
  Profil Oluşturma Araçları, varsayılan olarak, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] uygulama tarafından yüklenen CLR 'nin ilk sürümünü hedefleyin.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cmd
 VSPerfCmd.exe {/Launch:AppName | /Attach:PID} /TargetCLR[:ClrVersion] [Options]

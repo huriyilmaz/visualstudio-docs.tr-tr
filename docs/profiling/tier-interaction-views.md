@@ -1,5 +1,6 @@
 ---
 title: Katman etkileşimi görünümleri | Microsoft Docs
+description: Katman etkileşimi profili oluşturma işleminin veritabanlarıyla iletişim kuran çok katmanlı uygulamalardaki işlevlerin yürütme zamanları hakkında bilgi sağladığını öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +11,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 96b5fed31238fbc0e46d9982080b3acb1082e9f9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9b358409b83a924672880cef5972ffbd3bd9a17f
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74778134"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98722548"
 ---
 # <a name="tier-interaction-views"></a>Etkileşim Görünümleri
 

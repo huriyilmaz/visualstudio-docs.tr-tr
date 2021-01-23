@@ -12,12 +12,12 @@ author: mikejo5000
 dev_langs:
 - VB
 - CSharp
-ms.openlocfilehash: aa1f0505d37059ce65da80fcf483473610cf2f6d
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+ms.openlocfilehash: ba3baa1ff06da6497ddc663f888e7c93292d5b98
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96329542"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98719662"
 ---
 # <a name="isolate-code-under-test-with-microsoft-fakes"></a>Microsoft Fakes ile test edilen kodu yalıtma
 
@@ -255,11 +255,11 @@ Ayrıca belirli örnekler, oluşturucular ve özellikler için dolgular oluştur
 ## <a name="using-microsoft-fakes-in-the-ci"></a>CI 'da Microsoft Fakes 'i kullanma
 
 ### <a name="microsoft-fakes-assembly-generation"></a>Microsoft Fakes derleme oluşturma
-Microsoft Fakes için Visual Studio Enterprise gerektiğinden, Fakes derlemelerinin oluşturulması, projenizi [Visual Studio Build görevi](/azure/devops/pipelines/tasks/build/visual-studio-build?view=azure-devops)kullanarak oluşturmanızı gerektirir.
+Microsoft Fakes için Visual Studio Enterprise gerektiğinden, Fakes derlemelerinin oluşturulması, projenizi [Visual Studio Build görevi](/azure/devops/pipelines/tasks/build/visual-studio-build?view=azure-devops&preserve-view=true)kullanarak oluşturmanızı gerektirir.
 
 ::: moniker range=">=vs-2019"
 > [!NOTE]
-> Buna alternatif olarak, Fakes derlemelerinizi CI 'da denet, [MSBuild görevini](../msbuild/msbuild-task.md?view=vs-2019)kullanmaktır. Bunu yaptığınızda, aşağıdaki kod parçacığına benzer şekilde, test projenizde oluşturulan Fakes derlemesine bir derleme başvurunuz olduğundan emin olmanız gerekir:
+> Buna alternatif olarak, Fakes derlemelerinizi CI 'da denet, [MSBuild görevini](../msbuild/msbuild-task.md?view=vs-2019&preserve-view=true)kullanmaktır. Bunu yaptığınızda, aşağıdaki kod parçacığına benzer şekilde, test projenizde oluşturulan Fakes derlemesine bir derleme başvurunuz olduğundan emin olmanız gerekir:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -273,10 +273,10 @@ Bu başvurunun el ile özel SDK stili projelere eklenmesi gerekir (.NET Core ve 
 ::: moniker-end
 
 ### <a name="running-microsoft-fakes-tests"></a>Microsoft Fakes testlerini çalıştırma
-Microsoft Fakes derlemeleri yapılandırılmış `FakesAssemblies` dizinde (varsayılan olarak) bulunduğu sürece `$(ProjectDir)FakesAssemblies` , [VSTest görevini](/azure/devops/pipelines/tasks/test/vstest?view=azure-devops)kullanarak testleri çalıştırabilirsiniz.
+Microsoft Fakes derlemeleri yapılandırılmış `FakesAssemblies` dizinde (varsayılan olarak) bulunduğu sürece `$(ProjectDir)FakesAssemblies` , [VSTest görevini](/azure/devops/pipelines/tasks/test/vstest?view=azure-devops&preserve-view=true)kullanarak testleri çalıştırabilirsiniz.
 
 ::: moniker range=">=vs-2019"
-[VSTest Task](/azure/devops/pipelines/tasks/test/vstest?view=azure-devops) .NET Core projeleriyle Microsoft Fakes kullanılarak dağıtılmış test, Visual Studio 2019 güncelleştirme 9 Preview `20201020-06` ve üstünü gerektirir.
+[VSTest Task](/azure/devops/pipelines/tasks/test/vstest?view=azure-devops&preserve-view=true) .NET Core projeleriyle Microsoft Fakes kullanılarak dağıtılmış test, Visual Studio 2019 güncelleştirme 9 Preview `20201020-06` ve üstünü gerektirir.
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"

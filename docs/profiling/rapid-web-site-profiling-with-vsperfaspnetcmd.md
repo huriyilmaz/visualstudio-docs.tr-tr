@@ -1,5 +1,6 @@
 ---
 title: VSPerfASPNETCmd ile hızlı web sitesi profili oluşturma | Microsoft Docs
+description: VSPerfASPNETCmd komut satırı aracının ASP.NET Web uygulamalarının kolayca profilini oluşturmasını nasıl sağladığını öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +12,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: fff2486c4197cbbe28c3b5deb0099e264805e12b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a08604b95f49f55a5fea254447046d305d8feff9
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74771698"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98720429"
 ---
 # <a name="rapid-web-site-profiling-with-vsperfaspnetcmd"></a>VSPerfASPNETCmd ile hızlı web sitesi profili oluşturma
 
@@ -103,5 +104,5 @@ Aşağıdaki seçeneklerden herhangi birini, **VSPerfASPNETCmd/Shutdown** komutu
 
 |Seçenek|Açıklama|
 |------------|-----------------|
-|**/Output:**`VspFile`|Varsayılan olarak, profil oluşturma verileri (.* VSP*) dosyası, geçerli dizinde, bu dosya adı **PerformanceReport. vsp**olarak oluşturulur. Farklı bir konum, dosya adı veya her ikisini de belirtmek için/output seçeneğini kullanın.|
+|**/Output:**`VspFile`|Varsayılan olarak, profil oluşturma verileri (.*VSP*) dosyası, geçerli dizinde, bu dosya adı **PerformanceReport. vsp** olarak oluşturulur. Farklı bir konum, dosya adı veya her ikisini de belirtmek için/output seçeneğini kullanın.|
 |**/PackSymbols: kapalı**|Varsayılan olarak, VsPerfASPNETCmd, içindeki sembolleri (işlev ve parametre adları vb.) katıştırır. *VSP* dosyası. Sembolleri katıştırmak, profil oluşturma veri dosyasını çok büyük hale getirir. Öğesine erişiminiz varsa. sembolleri içeren *pdb* dosyaları verileri çözümlediğinizde, sembollerin gömülmesini devre dışı bırakmak için/packsymbols: off seçeneğini kullanın.|

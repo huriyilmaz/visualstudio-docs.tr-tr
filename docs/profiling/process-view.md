@@ -1,5 +1,6 @@
 ---
 title: İşlem görünümü | Microsoft Docs
+description: Işlem görünümünün profil oluşturma çalışması sırasında yürütülen işlemler ve iş parçacıkları için profil oluşturma verilerini nasıl görüntülediğini öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +18,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: da3097c276557238e6f5b521f6f7d3231434cd10
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bd4dfd4657d6ca2f42c234f576e362ffacb9e693
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74772182"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98719479"
 ---
 # <a name="process-view"></a>İşlem Görünümü
 Işlem görünümü, profil oluşturma çalışması sırasında yürütülen işlemler ve iş parçacıkları için profil oluşturma verilerini görüntüler.

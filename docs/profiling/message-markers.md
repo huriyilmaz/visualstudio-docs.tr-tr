@@ -1,5 +1,6 @@
 ---
 title: İleti Işaretçileri | Microsoft Docs
+description: Diğer araçlarla kullanılmak üzere iletileri bir metin dosyasına nasıl dışarı aktarabilirsiniz ve bir ileti dizesini görüntülemek için işaretçiyi eşzamanlılık görselleştiricisi içindeki bir iletiye geri taşıyabilirsiniz.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -10,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0b668f0331345e6a1022ef79105614f4a22e91d9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5d8e4d493173cb50f62510a9b776701a0b199f47
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62830084"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98720572"
 ---
 # <a name="message-markers"></a>İleti işaretçileri
 Bir ileti işaretçisi, günlük çıkışını temsil eder. İleti, belirli bir zamanda belirli bir iş parçacığı tarafından verilen bir dizedir. İletileri diğer araçlarla kullanmak üzere bir metin dosyasına dışarı aktarabilirsiniz. İleti dizesini görüntülemek için işaretçiyi eşzamanlılık görselleştiricisi içindeki bir iletiye taşıyabilirsiniz. Ve [işaretçiler raporundaki](../profiling/markers-report.md)tüm ileti işaretleyicilerini görüntüleyebilirsiniz.  Aşağıdaki çizimde bir ileti işaretçisi gösterilmektedir.

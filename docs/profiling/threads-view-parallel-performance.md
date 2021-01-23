@@ -1,5 +1,6 @@
 ---
 title: Eşzamanlılık Görselleştiricicide iş parçacığı görünümü | Microsoft Docs
+description: Iş parçacıkları görünümünde, bir yürütme kesimi sırasında hangi iş parçacıklarının kod yürüttüğünü belirleyebileceğinizi öğrenin.
 ms.date: 11/04/2018
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4382a21a68848a758f3d4cd37a8528722927691c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 619e76b3db67314119782ebc3010465ac7fa622f
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62973766"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98722730"
 ---
 # <a name="threads-view-in-the-concurrency-visualizer"></a>Eşzamanlılık görselleştiricisi içindeki iş parçacıkları görünümü
 
@@ -47,9 +48,9 @@ Eşzamanlılık görselleştiricisi iş parçacığı ve bağlam anahtarı olayl
 
 ## <a name="use-threads-view"></a>Iş parçacığı görünümünü kullan
 
-Eşzamanlılık Görselleştiricisi ' i başlatmak için **Analyze**  >  **eşzamanlılık görselleştirmesini**Çözümle ' yi seçin ve ardından **Yeni işlem başlatma**gibi bir seçenek belirleyin.
+Eşzamanlılık Görselleştiricisi ' i başlatmak için   >  **eşzamanlılık görselleştirmesini** Çözümle ' yi seçin ve ardından **Yeni işlem başlatma** gibi bir seçenek belirleyin.
 
-Eşzamanlılık görselleştiricisi uygulamayı başlatır ve **toplamayı durdur**seçeneğini seçinceye kadar bir izleme toplar. Görselleştiricisi daha sonra izlemeyi analiz eder ve sonuçları izleme raporu sayfasında görüntüler.
+Eşzamanlılık görselleştiricisi uygulamayı başlatır ve **toplamayı durdur** seçeneğini seçinceye kadar bir izleme toplar. Görselleştiricisi daha sonra izlemeyi analiz eder ve sonuçları izleme raporu sayfasında görüntüler.
 
 **Iş parçacıkları** görünümünü açmak için raporun sol üst kısmındaki **iş parçacıkları** sekmesini seçin.
 
@@ -68,7 +69,7 @@ Zaman çizelgesinde x ekseni zaman ve y ekseni üzerinde birçok kanala sahiptir
 - İzlemede işaret olayları varsa işaretçi kanalları. İşaretçi kanalları başlangıçta bu olayları oluşturan iş parçacığı kanalları altında görünür.
 - GPU kanalları.
 
-Başlangıçta, iş parçacıkları oluşturuldukları sırada sıralanır, bu nedenle ana uygulama iş parçacığı ilk olarak olur. İş parçacıklarını **yürütme**gibi başka bir ölçüte göre sıralamak için **sıralama ölçütü** açılır listesinde başka bir seçenek belirleyin.
+Başlangıçta, iş parçacıkları oluşturuldukları sırada sıralanır, bu nedenle ana uygulama iş parçacığı ilk olarak olur. İş parçacıklarını **yürütme** gibi başka bir ölçüte göre sıralamak için **sıralama ölçütü** açılır listesinde başka bir seçenek belirleyin.
 
 Zaman çizelgesi renkleri, belirli bir zamanda bir iş parçacığının durumunu gösterir. Yeşil segmentler yürütülüyor, kırmızı kesimlerin eşitleme için engellenmesi, sarı kesimlerin daha önce olması ve mor kesimlerin cihaz g/ç 'ye bağlı olması.
 
@@ -99,7 +100,7 @@ Eşzamanlılık görselleştiricisi iş parçacıkları arasındaki bağımlıl�
 Hangi iş parçacığının başka bir iş parçacığının engellemesini kaldırmasını belirlemek için, zaman çizelgesinde engelleme segmentini seçin. Eşzamanlılık görselleştiricisi engellemeyi kaldırma iş parçacığını belirleyebiliyorsanız, engellemeyi kaldırma iş parçacığı ve engelleme segmentini izleyen yürütme segmenti arasına bir çizgi çizer. İlgili çağrı yığınını görmek için alt bölmedeki **yığın engellemesini** Kaldır sekmesini seçin.
 
 ## <a name="profile-reports"></a>Profil raporları
-Zaman çizelgesi grafiğinin altında, **profil raporu**, **geçerli**ve **yığın raporu kaldırma** sekmelerini içeren bir bölme bulunur. Zaman çizelgesi ve iş parçacıkları seçimlerini değiştirirken raporlar otomatik olarak güncelleştirir. Büyük izlemeler için, güncelleştirmeler hesaplanırken raporlar bölmesi geçici olarak kullanılamıyor olabilir.
+Zaman çizelgesi grafiğinin altında, **profil raporu**, **geçerli** ve **yığın raporu kaldırma** sekmelerini içeren bir bölme bulunur. Zaman çizelgesi ve iş parçacıkları seçimlerini değiştirirken raporlar otomatik olarak güncelleştirir. Büyük izlemeler için, güncelleştirmeler hesaplanırken raporlar bölmesi geçici olarak kullanılamıyor olabilir.
 
 ### <a name="profile-report-tab"></a>Profil raporu sekmesi
 

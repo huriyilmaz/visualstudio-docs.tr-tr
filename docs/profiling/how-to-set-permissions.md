@@ -1,5 +1,6 @@
 ---
 title: Izinleri ayarla | Microsoft Docs
+description: Bir bilgisayarın yöneticisinin, yönetici izinlerine sahip olmayan bir kullanıcı veya grup için profil oluşturma için gereken güvenlik izinlerini nasıl verdiğini öğrenin.
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -14,12 +15,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: f0a55e5e18829856b913ad01df6f831a2df42863
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 2ab51b317164b8f2e828e0327021fb595574583c
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851833"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98722002"
 ---
 # <a name="how-to-set-permissions"></a>Nasıl yapılır: izinleri ayarlama
 
@@ -64,15 +65,15 @@ Yönetici, profil oluşturma araçlarının yazılım sürücüsüne erişim izn
 
 2. Klasöre sağ tıklayın ve ardından **Özellikler**' e tıklayın.
 
-     ** \<folder name> Özellikler** iletişim kutusu görüntülenir.
+     **\<folder name> Özellikler** iletişim kutusu görüntülenir.
 
 3. **Güvenlik** sekmesine tıklayın.
 
 4. **Grup veya Kullanıcı adları** kutusunda Kullanıcı hesabının adına tıklayın.
 
-5. ** \<user name> İzinler** kutusunda, **tam denetim**onay kutusunu seçin.
+5. **\<user name> İzinler** kutusunda, **tam denetim** onay kutusunu seçin.
 
-6. **Tamam**’a tıklayın.
+6. **Tamam**'a tıklayın.
 
      Bu, kullanıcıya, 5. adımda seçilen klasörle başlayan paylaşılan klasör ağacı için izin verir.
 

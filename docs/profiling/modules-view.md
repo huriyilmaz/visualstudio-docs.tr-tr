@@ -1,5 +1,6 @@
 ---
 title: Modüller görünümü | Microsoft Docs
+description: Modüller görünümünün profil oluşturma verilerinin modüllerini nasıl listeleyeceğinizi öğrenin. Her modül, hiyerarşik bir ağacın kök düğümüdür.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -15,12 +16,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 89d9146b3f724b4883f21a43689a495eef252777
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d0ff17c128af78c1772ad85597153332a0848062
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74778524"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98722951"
 ---
 # <a name="modules-view"></a>Modüller Görünümü
 Modüller görünümü profil oluşturma verilerinin modüllerini listeler. Her modül, hiyerarşik bir ağacın kök düğümüdür. Modülün profili oluşturulan işlevleri modül düğümünün altında listelenir. Profil oluşturma verileri örnekleme yöntemi kullanılarak toplandıysa, satır bilgileri işlev düğümünün altında listelenir ve yönerge işaretçisi verileri satır düğümünün altında listelenir.

@@ -1,5 +1,7 @@
 ---
 title: Eşzamanlılık görselleştiricisi | Microsoft Docs
+description: Çok iş parçacıklı uygulamanızdaki iş parçacığı zamanlamasını gösteren grafikleri görmek için eşzamanlılık Görselleştiricisini kullanın, performans sorunlarını çözmenize yardımcı olur.
+ms.custom: SEO-VS-2020
 ms.date: 07/11/2017
 ms.topic: conceptual
 f1_keywords:
@@ -15,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a955304e1a0939bbe7398b48a5e9ff30461d8745
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 5e6f36568568a59980316f3070f902027898e39e
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037347"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98720962"
 ---
 # <a name="concurrency-visualizer"></a>Eşzamanlılık Görselleştiricisi
 
@@ -32,7 +34,7 @@ ms.locfileid: "90037347"
 > - [Visual Studio 2015 uzantısı Için eşzamanlılık görselleştiricisi](https://marketplace.visualstudio.com/items?itemName=Diagnostics.ConcurrencyVisualizerforVisualStudio2015) indirin.
 > - [Visual Studio 2015 Için eşzamanlılık görselleştiricisi koleksiyon araçlarını](https://www.microsoft.com/download/details.aspx?id=49103)indirin.
 >
-> [Eşzamanlılık görselleştiricisi komut satırı yardımcı programı (CVCollectionCmd)](../profiling/concurrency-visualizer-command-line-utility-cvcollectioncmd.md) , komut satırından, Visual Studio 2015 Için eşzamanlılık görselleştiricisi içinde görüntüleyebileceğiniz izlemeleri toplamanıza olanak tanır. Araç, Visual Studio yüklü olmayan bilgisayarlarda kullanılabilir.
+> [Eşzamanlılık görselleştiricisi Command-Line yardımcı programı (CVCollectionCmd)](../profiling/concurrency-visualizer-command-line-utility-cvcollectioncmd.md) , komut satırından, Visual Studio 2015 Için eşzamanlılık görselleştiricisi içinde görüntüleyebileceğiniz izlemeleri toplamanıza olanak tanır. Araç, Visual Studio yüklü olmayan bilgisayarlarda kullanılabilir.
 
 Çoklu iş parçacıklı uygulamanızın nasıl çalıştığını görmek için eşzamanlılık görselleştiricisi ' i kullanabilirsiniz. Eşzamanlılık görselleştiricisi içindeki görünümler, programınızdaki iş parçacıkları ve sistem için bir bütün olarak zamana bağlı ilişkileri gösteren grafik, tablo ve metin verileri sağlar. Performans sorunları, CPU kullanımı, iş parçacığı çekişmesi, platformlar arası iş parçacığı geçişi, eşitleme gecikmeleri, DirectX etkinliği, çakışan g/ç alanları ve diğer bilgilerin yerini bulmak için eşzamanlılık görselleştiricisi ' ni kullanabilirsiniz. Görünümler, grafik çıktısını yığınlar ve kaynak kodu çağırmak üzere bağlayarak üzerinde işlem yapmak için kullanabileceğiniz verileri sağlar.
 

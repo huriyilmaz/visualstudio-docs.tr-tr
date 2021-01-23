@@ -1,5 +1,6 @@
 ---
 title: Modüller görünümü-.NET bellek Izleme verileri | Microsoft Docs
+description: İzleme yöntemi kullanılarak toplanan .NET bellek ayırma verilerinin modüller görünümünün, bellek ve zamanlama verilerini modüle göre gruplayarak bilgi edinin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +12,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: 521c884a0a25d7fa975a4039e6ec3e36ff4dc020
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e6a0a42fdc83891b96bb3fe036ebf7515e3d6a42
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74778550"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98723315"
 ---
 # <a name="modules-view---net-memory-instrumentation-data"></a>Modüller görünümü-.NET bellek izleme verileri
 İzleme yöntemi kullanılarak toplanan .NET bellek ayırma verilerinin Modüller görünümü, profil oluşturma çalıştırmasında yürütülen modüller tarafından bellek ve zamanlama verilerini gruplandırır. Modülün işlevleri için profil oluşturma verileri modül düğümünün altında listelenmiştir.
@@ -29,7 +30,7 @@ ms.locfileid: "74778550"
 |**İşlev satır numarası**|Kaynak dosyada bu işlevin başlangıcına ait satır numarası.|
 |**Çağrı Sayısı**|Bu işlev veya modüle yapılan toplam çağrı sayısı.|
 |**Kaynak Dosya**|Bu işlevin tanımını içeren kaynak dosya.|
-|**Modül Adı**|İşlevi içeren modülün adı.|
+|**Modül adı**|İşlevi içeren modülün adı.|
 |**Modül yolu**|İşlevi içeren modülün yolu.|
 |**İşlem Kimliği**|Profil oluşturma çalıştırmasının işlem KIMLIĞI (PID).|
 |**İşlem adı**|Modülün veya işlevin yürütüldüğü işlemin adı.|

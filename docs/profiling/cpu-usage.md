@@ -1,5 +1,7 @@
 ---
 title: Performans Profiler 'da CPU kullanımını analiz etme
+description: C++, C#, Visual Basic ve JavaScript uygulamalarında kod çalıştırırken harcanan CPU süresini ve yüzdesini gösteren CPU kullanımı performans aracı hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 04/02/2020
 ms.topic: how-to
 ms.assetid: 7501a20d-04a1-480f-a69c-201524aa709d
@@ -8,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 706ffa8d17974894403c22a559edad4c2e4b4ef8
-ms.sourcegitcommit: 172aaf05596a9d8ded298b7b104569c1cce6160e
+ms.openlocfilehash: 902974c195cabf09abf5f29334a1e28316da54e5
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92007095"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98719363"
 ---
 # <a name="analyze-cpu-usage-without-debugging-in-the-performance-profiler"></a>Performans profil oluşturucusu 'nda hata ayıklama olmadan CPU kullanımını çözümleme
 
@@ -34,7 +36,7 @@ Genellikle, yerel makine yüklü uygulama yürütmeyi en iyi şekilde çoğaltı
 
     ![Yayın ve yerel makine seçin](../profiling/media/cpuuse_selectreleaselocalmachine.png "Yayın ve yerel makine seçin")
 
-1. **Hata ayıklama**  >  **performans profil oluşturucuyu**seçin.
+1. **Hata ayıklama**  >  **performans profil oluşturucuyu** seçin.
 
 1. **Kullanılabilir araçlar**' ın altında **CPU kullanımı**' nı seçin ve ardından **Başlat**' ı seçin.
 
@@ -86,7 +88,7 @@ Visual Studio 2019 ' den başlayarak, çağrı ağacı görünümünde CPU 'nun 
 
 #### <a name="external-code"></a><a name="BKMK_External_Code"></a> Dış kod
 
-Kodunuz tarafından yürütülen System ve Framework işlevlerine *dış kod*denir. Dış kod işlevleri uygulamayı başlatıp durdurur, Kullanıcı arabirimini çizer, iş parçacığı denetimi yapın ve uygulamaya diğer alt düzey hizmetler sağlar. Çoğu durumda, dış kodla ilgilenmiyorsanız, CPU kullanım çağrısı ağacı bir Kullanıcı yönteminin dış işlevlerini tek bir **[Dış kod]** düğümüne toplar.
+Kodunuz tarafından yürütülen System ve Framework işlevlerine *dış kod* denir. Dış kod işlevleri uygulamayı başlatıp durdurur, Kullanıcı arabirimini çizer, iş parçacığı denetimi yapın ve uygulamaya diğer alt düzey hizmetler sağlar. Çoğu durumda, dış kodla ilgilenmiyorsanız, CPU kullanım çağrısı ağacı bir Kullanıcı yönteminin dış işlevlerini tek bir **[Dış kod]** düğümüne toplar.
 
 Dış kodun çağrı yollarını görüntülemek için, ana tanılama raporu sayfasında (sağ bölme), **filtre** açılan listesinden **dış kodu göster** ' i seçin ve ardından **Uygula**' yı seçin. **CPU kullanımı** sayfasının **çağrı ağacı** görünümü daha sonra dış kod çağrılarını genişletir. ( **Filtre** açılan listesi, ayrıntılı görünümlerde değil, ana tanılama sayfasında kullanılabilir.)
 

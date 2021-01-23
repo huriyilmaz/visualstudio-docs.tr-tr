@@ -1,5 +1,6 @@
 ---
 title: NameProfile | Microsoft Docs
+description: NameProfile işlevinin belirtilen işlem veya iş parçacığına bir dize atamasını öğrenin. Ayrıca, NameProfile API yalnızca izleme profili oluşturma için kullanılabilir.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,19 +13,19 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: cc887c6bcef9f8b7307d9d6aa570d6458d87f377
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3bd210f1d92245889be8d18156c43e0cad7ee3db
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85541706"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98722925"
 ---
 # <a name="nameprofile"></a>NameProfile
 `NameProfile`İşlevi belirtilen işlem veya iş parçacığına bir dize atar.
 
  NameProfile API yalnızca izleme profili oluşturma için kullanılabilir. NameProfile API 'SI örnekleme profili oluşturma için desteklenmiyor.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
 PROFILE_COMMAND_STATUS PROFILERAPI NameProfile(

@@ -1,5 +1,6 @@
 ---
 title: Satırlar görünümü-.NET Bellek Örnekleme verileri | Microsoft Docs
+description: .NET bellek ayırma profil oluşturma verileri için satırlar görünümünün profil oluşturma çalışması sırasında belleği ayrılan deyimleri nasıl listeleyeceğinizi öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +12,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: 503b3753f4f4fdc98f39804ec767277d7685d0d7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0033b3d50531bebe087f43930324db0431dee03f
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74774086"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98721339"
 ---
 # <a name="lines-view---net-memory-sampling-data"></a>Satırlar görünümü-.NET Bellek Örnekleme verileri
 Örnekleme yöntemini kullanan .NET bellek ayırma profil oluşturma verileri için Satırlar Görünümü profil oluşturma çalışması sırasında belleği ayrılan deyimleri listeler. Sütunlar ayrıca, ayırma boyutunu ve sayısını da içerir.
@@ -45,7 +46,7 @@ ms.locfileid: "74774086"
 |------------|-----------------|
 |**İşlem Kimliği**|Profil oluşturma çalıştırmasının işlem KIMLIĞI (PID).|
 |**İşlem adı**|Sürecin adı.|
-|**Modül Adı**|Deyimin bulunduğu modülün adı.|
+|**Modül adı**|Deyimin bulunduğu modülün adı.|
 |**Modül yolu**|Deyimin bulunduğu modülün yolu.|
 |**Kaynak Dosya**|İfadesini içeren kaynak dosya.|
 |**İşlev adı**|Deyimin bulunduğu işlevin adı.|

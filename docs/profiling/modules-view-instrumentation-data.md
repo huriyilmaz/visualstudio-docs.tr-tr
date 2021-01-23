@@ -1,5 +1,6 @@
 ---
 title: Modüller görünümü-Izleme verileri | Microsoft Docs
+description: Modüller görünümünün, profil oluşturma verilerinde olan modüllerle gruplanan performans verilerini nasıl görüntülediğini öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +12,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: f6449ad30edf11d3d315532cc33db2a79c14f90b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7012f2deffa2e01057fd79f52ec2fcac3674f7eb
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74778537"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98722977"
 ---
 # <a name="modules-view---instrumentation-data"></a>Modüller görünümü-izleme verileri
 Modüller görünümü profil oluşturma verilerinde olan modüllerle gruplanmış performans verilerini görüntüler. Modülün işlevleri modül düğümünün altında listelenmiştir.
@@ -30,7 +31,7 @@ Modüller görünümü profil oluşturma verilerinde olan modüllerle gruplanmı
 |**İşlev satır numarası**|Kaynak dosyada bu işlevin başlangıcına ait satır numarası.|
 |**Çağrı Sayısı**|Bu işlev veya modüle yapılan toplam çağrı sayısı.|
 |**Kaynak Dosya**|Bu işlevin tanımını içeren kaynak dosya.|
-|**Modül Adı**|İşlevi içeren modülün adı.|
+|**Modül adı**|İşlevi içeren modülün adı.|
 |**Modül yolu**|İşlevi içeren modülün yolu.|
 |**İşlem Kimliği**|Profil oluşturma çalıştırmasının işlem KIMLIĞI (PID).|
 |**İşlem adı**|Modülün veya işlevin yürütüldüğü işlemin adı.|

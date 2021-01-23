@@ -1,5 +1,6 @@
 ---
 title: Profil oluşturma komut satırı araçlarının yolunu belirtme
+description: Profil Oluşturma Araçları komut satırı araçlarının yolu PATH ortam değişkenine eklenmediyse profil oluşturma araçları komut satırı araçlarının yolunu belirtin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -10,12 +11,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: fb445e23b5d507bafb7fece40bf606bbfb76c370
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: fa1cb81d46f0977de2db9d78c6db53f542faa70f
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809191"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98720040"
 ---
 # <a name="specify-the-path-to-profiling-tools-command-line-tools"></a>Profil Araçları komut satırı araçlarının yolunu belirtin
 
@@ -23,7 +24,7 @@ ms.locfileid: "90809191"
 
 ## <a name="32-bit-computers"></a>32 bit bilgisayarlar
 
-Yerel kod için, Visual Studio Profiler API 'Leri *VSPerf.dll*. *VSPerf. h*ve içeri aktarma kitaplığı olan *VSPerf. lib*üstbilgi dosyası *Microsoft Visual Studio\2017\team Tools\Performance Tools\PerfSDK* dizininde bulunur.
+Yerel kod için, Visual Studio Profiler API 'Leri *VSPerf.dll*. *VSPerf. h* ve içeri aktarma kitaplığı olan *VSPerf. lib* üstbilgi dosyası *Microsoft Visual Studio\2017\team Tools\Performance Tools\PerfSDK* dizininde bulunur.
 
  Yönetilen kod için, profil oluşturucu API 'Leri *Microsoft.VisualStudio.Profiler.dll*. Bu DLL *Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools* dizininde bulunur.
 

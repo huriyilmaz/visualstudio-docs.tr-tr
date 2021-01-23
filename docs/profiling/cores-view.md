@@ -1,5 +1,7 @@
 ---
 title: Çekirdekler görünümü | Microsoft Docs
+description: Çekirdek görünümü tarafından sunulan bilgiler hakkında bilgi edinin. Önbellek performansını iyileştirmek için iş parçacığı benzeşimini veya iş parçacığı havuzu yönetimini kullanmanıza yardımcı olabilir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,15 +14,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 99b26b913a42a563e0226ff2697b947684dfec53
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9b124cc2f609ab7a113fd28f7086172169138d5f
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62553064"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98720715"
 ---
 # <a name="cores-view"></a>Çekirdekler Görünümü
-**Çekirdekler görünümü** iş parçacığı yürütmenin mantıksal işlemci çekirdekleri ile nasıl eşlenildiğini gösterir ( **Analyze**  >  eşzamanlılık Görselleştiriciyi başlatmak için**eşzamanlılık görselleştirmesini** Çözümle ' yi seçin). Sunucu uygulamaları yazıyorsanız, bu görünüm iş parçacığı benzeşimini veya iş parçacığı havuzu yönetimini kullanarak önbellek performansını iyileştirmenize yardımcı olabilir. Ayrıca, iş parçacığı benzeşimi kullanımı, platformlar arası geçiş sorununu etkileyebilecek durumları incelemenize yardımcı olabilir. Çekirdekler görünümü iki bölümden oluşur, bir grafik ve bir gösterge.
+**Çekirdekler görünümü** iş parçacığı yürütmenin mantıksal işlemci çekirdekleri ile nasıl eşlenildiğini gösterir (   >  eşzamanlılık Görselleştiriciyi başlatmak için **eşzamanlılık görselleştirmesini** Çözümle ' yi seçin). Sunucu uygulamaları yazıyorsanız, bu görünüm iş parçacığı benzeşimini veya iş parçacığı havuzu yönetimini kullanarak önbellek performansını iyileştirmenize yardımcı olabilir. Ayrıca, iş parçacığı benzeşimi kullanımı, platformlar arası geçiş sorununu etkileyebilecek durumları incelemenize yardımcı olabilir. Çekirdekler görünümü iki bölümden oluşur, bir grafik ve bir gösterge.
 
  Grafik, x eksenindeki y ekseni ve saat üzerindeki mantıksal çekirdekleri gösterir. Grafikteki her iş parçacığının, kendi hareketini zaman içindeki çekirdekler arasında izleyebilmeniz için benzersiz bir rengi vardır. Bu grafikteki iş parçacıklarını gösterge alanında seçerek filtreleyebilirsiniz.
 

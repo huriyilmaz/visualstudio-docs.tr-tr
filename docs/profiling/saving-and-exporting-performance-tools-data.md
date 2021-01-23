@@ -1,5 +1,6 @@
 ---
 title: Performans araçları verilerini kaydetme ve dışarı aktarma | Microsoft Docs
+description: Profil oluşturma veri (. vsp) dosyalarının filtrelenmiş veya filtrelenmemiş görünümlerini çözümlenen rapor (. vsps) dosyaları olarak nasıl kaydedebileceğinizi öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,18 +12,18 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 729dc2e28446420dd2590e132b7ec8a5444fcb9c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0b340abd81cef7183c2ba25af58ae432d8c80e6a
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74773905"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98720162"
 ---
 # <a name="save-and-export-performance-tools-data"></a>Performans araçları verilerini kaydetme ve dışarı aktarma
 Bu makalede, performans veri dosyalarının nasıl kaydedileceği ve dışarı aktarılacağı açıklanır.
 
 ## <a name="how-to-save-performance-data-files-as-analyzed-report-files"></a>Nasıl yapılır: performans veri dosyalarını çözümlenmiş rapor dosyaları olarak kaydetme
- Profil oluşturma verilerinin filtrelenmiş veya filtrelenmemiş görünümlerini kaydedebilirsiniz (.* VSP*) Çözümlenmiş rapor (.* vsps*) dosyaları. Analiz edilen rapor dosyası rapor görünümü penceresinde görüntülenebilir ve orijinalden önemli ölçüde küçüktür. *VSP* dosyası. Ancak, bir ' a ait verilere filtre uygulayamazsınız. *vsps* dosyası. Dosyayı tümleşik geliştirme ortamında (IDE) açmadan Performans Gezgini analiz edilen bir rapor dosyası oluşturabilir veya öğesini açıp filtrelemeniz sağlayabilirsiniz. *VSP* dosyası ve sonra sonuçları kaydedin.
+ Profil oluşturma verilerinin filtrelenmiş veya filtrelenmemiş görünümlerini kaydedebilirsiniz (.*VSP*) Çözümlenmiş rapor (.*vsps*) dosyaları. Analiz edilen rapor dosyası rapor görünümü penceresinde görüntülenebilir ve orijinalden önemli ölçüde küçüktür. *VSP* dosyası. Ancak, bir ' a ait verilere filtre uygulayamazsınız. *vsps* dosyası. Dosyayı tümleşik geliştirme ortamında (IDE) açmadan Performans Gezgini analiz edilen bir rapor dosyası oluşturabilir veya öğesini açıp filtrelemeniz sağlayabilirsiniz. *VSP* dosyası ve sonra sonuçları kaydedin.
 
 #### <a name="to-save-an-analyzed-performance-report-from-the-performance-explorer"></a>Analiz edilen bir performans raporunu Performans Gezgini kaydetmek için
 
@@ -34,7 +35,7 @@ Bu makalede, performans veri dosyalarının nasıl kaydedileceği ve dışarı a
 
 #### <a name="to-save-an-analyzed-performance-report-from-the-report-view-window"></a>Analiz edilen bir performans raporunu rapor görünümü penceresinden kaydetme
 
-1. Profil oluşturma verilerini açın (.* VSP*) dosyasını rapor görünümü penceresinde görebilirsiniz.
+1. Profil oluşturma verilerini açın (.*VSP*) dosyasını rapor görünümü penceresinde görebilirsiniz.
 
 2. Seçim Verilere filtre uygulayın. Daha fazla bilgi için bkz. [Performans raporu görünüm filtresi](../profiling/performance-report-view-filter.md).
 
@@ -60,9 +61,9 @@ Bu makalede, performans veri dosyalarının nasıl kaydedileceği ve dışarı a
 
 3. **Ile önek raporu**' nun altında, rapor adına eklemek istediğiniz öneki belirtin.
 
-4. **Verdiğiniz rapor konumu**altında, dizini belirtin.
+4. **Verdiğiniz rapor konumu** altında, dizini belirtin.
 
-5. **Aktarılmış rapor biçimi**altında (virgülle sınırlandırılmış) ( \* . csv \) veya XML verileri ( \* . xml) seçeneğini belirleyin \) .
+5. **Aktarılmış rapor biçimi** altında (virgülle sınırlandırılmış) ( \* . csv \) veya XML verileri ( \* . xml) seçeneğini belirleyin \) .
 
 6. **Dışarı aktar**'a tıklayın.
 
@@ -80,9 +81,9 @@ Bu makalede, performans veri dosyalarının nasıl kaydedileceği ve dışarı a
 
 5. **Ile önek raporu**' nun altında, rapor adına eklemek istediğiniz öneki belirtin.
 
-6. **Verdiğiniz rapor konumu**altında, dizini belirtin.
+6. **Verdiğiniz rapor konumu** altında, dizini belirtin.
 
-7. **Aktarılmış rapor biçimi**altında (virgülle sınırlandırılmış) ( \* . csv) veya XML verileri ( \* . xml) öğesini seçin.
+7. **Aktarılmış rapor biçimi** altında (virgülle sınırlandırılmış) ( \* . csv) veya XML verileri ( \* . xml) öğesini seçin.
 
 8. **Dışarı aktar**'a tıklayın.
 

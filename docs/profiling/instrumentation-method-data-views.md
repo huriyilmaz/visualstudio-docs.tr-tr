@@ -1,5 +1,6 @@
 ---
 title: İzleme yöntemi veri görünümleri | Microsoft Docs
+description: İzleme yöntemi kullanılarak oluşturulan profil oluşturucu veri dosyalarının görünümleri ve raporları için başvuru bilgileri hakkında bilgi edinin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 18cc473f517e1f2eb03b657a365a33e4e37ff23f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 18d7d2266ec21a3eee983474e433d72245658c43
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74774169"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98721547"
 ---
 # <a name="instrumentation-method-data-views"></a>İzleme yöntemi veri görünümleri
 Bu bölüm, izleme yöntemi kullanılarak oluşturulan profil oluşturucu veri dosyalarının görünümleri ve raporları için başvuru bilgileri içerir.
@@ -50,7 +51,7 @@ Bu bölüm, izleme yöntemi kullanılarak oluşturulan profil oluşturucu veri d
 
 - [İşlem Görünümü](../profiling/process-view.md)
 
- Wer tarafından profili oluşturulan tüm işlemler için işlem başlangıç, bitiş ve ömür süresini listeler.
+ Profili oluşturulan tüm işlemler için işlem başlangıç, bitiş ve ömür süresini listeler.
 
 ## <a name="related-sections"></a>İlgili bölümler
 - [Örnekleme yöntemi veri görünümleri](../profiling/profiler-sampling-method-data-views.md)

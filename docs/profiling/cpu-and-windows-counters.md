@@ -1,5 +1,7 @@
 ---
 title: CPU ve Windows sayaçları | Microsoft Docs
+description: CPU (donanım) ve Windows (yazılım) sayaçları performans verileri sağlar. Bunları görüntülemeyi ve verileri nasıl toplayacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +15,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 9accd3d0ab5ff1f7a3084d5973cace08e66396b9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2c3657f3558a688232424b868d0e93b8c056467c
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74779556"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98719168"
 ---
 # <a name="cpu-and-windows-counters"></a>CPU ve Windows sayaçları
 
@@ -90,15 +92,15 @@ Visual Studio IDE 'deki bir bilgisayardaki kullanılabilir sayaçları listeleme
 
 1. Performans Gezgini, performans oturumuna sağ tıklayın ve ardından **Özellikler**' e tıklayın.
 
-2. Şunlardan birini yapın:
+2. Aşağıdakilerden birini yapın:
 
-   - **Örnekleme**' ye tıklayın ve ardından **örnek** olay listesinden **performans sayacı** ' nı seçin. CPU sayaçları **kullanılabilir performans sayaçlarında**listelenir.
+   - **Örnekleme**' ye tıklayın ve ardından **örnek** olay listesinden **performans sayacı** ' nı seçin. CPU sayaçları **kullanılabilir performans sayaçlarında** listelenir.
 
       **Göz önünde** Önceki örnekleme yapılandırmasına geri dönmek için **iptal** 'e tıklayın.
 
      -veya-
 
-   - **CPU sayaçlarını**seçin ve ardından **CPU sayaçlarını topla**' yı seçin. CPU sayaçları **kullanılabilir sayaçlara**göre listelenmiştir.
+   - **CPU sayaçlarını** seçin ve ardından **CPU sayaçlarını topla**' yı seçin. CPU sayaçları **kullanılabilir sayaçlara** göre listelenmiştir.
 
       **Göz önünde** Önceki sayaç koleksiyonu yapılandırmasına dönmek için **iptal** 'e tıklayın.
 
@@ -130,7 +132,7 @@ Visual Studio IDE 'deki bir bilgisayardaki kullanılabilir sayaçları listeleme
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Genel bakış](../profiling/overviews-performance-tools.md) 
- [Nasıl yapılır: örnekleme olaylarını seçme](../profiling/how-to-choose-sampling-events.md) 
- [Nasıl yapılır: CPU sayacı verilerini toplama](../profiling/how-to-collect-cpu-counter-data.md) 
- [Nasıl yapılır: Windows sayaç verileri toplama](../profiling/how-to-collect-windows-counter-data.md)
+- ['a Genel Bakış](../profiling/overviews-performance-tools.md)
+- [Nasıl yapılır: örnekleme olaylarını seçme](../profiling/how-to-choose-sampling-events.md)
+- [Nasıl yapılır: CPU sayaç verileri toplama](../profiling/how-to-collect-cpu-counter-data.md)
+- [Nasıl yapılır: Windows sayaç verileri toplama](../profiling/how-to-collect-windows-counter-data.md)

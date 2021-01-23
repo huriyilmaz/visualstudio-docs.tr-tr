@@ -1,5 +1,6 @@
 ---
 title: Modüller görünümü-.NET Bellek Örnekleme verileri | Microsoft Docs
+description: Örnekleme yöntemi kullanılarak toplanan .NET bellek ayırma verilerinin Modüller görünümü hakkında bilgi edinin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +12,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9d0d9b7ab681a266115673b48f2c2604c5ff869c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7e05a3e1d915853689c436b192de9e266e86b13d
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74772733"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98723302"
 ---
 # <a name="modules-view---net-memory-sampling-data"></a>Modüller görünümü-.NET Bellek Örnekleme verileri
 Örnekleme yöntemi kullanılarak toplanan .NET bellek ayırma verilerinin Modüller görünümü, bellek verilerini profil oluşturma çalıştırmasında yürütülen modüller tarafından gruplandırır. Her modül hiyerarşik bir ağacın köküdür. Modülün işlevleri modül düğümünün altında listelenir.
@@ -28,7 +29,7 @@ ms.locfileid: "74772733"
 |**Ad**|Modülün, işlevin, satır numarasının veya yönerge adresinin adı.|
 |**İşlem Kimliği**|Profil oluşturma çalıştırmasının işlem KIMLIĞI (PID).|
 |**İşlem adı**|Sürecin adı.|
-|**Modül Adı**|İşlevi içeren modülün adı.|
+|**Modül adı**|İşlevi içeren modülün adı.|
 |**Modül yolu**|Modülün yolu.|
 |**Kaynak Dosya**|Bu işlevin tanımını içeren kaynak dosya.|
 |**İşlev satır numarası**|Kaynak dosyada bu işlevin başlangıcına ait satır numarası.|

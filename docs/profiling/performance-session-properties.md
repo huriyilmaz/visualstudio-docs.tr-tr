@@ -1,5 +1,6 @@
 ---
 title: Performans oturumu özellikleri | Microsoft Docs
+description: Bir performans oturumunun, uygulamanın profili oluşturma şeklini belirleyecek ayarları yapılandırmanıza nasıl olanak sağladığını öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 1b3bafa976c8e57f468a3f3f59a3b6b19308fd1b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 02ddf15251cf40dd340465563068b114940f9318
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74772208"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98721235"
 ---
 # <a name="performance-session-properties"></a>Performans oturumu özellikleri
 
@@ -25,7 +26,7 @@ Bir **performans oturumu** , uygulamanın profili oluşturma şeklini belirleyec
 
 Performans **sihirbazını** çalıştırarak veya el ile bir oturum oluşturarak bir **performans oturumu** oluşturursunuz. Performans **oturumu** , performans **oturumu** oluşturulduktan sonra **Performans Gezgini** görüntülenir.
 
-**Performans oturumu** özelliklerini görüntülemek için **Performans Gezgini**oturum adını seçin, sağ tıklayın ve ardından **Özellikler**' i seçin.
+**Performans oturumu** özelliklerini görüntülemek için **Performans Gezgini** oturum adını seçin, sağ tıklayın ve ardından **Özellikler**' i seçin.
 
 Performans oturumu aşağıdaki özellik sayfalarına sahiptir:
 
@@ -96,7 +97,7 @@ Daha fazla bilgi için bkz.
 
 ## <a name="windows-counters"></a>Windows sayaçları
 
-Bu seçenek, Windows performans Izleyicisi sayaçlarından veri toplamanıza olanak sağlar. Bu verileri toplamak için **Windows performans sayaçlarını topla**etiketli onay kutusunu seçin. Koleksiyon aralığı, **koleksiyon aralığı** kutusunda ayarlanabilir. **Sayaç kategorisi** ve **örneği** de kullanılabilir olabilir. Bazı varsayılan Windows performans Izleyicisi sayaçları kullanılabilir.
+Bu seçenek, Windows performans Izleyicisi sayaçlarından veri toplamanıza olanak sağlar. Bu verileri toplamak için **Windows performans sayaçlarını topla** etiketli onay kutusunu seçin. Koleksiyon aralığı, **koleksiyon aralığı** kutusunda ayarlanabilir. **Sayaç kategorisi** ve **örneği** de kullanılabilir olabilir. Bazı varsayılan Windows performans Izleyicisi sayaçları kullanılabilir.
 
  Daha fazla bilgi için bkz. [nasıl yapılır: Windows sayaç verilerini toplama](../profiling/how-to-collect-windows-counter-data.md).
 

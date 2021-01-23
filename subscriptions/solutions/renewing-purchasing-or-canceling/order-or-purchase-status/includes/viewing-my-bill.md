@@ -1,6 +1,6 @@
 ---
-title: Nasıl yaparım? faturanızı görüntüle?
-description: Nasıl yaparım? Visual Studio Aboneliğimin faturalandırımı görüntülensin mi?
+title: Nasıl yaparım? faturamı görüntüle?
+description: Nasıl yaparım? Visual Studio Aboneliğimin faturamı görüntülensin mi?
 ms.topic: include
 ms.assetid: 576ca2d3-aba4-4191-8639-64ea9f309536
 author: caitybuschlen
@@ -10,18 +10,18 @@ user.type: subscriber
 tags: billing
 subscription.type: vl, cloud, retail, partner
 sap.id: 2db8f927-5814-835b-cc9d-daab30a7a09e
-ms.openlocfilehash: fa95610b98d8731b486392d927452b8d42576f28
-ms.sourcegitcommit: cd7f122c6850cf442a4ca42d51d05c7a8fe9038d
+ms.openlocfilehash: 53630743cfdd1c81a37102f237ab15ee33df632a
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "98147604"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98723198"
 ---
-## <a name="how-do-i-view-my-bill"></a>Nasıl yaparım? faturanızı görüntüle?
+## <a name="how-do-i-view-my-invoice"></a>Nasıl yaparım? faturamı görüntüle?
 
-Azure faturanız, Azure hizmetlerine yönelik ödemeleri ve bazı Visual Studio abonelikleri türlerini içerebilir.
+Azure faturanızda Azure hizmetlerine yönelik ödemeler ve bazı Visual Studio abonelikleri türleri bulunabilir.
 
-## <a name="to-view-your-bill"></a>Faturanızı görüntülemek için
+## <a name="to-view-your-invoice"></a>Faturanızı görüntülemek için
 1. [Azure portalında](https://portal.azure.com) oturum açın.  
 2. Genel bakış, abonelik listesi ve faturaların bir özetini bulmak için menüdeki maliyet yönetimi + faturalama dikey penceresine tıklayın.  
 
@@ -30,7 +30,7 @@ Azure faturanız, Azure hizmetlerine yönelik ödemeleri ve bazı Visual Studio 
 Aylık (ve Aralık 2018 ' den önce satın alındığında yıllık) abonelikler Azure üzerinden faturalandırılır. Faturanızı aynı Azure Faturalandırma bölümünde bulabilirsiniz.  
 
 ## <a name="understanding-spending-limit"></a>Harcama limitini anlama 
-Azure 'daki harcama limiti özelliği, hizmetlerin kapatılacağı bir harcama limiti ayarlamanıza olanak sağlar. Bu, varsayılan olarak Azure geliştirme ve test bireysel kredi avantajına zaten uygulandı. Azure harcama limiti hakkında  [daha fazla bilgi edinin](https://docs.microsoft.com/azure/cost-management-billing/manage/spending-limit) . 
+Azure 'daki harcama limiti özelliği, hizmetlerin kapatılacağı bir harcama limiti ayarlamanıza olanak sağlar. Bu, varsayılan olarak Azure geliştirme ve test bireysel kredi avantajına zaten uygulandı.  [Azure harcama limiti hakkında daha fazla bilgi edinin](https://docs.microsoft.com/azure/cost-management-billing/manage/spending-limit). 
 
 Azure aboneliğinizde harcama üst sınırını kaldırdıysanız, Kullandıkça Öde 'ye dönüştürülürse, Kurumsal Geliştirme ve test fiyatlandırmasının avantajlarından yararlanarak yalnızca Visual Studio aboneleri tarafından kullanılabilir. ya da aylık kredi kapsamında sunulan geliştirme ve test için kullanılan hizmetlerin dışındaki hizmetlerden yararlanmak istiyorsanız, hizmetler için aylık olarak faturalandırılırsınız.  
 

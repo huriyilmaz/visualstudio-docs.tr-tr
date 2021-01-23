@@ -1,5 +1,6 @@
 ---
 title: Özet görünümü | Microsoft Docs
+description: Özet görünümünün, bir profil oluşturma çalıştırmasında en fazla performans maliyeti olan işlevler veya nesneler hakkında bilgi görüntülemesini öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +17,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: a12989004b5bed8601bdda1ec0719eda789ff822
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 154f168044e5395a534b4a79ea44d9eafe6293f6
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85546893"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98719285"
 ---
 # <a name="summary-view"></a>Özet görünümü
 Özet görünümü, bir profil oluşturma çalıştırmasında en yüksek performanslı işlevler veya nesneler hakkında bilgi görüntüler. Bu görünüm, profil oluşturma yönteminin performans ölçümlerine göre en pahalı işlevlerin veya nesnelerin bir zaman çizelgesi grafiği ve iki veya daha fazla listesini sağlar. Bu görünümdeki veriler, kullanılan profil oluşturma yöntemine (örnekleme, izleme veya eşzamanlılık) ve .NET bellek ayırmasının toplanıp toplanmadığını gösterir.
@@ -32,7 +33,7 @@ ms.locfileid: "85546893"
 
 - İşlevin Işlev ayrıntıları görünümünü açmak için Özet Görünüm listesindeki bir işleve tıklayabilirsiniz. Diğer görünüm seçenekleri için de işleve sağ tıklayabilirsiniz.
 
-- Özet Görünüm listelerinde görünen öğelerin sayısını değiştirmek için, **Araçlar** menüsünü açın, **Seçenekler**' in üzerine gelin ve ardından **performans araçları**' na tıklayın. **Genel ayarlar**altında, **Özet Görünüm ayarında işlev sayısını** değiştirin.
+- Özet Görünüm listelerinde görünen öğelerin sayısını değiştirmek için, **Araçlar** menüsünü açın, **Seçenekler**' in üzerine gelin ve ardından **performans araçları**' na tıklayın. **Genel ayarlar** altında, **Özet Görünüm ayarında işlev sayısını** değiştirin.
 
 ## <a name="notifications-links"></a>Bildirimler bağlantıları
  Raporun görüntüleme seçeneklerini ayarlamak için bildirim listesindeki bağlantılar ' a tıklayabilirsiniz. Liste, zaman çizelgesi grafiğinin sağında bulunur.

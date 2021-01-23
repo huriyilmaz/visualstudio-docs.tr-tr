@@ -1,5 +1,6 @@
 ---
 title: Başvuru pencereleri sembol bilgileri | Microsoft Docs
+description: Visual Studio Profil Oluşturma Araçları program ikili dosyalarında işlev adları gibi sembolik adları çözümlemek için sembol (. pdb) dosyalarını nasıl kullandığını öğrenin.
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -14,20 +15,20 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 3d1527a9fde739ed72af5861a4863dce8e39cbaf
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: af194a324840bc3e8b8e67199c7e213d7dca96c9
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851365"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98720689"
 ---
 # <a name="how-to-reference-windows-symbol-information"></a>Nasıl yapılır: Başvuru pencereleri sembol bilgileri
-Visual Studio Profil Oluşturma Araçları sembol kullanın (.* pdb*) dosyaları, program ikili dosyalarında işlev adları gibi sembolik adları çözümlemek için. Doğru şekilde indirmek ve güncelleştirmek için aşağıdaki adımları izleyebilirsiniz. Yerel bilgisayardaki Windows sürümü için *pdb* dosyaları.
+Visual Studio Profil Oluşturma Araçları sembol kullanın (.*pdb*) dosyaları, program ikili dosyalarında işlev adları gibi sembolik adları çözümlemek için. Doğru şekilde indirmek ve güncelleştirmek için aşağıdaki adımları izleyebilirsiniz. Yerel bilgisayardaki Windows sürümü için *pdb* dosyaları.
 
 > [!NOTE]
 > Bu ayar varolan raporları etkilemez. Yalnızca sembol sunucusu belirttikten sonra oluşturulan raporların sembol bilgisi olacaktır.
 
- Daha fazla bilgi için bkz [. simge belirtme (.* pdb*) ve kaynak dosyaları](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).
+ Daha fazla bilgi için bkz [. simge belirtme (.*pdb*) ve kaynak dosyaları](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).
 
 ### <a name="to-use-the-microsoft-symbol-server"></a>Microsoft symbol Server 'ı kullanmak için
 

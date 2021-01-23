@@ -1,5 +1,6 @@
 ---
 title: UWP uygulamalarında ağ kullanımını analiz etme
+description: Visual Studio Ağ Tanılama Aracı 'nın Windows. Web. http API 'SI kullanılarak gerçekleştirilen ağ işlemleriyle ilgili verileri nasıl topladığı hakkında bilgi edinin.
 ms.custom: seodec18
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -10,12 +11,12 @@ manager: jillfra
 ms.workload:
 - multiple
 monikerRange: vs-2017
-ms.openlocfilehash: 00fd0c03bf460cd8b72a10d15501994d7a2aa10a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 429bc6c8c2d82e3c18c75132f71e60231b10f10d
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85541720"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98722912"
 ---
 # <a name="analyze-network-usage-in-uwp-apps"></a>UWP uygulamalarında ağ kullanımını analiz etme
 Visual Studio **ağ** Tanılama Aracı, [Windows. Web. http API 'si](/uwp/api/windows.web.http)kullanılarak gerçekleştirilen ağ işlemleriyle ilgili verileri toplar. Verilerin çözümlenmesi, erişim ve kimlik doğrulama sorunları, yanlış önbellek kullanımı ve kötü ekran ve indirme performansı gibi sorunları çözmenize yardımcı olabilir.
@@ -30,7 +31,7 @@ Visual Studio **ağ** Tanılama Aracı, [Windows. Web. http API 'si](/uwp/api/wi
 
 1. Projeyi Visual Studio'da açın.
 
-2. Menüsünde **Hata Ayıkla/performans profili Oluşturucu ' ya**tıklayın. **Ağ**' ı seçin ve ardından **Başlat**' ı seçin.
+2. Menüsünde **Hata Ayıkla/performans profili Oluşturucu ' ya** tıklayın. **Ağ**' ı seçin ve ardından **Başlat**' ı seçin.
 
 3. Ağ aracı, uygulamanızın HTTP trafiğini toplamaya başlar.
 
@@ -55,7 +56,7 @@ Visual Studio **ağ** Tanılama Aracı, [Windows. Web. http API 'si](/uwp/api/wi
 
 |Ad|Açıklama|
 |-|-|
-|**Üst bilgiler**|Olayın istek üstbilgileri hakkında bilgi.|
+|**Üst Bilgiler**|Olayın istek üstbilgileri hakkında bilgi.|
 |**Gövde**|İstek ve yanıt yükü verileri.|
 |**Parametreler**|Sorgu dizesi parametre adları ve değerleri.|
 |**Özgü**|Yanıt ve istek tanımlama bilgisi verileri.|

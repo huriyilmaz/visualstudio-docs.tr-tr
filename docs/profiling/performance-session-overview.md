@@ -1,5 +1,6 @@
 ---
 title: Performans oturumuna genel bakış | Microsoft Docs
+description: Performans araçlarını kullanarak hızlı bir şekilde üretken olma ve zeni kodunun performansını artırma hakkında bilgi edinin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: e7b23a7cbefeace19a3deaa5c1bfc05580081d39
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1fcccf6a68afa26d8fe9ab5e5a4f40466822c689
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74778472"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98723276"
 ---
 # <a name="performance-session-overview"></a>Performans oturumuna genel bakış
 Bu genel bakışta profil oluşturma temelleri açıklanmaktadır. Performans çalışmalarıyla yeni olan geliştiriciler [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] profil oluşturma araçları hızla üretken hale gelmesine ve kodun performansını artırmaya nasıl yardımcı olacağını görür. Profil oluşturma bölümünde deneyimli geliştiriciler, belirli Profil Oluşturma Araçları özelliklerine ve işlemlerine genel bir bakış elde edebilir.
@@ -50,7 +51,7 @@ Bu genel bakışta profil oluşturma temelleri açıklanmaktadır. Performans ç
   Proje çözümünün bir parçası olarak bir projede bir performans oturumu yapılandırabilir [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] veya IDE aracılığıyla rastgele ikili dosyalar profili oluşturabilirsiniz [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Performans oturumu özellik sayfalarında oturum özelliklerini belirtebilir veya profil oluşturma Sihirbazı 'nı kullanabilirsiniz.
 
 ## <a name="collect-profiling-data"></a>Profil oluşturma verilerini topla
- **Performans Gezgini**profil oluşturma verilerinin koleksiyonunu başlatabilirsiniz. Topladığınız veri miktarını sınırlamak için profil oluşturmayı duraklatabilir ve devam ettirebilirsiniz. Zaten çalışan bir işleme ekleyebilirsiniz.
+ **Performans Gezgini** profil oluşturma verilerinin koleksiyonunu başlatabilirsiniz. Topladığınız veri miktarını sınırlamak için profil oluşturmayı duraklatabilir ve devam ettirebilirsiniz. Zaten çalışan bir işleme ekleyebilirsiniz.
 
  Uygulama başladıktan hemen sonra **veri toplama denetim** penceresi IDE 'de görüntülenir [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . **Veri toplama denetim** penceresinde, koleksiyon işlemini duraklatıp devam ettirerek uygulamanızın belirli bölümlerini profile olabilirsiniz. Toplanan verilere işaretler eklemek için **veri toplama denetim** penceresini de kullanabilirsiniz. İşaretler, profil görünümlerinde görüntülenen ve profil oluşturma verilerini filtrelemek için kullanılabilen, Kullanıcı tanımlı veri noktalarıdır.
 

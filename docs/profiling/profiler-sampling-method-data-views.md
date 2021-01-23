@@ -1,5 +1,6 @@
 ---
 title: Profiler örnekleme yöntemi veri görünümleri | Microsoft Docs
+description: Örnekleme yöntemi kullanılarak oluşturulan profil oluşturucu veri dosyalarının görünümleri ve raporları hakkında bilgi edinin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 8d845d84d421ca44f5b936df0a7138fefa848d8d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2b88abc935ca9eaef0a22230d427817756629bcb
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74772169"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98719441"
 ---
 # <a name="profiler-sampling-method-data-views"></a>Profiler örnekleme yöntemi veri görünümleri
 Bu bölüm, örnekleme yöntemi kullanılarak oluşturulan profil oluşturucu veri dosyalarının görünümleri ve raporları için başvuru bilgileri içerir.

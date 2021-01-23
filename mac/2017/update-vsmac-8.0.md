@@ -7,12 +7,12 @@ ms.date: 06/20/2018
 ms.technology: vs-ide-install
 ms.assetid: BC836802-CC65-41F7-BAEC-A42AED0371A9
 hide_comments: false
-ms.openlocfilehash: a7f5a3eb25fb4bb1e27ef41f79f325c38e13046d
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: 09f4af94eb1a12780268ab47f1a06c4710f0382f
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91860873"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98719156"
 ---
 # <a name="update-visual-studio-2017-for-mac-version-7-to-visual-studio-2019-for-mac-version-80"></a>Mac için Visual Studio 2017 (sürüm 7) güncelleştirme Mac için Visual Studio 2019 (sürüm 8,0)
 
@@ -22,9 +22,9 @@ Mac için Visual Studio 2019, birçok yeni geliştirme sunar: yepyeni bir C# Dü
 - [Mac için Visual Studio 2019 sürüm 8,1 artık kullanılabilir (ve 8,2 için Önizleme)](https://devblogs.microsoft.com/visualstudio/visual-studio-2019-for-mac-version-8-1-is-now-available-and-a-preview-for-8-2/)
 
 > [!IMPORTANT]
-> Mac için Visual Studio 2017 **sürüm 7.7.3**ile ilgili bilinen bir sorun vardır. burada Güncelleştirici, "güncelleştirme bilgilerini alma hatası" olarak görünür. Bu durumda [Mac için Visual Studio indirin](https://visualstudio.microsoft.com/vs/mac/) ve Mac Için Visual Studio 2019 ['yi yükleme](./installation.md?view=vsmac-2019) adımlarını izleyin. Bunun var olan Mac için Visual Studio 2017 örneğinizin üzerine yazyacağını unutmayın.
+> Mac için Visual Studio 2017 **sürüm 7.7.3** ile ilgili bilinen bir sorun vardır. burada Güncelleştirici, "güncelleştirme bilgilerini alma hatası" olarak görünür. Bu durumda [Mac için Visual Studio indirin](https://visualstudio.microsoft.com/vs/mac/) ve Mac Için Visual Studio 2019 ['yi yükleme](./installation.md?view=vsmac-2019&preserve-view=true) adımlarını izleyin. Bunun var olan Mac için Visual Studio 2017 örneğinizin üzerine yazyacağını unutmayın.
 
-En son sürümü almak için, [Güncelleştirici](./update.md?view=vsmac-2017) ' i Visual Studio 'ya göz atarak kullanabilirsiniz **> güncelleştirmeleri denetle...**:
+En son sürümü almak için, [Güncelleştirici](./update.md?view=vsmac-2017&preserve-view=true) ' i Visual Studio 'ya göz atarak kullanabilirsiniz **> güncelleştirmeleri denetle...**:
 
 ![Güncelleştirici iletişim kutusu](media/update-vsmac-updater.png)
 

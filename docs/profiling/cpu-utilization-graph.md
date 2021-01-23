@@ -1,5 +1,7 @@
 ---
 title: CPU kullanım grafiği | Microsoft Docs
+description: Zaman içinde bir uygulamadaki kullanım düzeyini gösteren CPU kullanımı grafiği hakkında bilgi edinin. Kullanım, kullanımdaki mantıksal çekirdek sayısı olarak gösterilir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e09526930bf98141ae4f9d4d204b20383763c208
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b310510a87e450c0d6b83a457cd117267ce0c9b8
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62552882"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98719025"
 ---
 # <a name="cpu-utilization-graph"></a>CPU kullanım grafiği
 CPU kullanım grafiğinde, zaman içinde bir uygulamadaki kullanım düzeyi gösterilir. X ekseni, izlemenin süresini temsil eder ve y ekseni, sistemdeki mantıksal çekirdek sayısını temsil eder. Grafik, belirli bir zamanda hangi belirli çekirdeğin etkin olduğunu göstermez. Örneğin, belirli bir süre boyunca her biri yüzde 50 kapasiteye iki çekirdek çalışıyorsa, bu görünüm kullanılan bir mantıksal çekirdeği gösterir.
@@ -26,7 +28,7 @@ CPU kullanım grafiğinde, zaman içinde bir uygulamadaki kullanım düzeyi gös
 
 - Yeşil, geçerli işlem tarafından sistemdeki mantıksal çekirdekler kullanımını gösterir.
 
-- Açık gri, sistemdeki diğer işlemlere göre mantıksal çekirdekler kullanımını gösterir. CPU grafiğinde yüksek oranda açık gri yüzdesi, sistemin diğer işlemler tarafından yoğun bir şekilde yüklendiğini ve işleminizin kendileri tarafından önceden gerçekleşme olasılığı olduğunu gösterir. Mantıksal çekirdekleri diğer işlemlere göre tüketimini azaltmak için, sistemde çalışan bunların sayısını azaltın.
+- Açık gri, sistemdeki diğer işlemlere göre mantıksal çekirdekler kullanımını gösterir. CPU grafiğinde yüksek oranda açık gri yüzdesi, sistemin diğer işlemler tarafından yoğun bir şekilde yüklendiğini ve işleminizin bu işlemden büyük olasılıkla önyüklenebileceğini gösterir. Mantıksal çekirdekleri diğer işlemlere göre tüketimini azaltmak için, sistemde çalışan bunların sayısını azaltın.
 
 - Koyu gri, mantıksal çekirdekler tarafından sistem işleminin tüketimini gösterir. Bunu doğrudan denetleyemiyorsunuz, ancak işlemin ne zaman meydana geldiğini bilmeniz yararlı olur, çünkü işlem için mantıksal çekirdekler kullanılabilirliğini etkileyebilir.
 

@@ -1,5 +1,6 @@
 ---
 title: Örnekleme veri değerlerini anlama | Microsoft Docs
+description: Visual Profil Oluşturma Araçları Studio 'nun örnekleme profili oluşturma yönteminin, küme aralıklarında bilgisayar işlemcisini nasıl kestireceğinizi ve işlev çağrı yığınını topladığını öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +12,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 289f92deaceca32a44249ed77c17187743a34fa4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 81efd0f20ba971555ec8c1333dfc322112f13e17
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74778056"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98722171"
 ---
 # <a name="understand-sampling-data-values"></a>Örnekleme veri değerlerini anlama
 

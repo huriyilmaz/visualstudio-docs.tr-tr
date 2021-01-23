@@ -1,5 +1,6 @@
 ---
 title: "İzlenecek yol: profil oluşturucu API 'Leri kullanma | Microsoft Docs"
+description: İzleme profili oluşturma sırasında toplanan veri miktarını sınırlamak için profil oluşturucu API 'Lerini nasıl kullanacağınızı öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 81071a44b51b1441782b25741126873fc720ed7b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 94276e294bfcf342cfc81b14005205a8f1e97949
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74779889"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98723094"
 ---
 # <a name="walkthrough-using-profiler-apis"></a>İzlenecek yol: Profil Oluşturucu API’lerini kullanma
 
@@ -32,12 +33,12 @@ ms.locfileid: "74779889"
  Visual Studio Profiler, veri toplamayı sınırlandırmanıza olanak sağlar. Bu izlenecek yol, profil oluşturucu API 'Leri kullanılarak veri koleksiyonunun nasıl sınırlandıralınacağını gösteren bir örnek sunmaktadır. Visual Studio Profiler, bir uygulamanın içinden veri toplamayı denetlemek için bir API sağlar.
 
  ::: moniker range="vs-2017"
- Yerel kod için, Visual Studio Profiler API 'Leri *VSPerf.dll*. *VSPerf. h*ve içeri aktarma kitaplığı olan *VSPerf. lib*üstbilgi dosyası *Microsoft Visual Studio\2017\team Tools\Performance Tools\PerfSDK* dizininde bulunur.  64 bitlik uygulamalar için, klasör *Microsoft Visual Studio\2017\Team Tools\Performance Tools\x64\PerfSDK*
+ Yerel kod için, Visual Studio Profiler API 'Leri *VSPerf.dll*. *VSPerf. h* ve içeri aktarma kitaplığı olan *VSPerf. lib* üstbilgi dosyası *Microsoft Visual Studio\2017\team Tools\Performance Tools\PerfSDK* dizininde bulunur.  64 bitlik uygulamalar için, klasör *Microsoft Visual Studio\2017\Team Tools\Performance Tools\x64\PerfSDK*
  ::: moniker-end
 
  Yönetilen kod için, profil oluşturucu API 'Leri *Microsoft.VisualStudio.Profiler.dll*. Bu DLL *Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools* dizininde bulunur. 64 bitlik uygulamalar için, klasör *Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools\x64*' dir. Daha fazla bilgi için bkz. [Profil Oluşturucu](/previous-versions/ms242704(v=vs.140)).
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
  Bu izlenecek yol, geliştirme ortamınızın tercih ettiğiniz hata ayıklama ve örnekleme işlemini destekleyecek şekilde yapılandırıldığını varsayar. Aşağıdaki konular, bu önkoşullara genel bir bakış sağlar:
 
 - [Nasıl yapılır: koleksiyon yöntemleri seçme](../profiling/how-to-choose-collection-methods.md)

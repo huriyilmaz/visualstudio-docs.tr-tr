@@ -1,5 +1,6 @@
 ---
 title: Zaman çizelgesi giriş karakteri | Microsoft Docs
+description: Giriş işaretinin, kullanıcının seçtiği konuma en yakın çağrı yığını olan çağrı yığınının tam konumunu nasıl gösterdiğini öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 370e19757890d6d9f56fad4e7b89b2197e515d9c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 85ead5e0292815e92de587e90e0fd2cab92cb485
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62999664"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98722496"
 ---
 # <a name="timeline-caret"></a>Zaman çizelgesi giriş işareti
 Yürütülen bir iş parçacığı segmentinin zaman çizelgesinde bir noktayı seçtiğinizde, üzerinde bir zaman çizelgesi giriş işareti belirir. Geçerli yığın sekmesinde görüntülenen çağrı yığını, segmenti tıklattığınız yere en yakın olan bir yerdir. Giriş işareti, **geçerli** sekme altında, örneklendiği zaman anlık ile birlikte görüntülenecek olan çağrı yığınını ilişkilendirmek için kullanılır. Giriş işareti, kullanıcının seçtiği konuma en yakın çağrı yığını olan çağrı yığınının tam konumunu gösterir.

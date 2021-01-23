@@ -1,5 +1,6 @@
 ---
 title: WinCounter | Microsoft Docs
+description: Özel olarak, profil çalıştırması sırasında ayarlanan aralıklarda toplanacak bir Windows veya uygulama performans sayacı belirten WinCounter seçeneği hakkında bilgi edinin.
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: ff319ffc-f249-4c3f-9eb2-06e392e3ae80
@@ -9,12 +10,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 672d472d4e592782f7ae06920c518b154fba6cba
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 595a8003992c92871a8476743288d3072aff63c8
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85329880"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98723055"
 ---
 # <a name="wincounter"></a>WinCounter
 **WinCounter** seçeneği, profil çalıştırması sırasında ayarlanan aralıklarda toplanacak bir Windows veya uygulama performans sayacı belirtir. Windows ve uygulama performansı sayaçları, profil oluşturma veri dosyasında işaretler olarak listelenir. Ayrı seçeneklerde toplanacak birden çok performans sayacı belirtebilirsiniz.
@@ -25,7 +26,7 @@ ms.locfileid: "85329880"
 
  **WinCounter** seçeneği yalnızca **Start** seçeneğiyle birlikte kullanılabilir.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cmd
 VSPerfCmd.exe /Start:Method /Wincounter:Path [/WinCounter:Path] [AutoMark:Milliseconds] [Options]

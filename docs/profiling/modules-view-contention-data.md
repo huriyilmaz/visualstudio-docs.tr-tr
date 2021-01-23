@@ -1,5 +1,6 @@
 ---
 title: Modüller görünümü-çekişme verileri | Microsoft Docs
+description: Çakışma verilerinin modüller görünümünün, profil oluşturma verilerinde örneklendiği modüller tarafından gruplanmış eşzamanlılık verilerini nasıl görüntülediğini öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +12,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 2de844867e9c0a8d95abdaa13f860a6487254bfe
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0640bc238bc300868d42aedc8905da8ffc97f65e
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74780019"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98723328"
 ---
 # <a name="modules-view---contention-data"></a>Modüller görünümü-çakışma verileri
 Çekişme verilerinin Modüller görünümü, profil oluşturma verilerinde örneklendiği modüller tarafından gruplanmış eşzamanlılık verilerini görüntüler. Her modül hiyerarşik bir ağacın köküdür. Çekişme olaylarının oluştuğu modülün işlevleri modül düğümünün altında listelenir.
@@ -36,7 +37,7 @@ ms.locfileid: "74780019"
 |**Kapsamlı çekişmeler**|-Bir işlev için, bu işlevin veya bu işlev tarafından çağrılan bir işlevin kaç kez yürütülenmediği.<br />-Bir modül için, bu modülden en az bir işlevin yığında olduğu çekişmelerin sayısı.<br />-Bir çizgi veya yönerge için, bu satır veya yönergenin yürütülmesi için kaç kez engellediği.|
 |**Kapsamlı çekişmeler yüzdesi**|-Bir işlev veya modül için, bu işlevin veya modülün dahil olduğu, profil oluşturma çalıştırmasında tüm çekişmelerin yüzdesi.<br />-Bir çizgi veya yönerge için, bu satır veya yönergenin yürütüldüğü profil oluşturma çalıştırmasında tüm engellenen sürenin yüzdesi.|
 |**İşlev satır numarası**|Kaynak dosyada bu işlevin başlangıcına ait satır numarası.|
-|**Modül Adı**|İşlevin, çizginin veya yönerge işaretçisinin bulunduğu modül adı.|
+|**Modül adı**|İşlevin, çizginin veya yönerge işaretçisinin bulunduğu modül adı.|
 |**Modül yolu**|Modülün, işlevin, çizginin veya yönerge işaretçisinin bulunduğu modül yolu.|
 |**Ad**|Modülün veya işlevin adı.|
 |**İşlem Kimliği**|Profil oluşturma çalıştırmasının işlem KIMLIĞI (PID).|

@@ -1,5 +1,6 @@
 ---
 title: Önalım saati | Microsoft Docs
+description: Premption Time hakkında bilgi edinin ve zaman çizelgesindeki bu kesimlerin, ön işleme olarak sınıflandırılan engelleme süresi ile ilişkili olduğunu öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: de7a02f7247e09876bc4598d44fc1c395161ebc2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a102b11fdc7608b94b97105b061e28860f41a9a1
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62935899"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98719519"
 ---
 # <a name="preemption-time"></a>Önalım zamanı
 Zaman çizelgesindeki bu segmentler, ön işleme olarak sınıflandırılan engelleme süresi ile ilişkilendirilir. Bu kategori, bir iş parçacığının şu nedenlerden biri nedeniyle dışarı geçmiş olduğunu gösterir:
