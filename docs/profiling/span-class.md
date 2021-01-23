@@ -1,5 +1,6 @@
 ---
 title: Span sınıfı | Microsoft Docs
+description: Span sınıfı ve uygulamanın bir aşamasını nasıl tanımladığını öğrenin. Ayrıca, span class public oluşturucular ve devralma hiyerarşisi hakkında bilgi edinin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8d8f31d24dc6c6c2ea20b50c9bf8af1cb4a9f9af
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0ca1e674b13877ff8a8864c3b7447f15fd0307d7
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62979763"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98720052"
 ---
 # <a name="span-class"></a>span sınıfı
 Uygulamanın aşamasını tanımlar.

@@ -1,5 +1,6 @@
 ---
 title: Nesne ömrü görünümü | Microsoft Docs
+description: Ayrıca, performans oturumu özellik sayfalarında .NET nesne yaşam süresi verilerini de topladığınızda nesne ömrü görünümünün nasıl kullanılabilir olduğunu öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +18,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: d4ea486930d0ea9f266b4ee57b69a50f7c570651
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9405b66c7412d65402a5572dcb5c71b232341b22
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74772630"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98722873"
 ---
 # <a name="object-lifetime-view"></a>Nesne Ömrü Görünümü
 Ayrıca, **performans oturumu** özellik sayfalarında **.NET nesne yaşam süresi verilerini de topladığınızda** , nesne ömrü görünümü kullanılabilir.
@@ -38,7 +39,7 @@ Ayrıca, **performans oturumu** özellik sayfalarında **.NET nesne yaşam süre
 |**Sınıf adı**|Ayrılmış türün sınıf adı.|
 |**İşlem Kimliği**|Profil oluşturma çalıştırmasının işlem KIMLIĞI.|
 |**İşlem adı**|Sürecin adı.|
-|**Modül Adı**|İşlevi içeren modülün adı.|
+|**Modül adı**|İşlevi içeren modülün adı.|
 |**Modül yolu**|İşlevi içeren modülün yolu.|
 
 ## <a name="instance-data"></a>Örnek veriler

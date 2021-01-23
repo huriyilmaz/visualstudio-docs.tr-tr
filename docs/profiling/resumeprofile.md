@@ -1,5 +1,6 @@
 ---
 title: ResumeProfile | Microsoft Docs
+description: ResumeProfile yönteminin, belirtilen profil oluşturma düzeyi için askıya alma/bırakma sayacını nasıl bir şekilde azaltır olduğunu öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +12,17 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 3d65d5fcf8961493c2b780453f2143de788551a5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1b700359977e13e4664067ef62af4913d41cbabb
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74778316"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98720247"
 ---
 # <a name="resumeprofile"></a>ResumeProfile
 `ResumeProfile`Yöntemi, belirtilen profil oluşturma düzeyi Için askıya alma/bekleme sayacını azaltır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
 PROFILE_COMMAND_STATUS PROFILERAPI ResumeProfile(
@@ -34,7 +35,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI ResumeProfile(
 
  Performans veri koleksiyonunun uygulanabileceğini gösteren profil düzeyini gösterir. Aşağıdaki **PROFILE_CONTROL_LEVEL** Numaralandırıcılar, performans verileri koleksiyonunun uygulanabileceği üç düzeyden birini göstermek için kullanılabilir:
 
-|Sının|Description|
+|Sının|Açıklama|
 |----------------|-----------------|
 |PROFILE_GLOBALLEVEL|Genel düzey ayarı, profil oluşturma çalıştırmasında tüm işlem ve iş parçacıklarını etkiler.|
 |PROFILE_PROCESSLEVEL|İşlem düzeyi ayarı, belirtilen işlemin parçası olan tüm iş parçacıklarını etkiler.|
@@ -47,7 +48,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI ResumeProfile(
 ## <a name="property-valuereturn-value"></a>Özellik değeri/dönüş değeri
  İşlev, **PROFILE_COMMAND_STATUS** numaralandırma kullanılarak başarılı veya başarısız olduğunu gösterir. Dönüş değeri aşağıdakilerden biri olabilir:
 
-|Sının|Description|
+|Sının|Açıklama|
 |----------------|-----------------|
 |PROFILE_ERROR_ID_NOEXIST|Profil oluşturma öğesi KIMLIĞI yok.|
 |PROFILE_ERROR_LEVEL_NOEXIST|Belirtilen profil oluşturma düzeyi yok.|

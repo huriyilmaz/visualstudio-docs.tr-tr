@@ -1,5 +1,6 @@
 ---
 title: UI Işlem zamanı | Microsoft Docs
+description: Zaman çizelgesindeki segmentlerin, Kullanıcı arabirimi Işleme olarak kategorilere ayrılan engelleyici sürelerle ilişkilendirildiğini öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 391b4582d03e32e738f0eade823326e72a662a43
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 63462aedfb1d7a2c03fe6ff5d59495358c52194e
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "63004462"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98722392"
 ---
 # <a name="ui-processing-time"></a>UI işlem süresi
 Zaman çizelgesindeki bu segmentler, Kullanıcı arabirimi Işleme olarak kategorilere ayrılan engelleyici sürelerle ilişkilendirilir. Bu, bir iş parçacığının Windows iletilerini balya da diğer kullanıcı arabirimi (UI) çalışmasını gerçekleştireceği anlamına gelir. Bu süre boyunca, concurrency Visualizer 'ın UI Işleme olarak sayan bir API 'de bir iş parçacığı engellenmiş. Ve gibi API `GetMessage()` 'ler `MsgWaitForMultipleObjects()` Bu gruba girer.

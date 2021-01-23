@@ -1,5 +1,6 @@
 ---
 title: Kaynak Izleme performans kuralları | Microsoft Docs
+description: Kaynak Izleme kategorisindeki performans iletilerinin uygulamanızın performansı hakkında nasıl ek veri sağladığını öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: f0f77faf-0a05-4718-a2c5-47934be40868
@@ -9,21 +10,21 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 39df18811a47dfb41c17333121cd9a23d8f46940
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 96cad46cd8a42346ab6199bca664cdc885bfc3cd
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85544540"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98720273"
 ---
 # <a name="resource-monitoring-performance-rules"></a>Kaynak İzleme Performans Kuralları
 Kaynak Izleme kategorisindeki performans iletileri uygulamanızın performansı hakkında ek veriler sağlar. Bu verileri, performans sorunlarını analiz etmek için kullanabilirsiniz. Bu kurallar bilgilendirme amaçlıdır ve her profil oluşturma çalışması için raporlanır.
 
-|Kural|Description|
+|Kural|Açıklama|
 |-|-|
 |[DA0501: Işlem tarafından ortalama CPU kullanımı profili oluşturuldu.](../profiling/da0501-average-cpu-consumption-by-the-process-being-profiled.md)|Bu ileti, bir işlemcinin uygulamadan yönergeleri yürütürken meşgul olduğu sürenin yüzdesini bildirir. Bildirilen değer, işlem yapılan işlemin etkin olduğu tüm ölçüm aralıklarının ortalaması olarak belirlenir.|
 |[DA0502: Profili oluşturulan İşlemin En Yüksek CPU kullanımı](../profiling/da0502-maximum-cpu-consumption-by-the-process-being-profiled.md)|Bu ileti, bir işlemcinin uygulamadan yönergeleri yürütürken meşgul olduğu sürenin en uzun yüzdesini bildirir. Bildirilen değer, işlem yapılan işlemin etkin olduğu tüm ölçüm aralıkları arasında raporlanan en büyük değerdir.|
 |[DA0503: Profili oluşturulan İşlemin Bayt Cinsinden Ortalama Çalışma Kümesi](../profiling/da0503-average-working-set-in-bytes-for-the-process-being-profiled.md)|Bu ileti, profil oluşturma etkinken işlemin kullandığı ortalama fiziksel bellek miktarını bayt cinsinden bildirir. Bu fiziksel bellek ölçüsü çalışma kümesi olarak bilinir.|
 |[DA0504: Profili oluşturulan İşlemin Bayt Cinsinden En Yüksek Sayıda Çalışma Kümesi](../profiling/da0504-maximum-working-set-in-bytes-for-the-process-being-profiled.md)|Bu ileti, profil oluşturma etkinken işlemin kullandığı maksimum fiziksel bellek miktarını bayt cinsinden bildirir.|
-|[DA0505: Profili oluşturulan İşlem için ayırılmış Ortalama Özel Baytlar](../profiling/da0505-average-private-bytes-allocated-for-the-process-being-profiled.md)|Bu ileti, profil oluşturma etkinken, işlemin bayt olarak ayırdığı ortalama sanal bellek miktarını bildirir. Bu sanal bellek ölçüsü *özel bayt*olarak bilinir. Özel baytlar, işlem tarafından yalnızca işlem içinde çalışan iş parçacıklarının erişebileceği sanal bellek konumlarını temsil eder.|
+|[DA0505: Profili oluşturulan İşlem için ayırılmış Ortalama Özel Baytlar](../profiling/da0505-average-private-bytes-allocated-for-the-process-being-profiled.md)|Bu ileti, profil oluşturma etkinken, işlemin bayt olarak ayırdığı ortalama sanal bellek miktarını bildirir. Bu sanal bellek ölçüsü *özel bayt* olarak bilinir. Özel baytlar, işlem tarafından yalnızca işlem içinde çalışan iş parçacıklarının erişebileceği sanal bellek konumlarını temsil eder.|
 |[DA0506: Profili oluşturulan İşlem için ayırılmış En Yüksek Sayıda Özel Bayt](../profiling/da0506-maximum-private-bytes-allocated-for-the-process-being-profiled.md)|Bu ileti, profil oluşturma etkinken özel baytlara ayrılan işlemin en fazla sanal bellek miktarını bildirir.|

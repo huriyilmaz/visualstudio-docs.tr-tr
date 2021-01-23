@@ -1,5 +1,6 @@
 ---
 title: Görünür zaman çizelgesi profili | Microsoft Docs
+description: Iş parçacığı engelleme görünümü için görünür zaman çizelgesi profilinin istatistiksel bilgiler ve raporlara bağlantılar sağladığını öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 352651be28f178272caaad9a01070dc9d7357d79
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b4b8725a6336218bdac413b12a20ff201dd0c287
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62823471"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98723172"
 ---
 # <a name="visible-timeline-profile"></a>Görünür zaman çizelgesi profili
 Iş parçacığı engelleme görünümü için görünür zaman çizelgesi profili, istatistiksel bilgiler ve raporlara bağlantılar sağlar. Yakınlaştırma, büyütme, yatay kaydırma, kanalları gizleme veya kanalları gösterme gibi, etkin göstergedeki numaralar şu anda görünümde olan öğeleri yansıtacak şekilde değişir. Göstergedeki bir öğeyle ilgili bir raporu görüntülemek için öğeye tıklayın.

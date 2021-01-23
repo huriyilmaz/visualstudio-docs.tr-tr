@@ -1,5 +1,7 @@
 ---
 title: Performans oturumlarını yapılandırma | Microsoft Docs
+description: Visual Studio Profil Oluşturma Araçları istediğiniz performans verilerini toplamak üzere nasıl yapılandıracağınızı öğrenin. Bu makalede ortak görevler listelenmekte ve bağlantılar sağlanmaktadır.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +16,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 1bdf1c372ffcb3ad3a0ebf102827565853947e2b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 52e2575e034dbabe5e380857edd95e4bc46f56d2
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74777874"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98721027"
 ---
 # <a name="configure-performance-sessions"></a>Performans oturumlarını yapılandırma
 Profil Oluşturma Araçları kullanarak [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] çok sayıda uygulama türü için çok çeşitli performans verileri toplayabilirsiniz. Bu bölümde, sizi ilgilendiren verileri toplamak üzere Profil Oluşturma Araçları yapılandırmak için performans oturumu ve hedef ikilisinin performans Sihirbazı ve özelliklerinin nasıl kullanılacağı gösterilmektedir. Profil Oluşturma Araçları yapılandırma özellikleri, profil oluşturma çalıştırmasında ne kadar veri toplandığını denetlemek için de kullanılabilir. Daha fazla bilgi için bkz. [Denetim verileri toplama](../profiling/controlling-data-collection.md).

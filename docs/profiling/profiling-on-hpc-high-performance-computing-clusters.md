@@ -1,5 +1,6 @@
 ---
 title: HPC üzerinde profil oluşturma (yüksek performanslı bilgi Işlem) kümeleri | Microsoft Docs
+description: Visual Studio Profil Oluşturma Araçları örnekleme yöntemini kullanarak Microsoft Windows HPC kümelerinin işlem düğümlerinde nasıl profil oluşturabileceğinizi öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -20,18 +21,18 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: f2d3949194dedab6d7e7ea2faa1aea304d889bc4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 06a160adda25debe21d8262d9064c23849011dc9
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74772126"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98720533"
 ---
 # <a name="profile-on-hpc-high-performance-computing-clusters"></a>HPC (yüksek performanslı bilgi işlem) kümelerinde profil
 
 Visual Studio Profil Oluşturma Araçları örnekleme yöntemini kullanarak Microsoft Windows HPC kümelerinin işlem düğümlerinde profil oluşturabilirsiniz. HPC hakkında daha fazla bilgi için bkz. Microsoft Web sitesinde [WINDOWS HPC](https://azure.microsoft.com/solutions/big-compute/) .
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Bir HPC işlem düğümünde profil yapmak için aşağıdakileri yapmanız gerekir:
 
@@ -75,9 +76,9 @@ HPC kümesi ve hedef bilgilerini belirtmek için HPC performans sihirbazını ku
 
 5. Sihirbazın üçüncü sayfasında:
 
-    - Açık bir projede olmayan bir yürütülebilirin profilini oluşturuyorsanız, **yürütülebilir dosyanın tam yolu olan**ikili dosyanın yolunu belirtin.
+    - Açık bir projede olmayan bir yürütülebilirin profilini oluşturuyorsanız, **yürütülebilir dosyanın tam yolu olan** ikili dosyanın yolunu belirtin.
 
-    - Açık bir projede olmayan bir yürütülebilir dosya profili oluşturuyorsanız, **komut satırı bağımsız değişkenlerinde**işleme geçirilecek komut satırı bağımsız değişkenlerini belirtebilirsiniz.
+    - Açık bir projede olmayan bir yürütülebilir dosya profili oluşturuyorsanız, **komut satırı bağımsız değişkenlerinde** işleme geçirilecek komut satırı bağımsız değişkenlerini belirtebilirsiniz.
 
     - **Uzak çalışma dizini**' nde, bireysel işlem düğümlerinde işlem örnekleri tarafından kullanılan klasörün yolunu belirtin.
 
@@ -103,7 +104,7 @@ HPC kümesi ve hedef bilgilerini belirtmek için HPC performans sihirbazını ku
 
     - Profil oluşturmayı hemen başlatmak için **sihirbaz bittikten sonra profil oluşturmayı Başlat** ' ı seçin veya profil oluşturmayı el ile başlatmak için onay kutusunun işaretini kaldırın.
 
-10. **Son**'a tıklayın.
+10. **Finish (Son)** düğmesine tıklayın.
 
 ## <a name="set-hpc-profiling-properties-by-using-performance-session-property-pages"></a>Performans oturumu özellik sayfalarını kullanarak HPC profil oluşturma özelliklerini ayarlama
 

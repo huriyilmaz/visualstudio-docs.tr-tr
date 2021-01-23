@@ -1,5 +1,6 @@
 ---
 title: Performans verisi dosya adı seçeneklerini ayarla | Microsoft Docs
+description: Performans oturumunun Özellikler iletişim kutusunun Genel sayfasında herhangi bir adlandırma parametresini nasıl değiştirebileceğinizi öğrenin.
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: d7a8d6b9-ab23-46fb-98ed-774781157860
@@ -9,16 +10,16 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: bba5677c491e77e6f1c2758e64cec1b598c9b627
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 6dce666121214bef7d844bae2735a284589463ee
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851573"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98722054"
 ---
 # <a name="how-to-set-performance-data-file-name-options"></a>Nasıl yapılır: Performans veri dosyası adlandırma seçeneklerini ayarlama
 
-Varsayılan olarak, profil oluşturma verilerini (.* VSP*) dosyası aşağıdaki sözdizimini kullanarak:
+Varsayılan olarak, profil oluşturma verilerini (.*VSP*) dosyası aşağıdaki sözdizimini kullanarak:
 
 *Yol\vsp-file\ydd (N)* **. vsp**
 

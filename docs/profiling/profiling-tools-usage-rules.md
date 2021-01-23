@@ -1,5 +1,6 @@
 ---
 title: Kullanım kuralları Profil Oluşturma Araçları | Microsoft Docs
+description: Profil Oluşturma Araçları Kullanım kategorisindeki performans kurallarının, verileri en etkili şekilde toplamak için profil oluşturucuyu kullanma kılavuzunu nasıl sağladığını öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: afa7db3b-8c1d-473a-81ac-24ede112a17f
@@ -9,17 +10,17 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 1aeeb7e0a9061d72a07b718acde70b00dfcbba89
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8eba05a40e108d2fd1ba5107160088c5c30da299
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88144681"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98720481"
 ---
 # <a name="profiling-tools-usage-rules"></a>Profil Araçları Kullanım Kuralları
 Profil Oluşturma Araçları Kullanım kategorisindeki performans kuralları, verileri en etkili şekilde toplamak için profil oluşturucunun kullanılmasına yönelik rehberlik sağlar.
 
-| Kural | Description |
+| Kural | Açıklama |
 | - | - |
 | [DA0002: VSPerfCorProf.dll eksik](../profiling/da0002-vsperfcorprof-dll-is-missing.md) | Komut satırı profili oluşturma, .NET Framework ikililer için tamamlanmamış veriler içerebilir. Bu durum doğru ortam değişkenlerini ayarlamamasından kaynaklanıyor olabilir. |
 | [DA0003: Pek çok çekirdek örneği](../profiling/da0003-many-kernel-samples.md) | Hedef ikilinin yürütülmesi dışında oluşan birçok profil oluşturma örneği kaydedildi. Daha doğru veri toplamak için, izleme yöntemini kullanmayı düşünün. |

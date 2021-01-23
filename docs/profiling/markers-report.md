@@ -1,5 +1,6 @@
 ---
 title: İşaret raporu | Microsoft Docs
+description: Işaretleyiciler raporunun görüntülenen zaman çerçevesinde işaretleyicileri nasıl listeleyeceğinizi ve kaydırma ya da yakınlaştırma işaretlerinin görünme veya kaybolmasının nasıl neden olabileceğini öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -10,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9502d2cf0081985cfbee2283af820c06d681ad9f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7e95cf3b14f804c481ff03ec6fbf72b360efedc7
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64808265"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98722119"
 ---
 # <a name="markers-report"></a>İşaretçiler Raporu
 Işaretçiler raporu, görünen zaman çerçevesinde işaretçileri listeler.  Yolları kaydırma veya büyütme ya da gizleme, işaretleyicilerin görünmesine veya kaybolmasına neden olabilir. Rapor, her işaretleyici hakkında şu bilgileri içerir:

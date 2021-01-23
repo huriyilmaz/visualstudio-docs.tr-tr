@@ -1,5 +1,6 @@
 ---
 title: Geçerli oturumu ayarla | Microsoft Docs
+description: Performans Gezgini birden çok performans oturumu açmayı öğrenin ve geçerli oturum olarak ayarlanacak görünür performans oturumlarından birini seçin.
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -16,16 +17,16 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: c729a9e8de7a27da5f5c81260c505bc654c33344
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 4a704b88f40f5d89b6bcdcccd7e4158411d9999c
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851742"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98721872"
 ---
 # <a name="how-to-set-the-current-session"></a>Nasıl yapılır: Geçerli oturumu ayarlama
 
-**Performans Gezgini**birden çok performans oturumu açabilir ve ardından geçerli oturum olarak ayarlanacak görünür performans oturumlarından birini seçebilirsiniz.
+**Performans Gezgini** birden çok performans oturumu açabilir ve ardından geçerli oturum olarak ayarlanacak görünür performans oturumlarından birini seçebilirsiniz.
 
 Geçerli oturum olarak bir oturum ayarladıktan sonra, **Performans Gezgini** araç çubuğunda **Başlat** ' a tıklamak geçerli oturumun profilini oluşturmaya başlar.
 

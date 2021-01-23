@@ -1,5 +1,6 @@
 ---
 title: Satırlar Görünümü-Örnekleme verileri | Microsoft Docs
+description: Örnekleme verilerinin satırlar görünümünün, örnekler profil oluşturma çalıştırmasında toplandığında yürütülen deyimler için performans verilerini nasıl listeleyeceğinizi öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +12,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: ff4d851937111400002de531696b9b69aec20ba9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 38ae3e9c40204082ea8791ddea4e92d77a0d311e
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74778589"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98721326"
 ---
 # <a name="lines-view---sampling-data"></a>Satırlar Görünümü-Örnekleme verileri
 Örnekleme verilerinin satırlar görünümü, profil oluşturma çalıştırmasında örnek toplandığında yürütülen deyimler için performans verilerini listeler.
@@ -46,7 +47,7 @@ ms.locfileid: "74778589"
 |------------|-----------------|
 |**İşlem Kimliği**|Profil oluşturma çalıştırmasının işlem KIMLIĞI (PID).|
 |**İşlem adı**|Sürecin adı.|
-|**Modül Adı**|İşlev satırını içeren modülün adı.|
+|**Modül adı**|İşlev satırını içeren modülün adı.|
 |**Modül yolu**|İşlev satırını içeren modülün yolu.|
 |**Kaynak Dosya**|İşlev satırını içeren kaynak dosya.|
 |**İşlev adı**|İşlevin adı.|

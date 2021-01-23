@@ -1,5 +1,6 @@
 ---
 title: API 'Leri Profil Oluşturma Araçları | Microsoft Docs
+description: Profil oluşturma çalıştırmasında veri toplamayı denetlemek için Visual Studio Profil Oluşturma Araçları API 'lerinin yönetilen veya yerel yöntemlerini nasıl ekleyebileceğiniz hakkında bilgi edinin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: bd9ca972-e5bf-45a6-9a5d-ac30a4d9ee02
@@ -9,12 +10,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: ed4fef32c04d68f37df71101447a4e24f39eecba
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b0b62f88903cab7ce3fcf9117e7159256d7adaf5
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74772096"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98720507"
 ---
 # <a name="profiling-tools-apis"></a>Profil Araçları API'leri
 

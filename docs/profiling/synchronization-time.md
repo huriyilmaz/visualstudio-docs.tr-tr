@@ -1,5 +1,6 @@
 ---
 title: Eşitleme saati | Microsoft Docs
+description: Zaman çizelgesindeki segmentlerin eşitleme olarak sınıflandırılan engelleme süreleriyle nasıl ilişkilendirildiğini öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ae73f7b9a9838a006dce47bf44b0ed46aa0b84fa
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b0e8c2243d01a5801b6846445995bbdfdcff78c9
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62965316"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98719831"
 ---
 # <a name="synchronization-time"></a>Eşitleme saati
 Zaman çizelgesindeki bu segmentler, eşitleme olarak kategorilere ayrılan engelleyici sürelerle ilişkilendirilir. Bir iş parçacığı eşitlemede engellenmiş olarak işaretlendiğinde, bunlardan biri kapsanır:

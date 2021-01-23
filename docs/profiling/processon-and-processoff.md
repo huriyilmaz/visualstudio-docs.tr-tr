@@ -1,5 +1,6 @@
 ---
 title: ProcessOn ve ProcessOff | Microsoft Docs
+description: VSPerfCmd.exe ProcessOff ve ProcessOn alt komutlarının, bir komut satırı profil oluşturma oturumunda belirtilen işlem için profil oluşturmayı duraklatma ve devam ettirme hakkında bilgi edinin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: d3dc6a7e-bc0f-48a6-a4ec-f386348bb296
@@ -9,17 +10,17 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 62c16c2d578a38187b4a58958466597a5e4d297d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ae4b5e95636894ddc2d0c4799308afb057145747
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74778394"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98719454"
 ---
 # <a name="processon-and-processoff"></a>ProcessOn ve ProcessOff
 VSPerfCmd.exe **ProcessOff** ve **ProcessOn** alt komutları, komut satırı profil oluşturma oturumunda belirtilen işlem için profil oluşturmayı duraklatır ve devam ettirir. **ProcessOff** işlemin profilini oluşturmayı durduruyor ve **ProcessOn** , işlemin profilini oluşturmaya başlar.
 
- Çoğu durumda, VSPerfCmd.exe komut satırında tek seçenek olarak **ProcessOn** veya **ProcessOff** belirtirsiniz, ancak **GlobalOn**, **globaloff**, **ThreadOn**ve **ThreadOff** alt komutları ile de birleştirilebilir.
+ Çoğu durumda, VSPerfCmd.exe komut satırında tek seçenek olarak **ProcessOn** veya **ProcessOff** belirtirsiniz, ancak **GlobalOn**, **globaloff**, **ThreadOn** ve **ThreadOff** alt komutları ile de birleştirilebilir.
 
  **ProcessOn** ve **ProcessOff** alt komutları, bir komut satırı profil oluşturma oturumunda tüm işlemlere yönelik veri toplamayı denetleyen **GlobalOn** ve **globaloff** alt komutları ve belirtilen bir iş parçacığı Için veri toplamayı denetleyen **ThreadOn** ve **ThreadOff** alt komutları ile etkileşime geçin.
 
@@ -31,7 +32,7 @@ VSPerfCmd.exe **ProcessOff** ve **ProcessOn** alt komutları, komut satırı pro
 
   Daha fazla bilgi için bkz. [profil oluşturma araçları API 'leri](../profiling/profiling-tools-apis.md).
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cmd
 VSPerfCmd.exe /{ProcessOff|ProcessOn}:PID [Options]
@@ -42,7 +43,7 @@ VSPerfCmd.exe /{ProcessOff|ProcessOn}:PID [Options]
  `PID` Başlatılacak veya durdurulacak işlemin tamsayı tanımlayıcısı. İşlem kimlikleri Windows Görev Yöneticisi 'nin **işlem** sekmesinde listelenir.
 
 ## <a name="required-subcommands"></a>Gerekli alt komutlar
- Hiçbiri
+ Yok
 
 ## <a name="valid-subcommands"></a>Geçerli alt komutlar
  Aşağıdaki alt komutları da içeren komut satırlarında **ProcessOn** ve **ProcessOff** belirtilebilir.
@@ -53,7 +54,7 @@ VSPerfCmd.exe /{ProcessOff|ProcessOn}:PID [Options]
 
  **Ekle:** `PID` Belirtilen işlemin profilini oluşturmaya başlıyor.
 
- **GlobalOff** Globalon&#124;**GlobalOn** , komut satırı profil oluşturma oturumunda tüm işlemlerde profil oluşturmayı durduruyor veya başlatır.
+  Globalon&#124;**GlobalOn** , komut satırı profil oluşturma oturumunda tüm işlemlerde profil oluşturmayı durduruyor veya başlatır.
 
  {**ThreadOff**&#124;**ThreadOn**} **:**`TID` Belirtilen iş parçacığı için profil oluşturmayı durduruyor veya başlatır (yalnızca izleme yöntemi).
 

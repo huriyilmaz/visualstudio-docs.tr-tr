@@ -1,5 +1,6 @@
 ---
 title: Sembol bilgilerini serileştirme | Microsoft Docs
+description: Uygulamanızı çözümlemek için sahip olmanız gereken sembolleri nasıl seri hale getirebileceğinizi ve sembol serileştirmenin. vsp dosyasına semboller nasıl ekleyeceğini öğrenin.
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -14,12 +15,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: d644960153a8e342f6442f3750420ea68a61b38f
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 0b7cdfa6e64380c966b62d6691f73719a3034e2d
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851599"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98722093"
 ---
 # <a name="how-to-serialize-symbol-information"></a>Nasıl yapılır: sembol bilgilerini serileştirme
 Uygulamanızı çözümlemek için sahip olmanız gereken sembolleri seri hale getirebilirsiniz. Sembol serileştirme öğesine semboller ekler. *VSP* dosyası. Öğesine sembol bilgisi ekleyerek. *VSP* dosyası, diğer bir deyişle, özgün simgelere erişim olmadan bir performans raporunu çözümleyebilir. Semboller serileştirilmeyen, özgün olarak işaretlenmiş olmalıdır. *exe* ve. analiz edilecek *pdb* dosyaları. *VSP* dosyası.
@@ -32,7 +33,7 @@ Uygulamanızı çözümlemek için sahip olmanız gereken sembolleri seri hale g
 
 2. **Performans araçları**' na tıklayın.
 
-3. **Genel ayar**altında **otomatik olarak sembol bilgilerini seri hale getirme**' yi seçin.
+3. **Genel ayar** altında **otomatik olarak sembol bilgilerini seri hale getirme**' yi seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Performans oturumlarını yapılandırma](../profiling/configuring-performance-sessions.md)

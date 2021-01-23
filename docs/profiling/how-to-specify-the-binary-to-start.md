@@ -1,5 +1,6 @@
 ---
 title: Başlatılacak Ikiliyi belirtin | Microsoft Docs
+description: <Target>DLL 'ler gibi ikili dosyaları profil oluşturma için özellik sayfaları iletişim kutusuna nasıl bilgi girmeniz gerektiğini öğrenin.
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -14,16 +15,16 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 8b3aec9448c6493350683dc9f0bec0cc2d60fa82
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 715c92a26ae33a4e909ec737c866be1cdc15251e
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851339"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98721846"
 ---
 # <a name="how-to-specify-the-binary-to-start"></a>Nasıl yapılır: Başlatma için ikili dosya belirtme
 
-Dll 'Ler gibi ikili dosyaların profilini almak için ** \<Target> Özellik sayfaları** iletişim kutusuna bilgi girmeniz gerekir. Bu bilgi, DLL projesinin çağıran uygulamayı bulabileceği yeri gösterir.
+Dll 'Ler gibi ikili dosyaların profilini almak için **\<Target> Özellik sayfaları** iletişim kutusuna bilgi girmeniz gerekir. Bu bilgi, DLL projesinin çağıran uygulamayı bulabileceği yeri gösterir.
 
 1. **Performans Gezgini**, hedef ikiliye sağ tıklayın ve ardından **Özellikler**' e tıklayın.
 
@@ -37,7 +38,7 @@ Dll 'Ler gibi ikili dosyaların profilini almak için ** \<Target> Özellik sayf
 
 6. **Çalışma dizini** metin kutusunda dizin konumunu belirtin.
 
-7. **Tamam**’a tıklayın.
+7. **Tamam**'a tıklayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,5 +1,6 @@
 ---
 title: Performans raporu görünüm filtresi | Microsoft Docs
+description: Profil Oluşturucu rapor görünümü filtresi penceresinin performans raporu penceresinin en üstünde nasıl yer aldığı hakkında bilgi edinin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,19 +13,19 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 9a5642a8e153a4dfc7705d91d933397b6f8acb37
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 79fb4b7cf7a5df4b2077a2145172d24acdbf86cb
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74778460"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98722743"
 ---
 # <a name="performance-report-view-filter"></a>Performans Raporu Görünüm Filtresi
 **Profil Oluşturucu rapor görünümü filtresi** penceresi, **Performans raporu** penceresinin en üstünde bulunur. Bunu göremiyorsanız **filtre göster** düğmesine tıklayın.
 
  Sonuçlarınızı iyileştirmek için her bir filtre yan tümcesini değiştirebilirsiniz. Aşağıdaki sütunlar, filtre Oluşturucusu 'nda mevcuttur.
 
-|Filtre öğesi|Description|
+|Filtre öğesi|Açıklama|
 |-----------------|-----------------|
 |Ve/veya|Bu yan **tümce ve Next** yan tümcesinin bir sonuçla eşleştirmek için true olması gerekir. Bu yan **tümce veya sonraki** yan tümce bir sonuçla eşleşecek şekilde doğru olabilir.|
 |Alan|Geçerli rapor dosyasında kullanılabilir olan veri alanları listesinden filtre yan tümcesinde kullanılacak alanı seçin.|

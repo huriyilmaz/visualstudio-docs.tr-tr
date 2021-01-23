@@ -1,5 +1,7 @@
 ---
 title: Veri toplamayı denetleme | Microsoft Docs
+description: Profil Oluşturma Araçları veri toplamayı başlatma ve durdurma ve profil oluşturma verilerinin toplandığı nesneleri sınırlama hakkında bilgi edinin. Bu makale genel bakıştır.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 48c7047bdd321943074221c9f09193970d42a247
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b846db263c95f20c6ea4cb6a418973830a5dd8ee
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74777809"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98720936"
 ---
 # <a name="control-data-collection"></a>Veri toplamayı denetleme
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Profil Oluşturma Araçları, bir performans oturumu sırasında profil oluşturma verilerinin ne zaman toplandığını denetlemenize ve profili oluşturulan işlevleri belirtmenize olanak tanır. Bu bölümde, veri toplamayı **Performans Gezgini** ve **veri toplama denetimi** pencerelerini başlatma ve durdurma ve profil oluşturma verilerinin toplandığı nesnelerinin nasıl sınırlandırılacağını açıklanmaktadır.

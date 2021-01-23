@@ -1,5 +1,6 @@
 ---
 title: Uyku süresi | Microsoft Docs
+description: Uyku kategorisinin bir iş parçacığının kendi mantıksal çekirdeğini sağladığını ve hiçbir iş olmadığını belirtir.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: be2d566228367e2cdb07aecc2d73eaf82a6d961f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e66e62c2f7d78003581b12121844090c9754c2cc
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62980219"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98720065"
 ---
 # <a name="sleep-time"></a>Uyku süresi
 Zaman çizelgesindeki bu segmentler, uyku olarak sınıflandırılan engelleme süresi ile ilişkilendirilir. Uyku kategorisi, bir iş parçacığının kendi mantıksal çekirdeğini kendine vermiş olduğunu ve hiçbir iş olmadığını gösterir. Bu süre boyunca, eşzamanlılık görselleştiricinin uyku olarak saymakta olduğu bir API 'de bir iş parçacığı engellenmiştir. Ve gibi API `Sleep()` 'ler `SwitchToThread()` Bu gruba girer.

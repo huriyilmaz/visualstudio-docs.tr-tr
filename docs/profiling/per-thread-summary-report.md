@@ -1,5 +1,6 @@
 ---
 title: Her Iş parçacığı özet raporu | Microsoft Docs
+description: Bir çubuk grafiğinde, gizli olmayan her iş parçacığının her bir etkinlik kategorisinde, o anda görünür zaman aralığı boyunca harcadığı sürenin oranı gösterilir.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1ab5e88db9f539dd79482044ab3834b27a6b1747
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 03797190097d3495a315fd0e0343fa9999100147
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62794332"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98722795"
 ---
 # <a name="per-thread-summary-report"></a>Her iş parçacığı özet raporu
 Bu çubuk grafiğinde, gizli olmayan her iş parçacığının her bir etkinlik kategorisinde, o anda görünür zaman aralığı boyunca harcadığı sürenin oranı gösterilmektedir. "Yürütme", iş parçacığının yürütüldüğü anlamına gelir; diğer tüm kategoriler, iş parçacığının bir şeyi beklediğini anlamına gelir.

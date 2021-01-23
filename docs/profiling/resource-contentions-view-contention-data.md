@@ -1,5 +1,6 @@
 ---
 title: Kaynak çekişmeleri görünümü-çekişme verileri | Microsoft Docs
+description: Kaynak çekişme görünümünün, çekişme olaylarının kaynağı olan kaynaklar için çekişmeyi nasıl listeleyeceğinizi öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 1607e594b6456d4da4396069d589160230b39680
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fc8e6c39efea24ac8a4a493099f3bcdb39dc4fe6
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74778342"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98720351"
 ---
 # <a name="resource-contentions-view---contention-data"></a>Kaynak Çakışmaları Görünümü - Çakışma Verileri
 Kaynak Çekişmesi görünümü, çekişme olaylarının kaynağı olan kaynaklar için çekişme verilerini listeler. Başka bir iş parçacığında bir işlev kaynağa özel erişim elde ettiğinden, bir iş parçacığında bir işlev kaynağa erişim için beklemeye zorlandığında bir çekişme olayı oluşur. Her kaynak, çekişme olayları ile sonuçlanan işlev yürütme yollarını görüntüleyen bir çağrı ağacının kök düğümüdür.
@@ -53,7 +54,7 @@ Kaynak Çekişmesi görünümü, çekişme olaylarının kaynağı olan kaynakla
 |**Kapsamlı çekişmeler yüzdesi**|-Bir kaynak için, bu kaynağa erişim için çekişme olayları olan profil oluşturma çalıştırmasında tüm çekişme olaylarının yüzdesi.<br />-Bir işlev için, işlevin işlev gövdesinde kod yürütürken, işlevin bu örneklerinin üst kaynağa erişmesi engellenecek olan sayı. İşlev tarafından çağrılan işlevlerde engelleme olayları dahil değildir.|
 |**Düzeyde**|Bu işlevin çağrı ağacındaki derinliği. Yalnızca [VSPerfReport](../profiling/vsperfreport.md) komut satırı raporlarında.|
 |**İşlev satır numarası**|Kaynak dosyada bu işlevin başlangıcına ait satır numarası.|
-|**Modül Adı**|İşlevi içeren modülün adı.|
+|**Modül adı**|İşlevi içeren modülün adı.|
 |**Modül yolu**|İşlevi içeren modülün yolu.|
 |**İşlem Kimliği**|İşlevin yürütüldüğü işlemin işlem KIMLIĞI (PID).|
 |**İşlem adı**|Sürecin adı.|
