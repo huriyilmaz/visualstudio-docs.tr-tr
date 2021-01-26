@@ -18,12 +18,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f8c0cf21d6d9055f183d15728fb63118ffb87e9c
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: 9e0348c1f6c51f0a82328814be671d8f44e3d4a7
+ms.sourcegitcommit: 3922edfe67063e1ede418cdbf6aa6293117c4855
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94904007"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98773346"
 ---
 # <a name="class-view-and-object-browser-icons"></a>Sınıf Görünümü ve Nesne Tarayıcısı simgeleri
 
@@ -65,6 +65,9 @@ Aşağıdaki sinyal simgeleri önceki tüm simgelere uygulanır ve erişilebilir
 
 > [!NOTE]
 > Projeniz bir kaynak denetim veritabanına dahil edildiğinde, iade edilen veya kullanıma alma gibi kaynak denetimi durumunu göstermek için ek sinyal simgeleri gösterilebilir.
+
+> [!TIP]
+> Visual Studio 'da görünen uygulama görüntülerinin ve simgelerinin daha fazlasını görüntülemek için [**Visual Studio Görüntü Kitaplığı**](https://www.microsoft.com/download/details.aspx?id=35825)' nı indirin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

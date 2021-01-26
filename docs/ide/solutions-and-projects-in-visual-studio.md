@@ -22,12 +22,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3b34d96f49370a71a63e986a79584caffbc00adf
-ms.sourcegitcommit: d577818d3d8e365baa55c6108fa8159c46ed8b43
+ms.openlocfilehash: a2a64b613ca19632a7827686ab0552e6e23620c1
+ms.sourcegitcommit: 3922edfe67063e1ede418cdbf6aa6293117c4855
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97847048"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98773331"
 ---
 # <a name="solutions-and-projects-in-visual-studio"></a>Visual Studio 'da çözümler ve projeler
 
@@ -102,10 +102,13 @@ Yeni bir proje oluşturduktan sonra, projeyi ve çözümü ve ilişkili öğeler
 
 Birçok menü komutu, **Çözüm Gezgini** çeşitli öğelerde sağ tıklama bağlam menüsünden kullanılabilir. Bu komutlar bir proje oluşturma, NuGet paketlerini yönetme, bir başvuru ekleme, bir dosyayı yeniden adlandırma ve Testleri çalıştırma, yalnızca birkaç kez adlandırma içerir.
 
-> [!TIP]
-> Çözüm Gezgini kapattıysanız ve yeniden açmak istiyorsanız, menü çubuğundan **pencere**  >  **düzeni penceresini Sıfırla** ' yı seçin.
-
 ASP.NET Core projeleri için, dosyaların **Çözüm Gezgini** nasıl iç içe yerleşdiğini özelleştirebilirsiniz. Daha fazla bilgi için bkz. [Çözüm Gezgini dosya iç içe geçirmeyi özelleştirme](file-nesting-solution-explorer.md).
+
+> [!TIP]
+> Çözüm Gezgini kapattıysanız ve yeniden açmak istiyorsanız,   >  menü çubuğundan **Çözüm Gezgini** görüntüle ' yi seçin veya **CTRL** + **alt** + **L** tuşuna basın. Yan sekmeleri kapattıysanız ve bunları varsayılan konumlarına geri yüklemek istiyorsanız, menü çubuğundan **pencere**  >  **penceresini Sıfırla** ' yı seçin.
+
+> [!NOTE]
+> Visual Studio 'da görünen uygulama görüntülerini ve simgelerini görüntülemek için [**Visual Studio Görüntü Kitaplığı**](https://www.microsoft.com/download/details.aspx?id=35825)' nı indirin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
