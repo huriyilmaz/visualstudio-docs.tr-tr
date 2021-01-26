@@ -1,5 +1,7 @@
 ---
 title: CPU sayacı verilerini topla | Microsoft Docs
+description: Donanıma özgü performans verilerini toplamak için CPU (donanım) olay sayaçlarını nasıl kullanacağınızı öğrenin. Bu makalede çeşitli olay türleri listelenmektedir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -13,12 +15,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 96934250bc00b02630b60e83d50ed4b274db0323
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: e59214640ab3048f94b2801ad6b6b2d7e12d2e25
+ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851287"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98801558"
 ---
 # <a name="how-to-collect-cpu-counter-data"></a>Nasıl yapılır: CPU sayaç verileri toplama
 
@@ -30,9 +32,9 @@ Donanıma özgü performans verilerini toplamak için bir CPU olay sayacı kulla
 
 - Platform olayları-belirli bir CPU ile bağlanmış CPU olayları.
 
-  Taşınabilir olaylar, kullanımdan kaldırılan yönergeler, durdurulmayan döngüler, CPU arabellek olayları, dallanma olayları ve L2 önbellek olayları gibi genel olayları içerir. Kullanılabilir platform olay sayaçları, işlemci üreticisi tarafından belirlenir.
+Taşınabilir olaylar, kullanımdan kaldırılan yönergeler, durdurulmayan döngüler, CPU arabellek olayları, dallanma olayları ve L2 önbellek olayları gibi genel olayları içerir. Kullanılabilir platform olay sayaçları, işlemci üreticisi tarafından belirlenir.
 
-  Etkinlik kategorileri, taşınabilir ve Platform sayaçları arasında paylaşılabilir. Örneğin, aşağıdaki veri kategorileri genellikle her iki tür için ortaktır:
+Etkinlik kategorileri, taşınabilir ve Platform sayaçları arasında paylaşılabilir. Örneğin, aşağıdaki veri kategorileri genellikle her iki tür için ortaktır:
 
 - Bellek olayları.
 
@@ -40,7 +42,7 @@ Donanıma özgü performans verilerini toplamak için bir CPU olay sayacı kulla
 
 - Dal olayları.
 
-  Profil Oluşturucu 'da performans sayacı verilerini iki şekilde toplayabilirsiniz:
+Profil Oluşturucu 'da performans sayacı verilerini iki şekilde toplayabilirsiniz:
 
 - İzleme tarafından profil oluştururken bir veya daha fazla sayaçdan veri toplayın.
 

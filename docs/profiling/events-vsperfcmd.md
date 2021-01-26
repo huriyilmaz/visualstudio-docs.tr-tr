@@ -1,5 +1,7 @@
 ---
 title: Olaylar (VSPerfCmd) | Microsoft Docs
+description: VSPerfCmd.exe komut satırı aracındaki olaylar seçeneğini kullanarak Windows için olay Izleme (ETW) günlüğünü denetleyin. Sözdizimi parametrelerini gözden geçirin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: eb139327-4783-4f2a-874c-efad377a7be4
@@ -9,19 +11,19 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 46b47f9b615c824d25e931cd3d05f5d2a04257ba
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 614ac24e38966c1d09df91d6771cab2b3914454d
+ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74777327"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98801397"
 ---
 # <a name="events-vsperfcmd"></a>Olaylar (VSPerfCmd)
 *VSPerfCmd.exe* **Events** seçeneği, Windows IÇIN olay izleme (ETW) günlüğünü denetler. ETW verileri, profil oluşturucu veri dosyasından ayrı bir. etl dosyasına kaydedilir. Veriler [VSPerfReport](../profiling/vsperfreport.md) /Summary: ETW komutu kullanılarak bir raporda görüntülenebilir.
 
  Profil oluşturma işlemini durdurmak için VSPerfCmd **kapatmadan** önce herhangi bir zamanda **Olaylar** seçeneği çağrılabilir.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cmd
 VSPerfCmd.exe /events {On|Off} {Guid|ProviderName} [,Flags[,Level]

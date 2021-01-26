@@ -1,5 +1,7 @@
 ---
 title: Dışarı aktarma düğmesi (eşzamanlılık görselleştiricisi) | Microsoft Docs
+description: Eşzamanlılık görselleştiricisi içindeki dışarı aktar düğmesini gözden geçirin. Dışarı aktar düğmesi, çağrı yığınını kendi kayıtlarınız için bir. csv dosyası olarak dışa aktarmanıza olanak tanır.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 50c5aed4f12cc5bef9bc50c2a41009de4e6ad811
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ec5395dccaf3d97d7b2b517cbecfec12826594e2
+ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62969907"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98801462"
 ---
 # <a name="export-button-concurrency-visualizer"></a>Dışarı aktarma düğmesi (eşzamanlılık görselleştiricisi)
 **Dışarı aktar** düğmesi çağrı yığınını bir olarak dışa aktarmanız sağlar. kendi kayıtlarınız için veya Microsoft Excel gibi başka bir araçla birlikte kullanmak üzere *CSV* dosyası.

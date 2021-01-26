@@ -1,5 +1,7 @@
 ---
 title: Kullanım performans kuralları .NET Framework | Microsoft Docs
+description: .NET Framework kullanım kategorisindeki performans kurallarını anlayın. İyileştirilen ve daha genel kullanım düzenlerini belirleyebilen belirli yöntemleri belirler.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: ab573755-6370-48aa-853d-a7321c424c79
@@ -9,12 +11,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: ac78ffb3455940cf2379af44ff5c2bc5870dc684
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cb6bb10f948e7aa9d97491949222c3cb0d15ba66
+ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85532008"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98801304"
 ---
 # <a name="net-framework-usage-performance-rules"></a>.NET Framework kullanımı performans kuralları
 The.NET Framework kullanım kategorisindeki performans kuralları, en iyi duruma getirilebilen ve ayrıca performans sorunları araştırılan çöp toplama ve kilit çekişmesi gibi daha genel kullanım düzenlerini tanımlayan belirli yöntemleri belirler.

@@ -1,5 +1,7 @@
 ---
 title: Performans veri dosyalarını karşılaştırma | Microsoft Docs
+description: Farkları, performans gerilemeleri ve performans iyileştirmeleri bulmak için iki farklı profil oluşturucu veri dosyası (. vsp veya. vsps) sonuçlarının nasıl karşılaştırılacağını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -14,15 +16,15 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: f42ceaa251b59eae426bfbe52c29b21ae5075077
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 40988d23dd8e9b848ea410aa75f4d4c1f45d524d
+ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851248"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98800460"
 ---
 # <a name="how-to-compare-performance-data-files"></a>Nasıl yapılır: Performans veri dosyalarını karşılaştırma
-İki farklı profil oluşturucu veri dosyasının sonuçlarını karşılaştırabilirsiniz (.* VSP* veya. *vsps*) bir karşılaştırma ("fark") raporu ya da görünümü oluşturarak. Karşılaştırma, bir profil oluşturma oturumundan diğerine gerçekleşen farkları, performans gerilemeleri ve geliştirmeleri gösterir.
+İki farklı profil oluşturucu veri dosyasının sonuçlarını karşılaştırabilirsiniz (.*VSP* veya. *vsps*) bir karşılaştırma ("fark") raporu ya da görünümü oluşturarak. Karşılaştırma, bir profil oluşturma oturumundan diğerine gerçekleşen farkları, performans gerilemeleri ve geliştirmeleri gösterir.
 
  Fark raporu, verilerin tablo görünümünü sunar. Tablo, Delta veya taban çizgisinden göre değişiklik gösterir. Bu, eski değer, taban çizgisi değeri ve yeni analizin sonucu değeri arasındaki farkı belirleyerek hesaplanır.
 
@@ -32,7 +34,7 @@ ms.locfileid: "90851248"
 
 ### <a name="to-create-comparison-file-view-for-a-project-in-performance-explorer"></a>Performans Gezgini bir proje için karşılaştırma dosyası görünümü oluşturmak için
 
-1. **Performans Gezgini**, **raporlar**altında öğesini seçin. *VSP* veya. Karşılaştırma için taban çizgisi değerleri olarak kullanmak istediğiniz *vsps* rapor dosyası.
+1. **Performans Gezgini**, **raporlar** altında öğesini seçin. *VSP* veya. Karşılaştırma için taban çizgisi değerleri olarak kullanmak istediğiniz *vsps* rapor dosyası.
 
 2. Öğesini seçin. *VSP* veya. karşılaştırmak istediğiniz *vsps* rapor dosyaları.
 
@@ -46,7 +48,7 @@ ms.locfileid: "90851248"
 
 3. **Sütun** açılan listesinde, karşılaştırmak istediğiniz değeri seçin.
 
-4. seçim **Eşik**için bir değer yazın.
+4. seçim **Eşik** için bir değer yazın.
 
 5. **Uygula**’ya tıklayın.
 
@@ -54,6 +56,6 @@ ms.locfileid: "90851248"
 
 1. **Çözümle** menüsünde, **performans raporlarını karşılaştır**' ı seçin.
 
-2. **Karşılaştırma için analiz dosyalarını Seç** penceresinde, **taban çizgisi dosya** Analizi dosyasını (.* VSP* veya. *vsps*) ve **karşılaştırma dosyası** (.* VSP* veya. *vsps*).
+2. **Karşılaştırma için analiz dosyalarını Seç** penceresinde, **taban çizgisi dosya** Analizi dosyasını (.*VSP* veya. *vsps*) ve **karşılaştırma dosyası** (.*VSP* veya. *vsps*).
 
-3. **Tamam**’a tıklayın.
+3. **Tamam**'a tıklayın.

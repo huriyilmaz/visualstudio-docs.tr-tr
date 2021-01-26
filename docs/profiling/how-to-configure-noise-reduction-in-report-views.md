@@ -1,5 +1,7 @@
 ---
 title: Rapor görünümlerinde gürültü azaltılması yapılandırma | Microsoft Docs
+description: Paraziti azaltmak ve performans sorunlarını raporlarınızda daha belirgin hale getirmek için, varsayılan olarak etkin olan kırpma ve katlama özelliğini kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -15,12 +17,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 71065ac66fff972e5b6e9cf2c397a75b97e4d02f
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 324c00c869e335fe6fc9504b461e6fc7f85bab98
+ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851235"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98800428"
 ---
 # <a name="how-to-configure-noise-reduction-in-report-views"></a>Nasıl yapılır: rapor görünümlerinde gürültü azaltılması yapılandırma
 Performans raporları, çağrı ağacı görünümünde ve ayırma görünümünde sunulan veri miktarını sınırlayarak gürültü azaltma için yapılandırılabilir. Gürültü azaltma kullanarak performans sorunları daha belirgin bir şekilde yapılır. Bu, performans raporlarını analiz ettiğinizde yararlı olur.
@@ -52,7 +54,7 @@ Performans raporları, çağrı ağacı görünümünde ve ayırma görünümün
 
 3. Kırpmayı devre dışı bırakmak için **Kırpmayı etkinleştir**' i temizleyin.
 
-4. **Tamam**’a tıklayın.
+4. **Tamam**'a tıklayın.
 
 ### <a name="to-configure-folding-for-a-performance-report"></a>Performans raporu için katlamayı yapılandırmak için
 
@@ -73,9 +75,9 @@ Performans raporları, çağrı ağacı görünümünde ve ayırma görünümün
 
     4. Oluşturulan raporda gürültü azaltma uyarısını etkinleştirmek için, **gürültü azaltma etkinleştirildiğinde uyarı görüntüle**' yi seçin. Bu varsayılan ayardır.
 
-3. Katlamayı devre dışı bırakmak için **katlama özelliğini**temizleyin.
+3. Katlamayı devre dışı bırakmak için **katlama özelliğini** temizleyin.
 
-4. **Tamam**’a tıklayın.
+4. **Tamam**'a tıklayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Performans araçları rapor görünümlerini özelleştirme](../profiling/customizing-performance-tools-report-views.md)

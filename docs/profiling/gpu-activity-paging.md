@@ -1,5 +1,7 @@
 ---
 title: GPU etkinliği (sayfalama) | Microsoft Docs
+description: Eşzamanlılık görselleştiricinin Iş parçacıkları sekmesindeki GPU etkinliği (sayfalama) segmentlerini gözden geçirin. Segmentler, GPU 'nun disk belleği isteklerini işleme süresini temsil eder.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -11,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8bd28c7b41a01992ad52fa343b098b0a02460806
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2bdf1fcffad90155baba8f92d11e31d1b316710b
+ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62969621"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98801189"
 ---
 # <a name="gpu-activity-paging"></a>GPU Etkinliği (Disk Belleği)
 **Iş parçacıkları** sekmesindeki **GPU etkinliği (sayfalama)** kesimleri, GPU 'nun disk belleği isteklerini işleme süresini temsil eder.  Bir segmentin uzunluğu, GPU 'nun doğrudan bellek erişimi (DMA) disk belleği paketini işleme süresini temsil eder. Genellikle disk belleği paketleri CPU ve GPU arasında bellek aktarımıyla ilişkilendirilir.

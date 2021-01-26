@@ -1,5 +1,7 @@
 ---
 title: GPU etkinlik grafiği | Microsoft Docs
+description: Sistemdeki DirectX etkinliğinin düzeyinde bulunan eşzamanlılık görselleştiricisi içinde görüntülenen GPU etkinlik grafiğini anlayın.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5734b9eb1b4307f7c32dcb8a170f7c6c571f46ca
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bccf4869a1197306017b443b00670cc123300a48
+ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62969572"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98801323"
 ---
 # <a name="gpu-activity-graph"></a>GPU etkinlik grafiği
 Eşzamanlılık görselleştiricisi içindeki GPU etkinlik grafiği, zaman içinde kullanımda olan DirectX altyapısının sayısıyla ölçülen, sistemdeki DirectX etkinliğinin düzeyini görüntüler.  Grafik hangi belirli altyapıların kullanıldığını göstermez.  Bir altyapının herhangi bir GPU işini işlemesi durumunda kullanımda olduğu kabul edilir.

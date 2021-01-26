@@ -1,5 +1,7 @@
 ---
 title: .NET bellek verileri görünümleri | Microsoft Docs
+description: .NET bellek profili oluşturma verileri içeren profil oluşturucu veri dosyalarının görünümleri ve raporları için başvuru bilgilerinin bağlantılarını inceleyin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 7e74027512eba0d64593133a3bbe758570cbf567
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8a4a6143127a2e55bf5c13cf6606bfe00de5cd9e
+ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74779278"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98801272"
 ---
 # <a name="net-memory-data-views"></a>.NET bellek verileri görünümleri
 Bu bölüm, .NET bellek profili oluşturma verileri içeren profil oluşturucu veri dosyalarının görünümleri ve raporları için başvuru bilgileri içerir.

@@ -1,5 +1,7 @@
 ---
 title: .NET bellek ayırmaları görünümü | Microsoft Docs
+description: Profil oluşturma çalışması sırasında oluşturulan türleri listeleyen .NET bellek ayırmaları görünümü hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +18,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: ce16f65947fd69b5a54e564ba6bec061bc68e328
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f52a30eef50c783ea96d403c25837f9bf2515a52
+ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74777383"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98801292"
 ---
 # <a name="net-memory-allocations-view"></a>.NET Bellek Ayırma Görünümü
 Ayırmalar görünümü profil oluşturma çalışması sırasında oluşturulan türleri listeler. Her tür, tür ayırmaları ile sonuçlanan işlev yürütme yollarını görüntüleyen bir çağrı ağacının kök düğümüdür.
@@ -44,7 +46,7 @@ Ayırmalar görünümü profil oluşturma çalışması sırasında oluşturulan
 |**Ad**|Ayrılan tür veya işlevin adı.|
 |**İşlem Kimliği**|Profil oluşturma çalıştırmasının işlem KIMLIĞI (PID).|
 |**İşlem adı**|Sürecin adı.|
-|**Modül Adı**|Türü veya işlevi içeren modülün adı.|
+|**Modül adı**|Türü veya işlevi içeren modülün adı.|
 |**Modül yolu**|Türü veya işlevi içeren modülün yolu.|
 |**Kaynak Dosya**|Tür veya işlev tanımını içeren kaynak dosya.|
 |**İşlev satır numarası**|Bu tür tanımının veya kaynak dosyadaki işlevinin başlangıç satır numarası.|

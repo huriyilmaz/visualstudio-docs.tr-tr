@@ -1,5 +1,7 @@
 ---
 title: İşlevler görünümü-Izleme verileri | Microsoft Docs
+description: İşlev adına göre profil oluşturma verilerini listeleyen Işlevler rapor görünümündeki profil oluşturma veri sütunlarının açıklamalarını okuyun.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 423b6d61af93c37e6fa83549ed3fa5d422128165
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2b12fc05f9eeb9b77e982c62ae52bfbbe784f5e6
+ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74779226"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98801371"
 ---
 # <a name="functions-view---instrumentation-data"></a>İşlevler görünümü-izleme verileri
 Işlevler rapor görünümü profil oluşturma verilerini işlev adına göre listeler.
@@ -31,7 +33,7 @@ Işlevler rapor görünümü profil oluşturma verilerini işlev adına göre li
 |**İşlev satır numarası**|Kaynak dosyada bu işlevin başlangıcına ait satır numarası.|
 |**Çağrı Sayısı**|Bu işleve yapılan çağrıların toplam sayısı.|
 |**Kaynak Dosya**|Bu işlevin tanımını içeren kaynak dosya.|
-|**Modül Adı**|İşlevi içeren modülün adı.|
+|**Modül adı**|İşlevi içeren modülün adı.|
 |**Modül yolu**|İşlevi içeren modülün yolu.|
 |**İşlem Kimliği**|Profil oluşturma çalıştırmasının işlem KIMLIĞI (PID).|
 |**İşlem adı**|Sürecin adı.|

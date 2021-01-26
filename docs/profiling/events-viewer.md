@@ -1,5 +1,7 @@
 ---
 title: Olay Görüntüleyici | Microsoft Docs
+description: Uygulamanızın Visual Studio Profiler içinde nasıl çalıştığını daha iyi tanılamanıza yardımcı olan genel olaylar Görüntüleyicisi hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 4/30/2020
 ms.topic: how-to
 helpviewer_keywords:
@@ -9,12 +11,12 @@ ms.author: sashe
 manager: AndSter
 ms.workload:
 - multiple
-ms.openlocfilehash: 0be00f2333a2e732d9ba4472004c383b132c0bf2
-ms.sourcegitcommit: 14637be49401f56341c93043eab560a4ff6b57f6
+ms.openlocfilehash: 6aef8e72f416923aa647a8b3a412ee701ece18dd
+ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90075071"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98801402"
 ---
 # <a name="events-viewer"></a>Olay Görüntüleyicisi
 
@@ -40,7 +42,7 @@ Aracı nasıl daha verimli hale getirmek hakkında daha fazla bilgi için bkz. [
 
 ![Olay Görüntüleyicisi izleme](../profiling/media/eventviewertrace.png "Olay Görüntüleyicisi izleme")
 
-|Sütun adı|Açıklama|
+|Sütun adı|Description|
 |----------|---------------------|
 |Sağlayıcı Adı|Olay kaynağı|
 |Olay Adı|Sağlayıcı tarafından belirtilen olay|
@@ -56,7 +58,7 @@ Herhangi bir sütun varsayılan olarak eksikse, mevcut sütun başlıklarındaki
 
 ![Olay Görüntüleyicisine sütun ekleme](../profiling/media/eventvieweraddcolumns.png "Olay Görüntüleyicisine sütun ekleme")
 
-Bir olay seçtiğinizde, **ek özellikler** penceresi görüntülenir. **Ortak özellikler** , herhangi bir olay için görünecek özelliklerin listesini gösterir. **Yük özellikleri** , olaya özgü özellikleri gösterir. Bazı olaylar için **yığınları**da görüntüleyebilirsiniz.
+Bir olay seçtiğinizde, **ek özellikler** penceresi görüntülenir. **Ortak özellikler** , herhangi bir olay için görünecek özelliklerin listesini gösterir. **Yük özellikleri** , olaya özgü özellikleri gösterir. Bazı olaylar için **yığınları** da görüntüleyebilirsiniz.
 
 ![Yığınları gösteren Olay Görüntüleyicisi](../profiling/media/eventviewerstacks.png "Yığınları gösteren Olay Görüntüleyicisi")
 

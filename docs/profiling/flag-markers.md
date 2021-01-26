@@ -1,5 +1,7 @@
 ---
 title: Bayrak Işaretçileri | Microsoft Docs
+description: Visual Studio Eşzamanlılık Görselleştiricisinin bayrak işaretçileri hakkında bilgi edinin. Bayrak işaretçisi, bir uygulamada anında zamanında oluşan bir şeyi temsil eder.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -10,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ccc0c7aa3386e906ad13331a596953db70240701
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fc7b128915b7fc961b44aa7d70a24a813d432ddf
+ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62969985"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98801471"
 ---
 # <a name="flag-markers"></a>Bayrak işaretçileri
 Bayrak işaretçisi, bir uygulamada anında zamanında oluşan bir şeyi temsil eder. Bayrak birçok tür uygulama olayını temsil edebilir. Örneğin, belirli bir iş öğesi zamanlandığında veya bir özel durum oluştuğunda bayrak gösterilebilir. Görev paralel kitaplığı gibi çalışma zamanları da bayrak oluşturabilir.

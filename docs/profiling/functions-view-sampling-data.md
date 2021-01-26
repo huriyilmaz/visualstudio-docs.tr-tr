@@ -1,5 +1,7 @@
 ---
 title: İşlevler Görünümü-Örnekleme verileri | Microsoft Docs
+description: Profil oluşturma çalışması sırasında örneklendiği işlevleri listeleyen örnekleme profili yöntemi için Işlevler rapor görünümü hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 70fda712a29ff07ee34a4ac76a06198cb5ead8a5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8f30849ff7503d9301ee94408df0cd7b14f65fea
+ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74780032"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98801246"
 ---
 # <a name="functions-view---sampling-data"></a>İşlevler Görünümü-Örnekleme verileri
 Örnekleme profili yöntemi için Işlevler rapor görünümü profil oluşturma çalıştırması sırasında örneklendiği işlevleri listeler.
@@ -29,7 +31,7 @@ ms.locfileid: "74780032"
 |------------|-----------------|
 |**İşlem Kimliği**|Profil oluşturma çalıştırmasının işlem KIMLIĞI (PID).|
 |**İşlem adı**|Sürecin adı.|
-|**Modül Adı**|İşlevi içeren modülün adı.|
+|**Modül adı**|İşlevi içeren modülün adı.|
 |**Modül yolu**|İşlevi içeren modülün yolu.|
 |**Kaynak Dosya**|Bu işlevin tanımını içeren kaynak dosya.|
 |**İşlev adı**|İşlevin tam adı.|

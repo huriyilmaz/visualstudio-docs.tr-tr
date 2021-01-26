@@ -1,5 +1,7 @@
 ---
-title: Satır düzeyi örnekleme verileri toplama | Microsoft Docs
+title: Line-Level örnekleme verilerini toplayın | Microsoft Docs
+description: Profiler 'ın satır düzeyi örnekleme, büyük miktarlarda işlemci süresi kullanan kodu nasıl açığa çıkartabilecek hakkında bilgi edinin. Hem yönetilen hem de yerel kodla birlikte çalışarak.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 4653cf4b8c921a0c464dcb148963d3ab33506c25
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 3a760980b16fab17fed7180b0bc74e0271c61e1d
+ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851261"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98801068"
 ---
 # <a name="how-to-collect-line-level-sampling-data"></a>Nasıl yapılır: satır düzeyi örnekleme verileri toplama
 Satır düzeyinde örnekleme, profil oluşturucunun, yüksek ayrıcalıklı örneklere sahip bir işlev gibi, işlemcinin yoğun bir işlev kodunda nerede bir süre harcadığını belirlemede kullandığı bir işlemdir.
@@ -50,11 +52,11 @@ Satır düzeyinde örnekleme, profil oluşturucunun, yüksek ayrıcalıklı örn
 ### <a name="turn-off-line-level-sampling-for-managed-code"></a>Yönetilen kod için satır düzeyinde örnekleme kapatma
  Varsayılan olarak, satır düzeyi örnekleme açıktır. Aşağıdaki komutlardan birini kullanarak, yönetilen kod için satır düzeyi veri toplamayı kapatabilirsiniz:
 
-- Profil oluşturmadan önce **VSPerfCLREnv/samplelineoff**yazın. Bu, hem uygulamaları hem de hizmetleri etkiler.
+- Profil oluşturmadan önce **VSPerfCLREnv/samplelineoff** yazın. Bu, hem uygulamaları hem de hizmetleri etkiler.
 
      veya
 
-- Bir uygulamayı başlatırken **VSPerfCmd/LineOff \<other arguments> **yazın.
+- Bir uygulamayı başlatırken **VSPerfCmd/LineOff \<other arguments>** yazın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Performans oturumlarını yapılandırma](../profiling/configuring-performance-sessions.md)

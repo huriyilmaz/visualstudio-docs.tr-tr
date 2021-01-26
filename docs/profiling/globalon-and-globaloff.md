@@ -1,5 +1,7 @@
 ---
 title: GlobalOn ve GlobalOff | Microsoft Docs
+description: VSPerfCmd.exe 'teki GlobalOn ve GlobalOff seçeneklerini gözden geçirin. Bu seçenekler, komut satırı profil oluşturma oturumunda süreçler ve iş parçacıkları için profil oluşturmayı duraklatır ve devam ettirir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 24b0ed68-d19e-473e-9af3-252c11d82bcf
@@ -9,19 +11,19 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 518f41557809cdeaaae9f9e1ac79e3797a854395
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: eaeac096c6bdff77368508bd34276d66530fa739
+ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74776972"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98801340"
 ---
 # <a name="globalon-and-globaloff"></a>GlobalOn ve GlobalOff
 *VSPerfCmd.exe* **globaloff** ve **GlobalOn** seçenekleri, komut satırı profil oluşturma oturumunda tüm süreçler ve iş parçacıkları için profil oluşturmayı duraklatır ve devam ettirir.
 
- *VSPerfCmd.exe* komut satırında tek seçenekler olarak **GlobalOn** ve **globaloff** belirtebilir ya da bunları **Başlat**, **Başlat**veya **Ekle** seçeneklerini içeren komut satırlarına dahil edebilirsiniz.
+ *VSPerfCmd.exe* komut satırında tek seçenekler olarak **GlobalOn** ve **globaloff** belirtebilir ya da bunları **Başlat**, **Başlat** veya **Ekle** seçeneklerini içeren komut satırlarına dahil edebilirsiniz.
 
- **GlobalOn** ve **globaloff** Ayrıca **ProcessOn**, **ProcessOff**, **ThreadOn**ve **ThreadOff** seçenekleriyle birleştirilebilir.
+ **GlobalOn** ve **globaloff** Ayrıca **ProcessOn**, **ProcessOff**, **ThreadOn** ve **ThreadOff** seçenekleriyle birleştirilebilir.
 
  **GlobalOn** ve **globaloff** seçenekleri, belirtilen bir işlem Için veri toplamayı denetleyen **ProcessOn** ve **ProcessOff** seçenekleriyle, belirtilen Iş parçacığı Için de veri toplamayı denetleyen **ThreadOn** ve **ThreadOff** seçenekleriyle etkileşime geçin.
 
@@ -33,7 +35,7 @@ ms.locfileid: "74776972"
 
   Daha fazla bilgi için bkz. [profil oluşturma araçları API 'leri](../profiling/profiling-tools-apis.md).
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cmd
 VSPerfCmd.exe /{GlobalOff|GlobalOn}

@@ -1,5 +1,7 @@
 ---
 title: Windows için olay Izleme (ETW) raporu | Microsoft Docs
+description: Visual Studio Profil Oluşturma Araçları Performans oturumunda kaydedilmiş ETW olaylarını listeleyen Windows için olay Izleme (ETW) raporu hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,15 +14,15 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 19412d184377637c29f34b2fe3ffd033f176b97c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e7167f2fb5c78a6fa8c3d83fb56c2c2eba217516
+ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74779304"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98801421"
 ---
 # <a name="event-tracing-for-windows-etw-report"></a>Windows için olay Izleme (ETW) raporu
-Windows için olay Izleme (ETW) raporu, Profil Oluşturma Araçları Performans oturumunda kaydedilmiş olan ETW olaylarını listeler [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . ETW verileri bir ikili dosyada toplanır (.* ETL*) dosyası.
+Windows için olay Izleme (ETW) raporu, Profil Oluşturma Araçları Performans oturumunda kaydedilmiş olan ETW olaylarını listeler [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . ETW verileri bir ikili dosyada toplanır (.*ETL*) dosyası.
 
 > [!NOTE]
 > Arabiriminde ETW raporlarını görüntüleyemezsiniz [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .
@@ -33,7 +35,7 @@ Windows için olay Izleme (ETW) raporu, Profil Oluşturma Araçları Performans 
 
 |Sütun|Açıklama|
 |------------|-----------------|
-|**Zaman damgası**|Olayın ne zaman oluştuğunu tanımlar.|
+|**İlişkin**|Olayın ne zaman oluştuğunu tanımlar.|
 |**İşlem Kimliği**|Olayı oluşturan işlemi tanımlar.|
 |**İş parçacığı KIMLIĞI**|Olayı oluşturan iş parçacığını tanımlar.|
 |**Açıklama**|Olay sağlayıcısını tanımlar.|

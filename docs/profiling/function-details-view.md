@@ -1,5 +1,7 @@
 ---
 title: İşlev Ayrıntıları görünümü | Microsoft Docs
+description: Performans Gezgini, Işlev Ayrıntıları görünümü penceresi, maliyet dağıtım çubuğu grafiği, Işlev performansı Ayrıntıları tablosu ve Işlev kodu görünümü penceresi hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -14,12 +16,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 2fa53ba1d2e805f744d6a817c65b77428d757a25
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6e812f0fdef46d0ac5ef42788c2f854922a7375c
+ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85537000"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98801256"
 ---
 # <a name="function-details-view"></a>İşlev Ayrıntıları Görünümü
 **Işlev Ayrıntıları görünümü** penceresi aşağıdaki bilgileri görüntüler:
@@ -94,21 +96,21 @@ ms.locfileid: "85537000"
 
 |Değer|Açıklama|
 |-|-|
-|**Geçen kapsamlı süre (geçen süre)**|Geçen süre, işletim sistemine yapılan çağrılarında bağlam anahtarları ve giriş/çıkış işlemleri gibi harcanan süreyi içerir.<br /><br /> - **Çağırma işlevi**için, işlev tarafından çağrılan seçili işlevin örneklerinin yürütülmesi için harcanan geçen süre miktarı. Seçilen işlev tarafından çağrılan işlevlerde harcanan süre dahildir.<br />- **Işlev gövdesi**için, seçilen işlevin kodunu yürütmek için harcanan geçen sürenin toplam miktarı. Çağrılan işlevlerde harcanan süre dahil değildir.<br />-Çağrılan bir işlev için, seçilen işlev tarafından çağrılan işlevin örneklerini yürütmek için harcanan süre. Toplam, işlevin çağrıldığı işlevlerde harcanan süreyi içerir. Seçilen işlev tarafından çağrılan işlevlerde harcanan süre dahildir.|
-|**Uygulama kapsamlı süresi (uygulama saati)**|Uygulama saati, bağlam anahtarları ve giriş/çıkış işlemleri gibi işletim sistemine yapılan çağrılarda harcanan zamanı içermez.<br /><br /> - **Çağırma işlevi**için, işlev tarafından çağrılan seçili işlevin örneklerini yürütmek için harcanan uygulama zamanı miktarı. Seçilen işlev tarafından çağrılan işlevlerde harcanan süre dahildir.<br />- **Işlev gövdesi**için, seçilen işlevin kodunu yürütmek için harcanan toplam uygulama zamanı miktarı. Çağrılan işlevlerde harcanan süre dahil değildir.<br />-Çağrılan bir işlev için, seçilen işlev tarafından çağrılan işlevin örneklerini yürütmek için harcanan tutar. Toplam, işlevin çağrıldığı işlevlerde harcanan süreyi içerir.|
+|**Geçen kapsamlı süre (geçen süre)**|Geçen süre, işletim sistemine yapılan çağrılarında bağlam anahtarları ve giriş/çıkış işlemleri gibi harcanan süreyi içerir.<br /><br /> - **Çağırma işlevi** için, işlev tarafından çağrılan seçili işlevin örneklerinin yürütülmesi için harcanan geçen süre miktarı. Seçilen işlev tarafından çağrılan işlevlerde harcanan süre dahildir.<br />- **Işlev gövdesi** için, seçilen işlevin kodunu yürütmek için harcanan geçen sürenin toplam miktarı. Çağrılan işlevlerde harcanan süre dahil değildir.<br />-Çağrılan bir işlev için, seçilen işlev tarafından çağrılan işlevin örneklerini yürütmek için harcanan süre. Toplam, işlevin çağrıldığı işlevlerde harcanan süreyi içerir. Seçilen işlev tarafından çağrılan işlevlerde harcanan süre dahildir.|
+|**Uygulama kapsamlı süresi (uygulama saati)**|Uygulama saati, bağlam anahtarları ve giriş/çıkış işlemleri gibi işletim sistemine yapılan çağrılarda harcanan zamanı içermez.<br /><br /> - **Çağırma işlevi** için, işlev tarafından çağrılan seçili işlevin örneklerini yürütmek için harcanan uygulama zamanı miktarı. Seçilen işlev tarafından çağrılan işlevlerde harcanan süre dahildir.<br />- **Işlev gövdesi** için, seçilen işlevin kodunu yürütmek için harcanan toplam uygulama zamanı miktarı. Çağrılan işlevlerde harcanan süre dahil değildir.<br />-Çağrılan bir işlev için, seçilen işlev tarafından çağrılan işlevin örneklerini yürütmek için harcanan tutar. Toplam, işlevin çağrıldığı işlevlerde harcanan süreyi içerir.|
 
 ### <a name="net-memory"></a>.NET belleği
  Aşağıdaki tabloda, .NET bellek profili oluşturma yöntemi kullanılarak toplanan profil oluşturma verileri için performans ölçümü listesindeki değerler açıklanmaktadır.
 
 |Değer|Açıklama|
 |-|-|
-|**Kapsamlı ayırmalar (ayırmalar)**|-Çağıran bir **işlev**için, işlevin çağrıldığı seçili işlevin örnekleri tarafından ayrılan nesne sayısı. Bu sayı, seçilen işlevin çağırdığı işlevler tarafından ayrılan nesneleri içerir.<br />- **Işlev gövdesi**için, kendi kodunu yürütürken seçili işlev tarafından ayrılan nesne sayısı. Seçili işlev tarafından çağrılan işlevlerde ayrılan nesneler dahil değildir.<br />-Çağrılan bir işlev için, seçilen işlev tarafından çağrılan işlevin örnekleri tarafından ayrılan nesne sayısı. Bu sayı, işlevin çağırdığı işlevler tarafından ayrılan nesneleri içerir.|
-|**Kapsamlı baytlar (bayt)**|-Çağıran bir **işlev**için, işlevin çağırdığı seçili işlevin örnekleri tarafından ayrılan bayt sayısı. Bu sayı, seçilen işlevin çağırdığı işlevler tarafından ayrılan baytları içerir.<br />- **Işlev gövdesi**için, seçili işlev tarafından ayrılan ve kendi kodunu yürütürken ayrılan toplam bayt sayısı. Seçilen işlev tarafından çağrılan işlevlerde ayrılan baytlar dahil değildir.<br />-Çağrılan bir işlev için, seçilen işlev tarafından çağrılan işlevin örnekleri tarafından ayrılan bayt sayısı. Bu sayı, işlevin çağırdığı işlevler tarafından ayrılan baytları içerir.|
+|**Kapsamlı ayırmalar (ayırmalar)**|-Çağıran bir **işlev** için, işlevin çağrıldığı seçili işlevin örnekleri tarafından ayrılan nesne sayısı. Bu sayı, seçilen işlevin çağırdığı işlevler tarafından ayrılan nesneleri içerir.<br />- **Işlev gövdesi** için, kendi kodunu yürütürken seçili işlev tarafından ayrılan nesne sayısı. Seçili işlev tarafından çağrılan işlevlerde ayrılan nesneler dahil değildir.<br />-Çağrılan bir işlev için, seçilen işlev tarafından çağrılan işlevin örnekleri tarafından ayrılan nesne sayısı. Bu sayı, işlevin çağırdığı işlevler tarafından ayrılan nesneleri içerir.|
+|**Kapsamlı baytlar (bayt)**|-Çağıran bir **işlev** için, işlevin çağırdığı seçili işlevin örnekleri tarafından ayrılan bayt sayısı. Bu sayı, seçilen işlevin çağırdığı işlevler tarafından ayrılan baytları içerir.<br />- **Işlev gövdesi** için, seçili işlev tarafından ayrılan ve kendi kodunu yürütürken ayrılan toplam bayt sayısı. Seçilen işlev tarafından çağrılan işlevlerde ayrılan baytlar dahil değildir.<br />-Çağrılan bir işlev için, seçilen işlev tarafından çağrılan işlevin örnekleri tarafından ayrılan bayt sayısı. Bu sayı, işlevin çağırdığı işlevler tarafından ayrılan baytları içerir.|
 
 ### <a name="concurrency"></a>Eşzamanlılık
  Aşağıdaki tabloda eşzamanlılık yöntemi kullanılarak toplanan profil oluşturma verileri için performans ölçümü listesindeki değerler açıklanmaktadır.
 
 |Değer|Açıklama|
 |-|-|
-|**Kapsamlı çekişme (çekişmeler)**|-Çağıran bir **işlev**için, işlevin çağrıldığı seçili işlevin örneklerinde gerçekleşen kaynak çekişmesi olayları sayısı. Bu sayı, seçilen işlevin çağrılan işlevlerde çekişme olaylarını içerir.<br />- **Işlev gövdesi**için, işlev kendi kodunu yürütürken gerçekleşen çekişme olaylarının toplam sayısı. Seçili işlev tarafından çağrılan işlevlerde gerçekleşen çekişmeler dahil değildir.<br />-Çağrılan bir işlev için, seçilen işlev tarafından çağrılan işlevin örneklerinde gerçekleşen çekişme olayları sayısı. Bu sayı, işlev çağrılan işlevlerde oluşan çekişme olaylarını içerir.|
-|**Kapsamlı engellenme süresi (engellenme süresi)**|-Çağıran bir işlev için, işlevin çağrıldığı seçili işlevin örnekleri için kaynak çekişmede harcanan zaman. Süre, seçilen işlevin çağrıldığı işlevlerde engellenme süresini içerir.<br />- **Işlev gövdesi**için, işlev kendi kodunu yürütürken oluşan çekişme olaylarında harcanan toplam süre. Seçilen işlevin çağrıldığı işlevlerde oluşan çekişmeler dahil değildir.<br />-Çağrılan bir işlev için, seçilen işlevin çağrılan işlevin örnekleri için kaynak çekişmede harcanan zaman. Süre, işlevin çağrıldığı işlevlerde oluşan engellenme süresini içerir.|
+|**Kapsamlı çekişme (çekişmeler)**|-Çağıran bir **işlev** için, işlevin çağrıldığı seçili işlevin örneklerinde gerçekleşen kaynak çekişmesi olayları sayısı. Bu sayı, seçilen işlevin çağrılan işlevlerde çekişme olaylarını içerir.<br />- **Işlev gövdesi** için, işlev kendi kodunu yürütürken gerçekleşen çekişme olaylarının toplam sayısı. Seçili işlev tarafından çağrılan işlevlerde gerçekleşen çekişmeler dahil değildir.<br />-Çağrılan bir işlev için, seçilen işlev tarafından çağrılan işlevin örneklerinde gerçekleşen çekişme olayları sayısı. Bu sayı, işlev çağrılan işlevlerde oluşan çekişme olaylarını içerir.|
+|**Kapsamlı engellenme süresi (engellenme süresi)**|-Çağıran bir işlev için, işlevin çağrıldığı seçili işlevin örnekleri için kaynak çekişmede harcanan zaman. Süre, seçilen işlevin çağrıldığı işlevlerde engellenme süresini içerir.<br />- **Işlev gövdesi** için, işlev kendi kodunu yürütürken oluşan çekişme olaylarında harcanan toplam süre. Seçilen işlevin çağrıldığı işlevlerde oluşan çekişmeler dahil değildir.<br />-Çağrılan bir işlev için, seçilen işlevin çağrılan işlevin örnekleri için kaynak çekişmede harcanan zaman. Süre, işlevin çağrıldığı işlevlerde oluşan engellenme süresini içerir.|

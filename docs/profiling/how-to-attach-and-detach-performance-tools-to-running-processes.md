@@ -1,6 +1,7 @@
 ---
 title: Çalışan işlemlere performans araçları iliştirme
-ms.custom: seodec18
+description: Örnekleme ve performans verilerini toplamayı kolaylaştırmak için, çalışan bir işleme eklemek veya ayırmak üzere Visual Studio Profiler 'ı kullanmayı öğrenin.
+ms.custom: SEO-VS-2020, seodec18
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -18,12 +19,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 58bbf5fa291d71b26cd303a7d43719fde8605c0a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9cccad7f47a26396612264280926b7b26e431879
+ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85331143"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98801162"
 ---
 # <a name="how-to-attach-and-detach-performance-tools-to-running-processes"></a>Nasıl yapılır: Performans araçlarını çalışan işlemlere ekleme ve bunlardan ayırma
 Profil Oluşturucu, örnekleme yapmak ve performans verilerini toplamak için çalışan bir işlemden eklemek ya da ayırmak için kullanılabilir. Bu yöntemi, uygulama yükleme süresi hakkında veri toplamayı önlemek veya belirli bir duruma ulaştıktan sonra bir işlemin performansını izlemek istediğinizde bir işlemi profil için kullanabilirsiniz.
@@ -43,7 +44,7 @@ Profil Oluşturucu, örnekleme yapmak ve performans verilerini toplamak için ç
 
 ### <a name="to-attach-to-a-running-process"></a>Çalışan bir işleme iliştirmek için
 
-1. **Hata Ayıkla** menüsünde **Profiler**' ın üzerine gelin ve **Performans Gezgini**ve ardından **Ekle**' ye tıklayın.
+1. **Hata Ayıkla** menüsünde **Profiler**' ın üzerine gelin ve **Performans Gezgini** ve ardından **Ekle**' ye tıklayın.
 
      **Işleme profil oluşturucu Ekle** iletişim kutusu görüntülenir.
 
@@ -53,7 +54,7 @@ Profil Oluşturucu, örnekleme yapmak ve performans verilerini toplamak için ç
 
 ### <a name="to-detach-from-a-running-process"></a>Çalışan bir işlemden ayrılmak için
 
-1. **Hata Ayıkla** menüsünde, **Profil Oluşturucu**üzerine gelin ve **Performans Gezgini**ve ardından **Ayır**' a tıklayın.
+1. **Hata Ayıkla** menüsünde, **Profil Oluşturucu** üzerine gelin ve **Performans Gezgini** ve ardından **Ayır**' a tıklayın.
 
      **Işleme profil oluşturucu Ekle** iletişim kutusu görüntülenir.
 

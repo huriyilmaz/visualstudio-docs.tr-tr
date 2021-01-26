@@ -1,5 +1,7 @@
 ---
-title: Bir Web sitesi için performans verilerini toplama | Microsoft Docs
+title: Bir Web sitesi için performans verilerini toplama | MICROSOFT
+description: Performans Sihirbazı 'nı kullanarak bir ASP.NET Web uygulaması için performans verilerini nasıl toplayacağınızı öğrenin. Uygulama yerel bilgisayarınızda çalışır ve Visual Studio 'da açık olabilir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -18,12 +20,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 7ea4e3309fc003a4fc4fc73377e8b2bbe12cd567
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 92e70ff7c6d10ad060086230955c27b781dd73be
+ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851482"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98801049"
 ---
 # <a name="how-to-collect-performance-data-for-a-web-site"></a>Nasıl yapılır: bir Web sitesi için performans verilerini toplama
 
@@ -80,7 +82,7 @@ Bir Web uygulaması için performans verilerini toplamak üzere **performans sih
 
    - Sunucu (IIS) tabanlı bir Web sitesi için gibi bir URL yazın **<`http://localhost/MySite/default.aspx`>** . Bunun nedeni [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] , Sitem 'in uygulama kökündeki yerel bilgisayardaki uygulamanın profili oluşturulabilir ve oturumu başlatmak Için Internet Explorer 'da bu sitede varsayılan. aspx sayfası başlatılır.
 
-   - Dosya tabanlı bir Web sitesi için, File///**c:\WebSites\MySite\default.aspx**gibi bir yol yazın. Bu, [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] C:\websites\sitem konumundaki uygulamanın profili oluşturulabilir ve `http://localhost:nnnn/MySite/default.aspx` oturumu başlatmak Için Internet Explorer 'da sayfanın başlatılmasına neden olur.
+   - Dosya tabanlı bir Web sitesi için, File///**c:\WebSites\MySite\default.aspx** gibi bir yol yazın. Bu, [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] C:\websites\sitem konumundaki uygulamanın profili oluşturulabilir ve `http://localhost:nnnn/MySite/default.aspx` oturumu başlatmak Için Internet Explorer 'da sayfanın başlatılmasına neden olur.
 
    - JavaScript verilerini toplamak istediğiniz dış sitelerde, örneğin URL 'sini yazın `http://www.contoso.com` .
 

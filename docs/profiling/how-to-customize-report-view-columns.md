@@ -1,5 +1,7 @@
 ---
 title: Rapor görünümü sütunlarını özelleştirme | Microsoft Docs
+description: Visual Studio performans araçları görünümlerinde sütunları ekleyebilir, kaldırabilir ve yeniden düzenleyebilirsiniz; Örneğin, Işlevler görünümü, Işlem görünümü ve arayan/çağrılan görünümü.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -14,12 +16,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: edc58c74daf3cdd1e80256f9915936f4cef6d3fa
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 23b12ca396a91fad440dc057b67e258194732236
+ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851183"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98800439"
 ---
 # <a name="how-to-customize-report-view-columns"></a>Nasıl yapılır: rapor görünümü sütunlarını özelleştirme
 Visual Studio Team System Development Edition 'daki performans araçları, sorunsuz bir kullanıcı deneyimi sağlamak için tümleşik geliştirme ortamı (IDE) ile tamamen tümleşiktir. Aşağıdaki liste sütunları ekleyerek, kaldırarak ve yeniden düzenleyerek özelleştirilebilen görünümlerin temsilcisidir:
@@ -56,4 +58,4 @@ Visual Studio Team System Development Edition 'daki performans araçları, sorun
 
 4. Sütunları yeniden sıralamak için ok düğmesine tıklayın.
 
-5. **Tamam**’a tıklayın.
+5. **Tamam**'a tıklayın.
