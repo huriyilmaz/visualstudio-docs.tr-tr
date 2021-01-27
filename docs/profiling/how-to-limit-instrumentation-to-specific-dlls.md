@@ -1,5 +1,7 @@
 ---
 title: Belirli dll 'Lerde Izleme sınırlandırma | Microsoft Docs
+description: Bir uygulamadaki bir veya daha fazla dll 'ye profil oluşturma verileri toplamayı sınırlamak için izleme profili oluşturma yöntemini nasıl kullanacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +12,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: a3584498854e7518e93c4ba00dc019d804b0e8d8
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 7bd781f2c62a313a8e0c0b044103ca5da28021f8
+ms.sourcegitcommit: 8e15b434bf5db3e0f719320ca82682df1a3da110
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851027"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98883377"
 ---
 # <a name="how-to-limit-instrumentation-to-specific-dlls"></a>Nasıl yapılır: İzlemeyi belirli DLL'ler ile sınırlama
 
@@ -29,7 +31,7 @@ ms.locfileid: "90851027"
 
 3. Profil oluşturma yöntemi olarak **Araçlar** ' ı seçin ve ardından **İleri**' ye tıklayın.
 
-4. **Aşağıdaki kullanılabilir hedeflerden hangisi profilini oluşturmak istersiniz?** altında, adını seçin. *dll* tıklayın ve ardından **İleri**' ye tıklayın.
+4. **Aşağıdaki kullanılabilir hedeflerden hangisi profilini oluşturmak istersiniz?** altında, adını seçin.  tıklayın ve ardından **İleri**' ye tıklayın.
 
 5. Sihirbazdan çıkmak için **son** ' a tıklayın ve yeni performans oturumunu **Performans Gezgini** penceresinde görüntüleyin.
 
@@ -47,15 +49,15 @@ ms.locfileid: "90851027"
 
 2. **Çözümle** menüsünde, **Performans Sihirbazını Başlat**' ı seçin.
 
-3. **Aşağıdaki kullanılabilir hedeflerden hangisi profilini oluşturmak**istersiniz, **bir dinamik bağlantı kitaplığı profili seçin (. DLL)** ve ardından **İleri**' ye tıklayın.
+3. **Aşağıdaki kullanılabilir hedeflerden hangisi profilini oluşturmak** istersiniz, **bir dinamik bağlantı kitaplığı profili seçin (. DLL)** ve ardından **İleri**' ye tıklayın.
 
 4. Sihirbazın ikinci sayfasında, aşağıdaki adımları uygulayın:
 
-    - Yolunu ve dosya adını yazın. dll dosyasında, **DLL yolunda**profil yapmak istediğiniz *DLL* dosyası. Ayrıca, dosyayı **profile olan dinamik bağlantı kitaplığı** iletişim kutusunda bulmak için üç nokta düğmesini (...) de tıklayabilirsiniz. Kopyasını belirtmeniz gerektiğini unutmayın. yürütülebilir dosya tarafından başlatılacak *DLL* dosyası (.* exe*) dosyasını seçin.
+    - Yolunu ve dosya adını yazın. dll dosyasında, **DLL yolunda** profil yapmak istediğiniz *DLL* dosyası. Ayrıca, dosyayı **profile olan dinamik bağlantı kitaplığı** iletişim kutusunda bulmak için üç nokta düğmesini (...) de tıklayabilirsiniz. Kopyasını belirtmeniz gerektiğini unutmayın. yürütülebilir dosya tarafından başlatılacak *DLL* dosyası (.*exe*) dosyasını seçin.
 
-    - Yürütülebilir dosyanın yolunu ve adını yazın (.* exe*) dosyası ile çalışır. *DLL* **yürütülebilir dosya yolu**. Ayrıca, **başlatılacak yürütülebilir** iletişim kutusunda dosyayı bulmak için üç nokta düğmesini (...) de tıklayabilirsiniz.
+    - Yürütülebilir dosyanın yolunu ve adını yazın (.*exe*) dosyası ile çalışır. *DLL* **yürütülebilir dosya yolu**. Ayrıca, **başlatılacak yürütülebilir** iletişim kutusunda dosyayı bulmak için üç nokta düğmesini (...) de tıklayabilirsiniz.
 
-    - İsteğe bağlı. **Komut satırı bağımsız değişkenlerinde**yürütülebilir dosyaya geçirmek istediğiniz komut satırı bağımsız değişkenlerini yazın. Gerekirse, **çalışma dizinindeki**uygulama için çalışma dizinini belirtin.
+    - İsteğe bağlı. **Komut satırı bağımsız değişkenlerinde** yürütülebilir dosyaya geçirmek istediğiniz komut satırı bağımsız değişkenlerini yazın. Gerekirse, **çalışma dizinindeki** uygulama için çalışma dizinini belirtin.
 
     - **İleri**’ye tıklayın.
 
@@ -66,7 +68,7 @@ ms.locfileid: "90851027"
 7. İsteğe bağlı. Daha fazlasını ekleyin. *DLL* dosyaları, **hedefler** ' e sağ tıklayın ve ardından **hedef ikilisi Ekle**' yi seçin. **Hedef Ikili Ekle** iletişim kutusundan dosyaları seçin.
 
     > [!NOTE]
-    > Yürütülebilir dosyayı belirtmeyin (.* exe*) dosyası dll 'leri uygulayan dosya.
+    > Yürütülebilir dosyayı belirtmeyin (.*exe*) dosyası dll 'leri uygulayan dosya.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

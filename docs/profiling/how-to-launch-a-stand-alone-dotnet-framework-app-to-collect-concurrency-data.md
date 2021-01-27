@@ -1,5 +1,7 @@
 ---
 title: Profil oluşturucu komut satırı-açık istemci .NET uygulaması, eşzamanlılık verileri al
+description: Visual Studio Profil Oluşturma Araçları komut satırı araçlarının nasıl kullanılacağını, .NET tek başına uygulamasını başlatıp işlem ve iş parçacığı eşzamanlılık verilerini toplamayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 17a48848-bd3e-44ef-9971-e39836ff1df2
@@ -9,12 +11,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: e2c1b0a52429e74ad35cf0cad3acc44d064c9672
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 01356e2fe8693e39ef06fc1620cabbb2cb608a43
+ms.sourcegitcommit: 8e15b434bf5db3e0f719320ca82682df1a3da110
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85327909"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98883501"
 ---
 # <a name="how-to-launch-a-stand-alone-net-framework-application-with-the-profiler-to-collect-concurrency-data-by-using-the-command-line"></a>Nasıl yapılır: komut satırını kullanarak eşzamanlılık verileri toplamak için Profil Oluşturucu ile tek başına .NET Framework uygulaması başlatma
 Bu konu, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] bir .NET Framework tek başına (istemci) uygulaması başlatmak ve işlem ve iş parçacığı eşzamanlılık verilerini toplamak için profil oluşturma araçları komut satırı araçlarının nasıl kullanılacağını açıklar
@@ -43,7 +45,7 @@ Bu konu, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] bir .NET Fram
      | **/Start: eşzamanlılık, yalnızca Resource** | Yalnızca kaynak çekişme verilerinin toplanmasını mümkün. |
      | **/Start: eşzamanlılık, threadonly** | Yalnızca iş parçacığı yürütme verilerinin toplanmasını mümkün. |
 
-   - /Start ile [/output](../profiling/output.md)**:** `OutputFile` seçeneği gereklidir. **/start** `OutputFile` profil oluşturma verileri (. vsp) dosyasının adını ve konumunu belirtir.
+   - /Start ile [/output](../profiling/output.md)**:** `OutputFile` seçeneği gereklidir.  `OutputFile` profil oluşturma verileri (. vsp) dosyasının adını ve konumunu belirtir.
 
      Aşağıdaki seçeneklerden herhangi birini, **/Start: eşzamanlılık** seçeneğiyle kullanabilirsiniz.
 
@@ -53,7 +55,7 @@ Bu konu, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] bir .NET Fram
    | [/CrossSession](../profiling/crosssession.md) | Diğer oturum oturumlarda işlemlerin profilini oluşturmayı mümkün. |
    | [/WINCOUNTER](../profiling/wincounter.md) **:**`WinCounterPath` | Profil oluşturma sırasında toplanacak bir Windows performans sayacı belirtir. |
    | [/AutoMark](../profiling/automark.md) **:**`Interval` | Yalnızca **/WINCOUNTER** ile kullanın. Windows performans sayacı toplama olayları arasındaki milisaniye sayısını belirtir. Varsayılan değer 500 MS 'dir. |
-   | [/Events](../profiling/events-vsperfcmd.md) **:**`Config` | Profil oluşturma sırasında toplanacak bir Windows için olay Izleme (ETW) olayı belirtir. ETW olayları ayrı bir (.* ETL*) dosyası. |
+   | [/Events](../profiling/events-vsperfcmd.md) **:**`Config` | Profil oluşturma sırasında toplanacak bir Windows için olay Izleme (ETW) olayı belirtir. ETW olayları ayrı bir (.*ETL*) dosyası. |
 
 3. Hedef uygulamayı başlatın. Şunu yazın:
 

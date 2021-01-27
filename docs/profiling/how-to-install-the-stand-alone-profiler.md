@@ -1,5 +1,7 @@
 ---
-title: Tek başına profil oluşturucuyu yükler | Microsoft Docs
+title: Stand-Alone profil oluşturucuyu yüklemeyi | Microsoft Docs
+description: Visual Studio yüklü olmadan çalışabilen tek başına profil oluşturucuyu yüklemeyi öğrenin. Visual Studio 'Nun yüklenmemediği durumlar vardır.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 4005a7af5af1582f31b6c706be150a504355f3d2
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 8f13edc60a2c05d50e2118e24344bf9d475e3f5f
+ms.sourcegitcommit: 8e15b434bf5db3e0f719320ca82682df1a3da110
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851157"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98883624"
 ---
 # <a name="how-to-install-the-stand-alone-profiler"></a>Nasıl yapılır: Bağımsız profil oluşturucuyu yükleme
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] IDE 'yi yüklemeden çalıştırılabilen bir komut satırı tabanlı tek başına profil oluşturucu sağlar [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Bu durum, bir bilgisayar bir geliştirme ortamının yüklü olmadığı veya içermediği durumlarda oluşur. Örneğin, bir üretim Web sunucusuna bir geliştirme ortamı yüklememelisiniz.
@@ -36,12 +38,12 @@ ms.locfileid: "90851157"
    > [!NOTE]
    > Profil oluşturma araçlarının yolunu almak için, bkz. [komut satırı araçlarının yolunu belirtme](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md). 64 bit bilgisayarlarda, araçların her ikisi de 64-bit ve 32 bit sürümleri mevcuttur. Profil oluşturucu komut satırı araçlarını kullanmak için araçlar yolunu komut Istemi penceresinin PATH ortam değişkenine eklemeniz ya da komutun kendisine eklemeniz gerekir.
 
-3. Komut isteminde **vsinstr**yazın.
+3. Komut isteminde **vsinstr** yazın.
 
    > [!NOTE]
    > vsinstr.exe için kullanım bilgileri görüntüleniyorsa her şey doğru şekilde ayarlanır. vsinstr.exe veya bağımlılıklarından biri bulunamadığını bildiren bir hata görürseniz, "Adım 2 ' de açıklandığı gibi yollarınızın doğru şekilde ayarlandığından emin olun.
 
-4. **_NT_SYMBOL_PATH** değişkeninizi **symsrv \*symsrv.dll\* c:\localcache \* https://msdl.microsoft.com/download/symbols ** olarak ayarlayarak sembol sunucusunu ayarlama
+4. **_NT_SYMBOL_PATH** değişkeninizi **symsrv \*symsrv.dll\* c:\localcache \* https://msdl.microsoft.com/download/symbols** olarak ayarlayarak sembol sunucusunu ayarlama
 
 5. Sembol sunucunuzu sistem ortam değişkenlerini kullanarak ayarladıktan sonra, yeni bir komut isteminde komut satırı profil oluşturucu Araçları ' nı çalıştırın. Bu, yeni ortam değişkenlerinin etkili olmasına olanak sağlar. Komut istemi penceresinde aşağıdaki komutu yazın:
 

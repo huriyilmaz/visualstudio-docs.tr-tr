@@ -1,5 +1,7 @@
 ---
 title: Profil oluşturucu komut satırı-istemci .NET Framework uygulamasını açın, bellek verilerini alın
+description: Visual Studio Profil Oluşturma Araçları komut satırı araçlarının nasıl kullanılacağını .NET Framework tek başına bir uygulama başlatabilir ve bellek etkinliği verilerini toplayacağınızı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 3bc53041-91b7-4ad0-8413-f8bf2c4b3f5e
@@ -9,12 +11,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6378ea021d089027c19d28e927d5772ef5f35e0f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a0df21a4d34d3d3f889442046b594ff63f01bcb6
+ms.sourcegitcommit: 8e15b434bf5db3e0f719320ca82682df1a3da110
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85327701"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98883507"
 ---
 # <a name="how-to-launch-a-stand-alone-net-framework-application-with-the-profiler-to-collect-memory-data-by-using-the-command-line"></a>Nasıl yapılır: komut satırını kullanarak bellek verileri toplamak için Profil Oluşturucu ile tek başına .NET Framework uygulaması başlatma
 Bu konu [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , bir .NET Framework tek başına (istemci) uygulaması başlatmak ve bellek verileri toplamak için profil oluşturma araçları komut satırı araçlarının nasıl kullanılacağını açıklar.
@@ -45,7 +47,7 @@ Bu konu [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , bir .NET Fra
 
    - [/Start](../profiling/start.md)**: örnek** seçeneği, profil oluşturucuyu başlatır.
 
-   - /Start ile [/output](../profiling/output.md)**:** `OutputFile` seçeneği gereklidir. **/start** `OutputFile` profil oluşturma verileri (. vsp) dosyasının adını ve konumunu belirtir.
+   - /Start ile [/output](../profiling/output.md)**:** `OutputFile` seçeneği gereklidir.  `OutputFile` profil oluşturma verileri (. vsp) dosyasının adını ve konumunu belirtir.
 
      Aşağıdaki seçeneklerden herhangi birini, **/Start: Sample** seçeneğiyle kullanabilirsiniz.
 
@@ -62,7 +64,7 @@ Bu konu [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , bir .NET Fra
 
      |Sözcükle|Description|
      |-------------|-----------------|
-     |**ayırma**|Yalnızca bellek ayırma verilerini toplayın.|
+     |**ayırmasını**|Yalnızca bellek ayırma verilerini toplayın.|
      |**süre**|Hem bellek ayırma hem de nesne yaşam süresi verilerini toplayın.|
 
      Aşağıdaki seçeneklerden herhangi birini **/Launch** seçeneği ile kullanabilirsiniz.

@@ -1,5 +1,7 @@
 ---
 title: Belirli Işlevlerle Izleme sınırlandırma | Microsoft Docs
+description: Gelişmiş sayfada veya hedef ikili özellik sayfalarında seçenekleri ayarlayarak, izleme ve veri toplamayı bir veya daha fazla fonksiyona sınırlamayı öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: b2316c0c3fe0b74bbd7b3e80324284f37dff0e64
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 92825f77b1c94a7545b399dbc1cb35ecefb8218d
+ms.sourcegitcommit: 8e15b434bf5db3e0f719320ca82682df1a3da110
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851001"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98883338"
 ---
 # <a name="how-to-limit-instrumentation-to-specific-functions"></a>Nasıl yapılır: belirli işlevlerle izleme sınırlandırma
 **Performans oturumunun** **Gelişmiş** sayfasında veya hedef ikili özellik sayfalarında seçenekleri ayarlayarak, izleme ve veri toplamayı bir veya daha fazla fonksiyona sınırlandırabilirsiniz:
@@ -42,10 +44,10 @@ ms.locfileid: "90851001"
 
     **/include:** `FuncSpec` **[;** `FuncSpec` **]**`...`
 
-    `FuncSpec` ad alanı ve işlev adıdır. Şu biçimdedir `Namespace` **::** `FunctionName` . Birden çok işlevi ayırmak için noktalı virgül kullanın. Bir \* veya daha fazla karakter için joker karakter belirtmek üzere bir yıldız işareti () kullanın. Örneğin, **/include: myNS:: \\ *** myNS ad alanındaki tüm işlevleri belirtir.
+    `FuncSpec` ad alanı ve işlev adıdır. Şu biçimdedir `Namespace` **::** `FunctionName` . Birden çok işlevi ayırmak için noktalı virgül kullanın. Bir \* veya daha fazla karakter için joker karakter belirtmek üzere bir yıldız işareti () kullanın. Örneğin, **/include: myNS:: \\** _ myNS ad alanındaki tüm işlevleri belirtir.
 
    > [!NOTE]
-   > Bir ikilinin işlevlerini listelemek için, Profil Oluşturma Araçları yükleme dizininde bir komut istemi penceresi açın (bkz [. komut satırı araçlarının yolunu belirtin](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)) ve ardından **VSInstr/DumpFuncs** yazın
+   > Bir ikilinin işlevlerini listelemek için, Profil Oluşturma Araçları yükleme dizininde bir komut istemi penceresi açın (bkz [. komut satırı araçlarının yolunu belirtme](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)) ve _ *VSInstr/DumpFuncs* yazın*
 
 ### <a name="to-limit-instrumentation-to-specific-functions-in-a-binary"></a>Bir ikilide belirli işlevlerle izlemeyi sınırlandırmak için
 
@@ -61,10 +63,10 @@ ms.locfileid: "90851001"
 
     **/include:** `FuncSpec` **[;** `FuncSpec` **]**`...`
 
-    `FuncSpec` ad alanı ve işlev adıdır. Şu biçimdedir `Namespace` **::** `FunctionName` . Birden çok işlevi ayırmak için noktalı virgül kullanın. Bir \* veya daha fazla karakter için joker karakter belirtmek üzere bir yıldız işareti () kullanın. Örneğin, **/include: myNS:: \\ *** myNS ad alanındaki tüm işlevleri belirtir.
+    `FuncSpec` ad alanı ve işlev adıdır. Şu biçimdedir `Namespace` **::** `FunctionName` . Birden çok işlevi ayırmak için noktalı virgül kullanın. Bir \* veya daha fazla karakter için joker karakter belirtmek üzere bir yıldız işareti () kullanın. Örneğin, **/include: myNS:: \\** _ myNS ad alanındaki tüm işlevleri belirtir.
 
    > [!NOTE]
-   > Bir ikilinin işlevlerini listelemek için, Profil Oluşturma Araçları yükleme dizininde bir komut istemi penceresi açın (bkz [. komut satırı araçlarının yolunu belirtin](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)) ve ardından **VSInstr/DumpFuncs** yazın
+   > Bir ikilinin işlevlerini listelemek için, Profil Oluşturma Araçları yükleme dizininde bir komut istemi penceresi açın (bkz [. komut satırı araçlarının yolunu belirtme](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)) ve _ *VSInstr/DumpFuncs* yazın*
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Veri toplamayı denetleme](../profiling/controlling-data-collection.md)

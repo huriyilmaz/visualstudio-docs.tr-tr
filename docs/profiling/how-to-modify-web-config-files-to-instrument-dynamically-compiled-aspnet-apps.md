@@ -1,5 +1,6 @@
 ---
 title: Web.Config dosya gereci & profili dinamik ASP.NET uygulaması
+description: Visual Studio Profil Oluşturma Araçları kullanarak dinamik olarak derlenen bir ASP.NET Web uygulaması için zamanlama ve bellek etkinlik verilerini nasıl toplayacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -10,12 +11,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - aspnet
-ms.openlocfilehash: 9682fe820e34e8e30a3c57670f5e5fbc7eae2153
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: e08732689d11cd7de70df1e93d1d1110a35baa6d
+ms.sourcegitcommit: 8e15b434bf5db3e0f719320ca82682df1a3da110
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809602"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98883506"
 ---
 # <a name="how-to-modify-webconfig-files-to-instrument-and-profile-dynamically-compiled-aspnet-web-applications"></a>Nasıl yapılır: dinamik olarak derlenen ASP.NET Web uygulamalarını işaretlemek ve profil haline getirmek için web.config dosyalarını değiştirme
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]Dinamik olarak derlenen Web uygulamalarından ayrıntılı zamanlama verileri, .net bellek ayırma verileri ve .NET nesne yaşam süresi verilerini toplamak için profil oluşturma araçları izleme yöntemini kullanabilirsiniz [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] .
@@ -141,7 +142,7 @@ ms.locfileid: "90809602"
    | Öznitelik adı | Öznitelik değeri |
    |----------------| - |
    | **anahtar** | **Microsoft. VisualStudio. Enterprise. AspNetHelper. VsInstrLocation** |
-   | **deeri** | `PerformanceToolsFolder`**\VSInstr.Exe** |
+   | **değer** | `PerformanceToolsFolder`**\VSInstr.Exe** |
 
 4. **AppSettings** öğesinin alt öğesi olarak başka bir **Add** öğesi ekleyin.
 
@@ -150,7 +151,7 @@ ms.locfileid: "90809602"
    |Öznitelik adı|Öznitelik değeri|
    |--------------------|---------------------|
    |**anahtar**|**Microsoft. VisualStudio. Enterprise. AspNetHelper. VsInstrTools**|
-   |**deeri**|`PerformanceToolsFolder`|
+   |**değer**|`PerformanceToolsFolder`|
 
     `PerformanceToolsFolder` , profil oluşturucu yürütülebilir dosyalarının yoludur. Profil oluşturma araçlarının yolunu almak için, bkz. [komut satırı araçlarının yolunu belirtme](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md).
 
