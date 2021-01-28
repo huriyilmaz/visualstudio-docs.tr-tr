@@ -10,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c69f93aca88cb8e83417a370de7113640d3ae38c
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 3a6f1efc85366bc74206dc8637c992f249c4eb44
+ms.sourcegitcommit: e443866e3468f838bc3655ad56a83a552013ceed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94351342"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98925881"
 ---
 # <a name="walkthrough-debug-an-xslt-style-sheet"></a>İzlenecek yol: XSLT stil sayfasında hata ayıklama
 
@@ -24,19 +24,19 @@ Bu izlenecek yolda bulunan adımlarda XSLT hata ayıklamanın nasıl kullanılac
 Bu izlenecek yol için hazırlanmak üzere, önce iki [örnek dosyayı](#sample-files) yerel bilgisayarınıza kopyalayın. Stil sayfası, diğeri ise stil sayfasına giriş olarak kullanacağımız XML dosyasıdır. Bu kılavuzda, kullandığımız stil sayfası maliyeti ortalama defter fiyatının altında olan tüm kitapları bulur.
 
 > [!NOTE]
-> XSLT hata ayıklayıcısı yalnızca Visual Studio Enterprise sürümünde kullanılabilir.
+> XSLT hata ayıklayıcısı yalnızca Visual Studio 'nun Professional ve Enterprise sürümlerinde kullanılabilir.
 
 ## <a name="start-debugging"></a>Hata ayıklamayı Başlat
 
-1. **Dosya** menüsünden dosya **Aç** ' ı seçin  >  **File**.
+1. **Dosya** menüsünden dosya **Aç**' ı seçin  >  .
 
-2. *Below-Average. xsl* dosyasını bulun ve **Aç** ' ı seçin.
+2. *Below-Average. xsl* dosyasını bulun ve **Aç**' ı seçin.
 
    Stil sayfası XML düzenleyicisinde açılır.
 
-3. Belge Özellikleri penceresinin **giriş** alanındaki gezinme düğmesine ( **...** ) tıklayın. ( **Özellikler** penceresi görünür değilse, düzenleyicide açık dosyada herhangi bir yere sağ tıklayın ve ardından **Özellikler** ' i seçin.)
+3. Belge Özellikleri penceresinin **giriş** alanındaki gezinme düğmesine (**...**) tıklayın. ( **Özellikler** penceresi görünür değilse, düzenleyicide açık dosyada herhangi bir yere sağ tıklayın ve ardından **Özellikler**' i seçin.)
 
-4. *books.xml* dosyasını bulun ve **Aç** ' ı seçin.
+4. *books.xml* dosyasını bulun ve **Aç**' ı seçin.
 
    Bu, XSLT dönüştürmesi için kullanılan kaynak belge dosyasını ayarlar.
 
@@ -46,7 +46,7 @@ Bu izlenecek yol için hazırlanmak üzere, önce iki [örnek dosyayı](#sample-
 
    - 12. satırda herhangi bir yere tıklayın ve ardından **F9** tuşuna basın.
 
-   - Başlangıç etiketini sağ tıklatın `xsl:if` ve **kesme** noktası  >  **Ekle kesme noktası** ' nı seçin.
+   - Başlangıç etiketini sağ tıklatın `xsl:if` ve **kesme** noktası  >  **Ekle kesme noktası**' nı seçin.
 
       ![Visual Studio 'da XSL dosyasında kesme noktası ekle](media/insert-breakpoint.PNG)
 
@@ -56,13 +56,13 @@ Bu izlenecek yol için hazırlanmak üzere, önce iki [örnek dosyayı](#sample-
 
    Düzenleyicide, hata ayıklayıcı `xsl:if` stil sayfasının öğesine yerleştirilir. *below-average.xml* adlı başka bir dosya düzenleyicide açılır; Bu, giriş dosyasındaki her düğüm *books.xml* işlendiği şekilde doldurulacak çıkış dosyasıdır.
 
-   **Oto, Yereller** ve **Locals** **Gözcü 1** pencereleri, Visual Studio penceresinin alt kısmında görünür. **Yereller** penceresi tüm yerel değişkenleri ve bunların geçerli değerlerini görüntüler. Bu, stil sayfasında tanımlanan değişkenleri ve ayrıca hata ayıklayıcının Şu anda bağlamdaki düğümleri izlemek için kullandığı değişkenleri içerir.
+   **Oto, Yereller** ve  **Gözcü 1** pencereleri, Visual Studio penceresinin alt kısmında görünür. **Yereller** penceresi tüm yerel değişkenleri ve bunların geçerli değerlerini görüntüler. Bu, stil sayfasında tanımlanan değişkenleri ve ayrıca hata ayıklayıcının Şu anda bağlamdaki düğümleri izlemek için kullandığı değişkenleri içerir.
 
 ## <a name="watch-window"></a>Gözcü penceresi
 
 Giriş dosyası işlendiğinde değerlerini inceleyebileceğiniz için, **1. gözcü** penceresine iki değişken ekleyeceğiz. (İzlemek istediğiniz değişkenler zaten orada ise, değerleri incelemek için **Yereller** penceresini de kullanabilirsiniz.)
 
-1. **Hata Ayıkla** menüsünde **Windows** 'u  >  **Watch**  >  **izle 1** ' i seçin.
+1. **Hata Ayıkla** menüsünde **Windows**'u  >    >  **izle 1**' i seçin.
 
    **1. gözcü** penceresi görünür hale gelir.
 
