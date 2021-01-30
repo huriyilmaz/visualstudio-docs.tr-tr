@@ -15,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cfec7d31e6fc2c120ef42dc9de2a5a7eea4132e0
-ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
+ms.openlocfilehash: 909e15a3acdc6725556c8d5121a363d1754a74be
+ms.sourcegitcommit: cfeffe2364275a347db0ba2dce36d8e80001c081
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95597099"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99104285"
 ---
 # <a name="how-to-save-and-open-files-with-encoding"></a>Nasıl yapılır: kodlama ile dosyaları kaydetme ve açma
 
@@ -39,6 +39,9 @@ ms.locfileid: "95597099"
      Bu seçenek, dosyayı farklı bir işletim sistemi kullanıcılarıyla değiş tokuş etmek istiyorsanız yararlıdır.
 
      Belirli bir şekilde kodlandığını bildiğiniz bir dosyayla çalışmak istiyorsanız, Visual Studio 'Yu dosyayı açarken bu kodlamayı kullanmasını söyleyebilirsiniz. Kullandığınız yöntem, dosyanın projenizin bir parçası olup olmamasına bağlıdır.
+
+> [!NOTE]
+> Proje dosyasını kodlamalı olarak kaydetmek istiyorsanız, projeyi kaldırana kadar **dosyayı farklı kaydet** seçeneği etkinleştirilmez.
 
 ## <a name="to-open-an-encoded-file-that-is-part-of-a-project"></a>Projenin bir parçası olan kodlanmış bir dosyayı açmak için
 
