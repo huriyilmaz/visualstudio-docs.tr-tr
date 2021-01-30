@@ -1,5 +1,7 @@
 ---
 title: Çekirdekler görünümü göstergesi | Microsoft Docs
+description: Tablo bağlamı anahtar verileri ve iş parçacığı seçimi sağlayan çekirdek görünümü göstergesi hakkında bilgi edinin. Ayrıca bağlam geçişleri ve performansı hakkında bilgi edinin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8ea3184fbcd3561b88521f7dbdf4bf44c925150d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 043f056587856b5c5774a3a15b3542437e0d4eb7
+ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62553169"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98720832"
 ---
 # <a name="cores-view-legend"></a>Çekirdekler görünümü göstergesi
 Çekirdekler görünümü göstergesi her bir iş parçacığını renge ve ada göre tanımlar. Bu, platformlar arası bağlam anahtarları, toplam bağlam geçişleri ve çekirdekler arası bağlam anahtarlarının yüzdesi gösteren sütunları içerir. Göstergedeki satırlar, azalan sırada çapraz çekirdek bağlam anahtarları sayısına göre sıralanır.
