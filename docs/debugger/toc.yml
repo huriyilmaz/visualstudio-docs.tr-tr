@@ -338,8 +338,6 @@
       items:
         - name: Hata ayıklayıcısı ile çalıştırma işlemleri iliştirme
           href: attach-to-running-processes-with-the-visual-studio-debugger.md
-        - name: Linux’ta .NET Core hatalarını ayıklama
-          href: remote-debugging-dotnet-core-linux-with-ssh.md
         - name: Docker kapsayıcısında çalışan bir işleme ekleme
           href: attach-to-process-running-in-docker-container.md
     - name: Çok iş parçacıklı uygulamaların hatalarını ayıklama
@@ -422,6 +420,14 @@
           href: debug-live-azure-apps-troubleshooting.md
         - name: Canlı Azure sanal makine uygulamasında Zaman Atlatma Hata Ayıklaması
           href: debug-live-azure-virtual-machines-time-travel-debugging.md
+    - name: Linux hata ayıklaması
+      items:
+        - name: WSL 2 ' de .NET Core uygulamalarında hata ayıklama
+          href: debug-dotnet-core-in-wsl-2.md
+        - name: Linux üzerinde SSH kullanarak .NET Core hatalarını ayıklama
+          href: remote-debugging-dotnet-core-linux-with-ssh.md
+        - name: Kapsayıcı araçlarıyla hata ayıklama >>
+          href: ../containers/edit-and-refresh.md
     - name: Uygulama türleri
       items:
         - name: Belirli uygulama türlerinde hata ayıklama

@@ -11,18 +11,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bde5bb8722e0f95a10991019bdc9cba9c8a48ec3
-ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
+ms.openlocfilehash: 599ebe86867e78d17029b2787b9f35b6755c3040
+ms.sourcegitcommit: 586369f5aa61d4a0330802f718f0ceaa55d7e9c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98204897"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99224359"
 ---
 # <a name="debug-net-core-on-linux-using-ssh-by-attaching-to-a-process"></a>Bir işleme ekleyerek SSH kullanarak Linux 'ta .NET Core hatalarını ayıklama
 
-Visual Studio 2017 ' den başlayarak, SSH üzerinden yerel veya uzak bir Linux dağıtımında çalışan .NET Core işlemlerine iliştirebilirsiniz. Bu makalede hata ayıklamayı ayarlama ve hata ayıklama işlemlerinin nasıl yapılacağı açıklanır. Docker kapsayıcılarını kullanarak hata ayıklama senaryolarında bkz. bunun yerine [Docker kapsayıcısı üzerinde çalışan bir Işleme iliştirme](../debugger/attach-to-process-running-in-docker-container.md) .
+Visual Studio 2017 ' den başlayarak, SSH üzerinden yerel veya uzak bir Linux dağıtımında çalışan .NET Core işlemlerine iliştirebilirsiniz. Bu makalede hata ayıklamayı ayarlama ve hata ayıklama işlemlerinin nasıl yapılacağı açıklanır. Docker kapsayıcılarını kullanan senaryoları hata ayıklama için bkz. [bir Docker kapsayıcısında çalışan bir işleme](../debugger/attach-to-process-running-in-docker-container.md) ve bunun yerine [kapsayıcı araçları](../containers/edit-and-refresh.md) makalelerine iliştirme. Visual Studio 'da (işleme iliştirme olmadan) WSL 2 ' de Linux 'ta hata ayıklamak için bkz. [Visual Studio Ile WSL 2 içindeki .NET Core uygulamalarında hata ayıklama](../debugger/debug-dotnet-core-in-wsl-2.md).
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 - Visual Studio bilgisayarında, **ASP.net ve Web geliştirme** iş yükünü ya da **.NET Core platformlar arası geliştirme** iş yükünü yüklemeniz gerekir.
 
