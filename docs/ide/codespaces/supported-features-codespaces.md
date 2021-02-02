@@ -11,12 +11,12 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 monikerRange: vs-2019
-ms.openlocfilehash: 20d42b45cc98a64d86306b81f14d781becb8b7a6
-ms.sourcegitcommit: 52742b678233eed1de7a249cf990d072f9758149
+ms.openlocfilehash: 994ac7b759b943a2076c4e8f401d757258e782ab
+ms.sourcegitcommit: 0e91210421974ad08189919495a7327e60be93bb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2021
-ms.locfileid: "99049486"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251446"
 ---
 # <a name="supported-visual-studio-features-preview"></a>Desteklenen Visual Studio özellikleri (Önizleme)
 
@@ -109,7 +109,7 @@ Henüz kullanılabilir değil:
 
 Bir codespace 'e bağlı Visual Studio ile çalışırken, yerel olarak çalışırken aynı erişilebilirlik özelliklerini alırsınız.
 
-* Kaynak denetimi-yeni [Tümleşik git deneyimi](../git-with-visual-studio.md)aracılığıyla tam git desteği.
+* Kaynak denetimi-yeni [Tümleşik git deneyimi](../git-with-visual-studio.md)aracılığıyla tam git desteği. Bir codespace 'te klonlanacak git alt modülleri için `git submodule update` terminalden çalıştırmanız gerekebilir.
 * Erişilebilirlik-yardımcı teknolojide, bir hata ayıklama uygulamasının appatama 'ya erişemediği bilinen bir sorun var. Bu sınırlamanın yanı sıra, yerel Visual Studio deneyiminde zaten mevcut olmayan başka uyumluluk sorunları olduğunu düşünmedik. [Geliştirici topluluğu](https://aka.ms/feedback/report?space=8)'nda bir sorun oluşturarak hataları algılamadıysanız lütfen bize bildirin.
 * Yayımlama-GitHub eylemleri aracılığıyla Azure 'da yayımlayın.
 * Bağlı hizmetler-Application Insights, Keykasası, Storage, SQL, Redsıs, Cosmos, Openapı ve gRPC kısmen desteklenmektedir.
