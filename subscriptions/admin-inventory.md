@@ -7,12 +7,12 @@ ms.assetid: 7d74e113-8fb2-490e-8502-48cce7b1327a
 ms.date: 01/14/2021
 ms.topic: conceptual
 description: Yöneticiler hakkında, ön üretim envanterleri yürütme sorumluluğunu öğrenin
-ms.openlocfilehash: abcb3c8c1213885b5e543b05cf912c418acaa3f5
-ms.sourcegitcommit: 4ee20054afe7bcf5c0aed504dec01e18059fbbd0
+ms.openlocfilehash: da8146b9f7d2b758ac2d249534d43bd98beae385
+ms.sourcegitcommit: d124123528776993eb5e7461dae8da3975d11d0d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "98226493"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99511312"
 ---
 # <a name="inventory-of-pre-production-environment"></a>Üretim öncesi ortam envanteri
 Visual Studio abonelikleri, cihazları yerine kullanıcıları sayarak varlık yönetimini basitleştirir.
@@ -30,7 +30,7 @@ Visual Studio yöneticileri **, adlandırılmış bireylere** Visual Studio abon
 
 ## <a name="resources"></a>Kaynaklar
 - [Visual Studio lisanslama teknik incelemesi](https://visualstudio.microsoft.com/wp-content/uploads/2019/06/Visual-Studio-Licensing-Whitepaper-May-2019.pdf)
-- [Visual Studio Yönetim ve Abonelik Desteği](https://visualstudio.microsoft.com/support/support-overview-vs)
+- [Visual Studio abonelikleri desteği](https://my.visualstudio.com/gethelp)
 - [Toplu Lisanslama Koşulları](https://www.microsoft.com/licensing/product-licensing/products.aspx)
 
 ## <a name="see-also"></a>Ayrıca bkz.

@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: b26b31dc-1eeb-4871-9ce6-2c980e703f1e
-ms.date: 10/22/2020
+ms.date: 02/02/2021
 ms.topic: conceptual
 description: Abonelik yöneticilerinin sorumlulukları hakkında bilgi edinin.
-ms.openlocfilehash: 183209e5e1fa873ae9af6ff2d9b32caf94c5461e
-ms.sourcegitcommit: bf5e2bba5acdcf05869b861211f8bb755081e5ce
+ms.openlocfilehash: 9d2c724fafb41ee44e531a1eec41d76d7e888686
+ms.sourcegitcommit: d124123528776993eb5e7461dae8da3975d11d0d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92467472"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99511299"
 ---
 # <a name="overview-of-admin-responsibilities"></a>Yönetici sorumluluklarına genel bakış
 Yönetici olarak, kuruluşunuz için abonelikleri yönetebilirsiniz.  Yönetici rolü Ayrıca, aboneliklerin lisans koşullarına uygun olarak yönetildiğinden emin olmak için sorumluluklar de taşır. Bu makalede, yönetici rolünün sorumlulukları, avantajları ve sınırlamaları özetlenmektedir.
@@ -41,6 +41,7 @@ Visual Studio abonelikleri, geliştiricilerin diğer yazılımları tasarlamak, 
 - [Azure DevOps belgeleri](/azure/devops/)
 - [Azure belgeleri](/azure/)
 - [Microsoft 365 belgeleri](/microsoft-365/)
+- [Visual Studio yönetim ve abonelik desteği](https://my.visualstudio.com/gethelp)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 Yöneticiler için sorumluluklar hakkında daha fazla bilgi edinin:

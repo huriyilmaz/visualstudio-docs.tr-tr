@@ -7,12 +7,12 @@ ms.assetid: 2249b32a-46d7-4e29-b543-4769c71ceda6
 ms.date: 10/22/2020
 ms.topic: conceptual
 description: Visual Studio aboneliklerinin bir parçası olarak GitHub Enterprise 'a erişme hakkında bilgi edinin
-ms.openlocfilehash: 59b665b1da7d46732f1f4e967ae2a98ec54875ff
-ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
+ms.openlocfilehash: 7ad60b1c1a177353cad13e3dbcbc50c67b5500ac
+ms.sourcegitcommit: d124123528776993eb5e7461dae8da3975d11d0d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96537909"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99511364"
 ---
 # <a name="visual-studio-subscriptions-with-github-enterprise"></a>GitHub Enterprise ile Visual Studio abonelikleri 
 
@@ -85,7 +85,7 @@ Y: GitHub Enterprise ile birlikte, Yazılım İndirmeleri, bulut Hizmetleri, tek
 - [GitHub yardımı](https://help.github.com)'nda çok çeşitli GitHub konuları dizisiyle ilgili soruların yanıtlarını bulun.
 - Daha fazla yardıma mı ihtiyacınız var?  [GitHub desteğiyle](https://support.github.com/) iletişim kurun
 - [GitHub topluluk forumundaki](https://github.community/)diğer GitHub kullanıcılarından yardım alın.
-- Visual Studio abonelikleri için Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım için [Visual Studio abonelikleri desteğiyle](https://visualstudio.microsoft.com/subscriptions/support/)görüşün.
+- Visual Studio abonelikleri için Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım için lütfen [Get Yardım](https://my.visualstudio.com/GetHelp) sayfamızı ziyaret edin.
 - Visual Studio IDE, Azure DevOps Services veya diğer Visual Studio ürünleri veya hizmetleri hakkında sorularınız mı var?  [Visual Studio desteği](https://visualstudio.microsoft.com/support/)' ni ziyaret edin.
 - GitHub Enterprise için [Teknik destek](https://support.microsoft.com/en-us/supportforbusiness/productselection?sapId=b77fe80f-5417-80bd-4b2a-275cf0018c24) alın.   
 

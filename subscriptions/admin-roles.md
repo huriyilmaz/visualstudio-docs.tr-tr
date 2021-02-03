@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 6601c395-f778-48c1-ab76-cf454b9193e4
-ms.date: 10/22/2020
+ms.date: 02/02/2021
 ms.topic: conceptual
 description: Süper yönetici ve yönetici rolleri ve yöneticiler atama hakkında bilgi edinin.
-ms.openlocfilehash: 491a8de27477f68b4344ad17b860b80b4ca96aa9
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: 2d9abf5a3079320011cb979a8109278c878321e3
+ms.sourcegitcommit: d124123528776993eb5e7461dae8da3975d11d0d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2020
-ms.locfileid: "92467381"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99511338"
 ---
 # <a name="super-admins-and-admins-for-visual-studio-subscription-agreements"></a>Visual Studio abonelik anlaşmaları için süper Yöneticiler ve Yöneticiler
 
@@ -29,7 +29,7 @@ Yöneticileri yönetme hakkında bir tanıtım izleyin.
 Yeni Yöneticiler (Yöneticiler) atamak için:
 1. https://manage.visualstudio.comAboneliklerin satın alındığı anlaşmada süper yönetici olarak atanmış bir e-posta adresi kullanarak oturum açın.
 2. **Yöneticileri Yönet** etiketli sekmeye tıklayın.
-3. **Ekle** 'ye tıklayın.
+3. **Ekle**'ye tıklayın.
    > [!div class="mx-imgBorder"]
    > ![Yönetici Ekle](_img/admin-roles/add-admins.png "Yöneticileri Yönet dikey penceresine tıklayın ve sonra yeni yöneticiler atamak için Ekle ' ye tıklayın.")
 4. Formu yeni yönetici bilgileriyle doldurun.  
@@ -42,13 +42,14 @@ Yeni Yöneticiler (Yöneticiler) atamak için:
 5. Yeni yönetici atamak için **Ekle** ' ye tıkladıktan sonra, portalda oturum açmak üzere bu kişilere davet eden bir e-posta gönderilir.  
 
 ## <a name="resources"></a>Kaynaklar
-- [Visual Studio Yönetim ve Abonelik Desteği](https://visualstudio.microsoft.com/support/support-overview-vs)
+- [Visual Studio yönetim ve abonelik desteği](https://my.visualstudio.com/gethelp)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)
 - [Azure DevOps belgeleri](/azure/devops/)
 - [Azure belgeleri](/azure/)
 - [Microsoft 365 belgeleri](/microsoft-365/)
+
 
 
 ## <a name="next-steps"></a>Sonraki adımlar
