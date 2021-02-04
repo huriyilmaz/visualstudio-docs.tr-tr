@@ -1,5 +1,5 @@
 ---
-title: Azure geliştirme ve Test Kullandıkça Öde aboneliğimi etkinleştiremedik.
+title: Azure geliştirme ve Test Kullandıkça Öde aboneliğim etkinleştirilemiyor
 description: Azure geliştirme ve Test Kullandıkça Öde aboneliğimi Visual Studio aboneliğime dahil edemiyorum?
 ms.topic: include
 ms.assetid: 6ad8bb6e-e571-450e-860b-acf1e78921d7
@@ -10,12 +10,12 @@ user.type: subscriber
 tags: benefit, azure, dev-test
 subscription.type: vl, cloud, retail, partner
 sap.id: 8dedd10e-cb1c-2eb1-bcda-fe00b07ac903
-ms.openlocfilehash: 2a6e02721512d9780cd94d2d9601fe7099eac956
-ms.sourcegitcommit: cd7f122c6850cf442a4ca42d51d05c7a8fe9038d
+ms.openlocfilehash: 83907b80a67193230a31d9bad155ce72bd02a373
+ms.sourcegitcommit: 645303f47a5258d4b65cc56bf9e2303865587e1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "98147632"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99541307"
 ---
 ## <a name="im-unable-to-activate-my-azure-dev--test-pay-as-you-go-subscription"></a>Azure geliştirme ve Test Kullandıkça Öde aboneliğimi etkinleştiremedik.
 
@@ -29,4 +29,4 @@ Bir Visual Studio abonesi olarak, Azure 'da abonelik yazılımınız için geli�
 
 ## <a name="more-information-about-subscriptions"></a>Abonelikler hakkında daha fazla bilgi
  
-[Azure geliştirme ve Test Kullandıkça Öde abonelikleri hakkında daha fazla bilgi edinin](https://docs.microsoft.com/visualstudio/subscriptions/vs-azure-payg).
+[Azure geliştirme ve Test Kullandıkça Öde abonelikleri hakkında](https://docs.microsoft.com/visualstudio/subscriptions/vs-azure-payg)daha fazla bilgi edinin.

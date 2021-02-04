@@ -1,5 +1,5 @@
 ---
-title: Yazılım indiremiyor veya etkinleştiremiyorum (Visual Studio ailesi hariç)
+title: Yazılım indirilemiyor veya etkinleştirilemiyor (Visual Studio ailesi hariç)
 description: Visual Studio aboneliğime dahil olan yazılımı indiremiyorum veya etkinleştiremiyorum (Visual Studio ailesi hariç).
 ms.topic: include
 ms.assetid: 4e67a935-40f9-4c26-b836-e06aa8582bad
@@ -10,12 +10,12 @@ user.type: subscriber
 tags: download, activate
 subscription.type: vl, cloud, retail, partner
 sap.id: 53a7a6d4-7755-352a-5a65-715d78af84bf
-ms.openlocfilehash: 81c9013c59ffa8fc503e71202941b044f90b139a
-ms.sourcegitcommit: cd7f122c6850cf442a4ca42d51d05c7a8fe9038d
+ms.openlocfilehash: 477753ab93205aa838389313a0ad2c96487aacc3
+ms.sourcegitcommit: 645303f47a5258d4b65cc56bf9e2303865587e1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "98147427"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99541168"
 ---
 ## <a name="im-unable-to-download-or-activate-software-excluding-visual-studio-family"></a>Yazılım indiremiyor veya etkinleştiremiyorum (Visual Studio ailesi hariç)
 
@@ -34,4 +34,4 @@ Tüm Abonelik türleri için kullanılabilir yazılım başlıklarının [kapsam
 Ayrıca, [](https://my.visualstudio.com/productkeys)   Tüm anahtarların toplama Işleminde kullanılabildiği ürün anahtarları sayfasını da ziyaret edebilirsiniz. Anahtarın ne zaman ve neden talep edildiğinizi belirlemek için Notlar sütununu düzenleyebilirsiniz. 
 
 ## <a name="more-information-about-downloads"></a>İndirmeler hakkında daha fazla bilgi 
-Ürün anahtarları ve İndirmeleri bulma ve oluşturma hakkında [daha fazla bilgi edinin](https://docs.microsoft.com/visualstudio/subscriptions/find-keys) .  
+[Ürün anahtarları ve İndirmeleri bulma ve](https://docs.microsoft.com/visualstudio/subscriptions/find-keys)oluşturma hakkında daha fazla bilgi edinin.  

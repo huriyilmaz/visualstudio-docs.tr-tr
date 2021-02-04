@@ -10,12 +10,12 @@ user.type: subscriber
 tags: purchasing
 subscription.type: vl, cloud, retail, partner
 sap.id: c374762c-640b-8b2c-d049-bda9545e903c
-ms.openlocfilehash: e79c8a818b4e2bf787225342c9ad2c344cfbc74c
-ms.sourcegitcommit: 60e5a8a7ee91854356797d05f3b502572c4a4884
+ms.openlocfilehash: be2c22f6ea8bb9b6b98823b8adbe763137fdec1a
+ms.sourcegitcommit: 645303f47a5258d4b65cc56bf9e2303865587e1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96916341"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99541275"
 ---
 ## <a name="where-to-purchase-subscriptions"></a>Aboneliklerin satın alınması 
 
@@ -42,8 +42,8 @@ Aylık aboneliklerle, uzun dönemli sözleşme olmadan Visual Studio’yu ve Azu
 * [Visual Studio Professional aylık abonelik](https://marketplace.visualstudio.com/items?itemName=ms.vs-professional-monthly) 
 * [Visual Studio Enterprise aylık abonelik](https://marketplace.visualstudio.com/items?itemName=ms.vs-enterprise-monthly) 
 
-Aylık Visual Studio Abonelikleri faturalandırması hakkında [daha fazla bilgi edinin](https://docs.microsoft.com/visualstudio/subscriptions/vscloud-billing-faq). 
+[Aylık Visual Studio abonelikleri faturalandırması](https://docs.microsoft.com/visualstudio/subscriptions/vscloud-billing-faq)hakkında daha fazla bilgi edinin. 
 
 ## <a name="volume-licensing"></a>Toplu Lisanslama 
 
-Toplu Lisanslama abonelikleri, bir kuruluşun çok sayıda abonelik satın alması gerektiğinde kullanılabilir. Toplu Lisanslama ile satın alma hakkında [daha fazla bilgi edinin](https://www.microsoft.com/licensing/how-to-buy/how-to-buy) .
+Toplu Lisanslama abonelikleri, bir kuruluşun çok sayıda abonelik satın alması gerektiğinde kullanılabilir. [Toplu lisanslama ile satın alma](https://www.microsoft.com/licensing/how-to-buy/how-to-buy)hakkında daha fazla bilgi edinin.

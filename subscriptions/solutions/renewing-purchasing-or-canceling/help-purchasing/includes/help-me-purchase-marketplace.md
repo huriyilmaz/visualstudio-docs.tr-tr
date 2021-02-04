@@ -10,12 +10,12 @@ user.type: subscriber, admin
 tags: purchasing
 subscription.type: vl, cloud, retail, partner
 sap.id: c374762c-640b-8b2c-d049-bda9545e903c
-ms.openlocfilehash: 2cb74dda511efbed7a204ef11a163097efc2f54b
-ms.sourcegitcommit: cd7f122c6850cf442a4ca42d51d05c7a8fe9038d
+ms.openlocfilehash: 6a4758508c478612b75f51acef6136fde0fab9d3
+ms.sourcegitcommit: 645303f47a5258d4b65cc56bf9e2303865587e1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "98147637"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99541187"
 ---
 ## <a name="purchase-monthly-subscriptions-through-visual-studio-marketplace"></a>Visual Studio Market aracılığıyla aylık abonelikler satın alın 
 
@@ -28,7 +28,7 @@ Faturalandırma, Microsoft Azure aboneliğiniz üzerinden sağlanır. Henüz bir
 * [Visual Studio Professional aylık abonelik](https://marketplace.visualstudio.com/items?itemName=ms.vs-professional-monthly) 
 * [Visual Studio Enterprise aylık abonelik](https://marketplace.visualstudio.com/items?itemName=ms.vs-enterprise-monthly) 
 
-Aylık Visual Studio abonelikleri Azure faturalaması hakkında [daha fazla bilgi edinin](https://docs.microsoft.com/visualstudio/subscriptions/vscloud-billing-faq) . 
+[Aylık Visual Studio abonelikleri Azure faturalaması](https://docs.microsoft.com/visualstudio/subscriptions/vscloud-billing-faq)hakkında daha fazla bilgi edinin. 
 
 ## <a name="more-information-about-subscription-benefits"></a>Abonelik avantajları hakkında daha fazla bilgi
 

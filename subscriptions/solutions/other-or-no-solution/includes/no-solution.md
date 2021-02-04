@@ -1,6 +1,6 @@
 ---
-title: Diğer
-description: "' Diğer ' kategorisinin seçildiği veya hiçbir çözüm bulunamadığı zaman gösterilen çözüm"
+title: Sorunum listede değil
+description: "' Sorun listelenmedi ' kategorisi seçildiğinde veya çözüm bulunamadığında çözüm gösteriliyor"
 ms.topic: include
 ms.assetid: c1537b27-0ae4-4bf3-b1e4-ff05f8e14359
 author: caitybuschlen
@@ -10,12 +10,12 @@ user.type: subscriber, admin
 tags: no-solution
 subscription.type: vl, cloud, retail, partner
 sap.id: 34fccc61-0a31-cc35-22dd-016a1ebf1134
-ms.openlocfilehash: a0193c8aa2e764c2cefb8650ba1bed91a711b93b
-ms.sourcegitcommit: cfc984316ded3396db6722ad90f9378dfb7661ff
+ms.openlocfilehash: bafa92559f4428fa3bdd3276886f386249bbdcb9
+ms.sourcegitcommit: 645303f47a5258d4b65cc56bf9e2303865587e1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98024392"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99541239"
 ---
 ## <a name="sorry-we-couldnt-find-a-solution-for-you"></a>Ne yazık ki sizin için bir çözüm bulamadık. 
 
