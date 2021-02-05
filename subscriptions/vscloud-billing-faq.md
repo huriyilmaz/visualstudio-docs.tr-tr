@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 21e0471d-ad59-4d21-9c6f-13f7147569af
-ms.date: 10/21/2020
+ms.date: 02/04/2021
 ms.topic: conceptual
 description: Bulut abonelikleri için faturalandırma soruları.
-ms.openlocfilehash: 0140a6250f2c04ad33fec962283e035393a03aae
-ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
+ms.openlocfilehash: a812965a549f2e6e6d6c58366d943f3129d951cd
+ms.sourcegitcommit: 55bc9df751a21656de8cc5b6dbd8a2a1915ec690
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92353427"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99572882"
 ---
 # <a name="visual-studio-cloud-subscriptions-billing-faq"></a>Visual Studio Cloud abonelikleri faturalama hakkında SSS
 Bulut ve standart Visual Studio abonelikleri arasındaki karşılaştırmalar, abone avantajları hakkındaki ayrıntılar ve daha fazlası ile her bir Visual Studio aboneliğinin avantajlarını anlamak için [bulut aboneliği avantajlarını ve fiyatlandırmasını karşılaştırdığınızdan](https://visualstudio.microsoft.com/vs/pricing/) emin olun.
@@ -28,6 +28,9 @@ Y: çoğu Azure aboneliği kullanılabilir-- [Kurumsal Anlaşma (EA)](https://az
 
 ### <a name="q-am-i-required-to-buy-other-azure-services"></a>S: diğer Azure hizmetlerini satın almam gerekiyor mu?
 Y: hiç değil. Yalnızca Azure aracılığıyla Visual Studio bulut abonelikleri satın almak istiyorsanız bunu yapabilirsiniz.
+
+### <a name="q-where-can-i-view-my-billing-and-usage-data"></a>S: Faturalandırma ve kullanım verilerimi nereden görüntüleyebilirim?
+Y: [faturanızı ve kullanımınızı görüntüleme](https://docs.microsoft.com/azure/cost-management-billing/manage/download-azure-invoice-daily-usage-date)hakkında bilgi alın.
 
 ## <a name="enterprise-agreement-ea-customers"></a>Kurumsal Anlaşma (EA) müşterileri
 ### <a name="q-can-i-use-an-enterprise-agreement-to-buy-visual-studio-cloud-subscriptions"></a>S: Kurumsal Anlaşma kullanarak Visual Studio bulut abonelikleri satın alabilir miyim?

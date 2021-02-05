@@ -8,12 +8,12 @@ manager: markl
 ms.workload:
 - cplusplus
 author: corob-msft
-ms.openlocfilehash: bf4db1c01fc79d32f7e498c265b74dec34f67e48
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6cf29d16432b677c6e83ba4cbaedb39f0a8d1ed2
+ms.sourcegitcommit: 55bc9df751a21656de8cc5b6dbd8a2a1915ec690
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85287252"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99572999"
 ---
 # <a name="how-to-use-google-test-for-c-in-visual-studio"></a>Visual Studio 'da C++ için Google Test kullanma
 
@@ -25,7 +25,7 @@ Visual Studio 2017 ve üzeri sürümlerde Google Test, Visual Studio IDE **Ile C
 
 ## <a name="add-a-google-test-project-in-visual-studio-2019"></a>Visual Studio 2019 ' de Google Test projesi ekleme
 
-1. **Çözüm Gezgini**, çözüm düğümüne sağ tıklayıp **Add** > **Yeni proje**Ekle ' yi seçin.
+1. **Çözüm Gezgini**, çözüm düğümüne sağ tıklayıp  > **Yeni proje** Ekle ' yi seçin.
 2. **Dili** **C++** olarak ayarlayın ve arama kutusuna **Test** yazın. Sonuçlar listesinden **Google test proje**' yi seçin.
 3. Test projesine bir ad verin ve **Tamam**' a tıklayın.
 
@@ -37,7 +37,7 @@ Visual Studio 2017 ve üzeri sürümlerde Google Test, Visual Studio IDE **Ile C
 
 ## <a name="add-a-google-test-project-in-visual-studio-2017"></a>Visual Studio 2017 ' de Google Test projesi ekleme
 
-1. **Çözüm Gezgini**, çözüm düğümüne sağ tıklayıp **Add** > **Yeni proje**Ekle ' yi seçin.
+1. **Çözüm Gezgini**, çözüm düğümüne sağ tıklayıp  > **Yeni proje** Ekle ' yi seçin.
 2. Sol bölmede **Visual C++** > **Test** ' i seçin ve ardından orta bölmedeki **Google test proje** ' yi seçin.
 3. Test projesine bir ad verin ve **Tamam**' a tıklayın.
 
@@ -53,7 +53,7 @@ Görüntülenen **test projesi yapılandırması** iletişim kutusunda, test etm
 
 ## <a name="set-additional-options"></a>Ek seçenekleri ayarla
 
-**Tools**  >  **Options**  >  Ek seçenekleri belirlemek için ana menüden Araçlar Seçenekler**Google test için test bağdaştırıcısı** seçin. Bu ayarlar hakkında daha fazla bilgi için Google Test belgelerine bakın.
+  >    >  Ek seçenekleri belirlemek için ana menüden Araçlar Seçenekler **Google test için test bağdaştırıcısı** seçin. Bu ayarlar hakkında daha fazla bilgi için Google Test belgelerine bakın.
 
 ![Google Test projesi ayarları](media/cpp-gtest-settings.png)
 
@@ -65,7 +65,7 @@ Test *. cpp* dosyanızda, `#include` programınızın türlerini ve işlevlerini
 
 ## <a name="write-and-run-tests"></a>Testleri yazma ve çalıştırma
 
-Artık Google testlerini yazmaya ve çalıştırmaya hazırsınız. Test makroları hakkında bilgi için [Google test](https://github.com/google/googletest/blob/master/googletest/docs/primer.md) bölümüne bakın. **Test Gezgini**'ni kullanarak testlerinizi bulma, çalıştırma ve gruplandırma hakkında bilgi için bkz. [Test Gezgini Ile birim testleri çalıştırma](run-unit-tests-with-test-explorer.md) .
+Artık Google testlerini yazmaya ve çalıştırmaya hazırsınız. Test makroları hakkında bilgi için [Google test](https://github.com/google/googletest/blob/master/docs/primer.md) bölümüne bakın. **Test Gezgini**'ni kullanarak testlerinizi bulma, çalıştırma ve gruplandırma hakkında bilgi için bkz. [Test Gezgini Ile birim testleri çalıştırma](run-unit-tests-with-test-explorer.md) .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

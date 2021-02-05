@@ -2,7 +2,7 @@
 title: 'Visual Studio belgeleri: yenilikler geçmişi '
 titleSuffix: ''
 description: Visual Studio belgelerindeki yeniliklerin geçmişi
-ms.date: 01/11/2021
+ms.date: 02/01/2021
 helpviewer_keywords:
 - Visual Studio, what's new, docs
 - what's new [Visual Studio]
@@ -15,16 +15,80 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 49c8d18a35cbe4a64585efa9bc16fd8afd250404
-ms.sourcegitcommit: fdc21fc21d4a05d9ad8627b06aab7f072bfeb0a6
+ms.openlocfilehash: 899334e6ac4a952ea2d33f01d95ecfbe0a972653
+ms.sourcegitcommit: 55bc9df751a21656de8cc5b6dbd8a2a1915ec690
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "98113586"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99572973"
 ---
 # <a name="history-of-whats-new-in-visual-studio-docs"></a>Visual Studio belgelerindeki yeniliklerin geçmişi
 
-Visual Studio docs 'taki yenilikler geçmişine hoş geldiniz. Bu makalede, 2020 Aralık 'tan önce docs 'Ta yapılan önemli değişiklikler yer almaktadır (2020 Temmuz 'dan itibaren). En son yenilikler için bkz. [Visual Studio docs: docs 'taki](whats-new-visual-studio-docs.md)yenilikler.
+Visual Studio docs 'taki yenilikler geçmişine hoş geldiniz. Bu makale, docs 2021 Ocak 2020 tarihinden önceki belgelere yapılan büyük değişiklikleri içerir. En son yenilikler için bkz. [Visual Studio docs: docs 'taki](whats-new-visual-studio-docs.md)yenilikler.
+
+## <a name="december-2020"></a>Aralık 2020
+### <a name="azure"></a>Azure
+
+**Yeni makaleler**
+
+- [Visual Studio bağlı hizmetler 'i kullanarak Azure Uygulama yapılandırması ekleme](../azure/vs-azure-tools-connected-services-app-configuration.md) -uygulama yapılandırma bağlı hizmetler öğreticisi
+
+### <a name="code-quality"></a>Kod kalitesi
+
+**Güncelleştirilmiş makaleler**
+
+- [Genel bakış](../code-quality/use-roslyn-analyzers.md) -editorconfig ile komut satırından oluşturma
+- [Birinci taraf .NET çözümleyicilerinin etkinleştirilmesi veya yüklenmesi](../code-quality/install-net-analyzers.md)
+  - Fxcopçözümleyiciler için geçiş belgelerine daha fazla açıklık ekleyerek Netçözümleyiciler
+  - .NET Çözümleyicileri için İçindekiler tablosunu yeniden düzenleme
+- [FxCop çözümleyicileri ' nden .net çözümleyicilerine geçiş](../code-quality/migrate-from-fxcop-analyzers-to-net-analyzers.md) -fxcopçözümleyiciler için geçiş belgelerine daha fazla açıklık ekleyerek netçözümleyiciler
+
+### <a name="containers"></a>Kapsayıcılar
+
+**Güncelleştirilmiş makaleler**
+
+- [Docker Ile Visual Studio geliştirmesi sorunlarını giderme](../containers/troubleshooting-docker-errors.md) -Visual Studio Için Docker güncelleştirme Kılavuzu
+
+### <a name="debugger"></a>Hata Ayıklayıcısı
+
+**Güncelleştirilmiş makaleler**
+
+- SSS-hata ayıklama görevinizi ve genel bakış konularını bulmak için Visual Studio-bulma işlerinde [ihtiyacınız olan hata ayıklama özelliğini bulun](../debugger/find-your-debugging-task.md)
+
+### <a name="get-started"></a>başlarken
+
+**Güncelleştirilmiş makaleler**
+
+- [Öğretici: Visual Studio 'da basit bir c# konsol uygulaması oluşturma](../get-started/csharp/tutorial-console.md) -C# konsol öğreticisi: 2. bölüm yalnızca vs 2019 için geçerlidir
+
+### <a name="ide"></a>IDE
+
+**Güncelleştirilmiş makaleler**
+
+- [Visual Studio 'Da çözümler ve projeler](./solutions-and-projects-in-visual-studio.md) -çözüme yönelik güncelleştirmeler & projeler konuları
+- [Visual Studio 'da yeni proje oluşturma](./create-new-project.md)
+  - ekran görüntüleri ve diyagramlar için alt metni daraltın
+  - Çözümlere daha fazla güncelleştirme & projeler konuları
+- [IDE hatalarında sorun giderme kaynakları](./reference/resources-for-troubleshooting-integrated-development-environment-errors.md) -güncel olmayan Forum kaynaklarını gözden geçirin bölümü
+- [Çözümler ve projelerle çalışma](./creating-solutions-and-projects.md) -& çözümlere yönelik diğer güncelleştirmeler-projeler konuları
+- [Visual Studio veya Visual Studio Yükleyicisi ilgili bir sorunu bildirme](./how-to-report-a-problem-with-visual-studio.md)
+  - Güncelleştirilmiş ekran görüntüsü
+  - Geliştirici topluluğu değişiklikleri
+- [Visual Studio performans ipuçları ve püf noktaları](./visual-studio-performance-tips-and-tricks.md) -devre dışı bırakma tanılama araçları bölümünü güncelleştirme
+- [Projelere ve çözümlere giriş](../get-started/tutorial-projects-solutions.md)
+  - Çözümler & projeler konusunda güncelleştirmeler konuları
+  - Tutorial-projects-solutions.md Güncelleştir
+  - eksik menü seçeneği
+
+### <a name="test"></a>Test
+
+**Güncelleştirilmiş makaleler**
+
+- [Birim testi ile çalışmaya başlama](../test/getting-started-with-unit-testing.md) -test araçları için bulma çalışması ve diğer geliştirmeler
+- [Visual Studio 'da test araçlarına ilk bakış](../test/improve-code-quality.md) -bulma çalışması ve test araçları için diğer geliştirmeler
+- [Visual Studio 'da test araçları # gerekli; arama sonuçlarında sayfa başlığı görüntülendi. Markasını ekleyin. < 60 karakter.](../test/index.yml) -Test araçları için bulma işi ve diğer geliştirmeler
+- [Test Gezgini ile birim testleri çalıştırma](../test/run-unit-tests-with-test-explorer.md) -fark çerçeveleri için dinamik playlist XML ekleme
+
 ## <a name="november-2020"></a>Kasım 2020
 ### <a name="code-quality"></a>Kod kalitesi
 

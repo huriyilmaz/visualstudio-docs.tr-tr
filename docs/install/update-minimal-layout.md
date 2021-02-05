@@ -12,12 +12,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 27a9c0de35bb6f9944015391c5f933bef28f4b9d
-ms.sourcegitcommit: 645303f47a5258d4b65cc56bf9e2303865587e1e
+ms.openlocfilehash: bd2e8c94bbfc24b731a40b2d4d4c298a528c622d
+ms.sourcegitcommit: 55bc9df751a21656de8cc5b6dbd8a2a1915ec690
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "99533571"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99572960"
 ---
 # <a name="update-visual-studio-using-a-minimal-offline-layout"></a>En düşük düzeyde çevrimdışı düzen kullanarak Visual Studio'yu güncelleştirme
 
@@ -67,6 +67,8 @@ Bu araç, Visual Studio 2017 (15,9) ve sonraki sürümler için güncelleştirme
 * **Doğrula**: düzen klasörünün bozuk olup olmadığını anlamak için bu komutu kullanın.
 * **Çözüm**: eksik olan paketleri düzen klasöründen değiştirme dahil bozuk bir düzen klasörünü onarmak için bu komutu kullanın.
 
+::: moniker range="vs-2019"
+
 #### <a name="options"></a>Seçenekler 
 
 |Seçenekler    |Description    |Gerekli/İsteğe Bağlı |Örnek |
@@ -80,6 +82,26 @@ Bu araç, Visual Studio 2017 (15,9) ve sonraki sürümler için güncelleştirme
 |-- &lt; bir veya daha fazla iş yükü veya Bileşen kimliği ekleyin&gt;    |Eklenecek bir veya daha fazla iş yükünü veya bileşen kimliğini belirtir. Ek bileşenler,--ıncludereyorumded ve/veya kullanılarak genel olarak eklenebilir <br> –-includeOptional. Birden çok iş yükü veya Bileşen kimliği, boşlukla ayrılmış olarak belirtilebilir.    |İsteğe Bağlı    |--Microsoft. VisualStudio. Workload. ManagedDesktop Microsoft. VisualStudio. Workload. NetWeb Component. GitHub. VisualStudio ekleyin |
 |--ıncludereyorumded    |, Yüklü olan, ancak isteğe bağlı bileşenleri olmayan tüm iş yükleri için önerilen bileşenleri içerir.    |İsteğe Bağlı    |Belirli bir iş yükü için: <br> --Microsoft. VisualStudio. Workload ekleyin. ManagedDesktop; ıncludereyorum <br><br> Tüm iş yüklerine uygulamak için:--ıncludereyorumded |
 |--IncludeOptional |, Önerilen bileşenler dahil olmak üzere yüklü olan tüm iş yükleri için isteğe bağlı bileşenleri içerir.    |İsteğe Bağlı    |Belirli bir iş yükü için: <br>--Microsoft. VisualStudio. Workload ekleyin. ManagedDesktop; IncludeOptional <br><br> Tüm iş yüklerine uygulamak için:--includeOptional |
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+#### <a name="options"></a>Seçenekler 
+
+|Seçenekler    |Description    |Gerekli/İsteğe Bağlı |Örnek |
+|:----------|:-----------|:------------|:--------------|
+|--targetLocation &lt; dir&gt; |En az bir çevrimdışı düzen oluşturulacağı dizini belirtir.       |Gerekli        |--targetLocation c:\VSLayout\ |
+|--baseVersion &lt; sürümü&gt;|Bu sürümle başlayarak en az çevrimdışı düzen oluşturulacaktır.   |Gerekli|--baseVersion 'sının 15.0.0 |
+|--targetVersion &lt; sürümü&gt;|En az çevrimdışı düzen, bu sürüm dahil olmak üzere en çok ve dahil oluşturulacak.|Gerekli|--targetVersion 15.9.31|
+|--Diller    |En az çevrimdışı düzene dahil edilecek dilleri belirtir. Boşluklarla ayırarak birden çok değer belirtilebilir.    |Gerekli    |--Diller en-US fr-FR |
+|--ProductID &lt; kimliği&gt;    |En az çevrimdışı düzenin oluşturulacağı ürünün KIMLIĞI. <br> <ul><li>Microsoft. VisualStudio. Product. Enterprise</li><li>Microsoft. VisualStudio. Product. Professional</li><li>Microsoft. VisualStudio. Product. BuildTools</li><li>Microsoft. VisualStudio. Product. TestAgent</li><li>Microsoft. VisualStudio. Product. TestController</li><li>Microsoft. VisualStudio. Product. TeamExplorer</li></ul>|Gerekli|--ProductID Microsoft. VisualStudio. Product. Enterprise |
+|--filePath    |Zaten oluşturulmuş bir düzenden dosyanın MinimalLayout.jsdosya yolu. Bu seçenek yalnızca yeniden oluştur komutuyla kullanılır.     |Yeniden oluştur komutu için gerekli    |--filePath C:\VSLayout\minimalLayout.json <br><br> **Yeniden oluştur komutunun yalnızca bir seçenek olarak--filePath aldığını unutmayın.** |
+|-- &lt; bir veya daha fazla iş yükü veya Bileşen kimliği ekleyin&gt;    |Eklenecek bir veya daha fazla iş yükünü veya bileşen kimliğini belirtir. Ek bileşenler,--ıncludereyorumded ve/veya kullanılarak genel olarak eklenebilir <br> –-includeOptional. Birden çok iş yükü veya Bileşen kimliği, boşlukla ayrılmış olarak belirtilebilir.    |İsteğe Bağlı    |--Microsoft. VisualStudio. Workload. ManagedDesktop Microsoft. VisualStudio. Workload. NetWeb Component. GitHub. VisualStudio ekleyin |
+|--ıncludereyorumded    |, Yüklü olan, ancak isteğe bağlı bileşenleri olmayan tüm iş yükleri için önerilen bileşenleri içerir.    |İsteğe Bağlı    |Belirli bir iş yükü için: <br> --Microsoft. VisualStudio. Workload ekleyin. ManagedDesktop; ıncludereyorum <br><br> Tüm iş yüklerine uygulamak için:--ıncludereyorumded |
+|--IncludeOptional |, Önerilen bileşenler dahil olmak üzere yüklü olan tüm iş yükleri için isteğe bağlı bileşenleri içerir.    |İsteğe Bağlı    |Belirli bir iş yükü için: <br>--Microsoft. VisualStudio. Workload ekleyin. ManagedDesktop; IncludeOptional <br><br> Tüm iş yüklerine uygulamak için:--includeOptional |
+
+::: moniker-end
 
 ### <a name="generating-a-minimal-layout"></a>En az düzen oluşturma
 

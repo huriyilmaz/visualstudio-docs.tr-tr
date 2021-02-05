@@ -14,12 +14,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1a8d774ace7744c90d0cf092faa2786110ed7309
-ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
+ms.openlocfilehash: 94fcd9e1ed16b86caf65b9c7fab44ba4f93b7a7a
+ms.sourcegitcommit: 55bc9df751a21656de8cc5b6dbd8a2a1915ec690
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92436433"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99572908"
 ---
 # <a name="how-to-build-specific-targets-in-solutions-by-using-msbuildexe"></a>Nasıl yapılır: MSBuild.exe kullanarak çözümlerde belirli hedefleri derleme
 
@@ -41,9 +41,9 @@ msbuild SlnFolders.sln -target:NotInSlnfolder:Rebuild;NewFolder\InSolutionFolder
 
 ## <a name="troubleshooting"></a>Sorun giderme
 
-Sizin için kullanılabilir seçenekleri incelemek isterseniz, MSBuild tarafından sağlanan bir hata ayıklama seçeneğini kullanabilirsiniz. Ortam değişkenini ayarlayın `MSBUILDEMITSOLUTION=1` ve çözümünüzü derleyin. Bu işlem, derleme zamanında çözümün, MSBuild 'in iç görünümünü gösteren * \<SolutionName> . sln. metaproj* adlı bir MSBuild dosyası oluşturur. Bu görünümü, hangi hedeflerin derleme için kullanılabilir olduğunu belirlemek için inceleyebilirsiniz.
+Sizin için kullanılabilir seçenekleri incelemek isterseniz, MSBuild tarafından sağlanan bir hata ayıklama seçeneğini kullanabilirsiniz. Ortam değişkenini ayarlayın `MSBUILDEMITSOLUTION=1` ve çözümünüzü derleyin. Bu işlem, derleme zamanında çözümün, MSBuild 'in iç görünümünü gösteren *\<SolutionName> . sln. metaproj* adlı bir MSBuild dosyası oluşturur. Bu görünümü, hangi hedeflerin derleme için kullanılabilir olduğunu belirlemek için inceleyebilirsiniz.
 
-Bu iç görünüme ihtiyaç duymadığınız takdirde bu ortam değişkeni kümesiyle derleme. Bu ayar, çözümünüzde proje oluşturma sorunlarına neden olabilir.
+Bu iç görünüme ihtiyaç duymadığınız takdirde bu ortam değişkeni kümesiyle derleme. Bu ayar, çözümünüzde proje oluşturma sorunlarına neden olabilir. Bunun yerine [ikili günlüğe](obtaining-build-logs-with-msbuild.md#save-a-binary-log) bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -17,18 +17,18 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 549e78309ef5fc5e9baf4237f9eca8c7484bc198
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: 0f861fd9e5c10946c2bfee0235632c005822cbf1
+ms.sourcegitcommit: 55bc9df751a21656de8cc5b6dbd8a2a1915ec690
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93046170"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99572947"
 ---
 # <a name="msbuild-project-file-schema-reference"></a>MSBuild proje dosyası şema başvurusu
 
 Tüm MSBuild XML şema öğelerinin kullanılabilir özniteliklerini ve alt öğelerini içeren bir tablo sağlar.
 
- MSBuild, derleme altyapısına ne tür derlemeyi ve nasıl oluşturulacağını bildirmek için proje dosyalarını kullanır. MSBuild proje dosyaları, MSBuild XML şemasına bağlı XML dosyalarıdır. Bu bölüm, MSBuild için XML şema tanımı ( *. xsd* ) dosyasını belgeler.
+ MSBuild, derleme altyapısına ne tür derlemeyi ve nasıl oluşturulacağını bildirmek için proje dosyalarını kullanır. MSBuild proje dosyaları, MSBuild XML şemasına bağlı XML dosyalarıdır. Bu bölüm, MSBuild için XML şema tanımı (*. xsd*) dosyasını belgeler.
 
 MSBuild proje dosyasındaki şema bağlantısı Visual Studio 2017 ve üzeri sürümlerde gerekli değildir. Varsa, ` http://schemas.microsoft.com/developer/msbuild/2003` Visual Studio 'nun sürümünden bağımsız olarak olmalıdır.
 
@@ -48,15 +48,15 @@ MSBuild proje dosyasındaki şema bağlantısı Visual Studio 2017 ve üzeri sü
 |[HataDurumunda öğesi (MSBuild)](../msbuild/onerror-element-msbuild.md)|--|Koşul<br /><br /> ExecuteTargets|
 |[Otherwise öğesi (MSBuild)](../msbuild/otherwise-element-msbuild.md)|Seçin:<br /><br /> ItemGroup<br /><br /> PropertyGroup|--|
 |[Output öğesi (MSBuild)](../msbuild/output-element-msbuild.md)|--|Koşul<br /><br /> ItemName<br /><br /> ÖzellikAdı<br /><br /> TaskParameter|
-|[Parameter öğesi](../msbuild/parameter-element.md)|--|Çıkış<br /><br /> ParameterType<br /><br /> Gerekli|
+|[Parameter öğesi](../msbuild/parameter-element.md)|--|Çıktı<br /><br /> ParameterType<br /><br /> Gerekli|
 |[ParameterGroup öğesi](../msbuild/parametergroup-element.md)|*Parametre*|--|
-|[Proje öğesi (MSBuild)](../msbuild/project-element-msbuild.md)|Seçin:<br /><br /> İçeri Aktar<br /><br /> ItemGroup<br /><br /> ProjectExtensions<br /><br /> PropertyGroup<br /><br /> Hedef<br /><br /> UsingTask|DefaultTargets<br /><br /> InitialTargets<br /><br /> ToolsVersion<br /><br /> TreatAsLocalProperty<br /><br /> özniteliði|
+|[Proje öğesi (MSBuild)](../msbuild/project-element-msbuild.md)|Seçin:<br /><br /> İçeri Aktar<br /><br /> ItemGroup<br /><br /> ProjectExtensions<br /><br /> PropertyGroup<br /><br /> Hedef<br /><br /> UsingTask|DefaultTargets<br /><br /> InitialTargets<br /><br /> 'Sının<br /><br /> ToolsVersion<br /><br /> TreatAsLocalProperty<br /><br /> özniteliði|
 |[Projecısions öğesi (MSBuild)](../msbuild/projectextensions-element-msbuild.md)|--|--|
 |[Property öğesi (MSBuild)](../msbuild/property-element-msbuild.md)|--|Koşul|
 |[PropertyGroup öğesi (MSBuild)](../msbuild/propertygroup-element-msbuild.md)|*Özellik*|Koşul|
 |[SDK öğesi (MSBuild)](../msbuild/sdk-element-msbuild.md)|--|Name<br /><br /> Sürüm|
 |[Target öğesi (MSBuild)](../msbuild/target-element-msbuild.md)|OnError<br /><br /> *Görev*|AfterTargets<br /><br /> BeforeTargets<br /><br /> Koşul<br /><br /> Bağımlıdsonhedefleri<br /><br /> Girişler<br /><br /> "Pduperepteçıkışları<br /><br /> Name<br /><br /> Çıkışlar<br /><br /> Döndürülenler|
-|[Hedefin görev öğesi (MSBuild)](../msbuild/task-element-msbuild.md)|Çıkış|Koşul<br /><br /> ContinueOnError<br /><br /> *Parametre*|
+|[Hedefin görev öğesi (MSBuild)](../msbuild/task-element-msbuild.md)|Çıktı|Koşul<br /><br /> ContinueOnError<br /><br /> *Parametre*|
 |[UsingTask öğesi (MSBuild)](../msbuild/taskbody-element-msbuild.md)|*Veriler*|Değerlendir|
 |[UsingTask öğesi (MSBuild)](../msbuild/usingtask-element-msbuild.md)|ParameterGroup<br /><br /> Görev|AssemblyFile & lt<br /><br /> AssemblyName<br /><br /> Koşul<br /><br /> TaskFactory<br /><br /> Silinecek|
 |[Ne zaman öğesi (MSBuild)](../msbuild/when-element-msbuild.md)|Seçin:<br /><br /> ItemGroup<br /><br /> PropertyGroup|Koşul|
