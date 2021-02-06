@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 31314a669815d38ed408a28e033e4943df0f75d3
-ms.sourcegitcommit: 4e28314dc2be59b4c5fd44545c0653f625e74489
+ms.openlocfilehash: 328f7540846f923fe186a76c4dcc03347f9c3214
+ms.sourcegitcommit: 686aa3516594ab951d48b192fc60b102eedaf9b7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97756662"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99628025"
 ---
 # <a name="get-started-with-unit-testing"></a>Birim testini kullanmaya başlama
 
@@ -180,13 +180,13 @@ Bu bölümde, birim testi projesinin nasıl oluşturulduğu açıklanmaktadır.
 1. [Test Gezgini](../test/run-unit-tests-with-test-explorer.md)'ni açın.
 
    ::: moniker range=">=vs-2019"
-   Test Gezgini 'ni açmak için  > üst menü çubuğundan test **Test Gezgini** ' ni seçin.
+   Test Gezgini 'ni açmak için  > üst menü çubuğundan test **Test Gezgini** ' ni seçin (veya **CTRL** + **E**, **T**'ye basın).
    ::: moniker-end
    ::: moniker range="vs-2017"
    Test Gezgini 'ni açmak için  >  > üst menü çubuğundan Windows **Test Gezgini** 'ni test et ' i seçin.
    ::: moniker-end
 
-1. **Tümünü Çalıştır**' a tıklayarak birim testlerinizi çalıştırın.
+1. **Tümünü Çalıştır** ' a tıklayarak birim testlerinizi çalıştırın (veya **CTRL**  +  **R**, **V** tuşlarına basın).
 
    ![Test Gezgini ile birim testleri çalıştırma](media/vs-2019/test-explorer-run-all.png)
 
@@ -274,7 +274,7 @@ Birim testi projesi eklemek için:
 
    ![Birim test kodu dosyanıza kod ekleme](media/vs-2019/unit-test-method.png)
 
-6. Test **Gezgini** 'nden veya test kodu ' na sağ tıklayıp **Test Çalıştır**' ı seçerek testi çalıştırın.
+6. Test **Gezgini** 'nden veya test kodu ' **na** sağ tıklayıp (veya **CTRL**  +  **R**, **T**) Testi Çalıştır ' ı seçerek testi çalıştırın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

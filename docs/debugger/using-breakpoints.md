@@ -35,12 +35,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c8487482b1d87ba87dfc3a8b1e07be1360227a2f
-ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
+ms.openlocfilehash: 3fba148b409d8e2b5b9cbc3b629f9f7116509c74
+ms.sourcegitcommit: 686aa3516594ab951d48b192fc60b102eedaf9b7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98150450"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99627999"
 ---
 # <a name="use-breakpoints-in-the-visual-studio-debugger"></a>Visual Studio hata ayıklayıcıda kesme noktaları kullanma
 
@@ -85,7 +85,7 @@ Koşullar ayarlayarak bir kesme noktasının ne zaman ve nerede yürütüldüğ�
 
 **Kesme noktası koşulu ayarlamak için:**
 
-1. Kesme noktası simgesine sağ tıklayın ve **koşullar**' ı seçin. Veya kesme noktası simgesinin üzerine gelin, **Ayarlar** simgesini seçin ve ardından **kesme noktası ayarları** penceresinde **koşullar** ' ı seçin.
+1. Kesme noktası simgesine sağ tıklayın ve **koşullar** ' ı (veya **alt**  +  **F9**, **C**) seçin. Veya kesme noktası simgesinin üzerine gelin, **Ayarlar** simgesini seçin ve ardından **kesme noktası ayarları** penceresinde **koşullar** ' ı seçin.
 
    Ayrıca, kesme **noktaları** penceresinde, bir kesme noktasına sağ tıklayıp **Ayarlar**' ı seçip **koşullar**' ı seçerek de koşullar belirleyebilirsiniz.
 
@@ -124,7 +124,7 @@ Geçersiz sözdizimi olan bir kesme noktası koşulu ayarlarsanız, bir uyarı i
 
 1. Nesne oluşturulduktan sonra, kodda bir kesme noktası ayarlayın.
 
-2. Hata ayıklamayı başlatın ve yürütme kesme noktasında durakladığında,   >    >    + **Yereller** penceresini açmak için Windows Yereller veya alt **4** hata ayıkla ' yı seçin.
+2. Hata ayıklamayı başlatın ve yürütme kesme noktasında durakladığında,   >    >     +    +   **Yereller** penceresini açmak için Windows yerelleri hata ayıkla (veya Ctrl Alt V, **L** tuşlarına basın) seçeneğini belirleyin.
 
    **Yereller** penceresinde belirli nesne örneğini bulun, sağ tıklayın ve **nesne kimliği yap**' ı seçin.
 
@@ -169,7 +169,7 @@ Bir işlev çağrıldığında yürütmeyi kesebilirsiniz. Bu, örneğin, işlev
 
 **Bir işlev kesme noktası ayarlamak için:**
 
-1.   >  **Yeni kesme noktası**  >  **işlev kesme noktasını** Ayıkla ' yı seçin veya **alt** + **F9**  >  **CTRL** + **B** tuşlarına basın.
+1.   >  **Yeni kesme noktası**  >  **işlev kesme noktasını** Ayıkla ' yı seçin veya **CTRL**  +  **K**, **B** tuşlarına basın.
 
    Ayrıca   >  **kesme noktaları** penceresinde yeni **işlev kesme noktası** ' nı da seçebilirsiniz.
 
@@ -206,7 +206,7 @@ Bir işlev çağrıldığında yürütmeyi kesebilirsiniz. Bu, örneğin, işlev
 
 2. Örneğin adresini bulun (örneğin, `0xcccccccc` ).
 
-3.   >  **Yeni kesme noktası**  >  **işlev kesme noktasını** Ayıkla ' yı seçin veya **alt** + **F9**  >  **CTRL** + **B** tuşlarına basın.
+3.   >  **Yeni kesme noktası**  >  **işlev kesme noktasını** Ayıkla ' yı seçin veya **CTRL**  +  **K**, **B** tuşlarına basın.
 
 4. Aşağıdakini **Işlev adı** kutusuna ekleyin ve **C++** dili ' ni seçin.
 
@@ -243,7 +243,7 @@ Belirli bir nesnenin özelliği değiştiğinde veri kesme noktaları yürütmey
 
 **Bir veri kesme noktası ayarlamak için:**
 
-1. Bir C++ projesinde hata ayıklamayı başlatın ve bir kesme noktasına ulaşılana kadar bekleyin. **Hata Ayıkla** menüsünde **Yeni kesme noktası**  >  **veri kesme noktası** ' nı seçin.
+1. Bir C++ projesinde hata ayıklamayı başlatın ve bir kesme noktasına ulaşılana kadar bekleyin. **Hata Ayıkla** menüsünde **Yeni kesme noktası**  >  **veri kesme noktası**' nı seçin.
 
     Ayrıca   >  , **kesme noktaları** penceresinde yeni **veri kesme noktası** ' nı seçebilir veya kısayol, **izleme** ya da **Yereller** penceresinde bir öğeye sağ tıklayabilir ve bağlam menüsünde **değer değiştiğinde kes** **'** i seçebilirsiniz.
 
@@ -268,7 +268,7 @@ Veri kesme noktaları aşağıdaki koşullarda çalışmaz:
 
 **Kesme noktaları** penceresinde, kesme noktalarını arayabilir, sıralayabilir, filtreleyebilir, etkinleştirebilir/devre dışı bırakabilir veya silebilirsiniz. Ayrıca, koşulları ve eylemleri ayarlayabilir veya yeni bir işlev ya da veri kesme noktası ekleyebilirsiniz.
 
-**Kesme noktaları** penceresini açmak için   >  **Windows**  >  **kesme noktaları** Hata Ayıkla ' yı seçin veya **alt** + **F9** ya da **CTRL** + **alt** + **B** tuşlarına basın.
+**Kesme noktaları** penceresini açmak için   >  **Windows**  >  **kesme noktaları** Hata Ayıkla ' yı seçin veya **CTRL** + **alt** + **B**' ye basın.
 
 ![Kesme Noktaları penceresi](../debugger/media/breakpointswindow.png "Kesme Noktaları penceresi")
 
@@ -314,7 +314,7 @@ Kod yürütme sırasında kesme noktalarını görsel olarak izlemek için bkz. 
 
 ### <a name="set-a-breakpoint-in-the-disassembly-window"></a>Ayrıştırma penceresinde bir kesme noktası ayarlayın
 
-1. **Ayrıştırma** penceresini açmak için hata ayıklama sırasında duraklamalısınız. Windows **ayrıştırılmış hata ayıkla**  >    >  ' yı seçin veya **alt** + **8**' e basın.
+1. **Ayrıştırma** penceresini açmak için hata ayıklama sırasında duraklamalısınız. Windows **ayrıştırılmış hata ayıkla**  >    >  ' yı seçin veya **CTRL** + **alt** + **D** tuşuna basın.
 
 2. **Ayrıştırma** penceresinde, bölmek istediğiniz yönergenin sol kenar boşluğuna tıklayın. Ayrıca, bunu seçip **F9** tuşuna basabilir veya sağ tıklayıp **kesme** noktası Ekle kesme noktası ' nı seçebilirsiniz  >  .
 

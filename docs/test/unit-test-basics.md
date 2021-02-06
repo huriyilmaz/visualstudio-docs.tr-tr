@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5660d67ac2c8c3bff589c34dd4303d36a3e20cff
-ms.sourcegitcommit: d526af3642163180e0cc3e1e73b0a00f02542683
+ms.openlocfilehash: 5efed99b9934ed91b2194b5a38c99134d6d4b5e5
+ms.sourcegitcommit: 686aa3516594ab951d48b192fc60b102eedaf9b7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/31/2020
-ms.locfileid: "97833318"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99628038"
 ---
 # <a name="unit-test-basics"></a>Birim testi temel bilgileri
 
@@ -236,7 +236,7 @@ public void My_Test ()
 
 ## <a name="run-tests-in-test-explorer"></a>Testleri test Gezgini 'nde Çalıştır
 
-Test projesi oluşturduğunuzda, testler **Test Gezgini**'nde görünür. **Test Gezgini** görünür değilse, Visual Studio menüsünden **Test** ' i seçin, **Windows**' u ve ardından **Test Gezgini**' ni seçin.
+Test projesi oluşturduğunuzda, testler **Test Gezgini**'nde görünür. **Test Gezgini** görünür değilse, Visual Studio menüsündeki **Test** ' i seçin, **Windows**' u seçin ve ardından **Test Gezgini** ' ni seçin (veya **CTRL**  +  **E**, **T**'ye basın).
 
 ::: moniker range="vs-2017"
 ![Birim test Gezgini](../test/media/ute_failedpassednotrunsummary.png)
@@ -260,7 +260,7 @@ Ayrıca, genel düzeydeki arama kutusundaki metni eşleştirerek veya önceden t
 ![Testleri test Gezgini araç çubuğundan Çalıştır](../test/media/vs-2019/test-explorer-toolbar-diagram-16-2.png)
 ::: moniker-end
 
-Tüm testlerinizi çalıştırmak için **Tümünü Çalıştır** ' ı seçebilirsiniz veya çalıştırılacak testlerin bir alt kümesini seçmek için **Çalıştır** ' ı seçin. Test ayrıntıları bölmesinde bu testin ayrıntılarını görüntülemek için bir test seçin. Seçili testin kaynak kodunu göstermek için sağ tıklama menüsünde (klavye: **F12**) **testi aç** ' ı seçin.
+Tüm testlerinizi çalıştırmak **için Tümünü Çalıştır** seçeneğini veya   +  çalıştırılacak testlerin bir alt kümesini seçmek için **Çalıştır** ' ı ( **CTRL**  +  **r**, **T**) seçebilirsiniz. Test ayrıntıları bölmesinde bu testin ayrıntılarını görüntülemek için bir test seçin. Seçili testin kaynak kodunu göstermek için sağ tıklama menüsünde (klavye: **F12**) **testi aç** ' ı seçin.
 
 ::: moniker range="vs-2017"
 
@@ -278,7 +278,7 @@ Bireysel testlerin herhangi bir sırada çalıştırılmasını engelleyen bir b
 
 ::: moniker range="vs-2017"
 
-|Düğme|Açıklama|
+|Düğme|Description|
 |-|-|
 |![Derlemeden sonra Çalıştır](../test/media/ute_runafterbuild_btn.png)|Her yerel derlemeden sonra birim testlerinizi çalıştırmak için standart menüdeki **Test** ' i seçin ve ardından **Test Gezgini** araç çubuğunda **derlemeden sonra Testleri Çalıştır** ' ı seçin.|
 
@@ -304,7 +304,7 @@ Her yerel derlemeden sonra birim testlerinizi çalıştırmak için, test Gezgin
 ![Filtre kategorilerini ara](../test/media/vs-2019/test-explorer-search-filter-16-2.png)
 ::: moniker-end
 
-|Düğme|Açıklama|
+|Düğme|Description|
 |-|-|
 |![Test Gezgini Grup düğmesi](../test/media/ute_groupby_btn.png)|Testlerinizi kategoriye göre gruplandırmak için **Gruplandırma ölçütü** düğmesini seçin.|
 

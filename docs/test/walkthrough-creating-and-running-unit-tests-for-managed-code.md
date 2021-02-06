@@ -15,12 +15,12 @@ manager: jillfra
 ms.workload:
 - dotnet
 author: mikejo5000
-ms.openlocfilehash: ed2e7f11a6e36c797bb6c506c19b0fff11fb5ad1
-ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
+ms.openlocfilehash: f734435f93c60ab0b66bd258417d90541575e398
+ms.sourcegitcommit: 686aa3516594ab951d48b192fc60b102eedaf9b7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95598555"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99627986"
 ---
 # <a name="walkthrough-create-and-run-unit-tests-for-managed-code"></a>İzlenecek yol: Yönetilen kod için birim testleri oluşturma ve çalıştırma
 
@@ -138,16 +138,16 @@ Bu makalede, yönetilen kod ve Visual Studio **Test Gezgini** için Microsoft bi
 
 6. Sağ tıklayıp **Çözüm Gezgini** **Yeniden Adlandır** ' ı seçerek dosyayı *BankAccount.cs* olarak yeniden adlandırın.
 
-7. **Yapı** menüsünde **Yapı Çözümü**’ne tıklayın.
+7. **Yapı** menüsünde **çözüm oluştur** ' a tıklayın (veya **CTRL**  +  **SHIFT**  +  **B** tuşlarına basın).
 
 Artık test edebilirsiniz yöntemleri olan bir projeniz var. Bu makalede, testler yöntemine odaklanmaktadır `Debit` . Bu `Debit` Yöntem para bir hesaptan geri geldiğinde çağrılır.
 
 ## <a name="create-a-unit-test-project"></a>Birim testi projesi oluşturma
 
-1. **Dosya** menüsünde **Add**  >  **Yeni proje** Ekle ' yi seçin.
+1. **Dosya** menüsünde   >  **Yeni proje** Ekle ' yi seçin.
 
    > [!TIP]
-   > Ayrıca **Çözüm Gezgini** çözüme sağ tıklayıp **Add**  >  **Yeni proje** Ekle ' yi seçebilirsiniz.
+   > Ayrıca **Çözüm Gezgini** çözüme sağ tıklayıp   >  **Yeni proje** Ekle ' yi seçebilirsiniz.
 
 ::: moniker range="vs-2017"
 
@@ -167,7 +167,7 @@ Artık test edebilirsiniz yöntemleri olan bir projeniz var. Bu makalede, testle
 
 3. Projeyi **BankTests** olarak adlandırın.
 
-4. **Oluştur**'a tıklayın.
+4. **Oluştur**’a tıklayın.
 
    **BankTests** projesi **Banka** çözümüne eklenir.
 
@@ -187,7 +187,7 @@ Sınıfı doğrulamak için bir test sınıfı oluşturun `BankAccount` . Proje 
 
 ### <a name="rename-a-file-and-class"></a>Dosya ve sınıfı yeniden adlandırma
 
-1. Dosyayı yeniden adlandırmak için, **Çözüm Gezgini** Içinde, BankTests projesindeki *UnitTest1.cs* dosyasını seçin. Sağ tıklama menüsünde, **Yeniden Adlandır**' ı seçin ve ardından dosyayı *BankAccountTests.cs* olarak yeniden adlandırın.
+1. Dosyayı yeniden adlandırmak için, **Çözüm Gezgini** Içinde, BankTests projesindeki *UnitTest1.cs* dosyasını seçin. Sağ tıklama menüsünde, **Yeniden Adlandır** ' ı seçin (veya **F2** tuşuna basın) ve sonra dosyayı *BankAccountTests.cs* olarak yeniden adlandırın.
 
 ::: moniker range="vs-2017"
 
@@ -197,7 +197,7 @@ Sınıfı doğrulamak için bir test sınıfı oluşturun `BankAccount` . Proje 
 
 ::: moniker range=">=vs-2019"
 
-2. Sınıfı yeniden adlandırmak için, imleci `UnitTest1` kod düzenleyicisinde üzerine konumlandırın, sağ tıklayın ve ardından **Yeniden Adlandır**' ı seçin. **BankAccountTests** yazın ve **ENTER** tuşuna basın.
+2. Sınıfı yeniden adlandırmak için, imleci `UnitTest1` kod düzenleyicisinde üzerine konumlandırın, sağ tıklayın ve ardından **Yeniden Adlandır** ' ı seçin (veya **F2** tuşuna basın). **BankAccountTests** yazın ve **ENTER** tuşuna basın.
 
 ::: moniker-end
 
@@ -289,11 +289,11 @@ Bir test yönteminin aşağıdaki gereksinimleri karşılaması gerekir:
 
 ## <a name="build-and-run-the-test"></a>Test oluşturun ve çalıştırın
 
-1. **Build** menüsünde **Build Solution** öğesini seçin.
+1. **Yapı** menüsünde **çözüm oluştur** ' u seçin (veya **CTRL**  +  **+ SHIFT**  +  **B** tuşlarına basın).
 
-2. **Test Gezgini** açık değilse, **Test**  >  **Windows**  >  üstteki menü çubuğundan Windows **Test Gezgini** 'ni test et ' i seçerek açın.
+2. **Test Gezgini** açık değilse, üstteki menü çubuğundan Windows Test Gezgini 'ni **Test** et ' i seçerek dosyayı açın  >    >   (veya **CTRL**  +  **E**, **T**'ye basın).
 
-3. Testi çalıştırmak için **Tümünü Çalıştır** ' ı seçin.
+3. Testi çalıştırmak için **Tümünü Çalıştır** ' ı seçin (veya **CTRL**  +  **R**, **V** tuşlarına basın).
 
    Test çalışırken, **Test Gezgini** penceresinin üstündeki durum çubuğu canlandırılır. Test çalıştırmasının sonunda, tüm test yöntemleri başarılı olursa çubuk yeşile dönüşür veya testlerin herhangi biri başarısız olursa kırmızı olur.
 
@@ -323,7 +323,7 @@ m_balance -= amount;
 
 ### <a name="rerun-the-test"></a>Testi yeniden çalıştırın
 
-**Test Gezgini**'nde testi yeniden **çalıştırmak için Tümünü Çalıştır** ' ı seçin. Kırmızı/yeşil çubuk, testin geçtiğini belirtmek için yeşile dönüşür.
+**Test Gezgini**'nde, testi yeniden **çalıştırmak için Tümünü Çalıştır** ' ı seçin (veya **CTRL**  +  **R**, **V** tuşlarına basın). Kırmızı/yeşil çubuk, testin geçtiğini belirtmek için yeşile dönüşür.
 
 ![Başarılı testi gösteren Visual Studio 2019 ' de test Gezgini](media/test-explorer-banktests-passed.png)
 
