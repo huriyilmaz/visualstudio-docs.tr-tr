@@ -4,19 +4,19 @@ description: Azure derin öğrenme VM 'de bir TensorFlow modeli çalıştırma
 keywords: AI, Visual Studio, derin öğrenme sanal makinesi
 author: jillre
 ms.author: jillfra
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.date: 11/13/2017
 ms.topic: tutorial
 ms.devlang: python
 ms.workload:
 - multiple
-ms.openlocfilehash: 6cd833a687591ba4f49e785746381f9a5d738f5e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8f6aef2d0cf8fe727036dda91256ac0330e15d37
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80638761"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99841321"
 ---
 # <a name="train-a-tensorflow-model-in-the-cloud"></a>Bulutta TensorFlow modelini eğitme
 
@@ -24,7 +24,7 @@ Bu öğreticide, bir Azure [derin öğrenimi](/azure/machine-learning/data-scien
 
 MNIST veritabanı, 60.000 örnek bir eğitim kümesine ve el yazısı rakamlarının bir dizi 10.000 örneklerine sahiptir.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 Başlamadan önce, aşağıdakilerin yüklü ve yapılandırılmış olduğundan emin olun:
 
 ### <a name="setup-azure-deep-learning-virtual-machine"></a>Azure derin öğrenimi sanal makinesini kurma
@@ -67,14 +67,14 @@ Sunucu Gezgini, AI araçları düğümünün altındaki **uzak makineler** düğ
 
 Gönderim penceresinde:
 
-- **Kullanılacak küme**listesinde, işi göndermek için uzak makineyi ("RM:" ön eki ile) seçin.
+- **Kullanılacak küme** listesinde, işi göndermek için uzak makineyi ("RM:" ön eki ile) seçin.
 
-- Bir **iş adı**girin.
+- Bir **iş adı** girin.
 
 - **Gönder**' e tıklayın.
 
 ## <a name="check-status-of-job"></a>İşin durumunu denetleme
-İşlerin durumunu ve ayrıntılarını görmek için: işi **Sunucu Gezgini**gönderdiğiniz sanal makineyi genişletin. **İşler**' e çift tıklayın.
+İşlerin durumunu ve ayrıntılarını görmek için: işi **Sunucu Gezgini** gönderdiğiniz sanal makineyi genişletin. **İşler**' e çift tıklayın.
 
 ![İş tarayıcısı](media/tensorflow-vm/job-browser.png)
 

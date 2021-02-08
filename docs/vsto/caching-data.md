@@ -13,15 +13,15 @@ helpviewer_keywords:
 - data caching [Office development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: db22378477daffd4562a9d60c6b30bc7b96e58e2
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: f31556e64ee93a73fb09c27edd095bcd2653dfdc
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96847877"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99836169"
 ---
 # <a name="cache-data"></a>Önbellek verileri
   Verilerin çevrimdışı olarak erişilebilmesi veya Microsoft Office Word ya da Excel Microsoft Office açılmadan, bir belge düzeyi özelleştirmesinde veri nesnelerini önbelleğe alabilirsiniz. Bir nesneyi önbelleğe almak için, nesnenin belirli gereksinimleri karşılayan bir veri türü olması gerekir. .NET Framework birçok ortak veri türü,, ve dahil olmak üzere bu gereksinimleri karşılar <xref:System.String> <xref:System.Data.DataSet> <xref:System.Data.DataTable> .

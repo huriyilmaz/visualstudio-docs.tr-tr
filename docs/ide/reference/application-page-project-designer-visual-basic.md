@@ -12,21 +12,21 @@ helpviewer_keywords:
 - Application page in Project Designer
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 675c3fbaaf1a3e49648befebca4927299649b057
-ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
+ms.openlocfilehash: 986179e66335403cda85ba48d1652ac95b9f8171
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "95871424"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99836533"
 ---
 # <a name="application-page-project-designer-visual-basic"></a>Uygulama Sayfası, Proje Tasarımcısı (Visual Basic)
 
 Projenin uygulama ayarlarını ve özelliklerini belirtmek için proje Tasarımcısı ' nın **uygulama** sayfasını kullanın.
 
-**Uygulama** sayfasına erişmek için **Çözüm Gezgini**' de bir proje düğümü ( **çözüm** düğümünü değil) seçin. Ardından **Project**  >  , menü çubuğunda Proje **özellikleri** ' ni seçin. **Proje Tasarımcısı** göründüğünde **uygulama** sekmesini seçin.
+**Uygulama** sayfasına erişmek için **Çözüm Gezgini**' de bir proje düğümü ( **çözüm** düğümünü değil) seçin. Ardından   >  , menü çubuğunda Proje **özellikleri** ' ni seçin. **Proje Tasarımcısı** göründüğünde **uygulama** sekmesini seçin.
 
 [!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)]
 
@@ -145,7 +145,7 @@ Kullanıcıların uygulamanın birden çok örneğini çalıştırmasını engel
 
 ### <a name="shutdown-mode"></a>Kapalı modu
 
-Başlangıç formu kapandığında uygulamanın çıkış ' ı kapattığında, diğer formlar açık olsa bile, uygulamanın çıkış **biçimini seçin (** varsayılan). Son **When last form closes** form kapatıldığında veya ne zaman `My.Application.Exit` ya da `End` deyimin açıkça çağrılışında uygulamanın çıkış yapmak için son form kapandığında öğesini seçin.
+Başlangıç formu kapandığında uygulamanın çıkış ' ı kapattığında, diğer formlar açık olsa bile, uygulamanın çıkış **biçimini seçin (** varsayılan). Son  form kapatıldığında veya ne zaman `My.Application.Exit` ya da `End` deyimin açıkça çağrılışında uygulamanın çıkış yapmak için son form kapandığında öğesini seçin.
 
 Açıkça kapatıldığında uygulamanın çıkış yaptığınızda çıkış olduğunu belirtmek için **Açık Kapat '** ı seçin `Shutdown` .
 

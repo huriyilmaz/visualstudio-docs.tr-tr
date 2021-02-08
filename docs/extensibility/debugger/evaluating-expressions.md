@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 5ccfcc80-dea5-48a1-8bae-6a26f8d3bc56
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b43fc91de129407f2fd01e12951cffee4028186f
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: 4a9b8db832207eff93e08f123db57b4beef4eb7f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96914601"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99840606"
 ---
 # <a name="evaluate-expressions"></a>İfadeleri değerlendir
-İfadeler **,** **hızlı** bir şekilde veya **anında** Windows 'tan geçirilen dizelerden oluşturulur **Watch**. Bir ifade değerlendirildiğinde, değişken veya bağımsız değişkenin adını ve türünü ve değerini içeren yazdırılabilir bir dize oluşturur. Bu dize, karşılık gelen IDE penceresinde görüntülenir.
+İfadeler **,** **hızlı** bir şekilde veya **anında** Windows 'tan geçirilen dizelerden oluşturulur . Bir ifade değerlendirildiğinde, değişken veya bağımsız değişkenin adını ve türünü ve değerini içeren yazdırılabilir bir dize oluşturur. Bu dize, karşılık gelen IDE penceresinde görüntülenir.
 
 ## <a name="implementation"></a>Uygulama
  Bir program kesme noktasında durdurulduğunda ifadeler değerlendirilir. İfadenin kendisi, verilen ifade değerlendirme bağlamı içinde bağlama ve değerlendirme için Ready bir ayrıştırılmış ifadeyi temsil eden bir [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) arabirimi tarafından temsil edilir. Yığın çerçevesi, [IDebugExpressionContext2](../../extensibility/debugger/reference/idebugexpressioncontext2.md) arabirimini uygulayarak hata ayıklama ALTYAPıSıNıN (de) sağladığı ifade değerlendirme bağlamını belirler.

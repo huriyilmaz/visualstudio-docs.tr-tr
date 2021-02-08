@@ -9,15 +9,15 @@ f1_keywords:
 - VS.ToolsOptionsPages.XAML_Designer.General
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - uwp
-ms.openlocfilehash: 0955a6644e8f1dc1d42a1b22b15399a6d1ca452d
-ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
+ms.openlocfilehash: 15bfae190ba2960c291dca635bfff1188ac64ab5
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96560986"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99836195"
 ---
 # <a name="xaml-designer-options-page"></a>XAML Tasarımcısı seçenekleri sayfası
 
@@ -50,7 +50,7 @@ XAML belgesi düzenlenirken XAML Tasarımcısı ne zaman ve nasıl görüneceği
 |-|-|
 |**Dikey**|Xaml kaynağı XAML görünümünün sol tarafında görünür ve XAML Tasarımcısı diğer tarafta görüntülenir.|
 |**Yatay**|XAML Tasarımcısı XAML görünümünün üst kısmında görünür ve XAML kaynağı bunun altında görünür.|
-|**Varsayılan**|XAML belgesi, belge projesinin hedeflediği platform için önerilen bölünmüş yönlendirmeyi kullanır. Çoğu platformda bu **yatay** olarak eşdeğerdir.|
+|**Varsayılanını**|XAML belgesi, belge projesinin hedeflediği platform için önerilen bölünmüş yönlendirmeyi kullanır. Çoğu platformda bu **yatay** olarak eşdeğerdir.|
 
 ## <a name="zoom-by-using"></a>Kullanarak Yakınlaştır
 

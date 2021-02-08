@@ -9,26 +9,26 @@ helpviewer_keywords:
 ms.assetid: f4cea2e1-08dc-47ac-aba2-3b8c338e607f
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: e5495bb1f531db00d43e04cce9f5f771c88cc1a7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 061e667196ce1577206ad76939e20daf3db131c0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "65679200"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99840892"
 ---
 # <a name="quickstart-debug-with-c-or-visual-basic-using-the-visual-studio-debugger"></a>Hızlı başlangıç: Visual Studio hata ayıklayıcısını kullanarak C# veya Visual Basic hatalarını ayıklama
 
 Visual Studio hata ayıklayıcı, uygulamalarınızda hata ayıklamanıza yardımcı olmak için birçok güçlü özellik sunar. Bu konu, temel özelliklerden bazılarını öğrenmenin hızlı bir yolunu sağlar.
 
-## <a name="create-a-new-project"></a>Yeni bir proje oluşturma
+## <a name="create-a-new-project"></a>Yeni proje oluşturma
 
 1. Visual Studio 'Yu açın ve yeni bir proje oluşturun.
 
     ::: moniker range=">=vs-2019"
-    Başlangıç penceresini kapatmak için **ESC** tuşuna basın. **CTRL + Q** yazarak arama kutusunu açın, **konsol**yazın, **Şablonlar**' ı seçin ve ardından **Yeni konsol uygulaması (.NET Core) projesi oluştur**' u seçin. Görüntülenen iletişim kutusunda **Oluştur**' u seçin.
+    Başlangıç penceresini kapatmak için **ESC** tuşuna basın. **CTRL + Q** yazarak arama kutusunu açın, **konsol** yazın, **Şablonlar**' ı seçin ve ardından **Yeni konsol uygulaması (.NET Core) projesi oluştur**' u seçin. Görüntülenen iletişim kutusunda **Oluştur**' u seçin.
     ::: moniker-end
     ::: moniker range="vs-2017"
     Üstteki menü çubuğundan **Dosya**  >  **Yeni**  >  **Proje**' yi seçin. **Yeni proje** iletişim kutusunun sol bölmesinde, **Visual C#** altında **.NET Core**' u seçin ve ardından Ortadaki bölmede **konsol uygulaması (.NET Core)** seçeneğini belirleyin. Ardından, **Mydbgapp** gibi bir ad yazın ve **Tamam**' a tıklayın.
@@ -38,7 +38,7 @@ Visual Studio hata ayıklayıcı, uygulamalarınızda hata ayıklamanıza yardı
 
     Visual Studio projeyi oluşturur.
 
-1. *Program.cs* veya *Module1. vb*dosyasında aşağıdaki kodu değiştirin
+1. *Program.cs* veya *Module1. vb* dosyasında aşağıdaki kodu değiştirin
 
     ```csharp
     class Program
@@ -130,11 +130,11 @@ Visual Studio hata ayıklayıcı, uygulamalarınızda hata ayıklamanıza yardı
 
 *Kesme noktası* , Visual Studio 'nun çalışan kodunuzu askıya alması gerektiğini belirten bir işaretleyicidir, böylece değişkenlerin değerlerine veya bellek davranışına veya kodun bir dalının çalıştırılıp çalıştırılmayacağı konusunda bir görünüm elde edebilirsiniz. Hata ayıklamada en temel özelliktir.
 
-1. Kesme noktasını ayarlamak için, işlev çağrısının solundaki cilt payın içine tıklayın `doWork` (veya kod satırını seçip **F9**tuşuna basın).
+1. Kesme noktasını ayarlamak için, işlev çağrısının solundaki cilt payın içine tıklayın `doWork` (veya kod satırını seçip **F9** tuşuna basın).
 
     ![Kesme noktası ayarlama](../debugger/media/dbg-qs-set-breakpoint-csharp.png "Kesme noktası ayarlama")
 
-2. Şimdi **F5** tuşuna basın (veya hata **ayıklamayı başlatmak > hata ayıkla**seçeneğini belirleyin).
+2. Şimdi **F5** tuşuna basın (veya hata **ayıklamayı başlatmak > hata ayıkla** seçeneğini belirleyin).
 
     ![Kesme noktasına isabet edin](../debugger/media/dbg-qs-hit-breakpoint-csharp.png "Kesme noktasına isabet edin")
 
@@ -147,7 +147,7 @@ Visual Studio hata ayıklayıcı, uygulamalarınızda hata ayıklamanıza yardı
 
 Hata ayıklayıcının devam etmesini bildirmek için farklı komutlar vardır. Visual Studio 2017 ' den başlayarak kullanılabilecek yararlı bir kod Gezinti komutu gösteririz.
 
-Kesme noktasında duraklalarken, tıklama `c1.AddLast(20)` düğmesine tıklayarak ve ardından tıklama düğmesine tıklayarak **Run to click** deyimin üzerine gelin ve ![Run to Click](../debugger/media/dbg-tour-run-to-click.png "RunToClick") sonra da **Çalıştır** düğmesine basın.
+Kesme noktasında duraklalarken, tıklama `c1.AddLast(20)` düğmesine tıklayarak ve ardından tıklama düğmesine tıklayarak  deyimin üzerine gelin ve ![](../debugger/media/dbg-tour-run-to-click.png "RunToClick") sonra da **Çalıştır** düğmesine basın.
 
 ![Tıklama için Çalıştır](../debugger/media/dbg-qs-run-to-click-csharp.png "Tıklama için Çalıştır")
 

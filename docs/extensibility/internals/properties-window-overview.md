@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 289ed4f2-02ac-4899-855e-42dfe57ee05f
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 712c3c5b5c0b94932abba602a841977e0601d3b3
-ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
+ms.openlocfilehash: 6a33d393cfd904bdae890f4ead9a4c25a6451460
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97875901"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99837300"
 ---
 # <a name="properties-window-overview"></a>Özellikler Penceresine Genel Bakış
 **Özellikler** penceresi, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Tümleşik GELIŞTIRME ortamında (IDE) kullanılabilen iki ana Windows türünde seçilen nesneler için özellikleri göstermek üzere kullanılır. Bu iki tür pencere şunlardır:
@@ -35,7 +35,7 @@ ms.locfileid: "97875901"
 
  Aşağıdaki tabloda, **Özellikler** penceresi tarafından kullanılan birincil arabirimler listelenmektedir.
 
-|Arabirim adı|Açıklama|
+|Arabirim adı|Description|
 |--------------------|-----------------|
 |<xref:Microsoft.VisualStudio.Shell.Interop.ICategorizeProperties>|**Özellikler** penceresine kategorilerin bir listesini sağlar ve her bir özelliği bir kategoriye eşler.|
 |[IDispatch arabirimi](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch)|Programlama araçları ve otomasyonu destekleyen diğer uygulamalar için bir nesnenin yöntemlerini ve özelliklerini gösterir.|

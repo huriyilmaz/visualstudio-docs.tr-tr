@@ -4,17 +4,17 @@ description: Docker Hub kayıt defteri kullanılarak Docker görüntülerinin na
 ms.date: 08/04/2020
 author: nebuk89
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: 46f91b3bf163f3847492a7727fa72a39908d441c
-ms.sourcegitcommit: fb8babf5cd72f1fc2f97ffe4ad7b62d91f325f61
+ms.openlocfilehash: 676668b1247377597bed55b293efb8ad8b5cd253
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89485543"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99841711"
 ---
 # <a name="share-your-app"></a>Uygulamanızı paylaşma
 
@@ -32,11 +32,11 @@ ms.locfileid: "89485543"
 
 1. **Oluştur** düğmesine tıklayın!
 
-Sayfanın sağ tarafına bakarsanız **Docker komutları**adlı bir bölüm görürsünüz. Bu, bu depoya göndermek için çalıştırmanız gereken örnek bir komut verir.
+Sayfanın sağ tarafına bakarsanız **Docker komutları** adlı bir bölüm görürsünüz. Bu, bu depoya göndermek için çalıştırmanız gereken örnek bir komut verir.
 
 ![Push örneği ile Docker komutu](media/push-command.png)
 
-## <a name="push-the-image"></a>Görüntüyü gönder
+## <a name="push-the-image"></a>Görüntüyü gönderme
 
 1. Komut satırında, Docker Hub 'da gördüğünüz Push komutunu çalıştırmayı deneyin. Komutunuza "Docker" değil, ad alanınızı kullanmayacağınızı unutmayın.
 

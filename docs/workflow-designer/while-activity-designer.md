@@ -9,19 +9,19 @@ f1_keywords:
 ms.assetid: ea008091-2e4c-4f64-bfa5-afb919552446
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 2e78d4f2e6aa332c9dfd5faebf834e4f5015c454
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 9447d32f17283e7123e2f99490acc49c1613360d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94433706"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99838002"
 ---
 # <a name="while-activity-designer"></a>While Etkinlik Tasarımcısı
 
-<xref:System.Activities.Statements.While>Etkinlik, içinde bulunan etkinliği <xref:System.Activities.Statements.While.Body%2A> belirtilen sırada yürütür <xref:System.Activities.Statements.While.Condition%2A> . **true** İçerilen etkinlik hiçbir şekilde yürütülemeyebilir. İçerilen etkinliğin en az bir kez yürütülmesini istiyorsanız <xref:System.Activities.Statements.DoWhile> bunun yerine etkinliğini kullanın.
+<xref:System.Activities.Statements.While>Etkinlik, içinde bulunan etkinliği <xref:System.Activities.Statements.While.Body%2A> belirtilen sırada yürütür <xref:System.Activities.Statements.While.Condition%2A> .  İçerilen etkinlik hiçbir şekilde yürütülemeyebilir. İçerilen etkinliğin en az bir kez yürütülmesini istiyorsanız <xref:System.Activities.Statements.DoWhile> bunun yerine etkinliğini kullanın.
 
 ## <a name="while-properties-in-workflow-designer"></a>İş Akışı Tasarımcısı Özellikler
 

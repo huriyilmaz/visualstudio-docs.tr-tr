@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: bbe7c931-b17a-4779-9cf6-59e5f9f0c172
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d012908e59be8b82e34ff68cdab1945c5bd2de8b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 10c04daf8ffea8266c874dfb0fb805e551942bc9
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80700401"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99836767"
 ---
 # <a name="sccrunscc-function"></a>SccRunScc İşlevi
 Bu işlev, kaynak denetimi yönetim aracını çağırır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
 SCCRTN SccRunScc(
@@ -68,7 +68,7 @@ SCCRTN SccRunScc(
 
  Bu işlev, şu anda seçili dosyalar için bir sayı ve dosya adı dizisiyle çağrılır. Yönetim Aracı destekliyorsa, dosya listesi yönetim arabirimindeki dosyaları önceden seçmek için kullanılabilir; Aksi takdirde, liste yok sayılabilir.
 
- Bu işlev genellikle Kullanıcı **Dosya** ** \<Source Control Server> **  ->  **kaynağı denetim** menüsünden başlatmayı seçtiğinde çağrılır. Bu **başlatma** menü seçeneği, bir kayıt defteri girişi ayarlanarak her zaman devre dışı bırakılabilir veya gizlenebilir. Ayrıntılar için bkz. [nasıl yapılır: kaynak denetim eklentisi yüklemesi](../extensibility/internals/how-to-install-a-source-control-plug-in.md) . Bu işlev yalnızca, [SccInitialize](../extensibility/sccinitialize-function.md) yetenek bitini döndürürse çağrılır `SCC_CAP_RUNSCC` (Bu ve diğer yetenek bitleri hakkındaki ayrıntılar Için bkz. [yetenek bayrakları](../extensibility/capability-flags.md) ).
+ Bu işlev genellikle Kullanıcı **Dosya** **\<Source Control Server>**  ->  **kaynağı denetim** menüsünden başlatmayı seçtiğinde çağrılır. Bu **başlatma** menü seçeneği, bir kayıt defteri girişi ayarlanarak her zaman devre dışı bırakılabilir veya gizlenebilir. Ayrıntılar için bkz. [nasıl yapılır: kaynak denetim eklentisi yüklemesi](../extensibility/internals/how-to-install-a-source-control-plug-in.md) . Bu işlev yalnızca, [SccInitialize](../extensibility/sccinitialize-function.md) yetenek bitini döndürürse çağrılır `SCC_CAP_RUNSCC` (Bu ve diğer yetenek bitleri hakkındaki ayrıntılar Için bkz. [yetenek bayrakları](../extensibility/capability-flags.md) ).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Kaynak Denetimi Eklentisi API İşlevleri](../extensibility/source-control-plug-in-api-functions.md)

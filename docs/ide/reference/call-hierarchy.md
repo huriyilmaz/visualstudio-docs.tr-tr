@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Call Hierarchy
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 75c330855d3fca1187f88171adb893c3f77c4ccd
-ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
+ms.openlocfilehash: e7384376b604f2097d68bf8bac06b2af0158e09b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "95871411"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99836481"
 ---
 # <a name="view-call-hierarchy"></a>Çağrı hiyerarşisini görüntüle
 
@@ -65,11 +65,11 @@ Araç çubuğundaki **arama kapsamı** kutusu **çözümünüz**, **geçerli pro
 
 Aşağıdaki tabloda, ağaç görünümü bölmesinde bir düğüme sağ tıkladığınızda kullanılabilecek çeşitli kısayol menü seçenekleri açıklanmaktadır.
 
-|Bağlam menüsü öğesi|Açıklama|
+|Bağlam menüsü öğesi|Description|
 | - |-----------------|
 |**Yeni kök olarak ekle**|Seçili düğümü ağaç görünümü bölmesine yeni bir kök düğüm olarak ekler. Bu, ilgilenmeniz belirli bir alt ağaçta odaklanmanızı sağlar.|
 |**Kökü Kaldır**|Seçili kök düğümü ağaç görünümü bölmesinden kaldırır. Bu seçenek yalnızca bir kök düğümden kullanılabilir.<br /><br /> Seçili kök düğümü kaldırmak için **kök kaldır** araç çubuğu düğmesini de kullanabilirsiniz.|
 |**Tanıma Git**|Seçili düğümdeki Tanıma Git komutunu çalıştırır. Bu, bir üye çağrısının veya değişken tanımının orijinal tanımına gider.<br /><br /> Tanıma Git komutunu çalıştırmak için Seçili düğüme çift tıklayabilir veya seçili düğümdeki F12 tuşuna basabilirsiniz.|
 |**Tüm Başvuruları Bul**|Seçili düğümdeki tüm başvuruları bul komutunu çalıştırır. Bu, projenizdeki bir sınıfa veya üyeye başvuran tüm kod satırlarını bulur.<br /><br /> Seçili düğümdeki tüm başvuruları bul komutunu çalıştırmak için SHIFT + F12 tuşlarını da kullanabilirsiniz.|
-|**Kopya**|Seçili düğümün içeriğini kopyalar (alt düğümleri değil).|
+|**Kopyala**|Seçili düğümün içeriğini kopyalar (alt düğümleri değil).|
 |**Yenile**|Seçili düğümü, yeniden genişleterek geçerli bilgileri görüntüleyecek şekilde daraltır.|

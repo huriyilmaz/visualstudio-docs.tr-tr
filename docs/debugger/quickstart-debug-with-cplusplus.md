@@ -9,21 +9,21 @@ helpviewer_keywords:
 ms.assetid: 639e430b-6d2d-46bd-b738-8c60dfb384f1
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b619b2b6c93da8be399b2fc35d81ffe226f408ad
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8735ecd409eca2801b42b11bd3928a00e5191bf8
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "65679410"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99840905"
 ---
 # <a name="quickstart-debug-with-c-using-the-visual-studio-debugger"></a>Hızlı başlangıç: Visual Studio hata ayıklayıcısını kullanarak C++ ile hata ayıklama
 
 Visual Studio hata ayıklayıcı, uygulamalarınızda hata ayıklamanıza yardımcı olmak için birçok güçlü özellik sunar. Bu konu, temel özelliklerden bazılarını öğrenmenin hızlı bir yolunu sağlar.
 
-## <a name="create-a-new-project"></a>Yeni bir proje oluşturma
+## <a name="create-a-new-project"></a>Yeni proje oluşturma
 
 1. Visual Studio 'Yu açın ve bir proje oluşturun.
 
@@ -80,11 +80,11 @@ Visual Studio hata ayıklayıcı, uygulamalarınızda hata ayıklamanıza yardı
 
 *Kesme noktası* , Visual Studio 'nun çalışan kodunuzu askıya alması gerektiğini belirten bir işaretleyicidir, böylece değişkenlerin değerlerine veya bellek davranışına veya kodun bir dalının çalıştırılıp çalıştırılmayacağı konusunda bir görünüm elde edebilirsiniz. Hata ayıklamada en temel özelliktir.
 
-1. Kesme noktasını ayarlamak için, işlev çağrısının solundaki cilt payın içine tıklayın `doWork` (veya kod satırını seçip **F9**tuşuna basın).
+1. Kesme noktasını ayarlamak için, işlev çağrısının solundaki cilt payın içine tıklayın `doWork` (veya kod satırını seçip **F9** tuşuna basın).
 
     ![Kesme noktası ayarlama](../debugger/media/dbg-qs-set-breakpoint.png "Kesme noktası ayarlama")
 
-2. Şimdi **F5** tuşuna basın (veya hata **ayıklamayı başlatmak > hata ayıkla**seçeneğini belirleyin).
+2. Şimdi **F5** tuşuna basın (veya hata **ayıklamayı başlatmak > hata ayıkla** seçeneğini belirleyin).
 
     ![Kesme noktasına isabet edin](../debugger/media/dbg-qs-hit-breakpoint.png "Kesme noktasına isabet edin")
 
@@ -99,7 +99,7 @@ Visual Studio hata ayıklayıcı, uygulamalarınızda hata ayıklamanıza yardı
 
 Hata ayıklayıcının devam etmesini bildirmek için farklı komutlar vardır. Visual Studio 2017 ' den başlayarak kullanılabilecek yararlı bir kod Gezinti komutu gösteririz.
 
-Kesme noktasında duraklalarken, tıklama `c1.push_back(20)` düğmesine tıklayarak ve ardından tıklama düğmesine tıklayarak **Run to click** deyimin üzerine gelin ve ![Run to Click](../debugger/media/dbg-tour-run-to-click.png "RunToClick") sonra da **Çalıştır** düğmesine basın.
+Kesme noktasında duraklalarken, tıklama `c1.push_back(20)` düğmesine tıklayarak ve ardından tıklama düğmesine tıklayarak  deyimin üzerine gelin ve ![](../debugger/media/dbg-tour-run-to-click.png "RunToClick") sonra da **Çalıştır** düğmesine basın.
 
 ![Tıklama için Çalıştır](../debugger/media/dbg-qs-run-to-click.png "Tıklama için Çalıştır")
 

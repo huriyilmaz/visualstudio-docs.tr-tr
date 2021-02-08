@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: de8bb378-8c1c-4087-a9a5-537fa8314c19
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 9dda564939652a09b64fec65747ca14d1315b3f1
-ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
+ms.openlocfilehash: 54a33d56542065311b2614bad72593132b7908cc
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96561077"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99836208"
 ---
 # <a name="visual-studio-command-aliases"></a>Visual Studio Komut Diğer Adları
 
@@ -55,7 +55,7 @@ Aşağıdaki tablo, önceden tanımlanmış Visual Studio komut diğer adların�
 |[Bellek komutunu](../../ide/reference/list-memory-command.md) ANSI olarak Listele|kapattığımda|Debug. ListMemory/ANSI|
 |[Bellek komut](../../ide/reference/list-memory-command.md) One-Byte biçimini Listele|veritabanı|Debug. ListMemory/Format: OneByte|
 |[Bellek komutunu](../../ide/reference/list-memory-command.md) Four-Byte biçimde ANSI olarak Listele|'ye|Debug. ListMemory/Format: on bayt/ANSI|
-|[Bellek komut](../../ide/reference/list-memory-command.md) Four-Byte biçimini Listele|dd|Debug. ListMemory/Format: on bayt|
+|[Bellek komut](../../ide/reference/list-memory-command.md) Four-Byte biçimini Listele|Ekle|Debug. ListMemory/Format: on bayt|
 |BOL 'a Sil|DelBOL|. DeleteToBOL 'yi Düzenle|
 |EOL 'a Sil|DelEOL|Düzenle. DeleteToEOL|
 |Yatay boşluğu Sil|DelHSp|. DeleteHorizontalWhitespace Düzenle|

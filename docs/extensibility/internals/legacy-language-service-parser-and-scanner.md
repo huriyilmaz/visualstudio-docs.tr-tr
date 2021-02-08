@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 1ac3de27-a23b-438d-9593-389e45839cfa
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 20c8c58a98887e5509026641ba0295fc167435e3
-ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
+ms.openlocfilehash: c4c9ee6cfec35804d7e60675342f3961dfb90c6c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98204611"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99839566"
 ---
 # <a name="legacy-language-service-parser-and-scanner"></a>Eski Dil Hizmeti Ayrıştırıcısı ve Tarayıcısı
 Ayrıştırıcı, dil hizmetinin kalbidir. Yönetilen paket çerçevesi (MPF) dil sınıfları, görüntülenmekte olan kodla ilgili bilgileri seçmek için bir dil ayrıştırıcısı gerektirir. Bir Ayrıştırıcı, metni sözcük temelli belirteçlere ayırır ve sonra bu belirteçleri tür ve işlevlere göre tanımlar.

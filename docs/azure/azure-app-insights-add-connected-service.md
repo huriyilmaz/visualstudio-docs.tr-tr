@@ -2,18 +2,18 @@
 title: Bağlı hizmetleri kullanarak Azure Application Insights ekleme | Microsoft Docs
 description: Bağlı hizmet eklemek için Visual Studio 'Yu kullanarak uygulamanıza Azure Application Insights ekleyin
 author: AngelosP
-manager: jillfra
+manager: jmartens
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 08/17/2020
 ms.author: angelpe
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: 1317f41c9463ab645e6dd3ba281f11b9246720a8
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: 5b93d5b15cbbd3ffcb1f8afb65afe6e1c2c371b1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94901940"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99841230"
 ---
 # <a name="add-azure-application-insights-by-using-visual-studio-connected-services"></a>Visual Studio bağlı hizmetler 'i kullanarak Azure Application Insights ekleme
 
@@ -33,7 +33,7 @@ Bağlı hizmet işlevselliği, gerekli tüm başvuruları ve bağlantı kodları
 
 > [!NOTE]
 > Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için [Mac için Visual Studio bağlı hizmetler](/visualstudio/mac/connected-services)' i inceleyin.
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 - Azure iş yükü yüklü olan Visual Studio.
 - Desteklenen türlerden birinin projesi

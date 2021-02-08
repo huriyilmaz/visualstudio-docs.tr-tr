@@ -7,15 +7,15 @@ ms.topic: conceptual
 ms.assetid: 822e3cf8-f723-4ff1-8467-e0fb42358a1f
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 506c098f1f385ddf39c5d000f4571a8ee92c09fc
-ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
+ms.openlocfilehash: 460227b1eb5a1e12ca698f649700586b53bc7254
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/21/2020
-ms.locfileid: "97715450"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99839341"
 ---
 # <a name="synchronously-autoloaded-extensions"></a>Zaman uyumlu bir şekilde otomatik yüklenen uzantılar
 
@@ -23,7 +23,7 @@ Zaman uyumlu olarak yüklenen uzantılar, Visual Studio 'nun performansı üzeri
 
 ![Uzantı uyumluluk uyarısı](media/extension-compatibility-warning-16-1.png.png)
 
-Şunları yapabilirsiniz:
+Seçenekleriniz şunlardır:
 
 - Uzantıların oto yüklemesine izin vermek için **zaman uyumlu bir oto yüküne Izin ver** ' e tıklayın. Visual Studio seçeneklerinde bu ayarı değiştirmek için, ortam ' a ve ardından Uzantılar ' a tıklayın ve ardından "uzantıların zaman uyumlu olarak yeniden yüklenmesine Izin ver" onay kutusunu seçin. 
 

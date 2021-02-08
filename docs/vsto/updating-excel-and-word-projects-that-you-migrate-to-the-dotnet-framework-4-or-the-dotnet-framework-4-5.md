@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Office projects [Office development in Visual Studio], migrating to .NET Framework 4
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 7bc79a53b62cf9fb0ca0ba533a2ce0d542b08c72
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 3a34774d537348a93308cb992ee8a7500ea242ed
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97528430"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99838275"
 ---
 # <a name="update-excel-and-word-projects-that-you-migrate-to-the-net-framework-45"></a>.NET Framework 4,5 ' ye geçirebileceğiniz Excel ve Word projelerini güncelleştirme
   Aşağıdaki özelliklerden herhangi birini kullanan bir Excel veya Word projeniz varsa, hedef Framework veya daha yeni olarak değiştirilirse kodunuzu değiştirmeniz gerekir [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] :

@@ -4,17 +4,17 @@ description: Bir veritabanındaki verileri kalıcı hale getirme ve bir birim ba
 ms.date: 08/04/2020
 author: nebuk89
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: 9a4eb5062f8f1b01e8ad5e5165d7ec9ede636124
-ms.sourcegitcommit: fb8babf5cd72f1fc2f97ffe4ad7b62d91f325f61
+ms.openlocfilehash: 9ee4109c888888d2dee36804a178f7db8d41753f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89485592"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99841776"
 ---
 # <a name="persist-your-data"></a>Verilerinizi kalıcı hale getirme
 
@@ -70,7 +70,7 @@ Bunu eylemde görmek için iki kapsayıcıyı başlatacak ve her birinde bir dos
 
 [Birimler](https://docs.docker.com/storage/volumes/) , kapsayıcının belirli dosya sistemi yollarını konak makinesine geri bağlama yeteneği sağlar. Kapsayıcıda bir dizin bağlanmışsa, bu dizindeki değişiklikler de ana makinede görülür. Aynı dizini kapsayıcının yeniden başlatmaları arasında bağlarsanız, aynı dosyaları görürsünüz.
 
-İki ana birim türü vardır. Sonunda her ikisini de kullanacaksınız, ancak **adlandırılmış birimlerle**başlayacaksınız.
+İki ana birim türü vardır. Sonunda her ikisini de kullanacaksınız, ancak **adlandırılmış birimlerle** başlayacaksınız.
 
 ## <a name="persist-your-todo-data"></a>Todo verilerinizi kalıcı hale getirin
 
@@ -78,7 +78,7 @@ Varsayılan olarak, ToDo uygulaması verilerini adresinde bir [SQLite veritaban�
 
 Veritabanı tek bir dosya haline getirilebileceği takdirde, bu dosyayı konakta kalıcı hale getirebiliyor ve bir sonraki kapsayıcının kullanımına sunmak istiyorsanız, en son kaldığınız yeri çekebilmelidir. Bir birim oluşturup (genellikle "bağlama" olarak adlandırılır) verileri verilerin depolandığı dizine ekleyerek, verileri kalıcı hale getirebilirsiniz. Kapsayıcı `todo.db` dosyaya yazarken, birimdeki konakta kalıcı hale getirilir.
 
-Belirtildiği gibi, **adlandırılmış bir birim**kullanacaksınız. Adlandırılmış bir birimi yalnızca bir veri demeti olarak düşünün. Docker, diskteki fiziksel konumu korur ve yalnızca birimin adını hatırlamanız gerekir. Birimi her kullandığınızda Docker doğru verilerin sağlandığından emin olur.
+Belirtildiği gibi, **adlandırılmış bir birim** kullanacaksınız. Adlandırılmış bir birimi yalnızca bir veri demeti olarak düşünün. Docker, diskteki fiziksel konumu korur ve yalnızca birimin adını hatırlamanız gerekir. Birimi her kullandığınızda Docker doğru verilerin sağlandığından emin olur.
 
 1. Komutunu kullanarak bir birim oluşturun `docker volume create` .
 

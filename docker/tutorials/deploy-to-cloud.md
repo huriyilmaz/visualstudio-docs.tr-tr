@@ -4,17 +4,17 @@ description: Barındırma için bir bulut hizmetine Docker uygulaması dağıtı
 ms.date: 08/04/2020
 author: nebuk89
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: 661f9f6833b5ac5d42aacde7f228b042bef00bb0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3167dd58a593a426644c3658fbd660f517e10b39
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89178457"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99837989"
 ---
 # <a name="deploy-to-the-cloud"></a>Buluta dağıtın
 
@@ -59,7 +59,7 @@ Artık ACI bağlamını listelenmiş olarak görebilir ve geçerli odağınızı
 
    ![ACı bağlamınızda çalışan kapsayıcı](media/contextcontainer.png)
 
-1. Bunun düzgün şekilde çalıştığından emin olmak için, çalışan kapsayıcıya sağ tıklayıp **Tarayıcıda görüntüle**seçeneğini belirleyebilirsiniz.
+1. Bunun düzgün şekilde çalıştığından emin olmak için, çalışan kapsayıcıya sağ tıklayıp **Tarayıcıda görüntüle** seçeneğini belirleyebilirsiniz.
 
    ![Ortak IP ile acı 'de kapsayıcı](media/containerinaci.png)
 

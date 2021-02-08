@@ -2,18 +2,18 @@
 title: Azure SQL veritabanı 'na bağlantı ekleme | Microsoft Docs
 description: Visual Studio bağlı hizmetler 'i kullanarak uygulamanıza Azure SQL veritabanı bağlantısı ekleme
 author: AngelosP
-manager: jillfra
+manager: jmartens
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 08/17/2020
 ms.author: angelpe
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: 4d720c51d7245d60d40c286c71976132a119a56f
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: 9e4a695a26e17e20fbd19081b863d9f108fc16b6
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94902876"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99841204"
 ---
 # <a name="add-a-connection-to-azure-sql-database"></a>Azure SQL veritabanı 'na bağlantı ekleme
 
@@ -33,7 +33,7 @@ Bağlı hizmet işlevselliği, gerekli tüm başvuruları ve bağlantı kodları
 
 > [!NOTE]
 > Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için [Mac için Visual Studio bağlı hizmetler](/visualstudio/mac/connected-services)' i inceleyin.
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 - Azure iş yükü yüklü olan Visual Studio.
 - Desteklenen türlerden birinin projesi

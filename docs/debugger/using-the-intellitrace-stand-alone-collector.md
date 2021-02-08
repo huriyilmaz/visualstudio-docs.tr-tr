@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 1bde9807-8219-4a2a-a440-ac5ee5178159
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: cbdd7e948aaafff8e90aa8e67907c9a53471b05c
-ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
+ms.openlocfilehash: 251b15edc838a1231e017d8f23b04f8bbb773692
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98150086"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99840879"
 ---
 # <a name="using-the-intellitrace-stand-alone-collector-c-visual-basic"></a>IntelliTrace tek başına toplayıcıyı kullanma (C#, Visual Basic)
 
@@ -123,7 +123,7 @@ ms.locfileid: "98150086"
 
 1. Uygulamanızın sunucusunda, yönetici olarak bir komut istemi penceresi açın.
 
-2. Sunucu yöneticisine toplayıcı dizinine tam izinler vermek için Windows **ıccacls** komutunu kullanın. Örnek:
+2. Sunucu yöneticisine toplayıcı dizinine tam izinler vermek için Windows **ıccacls** komutunu kullanın. Örneğin:
 
      `icacls "C:\IntelliTraceCollector" /grant "` *\<Domain\AdministratorID>* `":F`
 
@@ -131,13 +131,13 @@ ms.locfileid: "98150086"
 
     1. IntelliTrace PowerShell cmdlet 'lerini çalıştıracak kişiye Toplayıcı dizini için tam izinleri verin.
 
-         Örnek:
+         Örneğin:
 
          `icacls "C:\IntelliTraceCollector" /grant "` *\<Domain\UserID>* `":F`
 
     2. Web uygulaması veya SharePoint uygulaması için uygulama havuzuna Toplayıcı dizini için okuma ve yürütme izinleri verin.
 
-         Örnek:
+         Örneğin:
 
         - **DefaultAppPool** uygulama havuzundaki bir Web uygulaması için:
 
@@ -167,7 +167,7 @@ ms.locfileid: "98150086"
 
     2. PowerShell komut penceresinde, **Microsoft.VisualStudio.IntelliTrace.PowerShell.dll** içeri aktarmak için **Import-Module** komutunu kullanın.
 
-         Örnek:
+         Örneğin:
 
          `Import-Module "C:\IntelliTraceCollector\Microsoft.VisualStudio.IntelliTrace.PowerShell.dll"`
 
@@ -185,7 +185,7 @@ ms.locfileid: "98150086"
 
 2. Bir Web uygulaması veya SharePoint uygulaması için, uygulama havuzuna. iTrace dosya dizinine tam izinleri verin. Windows **ıccacls** komutunu veya Windows Gezgini 'ni (veya dosya Gezgini) kullanabilirsiniz.
 
-    Örnek:
+    Örneğin:
 
    - Windows **ıccacls** komutuyla izinleri ayarlamak için:
 

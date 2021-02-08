@@ -4,18 +4,18 @@ description: Visual Studio Code ile Docker ile çalışmanın temellerini kapsay
 ms.date: 08/04/2020
 author: nebuk89
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
 next_page: app.md
-ms.openlocfilehash: 9961810ad408a384db46439235b0b7acab325062
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 554badf01122b6c41d89c00b740574d28185e35e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89178438"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99837976"
 ---
 # <a name="tutorial-get-started-with-docker"></a>Öğretici: Docker 'ı kullanmaya başlama
 
@@ -62,7 +62,7 @@ Artık bir kapsayıcı çalıştırdığınıza göre, *kapsayıcı nedir?* Yaln
 
 ## <a name="what-is-a-container-image"></a>Kapsayıcı görüntüsü nedir?
 
-Bir kapsayıcı çalıştırırken, yalıtılmış bir dosya sistemi kullanır. Bu özel dosya sistemi bir **kapsayıcı görüntüsü**tarafından sağlanır. Görüntü kapsayıcının dosya sistemini içerdiğinden, bir uygulamayı çalıştırmak için gereken her şeyi içermesi gerekir-tüm bağımlılıklar, yapılandırma, betikler, ikili dosyalar, vb. Görüntü Ayrıca, kapsayıcı için ortam değişkenleri, çalıştırılacak varsayılan komut ve diğer meta veriler gibi diğer yapılandırmaları da içerir.
+Bir kapsayıcı çalıştırırken, yalıtılmış bir dosya sistemi kullanır. Bu özel dosya sistemi bir **kapsayıcı görüntüsü** tarafından sağlanır. Görüntü kapsayıcının dosya sistemini içerdiğinden, bir uygulamayı çalıştırmak için gereken her şeyi içermesi gerekir-tüm bağımlılıklar, yapılandırma, betikler, ikili dosyalar, vb. Görüntü Ayrıca, kapsayıcı için ortam değişkenleri, çalıştırılacak varsayılan komut ve diğer meta veriler gibi diğer yapılandırmaları da içerir.
 
 Daha sonra, katman, en iyi uygulamalar ve daha fazlası gibi konuları kapsayan görüntüleri daha ayrıntılı bir şekilde inceleyeceğiz.
 

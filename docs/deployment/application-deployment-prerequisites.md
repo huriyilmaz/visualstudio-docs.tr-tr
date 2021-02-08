@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: fc6e047e-ad94-44e8-8ff5-b6d1f4ca7735
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c87b0f6ded2960054cb553dbeb85681aa447668b
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: fe8312a4dcaa2efb0b783e89540e5ff9f71f15e6
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94383254"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99837807"
 ---
 # <a name="application-deployment-prerequisites"></a>Uygulama dağıtımının önkoşulları
 
@@ -73,7 +73,7 @@ Uygulamanızın başarıyla yüklenip çalışması için, önce uygulamanızın
 
  Herhangi bir önyükleyici seçeneğini değiştirirseniz, imzasız önyükleyici ' yi değiştirmeli ve ardından önyükleyici dosyasını daha sonra imzalamanız gerekir.
 
-| Komut satırı bağımsız değişkeni | Açıklama |
+| Komut satırı bağımsız değişkeni | Description |
 | - | - |
 | **-?,-h,-yardım** | Bir yardım iletişim kutusu görüntüler. |
 | **-URL,-ComponentsUrl** | Bu kurulum için depolanan URL ve bileşen URL 'sini gösterir. |

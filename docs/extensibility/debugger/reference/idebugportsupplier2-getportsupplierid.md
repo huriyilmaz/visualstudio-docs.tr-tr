@@ -9,32 +9,32 @@ helpviewer_keywords:
 ms.assetid: 741d0829-0943-49bf-b56e-61e836043006
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 9f56e412d0312de4b6e9522da24004ca37d522aa
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fcfafa5d104ded3ace847ac659171f423b07128a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80724613"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99840398"
 ---
 # <a name="idebugportsupplier2getportsupplierid"></a>IDebugPortSupplier2::GetPortSupplierId
 Bağlantı noktası sağlayıcısı tanımlayıcısını alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
-HRESULT GetPortSupplierId( 
+HRESULT GetPortSupplierId( 
    GUID* pguidPortSupplier
 );
 ```
 
 ```csharp
-HRESULT GetPortSupplierId( 
+HRESULT GetPortSupplierId( 
    out Guid pguidPortSupplier
 );
 ```

@@ -6,18 +6,18 @@ ms.date: 01/26/2018
 ms.topic: reference
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 020dcedd6b0cb2117984d45548b5c1e099c67aee
-ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
+ms.openlocfilehash: c02135074ee4a4907bb9c4ee235655fc3908a64c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96479829"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99838602"
 ---
 # <a name="sync-a-type-to-a-filename-or-a-filename-to-a-type-refactoring"></a>Bir türü dosya adına veya bir tür yeniden düzenleme için dosya adına eşitleyin
 
@@ -54,7 +54,7 @@ Bu yeniden düzenleme için geçerlidir:
       - **CTRL** tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek ve Önizleme penceresi açılır penceresinde **dosyayı *TypeName*. cs olarak yeniden adlandır** ' ı seçmek için, *TypeName* seçtiğiniz türün adıdır.
       - **CTRL** tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek Için, Önizleme penceresi açılır penceresinde **türü _Dosya_ adı olarak yeniden adlandır** ' ı seçin *. burada dosya adı geçerli* dosyanın adıdır.
    - **Fare**
-      - Koda sağ tıklayın, **Hızlı Eylemler ve yeniden düzenlemeler** menüsünü seçin ve dosya adını Type **. cs olarak değiştir ' *TypeName*** i seçin; burada *TypeName* seçtiğiniz türün adıdır.
+      - Koda sağ tıklayın, **Hızlı Eylemler ve yeniden düzenlemeler** menüsünü seçin ve dosya adını Type **. cs olarak değiştir '** i seçin; burada *TypeName* seçtiğiniz türün adıdır.
       - Koda sağ tıklayın, **Hızlı Eylemler ve yeniden düzenlemeler** menüsünü seçin, sonra *Dosya* adı ' nın geçerli dosyanın adı olduğu Önizleme penceresi açılır penceresinden **_Dosya_ adı olarak yeniden adlandır** ' ı seçin.
 
    Tür veya dosya yeniden adlandırıldı.

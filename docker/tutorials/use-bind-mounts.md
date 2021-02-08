@@ -4,23 +4,23 @@ description: Ana bilgisayar üzerindeki bağlama noktasını denetlemek için ba
 ms.date: 08/04/2020
 author: nebuk89
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: 6474179a0714f2407ac37e724b997139206a91fb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 57cb56d0d9a93d0f11e4047f6e25b64841c47e93
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89178430"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99841685"
 ---
 # <a name="use-bind-mounts"></a>BIND bağlama kullanma
 
 Önceki bölümde, verileri veritabanınızda kalıcı hale getirmek için adlandırılmış bir **birimi** öğrenmiş ve kullandınız. Verilerin *nerede* depolandığını merak etmeniz gerekmiyorsa, yalnızca verileri depolamak istiyorsanız adlandırılmış birimler harika olur.
 
-**BIND**bağlamalarla, konaktaki kesin bağlama noktasını denetlersiniz. Bunu verileri kalıcı hale getirmek için kullanabilirsiniz, ancak genellikle kapsayıcılara daha fazla veri sağlamak için kullanılır. Uygulama üzerinde çalışırken, kod değişikliklerini görmek, yanıt vermek ve değişiklikleri hemen görmenizi sağlamak için kaynak kodu kapsayıcıya bağlamak üzere bir bağlama bağlama kullanabilirsiniz.
+**BIND** bağlamalarla, konaktaki kesin bağlama noktasını denetlersiniz. Bunu verileri kalıcı hale getirmek için kullanabilirsiniz, ancak genellikle kapsayıcılara daha fazla veri sağlamak için kullanılır. Uygulama üzerinde çalışırken, kod değişikliklerini görmek, yanıt vermek ve değişiklikleri hemen görmenizi sağlamak için kaynak kodu kapsayıcıya bağlamak üzere bir bağlama bağlama kullanabilirsiniz.
 
 Düğüm tabanlı uygulamalar için [nodemon](https://npmjs.com/package/nodemon) , dosya değişikliklerini izlemek ve sonra uygulamayı yeniden başlatmak için harika bir araçtır. Birçok diğer dil ve çerçeve için eşdeğer araçlar vardır.
 

@@ -5,18 +5,18 @@ ms.date: 12/06/2018
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: 3c756f3d9a89294ecce054650037be3f7b26c291
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 40411f47e7deda48b04ac4efb9bb9bc18688989a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85540939"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99839116"
 ---
 # <a name="configure-python-web-apps-for-iis"></a>IIS için Python Web Apps 'i yapılandırma
 
@@ -41,7 +41,7 @@ Uygulamanızın *web.config* dosyası, Windows ÜZERINDE çalışan IIS (7 +) We
 
 ### <a name="configure-the-httpplatform-handler"></a>HttpPlatform işleyicisini yapılandırma
 
-HttpPlatform modülü, yuva bağlantılarını doğrudan bir tek başına Python işlemine geçirir. Bu geçiş, istediğiniz herhangi bir Web sunucusunu çalıştırmanıza izin verir, ancak yerel bir Web sunucusu çalıştıran bir başlatma betiği gerektirir. Komut dosyasını `<httpPlatform>` *web.config*öğesinde belirtirsiniz; burada `processPath` öznitelik, site uzantısının Python yorumlayıcısını ve `arguments` özniteliği, betiğinizi ve sağlamak istediğiniz bağımsız değişkeni gösterir:
+HttpPlatform modülü, yuva bağlantılarını doğrudan bir tek başına Python işlemine geçirir. Bu geçiş, istediğiniz herhangi bir Web sunucusunu çalıştırmanıza izin verir, ancak yerel bir Web sunucusu çalıştıran bir başlatma betiği gerektirir. Komut dosyasını `<httpPlatform>` *web.config* öğesinde belirtirsiniz; burada `processPath` öznitelik, site uzantısının Python yorumlayıcısını ve `arguments` özniteliği, betiğinizi ve sağlamak istediğiniz bağımsız değişkeni gösterir:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -86,7 +86,7 @@ Daha sonra, *python.exe* ve *wfastcgi.py* için tam yolları içerecek şekilde 
     </system.webServer>
     ```
 
-1. `<appSettings>` *web.config*bölümünde, için anahtarlar ekleyin `WSGI_HANDLER` `WSGI_LOG` (isteğe bağlı) ve `PYTHONPATH` :
+1. `<appSettings>` *web.config* bölümünde, için anahtarlar ekleyin `WSGI_HANDLER` `WSGI_LOG` (isteğe bağlı) ve `PYTHONPATH` :
 
     ```xml
     <appSettings>
@@ -112,7 +112,7 @@ Daha sonra, *python.exe* ve *wfastcgi.py* için tam yolları içerecek şekilde 
         <add key="WSGI_HANDLER" value="app.wsgi_app()"/>
         ```
 
-    - **Flask**: değeri, `WSGI_HANDLER` `<project_name>.app` `<project_name>` projenizin adıyla eşleşen olacak şekilde değiştirin. `from <project_name> import app` *Runserver.py*içindeki ifadeye bakarak tam tanımlayıcıyı bulabilirsiniz. Örneğin, proje "FlaskAzurePublishExample" olarak adlandırılmışsa, giriş şu şekilde görünür:
+    - **Flask**: değeri, `WSGI_HANDLER` `<project_name>.app` `<project_name>` projenizin adıyla eşleşen olacak şekilde değiştirin. `from <project_name> import app` *Runserver.py* içindeki ifadeye bakarak tam tanımlayıcıyı bulabilirsiniz. Örneğin, proje "FlaskAzurePublishExample" olarak adlandırılmışsa, giriş şu şekilde görünür:
 
         ```xml
         <!-- Flask apps only: change the project name to match your app -->

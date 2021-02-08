@@ -4,19 +4,19 @@ description: Visual Studio için AI araçları 'nda yerel olarak bir TensorFlow 
 keywords: AI, Visual Studio, TensorFlow, yerel
 author: jillre
 ms.author: jillfra
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.date: 11/13/2017
 ms.topic: quickstart
 ms.devlang: python
 ms.workload:
 - multiple
-ms.openlocfilehash: eca02b74154eab5468adeabdb84efdf2839fc92e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0ceb21701958630c8b783d5b6850c5e0a0ab229a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80638752"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99841386"
 ---
 # <a name="train-a-tensorflow-model-locally"></a>TensorFlow modelini yerel olarak eğitme
 
@@ -24,7 +24,7 @@ Bu hızlı [Başlangıçta, Visual Studio Tools for AI](http://yann.lecun.com/ex
 
 MNIST veritabanı, 60.000 örnek bir eğitim kümesine ve el yazısı rakamlarının bir dizi 10.000 örneklerine sahiptir.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Başlamadan önce, aşağıdakilerin yüklü olduğundan emin olun:
 
@@ -52,7 +52,7 @@ TensorFlow, CNTK, Theano ve daha fazlası arasında derin öğrenime Başlarken 
 
    ![Çözümü aç](media/tensorflow-local/open-solution.png)
 
-- **Çözüm Gezgini**içindeki mnist projesini bulun, sağ tıklayın ve **Başlangıç projesi olarak ayarla**' yı seçin.
+- **Çözüm Gezgini** içindeki mnist projesini bulun, sağ tıklayın ve **Başlangıç projesi olarak ayarla**' yı seçin.
 
 - **Başlat**'a tıklayın.
 

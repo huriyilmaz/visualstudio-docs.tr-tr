@@ -4,17 +4,17 @@ description: Kapsayıcılar arasında ağ ayarlama ve MySQL veritabanı için ka
 ms.date: 08/04/2020
 author: nebuk89
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: 9513a3414a38aa02f6a4607a8c95bbf02c0e1cf6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0c8c9fb4072da071ba06d5dc371e85db8291353a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89178417"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99841789"
 ---
 # <a name="multi-container-apps"></a>Birden çok kapsayıcılı uygulamalar
 
@@ -68,7 +68,7 @@ Bir ağ üzerinde kapsayıcı yerleştirmek için iki yol vardır: başlangıçt
     docker exec -it <mysql-container-id> mysql -p
     ```
 
-    Parola istemi geldiğinde **gizli**yazın. MySQL kabuğu 'nda veritabanlarını listeleyin ve veritabanını gördiğinizi doğrulayın `todos` .
+    Parola istemi geldiğinde **gizli** yazın. MySQL kabuğu 'nda veritabanlarını listeleyin ve veritabanını gördiğinizi doğrulayın `todos` .
 
     ```cli
     mysql> SHOW DATABASES;
@@ -179,7 +179,7 @@ Açıklanacak şekilde, dev-Ready kapsayıcınızı başlatın!
 
 1. Uygulamayı tarayıcınızda açın ve yapılacaklar listenize birkaç öğe ekleyin.
 
-1. MySQL veritabanına bağlanın ve öğelerin veritabanına yazıldığını kanıtlayın. Parolanın **gizli**olduğunu unutmayın.
+1. MySQL veritabanına bağlanın ve öğelerin veritabanına yazıldığını kanıtlayın. Parolanın **gizli** olduğunu unutmayın.
 
     ```bash
     docker exec -ti <mysql-container-id> mysql -p todos

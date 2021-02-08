@@ -2,18 +2,18 @@
 title: Bağlı hizmetleri kullanarak Redsıs için Azure önbelleği ekleme | Microsoft Docs
 description: Bir bağlı hizmet eklemek için Visual Studio 'Yu kullanarak uygulamanıza Redsıs desteği için Azure önbelleği ekleme
 author: AngelosP
-manager: jillfra
+manager: jmartens
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 08/17/2020
 ms.author: angelpe
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: ad233d51e271dfbacb80b7f5f2792d546a8a3e0a
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: dd08cc9cc44b0866d718fe03392e99d5fa6467b7
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94903071"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99841188"
 ---
 # <a name="add-azure-cache-for-redis-by-using-visual-studio-connected-services"></a>Visual Studio bağlı hizmetlerini kullanarak Redsıs için Azure önbelleği ekleme
 
@@ -33,7 +33,7 @@ Bağlı hizmet işlevselliği, gerekli tüm başvuruları ve bağlantı kodları
 
 > [!NOTE]
 > Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için [Mac için Visual Studio bağlı hizmetler](/visualstudio/mac/connected-services)' i inceleyin.
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 - Azure iş yükü yüklü olan Visual Studio.
 - Desteklenen türlerden birinin projesi
