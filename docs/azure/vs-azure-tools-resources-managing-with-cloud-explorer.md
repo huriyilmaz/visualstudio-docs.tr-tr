@@ -2,17 +2,17 @@
 title: Bulut Gezgini ile Azure kaynaklarını yönetme | Microsoft Docs
 description: Visual Studio 'da Azure kaynaklarını taramak ve yönetmek için Cloud Explorer 'ı nasıl kullanacağınızı öğrenin.
 author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 03/25/2017
 ms.author: ghogen
-ms.openlocfilehash: c9c2ce60b2096b6c3a4f06fad7360b1d5ea0c753
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: 532195bad81fc9162b854493d5aca9bb2fa7f600
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94902286"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99843949"
 ---
 # <a name="manage-the-resources-associated-with-your-azure-accounts-in-visual-studio-cloud-explorer"></a>Visual Studio Cloud Explorer'da Azure hizmetlerinizle ilişkilendirilmiş kaynakları yönetme
 
@@ -20,13 +20,13 @@ Cloud Explorer, Azure kaynaklarınızı ve Kaynak gruplarınızı görüntüleme
 
 [Azure Portal](https://portal.azure.com)gibi, bulut Gezgini Azure Resource Manager yığınında oluşturulmuştur. Bu nedenle, Cloud Explorer, Azure Kaynak grupları ve Logic Apps ve API uygulamaları gibi Azure hizmetleri gibi kaynakları anlamıştır ve [rol tabanlı erişim denetimini](/azure/role-based-access-control/role-assignments-portal) (RBAC) destekler.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 * Visual Studio 2017 veya üzeri (bkz. [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads)) seçili **Azure iş yükü** . Visual Studio 'nun önceki bir sürümünü [.NET için Microsoft Azure SDK 2,9](https://www.microsoft.com/download/details.aspx?id=51657)ile de kullanabilirsiniz.
 * Microsoft Azure hesabı-hesabınız yoksa, [ücretsiz deneme için kaydolabilir](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers/) veya [Visual Studio abone avantajlarınızı etkinleştirebilirsiniz](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers/).
 
 > [!NOTE]
-> Cloud Explorer 'ı görüntülemek için, **Ctrl** + arama kutusunu etkinleştirmek üzere CTRL **Q** tuşlarına basın ve ardından **bulut Gezgini**' ni girin.
+> Cloud Explorer 'ı görüntülemek için,  + arama kutusunu etkinleştirmek üzere CTRL **Q** tuşlarına basın ve ardından **bulut Gezgini**' ni girin.
 
 ## <a name="add-an-azure-account-to-cloud-explorer"></a>Bulut Gezgini 'ne bir Azure hesabı ekleme
 

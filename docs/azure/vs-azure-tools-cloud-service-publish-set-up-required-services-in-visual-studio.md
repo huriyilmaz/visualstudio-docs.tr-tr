@@ -2,17 +2,17 @@
 title: Bulut hizmetini yayımlamaya veya dağıtmaya hazırlanma
 description: Bulut ve depolama hesabı hizmetlerini ayarlama ve Azure uygulamanızı yapılandırma yordamlarını öğrenin.
 author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload: azure-vs
 ms.topic: how-to
 ms.date: 11/10/2017
 ms.author: ghogen
-ms.openlocfilehash: c048968ca97484812b7423a16e4a1834e1c8a66b
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: 06157f1476762af5bfe24ce950e29e80ac60e6b1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94902512"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99844430"
 ---
 # <a name="prepare-to-publish-or-deploy-a-cloud-service-from-visual-studio"></a>Visual Studio'dan bulut hizmeti yayımlamaya veya dağıtmaya hazırlanma
 

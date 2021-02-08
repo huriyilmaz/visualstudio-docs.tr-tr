@@ -2,17 +2,17 @@
 title: Azure bulut hizmeti projesi yapılandırma
 description: Bu projenin gereksinimlerine bağlı olarak, Visual Studio 'da bir Azure bulut hizmeti projesi yapılandırmayı öğrenin.
 author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload: azure-vs
 ms.topic: how-to
 ms.date: 03/06/2017
 ms.author: ghogen
-ms.openlocfilehash: dbf8d1ce8e668adb5fbab61178fafa980fd56298
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: ad011e740d7bffeddf7f92bd3735fbeedc1f4020
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94902539"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99844261"
 ---
 # <a name="configure-an-azure-cloud-service-project-with-visual-studio"></a>Visual Studio ile Azure bulut hizmeti projesini yapılandırma
 Bu projenin gereksinimlerine bağlı olarak bir Azure bulut hizmeti projesi yapılandırabilirsiniz. Projenin özelliklerini aşağıdaki kategoriler için ayarlayabilirsiniz:
@@ -30,7 +30,7 @@ Bu projenin gereksinimlerine bağlı olarak bir Azure bulut hizmeti projesi yap�
 
     ![Proje özellikleri menüsü](./media/vs-azure-tools-configuring-an-azure-project/solution-explorer-project-properties-menu.png)
 
-1. **True** **Mevcut bir dağıtımı doğru bir şekilde silmeden önce sor** ' a ayarlayın. Bu ayar, Azure 'da var olan bir dağıtımı yanlışlıkla silmemenizi sağlamaya yardımcı olur
+1.  **Mevcut bir dağıtımı doğru bir şekilde silmeden önce sor** ' a ayarlayın. Bu ayar, Azure 'da var olan bir dağıtımı yanlışlıkla silmemenizi sağlamaya yardımcı olur
 
 1. Bulut hizmetinizi yerel olarak çalıştırdığınızda veya hata ayıkladığınızda hangi hizmet yapılandırmasını kullanmak istediğinizi belirtmek için istenen **hizmet yapılandırmasını** seçin. Bir rol için bir hizmet yapılandırmasını değiştirme hakkında daha fazla bilgi için bkz. [Visual Studio Ile Azure bulut hizmeti için rolleri yapılandırma](./vs-azure-tools-configure-roles-for-cloud-service.md).
 

@@ -2,17 +2,17 @@
 title: Adlandırılmış kimlik doğrulama kimlik bilgilerini ayarlama | Microsoft Docs
 description: Visual Studio 'Nun Azure 'a yönelik isteklerin kimliğini doğrulamak için kullanabileceği kimlik bilgilerini nasıl sağlayacağınızı öğrenin. böylece, Azure 'da bir uygulamayı Visual Studio 'dan yayımlayabilir veya var olan bir bulut hizmetini izleyebilirsiniz.
 author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2017
 ms.author: ghogen
-ms.openlocfilehash: 059ac654f13ed833e80464e74e18a6cb8b0f8132
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: bd4c1864539d915e34b286debb3f6b2f739049d5
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94902005"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99843806"
 ---
 # <a name="set-up-named-authentication-credentials"></a>Adlandırılmış kimlik doğrulama bilgilerini ayarlama
 

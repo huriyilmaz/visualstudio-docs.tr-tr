@@ -9,32 +9,32 @@ helpviewer_keywords:
 ms.assetid: aafb32c5-5790-4807-a448-878a80256438
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: cb3b3bc07cc784300fd80626acd7f0cd6179773c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e303787a21996ba4a743e854d6ba1263438259b2
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80725456"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99844833"
 ---
 # <a name="idebugport2enumprocesses"></a>IDebugPort2::EnumProcesses
 Bir bağlantı noktasında çalışan tüm işlemlerin listesini döndürür.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
-HRESULT EnumProcesses( 
+HRESULT EnumProcesses( 
    IEnumDebugProcesses2** ppEnum
 );
 ```
 
 ```csharp
-int EnumProcesses( 
+int EnumProcesses( 
    out IEnumDebugProcesses2 ppEnum
 );
 ```

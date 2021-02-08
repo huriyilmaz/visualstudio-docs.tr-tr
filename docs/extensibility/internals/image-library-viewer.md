@@ -7,15 +7,15 @@ ms.topic: conceptual
 ms.assetid: 9d9c7fbb-ebae-4b20-9dd8-3c9070c0d0d1
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ae9090604a16196c43b80140395eb3401215d665
-ms.sourcegitcommit: 2f964946d7044cc7d49b3fc10b413ca06cb2d11b
+ms.openlocfilehash: dc0acd64a61acac2cb30b9251bcb4e528c08f227
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96761277"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99840125"
 ---
 # <a name="image-library-viewer"></a>Görüntü Kitaplığı Görüntüleyicisi
 Visual Studio Görüntü Kitaplığı Görüntüleyicisi Aracı, görüntü bildirimleri yükleyip arayabilir ve bu sayede, kullanıcının bunları Visual Studio ile aynı şekilde değiştirmesine izin verebilirsiniz. Kullanıcı arka plan, boyut, DPı, yüksek karşıtlık ve diğer ayarları değiştirebilir. Araç ayrıca her görüntü bildirimi için bilgileri yükleme ve görüntü bildirimindeki her bir görüntü için kaynak bilgilerini görüntüler. Bu araç için yararlı olur:
@@ -72,7 +72,7 @@ Visual Studio Görüntü Kitaplığı Görüntüleyicisi Aracı, görüntü bild
 
 |**Subelement**|**Tanım**|
 |-|-|
-|İçeri Aktar|Geçerli bildirimde kullanılmak üzere verilen bildirim dosyasının sembollerini içeri aktarır.|
+|İçeri Aktarma|Geçerli bildirimde kullanılmak üzere verilen bildirim dosyasının sembollerini içeri aktarır.|
 |Guid|Sembol bir GUID 'YI temsil eder ve GUID biçimlendirmesine uymalıdır.|
 |ID|Sembol bir KIMLIĞI temsil eder ve negatif olmayan bir tamsayı olmalıdır.|
 |Dize|Sembol rastgele bir dize değerini temsil eder.|
@@ -128,12 +128,12 @@ Visual Studio Görüntü Kitaplığı Görüntüleyicisi Aracı, görüntü bild
 
 |**Öznitelik**|**Tanım**|
 |-|-|
-|Kullanılmamışsa|Istenir Görüntünün nereden yüklenebileceğini tanımlayan bir URI. Aşağıdakilerden biri olabilir:<br /><br /> -Application:///yetkilisini kullanan bir [paket URI 'si](/dotnet/framework/wpf/app-development/pack-uris-in-wpf)<br /><br /> -Mutlak bir bileşen kaynağı başvurusu<br /><br /> -Yerel kaynak içeren bir dosyanın yolu|
-|Arka plan|Seçim Kaynağın kullanılması amaçlanan arka plan türünü gösterir.<br /><br /> Aşağıdakilerden biri olabilir:<br /><br /> - *Işık*: kaynak açık bir arka planda kullanılabilir.<br /><br /> - *Koyu*: kaynak koyu bir arka planda kullanılabilir.<br /><br /> - *Highkarşıtlıklı*: kaynak yüksek karşıtlık modundaki herhangi bir arka planda kullanılabilir.<br /><br /> - *Highdeğişken Stlight*: kaynak yüksek karşıtlık modundaki hafif bir arka planda kullanılabilir.<br /><br /> -Üst *sınır*: kaynak, yüksek karşıtlık modunda koyu bir arka planda kullanılabilir.<br /><br /> **Arka plan** özniteliği atlanırsa, kaynak herhangi bir arka planda kullanılabilir.<br /><br /> **Arka plan** hafif, *koyu*, *Ince* bir *şekilde veya daha* *ince*, kaynak renkleri hiçbir şekilde ters çevrilmez. **Arka plan** atlanırsa veya *highkontrast* olarak ayarlandıysa, kaynak renklerinin Inversion değeri görüntünün **allowcolorınversion** özniteliği tarafından denetlenir.|
+|Kullanılmamışsa|Istenir Görüntünün nereden yüklenebileceğini tanımlayan bir URI. Şunlardan biri olabilir:<br /><br /> -Application:///yetkilisini kullanan bir [paket URI 'si](/dotnet/framework/wpf/app-development/pack-uris-in-wpf)<br /><br /> -Mutlak bir bileşen kaynağı başvurusu<br /><br /> -Yerel kaynak içeren bir dosyanın yolu|
+|Arka Plan|Seçim Kaynağın kullanılması amaçlanan arka plan türünü gösterir.<br /><br /> Şunlardan biri olabilir:<br /><br /> - *Işık*: kaynak açık bir arka planda kullanılabilir.<br /><br /> - *Koyu*: kaynak koyu bir arka planda kullanılabilir.<br /><br /> - *Highkarşıtlıklı*: kaynak yüksek karşıtlık modundaki herhangi bir arka planda kullanılabilir.<br /><br /> - *Highdeğişken Stlight*: kaynak yüksek karşıtlık modundaki hafif bir arka planda kullanılabilir.<br /><br /> -Üst *sınır*: kaynak, yüksek karşıtlık modunda koyu bir arka planda kullanılabilir.<br /><br /> **Arka plan** özniteliği atlanırsa, kaynak herhangi bir arka planda kullanılabilir.<br /><br /> **Arka plan** hafif, *koyu*, *Ince* bir *şekilde veya daha* *ince*, kaynak renkleri hiçbir şekilde ters çevrilmez. **Arka plan** atlanırsa veya *highkontrast* olarak ayarlandıysa, kaynak renklerinin Inversion değeri görüntünün **allowcolorınversion** özniteliği tarafından denetlenir.|
 
  Bir \<Source> öğe, aşağıdaki isteğe bağlı alt öğeler için tam olarak birine sahip olabilir:
 
-|**Dosyalarında**|**Öznitelikler (tüm gerekli)**|**Tanım**|
+|**Öğe**|**Öznitelikler (tüm gerekli)**|**Tanım**|
 |-|-|-|
 |\<Size>|Değer|Kaynak, verilen boyutun (cihaz birimlerinde) görüntüleri için kullanılacaktır. Resim kare olacak.|
 |\<SizeRange>|MinSize, MaxSize|Kaynak, MinSize ' den MaxSize 'a (cihaz birimlerinde) dahil olmak üzere, dahil edilecek görüntüler için kullanılacaktır. Resim kare olacak.|

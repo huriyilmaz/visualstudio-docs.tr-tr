@@ -3,17 +3,17 @@ title: Tanılama-Azure Cloud Services & VM 'Leri
 ms.custom: SEO-VS-2020
 description: Visual Studio 'da Azure bulut hizmetlerinde ve sanal makinelerde (VM) hata ayıklama için tanılamayı ayarlamayı öğrenin.
 author: ghogen
-manager: jillfra
+manager: jmartens
 ms.topic: conceptual
 ms.workload: azure-vs
 ms.date: 06/28/2018
 ms.author: mikejo
-ms.openlocfilehash: ababbbfcfa71f3083a292103f4fa4f1ba481faae
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: e98d335d53edb7e8771db3314944a11c534d046b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94902629"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99844313"
 ---
 # <a name="set-up-diagnostics-for-azure-cloud-services-and-virtual-machines"></a>Azure Cloud Services ve sanal makineler için tanılamayı ayarlama
 Bir Azure bulut hizmetinde veya sanal makinede sorun gidermeniz gerektiğinde Azure Tanılama daha kolay bir şekilde kurmak için Visual Studio 'Yu kullanabilirsiniz. Tanılama, bulut hizmetinizi çalıştıran sanal makinelerde ve sanal makine örneklerinde sistem verilerini ve günlük verilerini yakalar. Tanılama verileri, seçtiğiniz bir depolama hesabına aktarılır. Azure 'da tanılama günlüğü hakkında daha fazla bilgi için bkz. [Azure App Service Web Apps için tanılama günlüğünü etkinleştirme](/azure/app-service/web-sites-enable-diagnostic-log).
@@ -216,7 +216,7 @@ Bir bulut hizmeti veya sanal makine için tanılama verilerini topladıktan sonr
     Bulut Gezgini ' nde veya Sunucu Gezgini, dağıtımla ilişkili depolama hesabını açın.
 3. Tablo görüntüleyicisinde tanılama tablolarını açın ve ardından topladığınız verileri gözden geçirin. IIS günlükleri ve özel Günlükler için bir blob kapsayıcısı açabilirsiniz. Aşağıdaki tabloda, farklı günlük dosyaları için verileri içeren tablolar veya blob kapsayıcıları listelenmektedir. Bu günlük dosyası için verilere ek olarak, tablo girişleri **Eventtickcount**, **DeploymentId**, **rol** ve **roleınstance**, verileri hangi sanal makine ve rolün oluşturulduğunu belirlemenize yardımcı olur.
 
-   | Tanılama verileri | Açıklama | Konum |
+   | Tanılama verileri | Description | Konum |
    | --- | --- | --- |
    | Uygulama günlükleri |**System. Diagnostics. Trace** sınıfının yöntemlerini çağırarak kodunuzun oluşturduğu Günlükler. |WADLogsTable |
    | Olay günlükleri |Sanal makinelerdeki Windows olay günlüklerinden alınan veriler. Windows, bilgileri bu günlüklerde depolar, ancak uygulamalar ve hizmetler, hataları veya günlük bilgilerini raporlamak için günlükleri de kullanır. |WADWindowsEventLogsTable |

@@ -9,26 +9,26 @@ helpviewer_keywords:
 ms.assetid: beda0da5-267e-4bf3-96c4-b659d29e2254
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2160f963ad1f3f37291519ced30b8096e33a6116
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e499d7b655cb79873b1cd3ef2954f054bba84f60
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80722869"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99844703"
 ---
 # <a name="idebugprogram2getdisassemblystream"></a>IDebugProgram2::GetDisassemblyStream
 Bu program veya bu programın bir parçası için ayrıştırma akışını alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
-HRESULT GetDisassemblyStream( 
+HRESULT GetDisassemblyStream( 
    DISASSEMBLY_STREAM_SCOPE   dwScope,
    IDebugCodeContext2*        pCodeContext,
    IDebugDisassemblyStream2** ppDisassemblyStream
@@ -36,7 +36,7 @@ HRESULT GetDisassemblyStream( 
 ```
 
 ```csharp
-int GetDisassemblyStream( 
+int GetDisassemblyStream( 
    enum_DISASSEMBLY_STREAM_SCOPE  dwScope,
    IDebugCodeContext2             pCodeContext,
    out IDebugDisassemblyStream2   ppDisassemblyStream

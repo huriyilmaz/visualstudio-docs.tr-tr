@@ -2,17 +2,17 @@
 title: Sunucu Gezgini 'den Azure sanal makinelerine erişme | Microsoft Docs
 description: Visual Studio 'da Sunucu Gezgini Azure sanal makinelerini (VM 'Ler) oluşturma ve yönetme hakkında genel bakış alın.
 author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 8/31/2017
 ms.author: ghogen
-ms.openlocfilehash: 653a9be556441f5f8d5fc1c1053b144dc97dd3b2
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: a40434845187490ee4f8437f8e15963bddd1998f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94901876"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99843793"
 ---
 # <a name="accessing-azure-virtual-machines-from-server-explorer"></a>Sunucu Gezgini'nden Azure Sanal Makineler'e erişme
 
@@ -26,7 +26,7 @@ Azure tarafından barındırılan sanal makineleriniz varsa bunlara Sunucu Gezgi
    | --- | --- |
    | DNS Adı |Sanal makinenin Internet adresine sahip URL. |
    | Ortam |Bir sanal makine için, bu özelliğin değeri her zaman üretime yöneliktir. |
-   | Ad |Sanal makinenin adı. |
+   | Name |Sanal makinenin adı. |
    | Boyut |Kullanılabilir bellek ve disk alanı miktarını yansıtan sanal makinenin boyutu. Daha fazla bilgi için bkz. [sanal makine boyutları](/azure/cloud-services/cloud-services-sizes-specs). |
    | Durum |Değerler, başlatma, başlatma, durdurma, durdurma ve durum alma içerir. Durum alma görünürse, geçerli durum bilinmiyor olur. Bu özelliğin değerleri, [Azure Portal](https://portal.azure.com)kullanılan değerlerden farklıdır. |
    | SubscriptionID |Azure hesabınızın abonelik KIMLIĞI. Bir aboneliğin özelliklerini görüntüleyerek [Azure Portal](https://portal.azure.com) bu bilgileri gösterebilirsiniz. |

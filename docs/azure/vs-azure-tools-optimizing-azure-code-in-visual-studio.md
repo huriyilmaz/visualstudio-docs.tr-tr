@@ -2,17 +2,17 @@
 title: Azure kodunuzu iyileştirme
 description: Visual Studio 'daki Azure Code Optimization araçları, kodunuzun daha sağlam ve daha iyi performans sağlanmasına nasıl yardımcı olduğunu öğrenin.
 author: ghogen
-manager: jillfra
+manager: jmartens
 ms.topic: conceptual
 ms.workload: azure-vs
 ms.date: 11/11/2016
 ms.author: ghogen
-ms.openlocfilehash: 5ae141c4ecdf5cfe1819ba2f47aac45f1763fa34
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: b7a20b4ae57ee5cf1127441bc43dea021c170188
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94902304"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99844040"
 ---
 # <a name="optimizing-your-azure-code"></a>Azure Kodunuzu İyileştirme
 Microsoft Azure kullanan uygulamalar programlarken, bir bulut ortamında uygulama ölçeklenebilirliği, davranış ve performans sorunlarını önlemeye yardımcı olmak için izlemeniz gereken bazı kodlama uygulamaları vardır. Microsoft, yaygın olarak karşılaşılan bu sorunlardan birkaçını algılayan ve tanıtan bir Azure Kod Analizi Aracı sağlar ve bunları çözmenize yardımcı olur. Visual Studio 'da NuGet aracılığıyla aracı indirebilirsiniz.
@@ -24,7 +24,7 @@ Azure Kod Analizi Aracı, performans etkileyen bilinen sorunları bulduğunda Az
 ### <a name="id"></a>ID
 AP0000
 
-### <a name="description"></a>Açıklama
+### <a name="description"></a>Description
 Bulut uygulamaları için varsayılan (işlem içi) oturum durumu modunu kullanırsanız, oturum durumunu kaybedebilirsiniz.
 
 Lütfen [Azure kod analizi geri bildirimi](https://social.msdn.microsoft.com/Forums/en-US/home)'nde fikirlerinizi ve geri bildiriminizi paylaşın.
@@ -41,7 +41,7 @@ ASP.NET oturum durumu, oturum durumu verileri için birkaç farklı depolama se�
 ### <a name="id"></a>ID
 AP1000
 
-### <a name="description"></a>Açıklama
+### <a name="description"></a>Description
 [Run ()](/previous-versions/azure/reference/ee772746(v=azure.100)) yönteminin dışında zaman uyumsuz Yöntemler ( [await](/dotnet/csharp/language-reference/operators/await)gibi) oluşturun ve sonra [()](/previous-versions/azure/reference/ee772746(v=azure.100))zaman uyumsuz yöntemleri çağırın. [[Run ()](/previous-versions/azure/reference/ee772746(v=azure.100))](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.serviceruntime.roleentrypoint.run.aspx) yönteminin zaman uyumsuz olarak bildirilmesi, çalışan rolünün yeniden başlatma döngüsü girmesine neden olur.
 
 Lütfen [Azure kod analizi geri bildirimi](https://social.msdn.microsoft.com/Forums/en-US/home)'nde fikirlerinizi ve geri bildiriminizi paylaşın.
@@ -86,7 +86,7 @@ public async Task RunAsync()
 ### <a name="id"></a>ID
 AP2000
 
-### <a name="description"></a>Açıklama
+### <a name="description"></a>Description
 Kimlik doğrulaması için paylaşılan erişim Imzasını (SAS) kullanın. Service Bus kimlik doğrulaması için Access Control Service (ACS) kullanım dışı bırakılıyor.
 
 Lütfen [Azure kod analizi geri bildirimi](https://social.msdn.microsoft.com/Forums/en-US/home)'nde fikirlerinizi ve geri bildiriminizi paylaşın.
@@ -112,7 +112,7 @@ Daha fazla bilgi için aşağıdaki konulara bakın.
 ### <a name="id"></a>ID
 AP2002
 
-### <a name="description"></a>Açıklama
+### <a name="description"></a>Description
 "Alma döngüsüne" engel olmak için **OnMessage** metodunu **çağırmak, iletileri alma yöntemi çağrılmadan** daha iyi bir çözümdür. Ancak, **alma** yöntemini kullanmanız gerekiyorsa ve varsayılan olmayan bir sunucu bekleme süresi belirtirseniz, sunucu bekleme süresinin bir dakikadan fazla olduğundan emin olun.
 
 Lütfen [Azure kod analizi geri bildirimi](https://social.msdn.microsoft.com/Forums/en-US/home)'nde fikirlerinizi ve geri bildiriminizi paylaşın.
@@ -216,7 +216,7 @@ while (true)
 ### <a name="id"></a>ID
 AP2003
 
-### <a name="description"></a>Açıklama
+### <a name="description"></a>Description
 Aracılı mesajlaşma ile performansı artırmak için zaman uyumsuz Service Bus yöntemler kullanın.
 
 Lütfen [Azure kod analizi geri bildirimi](https://social.msdn.microsoft.com/Forums/en-US/home)'nde fikirlerinizi ve geri bildiriminizi paylaşın.
@@ -233,7 +233,7 @@ Azure mesajlaşma altyapısının performansını artırmak için bkz. tasarım 
 ### <a name="id"></a>ID
 AP2004
 
-### <a name="description"></a>Açıklama
+### <a name="description"></a>Description
 Service Bus mesajlaşma ile daha iyi performans için Service Bus kuyrukları ve konuları bölümleyin.
 
 Lütfen [Azure kod analizi geri bildirimi](https://social.msdn.microsoft.com/Forums/en-US/home)'nde fikirlerinizi ve geri bildiriminizi paylaşın.
@@ -258,7 +258,7 @@ Daha fazla bilgi için bkz. [bölümlenmiş Service Bus kuyruklar ve konular | B
 ### <a name="id"></a>ID
 AP3001
 
-### <a name="description"></a>Açıklama
+### <a name="description"></a>Description
 Paylaşılan erişim ilkesini hemen başlatmak için SharedAccessStartTimeset ' i Şu anki zamana göre kullanmaktan kaçının. Yalnızca paylaşılan erişim ilkesini daha sonra başlatmak istiyorsanız bu özelliği ayarlamanız gerekir.
 
 Lütfen [Azure kod analizi geri bildirimi](https://social.msdn.microsoft.com/Forums/en-US/home)'nde fikirlerinizi ve geri bildiriminizi paylaşın.
@@ -290,7 +290,7 @@ blobPermissions.SharedAccessPolicies.Add("mypolicy", new SharedAccessBlobPolicy(
 ### <a name="id"></a>ID
 AP3002
 
-### <a name="description"></a>Açıklama
+### <a name="description"></a>Description
 "Saat eğriltme" olarak bilinen bir koşula bağlı olarak, farklı konumlardaki veri merkezleri arasındaki saatler için beş dakikalık fark olabilir. SAS ilke belirtecinin planlanandan daha önce dolmasını engellemek için, sona erme süresini beş dakikadan uzun olacak şekilde ayarlayın.
 
 Lütfen [Azure kod analizi geri bildirimi](https://social.msdn.microsoft.com/Forums/en-US/home)'nde fikirlerinizi ve geri bildiriminizi paylaşın.
@@ -340,7 +340,7 @@ Daha fazla bilgi için bkz. [kapsayıcılar ve Bloblar için anonim genel okuma 
 ### <a name="id"></a>ID
 AP4000
 
-### <a name="description"></a>Açıklama
+### <a name="description"></a>Description
 Azure Web sitesi ve Azure Mobil Hizmetleri gibi projeler için [ConfigurationManager](https://msdn.microsoft.com/library/system.configuration.configurationmanager\(v=vs.110\).aspx) sınıfının kullanılması çalışma zamanı sorunları oluşturmayacaktır. Bununla birlikte, en iyi uygulama olarak, tüm Azure bulut uygulamalarına yönelik yapılandırmaların yönetilmesi için birleştirilmiş bir yöntem olarak bulutta[ConfigurationManager](https://msdn.microsoft.com/library/system.configuration.configurationmanager\(v=vs.110\).aspx) kullanmak iyi bir fikirdir.
 
 Lütfen [Azure kod analizi geri bildirimi](https://social.msdn.microsoft.com/Forums/en-US/home)'nde fikirlerinizi ve geri bildiriminizi paylaşın.
@@ -377,7 +377,7 @@ Yapılandırma ayarının bir App.config veya Web.config dosyasında nasıl depo
 ### <a name="id"></a>ID
 AP4001
 
-### <a name="description"></a>Açıklama
+### <a name="description"></a>Description
 Sabit kodlanmış bağlantı dizeleri kullanırsanız ve daha sonra güncelleştirmeniz gerekiyorsa, kaynak kodunuzda değişiklik yapmanız ve uygulamayı yeniden derlemeniz gerekir. Ancak, bağlantı dizelerinizi bir yapılandırma dosyasında depoluyorsa yapılandırma dosyasını güncelleştirerek daha sonra değiştirebilirsiniz.
 
 Lütfen [Azure kod analizi geri bildirimi](https://social.msdn.microsoft.com/Forums/en-US/home)'nde fikirlerinizi ve geri bildiriminizi paylaşın.
@@ -398,7 +398,7 @@ web.config veya app.config gibi yapılandırma dosyalarını kullanma hakkında 
 ### <a name="id"></a>ID
 AP5000
 
-### <a name="description"></a>Açıklama
+### <a name="description"></a>Description
 Kodunuzda, Microsoft. WindowsAzure. Diagnostics programlama API 'sini kullanarak tanılama ayarlarını yapılandırmak yerine, tanılama ayarlarını Diagnostics. wadcfg dosyasında yapılandırmanız gerekir. (Veya Azure SDK 2,5 kullanıyorsanız, Diagnostics. wadcfgx). Bunu yaparak, kodunuzu yeniden derlemek zorunda kalmadan tanılama ayarlarını değiştirebilirsiniz.
 
 Lütfen [Azure kod analizi geri bildirimi](https://social.msdn.microsoft.com/Forums/en-US/home)'nde fikirlerinizi ve geri bildiriminizi paylaşın.
@@ -423,7 +423,7 @@ Tanılama ayarlarını tanılama yapılandırma dosyasına (SDK 2,5 ve üzeri i�
 ### <a name="id"></a>ID
 AP6000
 
-### <a name="description"></a>Açıklama
+### <a name="description"></a>Description
 Belleği kaydetmek için DBContext nesnelerini static olarak bildirmemeye özen gösterin.
 
 Lütfen [Azure kod analizi geri bildirimi](https://social.msdn.microsoft.com/Forums/en-US/home)'nde fikirlerinizi ve geri bildiriminizi paylaşın.

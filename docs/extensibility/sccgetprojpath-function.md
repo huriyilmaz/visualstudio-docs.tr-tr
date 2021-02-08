@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 1079847e-d45f-4cb8-9d92-1e01ce5d08f6
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 281787da3499c081fbbe6f59b7b8175a4dbf24d7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bad1cae248c0fe3babd920e0773825d9d36b7042
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80700700"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99844573"
 ---
 # <a name="sccgetprojpath-function"></a>SccGetProjPath işlevi
 Bu işlev, kullanıcıdan yalnızca kaynak denetimi eklentisi için anlamlı olan bir dize olan bir proje yolu ister. Kullanıcı şu olduğunda çağrılır:
@@ -28,7 +28,7 @@ Bu işlev, kullanıcıdan yalnızca kaynak denetimi eklentisi için anlamlı ola
 
 - Var olan bir sürüm denetimi projesi bulunmaya çalışılıyor
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
 SCCRTN SccGetProjPath (
@@ -76,12 +76,12 @@ SCCRTN SccGetProjPath (
 
 [in, out] Gelen değer yeni bir proje oluşturulup oluşturulmayacağını gösterir. Döndürülen değer bir proje oluşturma başarısını gösterir:
 
-|Gelen|Yorumlama|
+|Gelen|Yorum|
 |--------------|--------------------|
 |TRUE|Kullanıcı yeni bir proje oluşturabilir.|
 |FALSE|Kullanıcı yeni bir proje oluşturmayabilir.|
 
-|Tarafına|Yorumlama|
+|Tarafına|Yorum|
 |--------------|--------------------|
 |TRUE|Yeni bir proje oluşturuldu.|
 |FALSE|Var olan bir proje seçildi.|

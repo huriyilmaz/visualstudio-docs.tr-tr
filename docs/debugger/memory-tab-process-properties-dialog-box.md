@@ -9,22 +9,22 @@ helpviewer_keywords:
 ms.assetid: a70785f2-5997-40ec-a90f-80a52449768b
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 10fd47127abfd9cc476ed7029edd0dbbeb5501de
-ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
+ms.openlocfilehash: 4a1bf0409dacdd6cb2f7de65462f637124a5cecd
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97903733"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99845028"
 ---
 # <a name="memory-tab-process-properties-dialog-box"></a>Bellek Sekmesi, İşlem Özellikleri İletişim Kutusu
 Bir işlemin belleği nasıl kullandığını göstermek için **bellek** sekmesini kullanın. [Işlem özellikleri Iletişim kutusunu](../debugger/process-properties-dialog-box.md)görüntülemek için odağı bir [işlem görünümü](../debugger/processes-view.md) penceresine taşıyın. Ağaçta herhangi bir işlem düğümünü seçin, sonra **Görünüm** menüsünden **Özellikler** ' i seçin.
 
  **Bellek** sekmesinde aşağıdaki ayarlar kullanılabilir:
 
-|Giriş|Açıklama|
+|Giriş|Description|
 |-----------|-----------------|
 |**Sanal Bayt Sayısı**|İşlemin kullandığı sanal adres alanının geçerli boyutu (bayt cinsinden). Sanal adres alanının kullanımı, disk veya ana bellek sayfalarının karşılık gelen kullanımını göstermez. Ancak, sanal alan sınırlı olur ve çok fazla kullanımı, işlemin kitaplıklarını yükleme yeteneğini sınırlayabilir.|
 |**En yüksek sanal bayt sayısı**|İşlemin herhangi bir anda kullandığı en fazla sanal adres alanı bayt sayısı.|

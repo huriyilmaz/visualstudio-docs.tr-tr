@@ -2,18 +2,18 @@
 title: Bağlı hizmetler 'i kullanarak Azure depolama ekleme | Microsoft Docs
 description: Visual Studio bağlı hizmetlerini kullanarak uygulamanıza bir Azure depolama hizmeti bağımlılığı ekleyin
 author: ghogen
-manager: jillfra
+manager: jmartens
 ms.custom: vs-azure
 ms.workload: azure-vs
 ms.topic: how-to
 ms.date: 08/13/2020
 ms.author: ghogen
-ms.openlocfilehash: d169940d6deffdf67bcbcb94e9f647631d0f606a
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: a2aa5a0453b6a05c261d3cac853ab8265fb4e453
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94902642"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99844352"
 ---
 # <a name="adding-azure-storage-by-using-visual-studio-connected-services"></a>Visual Studio bağlı hizmetler 'i kullanarak Azure depolama ekleme
 
@@ -33,7 +33,7 @@ Bağlı hizmet işlevselliği, gerekli tüm başvuruları ve bağlantı kodları
 
 > [!NOTE]
 > Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için [Mac için Visual Studio bağlı hizmetler](/visualstudio/mac/connected-services)' i inceleyin.
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 - Azure iş yükü yüklü olan Visual Studio.
 - Desteklenen türlerden birinin projesi

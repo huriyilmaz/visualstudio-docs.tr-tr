@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 5bcafdc5-f922-48f6-a12e-6c8507a79a05
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1a7da218a9ada593731e6205e017861084e73adc
-ms.sourcegitcommit: 2f964946d7044cc7d49b3fc10b413ca06cb2d11b
+ms.openlocfilehash: f870da49cdf82203e7dd435601f93a75cb16dccd
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96761146"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99839969"
 ---
 # <a name="implementing-a-legacy-language-service-2"></a>Eski dil hizmeti uygulama 2
 Yönetilen paket çerçevesi 'ni (MPF) kullanarak bir dil hizmetini uygulamak için, sınıfından bir sınıf türetmeniz <xref:Microsoft.VisualStudio.Package.LanguageService> ve aşağıdaki soyut yöntemleri ve özellikleri uygulamanız gerekir:
@@ -195,7 +195,7 @@ namespace TestLanguagePackage
 
 ### <a name="in-the-languageservice-class"></a>LanguageService sınıfında
 
-|Yöntem|Döndürülen sınıf|Açıklama|
+|Yöntem|Döndürülen sınıf|Description|
 |------------|--------------------|-----------------|
 |<xref:Microsoft.VisualStudio.Package.LanguageService.CreateCodeWindowManager%2A>|<xref:Microsoft.VisualStudio.Package.CodeWindowManager>|Metin görünümüne özel eklemeleri desteklemek için.|
 |<xref:Microsoft.VisualStudio.Package.LanguageService.CreateDocumentProperties%2A>|<xref:Microsoft.VisualStudio.Package.DocumentProperties>|Özel belge özelliklerini desteklemek için.|
@@ -212,7 +212,7 @@ namespace TestLanguagePackage
 
 ### <a name="in-the-source-class"></a>Kaynak sınıfta
 
-|Yöntem|Döndürülen sınıf|Açıklama|
+|Yöntem|Döndürülen sınıf|Description|
 |------------|--------------------|-----------------|
 |<xref:Microsoft.VisualStudio.Package.Source.CreateCompletionSet%2A>|<xref:Microsoft.VisualStudio.Package.CompletionSet>|IntelliSense tamamlanma listelerinin görüntülenmesini özelleştirmek için (Bu yöntem genellikle geçersiz kılınmaz).|
 |<xref:Microsoft.VisualStudio.Package.Source.CreateErrorTaskItem%2A>|<xref:Microsoft.VisualStudio.Package.DocumentTask>|Hata Listesi görev listesinde destekleyici işaretçiler için; Özellikle, dosyayı açan ve hataya neden olan satıra atlama özellikleri için destek.|
@@ -222,7 +222,7 @@ namespace TestLanguagePackage
 
 ### <a name="in-the-authoringscope-class"></a>AuthoringScope sınıfında
 
-|Yöntem|Döndürülen sınıf|Açıklama|
+|Yöntem|Döndürülen sınıf|Description|
 |------------|--------------------|-----------------|
 |<xref:Microsoft.VisualStudio.Package.AuthoringScope.GetDeclarations%2A>|<xref:Microsoft.VisualStudio.Package.Declarations>|Üyeler veya türler gibi bildirimlerin bir listesini sağlar. Bu yöntemin uygulanması gerekir, ancak null bir değer döndürebilir. Bu yöntem geçerli bir nesne döndürürse, nesne sınıfının sürümünün bir örneği olmalıdır <xref:Microsoft.VisualStudio.Package.Declarations> .|
 |<xref:Microsoft.VisualStudio.Package.AuthoringScope.GetMethods%2A>|<xref:Microsoft.VisualStudio.Package.Methods>|Belirli bir bağlam için yöntem imzalarının bir listesini sağlar. Bu yöntemin uygulanması gerekir, ancak null bir değer döndürebilir. Bu yöntem geçerli bir nesne döndürürse, nesne sınıfının sürümünün bir örneği olmalıdır <xref:Microsoft.VisualStudio.Package.Methods> .|

@@ -2,17 +2,17 @@
 title: Azure bulut hizmeti yayımlama
 description: Visual Studio Azure Uygulama Yayımlama Sihirbazı 'ndaki çeşitli ayarları nasıl yapılandıracağınızı öğrenin
 author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload: azure-vs
 ms.topic: how-to
 ms.date: 03/21/2017
 ms.author: ghogen
-ms.openlocfilehash: 87082a0d4df4542f36b1ce95cba92d261a2b4d9e
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: f965d8e7f71ba34be9901d77fa4f0af881805bb0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94902317"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99844066"
 ---
 # <a name="using-the-visual-studio-publish-azure-application-wizard"></a>Visual Studio Azure Uygulamasını Yayımlama Sihirbazı'nı kullanma
 
@@ -35,7 +35,7 @@ Azure uygulaması Yayımlama Sihirbazı 'na, sahip olduğunuz Visual Studio proj
 
 1. Visual Studio 'da bir Azure bulut hizmeti projesi oluşturun veya açın.
 
-1. **Çözüm Gezgini**, projeye sağ tıklayın ve bağlam menüsünde, **Convert**  >  **Dönüştür Azure bulut hizmeti projesine** Dönüştür ' ü seçin.
+1. **Çözüm Gezgini**, projeye sağ tıklayın ve bağlam menüsünde,   >  **Dönüştür Azure bulut hizmeti projesine** Dönüştür ' ü seçin.
 
 1. **Çözüm Gezgini**, yeni oluşturulan Azure projesine sağ tıklayın ve bağlam menüsünden **Yayımla**' yı seçin.
 

@@ -3,17 +3,17 @@ title: Depolama kaynaklarına gözatıp yönetme
 description: Sunucu Gezgini kullanarak depolama kaynaklarına göz atma ve bunları yönetme
 ms.custom: SEO-VS-2020
 author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 8/24/2017
 ms.author: ghogen
-ms.openlocfilehash: ae45fafb562387720b652e0921624bc859ea5920
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: 70656b71df09f5635ebfb5d4532256e8f0d3dd35
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94902226"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99843858"
 ---
 # <a name="browse-and-manage-storage-resources-by-using-server-explorer"></a>Sunucu Gezgini'ni kullanarak depolama kaynaklarına göz atma ve bu kaynakları yönetme
 
@@ -23,7 +23,7 @@ ms.locfileid: "94902226"
 
 Microsoft Visual Studio için Azure Araçları 'nı yüklediyseniz, Azure için depolama hesaplarınızdan blob, kuyruk ve tablo verilerini görüntüleyebilirsiniz. Sunucu Gezgini 'de Azure **depolama** düğümü, yerel depolama öykünücü hesabınızdaki ve diğer Azure depolama hesaplarınızdaki verileri gösterir.
 
-Visual Studio 'da Sunucu Gezgini görüntülemek için, menü çubuğunda, Sunucu Gezgini **görüntüle**' yi seçin  >  **Server Explorer**. **Depolama** düğümü, her bir Azure aboneliğinde veya bağlı olduğunuz sertifikada bulunan tüm depolama hesaplarını gösterir. Depolama Hesabınız görünmezse, [Bu makalenin ilerleyen kısımlarındaki](#add-storage-accounts-by-using-server-explorer)yönergeleri izleyerek ekleyebilirsiniz.
+Visual Studio 'da Sunucu Gezgini görüntülemek için, menü çubuğunda, Sunucu Gezgini **görüntüle**' yi seçin  >  . **Depolama** düğümü, her bir Azure aboneliğinde veya bağlı olduğunuz sertifikada bulunan tüm depolama hesaplarını gösterir. Depolama Hesabınız görünmezse, [Bu makalenin ilerleyen kısımlarındaki](#add-storage-accounts-by-using-server-explorer)yönergeleri izleyerek ekleyebilirsiniz.
 
 Azure SDK 2,7 ' den başlayarak, Azure kaynaklarınızı görüntülemek ve yönetmek için bulut Gezgini 'ni de kullanabilirsiniz. Daha fazla bilgi için bkz. [Cloud Explorer Ile Azure kaynaklarını yönetme](vs-azure-tools-resources-managing-with-cloud-explorer.md).
 

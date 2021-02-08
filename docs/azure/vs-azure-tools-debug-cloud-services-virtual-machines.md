@@ -2,18 +2,18 @@
 title: Azure bulut hizmetinde veya sanal makinede hata ayıklama
 description: Visual Studio 'da bir bulut hizmetinde veya sanal makinede hata ayıklama
 author: mikejo5000
-manager: jillfra
+manager: jmartens
 ms.topic: how-to
 ms.workload: azure-vs
 ms.date: 11/11/2016
 ms.author: mikejo
 ms.technology: vs-ide-debug
-ms.openlocfilehash: c6e03bb4048b077bb4e1faa8b0382a3f4dbaf856
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: c7a95c43435cf78f169ce363b3e8fe301e9d0cbe
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94902565"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99844339"
 ---
 # <a name="debugging-an-azure-cloud-service-or-virtual-machine-in-visual-studio"></a>Visual Studio 'da bir Azure bulut hizmetinde veya sanal makinede hata ayıklama
 
@@ -27,7 +27,7 @@ Azure işlem öykünücüsü 'nü kullanarak, yerel bir makinedeki bulut hizmeti
 
 ### <a name="to-debug-your-cloud-service-on-your-local-computer"></a>Yerel bilgisayarınızda bulut hizmetinizde hata ayıklamak için
 
-1. **Debug**  >  Azure bulut hizmeti Projenizi çalıştırmak için menü çubuğunda Hata **ayıklamayı Başlat** ' ı seçin. Alternatif olarak F5 tuşuna basabilirsiniz. Işlem öykünücüsünün başladığı bir ileti görürsünüz. Öykünücü başladığında, sistem tepsisi simgesi onu onaylar.
+1.   >  Azure bulut hizmeti Projenizi çalıştırmak için menü çubuğunda Hata **ayıklamayı Başlat** ' ı seçin. Alternatif olarak F5 tuşuna basabilirsiniz. Işlem öykünücüsünün başladığı bir ileti görürsünüz. Öykünücü başladığında, sistem tepsisi simgesi onu onaylar.
 
     ![Sistem tepsisinde Azure öykünücüsü](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC783828.png)
 
@@ -77,7 +77,7 @@ Bir bulut hizmeti için uzaktan hata ayıklamayı etkinleştirirseniz, performan
 
     ![Kod türünü seç iletişim kutusu](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC718346.png)
 
-4. Hata ayıklayıcının eklendiği işlemi belirlemek için, menü çubuğunda Windows işlemlerini **Hata Ayıkla**' yı seçin  >  **Windows**  >  **Processes** ve **süreçler** iletişim kutusunu açın. (Klavye: Ctrl + Alt + Z) Belirli bir işlemi ayırmak için, kısayol menüsünü açın ve ardından **Işlemi ayır**' ı seçin. Ya da Sunucu Gezgini ' de örnek düğümünü bulun, işlemi bulun, kısayol menüsünü açın ve ardından **Işlemi ayır**' ı seçin.
+4. Hata ayıklayıcının eklendiği işlemi belirlemek için, menü çubuğunda Windows işlemlerini **Hata Ayıkla**' yı seçin  >    >  ve **süreçler** iletişim kutusunu açın. (Klavye: Ctrl + Alt + Z) Belirli bir işlemi ayırmak için, kısayol menüsünü açın ve ardından **Işlemi ayır**' ı seçin. Ya da Sunucu Gezgini ' de örnek düğümünü bulun, işlemi bulun, kısayol menüsünü açın ve ardından **Işlemi ayır**' ı seçin.
 
     ![Hata Ayıklama İşlemleri](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC690787.gif)
 

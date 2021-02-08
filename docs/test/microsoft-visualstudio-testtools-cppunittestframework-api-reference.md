@@ -5,16 +5,16 @@ ms.custom: SEO-VS-2020
 ms.date: 09/27/2019
 ms.topic: reference
 ms.author: corob
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 author: corob-msft
-ms.openlocfilehash: b552ff667d4b7aef5f982d4fb0cda78d65c98ed6
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+ms.openlocfilehash: 355259f784d496fae574a331382d03d3fbe5bfd6
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96329191"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99844534"
 ---
 # <a name="microsoftvisualstudiotesttoolscppunittestframework-api-reference"></a>Microsoft. VisualStudio. TestTools. CppUnitTestFramework API başvurusu
 
@@ -235,13 +235,13 @@ TEST_DESCRIPTION(description)
 TEST_PRIORITY(priority)
 ```
 
-`TEST_METHOD_ATTRIBUTE`Öncelik değeri ile bir adı `Priority` ve özniteliği tanımlar. *priority*
+`TEST_METHOD_ATTRIBUTE`Öncelik değeri ile bir adı `Priority` ve özniteliği tanımlar. 
 
 ```cpp
 TEST_WORKITEM(workitem)
 ```
 
-Çalışma `TEST_METHOD_ATTRIBUTE` `WorkItem` öğesinin adı *workItem* ve öznitelik değeri ile bir tanımlar.
+Çalışma `TEST_METHOD_ATTRIBUTE` `WorkItem` öğesinin adı ve öznitelik değeri ile bir tanımlar.
 
 ```cpp
 TEST_IGNORE()

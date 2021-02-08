@@ -2,17 +2,17 @@
 title: Hizmet yapılandırma ve profillerini yönetme | Microsoft Docs
 description: Hizmet yapılandırmaları ve profilleri yapılandırma dosyalarıyla çalışmayı öğrenin | Dağıtım ortamları ve bulut hizmetleri için yayımlama ayarları için hangi ayarları depolar.
 author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 8/11/2017
 ms.author: ghogen
-ms.openlocfilehash: 751214a99c7724c83f01226164202f90425ebf65
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: e1c97670a91f2d90a01fef24f592e6ce2d5b05fd
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94902089"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99843819"
 ---
 # <a name="how-to-manage-service-configurations-and-profiles"></a>Hizmet yapılandırmalarını ve profillerini yönetme
 ## <a name="overview"></a>Genel Bakış

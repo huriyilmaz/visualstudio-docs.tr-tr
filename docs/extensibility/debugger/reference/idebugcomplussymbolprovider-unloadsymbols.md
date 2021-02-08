@@ -8,23 +8,23 @@ helpviewer_keywords:
 ms.assetid: 53e3ddc1-ab47-4097-8fef-b26e5504b37a
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 1ab4e3d45d34e2db00a3f2adc20a43050d9ba391
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0e826f8190650eed26228b9ce54b7128139f981a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80733514"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99842491"
 ---
 # <a name="idebugcomplussymbolproviderunloadsymbols"></a>IDebugComPlusSymbolProvider::UnloadSymbols
 Belirtilen modülün hata ayıklama sembollerini bellekten kaldırır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
 HRESULT UnloadSymbols(
