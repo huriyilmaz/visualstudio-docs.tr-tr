@@ -12,19 +12,19 @@ helpviewer_keywords:
 - code snippets
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 dev_langs:
 - CSharp
 - VB
 - CPP
 ms.workload:
 - multiple
-ms.openlocfilehash: 52059dd464ad0c720a4a2e77a961b7d6f3525c6d
-ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
+ms.openlocfilehash: 642bfe9fdccaa607476facb792120502437cb4b8
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95006399"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99841983"
 ---
 # <a name="code-snippets"></a>Kod parçacıkları
 
@@ -39,7 +39,7 @@ Kod parçacıkları, C#, C++, Visual Basic, XML ve T-SQL dahil olmak üzere çok
 
 Kod parçacıklarına aşağıdaki genel yollarla erişilebilir:
 
-- Menü çubuğunda, IntelliSense **Düzenle**  >  **IntelliSense**  >  **kod parçacığı Ekle** ' yi seçin.
+- Menü çubuğunda, IntelliSense **Düzenle**  >    >  **kod parçacığı Ekle** ' yi seçin.
 
 - Kod düzenleyicisindeki sağ tıklama veya bağlam menüsünde kod **parçacığı**  >  **ekleme kod parçacığı** ' ni seçin.
 
@@ -64,7 +64,7 @@ finally
 
 Kod penceresinin sağ tıklama menüsünde (bağlam menüsü) kod **parçacığı Ekle** ' ye tıklayıp, ardından **Visual C#**, sonra yazarak `tryf` ve ardından **sekme** tuşuna basarak bu parçacığı ekleyebilirsiniz. İsterseniz `tryf` **Tab** tuşuna iki kez yazabilir ve basabilirsiniz.
 
-Bir surround-kod parçacığı ile bir örnek: C++ ' da, `if` ekleme parçacığı ya da bir surround olarak kod parçacığı olarak kullanılabilir. Bir kod satırı seçer (örneğin `return FALSE;` ) ve ardından **birlikte Çevrele** seçeneğini belirlerseniz, kod  >  **if** parçacığı satır etrafında genişletilir:
+Bir surround-kod parçacığı ile bir örnek: C++ ' da, `if` ekleme parçacığı ya da bir surround olarak kod parçacığı olarak kullanılabilir. Bir kod satırı seçer (örneğin `return FALSE;` ) ve ardından **birlikte Çevrele** seçeneğini belirlerseniz, kod  >  parçacığı satır etrafında genişletilir:
 
 ```cpp
 if (true)
@@ -77,7 +77,7 @@ if (true)
 
 Kod parçacıkları, yazmakta olduğunuz kesin kodu sığdırmak için değiştirmeniz gereken yer tutucuları olan değiştirme parametrelerini içerebilir. Önceki örnekte `true` , uygun koşulla değiştireceğiniz bir değiştirme parametresidir. Yaptığınız değişiklik, kod parçacığında aynı değiştirme parametresinin her örneği için yinelenir.
 
-Örneğin, Visual Basic bir özelliği ekleyen bir kod parçacığı vardır. Kod parçacığını eklemek için, **Snippet**  >  bir Visual Basic kod dosyasındaki sağ tıklama veya bağlam menüsünden kod parçacığı **Ekle kod parçacığını** seçin. Ardından, **kod desenleri**  >  **özelliklerini, yordamları, olayları**  >  **bir özelliği tanımlar**.
+Örneğin, Visual Basic bir özelliği ekleyen bir kod parçacığı vardır. Kod parçacığını eklemek için,   >  bir Visual Basic kod dosyasındaki sağ tıklama veya bağlam menüsünden kod parçacığı **Ekle kod parçacığını** seçin. Ardından, **kod desenleri**  >  **özelliklerini, yordamları, olayları**  >  **bir özelliği tanımlar**.
 
 ![Özellik tanımlamak için kod parçacığı menüsü](media/code-snippets-vb-property.png)
 
