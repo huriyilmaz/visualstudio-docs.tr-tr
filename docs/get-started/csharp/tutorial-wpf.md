@@ -11,15 +11,15 @@ dev_langs:
 ms.assetid: f84339c7-d617-4f56-bfcd-af2215c347ba
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 26beadbe6963a685f10aef1db7bd8779434927d2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4384a724b57de565e03637057e16fc26e8213e5e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85419282"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99924881"
 ---
 # <a name="tutorial-create-a-simple-application-with-c"></a>Öğretici: C ile basit bir uygulama oluşturma\#
 
@@ -44,7 +44,7 @@ Visual Studio 'Yu ilk kez açtığınızda, oturum açmanız istenir. Bu adım, 
 
 ![Ayarları Seç iletişim kutusu](../media/exploreide-settings.png)
 
-Visual Studio başlatıldıktan sonra araç pencerelerini, menüleri ve araç çubuklarını ve ana pencere alanını görürsünüz. Araç pencereleri, **Hızlı Başlat**, menü çubuğu ve en üstteki Standart araç çubuğu ile uygulama penceresinin sol ve sağ taraflarına yerleştirilir. Uygulama penceresinin merkezinde **Başlangıç sayfası**bulunur. Bir çözüm veya proje yüklediğinizde, düzenleyiciler ve tasarımcılar **Başlangıç sayfasının** bulunduğu alanda görüntülenir. Bir uygulama geliştirirken, bu merkezi alanda zamanınızın çoğunu harcarcaksınız.
+Visual Studio başlatıldıktan sonra araç pencerelerini, menüleri ve araç çubuklarını ve ana pencere alanını görürsünüz. Araç pencereleri, **Hızlı Başlat**, menü çubuğu ve en üstteki Standart araç çubuğu ile uygulama penceresinin sol ve sağ taraflarına yerleştirilir. Uygulama penceresinin merkezinde **Başlangıç sayfası** bulunur. Bir çözüm veya proje yüklediğinizde, düzenleyiciler ve tasarımcılar **Başlangıç sayfasının** bulunduğu alanda görüntülenir. Bir uygulama geliştirirken, bu merkezi alanda zamanınızın çoğunu harcarcaksınız.
 
 ![Genel ayarlar uygulanmış şekilde Visual Studio 2017 IDE](../media/exploreide-idewithgeneralsettings.png "Genel ayarların uygulanmış olduğu Visual Studio 2017 IDE ekran görüntüsü")
 
@@ -66,7 +66,7 @@ Visual Studio'da bir uygulama oluştururken önce bir proje ve bir çözüm olu�
 
      ![Menü çubuğunda dosya, yeni, proje ' yi seçin.](../media/exploreide-filenewproject.png "Dosya, yeni, proje ' yi seçtiğiniz menü çubuğunun ekran görüntüsü")
 
-1. **Yeni proje** iletişim kutusunda, **yüklü**  >  **Visual C#**  >  **Windows Masaüstü** kategorisini seçin ve ardından **WPF uygulaması (.NET Framework)** şablonunu seçin. Projeyi **HelloWPFApp**olarak adlandırın ve **Tamam**' ı seçin.
+1. **Yeni proje** iletişim kutusunda, **yüklü**  >  **Visual C#**  >  **Windows Masaüstü** kategorisini seçin ve ardından **WPF uygulaması (.NET Framework)** şablonunu seçin. Projeyi **HelloWPFApp** olarak adlandırın ve **Tamam**' ı seçin.
 
      ![Visual Studio 'da WPF uygulama şablonu yeni proje iletişim kutusu](media/exploreide-newprojectcsharp.png "Yeni proje iletişim kutusunda WPF uygulama şablonunun ekran görüntüsü")
 
@@ -87,7 +87,7 @@ Visual Studio'da bir uygulama oluştururken önce bir proje ve bir çözüm olu�
    > [!NOTE]
    > Biri .NET Framework ve diğeri .NET Core için olmak üzere iki WPF Masaüstü şablonu bulabilirsiniz. .NET Core şablonu, Visual Studio 2019 sürüm 16,3 ve sonraki sürümlerinde kullanılabilir. Bu öğretici için bunlardan birini kullanabilirsiniz, ancak yeni geliştirme için .NET Core önerilir.
 
-1. Sonraki ekranda, projeye **HelloWPFApp**adını verin ve **Oluştur**' u seçin.
+1. Sonraki ekranda, projeye **HelloWPFApp** adını verin ve **Oluştur**' u seçin.
 
    ![Projenizin ' HelloWPFApp ' olarak adlandırın](./media/vs-2019/exploreide-nameproject.png "Projenizin adını girdiğiniz pencerenin ekran görüntüsü")
 
@@ -100,23 +100,23 @@ Visual Studio HelloWPFApp projesini ve çözümünü oluşturur ve **Çözüm Ge
 > [!NOTE]
 > XAML (Genişletilebilir uygulama biçimlendirme dili) hakkında daha fazla bilgi için bkz. [WPF Için xaml genel bakış](/dotnet/framework/wpf/advanced/xaml-overview-wpf) sayfası.
 
-Projeyi oluşturduktan sonra özelleştirebilirsiniz. Bunu yapmak için, **Görünüm** menüsünden **Özellikler penceresi** ' ni seçin veya **F4**tuşuna basın. Daha sonra, bir uygulamadaki proje öğeleri, denetimler ve diğer öğeler için seçenekleri görüntüleyebilir ve değiştirebilirsiniz.
+Projeyi oluşturduktan sonra özelleştirebilirsiniz. Bunu yapmak için, **Görünüm** menüsünden **Özellikler penceresi** ' ni seçin veya **F4** tuşuna basın. Daha sonra, bir uygulamadaki proje öğeleri, denetimler ve diğer öğeler için seçenekleri görüntüleyebilir ve değiştirebilirsiniz.
 
    ![Özellik penceresi](../media/exploreide-hellowpfappfiles.png "WPF dosya uygulama adlarıyla Özellikler penceresi ekran görüntüsü")   
 
 ### <a name="change-the-name-of-mainwindowxaml"></a>MainWindow. xaml adını değiştirme
 
-Şimdi, MainWindow 'e daha özel bir ad verelim. **Çözüm Gezgini**, *MainWindow. xaml* ' e sağ tıklayıp **Yeniden Adlandır**' ı seçin. Dosyayı *Greetings. xaml*olarak yeniden adlandırın.
+Şimdi, MainWindow 'e daha özel bir ad verelim. **Çözüm Gezgini**, *MainWindow. xaml* ' e sağ tıklayıp **Yeniden Adlandır**' ı seçin. Dosyayı *Greetings. xaml* olarak yeniden adlandırın.
 
 ## <a name="design-the-user-interface-ui"></a>Kullanıcı arabirimini (UI) tasarlama
 
-Tasarımcı açık değilse, *Greetings. xaml* ' i seçin ve sonra **Shift** + da tasarımcıyı açmak için SHIFT**F7** tuşuna basın.
+Tasarımcı açık değilse, *Greetings. xaml* ' i seçin ve sonra  + da tasarımcıyı açmak için SHIFT **F7** tuşuna basın.
 
 Bu uygulamaya üç tür denetim ekleyeceğiz: <xref:System.Windows.Controls.TextBlock> Denetim, iki denetim <xref:System.Windows.Controls.RadioButton> ve bir <xref:System.Windows.Controls.Button> Denetim.
 
 ### <a name="add-a-textblock-control"></a>TextBlock denetimi ekleme
 
-1. **CTRL** + **Q** tuşlarına basarak arama kutusunu etkinleştirin ve **araç kutusu**yazın. Sonuçlar listesinden **> araç kutusunu görüntüle** ' yi seçin.
+1. **CTRL** + **Q** tuşlarına basarak arama kutusunu etkinleştirin ve **araç kutusu** yazın. Sonuçlar listesinden **> araç kutusunu görüntüle** ' yi seçin.
 
 1. **Araç kutusunda**, TextBlock denetimini görmek IÇIN **ortak WPF denetimleri** düğümünü genişletin.
 
@@ -190,7 +190,7 @@ Bu adımda, her zaman iki radyo düğmelerinden biri seçili olacak şekilde, Me
 
 1. XAML görünümünde, Merhaba düğmesine yönelik biçimlendirmeyi bulun.
 
-1. Bir **IsChecked** özniteliği ekleyin ve bunu **true**olarak ayarlayın. Özellikle, ekleyin `IsChecked="True"` .
+1. Bir **IsChecked** özniteliği ekleyin ve bunu **true** olarak ayarlayın. Özellikle, ekleyin `IsChecked="True"` .
 
    XAML işaretlemesi artık aşağıdaki örneğe benzer şekilde görünmelidir:
 
@@ -227,7 +227,7 @@ Ekleyeceğiniz son UI öğesi bir [düğme](/dotnet/framework/wpf/controls/butto
 
 ### <a name="add-code-to-the-display-button"></a>Görüntü düğmesine kod ekleme
 
-Bu uygulama çalıştığında, bir Kullanıcı radyo düğmesini seçtikten sonra **görüntüle** düğmesini seçtiğinde bir ileti kutusu görünür. Merhaba için bir ileti kutusu ve Güle Güle için bir diğer ileti kutusu görünecektir. Bu davranışı oluşturmak için `Button_Click` *Greetings.xaml.cs*içindeki olaya kod ekleyeceksiniz.
+Bu uygulama çalıştığında, bir Kullanıcı radyo düğmesini seçtikten sonra **görüntüle** düğmesini seçtiğinde bir ileti kutusu görünür. Merhaba için bir ileti kutusu ve Güle Güle için bir diğer ileti kutusu görünecektir. Bu davranışı oluşturmak için `Button_Click` *Greetings.xaml.cs* içindeki olaya kod ekleyeceksiniz.
 
 1. Tasarım yüzeyinde **görüntüle** düğmesine çift tıklayın.
 
@@ -271,7 +271,7 @@ Bu adımda, daha önce *MainWindow. xaml* dosyasının adını değiştirerek ne
 
    ![IOException iletisi](../media/exploreide-ioexception.png "IOException iletisinin ekran görüntüsü")
 
-1. Hata ayıklamayı Durdur hata ayıklamayı **Durdur seçeneğini belirleyerek**durdurun  >  **Stop Debugging**.
+1. Hata ayıklamayı Durdur hata ayıklamayı **Durdur seçeneğini belirleyerek** durdurun  >  .
 
 Bu öğreticinin başlangıcında *MainWindow. xaml* ' i *Greetings. xaml* olarak yeniden adlandırdık, ancak kod yine de uygulama için başlangıç URI 'si olarak *MainWindow. xaml* 'e başvuruyor, bu nedenle proje başlatılamıyor.
 
@@ -281,7 +281,7 @@ Bu öğreticinin başlangıcında *MainWindow. xaml* ' i *Greetings. xaml* olara
 
 1. `StartupUri="MainWindow.xaml"`Olarak değiştirin `StartupUri="Greetings.xaml"` ve değişiklikleri kaydedin.
 
-Hata ayıklayıcıyı yeniden başlatın ( **F5**tuşuna basın). Uygulamanın **Greetings** penceresini görmeniz gerekir.
+Hata ayıklayıcıyı yeniden başlatın ( **F5** tuşuna basın). Uygulamanın **Greetings** penceresini görmeniz gerekir.
 
 ::: moniker range="vs-2017"
 ![Çalışan uygulamanın ekran görüntüsü](media/exploreide-wpf-running-app.png)
@@ -294,11 +294,11 @@ Hata ayıklamayı durdurmak için şimdi uygulama penceresini kapatın.
 
 ### <a name="debug-with-breakpoints"></a>Kesme noktalarıyla hata ayıkla
 
-Hata ayıklama sırasında bazı kesme noktaları ekleyerek kodu test edebilirsiniz. Kesme **Debug**  >  **noktası geçiş noktasını**seçerek, kesmenin gerçekleşmesini istediğiniz kod satırının yanındaki düzenleyicinin sol kenar boşluğuna tıklayarak veya **F9**tuşuna basarak kesme noktaları ekleyebilirsiniz.
+Hata ayıklama sırasında bazı kesme noktaları ekleyerek kodu test edebilirsiniz. Kesme   >  **noktası geçiş noktasını** seçerek, kesmenin gerçekleşmesini istediğiniz kod satırının yanındaki düzenleyicinin sol kenar boşluğuna tıklayarak veya **F9** tuşuna basarak kesme noktaları ekleyebilirsiniz.
 
 #### <a name="add-breakpoints"></a>Kesme noktası ekleme
 
-1. *Greetings.xaml.cs*açın ve aşağıdaki satırı seçin:`MessageBox.Show("Hello.")`
+1. *Greetings.xaml.cs* açın ve aşağıdaki satırı seçin:`MessageBox.Show("Hello.")`
 
 1. Menüden **Hata Ayıkla**' yı ve ardından **kesme noktasını aç**' ı seçerek bir kesme noktası ekleyin.
 
@@ -340,11 +340,11 @@ Hata ayıklama sırasında bazı kesme noktaları ekleyerek kodu test edebilirsi
 
 Her şeyin çalıştığından emin olduğunuza göre, uygulamanın yayın derlemesini hazırlayabilirsiniz.
 
-1. Ana menüde, **Build**  >  önceki derlemeler sırasında oluşturulan ara dosyaları ve çıktı dosyalarını silmek için**temiz çözüm** oluştur ' u seçin. Bu gerekli değildir, ancak hata ayıklama oluşturma çıkışlarını temizler.
+1. Ana menüde,   >  önceki derlemeler sırasında oluşturulan ara dosyaları ve çıktı dosyalarını silmek için **temiz çözüm** oluştur ' u seçin. Bu gerekli değildir, ancak hata ayıklama oluşturma çıkışlarını temizler.
 
 1. Araç çubuğundaki DropDown denetimini kullanarak HelloWPFApp için derleme yapılandırmasını **hata ayıklamadan** **Yayınla** değiştirin (Şu anda "hata ayıkla" ifadesini alır).
 
-1. **Build**  >  **Build Solution**öğesini seçerek çözümü oluşturun.
+1. **Build**  >  **Build Solution** öğesini seçerek çözümü oluşturun.
 
 Tebrikler, bu öğreticiyi tamamlama! Çözümünüz ve proje dizininiz (*. ..\Hellowpfapp\hellowpfapp\bin\release*) altında oluşturduğunuz *. exe dosyasını* bulabilirsiniz.
 

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Domain-Specific Language, validation
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: cb9baced0a4cc38ae175146d3f3779c5b9c28dd2
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: 44ee0d9e10a4f96979362d8613dc6ca949ff2fd7
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97362541"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99924263"
 ---
 # <a name="validation-in-a-domain-specific-language"></a>Etki Alanına Özgü bir Dilde Doğrulama
 Etki alanına özgü dilin (DSL) yazarı olarak, Kullanıcı tarafından oluşturulan modelin anlamlı olduğunu doğrulamak için doğrulama kısıtlamaları tanımlayabilirsiniz. Örneğin, DSL 'niz kullanıcıların bir kişi ve üst öğelerinden oluşan aile ağacını çizmesini sağlamasına izin veriyorsa, alt öğelerinden sonra Doğum tarihleri olmasını sağlayan bir kısıtlama yazabilirsiniz.
@@ -195,7 +195,7 @@ if (erroneousLinks.Count < 5) { context.LogError( ... ); }
 
  Bir etki alanı ilişkisinin bir rolünün çokluğunu 1.. * veya 1.. 1 olacak şekilde ayarlarsanız, Kullanıcı bu ilişkinin bir bağlantısını oluşturmaz, bir doğrulama hata iletisi görüntülenir.
 
- Örneğin, DSL 'niz kişi ve kasalara sahipse ve ilişki 1 olan bir ilişkiye sahip olan bir ilişki **. \\** _ Town rolünde, şehir olmayan her kişi için bir hata mesajı görüntülenir.
+ Örneğin, DSL 'niz kişi ve kasalara sahipse ve ilişki 1 olan bir ilişkiye sahip olan bir ilişki **. \\** * Town rolünde, şehir olmayan her kişi için bir hata mesajı görüntülenir.
 
 ## <a name="running-validation-from-program-code"></a>Program kodundan doğrulama çalıştırma
  Doğrulaması, bir ValidationController 'a erişerek veya oluşturarak çalıştırabilirsiniz. Hataların hata penceresinde kullanıcıya görüntülenmesini istiyorsanız, diyagramınızın DocData 'a eklenmiş olan ValidationController ' ı kullanın. Örneğin, bir menü komutu yazıyorsanız, `CurrentDocData.ValidationController` komut kümesi sınıfında kullanılabilir:
@@ -235,7 +235,7 @@ if (!validator.Validate(store, ValidationCategories.Save))
 ## <a name="running-validation-when-a-change-occurs"></a>Değişiklik gerçekleştiğinde doğrulama çalıştırma
  Modelin geçersiz hale gelmesi durumunda kullanıcının hemen uyarı olduğundan emin olmak istiyorsanız, doğrulamayı çalıştıran bir depo olayı tanımlayabilirsiniz. Mağaza olayları hakkında daha fazla bilgi için bkz. [olay Işleyicileri değişiklikleri model dışında yayma](../modeling/event-handlers-propagate-changes-outside-the-model.md).
 
- Doğrulama koduna ek olarak, aşağıdaki örneğe benzer şekilde, _ *DslPackage** projenize özel bir kod dosyası ekleyin. Bu kod, `ValidationController` belgeye eklenmiş olan öğesini kullanır. Bu denetleyici, Visual Studio hata listesindeki doğrulama hatalarını görüntüler.
+ Doğrulama koduna ek olarak, aşağıdaki örneğe benzer içeriğe sahip **DslPackage** projenize özel bir kod dosyası ekleyin. Bu kod, `ValidationController` belgeye eklenmiş olan öğesini kullanır. Bu denetleyici, Visual Studio hata listesindeki doğrulama hatalarını görüntüler.
 
 ```csharp
 using System;

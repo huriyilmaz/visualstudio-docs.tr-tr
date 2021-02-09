@@ -11,13 +11,13 @@ helpviewer_keywords:
 - project templates [Visual Studio], Web
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
-ms.openlocfilehash: 8546b1364248b5c419a32e8f8ed40abf0b69fb5a
-ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
+manager: jmartens
+ms.openlocfilehash: 430faba462075335bbc8a3aa6e89f1c7f348ffb5
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95597086"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99924631"
 ---
 # <a name="how-to-manually-create-web-templates"></a>Nasıl yapılır: Web şablonlarını elle oluşturma
 
@@ -43,7 +43,7 @@ Web şablonu oluşturmak diğer şablon türlerini oluşturmaktan farklıdır. W
    - Step\chapter
    - VisualBasic
 
-     Örnek:
+     Örneğin:
 
      ```xml
      <TemplateData>
@@ -54,7 +54,7 @@ Web şablonu oluşturmak diğer şablon türlerini oluşturmaktan farklıdır. W
      </TemplateData>
      ```
 
-7. Şablonunuzda dosyaları seçin (Bu *vstemplate* dosyasını içerir), seçime sağ tıklayın ve **Send to**  >  **Sıkıştırılmış (daraltılmış) klasöre** Gönder ' i seçin. Dosyalar bir *. zip* dosyasında sıkıştırılır.
+7. Şablonunuzda dosyaları seçin (Bu *vstemplate* dosyasını içerir), seçime sağ tıklayın ve   >  **Sıkıştırılmış (daraltılmış) klasöre** Gönder ' i seçin. Dosyalar bir *. zip* dosyasında sıkıştırılır.
 
 8. *. Zip* şablon dosyasını Visual Studio proje şablonu dizinine yerleştirin. Varsayılan olarak, bu dizin *%userprofile%\, Studio \<Version\> \Projecttemplates* şeklindedir.
 

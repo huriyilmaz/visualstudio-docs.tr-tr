@@ -14,15 +14,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, packages
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: ee9b2a12c9eaa168f0223dff29a3379a12b3d691
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: eec1468fc2e0c51d7dea7aa5f3ffa808b484ec87
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96915355"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99923575"
 ---
 # <a name="how-to-add-and-remove-features-and-items-to-a-package-by-using-the-packaging-explorer"></a>Nasıl yapılır: paketleme Gezgini 'ni kullanarak bir pakete Özellikler ve öğeler ekleme ve kaldırma
   SharePoint öğelerini ve özelliklerini dağıtmak üzere bir paket yapılandırmak için paketleme Gezgini ' ni kullanabilirsiniz. SharePoint proje öğelerini ve. wsp dosyanızın içindeki özellikleri ayarlayabilirsiniz.
@@ -34,7 +34,7 @@ ms.locfileid: "96915355"
 
 #### <a name="to-open-the-packaging-explorer"></a>Paketleme Gezgini 'ni açmak için
 
-1. Menü çubuğunda, **View**  >  **diğer Windows**  >  **paketleme Gezginini** görüntüle ' yi seçin.
+1. Menü çubuğunda,   >  **diğer Windows**  >  **paketleme Gezginini** görüntüle ' yi seçin.
 
      **Paketleme Gezgini** **araç kutusunda** görünür.
 

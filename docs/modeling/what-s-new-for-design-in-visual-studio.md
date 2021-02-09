@@ -11,16 +11,16 @@ helpviewer_keywords:
 - modeling software [Visual Studio], What's New
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 monikerRange: vs-2017
-ms.openlocfilehash: bf622d9762e86bcb75a08c60085a15abb6fdca91
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: 00a72f52b67e1e55bcc0699a3daf7da4dcfbc57d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97360981"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99924007"
 ---
 # <a name="whats-new-for-design-in-visual-studio-2017"></a>Visual Studio 2017’de tasarıma yönelik yenilikler
 
@@ -73,7 +73,7 @@ Visual Studio çeşitli sürümlerde kullanılabilir. Bunların hepsi mimari ve 
 
 |**Özellik**|**Kurumsal sürüm**|**Professional sürümü**|**Topluluk sürümü**|
 |-|-|-|-|
-|**Kod eşlemeleri**|Evet|Yalnızca kod eşlemelerini okumayı, kod eşlemelerini filtrelemeyi, yeni genel düğümleri eklemeyi ve bir seçimden yeni bir yönlendirilmiş grafik oluşturmayı destekler.|-|
-|**Bağımlılık diyagramları**|Evet|Yalnızca bağımlılık diyagramlarını okumayı destekler.|Yalnızca bağımlılık diyagramlarını okumayı destekler.|
-|**Yönlendirilmiş grafikler** (DGML diyagramları)|Evet|Evet|Evet|
-|**Kod kopyası**|Evet|-|-|
+|**Kod eşlemeleri**|Yes|Yalnızca kod eşlemelerini okumayı, kod eşlemelerini filtrelemeyi, yeni genel düğümleri eklemeyi ve bir seçimden yeni bir yönlendirilmiş grafik oluşturmayı destekler.|-|
+|**Bağımlılık diyagramları**|Yes|Yalnızca bağımlılık diyagramlarını okumayı destekler.|Yalnızca bağımlılık diyagramlarını okumayı destekler.|
+|**Yönlendirilmiş grafikler** (DGML diyagramları)|Yes|Yes|Yes|
+|**Kod kopyası**|Yes|-|-|

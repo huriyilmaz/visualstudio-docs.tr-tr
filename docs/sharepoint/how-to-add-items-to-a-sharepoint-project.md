@@ -11,15 +11,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, adding items
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 4471f6a593e9349f32e4837da15df2e3e952d227
-ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
+ms.openlocfilehash: 4a32d38b20b93cf215cb53c2c2d2b8767418de24
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94850734"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99923488"
 ---
 # <a name="how-to-add-items-to-a-sharepoint-project"></a>Nasıl yapılır: bir SharePoint projesine öğe ekleme
   SharePoint çözümleri, her biri birden çok SharePoint proje öğesi içeren bir veya daha fazla proje içerir. Bir SharePoint çözümünü açtıktan veya oluşturduktan sonra, bu projelere yeni veya varolan öğeleri ekleyebilirsiniz. Örneğin, yeni iş akışı projeleri default. aspx adlı varsayılan bir formla gelir, ancak bu formu yeni veya farklı bir formla değiştirebilir veya başka bir ASPX formu ekleyebilirsiniz.
@@ -30,7 +30,7 @@ ms.locfileid: "94850734"
 
 2. **Çözüm Gezgini**, projenin düğümünü seçin.
 
-3. **Project**  >  **Yeni öğe** Ekle iletişim kutusunu göstermek için menü çubuğunda Proje **Yeni öğe Ekle** ' yi seçin.
+3.   >  **Yeni öğe** Ekle iletişim kutusunu göstermek için menü çubuğunda Proje **Yeni öğe Ekle** ' yi seçin.
 
 4. **Yüklü şablonlar** listesinde, **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
 
@@ -44,7 +44,7 @@ ms.locfileid: "94850734"
 
 2. **Çözüm Gezgini**, projenin düğümünü seçin.
 
-3. **Project**  >  **Varolan öğeyi Ekle** iletişim kutusunu göstermek için menü çubuğunda Proje **Varolan öğe Ekle** ' yi seçin.
+3.   >  **Varolan öğeyi Ekle** iletişim kutusunu göstermek için menü çubuğunda Proje **Varolan öğe Ekle** ' yi seçin.
 
 4. Eklemek istediğiniz öğeyi içeren klasöre gidin, seçin ve sonra **Ekle** düğmesini seçin.
 

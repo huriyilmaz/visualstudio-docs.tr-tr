@@ -9,18 +9,18 @@ ms.topic: tutorial
 ms.devlang: CSharp
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 dev_langs:
 - CSharp
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ee28bde6de10006ccfdc5175cca629ad9d1590d0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bbebcec3f5b2de01bcbfa7839f68e6f7a3e2cc64
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "81649648"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99922843"
 ---
 # <a name="how-to-run-a-c-program-in-visual-studio"></a>Nasıl yapılır: Visual Studio 'da C# programını çalıştırma
 
@@ -60,7 +60,7 @@ Visual Studio 'yu başlatın, boş bir C# konsol projesi açın, projede zaten b
 
 1. Uygun türde yeni bir proje oluşturun (emin değilseniz C# **konsol uygulamasını** kullanın).
 
-2. Proje düğümüne sağ tıklayın, **Add**  >  dosyaları seçmek ve bunları projenize aktarmak için**Mevcut öğeyi** ekleyin.  
+2. Proje düğümüne sağ tıklayın,   >  dosyaları seçmek ve bunları projenize aktarmak için **Mevcut öğeyi** ekleyin.  
 
 ### <a name="starting-from-a-folder"></a>Bir klasörden başlayarak
 
