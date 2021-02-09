@@ -10,15 +10,15 @@ f1_keywords:
 ms.assetid: 18a6c96e-49a9-4356-ab61-fbd7e3ab44bb
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f6bdf05878c08b1c175b78ff2205b74c4ea5669b
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 35dcc390dcf58e02a2c7c1fa2dba62840d433785
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94433940"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99882316"
 ---
 # <a name="switcht-activity-designer"></a>Switch\<T> Etkinlik Tasarımcısı
 
@@ -32,7 +32,7 @@ Bir <xref:System.Activities.Statements.Switch%601> etkinlik bir <xref:System.Act
 
 ## <a name="how-to-use-the-switcht-activity-designer"></a>Switch \<T> etkinlik tasarımcısını kullanma
 
-**Araç kutusunun** **Denetim akışı** kategorisindeki **\<T> Switch** etkinlik tasarımcısına erişin. İş Akışı Tasarımcısı, kullanıcının Etkinlikte kullanılan genel tür *T* 'yi belirtmesini sağlamak Için **türleri Seç** iletişim kutusunu görüntüler <xref:System.Activities.Statements.Switch%601> . Varsayılan değer **Int32** 'dir. Genel tür *t* seçildikten sonra, iş akışı tasarımcısına bir **anahtar<T \>** Designer eklenir.
+**Araç kutusunun** **Denetim akışı** kategorisindeki **\<T> Switch** etkinlik tasarımcısına erişin. İş Akışı Tasarımcısı, kullanıcının Etkinlikte kullanılan genel tür *T* 'yi belirtmesini sağlamak Için **türleri Seç** iletişim kutusunu görüntüler <xref:System.Activities.Statements.Switch%601> . Varsayılan değer **Int32**'dir. Genel tür *t* seçildikten sonra, iş akışı tasarımcısına bir **anahtar<T \>** Designer eklenir.
 
 **Anahtar<T \>** Designer 'ın özellikleri aşağıda verilmiştir. Bu özelliklerin tümü, özellik kılavuzunda düzenlenebilir. Bunlardan bazıları tasarımcı yüzeyi üzerinde de düzenlenebilir.
 
@@ -53,7 +53,7 @@ Bir servis talebi silmenin 2 yolu vardır:
 
 - Büyük/küçük harf ' i seçin ve silin.
 
-- Büyük/küçük harf ' i seçin, sağ tıklayarak bağlam menüsünü görüntüleyin ve **Sil** ' i seçin.
+- Büyük/küçük harf ' i seçin, sağ tıklayarak bağlam menüsünü görüntüleyin ve **Sil**' i seçin.
 
 Silmek için büyük/küçük harf ' i seçmeniz gerektiğini unutmayın. Etkinlik yalnızca bir servis talebi içinde seçilip silindiğinde etkinlik yalnızca durum değil olarak silinir.
 
