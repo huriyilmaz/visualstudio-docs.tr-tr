@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Business Data Connectivity service [SharePoint development in Visual Studio], get an entity
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: a02e88b0168a6aa4b1a69af3ee14150a71e76037
-ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
+ms.openlocfilehash: 237cd28bffece4517e80b979602ac8d2ed357aa2
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94849734"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99882693"
 ---
 # <a name="how-to-add-a-specific-finder-method"></a>Nasıl yapılır: belirli bir bulucu yöntemi ekleme
   *Belirli bir bulucu* yöntemi oluşturarak tek bir varlık örneği döndürebilirsiniz. Iş verileri bağlantısı (BDC) hizmeti, bir kullanıcı iş verileri Web bölümünde veya dış listede bir varlık seçtiğinde belirli Bulucu yöntemini yürütür. Daha fazla bilgi için bkz. [iş verileri bağlantı modeli tasarlama](../sharepoint/designing-a-business-data-connectivity-model.md).
@@ -35,7 +35,7 @@ ms.locfileid: "94849734"
 
     Visual Studio 'da **BDC tasarımcısına** bir varlık ekleme hakkında daha fazla bilgi için bkz. [nasıl yapılır: modele varlık ekleme](../sharepoint/how-to-add-an-entity-to-a-model.md).
 
-2. Menü çubuğunda, **View**  >  **diğer Windows** ve **BDC Yöntem ayrıntılarını** görüntüle ' yi seçin.
+2. Menü çubuğunda,   >  **diğer Windows** ve **BDC Yöntem ayrıntılarını** görüntüle ' yi seçin.
 
     **IVB yöntemi ayrıntıları** penceresi açılır. Bu pencere hakkında daha fazla bilgi için bkz. [BDC modeli tasarım araçlarına genel bakış](../sharepoint/bdc-model-design-tools-overview.md).
 

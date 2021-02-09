@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 47ee26cf-67b7-4ff1-8a9d-ab11a725405c
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 21e0e35b43fc3b94a8d029c97f56bd573ebac95f
-ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
+ms.openlocfilehash: eb70931f2c26c248b2e2d41348fa26958d5348b3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "96996376"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99883317"
 ---
 # <a name="how-to-use-wizards-with-project-templates"></a>Nasıl yapılır: Sihirbazları Proje Şablonlarıyla Kullanma
 
@@ -70,7 +70,7 @@ Bu yordamda, proje oluşturulmadan önce bir Windows formu açan özel bir sihir
 
 3. Derlemeyi VSıX projesine varlık olarak ekleyin. *Source. Extension. valtmanifest* dosyasını açın ve **varlıklar** sekmesini seçin. **Yeni varlık Ekle** penceresinde, **tür** için **Microsoft. VisualStudio. Assembly**' i seçin, **kaynak** için **Geçerli çözümde bir proje** seçin ve **Proje** için **myprojectwizard** öğesini seçin.
 
-4. Aşağıdaki başvuruları VSıX projesine ekleyin. ( **Çözüm Gezgini**, VSIX projesi düğümünün altında, **Başvurular**' ı seçin, sağ tıklayın ve **Başvuru Ekle**' yi seçin.) **Başvuru Ekle** iletişim kutusunda, **Framework** sekmesinde **System. Windows Forms** derlemesini bulun ve seçin. Ayrıca, **System** ve **System. Drawing** derlemelerini bulun ve seçin. Şimdi **Uzantılar** sekmesini seçin. **EnvDTE** derlemesini bulun ve seçin. Ayrıca **Microsoft. VisualStudio. TemplateWizardInterface** derlemesini bulun ve seçin. **Tamam** düğmesine tıklayın.
+4. Aşağıdaki başvuruları VSıX projesine ekleyin. ( **Çözüm Gezgini**, VSIX projesi düğümünün altında, **Başvurular**' ı seçin, sağ tıklayın ve **Başvuru Ekle**' yi seçin.) **Başvuru Ekle** iletişim kutusunda, **Framework** sekmesinde **System. Windows Forms** derlemesini bulun ve seçin. Ayrıca, **System** ve **System. Drawing** derlemelerini bulun ve seçin. Şimdi **Uzantılar** sekmesini seçin. **EnvDTE** derlemesini bulun ve seçin. Ayrıca **Microsoft. VisualStudio. TemplateWizardInterface** derlemesini bulun ve seçin. **Tamam**'a tıklayın.
 
 5. VSıX projesine sihirbaz uygulamasına yönelik bir sınıf ekleyin. ( **Çözüm Gezgini**, VSIX proje düğümüne sağ tıklayın ve **Ekle**' yi ve ardından **Yeni öğe**' yi ve ardından **sınıf**' ı seçin.) Sınıfı **Wizardimplementation** olarak adlandırın.
 

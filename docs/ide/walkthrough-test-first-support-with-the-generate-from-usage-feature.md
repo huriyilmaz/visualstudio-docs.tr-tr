@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Test-First Development
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d763a937ac23b397151aec163c2d0d90d7ebe6ba
-ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
+ms.openlocfilehash: 4ea04a9c70f23c30a5f603fa9411780223fff563
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96479686"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99883057"
 ---
 # <a name="walkthrough-test-first-development-with-the-generate-from-usage-feature"></a>İzlenecek yol: kullanımdan oluştur özelliğinden önce test geliştirme
 
@@ -38,7 +38,7 @@ Visual Studio, iş akışınız için en az kesintiyle yeni türler ve Üyeler o
 
 1. C# veya Visual Basic 'de yeni bir **Windows sınıf kitaplığı** projesi oluşturun. `GFUDemo_VB` `GFUDemo_CS` Kullandığınız dile bağlı olarak veya olarak adlandırın.
 
-2. **Çözüm Gezgini**, üstteki çözüm simgesine sağ tıklayın, **Add**  >  **Yeni proje** Ekle ' yi seçin.
+2. **Çözüm Gezgini**, üstteki çözüm simgesine sağ tıklayın,   >  **Yeni proje** Ekle ' yi seçin.
 
 3. Yeni bir **birim testi projesi (.NET Framework)** projesi oluşturun.
 
@@ -67,7 +67,7 @@ Visual Studio, iş akışınız için en az kesintiyle yeni türler ve Üyeler o
 2. Sınıfının bildirimini bulun `UnitTest1` ve olarak yeniden adlandırın `AutomobileTest` .
 
    > [!NOTE]
-   > IntelliSense artık IntelliSense deyimin tamamlanması için iki alternatif sağlıyor: *tamamlama modu* ve *öneri modu*. Sınıfların ve üyelerin tanımlanmadan önce kullanıldığı durumlar için öneri modunu kullanın. Bir **IntelliSense** penceresi açıkken, **Ctrl** + **Alt** + tamamlama modu ve öneri modu arasında geçiş yapmak için Ctrl alt **alanına** basabilirsiniz. Daha fazla bilgi için bkz. [IntelliSense 'ı kullanma](../ide/using-intellisense.md) . Öneri modu, bir sonraki adımda yazarken yardımcı olur `Automobile` .
+   > IntelliSense artık IntelliSense deyimin tamamlanması için iki alternatif sağlıyor: *tamamlama modu* ve *öneri modu*. Sınıfların ve üyelerin tanımlanmadan önce kullanıldığı durumlar için öneri modunu kullanın. Bir **IntelliSense** penceresi açıkken,  +  + tamamlama modu ve öneri modu arasında geçiş yapmak için Ctrl alt **alanına** basabilirsiniz. Daha fazla bilgi için bkz. [IntelliSense 'ı kullanma](../ide/using-intellisense.md) . Öneri modu, bir sonraki adımda yazarken yardımcı olur `Automobile` .
 
 3. Yöntemini bulun `TestMethod1()` ve olarak yeniden adlandırın `DefaultAutomobileIsInitializedCorrectly()` . Bu yöntemin içinde, aşağıdaki ekran görüntülerinde gösterildiği gibi adlı bir sınıfın yeni bir örneğini oluşturun `Automobile` . Bir derleme zamanı hatası gösteren dalgalı alt çizgi görünür ve sol kenar boşluğunda veya üzerine geldiğinizde doğrudan dalgalı bir [eylem](../ide/quick-actions.md) hatası ampulü görünür.
 
@@ -131,9 +131,9 @@ Belirtiminin, `Automobile` `IsRunning` `Model` ve `TopSpeed` özellikleri varsay
 
 ### <a name="run-the-tests"></a>Testleri çalıştırma
 
-1. **Test** menüsünde **Run**  >  **tüm testleri** Çalıştır ' ı seçin.
+1. **Test** menüsünde   >  **tüm testleri** Çalıştır ' ı seçin.
 
-     **Run**  >  **Tüm testleri** Çalıştır komutu, geçerli çözüm için yazılmış tüm test çerçevelerinden tüm testleri çalıştırır. Bu durumda, iki test vardır ve beklendiği gibi her ikisi de başarısız olur. `DefaultAutomobileIsInitializedCorrectly`Koşul döndürdüğü için test başarısız olur `Assert.IsTrue` `False` . `AutomobileWithModelNameCanStart` `Start` `Automobile` Sınıftaki yöntem bir özel durum oluşturduğundan test başarısız olur.
+       >  **Tüm testleri** Çalıştır komutu, geçerli çözüm için yazılmış tüm test çerçevelerinden tüm testleri çalıştırır. Bu durumda, iki test vardır ve beklendiği gibi her ikisi de başarısız olur. `DefaultAutomobileIsInitializedCorrectly`Koşul döndürdüğü için test başarısız olur `Assert.IsTrue` `False` . `AutomobileWithModelNameCanStart` `Start` `Automobile` Sınıftaki yöntem bir özel durum oluşturduğundan test başarısız olur.
 
      **Test sonuçları** penceresi aşağıdaki çizimde gösterilmiştir.
 

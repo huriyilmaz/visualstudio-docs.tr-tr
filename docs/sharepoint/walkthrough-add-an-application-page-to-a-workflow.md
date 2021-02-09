@@ -14,15 +14,15 @@ helpviewer_keywords:
 - application page [SharePoint development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: c862c1de3b0630b3a5144f821e6266c34a88a5db
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: d07b5272a31a0c649e12f353aefaa7c63c335eb5
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96915667"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99882667"
 ---
 # <a name="walkthrough-add-an-application-page-to-a-workflow"></a>İzlenecek yol: bir uygulama sayfasını bir iş akışına ekleme
   Bu izlenecek yol, bir iş akışından türetilmiş verileri bir iş akışı projesine görüntüleyen bir uygulama sayfasının nasıl ekleneceğini gösterir. BT Kılavuzu [: ilişkilendirme ve başlatma formları ile iş akışı oluşturma](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)konu başlığı altında açıklanan projede oluşturulur.
@@ -103,7 +103,7 @@ ms.locfileid: "96915667"
 
 #### <a name="to-code-the-application-page"></a>Uygulama sayfasını kodlayın
 
-1. **ApplicationPage1. aspx** düğümünü seçin ve ardından menü çubuğunda kodu **görüntüle**' yi seçerek  >  **Code** uygulama sayfasının arkasındaki kodu görüntüleyin.
+1. **ApplicationPage1. aspx** düğümünü seçin ve ardından menü çubuğunda kodu **görüntüle**' yi seçerek  >   uygulama sayfasının arkasındaki kodu görüntüleyin.
 
 2. Sınıfın en üstündeki **using** veya **Import** deyimlerini (programlama diline bağlı olarak) aşağıdaki gibi değiştirin:
 

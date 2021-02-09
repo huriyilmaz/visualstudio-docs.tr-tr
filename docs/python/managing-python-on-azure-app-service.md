@@ -5,18 +5,18 @@ ms.date: 01/07/2019
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: f96e9123f613cf50eebbedd393f5bce9cfa633d2
-ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
+ms.openlocfilehash: b76bc008c30efdee0185e6f122abaff8457acef6
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91830675"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99882797"
 ---
 # <a name="how-to-set-up-a-python-environment-on-azure-app-service-windows"></a>Azure App Service (Windows) üzerinde Python ortamı ayarlama
 
@@ -78,7 +78,7 @@ Bir Azure Resource Manager şablonuyla App Service dağıtıyorsanız, site uzan
 
 Site uzantısını yükledikten sonra (portal veya bir Azure Resource Manager şablonu aracılığıyla), uygulamanızın *web.config* dosyasını Python Yorumlayıcısına işaret edersiniz. *web.config* dosyası, IIS (7 +) Web sunucusuna, bir httpplatform (önerilen) veya FastCGI aracılığıyla Python isteklerini nasıl işleyeceğine ilişkin App Service çalışır.
 
-Site uzantısının *python.exe*tam yolunu bularak başlayın, sonra uygun *web.config* dosyasını oluşturun ve değiştirin.
+Site uzantısının *python.exe* tam yolunu bularak başlayın, sonra uygun *web.config* dosyasını oluşturun ve değiştirin.
 
 ### <a name="find-the-path-to-pythonexe"></a>python.exe yolunu bulun
 
@@ -94,13 +94,13 @@ Bu eylem, uzantının yolunu içeren Açıklama sayfasını açar:
 
 Uzantının yolunu görmekte sorun yaşıyorsanız, konsolunu kullanarak el ile bulabilirsiniz:
 
-1. App Service sayfanızda **geliştirme araçları**  >  **konsolunu**seçin.
-1. `ls ../home` `dir ..\home` *Python361x64*gibi en üst düzey uzantıları klasörlerini görmek için veya komutunu girin.
+1. App Service sayfanızda **geliştirme araçları**  >  **konsolunu** seçin.
+1. `ls ../home` `dir ..\home` *Python361x64* gibi en üst düzey uzantıları klasörlerini görmek için veya komutunu girin.
 1. `ls ../home/python361x64` `dir ..\home\python361x64` *python.exe* ve diğer yorumlayıcı dosyalarını içerdiğini doğrulamak için veya gibi bir komut girin.
 
 ### <a name="configure-the-httpplatform-handler"></a>HttpPlatform işleyicisini yapılandırma
 
-HttpPlatform modülü, yuva bağlantılarını doğrudan bir tek başına Python işlemine geçirir. Bu geçiş, istediğiniz herhangi bir Web sunucusunu çalıştırmanıza izin verir, ancak yerel bir Web sunucusu çalıştıran bir başlatma betiği gerektirir. Komut dosyasını `<httpPlatform>` *web.config*öğesinde belirtirsiniz; burada `processPath` öznitelik, site uzantısının Python yorumlayıcısını ve `arguments` özniteliği, betiğinizi ve sağlamak istediğiniz bağımsız değişkeni gösterir:
+HttpPlatform modülü, yuva bağlantılarını doğrudan bir tek başına Python işlemine geçirir. Bu geçiş, istediğiniz herhangi bir Web sunucusunu çalıştırmanıza izin verir, ancak yerel bir Web sunucusu çalıştıran bir başlatma betiği gerektirir. Komut dosyasını `<httpPlatform>` *web.config* öğesinde belirtirsiniz; burada `processPath` öznitelik, site uzantısının Python yorumlayıcısını ve `arguments` özniteliği, betiğinizi ve sağlamak istediğiniz bağımsız değişkeni gösterir:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -181,7 +181,7 @@ Paketleri doğrudan sunucu ortamına yüklemek için aşağıdaki yöntemlerden 
 
 1. Tek bir paket yüklemek için:
 
-    a. Paketi yüklemek istediğiniz *d:\home\python361x64*gibi Python yüklemesinin klasörüne gidin.
+    a. Paketi yüklemek istediğiniz *d:\home\python361x64* gibi Python yüklemesinin klasörüne gidin.
 
     b. `python.exe -m pip install <package_name>`Bir paket yüklemek için kullanın.
 
@@ -189,7 +189,7 @@ Paketleri doğrudan sunucu ortamına yüklemek için aşağıdaki yöntemlerden 
 
 1. Uygulamanız için zaten sunucuya bir *requirements.txt* dağıttıysanız, bu gereksinimlerin tümünü aşağıdaki şekilde yükleyebilirsiniz:
 
-    a. Paketi yüklemek istediğiniz *d:\home\python361x64*gibi Python yüklemesinin klasörüne gidin.
+    a. Paketi yüklemek istediğiniz *d:\home\python361x64* gibi Python yüklemesinin klasörüne gidin.
 
     b. `python.exe -m pip install --upgrade -r d:\home\site\wwwroot\requirements.txt` komutunu çalıştırın.
 

@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 10f0c666-ac2f-4ac5-9fb5-a88f660ab840
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 64012be03c08f3737f4e57a05217bf46082daeb6
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: de09394bfc071cbe3dd1fedad52d1e5a511b62c7
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98720754"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99882901"
 ---
 # <a name="cores-view-timeline"></a>Çekirdekler görünümü zaman çizelgesi
 Zaman çizelgesindeki her satır, profili oluşturulmuş sistemdeki mantıksal bir işlemci çekirdeğini temsil eder. Her satır için yatay eksen, belirli bir noktadaki mantıksal bir çekirdek üzerinde hangi iş parçacığının çalıştığını gösterir. İş parçacığını tanımlayan bir araç ipucunu döndürmek için bir zaman çizelgesinde ilgilendiğiniz bir rengin üzerine gelebilmeniz gerekir. İş parçacığı kimliği konusunda yardımcı olmak için pencerenin alt kısmındaki gösterge, her rengin ne temsil ettiğini gösterir. Yakınlaştırmak ve kapatmak için Yakınlaştır aracını kullanın ve CTRL tuşuna basarak veya fare tekerleğini taşıyarak yakınlaştırın. Çekirdek görünümü ve Iş parçacıkları görünümü arasında geçiş yaptığınızda yakınlaştırma tutarlılığı sürdürülür.

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - add-ins [Office development in Visual Studio], architecture
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 451ae0bd466403819a5b4e53d76070876d762c38
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: 136903bd6d844d57ef06fce5a62506e026355509
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96848358"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99882615"
 ---
 # <a name="architecture-of-vsto-add-ins"></a>VSTO Eklentileri Mimarisi
   Visual Studio 'da Office geliştirici araçları kullanılarak oluşturulan VSTO eklentileri, kararlılığı ve güvenliği vurgulayarak ve Microsoft Office yakından çalışmasını sağlayan mimari özelliklere sahiptir. Bu konuda, VSTO eklentilerinin aşağıdaki yönleri açıklanmaktadır:

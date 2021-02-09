@@ -14,15 +14,15 @@ helpviewer_keywords:
 - SharePoint projects, extending
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 074f5b8a3ed31587b86b172ad2da000b7b81e9c3
-ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
+ms.openlocfilehash: 4244fb83d4792786baeb99693dc0fee04624d37d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94850071"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99882732"
 ---
 # <a name="how-to-add-a-shortcut-menu-item-to-sharepoint-projects"></a>Nasıl yapılır: SharePoint projelerine kısayol menü öğesi ekleme
   Herhangi bir SharePoint projesine kısayol menü öğesi ekleyebilirsiniz. Kullanıcı **Çözüm Gezgini** bir proje düğümüne sağ tıkladığında, menü öğesi görünür.

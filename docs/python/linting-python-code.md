@@ -5,17 +5,17 @@ ms.date: 03/13/2019
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: d410fd7575b6f71f272f6924d15249f89aa6ebcc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 97336bf028a02c6c1f90262754dc0c89aa81e1cf
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85540107"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99882810"
 ---
 # <a name="use-pylint-to-check-python-code"></a>Python kodunu denetlemek için PyLint kullanın
 
@@ -50,7 +50,7 @@ Pylınt belgelerinin [komut satırı seçenekleri](https://pylint.readthedocs.io
    pylint --generate-rcfile > .pylintrc
    ```
 
-1. Visual Studio Çözüm Gezgini, projenize sağ tıklayın, **Add**  >  **var olan öğe**Ekle ' yi seçin, yeni *. pylintrc* dosyasına gidin, seçin ve **Ekle**' yi seçin.
+1. Visual Studio Çözüm Gezgini, projenize sağ tıklayın,   >  **var olan öğe** Ekle ' yi seçin, yeni *. pylintrc* dosyasına gidin, seçin ve **Ekle**' yi seçin.
 
 1. Üzerinde çalıştığınız çeşitli ayarlara sahip olan dosyayı düzenlenmek üzere açın. Bir uyarıyı devre dışı bırakmak için `[MESSAGES CONTROL]` bölümünü bulun, ardından `disable` Bu bölümdeki ayarı bulun. İstediğiniz uyarıları ekleyebileceğiniz belirli iletiler için uzun bir dize vardır. Buradaki örnekte, Append `,missing-docstring` (virgülle ayırıcı dahil).
 

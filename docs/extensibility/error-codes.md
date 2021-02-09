@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: d9cbd1c4-719b-467a-8100-333c1e146d3b
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: a77f869936531dbc41cc3bd1d9b510bf44c35cec
-ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
+ms.openlocfilehash: c9706f7c9cd5b25a3644af2f324fda01f448fa17
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "96994725"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99883408"
 ---
 # <a name="error-codes"></a>Hata kodları
 Bir kaynak denetimi eklentisi API işlevi bir hata döndürdüğünde, aşağıdaki hata kodlarından biri olması beklenir. Tüm hatalar negatif, uyarılar veya bilgilendirici hata kodları pozitif ve başarılı 0 ' dır.

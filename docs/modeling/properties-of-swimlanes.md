@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Domain-Specific Language, swimlane
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: fef3b2115be499197030a4ce7fd49b1dd849de12
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: 61994a25b5fa862a2014e2dd5b57a0c47130e6ba
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97363074"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99882992"
 ---
 # <a name="properties-of-swimlanes"></a>Kulvarların Özellikleri
 Bir diyagrama kulvarlar ekleyebilirsiniz. Kulvarlar bir diyagramı dikey veya yatay alanlara böler. Kulvarlar içinde görüntülenecek diğer şekilleri tanımlayabilirsiniz. Daha fazla bilgi için bkz. [Domain-Specific dil tanımlama](../modeling/how-to-define-a-domain-specific-language.md). Bu özelliklerin nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [Domain-Specific dilini özelleştirme ve genişletme](../modeling/customizing-and-extending-a-domain-specific-language.md).
@@ -39,7 +39,7 @@ Bir diyagrama kulvarlar ekleyebilirsiniz. Kulvarlar bir diyagramı dikey veya ya
 |Özel Oluşturucusu vardır|İse `True` , kaynak kodda özel bir Oluşturucu sağlanacaktır. Daha fazla bilgi için bkz. [oluşturulan sınıfları geçersiz kılma ve genişletme](../modeling/overriding-and-extending-the-generated-classes.md).|Yanlış|
 |Devralma değiştiricisi|Kulvardan (veya) oluşturulan kaynak kodu sınıfının devralım türünü açıklar `none` `abstract` `sealed` .|yok|
 |Temel kulvar|Bu kulvarın temel sınıfı.|(yok)|
-|Ad|Bu kulvarın adı.|Geçerli ad|
+|Name|Bu kulvarın adı.|Geçerli ad|
 |Ad Alanı|Bu Kulvar ile bağlantılı ad alanı.|Geçerli ad alanı|
 |Araç ipucu türü|Araç ipucu nasıl tanımlanır ( `fixed` , `variable` , veya `none` ). `fixed`Daha sonra `Fixed Tooltip Text` özelliğin değeri kullanılır; varsa `variable` , araç ipucu özel kodda tanımlanır.|\<none>|
 |Notlar|Bu Kulvar ile ilişkili resmi olmayan notlar.|\<none>|
@@ -47,7 +47,7 @@ Bir diyagrama kulvarlar ekleyebilirsiniz. Kulvarlar bir diyagramı dikey veya ya
 |Başlangıç yüksekliği|Bu kulvarın inç cinsinden başlangıç yüksekliği. Yalnızca yatay kulvarlar için geçerlidir.|0|
 |Başlangıç genişliği|Bu kulvarın inç cinsinden başlangıç genişliği. Yalnızca dikey kulvarlar için geçerlidir.|0|
 |Metin rengini gösterir|İse `True` , Kullanıcı oluşturulan Tasarımcıda bir Kulvar rengini ayarlayabilir. Bunu ayarlamak için kulvar şekline sağ tıklayın ve **gösterilen Ekle**' ye tıklayın.|Yanlış|
-|Açıklama|Oluşturulan tasarımcıyı belgelemek için kullanılır.|\<none>|
+|Description|Oluşturulan tasarımcıyı belgelemek için kullanılır.|\<none>|
 |Görünen Ad|Bu Kulvar sınıfına başvurmak için oluşturulan tasarımcıda görüntülenecek ad.|\<none>|
 |Düzeltilen araç Ipucu metni|Sabit bir araç ipucu için kullanılan metin.|\<none>|
 |Help anahtar sözcüğü|Bu Kulvar için F1 yardımını dizine eklemek için kullanılan anahtar sözcük.|\<none>|

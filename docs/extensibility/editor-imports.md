@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 8d096de3-33b4-427a-a122-4aeff8a72da0
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d4e3a128f0f2873ad1946788b34761aadd1e7021
-ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
+ms.openlocfilehash: aef66be9797967b8c551ad4d1674c0b7be7aad81
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "96994777"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99883486"
 ---
 # <a name="editor-imports"></a>Düzenleyici içeri aktarmaları
 Uzantınız için çekirdek düzenleyiciye farklı türlerde erişim sağlayan bir dizi Düzenleyici hizmeti, fabrikası ve aracıları içeri aktarabilirsiniz. Örneğin, <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService> belirli bir içerik türü için size bir sağlamak üzere öğesini içeri aktarabilirsiniz <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigator> . (Bu gezgin, bir metin arabelleğinde farklı türlerde aramalar gerçekleştirmenize olanak tanır.)
@@ -71,7 +71,7 @@ internal SVsServiceProvider ServiceProvider = null;
 ## <a name="services"></a>Hizmetler
  Düzenleyici Hizmetleri, genellikle bir hizmet sağlayan ve birden çok bileşen genelinde paylaşılan tek varlıklardır.
 
-|İçeri Aktar|Saðlar|
+|İçeri Aktarma|Saðlar|
 |------------|--------------|
 |<xref:Microsoft.VisualStudio.Utilities.IFileExtensionRegistryService>|Dosya uzantıları ve nesneler arasındaki ilişki <xref:Microsoft.VisualStudio.Utilities.IContentType> .|
 |<xref:Microsoft.VisualStudio.Utilities.IContentTypeRegistryService>|<xref:Microsoft.VisualStudio.Utilities.IContentType> nesneleri topluluğu.|
@@ -113,7 +113,7 @@ internal SVsServiceProvider ServiceProvider = null;
 ## <a name="other-imports"></a>Diğer içeri aktarmalar
  Sağlayıcı fabrikaları ve aracılar genellikle birden çok bileşende birden fazla örneğe sahip olan varlıklardır.
 
-|İçeri Aktar|Saðlar|
+|İçeri Aktarma|Saðlar|
 |------------|--------------|
 |<xref:Microsoft.VisualStudio.Text.Adornments.IErrorProviderFactory>|Bir <xref:Microsoft.VisualStudio.Text.Tagging.SimpleTagger%601> türü <xref:Microsoft.VisualStudio.Text.Tagging.ErrorTag> ) verilen arabellek için.|
 |<xref:Microsoft.VisualStudio.Text.Adornments.ITextMarkerProviderFactory>|Metin işaretçisi etiketi oluşturma ( <xref:Microsoft.VisualStudio.Text.Tagging.SimpleTagger%601> türü <xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag> ).|

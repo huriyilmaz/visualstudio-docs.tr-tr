@@ -6,17 +6,17 @@ ms.date: 01/28/2019
 ms.topic: tutorial
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: fda68b9e5bffbd1afab3389a0d8d624312a8de3f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7ca28446377c2e04766f70c9146e09dc47b8f089
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62430070"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99882784"
 ---
 # <a name="step-2-write-and-run-code"></a>2. Adım: kodu yazma ve çalıştırma
 
@@ -30,7 +30,7 @@ Proje dosyalarını yönettiğiniz **Çözüm Gezgini** , genellikle, kaynak kod
 
     ![IntelliSense otomatik tamamlama açılan penceresi](media/vs-getting-started-python-04-IntelliSense1b.png)
 
-1. IntelliSense, kullanmakta olduğunuz ifadeye, aradığınız işleve ve benzeri olarak farklı bilgiler gösterir. İşlevi ile `print` , `(` `print` bir işlev çağrısını belirten yazdıktan sonra bu işlev için tam kullanım bilgilerini görüntüler. IntelliSense açılır penceresi ayrıca kalın yazı (burada gösterilen**değer** ) ile geçerli bağımsız değişkeni gösterir:
+1. IntelliSense, kullanmakta olduğunuz ifadeye, aradığınız işleve ve benzeri olarak farklı bilgiler gösterir. İşlevi ile `print` , `(` `print` bir işlev çağrısını belirten yazdıktan sonra bu işlev için tam kullanım bilgilerini görüntüler. IntelliSense açılır penceresi ayrıca kalın yazı (burada gösterilen **değer** ) ile geçerli bağımsız değişkeni gösterir:
 
     ![Bir işlev için IntelliSense otomatik tamamlama açılan penceresi](media/vs-getting-started-python-05-IntelliSense2b.png)
 
@@ -84,7 +84,7 @@ Proje dosyalarını yönettiğiniz **Çözüm Gezgini** , genellikle, kaynak kod
         print(cos(radians(i)))
     ```
 
-1. Programı, **Ctrl** + **F5** **Debug**  >  **hata ayıklama olmadan**CTRL F5 veya Debug Start ile yeniden çalıştırın. Bitirdiğinizde çıkış penceresini kapatın.
+1. Programı,  +    >  **hata ayıklama olmadan** CTRL F5 veya Debug Start ile yeniden çalıştırın. Bitirdiğinizde çıkış penceresini kapatın.
 
 ## <a name="next-step"></a>Sonraki adım
 

@@ -6,17 +6,17 @@ ms.date: 01/07/2019
 ms.topic: tutorial
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: c9adda5eb9edba5e1ba62097d55c033be6c85d2e
-ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
+ms.openlocfilehash: 611bad608d3619e020994ad7325ad7a678fe1e24
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92099368"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99882836"
 ---
 # <a name="step-5-use-the-polls-flask-web-project-template"></a>5. Adım: Flask Web projesi şablonunu yoklayıp kullanın
 
@@ -36,7 +36,7 @@ Visual Studio aynı zamanda aynı uygulamayı üreten "Flask/Jade Web projesini 
 
 ## <a name="step-5-1-create-the-project"></a>Adım 5-1: projeyi oluşturma
 
-1. Visual Studio 'da **Çözüm Gezgini**gidin, bu öğreticide daha önce oluşturulan **learningflask** çözümüne sağ tıklayın ve **Add**  >  **Yeni proje**Ekle ' yi seçin. (Alternatif olarak, yeni bir çözüm kullanmak isterseniz **Dosya**  >  ' yı seçin. **Yeni**  >  Bunun yerine **Proje** .)
+1. Visual Studio 'da **Çözüm Gezgini** gidin, bu öğreticide daha önce oluşturulan **learningflask** çözümüne sağ tıklayın ve   >  **Yeni proje** Ekle ' yi seçin. (Alternatif olarak, yeni bir çözüm kullanmak isterseniz **Dosya**  >  ' yı seçin. **Yeni**  >  Bunun yerine **Proje** .)
 
 1. Yeni proje iletişim kutusunda, **Flask Web projesi şablonunu yoklayıp** seçin, "Flaskyoklamaları" projesini çağırın ve **Tamam**' ı seçin.
 
@@ -68,7 +68,7 @@ Visual Studio aynı zamanda aynı uygulamayı üreten "Flask/Jade Web projesini 
 
 1. Uygulamanın, izleyen bölümler için çalışır durumda kalmasını sağlayabilirsiniz.
 
-    Uygulamayı durdurmak ve [kaynak denetimine değişiklikleri uygulamak](learn-flask-visual-studio-step-02-create-app.md#commit-to-source-control)istiyorsanız, önce **Takım Gezgini**içindeki **değişiklikler** sayfasını açın, sanal ortam (Belki de **env**) klasörüne sağ tıklayın ve **Bu yerel öğeleri yoksay**' ı seçin.
+    Uygulamayı durdurmak ve [kaynak denetimine değişiklikleri uygulamak](learn-flask-visual-studio-step-02-create-app.md#commit-to-source-control)istiyorsanız, önce **Takım Gezgini** içindeki **değişiklikler** sayfasını açın, sanal ortam (Belki de **env**) klasörüne sağ tıklayın ve **Bu yerel öğeleri yoksay**' ı seçin.
 
 ### <a name="examine-the-project-contents"></a>Proje içeriğini inceleyin
 
@@ -155,7 +155,7 @@ Veri depolama mekanizması aşağıdaki gibi çalışmaktadır:
     repository = create_repository(REPOSITORY_NAME, REPOSITORY_SETTINGS)
     ```
 
-1. `factory.create_repository`Yöntemi, yalnızca uygun depo modülünü içeri aktaran *models\factory.exe*içinde bulunur, ardından bir `Repository` örnek oluşturur:
+1. `factory.create_repository`Yöntemi, yalnızca uygun depo modülünü içeri aktaran *models\factory.exe* içinde bulunur, ardından bir `Repository` örnek oluşturur:
 
     ```python
     def create_repository(name, settings):
@@ -174,7 +174,7 @@ Veri depolama mekanizması aşağıdaki gibi çalışmaktadır:
         return Repository(settings)
     ```
 
-1. `Repository`Her bir veri deposuna özgü sınıfının uygulamaları *models\azuretablestorage.py*, *models\mongodb.exe*ve *models\memory.exe*içinde bulunabilir. Azure depolama uygulama, Azure depolama paketini kullanır; Mongo DB uygulama, pymongo paketini kullanır. Adım 5-1 ' de belirtildiği gibi, her iki paket de proje şablonunun *requirements.txt* dosyasına dahil edilir. Ayrıntıları keşfetmek, okuyucu için bir alıştırma olarak kalır.
+1. `Repository`Her bir veri deposuna özgü sınıfının uygulamaları *models\azuretablestorage.py*, *models\mongodb.exe* ve *models\memory.exe* içinde bulunabilir. Azure depolama uygulama, Azure depolama paketini kullanır; Mongo DB uygulama, pymongo paketini kullanır. Adım 5-1 ' de belirtildiği gibi, her iki paket de proje şablonunun *requirements.txt* dosyasına dahil edilir. Ayrıntıları keşfetmek, okuyucu için bir alıştırma olarak kalır.
 
 Kısaca, `Repository` sınıfı veri deposunun özelliklerini soyutlar ve uygulama, çalışma zamanında ortam değişkenlerini kullanarak kullanılacak üç uygulamayı seçer ve yapılandırır.
 
@@ -218,7 +218,7 @@ Başlangıçta, seçilen tüm veri depolarıyla hiçbir yoklama yoktur, bu neden
 
 `polls`Şablondaki değişken, `repository.get_polls` veri deposu başlatılana kadar hiçbir şey döndüren bir çağrısından gelir.
 
-**Örnek yoklamalar oluştur** düğmesinin seçilmesi/Seed URL 'sine gider. Bu yolun işleyicisi  *views.py*içinde tanımlanmıştır:
+**Örnek yoklamalar oluştur** düğmesinin seçilmesi/Seed URL 'sine gider. Bu yolun işleyicisi  *views.py* içinde tanımlanmıştır:
 
 ```python
 @app.route('/seed', methods=['POST'])
@@ -242,7 +242,7 @@ Cevap: proje şablonu aracılığıyla belirtilen uygulama, yoklamaları ekleme 
 
 Burada kalan özellikler, tek bir yoklamada oylama (Ayrıntılar) ve sonuç görünümünü incelemektir.
 
-Giriş sayfasından bir yoklama seçtiğinizde, uygulama/Poll/} URL 'sine gider ve bu, \<key\> bir yoklama için *key* benzersiz bir tanımlayıcı olarak kullanılır. *Views.py* ' de, `details` işlevin hem Get hem de ISTEKLER için bu URL yönlendirmeyi işlemek üzere atandığını görebilirsiniz. Ayrıca `<key>` , URL rotasında kullanarak bu formun tüm rotasını aynı işleve eşler ve aynı ada sahip işleve bir bağımsız değişken üretir:
+Giriş sayfasından bir yoklama seçtiğinizde, uygulama/Poll/} URL 'sine gider ve bu, \<key\> bir yoklama için  benzersiz bir tanımlayıcı olarak kullanılır. *Views.py* ' de, `details` işlevin hem Get hem de ISTEKLER için bu URL yönlendirmeyi işlemek üzere atandığını görebilirsiniz. Ayrıca `<key>` , URL rotasında kullanarak bu formun tüm rotasını aynı işleve eşler ve aynı ada sahip işleve bir bağımsız değişken üretir:
 
 ```python
 @app.route('/poll/<key>', methods=['GET', 'POST'])
@@ -266,7 +266,7 @@ def details(key):
     )
 ```
 
-Bir yoklamayı (GET istekleri) göstermek için, bu işlev yalnızca yoklama *templates\details.html*dizisinin üzerinde dolaşır `choices` , her biri için bir radyo düğmesi oluşturaraktemplates\details.html üzerine çağrı yaparsınız.
+Bir yoklamayı (GET istekleri) göstermek için, bu işlev yalnızca yoklama dizisinin üzerinde dolaşır `choices` , her biri için bir radyo düğmesi oluşturaraktemplates\details.html üzerine çağrı yaparsınız.
 
 ```html
 {% extends "layout.html" %}
@@ -298,7 +298,7 @@ Bir yoklamayı (GET istekleri) göstermek için, bu işlev yalnızca yoklama *te
 
 **Oy** düğmesi olduğundan `type="submit"` , bir `details` kez daha sonra işlevine yönlendirilen aynı URL 'ye bir post isteği gönderir. Ancak, bu kez, form verilerinden seçimi ayıklar ve/Results/adresine yeniden yönlendirir \<choice\> .
 
-/Results/ \<key\> URL daha sonra `results` *views.py*içindeki işleve yönlendirilir. Bu, daha sonra yoklamada `calculate_stats` yöntemi çağırır ve işleme için *templates\results.html* kullanır:
+/Results/ \<key\> URL daha sonra `results` *views.py* içindeki işleve yönlendirilir. Bu, daha sonra yoklamada `calculate_stats` yöntemi çağırır ve işleme için *templates\results.html* kullanır:
 
 ```python
 @app.route('/results/<key>')
