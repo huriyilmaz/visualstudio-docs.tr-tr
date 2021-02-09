@@ -7,15 +7,15 @@ ms.topic: how-to
 ms.assetid: 390edde4-7b8d-4c89-8d69-55106b7e6b11
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - uwp
-ms.openlocfilehash: 5fb3c1fff831fdee711340345c283dbeaf3f13a6
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: d9033921c9e9863e5210721fb2c1244c326802d4
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93046077"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99881379"
 ---
 # <a name="inspect-xaml-properties-while-debugging"></a>Hata ayıklama sırasında XAML özelliklerini denetleme
 
@@ -34,7 +34,7 @@ Bir liste görünümü ve bir düğme içeren çok basit bir WPF uygulamasını 
 
 ### <a name="create-the-project"></a>Proje oluşturma
 
-1. Yeni bir C# WPF uygulaması oluşturun ( **Dosya**  >  **Yeni**  >  **Proje** ' ye tıklayın, ardından "C# WPF" yazın ve **WPF uygulaması (.NET Core)** ya da **WPF uygulaması (.NET Framework)** seçeneğini belirleyin. **TestXaml** olarak adlandırın.
+1. Yeni bir C# WPF uygulaması oluşturun (**Dosya**  >  **Yeni**  >  **Proje**' ye tıklayın, ardından "C# WPF" yazın ve **WPF uygulaması (.NET Core)** ya da **WPF uygulaması (.NET Framework)** seçeneğini belirleyin. **TestXaml** olarak adlandırın.
 
 1. MainWindow. xaml ' i şu şekilde değiştirin:
 
@@ -90,9 +90,9 @@ Bir liste görünümü ve bir düğme içeren çok basit bir WPF uygulamasını 
 
 ### <a name="inspect-xaml-properties"></a>XAML özelliklerini inceleme
 
-1. Sonra, uygulama içi araç çubuğunun çok sol düğmesine tıklayarak (veya **> Windows > Live Visual Tree ' Hata Ayıkla** ' ya giderek) **canlı görsel ağaç** penceresini açın. Açık olduktan sonra, bu pencereye ve **canlı Özellikler** penceresine yan yana bakabilmemiz için yerleştirme konumundan uzağa sürükleyin.
+1. Sonra, uygulama içi araç çubuğunun çok sol düğmesine tıklayarak (veya **> Windows > Live Visual Tree ' Hata Ayıkla**' ya giderek) **canlı görsel ağaç** penceresini açın. Açık olduktan sonra, bu pencereye ve **canlı Özellikler** penceresine yan yana bakabilmemiz için yerleştirme konumundan uzağa sürükleyin.
 
-1. **Canlı görsel ağaç** penceresinde, **ContentPresenter** düğümünü genişletin. Düğme ve liste kutusu için düğüm içermelidir. Liste kutusu öğelerini bulmak için liste kutusunu (ve ardından **ScrollContentPresenter** ve **ItemsPresenter** ) genişletin.
+1. **Canlı görsel ağaç** penceresinde, **ContentPresenter** düğümünü genişletin. Düğme ve liste kutusu için düğüm içermelidir. Liste kutusu öğelerini bulmak için liste kutusunu (ve ardından **ScrollContentPresenter** ve **ItemsPresenter**) genişletin.
 
    ::: moniker range=">= vs-2019"
    **ContentPresenter** düğümünü görmüyorsanız araç çubuğunda **yalnızca XAML mi göster** simgesine geçiş yapın. Visual Studio 2019 sürüm 16,4 ' den başlayarak, XAML öğelerinin görünümü varsayılan olarak yalnızca XAML 'IM özelliği kullanılarak basitleştirilmiştir. Tüm XAML öğelerini her zaman göstermek için Seçenekler ' de [Bu ayarı devre dışı](../debugger/general-debugging-options-dialog-box.md) bırakabilirsiniz.
@@ -121,23 +121,23 @@ Bir liste görünümü ve bir düğme içeren çok basit bir WPF uygulamasını 
    XAML gerçek yapısı, muhtemelen doğrudan ilgilenmediğiniz çok sayıda öğeye sahiptir ve kodun iyi olduğunu bilmiyorsanız, aradığınız şeyi bulmak için ağaçta gezinmek için bir sabit zaman olabilir. Bu nedenle, **canlı görsel ağaç** , incelemek istediğiniz öğeyi bulmanıza yardımcı olmak için uygulamanın kullanıcı arabirimini kullanmanıza olanak sağlayan birkaç yol içerir.
 
    ::: moniker range=">= vs-2019"
-   **Çalışan uygulamadaki öğesini seçin** . **Canlı görsel ağaç** araç çubuğunda en soldaki düğmeyi seçtiğinizde bu modu etkinleştirebilirsiniz. Bu mod üzerinde, uygulamada bir UI öğesi seçebilirsiniz ve **canlı görsel ağaç** (ve **canlı Özellik Görüntüleyicisi** ), düğümü ilgili öğeye ve özelliklerine karşılık gelen ağaçta göstermek için otomatik olarak güncelleştirilir. Visual Studio 2019 sürüm 16,4 ' den başlayarak, [öğe seçiminin davranışını yapılandırabilirsiniz](../debugger/general-debugging-options-dialog-box.md).
+   **Çalışan uygulamadaki öğesini seçin**. **Canlı görsel ağaç** araç çubuğunda en soldaki düğmeyi seçtiğinizde bu modu etkinleştirebilirsiniz. Bu mod üzerinde, uygulamada bir UI öğesi seçebilirsiniz ve **canlı görsel ağaç** (ve **canlı Özellik Görüntüleyicisi**), düğümü ilgili öğeye ve özelliklerine karşılık gelen ağaçta göstermek için otomatik olarak güncelleştirilir. Visual Studio 2019 sürüm 16,4 ' den başlayarak, [öğe seçiminin davranışını yapılandırabilirsiniz](../debugger/general-debugging-options-dialog-box.md).
 
-   **Çalışan uygulamada düzen donatıcıları görüntüleyin** . Seçimi Etkinleştir düğmesinin hemen sağında bulunan düğmeyi seçtiğinizde bu modu etkinleştirebilirsiniz. **Görüntüleme düzeni donatıcıları** açık olduğunda, uygulama penceresinin seçili nesnenin sınırları üzerinde yatay ve dikey çizgiler görüntülemesine neden olur, böylece neyin ne kadar hizalanacağını görebilir ve kenar boşluklarını gösteren dikdörtgenler de gösterilir. Örneğin, hem **Select öğesini** hem de **düzeni görüntüle** ' yi açın ve uygulamada **öğe Ekle** metin bloğunu seçin. **Canlı görsel ağaçta** metin bloğu düğümünü ve **canlı Özellik görüntüleyicisinde** metin bloğu özelliklerinin yanı sıra metin bloğunun sınırları üzerindeki yatay ve dikey çizgileri görmeniz gerekir.
+   **Çalışan uygulamada düzen donatıcıları görüntüleyin**. Seçimi Etkinleştir düğmesinin hemen sağında bulunan düğmeyi seçtiğinizde bu modu etkinleştirebilirsiniz. **Görüntüleme düzeni donatıcıları** açık olduğunda, uygulama penceresinin seçili nesnenin sınırları üzerinde yatay ve dikey çizgiler görüntülemesine neden olur, böylece neyin ne kadar hizalanacağını görebilir ve kenar boşluklarını gösteren dikdörtgenler de gösterilir. Örneğin, hem **Select öğesini** hem de **düzeni görüntüle** ' yi açın ve uygulamada **öğe Ekle** metin bloğunu seçin. **Canlı görsel ağaçta** metin bloğu düğümünü ve **canlı Özellik görüntüleyicisinde** metin bloğu özelliklerinin yanı sıra metin bloğunun sınırları üzerindeki yatay ve dikey çizgileri görmeniz gerekir.
 
    ![DisplayLayout içinde LivePropertyViewer](../debugger/media/vs-2019/livevisualtreelivepropertyviewer-displaylayout.png "LiveVisualTreeLivePropertyViewer-DisplayLayout")
 
-   **Önizleme seçimi** . Canlı görsel ağaç araç çubuğunda sol taraftaki üçüncü düğmeyi seçerek bu modu etkinleştirebilirsiniz. Bu mod, uygulamanın kaynak koduna erişiminiz varsa, öğenin bildirildiği XAML 'yi gösterir. **Öğe seç** ve **Önizleme seçimi** ' ni seçin ve ardından test uygulamamızda düğmesini seçin. MainWindow. xaml dosyası Visual Studio 'da açılır ve imleç düğmenin tanımlandığı satıra yerleştirilir.
+   **Önizleme seçimi**. Canlı görsel ağaç araç çubuğunda sol taraftaki üçüncü düğmeyi seçerek bu modu etkinleştirebilirsiniz. Bu mod, uygulamanın kaynak koduna erişiminiz varsa, öğenin bildirildiği XAML 'yi gösterir. **Öğe seç** ve **Önizleme seçimi**' ni seçin ve ardından test uygulamamızda düğmesini seçin. MainWindow. xaml dosyası Visual Studio 'da açılır ve imleç düğmenin tanımlandığı satıra yerleştirilir.
    ::: moniker-end
 
    ::: moniker range="vs-2017"
-   **Çalışan uygulamada seçimi etkinleştirin** . **Canlı görsel ağaç** araç çubuğunda en soldaki düğmeyi seçtiğinizde bu modu etkinleştirebilirsiniz. Bu mod üzerinde, uygulamada bir UI öğesi seçebilirsiniz ve **canlı görsel ağaç** (ve **canlı Özellik Görüntüleyicisi** ), düğümü ilgili öğeye ve özelliklerine karşılık gelen ağaçta göstermek için otomatik olarak güncelleştirilir.
+   **Çalışan uygulamada seçimi etkinleştirin**. **Canlı görsel ağaç** araç çubuğunda en soldaki düğmeyi seçtiğinizde bu modu etkinleştirebilirsiniz. Bu mod üzerinde, uygulamada bir UI öğesi seçebilirsiniz ve **canlı görsel ağaç** (ve **canlı Özellik Görüntüleyicisi**), düğümü ilgili öğeye ve özelliklerine karşılık gelen ağaçta göstermek için otomatik olarak güncelleştirilir.
 
-   **Çalışan uygulamada düzen donatıcıları görüntüleyin** . Seçimi Etkinleştir düğmesinin hemen sağında bulunan düğmeyi seçtiğinizde bu modu etkinleştirebilirsiniz. **Görüntüleme düzeni donatıcıları** açık olduğunda, uygulama penceresinin seçili nesnenin sınırları üzerinde yatay ve dikey çizgiler görüntülemesine neden olur, böylece neyin ne kadar hizalanacağını görebilir ve kenar boşluklarını gösteren dikdörtgenler de gösterilir. Örneğin, her ikisini de **seçimi** ve **görüntüleme yerleşimini** etkinleştirin ve uygulamada **öğe Ekle** metin bloğunu seçin. **Canlı görsel ağaçta** metin bloğu düğümünü ve **canlı Özellik görüntüleyicisinde** metin bloğu özelliklerinin yanı sıra metin bloğunun sınırları üzerindeki yatay ve dikey çizgileri görmeniz gerekir.
+   **Çalışan uygulamada düzen donatıcıları görüntüleyin**. Seçimi Etkinleştir düğmesinin hemen sağında bulunan düğmeyi seçtiğinizde bu modu etkinleştirebilirsiniz. **Görüntüleme düzeni donatıcıları** açık olduğunda, uygulama penceresinin seçili nesnenin sınırları üzerinde yatay ve dikey çizgiler görüntülemesine neden olur, böylece neyin ne kadar hizalanacağını görebilir ve kenar boşluklarını gösteren dikdörtgenler de gösterilir. Örneğin, her ikisini de **seçimi** ve **görüntüleme yerleşimini** etkinleştirin ve uygulamada **öğe Ekle** metin bloğunu seçin. **Canlı görsel ağaçta** metin bloğu düğümünü ve **canlı Özellik görüntüleyicisinde** metin bloğu özelliklerinin yanı sıra metin bloğunun sınırları üzerindeki yatay ve dikey çizgileri görmeniz gerekir.
 
    ![DisplayLayout içinde LivePropertyViewer](../debugger/media/livevisualtreelivepropertyviewer-displaylayout.png "LiveVisualTreeLivePropertyViewer-DisplayLayout")
 
-   **Önizleme seçimi** . Canlı görsel ağaç araç çubuğunda sol taraftaki üçüncü düğmeyi seçerek bu modu etkinleştirebilirsiniz. Bu mod, uygulamanın kaynak koduna erişiminiz varsa, öğenin bildirildiği XAML 'yi gösterir. Seçim ve **Önizleme seçimini** **Etkinleştir** ' i seçin ve ardından test uygulamamızda düğmesini seçin. MainWindow. xaml dosyası Visual Studio 'da açılır ve imleç düğmenin tanımlandığı satıra yerleştirilir.
+   **Önizleme seçimi**. Canlı görsel ağaç araç çubuğunda sol taraftaki üçüncü düğmeyi seçerek bu modu etkinleştirebilirsiniz. Bu mod, uygulamanın kaynak koduna erişiminiz varsa, öğenin bildirildiği XAML 'yi gösterir. Seçim ve **Önizleme seçimini** **Etkinleştir** ' i seçin ve ardından test uygulamamızda düğmesini seçin. MainWindow. xaml dosyası Visual Studio 'da açılır ve imleç düğmenin tanımlandığı satıra yerleştirilir.
    ::: moniker-end
 
 ## <a name="use-xaml-tools-with-running-applications"></a>Çalışan uygulamalarla XAML araçlarını kullanma
@@ -146,11 +146,11 @@ Kaynak kodunuz olmadığında bile bu XAML araçlarını kullanabilirsiniz. Çal
 
 1. Sürüm yapılandırmasında **TestXaml** uygulamasını başlatın. **Hata ayıklama** yapılandırmasında çalışan bir işleme iliştiremezsiniz.
 
-2. Visual Studio 'nun ikinci bir örneğini açın ve **Işleme eklemek > hata ayıkla** ' ya tıklayın. Kullanılabilir süreçler listesinde **TestXaml.exe** bulun ve **Ekle** ' ye tıklayın.
+2. Visual Studio 'nun ikinci bir örneğini açın ve **Işleme eklemek > hata ayıkla**' ya tıklayın. Kullanılabilir süreçler listesinde **TestXaml.exe** bulun ve **Ekle**' ye tıklayın.
 
 3. Uygulama çalışmaya başlar.
 
-4. Visual Studio 'nun ikinci örneğinde, **Live Visual Tree** ( **hata ayıkla > Windows > Live Visual Tree** ) öğesini açın. **TestXaml** Kullanıcı arabirimi öğelerini görmeniz gerekir ve uygulamayı doğrudan hata ayıklarken yaptığınız gibi işleyebilmelisiniz.
+4. Visual Studio 'nun ikinci örneğinde, **Live Visual Tree** (**hata ayıkla > Windows > Live Visual Tree**) öğesini açın. **TestXaml** Kullanıcı arabirimi öğelerini görmeniz gerekir ve uygulamayı doğrudan hata ayıklarken yaptığınız gibi işleyebilmelisiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

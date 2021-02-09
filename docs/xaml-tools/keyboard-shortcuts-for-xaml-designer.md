@@ -7,13 +7,13 @@ ms.topic: reference
 ms.assetid: 40211cc7-294a-4943-85a4-941ad6418dad
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
-ms.openlocfilehash: aed3ed43afcad9cfb38dc427a441512106d9749b
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+manager: jmartens
+ms.openlocfilehash: 0e0bdc7b10eb20b149493c8d9e05a6711eb71bb0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93045895"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99881340"
 ---
 # <a name="keyboard-shortcuts-for-xaml-designer"></a>XAML Tasarımcısı için klavye kısayolları
 
@@ -33,8 +33,8 @@ Bu tabloda, çalışma yüzeyinde öğelerle çalışmak için kullanılabilen k
 |Bitişik olmayan birden çok öğe seç|İlk ve son öğeleri seçerken **CTRL** tuşuna basın ve basılı tutun|
 |Seçili öğeleri taşı|Ok tuşlarına basın. (Her tuş tuşuna basarak geçiş mesafesini artırmak için **SHIFT** tuşunu basılı tutabilirsiniz.)|
 |Bir öğeyi 15 derece artışlarla döndürme|Öğeyi döndürürken **SHIFT** tuşunu basılı tutun|
-|Tüm öğeleri seç|**CTRL** tuşuna basın + **A**|
-|Tüm öğelerin seçimini temizle|**CTRL** + **SHIFT** + **A** tuşuna basın|
+|Tüm öğeleri seç|**CTRL** tuşuna basın + |
+|Tüm öğelerin seçimini temizle|**CTRL** + **SHIFT** +  tuşuna basın|
 |Öğe tutamaçlarını göster veya gizle|**F9** tuşuna basın|
 |Öğe için bir özellik seçin|Seçili bir öğe ve Özellikler penceresi odaklanıldığında **Tab** tuşuna basın. ( **CTRL** + kullanın Odağı Özellikler penceresi değiştirme **sekmesi** .) Aşağı açılan listelerden özellik değerlerini seçmek için ok tuşlarını kullanabilirsiniz.|
 

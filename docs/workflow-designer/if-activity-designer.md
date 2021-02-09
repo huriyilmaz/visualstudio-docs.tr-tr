@@ -9,15 +9,15 @@ f1_keywords:
 ms.assetid: 930a8fa2-db98-43e9-ad6d-a85cc7a6519a
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 2daa2ab6e3f41d5447204db573b8ae228d617fdf
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 93f36a3c2b587718fe6889688baa50224f663c1c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94437820"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99881366"
 ---
 # <a name="if-activity-designer"></a>If Etkinlik Tasarımcısı
 
@@ -30,11 +30,11 @@ Aşağıdaki tabloda en yararlı <xref:System.Activities.Statements.If> etkinlik
 |Özellik Adı|Gerekli|Kullanım|
 |-|--------------|-|
 |<xref:System.Activities.Statements.If.Condition%2A>|Doğru|Hangi alt etkinliğin çalıştırılacağını belirleyen koşul. Ayarlamak için, <xref:System.Activities.Statements.If.Condition%2A> **IF** Etkinlik tasarımcısında veya özellik kılavuzunda **koşul** kutusuna bir Visual Basic ifadesi yazın.|
-|<xref:System.Activities.Statements.If.Else%2A>|Yanlış|False ise yürütülecek etkinlik <xref:System.Activities.Statements.If.Condition%2A> . **false** Dal tarafından yürütülen bir etkinlik eklemek için <xref:System.Activities.Statements.If.Else%2A> , **araç kutusundan** bir etkinliği, ipucu metin olarak "etkinliği buraya bırak" Ipucu metni ile **IF** Etkinlik tasarımcısında **Else** kutusuna bırakın.|
-|<xref:System.Activities.Statements.If.Then%2A>|Yanlış|True ise yürütülecek etkinlik <xref:System.Activities.Statements.If.Condition%2A> . **true** Dal tarafından yürütülen bir etkinlik eklemek için <xref:System.Activities.Statements.If.Then%2A> , **araç kutusundan** bir etkinliği, ipucu metin olarak "etkinliği buraya **Then** bırak" ipucu metni ile **IF** Etkinlik tasarımcısında bulunan kutuya bırakın.|
+|<xref:System.Activities.Statements.If.Else%2A>|Yanlış|False ise yürütülecek etkinlik <xref:System.Activities.Statements.If.Condition%2A> .  Dal tarafından yürütülen bir etkinlik eklemek için <xref:System.Activities.Statements.If.Else%2A> , **araç kutusundan** bir etkinliği, ipucu metin olarak "etkinliği buraya bırak" Ipucu metni ile **IF** Etkinlik tasarımcısında **Else** kutusuna bırakın.|
+|<xref:System.Activities.Statements.If.Then%2A>|Yanlış|True ise yürütülecek etkinlik <xref:System.Activities.Statements.If.Condition%2A> .  Dal tarafından yürütülen bir etkinlik eklemek için <xref:System.Activities.Statements.If.Then%2A> , **araç kutusundan** bir etkinliği, ipucu metin olarak "etkinliği buraya  bırak" ipucu metni ile **IF** Etkinlik tasarımcısında bulunan kutuya bırakın.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Sequence](../workflow-designer/sequence-activity-designer.md)
-- [Paralel](../workflow-designer/parallel-activity-designer.md)
+- [Dir](../workflow-designer/parallel-activity-designer.md)
 - [Denetim akışı](../workflow-designer/control-flow-activity-designers.md)

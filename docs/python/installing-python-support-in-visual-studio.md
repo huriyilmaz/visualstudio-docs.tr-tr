@@ -5,17 +5,17 @@ ms.date: 03/13/2019
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 910b3b5491660cbcd6132aff68ebeabafaeea0d5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e0c1cf29c7579978d5992de46b14c01fee0799c5
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85540653"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99881652"
 ---
 # <a name="how-to-install-python-support-in-visual-studio-on-windows"></a>Windows üzerinde Visual Studio 'da Python desteği nasıl yüklenir
 
@@ -25,7 +25,7 @@ Visual Studio için Python desteğini yüklemek için (Visual Studio için Pytho
 - [Visual Studio 2015](#visual-studio-2015)
 - [Visual Studio 2013 ve önceki sürümler](#visual-studio-2013-and-earlier)
 
-Yükleme adımlarını tamamladıktan sonra Python desteğini hızlıca test etmek için, **alt**i ve girerek **Python etkileşimli** penceresini açın + **I** `2+2` . Çıktısını görmüyorsanız `4` , adımlarınızı yeniden denetleyin.
+Yükleme adımlarını tamamladıktan sonra Python desteğini hızlıca test etmek için, **alt** i ve girerek **Python etkileşimli** penceresini açın +  `2+2` . Çıktısını görmüyorsanız `4` , adımlarınızı yeniden denetleyin.
 
 > [!Tip]
 > Python iş yükü; şablonları, giriş şablonu seçeneklerini bulmaya ve proje ve dosya oluşturmaya yönelik grafik kullanıcı arabirimi sağlayan yararlı Cookiecutter uzantısını içerir. Ayrıntılar için bkz. [Cookiecutter kullanma](using-python-cookiecutter-templates.md).
@@ -103,7 +103,7 @@ Visual Studio 'da Python yükleme veya çalıştırma sorunlarıyla karşılaş�
 - Visual Studio yükleyicisi 'ndeki [**Onar**](../install/repair-visual-studio.md) seçeneğini kullanın.
 - Windows 'daki **Ayarlar**  >  **uygulamalar & Özellikler** aracılığıyla Python 'u onarın veya yeniden yükleyin.
 
-**Örnek hata**: etkileşimli işlem başlatılamadı: System. ComponentModel. Win32Exception (0x80004005): Microsoft. PythonTools. REPL. PythonInteractiveEvaluator. D__43. MoveNext () adresinde bilinmeyen hata (0xc0000135).
+**Örnek hata**: etkileşimli işlem başlatılamadı: System. ComponentModel. Win32Exception (0x80004005): Microsoft.PythonTools.REPL.PythonInteractiveEvaluator.d__43. MoveNext () konumunda bilinmeyen hata (0xc0000135).
 
 ## <a name="visual-studio-2015"></a>Visual Studio 2015
 
@@ -136,10 +136,10 @@ Visual Studio 2015 ve önceki sürümlerde, yükleme yolları aşağıdaki gibid
 
 - 32 bit:
   - Yol: *% Program Files (x86)% \ Microsoft Visual Studio \<VS_ver> \Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio \\<PTVS_ver>*
-  - Yolun kayıt konumu: **HKEY_LOCAL_MACHINE \software\microsoft\pythontools \\<VS_ver> \ınstalldir**
+  - Yolun kayıt konumu: **HKEY_LOCAL_MACHINE\Software\Microsoft\PythonTools\\<VS_ver> \ınstalldir**
 - 64 bit:
   - Yol: *% Program Files%\Microsoft Visual Studio \<VS_ver> \Common7\IDE\Extensions\Microsoft\Python Tools for Visual studio \\<PTVS_ver>*
-  - Yolun kayıt konumu: **HKEY_LOCAL_MACHINE \software\wow6432node\microsoft\pythontools \\<VS_ver> \ınstalldir**
+  - Yolun kayıt konumu: **HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\PythonTools\\<VS_ver> \ınstalldir**
 
 burada:
 

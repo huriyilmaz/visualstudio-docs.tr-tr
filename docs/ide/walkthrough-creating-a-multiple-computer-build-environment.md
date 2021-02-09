@@ -10,15 +10,15 @@ helpviewer_keywords:
 - build environment, MSBuild
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 1c8fa7756763a668f6e97d90d8a405c660519189
-ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
+ms.openlocfilehash: 3ae0e5f2516dd1f78aea880289f549ca3a44f3bb
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92136959"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99881975"
 ---
 # <a name="walkthrough-create-a-multiple-computer-build-environment"></a>İzlenecek yol: Birden çok bilgisayarda derleme ortamı oluşturma
 
@@ -257,9 +257,9 @@ Yapı bilgisayarında MSBuild 'i kullanmak için, PATH ortam değişkenlerini ay
 
 ### <a name="use-vcvarsallbat-to-set-environment-variables"></a>Ortam değişkenlerini ayarlamak için vcvarsall.bat kullanma
 
-Yapı bilgisayarında bir **komut istemi** penceresi açın ve *% Program Files%\Microsoft Visual Studio \\ \<version> \\ \<edition>\VC\vcvarsall.bat*çalıştırın. Kullanmak istediğiniz araç takımını (x86, yerel x64 veya x64 çapraz derleyicisi) belirtmek için bir komut satırı bağımsız değişkeni kullanabilirsiniz. Bir komut satırı bağımsız değişkeni belirtmezseniz, x86 araç takımı kullanılır.
+Yapı bilgisayarında bir **komut istemi** penceresi açın ve *% Program Files%\Microsoft Visual Studio \\ \<version> \\ \<edition>\VC\vcvarsall.bat* çalıştırın. Kullanmak istediğiniz araç takımını (x86, yerel x64 veya x64 çapraz derleyicisi) belirtmek için bir komut satırı bağımsız değişkeni kullanabilirsiniz. Bir komut satırı bağımsız değişkeni belirtmezseniz, x86 araç takımı kullanılır.
 
-Bu tabloda *vcvarsall.bat*için desteklenen bağımsız değişkenler açıklanmaktadır:
+Bu tabloda *vcvarsall.bat* için desteklenen bağımsız değişkenler açıklanmaktadır:
 
 |Vcvarsall.bat bağımsız değişkeni|Derleyici|Bilgisayar mimarisi oluşturun|Derleme çıkış mimarisi|
 | - |--------------| - | - |
@@ -333,7 +333,7 @@ Komut satırında MSBuild 'i kullanma hakkında daha fazla bilgi için bkz. [kom
 
      Bu adımlar dizine% deposu% olarak başvurur.
 
-2. Dizinleri ve dosyaları, Bu izlenecek yolun [dosyaları ana bilgisayardan yapı bilgisayarına](../ide/walkthrough-creating-a-multiple-computer-build-environment.md#copy-files-from-the-host-computer-to-the-build-computer) Kopyala bölümünde açıklandığı gibi kopyalayın, ancak bunları az önce oluşturduğunuz *% deposu%* dizininin altına yapıştırın. Örneğin, *%Kits\8.0\Bin* konumundan *%Depot%\Windows Kits\8.0\Bin dizinine*kopyalayın.
+2. Dizinleri ve dosyaları, Bu izlenecek yolun [dosyaları ana bilgisayardan yapı bilgisayarına](../ide/walkthrough-creating-a-multiple-computer-build-environment.md#copy-files-from-the-host-computer-to-the-build-computer) Kopyala bölümünde açıklandığı gibi kopyalayın, ancak bunları az önce oluşturduğunuz *% deposu%* dizininin altına yapıştırın. Örneğin, *%Kits\8.0\Bin* konumundan *%Depot%\Windows Kits\8.0\Bin dizinine* kopyalayın.
 
 3. Dosyalar *% deposu%* içine yapıştırılırken şu değişiklikleri yapın:
 
@@ -355,7 +355,7 @@ Komut satırında MSBuild 'i kullanma hakkında daha fazla bilgi için bkz. [kom
 
          AssemblyFile = "$ (VCTargetsPath11) Microsoft.Build.CppTasks.Common.v110.dll".
 
-4. Bir *. props* dosyası oluşturun — örneğin, *partner. oto Imports. props*— ve projelerinizi içeren klasörün köküne yerleştirin. Bu dosya, çeşitli kaynakları bulmak için MSBuild tarafından kullanılan değişkenleri ayarlamak için kullanılır. Değişkenler bu dosya tarafından ayarlanmamışsa, kayıt defteri değerlerini kullanan diğer *. props* dosyaları ve *. targets* dosyaları tarafından ayarlanır. Hiçbir kayıt defteri değeri ayarlamadığımızda, bu değişkenler boş olur ve derleme başarısız olur. Bunun yerine, bunu *partner. oto Imports. props*öğesine ekleyin:
+4. Bir *. props* dosyası oluşturun — örneğin, *partner. oto Imports. props*— ve projelerinizi içeren klasörün köküne yerleştirin. Bu dosya, çeşitli kaynakları bulmak için MSBuild tarafından kullanılan değişkenleri ayarlamak için kullanılır. Değişkenler bu dosya tarafından ayarlanmamışsa, kayıt defteri değerlerini kullanan diğer *. props* dosyaları ve *. targets* dosyaları tarafından ayarlanır. Hiçbir kayıt defteri değeri ayarlamadığımızda, bu değişkenler boş olur ve derleme başarısız olur. Bunun yerine, bunu *partner. oto Imports. props* öğesine ekleyin:
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>

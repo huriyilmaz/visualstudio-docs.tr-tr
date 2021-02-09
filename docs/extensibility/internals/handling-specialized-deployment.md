@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: de068b6a-e806-45f0-9dec-2458fbb486f7
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 664625cd8737fb9a9a3e398716d750d6d9665529
-ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
+ms.openlocfilehash: 279732f6019757c1a0d9fef566e8aaf1898dbdfb
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96480440"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99880066"
 ---
 # <a name="handle-specialized-deployment"></a>Özelleştirilmiş dağıtımı işle
 Dağıtım, projeler için isteğe bağlı bir işlemdir. Örneğin, bir Web projesi, projenin bir Web sunucusunu güncelleştirmesine izin vermek için bir dağıtımı destekler. Benzer şekilde, **akıllı bir cihaz** projesi, yerleşik bir uygulamayı hedef cihaza kopyalamak için bir dağıtımı destekler. Proje alt türleri, arabirimini uygulayarak özelleştirilmiş dağıtım davranışı sağlayabilir <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg> . Bu arabirim, dağıtım işlemlerinin bir bütün kümesini tanımlar:

@@ -5,7 +5,7 @@ description: Azure DevOps Services veya Team Foundation Server için zengin geri
 keywords: ''
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.date: 11/13/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -17,12 +17,12 @@ ms.prod: visual-studio-windows
 ms.technology: vs-installation
 monikerRange: vs-2017
 open_to_public_contributors: false
-ms.openlocfilehash: fe4eec389389622f0d87d30edbbd46d7c5b53d80
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f83b457582124658285e0769d1907a8643d44fda
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "81276311"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99881769"
 ---
 # <a name="visual-studio-feedback-client-component-directory"></a>Visual Studio Geri Bildirim İstemcisi bileşen dizini
 
@@ -37,7 +37,7 @@ Ayrıca, sayfa hakkında aşağıdakilere de göz önünde bulabilirsiniz:
 
 VSıX bildiriminizde bağımlılıklar ayarladığınızda, yalnızca bileşen kimliklerini belirtmeniz gerekir. En düşük bileşen bağımlılıklarımızı öğrenmek için bu sayfadaki tabloları kullanın. Bazı senaryolarda bu, bir iş yüküyle yalnızca bir bileşen belirttiğinizde anlamına gelebilir. Diğer senaryolarda, tek bir iş yüküyle birden çok bileşeni veya birden çok iş yükünün birden çok bileşenini belirtmeniz anlamına gelebilir. Daha fazla bilgi için bkz. [nasıl yapılır: genişletilebilirlik projelerini Visual Studio 'Ya geçirme 2017](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md) sayfası.
 
-Bu kimlikleri kullanma hakkında daha fazla bilgi için bkz. [Visual Studio 2017 sayfasını yüklemek Için komut satırı parametrelerini kullanma](use-command-line-parameters-to-install-visual-studio.md) . Ayrıca, diğer ürünlerin iş yükü ve bileşen kimliklerinin bir listesi için bkz. [Visual Studio 2017 Iş yükü ve bileşen kimlikleri](workload-and-component-ids.md) sayfası.
+Bu kimlikleri kullanma hakkında daha fazla bilgi için bkz. [Command-Line parametrelerini kullanarak Visual Studio 2017 sayfasını yüklemek](use-command-line-parameters-to-install-visual-studio.md) . Ayrıca, diğer ürünlerin iş yükü ve bileşen kimliklerinin bir listesi için bkz. [Visual Studio 2017 Iş yükü ve bileşen kimlikleri](workload-and-component-ids.md) sayfası.
 
 ## <a name="feedback-client"></a>Geribildirim İstemcisi
 

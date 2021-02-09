@@ -5,7 +5,7 @@ description: Bir komut satırı kullanarak Visual Studio 'Yu yüklemek veya VSı
 keywords: ''
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.date: 11/10/2020
 ms.topic: reference
 helpviewer_keywords:
@@ -17,12 +17,12 @@ ms.assetid: 34e19ef1-abfb-44fd-aad2-33c5d7874482
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 open_to_public_contributors: false
-ms.openlocfilehash: 87b8b70f8adb10f0451d276520219c6954ff7325
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: e7c2628e17305e861da3ab25e3e21833729638ac
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94437311"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99881990"
 ---
 # <a name="visual-studio-workload-and-component-ids"></a>Visual Studio iş yükü ve bileşen kimlikleri
 
@@ -32,7 +32,7 @@ Bir komut satırı kullanarak Visual Studio 'Yu yüklemek veya VSıX bildirimind
 
 **[15,9 sürümü](/visualstudio/releasenotes/vs2017-relnotes/) için güncelleştirildi**
 
-| **Sürüm** | **NUMARASıNı** | **Açıklama** |
+| **Sürüm** | **ID** | **Açıklama** |
 | ----------- | ------ | --------------- |
 | [Visual &nbsp; Studio Enterprise &nbsp; 2017](workload-component-id-vs-enterprise.md?view=vs-2017&preserve-view=true) | Microsoft. VisualStudio. Product. Enterprise | Her boyuttaki takımlar arasında üretkenlik ve koordinasyon için Microsoft DevOps çözümü |
 | [Visual &nbsp; Studio Professional &nbsp; 2017](workload-component-id-vs-professional.md?view=vs-2017&preserve-view=true) | Microsoft. VisualStudio. Product. Professional | Küçük takımlar için profesyonel geliştirici araçları ve Hizmetleri |
@@ -53,7 +53,7 @@ Bu listelerin nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [Vis
 
 **[16,8 sürümü](/visualstudio/releases/2019/release-notes/) için güncelleştirildi**
 
-| **Sürüm** | **NUMARASıNı** | **Açıklama** |
+| **Sürüm** | **ID** | **Açıklama** |
 | ----------- | ------ | --------------- |
 | [Visual &nbsp; Studio Enterprise &nbsp; 2019](workload-component-id-vs-enterprise.md?view=vs-2019&preserve-view=true) | Microsoft. VisualStudio. Product. Enterprise | Her boyuttaki takımlar arasında üretkenlik ve koordinasyon için Microsoft DevOps çözümü |
 | [Visual &nbsp; Studio Professional &nbsp; 2019](workload-component-id-vs-professional.md?view=vs-2019&preserve-view=true) | Microsoft. VisualStudio. Product. Professional | Küçük takımlar için profesyonel geliştirici araçları ve Hizmetleri |

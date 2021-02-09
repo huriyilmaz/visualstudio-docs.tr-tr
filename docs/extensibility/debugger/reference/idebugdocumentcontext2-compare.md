@@ -9,26 +9,26 @@ helpviewer_keywords:
 ms.assetid: 2327b1ba-52d0-42fb-a01e-63cb4b332d2f
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b0e46f765c8e4c0e12c3bb9447e0713919fae7b8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 959d909d0c777110905aff3b11c8c29d27d628dd
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80731888"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99880768"
 ---
 # <a name="idebugdocumentcontext2compare"></a>IDebugDocumentContext2::Compare
 Bu belge bağlamını, belirli bir belge bağlamı dizisiyle karşılaştırır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
-HRESULT Compare( 
+HRESULT Compare( 
    DOCCONTEXT_COMPARE       compare,
    IDebugDocumentContext2** rgpDocContextSet,
    DWORD                    dwDocContextSetLen,
@@ -37,7 +37,7 @@ HRESULT Compare( 
 ```
 
 ```csharp
-int Compare( 
+int Compare( 
    enum_ DOCCONTEXT_COMPARE compare,
    IDebugDocumentContext2[] rgpDocContextSet,
    uint                     dwDocContextSetLen,

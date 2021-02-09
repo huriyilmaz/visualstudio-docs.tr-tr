@@ -6,15 +6,15 @@ ms.date: 06/08/2020
 ms.topic: how-to
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 88b22364c92a17c7200ddb261d154c7896cd1696
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: d1559854c1b293c33c16cfab6e638a33908c2eb8
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97727870"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99881301"
 ---
 # <a name="getting-started-with-visual-studio-graphics-diagnostics"></a>Visual Studio Grafik Tanılama’ya Başlarken
 Bu bölümde Grafik Tanılama ilk kez kullanmaya hazırlarsınız, sonra Direct3D uygulamasından çerçeveler yakalayıp grafik Çözümleyicisi 'nde inceleyebilirsiniz.

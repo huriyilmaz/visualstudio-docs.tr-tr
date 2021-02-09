@@ -10,18 +10,18 @@ ms.topic: tutorial
 ms.devlang: CSharp
 author: ardalis
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 dev_langs:
 - CSharp
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 9d01d991daf5c24c02b8cd4976663a9399b251cc
-ms.sourcegitcommit: a778dffddb05d2f0f15969eadaf9081c9b466196
+ms.openlocfilehash: aa3df844d5fad5dc968a9bab5d02e9a3e8e06719
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91780963"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99879975"
 ---
 # <a name="step-3-work-with-data-using-entity-framework"></a>3. Adım: Entity Framework kullanarak verilerle çalışma
 
@@ -37,7 +37,7 @@ Bu videolarla birlikte takip ediyorsanız, önceki bölümde oluşturduğunuz We
 
 ## <a name="add-your-model"></a>Modelinizi ekleyin
 
-ASP.NET Core uygulamanızdaki verilerle çalışmak için yapmanız gereken ilk şey, verilerin nasıl göründüğünü açıklıyor. Çözmeye çalıştığımız sorun ile ilgili işlerin bir *modelini* oluşturan çağrımız. Gerçek dünyada uygulamalarda, bu modellere özel iş mantığı ekleyecek ve bu modellerle ilgili belirli yollarla davranmaları ve görevleri otomatikleştirebiliriz. Bu örnekte, izleme panosu oyunları için basit bir sistem oluşturacağız. Bir oyunu temsil eden bir sınıfa ihtiyacımız var ve bu oyun hakkında, kaç oyuncu destekleyebileceği gibi, bu oyunla ilgili kaydetmek isteyebileceğiniz bazı özellikler de içeriyor. Bu sınıf, *modeller*olarak adlandırılan Web projesinin kökünde oluşturacağınız yeni bir klasöre gidecektir.
+ASP.NET Core uygulamanızdaki verilerle çalışmak için yapmanız gereken ilk şey, verilerin nasıl göründüğünü açıklıyor. Çözmeye çalıştığımız sorun ile ilgili işlerin bir *modelini* oluşturan çağrımız. Gerçek dünyada uygulamalarda, bu modellere özel iş mantığı ekleyecek ve bu modellerle ilgili belirli yollarla davranmaları ve görevleri otomatikleştirebiliriz. Bu örnekte, izleme panosu oyunları için basit bir sistem oluşturacağız. Bir oyunu temsil eden bir sınıfa ihtiyacımız var ve bu oyun hakkında, kaç oyuncu destekleyebileceği gibi, bu oyunla ilgili kaydetmek isteyebileceğiniz bazı özellikler de içeriyor. Bu sınıf, *modeller* olarak adlandırılan Web projesinin kökünde oluşturacağınız yeni bir klasöre gidecektir.
 
 ```csharp
 public class Game
@@ -54,7 +54,7 @@ public class Game
 
 Şimdi, oyun kitaplığınızı yönetmek için kullanacağımız sayfaları oluşturmaya hazırız. Bu, ancak gerçekten başaramayabiliriz kolay bir işlemdir. İlk olarak uygulamamızda bu işlevsellikten nerede canlı olduğuna karar vermemiz gerekiyor. Web projesindeki sayfalar klasörünü açın ve yeni bir klasör ekleyin. BT *oyunları*'nı çağırın.
 
-Şimdi oyunlara sağ tıklayıp **Add**  >  **yeni yapı iskelesi Ekle öğesini**seçin. **Entity Framework (CRUD)** seçeneğini kullanarak Razor Pages seçin. CRUD "oluşturma, okuma, güncelleştirme, silme" anlamına gelir ve bu şablon, bu işlemlerin her biri için ("Tümünü Listele" sayfası ve "bir öğenin ayrıntılarını görüntüleme" sayfası dahil) sayfalar oluşturur.
+Şimdi oyunlara sağ tıklayıp   >  **yeni yapı iskelesi Ekle öğesini** seçin. **Entity Framework (CRUD)** seçeneğini kullanarak Razor Pages seçin. CRUD "oluşturma, okuma, güncelleştirme, silme" anlamına gelir ve bu şablon, bu işlemlerin her biri için ("Tümünü Listele" sayfası ve "bir öğenin ayrıntılarını görüntüleme" sayfası dahil) sayfalar oluşturur.
 
 ![Visual Studio 2019 ASP.NET Core yapı Iskelesi sayfaları ekleme](media/vs-2019/vs2019-add-scaffold.png)
 

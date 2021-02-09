@@ -8,15 +8,15 @@ ms.topic: reference
 ms.assetid: 3a1b6830-30c2-4a36-bd14-6961f5edf9cb
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 3641edafeed9cf7b5e29f8a967f9dbf26cdd3e8c
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: 92c2fd5ed260816ca9b0859d37f125b231c0906e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93049250"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99881288"
 ---
 # <a name="keyboard-shortcuts-in-blend-for-visual-studio"></a>Visual Studio için Blend klavye kısayolları
 
@@ -24,7 +24,7 @@ ms.locfileid: "93049250"
 
 |Bunu yapmak için|Bunu yapın|
 |----------------|-------------|
-|Yeni bir proje oluşturma|**CTRL** + **SHIFT** + **N**|
+|Yeni proje oluşturma|**CTRL** + **SHIFT** + **N**|
 |Bir projeyi veya çözümü açın (site değil)|**CTRL** + **SHIFT** + **O**|
 |Bir çözümü kapatma|**CTRL** + **SHIFT** + **C**|
 |Çözümün veya sitenin bir kopyasını kaydet|**CTRL** + **SHIFT** + **P**|
@@ -42,8 +42,8 @@ ms.locfileid: "93049250"
 |Tüm belgeleri kaydet|**CTRL** + **SHIFT** + **S**|
 |Etkin belgeyi kapat|**CTRL** + **W**|
 |Tüm açık belgeleri kapat|**CTRL** + **SHIFT** + **W**|
-|Son eylemi geri al|**CTRL** + Z|
-|Geri alınan son eylemi yinele|**CTRL** + Y veya **CTRL** + **SHIFT** + **Z**|
+|Son eylemi geri al|**CTRL**+ Z|
+|Geri alınan son eylemi yinele|**CTRL**+ Y veya **CTRL** + **SHIFT** + **Z**|
 |Tasarım zamanı ek açıklaması oluşturma|**CTRL** + **SHIFT** + **T**|
 |Kes|**CTRL** + **X**|
 |Kopyala|**CTRL** + **C**|
@@ -97,7 +97,7 @@ ms.locfileid: "93049250"
 
 |Bunu yapmak için|Bunu yapın|
 |----------------|-------------|
-|**Tasarım** , **kod** ve **bölünmüş** görünümler arasında geçiş yapma|**F11**|
+|**Tasarım**, **kod** ve **bölünmüş** görünümler arasında geçiş yapma|**F11**|
 |Çalışma yüzeyini yakınlaştırma|**CTRL** + **Eşittir işareti** ( **=** )|
 |Çalışma yüzeyinde uzaklaştır|**CTRL** + **Eksi işareti** ( **-** )|
 |Çalışma yüzeyini yakınlaştırma veya uzaklaştırma|Fare tekerleğini döndürme|
@@ -107,7 +107,7 @@ ms.locfileid: "93049250"
 |Çalışma yüzeyini gerçek boyutta görüntüleme|**CTRL** + **1**|
 |Tutamaçları göster veya gizle|**F9**|
 |Nesne sınırlarını göster veya gizle|**CTRL** + **SHIFT** + **H**|
-|**Tasarım** , **xaml** ve **bölünmüş** görünümler arasında geçiş yapma|**F11**|
+|**Tasarım**, **xaml** ve **bölünmüş** görünümler arasında geçiş yapma|**F11**|
 
 ## <a name="workspace-shortcuts"></a>Çalışma alanı kısayolları
 
