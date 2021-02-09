@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 2f3edd6a-84d1-4864-a1ae-6a13c5732aae
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 06effb313dc2b8a247eeeab99290a289717bc960
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: b2f36ee884beb3b79244e4621ba305c06aafe8ff
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94350471"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99915751"
 ---
 # <a name="walkthrough-create-a-custom-bootstrapper-with-a-privacy-prompt"></a>İzlenecek yol: Bir gizlilik istemiyle özel bir önyükleyici oluşturma
 ClickOnce uygulamalarını, daha yeni dosya sürümlerine ve derleme sürümlerine sahip derlemeler kullanılabilir olduğunda otomatik olarak güncelleştirilecek şekilde yapılandırabilirsiniz. Müşterilerinizin Bu davranışa izin vermesini sağlamak için bir gizlilik istemi görüntüleyebilirsiniz. Ardından, uygulamaya otomatik olarak güncelleştirme izni verip vermeyeceğinizi seçebilirler. Uygulamanın otomatik olarak güncelleştirmesine izin verilmiyorsa, yüklemez.
@@ -43,17 +43,17 @@ ClickOnce uygulamalarını, daha yeni dosya sürümlerine ve derleme sürümleri
 
 #### <a name="to-create-a-consent-dialog-box"></a>Onay iletişim kutusu oluşturmak için
 
-1. **Dosya** menüsünde, **Yeni** ' nin üzerine gelin ve ardından **Proje** ' ye tıklayın.
+1. **Dosya** menüsünde, **Yeni**' nin üzerine gelin ve ardından **Proje**' ye tıklayın.
 
-2. **Yeni proje** Iletişim kutusunda **Windows** ' a ve ardından **WindowsFormsApplication** ' e tıklayın.
+2. **Yeni proje** Iletişim kutusunda **Windows**' a ve ardından **WindowsFormsApplication**' e tıklayın.
 
-3. **Ad** Için **ConsentDialog** yazın ve ardından **Tamam** ' a tıklayın.
+3. **Ad** Için **ConsentDialog** yazın ve ardından **Tamam**' a tıklayın.
 
 4. Tasarımcıda forma tıklayın.
 
 5. **Özellikler** penceresinde, **metin** özelliğini **güncelleştirme onayı iletişim kutusunu** olarak değiştirin.
 
-6. **Araç kutusunda** **tüm Windows Forms** ' ı genişletin ve bir **etiket** denetimini forma sürükleyin.
+6. **Araç kutusunda** **tüm Windows Forms**' ı genişletin ve bir **etiket** denetimini forma sürükleyin.
 
 7. Tasarımcıda etiket denetimine tıklayın.
 
@@ -61,21 +61,21 @@ ClickOnce uygulamalarını, daha yeni dosya sürümlerine ve derleme sürümleri
 
     Yüklemek üzere olduğunuz uygulama, Web üzerinde en son güncelleştirmeleri denetler. "Kabul ediyorum" seçeneğine tıklayarak, uygulamayı internetten güncelleştirmeleri otomatik olarak denetleyip yükleyecek şekilde yetkilendirirsiniz.
 
-9. **Araç kutusu** ' nda, formun ortasına bir **CheckBox** denetimi sürükleyin.
+9. **Araç kutusu**' nda, formun ortasına bir **CheckBox** denetimi sürükleyin.
 
 10. **Özellikler** penceresinde, **kabul** ediyorum ' u Için, **Düzen** altındaki **metin** özelliğini değiştirin.
 
-11. **Araç kutusunda** , bir **düğme** denetimini formun sol altına sürükleyin.
+11. **Araç kutusunda**, bir **düğme** denetimini formun sol altına sürükleyin.
 
 12. **Özellikler** penceresinde, **devam** etmek için **Düzen** altındaki **metin** özelliğini değiştirin.
 
 13. **Özellikler** penceresinde, **Tasarım** altındaki **(ad)** özelliğini devam **edbutton** olarak değiştirin.
 
-14. **Araç kutusunda** , formun sağ alt kısmına bir **düğme** denetimi sürükleyin.
+14. **Araç kutusunda**, formun sağ alt kısmına bir **düğme** denetimi sürükleyin.
 
-15. **Özellikler** penceresinde, **Düzen** altındaki **metin** özelliğini **iptal** ' e değiştirin.
+15. **Özellikler** penceresinde, **Düzen** altındaki **metin** özelliğini **iptal**' e değiştirin.
 
-16. **Özellikler** penceresinde, **(ad)** özelliğini **Design** ' ın altında **CancelButton** ' a değiştirin.
+16. **Özellikler** penceresinde, **(ad)** özelliğini **Design** ' ın altında **CancelButton**' a değiştirin.
 
 17. Tasarımcı 'da, CheckedChanged olay işleyicisini oluşturmak için **kabul** ediyorum onay kutusuna çift tıklayın.
 
@@ -112,15 +112,15 @@ ClickOnce uygulamalarını, daha yeni dosya sürümlerine ve derleme sürümleri
 
      Yalnızca Visual Basic geliştiricileri için:
 
-    1. **Çözüm Gezgini** , **ConsentDialog** ' a tıklayın.
+    1. **Çözüm Gezgini**, **ConsentDialog**' a tıklayın.
 
-    2. **Proje** menüsünde **Modül Ekle** ' ye ve ardından **Ekle** ' ye tıklayın.
+    2. **Proje** menüsünde **Modül Ekle**' ye ve ardından **Ekle**' ye tıklayın.
 
     3. *Module1. vb* kod dosyasında aşağıdaki kodu ekleyin.
 
         [!code-vb[ConsentDialog#7](../deployment/codesnippet/VisualBasic/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_6.vb)]
 
-    4. **Proje** menüsünde, **ConsentDialog özellikleri** ' ne tıklayın ve ardından **uygulama** sekmesine tıklayın.
+    4. **Proje** menüsünde, **ConsentDialog özellikleri**' ne tıklayın ve ardından **uygulama** sekmesine tıklayın.
 
     5. **Uygulama çerçevesini etkinleştir** seçeneğinin işaretini kaldırın.
 
@@ -135,7 +135,7 @@ ClickOnce uygulamalarını, daha yeni dosya sürümlerine ve derleme sürümleri
 
        [!code-csharp[ConsentDialog#5](../deployment/codesnippet/CSharp/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_7.cs)]
 
-26. **Derle** menüsünde **BuildSolution** ' a tıklayın.
+26. **Derle** menüsünde **BuildSolution**' a tıklayın.
 
 ## <a name="create-the-custom-bootstrapper-package"></a>Özel önyükleyici paketi oluşturma
  Son kullanıcılara gizlilik istemi 'ni göstermek için, güncelleştirme onayı Iletişim kutusu uygulaması için özel bir önyükleyici paketi oluşturabilir ve bunu tüm ClickOnce uygulamalarınızda bir önkoşul olarak dahil edebilirsiniz.
@@ -155,7 +155,7 @@ ClickOnce uygulamalarını, daha yeni dosya sürümlerine ve derleme sürümleri
     > [!NOTE]
     > Bu klasörü oluşturmak için yönetici ayrıcalıklarına sahip olmanız gerekebilir.
 
-2. *UpdateConsentDialog* dizininde, *en* -adlı bir alt dizin oluşturun.
+2. *UpdateConsentDialog* dizininde, *en*-adlı bir alt dizin oluşturun.
 
     > [!NOTE]
     > Her yerel ayar için yeni bir dizin oluşturun. Örneğin, fr ve de yerel ayarları için alt dizinler ekleyebilirsiniz. Bu dizinler, gerekirse Fransızca ve Almanca dizeleri ve dil paketlerini içerir.
@@ -234,29 +234,29 @@ ClickOnce uygulamalarını, daha yeni dosya sürümlerine ve derleme sürümleri
 
 #### <a name="to-set-the-update-consent-application-as-a-prerequisite"></a>Güncelleştirme Onayı uygulamasını bir önkoşul olarak ayarlamak için
 
-1. **Çözüm Gezgini** , dağıtmak istediğiniz uygulamanızın adına tıklayın.
+1. **Çözüm Gezgini**, dağıtmak istediğiniz uygulamanızın adına tıklayın.
 
-2. **Proje** menüsünde, *ProjectName* **özellikleri** ' ne tıklayın.
+2. **Proje** menüsünde, *ProjectName* **özellikleri**' ne tıklayın.
 
-3. **Yayımla** sayfasına ve sonra **Önkoşullar** ' a tıklayın.
+3. **Yayımla** sayfasına ve sonra **Önkoşullar**' a tıklayın.
 
-4. **Onay onayını Güncelleştir** ' i seçin.
+4. **Onay onayını Güncelleştir**' i seçin.
 
     > [!NOTE]
     > Önkoşullar Iletişim kutusunda güncelleştirme onayı Iletişim kutusunu görmek için Visual Studio 'Yu kapatıp yeniden açmanız gerekebilir.
 
-5. **Tamam** ’a tıklayın.
+5. **Tamam**'a tıklayın.
 
 ## <a name="create-and-test-the-setup-program"></a>Kurulum programını oluşturma ve test etme
  Güncelleştirme Onayı uygulamasını bir önkoşul olarak ayarladıktan sonra, uygulamanız için yükleyiciyi ve önyükleyici oluşturabilirsiniz.
 
 #### <a name="to-create-and-test-the-setup-program-by-not-clicking-i-agree"></a>Kurulum programını kabul ediyorum ' a tıklamayan bir şekilde oluşturmak ve test etmek için
 
-1. **Çözüm Gezgini** , dağıtmak istediğiniz uygulamanızın adına tıklayın.
+1. **Çözüm Gezgini**, dağıtmak istediğiniz uygulamanızın adına tıklayın.
 
-2. **Proje** menüsünde, *ProjectName* **özellikleri** ' ne tıklayın.
+2. **Proje** menüsünde, *ProjectName* **özellikleri**' ne tıklayın.
 
-3. **Yayımla** sayfasına tıklayın ve **Şimdi Yayımla** ' ya tıklayın.
+3. **Yayımla** sayfasına tıklayın ve **Şimdi Yayımla**' ya tıklayın.
 
 4. Yayımlama çıkışı otomatik olarak açılmadığından, yayımlama çıktısına gidin.
 
@@ -264,7 +264,7 @@ ClickOnce uygulamalarını, daha yeni dosya sürümlerine ve derleme sürümleri
 
      Kurulum programı, güncelleştirme onayı Iletişim kutusu yazılım lisans sözleşmesini gösterir.
 
-6. Yazılım lisans sözleşmesini okuyun ve ardından **kabul et** ' e tıklayın.
+6. Yazılım lisans sözleşmesini okuyun ve ardından **kabul et**' e tıklayın.
 
      Güncelleştirme Onayı Iletişim kutusu uygulaması görünür ve şu metni gösterir: yüklemek üzere olduğunuz uygulama, Web üzerinde en son güncelleştirmeleri denetler. Kabul ediyorum ' a tıklayarak, uygulamayı Internet 'te güncelleştirmeleri otomatik olarak denetleyecek şekilde yetkilendirirsiniz.
 
@@ -274,15 +274,15 @@ ClickOnce uygulamalarını, daha yeni dosya sürümlerine ve derleme sürümleri
 
 8. Ayrıntılar ' a tıklayarak şu hata iletisini görüntüleyin: bileşen güncelleştirme onayı Iletişim kutusu şu hata iletisiyle başarısız oldu: "otomatik güncelleştirme sözleşmesi kabul edilmedi." Şu bileşenler yüklenemedi:-onay onay Iletişim kutusu
 
-9. **Kapat** ’a tıklayın.
+9. **Kapat**’a tıklayın.
 
 #### <a name="to-create-and-test-the-setup-program-by-clicking-i-agree"></a>Kurulum programını kabul ediyorum ' a tıklayarak oluşturma ve test etme
 
-1. **Çözüm Gezgini** , dağıtmak istediğiniz uygulamanızın adına tıklayın.
+1. **Çözüm Gezgini**, dağıtmak istediğiniz uygulamanızın adına tıklayın.
 
-2. **Proje** menüsünde, *ProjectName* **özellikleri** ' ne tıklayın.
+2. **Proje** menüsünde, *ProjectName* **özellikleri**' ne tıklayın.
 
-3. **Yayımla** sayfasına tıklayın ve **Şimdi Yayımla** ' ya tıklayın.
+3. **Yayımla** sayfasına tıklayın ve **Şimdi Yayımla**' ya tıklayın.
 
 4. Yayımlama çıkışı otomatik olarak açılmadığından, yayımlama çıktısına gidin.
 
@@ -290,15 +290,15 @@ ClickOnce uygulamalarını, daha yeni dosya sürümlerine ve derleme sürümleri
 
      Kurulum programı, güncelleştirme onayı Iletişim kutusu yazılım lisans sözleşmesini gösterir.
 
-6. Yazılım lisans sözleşmesini okuyun ve ardından **kabul et** ' e tıklayın.
+6. Yazılım lisans sözleşmesini okuyun ve ardından **kabul et**' e tıklayın.
 
      Güncelleştirme Onayı Iletişim kutusu uygulaması görünür ve şu metni gösterir: yüklemek üzere olduğunuz uygulama, Web üzerinde en son güncelleştirmeleri denetler. Kabul ediyorum ' a tıklayarak, uygulamayı Internet 'te güncelleştirmeleri otomatik olarak denetleyecek şekilde yetkilendirirsiniz.
 
-7. **Kabul** ediyorum ' a ve ardından **devam** ' a tıklayın.
+7. **Kabul** ediyorum ' a ve ardından **devam**' a tıklayın.
 
      Uygulama yüklenmeye başlıyor.
 
-8. Uygulama yüklemesi iletişim kutusu görüntülenirse, **yükler** ' e tıklayın.
+8. Uygulama yüklemesi iletişim kutusu görüntülenirse, **yükler**' e tıklayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Uygulama dağıtımının önkoşulları](../deployment/application-deployment-prerequisites.md)
