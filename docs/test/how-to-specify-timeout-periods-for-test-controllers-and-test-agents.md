@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 777d0db5-0073-458a-a2a3-58b1c1f24c60
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
-ms.openlocfilehash: 9dc661999eb12bb679aa3622f0f14adc3ffc661a
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+manager: jmartens
+ms.openlocfilehash: 3cca59fc165871e24269723635a1393d2f859178
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96330010"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99879572"
 ---
 # <a name="how-to-specify-timeout-periods-for-test-controllers-and-test-agents"></a>Nasıl yapılır: test denetleyicileri ve test aracıları için zaman aşımı sürelerini belirtme
 
@@ -30,7 +30,7 @@ Bir test denetleyicisini veya test aracısının çeşitli zaman aşımı ayarla
 
 - Test denetleyicisi: *QTController.exe.config*
 
-    |Anahtar adı|Açıklama|Değer|
+    |Anahtar adı|Description|Değer|
     |-|-----------------|-|
     |AgentConnectionTimeoutInSeconds|Bağlantının kaybolduğu kabul edilmeden önce aracı ping isteği için beklenecek saniye sayısı.|"n" saniye.|
     |Agentsynctimeoutınseconds|Bir eşitleme testi çalıştırması başlattığınızda, çalıştırmayı iptal etmeden önce tüm aracıların eşitlenmesi için beklenecek saniye sayısı.|"n" saniye.|
@@ -39,7 +39,7 @@ Bir test denetleyicisini veya test aracısının çeşitli zaman aşımı ayarla
 
 - Test Aracısı: *QTAgentService.exe.config*
 
-    |Anahtar adı|Açıklama|Değer|
+    |Anahtar adı|Description|Değer|
     |-|-----------------|-|
     |ControllerConnectionPeriodInSeconds|Denetleyiciye bağlanma denemeleri arasındaki saniye sayısı.|"n" saniye. Varsayılan: "30" (otuz saniye).|
     |RemotingTimeoutSeconds|Uzaktan iletişim çağrısının en uzun süre (saniye cinsinden).|"n" saniye. Varsayılan: "600" (on dakika).|

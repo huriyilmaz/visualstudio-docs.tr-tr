@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: e61c49f3-3161-45b1-9220-08b5459065a2
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
-ms.openlocfilehash: a20e8dc21e2ff5d76ea582b6ea3a9a0e36f7ed74
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+manager: jmartens
+ms.openlocfilehash: 540dad5ba6629095c5901b123ebdc4ecb7fb5770
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96328658"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99879533"
 ---
 # <a name="how-to-view-web-page-response-time-in-a-load-test-using-the-load-test-analyzer"></a>Nasıl yapılır: Yük Testi Çözümleyicisini kullanarak yük testinde Web sayfası yanıt süresini görüntüleme
 
@@ -45,7 +45,7 @@ Web performans testinizi yük testinde stres altında çalıştırırsanız, her
 
 3. Her sayfanın verileri kılavuzda görüntülenir. Aşağıdaki sütunlar normalde görüntülenir.
 
-   |Sütun başlığı|Açıklama|
+   |Sütun başlığı|Description|
    |-|-|
    |**Sayfa**|Web sayfasının adı.|
    |**Senaryo**|Senaryonun adı. Web performans testinizde birden fazla senaryonuz varsa önemlidir.|
@@ -58,7 +58,7 @@ Web performans testinizi yük testinde stres altında çalıştırırsanız, her
    |**%90**|Yanıt süresi için 90. yüzdebirlik. Bu, sayfaların %90 ' unun bu sayıdan daha hızlı yanıt verdiğini ve sayfaların %10 ' unun daha yavaş yanıt verdiğini gösterir.<br /><br /> Varsayılan olarak, bu veriler toplanmaz. Bu verileri toplamak için, **Yük Testi Düzenleyicisi**, **çalışma ayarları** düğümü altında, değiştirilecek çalışma ayarı düğümünü seçin. **Özellikler** penceresinde, **Zamanlama Ayrıntıları Deposu** özelliği Için, **alllindividualdetails**' i seçin.|
    |**%95**|Yanıt süresi için 95. yüzdebirlik. Bu, sayfaların %95 ' unun bu sayıdan daha hızlı yanıt verdiğini ve sayfaların %5 ' unun daha yavaş yanıt verdiğini gösterir.|
    |**%99**|Yanıt süresi için 99. yüzdebirlik. Bu, sayfaların %99 ' unun bu sayıdan daha hızlı yanıt verdiğini ve sayfaların %1 ' unun daha yavaş yanıt verdiğini gösterir.<br /><br /> Varsayılan olarak, bu veriler toplanmaz. Bu verileri toplamak için, **Yük Testi Düzenleyicisi**, **çalışma ayarları** düğümü altında, değiştirilecek çalışma ayarı düğümünü seçin. **Özellikler** penceresinde, **Zamanlama Ayrıntıları Deposu** özelliği Için, **alllindividualdetails**' i seçin.|
-   |**Maks**|En fazla sayfa yanıt süresi.<br /><br /> Varsayılan olarak, bu veriler toplanmaz. Bu verileri toplamak için, **Yük Testi Düzenleyicisi**, **çalışma ayarları** düğümü altında, değiştirilecek çalışma ayarı düğümünü seçin. **Özellikler** penceresinde, **Zamanlama Ayrıntıları Deposu** özelliği Için, **alllindividualdetails**' i seçin.|
+   |**Biçimlendir**|En fazla sayfa yanıt süresi.<br /><br /> Varsayılan olarak, bu veriler toplanmaz. Bu verileri toplamak için, **Yük Testi Düzenleyicisi**, **çalışma ayarları** düğümü altında, değiştirilecek çalışma ayarı düğümünü seçin. **Özellikler** penceresinde, **Zamanlama Ayrıntıları Deposu** özelliği Için, **alllindividualdetails**' i seçin.|
    |**STD dev**|Varsayılan olarak, standart sapma verileri toplanmaz. Bu verileri toplamak için, **Yük Testi Düzenleyicisi**, **çalışma ayarları** düğümü altında, değiştirilecek çalışma ayarı düğümünü seçin. **Özellikler** penceresinde, **Zamanlama Ayrıntıları Deposu** özelliği Için, **alllindividualdetails**' i seçin.|
    |**Sayfa saati**|Web sayfası için yapılan tüm isteklere yönelik ortalama yanıt süresi.|
    |**Hedef**|Sayfa saati hedefi. Bu sayfa için sabit bir değerdir. **Note:**  Sayfa saati hedefi yalnızca hedef, Web performans testinde istek için tanımlandığında görüntülenir.|

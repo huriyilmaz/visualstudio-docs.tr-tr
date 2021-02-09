@@ -14,15 +14,15 @@ helpviewer_keywords:
 - BDC [SharePoint development in Visual Studio], filter descriptors
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: ff312753be07867d8978dc4d5f60d5dfc0eee557
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: 4fe2da1bc6aefefb92fbd6f7d11613372b8b7742
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96915433"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99879702"
 ---
 # <a name="how-to-add-a-filter-descriptor-to-a-finder-method"></a>Nasıl yapılır: bir Bulucu yöntemine filtre tanımlayıcısı ekleme
   Filtre tanımlayıcıları, modelin tüketicilerini yürütmeden önce yöntemlere geçmesini sağlar. Daha fazla bilgi için bkz. [iş verileri bağlantı modeli tasarlama](../sharepoint/designing-a-business-data-connectivity-model.md).
@@ -35,7 +35,7 @@ ms.locfileid: "96915433"
 
 2. **Yöntem ayrıntıları** penceresinde, parametrenin tür tanımlayıcısını seçin.
 
-3. Menü çubuğunda **View**  >  **Özellikler penceresini** görüntüle ' yi seçin.
+3. Menü çubuğunda   >  **Özellikler penceresini** görüntüle ' yi seçin.
 
 4. **Özellikler** penceresinde, **tür adı** özelliğini filtreye uygun bir veri türü olarak ayarlayın.
 
@@ -47,7 +47,7 @@ ms.locfileid: "96915433"
 
      **Filtre tanımlayıcıları** düğümünün altında yeni bir filtre tanımlayıcısı görüntülenir.
 
-7. Menü çubuğunda **View**  >  **Özellikler penceresini** görüntüle ' yi seçin.
+7. Menü çubuğunda   >  **Özellikler penceresini** görüntüle ' yi seçin.
 
 8. **Özellikler** penceresinde **tür** özelliğini seçin.
 
