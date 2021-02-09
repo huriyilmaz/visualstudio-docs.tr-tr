@@ -11,15 +11,15 @@ helpviewer_keywords:
 - globalization [Office development in Visual Studio], configuring
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 51e4a2cc4fb74309c44b8068152253de92eed0df
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: fc61f66b2aefaf0e43b1b5af819e0e244feec114
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96847760"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99910307"
 ---
 # <a name="globalization-and-localization-of-excel-solutions"></a>Excel Çözümlerini Genelleştirme ve yerelleştirme
   Bu bölüm, Windows için Ingilizce olmayan ayarlara sahip bilgisayarlarda çalıştırılacak Microsoft Office Excel çözümlerinin özel konuları hakkında bilgiler içerir. Microsoft Office çözümlerin çoğu yönü, Visual Studio kullanarak diğer tür çözümler oluştururken karşılaştığınız ile aynıdır. Genel bilgiler için bkz. [globalize ve yerelleştirme uygulamaları](../ide/globalizing-and-localizing-applications.md).
@@ -79,7 +79,7 @@ Application.ActiveCell.Value2 = "05/12/04"
 
  Aynı kod, Visual Studio 'da Office geliştirme araçları kullanılarak oluşturulan ve COM birlikte çalışabilirliğine Excel 'e geçirilen bir çözümde kullanıldığında, tarih en-US stilinde biçimlendirilirken aynı sonuçları üretir.
 
- Örnek:
+ Örneğin:
 
  [!code-vb[Trin_VstcoreCreatingExcel#6](../vsto/codesnippet/VisualBasic/Trin_VstcoreCreatingExcelVB/Sheet1.vb#6)]
  [!code-csharp[Trin_VstcoreCreatingExcel#6](../vsto/codesnippet/CSharp/Trin_VstcoreCreatingExcelCS/Sheet1.cs#6)]

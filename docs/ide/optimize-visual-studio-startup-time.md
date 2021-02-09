@@ -11,17 +11,17 @@ helpviewer_keywords:
 ms.assetid: d1508121-8499-4084-8eb5-fa89fa7b17d3
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 f1_keywords:
 - vs.performancecenter
 ms.workload:
 - multiple
-ms.openlocfilehash: c409ad35b3d9c09a5dbe574d00a24d1f2bcb8370
-ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
+ms.openlocfilehash: 6d00979ff1672376c5d22da5ef55e5ad3bdf344a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96479959"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99909105"
 ---
 # <a name="optimize-visual-studio-startup-time"></a>Visual Studio başlangıç zamanını iyileştirin
 
@@ -31,7 +31,7 @@ Visual Studio, mümkün olduğunca hızlı ve etkili bir şekilde başlamak içi
 
 Başlangıç süresini genişletmemek için, Visual Studio _isteğe bağlı_ bir yaklaşım kullanarak uzantıları yükler. Bu davranış, uzantıların Visual Studio başladıktan hemen sonra açılmayacağı, ancak gerekli olduğu anlamına gelir. Ayrıca, önceki bir Visual Studio oturumunda açık olan araç pencereleri başlangıç süresini yavaşlatabileceğinden, Visual Studio başlangıç süresini etkilememek için araç pencerelerini daha akıllı bir şekilde açar.
 
-Visual Studio yavaş başlangıç algılarsa, yavaşlamaya neden olan uzantı veya araç penceresine uyarı veren bir açılır ileti görüntülenir. İleti, **Visual Studio performansını Yönet** iletişim kutusu için bir bağlantı sağlar. Bu iletişim kutusuna **Help**  >  , menü çubuğundan **Visual Studio performansının yönetimine** Yardım ' i seçerek de erişebilirsiniz.
+Visual Studio yavaş başlangıç algılarsa, yavaşlamaya neden olan uzantı veya araç penceresine uyarı veren bir açılır ileti görüntülenir. İleti, **Visual Studio performansını Yönet** iletişim kutusu için bir bağlantı sağlar. Bu iletişim kutusuna   >  , menü çubuğundan **Visual Studio performansının yönetimine** Yardım ' i seçerek de erişebilirsiniz.
 
 ![Visual Studio performansı-açılan menü okumayı yönetme ' uzantısının olduğunu belirledik... Visual Studio 'Yu yavaşlayor '](../ide/media/vside_perfdialog_popup.png)
 
@@ -39,9 +39,9 @@ Visual Studio yavaş başlangıç algılarsa, yavaşlamaya neden olan uzantı ve
 
 ## <a name="to-change-extension-settings-to-improve-startup-solution-load-and-typing-performance"></a><a name="extensions" />Başlangıç, çözüm yükleme ve yazma performansını geliştirmek için uzantı ayarlarını değiştirme
 
-1. **Help** Menü çubuğundan Visual Studio performansını Yönet ' i seçerek **Visual Studio performansını Yönet** iletişim kutusunu açın  >  **Manage Visual Studio Performance** .
+1. Menü çubuğundan Visual Studio performansını Yönet ' i seçerek **Visual Studio performansını Yönet** iletişim kutusunu açın  >   .
 
-    Bir uzantı Visual Studio başlatma, çözüm yükleme veya yazma için yavaşanıyorsa, uzantı, **Uzantılar** başlangıcı (veya çözüm yükleme veya yazma) altındaki **Visual Studio performansını Yönet** iletişim kutusunda görünür  >  **Startup** **Solution Load** **Typing**.
+    Bir uzantı Visual Studio başlatma, çözüm yükleme veya yazma için yavaşanıyorsa, uzantı, **Uzantılar** başlangıcı (veya çözüm yükleme veya yazma) altındaki **Visual Studio performansını Yönet** iletişim kutusunda görünür  >    .
 
     ![Visual Studio performansı-uzantıları görünümünü yönetme](../ide/media/vside_perfdialog_extensions.png)
 
@@ -51,9 +51,9 @@ Uzantı **Yöneticisi** veya **Visual Studio performansını Yönet** iletişim 
 
 ## <a name="to-change-tool-window-settings-to-improve-startup-time"></a><a name="tool-windows" />Başlatma süresini artırmak üzere araç penceresi ayarlarını değiştirmek için
 
-1. **Help** Menü çubuğundan Visual Studio performansını Yönet ' i seçerek **Visual Studio performansını Yönet** iletişim kutusunu açın  >  **Manage Visual Studio Performance** .
+1. Menü çubuğundan Visual Studio performansını Yönet ' i seçerek **Visual Studio performansını Yönet** iletişim kutusunu açın  >   .
 
-    Bir araç penceresi Visual Studio başlangıcını yavaşlayorsa araç penceresi, **araç Windows** başlangıcı altındaki **Visual Studio performansını Yönet** iletişim kutusunda görünür  >  **Startup**.
+    Bir araç penceresi Visual Studio başlangıcını yavaşlayorsa araç penceresi, **araç Windows** başlangıcı altındaki **Visual Studio performansını Yönet** iletişim kutusunda görünür  >  .
 
 2. Davranışını değiştirmek istediğiniz araç penceresini seçin.
 

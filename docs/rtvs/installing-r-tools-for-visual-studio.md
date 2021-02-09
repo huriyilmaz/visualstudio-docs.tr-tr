@@ -5,16 +5,16 @@ ms.date: 01/24/2018
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-science
 monikerRange: vs-2017
-ms.openlocfilehash: 5a09b3f78b929fd60764be36f56c0b580c7a42d7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fa5346d65a94646a0fa5e922f3b0055d8cdb6c0d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75843736"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99908658"
 ---
 # <a name="how-to-install-r-tools-for-visual-studio"></a>Visual Studio için R Araçları nasıl yüklenir
 
@@ -44,7 +44,7 @@ Yalnızca Visual Studio Test Professional ve SQL Server Management Studio gibi �
 
     ![VS2017 'de veri bilimi ve analitik uygulamalar iş yükü](media/installation-data-science-workload.png)
 
-1. Aynı iş yükü adının altında, sağ taraftaki ek seçenekleri ayarlayın. Varsayılan olarak, bu iş yükü F # ve Python desteği içerir. R için en düşük gereksinimler **r dil desteği**, **r geliştirme için çalışma zamanı desteği**ve **Microsoft R istemcisi**.
+1. Aynı iş yükü adının altında, sağ taraftaki ek seçenekleri ayarlayın. Varsayılan olarak, bu iş yükü F # ve Python desteği içerir. R için en düşük gereksinimler **r dil desteği**, **r geliştirme için çalışma zamanı desteği** ve **Microsoft R istemcisi**.
 
 RTVS, ' de yüklü: *% ProgramFiles (x86)% \ Microsoft Visual Studio \<version> \<edition> Common7\IDE\Extensions\Microsoft\R Tools for Visual Studio* , *\<version>* genellikle ve,, `2017` *\<edition>* `Community` `Professional` veya `Enterprise` .
 
@@ -87,7 +87,7 @@ Visual Studio 2015 için RTVS, içine yüklendi: `%ProgramFiles(x86)%\Microsoft 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [R ile çalışmaya başlama](getting-started-with-r.md)
+- [R’yi kullanmaya başlama](getting-started-with-r.md)
 - [R araçları örnek projeleri](getting-started-samples.md)
 - [R araçlarında yardım](getting-started-help.md)
 - [R Araçları seçenekleri](options-for-r-tools-in-visual-studio.md)

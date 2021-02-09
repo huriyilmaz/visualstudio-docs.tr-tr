@@ -9,26 +9,26 @@ helpviewer_keywords:
 ms.assetid: f4cea2e1-08dc-47ac-aba2-3b8c338e607f
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - aspnet
-ms.openlocfilehash: bbe3d23301f0853626a930855acf4b595c6a2923
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 882a192a96764356e90d78498ef5ed5ccd29ce25
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75847882"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99908344"
 ---
 # <a name="quickstart-debug-aspnet-core-with-the-visual-studio-debugger"></a>Hızlı başlangıç: Visual Studio hata ayıklayıcısı ile ASP.NET Core hata ayıklama
 
 Visual Studio hata ayıklayıcı, uygulamalarınızda hata ayıklamanıza yardımcı olmak için birçok güçlü özellik sunar. Bu konu, temel özelliklerden bazılarını öğrenmenin hızlı bir yolunu sağlar.
 
-## <a name="create-a-new-project"></a>Yeni bir proje oluşturma
+## <a name="create-a-new-project"></a>Yeni proje oluşturma
 
 1. Visual Studio'yu açın.
 
     ::: moniker range=">=vs-2019"
-    Başlangıç penceresini kapatmak için **ESC** tuşuna basın. **CTRL + Q** yazarak arama kutusunu açın, **ASP.net**yazın, **Şablonlar**' ı seçin ve sonra **Yeni ASP.NET Core Web uygulaması oluştur**' u seçin. Görüntülenen iletişim kutusunda **Oluştur**' u seçin.
+    Başlangıç penceresini kapatmak için **ESC** tuşuna basın. **CTRL + Q** yazarak arama kutusunu açın, **ASP.net** yazın, **Şablonlar**' ı seçin ve sonra **Yeni ASP.NET Core Web uygulaması oluştur**' u seçin. Görüntülenen iletişim kutusunda **Oluştur**' u seçin.
     ::: moniker-end
     ::: moniker range="vs-2017"
     Üstteki menü çubuğundan **Dosya**  >  **Yeni**  >  **Proje**' yi seçin. **Yeni proje** iletişim kutusunun sol bölmesinde, **Visual C#** altında **Web**' i seçin ve ardından Ortadaki bölmede **ASP.NET Core Web uygulaması**' nı seçin. **Mydbgapp** gibi bir ad yazın ve **Tamam**' a tıklayın.
@@ -38,7 +38,7 @@ Visual Studio hata ayıklayıcı, uygulamalarınızda hata ayıklamanıza yardı
     ![Bir Web uygulaması seçin](../debugger/media/dbg-qs-aspnet-choose-web-app.png)
     ::: moniker-end
 
-    **ASP.NET Core Web uygulaması** proje şablonunu görmüyorsanız **Araçlar**' a gidin  >  ve Visual Studio yükleyicisi açan araçlar**ve Özellikler...**' a gidin. **ASP.net ve Web geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
+    **ASP.NET Core Web uygulaması** proje şablonunu görmüyorsanız **Araçlar**' a gidin  >  ve Visual Studio yükleyicisi açan araçlar **ve Özellikler...**' a gidin. **ASP.net ve Web geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
 
     Visual Studio projeyi oluşturur.
 
@@ -78,13 +78,13 @@ Visual Studio hata ayıklayıcı, uygulamalarınızda hata ayıklamanıza yardı
 
 *Kesme noktası* , Visual Studio 'nun çalışan kodunuzu askıya alması gerektiğini belirten bir işaretleyicidir, böylece değişkenlerin değerlerine veya bellek davranışına veya kodun bir dalının çalıştırılıp çalıştırılmayacağı konusunda bir görünüm elde edebilirsiniz. Hata ayıklamada en temel özelliktir.
 
-1. Kesme noktasını ayarlamak için, işlevin solundaki cilt payın içine tıklayın `doWork` (veya kod satırını seçip **F9**tuşuna basın).
+1. Kesme noktasını ayarlamak için, işlevin solundaki cilt payın içine tıklayın `doWork` (veya kod satırını seçip **F9** tuşuna basın).
 
     ![Kesme noktası ayarlama](../debugger/media/dbg-qs-set-breakpoint-aspnet.png)
 
     Kesme noktası açma küme ayracı () solunda ayarlanır `{` .
 
-1. Şimdi **F5** tuşuna basın (veya hata **ayıklamayı başlatmak > hata ayıkla**seçeneğini belirleyin).
+1. Şimdi **F5** tuşuna basın (veya hata **ayıklamayı başlatmak > hata ayıkla** seçeneğini belirleyin).
 
 1. Web sayfası yüklendiğinde, Web sayfasının en üstündeki **hakkında** bağlantısına tıklayın.
 
@@ -99,7 +99,7 @@ Visual Studio hata ayıklayıcı, uygulamalarınızda hata ayıklamanıza yardı
 
 Hata ayıklayıcının devam etmesini bildirmek için farklı komutlar vardır. Visual Studio 2017 ' den başlayarak kullanılabilecek yararlı bir kod Gezinti komutu gösteririz.
 
-Kesme noktasında duraklalarken, tıklama `return c2` düğmesine tıklayarak ve ardından tıklama düğmesine tıklayarak **Run to click** deyimin üzerine gelin ![ ](../debugger/media/dbg-tour-run-to-click.png) ve sonra da **Çalıştır** düğmesine basın.
+Kesme noktasında duraklalarken, tıklama `return c2` düğmesine tıklayarak ve ardından tıklama düğmesine tıklayarak  deyimin üzerine gelin ![ ](../debugger/media/dbg-tour-run-to-click.png) ve sonra da **Çalıştır** düğmesine basın.
 
 ![Tıklama için Çalıştır](../debugger/media/dbg-qs-run-to-click-aspnet.png)
 

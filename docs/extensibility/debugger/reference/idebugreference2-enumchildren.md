@@ -9,26 +9,26 @@ helpviewer_keywords:
 ms.assetid: 35b3c2f3-69f4-4013-b555-f847221f62e8
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 96b2fec782ce88dfb2200df35f56b35b304beda5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d142f6c3715e2c3888c7ce60f349c50e84f7f16b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80720626"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99909694"
 ---
 # <a name="idebugreference2enumchildren"></a>IDebugReference2::EnumChildren
 Bir başvurunun seçili alt öğelerinin listesini alır. Daha sonraki kullanımlar için ayrılmıştır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
-HRESULT EnumChildren ( 
+HRESULT EnumChildren ( 
    DEBUGREF_INFO_FLAGS        dwFields,
    DWORD                      dwRadix,
    DBG_ATTRIB_FLAGS           dwAttribFilter,
@@ -39,7 +39,7 @@ HRESULT EnumChildren ( 
 ```
 
 ```csharp
-int EnumChildren ( 
+int EnumChildren ( 
    enum_DEBUGREF_INFO_FLAGS     dwFields,
    uint                         dwRadix,
    enum_DBG_ATTRIB_FLAGS        dwAttribFilter,
@@ -57,7 +57,7 @@ int EnumChildren ( 
 'ndaki Herhangi bir sayısal bilgiyi biçimlendirmede kullanılacak taban tabanı.
 
 `dwAttribFilter`\
-'ndaki [DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md) `pszNameFilter` Hangi yapıların numaralandırılacağını seçmek için parametresiyle birlikte filtre olarak kullanılan DBG_ATTRIB_FLAGS numaralandırmasındaki bayrakların birleşimi.
+'ndaki [](../../../extensibility/debugger/reference/dbg-attrib-flags.md) `pszNameFilter` Hangi yapıların numaralandırılacağını seçmek için parametresiyle birlikte filtre olarak kullanılan DBG_ATTRIB_FLAGS numaralandırmasındaki bayrakların birleşimi.
 
 `pszNameFilter`\
 'ndaki "MyX" gibi bir filtre belirten bir dize, `dwAttribFilter` Numaralandırılacak yapıları seçmek için parametresiyle birlikte kullanılır.

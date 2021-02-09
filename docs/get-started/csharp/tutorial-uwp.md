@@ -9,17 +9,17 @@ ms.topic: tutorial
 ms.devlang: CSharp
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: 3c1f541c94804f8f5f454f6299a116a8bd1386e7
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 342fb2ba0d094299b41707b93b52f3b28a3afdce
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037282"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99909253"
 ---
 # <a name="tutorial-create-your-first-universal-windows-platform-application-in-visual-studio-with-xaml-and-c35"></a>Öğretici: Visual Studio 'da XAML ve C ile ilk Evrensel Windows Platformu uygulamanızı oluşturma&#35;
 
@@ -66,7 +66,7 @@ Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://
    > [!NOTE]
    > **Boş uygulama (Evrensel Windows)** proje şablonunu görmüyorsanız, **daha fazla araç ve özellik yüklemesi** bağlantısına tıklayın.<br><br>![Daha fazla araç ve özellik yüklemesi bağlantısına tıklayın](media/vs-2019/uwp-not-finding.png)<br><br>Visual Studio Yükleyicisi başlatılır. **Evrensel Windows platformu geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.<br><br>![Visual Studio Yükleyicisi Evrensel Windows Platformu geliştirme iş yükü](media/uwp-dev-workload.png)
 
-1. Projeye bir ad, _HelloWorld_ve **Oluştur**seçeneğini belirleyin.
+1. Projeye bir ad, _HelloWorld_ ve **Oluştur** seçeneğini belirleyin.
 
    ![Proje ekranınızı yapılandırma](media/vs-2019/uwp-configure-your-project.png)
 
@@ -85,7 +85,7 @@ Geliştirmeye başlama zamanı. Düğme denetimi ekleyecek, düğmeye bir eylem 
 
 ### <a name="add-a-button-to-the-design-canvas"></a>Tasarım tuvaline düğme ekleme
 
-1. **Çözüm Gezgini**bölünmüş bir görünüm açmak Için *MainPage. xaml* öğesine çift tıklayın.
+1. **Çözüm Gezgini** bölünmüş bir görünüm açmak Için *MainPage. xaml* öğesine çift tıklayın.
 
    ::: moniker range="vs-2017"
    ![Çözüm Gezgini MainPage. xaml ' i açın ](media/uwp-solution-explorer-MainPage-xaml.png)
@@ -94,7 +94,7 @@ Geliştirmeye başlama zamanı. Düğme denetimi ekleyecek, düğmeye bir eylem 
    ![Çözüm Gezgini MainPage. xaml ' i açın](media/vs-2019/uwp-solution-explorer-mainpage-xaml.png)
    ::: moniker-end
 
-   İki bölme vardır: tasarım tuvali içeren **XAML Tasarımcısı**ve kod ekleyebileceğiniz veya değiştirebileceğiniz **xaml Düzenleyicisi**.
+   İki bölme vardır: tasarım tuvali içeren **XAML Tasarımcısı** ve kod ekleyebileceğiniz veya değiştirebileceğiniz **xaml Düzenleyicisi**.
 
    ![XAML düzenleyicisinde XAML Tasarımcısı bölmesi](media/uwp-xaml-editor.png)
 
@@ -102,7 +102,7 @@ Geliştirmeye başlama zamanı. Düğme denetimi ekleyecek, düğmeye bir eylem 
 
    ![Araç kutusu ' na tıklayarak araç kutusu açılır penceresini açın](media/uwp-toolbox.png)
 
-   ( **Araç kutusu** seçeneğini görmüyorsanız, menü çubuğundan açabilirsiniz. Bunu yapmak için **View**  >  **araç çubuğunu**görüntüle ' yi seçin. Ya da **CTRL** + **alt** + **X**tuşlarına basın.)
+   ( **Araç kutusu** seçeneğini görmüyorsanız, menü çubuğundan açabilirsiniz. Bunu yapmak için   >  **araç çubuğunu** görüntüle ' yi seçin. Ya da **CTRL** + **alt** + **X** tuşlarına basın.)
 
 1. Araç kutusu penceresini sabitlemek için **sabitle** simgesine tıklayın.
 
@@ -112,7 +112,7 @@ Geliştirmeye başlama zamanı. Düğme denetimi ekleyecek, düğmeye bir eylem 
 
    ![Düğme denetimine tıklayın ve tasarım tuvaline sürükleyin](media/uwp-toolbox-add-button-control.png)
 
-   **Xaml düzenleyicisinde**koda bakarsanız, düğmenin de bu şekilde eklendiğini görürsünüz:
+   **Xaml düzenleyicisinde** koda bakarsanız, düğmenin de bu şekilde eklendiğini görürsünüz:
 
    ![XAML düzenleyicisinde düğmeyi göster](media/uwp-xaml-control-code-window.png)
 
@@ -132,7 +132,7 @@ Geliştirmeye başlama zamanı. Düğme denetimi ekleyecek, düğmeye bir eylem 
 
 1. Tasarım tuvalindeki düğme denetimine çift tıklayın.
 
-1. Arka plan kod sayfasında, *MainPage.xaml.cs*içindeki olay işleyici kodunu düzenleyin.
+1. Arka plan kod sayfasında, *MainPage.xaml.cs* içindeki olay işleyici kodunu düzenleyin.
 
    İşte ilginç şeyler. Varsayılan olay işleyicisi şöyle görünür:
 

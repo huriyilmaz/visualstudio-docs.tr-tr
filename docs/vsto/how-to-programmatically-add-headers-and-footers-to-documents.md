@@ -15,15 +15,15 @@ helpviewer_keywords:
 - footers, adding to documents
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 1abf9c0726a6b4afd1764aec095f129a4fcaf510
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: 63b50e020efa549993e36dbd5b43504467e554a6
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96844524"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99908600"
 ---
 # <a name="how-to-programmatically-add-headers-and-footers-to-documents"></a>Nasıl yapılır: belgelere program aracılığıyla üstbilgiler ve altbilgiler ekleme
   Özelliği ve özelliğini kullanarak belgenizdeki üstbilgilere ve altbilgilere metin ekleyebilirsiniz <xref:Microsoft.Office.Interop.Word.Section.Headers%2A> <xref:Microsoft.Office.Interop.Word.Section.Footers%2A> <xref:Microsoft.Office.Interop.Word.Section> . Bir belgenin her bölümü üç üst bilgi ve alt bilgi içerir:

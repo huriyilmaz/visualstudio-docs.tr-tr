@@ -5,18 +5,18 @@ ms.date: 08/28/2020
 ms.topic: reference
 author: andysterland
 ms.author: andster
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 153864a293ca25fdcf30f23b96f686737411c965
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 9cd9fef6cebdefc190d37c067616e51c6d3e372f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94435788"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99908127"
 ---
 # <a name="devinit-commands"></a>devinit komutları
 
@@ -34,10 +34,10 @@ Komut için isteğe bağlı seçenekler `devinit init` .
 
 | Bağımsız Değişken             | Gerekli | Açıklama                                                               |
 |----------------------|----------|---------------------------------------------------------------------------|
-| -f,--dosyası            | No       | `.devinit.json`Dosyanın yolu.                                         |
-| --hata-eylem       | No       | Hataların nasıl işleneceğini belirtir. Seçenekler: durdur, Yoksay, devam et (varsayılan).|
-| -v,--verbose         | No       | Ayrıntılı çıktıyı yay.                                                      |
-| -n,--Kuru çalıştırma         | No       | Kuru çalıştırma.                                                                  |
+| -f,--dosyası            | Hayır       | `.devinit.json`Dosyanın yolu.                                         |
+| --hata-eylem       | Hayır       | Hataların nasıl işleneceğini belirtir. Seçenekler: durdur, Yoksay, devam et (varsayılan).|
+| -v,--verbose         | Hayır       | Ayrıntılı çıktıyı yay.                                                      |
+| -n,--Kuru çalıştırma         | Hayır       | Kuru çalıştırma.                                                                  |
 
 #### <a name="--file-argument"></a>--Dosya bağımsız değişkeni
 
@@ -82,17 +82,17 @@ Komut için Seçenekler `devinit run` .
 | Bağımsız Değişken                                      | Gerekli | Açıklama                                                                          |
 |-----------------------------------------------|----------|--------------------------------------------------------------------------------------|
 | -t,--aracı                                     | Yes      | Gereklidir. Araç adı.                                                             |
-| -ı,--girişi                                    | No       | Araç giriş değeri. Örneğin, bir dosya adı, paket veya ad.                     |
-| --hata-eylem                                | No       | Araç hatalarının nasıl işleneceğini belirtir: durdur, Yoksay, devam et. Varsayılan değer durdurulur. |
-| -v,--verbose                                  | No       | Ayrıntılı çıktıyı yay.                                                                 |
-| -n,--Kuru çalıştırma                                  | No       | Kuru çalıştırma.                                                                             |
-| --&lt;arg1 &gt; &lt; arg2 &gt; ... &lt; argN&gt;  | No       | Araca ek komut satırı bağımsız değişkenleri.                                       |
+| -ı,--girişi                                    | Hayır       | Araç giriş değeri. Örneğin, bir dosya adı, paket veya ad.                     |
+| --hata-eylem                                | Hayır       | Araç hatalarının nasıl işleneceğini belirtir: durdur, Yoksay, devam et. Varsayılan değer durdurulur. |
+| -v,--verbose                                  | Hayır       | Ayrıntılı çıktıyı yay.                                                                 |
+| -n,--Kuru çalıştırma                                  | Hayır       | Kuru çalıştırma.                                                                             |
+| --&lt;arg1 &gt; &lt; arg2 &gt; ... &lt; argN&gt;  | Hayır       | Araca ek komut satırı bağımsız değişkenleri.                                       |
 
 #### <a name="--error-action-argument"></a>--hata-eylem bağımsız değişkeni
 
 Bir araç sıfır olmayan bir çıkış kodu döndürürse gerçekleştirilecek eylemi belirtir. Geçerli değerler şunlardır:
 
-| Bağımsız Değişken | Açıklama                                                                                                                                                                                                                                                                           |
+| Bağımsız Değişken | Description                                                                                                                                                                                                                                                                           |
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | continue | Standart hataya bir hata gönderdikten sonra diğer araçları işlemeye devam edin. devinit.exe çıkış kodu sıfır değil (hata). Bu davranış durdurma hatası eylemine benzerdir, ancak işleme devam eder. `continue` init komutu için varsayılan hata-eylem.              |
 | yoksayma   | Standart çıktıya bir uyarı yaydıktan sonra diğer araçları işlemeye devam edin. DevInit işlem çıkış kodu her zaman sıfır (başarılı) olmalıdır. `ignore`Ayar tüm hataları yoksayar.                                                                                                      |

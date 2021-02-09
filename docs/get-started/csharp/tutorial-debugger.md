@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 62734c0d-a75a-4576-8f73-0e97c19280e1
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 435564a9bf4e90dd25ed5fee3a44d0578c201a99
-ms.sourcegitcommit: d577818d3d8e365baa55c6108fa8159c46ed8b43
+ms.openlocfilehash: 741c22e8116d47a51a75369b5b114725c1f64bf8
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97846942"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99909263"
 ---
 # <a name="tutorial-learn-to-debug-c-code-using-visual-studio"></a>Öğretici: Visual Studio kullanarak C# kodunda hata ayıklamayı öğrenin
 
@@ -36,7 +36,7 @@ Bu öğreticide şunları yapacaksınız:
 > * Veri ipuçlarında ve hata ayıklayıcı Windows 'da değişkenleri İnceleme
 > * Çağrı yığınını inceleyin
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 ::: moniker range=">=vs-2019"
 

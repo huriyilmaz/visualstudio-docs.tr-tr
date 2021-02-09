@@ -10,26 +10,26 @@ helpviewer_keywords:
 ms.assetid: 61cc3704-47fa-4d9b-aa62-bb4585ac8fb1
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ac9113424c6cd5cce230774a6e5335ffa4d4ba77
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8ff77985bca8772d92c3b90e7a727c0077137e24
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80727523"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99909900"
 ---
 # <a name="idebugmemorybytes2writeat"></a>IDebugMemoryBytes2::WriteAt
 Belirtilen adresten başlayarak belirtilen sayıda belleği yazar.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
-HRESULT WriteAt( 
+HRESULT WriteAt( 
    IDebugMemoryContext2* pStartContext,
    DWORD                 dwCount,
    BYTE*                 rgbMemory

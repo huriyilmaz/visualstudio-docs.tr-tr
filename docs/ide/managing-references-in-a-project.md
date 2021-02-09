@@ -20,21 +20,21 @@ helpviewer_keywords:
 - objects [Visual Studio], referencing
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: fdf737d26ec14c2a108125425a3b66cdf4a0e519
-ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
+ms.openlocfilehash: b9beb330f452ff97b7f5a81539cfc62c02404901
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "95870956"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99909160"
 ---
 # <a name="manage-references-in-a-project"></a>Bir projedeki başvuruları yönetme
 
 Bir dış bileşene veya bağlı hizmete karşı kod yazmadan önce, projenizin bir başvurusu içermesi gerekir. Başvuru temelde, Visual Studio 'Nun bileşeni veya hizmeti bulması için gereken bilgileri içeren bir proje dosyasındaki giriştir.
 
-Başvuru eklemek için, **Çözüm Gezgini** ' deki **Başvurular** veya **Bağımlılıklar** düğümüne sağ tıklayın ve **Başvuru Ekle**' yi seçin. Ayrıca, proje düğümüne sağ tıklayıp başvuru **Ekle**' yi seçebilirsiniz  >  **Reference**. Daha fazla bilgi için bkz. [nasıl yapılır: başvuruları ekleme veya kaldırma](../ide/how-to-add-or-remove-references-by-using-the-reference-manager.md).
+Başvuru eklemek için, **Çözüm Gezgini** ' deki **Başvurular** veya **Bağımlılıklar** düğümüne sağ tıklayın ve **Başvuru Ekle**' yi seçin. Ayrıca, proje düğümüne sağ tıklayıp başvuru **Ekle**' yi seçebilirsiniz  >  . Daha fazla bilgi için bkz. [nasıl yapılır: başvuruları ekleme veya kaldırma](../ide/how-to-add-or-remove-references-by-using-the-reference-manager.md).
 
 ![Visual C&#43;&#43; bir başvuru ekleme](../ide/media/vs2015_cpp_add_reference.png)
 
@@ -82,7 +82,7 @@ Uygulamanız tarafından başvurulan Uzantı SDK 'sının desteklenmediğini bel
 
 1. Projede hataya neden olan **Başvurular** veya **Bağımlılıklar** düğümüne sağ tıklayın ve **Başvuru Ekle**' yi seçin.
 
-1. **Windows** sekmesine ve sonra **Uzantılar** alt sekmesine tıklayın ve ardından eski Uzantı SDK 'larının onay kutularının Işaretini kaldırın ve yeni uzantı SDK 'larının onay kutularını işaretleyin. **Tamam** düğmesine tıklayın.
+1. **Windows** sekmesine ve sonra **Uzantılar** alt sekmesine tıklayın ve ardından eski Uzantı SDK 'larının onay kutularının Işaretini kaldırın ve yeni uzantı SDK 'larının onay kutularını işaretleyin. **Tamam**'a tıklayın.
 
 ## <a name="add-a-reference-at-design-time"></a>Tasarım zamanında başvuru ekleme
 

@@ -9,17 +9,17 @@ helpviewer_keywords:
 - performance [Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 f1_keywords:
 - vs.performancecenter
 ms.workload:
 - multiple
-ms.openlocfilehash: 6e6f93b7709144e6682bc54d5686fde5ff650f56
-ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
+ms.openlocfilehash: e1c1be9ef034f4c11fde22e8aa811785631321f5
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "95871476"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99909126"
 ---
 # <a name="optimize-visual-studio-performance"></a>Visual Studio performansını iyileştirme
 
@@ -51,7 +51,7 @@ Ayrıca, çözümünüzü bir USB sürücüsünden çalıştırmayın. Bunu HDD 
 
 ## <a name="help-us-improve"></a>Geliştirmemize yardımcı olun
 
-Geribildiriminiz iyileştirmemize yardımcı olur. Bir izlemeyi "kaydetmek" ve bize göndermek için **sorun bildir** özelliğini kullanın. **Hızlı Başlat**' ın yanındaki geri bildirim simgesini seçin veya **Help**  >  menü çubuğundan sorun bildir Yardım **geri bildirim gönder**' i seçin  >  **Report a Problem** . Daha fazla bilgi için bkz. [Visual Studio ile sorun bildirme](../ide/how-to-report-a-problem-with-visual-studio.md).
+Geribildiriminiz iyileştirmemize yardımcı olur. Bir izlemeyi "kaydetmek" ve bize göndermek için **sorun bildir** özelliğini kullanın. **Hızlı Başlat**' ın yanındaki geri bildirim simgesini seçin veya   >  menü çubuğundan sorun bildir Yardım **geri bildirim gönder**' i seçin  >   . Daha fazla bilgi için bkz. [Visual Studio ile sorun bildirme](../ide/how-to-report-a-problem-with-visual-studio.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

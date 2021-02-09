@@ -9,18 +9,18 @@ ms.topic: tutorial
 ms.devlang: CSharp
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 dev_langs:
 - CSharp
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 484cb82a3659e306bd4c6bd14a3133c4677160db
-ms.sourcegitcommit: d526af3642163180e0cc3e1e73b0a00f02542683
+ms.openlocfilehash: ff5e23a92409a3169add19c8810bec44fa4db9ad
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/31/2020
-ms.locfileid: "97833344"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99909363"
 ---
 # <a name="tutorial-create-a-simple-c-console-app-in-visual-studio"></a>Öğretici: Visual Studio 'da basit bir C# konsol uygulaması oluşturma
 
@@ -49,13 +49,13 @@ Başlamak için bir C# uygulama projesi oluşturacağız. Proje türü, ihtiyac�
 2. Üstteki menü çubuğundan **Dosya**  >  **Yeni**  >  **Proje**' yi seçin.
    (Alternatif olarak, **CTRL** + tuşuna basın **SHIFT** + **N**).
 
-3. **Yeni proje** iletişim kutusunun sol bölmesinde, **C#**' ı genişletin ve ardından **.NET Core**' u seçin. Orta bölmede **konsol uygulaması (.NET Core)** öğesini seçin. Sonra **_Hesaplayıcı_* _ dosyasını adlandırın.
+3. **Yeni proje** iletişim kutusunun sol bölmesinde, **C#**' ı genişletin ve ardından **.NET Core**' u seçin. Orta bölmede **konsol uygulaması (.NET Core)** öğesini seçin. Ardından dosya **_Hesaplayıcı_** adını adlandırın.
 
    ![Visual Studio IDE 'de yeni proje iletişim kutusundaki konsol uygulaması (.NET Core) proje şablonu](./media/new-project-csharp-calculator-console-app.png)
 
 ### <a name="add-a-workload-optional"></a>İş yükü ekleme (isteğe bağlı)
 
-_ *Konsol uygulaması (.NET Core)** proje şablonu görmüyorsanız, **.NET Core platformlar arası geliştirme** iş yükünü ekleyerek bu uygulamayı edinebilirsiniz. Aşağıdaki adımları uygulayın:
+**Konsol uygulaması (.NET Core)** proje şablonunu görmüyorsanız, **.NET Core platformlar arası geliştirme** iş yükünü ekleyerek buna ulaşabilirsiniz. Aşağıdaki adımları uygulayın:
 
 #### <a name="option-1-use-the-new-project-dialog-box"></a>Seçenek 1: yeni proje iletişim kutusunu kullanma
 
