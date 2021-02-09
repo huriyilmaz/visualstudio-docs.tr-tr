@@ -6,15 +6,15 @@ ms.date: 11/04/2016
 ms.topic: overview
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 1bd1cac1c688bf2efc0a4c08797d72eabf0133e2
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: de79063eeef5056bd850d8fa1fe76d6698c7e082
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94351446"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99874859"
 ---
 # <a name="xml-editor"></a>XML düzenleyicisi
 
@@ -42,7 +42,7 @@ XML Düzenleyicisi aşağıdaki özellikleri içerir:
 
 - [XML şema Gezgini](../xml-tools/xml-schema-explorer.md)ile tümleştirme. Bu, XML şemaları için hiyerarşik bir görünüm sağlar.
 
-XML Düzenleyicisi, *. xml* , *. xsd* , *. xsl* ve *. config* gibi iyi bilinen dosya uzantıları için çağrılır. Ayrıca dosya XML içeriyorsa, herhangi bir bilinmeyen dosya uzantısında da çağrılır.
+XML Düzenleyicisi, *. xml*, *. xsd*, *. xsl* ve *. config* gibi iyi bilinen dosya uzantıları için çağrılır. Ayrıca dosya XML içeriyorsa, herhangi bir bilinmeyen dosya uzantısında da çağrılır.
 
 ## <a name="xslt-intellisense"></a>XSLT IntelliSense
 

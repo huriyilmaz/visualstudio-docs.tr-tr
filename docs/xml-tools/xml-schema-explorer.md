@@ -7,19 +7,19 @@ ms.topic: conceptual
 ms.assetid: 2fc39e98-b194-456b-a452-cfafb0a52d66
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 31edea44741249c5d75a53e291c766824dc3b8ea
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: c4b16c1baa039a2f1e812d35e7a4994ffc0d5e5c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94351303"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99874892"
 ---
 # <a name="xml-schema-explorer"></a>XML Şema Gezgini
 
-XML **şema Gezgini** , XML şeması tanım DILI (xsd) şemaları ile çalışmanıza olanak tanımak için MICROSOFT VISUAL STUDIO ve XML Düzenleyicisi ile tümleşiktir. Bir XML şema dosyası açtığınızda, **şema kümesi** düğümü **XML şema Gezgini** 'nde görünür. Hedef dosyanız için dahil edilen, içeri aktarılan veya yeniden tanımlanmış şemaların yanı sıra bir veya ifadesiyle başvurulan tüm dosyalar `include` `import` da **XML şema Gezgini** 'nde görünür.
+XML **şema Gezgini** , XML şeması tanım DILI (xsd) şemaları ile çalışmanıza olanak tanımak için MICROSOFT VISUAL STUDIO ve XML Düzenleyicisi ile tümleşiktir. Bir XML şema dosyası açtığınızda, **şema kümesi** düğümü **XML şema Gezgini**'nde görünür. Hedef dosyanız için dahil edilen, içeri aktarılan veya yeniden tanımlanmış şemaların yanı sıra bir veya ifadesiyle başvurulan tüm dosyalar `include` `import` da **XML şema Gezgini**'nde görünür.
 
 **XML şeması Gezgini** şunları yapmanızı sağlar:
 
@@ -37,7 +37,7 @@ XML **şema Gezgini** , XML şeması tanım DILI (xsd) şemaları ile çalışma
 
 - Genel öğeler için örnek XML oluşturun.
 
-**XML şema Gezgini** , bir ağaç görünümü aracılığıyla şema kümesinin hiyerarşik bir görünümünü sağlar. **XML şeması Gezgini** Ayrıca arama, filtreleme, gezinme ve sıralama sağlar. **XML şema Gezgini** 'ne erişmek için aşağıdakilerden birini yapın:
+**XML şema Gezgini** , bir ağaç görünümü aracılığıyla şema kümesinin hiyerarşik bir görünümünü sağlar. **XML şeması Gezgini** Ayrıca arama, filtreleme, gezinme ve sıralama sağlar. **XML şema Gezgini**'ne erişmek için aşağıdakilerden birini yapın:
 
 - [Başlangıç görünümü](../xml-tools/start-view.md)' nde, **XML şema Gezgini** bağlantısına tıklayın.
 

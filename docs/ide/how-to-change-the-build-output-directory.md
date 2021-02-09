@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: a8333c89-afb2-4b1d-b2e2-9146da852402
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 2512836781b0bf8c269f296066b25722b58be1fb
-ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
+ms.openlocfilehash: 792175d7d2c168f75d20bce86675a1fcd8c47899
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92136894"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99875542"
 ---
 # <a name="how-to-change-the-build-output-directory"></a>Nasıl yapılır: derleme çıkış dizinini değiştirme
 
@@ -34,7 +34,7 @@ Projeniz tarafından oluşturulan çıktının yapılandırma bazında (hata ay�
    - Visual Basic için **Derle** sekmesini seçin.
    - C++ veya JavaScript için **genel** sekmesini seçin.
 
-3. Üstteki yapılandırma açılır penceresinde çıkış dosyası konumunu değiştirmek istediğiniz yapılandırmayı (**hata ayıklama**, **yayın**veya **tüm yapılandırmalar**) seçin.
+3. Üstteki yapılandırma açılır penceresinde çıkış dosyası konumunu değiştirmek istediğiniz yapılandırmayı (**hata ayıklama**, **yayın** veya **tüm yapılandırmalar**) seçin.
 
 4. Proje türüne göre farklılık gösteren sayfada çıkış yolu girişini bulun &mdash; :
 

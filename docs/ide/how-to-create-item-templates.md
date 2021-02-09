@@ -8,13 +8,13 @@ helpviewer_keywords:
 - item templates [Visual Studio], creating
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
-ms.openlocfilehash: abf058526a6ff48a37d4c7585e7deabe1decb14a
-ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
+manager: jmartens
+ms.openlocfilehash: 3f8dc8ddb5cc17f2ac575ea023283f60f579ccbd
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95597281"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99875399"
 ---
 # <a name="how-to-create-item-templates"></a>Nasıl yapılır: öğe şablonları oluşturma
 
@@ -121,7 +121,7 @@ Bazı durumlarda, sıfırdan el ile bir öğe şablonu oluşturmak isteyebilirsi
 
 6. *. Vstemplate* dosyasını kaydedin ve kapatın.
 
-7. **Windows Gezgini**'nde, şablonunuza dahil etmek istediğiniz dosyaları seçin. Seçime sağ tıklayın ve **Send to**  >  **Sıkıştırılmış (daraltılmış) klasöre** Gönder ' i seçin. Seçtiğiniz dosyalar bir *. zip* dosyasında sıkıştırılır.
+7. **Windows Gezgini**'nde, şablonunuza dahil etmek istediğiniz dosyaları seçin. Seçime sağ tıklayın ve   >  **Sıkıştırılmış (daraltılmış) klasöre** Gönder ' i seçin. Seçtiğiniz dosyalar bir *. zip* dosyasında sıkıştırılır.
 
 ::: moniker range="vs-2017"
 

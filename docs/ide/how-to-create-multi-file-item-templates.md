@@ -10,13 +10,13 @@ helpviewer_keywords:
 - item templates, creating multi-file item templates
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
-ms.openlocfilehash: a947d23bd7094e003bae3cfe880299bb3698d92e
-ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
+manager: jmartens
+ms.openlocfilehash: b375cf54dfe35928a35f991190c94b3d08685827
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95597268"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99875386"
 ---
 # <a name="how-to-create-multi-file-item-templates"></a>Nasıl yapılır: birden çok dosya öğesi şablonları oluşturma
 
@@ -38,7 +38,7 @@ Birden çok dosya öğesi şablonunu tek bir dosya öğesi şablonuyla aynı şe
 
 1. Bir tek dosya öğesi şablonunu el ile oluşturacağınız, ancak çoklu dosya öğesini oluşturan her dosyayı dahil ettiğiniz için öğe şablonunu oluşturun.
 
-1. *. Vstemplate* XML dosyasında `ProjectItem` her bir dosya için bir öğe ekleyin ve `TargetFileName` Bu öğeye bir öznitelik ekleyin. `TargetFileName`Özniteliğin değerini *$fileinputname $ olarak ayarlayın. FileExtension*, burada *FileExtension* , şablonda yer alan dosyanın dosya uzantısıdır. Örnek:
+1. *. Vstemplate* XML dosyasında `ProjectItem` her bir dosya için bir öğe ekleyin ve `TargetFileName` Bu öğeye bir öznitelik ekleyin. `TargetFileName`Özniteliğin değerini *$fileinputname $ olarak ayarlayın. FileExtension*, burada *FileExtension* , şablonda yer alan dosyanın dosya uzantısıdır. Örneğin:
 
     ```xml
     <ProjectItem TargetFileName="$fileinputname$.vb">
@@ -55,7 +55,7 @@ Birden çok dosya öğesi şablonunu tek bir dosya öğesi şablonuyla aynı şe
      > [!NOTE]
      > Bu şablondan türetilen bir öğe projeye eklendiğinde, dosya adları kullanıcının **Yeni öğe Ekle** iletişim kutusuna girdiği adından türetilir.
 
-1. Şablonunuza dahil edilecek dosyaları seçin, seçime sağ tıklayın ve **Send to**  >  **Sıkıştırılmış (daraltılmış) klasöre** Gönder ' i seçin.
+1. Şablonunuza dahil edilecek dosyaları seçin, seçime sağ tıklayın ve   >  **Sıkıştırılmış (daraltılmış) klasöre** Gönder ' i seçin.
 
    Seçtiğiniz dosyalar bir *. zip* dosyasında sıkıştırılır.
 

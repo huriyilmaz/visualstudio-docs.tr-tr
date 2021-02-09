@@ -7,15 +7,15 @@ ms.topic: how-to
 ms.assetid: ea8dc357-2e66-455a-aec2-7ccaccfc9adf
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f8aa7daef6e427b7355eb7676db0728a4af4ca42
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 45d0bb8b47162966974499fed20c826b52dcfaa4
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94351485"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99875087"
 ---
 # <a name="walkthrough-use-xml-editor-features"></a>İzlenecek yol: XML düzenleyicisi özelliklerini kullanma
 
@@ -26,23 +26,23 @@ Bu izlenecek yolda, yeni bir XML belgesi oluşturma adımları gösterilmektedir
 
 ## <a name="to-create-a-new-xml-file-and-associate-it-with-an-xml-schema"></a>Yeni bir XML dosyası oluşturmak ve bir XML şeması ile ilişkilendirmek için
 
-1. **Dosya** menüsünde, **Yeni** ' nin üzerine gelin ve **Dosya** ' ya tıklayın.
+1. **Dosya** menüsünde, **Yeni**' nin üzerine gelin ve **Dosya**' ya tıklayın.
 
-2. **Şablonlar** bölmesinde **XML dosyası** ' nı seçin ve **Aç** ' a tıklayın.
+2. **Şablonlar** bölmesinde **XML dosyası** ' nı seçin ve **Aç**' a tıklayın.
 
      Düzenleyicide yeni bir dosya açılır. Dosya varsayılan bir XML bildirimi içerir `<?xml version="1.0" encoding="utf-8">` .
 
-3. Belge Özellikleri penceresinde, **şemalar** alanındaki ( **...** ) düğmesine tıklayın.
+3. Belge Özellikleri penceresinde, **şemalar** alanındaki (**...**) düğmesine tıklayın.
 
      **Xsd şemaları** iletişim kutusu görüntülenir.
 
-4. **Ekle** 'ye tıklayın.
+4. **Ekle**'ye tıklayın.
 
      **XSD şeması aç** iletişim kutusu görüntülenir.
 
-5. *HireDate. xsd* dosyasını seçin ve **Aç** ' a tıklayın.
+5. *HireDate. xsd* dosyasını seçin ve **Aç**' a tıklayın.
 
-6. **Tamam** ’a tıklayın.
+6. **Tamam**'a tıklayın.
 
      XML şeması artık XML belgesiyle ilişkili. XML şeması belgeyi doğrulamak için kullanılır. IntelliSense tarafından geçerli öğelerin üye listesini doldurmak için de kullanılır.
 
@@ -82,7 +82,7 @@ Bu izlenecek yolda, yeni bir XML belgesi oluşturma adımları gösterilmektedir
 
      **ABC** metninde dalgalı bir alt çizgi bulunur. **Araç ipucu** iletiyi görüntüler: **' ID ' öğesi, veri türüne göre geçersiz bir değere sahip**.
 
-9. ID öğesine sağ tıklayın ve **Tanıma Git** ' i seçin.
+9. ID öğesine sağ tıklayın ve **Tanıma Git**' i seçin.
 
      Düzenleyici, *HireDate. xsd* dosyasını yeni bir belge penceresinde açar ve imleci kimlik şeması öğe tanımına konumlandırır.
 
@@ -98,7 +98,7 @@ Bu izlenecek yolda, yeni bir XML belgesi oluşturma adımları gösterilmektedir
 
 ## <a name="to-format-the-xml-document"></a>XML belgesini biçimlendirmek için
 
-- XML Düzenleyicisi araç çubuğunda **belge Biçimlendir** düğmesini seçin veya **CTRL** + **E** , **D** ' ye basın.
+- XML Düzenleyicisi araç çubuğunda **belge Biçimlendir** düğmesini seçin veya **CTRL** + **E**,**D**' ye basın.
 
    ![Visual Studio 'da XML belgesi biçimlendirme düğmesi](media/format-xml-document.png)
 
@@ -110,7 +110,7 @@ Bu izlenecek yolda, yeni bir XML belgesi oluşturma adımları gösterilmektedir
 
      **Dosyayı farklı kaydet** iletişim kutusu görüntülenir. Varsayılan dosya adı *' XMLFile1 '*.
 
-2. XML belgesi için dosya adı ve konum girin ve **Kaydet** ' e tıklayın.
+2. XML belgesi için dosya adı ve konum girin ve **Kaydet**' e tıklayın.
 
 ## <a name="hiredatexsd-file"></a>hireDate. xsd dosyası
 

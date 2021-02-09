@@ -7,15 +7,15 @@ ms.topic: conceptual
 ms.assetid: 588fa495-fe7f-4b16-8a9f-6b6b8d2d502a
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 06e7c1774666d2079bea56586f28c6c4e3f5aeec
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: ca91d586be9a351d113aed758d4312dab1a98299
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94351316"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99874866"
 ---
 # <a name="xml-schema-designer-workspace-views"></a>XML şema Tasarımcısı çalışma alanı görünümleri
 
@@ -35,7 +35,7 @@ Aşağıdaki yollarla çalışma alanına düğümler ekleyebilirsiniz:
 
 - Genel düğümleri, dosya düğümlerini ve ad alanı düğümlerini, **XML şema** Gezgininden üç görünümden birine sürükleyin ve bırakın. Daha fazla bilgi için, [XML şema Gezgini](../xml-tools/xml-schema-explorer.md)'Ndeki "düğümleri sürükleme ve bırakma" bölümüne bakın.
 
-- **XML şema Gezgini** ' nde bağlam (sağ tıklama) menüsünü kullanın. Daha fazla bilgi için bkz. [Bağlam menüleri](../xml-tools/context-menus-xml-schema-explorer.md).
+- **XML şema Gezgini**' nde bağlam (sağ tıklama) menüsünü kullanın. Daha fazla bilgi için bkz. [Bağlam menüleri](../xml-tools/context-menus-xml-schema-explorer.md).
 
 - XSD Explorer 'da bir arama yapın ve özet sonuçlar bölmesinde **çalışma alanına vurgulanan düğümleri Ekle** düğmesine tıklayın. Daha fazla bilgi için bkz. [Şema kümesini arama](../xml-tools/searching-the-schema-set.md).
 
@@ -49,4 +49,4 @@ Görünümleri değiştirmek için aşağıdakilerden birini kullanın:
 
 - Başlangıç görünümü sayfasındaki filigranlar veya boş Içerik modeli görünümündeki veya grafik görünümündeki filigranlar.
 
-- Kısayol tuşları **Ctrl** : + Başlangıç görünümü için CTRL **1** , **Ctrl** + grafik görünümü için CTRL **2** ve **Ctrl** + içerik modeli görünümü için CTRL **3** .
+- Kısayol tuşları : + Başlangıç görünümü için CTRL **1** ,  + grafik görünümü için CTRL **2** ve  + içerik modeli görünümü için CTRL **3** .

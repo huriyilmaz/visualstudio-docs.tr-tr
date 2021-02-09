@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Office applications [Office development in Visual Studio], MSI
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: c001b3ce308c9e991cee747bdcab3ad646b226ab
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: ef515ce323322dee667dab5690b85b29af97c07d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96847123"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99875425"
 ---
 # <a name="deploy-an-office-solution-by-using-windows-installer"></a>Windows Installer kullanarak bir Office çözümünü dağıtma
 
@@ -131,7 +131,7 @@ Office projenizin çıkışını dahil etmek için **OfficeAddInSetup** projesin
 
    ![Çözüm Gezgini içindeki proje Yardımcısı dosyası](../vsto/media/installshield-projectassistant.png "Çözüm Gezgini içindeki proje Yardımcısı dosyası")
 
-2. Menü çubuğunda açık **görüntüle**' yi seçin  >  **Open**.
+2. Menü çubuğunda açık **görüntüle**' yi seçin  >  .
 
 3. **Proje Yardımcısı** sayfasının en altında, aşağıdaki çizimin gösterdiği **uygulama dosyaları** düğmesini seçin.
 
@@ -169,7 +169,7 @@ Kurulum uygulamanızda, yalnızca aşağıdaki bileşenleri değil, çözümün�
 
    ![Çözüm Gezgini içindeki yeniden dağıtılabilir dosyası](../vsto/media/installshield-redistributablesfile.png "Çözüm Gezgini içindeki yeniden dağıtılabilir dosyası")
 
-2. Menü çubuğunda açık **görüntüle**' yi seçin  >  **Open**.
+2. Menü çubuğunda açık **görüntüle**' yi seçin  >  .
 
    **Yeniden dağıtılabilir** sayfası açılır.
 
@@ -251,7 +251,7 @@ Kurulum uygulamanızda, yalnızca aşağıdaki bileşenleri değil, çözümün�
 
 1. **Çözüm Gezgini**, **OfficeAddInSetup** düğümünü genişletin, **kurulumunuzu düzenleyin** düğümünü genişletin ve ardından **genel bilgi** dosyasını seçin.
 
-2. Menü çubuğunda açık **görüntüle**' yi seçin  >  **Open**.
+2. Menü çubuğunda açık **görüntüle**' yi seçin  >  .
 
 3. Özellikler listesinde, **InstallDir** özelliğinin yanındaki git **düğmesini seçin** .
 
@@ -275,7 +275,7 @@ Kullanıcı başına Yüklemeler Office veya Windows sürümünden bağımsız o
 
 1. **Çözüm Gezgini**, **OfficeAddInSetup** proje düğümünü genişletin, **kurulumunuzu düzenleyin** düğümünü genişletin ve ardından **genel bilgi** dosyasını seçin.
 
-2. Menü çubuğunda açık **görüntüle**' yi seçin  >  **Open**.
+2. Menü çubuğunda açık **görüntüle**' yi seçin  >  .
 
    Kurulum projesinin özellikleri görüntülenir.
 
@@ -289,7 +289,7 @@ Kullanıcı başına Yüklemeler Office veya Windows sürümünden bağımsız o
 
 1. **Çözüm Gezgini**, **Proje Yardımcısı** düğümünü seçin.
 
-   Menü çubuğunda açık **görüntüle**' yi seçin  >  **Open**.
+   Menü çubuğunda açık **görüntüle**' yi seçin  >  .
 
 2. **Proje Yardımcısı** sayfasının en altında, aşağıdaki çizimin gösterdiği **uygulama kayıt defteri** düğmesini seçin.
 
@@ -406,7 +406,7 @@ Belge düzeyi özelleştirmeleri, kayıt defteri anahtarlarını kullanmaz. Bunu
 
 7. **Çözüm Gezgini**' de, **program.cs** dosyasını (C# uygulamaları için) veya **Module1. vb** dosyasını (Visual Basic uygulamalar için) seçin.
 
-8. Menü çubuğunda açık **görüntüle**' yi seçin  >  **Open**.
+8. Menü çubuğunda açık **görüntüle**' yi seçin  >  .
 
 9. Tüm dosyanın içeriğini aşağıdaki kodla değiştirin.
 
@@ -421,7 +421,7 @@ Belge düzeyi özelleştirmeleri, kayıt defteri anahtarlarını kullanmaz. Bunu
 
    ![Çözüm Gezgini içindeki proje Yardımcısı dosyası](../vsto/media/installshield-projectassistant.png "Çözüm Gezgini içindeki proje Yardımcısı dosyası")
 
-2. Menü çubuğunda açık **görüntüle**' yi seçin  >  **Open**.
+2. Menü çubuğunda açık **görüntüle**' yi seçin  >  .
 
 3. **Proje Yardımcısı** sayfasının en altında, aşağıdaki çizimin gösterdiği **uygulama dosyaları** düğmesini seçin.
 
@@ -435,7 +435,7 @@ Belge düzeyi özelleştirmeleri, kayıt defteri anahtarlarını kullanmaz. Bunu
 
 6. **Çözüm Gezgini**, **OfficeAddInSetup** düğümü altında, **kurulum gereksinimlerini ve eylemleri tanımla** düğümünü genişletin ve ardından **özel eylemler** klasörünü seçin.
 
-7. Menü çubuğunda açık **görüntüle**' yi seçin  >  **Open**.
+7. Menü çubuğunda açık **görüntüle**' yi seçin  >  .
 
    Olay listesi, ekranın yanındaki bir bölmede görüntülenir.
 
@@ -484,7 +484,7 @@ Belge düzeyi özelleştirmeleri, kayıt defteri anahtarlarını kullanmaz. Bunu
 
 1. **Çözüm Gezgini**, **yayın için hazırla** düğümünü genişletin ve ardından **yayınlar** dosyasını seçin.
 
-2. Menü çubuğunda açık **görüntüle**' yi seçin  >  **Open**.
+2. Menü çubuğunda açık **görüntüle**' yi seçin  >  .
 
    **Yapı** Gezgini, oluşturmak istediğiniz yayın türünü seçebilmeniz için yan bölmede açılır.
 
@@ -494,7 +494,7 @@ Belge düzeyi özelleştirmeleri, kayıt defteri anahtarlarını kullanmaz. Bunu
 
 5. **Setup.exe** Özellik sayfasında, **InstallShield önkoşulları konum** listesinden **Web 'den indir**' i seçin.
 
-6. Menü çubuğunda Configuration Manager **Oluştur**' u seçin  >  **Configuration Manager**.
+6. Menü çubuğunda Configuration Manager **Oluştur**' u seçin  >  .
 
 7. **Etkin çözüm yapılandırması** listesinde **SingleImage** öğesini seçin.
 

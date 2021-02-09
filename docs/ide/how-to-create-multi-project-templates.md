@@ -10,13 +10,13 @@ helpviewer_keywords:
 - multi-project templates
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
-ms.openlocfilehash: efd0808342e38627d0b79b097f36f86a1881dafe
-ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
+manager: jmartens
+ms.openlocfilehash: c4cfc7f51999056379acd73ec7ec3933c1f31a51
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95597242"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99875412"
 ---
 # <a name="how-to-create-multi-project-templates"></a>Nasıl yapılır: birden çok proje şablonu oluşturma
 
@@ -48,14 +48,14 @@ Birden çok projeli bir şablon, bir *. zip* dosyasına sıkıştırılan aşağ
 
 Çoklu proje şablonu için kök *vstemplate* dosyası, tek projeli bir şablondan aşağıdaki yollarla farklılık gösterir:
 
-- **Vstemplate** öğesinin **Type** özniteliği **Project** yerine **ProjectGroup** değerine sahiptir. Örnek:
+- **Vstemplate** öğesinin **Type** özniteliği **Project** yerine **ProjectGroup** değerine sahiptir. Örneğin:
 
     ```xml
     <VSTemplate Version="2.0.0" Type="ProjectGroup"
         xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
     ```
 
-- **TemplateContent** öğesi, dahil edilen projelerin *vstemplate* dosyalarının yollarını tanımlayan bir veya daha fazla **ProjectTemplateLink** öğesine sahip bir **ProjectCollection** öğesi içeriyor. Örnek:
+- **TemplateContent** öğesi, dahil edilen projelerin *vstemplate* dosyalarının yollarını tanımlayan bir veya daha fazla **ProjectTemplateLink** öğesine sahip bir **ProjectCollection** öğesi içeriyor. Örneğin:
 
     ```xml
     <TemplateContent>
@@ -71,7 +71,7 @@ Birden çok projeli bir şablon, bir *. zip* dosyasına sıkıştırılan aşağ
     ```
 
 > [!TIP]
-> Yalnızca çoklu proje şablonunun yeni proje iletişim kutusunda görünmesini istiyorsanız, içerdiği ayrı projeler değil, iç şablonları [gizli](../extensibility/hidden-element-visual-studio-templates.md)olarak işaretleyin. Örnek:
+> Yalnızca çoklu proje şablonunun yeni proje iletişim kutusunda görünmesini istiyorsanız, içerdiği ayrı projeler değil, iç şablonları [gizli](../extensibility/hidden-element-visual-studio-templates.md)olarak işaretleyin. Örneğin:
 >
 > ```xml
 > <VSTemplate Type="Project" ... >
@@ -115,7 +115,7 @@ Birden çok projeli bir şablon, bir *. zip* dosyasına sıkıştırılan aşağ
 
 8. Taban dizininde *. vstemplate* dosya uzantısına sahıp bir XML dosyası oluşturun. Bu dosya, çoklu proje şablonu için meta verileri içerir. Dosyanın yapısı için aşağıdaki örneğe bakın. Her projenin *vstemplate* dosyasının göreli yolunu belirttiğinizden emin olun.
 
-9. Temel dizindeki tüm dosyaları seçin ve sağ tıklama ya da bağlam menüsünden **Send to**  >  **Sıkıştırılmış (daraltılmış) klasöre** Gönder ' i seçin.
+9. Temel dizindeki tüm dosyaları seçin ve sağ tıklama ya da bağlam menüsünden   >  **Sıkıştırılmış (daraltılmış) klasöre** Gönder ' i seçin.
 
    Dosyalar ve klasörler bir *. zip* dosyasında sıkıştırılır.
 
