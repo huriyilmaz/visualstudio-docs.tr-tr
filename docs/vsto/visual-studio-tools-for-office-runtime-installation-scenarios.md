@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Visual Studio Tools for Office runtime, installation scenarios
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 484627c01a5385a6da4b2b0a41a966ac31d0e6d8
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 10b747602a1c5af9f63c567103a80405341019af
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97526396"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99921798"
 ---
 # <a name="visual-studio-tools-for-office-runtime-installation-scenarios"></a>Office çalışma zamanı yükleme senaryoları için Visual Studio Araçları
   Office çalışma zamanı için Visual Studio 2010 araçları 'nı üç şekilde yükleyebilirsiniz:
@@ -42,7 +42,7 @@ ms.locfileid: "97526396"
 |-----------------------------------|----------------------------|--------------------------------------------------| - |---------------------------------------------------------------------------|
 |[!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)]Ve sonraki sürümlerde|Yes|Evet, .NET Framework 3,5 zaten yüklüyse.|Yes|Yes|
 |Kullanılarak [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)]|Yes|Evet, .NET Framework 3,5 zaten yüklüyse.|Hayır|Hayır|
-|Office 2010 Service Pack 1 (SP1) veya üzeri ile|Yes|Evet, .NET Framework 3,5 zaten yüklüyse.|Evet, [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] zaten yüklüyse.|No|
+|Office 2010 Service Pack 1 (SP1) veya üzeri ile|Yes|Evet, .NET Framework 3,5 zaten yüklüyse.|Evet, [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] zaten yüklüyse.|Hayır|
 |Yeniden dağıtılabilir çalışma zamanı|Yes|Evet, .NET Framework 3,5 zaten yüklüyse|Evet, [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] zaten yüklüyse.|Evet, [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] zaten yüklüyse.|
 
 ### <a name="install-the-runtime-with-visual-studio-or-the-microsoft-office-developer-tools-for-visual-studio"></a>Visual Studio veya Visual Studio için Microsoft Office Geliştirici Araçları çalışma zamanını yükler

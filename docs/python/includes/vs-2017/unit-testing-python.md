@@ -5,25 +5,25 @@ ms.date: 09/18/2019
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 032732f19855b9ba5c97c2e5281e8385f9ace3be
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 612d4bd7d66add8c3fe7c45e8f03ca3531b0b4c0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85535349"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99920658"
 ---
 ## <a name="discover-and-view-tests"></a>Testleri bulma ve görüntüleme
 
 Kurala göre, Visual Studio Testleri adları ile başlayan yöntemler olarak tanımlar `test` . Bu davranışı görmek için aşağıdakileri yapın:
 
-1. Visual Studio 'da yüklü bir [Python projesi](../../managing-python-projects-in-visual-studio.md) açın, projenize sağ tıklayın, **Add**  >  **Yeni öğe**Ekle ' yi seçin, sonra **Python birim testi** ' ni ve ardından **Ekle**' yi seçin.
+1. Visual Studio 'da yüklü bir [Python projesi](../../managing-python-projects-in-visual-studio.md) açın, projenize sağ tıklayın,   >  **Yeni öğe** Ekle ' yi seçin, sonra **Python birim testi** ' ni ve ardından **Ekle**' yi seçin.
 
-1. Bu eylem, standart *test1.py* modülünü içeri aktaran `unittest` , öğesinden bir test sınıfı türetilen `unittest.TestCase` ve `unittest.main()` betiği doğrudan çalıştırırsanız çağıran bir test1.py dosyası oluşturur:
+1. Bu eylem, standart  modülünü içeri aktaran `unittest` , öğesinden bir test sınıfı türetilen `unittest.TestCase` ve `unittest.main()` betiği doğrudan çalıştırırsanız çağıran bir test1.py dosyası oluşturur:
 
     ```python
 
@@ -37,7 +37,7 @@ Kurala göre, Visual Studio Testleri adları ile başlayan yöntemler olarak tan
         unittest.main()
     ```
 
-1. Gerekirse dosyayı kaydedin ve test **Gezgini** ' **ni test**  >  **Windows**  >  **Gezgini** menü komutuyla açın.
+1. Gerekirse dosyayı kaydedin ve test **Gezgini** ' **ni test**  >    >  **Gezgini** menü komutuyla açın.
 
 1. **Test Gezgini** projenizde testler için arama yapar ve bunları aşağıda gösterildiği gibi görüntüler. Bir teste çift tıklamak, kaynak dosyasını açar.
 

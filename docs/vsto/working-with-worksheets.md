@@ -12,15 +12,15 @@ helpviewer_keywords:
 - worksheets [Office development in Visual Studio], common tasks
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: d58576c999d11441122bb0b2115d2367b7ce04ce
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 294ff749f338df12cc2ca9edeab28d07786c7018
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97522536"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99920170"
 ---
 # <a name="work-with-worksheets"></a>Çalışma sayfalarıyla çalışma
   <xref:Microsoft.Office.Tools.Excel.Worksheet>Ve <xref:Microsoft.Office.Interop.Excel.Worksheet> sınıfları, çalışma sayfalarıyla görevleri gerçekleştirmek için kullandığınız yöntemleri ve özellikleri içerir.

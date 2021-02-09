@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: aad7c4c6-1dc1-4d32-b975-f1fdf76bdeda
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 216bf2f19d528084685a2361a158e105e2284010
-ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
+ms.openlocfilehash: ac81d386f0e1104879701faba230d5384259fa25
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96560167"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99921407"
 ---
 # <a name="expression-evaluator-architecture"></a>İfade değerlendirici mimarisi
 > [!IMPORTANT]
@@ -37,7 +37,7 @@ ms.locfileid: "96560167"
  DE [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) arabirimini uygulayan bir nesne oluşturur, nesnesini `IDebugParsedExpression` nesnesine koyar `IDebugExpression2` ve `IDebugExpression2` öğesinden nesnesini döndürür `IDebugExpressionContext2::ParseText` .
 
 ### <a name="evaluate-the-expression"></a>İfadeyi değerlendir
- Visual Studio, ayrıştırılmış ifadeyi değerlendirmek için [EvaluateSync](../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) ya da [EvaluateAsync](../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) öğesini çağırır. Bu yöntemlerin her ikisi de [EvaluateSync](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md) , `IDebugExpression2::EvaluateSync` `IDebugExpression2::EvaluateAsync` ayrıştırılmış ifadeyi değerlendirmek ve ayrıştırılmış ifadenin değerini ve türünü temsil eden bir [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) arabirimi döndürmek için EvaluateSync öğesini çağırır (yöntemi hemen, bir arka plan iş parçacığı aracılığıyla çağırır). `IDebugParsedExpression::EvaluateSync` , ayrıştırılmış ifadeyi arabirim tarafından temsil edilen gerçek bir değere dönüştürmek için sağlanan SH, adresin ve ciltçiyi kullanır `IDebugProperty2` .
+ Visual Studio, ayrıştırılmış ifadeyi değerlendirmek için [EvaluateSync](../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) ya da [EvaluateAsync](../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) öğesini çağırır. Bu yöntemlerin her ikisi de [](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md) , `IDebugExpression2::EvaluateSync` `IDebugExpression2::EvaluateAsync` ayrıştırılmış ifadeyi değerlendirmek ve ayrıştırılmış ifadenin değerini ve türünü temsil eden bir [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) arabirimi döndürmek için EvaluateSync öğesini çağırır (yöntemi hemen, bir arka plan iş parçacığı aracılığıyla çağırır). `IDebugParsedExpression::EvaluateSync` , ayrıştırılmış ifadeyi arabirim tarafından temsil edilen gerçek bir değere dönüştürmek için sağlanan SH, adresin ve ciltçiyi kullanır `IDebugProperty2` .
 
 ### <a name="for-example"></a>Örneğin:
  Çalışan bir programda bir kesme noktasına isabet ettikten sonra, Kullanıcı **hızlı izleme** iletişim kutusunda bir değişken görüntülemeyi seçer. Bu iletişim kutusu değişkenin adını, değerini ve türünü gösterir. Kullanıcı genellikle değeri değiştirebilir.

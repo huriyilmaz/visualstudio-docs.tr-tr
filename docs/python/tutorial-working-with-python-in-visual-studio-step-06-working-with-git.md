@@ -6,17 +6,17 @@ ms.date: 01/28/2019
 ms.topic: tutorial
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: cd8ebd706d9228d23eb5d5ce3b1429063bae55e5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: db5a8857a6b6610fdc60b05158379ef69995ddf3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72289711"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99920746"
 ---
 # <a name="step-6-work-with-git"></a>6. Adım: git ile çalışma
 
@@ -48,7 +48,7 @@ Bu makalede, var olan bir proje için yerel bir git deposu oluşturmaya yönelik
 
     ![Dalları gösteren Visual Studio 'da Takım Gezgini](media/working-with-git-04.png)
 
-1. Depo adı (önceki görüntüde**CosineWave** ) ile git denetimi seçilerek, **Takım Gezgini** , başka bir depoya hızla geçiş yapmak için kullanabileceğiniz bir **bağlantı** arabirimi gösterir.
+1. Depo adı (önceki görüntüde **CosineWave** ) ile git denetimi seçilerek, **Takım Gezgini** , başka bir depoya hızla geçiş yapmak için kullanabileceğiniz bir **bağlantı** arabirimi gösterir.
 
 1. Yerel bir depo kullanılırken, kaydedilen değişiklikler doğrudan depoya gider. Uzak bir depoya bağlıysanız, **Takım Gezgini**' deki aşağı açılan üstbilgiyi seçin, **eşitleme** bölümüne geçmek için **Eşitle** ' yi seçin ve **çekme** ve **getirme** komutlarıyla birlikte çalışın.
 

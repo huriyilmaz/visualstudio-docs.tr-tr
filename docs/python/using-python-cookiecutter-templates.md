@@ -5,17 +5,17 @@ ms.date: 01/28/2019
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 2d58462b90039e14ae98fe450812ca4cfdb6cbbd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 08ae2e13f094535eae0447cc3b8d4acf4c806a99
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88801587"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99920622"
 ---
 # <a name="use-the-cookiecutter-extension"></a>Cookiecutter uzantısını kullanma
 
@@ -23,7 +23,7 @@ ms.locfileid: "88801587"
 
 Cookiecutter, Python 3,3 veya üzeri (32-bit veya 64-bit) veya Anaconda 3 4,2 veya üzeri (32-bit veya 64-bit) gerektirir. Uygun bir Python yorumlayıcı yoksa, Visual Studio bir uyarı görüntüler. Visual Studio çalışırken bir Python yorumlayıcı yüklerseniz, yeni yüklenen yorumlayıcı algılamak için Cookiecutter araç çubuğundaki **giriş** düğmesini seçin. (Genel olarak ortamlar hakkında daha fazla bilgi için bkz. [Python ortamları](managing-python-environments-in-visual-studio.md) .)
 
-Yüklendikten sonra, **View**  >  **Cookiecutter Gezginini** görüntüle ' yi seçerek penceresini açın:
+Yüklendikten sonra,   >  **Cookiecutter Gezginini** görüntüle ' yi seçerek penceresini açın:
 
 ![Cookiecutter ana penceresi](media/cookiecutter-overview.png)
 
@@ -37,7 +37,7 @@ Cookiecutter giriş sayfasında, aşağıdaki gruplar halinde düzenlenmiş, ara
 
 | Grup | Açıklama |
 | --- | --- |
-| **Yüklendi** | Yerel bilgisayarınıza yüklenmiş şablonlar. Çevrimiçi bir şablon kullanıldığında, deposu otomatik olarak *~/. tanımlama bilgisi ecutters*alt klasörüne kopyalanır. Seçili yüklü bir şablonu **Sil**' i tıklatarak silebilirsiniz. |
+| **Yüklendi** | Yerel bilgisayarınıza yüklenmiş şablonlar. Çevrimiçi bir şablon kullanıldığında, deposu otomatik olarak *~/. tanımlama bilgisi ecutters* alt klasörüne kopyalanır. Seçili yüklü bir şablonu **Sil**' i tıklatarak silebilirsiniz. |
 | **Önerilen** | Önerilen akıştan yüklenen şablonlar. Varsayılan akış Microsoft tarafından yapılır. Akışı özelleştirme hakkında daha fazla bilgi için aşağıdaki [Cookiecutter seçeneklerine](#cookiecutter-options) bakın. |
 | **GitHub** | Cookiecutter anahtar sözcüğü için GitHub arama sonuçları. GitHub sonuçları, daha fazla sonuç varsa, listenin sonunda **daha fazla yükle** görüntülenir. |
 | **Özel** | Arama kutusuna özel bir konum girildiğinde, bu grupta görünür. GitHub deposunun tam yolunu ya da yerel diskinizdeki bir klasöre tam yolu yazabilirsiniz. |
@@ -69,20 +69,20 @@ Bir Kullanıcı yapılandırma dosyası ile belirli seçenekler için varsayıla
 
 Seçeneklerinizi ayarladıktan sonra kod oluşturmak için **Oluştur** ' u seçin (çıktı klasörü boş değilse bir uyarı görünür). Şablonun çıktısını öğrenmeniz ve dosyaların üzerine yazılmayamıyorsanız, uyarıyı kapatabilirsiniz. Aksi takdirde, **iptal**' i seçin, boş bir klasör belirtin ve ardından oluşturulan dosyaları boş olmayan çıkış klasörünüze el ile kopyalayın.
 
-Dosyalar başarıyla oluşturulduktan sonra, Cookiecutter **Çözüm Gezgini**dosyaları açmak için bir seçenek sunar:
+Dosyalar başarıyla oluşturulduktan sonra, Cookiecutter **Çözüm Gezgini** dosyaları açmak için bir seçenek sunar:
 
 ![Çözüm Gezgini komutu gösteren Cookiecutter](media/cookiecutter-files-created.png)
 
 ## <a name="cookiecutter-options"></a>Cookiecutter seçenekleri
 
-Cookiecutter seçenekleri **Araçlar**  >  **Seçenekler**  >  **Cookiecutter**aracılığıyla kullanılabilir:
+Cookiecutter seçenekleri **Araçlar**  >  **Seçenekler**  >  **Cookiecutter** aracılığıyla kullanılabilir:
 
 ![Cookiecutter seçenekleri](media/cookiecutter-tools-options.png)
 
 | Seçenek | Açıklama |
 | --- | --- |
 | **Önerilen akış URL 'SI** | Önerilen şablonlar akışı konumu. Bu bir URL veya yerel bir dosyanın yolu olabilir. Varsayılan Microsoft seçkin akışını kullanmak için URL 'YI boş bırakın. Akış, newlines ile ayrılmış, şablon konumlarının basit bir listesini sağlar. Seçkin akışta değişiklik istemek için [GitHub 'da kaynak](https://github.com/Microsoft/PTVS/blob/master/Python/Product/Cookiecutter/CookiecutterFeed.txt)üzerinde bir çekme isteği oluşturun. |
-| **Yardımı göster** | Cookiecutter penceresinin en üstündeki yardım bilgileri çubuğunun görünürlüğünü denetler. |
+| **Yardımı Göster** | Cookiecutter penceresinin en üstündeki yardım bilgileri çubuğunun görünürlüğünü denetler. |
 
 ## <a name="optimize-cookiecutter-templates-for-visual-studio"></a>Visual Studio için Cookiecutter şablonlarını iyileştirme
 
@@ -187,13 +187,13 @@ Birden çok bağımsız değişken için bir dizi kullanın. Anahtarlar için an
 
 Bağımsız değişkenler, diğer Cookiecutter değişkenlerine başvurabilir. Yukarıdaki örneklerde, iç `_output_folder_path` değişken oluşturulan dosyalara mutlak bir yol oluşturmak için kullanılır.
 
-`Python.InstallProjectRequirements`Komutun yalnızca mevcut bir projeye dosya eklerken çalıştığına unutmayın. Bu sınırlama, komut **Çözüm Gezgini**' de Python projesi tarafından işlendiği ve **Çözüm Gezgini**  -  **klasör görünümünde**iletiyi alacak bir proje bulunmadığından oluşur. Gelecek bir sürümü kazanmanızı (ve genel olarak daha iyi **klasör görünümü** desteği sağlamayı) umuyoruz.
+`Python.InstallProjectRequirements`Komutun yalnızca mevcut bir projeye dosya eklerken çalıştığına unutmayın. Bu sınırlama, komut **Çözüm Gezgini**' de Python projesi tarafından işlendiği ve **Çözüm Gezgini**  -  **klasör görünümünde** iletiyi alacak bir proje bulunmadığından oluşur. Gelecek bir sürümü kazanmanızı (ve genel olarak daha iyi **klasör görünümü** desteği sağlamayı) umuyoruz.
 
 ## <a name="troubleshooting"></a>Sorun giderme
 
 ### <a name="error-loading-template"></a>Şablon yüklenirken hata oluştu
 
-Bazı şablonlar, * üzerindecookiecutter.js*, Boolean gibi geçersiz veri türlerini kullanıyor olabilir. Şablon bilgileri bölmesindeki **sorunlar** bağlantısını seçerek şablon yazarına bu tür örnekler bildirin.
+Bazı şablonlar, *üzerindecookiecutter.js*, Boolean gibi geçersiz veri türlerini kullanıyor olabilir. Şablon bilgileri bölmesindeki **sorunlar** bağlantısını seçerek şablon yazarına bu tür örnekler bildirin.
 
 ### <a name="hook-script-failed"></a>Kanca betiği başarısız oldu
 
@@ -201,7 +201,7 @@ Bazı şablonlar, Cookiecutter Kullanıcı arabirimiyle uyumlu olmayan oluşturm
 
 ### <a name="hook-script-not-supported-on-windows"></a>Kanca betiği Windows üzerinde desteklenmez
 
-Post betiği *. sh*Ise, Windows bilgisayarınızdaki bir uygulamayla ilişkili olmayabilir. Windows Mağazası 'nda uyumlu bir uygulama bulmanızı isteyen bir Windows iletişim kutusu görebilirsiniz.
+Post betiği *. sh* Ise, Windows bilgisayarınızdaki bir uygulamayla ilişkili olmayabilir. Windows Mağazası 'nda uyumlu bir uygulama bulmanızı isteyen bir Windows iletişim kutusu görebilirsiniz.
 
 ### <a name="templates-with-known-issues"></a>Bilinen sorunları olan şablonlar
 
@@ -212,7 +212,7 @@ Kopyalama başarısızlığı:
 
 Yükleme başarısızlığı:
 
-- **chrisdev/Wagtail-cookiecutter-Foundation** ( *cookiecutter.jsüzerinde*bir Boole türü kullanır)
+- **chrisdev/Wagtail-cookiecutter-Foundation** ( *cookiecutter.jsüzerinde* bir Boole türü kullanır)
 - **quintoandar/cookiecutter-Android** (şablon klasörü yok)
 
 Çalıştırma sorunları:

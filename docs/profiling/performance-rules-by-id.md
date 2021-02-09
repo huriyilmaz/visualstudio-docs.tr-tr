@@ -6,20 +6,20 @@ ms.topic: conceptual
 ms.assetid: 9a1c934c-4798-4df9-a8ef-eb17ef06b6a2
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 4cbfde146586d8ab10b8ad44ee1294e36221493a
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: c1d37686ff8bde7824fe27a3d2084dada9e758c3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98722106"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99922126"
 ---
 # <a name="performance-rules-by-id"></a>Kimliğe göre performans kuralları
 
-| Uyarı | Açıklama |
+| Uyarı | Description |
 | - | - |
 | [DA0001: Birleştirmeler için StringBuilder kullanma](../profiling/da0001-use-stringbuilder-for-concatenations.md) | System. String. Concat çağrısı, profil oluşturma verilerinin önemli bir orandır. Birden <xref:System.Text.StringBuilder> fazla kesimden dizeler oluşturmak için sınıfını kullanmayı düşünün. |
 | [DA0002: VSPerfCorProf.dll eksik](../profiling/da0002-vsperfcorprof-dll-is-missing.md) | Profil Oluşturucu, profil oluşturma çalışması sırasında VSPerfCorProf.dll bulamadı. Bu uyarı, profil oluşturucu verileri koleksiyonu için komut satırı araçları, gerekli ortam değişkenlerini başlatmak için VSPerfCLREnv. cmd aracı kullanılmadan kullanıldığında oluşur. |

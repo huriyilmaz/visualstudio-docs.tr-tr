@@ -12,20 +12,20 @@ helpviewer_keywords:
 - vstoRuntime element
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: ffebff9e5cee8666d1b178fca09262ecd45c99b1
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: c866db5f691db56e68f6980c9c07d21ee15c0ae5
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584366"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99921745"
 ---
 # <a name="ltvstoruntimegt-element-office-development-in-visual-studio"></a>&lt;vstoRuntime &gt; öğesi (Visual Studio 'Da Office geliştirme)
   `vstoRuntime`Ad alanı öğesi, `vstav3` belirli bir Office çözümü için Office çalışma zamanının Visual Studio Araçları desteklenen bir sürümünü içerir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <vstoRuntime

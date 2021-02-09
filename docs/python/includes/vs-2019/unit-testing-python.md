@@ -5,17 +5,17 @@ ms.date: 09/18/2019
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 6b611657db104a4b74e784df8925627ff41f3c33
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bd63d927e41a8b360eb7d934693bb3c83a30ea4f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85535348"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99920669"
 ---
 ## <a name="select-the-test-framework-for-a-python-project"></a>Python projesi için test çerçevesini seçme
 
@@ -76,9 +76,9 @@ Varsayılan olarak, Visual Studio **UnitTest** ve **pytest** testlerini adları 
    > [!Note]
    > Pytest çerçevesini kullanırsanız, standart pytest. ini yapılandırma dosyasını kullanarak test konumu ve dosya adı desenleri belirtebilirsiniz. Varsayılan olarak, çalışma alanı/proje klasörü, ve bir düzeniyle kullanılır `test_*py` `*_test.py` . Daha fazla bilgi için [pytest başvuru belgelerine](https://docs.pytest.org/en/latest/reference.html#ini-options-ref) bakın.
 
-1. Framework seçildikten sonra projeye tekrar sağ tıklayın ve **Add**  >  **Yeni öğe**Ekle ' yi seçin ve ardından **Ekle**' **yi seçin** .
+1. Framework seçildikten sonra projeye tekrar sağ tıklayın ve   >  **Yeni öğe** Ekle ' yi seçin ve ardından **Ekle**' **yi seçin** .
 
-1. Bu eylem, standart *test_1.py* modülünü içeri aktaran `unittest` , öğesinden bir test sınıfı türetilen `unittest.TestCase` ve `unittest.main()` komut dosyasını doğrudan çalıştırırsanız çağıran kod ile bir test_1. bir dosyası oluşturur:
+1. Bu eylem, standart  modülünü içeri aktaran `unittest` , öğesinden bir test sınıfı türetilen `unittest.TestCase` ve `unittest.main()` komut dosyasını doğrudan çalıştırırsanız çağıran kod ile bir test_1. bir dosyası oluşturur:
 
     ```python
     import unittest
@@ -91,7 +91,7 @@ Varsayılan olarak, Visual Studio **UnitTest** ve **pytest** testlerini adları 
         unittest.main()
     ```
 
-1. Gerekirse dosyayı kaydedin **ve test** **Test Explorer**  >  **Test Gezgini** menü komutuyla test Gezgini ' ni açın.
+1. Gerekirse dosyayı kaydedin **ve test**   >  **Test Gezgini** menü komutuyla test Gezgini ' ni açın.
 
 1. **Test Gezgini** projenizde testler için arama yapar ve bunları aşağıda gösterildiği gibi görüntüler. Bir teste çift tıklamak, kaynak dosyasını açar.
 
@@ -130,7 +130,7 @@ Arka planda çalıştırılan testler ve **Test Gezgini** , tamamlandığında h
 Birim testleri kod parçaları olduğundan, diğer tüm kodlar gibi hatalara tabidir ve bazen bir hata ayıklayıcıda çalıştırılması gerekir. Hata ayıklayıcıda kesme noktaları ayarlayabilir, değişkenleri inceleyebilir ve koddaki adımları izleyebilirsiniz. Visual Studio, birim testleri için de tanılama araçları sağlar.
 
 > [!Note]
-> Varsayılan olarak, test hata ayıklaması, Visual Studio 2017 için ptvsd 4 hata ayıklayıcısını kullanır (15,8 ve üzeri sürümler) ve Visual Studio 2019 için hata ayıklayıcı GPY (sürümler 16,5 ve üzeri). Bunun yerine ptvsd 3 kullanmak isterseniz, **Araçlar**seçenekler Python hata ayıklama üzerinde **eski hata ayıklayıcı kullan** seçeneğini belirleyebilirsiniz  >  **Options**  >  **Python**  >  **Debugging**. 
+> Varsayılan olarak, test hata ayıklaması, Visual Studio 2017 için ptvsd 4 hata ayıklayıcısını kullanır (15,8 ve üzeri sürümler) ve Visual Studio 2019 için hata ayıklayıcı GPY (sürümler 16,5 ve üzeri). Bunun yerine ptvsd 3 kullanmak isterseniz, **Araçlar** seçenekler Python hata ayıklama üzerinde **eski hata ayıklayıcı kullan** seçeneğini belirleyebilirsiniz  >    >    >  . 
 
 Hata ayıklamayı başlatmak için kodunuzda bir başlangıç kesme noktası ayarlayın ve **Test Gezgini** 'nde teste (veya bir seçime) sağ tıklayın ve **Seçili testlerin hatalarını ayıkla**' yı seçin. Visual Studio, Python hata ayıklayıcısını uygulama kodu gibi başlatır.
 

@@ -8,20 +8,20 @@ dev_langs:
 helpviewer_keywords: ''
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 1307d720e005855770ee68659374dbbfae247d65
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 605c1dc7a7b0d24ba082767930fd53148cccbd95
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85541043"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99920331"
 ---
 # <a name="imanagedaddinload"></a>IManagedAddin::Load
   Yönetilen bir VSTO eklentisi yüklendiğinde çağırılır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```csharp
 HRESULT Load([in] BSTR bstrManifestURL,
@@ -41,7 +41,7 @@ HRESULT Load([in] BSTR bstrManifestURL,
 ## <a name="remarks"></a>Açıklamalar
  Bildirim, VSTO eklentisini yüklemeye yardımcı olmak için kullanılan bilgileri sağlayan bir dosyadır (genellikle bir XML dosyasıdır). Örneğin, bir bildirim VSTO eklenti derlemesinin konumunu ve VSTO eklentisi yüklendiğinde örnek oluşturmak için giriş noktası sınıfını belirtebilir.
 
- *BstrManifestURL* parametresi, `Manifest` VSTO eklentisi için **HKEY_CURRENT_USER \software\microsoft\office \\ _\<application name>_ \addıns \\ _\<add-in ID>_ ** kayıt defteri anahtarı altındaki girişin değerini içerir. Daha fazla bilgi için bkz. [IManagedAddin Interface](../vsto/imanagedaddin-interface.md).
+ *BstrManifestURL* parametresi, `Manifest` VSTO eklentisinin **HKEY_CURRENT_USER\Software\Microsoft\Office\\ _\<application name>_ \\ _\<add-in ID>_ \addıns** kayıt defteri anahtarı altındaki girişin değerini içerir. Daha fazla bilgi için bkz. [IManagedAddin Interface](../vsto/imanagedaddin-interface.md).
 
  Yüklenmekte olan VSTO eklentisi için uygulama etki alanını ve güvenlik ilkesini yapılandırma gibi görevleri gerçekleştirmek için [IManagedAddin:: Load](../vsto/imanagedaddin-load.md) yöntemini uygulayın.
 

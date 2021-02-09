@@ -15,15 +15,15 @@ helpviewer_keywords:
 - worksheets, adding controls at run time
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: e9987e9427c0fe982cf3ddcb88ce8071caab04b0
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: bc6c608d406cabe6962a47dae4c86fa7503a05a1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97522781"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99921785"
 ---
 # <a name="walkthrough-add-controls-to-a-worksheet-at-run-time-in-vsto-add-in-project"></a>İzlenecek yol: çalışma zamanında VSTO eklenti projesindeki çalışma sayfasına denetimler ekleme
   Excel VSTO eklentisini kullanarak, herhangi bir açık çalışma sayfasına denetim ekleyebilirsiniz. Bu izlenecek yol, kullanıcıların <xref:Microsoft.Office.Tools.Excel.Controls.Button> çalışma sayfasına bir, a ve bir eklemek Için şerit 'in nasıl kullanılacağını gösterir <xref:Microsoft.Office.Tools.Excel.NamedRange> <xref:Microsoft.Office.Tools.Excel.ListObject> . Daha fazla bilgi için bkz. [çalışma zamanında Office belgelerine denetim ekleme](../vsto/adding-controls-to-office-documents-at-run-time.md).

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - IManagedAddin interface
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: b436d76164b1744cffe16593149f64d219d04bf1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 89e705296c6051b8bdec823e523f0a386ff7ff76
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85541134"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99920431"
 ---
 # <a name="imanagedaddin-interface"></a>IManagedAddin arabirimi
   Yönetilen VSTO Eklentilerini yükleyen bir bileşen oluşturmak için IManagedAddin arabirimini uygulayın. Bu arabirim 2007 Microsoft Office sistemine eklenmiştir.
@@ -56,13 +56,13 @@ interface IManagedAddin : IUnknown
 
 1. Uygulama, aşağıdaki kayıt defteri anahtarı altındaki girdileri arayarak VSTO Eklentilerini bulur:
 
-    **HKEY_CURRENT_USER \Software\Microsoft\Office \\ *\<application name>* \ eklentileri\\**
+    **HKEY_CURRENT_USER\Software\Microsoft\Office\\ *\<application name>* \addıns\\**
 
     Bu kayıt defteri anahtarı altındaki her giriş, VSTO eklentisinin benzersiz KIMLIĞIDIR. Genellikle, bu, VSTO eklenti derlemesinin adıdır.
 
 2. Uygulama, `Manifest` her VSTO eklentisi için giriş altında bir giriş arar.
 
-    Yönetilen VSTO eklentileri `Manifest` **HKEY_CURRENT_USER \Software\microsoft\office \\ _\<application name>_ \\ _\<add-in ID>_ \ AddIns**altındaki girişte bir bildirimin tam yolunu saklayabilir. Bildirim, VSTO eklentisini yüklemeye yardımcı olmak için kullanılan bilgileri sağlayan bir dosyadır (genellikle bir XML dosyasıdır).
+    Yönetilen VSTO eklentileri, bir bildirimin tam yolunu `Manifest` **HKEY_CURRENT_USER\Software\Microsoft\Office\\ _\<application name>_ \addıns \\ _\<add-in ID>_** altındaki girişte depolayabilirler. Bildirim, VSTO eklentisini yüklemeye yardımcı olmak için kullanılan bilgileri sağlayan bir dosyadır (genellikle bir XML dosyasıdır).
 
 3. Uygulama bir `Manifest` giriş bulursa, uygulama yönetilen BIR VSTO eklentisi yükleyici bileşeni yüklemeye çalışır. Uygulama, IManagedAddin arabirimini uygulayan bir COM nesnesi oluşturmaya çalışırken bunu yapar.
 
