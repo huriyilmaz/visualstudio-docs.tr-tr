@@ -5,18 +5,18 @@ ms.date: 01/07/2019
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: 9a3aee5dc1c2d1272c3814fa6cfb2561f6cb4564
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: af3e7c2d74a9d7b3a95ae24bba37981822247728
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88801314"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99912554"
 ---
 # <a name="publishing-to-azure-app-service-on-windows"></a>Windows üzerinde Azure App Service yayımlama
 
@@ -30,7 +30,7 @@ Yayımlama işlemi, Visual Studio 2017 ve üzeri ve Visual Studio 2015 arasında
 > [!Note]
 > Visual Studio 2015 ile Visual Studio 2017 ve üzeri değişikliklerle ilgili değişiklikler hakkında daha fazla bilgi için bkz. [visual 2017 Studio 'Da Azure 'Da yayımlama](https://devblogs.microsoft.com/python/publish-to-azure-in-vs-2017/), blog gönderisi.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Bu izlenecek yol için, şişe, Flask veya Docgo çerçevelerini temel alan bir Web uygulaması projesine ihtiyacınız vardır. Henüz bir projeniz yoksa ve yayımlama işlemini denemek istiyorsanız, aşağıdaki gibi basit bir test projesi oluşturun:
 
@@ -38,7 +38,7 @@ Bu izlenecek yol için, şişe, Flask veya Docgo çerçevelerini temel alan bir 
 
 1. Sanal ortam için **bir sanal ortama** ve tercih ettiğiniz taban yorumlayıcı ' yı seçerek dış paketleri yüklemek için istemleri izleyin. Bu seçeneği genellikle App Service üzerinde yüklü olan Python sürümü ile eşleştirin.
 
-1. F5 tuşuna basarak veya hata **ayıklamayı başlatmak > hata ayıkla**öğesini seçerek projeyi yerel olarak test edin.
+1. F5 tuşuna basarak veya hata **ayıklamayı başlatmak > hata ayıkla** öğesini seçerek projeyi yerel olarak test edin.
 
 ## <a name="create-an-azure-app-service"></a>Azure App Service oluşturma
 
@@ -145,7 +145,7 @@ Visual Studio 2017 ' den Azure App Service yayımlama ve sonrasında yalnızca p
 
     ![Azure 'Da yayımlama adım 1, Visual Studio 2017 ve üzeri, mevcut abonelikler](media/tutorials-common-publish-1a-2017.png)
 
-    b. Try.azurewebsites.net üzerinde geçici bir App Service kullanıyorsanız veya bir yayımlama profili kullanmanız gerekiyorsa, **>** **içeri aktarma profilini**bulmak için denetimi seçin, bu seçeneği belirleyin ve ardından **Yayımla**' yı seçin. Bu, `.publishsettings` daha önce indirilen dosyanın konumunu ister.
+    b. Try.azurewebsites.net üzerinde geçici bir App Service kullanıyorsanız veya bir yayımlama profili kullanmanız gerekiyorsa, **>** **içeri aktarma profilini** bulmak için denetimi seçin, bu seçeneği belirleyin ve ardından **Yayımla**' yı seçin. Bu, `.publishsettings` daha önce indirilen dosyanın konumunu ister.
 
     ![Azure 'Da yayımlama adım 1, Visual Studio 2017 ve üzeri, geçici App Service](media/tutorials-common-publish-1b-2017.png)
 
@@ -187,7 +187,7 @@ Visual Studio 2017 ' den Azure App Service yayımlama ve sonrasında yalnızca p
 
 1. **Çözüm Gezgini**'nde projeye sağ tıklayın ve **Yayımla**'yı seçin.
 
-1. **Yayımla** iletişim kutusunda **Microsoft Azure App Service**seçin:
+1. **Yayımla** iletişim kutusunda **Microsoft Azure App Service** seçin:
 
   ![Azure 'da yayımlama 1. adım](media/tutorials-common-publish-1.png)
 
@@ -200,7 +200,7 @@ Visual Studio 2017 ' den Azure App Service yayımlama ve sonrasında yalnızca p
 
   ![Azure 'da Yayımla adım 2](media/tutorials-common-publish-2.png)
 
-1. Ek ayarları gözden geçirmek için gerektiğinde **ileri >' yi ** seçin.
+1. Ek ayarları gözden geçirmek için gerektiğinde **ileri >' yi** seçin.
 
 1. **Yayımla**’yı seçin. Uygulamanız Azure 'a dağıtıldığında, varsayılan tarayıcınız bu sitede açılır.
 

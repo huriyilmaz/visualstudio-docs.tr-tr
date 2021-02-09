@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, deploying
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 65683544f345a2378fdec559f582985ffec7bc43
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: 22fe46e2876b14551637dd97712e1728816b020e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94903591"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99913697"
 ---
 # <a name="how-to-deploy-and-publish-a-sharepoint-solution-to-a-local-sharepoint-site"></a>Nasıl yapılır: bir SharePoint çözümünü yerel bir SharePoint sitesine dağıtma ve yayımlama
   Geliştirme bilgisayarınızda, SharePoint çözümlerini yerel bir SharePoint sunucusuna dağıtabilir veya yayımlayabilirsiniz. Dağıtım işlemi *. wsp* dosyasını SharePoint sunucusuna kopyalar, çözümü yüklenir ve ardından özellikleri etkinleştirir. Yayımlama işlemi yalnızca *. wsp* dosyasını SharePoint sunucusuna kopyalar ve onu kurar. SharePoint 'te etkinleştirmek için el ile etkinleştirmeniz gerekir.

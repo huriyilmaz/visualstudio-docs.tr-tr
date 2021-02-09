@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: 356472d8-68b2-4b7e-b5f0-1f16d4ee80af
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c552e57c43b5abc1a41ecd468747b4ce32241a6f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 75b5e75362330def308bc3b0b836d22807aea66a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80717739"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99912726"
 ---
 # <a name="ienumcodepaths2skip"></a>IEnumCodePaths2::Skip
 Belirtilen sayıda öğeyi atlar.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
 HRESULT Skip(

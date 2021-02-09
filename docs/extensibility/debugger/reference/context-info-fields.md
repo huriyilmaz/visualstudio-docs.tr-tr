@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: ef436bd3-738e-47e8-828c-8febce752439
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b398e7ee549026750cbdff7b7fede8522116f346
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9c0d67afa2b20e239180848ef1e68d0f0a0c3079
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80737598"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99912959"
 ---
 # <a name="context_info_fields"></a>CONTEXT_INFO_FIELDS
 Bellek bağlamı hakkında hangi bilgilerin alınması gerektiğini belirtir.
@@ -28,7 +28,7 @@ Bellek bağlamı hakkında hangi bilgilerin alınması gerektiğini belirtir.
 ## <a name="syntax"></a>Syntax
 
 ```cpp
-enum enum_CONTEXT_INFO_FIELDS {
+enum enum_CONTEXT_INFO_FIELDS {
     CIF_MODULEURL =       0x00000001,
     CIF_FUNCTION =        0x00000002,
     CIF_FUNCTIONOFFSET =  0x00000004,
@@ -86,6 +86,6 @@ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Listelemeler](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md)
 - [GetInfo](../../../extensibility/debugger/reference/idebugmemorycontext2-getinfo.md)

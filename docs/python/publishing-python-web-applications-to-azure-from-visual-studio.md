@@ -5,18 +5,18 @@ ms.date: 03/13/2019
 ms.topic: conceptual
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: c3c8d6c16f2f7e432b6b5e988bf63521f3dfc8c0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b2848a54ddbce41b538bf58f82db42ede76026d1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62784121"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99912410"
 ---
 # <a name="publish-to-azure-app-service"></a>Azure App Service’e yayımlama
 
@@ -29,7 +29,7 @@ Mevcut olduğunda Python, Linux için Azure App Service desteklenir ve bu makale
 
 ## <a name="publish-to-app-service-on-linux-using-git-deploy"></a>Git dağıtımını kullanarak Linux üzerinde App Service yayımlama
 
-Git Deploy, Linux üzerinde App Service bir git deposunun belirli bir dalına bağlar. Bu dala kod yürütme, otomatik olarak App Service dağıtır ve App Service *requirements.txt*listelenen tüm bağımlılıkları otomatik olarak yüklüyor. Bu durumda, Linux üzerinde App Service, kodunuzu Gunic, Web sunucusunu kullanan önceden yapılandırılmış bir kapsayıcı görüntüsünde çalıştırır. Bu hizmet, şu anda önizleme aşamasındadır ve üretim kullanımı için desteklenmez.
+Git Deploy, Linux üzerinde App Service bir git deposunun belirli bir dalına bağlar. Bu dala kod yürütme, otomatik olarak App Service dağıtır ve App Service *requirements.txt* listelenen tüm bağımlılıkları otomatik olarak yüklüyor. Bu durumda, Linux üzerinde App Service, kodunuzu Gunic, Web sunucusunu kullanan önceden yapılandırılmış bir kapsayıcı görüntüsünde çalıştırır. Bu hizmet, şu anda önizleme aşamasındadır ve üretim kullanımı için desteklenmez.
 
 Daha fazla bilgi için Azure belgelerinde aşağıdaki makalelere bakın:
 

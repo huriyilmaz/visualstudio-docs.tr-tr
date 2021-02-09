@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: 71189a00-34eb-4c71-b96e-8bd6e70c6966
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f163f2733f237b30b668c2c46473e152718dd6fc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 46b7c7ba36ac6d54c10d38b17154d77be88247fe
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80717704"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99912706"
 ---
 # <a name="ienumdebugaddressesclone"></a>IEnumDebugAddresses::Clone
 Bu yöntem, geçerli numaralandırmanın ayrı bir nesne olarak kopyasını döndürür.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
 HRESULT Clone(

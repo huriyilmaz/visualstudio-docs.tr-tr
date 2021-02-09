@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 701ed61c-a320-4c20-a335-0b840024abc0
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 1c88b50644d1adda2dd0eaa3b74a828f9739d70b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f273bbab4a85f03a7da0d155d8b9e081693987c7
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80737606"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99912970"
 ---
 # <a name="context_compare"></a>CONTEXT_COMPARE
 İki bellek bağlamlarını karşılaştırma ölçütlerini belirtir.
@@ -97,5 +97,5 @@ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Listelemeler](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [Karşılaştır](../../../extensibility/debugger/reference/idebugmemorycontext2-compare.md)

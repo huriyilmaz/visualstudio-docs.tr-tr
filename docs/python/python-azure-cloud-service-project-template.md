@@ -5,24 +5,24 @@ ms.date: 11/12/2018
 ms.topic: conceptual
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: 4d205ee2bbc0a6e9c44c34f3b0487abb4f22283e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a40745b19bde57f7f0ca52e04a11a89ad1ca69ea
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72983657"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99912422"
 ---
 # <a name="azure-cloud-service-projects-for-python"></a>Python için Azure bulut hizmeti projeleri
 
 Visual Studio, Python kullanarak Azure Cloud Services oluşturmaya başlamanıza yardımcı olacak şablonlar sağlar.
 
-[Bulut hizmeti](/azure/cloud-services/) herhangi bir sayıda *çalışan rolünden* ve *web rolünden*oluşur ve her biri kavramsal olarak ayrı bir görev gerçekleştirir, ancak ölçeklendirme için gerektiğinde sanal makinelerde ayrı olarak çoğaltılabilirler. Web rolleri, ön uç Web uygulamaları için barındırma sağlar. Python 'un ilgilendiğinde, WSGI 'yi destekleyen herhangi bir Web çerçevesi bu tür bir uygulamayı yazmak için kullanılabilir ( [Web projesi şablonu](python-web-application-project-templates.md)tarafından desteklenir). Çalışan rolleri, kullanıcılarla doğrudan etkileşimde bulunmayan uzun süre çalışan işlemlere yöneliktir. Genellikle, ile yüklenen "Azure" paketindeki paketleri kullanır [`pip install azure`](https://pypi.org/project/azure) .
+[Bulut hizmeti](/azure/cloud-services/) herhangi bir sayıda *çalışan rolünden* ve *web rolünden* oluşur ve her biri kavramsal olarak ayrı bir görev gerçekleştirir, ancak ölçeklendirme için gerektiğinde sanal makinelerde ayrı olarak çoğaltılabilirler. Web rolleri, ön uç Web uygulamaları için barındırma sağlar. Python 'un ilgilendiğinde, WSGI 'yi destekleyen herhangi bir Web çerçevesi bu tür bir uygulamayı yazmak için kullanılabilir ( [Web projesi şablonu](python-web-application-project-templates.md)tarafından desteklenir). Çalışan rolleri, kullanıcılarla doğrudan etkileşimde bulunmayan uzun süre çalışan işlemlere yöneliktir. Genellikle, ile yüklenen "Azure" paketindeki paketleri kullanır [`pip install azure`](https://pypi.org/project/azure) .
 
 Bu makalede, Visual Studio 2017 ve üzeri sürümlerde proje şablonu ve diğer destek ile ilgili ayrıntılar yer almaktadır (önceki sürümler benzerdir ancak bazı farklardır). Python 'dan Azure ile çalışma hakkında daha fazla bilgi için [Azure Python Geliştirici Merkezi](/azure/python/)' ni ziyaret edin.
 
@@ -45,7 +45,7 @@ Bu makalede, Visual Studio 2017 ve üzeri sürümlerde proje şablonu ve diğer 
 
     ![Çalışan rolü destek dosyaları](media/template-azure-cloud-service-worker-role-support-files.png)
 
-    Bu yapılandırma betiklerini yeni bir projeye eklemek için projeye sağ tıklayın, yeni öğe **Ekle**' yi seçin  >  **New Item**ve **Web rolü destek dosyaları** ya da **çalışan rolü destek dosyaları**' nı seçin.
+    Bu yapılandırma betiklerini yeni bir projeye eklemek için projeye sağ tıklayın, yeni öğe **Ekle**' yi seçin  >  ve **Web rolü destek dosyaları** ya da **çalışan rolü destek dosyaları**' nı seçin.
 
 ## <a name="configure-role-deployment"></a>Rol dağıtımını yapılandırma
 
@@ -67,33 +67,33 @@ Ek yapılandırma aşağıdaki şekilde gerçekleştirilebilir:
 
 Rollerinizi yazarken, bulut hizmeti öykünücüsünü kullanarak bulut projenizi yerel olarak test edebilirsiniz. Öykünücü Azure SDK Tools dahildir ve bulut hizmetiniz Azure 'da yayımlandığında kullanılan ortamın sınırlı bir sürümüdür.
 
-Öykünücüyü başlatmak için önce bulut projenizin çözümünüzdeki başlangıç projesi olduğundan emin olun ve **Başlangıç projesi olarak ayarla**' yı seçin. Ardından hata **Debug**ayıklamayı  >  **Başlat** (**F5**) veya hata **Debug**ayıklama başlatma hata ayıklaması  >  **olmadan Başlat** (**CTRL** + **F5**) seçeneğini belirleyin.
+Öykünücüyü başlatmak için önce bulut projenizin çözümünüzdeki başlangıç projesi olduğundan emin olun ve **Başlangıç projesi olarak ayarla**' yı seçin. Ardından hata ayıklamayı  >  **Başlat** (**F5**) veya hata ayıklama başlatma hata ayıklaması  >  **olmadan Başlat** (**CTRL** + **F5**) seçeneğini belirleyin.
 
 Öykünücüdeki sınırlamalar nedeniyle Python kodunuzda hata ayıklama mümkün olmadığı unutulmamalıdır. Bu nedenle, rolleri bağımsız olarak çalıştırarak hata ayıklamanızı ve yayımlamadan önce tümleştirme testi için öykünücüyü kullanmanızı öneririz.
 
 ## <a name="deploy-a-role"></a>Rol dağıtma
 
-**Yayımla** Sihirbazı 'nı açmak için **Çözüm Gezgini** ' de rol **projesi seçin ve**  >  ana menüden**Yayınla Yayımla** ' yı seçin veya projeye sağ tıklayıp **Yayımla**' yı seçin.
+**Yayımla** Sihirbazı 'nı açmak için **Çözüm Gezgini** ' de rol **projesi seçin ve**  >  ana menüden **Yayınla Yayımla** ' yı seçin veya projeye sağ tıklayıp **Yayımla**' yı seçin.
 
 Yayımlama işlemi iki aşamadan oluşur. İlk olarak, Visual Studio bulut hizmetiniz için tüm rolleri içeren tek bir paket oluşturur. Bu paket, her rol için bir veya daha fazla sanal makine başlatan ve kaynağı dağıtan Azure 'a dağıtılır.
 
 Her sanal makine etkinleştiğinde, *ConfigureCloudService.ps1* betiği yürütür ve tüm bağımlılıkları kurar. Bu komut dosyası varsayılan olarak, [NuGet](https://www.nuget.org/packages?q=Tags%3A%22python%22+Authors%3A%22Python+Software+Foundation%22) 'den en son Python sürümünü ve bir *requirements.txt* dosyasında belirtilen paketleri kurar.
 
-Son olarak, çalışan rolleri *LaunchWorker.ps1*yürütülür ve bu, Python betiğinizi çalıştırmaya başlar; Web rolleri IIS 'yi başlatır ve Web isteklerini işlemeye başlar.
+Son olarak, çalışan rolleri *LaunchWorker.ps1* yürütülür ve bu, Python betiğinizi çalıştırmaya başlar; Web rolleri IIS 'yi başlatır ve Web isteklerini işlemeye başlar.
 
 ## <a name="dependencies"></a>Bağımlılıklar
 
-Cloud Services için *ConfigureCloudService.ps1* betiği `pip` bir Python bağımlılıkları kümesini yüklemek için kullanır. Bağımlılıklar, *requirements.txt* adlı bir dosyada belirtilmelidir ( *ConfigureCloudService.ps1*değiştirilerek özelleştirilebilir). Dosya, `pip install -r requirements.txt` başlatma kapsamında yürütülür.
+Cloud Services için *ConfigureCloudService.ps1* betiği `pip` bir Python bağımlılıkları kümesini yüklemek için kullanır. Bağımlılıklar, *requirements.txt* adlı bir dosyada belirtilmelidir ( *ConfigureCloudService.ps1* değiştirilerek özelleştirilebilir). Dosya, `pip install -r requirements.txt` başlatma kapsamında yürütülür.
 
 Bulut hizmeti örneklerinin C derleyicileri içermiyorsa, bu nedenle C uzantılarına sahip tüm kitaplıkların önceden derlenmiş ikili dosyalar sağlaması gerekir.
 
-PIP ve bağımlılıkları, *requirements.txt*içindeki paketler otomatik olarak indirilir ve Borçlandırılabilir bant genişliği kullanımı olarak sayabilir. *requirements.txt* dosyalarını yönetme hakkında ayrıntılar için bkz. [gereken paketleri yönetme](managing-required-packages-with-requirements-txt.md) .
+PIP ve bağımlılıkları, *requirements.txt* içindeki paketler otomatik olarak indirilir ve Borçlandırılabilir bant genişliği kullanımı olarak sayabilir. *requirements.txt* dosyalarını yönetme hakkında ayrıntılar için bkz. [gereken paketleri yönetme](managing-required-packages-with-requirements-txt.md) .
 
 ## <a name="troubleshooting"></a>Sorun giderme
 
 Web veya çalışan rolünüzün dağıtımdan sonra düzgün davranması durumunda, aşağıdakileri denetleyin:
 
-- Python projeniz (en az) içeren bir *bin \\ * klasörü içerir:
+- Python projeniz (en az) içeren bir *bin \\* klasörü içerir:
 
   - *ConfigureCloudService.ps1*
   - *LaunchWorker.ps1* (çalışan rolleri için)

@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: ef07191e-7966-43ab-96fb-1a0b1db3115d
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 02550141fb1857214d5bfd80d5dd86969bec9fba
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d01485a6044122baf460eede90470c5cc1478323
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80737794"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99912995"
 ---
 # <a name="bp_type"></a>BP_TYPE
 Kesme noktasının bir kod konumunda olup olmadığını, bir veri konumu olduğunu veya başka bir kesme noktası türünü belirtir.
@@ -70,6 +70,6 @@ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Listelemeler](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [GetBreakpointType](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getbreakpointtype.md)
 - [GetBreakpointType](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getbreakpointtype.md)

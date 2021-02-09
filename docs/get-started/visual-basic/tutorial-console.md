@@ -9,17 +9,17 @@ ms.topic: tutorial
 ms.devlang: vb
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 dev_langs:
 - vb
 ms.workload:
 - multiple
-ms.openlocfilehash: 279bfb00a2466120d21c5c868c0987ec19202acc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a08e955d8446ebcd376f81773b5996146241486e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77579940"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99915021"
 ---
 # <a name="tutorial-get-started-with-visual-basic-in-visual-studio"></a>Öğretici: Visual Studio 'da Visual Basic kullanmaya başlayın
 
@@ -47,7 +47,7 @@ Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://
 
 2. Üstteki menü çubuğundan **Dosya** > **Yeni** > **Proje**' yi seçin.
 
-3. Sol bölmedeki **Yeni proje** iletişim kutusunda **Visual Basic**' ı genişletin ve ardından **.NET Core**' u seçin. Orta bölmede **konsol uygulaması (.NET Core)** öğesini seçin. Ardından projeyi *WhatIsYourName*olarak adlandırın.
+3. Sol bölmedeki **Yeni proje** iletişim kutusunda **Visual Basic**' ı genişletin ve ardından **.NET Core**' u seçin. Orta bölmede **konsol uygulaması (.NET Core)** öğesini seçin. Ardından projeyi *WhatIsYourName* olarak adlandırın.
 
    ![Visual Studio IDE 'de yeni proje iletişim kutusundaki konsol uygulaması (.NET Core) proje şablonu](media/new-project-vb-dotnetcore-whatisyourname-console-app.png)
 
@@ -111,7 +111,7 @@ Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://
 
 ## <a name="create-a-what-is-your-name-application"></a>"Adınız nedir" uygulamanız oluşturun
 
-Sizden adınızı girmenizi isteyen bir uygulama oluşturalım ve Tarih ve saat ile birlikte görüntülüyor. Bunu yapmak için:
+Sizden adınızı girmenizi isteyen bir uygulama oluşturalım ve Tarih ve saat ile birlikte görüntülüyor. Aşağıdaki adımları uygulayın:
 
  ::: moniker range="vs-2017"
 
@@ -175,7 +175,7 @@ Sizden adınızı girmenizi isteyen bir uygulama oluşturalım ve Tarih ve saat 
 
 1. Visual Studio 2017 ' i açın ve üst menü çubuğundan **Dosya** > **Yeni** > **Proje**' yi seçin.
 
-1. Sol bölmedeki **Yeni proje** iletişim kutusunda **Visual Basic**' ı genişletin ve ardından **.NET Core**' u seçin. Orta bölmede **konsol uygulaması (.NET Core)** öğesini seçin. Sonra dosyayı *CalculateThis*olarak adlandırın.
+1. Sol bölmedeki **Yeni proje** iletişim kutusunda **Visual Basic**' ı genişletin ve ardından **.NET Core**' u seçin. Orta bölmede **konsol uygulaması (.NET Core)** öğesini seçin. Sonra dosyayı *CalculateThis* olarak adlandırın.
 
 1. Çizgi ve satır arasına aşağıdaki kodu girin `Module Program` `End Module` :
 

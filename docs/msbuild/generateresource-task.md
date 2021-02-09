@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c0aff32f-f2cc-46f6-9c3e-a5c9f8f912b1
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 124e5dcc3666698dd71927e15c3686038233c317
-ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
+ms.openlocfilehash: 810cbd4987277416b5be545603908d9818bff890
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92436882"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99914753"
 ---
 # <a name="generateresource-task"></a>GenerateResource görevi
 
@@ -38,7 +38,7 @@ Aşağıdaki tablo, görevin parametrelerini açıklar `GenerateResource` .
 |Parametre|Açıklama|
 |---------------|-----------------|
 |`AdditionalInputs`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametre.<br /><br /> Bu görev tarafından gerçekleştirilen bağımlılık denetimi için ek girişler içerir. Örneğin, proje ve hedef dosyalar genellikle girdi olmalıdır, bu sayede güncelleniyorsa tüm kaynaklar yeniden oluşturulur.|
-|`EnvironmentVariables`|İsteğe bağlı `String[]` parametre.<br /><br /> Düzenli ortam bloğunu (veya seçmeli olarak geçersiz kılan) ek olarak, oluşturulan *resgen.exe*geçirilmesi gereken ortam değişkenlerinin ad-değer çiftleri dizisini belirtir.|
+|`EnvironmentVariables`|İsteğe bağlı `String[]` parametre.<br /><br /> Düzenli ortam bloğunu (veya seçmeli olarak geçersiz kılan) ek olarak, oluşturulan *resgen.exe* geçirilmesi gereken ortam değişkenlerinin ad-değer çiftleri dizisini belirtir.|
 |`ExcludedInputPaths`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametre.<br /><br /> Güncel Denetim sırasında, izlenen girişlerin yoksayıldığı yolları belirten bir öğe dizisi belirtir.|
 |`ExecuteAsTool`|İsteğe bağlı `Boolean` parametre.<br /><br /> `true`, Gerekli sarmalayıcı derlemelerini oluşturmak için uygun hedef çerçevesinden *tlbimp.exe* ve *aximp.exe* çalışır. Bu parametre çoklu hedeflemeye izin verir `ResolveComReferences` .|
 |`FilesWritten`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıkış parametresi.<br /><br /> Diske yazılan tüm dosyaların adlarını içerir. Bu, varsa önbellek dosyasını içerir. Bu parametre, temizleme uygulamaları için yararlıdır.|
@@ -47,8 +47,8 @@ Aşağıdaki tablo, görevin parametrelerini açıklar `GenerateResource` .
 |`OutputResources`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıkış parametresi.<br /><br /> Oluşturulan dosyaların ( *. resources* dosyaları gibi) adını belirtir. Bir ad belirtmezseniz, eşleşen giriş dosyasının adı kullanılır ve oluşturulan *. resources* dosyası giriş dosyasını içeren dizine yerleştirilir.|
 |`PublicClass`|İsteğe bağlı `Boolean` parametre.<br /><br /> İse `true` , bir genel sınıf olarak türü kesin belirlenmiş bir kaynak sınıfı oluşturur.|
 |`References`|İsteğe bağlı `String[]` parametre.<br /><br /> *. Resx* dosyalarındaki yükleme türlerine başvurular. *. resx* dosya verisi öğelerinin .NET türü olabilir. *. Resx* dosyası okun, bu, çözülmesi gerekir. Genellikle standart tür yükleme kuralları kullanılarak başarıyla çözümlenir. İçinde derlemeler sağlarsanız `References` , bunlar öncelik kazanır.<br /><br /> Bu parametre, kesin olarak belirlenmiş kaynaklar için gerekli değildir.|
-|`SdkToolsPath`|İsteğe bağlı `String` parametre.<br /><br /> *resgen.exe*gibi SDK araçlarının yolunu belirtir.|
-|`Sources`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Dönüştürülecek öğeleri belirtir. Bu parametreye geçirilen öğeler aşağıdaki dosya uzantılarından birine sahip olmalıdır:<br /><br /> -   *. txt*: dönüştürülecek bir metin dosyası uzantısını belirtir. Metin dosyaları yalnızca dize kaynakları içerebilir.<br />-   *. resx*: dönüştürülecek XML tabanlı bir kaynak dosyası uzantısını belirtir.<br />-   *. restext*: *. txt*ile aynı biçimi belirtir. Bu farklı uzantı, yapı sürecinizdeki diğer kaynak dosyalardan kaynakları içeren kaynak dosyaları açıkça ayırt etmek istiyorsanız yararlıdır.<br />-   *. resources*: dönüştürülecek kaynak dosyanın uzantısını belirtir.|
+|`SdkToolsPath`|İsteğe bağlı `String` parametre.<br /><br /> *resgen.exe* gibi SDK araçlarının yolunu belirtir.|
+|`Sources`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Dönüştürülecek öğeleri belirtir. Bu parametreye geçirilen öğeler aşağıdaki dosya uzantılarından birine sahip olmalıdır:<br /><br /> -   *. txt*: dönüştürülecek bir metin dosyası uzantısını belirtir. Metin dosyaları yalnızca dize kaynakları içerebilir.<br />-   *. resx*: dönüştürülecek XML tabanlı bir kaynak dosyası uzantısını belirtir.<br />-   *. restext*: *. txt* ile aynı biçimi belirtir. Bu farklı uzantı, yapı sürecinizdeki diğer kaynak dosyalardan kaynakları içeren kaynak dosyaları açıkça ayırt etmek istiyorsanız yararlıdır.<br />-   *. resources*: dönüştürülecek kaynak dosyanın uzantısını belirtir.|
 |`StateFile`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> parametre.<br /><br /> *. Resx* giriş dosyalarındaki bağlantıların bağımlılık denetimini hızlandırmak için kullanılan isteğe bağlı bir önbellek dosyasının yolunu belirtir.|
 |`StronglyTypedClassName`|İsteğe bağlı `String` parametre.<br /><br /> Türü kesin belirlenmiş kaynak sınıfı için sınıf adını belirtir. Bu parametre belirtilmemişse, kaynak dosyanın temel adı kullanılır.|
 |`StronglyTypedFilename`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> parametre.<br /><br /> Kaynak dosya için dosya adını belirtir. Bu parametre belirtilmemişse, sınıfın adı, uzantısı dile bağlı olan temel dosya adı olarak kullanılır. Örneğin: *MyClass.cs*.|
@@ -57,10 +57,10 @@ Aşağıdaki tablo, görevin parametrelerini açıklar `GenerateResource` .
 |`StronglyTypedNamespace`|İsteğe bağlı `String` parametre.<br /><br /> Türü kesin belirlenmiş kaynak için oluşturulan sınıf kaynağı için kullanılacak ad alanını belirtir. Bu parametre belirtilmemişse, kesin olarak belirlenmiş tüm kaynaklar genel ad alanında bulunur.|
 |`TLogReadFiles`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` salt okunurdur parametresi.<br /><br /> Okuma izleme günlüklerini temsil eden öğelerin bir dizisini alır.|
 |`TLogWriteFiles`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` salt okunurdur parametresi.<br /><br /> Yazma izleme günlüklerini temsil eden öğelerin bir dizisini alır.|
-|`ToolArchitecture`|İsteğe bağlı <xref:System.String?displayProperty=fullName> parametre.<br /><br /> *ResGen.exe*üretme için kullanılıp kullanılmayacağını *Tracker.exe* için kullanılır.<br /><br /> Sabit listesinin bir üyesine ayrıştırılamayan olmalıdır <xref:Microsoft.Build.Utilities.ExecutableType> . `String.Empty`, Varsayılan bir mimariyi belirlemede buluşsal yöntem kullanır. Microsoft.Build.Utilities.ExecutableType numaralandırması üyesine ayrıştırılamayan olmalıdır.|
-|`TrackerFrameworkPath`|İsteğe bağlı `String` parametre.<br /><br /> *FileTracker.dll*içeren uygun .NET Framework konumun yolunu belirtir.<br /><br /> Ayarlanırsa, Kullanıcı, geçirdikleri *FileTracker.dll* bit sayısının, kullanmayı düşündüğünüz *ResGen.exe* bit durumuyla eşleştiğinden emin olma sorumluluğunu alır. Ayarlanmamışsa, görev geçerli .NET Framework sürümüne göre uygun konuma karar verir.|
+|`ToolArchitecture`|İsteğe bağlı <xref:System.String?displayProperty=fullName> parametre.<br /><br /> *ResGen.exe* üretme için kullanılıp kullanılmayacağını *Tracker.exe* için kullanılır.<br /><br /> Sabit listesinin bir üyesine ayrıştırılamayan olmalıdır <xref:Microsoft.Build.Utilities.ExecutableType> . `String.Empty`, Varsayılan bir mimariyi belirlemede buluşsal yöntem kullanır. Microsoft.Build.Utilities.ExecutableType numaralandırması üyesine ayrıştırılamayan olmalıdır.|
+|`TrackerFrameworkPath`|İsteğe bağlı `String` parametre.<br /><br /> *FileTracker.dll* içeren uygun .NET Framework konumun yolunu belirtir.<br /><br /> Ayarlanırsa, Kullanıcı, geçirdikleri *FileTracker.dll* bit sayısının, kullanmayı düşündüğünüz *ResGen.exe* bit durumuyla eşleştiğinden emin olma sorumluluğunu alır. Ayarlanmamışsa, görev geçerli .NET Framework sürümüne göre uygun konuma karar verir.|
 |`TrackerLogDirectory`|İsteğe bağlı `String` parametre.<br /><br /> Bu görevi çalıştırmanın İzleme günlüklerinin yerleştirileceği ara dizini belirtir.|
-|`TrackerSdkPath`|İsteğe bağlı `String` parametre.<br /><br /> *Tracker.exe*içeren uygun Windows SDK konumun yolunu belirtir.<br /><br /> Ayarlanırsa, Kullanıcı, geçirdikleri *Tracker.exe* bit sayısının, kullanmayı düşündüğünüz *ResGen.exe* bit durumuyla eşleştiğinden emin olma sorumluluğunu alır. Ayarlanmamışsa, görev geçerli Windows SDK göre uygun konuma karar verir.|
+|`TrackerSdkPath`|İsteğe bağlı `String` parametre.<br /><br /> *Tracker.exe* içeren uygun Windows SDK konumun yolunu belirtir.<br /><br /> Ayarlanırsa, Kullanıcı, geçirdikleri *Tracker.exe* bit sayısının, kullanmayı düşündüğünüz *ResGen.exe* bit durumuyla eşleştiğinden emin olma sorumluluğunu alır. Ayarlanmamışsa, görev geçerli Windows SDK göre uygun konuma karar verir.|
 |`TrackFileAccess`|İsteğe bağlı <xref:System.Boolean> parametre.<br /><br /> True ise, göreli dosya yollarını çözümlemek için giriş dosyasının dizini kullanılır.|
 |`UseSourcePath`|İsteğe bağlı `Boolean` parametre.<br /><br /> İse `true` , göreli dosya yollarını çözümlemek için giriş dosyasının dizininin kullanılacağını belirtir.|
 
@@ -88,7 +88,7 @@ Aşağıdaki örnek, `GenerateResource` öğe koleksiyonu tarafından belirtilen
 
 `GenerateResource`Görev, \<LogicalName> \<EmbeddedResource> bir derlemeye gömülü kaynağı adlandırmak için bir öğenin meta verilerini kullanır.
 
-Derlemenin myAssembly olarak adlandırıldığını varsayarsak, aşağıdaki kod *Somequalifier. someResource. resources*adlı bir katıştırılmış kaynak oluşturur:
+Derlemenin myAssembly olarak adlandırıldığını varsayarsak, aşağıdaki kod *Somequalifier. someResource. resources* adlı bir katıştırılmış kaynak oluşturur:
 
 ```xml
 <ItemGroup>
@@ -98,7 +98,7 @@ Derlemenin myAssembly olarak adlandırıldığını varsayarsak, aşağıdaki ko
 </ItemGroup>
 ```
 
-\<LogicalName>Meta veriler olmadan kaynak *MyAssembly. MyResource. resources*olarak adlandırılır.  Bu örnek yalnızca Visual Basic ve Visual C# derleme işlemi için geçerlidir.
+\<LogicalName>Meta veriler olmadan kaynak *MyAssembly. MyResource. resources* olarak adlandırılır.  Bu örnek yalnızca Visual Basic ve Visual C# derleme işlemi için geçerlidir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

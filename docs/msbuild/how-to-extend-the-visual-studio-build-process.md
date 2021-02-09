@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: cb077613-4a59-41b7-96ec-d8516689163c
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 07f0312892d9f4f4073cf6fb2c9537ffa52a6267
-ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
+ms.openlocfilehash: 67b2eff1ca7c1871eacad7608b56b6916e3cc8e3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "95970069"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99914368"
 ---
 # <a name="how-to-extend-the-visual-studio-build-process"></a>Nasıl yapılır: Visual Studio derleme işlemini genişletme
 
@@ -41,7 +41,7 @@ Ortak hedefler, yapı işlemindeki ana hedeflerden önce ve sonra çağrılan bi
 
 1. Geçersiz kılmak istediğiniz ortak hedeflerde önceden tanımlanmış bir hedef belirler. Güvenli şekilde geçersiz kılabileceğiniz hedeflerin tamamı listesi için aşağıdaki tabloya bakın.
 
-2. Doğrudan etiketinden önce, proje dosyanızın sonundaki hedef veya hedefleri tanımlayın `</Project>` . Örnek:
+2. Doğrudan etiketinden önce, proje dosyanızın sonundaki hedef veya hedefleri tanımlayın `</Project>` . Örneğin:
 
     ```xml
     <Project>
@@ -130,7 +130,7 @@ Bu XML parçası, hedefin çalıştırılabilmesi için önce `Build` özellikte
 </PropertyGroup>
 ```
 
-Proje dosyanızın sonunda adlı başka bir özelliği bildirerek, bu özellik değerini geçersiz kılabilirsiniz `BuildDependsOn` . Önceki `BuildDependsOn` özelliği yeni özelliğe dahil ederek, hedef listenin başına ve sonuna yeni hedefler ekleyebilirsiniz. Örnek:
+Proje dosyanızın sonunda adlı başka bir özelliği bildirerek, bu özellik değerini geçersiz kılabilirsiniz `BuildDependsOn` . Önceki `BuildDependsOn` özelliği yeni özelliğe dahil ederek, hedef listenin başına ve sonuna yeni hedefler ekleyebilirsiniz. Örneğin:
 
 ```xml
 <PropertyGroup>

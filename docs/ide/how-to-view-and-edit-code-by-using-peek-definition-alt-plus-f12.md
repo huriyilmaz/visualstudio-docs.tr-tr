@@ -6,15 +6,15 @@ ms.date: 01/10/2018
 ms.topic: how-to
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0b706e730767c7c79fbeebc11291ecd11f4635b6
-ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
+ms.openlocfilehash: 9c296aca79e6f334c93d8a9974d4a718ccd39d97
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95596930"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99914997"
 ---
 # <a name="how-to-view-and-edit-code-by-using-peek-definition-altf12"></a>Nasıl yapılır: Özet tanımı 'nı kullanarak kodu görüntüleme ve düzenleme (alt + F12)
 
@@ -77,7 +77,7 @@ Bu klavye kısayollarını **göz atma** penceresiyle birlikte kullanabilirsiniz
 |Tanım penceresini açma|**Alt** + **F12**|
 |Tanım penceresini kapatma|**Esc**|
 |Tanım penceresini bir normal belge sekmesine yükseltme|**CTRL** + **Alt** + **Giriş sayfası**|
-|Tanım pencereleri arasında gezinme|**CTRL** + **Alt** + Alt **-** ve **CTRL** + **alt**+**=**|
+|Tanım pencereleri arasında gezinme|**CTRL** +  + Alt **-** ve **CTRL** + **alt**+**=**|
 |Birden fazla sonuç arasında gezinme|**F8** ve **SHIFT** + **F8**|
 |Kod düzenleyicisi penceresi ile tanım penceresi arasında geçiş yapma|**SHIFT** + **ESC**|
 

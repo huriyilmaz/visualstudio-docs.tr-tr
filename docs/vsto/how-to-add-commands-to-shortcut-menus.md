@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Office development in Visual Studio, context menus
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 95cc6a9dc773c9a0cb07eff518566af9dcc49e96
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: 2f5c244d78ab5a6b5d98550b11c280159f285db7
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96845498"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99913453"
 ---
 # <a name="how-to-add-commands-to-shortcut-menus"></a>Nasıl yapılır: Kısayol menülerine komut ekleme
   Bu konu başlığı altında, VSTO eklentisi kullanarak bir Office uygulamasındaki kısayol menüsüne nasıl komut ekleyeceğiniz gösterilmektedir.
@@ -33,7 +33,7 @@ ms.locfileid: "96845498"
 
 2. **Çözüm Gezgini**, **ThisAddin.cs** veya **ThisAddIn. vb** öğesini seçin.
 
-3. Menü çubuğunda kodu **görüntüle**' yi seçin  >  **Code**.
+3. Menü çubuğunda kodu **görüntüle**' yi seçin  >  .
 
      **ThisAddIn** sınıfı dosyası kod düzenleyicisinde açılır.
 
@@ -44,7 +44,7 @@ ms.locfileid: "96845498"
 
 5. **Çözüm Gezgini**, Şerit XML dosyasını seçin. Varsayılan olarak, Şerit XML dosyası *Ribbon1.xml* olarak adlandırılır.
 
-6. Menü çubuğunda kodu **görüntüle**' yi seçin  >  **Code**.
+6. Menü çubuğunda kodu **görüntüle**' yi seçin  >  .
 
      Şerit XML dosyası kod düzenleyicisinde açılır.
 

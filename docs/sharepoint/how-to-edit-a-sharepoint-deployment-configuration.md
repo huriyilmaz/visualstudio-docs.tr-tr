@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, deploying
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: e64f805496d03b42ca70489bab1302ecf58b33bc
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: 59354537f0c1f22534395da1e0ed3db3929a14a9
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94903565"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99913644"
 ---
 # <a name="how-to-edit-a-sharepoint-deployment-configuration"></a>Nasıl yapılır: SharePoint dağıtım yapılandırmasını düzenleme
   Dağıtım yapılandırması oluşturabilir veya var olan bir dağıtım yapılandırmasını değiştirebilirsiniz. Örneğin, tek bir adım çalıştırabilir veya dağıtım işlemindeki adımların sırasını değiştirebilirsiniz. Yerleşik ve programlı olarak eklenen yapılandırmaların değiştirilemediğinden, dağıtım yapılandırması oluşturmak veya değiştirmek isteyebilirsiniz.

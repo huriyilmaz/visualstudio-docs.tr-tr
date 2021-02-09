@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 163734bd-1bfd-4093-a730-7741fc21742d
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d81328ecf17117500a5f686a45f934e451bb5809
-ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
+ms.openlocfilehash: 5c351b7f676dec678bd4f070a1f8fb9af97c5d28
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92436054"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99914114"
 ---
 # <a name="how-to-use-the-same-target-in-multiple-project-files"></a>Nasıl yapılır: birden çok proje dosyasında aynı hedefi kullanma
 
@@ -42,7 +42,7 @@ Birkaç MSBuild proje dosyası oluşturduysanız, farklı proje dosyalarında ay
 
  MSBuild bir öğeye ulaştığında `Import` , içeri aktarılan proje, öğe konumundaki içeri aktarma projesine etkin bir şekilde eklenir `Import` . Bu nedenle, `Import` öğesinin konumu Özellikler ve öğelerin değerlerini etkileyebilir. İçeri aktarılan proje tarafından ayarlanan özellikleri ve öğeleri ve içeri aktarılan projenin kullandığı özellikleri ve öğeleri anlamak önemlidir.
 
- Proje oluşturulduğunda tüm özellikler önce değerlendirilir ve ardından öğeler gelir. Örneğin, aşağıdaki XML içeri aktarılan proje dosyasını *MyCommon. targets*olarak tanımlar:
+ Proje oluşturulduğunda tüm özellikler önce değerlendirilir ve ardından öğeler gelir. Örneğin, aşağıdaki XML içeri aktarılan proje dosyasını *MyCommon. targets* olarak tanımlar:
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -56,7 +56,7 @@ Birkaç MSBuild proje dosyası oluşturduysanız, farklı proje dosyalarında ay
 </Project>
 ```
 
- Aşağıdaki XML, *MyCommon. targets*Içeri aktaran *MyApp. proj*öğesini tanımlar:
+ Aşağıdaki XML, *MyCommon. targets* Içeri aktaran *MyApp. proj* öğesini tanımlar:
 
 ```xml
 <Project
@@ -73,7 +73,7 @@ Birkaç MSBuild proje dosyası oluşturduysanız, farklı proje dosyalarında ay
 
  `Name="MyCommon"`
 
- Proje, özelliği `Name` *MyApp. proj*içinde tanımlandıktan sonra Içeri aktarıldığından `Name` *MyCommon. targets* içindeki tanımı, *MyApp. proj*içindeki tanımı geçersiz kılar. Proje, özellik adı tanımlanmadan önce içeri aktarıldıysa, yapı aşağıdaki iletiyi görüntüler:
+ Proje, özelliği `Name` *MyApp. proj* içinde tanımlandıktan sonra Içeri aktarıldığından `Name` *MyCommon. targets* içindeki tanımı, *MyApp. proj* içindeki tanımı geçersiz kılar. Proje, özellik adı tanımlanmadan önce içeri aktarıldıysa, yapı aşağıdaki iletiyi görüntüler:
 
  `Name="MyApp"`
 

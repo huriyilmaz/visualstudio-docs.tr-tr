@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 3ee22eb9-978f-4efd-a5e0-f071745496ce
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 93a3a0c536e9f3cfc13d2372038651c0765149cf
-ms.sourcegitcommit: 40d758f779d42c66cb02ae7face8a62763a8662b
+ms.openlocfilehash: 109ca82378fc7d59869b26cd02fcf2e803e5715f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97398409"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99913447"
 ---
 # <a name="how-to-change-fonts"></a>Nasıl yapılır: Yazı Tiplerini Değiştirme
 Spy + + Windows için yazı tipi, yazı tipi stili ve yazı tipi boyutunu değiştirebilirsiniz.
@@ -28,7 +28,7 @@ Spy + + Windows için yazı tipi, yazı tipi stili ve yazı tipi boyutunu deği�
 
 2. Yazı tipi, yazı tipi stili ve yazı tipi boyutu seçin.
 
-3. **Tamam** düğmesine tıklayın.
+3. **Tamam**'a tıklayın.
 
    **Yazı tipini varsayılan olarak kaydet** seçeneğinin belirlenmesi, gelecekteki tüm Spy + + pencerelerinin bu yazı tipini kullanmasına neden olur.
 

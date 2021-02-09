@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 92b6539c-6897-45e0-8989-0c234bbfe782
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0a100ad8a3be57288e49a858d6f87851269df303
-ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
+ms.openlocfilehash: f4a41a5cbecea69d4843cbd70479a604f91b2218
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92436762"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99914744"
 ---
 # <a name="generatetemporarytargetassembly-task"></a>GenerateTemporaryTargetAssembly görevi
 
@@ -35,13 +35,13 @@ ms.locfileid: "92436762"
 
 | Parametre | Açıklama |
 |--------------------------| - |
-| `AssemblyName` | Gerekli **dize** parametresi.<br /><br /> Bir proje için oluşturulan derlemenin kısa adını belirtir ve ayrıca geçici olarak oluşturulan hedef derlemenin adıdır. Örneğin, bir proje adı *WinExeAssembly.exe*olan bir Windows yürütülebiliri oluşturursa, **AssemblyName** parametresinin değeri **WinExeAssembly**olur. |
+| `AssemblyName` | Gerekli **dize** parametresi.<br /><br /> Bir proje için oluşturulan derlemenin kısa adını belirtir ve ayrıca geçici olarak oluşturulan hedef derlemenin adıdır. Örneğin, bir proje adı *WinExeAssembly.exe* olan bir Windows yürütülebiliri oluşturursa, **AssemblyName** parametresinin değeri **WinExeAssembly** olur. |
 | `CompileTargetName` | Gerekli **dize** parametresi.<br /><br /> Kaynak kod dosyalarından derlemeler oluşturmak için kullanılan MSBuild hedefinin adını belirtir. **CompileTargetName** için tipik değer **CoreCompile**' dir. |
 | `CompileTypeName` | Gerekli **dize** parametresi.<br /><br /> **CompileTargetName** parametresi tarafından belirtilen hedef tarafından gerçekleştirilen derlemenin türünü belirtir. **CoreCompile** hedefi için bu değer **derlenir**. |
 | `CurrentProject` | Gerekli **dize** parametresi.<br /><br /> Proje için geçici bir hedef derleme gerektiren MSBuild proje dosyasının tam yolunu belirtir. |
 | `GeneratedCodeFiles` | İsteğe bağlı **ıtaskitem []** parametresi.<br /><br /> [MarkupCompilePass1](../msbuild/markupcompilepass1-task.md) görevi tarafından oluşturulan dile özgü yönetilen kod dosyalarının listesini belirtir. |
 | `IntermediateOutputPath` | Gerekli **dize** parametresi.<br /><br /> Geçici hedef derlemenin oluşturulduğu dizini belirtir. |
-| `MSBuildBinPath` | Gerekli **dize** parametresi.<br /><br /> Geçici hedef derlemeyi derlemek için gereken *MSBuild.exe*konumunu belirtir. |
+| `MSBuildBinPath` | Gerekli **dize** parametresi.<br /><br /> Geçici hedef derlemeyi derlemek için gereken *MSBuild.exe* konumunu belirtir. |
 | `ReferencePath` | İsteğe bağlı **ıtaskitem []** parametresi.<br /><br /> Geçici hedef derlemeye derlenen türlerin başvurduğu, yola ve dosya adına göre derlemelerin bir listesini belirtir. |
 | `ReferencePathTypeName` | Gerekli **dize** parametresi.<br /><br /> Derleme başvuruları (**ReferencePath**) listesini belirten derleme hedefi (**CompileTargetName**) parametresi tarafından kullanılan parametreyi belirtir. Uygun değer **ReferencePath**' dir. |
 

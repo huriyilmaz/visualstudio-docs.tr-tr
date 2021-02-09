@@ -12,15 +12,15 @@ helpviewer_keywords:
 - importing items [SharePoint development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: c17f4e7477a20ea245eaa359a6f9611a8dc4ece6
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: 331ae3964de40e6590345aadae59776fe37f467a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94903500"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99913678"
 ---
 # <a name="how-to-import-a-master-page-or-theme"></a>Nasıl yapılır: bir ana sayfa veya temayı Içeri aktarma
   SharePoint sitenizde sayfalara, ana sayfalar ve Temalar oluşturup kullanarak tutarlı bir görünüm verebilirsiniz. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Bu öğeler için şablon sağlamıyor, ancak bunları SharePoint Designer 'da oluşturabilir ve sonra içine aktarabilirsiniz [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . Daha fazla bilgi için bkz. Microsoft Web sitesinde [yapı taşı: sayfalar ve Kullanıcı arabirimi](/previous-versions/office/developer/sharepoint-2010/ee539040(v=office.14)) .

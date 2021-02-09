@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 9e2e01d9-7beb-42b2-99b2-86995578afda
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2496de5d1139d66e4ae9072b551ada990cf856dd
-ms.sourcegitcommit: 2f964946d7044cc7d49b3fc10b413ca06cb2d11b
+ms.openlocfilehash: ad5b77176d05c28b3ba938a1255de6e10fcd7094
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96761237"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99912758"
 ---
 # <a name="how-to-install-a-source-control-plug-in"></a>Nasıl yapılır: kaynak denetimi eklentisi yüklemesi
 Kaynak denetimi eklentisi oluşturma üç adımdan oluşur:
@@ -37,7 +37,7 @@ Kaynak denetimi eklentisi oluşturma üç adımdan oluşur:
 
 #### <a name="to-register-the-source-control-plug-in-dll"></a>Kaynak denetimi eklentisi DLL 'sini kaydetmek için
 
-1. Şirket adı alt anahtarını ve ardından ürün adı alt anahtarınızı belirten **yazılım** alt anahtarındaki **HKEY_LOCAL_MACHINE** anahtarı altına iki giriş ekleyin. Model **\\ \<company name>HKEY_LOCAL_MACHINE\SOFTWARE\\ \<product name> değerdir \\ . \<entry>**  =  *value* İki giriş her zaman **SccServerName** ve **SccServerPath** olarak adlandırılır. Her biri normal bir dizedir.
+1. Şirket adı alt anahtarını ve ardından ürün adı alt anahtarınızı belirten **yazılım** alt anahtarındaki **HKEY_LOCAL_MACHINE** anahtarı altına iki giriş ekleyin. Model **\\ \<company name>HKEY_LOCAL_MACHINE\SOFTWARE\\ \<product name> değerdir \\ . \<entry>**  =   İki giriş her zaman **SccServerName** ve **SccServerPath** olarak adlandırılır. Her biri normal bir dizedir.
 
     Örneğin, şirketinizin adı Microsoft ise ve kaynak denetimi ürününüz SourceSafe olarak adlandırılmışsa, bu kayıt defteri yolu **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SourceSafe** olacaktır. Bu alt anahtarda, **SccServerName** ilk girdisi, ürününüzü adlandırırken Kullanıcı tarafından okunabilen bir dizedir. İkinci girdi, **SccServerPath**, IDE 'nin bağlanması gereken kaynak denetim eklentisi dll 'inin tam yoludur. Aşağıda örnek kayıt defteri girdileri verilmiştir:
 
@@ -81,7 +81,7 @@ Kaynak denetimi eklentisi oluşturma üç adımdan oluşur:
 
     Bu girdinin adı, sağlayıcının kullanıcı tarafından okunabilen adıdır (SCCServerName girişi için belirtilen değerle aynıdır) ve değer, tekrar, 1. adımda oluşturulan alt anahtar. Bu model, **HKEY_LOCAL_MACHINE\SOFTWARE\SourceCodeControlProvider\InstalledSCCProviders\\ görünen adı \>**  =  *yazılım \\<şirket adı \> \\<ürün adı \>*<.
 
-    Örnek:
+    Örneğin:
 
    |Örnek kayıt defteri girdisi|Örnek değer|
    |---------------------------|------------------|

@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: bbc02cf7-a7e6-44fe-99af-87a43e1d7251
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a0458fb4981642d3f8386edd4c3605ae7b902a14
-ms.sourcegitcommit: 40d758f779d42c66cb02ae7face8a62763a8662b
+ms.openlocfilehash: 83522eb13350d86ef0531d90b3db844ece8f6655
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97398681"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99913413"
 ---
 # <a name="how-to-debug-an-activex-control"></a>Nasıl Yapılır: ActiveX Denetiminde Hata Ayıklama
 
@@ -54,7 +54,7 @@ ActiveX denetimi hata ayıklaması yapmak için denetimin içinde çalışacağ�
 
 6. Kapsayıcı olarak Internet Explorer 'ı belirtirseniz ve etkin masaüstü kullanıyorsanız, `/new` **komut bağımsız değişkenleri** kutusuna yazın.
 
-7. **Tamam** düğmesine tıklayın.
+7. **Tamam**'a tıklayın.
 
      **Proje özellik sayfaları** iletişim kutusunda bir kapsayıcı belirtmezseniz, hata ayıklamaya başladığınızda kapsayıcıyı belirtebilirsiniz. Hata ayıklamayı başlatmak için bir yürütme komutu seçtiğinizde, [hata ayıklama oturumu Için yürütülebilir Iletişim kutusu](../debugger/executable-for-debugging-session-dialog-box.md) görüntülenir. İletişim kutusunda kapsayıcının yol adını belirtin.
 

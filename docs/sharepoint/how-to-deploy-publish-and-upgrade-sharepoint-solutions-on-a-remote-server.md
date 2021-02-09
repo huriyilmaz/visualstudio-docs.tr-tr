@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, deploying
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: db476af4a9d3be9cab2109fb3489d0767765075f
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: ab301f11ffdae03564f05388dfbba55a90d12391
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94903578"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99913687"
 ---
 # <a name="how-to-deploy-publish-and-upgrade-sharepoint-solutions-on-a-remote-server"></a>Nasıl yapılır: uzak bir sunucuda SharePoint çözümlerini dağıtma, yayımlama ve yükseltme
   SharePoint çözümlerini yerel sisteme dağıtmanın yanı sıra, korumalı SharePoint çözümlerini uzak sitelere veya yerel SharePoint sitelerine de yayımlayabilirsiniz. Uzaktan yayımlama işlemi, *. wsp* dosyasını SharePoint sunucusuna kopyalar, çözümü yüklüyor ve sonra çözümü etkinleştirmenizi sağlar. Ayrıca, bir uzak SharePoint çözüm yüklemesini değişiklikler yapıldıktan sonra yükseltebilirsiniz.

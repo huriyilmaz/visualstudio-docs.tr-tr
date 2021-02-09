@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: 988c5092-fcc5-43a1-a94c-c261edd56ebf
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ab16a27257229bf97145403b99af9e478eae65db
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b85490c3641158ecff6881e139dbec54796e0f5a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80717830"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99912926"
 ---
 # <a name="ienumcodepaths2getcount"></a>IEnumCodePaths2::GetCount
 Numaralandırmadaki öğe sayısını döndürür.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
 HRESULT GetCount(

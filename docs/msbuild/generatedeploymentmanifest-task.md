@@ -16,15 +16,15 @@ helpviewer_keywords:
 - GenerateDeploymentManifest task [MSBuild]
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 68a35804a1523b3387061b4666cd483a9c3b0476
-ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
+ms.openlocfilehash: 436aeb1b318aaa98d8a8cc9d8dac6baf4dd3c6c3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92436464"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99914764"
 ---
 # <a name="generatedeploymentmanifest-task"></a>GenerateDeploymentManifest görevi
 
@@ -50,7 +50,7 @@ Aşağıdaki tabloda, görevi için parametreler açıklanmaktadır `GenerateDep
 | `MaxTargetPath` | İsteğe bağlı `String` parametre.<br /><br /> ClickOnce uygulama dağıtımında bir dosya yolunun izin verilen maksimum uzunluğunu belirtir. Bu parametre belirtilmişse, uygulamadaki her dosya yolunun uzunluğu bu sınıra karşı denetlenir. Sınırı aşan tüm öğeler, derleme uyarısına neden olur. Bu giriş belirtilmemişse veya sıfırsa, hiçbir denetim yapılmaz. |
 | `MinimumRequiredVersion` | İsteğe bağlı `String` parametre.<br /><br /> Kullanıcının güncelleştirmeyi atlayıp atlayamayacağını belirtir. Kullanıcının gerekenden daha düşük bir sürümü varsa, güncelleştirmeyi atlama seçeneği yoktur. Bu giriş yalnızca parametresinin değeri olduğunda geçerlidir `Install` `true` . |
 | `OutputManifest` | İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> parametre.<br /><br /> Oluşturulan çıkış bildirimi dosyasının adını belirtir. Bu parametre belirtilmemişse, çıkış dosyasının adı oluşturulan bildirimin kimliğinden algılanır. |
-| `Platform` | İsteğe bağlı `String` parametre.<br /><br /> Uygulamanın hedef platformunu belirtir. Bu parametre aşağıdaki değerlere sahip olabilir:<br /><br /> -   `AnyCPU`<br />-   `x86`<br />-   `x64`<br />-   `Itanium`<br /><br /> Varsayılan değer: `AnyCPU`. |
+| `Platform` | İsteğe bağlı `String` parametre.<br /><br /> Uygulamanın hedef platformunu belirtir. Bu parametre aşağıdaki değerlere sahip olabilir:<br /><br /> -   `AnyCPU`<br />-   `x86`<br />-   `x64`<br />-   `Itanium`<br /><br /> `AnyCPU` varsayılan değerdir. |
 | `Product` | İsteğe bağlı `String` parametre.<br /><br /> Uygulamanın adını belirtir. Bu parametre belirtilmemişse, ad oluşturulan bildirimin kimliğinden algılanır. Bu ad, **Başlangıç** menüsündeki kısayol adı için kullanılır ve **Program Ekle veya Kaldır** iletişim kutusunda görünen adın bir parçasıdır. |
 | `Publisher` | İsteğe bağlı `String` parametre.<br /><br /> Uygulamanın yayımcısını belirtir. Bu parametre belirtilmemişse, ad kayıtlı kullanıcıdan veya oluşturulan bildirimin kimliğiyle algılanır. Bu ad, **Başlangıç** menüsündeki klasör adı için kullanılır ve **Program Ekle veya Kaldır** iletişim kutusunda görünen adın bir parçasıdır. |
 | `SuiteNamel` | İsteğe bağlı `String` parametre.<br /><br /> Uygulamanın ClickOnce dağıtımından sonra bulunduğu **Başlangıç** menüsünde klasörün adını belirtir. |

@@ -5,21 +5,21 @@ ms.date: 11/12/2018
 ms.topic: conceptual
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 136c03ef11071e5d548e36e45a6a541cffce1469
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0193256edb4a55285e8017a56fe7249ef5d60362
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62784887"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99912406"
 ---
 # <a name="django-web-project-template"></a>Django web projesi şablonu
 
-[Docgo](https://www.djangoproject.com/) , hızlı, güvenli ve ölçeklenebilir Web geliştirme için tasarlanan üst düzey bir Python çerçevesidir. Visual Studio 'da Python desteği, bir Docgo tabanlı Web uygulamasının yapısını ayarlamak için çeşitli proje şablonları sağlar. Visual Studio 'da bir şablon kullanmak için **Dosya**  >  **Yeni**  >  **Proje**' yi seçin, "docgo" araması yapın ve **boş docgo Web projesinden**, **docgo**Web projesinden seçim yapın ve **docgo Web projesi şablonlarını yoklar** . Tüm şablonlar hakkında bir anlatım için bkz. [Docgo öğreticisi](learn-django-in-visual-studio-step-01-project-and-solution.md) .
+[Docgo](https://www.djangoproject.com/) , hızlı, güvenli ve ölçeklenebilir Web geliştirme için tasarlanan üst düzey bir Python çerçevesidir. Visual Studio 'da Python desteği, bir Docgo tabanlı Web uygulamasının yapısını ayarlamak için çeşitli proje şablonları sağlar. Visual Studio 'da bir şablon kullanmak için **Dosya**  >  **Yeni**  >  **Proje**' yi seçin, "docgo" araması yapın ve **boş docgo Web projesinden**, **docgo** Web projesinden seçim yapın ve **docgo Web projesi şablonlarını yoklar** . Tüm şablonlar hakkında bir anlatım için bkz. [Docgo öğreticisi](learn-django-in-visual-studio-step-01-project-and-solution.md) .
 
 Visual Studio, Docgo projeleri için tam IntelliSense sağlar:
 
@@ -55,11 +55,11 @@ Docgo yönetim konsoluna, **Proje** menüsündeki çeşitli komutlar aracılığ
 
     ![Docgo Sync DB komutunun sonucu](media/template-django-console-sync-db.png)
 
-- **Statik topla**: `manage.py collectstatic --noinput` tüm statik dosyaları `STATIC_ROOT` *Settings.py*içinde belirtilen yola kopyalamak için yürütülür.
+- **Statik topla**: `manage.py collectstatic --noinput` tüm statik dosyaları `STATIC_ROOT` *Settings.py* içinde belirtilen yola kopyalamak için yürütülür.
 
     ![Statik toplama komutunun sonucu](media/template-django-console-collect-static.png)
 
-- **Validate**: `manage.py validate` , `INSTALLED_APPS` *Settings.py*içinde tarafından belirtilen yüklü modellerdeki doğrulama hatalarını raporlayan yürütülür:
+- **Validate**: `manage.py validate` , `INSTALLED_APPS` *Settings.py* içinde tarafından belirtilen yüklü modellerdeki doğrulama hatalarını raporlayan yürütülür:
 
     ![Validate komutunun sonucu](media/template-django-console-validate.png)
 

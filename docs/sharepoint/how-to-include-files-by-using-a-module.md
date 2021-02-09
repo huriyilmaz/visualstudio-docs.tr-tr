@@ -12,15 +12,15 @@ helpviewer_keywords:
 - modules [SharePoint development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 381cb529db3f4116a9c42041c26e0e1e242073df
-ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
+ms.openlocfilehash: e83a1474c7dfe6385c36cc13646bfe40fc897640
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2020
-ms.locfileid: "96305421"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99913626"
 ---
 # <a name="how-to-include-files-by-using-a-module"></a>Nasıl yapılır: modül kullanarak dosyaları Içerme
   *Modüller* ( [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] modüllerle KARıŞTıRıLMAMALıDıR), aspx ana sayfaları, metin dosyaları veya görüntüler gibi dosyaları SharePoint 'e dağıtmanızı sağlayan kapsayıcılardır.

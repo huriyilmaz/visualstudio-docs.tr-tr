@@ -7,15 +7,15 @@ ms.topic: conceptual
 ms.assetid: 34990c37-ae98-4140-9b1e-a91c192220d9
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 41adcbe97f9d0779fbad465bac673a3f7cf086c7
-ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
+ms.openlocfilehash: 77fdc39ccccb7728749edd55527741c15bb1bcb0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "96993542"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99912735"
 ---
 # <a name="image-service-and-catalog"></a>Görüntü hizmeti ve kataloğu
 Bu kılavuz kitabı, Visual Studio görüntü hizmeti ve Visual Studio 2015 ' de tanıtılan görüntü kataloğunu benimseme için rehberlik ve en iyi uygulamaları içerir.
@@ -105,7 +105,7 @@ Bu kılavuz kitabı, Visual Studio görüntü hizmeti ve Visual Studio 2015 ' de
 
 |**Subelement**|**Tanım**|
 |-|-|
-|İçeri Aktar|Geçerli bildirimde kullanılmak üzere verilen bildirim dosyasının sembollerini içeri aktarır|
+|İçeri Aktarma|Geçerli bildirimde kullanılmak üzere verilen bildirim dosyasının sembollerini içeri aktarır|
 |Guid|Sembol bir GUID 'YI temsil eder ve GUID biçimlendirmesi ile eşleşmelidir|
 |ID|Sembol bir KIMLIĞI temsil eder ve negatif olmayan bir tamsayı olmalıdır|
 |Dize|Sembol rastgele bir dize değerini temsil eder|
@@ -161,12 +161,12 @@ Bu kılavuz kitabı, Visual Studio görüntü hizmeti ve Visual Studio 2015 ' de
 
 |**Öznitelik**|**Tanım**|
 |-|-|
-|Kullanılmamışsa|Istenir Görüntünün nereden yüklenebileceğini tanımlayan bir URI. Aşağıdakilerden biri olabilir:<br /><br /> -Application:///yetkilisini kullanan bir [paket URI 'si](/dotnet/framework/wpf/app-development/pack-uris-in-wpf)<br />-Mutlak bir bileşen kaynağı başvurusu<br />-Yerel kaynak içeren bir dosyanın yolu|
-|Arka plan|Seçim Kaynağın kullanılması amaçlanan arka plan türünü gösterir.<br /><br /> Aşağıdakilerden biri olabilir:<br /><br /> *Hafif:* Kaynak açık bir arka planda kullanılabilir.<br /><br /> *Koyu:* Kaynak, koyu bir arka planda kullanılabilir.<br /><br /> *Highkarşıtlıklı:* Kaynak Yüksek Karşıtlık modundaki herhangi bir arka planda kullanılabilir.<br /><br /> *High, Stlight:* Kaynak Yüksek Karşıtlık modundaki hafif bir arka planda kullanılabilir.<br /><br /> Üst *sınır:* Kaynak, Yüksek Karşıtlık modundaki karanlık bir arka planda kullanılabilir.<br /><br /> Arka plan özniteliği atlanırsa, kaynak herhangi bir arka planda kullanılabilir.<br /><br /> Arka plan hafif, *koyu*, *ince* bir *şekilde veya daha* *ince*, kaynak renkleri hiçbir şekilde ters çevrilmez. Arka plan atlanırsa veya *Highkontrast* olarak ayarlandıysa, kaynak renklerinin Inversion değeri görüntünün **allowcolorınversion** özniteliği tarafından denetlenir.|
+|Kullanılmamışsa|Istenir Görüntünün nereden yüklenebileceğini tanımlayan bir URI. Şunlardan biri olabilir:<br /><br /> -Application:///yetkilisini kullanan bir [paket URI 'si](/dotnet/framework/wpf/app-development/pack-uris-in-wpf)<br />-Mutlak bir bileşen kaynağı başvurusu<br />-Yerel kaynak içeren bir dosyanın yolu|
+|Arka Plan|Seçim Kaynağın kullanılması amaçlanan arka plan türünü gösterir.<br /><br /> Şunlardan biri olabilir:<br /><br /> *Hafif:* Kaynak açık bir arka planda kullanılabilir.<br /><br /> *Koyu:* Kaynak, koyu bir arka planda kullanılabilir.<br /><br /> *Highkarşıtlıklı:* Kaynak Yüksek Karşıtlık modundaki herhangi bir arka planda kullanılabilir.<br /><br /> *High, Stlight:* Kaynak Yüksek Karşıtlık modundaki hafif bir arka planda kullanılabilir.<br /><br /> Üst *sınır:* Kaynak, Yüksek Karşıtlık modundaki karanlık bir arka planda kullanılabilir.<br /><br /> Arka plan özniteliği atlanırsa, kaynak herhangi bir arka planda kullanılabilir.<br /><br /> Arka plan hafif, *koyu*, *ince* bir *şekilde veya daha* *ince*, kaynak renkleri hiçbir şekilde ters çevrilmez. Arka plan atlanırsa veya *Highkontrast* olarak ayarlandıysa, kaynak renklerinin Inversion değeri görüntünün **allowcolorınversion** özniteliği tarafından denetlenir.|
 
 Bir \<Source> öğe, aşağıdaki isteğe bağlı alt öğeler için tam olarak birine sahip olabilir:
 
-|**Dosyalarında**|**Öznitelikler (tüm gerekli)**|**Tanım**|
+|**Öğe**|**Öznitelikler (tüm gerekli)**|**Tanım**|
 |-|-|-|
 |\<Size>|Değer|Kaynak, verilen boyutun (cihaz birimlerinde) görüntüleri için kullanılacaktır. Resim kare olacak.|
 |\<SizeRange>|MinSize, MaxSize|Kaynak, MinSize ' den MaxSize 'a (cihaz birimlerinde) dahil olmak üzere, dahil edilecek görüntüler için kullanılacaktır. Resim kare olacak.|

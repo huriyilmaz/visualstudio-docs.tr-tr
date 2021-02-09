@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: a494102b-0cb2-4755-8e2a-d2c0f39fac1d
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c4752e4b736a6ba2f8b4a209824b22f94d8036c2
-ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
+ms.openlocfilehash: 2af490f27ab1cdecfe57da9253aff6c4247c7223
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92436552"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99914890"
 ---
 # <a name="generateapplicationmanifest-task"></a>GenerateApplicationManifest görevi
 
@@ -322,9 +322,9 @@ Bu örnek, `GenerateApplicationManifest` `GenerateDeploymentManifest` birden ço
 
 ## <a name="example-4"></a>Örnek 4
 
-Bu örnek, `GenerateApplicationManifest` uygulama *Test.exe*için yerel bileşen *Alpha.dll* ve yalıtılmış bir com bileşeni *Bravo.dll*başvuruda bulunan bir yerel bildirim oluşturmak için görevini kullanır.
+Bu örnek, `GenerateApplicationManifest` uygulama *Test.exe* için yerel bileşen *Alpha.dll* ve yalıtılmış bir com bileşeni *Bravo.dll* başvuruda bulunan bir yerel bildirim oluşturmak için görevini kullanır.
 
-Bu örnek *Test.exe. manifest*dosyasını üretir, böylece uygulama xcopy olarak dağıtılabilir ve kayıt ücretsiz com avantajlarından yararlanır.
+Bu örnek *Test.exe. manifest* dosyasını üretir, böylece uygulama xcopy olarak dağıtılabilir ve kayıt ücretsiz com avantajlarından yararlanır.
 
 > [!NOTE]
 > Aşağıdaki örnekte, tüm uygulama ikilileri bildirim oluşturma yönlerine odaklanmak için önceden oluşturulmuştur. Bu örnek, tam olarak çalışan bir ClickOnce dağıtımı üretir.
