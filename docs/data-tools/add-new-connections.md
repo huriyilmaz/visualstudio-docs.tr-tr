@@ -6,19 +6,19 @@ ms.date: 11/04/2016
 ms.topic: how-to
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 32fbd3462f6a496d681f76480c3eb4451f325b35
-ms.sourcegitcommit: 63ff7cb85b3baeeb713240d17bb2a18497f3741d
+ms.openlocfilehash: ddcc5dd06a4e71d445c94c860b2a3ab92429ab2e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94518719"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99859391"
 ---
 # <a name="add-new-connections"></a>Yeni bağlantı ekleme
 
-Bir veritabanı veya hizmetle bağlantınızı test edebilir ve **Sunucu Gezgini** , **bulut Gezgini** veya **SQL Server Nesne Gezgini** kullanarak veritabanı içeriğini ve şemalarını keşfedebilirsiniz. Bu pencerelerin işlevselliği bir ölçüde çakışıyor. Temel farklılıklar şunlardır:
+Bir veritabanı veya hizmetle bağlantınızı test edebilir ve **Sunucu Gezgini**, **bulut Gezgini** veya **SQL Server Nesne Gezgini** kullanarak veritabanı içeriğini ve şemalarını keşfedebilirsiniz. Bu pencerelerin işlevselliği bir ölçüde çakışıyor. Temel farklılıklar şunlardır:
 
 - Sunucu Gezgini
 
@@ -34,7 +34,7 @@ Bir veritabanı veya hizmetle bağlantınızı test edebilir ve **Sunucu Gezgini
 
 ## <a name="add-a-connection-in-server-explorer"></a>Sunucu Gezgini bağlantı ekleme
 
-Veritabanına bir bağlantı oluşturmak için **Sunucu Gezgini** **bağlantı ekle** simgesine tıklayın veya **veri bağlantıları** düğümünde **Sunucu Gezgini** ' a sağ tıklayıp **bağlantı ekle** ' yi seçin. Buradan, başka bir sunucuda, SharePoint hizmetinde veya bir Azure hizmetinde bir veritabanına da bağlanabilirsiniz.
+Veritabanına bir bağlantı oluşturmak için **Sunucu Gezgini** **bağlantı ekle** simgesine tıklayın veya **veri bağlantıları** düğümünde **Sunucu Gezgini** ' a sağ tıklayıp **bağlantı ekle**' yi seçin. Buradan, başka bir sunucuda, SharePoint hizmetinde veya bir Azure hizmetinde bir veritabanına da bağlanabilirsiniz.
 
 ![Sunucu Gezgini yeni bağlantı simgesi](../data-tools/media/raddata-server-explorer-new-connection-icon.png)
 
@@ -50,7 +50,7 @@ Veri kaynağı istediğiniz gibi değilse, yeni bir veri kaynağı ve/veya yeni 
 
 ## <a name="test-the-connection"></a>Bağlantıyı test etme
 
-Veri kaynağını seçtikten sonra **Bağlantıyı Sına** ' ya tıklayın. Başarılı olmazsa, satıcının belgelerine göre sorun gidermeniz gerekecektir.
+Veri kaynağını seçtikten sonra **Bağlantıyı Sına**' ya tıklayın. Başarılı olmazsa, satıcının belgelerine göre sorun gidermeniz gerekecektir.
 
 ![Bağlantıyı Sına](../data-tools/media/raddata-test-connection.png)
 

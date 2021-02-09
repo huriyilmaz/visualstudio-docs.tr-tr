@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 20597ff8-0c98-43ec-8fb1-05376804ba48
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 8a81ecb35c37dbef6d48227c27ed877c64e6e26f
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 6b4d1782a82a1eb2147d540b1799f5152c4f2308
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94434473"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99858442"
 ---
 # <a name="set-the-control-to-be-created-when-dragging-from-the-data-sources-window"></a>Veri Kaynakları penceresinden sürüklendiğinde denetimin oluşturulmasını ayarlama
 
@@ -39,15 +39,15 @@ Bu bağlamda, *nesne* terimi özel bir iş nesnesi, bir varlık (varlık veri mo
 2. **Veri kaynakları** penceresinde, ayarlamak istediğiniz veri tablosu veya nesneyi temsil eden öğeyi seçin.
 
    > [!TIP]
-   > **Veri kaynakları** penceresi açık değilse, **View**  >  **diğer Windows**  >  **veri kaynaklarını** görüntüle ' yi seçerek açabilirsiniz.
+   > **Veri kaynakları** penceresi açık değilse,   >  **diğer Windows**  >  **veri kaynaklarını** görüntüle ' yi seçerek açabilirsiniz.
 
 3. Öğenin açılan menüsüne tıklayın ve ardından menüdeki aşağıdaki öğelerden birine tıklayın:
 
-    - Her veri alanını ayrı bir denetimde göstermek için **Ayrıntılar** ' a tıklayın. Veri öğesini tasarımcıya sürüklediğinizde, bu eylem her bir denetimin etiketleriyle birlikte üst veri tablosu veya nesnesinin her bir sütunu veya özelliği için farklı bir veri bağlantılı denetim oluşturur.
+    - Her veri alanını ayrı bir denetimde göstermek için **Ayrıntılar**' a tıklayın. Veri öğesini tasarımcıya sürüklediğinizde, bu eylem her bir denetimin etiketleriyle birlikte üst veri tablosu veya nesnesinin her bir sütunu veya özelliği için farklı bir veri bağlantılı denetim oluşturur.
 
     - Tüm verileri tek bir denetimde göstermek için, listede **DataGrid** veya bir WPF uygulamasında **liste** veya Windows Forms uygulamasında **DataGridView** gibi farklı bir denetim seçin.
 
-    Kullanılabilir denetimlerin listesi, açtığınız tasarımcıya, projenizin hedeflediği .NET sürümüne ve **araç kutusu** 'na veri bağlamayı destekleyen özel denetimler eklemiş olmanıza bağlıdır. Oluşturmak istediğiniz denetim kullanılabilir denetimler listesinde yoksa, denetimi listeye ekleyebilirsiniz. Daha fazla bilgi için bkz. [veri kaynakları penceresine özel denetimler ekleme](../data-tools/add-custom-controls-to-the-data-sources-window.md).
+    Kullanılabilir denetimlerin listesi, açtığınız tasarımcıya, projenizin hedeflediği .NET sürümüne ve **araç kutusu**'na veri bağlamayı destekleyen özel denetimler eklemiş olmanıza bağlıdır. Oluşturmak istediğiniz denetim kullanılabilir denetimler listesinde yoksa, denetimi listeye ekleyebilirsiniz. Daha fazla bilgi için bkz. [veri kaynakları penceresine özel denetimler ekleme](../data-tools/add-custom-controls-to-the-data-sources-window.md).
 
     **Veri kaynakları** penceresinde veri tabloları veya nesneleri için denetim listesine eklenebilen özel bir Windows Forms denetimi oluşturmayı öğrenmek için, bkz. [karmaşık veri bağlamayı destekleyen bir Windows Forms Kullanıcı denetimi oluşturma](../data-tools/create-a-windows-forms-user-control-that-supports-complex-data-binding.md).
 

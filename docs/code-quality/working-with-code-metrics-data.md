@@ -12,15 +12,15 @@ helpviewer_keywords:
 - results window, code metrics
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d29109811c3dd5f354b510d046b33b0ba31d60e5
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: c02f5a3b5175be4517a51a6dc477d6e59b38a762
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94436816"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99859573"
 ---
 # <a name="use-the-code-metrics-results-window"></a>Kod ölçümleri sonuçları penceresini kullanın
 
@@ -32,9 +32,9 @@ Kod **ölçümleri sonuçları penceresi,** kod ölçümleri sonuçları oluştu
 
 Aşağıdaki menü dizilerinden birini kullanarak kod ölçümleri sonuçları penceresini görüntüleyebilirsiniz:
 
-- **Çözümle** menüsünde **Windows**  >  **Kod ölçümleri sonuçları** ' nı seçin.
+- **Çözümle** menüsünde **Windows**  >  **Kod ölçümleri sonuçları**' nı seçin.
 
-- **Görünüm** menüsünde **diğer Windows**  >  **Kod ölçümleri sonuçları** ' nı seçin.
+- **Görünüm** menüsünde **diğer Windows**  >  **Kod ölçümleri sonuçları**' nı seçin.
 
 **Kod ölçümleri sonuçları** penceresi, hiçbir sonuç içermediğinden bile açılır.
 
@@ -66,9 +66,9 @@ Kod ölçümleri sonuçları oluşturulduysa, **hiyerarşi** sütunundaki ağac�
 
 ### <a name="add-or-remove-a-column"></a>Sütun ekleme veya kaldırma
 
-1. Sütun **Ekle/Kaldır** düğmesine tıklayın veya herhangi bir sütun başlığına sağ tıklayıp **sütun Ekle/Kaldır** ' a tıklayın.
+1. Sütun **Ekle/Kaldır** düğmesine tıklayın veya herhangi bir sütun başlığına sağ tıklayıp **sütun Ekle/Kaldır**' a tıklayın.
 
-1. **Sütun Ekle/Kaldır** iletişim kutusunda, eklemek veya kaldırmak istediğiniz sütunun onay kutusunu seçin veya temizleyin ve ardından **Tamam** ' ı seçin.
+1. **Sütun Ekle/Kaldır** iletişim kutusunda, eklemek veya kaldırmak istediğiniz sütunun onay kutusunu seçin veya temizleyin ve ardından **Tamam**' ı seçin.
 
 ### <a name="rearrange-columns"></a>Sütunları yeniden Düzenle
 
@@ -76,7 +76,7 @@ Kod ölçümleri sonuçları oluşturulduysa, **hiyerarşi** sütunundaki ağac�
 
 1. **Sütun Ekle/Kaldır** iletişim kutusunda, taşımak istediğiniz sütunu seçin ve ardından yukarı oku veya aşağı oku seçin.
 
-1. Sütun istediğiniz yere konumlandırıldığında **Tamam** ' ı seçin.
+1. Sütun istediğiniz yere konumlandırıldığında **Tamam**' ı seçin.
 
 ## <a name="copy-data-to-the-clipboard-or-excel"></a>Verileri panoya veya Excel 'e kopyalama
 
@@ -92,7 +92,7 @@ Azure Boards iş öğeleri hakkında daha fazla bilgi için bkz. [iş öğeleri]
 
 1. Sonuca sağ tıklayın.
 
-2. **Iş öğesi oluştur** ' un üzerine gelin ve sonra oluşturmak istediğiniz iş öğesi türüne ( **hata** , **görev** vb.) tıklayın.
+2. **Iş öğesi oluştur**' un üzerine gelin ve sonra oluşturmak istediğiniz iş öğesi türüne (**hata**, **görev** vb.) tıklayın.
 
 3. Tüm gerekli alanları doldurarak iş öğesi formunu doldurun.
 

@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: d1f221cd-68c0-4277-9397-b76ad0dbae77
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 43dae5ec9ca68c746b914ad0a75b792f2a6e6b43
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 5fdd14b394bca495b38f408be94b46a4b9a68c01
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94349106"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99860561"
 ---
 # <a name="code-analysis-policy-errors"></a>Kod Analiz İlkesi Hataları
 
@@ -31,7 +31,7 @@ Bir veya daha fazla kod projesi için proje kaynak denetimine iade etme kod anal
 
 - Kod Analizi, Çözümdeki tüm projelere yönelik derlemede etkin değildir.
 
-- Visual Studio 'da projenin yerel kural kümesi, proje kuralı kümesinden daha az kısıtlayıcı bir **eylem** ayarına sahip. Örneğin, sunucuda **eylem** hatası olarak ayarlanan bir kural, = **Error** **eylemi** **Uyarı** olarak ayarlanmış veya Visual Studio 'da çalıştırılmakta olan kural kümesinde **yok** .
+- Visual Studio 'da projenin yerel kural kümesi, proje kuralı kümesinden daha az kısıtlayıcı bir **eylem** ayarına sahip. Örneğin, sunucuda **eylem** hatası olarak ayarlanan bir kural, =  **eylemi** **Uyarı** olarak ayarlanmış veya Visual Studio 'da çalıştırılmakta olan kural kümesinde **yok** .
 
 - Visual Studio 'da belirtilen kural kümesi, proje için kod analizi iade ilkesinde belirtilen kural kümesinde belirtilen kuralların tümünü içermiyor.
 

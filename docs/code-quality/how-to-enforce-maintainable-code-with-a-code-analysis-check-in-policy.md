@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: d1b3b04f-4dd9-40e6-b2d4-b414d33fb647
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 6fa97f52f67e08b2ccf0843e5b5400680ed1c020
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 9f061d9d10d66857a0b2506d13d6d6671f7df401
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94434824"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99860053"
 ---
 # <a name="how-to-enforce-maintainable-code-with-a-code-analysis-check-in-policy"></a>Nasıl yapılır: bir kod çözümleme iade ilkesiyle sürdürülebilir kodu zorlama
 
@@ -29,21 +29,21 @@ Team Foundation için sürüm denetimi yöneticileri, iade ilkesi gereksinimleri
 
 ## <a name="to-open-the-code-analysis-policy-editor"></a>Kod Analizi Ilke düzenleyicisini açmak için
 
-1. **Takım Gezgini** , projeye sağ tıklayın, **proje ayarları** ' na tıklayın ve ardından **kaynak denetimi** ' ne tıklayın.
+1. **Takım Gezgini**, projeye sağ tıklayın, **proje ayarları**' na tıklayın ve ardından **kaynak denetimi**' ne tıklayın.
 
      **Kaynak denetimi** iletişim kutusu görüntülenir.
 
-2. **Iade ilkesi** sekmesinde, **Ekle** ' ye tıklayın.
+2. **Iade ilkesi** sekmesinde, **Ekle**' ye tıklayın.
 
      **Iade Ilkesi Ekle** iletişim kutusu görünür.
 
-3. **Iade ilkesi** listesinde, **Kod Analizi** onay kutusunu seçin ve ardından **Tamam** ' a tıklayın.
+3. **Iade ilkesi** listesinde, **Kod Analizi** onay kutusunu seçin ve ardından **Tamam**' a tıklayın.
 
      **Kod Analizi Ilke Düzenleyicisi** iletişim kutusu görüntülenir.
 
 ## <a name="to-enable-code-analysis-maintainability-rules"></a>Kod Analizi bakım kurallarını etkinleştirmek için
 
-1. **Kod Analizi Ilke Düzenleyicisi** iletişim kutusunda, **Kural ayarları** ' nın altında, bakım **kuralları** düğümünü genişletin.
+1. **Kod Analizi Ilke Düzenleyicisi** iletişim kutusunda, **Kural ayarları**' nın altında, bakım **kuralları** düğümünü genişletin.
 
 2. Aşağıdaki kuralların onay kutularını seçin:
 
@@ -57,7 +57,7 @@ Team Foundation için sürüm denetimi yöneticileri, iade ilkesi gereksinimleri
 
      Ayrıca, başarılı bir derlemeyi engellemek için bir kural ihlalini isterseniz, kural açıklamasının yanındaki **uyarıyı hata olarak işle** onay kutusunu seçin.
 
-3. **Tamam** düğmesine tıklayın. Yeni iade ilkesi artık gelecek iadeler için geçerlidir.
+3. **Tamam**'a tıklayın. Yeni iade ilkesi artık gelecek iadeler için geçerlidir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

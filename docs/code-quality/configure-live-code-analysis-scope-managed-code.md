@@ -11,21 +11,21 @@ helpviewer_keywords:
 - full solution analysis
 author: mikadumont
 ms.author: midumont
-manager: jillfra
+manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9690e50ccbe927702ef1b3e7e99545c07cdced41
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 7a6a7253d4104fbcde09b96b86f5f83a864677cf
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94348469"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99860405"
 ---
 # <a name="configure-live-code-analysis-for-net"></a>.NET için Canlı Kod analizini yapılandırma
 
 Visual Studio, düzenleyicide kaynak dosyaları düzenlediğinizde *arka plan Analizi* olarak da adlandırılan, bir dizi Canlı Kod analizini yürütür. Bir kısmı, kabul edilebilir bir Visual Studio IDE düzenlemesi deneyimi için en az analiz gerektirir. Bazıları IDE özellikleri için iyileştirilmiş yanıt verme içindir. Bu bir nedenle, Roslyn çözümleyicilerinin tanılama ve kod düzeltmeleri gibi ek IDE işlevlerini etkinleştirmektir. İşlevlere bağlı olarak, bu çözümlemeler aşağıdaki gibi gruplandırılabilir:
 
-- **Tanılama arka plan hesaplama** : kaynak dosyalardaki hataları, uyarıları ve önerileri hesaplamak için analiz. Bu Tanılamalar, hata listesinde ve düzenleyicide dalgalı çizgiler olarak giriş gösterir. Bunlar iki kategoride sınıflandırılabilirler:
+- **Tanılama arka plan hesaplama**: kaynak dosyalardaki hataları, uyarıları ve önerileri hesaplamak için analiz. Bu Tanılamalar, hata listesinde ve düzenleyicide dalgalı çizgiler olarak giriş gösterir. Bunlar iki kategoride sınıflandırılabilirler:
   - C# ve Visual Basic derleyici tanılaması
   - Şunları içeren Roslyn Çözümleyicisi tanılaması:
 
@@ -33,7 +33,7 @@ Visual Studio, düzenleyicide kaynak dosyaları düzenlediğinizde *arka plan An
     - Kod kalitesi önerileri için yerleşik CA Çözümleyicileri
     - Geçerli çözümdeki projeler için [yüklenen](./install-roslyn-analyzers.md) üçüncü taraf çözümleyici paketleri.
 
-- **Diğer arka plan analizleri** : IDE özelliklerine yönelik yanıt verme ve Visual Studio etkileşimini artırmaya yönelik analiz. Bu analizler için bazı örnekler şunlardır:
+- **Diğer arka plan analizleri**: IDE özelliklerine yönelik yanıt verme ve Visual Studio etkileşimini artırmaya yönelik analiz. Bu analizler için bazı örnekler şunlardır:
   - Açık dosyaları arka planda ayrıştırma.
   - Belirli IDE özelliklerinde iyileştirilmiş yanıt verme için sembolleri gerçekleştirmek üzere açık dosyaları olan projelerin arka plan derlenmesi.
   - Sözdizimi ve sembol önbellekleri oluşturma.
@@ -45,7 +45,7 @@ Varsayılan olarak, Visual Studio 'da _açılan_ tüm dosyalar için tanılama '
 
 ## <a name="custom-analysis-scope"></a>Özel analiz kapsamı
 
-Her bir arka plan analizinin varsayılan kapsamı, çoğu müşteri senaryosu ve çözümü için en iyi kullanıcı deneyimi, işlevselliği ve performansı için ayarlanmıştır. Ancak, müşterilerin arka plan analizini azaltmak veya artırmak üzere bu kapsamı özelleştirmek isteyebileceğiniz durumlar vardır. Örnek:
+Her bir arka plan analizinin varsayılan kapsamı, çoğu müşteri senaryosu ve çözümü için en iyi kullanıcı deneyimi, işlevselliği ve performansı için ayarlanmıştır. Ancak, müşterilerin arka plan analizini azaltmak veya artırmak üzere bu kapsamı özelleştirmek isteyebileceğiniz durumlar vardır. Örneğin:
 
 - Güç tasarrufu modu: kullanıcılar dizüstü pille çalışıyorsa, daha uzun pil ömrü için güç tüketimini en aza indirmek isteyebilir. Bu senaryoda, arka plan analizini en aza indirmek istiyoruz.
 - İsteğe bağlı kod analizi: kullanıcılar gerçek zamanlı çözümleyici yürütmeyi kapatmayı ve isteğe bağlı kod analizini el ile çalıştırmayı tercih ediyorsanız, arka plan analizini en aza indirmek istedikleri olur. Bkz. [nasıl yapılır: isteğe bağlı kod analizini el ile çalıştırma](./how-to-run-code-analysis-manually-for-managed-code.md).
@@ -53,22 +53,22 @@ Her bir arka plan analizinin varsayılan kapsamı, çoğu müşteri senaryosu ve
 
 Visual Studio 2019 sürüm 16,5 ' den başlayarak, kullanıcılar C# ve Visual Basic projeleri için tanılama hesaplaması dahil olmak üzere tüm canlı kod analizinin kapsamını açıkça özelleştirebilir. Kullanılabilir analiz kapsamları şunlardır:
 
-- **Geçerli belge** : yalnızca düzenleyicideki geçerli veya görünür dosya için yürütmek üzere canlı kod analizi kapsamını en aza indirir.
-- **Açık belgeler** : Yukarıdaki bölümde açıklandığı gibi, varsayılan canlı kod analizi kapsamı.
-- Tüm **çözüm** : tüm çözüm içindeki tüm dosyalar ve projeler için yürütülecek canlı kod analizi kapsamını en üst düzeye çıkarır.
+- **Geçerli belge**: yalnızca düzenleyicideki geçerli veya görünür dosya için yürütmek üzere canlı kod analizi kapsamını en aza indirir.
+- **Açık belgeler**: Yukarıdaki bölümde açıklandığı gibi, varsayılan canlı kod analizi kapsamı.
+- Tüm **çözüm**: tüm çözüm içindeki tüm dosyalar ve projeler için yürütülecek canlı kod analizi kapsamını en üst düzeye çıkarır.
 
 Aşağıdaki adımları izleyerek, Araçlar Seçenekler iletişim kutusunda Yukarıdaki özel analiz kapsamları arasından birini seçebilirsiniz:
 
-1. **Seçenekler** iletişim kutusunu açmak için, Visual Studio 'daki menü çubuğunda **Araçlar**  >  **Seçenekler** ' i seçin.
+1. **Seçenekler** iletişim kutusunu açmak için, Visual Studio 'daki menü çubuğunda **Araçlar**  >  **Seçenekler**' i seçin.
 
-2. **Seçenekler** iletişim kutusunda **metin düzenleyici**  >  **C#** veya **temel**  >  **Gelişmiş** ' i seçin.
+2. **Seçenekler** iletişim kutusunda **metin düzenleyici**  >  **C#** veya **temel**  >  **Gelişmiş**' i seçin.
 
 3. Analiz kapsamını özelleştirmek için istenen **arka plan Analizi kapsamını** seçin. İşiniz bittiğinde **Tamam ' ı** seçin.
 
 ![Analiz kapsamı.](./media/background-analysis-scope.png)
 
 > [!NOTE]
-> Kullanıcılar, Visual Studio 2019 sürüm 16,5 ' den önce, **Araçlar** Seçenekler metin Düzenleyicisi **Enable full solution analysis**  >  **Options**  >  **Text Editor**  >  **C#** veya **temel**  >  **Gelişmiş** sekmesinden tam çözüm analizini etkinleştir onay kutusunu kullanarak tüm çözüme tanılama hesaplaması için analiz kapsamını özelleştirebilir. Önceki Visual Studio sürümlerindeki arka plan Analizi kapsamını en aza indirme desteği yoktur.
+> Kullanıcılar, Visual Studio 2019 sürüm 16,5 ' den önce, **Araçlar** Seçenekler metin Düzenleyicisi   >    >    >  **C#** veya **temel**  >  **Gelişmiş** sekmesinden tam çözüm analizini etkinleştir onay kutusunu kullanarak tüm çözüme tanılama hesaplaması için analiz kapsamını özelleştirebilir. Önceki Visual Studio sürümlerindeki arka plan Analizi kapsamını en aza indirme desteği yoktur.
 
 ## <a name="automatically-minimize-live-code-analysis-scope"></a>Canlı Kod Analizi kapsamını otomatik olarak Küçült
 

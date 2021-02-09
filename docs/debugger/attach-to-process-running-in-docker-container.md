@@ -8,16 +8,16 @@ helpviewer_keywords:
 - debugging, Docker container
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: '>= vs-2019'
 ms.workload:
 - multiple
-ms.openlocfilehash: f6e2b851057d924353e6e1e9a211fcbb294353c8
-ms.sourcegitcommit: 3c571f44bfd6402efea5187af43df287bac5b6ac
+ms.openlocfilehash: 4f39d4ecd69b726c1d549d723fadd324b1edd722
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97761270"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99857935"
 ---
 # <a name="attach-to-a-process-running-on-a-docker-container"></a>Docker kapsayıcısında çalışan bir işleme iliştirme 
 
@@ -52,13 +52,13 @@ Visual Studio hata ayıklayıcısını, **Işleme Ekle** iletişim kutusunu kull
     > [!NOTE]
     > Bir Docker kapsayıcısında çalışan bir işleme uzaktan bağlanmak için iki seçenek vardır. SSH 'yi kullanmak için ilk seçenek, yerel makinenizde Docker Araçları yüklü değilse idealdir.  Yerel olarak Docker Araçları yüklüyse ve uzak istekleri kabul edecek şekilde yapılandırılmış bir Docker Daemon varsa, bir Docker Daemon kullanarak ikinci seçeneği deneyin.
 
-    1. **_SSH aracılığıyla uzak makineye bağlanmak için:_* _
-        1. _ *Ekle...* öğesini seçin * bir uzak sisteme bağlanmak için.<br/>
+    1. ***SSH aracılığıyla uzak makineye bağlanmak için:***
+        1. Uzak bir sisteme bağlanmak için **Ekle...** öğesini seçin.<br/>
         ![Uzak bir sisteme bağlanma](../debugger/media/connect-remote-system.png "Uzak bir sisteme bağlanma")
         1. SSH veya Daemon 'e başarıyla bağlandıktan sonra eklemek için çalışan bir kapsayıcı seçin ve **Tamam 'a** basın.
 
-    1. **_Hedefi bir [Docker Daemon](https://docs.docker.com/engine/reference/commandline/dockerd/)_ aracılığıyla bir işlem çalıştıran uzak kapsayıcıya ayarlamak için_*
-        1. _ *Docker ana bilgisayarı (Isteğe bağlı)* altında bulunan Daemon ADRESINI (TCP, IP vb.) * belirtin ve Yenile bağlantısına tıklayın.
+    1. ***Hedefi bir [Docker Daemon](https://docs.docker.com/engine/reference/commandline/dockerd/) aracılığıyla bir işlem çalıştıran uzak kapsayıcıya ayarlamak için***
+        1. **Docker Konağı (Isteğe bağlı)** altında, Daemon ADRESINI (TCP, IP vb.) belirtin ve Yenile bağlantısına tıklayın.
         1. Daemon 'a başarıyla bağlandıktan sonra eklemek için çalışan bir kapsayıcı seçin ve **Tamam 'a** basın.
 
 4. **Kullanılabilir işlemler** listesinden karşılık gelen kapsayıcı işlemini seçin ve Visual Studio 'Da C# kapsayıcı işleminizi hata ayıklamaya başlamak için **İliştir** ' i seçin!
@@ -86,8 +86,8 @@ Visual Studio hata ayıklayıcısını, **Işleme Ekle** iletişim kutusunu kull
 
    Hedefin SSH aracılığıyla uzak bir kapsayıcıya ayarlanması şu anda kullanılamıyor ve yalnızca bir Docker Daemon kullanılarak yapılabilir.
 
-    **_Hedefi bir [Docker Daemon](https://docs.docker.com/engine/reference/commandline/dockerd/)_ aracılığıyla bir işlem çalıştıran uzak kapsayıcıya ayarlamak için_*
-    1. _ *Docker ana bilgisayarı (Isteğe bağlı)* altında bulunan Daemon ADRESINI (TCP, IP vb.) * belirtin ve Yenile bağlantısına tıklayın.
+    ***Hedefi bir [Docker Daemon](https://docs.docker.com/engine/reference/commandline/dockerd/) aracılığıyla bir işlem çalıştıran uzak kapsayıcıya ayarlamak için***
+    1. **Docker Konağı (Isteğe bağlı)** altında, Daemon ADRESINI (TCP, IP vb.) belirtin ve Yenile bağlantısına tıklayın.
 
     1. Daemon 'a başarıyla bağlandıktan sonra eklemek için çalışan bir kapsayıcı seçin ve Tamam ' ı seçin.
 

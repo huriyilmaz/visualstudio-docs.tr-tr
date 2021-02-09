@@ -7,15 +7,15 @@ ms.topic: conceptual
 ms.assetid: c149f4e5-3b61-4c33-892e-3e26d47f3eeb
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 30091a5bfd613ba9bd3738731e23153565ec4c8e
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 64b5643704024ee689a011f5285b41be818dc5cb
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94436595"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99858975"
 ---
 # <a name="datacontext-methods-or-designer"></a>DataContext Metotları (O/R Tasarımcısı)
 
@@ -25,10 +25,10 @@ Sınıfı, bir <xref:System.Data.Linq.DataContext> [!INCLUDE[vbtecdlinq](../data
 
 ## <a name="methods-pane"></a>Yöntemler bölmesi
 
-<xref:System.Data.Linq.DataContext>saklı yordamlar ve işlevlerle eşlenen Yöntemler **O/R tasarımcısının** **Yöntemler** bölmesinde görüntülenir. **Yöntemler** bölmesi, **varlıklar** bölmesinin (ana tasarım yüzeyi) yanındaki bölmesidir. **Yöntemler** bölmesinde <xref:System.Data.Linq.DataContext> , **O/R Tasarımcısı** kullanılarak oluşturduğunuz tüm yöntemler listelenir. Varsayılan olarak, **Yöntemler** bölmesi boştur; Yöntemler oluşturmak **Server Explorer** ve **Database Explorer** yöntemler bölmesini doldurmak için Sunucu Gezgini veya veritabanı Gezgini içindeki saklı yordamları veya Işlevleri **O/R tasarımcısına** sürükleyin <xref:System.Data.Linq.DataContext> . **Methods** Daha fazla bilgi için bkz. [nasıl yapılır: saklı yordamlar ve işlevlerle eşlenen DataContext yöntemleri oluşturma (O/R Designer)](../data-tools/how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-o-r-designer.md).
+<xref:System.Data.Linq.DataContext>saklı yordamlar ve işlevlerle eşlenen Yöntemler **O/R tasarımcısının** **Yöntemler** bölmesinde görüntülenir. **Yöntemler** bölmesi, **varlıklar** bölmesinin (ana tasarım yüzeyi) yanındaki bölmesidir. **Yöntemler** bölmesinde <xref:System.Data.Linq.DataContext> , **O/R Tasarımcısı** kullanılarak oluşturduğunuz tüm yöntemler listelenir. Varsayılan olarak, **Yöntemler** bölmesi boştur; Yöntemler oluşturmak  ve  yöntemler bölmesini doldurmak için Sunucu Gezgini veya veritabanı Gezgini içindeki saklı yordamları veya Işlevleri **O/R tasarımcısına** sürükleyin <xref:System.Data.Linq.DataContext> .  Daha fazla bilgi için bkz. [nasıl yapılır: saklı yordamlar ve işlevlerle eşlenen DataContext yöntemleri oluşturma (O/R Designer)](../data-tools/how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-o-r-designer.md).
 
 > [!NOTE]
-> **O/R tasarımcısına** sağ tıklayıp Yöntemler bölmesini **Gizle** veya **Yöntemler bölmesini göster** ' e tıklayarak Yöntemler bölmesini açıp kapatın veya **CTRL** + **1** klavye kısayolunu kullanın.
+> **O/R tasarımcısına** sağ tıklayıp Yöntemler bölmesini **Gizle** veya **Yöntemler bölmesini göster**' e tıklayarak Yöntemler bölmesini açıp kapatın veya **CTRL** + **1** klavye kısayolunu kullanın.
 
 ## <a name="two-types-of-datacontext-methods"></a>İki tür DataContext yöntemi
 

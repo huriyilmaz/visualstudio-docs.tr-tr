@@ -7,15 +7,15 @@ ms.topic: overview
 ms.assetid: 45e477c0-5c6b-41f9-b2d0-2808fb4f6537
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: af394318d18244fc6e20e517d0ff985ca5e5ad1f
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 20473125814b1ee0569579c7248b7b940cd31500
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94436243"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99858650"
 ---
 # <a name="linq-to-sql-tools-in-visual-studio"></a>Visual Studio 'da LINQ to SQL araçları
 
@@ -23,9 +23,9 @@ LINQ to SQL, Microsoft tarafından yayınlanan ilk nesne ilişkisel eşleme tekn
 
 ## <a name="install-the-linq-to-sql-tools"></a>LINQ to SQL araçlarını yükler
 
-Visual Studio 'da, **nesne ilişkisel Tasarımcısı** ( **O/R DESIGNER** ) kullanarak SQL tablolarını temsil eden LINQ to SQL sınıflar oluşturursunuz. O/R Tasarımcısı,. dbml dosyalarının düzenlenmesine yönelik Kullanıcı arabirimdir. . Dbml dosyalarını tasarımcı yüzeyine göre düzenlediğinizde, Visual Studio 'nun herhangi bir iş yükünün parçası olarak varsayılan olarak yüklenmeyen LINQ to SQL araçları gerekir.
+Visual Studio 'da, **nesne ilişkisel Tasarımcısı** (**O/R DESIGNER**) kullanarak SQL tablolarını temsil eden LINQ to SQL sınıflar oluşturursunuz. O/R Tasarımcısı,. dbml dosyalarının düzenlenmesine yönelik Kullanıcı arabirimdir. . Dbml dosyalarını tasarımcı yüzeyine göre düzenlediğinizde, Visual Studio 'nun herhangi bir iş yükünün parçası olarak varsayılan olarak yüklenmeyen LINQ to SQL araçları gerekir.
 
-LINQ to SQL araçlarını yüklemek için, Visual Studio yükleyicisi 'ni başlatın, **Değiştir** ' i seçin, sonra **ayrı bileşenler** sekmesini seçin ve ardından **kod araçları** kategorisi altında **LINQ to SQL araçlar** ' ı seçin.
+LINQ to SQL araçlarını yüklemek için, Visual Studio yükleyicisi 'ni başlatın, **Değiştir**' i seçin, sonra **ayrı bileşenler** sekmesini seçin ve ardından **kod araçları** kategorisi altında **LINQ to SQL araçlar** ' ı seçin.
 
 ## <a name="what-is-the-or-designer"></a>O/R Tasarımcısı nedir?
 
@@ -35,7 +35,7 @@ LINQ to SQL araçlarını yüklemek için, Visual Studio yükleyicisi 'ni başla
 
 ## <a name="open-the-or-designer"></a>O/R tasarımcısını açın
 
-Projenize LINQ to SQL bir varlık modeli eklemek için **Proje**  >  **Ekle yeni öğe** ' yi seçin ve ardından proje öğeleri listesinden **LINQ to SQL sınıflar** ' ı seçin:
+Projenize LINQ to SQL bir varlık modeli eklemek için **Proje**  >  **Ekle yeni öğe**' yi seçin ve ardından proje öğeleri listesinden **LINQ to SQL sınıflar** ' ı seçin:
 
 ![LINQ to SQL sınıfları](../data-tools/media/raddata-linq-to-sql-classes.png)
 

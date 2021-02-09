@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a6b54353-05fe-4e5c-8631-90231fc95504
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 3c565f7238edf9126dd651fa567de82aed7b8d21
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: d8e3692f376a502a2cd924fa9604eddab445333f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94435019"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99858767"
 ---
 # <a name="how-to-connect-to-data-in-a-service"></a>Nasıl yapılır: bir hizmette verilere bağlanma
 
@@ -38,11 +38,11 @@ Sihirbazı tamamladıktan sonra projenize bir hizmet başvurusu eklenir ve [veri
 
 ## <a name="to-connect-your-application-to-a-service"></a>Uygulamanızı bir hizmete bağlamak için
 
-1. **Veri** menüsünde **Yeni veri kaynağı Ekle** ' ye tıklayın.
+1. **Veri** menüsünde **Yeni veri kaynağı Ekle**' ye tıklayın.
 
-2. **Veri kaynağı türü seçin** sayfasında **hizmet** ' i seçin ve ardından **İleri** ' ye tıklayın.
+2. **Veri kaynağı türü seçin** sayfasında **hizmet** ' i seçin ve ardından **İleri**' ye tıklayın.
 
-3. Kullanmak istediğiniz hizmetin adresini girin veya geçerli çözümde hizmetleri bulmak için **bul** ' a tıklayın ve ardından **Git** ' e tıklayın.
+3. Kullanmak istediğiniz hizmetin adresini girin veya geçerli çözümde hizmetleri bulmak için **bul** ' a tıklayın ve ardından **Git**' e tıklayın.
 
 4. İsteğe bağlı olarak, varsayılan değer yerine yeni bir **ad alanı** yazabilirsiniz.
 

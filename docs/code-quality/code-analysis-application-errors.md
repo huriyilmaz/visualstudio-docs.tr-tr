@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: d8fd9475-ac9b-4085-b5a3-b0c807922cac
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4dccefdb0325cfd96024923c77d03565f904ea49
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 0f5c217e8d043d0363b66a63c84c78829f640065
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94348508"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99860587"
 ---
 # <a name="code-analysis-application-errors"></a>Kod analizi uygulama hataları
 
@@ -41,12 +41,12 @@ Bu bölüm, yönetilen kod Analizi Aracı tarafından oluşturulan hata iletiler
 |[CA0058](ca0058.md)|Başvurulan derlemeler yüklenemiyor.|
 |[CA0059](ca0059.md)|Komut satırı anahtar hatası.|
 |[CA0060](ca0060.md)|Dolaylı olarak başvurulan derlemeler yüklenemiyor.|
-|[CA0061](ca0061.md)|' *RuleId* ' kuralı bulunamadı.|
-|[CA0062](ca0062.md)|' *RuleSetName* ' kural kümesinde başvurulan ' *RuleId* ' kuralı bulunamadı.|
+|[CA0061](ca0061.md)|'*RuleId*' kuralı bulunamadı.|
+|[CA0062](ca0062.md)|'*RuleSetName*' kural kümesinde başvurulan '*RuleId*' kuralı bulunamadı.|
 |[CA0063](ca0063.md)|Kural kümesi dosyası veya bağımlı kural kümesi dosyalarından biri yüklenemedi.|
 |[CA0064](ca0064.md)|Belirtilen kural kümesi bir FxCop kuralı içermediğinden hiçbir analiz gerçekleştirilmedi.|
-|[CA0065](ca0065.md)|Desteklenmeyen meta veri yapısı: ' *TypeName* ' türü, aynı ' *PropertyFieldName* ' adına sahip hem bir özellik hem de bir alan içeriyor|
-|[CA0066](ca0066.md)|**/TargetFrameworkVersion** için belirtilen ' *VersionId* ' değeri tanınan bir sürüm değil.|
+|[CA0065](ca0065.md)|Desteklenmeyen meta veri yapısı: '*TypeName*' türü, aynı '*PropertyFieldName*' adına sahip hem bir özellik hem de bir alan içeriyor|
+|[CA0066](ca0066.md)|**/TargetFrameworkVersion** için belirtilen '*VersionId*' değeri tanınan bir sürüm değil.|
 |[CA0067](ca0067.md)|Dizin bulunamadı.|
 |[CA0068](ca0068.md)|*' AssemblyName '* hedef derlemesi için hata ayıklama bilgileri bulunamadı.|
 |[CA0069](ca0069.md)|Alternatif platform kullanma. *FrameworkVersion1* bulunamadı. Bunun yerine *FrameworkVersion2* kullanılıyor. En iyi analiz sonuçları için, doğru Framework sürümünün yüklü olduğundan emin olun.|

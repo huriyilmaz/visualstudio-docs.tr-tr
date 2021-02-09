@@ -9,15 +9,15 @@ f1_keywords:
 ms.assetid: 9b02f934-2db6-41ec-aaff-9c31ceec2f04
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 913860538fe7f9da1514d0e51d23bb3ea48c3b66
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: d2908f7ec93d8704b52798121bd0076a7f5fddc1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94434694"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99859924"
 ---
 # <a name="how-to-synchronize-code-project-rule-sets-with-an-azure-devops-project-check-in-policy"></a>Nasıl yapılır: Azure DevOps projesi Iade Ilkesiyle kod proje kural kümelerini senkronize etme
 
@@ -33,9 +33,9 @@ Kod projeleri için kod analizi ayarlarını, en azından iade ilkesi için kura
 
 ## <a name="to-specify-a-microsoft-standard-rule-set"></a>Bir Microsoft standart kural kümesi belirtmek için
 
-1. **Çözüm Gezgini** , kod projesine sağ tıklayın ve ardından **Özellikler** ' e tıklayın.
+1. **Çözüm Gezgini**, kod projesine sağ tıklayın ve ardından **Özellikler**' e tıklayın.
 
-2. **Kod Analizi** ' ne tıklayın.
+2. **Kod Analizi**' ne tıklayın.
 
 ::: moniker range="vs-2017"
 
@@ -53,9 +53,9 @@ Kod projeleri için kod analizi ayarlarını, en azından iade ilkesi için kura
 
 1. Gerekirse, iade ilkesini belirten kural kümesi dosyasında bir get işlemi gerçekleştirin.
 
-2. **Çözüm Gezgini** , kod projesine sağ tıklayın ve ardından **Özellikler** ' e tıklayın.
+2. **Çözüm Gezgini**, kod projesine sağ tıklayın ve ardından **Özellikler**' e tıklayın.
 
-3. **Kod Analizi** ' ne tıklayın.
+3. **Kod Analizi**' ne tıklayın.
 
 ::: moniker range="vs-2017"
 

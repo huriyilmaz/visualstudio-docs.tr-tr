@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 68bae3f6-ec9b-45ee-a33a-69395029f54c
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: bfc0c1ca96f5bf6ce58a1b7df9ad0ea10f283e1e
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 05575e6cc75468a85a3dd410ea59bebca79eee0f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94435162"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99858845"
 ---
 # <a name="hierarchical-update"></a>Hiyerarşik güncelleştirme
 
@@ -46,7 +46,7 @@ Varsayılan olarak, Hiyerarşik güncelleştirme bir projede eklenen veya oluşt
 
 ## <a name="create-a-new-relation-between-tables"></a>Tablolar arasında yeni bir ilişki oluşturma
 
-İki tablo arasında yeni bir ilişki oluşturmak için, Veri Kümesi Tasarımcısı her tablonun başlık çubuğunu seçin, sonra sağ tıklayıp **Ilişki Ekle** ' yi seçin.
+İki tablo arasında yeni bir ilişki oluşturmak için, Veri Kümesi Tasarımcısı her tablonun başlık çubuğunu seçin, sonra sağ tıklayıp **Ilişki Ekle**' yi seçin.
 
 ![Hiyerarşik güncelleştirme ilişki Ekle menüsü](../data-tools/media/hierarchical-update-add-relation-menu.png)
 
@@ -80,7 +80,7 @@ Ancak, bazen veri kümesini yedek kopyadan geri yüklemek isteyebilirsiniz. Otom
 
 `TableAdapterManager.UpdateAll`Yöntemini çağırarak ve ilgili tabloları içeren veri kümesinin adını geçirerek veri kümesindeki ilgili veri tablolarından değişiklikleri veritabanına kaydedin. Örneğin, `TableAdapterManager.UpdateAll(NorthwindDataset)` NorthwindDataSet 'teki tüm tablolardaki güncelleştirmeleri arka uç veritabanına göndermek için yöntemini çalıştırın.
 
-Öğeleri **veri kaynakları** penceresinden bıraktığınızda, `Form_Load` her bir tabloyu (Yöntemler) doldurmak için olaya otomatik olarak kod eklenir `TableAdapter.Fill` . Kod, **Save** <xref:System.Windows.Forms.BindingNavigator> veri kümesinden veritabanına geri veri kaydetmek Için ' ın Kaydet düğmesine tıklama olayına de eklenir ( `TableAdapterManager.UpdateAll` yöntemi).
+Öğeleri **veri kaynakları** penceresinden bıraktığınızda, `Form_Load` her bir tabloyu (Yöntemler) doldurmak için olaya otomatik olarak kod eklenir `TableAdapter.Fill` . Kod,  <xref:System.Windows.Forms.BindingNavigator> veri kümesinden veritabanına geri veri kaydetmek Için ' ın Kaydet düğmesine tıklama olayına de eklenir ( `TableAdapterManager.UpdateAll` yöntemi).
 
 Oluşturulan kaydetme kodu, yöntemi çağıran bir kod satırı da içerir `CustomersBindingSource.EndEdit` . Özellikle, <xref:System.Windows.Forms.BindingSource.EndEdit%2A> forma eklenen ilk öğesinin yöntemini çağırır <xref:System.Windows.Forms.BindingSource> . Diğer bir deyişle, bu kod yalnızca **veri kaynakları** penceresinden form üzerine sürüklenen ilk tablo için oluşturulur. <xref:System.Windows.Forms.BindingSource.EndEdit%2A>Çağrı, şu anda düzenlenmekte olan herhangi bir veri bağlantılı denetimlerde işlemdeki tüm değişiklikleri kaydeder. Bu nedenle, bir veri bağlantılı denetim hala odağa sahipse ve **Kaydet** düğmesine tıklarsanız, o denetimdeki tüm bekleyen düzenlemeler gerçek kaydetme işleminden ( `TableAdapterManager.UpdateAll` yöntemi) önce işlenir.
 
@@ -89,7 +89,7 @@ Oluşturulan kaydetme kodu, yöntemi çağıran bir kod satırı da içerir `Cus
 
 ### <a name="to-update-the-code-to-commit-changes-to-the-related-tables-before-saving"></a>Kodu kaydedilmeden önce ilgili tablolardaki değişiklikleri yürütmek üzere güncelleştirmek için
 
-1. Kod düzenleyicisinde Form1 ' i açmak için üzerinde **Kaydet** düğmesine çift tıklayın <xref:System.Windows.Forms.BindingNavigator> . **Form1**
+1. Kod düzenleyicisinde Form1 ' i açmak için üzerinde **Kaydet** düğmesine çift tıklayın <xref:System.Windows.Forms.BindingNavigator> . 
 
 2. Yöntemi `OrdersBindingSource.EndEdit` çağıran satırdan sonra yöntemi çağırmak için bir kod satırı ekleyin `CustomersBindingSource.EndEdit` . **Kaydet** düğmesine tıklama olayının kodu aşağıdakine benzemelidir:
 
@@ -120,7 +120,7 @@ Varsayılan olarak, `TableAdapterManager` ilişkili tabloları içeren bir veri 
 
 Aşağıda, sınıfının sık kullanılan yöntemleri ve özellikleri verilmiştir `TableAdapterManager` :
 
-|Üye|Açıklama|
+|Üye|Description|
 |------------|-----------------|
 |`UpdateAll` yöntemi|Tüm veri tablolarından tüm verileri kaydeder.|
 |`BackUpDataSetBeforeUpdate` özelliði|Yöntemi yürütmeden önce veri kümesinin yedek kopyasının oluşturulup oluşturulmayacağını belirler `TableAdapterManager.UpdateAll` . Boolean.|

@@ -7,15 +7,15 @@ ms.topic: how-to
 ms.assetid: d6d1122e-2f55-4607-8d8b-48c3c22600fb
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 7d3468bbc3e3a1f1250cf2c679087b9606b87a18
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 2404fd48aade91c623efb12e89f4a97da01ec66b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94434928"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99858715"
 ---
 # <a name="how-to-extend-code-generated-by-the-or-designer"></a>Nasıl yapılır: O/R Tasarımcısı tarafından oluşturulan kodu genişletme
 **O/R Tasarımcısı** tarafından oluşturulan kod, varlık sınıflarında ve tasarımcı yüzeyinde diğer nesnelerde değişiklik yapıldığında yeniden oluşturulur. Bu kod yeniden oluşturma nedeniyle, tasarımcı kodu yeniden oluştururken oluşturulan koda eklediğiniz tüm kodlar genellikle üzerine yazılır. **O/R Tasarımcısı** , üzerine yazılmayan kod ekleyebileceğiniz kısmi sınıf dosyaları oluşturma yeteneği sağlar. Kendi kodunuzu **O/R Tasarımcısı** tarafından oluşturulan koda eklemenin bir örneği, LINQ to SQL (varlık) sınıflarına veri doğrulaması ekliyor. Daha fazla bilgi için bkz. [nasıl yapılır: varlık sınıflarına doğrulama ekleme](../data-tools/how-to-add-validation-to-entity-classes.md).
@@ -26,9 +26,9 @@ ms.locfileid: "94434928"
 
 ### <a name="to-create-a-partial-class-and-add-code-to-an-entity-class"></a>Kısmi bir sınıf oluşturmak ve bir varlık sınıfına kod eklemek için
 
-1. **O/R tasarımcısında** yeni bir LINQ to SQL Classes dosyası ( **. dbml** dosyası) açın veya oluşturun. ( **Çözüm Gezgini** veya **veritabanı Gezgini** **. dbml** dosyasını çift tıklatın.)
+1. **O/R tasarımcısında** yeni bir LINQ to SQL Classes dosyası (**. dbml** dosyası) açın veya oluşturun. ( **Çözüm Gezgini** veya **veritabanı Gezgini** **. dbml** dosyasını çift tıklatın.)
 
-2. **O/R tasarımcısında** , doğrulama eklemek istediğiniz sınıfa sağ tıklayın ve sonra **kodu görüntüle** ' ye tıklayın.
+2. **O/R tasarımcısında**, doğrulama eklemek istediğiniz sınıfa sağ tıklayın ve sonra **kodu görüntüle**' ye tıklayın.
 
      Kod Düzenleyicisi seçili varlık sınıfı için kısmi bir sınıf ile açılır.
 
@@ -38,9 +38,9 @@ ms.locfileid: "94434928"
 
 ### <a name="to-create-a-partial-class-and-add-code-to-a-datacontext"></a>Kısmi bir sınıf oluşturmak ve DataContext 'e kod eklemek için
 
-1. **O/R tasarımcısında** yeni bir LINQ to SQL Classes dosyası ( **. dbml** dosyası) açın veya oluşturun. ( **Çözüm Gezgini** veya **veritabanı Gezgini** **. dbml** dosyasını çift tıklatın.)
+1. **O/R tasarımcısında** yeni bir LINQ to SQL Classes dosyası (**. dbml** dosyası) açın veya oluşturun. ( **Çözüm Gezgini** veya **veritabanı Gezgini** **. dbml** dosyasını çift tıklatın.)
 
-2. **O/R tasarımcısında** , tasarımcıda boş bir alana sağ tıklayın ve ardından **kodu görüntüle** ' ye tıklayın.
+2. **O/R tasarımcısında**, tasarımcıda boş bir alana sağ tıklayın ve ardından **kodu görüntüle**' ye tıklayın.
 
      Kod Düzenleyicisi DataContext için kısmi bir sınıf ile açılır.
 

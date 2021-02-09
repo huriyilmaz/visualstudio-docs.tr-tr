@@ -12,15 +12,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, extending deployment
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: ea8e6a09c512ed5edb6098183c66361e96537f54
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: 8d42726cddb0565af66e161b41c16c94cfe2cb2b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96914939"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99839142"
 ---
 # <a name="walkthrough-create-a-custom-deployment-step-for-sharepoint-projects"></a>İzlenecek yol: SharePoint projeleri için özel bir dağıtım adımı oluşturma
   Bir SharePoint projesi dağıtırken, Visual Studio belirli bir sırada bir dizi dağıtım adımını yürütür. Visual Studio birçok yerleşik dağıtım adımı içerir, ancak kendi kendinize de oluşturabilirsiniz.
@@ -243,7 +243,7 @@ ms.locfileid: "96914939"
 
 2. DeploymentStepExtension projesinde, UpgradeStep kod dosyasını açın ve ardından ve yöntemlerinde ilk kod satırına bir kesme noktası ekleyin `CanExecute` `Execute` .
 
-3. **F5** tuşunu seçerek veya menü **çubuğunda hata ayıklamayı** Başlat ' ı seçerek hata ayıklamayı başlatın  >  **Start Debugging**.
+3. **F5** tuşunu seçerek veya menü **çubuğunda hata ayıklamayı** Başlat ' ı seçerek hata ayıklamayı başlatın  >  .
 
 4. Visual Studio, uzantıyı%UserProfile%\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Contoso\Upgrade dağıtım adımını SharePoint projeleri0 ' a ve Visual Studio 'nun deneysel bir örneğini başlatır. Bu Visual Studio örneğinde yükseltme dağıtım adımını test edeceksiniz.
 
@@ -379,7 +379,7 @@ ms.locfileid: "96914939"
 
      Bu eylem, SharePoint sitesindeki **çalışanlar** listesinin varsayılan görünümünden bu alanları kaldırır.
 
-8. **F5** tuşunu seçerek veya menü **çubuğunda hata ayıklamayı** Başlat ' ı seçerek hata ayıklamayı başlatın  >  **Start Debugging**.
+8. **F5** tuşunu seçerek veya menü **çubuğunda hata ayıklamayı** Başlat ' ı seçerek hata ayıklamayı başlatın  >  .
 
 9. **Dağıtım çakışmaları** iletişim kutusunun göründüğünü doğrulayın.
 
@@ -434,7 +434,7 @@ ms.locfileid: "96914939"
 
     Bu eylem, SharePoint sitesindeki **çalışanlar** listesinin varsayılan görünümünden bu alanları kaldırır.
 
-5. **F5** tuşunu seçerek veya menü **çubuğunda hata ayıklamayı** Başlat ' ı seçerek hata ayıklamayı başlatın  >  **Start Debugging**.
+5. **F5** tuşunu seçerek veya menü **çubuğunda hata ayıklamayı** Başlat ' ı seçerek hata ayıklamayı başlatın  >  .
 
 6. Visual Studio 'nun diğer örneğindeki kodun, daha önce yönteminde ayarladığınız kesme noktasında durduğunu doğrulayın `CanExecute` .
 

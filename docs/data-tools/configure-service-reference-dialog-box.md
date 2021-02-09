@@ -13,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: 25e4c36b-2db6-4e71-9010-b7068255d09d
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 1dc1d82b0267e5e0655f3ebef8eb08806ad319a8
-ms.sourcegitcommit: 63ff7cb85b3baeeb713240d17bb2a18497f3741d
+ms.openlocfilehash: 9ce4057378db357345869d10e933929ae31ee573
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94518732"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99859222"
 ---
 # <a name="configure-service-reference-dialog-box"></a>Hizmet Başvurusu Yapılandır iletişim kutusu
 
 **Hizmet başvurusunu Yapılandır** iletişim kutusu, WINDOWS COMMUNICATION FOUNDATION (WCF) hizmetlerinin davranışını yapılandırmanızı sağlar.
 
-**Hizmet başvurusunu Yapılandır** iletişim kutusuna erişmek için **Çözüm Gezgini** bir hizmet başvurusunu sağ tıklatın ve **hizmet başvurusunu Yapılandır** ' ı seçin. İletişim kutusuna, **hizmet başvurusu Ekle Iletişim kutusunda** **Gelişmiş** düğmesine tıklayarak da erişebilirsiniz.
+**Hizmet başvurusunu Yapılandır** iletişim kutusuna erişmek için **Çözüm Gezgini** bir hizmet başvurusunu sağ tıklatın ve **hizmet başvurusunu Yapılandır**' ı seçin. İletişim kutusuna, **hizmet başvurusu Ekle Iletişim kutusunda** **Gelişmiş** düğmesine tıklayarak da erişebilirsiniz.
 
 ## <a name="task-list"></a>Görev listesi
 
@@ -41,7 +41,7 @@ ms.locfileid: "94518732"
 
 - Bir WCF istemcisi için liste veya sözlük koleksiyon türlerini belirtmek için, **koleksiyon türü** ve **sözlük koleksiyon türü** listelerinden türleri seçin.
 
-- Tür paylaşımını devre dışı bırakmak için, **başvurulan derlemelerde türleri yeniden kullan** onay kutusunu temizleyin. Başvurulan derlemelerin bir alt kümesi için tür paylaşımını etkinleştirmek üzere, **başvurulan derlemelerde türleri yeniden kullan** onay kutusunu seçin, **belirtilen başvurulan derlemelerdeki türleri yeniden kullan** ' ı seçin ve **başvurulan derlemeler listesinde** istenen başvuruları seçin.
+- Tür paylaşımını devre dışı bırakmak için, **başvurulan derlemelerde türleri yeniden kullan** onay kutusunu temizleyin. Başvurulan derlemelerin bir alt kümesi için tür paylaşımını etkinleştirmek üzere, **başvurulan derlemelerde türleri yeniden kullan** onay kutusunu seçin, **belirtilen başvurulan derlemelerdeki türleri yeniden kullan**' ı seçin ve **başvurulan derlemeler listesinde** istenen başvuruları seçin.
 
 ## <a name="uielement-list"></a>UIElement listesi
 
@@ -93,7 +93,7 @@ Seçildiğinde, yalnızca **başvurulan derlemeler listesindeki** seçili türle
 
 **Başvurulan derlemeler listesi**
 
-Proje veya Web sitesi için başvurulan derlemelerin bir listesini içerir. **Belirtilen başvurulan derlemelerdeki türleri yeniden kullan** ' ı seçtiğinizde, bireysel derlemeleri seçebilir veya temizleyebilirsiniz.
+Proje veya Web sitesi için başvurulan derlemelerin bir listesini içerir. **Belirtilen başvurulan derlemelerdeki türleri yeniden kullan**' ı seçtiğinizde, bireysel derlemeleri seçebilir veya temizleyebilirsiniz.
 
 **Web başvurusu Ekle**
 

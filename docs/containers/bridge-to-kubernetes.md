@@ -9,13 +9,13 @@ keywords: Kubernetes, Azure Dev Spaces, dev Spaces, Docker, Kubernetes, Azure, k
 monikerRange: '>=vs-2019'
 ms.author: ghogen
 author: ghogen
-manager: jillfra
-ms.openlocfilehash: 7bbeec2baab018ea770dbee60db507399ebeb745
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+manager: jmartens
+ms.openlocfilehash: 23d060489a13aa8e02316e253d9367e9e3372bbe
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91860435"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99859638"
 ---
 # <a name="use-bridge-to-kubernetes"></a>Kubernetes için köprü kullanma
 
@@ -36,7 +36,7 @@ Ayrıca, .NET konsol uygulamaları için *Microsoft. VisualStudio. Azure. Kubern
 
 ## <a name="create-a-kubernetes-cluster"></a>Kubernetes kümesi oluşturma
 
-[Desteklenen bir bölgede][supported-regions]aks kümesi oluşturma. Aşağıdaki komutlar *Myresourcegroup* adlı bir kaynak grubu ve *myaks*adlı bir aks kümesi oluşturur.
+[Desteklenen bir bölgede][supported-regions]aks kümesi oluşturma. Aşağıdaki komutlar *Myresourcegroup* adlı bir kaynak grubu ve *myaks* adlı bir aks kümesi oluşturur.
 
 ```azurecli-interactive
 az group create \
@@ -83,7 +83,7 @@ Geliştirme bilgisayarınızda, [az aks Get-Credentials][az-aks-get-credentials]
 az aks get-credentials --resource-group MyResourceGroup --name MyAKS
 ```
 
-GitHub 'daki [bisiklet paylaşımı örnek uygulama][bike-sharing-github] deposundan, bir depoyu yerel olarak kopyalamak ve Visual Studio 'daki klasörü açmak Için yeşil **kod** düğmesindeki açılan menüyü kullanın ve **Visual Studio 'da aç** ' ı seçin. Ardından, **File**  >  *Samples/bıkesharingapp/rezervationengine* klasöründe **app. csproj** projesini açmak için dosya**Aç projesini** kullanın.
+GitHub 'daki [bisiklet paylaşımı örnek uygulama][bike-sharing-github] deposundan, bir depoyu yerel olarak kopyalamak ve Visual Studio 'daki klasörü açmak Için yeşil **kod** düğmesindeki açılan menüyü kullanın ve **Visual Studio 'da aç** ' ı seçin. Ardından,   >  *Samples/bıkesharingapp/rezervationengine* klasöründe **app. csproj** projesini açmak için dosya **Aç projesini** kullanın.
 
 Projenizde, aşağıda gösterildiği gibi başlatma ayarları açılır listesinden **Kubernetes 'e bağla** ' yı seçin.
 
@@ -123,14 +123,14 @@ Geliştirme Bilgisayarınız bağlandıktan sonra, değiştirmek istediğiniz hi
 
 ## <a name="set-a-break-point"></a>Kesme noktası ayarlama
 
-[BikesHelper.cs][bikeshelper-cs-breakpoint] açın ve imlecinizi buraya yerleştirmek için, 26. satırdaki herhangi bir yere tıklayın. *F9* tuşuna basarak veya **hata ayıklama**  >  **geçiş kesme noktası**seçeneğini belirleyerek bir kesme noktası ayarlayın.
+[BikesHelper.cs][bikeshelper-cs-breakpoint] açın ve imlecinizi buraya yerleştirmek için, 26. satırdaki herhangi bir yere tıklayın. *F9* tuşuna basarak veya **hata ayıklama**  >  **geçiş kesme noktası** seçeneğini belirleyerek bir kesme noktası ayarlayın.
 
-Ortak URL 'YI açarak örnek uygulamaya gidin. Kullanıcı olarak **Aurelia Briggs (müşteri)** öğesini seçin ve ardından kiralamak istediğiniz bir bisiklet seçin. **Kira bisikleti**seçin. Visual Studio 'ya dönün ve 26. satırı gözlemleyin. Ayarladığınız kesme noktası 26. satırdaki hizmeti duraklattı. Hizmeti sürdürmek için **F5** tuşuna basın veya devam **Ayıkla**' ya tıklayın  >  **Continue**. Tarayıcınıza geri dönün ve bisiklet bir şekilde yeniden kullandığınızı gösteren sayfayı doğrulayın.
+Ortak URL 'YI açarak örnek uygulamaya gidin. Kullanıcı olarak **Aurelia Briggs (müşteri)** öğesini seçin ve ardından kiralamak istediğiniz bir bisiklet seçin. **Kira bisikleti** seçin. Visual Studio 'ya dönün ve 26. satırı gözlemleyin. Ayarladığınız kesme noktası 26. satırdaki hizmeti duraklattı. Hizmeti sürdürmek için **F5** tuşuna basın veya devam **Ayıkla**' ya tıklayın  >  . Tarayıcınıza geri dönün ve bisiklet bir şekilde yeniden kullandığınızı gösteren sayfayı doğrulayın.
 
-İmlecinizi 26. satıra koyarak `BikesHelper.cs` ve **F9**tuşuna basarak kesme noktasını kaldırın.
+İmlecinizi 26. satıra koyarak `BikesHelper.cs` ve **F9** tuşuna basarak kesme noktasını kaldırın.
 
 > [!NOTE]
-> Varsayılan olarak, hata ayıklama görevinin durdurulması geliştirme bilgisayarınızı Kubernetes kümenizdeki bağlantısını da keser. Hata ayıklama **Disconnect after debugging** `false` seçeneklerinin **Kubernetes hata ayıklama araçları** bölümünde öğesine hata ayıkladıktan sonra bağlantı kesmeyi değiştirerek bu davranışı değiştirebilirsiniz. Bu ayar güncelleştirildikten sonra, hata ayıklamayı durdurup başlattığınızda geliştirme Bilgisayarınız bağlı kalır. Geliştirme bilgisayarınızı sizin kümenize kesmek için, araç çubuğundaki **bağlantıyı kes** düğmesine tıklayın.
+> Varsayılan olarak, hata ayıklama görevinin durdurulması geliştirme bilgisayarınızı Kubernetes kümenizdeki bağlantısını da keser. Hata ayıklama  `false` seçeneklerinin **Kubernetes hata ayıklama araçları** bölümünde öğesine hata ayıkladıktan sonra bağlantı kesmeyi değiştirerek bu davranışı değiştirebilirsiniz. Bu ayar güncelleştirildikten sonra, hata ayıklamayı durdurup başlattığınızda geliştirme Bilgisayarınız bağlı kalır. Geliştirme bilgisayarınızı sizin kümenize kesmek için, araç çubuğundaki **bağlantıyı kes** düğmesine tıklayın.
 
 ## <a name="additional-configuration"></a>Ek yapılandırma
 

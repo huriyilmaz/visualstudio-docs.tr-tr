@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: 35e766ad-269f-41e4-ba23-74a556c315f3
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 726a02c852c4b41dacc2cab73ab4000ebda53a8a
-ms.sourcegitcommit: dfbbf041e68ec3a4cd97196b19c9226a4793e702
+ms.openlocfilehash: 8568670e43f21227db7e3ef88d41b2c7c0fc63c3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91878949"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99859469"
 ---
 # <a name="system-requirements-for-the-visual-studio-emulator-for-android"></a>Android için Visual Studio öykünücüsü sistem gereksinimleri
 
@@ -33,7 +33,7 @@ Kurulum programı, öykünücüsü yüklerken sessizce bu önkoşulları yapıla
 
 Android için Visual Studio öykünücüsü 'nü çalıştırmaya yönelik gereksinimlerin hızlı bir denetim listesi aşağıda verilmiştir. Daha ayrıntılı bilgi için bu konudaki sonraki bölümlere bakın.
 
-Sistem gereksinimleri
+Sistem Gereksinimleri
 
 - Hyper-V desteği (aşağıdaki Hyper-V gereksinimlerine bakın)
 
@@ -63,7 +63,7 @@ Hyper-V gereksinimleri
 
 - Yerel Hyper-V yöneticileri grubunun bir üyesi olmanız gerekir.
 
-## <a name="system-requirements"></a>Sistem gereksinimleri
+## <a name="system-requirements"></a>Sistem Gereksinimleri
  Bilgisayarınızın aşağıdaki gereksinimleri karşılaması gerekir:
 
 - Hyper-V desteği (bkz. [Hyper-v gereksinimleri](#hyper-v-requirements))

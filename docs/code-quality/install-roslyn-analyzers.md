@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Roslyn analyzers
 author: mikadumont
 ms.author: midumont
-manager: jillfra
+manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 93cd01c0a90f2864843549c3ce11e066a16a8843
-ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
+ms.openlocfilehash: 3d4833ba922ddde1a1770cfd75cf446f210e2c79
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96040387"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99859859"
 ---
 # <a name="install-third-party-analyzers"></a>Üçüncü taraf çözümleyici yükleme
 
@@ -35,7 +35,7 @@ Visual Studio temel bir .NET Compiler Platform (*Roslyn*) Çözümleyicileri kü
    > [!NOTE]
    > Her çözümleyici paketi için www.nuget.org sayfasında, **Paket Yöneticisi konsoluna** yapıştırmanın komutu gösterilmektedir. Metni panoya kopyalamak için kullanışlı bir düğme de vardır.
 
-   Çözümleyici derlemeleri yüklenir ve **başvuru** Çözümleyicileri altında **Çözüm Gezgini** görüntülenir  >  **Analyzers**.
+   Çözümleyici derlemeleri yüklenir ve **başvuru** Çözümleyicileri altında **Çözüm Gezgini** görüntülenir  >  .
 
 ## <a name="to-install-vsix-analyzers"></a>VSıX Çözümleyicileri yüklemek için
 
@@ -101,4 +101,4 @@ Uzantının yüklü olup olmadığını denetlemek isterseniz, **uzantıları** 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Studio 'da kod Çözümleyicileri 'ne genel bakış](../code-quality/roslyn-analyzers-overview.md)
-- [.NET Çözümleyicileri 'ni yükler](../code-quality/install-net-analyzers.md)
+- [.NET çözümleyicilerini yükleme](../code-quality/install-net-analyzers.md)

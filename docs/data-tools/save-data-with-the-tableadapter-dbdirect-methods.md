@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 74a6773b-37e1-4d96-a39c-63ee0abf49b1
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 5d79b2081e2d30d77ae3507884b44421f0f14bae
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 00f508163dc039d5c29013538a78fa7dab6091fd
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94434577"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99858455"
 ---
 # <a name="save-data-with-the-tableadapter-dbdirect-methods"></a>TableAdapter DBDirect metotlarıyla veri kaydetme
 
@@ -45,11 +45,11 @@ Bu izlenecek yol sırasında şunları yapmayı öğreneceksiniz:
 
 Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını kullanır.
 
-1. SQL Server Express LocalDB yoksa, [SQL Server Express indirme sayfasından](https://www.microsoft.com/sql-server/sql-server-editions-express)veya **Visual Studio yükleyicisi** aracılığıyla yükleyin. **Visual Studio yükleyicisi** , SQL Server Express LocalDB 'yi **veri depolama ve işleme** iş yükünün parçası olarak veya ayrı bir bileşen olarak yükleyebilirsiniz.
+1. SQL Server Express LocalDB yoksa, [SQL Server Express indirme sayfasından](https://www.microsoft.com/sql-server/sql-server-editions-express)veya **Visual Studio yükleyicisi** aracılığıyla yükleyin. **Visual Studio yükleyicisi**, SQL Server Express LocalDB 'yi **veri depolama ve işleme** iş yükünün parçası olarak veya ayrı bir bileşen olarak yükleyebilirsiniz.
 
 2. Aşağıdaki adımları izleyerek Northwind örnek veritabanını yüklersiniz:
 
-    1. Visual Studio 'da **SQL Server Nesne Gezgini** penceresini açın. (SQL Server Nesne Gezgini, Visual Studio Yükleyicisi **veri depolama ve işleme** iş yükünün parçası olarak yüklenir.) **SQL Server** düğümünü genişletin. LocalDB örneğinize sağ tıklayıp **Yeni sorgu** ' yı seçin.
+    1. Visual Studio 'da **SQL Server Nesne Gezgini** penceresini açın. (SQL Server Nesne Gezgini, Visual Studio Yükleyicisi **veri depolama ve işleme** iş yükünün parçası olarak yüklenir.) **SQL Server** düğümünü genişletin. LocalDB örneğinize sağ tıklayıp **Yeni sorgu**' yı seçin.
 
        Sorgu Düzenleyicisi penceresi açılır.
 
@@ -63,13 +63,13 @@ Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını 
 
 İlk adım **Windows Forms bir uygulama** oluşturmaktır.
 
-1. Visual Studio 'da, **Dosya** menüsünde **Yeni**  >  **Proje** ' yi seçin.
+1. Visual Studio 'da, **Dosya** menüsünde **Yeni**  >  **Proje**' yi seçin.
 
-2. Sol bölmedeki **Visual C#** veya **Visual Basic** genişletip **Windows Masaüstü** ' nü seçin.
+2. Sol bölmedeki **Visual C#** veya **Visual Basic** genişletip **Windows Masaüstü**' nü seçin.
 
 3. Orta bölmede **Windows Forms uygulama** proje türünü seçin.
 
-4. Projeyi **TableAdapterDbDirectMethodsWalkthrough** olarak adlandırın ve ardından **Tamam** ' ı seçin.
+4. Projeyi **TableAdapterDbDirectMethodsWalkthrough** olarak adlandırın ve ardından **Tamam**' ı seçin.
 
      **TableAdapterDbDirectMethodsWalkthrough** projesi oluşturulup **Çözüm Gezgini** eklenir.
 
@@ -79,13 +79,13 @@ Bu adım, Northwind örnek veritabanındaki tabloya dayalı bir veri kaynağı o
 
 ### <a name="to-create-the-data-source"></a>Veri kaynağı oluşturmak için
 
-1. **Veri** menüsünde **veri kaynaklarını göster** ' i seçin.
+1. **Veri** menüsünde **veri kaynaklarını göster**' i seçin.
 
    **Veri kaynakları** penceresi açılır.
 
-2. Veri **kaynakları** penceresinde, **veri kaynağı Yapılandırma Sihirbazı** ' nı başlatmak Için **Yeni veri kaynağı Ekle** ' yi seçin.
+2. Veri **kaynakları** penceresinde, **veri kaynağı Yapılandırma Sihirbazı**' nı başlatmak Için **Yeni veri kaynağı Ekle** ' yi seçin.
 
-3. **Veri kaynağı türü seçin** ekranında **veritabanı** ' nı seçin ve ardından **İleri** ' yi seçin.
+3. **Veri kaynağı türü seçin** ekranında **veritabanı**' nı seçin ve ardından **İleri**' yi seçin.
 
 4. **Veri bağlantınızı seçin** ekranında aşağıdakilerden birini yapın:
 
@@ -95,13 +95,13 @@ Bu adım, Northwind örnek veritabanındaki tabloya dayalı bir veri kaynağı o
 
     - **Yeni bağlantı** ' yı seçerek **Bağlantı Ekle/Değiştir** iletişim kutusunu başlatın.
 
-5. Veritabanınız parola gerektiriyorsa, hassas verileri dahil etme seçeneğini belirleyin ve ardından **İleri** ' yi seçin.
+5. Veritabanınız parola gerektiriyorsa, hassas verileri dahil etme seçeneğini belirleyin ve ardından **İleri**' yi seçin.
 
-6. **Bağlantı dizesini uygulama yapılandırma dosyasına kaydet** ekranında, **İleri** ' yi seçin.
+6. **Bağlantı dizesini uygulama yapılandırma dosyasına kaydet** ekranında, **İleri**' yi seçin.
 
 7. **Veritabanı nesnelerinizi seçin** ekranında **Tablolar** düğümünü genişletin.
 
-8. Tabloyu seçin `Region` ve ardından **son** ' u seçin.
+8. Tabloyu seçin `Region` ve ardından **son**' u seçin.
 
      **NorthwindDataSet** , projenize eklenir ve `Region` tablo **veri kaynakları** penceresinde görünür.
 
@@ -119,7 +119,7 @@ Windows formunda veri bağlantılı denetimler oluşturmak için, **veri kaynakl
 
 2. Her düğme için aşağıdaki **ad** ve **metin** özelliklerini ayarlayın.
 
-    |Ad|Metin|
+    |Name|Metin|
     |----------|----------|
     |`InsertButton`|**Ekle**|
     |`UpdateButton`|**Güncelleştirme**|

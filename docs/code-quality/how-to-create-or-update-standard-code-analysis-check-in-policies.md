@@ -10,15 +10,15 @@ helpviewer_keywords:
 - code analysis, migrating check-in policy
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d5f03cbd78944d49301362c07d01497abb22734c
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 3d46ed89880c41cbcaa6982c386e2ff8f115f8de
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94348768"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99860119"
 ---
 # <a name="how-to-create-or-update-standard-code-analysis-check-in-policies"></a>Nasıl yapılır: Standart Kod Çözümleme İade İlkeleri Oluşturma veya Güncelleme
 
@@ -37,7 +37,7 @@ Yönetilen kod için bir iade ilkesi belirttikten sonra, ekip üyeleri kod proje
 
 ## <a name="to-open-the-check-in-policy-editor"></a>İade İlkesi düzenleyicisini açmak için
 
-1. Takım Gezgini, proje adına sağ tıklayın, **proje ayarları** ' nın üzerine gelin ve **kaynak denetimi** ' ne tıklayın.
+1. Takım Gezgini, proje adına sağ tıklayın, **proje ayarları**' nın üzerine gelin ve **kaynak denetimi**' ne tıklayın.
 
 1. **Kaynak denetimi** iletişim kutusunda, **iade ilkesi** sekmesini seçin.
 

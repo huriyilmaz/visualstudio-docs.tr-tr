@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 5086d228-f92e-4515-9708-c5b89b9e9a03
 author: mikadumont
 ms.author: midumont
-manager: jillfra
+manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2eb4beff76d602bb4ce6182fab6091c7cd2a0096
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 997fc6f6ecb8ffbd8c48e2352dcc9ae2f6092211
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94348729"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99860028"
 ---
 # <a name="run-code-analysis-manually-for-net"></a>.NET için kod analizini el ile çalıştırın
 Varsayılan olarak, .NET Compiler Platform ("Roslyn") Çözümleyicileri, derleme sırasında ve canlı analizler yaparak C# veya Visual Basic kodunuzu sizin yazarken analiz eder. Bu nedenle normalde Kod analizini el ile tetiklemeniz gerekmez. Ancak, Kod analizini el ile tetiklemek isteyebileceğiniz bazı senaryolar vardır:
@@ -31,7 +31,7 @@ Varsayılan olarak, .NET Compiler Platform ("Roslyn") Çözümleyicileri, derlem
 
 ### <a name="run-code-analysis-manually"></a>Kod analizini el ile çalıştırma
 
-1. **Çözüm Gezgini** , projeyi seçin.
+1. **Çözüm Gezgini**, projeyi seçin.
 
 2. **Çözümle** menüsünde, *Proje adı* **üzerinde Kod analizini Çalıştır** ' ı seçin.
 

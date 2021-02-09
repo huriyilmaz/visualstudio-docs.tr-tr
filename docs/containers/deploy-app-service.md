@@ -3,18 +3,18 @@ title: Azure App Service ASP.NET Core kapsayıcısını dağıtma
 description: Bir Docker kapsayıcısında ASP.NET Core Web uygulamasını dağıtmak için Visual Studio kapsayıcı araçları 'nı kullanmayı öğrenin Azure App Service
 ms.custom: SEO-VS-2020
 author: ghogen
-manager: jillfra
+manager: jmartens
 ms.technology: vs-azure
 ms.devlang: dotnet
 ms.topic: how-to
 ms.date: 01/27/2020
 ms.author: ghogen
-ms.openlocfilehash: c0f45f14bc8b363a0c7c4e298effa67c5fccde18
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 2e23658cfde1154f5b4df7ae7dade71b1569e35c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036346"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99859651"
 ---
 # <a name="deploy-an-aspnet-core-container-to-azure-app-service-using-visual-studio"></a>Visual Studio kullanarak Azure App Service ASP.NET Core kapsayıcısını dağıtma
 
@@ -22,7 +22,7 @@ Bu öğretici, Kapsayıcılı ASP.NET Core Web uygulamanızı bir [Azure App Ser
 
 Azure aboneliğiniz yoksa başlamadan önce [ücretsiz bir hesap](https://azure.microsoft.com/free/dotnet/?utm_source=acr-publish-doc&utm_medium=docs&utm_campaign=docs) oluşturun.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Bu öğreticiyi tamamlamak için:
 
@@ -62,7 +62,7 @@ Aşağıdaki adımlar, bu öğreticide kullanılacak temel bir ASP.NET Core uygu
 ::: moniker range="vs-2017"
 
 1. **Çözüm Gezgini** ' de projenize sağ tıklayın ve **Yayımla**' yı seçin.
-1. Hedef Yayımla iletişim kutusunda **App Service Linux** veya **App Service**öğesini seçin. Bu, Web sunucusunu barındıracak olan işletim sistemidir.
+1. Hedef Yayımla iletişim kutusunda **App Service Linux** veya **App Service** öğesini seçin. Bu, Web sunucusunu barındıracak olan işletim sistemidir.
 1. Yalnızca App Service yayımlayabilirsiniz veya App Service ve Azure Container Registry (ACR) ' de yayımlayabilirsiniz. Kapsayıcıyı bir Azure Container Registry (ACR) içinde yayımlamak için, **kapsayıcılar için yeni App Service oluştur**' u seçin ve **Yayımla**' ya tıklayın.
 
    ![Yayımla iletişim kutusunun ekran görüntüsü](media/deploy-app-service/publish-app-service-linux.PNG)
@@ -136,7 +136,7 @@ Buradan, kapsayıcı bilgilerini görüntüleyebilir, günlükleri görüntüley
 
 ## <a name="clean-up-resources"></a>Kaynakları temizleme
 
-Bu öğreticiyle ilişkili tüm Azure kaynaklarını kaldırmak için [Azure Portal](https://portal.azure.com)kullanarak kaynak grubunu silin. Yayımlanmış bir Web uygulamasıyla ilişkili kaynak grubunu bulmak için, **View**  >  **diğer Windows**  >  **Web yayımlama etkinliğini**görüntüle ' yi seçin ve ardından dişli simgesini seçin. Kaynak grubunu içeren **Yayımla** sekmesi açılır.
+Bu öğreticiyle ilişkili tüm Azure kaynaklarını kaldırmak için [Azure Portal](https://portal.azure.com)kullanarak kaynak grubunu silin. Yayımlanmış bir Web uygulamasıyla ilişkili kaynak grubunu bulmak için,   >  **diğer Windows**  >  **Web yayımlama etkinliğini** görüntüle ' yi seçin ve ardından dişli simgesini seçin. Kaynak grubunu içeren **Yayımla** sekmesi açılır.
 
 Azure portal, **kaynak grupları**' nı seçin, Ayrıntılar sayfasını açmak için kaynak grubunu seçin. Bunun doğru kaynak grubu olduğunu doğrulayıp **kaynak grubunu Kaldır**' ı seçin, adı yazın ve **Sil**' i seçin.
 

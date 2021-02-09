@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: 64b772ad-4392-42e9-a237-5137f0384bf0
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 32af7033eb29d223a5ecfafaccb0a3123ab88d06
-ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
+ms.openlocfilehash: 95bc250219c59d4db21fcb086cdf43e0ba7800e3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97877136"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99838636"
 ---
 # <a name="walkthrough-highlight-text"></a>İzlenecek yol: metni vurgula
 Managed Extensibility Framework (MEF) bileşen bölümleri oluşturarak düzenleyiciye farklı görsel etkiler ekleyebilirsiniz. Bu izlenecek yol, bir metin dosyasında geçerli sözcüğün her geçtiği yeri vurgulamanın nasıl yapılacağını gösterir. Bir kelime bir metin dosyasında birden çok kez oluşursa ve giriş işaretini tek bir tekrara konumlandırdıysanız, her oluşum vurgulanır.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
  Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yükleyemezsiniz. Visual Studio kurulumunda isteğe bağlı bir özellik olarak eklenmiştir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-a-mef-project"></a>MEF projesi oluşturma

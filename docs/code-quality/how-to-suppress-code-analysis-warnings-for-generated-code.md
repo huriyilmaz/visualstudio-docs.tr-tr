@@ -7,15 +7,15 @@ ms.topic: how-to
 ms.assetid: 3a96434e-d419-43a7-81ba-95cccac835b8
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e462281686236f809fbd88588df5ad8fd832dbde
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: a149511b447f1f21d180eaf526ebc3d991c95997
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94435553"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99859950"
 ---
 # <a name="how-to-suppress-code-analysis-warnings-for-generated-code"></a>Nasıl yapılır: üretilen kod için kod analizi uyarılarını gösterme
 
@@ -28,7 +28,7 @@ Bir projenin kod analizi özelliği sayfasında, **üretilen koddan sonuçları 
 
 ### <a name="to-suppress-warnings-for-generated-code-in-a-project"></a>Bir projede oluşturulan koda yönelik uyarıları gizlemek için
 
-1. **Çözüm Gezgini** ' de projeye sağ tıklayın ve ardından **Özellikler** ' e tıklayın.
+1. **Çözüm Gezgini** ' de projeye sağ tıklayın ve ardından **Özellikler**' e tıklayın.
 
 2. **Kod Analizi** sekmesini seçin.
 

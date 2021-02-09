@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: ea118fff-69b1-4675-b79a-e33374377f04
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 3586cf45e152cd8a0149140556916b11544a00bb
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 8b5228d463bebf7ed57c68cbcf16a1d767d94917
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94436282"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99858676"
 ---
 # <a name="insert-new-records-into-a-database"></a>Veritabanına yeni kayıtlar ekleme
 
@@ -36,7 +36,7 @@ Uygulamanız verileri depolamak için veri kümeleri kullanıyorsa `TableAdapter
 
 Uygulamanız verileri depolamak için nesneler kullanıyorsa veya veritabanında yeni kayıtlar oluşturmak için daha ayrıntılı bir denetim istiyorsanız `TableAdapter.Insert` yöntemini kullanın.
 
-TableAdapter 'da bir yöntemi yoksa `Insert` , TableAdapter saklı yordamları kullanacak şekilde yapılandırıldığı veya `GenerateDBDirectMethods` özelliği olarak ayarlandığı anlamına gelir `false` . TableAdapter `GenerateDBDirectMethods` özelliğinin özelliğini veri kümesi Tasarımcısı içinden olarak ayarlamayı deneyin `true` ve ardından **Dataset Designer** veri kümesini kaydedin. Bu, TableAdapter 'ı yeniden oluşturacak. TableAdapter `Insert` 'ın bir yöntemi yoksa, tablo muhtemelen tek tek satırları ayırt etmek için yeterli şema bilgisi sağlamaz (örneğin, tabloda birincil anahtar kümesi bulunmayabilir).
+TableAdapter 'da bir yöntemi yoksa `Insert` , TableAdapter saklı yordamları kullanacak şekilde yapılandırıldığı veya `GenerateDBDirectMethods` özelliği olarak ayarlandığı anlamına gelir `false` . TableAdapter `GenerateDBDirectMethods` özelliğinin özelliğini veri kümesi Tasarımcısı içinden olarak ayarlamayı deneyin `true` ve ardından veri kümesini kaydedin. Bu, TableAdapter 'ı yeniden oluşturacak. TableAdapter `Insert` 'ın bir yöntemi yoksa, tablo muhtemelen tek tek satırları ayırt etmek için yeterli şema bilgisi sağlamaz (örneğin, tabloda birincil anahtar kümesi bulunmayabilir).
 
 ## <a name="insert-new-records-by-using-tableadapters"></a>TableAdapters kullanarak yeni kayıtlar ekleme
 

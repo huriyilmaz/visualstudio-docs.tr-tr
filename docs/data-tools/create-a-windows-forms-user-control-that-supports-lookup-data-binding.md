@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: c48b4d75-ccfc-4950-8b14-ff8adbfe4208
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: de89839dd85f0f330356e1ade7d4658428ea3d3e
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 0eeb3e768370066bf93afc766d4d7f67d8d39a1d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94435280"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99859079"
 ---
 # <a name="create-a-windows-forms-user-control-that-supports-lookup-data-binding"></a>Arama veri bağlama modelini destekleyen bir Windows Forms kullanıcı denetimi oluşturma
 
@@ -60,11 +60,11 @@ Bu izlenecek yol sırasında şunları yapmayı öğreneceksiniz:
 
 Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını kullanır.
 
-1. SQL Server Express LocalDB yoksa, [SQL Server Express indirme sayfasından](https://www.microsoft.com/sql-server/sql-server-editions-express)veya **Visual Studio yükleyicisi** aracılığıyla yükleyin. **Visual Studio yükleyicisi** , SQL Server Express LocalDB 'yi **veri depolama ve işleme** iş yükünün parçası olarak veya ayrı bir bileşen olarak yükleyebilirsiniz.
+1. SQL Server Express LocalDB yoksa, [SQL Server Express indirme sayfasından](https://www.microsoft.com/sql-server/sql-server-editions-express)veya **Visual Studio yükleyicisi** aracılığıyla yükleyin. **Visual Studio yükleyicisi**, SQL Server Express LocalDB 'yi **veri depolama ve işleme** iş yükünün parçası olarak veya ayrı bir bileşen olarak yükleyebilirsiniz.
 
 2. Aşağıdaki adımları izleyerek Northwind örnek veritabanını yüklersiniz:
 
-    1. Visual Studio 'da **SQL Server Nesne Gezgini** penceresini açın. (SQL Server Nesne Gezgini, Visual Studio Yükleyicisi **veri depolama ve işleme** iş yükünün parçası olarak yüklenir.) **SQL Server** düğümünü genişletin. LocalDB örneğinize sağ tıklayıp **Yeni sorgu** ' yı seçin.
+    1. Visual Studio 'da **SQL Server Nesne Gezgini** penceresini açın. (SQL Server Nesne Gezgini, Visual Studio Yükleyicisi **veri depolama ve işleme** iş yükünün parçası olarak yüklenir.) **SQL Server** düğümünü genişletin. LocalDB örneğinize sağ tıklayıp **Yeni sorgu**' yı seçin.
 
        Sorgu Düzenleyicisi penceresi açılır.
 
@@ -78,13 +78,13 @@ Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını 
 
 İlk adım **Windows Forms bir uygulama** projesi oluşturmaktır.
 
-1. Visual Studio 'da, **Dosya** menüsünde **Yeni**  >  **Proje** ' yi seçin.
+1. Visual Studio 'da, **Dosya** menüsünde **Yeni**  >  **Proje**' yi seçin.
 
-2. Sol bölmedeki **Visual C#** veya **Visual Basic** genişletip **Windows Masaüstü** ' nü seçin.
+2. Sol bölmedeki **Visual C#** veya **Visual Basic** genişletip **Windows Masaüstü**' nü seçin.
 
 3. Orta bölmede **Windows Forms uygulama** proje türünü seçin.
 
-4. Projeyi **LookupControlWalkthrough** olarak adlandırın ve ardından **Tamam** ' ı seçin.
+4. Projeyi **LookupControlWalkthrough** olarak adlandırın ve ardından **Tamam**' ı seçin.
 
      **LookupControlWalkthrough** projesi oluşturulur ve **Çözüm Gezgini** eklenir.
 
@@ -92,9 +92,9 @@ Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını 
 
 Bu izlenecek yol, **Kullanıcı denetiminden** bir arama denetimi oluşturur, bu nedenle **LookupControlWalkthrough** projesine bir **Kullanıcı denetim** öğesi ekleyin.
 
-1. **Proje** menüsünden **Kullanıcı denetimi Ekle** ' yi seçin.
+1. **Proje** menüsünden **Kullanıcı denetimi Ekle**' yi seçin.
 
-2. `LookupBox` **Ad** alanına yazın ve ardından **Ekle** ' ye tıklayın.
+2. `LookupBox` **Ad** alanına yazın ve ardından **Ekle**' ye tıklayın.
 
      **LookupBox** denetimi **Çözüm Gezgini** eklenir ve tasarımcıda açılır.
 
@@ -117,13 +117,13 @@ Veri bağlamayı destekleyen arama denetimleri için, uygulamasını uygulayabil
 
 ## <a name="create-a-data-source-from-your-database"></a>Veritabanınızdan bir veri kaynağı oluşturun
 
-Bu adım, **Data Source Configuration** `Customers` `Orders` Northwind örnek veritabanındaki ve tabloları temel alan veri kaynağı Yapılandırma Sihirbazı 'nı kullanarak bir veri kaynağı oluşturur.
+Bu adım,  `Customers` `Orders` Northwind örnek veritabanındaki ve tabloları temel alan veri kaynağı Yapılandırma Sihirbazı 'nı kullanarak bir veri kaynağı oluşturur.
 
-1. Veri **kaynakları** penceresini açmak Için, **veri** menüsünde **veri kaynaklarını göster** ' e tıklayın.
+1. Veri **kaynakları** penceresini açmak Için, **veri** menüsünde **veri kaynaklarını göster**' e tıklayın.
 
 2. Veri **kaynakları** penceresinde, **veri kaynağı yapılandırma** Sihirbazı ' nı başlatmak Için **Yeni veri kaynağı Ekle** ' yi seçin.
 
-3. **Veri kaynağı türü seçin** sayfasında **veritabanı** ' nı seçin ve ardından **İleri** ' ye tıklayın.
+3. **Veri kaynağı türü seçin** sayfasında **veritabanı** ' nı seçin ve ardından **İleri**' ye tıklayın.
 
 4. **Veri bağlantınızı seçin** sayfasında aşağıdakilerden birini yapın:
 
@@ -131,13 +131,13 @@ Bu adım, **Data Source Configuration** `Customers` `Orders` Northwind örnek ve
 
     - **Yeni bağlantı** ' yı seçerek **Bağlantı Ekle/Değiştir** iletişim kutusunu başlatın.
 
-5. Veritabanınız parola gerektiriyorsa, hassas verileri dahil etme seçeneğini belirleyin ve ardından **İleri** ' ye tıklayın.
+5. Veritabanınız parola gerektiriyorsa, hassas verileri dahil etme seçeneğini belirleyin ve ardından **İleri**' ye tıklayın.
 
-6. **Bağlantı dizesini uygulama yapılandırma dosyasına kaydet** sayfasında, **İleri** ' ye tıklayın.
+6. **Bağlantı dizesini uygulama yapılandırma dosyasına kaydet** sayfasında, **İleri**' ye tıklayın.
 
 7. **Veritabanı nesnelerinizi seçin** sayfasında **Tablolar** düğümünü genişletin.
 
-8. `Customers`Ve tablolarını seçip `Orders` **son** ' a tıklayın.
+8. `Customers`Ve tablolarını seçip `Orders` **son**' a tıklayın.
 
      **NorthwindDataSet** , projenize eklenir ve `Customers` `Orders` Tablolar **veri kaynakları** penceresinde görünür.
 
@@ -153,13 +153,13 @@ Bu adım, **Data Source Configuration** `Customers` `Orders` Northwind örnek ve
 
 4. **Siparişler** düğümündeki açılan oka tıklayın ve denetim listesinden **Ayrıntılar** ' ı seçin.
 
-5. **MüşteriNo** sütunundaki açılan oka tıklayın ( **siparişler** düğümünde) ve **Özelleştir** ' i seçin.
+5. **MüşteriNo** sütunundaki açılan oka tıklayın ( **siparişler** düğümünde) ve **Özelleştir**' i seçin.
 
 6. **Veri Kullanıcı arabirimi özelleştirme seçenekleri** Iletişim kutusunda **Ilişkili denetimler** listesinden **LookupBox** ' ı seçin.
 
-7. **Tamam** düğmesine tıklayın.
+7. **Tamam**'a tıklayın.
 
-8. **MüşteriNo** sütunundaki açılan oka tıklayın ve **LookupBox** ' ı seçin.
+8. **MüşteriNo** sütunundaki açılan oka tıklayın ve **LookupBox**' ı seçin.
 
 ## <a name="add-controls-to-the-form"></a>Forma denetim ekleme
 
@@ -175,7 +175,7 @@ Bu, tablodaki değeri koruyarak, tablosundan görüntülenecek veri bağlamayı 
 
 ## <a name="run-the-application"></a>Uygulamayı çalıştırma
 
-- Uygulamayı çalıştırmak için **F5** 'e basın.
+- Uygulamayı çalıştırmak için **F5**'e basın.
 
 - Bazı kayıtlar arasında ilerleyin ve `CompanyName` `LookupBox` denetimin denetimde göründüğünü doğrulayın.
 

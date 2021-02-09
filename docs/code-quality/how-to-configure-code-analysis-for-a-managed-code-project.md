@@ -17,15 +17,15 @@ helpviewer_keywords:
 - code analysis, rule sets
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8c14a72ff0d797f2fcab8e4ac62d0e0a3fb1001f
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 8b76678b1e5c0f53502e24f8baee87ede3bd3ef6
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94348807"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99860184"
 ---
 # <a name="how-to-configure-legacy-analysis-for-managed-code"></a>Nasıl yapılır: yönetilen kod için eski Analizi yapılandırma
 
@@ -38,15 +38,15 @@ Visual Studio 'da, yönetilen bir kod projesine uygulamak üzere kod analizi [ku
 
 1. Projenin özellik sayfalarındaki **Kod Analizi** sekmesini açın. Bunu aşağıdaki yöntemlerle yapabilirsiniz:
 
-   - **Çözüm Gezgini** , projeyi seçin. Menü çubuğunda **Çözümle**  >  **Configure Code Analysis**  >  **Kod analizini Yapılandır ' ı seçin. \<projectname>**
+   - **Çözüm Gezgini**, projeyi seçin. Menü çubuğunda **Çözümle**  >    >  **Kod analizini Yapılandır ' ı seçin. \<projectname>**
 
-   - **Çözüm Gezgini** ' de projeye sağ tıklayın ve **Özellikler** ' i seçin ve ardından **Kod Analizi** sekmesini seçin.
+   - **Çözüm Gezgini** ' de projeye sağ tıklayın ve **Özellikler**' i seçin ve ardından **Kod Analizi** sekmesini seçin.
 
 2. **Yapılandırma** ve **Platform** listelerinde, derleme yapılandırması ve hedef platform ' u seçin.
 
 ::: moniker range="vs-2017"
 
-3. Projenin seçili yapılandırma kullanılarak oluşturulduğu her seferinde Kod analizini çalıştırmak için **derlemede Kod analizini etkinleştir** ' i seçin. Kod analizini, kod analizi çalıştırma kodu analizini **Çözümle**  >  **Run Code Analysis**  >  **' \<projectname>** i seçerek el ile de çalıştırabilirsiniz.
+3. Projenin seçili yapılandırma kullanılarak oluşturulduğu her seferinde Kod analizini çalıştırmak için **derlemede Kod analizini etkinleştir**' i seçin. Kod analizini, kod analizi çalıştırma kodu analizini **Çözümle**  >    >  **' \<projectname>** i seçerek el ile de çalıştırabilirsiniz.
 
 ::: moniker-end
 
@@ -85,9 +85,9 @@ Varsayılan olarak, bir çözümün tüm yönetilen projelerine, *Microsoft 'un 
 
 1. Visual Studio 'da çözümü açın.
 
-2. **Çözümle** menüsünde, **çözüm Için kod analizini Yapılandır** ' ı seçin.
+2. **Çözümle** menüsünde, **çözüm Için kod analizini Yapılandır**' ı seçin.
 
-3. Gerekirse, **ortak özellikler** ' i genişletin ve ardından **Kod Analizi ayarları** ' nı seçin.
+3. Gerekirse, **ortak özellikler**' i genişletin ve ardından **Kod Analizi ayarları**' nı seçin.
 
 4. Bir veya daha fazla proje için bir kural kümesi belirtebilirsiniz:
 

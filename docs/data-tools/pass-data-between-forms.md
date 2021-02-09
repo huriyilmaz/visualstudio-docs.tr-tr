@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 78bf038b-9296-4fbf-b0e8-d881d1aff0df
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: e740483a855bbfd736810dd4d41e3f4d01b7dd60
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 9aad1bff0b70f87ff271f6d09cc7f8d34179136d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94434681"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99858572"
 ---
 # <a name="pass-data-between-forms"></a>Formlar arasında veri geçirme
 
@@ -57,7 +57,7 @@ Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını 
 
 2. Aşağıdaki adımları izleyerek Northwind örnek veritabanını yüklersiniz:
 
-    1. Visual Studio 'da **SQL Server Nesne Gezgini** penceresini açın. (SQL Server Nesne Gezgini, Visual Studio Yükleyicisi **veri depolama ve işleme** iş yükünün parçası olarak yüklenir.) **SQL Server** düğümünü genişletin. LocalDB örneğinize sağ tıklayıp **Yeni sorgu** ' yı seçin.
+    1. Visual Studio 'da **SQL Server Nesne Gezgini** penceresini açın. (SQL Server Nesne Gezgini, Visual Studio Yükleyicisi **veri depolama ve işleme** iş yükünün parçası olarak yüklenir.) **SQL Server** düğümünü genişletin. LocalDB örneğinize sağ tıklayıp **Yeni sorgu**' yı seçin.
 
        Sorgu Düzenleyicisi penceresi açılır.
 
@@ -69,25 +69,25 @@ Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını 
 
 ## <a name="create-the-windows-forms-app-project"></a>Windows Forms uygulama projesi oluşturma
 
-1. Visual Studio 'da, **Dosya** menüsünde **Yeni**  >  **Proje** ' yi seçin.
+1. Visual Studio 'da, **Dosya** menüsünde **Yeni**  >  **Proje**' yi seçin.
 
-2. Sol bölmedeki **Visual C#** veya **Visual Basic** genişletip **Windows Masaüstü** ' nü seçin.
+2. Sol bölmedeki **Visual C#** veya **Visual Basic** genişletip **Windows Masaüstü**' nü seçin.
 
 3. Orta bölmede **Windows Forms uygulama** proje türünü seçin.
 
-4. Projeyi **PassingDataBetweenForms** olarak adlandırın ve ardından **Tamam** ' ı seçin.
+4. Projeyi **PassingDataBetweenForms** olarak adlandırın ve ardından **Tamam**' ı seçin.
 
      **PassingDataBetweenForms** projesi oluşturulur ve **Çözüm Gezgini** eklenir.
 
 ## <a name="create-the-data-source"></a>Veri kaynağını oluşturma
 
-1. Veri **kaynakları** penceresini açmak Için, **veri** menüsünde **veri kaynaklarını göster** ' e tıklayın.
+1. Veri **kaynakları** penceresini açmak Için, **veri** menüsünde **veri kaynaklarını göster**' e tıklayın.
 
 2. Veri **kaynakları** penceresinde, **veri kaynağı yapılandırma** Sihirbazı ' nı başlatmak Için **Yeni veri kaynağı Ekle** ' yi seçin.
 
-3. **Veri kaynağı türü seçin** sayfasında **veritabanı** ' nı seçin ve ardından **İleri** ' ye tıklayın.
+3. **Veri kaynağı türü seçin** sayfasında **veritabanı** ' nı seçin ve ardından **İleri**' ye tıklayın.
 
-4. **Bir veritabanı modeli seçin** sayfasında, **veri kümesinin** belirtildiğinden emin olun ve ardından **İleri** ' ye tıklayın.
+4. **Bir veritabanı modeli seçin** sayfasında, **veri kümesinin** belirtildiğinden emin olun ve ardından **İleri**' ye tıklayın.
 
 5. **Veri bağlantınızı seçin** sayfasında aşağıdakilerden birini yapın:
 
@@ -95,13 +95,13 @@ Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını 
 
     - **Yeni bağlantı** ' yı seçerek **Bağlantı Ekle/Değiştir** iletişim kutusunu başlatın.
 
-6. Veritabanınız parola gerektiriyorsa ve hassas verileri dahil etme seçeneği etkinse, seçeneğini belirleyin ve ardından **İleri** ' ye tıklayın.
+6. Veritabanınız parola gerektiriyorsa ve hassas verileri dahil etme seçeneği etkinse, seçeneğini belirleyin ve ardından **İleri**' ye tıklayın.
 
-7. **Bağlantı dizesini uygulama yapılandırma dosyasına kaydet** sayfasında, **İleri** ' ye tıklayın.
+7. **Bağlantı dizesini uygulama yapılandırma dosyasına kaydet** sayfasında, **İleri**' ye tıklayın.
 
 8. **Veritabanı nesnelerinizi seçin** sayfasında **Tablolar** düğümünü genişletin.
 
-9. **Müşteriler** ve **siparişler** tablolarını seçip **son** ' a tıklayın.
+9. **Müşteriler** ve **siparişler** tablolarını seçip **son**' a tıklayın.
 
      **NorthwindDataSet** , projenize eklenir ve **müşteriler** ve **siparişler** tabloları **veri kaynakları** penceresinde görünür.
 
@@ -119,9 +119,9 @@ Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını 
 
 Verileri iletmek için ikinci bir form oluşturun.
 
-1. **Proje** menüsünden **Windows formu Ekle** ' yi seçin.
+1. **Proje** menüsünden **Windows formu Ekle**' yi seçin.
 
-2. Varsayılan **Form2** adını bırakın ve **Ekle** ' ye tıklayın.
+2. Varsayılan **Form2** adını bırakın ve **Ekle**' ye tıklayın.
 
 3. Ana **siparişler** düğümünü **veri kaynakları** penceresinden **Form2** üzerine sürükleyin.
 
@@ -137,11 +137,11 @@ Form2 'e bir TableAdapter sorgusu ekleyerek Form1 üzerinde seçilen müşteriye
 
 1. **Çözüm Gezgini** **NorthwindDataSet. xsd** dosyasını çift tıklayın.
 
-2. **OrdersTableAdapter** öğesine sağ tıklayın ve **Sorgu Ekle** ' yi seçin.
+2. **OrdersTableAdapter** öğesine sağ tıklayın ve **Sorgu Ekle**' yi seçin.
 
-3. **SQL deyimlerini kullan** varsayılan seçeneğini bırakın ve ardından **İleri** ' ye tıklayın.
+3. **SQL deyimlerini kullan** varsayılan seçeneğini bırakın ve ardından **İleri**' ye tıklayın.
 
-4. **Satırları döndüren Seç** varsayılan seçeneğini bırakın ve ardından **İleri** ' ye tıklayın.
+4. **Satırları döndüren Seç** varsayılan seçeneğini bırakın ve ardından **İleri**' ye tıklayın.
 
 5. Temelinde döndürmek için sorguya bir WHERE yan tümcesi ekleyin `Orders` `CustomerID` . Sorgu aşağıdakine benzemelidir:
 
@@ -154,17 +154,17 @@ Form2 'e bir TableAdapter sorgusu ekleyerek Form1 üzerinde seçilen müşteriye
     > [!NOTE]
     > Veritabanınız için doğru parametre söz dizimini doğrulayın. Örneğin, Microsoft Access 'te WHERE yan tümcesi şöyle görünür: `WHERE CustomerID = ?` .
 
-6. **İleri** ’ye tıklayın.
+6. **İleri**’ye tıklayın.
 
 7. **DataTableMethod adı doldur** için yazın `FillByCustomerID` .
 
-8. **Bir DataTable döndürün** seçeneğinin işaretini kaldırın ve ardından **İleri** ' ye tıklayın.
+8. **Bir DataTable döndürün** seçeneğinin işaretini kaldırın ve ardından **İleri**' ye tıklayın.
 
 9. **Finish (Son)** düğmesine tıklayın.
 
 ## <a name="create-a-method-on-form2-to-pass-data-to"></a>Verileri iletmek için Form2 üzerinde bir yöntem oluşturma
 
-1. **Form2** ' e sağ tıklayın ve **Kod Düzenleyicisi** 'nde **Form2** ' yi açmak için **kodu görüntüle** ' yi seçin.
+1. **Form2**' e sağ tıklayın ve **Kod Düzenleyicisi**'nde **Form2** ' yi açmak için **kodu görüntüle** ' yi seçin.
 
 2. Aşağıdaki kodu yönteminden sonra **Form2** öğesine ekleyin `Form2_Load` :
 
@@ -173,13 +173,13 @@ Form2 'e bir TableAdapter sorgusu ekleyerek Form1 üzerinde seçilen müşteriye
 
 ## <a name="create-a-method-on-form1-to-pass-data-and-display-form2"></a>Veri geçirmek ve Form2 göstermek için Form1 üzerinde bir yöntem oluşturun
 
-1. **Form1** ' te, müşteri verileri kılavuzuna sağ tıklayın ve ardından **Özellikler** ' e tıklayın.
+1. **Form1**' te, müşteri verileri kılavuzuna sağ tıklayın ve ardından **Özellikler**' e tıklayın.
 
-2. **Özellikler** penceresinde **Olaylar** ' a tıklayın.
+2. **Özellikler** penceresinde **Olaylar**' a tıklayın.
 
 3. **CellDoubleClick** olayına çift tıklayın.
 
-     Kod Düzenleyicisi görünür.
+     Kod düzenleyicisi görünür.
 
 4. Yöntem tanımını aşağıdaki örnekle eşleşecek şekilde güncelleştirin:
 
@@ -188,7 +188,7 @@ Form2 'e bir TableAdapter sorgusu ekleyerek Form1 üzerinde seçilen müşteriye
 
 ## <a name="run-the-app"></a>Uygulamayı çalıştırma
 
-- Uygulamayı çalıştırmak için **F5** 'e basın.
+- Uygulamayı çalıştırmak için **F5**'e basın.
 
 - Bu müşterinin siparişleriyle **Form2** açmak için **Form1** içindeki bir müşteri kaydına çift tıklayın.
 

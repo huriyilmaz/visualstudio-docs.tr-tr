@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 667e3b4e-beff-48be-b3d1-376e1716a895
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 33a552cfe918ef75257a4d23391535622560661c
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 10466acedcd5c7f5fda835d66e654128a556d0a4
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94348742"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99860106"
 ---
 # <a name="how-to-customize-the-code-analysis-dictionary"></a>Nasıl yapılır: Kod Çözümleme Dizinini Özelleştirme
 
@@ -266,14 +266,14 @@ Sözlük/Kısaltmalar/CasingExceptions düğümündeki terimler aşağıdaki kod
 
 ## <a name="to-apply-a-custom-dictionary-to-a-project"></a><a name="BKMK_ToApplyACustomDictionaryToAProject"></a> Bir projeye özel bir sözlük uygulamak için
 
-1. **Çözüm Gezgini** , aşağıdaki yordamlardan birini kullanın:
+1. **Çözüm Gezgini**, aşağıdaki yordamlardan birini kullanın:
 
-    - Tek bir projeye sözlük eklemek için, proje adına sağ tıklayın ve ardından **varolan öğeyi Ekle** ' ye tıklayın. **Varolan öğe Ekle** iletişim kutusunda dosyayı belirtin.
+    - Tek bir projeye sözlük eklemek için, proje adına sağ tıklayın ve ardından **varolan öğeyi Ekle**' ye tıklayın. **Varolan öğe Ekle** iletişim kutusunda dosyayı belirtin.
   
-    - İki veya daha fazla proje arasında paylaşılan bir sözlük eklemek için, **Varolan öğe Ekle** iletişim kutusunda paylaşılacak dosyayı bulun, **Ekle** düğmesinin üzerindeki aşağı oka tıklayın ve ardından **bağlantı olarak ekle** ' ye tıklayın.
+    - İki veya daha fazla proje arasında paylaşılan bir sözlük eklemek için, **Varolan öğe Ekle** iletişim kutusunda paylaşılacak dosyayı bulun, **Ekle** düğmesinin üzerindeki aşağı oka tıklayın ve ardından **bağlantı olarak ekle**' ye tıklayın.
 
-2. **Çözüm Gezgini** , **CustomDictionary.xml** dosya adına sağ tıklayın ve **Özellikler** ' e tıklayın.
+2. **Çözüm Gezgini**, **CustomDictionary.xml** dosya adına sağ tıklayın ve **Özellikler**' e tıklayın.
 
-3. **Yapı eylemi** listesinden **codeanalysisdictionary** ' yi seçin.
+3. **Yapı eylemi** listesinden **codeanalysisdictionary**' yi seçin.
 
-4. **Çıkış Dizinine Kopyala** listesinden **kopyalama** ' yı seçin.
+4. **Çıkış Dizinine Kopyala** listesinden **kopyalama**' yı seçin.

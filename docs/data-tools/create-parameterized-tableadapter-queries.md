@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 104d1d19-b5a9-4071-b81e-1b3af08e9c7b
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: e6eb2f6e1358c91a1103615aca67ede4a3561fae
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 373e062ad7f2d8600fd28f098cbc0cae1c8d5a65
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94436673"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99859014"
 ---
 # <a name="create-parameterized-tableadapter-queries"></a>Parametreleştirilmiş TableAdapter sorguları oluşturma
 
@@ -50,7 +50,7 @@ Parametreli bir sorgu, sorgu içindeki bir WHERE yan tümcesinin koşullarını 
 
 1. Formunuzda zaten bir veri kümesine bağlı olan bir denetim seçin. Daha fazla bilgi için bkz. [Visual Studio 'da verilere Windows Forms denetimleri bağlama](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md).
 
-2. **Veri** menüsünde **Sorgu Ekle** ' yi seçin.
+2. **Veri** menüsünde **Sorgu Ekle**' yi seçin.
 
 3. **Arama ölçütleri Oluşturucu** iletişim kutusunu doldurun ve istenen PARAMETRELERE sahip WHERE yan tümcesini SQL deyimi 'ne ekleyin.
 
@@ -73,7 +73,7 @@ Parametreli bir sorgu, sorgu içindeki bir WHERE yan tümcesinin koşullarını 
 
 5. **Sorgu metin** kutusuna parametreleri alan bir sorgu yazın.
 
-6. **Tamam** ’ı seçin.
+6. **Tamam**’ı seçin.
 
      Bir denetimde parametre ve bir **yükleme** düğmesi girişi için bir denetim eklenir <xref:System.Windows.Forms.ToolStrip> .
 
@@ -94,9 +94,9 @@ Bu bir TableAdapter üzerinde bir sorgu olsaydı, şu kodla gönderilmeyen tüm 
 
 Bir sorguyu null değerlerini kabul edecek şekilde etkinleştirmek için:
 
-1. **Veri kümesi Tasarımcısı** , null parametre değerlerini kabul etmesi gereken TableAdapter sorgusunu seçin.
+1. **Veri kümesi Tasarımcısı**, null parametre değerlerini kabul etmesi gereken TableAdapter sorgusunu seçin.
 
-2. **Özellikler** penceresinde **Parametreler** ' i seçin, sonra **Parametreler koleksiyonu düzenleyicisini** açmak için üç nokta ( **...** ) düğmesini tıklatın.
+2. **Özellikler** penceresinde **Parametreler**' i seçin, sonra **Parametreler koleksiyonu düzenleyicisini** açmak için üç nokta (**...**) düğmesini tıklatın.
 
 3. Null değerlere izin veren parametreyi seçin ve **AllowDBNull** özelliğini olarak ayarlayın `true` .
 

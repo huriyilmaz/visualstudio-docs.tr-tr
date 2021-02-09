@@ -9,13 +9,13 @@ helpviewer_keywords:
 - disable code analysis
 author: mikadumont
 ms.author: midumont
-manager: jillfra
-ms.openlocfilehash: e808cb623fa47c9971e1cdceb15a02b5bf46e901
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+manager: jmartens
+ms.openlocfilehash: 6a1f1466caa921d46ce4701f5074b98f3d5ba051
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94348560"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99860392"
 ---
 # <a name="disable-source-code-analysis-for-net"></a>.NET için kaynak kodu analizini devre dışı bırak
 
@@ -37,7 +37,7 @@ Visual Studio 2019 sürüm 16,3 ' den başlayarak, kod analizi özellikleri sayf
 
 ![Visual Studio 'da Canlı Kod analizini veya derlemeyi etkinleştirme veya devre dışı bırakma](media/run-on-build-run-live-analysis.png)
 
-Bu sayfayı açmak için **Çözüm Gezgini** ' de proje düğümüne sağ tıklayın ve **Özellikler** ' i seçin. **Kod Analizi** sekmesini seçin.
+Bu sayfayı açmak için **Çözüm Gezgini** ' de proje düğümüne sağ tıklayın ve **Özellikler**' i seçin. **Kod Analizi** sekmesini seçin.
 
 - Derleme zamanında kaynak analizini devre dışı bırakmak için, **derlemede Çalıştır** seçeneğinin işaretini kaldırın.
 - Canlı kaynak analizini devre dışı bırakmak için **canlı olarak çalıştır analiz** seçeneğinin işaretini kaldırın.
@@ -69,7 +69,7 @@ Bu sayfayı açmak için **Çözüm Gezgini** ' de proje düğümüne sağ tıkl
 
 ## <a name="source-analysis"></a>Kaynak analizi
 
-Visual Studio 2017 ' de [kaynak analizini](roslyn-analyzers-overview.md) devre dışı bırakabilirsiniz. **Hata listesi** çözümleyici hatalarını temizlemek istiyorsanız, tüm geçerli ihlallerin **Analyze**  >  **Kod analizini çözümle ve menü çubuğunda etkin sorunları Gizle** ' yi seçerek gizleyebilirsiniz. Daha fazla bilgi için bkz. [Ihlalleri gösterme](use-roslyn-analyzers.md#suppress-violations).
+Visual Studio 2017 ' de [kaynak analizini](roslyn-analyzers-overview.md) devre dışı bırakabilirsiniz. **Hata listesi** çözümleyici hatalarını temizlemek istiyorsanız, tüm geçerli ihlallerin   >  **Kod analizini çözümle ve menü çubuğunda etkin sorunları Gizle** ' yi seçerek gizleyebilirsiniz. Daha fazla bilgi için bkz. [Ihlalleri gösterme](use-roslyn-analyzers.md#suppress-violations).
 
 Visual Studio 2019 sürüm 16,3 ' den başlayarak, kaynak kodu analizini kapatabilir veya isteğe bağlı olarak yürütebilirsiniz. Visual Studio 2019 ' e yükseltmeyi düşünün.
 

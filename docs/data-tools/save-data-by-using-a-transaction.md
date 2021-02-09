@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8b835e8f-34a3-413d-9bb5-ebaeb87f1198
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: c1cd112a1960078c72c575542525a5ecf6571b06
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: c633ed01821f500e958d3c7549febc23cf33c09d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94434596"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99858494"
 ---
 # <a name="how-to-save-data-by-using-a-transaction"></a>Nasıl yapılır: işlem kullanarak verileri kaydetme
 
@@ -39,9 +39,9 @@ Bir işlemi uygulamanın en kolay yolu, <xref:System.Transactions.TransactionSco
 
 ## <a name="to-add-a-reference-to-the-systemtransactionsdll"></a>System.Transactions.dll bir başvuru eklemek için
 
-1. **Proje** menüsünde, **Başvuru Ekle** ' yi seçin.
+1. **Proje** menüsünde, **Başvuru Ekle**' yi seçin.
 
-2. **.Net** sekmesinde (SQL Server projeler için **SQL Server** sekmesinde), **System. Transactions** ' ı seçin ve ardından **Tamam** ' ı seçin.
+2. **.Net** sekmesinde (SQL Server projeler için **SQL Server** sekmesinde), **System. Transactions**' ı seçin ve ardından **Tamam**' ı seçin.
 
      Projeye *System.Transactions.dll* bir başvuru eklenir.
 

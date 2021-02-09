@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 80260118-08bc-4b37-bfe5-9422ee7a1e4e
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 1bb0262139e2096cf55ae7581ef854a57c67d22a
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 62175e33949b2c6311fba8e9255b237cd8b43e01
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94434551"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99858481"
 ---
 # <a name="walkthrough-save-data-in-a-transaction"></a>İzlenecek yol: Bir işlemde veri kaydetme
 
@@ -38,7 +38,7 @@ Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını 
 
 2. Aşağıdaki adımları izleyerek Northwind örnek veritabanını yüklersiniz:
 
-    1. Visual Studio 'da **SQL Server Nesne Gezgini** penceresini açın. (SQL Server Nesne Gezgini, Visual Studio Yükleyicisi **veri depolama ve işleme** iş yükünün parçası olarak yüklenir.) **SQL Server** düğümünü genişletin. LocalDB örneğinize sağ tıklayıp **Yeni sorgu** ' yı seçin.
+    1. Visual Studio 'da **SQL Server Nesne Gezgini** penceresini açın. (SQL Server Nesne Gezgini, Visual Studio Yükleyicisi **veri depolama ve işleme** iş yükünün parçası olarak yüklenir.) **SQL Server** düğümünü genişletin. LocalDB örneğinize sağ tıklayıp **Yeni sorgu**' yı seçin.
 
        Sorgu Düzenleyicisi penceresi açılır.
 
@@ -52,13 +52,13 @@ Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını 
 
 İlk adım **Windows Forms bir uygulama** oluşturmaktır.
 
-1. Visual Studio 'da, **Dosya** menüsünde **Yeni**  >  **Proje** ' yi seçin.
+1. Visual Studio 'da, **Dosya** menüsünde **Yeni**  >  **Proje**' yi seçin.
 
-2. Sol bölmedeki **Visual C#** veya **Visual Basic** genişletip **Windows Masaüstü** ' nü seçin.
+2. Sol bölmedeki **Visual C#** veya **Visual Basic** genişletip **Windows Masaüstü**' nü seçin.
 
 3. Orta bölmede **Windows Forms uygulama** proje türünü seçin.
 
-4. Projeyi **SavingDataInATransactionWalkthrough** olarak adlandırın ve ardından **Tamam** ' ı seçin.
+4. Projeyi **SavingDataInATransactionWalkthrough** olarak adlandırın ve ardından **Tamam**' ı seçin.
 
      **SavingDataInATransactionWalkthrough** projesi oluşturulup **Çözüm Gezgini** eklenir.
 
@@ -66,11 +66,11 @@ Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını 
 
 Bu adım, Northwind örnek veritabanındaki ve tablolarını temel alan bir veri kaynağı oluşturmak için **veri kaynağı Yapılandırma Sihirbazı** ' nı kullanır `Customers` `Orders` .
 
-1. Veri **kaynakları** penceresini açmak Için, **veri** menüsünde **veri kaynaklarını göster** ' i seçin.
+1. Veri **kaynakları** penceresini açmak Için, **veri** menüsünde **veri kaynaklarını göster**' i seçin.
 
-2. Veri **kaynakları** penceresinde, **veri kaynağı Yapılandırma Sihirbazı** ' nı başlatmak Için **Yeni veri kaynağı Ekle** ' yi seçin.
+2. Veri **kaynakları** penceresinde, **veri kaynağı Yapılandırma Sihirbazı**' nı başlatmak Için **Yeni veri kaynağı Ekle** ' yi seçin.
 
-3. **Veri kaynağı türü seçin** ekranında **veritabanı** ' nı seçin ve ardından **İleri** ' yi seçin.
+3. **Veri kaynağı türü seçin** ekranında **veritabanı**' nı seçin ve ardından **İleri**' yi seçin.
 
 4. **Veri bağlantınızı seçin** ekranında aşağıdakilerden birini yapın:
 
@@ -80,13 +80,13 @@ Bu adım, Northwind örnek veritabanındaki ve tablolarını temel alan bir veri
 
     - **Yeni bağlantı** ' yı seçerek **Bağlantı Ekle/Değiştir** Iletişim kutusunu başlatın ve Northwind veritabanına bir bağlantı oluşturun.
 
-5. Veritabanınız parola gerektiriyorsa, hassas verileri dahil etme seçeneğini belirleyin ve ardından **İleri** ' yi seçin.
+5. Veritabanınız parola gerektiriyorsa, hassas verileri dahil etme seçeneğini belirleyin ve ardından **İleri**' yi seçin.
 
-6. **Bağlantı dizesini uygulama yapılandırma dosyasına kaydet** ekranında, **İleri** ' yi seçin.
+6. **Bağlantı dizesini uygulama yapılandırma dosyasına kaydet** ekranında, **İleri**' yi seçin.
 
 7. **Veritabanı nesnelerinizi seçin** ekranında **Tablolar** düğümünü genişletin.
 
-8. `Customers`Ve tablolarını seçip `Orders` **son** ' u seçin.
+8. `Customers`Ve tablolarını seçip `Orders` **son**' u seçin.
 
      **NorthwindDataSet** , projenize eklenir ve `Customers` `Orders` Tablolar **veri kaynakları** penceresinde görünür.
 
@@ -110,9 +110,9 @@ Veri **kaynakları** penceresinden formunuza öğe sürükleyerek veri bağlant�
 
 ### <a name="to-add-a-reference-to-the-systemtransactions-dll-file"></a>System. Transactions DLL dosyasına bir başvuru eklemek için
 
-1. **Proje** menüsünde, **Başvuru Ekle** ' yi seçin.
+1. **Proje** menüsünde, **Başvuru Ekle**' yi seçin.
 
-2. **System. Transactions** ( **.net** sekmesinde) öğesini seçin ve ardından **Tamam** ' ı seçin.
+2. **System. Transactions** ( **.net** sekmesinde) öğesini seçin ve ardından **Tamam**' ı seçin.
 
      **System. Transactions** öğesine bir başvuru projeye eklenir.
 
@@ -169,7 +169,7 @@ Formunuza bırakılan ilk tablo için, kod varsayılan olarak `click` , üzerind
 
 ## <a name="run-the-application"></a>Uygulamayı çalıştırma
 
-Uygulamayı çalıştırmak için **F5** 'e basın.
+Uygulamayı çalıştırmak için **F5**'e basın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

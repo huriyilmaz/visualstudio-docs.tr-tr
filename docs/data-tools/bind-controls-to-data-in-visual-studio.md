@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: be8b6623-86a6-493e-ab7a-050de4661fd6
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 1b48c2e8b557a47c1ed795b6f9d3c3ced6247a43
-ms.sourcegitcommit: 63ff7cb85b3baeeb713240d17bb2a18497f3741d
+ms.openlocfilehash: a237d07af14cd6f31af300eff050c8952fd9840e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94518628"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99859352"
 ---
 # <a name="bind-controls-to-data-in-visual-studio"></a>Visual Studio'da verilere denetimler bağlama
 
@@ -47,7 +47,7 @@ Veri bağlama bağlamında, veri kaynağı, Kullanıcı arabiriminize bağlanabi
 
 ## <a name="data-sources-window"></a>Veri Kaynakları penceresi
 
-Veri kaynakları, projenizde **veri kaynakları** penceresinde öğeler olarak kullanılabilir. Bu pencere, form tasarım yüzeyi projenizdeki etkin pencere olduğunda görünür veya **View**  >  **diğer Windows**  >  **veri kaynaklarını** görüntüle ' yi seçerek (proje açıkken) açabilirsiniz. Bu penceredeki öğeleri, temel alınan verilere bağlanan denetimler oluşturmak için sürükleyebilir ve sağ tıklayarak da veri kaynaklarını yapılandırabilirsiniz.
+Veri kaynakları, projenizde **veri kaynakları** penceresinde öğeler olarak kullanılabilir. Bu pencere, form tasarım yüzeyi projenizdeki etkin pencere olduğunda görünür veya   >  **diğer Windows**  >  **veri kaynaklarını** görüntüle ' yi seçerek (proje açıkken) açabilirsiniz. Bu penceredeki öğeleri, temel alınan verilere bağlanan denetimler oluşturmak için sürükleyebilir ve sağ tıklayarak da veri kaynaklarını yapılandırabilirsiniz.
 
 ![Veri Kaynakları penceresi](../data-tools/media/raddata-data-sources-window.png)
 
@@ -59,7 +59,7 @@ Aşağıdaki tabloda, denetimleri verilere bağlamak için gerçekleştirdiğini
 
 |Görev|Daha fazla bilgi|
 |----------| - |
-|**Veri kaynakları** penceresini açın.|Düzenleyicide bir tasarım yüzeyi açın ve **View**  >  **veri kaynaklarını** görüntüle ' yi seçin.|
+|**Veri kaynakları** penceresini açın.|Düzenleyicide bir tasarım yüzeyi açın ve   >  **veri kaynaklarını** görüntüle ' yi seçin.|
 |Projenize bir veri kaynağı ekleyin.|[Yeni veri kaynağı ekleme](../data-tools/add-new-data-sources.md)|
 |**Veri kaynakları** penceresinden tasarımcıya bir öğe sürüklediğinizde oluşturulan denetimi ayarlayın.|[Veri Kaynakları penceresinden sürüklendiğinde denetimin oluşturulmasını ayarlama](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)|
 |**Veri kaynakları** penceresindeki öğelerle ilişkili denetimlerin listesini değiştirin.|[Veri kaynakları penceresine özel denetimler ekleme](../data-tools/add-custom-controls-to-the-data-sources-window.md)|

@@ -19,21 +19,21 @@ helpviewer_keywords:
 ms.assetid: fae72958-0893-47d6-b3dd-9d42418418e4
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: d5e0c287565c001870f91f4912afad28864fe2ef
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 9fb859d61ab31a554579f72121a18a541b2995a7
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94434655"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99858559"
 ---
 # <a name="read-xml-data-into-a-dataset"></a>Bir veri kümesinin içine XML verileri okuma
 
 ADO.NET XML verileriyle çalışmak için basit yöntemler sağlar. Bu kılavuzda, XML verilerini bir veri kümesine yükleyen bir Windows uygulaması oluşturacaksınız. Veri kümesi daha sonra bir denetimde görüntülenir <xref:System.Windows.Forms.DataGridView> . Son olarak, XML dosyasının içeriğini temel alan bir XML şeması metin kutusunda görüntülenir.
 
-## <a name="create-a-new-project"></a>Yeni bir proje oluşturma
+## <a name="create-a-new-project"></a>Yeni proje oluşturma
 
 C# veya Visual Basic için yeni bir **Windows Forms uygulama** projesi oluşturun. Projeyi **ReadingXML** olarak adlandırın.
 
@@ -41,9 +41,9 @@ C# veya Visual Basic için yeni bir **Windows Forms uygulama** projesi oluşturu
 
 Bu izlenecek yol, XML verilerinin bir veri kümesine okunmasına odaklandığı için, bir XML dosyasının içeriği sağlanır.
 
-1. **Proje** menüsünde **Yeni öğe Ekle** ' yi seçin.
+1. **Proje** menüsünde **Yeni öğe Ekle**' yi seçin.
 
-2. **XML dosyası** ' nı seçin, **authors.xml** dosyayı adlandırın ve ardından **Ekle** ' yi seçin.
+2. **XML dosyası**' nı seçin, **authors.xml** dosyayı adlandırın ve ardından **Ekle**' yi seçin.
 
    XML dosyası tasarımcıya yüklenir ve düzenleme için hazırlayın.
 
@@ -109,7 +109,7 @@ Bu izlenecek yol, XML verilerinin bir veri kümesine okunmasına odaklandığı 
    </Authors_Table>
    ```
 
-4. **Dosya** menüsünde **authors.xmlkaydet** ' i seçin.
+4. **Dosya** menüsünde **authors.xmlkaydet**' i seçin.
 
 ## <a name="create-the-user-interface"></a>Kullanıcı arabirimini oluşturma
 
@@ -152,11 +152,11 @@ Bu uygulama için Kullanıcı arabirimi aşağıdakilerden oluşur:
 
 Bu adımda adlı yeni bir veri kümesi oluşturursunuz `authors` . Veri kümeleri hakkında daha fazla bilgi için bkz. [Visual Studio 'Da veri kümesi araçları](../data-tools/dataset-tools-in-visual-studio.md).
 
-1. **Çözüm Gezgini** , **Form1** için kaynak dosyasını seçin ve sonra **Çözüm Gezgini** araç çubuğunda **Tasarımcı görüntüle** düğmesini seçin.
+1. **Çözüm Gezgini**, **Form1** için kaynak dosyasını seçin ve sonra **Çözüm Gezgini** araç çubuğunda **Tasarımcı görüntüle** düğmesini seçin.
 
 2. [Araç kutusu, veri sekmesinde](../ide/reference/toolbox-data-tab.md)bir **veri kümesini** **Form1** üzerine sürükleyin.
 
-3. **Veri kümesi Ekle** Iletişim kutusunda **türsüz veri kümesi** ' ni seçin ve ardından **Tamam** ' ı seçin.
+3. **Veri kümesi Ekle** Iletişim kutusunda **türsüz veri kümesi**' ni seçin ve ardından **Tamam**' ı seçin.
 
      **DataSet1** , bileşen tepsisine eklenir.
 
@@ -166,7 +166,7 @@ Bu adımda adlı yeni bir veri kümesi oluşturursunuz `authors` . Veri kümeler
 
 **XML oku** düğmesi XML dosyasını veri kümesine okur. Daha sonra bu <xref:System.Windows.Forms.DataGridView> Denetim, veri kümesine bağlayan denetimdeki özellikleri ayarlar.
 
-1. **Çözüm Gezgini** , **Form1** ' i seçin ve sonra **Çözüm Gezgini** araç çubuğunda **Tasarımcı görüntüle** düğmesini seçin.
+1. **Çözüm Gezgini**, **Form1**' i seçin ve sonra **Çözüm Gezgini** araç çubuğunda **Tasarımcı görüntüle** düğmesini seçin.
 
 2. **XML oku** düğmesini seçin.
 
@@ -183,7 +183,7 @@ Bu adımda adlı yeni bir veri kümesi oluşturursunuz `authors` . Veri kümeler
 
 **Şemayı göster** düğmesi, <xref:System.IO.StringWriter> şemayla doldurulmuş ve denetimde görüntülenen bir nesne oluşturur <xref:System.Windows.Forms.TextBox> .
 
-1. **Çözüm Gezgini** , **Form1** ' i seçin ve sonra **Tasarımcı görüntüle** düğmesini seçin.
+1. **Çözüm Gezgini**, **Form1**' i seçin ve sonra **Tasarımcı görüntüle** düğmesini seçin.
 
 2. **Şemayı göster** düğmesini seçin.
 

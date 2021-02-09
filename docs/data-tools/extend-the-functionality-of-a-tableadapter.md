@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 418249c8-c7f3-47ef-a94c-744cb6fe6aaf
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 6e1c594ab1f74cddb962cc2a6d4030ede1e53c8f
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: bfc0f68f38f801d63367b1ee9150c723767ec667
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94435084"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99858884"
 ---
 # <a name="extend-the-functionality-of-a-tableadapter"></a>Bir TableAdapter’ın işlevselliğini genişletme
 
@@ -44,7 +44,7 @@ Aşağıdaki örnek, adlı bir TableAdapter `CustomersTableAdapter` 'ın ile bir
 
 2. Sınıfı adlandırın `CustomersTableAdapterExtended` .
 
-3. **Ekle** ’yi seçin.
+3. **Add (Ekle)** seçeneğini belirleyin.
 
 4. Kodu, projeniz için doğru ad alanı ve kısmi sınıf adı ile aşağıdaki gibi değiştirin:
 

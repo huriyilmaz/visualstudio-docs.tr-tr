@@ -9,22 +9,22 @@ helpviewer_keywords:
 ms.assetid: eaec9f07-d580-436d-934d-76c4e59439aa
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 3bf37d9e5d672f0ecce262699fdd5d704cde9efe
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: e1d7126fe795e269ee619e03daf2b81d6458f2e7
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97729034"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99857821"
 ---
 # <a name="class-tab-window-properties-dialog-box"></a>Sınıf Sekmesi, Pencere Özellikleri İletişim Kutusu
 Seçili pencerenin sınıfındaki bilgileri göstermek için **sınıf** sekmesini kullanın. [Pencere özellikleri Iletişim kutusunu](../debugger/window-properties-dialog-box.md)görüntülemek Için odağı [Windows görünümü](../debugger/windows-view.md) penceresine taşıyın. Ağaçta herhangi bir pencere düğümünü seçin, sonra **Görünüm** menüsünden **Özellikler** ' i seçin.
 
  Aşağıdaki ayarlar **sınıf** sekmesinde mevcuttur:
 
-|Giriş|Açıklama|
+|Giriş|Description|
 |-----------|-----------------|
 |**Sınıf adı**|Bu pencere sınıfının adı (veya sıra numarası).|
 |**Sınıf stilleri**|Sınıf stili kodlarının birleşimi.|

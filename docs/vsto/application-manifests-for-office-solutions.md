@@ -11,15 +11,15 @@ helpviewer_keywords:
 - application manifests [Office development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 5a16d0f438d06cbfa48538bb3e370ed9b334ad16
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: b3fbea6df2b66a108a048332e28a623bdaa95786
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96847929"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99839034"
 ---
 # <a name="application-manifests-for-office-solutions"></a>Office çözümleri için uygulama bildirimleri
   Uygulama bildirimi, Microsoft Office çözümüne yüklenen derlemeleri açıklayan bir XML dosyasıdır. Visual Studio 'daki Microsoft Office geliştirme araçları, [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] [ClickOnce uygulama bildirimi](../deployment/clickonce-application-manifest.md) başvurusunda tanımlanan uygulama bildirimi şemasını kullanır.
@@ -30,9 +30,9 @@ ms.locfileid: "96847929"
 |-------------|-----------------|----------------|
 |[&#60;derleme&#62; öğesi ClickOnce uygulaması &#40;&#41;](../deployment/assembly-element-clickonce-deployment.md)|Gereklidir. Üst düzey öğe.|**manifestVersion**|
 |[&#60;assemblyIdentity&#62; öğesi ClickOnce uygulaması &#40;&#41;](../deployment/assemblyidentity-element-clickonce-deployment.md)|Gereklidir. [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]Uygulamanın birincil derlemesini tanımlar.|**ada**<br /><br /> **Sürüm**<br /><br /> **publicKeyToken**<br /><br /> **processorArchitecture**<br /><br /> **dildir**|
-|[&#60;TrustInfo&#62; öğesi ClickOnce uygulaması &#40;&#41;](../deployment/trustinfo-element-clickonce-application.md)|Uygulama güvenlik gereksinimlerini tanımlar.|Hiçbiri|
+|[&#60;TrustInfo&#62; öğesi ClickOnce uygulaması &#40;&#41;](../deployment/trustinfo-element-clickonce-application.md)|Uygulama güvenlik gereksinimlerini tanımlar.|Yok|
 |[&#60;giriş noktası&#62; öğesi ClickOnce uygulaması &#40;&#41;](../deployment/entrypoint-element-clickonce-application.md)|Gereklidir. Yürütme için uygulama kodu giriş noktasını tanımlar.|**ada**<br /><br /> **dependencyName**<br /><br /> **customHostSpecified**|
-|[&#60;bağımlılık&#62; öğesi ClickOnce uygulaması &#40;&#41;](../deployment/dependency-element-clickonce-deployment.md)|Gereklidir. Uygulamanın çalışması için gereken her bağımlılığı tanımlar. İsteğe bağlı olarak, önceden yüklenmesi gereken derlemeleri tanımlar.|Hiçbiri|
+|[&#60;bağımlılık&#62; öğesi ClickOnce uygulaması &#40;&#41;](../deployment/dependency-element-clickonce-deployment.md)|Gereklidir. Uygulamanın çalışması için gereken her bağımlılığı tanımlar. İsteğe bağlı olarak, önceden yüklenmesi gereken derlemeleri tanımlar.|Yok|
 |[&#60;dosya&#62; öğesi ClickOnce uygulaması &#40;&#41;](../deployment/file-element-clickonce-application.md)|Gereklidir. Uygulama tarafından kullanılan derleme olmayan her dosyayı tanımlar. , Dosyayla ilişkili bileşen nesne modeli (COM) yalıtım verilerini içerebilir.|**ada**<br /><br /> **boyutla**|
 
  Office çözümleri için uygulama bildirimlerinin ad alanında aşağıdaki öğesi vardır `co.v1` .
@@ -71,23 +71,23 @@ ms.locfileid: "96847929"
 
 |Öğe|Açıklama|Öznitelikler|
 |-------------|-----------------|----------------|
-|[&#60;Customhostbelirtilen&#62; öğesi Visual Studio 'da Office geliştirme &#40;&#41;](../vsto/customhostspecified-element-office-development-in-visual-studio.md)|Gereklidir. Bildirimi özel olarak bir Office çözümü olarak işaretler.|Hiçbiri|
-|[&#60;AddIn&#62; öğesi Visual Studio 'da Office geliştirme &#40;&#41;](../vsto/addin-element-office-development-in-visual-studio.md)|Gereklidir. Giriş noktalarını tek bir ad alanına depolar.|Hiçbiri|
+|[&#60;Customhostbelirtilen&#62; öğesi Visual Studio 'da Office geliştirme &#40;&#41;](../vsto/customhostspecified-element-office-development-in-visual-studio.md)|Gereklidir. Bildirimi özel olarak bir Office çözümü olarak işaretler.|Yok|
+|[&#60;AddIn&#62; öğesi Visual Studio 'da Office geliştirme &#40;&#41;](../vsto/addin-element-office-development-in-visual-studio.md)|Gereklidir. Giriş noktalarını tek bir ad alanına depolar.|Yok|
 |[&#60;entryPointsCollection&#62; öğesi Visual Studio 'da Office geliştirme &#40;&#41;](../vsto/entrypointscollection-element-office-development-in-visual-studio.md)|Gereklidir. Bir veya daha fazla Office çözümü için tüm derlemeleri gruplandırır.|**id**|
-|[&#60;entryPoints&#62; öğesi Visual Studio 'da Office geliştirme &#40;&#41;](../vsto/entrypoints-element-office-development-in-visual-studio.md)|Gereklidir. Tüm derlemeleri bir Office çözümünü çalıştıracak şekilde gruplandırır.|Hiçbiri|
+|[&#60;entryPoints&#62; öğesi Visual Studio 'da Office geliştirme &#40;&#41;](../vsto/entrypoints-element-office-development-in-visual-studio.md)|Gereklidir. Tüm derlemeleri bir Office çözümünü çalıştıracak şekilde gruplandırır.|Yok|
 |[&#60;entryPoint&#62; öğesi Visual Studio 'da Office geliştirme &#40;&#41;](../vsto/entrypoint-element-office-development-in-visual-studio.md)|Gereklidir. Bir Office çözümünde çalıştırılacak derlemeyi tanımlar.|**sınıfı**<br /><br /> **Sözleşmesi**|
 |[&#60;güncelleştirme&#62; öğesi Visual Studio 'da Office geliştirme &#40;&#41;](../vsto/update-element-office-development-in-visual-studio.md)|Gereklidir. Çözüm için güncelleştirmeleri yapılandırır.|**etkinletir**<br /><br /> **dolmadan**|
-|[&#60;, Visual Studio 'da Office geliştirme&#62; öğe &#40;&#41;](../vsto/postactions-element-office-development-in-visual-studio.md)|İsteğe bağlı. Office çözümleri yüklendikten sonra çalıştırılan tüm dağıtım sonrası eylemlerini gruplandırır.|Hiçbiri|
-|[&#60;Postaeylemi&#62; öğesi Visual Studio 'da Office geliştirme &#40;&#41;](../vsto/postaction-element-office-development-in-visual-studio.md)|İsteğe bağlı. Dağıtım sonrası eylemi tanımlar.|Hiçbiri|
-|[&#60;postActionData&#62; öğesi Visual Studio 'da Office geliştirme &#40;&#41;](../vsto/postactiondata-element-office-development-in-visual-studio.md)|İsteğe bağlı. Dağıtım sonrası eylemi için verileri yapılandırır.|Hiçbiri|
-|[ Visual Studio 'da Office geliştirme &#40;uygulama&#62; öğesi&#60;&#41;](../vsto/application-element-office-development-in-visual-studio.md)|Gereklidir. Uygulamaya özgü bilgileri tek bir düğüme kaydırır.|Hiçbiri|
-|[&#60;özelleştirmeler&#62; öğesi Visual Studio 'da Office geliştirme &#40;&#41;](../vsto/customizations-element-office-development-in-visual-studio.md)|Gereklidir. Uygulamaya özgü tüm bilgileri ayrı bir ad alanında depolar.|Hiçbiri|
+|[&#60;, Visual Studio 'da Office geliştirme&#62; öğe &#40;&#41;](../vsto/postactions-element-office-development-in-visual-studio.md)|İsteğe bağlı. Office çözümleri yüklendikten sonra çalıştırılan tüm dağıtım sonrası eylemlerini gruplandırır.|Yok|
+|[&#60;Postaeylemi&#62; öğesi Visual Studio 'da Office geliştirme &#40;&#41;](../vsto/postaction-element-office-development-in-visual-studio.md)|İsteğe bağlı. Dağıtım sonrası eylemi tanımlar.|Yok|
+|[&#60;postActionData&#62; öğesi Visual Studio 'da Office geliştirme &#40;&#41;](../vsto/postactiondata-element-office-development-in-visual-studio.md)|İsteğe bağlı. Dağıtım sonrası eylemi için verileri yapılandırır.|Yok|
+|[ Visual Studio 'da Office geliştirme &#40;uygulama&#62; öğesi&#60;&#41;](../vsto/application-element-office-development-in-visual-studio.md)|Gereklidir. Uygulamaya özgü bilgileri tek bir düğüme kaydırır.|Yok|
+|[&#60;özelleştirmeler&#62; öğesi Visual Studio 'da Office geliştirme &#40;&#41;](../vsto/customizations-element-office-development-in-visual-studio.md)|Gereklidir. Uygulamaya özgü tüm bilgileri ayrı bir ad alanında depolar.|Yok|
 |[&#60;özelleştirme&#62; öğesi Visual Studio 'da Office geliştirme &#40;&#41;](../vsto/customization-element-office-development-in-visual-studio.md)|Gereklidir. Uygulama konağına özgü bilgileri ayrı bir ad alanında depolar.|**özniteliði**|
 |[&#60;belge&#62; öğesi Visual Studio 'da Office geliştirme &#40;&#41;](../vsto/document-element-office-development-in-visual-studio.md)|Yalnızca belge düzeyi çözümler için gereklidir. Özelleştirmeden özel bilgileri depolar.|**SolutionID**|
 |[&#60;appAddin&#62; öğesi Visual Studio 'da Office geliştirme &#40;&#41;](../vsto/appaddin-element-office-development-in-visual-studio.md)|Yalnızca uygulama düzeyi çözümler için gereklidir. Özelleştirmeden özel bilgileri depolar.|**uygulama**<br /><br /> **loadBehavior**<br /><br /> **Işareti**|
-|[&#60;friendlyName&#62; öğesi Visual Studio 'da Office geliştirme &#40;&#41;](../vsto/friendlyname-element-office-development-in-visual-studio.md)|İsteğe bağlı. , Yüklü VSTO eklentileri listesinde görünen VSTO eklentisinin adını depolar.|Hiçbiri|
-|[&#60;Description&#62; öğesi Visual Studio 'da Office geliştirme &#40;&#41;](../vsto/description-element-office-development-in-visual-studio.md)|Yalnızca VSTO eklentileri için gereklidir. Yüklü programlar listesinde görüntülenen açıklamayı depolar.|Hiçbiri|
-|[&#60;FormRegion&#62; öğesi Visual Studio 'da Office geliştirme &#40;&#41;](../vsto/formregions-element-office-development-in-visual-studio.md)|Yalnızca form bölgelerini içeren Outlook VSTO eklentileri için gereklidir.|Hiçbiri|
+|[&#60;friendlyName&#62; öğesi Visual Studio 'da Office geliştirme &#40;&#41;](../vsto/friendlyname-element-office-development-in-visual-studio.md)|İsteğe bağlı. , Yüklü VSTO eklentileri listesinde görünen VSTO eklentisinin adını depolar.|Yok|
+|[&#60;Description&#62; öğesi Visual Studio 'da Office geliştirme &#40;&#41;](../vsto/description-element-office-development-in-visual-studio.md)|Yalnızca VSTO eklentileri için gereklidir. Yüklü programlar listesinde görüntülenen açıklamayı depolar.|Yok|
+|[&#60;FormRegion&#62; öğesi Visual Studio 'da Office geliştirme &#40;&#41;](../vsto/formregions-element-office-development-in-visual-studio.md)|Yalnızca form bölgelerini içeren Outlook VSTO eklentileri için gereklidir.|Yok|
 |[&#60;formRegion&#62; öğesi Visual Studio 'da Office geliştirme &#40;&#41;](../vsto/formregion-element-office-development-in-visual-studio.md)|Yalnızca form bölgelerini içeren Outlook VSTO eklentileri için gereklidir.|**Ad**|
 |[&#60;vstoRuntime&#62; öğesi Visual Studio 'da Office geliştirme &#40;&#41;](../vsto/vstoruntime-element-office-development-in-visual-studio.md)|Gereklidir. Office çözümünün desteklediği, Office çalışma zamanı için Visual Studio Araçları belirli bir sürümünü açıklar.|**Yayın**<br /><br /> **Sürüm**<br /><br /> **supportUrl**|
 
