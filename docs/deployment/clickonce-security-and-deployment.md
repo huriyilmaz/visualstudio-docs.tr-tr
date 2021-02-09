@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: abab6d34-c3c2-45c1-a8b6-43c7d3131e7a
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b055928212dd4b094f4bd8987f6ce03960e932f1
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: 8bb0bdeae09f22a2b45e3029fbc9097c00911d2a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94382683"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99930024"
 ---
 # <a name="clickonce-security-and-deployment"></a>ClickOnce güvenliği ve dağıtımı
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] , en az kullanıcı etkileşimi ile yüklenebilen ve çalıştırılabilen, kendi kendini güncelleştiren Windows tabanlı uygulamalar oluşturmanıza olanak sağlayan bir dağıtım teknolojisidir. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] projelerinizi Visual Basic ve Visual C# ile geliştirdiyseniz ClickOnce teknolojisi ile dağıtılan uygulamaları yayımlama ve güncelleştirme için tam destek sağlar. Visual C++ uygulamalarını dağıtma hakkında daha fazla bilgi için bkz. [Visual C++ uygulamalar Için ClickOnce dağıtımı](/cpp/windows/clickonce-deployment-for-visual-cpp-applications).
@@ -40,7 +40,7 @@ ms.locfileid: "94382683"
   Geçmişte bu sorunlar, geliştiricilerin, yükleme kolaylığı için zengin bir kullanıcı arabiriminden doğan Windows tabanlı uygulamalar yerine Web uygulamaları oluşturmaya karar vermesine neden olabilir. Kullanılarak dağıtılan uygulamaları kullanarak [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] her iki teknolojiden en iyi şekilde sahip olabilirsiniz.
 
 ## <a name="what-is-a-clickonce-application"></a>ClickOnce uygulaması nedir?
- [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Uygulama, teknoloji kullanılarak yayınlanan Windows Presentation Foundation ( *. xbap* ), Windows Forms ( *. exe* ), konsol uygulaması (. *exe* ) veya Office çözümüdür ( *. dll* ) [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . Bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulamayı üç farklı şekilde yayımlayabilirsiniz: bir Web sayfasından, bir ağ dosya paylaşımından veya CD-ROM gibi medyadan. Bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama, son kullanıcının bilgisayarına yüklenebilir ve bilgisayar çevrimdışıyken bile yerel olarak çalıştırılabilir veya son kullanıcının bilgisayarına hiçbir şey kalıcı olarak yüklenmeden yalnızca çevrimiçi modda çalıştırılabilir. Daha fazla bilgi için bkz. [ClickOnce dağıtım stratejisi seçme](../deployment/choosing-a-clickonce-deployment-strategy.md).
+ [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Uygulama, teknoloji kullanılarak yayınlanan Windows Presentation Foundation (*. xbap*), Windows Forms (*. exe*), konsol uygulaması (.*exe*) veya Office çözümüdür (*. dll*) [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . Bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulamayı üç farklı şekilde yayımlayabilirsiniz: bir Web sayfasından, bir ağ dosya paylaşımından veya CD-ROM gibi medyadan. Bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama, son kullanıcının bilgisayarına yüklenebilir ve bilgisayar çevrimdışıyken bile yerel olarak çalıştırılabilir veya son kullanıcının bilgisayarına hiçbir şey kalıcı olarak yüklenmeden yalnızca çevrimiçi modda çalıştırılabilir. Daha fazla bilgi için bkz. [ClickOnce dağıtım stratejisi seçme](../deployment/choosing-a-clickonce-deployment-strategy.md).
 
  [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulamalar kendi kendine güncellenebilir. Bunlar, kullanılabilir olduklarında yeni sürümleri denetleyebilir ve tüm güncelleştirilmiş dosyaları otomatik olarak değiştirir. Geliştirici güncelleştirme davranışını belirtebilir; bir ağ yöneticisi ayrıca güncelleştirme stratejilerini denetleyebilir, örneğin, bir güncelleştirmeyi zorunlu olarak işaretler. Güncelleştirmeler Ayrıca son kullanıcı veya yönetici tarafından daha önceki bir sürüme geri alınabilir. Daha fazla bilgi için bkz. [ClickOnce güncelleştirme stratejisi seçme](../deployment/choosing-a-clickonce-update-strategy.md).
 
@@ -62,7 +62,7 @@ ms.locfileid: "94382683"
  Çekirdek [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] dağıtım mimarisi ıkı XML bildirim dosyasını temel alır: bir uygulama bildirimi ve bir dağıtım bildirimi. Dosyalar, ClickOnce uygulamalarının nereden yükleneceğini, nasıl güncelleştirileceğini ve ne zaman güncelleştirileceğini tanımlamakta kullanılır.
 
 ### <a name="publish-clickonce-applications"></a>ClickOnce uygulamalarını yayımlama
- Uygulama bildirimi uygulamanın kendisini açıklar. Bu derlemeler, uygulamayı oluşturan bağımlılıklar ve dosyalar, gerekli izinler ve güncelleştirmelerin kullanılabildiği konum dahildir. Uygulama geliştiricisi, Visual Studio 'daki Yayımla Sihirbazı 'nı veya içinde Bildirim Oluşturma ve Düzenleme Aracı ( *Mage.exe* ) kullanarak uygulama bildirimini yazar [!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)] . Daha fazla bilgi için bkz. [nasıl yapılır: yayımlama sihirbazını kullanarak ClickOnce uygulaması yayımlama](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md).
+ Uygulama bildirimi uygulamanın kendisini açıklar. Bu derlemeler, uygulamayı oluşturan bağımlılıklar ve dosyalar, gerekli izinler ve güncelleştirmelerin kullanılabildiği konum dahildir. Uygulama geliştiricisi, Visual Studio 'daki Yayımla Sihirbazı 'nı veya içinde Bildirim Oluşturma ve Düzenleme Aracı (*Mage.exe*) kullanarak uygulama bildirimini yazar [!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)] . Daha fazla bilgi için bkz. [nasıl yapılır: yayımlama sihirbazını kullanarak ClickOnce uygulaması yayımlama](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md).
 
  Dağıtım bildirimi uygulamanın nasıl dağıtılacağını açıklar. Bu, uygulama bildiriminin konumunu ve istemcilerin çalıştırması gereken uygulama sürümünü içerir.
 
@@ -74,7 +74,7 @@ ms.locfileid: "94382683"
 
  Güvenilen bir sertifikayla imzalanmış ClickOnce uygulamalarının sessizce yüklenebilmesi için, sertifikalara makinede veya kuruluş düzeyinde güveniliyor. Güvenilen Sertifikalar hakkında daha fazla bilgi için bkz. [Güvenilen uygulama dağıtımına genel bakış](../deployment/trusted-application-deployment-overview.md).
 
- Uygulama, kullanıcının **Başlat** menüsüne ve **Denetim Masası** 'Ndaki **Program Ekle veya Kaldır** grubuna eklenebilir. Diğer dağıtım teknolojilerinin aksine, **Program dosyaları** klasörüne veya kayıt defterine hiçbir şey eklenmez ve yükleme için yönetici hakları gerekmez
+ Uygulama, kullanıcının **Başlat** menüsüne ve **Denetim Masası**'Ndaki **Program Ekle veya Kaldır** grubuna eklenebilir. Diğer dağıtım teknolojilerinin aksine, **Program dosyaları** klasörüne veya kayıt defterine hiçbir şey eklenmez ve yükleme için yönetici hakları gerekmez
 
 > [!NOTE]
 > Uygulamanın, bir Web uygulaması gibi davranması için **Başlat** menüsüne ve **Program Ekle/Kaldır** grubuna eklenmesini engellemek de mümkündür. Daha fazla bilgi için bkz. [ClickOnce dağıtım stratejisi seçme](../deployment/choosing-a-clickonce-deployment-strategy.md).

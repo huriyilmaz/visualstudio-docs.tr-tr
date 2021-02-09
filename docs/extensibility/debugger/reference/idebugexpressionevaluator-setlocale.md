@@ -9,26 +9,26 @@ helpviewer_keywords:
 ms.assetid: d3d2027d-74e2-4ae6-bcc7-59d12f873b7c
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 57ddee6e1796159c505b67982f25d1ba09684561
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0d035ac829f689a61b5703fe5d0df62bfe6e598a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80729465"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99930232"
 ---
 # <a name="idebugexpressionevaluatorsetlocale"></a>IDebugExpressionEvaluator::SetLocale
 Bu yöntem, yazdırılabilir sonuçlar oluşturmak için kullanılacak dili ayarlar.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
-HRESULT SetLocale( 
+HRESULT SetLocale( 
    WORD wLangID
 );
 ```

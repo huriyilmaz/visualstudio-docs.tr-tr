@@ -9,26 +9,26 @@ helpviewer_keywords:
 ms.assetid: 52c42a2e-f144-476b-8bef-442464c8fe8e
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a6ba87d6c1a1f7370ce5e209440589f362b87035
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 13759bc8598c4739fbb9d2263dd8dc7d1b84c16e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80729526"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99930427"
 ---
 # <a name="idebugexpressionevaluatorgetmethodlocationproperty"></a>IDebugExpressionEvaluator::GetMethodLocationProperty
 Bu yöntem, bir yöntem konumunu ve sapmayı bir bellek adresine dönüştürür.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
-HRESULT GetMethodLocationProperty( 
+HRESULT GetMethodLocationProperty( 
    LPCOLESTR             upstrFullyQualifiedMethodPlusOffset,
    IDebugSymbolProvider* pSymbolProvider,
    IDebugAddress*        pAddress,
