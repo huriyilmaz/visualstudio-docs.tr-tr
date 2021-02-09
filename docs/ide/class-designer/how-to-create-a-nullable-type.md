@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 84673a89-3f6d-4668-919e-1c0f56182fe5
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 3e229583b2ff375928ea462ee676e21462157dcb
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: de87e78b6f7ea14643df1070faf731e92d7a5767
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94901654"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99850223"
 ---
 # <a name="how-to-create-a-nullable-type-in-class-designer"></a>Nasıl yapılır: Sınıf Tasarımcısı null yapılabilir bir tür oluşturma
 
@@ -47,11 +47,11 @@ C# ' de Nullable türler hakkında daha fazla bilgi için bkz. [Nullable türler
 
 1. Sınıf diyagramında, varolan bir sınıfı genişletin veya yeni bir sınıf oluşturun.
 
-2. Projeye bir sınıf eklemek için, **sınıf diyagramı** menüsünde, sınıf Ekle **Ekle ' ye tıklayın**  >  **Add Class**.
+2. Projeye bir sınıf eklemek için, **sınıf diyagramı** menüsünde, sınıf Ekle **Ekle ' ye tıklayın**  >  .
 
 3. Sınıf şeklini genişletmek için, **sınıf diyagramı** menüsünde **Genişlet**' e tıklayın.
 
-4. Sınıf şeklini seçin. **Sınıf diyagramı** menüsünde alan **Ekle**' ye tıklayın  >  **Field**. Varsayılan ad **alanı** olan yeni bir alan sınıf şeklinde ve ayrıca **Sınıf Ayrıntıları** penceresinde görünür.
+4. Sınıf şeklini seçin. **Sınıf diyagramı** menüsünde alan **Ekle**' ye tıklayın  >  . Varsayılan ad **alanı** olan yeni bir alan sınıf şeklinde ve ayrıca **Sınıf Ayrıntıları** penceresinde görünür.
 
 5. **Sınıf Ayrıntıları** penceresinin (veya sınıf şeklinin kendisinde) **ad** sütununda, yeni alanın adını geçerli ve anlamlı bir adla değiştirin.
 

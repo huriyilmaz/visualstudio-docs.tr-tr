@@ -15,15 +15,15 @@ helpviewer_keywords:
 - Ribbon [Office development in Visual Studio], Outlook
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 25b4faa994a99bccdc2122ad6b9d124f7391e9f8
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: c12e92ef77130ca2d9b55ccec737f37c73396c2b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96848111"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99849885"
 ---
 # <a name="customize-a-ribbon-for-outlook"></a>Outlook için şerit özelleştirme
   Microsoft Office Outlook 'ta Şeriti özelleştirdiğinizde, özel şeritlerinizin uygulamada nerede görüneceğini göz önünde bulundurmanız gerekir. Outlook, ana uygulama kullanıcı arabiriminde (UI) ve kullanıcılar e-posta iletileri oluşturma gibi belirli görevleri gerçekleştirirken açık olan Windows 'da şeridi görüntüler. Bu uygulama pencereleri Inspectors olarak adlandırılmıştır.

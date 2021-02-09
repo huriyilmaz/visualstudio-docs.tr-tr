@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 01370792-b5da-4e46-9ce2-7dd326587141
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b6c3a25aa9312073d3ce4a60752d41585fcee7b3
-ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
+ms.openlocfilehash: 50cbf92b8214e605976aec58aaea984276ca8cc6
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97487653"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99848214"
 ---
 # <a name="test-area-8-plug-in-switching"></a>Test Alanı 8: Eklenti Değiştirme
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Tümleşik geliştirme ortamı (IDE), geçerli kaynak denetimi eklentisini değiştirmek için Kullanıcı arabirimine (UI) sahiptir. Bu test alanı, çözüm kaynak denetimi için hangi eklentinin kullanılacağını seçme işlemi için test çalışmaları sağlar.

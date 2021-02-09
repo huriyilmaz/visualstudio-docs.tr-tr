@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 0eac1b54-2711-4e4b-9654-a0c429c08c8f
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 2fbde07ec9825f094777f7e9b962e8394595e180
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: a27f5ae8320e942d5167fcc8260179f8cec96e37
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94903006"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99850288"
 ---
 # <a name="how-to-add-class-diagrams-to-projects"></a>Nasıl yapılır: projelere sınıf diyagramları ekleme
 
@@ -44,7 +44,7 @@ Birden çok uygulama arasında kod paylaşan projelerden sınıf diyagramları o
 
 ## <a name="add-a-blank-class-diagram-to-a-project"></a>Projeye boş bir sınıf diyagramı ekleme
 
-1. **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve ardından **Add**  >  **Yeni öğe** Ekle ' yi seçin. Ya da **CTRL** + **SHIFT** + **A**'ya basın.
+1. **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve ardından   >  **Yeni öğe** Ekle ' yi seçin. Ya da **CTRL** + **SHIFT** + **A**'ya basın.
 
    **Yeni öğe Ekle** iletişim kutusu açılır.
 

@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 86b86442-4293-4cad-9fe2-876eef65f426
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d15d845f07310e3efcba6f05538a2207d9c416e4
-ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
+ms.openlocfilehash: 09a24198d5b3c001f363f3a9eecf1dcd2760889f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "96994022"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99850641"
 ---
 # <a name="how-to-manage-a-private-gallery-by-using-registry-settings"></a>Nasıl yapılır: kayıt defteri ayarlarını kullanarak özel galeri yönetme
 Bir Yöneticiyseniz veya yalıtılmış bir kabuk uzantısının geliştiricisiyseniz, Visual Studio galerisinde, örnekler galerisinde veya özel galerilerinde denetimlere, şablonlara ve araçlara erişimi kontrol edebilirsiniz. Bir galeriyi kullanılabilir hale getirmek veya devre dışı bırakmak için, değiştirilmiş kayıt defteri anahtarlarını ve bunların değerlerini açıklayan bir *. pkgdef* dosyası oluşturun.

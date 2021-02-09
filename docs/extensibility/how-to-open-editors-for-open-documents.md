@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 1a0fa49c-efa4-4dcc-bdc0-299b7052acdc
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6d329ce7b4f4b74b8ff77357393ffe9383a3977e
-ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
+ms.openlocfilehash: 45cd616a58f51a532883eeba37f06c4eb73bd72d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "96993867"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99850680"
 ---
 # <a name="how-to-open-editors-for-open-documents"></a>Nasıl yapılır: açık belgeler için düzenleyiciler açma
 Proje bir belge penceresini açmadan önce, projenin, dosyanın zaten başka bir düzenleyicinin belge penceresinde açık olup olmadığını belirlemesi gerekir. Dosya projeye özgü bir düzenleyicide veya ile kaydedilen standart düzenleyicilerden birinde açılabilir [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .

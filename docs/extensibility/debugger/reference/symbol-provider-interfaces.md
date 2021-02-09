@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 4201f10e-c9f7-4b38-bb45-40fe0082d5bf
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: a24baec6738382f93dee5d8b7843d624eea80890
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: f5c2204a1f8c4bef17256e98ed04dcf4b195c3aa
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96845797"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99850827"
 ---
 # <a name="symbol-provider-interfaces"></a>Sembol Sağlayıcısı Arabirimleri
 Aşağıdakiler için sembol Işleme arabirimlerdir [!INCLUDE[vsipsdk](../../../extensibility/includes/vsipsdk_md.md)] .
@@ -27,7 +27,7 @@ Aşağıdakiler için sembol Işleme arabirimlerdir [!INCLUDE[vsipsdk](../../../
 ## <a name="discussion"></a>Tartışma
  Bu arabirimler, kesme modunda bir çağrı yığınında değişkenleri değerlendirmek için kullanılır. Yalnızca ortak dil çalışma zamanı sembol sağlayıcıları (SP) için uygulanır.
 
-|Arabirim|Uygulayan|Açıklama|
+|Arabirim|Uygulayan|Description|
 |---------------|--------------------|-----------------|
 |[IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)|SP2|Bir öğenin adresini temsil eder.|
 |[IDebugAddress2](../../../extensibility/debugger/reference/idebugaddress2.md)|SP2|İşlem KIMLIĞINE erişim sağlayan bir öğenin adresini temsil eder.|

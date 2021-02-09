@@ -7,15 +7,15 @@ ms.technology: vs-ide-compile
 ms.topic: reference
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8884eaa459fa3a2a7dd8d10f0ffeca5003398afd
-ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
+ms.openlocfilehash: 86df6673608359dcc7158762c3ef9d86c184fff6
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96189725"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99850487"
 ---
 # <a name="build-actions"></a>Derleme eylemleri
 
@@ -26,7 +26,7 @@ Visual Studio projesindeki tüm dosyaların bir yapı eylemi vardır. Yapı eyle
 
 ## <a name="set-a-build-action"></a>Yapı eylemi ayarla
 
-Bir dosyaya yönelik derleme eylemini ayarlamak için, **Çözüm Gezgini** dosya ' da bir dosyayı seçip **alt** ENTER ' a basarak **Özellikler** penceresinde dosyanın özelliklerini açın + **Enter**. Ya da **Çözüm Gezgini** ' de dosyaya sağ tıklayıp **Özellikler**' i seçin. **Özellikler** penceresinde, **Gelişmiş** bölümünde, dosya için derleme eylemi ayarlamak için **Oluştur eylemi** ' nin yanındaki açılan listeyi kullanın.
+Bir dosyaya yönelik derleme eylemini ayarlamak için, **Çözüm Gezgini** dosya ' da bir dosyayı seçip **alt** ENTER ' a basarak **Özellikler** penceresinde dosyanın özelliklerini açın + . Ya da **Çözüm Gezgini** ' de dosyaya sağ tıklayıp **Özellikler**' i seçin. **Özellikler** penceresinde, **Gelişmiş** bölümünde, dosya için derleme eylemi ayarlamak için **Oluştur eylemi** ' nin yanındaki açılan listeyi kullanın.
 
 ![Visual Studio 'da bir dosya için derleme eylemleri](media/build-actions.png)
 
@@ -34,7 +34,7 @@ Bir dosyaya yönelik derleme eylemini ayarlamak için, **Çözüm Gezgini** dosy
 
 C# ve Visual Basic proje dosyaları için daha yaygın olarak kullanılan derleme eylemlerinden bazıları şunlardır:
 
-|Derleme eylemi | Proje türleri | Açıklama |
+|Derleme eylemi | Proje türleri | Description |
 |-|-|
 | **AdditionalFiles** | C#, Visual Basic | C# veya Visual Basic derleyicisine giriş olarak geçirilen kaynak olmayan bir metin dosyası. Bu derleme eylemi, genellikle kod kalitesini doğrulamak üzere bir proje tarafından başvurulan [çözümleyiciler](../code-quality/roslyn-analyzers-overview.md) için giriş sağlamak üzere kullanılır. Daha fazla bilgi için bkz. [ek dosyaları kullanma](https://github.com/dotnet/roslyn/blob/master/docs/analyzers/Using%20Additional%20Files.md).|
 | **ApplicationDefinition** | WPF | Uygulamanızı tanımlayan dosya. İlk kez bir proje oluşturduğunuzda, bu *app. xaml*' dir. |
@@ -50,7 +50,7 @@ C# ve Visual Basic proje dosyaları için daha yaygın olarak kullanılan derlem
 | **Sayfa** | WPF | Çalışma zamanında daha hızlı yükleme yapmak için bir XAML dosyasını bir binary. BAML dosyasına derleyin. |
 | **Kaynak** | WPF | Dosyayı *. g. resources* uzantısına sahip bir derleme bildirimi kaynak dosyasına katıştırmayı belirtir. |
 | **Gölgeli** | .NET | Her satırda bir tane olmak üzere oluşturulan derleme dosya adlarının listesini içeren bir. accessor dosyası için kullanılır. Listedeki her derleme için, `ClassName_Accessor` yalnızca orijinallere benzeyen, ancak özel yöntemler yerine ortak yöntemlerle ortak sınıflar oluşturun. Birim testi için kullanılır. |
-| **Giriş Ekranı** | WPF | Uygulama başlatıldığında çalışma zamanında görüntülenecek bir resim dosyasını belirtir. |
+| **Giriş ekranı** | WPF | Uygulama başlatıldığında çalışma zamanında görüntülenecek bir resim dosyasını belirtir. |
 | **XamlAppDef** | Windows Workflow Foundation | Derlemeyi, gömülü iş akışıyla bir derlemede iş akışı XAML dosyası oluşturmak için yönlendirir. |
 
 > [!NOTE]

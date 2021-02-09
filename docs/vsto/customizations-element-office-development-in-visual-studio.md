@@ -14,15 +14,15 @@ helpviewer_keywords:
 - application manifests [Office development in Visual Studio], <customizations> element
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: cc1f33101346d334d08d2bd2d7795961ea33011e
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: 27b20a13d96b8fc23fcde2dbb8f14d1f1f27ceea
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96844042"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99849937"
 ---
 # <a name="ltcustomizationsgt-element-office-development-in-visual-studio"></a>&lt;özelleştirmeler &gt; öğesi (Visual Studio 'Da Office geliştirme)
   `customizations`Ad alanı öğesi, `vstov4` her bir Office çözümünü yükleme ve yükleme ile ilgili tüm bilgileri içerir.
@@ -69,7 +69,7 @@ ms.locfileid: "96844042"
 
 ## <a name="example-of-a-document-level-customization"></a>Belge düzeyi özelleştirmesi örneği
 
-### <a name="description"></a>Açıklama
+### <a name="description"></a>Description
  Aşağıdaki kod örneği, `customizations` belge düzeyi özelleştirmesi için öğesini gösterir.
 
 > [!NOTE]
@@ -89,7 +89,7 @@ ms.locfileid: "96844042"
 
 ## <a name="example-of-a-vsto-add-in"></a>VSTO eklentisi örneği
 
-### <a name="description"></a>Açıklama
+### <a name="description"></a>Description
  Aşağıdaki kod örneği, `customizations` VSTO eklentisinin öğesini gösterir. Bu, form bölgelerini içeren bir Outlook VSTO eklentisi. Bu kod örneği, [Office çözümleri Için uygulama bildirimlerinde](../vsto/application-manifests-for-office-solutions.md)sunulan daha büyük bir örneğin bir parçasıdır.
 
 ### <a name="code"></a>Kod

@@ -24,15 +24,15 @@ helpviewer_keywords:
 - custom task panes [Office development in Visual Studio], about custom task panes
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: b08e0e3bbc9f45b33ecd0248179011113db7a779
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: 8ed86cb10f6521e5863562cdb67e768b1a2367d1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96844186"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99850041"
 ---
 # <a name="custom-task-panes"></a>Özel görev bölmeleri
   Görev bölmeleri, genellikle bir Microsoft Office uygulamasındaki bir pencerenin bir tarafına yerleştirilen Kullanıcı arabirimi panolardır. Özel görev bölmeleri, kendi görev bölmenizi oluşturmak ve kullanıcılara çözümünüzün özelliklerine erişmek için tanıdık bir arabirim sağlamak için bir yol sağlar. Örneğin, arabirim, belgeleri değiştirmek veya bir veri kaynağındaki verileri göstermek için kodu çalıştıran denetimleri içerebilir.
@@ -174,7 +174,7 @@ ms.locfileid: "96844186"
 
  Birden çok belgeyle özel bir görev bölmesi göstermek istiyorsanız, Kullanıcı yeni bir belge oluşturduğunda veya var olan bir belgeyi açtığında özel görev bölmesinin yeni bir örneğini oluşturun. Bunu yapmak için, bir belge oluşturulduğunda veya açıldığında oluşturulan olayları işleyin ve ardından olay işleyicilerinde görev bölmesini oluşturun. Ayrıca, hangi belgenin görünür olduğuna bağlı olarak görev bölmelerini gizlemek veya göstermek için belge olaylarını işleyebilirsiniz.
 
- Görev bölmesini belirli bir belge penceresiyle ilişkilendirmek için, <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A> görev bölmesini oluşturmak için yöntemini kullanın ve <xref:Microsoft.Office.Interop.Word.Window> pencere parametresine (Word için), <xref:Microsoft.Office.Interop.InfoPath.WindowObject> (InfoPath Için) veya [DocumentWindow](/previous-versions/office/developer/office-2010/ff762047(v=office.14)) 'a (PowerPoint için) *window* geçiş yapın.
+ Görev bölmesini belirli bir belge penceresiyle ilişkilendirmek için, <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A> görev bölmesini oluşturmak için yöntemini kullanın ve <xref:Microsoft.Office.Interop.Word.Window> pencere parametresine (Word için), <xref:Microsoft.Office.Interop.InfoPath.WindowObject> (InfoPath Için) veya [DocumentWindow](/previous-versions/office/developer/office-2010/ff762047(v=office.14)) 'a (PowerPoint için)  geçiş yapın.
 
 ### <a name="word-events"></a>Word olayları
  Word 'deki Belge pencerelerinin durumunu izlemek için aşağıdaki olayları işleyebilirsiniz:

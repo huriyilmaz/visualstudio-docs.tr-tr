@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 710891fd-379e-42c2-a84b-44a7af694ca0
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d2ab8a723b69f4c5930c91a10719a2107ad83003
-ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
+ms.openlocfilehash: ba53fefcc5d29cb47bd3a6912ad7af34dd8deabb
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92136803"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99850392"
 ---
 # <a name="build-and-clean-projects-and-solutions-in-visual-studio"></a>Visual Studio 'da projeler ve çözümler oluşturma ve Temizleme
 
@@ -61,7 +61,7 @@ Bu konudaki yordamları kullanarak bir çözümde proje veya proje öğelerinden
 
 1. **Çözüm Gezgini**, projeyi seçin veya açın.
 
-2. Menü çubuğunda **Oluştur**' u seçin ve sonra *ProjectName* **Derle** veya *ProjectName*öğesini **yeniden oluştur** ' u seçin.
+2. Menü çubuğunda **Oluştur**' u seçin ve sonra *ProjectName* **Derle** veya *ProjectName* öğesini **yeniden oluştur** ' u seçin.
 
     - Yalnızca en son derlemeden bu yana değiştirilen proje bileşenlerini derlemek için **Build** *ProjectName* öğesini seçin.
 
@@ -73,7 +73,7 @@ Bu konudaki yordamları kullanarak bir çözümde proje veya proje öğelerinden
 
 2. **Seçenekler** iletişim kutusunda, **Projeler ve çözümler** düğümünü genişletin ve ardından **Oluştur ve Çalıştır** sayfasını seçin.
 
-     Projeleri ve çözümleri **oluşturma ve çalıştırma**  >  **Projects and Solutions**  >  **seçenekleri** iletişim kutusu açılır.
+     Projeleri ve çözümleri **oluşturma ve çalıştırma**  >    >  **seçenekleri** iletişim kutusu açılır.
 
 3. **Yalnızca oluşturma başlangıç projelerini ve çalıştırılan bağımlılıkları Çalıştır** onay kutusunu seçin.
 
@@ -87,7 +87,7 @@ Bu konudaki yordamları kullanarak bir çözümde proje veya proje öğelerinden
 
 ## <a name="to-build-only-the-selected-visual-c-project"></a>Yalnızca seçili Visual C++ projesi oluşturmak için
 
-Bir [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] proje seçin ve ardından menü çubuğunda **Build**  >  **yalnızca proje**oluştur ' u ve aşağıdaki komutlardan birini seçin:
+Bir [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] proje seçin ve ardından menü çubuğunda   >  **yalnızca proje** oluştur ' u ve aşağıdaki komutlardan birini seçin:
 
 - **Yalnızca** *ProjectName* oluştur
 
