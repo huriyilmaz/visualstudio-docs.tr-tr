@@ -9,21 +9,21 @@ helpviewer_keywords:
 ms.assetid: 596c28ee-f48d-4252-a5c4-f730c43a39e6
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: a34f772b780cda825861e11e6816d1d88405f74e
-ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
+ms.openlocfilehash: 565f73b9809f3f18fe6828a19860a46b14ff07e9
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98204538"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99839473"
 ---
 # <a name="managing-configuration-options"></a>Yapılandırma Seçeneklerini Yönetme
 Yeni bir proje türü oluşturduğunuzda, projenizin nasıl oluşturulup paketlenceğini, dağıtıldığını, dağıtılacağını ve çalıştırılacağını belirleyecek proje ve çözüm yapılandırma ayarlarını yönetmeniz gerekir. Aşağıdaki konularda proje ve çözüm yapılandırması ele alınmaktadır.
 
 ## <a name="in-this-section"></a>Bu Bölümde
-- [Genel bakış](../../extensibility/internals/configuration-options-overview.md)
+- [Genel Bakış](../../extensibility/internals/configuration-options-overview.md)
 
  İçindeki projelerin [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] birden çok yapılandırmayı nasıl destekleyebileceğinizi açıklar.
 

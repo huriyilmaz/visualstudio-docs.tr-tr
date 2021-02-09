@@ -7,15 +7,15 @@ ms.topic: conceptual
 ms.assetid: 0234109b-5dcb-4d9d-acb9-a63f8bd5699c
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 52eee4fa826d92e7de389627a3d7a2afddcc9156
-ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
+ms.openlocfilehash: 65e4b16beefdef765fe52afd9d84e64a767999fa
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98204507"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99839434"
 ---
 # <a name="manifest-from-resources"></a>Manifest from Resources
 Manifest from Resources Aracı, görüntü kaynakları (. png veya. xaml dosyaları) listesini alan ve bu görüntülerin Visual Studio görüntü hizmeti ile kullanılmasına izin veren bir. ımagemanifest dosyası oluşturan bir konsol uygulamasıdır. Ayrıca, bu araç var olan bir. ımagemanifest öğesine görüntü eklemek için kullanılabilir. Bu araç, Visual Studio uzantısına görüntü için yüksek DPı ve tema desteği eklemek için yararlıdır. Oluşturulan. ımagemanifest dosyası, Visual Studio uzantısının (. vsix) bir parçası olarak içine dahil edilmelidir ve dağıtılmalıdır.
