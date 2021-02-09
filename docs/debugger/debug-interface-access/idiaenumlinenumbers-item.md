@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: 08efbeaf-22f7-49e9-96a8-bb906dfe4fd8
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f1eae34788cfed9f509e979df8efae6657f330d5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 55c0a421b89f9187a055b7ab5fedc93a5f66a112
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85468219"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99856602"
 ---
 # <a name="idiaenumlinenumbersitem"></a>IDiaEnumLineNumbers::Item
 Bir dizin aracılığıyla bir satır numarası alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT Item ( 
+HRESULT Item ( 
    DWORD            index,
    IDiaLineNumber** lineNumber
 );

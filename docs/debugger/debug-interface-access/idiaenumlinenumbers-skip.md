@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: d182c269-8c76-4d8b-8275-c6807c5ae4e1
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 9301b3567b88079c9d7ff91dbfb866a048324294
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f2d171b36cb45bbe51ef9920217a17cf67edc343
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85468198"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99856546"
 ---
 # <a name="idiaenumlinenumbersskip"></a>IDiaEnumLineNumbers::Skip
 Sabit Listesi dizisinde belirtilen sayıda satır sayısını atlar.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT Skip ( 
+HRESULT Skip ( 
    ULONG celt
 );
 ```

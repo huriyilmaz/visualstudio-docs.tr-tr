@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: 2585e13c-c0f3-49fe-9a84-08adb0dbeaa4
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c266c5e823bd77315d184133947df225935fbcb3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a0a4cec6b81ecf3944523d4023c61c353beb90d1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85467297"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99855909"
 ---
 # <a name="idiaframedataget_maxstack"></a>IDiaFrameData::get_maxStack
 Çerçevedeki yığına gönderilen en fazla bayt sayısını alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT get_maxStack ( 
+HRESULT get_maxStack ( 
    DWORD* pRetVal
 );
 ```

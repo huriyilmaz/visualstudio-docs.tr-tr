@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: beb21109-b12c-44d8-8c1f-a332216b3713
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 68727c09b03ba8cf53f865c51698256b60742410
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5b7abdc5545c25f0e4dfa68657a0867c4c97b483
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85467577"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99856049"
 ---
 # <a name="idiaenumtablesclone"></a>IDiaEnumTables::Clone
 Geçerli numaralandırıcı ile aynı numaralandırma durumunu içeren bir Numaralandırıcı oluşturur.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT Clone ( 
+HRESULT Clone ( 
    IDiaEnumTables** ppenum
 );
 ```

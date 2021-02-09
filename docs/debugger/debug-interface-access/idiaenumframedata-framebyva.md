@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: 0b1e441b-710a-46d8-8060-bed39071c834
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: fbf4826eccff4039930b7c144ce3200e96b0e4c8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 48bffc8e07ede412c9d33176fdaf29ba85ba1f0e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85468352"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99856875"
 ---
 # <a name="idiaenumframedataframebyva"></a>IDiaEnumFrameData::frameByVA
 Sanal adrese (VA) göre bir çerçeve döndürür.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT frameByVA( 
+HRESULT frameByVA( 
    ULONGLONG       virtualAddress,
    IDiaFrameData** frame
 );

@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: ac84339f-70c6-48ed-85d0-6d7d1b5194e8
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 3f74f28dfd9b2a5ffdff4d6b5021dfbe4c7576bb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f3e4d5e4fcaad973ef21263e4eb3e5af6b42265e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85467591"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99856056"
 ---
 # <a name="idiaenumsymbolsbyaddrsymbolbyva"></a>IDiaEnumSymbolsByAddr::symbolByVA
 Sanal adrese (VA) göre arama gerçekleştirerek numaralandırıcıyı konumlandırır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT symbolByVA ( 
+HRESULT symbolByVA ( 
    DWORD**      virtualAddress,
    IDiaSymbol** ppsymbol
 );

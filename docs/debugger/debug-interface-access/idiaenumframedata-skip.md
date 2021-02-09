@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: 67140b4c-7125-4895-932d-42412326da29
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 02c56c0b49844b72384d641a53eb513c2a504acb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 52fe677fcbd349933ac827bc564fb57104918a1a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85468310"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99856770"
 ---
 # <a name="idiaenumframedataskip"></a>IDiaEnumFrameData::Skip
 Bir numaralandırma dizisindeki belirtilen sayıda çerçeve verisi öğesini atlar.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT Skip ( 
+HRESULT Skip ( 
    ULONG celt
 );
 ```

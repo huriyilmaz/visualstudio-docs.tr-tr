@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: 7a6c7d03-1ff1-4059-bd54-5f407eeebc26
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 2587d10b613200b1bf850636f613abbb497e04de
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 00cc4ba3f7ba3f54df4dd8687996fa72d27e91fb
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85467451"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99856000"
 ---
 # <a name="idiaframedataexecute"></a>IDiaFrameData::execute
 Yığın geri sarma gerçekleştirir ve sonuçları bir yığın ilerleme çerçevesi arabiriminde döndürür.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT execute ( 
+HRESULT execute ( 
    IDiaStackWalkFrame* frame
 );
 ```

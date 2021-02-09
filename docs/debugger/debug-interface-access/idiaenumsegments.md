@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 0c9edd5e-b9ce-43e1-a791-cd4c5d16d923
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: cd6a0716d0bae5a223cff3439834c87b9650e7a5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 92463a892ec9d02fd7c31061aafa81918cfabe3a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85467948"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99856315"
 ---
 # <a name="idiaenumsegments"></a>IDiaEnumSegments
 Veri kaynağında bulunan çeşitli kesimleri numaralandırır.
@@ -25,7 +25,7 @@ Veri kaynağında bulunan çeşitli kesimleri numaralandırır.
 ## <a name="syntax"></a>Syntax
 
 ```
-IDiaEnumSegments : IUnknown
+IDiaEnumSegments : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler

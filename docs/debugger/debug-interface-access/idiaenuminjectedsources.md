@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: f97e2392-22e1-48da-b7ce-ad94c8b684b0
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8ecd669e546f12972c2a11c3b038322ceaf18fc1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fe4fdd42682b5336f8202dd94e37904dbc1bcf12
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85468247"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99856630"
 ---
 # <a name="idiaenuminjectedsources"></a>IDiaEnumInjectedSources
 Veri kaynağında yer alan çeşitli eklenen kaynakları numaralandırın.
@@ -25,7 +25,7 @@ Veri kaynağında yer alan çeşitli eklenen kaynakları numaralandırın.
 ## <a name="syntax"></a>Syntax
 
 ```
-IDiaEnumInjectedSources : IUnknown
+IDiaEnumInjectedSources : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler

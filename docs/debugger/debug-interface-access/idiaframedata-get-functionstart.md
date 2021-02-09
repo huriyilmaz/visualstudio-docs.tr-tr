@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: 49fd24fb-65c2-4812-8303-56a968353e1b
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 1e4ee5de3c27d1ba16aed25c59555880901c010b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bae370c5a279edf86bd3fabd9ba710436ae63ed7
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85467374"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99855930"
 ---
 # <a name="idiaframedataget_functionstart"></a>IDiaFrameData::get_functionStart
 Bloğun bir işlevin giriş noktasını içerip içermediğini gösteren bir bayrak alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT get_functionStart ( 
+HRESULT get_functionStart ( 
    BOOL* pRetVal
 );
 ```
