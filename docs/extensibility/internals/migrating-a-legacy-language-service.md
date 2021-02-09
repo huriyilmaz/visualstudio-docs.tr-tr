@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: e0f666a0-92a7-4f9c-ba79-d05b13fb7f11
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ced200ff24b17f312e63642c8083f038a6fc6a4d
-ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
+ms.openlocfilehash: 7a0e20c77a1c8a81a29691079ace1e4751135560
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97877838"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99895693"
 ---
 # <a name="migrating-a-legacy-language-service"></a>Eski Dil Hizmetini Geçirme
 Projeyi güncelleştirerek ve projeye bir Source. Extension. valtmanifest dosyası ekleyerek eski bir dil hizmetini Visual Studio 'nun sonraki bir sürümüne geçirebilirsiniz. Dil hizmetinin kendisi, daha önce olduğu gibi çalışmaya devam eder, çünkü Visual Studio Düzenleyicisi tarafından uyum sağlar.
@@ -53,7 +53,7 @@ Projeyi güncelleştirerek ve projeye bir Source. Extension. valtmanifest dosyas
 
 4. RegExLangServ. sln çözümünü açın.
 
-5. **Tek yönlü yükseltme** penceresi görüntülenir. **Tamam**’a tıklayın.
+5. **Tek yönlü yükseltme** penceresi görüntülenir. **Tamam**'a tıklayın.
 
 6. Proje özelliklerini güncelleştirin. **Çözüm Gezgini** proje düğümünü seçip, sağ tıklayıp **Özellikler**' i seçerek **Proje özellikleri** penceresini açın.
 

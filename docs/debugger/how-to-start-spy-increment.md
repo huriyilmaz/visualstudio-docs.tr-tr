@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 1d36813a-dc2a-4fda-9b3d-a38928a62ced
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 79796ec8984f9baee1d6b3e6c760d41297d70701
-ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
+ms.openlocfilehash: 0e8b1125534e52c810f97c91bd00ea53dfd3d6de
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98150697"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99896630"
 ---
 # <a name="how-to-start-spy"></a>Nasıl Yapılır: Spy++ Hizmetini Başlatma
 
@@ -28,7 +28,7 @@ Spy + + ' ya Visual Studio 'dan veya bir komut isteminde başlatabilirsiniz.
 > [!NOTE]
 > Spy + + ' un yalnızca bir örneğini çalıştırabilirsiniz. İkinci bir örnek başlatmaya çalışırsanız, yalnızca şu anda çalışan örneğin odağı almasına neden olur.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Spy + + aşağıdaki bileşenleri gerektirir. **Tek tek bileşenler** sekmesini seçerek ve ardından aşağıdaki bileşenleri seçerek Visual Studio yükleyicisi bu bileşenleri seçebilirsiniz.
 

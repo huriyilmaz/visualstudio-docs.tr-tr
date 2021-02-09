@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 97c88693-05ff-499e-8c43-352ee073dcb7
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 468b1a44fb4754f86b31992e2c6d96bf6380592d
-ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
+ms.openlocfilehash: bf089eeaf8c4408a0bc76d2f3982d311ac9c5979
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94974546"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99896266"
 ---
 # <a name="create-a-settings-category"></a>Ayarlar kategorisi oluşturma
 
@@ -27,7 +27,7 @@ Sınıfından türeterek bir ayarlar kategorisi oluşturursunuz <xref:Microsoft.
 
 Bu yönergeyi başlatmak için önce [bir seçenek sayfası oluştur sayfasının](../extensibility/creating-an-options-page.md)ilk bölümünü tamamlamalısınız. Elde edilen seçenekler Özellik Kılavuzu, kategorideki özellikleri incelemenizi ve değiştirmenizi sağlar. Özellik kategorisini bir ayarlar dosyasına kaydettikten sonra, özellik değerlerinin nasıl depolandığını görmek için dosyayı inceleyebilirsiniz.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
  Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yüklememeyin. Visual Studio kurulumuna isteğe bağlı bir özellik olarak dahildir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-a-settings-category"></a>Ayarlar kategorisi oluşturma
@@ -98,7 +98,7 @@ Bu yönergeyi başlatmak için önce [bir seçenek sayfası oluştur sayfasını
 
 3. Sol bölmedeki ağaç görünümünde, **kategorim** ' ı genişletin ve ardından **kılavuz sayfam**' ı tıklatın.
 
-4. **OptionFloat** değerini 3,1416 ve **OptionInteger** değerlerini 12 olarak değiştirin. **Tamam** düğmesine tıklayın.
+4. **OptionFloat** değerini 3,1416 ve **OptionInteger** değerlerini 12 olarak değiştirin. **Tamam**'a tıklayın.
 
 5. **Araçlar** menüsünde **Içeri ve dışarı aktarma ayarları**' na tıklayın.
 
@@ -139,7 +139,7 @@ Bu yönergeyi başlatmak için önce [bir seçenek sayfası oluştur sayfasını
 
 11. Ayarları değiştirmeden ayarlar dosyasını kapatın.
 
-12. **Araçlar** menüsünde **Seçenekler**' i tıklatın, **kategorim**' ı genişletin, **kılavuz** Sayfam ' ı tıklatın ve ardından **OptionFloat** değerini 1,0 ve **OptionInteger** olarak 1 olarak değiştirin. **Tamam** düğmesine tıklayın.
+12. **Araçlar** menüsünde **Seçenekler**' i tıklatın, **kategorim**' ı genişletin, **kılavuz** Sayfam ' ı tıklatın ve ardından **OptionFloat** değerini 1,0 ve **OptionInteger** olarak 1 olarak değiştirin. **Tamam**'a tıklayın.
 
 13. **Araçlar** menüsünde **Içeri ve dışarı aktarma ayarları**' na tıklayın, **Seçili ortam ayarlarını içeri aktar**' ı seçin ve ardından **İleri**' ye tıklayın.
 

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: ea172841-7fef-47bf-bd02-e7da4c3c7109
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a5034fe887ba221106055a928e67e11076167286
-ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
+ms.openlocfilehash: ee1970e46b9789b814029ef0fa7efe9bfbacc3a4
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98150775"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99896688"
 ---
 # <a name="how-to-specify-debugger-settings"></a>Nasıl Yapılır: Hata Ayıklama Ayarlarını Belirtme
 İçinde [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , değişkenlerin nasıl görüntülendiğini, belirli uyarıların sunulduğunu, kesme noktalarının nasıl ayarlandığını ve çalışan programları nasıl etkilediğini de içeren hata ayıklayıcı davranışı için çeşitli ayarlar belirtebilirsiniz. **Seçenekler** iletişim kutusunda hata ayıklayıcı ayarlarını belirtirsiniz.

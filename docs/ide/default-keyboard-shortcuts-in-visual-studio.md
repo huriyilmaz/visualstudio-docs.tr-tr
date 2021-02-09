@@ -12,15 +12,15 @@ helpviewer_keywords:
 - keyboard shortcuts
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 06bbbb0124984530e92b0066044c71bfbe80ad2b
-ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
+ms.openlocfilehash: 8a4901cecf36208f3ed2141e5baef15ecbe43a6e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95006373"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99894744"
 ---
 # <a name="default-keyboard-shortcuts-in-visual-studio"></a>Visual Studio 'da varsayılan klavye kısayolları
 
@@ -34,7 +34,7 @@ Yaygın klavye kısayollarının ve diğer üretkenlik bilgilerinin bir listesi 
 
 Visual Studio 'da erişilebilirlik hakkında daha fazla bilgi için bkz. [erişilebilirlik ipuçları ve püf noktaları](../ide/reference/accessibility-tips-and-tricks.md) ve [nasıl yapılır: klavyeyi özel olarak kullanma](../ide/reference/how-to-use-the-keyboard-exclusively.md).
 
-- [Analiz](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_analyze)
+- [Çözümleme](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_analyze)
 - [Düzenle](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_edit)
 - [Project](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_project)
 - [Test](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_test)
@@ -50,7 +50,7 @@ Visual Studio 'da erişilebilirlik hakkında daha fazla bilgi için bkz. [erişi
 - [Yardım](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_help)
 - [Çözüm Gezgini](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_solutionexplorerGLOBAL)
 - [Görünüm](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_view)
-- [H](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_debug)
+- [Hata ayıklama](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_debug)
 - [Yük testi](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_loadtest)
 - [Team](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_team) (Takım)
 - [Pencere](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_window)
@@ -221,9 +221,9 @@ Bu klavye kısayolları *geneldir*. Bu, herhangi bir Visual Studio penceresi oda
 |Edit.Replace|**Ctrl+H**|
 |Edit.ReplaceinFiles|**Ctrl+Shift+H**|
 |Edit.SelectAll|**Ctrl+A**|
-|Edit.SelectNextControl|**Sekmesinde**|
+|Edit.SelectNextControl|**Sekme**|
 |Edit.SelectPreviousControl|**Shift+Sekme Tuşu**|
-|Edit.ShowTileGrid|**Girmesini**|
+|Edit.ShowTileGrid|**Enter**|
 |Edit.SizeControlDown|**Ctrl+Shift+Aşağı Ok**|
 |Edit.SizeControlDownGrid|**Shift+Aşağı Ok**|
 |Edit.SizeControlLeft|**Ctrl+Shift+Sol Ok**|
@@ -488,7 +488,7 @@ Bu klavye kısayolları *geneldir*. Bu, herhangi bir Visual Studio penceresi oda
 |Edit.ExpandCollapseBaseTypeList|**Shift+Alt+B**|
 |Edit.NavigateToLollipop|**Shift+Alt+L**|
 |Edit.RemovefromDiagram|**Silme**|
-|View.ViewCode|**Girmesini**|
+|View.ViewCode|**Enter**|
 
 ## <a name="coded-ui-test-editor"></a>Kodlanmış UI Test Düzenleyicisi
 
@@ -543,9 +543,9 @@ Bu klavye kısayolları *geneldir*. Bu, herhangi bir Visual Studio penceresi oda
 |Komutlar|Klavye kısayolları|
 |--------------| - |
 |ArchitectureContextMenus.DirectedGraphContextMenu.Advanced.Add.AddNode|**Ekle**|
-|ArchitectureContextMenus.DirectedGraphContextMenu.Advanced.Select.BothDependencies|**B**|
-|ArchitectureContextMenus.DirectedGraphContextMenu.Advanced.Select.IncomingDependencies|**I**|
-|ArchitectureContextMenus.DirectedGraphContextMenu.Advanced.Select.OutgoingDependencies|**O**|
+|ArchitectureContextMenus.DirectedGraphContextMenu.Advanced.Select.BothDependencies|**Kenarı**|
+|ArchitectureContextMenus.DirectedGraphContextMenu.Advanced.Select.IncomingDependencies|**Kaydedemiyorum**|
+|ArchitectureContextMenus.DirectedGraphContextMenu.Advanced.Select.OutgoingDependencies|**Gelirken**|
 |ArchitectureContextMenus.DirectedGraphContextMenu.NewComment|**Ctrl+Shift+K**<br /><br /> veya<br /><br /> **Ctrl+E, C**|
 |ArchitectureContextMenus.DirectedGraphContextMenu.Remove|**Silme**|
 |ArchitectureContextMenus.DirectedGraphContextMenu.Rename|**F2**|
@@ -721,12 +721,12 @@ Bu klavye kısayolları *geneldir*. Bu, herhangi bir Visual Studio penceresi oda
 
 |Komutlar|Klavye kısayolları|
 |--------------| - |
-|Edit.BreakLine|**Girmesini**|
+|Edit.BreakLine|**Enter**|
 |Edit.CharLeft|**Sol Ok**|
 |Edit.CharLeftExtend|**Shift+Sol Ok**|
 |Edit.CharRight|**Sağ Ok**|
 |Edit.CharRightExtend|**Shift+Sağ Ok**|
-|Edit.InsertTab|**Sekmesinde**|
+|Edit.InsertTab|**Sekme**|
 |Edit.LineDown|**Aşağı Ok**|
 |Edit.LineDownExtend|**Shift+Aşağı Ok**|
 |Edit.LineUp|**Yukarı Ok**|
@@ -800,7 +800,7 @@ Bu klavye kısayolları *geneldir*. Bu, herhangi bir Visual Studio penceresi oda
 
 | Komutlar | Klavye kısayolları |
 | - | - |
-| Edit.BreakLine | **Girmesini**<br /><br /> veya<br /><br /> **Shift+Enter** |
+| Edit.BreakLine | **Enter**<br /><br /> veya<br /><br /> **Shift+Enter** |
 | Edit.CharLeft | **Sol Ok** |
 | Edit.CharLeftExtend | **Shift+Sol Ok** |
 | Edit.CharLeftExtendColumn | **Shift+Alt+Sol Ok** |
@@ -840,7 +840,7 @@ Bu klavye kısayolları *geneldir*. Bu, herhangi bir Visual Studio penceresi oda
 | Edit.IncrementalSearch | **Ctrl+I** |
 | Edit. ınsertcaretsatalleþleþen | **SHIFT + alt +;** |
 | Edit. ınsertnextmatchingşapka | **SHIFT + alt +.** |
-| Edit.InsertTab | **Sekmesinde** |
+| Edit.InsertTab | **Sekme** |
 | Edit.LineCut | **Ctrl+L** |
 | Edit.LineDelete | **Ctrl+Shift+L** |
 | Edit.LineDown | **Aşağı Ok** |
@@ -1051,7 +1051,7 @@ Bu klavye kısayolları *geneldir*. Bu, herhangi bir Visual Studio penceresi oda
 
 |Komutlar|Klavye kısayolları|
 |--------------| - |
-|Edit.BreakLine|**Girmesini**|
+|Edit.BreakLine|**Enter**|
 |Edit.CharLeft|**Sol Ok**|
 |Edit.CharLeftExtend|**Shift+Sol Ok**|
 |Edit.CharRight|**Sağ Ok**|
@@ -1060,7 +1060,7 @@ Bu klavye kısayolları *geneldir*. Bu, herhangi bir Visual Studio penceresi oda
 |Edit.DocumentEndExtend|**Shift+End**|
 |Edit.DocumentStart|**Giriş Ekranı**|
 |Edit.DocumentStartExtend|**Shift+Home**|
-|Edit.InsertTab|**Sekmesinde**|
+|Edit.InsertTab|**Sekme**|
 |Edit.LineDown|**Aşağı Ok**|
 |Edit.LineDownExtend|**Shift+Yukarı Ok**|
 |Edit.LineUp|**Yukarı Ok**|

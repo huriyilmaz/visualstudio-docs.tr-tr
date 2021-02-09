@@ -7,15 +7,15 @@ ms.topic: conceptual
 ms.assetid: 620d7dcd-d462-475e-a449-fbfa06ff12c5
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9e77d06900a17aca4c2630587a45a9b144accde2
-ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
+ms.openlocfilehash: 2e7b2c8d5f194287f0b654184ddd8716f248ca36
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97877851"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99895758"
 ---
 # <a name="microsoft-help-viewer-sdk"></a>Microsoft Yardım Görüntüleyicisi SDK’sı
 
@@ -362,7 +362,7 @@ IDE 'de, yardım menüsü öğesi altında **Hata Ayıkla yardım bağlamı**' n
 
 Aşağıdaki tabloda, köşeli ayraçlar arasında görünen tüm dizeler, tanınan bir değerle değiştirilmelidir. Örneğin, \<meta name="Microsoft.Help.Locale" content="[language code]" /> "[Language Code]", "en-US" gibi bir değer ile değiştirilmelidir.
 
-| Özellik (HTML temsili) | Açıklama |
+| Özellik (HTML temsili) | Description |
 | - | - |
 | \< meta name="Microsoft.Help.Locale" content="[language-code]" /> | Bu konu için bir yerel ayar ayarlar. Bu etiket bir konu başlığında kullanılıyorsa, yalnızca bir kez kullanılması gerekir ve diğer Microsoft Yardım etiketlerinin üzerine eklenmelidir. Bu etiket kullanılmazsa, konunun gövde metni, belirtilen ürün yerel ayarıyla ilişkili sözcük kesici kullanılarak dizinlenir; Aksi halde, en-US sözcük kesici kullanılır. Bu etiket, ıSOC RFC 4646 ' e uygundur. Microsoft Yardım 'ın doğru şekilde çalıştığından emin olmak için, genel dil özniteliği yerine bu özelliği kullanın. |
 | \< meta name="Microsoft.Help.TopicLocale" content="[language-code]" /> | Diğer yerel ayarlar da kullanıldığında, bu konu için bir yerel ayar ayarlar. Bu etiket bir konu başlığında kullanılıyorsa, yalnızca bir kez kullanılmalıdır. Katalog birden fazla dilde içerik içerdiğinde bu etiketi kullanın. Bir katalogdaki birden çok konu aynı KIMLIĞE sahip olabilir, ancak her birinin benzersiz bir Topılocale belirtmesi gerekir. Kataloğun yerel ayarıyla eşleşen bir Topılocale belirten konu, içindekiler tablosunda görüntülenen konudur. Ancak, konunun tüm dil sürümleri arama sonuçlarında görüntülenir. |
@@ -451,12 +451,12 @@ Not: "{n}" tarafından belirtilen değişkenlerin kod bağımlılıkları vardı
 | - | - |
 | Özellik | **CollapsibleArea** |
 | Kullanırsınız | Genişlet içerik denetimi metnini Genişlet |
-| **Dosyalarında** | **Değer** |
+| **Öğe** | **Değer** |
 | ExpandText | Genişlet |
 | CollapseText | Daralt |
 | Özellik | **CodeSnippet** |
 | Kullanırsınız | Kod parçacığı denetim metni.  Note: "bölünmez" boşluk ile kod parçacığı içeriği, boşluk olarak değiştirilecek. |
-| **Dosyalarında** | **Değer** |
+| **Öğe** | **Değer** |
 | CopyToClipboard | Panoya kopyala |
 | ViewColorizedText | Renklendirilmiş görüntüleme |
 | CombinedVBTabDisplayLanguage | Visual Basic (örnek) |
@@ -464,7 +464,7 @@ Not: "{n}" tarafından belirtilen değişkenlerin kod bağımlılıkları vardı
 | VBUsage | Kullanım |
 | Özellik | **Geri bildirim, altbilgi ve logo** |
 | Kullanırsınız | Müşterinin, e-posta ile geçerli konu hakkında geri bildirim sağlaması için bir geri bildirim denetimi sağlayın.  İçerik için telif hakkı metni.  Logo tanımı. |
-| **Dosyalarında** | **Değer (Bu dizeler, içerik benimseme gereksinimini karşılayacak şekilde değiştirilebilir.)** |
+| **Öğe** | **Değer (Bu dizeler, içerik benimseme gereksinimini karşılayacak şekilde değiştirilebilir.)** |
 | Yaptırımlar | © 2013 Microsoft Corporation. All rights reserved. |
 | SendFeedback | \<a href="{0}" {1}>\</a>Bu konuda Microsoft 'A geri bildirim gönderin. |
 | FeedbackLink | |
@@ -473,7 +473,7 @@ Not: "{n}" tarafından belirtilen değişkenlerin kod bağımlılıkları vardı
 | LogoFileNameHC | vs_logo_wh.gif |
 | Özellik | **Sorumluluk reddi** |
 | Kullanırsınız | Makine çevirisi içeriği için büyük/küçük harfe özgü bildirimler kümesi. |
-| **Dosyalarında** | **Değer** |
+| **Öğe** | **Değer** |
 | MT_Editable | Bu makale makine çevirisi yapıldı. Bir Internet bağlantınız varsa, bu sayfayı orijinal Ingilizce içeriğiyle aynı anda düzenlenebilir modda görüntülemek için "Bu konuyu çevrimiçi görüntüle" seçeneğini belirleyin. |
 | MT_NonEditable | Bu makale makine çevirisi yapıldı. Bir Internet bağlantınız varsa, bu sayfayı orijinal Ingilizce içeriğiyle aynı anda düzenlenebilir modda görüntülemek için "Bu konuyu çevrimiçi görüntüle" seçeneğini belirleyin. |
 | MT_QualityEditable | Bu makale el ile çevrilmiştir. Bir Internet bağlantınız varsa, bu sayfayı orijinal Ingilizce içeriğiyle aynı anda düzenlenebilir modda görüntülemek için "Bu konuyu çevrimiçi görüntüle" seçeneğini belirleyin. |
@@ -482,14 +482,14 @@ Not: "{n}" tarafından belirtilen değişkenlerin kod bağımlılıkları vardı
 | MT_BetaRecycledContents | Bu makale, ön sürüm için el ile çevrilmiştir. Bir Internet bağlantınız varsa, bu sayfayı orijinal Ingilizce içeriğiyle aynı anda düzenlenebilir modda görüntülemek için "Bu konuyu çevrimiçi görüntüle" seçeneğini belirleyin. |
 | Özellik | **LinkTable** |
 | Kullanırsınız | Çevrimiçi konu bağlantıları desteği |
-| **Dosyalarında** | **Değer** |
+| **Öğe** | **Değer** |
 | LinkTableTitle | Tablo bağla |
 | Topicenulınktext | \</a>Bilgisayarınızda mevcut olan bu konunun İngilizce sürümünü görüntüleyin. |
 | Topiconlinelink metni | Bu konuyu \<a href="{0}" {1}> çevrimiçi görüntüleyin\</a> |
 | OnlineText | Çevrimiçi |
 | Özellik | **Video ses denetimi** |
 | Kullanırsınız | Video içeriği için öğeleri ve metni görüntüleme |
-| **Dosyalarında** | **Değer** |
+| **Öğe** | **Değer** |
 | MultiMediaNotSupported | İçeriği desteklemek için Internet Explorer 9 veya üzeri yüklü olmalıdır {0} . |
 | VideoText | videoyu görüntüleme |
 | AudioText | ses akışı |
@@ -497,25 +497,25 @@ Not: "{n}" tarafından belirtilen değişkenlerin kod bağımlılıkları vardı
 | Onlinesesolınktext | \<p>Bu konuyla ilişkili sesi dinlemek için {0} \<a href="{1}"> {2} buraya tıklayın \</a> .\</p> |
 | Özellik | **İçerik yüklü değil denetimi** |
 | Kullanırsınız | contentnotinstalled.htm işleme için kullanılan metin öğeleri (dizeler) |
-| **Dosyalarında** | **Değer** |
+| **Öğe** | **Değer** |
 | Contentnotınstalınstalınstalde başlığı | Bilgisayarınızda içerik bulunamadı. |
 | Contentnotınstalınstaldownloadcontenttext | \<p>İçeriği bilgisayarınıza indirmek için \<a href="{0}" {1}> Yönet sekmesine tıklayın \</a> .\</p> |
 | Contentnotınstalınstalınstalde metni | \<p>Bilgisayarınızda yüklü içerik yok. Yerel Yardım içeriği yüklemesi için yöneticinize başvurun.\</p> |
 | Özellik | **Konu bulunamadı denetimi** |
 | Kullanırsınız | topicnotfound.htm işleme için kullanılan metin öğeleri (dizeler) |
-| **Dosyalarında** | **Değer** |
+| **Öğe** | **Değer** |
 | Topınotfoundtitle | İstenen konu bilgisayarınızda bulunamıyor. |
 | Topınotfoundviewonlinetext | \<p>İstediğiniz konu bilgisayarınızda bulunamadı, ancak \<a href="{0}" {1}> konuyu çevrimiçi olarak görebilirsiniz \</a> .\</p> |
 | TopicNotFoundDownloadContentText | \<p>Benzer konuların bağlantıları için gezinti bölmesine bakın veya \<a href="{0}" {1}> \</a> içeriği bilgisayarınıza Indirmek için Yönet sekmesine tıklayın.\</p> |
 | Topınotfoundmetni | \<p>İstediğiniz konu bilgisayarınızda bulunamadı.\</p> |
 | Özellik | **Konu başlığı bozuk denetimi** |
 | Kullanırsınız | topiccorrupted.htm işleme için kullanılan metin öğeleri (dizeler) |
-| **Dosyalarında** | **Değer** |
+| **Öğe** | **Değer** |
 | Topıbozuk Tedtitle | İstenen konu gösterilemiyor. |
 | Topıboztedviewonlinetext | \<p>Yardım Görüntüleyicisi istenen konuyu görüntüleyemiyor. Konunun içeriğinde veya temeldeki sistem bağımlılığında bir hata olabilir.\</p> |
 | Özellik | **Giriş sayfası denetimi** |
 | Kullanırsınız | Yardım Görüntüleyicisi üst düzey düğüm içeriğinin görüntülenmesini destekleyen metin. |
-| **Dosyalarında** | **Değer** |
+| **Öğe** | **Değer** |
 | HomePageTitle | Yardım Görüntüleyicisi giriş sayfası |
 | Homepagetanıtımı | \<p>Microsoft araçları, ürünleri, teknolojileri ve hizmetleri kullanan herkese yönelik önemli bir bilgi kaynağı olan Microsoft Yardım Görüntüleyicisi hoş geldiniz. Yardım Görüntüleyicisi, nasıl yapılır ve başvuru bilgilerine, örnek koda, teknik makalelere ve daha fazlasına erişmenizi sağlar. İhtiyacınız olan içeriği bulmak için içindekiler tablosuna göz atarak tam metin aramasını kullanın veya anahtar sözcük dizinini kullanarak içerik üzerinde gezinin.\</p> |
 | Homepagecontentınstalltext | \<p>\<br />\<a href="{0}" {1}>İçeriği Yönet sekmesini kullanarak \</a> şunları yapın: \<ul> \<li> bilgisayarınıza içerik ekleyin. \</li> \<li> Yerel içeriklerinizin güncelleştirmelerini denetleyin. \</li> \<li> İçeriği bilgisayarınızdan kaldırın.\</li>\</ul>\</p> |

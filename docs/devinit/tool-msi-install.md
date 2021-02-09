@@ -5,18 +5,18 @@ ms.date: 11/20/2020
 ms.topic: reference
 author: andysterland
 ms.author: andster
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 8dfde12f58161dfcf86eeda2b9714f705685d39a
-ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
+ms.openlocfilehash: 9b177d63ceabd8162c5ddd77e87c68d4a820b00a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95440425"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99896240"
 ---
 # <a name="msi-install"></a>msi-install
 
@@ -29,7 +29,7 @@ ms.locfileid: "95440425"
 | Ad                                         | Tür   | Gerekli | Değer                                                                             |
 |----------------------------------------------|--------|----------|-----------------------------------------------------------------------------------|
 | **açıklamaları**                                 | dize | No       | İsteğe bağlı Yorumlar özelliği. Kullanılmadı.                                             |
-| [**girişinin**](#input)                          | string | Evet      | Öğesini `msi` yüklemek için. Ayrıntılar için aşağıdaki [girişi](#input) inceleyin.                      |
+| [**girişinin**](#input)                          | string | Yes      | Öğesini `msi` yüklemek için. Ayrıntılar için aşağıdaki [girişi](#input) inceleyin.                      |
 | [**additionalOptions**](#additional-options) | dize | No       | Ayrıntılar için aşağıdaki [ek seçeneklere](#additional-options) bakın.                  |
 
 ### <a name="input"></a>Giriş
@@ -42,7 +42,7 @@ Ek yapılandırma seçenekleri additionalOptions değeri olarak geçirilebilir. 
 
 ### <a name="built-in-options"></a>Yerleşik Seçenekler
 
-MSI-install Aracı, `msiexec` MSI 'nin gözetimsiz olarak çalışmasını sağlamak için bir dizi komut satırı bağımsız değişkeni ayarlar. Bu bağımsız değişkenler aşağıda listelenmiştir ve belgelerde yer alan belgeler bulunabilir `msiexec` [documentation](https://docs.microsoft.com/windows-server/administration/windows-commands/msiexec).
+MSI-install Aracı, `msiexec` MSI 'nin gözetimsiz olarak çalışmasını sağlamak için bir dizi komut satırı bağımsız değişkeni ayarlar. Bu bağımsız değişkenler aşağıda listelenmiştir ve belgelerde yer alan belgeler bulunabilir `msiexec` [](https://docs.microsoft.com/windows-server/administration/windows-commands/msiexec).
 
 | Ad          | Açıklama                                                                                                                                                                                   |
 |---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

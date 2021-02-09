@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 891caba6-faef-4a3c-8f71-60e6fadb60eb
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e51b850fa10ac660fbc3bd3a06428ddb92a060c4
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: 96491dc192b6578abd725d5d69b7c9093e92b20c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94383137"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99896396"
 ---
 # <a name="clickonce-and-application-settings"></a>ClickOnce ve uygulama ayarları
 Windows Forms için uygulama ayarları, istemci üzerinde özel uygulama ve Kullanıcı tercihleri oluşturmayı, depolamayı ve bakımını yapmayı kolaylaştırır. Aşağıdaki belge, uygulama ayarları dosyalarının bir ClickOnce uygulamasında nasıl çalıştığını ve Kullanıcı bir sonraki sürüme yükseltildiğinde ClickOnce 'ın ayarları nasıl geçirdiğini açıklar.
@@ -29,7 +29,7 @@ Windows Forms için uygulama ayarları, istemci üzerinde özel uygulama ve Kull
  Aşağıdaki bilgiler yalnızca varsayılan uygulama ayarları sağlayıcısı, sınıfı için geçerlidir <xref:System.Configuration.LocalFileSettingsProvider> . Özel bir sağlayıcı sağlarsanız, bu sağlayıcı, verileri nasıl depoladığını ve sürümler arasında ayarlarını nasıl yükseltleyeceğini tespit eder. Uygulama ayarları sağlayıcıları hakkında daha fazla bilgi için bkz. [uygulama ayarları mimarisi](/dotnet/framework/winforms/advanced/application-settings-architecture).
 
 ## <a name="application-settings-files"></a>Uygulama ayarları dosyaları
- Uygulama ayarları iki dosya tüketir: *\<app>.exe.config* ve *user.config* , burada *uygulama* Windows Forms uygulamanızın adıdır. *user.config* , uygulamanız kullanıcı kapsamlı ayarları depolaışında istemci üzerinde oluşturulur. Ayarlar için varsayılan değerler tanımlarsanız, buna karşılık olarak *\<app>.exe.config* , dağıtımdan önce mevcut olacaktır. **Yayımla** komutunu kullandığınızda, Visual Studio bu dosyayı otomatik olarak içerecektir. ClickOnce uygulamanızı *Mage.exe* veya *MageUI.exe* kullanarak oluşturursanız, uygulama bildiriminizi doldurduğunuzda bu dosyanın uygulamanızın diğer dosyalarına eklendiğinden emin olmanız gerekir.
+ Uygulama ayarları iki dosya tüketir: *\<app>.exe.config* ve *user.config*, burada *uygulama* Windows Forms uygulamanızın adıdır. *user.config* , uygulamanız kullanıcı kapsamlı ayarları depolaışında istemci üzerinde oluşturulur. Ayarlar için varsayılan değerler tanımlarsanız, buna karşılık olarak *\<app>.exe.config*, dağıtımdan önce mevcut olacaktır. **Yayımla** komutunu kullandığınızda, Visual Studio bu dosyayı otomatik olarak içerecektir. ClickOnce uygulamanızı *Mage.exe* veya *MageUI.exe* kullanarak oluşturursanız, uygulama bildiriminizi doldurduğunuzda bu dosyanın uygulamanızın diğer dosyalarına eklendiğinden emin olmanız gerekir.
 
  ClickOnce kullanılarak dağıtılan bir Windows Forms uygulamasında, uygulamanın *\<app>.exe.config* dosyası uygulama dizininde depolanır, ancak *user.config* dosyası kullanıcının **Belgeler ve ayarlar** klasöründe depolanır. ClickOnce uygulamasında, *\<app>.exe.config* ClickOnce uygulama önbelleğinin içindeki uygulama dizininde bulunur ve bu uygulamanın ClickOnce veri dizininde yer *user.config* .
 

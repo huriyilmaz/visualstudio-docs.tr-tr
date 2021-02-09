@@ -12,15 +12,15 @@ helpviewer_keywords:
 - <addin> element
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: cf922799301aef67ee70c480dd9e0823382cbd47
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 71fa31122432f4894bfca59929ee5eb127b7cad2
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85543773"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99896725"
 ---
 # <a name="ltaddingt-element-office-development-in-visual-studio"></a>&lt;AddIn &gt; öğesi (Visual Studio 'Da Office geliştirme)
   Ad alanının **addin** öğesi, `vstav3` Visual Studio Ile geliştirilen Microsoft Office VSTO eklentileri ve belge düzeyi özelleştirmelerine özgü bilgiler içerir.
@@ -57,13 +57,13 @@ ms.locfileid: "85543773"
  `addin`Öğesi aşağıdaki alt öğeleri içerir.
 
 ### <a name="entrypoints"></a>entryPoints
- Gereklidir. **EntryPoints** öğesi, [Visual&#41;Studio 'da Office geliştirme &#40;&#62;&#60;entryPoints ](../vsto/entrypoints-element-office-development-in-visual-studio.md)öğesinde açıklanmıştır.
+ Gereklidir. **EntryPoints** öğesi, [Visual&#41;Studio 'da Office geliştirme &#40;&#62;&#60;entryPoints](../vsto/entrypoints-element-office-development-in-visual-studio.md)öğesinde açıklanmıştır.
 
 ### <a name="update"></a>update
- Gereklidir. **Update** öğesi, [Visual&#41;Studio 'da Office geliştirme &#40;&#60;Update&#62; öğesi ](../vsto/update-element-office-development-in-visual-studio.md)açıklanmaktadır.
+ Gereklidir. **Update** öğesi, [Visual&#41;Studio 'da Office geliştirme &#40;&#60;Update&#62; öğesi](../vsto/update-element-office-development-in-visual-studio.md)açıklanmaktadır.
 
 ### <a name="postactions"></a>Postalamalar
- İsteğe bağlı. **Postalamalar** öğesi, [Visual&#41;Studio 'da Office geliştirme &#40;&#60;postalamalar&#62; öğesi ](../vsto/postactions-element-office-development-in-visual-studio.md)içinde açıklanmıştır.
+ İsteğe bağlı. **Postalamalar** öğesi, [Visual&#41;Studio 'da Office geliştirme &#40;&#60;postalamalar&#62; öğesi](../vsto/postactions-element-office-development-in-visual-studio.md)içinde açıklanmıştır.
 
 ### <a name="application"></a>uygulama
  Gereklidir. **Uygulama** öğesi, [Visual Studio 'da Office geliştirme &#40;&#41;uygulama&#62; öğesi&#60;](../vsto/application-element-office-development-in-visual-studio.md)açıklanmaktadır.

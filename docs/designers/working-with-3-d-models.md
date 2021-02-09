@@ -7,15 +7,15 @@ ms.topic: conceptual
 ms.assetid: fa035091-1354-4d1c-be44-4fb83860466f
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 886d6d24293af9f630e70defff0d95ec791f0edf
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: 9206fa8ced5ae60e58d353a9adae2234860670c8
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93133955"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99896305"
 ---
 # <a name="work-with-3d-models"></a>3B modeller ile çalışma
 
@@ -23,7 +23,7 @@ Visual Studio 'da model düzenleyicisini kullanarak 3B modeller oluşturabilirsi
 
 ## <a name="3d-models"></a>3B Modeller
 
-3B modeller nesnelerin şeklini 3B sahnede oldukları gibi tanımlar. Modeller temel, temel nesnelerin hiyerarşilerinden oluşturulan karmaşık nesneler, hatta tüm 3B sahneler olabilir. 3B nesne, 3B alanda ( *köşeler olarak bilinir* ) noktaları, bu noktaların üzerinde oluşan üçgenler, çizgileri veya diğer temel öğeleri tanımlayan dizinleri ve köşe başına ya da basit temelinde (örneğin, yüzey normaller) uygulanabilecek öznitelikleri tanımlar. Ayrıca, bazı bilgiler nesne başına temelinde, örneğin, hangi gölgelendirici ve dokuların nesnenin benzersiz görünümünü sunabileceği için de uygulanabilir.
+3B modeller nesnelerin şeklini 3B sahnede oldukları gibi tanımlar. Modeller temel, temel nesnelerin hiyerarşilerinden oluşturulan karmaşık nesneler, hatta tüm 3B sahneler olabilir. 3B nesne, 3B alanda ( *köşeler olarak bilinir*) noktaları, bu noktaların üzerinde oluşan üçgenler, çizgileri veya diğer temel öğeleri tanımlayan dizinleri ve köşe başına ya da basit temelinde (örneğin, yüzey normaller) uygulanabilecek öznitelikleri tanımlar. Ayrıca, bazı bilgiler nesne başına temelinde, örneğin, hangi gölgelendirici ve dokuların nesnenin benzersiz görünümünü sunabileceği için de uygulanabilir.
 
 Model Düzenleyicisi, oyununuzda veya uygulamanızda kullanabileceğiniz temel 3B modeller oluşturmak için ihtiyacınız olan tek araçtır (malzeme özellikleri, dokular ve piksel gölgelendiricileriyle birlikte). Ya da, modelleri sonuçlandırmak için sanatçılara geçmeden önce Prototipleme ve test için kullanmak üzere yer tutucu modeller oluşturabilirsiniz.
 

@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 6e9cc5ca-24cc-49cf-aa22-c89733828f8c
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 320a31afcbe4d99518ce92002e8e2733fded9164
-ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
+ms.openlocfilehash: b076d2268719e894632ee13142e8388a93450810
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98205417"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99896424"
 ---
 # <a name="windows-tab-message-options-dialog-box"></a>Pencereler Sekmesi, İleti Seçenekleri İletişim Kutusu
 [Iletiler görünümünde](../debugger/messages-view.md)listelenen iletilerin kapsamını ayarlamak için **Windows** sekmesini kullanın. [Ileti seçenekleri Iletişim kutusunu](../debugger/message-options-dialog-box.md)göstermek için **Spy** menüsünde **günlük iletileri** ' ni seçin.

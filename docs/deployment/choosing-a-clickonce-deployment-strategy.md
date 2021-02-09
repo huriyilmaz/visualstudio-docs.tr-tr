@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 98bcab65-ab8b-4ed1-9adc-fdacf92b8106
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d623c47960a3c1a44c184df52488682659d5238d
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: f4c20689c79529edf4a34edca857dedf1420b03f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94383176"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99895121"
 ---
 # <a name="choose-a-clickonce-deployment-strategy"></a>ClickOnce dağıtım stratejisini seçme
 Uygulama dağıtmaya yönelik üç farklı strateji vardır [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] ; seçtiğiniz strateji birincil olarak dağıttığınız uygulamanın türüne bağlıdır. Üç dağıtım stratejisi aşağıdaki gibidir:
@@ -37,7 +37,7 @@ Uygulama dağıtmaya yönelik üç farklı strateji vardır [!INCLUDE[ndptecclic
     > Dağıtım stratejisi seçmenin yanı sıra, uygulama güncelleştirmeleri sağlamak için de bir strateji seçmek isteyeceksiniz. Daha fazla bilgi için bkz. [ClickOnce güncelleştirme stratejisi seçme](../deployment/choosing-a-clickonce-update-strategy.md).
 
 ## <a name="install-from-the-web-or-a-network-share"></a>Web 'den veya ağ paylaşımından yüklemesi
- Bu stratejiyi kullandığınızda, uygulamanız bir Web sunucusuna veya ağ dosyası paylaşımına dağıtılır. Son kullanıcı uygulamayı yüklemek istediğinde, Web sayfası üzerinde bir simgeye tıklar veya dosya paylaşımındaki simgeye çift tıklar. Sonra son kullanıcının bilgisayarında uygulama indirilir, kurulur ve başlatılır. Öğeler **Başlat** menüsüne ve **Denetim Masası** 'Ndaki **Program Ekle veya Kaldır** ' a eklenir.
+ Bu stratejiyi kullandığınızda, uygulamanız bir Web sunucusuna veya ağ dosyası paylaşımına dağıtılır. Son kullanıcı uygulamayı yüklemek istediğinde, Web sayfası üzerinde bir simgeye tıklar veya dosya paylaşımındaki simgeye çift tıklar. Sonra son kullanıcının bilgisayarında uygulama indirilir, kurulur ve başlatılır. Öğeler **Başlat** menüsüne ve **Denetim Masası**'Ndaki **Program Ekle veya Kaldır** ' a eklenir.
 
  Bu strateji ağ bağlantısına bağlı olduğundan, yerel ağ veya yüksek hızlı Internet bağlantısı erişimi olan kullanıcılar çok iyi çalışır.
 
@@ -48,7 +48,7 @@ Uygulama dağıtmaya yönelik üç farklı strateji vardır [!INCLUDE[ndptecclic
  Bu, varsayılan dağıtım stratejisidir.
 
 ## <a name="start-the-application-from-the-web-or-a-network-share"></a>Uygulamayı Web 'den veya ağ paylaşımından Başlat
- Uygulamanın bir Web uygulaması gibi davranması dışında, bu strateji birinci stratejiye benzer. Kullanıcı Web sayfası üzerinde bir bağlantıyı tıkladığında (veya dosya paylaşımında bir simgeye çift tıklarsa) uygulama başlatılır. Kullanıcılar uygulamayı kapatsa da, yerel bilgisayarlarında artık kullanılamaz; **Başlat** menüsüne veya **Denetim Masası** 'Ndaki **Program Ekle veya Kaldır** 'a hiçbir şey eklenmez.
+ Uygulamanın bir Web uygulaması gibi davranması dışında, bu strateji birinci stratejiye benzer. Kullanıcı Web sayfası üzerinde bir bağlantıyı tıkladığında (veya dosya paylaşımında bir simgeye çift tıklarsa) uygulama başlatılır. Kullanıcılar uygulamayı kapatsa da, yerel bilgisayarlarında artık kullanılamaz; **Başlat** menüsüne veya **Denetim Masası**'Ndaki **Program Ekle veya Kaldır** 'a hiçbir şey eklenmez.
 
 > [!NOTE]
 > Teknik olarak uygulama, Web uygulamalarının Web önbelleğine indirilmesi gibi yerel bilgisayar üzerinde uygulama önbelleğine indirilir ve kurulur. Web önbelleği gibi, dosyalar son olarak uygulama önbelleğinden atılır. Ancak, kullanıcı uygulamanın Web'den veya dosya paylaşımından çalıştığını zanneder.
@@ -57,10 +57,10 @@ Uygulama dağıtmaya yönelik üç farklı strateji vardır [!INCLUDE[ndptecclic
 
  ' De bu dağıtım stratejisini etkinleştirmek için [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , Yayımla sihirbazının **Web 'den yüklemek veya buradan Çalıştır** sayfasında **uygulamayı yüklemeyin** ' e tıklayın.
 
- Bu dağıtım stratejisini el ile etkinleştirmek için dağıtım bildiriminde **install** etiketini değiştirin. (Değeri **true** veya **false** olabilir. *Mage.exe* ' de, **uygulama türü** listesinde **yalnızca çevrimiçi** seçeneğini kullanın.)
+ Bu dağıtım stratejisini el ile etkinleştirmek için dağıtım bildiriminde **install** etiketini değiştirin. (Değeri **true** veya **false** olabilir. *Mage.exe*' de, **uygulama türü** listesinde **yalnızca çevrimiçi** seçeneğini kullanın.)
 
 ## <a name="install-from-a-cd"></a>CD'den yükle
- Bu stratejiyi kullandığınızda, uygulamanız CD-ROM veya DVD gibi çıkarılabilir ortamla dağıtılır. Önceki seçenekte olduğu gibi, Kullanıcı uygulamayı yüklemeyi seçtiğinde, yüklenir ve başlatılır, öğeler **Başlat** menüsüne ve **Denetim Masası** 'Ndaki **Program Ekle/Kaldır** ' a eklenir.
+ Bu stratejiyi kullandığınızda, uygulamanız CD-ROM veya DVD gibi çıkarılabilir ortamla dağıtılır. Önceki seçenekte olduğu gibi, Kullanıcı uygulamayı yüklemeyi seçtiğinde, yüklenir ve başlatılır, öğeler **Başlat** menüsüne ve **Denetim Masası**'Ndaki **Program Ekle/Kaldır** ' a eklenir.
 
  Bu strateji en iyi, devamlı ağ bağlantısı olmayan veya bant genişliği düşük bağlantısı olan kullanıcılara dağıtılacak uygulamalar için çalışır. Uygulama çıkarılabilir ortamdan yüklendiğinden yükleme için ağ bağlantısı gerekmez, ancak ağ bağlantısını yine de uygulama güncelleştirmeleri için gereklidir.
 

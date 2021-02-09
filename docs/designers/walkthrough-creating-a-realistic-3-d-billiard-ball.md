@@ -7,15 +7,15 @@ ms.topic: how-to
 ms.assetid: af8eb0f3-bf6a-4d1c-ab47-dcd88ab04efa
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 646522fe5c893508cbe60a0886ba704e6829252f
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: e5469825b8d81a210fdb699dc9afeb7c6689953b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93134772"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99896457"
 ---
 # <a name="walkthrough-create-a-realistic-3d-billiard-ball"></a>İzlenecek yol: Gerçekçi bir 3B bilardo topu oluşturma
 
@@ -91,7 +91,7 @@ Sonraki adımda, modele doku uygulayan bir gölgelendirici programı oluşturaca
 
 Gerçek dünyada, ışık doğrudan bir açık kaynak sunan yüzeyler üzerinde en parlak test ve ışık kaynağına eğik açılı olan yüzeyler üzerinde daha az parlak bir şekilde görünür. Bunun nedeni, açık ışındaki enerji, yüzey doğrudan ışık kaynağına doğru yüzlü en küçük yüzey alanına dağıtılır. Yüzey, ışık kaynağından uzakta olduğu için, aynı enerji miktarı giderek daha büyük bir yüzey alanı üzerinden dağıtılır. Bir ışık kaynağından uzaklaşan bir yüzey hiç hafif bir enerji almaz ve tamamen koyu bir görünüme neden olur. Bir nesnenin yüzeyi genelinde parlaklığın varyansı, bir nesnenin şeklini göstermeye yardımcı olan önemli bir görsel destesi; Bu olmadan, nesne düz görünür.
 
-BİLGİSAYAR grafiklerde, *aydınlatma modelleri* — karmaşık, gerçek dünya aydınlatma etkileşimlerinin basitleştirilmesi, gerçek dünya ışıksının görünümünü çoğaltmak için kullanılır. Lambert aydınlatma modeli, önceki paragrafta açıklandığı gibi, bir nesnenin yüzeyi genelinde dağıtılmış olan ışık miktarını değiştirir. Milbdo topu daha ikna edici bir 3B görünümü sağlamak için gölgelendiricinize Lambert aydınlatma modeli ekleyebilirsiniz.
+BİLGİSAYAR grafiklerde, *aydınlatma modelleri*— karmaşık, gerçek dünya aydınlatma etkileşimlerinin basitleştirilmesi, gerçek dünya ışıksının görünümünü çoğaltmak için kullanılır. Lambert aydınlatma modeli, önceki paragrafta açıklandığı gibi, bir nesnenin yüzeyi genelinde dağıtılmış olan ışık miktarını değiştirir. Milbdo topu daha ikna edici bir 3B görünümü sağlamak için gölgelendiricinize Lambert aydınlatma modeli ekleyebilirsiniz.
 
 ### <a name="to-add-lambert-lighting-to-your-shader"></a>Gölgelendiricinize Lambert aydınlatma eklemek için
 
@@ -121,7 +121,7 @@ Phong aydınlatma modeli, önceki paragrafta açıklandığı gibi yansımalı v
 
     ![Yansımalı aydınlatma eklenen Gölgelendirici Grafiği](../designers/media/gfx_shader_demo_billiard_step_3.png)
 
-2. İsteğe bağlı olarak, gölgelendirici grafiğinin yansımalı özelliklerini ( **materialspecsel** ve **MaterialSpecularPower** ) yapılandırarak, yansımalı vurgulamanın nasıl davranacağını ayarlayabilirsiniz. Gölgelendirici grafiğinin özelliklerine erişmek için tasarım yüzeyinde boş bir alan seçin ve **Özellikler** penceresinde erişmek istediğiniz özelliği bulun.
+2. İsteğe bağlı olarak, gölgelendirici grafiğinin yansımalı özelliklerini (**materialspecsel** ve **MaterialSpecularPower**) yapılandırarak, yansımalı vurgulamanın nasıl davranacağını ayarlayabilirsiniz. Gölgelendirici grafiğinin özelliklerine erişmek için tasarım yüzeyinde boş bir alan seçin ve **Özellikler** penceresinde erişmek istediğiniz özelliği bulun.
 
    Gölgelendiricinize yansımalı vurguların nasıl uygulanacağı hakkında daha fazla bilgi için bkz. [nasıl yapılır: temel bir Phong gölgelendiricisi oluşturma](../designers/how-to-create-a-basic-phong-shader.md).
 
@@ -163,15 +163,15 @@ Ortam eşleme, önceki paragraflarda açıklandığı şekilde gerçek yansıma 
 
 ### <a name="to-assemble-a-cube-map-by-using-the-directx-texture-tool"></a>DirectX doku aracını kullanarak bir küp haritasını birleştirmek için
 
-1. DirectX doku aracında, ana menüden **Dosya**  >  **yeni doku** ' ı seçin. **Yeni doku** iletişim kutusu görüntülenir.
+1. DirectX doku aracında, ana menüden **Dosya**  >  **yeni doku**' ı seçin. **Yeni doku** iletişim kutusu görüntülenir.
 
 2. **Doku türü** grubunda, **cubemap dokusunu** seçin.
 
-3. **Boyutlar** grubunda **Genişlik** ve **Yükseklik** için doğru değeri girip **Tamam** ' ı seçin. Yeni bir doku belgesi görüntülenir. Varsayılan olarak, doku belgesinde ilk olarak gösterilen doku **pozitif X** küp yüzüne karşılık gelir.
+3. **Boyutlar** grubunda **Genişlik** ve **Yükseklik** için doğru değeri girip **Tamam**' ı seçin. Yeni bir doku belgesi görüntülenir. Varsayılan olarak, doku belgesinde ilk olarak gösterilen doku **pozitif X** küp yüzüne karşılık gelir.
 
-4. Doku küpünün yan tarafında oluşturduğunuz dokuyu küp yüzüne yükleyin. Ana menüde, **File**  >  **Bu cubemap** üzerinde dosya Aç ' ı seçin, küpün yan tarafında oluşturduğunuz dokuyu seçin ve sonra **Aç** ' ı seçin.
+4. Doku küpünün yan tarafında oluşturduğunuz dokuyu küp yüzüne yükleyin. Ana menüde,   >  **Bu cubemap** üzerinde dosya Aç ' ı seçin, küpün yan tarafında oluşturduğunuz dokuyu seçin ve sonra **Aç**' ı seçin.
 
-5. **Negatif X** , **pozitif Z** ve **negatif z** küp yüzleri için 4. adımı yineleyin. Bunu yapmak için, yüklemek istediğiniz yüzü görüntülemeniz gerekir. Farklı bir küp Haritası yüzünü görüntülemek için, ana menüden, **View**  >  **küp haritasını görüntüle yüzeyini** seçin ve ardından görüntülemek istediğiniz yüzü seçin.
+5. **Negatif X**, **pozitif Z** ve **negatif z** küp yüzleri için 4. adımı yineleyin. Bunu yapmak için, yüklemek istediğiniz yüzü görüntülemeniz gerekir. Farklı bir küp Haritası yüzünü görüntülemek için, ana menüden,   >  **küp haritasını görüntüle yüzeyini** seçin ve ardından görüntülemek istediğiniz yüzü seçin.
 
 6. **Pozitif Y** küp yüzü için, doku küpünün üst kısmında oluşturduğunuz dokuyu yükleyin.
 

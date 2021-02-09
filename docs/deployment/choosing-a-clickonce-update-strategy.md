@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d8b6e7bb-4ea0-47f3-91cd-48580bdceccc
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 7f231f3426821b7f3148d3e6c268234f125f88f0
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: d546b48ffbbb4d44fb5f2ced11f41826370403e3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94437610"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99895082"
 ---
 # <a name="choose-a-clickonce-update-strategy"></a>ClickOnce güncelleştirme stratejisini seçme
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] , otomatik uygulama güncelleştirmeleri sağlayabilir. Uygulama [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] güncelleştirmelerin kullanılabilir olup olmadığını görmek için uygulama düzenli aralıklarla dağıtım bildirimi dosyasını okur. Kullanılabilir olması durumunda uygulamanın yeni sürümü indirilir ve çalıştırılır. Verimlilik için, sadece değişen dosyalar indirilir.
@@ -82,7 +82,7 @@ ms.locfileid: "94437610"
 > [!NOTE]
 > Diğer güncelleştirme stratejilerini kullanarak güncelleştirmeler gerektirseniz de, **uygulama başlamadan önce** denetim, eski bir sürümün çalıştırılabilmesi için tek yoldur. Zorunlu güncelleştirme başlangıçta algılandığında, kullanıcının ya güncelleştirmeyi kabul etmesi ya da uygulamayı kapatması gerekir.
 
- Bir güncelleştirmeyi gerekli olarak işaretlemek için, **uygulama güncelleştirmeleri** iletişim kutusunda **Bu uygulama için gereken en düşük sürümü belirtin** ' e tıklayın ve ardından yüklenebilen uygulamanın en düşük sürüm numarasını belirten yayımlama sürümünü ( **ana** , **İkincil** , **derleme** , **Düzeltme** ) belirtin.
+ Bir güncelleştirmeyi gerekli olarak işaretlemek için, **uygulama güncelleştirmeleri** iletişim kutusunda **Bu uygulama için gereken en düşük sürümü belirtin** ' e tıklayın ve ardından yüklenebilen uygulamanın en düşük sürüm numarasını belirten yayımlama sürümünü (**ana**, **İkincil**, **derleme**, **Düzeltme**) belirtin.
 
  Bu, dağıtım bildiriminde **dağıtım** öğesinin **MinimumRequiredVersion** özniteliğini ayarlamayla aynıdır; Örneğin:
 

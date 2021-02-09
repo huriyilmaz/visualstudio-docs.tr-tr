@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 12cce037-9840-4761-845e-5abd5fb317b0
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 464538d7f7be68737715cb6fd10fda4017a5556a
-ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
+ms.openlocfilehash: 306099f1fc65a211943e4fb25a5cd73ad6195ea2
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97876668"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99895680"
 ---
 # <a name="nesting-projects"></a>Projeleri İç İçe Geçirme
 VS paketinizi kullanan kurumsal uygulama geliştiricileri, içindeki [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] *proje iç içe geçme* kullanarak benzer proje türlerini kolayca gruplandırabilir. Örneğin, kurumsal şablon proje, projeleri kategoriler halinde gruplamak için iç içe geçmiş projeleri kullanır. İş façlade projeleri, Web UI projeleri vb. bir kategoride birlikte gruplandırılır.
@@ -41,5 +41,5 @@ VS paketinizi kullanan kurumsal uygulama geliştiricileri, içindeki [!INCLUDE[v
 - [İç içe Projeler için Komut İşlemesi Uygulama](../../extensibility/internals/implementing-command-handling-for-nested-projects.md)
 - [İç içe Projeler için AddItem İletişim Kutusunu Filtreleme](../../extensibility/internals/filtering-the-additem-dialog-box-for-nested-projects.md)
 - [Yapılacaklar listesi: Yeni Proje Türleri Oluşturma](../../extensibility/internals/checklist-creating-new-project-types.md)
-- [Bağlam Parametreleri](../../extensibility/internals/context-parameters.md)
+- [Bağlam parametreleri](../../extensibility/internals/context-parameters.md)
 - [Sihirbaz (.Vsz) Dosyası](../../extensibility/internals/wizard-dot-vsz-file.md)

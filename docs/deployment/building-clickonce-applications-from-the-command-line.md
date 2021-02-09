@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d9bc6212-c584-4f72-88c9-9a4b998c555e
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4b719f9609dfb2feb432f4692b31e820d806ff92
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 13b057f0a688c3a1ae855215ac226a4d31993ea1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94437729"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99895160"
 ---
 # <a name="build-clickonce-applications-from-the-command-line"></a>Komut satırından ClickOnce uygulamalarını derleme
 
@@ -55,7 +55,7 @@ ms.locfileid: "94437729"
 
     Yayımla Sihirbazı görüntülenir.
 
-1. Yayımla sihirbazında **son** ' a tıklayın.
+1. Yayımla sihirbazında **son**' a tıklayın.
 
     Visual Studio, *Publish.htm* adlı varsayılan Web sayfasını oluşturur ve görüntüler.
 
@@ -67,9 +67,9 @@ ms.locfileid: "94437729"
 
 1. Çıkış yapın [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] .
 
-2. Windows **Başlat** menüsünde **tüm programlar** ' a ve ardından **Microsoft Visual Studio** **Visual Studio Araçları** , sonra da **Visual Studio komut istemi** ' ne tıklayın. Bu, geçerli kullanıcının kök klasöründe bir komut istemi açması gerekir.
+2. Windows **Başlat** menüsünde **tüm programlar**' a ve ardından **Microsoft Visual Studio** **Visual Studio Araçları**, sonra da **Visual Studio komut istemi**' ne tıklayın. Bu, geçerli kullanıcının kök klasöründe bir komut istemi açması gerekir.
 
-3. **Visual Studio komut isteminde** , geçerli dizini yukarıda oluşturduğunuz projenin konumuyla değiştirin. Örneğin, `chdir My Documents\Visual Studio\Projects\CmdLineDemo`.
+3. **Visual Studio komut isteminde**, geçerli dizini yukarıda oluşturduğunuz projenin konumuyla değiştirin. Örneğin, `chdir My Documents\Visual Studio\Projects\CmdLineDemo`.
 
 4. "Bir proje oluşturmak ve yayımlamak Için" içinde oluşturulan mevcut dosyaları kaldırmak için [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] , yazın `rmdir /s publish` .
 
@@ -130,13 +130,13 @@ msbuild /target:publish /property:BootstrapperEnabled=false
 ::: moniker range=">=vs-2019"
 .NET Core 3,1 veya sonraki sürümlerde, bu ayarlar pubxml dosyasında verilmiştir.
 
- Yayımlama özellikleri, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] **Proje Tasarımcısı** 'nın **Yayımlama** , **güvenlik** ve **imzalama** Özellik sayfalarından denetlenir. Aşağıda, yayımlama özelliklerinin açıklaması ve bunların her birinin Uygulama Tasarımcısı 'nın çeşitli özellik sayfalarında nasıl ayarlandığı hakkında bir gösterge verilmiştir:
+ Yayımlama özellikleri, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] **Proje Tasarımcısı**'nın **Yayımlama**, **güvenlik** ve **imzalama** Özellik sayfalarından denetlenir. Aşağıda, yayımlama özelliklerinin açıklaması ve bunların her birinin Uygulama Tasarımcısı 'nın çeşitli özellik sayfalarında nasıl ayarlandığı hakkında bir gösterge verilmiştir:
 
 > [!NOTE]
 > .NET Windows Masaüstü projeleri için, bu ayarlar artık Yayımla sihirbazında bulunur
 ::: moniker-end
 
-- `AssemblyOriginatorKeyFile` Uygulama bildirimlerinizi imzalamak için kullanılan anahtar dosyasını belirler [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . Bu aynı anahtar, derlemelerinize güçlü bir ad atamak için de kullanılabilir. Bu özellik, **Proje Tasarımcısı** ' nın **imzalama** sayfasında ayarlanır.
+- `AssemblyOriginatorKeyFile` Uygulama bildirimlerinizi imzalamak için kullanılan anahtar dosyasını belirler [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . Bu aynı anahtar, derlemelerinize güçlü bir ad atamak için de kullanılabilir. Bu özellik, **Proje Tasarımcısı**' nın **imzalama** sayfasında ayarlanır.
 ::: moniker range=">=vs-2019"
 .NET Windows uygulamaları için bu ayar proje dosyasında kalır
 ::: moniker-end
@@ -202,7 +202,7 @@ msbuild /target:publish /property:BootstrapperEnabled=false
 
  Aşağıdaki tabloda ClickOnce dağıtımı için dört URL seçeneği gösterilmektedir.
 
-|URL seçeneği|Açıklama|
+|URL seçeneği|Description|
 |----------------|-----------------|
 |`PublishURL`|ClickOnce uygulamanızı bir Web sitesinde yayımlıyorsanız gereklidir.|
 |`InstallURL`|İsteğe bağlı. Yükleme sitesi öğesinden farklıysa bu URL seçeneğini ayarlayın `PublishURL` . Örneğin, öğesini bir `PublishURL` FTP yolu olarak ayarlayabilir ve ' ı `InstallURL` BIR Web URL 'si olarak ayarlayabilirsiniz.|

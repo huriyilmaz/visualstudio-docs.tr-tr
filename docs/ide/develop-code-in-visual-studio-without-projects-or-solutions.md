@@ -10,15 +10,15 @@ helpviewer_keywords:
 - projects and solutions, develop code without
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d706ccdc07abcc91e956878e1bc180be9c542223
-ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
+ms.openlocfilehash: fcff44b64045e85a06fdc7a8f15f8780c8453713
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95006009"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99894757"
 ---
 # <a name="develop-code-in-visual-studio-without-projects-or-solutions"></a>Visual Studio’da projeler veya çözümler olmadan kod geliştirme
 
@@ -30,7 +30,7 @@ Visual Studio 'da kod dosyalarınızı açtıktan sonra, **Çözüm Gezgini** kl
 
 Aşağıdaki yollarla kodu Visual Studio 'da açabilirsiniz:
 
-- Visual Studio menü çubuğunda **Dosya**  >  **Open**  >  **klasörü** aç ' ı seçin ve ardından kod konumuna gidin.
+- Visual Studio menü çubuğunda **Dosya**  >    >  **klasörü** aç ' ı seçin ve ardından kod konumuna gidin.
 
 - Kod içeren bir klasörün bağlam (sağ tıklama) menüsünde, **Visual Studio 'Da aç** komutunu seçin.
 
@@ -50,7 +50,7 @@ Aşağıdaki yollarla kodu Visual Studio 'da açabilirsiniz:
 
 ::: moniker-end
 
-- Klavye kullanıcısı kullanıyorsanız, **Ctrl** + **Shift** + **Alt** + Visual Studio 'da CTRL SHIFT alt **O** tuşlarına basın.
+- Klavye kullanıcısı kullanıyorsanız,  +  +  + Visual Studio 'da CTRL SHIFT alt **O** tuşlarına basın.
 
 - Kopyalanmış bir GitHub deposundan kodu açın.
 
@@ -64,7 +64,7 @@ Aşağıdaki örnekte, bir GitHub deposunun nasıl klonaçılacağı ve sonra ko
 
    ![GitHub kopyalama düğmesi](./media/VSIDE_Code_Clone.png)
 
-1. Visual Studio 'da **Takım Gezgini** açmak için **Takım Gezgini** sekmesini seçin. Sekmeyi görmüyorsanız, Takım Gezgini **Görünüm**' den açın  >  **Team Explorer**.
+1. Visual Studio 'da **Takım Gezgini** açmak için **Takım Gezgini** sekmesini seçin. Sekmeyi görmüyorsanız, Takım Gezgini **Görünüm**' den açın  >  .
 
 1. Takım Gezgini, **yerel Git depoları** bölümünde, **Kopyala** komutunu seçin ve ardından GitHub sayfasının URL 'sini metin kutusuna yapıştırın.
 
@@ -103,7 +103,7 @@ Kod tabanınız özel derleme araçları kullanıyorsa, Visual Studio 'Nun bir *
 
 Kod tabanınız Python veya JavaScript kodu içeriyorsa, herhangi bir *. JSON* dosyası yapılandırmanız gerekmez, ancak ilgili iş yükünü yüklemelisiniz. Başlangıç betiğini de yapılandırmanız gerekir:
 
-1. **Araçlar** [Node.js development](https://visualstudio.microsoft.com/vs/node-js/) [Python development](https://visualstudio.microsoft.com/vs/python/)  >  **ve Özellikler al**' ı seçerek veya Visual Studio 'yu kapatarak ve Visual Studio yükleyicisi çalıştırarakNode.js geliştirme veya Python geliştirme iş yükünü yüklemelisiniz.
+1. **Araçlar** [](https://visualstudio.microsoft.com/vs/node-js/) [](https://visualstudio.microsoft.com/vs/python/)  >  **ve Özellikler al**' ı seçerek veya Visual Studio 'yu kapatarak ve Visual Studio yükleyicisi çalıştırarakNode.js geliştirme veya Python geliştirme iş yükünü yüklemelisiniz.
 
    ![Node.js ve Python geliştirme iş yükleri](media/python_nodejs_workloads.png)
 

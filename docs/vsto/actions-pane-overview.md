@@ -14,15 +14,15 @@ helpviewer_keywords:
 - user controls [Office development in Visual Studio], actions panes
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 5d03ba8968b08fb07eb2cc9c17839af57cf06eca
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: 9579de6712b742dde1f9b399ca8a1e4598783679
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96844835"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99896771"
 ---
 # <a name="actions-pane-overview"></a>Eylemler bölmesine genel bakış
   Bir eylemler bölmesi, belirli bir Microsoft Office Word belgesine veya Microsoft Office Excel çalışma kitabına eklenen özelleştirilebilir bir **belge eylemleri** görev bölmesidir. Eylemler bölmesi Office görev bölmesinin içinde, Excel 'deki **XML kaynağı** görev bölmesi veya Word 'deki **Stiller ve biçimlendirme** görev bölmesi gibi diğer yerleşik görev bölmeleri ile birlikte barındırılır. Eylemler bölmesi Kullanıcı arabirimini tasarlamak için Windows Forms denetimleri veya WPF denetimleri kullanabilirsiniz.
@@ -114,7 +114,7 @@ ms.locfileid: "96844835"
 |FromLeft|Eylemler bölmesinin sol tarafındaki yığın.|
 |FromRight|Eylemler bölmesinin sağ tarafındaki yığın.|
 |FromTop|Eylemler bölmesinin en üstünden oluşan yığın.|
-|Hiçbiri|Yığın sıralaması tanımlı değil; sıra, geliştirici tarafından denetlenir.|
+|Yok|Yığın sıralaması tanımlı değil; sıra, geliştirici tarafından denetlenir.|
 
  Aşağıdaki kod, <xref:Microsoft.Office.Tools.ActionsPane.StackOrder%2A> Kullanıcı denetimlerini eylemler bölmesinin en üstünden yığmak için özelliğini ayarlar.
 
