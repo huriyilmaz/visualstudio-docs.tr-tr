@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: e8df1972-913c-446c-9779-775575b0caa9
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 78a40caf8f2f974386f43ba9aeecfbdc4c71c766
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9409c7a3e30f080df4a821cdd6f0003a016ea31f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85467206"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99864938"
 ---
 # <a name="idiaframedataget_systemexceptionhandling"></a>IDiaFrameData::get_systemExceptionHandling
 Sistem özel durum işlemenin etkin olup olmadığını gösteren bir bayrak alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT get_systemExceptionHandling ( 
+HRESULT get_systemExceptionHandling ( 
    BOOL* pRetVal
 );
 ```

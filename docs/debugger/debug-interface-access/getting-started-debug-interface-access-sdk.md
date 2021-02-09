@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: cb3d040a-2846-40d7-bdbc-8a5beb5dd2f6
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a93225b4bd4180a9ce3389911c2c15d0dbef52ad
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6a60e7b685fe277cfe44e5dd3ab1c4825dba67af
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85468604"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99865316"
 ---
 # <a name="getting-started-debug-interface-access-sdk"></a>Başlarken (Arabirim Erişimi SDK'sında Hata Ayıklama)
 Hata ayıklama arabirimi erişimi (DIA) SDK 'Sı size, size bir öğretici belgesi ve bir DIA API 'sinin nasıl kullanılacağını gösteren bir örnek sağlar. . Pdb ve. dbg dosyalarını açan ve içeriklerini semboller, değerler, öznitelikler, adresler ve diğer hata ayıklama bilgileri için aramak üzere DIA SDK arabirimlerini ve yöntemlerini kullanın. Bu SDK, C++ uygulamalarında bulunan simgelerle ilişkili özellikler için de başvuru tabloları sağlar.
@@ -43,7 +43,7 @@ Hata ayıklama arabirimi erişimi (DIA) SDK 'Sı size, size bir öğretici belge
 
 ## <a name="in-this-section"></a>Bu Bölümde
 
-[Genel bakış](../../debugger/debug-interface-access/overview-debug-interface-access-sdk.md)
+[Genel Bakış](../../debugger/debug-interface-access/overview-debug-interface-access-sdk.md)
 
 DIA 'in temel mimarisini inceler.
 

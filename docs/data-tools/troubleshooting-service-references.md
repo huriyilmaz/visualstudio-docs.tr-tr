@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3b531120-1325-4734-90c6-6e6113bd12ac
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 7d1a1f0efc21f1f612d85725358555fcb0cb8245
-ms.sourcegitcommit: 72a49c10a872ab45ec6c6d7c4ac7521be84526ff
+ms.openlocfilehash: 909291e3f9762593a58df93a9ccc7fe2e82b7952
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94998076"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99866365"
 ---
 # <a name="troubleshoot-service-references"></a>Hizmet başvurularında sorun giderme
 

@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: d15e4d31-2839-48d9-9e0e-2e73404d82a2
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 76bf07e99f9965e88804c51663bcc37053bf74d6
-ms.sourcegitcommit: 72a49c10a872ab45ec6c6d7c4ac7521be84526ff
+ms.openlocfilehash: ed395c60ec16eeff6a5aac88a99698193e8bacbd
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94998089"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99866157"
 ---
 # <a name="walkthrough-create-an-n-tier-data-application"></a>İzlenecek yol: n katmanlı veri uygulaması oluşturma
 *N katmanlı* veri uygulamaları, verilere erişen ve birden çok mantıksal katmana veya katmana ayrılan *uygulamalardır.* Uygulama bileşenlerini farklı katmanlara ayırmak uygulamanızın yönetilebilirliğini ve ölçeklenebilirliğini artırır. Bunu, tüm çözümü yeniden tasarlamanıza gerek kalmadan tek bir katmana uygulanabilen yeni teknolojilerin daha kolay benimsenmesini sağlayarak yapar. N katmanlı mimaride bir sunu katmanı, bir orta katman ve bir veri katmanı bulunur. Orta katmanda genellikle bir veri erişim katmanı, iş mantığı katmanı ve kimlik doğrulaması ve doğrulama gibi paylaşılan bileşenler bulunur. Veri katmanında ilişkisel bir veritabanı vardır. N katmanlı uygulamalar hassas bilgileri orta katmanın veri erişimi katmanında depolayarak sunu katmanına erişimi olan son kullanıcılardan uzakta tutulmasını sağlar. Daha fazla bilgi için bkz. [N katmanlı veri uygulamalarına genel bakış](../data-tools/n-tier-data-applications-overview.md).
@@ -94,7 +94,7 @@ DataEntityTier projesini oluşturduktan sonraki adım başka bir sınıf kitapl�
 
 ### <a name="to-create-a-separate-class-library-for-the-tableadapters"></a>TableAdapters için ayrı bir sınıf kitaplığı oluşturmak için
 
-1. **Çözüm Gezgini** çözüme sağ tıklayın ve **Add**  >  **Yeni proje** Ekle ' yi seçin.
+1. **Çözüm Gezgini** çözüme sağ tıklayın ve   >  **Yeni proje** Ekle ' yi seçin.
 
 2. **Yeni proje** iletişim kutusunda, Orta bölmede, **sınıf kitaplığı**' nı seçin.
 
@@ -166,7 +166,7 @@ Bu kılavuzda, bir WCF hizmeti kullanılarak veri erişim katmanına nasıl eri�
 
 ### <a name="to-create-a-new-wcf-service-application"></a>Yeni bir WCF Hizmeti uygulaması oluşturmak için
 
-1. **Çözüm Gezgini** çözüme sağ tıklayın ve **Add**  >  **Yeni proje** Ekle ' yi seçin.
+1. **Çözüm Gezgini** çözüme sağ tıklayın ve   >  **Yeni proje** Ekle ' yi seçin.
 
 2. **Yeni proje** iletişim kutusunda, sol taraftaki bölmede, **WCF**' yi seçin. Orta bölmede, **WCF hizmet kitaplığı**' nı seçin.
 
@@ -220,7 +220,7 @@ Veri hizmeti veri kümesinden ve TableAdapters bilgi gerektirdiğinden, **DataEn
 
 3. Hem **DataAccessTier** hem de **DataEntityTier** projelerini seçin.
 
-4. **Tamam** düğmesine tıklayın.
+4. **Tamam**'a tıklayın.
 
 ## <a name="add-functions-to-the-service-to-call-the-getcustomers-and-getorders-methods-in-the-data-access-tier"></a>Veri erişim katmanında GetCustomers ve GetOrders yöntemlerini çağırmak için hizmete işlevler ekleyin
 Şimdi veri erişim katmanında veri döndürme yöntemleri bulunduğuna göre, veri erişim katmanındaki yöntemleri çağırmak için veri hizmetinde yöntemler oluşturun.
@@ -290,7 +290,7 @@ Artık çözüm, veri erişim katmanına çağrı yapan yöntemlere sahip veri h
 
 ### <a name="to-create-the-presentation-tier-project"></a>Sunu katmanı projesi oluşturmak için
 
-1. **Çözüm Gezgini** çözüme sağ tıklayın ve **Add**  >  **Yeni proje** Ekle ' yi seçin.
+1. **Çözüm Gezgini** çözüme sağ tıklayın ve   >  **Yeni proje** Ekle ' yi seçin.
 
 2. **Yeni proje** iletişim kutusunda, sol taraftaki bölmede **Windows Masaüstü**' nü seçin. Orta bölmede **Windows Forms uygulama**' yı seçin.
 

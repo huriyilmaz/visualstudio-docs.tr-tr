@@ -7,15 +7,15 @@ ms.topic: how-to
 ms.assetid: e88224ab-ff61-4a3a-b6b8-6f3694546cac
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 5915de290a84429878eccb4eae17821f8ac27f70
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: f0b7ab161a252e1d3a89ef856325963bddffdc56
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94436419"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99866859"
 ---
 # <a name="how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-or-designer"></a>Nasıl yapılır: Güncelleştirme, ekleme ve silme işlemleri gerçekleştirmek için saklı yordamlar atama (O/R Tasarımcısı)
 
@@ -37,7 +37,7 @@ Varsayılan olarak, bir veritabanını güncelleştirme mantığı (ekler, günc
 
 1. Tasarımcıda **LINQ to SQL** dosyasını açın. ( **Çözüm Gezgini** **. dbml** dosyasına çift tıklayın.)
 
-2. **Sunucu Gezgini** veya **veritabanı Gezgini** ' de, **saklı yordamlar** ' ı genişletin ve varlık sınıfının INSERT, Update ve/veya delete komutları için kullanmak istediğiniz saklı yordamları bulun.
+2. **Sunucu Gezgini** veya **veritabanı Gezgini**' de, **saklı yordamlar** ' ı genişletin ve varlık sınıfının INSERT, Update ve/veya delete komutları için kullanmak istediğiniz saklı yordamları bulun.
 
 3. Saklı yordamı **O/R tasarımcısına** sürükleyin.
 
@@ -45,11 +45,11 @@ Varsayılan olarak, bir veritabanını güncelleştirme mantığı (ekler, günc
 
 4. Güncelleştirme gerçekleştirmek için saklı yordamı kullanmak istediğiniz varlık sınıfını seçin.
 
-5. **Özellikler** penceresinde, geçersiz kılmak için komutu seçin ( **Insert** , **Update** veya **Delete** ).
+5. **Özellikler** penceresinde, geçersiz kılmak için komutu seçin (**Insert**, **Update** veya **Delete**).
 
 6. **Çalışma zamanı kullan** **iletişim kutusunu** açmak için sözcüklerin yanındaki üç nokta (...) simgesine tıklayın.
 
-7. **Özelleştir** 'i seçin.
+7. **Özelleştir**'i seçin.
 
 8. **Özelleştir** listesinde istenen saklı yordamı seçin.
 
@@ -58,12 +58,12 @@ Varsayılan olarak, bir veritabanını güncelleştirme mantığı (ekler, günc
     > [!NOTE]
     > Varsayılan olarak, yöntem bağımsız değişkenleri, adlar eşleşiyorsa sınıf özellikleriyle eşlenir. Değiştirilen özellik adları, tablo ve varlık sınıfı arasında artık eşleşmezse, tasarımcı doğru eşlemeyi belirleyememesi durumunda eşlenecek eşdeğer sınıf özelliğini seçmeniz gerekebilir.
 
-10. **Tamam** ' a veya **Uygula** ' ya tıklayın.
+10. **Tamam** ' a veya **Uygula**' ya tıklayın.
 
     > [!NOTE]
-    > Her bir değişiklik yaptıktan sonra **Uygula** ' ya tıkladığınızda her bir sınıf ve davranış birleşimine yönelik davranışı yapılandırmaya devam edebilirsiniz. **Uygula** ' ya tıklamadan önce sınıfı veya davranışı değiştirirseniz, bir uyarı iletişim kutusu görüntülenir ve yaptığınız değişiklikleri uygulamak için size bir fırsat sağlar.
+    > Her bir değişiklik yaptıktan sonra **Uygula** ' ya tıkladığınızda her bir sınıf ve davranış birleşimine yönelik davranışı yapılandırmaya devam edebilirsiniz. **Uygula**' ya tıklamadan önce sınıfı veya davranışı değiştirirseniz, bir uyarı iletişim kutusu görüntülenir ve yaptığınız değişiklikleri uygulamak için size bir fırsat sağlar.
 
-Güncelleştirmeler için varsayılan çalışma zamanı mantığını kullanmaya dönmek için, **Özellikler** penceresinde **Ekle** , **Güncelleştir** ve **Sil** komutunun yanındaki üç noktaya tıklayın ve sonra **davranışı Yapılandır** iletişim kutusunda **çalışma zamanını kullan** iletişim kutusunu seçin.
+Güncelleştirmeler için varsayılan çalışma zamanı mantığını kullanmaya dönmek için, **Özellikler** penceresinde **Ekle**, **Güncelleştir** ve **Sil** komutunun yanındaki üç noktaya tıklayın ve sonra **davranışı Yapılandır** iletişim kutusunda **çalışma zamanını kullan** iletişim kutusunu seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

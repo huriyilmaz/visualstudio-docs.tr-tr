@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: b1488366-6dfb-454e-9751-f42fd3f3ddfb
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 4ba2010b33b1defa6ef7dcb601fde9417fa47f70
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 30f6d338b4e27677c14dfa4e5ff8793e67f4c6ea
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94436751"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99867119"
 ---
 # <a name="create-a-windows-forms-user-control-that-supports-simple-data-binding"></a>Basit veri bağlama modelini destekleyen bir Windows Forms kullanıcı denetimi oluşturma
 
@@ -59,11 +59,11 @@ Bu izlenecek yol sırasında şunları yapmayı öğreneceksiniz:
 
 Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını kullanır.
 
-1. SQL Server Express LocalDB yoksa, [SQL Server Express indirme sayfasından](https://www.microsoft.com/sql-server/sql-server-editions-express)veya **Visual Studio yükleyicisi** aracılığıyla yükleyin. **Visual Studio yükleyicisi** , SQL Server Express LocalDB 'yi **veri depolama ve işleme** iş yükünün parçası olarak veya ayrı bir bileşen olarak yükleyebilirsiniz.
+1. SQL Server Express LocalDB yoksa, [SQL Server Express indirme sayfasından](https://www.microsoft.com/sql-server/sql-server-editions-express)veya **Visual Studio yükleyicisi** aracılığıyla yükleyin. **Visual Studio yükleyicisi**, SQL Server Express LocalDB 'yi **veri depolama ve işleme** iş yükünün parçası olarak veya ayrı bir bileşen olarak yükleyebilirsiniz.
 
 2. Aşağıdaki adımları izleyerek Northwind örnek veritabanını yüklersiniz:
 
-    1. Visual Studio 'da **SQL Server Nesne Gezgini** penceresini açın. (SQL Server Nesne Gezgini, **Visual Studio yükleyicisi** **veri depolama ve işleme** iş yükünün parçası olarak yüklenir.) **SQL Server** düğümünü genişletin. LocalDB örneğinize sağ tıklayıp **Yeni sorgu** ' yı seçin.
+    1. Visual Studio 'da **SQL Server Nesne Gezgini** penceresini açın. (SQL Server Nesne Gezgini, **Visual Studio yükleyicisi** **veri depolama ve işleme** iş yükünün parçası olarak yüklenir.) **SQL Server** düğümünü genişletin. LocalDB örneğinize sağ tıklayıp **Yeni sorgu**' yı seçin.
 
        Sorgu Düzenleyicisi penceresi açılır.
 
@@ -77,13 +77,13 @@ Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını 
 
 İlk adım **Windows Forms bir uygulama** oluşturmaktır:
 
-1. Visual Studio 'da, **Dosya** menüsünde **Yeni**  >  **Proje** ' yi seçin.
+1. Visual Studio 'da, **Dosya** menüsünde **Yeni**  >  **Proje**' yi seçin.
 
-2. Sol bölmedeki **Visual C#** veya **Visual Basic** genişletip **Windows Masaüstü** ' nü seçin.
+2. Sol bölmedeki **Visual C#** veya **Visual Basic** genişletip **Windows Masaüstü**' nü seçin.
 
 3. Orta bölmede **Windows Forms uygulama** proje türünü seçin.
 
-4. Projeyi **SimpleControlWalkthrough** olarak adlandırın ve ardından **Tamam** ' ı seçin.
+4. Projeyi **SimpleControlWalkthrough** olarak adlandırın ve ardından **Tamam**' ı seçin.
 
      **SimpleControlWalkthrough** projesi oluşturulur ve **Çözüm Gezgini** eklenir.
 
@@ -91,9 +91,9 @@ Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını 
 
 Bu izlenecek yol, bir **Kullanıcı denetiminden** basit bir veri bağlanabilir denetim oluşturur. **SimpleControlWalkthrough** projesine bir **Kullanıcı denetim** öğesi ekleyin:
 
-1. **Proje** menüsünden **Kullanıcı denetimi Ekle** ' yi seçin.
+1. **Proje** menüsünden **Kullanıcı denetimi Ekle**' yi seçin.
 
-2. Ad alanına **PhoneNumberBox** yazın ve **Ekle** ' ye tıklayın.
+2. Ad alanına **PhoneNumberBox** yazın ve **Ekle**' ye tıklayın.
 
      **PhoneNumberBox** denetimi **Çözüm Gezgini** eklenir ve tasarımcıda açılır.
 
@@ -103,7 +103,7 @@ Bu izlenecek yol, <xref:System.Windows.Forms.MaskedTextBox> **PhoneNumberBox** d
 
 1. <xref:System.Windows.Forms.MaskedTextBox> **Araç kutusundan** bir öğesini Kullanıcı denetiminin tasarım yüzeyine sürükleyin.
 
-2. Yeni sürüklediğiniz seçtiğiniz akıllı etiketi seçin <xref:System.Windows.Forms.MaskedTextBox> ve **maskeyi ayarla** ' yı seçin.
+2. Yeni sürüklediğiniz seçtiğiniz akıllı etiketi seçin <xref:System.Windows.Forms.MaskedTextBox> ve **maskeyi ayarla**' yı seçin.
 
 3. **Giriş maskesi** Iletişim kutusunda **telefon numarası** ' nı seçin ve maskeyi ayarlamak için **Tamam** ' ı tıklatın.
 
@@ -124,11 +124,11 @@ Veri bağlamayı destekleyen basit denetimler için <xref:System.ComponentModel.
 
 Bu adım, Northwind örnek veritabanındaki tabloya dayalı bir veri kaynağı oluşturmak için **veri kaynağı yapılandırma** Sihirbazı ' nı kullanır `Customers` . Bağlantıyı oluşturmak için Northwind örnek veritabanına erişiminizin olması gerekir. Northwind örnek veritabanını ayarlama hakkında daha fazla bilgi için bkz. [nasıl yapılır: örnek veritabanlarını kurma](../data-tools/installing-database-systems-tools-and-samples.md).
 
-1. Veri **kaynakları** penceresini açmak Için, **veri** menüsünde **veri kaynaklarını göster** ' e tıklayın.
+1. Veri **kaynakları** penceresini açmak Için, **veri** menüsünde **veri kaynaklarını göster**' e tıklayın.
 
 2. Veri **kaynakları** penceresinde, **veri kaynağı yapılandırma** Sihirbazı ' nı başlatmak Için **Yeni veri kaynağı Ekle** ' yi seçin.
 
-3. **Veri kaynağı türü seç** sayfasında, **veritabanı** ' nı seçin ve ardından **İleri** ' ye tıklayın.
+3. **Veri kaynağı türü seç** sayfasında, **veritabanı**' nı seçin ve ardından **İleri**' ye tıklayın.
 
 4. **Veri bağlantınızı seçin** sayfasında aşağıdakilerden birini yapın:
 
@@ -136,13 +136,13 @@ Bu adım, Northwind örnek veritabanındaki tabloya dayalı bir veri kaynağı o
 
     - **Yeni bağlantı** ' yı seçerek **Bağlantı Ekle/Değiştir** iletişim kutusunu başlatın.
 
-5. Veritabanınız parola gerektiriyorsa, hassas verileri dahil etme seçeneğini belirleyin ve ardından **İleri** ' ye tıklayın.
+5. Veritabanınız parola gerektiriyorsa, hassas verileri dahil etme seçeneğini belirleyin ve ardından **İleri**' ye tıklayın.
 
-6. **Bağlantı dizesini uygulama yapılandırma dosyasına kaydet** sayfasında, **İleri** ' ye tıklayın.
+6. **Bağlantı dizesini uygulama yapılandırma dosyasına kaydet** sayfasında, **İleri**' ye tıklayın.
 
 7. **Veritabanı nesnelerinizi seçin** sayfasında **Tablolar** düğümünü genişletin.
 
-8. Tabloyu seçin `Customers` ve ardından **son** ' a tıklayın.
+8. Tabloyu seçin `Customers` ve ardından **son**' a tıklayın.
 
      **NorthwindDataSet** , projenize eklenir ve `Customers` tablo **veri kaynakları** penceresinde görünür.
 
@@ -156,11 +156,11 @@ Bu adım, Northwind örnek veritabanındaki tabloya dayalı bir veri kaynağı o
 
 3. **Müşteriler** düğümündeki açılan oka tıklayın ve denetim listesinden **Ayrıntılar** ' ı seçin.
 
-4. **Telefon** sütunundaki açılan oka tıklayın ve **Özelleştir** ' i seçin.
+4. **Telefon** sütunundaki açılan oka tıklayın ve **Özelleştir**' i seçin.
 
 5. **Veri Kullanıcı arabirimi özelleştirme seçenekleri** Iletişim kutusunda **Ilişkili denetimler** listesinden **PhoneNumberBox** ' ı seçin.
 
-6. **Telefon** sütunundaki açılan oka tıklayın ve **PhoneNumberBox** ' ı seçin.
+6. **Telefon** sütunundaki açılan oka tıklayın ve **PhoneNumberBox**' ı seçin.
 
 ## <a name="add-controls-to-the-form"></a>Forma denetim ekleme
 
@@ -172,7 +172,7 @@ Açıklayıcı etiketlere sahip veriye bağlı denetimler, formda gezinmek için
 
 ## <a name="run-the-application"></a>Uygulamayı çalıştırma
 
-Uygulamayı çalıştırmak için **F5** 'e basın.
+Uygulamayı çalıştırmak için **F5**'e basın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

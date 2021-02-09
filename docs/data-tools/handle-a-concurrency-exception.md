@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 73ee9759-0a90-48a9-bf7b-9d6fc17bff93
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 5fcd8bb06cf9c88466b4dfa3cfaf2dfd8093bd3d
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: c410d9290b7e377654a9cff87f8df7524a1b7149
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94436452"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99866885"
 ---
 # <a name="handle-a-concurrency-exception"></a>Bir eşzamanlılık özel durumunu işleme
 
@@ -51,11 +51,11 @@ Bu izlenecek yol, aşağıdaki işlem boyunca size kılavuzluk eden bir işlemdi
 
 Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını kullanır.
 
-1. SQL Server Express LocalDB yoksa, [SQL Server Express indirme sayfasından](https://www.microsoft.com/sql-server/sql-server-editions-express)veya **Visual Studio yükleyicisi** aracılığıyla yükleyin. **Visual Studio yükleyicisi** , SQL Server Express LocalDB 'yi **veri depolama ve işleme** iş yükünün parçası olarak veya ayrı bir bileşen olarak yükleyebilirsiniz.
+1. SQL Server Express LocalDB yoksa, [SQL Server Express indirme sayfasından](https://www.microsoft.com/sql-server/sql-server-editions-express)veya **Visual Studio yükleyicisi** aracılığıyla yükleyin. **Visual Studio yükleyicisi**, SQL Server Express LocalDB 'yi **veri depolama ve işleme** iş yükünün parçası olarak veya ayrı bir bileşen olarak yükleyebilirsiniz.
 
 2. Aşağıdaki adımları izleyerek Northwind örnek veritabanını yüklersiniz:
 
-    1. Visual Studio 'da **SQL Server Nesne Gezgini** penceresini açın. (SQL Server Nesne Gezgini, Visual Studio Yükleyicisi **veri depolama ve işleme** iş yükünün parçası olarak yüklenir.) **SQL Server** düğümünü genişletin. LocalDB örneğinize sağ tıklayıp **Yeni sorgu** ' yı seçin.
+    1. Visual Studio 'da **SQL Server Nesne Gezgini** penceresini açın. (SQL Server Nesne Gezgini, Visual Studio Yükleyicisi **veri depolama ve işleme** iş yükünün parçası olarak yüklenir.) **SQL Server** düğümünü genişletin. LocalDB örneğinize sağ tıklayıp **Yeni sorgu**' yı seçin.
 
        Sorgu Düzenleyicisi penceresi açılır.
 
@@ -65,17 +65,17 @@ Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını 
 
        Kısa bir süre sonra sorgu çalışmayı sonlandırır ve Northwind veritabanı oluşturulur.
 
-## <a name="create-a-new-project"></a>Yeni bir proje oluşturma
+## <a name="create-a-new-project"></a>Yeni proje oluşturma
 
 Yeni bir Windows Forms uygulaması oluşturarak başlayın:
 
-1. Visual Studio 'da, **Dosya** menüsünde **Yeni**  >  **Proje** ' yi seçin.
+1. Visual Studio 'da, **Dosya** menüsünde **Yeni**  >  **Proje**' yi seçin.
 
-2. Sol bölmedeki **Visual C#** veya **Visual Basic** genişletip **Windows Masaüstü** ' nü seçin.
+2. Sol bölmedeki **Visual C#** veya **Visual Basic** genişletip **Windows Masaüstü**' nü seçin.
 
 3. Orta bölmede **Windows Forms uygulama** proje türünü seçin.
 
-4. Projeyi **ConcurrencyWalkthrough** olarak adlandırın ve ardından **Tamam** ' ı seçin.
+4. Projeyi **ConcurrencyWalkthrough** olarak adlandırın ve ardından **Tamam**' ı seçin.
 
      **ConcurrencyWalkthrough** projesi oluşturulup **Çözüm Gezgini** eklenir ve tasarımcıda yeni bir form açılır.
 
@@ -83,20 +83,20 @@ Yeni bir Windows Forms uygulaması oluşturarak başlayın:
 
 Sonra, **NorthwindDataSet** adlı bir veri kümesi oluşturun:
 
-1. **Veri** menüsünde **Yeni veri kaynağı Ekle** ' yi seçin.
+1. **Veri** menüsünde **Yeni veri kaynağı Ekle**' yi seçin.
 
    Veri kaynağı Yapılandırma Sihirbazı açılır.
 
-2. **Veri kaynağı türü seçin** ekranında **veritabanı** ' nı seçin.
+2. **Veri kaynağı türü seçin** ekranında **veritabanı**' nı seçin.
 
    ![Visual Studio 'da veri kaynağı Yapılandırma Sihirbazı](media/data-source-configuration-wizard.png)
 
-3. Kullanılabilir bağlantılar listesinden Northwind örnek veritabanına bir bağlantı seçin. Bağlantı listesinde bağlantı yoksa, **Yeni bağlantı** ' yı seçin.
+3. Kullanılabilir bağlantılar listesinden Northwind örnek veritabanına bir bağlantı seçin. Bağlantı listesinde bağlantı yoksa, **Yeni bağlantı**' yı seçin.
 
     > [!NOTE]
     > Bir yerel veritabanı dosyasına bağlanıyorsanız, dosyayı projenize eklemek isteyip istemediğiniz sorulduğunda **Hayır** ' ı seçin.
 
-4. **Bağlantı dizesini uygulama yapılandırma dosyasına kaydet** ekranında, **İleri** ' yi seçin.
+4. **Bağlantı dizesini uygulama yapılandırma dosyasına kaydet** ekranında, **İleri**' yi seçin.
 
 5. **Tablolar** düğümünü genişletin ve **müşteriler** tablosunu seçin. Veri kümesinin varsayılan adı **NorthwindDataSet** olmalıdır.
 
@@ -106,7 +106,7 @@ Sonra, **NorthwindDataSet** adlı bir veri kümesi oluşturun:
 
 Bu bölümde, <xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType> **müşteriler** öğesini **veri kaynakları** penceresinden Windows formunuzun üzerine sürükleyerek bir oluşturun.
 
-1. Veri **kaynakları** penceresini açmak Için, **veri** menüsünde **veri kaynaklarını göster** ' i seçin.
+1. Veri **kaynakları** penceresini açmak Için, **veri** menüsünde **veri kaynaklarını göster**' i seçin.
 
 2. **Veri kaynakları** penceresinde **NorthwindDataSet** düğümünü genişletin ve ardından **Customers** tablosunu seçin.
 
@@ -114,7 +114,7 @@ Bu bölümde, <xref:System.Windows.Forms.DataGridView?displayProperty=nameWithTy
 
 4. Tabloyu formunuzun boş bir alanının üzerine sürükleyin.
 
-     <xref:System.Windows.Forms.DataGridView> **CustomersDataGridView** adlı bir denetim ve <xref:System.Windows.Forms.BindingNavigator> adlı **CustomersBindingNavigator** , öğesine bağlanan forma eklenir <xref:System.Windows.Forms.BindingSource> . Bu, sırasıyla NorthwindDataSet 'teki Customers tablosuna bağlanır.
+     <xref:System.Windows.Forms.DataGridView> **CustomersDataGridView** adlı bir denetim ve <xref:System.Windows.Forms.BindingNavigator> adlı **CustomersBindingNavigator**, öğesine bağlanan forma eklenir <xref:System.Windows.Forms.BindingSource> . Bu, sırasıyla NorthwindDataSet 'teki Customers tablosuna bağlanır.
 
 ## <a name="test-the-form"></a>Formu test etme
 
@@ -124,7 +124,7 @@ Artık formu, bu noktaya kadar beklenen şekilde davrandığından emin olmak i�
 
      Form, <xref:System.Windows.Forms.DataGridView> Müşteriler tablosundaki verilerle doldurulmuş bir denetim ile birlikte görüntülenir.
 
-2. **Hata Ayıkla** menüsünde, **hata ayıklamayı Durdur** ' u seçin.
+2. **Hata Ayıklama** menüsünde **Hata Ayıklamayı Durdur**’u seçin.
 
 ## <a name="handle-concurrency-errors"></a>Eşzamanlılık hatalarını işleme
 
@@ -178,7 +178,7 @@ Yeni yazdığınız kod, `CreateMessage` kullanıcıya hata bilgilerini görünt
 
 ### <a name="process-the-users-response"></a>Kullanıcının yanıtını işle
 
-Kullanıcının ileti kutusuna yanıtını işlemek için de kod gerekir. Seçenekler, önerilen değişiklikle veritabanındaki geçerli kaydın üzerine yazar veya yerel değişiklikleri iptal edebilir ve veri tablosunu veritabanında Şu anda olan kayıtla yeniler. Kullanıcı **Evet** ' i seçerse, <xref:System.Data.DataTable.Merge%2A> yöntemi *PreserveChanges* bağımsız değişkeniyle **doğru** olarak ayarlanır. Bu, kaydın orijinal sürümü artık veritabanındaki kayıtla eşleştiğinden güncelleştirme denemesinin başarılı olmasına neden olur.
+Kullanıcının ileti kutusuna yanıtını işlemek için de kod gerekir. Seçenekler, önerilen değişiklikle veritabanındaki geçerli kaydın üzerine yazar veya yerel değişiklikleri iptal edebilir ve veri tablosunu veritabanında Şu anda olan kayıtla yeniler. Kullanıcı **Evet**' i seçerse, <xref:System.Data.DataTable.Merge%2A> yöntemi *PreserveChanges* bağımsız değişkeniyle **doğru** olarak ayarlanır. Bu, kaydın orijinal sürümü artık veritabanındaki kayıtla eşleştiğinden güncelleştirme denemesinin başarılı olmasına neden olur.
 
 Önceki bölümde eklenmiş olan kodun altına aşağıdaki kodu ekleyin:
 
@@ -193,20 +193,20 @@ Artık, beklenen şekilde davrandığından emin olmak için formu test edebilir
 
 2. Form görüntülendikten sonra çalışır durumda bırakın ve Visual Studio IDE 'ye geçin.
 
-3. **Görünüm** menüsünde **Sunucu Gezgini** ' yi seçin.
+3. **Görünüm** menüsünde **Sunucu Gezgini**' yi seçin.
 
-4. **Sunucu Gezgini** , uygulamanızın kullandığı bağlantıyı genişletin ve **Tablolar** düğümünü genişletin.
+4. **Sunucu Gezgini**, uygulamanızın kullandığı bağlantıyı genişletin ve **Tablolar** düğümünü genişletin.
 
-5. **Müşteriler** tablosuna sağ tıklayın ve ardından **tablo verilerini göster** ' i seçin.
+5. **Müşteriler** tablosuna sağ tıklayın ve ardından **tablo verilerini göster**' i seçin.
 
-6. İlk kayıtta ( **alfki** ) **ContactName** öğesini **Maria Anders2** olarak değiştirin.
+6. İlk kayıtta (**alfki**) **ContactName** öğesini **Maria Anders2** olarak değiştirin.
 
     > [!NOTE]
     > Değişikliği uygulamak için farklı bir satıra gidin.
 
 7. ConcurrencyWalkthrough 'in çalışan formuna geçiş yapın.
 
-8. Formdaki ( **alfki** ) ilk kayıtta, **ContactName** öğesini **Maria Anders1** olarak değiştirin.
+8. Formdaki (**alfki**) ilk kayıtta, **ContactName** öğesini **Maria Anders1** olarak değiştirin.
 
 9. **Kaydet** düğmesini seçin.
 

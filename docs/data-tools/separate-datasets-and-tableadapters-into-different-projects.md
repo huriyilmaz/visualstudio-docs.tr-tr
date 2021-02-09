@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: f66a3940-6227-46af-a930-9177f425f4fd
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: f039dc445acd9032a5fe6862e78e5c28ec67bf5d
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 9463fe0371ee3184fd78684e7fe0565820ab3bf0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94436009"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99866547"
 ---
 # <a name="separate-datasets-and-tableadapters-into-different-projects"></a>Veri kümeleri ile TableAdapter’ları farklı projelere ayırma
 Türü belirtilmiş veri kümeleri, [TableAdapters](create-and-configure-tableadapters.md) ve DataSet sınıflarının ayrı projelere üretilebilmeleri için geliştirilmiştir. Bu, uygulama katmanlarını hızlıca ayırmanızı ve n katmanlı veri uygulamaları oluşturmanıza olanak sağlar.
@@ -32,7 +32,7 @@ Veri kümesi kodunu TableAdapter kodundan ayırdığınızda, veri kümesi kodun
 
 #### <a name="to-separate-the-dataset-into-a-different-project"></a>Veri kümesini farklı bir projeye ayırmak için
 
-1. Bir veri kümesi ( *. xsd* dosyası) içeren bir çözüm açın.
+1. Bir veri kümesi (*. xsd* dosyası) içeren bir çözüm açın.
 
     > [!NOTE]
     > Çözüm, veri kümesi kodunuzu ayırmak istediğiniz projeyi içermiyorsa, projeyi oluşturun veya var olan bir projeyi çözüme ekleyin.
@@ -54,10 +54,10 @@ Veri kümesi kodunu TableAdapter kodundan ayırdığınızda, veri kümesi kodun
 
      Veri kümesi kodu, **veri kümesi proje** özelliğindeki seçili projede oluşturulur ve **TableAdapter** kodu geçerli projede oluşturulur.
 
-Varsayılan olarak, veri kümesini ve TableAdapter kodunu ayırdıktan sonra sonuç, her projedeki ayrı bir sınıf dosyasıdır. Özgün projenin, TableAdapter kodunu içeren *DataSetName. Designer. vb* (veya *DataSetName.Designer.cs* ) adlı bir dosyası vardır. **DataSet projesi** özelliğinde belirtilen proje, dataset kodunu Içeren *DataSetName. DataSet. Designer. vb* (veya *DataSetName.DataSet.Designer.cs* ) adlı bir dosyaya sahiptir.
+Varsayılan olarak, veri kümesini ve TableAdapter kodunu ayırdıktan sonra sonuç, her projedeki ayrı bir sınıf dosyasıdır. Özgün projenin, TableAdapter kodunu içeren *DataSetName. Designer. vb* (veya *DataSetName.Designer.cs*) adlı bir dosyası vardır. **DataSet projesi** özelliğinde belirtilen proje, dataset kodunu Içeren *DataSetName. DataSet. Designer. vb* (veya *DataSetName.DataSet.Designer.cs*) adlı bir dosyaya sahiptir.
 
 > [!NOTE]
-> Oluşturulan sınıf dosyasını görüntülemek için DataSet veya TableAdapter projesini seçin. Ardından, **Çözüm Gezgini** , **tüm dosyaları göster** ' i seçin.
+> Oluşturulan sınıf dosyasını görüntülemek için DataSet veya TableAdapter projesini seçin. Ardından, **Çözüm Gezgini**, **tüm dosyaları göster**' i seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

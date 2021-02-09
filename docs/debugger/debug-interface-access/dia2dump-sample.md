@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 492c0893-7043-452f-a020-890a47230d20
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 17fe6d65e70399ccac5b9ef4e2f1234ef4e3698e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fee6f04b3ee0aefe0aac99f8079e2f31733ce08b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85468688"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99865421"
 ---
 # <a name="dia2dump-sample"></a>Dia2dump Örneği
 
@@ -64,13 +64,13 @@ Varsayılan olarak, yükleme dizini korumalı bir dizindir. Diğer bir deyişle,
 
 ## <a name="run-the-dia2dump-sample"></a>Dia2Dump örneğini çalıştırma
 
-Dia2Dump.exe, hizmetlerini sağlamak için msçya*Version*. dll com sunucusuna bağımlıdır. Visual Studio 2015 ' den başlayarak sürüm msdia140.dll. MSDIA*sürümü*. dll com sunucusu başlatılmazsa, dia2dump.exe çalışmadan önce kaydetmelisiniz. DIA SDK dizininde DLL 'nin x86 sürümünü içeren bir bin alt dizini vardır. X64 mimari makineler için bir sürüm, bin\amd64 ' te ve ARM için bir sürüm de bin\arm. Dll 'yi kaydetmek için, yükseltilmiş bir geliştirici komut istemi penceresi açın ve makine mimarinizin sürümünü içeren dizine geçin. `regsvr32 msdia140.dll`Com sunucusunu kaydetmek için komutunu girin.
+Dia2Dump.exe, hizmetlerini sağlamak için msçya *Version*. dll com sunucusuna bağımlıdır. Visual Studio 2015 ' den başlayarak sürüm msdia140.dll. MSDIA *sürümü*. dll com sunucusu başlatılmazsa, dia2dump.exe çalışmadan önce kaydetmelisiniz. DIA SDK dizininde DLL 'nin x86 sürümünü içeren bir bin alt dizini vardır. X64 mimari makineler için bir sürüm, bin\amd64 ' te ve ARM için bir sürüm de bin\arm. Dll 'yi kaydetmek için, yükseltilmiş bir geliştirici komut istemi penceresi açın ve makine mimarinizin sürümünü içeren dizine geçin. `regsvr32 msdia140.dll`Com sunucusunu kaydetmek için komutunu girin.
 
 ### <a name="to-run-the-sample"></a>Örnek çalıştırmak için
 
 1. Bir komut istemi açın ve derlediniz dia2dump.exe içeren dizine geçin.
 
-1. `dia2dump filename` *Dosya adının* , incelenecek bir pdb dosyasının adı olduğu komutu girin. PDB dosyası başka bir dizinse dosya *adı*olarak dosyanın tam yolunu kullanın. Bu komut PDB dosyasındaki tüm verileri listeler.
+1. `dia2dump filename` *Dosya adının* , incelenecek bir pdb dosyasının adı olduğu komutu girin. PDB dosyası başka bir dizinse dosya *adı* olarak dosyanın tam yolunu kullanın. Bu komut PDB dosyasındaki tüm verileri listeler.
 
 1. Dia2Dump yalnızca seçilen bilgileri görüntülemeye yönelik başka seçeneklere sahiptir. `dia2dump -?`Tüm kullanılabilir seçenekleri listelemek için komutunu kullanın.
 

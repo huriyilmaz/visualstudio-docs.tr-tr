@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: cfe274f0-71fe-40f6-994e-7c7f6273c9ba
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 0a07ca2d30e27cdcbc06e8f90a810982d4410931
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 92e1a03a9a72b550c77aa734c4a9ff2d0b184839
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94436104"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99866612"
 ---
 # <a name="create-relationships-between-datasets"></a>Veri kümeleri arasında ilişki oluşturma
-İlişkili veri tabloları içeren veri kümeleri <xref:System.Data.DataRelation> , tablolar arasında bir üst/alt ilişkiyi temsil etmek ve birbiriyle ilişkili kayıtları döndürmek için nesneleri kullanır. **Veri kaynağı Yapılandırma Sihirbazı** ' nı kullanarak veya **veri kümesi tasarımcısı** , ilgili tabloları veri kümelerine eklemek <xref:System.Data.DataRelation> sizin için nesneyi oluşturur ve yapılandırır.
+İlişkili veri tabloları içeren veri kümeleri <xref:System.Data.DataRelation> , tablolar arasında bir üst/alt ilişkiyi temsil etmek ve birbiriyle ilişkili kayıtları döndürmek için nesneleri kullanır. **Veri kaynağı Yapılandırma Sihirbazı**' nı kullanarak veya **veri kümesi tasarımcısı**, ilgili tabloları veri kümelerine eklemek <xref:System.Data.DataRelation> sizin için nesneyi oluşturur ve yapılandırır.
 
 <xref:System.Data.DataRelation>Nesnesi iki işlev gerçekleştirir:
 

@@ -7,15 +7,15 @@ ms.topic: conceptual
 ms.assetid: 1b06b573-84aa-4458-b3f5-e238df47bf45
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 1cc1aa43945ceee19b70a037b1c865c67539fb61
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: ee4bb5e56c5ae9ffb5f5266c8ef80804c8e96597
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94436647"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99866989"
 ---
 # <a name="entity-framework-tools-in-visual-studio"></a>Visual Studio 'da Entity Framework Tools
 
@@ -32,7 +32,7 @@ Entity Framework araçları, Visual Studio Yükleyicisi **veri depolama ve işle
 
 Visual Studio 'da Entity Framework araçları oluşturan özel araçlar şunlardır:
 
-- [!INCLUDE[vstecado](../data-tools/includes/vstecado_md.md)] **[!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)] Tasarımcı** ( **Entity Desisgner** ) kullanarak varlıklar, ilişkilendirmeler, eşlemeler ve devralma ilişkilerini görsel olarak oluşturabilir ve değiştirebilirsiniz. **Entity Desisgner** Ayrıca, [!INCLUDE[TLA#tla_cshrp](../data-tools/includes/tlasharptla_cshrp_md.md)] veya [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] nesne katmanı kodu oluşturur.
+- [!INCLUDE[vstecado](../data-tools/includes/vstecado_md.md)] **[!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)] Tasarımcı** (**Entity Desisgner**) kullanarak varlıklar, ilişkilendirmeler, eşlemeler ve devralma ilişkilerini görsel olarak oluşturabilir ve değiştirebilirsiniz. **Entity Desisgner** Ayrıca, [!INCLUDE[TLA#tla_cshrp](../data-tools/includes/tlasharptla_cshrp_md.md)] veya [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] nesne katmanı kodu oluşturur.
 
 - **[!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)] Sihirbazı** , mevcut bir veritabanından kavramsal bir model oluşturmak ve uygulamanıza veritabanı bağlantı bilgilerini eklemek için kullanabilirsiniz.
 

@@ -12,16 +12,16 @@ dev_langs:
 ms.assetid: 7d105907-8b39-4d07-8762-5c5ed74c7f21
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - uwp
-ms.openlocfilehash: 5439f9f253126e159df5dd9ea58bad04c3f6c649
-ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
+ms.openlocfilehash: c3876befa45904d21b5a1672ca6fcc72c51bf801
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96560557"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99865663"
 ---
 # <a name="debug-a-webview-control-in-a-uwp-app"></a>UWP uygulamasında bir WebView denetiminde hata ayıklama
 
@@ -29,7 +29,7 @@ ms.locfileid: "96560557"
 
 - Bir örnek için [DOM Gezginini](../debugger/quickstart-debug-html-and-css.md) açın `WebView` , Dom ÖĞELERINI inceleyin, CSS stili sorunları araştırın ve dinamik olarak işlenen değişiklikleri stillerde test edin.
 
-- `iFrame`JavaScript Konsol penceresinde Web sayfasını seçin veya `WebView` bir hedef olarak örnekte görüntüleniyorsa, [JavaScript Console](../debugger/javascript-console-commands.md?view=vs-2017&preserve-view=true) konsol komutlarını kullanarak Web sayfası ile etkileşime geçin. Konsol, geçerli betik yürütme bağlamına erişim sağlar.
+- `iFrame`JavaScript Konsol penceresinde Web sayfasını seçin veya `WebView` bir hedef olarak örnekte görüntüleniyorsa, [](../debugger/javascript-console-commands.md?view=vs-2017&preserve-view=true) konsol komutlarını kullanarak Web sayfası ile etkileşime geçin. Konsol, geçerli betik yürütme bağlamına erişim sağlar.
 
 ### <a name="attach-the-debugger-c-visual-basic-c"></a>Hata ayıklayıcıyı iliştirme (C#, Visual Basic, C++)
 

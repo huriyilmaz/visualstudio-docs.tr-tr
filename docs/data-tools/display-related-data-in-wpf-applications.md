@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3aa80194-0191-474d-9d28-5ec05654b426
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: a9604ac7c0083bc40edb17b19d4de608eb7366b1
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 3467b2a3c4f49b22ab36b44ff0d3ea47d143e971
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94436504"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99866963"
 ---
 # <a name="display-related-data-in-wpf-applications"></a>WPF uygulamalarındaki ilgili verileri görüntüleme
 
@@ -35,7 +35,7 @@ Bazı uygulamalarda, bir üst-alt ilişkisinde birbirleriyle ilgili birden çok 
 
 1. Veri **kaynakları** penceresini açmak için **veri** menüsünde **veri kaynaklarını göster** ' e tıklayın.
 
-2. **Yeni veri kaynağı Ekle** ' ye tıklayın ve **veri kaynağı yapılandırma** Sihirbazı ' nı doldurun.
+2. **Yeni veri kaynağı Ekle**' ye tıklayın ve **veri kaynağı yapılandırma** Sihirbazı ' nı doldurun.
 
 3. WPF tasarımcısını açın ve tasarımcı 'nın **veri kaynakları** penceresindeki öğeler için geçerli bir bırakma hedefi olan bir kapsayıcı içerdiğinden emin olun.
 

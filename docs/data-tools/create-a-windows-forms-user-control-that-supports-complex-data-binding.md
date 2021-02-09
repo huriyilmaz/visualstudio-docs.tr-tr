@@ -13,15 +13,15 @@ helpviewer_keywords:
 - user controls [Visual Studio], complex data binding
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 465636b2b5bbf1a47752b4f0917258e264172abd
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 25bdda6a1b62f47c752a2975fa3acfd1379a470c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94436790"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99867155"
 ---
 # <a name="create-a-windows-forms-user-control-that-supports-complex-data-binding"></a>Karmaşık veri bağlama modelini destekleyen bir Windows Forms kullanıcı denetimi oluşturma
 
@@ -57,11 +57,11 @@ Bu izlenecek yol sırasında şunları yapmayı öğreneceksiniz:
 
 Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını kullanır.
 
-1. SQL Server Express LocalDB yoksa, [SQL Server Express indirme sayfasından](https://www.microsoft.com/sql-server/sql-server-editions-express)veya **Visual Studio yükleyicisi** aracılığıyla yükleyin. **Visual Studio yükleyicisi** , SQL Server Express LocalDB 'yi **veri depolama ve işleme** iş yükünün parçası olarak veya ayrı bir bileşen olarak yükleyebilirsiniz.
+1. SQL Server Express LocalDB yoksa, [SQL Server Express indirme sayfasından](https://www.microsoft.com/sql-server/sql-server-editions-express)veya **Visual Studio yükleyicisi** aracılığıyla yükleyin. **Visual Studio yükleyicisi**, SQL Server Express LocalDB 'yi **veri depolama ve işleme** iş yükünün parçası olarak veya ayrı bir bileşen olarak yükleyebilirsiniz.
 
 1. Aşağıdaki adımları izleyerek Northwind örnek veritabanını yüklersiniz:
 
-    1. Visual Studio 'da **SQL Server Nesne Gezgini** penceresini açın. (SQL Server Nesne Gezgini, Visual Studio Yükleyicisi **veri depolama ve işleme** iş yükünün parçası olarak yüklenir.) **SQL Server** düğümünü genişletin. LocalDB örneğinize sağ tıklayıp **Yeni sorgu** ' yı seçin.
+    1. Visual Studio 'da **SQL Server Nesne Gezgini** penceresini açın. (SQL Server Nesne Gezgini, Visual Studio Yükleyicisi **veri depolama ve işleme** iş yükünün parçası olarak yüklenir.) **SQL Server** düğümünü genişletin. LocalDB örneğinize sağ tıklayıp **Yeni sorgu**' yı seçin.
 
        Sorgu Düzenleyicisi penceresi açılır.
 
@@ -79,9 +79,9 @@ Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını 
 
 Bu izlenecek yol, **Kullanıcı denetiminden** karmaşık bir veri bağlanabilir denetim oluşturduğundan, projeye bir **Kullanıcı denetim** öğesi ekleyin:
 
-1. **Proje** menüsünden **Kullanıcı denetimi Ekle** ' yi seçin.
+1. **Proje** menüsünden **Kullanıcı denetimi Ekle**' yi seçin.
 
-1. **Ad** alanına **ComplexDataGridView** yazın ve ardından **Ekle** ' ye tıklayın.
+1. **Ad** alanına **ComplexDataGridView** yazın ve ardından **Ekle**' ye tıklayın.
 
     **ComplexDataGridView** denetimi **Çözüm Gezgini** eklenir ve tasarımcıda açılır.
 
@@ -93,7 +93,7 @@ Kullanıcı denetimine bir eklemek için <xref:System.Windows.Forms.DataGridView
 
 Veri bağlamayı destekleyen karmaşık denetimler için şunları uygulayabilirsiniz <xref:System.ComponentModel.ComplexBindingPropertiesAttribute> :
 
-1. **ComplexDataGridView** denetimini Code View olarak değiştirin. ( **Görünüm** menüsünde **kod** ' i seçin.)
+1. **ComplexDataGridView** denetimini Code View olarak değiştirin. ( **Görünüm** menüsünde **kod**' i seçin.)
 
 1. İçindeki kodu aşağıdaki gibi değiştirin `ComplexDataGridView` :
 
@@ -106,11 +106,11 @@ Veri bağlamayı destekleyen karmaşık denetimler için şunları uygulayabilir
 
 Northwind örnek veritabanındaki tabloya dayalı bir veri kaynağı oluşturmak için **veri kaynağı yapılandırma** Sihirbazı ' nı kullanın `Customers` :
 
-1. Veri **kaynakları** penceresini açmak Için, **veri** menüsünde **veri kaynaklarını göster** ' e tıklayın.
+1. Veri **kaynakları** penceresini açmak Için, **veri** menüsünde **veri kaynaklarını göster**' e tıklayın.
 
 2. Veri **kaynakları** penceresinde, **veri kaynağı yapılandırma** Sihirbazı ' nı başlatmak Için **Yeni veri kaynağı Ekle** ' yi seçin.
 
-3. **Veri kaynağı türü seçin** sayfasında **veritabanı** ' nı seçin ve ardından **İleri** ' ye tıklayın.
+3. **Veri kaynağı türü seçin** sayfasında **veritabanı** ' nı seçin ve ardından **İleri**' ye tıklayın.
 
 4. **Veri bağlantınızı seçin** sayfasında aşağıdakilerden birini yapın:
 
@@ -118,13 +118,13 @@ Northwind örnek veritabanındaki tabloya dayalı bir veri kaynağı oluşturmak
 
    - **Yeni bağlantı** ' yı seçerek **Bağlantı Ekle/Değiştir** iletişim kutusunu başlatın.
 
-5. Veritabanınız parola gerektiriyorsa, hassas verileri dahil etme seçeneğini belirleyin ve ardından **İleri** ' ye tıklayın.
+5. Veritabanınız parola gerektiriyorsa, hassas verileri dahil etme seçeneğini belirleyin ve ardından **İleri**' ye tıklayın.
 
-6. **Bağlantı dizesini uygulama yapılandırma dosyasına kaydet** sayfasında, **İleri** ' ye tıklayın.
+6. **Bağlantı dizesini uygulama yapılandırma dosyasına kaydet** sayfasında, **İleri**' ye tıklayın.
 
 7. **Veritabanı nesnelerinizi seçin** sayfasında **Tablolar** düğümünü genişletin.
 
-8. Tabloyu seçin `Customers` ve ardından **son** ' a tıklayın.
+8. Tabloyu seçin `Customers` ve ardından **son**' a tıklayın.
 
    **NorthwindDataSet** , projenize eklenir ve `Customers` tablo **veri kaynakları** penceresinde görünür.
 
@@ -136,7 +136,7 @@ Northwind örnek veritabanındaki tabloya dayalı bir veri kaynağı oluşturmak
 
 1. **Veri kaynakları** penceresindeki **müşteriler** düğümünü genişletin.
 
-1. **Müşteriler** düğümündeki açılan oka tıklayın ve **Özelleştir** ' i seçin.
+1. **Müşteriler** düğümündeki açılan oka tıklayın ve **Özelleştir**' i seçin.
 
 1. **Veri Kullanıcı arabirimi özelleştirme seçenekleri** Iletişim kutusunda **Ilişkili denetimler** listesinden **ComplexDataGridView** ' i seçin.
 
@@ -148,7 +148,7 @@ Veri **kaynakları** penceresinden formunuza öğe sürükleyerek veri bağlant�
 
 ## <a name="run-the-application"></a>Uygulamayı çalıştırma
 
-Uygulamayı çalıştırmak için **F5** 'e basın.
+Uygulamayı çalıştırmak için **F5**'e basın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

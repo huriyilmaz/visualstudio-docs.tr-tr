@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: f230560b-4243-432d-8f19-46df112043b9
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 521d5640f001fa0bc190e1869a6568328e864f5a
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: a40710026b00f46f6539ad73a938999440f30b02
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97728624"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99865456"
 ---
 # <a name="cv_call_e"></a>CV_call_e
 Bir işlev için çağırma kuralını belirtir.
@@ -27,7 +27,7 @@ Bir işlev için çağırma kuralını belirtir.
 > [!NOTE]
 > Burada yalnızca en yaygın numaralandırma değerleri belgelenmiştir. Tüm sabit listesi, cvconst. h üstbilgi dosyasında bulunur.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```C++
 typedef enum CV_call_e {

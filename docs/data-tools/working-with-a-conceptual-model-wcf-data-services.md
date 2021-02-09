@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 2cd873cf-b010-49f2-a278-bb1277aaa934
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 2aa79ca10729b9c36437fe30072328838de5dda4
-ms.sourcegitcommit: 72a49c10a872ab45ec6c6d7c4ac7521be84526ff
+ms.openlocfilehash: ef5745f974848da75b4dcc0c42b59b38aa61cd0b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94997881"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99866118"
 ---
 # <a name="work-with-a-conceptual-model-wcf-data-services"></a>Kavramsal modelle çalışma (WCF Veri Hizmetleri)
 

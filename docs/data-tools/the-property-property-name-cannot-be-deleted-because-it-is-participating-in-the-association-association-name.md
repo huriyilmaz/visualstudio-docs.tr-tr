@@ -7,15 +7,15 @@ ms.topic: error-reference
 ms.assetid: 389873cc-92dd-48da-bfca-0f6c8e0ae3c2
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: a0d39fa3d7740996be3fc9da75224739f1e55539
-ms.sourcegitcommit: 72a49c10a872ab45ec6c6d7c4ac7521be84526ff
+ms.openlocfilehash: 99115a3c04aec71e7d000dfa4e707eacb0e28cf3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94998379"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99866404"
 ---
 # <a name="the-property-ltproperty-namegt-cannot-be-deleted-because-it-is-participating-in-the-association-ltassociation-namegt"></a>Özellik &lt; özelliği adı, &gt; ilişkilendirme ilişkilendirme adına katıldığından silinemiyor &lt;&gt;
 

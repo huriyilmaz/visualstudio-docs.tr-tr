@@ -10,15 +10,15 @@ dev_langs:
 ms.assetid: c83ba0bb-5425-4d47-8891-6b4dbf937701
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: b2dc8d78f42d210741c904e3e475be33f2443e74
-ms.sourcegitcommit: 72a49c10a872ab45ec6c6d7c4ac7521be84526ff
+ms.openlocfilehash: e4853dfbffdf07d3b605b13c5fce749a30285c27
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94998063"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99866339"
 ---
 # <a name="typed-vs-untyped-datasets"></a>Yazılan ve yazılmayan veri kümelerinin karşılaştırması
 Türü belirtilmiş veri kümesi, ilk olarak temel sınıftan türetilmiş bir veri kümesidir <xref:System.Data.DataSet> ve sonra yeni ve türü kesin belirlenmiş bir veri kümesi sınıfı oluşturmak için bir. xsd dosyasında depolanan **veri kümesi Tasarımcısı** bilgileri kullanır. Şemadan alınan bilgiler (tablolar, sütunlar, vb.) oluşturulup ilk sınıf nesne ve özellik kümesi olarak bu yeni veri kümesi sınıfına derlenir. Türü belirtilmiş bir veri kümesi temel sınıftan devraldığı için <xref:System.Data.DataSet> , yazılan sınıf sınıfın tüm işlevselliğini varsayar <xref:System.Data.DataSet> ve bir sınıfın örneğini bir parametre olarak alan yöntemlerle birlikte kullanılabilir <xref:System.Data.DataSet> .

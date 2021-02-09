@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 9375ca35-cb91-45f5-8903-7344ee4528e8
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 6d813955c8b61965b41cd252aaa35cb7ca323234
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: f0cb578e55ed5559c9ac5e88aca4db9abf31a2e9
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97728890"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99865584"
 ---
 # <a name="baseclass"></a>BaseClass
 Kullanıcı tanımlı tür (UDT) simgesi için her temel sınıf, etiketiyle bir alt öğe tarafından tanımlanır `SymTagBaseClass` . [IDiaSymbol:: get_type](../../debugger/debug-interface-access/idiasymbol-get-type.md) özelliği, temeldeki udt 'nin sembolünü içerir ve temel alınan udt 'nin tüm özellikleri bu BaseClass sembolünün bir parçası olarak kullanılabilir.

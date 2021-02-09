@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 55f3bfbe-db78-4486-add3-c62f49e6b9a0
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: e6a10eb996acbdbf5411688860ce2ec8b00da1f6
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 8037b8d19bad19485e9ed8f7926e6a3e45b8fef1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94436465"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99866911"
 ---
 # <a name="fill-datasets-by-using-tableadapters"></a>TableAdapter'ları kullanarak veri kümelerini doldurma
 
@@ -37,7 +37,7 @@ TableAdapter bileşeni, bir veri kümesini bir veya daha fazla sorgu ya da belir
 
 TableAdapter işlemleri hakkında ayrıntılı bilgi için doğrudan şu konulardan birine atlayabilirsiniz:
 
-|Konu|Açıklama|
+|Konu|Description|
 |-----------|-----------------|
 |[TableAdapter’lar oluşturma ve yapılandırma](../data-tools/create-and-configure-tableadapters.md)|TableAdapters oluşturmak ve yapılandırmak için tasarımcıları kullanma|
 |[Parametreleştirilmiş TableAdapter sorguları oluşturma](../data-tools/create-parameterized-tableadapter-queries.md)|Kullanıcıların TableAdapter yordamlarına veya sorgularına bağımsız değişkenler vermesini sağlama|
@@ -91,7 +91,7 @@ TableAdapter sınıfı bir .NET türü değil. Bu, belgelerde veya **nesne taray
 
 Aşağıda, TableAdapters 'in yaygın olarak kullanılan yöntemleri ve özellikleri verilmiştir:
 
-|Üye|Açıklama|
+|Üye|Description|
 |------------|-----------------|
 |`TableAdapter.Fill`|TableAdapter 'ın ilişkili veri tablosunu TableAdapter komutunun sonuçlarıyla doldurur `SELECT` .|
 |`TableAdapter.Update`|Değişiklikleri veritabanına geri gönderir ve güncelleştirmeden etkilenen satır sayısını temsil eden bir tamsayı döndürür. Daha fazla bilgi için bkz. [TableAdapter kullanarak verileri güncelleştirme](../data-tools/update-data-by-using-a-tableadapter.md).|
@@ -128,7 +128,7 @@ TableAdapterManager sınıfı bir .NET türü değildir. Bu nedenle, belgelerde 
 
 Aşağıda, sınıfının sık kullanılan yöntemleri ve özellikleri verilmiştir `TableAdapterManager` :
 
-|Üye|Açıklama|
+|Üye|Description|
 |------------|-----------------|
 |`UpdateAll` yöntemi|Tüm veri tablolarından tüm verileri kaydeder.|
 |`BackUpDataSetBeforeUpdate` özelliði|Yöntemi yürütmeden önce veri kümesinin yedek kopyasının oluşturulup oluşturulmayacağını belirler `TableAdapterManager.UpdateAll` . Boolean.|

@@ -10,15 +10,15 @@ dev_langs:
 ms.assetid: 7b1a91cf-8b5a-4fc0-ac36-0dc2d336fa1b
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 8ccf228b147301eb9fccf41da98f8cc5204971a9
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 4342af681f8e2cc38855bec6041e8b4cd83dcf5d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94436074"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99866625"
 ---
 # <a name="query-datasets"></a>Veri kümelerini sorgulama
 Bir veri kümesindeki belirli kayıtları aramak için `FindBy` DataTable 'daki yöntemi kullanın, tablonun satır koleksiyonu üzerinde döngü yapmak için kendi foreach deyiminizi yazın veya [LINQ to DataSet](/dotnet/framework/data/adonet/linq-to-dataset)kullanın.
@@ -72,7 +72,7 @@ Bu sayfa, türü belirtilmiş veri kümelerini kullanarak örnekler sağlar. Tü
 > [!NOTE]
 > Windows Forms bir uygulamada çalışıyorsanız ve verileri göstermek için veri bağlama özelliklerini kullanıyorsanız, tasarımcı tarafından oluşturulan form uygulamanız için yeterli işlevsellik sağlayabilir. Daha fazla bilgi için bkz. [Visual Studio 'da denetimleri verilere bağlama](../data-tools/bind-controls-to-data-in-visual-studio.md). Özellikle, bkz. [veri kümelerinde ilişkiler](relationships-in-datasets.md).
 
-Aşağıdaki kod örnekleri, türü belirtilmiş veri kümelerinde yukarı ve aşağı ilişkileri nasıl gidebileceğinizi göstermektedir. Kod örnekleri, <xref:System.Data.DataRow> `NorthwindDataSet.OrdersRow` *PrimaryKey* `FindByCustomerID` istenen bir satırı bulmak ve ilgili kayıtları döndürmek için yazılan s () ve üretilen FindBy PrimaryKey () yöntemlerini kullanır. Örnekler yalnızca şunları yaptıysanız derleme ve doğru şekilde çalışır:
+Aşağıdaki kod örnekleri, türü belirtilmiş veri kümelerinde yukarı ve aşağı ilişkileri nasıl gidebileceğinizi göstermektedir. Kod örnekleri, <xref:System.Data.DataRow> `NorthwindDataSet.OrdersRow`  `FindByCustomerID` istenen bir satırı bulmak ve ilgili kayıtları döndürmek için yazılan s () ve üretilen FindBy PrimaryKey () yöntemlerini kullanır. Örnekler yalnızca şunları yaptıysanız derleme ve doğru şekilde çalışır:
 
 - Tablo ile adlı bir veri kümesinin örneği `NorthwindDataSet` `Customers` .
 

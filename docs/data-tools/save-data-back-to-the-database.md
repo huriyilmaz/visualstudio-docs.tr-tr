@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: afe6cb8a-dc6a-428b-b07b-903ac02c890b
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 77f6a837fcc88c7154978e8031b17febaa0fcd39
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: bdbfba867fd1fa898ff376d3d1e60f33f58c32a0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94436061"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99866599"
 ---
 # <a name="save-data-back-to-the-database"></a>Verileri yeniden veritabanına kaydetme
 
@@ -43,7 +43,7 @@ Veri kümesi tablolarını bir Windows form veya XAML sayfasında denetimlere ve
 
 TableAdapters hakkında bilgi sahibiyseniz, doğrudan bu konulardan birine atlayabilirsiniz:
 
-|Konu|Açıklama|
+|Konu|Description|
 |-----------|-----------------|
 |[Veritabanına yeni kayıtlar ekleme](../data-tools/insert-new-records-into-a-database.md)|TableAdapters veya komut nesnelerini kullanarak güncelleştirmeleri ve eklemeleri gerçekleştirme|
 |[TableAdapter kullanarak verileri güncelleştirme](../data-tools/update-data-by-using-a-tableadapter.md)|TableAdapters ile güncelleştirme gerçekleştirme|
@@ -127,7 +127,7 @@ Bir veri kümesindeki değişikliklerle ilgili bilgiler iki şekilde tutulur: de
 
 Aşağıdaki tabloda, sabit listesinin olası değerlerinin ayrıntıları verilmiştir <xref:System.Data.DataRowState> :
 
-|DataRowState değeri|Açıklama|
+|DataRowState değeri|Description|
 | - |-----------------|
 |<xref:System.Data.DataRowState.Added>|Satır, öğesine bir öğe olarak eklenmiştir <xref:System.Data.DataRowCollection> . (Son yöntem çağrıldığında mevcut olmadığından, bu durumdaki bir satır karşılık gelen orijinal bir sürüme sahip değildir <xref:System.Data.DataRow.AcceptChanges%2A> ).|
 |<xref:System.Data.DataRowState.Deleted>|Satır, bir nesnesi kullanılarak silindi <xref:System.Data.DataRow.Delete%2A> <xref:System.Data.DataRow> .|
@@ -141,7 +141,7 @@ Veri kümeleri kayıtların birden çok sürümünü tutar. <xref:System.Data.Da
 
 Aşağıdaki tabloda, sabit listesinin olası değerlerinin ayrıntıları verilmiştir <xref:System.Data.DataRowVersion> :
 
-|DataRowVersion değeri|Açıklama|
+|DataRowVersion değeri|Description|
 | - |-----------------|
 |<xref:System.Data.DataRowVersion.Current>|Bir kaydın geçerli sürümü, en son çağrılmasından bu yana kayıtta gerçekleştirilen tüm değişiklikleri içerir <xref:System.Data.DataRow.AcceptChanges%2A> . Satır silinmişse, geçerli sürüm yoktur.|
 |<xref:System.Data.DataRowVersion.Default>|Bir kaydın veri kümesi şeması veya veri kaynağı tarafından tanımlanan varsayılan değeri.|

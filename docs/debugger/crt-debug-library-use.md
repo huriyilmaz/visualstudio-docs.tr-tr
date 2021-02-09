@@ -27,15 +27,15 @@ helpviewer_keywords:
 ms.assetid: 464de16b-4215-4787-9bfa-921aaff9d9f4
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4d145ccd8764e488a5d1270985050b29bcd8987d
-ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
+ms.openlocfilehash: fe50082f8ff62c4a19b7725facc18f43d672e353
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96560570"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99865715"
 ---
 # <a name="crt-debug-library-use"></a>CRT Hata Ayıklama Kitaplığı Kullanımı
 C çalışma zamanı kitaplığı kapsamlı hata ayıklama desteği sağlar. CRT hata ayıklama kitaplıklarından birini kullanmak için [/Debug](/cpp/build/reference/debug-generate-debug-info) ile bağlantı oluşturmanız ve **/MDD**, **/MTD** veya **/LDD** ile derlemeniz gerekir.

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - upgrading to LocalDB
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: babc82469d32540f1a003b629c9d83887ca91595
-ms.sourcegitcommit: 72a49c10a872ab45ec6c6d7c4ac7521be84526ff
+ms.openlocfilehash: cbea7761ed5f36265464f2afe9a64550ddc5e62a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94998050"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99866313"
 ---
 # <a name="upgrade-mdf-files"></a>.mdf dosyalarını yükseltme
 
@@ -67,7 +67,7 @@ Bir veritabanını yükseltmeden önce aşağıdaki ölçütleri göz önünde b
 
     - **Sunucu adı**:
 
-        - Varsayılan sürümü kullanmak için: `(localdb)\MSSQLLocalDB` .  Bu, hangi Visual Studio sürümünün yüklü olduğuna ve ilk LocalDB örneğinin ne zaman oluşturulduğuna bağlı olarak ProjectV12 veya ProjectV13 belirtir. SQL Server Nesne Gezgini **Mssqllocaldb** düğümü, **SQL Server Object Explorer** işaret ettiği sürümü gösterir.
+        - Varsayılan sürümü kullanmak için: `(localdb)\MSSQLLocalDB` .  Bu, hangi Visual Studio sürümünün yüklü olduğuna ve ilk LocalDB örneğinin ne zaman oluşturulduğuna bağlı olarak ProjectV12 veya ProjectV13 belirtir. SQL Server Nesne Gezgini **Mssqllocaldb** düğümü,  işaret ettiği sürümü gösterir.
 
         - Belirli bir sürümü kullanmak için: `(localdb)\ProjectsV12` veya `(localdb)\ProjectsV13` V12, localdb 2014 ve v13, localdb 2016 ' dir.
 

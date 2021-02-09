@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 56a1fbff-c7e8-4187-a1c1-ffd17024bc1b
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 293f04ca111fe88c905a288885f7e4763ec1cdc3
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: cc390642155d33f75bf5c4a69236945658845639
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94436699"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99867106"
 ---
 # <a name="create-lookup-tables-in-wpf-applications"></a>WPF uygulamalarında arama tabloları oluşturma
 
@@ -55,7 +55,7 @@ Terim *arama tablosu* (bazen *arama bağlaması* denir), bir veri tablosundan, b
     > [!NOTE]
     > İlişkili alt tablo veya nesne, üst tablo veya nesne altında genişletilebilen bir alt düğüm olarak görünen düğümdür.
 
-5. Alt düğümün açılan menüsüne tıklayın ve **Ayrıntılar** ' ı seçin.
+5. Alt düğümün açılan menüsüne tıklayın ve **Ayrıntılar**' ı seçin.
 
 6. Alt düğümü genişletin.
 

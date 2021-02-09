@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 0f17e96a-2e06-42c9-a877-3e5e670ee0ef
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: cd507974a11636b4fdc0753dbf94da2a6aece783
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c71f9f39d1b38db79d47aff37cee50f48e92566e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85468716"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99865435"
 ---
 # <a name="data-debug-interface-access-sdk"></a>Veriler (Arabirim Erişimi SDK'sında Hata Ayıklama)
 Parametreler, yerel değişkenler, genel değişkenler ve sınıf üyeleri gibi tüm değişkenler semboller tarafından tanımlanır `SymTagData` . Sabit değerler ( `LocIsConstant` ) bu türle de tanımlanır.

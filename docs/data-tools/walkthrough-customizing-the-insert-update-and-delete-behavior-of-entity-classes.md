@@ -10,15 +10,15 @@ dev_langs:
 ms.assetid: 03ff1146-706e-4780-91cb-56a83df63eea
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: cac9f27263fc7d316d308f1f8d906751f419f104
-ms.sourcegitcommit: 72a49c10a872ab45ec6c6d7c4ac7521be84526ff
+ms.openlocfilehash: 1aba3b1f00ce65b90f61077673a0b88a3bab0f5e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94997933"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99866144"
 ---
 # <a name="walkthrough-customize-the-insert-update-and-delete-behavior-of-entity-classes"></a>İzlenecek yol: varlık sınıflarının INSERT, Update ve DELETE davranışını özelleştirme
 
@@ -231,7 +231,7 @@ Varsayılan olarak, Kaydet düğmesi etkin değildir ve Kaydet işlevi uygulanma
 
 18. **Original_CustomerID** yöntemi bağımsız değişkenini **CustomerID (orijinal)** sınıf özelliği ile eşleyin.
 
-19. **Tamam** düğmesine tıklayın.
+19. **Tamam**'a tıklayın.
 
 > [!NOTE]
 > Bu izlenecek yol için bir sorun olmasa da, LINQ to SQL kimlik (otomatik artırma), ROWGUIDCOL (veritabanı tarafından üretilen GUID) ve ekleme ve güncelleştirme sırasında zaman damgası sütunları için veritabanı tarafından oluşturulan değerleri otomatik olarak işlediğini belirten bir değer. Diğer sütun türlerindeki veritabanı tarafından oluşturulan değerler beklenmedik bir şekilde null değer oluşmasına neden olur. Veritabanı tarafından oluşturulan değerleri döndürmek için, aşağıdakilerden birine el ile ve olarak ayarlamanız gerekir <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> `true` <xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> : [oto Sync. Always](<xref:System.Data.Linq.Mapping.AutoSync.Always>), [oto Sync. OnInsert](<xref:System.Data.Linq.Mapping.AutoSync.OnInsert>)veya [oto Sync. OnUpdate](<xref:System.Data.Linq.Mapping.AutoSync.OnUpdate>).

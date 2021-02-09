@@ -7,15 +7,15 @@ ms.topic: how-to
 ms.assetid: 0fb78bbc-7a78-4ab4-b32f-85ece912e660
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 79e5c529c1aefb4777e174489fc8fd1ca95a4111
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: b440e8c47afdec6e0b04b5f48a35e15fe48e1875
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94436352"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99866807"
 ---
 # <a name="how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-or-designer"></a>Nasıl yapılır: Tablolar ve görünümler ile eşlenen LINQ to SQL sınıfları oluşturma (O/R Tasarımcısı)
 
@@ -34,7 +34,7 @@ Varsayılan olarak, [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.m
 
 ### <a name="to-create-linq-to-sql-classes-that-are-mapped-to-database-tables-or-views"></a>Veritabanı tabloları veya görünümleriyle eşlenmiş LINQ to SQL sınıfları oluşturmak için
 
-1. **Sunucu** veya **veritabanı Gezgini** ' de, **Tablolar** veya **Görünümler** ' i genişletin ve uygulamanızda kullanmak istediğiniz veritabanı tablosu veya görünümünü bulun.
+1. **Sunucu** veya **veritabanı Gezgini**' de, **Tablolar** veya **Görünümler** ' i genişletin ve uygulamanızda kullanmak istediğiniz veritabanı tablosu veya görünümünü bulun.
 
 2. Tabloyu veya görünümü **O/R tasarımcısına** sürükleyin.
 
@@ -48,11 +48,11 @@ Varsayılan olarak, [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.m
 
 1. Projeyi derlemek için **Oluştur** menüsünde **çözüm oluştur** ' a tıklayın.
 
-2. Veri **kaynakları** penceresini açmak Için, **veri** menüsünde **veri kaynaklarını göster** ' e tıklayın.
+2. Veri **kaynakları** penceresini açmak Için, **veri** menüsünde **veri kaynaklarını göster**' e tıklayın.
 
-3. **Veri kaynakları** penceresinde **Yeni veri kaynağı Ekle** ' ye tıklayın.
+3. **Veri kaynakları** penceresinde **Yeni veri kaynağı Ekle**' ye tıklayın.
 
-4. **Veri kaynağı türü seçin** sayfasında **nesne** ' ye tıklayın ve ardından **İleri** ' ye tıklayın.
+4. **Veri kaynağı türü seçin** sayfasında **nesne** ' ye tıklayın ve ardından **İleri**' ye tıklayın.
 
 5. Düğümleri genişletin ve sınıfınızı bulun ve seçin.
 

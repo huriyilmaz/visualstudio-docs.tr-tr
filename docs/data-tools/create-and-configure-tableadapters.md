@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 08630d69-0d6c-4e8f-b42d-2922f45f8415
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 6c976f06f105969f1eaa91022607d61251a56008
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: a9ab54b358125e45cfb0d6a4df30989cf679ab2d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94436764"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99867158"
 ---
 # <a name="create-and-configure-tableadapters"></a>TableAdapter’lar oluşturma ve yapılandırma
 
@@ -51,7 +51,7 @@ Araç kutusundan yeni bir TableAdapter sürükleyip **veri kümesi Tasarımcıs�
 
 - Veritabanı için doğru izinleriniz varsa, temel alınan veritabanında yeni bir saklı yordam oluşturma seçeneğiniz vardır. Bu izinlere sahip değilseniz bu bir seçenek değildir.
 
-- Ayrıca, TableAdapter 'ın **Select** , **Insert** , **Update** ve **Delete** komutları için mevcut saklı yordamları çalıştırmayı da tercih edebilirsiniz. **Update** komutuna atanan saklı yordam, örneğin, `TableAdapter.Update()` yöntemi çağrıldığında çalıştırılır.
+- Ayrıca, TableAdapter 'ın **Select**, **Insert**, **Update** ve **Delete** komutları için mevcut saklı yordamları çalıştırmayı da tercih edebilirsiniz. **Update** komutuna atanan saklı yordam, örneğin, `TableAdapter.Update()` yöntemi çağrıldığında çalıştırılır.
 
 Seçili saklı yordamdaki parametreleri veri tablosundaki karşılık gelen sütunlara eşleyin. Örneğin, saklı yordamınız tablodaki sütuna geçtiğinde adlı bir parametreyi kabul ediyorsa `@CompanyName` `CompanyName` , parametresinin **kaynak sütununu** `@CompanyName` olarak ayarlayın `CompanyName` .
 

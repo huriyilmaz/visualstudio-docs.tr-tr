@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 70ab2522-6486-4076-a1a9-e0f11cd0f3a1
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2d546beb45be7f1473992ab9c2afc5f02ced1a1b
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: 49560ac3293c416719b9addc1cbadf1b0c04f438
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97729099"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99866092"
 ---
 # <a name="assertions-in-managed-code"></a>Yönetilen Koddaki Onaylar
 Bir onay veya `Assert` deyimi, `Assert` deyimine bağımsız değişken olarak belirttiğiniz bir koşulu test eder. Koşul true olarak değerlendirilirse işlem yapmanız gerekmez. Koşul false olarak değerlendirilirse onay başarısız olur. Hata ayıklama derlemesiyle çalışıyorsanız programınız kesme moduna girer.
