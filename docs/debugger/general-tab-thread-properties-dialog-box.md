@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 46b6c668-6786-456e-97dc-337bcac0d812
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: dd4c2bf24058ce8a69f05d8d2cee17a18ff9505d
-ms.sourcegitcommit: 47da50a74fcd3db66d97cb20accac983bc41912f
+ms.openlocfilehash: 02ba7d14dad8e4755170ffca7853aa9cc6c85a19
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96863003"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99870551"
 ---
 # <a name="general-tab-thread-properties-dialog-box"></a>Genel Sekmesi, İş Parçacığı Özellikleri İletişim Kutusu
 Belirli bir iş parçacığı hakkında daha fazla bilgi edinmek için bu iletişim kutusunu kullanın. Bu iletişim kutusunu görüntülemek için odağı bir [Iş parçacığı görünümü](../debugger/threads-view.md) penceresine taşıyın veya [iletiler görünümü](../debugger/messages-view.md) ' ni açın ve bir ileti genişletin. Ağaçta herhangi bir iş parçacığı düğümünü seçin, sonra **Görünüm** menüsünden **Özellikler** ' i seçin.
@@ -26,7 +26,7 @@ Belirli bir iş parçacığı hakkında daha fazla bilgi edinmek için bu ileti�
 
 |Giriş|Description|
 |-----------|-----------------|
-|**Modül Adı**|Modülün adı.|
+|**Modül adı**|Modülün adı.|
 |**İş parçacığı KIMLIĞI**|Bu iş parçacığının benzersiz KIMLIĞI. İş parçacığı KIMLIĞI numaralarının yeniden kullanılabilir olduğunu unutmayın. bir iş parçacığını yalnızca o iş parçacığının ömrü için tanımlarlar.|
 |**İşlem Kimliği**|Bu işlemin benzersiz KIMLIĞI. İşlem KIMLIĞI numaraları yeniden kullanılır, bu nedenle bir işlemi yalnızca bu işlemin kullanım ömrü için tanımlarlar. Işlem nesnesi türü, bir program çalıştırıldığında oluşturulur. Bir işlemdeki tüm iş parçacıkları aynı adres alanını paylaşır ve aynı verilere erişebilir. İşlem KIMLIĞININ özelliklerini görüntülemek için bu değeri seçin.|
 |**İş parçacığı durumu**|İş parçacığının geçerli durumu. Çalışan bir iş parçacığı işlemciyi kullanıyor; bir bekleme iş parçacığı kullanmak için. Ücretsiz bir Iş parçacığı, bir işlemcinin kullanılmasını bekliyor çünkü bir işlem ücretsizdir. Geçiş içindeki bir iş parçacığı, yürütme yığınının diskten disk belleğine alınması beklendiğinden bir kaynağın yürütülmesini bekliyor. Bir çevre birimi işleminin tamamlanmasını veya bir kaynağın ücretsiz olmasını beklediği için bekleyen bir iş parçacığı işlemciyi gerektirmez.|
