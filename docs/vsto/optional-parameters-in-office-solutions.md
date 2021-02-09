@@ -17,15 +17,15 @@ helpviewer_keywords:
 - parameters [Office development in Visual Studio], optional
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 7567f43dfa79e6a1e5d92b9ecddbf7918a6edef3
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: d6824d53d552a27a68a49d63497156147283fd29
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97527573"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99847706"
 ---
 # <a name="optional-parameters-in-office-solutions"></a>Office çözümlerinde isteğe bağlı parametreler
   Microsoft Office uygulamaların nesne modellerindeki birçok yöntem isteğe bağlı parametreleri kabul eder. Visual Studio 'da bir Office çözümü geliştirmek için Visual Basic kullanıyorsanız, varsayılan değerler eksik her parametre için otomatik olarak kullanıldığından isteğe bağlı parametreler için bir değer geçirmeniz gerekmez. Çoğu durumda, Visual C# projelerinde isteğe bağlı parametreleri de atlayabilirsiniz. Ancak,  `ThisDocument` belge düzeyi Word projelerinde sınıfının isteğe bağlı başvuru parametrelerini atlayamazsınız.

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Business Data Connectivity service [SharePoint development in Visual Studio], external list
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: a791f94e46e16369392465e075ade92a833e2868
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: dbf996a2d44f94e4571a332fa7a86d861d820d45
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96915342"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99847719"
 ---
 # <a name="walkthrough-create-an-external-list-in-sharepoint-by-using-business-data"></a>İzlenecek yol: iş verileri kullanarak SharePoint 'te dış liste oluşturma
 
@@ -96,7 +96,7 @@ Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vard�
 
      Bir. dbml dosyası projeye eklenir ve Nesne İlişkisel Tasarımcısı (O/R Designer) açılır.
 
-8. Menü çubuğunda Sunucu Gezgini **görüntüle**' yi seçin  >  **Server Explorer**.
+8. Menü çubuğunda Sunucu Gezgini **görüntüle**' yi seçin  >  .
 
 9. **Sunucu Gezgini**' de, AdventureWorks örnek veritabanını temsil eden düğümü genişletin ve **Tablolar** düğümünü genişletin.
 
@@ -128,7 +128,7 @@ Modele bir varlık ekleyin. Visual Studio **araç kutusu** 'ndan bdc Tasarımcı
 
      Yeni varlık tasarımcıda görünür. Visual Studio, projeye *EntityService. vb* (Visual Basic) veya *EntityService.cs* (C# ' de) adlı bir dosya ekler.
 
-3. Menü çubuğunda **View**  >  **Özellikler**  >  **penceresini** görüntüle ' yi seçin.
+3. Menü çubuğunda   >  **Özellikler**  >  **penceresini** görüntüle ' yi seçin.
 
 4. **Özellikler** penceresinde, **ad** özellik değerini **iletişim** olarak ayarlayın.
 
@@ -148,7 +148,7 @@ BDC hizmetinin belirli bir kişiyi göstermesini sağlamak için belirli bir bul
 
 1. IVB tasarımcısında, **iletişim** varlığını seçin.
 
-2. Menü çubuğunda, **View**  >  **diğer Windows**  >  **bdc yöntemi ayrıntılarını** görüntüle ' yi seçin.
+2. Menü çubuğunda,   >  **diğer Windows**  >  **bdc yöntemi ayrıntılarını** görüntüle ' yi seçin.
 
      IVB yöntemi ayrıntıları penceresi açılır.
 

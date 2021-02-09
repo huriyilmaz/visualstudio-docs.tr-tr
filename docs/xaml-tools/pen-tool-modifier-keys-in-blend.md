@@ -8,15 +8,15 @@ ms.topic: reference
 ms.assetid: c3ab14c6-a320-46db-a6b3-7fd1ca261587
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 104e52619a34f1f2fd5b7aedbac98eafd7fdc189
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: 233ee9e4583e893d38700088d54e4b0e5eacffb6
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93049262"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99846276"
 ---
 # <a name="pen-tool-modifier-keys-in-blend-for-visual-studio"></a>Visual Studio için Blend kalem aracı değiştirici tuşları
 
@@ -28,7 +28,7 @@ Aşağıdaki tabloda, **kalem** aracı kalem aracı ile oluşturduğunuz sırada
 |Eğri çizgi segmentini başlatmak için bir nokta oluşturun|Yeni noktayı oluşturmak için tıklayın ve ardından fare düğmesini bırakmadan önce tanjant tutamaçlarını ayarlamak için sürükleyin|![Eğri çizgi segmentini başlatmak için bir nokta oluşturun](../designers/media/0bfb1b71-80ac-4ad4-aed8-40e09f8b7ab8.png)<br /><br /> Kalem işaretçisi|
 |Kesintisiz kısıtlama olmadan son tanjantı, keskin bir köşe oluşturmanıza izin vererek ayarlayın|Yeni noktayı oluşturmak için tıklayın ve ardından fare düğmesini bırakmadan önce **alt** tuşuna basın|![Kesintisiz kısıtlama olmadan son tanjantı ayarla](../designers/media/317e5475-b70c-489f-9477-110a98639ade.png)<br /><br /> Kalem ayarlama işaretçisi|
 |Son tanjantı, teğet bitiş noktalarının bağımsız olarak çalışması için böler, böylece keskin bir köşe yapabilirsiniz|Yeni noktayı oluşturmak için tıklayın ve ardından fare düğmesini bırakmadan önce **alt** tuşunu basılı tutarak sürükleyin|![Tanjant bitiş noktalarının bağımsız çalışması için son tanjantı Böl](../designers/media/317e5475-b70c-489f-9477-110a98639ade.png)<br /><br /> Kalem ayarlama işaretçisi|
-|Tanjant bitiş noktasını, 15 derecelik artışlarla yeni noktanın etrafında taşıyın|Yeni noktayı oluşturmak için tıklayın ve ardından Shift tuşunu basılı tutarak **Shift** + **Alt** fare düğmesini bırakmadan önce sürükleyin|![Tanjant bitiş noktasını, 15 derecelik artışlarla yeni noktanın etrafında taşıyın](../designers/media/317e5475-b70c-489f-9477-110a98639ade.png)<br /><br /> Kalem ayarlama işaretçisi|
+|Tanjant bitiş noktasını, 15 derecelik artışlarla yeni noktanın etrafında taşıyın|Yeni noktayı oluşturmak için tıklayın ve ardından Shift tuşunu basılı tutarak  +  fare düğmesini bırakmadan önce sürükleyin|![Tanjant bitiş noktasını, 15 derecelik artışlarla yeni noktanın etrafında taşıyın](../designers/media/317e5475-b70c-489f-9477-110a98639ade.png)<br /><br /> Kalem ayarlama işaretçisi|
 |Bitiş noktasındaki tanjantı sıfır uzunluğa azaltma|Uç noktaya tıklayın|![Bitiş noktasındaki tanjantı sıfır uzunluğa azaltma](../designers/media/317e5475-b70c-489f-9477-110a98639ade.png)<br /><br /> Kalem ayarlama işaretçisi|
 |Varolan bir yola yeni bir nokta Ekle|Yeni noktasının istediğiniz konumdaki yola tıklayın|![Varolan bir yola yeni bir nokta Ekle](../designers/media/b004ad5a-33a4-46ae-81c0-20be0d819332.png)<br /><br /> Kalem ekleme işaretçisi|
 |Yoldan bir noktayı kaldırma|Var olan bir noktanın üzerine gelin ve tıklayın|![Noktayı yoldan kaldır](../designers/media/08a64b78-f3df-4730-8169-c56b5631b071.png)<br /><br /> Kalem silme işaretçisi|

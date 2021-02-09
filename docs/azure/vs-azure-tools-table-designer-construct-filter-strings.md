@@ -2,17 +2,17 @@
 title: Tablo Tasarımcısı için filtre dizeleri oluşturma | Microsoft Docs
 description: Tablo Tasarımcısı için filtre dizeleri oluşturma
 author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/18/2016
 ms.author: ghogen
-ms.openlocfilehash: 288e4256a472eb7bbc692758ad81df68be507676
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: cdfcacf38239e896687a236624bb167573f4bd1f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94901927"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99846211"
 ---
 # <a name="constructing-filter-strings-for-the-table-designer"></a>Tablo Tasarımcısı için Filtre Dizelerini Oluşturma
 ## <a name="overview"></a>Genel Bakış
@@ -23,7 +23,7 @@ WCF Veri Hizmetleri, [Açık Veri Protokolü 'nü](https://www.odata.org/) (ODat
 ## <a name="comparison-operators"></a>Karşılaştırma İşleçleri
 Aşağıdaki mantıksal işleçler tüm özellik türleri için desteklenir:
 
-| Mantıksal işleç | Açıklama | Örnek filtre dizesi |
+| Mantıksal işleç | Description | Örnek filtre dizesi |
 | --- | --- | --- |
 | eq |Eşittir |Şehir EQ ' Redmond ' |
 | gt |Büyüktür |Fiyat gt 20 |

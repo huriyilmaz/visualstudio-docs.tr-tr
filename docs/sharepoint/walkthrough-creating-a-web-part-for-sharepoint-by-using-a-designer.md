@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Web Parts [SharePoint development in Visual Studio], designing
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: cc214e98b2ec0ed6feb31c9aaa6e8170b3ddd2c8
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: 02a0eb7c9279aef1fd2821d44a6f3cc4a0008356
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96913990"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99847758"
 ---
 # <a name="walkthrough-create-a-web-part-for-sharepoint-by-using-a-designer"></a>İzlenecek yol: tasarımcı kullanarak SharePoint için bir Web Bölümü oluşturma
 
@@ -83,7 +83,7 @@ Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vard�
 
 5. Tasarımcıda **button1** düğmesini seçin.
 
-6. Menü çubuğunda **View**  >  **Özellikler penceresini** görüntüle ' yi seçin.
+6. Menü çubuğunda   >  **Özellikler penceresini** görüntüle ' yi seçin.
 
      **Özellikler** penceresi açılır.
 

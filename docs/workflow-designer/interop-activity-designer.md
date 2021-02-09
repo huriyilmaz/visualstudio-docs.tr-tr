@@ -9,15 +9,15 @@ f1_keywords:
 ms.assetid: 800a3403-ba86-41c4-8de1-c4fee9703eb1
 author: jillre
 ms.author: jillfra
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4a45187f01469f568a98098a8470ad62f67307a6
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: edf4658743bb719c1c23f93b2d1d3cc33afdbaba
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94437781"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99847394"
 ---
 # <a name="interop-activity-designer"></a>Interop Etkinlik Tasarımcısı
 
@@ -43,7 +43,7 @@ Aşağıdaki tabloda <xref:System.Activities.Statements.Interop> Özellikler gö
 
 |Özellik Adı|Gerekli|Kullanım|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|Yanlış|Etkinliğin kolay adı <xref:System.Activities.Statements.Interop> . Varsayılan değer **birlikte çalışabilirlik** ' dir. Görünen ad gerekli olmasa da, bir tane sağlamanız önerilir.|
+|<xref:System.Activities.Activity.DisplayName%2A>|Yanlış|Etkinliğin kolay adı <xref:System.Activities.Statements.Interop> . Varsayılan değer **birlikte çalışabilirlik**' dir. Görünen ad gerekli olmasa da, bir tane sağlamanız önerilir.|
 |<xref:System.Activities.Statements.Interop.ActivityType%2A>|Doğru|Etkinliğin içerdiği etkinliğin türünü belirtir <xref:System.Activities.Statements.Interop> . Belirtilen bu tür öğesinden türetilmelidir <xref:System.Workflow.ComponentModel.Activity> .|
 
 ## <a name="see-also"></a>Ayrıca bkz.

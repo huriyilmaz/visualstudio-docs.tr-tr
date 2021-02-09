@@ -12,15 +12,15 @@ dev_langs:
 - CSharp
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: fdfd510aaea8d09ac20546344f4bbba18bd5f99b
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: ee35ecc9cfa49f445e93677df9d2917150bc1e74
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96914796"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99847836"
 ---
 # <a name="walkthrough-create-a-silverlight-web-part-that-displays-odata-for-sharepoint"></a>İzlenecek yol: SharePoint için OData görüntüleyen bir Silverlight Web Bölümü oluşturma
   SharePoint 2010, liste verilerini OData aracılığıyla gösterir. SharePoint 'te OData hizmeti, Reststaservıce ListData. svc tarafından uygulanır. Bu izlenecek yol, bir Silverlight uygulaması barındıran SharePoint Web Bölümü oluşturmayı gösterir. Silverlight uygulaması, ListData. svc kullanarak SharePoint duyuru listesi bilgilerini görüntüler. Daha fazla bilgi için bkz. [SharePoint FOUNDATION Rest arabirimi](/previous-versions/office/developer/sharepoint-2010/ff521587(v=office.14)) ve [Açık Veri Protokolü](https://www.odata.org/).
@@ -42,7 +42,7 @@ ms.locfileid: "96914796"
 
 #### <a name="to-create-a-silverlight-application-and-silverlight-web-part"></a>Silverlight uygulaması ve Silverlight Web bölümü oluşturmak için
 
-1. **File**  >  **New**  >  **Yeni proje** iletişim kutusunu göstermek için menü çubuğunda dosya yeni **Proje** ' yi seçin.
+1.   >    >  **Yeni proje** iletişim kutusunu göstermek için menü çubuğunda dosya yeni **Proje** ' yi seçin.
 
 2. **Visual C#** veya **Visual Basic** altında **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
 
@@ -86,7 +86,7 @@ ms.locfileid: "96914796"
 
 5. Menü **çubuğunda Build**  >  **Build Solution** öğesini seçin.
 
-6. SharePoint hizmetine göre projeye yeni bir veri kaynağı ekleyin. Bunu yapmak için, menü çubuğunda **View**  >  **diğer Windows**  >  **veri kaynaklarını** görüntüle ' yi seçin.
+6. SharePoint hizmetine göre projeye yeni bir veri kaynağı ekleyin. Bunu yapmak için, menü çubuğunda   >  **diğer Windows**  >  **veri kaynaklarını** görüntüle ' yi seçin.
 
      **Veri kaynakları** penceresi, görevler, Duyurular ve takvim gibi tüm kullanılabilir SharePoint listesi verilerini gösterir.
 

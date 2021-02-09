@@ -9,16 +9,16 @@ f1_keywords:
 ms.assetid: 228872da-77d0-4da5-b455-ac57fb1867c9
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 20736e7af905bbbc72c1c2bec1e5b79d68259217
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 28b9f5af736e07d6e61d3c175b13202c54a4d0d7
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85544657"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99847875"
 ---
 # <a name="da0024-excessive-gc-cpu-time"></a>DA0024: aşırı GC CPU süresi
 
@@ -46,6 +46,6 @@ ms.locfileid: "85544657"
 > Çöp toplama sırasında harcanan sürenin oranı önemli ve Toplam uygulama işleme süresi ile karşılaştırıldığında çok fazla olmadığında, bu kural yerine [DA0023: Yüksek GC CPU süresi](../profiling/da0023-high-gc-cpu-time.md) uyarısı ateşlenir.
 
 ## <a name="how-to-investigate-a-warning"></a>Uyarı araştırma
- Profil oluşturma verilerinin [Işaretler görünümüne](../profiling/marks-view.md) gitmek Için hatalar Listesi penceresinde iletiye çift tıklayın. GC sütununda **.NET CLR bellek \\ % zamanını** bulun. Yönetilen bellek çöp toplamanın yükünün diğer aşamalardan daha ağır olduğu, program yürütmesinin belirli aşamaları olup olmadığını belirleme. GC değerindeki% değerinin değerlerini, **# of Gen 0 koleksiyonlarında**, **Gen 1 koleksiyonlardan**oluşan #/ **Gen 2 koleksiyon** değerlerinin sayısı ile bildirilen çöp toplama hızına göre karşılaştırın.
+ Profil oluşturma verilerinin [Işaretler görünümüne](../profiling/marks-view.md) gitmek Için hatalar Listesi penceresinde iletiye çift tıklayın. GC sütununda **.NET CLR bellek \\ % zamanını** bulun. Yönetilen bellek çöp toplamanın yükünün diğer aşamalardan daha ağır olduğu, program yürütmesinin belirli aşamaları olup olmadığını belirleme. GC değerindeki% değerinin değerlerini, **# of Gen 0 koleksiyonlarında**, **Gen 1 koleksiyonlardan** oluşan #/ **Gen 2 koleksiyon** değerlerinin sayısı ile bildirilen çöp toplama hızına göre karşılaştırın.
 
  GC değerindeki% süresi, bir uygulamanın çöp toplama işlemini gerçekleştirirken harcadığı süreyi toplam işleme miktarına göre rapor etmeye çalışır. GC değerindeki% zamanının yüksek bir değeri bildirebildiği, ancak aşırı atık toplama nedeniyle olmadığı durumlar olduğunu unutmayın. GC değerindeki% zamanının hesaplanma şekli hakkında daha fazla bilgi için, MSDN 'de **Maonı 'Nin Web günlüğü** ' nin [farklı araçları-4 girişi Ile raporlanan performans verileri arasındaki farka](https://devblogs.microsoft.com/maoni/archive/difference-between-perf-data-reported-by-different-tools-4.aspx) bakın. Sayfa hataları oluşuyorsa veya uygulama çöp toplama sırasında makinede daha yüksek öncelikli iş tarafından önceden atılıyorsa, GC sayacında% süre bu ek gecikmeleri yansıtır.
