@@ -24,15 +24,15 @@ helpviewer_keywords:
 - XML documentation comments [JavaScript]
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 1b4f86d904d98235ee98c54045789751c829b28c
-ms.sourcegitcommit: a7944c325bedd8efbb244452741864089a02f5db
+ms.openlocfilehash: 5a4120a6038949f172b96bec599f2329b69abcac
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91947836"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99903973"
 ---
 # <a name="javascript-intellisense"></a>JavaScript IntelliSense
 
@@ -134,12 +134,12 @@ Aşağıda, bu tür bilgileri (bir arabirim aracılığıyla) aynı projede bir 
 
 TypeScript dünyasında en popüler JavaScript kitaplıklarının API 'Leri *. d. TS* dosyaları tarafından tanımlanır ve bu tür tanımlar için en yaygın depo, [Definitelytyped](https://github.com/DefinitelyTyped/DefinitelyTyped)' dedir.
 
-Varsayılan olarak, salsa dili hizmeti hangi JavaScript kitaplıklarının kullanımda olduğunu algılamaya çalışır ve daha zengin IntelliSense sağlamak için kitaplığı tanımlayan ilgili *. d. TS* dosyasını otomatik olarak indirir. Dosyalar, *%LocalAppData%\microsoft\typescript*konumundaki Kullanıcı klasörünün altında bulunan bir önbelleğe indirilir.
+Varsayılan olarak, salsa dili hizmeti hangi JavaScript kitaplıklarının kullanımda olduğunu algılamaya çalışır ve daha zengin IntelliSense sağlamak için kitaplığı tanımlayan ilgili *. d. TS* dosyasını otomatik olarak indirir. Dosyalar, *%LocalAppData%\microsoft\typescript* konumundaki Kullanıcı klasörünün altında bulunan bir önbelleğe indirilir.
 
 > [!NOTE]
 > Yapılandırma dosyasında bir *tsconfig.js* kullanılıyorsa bu özellik varsayılan olarak **devre dışıdır** , ancak aşağıda açıklandığı gibi etkin olarak ayarlanabilir.
 
-Şu anda otomatik algılama, NPM 'den indirilen bağımlılıklar için (dosyadaki *package.js* okunurken), Bower (dosya * üzerindebower.js* okuyarak) ve projenizde en popüler 400 en popüler JavaScript kitaplıklarının listesiyle eşleşen gevşek dosyalar için geçerlidir. Örneğin, projenizde *jquery-1.10.min.js* varsa, daha iyi bir düzen deneyimi sağlamak amacıyla *jQuery. d. TS* dosyası getirilir ve yüklenir. Bu *. d. TS* dosyası projeniz üzerinde hiçbir etkiye sahip olmayacaktır.
+Şu anda otomatik algılama, NPM 'den indirilen bağımlılıklar için (dosyadaki *package.js* okunurken), Bower (dosya *üzerindebower.js* okuyarak) ve projenizde en popüler 400 en popüler JavaScript kitaplıklarının listesiyle eşleşen gevşek dosyalar için geçerlidir. Örneğin, projenizde *jquery-1.10.min.js* varsa, daha iyi bir düzen deneyimi sağlamak amacıyla *jQuery. d. TS* dosyası getirilir ve yüklenir. Bu *. d. TS* dosyası projeniz üzerinde hiçbir etkiye sahip olmayacaktır.
 
 Otomatik alma 'yı kullanmak istemiyorsanız, aşağıda özetlenen bir yapılandırma dosyası ekleyerek devre dışı bırakın. Tanım dosyalarını, doğrudan projeniz içinde kullanmak üzere el ile de yerleştirebilirsiniz.
 

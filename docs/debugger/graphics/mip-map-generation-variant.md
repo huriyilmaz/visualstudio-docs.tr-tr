@@ -7,20 +7,20 @@ ms.topic: conceptual
 ms.assetid: 3b4b3583-0b01-4f5d-aacb-3f96d19111d9
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d939fb537ac6aed75d9b0f7bda2970a85f9175ad
-ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
+ms.openlocfilehash: dc2e377c0313fffda88bf14c0c7304ff084f3275
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "96994974"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99904438"
 ---
 # <a name="mip-map-generation-variant"></a>Mip-map Oluşturma Çeşidi
 Oluşturma hedefleri olmayan dokuların MIP haritalarını sunar.
 
-## <a name="interpretation"></a>Yorumlama
+## <a name="interpretation"></a>Yorum
 MIP haritaları öncelikle dokudaki dokuların daha küçük sürümlerini önceden hesaplayarak, kele kapsamındaki dokuların diğer ad yapılarını ortadan kaldırmak için kullanılır. Bu ek dokular GPU belleğini tüketse de orijinal dokundan daha fazla yüzde 33 daha fazla olan yüzey alanı GPU dokusu önbelleğine sığdığı ve içeriği daha fazla kullanım elde ettiğinden daha verimli olur.
 
 3B sahneler için, her iki işleme performansı ve görüntü kalitesini arttıkları için bellek ek dokuları depolamak için kullanılabilir olduğunda MIP eşlemeleri önerilir.

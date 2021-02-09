@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 6ba9a754-9cc0-4fed-9fc8-4dcd3926a031
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: cf13e23d69dfeba967e8e971ad2463cef4546567
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: 7ecfa11122b76bcfef3473ff5d06083c64157a2c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93048959"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99905447"
 ---
 # <a name="obtain-build-logs-with-msbuild"></a>MSBuild ile derleme günlükleri alma
 
@@ -37,9 +37,9 @@ MSBuild ile anahtarları kullanarak, ne kadar yapı verisi gözden geçirmek ist
 
 - Yapı Özeti.
 
-**-Ayrıntı** ( **-v** ) anahtarını kullanarak, çıktı günlüğünde ne kadar veri göründüğünü kontrol edebilirsiniz. Sorun giderme için, `detailed` `d` `diagnostic` `diag` en fazla bilgiyi sağlayan () veya () ayrıntı düzeyini kullanın.
+**-Ayrıntı** (**-v**) anahtarını kullanarak, çıktı günlüğünde ne kadar veri göründüğünü kontrol edebilirsiniz. Sorun giderme için, `detailed` `d` `diagnostic` `diag` en fazla bilgiyi sağlayan () veya () ayrıntı düzeyini kullanın.
 
--Ayrıntı düzeyini ' a ayarladığınızda, **-ayrıntı düzeyini** `detailed` ve hatta daha yavaş ayarlarsanız yapı işlemi daha yavaş olabilir **-verbosity** `diagnostic` .
+-Ayrıntı düzeyini ' a ayarladığınızda, **-ayrıntı düzeyini** `detailed` ve hatta daha yavaş ayarlarsanız yapı işlemi daha yavaş olabilir  `diagnostic` .
 
 ```cmd
 msbuild MyProject.proj -t:go -v:diag
@@ -60,7 +60,7 @@ Aşağıdaki tabloda, günlük ayrıntı düzeyi (sütun değerleri) hangi ileti
 
 ## <a name="save-the-build-log-to-a-file"></a>Derleme günlüğünü bir dosyaya kaydetme
 
-Derleme verilerini bir dosyaya kaydetmek için **-filegünlükçü** ( **fl** ) anahtarını kullanabilirsiniz. Aşağıdaki örnek, yapı verilerini *MSBuild. log* adlı bir dosyaya kaydeder.
+Derleme verilerini bir dosyaya kaydetmek için **-filegünlükçü** (**fl**) anahtarını kullanabilirsiniz. Aşağıdaki örnek, yapı verilerini *MSBuild. log* adlı bir dosyaya kaydeder.
 
 ```cmd
 msbuild MyProject.proj -t:go -fileLogger
@@ -88,7 +88,7 @@ msbuild MyProject.proj -t:go -fl1 -fl2 -fl3 -flp2:logfile=JustErrors.log;errorso
 
 ## <a name="save-a-binary-log"></a>İkili günlük kaydetme
 
-**-Binarygünlükçü** ( **BL** ) anahtarını kullanarak günlüğü sıkıştırılmış, ikili biçimde kaydedebilirsiniz. Bu günlük, derleme işleminin ayrıntılı açıklamasını içerir ve belirli günlük analizi araçları tarafından okunabilir.
+**-Binarygünlükçü** (**BL**) anahtarını kullanarak günlüğü sıkıştırılmış, ikili biçimde kaydedebilirsiniz. Bu günlük, derleme işleminin ayrıntılı açıklamasını içerir ve belirli günlük analizi araçları tarafından okunabilir.
 
 Aşağıdaki örnekte, *binarylogfilename* adlı bir ikili günlük dosyası oluşturulur.
 

@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 0da81b98-f5e3-40d3-ba9a-94551378d0b4
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b2edd0349555380f6d98d24f7a40c22e48797d12
-ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
+ms.openlocfilehash: 3fdbd9220ef82102dd66f10ab7f15570118bae9a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/04/2021
-ms.locfileid: "97863756"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99904541"
 ---
 # <a name="vsix-extension-schema-20-reference"></a>VSıX uzantı Şeması 2,0 başvurusu
 VSıX dağıtımı bildirim dosyası bir VSıX paketinin içeriğini açıklar. Dosya biçimi bir şemaya tabidir. Bu şemanın sürüm 2,0, özel türlerin ve özniteliklerin eklenmesini destekler.  Bildirimin şeması genişletilebilir. Bildirim yükleyicisi, anladığı XML öğelerini ve özniteliklerini yoksayar.

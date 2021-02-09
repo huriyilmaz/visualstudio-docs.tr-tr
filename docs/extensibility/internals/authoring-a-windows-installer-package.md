@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 0ce7c21d-0d3f-47fe-a0bb-eed506e32609
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 82c96bdf8e73f7d40b41220524edef022c216f1b
-ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
+ms.openlocfilehash: 445b302c66739c8a35f180686011f3b498f87ada
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96190128"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99906137"
 ---
 # <a name="author-a-windows-installer-package"></a>Windows Installer paketi yazma
 Veri sürücüleri Windows Installer modeli. Dosyaları kopyalamak ve kayıt defteri girişlerini yazmak için bir yordamsal betik yazmak yerine, dosya ve kayıt defteri verilerini içeren veritabanı tablolarında satır ve sütun yazarınız.

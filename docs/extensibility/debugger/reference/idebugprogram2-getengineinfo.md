@@ -9,33 +9,33 @@ helpviewer_keywords:
 ms.assetid: 3a4f2dc0-e082-4d8d-aeaf-463ab09d279b
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 53f16a3ef6bd1328d73c8a6c71c666968d5564d4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b26d6dcde31d3599c8aa8f8223c1f3cf00a59437
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80722823"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99906262"
 ---
 # <a name="idebugprogram2getengineinfo"></a>IDebugProgram2::GetEngineInfo
 Bu programı çalıştıran hata ayıklama altyapısının (DE) adını ve GUID 'sini alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
-HRESULT GetEngineInfo( 
+HRESULT GetEngineInfo( 
    BSTR* pbstrEngine,
    GUID* pguidEngine
 );
 ```
 
 ```csharp
-int GetEngineInfo( 
+int GetEngineInfo( 
    out string pbstrEngine,
    out GUID   pguidEngine
 );

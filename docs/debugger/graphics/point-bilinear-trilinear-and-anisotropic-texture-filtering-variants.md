@@ -7,20 +7,20 @@ ms.topic: conceptual
 ms.assetid: 57d14fc9-b5f7-45ee-9717-48086886742d
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c38869b4c8daa4cb4433f9f6a64afcc7398c9a9c
-ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
+ms.openlocfilehash: 7de150064ee493795bdeed579715dbf1370573a2
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "96996090"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99905065"
 ---
 # <a name="point-bilinear-trilinear-and-anisotropic-texture-filtering-variants"></a>Nokta, Çift Doğrusal, Üçlü Doğrusal ve Yön Bağımlı Doku Filtreleme Çeşitleri
 Uygun doku örnekleyicileri için filtreleme modunu geçersiz kılar.
 
-## <a name="interpretation"></a>Yorumlama
+## <a name="interpretation"></a>Yorum
  Farklı doku örnekleme yöntemleri farklı performans maliyetlerine ve görüntü kalitesine sahiptir. Maliyet artırma ve görsel kaliteyi artırma gibi — filtre modları şunlardır:
 
 1. Nokta filtreleme (en az pahalı, en kötü görsel kalite)

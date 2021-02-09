@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 12b6d6db-0d22-4aaa-aa7d-1365f759b7b0
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f88d064c551ccffe1c59e68c8472b519a58db436
-ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
+ms.openlocfilehash: 26184263d5f269ebf6922c5dd85a37e93356e935
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96190102"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99906016"
 ---
 # <a name="automation-model-overview"></a>Otomasyon modeline genel bakış
 Otomasyon modeli, Visual Studio eklentisi veya uzantısı yazabileceğiniz bir nesne kümesinden oluşur. Bir eklenti, Visual Studio ortamını işleyebilen ve ortak görevleri otomatikleştiren bir uygulamadır. Visual Studio uzantısı, özel Visual Studio bileşenleri oluşturabilir veya metin Düzenleyicisi gibi standart bileşenlerin işlevlerine ekleyebilir.

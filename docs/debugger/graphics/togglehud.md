@@ -7,20 +7,20 @@ ms.topic: conceptual
 ms.assetid: 7261e01d-3c72-46ce-9fb3-5f33b2ddb901
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 60bee5a89be0fc1503595a36cfc48a692711d40a
-ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
+ms.openlocfilehash: 6cde6549551156f3655f313c23dc66659d2830cf
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "96996077"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99905055"
 ---
 # <a name="togglehud"></a>ToggleHUD
 Grafik tanılama *HUD* (baş ekran görüntüsü) kaplamayı açık veya kapalı olarak değiştirir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```C++
 void ToggleHUD();

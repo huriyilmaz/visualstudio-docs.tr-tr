@@ -16,15 +16,15 @@ helpviewer_keywords:
 - application resources [Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4707a3e33279ead458566bc01ed2eed8c67355cf
-ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
+ms.openlocfilehash: b970e9e502542da0452c1ed4f1ebb4585f00559b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95596748"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99903965"
 ---
 # <a name="manage-application-resources-net"></a>Uygulama kaynaklarını yönetme (.NET)
 
@@ -40,8 +40,8 @@ Kaynak dosyaları, bir uygulamanın parçası olan ancak derlenmediği, örneği
 Yönetilen bir kod projesinde proje özellikleri penceresini açın. Özellikler penceresini şu şekilde açabilirsiniz:
 
 - **Çözüm Gezgini** ' de proje düğümüne sağ tıklayıp **Özellikler** ' i seçin
-- **project properties** **CTRL** + **Q** arama kutusuna proje özelliklerini yazma
-- Çözüm Gezgini **alt** + **ENTER** seçme **Solution Explorer**
+-  **CTRL** + **Q** arama kutusuna proje özelliklerini yazma
+- Çözüm Gezgini **alt** + **ENTER** seçme 
 
 **Kaynaklar** sekmesini seçin. Projenizde bir tane yoksa bir *. resx* dosyası ekleyebilirsiniz, farklı türlerde kaynaklar ekleyip silebilir ve mevcut kaynakları değiştirebilirsiniz.
 

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Bookmark control
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 53f68bfd9abd26d9dfcb9e253c412a1ddf3c0e28
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: 1da30943eff228aad3c5413c5d8faea337634e9b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96848371"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99905259"
 ---
 # <a name="bookmark-control"></a>Yer işareti denetimi
   <xref:Microsoft.Office.Tools.Word.Bookmark>Denetim, benzersiz bir ada sahip, olayları ortaya çıkaran ve verilere bağlanabilen bir yer işaretidir. Yer işareti, bir Microsoft Office Word belgesindeki bir öğeyi veya konumu işaretlemek için yer tutucu olarak kullanılabilir. <xref:Microsoft.Office.Tools.Word.Bookmark>Denetim bir <xref:Microsoft.Office.Interop.Word.Bookmark> nesne ve <xref:Microsoft.Office.Interop.Word.Range> nesne birleşimidir.
@@ -48,7 +48,7 @@ ms.locfileid: "96848371"
 
  <xref:Microsoft.Office.Tools.Word.Bookmark?displayProperty=nameWithType>Denetimin özelliği de vardır <xref:Microsoft.Office.Tools.Word.Bookmark.Text?displayProperty=nameWithType> . Bu özellik <xref:Microsoft.Office.Interop.Word.Range.Text?displayProperty=nameWithType> <xref:Microsoft.Office.Tools.Word.Bookmark.Range?displayProperty=nameWithType> <xref:Microsoft.Office.Tools.Word.Bookmark?displayProperty=nameWithType> , bir denetimin özelliği veya <xref:Microsoft.Office.Interop.Word.Bookmark.Range?displayProperty=nameWithType> bir <xref:Microsoft.Office.Interop.Word.Bookmark?displayProperty=nameWithType> nesnenin özelliği üzerinde kullanılabilir olan özellikten farklıdır.
 
-|Text özelliği|Açıklama|
+|Text özelliği|Description|
 |-------------------|-----------------|
 |<xref:Microsoft.Office.Tools.Word.Bookmark.Text?displayProperty=nameWithType>|Yer işareti içindeki metni göstermek ve yer işaretini belgede bırakmak için bu özelliği kullanın. Yer işaretine metin atama, yer işareti aralığını genişletir ve yer işaretini silmez.<br /><br /> Örneğin, `Bookmark1.Text = "Hello world"` metni yer işaretine ekler ve yer işaretini dokunulmamış olarak bırakır.|
 |<xref:Microsoft.Office.Interop.Word.Range.Text?displayProperty=nameWithType>|Yer işareti konumundaki metni göstermek ve yer işaretini otomatik olarak silmek için bu özelliği kullanın. Örneğin, `Bookmark1.Range.Text = "Hello world"` metni yer işaretine ekler ve yer işaretini siler.|
@@ -93,7 +93,7 @@ Aşağıdaki tabloda, "Bunun örnek metin olan" tümcesi gösterilmektedir. , ba
 |Bookmark1|Bu değişiklik.|
 |Bookmark2|*\<empty>*|
 
-## <a name="events"></a>Olaylar
+## <a name="events"></a>Ekinlikler
 
 Denetim için aşağıdaki olaylar mevcuttur <xref:Microsoft.Office.Tools.Word.Bookmark> :
 

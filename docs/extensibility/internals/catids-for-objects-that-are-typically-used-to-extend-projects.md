@@ -11,22 +11,22 @@ helpviewer_keywords:
 ms.assetid: 0c7fdb66-ed96-4b36-89f6-021bca573572
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1b0b20425cd1508db29932e9687d00055e4db58c
-ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
+ms.openlocfilehash: bebaf35fc19cbad86a1e1ee4c8bbeddef0259cb4
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96190024"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99905875"
 ---
 # <a name="catids-for-objects-that-are-typically-used-to-extend-projects"></a>Projeleri genişletmek için genellikle kullanılan nesneler için CATIDs
 Aşağıdaki tabloda `Project` `ProjectItem` [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] , ve projeleri için nesneleri genişletmek ve otomasyon Için kullanılan catids listelenmiştir [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] . Bu CATIDs, *VSLangProj. olb* içinde tanımlanmıştır.
 
 ## <a name="listing-of-catids"></a>CATIDs listesi
 
-|Adı|GUID|
+|Name|GUID|
 |----------|----------|
 |<xref:VSLangProj.PrjCATID.prjCATIDProject>|{610D4614-D0D5-11D2-8599-006097C68E81}|
 |<xref:VSLangProj.PrjCATID.prjCATIDProjectItem>|{610D4615-D0D5-11D2-8599-006097C68E81}|
@@ -34,7 +34,7 @@ Aşağıdaki tabloda `Project` `ProjectItem` [!INCLUDE[vbprvb](../../code-qualit
 ## <a name="visual-basic-catids"></a>Visual Basic CATIDs
  Aşağıdaki tabloda, tarama nesnelerini genişletmek için kullanılan CATIDs listelenmiştir [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] . Hepsi *VSLangProj. olb* içinde tanımlanmıştır.
 
-|Adı|GUID|
+|Name|GUID|
 |----------|----------|
 |<xref:VSLangProj.PrjBrowseObjectCATID.prjCATIDVBProjectBrowseObject>|{E0FDC879-C32A-4751-A3D3-0B3824BD575F}|
 |<xref:VSLangProj.PrjBrowseObjectCATID.prjCATIDVBProjectConfigBrowseObject>|{67F8DD11-14EB-489b-87F0-F01C52AF3870}|
@@ -45,7 +45,7 @@ Aşağıdaki tabloda `Project` `ProjectItem` [!INCLUDE[vbprvb](../../code-qualit
 ## <a name="visual-c-catids"></a>Visual C# CATIDs
  Aşağıdaki CATIDs 'Ler, gezinme nesnelerini genişletmek için kullanılabilir [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] . Hepsi *VSLangProj. olb* içinde tanımlanmıştır.
 
-|Adı|GUID|
+|Name|GUID|
 |----------|----------|
 |<xref:VSLangProj.PrjBrowseObjectCATID.prjCATIDCSharpProjectBrowseObject>|{4EF9F003-DE95-4d60-96B0-212979F2A857}|
 |<xref:VSLangProj.PrjBrowseObjectCATID.prjCATIDCSharpProjectConfigBrowseObject>|{A12CE10A-227F-4963-ADB6-3A43388513CA}|
@@ -56,7 +56,7 @@ Aşağıdaki tabloda `Project` `ProjectItem` [!INCLUDE[vbprvb](../../code-qualit
 ## <a name="c-catids"></a>C++ CATIDs
  Aşağıdaki [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] Proje sistemi CATIDs, .net 2003 ' deki tür kitaplıklarında gösterilmez [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ve bu proje nesnelerini genişletmek istediğiniz her seferinde kodunuza dahil edilmemelidir. Bu CATIDs, daha sonraki sürümlerindeki tür kitaplıklarına dahil edilir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
 
-|Adı|GUID|
+|Name|GUID|
 |----------|----------|
 |`CVCProjectNode`|{EE8299CB-19B6-4f20-ABEA-E1FD9A33B683}|
 |`CVCFolderNode`|{EE8299CA-19B6-4f20-ABEA-E1FD9A33B683}|
@@ -72,7 +72,7 @@ const LPOLESTR CVCFileNode::s_wszCATID = L"{EE8299C9-19B6-4f20-ABEA-E1FD9A33B683
 
  Aşağıdaki [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] Proje sistemi kasaları ayrıca .net 2003 ' deki tür kitaplıklarında gösterilmez [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ve bu proje nesnelerini genişletmek istediğiniz her seferinde kodunuza dahil edilmemelidir. Bu CATIDs yalnızca .NET 2003 ' de kullanılabilir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ve sonraki sürümlerinde kullanılamaz [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
 
-|Adı|GUID|
+|Name|GUID|
 |----------|----------|
 |`CVCAssemblyReferenceNode`|{FE8299C9-19B6-4f20-ABEA-E1FD9A33B683}|
 |`CVCProjectReferenceNode`|{593DCFCE-20A7-48e4-ACA1-49ADE9049887}|

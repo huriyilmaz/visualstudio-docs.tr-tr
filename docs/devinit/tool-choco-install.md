@@ -5,18 +5,18 @@ ms.date: 11/20/2020
 ms.topic: reference
 author: andysterland
 ms.author: andster
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 586f503569f7218e78cda79e7a40e33f7ec30ff6
-ms.sourcegitcommit: 74b67f102d243e3b74a93563e834f49df298e4b8
+ms.openlocfilehash: 386b41dd7f1b19d223703570b0423de0855e983a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/19/2020
-ms.locfileid: "97696532"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99904799"
 ---
 # <a name="choco-install"></a>choco-install
 
@@ -29,10 +29,10 @@ Hem hem de `input` `additionalOptions` özellikleri atlanırsa veya boşsa araç
 | Ad                                             | Tür   | Gerekli  | Değer                                                                                                          |
 |--------------------------------------------------|--------|-----------|----------------------------------------------------------------------------------------------------------------|
 | **açıklamaları**                                     | dize | No        | İsteğe bağlı Yorumlar özelliği. Kullanılmadı.                                                                          |
-| [**girişinin**](#input)                              | string | Evet       | Yüklenecek paket. Ayrıntılar için aşağıdaki [girişi](#input) inceleyin.                                                 |
+| [**girişinin**](#input)                              | string | Yes       | Yüklenecek paket. Ayrıntılar için aşağıdaki [girişi](#input) inceleyin.                                                 |
 | [**additionalOptions**](#additional-options)     | dize | No        | Araca geçirilecek ek seçenekler. Ayrıntılar için aşağıdaki [ek seçeneklere](#additional-options) bakın.       |
 
-### <a name="input"></a>Girdi
+### <a name="input"></a>Giriş
 
 `input`Özelliği, Yüklenecek paketin adını (örneğin ' MongoDB ') veya aşağıdaki biçimlerdeki bir yapılandırma dosyasının yolunu belirtmek için kullanılır _packages.config_, _. nuspec_ ve _. nupkg_. Değeri, `input` öğesine `choco install` `choco install mongodb` özgü bağımsız değişkenlerle birlikte (örneğin,) [`additionalOptions`](#additional-options) ve yerleşik `choco` seçeneklere ( [aşağıda](#built-in-options)tanımlanmıştır) eklenir. Paketler [Chocolatey paket galerisinde](https://chocolatey.org/packages)bulunur. Bir yapılandırma dosyası kullanırken, bu dosyanın yolunu, `input` Örneğin, özelliğinde geçirebilirsiniz `"input":"packages.config"` .
 

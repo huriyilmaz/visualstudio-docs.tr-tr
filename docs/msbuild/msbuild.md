@@ -10,21 +10,21 @@ helpviewer_keywords:
 ms.assetid: e39f13f7-1e1d-4435-95ca-0c222bca071c
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d7e42452d8ee59142c4f906d928378d1fb44bf67
-ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
+ms.openlocfilehash: dbf938e61cc1567beb682847821595f5ca6cc026
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92904515"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99905469"
 ---
 # <a name="msbuild"></a>MSBuild
 
 Microsoft Build Engine, uygulama oluşturmaya yönelik bir platformdur. MSBuild olarak da bilinen bu altyapı, derleme platformunun yazılım işleme ve derleme şeklini denetleyen bir proje dosyası için bir XML şeması sağlar. Visual Studio MSBuild kullanır, ancak MSBuild, Visual Studio 'ya bağlı değildir. Proje veya çözüm dosyanızda *msbuild.exe* çağırarak, ürünleri Visual Studio 'nun yüklü olmadığı ortamlarda düzenleyebilir ve oluşturabilirsiniz.
 
- Visual Studio, yönetilen projeleri yüklemek ve derlemek için MSBuild 'i kullanır. Visual Studio 'daki proje dosyaları ( *. csproj* , *. vbproj* , *. vcxproj* ve diğerleri), IDE kullanarak bir proje oluşturduğunuzda yürütülen MSBuild xml kodunu içerir. Visual Studio projeleri tipik geliştirme işlerini yapmak için gerekli tüm ayarları ve derleme süreçlerini içeri aktarır, ancak bunları Visual Studio içinden genişletebilir veya bir XML Düzenleyicisi kullanarak değiştirebilirsiniz.
+ Visual Studio, yönetilen projeleri yüklemek ve derlemek için MSBuild 'i kullanır. Visual Studio 'daki proje dosyaları (*. csproj*, *. vbproj*, *. vcxproj* ve diğerleri), IDE kullanarak bir proje oluşturduğunuzda yürütülen MSBuild xml kodunu içerir. Visual Studio projeleri tipik geliştirme işlerini yapmak için gerekli tüm ayarları ve derleme süreçlerini içeri aktarır, ancak bunları Visual Studio içinden genişletebilir veya bir XML Düzenleyicisi kullanarak değiştirebilirsiniz.
 
  C++ için MSBuild hakkında daha fazla bilgi için bkz. [MSBuild (c++)](/cpp/build/msbuild-visual-cpp).
 
@@ -72,7 +72,7 @@ MSBuild.exe MyProj.proj -property:Configuration=Debug
 
  Aşağıdaki bölümlerde MSBuild proje dosyası biçiminin bazı temel öğeleri açıklanır. Temel proje dosyası oluşturma hakkında bir öğretici için, bkz. [Izlenecek yol: bir MSBuild proje dosyası sıfırdan oluşturma](../msbuild/walkthrough-creating-an-msbuild-project-file-from-scratch.md).
 
-### <a name="properties"></a><a name="BKMK_Properties"></a> Özelliklerinin
+### <a name="properties"></a><a name="BKMK_Properties"></a> Özellikler
 
  Özellikler, yapıları yapılandırmak için kullanılabilen anahtar/değer çiftlerini temsil eder. Özellikler, bir [PropertyGroup](../msbuild/propertygroup-element-msbuild.md) öğesinin alt öğesi olarak özelliğin adına sahip bir öğe oluşturularak belirtilir. Örneğin, aşağıdaki kod, değeri olan adlı bir özellik oluşturur `BuildDir` `Build` .
 

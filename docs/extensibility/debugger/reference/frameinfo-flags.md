@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 41578062-8455-412a-9d8b-1e1e9dc8d52e
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3510726400623c5ddf3e7a4d58a4903763b91245
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9dcdb555e4355d6f22c8218f98899c01b3b3e2e0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80736807"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99904778"
 ---
 # <a name="frameinfo_flags"></a>FRAMEINFO_FLAGS
 Yığın çerçeve nesnesi hakkında alınacak bilgileri belirtir.
@@ -28,7 +28,7 @@ Yığın çerçeve nesnesi hakkında alınacak bilgileri belirtir.
 ## <a name="syntax"></a>Syntax
 
 ```cpp
-enum enum_FRAMEINFO_FLAGS {
+enum enum_FRAMEINFO_FLAGS {
     FIF_FUNCNAME              = 0x00000001,
     FIF_RETURNTYPE            = 0x00000002,
     FIF_ARGS                  = 0x00000004,
@@ -65,7 +65,7 @@ typedef DWORD FRAMEINFO_FLAGS;
 ```
 
 ```csharp
-public enum enum_FRAMEINFO_FLAGS {
+public enum enum_FRAMEINFO_FLAGS {
     FIF_FUNCNAME              = 0x00000001,
     FIF_RETURNTYPE            = 0x00000002,
     FIF_ARGS                  = 0x00000004,
@@ -207,7 +207,7 @@ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Listelemeler](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md)
 - [EnumFrameInfo](../../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md)
 - [GetInfo](../../../extensibility/debugger/reference/idebugstackframe2-getinfo.md)

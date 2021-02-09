@@ -15,15 +15,15 @@ helpviewer_keywords:
 - Domain-Specific Language, domain properties
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 40dcba1cb83e695f2b02468bdd83a5faa8c25a38
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: 440d2f42fb7967ebbcb97433c3faa55e2d91ca0e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97363321"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99903928"
 ---
 # <a name="how-to-define-a-domain-specific-language"></a>Nasıl yapılır: Etki Alanına Özgü bir Dili Tanımlama
 Bir etki alanına özgü dil (DSL) tanımlamak için, bir şablondan bir Visual Studio çözümü oluşturursunuz. Çözümün anahtar bölümü DslDefinition. dsl ' de depolanan DSL tanımı diyagramıdır. DSL tanımı, DSL 'nin sınıflarını ve şekillerini tanımlar. Bu öğelere değiştirdikten ve ekledikten sonra, DSL 'yi daha ayrıntılı şekilde özelleştirmek için program kodu ekleyebilirsiniz.

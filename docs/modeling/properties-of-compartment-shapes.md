@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Domain-Specific Language, compartment shape
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 54b6e42a46fc60dd981d9a103a4303b44fb0f909
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: eb97f6b218655266afeaeec6198ea52d35c76c52
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97360500"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99905491"
 ---
 # <a name="properties-of-compartment-shapes"></a>Bölme Şekillerinin Özellikleri
 Bölme şekilleri, etki alanına özgü bir dilde bir etki alanı sınıfını göstermek için kullanabileceğiniz şekillerden biridir. Bölmeleri genişletebilir ve daraltabilirsiniz.
@@ -45,14 +45,14 @@ Bölme şekilleri, etki alanına özgü bir dilde bir etki alanı sınıfını g
 |Özel Oluşturucusu vardır|İse `True` , kaynak kodda özel bir Oluşturucu sağlanacaktır. Daha fazla bilgi için bkz. [oluşturulan sınıfları geçersiz kılma ve genişletme](../modeling/overriding-and-extending-the-generated-classes.md).|Yanlış|
 |Devralma değiştiricisi|Bölme şeklinden oluşturulan kaynak kodu sınıfının devralım türünü açıklar ( `none` `abstract` veya `sealed` ).|Yok|
 |Temel bölme şekli|Bu şeklin temel sınıfı.|(yok)|
-|Ad|Bu şeklin adı.|Geçerli ad|
+|Name|Bu şeklin adı.|Geçerli ad|
 |Ad Alanı|Bu şekille ilişkili ad alanı.|Geçerli ad alanı|
 |Araç ipucu türü|Araç ipucu nasıl tanımlanır (sabit, değişken veya yok). Düzeltildiğinde, `Fixed Tooltip Text` özelliğin değeri araç ipucu olarak kullanılır; değişken ise, araç ipucu özel kodda tanımlanır.|yok|
 |Notlar|Bu şekille ilişkili resmi olmayan notlar.|\<none>|
 |Başlangıç yüksekliği|Bu şeklin inç cinsinden başlangıç yüksekliği. Bölme şekilleri için bu, yalnızca üst bilgi bölümünün yüksekliğidir ve yeniden boyutlandırılmaz.|1|
 |Başlangıç genişliği|Bu şeklin inç cinsinden başlangıç genişliği.|1,5|
 |Özellik olarak gösterilen Fill Color<br /><br /> Sunulma dolgusu gradyan modu<br /><br /> Özellik olarak gösterilen ana hat rengi<br /><br /> Özellik olarak sunulan ana hat kesik çizgi stili<br /><br /> Sunulan ana hat kalınlığı özellik olarak<br /><br /> Metin rengini gösterir|Eğer `True` Kullanıcı, bir şeklin belirtilen özelliğini ayarlayabilir. Bunu ayarlamak için, şekil tanımına sağ tıklayıp **gösterilen Ekle**' ye tıklayın.|Yanlış|
-|Açıklama|Oluşturulan tasarımcıyı belgelemek için kullanılır.|\<none>|
+|Description|Oluşturulan tasarımcıyı belgelemek için kullanılır.|\<none>|
 |Görünen Ad|Bu şekil için oluşturulan tasarımcıda görüntülenecek ad.|\<none>|
 |Düzeltilen araç Ipucu metni|Sabit bir araç ipucu için kullanılan metin.|\<none>|
 |Help anahtar sözcüğü|Bu şekle yönelik F1 yardımını indekslemek için kullanılan anahtar sözcük.|\<none>|

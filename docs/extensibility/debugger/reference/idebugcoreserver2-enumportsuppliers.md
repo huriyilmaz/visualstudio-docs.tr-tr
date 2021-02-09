@@ -9,33 +9,33 @@ helpviewer_keywords:
 ms.assetid: ce0c90e4-8e02-4b08-b558-7677fb2c88f7
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 72edf2a5752371366752333659458439d646642a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: df295625a7e21dbfe13150e05e4b0ecbfa08f694
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80733177"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99904179"
 ---
 # <a name="idebugcoreserver2enumportsuppliers"></a>IDebugCoreServer2::EnumPortSuppliers
 Tüm kullanılabilir bağlantı noktası sağlayıcılarının listesini alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
-HRESULT EnumPortSuppliers(
-   IEnumDebugPortSuppliers2** ppEnum
+HRESULT EnumPortSuppliers(
+   IEnumDebugPortSuppliers2** ppEnum
 );
 ```
 
 ```csharp
-int EnumPortSuppliers(
-   out IEnumDebugPortSuppliers2 ppEnum
+int EnumPortSuppliers(
+   out IEnumDebugPortSuppliers2 ppEnum
 );
 ```
 

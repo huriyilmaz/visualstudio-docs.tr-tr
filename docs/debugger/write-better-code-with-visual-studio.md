@@ -10,15 +10,15 @@ helpviewer_keywords:
 - debugger
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 2ac595098d793e44d65312a09fc8857225f150ef
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c69fe13821f595a137c07d545a4ccfb10fc89b34
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89311397"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99904948"
 ---
 # <a name="debugging-techniques-and-tools-to-help-you-write-better-code"></a>Daha iyi kod yazmanıza yardımcı olacak hata ayıklama teknikleri ve araçları
 
@@ -44,7 +44,7 @@ Uygulamayı oluşturmak için:
 
 1. Oluşturmak istediğiniz uygulama türüne bağlı olarak, Visual Studio yüklü ve **.NET Core platformlar arası geliştirme** veya **.net masaüstü geliştirme** iş yükü yüklü olmalıdır.
 
-    Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads/)   sayfasına giderek ücretsiz olarak yükleme yapın.
+    Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads/) sayfasına giderek ücretsiz olarak yükleme yapın.
 
     İş yükünü yüklemeniz gerekir, ancak Visual Studio zaten varsa **Araçlar**  >  **ve Özellikler al**' a tıklayın. Visual Studio Yükleyicisi başlatılır. **.NET Core platformlar arası geliştirme** veya **.net masaüstü geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
 
@@ -57,7 +57,7 @@ Uygulamayı oluşturmak için:
     Üstteki menü çubuğundan **Dosya**  >  **Yeni**  >  **Proje**' yi seçin. **Yeni proje** iletişim kutusunun sol bölmesinde, **Visual C#** altında, **konsol uygulaması**' nı seçin ve ardından Ortadaki bölmede **konsol uygulaması (.net Core)** veya **konsol uygulaması (.NET Framework)** seçeneğini belirleyin. **Console_Parse_JSON** gibi bir ad yazın ve **Tamam**' a tıklayın.
     ::: moniker-end
 
-    **Konsol uygulaması (.NET Core)** veya **konsol uygulaması (.NET Framework)** proje şablonunu görmüyorsanız, **Araçlar**' a gidin  >  ve Visual Studio yükleyicisi açan araçlar**ve Özellikler**' e gidin. **.NET Core platformlar arası geliştirme** veya **.net masaüstü geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
+    **Konsol uygulaması (.NET Core)** veya **konsol uygulaması (.NET Framework)** proje şablonunu görmüyorsanız, **Araçlar**' a gidin  >  ve Visual Studio yükleyicisi açan araçlar **ve Özellikler**' e gidin. **.NET Core platformlar arası geliştirme** veya **.net masaüstü geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
 
     Visual Studio, sağ bölmedeki Çözüm Gezgini görüntülenen konsol projesini oluşturur.
 
@@ -204,7 +204,7 @@ Bu hata, sol alt tarafta bir ampul simgesi gösterdiğine dikkat edin. Screwdriv
 
 Bu öğeye tıkladığınızda, Visual Studio `using System.Text` *program.cs* dosyasının en üstüne ifadesini ekler ve kırmızı dalgalı çizgi kaybolur. (Önerilen bir düzeltmesinin ne yapacakından emin değilseniz, bu değişikliği uygulamadan önce sağ taraftaki **Değişiklikleri Önizle** bağlantısını seçin.)
 
-Yukarıdaki hata, kodunuza yeni bir ifade ekleyerek genellikle düzelten yaygın bir yoldur `using` . Bu tür hatalar gibi bu tür hataların yaygın olarak karşılaşılan birkaç hatası vardır ```The type or namespace `Name` cannot be found.``` (projeye sağ tıklayın, başvuru **Ekle**' yi seçin  >  **Reference**), yanlış yazılmış bir ad veya eklemeniz gereken eksik bir kitaplık olabilir (C# için projeye sağ tıklayıp **NuGet Paketlerini Yönet**' i seçin).
+Yukarıdaki hata, kodunuza yeni bir ifade ekleyerek genellikle düzelten yaygın bir yoldur `using` . Bu tür hatalar gibi bu tür hataların yaygın olarak karşılaşılan birkaç hatası vardır ```The type or namespace `Name` cannot be found.``` (projeye sağ tıklayın, başvuru **Ekle**' yi seçin  >  ), yanlış yazılmış bir ad veya eklemeniz gereken eksik bir kitaplık olabilir (C# için projeye sağ tıklayıp **NuGet Paketlerini Yönet**' i seçin).
 
 ## <a name="fix-the-remaining-errors-and-warnings"></a>Kalan hataları ve uyarıları çözme
 
@@ -253,7 +253,7 @@ Yeşil dalgalı çizgi kaybolur.
 
 Tüm Red dalgalı çizgiler ve çözümlenen--veya en az araştırılan--tüm yeşil dalgalı çizgiler, hata ayıklayıcıyı başlatmaya ve uygulamayı çalıştırmaya başlayabilirsiniz.
 
-Hata ayıklama araç çubuğunda **F5** tuşuna basın (hata**Ayıkla > Başlat**) ![veya hata](../debugger/media/dbg-tour-start-debugging.png "Hata ayıklamayı Başlat") **ayıklamayı** Başlat düğmesine basın.
+Hata ayıklama araç çubuğunda **F5** tuşuna basın (hata **Ayıkla > Başlat**) ![veya hata](../debugger/media/dbg-tour-start-debugging.png "Hata ayıklamayı Başlat") **ayıklamayı** Başlat düğmesine basın.
 
 Bu noktada, örnek uygulama bir `SerializationException` özel durum (çalışma zamanı hatası) oluşturur. Yani, uygulama Serileştirmeye çalıştığı verileri alır. Uygulamayı hata ayıklama modunda (hata ayıklayıcı ekli) başlattığınız için, hata ayıklayıcının özel durum Yardımcısı özel durumu oluşturan koda doğru bir hata iletisi verir.
 

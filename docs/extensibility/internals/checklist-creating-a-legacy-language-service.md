@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 8b73b341-a33a-4ab5-9390-178c9e563d2d
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 905d81d49706c3ae5348d71c03189d6e036dd3e5
-ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
+ms.openlocfilehash: 823d46453ac6ad4a1a5a42c1f7d18a079b39d12d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96189998"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99905862"
 ---
 # <a name="checklist-create-a-legacy-language-service"></a>Denetim listesi: eski dil hizmeti oluşturma
 Aşağıdaki denetim listesi, çekirdek Düzenleyici için bir dil hizmeti oluşturmak üzere uygulamanız gereken temel adımları özetler [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Dil hizmetinizi ile tümleştirmek için [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] bir hata ayıklama ifade değerlendiricisi oluşturmanız gerekir. Daha fazla bilgi için bkz. [Visual Studio hata ayıklayıcısı genişletilebilirliği](../../extensibility/debugger/visual-studio-debugger-extensibility.md)IÇINDE [bir clr ifade değerlendiricisi yazma](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md) .

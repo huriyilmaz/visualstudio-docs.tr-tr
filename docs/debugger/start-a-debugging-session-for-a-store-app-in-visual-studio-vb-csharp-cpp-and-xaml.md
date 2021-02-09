@@ -33,15 +33,15 @@ dev_langs:
 - C++
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - uwp
-ms.openlocfilehash: 003eaa7eefffaab9ff2b3c8c25a5ce5c0d41d43b
-ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
+ms.openlocfilehash: e90a6466a4bff0f3299e3f47bce7e0b54d540fcf
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98150372"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99905029"
 ---
 # <a name="start-a-debugging-session-for-a-uwp-app"></a>UWP uygulaması için hata ayıklama oturumu başlatma
 
@@ -120,7 +120,7 @@ C++ uygulamalarında, Visual Studio varsayılan olarak yerel kod ile hata ayıkl
 |**Yalnızca yönetilen**|Uygulamanızdaki yönetilen kodda hata ayıklayın. JavaScript kodu ve yerel C/C++ kodu yok sayılır.|
 |**Yalnızca yerel**|Uygulamanızda Yerel C/C++ kodunda hata ayıklayın. Yönetilen kod ve JavaScript kodu yok sayılır.|
 |**Karışık (yönetilen ve yerel)**|Uygulamanızda Yerel C/C++ kodu ve yönetilen kod hatalarını ayıklayın. JavaScript kodu yoksayıldı. C++ projelerinde, bu seçenek **yönetilen ve yerel** olarak adlandırılır.|
-|**SCRIPT**|Uygulamanızdaki JavaScript kodunda hata ayıklayın. Yönetilen kod ve yerel kod yok sayılır.|
+|**Komut Dosyası**|Uygulamanızdaki JavaScript kodunda hata ayıklayın. Yönetilen kod ve yerel kod yok sayılır.|
 |**Betiği ile yerel**|Uygulamanızda Yerel C/C++ kodunda ve JavaScript kodunda hata ayıklayın. Yönetilen kod yok sayılır. Yalnızca C++ projelerinde veya arka plan görevlerinde kullanılabilir.|
 |**Yalnızca GPU (C++ AMP)**|Grafik işleme birimi (GPU) üzerinde çalışan yerel C++ kodunda hata ayıklayın. Yalnızca C++ projelerinde kullanılabilir.|
 
