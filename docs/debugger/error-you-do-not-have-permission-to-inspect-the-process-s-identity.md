@@ -9,15 +9,15 @@ dev_langs:
 - C++
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 90cd775f18dd505d2f734a8d337daadfd9f0dd7b
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 6903cba8d048d5ed2969d5aa7436fc6eca17561e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851508"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99870817"
 ---
 # <a name="error-you-do-not-have-permission-to-inspect-the-process39s-identity"></a>Hata: işlemi&#39;s kimliğini İnceleme izniniz yok
 İşlemin kimliğini İnceleme izniniz yok. Bunun nedeni sisteminizin yapılandırması olabilir.
@@ -34,15 +34,15 @@ ms.locfileid: "90851508"
 
 4. Bilgisayar Yönetimi penceresinde, **Hizmetler ve uygulamalar** düğümünü genişletin.
 
-5. **Hizmetler ve uygulamalar**altında **Hizmetler**' e tıklayın.
+5. **Hizmetler ve uygulamalar** altında **Hizmetler**' e tıklayın.
 
      Sağ bölmede hizmetlerin bir listesi görüntülenir.
 
 6. **Hizmetler** listesinde, **Terminal Hizmetleri** ' ne sağ tıklayın ve ardından **Özellikler**' i seçin.
 
-7. **Terminal Hizmetleri Özellikler** penceresinde **genel** sekmesine gidin ve **Başlangıç türünü** **el ile**olarak ayarlayın.
+7. **Terminal Hizmetleri Özellikler** penceresinde **genel** sekmesine gidin ve **Başlangıç türünü** **el ile** olarak ayarlayın.
 
-8. **Tamam**’a tıklayın.
+8. **Tamam**'a tıklayın.
 
 9. Bilgisayarı yeniden başlatın.
 
@@ -56,11 +56,11 @@ ms.locfileid: "90851508"
 
      **Sistem Özellikleri** penceresi görüntülenir.
 
-3. **Uzak**öğesine tıklayın.
+3. **Uzak** öğesine tıklayın.
 
-4. **Uzak Masaüstü**altında, **kullanıcıların bu bilgisayara uzaktan bağlanmasına izin ver**' i seçin.
+4. **Uzak Masaüstü** altında, **kullanıcıların bu bilgisayara uzaktan bağlanmasına izin ver**' i seçin.
 
-5. **Tamam**’a tıklayın.
+5. **Tamam**'a tıklayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Uzaktan Hata Ayıklama Hataları ve Sorun Giderme](../debugger/remote-debugging-errors-and-troubleshooting.md)
+- [Uzaktan hata ayıklama hataları ve sorun giderme](../debugger/remote-debugging-errors-and-troubleshooting.md)

@@ -11,15 +11,15 @@ dev_langs:
 - C++
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f5991bf0b14cf4952303dba599ad47e4c8fd27a9
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: cf7832d71ab86c6dab973a07dbc46217274cb83b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852419"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99870902"
 ---
 # <a name="error-web-site-worker-process-has-been-terminated-by-iis"></a>Hata: Web sitesi çalışan işlemi IIS tarafından sonlandırıldı
 Hata ayıklayıcı Web sitesinde kod yürütmeyi durdurdu. Bu, çalışan işlemin yanıt vermeyi durdurduğunu varsaymak için Internet Information Services (IIS) hatasına neden oldu. Bu nedenle, IIS çalışan işlemini sonlandırdı.
@@ -46,7 +46,7 @@ Hata ayıklayıcı Web sitesinde kod yürütmeyi durdurdu. Bu, çalışan işlem
 
 6. **Gelişmiş ayarlar** iletişim kutusunda, **işlem modeli** bölümünü bulun ve aşağıdaki eylemlerden birini gerçekleştirin:
 
-   - **Ping etkin** ayarını **false**olarak ayarlayın.
+   - **Ping etkin** ayarını **false** olarak ayarlayın.
 
    - **En fazla ping yanıt süresini** 90 saniyeden daha büyük bir değere ayarlayın.
 
@@ -57,4 +57,4 @@ Hata ayıklayıcı Web sitesinde kod yürütmeyi durdurdu. Bu, çalışan işlem
 8. IIS Yöneticisi 'Ni ve **Yönetimsel Araçlar** penceresini kapatın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Uzaktan Hata Ayıklama Hataları ve Sorun Giderme](../debugger/remote-debugging-errors-and-troubleshooting.md)
+- [Uzaktan hata ayıklama hataları ve sorun giderme](../debugger/remote-debugging-errors-and-troubleshooting.md)

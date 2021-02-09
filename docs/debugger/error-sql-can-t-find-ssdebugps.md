@@ -12,15 +12,15 @@ dev_langs:
 - SQL
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 50c8b6c2385879e4cf41c8cc2aea57715050b5e2
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 67d7602357a39cbdce0c96b494f4c02758533e73
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851794"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99871396"
 ---
 # <a name="error-sql-can39t-find-ssdebugps"></a>Hata: SQL&#39;SSDEBUGPS bulamıyor
 
@@ -38,7 +38,7 @@ SSDEBUGPS.dll SQL Server 2005 makinesine kopyalamak için:
 
 1. Dosyayı, makinede aynı ada ve yola sahip dizine kopyalayın [!INCLUDE[sqprsqlong](../debugger/includes/sqprsqlong_md.md)] .
 
-2. Bir **komut istemi**açıp aşağıdaki komutu çalıştırarak kaydedin:
+2. Bir **komut istemi** açıp aşağıdaki komutu çalıştırarak kaydedin:
 
     ```cmd
     regsvr32 ssdebugps.dll

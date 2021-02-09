@@ -13,15 +13,15 @@ helpviewer_keywords:
 - DCOM, unable to connect error
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d1ab43773b4aa9d2535eb6ac157ec39333907731
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: dcf52a258a46f44afaf6e890531496f57b11fc24
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852517"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99871071"
 ---
 # <a name="error-unable-to-connect-to-the-machine-ltnamegt-the-machine-cannot-be-found-on-the-network"></a>Hata: makine &lt; adına bağlanılamıyor &gt; . Makine ağ üzerinde bulunamadı.
 Bu davranış, aşağıdaki koşullardan biri doğru olduğunda meydana gelir:
@@ -46,4 +46,4 @@ Bu davranış, aşağıdaki koşullardan biri doğru olduğunda meydana gelir:
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Uzaktan hata ayıklama](../debugger/remote-debugging.md)
-- [Hata Ayıklayıcısı Ayarları ve Hazırlığı](../debugger/debugger-settings-and-preparation.md)
+- [Hata ayıklayıcı ayarları ve hazırlığı](../debugger/debugger-settings-and-preparation.md)
