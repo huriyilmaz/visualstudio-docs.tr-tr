@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: e317f29a-6525-46a7-8421-33985392f8fd
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 2e69a3ca233b739b32acaa769270b5253cc7232d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ec9075be8ab003cda087b37c13a0f2ef9c481dff
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85466989"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99864805"
 ---
 # <a name="idialinenumberget_columnnumber"></a>IDiaLineNumber::get_columnNumber
 İfadenin veya deyimin başladığı sütun numarasını alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
-HRESULT get_columnNumber ( 
+HRESULT get_columnNumber ( 
    DWORD* pRetVal
 );
 ```

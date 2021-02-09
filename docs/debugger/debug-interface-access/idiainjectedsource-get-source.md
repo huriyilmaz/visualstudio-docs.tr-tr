@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: 3c0b5386-321f-4f8f-85cc-e2ee7b4cc3d2
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8408145d83b3b78f8392603466980495ab32d24b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2f44f30b063a34a0d5d5549cd1923b66c1dde9cb
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85467031"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99864868"
 ---
 # <a name="idiainjectedsourceget_source"></a>IDiaInjectedSource::get_source
 Kaynak kodu baytlarını alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT get_source ( 
+HRESULT get_source ( 
    DWORD  cbData,
    DWORD* pcbData,
    BYTE   data[]

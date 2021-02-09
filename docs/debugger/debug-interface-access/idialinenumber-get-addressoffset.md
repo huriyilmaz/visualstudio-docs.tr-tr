@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: 3bcb5500-b26c-4d3c-9d81-0a389a3715c3
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 27539f993934f230525c02ebcb7e80e6e8f325c1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d8593277312a168355cef1db3142feaf5af936a7
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85467003"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99864861"
 ---
 # <a name="idialinenumberget_addressoffset"></a>IDiaLineNumber::get_addressOffset
 Bir bloğun başladığı bellek adresinin konum kısmını alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT get_addressOffset ( 
+HRESULT get_addressOffset ( 
    DWORD* pRetVal
 );
 ```

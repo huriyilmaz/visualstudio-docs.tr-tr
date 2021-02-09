@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: 67ecdc8c-d342-4d0b-b02a-c6b88e22fd02
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 04807518555572f43c333bfc4d4d6fdded4f4442
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: defb7bba67605c905867834c792f2bf3d49781a1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85467143"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99864847"
 ---
 # <a name="idiaimagedataget_virtualaddress"></a>IDiaImageData::get_virtualAddress
 Görüntünün sanal belleğindeki konumunu alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT get_virtualAddress ( 
+HRESULT get_virtualAddress ( 
    ULONGLONG* pRetVal
 );
 ```
