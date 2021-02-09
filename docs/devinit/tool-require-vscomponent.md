@@ -5,22 +5,22 @@ ms.date: 11/20/2020
 ms.topic: reference
 author: andysterland
 ms.author: andster
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 4a4725ac0757f43830741afd5aefd540633f05af
-ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
+ms.openlocfilehash: 0b58e80a03828bf486e6beb4d0014f6fe2267485
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95442279"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99918356"
 ---
 # <a name="require-vscomponent"></a>require-vscomponent
 
-`require-vscomponent`Araç, Visual Studio yapılandırmasını var olan Visual Studio 'ya aktarmak için kullanılır. Buradan daha fazla bilgi edinin `.vsconfig` [here](../install/import-export-installation-configurations.md).
+`require-vscomponent`Araç, Visual Studio yapılandırmasını var olan Visual Studio 'ya aktarmak için kullanılır. Buradan daha fazla bilgi edinin `.vsconfig` [](../install/import-export-installation-configurations.md).
 
 ## <a name="usage"></a>Kullanım
 

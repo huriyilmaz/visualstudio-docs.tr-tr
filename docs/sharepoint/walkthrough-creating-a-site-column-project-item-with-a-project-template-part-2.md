@@ -11,15 +11,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, defining new project item types
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: e6e5c9a0bb461f6b81b9cb7e1aa5f0134a7bdcbd
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: bc664a50fc307c59d5c168b26c8af1bc6181ebad
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96915147"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99918726"
 ---
 # <a name="walkthrough-create-a-site-column-project-item-with-a-project-template-part-2"></a>İzlenecek yol: proje şablonu, Bölüm 2 ile bir site sütunu proje öğesi oluşturma
   Özel bir SharePoint proje öğesi türü tanımladıktan ve Visual Studio 'daki bir proje şablonuyla ilişkilendirdikten sonra, şablon için bir sihirbaz de sağlamak isteyebilirsiniz. Sihirbazı kullanarak, Proje öğesini içeren yeni bir proje oluşturmak için şablonunuzu kullandıklarında kullanıcılardan bilgi toplayabilirsiniz. Topladığınız bilgiler Proje öğesini başlatmak için kullanılabilir.
@@ -479,7 +479,7 @@ ms.locfileid: "96915147"
 
 4. **Özel durumlar** iletişim kutusunda, **ortak dil çalışma zamanı özel durumları** için **oluşturulan** ve **Kullanıcı tarafından işlenmeyen** onay kutularının temizlenmiş olduğundan emin olun ve **Tamam** düğmesini seçin.
 
-5. **F5** tuşunu seçerek veya menü **çubuğunda hata ayıklamayı** Başlat ' ı seçerek hata ayıklamayı başlatın  >  **Start Debugging**.
+5. **F5** tuşunu seçerek veya menü **çubuğunda hata ayıklamayı** Başlat ' ı seçerek hata ayıklamayı başlatın  >  .
 
      Visual Studio, uzantıyı%UserProfile%\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Contoso\Site Column\1.0 konumuna yükleyerek Visual Studio 'nun deneysel bir örneğini başlatır. Bu Visual Studio örneğinde Proje öğesini test edeceksiniz.
 

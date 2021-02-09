@@ -8,16 +8,16 @@ helpviewer_keywords:
 - dependency diagrams, adding custom validation
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: SEO-VS-2020
 ms.workload:
 - multiple
-ms.openlocfilehash: ea168744427469d1d08dd78bc1a23d79d577604f
-ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
+ms.openlocfilehash: bd5f17e7e8c12da1d4e01738c26650a3df4760fa
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90100532"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99919319"
 ---
 # <a name="add-custom-architecture-validation-to-dependency-diagrams"></a>Bağımlılık diyagramlarına özel mimari doğrulaması ekleme
 
@@ -80,11 +80,11 @@ Katman Doğrulayıcıları, komutlar ve diğer uzantıları içeren bir VSıX ol
 
 1. Yeni bir **sınıf kitaplığı** projesi oluşturun. Bu proje, katman doğrulama sınıfını içerecektir.
 
-2. Çözümünüzde bir **VSIX projesi** bulun veya oluşturun. VSıX projesi, **kaynak. Extension. valtmanifest**adlı bir dosya içerir.
+2. Çözümünüzde bir **VSIX projesi** bulun veya oluşturun. VSıX projesi, **kaynak. Extension. valtmanifest** adlı bir dosya içerir.
 
 3. **Çözüm Gezgini**, VSIX projesinin sağ tıklama menüsünde **Başlangıç projesi olarak ayarla**' yı seçin.
 
-4. **Source. Extension. valtmanifest**Içinde, **varlıklar**altında, katman doğrulama projesini MEF bileşeni olarak ekleyin:
+4. **Source. Extension. valtmanifest** Içinde, **varlıklar** altında, katman doğrulama projesini MEF bileşeni olarak ekleyin:
 
     1. **Yeni**'yi seçin.
 
@@ -221,7 +221,7 @@ Doğrulama ayrı bir işlemde çalışır. Bu nedenle, doğrulama yönteminizin 
 
 Hata ayıklayıcıyı doğrulama işlemine iliştirmek için, doğrulama yönteminizin başlangıcında öğesine bir çağrı ekleyin `System.Diagnostics.Debugger.Launch()` . Hata ayıklama iletişim kutusu göründüğünde, Visual Studio 'nun ana örneğini seçin.
 
-Alternatif olarak, öğesine bir çağrı ekleyebilirsiniz `System.Windows.Forms.MessageBox.Show()` . İleti kutusu göründüğünde, Visual Studio 'nun ana örneğine gidin ve **Hata Ayıkla** menüsünde **işleme Ekle**' ye tıklayın. **Graphcmd.exe**adlı işlemi seçin.
+Alternatif olarak, öğesine bir çağrı ekleyebilirsiniz `System.Windows.Forms.MessageBox.Show()` . İleti kutusu göründüğünde, Visual Studio 'nun ana örneğine gidin ve **Hata Ayıkla** menüsünde **işleme Ekle**' ye tıklayın. **Graphcmd.exe** adlı işlemi seçin.
 
 CTRL + F5 tuşuna basarak (**hata ayıklama olmadan Başlat**) deneysel örneği her zaman başlatın.
 

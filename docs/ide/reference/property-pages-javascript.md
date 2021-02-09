@@ -16,25 +16,25 @@ f1_keywords:
 ms.assetid: a05ab01f-3d5d-4675-a845-eab51807d3a3
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: cf6c984715f5cd35f08bb75526346b68c11dbeb9
-ms.sourcegitcommit: a7944c325bedd8efbb244452741864089a02f5db
+ms.openlocfilehash: 30c16e1c76e6f4e12d822f68f2a9530290c15de5
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91947810"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99919467"
 ---
 # <a name="property-pages-javascript"></a>Özellik sayfaları, JavaScript
 
 **Özellik sayfaları** , proje ayarlarına erişim sağlar. Proje özelliklerini değiştirmek için **özellik sayfalarında** görünen sayfaları kullanabilirsiniz.
 
-Proje özelliklerine erişmek için **Çözüm Gezgini**bir proje düğümü seçin. **Proje** menüsünde **Özellikler**' e tıklayın.
+Proje özelliklerine erişmek için **Çözüm Gezgini** bir proje düğümü seçin. **Proje** menüsünde **Özellikler**' e tıklayın.
 
 [!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)]
 
-Aşağıdaki sayfalar ve Seçenekler **özellik sayfalarında**görünür.
+Aşağıdaki sayfalar ve Seçenekler **özellik sayfalarında** görünür.
 
 ## <a name="configuration-and-platform-page"></a>Yapılandırma ve platform sayfası
 
@@ -42,11 +42,11 @@ Görüntülenecek veya değiştirilecek olan yapılandırmayı ve platformu seç
 
  **Yapılandırma**
 
-Görüntülenecek veya değiştirilecek yapılandırma ayarlarını belirtir. Ayarlar **hata ayıklama** (varsayılan), **yayın**, **tüm yapılandırmalar**veya Kullanıcı tanımlı bir yapılandırmadır. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'da hata ayıklama ve yayın yapılandırmasını ayarlama](../../debugger/how-to-set-debug-and-release-configurations.md).
+Görüntülenecek veya değiştirilecek yapılandırma ayarlarını belirtir. Ayarlar **hata ayıklama** (varsayılan), **yayın**, **tüm yapılandırmalar** veya Kullanıcı tanımlı bir yapılandırmadır. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'da hata ayıklama ve yayın yapılandırmasını ayarlama](../../debugger/how-to-set-debug-and-release-configurations.md).
 
  **Platform**
 
-Görüntülenecek veya değiştirilecek platform ayarlarını belirtir. Ayarlar **herhangi BIR CPU** (uygulamalar için varsayılan [!INCLUDE[win8_appname_long](../../debugger/includes/win8_appname_long_md.md)] ), **x64**, **ARM**, **x86**veya Kullanıcı tanımlı bir platform. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'da hata ayıklama ve yayın yapılandırmasını ayarlama](../../debugger/how-to-set-debug-and-release-configurations.md).
+Görüntülenecek veya değiştirilecek platform ayarlarını belirtir. Ayarlar **herhangi BIR CPU** (uygulamalar için varsayılan [!INCLUDE[win8_appname_long](../../debugger/includes/win8_appname_long_md.md)] ), **x64**, **ARM**, **x86** veya Kullanıcı tanımlı bir platform. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'da hata ayıklama ve yayın yapılandırmasını ayarlama](../../debugger/how-to-set-debug-and-release-configurations.md).
 
 ## <a name="general-page"></a>Genel sayfa
 
@@ -59,7 +59,7 @@ Projenin genel özelliklerini ayarlamak için aşağıdaki seçenekleri kullanı
 
 Projenin yapılandırması için çıkış dosyalarının konumunu belirtir. Yol görelidir; mutlak bir yol girerseniz, mutlak yol projeye kaydedilir. Varsayılan yol bin\Debug.
 
-Basitleştirilmiş derleme yapılandırması kullandığınızda, proje sistemi bir hata ayıklama veya yayın sürümü oluşturulup oluşturulmayacağını belirler. **Hata**ayıklama  >  **başlatma hata ayıklaması** ' ne tıkladığınızda (veya **F5**tuşuna basın), yapı, belirttiğiniz **çıkış yolundan** bağımsız olarak hata ayıklama konumuna konur. Ancak, **Yapı** menüsündeki **Build Solution** komutu onu belirttiğiniz konuma koyar. Gelişmiş derleme yapılandırmalarının etkinleştirilmesi için menü çubuğunda **Araçlar**  >  **Seçenekler**' i seçin. **Seçenekler** iletişim kutusunda, **Projeler ve çözümler**' i genişletin, **genel**' i seçin ve ardından **Gelişmiş derleme yapılandırmasını göster** onay kutusunu temizleyin. Bu, tüm yapılandırma değerleri üzerinde el ile denetim elde etmenizi ve bir hata ayıklama ya da sürüm sürümünün oluşturulup oluşturulmayacağını sağlar.
+Basitleştirilmiş derleme yapılandırması kullandığınızda, proje sistemi bir hata ayıklama veya yayın sürümü oluşturulup oluşturulmayacağını belirler. **Hata** ayıklama  >  **başlatma hata ayıklaması** ' ne tıkladığınızda (veya **F5** tuşuna basın), yapı, belirttiğiniz **çıkış yolundan** bağımsız olarak hata ayıklama konumuna konur. Ancak, **Yapı** menüsündeki **Build Solution** komutu onu belirttiğiniz konuma koyar. Gelişmiş derleme yapılandırmalarının etkinleştirilmesi için menü çubuğunda **Araçlar**  >  **Seçenekler**' i seçin. **Seçenekler** iletişim kutusunda, **Projeler ve çözümler**' i genişletin, **genel**' i seçin ve ardından **Gelişmiş derleme yapılandırmasını göster** onay kutusunu temizleyin. Bu, tüm yapılandırma değerleri üzerinde el ile denetim elde etmenizi ve bir hata ayıklama ya da sürüm sürümünün oluşturulup oluşturulmayacağını sağlar.
 
  **Varsayılan Dil**
 
@@ -84,7 +84,7 @@ Hata ayıklayıcı için varsayılan Konağı belirtir.
 
 **Uygulamayı Başlat**
 
-**F5** tuşuna bastığınızda uygulamanın başlatılıp başlatılmayacağını belirtir veya **hata**ayıklama  >  **başlatma hata**Ayıkla ' ya tıklayın. Uygulamayı başlatmak için **Evet** ' i seçin; Aksi takdirde **Hayır**' ı seçin. **Hayır**' ı seçerseniz, uygulamayı başlatmak için farklı bir yöntem kullanıyorsanız uygulamada hata ayıklamaya devam edebilirsiniz.
+**F5** tuşuna bastığınızda uygulamanın başlatılıp başlatılmayacağını belirtir veya **hata** ayıklama  >  **başlatma hata** Ayıkla ' ya tıklayın. Uygulamayı başlatmak için **Evet** ' i seçin; Aksi takdirde **Hayır**' ı seçin. **Hayır**' ı seçerseniz, uygulamayı başlatmak için farklı bir yöntem kullanıyorsanız uygulamada hata ayıklamaya devam edebilirsiniz.
 
 **Hata ayıklayıcı türü**
 
@@ -92,12 +92,12 @@ Hata ayıklaması yapılacak kod türlerini belirtir. JavaScript kodunda hata ay
 
 **Yerel ağ geri döngüsüne izin ver**
 
-Uygulama testi için IP geri döngü adresine erişime izin verilip verilmeyeceğini belirtir. İstemci uygulaması, sunucu uygulamasının çalıştığı makinada ise geri döngü adresinin kullanılmasına izin vermek için **Evet** ' i seçin; Aksi takdirde **Hayır**' ı seçin. Bu özellik yalnızca, **başlatma Için hata ayıklayıcı** özelliği **uzak makine**olarak ayarlanırsa kullanılabilir.
+Uygulama testi için IP geri döngü adresine erişime izin verilip verilmeyeceğini belirtir. İstemci uygulaması, sunucu uygulamasının çalıştığı makinada ise geri döngü adresinin kullanılmasına izin vermek için **Evet** ' i seçin; Aksi takdirde **Hayır**' ı seçin. Bu özellik yalnızca, **başlatma Için hata ayıklayıcı** özelliği **uzak makine** olarak ayarlanırsa kullanılabilir.
 
 **Makine Adı**
 
-Hata ayıklayıcıyı barındıracak uzak bilgisayarın adını belirtir. Bu özellik yalnızca **başlatma Için hata ayıklayıcı** **uzak makineye**ayarlanmışsa kullanılabilir.
+Hata ayıklayıcıyı barındıracak uzak bilgisayarın adını belirtir. Bu özellik yalnızca **başlatma Için hata ayıklayıcı** **uzak makineye** ayarlanmışsa kullanılabilir.
 
 **Kimlik doğrulaması gerektir**
 
-Uzak bilgisayarın kimlik doğrulaması gerektirip gerektirmediğini belirtir. Bu özellik yalnızca **başlatma Için hata ayıklayıcı** **uzak makineye**ayarlanmışsa kullanılabilir.
+Uzak bilgisayarın kimlik doğrulaması gerektirip gerektirmediğini belirtir. Bu özellik yalnızca **başlatma Için hata ayıklayıcı** **uzak makineye** ayarlanmışsa kullanılabilir.

@@ -7,15 +7,15 @@ ms.topic: conceptual
 ms.assetid: eecbcd65-9fbc-4307-a321-46d3c3b79b12
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 47b4ba2c27e130580af961216739289c6c7e9585
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: 9d448adb2ba898eabdbac304c0087176e6ed7119
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93046313"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99918998"
 ---
 # <a name="msbuild-multitargeting-overview"></a>MSBuild çoklu sürüm desteğine genel bakış
 
@@ -42,7 +42,7 @@ MSBuild 'i kullanarak, .NET Framework çeşitli sürümlerinden herhangi birini 
 
 ## <a name="toolset-toolsversion"></a>Araç Takımı (ToolsVersion)
 
- Araç takımı, uygulamayı oluşturmak için kullanılan araçları, görevleri ve hedefleri birlikte toplar. Araç takımı, *csc.exe* ve *vbc.exe* , ortak hedefler dosyası ( *Microsoft. Common. targets* ) ve ortak görevler dosyası ( *Microsoft. Common. Tasks* ) gibi derleyiciler içerir. 4,5 araç takımı, 2,0, 3,0, 3,5, 4 ve 4,5 .NET Framework sürümlerini hedeflemek için kullanılabilir. Ancak, 2,0 araç takımı yalnızca 2,0 sürümünü .NET Framework hedeflemek için kullanılabilir. Daha fazla bilgi için bkz. [araç takımı (araçları sürümü)](../msbuild/msbuild-toolset-toolsversion.md).
+ Araç takımı, uygulamayı oluşturmak için kullanılan araçları, görevleri ve hedefleri birlikte toplar. Araç takımı, *csc.exe* ve *vbc.exe*, ortak hedefler dosyası (*Microsoft. Common. targets*) ve ortak görevler dosyası (*Microsoft. Common. Tasks*) gibi derleyiciler içerir. 4,5 araç takımı, 2,0, 3,0, 3,5, 4 ve 4,5 .NET Framework sürümlerini hedeflemek için kullanılabilir. Ancak, 2,0 araç takımı yalnızca 2,0 sürümünü .NET Framework hedeflemek için kullanılabilir. Daha fazla bilgi için bkz. [araç takımı (araçları sürümü)](../msbuild/msbuild-toolset-toolsversion.md).
 
 ## <a name="reference-assemblies"></a>Başvuru derlemeleri
 

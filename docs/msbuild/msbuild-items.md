@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: d762eff4-c92a-4b5f-a944-1ca30aa22319
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a28823a1a492cb1e8d5f434f98248fecc5d84e47
-ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
+ms.openlocfilehash: d4bfc58c9be578514598fce2d447ef921d091177
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92904500"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99919067"
 ---
 # <a name="msbuild-items"></a>MSBuild öğeleri
 
@@ -35,7 +35,7 @@ MSBuild öğeleri, derleme sistemine giriş gösterir ve genellikle dosyaları t
 </ItemGroup>
 ```
 
- Öğe *File2.cs* öğenin yerini almaz *File1.cs* ; Bunun yerine, dosya adı öğe türü için değerler listesine eklenir `Compile` .
+ Öğe *File2.cs* öğenin yerini almaz *File1.cs*; Bunun yerine, dosya adı öğe türü için değerler listesine eklenir `Compile` .
 
  Aşağıdaki XML, her iki dosyayı tek bir öznitelikte bildirerek aynı öğe türünü oluşturur `Include` . Dosya adlarının noktalı virgülle ayrıldığına dikkat edin.
 
@@ -169,7 +169,7 @@ Joker karakterler hakkında daha fazla bilgi için bkz. [nasıl yapılır: oluş
 
 ## <a name="item-definitions"></a>Öğe tanımları
 
- 3,5 .NET Framework başlayarak, [ItemDefinitionGroup öğesini](../msbuild/itemdefinitiongroup-element-msbuild.md)kullanarak herhangi bir öğe türüne varsayılan meta veri ekleyebilirsiniz. İyi bilinen meta veriler gibi, varsayılan meta veriler belirttiğiniz öğe türünün tüm öğeleriyle ilişkilendirilir. Bir öğe tanımında varsayılan meta verileri açıkça geçersiz kılabilirsiniz. Örneğin, aşağıdaki XML `Compile` *one.cs* ve *Three.cs* `BuildDay` "Pazartesi" değeriyle meta verileri verir. Kod, öğeyi *two.cs* `BuildDay` "Salı" değeriyle meta veriler Two.cs verir.
+ 3,5 .NET Framework başlayarak, [ItemDefinitionGroup öğesini](../msbuild/itemdefinitiongroup-element-msbuild.md)kullanarak herhangi bir öğe türüne varsayılan meta veri ekleyebilirsiniz. İyi bilinen meta veriler gibi, varsayılan meta veriler belirttiğiniz öğe türünün tüm öğeleriyle ilişkilendirilir. Bir öğe tanımında varsayılan meta verileri açıkça geçersiz kılabilirsiniz. Örneğin, aşağıdaki XML `Compile` *one.cs* ve *Three.cs* `BuildDay` "Pazartesi" değeriyle meta verileri verir. Kod, öğeyi  `BuildDay` "Salı" değeriyle meta veriler Two.cs verir.
 
 ```xml
 <ItemDefinitionGroup>
@@ -502,7 +502,7 @@ Açıklamalarının
   - Başvurulan her öğe türünden son oluşum yakalanır (Bu nedenle, öğe türü başına yakalanan bir öğe).
   - Bu, hedefler altında görev öğesi toplu işleme davranışını eşleştirir.
 - Her biri%() başvuruyu koyabileceği yer:
-  - Meta Veriler
+  - Meta veri
   - Meta veri koşulları
 - Meta veri adı eşleştirmesi büyük/küçük harfe duyarlıdır.
 :::moniker-end

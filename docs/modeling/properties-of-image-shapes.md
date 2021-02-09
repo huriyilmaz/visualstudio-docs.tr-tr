@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Domain-Specific Language, image shape
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 50785a4f37b4f3e9e6eaae1bb2a58dcf206af672
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: 8bbd2fff30ab59d14c8aa2762d8cca942063bd79
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97361920"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99918354"
 ---
 # <a name="properties-of-image-shapes"></a>Görüntü Şekillerinin Özellikleri
 
@@ -60,14 +60,14 @@ Resim şekilleri aşağıdaki tabloda listelenen özelliklere sahiptir.
 |Özel Oluşturucusu vardır|İse `True` , kaynak kodda özel bir Oluşturucu sağlanacaktır. Daha fazla bilgi için bkz. [oluşturulan sınıfları geçersiz kılma ve genişletme](../modeling/overriding-and-extending-the-generated-classes.md).|Yanlış|
 |Devralma değiştiricisi|Görüntü şeklinden oluşturulan kaynak kodu sınıfının devralım türünü açıklar ( `none` `abstract` veya `sealed` ).|yok|
 |Temel resim şekli|Bu şeklin temel sınıfı.|(yok)|
-|Ad|Bu şeklin adı.|Geçerli ad|
+|Name|Bu şeklin adı.|Geçerli ad|
 |Ad Alanı|Bu şekille ilişkili ad alanı.|Geçerli ad alanı|
 |Araç ipucu türü|ToolTip 'in tanımlandığı yer (sabit, değişken veya yok). Düzeltildiğinde, `Fixed Tooltip Text` özelliğin değeri araç ipucu olarak kullanılır; değişken ise, araç ipucu özel kodda tanımlanır.|yok|
 |Notlar|Bu şekille ilişkili resmi olmayan notlar.|\<none>|
 |Başlangıç yüksekliği|Bu şeklin inç cinsinden başlangıç yüksekliği.|1|
 |Başlangıç genişliği|Bu şeklin inç cinsinden başlangıç genişliği.|1,5|
 |Özellik olarak gösterilen Fill Color<br /><br /> Sunulma dolgusu gradyan modu<br /><br /> Özellik olarak gösterilen ana hat rengi<br /><br /> Özellik olarak sunulan ana hat kesik çizgi stili<br /><br /> Sunulan ana hat kalınlığı özellik olarak<br /><br /> Metin rengini gösterir|Eğer `True` Kullanıcı, bir şeklin belirtilen özelliğini ayarlayabilir. Bunu ayarlamak için, şekil tanımına sağ tıklayıp **gösterilen Ekle**' ye tıklayın.|Yanlış|
-|Açıklama|Oluşturulan tasarımcıyı belgelemek için kullanılır.|\<none>|
+|Description|Oluşturulan tasarımcıyı belgelemek için kullanılır.|\<none>|
 |Görünen Ad|Bu şekil için oluşturulan tasarımcıda görüntülenecek ad.|\<none>|
 |Düzeltilen araç Ipucu metni|Sabit bir araç ipucu için kullanılan metin.|\<none>|
 |Help anahtar sözcüğü|Bu öğe için F1 yardımını dizine eklemek için kullanılan anahtar sözcük.|\<none>|

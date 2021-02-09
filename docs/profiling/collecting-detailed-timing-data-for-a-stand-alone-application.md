@@ -10,16 +10,16 @@ helpviewer_keywords:
 ms.assetid: 4017d9d1-d609-4f41-8e4e-976abae746b3
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: d93673080acd36f4195fb9b19382c9f0152f51f5
-ms.sourcegitcommit: 7a5c4f60667b5792f876953d55192b49a73f5fe9
+ms.openlocfilehash: bdfe683d6afc518ea7981e016587413e0b9cb2f2
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98533842"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99918818"
 ---
 # <a name="collect-detailed-timing-data-for-a-stand-alone-application-by-using-the-profiler-command-line"></a>Profil oluşturucu komut satırını kullanarak tek başına bir uygulama için ayrıntılı zamanlama verileri toplama
 Bu bölümde, komut satırından izleme yöntemini kullanarak bir istemci (tek başına) bileşeni için ayrıntılı performans verilerini toplamaya yönelik yordamlar ve seçenekler açıklanmaktadır.

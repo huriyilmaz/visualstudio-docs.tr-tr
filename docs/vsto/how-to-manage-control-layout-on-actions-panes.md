@@ -13,15 +13,15 @@ helpviewer_keywords:
 - smart documents [Office development in Visual Studio], control layout
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: dbee49a97ab6cb3e6084950e53f30b3cb6ce1b7c
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: 49739b6011fcf977db84a3350929a56514040975
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96848254"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99918592"
 ---
 # <a name="how-to-manage-control-layout-on-actions-panes"></a>Nasıl yapılır: eylemler bölmelerinde denetim yerleşimini yönetme
   Bir eylemler bölmesi, varsayılan olarak bir belge veya çalışma sayfasının sağına yerleştirilir; Ancak, sol, üst veya alt kısma yerleştirilebilir. Birden çok kullanıcı denetimi kullanıyorsanız, Eylemler bölmesinde kullanıcı denetimlerini doğru bir şekilde yığmak için kod yazabilirsiniz. Daha fazla bilgi için bkz. [eylemler bölmesine genel bakış](../vsto/actions-pane-overview.md).

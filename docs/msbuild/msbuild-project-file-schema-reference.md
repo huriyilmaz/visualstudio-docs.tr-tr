@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: d9a68146-1f43-4621-ac78-2c8c3f400936
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f861fd9e5c10946c2bfee0235632c005822cbf1
-ms.sourcegitcommit: 55bc9df751a21656de8cc5b6dbd8a2a1915ec690
+ms.openlocfilehash: b3451101d6ab2483960731281763167c0cd1629c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "99572947"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99918979"
 ---
 # <a name="msbuild-project-file-schema-reference"></a>MSBuild proje dosyası şema başvurusu
 
@@ -40,7 +40,7 @@ MSBuild proje dosyasındaki şema bağlantısı Visual Studio 2017 ve üzeri sü
 |-------------|--------------------|----------------|
 |[Öğe seç (MSBuild)](../msbuild/choose-element-msbuild.md)|Güvenmiyorsanız<br /><br /> Ne zaman|--|
 |[İçeri aktarma öğesi (MSBuild)](../msbuild/import-element-msbuild.md)|--|Koşul<br /><br /> Project|
-|[ImportGroup öğesi](../msbuild/importgroup-element.md)|İçeri Aktar|Koşul|
+|[ImportGroup öğesi](../msbuild/importgroup-element.md)|İçeri Aktarma|Koşul|
 |[Item öğesi (MSBuild)](../msbuild/item-element-msbuild.md)|*ItemMetadata*|Koşul<br /><br /> Exclude<br /><br /> Şunları Dahil Et:<br /><br /> Kaldır|
 |[ItemDefinitionGroup öğesi (MSBuild)](../msbuild/itemdefinitiongroup-element-msbuild.md)|*Öğe*|Koşul|
 |[ItemGroup öğesi (MSBuild)](../msbuild/itemgroup-element-msbuild.md)|*Öğe*|Koşul|
@@ -50,7 +50,7 @@ MSBuild proje dosyasındaki şema bağlantısı Visual Studio 2017 ve üzeri sü
 |[Output öğesi (MSBuild)](../msbuild/output-element-msbuild.md)|--|Koşul<br /><br /> ItemName<br /><br /> ÖzellikAdı<br /><br /> TaskParameter|
 |[Parameter öğesi](../msbuild/parameter-element.md)|--|Çıktı<br /><br /> ParameterType<br /><br /> Gerekli|
 |[ParameterGroup öğesi](../msbuild/parametergroup-element.md)|*Parametre*|--|
-|[Proje öğesi (MSBuild)](../msbuild/project-element-msbuild.md)|Seçin:<br /><br /> İçeri Aktar<br /><br /> ItemGroup<br /><br /> ProjectExtensions<br /><br /> PropertyGroup<br /><br /> Hedef<br /><br /> UsingTask|DefaultTargets<br /><br /> InitialTargets<br /><br /> 'Sının<br /><br /> ToolsVersion<br /><br /> TreatAsLocalProperty<br /><br /> özniteliði|
+|[Proje öğesi (MSBuild)](../msbuild/project-element-msbuild.md)|Seçin:<br /><br /> İçeri Aktarma<br /><br /> ItemGroup<br /><br /> ProjectExtensions<br /><br /> PropertyGroup<br /><br /> Hedef<br /><br /> UsingTask|DefaultTargets<br /><br /> InitialTargets<br /><br /> 'Sının<br /><br /> ToolsVersion<br /><br /> TreatAsLocalProperty<br /><br /> özniteliði|
 |[Projecısions öğesi (MSBuild)](../msbuild/projectextensions-element-msbuild.md)|--|--|
 |[Property öğesi (MSBuild)](../msbuild/property-element-msbuild.md)|--|Koşul|
 |[PropertyGroup öğesi (MSBuild)](../msbuild/propertygroup-element-msbuild.md)|*Özellik*|Koşul|

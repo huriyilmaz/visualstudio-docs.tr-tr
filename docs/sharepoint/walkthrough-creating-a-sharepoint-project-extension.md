@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SharePoint projects, extending
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: b815f8ea4656cc5a144f8cf12396391e55123ece
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: 378e839ea5f4223873fbbeec8d7b401ae0b16fc0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96914874"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99918759"
 ---
 # <a name="walkthrough-create-a-sharepoint-project-extension"></a>İzlenecek yol: SharePoint Proje uzantısı oluşturma
   Bu izlenecek yol, SharePoint projeleri için bir uzantı oluşturmayı gösterir. Projenin eklenmesi, silinmesi veya yeniden adlandırılması gibi proje düzeyindeki olaylara yanıt vermek için bir proje uzantısı kullanabilirsiniz. Ayrıca bir özellik değeri değiştiğinde özel özellikler ekleyebilir veya yanıt verebilirsiniz. Proje öğesi uzantılarının aksine, proje uzantıları belirli bir SharePoint proje türüyle ilişkilendirilemez. Bir proje uzantısı oluşturduğunuzda uzantı, içinde herhangi bir tür SharePoint projesi açıldığında yüklenir [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
@@ -47,7 +47,7 @@ ms.locfileid: "96914874"
 
 - [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)], SharePoint ve ' nin desteklenen sürümleri [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
-- [!INCLUDE[vssdk_current_long](../sharepoint/includes/vssdk-current-long-md.md)]. Bu izlenecek yol, **VSIX Project** [!INCLUDE[TLA2#tla_sdk](../sharepoint/includes/tla2sharptla-sdk-md.md)] Proje özelliği uzantısını DAĞıTMAK üzere bir VSIX paketi oluşturmak Için içindeki VSIX proje şablonunu kullanır. Daha fazla bilgi için bkz. [Visual Studio 'Da SharePoint araçlarını genişletme](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md).
+- [!INCLUDE[vssdk_current_long](../sharepoint/includes/vssdk-current-long-md.md)]. Bu izlenecek yol,  [!INCLUDE[TLA2#tla_sdk](../sharepoint/includes/tla2sharptla-sdk-md.md)] Proje özelliği uzantısını DAĞıTMAK üzere bir VSIX paketi oluşturmak Için içindeki VSIX proje şablonunu kullanır. Daha fazla bilgi için bkz. [Visual Studio 'Da SharePoint araçlarını genişletme](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md).
 
 ## <a name="create-the-projects"></a>Projeleri oluşturma
  Bu yönergeyi tamamlamak için iki proje oluşturmanız gerekir:
@@ -172,7 +172,7 @@ ms.locfileid: "96914874"
 
 1. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]Yönetici kimlik bilgileriyle yeniden başlatın ve ardından Projecbir Sionpackage çözümünü açın.
 
-2. **F5** tuşunu seçerek veya menü çubuğunda hata ayıklama **Debug**  >  **Başlat hata** Ayıkla ' yı seçerek projenizin hata ayıklama derlemesini başlatın.
+2. **F5** tuşunu seçerek veya menü çubuğunda hata ayıklama   >  **Başlat hata** Ayıkla ' yı seçerek projenizin hata ayıklama derlemesini başlatın.
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] uzantıyı%UserProfile%\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Contoso\Custom Project Property\1.0 dizinine yükleyerek deneysel bir örneğini başlatır [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 

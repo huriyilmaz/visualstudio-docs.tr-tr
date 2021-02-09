@@ -6,21 +6,21 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 34628f08c8860771b07d8e2544c79ad23eba18cf
-ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
+ms.openlocfilehash: b376f1cb1d6b473c0ea37bb33f6ae2b60789fa24
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92903568"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99919305"
 ---
 # <a name="use-the-msbuild-api"></a>MSBuild API 'sini kullanma
 
 MSBuild, programınızın derleme gerçekleştirebilmesi ve proje incelemesi yapabilmesi için ortak bir API yüzeyi sağlar. MSBuild API 'lerinin son sürümleri aşağıdaki NuGet paketlerinde bulunabilir:
 
-| Paket adı | Açıklama |
+| Paket adı | Description |
 | ------------ | ----------- |
 | [Microsoft. Build](https://www.nuget.org/packages/Microsoft.Build) | MSBuild projelerini oluşturmak, düzenlemek ve değerlendirmek için kullanılan Microsoft. Build derlemesini içerir.|
 | [Microsoft. Build. Framework](https://www.nuget.org/packages/Microsoft.Build.Framework)| Diğer MSBuild derlemeleri tarafından kullanılan ortak MSBuild çerçevesi derlemesini içerir. |
@@ -35,7 +35,7 @@ MSBuild API 'nin birkaç farklı sürümü vardır ve 15 ve 16 sürümleri için
 MSBuild API 'SI belgeleri [.NET API tarayıcısı](/dotnet/api)kullanılarak veya aşağıdaki listedeki ad alanlarına göz atarak bulunabilir.
 
 ::: moniker range="vs-2017"
-| Ad Alanı | Uygulanan Öğe | Açıklama |
+| Ad Alanı | Uygulanan Öğe | Description |
 |-----------| -----------| ----------- |
 | [Microsoft. Build. Inşaat](/dotnet/api/Microsoft.Build.Construction?view=msbuild-15&preserve-view=true) | Tümü |  MSBuild nesne modelinin değerlendirilmeyecek değerlerle proje kökleri oluşturmak için kullandığı türleri içerir. Her proje kökü bir proje veya hedef dosyasına karşılık gelir. |
 | [Microsoft. Build. Definition](/dotnet/api/Microsoft.Build.Definition?view=msbuild-15&preserve-view=true) | Tümü | `ProjectOptions`Proje oluşturmayı destekleyen sınıfını içerir. |
@@ -59,7 +59,7 @@ MSBuild API 'SI belgeleri [.NET API tarayıcısı](/dotnet/api)kullanılarak vey
 | [Microsoft. Build. Utilities](/dotnet/api/Microsoft.Build.Utilities?view=msbuild-15&preserve-view=true) | Tümü | Kendi MSBuild Günlükçüleri ve görevlerinizi oluşturmak için kullanabileceğiniz yardımcı sınıfları içerir.|
 :::moniker-end
 :::moniker range=">=vs-2019"
-| Ad Alanı | Uygulanan Öğe | Açıklama |
+| Ad Alanı | Uygulanan Öğe | Description |
 |-----------| -----------| ----------- |
 | [Microsoft. Build. Inşaat](/dotnet/api/Microsoft.Build.Construction?view=msbuild-16&preserve-view=true) | Tümü |  MSBuild nesne modelinin değerlendirilmeyecek değerlerle proje kökleri oluşturmak için kullandığı türleri içerir. Her proje kökü bir proje veya hedef dosyasına karşılık gelir. |
 | [Microsoft. Build. Definition](/dotnet/api/Microsoft.Build.Definition?view=msbuild-16&preserve-view=true) | Tümü | `ProjectOptions`Proje oluşturmayı destekleyen sınıfını içerir. |

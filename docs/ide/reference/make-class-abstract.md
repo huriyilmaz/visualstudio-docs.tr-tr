@@ -1,23 +1,23 @@
 ---
-title: Sınıf soyut yap
+title: Sınıfı soyut yapma
 ms.date: 11/03/2020
 ms.topic: reference
 author: mikadumont
 ms.author: midumont
-manager: jillfra
+manager: jmartens
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8bfcaa7117249ceffbaed706ac420c5250c02089
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 7b44c8331c10bc0cf2f87e19094a77c0cbec251a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93402354"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99919419"
 ---
-# <a name="make-class-abstract"></a>Sınıf soyut yap
+# <a name="make-class-abstract"></a>Sınıfı soyut yapma
 
 Bu yeniden düzenleme için geçerlidir:
 
@@ -39,7 +39,7 @@ Bu yeniden düzenleme için geçerlidir:
 
 3. **' Abstract ' sınıfını oluştur '** u seçin.
 
-    ![Sınıf soyut yap](media/make-class-abstract.png)
+    ![Sınıfı soyut yapma](media/make-class-abstract.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
