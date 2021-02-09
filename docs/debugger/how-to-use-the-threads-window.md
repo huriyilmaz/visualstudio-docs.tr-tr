@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: adfbe002-3d7b-42a9-b42a-5ac0903dfc25
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 33375a8970638765d02a94e6e3e9cd8afc1a0fe7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dbac3de879937435e9f2e1dc5ab4fad0e7358fc9
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85348658"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99925388"
 ---
 # <a name="walkthrough-debug-a-multithreaded-app-using-the-threads-window-c-visual-basic-c"></a>İzlenecek yol: Iş parçacıkları penceresini kullanarak çok iş parçacıklı bir uygulamada hata ayıklama (C#, Visual Basic, C++)
 
@@ -65,7 +65,7 @@ Bu öğreticide kullanmak üzere aşağıdaki çok iş parçacıklı uygulama pr
    **Tamam**’ı seçin.
    ::: moniker-end
 
-   Yeni bir konsol projesi görüntülenir. Proje oluşturulduktan sonra bir kaynak dosya görüntülenir. Seçtiğiniz dile bağlı olarak, kaynak dosya *program.cs*, *MyThreadWalkthroughApp. cpp*veya *Module1. vb*olarak adlandırılabilir.
+   Yeni bir konsol projesi görüntülenir. Proje oluşturulduktan sonra bir kaynak dosya görüntülenir. Seçtiğiniz dile bağlı olarak, kaynak dosya *program.cs*, *MyThreadWalkthroughApp. cpp* veya *Module1. vb* olarak adlandırılabilir.
 
 1. Kaynak dosyadaki kodu, çok [iş parçacıklı uygulamalarda hata ayıklamayı kullanmaya](../debugger/get-started-debugging-multithreaded-apps.md)başlamak Için C# veya C++ örnek kodu ile değiştirin.
 
@@ -85,15 +85,15 @@ Bu öğreticide kullanmak üzere aşağıdaki çok iş parçacıklı uygulama pr
    Console.WriteLine();
    ```
 
-1. `Console.WriteLine();`Sol cilt paya tıklayarak veya satırı seçip **F9**tuşuna basarak satırda bir kesme noktası ayarlayın.
+1. `Console.WriteLine();`Sol cilt paya tıklayarak veya satırı seçip **F9** tuşuna basarak satırda bir kesme noktası ayarlayın.
 
    Kesme noktası, kod satırının yanındaki sol cilt alanında kırmızı bir daire olarak görünür.
 
-1. **Hata**  >  **ayıklamayı Başlat hata**Ayıkla ' yı seçin veya **F5**tuşuna basın.
+1. **Hata**  >  **ayıklamayı Başlat hata** Ayıkla ' yı seçin veya **F5** tuşuna basın.
 
    Uygulama hata ayıklama modunda başlar ve kesme noktasında duraklatılır.
 
-1. Kesme modundayken, **Debug**Windows **Threads**  >  **Windows**  >  **iş parçacıklarını**Ayıkla ' yı seçerek iş parçacıkları penceresini açın. **Iş parçacıklarını** ve diğer hata ayıklama pencerelerini açmak veya görmek için bir hata ayıklama oturumunda olmanız gerekir.
+1. Kesme modundayken, Windows   >    >  **iş parçacıklarını** Ayıkla ' yı seçerek iş parçacıkları penceresini açın. **Iş parçacıklarını** ve diğer hata ayıklama pencerelerini açmak veya görmek için bir hata ayıklama oturumunda olmanız gerekir.
 
 ## <a name="examine-thread-markers"></a>İş parçacığı işaretçilerini İncele
 
@@ -118,9 +118,9 @@ Kaynak kodu düzenleyicisinden veya **Iş parçacıkları** penceresinden iş pa
 
 ### <a name="flag-and-unflag-threads-in-source-code"></a>Kaynak kodundaki iş parçacıklarını işaretle ve işaretini kaldır
 
-1. **Debug Location** **View**  >  **Araç çubukları**  >  **hata ayıklama konumunu**göster ' i seçerek hata ayıklama konumu araç çubuğunu açın. Ayrıca araç çubuğu alanına sağ tıklayıp **hata ayıklama konumu**' nu seçebilirsiniz.
+1.    >  **Araç çubukları**  >  **hata ayıklama konumunu** göster ' i seçerek hata ayıklama konumu araç çubuğunu açın. Ayrıca araç çubuğu alanına sağ tıklayıp **hata ayıklama konumu**' nu seçebilirsiniz.
 
-1. **Hata ayıklama konumu** araç çubuğunda üç alan vardır **: işlem**, **iş parçacığı**ve **yığın çerçevesi**. **Iş parçacığı** listesini açılır ve kaç iş parçacığı olduğunu Note. **Iş parçacığı** listesinde, yürütülmekte olan iş parçacığı bir sembol tarafından işaretlenir **>** .
+1. **Hata ayıklama konumu** araç çubuğunda üç alan vardır **: işlem**, **iş parçacığı** ve **yığın çerçevesi**. **Iş parçacığı** listesini açılır ve kaç iş parçacığı olduğunu Note. **Iş parçacığı** listesinde, yürütülmekte olan iş parçacığı bir sembol tarafından işaretlenir **>** .
 
 1. Kaynak kodu penceresinde, cilt payında bir iş parçacığı işaretleyici simgesinin üzerine gelin ve veri Ipucunda bayrak simgesini (veya boş bayrak simgelerinden birini) seçin. Bayrak simgesi kırmızıya döner.
 
@@ -145,7 +145,7 @@ Kaynak kodu düzenleyicisinden veya **Iş parçacıkları** penceresinden iş pa
 
 Geçerli durumuna bağlı olarak, iş parçacığı durumunu bayraklı veya bayraklı olarak değiştirmek için bir bayrak simgesi seçin.
 
-Ayrıca, kısayol menüsünden bir satıra sağ tıklayıp **bayrak**, bayrağı **Kaldır**veya **tüm iş parçacıklarını işaretini kaldır** ' ı seçebilirsiniz.
+Ayrıca, kısayol menüsünden bir satıra sağ tıklayıp **bayrak**, bayrağı **Kaldır** veya **tüm iş parçacıklarını işaretini kaldır** ' ı seçebilirsiniz.
 
 **Iş parçacıkları** penceresi araç çubuğu aynı zamanda **yalnızca bayraklı iş parçacıklarını göster** düğmesine sahiptir, bu iki bayrak simgelerinden biri olan righthand. **Hata ayıklama konumu** araç çubuğundaki düğmeyle aynı şekilde çalışacaktır ve iki düğme de her iki konumdaki görüntüyü denetler.
 
@@ -158,12 +158,12 @@ Ayrıca, kısayol menüsünden bir satıra sağ tıklayıp **bayrak**, bayrağı
 **Konum** sütununda her bir iş parçacığının kaynak kodunda nerede göründüğü gösterilmektedir. Bu iş parçacığı için kısmi bir çağrı yığını göstermek için **konum** girişinin yanındaki Genişlet okunu veya girdinin üzerine gelin.
 
 >[!TIP]
->İş parçacıkları için çağrı yığınlarının grafik görünümü için [Paralel Yığınlar](../debugger/using-the-parallel-stacks-window.md) penceresini kullanın. Pencereyi açmak için hata ayıklama sırasında **Debug** >  **Windows**  >  **paralel yığınları**Hata Ayıkla ' yı seçin.
+>İş parçacıkları için çağrı yığınlarının grafik görünümü için [Paralel Yığınlar](../debugger/using-the-parallel-stacks-window.md) penceresini kullanın. Pencereyi açmak için hata ayıklama sırasında  >  **Windows**  >  **paralel yığınları** Hata Ayıkla ' yı seçin.
 
-**Tüm Iş parçacıklarının** **bayrak**, **Unflag**ve Unflag öğelerine ek olarak, **iş parçacığı** pencere öğeleri için sağ tıklama bağlam menüsü:
+**Tüm Iş parçacıklarının** **bayrak**, **Unflag** ve Unflag öğelerine ek olarak, **iş parçacığı** pencere öğeleri için sağ tıklama bağlam menüsü:
 
 - **Kaynak olarak Iş parçacıklarını göster** düğmesi.
-- İş **parçacıkları** penceresindeki **iş parçacığı kimliklerini**ondalığa onaltılık biçime değiştiren **onaltılık görüntü**.
+- İş **parçacıkları** penceresindeki **iş parçacığı kimliklerini** ondalığa onaltılık biçime değiştiren **onaltılık görüntü**.
 - Çalışmayı hemen ilgili iş parçacığına geçirir [Iş parçacığına geçin](#switch-to-another-thread).
 - İş parçacığı adını değiştirmenize olanak sağlayan **yeniden adlandırma**.
 - Komutları [dondurma ve çözme](#bkmk_freeze) .
@@ -183,7 +183,7 @@ Ayrıca, kısayol menüsünden bir satıra sağ tıklayıp **bayrak**, bayrağı
 
 1. Dondurulmuş iş parçacığına sağ tıklayın ve çöz ' ü **seçin.**
 
-   **Duraklat** simgesi kaybolur ve **askıya alınan sayı** değeri **0**olarak değişir.
+   **Duraklat** simgesi kaybolur ve **askıya alınan sayı** değeri **0** olarak değişir.
 
 ## <a name="switch-to-another-thread"></a>Başka bir iş parçacığına geç
 
@@ -208,5 +208,5 @@ Kaynak kodundaki iş parçacığı işaretleyicisi ile yalnızca o konumda durdu
 Artık çok iş parçacıklı uygulamalarda hata ayıklama hakkında temel bilgileri öğrendiniz. **İş parçacıkları penceresini,** **hata ayıklama konumu** araç çubuğundaki **iş parçacığı** listesini veya kaynak kodu düzenleyicisindeki iş parçacığı işaretçilerini kullanarak iş parçacıklarını gözlemleyerek, bayrakla kaldırarak ve dondurabilirsiniz
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Çok iş parçacıklı uygulamalarda hata ayıklama](../debugger/debug-multithreaded-applications-in-visual-studio.md)
+- [Çok iş parçacıklı uygulamaların hatalarını ayıklama](../debugger/debug-multithreaded-applications-in-visual-studio.md)
 - [Nasıl yapılır: Hata ayıklarken başka bir iş parçacığına geçme](../debugger/how-to-switch-to-another-thread-while-debugging.md)

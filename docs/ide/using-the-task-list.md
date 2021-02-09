@@ -12,19 +12,19 @@ helpviewer_keywords:
 - Visual Studio, task list
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8d19794b4fce3e4a1388f864cecf408e0f7e9c53
-ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
+ms.openlocfilehash: 599623fc5c069c6c402de3718b1b16d20176eaad
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96189842"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99925641"
 ---
 # <a name="use-the-task-list"></a>Görev Listesini Kullanma
 
-Ve **Task List** , veya özel belirteçler gibi belirteçleri kullanan kod açıklamalarını izlemek `TODO` `HACK` ve sizi doğrudan kodda önceden tanımlanmış bir konuma götürür kısayolları yönetmek için görev listesi kullanın. Kaynak kodundaki konumuna gitmek için listedeki öğeye tıklayın.
+Ve  , veya özel belirteçler gibi belirteçleri kullanan kod açıklamalarını izlemek `TODO` `HACK` ve sizi doğrudan kodda önceden tanımlanmış bir konuma götürür kısayolları yönetmek için görev listesi kullanın. Kaynak kodundaki konumuna gitmek için listedeki öğeye tıklayın.
 
 > [!NOTE]
 > Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için bkz. [görev açıklamaları (Mac için Visual Studio)](/visualstudio/mac/task-comments).
@@ -33,7 +33,7 @@ Ve **Task List** , veya özel belirteçler gibi belirteçleri kullanan kod açı
 
 **Görev listesi** açık olduğunda, uygulama penceresinin alt kısmında görünür.
 
-**Görev listesi** açmak için görev listesi **görüntüle**' yi seçin  >  **Task List** veya klavyeden **CTRL** + **\\** ,**T** tuşlarına basın.
+**Görev listesi** açmak için görev listesi **görüntüle**' yi seçin  >  veya klavyeden **CTRL** + **\\** ,**T** tuşlarına basın.
 
 ![Görev Listesi penceresi](../ide/media/vs2015_task_list.png)
 
@@ -105,7 +105,7 @@ C++ Todo açıklamalarını kapatmak için, **Araçlar** menüsünde **Seçenekl
 
 ### <a name="create-a-shortcut"></a>Kısayol oluşturma
 
-Bir kısayol oluşturmak için, işaretçiyi bir kısayol yerleştirmek istediğiniz koda ekleyin. **Edit**  >  **Yer imlerini** Düzenle  >  **görev listesi kısayolunu** seçin veya **CTRL** + **K**, **CTRL** + **H** tuşlarına basın.
+Bir kısayol oluşturmak için, işaretçiyi bir kısayol yerleştirmek istediğiniz koda ekleyin.   >  **Yer imlerini** Düzenle  >  **görev listesi kısayolunu** seçin veya **CTRL** + **K**, **CTRL** + **H** tuşlarına basın.
 
 Koddaki kısayollar arasında gezinmek için listeden bir kısayol seçin ve sonra kısayol menüsünden **sonraki görev** veya **önceki görev** ' i seçin.
 

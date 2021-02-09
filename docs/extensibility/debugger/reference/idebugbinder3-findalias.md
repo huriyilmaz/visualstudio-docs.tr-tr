@@ -9,35 +9,35 @@ helpviewer_keywords:
 ms.assetid: b8333701-2718-4983-8513-0875fb7cb730
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f0a697e39d21b1c25a98c09ad6cc4837cca7a293
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1bac818844b69018bb9dc6a970a5659513dbe50d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80735866"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99925086"
 ---
 # <a name="idebugbinder3findalias"></a>IDebugBinder3::FindAlias
 Bu yöntem, ad verilen bir diğer ad bulur. Bu, programdaki tüm diğer adları arar.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
-HRESULT FindAlias(
-   LPCOLESTR     pcstrName,
-   IDebugAlias** ppAlias
+HRESULT FindAlias(
+   LPCOLESTR     pcstrName,
+   IDebugAlias** ppAlias
 );
 ```
 
 ```csharp
-int FindAlias(
-   string          pcstrName,
-   out IDebugAlias ppAlias
+int FindAlias(
+   string          pcstrName,
+   out IDebugAlias ppAlias
 );
 ```
 

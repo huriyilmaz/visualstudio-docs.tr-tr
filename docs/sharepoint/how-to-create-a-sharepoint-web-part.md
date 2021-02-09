@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Web Parts [SharePoint development in Visual Studio], creating
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 13039520299d52e6f6a704567cf1cdc5ccfd66db
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: f15cd788d19540bdea416b36ab0f8e8d8aa95e3a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94903708"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99925595"
 ---
 # <a name="how-to-create-a-sharepoint-web-part"></a>Nasıl yapılır: SharePoint Web Bölümü oluşturma
   Herhangi bir SharePoint projesine **Web** bölümü öğesi ekleyerek ve sonra Web bölümü için veya Tasarımcı kullanarak bir Web bölümü oluşturup özelleştirebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: tasarımcı kullanarak SharePoint Web Bölümü oluşturma](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md).

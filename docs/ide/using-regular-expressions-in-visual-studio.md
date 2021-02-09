@@ -15,15 +15,15 @@ helpviewer_keywords:
 - regular expressions
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8648eb48c68e0220b1d36a851619edec2b51ceb7
-ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
+ms.openlocfilehash: d62d35a296c70462aab75af5a8c6729179d5b34d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96478997"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99925764"
 ---
 # <a name="use-regular-expressions-in-visual-studio"></a>Visual Studio 'da normal ifadeler kullanma
 
@@ -33,7 +33,7 @@ Visual Studio, metni bulmak ve değiştirmek için [.net normal ifadelerini](/do
 
 Aşağıdaki tabloda bazı normal ifade karakterleri, işleçler, yapılar ve model örnekleri yer almaktadır. Daha kapsamlı bir başvuru için bkz. [normal ifade dili](/dotnet/standard/base-types/regular-expression-language-quick-reference).
 
-|Amaç|İfade|Örnek|
+|Amaç|Expression|Örnek|
 |-------------|----------------|-------------|
 |Tek bir karakterle Eşleştir (satır sonu hariç). Daha fazla bilgi için, bkz. [herhangi bir karakter](/dotnet/standard/base-types/character-classes-in-regular-expressions#any-character-).|.|`a.o` "About" içinde "Acro" ve "" değil "About" ve "ABO" içinde "Aro" ile eşleşir|
 |Önceki ifadenin sıfır veya daha fazla tekrarlamalarını eşleştirin (mümkün olduğunca çok karakterle Eşleştir). Daha fazla bilgi için bkz. [sıfır veya daha fazla kez eşleşme](/dotnet/standard/base-types/quantifiers-in-regular-expressions#match-zero-or-more-times-).|*|`a*r` "bin", "ark" içinde "ar" ve "aardvark" içinde "aar" içinde "r" ile eşleşir|
@@ -73,7 +73,7 @@ Numaralandırılmış bir yakalama grubu oluşturmak için, alt ifadeyi normal i
 
 - **normal ifade içinde**: kullanın `\number` . Örneğin, `\1` normal ifadede `(\w+)\s\1` ilk yakalama grubuna başvuru yapılır `(\w+)` .
 
-- **değiştirme** düzeninde: kullanın `$number` . Örneğin, gruplanmış normal ifade `(\d)([a-z])` iki grup tanımlar: ilk grup tek bir ondalık basamak içerir ve ikinci grup, ve **z** arasında tek bir karakter içerir. **a** İfade şu dizede dört eşleşme bulur: **1a 2b 3c 4d**. Değiştirme dizesi `z$1` yalnızca ilk gruba ( `$1` ) başvurur ve dizeyi **Z1 Z2 Z3 Z4** öğesine dönüştürür.
+- **değiştirme** düzeninde: kullanın `$number` . Örneğin, gruplanmış normal ifade `(\d)([a-z])` iki grup tanımlar: ilk grup tek bir ondalık basamak içerir ve ikinci grup, ve **z** arasında tek bir karakter içerir.  İfade şu dizede dört eşleşme bulur: **1a 2b 3c 4d**. Değiştirme dizesi `z$1` yalnızca ilk gruba ( `$1` ) başvurur ve dizeyi **Z1 Z2 Z3 Z4** öğesine dönüştürür.
 
 Aşağıdaki görüntüde bir normal ifade `(\w+)\s\1` ve bir değiştirme dizesi gösterilmektedir `$1` . Normal ifade ve değiştirme deseninin her ikisi de otomatik olarak numaralandırılan ilk yakalama grubuna başvurur. Visual Studio 'daki **hızlı değiştirme** iletişim kutusunda **Tümünü Değiştir** ' i seçtiğinizde, yinelenen sözcükler metinden kaldırılır.
 
