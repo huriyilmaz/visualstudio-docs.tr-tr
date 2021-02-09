@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 99cf4781-bd4d-47b4-91b9-217933509f82
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: cd5239c4fd01aefa247fc63a66af3e872dbecbb6
-ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
+ms.openlocfilehash: a59ee0e3aed10b5fd48fcbf57d9cb69aca3f929e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95006412"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99907637"
 ---
 # <a name="configuring-warnings-in-visual-basic"></a>Visual Basic uyarıları yapılandırma
 
@@ -34,7 +34,7 @@ Uyarıları yapılandırmanın iki farklı yolu vardır: **Proje tasarımcısın
 
 **Proje Tasarımcısı** sayfasının **Derle** sekmesi, uyarıları açıp kapatmanızı sağlar. Tüm uyarıları devre dışı bırakmak için **tüm uyarıları devre dışı bırak** onay kutusunu seçin; Tüm uyarıları hata olarak değerlendirmek için **tüm uyarıları hata olarak değerlendir** ' i seçin. Bazı ayrı uyarılar, görüntülenmiş tabloda istendiği gibi hata veya uyarı olarak değiştirilebilir.
 
-**Option Strict** **devre dışı** olarak ayarlandığında, kesin ilgili uyarı **seçeneği** birbirinden bağımsız olarak kabul edilemez. **Option Strict** **Açık** olarak ayarlandığında, ilişkili uyarılar, durumu ne olduğuna bakılmaksızın hata olarak değerlendirilir. **Option Strict** **Custom** `/optionstrict:custom` , komut satırı derleyicisinde belirtilerek özel olarak ayarlandığında, **kesin** uyarılar bağımsız olarak açık veya kapalı olabilir.
+**Option Strict** **devre dışı** olarak ayarlandığında, kesin ilgili uyarı **seçeneği** birbirinden bağımsız olarak kabul edilemez. **Option Strict** **Açık** olarak ayarlandığında, ilişkili uyarılar, durumu ne olduğuna bakılmaksızın hata olarak değerlendirilir. **Option Strict**  `/optionstrict:custom` , komut satırı derleyicisinde belirtilerek özel olarak ayarlandığında, **kesin** uyarılar bağımsız olarak açık veya kapalı olabilir.
 
 Derleyicinin **/warnaserror** komut satırı seçeneği, uyarıların hata olarak değerlendirilip değerlendirilmeyeceğini belirtmek için de kullanılabilir. + Veya-kullanarak hangi uyarıların hata veya uyarı olarak değerlendirileceğini belirtmek için bu seçeneğe virgülle ayrılmış bir liste ekleyebilirsiniz. Aşağıdaki tabloda olası seçenekler ayrıntılı olarak verilmiştir.
 

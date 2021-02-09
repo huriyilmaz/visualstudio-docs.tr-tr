@@ -7,16 +7,16 @@ ms.topic: how-to
 ms.assetid: a92e5692-2183-4ae3-9431-b067c6a7aab4
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - aspnet
-ms.openlocfilehash: e08732689d11cd7de70df1e93d1d1110a35baa6d
-ms.sourcegitcommit: 8e15b434bf5db3e0f719320ca82682df1a3da110
+ms.openlocfilehash: fc768c4eb3caf03e81d60a9d4340d29d18fabf9a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "98883506"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99907152"
 ---
 # <a name="how-to-modify-webconfig-files-to-instrument-and-profile-dynamically-compiled-aspnet-web-applications"></a>Nasıl yapılır: dinamik olarak derlenen ASP.NET Web uygulamalarını işaretlemek ve profil haline getirmek için web.config dosyalarını değiştirme
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]Dinamik olarak derlenen Web uygulamalarından ayrıntılı zamanlama verileri, .net bellek ayırma verileri ve .NET nesne yaşam süresi verilerini toplamak için profil oluşturma araçları izleme yöntemini kullanabilirsiniz [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] .

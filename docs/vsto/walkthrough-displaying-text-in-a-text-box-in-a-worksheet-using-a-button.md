@@ -14,15 +14,15 @@ helpviewer_keywords:
 - text [Office development in Visual Studio], text boxes
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: c499800efa783ce252dbf925f307bc64e814420f
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 270754005704d91569f014ed2e0be382bc2dd707
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97522649"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99906477"
 ---
 # <a name="walkthrough-display-text-in-a-text-box-in-a-worksheet-using-a-button"></a>İzlenecek yol: düğme kullanarak çalışma sayfasındaki metin kutusunda metin görüntüleme
   Bu izlenecek yol, Excel çalışma sayfalarında düğme ve metin Microsoft Office kutusu kullanmanın temel bilgilerini ve Visual Studio 'da Office geliştirme araçları 'nı kullanarak Excel projeleri oluşturmayı gösterir. Sonucu tamamlanmış bir örnek olarak görmek için bkz. [Office geliştirme örnekleri ve izlenecek yollar](../vsto/office-development-samples-and-walkthroughs.md): Excel denetimleri örneği.
@@ -94,7 +94,7 @@ ms.locfileid: "97522649"
 
      [!code-csharp[Trin_VstcoreProgrammingControlsExcel#12](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs#12)]
 
-## <a name="test-the-application"></a>Uygulamayı test etme
+## <a name="test-the-application"></a>Uygulamayı test edin
  Artık Merhaba Dünya ileti olduğundan emin olmak için çalışma kitabınızı test edebilirsiniz **!** düğmeye tıkladığınızda metin kutusunda görünür.
 
 ### <a name="to-test-your-workbook"></a>Çalışma kitabınızı test etmek için

@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: ee2b3e0c-0990-46d9-8de6-c29fa386b15b
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 1a368da7a69d921c7e7a55922fb89774ce192b08
-ms.sourcegitcommit: 8e15b434bf5db3e0f719320ca82682df1a3da110
+ms.openlocfilehash: 70d362ecdbcc274d01dac6c8e56daa05ec325d71
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "98883498"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99907179"
 ---
 # <a name="how-to-manually-create-performance-sessions"></a>Nasıl yapılır: El ile performans oturumları oluşturma
 El ile bir performans oturumu oluşturabilirsiniz. Bunu yapmak için ' de bir proje açmanız gerekli değildir [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Daha fazla bilgi için bkz. [performans oturumlarını yapılandırma](../profiling/configuring-performance-sessions.md).

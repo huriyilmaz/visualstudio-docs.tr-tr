@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 998b616b-bd08-45cb-845f-808efb8c33bc
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1694e0835add6eac75986538a8abae99adf717b1
-ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
+ms.openlocfilehash: 47991a3d1140893c4695e4edb7b76b808ab2917a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2020
-ms.locfileid: "96305232"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99907735"
 ---
 # <a name="command-routing-algorithm"></a>Komut yönlendirme algoritması
 Visual Studio komutları 'nda birkaç farklı bileşen tarafından işlenir. Komutlar, geçerli seçime bağlı olarak en dıştaki (genel olarak da bilinir) bağlam olan en içteki bağlamdan yönlendirilir. Daha fazla bilgi için bkz. [komut kullanılabilirliği](../../extensibility/internals/command-availability.md).

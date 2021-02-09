@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 9b5f1b5f-fd42-4de5-a3e1-d8e7e2e8cf1a
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0347ba8ffe0d5e479dc31f5d19a4f21c9a51df5c
-ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
+ms.openlocfilehash: 49bdf59b5076bd4f30ab219fbf4e00899d03ba96
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98149267"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99906352"
 ---
 # <a name="window-menu-commands"></a>Pencere Menü Komutları
 **Pencere** menüsü, Spy + + pencerelerini yönetmek için komutlar sağlar.
