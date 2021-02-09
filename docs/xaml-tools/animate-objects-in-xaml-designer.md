@@ -8,13 +8,13 @@ ms.topic: how-to
 ms.assetid: fb88fa26-e835-47f5-9771-2f279441c83c
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
-ms.openlocfilehash: 2c1c4100921430daa0faa0daba3c3c3f5328fb3d
-ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
+manager: jmartens
+ms.openlocfilehash: 162ed3ddb7e8f71a14c9dd8415500cc845316e82
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92796335"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99889258"
 ---
 # <a name="animate-objects-in-xaml-designer"></a>XAML Tasarımcısı’nda nesnelere animasyon ekleme
 
@@ -28,7 +28,7 @@ Aşağıdaki resimlerde **Storyboard1** adlı bir görsel taslak gösterilmekted
 
 ## <a name="create-an-animation"></a>Animasyon oluşturma
 
-1. Görsel taslak oluşturmak için **nesneler ve zaman çizelgesi** penceresinde **görsel taslak seçenekleri** düğmesini seçin ve ardından **Yeni** ' yi seçin.
+1. Görsel taslak oluşturmak için **nesneler ve zaman çizelgesi** penceresinde **görsel taslak seçenekleri** düğmesini seçin ve ardından **Yeni**' yi seçin.
 
    ![Visual Studio için Blend film şeridi ekleme](media/new-storyboard.png)
 

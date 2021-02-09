@@ -10,15 +10,15 @@ f1_keywords:
 ms.assetid: 02a326c2-4009-442f-b7cb-e42121fd2992
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 9f1396a60cda1e4e1ad372a73b9c2130d450d746
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 23d9f1b0037600c6612a413cce7b089f6adbc7aa
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94433576"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99889310"
 ---
 # <a name="trycatch-activity-designer"></a>TryCatch Etkinlik Tasarımcısı
 
@@ -33,7 +33,7 @@ ms.locfileid: "94433576"
 
 **TryCatch** etkinlik Tasarımcısı **araç kutusundan** sürüklenip, örneğin içinde olduğu gibi etkinliklerin genellikle yerleştirildiği iş akışı Tasarımcısı yüzeyine bırakılabilir <xref:System.Activities.Statements.Sequence> . Bu <xref:System.Activities.Statements.TryCatch> , varsayılan TryCatch olan bir etkinlik oluşturur <xref:System.Activities.Activity.DisplayName%2A> . <xref:System.Activities.Activity.DisplayName%2A>Değer, **TryCatch** etkinlik tasarımcısının üst bilgisinde veya özellik kılavuzunun **DisplayName** kutusunda düzenlenebilir. Diğer özellikler, **TryCatch** etkinlik tasarımcısının yüzeyinde düzenlenmelidir.
 
-Genişletilmiş görünümdeki **TRY** , **catch** ve **finally** kutularını görmek için, **TryCatch** Tasarımcısı ' nın sağ üst köşesindeki Genişlet düğmesine tıklayın. Bir catch eklemek için, **TryCatch** tasarımcısında **Yeni catch Ekle** düğmesine tıklayın. Düğme, bir tür açılan kutusu olarak değişir. Catch eklemek için bir özel durum türü seçin ve ENTER tuşuna basın. **Catch eklendikten sonra, catch** alanı genişler ve bir etkinlik, catch için yürütme mantığını tanımlamak üzere catch 'e bırakılabilir. Genişletilmiş catch alanının sağ tarafında bir metin kutusu olduğunu unutmayın. Bu metin kutusunu kullanarak özel durum değişkenine ad verebilirsiniz. Özel durum değişkeni yalnızca aynı **catch** içindeki etkinlikler için kullanılabilir.
+Genişletilmiş görünümdeki **TRY**, **catch** ve **finally** kutularını görmek için, **TryCatch** Tasarımcısı ' nın sağ üst köşesindeki Genişlet düğmesine tıklayın. Bir catch eklemek için, **TryCatch** tasarımcısında **Yeni catch Ekle** düğmesine tıklayın. Düğme, bir tür açılan kutusu olarak değişir. Catch eklemek için bir özel durum türü seçin ve ENTER tuşuna basın. **Catch eklendikten sonra, catch** alanı genişler ve bir etkinlik, catch için yürütme mantığını tanımlamak üzere catch 'e bırakılabilir. Genişletilmiş catch alanının sağ tarafında bir metin kutusu olduğunu unutmayın. Bu metin kutusunu kullanarak özel durum değişkenine ad verebilirsiniz. Özel durum değişkeni yalnızca aynı **catch** içindeki etkinlikler için kullanılabilir.
 
 **TryCatch** Tasarımcısı, **catch** düzenlemesini desteklemiyor. Özel durum türünü değiştirmek isterseniz, **catch** 'i silip yeni bir tane eklemeniz gerekir. Bir **catch** , seçilip silinerek veya sağ tıklanarak erişilen bağlam menüsünde **Sil** ' i seçerek silinebilir.
 
@@ -45,7 +45,7 @@ Aşağıdaki tabloda <xref:System.Activities.Statements.TryCatch> Özellikler g�
 |-|--------------|-|
 |<xref:System.Activities.Activity.DisplayName%2A>|Yanlış|Etkinliğin isteğe bağlı kolay adını belirtir <xref:System.Activities.Statements.TryCatch> . Varsayılan değer TryCatch ' dir.|
 |<xref:System.Activities.Statements.TryCatch.Try%2A>|Yanlış|İlk yürütüldüğünde etkinlik yürütülür <xref:System.Activities.Statements.TryCatch> .|
-|<xref:System.Activities.Statements.TryCatch.Catches%2A>|Yanlış|**Catch** <xref:System.Activities.Statements.TryCatch.Try%2A> Etkinlik bir özel durum oluşturduğunda denetlenecek catch öğelerinin koleksiyonu.<br /><br /> ' De en az bir etkinlik <xref:System.Activities.Statements.TryCatch.Catches%2A> veya bloktaki bir etkinlik eklemeniz gerekiyor <xref:System.Activities.Statements.TryCatch.Finally%2A> .|
+|<xref:System.Activities.Statements.TryCatch.Catches%2A>|Yanlış| <xref:System.Activities.Statements.TryCatch.Try%2A> Etkinlik bir özel durum oluşturduğunda denetlenecek catch öğelerinin koleksiyonu.<br /><br /> ' De en az bir etkinlik <xref:System.Activities.Statements.TryCatch.Catches%2A> veya bloktaki bir etkinlik eklemeniz gerekiyor <xref:System.Activities.Statements.TryCatch.Finally%2A> .|
 |<xref:System.Activities.Statements.TryCatch.Finally%2A>|Yanlış|<xref:System.Activities.Statements.TryCatch.Try%2A>Koleksiyonda ve tüm gerekli etkinliklerden <xref:System.Activities.Statements.TryCatch.Catches%2A> yürütme tamamlandığında yürütülecek etkinlik.<br /><br /> ' De en az bir etkinlik <xref:System.Activities.Statements.TryCatch.Catches%2A> veya bloktaki bir etkinlik eklemeniz gerekiyor <xref:System.Activities.Statements.TryCatch.Finally%2A> .|
 
 ## <a name="see-also"></a>Ayrıca bkz.

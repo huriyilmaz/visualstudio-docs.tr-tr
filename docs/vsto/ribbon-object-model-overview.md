@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Ribbon [Office development in Visual Studio], object model
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: f97bbbab4b867f503e5b5befff27844df8a4b4bc
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 6306b13cc40d8b93de734168fe1e6df92c256d21
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97527991"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99888699"
 ---
 # <a name="ribbon-object-model-overview"></a>Şerit nesne modeline genel bakış
   , [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Çalışma zamanında Şerit denetimlerinin özelliklerini almak ve ayarlamak için kullanabileceğiniz, türü kesin belirlenmiş bir nesne modeli sunar. Örneğin, menü denetimlerini dinamik olarak doldurabilir veya bağlamsal olarak denetimlerini gösterebilir ve gizleyebilirsiniz. Ayrıca, şerit 'e sekmeler, gruplar ve denetimler ekleyebilirsiniz, ancak yalnızca Şerit Office uygulaması tarafından yüklenmeden önce. Bilgi için bkz. [Salt okunabilir olan özellikleri ayarlama](#SettingReadOnlyProperties).
@@ -54,7 +54,7 @@ ms.locfileid: "97527991"
 |**ButtonGroup**|<xref:Microsoft.Office.Tools.Ribbon.RibbonButtonGroup>|
 |**CheckBox**|<xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox>|
 |**ComboBox**|<xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox>|
-|**DropDown**|<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>|
+|**Listenin**|<xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>|
 |**EditBox**|<xref:Microsoft.Office.Tools.Ribbon.RibbonEditBox>|
 |**Galeri**|<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>|
 |**Grup**|<xref:Microsoft.Office.Tools.Ribbon.RibbonGroup>|

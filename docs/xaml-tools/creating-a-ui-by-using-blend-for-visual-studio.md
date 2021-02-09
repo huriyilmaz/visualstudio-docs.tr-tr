@@ -9,15 +9,15 @@ f1_keywords:
 - Blend.Start.Dev12
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: affef27dae9fe569c0cacbbd3725b9bf76edb94c
-ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
+ms.openlocfilehash: 9fdc3fc2241807cd1b36ec64d620c7b46a498918
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92796348"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99889271"
 ---
 # <a name="blend-for-visual-studio-overview"></a>Visual Studio için Blend genel bakış
 
@@ -64,7 +64,7 @@ Varlıklar penceresine erişin ve kütüphanedeki en son kullanılan varlığı 
 
 ## <a name="assets-window"></a>Varlıklar penceresi
 
-**Varlıklar** penceresi, tüm kullanılabilir denetimleri Içerir ve Visual Studio 'Daki **araç kutusuna** benzerdir. Denetimlere ek olarak, **varlıklar** penceresinde stiller, medya, davranışlar ve efektler dahil olmak üzere çalışma yüzeyinizi ekleyebileceğiniz her şeyi bulabilirsiniz. **Varlıklar** penceresini açmak için varlıklar penceresini **görüntüle** ' yi seçin  >  **Assets Window** veya **CTRL** + **alt** + **X** tuşuna basın.
+**Varlıklar** penceresi, tüm kullanılabilir denetimleri Içerir ve Visual Studio 'Daki **araç kutusuna** benzerdir. Denetimlere ek olarak, **varlıklar** penceresinde stiller, medya, davranışlar ve efektler dahil olmak üzere çalışma yüzeyinizi ekleyebileceğiniz her şeyi bulabilirsiniz. **Varlıklar** penceresini açmak için varlıklar penceresini **görüntüle**' yi seçin  >   veya **CTRL** + **alt** + **X** tuşuna basın.
 
 ![Visual Studio için Blend varlıklar penceresi](media/blend-assets-window.png)
 
@@ -73,7 +73,7 @@ Varlıklar penceresine erişin ve kütüphanedeki en son kullanılan varlığı 
 
 ## <a name="objects-and-timeline-window"></a>Nesneler ve Zaman Çizelgesi penceresi
 
-Çalışma yüzeyinizdeki nesneleri düzenlemek ve isterseniz bunlara animasyon uygulamak için bu pencereyi kullanın. **Nesneler ve zaman çizelgesi** penceresini açmak için **View**  >  **belge anahattını** görüntüle ' yi seçin. Visual Studio 'daki [Belge Anahattı penceresinde](creating-a-ui-by-using-xaml-designer-in-visual-studio.md#document-outline-window) sunulan işlevlere ek olarak, Visual Studio için Blend nesneler ve zaman çizelgesi pencerenin sağ tarafta bir zaman çizelgesi bileşim alanı vardır. Animasyonları oluştururken ve düzenlediğinizde zaman çizelgesini kullanın.
+Çalışma yüzeyinizdeki nesneleri düzenlemek ve isterseniz bunlara animasyon uygulamak için bu pencereyi kullanın. **Nesneler ve zaman çizelgesi** penceresini açmak için   >  **belge anahattını** görüntüle ' yi seçin. Visual Studio 'daki [Belge Anahattı penceresinde](creating-a-ui-by-using-xaml-designer-in-visual-studio.md#document-outline-window) sunulan işlevlere ek olarak, Visual Studio için Blend nesneler ve zaman çizelgesi pencerenin sağ tarafta bir zaman çizelgesi bileşim alanı vardır. Animasyonları oluştururken ve düzenlediğinizde zaman çizelgesini kullanın.
 
 ![Animasyon modundaki nesne ve zaman çizelgesi penceresi](media/storyboard-timeline.png)
 

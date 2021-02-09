@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e0a8c330-21bc-4eb2-b936-fd0f3c3221f1
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 67dcee1fac0b5ec082a7f92285c6c0ac2523800a
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: c87ed73d2c3a26ecc4522c6497ac71e33e46a6c3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94349522"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99889128"
 ---
 # <a name="how-to-use-clickonce-to-deploy-applications-that-can-run-on-multiple-versions-of-the-net-framework"></a>Nasıl yapılır: .NET Framework 'ün birden çok sürümünde çalışabilen uygulamaları dağıtmak için ClickOnce kullanma
 ClickOnce dağıtım teknolojisini kullanarak .NET Framework birden çok sürümünü hedefleyen bir uygulamayı dağıtabilirsiniz. Bunun için uygulama ve dağıtım bildirimlerini oluşturmanız ve güncelleştirmeniz gerekir.
@@ -63,7 +63,7 @@ ClickOnce dağıtım teknolojisini kullanarak .NET Framework birden çok sürüm
     |4 tam|\<framework targetVersion="4.0" profile="Full" supportedRuntime="4.0.30319" />|
     |3,5 istemcisi|\<framework targetVersion="3.5" profile="Client" supportedRuntime="2.0.50727" />|
     |3,5 tam|\<framework targetVersion="3.5" profile="Full" supportedRuntime="2.0.50727" />|
-    |3,0|\<framework targetVersion="3.0" supportedRuntime="2.0.50727" />|
+    |3.0|\<framework targetVersion="3.0" supportedRuntime="2.0.50727" />|
 
 ### <a name="to-change-the-appconfig-file-to-list-the-compatible-net-framework-runtime-versions"></a>app.config dosyasını, uyumlu .NET Framework çalışma zamanı sürümlerini listelemek üzere değiştirmek için
 
