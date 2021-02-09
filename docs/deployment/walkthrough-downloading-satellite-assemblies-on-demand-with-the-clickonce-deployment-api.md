@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: fdaa553f-a27e-44eb-a4e2-08c122105a87
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 54deb51714183497173c7df4e346bb65613366a2
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 59c468e28321c01993cd2f4b119218fb29bc6020
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94349301"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99917314"
 ---
 # <a name="walkthrough-download-satellite-assemblies-on-demand-with-the-clickonce-deployment-api"></a>İzlenecek yol: ClickOnce dağıtım API 'SI ile isteğe bağlı uydu derlemelerini Indirme
 Windows Forms uygulamalar, uydu derlemeleri kullanılarak birden çok kültür için yapılandırılabilir. *Uydu derlemesi* , uygulamanın varsayılan kültürü dışında bir kültür için uygulama kaynakları içeren bir derlemedir.
@@ -56,7 +56,7 @@ Windows Forms uygulamalar, uydu derlemeleri kullanılarak birden çok kültür i
 
 4. **Dosyalar** sekmesine tıklayın.
 
-5. **Üç nokta** düğmesine ( **...** ) tıklayın ve *Resgen.exe* kullanarak oluşturduğunuz uydu derlemeleri dahil olmak üzere tüm uygulamanızın derlemelerini ve dosyalarını içeren dizini seçin. (Uydu derlemesi, RFC 1766 biçiminde bir dil tanımlayıcısı olan *\<isoCode>\ApplicationName.resources.dll* biçimde bir ada sahip olacaktır \<isoCode> .)
+5. **Üç nokta** düğmesine (**...**) tıklayın ve *Resgen.exe* kullanarak oluşturduğunuz uydu derlemeleri dahil olmak üzere tüm uygulamanızın derlemelerini ve dosyalarını içeren dizini seçin. (Uydu derlemesi, RFC 1766 biçiminde bir dil tanımlayıcısı olan *\<isoCode>\ApplicationName.resources.dll* biçimde bir ada sahip olacaktır \<isoCode> .)
 
 6. Dosyaları dağıtımınıza eklemek için **doldur** ' a tıklayın.
 

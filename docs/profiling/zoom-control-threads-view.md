@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 7f9bda07-53a8-4f11-9846-a3e31064c596
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 00cf79b23de47c1ac808b9287f387a16b51e5c3e
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: 69e0fc1d7e6a21483972efac48c273d71ce59091
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98719129"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99915920"
 ---
 # <a name="zoom-control-threads-view"></a>Yakınlaştırma denetimi (iş parçacıkları görünümü)
 Yakınlaştırma denetimi, belirli bir ilgilendiğiniz alanlara odaklanabilmeniz için zaman çizelgesinde yakınlaştırıp uzaklaşmanıza yardımcı olan bir kaydırıcıdır. Bu denetim, zaman çizelgesi görünümünün merkezinde yakınlaştırdığı için, yakınlaştırmadan önce ilgilendiğiniz alanı ortalayın.

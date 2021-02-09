@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: f34a558a-ebd9-49bd-8510-32a2b581a4af
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 58974778be615f2b0455f5b65a1c392035265425
-ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
+ms.openlocfilehash: c92a9270198fc7dfb5035afd35a1c92269450133
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92903471"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99918165"
 ---
 # <a name="msbuild-advanced-concepts"></a>MSBuild gelişmiş kavramları
 
@@ -31,7 +31,7 @@ Bu bölümdeki belgeler, MSBuild kullanarak çalıştırdığınız derlemeleri 
 |[Dönüştürmeler](../msbuild/msbuild-transforms.md)|Bağımlılık analizini etkinleştirmek için dönüşümlerin nasıl kullanılacağını açıklar.|
 |[Visual Studio tümleştirmesi](../msbuild/visual-studio-integration-msbuild.md)|Visual Studio IDE 'den kod derlerken MSBuild proje dosyalarının nasıl kullanılacağını açıklar.|
 |[Paralel olarak birden çok proje oluşturun](../msbuild/building-multiple-projects-in-parallel-with-msbuild.md)|Birden çok işlemciyi veya çok birimli işlemciyi olan bilgisayarlarda birden çok projenin daha hızlı bir şekilde nasıl oluşturulacağını açıklar.|
-|[Çoklu sürüm desteği](../msbuild/msbuild-multitargeting-overview.md)|.NET Framework çeşitli sürümlerinden herhangi birinde çalıştırmak için bir uygulamanın nasıl derleneceğini açıklar.|
+|[Çoklu Sürüm Desteği](../msbuild/msbuild-multitargeting-overview.md)|.NET Framework çeşitli sürümlerinden herhangi birinde çalıştırmak için bir uygulamanın nasıl derleneceğini açıklar.|
 |[En iyi uygulamalar](../msbuild/msbuild-best-practices.md)|MSBuild betikleri yazmak için en iyi yöntemleri önerir.|
 
 ## <a name="see-also"></a>Ayrıca bkz.

@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 507b06e9-bb56-4a72-8fd5-f91f958da6fc
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b0dd8643f63a7a3e67400f09f00b999fff33f09e
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: ebeb885d427cf6a9a6ca80d4d0ad572b23d7f685
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98721274"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99917794"
 ---
 # <a name="manage-channels"></a>Kanalları Yönet
 Eşzamanlılık görselleştiricisi içindeki **Iş parçacıkları görünümünde** , işlem için kanalları düzenleyerek belirli desenleri inceleyebilirsiniz. Kanalları sıralayabilir, yukarı ve aşağı taşıyabilir, gizleyebilir veya gösterebilirsiniz.

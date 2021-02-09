@@ -7,15 +7,15 @@ ms.topic: how-to
 ms.assetid: a0d97966-2df8-449b-a8cf-5a19684dc773
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 924b990e1626842778c0b3577ddb25a53a4eb910
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: 5c60c30c593e67f47a620062e2b2f4958120a1a1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93134609"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99917108"
 ---
 # <a name="how-to-create-a-basic-3d-model"></a>Nasıl yapılır: Temel 3B model oluşturma
 
@@ -46,13 +46,13 @@ Başlamadan önce, **Özellikler** penceresi ve **araç kutusunun** görüntüle
 
 2. Sahneye küp ekleyin. **Araç kutusu** penceresinde, **şekiller** altında **küp** ' i seçin ve tasarım yüzeyine taşıyın.
 
-3. Yüz seçimine geçiş yapın. Model Düzenleyicisi araç çubuğunda **yüz seç** ' i seçin.
+3. Yüz seçimine geçiş yapın. Model Düzenleyicisi araç çubuğunda **yüz seç**' i seçin.
 
 4. Küpün üst kısmını alt bölümlere ayır. Yüz seçimi modunda, seçim için etkinleştirmek üzere küpü bir kez seçin ve ardından en üstteki yüzü seçmek için küpün en üstünü seçin. Model Düzenleyicisi araç çubuğunda alt **bölümlere** ayır ' ı seçin. Bu, küpün en üstüne, eşit olarak boyutlandırılmış dört bölüme bölünmüş yeni köşeler ekler.
 
     ![Küpün üst bölümü alt bölünmüştür](../designers/media/gfx_model_demo_house_subdiv.png)
 
-5. Küpün iki bitişik tarafını — Örneğin, küpün ön ve sağ taraflarından yükseltme. Yüz seçimi modunda, seçim için etkinleştirmek üzere küpü bir kez seçtikten sonra küpün bir tarafını seçin. **CTRL** tuşunu basılı tutarak, önce seçtiğiniz tarafa bitişik olan küpün başka bir tarafını seçin ve ardından Model Düzenleyicisi araç çubuğunda, **yükseltme yüzü** ' ni seçin.
+5. Küpün iki bitişik tarafını — Örneğin, küpün ön ve sağ taraflarından yükseltme. Yüz seçimi modunda, seçim için etkinleştirmek üzere küpü bir kez seçtikten sonra küpün bir tarafını seçin. **CTRL** tuşunu basılı tutarak, önce seçtiğiniz tarafa bitişik olan küpün başka bir tarafını seçin ve ardından Model Düzenleyicisi araç çubuğunda, **yükseltme yüzü**' ni seçin.
 
     ![Küpün tarafları yükseltilmiş](../designers/media/gfx_model_demo_house_extrude.png)
 
@@ -60,7 +60,7 @@ Başlamadan önce, **Özellikler** penceresi ve **araç kutusunun** görüntüle
 
     ![Küpün bir tarafı daha fazla yükseltilmiş.](../designers/media/gfx_model_demo_house_extend.png)
 
-7. Model üçgenlere ayır. Model Düzenleyicisi araç çubuğunda **Gelişmiş**  >  **Araçlar**  >  **üçgenlere ayır** ' ı seçin.
+7. Model üçgenlere ayır. Model Düzenleyicisi araç çubuğunda **Gelişmiş**  >  **Araçlar**  >  **üçgenlere ayır**' ı seçin.
 
 8. Evin çatı ' ini oluşturun. Model Düzenleyicisi araç çubuğunda **kenar Seç** ' i seçerek kenar seçimi moduna geçin ve sonra etkinleştirmek için küpü seçin. Burada gösterilen kenarları seçerken **CTRL** tuşuna basın ve basılı tutun:
 

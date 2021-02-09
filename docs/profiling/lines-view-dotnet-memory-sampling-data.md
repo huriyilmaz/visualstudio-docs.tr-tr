@@ -8,16 +8,16 @@ helpviewer_keywords:
 ms.assetid: 6631ab87-0e62-4c76-a063-4ea7222b07da
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0033b3d50531bebe087f43930324db0431dee03f
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: 1922851b96ddec47c298b3e7d1e94a7de129505a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98721339"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99917843"
 ---
 # <a name="lines-view---net-memory-sampling-data"></a>Satırlar görünümü-.NET Bellek Örnekleme verileri
 Örnekleme yöntemini kullanan .NET bellek ayırma profil oluşturma verileri için Satırlar Görünümü profil oluşturma çalışması sırasında belleği ayrılan deyimleri listeler. Sütunlar ayrıca, ayırma boyutunu ve sayısını da içerir.

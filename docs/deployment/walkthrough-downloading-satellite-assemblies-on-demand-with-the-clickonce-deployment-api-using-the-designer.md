@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 82b85a47-b223-4221-a17c-38a52c3fb6e2
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8b6b57faf01878dc5aff708f0aca47707bf6e48c
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 74e6641eff7fcaecfab300afe4747bb2ab7b75b2
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94350341"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99917302"
 ---
 # <a name="walkthrough-download-satellite-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer"></a>İzlenecek yol: Tasarımcıyı kullanarak ClickOnce dağıtım API 'SI ile uydu derlemelerini isteğe bağlı olarak Indirme
 Windows Forms uygulamalar, uydu derlemeleri kullanılarak birden çok kültür için yapılandırılabilir. *Uydu derlemesi* , uygulamanın varsayılan kültürü dışında bir kültür için uygulama kaynakları içeren bir derlemedir.
@@ -43,9 +43,9 @@ Windows Forms uygulamalar, uydu derlemeleri kullanılarak birden çok kültür i
 
 1. Projenizi yapılandırın. Bu, yerelleştirçalıştığınız tüm kültürler için uydu derlemeleri oluşturur.
 
-2. Çözüm Gezgini ' de proje adına sağ tıklayın ve **Özellikler** ' e tıklayın.
+2. Çözüm Gezgini ' de proje adına sağ tıklayın ve **Özellikler**' e tıklayın.
 
-3. **Yayımla** sekmesine tıklayın ve ardından **uygulama dosyaları** ' na tıklayın.
+3. **Yayımla** sekmesine tıklayın ve ardından **uygulama dosyaları**' na tıklayın.
 
 4. Uydu derlemelerini görüntülemek için **tüm dosyaları göster** onay kutusunu seçin. Varsayılan olarak, tüm uydu derlemeleri dağıtımınıza dahil edilir ve bu iletişim kutusunda görünür olur.
 
@@ -57,7 +57,7 @@ Windows Forms uygulamalar, uydu derlemeleri kullanılarak birden çok kültür i
 
 ### <a name="to-download-satellite-assemblies-on-demand-in-c"></a>C 'de isteğe bağlı uydu derlemelerini indirmek için\#
 
-1. *Program.cs* dosyasını açın. Bu dosyayı Çözüm Gezgini görmüyorsanız, projenizi seçin ve **Proje** menüsünde **tüm dosyaları göster** ' e tıklayın.
+1. *Program.cs* dosyasını açın. Bu dosyayı Çözüm Gezgini görmüyorsanız, projenizi seçin ve **Proje** menüsünde **tüm dosyaları göster**' e tıklayın.
 
 2. Uygun uydu derlemesini indirmek ve uygulamanızı başlatmak için aşağıdaki kodu kullanın.
 
@@ -67,7 +67,7 @@ Windows Forms uygulamalar, uydu derlemeleri kullanılarak birden çok kültür i
 
 1. Uygulamanın **Özellikler** penceresinde **uygulama** sekmesine tıklayın.
 
-2. Sekme sayfasının alt kısmındaki **uygulama olaylarını görüntüle** ' ye tıklayın.
+2. Sekme sayfasının alt kısmındaki **uygulama olaylarını görüntüle**' ye tıklayın.
 
 3. Aşağıdaki içeri aktarmaları *ApplicationEvents. vb* dosyasının başına ekleyin.
 

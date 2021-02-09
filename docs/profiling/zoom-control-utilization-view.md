@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 8aeff804-0183-4588-8218-52e107a5382e
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f28a0f8bd60ad169715ba72b6fab957e7699a5b
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: b3e2bda0a6ed746c5e518b046b2165f0aff2e38b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98723029"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99915913"
 ---
 # <a name="zoom-control-utilization-view"></a>Yakınlaştırma denetimi (kullanım görünümü)
 Yakınlaştırma denetimi, belirli bir ilgilendiğiniz alanlara odaklanmak için CPU kullanımı grafiğini yakınlaştırmanıza yardımcı olur. Bu denetim, görünümün merkezinde yakınlaştırılır. Bu nedenle, yakınlaştırmadan önce ilgilendiğiniz alanı ortamalısınız.

@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: 8ce4dd50-ca29-4c72-98d6-582693f7d501
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 7ff6b0449c877b5ae925ba2088917d7bacab4c34
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e68ec76737308d9bc9478f4106420626389f5eeb
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85330668"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99917726"
 ---
 # <a name="marker_seriesis_enabled-method"></a>marker_series:: is_enabled yöntemi
 Sağlayıcının herhangi bir oturumun etkinleştirilip etkinleştirilmediğini belirler.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
 bool is_enabled();

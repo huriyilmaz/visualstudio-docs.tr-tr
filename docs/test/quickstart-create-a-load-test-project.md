@@ -8,13 +8,13 @@ helpviewer_keywords:
 - load testing, quickstart
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
-ms.openlocfilehash: 3833542dc00f347014dabf96f836fbd4fa810862
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+manager: jmartens
+ms.openlocfilehash: d440b4d9fe175cb685b7e7ed3c5eb5911e541fde
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96329139"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99917603"
 ---
 # <a name="quickstart-create-a-load-test-project"></a>Hızlı Başlangıç: Yük testi projesi oluşturma
 
@@ -76,7 +76,7 @@ Bu bölümde, bir C# yük testi projesi oluşturacağız. Dilerseniz, bir Visual
 
 ## <a name="add-a-load-test-to-the-project"></a>Projeye yük testi ekleme
 
-1. **Çözüm Gezgini** içindeki proje düğümünün sağ tıklama menüsünde veya bağlam menüsünde **Add**  >  **Yük testi** Ekle ' yi seçin.
+1. **Çözüm Gezgini** içindeki proje düğümünün sağ tıklama menüsünde veya bağlam menüsünde   >  **Yük testi** Ekle ' yi seçin.
 
    **Yeni Yük Testi Sihirbazı** açılır.
 

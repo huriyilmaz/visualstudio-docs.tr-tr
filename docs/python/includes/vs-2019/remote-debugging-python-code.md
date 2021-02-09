@@ -5,17 +5,17 @@ ms.date: 05/12/2020
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 5307684bde56955f2a4ed77d2ac66b6b30cb1c1d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dcc5d9746a556af54ea206528fcb9a402e25d700
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85541093"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99916599"
 ---
 Visual Studio, Windows bilgisayarında Python uygulamalarını yerel olarak ve uzaktan başlatabilir ve hata ayıklayabilir (bkz. [Uzaktan hata ayıklama](../../../debugger/remote-debugging.md)). Ayrıca, hata ayıklayıcı [GPY kitaplığını](https://pypi.org/project/debugpy/)kullanarak, Cpıthon dışında farklı bir işletim sisteminde, cihazda veya Python uygulamasında uzaktan hata ayıklayabilirsiniz.
 
@@ -69,7 +69,7 @@ Bir Azure VM için bir güvenlik duvarı kuralı oluşturma hakkında ayrıntıl
    >[!NOTE]
    >Sorun gidermek için ihtiyaç duymanız durumunda yüklü olan, hata ayıklama GPY sürümünü kaydetmek iyi bir fikirdir; hata ayıklama [GPY listesi](https://pypi.org/project/debugpy/) de kullanılabilir sürümleri gösterir.
 
-1. Aşağıdaki kodu, diğer koddan önce *Guessing-Game.py*içindeki olası en erken noktaya ekleyerek uzaktan hata ayıklamayı etkinleştirin. (Katı bir gereksinim olmasa da, işlev çağrılmadan önce oluşturulan herhangi bir arka plan iş parçacığında hata ayıklaması olanaksızdır `listen` .)
+1. Aşağıdaki kodu, diğer koddan önce *Guessing-Game.py* içindeki olası en erken noktaya ekleyerek uzaktan hata ayıklamayı etkinleştirin. (Katı bir gereksinim olmasa da, işlev çağrılmadan önce oluşturulan herhangi bir arka plan iş parçacığında hata ayıklaması olanaksızdır `listen` .)
 
    ```python
    import debugpy
@@ -89,7 +89,7 @@ Bu adımlarda, uzak işlemi durdurmak için basit bir kesme noktası ayarlayaca�
 
 1. Seçim Yerel bilgisayarınızda hata ayıklama GPY için IntelliSense 'i yüklemek üzere, hata ayıklama GPY paketini Python ortamınıza ekleyin.
 
-1. İşleme **Ekle hata ayıkla**öğesini seçin  >  **Attach to Process**.
+1. İşleme **Ekle hata ayıkla** öğesini seçin  >  .
 
 1. Görüntülenen **Işleme İliştir** Iletişim kutusunda **bağlantı türünü** **Python Remote (hata ayıklama GPY)** olarak ayarlayın.
 
@@ -101,7 +101,7 @@ Bu adımlarda, uzak işlemi durdurmak için basit bir kesme noktası ayarlayaca�
 
     Bu listeyi doldurduktan sonra uzak bilgisayarda başka bir program başlatmanız durumunda **Yenile** düğmesini seçin.
 
-1. Hata ayıklama ve ardından **Ekle**işlemini seçin ya da işleme çift tıklayın.
+1. Hata ayıklama ve ardından **Ekle** işlemini seçin ya da işleme çift tıklayın.
 
 1. Ardından, komut dosyası uzak bilgisayarda çalışmaya devam ederken, tüm olağan [hata ayıklama](../../debugging-python-in-visual-studio.md) yeteneklerini sunarak, Visual Studio hata ayıklama moduna geçer. Örneğin, satırda bir kesme noktası ayarlayın `if guess < number:` , ardından uzak bilgisayara geçin ve başka bir tahmin girin. Bunu yaptıktan sonra, yerel bilgisayarınızdaki Visual Studio bu kesme noktasında durduktan sonra yerel değişkenleri gösterir ve bu şekilde devam eder:
 

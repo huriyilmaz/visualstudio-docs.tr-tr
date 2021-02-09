@@ -5,17 +5,17 @@ ms.date: 12/06/2018
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: a1f8c145d7c9c072adcc902cae9f2b6ae36937cd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a58af8098a49992e81380c6567755c31709d1dc3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88246143"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99916590"
 ---
 Visual Studio, Windows bilgisayarında Python uygulamalarını yerel olarak ve uzaktan başlatabilir ve hata ayıklayabilir (bkz. [Uzaktan hata ayıklama](../../../debugger/remote-debugging.md)). Ayrıca, [ptvsd kitaplığını](https://pypi.python.org/pypi/ptvsd)kullanarak, Cpıthon dışında farklı bir işletim sisteminde, cihazda veya Python uygulamasında uzaktan hata ayıklaması yapabilir.
 
@@ -65,7 +65,7 @@ Bir Azure VM için bir güvenlik duvarı kuralı oluşturma hakkında ayrıntıl
    >[!NOTE]
    >Sorun giderme için ihtiyaç duymanız durumunda yüklü olan ptvsd sürümünü kaydetmek iyi bir fikirdir; [ptvsd listesi](https://pypi.python.org/pypi/ptvsd) de kullanılabilir sürümleri gösterir.
 
-1. Aşağıdaki kodu, diğer koddan önce *Guessing-Game.py*içindeki olası en erken noktaya ekleyerek uzaktan hata ayıklamayı etkinleştirin. (Katı bir gereksinim olmasa da, işlev çağrılmadan önce oluşturulan herhangi bir arka plan iş parçacığında hata ayıklaması olanaksızdır `enable_attach` .)
+1. Aşağıdaki kodu, diğer koddan önce *Guessing-Game.py* içindeki olası en erken noktaya ekleyerek uzaktan hata ayıklamayı etkinleştirin. (Katı bir gereksinim olmasa da, işlev çağrılmadan önce oluşturulan herhangi bir arka plan iş parçacığında hata ayıklaması olanaksızdır `enable_attach` .)
 
    ```python
    import ptvsd
@@ -85,11 +85,11 @@ Bu adımlarda, uzak işlemi durdurmak için basit bir kesme noktası ayarlayaca�
 
 1. Seçim Yerel bilgisayarınızda ptvsd için IntelliSense 'i sağlamak için, ptvsd paketini Python ortamınıza ekleyin.
 
-1. İşleme **Ekle hata ayıkla**öğesini seçin  >  **Attach to Process**.
+1. İşleme **Ekle hata ayıkla** öğesini seçin  >  .
 
-1. Görüntülenen **Işleme İliştir** Iletişim kutusunda **bağlantı türünü** **Python Remote (ptvsd)** olarak ayarlayın. (Visual Studio 'nun eski sürümlerinde bu komutlar **Aktarım** ve **Python uzaktan hata ayıklama**olarak adlandırılır.)
+1. Görüntülenen **Işleme İliştir** Iletişim kutusunda **bağlantı türünü** **Python Remote (ptvsd)** olarak ayarlayın. (Visual Studio 'nun eski sürümlerinde bu komutlar **Aktarım** ve **Python uzaktan hata ayıklama** olarak adlandırılır.)
 
-1. **Bağlantı hedefi** alanında (eski sürümlerde**niteleyici** ), `tcp://<ip_address>:5678` `<ip_address>` uzak bilgisayarın konumunu (bir açık adres veya myvm.cloudapp.NET gibi bir ad olabilir) ve `:5678` Uzaktan hata ayıklama bağlantı noktası numarası olduğunu girin.
+1. **Bağlantı hedefi** alanında (eski sürümlerde **niteleyici** ), `tcp://<ip_address>:5678` `<ip_address>` uzak bilgisayarın konumunu (bir açık adres veya myvm.cloudapp.NET gibi bir ad olabilir) ve `:5678` Uzaktan hata ayıklama bağlantı noktası numarası olduğunu girin.
 
 1. Bu bilgisayardaki kullanılabilir ptvsd işlemlerinin listesini doldurmak için **ENTER** tuşuna basın:
 
@@ -97,7 +97,7 @@ Bu adımlarda, uzak işlemi durdurmak için basit bir kesme noktası ayarlayaca�
 
     Bu listeyi doldurduktan sonra uzak bilgisayarda başka bir program başlatmanız durumunda **Yenile** düğmesini seçin.
 
-1. Hata ayıklama ve ardından **Ekle**işlemini seçin ya da işleme çift tıklayın.
+1. Hata ayıklama ve ardından **Ekle** işlemini seçin ya da işleme çift tıklayın.
 
 1. Ardından, komut dosyası uzak bilgisayarda çalışmaya devam ederken, tüm olağan [hata ayıklama](../../debugging-python-in-visual-studio.md) yeteneklerini sunarak, Visual Studio hata ayıklama moduna geçer. Örneğin, satırda bir kesme noktası ayarlayın `if guess < number:` , ardından uzak bilgisayara geçin ve başka bir tahmin girin. Bunu yaptıktan sonra, yerel bilgisayarınızdaki Visual Studio bu kesme noktasında durduktan sonra yerel değişkenleri gösterir ve bu şekilde devam eder:
 
@@ -107,7 +107,7 @@ Bu adımlarda, uzak işlemi durdurmak için basit bir kesme noktası ayarlayaca�
 
 ### <a name="connection-troubleshooting"></a>Bağlantı sorunlarını giderme
 
-1. **Bağlantı türü** için **Python Remote (ptvsd)** öğesini seçtiğinizden emin olun (eski sürümlere sahip **taşıma** için**Python uzaktan hata ayıklama** ).
+1. **Bağlantı türü** için **Python Remote (ptvsd)** öğesini seçtiğinizden emin olun (eski sürümlere sahip **taşıma** için **Python uzaktan hata ayıklama** ).
 1. **Bağlantı hedefinde** (veya **niteleyicisi**) gizli anahtar, uzak koddaki gizli anahtar ile tam olarak eşleştiğinden emin olun.
 1. **Bağlantı hedefinde** (veya **niteleyicisi**) IP adresinin uzak bilgisayarın ile eşleşip eşleşmediğini denetleyin.
 1. Uzak bilgisayarda uzaktan hata ayıklama bağlantı noktasını açtığınızdan ve bağlantı hedefinde bağlantı noktası sonekini (gibi) eklemiş olduğunuzdan emin olun `:5678` .

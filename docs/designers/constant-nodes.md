@@ -7,15 +7,15 @@ ms.topic: reference
 ms.assetid: 2c798a50-a2d7-459b-9879-ad4ad8290c9b
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: eb7297a5486764127efda72ea37c5c97acc05245
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: 79fd16f42629bdf242d70432065d077efd5883eb
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93134223"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99917214"
 ---
 # <a name="constant-nodes"></a>Sabit düğümler
 
@@ -29,7 +29,7 @@ Her piksel gölgelendirici örneği yalnızca bir sabit değer kümesi alırsa v
 
 ## <a name="constant-node-reference"></a>Sabit düğüm başvurusu
 
-|Node|Ayrıntılar|Özellikler|
+|Düğüm|Ayrıntılar|Özellikler|
 |----------|-------------|----------------|
 |**Kamera vektörü**|Dünya alanındaki geçerli pikselden kameraya genişleyen vektör.<br /><br /> Bunu, dünya alanındaki yansımaları hesaplamak için kullanabilirsiniz.<br /><br /> **Çıktı**<br /><br /> `Output`: `float3`<br /> Geçerli pikselden kameraya olan vektör.|Yok|
 |**Renk sabiti**|Sabit bir renk değeri.<br /><br /> **Çıktı**<br /><br /> `Output`: `float4`<br /> Renk değeri.|**Çıktı**<br /> Renk değeri.|

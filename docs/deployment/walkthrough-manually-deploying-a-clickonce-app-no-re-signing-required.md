@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: c21822fb-d4ee-42e4-b72d-41ee9786efe5
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 29bdd080e87e8fad44c7b8943d0d017749b8c30b
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: c0e8895f45524526fc8007ff909a9c541e9899b3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94350315"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99917257"
 ---
 # <a name="walkthrough-manually-deploy-a-clickonce-application-that-does-not-require-re-signing-and-that-preserves-branding-information"></a>İzlenecek yol: yeniden imzalama gerektirmeyen ve marka bilgilerini koruyan bir ClickOnce uygulamasını El Ile dağıtın
 Bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama oluşturup bu uygulamayı yayımlamak ve dağıtmak üzere bir müşteriye verdiğinizde, müşterinin genellikle dağıtım bildirimini güncelleştirmesi ve yeniden imzalaması gerekiyordu. Çoğu durumda hala tercih edilen yöntem olsa da, 3,5 .NET Framework, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] Yeni bir dağıtım bildirimini yeniden oluşturmak zorunda kalmadan müşteriler tarafından dağıtılabilecek dağıtımlar oluşturmanıza olanak sağlar. Daha fazla bilgi için bkz. [sınama ve üretim sunucuları için teslim etmeden ClickOnce uygulamaları dağıtma](../deployment/deploying-clickonce-applications-for-testing-and-production-without-resigning.md).
@@ -50,7 +50,7 @@ Bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama o
 
 1. Bir Visual Studio komut istemi veya bir [!INCLUDE[winsdkshort](../debugger/debug-interface-access/includes/winsdkshort_md.md)] komut istemi açın ve dosyalarınızı depoladığınız dizine geçin [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] .
 
-2. Dağıtımınızın geçerli sürümünden sonra adlı bir dizin oluşturun. Uygulamayı ilk kez dağıtıyorsanız, büyük olasılıkla **1.0.0.0** ' ı seçmeniz gerekir.
+2. Dağıtımınızın geçerli sürümünden sonra adlı bir dizin oluşturun. Uygulamayı ilk kez dağıtıyorsanız, büyük olasılıkla **1.0.0.0**' ı seçmeniz gerekir.
 
    > [!NOTE]
    > Dağıtımınızın sürümü uygulama dosyalarınızın sürümünden farklı olabilir.
@@ -100,7 +100,7 @@ Bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama o
 
 2. **Bin** adlı bir alt dizin oluşturun ve yürütülebilir dosyalar, derlemeler, kaynaklar ve veri dosyaları dahil olmak üzere buradaki tüm uygulama dosyalarınızı kopyalayın.
 
-3. Dağıtımınızın geçerli sürümünden sonra adlı bir alt dizin oluşturun. Uygulamayı ilk kez dağıtıyorsanız, büyük olasılıkla **1.0.0.0** ' ı seçmeniz gerekir.
+3. Dağıtımınızın geçerli sürümünden sonra adlı bir alt dizin oluşturun. Uygulamayı ilk kez dağıtıyorsanız, büyük olasılıkla **1.0.0.0**' ı seçmeniz gerekir.
 
    > [!NOTE]
    > Dağıtımınızın sürümü uygulama dosyalarınızın sürümünden farklı olabilir.
@@ -113,11 +113,11 @@ Bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama o
    MageUI.exe
    ```
 
-6. Menüden **Dosya** , **Yeni** , **uygulama bildirimi** ' ni seçerek yeni bir uygulama bildirimi oluşturun.
+6. Menüden **Dosya**, **Yeni**, **uygulama bildirimi** ' ni seçerek yeni bir uygulama bildirimi oluşturun.
 
 7. Varsayılan **ad** sekmesinde, bu dağıtımın adını ve sürüm numarasını girin. Ayrıca, **Yayımcı** için, dağıtıldığında başlangıç menüsündeki uygulamanın kısayol bağlantısı için klasör adı olarak kullanılacak bir değer sağlayın.
 
-8. **Uygulama seçenekleri** sekmesini seçin ve **güven bilgileri Için uygulama bildirimini kullan** ' a tıklayın. Bu, bu uygulama için üçüncü taraf markalamayı etkinleştirir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] .
+8. **Uygulama seçenekleri** sekmesini seçin ve **güven bilgileri Için uygulama bildirimini kullan**' a tıklayın. Bu, bu uygulama için üçüncü taraf markalamayı etkinleştirir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] .
 
 9. **Dosyalar** sekmesini seçin ve **uygulama dizini** metin kutusunun yanındaki **Git düğmesine tıklayın** .
 
@@ -127,15 +127,15 @@ Bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama o
 
 12. **Gerekli izinler** sekmesini seçin ve uygulamanız için gereken güven düzeyini seçin. Varsayılan değer, çoğu uygulama için uygun olacak şekilde **tam güvendir**.
 
-13. **Dosya** ' yı seçin, menüden **kaydedin** ve uygulama bildirimini kaydedin. Uygulamayı kaydettiğinizde uygulama bildirimini imzalamanız istenir.
+13. **Dosya**' yı seçin, menüden **kaydedin** ve uygulama bildirimini kaydedin. Uygulamayı kaydettiğinizde uygulama bildirimini imzalamanız istenir.
 
-14. Dosya sisteminizde dosya olarak depolanan bir sertifikanız varsa, **sertifika dosyası olarak imzala** seçeneğini kullanın ve dosya sistemindeki sertifikayı, üç nokta ( **...** ) düğmesini kullanarak seçin.
+14. Dosya sisteminizde dosya olarak depolanan bir sertifikanız varsa, **sertifika dosyası olarak imzala** seçeneğini kullanın ve dosya sistemindeki sertifikayı, üç nokta (**...**) düğmesini kullanarak seçin.
 
      -veya-
 
      Sertifikanız, bilgisayarınızdan erişilebilen bir sertifika deposunda tutuluyorsa, **depolanan sertifikayla imzala seçeneğini** belirleyin ve belirtilen listeden sertifikayı seçin.
 
-15. Dağıtım bildiriminizi oluşturmak için menüden **Dosya** , **Yeni** , **dağıtım bildirimi** ' ni seçin ve ardından **ad** sekmesine bir ad ve sürüm numarası sağlayın (Bu örnekte **1.0.0.0** ).
+15. Dağıtım bildiriminizi oluşturmak için menüden **Dosya**, **Yeni**, **dağıtım bildirimi** ' ni seçin ve ardından **ad** sekmesine bir ad ve sürüm numarası sağlayın (Bu örnekte **1.0.0.0** ).
 
 16. **Güncelleştirme** sekmesine geçin ve bu uygulamanın ne sıklıkta güncelleştirilmesini istediğinizi belirtin. Uygulamanız [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] güncelleştirmeleri denetlemek için DAĞıTıM API 'sini kullanıyorsa, **Bu uygulamanın güncelleştirmeleri denetlemesi gereken** onay kutusunun işaretini kaldırın.
 
@@ -152,7 +152,7 @@ Bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama o
     pvk2pfx.exe -pvk MyCert.pvk -spc MyCert.cer -pfx MyCert.pfx
     ```
 
-21. Sertifika üretilerek, istemci artık *MageUI.exe* ' de dağıtım bildirimini açıp ardından kaydederek dağıtım bildirimini imzalar. İmzalama iletişim kutusu göründüğünde, müşteri, **sertifika dosyası olarak imzala** seçeneğini belirler ve DISKTE kaydedildiği pfx dosyasını seçer.
+21. Sertifika üretilerek, istemci artık *MageUI.exe*' de dağıtım bildirimini açıp ardından kaydederek dağıtım bildirimini imzalar. İmzalama iletişim kutusu göründüğünde, müşteri, **sertifika dosyası olarak imzala** seçeneğini belirler ve DISKTE kaydedildiği pfx dosyasını seçer.
 
 22. Müşteri, uygulamayı kullanıcılarına dağıtır.
 

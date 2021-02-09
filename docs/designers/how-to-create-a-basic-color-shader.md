@@ -7,15 +7,15 @@ ms.topic: how-to
 ms.assetid: c301328a-079a-49e8-b688-4749c01657c0
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d966a8fdc565eae5254d21dba4ab9dfaa440de94
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: 0b3c90496050754cc79c8bd774c0faa246e21512
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93134112"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99917048"
 ---
 # <a name="how-to-create-a-basic-color-shader"></a>Nasıl yapılır: temel renk gölgelendiricisi oluşturma
 
@@ -29,7 +29,7 @@ Başlamadan önce, **Özellikler** penceresinin ve **araç kutusunun** görünt�
 
 1. Birlikte çalışmak için bir DGSL gölgelendiricisi oluşturun. Projenize bir DGSL gölgelendiricisi ekleme hakkında daha fazla bilgi için bkz. [gölgelendirici tasarımcısında](../designers/shader-designer.md)Başlarken bölümü.
 
-2. **Nokta rengi** düğümünü silin. **Nokta rengi** düğümünü seçmek için **Seç** aracını kullanın ve ardından menü çubuğunda Sil **Düzenle** ' yi seçin  >  **Delete** .
+2. **Nokta rengi** düğümünü silin. **Nokta rengi** düğümünü seçmek için **Seç** aracını kullanın ve ardından menü çubuğunda Sil **Düzenle**' yi seçin  >  .
 
 3. Grafiğe **renkli sabit** bir düğüm ekleyin. **Araç kutusunda** **sabitler** altında **renk sabiti** ' ni seçin ve tasarım yüzeyine taşıyın.
 
