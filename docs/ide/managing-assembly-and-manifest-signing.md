@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 6c1ef36b-25f7-4ad0-b29a-51801b7a5420
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: bdd2570f94b0f5577c7c09a696906338245f77a4
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 709a5a64164ed6c80c29a8e554d2b07050e18339
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94351394"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99886528"
 ---
 # <a name="manage-assembly-and-manifest-signing"></a>Derleme ve bildirim imzalamayı yönetme
 
@@ -40,13 +40,13 @@ C++ projelerinde derlemeleri imzalama hakkında daha fazla bilgi için bkz. [Str
 
 .NET derlemelerini ve uygulama bildirimlerini imzalayabilirsiniz:
 
-- Yürütülebilir dosyalar ( *. exe* )
+- Yürütülebilir dosyalar (*. exe*)
 
-- Uygulama bildirimleri ( *. exe. manifest* )
+- Uygulama bildirimleri (*. exe. manifest*)
 
-- Dağıtım bildirimleri ( *. Application* )
+- Dağıtım bildirimleri (*. Application*)
 
-- Paylaşılan bileşen derlemeleri ( *. dll* )
+- Paylaşılan bileşen derlemeleri (*. dll*)
 
 Aşağıdaki varlık türlerini imzalayın:
 
@@ -60,7 +60,7 @@ Genel olarak, yürütülebilir dosyaları imzalayamamalıdır. Kesin adlandırı
 
 ## <a name="how-to-sign-an-assembly-in-visual-studio"></a>Visual Studio 'da bir derlemeyi imzalama
 
-Proje Özellikleri penceresinin **imzalama** sekmesini kullanarak bir uygulamayı veya bileşeni imzalayabilirseniz ( **Çözüm Gezgini** içinde proje düğümüne sağ tıklayıp **Özellikler** ' i seçin). **İmzalama** sekmesini seçin ve ardından **derlemeyi imzala** onay kutusunu seçin.
+Proje Özellikleri penceresinin **imzalama** sekmesini kullanarak bir uygulamayı veya bileşeni imzalayabilirseniz ( **Çözüm Gezgini** içinde proje düğümüne sağ tıklayıp **Özellikler**' i seçin). **İmzalama** sekmesini seçin ve ardından **derlemeyi imzala** onay kutusunu seçin.
 
 Bir anahtar dosyası belirtin. Yeni bir anahtar dosyası oluşturmayı seçerseniz, yeni anahtar dosyaları her zaman *. pfx* biçiminde oluşturulur. Yeni dosya için bir ad ve parola gerekir.
 

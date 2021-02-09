@@ -11,15 +11,15 @@ f1_keywords:
 ms.assetid: f48f62d9-16ff-4a2e-8c01-5cbe99513788
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b7e746d37edaca87abfca42f315a65a470369e7e
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: 095828e711f860662432edd767b19493b73c56c0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97727586"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99887581"
 ---
 # <a name="graphics-object-table"></a>Grafik Nesnesi Tablosu
 Visual Studio grafik analizinde grafik nesne tablosu, oyununuzun veya uygulamanızın çerçevesini destekleyen Direct3D nesnelerini anlamanıza yardımcı olur.
@@ -40,7 +40,7 @@ Visual Studio grafik analizinde grafik nesne tablosu, oyununuzun veya uygulaman�
 
 |Sütun|Açıklama|
 |------------|-----------------|
-|**Tanımlayıcısını**|Nesne KIMLIĞI.|
+|**Tanımlayıcı**|Nesne KIMLIĞI.|
 |**Ad**|Nesnesinde Direct3D işlevi kullanılarak ayarlanan uygulamaya özgü bilgiler, `SetPrivateData` genellikle bir nesne hakkında ek tanımlayıcı bilgi sağlamak için.|
 |**Tür**|Nesne türü.|
 |**Etkin**|Yakalanan çerçeve sırasında D3D10Device veya D3D11DeviceContext üzerinde ayarlanan bir nesne için "*" görüntüler.<br /><br /> Bu, gri metin olarak görüntülenen nesnelere karşılık gelir, ancak nesne tablosunun sıralanmasını sağlamak için kullanabileceğiniz bir sütun girişi sağlar.|
@@ -80,7 +80,7 @@ Visual Studio grafik analizinde grafik nesne tablosu, oyununuzun veya uygulaman�
 
  Ayrıca, arabellekteki her bir öğenin sapmasını gizlemek veya görüntülemek için de kaydırmayı **göster** onay kutusunu işaretleyebilirsiniz.
 
-|Tür|Açıklama|
+|Tür|Description|
 |----------|-----------------|
 |**float**|32 bitlik kayan nokta değeri.|
 |**float2**|2 32 bitlik kayan nokta değerlerini içeren bir vektör.|

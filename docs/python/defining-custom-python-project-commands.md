@@ -5,17 +5,17 @@ ms.date: 11/12/2018
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 6e9e7fe418528bb888672b1b73d421d811b9e69e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 43270ee1ec956f45b76d23a6b649ad2d870638c5
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86386991"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99887932"
 ---
 # <a name="define-custom-commands-for-python-projects"></a>Python projeleri için özel komutlar tanımlama
 
@@ -36,19 +36,19 @@ Her özel komut bir Python dosyası, bir Python modülü, satır içi Python kod
 > [!Tip]
 > Bir metin düzenleyicisinde proje dosyasında her değişiklik yaptığınızda, bu değişiklikleri uygulamak için projeyi Visual Studio 'ya yeniden yüklemeniz gerekir. Örneğin, projenin bağlam menüsünde görünmesi için bu komutlar için özel komut tanımları ekledikten sonra bir projeyi yeniden yüklemeniz gerekir.
 >
-> Bildiğiniz gibi, Visual Studio proje dosyasını doğrudan düzenlemek için bir yol sağlar. Önce proje dosyasına sağ tıklayıp **Projeyi Kaldır**' ı seçtikten sonra yeniden sağ tıklayıp **Düzenle \<project-name> ** ' yi seçerek projeyi Visual Studio düzenleyicisinde açın. Daha sonra düzenlemeler yapıp kaydeder, daha sonra projeye sağ tıklayıp projeyi **yeniden yükle**' yi seçtiğinizde proje dosyasını düzenleyicide kapatmayı onaylamanızı de istenir.
+> Bildiğiniz gibi, Visual Studio proje dosyasını doğrudan düzenlemek için bir yol sağlar. Önce proje dosyasına sağ tıklayıp **Projeyi Kaldır**' ı seçtikten sonra yeniden sağ tıklayıp **Düzenle \<project-name>** ' yi seçerek projeyi Visual Studio düzenleyicisinde açın. Daha sonra düzenlemeler yapıp kaydeder, daha sonra projeye sağ tıklayıp projeyi **yeniden yükle**' yi seçtiğinizde proje dosyasını düzenleyicide kapatmayı onaylamanızı de istenir.
 >
 > Ancak, özel bir komut geliştirilirken, tüm bu tıklama sıkıcı hale gelebilir. Daha verimli bir iş akışı için, projeyi Visual Studio 'Ya yükleyin ve ayrıca *. pyproj* dosyasını ayrı bir düzenleyicide (örneğin, Visual Studio 'nun başka bir örneği, Visual Studio Code, Not defteri, vb.) birlikte açın. Düzenleyicide yaptığınız değişiklikleri kaydettiğinizde ve Visual Studio 'ya geçtiğinizde, Visual Studio değişiklikleri algılar ve projeyi yeniden yükleyip yükleyemeyeceğini sorar (**Proje \<name> ortamın dışında değiştirilmiş demektir.**). **Yeniden yükle** ' yi seçtiğinizde değişiklikleriniz hemen tek bir adımda uygulanır.
 
 ## <a name="walkthrough-add-a-command-to-a-project-file"></a>İzlenecek yol: proje dosyasına bir komut ekleme
 
-Bu bölümde, özel komutlar hakkında bilgi edinmek için, bir projenin başlangıç dosyasını doğrudan *python.exe*kullanarak çalıştıran basit bir örnek gösterilmektedir. (Böyle bir komut, **hata ayıklama**  >  kullanma ile etkin şekilde aynıdır **Hata ayıklama olmadan Başlat**.)
+Bu bölümde, özel komutlar hakkında bilgi edinmek için, bir projenin başlangıç dosyasını doğrudan *python.exe* kullanarak çalıştıran basit bir örnek gösterilmektedir. (Böyle bir komut, **hata ayıklama**  >  kullanma ile etkin şekilde aynıdır **Hata ayıklama olmadan Başlat**.)
 
 1. **Python uygulama** şablonunu kullanarak "Python-customcommands" adlı yeni bir proje oluşturun. (Bkz. hızlı başlangıç: işlemden daha önce alışkın değilseniz yönergeler için [bir şablondan Python projesi oluşturma](quickstart-02-python-in-visual-studio-project-from-template.md) .)
 
-1. *Python_CustomCommands. Kopyala*içinde kodu ekleyin `print("Hello custom commands")` .
+1. *Python_CustomCommands. Kopyala* içinde kodu ekleyin `print("Hello custom commands")` .
 
-1. **Çözüm Gezgini**' de projeye sağ tıklayın, **Python**' ı seçin ve alt menüde görünen tek komutun **Pylint ' i çalıştırdığına**dikkat edin. Özel komutlarınız aynı alt menüde görünür.
+1. **Çözüm Gezgini**' de projeye sağ tıklayın, **Python**' ı seçin ve alt menüde görünen tek komutun **Pylint ' i çalıştırdığına** dikkat edin. Özel komutlarınız aynı alt menüde görünür.
 
 1. Giriş bölümünde önerildiği gibi, farklı bir metin düzenleyicisinde *Python-CustomCommands. pyproj* öğesini açın. Ardından, dosyanın sonuna aşağıdaki satırları, kapanış içinde hemen ekleyin `</Project>` ve dosyayı kaydedin.
 
@@ -92,7 +92,7 @@ Bu bölümde, özel komutlar hakkında bilgi edinmek için, bir projenin başlan
 
     ![Python bağlam alt menüsünde görünen özel komut](media/custom-commands-walkthrough-menu-item.png)
 
-1. **Başlangıç dosyasını çalıştır** komutunu seçin ve ardından **Merhaba özel komutları** ve ardından **devam etmek için herhangi bir tuşa basarak**bir komut penceresi görürsünüz.  Pencereyi kapatmak için bir tuşa basın.
+1. **Başlangıç dosyasını çalıştır** komutunu seçin ve ardından **Merhaba özel komutları** ve ardından **devam etmek için herhangi bir tuşa basarak** bir komut penceresi görürsünüz.  Pencereyi kapatmak için bir tuşa basın.
 
     ![Konsol penceresinde özel komut çıkışı](media/custom-commands-walkthrough-console.png)
 
@@ -145,7 +145,7 @@ Tüm öznitelik değerleri büyük/küçük harfe duyarlıdır.
 | --- | --- | --- |
 | Öğesi | Yes | Target özniteliğinin neleri içerdiğini ve bağımsız değişkenler özniteliğiyle birlikte nasıl kullanıldığını belirtir:<ul><li>**yürütülebilir**: hedef içinde adlı yürütülebilir dosyayı, doğrudan komut satırına girildiği gibi bağımsız değişkenlerde değeri ekleyerek çalıştırın. Değer yalnızca bağımsız değişken içermeyen bir program adı içermelidir.</li><li>**betik**: *python.exe* , hedefte dosya adı Ile ve ardından bağımsız değişkenlerdeki değerle çalıştırın.</li><li>**Modül**: `python -m` sonra, hedefteki modül adı ve ardından bağımsız değişkenlerde değeri ile çalıştırın.</li><li>**kod**: hedefte bulunan satır içi kodu çalıştırın. Bağımsız değişkenler değeri yok sayılır.</li><li>**PIP**: `pip` target içindeki komutla, sonra bağımsız değişkenler Ile çalıştırın; executeın "output" olarak ayarlanır, ancak, PIP komutu kabul eder `install` ve paket adı olarak hedefi kullanır.</li></ul> |
 | Hedef | Yes | TargetType öğesine bağlı olarak kullanılacak dosya adı, modül adı, kod veya PIP komutu. |
-| Arguments | İsteğe Bağlı | Hedefe verilecek bağımsız değişkenlerin (varsa) bir dizesini belirtir. TargetType olduğunda `script` , bağımsız değişkenlerin *python.exe*değil Python programına verildiğini unutmayın. TargetType için yok sayıldı `code` . |
+| Bağımsız değişkenler | İsteğe Bağlı | Hedefe verilecek bağımsız değişkenlerin (varsa) bir dizesini belirtir. TargetType olduğunda `script` , bağımsız değişkenlerin *python.exe* değil Python programına verildiğini unutmayın. TargetType için yok sayıldı `code` . |
 | Executeın | Yes | Komutun çalıştırılacağı ortamı belirtir:<ul><li>**konsol**: (varsayılan) hedefi ve bağımsız değişkenleri doğrudan komut satırına girilmiş gibi çalıştırır. Hedef çalışırken bir komut penceresi görünür, sonra otomatik olarak kapatılır.</li><li>**consolepause**: konsol ile aynı, ancak pencereyi kapatmadan önce bir KeyPress için bekler.</li><li>**Çıkış**: hedefi çalıştırır ve sonuçları Visual Studio 'daki **Çıkış** penceresinde görüntüler. TargetType, "PIP" ise, Visual Studio paket adı olarak hedefi kullanır ve bağımsız değişkenleri ekler.</li><li>**REPL**: [Python etkileşimli](python-interactive-repl-in-visual-studio.md) penceresinde hedefi çalıştırır; Pencerenin başlığı için isteğe bağlı görünen ad kullanılır.</li><li>**hiçbiri**: konsoluyla aynı şekilde davranır.</li></ul>|
 | Başlangıç | İsteğe Bağlı | Komutun çalıştırılacağı klasör. |
 | ErrorRegex<br>WarningRegEx | İsteğe Bağlı | Yalnızca ExecuteIn olduğunda kullanılır `output` . Her iki değer de, Visual Studio 'Nun **hata listesi** penceresinde hata ve uyarıları göstermek için komut çıkışını ayrıştırmak için bir normal ifade belirtir. Belirtilmemişse, komut **hata listesi** penceresini etkilemez. Visual Studio 'Nun beklediği hakkında daha fazla bilgi için bkz. [adlandırılmış yakalama grupları](#named-capture-groups-for-regular-expressions). |

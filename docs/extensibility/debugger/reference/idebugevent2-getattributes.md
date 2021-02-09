@@ -9,32 +9,32 @@ helpviewer_keywords:
 ms.assetid: 2ac5b5fb-da17-43f7-811a-313f677e60d7
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ffc3fc1b7988401611190fdf09e8041bf0dc5b1a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 64f4b404938143e5b1531798b1cded7ac6218de6
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80729949"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99888283"
 ---
 # <a name="idebugevent2getattributes"></a>IDebugEvent2::GetAttributes
 Bu hata ayıklama olayının özniteliklerini alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
-HRESULT GetAttribute( 
+HRESULT GetAttribute( 
    DWORD* pdwAttrib
 );
 ```
 
 ```csharp
-int GetAttribute( 
+int GetAttribute( 
    out uint pdwAttrib
 );
 ```

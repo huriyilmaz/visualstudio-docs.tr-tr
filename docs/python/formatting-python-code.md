@@ -5,24 +5,24 @@ ms.date: 03/13/2019
 ms.topic: conceptual
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 6e95d05c3fbc0dd46d235c7480bd4a9caa48947e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7b03e99a70edd587c9dfe2a43d326a64d14b9193
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62957547"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99887893"
 ---
 # <a name="format-python-code"></a>Python kodunu biçimlendirme
 
 Visual Studio, önceden yapılandırılmış biçimlendirme seçenekleriyle eşleşecek şekilde kodu hızlı bir şekilde yeniden biçimlendirmenizi sağlar.
 
-- Bir seçimi biçimlendirmek için: **Edit**  >  **Gelişmiş**  >  **Biçim seçimini** Düzenle ' yi seçin veya **CTRL** + **E**  >  **F**tuşlarına basın.
-- Tüm dosyayı biçimlendirmek için: **Edit**  >  **Gelişmiş**  >  **Biçim belgesini** Düzenle ' yi seçin veya **CTRL** + **E**' ye basın  >  **D**.
+- Bir seçimi biçimlendirmek için:   >  **Gelişmiş**  >  **Biçim seçimini** Düzenle ' yi seçin veya **CTRL** + **E**  >  **F** tuşlarına basın.
+- Tüm dosyayı biçimlendirmek için:   >  **Gelişmiş**  >  **Biçim belgesini** Düzenle ' yi seçin veya **CTRL** + **E**' ye basın  >  .
 
 Seçenekler, **Araçlar**  >  **Seçenekler**  >  **metin Düzenleyicisi**  >  **Python**  >  **biçimlendirme** ve iç içe geçmiş sekmeleri aracılığıyla ayarlanır. Bu seçeneklerin görünmesi için **tüm ayarları göster** ' i seçmeniz gerekir:
 
@@ -30,7 +30,7 @@ Seçenekler, **Araçlar**  >  **Seçenekler**  >  **metin Düzenleyicisi**  >  *
 
 Biçimlendirme seçenekleri varsayılan olarak [Pep 8 stil kılavuzunun](https://www.python.org/dev/peps/pep-0008/)bir üst kümesiyle eşleşecek şekilde ayarlanır. Biçimlendirmenin ne zaman uygulanacağını **genel** sekme belirler. diğer üç sekmeye yönelik ayarlar bu makalede açıklanmıştır.
 
-[Visual Studio 'da Python desteği](installing-python-support-in-visual-studio.md) Ayrıca, daha sonraki bir bölümde açıklandığı gibi, gelişmiş bir [**Açıklama Ekle paragraf**](#fill-comment-paragraph-command) komutunu da **Edit**  >  **Gelişmiş** Düzenle menüsüne ekler.
+[Visual Studio 'da Python desteği](installing-python-support-in-visual-studio.md) Ayrıca, daha sonraki bir bölümde açıklandığı gibi, gelişmiş bir [**Açıklama Ekle paragraf**](#fill-comment-paragraph-command) komutunu da   >  **Gelişmiş** Düzenle menüsüne ekler.
 
 ## <a name="spacing"></a>Aralık
 

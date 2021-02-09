@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Live Unit Testing
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: ce2376f2dc3cb6abeb11b328452defb891949558
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+ms.openlocfilehash: ea87135b1f60c7ae65a8bc25399604151ab2fcee
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96329503"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99887815"
 ---
 # <a name="get-started-with-live-unit-testing"></a>Live Unit Testing kullanmaya başlama
 
@@ -36,7 +36,7 @@ Tek bir .NET Standard Class Library projesinden (StringLibrary) oluşan bir Visu
 
 Çözüm yalnızca bir veya daha fazla proje için bir kapsayıcıdır. Boş bir çözüm oluşturmak için Visual Studio 'Yu açın ve aşağıdakileri yapın:
 
-1. **File**  >  **New**  >  En üst düzey Visual Studio menüsünden dosya yeni **Proje** ' yi seçin.
+1.   >    >  En üst düzey Visual Studio menüsünden dosya yeni **Proje** ' yi seçin.
 
 1. Şablon arama kutusuna **çözüm** yazın ve ardından **boş çözüm** şablonunu seçin. Projenin kullanımı **Tylibraries** olarak adlandırın.
 
@@ -50,7 +50,7 @@ Tek bir .NET Standard Class Library projesinden (StringLibrary) oluşan bir Visu
 
 Çözümü oluşturduğunuza göre, dizeler ile çalışmak için birkaç uzantı yöntemi içeren StringLibrary adlı bir sınıf kitaplığı oluşturacaksınız.
 
-1. **Çözüm Gezgini**, kullanımı uygun proje çözümüne sağ tıklayın ve **Add**  >  **Yeni proje** Ekle ' yi seçin.
+1. **Çözüm Gezgini**, kullanımı uygun proje çözümüne sağ tıklayın ve   >  **Yeni proje** Ekle ' yi seçin.
 
 ::: moniker range="vs-2017"
 
@@ -92,13 +92,13 @@ Tek bir .NET Standard Class Library projesinden (StringLibrary) oluşan bir Visu
 
    - `HasEmbeddedSpaces``true`bir dize gömülü bir boşluk karakteri içeriyorsa döndürür; Aksi takdirde, döndürür `false` .
 
-6. **Build**  >  Üst düzey Visual Studio menüsünden Build **Build Solution** öğesini seçin. Derleme başarılı olmalıdır.
+6.   >  Üst düzey Visual Studio menüsünden Build **Build Solution** öğesini seçin. Derleme başarılı olmalıdır.
 
 ## <a name="create-the-test-project"></a>Test projesi oluşturma
 
 Sonraki adım, StringLibrary kitaplığını test etmek için birim test projesi oluşturmaktır. Aşağıdaki adımları gerçekleştirerek birim testlerini oluşturun:
 
-1. **Çözüm Gezgini**, kullanımı uygun proje çözümüne sağ tıklayın ve **Add**  >  **Yeni proje** Ekle ' yi seçin.
+1. **Çözüm Gezgini**, kullanımı uygun proje çözümüne sağ tıklayın ve   >  **Yeni proje** Ekle ' yi seçin.
 
 ::: moniker range="vs-2017"
 
@@ -128,7 +128,7 @@ Sonraki adım, StringLibrary kitaplığını test etmek için birim test projesi
    > [!NOTE]
    > Bu Başlangıç Öğreticisi, MSTest test çerçevesiyle Live Unit Testing kullanır. Ayrıca xUnit ve NUnit test çerçevelerini de kullanabilirsiniz.
 
-5. Birim testi projesi test edilen sınıf kitaplığına otomatik olarak erişemez. Sınıf kitaplığı projesine bir başvuru ekleyerek test Kitaplığı erişimi verirsiniz. Bunu yapmak için projeye sağ tıklayın `StringLibraryTests` ve başvuru Ekle ' yi seçin **Add**  >  **Reference**. **Başvuru Yöneticisi** iletişim kutusunda, **çözüm** sekmesinin seçili olduğundan emin olun ve aşağıdaki çizimde gösterildiği gibi StringLibrary projesini seçin.
+5. Birim testi projesi test edilen sınıf kitaplığına otomatik olarak erişemez. Sınıf kitaplığı projesine bir başvuru ekleyerek test Kitaplığı erişimi verirsiniz. Bunu yapmak için projeye sağ tıklayın `StringLibraryTests` ve başvuru Ekle ' yi seçin   >  . **Başvuru Yöneticisi** iletişim kutusunda, **çözüm** sekmesinin seçili olduğundan emin olun ve aşağıdaki çizimde gösterildiği gibi StringLibrary projesini seçin.
 
    ![* * Reference Manager * * iletişim kutusu](./media/lut-start/add-reference.png)
 
@@ -148,7 +148,7 @@ Sonraki adım, StringLibrary kitaplığını test etmek için birim test projesi
 
    ![UTF-8 kodlamasını seçme](media/lut-start/utf8-encoding.png)
 
-10. **Build**  >  Üst düzey Visual Studio menüsünden derleme **yeniden oluşturma çözümünü** seçerek birim testi projesini derleyin.
+10.   >  Üst düzey Visual Studio menüsünden derleme **yeniden oluşturma çözümünü** seçerek birim testi projesini derleyin.
 
 Bir sınıf kitaplığı ve bunun için bazı birim testlerini oluşturdunuz. Artık Live Unit Testing kullanmak için gereken başlangıç kuralları tamamladınız.
 
@@ -158,7 +158,7 @@ Bir sınıf kitaplığı ve bunun için bazı birim testlerini oluşturdunuz. Ar
 
 1. İsteğe bağlı olarak, StringLibrary kodunu içeren kod düzenleyici penceresini seçin. Bu, bir C# projesi için *Class1.cs* veya Visual Basic projesi için *Class1. vb* ' dir. (Bu adım, Live Unit Testing etkinleştirdikten sonra testlerinizin sonucunu ve kod kapsamınız kapsamını görsel olarak incelemenize olanak sağlar.)
 
-1. **Test**  >  **Live Unit Testing**  >  En üst düzey Visual Studio menüsünden test Live Unit Testing **Başlat** ' ı seçin.
+1.   >    >  En üst düzey Visual Studio menüsünden test Live Unit Testing **Başlat** ' ı seçin.
 
 1. Visual Studio, tüm testlerinizi otomatik olarak çalıştıran canlı birim testi başlatır.
 

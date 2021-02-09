@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Office development in Visual Studio, deployment manifests
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 31909d2a6765c357635cd0a8c039132f14b5967d
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: 0a6c8cf672c4799a53c9df947f15bca38cb02589
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96845511"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99887607"
 ---
 # <a name="deployment-manifests-for-office-solutions"></a>Office çözümleri için dağıtım bildirimleri
   Dağıtım bildirimi, bir Office çözümünün dağıtım ayarlarını açıklayan ve geçerli uygulama sürümünü tanımlayan bir XML dosyasıdır.

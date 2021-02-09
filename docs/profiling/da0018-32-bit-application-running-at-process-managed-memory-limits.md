@@ -9,16 +9,16 @@ f1_keywords:
 ms.assetid: 98eb2d96-f92f-42f9-915c-e5ac2330ffbf
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: 74fed5f0dcbac45f603f16743eb2635fcf35292a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f5730e96a47e7e931606269341d5f1cca302a0e5
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85548154"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99886398"
 ---
 # <a name="da0018-32-bit-application-running-at-process-managed-memory-limits"></a>DA0018: işlem tarafından yönetilen bellek sınırlarında çalışan 32 bit uygulama
 
@@ -47,7 +47,7 @@ ms.locfileid: "85548154"
  Yönetilen yığınların toplam boyutu varsayılan sınıra yaklaşıyorsa, bellek yönetiminin ek yükü genellikle uygulamanın yanıt hızını ve ölçeklenebilirliğini etkilemek için başlayabileceği noktaya kadar artar.
 
 ## <a name="how-to-investigate-a-warning"></a>Uyarı araştırma
- [İşaretler](../profiling/marks-view.md) görünümüne gitmek için hata Listesi penceresindeki iletiye çift tıklayın. ** \\ Tüm yığınlardaki .NET CLR bellek** sayısı ' nı ve **Toplam kaydedilmiş bayt** sütunlarını bulun. Yönetilen bellek ayırmanın diğer aşamalara göre daha ağır olduğu program yürütmesinin belirli aşamaları olup olmadığını belirleme. **Tüm Heap sütunlarındaki # bytes** değerlerini, ** \\ Gen 0 koleksiyonlarının .NET CLR**belleği #, **.NET CLR Memory # for gen \\ 1 Collections**ve .net **clr Memory of gen \\ 2 koleksiyonlar** sütunlarının, yönetilen bellek ayırmaları deseninin çöp toplama oranını etkileyip etkilemediğini tespit etmek üzere karşılaştırın.
+ [İşaretler](../profiling/marks-view.md) görünümüne gitmek için hata Listesi penceresindeki iletiye çift tıklayın. **\\ Tüm yığınlardaki .NET CLR bellek** sayısı ' nı ve **Toplam kaydedilmiş bayt** sütunlarını bulun. Yönetilen bellek ayırmanın diğer aşamalara göre daha ağır olduğu program yürütmesinin belirli aşamaları olup olmadığını belirleme. **Tüm Heap sütunlarındaki # bytes** değerlerini, **\\ Gen 0 koleksiyonlarının .NET CLR** belleği #, **.NET CLR Memory # for gen \\ 1 Collections** ve .net **clr Memory of gen \\ 2 koleksiyonlar** sütunlarının, yönetilen bellek ayırmaları deseninin çöp toplama oranını etkileyip etkilemediğini tespit etmek üzere karşılaştırın.
 
  .NET Framework bir uygulamada, ortak dil çalışma zamanı, yönetilen yığınların toplam boyutunu, bir işlem adres alanının özel alan boyutunun en büyük boyutundan biraz daha az bir olacak şekilde sınırlandırır. 32 bit makinede çalışan 32 bitlik işlemler için 2 GB, işlem adres alanının özel bölümünün üst sınırını temsil eder. Yönetilen yığınların toplam boyutu varsayılan sınırına yaklaşımak üzere başladığında, bellek yönetiminin ek yükü artabilir ve uygulama performansı azalabilir.
 
