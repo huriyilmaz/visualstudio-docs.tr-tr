@@ -15,15 +15,15 @@ helpviewer_keywords:
 - paragraphs, controlling structure
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 57e6f6ed2a71c026589d56088f94c8bf1a523ea2
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 898eae77928908dfc077ddf80d2659328ec6475d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97525764"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99885488"
 ---
 # <a name="how-to-programmatically-exclude-paragraph-marks-when-creating-ranges"></a>Nasıl yapılır: Aralık oluştururken program aracılığıyla paragraf işaretlerini hariç tutma
   <xref:Microsoft.Office.Interop.Word.Range>Paragrafı temel alan bir nesne oluşturduğunuzda, paragraf işaretleri gibi tüm yazdırılamayan karakterler aralığa dahil edilir. Kaynak paragraftan bir hedef paragrafa metin eklemek isteyebilirsiniz. Hedef paragrafı ayrı paragraflara bölmek istemiyorsanız, önce paragraf işaretini kaynak paragrafından kaldırmanız gerekir. Ayrıca, paragraf biçimlendirme bilgileri paragraf işareti içinde depolandığından, aralığı varolan bir paragrafa eklediğinizde bunu dahil etmek istemeyebilirsiniz.

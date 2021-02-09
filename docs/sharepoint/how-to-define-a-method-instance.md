@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Business Data Connectivity service [SharePoint development in Visual Studio], method
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 751683873d98e6c7aedc7228e0a91fb59117993b
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: 055193123f99825027238166d762ce54b288d716
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94903630"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99885670"
 ---
 # <a name="how-to-define-a-method-instance"></a>Nasıl yapılır: Yöntem örneği tanımlama
   Modelinizdeki her yöntem için en az bir yöntem örneği tanımlamanız gerekir.
@@ -37,7 +37,7 @@ ms.locfileid: "94903630"
 
      **Örnekler** düğümünün altında yeni bir yöntem örneği görüntülenir.
 
-3. Menü çubuğunda **View**  >  **Özellikler penceresini** görüntüle ' yi seçin.
+3. Menü çubuğunda   >  **Özellikler penceresini** görüntüle ' yi seçin.
 
 4. **Özellikler** penceresinde, yöntem örneğinin özelliklerini ayarlayın. Her özellik hakkında daha fazla bilgi için bkz. [MethodInstance](/previous-versions/office/developer/sharepoint-2010/ee556838(v=office.14)).
 

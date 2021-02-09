@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: c745cb76-47a6-49ff-9eed-16af0f748e35
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: aa0b0e3e8ea59ce1d41f9d8a6c056239f2bc0e9a
-ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
+ms.openlocfilehash: f9822319a74d1374ef2a88d4f9231e6fd86b1e5f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2020
-ms.locfileid: "96305551"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99884539"
 ---
 # <a name="createpkgdef-utility"></a>CreatePkgDef yardımcı programı
 Visual Studio uzantısı için bir. dll dosyasını parametre olarak alır ve. *DLL* dosyasına eşlik etmek için bir *. pkgdef* dosyası oluşturur. *. Pkgdef* dosyası, uzantı yüklendiğinde sistem kayıt defterine yazılabilecek tüm bilgileri içerir.

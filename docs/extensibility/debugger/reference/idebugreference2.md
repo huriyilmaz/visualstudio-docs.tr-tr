@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 3cfed312-f532-4bce-84a5-1677c14567d7
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 52f655afd35ed316080a3a85ccfae047aa50d87f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3f1ae87cc9d0926d7afc22d819dddf672a89afd3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80720269"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99883811"
 ---
 # <a name="idebugreference2"></a>IDebugReference2
 Bu arabirim bir yığın çerçevesi özelliğine veya başka bir özelliğe başvuruyu temsil eder.

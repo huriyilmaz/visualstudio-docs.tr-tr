@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 2820ac4c-c893-4d87-8c62-83981d561493
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 84d43ede5fcca1ae76d155cb8799a61900926d7b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f46efe377cb01b7b78a9df2de2d1e6fc89826014
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84183853"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99884292"
 ---
 # <a name="walkthrough-debugging-a-parallel-application-in-visual-studio-c-visual-basic-c"></a>İzlenecek yol: Visual Studio 'da paralel uygulamada hata ayıklama (C#, Visual Basic, C++)
 
@@ -45,7 +45,7 @@ Bu izlenecek yol, paralel bir uygulamada hata ayıklamak için paralel **Görevl
 
 - Windows Cope 'un gruplandırma, yakınlaştırma ve diğer ilgili özelliklerle nasıl ölçeklendirilmesi.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yol **yalnızca kendi kodum** etkinleştirildiğini varsayar (Visual Studio 'nun daha yeni sürümlerinde varsayılan olarak etkindir). **Araçlar** menüsünde **Seçenekler**' e tıklayın, **hata ayıklama** düğümünü genişletin, **genel**' i seçin ve ardından yalnızca kendi kodum etkinleştir ' i seçin **(yalnızca yönetilen)**. Bu özelliği görmüyorsanız, bu yönergeyi kullanmaya devam edebilirsiniz, ancak sonuçlarınız çizimlerden farklı olabilir.
 
 ## <a name="c-sample"></a>C# örneği
@@ -84,7 +84,7 @@ Bu izlenecek yol, paralel bir uygulamada hata ayıklamak için paralel **Görevl
    Üstteki menü çubuğundan **Dosya**  >  **Yeni**  >  **Proje**' yi seçin. **Yeni proje** iletişim kutusunun sol bölmesinde aşağıdakileri seçin:
 
    - C# uygulaması için, **Visual C#** altında, **Windows Masaüstü**' nün ardından orta bölmedeki **konsol uygulaması (.NET Framework)** seçeneğini belirleyin.
-   - Visual Basic bir uygulama için, **Visual Basic**altında **Windows Masaüstü**' ne ve ardından orta bölmedeki konsol uygulaması ' nı **(.NET Framework)** seçin.
+   - Visual Basic bir uygulama için, **Visual Basic** altında **Windows Masaüstü**' ne ve ardından orta bölmedeki konsol uygulaması ' nı **(.NET Framework)** seçin.
    - C++ uygulaması için, **Visual C++** altında, **Windows Masaüstü**' nün ardından **Windows konsol uygulaması**' nı seçin.
 
    **Konsol uygulamasını (.NET Core)** görmüyorsanız veya C++ için **konsol uygulaması** proje şablonu ' na **gidin Araçlar**  >  **ve Özellikler al..**. ' a giderek Visual Studio yükleyicisi açılır. C++ iş yüküyle **.net masaüstü geliştirme** veya **masaüstü geliştirme** seçeneklerini belirleyin ve ardından **Değiştir**' i seçin.
@@ -149,7 +149,7 @@ Bu izlenecek yol, paralel bir uygulamada hata ayıklamak için paralel **Görevl
 
      İlk kesme noktasında, hepsi S. A ile s. B-S. C yöntemlerine giden dört iş parçacığı. Bu bilgiler, **Paralel Yığınlar** penceresinde görünmeye devam eder, ancak dört iş parçacığının ilerlemedi daha fazla olması gerekir. Bunlardan biri, S. D ve sonra G.D. . F, S. G ve S.H. ile devam eden başka bir Diğer iki kişi de S. I ve S. J ile devam etti ve bunlardan biri, diğer kullanıcı harici kod ile devam etti.
 
-     İş parçacıklarının iş parçacığı kimliklerini görmek için, örneğin **1 Iş parçacığı** veya **2 iş**parçacığı üzerinde, Box üstbilgisinin üzerine gelin. İş parçacığı kimliklerini ve diğer çerçeve ayrıntılarını görmek için yığın çerçevelerinin üzerine gelin. Mavi vurgu geçerli iş parçacığını gösterir ve sarı ok geçerli iş parçacığının etkin yığın çerçevesini gösterir.
+     İş parçacıklarının iş parçacığı kimliklerini görmek için, örneğin **1 Iş parçacığı** veya **2 iş** parçacığı üzerinde, Box üstbilgisinin üzerine gelin. İş parçacığı kimliklerini ve diğer çerçeve ayrıntılarını görmek için yığın çerçevelerinin üzerine gelin. Mavi vurgu geçerli iş parçacığını gösterir ve sarı ok geçerli iş parçacığının etkin yığın çerçevesini gösterir.
 
      Kumaş iş parçacıkları simgesi (birbirine bağlı çizgiler), geçerli olmayan iş parçacıklarının etkin yığın çerçevelerini gösterir. **Çağrı yığını** penceresinde, kareleri değiştirmek için S. B öğesine çift tıklayın. **Paralel Yığınlar** penceresi, bir yeşil eğri ok simgesi kullanarak geçerli iş parçacığının geçerli yığın çerçevesini gösterir.
 
@@ -159,7 +159,7 @@ Bu izlenecek yol, paralel bir uygulamada hata ayıklamak için paralel **Görevl
 
      ![Yürütmenin paralel yığınları yolu](../debugger/media/pdb_walkthrough_2b.png "PDB_Walkthrough_2B")
 
-     S. C öğesine sağ tıklayın ve **çerçeveye geçiş**yapmak için üzerine gelin. Komutlardan biri, geçerli iş parçacığının yığın çerçevesini gösteren bir onay işaretine sahiptir. Aynı iş parçacığının bu çerçevesine geçebilirsiniz (yalnızca yeşil ok değişir) veya diğer iş parçacığına geçiş yapabilirsiniz (mavi vurgu de değişir). Aşağıdaki çizimde alt menü gösterilmektedir.
+     S. C öğesine sağ tıklayın ve **çerçeveye geçiş** yapmak için üzerine gelin. Komutlardan biri, geçerli iş parçacığının yığın çerçevesini gösteren bir onay işaretine sahiptir. Aynı iş parçacığının bu çerçevesine geçebilirsiniz (yalnızca yeşil ok değişir) veya diğer iş parçacığına geçiş yapabilirsiniz (mavi vurgu de değişir). Aşağıdaki çizimde alt menü gösterilmektedir.
 
      ![J geçerli olduğunda C üzerinde 2 seçenek içeren yığınlar menüsü](../debugger/media/pdb_walkthrough_3.png "PDB_Walkthrough_3")
 
@@ -272,7 +272,7 @@ Bu izlenecek yol, paralel bir uygulamada hata ayıklamak için paralel **Görevl
 
      **Görevler** penceresini yeniden görüntüleyin. Sütunun kısayol menüsünü görmek için herhangi bir sütun başlığına sağ tıklayın.
 
-     Sütun eklemek veya kaldırmak için kısayol menüsünü kullanabilirsiniz. Örneğin, AppDomain sütunu seçili değildir; Bu nedenle, listede gösterilmez. **Üst öğeye**tıklayın. **Üst** sütun dört görevlerden herhangi biri için değer olmadan görüntülenir.
+     Sütun eklemek veya kaldırmak için kısayol menüsünü kullanabilirsiniz. Örneğin, AppDomain sütunu seçili değildir; Bu nedenle, listede gösterilmez. **Üst öğeye** tıklayın. **Üst** sütun dört görevlerden herhangi biri için değer olmadan görüntülenir.
 
 #### <a name="to-resume-execution-until-the-third-breakpoint"></a>Yürütmeyi üçüncü kesme noktasına kadar sürdürmeyi sağlamak için
 
@@ -284,11 +284,11 @@ Bu izlenecek yol, paralel bir uygulamada hata ayıklamak için paralel **Görevl
 
      ![Görevler penceresinde üst&#45;alt öğe görünümü](../debugger/media/pdb_walkthrough_9.png "PDB_Walkthrough_9")
 
-     Görev 4 ve görev 5 ' in aynı iş parçacığında çalıştığını (gizliyse **Iş parçacığı atama** sütununu göster) unutmayın. Bu bilgiler, **Iş parçacıkları** penceresinde gösterilmez; **Görevler** penceresinin başka bir avantajı burada görüntülenir. Bunu doğrulamak için, **Paralel Yığınlar** penceresini görüntüleyin. **Görevleri**görüntülemekte olduğunuzdan emin olun. **Görevler penceresinde bunlara** çift tıklayarak 4 ve 5. görevleri bulun. Bunu yaptığınızda, **Paralel Yığınlar** penceresinde mavi vurgu güncellenir. **Paralel Yığınlar** penceresinde araç ipuçlarını tarayarak 4 ve 5. görevleri de bulabilirsiniz.
+     Görev 4 ve görev 5 ' in aynı iş parçacığında çalıştığını (gizliyse **Iş parçacığı atama** sütununu göster) unutmayın. Bu bilgiler, **Iş parçacıkları** penceresinde gösterilmez; **Görevler** penceresinin başka bir avantajı burada görüntülenir. Bunu doğrulamak için, **Paralel Yığınlar** penceresini görüntüleyin. **Görevleri** görüntülemekte olduğunuzdan emin olun. **Görevler penceresinde bunlara** çift tıklayarak 4 ve 5. görevleri bulun. Bunu yaptığınızda, **Paralel Yığınlar** penceresinde mavi vurgu güncellenir. **Paralel Yığınlar** penceresinde araç ipuçlarını tarayarak 4 ve 5. görevleri de bulabilirsiniz.
 
      ![Paralel Yığınlar penceresinde görev görünümü](../debugger/media/pdb_walkthrough_9a.png "PDB_Walkthrough_9A")
 
-     **Paralel Yığınlar** penceresinde, S. P öğesine sağ tıklayın ve ardından **iş parçacığına git ' e**tıklayın. Pencere, Iş parçacıkları görünümüne geçer ve ilgili çerçeve görünümüdür. Aynı iş parçacığında her iki görevi de görebilirsiniz.
+     **Paralel Yığınlar** penceresinde, S. P öğesine sağ tıklayın ve ardından **iş parçacığına git ' e** tıklayın. Pencere, Iş parçacıkları görünümüne geçer ve ilgili çerçeve görünümüdür. Aynı iş parçacığında her iki görevi de görebilirsiniz.
 
      ![İş parçacıkları görünümünde vurgulanan iş parçacığı](../debugger/media/pdb_walkthrough_9b.png "PDB_Walkthrough_9B")
 
@@ -300,7 +300,7 @@ Bu izlenecek yol, paralel bir uygulamada hata ayıklamak için paralel **Görevl
 
      ![Paralel Yığınlar penceresinde dört görev durumu](../debugger/media/pdb_walkthrough_10.png "PDB_Walkthrough_10")
 
-     5. görev tamamlandığı için artık görüntülenmiyor. Bu durum bilgisayarınızda değilse ve kilitlenme gösterilmezse, **F11**tuşuna basarak bir kez adım adım.
+     5. görev tamamlandığı için artık görüntülenmiyor. Bu durum bilgisayarınızda değilse ve kilitlenme gösterilmezse, **F11** tuşuna basarak bir kez adım adım.
 
      Görev 3 ve görev 4 artık birbirini bekliyor ve engelleniyor. 2. görevin alt öğesi olan ve şimdi zamanlanmış 5 yeni görev da vardır. Zamanlanan görevler, kodda başlatılmış ancak henüz çalıştırılmayan görevlerdir. Bu nedenle, **konum** ve **iş parçacığı atama** sütunları boştur.
 
@@ -316,7 +316,7 @@ Bu izlenecek yol, paralel bir uygulamada hata ayıklamak için paralel **Görevl
 
      Görüntülenecek **Görevler** penceresinin son özelliği, bir göreve sağ tıkladığınızda görüntülenen kısayol menüsü olur.
 
-     Kısayol menüsü, görevin durumuna bağlı olarak farklı komutları görüntüler. Bu komutlar **kopyalama**, **Tümünü seçme**, **onaltılık görüntü**, **görev değiştirme**, **atanan Iş parçacığını**dondurma, **tüm iş parçacıklarını dondurma, ancak bu**atama ve **bayrağı** **çözme**içerebilir.
+     Kısayol menüsü, görevin durumuna bağlı olarak farklı komutları görüntüler. Bu komutlar **kopyalama**, **Tümünü seçme**, **onaltılık görüntü**, **görev değiştirme**, **atanan Iş parçacığını** dondurma, **tüm iş parçacıklarını dondurma, ancak bu** atama ve **bayrağı** **çözme** içerebilir.
 
      Bir görevin veya görevlerin temel alınan iş parçacığını dondurabilir veya atanmış olanı hariç tüm iş parçacıklarını dondurabilirsiniz. Dondurulmuş bir iş parçacığı, bir mavi *duraklatma* simgesiyle **iş parçacıkları** penceresinde olduğu gibi **Görevler** penceresinde temsil edilir.
 

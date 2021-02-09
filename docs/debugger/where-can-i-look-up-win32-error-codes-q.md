@@ -17,20 +17,20 @@ helpviewer_keywords:
 ms.assetid: 8fb4ff42-b8eb-4152-b49e-b802d194b05e
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 44a006be3b6ecad3ef723c00154354cb35df0049
-ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
+ms.openlocfilehash: c4eb61a6eda5848277a1da95f9282b396b413ad5
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98149293"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99883837"
 ---
 # <a name="where-can-i-look-up-win32-error-codes"></a>Win32 Hata Kodlarına Nereden Bakabilirim?
 WINERROR. Varsayılan sistem yüklemenizin IÇERME dizinindeki H, Win32 API işlevleri için hata kodu tanımlarını içerir.
 
- **İzleme** penceresinde veya **QuickWatch** iletişim kutusunda kodu yazarak bir hata kodu arayabilirsiniz. Örnek:
+ **İzleme** penceresinde veya **QuickWatch** iletişim kutusunda kodu yazarak bir hata kodu arayabilirsiniz. Örneğin:
 
 `0x80000004,hr`
 

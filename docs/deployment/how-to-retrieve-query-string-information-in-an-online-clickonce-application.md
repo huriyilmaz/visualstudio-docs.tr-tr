@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 48ce098a-a075-481b-a5f5-c8ba11f63120
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 25a1ba70336b54ce2ce4c4df6678984db9de8bf8
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 49fd3ca9b625b9dec179ec37603e875cfdd296c0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94349925"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99885137"
 ---
 # <a name="how-to-retrieve-query-string-information-in-an-online-clickonce-application"></a>Nasıl yapılır: çevrimiçi bir ClickOnce uygulamasında sorgu dize bilgilerini alma
 *Sorgu dizesi* , bir URL 'nin *adı = değer* biçiminde rastgele bilgiler içeren bir soru işareti (?) ile başlayan bölümüdür. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Üzerinde barındırdığınızı adlı bir uygulamanız olduğunu `WindowsApp1` `servername` ve uygulama başlatıldığında değişken için bir değer geçirmek istediğinizi varsayalım `username` . URL 'niz aşağıdakine benzer şekilde görünebilir:
@@ -63,14 +63,14 @@ ms.locfileid: "94349925"
    MageUI
    ```
 
-2. **Dosya** menüsünde **Aç** ' ı seçin ve uygulamanızın dağıtım bildirimini açın [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] , bu dosya `.application` uzantıda sona eriyor.
+2. **Dosya** menüsünde **Aç**' ı seçin ve uygulamanızın dağıtım bildirimini açın [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] , bu dosya `.application` uzantıda sona eriyor.
 
 3. Sol taraftaki Gezinti penceresinde **dağıtım seçenekleri** panelini SEÇIN ve **URL parametrelerinin uygulamaya geçirilmesine izin ver** onay kutusunu seçin.
 
-4. **Dosya** menüsünde **Kaydet** ' i seçin.
+4. **Dosya** menüsünde **Kaydet**' i seçin.
 
 > [!NOTE]
-> Alternatif olarak, sorgu dizesi geçişini de etkinleştirebilirsiniz [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] . **Proje özellikleri** açılarak, **Yayımla** sekmesini seçerek, **Seçenekler** düğmesine tıklayıp ve ardından **Bildirimler** ' i seçerek bulunan **URL parametrelerinin uygulamaya geçirilmesine izin ver** onay kutusunu seçin.
+> Alternatif olarak, sorgu dizesi geçişini de etkinleştirebilirsiniz [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] . **Proje özellikleri** açılarak, **Yayımla** sekmesini seçerek, **Seçenekler** düğmesine tıklayıp ve ardından **Bildirimler**' i seçerek bulunan **URL parametrelerinin uygulamaya geçirilmesine izin ver** onay kutusunu seçin.
 
 ## <a name="robust-programming"></a>Güçlü programlama
  Sorgu dizesi parametreleri kullandığınızda uygulamanızın nasıl yüklendiğine ve etkinleştirilme konusunda dikkatli bir dikkat etmeniz gerekir. Uygulamanız kullanıcının bilgisayarına Web 'den veya bir ağ paylaşımından yüklenmek üzere yapılandırılmışsa, büyük olasılıkla Kullanıcı uygulamayı URL aracılığıyla yalnızca bir kez etkinleştirecektir. Bundan sonra, Kullanıcı **Başlangıç** menüsündeki kısayolunu kullanarak uygulamanızı genellikle etkinleştirir. Sonuç olarak, uygulamanız yaşam süresi boyunca yalnızca bir kez sorgu dizesi bağımsız değişkenlerini alacak şekilde garanti edilir. Gelecekte kullanılmak üzere bu bağımsız değişkenleri kullanıcının makinesinde depolamayı seçerseniz, bunları güvenli ve güvenli bir şekilde saklamaktan siz sorumlusunuz.

@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: cd0a73dc-dd25-46fd-8c4f-5b011501afeb
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: de0bfc5b387df9b347e4a58d97601a5e1e70f1a4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: edff2cad101a6a6f0f19a4b384b8f2398b98b2e4
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80715942"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99883746"
 ---
 # <a name="ienumdebugportsuppliers2"></a>IEnumDebugPortSuppliers2
 Bu arabirim, bağlantı noktası tedarikçilerini numaralandırır.
@@ -42,7 +42,7 @@ IEnumDebugPortSuppliers2 : IUnknown
 |[Sonraki](../../../extensibility/debugger/reference/ienumdebugportsuppliers2-next.md)|Bir numaralandırma dizisinde belirtilen sayıda bağlantı noktası tedarikçilerini alır.|
 |[Atla](../../../extensibility/debugger/reference/ienumdebugportsuppliers2-skip.md)|Bir numaralandırma dizisinde belirtilen sayıda bağlantı noktası tedarikçilerini atlar.|
 |[Sıfırla](../../../extensibility/debugger/reference/ienumdebugportsuppliers2-reset.md)|Bir numaralandırma dizisini başlangıca sıfırlar.|
-|[Kopyalama](../../../extensibility/debugger/reference/ienumdebugportsuppliers2-clone.md)|Geçerli numaralandırıcı ile aynı numaralandırma durumunu içeren bir Numaralandırıcı oluşturur.|
+|[Oluşturulacak](../../../extensibility/debugger/reference/ienumdebugportsuppliers2-clone.md)|Geçerli numaralandırıcı ile aynı numaralandırma durumunu içeren bir Numaralandırıcı oluşturur.|
 |[GetCount](../../../extensibility/debugger/reference/ienumdebugportsuppliers2-getcount.md)|Bir Numaralandırıcı içindeki bağlantı noktası sağlayıcılarının sayısını alır.|
 
 ## <a name="remarks"></a>Açıklamalar

@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: 77424414-7f0e-4b99-94bb-ea130de92d09
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 3d9c8ce481ab9ca99b7d456f53418641654369ad
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: e527e1aec630faadec6e594f944a6715028c6d82
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94351043"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99885059"
 ---
 # <a name="how-to-set-a-custom-log-file-location-for-clickonce-deployment-errors"></a>Nasıl yapılır: ClickOnce dağıtım hataları için özel günlük dosyası konumu ayarlama
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] tüm dağıtımlar için etkinleştirme günlük dosyalarını tutar. Bu Günlükler, bir dağıtımı yükleme ve başlatma ile ilgili tüm hataları belgeleyin [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . Varsayılan olarak, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] her dağıtım etkinleştirmesi için bir günlük dosyası oluşturur. Bu günlük dosyalarını Temporary Internet Files klasöründe depolar. Bir dağıtım için günlük dosyası, bir etkinleştirme hatası oluştuğunda kullanıcıya gösterilir ve Kullanıcı ortaya çıkan hata iletişim kutusunda **Ayrıntılar** ' a tıklar.
 
- Özel bir günlük dosyası yolu ayarlamak için, kayıt defteri Düzenleyicisi 'Ni ( **regedit.exe** ) kullanarak belirli bir istemci için bu davranışı değiştirebilirsiniz. Bu durumda, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] tek bir dosyadaki tüm dağıtımlar için etkinleştirme başarıları ve başarısızlıklarını günlüğe kaydeder.
+ Özel bir günlük dosyası yolu ayarlamak için, kayıt defteri Düzenleyicisi 'Ni (**regedit.exe**) kullanarak belirli bir istemci için bu davranışı değiştirebilirsiniz. Bu durumda, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] tek bir dosyadaki tüm dağıtımlar için etkinleştirme başarıları ve başarısızlıklarını günlüğe kaydeder.
 
 > [!CAUTION]
 > Kayıt Defteri Düzenleyicisi 'Ni yanlış kullanırsanız, işletim sisteminizi yeniden yüklemenizi gerektirebilecek önemli sorunlara neden olabilirsiniz. Kayıt Defteri Düzenleyicisi 'Ni kullanarak kendi sorumluluğunuzdadır.

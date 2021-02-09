@@ -12,15 +12,15 @@ helpviewer_keywords:
 - documents [Office development in Visual Studio], extending ranges
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 61ed056b5cebcebb6fe2dffd66dc374e4e1f9205
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: b3236a6303f25d8d24fe77c434a60d31aa572aa7
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97525742"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99885449"
 ---
 # <a name="how-to-programmatically-extend-ranges-in-documents"></a>Nasıl yapılır: belgelerde aralıkları program aracılığıyla genişletme
   Bir <xref:Microsoft.Office.Interop.Word.Range> Microsoft Office Word belgesinde bir nesne tanımladıktan sonra, ve yöntemlerini kullanarak başlangıç ve bitiş noktalarını değiştirirsiniz <xref:Microsoft.Office.Interop.Word.Range.MoveStart%2A> <xref:Microsoft.Office.Interop.Word.Range.MoveEnd%2A> . <xref:Microsoft.Office.Interop.Word.Range.MoveStart%2A>Ve <xref:Microsoft.Office.Interop.Word.Range.MoveEnd%2A> yöntemleri aynı iki bağımsız değişkeni, *birimi* ve *sayıyı* alır. *Count* bağımsız değişkeni, taşınacak birim sayısı ve *birim* bağımsız değişkeni aşağıdaki değerlerden biri olabilir <xref:Microsoft.Office.Interop.Word.WdUnits> :

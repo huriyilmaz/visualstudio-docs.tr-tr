@@ -15,15 +15,15 @@ helpviewer_keywords:
 - Office documents [Office development in Visual Studio, restricted permissions
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: b6beaf85000438846e5d440e48c9722b9660f9bd
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 2cc320baf310af0ec2b4cdd84fabff951b2a9cb2
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97528069"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99885293"
 ---
 # <a name="password-protection-on-office-documents"></a>Office belgelerinde parola koruması
   Microsoft Office Word belgelerinizi ve Microsoft Office Excel çalışma kitaplarını, parolayı kullanmayan birisi tarafından açılabilmeleri için bir parola ayarlamak mümkündür. Bu seçeneğe **açık parola** adı verilir.

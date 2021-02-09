@@ -8,23 +8,23 @@ helpviewer_keywords:
 - debugger
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c01317f3b8fa92cf1bc17c3745f708e0d3f26e5b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3435b7a270d89dc38f5ff10a1350418a24f91c0a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62901245"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99883941"
 ---
 # <a name="what-is-debugging"></a>Hata ayıklama nedir?
 
-Visual Studio hata ayıklayıcı güçlü bir araçtır. Nasıl kullanacağınızı göstermemiz için *hata ayıklayıcı*, *hata ayıklama*ve *hata ayıklama modu*gibi bazı terimler hakkında konuşmak istiyoruz. Bu şekilde, daha sonra hataları bulma ve düzeltme hakkında konuştuyoruz ve aynı şey hakkında konuşacağız.
+Visual Studio hata ayıklayıcı güçlü bir araçtır. Nasıl kullanacağınızı göstermemiz için *hata ayıklayıcı*, *hata ayıklama* ve *hata ayıklama modu* gibi bazı terimler hakkında konuşmak istiyoruz. Bu şekilde, daha sonra hataları bulma ve düzeltme hakkında konuştuyoruz ve aynı şey hakkında konuşacağız.
 
 ## <a name="debugger-vs-debugging"></a>Hata ayıklayıcı ile hata ayıklama
 
-*Hata ayıklama* terimi çok sayıda farklı şeyi ifade edebilir, ancak en çok harfi, koddan hataların kaldırılması anlamına gelir. Şimdi bunu yapmak için birçok yol vardır. Örneğin, kodunuzu tarayarak veya bir kod çözümleyici kullanarak hata ayıklaması yapabilirsiniz. Bir performans profil oluşturucusu kullanarak kodda hata ayıklaması yapabilirsiniz. Ya da hata *ayıklayıcı*kullanarak hata ayıklaması yapabilirsiniz.
+*Hata ayıklama* terimi çok sayıda farklı şeyi ifade edebilir, ancak en çok harfi, koddan hataların kaldırılması anlamına gelir. Şimdi bunu yapmak için birçok yol vardır. Örneğin, kodunuzu tarayarak veya bir kod çözümleyici kullanarak hata ayıklaması yapabilirsiniz. Bir performans profil oluşturucusu kullanarak kodda hata ayıklaması yapabilirsiniz. Ya da hata *ayıklayıcı* kullanarak hata ayıklaması yapabilirsiniz.
 
 Hata ayıklayıcı, çalışan uygulamanıza bağlanan ve kodunuzu incelemenize olanak tanıyan özel bir geliştirici aracıdır. Visual Studio için hata ayıklama belgelerinde, genellikle "hata ayıklama" söylediğimiz anlamına gelir.
 
@@ -34,7 +34,7 @@ Uygulamanızı Visual Studio 'da ilk kez çalıştırdığınızda, araç çubu�
 
 ![Bir hata ayıklama derlemesi seçin](../debugger/media/what-is-debugging-debug-build.png)
 
-**Hata ayıklama** değeri bir hata ayıklama yapılandırmasını gösterir. Hata ayıklama yapılandırmasındaki uygulamayı başlattığınızda (yeşil oka veya **F5**tuşuna basın), uygulamayı hata *ayıklama modunda*başlatın, bu da uygulamanızı bir hata ayıklayıcı ekli olarak çalıştırıyorsunuz demektir. Bu, uygulamanızdaki hataları bulmaya yardımcı olması için kullanabileceğiniz bir hata ayıklama özelliklerinin tam kümesini sağlar.
+**Hata ayıklama** değeri bir hata ayıklama yapılandırmasını gösterir. Hata ayıklama yapılandırmasındaki uygulamayı başlattığınızda (yeşil oka veya **F5** tuşuna basın), uygulamayı hata *ayıklama modunda* başlatın, bu da uygulamanızı bir hata ayıklayıcı ekli olarak çalıştırıyorsunuz demektir. Bu, uygulamanızdaki hataları bulmaya yardımcı olması için kullanabileceğiniz bir hata ayıklama özelliklerinin tam kümesini sağlar.
 
 Açık bir projeniz varsa, **hata ayıklamayı** belirten açılan seçiciyi seçin ve bunun yerine **yayın** ' ı seçin.
 

@@ -11,15 +11,15 @@ dev_langs:
 - C++
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 65ac088d52b4e7a288965bb75e1bc6a00da40f7b
-ms.sourcegitcommit: 105e7b5a486262bc92939980383ceee068098a11
+ms.openlocfilehash: c81bcb029499b77b2f5b25c598437f1fcbf70854
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/30/2020
-ms.locfileid: "97815821"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99886166"
 ---
 # <a name="analyze-memory-usage-without-debugging-in-the-performance-profiler"></a>Performans Profiler 'da hata ayıklama olmadan bellek kullanımını analiz etme
 
@@ -77,7 +77,7 @@ Numaralar, yeni Visual Studio Windows 'da ayrıntılı **bellek kullanımı** ra
 
   ![Anlık görüntü görünümü bağlantıları](../profiling/media/memuse__snapshotview_numbered.png "Anlık görüntü görünümü bağlantıları")
 
-|Görüntü|Açıklama|
+|Görüntü|Description|
 |-|-|
 |![1. Adım](../profiling/media/procguid_1.png "ProcGuid_1")|Anlık görüntü çekilirken bellekteki toplam bayt sayısı.<br /><br /> Tür örneklerinin toplam boyutuna göre sıralanmış bir anlık görüntü ayrıntıları raporu göstermek için bu bağlantıyı seçin.|
 |![2. Adım](../profiling/media/procguid_2.png "ProcGuid_2")|Anlık görüntü çekilirken bellekteki toplam nesne sayısı.<br /><br /> Bu bağlantıyı, türlerin örnek sayısına göre sıralanmış bir anlık görüntü ayrıntıları raporu göstermek için seçin.|

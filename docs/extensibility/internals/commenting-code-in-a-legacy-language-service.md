@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 9600d6f0-e2b6-4fe0-b935-fb32affb97a4
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 07205a8e15cd338fa1acf0d3b081301a083bba5d
-ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
+ms.openlocfilehash: d53117456318039837a371f68745b4688cbbd087
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2020
-ms.locfileid: "96305003"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99884708"
 ---
 # <a name="comment-code-in-a-legacy-language-service"></a>Eski dil hizmetindeki yorum kodu
 Programlama dilleri genellikle kodun açıklamasına veya açıklamasına açıklama eklemek için bir yol sağlar. Yorum, kod hakkında ek bilgiler sağlayan ancak derleme veya yorum sırasında yoksayılan bir metin bölümüdür.
@@ -34,7 +34,7 @@ Programlama dilleri genellikle kodun açıklamasına veya açıklamasına açık
 
 Satır açıklamalarının genellikle başlangıç karakteri (veya karakterleri), blok açıklamaları ise başlangıç ve bitiş karakterlerinden oluşmalıdır. Örneğin, C# ' de bir satır yorumu ile başlar `//` ve bir blok yorumu ile başlar `/*` ve ile biter `*/` .
 
-Kullanıcı, **Düzenle** Gelişmiş menüsünden komut **Açıklama seçimini** seçtiğinde  >  **Advanced** , komut, <xref:Microsoft.VisualStudio.Package.Source.CommentSpan%2A> sınıfındaki yöntemine yönlendirilir <xref:Microsoft.VisualStudio.Package.Source> . Kullanıcı **seçimi açıklama** Kaldır komutunu seçtiğinde, komut <xref:Microsoft.VisualStudio.Package.Source.UncommentSpan%2A> yöntemine yönlendirilir.
+Kullanıcı, **Düzenle** Gelişmiş menüsünden komut **Açıklama seçimini** seçtiğinde  >   , komut, <xref:Microsoft.VisualStudio.Package.Source.CommentSpan%2A> sınıfındaki yöntemine yönlendirilir <xref:Microsoft.VisualStudio.Package.Source> . Kullanıcı **seçimi açıklama** Kaldır komutunu seçtiğinde, komut <xref:Microsoft.VisualStudio.Package.Source.UncommentSpan%2A> yöntemine yönlendirilir.
 
 ## <a name="support-code-comments"></a>Kod açıklamalarını destekleme
  Dil hizmetinizin, adlandırılmış parametresi aracılığıyla kod açıklamalarını desteklemesini sağlayabilirsiniz `EnableCommenting` <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> . Bu <xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableCommenting%2A> , sınıfının özelliğini ayarlar <xref:Microsoft.VisualStudio.Package.LanguagePreferences> . Dil hizmeti özelliklerini ayarlama hakkında daha fazla bilgi için bkz. [eski dil hizmetini kaydetme](../../extensibility/internals/registering-a-legacy-language-service1.md).

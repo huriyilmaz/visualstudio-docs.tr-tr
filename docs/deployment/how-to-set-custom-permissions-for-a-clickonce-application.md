@@ -14,22 +14,22 @@ helpviewer_keywords:
 ms.assetid: 660459ca-ef73-44a8-b323-610001f63b93
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d5d0348b882a3327c02fca6db0628822c0deffeb
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 2050f3534caba8aba12fa8550eb6e573a3d0db08
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94351004"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99885046"
 ---
 # <a name="how-to-set-custom-permissions-for-a-clickonce-application"></a>Nasıl yapılır: ClickOnce uygulaması için özel izinleri ayarlama
-[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Internet veya yerel Intranet bölgeleri için varsayılan izinleri kullanan bir uygulamayı dağıtabilirsiniz. Alternatif olarak, uygulamanın ihtiyacı olan özel izinler için özel bir bölge oluşturabilirsiniz. Bunu, **Proje Tasarımcısı** 'nın **güvenlik** sayfasında güvenlik izinlerini özelleştirerek yapabilirsiniz.
+[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Internet veya yerel Intranet bölgeleri için varsayılan izinleri kullanan bir uygulamayı dağıtabilirsiniz. Alternatif olarak, uygulamanın ihtiyacı olan özel izinler için özel bir bölge oluşturabilirsiniz. Bunu, **Proje Tasarımcısı**'nın **güvenlik** sayfasında güvenlik izinlerini özelleştirerek yapabilirsiniz.
 
 ### <a name="to-customize-a-permission"></a>Bir izni özelleştirmek için
 
-1. **Çözüm Gezgini** ' de bir proje seçiliyken, **Proje** menüsünde **Özellikler** ' e tıklayın.
+1. **Çözüm Gezgini**' de bir proje seçiliyken, **Proje** menüsünde **Özellikler**' e tıklayın.
 
 2. **Güvenlik** sekmesine tıklayın.
 
@@ -41,7 +41,7 @@ ms.locfileid: "94351004"
 
 5. Uygulamanızın açılan listeden **yüklenecek bölge** listesinden **(özel)** seçeneğine tıklayın.
 
-6. **Izinleri Düzenle XML** ' ye tıklayın.
+6. **Izinleri Düzenle XML**' ye tıklayın.
 
      *App. manifest* dosyası XML düzenleyicisinde açılır.
 

@@ -5,15 +5,15 @@ ms.date: 11/05/2018
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-science
-ms.openlocfilehash: 7ecfd8f1cf50e94991ce2fd94ad94ac9815c92ca
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4aea7f5371dc425a77e10b64a9389571b06f80b4
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89315102"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99885865"
 ---
 # <a name="edit-r-code-in-visual-studio"></a>Visual Studio 'da R kodunu Düzenle
 
@@ -35,7 +35,7 @@ Visual Studio Ayrıca düzenleyicideki sözdizimi hatalarının altını çizer:
 
 ![R kodunda sözdizimi hatası vurgulama](media/editing-syntax-error.png)
 
-Bu davranışı değiştirmek için, **Advanced**  >  [Düzenleyici seçenekleri](#editor-options)altındaki Gelişmiş**sözdizimi denetimi** ayarı bölümüne bakın.
+Bu davranışı değiştirmek için,   >  [Düzenleyici seçenekleri](#editor-options)altındaki Gelişmiş **sözdizimi denetimi** ayarı bölümüne bakın.
 
 ## <a name="edit-and-organize-code"></a>Kodu düzenleme ve düzenleme
 
@@ -49,7 +49,7 @@ Kodu yazarken, RTVS, [IntelliSense](r-intellisense.md) sayfasında açıklandı�
 
 Bu davranışı değiştirmek için, **Sekmeler** grubu için [Düzenleyici seçenekleri](#editor-options) bölümüne bakın.
 
-Daraltılabilir kod bölgeleri, düzenleyicideki kodun bir parçasını geçici olarak gizlemenizi sağlar. Visual Studio, **Gelişmiş**ana hat kod ana hattı  >  **Outlining**  >  **Code outlining** seçeneği kapalı olarak ayarlanmadığı sürece, çok satırlı deyimler için otomatik olarak çeşitli bölgeler oluşturur.
+Daraltılabilir kod bölgeleri, düzenleyicideki kodun bir parçasını geçici olarak gizlemenizi sağlar. Visual Studio, **Gelişmiş** ana hat kod ana hattı  >    >   seçeneği kapalı olarak ayarlanmadığı sürece, çok satırlı deyimler için otomatik olarak çeşitli bölgeler oluşturur.
 
 Kendi bölgesini oluşturmak için, istenen kodu ile biten açıklamalarla çevreleyin `---` . Kodun solundaki küçük +/-denetimleri, daha sonra bölgeleri genişletmenize ve daraltmanıza imkan tanır:
 
@@ -61,19 +61,19 @@ Varsayılan olarak, **sekme** tuşuna bastığınızda Visual Studio boşluk ekl
 
 Kod gezintisi, R programınızın ve kitaplıklarının kaynak koduna hızlı erişim sağlar. Bu özellikler, kodunuzu el ile aramak yerine çalışmalarınızın akışında tutar.
 
-**Tanıma Git** bir işlev tanımına hızlı bir şekilde atlar veya bir kitaplık işlevinin kaynak kodunu okumak için bir satır içi mini-düzenleyiciyi açılır. İlgilendiğiniz işleve sağ tıklayıp **Tanıma Git**' i seçin ya da imleci Işleve yerleştirip **F12**tuşuna basın.
+**Tanıma Git** bir işlev tanımına hızlı bir şekilde atlar veya bir kitaplık işlevinin kaynak kodunu okumak için bir satır içi mini-düzenleyiciyi açılır. İlgilendiğiniz işleve sağ tıklayıp **Tanıma Git**' i seçin ya da imleci Işleve yerleştirip **F12** tuşuna basın.
 
 Bu komut, işlevin kaynak kodunu içeren yeni bir düzenleyici penceresi açar. İmleç, işlev tanımının başlangıcında kolay bir şekilde konumlandırılmış.
 
-Sağ tıklama menüsünden veya **alt**F12 'tan çağrılan **Açıklama tanımı**, + **F12**işlev çağrısının altındaki işlevin kaynak kodunu içeren salt okunurdur, kaydırılabilir bir bölge ekler:
+Sağ tıklama menüsünden veya **alt** F12 'tan çağrılan **Açıklama tanımı**, + işlev çağrısının altındaki işlevin kaynak kodunu içeren salt okunurdur, kaydırılabilir bir bölge ekler:
 
 ![Göz atma tanımı için animasyon](media/editing-peek-definition.gif)
 
 ## <a name="send-code-to-the-interactive-window"></a>Etkileşimli pencereye kod gönder
 
-Birçok geliştirici düzenleyicide kod yazmak ve ardından anında test için bu kodu [etkileşimli pencereye](interactive-repl-for-r-in-visual-studio.md) göndermek (Ayrıca Read-değerlendir-PRINT-Loop veya REPL olarak da bilinir). R düzenleyicisinde **CTRL** + **ENTER** tuşlarına basmak, geçerli kod satırını etkileşimli pencereye gönderir ve ardından imleci bir sonraki satıra koyar. **CTRL** + **ENTER**ile, düzenleyiciden kodunuzda kodlarda etkin bir şekilde geçiş yapabilirsiniz.
+Birçok geliştirici düzenleyicide kod yazmak ve ardından anında test için bu kodu [etkileşimli pencereye](interactive-repl-for-r-in-visual-studio.md) göndermek (Ayrıca Read-değerlendir-PRINT-Loop veya REPL olarak da bilinir). R düzenleyicisinde **CTRL** + **ENTER** tuşlarına basmak, geçerli kod satırını etkileşimli pencereye gönderir ve ardından imleci bir sonraki satıra koyar. **CTRL** + **ENTER** ile, düzenleyiciden kodunuzda kodlarda etkin bir şekilde geçiş yapabilirsiniz.
 
-Ayrıca, **Ctrl** + tüm seçimi uygulamak için kod seçip CTRL**ENTER** tuşuna basabilirsiniz. Alternatif olarak, seçime sağ tıklayıp **etkileşimli olarak çalıştır**' ı seçin.
+Ayrıca,  + tüm seçimi uygulamak için kod seçip CTRL **ENTER** tuşuna basabilirsiniz. Alternatif olarak, seçime sağ tıklayıp **etkileşimli olarak çalıştır**' ı seçin.
 
 ## <a name="format-code"></a>Kodu biçimlendirme
 
@@ -89,11 +89,11 @@ Biçimlendirme uygulandığında şu kadar temizler:
 f <- function(a) { return(a + 1) }
 ```
 
-Tüm kod dosyasını yeniden biçimlendirmek için, **Edit**  >  **Gelişmiş**  >  **Biçim belgesini** Düzenle (**CTRL** + **E**,**D**) seçeneğini belirleyin.
+Tüm kod dosyasını yeniden biçimlendirmek için,   >  **Gelişmiş**  >  **Biçim belgesini** Düzenle (**CTRL** + **E**,**D**) seçeneğini belirleyin.
 
 Otomatik biçimlendirme, geri alınabilecek ayrı bir işlemdir. Örneğin, düzenleyiciye kod yapıştırdıysanız ve bu biçim geçerliyse, **Düzenle**  >  **geri al** ' ı veya **CTRL** + **Z** tuşlarına basıldığında biçimlendirmeyi tersine çevirir; ikinci bir **geri alma** , yapıştırmayı kendisini tersine çevirir.
 
-Biçimlendirme seçenekleri (biçimlendirmeyi kapatma dahil) **Tools**  >  , **metin düzenleyici****Options**  >  **R**  >  **Gelişmiş** sekmesindeki Araçlar seçenekleri aracılığıyla ayarlanır. **R araçları**  >  **Düzenleyicisi seçenekler** komutunu kullanarak veya düzenleyiciye sağ tıklayıp **biçimlendirme seçenekleri**' ni seçerek doğrudan bu sayfaya gidebilirsiniz. Ayrıntılar için [Düzenleyici seçenekleri](#editor-options) bölümüne bakın.
+Biçimlendirme seçenekleri (biçimlendirmeyi kapatma dahil)   >  , **metin düzenleyici**  >  **R**  >  **Gelişmiş** sekmesindeki Araçlar seçenekleri aracılığıyla ayarlanır. **R araçları**  >  **Düzenleyicisi seçenekler** komutunu kullanarak veya düzenleyiciye sağ tıklayıp **biçimlendirme seçenekleri**' ni seçerek doğrudan bu sayfaya gidebilirsiniz. Ayrıntılar için [Düzenleyici seçenekleri](#editor-options) bölümüne bakın.
 
 ## <a name="inserting-roxygen-comments"></a>Roxygen açıklamaları ekleme
 
@@ -103,9 +103,9 @@ RTVS, bir işlevin parametre adlarını kullanarak [Roxygen](https://cran.r-proj
 
 ## <a name="editor-options"></a>Düzenleyici seçenekleri
 
-Düzenleyiciye özgü seçenekler, **Araçlar**  >  **Seçenekler** komutuyla, **metin Düzenleyicisi**  >  **R**'ye gidilerek ve **r araçları**  >  **Düzenleyicisi seçenekleri**kısayol komutu kullanılarak ayarlanır.
+Düzenleyiciye özgü seçenekler, **Araçlar**  >  **Seçenekler** komutuyla, **metin Düzenleyicisi**  >  **R**'ye gidilerek ve **r araçları**  >  **Düzenleyicisi seçenekleri** kısayol komutu kullanılarak ayarlanır.
 
-**Genel**, **kaydırma çubukları**ve **Sekmeler** sekmelerinde bulunan seçenekler R 'ye özgü değildir, ancak genel Visual Studio ayarları tüm diller için kullanılabilir ancak dile göre ayrı olarak uygulanır. Ayrıntılar için aşağıdaki makalelere bakın:
+**Genel**, **kaydırma çubukları** ve **Sekmeler** sekmelerinde bulunan seçenekler R 'ye özgü değildir, ancak genel Visual Studio ayarları tüm diller için kullanılabilir ancak dile göre ayrı olarak uygulanır. Ayrıntılar için aşağıdaki makalelere bakın:
 
 - [Seçenekler, Metin Düzenleyici, Tüm Diller](../ide/reference/options-text-editor-all-languages.md)
 - [Kaydırma çubuğunu özelleştirerek kodunuzu izleyin](../ide/how-to-track-your-code-by-customizing-the-scrollbar.md)
@@ -113,7 +113,7 @@ Düzenleyiciye özgü seçenekler, **Araçlar**  >  **Seçenekler** komutuyla, *
 
 **R**  >  **Gelişmiş** sekmesindeki seçenekler rtvs 'ye özgüdür:
 
-| Gruplama | Seçenek | Varsayılan | Description |
+| Grup | Seçenek | Varsayılan | Description |
 | --- | --- | --- | --- |
 | Biçimlendirme | Otomatik biçimlendirme | Açık | Yazdığınız şekilde kodu yeniden biçimlendirir. **Biçim Seçimi** veya **Biçim belgesi** komutlarını etkilemez. |
 | | Genişletilmiş küme ayraçları | Kapalı | Açık bir {yeni satıra koyar. |
@@ -125,8 +125,8 @@ Düzenleyiciye özgü seçenekler, **Araçlar**  >  **Seçenekler** komutuyla, *
 | | Etrafındaki boşluklar = | Açık | Eşittir işaretinin etrafına boşluk koyar. |
 | IntelliSense | ENTER tuşuna bir Kaydet | Kapalı | **ENTER** tuşuna basıldığında otomatik tamamlama seçimini kaydeder. |
 | | Boşluk anahtarında Yürüt | Kapalı | **Boşluk** basıldığında otomatik tamamlama seçimini kaydeder.|
-| | İlk karakter için tamamlanma listesi | Açık | İlk karakter türlerindeki tamamlanma listesini gösterir. Kapalı olduğunda, **Edit**  >  **IntelliSense**  >  **Liste üyelerini** Düzenle (**CTRL** + **J**) ile bir tamamlanma listesi görüntülenir. |
-| | **Sekme** anahtarındaki tamamlanma listesi | Kapalı | Bir veya daha fazla karakter yazıp **Tab**tuşuna basarak tamamlanma listesini çağırır. |
+| | İlk karakter için tamamlanma listesi | Açık | İlk karakter türlerindeki tamamlanma listesini gösterir. Kapalı olduğunda,   >  **IntelliSense**  >  **Liste üyelerini** Düzenle (**CTRL** + **J**) ile bir tamamlanma listesi görüntülenir. |
+| | **Sekme** anahtarındaki tamamlanma listesi | Kapalı | Bir veya daha fazla karakter yazıp **Tab** tuşuna basarak tamamlanma listesini çağırır. |
 | | Kısmi türlerin bağımsız değişken adlarını Eşleştir | Kapalı | Bir işlev çağrısında bağımsız değişken adları yazarken, imza yardımı en iyi eşleşme olan bağımsız değişken için bir açıklama gösterir. |
 | Etkileşimli Pencere | R konsolundaki sözdizimi denetimi | Kapalı | Etkileşimli pencerede söz dizimi denetimi uygular. Sözdizimi denetimi, çok satırlı deyimlerle düzgün çalışmayabilir. |
 | Anahat Oluşturma | Kod anahat oluşturma | Açık | , Çok satırlı deyimler gibi alanlarda otomatik olarak daraltılabilir bölgeler oluşturur. |

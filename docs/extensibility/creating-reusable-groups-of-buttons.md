@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 0c561617-fb86-476d-8bd1-c6e5e7464c65
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8b9d1d8b985f7184ffdfbf083dc3f6b8ab03d894
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: 62873d57da04f94ce1cdda16c5fe4801af5d19c3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96915589"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99884935"
 ---
 # <a name="create-reusable-groups-of-buttons"></a>Yeniden kullanılabilir düğme grupları oluşturma
 Komut grubu, her zaman bir menü veya araç çubuğunda birlikte görünen komutların bir koleksiyonudur. Herhangi bir komut grubu, *. vsct* dosyasının CommandPlacements bölümünde farklı üst menülere atayarak yeniden kullanılabilir.
@@ -30,7 +30,7 @@ Komut grubu, her zaman bir menü veya araç çubuğunda birlikte görünen komut
 
 1. Adlı bir VSıX projesi oluşturun `ReusableButtons` . Daha fazla bilgi için bkz. [bir menü komutuyla uzantı oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md).
 
-2. Proje açıldığında, **ReusableCommand** adlı özel bir komut öğesi şablonu ekleyin. **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve **Add**  >  **Yeni öğe** Ekle ' yi seçin. **Yeni öğe Ekle** iletişim kutusunda, **Visual C#**  >  **genişletilebilirliği** ' ne gidin ve **özel komut**' yi seçin. Pencerenin alt kısmındaki **ad** alanında, komut dosyası adını *ReusableCommand.cs* olarak değiştirin.
+2. Proje açıldığında, **ReusableCommand** adlı özel bir komut öğesi şablonu ekleyin. **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve   >  **Yeni öğe** Ekle ' yi seçin. **Yeni öğe Ekle** iletişim kutusunda, **Visual C#**  >  **genişletilebilirliği** ' ne gidin ve **özel komut**' yi seçin. Pencerenin alt kısmındaki **ad** alanında, komut dosyası adını *ReusableCommand.cs* olarak değiştirin.
 
 3. *. Vsct* dosyasında, semboller bölümüne gidin ve proje için grupları ve komutları Içeren GuidSymbol öğesini bulun. Bu, guidReusableCommandPackageCmdSet olarak adlandırılmalıdır.
 

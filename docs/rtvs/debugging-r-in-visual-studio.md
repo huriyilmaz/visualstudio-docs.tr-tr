@@ -5,15 +5,15 @@ ms.date: 01/24/2018
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-science
-ms.openlocfilehash: 5efa0a32f51e1f5060474a0d277bfca7f1e7d548
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e3696cac00c726cffb76f29a1da2c503a15af2bd
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "73189261"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99885826"
 ---
 # <a name="debug-r-in-visual-studio"></a>Visual Studio 'da R 'de hata ayıkla
 
@@ -35,7 +35,7 @@ Sourcing: c:\proj\rproject1\rproject1\Settings.R
 
 `rtvs::debug_source`İşlevin betiği kaynağında kullanıldığını unutmayın. RTVS 'nin hata ayıklama hazırlığı için kodunuzu değiştirmesi gerektiğinden, bu işlev gereklidir. Herhangi bir RTVS kaynak kullanımı komutunu kullanırken ve bir hata ayıklayıcı eklendiğinde, Visual Studio otomatik olarak kullanır `rtvs::debug_source` .
 
-Ayrıca, etkileşimli pencere araç çubuğunda **R araçları**  >  **oturumu**  >  **iliştirme hata ayıklayıcısı** komutunu, R etkileşim **Hata Ayıkla**  >  **Attach to R Interactive** komutunu veya hata **ayıklayıcı Ekle** komutunu kullanarak doğrudan hata ayıklayıcıyı etkileşimli pencereden el ile ekleyebilirsiniz. Bunu yaptıktan sonra, hata ayıklamak istediğiniz dosyaları kaynak olarak kullanabilirsiniz. Dosyaları el ile kaynak olarak almak istiyorsanız, `rtvs::debug_source` R 'de normal komutunu kullandığınızdan emin olun `source` .
+Ayrıca, etkileşimli pencere araç çubuğunda **R araçları**  >  **oturumu**  >  **iliştirme hata ayıklayıcısı** komutunu, R etkileşim **Hata Ayıkla**  >   komutunu veya hata **ayıklayıcı Ekle** komutunu kullanarak doğrudan hata ayıklayıcıyı etkileşimli pencereden el ile ekleyebilirsiniz. Bunu yaptıktan sonra, hata ayıklamak istediğiniz dosyaları kaynak olarak kullanabilirsiniz. Dosyaları el ile kaynak olarak almak istiyorsanız, `rtvs::debug_source` R 'de normal komutunu kullandığınızdan emin olun `source` .
 
 Hata ayıklayıcı ve etkileşimli pencere arasındaki bu bağlantı, farklı parametre değerleriyle bir işlevi çağırma (ve hata ayıklama) gibi şeyleri daha kolay hale getirir. Örneğin, kaynak dosyada aşağıdaki işleve sahip olduğunuzu varsayalım (Bu, oturuma yüklenmiş olduğunu belirtir):
 
@@ -60,7 +60,7 @@ Ortam tarayıcısı bazı özel komutları destekler:
 | f | Son: geçerli işlev kapsamının geri kalanını çalıştırır ve arayana döndürür (adımla aynı). |
 | c, devamı | devam: programı bir sonraki kesme noktasına çalıştırır. |
 | Q | çıkar: hata ayıklama oturumunu sonlandırır. |
-| where | yığını göster: çağrı yığınını etkileşimli pencerede görüntüler. |
+| konum | yığını göster: çağrı yığınını etkileşimli pencerede görüntüler. |
 | Yardım | yardımı göster: etkileşimli pencerede kullanılabilir komutları görüntüler. |
 | &lt;ifadeyi&gt; | ifadeyi *Expr*'de değerlendirin. |
 

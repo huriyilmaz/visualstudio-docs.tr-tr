@@ -9,28 +9,28 @@ helpviewer_keywords:
 ms.assetid: fa3b993b-ab95-47fa-a38b-b788f3a5b2d8
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: e6264cb35e404d69900094513875fc7b79310a4d
-ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
+ms.openlocfilehash: c8bfdcd854cf35c392578d9851a7421bacc8cbfe
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94973738"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99884994"
 ---
 # <a name="create-an-extension-with-an-editor-item-template"></a>Düzenleyici öğe şablonuyla uzantı oluşturma
 Düzenleyiciyle sınıflandırmalar, donmanlar ve kenar boşlukları ekleyen temel Düzenleyici uzantıları oluşturmak için Visual Studio SDK 'sında bulunan öğe şablonlarını kullanabilirsiniz. Düzenleyici öğe şablonları, Visual C# veya Visual Basic VSıX projeleri için kullanılabilir.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
  Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yüklememeyin. Visual Studio kurulumuna isteğe bağlı bir özellik olarak dahildir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-a-classifier-extension"></a>Sınıflandırıcı uzantısı oluşturma
  Düzenleyici sınıflandırıcı öğe şablonu, herhangi bir metin dosyasındaki uygun metni (Bu durumda, her şey) renkeden bir düzenleyici sınıflandırıcı oluşturur.
 
-1. **Yeni proje** iletişim kutusunda, **Visual C#** veya **Visual Basic** öğesini genişletin ve ardından **genişletilebilirlik**' e tıklayın. **Şablonlar** bölmesinde **VSIX projesi**' ni seçin. **Ad** kutusuna `TestClassifier` yazın. **Tamam** düğmesine tıklayın.
+1. **Yeni proje** iletişim kutusunda, **Visual C#** veya **Visual Basic** öğesini genişletin ve ardından **genişletilebilirlik**' e tıklayın. **Şablonlar** bölmesinde **VSIX projesi**' ni seçin. **Ad** kutusuna `TestClassifier` yazın. **Tamam**'a tıklayın.
 
-2. **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve **Add**  >  **Yeni öğe** Ekle ' yi seçin. Visual C# **genişletilebilirlik** düğümüne gidin ve **Düzenleyici sınıflandırıcı**' yı seçin. Varsayılan dosya adını (*EditorClassifier1.cs*) bırakın.
+2. **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve   >  **Yeni öğe** Ekle ' yi seçin. Visual C# **genişletilebilirlik** düğümüne gidin ve **Düzenleyici sınıflandırıcı**' yı seçin. Varsayılan dosya adını (*EditorClassifier1.cs*) bırakın.
 
 3. Dört kod dosyası aşağıda verilmiştir:
 
@@ -49,9 +49,9 @@ Düzenleyiciyle sınıflandırmalar, donmanlar ve kenar boşlukları ekleyen tem
 ## <a name="create-a-text-relative-adornment-extension"></a>Metin göreli kenarlığı uzantısı oluşturma
  Düzenleyici metni kenarlığı şablonu, kırmızı bir ana hat ve mavi arka plana sahip bir kutu kullanarak, ' a ' metin karakterinin tüm örneklerini süsleyerek metin göreli bir kenarlığı oluşturur. Metin göreli olarak değişir çünkü kutu, taşındıklarında veya yeniden biçimlendirildiklerinde bile her zaman ' a ' karakterlerinin bulunduğu yerlerdir.
 
-1. **Yeni proje** iletişim kutusunda, **Visual C#** veya **Visual Basic** öğesini genişletin ve ardından **genişletilebilirlik**' e tıklayın. **Şablonlar** bölmesinde **VSIX projesi**' ni seçin. **Ad** kutusuna `TestAdornment` yazın. **Tamam** düğmesine tıklayın.
+1. **Yeni proje** iletişim kutusunda, **Visual C#** veya **Visual Basic** öğesini genişletin ve ardından **genişletilebilirlik**' e tıklayın. **Şablonlar** bölmesinde **VSIX projesi**' ni seçin. **Ad** kutusuna `TestAdornment` yazın. **Tamam**'a tıklayın.
 
-2. **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve **Add**  >  **Yeni öğe** Ekle ' yi seçin. Visual C# **genişletilebilirlik** düğümüne gidin ve **Düzenleyici metni kenarlığı**' nı seçin. Varsayılan dosya adını (*TextAdornment1.CS/vb*) bırakın.
+2. **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve   >  **Yeni öğe** Ekle ' yi seçin. Visual C# **genişletilebilirlik** düğümüne gidin ve **Düzenleyici metni kenarlığı**' nı seçin. Varsayılan dosya adını (*TextAdornment1.CS/vb*) bırakın.
 
 3. Aşağıdaki gibi iki kod dosyası vardır:
 
@@ -69,9 +69,9 @@ Düzenleyiciyle sınıflandırmalar, donmanlar ve kenar boşlukları ekleyen tem
 
 ### <a name="to-create-a-viewport-adornment-extension-by-using-the-editor-viewport-adornment-template"></a>Düzenleyici Görünüm penceresi kenarlığı şablonunu kullanarak bir görünüm penceresi kenarlığı uzantısı oluşturmak için
 
-1. **Yeni proje** iletişim kutusunda, **Visual C#** veya **Visual Basic** öğesini genişletin ve ardından **genişletilebilirlik**' e tıklayın. **Şablonlar** bölmesinde **VSIX projesi**' ni seçin. **Ad** kutusuna `ViewportAdornment` yazın. **Tamam** düğmesine tıklayın.
+1. **Yeni proje** iletişim kutusunda, **Visual C#** veya **Visual Basic** öğesini genişletin ve ardından **genişletilebilirlik**' e tıklayın. **Şablonlar** bölmesinde **VSIX projesi**' ni seçin. **Ad** kutusuna `ViewportAdornment` yazın. **Tamam**'a tıklayın.
 
-2. **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve **Add**  >  **Yeni öğe** Ekle ' yi seçin. Visual C# **genişletilebilirlik** düğümüne gidin ve **Düzenleyici Görünüm penceresi kenarlığı**' ni seçin. Varsayılan dosya adını (*ViewportAdornment1.CS/vb*) bırakın.
+2. **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve   >  **Yeni öğe** Ekle ' yi seçin. Visual C# **genişletilebilirlik** düğümüne gidin ve **Düzenleyici Görünüm penceresi kenarlığı**' ni seçin. Varsayılan dosya adını (*ViewportAdornment1.CS/vb*) bırakın.
 
 3. Aşağıdaki gibi iki kod dosyası vardır:
 
@@ -86,9 +86,9 @@ Düzenleyiciyle sınıflandırmalar, donmanlar ve kenar boşlukları ekleyen tem
 
 ### <a name="to-create-a-margin-extension-by-using-the-editor-margin-template"></a>Düzenleyici kenar boşluğu şablonunu kullanarak bir kenar boşluğu uzantısı oluşturmak için
 
-1. **Yeni proje** iletişim kutusunda, **Visual C#** veya **Visual Basic** öğesini genişletin ve ardından **genişletilebilirlik**' e tıklayın. **Şablonlar** bölmesinde **VSIX projesi**' ni seçin. **Ad** kutusuna `MarginExtension` yazın. **Tamam** düğmesine tıklayın.
+1. **Yeni proje** iletişim kutusunda, **Visual C#** veya **Visual Basic** öğesini genişletin ve ardından **genişletilebilirlik**' e tıklayın. **Şablonlar** bölmesinde **VSIX projesi**' ni seçin. **Ad** kutusuna `MarginExtension` yazın. **Tamam**'a tıklayın.
 
-2. **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve **Add**  >  **Yeni öğe** Ekle ' yi seçin. Visual C# **genişletilebilirlik** düğümüne gidin ve **Düzenleyici kenar boşluğu**' nu seçin. Varsayılan dosya adını (EditorMargin1.cs/vb) bırakın.
+2. **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve   >  **Yeni öğe** Ekle ' yi seçin. Visual C# **genişletilebilirlik** düğümüne gidin ve **Düzenleyici kenar boşluğu**' nu seçin. Varsayılan dosya adını (EditorMargin1.cs/vb) bırakın.
 
 3. Aşağıdaki gibi iki kod dosyası vardır:
 

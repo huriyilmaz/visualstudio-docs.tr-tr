@@ -5,15 +5,15 @@ ms.date: 01/24/2018
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-science
-ms.openlocfilehash: af6c6156b1d88c1d015f7700fc7bed061bbe9a76
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 551f929e4d42b208dd222f052b27720edb273761
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62950584"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99885774"
 ---
 # <a name="help-in-r-tools-for-visual-studio"></a>Visual Studio için R Araçları Yardım
 

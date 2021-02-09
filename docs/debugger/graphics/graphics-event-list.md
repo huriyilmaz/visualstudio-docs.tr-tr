@@ -9,15 +9,15 @@ f1_keywords:
 ms.assetid: a1252e19-b27d-4dc7-a16b-fdac894c1f0e
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d7f987d8dc6decf90e44eef0123f6ad4fc194805
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: c964cda5cbe2903cf9511659b9a8f9bfb9f4aad6
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97727769"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99884526"
 ---
 # <a name="graphics-event-list"></a>Grafik Olay Listesi
 Oyununuzun veya uygulamanızın bir çerçevesini işlerken kaydedilen Direct3D olaylarını araştırmak için Visual Studio Grafik Çözümleyicisi 'deki grafik olay listesini kullanın.
@@ -34,7 +34,7 @@ Oyununuzun veya uygulamanızın bir çerçevesini işlerken kaydedilen Direct3D 
 ### <a name="color-coded-events-in-direct3d-12"></a>Direct3D 12 ' de renk kodlu olaylar
  Direct3D 12, farklı donanım işlevlerine karşılık gelen birden çok sırayı gösterir. Direct3D 12 ' deki belirli bir grafik olayı ile ilişkili sırayı belirlemek için, bir Direct3D 12 uygulaması yakalamayla çalışırken, olaylar, kuyruğuna göre olay listesinde renk kodludur.
 
-|Direct3D 12 kuyruğu|Color|
+|Direct3D 12 kuyruğu|Renk|
 |-----------------------|-----------|
 |İşleme kuyruğu|Yeşil|
 |İşlem kuyruğu|Yellow|

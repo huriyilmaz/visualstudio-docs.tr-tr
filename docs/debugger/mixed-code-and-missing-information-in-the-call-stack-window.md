@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: dd628427-e8d6-4fc2-b524-9d6393ea5376
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: da8d3a469b957444935150f91567636aef0fb38a
-ms.sourcegitcommit: c67dece5ded82a5867148e1f94396954c1ec4398
+ms.openlocfilehash: 793d60c9bc550b0f29ac48e50a95dab601750ad4
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97975270"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99885111"
 ---
 # <a name="mixed-code-and-missing-information-in-the-call-stack-window"></a>Çağrı Yığını Penceresinde Karışık Kod ve Eksik Bilgiler
 Yönetilen ve yerel kod için çağrı yığınları arasındaki farklılıklar nedeniyle, kod türü karışımında hata ayıklayıcı her zaman tüm çağrı yığınını gösteremez. Yerel kod yönetilen kodu çağırdığında, **çağrı yığını** penceresinde aşağıdaki tutarsızlıkları fark edebilirsiniz:

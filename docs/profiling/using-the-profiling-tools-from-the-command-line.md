@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 6593fa82-181e-4009-a0ed-02aa24c2c063
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 9d6e159e28a1401548f0cda7b795a5bbe70a257b
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: 6cfb8f26486c731d3900522d72ac62ff6997005e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98723237"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99885956"
 ---
 # <a name="use-the-profiling-tools-from-the-command-line"></a>Komut satırından Profil Oluşturma Araçları kullanın
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]Komut isteminde uygulamalar profili oluşturmak ve toplu iş dosyalarını ve komut dosyalarını kullanarak profil oluşturmayı otomatikleştirmek için profil oluşturma araçları komut satırı araçlarını kullanabilirsiniz. Ayrıca, bir komut isteminde rapor dosyaları da oluşturabilirsiniz. Yüklü olmayan bilgisayarlarda veri toplamak için hafif tek başına profil oluşturucuyu kullanabilirsiniz [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .

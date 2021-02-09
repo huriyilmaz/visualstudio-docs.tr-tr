@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 590ffd57-0556-43d8-8962-ee27e5b2b7d7
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b02d980292eaed40c7c1598c772b52f695bf23e2
-ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
+ms.openlocfilehash: cd11e722886b77e9faaace768cc30a74c759903f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98149710"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99884214"
 ---
 # <a name="view-threads-in-the-visual-studio-debugger-by-using-the-threads-window-c-visual-basic-c"></a>Iş parçacıkları penceresini kullanarak Visual Studio hata ayıklayıcısındaki iş parçacıklarını görüntüleme (C#, Visual Basic, C++)
 **Iş parçacıkları** penceresinde, hata ayıklaması yaptığınız uygulamadaki iş parçacıklarını inceleyebilir ve bunlarla çalışabilirsiniz. **Iş parçacıkları** penceresini kullanma hakkında adım adım yönergeler için bkz. [Izlenecek yol: iş parçacıkları penceresini kullanarak hata ayıklama](../debugger/how-to-use-the-threads-window.md).

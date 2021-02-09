@@ -15,31 +15,31 @@ helpviewer_keywords:
 ms.assetid: 06f15504-6385-40a6-b01d-cd90ca36dc73
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 100c3cd12a3011d35445ac885333802e28b4a92f
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 71d74d8b16e058b150187a231a1f3a7323c0c612
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94349795"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99885033"
 ---
 # <a name="how-to-set-the-clickonce-publish-version"></a>Nasıl yapılır: ClickOnce yayımlama sürümünü ayarlama
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] `Publish Version` Özelliği, yayımlamakta olduğunuz uygulamanın güncelleştirme olarak değerlendirilip değerlendirilmeyeceğini belirler. Sürüm her artışında, uygulama bir güncelleştirme olarak yayımlanır.
 
- `Publish Version`Özelliği, **Proje Tasarımcısı** ' nın **Yayımla** sayfasında ayarlanabilir.
+ `Publish Version`Özelliği, **Proje Tasarımcısı**' nın **Yayımla** sayfasında ayarlanabilir.
 
 > [!NOTE]
 > Uygulamanın her yayımlanışında özelliği otomatik olarak arttacak bir proje seçeneği vardır `Publish Version` ; Bu seçenek varsayılan olarak etkindir. Daha fazla bilgi için bkz. [nasıl yapılır: ClickOnce Yayım sürümünü otomatik olarak artırma](../deployment/how-to-automatically-increment-the-clickonce-publish-version.md).
 
 ### <a name="to-change-the-publish-version"></a>Yayımla sürümünü değiştirmek için
 
-1. **Çözüm Gezgini** ' de bir proje seçiliyken, **Proje** menüsünde **Özellikler** ' e tıklayın.
+1. **Çözüm Gezgini**' de bir proje seçiliyken, **Proje** menüsünde **Özellikler**' e tıklayın.
 
 2. **Yayımla** sekmesine tıklayın.
 
-3. **Sürümü Yayımla** alanında, **ana** , **İkincil** , **derleme** veya **Düzeltme** sürüm numaralarını artırın.
+3. **Sürümü Yayımla** alanında, **ana**, **İkincil**, **derleme** veya **Düzeltme** sürüm numaralarını artırın.
 
     > [!NOTE]
     > Sürüm numarasını hiçbir şekilde azaltmamanız gerekir; Bunun yapılması öngörülemeyen güncelleştirme davranışına neden olabilir.
