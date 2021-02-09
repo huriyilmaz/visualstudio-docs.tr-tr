@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 7fbb8fb7-db64-4546-a364-dc668430c8af
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1717397d9ff073642c7b6bc25ad85babe76d684c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 04566b4a8dae7f25f799d08780c93936009adef8
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80715577"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99890753"
 ---
 # <a name="ienumdebugprograms2"></a>IEnumDebugPrograms2
 Bu arabirim, geçerli hata ayıklama oturumunda çalışan programları numaralandırır.
@@ -42,7 +42,7 @@ IEnumDebugPrograms2 : IUnknown
 |[Sonraki](../../../extensibility/debugger/reference/ienumdebugprograms2-next.md)|Bir numaralandırma dizisindeki belirtilen sayıda programı alır.|
 |[Atla](../../../extensibility/debugger/reference/ienumdebugprograms2-skip.md)|Bir numaralandırma dizisinde belirtilen sayıda programı atlar.|
 |[Sıfırla](../../../extensibility/debugger/reference/ienumdebugprograms2-reset.md)|Bir numaralandırma dizisini başlangıca sıfırlar.|
-|[Kopyalama](../../../extensibility/debugger/reference/ienumdebugprograms2-clone.md)|Geçerli numaralandırıcı ile aynı numaralandırma durumunu içeren bir Numaralandırıcı oluşturur.|
+|[Oluşturulacak](../../../extensibility/debugger/reference/ienumdebugprograms2-clone.md)|Geçerli numaralandırıcı ile aynı numaralandırma durumunu içeren bir Numaralandırıcı oluşturur.|
 |[GetCount](../../../extensibility/debugger/reference/ienumdebugprograms2-getcount.md)|Bir Numaralandırıcı içindeki program sayısını alır.|
 
 ## <a name="remarks"></a>Açıklamalar

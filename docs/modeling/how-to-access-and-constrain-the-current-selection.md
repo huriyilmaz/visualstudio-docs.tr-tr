@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Domain-Specific Language, accessing the current selection
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0ba656793b630dd55fc2ebc7242e5d45484b0f8e
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: 83903c8ff911fdd1d4900714137a7f6976513dad
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97363399"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99890571"
 ---
 # <a name="how-to-access-and-constrain-the-current-selection"></a>Nasıl yapılır: Geçerli Seçime Erişme ve Seçimi Kısıtlama
 
@@ -32,7 +32,7 @@ Komuta bağlı olarak, komut işleyicisinin model tasarımcısında, model Gezgi
 
 1. <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>Sınıfı, geçerli seçime erişmek için kullanılabilecek aşağıdaki üyeleri tanımlar.
 
-    |Üye|Açıklama|
+    |Üye|Description|
     |-|-|
     |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsAnyDocumentSelectionCompartment%2A> yöntemi|`true`Model tasarımcısında seçili öğelerden herhangi biri bir bölme şekli ise, aksi takdirde, döndürür `false` .|
     |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsDiagramSelected%2A> yöntemi|`true`Şema, model tasarımcısında seçiliyse döndürür; Aksi takdirde, `false` .|

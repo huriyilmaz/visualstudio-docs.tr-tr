@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 2465cd9d-18b6-4c4a-b1ea-86dbab23fc79
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f761161f2ad29be994b3a6260bafe827a41fabe0
-ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
+ms.openlocfilehash: 3de415f99dbb9a91f2fa0e30ffc5e40727d10303
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96616363"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99889764"
 ---
 # <a name="visual-basic-defaults-projects-options-dialog-box"></a>Visual Basic Varsayılanları, Projeler, Seçenekler İletişim Kutusu
 Visual Basic proje seçenekleri için varsayılan ayarları belirtir. Yeni bir proje oluşturulduğunda, belirtilen seçenek deyimleri kod düzenleyicisinde proje başlığına eklenecektir. Seçenekler tüm Visual Basic projelerine uygulanır.

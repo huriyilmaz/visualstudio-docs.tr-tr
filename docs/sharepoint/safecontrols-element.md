@@ -11,15 +11,15 @@ helpviewer_keywords:
 - SafeControls element
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: c3423d1b6efd106ef7f947bd8573dcd1aa548a66
-ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
+ms.openlocfilehash: 23e31e3df59d6d580ac94ffcb83f7a17e186a267
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95440681"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99889453"
 ---
 # <a name="safecontrols-element"></a>SafeControls öğesi
   Herhangi bir kullanıcının SharePoint sitesindeki herhangi bir ASPX sayfasına erişmesi için güvenli olarak belirlenmiş bir ASPX denetimleri ve Web Bölümleri koleksiyonu.
@@ -57,7 +57,7 @@ ms.locfileid: "95440681"
 
 |Özellik|Değer|
 |-|-|
-|**Uzayına**|http: \/ \/ schemas.Microsoft.com/VisualStudio/<br>2010/SharePointTools/Sharepointprojectıtemmodel|
+|**Ad Alanı**|http: \/ \/ schemas.Microsoft.com/VisualStudio/<br>2010/SharePointTools/Sharepointprojectıtemmodel|
 |**Şema adı**|SharePoint proje öğesi şeması|
 |**Doğrulama dosyası**|Projectıtemmodelschema. xsd|
 |**Boş olabilir**|Hayır|

@@ -14,15 +14,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, extending project items
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: ae43eb1fd2c20fde6e7b1ad503b87a5d1cb367b1
-ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
+ms.openlocfilehash: 3d721c8d4f381e99a814852839de0e808d326b3a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94850175"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99889648"
 ---
 # <a name="how-to-add-a-property-to-a-sharepoint-project-item-extension"></a>Nasıl yapılır: bir SharePoint proje öğe uzantısına özellik ekleme
   Visual Studio 'da zaten yüklü olan herhangi bir SharePoint proje öğesine bir özellik eklemek için bir proje öğesi uzantısı kullanabilirsiniz. Özelliği, proje öğesi **Çözüm Gezgini** seçildiğinde **Özellikler** penceresinde görünür.

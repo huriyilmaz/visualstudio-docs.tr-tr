@@ -6,15 +6,15 @@ ms.topic: conceptual
 ms.assetid: 3a10022a-5c37-48b1-a833-dd35902176b6
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 6f8fadf9ef97717983c96226d81d43efada65e89
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: 8c919c72cbf06faccf5bb39b0753533f2b2a441f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98723146"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99890532"
 ---
 # <a name="visualize-eventsource-events-as-markers"></a>EventSource olaylarını işaretçiler olarak görselleştirin
 Eşzamanlılık görselleştiricisi, EventSource olaylarını işaretçiler olarak görüntüleyebilir ve işaretçilerin nasıl görüntüleneceğini denetleyebilir. EventSource işaretleyicilerini görüntülemek için, [Gelişmiş ayarlar](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) iletişim kutusunu kullanarak ETW sağlayıcısı GUID 'sini kaydedin. Eşzamanlılık görselleştiricisi, olay [işaretçileri](../profiling/flag-markers.md), [span Işaretçileri](../profiling/span-markers.md)ve [ileti işaretçileri](../profiling/message-markers.md)olarak EventSource olaylarını temsil eden varsayılan kurallara sahiptir. Olaylara özel alanlar ekleyerek EventSource olaylarının nasıl görüntülendiğini özelleştirebilirsiniz. İşaretleyiciler hakkında daha fazla bilgi için bkz. [Eşzamanlılık görselleştiricisi işaretçileri](../profiling/concurrency-visualizer-markers.md). EventSource olayları hakkında daha fazla bilgi için bkz <xref:System.Diagnostics.Tracing> ..

@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: a4517f73-45af-4745-9d7f-9fddf887b636
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ffe5cb6477808f892b8d36aa5fd616a5a0ea7969
-ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
+ms.openlocfilehash: 6817dbd534d272924e5020b1c4c48753dcd70a54
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97876330"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99890675"
 ---
 # <a name="project-configuration-for-output"></a>Çıkış için Proje Yapılandırması
 Her yapılandırma, çalıştırılabilir veya kaynak dosyaları gibi çıkış öğeleri üreten bir yapı işlemi kümesini destekleyebilir. Bu çıkış öğeleri kullanıcıya özeldir ve yürütülebilir dosyalar (. exe,. dll,. lib) ve kaynak dosyaları (. IDL,. h dosyaları) gibi ilgili çıkış türlerini bağlayan gruplara yerleştirilebilir.

@@ -14,15 +14,15 @@ helpviewer_keywords:
 - SharePoint Connections [SharePoint development in Visual Studio], creating a new node type
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 56b635db6a8b0c24e2604940fe7500bb8f769a1b
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: 9c10c2bc69086e3c98633ba746c1e6fc8d7f2a20
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94672567"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99889700"
 ---
 # <a name="extend-the-sharepoint-connections-node-in-server-explorer"></a>Sunucu Gezgini SharePoint bağlantıları düğümünü genişletme
   Visual Studio 'da, **Sunucu Gezgini** penceresindeki **SharePoint bağlantıları** düğümünü kullanarak geliştirme bilgisayarındaki yerel SharePoint sitelerine bağlanabilirsiniz. Bu düğüm, hiyerarşik ağaç görünümünde yerel SharePoint sitelerinin birçok bileşenini görüntüler. Örneğin, listeleri, belge kitaplıklarını ve içerik türlerini yerel sitelerde görüntüleyebilirsiniz. Yerel SharePoint sitelerine bağlanmak için **Sunucu Gezgini** kullanma hakkında daha fazla bilgi için bkz. [Sunucu Gezgini kullanarak SharePoint bağlantılarına gözatamıyorum](../sharepoint/browsing-sharepoint-connections-using-server-explorer.md).
@@ -59,7 +59,7 @@ ms.locfileid: "94672567"
 |---------------|----------------------|
 |SharePoint sitesi düğümü|<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerSiteNodeInfo>|
 |İçerik türü|<xref:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IContentTypeNodeInfo>|
-|Öne çıkan özelliği|<xref:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IFeatureNodeInfo>|
+|Özellik|<xref:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IFeatureNodeInfo>|
 |Alan|<xref:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IFieldNodeInfo>|
 |Liste|<xref:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IListNodeInfo>|
 |Liste şablonu|<xref:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IListTemplateNodeInfo>|

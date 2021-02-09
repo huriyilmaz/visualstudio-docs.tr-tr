@@ -6,17 +6,17 @@ ms.date: 06/05/2019
 ms.topic: overview
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: a913fa6abdcf59a64d8514f17656b8f8531d476d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0283cb4332e9137550b74a85c38d7963f3c77a70
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89315271"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99890480"
 ---
 # <a name="work-with-python-in-visual-studio-on-windows"></a>Windows üzerinde Visual Studio 'da Python ile çalışma
 
@@ -63,7 +63,7 @@ Daha fazla bilgi için:
 
 ## <a name="rich-editing-intellisense-and-code-comprehension"></a>Zengin düzenlemeler, IntelliSense ve kod kavrama
 
-Visual Studio, sözdizimi renklendirme, tüm kod ve kitaplıklarınızda otomatik tamamlanma, kod biçimlendirme, imza yardımı, yeniden düzenleme, oluşturma ve tür ipuçlarına dahil olmak üzere birinci sınıf bir Python Düzenleyicisi sağlar. Visual Studio Ayrıca sınıf görünümü gibi benzersiz özellikler de sağlar, **Tanıma Git**, **tüm başvuruları bul**ve kod parçacıkları. [Etkileşimli pencereyle](#interactive-window) doğrudan tümleştirme, bir dosyaya zaten kaydedilmiş Python kodunu hızlı bir şekilde geliştirmenize yardımcı olur.
+Visual Studio, sözdizimi renklendirme, tüm kod ve kitaplıklarınızda otomatik tamamlanma, kod biçimlendirme, imza yardımı, yeniden düzenleme, oluşturma ve tür ipuçlarına dahil olmak üzere birinci sınıf bir Python Düzenleyicisi sağlar. Visual Studio Ayrıca sınıf görünümü gibi benzersiz özellikler de sağlar, **Tanıma Git**, **tüm başvuruları bul** ve kod parçacıkları. [Etkileşimli pencereyle](#interactive-window) doğrudan tümleştirme, bir dosyaya zaten kaydedilmiş Python kodunu hızlı bir şekilde geliştirmenize yardımcı olur.
 
 ![Visual Studio 'da Python kodu için kod tamamlama](media/code-editing-completions-simple.png)
 
@@ -81,7 +81,7 @@ Visual Studio tarafından bilinen her Python ortamında, ayrı bir komut istemi 
 
 ![Visual Studio 'da Python etkileşimli penceresi](media/interactive-window.png)
 
-Visual Studio Ayrıca Python kod Düzenleyicisi ve **etkileşimli** pencere arasında sıkı tümleştirme sağlar. **Ctrl tuşu** + **Enter** klavye kısayolu, düzenleyicide geçerli kod satırını (veya kod bloğunu) **etkileşimli** pencereye kolayca gönderir ve ardından sonraki satıra (veya bloğa) gider. **CTRL** + **ENTER** , hata ayıklayıcıyı çalıştırmak zorunda kalmadan kodu kolayca adımlamanızı sağlar. Ayrıca, seçilen kodu aynı tuş vuruşu ile **etkileşimli** pencereye gönderebilir ve **etkileşimli** penceredeki kodu kolayca düzenleyiciye yapıştırabilirsiniz. Bu yetenekler birlikte, **etkileşimli** penceredeki bir kod segmenti için ayrıntıları çalışmanıza ve sonuçları düzenleyicide bir dosyaya kolayca kaydetmenizi sağlar.
+Visual Studio Ayrıca Python kod Düzenleyicisi ve **etkileşimli** pencere arasında sıkı tümleştirme sağlar. **Ctrl tuşu** +  klavye kısayolu, düzenleyicide geçerli kod satırını (veya kod bloğunu) **etkileşimli** pencereye kolayca gönderir ve ardından sonraki satıra (veya bloğa) gider. **CTRL** + **ENTER** , hata ayıklayıcıyı çalıştırmak zorunda kalmadan kodu kolayca adımlamanızı sağlar. Ayrıca, seçilen kodu aynı tuş vuruşu ile **etkileşimli** pencereye gönderebilir ve **etkileşimli** penceredeki kodu kolayca düzenleyiciye yapıştırabilirsiniz. Bu yetenekler birlikte, **etkileşimli** penceredeki bir kod segmenti için ayrıntıları çalışmanıza ve sonuçları düzenleyicide bir dosyaya kolayca kaydetmenizi sağlar.
 
 Visual Studio Ayrıca satır içi çizimler, .NET ve Windows Presentation Foundation (WPF) dahil olmak üzere REPL 'da IPython/Jupyter 'yı da destekler.
 
@@ -213,7 +213,7 @@ Visual Studio 2015 ve önceki sürümleri [VisualStudio.Microsoft.com/vs/Older-d
 
 <br/>
 
-|           Düzenleniyor            |   2017 +   |   2015   | 2013 Comm | 2013 Masaüstü | 2013 Web | 2013 Pro + | 2012 Pro + | 2010 SP1 Pro + |
+|           Düzenleme            |   2017 +   |   2015   | 2013 Comm | 2013 Masaüstü | 2013 Web | 2013 Pro + | 2012 Pro + | 2010 SP1 Pro + |
 |------------------------------|----------|----------|-----------|--------------|----------|-----------|-----------|---------------|
 |     Söz dizimi vurgulama      | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
 |        Otomatik tamamlama         | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |

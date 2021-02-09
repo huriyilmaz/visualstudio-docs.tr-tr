@@ -11,15 +11,15 @@ helpviewer_keywords:
 - SafeControl element
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 36a8b0ed45fbdb8d2dfe8e93a027a47adf407587
-ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
+ms.openlocfilehash: f08046666ff00d4a0e5489bc78c0c70967774f08
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95440629"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99889479"
 ---
 # <a name="safecontrol-element"></a>SafeControl öğesi
   Herhangi bir kullanıcının SharePoint sitesindeki herhangi bir ASPX sayfasına erişmesi için güvenli olarak belirlenmiş bir ASPX denetimi veya Web bölümü temsil eder.
@@ -46,7 +46,7 @@ ms.locfileid: "95440629"
 |**IsSafe**|İsteğe bağlı **xs: Boolean** özniteliği.<br /><br /> ASPX denetiminin veya Web bölümünün güvenilmeyen kullanıcıların erişmesi için güvenli olup olmadığını belirtir.|
 |**Issafeagaınstscript**|İsteğe bağlı **xs: Boolean** özniteliği.<br /><br /> Güvenilmeyen kullanıcıların ASPX denetiminin veya Web bölümünün özelliklerini görüntüleyip görüntüleyemeyeceğini veya düzenleyip düzenleyemeyeceğini belirtir.|
 |**Ad**|İsteğe bağlı **xs: String** özniteliği.<br /><br /> Koleksiyondaki bu güvenli denetim girişinin adı.|
-|**Uzayına**|İsteğe bağlı **xs: String** özniteliği.<br /><br /> ASPX denetiminin veya Web bölümünün ad alanı.|
+|**Ad Alanı**|İsteğe bağlı **xs: String** özniteliği.<br /><br /> ASPX denetiminin veya Web bölümünün ad alanı.|
 |**'Ta**|İsteğe bağlı **xs: String** özniteliği.<br /><br /> ASPX denetiminin veya Web bölümünün tür adı.|
 
 ### <a name="child-elements"></a>Alt öğeleri
@@ -65,7 +65,7 @@ ms.locfileid: "95440629"
 
 |Özellik|Değer|
 |-|-|
-|**Uzayına**|http: \/ \/ schemas.Microsoft.com/VisualStudio/<br>2010/SharePointTools/Sharepointprojectıtemmodel|
+|**Ad Alanı**|http: \/ \/ schemas.Microsoft.com/VisualStudio/<br>2010/SharePointTools/Sharepointprojectıtemmodel|
 |**Şema adı**|SharePoint proje öğesi şeması|
 |**Doğrulama dosyası**|Projectıtemmodelschema. xsd|
 |**Boş olabilir**|Hayır|

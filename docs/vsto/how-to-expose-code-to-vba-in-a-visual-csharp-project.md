@@ -14,15 +14,15 @@ helpviewer_keywords:
 - exposing code to VBA
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: a830ec75e3997bee8d4bed9e275fc6229fec3405
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: 1df1eed4edec3efdbf93f4effc352b3d02656d04
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96846603"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99889414"
 ---
 # <a name="how-to-expose-code-to-vba-in-a-visual-c-project"></a>Nasıl yapılır: Visual C# projesinde kodu VBA kullanımına sunma
   İki tür kodun birbirleriyle etkileşime geçmesini isterseniz, bir Visual C# projesindeki kodu Visual Basic for Applications (VBA) kodu olarak kullanıma sunabilirsiniz.

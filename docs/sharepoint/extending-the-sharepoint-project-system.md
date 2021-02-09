@@ -12,15 +12,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, extending project items
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: c017217f66e38eed6248b90efaeabce0efaa9c70
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: 5a81fef67cc6816f16a074494005a61d647abeab
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94672554"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99889687"
 ---
 # <a name="extend-the-sharepoint-project-system"></a>SharePoint proje sistemini genişletme
   Visual Studio 'da bir dizi proje şablonu ve öğe şablonu kullanarak SharePoint çözümleri oluşturabilirsiniz. Bu şablonlar birçok geliştirme senaryosunun gereksinimlerini karşılar, ancak ihtiyacınız olan işlevleri sağlamayan bazı durumları keşfedebilirsiniz. Bu gibi durumlarda, SharePoint proje sistemini genişletebilirsiniz.

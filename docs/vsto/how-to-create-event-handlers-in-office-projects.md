@@ -14,15 +14,15 @@ helpviewer_keywords:
 - events [Office development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: f87889c13021a7c0a43b58564210db34301abdf4
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: b2aed6102b6aed5938ecfab826363e62dcfac48a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96846707"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99889427"
 ---
 # <a name="how-to-create-event-handlers-in-office-projects"></a>Nasıl yapılır: Office projelerinde olay işleyicileri oluşturma
   Visual Basic ve C# ' de olay işleyicileri oluşturmanın birkaç yolu vardır. Tasarım görünümünde, denetime çift tıklayarak denetimler için varsayılan olay işleyicilerini oluşturabilir veya denetimdeki herhangi bir olay için işleyiciler oluşturmak üzere **Özellikler** penceresinin Olaylar bölmesini kullanabilirsiniz. Ancak, kod görünümünde çalışıyorsanız, bir olay işleyicisi oluşturmak için Tasarım görünümü geçiş yapmak istemeyebilirsiniz.
@@ -44,7 +44,7 @@ ms.locfileid: "96846707"
 
 ### <a name="to-create-an-event-handler-in-c"></a>C 'de bir olay işleyicisi oluşturmak için\#
 
-1. Tam olay adını yazıp bir boşluk ve ardından boşluk olmadan yazarak, sınıfının **Başlangıç** olayında olay temsilcisini oluşturun **+=** . Örnek:
+1. Tam olay adını yazıp bir boşluk ve ardından boşluk olmadan yazarak, sınıfının **Başlangıç** olayında olay temsilcisini oluşturun **+=** . Örneğin:
 
      `this.<object name>.<event name> +=`
 

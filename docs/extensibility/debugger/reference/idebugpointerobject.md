@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 257fa167-b46e-4ffb-9a12-272efbf26702
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4b28189b3f0a07a27f5e4478f64963a63d634db5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 134c1edabb7df7a5cb7f26ce1b7b7487daa78e37
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80725495"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99890207"
 ---
 # <a name="idebugpointerobject"></a>IDebugPointerObject
 > [!IMPORTANT]
@@ -28,7 +28,7 @@ ms.locfileid: "80725495"
 ## <a name="syntax"></a>Syntax
 
 ```
-IDebugPointerObject : IDebugObject
+IDebugPointerObject : IDebugObject
 ```
 
 ## <a name="notes-for-implementers"></a>Implemenonun notları
@@ -57,5 +57,5 @@ IDebugPointerObject : IDebugObject
  Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [İfade Değerlendirme Arabirimleri](../../../extensibility/debugger/reference/expression-evaluation-interfaces.md)
+- [Expression Evaluation Interfaces](../../../extensibility/debugger/reference/expression-evaluation-interfaces.md)
 - [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

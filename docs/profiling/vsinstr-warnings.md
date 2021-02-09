@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: 47512bc9-a8e9-4628-883a-d9888edab786
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: d5510c475ab566e65d2bd152136535fde62f257b
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: ed42588f7135b4664b7f65dfcd8c0d979a523aeb
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98723133"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99890493"
 ---
 # <a name="vsinstr-warnings"></a>VSInstr uyarıları
 Aşağıdaki tabloda *VSInstr.exe* aracı tarafından verilen uyarılar listelenmektedir. Uyarının görünmesini engellemek için uyarı numaralarıyla birlikte NOWARN seçeneğini kullanabilirsiniz.
 
-|Uyarı numarası|Açıklama|
+|Uyarı numarası|Description|
 |--------------------|-----------------|
 |**VSP1026**|MSCorLib 'e başvurmayan kitaplıklarda kapsam desteklenmez. Bu durum genellikle taşınabilir kitaplıklar için de kullanılır.<br /><br />.NET Core için [/Enablecodecoverage](../test/vstest-console-options.md) komut satırı seçeneği gereklidir.|
 |**VSP2000**|İç Hata. Bu yürütülebilir dosya için modül dosyası adı alınamıyor.|

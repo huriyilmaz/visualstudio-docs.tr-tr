@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 2f6f18d1-acd8-454d-a856-9a4d81155052
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b2d745619be8bff77503bc14a1d7a87d84cc7864
-ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
+ms.openlocfilehash: 0f77afea813158c787978e2ea4dbec1a55e36eca
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97875603"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99890636"
 ---
 # <a name="selection-and-currency-in-the-ide"></a>IDE’de Seçim ve Para Birimi
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Tümleşik geliştirme ortamı (IDE), kullanıcıların seçilmiş olan nesneler hakkında seçim *bağlamını* kullanarak bilgi saklar. Seçim bağlamında VSPackages, para birimi izlemede iki şekilde bir parçası alabilir:

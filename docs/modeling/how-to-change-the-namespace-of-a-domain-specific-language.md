@@ -8,16 +8,16 @@ helpviewer_keywords:
 - Domain-Specific Language, namespace
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: SEO-VS-2020
 ms.workload:
 - multiple
-ms.openlocfilehash: a7b0de26fdc1a7982347a12c283a6aa73e9aad12
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 29835e993d287c981ad1c4014af3dc276891af5d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809446"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99890506"
 ---
 # <a name="how-to-change-the-namespace-of-a-domain-specific-language"></a>Nasıl yapılır: etki alanına özgü dilin ad alanını değiştirme
 
@@ -49,7 +49,7 @@ Etki alanına özgü dilin ad alanını değiştirebilirsiniz. DSL **Gezgini**' 
 
 10. Visual Studio Deneysel örneğini sıfırlayın.
 
-    1. **\Users \\ **_{Name}_**\appdata\local\microsoft\visualstudio \\ \* Exp**öğesini silin.
+    1. **\Users \\**_{Name}_**\appdata\local\microsoft\visualstudio \\ \* Exp** öğesini silin.
 
     2. Windows **Başlat** menüsünde **tüm programlar**' ı seçin  >  **Microsoft Visual Studio 2010 SDK**  >  **araçları**  >  **deneysel örneği sıfırlayın**.
 

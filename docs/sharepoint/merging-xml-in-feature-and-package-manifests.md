@@ -11,15 +11,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, packaging
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 16305ed63f48d9f14e35aeb8d37e35f23f40be25
-ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
+ms.openlocfilehash: 8be6adfedeabaea236e4dcb2cd969e6023a7f3ec
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2020
-ms.locfileid: "96304232"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99889570"
 ---
 # <a name="merge-xml-in-feature-and-package-manifests"></a>Özellik ve paket bildirimlerinde XML 'yi birleştirme
   Özellikler ve paketler, [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] bildirim dosyaları tarafından tanımlanır. Bu paketlenmiş bildirimler, tasarımcılardan oluşturulan verilerin ve [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] bildirim şablonunda kullanıcılar tarafından girilen özel bir birleşimidir. Paketleme sırasında, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] paketlenmiş bildirim dosyasını oluşturmak için özel deyimleri tasarımcı tarafından belirtilen şekilde birleştirir [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] . Daha sonra birleştirme özel durumları 'nda belirtilen özel durumlarla benzer öğeler, [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] dosyaları SharePoint 'e dağıttıktan sonra doğrulama hatalarından kaçınmak ve bildirim dosyalarını daha küçük ve daha verimli hale getirmek için birleştirilir.

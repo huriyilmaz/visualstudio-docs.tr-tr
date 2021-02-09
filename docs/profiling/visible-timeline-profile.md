@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 559841d1-967c-4b51-8574-6ace23969580
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b4b8725a6336218bdac413b12a20ff201dd0c287
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: 6b63bbd3396e0a4119e59bd47bde31459b3d2145
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98723172"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99890519"
 ---
 # <a name="visible-timeline-profile"></a>Görünür zaman çizelgesi profili
 Iş parçacığı engelleme görünümü için görünür zaman çizelgesi profili, istatistiksel bilgiler ve raporlara bağlantılar sağlar. Yakınlaştırma, büyütme, yatay kaydırma, kanalları gizleme veya kanalları gösterme gibi, etkin göstergedeki numaralar şu anda görünümde olan öğeleri yansıtacak şekilde değişir. Göstergedeki bir öğeyle ilgili bir raporu görüntülemek için öğeye tıklayın.

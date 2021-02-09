@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 8ebc256b-5428-4ed6-a505-6aedc8242b8e
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: a07f2808c1aaeca3c1631fce658fdf6e8da32d60
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d98f8653d851eb338a96f969d73a2514b555f400
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80727770"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99890285"
 ---
 # <a name="idebuginterceptexceptioncompleteevent2"></a>IDebugInterceptExceptionCompleteEvent2
 Bu arabirim, olay ayıklama altyapısı (DE) tarafından, iptal edilmiş bir olayın işlenmesini tamamladıktan sonra oturum hata ayıklama Yöneticisi 'ne (SDM) gönderilir.

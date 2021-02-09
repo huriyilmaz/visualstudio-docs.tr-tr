@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: cc04fa75-012b-47c9-9347-f4216be23cf2
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 68d39bed64ff1392c83d6fc2be0de936ac1b00d2
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 8cb23eeee53990113d779e241adb8dcf1ab0cf16
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94350068"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99890312"
 ---
 # <a name="how-to-configure-the-clickonce-trust-prompt-behavior"></a>Nasıl yapılır: ClickOnce güven istemi davranışını yapılandırma
 ClickOnce güven istemi ' ni, son kullanıcılara Windows Forms uygulamalar, Windows Presentation Foundation uygulamalar, konsol uygulamaları, WPF tarayıcı uygulamaları ve Office çözümleri gibi ClickOnce uygulamalarını yükleme seçeneği verilip verilmediğini denetlemek için yapılandırabilirsiniz. Her son kullanıcının bilgisayarında kayıt defteri anahtarlarını ayarlayarak güven istemi 'ni yapılandırırsınız.
@@ -55,11 +55,11 @@ ClickOnce güven istemi ' ni, son kullanıcılara Windows Forms uygulamalar, Win
 
 #### <a name="to-enable-the-clickonce-trust-prompt-by-using-the-registry-editor"></a>Kayıt defteri düzenleyicisini kullanarak ClickOnce güven istemi 'ni etkinleştirmek için
 
-1. Kayıt defteri düzenleyicisini açın: 
+1. Kayıt defteri düzenleyicisini açın:
 
-    1. **Başlat** ' a ve ardından **Çalıştır** ' a tıklayın.
+    1. **Başlat**' a ve ardından **Çalıştır**' a tıklayın.
 
-    2. **Aç** kutusuna yazın `regedit` ve ardından **Tamam** ' a tıklayın.
+    2. **Aç** kutusuna yazın `regedit` ve ardından **Tamam**' a tıklayın.
 
 2. Aşağıdaki kayıt defteri anahtarını bulun:
 
@@ -114,11 +114,11 @@ ClickOnce güven istemi ' ni, son kullanıcılara Windows Forms uygulamalar, Win
 
 #### <a name="to-restrict-the-clickonce-trust-prompt-by-using-the-registry-editor"></a>Kayıt defteri düzenleyicisini kullanarak ClickOnce güven istemi 'ni kısıtlamak için
 
-1. Kayıt defteri düzenleyicisini açın: 
+1. Kayıt defteri düzenleyicisini açın:
 
-    1. **Başlat** ' a ve ardından **Çalıştır** ' a tıklayın.
+    1. **Başlat**' a ve ardından **Çalıştır**' a tıklayın.
 
-    2. **Aç** kutusuna yazın `regedit` ve ardından **Tamam** ' a tıklayın.
+    2. **Aç** kutusuna yazın `regedit` ve ardından **Tamam**' a tıklayın.
 
 2. Aşağıdaki kayıt defteri anahtarını bulun:
 
@@ -171,11 +171,11 @@ ClickOnce güven istemi ' ni, son kullanıcılara Windows Forms uygulamalar, Win
 
 #### <a name="to-disable-the-clickonce-trust-prompt-by-using-the-registry-editor"></a>Kayıt defteri düzenleyicisini kullanarak ClickOnce güven istemi 'ni devre dışı bırakmak için
 
-1. Kayıt defteri düzenleyicisini açın: 
+1. Kayıt defteri düzenleyicisini açın:
 
-    1. **Başlat** ' a ve ardından **Çalıştır** ' a tıklayın.
+    1. **Başlat**' a ve ardından **Çalıştır**' a tıklayın.
 
-    2. **Aç** kutusuna yazın `regedit` ve ardından **Tamam** ' a tıklayın.
+    2. **Aç** kutusuna yazın `regedit` ve ardından **Tamam**' a tıklayın.
 
 2. Aşağıdaki kayıt defteri anahtarını bulun:
 

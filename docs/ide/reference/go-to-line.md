@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: 529fa251-b7b3-49cf-863c-10e0b82ac7cc
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 7241a574dc8ac8531c2eb4d88eddb1cf047a80d6
-ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
+ms.openlocfilehash: fa2cc2555f87d1781712e60463401a38f843635e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2020
-ms.locfileid: "96304211"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99889934"
 ---
 # <a name="go-to-line-dialog-box"></a>Satıra Git iletişim kutusu
 
-**Satıra git** iletişim kutusu etkin belgedeki belirli bir satıra gitmenizi sağlar. Bu iletişim kutusuna erişmek için, düzenleme için bir belge açın ve ardından **Düzenle** git ' i seçerek  >  **Go To**  >  **satıra gidin** veya **CTRL** + **G** tuşuna basın.
+**Satıra git** iletişim kutusu etkin belgedeki belirli bir satıra gitmenizi sağlar. Bu iletişim kutusuna erişmek için, düzenleme için bir belge açın ve ardından **Düzenle** git ' i seçerek  >    >  **satıra gidin** veya **CTRL** + **G** tuşuna basın.
 
 ![Visual Studio 'da satıra Git iletişim kutusu](media/go-to-line-dialog-box.png)
 
