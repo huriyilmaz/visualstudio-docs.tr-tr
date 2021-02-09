@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: 579aed0b-c57d-41a1-a94a-3bf665fd4a9d
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 25942c76d8e568d6354c9a6a2b2c69c806cde352
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b3d34c362a64107bff94e271c01b57d45d09cf8d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85461604"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99862551"
 ---
 # <a name="idiasymbolget_undecoratednameex"></a>IDiaSymbol::get_undecoratedNameEx
 C++ ile düzenlenmiş (bağlantı) adı için, açıklanmamalıdır bir adın bir kısmını veya tamamını alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT get_undecoratedNameEx( 
+HRESULT get_undecoratedNameEx( 
    DWORD undecorateOptions,
    BSTR* pRetval
 );

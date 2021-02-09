@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: 9f5caeb4-5c88-4054-bf8b-50d34bbbf8c5
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 2fe29506c0d25d2afc9914c21774dbf353a7a341
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0f2ea60722775d706bdbf4753c9dd8d6e0b18b20
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85462583"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99862831"
 ---
 # <a name="idiasymbolget_parambasepointerregisterid"></a>IDiaSymbol::get_paramBasePointerRegisterId
 Parametrelere bir taban işaretçisi tutan kaydın KIMLIĞINI alır. [SymTagEnum numaralandırması](../../debugger/debug-interface-access/symtagenum.md) olarak ayarlandığında kullanın `SymTagFunction` .
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT get_paramBasePointerRegisterId ( 
+HRESULT get_paramBasePointerRegisterId ( 
    DWORD* pRetVal
 );
 ```

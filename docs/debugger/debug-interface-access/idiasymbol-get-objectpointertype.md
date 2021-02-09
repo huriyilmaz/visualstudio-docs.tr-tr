@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: bce193b9-67b0-4c35-96e5-6a664937322e
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 1ae9ce8d655d9229b5e9c9f547b0dade6ad503e6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: add00659717072522acd7942d16feb942a5dca83
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85462688"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99862859"
 ---
 # <a name="idiasymbolget_objectpointertype"></a>IDiaSymbol::get_objectPointerType
 Bir sınıf yöntemi için nesne işaretçisinin türünü alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT get_objectPointerType ( 
+HRESULT get_objectPointerType ( 
    IDiaSymbol** pRetVal
 );
 ```

@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: 1c6a4176-dd4e-4c22-8b8f-0e559fc078ba
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 738d3045c524700e803fe82c8902d4f1b77948b5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d739764d540c67d8b776770c400f499ad49fa7fb
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85461748"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99862579"
 ---
 # <a name="idiasymbolget_type"></a>IDiaSymbol::get_type
 Bu sembolün türünü temsil eden simgeyi alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
 HRESULT get_type (
