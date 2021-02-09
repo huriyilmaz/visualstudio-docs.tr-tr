@@ -9,15 +9,15 @@ helpviewer_keywords:
 - IntelliSense [C#]
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: e725a06a2bc90c91cff11b05ad32b20a0db8e4fc
-ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
+ms.openlocfilehash: b7e67c3a00a427a9f3cd6167af494484a02cc3f2
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96479790"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99862069"
 ---
 # <a name="c-intellisense"></a>C# IntelliSense
 
@@ -72,7 +72,7 @@ IntelliSense, filtre kullanarak gereksiz üyeleri tamamlama listesinden kaldır�
 
 - **enum anahtar sözcüğü**: bir Enum ataması için eşittir Işaretinden sonra **boşluğa** bastığınızda bir tamamlama listesi görüntülenir. Kodunuzda bağlam temelinde, listede otomatik olarak bir öğe seçilir. Örneğin, Return anahtar sözcüğünü yazdıktan sonra ve bir bildirim yaptığınızda öğeler tamamlama listesinde otomatik olarak seçilir.
 
-- **as ve in işleçleri**: **Space** `as` veya anahtar sözcüğünü yazdıktan sonra alana bastığınızda filtrelenmiş tamamlanma listesi otomatik olarak görüntülenir `is` .
+- **as ve in işleçleri**:  `as` veya anahtar sözcüğünü yazdıktan sonra alana bastığınızda filtrelenmiş tamamlanma listesi otomatik olarak görüntülenir `is` .
 
 - **Olaylar**: anahtar sözcüğünü yazdığınızda `event` , tamamlama listesi yalnızca temsilci türlerini içerir.
 
@@ -126,7 +126,7 @@ Her tanımsız tanımlayıcı altında kırmızı dalgalı alt çizgi görünür
 
 - Tanımsız tanımlayıcıya tıklayın. Tanımlayıcının altında **hızlı bir eylem** hatası ampulü görünür. Ampul hatası ' na tıklayın.
 
-- Tanımsız tanımlayıcıya tıklayın ve ardından CTRL tuşuna basın **Ctrl** + **.** (**CTRL** + nokta).
+- Tanımsız tanımlayıcıya tıklayın ve ardından CTRL tuşuna basın  + **.** (**CTRL** + nokta).
 
 - Tanımsız tanımlayıcıya sağ tıklayın ve sonra **Hızlı Eylemler ve yeniden düzenlemeler**' e tıklayın.
 
@@ -160,7 +160,7 @@ IntelliSense, kod Düzenleyicisi 'nde Yöntemler (olay işleyicileri) ile olay a
 **Sekme** tuşuna basarsanız, IntelliSense doğru imzaya sahip bir yöntemi dışarı yerleştirir ve imleci olay işleyicinizin gövdesine koyar.
 
 > [!NOTE]
-> **View** **Ctrl** Olay kancası bildirimine geri dönmek için Görünüm menüsündeki **geri git** komutunu (Ctrl + **-** ) kullanın.
+>  Olay kancası bildirimine geri dönmek için Görünüm menüsündeki **geri git** komutunu (Ctrl + **-** ) kullanın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

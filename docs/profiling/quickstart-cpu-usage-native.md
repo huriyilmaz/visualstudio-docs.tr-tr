@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Diagnostics Tools, CPU Usage
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e721a424cc1c8b7202764fdc9b23eae737d22a4
-ms.sourcegitcommit: 14637be49401f56341c93043eab560a4ff6b57f6
+ms.openlocfilehash: 86b5e44f5b9e2fec07fef4e54a48ff89ebb2ff74
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90074884"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99861647"
 ---
 # <a name="quickstart-analyze-cpu-usage-data-in-visual-studio-c"></a>Hızlı başlangıç: Visual Studio 'da CPU kullanım verilerini çözümleme (C++)
 
@@ -35,7 +35,7 @@ Hata ayıklayıcı (**Tanılama araçları** penceresi) ile profil oluşturma ar
    ::: moniker range="vs-2017"
    Üstteki menü çubuğundan **Dosya** > **Yeni** > **Proje**' yi seçin.
 
-   Sol bölmedeki **Yeni proje** iletişim kutusunda, **Visual C++** öğesini genişletin ve ardından **Windows Masaüstü**' nu seçin. Orta bölmede **Windows konsol uygulaması**' nı seçin. Sonra *Diagnostics_Get_Started_Native*projeyi adlandırın.
+   Sol bölmedeki **Yeni proje** iletişim kutusunda, **Visual C++** öğesini genişletin ve ardından **Windows Masaüstü**' nu seçin. Orta bölmede **Windows konsol uygulaması**' nı seçin. Sonra *Diagnostics_Get_Started_Native* projeyi adlandırın.
 
    **Windows konsol uygulaması** proje şablonunu görmüyorsanız, **Yeni proje** iletişim kutusunun sol bölmesindeki **Visual Studio yükleyicisi aç** bağlantısını seçin. Visual Studio Yükleyicisi başlatılır. C++ iş yükü **Ile masaüstü geliştirmeyi** seçin ve ardından **Değiştir**' i seçin.
    ::: moniker-end
@@ -146,7 +146,7 @@ Hata ayıklayıcı (**Tanılama araçları** penceresi) ile profil oluşturma ar
 
 3. **Tanılama araçları** pencere, siz kapatmadığınız müddetçe zaten görünür. Pencereyi yeniden getirmek için, **Hata Ayıkla**  >  **Windows**  >  **Tanılama araçları göster**' e tıklayın.
 
-4. Hata **Debug**  >  **ayıklamayı Başlat** ' a tıklayın (veya araç çubuğundan veya **F5**' i **başlatın** ).
+4. Hata   >  **ayıklamayı Başlat** ' a tıklayın (veya araç çubuğundan veya **F5**' i **başlatın** ).
 
      Uygulamanın yüklenmesi bittiğinde, tanılama araçlarının **Özet** görünümü görüntülenir.
 
@@ -185,7 +185,7 @@ CPU kullanımı altındaki işlevlerin listesini inceleyerek, en çok iş yapan 
 
     ![Tanılama araçları çağıran çağrılan görünümü](../profiling/media/quickstart-cpu-usage-caller-callee-cplusplus.png "Diagtoolscallerçağrılan")
 
-    Bu görünümde, seçilen işlev başlıkta ve **geçerli işlev** kutusunda ( `getNumber` Bu örnekte) görüntülenir. Geçerli işlevi çağıran işlev sol tarafta **çağıran işlevin**altında gösterilir ve geçerli işlev tarafından çağrılan işlevler sağ taraftaki **çağrılan işlevler** kutusunda gösterilir. (Geçerli işlevi değiştirmek için iki kutuyu da seçebilirsiniz.)
+    Bu görünümde, seçilen işlev başlıkta ve **geçerli işlev** kutusunda ( `getNumber` Bu örnekte) görüntülenir. Geçerli işlevi çağıran işlev sol tarafta **çağıran işlevin** altında gösterilir ve geçerli işlev tarafından çağrılan işlevler sağ taraftaki **çağrılan işlevler** kutusunda gösterilir. (Geçerli işlevi değiştirmek için iki kutuyu da seçebilirsiniz.)
 
     Bu görünümde, işlevin tamamlanışında toplam süre (MS) ve Toplam uygulama çalışma zamanının yüzdesi gösterilir.
 

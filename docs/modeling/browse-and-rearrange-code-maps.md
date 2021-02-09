@@ -21,15 +21,15 @@ helpviewer_keywords:
 - dependency graphs, browsing
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0ace2095e98bc7d7425f518249a754fcbed07a02
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: e579f62c24795ad99939fe10f68c42acaaa89b60
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97363620"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99861940"
 ---
 # <a name="browse-and-rearrange-code-maps"></a>Kod eşlemelerine göz atma ve bunları yeniden düzenleme
 
@@ -61,7 +61,7 @@ Haritayı oluşturduktan sonra, kodunuzu gözden geçirmek için şu ipuçların
 
 ## <a name="change-the-map-layout"></a><a name="Selecting"></a> Harita yerleşimini değiştirme
 
-|**Hedef**|**Bu adımları gerçekleştirin**|
+|**Kime**|**Bu adımları gerçekleştirin**|
 |-|-|
 |Tüm haritanın bağımlılık akışını belirli bir yönde düzenleyin. Bu, koddaki mimari katmanları görbaşlamanıza yardımcı olabilir.|Harita araç çubuğunda **Düzen**' i seçin ve ardından:<br /><br /> -   **Yukarıdan aşağıya** ![ Üstten alta grafik düğmesi](../modeling/media/topbottomgraphbutton.gif)<br />-   **Aşağıdan yukarıya** ![ Alttan üste grafik düğmesi](../modeling/media/bottomtopgraphbutton.gif)<br />-   **Soldan sağa** ![ Soldan sağa düzen düğmesi](../modeling/media/leftrightgraphbutton.gif)<br />-   **Sağdan sola** ![ Sağdan sola grafik düğmesi](../modeling/media/rightleftgraphbutton.gif)|
 |Kümelerin merkezinde en bağımlı düğümleri ve bu kümelerin dışında en az bağımlı düğümleri içeren kodda doğal bağımlılık kümelerine bakın.|Harita araç çubuğunda **Düzen**' i ve sonra  ![ grafik araç çubuğunda hızlı kümeler hızlı kümeler düğmesini seçin ](../modeling/media/quickclustersicon.gif) .|
@@ -72,7 +72,7 @@ Haritayı oluşturduktan sonra, kodunuzu gözden geçirmek için şu ipuçların
 
 ## <a name="browse-the-map"></a><a name="Explore"></a> Haritaya gözatamıyorum
 
-|**Hedef**|**Bu adımları gerçekleştirin**|
+|**Kime**|**Bu adımları gerçekleştirin**|
 |-|-|
 |Haritayı tarayın.|Fareyi kullanarak Haritayı herhangi bir yöne sürükleyin.<br /><br /> - veya -<br /><br /> Yatay kaydırma yapmak için **SHIFT** tuşunu basılı tutun ve fare tekerleğini döndürün. **SHIFT** tuşuna basılı tutun  +   ve yatay olarak kaydırmak için fare tekerleğini döndürün.|
 |Haritayı yakınlaştırın veya uzaklaştırın.|Fare tekerleğini döndürün.<br /><br /> - veya -<br /><br /> Kod Haritası araç çubuğundaki **Yakınlaştırma** açılan listesini kullanın.<br /><br /> - veya -<br /><br /> Klavye kısayollarını kullanın. Yakınlaştırmak için **CTRL + SHIFT +** tuşlarına basın. (nokta). Uzaklaştırmak için **CTRL + SHIFT +,** (virgül) tuşlarına basın.|
@@ -84,7 +84,7 @@ Haritayı oluşturduktan sonra, kodunuzu gözden geçirmek için şu ipuçların
 
 ## <a name="filter-nodes-and-links"></a><a name="FilterNodes"></a> Düğümleri ve bağlantıları filtrele
 
-|**Hedef**|**Bu adımları gerçekleştirin**|
+|**Kime**|**Bu adımları gerçekleştirin**|
 |-|-|
 |Filtreler bölmesini gösterin veya gizleyin.|Kod Haritası araç çubuğunda **Filtreler** düğmesini seçin. **Filtreler** bölmesi, varsayılan olarak **Çözüm Gezgini** sekmeli bir sayfa olarak görüntülenir.|
 |Haritada gösterilen düğüm türlerini filtreleyin.|Filtreler bölmesindeki **kod öğeleri** listesinde onay kutularını işaretleyin veya temizleyin.|
@@ -106,7 +106,7 @@ Kod haritaları bu tür bağlantıları gösterir:
 > [!TIP]
 > Varsayılan olarak, haritada yalnızca seçili düğümler için çapraz grup bağlantıları gösterilmektedir. Gruplar arasındaki toplanmış bağlantıları göstermek veya gizlemek üzere bu davranışı değiştirmek için, kod Haritası araç çubuğunda **Düzen** ' i tıklatın ve **Gelişmiş**' i seçin, sonra **tüm çapraz grup bağlantılarını gösterin** veya **tüm çapraz** grup bağlantılarını gizleyin. Daha fazla ayrıntı için bkz. [düğümleri ve bağlantıları gizleme veya gösterme](#HidingShowing) .
 
-|**Hedef**|**Bu adımları gerçekleştirin**|
+|**Kime**|**Bu adımları gerçekleştirin**|
 |-|-|
 |Bir düğüm veya bağlantı hakkında daha fazla bilgi görüntüleyin.|Araç ipucu görünene kadar fare işaretçisini düğümün üst kısmına veya bağlantısına taşıyın.<br /><br /> Toplanmış bir bağlantının araç ipucu gösterdiği ayrı bağımlılıkları listeler.<br /><br /> - veya -<br /><br /> Düğüm veya bağlantı için kısayol menüsünü açın. **Düzenle**, **Özellikler**' i seçin.|
 |Bir grubun içeriğini gösterin veya gizleyin.|-Bir grubu genişletmek için düğüm için kısayol menüsünü açın ve **Grup**, **Genişlet**' i seçin.<br />     - veya -<br />     Köşeli çift ayraç (aşağı ok) düğmesi görünene kadar fare işaretçisini düğümün üst kısmına taşıyın. Grubu genişletmek için bu düğmeye tıklayın. Klavye: Seçili Grubu genişletmek veya daraltmak için **artı** tuşuna ( **+** ) veya **eksi** tuşuna ( **-** ) basın.<br />-Bir grubu daraltmak için düğüm için kısayol menüsünü açın ve **Grup**, **Daralt**' ı seçin.<br />     - veya -<br />     Köşeli çift ayraç (yukarı ok) düğmesi görünene kadar fare işaretçisini bir grubun üstüne taşıyın. Grubu daraltmak için bu düğmeye tıklayın.<br />-Tüm grupları genişletmek için,   +  tüm düğümleri seçmek üzere CTRL **A** 'ya basın. Harita için kısayol menüsünü açın ve **Grup**, **Genişlet** seçeneğini belirleyin. **Note:**      Tüm grupların genişletilmesi, kullanılamayan bir eşleme veya bellek sorunları oluşturursa, bu komut kullanılamaz. Eşlemeyi yalnızca ilgilendiğiniz ayrıntı düzeyine genişletmenizi öneririz.<br />-Tüm grupları daraltmak için bir düğümün veya haritanın kısayol menüsünü açın. **Grup** seç, **Tümünü Daralt**.|
@@ -124,7 +124,7 @@ Düğümlerin gizlenmesi, düzen algoritmasına katılmalarını engeller. Varsa
 
 ### <a name="to-hide-or-show-nodes"></a>Düğümleri gizlemek veya göstermek için
 
-|**Hedef**|**Bu adımları gerçekleştirin**|
+|**Kime**|**Bu adımları gerçekleştirin**|
 |-|-|
 |Seçili düğümleri gizleyin.|1. gizlemek istediğiniz düğümleri seçin.<br />2. Seçili düğümlerin veya haritanın kısayol menüsünü açın. **Seç**, **Seçileni Gizle**' yi seçin.|
 |Seçilmemiş düğümleri gizleyin.|1. görünür kalmasını istediğiniz düğümleri seçin.<br />2. Seçili düğümlerin veya haritanın kısayol menüsünü açın. **Seç**' i seçin, **Seçili seçimini gizleyin**.|
@@ -132,7 +132,7 @@ Düğümlerin gizlenmesi, düzen algoritmasına katılmalarını engeller. Varsa
 
 ### <a name="to-hide-or-show-links"></a>Bağlantıları gizlemek veya göstermek için
 
-|**Hedef**|**Harita araç çubuğunda düzen ve Gelişmiş ' i seçin ve ardından**|
+|**Kime**|**Harita araç çubuğunda düzen ve Gelişmiş ' i seçin ve ardından**|
 |-|-|
 |Çapraz grup bağlantılarını her zaman gösterin.|**Tüm çapraz grup bağlantılarını göster**. Bu, gruplar arasında toplanmış bağlantıları gizler.|
 |Çapraz grup bağlantılarını her zaman gizleyin.|**Tüm çapraz grup bağlantılarını gizle**|
@@ -141,7 +141,7 @@ Düğümlerin gizlenmesi, düzen algoritmasına katılmalarını engeller. Varsa
 
 ## <a name="group-nodes"></a><a name="OrganizeGroups"></a> Grup düğümleri
 
-|**Hedef**|**Bu adımları gerçekleştirin**|
+|**Kime**|**Bu adımları gerçekleştirin**|
 |-|-|
 |Kapsayıcı düğümlerini grup düğümleri veya yaprak düğümleri olarak gösterin.|Kapsayıcı düğümlerini yaprak düğüm olarak göstermek için: düğümleri seçin, seçiminizin kısayol menüsünü açın ve **Grup**, **yaprağı Dönüştür**' ü seçin.<br /><br /> Kapsayıcı düğümlerini grup düğümleri olarak göstermek için: düğümleri seçin, seçiminiz için kısayol menüsünü açın ve **Grup**, **gruba Dönüştür**' ü seçin.|
 |Bir grup içindeki düzeni değiştirin.|Grubu seçin, kısayol menüsünü açın, **Düzen**' i seçin ve istediğiniz düzen stilini seçin.<br /><br /> - veya -<br /><br /> 1. grubu seçin ve genişletildiğinden emin olun.<br />2. Grup başlığına yeniden tıklayın ve grup araç çubuğu görüntülenir.<br />     ![Bağımlılık grafiği &#45; grup araç çubuğu](../modeling/media/dependencygraph_group.png)<br />3. Grup listesi bağımlılık grafiğinin **Düzen stilini değiştirin** ![ &#45; grup araç çubuğu &#45; düzeni ](../modeling/media/dependencygraph_grouptoolbar.gif) ve istediğiniz düzen stilini seçin.<br /><br /> **Liste görünümü** grubun üyelerini listeye yeniden düzenler. **Grafik varsayılanı** , Grup yerleşimini varsayılan harita düzenine sıfırlar. Diğer seçenekler için bkz. [harita yerleşimini değiştirme](#Selecting).|
@@ -160,7 +160,7 @@ Haritada ayrıntıya geçmek veya Haritayı basitleştirmek için bir haritada d
 
 ### <a name="add-a-node-for-a-code-element"></a>Kod öğesi için düğüm ekleme
 
-|**Hedef**|**Bu adımları gerçekleştirin**|
+|**Kime**|**Bu adımları gerçekleştirin**|
 |-|-|
 |Geçerli fare işaretçisi konumuna yeni bir genel düğüm ekleyin.|1. fare işaretçisini, haritada yeni kod öğesini yerleştirmek istediğiniz yere taşıyın ve **Ekle** tuşuna basın.<br />     - veya -<br />     Harita için kısayol menüsünü açın ve **Düzenle**, **Ekle**, **genel düğüm**' i seçin.<br />2. yeni düğümün adını yazın ve **Return** tuşuna basın.|
 |Geçerli fare işaretçisi konumunda belirli bir kod öğesi düğümü türü ekleyin.|1. fare işaretçisini, harita üzerinde yeni kod öğesini yerleştirmek istediğiniz yere taşıyın ve haritanın kısayol menüsünü açın.<br />2. istediğiniz düğüm türünü **Düzenle**, **Ekle** ve Seç ' i seçin.<br />3. yeni düğümün adını yazın ve **Return** tuşuna basın.|
@@ -280,9 +280,9 @@ Kod öğelerindeki simgeleri ve kod öğelerinin renklerini ve önceden tanımla
 
 5. Değiştirmek istediğiniz stili seçmek için aşağıdaki tabloyu kullanın:
 
-    |**Bunu değiştirmek için**|**Seçin:**|
+    |**Bunu değiştirmek için**|**'Yu**|
     |-|-|
-    |Arka plan rengi|**Arka plan**|
+    |Arka plan rengi|**Arka Plan**|
     |Ana hat rengi|**Vuruş**|
     |Metin rengi (sonucu göstermek için "f" harfi görüntülenir)|**Ön plan**|
     |Simge|**Simgeler**|
@@ -307,7 +307,7 @@ Kod öğelerindeki simgeleri ve kod öğelerinin renklerini ve önceden tanımla
 
 2. Aşağıdaki görevlerden birini uygulayın:
 
-    |**Hedef**|**Seçin:**|
+    |**Kime**|**'Yu**|
     |-|-|
     |Kod öğesini devre dışı bırak|**Devre Dışı Bırak**|
     |Kod öğesini Sil|**Silme**|

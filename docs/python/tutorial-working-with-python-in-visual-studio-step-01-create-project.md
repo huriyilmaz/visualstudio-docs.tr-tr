@@ -6,17 +6,17 @@ ms.date: 01/28/2019
 ms.topic: tutorial
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: ed4fdbfe7090a66d955461f2c3a394f6fb661c5a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 74259a6e15446d8ca0b07f3b694d0285427f8d9f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62430756"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99861562"
 ---
 # <a name="tutorial-work-with-python-in-visual-studio"></a>Öğretici: Visual Studio 'da Python ile çalışma
 
@@ -40,7 +40,7 @@ Visual Studio, Python için birinci sınıf dil desteği sağlar. Bu öğretici 
 
 Bu öğreticide, tek bir boş kod dosyası içeren basit bir proje ile çalışmaya başlayabilirsiniz.
 
-1. Visual Studio 'da **File**  >  **New**  >  **Project** **Ctrl** + **Shift** + **Yeni proje** iletişim kutusunu gösteren dosya yeni proje ' yi (CTRL SHIFT**N**) seçin. Burada, farklı dillerdeki şablonlara gözatıp projeniz için bir tane seçin ve Visual Studio 'Nun dosyaları nereye yerleştirip nerede olduğunu belirtirsiniz.
+1. Visual Studio 'da   >    >    +  + **Yeni proje** iletişim kutusunu gösteren dosya yeni proje ' yi (CTRL SHIFT **N**) seçin. Burada, farklı dillerdeki şablonlara gözatıp projeniz için bir tane seçin ve Visual Studio 'Nun dosyaları nereye yerleştirip nerede olduğunu belirtirsiniz.
 
 1. Python şablonlarını görüntülemek için sol tarafta **yüklü**  >  **Python** ' ı seçin veya "Python" ifadesini arayın. Arama kullanmak, dil ağacındaki konumunu anımsayamıyorsanız bir şablonu bulmanın harika bir yoludur.
 
@@ -54,7 +54,7 @@ Bu öğreticide, tek bir boş kod dosyası içeren basit bir proje ile çalışm
 
     ![Python projesiyle Çözüm Gezgini](media/vs-getting-started-python-02-windows.png)
 
-1. Projenizdeki dosyalara ve klasörlere gözatabileceğiniz **Çözüm Gezgini**hakkında bilgi edinmek için birkaç dakikanızı ayırın.
+1. Projenizdeki dosyalara ve klasörlere gözatabileceğiniz **Çözüm Gezgini** hakkında bilgi edinmek için birkaç dakikanızı ayırın.
 
     ![Çeşitli özellikleri göstermek için genişletilmiş Çözüm Gezgini](media/vs-getting-started-python-03-solution-explorer.png)
 

@@ -6,15 +6,15 @@ ms.topic: conceptual
 author: JoshuaPartlow
 ms.author: joshuapa
 ms.custom: SEO-VS-2020
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b33e9400926dd7d1f7a2dc5a66a33ec2fb244b1b
-ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
+ms.openlocfilehash: 9c2aa1e49c0465fcf75917f0d9bd134962794c74
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90100446"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99861757"
 ---
 # <a name="code-maps-for-c-projects"></a>C++ projeleri için kod haritaları
 
@@ -22,7 +22,7 @@ C++ projeleri için daha fazla eşleme oluşturmak istiyorsanız, bu projelerde 
 
 Visual C++ projeleri içeren bir çözümü açtığınızda, IntelliSense veritabanını güncelleştirmek biraz zaman alabilir. Bu süre boyunca, IntelliSense veritabanı güncelleştirmeyi bitirene kadar üstbilgi (*. h* veya) dosyaları için kod haritaları oluşturmeyebilirsiniz `#include` . Visual Studio durum çubuğunda güncelleştirme ilerleme durumunu izleyebilirsiniz.
 
-- Çözümünüzdeki tüm kaynak dosyaları ve üstbilgi dosyaları arasındaki bağımlılıkları görmek için, **Architecture**  >  **içerme dosyaları**için mimari oluştur ' u seçin.
+- Çözümünüzdeki tüm kaynak dosyaları ve üstbilgi dosyaları arasındaki bağımlılıkları görmek için,   >  **içerme dosyaları** için mimari oluştur ' u seçin.
 
    ![Yerel kod için bağımlılık grafiği](../modeling/media/dependencygraphgeneral_nativecode.png)
 
@@ -40,7 +40,7 @@ Bu öğeler C ve C++ kodu için desteklenmez:
 
 Bu sorunlar, C ve C++ kodu için kod eşlemeleri oluşturduğunuzda oluşabilir:
 
-|**Sorun**|**Olası nedeni**|**Çözünürlük**|
+|**Konuda**|**Olası nedeni**|**Çözünürlük**|
 |-|-|-|
 |Kod eşlemesi oluşturulamadı.|Çözümdeki hiçbir proje başarıyla oluşturulmadı.|Oluşan yapı hatalarını giderip eşlemeyi yeniden oluşturun.|
 |**Mimari** menüsünden bir kod Haritası oluşturmaya çalıştığınızda Visual Studio yanıt vermemeye çalışır.|Program veritabanı (.pdb) dosyası bozulmuş olabilir.<br /><br /> .pdb dosyası; tür, yöntem ve kaynak dosya bilgileri gibi hata ayıklama bilgilerini depolar.|Çözümü yeniden oluşturun ve tekrar deneyin.|

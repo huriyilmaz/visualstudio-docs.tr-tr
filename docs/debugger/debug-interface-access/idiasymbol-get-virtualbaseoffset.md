@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: 103b034f-36c4-42d5-aa34-1449a1e66d03
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 6bc7d0e8f1f8421623ed592a2a524af42e51a886
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 32f37a2e912e6e7ad315a1c92a495fcb5ad98a0a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85461457"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99862451"
 ---
 # <a name="idiasymbolget_virtualbaseoffset"></a>IDiaSymbol::get_virtualBaseOffset
 Sanal bir işlevin sanal işlev tablosundaki sapmayı alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT get_virtualBaseOffset ( 
+HRESULT get_virtualBaseOffset ( 
    DWORD* pRetVal
 );
 ```
