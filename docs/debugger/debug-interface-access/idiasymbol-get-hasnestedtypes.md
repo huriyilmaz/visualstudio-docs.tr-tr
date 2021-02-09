@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: 1a8306bd-10dd-40a9-81fc-01f71c348484
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: fe569737440cc9d974196eaa2a73c2fab5b7e143
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 117bbed95e4adf79270072888c8ac1ac71215433
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85463682"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99863314"
 ---
 # <a name="idiasymbolget_hasnestedtypes"></a>IDiaSymbol::get_hasNestedTypes
 Kullanıcı tanımlı veri türünün iç içe geçmiş tür tanımlarına sahip olup olmadığını belirten bir bayrak alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT get_hasNestedTypes ( 
+HRESULT get_hasNestedTypes ( 
    BOOL* pRetVal
 );
 ```
@@ -43,7 +43,7 @@ dışı `TRUE` Kullanıcı tanımlı veri türünün iç içe geçmiş tür tan�
 
 ## <a name="requirements"></a>Gereksinimler
 
-|Gereksinim|Description|
+|Gereksinim|Açıklama|
 |-----------------|-----------------|
 |Üst bilgi|dia2. h|
 |Sürüm:|DIA SDK v 7.0|

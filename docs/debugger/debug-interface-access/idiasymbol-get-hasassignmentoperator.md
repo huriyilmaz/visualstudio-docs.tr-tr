@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: fb1acb9c-4500-4343-a590-0395789e4040
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d0d2410e8bb027aebf767970877870f1558a9c2b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 709ffb3327359e41693d524e5b9eaab79dc64790
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85463815"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99863398"
 ---
 # <a name="idiasymbolget_hasassignmentoperator"></a>IDiaSymbol::get_hasAssignmentOperator
 Kullanıcı tanımlı veri türünde tanımlanmış atama işleçleri olup olmadığını belirten bir bayrak alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT get_hasAssignmentOperator ( 
+HRESULT get_hasAssignmentOperator ( 
    BOOL* pRetVal
 );
 ```
@@ -43,7 +43,7 @@ dışı `TRUE` Kullanıcı tanımlı veri türü tanımlanmış herhangi bir ata
 
 ## <a name="requirements"></a>Gereksinimler
 
-|Gereksinim|Description|
+|Gereksinim|Açıklama|
 |-----------------|-----------------|
 |Üst bilgi|dia2. h|
 |Sürüm:|DIA SDK v 7.0|

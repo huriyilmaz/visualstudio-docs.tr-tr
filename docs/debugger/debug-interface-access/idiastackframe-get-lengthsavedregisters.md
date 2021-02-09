@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: b75fad6e-1ef4-44e6-89e3-c31c6fba10b3
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 246152e781faf233b944b16149d4e7d0c11c31dd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9bd9d10c64de0d6683d7369aee8f44721b6e9c26
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85465075"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99863965"
 ---
 # <a name="idiastackframeget_lengthsavedregisters"></a>IDiaStackFrame::get_lengthSavedRegisters
 Yığına gönderilen kaydedilmiş yazmaçların bayt sayısını alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT get_lengthSavedRegisters ( 
+HRESULT get_lengthSavedRegisters ( 
    DWORD* pRetVal
 );
 ```

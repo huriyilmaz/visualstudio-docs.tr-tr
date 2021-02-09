@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: f29e373d-e7bb-4181-ab9f-bf708d401d83
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 84123d88bc379ea670caca90d66207fc6e16f26f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c32382468c4d67dae9e94a3fc9882fd61213cf00
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85463213"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99863125"
 ---
 # <a name="idiasymbolget_issafebuffers"></a>IDiaSymbol::get_isSafeBuffers
 Güvenli bir arabellek için preprocesser yönergesinin kullanılıp kullanılmayacağını belirten bir bayrak alır. [SymTagEnum numaralandırması](../../debugger/debug-interface-access/symtagenum.md) olarak ayarlandığında kullanın `SymTagFunction` .
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT get_isSafeBuffers( 
+HRESULT get_isSafeBuffers( 
    BOOL* pRetVal)
 );
 ```

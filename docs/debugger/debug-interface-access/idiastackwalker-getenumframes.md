@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: f9f09729-4c34-441c-989c-e0b7339ee32c
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 19bd830294d3bf5032bf1a69b51f2ab5824d7494
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 55d4a30b9f4b37274872141c6e9ac18a9aab9206
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85464907"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99863854"
 ---
 # <a name="idiastackwalkergetenumframes"></a>IDiaStackWalker::getEnumFrames
 X86 platformları için bir yığın çerçeve numaralandırıcısı alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT getEnumFrames( 
+HRESULT getEnumFrames( 
    IDiaStackWalkHelper*   pHelper,
    IDiaEnumStackFrames**  ppEnum
 );

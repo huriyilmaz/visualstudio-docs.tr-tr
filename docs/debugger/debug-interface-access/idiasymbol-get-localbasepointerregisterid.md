@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: 9cbcaf00-9ace-45e1-b164-7a9439e08083
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: fee917c4d275ec0f76cd3442d1ae56887667ca6c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cdec2a9d4c1cb089ef813123bab6f84daa26a826
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85462989"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99862999"
 ---
 # <a name="idiasymbolget_localbasepointerregisterid"></a>IDiaSymbol::get_localBasePointerRegisterId
 Yığındaki yerel değişkenlere bir taban işaretçisi tutan kaydın KIMLIĞINI alır. [SymTagEnum numaralandırması](../../debugger/debug-interface-access/symtagenum.md) olarak ayarlandığında kullanın `SymTagFunction` .
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT get_localBasePointerRegisterId ( 
+HRESULT get_localBasePointerRegisterId ( 
    DWORD* pRetVal
 );
 ```

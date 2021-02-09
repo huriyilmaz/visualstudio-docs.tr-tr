@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: d3197a38-5973-4e56-873e-4f1b84c3f674
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ba4cdb5f74cedf13cfb74b5aff6d43d24534eab9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bc38d92dc20d1eea368c07e45237508dd5f85585
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85466485"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99864567"
 ---
 # <a name="idiapropertystorage"></a>IDiaPropertyStorage
 Bir DIA özellik kümesinin kalıcı özelliklerini okumanızı sağlar.
@@ -25,7 +25,7 @@ Bir DIA özellik kümesinin kalıcı özelliklerini okumanızı sağlar.
 ## <a name="syntax"></a>Syntax
 
 ```
-IDiaPropertyStorage : IUnknown
+IDiaPropertyStorage : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
@@ -63,7 +63,7 @@ Bir özellik kümesi içindeki her özellik, `ULONG` Bu küme için benzersiz ol
 - [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)
 
 ## <a name="example"></a>Örnek
-Bu örnek, nesne tarafından kullanıma sunulan tüm özellikleri görüntüleyen bir işlevi gösterir `IDiaPropertyStorage` . [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md) `IDiaPropertyStorage` Arabirimin [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md) arabiriminden nasıl alındıklarına ilişkin bir örnek Için bkz. IDiaEnumInjectedSources arabirimi.
+Bu örnek, nesne tarafından kullanıma sunulan tüm özellikleri görüntüleyen bir işlevi gösterir `IDiaPropertyStorage` . [](../../debugger/debug-interface-access/idiaenuminjectedsources.md) `IDiaPropertyStorage` Arabirimin [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md) arabiriminden nasıl alındıklarına ilişkin bir örnek Için bkz. IDiaEnumInjectedSources arabirimi.
 
 ```C++
 void PrintPropertyStorage(IDiaPropertyStorage* pPropertyStorage)

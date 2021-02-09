@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: b16629dc-8e17-476b-9c7b-58e7277c61ed
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4ff263ace06e529c625d78daaa7055dbf70bd0fd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c9e905cc68bb612d9a59bb1780d08561716abca8
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85463311"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99863146"
 ---
 # <a name="idiasymbolget_isnaked"></a>IDiaSymbol::get_isNaked
 İşlevin [çıplak](/cpp/cpp/naked-cpp) özniteliğe sahip olup olmadığını belirten bir bayrak alır (yani, işlevin derleyici tarafından eklenen giriş veya bitiş kodu yok).
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
 HRESULT get_isNaked(
@@ -43,7 +43,7 @@ dışı `TRUE` İşlevin özniteliğe sahip olup olmadığını döndürür `nak
 
 ## <a name="requirements"></a>Gereksinimler
 
-|Gereksinim|Description|
+|Gereksinim|Açıklama|
 |-----------------|-----------------|
 |Üst bilgi|dia2. h|
 |Sürüm:|DIA SDK v 8.0|

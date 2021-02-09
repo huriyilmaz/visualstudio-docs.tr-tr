@@ -7,23 +7,23 @@ dev_langs:
 ms.assetid: a073cc45-0c7b-417e-b5fc-a3b08beccdbc
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: cf05d60499da0317461d03d05579dce6124385f7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bdc8d94abf02b1e090dd9d4c78bdded88fda7bab
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85465533"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99864112"
 ---
 # <a name="idiasessionfindsymbolsbyrvaforacceleratorpointertag"></a>IDiaSession::findSymbolsByRVAForAcceleratorPointerTag
 Karşılık gelen bir etiket değeri verildiğinde, bu yöntem belirtilen bir ilişkili sanal adreste belirtilen üst Hızlandırıcı saplama işlevinde bulunan simgelerin bir listesini döndürür.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT findSymbolsByRVAForAcceleratorPointerTag ( 
+HRESULT findSymbolsByRVAForAcceleratorPointerTag ( 
    IDiaSymbol*           parent,
    DWORD                 tagValue,
    DWORD                 rva,

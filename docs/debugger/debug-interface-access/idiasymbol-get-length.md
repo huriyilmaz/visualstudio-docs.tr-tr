@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: cc62f028-d195-4fbf-93bc-10b08bef52d2
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 2d9adc7949b0a6df886ceda0c1ddc6f3b9ee90d4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b9ad12358e92be12dca0dd9c49f4a2941f5c1da3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85463073"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99863048"
 ---
 # <a name="idiasymbolget_length"></a>IDiaSymbol::get_length
 Bu sembol tarafından temsil edilen nesne tarafından kullanılan bit veya bayt sayısını alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT get_length ( 
+HRESULT get_length ( 
    ULONGLONG* pRetVal
 );
 ```
@@ -54,7 +54,7 @@ pSymbol->get_length( &length );
 
 ## <a name="requirements"></a>Gereksinimler
 
-|Gereksinim|Description|
+|Gereksinim|Açıklama|
 |-----------------|-----------------|
 |Üst bilgi|dia2. h|
 |Sürüm:|DIA SDK v 7.0|

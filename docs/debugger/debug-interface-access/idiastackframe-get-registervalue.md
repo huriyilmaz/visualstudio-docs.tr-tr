@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: cbe3d8ac-319a-40ac-bc3e-4eb81b2d7807
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 42bd724e4f25b5475f89af32f5793ede8d66594a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0f11d99a3e3a8a78b6c8152dd94a28f27d800772
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85464970"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99863944"
 ---
 # <a name="idiastackframeget_registervalue"></a>IDiaStackFrame::get_registerValue
 Belirtilen kaydın değerini yığın çerçevesinde saklanan şekilde alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
 HRESULT get_registerValue(

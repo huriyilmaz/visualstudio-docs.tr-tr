@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: 24d280ef-6ea3-4958-9418-4ad3ca7c67c1
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 02e1a3a831ccd7394c58af4b744f0be8b905d763
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4fc7eb836bab2219e764a7d6a40fc6b8421c916f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85463486"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99863251"
 ---
 # <a name="idiasymbolget_isaggregated"></a>IDiaSymbol::get_isAggregated
 Veri sembolünün sembol toplamanın veya bir koleksiyonunun bir parçası olup olmadığını belirten bir bayrak alır; Derleyici toplanmış sembolleri ayrı varlıklar olarak değerlendirir, ancak bunlar aslında tek bir büyük simgenin parçalarından oluşur.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
 HRESULT get_isAggregated(
@@ -46,7 +46,7 @@ dışı `TRUE` Verilerin bir üst sembolden bölünen bir sembol toplamasının 
 
 ## <a name="requirements"></a>Gereksinimler
 
-|Gereksinim|Description|
+|Gereksinim|Açıklama|
 |-----------------|-----------------|
 |Üst bilgi|dia2. h|
 |Sürüm:|DIA SDK v 8.0|

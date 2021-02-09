@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: 8cde8fc5-9546-4f82-b4a8-afd0d835039e
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5cf76f2c335af44a3dc1b0ebdd388ae1a26c462c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 82f074bc03e8c893b2f9a03d185056c34f0ceb28
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85466359"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99864525"
 ---
 # <a name="idiasectioncontribget_code16bit"></a>IDiaSectionContrib::get_code16bit
 Bölümün 16 bit kod içerip içermediğini gösteren bir bayrak alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
 HRESULT get_code16bit(

@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: 5fcda988-6be1-4b2f-8660-b59aa78fc35d
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 498a72888ff59d09abf4f8d4dd830db25678761c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f804267175bfffef0a21cabf7c1c9549551f74aa
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85465939"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99864301"
 ---
 # <a name="idiasegmentget_write"></a>IDiaSegment::get_write
 Segmentin değiştirilip değiştirilemeyeceğini belirten bir bayrak alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT get_write ( 
+HRESULT get_write ( 
    BOOL* pRetVal
 );
 ```

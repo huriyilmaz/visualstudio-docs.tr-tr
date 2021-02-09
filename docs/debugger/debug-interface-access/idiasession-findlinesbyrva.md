@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: 06f53b0b-b5b4-42cf-9252-dcee0dbe2d71
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 671e72d9a0dc1f9d4bf539efaa75e76e2f15f23f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 60c18d89d2ef2e3553343a0a09cf783265232140
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85465610"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99864161"
 ---
 # <a name="idiasessionfindlinesbyrva"></a>IDiaSession::findLinesByRVA
 Belirtilen bir göreli sanal adres (RVA) içeren belirtilen bir compiland içindeki satırları alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT findLinesByRVA ( 
+HRESULT findLinesByRVA ( 
     DWORD                 rva,
     DWORD                 length,
     IDiaEnumLineNumbers** ppResult

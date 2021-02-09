@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: 124f86e2-6f66-4541-87c3-799f435b731e
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4570585362da1475277f899bcb3c483d085918db
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 48a3be4d7aa3d2f7fcc096c3d8c101733bd71fff
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85464305"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99863587"
 ---
 # <a name="idiasymbolget_arrayindextypeid"></a>IDiaSymbol::get_arrayIndexTypeId
 Simgenin dizi dizin türü tanımlayıcısını alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT get_arrayIndexTypeId ( 
+HRESULT get_arrayIndexTypeId ( 
    DWORD* pRetVal
 );
 ```
@@ -46,7 +46,7 @@ dışı Simgenin dizi dizin türü KIMLIĞINI döndürür.
 
 ## <a name="requirements"></a>Gereksinimler
 
-|Gereksinim|Description|
+|Gereksinim|Açıklama|
 |-----------------|-----------------|
 |Üst bilgi|dia2. h|
 |Sürüm:|DIA SDK v 7.0|

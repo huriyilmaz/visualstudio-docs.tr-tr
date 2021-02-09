@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: eafcc757-b488-487d-a063-ad3703ff42e8
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 1462ed0224dc2f881c5745876347712ac2c14e60
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 241f2860a6ed3b1bc57fb8e2d959ad5b26decc68
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85465407"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99864091"
 ---
 # <a name="idiasessiongetsymbolsbyaddr"></a>IDiaSession::getSymbolsByAddr
 Sembolleri, adreslerinin sırasına göre bulan bir Numaralandırıcı alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT getSymbolsByAddr( 
+HRESULT getSymbolsByAddr( 
    IDiaEnumSymbolsByAddr** ppEnumbyAddr
 );
 ```

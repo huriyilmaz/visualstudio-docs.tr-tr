@@ -7,20 +7,20 @@ dev_langs:
 ms.assetid: 9a63b298-8577-4c15-8595-530558d41bf1
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 55edae0904a0f3416fc30a3776b81414e57a6525
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c763e681707d429591073ea9736a13ae5ad923d4
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85462905"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99862978"
 ---
 # <a name="idiasymbolget_memoryspacekind"></a>IDiaSymbol::get_memorySpaceKind
 Bellek alanı türünü alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
 HRESULT get_memorySpaceKind(

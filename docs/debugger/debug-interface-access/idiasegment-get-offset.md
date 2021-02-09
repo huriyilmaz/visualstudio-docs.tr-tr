@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: 97415ac6-b072-4e3c-9dd3-73087ae605fc
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: be90322d11d8676d1087ee53c914eaf7a33c518b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fbfff4382df74052efdcc59aa813b9c002a9103f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85465967"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99864364"
 ---
 # <a name="idiasegmentget_offset"></a>IDiaSegment::get_offset
 Bölümün başladığı yeri segmentlerde alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT get_offset ( 
+HRESULT get_offset ( 
    DWORD* pRetVal
 );
 ```

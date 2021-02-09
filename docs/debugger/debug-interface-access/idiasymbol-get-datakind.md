@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: 45005ad0-8b29-4cde-9d33-6bef72f6e463
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: dbeff220bdb0f3c97b8e6588ff42c31b31b97ceb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6448b30f94924d24358409715af0dec673e31d87
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85463948"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99863440"
 ---
 # <a name="idiasymbolget_datakind"></a>IDiaSymbol::get_dataKind
 Bir veri sembolünün değişken sınıflandırmasını alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT get_dataKind ( 
+HRESULT get_dataKind ( 
    DWORD* pRetVal
 );
 ```
@@ -43,7 +43,7 @@ dışı Örneğin, genel, statik veya sabit gibi veri türünü belirten [DataKi
 
 ## <a name="requirements"></a>Gereksinimler
 
-|Gereksinim|Description|
+|Gereksinim|Açıklama|
 |-----------------|-----------------|
 |Üst bilgi|dia2. h|
 |Sürüm:|DIA SDK v 7.0|

@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: 711b81fd-9549-44dc-9761-5eb862ed64c0
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 068720e4b35ca52e07351aeb6f74d7594fe69d1e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5f2439a2b2256732856afbfcf4d856bfa829cc7d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85463437"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99863244"
 ---
 # <a name="idiasymbolget_iscvtcil"></a>IDiaSymbol::get_isCVTCIL
 Modülün ortak ara dil (CıL) modülünden yerel bir modüle dönüştürülüp dönüştürülmediğini belirten bir bayrak alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
 HRESULT get_isCVTCIL(
@@ -46,7 +46,7 @@ dışı `TRUE` Modülün CIL 'den yerel koda dönüştürülüp dönüştürüld
 
 ## <a name="requirements"></a>Gereksinimler
 
-|Gereksinim|Description|
+|Gereksinim|Açıklama|
 |-----------------|-----------------|
 |Üst bilgi|dia2. h|
 |Sürüm:|DIA SDK v 8.0|

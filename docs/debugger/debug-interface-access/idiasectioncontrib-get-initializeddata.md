@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: f5c108be-a0cc-408b-9590-b8d44361810c
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ae43ee519f0c0d03be9697b4361f6ff939d2b411
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c040f2f39133d62cd5b2899389c50cf87572654d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85466261"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99864448"
 ---
 # <a name="idiasectioncontribget_initializeddata"></a>IDiaSectionContrib::get_initializedData
 Bölümün başlatılmış verileri içerip içermediğini gösteren bir bayrak alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT get_initializedData ( 
+HRESULT get_initializedData ( 
    BOOL* pRetVal
 );
 ```

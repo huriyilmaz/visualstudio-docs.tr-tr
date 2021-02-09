@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: 5c610b78-f1a3-494a-acf8-c42b97935be1
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 74a2cd3daa2c1ca466b0e302c916a220fa31e7d0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b3ac08460995cbaec149c5dda9ffc4c1e3e5bfbf
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85462842"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99862964"
 ---
 # <a name="idiasymbolget_noinline"></a>IDiaSymbol::get_noInline
 İşlevin satır içi değil olarak işaretlenip işaretlenmediğini belirten bir bayrak alır ( [noinline](/cpp/cpp/noinline) özniteliği kullanılarak).
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
 HRESULT get_noInline(
@@ -43,7 +43,7 @@ dışı `TRUE` İşlevin özniteliğe sahip olup olmadığını döndürür `noi
 
 ## <a name="requirements"></a>Gereksinimler
 
-|Gereksinim|Description|
+|Gereksinim|Açıklama|
 |-----------------|-----------------|
 |Üst bilgi|dia2. h|
 |Sürüm:|DIA SDK v 8.0|

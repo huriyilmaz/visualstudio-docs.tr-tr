@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: fd30ab7b-022b-4402-a42a-2d38e274c1b1
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c7d98260678af245fbc5a17593670a2471e9a488
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 41f968bcf5f295ae249c8e3c176fe3c10745f30b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85466114"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99864399"
 ---
 # <a name="idiasectioncontribget_remove"></a>IDiaSectionContrib::get_remove
 Bellek içi görüntünün bir parçası oluşturulmadan önce bölümün kaldırılıp kaldırılmadığını gösteren bir bayrak alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT get_remove ( 
+HRESULT get_remove ( 
    BOOL* pRetVal
 );
 ```

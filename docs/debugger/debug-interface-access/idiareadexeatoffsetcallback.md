@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 3c961641-3ce3-4bc3-bd6e-a802fa3bec49
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a8db3960aebe4edc1669f2e7fbe4d40b60618bd0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 84cf920182e3eae25d9cb4a6f7d630ec37df7de8
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85466471"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99864560"
 ---
 # <a name="idiareadexeatoffsetcallback"></a>IDiaReadExeAtOffsetCallback
 İstemci uygulamasının dosya konumuyla belirtilen bir yürütülebilir dosya bayt sağlaması için izin sağlar.
@@ -25,7 +25,7 @@ ms.locfileid: "85466471"
 ## <a name="syntax"></a>Syntax
 
 ```
-IDiaReadExeAtOffsetCallback : IUnknown
+IDiaReadExeAtOffsetCallback : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler

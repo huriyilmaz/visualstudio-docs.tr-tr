@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: 908976ae-95c4-4020-89c9-de137f727f98
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e14a713772a183100753212effcb696e5d5f1f05
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8a25d2eb12529461a9787deadf3f3babff6b6cbe
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85464396"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99863671"
 ---
 # <a name="idiasymbolget_access"></a>IDiaSymbol::get_access
 Bir sınıf üyesinin erişim değiştiricisini alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT get_access ( 
+HRESULT get_access ( 
    DWORD* pRetVal
 );
 ```
@@ -43,7 +43,7 @@ dışı Bir sınıf üyesinin erişim değiştiricisini belirten [CV_access_e sa
 
 ## <a name="requirements"></a>Gereksinimler
 
-|Gereksinim|Description|
+|Gereksinim|Açıklama|
 |-----------------|-----------------|
 |Üst bilgi|dia2. h|
 |Sürüm:|DIA SDK v 7.0|
