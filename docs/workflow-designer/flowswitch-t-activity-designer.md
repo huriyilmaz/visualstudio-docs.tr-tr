@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 5b9c5afe-7499-4ee8-8c33-28aff14bde07
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4eff69f1da5d2bc8c5f397b0cc6d21492a0a8d20
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 6f61dd3f14ba527e9f5be0e009825902e683fb1d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94435801"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99876569"
 ---
 # <a name="flowswitcht-activity-designer"></a>FlowSwitch\<T> Etkinlik Tasarımcısı
 
@@ -28,7 +28,7 @@ ms.locfileid: "94435801"
 
 ## <a name="the-flowswitcht-activity"></a>FlowSwitch \<T> etkinliği
 
-<xref:System.Activities.Statements.FlowSwitch%601>Etkinlik, <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> değerlendirildiğinde *T* türünde bir değer (genel parametresiyle belirtilir) döndüren bir içerir. Etkinlik ayrıca bir kümesini içerir <xref:System.Activities.Statements.FlowSwitch%601.Cases%2A> ve bu değerlendirmenin olası sonuçlarından bir nesne kümesine benzersiz bir eşleme belirtir <xref:System.Activities.Statements.FlowNode> . <xref:System.Activities.Statements.FlowNode>Yürütülen nesne, değerlendirilen değeri, değerlendirilen değeriyle eşleşen *T* bir nesnedir <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> . Bir <xref:System.Activities.Statements.FlowSwitch%601.Default%2A> durum (isteğe bağlı olarak), hiçbir eşleşme alınmamıştır.
+<xref:System.Activities.Statements.FlowSwitch%601>Etkinlik, <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> değerlendirildiğinde *T* türünde bir değer (genel parametresiyle belirtilir) döndüren bir içerir. Etkinlik ayrıca bir kümesini içerir <xref:System.Activities.Statements.FlowSwitch%601.Cases%2A> ve bu değerlendirmenin olası sonuçlarından bir nesne kümesine benzersiz bir eşleme belirtir <xref:System.Activities.Statements.FlowNode> . <xref:System.Activities.Statements.FlowNode>Yürütülen nesne, değerlendirilen değeri, değerlendirilen değeriyle eşleşen  bir nesnedir <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> . Bir <xref:System.Activities.Statements.FlowSwitch%601.Default%2A> durum (isteğe bağlı olarak), hiçbir eşleşme alınmamıştır.
 
 ### <a name="using-the-flowswitcht-activity-designer"></a>FlowSwitch \<T> etkinlik tasarımcısını kullanma
 

@@ -11,15 +11,15 @@ f1_keywords:
 ms.assetid: 187ce86e-e340-4f6c-8937-8e8f1027a17f
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a11a5dc3a02959ff7bec4cfaac9aac2ca231b2ba
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: 29a6371d8c49aabf27227d283ec0887f07f0c89f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97727930"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99876452"
 ---
 # <a name="capturing-graphics-information"></a>Grafik Bilgilerini Yakalama
 Oluşturma sorunlarını ve performans sorunlarını tanılamak için Visual Studio Grafik Çözümleyicisi kullanabilmeniz için Direct3D uygulamanızdan grafik bilgilerini yakalayın.

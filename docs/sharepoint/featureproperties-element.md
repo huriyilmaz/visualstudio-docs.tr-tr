@@ -11,15 +11,15 @@ helpviewer_keywords:
 - FeatureProperties element
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 9ee2bddec02263a889fb1f69088a8a50b3d8b57d
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: 8756feaf08de9b01904309177f5e19c122da714d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94672606"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99876725"
 ---
 # <a name="featureproperties-element"></a>FeatureProperties öğesi
   SharePoint 'e dağıtıldığında bir özelliğe dahil olan özellik değerlerinin bir koleksiyonu. Bir özellik dağıtıldıktan sonra, kodunuzda özellik değerlerine erişebilirsiniz.

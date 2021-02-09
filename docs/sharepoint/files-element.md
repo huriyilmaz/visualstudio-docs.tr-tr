@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Files element
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 03473f40bb78c866f3d93dea11a20b8747afad7b
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: 653e48a2e9b6a68db94fd66660da85f4dec20927
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94672814"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99876658"
 ---
 # <a name="files-element"></a>Dosyalar öğesi
   Özellik öğesi dosyaları ve bağımlı SharePoint olmayan projelerin çıktısı gibi SharePoint proje öğesiyle dağıtılacak dosyaları belirtir.

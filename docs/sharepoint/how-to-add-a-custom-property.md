@@ -16,15 +16,15 @@ helpviewer_keywords:
 - BDC [SharePoint development in Visual Studio], custom properties
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: b12124d874c58ce17f1fa24d2bd9283af64f1c92
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: d335cc809a8415a2b41f3de63138c113c2a78706
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96915485"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99876608"
 ---
 # <a name="how-to-add-a-custom-property"></a>Nasıl yapılır: özel özellik ekleme
   **Özellik düzenleyicisini** kullanarak modele özel özellikler ekleyebilirsiniz. Çalışma zamanında bağlantı dizeleri ve diğer veriler gibi bilgileri almak için koddaki bu özelliklere erişebilirsiniz.
@@ -33,7 +33,7 @@ ms.locfileid: "96915485"
 
 1. **IVB Gezgini**' nde, özel bir özellik uygulamak istediğiniz model öğesini temsil eden düğümü seçin.
 
-2. Menü çubuğunda **View**  >  **Özellikler penceresini** görüntüle ' yi seçin.
+2. Menü çubuğunda   >  **Özellikler penceresini** görüntüle ' yi seçin.
 
 3. **Özellikler** penceresinde **özel özellikler** özelliğini seçin ve ardından üç nokta düğmesini (![ASP.net Mobile Designer elips](../sharepoint/media/mwellipsis.gif "ASP.NET Mobile Designer elips")) seçin.
 

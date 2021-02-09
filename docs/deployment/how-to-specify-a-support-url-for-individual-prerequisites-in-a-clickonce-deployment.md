@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 590742c3-a286-4160-aa75-7a441bb2207b
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: af912503ddc1e87f14756a1041e9fa4d8aac505b
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 585ea1a558b91ac733670ad94a9a3e0be33f1348
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94350952"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99876322"
 ---
 # <a name="how-to-specify-a-support-url-for-individual-prerequisites-in-a-clickonce-deployment"></a>Nasıl yapılır: bir ClickOnce dağıtımında tek Önkoşullar için destek URL 'SI belirtme
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Dağıtım, uygulamanın çalışması için istemci bilgisayarda kullanılabilir olması gereken bazı önkoşulları test edebilir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . Bu bağımlılıklar, .NET Framework gereken en düşük sürümü, işletim sisteminin sürümünü ve genel derleme önbelleğinde (GAC) önceden yüklenmiş olması gereken tüm derlemeleri içerir. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Ancak, bu önkoşullardan herhangi biri yüklenemez; bir önkoşul bulunamazsa, yüklemeyi durdurur ve yüklemenin neden başarısız olduğunu açıklayan bir iletişim kutusu görüntüler.
