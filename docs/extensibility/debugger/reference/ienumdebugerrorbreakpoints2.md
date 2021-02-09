@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: ffdad73d-969a-45ef-9ad1-7f5d3b814018
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ea841a095964b71e301e966bfd0a10c8f7c0c65d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 33ff6805537327b29b1d43b1bf4009b431452fc1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80716891"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99896980"
 ---
 # <a name="ienumdebugerrorbreakpoints2"></a>IEnumDebugErrorBreakpoints2
 Bu arabirim, bekleyen bir kesme noktasıyla ilişkili hata kesme noktalarını numaralandırır.
@@ -42,7 +42,7 @@ IEnumDebugErrorBreakpoints2 : IUnknown
 |[Sonraki](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2-next.md)|Bir numaralandırma dizisinde belirtilen sayıda hata kesme noktası alır.|
 |[Atla](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2-skip.md)|Sabit Listesi dizisinde belirtilen sayıda hata kesme noktası atlar.|
 |[Sıfırla](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2-reset.md)|Bir numaralandırma dizisini başlangıca sıfırlar.|
-|[Kopyalama](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2-clone.md)|Geçerli numaralandırıcı ile aynı numaralandırma durumunu içeren bir Numaralandırıcı oluşturur.|
+|[Oluşturulacak](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2-clone.md)|Geçerli numaralandırıcı ile aynı numaralandırma durumunu içeren bir Numaralandırıcı oluşturur.|
 |[GetCount](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2-getcount.md)|Bir Numaralandırıcı içindeki hata kesme noktası sayısını alır.|
 
 ## <a name="remarks"></a>Açıklamalar

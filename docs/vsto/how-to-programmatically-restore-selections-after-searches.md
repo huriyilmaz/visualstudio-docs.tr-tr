@@ -14,15 +14,15 @@ helpviewer_keywords:
 - selections, restoring after a search
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: d396602a5d2bc0c3a90d32256bf226348abff3f3
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 493f736ce899a0d90332418ca37a5b2825dd2d7b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97528278"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99897509"
 ---
 # <a name="how-to-programmatically-restore-selections-after-searches"></a>Nasıl yapılır: aramadan sonra program aracılığıyla seçimleri geri yükleme
   Bir belgede metin bulup değiştirirseniz, arama tamamlandıktan sonra kullanıcının özgün seçimini geri yüklemek isteyebilirsiniz.

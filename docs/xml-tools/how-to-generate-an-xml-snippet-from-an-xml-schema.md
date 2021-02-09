@@ -7,15 +7,15 @@ ms.topic: how-to
 ms.assetid: 2c128d2a-aaa6-4814-aa95-e07056afe338
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ce87f71a465f9c6452fa713fd8a7bdf523e801a3
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: e73834888009ff547bb4252aaedafb713ce9c2fb
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93399475"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99897473"
 ---
 # <a name="how-to-generate-an-xml-snippet-from-an-xml-schema"></a>Nasıl yapılır: XML şemasından XML kod parçacığı oluşturma
 
@@ -52,23 +52,23 @@ Bu bölümdeki adımlarda, XML düzenleyicisinin şema tarafından oluşturulan 
 
 ### <a name="to-create-a-new-xml-file-and-associate-it-with-an-xml-schema"></a>Yeni bir XML dosyası oluşturmak ve bir XML şeması ile ilişkilendirmek için
 
-1. **Dosya** menüsünde, **Yeni** ' nin üzerine gelin ve **Dosya** ' ya tıklayın.
+1. **Dosya** menüsünde, **Yeni**' nin üzerine gelin ve **Dosya**' ya tıklayın.
 
-2. **Şablonlar** bölmesinde **XML dosyası** ' nı seçin ve **Aç** ' a tıklayın.
+2. **Şablonlar** bölmesinde **XML dosyası** ' nı seçin ve **Aç**' a tıklayın.
 
      Düzenleyicide yeni bir dosya açılır. Dosya varsayılan bir XML bildirimi içerir `<?xml version="1.0" encoding="utf-8">` .
 
-3. Belge Özellikleri penceresinde, **şemalar** alanındaki ( **...** ) düğmesine tıklayın.
+3. Belge Özellikleri penceresinde, **şemalar** alanındaki (**...**) düğmesine tıklayın.
 
      **Xsd şemaları** iletişim kutusu görüntülenir.
 
-4. **Ekle** 'ye tıklayın.
+4. **Ekle**'ye tıklayın.
 
      **XSD şeması aç** iletişim kutusu görüntülenir.
 
-5. Şema dosyasını seçin ve **Aç** ' a tıklayın.
+5. Şema dosyasını seçin ve **Aç**' a tıklayın.
 
-6. **Tamam** ’a tıklayın.
+6. **Tamam**'a tıklayın.
 
      XML şeması artık XML belgesiyle ilişkili.
 
@@ -141,7 +141,7 @@ Aşağıdaki şema dosyası, izlenecek yol tarafından kullanılır.
 </xs:schema>
 ```
 
-### <a name="output"></a>Çıkış
+### <a name="output"></a>Çıktı
 
 Aşağıda öğesiyle ilişkili şema bilgilerine göre oluşturulan XML verileri verilmiştir `Contact` . `bold`XML kod parçacığında düzenlenebilir alanları belirleyin olarak işaretlenen öğeler.
 

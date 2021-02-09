@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: b2f572d3-b26d-4846-92d1-84055fac141a
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: c6aeb24b2aee5b0abb3e5d803004ba97725bb707
-ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
+ms.openlocfilehash: d7d7e664f0c39a46e1d84df0c5a0842c7270c942
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97876902"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99896897"
 ---
 # <a name="project-model-core-components"></a>Proje Modeli Çekirdek Bileşenleri
 Aşağıdaki tablolar proje modelinde genişletilir. Tablolarda, modelde tanımlanan arabirimlerin ve hizmetlerin yanı sıra belirli nesnelerle ilişkili arabirimler ve hizmetler bulunur. Ayrıca, tablolar, belirli proje türünün gereksinimlerine bağlı olarak, proje oluşturma ve bakım için isteğe bağlı diğer arabirimleri de ayrıntılandırır.

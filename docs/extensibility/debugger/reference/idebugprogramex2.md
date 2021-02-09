@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 663359ed-635a-4539-addb-0cc52f19d1bd
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b8961ea105779674aab0b67c9ad6339ce1c282f9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f206de825d021d8daa2977a839f96fabd5e9db7f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80722335"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99898857"
 ---
 # <a name="idebugprogramex2"></a>IDebugProgramEx2
 Bu arabirim, oturum hata ayıklama Yöneticisi 'nin (SDM) bir programa iliştirmelerini ve bir programla ilişkili program düğümünü almasını sağlar.
@@ -32,7 +32,7 @@ IDebugProgramEx2 : IUnknown
  Özel bir bağlantı noktası sağlayıcısı, bu arabirimi, SDM 'nin programa bağlı tüm oturumları izlemesine izin vermek için, aynı zamanda, SDM 'yi bir programa ekleyebilmesine izin vermek üzere [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) arabirimiyle aynı nesne üzerinde uygular. Özel bağlantı noktası sağlayıcısı, seçerse bu arabirimi uygulayabilir.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- SDM, [QueryInterface](/cpp/atl/queryinterface) `IDebugProgram2` programlara eklenmiş olan oturumları izlemek için bu arabirimi almak üzere bir arabirimdeki QueryInterface 'i çağırır.
+ SDM, [](/cpp/atl/queryinterface) `IDebugProgram2` programlara eklenmiş olan oturumları izlemek için bu arabirimi almak üzere bir arabirimdeki QueryInterface 'i çağırır.
 
 ## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
  Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDebugProgramEx2` .

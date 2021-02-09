@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 9df51800-190e-4662-b685-fdaafcff1400
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: edc4b4bcfe1ac1a85524517ba467e207a792e3cd
-ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
+ms.openlocfilehash: 0e2b56c061ce6e3124a7ed5a5dc00e41c3964204
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97877734"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99898235"
 ---
 # <a name="template-directory-description-vsdir-files"></a>Şablon Dizin Açıklaması (.Vsdir) Dosyaları
 Şablon dizin açıklama dosyası (. vsdir), tümleşik geliştirme ortamının (IDE), iletişim kutularındaki projenizle ilişkili klasörleri, sihirbaz. vsz dosyalarını ve şablon dosyalarını görüntülemesini sağlayan bir metin dosyasıdır. İçerikler dosya veya klasör başına bir kayıt içerir. Başvurulan bir konumdaki tüm. VSDir dosyaları birleştirilir, ancak birden çok klasörü, Sihirbazı veya şablon dosyasını anlatmak için genellikle yalnızca bir. vsdir dosyası sağlanır.
@@ -44,7 +44,7 @@ SourceFile.cpp|{E59935A1-6156-11d1-87A6-00A0C91E2A46}|#122|110|#123|0|0|0|#124
 | {clsidPackage} | VSPackage 'in uydu dinamik bağlantı kitaplığı (DLL) kaynaklarında LocalizedName, Description, ıresourceıd ve SuggestedBaseName gibi yerelleştirilmiş dizelere erişim sağlayan VSPackage GUID 'SI. DLLPath sağlanmazsa, ıresourceıd geçerlidir. **Note:**  Önceki alanlardan biri veya daha fazlası kaynak tanımlayıcısı değilse bu alan isteğe bağlıdır. Bu alan, kendi metinlerini yerelleştirmez üçüncü taraf sihirbazlarıyla karşılık gelen. VSDir dosyaları için genellikle boştur. |
 | LocalizedName | Şablon dosyasının veya sihirbazının yerelleştirilmiş adı. Bu alan, "#ResID" biçiminde bir dize veya kaynak tanımlayıcısı olabilir. Bu ad, **Yeni öğe Ekle** iletişim kutusunda görüntülenir. **Note:**  LocalizedName bir kaynak tanımsıdır, {clsidPackage} gerekir. |
 | SortPriority | Bu şablon dosyasının veya sihirbazının göreli önceliğini temsil eden bir tamsayı. Örneğin, bu öğenin değeri 1 ise bu öğe, 1 değerine sahip diğer öğelerin yanında görüntülenir ve 2 veya daha büyük bir sıralama değeri olan tüm öğelerin ilerisindedir.<br /><br /> Sıralama önceliği, aynı dizindeki öğelere göre belirlenir. Aynı dizinde birden fazla. vsdir dosyası olabilir. Bu durumda, tüm öğeleri <em>.</em> Bu dizindeki VSDir dosyaları birleştirilir. Aynı önceliğe sahip öğeler görüntülenen adının büyük/küçük harf duyarsız lexicographic sırasıyla listelenir. `_wcsicmp`İşlevi öğeleri sıralamak için kullanılır.<br /><br /> . Vsdir dosyalarında açıklanmayan öğeler,. vsdir dosyalarında listelenen en yüksek öncelik numarasından daha büyük bir öncelik numarası içerir. Sonuç, bu öğelerin, adından bağımsız olarak görüntülenen listenin sonunda olması olur. |
-| Açıklama | Şablon dosyasının veya sihirbazının yerelleştirilmiş açıklaması. Bu alan, "#ResID" biçiminde bir dize veya kaynak tanımlayıcısı olabilir. Bu dize, öğe seçildiğinde **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda görünür. |
+| Description | Şablon dosyasının veya sihirbazının yerelleştirilmiş açıklaması. Bu alan, "#ResID" biçiminde bir dize veya kaynak tanımlayıcısı olabilir. Bu dize, öğe seçildiğinde **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda görünür. |
 | DLLPath veya {clsidPackage} | Şablon dosyası veya sihirbazına yönelik bir simge yüklemek için kullanılır. Simge, ıresourceıd kullanılarak bir. dll veya. exe dosyasından kaynak olarak yüklenir. Bu. dll veya. exe dosyası, tam yol kullanılarak veya VSPackage 'un GUID 'SI kullanılarak belirlenebilir. VSPackage 'ın uygulama DLL 'SI, simgenin (uydu DLL değil) yüklenmesi için kullanılır. |
 | Iresourceıd | DLL veya VSPackage uygulama DLL dosyasında görüntülenecek simgeyi belirleyen kaynak tanımlayıcısı. |
 | Flags ( <xref:Microsoft.VisualStudio.Shell.Interop.__VSDIRFLAGS> ) | **Yeni öğe Ekle** Iletişim kutusundaki **ad** ve **konum** alanlarını devre dışı bırakmak veya etkinleştirmek için kullanılır. **Flags** alanının değeri, gerekli bit bayrakları birleşiminin ondalık eşdeğeridir.<br /><br /> Kullanıcı **Yeni** sekmede bir öğe seçtiğinde proje, **Yeni öğe Ekle** Iletişim kutusu ilk görüntülendiğinde ad alanının ve konum alanının gösterilip gösterilmeyeceğini belirler. Bir. vsdir dosyası aracılığıyla, öğe seçildiğinde yalnızca alanların etkin ve devre dışı olarak devre dışı bırakılıp bırakılmadığını kontrol edebilir. |

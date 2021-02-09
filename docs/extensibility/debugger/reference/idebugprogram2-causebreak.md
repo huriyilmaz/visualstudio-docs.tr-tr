@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 07d353fc-68ab-4297-a18f-3d3c7a80e121
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e96db32d7ba5a01f89530623c949500a265cdb60
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3593dd8d139bbb23cbb8128378399642bee03fdc
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80723104"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99897345"
 ---
 # <a name="idebugprogram2causebreak"></a>IDebugProgram2::CauseBreak
 İş parçacıklarından birinin bir sonraki çalıştırılışında programın yürütmeyi durdurmasını ister.
@@ -28,8 +28,8 @@ ms.locfileid: "80723104"
 ## <a name="syntax"></a>Syntax
 
 ```cpp
-HRESULT CauseBreak( 
-   void 
+HRESULT CauseBreak( 
+   void 
 );
 ```
 

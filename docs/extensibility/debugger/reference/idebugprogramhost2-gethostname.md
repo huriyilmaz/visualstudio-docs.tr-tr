@@ -9,33 +9,33 @@ helpviewer_keywords:
 ms.assetid: 48bbb089-e59a-471a-9965-24b42a8dabf3
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 5f1bd63d6b53359cf3b86f5e3849cb18bd8367f7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f801b6fd4b030866886f86b8cd01916645c2219c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80722225"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99898788"
 ---
 # <a name="idebugprogramhost2gethostname"></a>IDebugProgramHost2::GetHostName
 Bu programın barındırma sürecinin başlığını, kolay adını veya dosya adını alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
-HRESULT GetHostName( 
+HRESULT GetHostName( 
    DWORD dwType,
    BSTR* pbstrHostName
 );
 ```
 
 ```csharp
-int GetHostName( 
+int GetHostName( 
    uint dwType,
    out string pbstrHostName
 );

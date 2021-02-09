@@ -6,7 +6,7 @@ ms.date: 01/26/2018
 ms.topic: reference
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 f1_keywords:
 - vsl.GenerateFromUsage
 dev_langs:
@@ -14,12 +14,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: fe38cacf9f33acfac6b1634b6be6a8a3e45de820
-ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
+ms.openlocfilehash: 094dac3cea088bcede1ae251eec73c9741f6de6c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96617545"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99897985"
 ---
 # <a name="generate-a-class-or-type-in-visual-studio"></a>Visual Studio 'da bir sınıf veya tür oluşturma
 
@@ -74,9 +74,9 @@ Bu kod üretimi için geçerlidir:
 
    Seçim | Açıklama
    --- | ---
-   Erişim | Türü *varsayılan*, *iç* veya *genel* erişime sahip olacak şekilde ayarlayın.
-   Tür | Bu, *sınıf* veya *Yapı* olarak ayarlanabilir.
-   Ad | Bu değiştirilemez ve zaten yazdığınız ad olur.
+   Access | Türü *varsayılan*, *iç* veya *genel* erişime sahip olacak şekilde ayarlayın.
+   Tip | Bu, *sınıf* veya *Yapı* olarak ayarlanabilir.
+   Name | Bu değiştirilemez ve zaten yazdığınız ad olur.
    Project | Çözümünüzde birden fazla proje varsa, sınıfın/yapının nerede canlı olmasını istediğinizi seçebilirsiniz.
    Dosya Adı | Yeni bir dosya oluşturabilir veya türü mevcut bir dosyaya ekleyebilirsiniz.
 

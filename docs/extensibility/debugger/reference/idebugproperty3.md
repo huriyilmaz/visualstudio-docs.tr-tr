@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 8f9be68d-4490-4eca-8f6b-8a10ed77e226
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d2819724c204631112fd1a3e827126c4bc176972
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2f24e7ec1842866011bb4d3735104a043bc77e01
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80721045"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99897256"
 ---
 # <a name="idebugproperty3"></a>IDebugProperty3
 Bu arabirim için destek sağlar:
@@ -40,7 +40,7 @@ IDebugProperty3 : IDebugProperty2
  Hata ayıklama altyapısı (DE), uzun dizeler, özellik kimlikleri ve özel görüntüleyiciler için destek sağlamak üzere [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) uygulayan aynı nesne üzerinde bu arabirimi uygular.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- [QueryInterface](/cpp/atl/queryinterface) `IDebugProperty2` Bu arabirimi edinmek Için arabirim üzerinde QueryInterface 'i çağırın.
+ [](/cpp/atl/queryinterface) `IDebugProperty2` Bu arabirimi edinmek Için arabirim üzerinde QueryInterface 'i çağırın.
 
 ## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
  Kaynağından devralınan yöntemlere ek olarak `IDebugProperty2` , `IDebugProperty3` arabirimi aşağıdaki yöntemleri sunar.

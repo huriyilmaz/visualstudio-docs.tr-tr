@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: be1f1cd5-0b2f-435c-a052-dca28a7c978d
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ae58728601c3adbe6e37a00fd0694a5d71eef0b5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0640fa06b821c6679bc52c9f92a757cee6f0a580
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80722155"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99898739"
 ---
 # <a name="idebugprogramnamechangedevent2"></a>IDebugProgramNameChangedEvent2
 Bir programın adı değiştiğinde, hata ayıklama altyapısından (DE) oturum hata ayıklama Yöneticisi 'ne (SDM) gönderilir.

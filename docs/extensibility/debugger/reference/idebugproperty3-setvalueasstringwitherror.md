@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: b378368f-4a45-4b2f-8e3d-3bff7a18ab17
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: fb3441dabba1ff13600a9e505eeaec5ae93acd8e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4139d3c254c6d824c28e7ceb7fd5fe29b47a3737
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80721071"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99897303"
 ---
 # <a name="idebugproperty3setvalueasstringwitherror"></a>IDebugProperty3::SetValueAsStringWithError
 Bu özelliğin değerini ayarlar ve gerekirse bir hata mesajı döndürür.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
 HRESULT SetValueAsStringWithError(
