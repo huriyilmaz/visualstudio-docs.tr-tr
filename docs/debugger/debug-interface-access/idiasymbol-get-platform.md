@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: dff1c1eb-bcb2-4275-bb07-f2fdc076d6fb
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: fe9da9a436604c869bb460dd6a30bf74c3c286f6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: acfd6945e0ae32a259a67f646c0fed80820b9f9b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85462562"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99853697"
 ---
 # <a name="idiasymbolget_platform"></a>IDiaSymbol::get_platform
 Compiland 'in derlendiği Platform türünü alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT get_platform ( 
+HRESULT get_platform ( 
    DWORD* pRetVal
 );
 ```

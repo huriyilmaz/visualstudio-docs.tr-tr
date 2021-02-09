@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: 8bd9be8d-59ee-4698-b055-daba354b8dcc
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8e5c5f707be5d687417d06e71d58f11012516e00
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 44397558b29b1dd2e8038fa2d9b5fec44b5404df
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85466352"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99855482"
 ---
 # <a name="idiasectioncontribget_comdat"></a>IDiaSectionContrib::get_comdat
 Bölümün bir COMDAT kaydı olup olmadığını gösteren bir bayrak alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT get_comdat ( 
+HRESULT get_comdat ( 
    BOOL* pRetVal
 );
 ```

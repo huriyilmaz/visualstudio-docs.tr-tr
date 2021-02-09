@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: ff160cf6-003b-4ef5-a406-20a7b287b2bf
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 2c2bae3d054aa8e331db3a345743e4f0e9c20b49
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bbdeb9b4a5bf6f173cbb2a0bd593202317d62342
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85463178"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99853998"
 ---
 # <a name="idiasymbolget_issplitted"></a>IDiaSymbol::get_isSplitted
 Veri sembolünün diğer sembollerin toplama veya toplama göre bölünmeyeceğini belirten bir bayrak alır; Derleyici, sembolleri büyük bir sembolün gerçekten bir parçası olsalar bile ayrı varlıklar olarak değerlendirir.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
 HRESULT get_isSplitted(
@@ -46,7 +46,7 @@ dışı `TRUE` Simgenin bir sembol toplamasına bölündüğünü döndürür; A
 
 ## <a name="requirements"></a>Gereksinimler
 
-|Gereksinim|Description|
+|Gereksinim|Açıklama|
 |-----------------|-----------------|
 |Üst bilgi|dia2. h|
 |Sürüm:|DIA SDK v 8.0|

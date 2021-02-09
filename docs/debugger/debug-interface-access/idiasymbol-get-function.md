@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: 48b3a318-3211-410f-8570-c02ee210f0a5
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f806479aa04c568331a5463d8a67defe03fe459d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6f340f4ba2202f6412d962d218e23369c9c6e3a4
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85463836"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99854320"
 ---
 # <a name="idiasymbolget_function"></a>IDiaSymbol::get_function
 Genel simgenin bir işleve başvurmayacağını belirten bir bayrak alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT get_function ( 
+HRESULT get_function ( 
    BOOL* pRetVal
 );
 ```
@@ -43,7 +43,7 @@ dışı `TRUE` Sembol bir işleve başvuruyorsa bir döndürür; Aksi takdirde, 
 
 ## <a name="requirements"></a>Gereksinimler
 
-|Gereksinim|Description|
+|Gereksinim|Açıklama|
 |-----------------|-----------------|
 |Üst bilgi|dia2. h|
 |Sürüm:|DIA SDK v 7.0|

@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: 57ef4170-37a9-46b0-8217-c1a674725113
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: bf547835179aa203b9ecc4bb0c8050c34e213fdd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 418b8978b6c714a55c28bd2a8c8eb2e6110f6931
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85462604"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99853732"
 ---
 # <a name="idiasymbolget_optimizedcodedebuginfo"></a>IDiaSymbol::get_optimizedCodeDebugInfo
 İşlevin iyileştirilmiş kod için özel hata ayıklama bilgileri içerip içermediğini gösteren bir bayrak alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
 HRESULT get_optimizedCodeDebugInfo(
@@ -43,7 +43,7 @@ dışı `TRUE` İyileştirilmiş işlev veya etiket hata ayıklama bilgisi içer
 
 ## <a name="requirements"></a>Gereksinimler
 
-|Gereksinim|Description|
+|Gereksinim|Açıklama|
 |-----------------|-----------------|
 |Üst bilgi|dia2. h|
 

@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: 24e832eb-80b3-484c-a41b-11477ec9de99
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 62bb2f29d737aeb09cc228038be96480922e204c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a1f5deb0854a10e3d8947af7ed4c78d0432c21a8
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85464032"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99854418"
 ---
 # <a name="idiasymbolget_container"></a>IDiaSymbol::get_container
 Bu işlev, bu sembolün üst/kapsayıcısını temsil eden bir simgeye yönelik bir işaretçi alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
 HRESULT get_container(
@@ -43,7 +43,7 @@ dışı `IDiaSymbol` Bu sembolün kapsayıcısı hakkında içeren bir bilgi iç
 
 ## <a name="requirements"></a>Gereksinimler
 
-|Gereksinim|Description|
+|Gereksinim|Açıklama|
 |-----------------|-----------------|
 |Üst bilgi|dia2. h|
 |Sürüm:|DIA SDK v 8.0|

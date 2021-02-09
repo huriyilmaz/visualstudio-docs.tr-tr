@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: 7ee7a9be-a0d8-48e4-9fef-d37b3d6ae4ef
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 717c7efe5792a7df53139571273b4796e2e7f030
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d8da3cbfa085eea44af8a1caf7489aaaab83f60e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85461755"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99853501"
 ---
 # <a name="idiasymbolget_token"></a>IDiaSymbol::get_token
 Yönetilen bir işlevin veya değişkenin meta veri belirtecini alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT get_token ( 
+HRESULT get_token ( 
    DWORD* pRetVal
 );
 ```

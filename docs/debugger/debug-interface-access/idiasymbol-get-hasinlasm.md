@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: 7001c7cc-1459-4929-851b-a08066a803c6
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8bd9207a802a919e1dd86624584bda6963d2f278
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 26a617f01c56e417ed9d0a05c4fea72bc1e0b88b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85463710"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99854243"
 ---
 # <a name="idiasymbolget_hasinlasm"></a>IDiaSymbol::get_hasInlAsm
 İşlevin satır içi derleme içerip içermediğini belirten bir bayrak alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
 HRESULT get_hasInlAsm(
@@ -43,7 +43,7 @@ dışı `TRUE` İşlevin satır içi bir bütünleştirilmiş koda sahip olup ol
 
 ## <a name="requirements"></a>Gereksinimler
 
-|Gereksinim|Description|
+|Gereksinim|Açıklama|
 |-----------------|-----------------|
 |Üst bilgi|dia2. h|
 |Sürüm:|DIA SDK v 8.0|

@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: 6ae46d43-8486-48d6-a6f2-d73ebf4023e3
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a9f2fda5fb6effff1d528ac3c98d84b670ea2c09
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 04de0500105a460006d49788c5563eba3820685f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85462856"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99853837"
 ---
 # <a name="idiasymbolget_nested"></a>IDiaSymbol::get_nested
 Kullanıcı tanımlı veri türünün iç içe olup olmadığını belirten bir bayrak alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT get_nested ( 
+HRESULT get_nested ( 
    BOOL* pRetVal
 );
 ```

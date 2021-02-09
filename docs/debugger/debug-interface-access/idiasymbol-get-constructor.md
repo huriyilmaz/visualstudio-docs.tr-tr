@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: 2f2cf1e0-f817-4ca0-b782-3341362c46a9
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 877ac3b0a73dc13600c9d6847dfc505caaa05821
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f1d2f084d0561d7d691df1f0e12f98b4604c11b1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85464046"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99854432"
 ---
 # <a name="idiasymbolget_constructor"></a>IDiaSymbol::get_constructor
 Kullanıcı tanımlı veri türünün bir Oluşturucu veya yıkıcıya sahip olup olmadığını belirten bir bayrak alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT get_constructor ( 
+HRESULT get_constructor ( 
    BOOL* pRetVal
 );
 ```
@@ -43,7 +43,7 @@ dışı `TRUE` Kullanıcı tanımlı veri türünde bir Oluşturucu veya yıkıc
 
 ## <a name="requirements"></a>Gereksinimler
 
-|Gereksinim|Description|
+|Gereksinim|Açıklama|
 |-----------------|-----------------|
 |Üst bilgi|dia2. h|
 |Sürüm:|DIA SDK v 7.0|

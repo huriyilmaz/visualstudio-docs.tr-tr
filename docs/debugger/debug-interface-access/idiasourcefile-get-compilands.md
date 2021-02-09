@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: 57deb50a-9c22-43ea-a80c-eab205997bc4
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 89b3d85ab967185fb264491f57d6e6b59afad105
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 339097280cc3ddf88082f7c18c65693fd8e30702
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85465302"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99854985"
 ---
 # <a name="idiasourcefileget_compilands"></a>IDiaSourceFile::get_compilands
 Bu dosyaya başvuran satır numaralarına sahip olan compitika türlerini alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT get_compilands ( 
+HRESULT get_compilands ( 
    IDiaEnumSymbols** ppRetVal
 );
 ```

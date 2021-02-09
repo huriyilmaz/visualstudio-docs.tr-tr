@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: ca3c20a9-934a-4b2c-a7f6-7d06e8611ff2
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: bba448e11cd8a3be269f0824df1597ac1c6ce95a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1d79a3d8fdc0a1e2c6da53b744357b92a0cc0573
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85464844"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99854796"
 ---
 # <a name="idiastackwalkframeget_registervalue"></a>IDiaStackWalkFrame::get_registerValue
 Bir kaydın değerini alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT get_registerValue ( 
+HRESULT get_registerValue ( 
    DWORD      index,
    ULONGLONG* pRetVal
 );

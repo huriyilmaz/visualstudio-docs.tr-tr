@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: 30af6a2f-be84-429e-a96a-d0f9ed9343fb
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 676ae888de9cbf6a32e77571848d84a0632d0cc0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: efde91caaa4e7b79db01975c0691b2acb5f01bee
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85463570"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99854194"
 ---
 # <a name="idiasymbolget_inlspec"></a>IDiaSymbol::get_InlSpec
 Bu işlev, işlevin satır içi olarak işaretlenip işaretlenmediğini belirten bir bayrak alır ( [satır içi, __inline \_ _forceinline](/cpp/cpp/inline-functions-cpp) özniteliklerinden birini kullanarak).
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
 HRESULT get_inlSpec(
@@ -43,7 +43,7 @@ dışı `TRUE` İşlevin satır içi olarak işaretlenip işaretlenmediğini dö
 
 ## <a name="requirements"></a>Gereksinimler
 
-|Gereksinim|Description|
+|Gereksinim|Açıklama|
 |-----------------|-----------------|
 |Üst bilgi|dia2. h|
 |Sürüm:|DIA SDK v 8.0|

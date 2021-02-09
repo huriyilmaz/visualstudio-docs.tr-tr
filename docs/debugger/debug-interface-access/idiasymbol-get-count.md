@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: f6d6ac2f-6d96-4f88-962b-29c0a66890b0
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 515ef7571192271b5458d36257120d6eef2fe02f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0ade59bbe5c89a9fa88c49dc0ef3d648c45030f6
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85464011"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99854390"
 ---
 # <a name="idiasymbolget_count"></a>IDiaSymbol::get_count
 Bir liste veya dizideki öğelerin sayısını alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT get_count ( 
+HRESULT get_count ( 
    DWORD* pRetVal
 );
 ```
@@ -43,7 +43,7 @@ dışı Bir liste veya dizideki öğe sayısını döndürür.
 
 ## <a name="requirements"></a>Gereksinimler
 
-|Gereksinim|Description|
+|Gereksinim|Açıklama|
 |-----------------|-----------------|
 |Üst bilgi|dia2. h|
 |Sürüm:|DIA SDK v 7.0|

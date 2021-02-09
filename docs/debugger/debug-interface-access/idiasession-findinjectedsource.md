@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: 907531b6-1ef8-4153-986d-b72611a1632d
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 315c09c29f99d8fe148f9795879193b2cb1f9e49
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a49af12ed317732271d755477a2f50e6bb424205
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85465820"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99855223"
 ---
 # <a name="idiasessionfindinjectedsource"></a>IDiaSession::findInjectedSource
 Öznitelik sağlayıcıları veya derleme sürecinin diğer bileşenleri tarafından sembol deposuna yerleştirilmiş kaynakların listesini alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT findInjectedSource ( 
+HRESULT findInjectedSource ( 
    LPCOLESTR                 srcFile,
    IDiaEnumInjectedSources** ppResult
 );

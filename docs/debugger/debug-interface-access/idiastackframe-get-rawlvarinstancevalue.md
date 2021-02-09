@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: ce526259-85a6-475b-9274-0b3a21d95db2
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5a45568ea62a767d06a33c324f0f05a1f697e93f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a0c0052ca7183a0c53080a4e51bddd2cdfbf72ee
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85464984"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99854894"
 ---
 # <a name="idiastackframeget_rawlvarinstancevalue"></a>IDiaStackFrame::get_rawLVarInstanceValue
 Bu yöntem belirtilen yerel değişkenin değerini ham bayt olarak alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
 HRESULT get_rawLVarInstanceValue(

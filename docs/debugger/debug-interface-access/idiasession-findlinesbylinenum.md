@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: 76d5622d-9a91-4c2a-a98f-263af5d1daef
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 240eb3196ac47bf48bc6d6c3ef3ca844ec010dde
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e2486d3cbbecad1dee6b171f105d155d95a4e231
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85465666"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99855132"
 ---
 # <a name="idiasessionfindlinesbylinenum"></a>IDiaSession::findLinesByLinenum
 Kaynak dosyadaki belirtilen satır numarasının içinde veya yakınında bulunduğu compiland 'ın satır numaralarını belirler.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT findLinesByLinenum ( 
+HRESULT findLinesByLinenum ( 
     IDiaSymbol*           compiland,
     IDiaSourceFile*       file,
     DWORD                 linenum,

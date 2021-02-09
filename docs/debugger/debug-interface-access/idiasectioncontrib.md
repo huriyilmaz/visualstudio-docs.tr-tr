@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 371d40f6-ca0e-4d7e-9210-64d3768996c6
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 82d1a52616273a1cfe1d54580c91ec4ba6e1c09e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ba3e4566796d65818fcf85abc70494122fe5f14d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85466072"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99855342"
 ---
 # <a name="idiasectioncontrib"></a>IDiaSectionContrib
 Bir bölüm katkısını açıklayan verileri alır, diğer bir deyişle, bir compiland tarafından görüntüye katkıda bulunulan bir bellek bloğu.
@@ -25,7 +25,7 @@ Bir bölüm katkısını açıklayan verileri alır, diğer bir deyişle, bir co
 ## <a name="syntax"></a>Syntax
 
 ```
-IDiaSectionContrib : IUnknown
+IDiaSectionContrib : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler

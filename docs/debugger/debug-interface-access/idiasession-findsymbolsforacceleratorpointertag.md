@@ -7,23 +7,23 @@ dev_langs:
 ms.assetid: 95fd5e7a-c637-437e-b369-c864eef733c2
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 9a58795531d2537fc299e6e15554561129f0da0e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cba0d6c24bf4c22773da738ceb37470d6d7c5125
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85465505"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99855069"
 ---
 # <a name="idiasessionfindsymbolsforacceleratorpointertag"></a>IDiaSession::findSymbolsForAcceleratorPointerTag
 Belirtilen etiket değerinin üst Hızlandırıcı saplama işlevinde karşılık geldiği değişken için bir sembol numaralandırması döndürür.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT findSymbolsForAcceleratorPointerTag ( 
+HRESULT findSymbolsForAcceleratorPointerTag ( 
    IDiaSymbol*           parent,
    DWORD                 tagValue,
    IDiaEnumSymbols**     ppResult

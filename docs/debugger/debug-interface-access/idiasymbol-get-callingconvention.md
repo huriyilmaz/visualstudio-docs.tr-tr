@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: 355d3877-b6b6-45fd-a1d8-baed428d8f96
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4513571edb7d46efd02ff65bac5882c38f5dbc0e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: eee47ae1b1254e553c4b2bb1e075079c3f51a1ba
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85464116"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99854481"
 ---
 # <a name="idiasymbolget_callingconvention"></a>IDiaSymbol::get_callingConvention
 Yöntem çağırma yöntemi göstergesini döndürür.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT get_callingConvention ( 
+HRESULT get_callingConvention ( 
    DWORD* pRetVal
 );
 ```
@@ -43,7 +43,7 @@ dışı Metodun çağırma kuralını belirten [CV_call_e sabit](../../debugger/
 
 ## <a name="requirements"></a>Gereksinimler
 
-|Gereksinim|Description|
+|Gereksinim|Açıklama|
 |-----------------|-----------------|
 |Üst bilgi|dia2. h|
 |Sürüm:|DIA SDK v 7.0|

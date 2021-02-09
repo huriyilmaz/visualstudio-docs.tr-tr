@@ -7,23 +7,23 @@ dev_langs:
 ms.assetid: ddb3ff0e-cb3d-4fa0-af56-f064b218b264
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8be9203b3ed22093863710eb7689b16226988efe
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ae878043729787b80102d4ad6ed3bf2158d3cba0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85465694"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99855174"
 ---
 # <a name="idiasessionfindinlineframesbyrva"></a>IDiaSession::findInlineFramesByRVA
 Bir istemcinin belirtilen göreli sanal adreste (RVA) bulunan tüm satır içi çerçevelerde yineleme yapmasına izin veren bir sabit listesi alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT findInlineFramesByRVA ( 
+HRESULT findInlineFramesByRVA ( 
    IDiaSymbol*       parent,   DWORD             rva,
    IDiaEnumSymbols** ppResult
 );

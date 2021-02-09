@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: 8292bb08-4dc8-4663-beb4-258f5d5a448d
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 71105c6c3f93f259bdb6ce8e5f46abe30c5953c2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e6469180cada412fe5f08db1bd982f5a6e250e9e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85462618"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99853746"
 ---
 # <a name="idiasymbolget_offset"></a>IDiaSymbol::get_offset
 Sembol konumunun sapmasını alır. [LocationType numaralandırması](../../debugger/debug-interface-access/locationtype.md) veya olduğunda kullanın `LocIsRegRel` `LocIsBitField` .
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT get_offset ( 
+HRESULT get_offset ( 
    LONG* pRetVal
 );
 ```
@@ -46,7 +46,7 @@ dışı Sembol konumunun bayt cinsinden sapmasını döndürür.
 
 ## <a name="requirements"></a>Gereksinimler
 
-|Gereksinim|Description|
+|Gereksinim|Açıklama|
 |-----------------|-----------------|
 |Üst bilgi|dia2. h|
 |Sürüm:|DIA SDK v 7.0|

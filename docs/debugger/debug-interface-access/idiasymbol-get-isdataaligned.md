@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: ddd11a41-6c00-4829-acf4-aa1ace8c21a7
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 00507b5d69f46657968407170d9633f1d84c8e4f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f2270a960eda7942216751be90241e4f896ba5ea
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85463430"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99854110"
 ---
 # <a name="idiasymbolget_isdataaligned"></a>IDiaSymbol::get_isDataAligned
 Kullanıcı tanımlı türün (UDT) belirli bir bellek sınırına hizalanıp Hizalanmadığını belirten bir bayrak alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
 HRESULT get_isDataAligned(
@@ -46,7 +46,7 @@ dışı `TRUE` Udt bir bellek sınırına hizalanmışsa döndürür; Aksi takdi
 
 ## <a name="requirements"></a>Gereksinimler
 
-|Gereksinim|Description|
+|Gereksinim|Açıklama|
 |-----------------|-----------------|
 |Üst bilgi|dia2. h|
 |Sürüm:|DIA SDK v 8.0|

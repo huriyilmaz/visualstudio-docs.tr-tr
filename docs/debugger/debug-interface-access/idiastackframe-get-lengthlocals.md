@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: dbc3e544-578a-4f0b-8d20-f21ad4cbb604
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a812b51f8f874baf0a954b33d8fe25cc382e2d83
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c2a78811b39243c31385201ee327fbe7b5c5416b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85465096"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99854915"
 ---
 # <a name="idiastackframeget_lengthlocals"></a>IDiaStackFrame::get_lengthLocals
 Yığına gönderilen yerel değişkenlerin bayt sayısını alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT get_lengthLocals ( 
+HRESULT get_lengthLocals ( 
    DWORD* pRetVal
 );
 ```

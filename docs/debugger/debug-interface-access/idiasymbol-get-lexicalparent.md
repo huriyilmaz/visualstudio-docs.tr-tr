@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: 4d119965-33a8-474c-9c64-95c5218c389c
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d1a381fe495208bf3dd1f530a2d5e3dffd7c3c76
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: afac75a650f3ffc8dc365626a7a61fea8c3193f4
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85463066"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99853956"
 ---
 # <a name="idiasymbolget_lexicalparent"></a>IDiaSymbol::get_lexicalParent
 Simgenin sözcük üst öğesi için bir başvuru alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT get_lexicalParent ( 
+HRESULT get_lexicalParent ( 
    IDiaSymbol** pRetVal
 );
 ```

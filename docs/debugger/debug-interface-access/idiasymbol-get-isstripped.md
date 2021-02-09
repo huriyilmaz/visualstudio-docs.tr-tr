@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: cc2c4a0b-ab9f-4b79-a8ff-a3badb0405d6
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8a2fa8d393511417c11e35a29e467ebf852f7f9d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a62c05fa4297fb98d7a9e2005522d56bcaa58aba
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85463164"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99853977"
 ---
 # <a name="idiasymbolget_isstripped"></a>IDiaSymbol::get_isStripped
 Özel simgelerin sembol dosyasından bırakılıp nakledilmediğini belirten bayrak alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
 HRESULT get_isStripped(
@@ -46,7 +46,7 @@ dışı `TRUE` Özel simgelerin sembol dosyasından kaldırılıp kaldırılmad�
 
 ## <a name="requirements"></a>Gereksinimler
 
-|Gereksinim|Description|
+|Gereksinim|Açıklama|
 |-----------------|-----------------|
 |Üst bilgi|dia2. h|
 |Sürüm:|DIA SDK v 8.0|

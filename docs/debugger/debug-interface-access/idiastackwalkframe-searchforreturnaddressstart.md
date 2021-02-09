@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: 47660b9b-6e4f-4dfa-88ab-63dce28f7412
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 361aa5083f0d3abafc42ddbacf9bee4e464a3336
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7df2a6bf560c8b0916357c063dff01f1d8f5ac9e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85464816"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99854775"
 ---
 # <a name="idiastackwalkframesearchforreturnaddressstart"></a>IDiaStackWalkFrame::searchForReturnAddressStart
 Belirtilen adreste veya yakınında bir dönüş adresi için belirtilen yığın çerçevesini arar.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT searchForReturnAddressStart ( 
+HRESULT searchForReturnAddressStart ( 
    IDiaFrameData* frame,
    ULONGLONG      startAddress,
    ULONGLONG*     returnAddress

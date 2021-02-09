@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: e40f82f5-88fe-4a9b-b594-3605f42773ec
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: e4ce3326e6922227b83a12b21b6fc2aa2f9ce81e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2fe00b39fb451372d8d3a949d5f1d553b71d7507
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85463696"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99854236"
 ---
 # <a name="idiasymbolget_hasmanagedcode"></a>IDiaSymbol::get_hasManagedCode
 Modülün yönetilen kod içerip içermediğini gösteren bir bayrak alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
 HRESULT get_hasManagedCode(
@@ -46,7 +46,7 @@ dışı `TRUE` Modülün yönetilen kod içerip içermediğini döndürür; Aksi
 
 ## <a name="requirements"></a>Gereksinimler
 
-|Gereksinim|Description|
+|Gereksinim|Açıklama|
 |-----------------|-----------------|
 |Üst bilgi|dia2. h|
 |Sürüm:|DIA SDK v 8.0|

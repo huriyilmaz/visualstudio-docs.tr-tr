@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: 5d92e394-649b-49f2-bce7-12dd9d666d85
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d878e831e18149df63243abd7c6a4ceee051d550
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a887ddad0b22cd1ccc478ab7caed1ed22c25f5d1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85465974"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99855314"
 ---
 # <a name="idiasegmentget_length"></a>IDiaSegment::get_length
 Kesimdeki bayt sayısını alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
-HRESULT get_ length ( 
+HRESULT get_ length ( 
    DWORD* pRetVal
 );
 ```

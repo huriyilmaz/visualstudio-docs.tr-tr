@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: 22656206-dccf-40ed-b179-fc016d1b262a
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 353247c494b803871a9c64126545e11be39bfcae
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a2584351919e717c893afcf35b4812df63042240
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85463640"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99854215"
 ---
 # <a name="idiasymbolget_hassetjump"></a>IDiaSymbol::get_hasSetJump
 İşlevin [setjmp](/cpp/c-runtime-library/reference/setjmp) komutunun bir kullanımını içerip içermediğini belirten bir bayrak alır (Bu, [longjmp](/cpp/c-runtime-library/reference/longjmp) komutuyla eşleştirilmiş, bu, özel durum işlemenin C stili yöntemini oluşturur).
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```C++
 HRESULT get_hasSetJump(
@@ -43,7 +43,7 @@ dışı `TRUE` İşlev bir komut içeriyorsa döndürür `setjmp` ; Aksi takdird
 
 ## <a name="requirements"></a>Gereksinimler
 
-|Gereksinim|Description|
+|Gereksinim|Açıklama|
 |-----------------|-----------------|
 |Üst bilgi|dia2. h|
 |Sürüm:|DIA SDK v 8.0|
