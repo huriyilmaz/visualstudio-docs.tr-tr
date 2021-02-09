@@ -12,15 +12,15 @@ helpviewer_keywords:
 - ClickOnce deployment [Office development in Visual Studio], deploying solutions
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: d808348528a64cc184c7a6c50359c057b2325a75
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: da527da4504d4c2d9375aee0209b0e261fe5fd0a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96845654"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99877941"
 ---
 # <a name="deploy-an-office-solution-by-using-clickonce"></a>ClickOnce kullanarak Office çözümü dağıtma
   ClickOnce kullanıyorsanız Office çözümünüzü daha az adımda dağıtabilirsiniz. Güncelleştirmeleri yayımlarsanız, çözümünüz bunları otomatik olarak algılar ve yükler. Bununla birlikte, ClickOnce, çözümünüzü bir bilgisayarın her kullanıcısı için ayrı ayrı yüklemenizi gerektirir. Bu nedenle, birden fazla Kullanıcı çözümünüzü aynı bilgisayarda çalıştırabileceğinden, Windows Installer (*. msi*) kullanmayı düşünmelisiniz.
@@ -170,7 +170,7 @@ ms.locfileid: "96845654"
 
 ##### <a name="to-add-the-vsto-mime-type-to-iis-70"></a>IIS 7,0. vsto MIME türünü eklemek için
 
-1. IIS 7,0 çalıştıran sunucuda **Start**  >  **tüm programlar**  >  **aksesuarları**' nı Başlat ' ı seçin.
+1. IIS 7,0 çalıştıran sunucuda   >  **tüm programlar**  >  **aksesuarları**' nı Başlat ' ı seçin.
 
 2. **Komut istemi** kısayol menüsünü açın ve ardından **yönetici olarak çalıştır** ' ı seçin.
 

@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: d0bcfc3c-14fa-455e-805c-63ccffa4a3bf
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4eb35554c61c532e0d004e5c974345564e17d4ae
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: ba6a71373026a5a41905efc7c91520a9f6b7c5c3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93048996"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99878213"
 ---
 # <a name="msbuild-transforms"></a>MSBuild dönüşümleri
 
@@ -34,7 +34,7 @@ Aşağıdaki örnekte, *. resx* dosyalarının bir listesi *. resources* dosyala
 @(RESXFile->'%(filename).resources')
 ```
 
-Örneğin, @ (RESXFile) öğe listesindeki öğeler *Form1. resx* , *Form2. resx* ve *Form3. resx* ise, dönüştürülmüş listedeki çıktılar *Form1. resources* , *Form2. resources* ve *Form3. resources* olur.
+Örneğin, @ (RESXFile) öğe listesindeki öğeler *Form1. resx*, *Form2. resx* ve *Form3. resx* ise, dönüştürülmüş listedeki çıktılar *Form1. resources*, *Form2. resources* ve *Form3. resources* olur.
 
 > [!NOTE]
 > Dönüştürülmüş öğe listesi için bir özel ayırıcı, bir standart öğe listesi için ayırıcı belirttiğiniz şekilde belirtebilirsiniz. Örneğin, varsayılan noktalı virgül (;) yerine virgül (,) kullanarak dönüştürülmüş bir öğe listesini ayırmak için aşağıdaki XML 'i kullanın: `@(RESXFile->'Toolset\%(filename)%(extension)', ',')`
@@ -47,7 +47,7 @@ Aşağıdaki örnekte, *. resx* dosyalarının bir listesi *. resources* dosyala
 @(RESXFile->'Toolset\%(filename)%(extension)')
 ```
 
- Örneğin, öğe listesinde yer alan öğeler `RESXFile` *Project1\Form1.resx* , *Project1\Form2.resx* ve *Project1\Form3.Text* ise, dönüştürülmüş listedeki çıktılar *Toolset\Form1.resx* , *Toolset\Form2.resx* ve *Toolset\Form3.Text* olur.
+ Örneğin, öğe listesinde yer alan öğeler `RESXFile` *Project1\Form1.resx*, *Project1\Form2.resx* ve *Project1\Form3.Text* ise, dönüştürülmüş listedeki çıktılar *Toolset\Form1.resx*, *Toolset\Form2.resx* ve *Toolset\Form3.Text* olur.
 
 ## <a name="dependency-analysis"></a>Bağımlılık Analizi
 

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - text [Office development in Visual Studio], text searches
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 5ad77da419f70a8e513bf152ced41cccdd0474a8
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: f3ef1a32d145169db815915ee93d03893943e71f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97524601"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99877908"
 ---
 # <a name="how-to-programmatically-search-for-and-replace-text-in-documents"></a>Nasıl yapılır: belgelerde metni program aracılığıyla arama ve değiştirme
   <xref:Microsoft.Office.Interop.Word.Find>Nesnesi hem hem de nesnelerinin bir üyesidir <xref:Microsoft.Office.Interop.Word.Selection> <xref:Microsoft.Office.Interop.Word.Range> ve Microsoft Office Word belgelerinde metin aramak için bunlardan birini kullanabilirsiniz. Replace komutu Find komutunun bir uzantısıdır.

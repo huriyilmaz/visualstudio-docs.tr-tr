@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 0a84bda3-6051-45eb-9c7f-d57419e1f97d
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
-ms.openlocfilehash: 7787b3b0afaed0bc3592b458646b97151e309905
-ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
+manager: jmartens
+ms.openlocfilehash: 5b501cef5360be08f1b283e9064617b649a33da9
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95442514"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99878025"
 ---
 # <a name="analyze-load-test-results-and-errors-in-the-tables-view-of-the-load-test-analyzer"></a>Yük Testi Çözümleyicisinin Tablo görünümündeki yük testi sonuçlarını ve hatalarını çözümleme
 
@@ -76,19 +76,19 @@ Aşağıdaki tabloda **istekler** tablosundaki sütunlar listelenmektedir:
 
 |Sütun|Açıklama|Varsayılan olarak görünür|
 |-|-|-|
-|**İstek**|İsteğin URL 'SI. Örneğin, *home.html* veya *orange-arrow.gif*.|Evet|
-|**Senaryo**|Senaryonun adı.|Evet|
-|**Test**|Testin adı.|Evet|
-|**Toplam**|Yük testi çalıştırması sırasında verilen bu Web performans testi isteğinin toplam sayısı. Toplam geçen ve başarısız istekleri içerir, ancak Web sunucusuna verilmediğinden önbelleğe alınmış istekleri içermez.|Evet|
+|**İstek**|İsteğin URL 'SI. Örneğin, *home.html* veya *orange-arrow.gif*.|Yes|
+|**Senaryo**|Senaryonun adı.|Yes|
+|**Test**|Testin adı.|Yes|
+|**Toplam**|Yük testi çalıştırması sırasında verilen bu Web performans testi isteğinin toplam sayısı. Toplam geçen ve başarısız istekleri içerir, ancak Web sunucusuna verilmediğinden önbelleğe alınmış istekleri içermez.|Yes|
 |**Geçiril**|İsteğin kaç kez verildiğini ve geçtiğini.|Hayır|
-|**Başarısız**|İsteğin kaç kez verildiğini ve başarısız olduğunu. Bu sütundaki girişler köprü olarak görüntülenir. **Yük testi hataları** iletişim kutusunda bireysel hataların bir listesini görüntülemek için herhangi bir köprü seçebilirsiniz. Daha fazla bilgi için bkz. [Yük testi sonuçlarını çözümleme](../test/analyze-load-test-results-using-the-load-test-analyzer.md).|Evet|
+|**Başarısız**|İsteğin kaç kez verildiğini ve başarısız olduğunu. Bu sütundaki girişler köprü olarak görüntülenir. **Yük testi hataları** iletişim kutusunda bireysel hataların bir listesini görüntülemek için herhangi bir köprü seçebilirsiniz. Daha fazla bilgi için bkz. [Yük testi sonuçlarını çözümleme](../test/analyze-load-test-results-using-the-load-test-analyzer.md).|Yes|
 |**Önbelleğe alınmış**|İsteğin önceden önbelleğe alınma toplam sayısı.|Hayır|
 |**İstek/sn**|Yük testi çalışması sırasında isteğin saniye başına oranı.|Hayır|
 |**Geçilen/sn**|Bu isteğin geçirildiği örnekleri için yük testi çalıştırması sırasında bu isteğin saniye oranı.|Hayır|
 |**Başarısız/sn**|Bu isteğin başarısız olduğu örnekler için yük testi çalıştırması sırasında bu isteğin saniye oranı.|Hayır|
 |**İlk bayt süresi**|İsteğin Web sunucusuna gönderilme zamanından itibaren ölçülen ilk baytın alınacağı ortalama süre. Birimler saniyedir.|Hayır|
-|**Yanıt süresi**|İsteğin Web sunucusuna gönderilme zamanından itibaren ölçülen tüm yanıtı almak için geçen ortalama süre. Birimler saniyedir.|Evet|
-|**İçerik uzunluğu**|İsteğin yanıt içeriğinin ortalama uzunluğu. Birimler bayttır.|Evet|
+|**Yanıt süresi**|İsteğin Web sunucusuna gönderilme zamanından itibaren ölçülen tüm yanıtı almak için geçen ortalama süre. Birimler saniyedir.|Yes|
+|**İçerik uzunluğu**|İsteğin yanıt içeriğinin ortalama uzunluğu. Birimler bayttır.|Yes|
 
 ## <a name="the-tests-table"></a>Testler tablosu
 
@@ -98,17 +98,17 @@ Aşağıdaki tabloda, **testler** tablosundaki sütunlar listelenmektedir.
 
 |Sütun|Açıklama|Varsayılan olarak görünür|
 |-|-|-|
-|**Test**|Testin adı.|Evet|
-|**Senaryo**|Senaryonun adı.|Evet|
-|**Toplam**|Senaryoda testin toplam kaç kez çalıştırıldığı. Bu, testin kaç kez geçtiğini ve başarısız olduğunu içerir.|Evet|
-|**Geçiril**|Testin senaryoda kaç kez çalıştırıldığı ve geçirildiği sayı.|Evet|
-|**Başarısız**|Testin senaryoda kaç kez çalıştırıldığını ve başarısız olduğunu. Bu sütundaki girişler köprü olarak görüntülenir. **Yük testi hataları** iletişim kutusunda bireysel hataların bir listesini görüntülemek için herhangi bir köprü seçebilirsiniz. Daha fazla bilgi için bkz. [Yük testi sonuçlarını çözümleme](../test/analyze-load-test-results-using-the-load-test-analyzer.md).|Evet|
-|**Test/sn**|Yük testi çalışması sırasında testin saniye başına hızı.|Evet|
+|**Test**|Testin adı.|Yes|
+|**Senaryo**|Senaryonun adı.|Yes|
+|**Toplam**|Senaryoda testin toplam kaç kez çalıştırıldığı. Bu, testin kaç kez geçtiğini ve başarısız olduğunu içerir.|Yes|
+|**Geçiril**|Testin senaryoda kaç kez çalıştırıldığı ve geçirildiği sayı.|Yes|
+|**Başarısız**|Testin senaryoda kaç kez çalıştırıldığını ve başarısız olduğunu. Bu sütundaki girişler köprü olarak görüntülenir. **Yük testi hataları** iletişim kutusunda bireysel hataların bir listesini görüntülemek için herhangi bir köprü seçebilirsiniz. Daha fazla bilgi için bkz. [Yük testi sonuçlarını çözümleme](../test/analyze-load-test-results-using-the-load-test-analyzer.md).|Yes|
+|**Test/sn**|Yük testi çalışması sırasında testin saniye başına hızı.|Yes|
 |**Geçilen/sn**|Bu testin geçirildiği örnekleri için yük testi çalıştırması sırasında bu testin saniye oranı.|Hayır|
 |**Başarısız/sn**|Bu testin başarısız olan örnekleri için yük testi çalıştırması sırasında bu testin saniye oranı.|Hayır|
-|**Test zamanı**|Yük testi çalıştırması sırasında testi yürütmek için geçen ortalama süre. Birimler saniyedir.|Evet|
+|**Test zamanı**|Yük testi çalıştırması sırasında testi yürütmek için geçen ortalama süre. Birimler saniyedir.|Yes|
 |**%90 test zamanı**|Test süresi için 90. yüzdebirlik değeri.|Hayır|
-|**%95 test zamanı**|Test süresi için 95. yüzdebirlik değeri.|Evet|
+|**%95 test zamanı**|Test süresi için 95. yüzdebirlik değeri.|Yes|
 |**İstek/test**|Web performans testi ise, testteki ortalama istek sayısı.|Hayır|
 
 ## <a name="the-transactions-table"></a>Işlem tablosu
@@ -122,10 +122,10 @@ Aşağıdaki tabloda, **işlemler** tablosundaki sütunlar listelenmektedir.
 
 |Sütun|Açıklama|Zamanlama ayrıntıları olmadan görünür|
 |-|-|-|
-|**İşlem**|İşlemin adı.|Evet|
-|**Senaryo**|Senaryonun adı.|Evet|
-|**Test**|Testin adı.|Evet|
-|**Toplam**|Yük testi çalışması sırasında verilen toplam işlem sayısı.|Evet|
+|**İşlem**|İşlemin adı.|Yes|
+|**Senaryo**|Senaryonun adı.|Yes|
+|**Test**|Testin adı.|Yes|
+|**Toplam**|Yük testi çalışması sırasında verilen toplam işlem sayısı.|Yes|
 |**İşlem saati**|Yük testi çalışması sırasında işlemin yürütülmesi için geçen süre. Web performans testlerinde düşünme süresi hesaplamaya dahil edilir. Birimler saniyedir.|Hayır|
 |**Yanıt süresi**|Yük testi çalıştırmasında Web performans testi işlemi için yanıt süresi. Yanıt süresi, bu yanıt süresi içinde Işlem zamanından farklıdır ve işlem sırasında oluşan düşünme süresini içermez. Birimler saniyedir.|Hayır|
 |**Ave. Işlem zamanı**|Ortalama işlem süresi. Bu kez düşünme süreleri de dahildir. Örneğin, üç isteğiniz varsa ve her birinin bir düşünme zamanı varsa, bu kez isteklerin yürütülmesi için bu düşünme süreleri ve gerçek zaman dahil edilir.|Hayır|
@@ -148,10 +148,10 @@ Hatalar tablosu şu sütunları içerir:
 
 |Sütun|Açıklama|Varsayılan olarak görünür|
 |-|-|-|
-|Tür|Hatanın türü. Örneğin, HttpError.|Evet|
-|SubType|Hatanın alt türü. Örneğin, LoadTestException.|Evet|
-|Count|Bu türün yük testi sırasında oluşan hata sayısı. Bu sütundaki girişler köprü olarak görüntülenir. Bireysel hataların bir listesini görüntülemek için herhangi bir köprü seçebilirsiniz.|Evet|
-|Son Ileti|Hatayı açıklayan bir ileti. Örneğin, 404-NotFound.|Evet|
+|Tür|Hatanın türü. Örneğin, HttpError.|Yes|
+|SubType|Hatanın alt türü. Örneğin, LoadTestException.|Yes|
+|Count|Bu türün yük testi sırasında oluşan hata sayısı. Bu sütundaki girişler köprü olarak görüntülenir. Bireysel hataların bir listesini görüntülemek için herhangi bir köprü seçebilirsiniz.|Yes|
+|Son Ileti|Hatayı açıklayan bir ileti. Örneğin, 404-NotFound.|Yes|
 
 Daha fazla bilgi için bkz. [Yük testi tablolarıyla çalışma](../test/analyze-load-test-results-and-errors-in-the-tables-view.md).
 

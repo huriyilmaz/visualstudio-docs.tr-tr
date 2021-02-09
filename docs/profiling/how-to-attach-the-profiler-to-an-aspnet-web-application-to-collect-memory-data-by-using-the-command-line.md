@@ -7,16 +7,16 @@ ms.topic: how-to
 ms.assetid: d608f85a-41ae-4ca7-85e6-b96624dbc83c
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - aspnet
-ms.openlocfilehash: 918a370df43e2754721dd715ea6e2559e14160f8
-ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
+ms.openlocfilehash: eb90141f10787b820fcb31ee0337f6cd8402f084
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98801605"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99877089"
 ---
 # <a name="how-to-attach-the-profiler-to-an-aspnet-web-application-to-collect-memory-data-by-using-the-command-line"></a>Nasıl yapılır: komut satırını kullanarak bellek verileri toplamak için profil oluşturucuyu bir ASP.NET Web uygulamasına Iliştirme
 Bu makalede [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , bir [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web uygulamasına Profiler eklemek ve .NET Framework bellek ayırmalarının sayısı ve boyutu hakkında veri toplamak için profil oluşturma araçları komut satırı araçlarının nasıl kullanılacağı açıklanır. Ayrıca, .NET Framework bellek nesnelerinin yaşam süresi hakkında veri toplayabilirsiniz.

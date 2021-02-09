@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SharePoint Connections [SharePoint development in Visual Studio], creating a new node type
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: bbee6d780c7f447c8b47f7b478531cb58cef94fd
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: be772075be27cc8d6e58b6b54bb281a127f4677f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96915472"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99878129"
 ---
 # <a name="how-to-add-a-custom-sharepoint-node-to-server-explorer"></a>Nasıl yapılır: Sunucu Gezgini için özel bir SharePoint düğümü ekleme
   **Sunucu Gezgini**' de **SharePoint bağlantıları** düğümünün altına özel düğümler ekleyebilirsiniz. Bu, varsayılan olarak **Sunucu Gezgini** görüntülenmeyen ek SharePoint bileşenlerini göstermek istediğinizde yararlıdır. Daha fazla bilgi için, bkz. [Sunucu Gezgini SharePoint bağlantıları düğümünü genişletme](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md).

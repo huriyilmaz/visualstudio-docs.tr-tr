@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c9b7525a-b1c9-40fc-8bce-77a5b8f960d8
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 99475ac316112f29a73a85b8ff92249a13867852
-ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
+ms.openlocfilehash: 785d1bcfb8fdce5b09e749dcca17ff476a5d3f48
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92436729"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99877167"
 ---
 # <a name="exec-task"></a>Yürütme görevi
 
@@ -37,7 +37,7 @@ Aşağıdaki tabloda, görevi için parametreler açıklanmaktadır `Exec` .
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`Command`|Gerekli `String` parametre.<br /><br /> Çalıştırılacak komut (lar). Bunlar, attrib gibi sistem komutları veya *program.exe*, *runprogram.bat*veya *setup.msi*gibi yürütülebilir bir dosya olabilir.<br /><br /> Bu parametre, birden çok komut satırı içerebilir. Alternatif olarak, birden fazla komutu bir toplu iş dosyasına yerleştirebilir ve bu parametreyi kullanarak çalıştırabilirsiniz.|
+|`Command`|Gerekli `String` parametre.<br /><br /> Çalıştırılacak komut (lar). Bunlar, attrib gibi sistem komutları veya *program.exe*, *runprogram.bat* veya *setup.msi* gibi yürütülebilir bir dosya olabilir.<br /><br /> Bu parametre, birden çok komut satırı içerebilir. Alternatif olarak, birden fazla komutu bir toplu iş dosyasına yerleştirebilir ve bu parametreyi kullanarak çalıştırabilirsiniz.|
 |`ConsoleOutput`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıkış parametresi.<br /><br /> Her öğe çıktısı, araç tarafından yayılan standart çıkış veya standart hata akışından alınan bir satırdır. Bu yalnızca `ConsoleToMsBuild` olarak ayarlanırsa yakalanır `true` .|
 |`ConsoleToMsBuild`|İsteğe bağlı `Boolean` parametre.<br /><br /> `true`Bu görev, aracının standart hatasını ve standart çıkışını yakalayıp çıkış parametresinde kullanılabilir hale getirir `ConsoleOutput` .<br /><br />Varsayılan: `false`.|
 |`CustomErrorRegularExpression`|İsteğe bağlı `String` parametre.<br /><br /> Araç çıkışında hata çizgilerini belirlemek için kullanılan bir normal ifade belirtir. Bu, olağandışı biçimli çıkış üreten araçlar için kullanışlıdır.<br /><br />Varsayılan: `null` (özel işlem yok).|
