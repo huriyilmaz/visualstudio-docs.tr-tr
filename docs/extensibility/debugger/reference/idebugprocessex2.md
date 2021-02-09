@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 44e309ba-1d6f-499b-aa7e-9b34858a6d57
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 743dd1aa72d9b8db6b848618c8a2ad6c8c8ecaaf
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9e8966be5c30bf2061fc1e03be6798279afbe8ac
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80723335"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99900177"
 ---
 # <a name="idebugprocessex2"></a>IDebugProcessEx2
 Bu arabirim, oturum hata ayıklama Yöneticisi 'nin (SDM) işleme iliştirmekte veya işlemden ayrıldığı bir işlemi bilgilendirmesini sağlar.
@@ -39,7 +39,7 @@ IDebugProcessEx2 : IUnknown
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
 
-- SDM, [QueryInterface](/cpp/atl/queryinterface) `IDebugProcess2` Bu arabirimi almak Için bir arabirimdeki QueryInterface 'i çağırır.
+- SDM, [](/cpp/atl/queryinterface) `IDebugProcess2` Bu arabirimi almak Için bir arabirimdeki QueryInterface 'i çağırır.
 
 ## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
  Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDebugProcessEx2` .

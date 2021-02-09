@@ -9,15 +9,15 @@ f1_keywords:
 ms.assetid: f58d3c70-944d-4bb4-90a7-e68c103caddc
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f6414d92cea867a1235d73a39b6415ab884651ec
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: ceff7d40ffd0d7c961f07dd65a8070a8f11a1b4b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94434200"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99899375"
 ---
 # <a name="receive-activity-designer"></a>Receive Etkinlik Tasarımcısı
 

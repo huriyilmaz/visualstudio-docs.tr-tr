@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Domain-Specific Language, connectors
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0d456f251c5c8af21113593469b019094207cbf2
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: b09ec4278dd78f797067c3acdf3152736fb395c3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97360513"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99899852"
 ---
 # <a name="properties-of-connectors"></a>Bağlayıcıların Özellikleri
 Bağlayıcılar, oluşturulan bir tasarımcıda etki alanı ilişkilerini temsil eder.
@@ -39,13 +39,13 @@ Bağlayıcılar, oluşturulan bir tasarımcıda etki alanı ilişkilerini temsil
 |Özel Oluşturucusu vardır|İse `True` , kaynak kodda özel bir Oluşturucu sağlanacaktır. Daha fazla bilgi için bkz. [oluşturulan sınıfları geçersiz kılma ve genişletme](../modeling/overriding-and-extending-the-generated-classes.md).|Yanlış|
 |Devralma değiştiricisi|Bağlayıcıdan oluşturulan kaynak kodu sınıfının devralım türünü açıklar ( `none` `abstract` veya `sealed` ).|yok|
 |Temel bağlayıcı|Bu bağlayıcının temel sınıfı.|(yok)|
-|Ad|Bu bağlayıcının adı.|Geçerli ad|
+|Name|Bu bağlayıcının adı.|Geçerli ad|
 |Ad Alanı|Bu bağlayıcıyla ilişkili ad alanı.|Geçerli ad alanı|
 |Araç ipucu türü|Araç ipucu nasıl tanımlanır (sabit, değişken veya yok). Düzeltildiğinde, `Fixed Tooltip Text` özelliğin değeri araç ipucu olarak kullanılır; değişken ise, araç ipucu özel kodda tanımlanır.|\<none>|
 |Notlar|Bu bağlayıcı ile ilişkili resmi olmayan notlar.|\<none>|
 |Yönlendirme stili|Bağlayıcıyı yönlendirmek için kullanılan stil. `Rectilinear`Bağlayıcı, gereken şekilde doğru dönüşler yapar; bir `Straight` bağlayıcı değildir.|Rectilinear|
 |Özellik olarak sunulan renk<br /><br /> Özellik olarak açığa çıkarılan kesik çizgi stili<br /><br /> Özellik olarak sunulma kalınlığı<br /><br /> Metin rengini gösterir|Eğer `True` Kullanıcı, bir şeklin belirtilen özelliğini ayarlayabilir. Bunu ayarlamak için, şekil tanımına sağ tıklayıp **gösterilen Ekle**' ye tıklayın.|Yanlış|
-|Açıklama|Oluşturulan tasarımcıyı belgelemek için kullanılır.|\<none>|
+|Description|Oluşturulan tasarımcıyı belgelemek için kullanılır.|\<none>|
 |Görünen Ad|Bu bağlayıcı için oluşturulan tasarımcıda görüntülenecek ad.|\<none>|
 |Düzeltilen araç Ipucu metni|Sabit bir araç ipucu için kullanılan metin.|\<none>|
 |Help anahtar sözcüğü|Bu öğe için F1 yardımını dizine eklemek için kullanılan anahtar sözcük.|\<none>|

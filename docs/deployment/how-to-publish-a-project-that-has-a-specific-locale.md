@@ -19,29 +19,29 @@ helpviewer_keywords:
 ms.assetid: 7c4cd83a-f985-4c85-9022-fadb5dbd2b39
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 3cb63d217249cd24d6777fb4d87ae4fe4d00c755
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 4059d2d4b8a5d69c0c3433699c42c5e88bc6b668
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94351147"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99900529"
 ---
 # <a name="how-to-publish-a-project-that-has-a-specific-locale"></a>Nasıl yapılır: belirli bir yerel ayara sahip bir projeyi yayımlama
 Bir uygulamanın farklı yerel ayarlara sahip bileşenleri içermesi yaygın olmayan bir durumdur. Bu senaryoda, birden fazla proje içeren bir çözüm oluşturacak ve ardından her yerel ayar için ayrı projeler yayımlacaksınız. Bu yordamda, ' en ' yerel ayarını kullanarak bir çözümdeki ilk projeyi yayımlamak için bir makronun nasıl kullanılacağı gösterilmektedir. Bu yordamı ' en ' dışında bir yerel ayarda denemek istiyorsanız, `localeString` makroda, kullanmakta olduğunuz yerel ayara uyacak şekilde ayarlandığından emin olun (örneğin, ' de ' veya ' de-de ').
 
 > [!NOTE]
-> Bu makroyu kullandığınızda, yayımlama konumu geçerli bir URL veya evrensel adlandırma kuralı (UNC) paylaşımıdır. Ayrıca, Internet Information Services (IIS) bilgisayarınıza yüklenmiş olmalıdır. IIS yüklemek için **Başlat** menüsünde, **Denetim Masası** ' na tıklayın. **Program Ekle veya Kaldır** ' a çift tıklayın. **Program Ekle/Kaldır** ' da **Windows Bileşenlerini Ekle/Kaldır** ' a tıklayın. **Windows bileşenleri sihirbazında** , **Bileşenler** listesinden **Internet Information Services (IIS)** onay kutusunu seçin. Sonra Sihirbazı kapatmak için **son** ' a tıklayın.
+> Bu makroyu kullandığınızda, yayımlama konumu geçerli bir URL veya evrensel adlandırma kuralı (UNC) paylaşımıdır. Ayrıca, Internet Information Services (IIS) bilgisayarınıza yüklenmiş olmalıdır. IIS yüklemek için **Başlat** menüsünde, **Denetim Masası**' na tıklayın. **Program Ekle veya Kaldır**' a çift tıklayın. **Program Ekle/Kaldır**' da **Windows Bileşenlerini Ekle/Kaldır**' a tıklayın. **Windows bileşenleri sihirbazında**, **Bileşenler** listesinden **Internet Information Services (IIS)** onay kutusunu seçin. Sonra Sihirbazı kapatmak için **son** ' a tıklayın.
 
 ### <a name="to-create-the-publishing-macro"></a>Yayımlama makrosunu oluşturmak için
 
-1. Makro Gezginini açmak için, **Araçlar** menüsünde **makrolar** ' ın üzerine gelin ve **makro Gezgini** ' ne tıklayın.
+1. Makro Gezginini açmak için, **Araçlar** menüsünde **makrolar**' ın üzerine gelin ve **makro Gezgini**' ne tıklayın.
 
-2. Yeni bir makro modülü oluşturun. Makro Gezgini ' nde **MyMacros** ' u seçin. **Araçlar** menüsünde, **makrolar** ' ın üzerine gelin ve ardından **yeni makro modülü** ' ne tıklayın. Modülün **PublishSpecificCulture** olarak adlandırın.
+2. Yeni bir makro modülü oluşturun. Makro Gezgini ' nde **MyMacros**' u seçin. **Araçlar** menüsünde, **makrolar**' ın üzerine gelin ve ardından **yeni makro modülü**' ne tıklayın. Modülün **PublishSpecificCulture** olarak adlandırın.
 
-3. Makro Gezgini ' nde **MyMacros** düğümünü genişletin ve ardından çift tıklayarak **PublishAllProjects** modülünü açın (ya da **Araçlar** menüsünden **MAKROLAR** ' ın üzerine gelin ve **Makrolar IDE** ' ye tıklayın).
+3. Makro Gezgini ' nde **MyMacros** düğümünü genişletin ve ardından çift tıklayarak **PublishAllProjects** modülünü açın (ya da **Araçlar** menüsünden **MAKROLAR**' ın üzerine gelin ve **Makrolar IDE**' ye tıklayın).
 
 4. Makrolar IDE ' de, aşağıdaki kodu deyimden sonra modüle ekleyin `Import` :
 
@@ -141,7 +141,7 @@ Bir uygulamanın farklı yerel ayarlara sahip bileşenleri içermesi yaygın olm
 
 ### <a name="to-publish-a-project-for-a-specific-locale"></a>Bir projeyi belirli bir yerel ayar için yayımlamak için
 
-1. Visual Basic bir Windows uygulama projesi oluşturmak için, **Dosya** menüsünde **Yeni** ' nin üzerine gelin ve ardından **Proje** ' ye tıklayın.
+1. Visual Basic bir Windows uygulama projesi oluşturmak için, **Dosya** menüsünde **Yeni**' nin üzerine gelin ve ardından **Proje**' ye tıklayın.
 
 2. **Yeni proje** iletişim kutusunda, **Visual Basic** düğümünden **Windows uygulaması** ' nı seçin. Projeyi *Publishyerelleri* olarak adlandırın.
 
@@ -151,15 +151,15 @@ Bir uygulamanın farklı yerel ayarlara sahip bileşenleri içermesi yaygın olm
 
 4. Visual Studio IDE 'yi kullanarak *Publishyerelleri* yayımlayın.
 
-     **Çözüm Gezgini** , *publishyerelleri* ' ni seçin. **Proje** menüsünde **Özellikler** ' i seçin. Proje Tasarımcısı ' nda, **Yayımla** sayfasında, bir yayımlama konumu belirtin **http://localhost/PublishLocales** ve ardından **Şimdi Yayımla** ' ya tıklayın.
+     **Çözüm Gezgini**, *publishyerelleri*' ni seçin. **Proje** menüsünde **Özellikler**' i seçin. Proje Tasarımcısı ' nda, **Yayımla** sayfasında, bir yayımlama konumu belirtin **http://localhost/PublishLocales** ve ardından **Şimdi Yayımla**' ya tıklayın.
 
      Web 'i Yayımla sayfası göründüğünde kapatın. (Bu adım için yalnızca projeyi yayımlamanız gerekir; yüklemek zorunda değilsiniz.)
 
-5. Visual Studio komut Istemi penceresinde makroyu çağırarak *Publishyerelleri* yeniden yayımlayın. Komut istemi penceresini görüntülemek için, **Görünüm** menüsünde **diğer pencereler** ' in üzerine gelin ve ardından **komut penceresi** ' ne tıklayın veya **CTRL** + **alt** + **A** ' ya basın. Komut Istemi penceresinde, şunu yazın `macros` ; otomatik olarak Tamam kullanılabilir makroların bir listesini sağlar. Aşağıdaki makroyu seçin ve ENTER tuşuna basın:
+5. Visual Studio komut Istemi penceresinde makroyu çağırarak *Publishyerelleri* yeniden yayımlayın. Komut istemi penceresini görüntülemek için, **Görünüm** menüsünde **diğer pencereler** ' in üzerine gelin ve ardından **komut penceresi**' ne tıklayın veya **CTRL** + **alt** + **A**' ya basın. Komut Istemi penceresinde, şunu yazın `macros` ; otomatik olarak Tamam kullanılabilir makroların bir listesini sağlar. Aşağıdaki makroyu seçin ve ENTER tuşuna basın:
 
      `Macros.MyMacros.PublishSpecificCulture.PublishProjectFirstProjectWithEnLocale`
 
-6. Yayımlama işlemi başarılı olduğunda, " *Publishlocales\publishlocales.exe* Için başarılı Yayımla ' yı bildiren bir ileti oluşturacaktır. Yayımlama dili ' en ' idi. " İleti kutusunda **Tamam** ' a tıklayın. Web 'i Yayımla sayfası göründüğünde, **yüklensin** ' e tıklayın.
+6. Yayımlama işlemi başarılı olduğunda, " *Publishlocales\publishlocales.exe* Için başarılı Yayımla ' yı bildiren bir ileti oluşturacaktır. Yayımlama dili ' en ' idi. " İleti kutusunda **Tamam** ' a tıklayın. Web 'i Yayımla sayfası göründüğünde, **yüklensin**' e tıklayın.
 
 7. *C:\inetpub\wwwroot\publishlocales\en* bölümüne bakın. Yerelleştirilmiş kaynak DLL 'inin yanı sıra bildirimler, *setup.exe* ve Web sayfası Yayımla dosyası gibi yüklü dosyaları görmeniz gerekir. (Varsayılan olarak ClickOnce, EXEs ve DLL 'lerde bir *. deploy* uzantısı ekler; dağıtımdan sonra bu uzantıyı kaldırabilirsiniz.)
 

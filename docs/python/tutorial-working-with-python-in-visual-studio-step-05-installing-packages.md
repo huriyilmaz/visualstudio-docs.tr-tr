@@ -6,17 +6,17 @@ ms.date: 03/09/2020
 ms.topic: tutorial
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 32e85f39c4acf9466def24bcfea59bbfd6807a1b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c47eacf0c9977e7342bfda17e03ea53728ee9215
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88801665"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99901146"
 ---
 # <a name="step-5-install-packages-in-your-python-environment"></a>5. Adım: Python ortamınıza paket yüklemeyi
 
@@ -26,7 +26,7 @@ Python geliştirici topluluğu, kendi projeleriniz ile birleştirebilmeniz için
 
 ## <a name="view-environments"></a>Ortamları görüntüleme
 
-1. **View**  >  **Diğer Windows**  >  **Python ortamlarını** görüntüle menü komutunu seçin. **Python ortamları** penceresi **Çözüm Gezgini** için bir eş olarak açılır ve size sunulan farklı ortamları gösterir. Listede, Visual Studio yükleyicisi kullanılarak yüklediğiniz ortamlar ve ayrı olarak yüklediğiniz ortamlar gösterilmektedir. Bu, genel, sanal ve Conda ortamlarını içerir. Kalın olan ortam, yeni projeler için kullanılan varsayılan ortamdır. Ortamlarla çalışma hakkında daha fazla bilgi için bkz. [Visual Studio ortamlarında Python ortamları oluşturma ve yönetme](managing-python-environments-in-visual-studio.md).
+1.   >  **Diğer Windows**  >  **Python ortamlarını** görüntüle menü komutunu seçin. **Python ortamları** penceresi **Çözüm Gezgini** için bir eş olarak açılır ve size sunulan farklı ortamları gösterir. Listede, Visual Studio yükleyicisi kullanılarak yüklediğiniz ortamlar ve ayrı olarak yüklediğiniz ortamlar gösterilmektedir. Bu, genel, sanal ve Conda ortamlarını içerir. Kalın olan ortam, yeni projeler için kullanılan varsayılan ortamdır. Ortamlarla çalışma hakkında daha fazla bilgi için bkz. [Visual Studio ortamlarında Python ortamları oluşturma ve yönetme](managing-python-environments-in-visual-studio.md).
 
    ![Python ortamları penceresi](media/environments/environments-default-view-2019.png)
 
@@ -35,7 +35,7 @@ Python geliştirici topluluğu, kendi projeleriniz ile birleştirebilmeniz için
 
 2. Ortamın **genel bakış** sekmesi, ortamın yükleme klasörü ve yorumlayıcıları ile birlikte bu ortam için **etkileşimli** bir pencereye hızlı erişim sağlar. Örneğin **etkileşimli pencere aç** ' ı seçin ve Visual Studio 'da belirli bir ortam için **etkileşimli** bir pencere görüntülenir.
 
-3. Şimdi, yeni **Dosya**projesi olan yeni bir proje oluşturun  >  **New**  >  **Project**, **Python uygulama** şablonunu seçin. Görüntülenen kod dosyasında, önceki öğretici adımları gibi bir kosinüs dalgası oluşturan aşağıdaki kodu yapıştırın, yalnızca bu kez grafik çizilir. Alternatif olarak, önceden oluşturduğunuz projeyi kullanabilir ve kodu değiştirebilirsiniz.
+3. Şimdi, yeni **Dosya** projesi olan yeni bir proje oluşturun  >    >  , **Python uygulama** şablonunu seçin. Görüntülenen kod dosyasında, önceki öğretici adımları gibi bir kosinüs dalgası oluşturan aşağıdaki kodu yapıştırın, yalnızca bu kez grafik çizilir. Alternatif olarak, önceden oluşturduğunuz projeyi kullanabilir ve kodu değiştirebilirsiniz.
 
     ```python
     from math import radians

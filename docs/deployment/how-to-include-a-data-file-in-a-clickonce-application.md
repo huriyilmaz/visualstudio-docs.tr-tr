@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 89ee46ef-bc8c-4ab0-a2ac-1220f9da06fc
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: cb9e346022871a3aa25363aa717f1bf15a3d42a6
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 4f4b5e8fe9d17a6de9abac2681074dcfc162e9b7
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94349951"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99900600"
 ---
 # <a name="how-to-include-a-data-file-in-a-clickonce-application"></a>Nasıl yapılır: ClickOnce uygulamasına bir veri dosyası dahil etme
-[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Yüklediğiniz her uygulamaya, uygulamanın kendi verilerini yönetebileceği hedef bilgisayarın yerel diskinde bir veri dizini atanır. Veri dosyaları herhangi bir türde dosya içerebilir: metin dosyaları, XML dosyaları, hatta Microsoft Access veritabanı ( *. mdb* ) dosyaları. Aşağıdaki yordamlarda, uygulamanıza herhangi bir türde veri dosyasını nasıl ekleyeceğiniz gösterilmektedir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] .
+[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Yüklediğiniz her uygulamaya, uygulamanın kendi verilerini yönetebileceği hedef bilgisayarın yerel diskinde bir veri dizini atanır. Veri dosyaları herhangi bir türde dosya içerebilir: metin dosyaları, XML dosyaları, hatta Microsoft Access veritabanı (*. mdb*) dosyaları. Aşağıdaki yordamlarda, uygulamanıza herhangi bir türde veri dosyasını nasıl ekleyeceğiniz gösterilmektedir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] .
 
 ### <a name="to-include-a-data-file-by-using-mageexe"></a>Mage.exe kullanarak bir veri dosyası eklemek için
 
@@ -70,7 +70,7 @@ ms.locfileid: "94349951"
 
 4. **Dosyalar** sekmesini seçin.
 
-5. Sekmenin en üstündeki metin kutusuna uygulamanızın dosyalarını içeren dizini girin ve ardından **doldur** ' a tıklayın.
+5. Sekmenin en üstündeki metin kutusuna uygulamanızın dosyalarını içeren dizini girin ve ardından **doldur**' a tıklayın.
 
      Veri dosyanız kılavuzda görüntülenir.
 

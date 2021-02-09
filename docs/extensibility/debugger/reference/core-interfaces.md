@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 666b9116-8550-4bdd-bc15-55fc57de87df
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8bf01ffceb122ad99d5ecca8fabfaa102a8fc505
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ee2f44e5d75d44cfc1c903d462e7a1df360eeefa
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80737586"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99899166"
 ---
 # <a name="core-interfaces"></a>Temel Arabirimler
 Aşağıdaki arabirimler, kullanarak hata ayıklayıcıyı genişletmek için temel arabirimlerdir [!INCLUDE[vsipsdk](../../../extensibility/includes/vsipsdk_md.md)] .
@@ -259,7 +259,7 @@ Aşağıdaki arabirimler, kullanarak hata ayıklayıcıyı genişletmek için te
 |[IDebugProviderProgramNode2](../../../extensibility/debugger/reference/idebugproviderprogramnode2.md)|DE, PS|İş parçacığı veya işlem sınırları genelinde arabirimleri sıraleyesağlayan bir [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) temsil eder.|
 |[IEnumDebugPrograms2](../../../extensibility/debugger/reference/ienumdebugprograms2.md)|DE, PS|Bir program kümesinin bir listesini temsil eder.|
 
-## <a name="properties"></a><a name="Properties"></a> Özelliklerinin
+## <a name="properties"></a><a name="Properties"></a> Özellikler
  Bu arabirimler, genellikle bir ifade değerlendirmesinin sonucu olan belirli bir içerikle ilişkili bir değer olan özellikleri temsil eder.
 
 |Arabirim|Uygulayan|Description|

@@ -7,15 +7,15 @@ ms.topic: how-to
 ms.assetid: 73b22b02-fc75-42aa-82d3-51fdcaf8e5c8
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e372d3163dcef84d76d77e54c66cf9f7c788e213
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: f090729cdd0d08d39cf97cab9c3899f0b77c80eb
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94349860"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99900474"
 ---
 # <a name="how-to-publish-a-wpf-application-with-visual-styles-enabled"></a>Nasıl yapılır: görsel stiller etkinken WPF uygulaması yayımlama
 
@@ -51,17 +51,17 @@ Görsel stiller, Kullanıcı tarafından seçilen temaya göre değişiklik yapm
 
     **Bildirim dosyasını Visual Basic bir projede açmak için**
 
-    1. Menü çubuğunda, **Proje** , *ProjectName* **Özellikler** ' i seçin, burada *ProjectName* WPF projenizin adıdır.
+    1. Menü çubuğunda, **Proje**, *ProjectName* **Özellikler**' i seçin, burada *ProjectName* WPF projenizin adıdır.
 
          WPF projeniz için özellik sayfaları görüntülenir.
 
-    2. **Uygulama** sekmesinde, **Windows ayarlarını görüntüle** ' yi seçin.
+    2. **Uygulama** sekmesinde, **Windows ayarlarını görüntüle**' yi seçin.
 
          App. manifest dosyası **kod düzenleyicisinde** açılır.
 
     **Bir C# projesinde bildirim dosyasını açmak için**
 
-    1. Menü çubuğunda, **Proje** , *ProjectName* **Özellikler** ' i seçin, burada *ProjectName* WPF projenizin adıdır.
+    1. Menü çubuğunda, **Proje**, *ProjectName* **Özellikler**' i seçin, burada *ProjectName* WPF projenizin adıdır.
 
          WPF projeniz için özellik sayfaları görüntülenir.
 
@@ -70,7 +70,7 @@ Görsel stiller, Kullanıcı tarafından seçilen temaya göre değişiklik yapm
         > [!NOTE]
         > Bildirimi **varsayılan ayarlarla katıştır** veya bildirim **olmadan uygulama oluşturursanız** , bildirim alanında görsel stiller etkinleştirilmez. Bildirim alanında bir bildirim dosyasının adı görünürse, bu yordamın bir sonraki adımına geçin.
 
-    3. **Çözüm Gezgini** , **tüm dosyaları göster** ' i seçin.
+    3. **Çözüm Gezgini**, **tüm dosyaları göster**' i seçin.
 
          Bu düğme, hariç tutulan ve normalde gizlenen olanlar da dahil olmak üzere tüm proje öğelerini gösterir. Bildirim dosyası bir proje öğesi olarak görünür.
 
@@ -97,27 +97,27 @@ Görsel stiller, Kullanıcı tarafından seçilen temaya göre değişiklik yapm
     </asmv1:assembly>
     ```
 
-2. Not defteri 'nde **Dosya** ' ya ve ardından **farklı kaydet** ' e tıklayın.
+2. Not defteri 'nde **Dosya**' ya ve ardından **farklı kaydet**' e tıklayın.
 
-3. **Farklı kaydet** iletişim kutusunda, **farklı kaydet türü** aşağı açılan listesinde **tüm dosyalar** ' ı seçin.
+3. **Farklı kaydet** iletişim kutusunda, **farklı kaydet türü** aşağı açılan listesinde **tüm dosyalar**' ı seçin.
 
 4. Dosya **adı** kutusunda dosyayı adlandırın ve dosya adının sonuna *. bildirimini* ekleyin. Örneğin: *Themes. manifest*.
 
-5. **Klasörlere Gözatadır** düğmesini seçin, herhangi bir klasör seçin ve ardından **Kaydet** ' e tıklayın.
+5. **Klasörlere Gözatadır** düğmesini seçin, herhangi bir klasör seçin ve ardından **Kaydet**' e tıklayın.
 
     > [!NOTE]
     > Kalan yordamlar, bu dosyanın adının *Temalar. manifest* olduğunu ve dosyanın bilgisayarınızdaki *C:\Temp* dizinine kaydedildiğini varsayar.
 
 ## <a name="embed-the-manifest-file-into-the-executable-file-of-the-published-solution"></a>Bildirim dosyasını yayımlanan çözümün yürütülebilir dosyasına ekleyin
 
-1. **Visual Studio komut istemi** 'ni açın.
+1. **Visual Studio komut istemi**'ni açın.
 
     **Visual Studio komut istemini** açma hakkında daha fazla bilgi için bkz. [komut istemleri](/dotnet/framework/tools/developer-command-prompt-for-vs).
 
    > [!NOTE]
    > Geri kalan adımlar çözümünüz hakkında aşağıdaki varsayımlar yapar:
    >
-   > - Çözümün adı **MyWPFProject** ' dir.
+   > - Çözümün adı **MyWPFProject**' dir.
    > - Çözüm şu dizinde bulunur: `%UserProfile%\Documents\Visual Studio 2010\Projects\` .
    >
    > - Çözüm şu dizine yayımlandı: `%UserProfile%\Documents\Visual Studio 2010\Projects\publish` .

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - UML diagrams, saving
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ecf972974ff2c84cb47cd93d944aced4758d1cb7
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: e12dcd1fcb9119aa65811fc149d86150a8b084e7
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97363750"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99899786"
 ---
 # <a name="share-models-and-exporting-diagrams"></a>Modelleri paylaşma ve diyagramları dışarı aktarma
 Visual Studio 'da, iş arkadaşlarınızla modelleri ve diyagramları çeşitli yollarla paylaşabilirsiniz.
