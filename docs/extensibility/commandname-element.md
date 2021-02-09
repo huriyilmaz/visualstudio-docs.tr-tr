@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: a338b767-aa7e-4536-9908-e19a50ab60ac
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8447213b14a3632197ea7ce27677423460315f71
-ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
+ms.openlocfilehash: 95b4c88cc42879bf40278871a0e39de13f63a418
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94974119"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99911216"
 ---
 # <a name="commandname-element"></a>CommandName öğesi
 `CommandName`Öğesi, **Seçenekler** iletişim kutusundaki klavye kategorisinde ve **Özelleştir** iletişim kutusundaki **Komutlar** listesinde görüntülenen metni belirtir.

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: c884976e-c0df-4c6d-8e3a-856ea2bd547c
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5c91a016d91addc4f9e4b06acb32614bd6f6a162
-ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
+ms.openlocfilehash: f3b6d98e715d0c86af6948f2fcc502e94dfde56a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92136777"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99910827"
 ---
 # <a name="options-dialog-box-projects-and-solutions--build-and-run"></a>Seçenekler iletişim kutusu: projeler ve çözümler \> derleme ve çalıştırma
 
@@ -60,7 +60,7 @@ Bu seçenek ayarlandığında, yeni çözümler seçili olan projeyi başlangı�
 
 *Yalnızca C++ projeleri için geçerlidir.*
 
-Derleme günlüğü dosyasına ne kadar bilgi yazıldığını belirler ve bu, * \\ \<ProjectName> \debug \\ \<ProjectName> . log*dosyasında bulunur.
+Derleme günlüğü dosyasına ne kadar bilgi yazıldığını belirler ve bu, *\\ \<ProjectName> \debug \\ \<ProjectName> . log* dosyasında bulunur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

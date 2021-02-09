@@ -6,18 +6,18 @@ ms.date: 05/31/2018
 ms.topic: how-to
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - uwp
-ms.openlocfilehash: a6ec6750a48b8902ec77e8982beb774e306c8d1d
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+ms.openlocfilehash: 0fb60de87fa98e4715d872512c120a408ec8339e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96330244"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99911513"
 ---
 # <a name="create-a-coded-ui-test-to-test-a-uwp-app"></a>UWP uygulamasını test etmek için kodlanmış UI testi oluşturma
 
@@ -59,13 +59,13 @@ Bu makalede, bir Evrensel Windows Platformu (UWP) uygulaması için kodlanmış 
    Me.textBox.Text = Me.button.Name
    ```
 
-1. **Ctrl** + Uygulamayı çalıştırmak için CTRL **F5** tuşuna basın. Aşağıdakine benzer bir şey görmeniz gerekir:
+1.  + Uygulamayı çalıştırmak için CTRL **F5** tuşuna basın. Aşağıdakine benzer bir şey görmeniz gerekir:
 
    ![Düğme ve metin kutusuyla UWP uygulaması](media/uwp-app.png)
 
 ## <a name="create-a-coded-ui-test"></a>Kodlanmış UI testi oluşturma
 
-1. Çözüme bir test projesi eklemek için **Çözüm Gezgini** çözüm üzerinde sağ tıklayın ve **Add**  >  **Yeni proje** Ekle ' yi seçin.
+1. Çözüme bir test projesi eklemek için **Çözüm Gezgini** çözüm üzerinde sağ tıklayın ve   >  **Yeni proje** Ekle ' yi seçin.
 
 1. **KODLANMıŞ UI test projesi (Evrensel Windows)** şablonunu arayın ve seçin.
 
@@ -84,7 +84,7 @@ Bu makalede, bir Evrensel Windows Platformu (UWP) uygulaması için kodlanmış 
 
 1. UWP uygulamanız zaten çalışmıyorsa, **CTRL** + **F5** tuşuna basarak başlatın.
 
-1. İmleci yöntemine yerleştirerek kodlanmış UI **Test Oluşturucusu** iletişim kutusunu açın `CodedUITestMethod1` ve sonra **Test**  >  **kodlanmış UI testi için test kodu oluştur**' u seçerek kodlanmış  >  **UI test oluşturucusunu kullanın**.
+1. İmleci yöntemine yerleştirerek kodlanmış UI **Test Oluşturucusu** iletişim kutusunu açın `CodedUITestMethod1` ve sonra   >  **kodlanmış UI testi için test kodu oluştur**' u seçerek kodlanmış  >  **UI test oluşturucusunu kullanın**.
 
 1. Denetimleri UI denetim haritasına ekleyin. UWP uygulamasındaki düğme denetimini seçmek için **KODLANMıŞ UI Test Oluşturucusu** çapraz artı aracını kullanın. **Onaylama Ekle** iletişim kutusunda, gerekirse **UI denetim Haritası** BÖLMESINI genişletin ve ardından **UI Denetim Haritasına denetim Ekle**' yi seçin.
 
@@ -139,7 +139,7 @@ Bu makalede, bir Evrensel Windows Platformu (UWP) uygulaması için kodlanmış 
     End Sub
     ```
 
-1. Ardından, test etmek istediğimiz UWP uygulamasının **AutomationId** 'sini edinmemiz [app](#create-a-uwp-app-to-test) gerekiyor. Uygulamanın kutucuğunu görmek için Windows **Başlat** menüsünü açın. Sonra, ![ ](media/target-icon.png) **kodlanmış UI Test Oluşturucusu** iletişim kutusundan, artı-saç araç hedefi simgesini uygulamanızın kutucuğuna sürükleyin. Bir mavi kutu kutucuğu çevreleyecek şekilde farenizi serbest bırakın.
+1. Ardından, test etmek istediğimiz UWP uygulamasının **AutomationId** 'sini edinmemiz [](#create-a-uwp-app-to-test) gerekiyor. Uygulamanın kutucuğunu görmek için Windows **Başlat** menüsünü açın. Sonra, ![ ](media/target-icon.png) **kodlanmış UI Test Oluşturucusu** iletişim kutusundan, artı-saç araç hedefi simgesini uygulamanızın kutucuğuna sürükleyin. Bir mavi kutu kutucuğu çevreleyecek şekilde farenizi serbest bırakın.
 
    ![Çapraz saç aracı](media/cross-hair-tool.png)
 
@@ -204,7 +204,7 @@ Bu makalede, bir Evrensel Windows Platformu (UWP) uygulaması için kodlanmış 
        End Sub
    ```
 
-1. Test projesi oluşturun ve ardından Test Gezgini ' **ni seçerek test** **Gezgini** ' ni açın  >  **Windows**  >  **Test Explorer**.
+1. Test projesi oluşturun ve ardından Test Gezgini ' **ni seçerek test** **Gezgini** ' ni açın  >    >  .
 
 1. Testi çalıştırmak için **Tümünü Çalıştır** ' ı seçin.
 
@@ -226,7 +226,7 @@ Y **: Hayır**, yalnızca XAML tabanlı uygulamalar desteklenir.
 
 ### <a name="q-why-cant-i-modify-the-code-in-the-uimapdesigner-file"></a>S: UIMap. Designer dosyasındaki kodu neden değiştiremiyorum?
 
-**A** Y: *UIMapDesigner.cs* dosyasında yaptığınız tüm kod değişikliklerinin, **kodlanmış UI Test Oluşturucusu**'nu kullanarak kod oluşturduğunuzda üzerine yazılır. Kayıtlı bir yöntemi değiştirmeniz gerekiyorsa, *UIMap.cs* dosyasına kopyalayın ve yeniden adlandırın. *UIMap.cs* dosyası, *UIMapDesigner.cs* dosyasındaki yöntemleri ve özellikleri geçersiz kılmak için kullanılabilir. *CodedUITest.cs* dosyasındaki özgün yönteme başvuruyu kaldırın ve yeniden adlandırılmış yöntem adıyla değiştirin.
+Y: *UIMapDesigner.cs* dosyasında yaptığınız tüm kod değişikliklerinin, **kodlanmış UI Test Oluşturucusu**'nu kullanarak kod oluşturduğunuzda üzerine yazılır. Kayıtlı bir yöntemi değiştirmeniz gerekiyorsa, *UIMap.cs* dosyasına kopyalayın ve yeniden adlandırın. *UIMap.cs* dosyası, *UIMapDesigner.cs* dosyasındaki yöntemleri ve özellikleri geçersiz kılmak için kullanılabilir. *CodedUITest.cs* dosyasındaki özgün yönteme başvuruyu kaldırın ve yeniden adlandırılmış yöntem adıyla değiştirin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
