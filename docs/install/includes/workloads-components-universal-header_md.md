@@ -1,17 +1,17 @@
 ---
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.date: 03/16/2020
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
-ms.openlocfilehash: 040a168f45afff9111426aac57cafc32a05c1b12
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a3b5686ea36b77b6024fd1e95aee393877e0eaa1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "79437496"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99868621"
 ---
 Bu sayfadaki tablolarda, komut satırından Visual Studio 'Yu yüklemek için kullanabileceğiniz veya VSıX bildiriminde bir bağımlılık olarak belirtebileceğiniz kimlikler listelenmektedir. Visual Studio güncelleştirmelerini yayınlarız, ek bileşenler ekleyeceğiz.
 

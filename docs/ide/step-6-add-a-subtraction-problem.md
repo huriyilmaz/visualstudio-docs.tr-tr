@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: 59204ef9-24bd-4f81-b85f-e3168e518a3e
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8157335e47ec13c66da471f77ddbd2877bcac12d
-ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
+ms.openlocfilehash: 64d28df03c18207a3f0ded58caa48d4b41800824
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96480674"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99868939"
 ---
 # <a name="step-6-add-a-subtraction-problem"></a>6. Adım: Çıkarma problemi ekleme
 Bu öğreticinin altıncı bölümünde, bir çıkarma sorunu ekleyecek ve aşağıdaki görevlerin nasıl gerçekleştirileceğini öğreneceksiniz:
@@ -62,12 +62,12 @@ Bu öğreticinin altıncı bölümünde, bir çıkarma sorunu ekleyecek ve aşa�
      `Next()`Bu öğreticide daha önce "rasgeleizer" olarak adlandırdığınız Random sınıfının yöntemini birden çok şekilde çağırabilirsiniz. Birden fazla yoldan çağırabileceğiniz Yöntemler aşırı yüklenmiş olarak adlandırılır ve IntelliSense 'i kullanarak bunları keşfedebilirsiniz. Yöntemi için IntelliSense penceresinin araç ipucunda bir daha göz atın `Next()` .
 
      ![IntelliSense penceresi araç ipucu](../ide/media/express_overloads.png)<br/>
-**_IntelliSense_* _ _window araç ipucu *
+***IntelliSense** _ _window araç ipucu *
 
      Araç İpucu **(+ 2 aşırı yükleme**) gösterir. Bu, `Next()` yöntemi iki farklı şekilde çağırabilmeniz anlamına gelir. Aşırı yüklemeler farklı sayılar veya bağımsız değişken türleri içerir, böylece bir diğerinden biraz farklı çalışırlar. Örneğin, bir yöntem tek bir tamsayı bağımsız değişkeni alabilir ve aşırı yüklerinden biri tamsayı ve dize alabilir. Ne yapmak istediğinize bağlı olarak doğru aşırı yüklemeyi seçersiniz. Kodu `StartTheQuiz()` yöntemine eklediğinizde, girdiğiniz anda IntelliSense penceresinde daha fazla bilgi görüntülenir `randomizer.Next(` . Aşırı yüklemeler arasında geçiş yapmak için, aşağıdaki çizimde gösterildiği gibi **yukarı ok** ve **aşağı ok** tuşlarını seçin:
 
      ![IntelliSense 'de Next&#40;&#41; yöntemi için aşırı yükleme](../ide/media/express_nextoverload.png)<br/>
-*Için*  * aşırı yükleme _* ***IntelliSense** 'de_ **Next ()** _ yöntemi
+*Için*  * aşırı yükleme **Next ()** _ _Method * ***IntelliSense***
 
      Bu durumda, en düşük ve en yüksek değerleri belirtebileceğiniz için son aşırı yüklemeyi seçmek istersiniz.
 
@@ -88,7 +88,7 @@ Bu öğreticinin altıncı bölümünde, bir çıkarma sorunu ekleyecek ve aşa�
      Aşağıdaki çizimde gösterildiği gibi programınız bir çıkarma sorunu içerir:
 
      ![Çıkarma sorunu ile matematik testi](../ide/media/express_addsubtract.png)<br/>
-_*_Matematik testi_*_ _with çıkarma sorunu *
+***Matematik sınavı** _ _with çıkarma sorunu *
 
 ## <a name="to-continue-or-review"></a>Devam etmek veya gözden geçirmek için
 

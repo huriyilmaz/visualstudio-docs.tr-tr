@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 141f2dee-1563-4ce6-ba37-32920b082519
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 145fc1ad1dddfa4d0648e2ecc7a8d85263744d49
-ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
+ms.openlocfilehash: 8569231ee1b9f19752bf58691b41ec74789bb761
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92136751"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99869004"
 ---
 # <a name="advanced-build-settings-dialog-box-c"></a>Gelişmiş derleme ayarları iletişim kutusu (C#)
 
@@ -48,7 +48,7 @@ Varsayılan değer C# 7,0 ' dir.
 
 **İç derleyici hata bildirimi**
 
-Derleyici hatalarının Microsoft 'a raporlanıp raporlanmayacağını belirtir. **İstem** olarak ayarlandıysa (varsayılan), iç derleyici hatası oluşursa, Microsoft 'a elektronik bir hata raporu gönderme seçeneği sunarak bir istem alırsınız. **Send**olarak ayarlandıysa, otomatik olarak bir hata raporu gönderilir. **Sıraya**ayarlandıysa, hata raporları sıraya alınır. **None**olarak ayarlanırsa, hata yalnızca derleyicinin metin çıkışında bildirilir. Daha fazla bilgi için bkz. [/errorreport (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/errorreport-compiler-option).
+Derleyici hatalarının Microsoft 'a raporlanıp raporlanmayacağını belirtir. **İstem** olarak ayarlandıysa (varsayılan), iç derleyici hatası oluşursa, Microsoft 'a elektronik bir hata raporu gönderme seçeneği sunarak bir istem alırsınız. **Send** olarak ayarlandıysa, otomatik olarak bir hata raporu gönderilir. **Sıraya** ayarlandıysa, hata raporları sıraya alınır. **None** olarak ayarlanırsa, hata yalnızca derleyicinin metin çıkışında bildirilir. Daha fazla bilgi için bkz. [/errorreport (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/errorreport-compiler-option).
 
 **Aritmetik taşma/yetersiz kalması için denetle**
 
@@ -90,7 +90,7 @@ Daha fazla bilgi için bkz. [/Debug (C# derleyici seçenekleri)](/dotnet/csharp/
 
 **Dosya hizalaması**
 
-Çıkış dosyasındaki bölümlerin boyutunu belirtir. Geçerli değerler **512**, **1024**, **2048**, **4096**ve **8192**. Bu değerler bayt cinsinden ölçülür. Her bölüm, çıkış dosyasının boyutunu etkileyen bu değerin birden çok katı olan bir sınıra göre hizalanacaktır. Daha fazla bilgi için bkz. [/filealign (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/filealign-compiler-option).
+Çıkış dosyasındaki bölümlerin boyutunu belirtir. Geçerli değerler **512**, **1024**, **2048**, **4096** ve **8192**. Bu değerler bayt cinsinden ölçülür. Her bölüm, çıkış dosyasının boyutunu etkileyen bu değerin birden çok katı olan bir sınıra göre hizalanacaktır. Daha fazla bilgi için bkz. [/filealign (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/filealign-compiler-option).
 
 **Kitaplık temel adresi**
 

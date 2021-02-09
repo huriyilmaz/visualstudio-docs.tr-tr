@@ -10,16 +10,16 @@ f1_keywords:
 ms.assetid: 76e614b3-ad7e-4b92-b7be-88dc1329be1d
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 36c9f3b33eab8428cd14aa26896c3813422d3dd7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4b6437daa245343f5a7fc40e5564ee6f2f885e14
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85537078"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99868312"
 ---
 # <a name="da0002-vsperfcorprofdll-is-missing"></a>DA0002: VSPerfCorProf.dll eksik
 
@@ -28,7 +28,7 @@ ms.locfileid: "85537078"
 |Kural kimliği|DA0002|
 |Kategori|Profil Oluşturma Araçları kullanımı|
 |Profil oluşturma yöntemleri|VSPerfCmd ve VSPerfASPNETCmd komut satırı araçlarını kullanarak profil oluşturma|
-|İleti|Dosya, *VSPerfCLREnv. cmd*ile ortam değişkenlerini düzgün şekilde ayarlamadan toplanmış gibi görünüyor. Yönetilen ikililerin sembolleri çözümlenmeyebilir.|
+|İleti|Dosya, *VSPerfCLREnv. cmd* ile ortam değişkenlerini düzgün şekilde ayarlamadan toplanmış gibi görünüyor. Yönetilen ikililerin sembolleri çözümlenmeyebilir.|
 |Kural türü|Bilgi|
 
 ## <a name="cause"></a>Nedeni

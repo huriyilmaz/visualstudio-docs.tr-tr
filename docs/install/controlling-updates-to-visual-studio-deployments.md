@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: 35C7AB05-07D5-4B38-BCAC-AB88444E7368
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 8743f042c7c33da34895f93e5df3990f6e0b2ed2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ffa088de8852b0d5884cd4d9db5e65e1c179164b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76115317"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99868549"
 ---
 # <a name="control-updates-to-network-based-visual-studio-deployments"></a>Ağ tabanlı Visual Studio dağıtımlarında güncelleştirmeleri denetleme
 
@@ -30,7 +30,7 @@ Kurumsal Yöneticiler genellikle son kullanıcılara dağıtmak üzere bir düze
 
 Varsayılan olarak, yükleme bir ağ paylaşımından dağıtılsa bile Visual Studio güncelleştirmeler için çevrimiçi görünmeye devam eder. Bir güncelleştirme varsa, Kullanıcı bunu yükleyebilir. Çevrimdışı düzende bulunmayan güncelleştirilmiş içerikler Web 'den indirilir.
 
-Visual Studio 'Nun güncelleştirmeleri aradığı yerde doğrudan denetim istiyorsanız, konumunu değiştirmek için değişiklik yapabilirsiniz. Kullanıcılarınızın güncelleştirilme sürümünü de denetleyebilirsiniz. Bunu yapmak için şu adımları uygulayın:
+Visual Studio 'Nun güncelleştirmeleri aradığı yerde doğrudan denetim istiyorsanız, konumunu değiştirmek için değişiklik yapabilirsiniz. Kullanıcılarınızın güncelleştirilme sürümünü de denetleyebilirsiniz. Bunu yapmak için aşağıdaki adımları izleyin:
 
 1. Çevrimdışı düzen oluşturma:
 

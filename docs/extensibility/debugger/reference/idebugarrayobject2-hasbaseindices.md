@@ -8,23 +8,23 @@ helpviewer_keywords:
 ms.assetid: 51a5d145-ea53-422c-b5cf-c800cf64b8e6
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 48250b3328310c3f1cb1c84c8fe1a9c61c534cad
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e828c8d51d297d85aed9b23d75b99f2d9ac1a517
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80736134"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99870044"
 ---
 # <a name="idebugarrayobject2hasbaseindices"></a>IDebugArrayObject2::HasBaseIndices
 Dizide tanımlanmış temel dizinler (alt sınırlar) olup olmadığını belirler.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
 HRESULT HasBaseIndices (

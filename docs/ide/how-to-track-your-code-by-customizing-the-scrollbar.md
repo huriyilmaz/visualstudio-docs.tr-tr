@@ -6,15 +6,15 @@ ms.date: 03/20/2020
 ms.topic: how-to
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c59ac152be9528ef3e01410f0a3b5f34dd882286
-ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
+ms.openlocfilehash: 740a1b9385c53c87e8d52d2e80729586557f7ce0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95596943"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99869160"
 ---
 # <a name="how-to-customize-the-scroll-bar"></a>Nasıl yapılır: kaydırma çubuğunu özelleştirme
 
@@ -24,7 +24,7 @@ Uzun kod dosyalarıyla çalışırken her şeyin dosyada nerede olduğunu izleme
 
 Kaydırma çubuğunun kod değişiklikleri, kesme noktaları, yer işaretleri, hatalar ve giriş işareti konumu gibi ek açıklamaları gösterilip gösterilmeyeceğini belirleyebilirsiniz.
 
-   1. **Scroll Bars** **Araçlar**  >  **Seçenekler**  >  **metin düzenleyici**  >  **tüm diller**  >  **kaydırma çubukları**' nı seçerek kaydırma çubukları Seçenekler sayfasını açın.
+   1.  **Araçlar**  >  **Seçenekler**  >  **metin düzenleyici**  >  **tüm diller**  >  **kaydırma çubukları**' nı seçerek kaydırma çubukları Seçenekler sayfasını açın.
 
    2. **Dikey kaydırma çubuğu üzerinde ek açıklamaları göster**' i seçin ve ardından görmek istediğiniz ek açıklamaları seçin. Kullanılabilir ek açıklamalar şunlardır:
 

@@ -7,15 +7,15 @@ ms.topic: reference
 ms.assetid: bc8df61c-19af-40ab-a871-315807e5f4bf
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5bb87da3cc668ba946c6ee607fa3be5a2c79cc32
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 54ba61f3d4f82a5db25d0079193955a5569afa8a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94435332"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99867886"
 ---
 # <a name="mixed-minimum-rules-rule-set"></a>Karışık Minimum Kurallar kural kümesi
 
@@ -23,7 +23,7 @@ Microsoft Mixed minimum kuralları, olası güvenlik delikleri ve uygulama kilit
 
 Bu kuralı, ortak dil çalışma zamanını destekleyen C++ projeleriniz için oluşturduğunuz herhangi bir özel kural kümesine ekleyin.
 
-|Kural|Açıklama|
+|Kural|Description|
 |----------|-----------------|
 |[C6001](/cpp/code-quality/c6001)|Başlatılmamış belleği kullanma|
 |[C6011](/cpp/code-quality/c6011)|Null Işaretçisinin başvurusu|

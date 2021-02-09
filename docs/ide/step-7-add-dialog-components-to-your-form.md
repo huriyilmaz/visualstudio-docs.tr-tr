@@ -9,15 +9,15 @@ ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 37cbd2ca1f0207eaf2a41f6a08248bcedcfbe5bb
-ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
+ms.openlocfilehash: a485433ef73ef853a186a5b441396f6d5a57f679
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96479478"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99868861"
 ---
 # <a name="step-7-add-dialog-components-to-your-form"></a>7. Adım: Formunuza iletişim kutusu bileşenleri ekleme
 
@@ -34,7 +34,7 @@ Bir bileşen, bazı yollarla denetim gibidir. Formunuza bir bileşen eklemek iç
 
 1. Formunuza **OpenFileDialog1** adlı bir bileşen eklemek Için, **OpenFileDialog** öğesine çift tıklayın. Formunuza **colorDialog1** adlı bir bileşen eklemek Için **araç kutusunda** **ColorDialog** ' a çift tıklayın. (Bunu bir sonraki öğretici adımında kullanırsınız.) Aşağıdaki görüntüde gösterildiği gibi, eklediğiniz iki iletişim kutusu bileşeninin bir simgesine sahip **Windows Form Tasarımcısı** ( **Resim Görüntüleyicisi** formunun altında) altında bir alan görmeniz gerekir.
 
-     ![İletişim kutusu bileşenleri](../ide/media/express_dialogsadded.png)<br>**_Iletişim kutusu_* _ _components *
+     ![İletişim kutusu bileşenleri](../ide/media/express_dialogsadded.png)<br>***Iletişim kutusu** _ _components *
 
 1. **Windows Form Tasarımcısı** altındaki alanda bulunan **OpenFileDialog1** simgesini seçin. İki özellik ayarlayın:
 

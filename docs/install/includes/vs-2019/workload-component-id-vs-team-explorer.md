@@ -5,17 +5,17 @@ description: Visual Studio iş yükünü ve bileşen kimliklerini kullanarak gen
 keywords: ''
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.date: 11/10/2020
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
-ms.openlocfilehash: 62295e6b63ffd38d57d218d5f2458a48353db7f2
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 6c90c4ad91ec810a2e43c16bd69d95d66e862dee
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94437355"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99868598"
 ---
 ## <a name="visual-studio-core-editor-included-with-visual-studio-team-explorer-2019"></a>Visual Studio çekirdek Düzenleyicisi (Visual Studio Takım Gezgini 2019 ile birlikte)
 
@@ -25,7 +25,7 @@ ms.locfileid: "94437355"
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen KIMLIĞI | Ad | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Microsoft. VisualStudio. Component. CoreEditor | Visual Studio temel Düzenleyicisi | 16.1.28811.260 | Gerekli
 Microsoft. VisualStudio. Component. Startpagedenemeler. cpp | C++ kullanıcıları için Visual Studio başlangıç sayfası | 16.0.28315.86 | İsteğe Bağlı
@@ -34,6 +34,6 @@ Microsoft. VisualStudio. Component. Startpagedenemeler. cpp | C++ kullanıcılar
 
 Bunlar herhangi bir iş yüküne dahil olmayan, ancak tek bir bileşen olarak seçilebilir olan bileşenlerdir.
 
-Bileşen KIMLIĞI | Ad | Sürüm
+Bileşen KIMLIĞI | Name | Sürüm
 --- | --- | ---
 yok | yok | yok

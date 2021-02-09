@@ -7,27 +7,27 @@ ms.technology: vs-ide-compile
 ms.topic: how-to
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a59f3706e2d33e87e760d2b88c4c7ba78eca4ef2
-ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
+ms.openlocfilehash: ab79521cfd4cc122fa398f88b56ca37e2f2673a1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92136373"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99869186"
 ---
 # <a name="how-to-suppress-compiler-warnings"></a>Nasıl yapılır: derleyici uyarılarını gösterme
 
-Bir veya daha fazla derleyici uyarısına filtre uygulayarak bir yapı günlüğü declutter yapabilirsiniz. Örneğin, derleme günlüğü ayrıntı düzeyini **normal**, **ayrıntılı**veya **Tanılama**olarak ayarladığınızda oluşturulan çıktının yalnızca bir kısmını gözden geçirmek isteyebilirsiniz. Ayrıntı düzeyi hakkında daha fazla bilgi için bkz. [nasıl yapılır: görüntüleme, kaydetme ve derleme günlüğü dosyalarını yapılandırma](../ide/how-to-view-save-and-configure-build-log-files.md).
+Bir veya daha fazla derleyici uyarısına filtre uygulayarak bir yapı günlüğü declutter yapabilirsiniz. Örneğin, derleme günlüğü ayrıntı düzeyini **normal**, **ayrıntılı** veya **Tanılama** olarak ayarladığınızda oluşturulan çıktının yalnızca bir kısmını gözden geçirmek isteyebilirsiniz. Ayrıntı düzeyi hakkında daha fazla bilgi için bkz. [nasıl yapılır: görüntüleme, kaydetme ve derleme günlüğü dosyalarını yapılandırma](../ide/how-to-view-save-and-configure-build-log-files.md).
 
 ## <a name="suppress-specific-warnings-for-visual-c-or-f"></a>Visual C# veya F için belirli uyarıları gösterme\#
 
 C# ve F # projelerine yönelik belirli uyarıları bastırmak için **Yapı** özelliği sayfasını kullanın.
 
-1. **Çözüm Gezgini**içinde, uyarılarını bastırmak istediğiniz projeyi seçin.
+1. **Çözüm Gezgini** içinde, uyarılarını bastırmak istediğiniz projeyi seçin.
 
-1. Menü çubuğunda, **View**  >  **özellik sayfalarını**görüntüle ' yi seçin.
+1. Menü çubuğunda,   >  **özellik sayfalarını** görüntüle ' yi seçin.
 
 1. **Yapı** sayfasını seçin.
 
@@ -41,7 +41,7 @@ C++ projelerine yönelik belirli uyarıları bastırmak için **yapılandırma �
 
 1. **Çözüm Gezgini**, içinde uyarıları bastırmak istediğiniz proje veya kaynak dosyasını seçin.
 
-1. Menü çubuğunda, **View**  >  **özellik sayfalarını**görüntüle ' yi seçin.
+1. Menü çubuğunda,   >  **özellik sayfalarını** görüntüle ' yi seçin.
 
 1. **Yapılandırma özellikleri** kategorisini seçin, **C/C++** kategorisini seçin ve ardından **Gelişmiş** sayfasını seçin.
 
@@ -55,17 +55,17 @@ C++ projelerine yönelik belirli uyarıları bastırmak için **yapılandırma �
 
 ## <a name="suppress-warnings-for-visual-basic"></a>Visual Basic uyarılarını gösterme
 
-Projenin *. vbproj* dosyasını düzenleyerek Visual Basic için belirli derleyici uyarılarını gizleyebilirsiniz. Uyarıları *kategoriye*göre gizlemek için [derleme özellik sayfasını](../ide/reference/compile-page-project-designer-visual-basic.md)kullanabilirsiniz. Daha fazla bilgi için bkz. [Visual Basic uyarıları yapılandırma](../ide/configuring-warnings-in-visual-basic.md).
+Projenin *. vbproj* dosyasını düzenleyerek Visual Basic için belirli derleyici uyarılarını gizleyebilirsiniz. Uyarıları *kategoriye* göre gizlemek için [derleme özellik sayfasını](../ide/reference/compile-page-project-designer-visual-basic.md)kullanabilirsiniz. Daha fazla bilgi için bkz. [Visual Basic uyarıları yapılandırma](../ide/configuring-warnings-in-visual-basic.md).
 
 ### <a name="to-suppress-specific-warnings-for-visual-basic"></a>Visual Basic için belirli uyarıları gizlemek için
 
 Bu örnekte, belirli derleyici uyarılarını gizlemek için *. vbproj* dosyasının nasıl düzenleneceği gösterilmektedir.
 
-1. **Çözüm Gezgini**içinde, uyarılarını bastırmak istediğiniz projeyi seçin.
+1. **Çözüm Gezgini** içinde, uyarılarını bastırmak istediğiniz projeyi seçin.
 
 1. Menü çubuğunda **Proje**  >  **Kaldır proje**' yi seçin.
 
-1. **Çözüm Gezgini**' de, proje için sağ tıklama veya kısayol menüsünü açın ve ardından ** \<ProjectName> . vbproj öğesini Düzenle**' yi seçin.
+1. **Çözüm Gezgini**' de, proje için sağ tıklama veya kısayol menüsünü açın ve ardından **\<ProjectName> . vbproj öğesini Düzenle**' yi seçin.
 
     XML projesi dosyası kod düzenleyicisinde açılır.
 
@@ -89,7 +89,7 @@ Bu örnekte, belirli derleyici uyarılarını gizlemek için *. vbproj* dosyası
     ```
 
    > [!NOTE]
-   > .NET Core projeleri varsayılan olarak derleme yapılandırma Özellik grupları içermez. Bir .NET Core projesinde uyarıları gizlemek için, derleme yapılandırma bölümünü dosyaya el ile ekleyin. Örnek:
+   > .NET Core projeleri varsayılan olarak derleme yapılandırma Özellik grupları içermez. Bir .NET Core projesinde uyarıları gizlemek için, derleme yapılandırma bölümünü dosyaya el ile ekleyin. Örneğin:
    >
    > ```xml
    > <Project Sdk="Microsoft.NET.Sdk">
@@ -130,7 +130,7 @@ Bazı durumlarda, tüm proje için değil tek bir NuGet paketi için NuGet derle
 
    ![NuGet paket özellikleri](media/nuget-properties-nowarn.png)
 
-   Uyarı **Çözüm Gezgini** ve **hata listesi**kayboluyor.
+   Uyarı **Çözüm Gezgini** ve **hata listesi** kayboluyor.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

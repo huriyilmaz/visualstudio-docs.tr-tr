@@ -9,15 +9,15 @@ helpviewer_keywords:
 - managed code, code analysis
 author: mikadumont
 ms.author: midumont
-manager: jillfra
+manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: c6f1f12fa7fca964c857e534c1ffae50efe70b27
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: e8d9ddf88086772e0cd21bde856184954bc7143b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94348664"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99867691"
 ---
 # <a name="overview-of-legacy-analysis-for-managed-code-in-visual-studio"></a>Visual Studio 'da yönetilen kod için eski Analize genel bakış
 
@@ -61,7 +61,7 @@ Daha fazla bilgi için bkz. [uyarıları gösterme](../code-quality/in-source-su
 ::: moniker range="vs-2017"
 
 > [!NOTE]
-> Bir projeyi Visual Studio 2017 ' a geçirirseniz, çok sayıda kod analizi uyarısıyla aniden karşılaşabilirsiniz. Uyarıları gidermeye hazırsanız, **Analyze**  >  **çalışma kodu analizini çözümle ve etkin sorunları Gizle** ' yi seçerek bunların tümünün görüntülenmesini sağlayabilirsiniz.
+> Bir projeyi Visual Studio 2017 ' a geçirirseniz, çok sayıda kod analizi uyarısıyla aniden karşılaşabilirsiniz. Uyarıları gidermeye hazırsanız,   >  **çalışma kodu analizini çözümle ve etkin sorunları Gizle**' yi seçerek bunların tümünün görüntülenmesini sağlayabilirsiniz.
 >
 > ![Visual Studio 'da Kod analizini çalıştırma ve sorunları gösterme](media/suppress-active-issues.png)
 
@@ -70,7 +70,7 @@ Daha fazla bilgi için bkz. [uyarıları gösterme](../code-quality/in-source-su
 ::: moniker range=">=vs-2019"
 
 > [!NOTE]
-> Bir projeyi Visual Studio 2019 ' a geçirirseniz, çok sayıda kod analizi uyarısıyla aniden karşılaşabilirsiniz. Uyarıları gidermeye hazırsanız, derlemeyi **Çözümle**  >  **ve etkin sorunları Gizle** ' yi seçerek bunların tümünün görüntülenmesini sağlayabilirsiniz.
+> Bir projeyi Visual Studio 2019 ' a geçirirseniz, çok sayıda kod analizi uyarısıyla aniden karşılaşabilirsiniz. Uyarıları gidermeye hazırsanız, derlemeyi **Çözümle**  >  **ve etkin sorunları Gizle**' yi seçerek bunların tümünün görüntülenmesini sağlayabilirsiniz.
 
 ::: moniker-end
 

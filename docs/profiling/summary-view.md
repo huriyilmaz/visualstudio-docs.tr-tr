@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 98a1eb71-bbf5-4ce7-8559-cdc29f082c4b
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 154f168044e5395a534b4a79ea44d9eafe6293f6
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: a7c1e22d10e7ffa20c73e1b4c42541bc22eab4bb
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98719285"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99868239"
 ---
 # <a name="summary-view"></a>Özet görünümü
 Özet görünümü, bir profil oluşturma çalıştırmasında en yüksek performanslı işlevler veya nesneler hakkında bilgi görüntüler. Bu görünüm, profil oluşturma yönteminin performans ölçümlerine göre en pahalı işlevlerin veya nesnelerin bir zaman çizelgesi grafiği ve iki veya daha fazla listesini sağlar. Bu görünümdeki veriler, kullanılan profil oluşturma yöntemine (örnekleme, izleme veya eşzamanlılık) ve .NET bellek ayırmasının toplanıp toplanmadığını gösterir.

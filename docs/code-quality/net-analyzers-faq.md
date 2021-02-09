@@ -8,15 +8,15 @@ helpviewer_keywords:
 - code analysis FAQ
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: d581ef60ebfe9ff5aeceae4c16ee4294eae5d850
-ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
+ms.openlocfilehash: 951e9b951f1d90077fe29506e9c288fb19f2d5ff
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96112248"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99867769"
 ---
 # <a name="frequently-asked-questions-about-legacy-fxcop-and-net-analyzers"></a>Eski FxCop ve .NET Çözümleyicileri hakkında sık sorulan sorular
 
@@ -34,7 +34,7 @@ Hem FxCop çözümleyicileri hem de .NET Çözümleyicileri, FxCop CA kuralları
 
 ## <a name="does-the-run-code-analysis-command-run-net-analyzers"></a>Kod analizini Çalıştır komutu .NET Çözümleyicileri 'ni çalıştırsın mı?
 
-Visual Studio 2019 16,5 sürümünden önce, **Analyze**  >  **çalışma kodu analizini** Çözümle ' yi seçtiğinizde eski analiz yürütülür. Visual Studio 2019 16,5 başlatılıyor, **Kod Analizi Çalıştır** menü seçeneği, seçili proje veya çözüm Için Roslyn tabanlı Çözümleyicileri yürütür. .NET Çözümleyicileri yüklediyseniz, bunlar da yürütülür. Daha fazla bilgi için bkz. [nasıl yapılır: yönetilen kod Için kod analizini El Ile çalıştırma](how-to-run-code-analysis-manually-for-managed-code.md).
+Visual Studio 2019 16,5 sürümünden önce,   >  **çalışma kodu analizini** Çözümle ' yi seçtiğinizde eski analiz yürütülür. Visual Studio 2019 16,5 başlatılıyor, **Kod Analizi Çalıştır** menü seçeneği, seçili proje veya çözüm Için Roslyn tabanlı Çözümleyicileri yürütür. .NET Çözümleyicileri yüklediyseniz, bunlar da yürütülür. Daha fazla bilgi için bkz. [nasıl yapılır: yönetilen kod Için kod analizini El Ile çalıştırma](how-to-run-code-analysis-manually-for-managed-code.md).
 
 ## <a name="does-the-runcodeanalysis-msbuild-project-property-run-analyzers"></a>RunCodeAnalysis MSBuild proje özelliği çözümleyiciler çalıştıranlar mı?
 
@@ -63,5 +63,5 @@ Projeniz uyarıları hata olarak değerlendirmek için Build seçeneğini kullan
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [.NET Compiler Platform çözümleyicilerine genel bakış](roslyn-analyzers-overview.md)
-- [.NET çözümleyiciler 'e geçiş](migrate-from-legacy-analysis-to-net-analyzers.md)
-- [.NET Çözümleyicileri 'ni yükler](install-net-analyzers.md)
+- [.NET çözümleyicilerine geçirme](migrate-from-legacy-analysis-to-net-analyzers.md)
+- [.NET çözümleyicilerini yükleme](install-net-analyzers.md)

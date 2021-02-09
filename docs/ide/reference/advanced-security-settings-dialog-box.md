@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 2e7aefe9-6d20-4f3e-b257-aee1ebcc6f5d
 author: Mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ffbf2bb5a8a73ba577489af825969c3bdc23f15e
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 3ece930da2bb133a19e443da4d37654367a1c862
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94351511"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99868991"
 ---
 # <a name="advanced-security-settings-dialog-box"></a>Gelişmiş Güvenlik Ayarları iletişim kutusu
 
@@ -28,7 +28,7 @@ Bu iletişim kutusu, bölgede hata ayıklama ile ilgili güvenlik ayarlarını b
 
 ![Visual Studio 'da gelişmiş güvenlik ayarları iletişim kutusu](../media/advanced-security-settings.png)
 
-Bu iletişim kutusuna erişmek için **Çözüm Gezgini** ' de bir proje düğümü seçin ve ardından **Proje** menüsünde **Özellikler** ' e tıklayın. **Proje Tasarımcısı** göründüğünde, **güvenlik** sekmesine tıklayın. **Güvenlik** sayfasında, **ClickOnce güvenlik ayarlarını etkinleştir** ' i seçin, **Bu kısmi güven uygulaması** ' na tıklayın ve ardından **Gelişmiş** ' e tıklayın.
+Bu iletişim kutusuna erişmek için **Çözüm Gezgini**' de bir proje düğümü seçin ve ardından **Proje** menüsünde **Özellikler**' e tıklayın. **Proje Tasarımcısı** göründüğünde, **güvenlik** sekmesine tıklayın. **Güvenlik** sayfasında, **ClickOnce güvenlik ayarlarını etkinleştir**' i seçin, **Bu kısmi güven uygulaması**' na tıklayın ve ardından **Gelişmiş**' e tıklayın.
 
 ## <a name="uielement-list"></a>UIElement listesi
 

@@ -9,13 +9,13 @@ helpviewer_keywords:
 - Solution Explorer, file nesting
 author: angelosp
 ms.author: angelpe
-manager: jillfra
-ms.openlocfilehash: 5425c255e85a2785383f1e8e718340fc2049e0c4
-ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
+manager: jmartens
+ms.openlocfilehash: aa3ca640fed4e32c19defd925a49369890219035
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95006698"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99869459"
 ---
 # <a name="file-nesting-in-solution-explorer"></a>Çözüm Gezgini’nde dosya iç içe yerleştirme
 
@@ -162,7 +162,7 @@ Her bir çözümün ve projenin sağ tıklama menüsünde (bağlam menüsü), ç
 
 Çözüme özgü ve projeye özel ayarlar, etkin Visual Studio ayarlarıyla birleştirilir. Örneğin, projeye özgü boş bir ayarlar dosyanız olabilir, ancak **Çözüm Gezgini** dosyaları iç içe geçirme işlemi devam etmektedir. İç içe geçme davranışı çözüme özgü ayarlardan ya da Visual Studio ayarlarından geliyor. Dosya iç içe geçme ayarlarını birleştirme önceliği: Visual Studio > çözüm > projesi.
 
-Visual Studio 'ya, **Tools** dosya iç içe ASP.NET Core Araçlar Seçenekler altında **çözümü ve proje ayarlarını yoksay** seçeneğini etkinleştirerek çözüme özgü ve projeye özgü ayarları yok saymasını söyleyebilirsiniz  >  **Options**  >  **ASP.NET Core**  >  **File Nesting**.
+Visual Studio 'ya, dosya iç içe ASP.NET Core Araçlar Seçenekler altında **çözümü ve proje ayarlarını yoksay** seçeneğini etkinleştirerek çözüme özgü ve projeye özgü ayarları yok saymasını söyleyebilirsiniz  >    >    >  .
 
 Bunun tersini yapabilir ve Visual Studio 'ya *yalnızca* çözüme özgü veya projeye özgü ayarları kullanarak **kök** düğümü **true** olarak ayarlayarak bunu söyleyebilirsiniz. Visual Studio, dosyaları bu düzeyde birleştirmeyi durduruyor ve hiyerarşiyi daha üst düzeydeki dosyalarla birleştirmez.
 

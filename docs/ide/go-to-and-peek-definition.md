@@ -12,15 +12,15 @@ helpviewer_keywords:
 - member definition [Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8fab4bae999825d7d2fb11dd232d1e271b4f62d5
-ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
+ms.openlocfilehash: 804c49c079f619a774cb1f99d54b2b2af5a3929d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95597502"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99869368"
 ---
 # <a name="view-type-and-member-definitions"></a>Görünüm türü ve üye tanımları
 
@@ -36,7 +36,7 @@ Geliştiricilerin genellikle kendi kodlarında kullandıkları türler veya sın
 
 ![Fare tıklaması tanım animasyonuna git](../ide/media/click_gotodef.gif)
 
-Fare tıklaması için değiştirici anahtarını değiştirebilirsiniz. **Araçlar** **Go To Definition**  >  **Seçenekler**  >  **metin Düzenleyicisi**  >  **genel**'e giderek ve **Alt** **Ctrl** + **değiştirici tuşu kullan** açılır listesinden alt ya da CTRL **alt** ' i seçerek tanıma git ' i seçin. Fare **tıklamasını** devre dışı bırakmak için fare tıklamasını **Etkinleştir** onay kutusunun işaretini kaldırın.
+Fare tıklaması için değiştirici anahtarını değiştirebilirsiniz. **Araçlar**   >  **Seçenekler**  >  **metin Düzenleyicisi**  >  **genel**'e giderek ve   + **değiştirici tuşu kullan** açılır listesinden alt ya da CTRL **alt** ' i seçerek tanıma git ' i seçin. Fare **tıklamasını** devre dışı bırakmak için fare tıklamasını **Etkinleştir** onay kutusunun işaretini kaldırın.
 
 ![Fare tıklamasını etkinleştirme tanıma git](../ide/media/editor_options_mouse_click_gotodef.png)
 

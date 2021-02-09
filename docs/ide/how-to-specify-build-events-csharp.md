@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: b4ce1ad9-5215-4b6f-b6a2-798b249aa335
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7bac7b2b293cd508931304b1e6cdd237234001e3
-ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
+ms.openlocfilehash: e1ea031391b93d571b9f34ad820f1a6957dab242
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92136946"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99869251"
 ---
 # <a name="how-to-specify-build-events-c"></a>Nasıl yapılır: derleme olayları belirtme (C#)
 
 Yapı başlamadan önce veya derleme bittikten sonra çalışan komutları belirtmek için derleme olaylarını kullanın. Derleme olayları yalnızca derleme yapı sürecinde bu noktalara başarıyla ulaşırsa yürütülür.
 
-Bir proje oluşturulduğunda, derleme öncesi olaylar *PreBuildEvent.bat* adlı bir dosyaya eklenir ve derleme sonrası olaylar *PostBuildEvent.bat*adlı bir dosyaya eklenir. Hata denetimi sağlamak istiyorsanız, derleme adımlarına kendi hata denetleme komutlarınızı ekleyin.
+Bir proje oluşturulduğunda, derleme öncesi olaylar *PreBuildEvent.bat* adlı bir dosyaya eklenir ve derleme sonrası olaylar *PostBuildEvent.bat* adlı bir dosyaya eklenir. Hata denetimi sağlamak istiyorsanız, derleme adımlarına kendi hata denetleme komutlarınızı ekleyin.
 
 ## <a name="specify-a-build-event"></a>Derleme olayı belirtin
 
@@ -72,7 +72,7 @@ Aşağıdaki yordamda, derleme sonrası olayından (proje dizinindeki *. exe. ma
 
 ### <a name="create-an-exe-command-to-change-the-application-manifest"></a>Uygulama bildirimini değiştirmek için bir. exe komutu oluşturma
 
-1. Komut için yeni bir **konsol uygulaması** projesi oluşturun. Projeyi **ChangeOSVersionCS**olarak adlandırın.
+1. Komut için yeni bir **konsol uygulaması** projesi oluşturun. Projeyi **ChangeOSVersionCS** olarak adlandırın.
 
 2. *Program.cs*' de, aşağıdaki satırı `using` dosyanın en üstündeki yönergelere ekleyin:
 
@@ -136,21 +136,21 @@ Aşağıdaki yordamda, derleme sonrası olayından (proje dizinindeki *. exe. ma
 
 4. Projeyi derleyin.
 
-5. *. Exe* dosyasını *C:\TEMP\ChangeOSVersionVB.exe*gibi bir dizine kopyalayın.
+5. *. Exe* dosyasını *C:\TEMP\ChangeOSVersionVB.exe* gibi bir dizine kopyalayın.
 
 Sonra, uygulama bildirimini değiştirmek için bu komutu derleme sonrası bir olayda çağırın.
 
 ### <a name="invoke-a-post-build-event-to-modify-the-application-manifest"></a>Uygulama bildirimini değiştirmek için derleme sonrası olayını çağırma
 
-1. Yeni bir **Windows Forms App** projesi oluşturun ve bunu **CSWinApp**olarak adlandırın.
+1. Yeni bir **Windows Forms App** projesi oluşturun ve bunu **CSWinApp** olarak adlandırın.
 
 2. **Çözüm Gezgini**' de proje seçiliyken, **Proje** menüsünde **Özellikler**' i seçin.
 
-3. **Proje tasarımcısında** **Yayımla** sayfasını bulun ve **Yayımlama konumunu** *C:\Temp*olarak ayarlayın.
+3. **Proje tasarımcısında** **Yayımla** sayfasını bulun ve **Yayımlama konumunu** *C:\Temp* olarak ayarlayın.
 
 4. **Şimdi Yayımla**' ya tıklayarak projeyi yayımlayın.
 
-   Bildirim dosyası *C:\TEMP\CSWinApp_1_0_0_0\CSWinApp.exe. manifest*öğesine oluşturulup kaydedilir. Bildirimi görüntülemek için, dosyaya sağ tıklayın, **birlikte Aç**' a tıklayın, **Listeden programı seç**' i seçin ve ardından **Notepad**' e tıklayın.
+   Bildirim dosyası *C:\TEMP\CSWinApp_1_0_0_0\CSWinApp.exe. manifest* öğesine oluşturulup kaydedilir. Bildirimi görüntülemek için, dosyaya sağ tıklayın, **birlikte Aç**' a tıklayın, **Listeden programı seç**' i seçin ve ardından **Notepad**' e tıklayın.
 
    Dosyasında öğesi için arama yapın `<osVersionInfo>` . Örneğin, sürüm şu olabilir:
 

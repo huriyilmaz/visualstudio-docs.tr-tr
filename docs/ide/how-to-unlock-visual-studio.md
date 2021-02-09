@@ -6,17 +6,17 @@ ms.topic: conceptual
 ms.assetid: ffb580a1-8b5d-48f5-b811-87f8036f50ea
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-ms.openlocfilehash: 8e11d77a94c7c1d3d7b038ecea1a6c61646e371f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3dd2a688ef70064f44caccfd7c64150b7c649769
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77027573"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99869134"
 ---
 # <a name="extend-a-trial-version-or-update-a-license"></a>Deneme sürümü uzatma veya bir lisansı güncelleştirme
 
@@ -37,7 +37,7 @@ Visual Studio abonelikleri ve nasıl çalıştıkları hakkında daha fazla bilg
 
 ## <a name="enter-a-product-key"></a>Bir ürün anahtarı girin
 
-1. **File**  >  **Hesap ayarları** iletişim kutusunu açmak için dosya**hesabı ayarları** ' nı seçin ve ardından **bir ürün anahtarı bağlantısı olan lisansı** seçin.
+1.   >  **Hesap ayarları** iletişim kutusunu açmak için dosya **hesabı ayarları** ' nı seçin ve ardından **bir ürün anahtarı bağlantısı olan lisansı** seçin.
 
 1. Belirtilen alana ürün anahtarını girin.
 
@@ -68,7 +68,7 @@ Kimlik bilgilerinizi yeniden girmeyin, belirteç eskgeç çalışmaya başlar ve
 
 Aboneliğinizin süresi dolmuşsa ve Visual Studio için artık erişim haklarınız yoksa, aboneliğinizi yenilemeniz veya aboneliğine sahip başka bir hesap eklemeniz gerekir. Kullanmakta olduğunuz lisans hakkında daha fazla bilgi görmek için, **Dosya**  >  **hesabı ayarları** ' na gidin ve iletişim kutusunun sağ tarafındaki lisans bilgilerine bakın. Farklı bir hesapla ilişkili başka bir aboneliğiniz varsa, **Hesap Ekle** bağlantısı ' nı seçerek bu hesabı iletişim kutusunun sol tarafındaki **tüm hesaplar** listesine ekleyin.
 
-## <a name="get-support"></a>Destek alma
+## <a name="get-support"></a>Destek alın
 
 Bazen, şeyler yanlış gider. Bir sorunla karşılaşırsanız, bazı destek seçenekleri aşağıda verilmiştir:
 

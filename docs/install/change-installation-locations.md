@@ -11,17 +11,17 @@ helpviewer_keywords:
 - use the D drive
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 5751ddeca2ba690ec29ff905ec7e8330a7199eab
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4db3a31c8baa578a17d14b3a740ff40a444ba208
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85419126"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99868640"
 ---
 # <a name="select-the-installation-locations-in-visual-studio"></a>Visual Studio 'da yükleme konumlarını seçme
 
@@ -59,7 +59,7 @@ Başlamaya hazır mısınız? Aşağıdaki adımları uygulayın:
 
      ![Yükleme konumları sekmesinin önbellek indirme bölümü](media/vs-installation-locations-cache.png "Yükleme sonrasında indirme önbelleğinin tutulup tutulmayacağını seçin ve ardından dosyaları depolamak istediğiniz sürücüyü belirtin.")
 
-    1. **Yükleme sonrasında indirme önbelleğini koru**veya işaretini kaldır.
+    1. **Yükleme sonrasında indirme önbelleğini koru** veya işaretini kaldır.
 
        İndirme önbelleğini tutmamaya karar verirseniz, konum yalnızca geçici olarak kullanılır. Bu eylem önceki yüklemelerin dosyalarını etkilemez veya silmez.
 
@@ -89,7 +89,7 @@ Başlamaya hazır mısınız? Aşağıdaki adımları uygulayın:
 
 1. **Önbelleği indir** bölümünde, indirme önbelleğini tutmak istediğinize karar verin ve sonra dosyalarını nerede saklamak istediğinize karar verin.
 
-    * **Yükleme sonrasında indirme önbelleğini koru**veya işaretini kaldır.
+    * **Yükleme sonrasında indirme önbelleğini koru** veya işaretini kaldır.
 
        İndirme önbelleğini tutmamaya karar verirseniz, konum yalnızca geçici olarak kullanılır. Bu eylem önceki yüklemelerin dosyalarını etkilemez veya silmez.
 

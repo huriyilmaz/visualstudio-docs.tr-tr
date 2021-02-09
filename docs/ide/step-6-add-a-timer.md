@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: 09e7930b-cab6-4a22-9a6f-72e23f489585
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 2684b197fc32b33081c8ecdfa8139b3c8f14e752
-ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
+ms.openlocfilehash: 77daa47cdd6336849903202233392d3eecc33c1a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96480557"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99868900"
 ---
 # <a name="step-6-add-a-timer"></a>6. Adım: Süreölçer ekleme
 Ardından, <xref:System.Windows.Forms.Timer> eşleşen oyuna bir denetim eklersiniz. Bir Zamanlayıcı belirtilen sayıda milisaniye bekler ve sonra *değer* olarak adlandırılan bir olayı tetikler. Bu olay, bir eylemi başlatmak veya eylemi düzenli aralıklarla yinelemek için kullanışlıdır. Bu durumda, oyuncuların iki simge seçmesini sağlamak ve simgeler eşleşmez ise, kısa bir süre sonra bu iki simgeyi yeniden gizlemek için bir zamanlayıcı kullanacaksınız.
@@ -30,12 +30,12 @@ Ardından, <xref:System.Windows.Forms.Timer> eşleşen oyuna bir denetim eklersi
 1. **Windows Form Tasarımcısı** içindeki Araç kutusundan **Zamanlayıcı** ' yı seçin ( **Bileşenler** kategorisinde) ve ardından **ENTER** tuşunu seçin veya bir zamanlayıcı denetimi eklemek için zamanlayıcıyı çift tıklayın. Aşağıdaki görüntüde gösterildiği gibi, **Süreölçer1** adlı zamanlayıcının simgesinin, formun altındaki bir alanda görünmesi gerekir.
 
      ![Zamanlayıcı](../ide/media/express_timer.png)<br/>
-**_Zamanlayıcı_* _
+***Zamanlayıcı***
 
     > [!NOTE]
     > Araç kutusu boş ise, araç kutusunu açmadan önce formun arkasındaki kodu değil de, form tasarımcısını seçtiğinizden emin olun.
 
-2. Zamanlayıcıyı seçmek için _ *Süreölçer1** simgesini seçin. **Özellikler** penceresinde olayları görüntüleme, özellikleri görüntüleme ' ye geçin. Sonra, zamanlayıcının **Interval** özelliğini **750** olarak ayarlayın, ancak **Enabled** özelliğini **false** olarak ayarlayın. **Interval** özelliği, zamanlayıcının, zaman *işaretleri* arasında ne kadar bekleyeceğini ya da olayını ne zaman tetikleyeceğini söyler <xref:System.Windows.Forms.Timer.Tick> . 750 değeri zamanlayıcıya, Tick olayını tetiklemeden önce saniyenin dörtte üçü kadar (750 milisaniye) beklemesini bildirir. <xref:System.Windows.Forms.Timer.Start>Zamanlayıcıyı yalnızca Player ikinci etiketi seçtikten sonra başlatmak için yöntemini çağıracaksınız.
+2. Zamanlayıcıyı seçmek için **Süreölçer1** simgesini seçin. **Özellikler** penceresinde olayları görüntüleme, özellikleri görüntüleme ' ye geçin. Sonra, zamanlayıcının **Interval** özelliğini **750** olarak ayarlayın, ancak **Enabled** özelliğini **false** olarak ayarlayın. **Interval** özelliği, zamanlayıcının, zaman *işaretleri* arasında ne kadar bekleyeceğini ya da olayını ne zaman tetikleyeceğini söyler <xref:System.Windows.Forms.Timer.Tick> . 750 değeri zamanlayıcıya, Tick olayını tetiklemeden önce saniyenin dörtte üçü kadar (750 milisaniye) beklemesini bildirir. <xref:System.Windows.Forms.Timer.Start>Zamanlayıcıyı yalnızca Player ikinci etiketi seçtikten sonra başlatmak için yöntemini çağıracaksınız.
 
 3. **Windows Form Tasarımcısı** 'de süreölçer denetimi simgesini seçin ve ardından **ENTER** tuşuna basın veya boş bir Tick olayı işleyicisi eklemek için zamanlayıcıyı çift tıklayın. Kodu aşağıdaki kodla değiştirin ya da aşağıdaki kodu olay işleyicisine el ile girin.
 

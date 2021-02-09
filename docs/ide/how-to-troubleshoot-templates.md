@@ -8,13 +8,13 @@ helpviewer_keywords:
 - templates [Visual Studio], troubleshooting
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
-ms.openlocfilehash: 42dc34d846f37ed1d7655d6758d045b2db7187d9
-ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
+manager: jmartens
+ms.openlocfilehash: 842e34ce18767f5d16cc55d16b8346369fe6cef9
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95596852"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99869121"
 ---
 # <a name="how-to-troubleshoot-templates"></a>Nasıl yapılır: şablonlarda sorun giderme
 
@@ -40,7 +40,7 @@ Bir şablondaki *vstemplate* dosyası Visual Studio şablon şemasına bağlı d
 
 1. *. Zip* dosyasını ayıklayın.
 
-1. Visual Studio 'daki **Dosya** menüsünde Dosya **Aç**' ı seçin  >  **File**.
+1. Visual Studio 'daki **Dosya** menüsünde Dosya **Aç**' ı seçin  >  .
 
 1. Şablon için *vstemplate* dosyasını seçin ve **Aç**' ı seçin.
 
@@ -51,7 +51,7 @@ Bir şablondaki *vstemplate* dosyası Visual Studio şablon şemasına bağlı d
 
 1. *Vstemplate* dosyasını kaydedin ve kapatın.
 
-1. Şablonunuza dahil olan dosyaları seçin, sağ tıklayın ve **Send to**  >  **Sıkıştırılmış (daraltılmış) klasöre** Gönder ' i seçin. Seçtiğiniz dosyalar bir *. zip* dosyasında sıkıştırılır.
+1. Şablonunuza dahil olan dosyaları seçin, sağ tıklayın ve   >  **Sıkıştırılmış (daraltılmış) klasöre** Gönder ' i seçin. Seçtiğiniz dosyalar bir *. zip* dosyasında sıkıştırılır.
 
 1. Yeni *. zip* dosyasını eski *. zip* dosyası ile aynı dizine yerleştirin.
 

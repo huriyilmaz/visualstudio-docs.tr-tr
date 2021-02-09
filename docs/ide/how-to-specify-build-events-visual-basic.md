@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 40dc83bf-a7c5-4a14-816a-fa0980b6e4c3
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 00655d1f30d18da4170782384c634ff189b104ee
-ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
+ms.openlocfilehash: 426b387603fbe7bca29f2ad4f507f2e517cac9bd
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92136933"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99869264"
 ---
 # <a name="how-to-specify-build-events-visual-basic"></a>Nasıl yapılır: derleme olaylarını belirtme (Visual Basic)
 
@@ -69,7 +69,7 @@ Aşağıdaki yordamda, derleme sonrası olayından (proje dizinindeki *. exe. ma
 
 2. **Yeni proje** iletişim kutusunda, **Visual Basic** düğümünde **Windows** ' u ve ardından **konsol uygulama** şablonu ' nu seçin. Projeyi adlandırın `ChangeOSVersionVB` .
 
-3. *Module1. vb*dosyasında, aşağıdaki satırı `Imports` dosyanın en üstündeki diğer deyimlere ekleyin:
+3. *Module1. vb* dosyasında, aşağıdaki satırı `Imports` dosyanın en üstündeki diğer deyimlere ekleyin:
 
    ```vb
    Imports System.Xml
@@ -118,11 +118,11 @@ Aşağıdaki yordamda, derleme sonrası olayından (proje dizinindeki *. exe. ma
    End Sub
    ```
 
-   Komut iki bağımsız değişken alır. İlk bağımsız değişken, uygulama bildiriminin yoludur (yani, yapı işleminin bildirimi oluşturduğu klasör, genellikle * \<ProjectName> . Publish*). İkinci bağımsız değişken yeni işletim sistemi sürümüdür.
+   Komut iki bağımsız değişken alır. İlk bağımsız değişken, uygulama bildiriminin yoludur (yani, yapı işleminin bildirimi oluşturduğu klasör, genellikle *\<ProjectName> . Publish*). İkinci bağımsız değişken yeni işletim sistemi sürümüdür.
 
 5. **Yapı** menüsünde **Yapı Çözümü**’ne tıklayın.
 
-6. *. Exe* dosyasını *C:\TEMP\ChangeOSVersionVB.exe*gibi bir dizine kopyalayın.
+6. *. Exe* dosyasını *C:\TEMP\ChangeOSVersionVB.exe* gibi bir dizine kopyalayın.
 
    Sonra, uygulama bildirimini değiştirmek için bu komutu derleme sonrası bir olayda çağırın.
 
@@ -133,11 +133,11 @@ Aşağıdaki yordamda, derleme sonrası olayından (proje dizinindeki *. exe. ma
 2. **Yeni proje** iletişim kutusunda, **Visual Basic** düğümünde, **Windows masaüstü** ' nü ve sonra **Windows Forms uygulama** şablonunu seçin. Projeyi adlandırın `VBWinApp` .
 3. **Çözüm Gezgini**' de proje seçiliyken, **Proje** menüsünde **Özellikler**' e tıklayın.
 
-4. **Proje tasarımcısında** **Yayımla** sayfasına gidin ve **Yayımlama konumunu** *C:\Temp*olarak ayarlayın.
+4. **Proje tasarımcısında** **Yayımla** sayfasına gidin ve **Yayımlama konumunu** *C:\Temp* olarak ayarlayın.
 
 5. **Şimdi Yayımla**' ya tıklayarak projeyi yayımlayın.
 
-     Bildirim dosyası *C:\TEMP\VBWinApp_1_0_0_0\VBWinApp.exe. manifest*dosyasına oluşturulup yerleştirilecek. Bildirimi görüntülemek için, dosyaya sağ tıklayın ve **birlikte Aç**' a tıklayın ve ardından **Listeden programı seç**' e tıklayın ve ardından **Notepad**' e tıklayın.
+     Bildirim dosyası *C:\TEMP\VBWinApp_1_0_0_0\VBWinApp.exe. manifest* dosyasına oluşturulup yerleştirilecek. Bildirimi görüntülemek için, dosyaya sağ tıklayın ve **birlikte Aç**' a tıklayın ve ardından **Listeden programı seç**' e tıklayın ve ardından **Notepad**' e tıklayın.
 
      Dosyasında öğesi için arama yapın `<osVersionInfo>` . Örneğin, sürüm şu olabilir:
 

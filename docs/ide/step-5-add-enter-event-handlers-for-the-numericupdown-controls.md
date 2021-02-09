@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: 45a99a5d-c881-4298-b74d-adb481dec5ee
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 19dc77469a08821f5fb9775450bf080c0d49181b
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 876cdb3639c93e9a67316f5aaea4139f061efb17
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036970"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99869017"
 ---
 # <a name="step-5-add-enter-event-handlers-for-the-numericupdown-controls"></a>5. Adım: NumericUpDown denetimleri için Giriş olay işleyicileri ekleme
 
@@ -35,13 +35,13 @@ Bu öğreticinin beşinci kısmında, <xref:System.Windows.Forms.Control.Enter> 
 
      Ek sorun için **NumericUpDown** denetiminde, imleç **0** (sıfır) seçeneğinin yanında yanıp sönmesini sağlar.
 
-2. **3**girin ve denetimin **30**gösterdiğini unutmayın.
+2. **3** girin ve denetimin **30** gösterdiğini unutmayın.
 
-3. **5**girin ve **350** ' un göründüğünü, ancak saniyenin sonunda **100** ' e değişiklik olduğunu unutmayın.
+3. **5** girin ve **350** ' un göründüğünü, ancak saniyenin sonunda **100** ' e değişiklik olduğunu unutmayın.
 
      Bu sorunu giderdikten sonra, neler olduğunu düşünün. **3** girdiğinizde **0** ' ın neden kaybolmaması gerektiğini ve **350** neden **100** olarak değiştirildiğini düşünün.
 
-     Bu davranış tek görünebilir, ancak kodun mantığına göre daha anlamlı hale gelir. **Başlat** düğmesini seçtiğinizde, **etkin** özelliği **false**olarak ayarlanır ve Düğme soluk görünür ve kullanılamaz olur. Programınız, geçerli seçimi (odağı), ek sorun için NumericUpDown denetimi olan bir sonraki en düşük TabIndex değerine sahip olan denetim olarak değiştirir. Bir NumericUpDown denetimine gitmek için **Tab** tuşunu kullandığınızda, imleç denetimin başlangıcında otomatik olarak konumlandırılır. Bu, girdiğiniz sayıların sağ taraftan değil, sol taraftan görünmemesinin neden olduğu. 100 olarak ayarlanan **MaximumValue** özelliğinin değerinden daha yüksek bir sayı belirttiğinizde, girdiğiniz sayı bu özelliğin değeri ile değiştirilmiştir.
+     Bu davranış tek görünebilir, ancak kodun mantığına göre daha anlamlı hale gelir. **Başlat** düğmesini seçtiğinizde, **etkin** özelliği **false** olarak ayarlanır ve Düğme soluk görünür ve kullanılamaz olur. Programınız, geçerli seçimi (odağı), ek sorun için NumericUpDown denetimi olan bir sonraki en düşük TabIndex değerine sahip olan denetim olarak değiştirir. Bir NumericUpDown denetimine gitmek için **Tab** tuşunu kullandığınızda, imleç denetimin başlangıcında otomatik olarak konumlandırılır. Bu, girdiğiniz sayıların sağ taraftan değil, sol taraftan görünmemesinin neden olduğu. 100 olarak ayarlanan **MaximumValue** özelliğinin değerinden daha yüksek bir sayı belirttiğinizde, girdiğiniz sayı bu özelliğin değeri ile değiştirilmiştir.
 
 ## <a name="to-add-an-enter-event-handler-for-a-numericupdown-control"></a>NumericUpDown denetimine bir Enter Olay işleyicisi eklemek için
 
@@ -51,11 +51,11 @@ Bu öğreticinin beşinci kısmında, <xref:System.Windows.Forms.Control.Enter> 
 
    **Özellikler** Iletişim kutusundaki **Olaylar** sekmesi, formda seçtiğiniz öğe için yanıt verebildiği tüm olayları (tanıtıcı) görüntüler. NumericUpDown denetimini seçtiğinizden, listelenen tüm olaylar buna aittir.
 
-2. **ENTER** olayını seçin, yazın `answer_Enter` ve ENTER tuşuna basın **Enter** .
+2. **ENTER** olayını seçin, yazın `answer_Enter` ve ENTER tuşuna basın  .
 
    ![Olay işleyicisi yöntem adını girin](media/enter-event.png)
 
-   Sum NumericUpDown denetimi için bir Enter Olay işleyicisi eklediniz ve işleyiciyi **answer_Enter**adlandırdınız.
+   Sum NumericUpDown denetimi için bir Enter Olay işleyicisi eklediniz ve işleyiciyi **answer_Enter** adlandırdınız.
 
 3. **Answer_Enter** olay işleyicisine yönelik yöntemde aşağıdaki kodu ekleyin:
 

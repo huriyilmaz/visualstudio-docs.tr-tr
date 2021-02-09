@@ -11,13 +11,13 @@ helpviewer_keywords:
 - updating templates [Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
-ms.openlocfilehash: e3a709070d777ebaf600fc05abf0e651eaef5b1a
-ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
+manager: jmartens
+ms.openlocfilehash: 12005ce6c280a828aa59c281803cb431cc08587a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95596891"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99869095"
 ---
 # <a name="how-to-update-existing-templates"></a>Nasıl yapılır: mevcut şablonları güncelleştirme
 
@@ -59,7 +59,7 @@ Sıkıştırılmış *. zip* dosyasındaki dosyaları değiştirerek, **şablonu
 
     *. Vstemplate* şeması hakkında daha fazla bilgi için bkz. [Visual Studio Şablon Şeması Başvurusu (genişletilebilirlik)](../extensibility/visual-studio-template-schema-reference.md). Kaynak dosyalarında parametreleştiribilecekleri hakkında daha fazla bilgi için bkz. [şablon parametreleri](../ide/template-parameters.md).
 
-1. Şablonunuzda bulunan dosyaları ve sağ tıklama ya da bağlam menüsünden seçin ve **Send to**  >  **Sıkıştırılmış (daraltılmış) klasöre** Gönder ' i seçin.
+1. Şablonunuzda bulunan dosyaları ve sağ tıklama ya da bağlam menüsünden seçin ve   >  **Sıkıştırılmış (daraltılmış) klasöre** Gönder ' i seçin.
 
     Seçtiğiniz dosyalar bir *. zip* dosyasında sıkıştırılır.
 

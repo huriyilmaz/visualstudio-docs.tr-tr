@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 64173505-8bfb-41cf-a0de-b9075173f3a2
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a267a64a6b6d59b64ffb70596154d1e54f368410
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 5568961cc8b527ecd724ab9a1d26ab4a641696b6
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94351277"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99869290"
 ---
 # <a name="how-to-sign-application-and-deployment-manifests"></a>Nasıl yapılır: uygulama ve dağıtım bildirimlerini Imzalama
 
@@ -42,14 +42,14 @@ Anahtar dosyaları oluşturma hakkında daha fazla bilgi için bkz. [nasıl yap�
 
 ## <a name="sign-using-a-certificate"></a>Sertifika kullanarak imzala
 
-1. Proje özellikleri penceresine gidin ( **Çözüm Gezgini** proje düğümüne sağ tıklayın ve **Özellikler** ' i seçin). **İmzalama** sekmesinde **ClickOnce bildirimlerini imzala** onay kutusunu seçin.
+1. Proje özellikleri penceresine gidin ( **Çözüm Gezgini** proje düğümüne sağ tıklayın ve **Özellikler**' i seçin). **İmzalama** sekmesinde **ClickOnce bildirimlerini imzala** onay kutusunu seçin.
 
 2. **Mağazadan Seç** düğmesine tıklayın.
 
      **Sertifika seç** iletişim kutusu görünür ve Windows sertifika deposunun içeriğini görüntüler.
 
     > [!TIP]
-    > **Sertifika özelliklerini görüntülemek için buraya tıklayın** ' a tıklarsanız, **sertifika ayrıntıları** iletişim kutusu görüntülenir. Bu iletişim kutusu, sertifika ve ek seçenekler hakkında ayrıntılı bilgi içerir. Ek Yardım bilgilerini görüntülemek için **Sertifikalar** ' a tıklayın.
+    > **Sertifika özelliklerini görüntülemek için buraya tıklayın**' a tıklarsanız, **sertifika ayrıntıları** iletişim kutusu görüntülenir. Bu iletişim kutusu, sertifika ve ek seçenekler hakkında ayrıntılı bilgi içerir. Ek Yardım bilgilerini görüntülemek için **Sertifikalar** ' a tıklayın.
 
 3. Bildirimleri imzalamak için kullanmak istediğiniz sertifikayı seçin.
 
@@ -63,14 +63,14 @@ Anahtar dosyaları oluşturma hakkında daha fazla bilgi için bkz. [nasıl yap�
 
      **Dosya Seç** iletişim kutusu görüntülenir.
 
-3. **Dosya Seç** iletişim kutusunda, kullanmak istediğiniz anahtar dosyasının ( *. pfx* ) konumuna gidin ve ardından **Aç** ' a tıklayın.
+3. **Dosya Seç** iletişim kutusunda, kullanmak istediğiniz anahtar dosyasının (*. pfx*) konumuna gidin ve ardından **Aç**' a tıklayın.
 
     > [!NOTE]
     > Bu seçenek yalnızca *. pfx* uzantılı dosyaları destekler. Başka bir biçimde anahtar dosyası veya sertifikanız varsa, bunu Windows sertifika depolama alanında depolayın ve önceki yordamda açıklanan sertifikayı seçin. Seçilen sertifikanın amacı, kod imzalama içermelidir.
 
      **Dosyayı açmak için parola girin** iletişim kutusu görüntülenir. ( *. Pfx* dosyası zaten Windows sertifika deponuzda depolanıyorsa veya parola korumalı değilse, bir parola girmeniz istenmez.)
 
-4. Anahtar dosyasına erişmek için parolayı girin ve ardından **ENTER** ' u seçin.
+4. Anahtar dosyasına erişmek için parolayı girin ve ardından **ENTER**' u seçin.
 
 > [!NOTE]
 > *. Pfx* dosyası, sertifika zincirleme bilgilerini içeremez. Varsa, aşağıdaki içeri aktarma hatası oluşur: **şifre çözme için sertifika ve özel anahtar bulunamıyor**. Sertifika zincirleme bilgilerini kaldırmak için *certmgr. msc* ' yi kullanabilir ve *. pfx dosyasını dışarı aktarırken **tüm sertifikaları dahil etme** [seçeneğini devre dışı bırakabilirsiniz](/previous-versions/aa730868(v=vs.80)) .

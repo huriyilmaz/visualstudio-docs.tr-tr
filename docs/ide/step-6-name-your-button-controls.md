@@ -12,15 +12,15 @@ dev_langs:
 - VB
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: bfa5b69cc106aeae18012a7116fd511263423b2c
-ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
+ms.openlocfilehash: 0f6612806f8bf1453cf28f9d75c78588c2074bb0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96480323"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99868887"
 ---
 # <a name="step-6-name-your-button-controls"></a>6. Adım: Düğme denetimlerinizi adlandırma
 
@@ -35,7 +35,7 @@ Formunuzda dört düğme vardır ve bunları **button1**, **button2**, **BUTTON3
 
 1. Formda, **Kapat** düğmesini seçin. (Tüm düğmeler seçiliyse, seçimi iptal etmek için **ESC** tuşunu seçin.) **(Ad)** özelliğini görene kadar **Özellikler** penceresinde kaydırma yapın. ( **(Ad)** özelliği, Özellikler alfabetik olduğunda üst kısımdaki bir yakındır.) Aşağıdaki ekran görüntüsünde gösterildiği gibi, adı **CloseButton** olarak değiştirin.
 
-    ![CloseButton adıyla Özellikler penceresi](../ide/media/express_setnameproperty.png)<br>*_* ***CloseButton**_ _name * ile _ pencere *_özellikleri_*
+    ![CloseButton adıyla Özellikler penceresi](../ide/media/express_setnameproperty.png)<br>*_* ***CloseButton**_ _name * ile _ pencere **özellikleri**
 
     > [!NOTE]
     > Düğme adını "Close" ve "Button" kelimeleri arasında bir boşluk olacak şekilde **Kapat düğmesine** değiştirmeyi deneyin. Bunu yaptığınızda, IDE bir hata iletisi görüntüler: "özellik değeri geçerli değil." Denetim adlarında boşluklara (ve diğer birkaç karaktere) izin verilmez.
@@ -48,7 +48,7 @@ Formunuzda dört düğme vardır ve bunları **button1**, **button2**, **BUTTON3
    Bu sekme, aşağıdaki ekran görüntüsünde gösterildiği gibi, formun arkasındaki kod dosyasını görüntüler.
 
     ![Visual C&#35; Code ile Form1.cs sekmesi](../ide/media/express_showbuttoncode.png)<br>
-**_Form1.cs_* _ _Tab C# kodu *
+***Form1.cs** _ _Tab C# kodu *
 
     > [!NOTE]
     > Form1.cs veya Form1. vb sekmesinizdeki **showButton** **yerine showButton görüntülenebilir** .
@@ -91,13 +91,13 @@ Formunuzda dört düğme vardır ve bunları **button1**, **button2**, **BUTTON3
 
     Tasarım zamanında IDE 'deki bir denetimin kodunu görüntülediğinizde, Visual Studio bir tane değilse denetim için bir olay işleyici yöntemi ekler. Örneğin, bir düğmeye çift tıkladığınızda IDE, olayı için bir olay işleyicisi ekler <xref:System.Windows.Forms.Control.Click> (Kullanıcı düğmeyi seçtiğinde çağrılır). Bir onay kutusunu çift tıklattığınızda, IDE, olayı için bir olay işleyicisi ekler <xref:System.Windows.Forms.CheckBox.CheckedChanged> (Kullanıcı kutuyu seçtiğinde veya temizlediğinde çağrılır).
 
-    Bir denetim için bir olay işleyicisi ekledikten sonra, denetime çift tıklayarak veya menü çubuğunda kodu **görüntüle**' yi seçerek **Windows Form Tasarımcısı** istediğiniz zaman buna dönebilirsiniz  >  **Code**.
+    Bir denetim için bir olay işleyicisi ekledikten sonra, denetime çift tıklayarak veya menü çubuğunda kodu **görüntüle**' yi seçerek **Windows Form Tasarımcısı** istediğiniz zaman buna dönebilirsiniz  >  .
 
     Programlar oluştururken adlar önemlidir ve Yöntemler (olay işleyicileri dahil) istediğiniz herhangi bir ada sahip olabilir. IDE ile bir olay işleyicisi eklediğinizde, denetimin adına ve işlenmekte olan olaya göre bir ad oluşturur.
 
     Örneğin, **showButton** adlı bir düğmenin Click olayına `showButton_Click()` (alternatif olarak `ShowButton_Click()` ) olay işleyicisi yöntemi denir. Ayrıca, yöntemlerin açıklanmakta olduğunu göstermek için, açma ve kapatma parantezleri `()` genellikle yöntem adından sonra eklenir.
 
-    Kod değişkeni adını değiştirmek istediğinize karar verirseniz, koddaki değişkene sağ tıklayıp yeniden **Düzenle**' yi seçin  >  **Rename**. Koddaki bu değişkenin tüm örnekleri yeniden adlandırılır. Daha fazla bilgi için [yeniden düzenlemeyi yeniden adlandırma](../ide/reference/rename.md)bölümüne bakın.
+    Kod değişkeni adını değiştirmek istediğinize karar verirseniz, koddaki değişkene sağ tıklayıp yeniden **Düzenle**' yi seçin  >  . Koddaki bu değişkenin tüm örnekleri yeniden adlandırılır. Daha fazla bilgi için [yeniden düzenlemeyi yeniden adlandırma](../ide/reference/rename.md)bölümüne bakın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
