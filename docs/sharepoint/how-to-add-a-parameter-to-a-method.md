@@ -16,15 +16,15 @@ helpviewer_keywords:
 - BDC [SharePoint development in Visual Studio], method parameters
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 179109ff4c0def002dac45887fe9491196a70d3e
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: d568d5ca2025f1467fa96387493b1e8b4ed1ec6e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96915407"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99931701"
 ---
 # <a name="how-to-add-a-parameter-to-a-method"></a>Nasıl yapılır: bir yönteme parametre ekleme
   Yöntemine bilgi iletmek veya bir yöntemden bilgi döndürmek için bir parametre kullanın. Tüm yöntemler en az bir parametreye sahip olmalıdır. Oluşturmak istediğiniz yöntem türünü desteklemek için bir parametre tasarlamak hakkında daha fazla bilgi için, bkz. [Iş verileri bağlantı modeli tasarlama](../sharepoint/designing-a-business-data-connectivity-model.md).
@@ -35,7 +35,7 @@ ms.locfileid: "96915407"
 
 1. Bir varlığa bir yöntem ekleyin.
 
-2. Menü çubuğunda, **View**  >  **diğer Windows**  >  **bdc yöntemi ayrıntılarını** görüntüle ' yi seçin.
+2. Menü çubuğunda,   >  **diğer Windows**  >  **bdc yöntemi ayrıntılarını** görüntüle ' yi seçin.
 
      **IVB yöntemi ayrıntıları** penceresi açılır. Daha fazla bilgi için bkz. [BDC modeli tasarım araçlarına genel bakış](../sharepoint/bdc-model-design-tools-overview.md).
 
@@ -45,7 +45,7 @@ ms.locfileid: "96915407"
 
      **Parametreler** düğümünün altında yeni bir parametre görüntülenir.
 
-5. Menü çubuğunda **View**  >  **Özellikler penceresini** görüntüle ' yi seçin.
+5. Menü çubuğunda   >  **Özellikler penceresini** görüntüle ' yi seçin.
 
 6. **Özellikler** penceresinde, **ad** özelliğini anlamlı olan herhangi bir ad olarak ayarlayın. Örneğin, yöntem müşterileri döndürecektir, **GetCustomers** yöntemine ad yazabilirsiniz.
 

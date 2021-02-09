@@ -9,17 +9,17 @@ ms.devlang: javascript
 ms.assetid: b0e4ebed-1a01-41ef-aad1-4d8465ce5322
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 69ddd658eb8ca7015ae2c6868b55d7081da0917c
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: c342018a2331b27a411b5efc23af1438fa18518d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809026"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99932624"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-nodejs-app"></a>Hızlı başlangıç: ilk Node.js uygulamanızı oluşturmak için Visual Studio 'Yu kullanma
 
@@ -30,10 +30,10 @@ Bu 5-10 dakikalık Visual Studio tümleşik geliştirme ortamına (IDE) giriş y
 * Visual Studio yüklü ve Node.js geliştirme iş yüküne sahip olmanız gerekir.
 
     ::: moniker range=">=vs-2019"
-    Visual Studio 2019 ' ü henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads)   sayfasına giderek ücretsiz olarak yükleme yapın.
+    Visual Studio 2019 ' ü henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads) sayfasına giderek ücretsiz olarak yükleme yapın.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Visual Studio 2017 ' ü henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)   sayfasına giderek ücretsiz olarak yükleme yapın.
+    Visual Studio 2017 ' ü henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) sayfasına giderek ücretsiz olarak yükleme yapın.
     ::: moniker-end
 
     İş yükünü yüklemeniz gerekir, ancak zaten Visual Studio 'ya sahipseniz **Araçlar**  >  **ve Özellikler al.**.. ' a giderek Visual Studio yükleyicisi açılır. **Node.js geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
@@ -44,7 +44,7 @@ Bu 5-10 dakikalık Visual Studio tümleşik geliştirme ortamına (IDE) giriş y
 
     Yüklü değilse, dış çerçeveler ve kitaplıklar ile en iyi uyumluluk için [Node.js](https://nodejs.org/en/download/) Web sitesinden LTS sürümünü yüklemenizi öneririz. Node.js, 32-bit ve 64-bit mimariler için oluşturulmuştur. Visual Studio 'daki Node.js araçları, Node.js iş yüküne dahil edilmiştir, her iki sürümü de destekler. Yalnızca bir tane gereklidir ve Node.js yükleyici yalnızca aynı anda yüklü olan birini destekler.
     
-    Genel olarak, Visual Studio yüklü Node.js çalışma zamanını otomatik olarak algılar. Yüklü bir çalışma zamanı algılamazsa, projenizi Özellikler sayfasındaki yüklü çalışma zamanına başvuracak şekilde yapılandırabilirsiniz (bir proje oluşturduktan sonra proje düğümüne sağ tıklayın, **Özellikler**' i seçin ve **Node.exe yolunu**ayarlayın). Node.js genel bir yüklemesini kullanabilir veya Node.js projelerinizde her birinde yerel yorumlayıcı yolunu belirtebilirsiniz. 
+    Genel olarak, Visual Studio yüklü Node.js çalışma zamanını otomatik olarak algılar. Yüklü bir çalışma zamanı algılamazsa, projenizi Özellikler sayfasındaki yüklü çalışma zamanına başvuracak şekilde yapılandırabilirsiniz (bir proje oluşturduktan sonra proje düğümüne sağ tıklayın, **Özellikler**' i seçin ve **Node.exe yolunu** ayarlayın). Node.js genel bir yüklemesini kullanabilir veya Node.js projelerinizde her birinde yerel yorumlayıcı yolunu belirtebilirsiniz. 
 
 ## <a name="create-a-project"></a>Proje oluşturma
 
@@ -59,10 +59,10 @@ Bu 5-10 dakikalık Visual Studio tümleşik geliştirme ortamına (IDE) giriş y
 1. Yeni bir proje oluşturma.
 
     ::: moniker range=">=vs-2019"
-    Başlangıç penceresini kapatmak için **ESC** tuşuna basın. **CTRL + Q** yazarak arama kutusunu açın, **Node.js**yazın ve sonra **Yeni boş Node.js Web uygulaması projesi** (JavaScript) öğesini seçin. Görüntülenen iletişim kutusunda **Oluştur**' u seçin.
+    Başlangıç penceresini kapatmak için **ESC** tuşuna basın. **CTRL + Q** yazarak arama kutusunu açın, **Node.js** yazın ve sonra **Yeni boş Node.js Web uygulaması projesi** (JavaScript) öğesini seçin. Görüntülenen iletişim kutusunda **Oluştur**' u seçin.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Üstteki menü çubuğundan **Dosya**  >  **Yeni**  >  **Proje**' yi seçin. **Yeni proje** iletişim kutusunun sol bölmesinde **JavaScript**' i ve ardından **Node.js**' yi seçin. Orta bölmede, **Web uygulaması Node.js boş bırakın**ve **Tamam**' ı seçin.
+    Üstteki menü çubuğundan **Dosya**  >  **Yeni**  >  **Proje**' yi seçin. **Yeni proje** iletişim kutusunun sol bölmesinde **JavaScript**' i ve ardından **Node.js**' yi seçin. Orta bölmede, **Web uygulaması Node.js boş bırakın** ve **Tamam**' ı seçin.
     ::: moniker-end
     **Boş Node.js Web uygulaması** proje şablonunu görmüyorsanız, **Node.js geliştirme** iş yükünü eklemeniz gerekir. Ayrıntılı yönergeler için bkz. [Önkoşullar](#prerequisites).
 
@@ -84,11 +84,11 @@ Bu 5-10 dakikalık Visual Studio tümleşik geliştirme ortamına (IDE) giriş y
 
    ![Komut istemi Node.js](../ide/media/quickstart-nodejs-command-prompt.png)
 
-1. Düzenleyicideki *server.js* dosyasında (sol bölme), `http.createServer` ardından **F12** tuşuna basın veya bağlam (sağ tıklama) menüsünde **Tanıma Git** ' i seçin. Bu komut sizi `createServer` *Dizin. d. TS*içindeki işlevin tanımına götürür.
+1. Düzenleyicideki *server.js* dosyasında (sol bölme), `http.createServer` ardından **F12** tuşuna basın veya bağlam (sağ tıklama) menüsünde **Tanıma Git** ' i seçin. Bu komut sizi `createServer` *Dizin. d. TS* içindeki işlevin tanımına götürür.
 
    ![Tanım bağlam menüsüne git](../ide/media/quickstart-nodejs-gotodefinition.png)
 
-1. *server.js*dönün, sonra imlecinizi bu kod satırındaki dizenin sonuna koyun `res.end('Hello World\n');` ve aşağıdaki gibi görünmesi için değiştirin:
+1. *server.js* dönün, sonra imlecinizi bu kod satırındaki dizenin sonuna koyun `res.end('Hello World\n');` ve aşağıdaki gibi görünmesi için değiştirin:
 
     `res.end('Hello World\n' + res.connection.`
 
@@ -96,13 +96,13 @@ Bu 5-10 dakikalık Visual Studio tümleşik geliştirme ortamına (IDE) giriş y
 
    ![IntelliSense otomatik tamamlamayı](../ide/media/quickstart-nodejs-intellisense.png)
 
-1. **Localport**öğesini seçin ve ardından şunu yazarak ifadeyi şöyle olacak `);` şekilde doldurun:
+1. **Localport** öğesini seçin ve ardından şunu yazarak ifadeyi şöyle olacak `);` şekilde doldurun:
 
     `res.end('Hello World\n' + res.connection.localPort);`
 
 ## <a name="run-the-application"></a>Uygulamayı çalıştırma
 
-1. **Ctrl** + Uygulamayı çalıştırmak için CTRL**F5** tuşuna basın (veya hata ayıklama **> başlatın**). Uygulama bir tarayıcıda açılır.
+1.  + Uygulamayı çalıştırmak için CTRL **F5** tuşuna basın (veya hata ayıklama **> başlatın**). Uygulama bir tarayıcıda açılır.
 
 1. Tarayıcı penceresinde, "Merhaba Dünya" ve yerel bağlantı noktası numarasını görürsünüz.
 

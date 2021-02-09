@@ -7,15 +7,15 @@ ms.topic: how-to
 ms.assetid: 56a0fe82-5231-487d-8b6e-a08a9b04e0fc
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f1c7165f301c82dfaf5aa066a3e15bd7ab244089
-ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
+ms.openlocfilehash: 1c9f5510603a9292797b6f66c2e63882569c2eb6
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "95970239"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99931116"
 ---
 # <a name="how-to-execute-an-xslt-transformation-from-the-xml-editor"></a>Nasıl yapılır: XML düzenleyicisinden XSLT dönüşümü yürütme
 
@@ -37,7 +37,7 @@ XML Düzenleyicisi bir XSLT stil sayfasını bir XML belgesi ile ilişkilendirme
 
     - **Özellikler** PENCERESINI kullanarak XSLT stil sayfasını ekleyin. Düzenleyicide XML dosyası açıkken, düzenleyicide herhangi bir yere sağ tıklayın ve **Özellikler**' i seçin. **Özellikler** penceresinde, **stil sayfası** alanına tıklayın ve ardından (...) düğmesini seçin. XSLT stil sayfasını seçin ve sonra **Aç**' ı seçin.
 
-3. Menü çubuğunda, **XML**  >  **hata ayıklama olmadan XML Başlat XSLT**'yi seçin. Ya da **CTRL** + **alt** + **F5** tuşuna basın.
+3. Menü çubuğunda,   >  **hata ayıklama olmadan XML Başlat XSLT**'yi seçin. Ya da **CTRL** + **alt** + **F5** tuşuna basın.
 
    XSLT dönüştürmesinin çıktısı yeni bir belge penceresinde görüntülenir.
 
@@ -53,7 +53,7 @@ XML Düzenleyicisi bir XSLT stil sayfasını bir XML belgesi ile ilişkilendirme
    > [!NOTE]
    > XML belgesi, dönüştürme için kullanılan giriş belgesidir. XSLT dönüşümü başlatıldığında bir belge belirtilmemişse, **Dosya Aç** iletişim kutusu görüntülenir ve o sırada bir belge belirtebilirsiniz.
 
-3. Menü çubuğunda, **XML**  >  **hata ayıklama olmadan XML Başlat XSLT**'yi seçin. Ya da **CTRL** + **alt** + **F5** tuşuna basın.
+3. Menü çubuğunda,   >  **hata ayıklama olmadan XML Başlat XSLT**'yi seçin. Ya da **CTRL** + **alt** + **F5** tuşuna basın.
 
    XSLT dönüştürmesinin çıktısı yeni bir belge penceresinde görüntülenir.
 

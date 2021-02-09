@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 0fc63484-5fb6-4887-9ea4-1905b459ca9d
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: bf7f59384d9317e4be173c93b6165d754a35ad8f
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: 0fc7f8ba4d3939424e634f37ede78e92496c9eac
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96914250"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99930505"
 ---
 # <a name="control-events"></a>Denetim olayları
 Programınızın denetlenen yürütmesi sırasında olayları göndermeniz gerekir. Tüm olaylar [IDebugEvent2](../../extensibility/debugger/reference/idebugevent2.md) arabirimi kullanılarak gönderilir ve [IDebugEvent2:: GetAttributes](../../extensibility/debugger/reference/idebugevent2-getattributes.md) metodunu uygulamanızı gerektiren özniteliklere sahiptir.

@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 97071846-007e-450f-95a6-f072d0f5e61e
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 88adaad3092e084841c40b5e04d45f94985a2ee8
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: b00e0529c1d2ac7224881067628618251ba03898
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96913886"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99930518"
 ---
 # <a name="control-of-execution"></a>Yürütmenin denetimi
 Hata ayıklama altyapısı (DE) genellikle son başlatma olayı olarak aşağıdaki olaylardan birini gönderir:
@@ -59,7 +59,7 @@ Hata ayıklama altyapısı (DE) genellikle son başlatma olayı olarak aşağıd
 
    Hata ayıklama paketi belirli bir durdurma olayını yok sayıyorsa, hata ayıklama paketi [IDebugProgram2:: Continue](../../extensibility/debugger/reference/idebugprogram2-continue.md)ÖĞESINI çağıran SDM 'yi çağırır. Program durdurma koşuluyla karşılaştığı zaman bir işlevin içine, üzerine veya dışına adımlanıyor ise, bu adım devam eder. Bu, programın nasıl devam edebildiğini bilmesi için bir atlama durumu koruduğu anlamına gelir.
 
-   SDM 'nin yaptığı çağrı `Step` , **yürütme** ve **devam etme** zaman uyumsuzdur ve bu, SDM 'nin çağrının hızlı dönmesini beklediği anlamına gelir. DE, SDM 'yi aynı iş parçacığında önce, yürütmeden veya devam etmeden önce durdurma olayı gönderirse, `Step` SDM yanıt vermeyi durduruyor. **Execute** **Continue**
+   SDM 'nin yaptığı çağrı `Step` , **yürütme** ve **devam etme** zaman uyumsuzdur ve bu, SDM 'nin çağrının hızlı dönmesini beklediği anlamına gelir. DE, SDM 'yi aynı iş parçacığında önce, yürütmeden veya devam etmeden önce durdurma olayı gönderirse, `Step` SDM yanıt vermeyi durduruyor.  
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Hata ayıklama görevleri](../../extensibility/debugger/debugging-tasks.md)

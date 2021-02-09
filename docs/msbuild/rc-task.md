@@ -21,19 +21,19 @@ helpviewer_keywords:
 ms.assetid: 2fd26c75-a056-4dda-9f7e-2f90d3748d88
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 94a1babf518a3579246903f6479f999d8912dfe5
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: 7f00e0b5cd0575613add2698058ba6b1357aec0f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93048793"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99931987"
 ---
 # <a name="rc-task"></a>RC görevi
 
-Microsoft Windows Kaynak derleyicisi Aracı ' nı sarmalayan *rc.exe* . **RC** görevi, imleçler, simgeler, bit eşlemler, iletişim kutuları ve yazı tipleri gibi kaynakları bir kaynak ( *. res* ) dosyasına derler. Daha fazla bilgi için bkz. [kaynak derleyicisi](/windows/desktop/menurc/resource-compiler).
+Microsoft Windows Kaynak derleyicisi Aracı ' nı sarmalayan *rc.exe*. **RC** görevi, imleçler, simgeler, bit eşlemler, iletişim kutuları ve yazı tipleri gibi kaynakları bir kaynak (*. res*) dosyasına derler. Daha fazla bilgi için bkz. [kaynak derleyicisi](/windows/desktop/menurc/resource-compiler).
 
 ## <a name="parameters"></a>Parametreler
 

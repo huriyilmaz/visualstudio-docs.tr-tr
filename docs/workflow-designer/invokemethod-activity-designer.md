@@ -9,15 +9,15 @@ f1_keywords:
 ms.assetid: 15e6efdc-52ca-46d8-9c5e-063f7c8265a6
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 55162def18d2295e0767a3999ffde75d71e1233d
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 2ba7234ee0c5a4ab8096c020cb44345f17830540
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94437742"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99931220"
 ---
 # <a name="invokemethod-activity-designer"></a>InvokeMethod Etkinlik Tasarımcısı
 
@@ -41,7 +41,7 @@ Aşağıdaki tabloda <xref:System.Activities.Statements.InvokeMethod> Özellikle
 |<xref:System.Activities.Statements.InvokeMethod.MethodName%2A>|Doğru|Etkinlik yürütüldüğünde çağrılacak yöntemin adı. Çağrılan yöntem **ortak** olarak bildirilmelidir. Bu özellik tasarımcı yüzeyinde düzenlenebilir ve zorunludur.|
 |<xref:System.Activities.Statements.InvokeMethod.Parameters%2A>|Yanlış|Çağrılan metodun parametre koleksiyonu. Parametrelerin, yöntem imzasında göründükleri sırada koleksiyona eklenmesi gerekir. Bu özelliği ayarlayabileceğiniz **Parametreler** iletişim kutusunu göstermek için, özellik kılavuzunun **Parametreler** alanındaki üç nokta düğmesine tıklayın. Parametreleri eklemek için **bağımsız değişken Oluştur** düğmesine tıklayın.|
 |<xref:System.Activities.Statements.InvokeMethod.Result%2A>|Yanlış|Yöntem çağrısının dönüş değeri.|
-|<xref:System.Activities.Statements.InvokeMethod.RunAsynchronously%2A>|Doğru|Metodun zaman uyumsuz olarak verilip verilmeyeceğini belirtir. Varsayılan değer **false** 'dur.|
+|<xref:System.Activities.Statements.InvokeMethod.RunAsynchronously%2A>|Doğru|Metodun zaman uyumsuz olarak verilip verilmeyeceğini belirtir. Varsayılan değer **false**'dur.|
 |<xref:System.Activities.Statements.InvokeMethod.TargetObject%2A>|Yanlış|Çağrılacak yöntemi içeren nesne. Bu özellik, tasarımcı yüzeyinde düzenlenebilir.<br /><br /> Ya da ' <xref:System.Activities.Statements.InvokeMethod.TargetObject%2A> <xref:System.Activities.Statements.InvokeMethod.TargetType%2A> nin ayarlanması gerekiyor.|
 |<xref:System.Activities.Statements.InvokeMethod.TargetType%2A>|Yanlış|Türü <xref:System.Activities.Statements.InvokeMethod.TargetObject%2A> . Bu özellik tasarımcı yüzeyinde düzenlenebilir. Bu özellik yalnızca çağrılan yöntem static ise ayarlanmalıdır.|
 

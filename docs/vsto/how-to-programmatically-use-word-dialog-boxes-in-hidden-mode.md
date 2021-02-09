@@ -14,15 +14,15 @@ helpviewer_keywords:
 - dialog boxes, hidden mode in Word
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 263041fe15f07e8041bb771a6f3abd8b3311b0f2
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 0977e7241920ad23a6248bb2349ddaeb10a5e931
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97523166"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99931259"
 ---
 # <a name="how-to-programmatically-use-word-dialog-boxes-in-hidden-mode"></a>Nasıl yapılır: gizli modda program aracılığıyla Word iletişim kutuları kullanma
   Microsoft Office Word içindeki yerleşik iletişim kutularını kullanıcıya görüntülemeden çağırarak, tek bir yöntem çağrısıyla karmaşık işlemler gerçekleştirebilirsiniz. <xref:Microsoft.Office.Interop.Word.Dialog.Execute%2A> <xref:Microsoft.Office.Interop.Word.Dialog> Yöntemi çağırmak zorunda kalmadan nesne yöntemini kullanarak bunu yapabilirsiniz <xref:Microsoft.Office.Interop.Word.Dialog.Display%2A> .

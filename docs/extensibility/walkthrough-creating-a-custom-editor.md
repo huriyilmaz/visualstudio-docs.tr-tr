@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: d090abb6-d99f-4083-a3db-cd16bf81ce7d
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 188c02471e8921e66faefe9668ec3f54c935b50b
-ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
+ms.openlocfilehash: 0a4ebcf99634012943ed0a7fd1a72b5d4852729e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/04/2021
-ms.locfileid: "97863120"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99931389"
 ---
 # <a name="walkthrough-create-a-custom-editor"></a>İzlenecek yol: özel bir düzenleyici oluşturma
 VSPackage proje şablonu C++ ' da basit bir özel düzenleyici oluşturabilir. VSPackage proje şablonu artık C# veya Visual Basic projelerini desteklememektedir. Daha fazla bilgi için bkz. [Visual STUDIO SDK](../extensibility/visual-studio-sdk.md).
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
  Bu yönergeyi izlemek için, Visual Studio SDK 'sını yüklemelisiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="the-visual-studio-package-project-template"></a>Visual Studio paketi proje şablonu

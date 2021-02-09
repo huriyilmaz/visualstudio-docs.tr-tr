@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Prerequisites dialog box
 author: Mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e7384bad2096f98a646487d5d97eed3d387c7de1
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 78d5f4f00a81fccf573e69797b9d528ee61ffdc5
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94349236"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99932065"
 ---
 # <a name="prerequisites-dialog-box"></a>Önkoşullar iletişim kutusu
 
@@ -27,14 +27,14 @@ ms.locfileid: "94349236"
 
 ![Visual Studio 'da Önkoşullar iletişim kutusu](media/prerequisites-dialog-box.png)
 
-İletişim kutusuna erişmek için, **Çözüm Gezgini** ' de bir proje düğümü seçin ve ardından **Proje**  >  **özellikleri** ' ni seçin. **Proje Tasarımcısı** göründüğünde, **Yayımla** sekmesini seçin ve ardından **Önkoşullar** ' ı seçin. Kurulum projeleri için, **Proje** menüsünde **Özellikler** ' e tıklayın. **Özellik sayfaları** iletişim kutusu göründüğünde, **Önkoşullar** ' ı tıklatın.
+İletişim kutusuna erişmek için, **Çözüm Gezgini**' de bir proje düğümü seçin ve ardından **Proje**  >  **özellikleri**' ni seçin. **Proje Tasarımcısı** göründüğünde, **Yayımla** sekmesini seçin ve ardından **Önkoşullar**' ı seçin. Kurulum projeleri için, **Proje** menüsünde **Özellikler**' e tıklayın. **Özellik sayfaları** iletişim kutusu göründüğünde, **Önkoşullar**' ı tıklatın.
 
 ## <a name="uielement-list"></a>UIElement listesi
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|**Önkoşul bileşenlerini yüklemek için Kurulum programı oluşturma**|Uygulamanızın uygulama Kurulum programında ( *Setup.exe* ) Önkoşul bileşenlerini içerir, böylece uygulamanız, bağımlılık sırasına göre yüklenir. Varsayılan olarak, bu seçenek seçilidir. Seçili değilse *Setup.exe* oluşturulmaz.|
-|**Hangi önkoşulların yükleneceğini seçin**|.NET Framework ve C++ çalışma zamanı kitaplıkları gibi bileşenlerin yüklenip yüklenmeyeceğini belirtir.<br /><br />Örneğin, **SQL Server 2012 Express** ' in yanındaki onay kutusunu seçerek, Kurulum programının bu bileşenin hedef bilgisayarda yüklü olup olmadığını doğrulaması gerektiğini ve değilse yüklemesi gerektiğini belirtirsiniz.<br /><br />Her önkoşul paketiyle ilgili ayrıntılı bilgi için bkz. [Önkoşul bilgileri](#prerequisites-information).|
+|**Önkoşul bileşenlerini yüklemek için Kurulum programı oluşturma**|Uygulamanızın uygulama Kurulum programında (*Setup.exe*) Önkoşul bileşenlerini içerir, böylece uygulamanız, bağımlılık sırasına göre yüklenir. Varsayılan olarak, bu seçenek seçilidir. Seçili değilse *Setup.exe* oluşturulmaz.|
+|**Hangi önkoşulların yükleneceğini seçin**|.NET Framework ve C++ çalışma zamanı kitaplıkları gibi bileşenlerin yüklenip yüklenmeyeceğini belirtir.<br /><br />Örneğin, **SQL Server 2012 Express**' in yanındaki onay kutusunu seçerek, Kurulum programının bu bileşenin hedef bilgisayarda yüklü olup olmadığını doğrulaması gerektiğini ve değilse yüklemesi gerektiğini belirtirsiniz.<br /><br />Her önkoşul paketiyle ilgili ayrıntılı bilgi için bkz. [Önkoşul bilgileri](#prerequisites-information).|
 |**Önkoşulları bileşen satıcısının Web sitesinden indir**|Önkoşul bileşenlerinin satıcının Web sitesinden yükleneceğini belirtir. Bu varsayılan seçenektir.|
 |**Önkoşulları Uygulamam ile aynı konumdan indir**|Önkoşul bileşenlerinin uygulamayla aynı konumdan yükleneceğini belirtir. Bu, tüm önkoşul paketlerini yayımlama konumuna kopyalar. Bu seçeneğin çalışması için önkoşul paketleri geliştirme bilgisayarında olmalıdır.|
 |**Önkoşulları aşağıdaki konumdan indirin**|Önkoşul bileşenlerinin girdiğiniz konumdan yükleneceğini belirtir. Bir konum seçmek için, **tarayıcı** düğmesini kullanabilirsiniz.|

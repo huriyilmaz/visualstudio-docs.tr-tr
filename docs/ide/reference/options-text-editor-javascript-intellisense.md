@@ -12,19 +12,19 @@ f1_keywords:
 ms.assetid: b4a9816d-cf87-4dc6-a8d4-1591d6a48103
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 41256882433bc95db7af380d27cc8dc63fbcd387
-ms.sourcegitcommit: a7944c325bedd8efbb244452741864089a02f5db
+ms.openlocfilehash: 051711a9d6dfe861f37e741ae9ecabfbf741012e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91947732"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99932364"
 ---
 # <a name="options-dialog-box-text-editor--javascript--intellisense"></a>Seçenekler iletişim kutusu: metin düzenleyici \> JavaScript \> IntelliSense
 
-JavaScript için IntelliSense davranışını etkileyen ayarları değiştirmek için **Seçenekler** Iletişim kutusunun **IntelliSense** sayfasını kullanın. **IntelliSense** sayfasına, menü çubuğunda **Araçlar**  >  **Seçenekler** ' i ve ardından **metin Düzenleyicisi**  >  **JavaScript/TypeScript**IntelliSense ' i genişleterek erişebilirsiniz  >  **.**
+JavaScript için IntelliSense davranışını etkileyen ayarları değiştirmek için **Seçenekler** Iletişim kutusunun **IntelliSense** sayfasını kullanın. **IntelliSense** sayfasına, menü çubuğunda **Araçlar**  >  **Seçenekler** ' i ve ardından **metin Düzenleyicisi**  >  **JavaScript/TypeScript** IntelliSense ' i genişleterek erişebilirsiniz  >  **.**
 
 [!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)]
 
@@ -62,7 +62,7 @@ Belirli IntelliSense .js dosyalarının farklı JavaScript projeleri için kapsa
 
 **Dahil edilen dosyalar**
 
-Bu seçenek, dil hizmetinin bağlamına dosyaların yüklendiği sırayı belirtir. Sıralamayı, **Kaldır**, **Yukarı taşı**ve **aşağı taşı** düğmelerini kullanarak yapılandırabilirsiniz. IntelliSense'in düzgün çalışması için, bir diğer dosyaya bağımlı olan dosya söz konusu bu diğer dosyadan sonra yüklenmelidir.
+Bu seçenek, dil hizmetinin bağlamına dosyaların yüklendiği sırayı belirtir. Sıralamayı, **Kaldır**, **Yukarı taşı** ve **aşağı taşı** düğmelerini kullanarak yapılandırabilirsiniz. IntelliSense'in düzgün çalışması için, bir diğer dosyaya bağımlı olan dosya söz konusu bu diğer dosyadan sonra yüklenmelidir.
 
 > [!CAUTION]
 > Bir nesne iki veya daha fazla örtük başvuruda koşulsuz olarak tanımlanırsa, nesneyi tanımlamak için bu listedeki son başvuru kullanılır.

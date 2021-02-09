@@ -25,15 +25,15 @@ helpviewer_keywords:
 ms.assetid: 727efa8c-3336-40b8-8bef-ae6cbd77a422
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 884cecdcbdbef3320516dd67c43cedd72bc25076
-ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
+ms.openlocfilehash: a310cd4428232338ed46a8a54502d9956e73be15
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92903856"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99932025"
 ---
 # <a name="midl-task"></a>MIDL görevi
 
@@ -145,7 +145,7 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını *midl.exe* sarmal
 
      İse `true` , sabit listesi değerlerinin izin verilen aralıkta olup olmadığını denetler.
 
-     Daha fazla bilgi için, *midl.exe* için komut satırı yardımı 'nda ( **/?** ) **/Error sabit listesi** seçeneğine bakın.
+     Daha fazla bilgi için, *midl.exe* için komut satırı yardımı 'nda (**/?**) **/Error sabit listesi** seçeneğine bakın.
 
 - **Errorcheckrefişaretçiler**
 
@@ -205,7 +205,7 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını *midl.exe* sarmal
 
      İsteğe bağlı **Boolean** parametresi.
 
-     İse `true` , bir tür kitaplığı ( *. tlb* ) dosyası oluşturulmaz.
+     İse `true` , bir tür kitaplığı (*. tlb*) dosyası oluşturulmaz.
 
      Daha fazla bilgi için [MIDL komut satırı başvurusunda](/windows/desktop/Midl/midl-command-line-reference) **/notlb** seçeneğine bakın.
 
@@ -261,7 +261,7 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını *midl.exe* sarmal
 
      İsteğe bağlı **dize []** parametresi.
 
-     Bir veya daha fazla *tanımlar* belirtir; diğer bir deyişle, bir ad ve isteğe bağlı bir değer, bir yönergesi tarafından olduğu gibi C Önişlemci 'ye geçirilir `#define` . Her tanımlamanın formu, *adı [= değer]* .
+     Bir veya daha fazla *tanımlar* belirtir; diğer bir deyişle, bir ad ve isteğe bağlı bir değer, bir yönergesi tarafından olduğu gibi C Önişlemci 'ye geçirilir `#define` . Her tanımlamanın formu, *adı [= değer]*.
 
      Daha fazla bilgi için [MIDL komut satırı başvurusunda](/windows/desktop/Midl/midl-command-line-reference) **/d** seçeneğine bakın. Ayrıca bkz. bu tablodaki **UndefinePreprocessorDefinitions** parametresi.
 
@@ -299,7 +299,7 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını *midl.exe* sarmal
 
      İsteğe bağlı **dize** parametresi.
 
-     Hedef sistemdeki yapıların hizalamasını ( *paketleme düzeyi* ) belirtir.
+     Hedef sistemdeki yapıların hizalamasını (*paketleme düzeyi*) belirtir.
 
      Her biri bir komut satırı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.
 
@@ -405,7 +405,7 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını *midl.exe* sarmal
 
      İsteğe bağlı **dize** parametresi.
 
-     Görüntülenecek uyarıların önem derecesini ( *Uyarı düzeyi* ) belirtir. 0 değeri için hiçbir uyarı yayınlanmadı. Aksi takdirde, uyarı düzeyi belirtilen değere eşit veya ondan daha küçükse bir uyarı yayınlanır.
+     Görüntülenecek uyarıların önem derecesini (*Uyarı düzeyi*) belirtir. 0 değeri için hiçbir uyarı yayınlanmadı. Aksi takdirde, uyarı düzeyi belirtilen değere eşit veya ondan daha küçükse bir uyarı yayınlanır.
 
      Her biri bir komut satırı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.
 

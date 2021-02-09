@@ -7,15 +7,15 @@ ms.topic: how-to
 ms.assetid: 0222e8bf-d29f-421b-9b1f-123d500fa179
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4bb4a0a66855351e9edbb1b06dbf2aee452cd150
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: 2ac90077831d852ba0361c46186d18fe39cf9e81
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93134151"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99931077"
 ---
 # <a name="how-to-create-a-basic-texture"></a>Nasıl yapılır: Temel doku oluşturma
 
@@ -49,7 +49,7 @@ Başlamadan önce **Özellikler** penceresinin görüntülendiğinden emin olun.
 
 3. Görüntü Düzenleyicisi araç çubuğunda, **Fill** aracını seçin. **Özellikler** penceresi artık, görüntü özellikleriyle birlikte **Fill** aracının özelliklerini görüntüler.
 
-4. Ön plan rengini tamamen saydam siyah olarak ayarlayın. **Özellikler** penceresinde, **renkler** Özellik grubunda **ön plan** ' ı seçin. **R** , **G** , **B** ve renk seçicisinin yanındaki **bir** özellik değerlerini olarak ayarlayın `0` .
+4. Ön plan rengini tamamen saydam siyah olarak ayarlayın. **Özellikler** penceresinde, **renkler** Özellik grubunda **ön plan**' ı seçin. **R**, **G**, **B** ve renk seçicisinin yanındaki **bir** özellik değerlerini olarak ayarlayın `0` .
 
 5. Görüntü Düzenleyicisi araç çubuğunda, **Fill** aracını seçin ve ardından **SHIFT** tuşunu basılı tutarak görüntüde herhangi bir noktayı seçin. **SHIFT** tuşunun kullanılması, görüntü içindeki rengin yerini alacak şekilde, Fill renginin alfa değerini sağlar; Aksi halde, alfa değeri, görüntü içindeki renkle birlikte Fill rengini karıştırmak için kullanılır.
 
@@ -58,9 +58,9 @@ Başlamadan önce **Özellikler** penceresinin görüntülendiğinden emin olun.
 
 6. Görüntü Düzenleyicisi araç çubuğunda **elips** aracını seçin.
 
-7. Ön plan rengini tamamen opak siyah olarak ayarlayın. **R** , **G** ve **B** özelliklerinin değerlerini `0` ve **bir** özelliğinin değerini olarak ayarlayın `255` .
+7. Ön plan rengini tamamen opak siyah olarak ayarlayın. **R**, **G** ve **B** özelliklerinin değerlerini `0` ve **bir** özelliğinin değerini olarak ayarlayın `255` .
 
-8. Arka plan rengini tamamen opak beyaz olarak ayarlayın. **Özellikler** penceresinde, **renkler** Özellik grubunda, **arka plan** ' ı seçin. **R** , **G** , **B** ve **bir** özelliklerinin değerlerini olarak ayarlayın `255` .
+8. Arka plan rengini tamamen opak beyaz olarak ayarlayın. **Özellikler** penceresinde, **renkler** Özellik grubunda, **arka plan**' ı seçin. **R**, **G**, **B** ve **bir** özelliklerinin değerlerini olarak ayarlayın `255` .
 
 9. Elipsin anahattının genişliğini ayarlayın. **Özellikler** penceresinde, **Görünüm** Özellik grubunda, **Width** özelliğinin değerini olarak ayarlayın `8` .
 
@@ -75,7 +75,7 @@ Başlamadan önce **Özellikler** penceresinin görüntülendiğinden emin olun.
 
 13. Piksel koordinatından piksel koordinatına başka bir daire çizin `(64, 64)` `(448, 448)` .
 
-14. Arka plan rengini tamamen opak beyaza çevirin. **R** , **G** , **B** ve **A** 'yı olarak ayarlayın `255` .
+14. Arka plan rengini tamamen opak beyaza çevirin. **R**, **G**, **B** ve **A** 'yı olarak ayarlayın `255` .
 
 15. Piksel koordinatından piksel koordinatına başka bir daire çizin `(128, 128)` `(384, 384)` .
 

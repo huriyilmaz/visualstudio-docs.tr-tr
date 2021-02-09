@@ -25,15 +25,15 @@ helpviewer_keywords:
 - Office projects [Office development in Visual Studio], Excel
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: e6ca4cfd45c1147d10ffaf8d3308b9adb09c689e
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: 3833ff549b2cceb3f783afc43a4f71dacc00ecb0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96848124"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99931285"
 ---
 # <a name="excel-solutions"></a>Excel çözümleri
   Visual Studio, Microsoft Office Excel için belge düzeyi özelleştirmeler ve VSTO eklentileri oluşturmak için kullanabileceğiniz proje şablonları sağlar. Excel 'i otomatikleştirmek, Excel özelliklerini genişletmek ve Excel Kullanıcı arabirimini (UI) özelleştirmek için bu çözümleri kullanabilirsiniz. Belge düzeyi özelleştirmeleri ve VSTO eklentileri arasındaki farklar hakkında daha fazla bilgi için bkz. [Office çözümleri geliştirmeye genel bakış &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md).

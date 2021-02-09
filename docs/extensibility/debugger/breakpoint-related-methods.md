@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: a6f77bf0-bf81-443f-8683-5f12075bbe10
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9472f1ff4105790951ddd687d7e71c3e57fa39da
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: c20a92e847f120850d7cbd424cc073018903911d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96914471"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99930830"
 ---
 # <a name="breakpoint-related-methods"></a>Kesme noktası ile ilgili Yöntemler
 Bir hata ayıklama altyapısı (DE) kesme noktası ayarını desteklemelidir. Visual Studio hata ayıklaması aşağıdaki kesme noktası türlerini destekler:
@@ -44,7 +44,7 @@ Bir hata ayıklama altyapısı (DE) kesme noktası ayarını desteklemelidir. Vi
 |[Bağladığınızda](../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)|Belirtilen bir bekleyen kesme noktasını bir veya daha fazla kod konumuna bağlar.|
 |[GetState](../../extensibility/debugger/reference/idebugpendingbreakpoint2-getstate.md)|Bekleyen bir kesme noktasının durumunu alır.|
 |[GetBreakpointRequest](../../extensibility/debugger/reference/idebugpendingbreakpoint2-getbreakpointrequest.md)|Bekleyen kesme noktası oluşturmak için kullanılan kesme noktası isteğini alır.|
-|[Etkinleştir](../../extensibility/debugger/reference/idebugpendingbreakpoint2-enable.md)|Bekleyen bir kesme noktasının etkin durumunu değiştirir.|
+|[Etkinleştirme](../../extensibility/debugger/reference/idebugpendingbreakpoint2-enable.md)|Bekleyen bir kesme noktasının etkin durumunu değiştirir.|
 |[EnumBoundBreakpoints](../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumboundbreakpoints.md)|Bekleyen bir kesme noktasından bağlantılı tüm kesme noktalarını numaralandırır.|
 |[EnumErrorBreakpoints](../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md)|Bekleyen bir kesme noktasından kaynaklanan tüm hata kesme noktalarını numaralandırır.|
 |[Silme](../../extensibility/debugger/reference/idebugpendingbreakpoint2-delete.md)|Bekleyen bir kesme noktasını ve bundan sonra gelen tüm kesme noktalarını siler.|
@@ -58,7 +58,7 @@ Bir hata ayıklama altyapısı (DE) kesme noktası ayarını desteklemelidir. Vi
 |[GetPendingBreakpoint](../../extensibility/debugger/reference/idebugboundbreakpoint2-getpendingbreakpoint.md)|Kesme noktası içeren bekleyen kesme noktasını alır.|
 |[GetState](../../extensibility/debugger/reference/idebugboundbreakpoint2-getstate.md)|Bir bağlantılı kesme noktasının durumunu alır.|
 |[GetBreakpointResolution](../../extensibility/debugger/reference/idebugboundbreakpoint2-getbreakpointresolution.md)|Bir kesme noktasını açıklayan kesme noktası çözünürlüğünü alır.|
-|[Etkinleştir](../../extensibility/debugger/reference/idebugboundbreakpoint2-enable.md)|Kesme noktasını etkinleştirilir veya devre dışı bırakır.|
+|[Etkinleştirme](../../extensibility/debugger/reference/idebugboundbreakpoint2-enable.md)|Kesme noktasını etkinleştirilir veya devre dışı bırakır.|
 |[Silme](../../extensibility/debugger/reference/idebugboundbreakpoint2-delete.md)|Bir bağlantılı kesme noktasını siler.|
 
  Çözüm ve istek bilgileri aşağıdaki [IDebugBreakpointResolution2](../../extensibility/debugger/reference/idebugbreakpointresolution2.md) yöntemlerinin uygulanmasını gerektirir.

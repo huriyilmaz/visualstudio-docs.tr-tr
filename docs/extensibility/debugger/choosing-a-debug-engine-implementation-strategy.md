@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 90458fdd-2d34-4f10-82dc-6d8f31b66d8b
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2b87d61586fb4acc360b5f5202b1219199c6a24b
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: e544e4cebaa4e2e1691f6c175dfa750a1f951abc
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96914302"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99930700"
 ---
 # <a name="choose-a-debug-engine-implementation-strategy"></a>Hata ayıklama altyapısı uygulama stratejisi seçin
 Hata ayıklama altyapısı (DE) uygulama stratejinizi öğrenmek için çalışma zamanı mimarisini kullanın. Hata ayıklama altyapısını işlem içi hata ayıklaması yaptığınız programa oluşturabilirsiniz. Visual Studio oturumu hata ayıklama Yöneticisi (SDM) için işlem içi hata ayıklama altyapısını oluşturun. Ya da hata ayıklama altyapısını her ikisine de işlem dışı bir şekilde oluşturun. Aşağıdaki kılavuzlar bu üç strateji arasından seçim yapmanıza yardımcı olmalıdır.

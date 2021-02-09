@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 19bfabf3-1a2e-49dc-8819-a813982e86fd
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 66f63c7232b52ebe849722147e007ab70527c311
-ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
+ms.openlocfilehash: 558a54f6ddcf4945da4937f75b8aa133949349a7
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97903928"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99931090"
 ---
 # <a name="jit-optimization-and-debugging"></a>JIT İyileştirmesi ve Hata Ayıklaması
 Kodda hata ayıklamaya çalışıyorsanız, bu kod en iyi duruma **getirilmeyen** daha kolay olur. Kod iyileştirildiğinde, derleyici ve çalışma zamanı, daha hızlı çalışacak, ancak özgün kaynak koda daha az bir doğrudan eşlemeye sahip olacak şekilde, verilmiş CPU kodunda değişiklikler yapar. Eşleme daha az doğrudan ise, hata ayıklayıcılar genellikle yerel değişkenlerin değerini söyleyebilir ve kod Adımlama ve kesme noktaları beklemiş gibi çalışmayabilir.

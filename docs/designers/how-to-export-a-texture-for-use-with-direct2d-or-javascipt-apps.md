@@ -7,15 +7,15 @@ ms.topic: how-to
 ms.assetid: 241c25fe-764e-4e1b-ad32-b1377dcbb605
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 502dcaec9aeb8fdb2f4b7a72b801f19d2d08dbc4
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: 84fadd786e7a1bf978ec4df919b691031c316a4a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93134400"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99930960"
 ---
 # <a name="how-to-export-a-texture-for-use-with-direct2d-or-javascript-apps"></a>Nasıl yapılır: Direct2D veya JavaScript uygulamaları ile kullanmak için doku dışarı aktarma
 
@@ -53,12 +53,12 @@ Direct2D bağlamında kullanılan dokuların bu Direct2D iç işleme kuralların
 
 1. Temel bir dokuyla başlayın. Mevcut bir görüntüyü yükleyin veya [nasıl yapılır: temel doku oluşturma](../designers/how-to-create-a-basic-texture.md)bölümünde açıklandığı gibi yeni bir tane oluşturun. *. DDS* biçimindeki blok sıkıştırmasını desteklemek için, boyutun boyutunun dört katı olan genişlik ve yüksekliğe sahip bir doku belirtin, örneğin, 100x100, 128x128 veya 256x192. II eşlemesi desteklenmediğinden, dokunun kare olması gerekmez ve iki boyutta bir üssü olmalıdır.
 
-2. Doku dosyasını görüntü Içeriği ardışık düzeni tarafından işlenecek şekilde yapılandırın. **Çözüm Gezgini** ' de, az önce oluşturduğunuz doku dosyasının kısayol menüsünü açın ve ardından **Özellikler** ' i seçin. **Yapılandırma özellikleri**  >  **genel** sayfasında, **öğe türü** özelliğini **görüntü içeriği ardışık düzeni** olarak ayarlayın. **İçerik** özelliğinin **Evet** olarak ayarlandığından ve **derlemeden hariç tut** ' un **Hayır** olarak ayarlandığından emin olun ve ardından **Uygula** düğmesini seçin. **Görüntü Içeriği ardışık düzen** yapılandırma özelliği sayfası görüntülenir.
+2. Doku dosyasını görüntü Içeriği ardışık düzeni tarafından işlenecek şekilde yapılandırın. **Çözüm Gezgini**' de, az önce oluşturduğunuz doku dosyasının kısayol menüsünü açın ve ardından **Özellikler**' i seçin. **Yapılandırma özellikleri**  >  **genel** sayfasında, **öğe türü** özelliğini **görüntü içeriği ardışık düzeni** olarak ayarlayın. **İçerik** özelliğinin **Evet** olarak ayarlandığından ve **derlemeden hariç tut** ' un **Hayır** olarak ayarlandığından emin olun ve ardından **Uygula** düğmesini seçin. **Görüntü Içeriği ardışık düzen** yapılandırma özelliği sayfası görüntülenir.
 
 3. Çıkış biçimini, blok ile sıkıştırılmış biçimlerden birine ayarlayın. **Yapılandırma özellikleri**  >  **görüntüsü içerik ardışık düzeni**  >  **genel** sayfasında, **Sıkıştır** özelliğini **BC3_UNORM Compression (/Compress: BC3_UNORM)** olarak ayarlayın. Gereksinimlerinize bağlı olarak diğer BC1, BC2 veya BC3 biçimlerinden birini seçebilirsiniz. Direct2D Şu anda BC4, BC5, BC6 veya BC7 dokularını desteklemez. Farklı BC biçimleri hakkında daha fazla bilgi için bkz. [blok sıkıştırma (Direct3D 10)](/windows/desktop/direct3d10/d3d10-graphics-programming-guide-resources-block-compression).
 
    > [!NOTE]
-   > Belirtilen sıkıştırma biçimi, görüntü Içeriği ardışık düzeni tarafından üretilen dosyanın biçimini belirler. Bu, görüntü düzenleyicisinde kaynak görüntünün **Biçim** özelliğinden farklıdır. Bu, disk üzerinde depolanan kaynak görüntü dosyasının biçimini ( *çalışma biçimi* ) belirler. Genellikle, sıkıştırılmış bir çalışma biçimi istemezsiniz.
+   > Belirtilen sıkıştırma biçimi, görüntü Içeriği ardışık düzeni tarafından üretilen dosyanın biçimini belirler. Bu, görüntü düzenleyicisinde kaynak görüntünün **Biçim** özelliğinden farklıdır. Bu, disk üzerinde depolanan kaynak görüntü dosyasının biçimini ( *çalışma biçimi*) belirler. Genellikle, sıkıştırılmış bir çalışma biçimi istemezsiniz.
 
 4. Görüntü Içeriği ardışık düzenini, ön çarpılmış alfa kullanan çıkış oluşturacak şekilde yapılandırın. **Yapılandırma özellikleri**  >  **görüntüsü içerik ardışık düzeni**  >  **genel** sayfasında, **önceden çarpılan Alfa biçimi** özelliğini **Evet (/generatepremultipliedalpha)** olarak ayarlayın.
 

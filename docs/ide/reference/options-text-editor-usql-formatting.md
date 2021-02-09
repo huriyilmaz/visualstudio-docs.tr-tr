@@ -12,21 +12,21 @@ f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.U-SQL.Formatting.General
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5bf65c6c80bbcf24d48f5da584349cc4d6b26049
-ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
+ms.openlocfilehash: a42fa7e5f40f413f7bc336ba8f0afbba7bdbf445
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96040296"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99932299"
 ---
 # <a name="options-text-editor-u-sql-formatting"></a>Seçenekler, metin düzenleyici, U-SQL, biçimlendirme
 
 Kod düzenleyicisinde biçimlendirme kodu seçeneklerini ayarlamak için **biçimlendirme** seçenekleri sayfasını kullanın. Bu seçenekler sayfasına erişmek için **Araçlar**  >  **Seçenekler**' i seçin. **Seçenekler** iletişim kutusunda **metin düzenleyici**  >  **U-SQL**  >  **biçimlendirme**' yi seçin.
 
-## <a name="general-page"></a>Genel sayfa
+## <a name="general-page"></a>Genel sayfası
 
 ### <a name="general-settings"></a>Genel ayarlar
 

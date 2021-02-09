@@ -7,20 +7,20 @@ ms.topic: how-to
 ms.assetid: 99e5566d-450e-4660-9bca-454e1c056a02
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8d8d498c1d9a5e5142672bcd561ac0749bbf8d75
-ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
+ms.openlocfilehash: e1c906b96f3bd20b72cf2b5eca92190e0ad42916
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97877968"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99931298"
 ---
 # <a name="walkthrough-display-light-bulb-suggestions"></a>İzlenecek yol: ampul önerilerini görüntüleme
 Hafif bulbs, Visual Studio düzenleyicisinde, yerleşik kod Çözümleyicileri veya kod yeniden düzenleme tarafından tanımlanan sorunlara yönelik düzeltmeler gibi bir dizi eylemi görüntüleyecek şekilde genişlettiğinde simgeler.
 
- Visual C# ve Visual Basic düzenleyicilerinde Ayrıca, açık bulbs 'leri otomatik olarak görüntüleyen eylemlerle kendi kod Çözümleyicileri yazmak ve paketlemek için .NET Compiler Platform ("Roslyn") de kullanabilirsiniz. Daha fazla bilgi için bkz:
+ Visual C# ve Visual Basic düzenleyicilerinde Ayrıca, açık bulbs 'leri otomatik olarak görüntüleyen eylemlerle kendi kod Çözümleyicileri yazmak ve paketlemek için .NET Compiler Platform ("Roslyn") de kullanabilirsiniz. Daha fazla bilgi için bkz.
 
 - [Nasıl yapılır: C# tanısı ve kod onarımı yazma](https://github.com/dotnet/roslyn/blob/master/docs/wiki/How-To-Write-a-C%23-Analyzer-and-Code-Fix.md)
 
@@ -38,7 +38,7 @@ Hafif bulbs, Visual Studio düzenleyicisinde, yerleşik kod Çözümleyicileri v
 
   Açık bulbs kullanarak kendi önerdiğimiz eylemleri sağlayabilirsiniz. Örneğin, küme ayracını yeni bir satıra taşımak veya önceki satırın sonuna taşımak için Eylemler sağlayabilirsiniz. Aşağıdaki izlenecek yol, geçerli kelimede görüntülenen ve iki önerilen eyleme sahip olan bir ampul oluşturmayı gösterir: **büyük harfe Dönüştür** ve **küçük harfe Dönüştür**.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
  Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yükleyemezsiniz. Visual Studio kurulumunda isteğe bağlı bir özellik olarak eklenmiştir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-a-managed-extensibility-framework-mef-project"></a>Managed Extensibility Framework (MEF) projesi oluşturma

@@ -5,33 +5,33 @@ ms.date: 11/12/2018
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 4a735c374216b1810b3abd99ffab89000cec8b8f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 52eb7535430248f519654c09924541a6900336cc
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85540926"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99933095"
 ---
 # <a name="install-debugging-symbols-for-python-interpreters"></a>Python yorumlayıcıları için hata ayıklama sembolleri yükler
 
-Tam bir hata ayıklama deneyimi sağlamak için, Visual Studio 'daki [karma mod Python hata ayıklayıcısı](debugging-mixed-mode-c-cpp-python-in-visual-studio.md) , çok sayıda iç veri yapısını ayrıştırmak Için kullanılan Python yorumlayıcısı için hata ayıklama sembollerine ihtiyaç duyuyor. Örneğin, *python27.dll*için, karşılık gelen sembol dosyası *python27. pdb*; *python36.dll*için, sembol dosyası *python36. pdb*' dir. Yorumlayıcı 'nın her sürümü, çeşitli modüller için sembol dosyaları da sağlar.
+Tam bir hata ayıklama deneyimi sağlamak için, Visual Studio 'daki [karma mod Python hata ayıklayıcısı](debugging-mixed-mode-c-cpp-python-in-visual-studio.md) , çok sayıda iç veri yapısını ayrıştırmak Için kullanılan Python yorumlayıcısı için hata ayıklama sembollerine ihtiyaç duyuyor. Örneğin, *python27.dll* için, karşılık gelen sembol dosyası *python27. pdb*; *python36.dll* için, sembol dosyası *python36. pdb*' dir. Yorumlayıcı 'nın her sürümü, çeşitli modüller için sembol dosyaları da sağlar.
 
-Visual Studio 2017 ve üzeri ile Python 3 ve Anaconda 3 yorumlayıcıları ilgili sembolleri otomatik olarak yükler ve Visual Studio bu sembolleri otomatik olarak bulur. Visual Studio 2015 ve önceki sürümlerde veya diğer yorumlayıcıları kullanırken, sembolleri ayrı olarak indirmeniz ve sonra **Tools**  >  **hata ayıklama**sembolleri sekmesindeki Araçlar**seçenekleri** iletişim kutusunda Visual Studio 'ya işaret etmeniz gerekir  >  **Symbols** . Bu adımlar aşağıdaki bölümlerde ayrıntılı olarak verilmiştir.
+Visual Studio 2017 ve üzeri ile Python 3 ve Anaconda 3 yorumlayıcıları ilgili sembolleri otomatik olarak yükler ve Visual Studio bu sembolleri otomatik olarak bulur. Visual Studio 2015 ve önceki sürümlerde veya diğer yorumlayıcıları kullanırken, sembolleri ayrı olarak indirmeniz ve sonra   >  **hata ayıklama** sembolleri sekmesindeki Araçlar **seçenekleri** iletişim kutusunda Visual Studio 'ya işaret etmeniz gerekir  >   . Bu adımlar aşağıdaki bölümlerde ayrıntılı olarak verilmiştir.
 
 Visual Studio, genellikle karışık modda hata ayıklama oturumu başlatırken semboller gerektiğinde size sorabilir. Bu durumda, iki seçenekten oluşan bir iletişim kutusu görüntülenir:
 
-- **Sembol ayarlarını Aç iletişim kutusu** , **Options** **hata ayıklama**  >  **sembolleri** sekmesindeki Seçenekler iletişim kutusunu açar.
+- **Sembol ayarlarını Aç iletişim kutusu** ,  **hata ayıklama**  >  **sembolleri** sekmesindeki Seçenekler iletişim kutusunu açar.
 - **Yorumlayıcı için sembolleri indir** bu mevcut belge sayfasını açar, bu durumda **Araçlar**  >  **Seçenekler** ' i seçin ve devam etmek için **hata ayıklama**  >  **sembolleri** sekmesine gidin.
 
     ![Karışık mod hata ayıklayıcısı sembolleri istemi](media/mixed-mode-debugging-symbols-required.png)
 
 ## <a name="download-symbols"></a>Sembolleri indir
 
-- Python 3,5 ve üzeri: Python yükleyicisi aracılığıyla hata ayıklama sembolleri alın. **Özel yükleme**' yi seçin **, ileri** ' yi seçerek **Gelişmiş seçeneklere**ulaşın ve **hata ayıklama sembollerini indir** ve **hata ayıklama ikililerini indir**' i seçin:
+- Python 3,5 ve üzeri: Python yükleyicisi aracılığıyla hata ayıklama sembolleri alın. **Özel yükleme**' yi seçin **, ileri** ' yi seçerek **Gelişmiş seçeneklere** ulaşın ve **hata ayıklama sembollerini indir** ve **hata ayıklama ikililerini indir**' i seçin:
 
     ![Hata ayıklama sembolleri dahil Python 3. x yükleyicisi](media/mixed-mode-debugging-symbols-installer35.png)
 
@@ -40,7 +40,7 @@ Visual Studio, genellikle karışık modda hata ayıklama oturumu başlatırken 
 - Python 3.4. x ve önceki sürümler: semboller, [resmi dağıtımlarından](#official-distributions) ve [Canopy](#enthought-canopy)'den indirilebilir *. zip* dosyaları olarak kullanılabilir. İndirdikten sonra, Python klasörü içindeki *semboller* klasörü gibi devam etmek için dosyaları yerel bir klasöre ayıklayın.
 
     > [!Important]
-    > Semboller, Python 'un küçük derlemeleri ve 32-bit ve 64 bit derlemeler arasında farklılık gösterir, bu nedenle sürümleri tam olarak eşleştirmek istersiniz. Kullanılan yorumlayıcı 'yı denetlemek için **Çözüm Gezgini** ' de projenizin altındaki **Python ortamları** *düğümünü* genişletin ve ortam adını aklınızda yapın. Daha sonra **Python ortamları** *penceresine* geçin ve yüklemenin konumunu aklınızda yapın. Ardından, bu konumda bir komut penceresi açın ve *python.exe*başlatın, bu sürüm tam sürümü ve 32 bit mi yoksa 64 bit mi olduğunu gösterir.
+    > Semboller, Python 'un küçük derlemeleri ve 32-bit ve 64 bit derlemeler arasında farklılık gösterir, bu nedenle sürümleri tam olarak eşleştirmek istersiniz. Kullanılan yorumlayıcı 'yı denetlemek için **Çözüm Gezgini** ' de projenizin altındaki **Python ortamları** *düğümünü* genişletin ve ortam adını aklınızda yapın. Daha sonra **Python ortamları** *penceresine* geçin ve yüklemenin konumunu aklınızda yapın. Ardından, bu konumda bir komut penceresi açın ve *python.exe* başlatın, bu sürüm tam sürümü ve 32 bit mi yoksa 64 bit mi olduğunu gösterir.
 
 - ActiveState Python gibi diğer üçüncü taraf Python dağıtımı için: Bu dağıtımın yazarlarıyla iletişim kurun ve size sembolleri sağlamak üzere isteyin. WinPython, bölümü için standart Python yorumlayıcı 'yı değişiklik yapmadan birleştirir, bu nedenle söz konusu sürüm numarası için resmi dağılıcınızdan sembolleri kullanın.
 

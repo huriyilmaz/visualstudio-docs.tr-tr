@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 481cbab6-73ff-488c-aba5-2c09f9eb1e04
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 269499153c4be228503d6bd5b22e91e63dd5b5dd
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: 5bb2a260f0b9903837b6f1bb8ce8a2e4a2fe691e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93048670"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99931792"
 ---
 # <a name="removeduplicates-task"></a>RemoveDuplicates görevi
 
@@ -72,7 +72,7 @@ Belirtilen öğe koleksiyonundan yinelenen öğeleri kaldırır.
 </Project>
 ```
 
- Aşağıdaki örnekte, `RemoveDuplicates` görevin giriş sırası korunduğu gösterilmektedir. Görev tamamlandığında, `FilteredItems` öğe koleksiyonu bu sırayla *MyFile2.cs* , *MyFile1.cs* ve *MyFile3.cs* öğelerini içerir.
+ Aşağıdaki örnekte, `RemoveDuplicates` görevin giriş sırası korunduğu gösterilmektedir. Görev tamamlandığında, `FilteredItems` öğe koleksiyonu bu sırayla *MyFile2.cs*, *MyFile1.cs* ve *MyFile3.cs* öğelerini içerir.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">

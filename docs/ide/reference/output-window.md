@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: d8931d88-250e-4db4-963f-2c5b3e99b45f
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b8615fcdb7e6751087c499967478aaf63e68d624
-ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
+ms.openlocfilehash: 0bdbaf79a3700a1ba1c0574e345093af25608e39
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96560388"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99932052"
 ---
 # <a name="output-window"></a>Çıktı penceresi
 
-**Çıkış** penceresinde, tümleşik geliştirme ORTAMıNDAKI (IDE) çeşitli özellikler için durum iletileri görüntülenir. **Çıkış** penceresini açmak için, menü çubuğunda çıktıyı görüntüle ' yi seçin **View**  >  **Output** veya **CTRL** + **alt** + **O** tuşlarına basın.
+**Çıkış** penceresinde, tümleşik geliştirme ORTAMıNDAKI (IDE) çeşitli özellikler için durum iletileri görüntülenir. **Çıkış** penceresini açmak için, menü çubuğunda çıktıyı görüntüle ' yi seçin   >  veya **CTRL** + **alt** + **O** tuşlarına basın.
 
 ## <a name="toolbar"></a>Araç Çubuğu
 
@@ -73,7 +73,7 @@ C++ ' da, uyarıları ve hataları **Çıkış** bölmesinde görüntülenen ve 
 
 ## <a name="scroll-behavior"></a>Kaydırma davranışı
 
-**Çıkış** penceresinde bir oto kaydırma kullanır ve sonra fare veya ok tuşlarını kullanarak gezinirseniz, oto kaydırma duraklar. Oto kaydırmayı yeniden başlatmak için **CTRL** tuşuna basın + **End**.
+**Çıkış** penceresinde bir oto kaydırma kullanır ve sonra fare veya ok tuşlarını kullanarak gezinirseniz, oto kaydırma duraklar. Oto kaydırmayı yeniden başlatmak için **CTRL** tuşuna basın + .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

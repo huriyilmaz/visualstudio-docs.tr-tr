@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 2253956e-3ae0-4bdc-9d3a-4881dfae4ddb
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 7fa104ece39e20fbd00abcc2e1616a3dd52a5d4c
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 5b4dce707d51d7a2840aeef78f4d70392c884275
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94437129"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99932026"
 ---
 # <a name="property-functions"></a>Özellik işlevleri
 
@@ -153,7 +153,7 @@ $([MSBuild]::Add($(NumberOne), $(NumberTwo)))
 
 MSBuild özellik işlevlerinin bir listesi aşağıdadır:
 
-|İşlev imzası|Açıklama|
+|İşlev imzası|Description|
 |------------------------|-----------------|
 |Double Ekle (çift a, çift b)|İki Double Ekle.|
 |uzun ekleme (Long a, Long b)|İki Long ekleyin.|
@@ -346,7 +346,7 @@ Output:
 
 MSBuild [, TargetFramework ve TargetPlatform özelliklerini](msbuild-target-framework-and-target-platform.md)işlemek için çeşitli işlevler tanımlar.
 
-|İşlev imzası|Açıklama|
+|İşlev imzası|Description|
 |------------------------|-----------------|
 |Gettargetframeworkıdentifier (dize targetFramework)|Targetframeworkıdentifier 'ı TargetFramework 'ten ayrıştırın.|
 |GetTargetFrameworkVersion (dize targetFramework)|TargetFrameworkVersion 'ı TargetFramework 'ten ayrıştırın.|

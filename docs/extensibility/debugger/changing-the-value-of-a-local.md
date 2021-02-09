@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 8407d3df-d38a-4328-82d1-98084bef43ec
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 08f366162f4031b9cc7aa651bf9eca7aab55a15a
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: f11be641cb77b6b27b735b7a4f66d45e11d7a193
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96914341"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99930687"
 ---
 # <a name="change-the-value-of-a-local"></a>Yerel bir değeri değiştirme
 > [!IMPORTANT]
@@ -42,7 +42,7 @@ ms.locfileid: "96914341"
 
 3. Visual Studio **Locals** görüntüsünü yeniler (Ayrıntılar için bkz. [Locals görüntüleme](../../extensibility/debugger/displaying-locals.md) ).
 
-   Bu yordam Ayrıca, **Watch** `IDebugProperty2` `IDebugProperty2` Yerel kendisiyle ilişkili nesne yerine kullanılan yerel değeri ile Ilişkili nesne dışında, Gözcü penceresindeki bir değişkenin değerini değiştirmek için de kullanılır.
+   Bu yordam Ayrıca,  `IDebugProperty2` `IDebugProperty2` Yerel kendisiyle ilişkili nesne yerine kullanılan yerel değeri ile Ilişkili nesne dışında, Gözcü penceresindeki bir değişkenin değerini değiştirmek için de kullanılır.
 
 ## <a name="in-this-section"></a>Bu bölümde
  [Değişen değerlerin örnek uygulama](../../extensibility/debugger/sample-implementation-of-changing-values.md) Değerleri değiştirme işlemini adım adım yapmak için MyCEE örneğini kullanır.
