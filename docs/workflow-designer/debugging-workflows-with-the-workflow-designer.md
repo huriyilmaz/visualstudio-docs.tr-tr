@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: d71308cf-d464-4536-8711-0d0a8eadb255
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 45219da52cdd1ff87b7243c3cc742bb4c97a74e7
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 0acc0cb0a37543b1462a4d5241eb63706868d372
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94435866"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99894341"
 ---
 # <a name="debug-workflows-with-the-workflow-designer"></a>İş Akışı Tasarımcısı iş akışlarında hata ayıkla
 
@@ -39,12 +39,12 @@ Genellikle, diğer Visual Studio programlama dillerinde yazılmış programlarda
 
 ## <a name="step-through-code"></a>Kod üzerinden adımla
 
-- **Adımla** : **F11** tuşuna basarak bir etkinliğe adımla. Hata ayıklayıcı, tanımlı herhangi bir işleyicide adımları. Hiçbir işleyici tanımlanmamışsa, etkinliğin üzerinde veya diğer etkinlikleri içeren bileşik etkinliklerle ilk yürütme etkinliğinin içine adımlayın.
+- **Adımla**: **F11** tuşuna basarak bir etkinliğe adımla. Hata ayıklayıcı, tanımlı herhangi bir işleyicide adımları. Hiçbir işleyici tanımlanmamışsa, etkinliğin üzerinde veya diğer etkinlikleri içeren bileşik etkinliklerle ilk yürütme etkinliğinin içine adımlayın.
 
-- **Dışarı adımla:** **SHIFT** F11 tuşuna basarak bir etkinliğin dışına geçin + **F11**. Bir etkinliğin dışına geçmek, geçerli etkinliği ve tüm eşdüzey etkinliklerini tamamlamaya kadar çalıştırır. Hata ayıklayıcı daha sonra geçerli etkinliğin üst öğesiyle kesilir. Kod işleyiciden atlama yaparken, hata ayıklayıcı işleyicinin ilişkilendirildiği etkinliği keser.
+- **Dışarı adımla:** **SHIFT** F11 tuşuna basarak bir etkinliğin dışına geçin + . Bir etkinliğin dışına geçmek, geçerli etkinliği ve tüm eşdüzey etkinliklerini tamamlamaya kadar çalıştırır. Hata ayıklayıcı daha sonra geçerli etkinliğin üst öğesiyle kesilir. Kod işleyiciden atlama yaparken, hata ayıklayıcı işleyicinin ilişkilendirildiği etkinliği keser.
 
-- **Adımlama** : bir etkinliğin üzerinde, **F10** tuşuna basarak adımla. Bileşik bir etkinliğin üzerine adımlarken, hata ayıklayıcı bileşik etkinliğin ilk yürütülebilir alt öğesi üzerinde kesilir. Bir etkinlik gibi bileşik olmayan bir üzerinde Adımlama yaparken <xref:System.Activities.Statements.Assign> , hata ayıklayıcı aktiviteyi ve ilgili işleyicileri yürütür ve sonraki etkinlikte kesilir. Yürütülen etkinlik bileşik bir etkinlikte son alt etkinlikse, yürütmeden sonra hata ayıklayıcı üst etkinliği keser.
+- **Adımlama**: bir etkinliğin üzerinde, **F10** tuşuna basarak adımla. Bileşik bir etkinliğin üzerine adımlarken, hata ayıklayıcı bileşik etkinliğin ilk yürütülebilir alt öğesi üzerinde kesilir. Bir etkinlik gibi bileşik olmayan bir üzerinde Adımlama yaparken <xref:System.Activities.Statements.Assign> , hata ayıklayıcı aktiviteyi ve ilgili işleyicileri yürütür ve sonraki etkinlikte kesilir. Yürütülen etkinlik bileşik bir etkinlikte son alt etkinlikse, yürütmeden sonra hata ayıklayıcı üst etkinliği keser.
 
 ## <a name="debug-with-f5"></a>F5 ile hata ayıklama
 
-Bir Iş akışı konsol uygulaması oluşturuyorsanız, uygulamanızda ve iş akışınızda hata ayıklamaya başlamak için **F5** tuşuna basın. Kendi başına bir etkinlik kitaplığı oluşturuyorsanız, başlangıç projesi olarak bir yürütülebilir ana bilgisayar uygulaması belirtmeniz gerekir. **Çözüm Gezgini** bir başlangıç projesi ayarlamak için konağın proje adına sağ tıklayın ve **Başlangıç projesi olarak ayarla** ' yı seçin.
+Bir Iş akışı konsol uygulaması oluşturuyorsanız, uygulamanızda ve iş akışınızda hata ayıklamaya başlamak için **F5** tuşuna basın. Kendi başına bir etkinlik kitaplığı oluşturuyorsanız, başlangıç projesi olarak bir yürütülebilir ana bilgisayar uygulaması belirtmeniz gerekir. **Çözüm Gezgini** bir başlangıç projesi ayarlamak için konağın proje adına sağ tıklayın ve **Başlangıç projesi olarak ayarla**' yı seçin.

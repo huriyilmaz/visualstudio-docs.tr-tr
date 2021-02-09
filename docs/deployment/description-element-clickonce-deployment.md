@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 18f6919e-a3ab-4942-a57d-167fabfac44e
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4eb1de8f5692eedc9673f1a22cb448ac8d102ae5
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: 8dee33fca027ce47ede8315f7956479ee2394382
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94382838"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99893093"
 ---
 # <a name="ltdescriptiongt-element-clickonce-deployment"></a>&lt;Description &gt; öğesi (ClickOnce dağıtımı)
 Denetim Masası 'ndaki bir kabuk varlığı ve **Program Ekle/Kaldır** öğesi oluşturmak için kullanılan uygulama bilgilerini tanımlar.

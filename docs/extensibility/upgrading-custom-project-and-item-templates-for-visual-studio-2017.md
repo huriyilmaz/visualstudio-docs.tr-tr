@@ -8,16 +8,16 @@ ms.topic: conceptual
 ms.assetid: ad02477b-e101-4f32-aeb7-292bf95d5c2f
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 monikerRange: vs-2017
-ms.openlocfilehash: 089baadcb60afcc8b32e287095b10ab30196ce17
-ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
+ms.openlocfilehash: 84e9b08350cf5977269bfbcf28ca5335e17f024d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/21/2020
-ms.locfileid: "97715983"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99893411"
 ---
 # <a name="upgrade-custom-project-and-item-templates-for-visual-studio-2017"></a>Yükseltme özel Visual Studio için Proje ve Öğe Şablonları 2017
 
@@ -35,7 +35,7 @@ Diğer (Kullanıcı olmayanlar) konumları için, şablonun konumunu ve diğer �
 
 ## <a name="how-to-update-a-vsix-extension-with-project-or-item-templates"></a>Proje veya öğe şablonlarıyla VSıX uzantısını güncelleştirme
 
-1. Visual Studio 2017 ' de çözümü açın. Kodu yükseltmeniz istenir. **Tamam**’a tıklayın.
+1. Visual Studio 2017 ' de çözümü açın. Kodu yükseltmeniz istenir. **Tamam**'a tıklayın.
 
 2. Yükseltme tamamlandıktan sonra, Install Target sürümünü değiştirmeniz gerekebilir. VSıX projesinde, kaynak. Extension. valtmanifest dosyasını açın ve **hedefleri yüklensin** sekmesini seçin. **Sürüm aralığı** alanı **[14,0]** ise, **Düzenle** ' ye tıklayın ve Visual Studio 2017 ' i içerecek şekilde değiştirin. Örneğin, uzantıyı Visual Studio 2015 veya Visual Studio 2017 ya da yalnızca Visual Studio 2017 ' e yüklemek için [ **15,0] veya []** için [ **14.0, 15.0]** olarak ayarlayabilirsiniz.
 

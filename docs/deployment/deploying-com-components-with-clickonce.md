@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1a4c7f4c-7a41-45f2-9af4-8b1666469b89
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4fc6ef0e4d682f0f712eefc4c139895331c31688
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: e2285706f2d15c5497a83d27c95cd613191e0fe4
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94382929"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99893977"
 ---
 # <a name="deploy-com-components-with-clickonce"></a>ClickOnce ile COM bileşenleri dağıtma
 Eski COM bileşenlerinin dağıtımı, geleneksel olarak zor bir görevdir. Bileşenlerin Global olarak kaydedilmesi gerekir ve bu nedenle örtüşen uygulamalar arasında istenmeyen yan etkilere neden olabilir. Bileşenler bir uygulamaya tamamen yalıtılarak veya yan yana uyumlu olduğundan, bu durum genellikle .NET Framework uygulamalarında sorun değildir. Visual Studio, yalıtılmış COM bileşenlerini Windows XP veya daha yüksek işletim sisteminde dağıtmanıza olanak tanır.
@@ -59,14 +59,14 @@ Eski COM bileşenlerinin dağıtımı, geleneksel olarak zor bir görevdir. Bile
 
 ##### <a name="to-create-a-native-com-component"></a>Yerel bir COM bileşeni oluşturmak için
 
-1. Visual Basic 6,0 kullanarak, **Dosya** menüsünden **Yeni** ve ardından **Proje** ' ye tıklayın.
+1. Visual Basic 6,0 kullanarak, **Dosya** menüsünden **Yeni** ve ardından **Proje**' ye tıklayın.
 
 2. **Yeni proje** iletişim kutusunda **Visual Basic** düğümünü SEÇIN ve bir **ActiveX DLL** projesi seçin. **Ad** kutusuna `VB6Hello` yazın.
 
     > [!NOTE]
     > Kayıt-ücretsiz COM ile yalnızca ActiveX DLL ve ActiveX denetimi proje türleri desteklenir; ActiveX EXE ve ActiveX belge proje türleri desteklenmez.
 
-3. **Çözüm Gezgini** ' de, **Class1. vb** ' ye çift tıklayarak metin düzenleyicisini açın.
+3. **Çözüm Gezgini**' de, **Class1. vb** ' ye çift tıklayarak metin düzenleyicisini açın.
 
 4. Class1. vb ' de, yöntemi için oluşturulan koddan sonra aşağıdaki kodu ekleyin `New` :
 
@@ -76,7 +76,7 @@ Eski COM bileşenlerinin dağıtımı, geleneksel olarak zor bir görevdir. Bile
     End Sub
     ```
 
-5. Bileşeni oluşturun. **Derle** menüsünde **Çözümü Derle** 'ye tıklayın.
+5. Bileşeni oluşturun. **Derle** menüsünde **Çözümü Derle**'ye tıklayın.
 
 > [!NOTE]
 > Kayıt-ücretsiz COM yalnızca dll 'Leri ve COM denetimleri proje türlerini destekler. Kayıt-ücretsiz COM ile EXEs kullanamazsınız.
@@ -85,11 +85,11 @@ Eski COM bileşenlerinin dağıtımı, geleneksel olarak zor bir görevdir. Bile
 
 ##### <a name="to-create-a-windows-based-application-using-a-com-component"></a>COM bileşeni kullanarak Windows tabanlı bir uygulama oluşturmak için
 
-1. Visual Basic kullanarak, **Dosya** menüsünde, **Yeni** ve ardından **Proje** ' ye tıklayın.
+1. Visual Basic kullanarak, **Dosya** menüsünde, **Yeni** ve ardından **Proje**' ye tıklayın.
 
-2. **Yeni proje** iletişim kutusunda **Visual Basic** düğümünü seçin ve **Windows uygulaması** ' nı seçin. **Ad** kutusuna `RegFreeComDemo` yazın.
+2. **Yeni proje** iletişim kutusunda **Visual Basic** düğümünü seçin ve **Windows uygulaması**' nı seçin. **Ad** kutusuna `RegFreeComDemo` yazın.
 
-3. **Çözüm Gezgini** , proje başvurularını görüntülemek Için **tüm dosyaları göster** düğmesini tıklatın.
+3. **Çözüm Gezgini**, proje başvurularını görüntülemek Için **tüm dosyaları göster** düğmesini tıklatın.
 
 4. **Başvurular** düğümüne sağ tıklayın ve bağlam menüsünden **Başvuru Ekle** ' yi seçin.
 
@@ -97,7 +97,7 @@ Eski COM bileşenlerinin dağıtımı, geleneksel olarak zor bir görevdir. Bile
 
     Başvurular listesinde bir **VB6Hello** başvurusu görüntülenir.
 
-6. **Araç kutusu** ' nun üzerine gelin, bir **düğme** denetimi seçin ve onu **Form1** formuna sürükleyin.
+6. **Araç kutusu**' nun üzerine gelin, bir **düğme** denetimi seçin ve onu **Form1** formuna sürükleyin.
 
 7. **Özellikler** penceresinde, düğmenin **Text** özelliğini **Hello** olarak ayarlayın.
 
@@ -110,7 +110,7 @@ Eski COM bileşenlerinin dağıtımı, geleneksel olarak zor bir görevdir. Bile
    End Sub
    ```
 
-9. Uygulamayı çalıştırın. **Hata Ayıkla** menüsünde, **hata ayıklamayı Başlat** ' a tıklayın.
+9. Uygulamayı çalıştırın. **Hata Ayıkla** menüsünde, **hata ayıklamayı Başlat**' a tıklayın.
 
    Sonra, denetimi yalıtmanız gerekir. Uygulamanızın kullandığı her bir COM bileşeni, projenizde bir COM başvurusu olarak temsil edilir. Bu başvurular **Çözüm Gezgini** penceresindeki **Başvurular** düğümü altında görünür. ( **Proje** menüsünde **Başvuru Ekle** komutunu kullanarak doğrudan veya bir ActiveX denetimini formunuza sürükleyerek başvuru ekleyebildiğinize dikkat edin.)
 
@@ -118,11 +118,11 @@ Eski COM bileşenlerinin dağıtımı, geleneksel olarak zor bir görevdir. Bile
 
 ##### <a name="to-isolate-a-com-component"></a>Bir COM bileşenini yalıtmak için
 
-1. **Çözüm Gezgini** , **Başvurular** düğümünde **VB6Hello** başvurusunu seçin.
+1. **Çözüm Gezgini**, **Başvurular** düğümünde **VB6Hello** başvurusunu seçin.
 
 2. **Özellikler** penceresinde, **yalıtılmış** özelliğin değerini **false** değerinden **true** değerine değiştirin.
 
-3. **Derle** menüsünde **Çözümü Derle** 'ye tıklayın.
+3. **Derle** menüsünde **Çözümü Derle**'ye tıklayın.
 
    Şimdi F5 tuşuna bastığınızda uygulama beklendiği gibi çalışır, ancak artık kayıtsız COM altında çalışmaktadır. Bunu kanıtlamak için VB6Hello.dll bileşenini kaldırmayı ve Visual Studio IDE dışında RegFreeComDemo1.exe çalıştırmayı deneyin. Düğmeye tıklandığında bu kez hala işe yarar. Uygulama bildirimini geçici olarak yeniden adlandırırsanız, yeniden başarısız olur.
 
@@ -133,7 +133,7 @@ Eski COM bileşenlerinin dağıtımı, geleneksel olarak zor bir görevdir. Bile
 
 ##### <a name="to-publish-an-application-update-with-an-isolated-com-component"></a>Yalıtılmış bir COM bileşeniyle uygulama güncelleştirmesi yayımlamak için
 
-1. **Build** menüsünde, **RegFreeComDemo Yayımla** ' ya tıklayın.
+1. **Build** menüsünde, **RegFreeComDemo Yayımla**' ya tıklayın.
 
     Yayımla Sihirbazı görüntülenir.
 

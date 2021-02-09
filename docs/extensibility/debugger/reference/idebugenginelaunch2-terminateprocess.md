@@ -9,32 +9,32 @@ helpviewer_keywords:
 ms.assetid: f7039e7f-5f57-4222-9ad2-11a66b2da6e0
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 971259edc89d1ad8be01b6e6e4db46f760534349
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 19222c3cc6ec7e3b09cfa16bdb82820ecc702451
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80730504"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99892807"
 ---
 # <a name="idebugenginelaunch2terminateprocess"></a>IDebugEngineLaunch2::TerminateProcess
 Bir işlemi sonlandırır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
-HRESULT TerminateProcess ( 
+HRESULT TerminateProcess ( 
    IDebugProcess2* pProcess
 );
 ```
 
 ```csharp
-int TerminateProcess ( 
+int TerminateProcess ( 
    IDebugProcess2 pProcess
 );
 ```

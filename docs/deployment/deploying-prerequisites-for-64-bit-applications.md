@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 87399e20-5510-41e4-b5b7-4a87c5773f21
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c051e57bb6af707e7bd5c096e230966e98498bd2
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: abc44c679e65cc49f6a491e9435fdaeffed5e9c8
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94382916"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99893951"
 ---
 # <a name="deploy-prerequisites-for-64-bit-applications"></a>64 bit uygulamalar için dağıtım önkoşulları
 ClickOnce dağıtımı, uygulamaların 64-bit platformlarda yüklenmesini destekler. Hedef platformlar, 32 bitlik platformlar için **x86** , amd64 ve EM64T yönerge kümelerini destekleyen makineler için **x64** ve 64 bit Itanium işlemci için **Itanium** .
@@ -37,11 +37,11 @@ ClickOnce dağıtımı, uygulamaların 64-bit platformlarda yüklenmesini destek
 
 | Yeniden dağıtılabilir | x64 desteği | IA64 desteği |
 | - |-------------|--------------|
-| [!INCLUDE[vsto_runtime](../deployment/includes/vsto_runtime_md.md)] | Evet | Hayır |
-| Visual C++ 2010 çalışma zamanı kitaplığı (ıA64) | Hayır | Evet |
-| Visual C++ 2010 çalışma zamanı kitaplıkları (x64) | Evet | Hayır |
-| Microsoft .NET Framework 4 (x86 ve x64) | Evet | |
-| Microsoft .NET Framework 4 Istemci profili (x86 ve x64) | Evet | |
+| [!INCLUDE[vsto_runtime](../deployment/includes/vsto_runtime_md.md)] | Yes | Hayır |
+| Visual C++ 2010 çalışma zamanı kitaplığı (ıA64) | Hayır | Yes |
+| Visual C++ 2010 çalışma zamanı kitaplıkları (x64) | Yes | Hayır |
+| Microsoft .NET Framework 4 (x86 ve x64) | Yes | |
+| Microsoft .NET Framework 4 Istemci profili (x86 ve x64) | Yes | |
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Uygulamaları, hizmetleri ve bileşenleri dağıtma](../deployment/deploying-applications-services-and-components.md)

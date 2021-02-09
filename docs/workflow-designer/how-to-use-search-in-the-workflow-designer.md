@@ -7,15 +7,15 @@ ms.topic: how-to
 ms.assetid: f42d3115-2ed2-4941-8f1e-92dac41c30fa
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 3dadaf6ce4728dfac8d4052804cbed70ee7cefcd
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 6fb30d4846c24638f87989d2a7a716df06b0523b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94437911"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99894120"
 ---
 # <a name="how-to-use-search-in-the-workflow-designer"></a>Nasıl yapılır: İş Akışı Tasarımcısında Aramayı kullanma
 
@@ -29,15 +29,15 @@ Hızlı bul, tasarımcıda aşağıdakileri bulur:
 
 - Değişkenler
 
-- Arguments
+- Bağımsız değişkenler
 
 - İfadeler
 
 ### <a name="use-quick-find"></a>Hızlı bul kullanma
 
-1. İş akışı Tasarımcısı açıkken, **CTRL + F** tuşlarına basın veya **Düzenle**  >  **Bul ve Değiştir '** i seçerek  >  **hızlı bul** ' u seçin.
+1. İş akışı Tasarımcısı açıkken, **CTRL + F** tuşlarına basın veya **Düzenle**  >  **Bul ve Değiştir '** i seçerek  >  **hızlı bul**' u seçin.
 
-2. **Aranan metin kutusuna** arama terimini girin ve **Sonrakini Bul** ' a tıklayın.
+2. **Aranan metin kutusuna** arama terimini girin ve **Sonrakini Bul**' a tıklayın.
 
 3. Arama terimi geçerli iş akışında bulunur. Aşağıdaki görüntüde, tasarımcıda bulunan bir etkinlik görünen adı gösterilmektedir:
 
@@ -51,6 +51,6 @@ Dosyalarda bul, XAML dosyaları da dahil olmak üzere iş akışı dosyalarında
 
 1. Visual Studio 'da **CTRL** + **SHIFT** + **F** tuşlarına basın veya **Düzenle** bul ' u  >  **ve**  >  **dosyalardaki bul** Değiştir ' i seçin.
 
-2. **Aranan metin kutusuna** arama öğesini girin ve **Tümünü Bul** ' a tıklayın.
+2. **Aranan metin kutusuna** arama öğesini girin ve **Tümünü Bul**' a tıklayın.
 
 3. Bulma sonucu **bul sonucu** görünümünde gösterilir. Bir sonuç öğesine çift tıklamak, iş akışı tasarımcısında eşleşmeyi içeren etkinliğe gider.

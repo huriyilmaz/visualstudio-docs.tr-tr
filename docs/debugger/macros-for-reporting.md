@@ -21,20 +21,20 @@ helpviewer_keywords:
 ms.assetid: f2085314-a3a8-4caf-a5a4-2af9ad5aad05
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 1920b4eddcbffa5cd51d548ade9af3a3a2f208d0
-ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
+ms.openlocfilehash: 0356f05c3f0dac636813d1632f628dd02dd28923
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97903798"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99893132"
 ---
 # <a name="macros-for-reporting"></a>Raporlama Makroları
 Hata ayıklama için, CRTDBG içinde tanımlanan **_RPTn** ve **_RPTFn** makrolarını kullanabilirsiniz. H, deyimlerin kullanımını değiştirmek için `printf` . **_DEBUG** tanımlanmadığında yayın derlemeniz otomatik olarak kaybolduğu için **#ifdef** s 'de bunları almanız gerekmez.
 
-|Makroya|Açıklama|
+|Makroya|Description|
 |-----------|-----------------|
 |**_RPT0**, **_RPT1**, **_RPT2**, **_RPT3**, **_RPT4**|İleti dizesi ve sıfırdan dört bağımsız değişken verir. **_RPT4** üzerinden **_RPT1** için, ileti dizesi bağımsız değişkenler için bir printf stili biçimlendirme dizesi işlevi görür.|
 |**_RPTF0**, **_RPTF1**, **_RPTF2**, **_RPTF3**, **_RPTF4**|**_RPTn** ile aynıdır, ancak bu makrolar, makronun bulunduğu dosya adı ve satır numarasını da çıktı olarak alır.|

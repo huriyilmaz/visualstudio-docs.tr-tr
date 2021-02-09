@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3d14a8d4-2925-44d0-be41-ec546d411db9
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 57740c05e31bde2ae4e5143735e3bba1f3fc112c
-ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
+ms.openlocfilehash: b3061823a97faa53680bb358475a583493be5b93
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97903811"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99893106"
 ---
 # <a name="managed-debugging-recommended-property-settings"></a>Yönetilen Hata Ayıklama: Önerilen Özellik Ayarları
 Tüm yönetilen hata ayıklama senaryoları için bazı özellikler aynı şekilde ayarlanmalıdır.
@@ -34,7 +34,7 @@ Tüm yönetilen hata ayıklama senaryoları için bazı özellikler aynı şekil
 
 ### <a name="configuration-properties-on-the-build-c-or-compile-visual-basic-tab"></a>Build (C#) veya Compile (Visual Basic) sekmesindeki yapılandırma özellikleri
 
-|**Özellik adı**|**Ayar**|
+|**Özellik Adı**|**Ayar**|
 |-----------------------|-----------------|
 |**Hata ayıklama sabiti tanımla**|C# ve F #: onay kutusunu işaretli olarak ayarlayın. Bu, uygulamanızın hata ayıklama sınıfını kullanmasını sağlar.|
 |**Izleme sabitini tanımlama**|C# ve F #: onay kutusunu işaretli olarak ayarlayın. Bu, uygulamanızın Trace sınıfını kullanmasını sağlar.|
@@ -44,7 +44,7 @@ Tüm yönetilen hata ayıklama senaryoları için bazı özellikler aynı şekil
 
 ### <a name="advanced-compiler-settings-dialog-box"></a>Gelişmiş Derleyici Ayarları iletişim kutusu
 
-|**Özellik adı**|**Ayar**|
+|**Özellik Adı**|**Ayar**|
 |-----------------------|-----------------|
 |**İyileştirmeleri etkinleştir**|Önceki tablodaki **kodu en iyileştirme** seçeneğinde belirtilen nedenler için false olarak ayarlayın.|
 |**Hata ayıklama bilgileri oluştur**|Derleme sırasında/DEBUG bayrağının ayarlanmış olmasını sağlamak için bu onay kutusunu işaretleyin ve bu, hata ayıklamayı kolaylaştırmak için gereken bilgileri oluşturur.|

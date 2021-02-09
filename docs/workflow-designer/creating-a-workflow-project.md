@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 235a125e-ebe7-4a98-bf77-86c8558728fb
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4df3a1b4ead644058147473a4f95cf16fe6fc5cc
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: cf8c0fe0b716cecee19c00bb0b300d4ffdc99355
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94438106"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99894367"
 ---
 # <a name="workflow-project-templates"></a>İş akışı proje şablonları
 
@@ -38,14 +38,14 @@ Visual Studio dört farklı Iş akışı proje şablonu sağlar:
 
 Bu şablonlara erişmek için önce Visual Studio 'nun **Windows Workflow Foundation** bileşenini yüklemeniz gerekir. Ayrıntılı yönergeler için bkz. [ınstall Windows Workflow Foundation](developing-applications-with-the-workflow-designer.md#install-windows-workflow-foundation).
 
-1. **Windows Workflow Foundation** bileşenini yükledikten sonra **Dosya**  >  **Yeni**  >  **Proje** ' yi seçin.
+1. **Windows Workflow Foundation** bileşenini yükledikten sonra **Dosya**  >  **Yeni**  >  **Proje**' yi seçin.
 
 1. Bir iş akışı proje şablonu (örneğin, **Iş akışı konsol uygulaması** şablonu) arayın ve seçin.
 
 1. Projeyi oluşturmak için devam edin.
 
    > [!NOTE]
-   > Mevcut bir çözüme yeni bir proje eklemek istiyorsanız, Visual Studio 'da bu çözümü açın, **Çözüm Gezgini** ' de çözüme sağ tıklayın ve **Add**  >  **Yeni proje** Ekle ' yi seçin.
+   > Mevcut bir çözüme yeni bir proje eklemek istiyorsanız, Visual Studio 'da bu çözümü açın, **Çözüm Gezgini**' de çözüme sağ tıklayın ve   >  **Yeni proje** Ekle ' yi seçin.
 
 ## <a name="workflow-console-app"></a>İş akışı konsol uygulaması
 

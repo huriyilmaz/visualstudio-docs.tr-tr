@@ -31,15 +31,15 @@ helpviewer_keywords:
 ms.assetid: 43a77fa8-37d0-4c98-a334-0134dbca4ece
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 58a701e6297cb81ce84c164b3b6791a6e73c76f8
-ms.sourcegitcommit: 993fca11dc373a10150751bc2a045a9701a9db2f
+ms.openlocfilehash: b594857b00ee233c186008efc9d0fba7d968a9bc
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "98240276"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99893171"
 ---
 # <a name="manage-exceptions-with-the-debugger-in-visual-studio"></a>Visual Studio 'da hata ayıklayıcı ile özel durumları yönetme
 
@@ -217,9 +217,9 @@ Koşullu özel durumlar eklemek için:
 
    ![Özel durum için ek koşullar](../debugger/media/extraconditionsforanexception.png "ExtraConditionsForAnException")
 
-3. Her bir koşul satırı için, modülün adını yazın ve karşılaştırma operatörü listesini **eşittir** veya **eşit** olarak değiştirin. Birden *\\\** fazla modül belirtmek için adında joker karakterler (* _) belirtebilirsiniz.
+3. Her bir koşul satırı için, modülün adını yazın ve karşılaştırma operatörü listesini **eşittir** veya **eşit** olarak değiştirin. **\\\*** Adında birden fazla modül belirtmek için joker karakterler () belirtebilirsiniz.
 
-4. Bir koşulu silmeniz gerekiyorsa, koşul satırının sonundaki _ *X** öğesini seçin.
+4. Bir koşulu silmeniz gerekiyorsa, koşul satırının sonundaki **X** seçeneğini belirleyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

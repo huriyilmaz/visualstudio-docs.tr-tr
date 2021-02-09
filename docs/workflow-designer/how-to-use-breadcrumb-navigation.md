@@ -7,15 +7,15 @@ ms.topic: how-to
 ms.assetid: 4a688056-37dc-406a-9071-be2141e192fe
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a15f44b33e7109b126b091dcbf7102aa86a649a9
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 4e33ea580f46f09ab3bd4d75ba58a35518c3583c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94437898"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99894146"
 ---
 # <a name="how-to-use-breadcrumb-navigation"></a>Nasıl Yapılır: İçerik Haritası Gezintisini Kullanma
 
@@ -44,7 +44,7 @@ ms.locfileid: "94437898"
 
 ## <a name="expanding-all-or-collapsing-all-activities"></a>Tüm etkinlikleri genişletme veya daraltma
 
-1. Geçerli içerik haritası kökündeki tüm etkinlikleri genişletmek veya daraltmak için Kullanıcı arabirimindeki tümünü **Genişlet** ve **Tümünü Daralt** düğmelerini kullanın. Tümünü Genişlet ve Tümünü Daralt genel durumlardır. Yani, içerik haritası gezintisi kullanarak kök etkinliği değiştirdiğinizde, **geri yükle** ' ye tıklaana kadar Tümünü Genişlet veya Tümünü Daralt durumu devam ettirir.
+1. Geçerli içerik haritası kökündeki tüm etkinlikleri genişletmek veya daraltmak için Kullanıcı arabirimindeki tümünü **Genişlet** ve **Tümünü Daralt** düğmelerini kullanın. Tümünü Genişlet ve Tümünü Daralt genel durumlardır. Yani, içerik haritası gezintisi kullanarak kök etkinliği değiştirdiğinizde, **geri yükle**' ye tıklaana kadar Tümünü Genişlet veya Tümünü Daralt durumu devam ettirir.
 
 2. Tümünü Genişlet veya Tümünü Daralt durumunu uyguladıktan sonra, her etkinliğe daha önce uygulanan duruma bakmak için geri dönerek görüntülenen **geri yükle** düğmesine tıklayabilirsiniz.
 
@@ -52,4 +52,4 @@ ms.locfileid: "94437898"
     > Örneğin, gibi bir etkinlik <xref:System.Activities.Statements.Flowchart> Genişlemeden sonra, **Tümünü Genişlet** ve **Tümünü Daralt** düğmeleri Ile ilişkili işlevler, **akış çizelgesi** tasarımcısında devre dışıdır. **Akış çizelgesi** Tasarımcısı hakkında daha fazla bilgi için, bkz. [akış çizelgesi](../workflow-designer/flowchart-activity-designer.md) konusu.
 
     > [!WARNING]
-    > Tümünü Genişlet, **Switch** ve **TryCatch** etkinlik tasarımcıları 'nda özel bir etkiye de sahiptir. **Tümünü Genişlet** ' e tıkladığınızda tüm anahtar örnekleri ve tüm dene/yakala/finally blokları görüntülenir. Tümünü **geri yükle** veya **Daralt** ' a tıkladığınızda bu tasarımcılar varsayılan durumlarına döndürülür. Bu, içeriğini görüntülemek için tek bir servis talebine/bloğa tıklayabilirsiniz.
+    > Tümünü Genişlet, **Switch** ve **TryCatch** etkinlik tasarımcıları 'nda özel bir etkiye de sahiptir. **Tümünü Genişlet**' e tıkladığınızda tüm anahtar örnekleri ve tüm dene/yakala/finally blokları görüntülenir. Tümünü **geri yükle** veya **Daralt** ' a tıkladığınızda bu tasarımcılar varsayılan durumlarına döndürülür. Bu, içeriğini görüntülemek için tek bir servis talebine/bloğa tıklayabilirsiniz.

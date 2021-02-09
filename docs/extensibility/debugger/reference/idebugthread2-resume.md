@@ -9,32 +9,32 @@ helpviewer_keywords:
 ms.assetid: 36aad682-b0b9-40a2-b3fc-f0e61d41cdbc
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3899dea7c33946588de4308f42b948ede703361a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6156becc782adb054af37cf24efd64915729149c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80718680"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99893730"
 ---
 # <a name="idebugthread2resume"></a>IDebugThread2::Resume
 Bir iş parçacığının yürütülmesini sürdürür.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
-HRESULT Resume ( 
+HRESULT Resume ( 
    DWORD *pdwSuspendCount
 );
 ```
 
 ```csharp
-int Resume ( 
+int Resume ( 
    out uint pdwSuspendCount
 );
 ```
@@ -53,4 +53,4 @@ dışı Yeniden başlatma işleminden sonra askıda kalma sayısını döndürü
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)
-- [Suspend](../../../extensibility/debugger/reference/idebugthread2-suspend.md)
+- [Askıya Alma](../../../extensibility/debugger/reference/idebugthread2-suspend.md)

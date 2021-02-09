@@ -17,15 +17,15 @@ helpviewer_keywords:
 - importing items [SharePoint development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: ef77fb280021fcfb701a677bc9ce17ec26e39516
-ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
+ms.openlocfilehash: 799589f5eba901a6fa82191507af1397ab1d323a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2020
-ms.locfileid: "96304518"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99893353"
 ---
 # <a name="import-items-from-an-existing-sharepoint-site"></a>Mevcut bir SharePoint sitesinden öğeleri içeri aktar
   Içeri aktarma SharePoint çözüm paketi proje şablonu, yeni bir SharePoint çözümündeki mevcut SharePoint sitelerinden içerik türleri ve alanlar gibi öğeleri yeniden kullanmanıza olanak sağlar [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . Çoğu içeri aktarılan çözümü değişiklik yapmadan çalıştırabilmenize karşın, özellikle de herhangi bir öğeyi içe aktardıktan sonra değiştirirseniz dikkate alınması gereken bazı kısıtlamalar ve sorunlar vardır.
@@ -128,7 +128,7 @@ ms.locfileid: "96304518"
 ## <a name="the-sharepointproductversion-attribute"></a>SharePointProductVersion özniteliği
  Veya gibi SharePoint 'in önceki bir sürümünde oluşturulmuş bir çözümü içeri aktarırsanız [!INCLUDE[winshare3](../sharepoint/includes/winshare3-md.md)] [!INCLUDE[offshare7](../sharepoint/includes/offshare7-md.md)] , paket bildirimindeki SharePointProductVersion öznitelik değerini 12,0 olarak değiştirin veya tüm Içeri aktarılan Web sayfalarına bir betik Yöneticisi denetimi ekleyin ve sharepointproductversion 'ı 14,0 olarak bırakın. Aksi takdirde, içeri aktarılan Web formları SharePoint 'te görüntülenmez.
 
-### <a name="background"></a>Arka plan
+### <a name="background"></a>Arka Plan
  Ve içindeki çözümler [!INCLUDE[wss_14_short](../sharepoint/includes/wss-14-short-md.md)] , [!INCLUDE[moss_14_short](../sharepoint/includes/moss-14-short-md.md)] SharePointProductVersion adlı bir özniteliği içerir. SharePoint, çözüm için tasarlanan SharePoint sürümünü belirlemekte bu özniteliği paket bildirimlerinde kullanır. İki geçerli değer 12,0 ve 14,0 ' dir. 12,0 değeri, öğenin veya için tasarlandığını belirtir [!INCLUDE[winshare3](../sharepoint/includes/winshare3-md.md)] [!INCLUDE[offshare7](../sharepoint/includes/offshare7-md.md)] ; 14,0 değeri öğenin veya için tasarlandığını gösterir [!INCLUDE[wss_14_short](../sharepoint/includes/wss-14-short-md.md)] [!INCLUDE[moss_14_short](../sharepoint/includes/moss-14-short-md.md)] .
 
  ASPX sayfalarını işlerken gelişmiş güvenlik için [!INCLUDE[wss_14_short](../sharepoint/includes/wss-14-short-md.md)] ve [!INCLUDE[moss_14_short](../sharepoint/includes/moss-14-short-md.md)] Tüm aspx veya ana sayfaların bir betik Yöneticisi denetimi içermesini gerektirir. Betik Yöneticisi hakkında daha fazla bilgi için bkz. [ScriptManager denetimine genel bakış](/previous-versions/bb398863(v=vs.140)). Komut dosyası Yöneticisi denetimi ve ' de kullanılamadığından, bir veya ' a [!INCLUDE[winshare3](../sharepoint/includes/winshare3-md.md)] [!INCLUDE[offshare7](../sharepoint/includes/offshare7-md.md)] yükseltilen herhangi bir [!INCLUDE[winshare3](../sharepoint/includes/winshare3-md.md)] sayfaya eklenmelidir [!INCLUDE[offshare7](../sharepoint/includes/offshare7-md.md)] [!INCLUDE[wss_14_short](../sharepoint/includes/wss-14-short-md.md)] [!INCLUDE[moss_14_short](../sharepoint/includes/moss-14-short-md.md)] . Standart ana sayfa kullanan ASPX sayfaları, zaten standart ana sayfaya eklenmiş olduğundan bir betik Yöneticisi denetimi gerektirmez. Ancak, bir ana sayfa kullanmayan veya özel ana sayfa kullanan ASPX sayfaları, veya içinde çalışmak için bir betik denetimi eklememelidir [!INCLUDE[wss_14_short](../sharepoint/includes/wss-14-short-md.md)] [!INCLUDE[moss_14_short](../sharepoint/includes/moss-14-short-md.md)] .
