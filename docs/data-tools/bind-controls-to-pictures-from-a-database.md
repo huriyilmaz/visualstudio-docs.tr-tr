@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 9748815e-3556-49e8-86b1-c6aa593c6163
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 10ea349186aa46bfb58f4b9ceeaab2c8ac3edd81
-ms.sourcegitcommit: 63ff7cb85b3baeeb713240d17bb2a18497f3741d
+ms.openlocfilehash: 2ce969ddab5e48ac495754369e980747332f9b0a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94518576"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99867379"
 ---
 # <a name="bind-controls-to-pictures-from-a-database"></a>Bir veritabanından resimlere denetim bağlama
 
@@ -41,13 +41,13 @@ Aşağıdaki yordamda, **veri kaynakları** penceresinin görüntenize bağlanan
 2. **Veri kaynakları** penceresinde, sütun veya özelliklerini göstermek için istenen tabloyu veya nesneyi genişletin.
 
    > [!TIP]
-   > **Veri kaynakları** penceresi açık değilse, **View**  >  **diğer Windows**  >  **veri kaynaklarını** görüntüle ' yi seçerek açın.
+   > **Veri kaynakları** penceresi açık değilse,   >  **diğer Windows**  >  **veri kaynaklarını** görüntüle ' yi seçerek açın.
 
 3. Görüntü verilerinizi içeren sütunu veya özelliği seçin ve açılan denetim listesinden aşağıdaki denetimlerden birini seçin:
 
-    - WPF Tasarımcısı açıksa **görüntü** ' i seçin.
+    - WPF Tasarımcısı açıksa **görüntü**' i seçin.
 
-    - Windows Forms Tasarımcısı açıksa, **PictureBox** ' ı seçin.
+    - Windows Forms Tasarımcısı açıksa, **PictureBox**' ı seçin.
 
     - Alternatif olarak, veri bağlamayı destekleyen ve görüntü görüntüleyebilen farklı bir denetim seçebilirsiniz. Kullanmak istediğiniz denetim kullanılabilir denetimler listesinde değilse, listeye ekleyebilir ve sonra bunu seçebilirsiniz. Daha fazla bilgi için bkz. [veri kaynakları penceresine özel denetimler ekleme](../data-tools/add-custom-controls-to-the-data-sources-window.md).
 

@@ -9,15 +9,15 @@ f1_keywords:
 ms.assetid: 370c97bf-bb29-4b2f-b9ae-ba125bce7b2d
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4d2703972658aace438ab235d469eed3e0644c06
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: ba8ecdd3a1aae382d1b74d75e26e614ba07e6a66
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94436829"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99867613"
 ---
 # <a name="use-the-code-analysis-rule-set-editor"></a>Kod analizi kural kümesi düzenleyicisini kullanma
 
@@ -25,13 +25,13 @@ Kod analizi kural kümesi Düzenleyicisi, özel bir kural kümesine dahil edilen
 
 Aşağıdaki tabloda önem derecesi seçenekleri gösterilmektedir:
 
-|Eylem (önem derecesi)|Açıklama|
+|Eylem (önem derecesi)|Description|
 |-|-|
 |Uyarı|**Hata listesi** ve derleme zamanında bir uyarı oluşturur.|
 |Hata|**Hata listesi** ve derleme zamanında bir hata oluşturur.|
 |Bilgi|**Hata listesi** bir ileti oluşturur.|
 |Gizli|İhlalin kullanıcıya görünür değil. Ancak, bu, ihlalin ihlal olduğu konusunda bilgilendirilir.|
-|Hiçbiri|Kural bastırılır. Kural, kuralın kural kümesinden kaldırılmış olduğu durumla aynıdır.|
+|Yok|Kural bastırılır. Kural, kuralın kural kümesinden kaldırılmış olduğu durumla aynıdır.|
 
 Düzenleyici, kuralları belirttiğiniz bir kural kümesi alanına göre gruplandıran bir ağaç yapısında görüntüler. Kural kümesine kural eklemek veya kuralı kaldırmak için aşağıdaki adımlardan birini veya birkaçını yapın:
 
@@ -50,7 +50,7 @@ Kural kümesi Düzenleyicisi ' nin araç çubuğunu, kural kümesi kılavuzunda 
 
 Aşağıdaki tabloda, kural kümesi düzenleyicisinin araç çubuğundaki denetimler açıklanmaktadır.
 
-|ToolBar denetimi|Açıklama|
+|ToolBar denetimi|Description|
 |---------------------|-----------------|
 |**Tümünü Genişlet**|Tüm gruplardaki kuralları gösterir.|
 |**Tümünü Daralt**|Tüm gruplardaki kuralları gizler.|
@@ -71,7 +71,7 @@ Aşağıdaki tabloda bir kural kümesi alanları açıklanmaktadır:
 
 |Alan|Açıklama|
 |-----------|-----------------|
-|**NUMARASıNı**|Kuralın tanımlayıcısı.|
+|**ID**|Kuralın tanımlayıcısı.|
 |**Kategori**|Kural kümelerinde üyeliklerine ek olarak, kod analizi kuralları da kategoriye göre gruplandırılır. Daha fazla bilgi için bkz. [Kod Analizi uyarıları](/dotnet/fundamentals/code-analysis/quality-rules/index).|
 |**Ad**|Kuralın başlığı.|
 |**Ad Alanı**|Kuralın ad alanı.|

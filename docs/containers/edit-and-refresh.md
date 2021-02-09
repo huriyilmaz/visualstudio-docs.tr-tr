@@ -3,18 +3,18 @@ title: Yerel bir Docker kapsayıcısında uygulamalarda hata ayıklama | Microso
 description: Yerel bir Docker kapsayıcısında çalışan bir uygulamayı değiştirmeyi, Düzenle ve Yenile aracılığıyla kapsayıcıyı yenilemeyi ve sonra hata ayıklama kesme noktalarını ayarlamayı öğrenin.
 ms.author: ghogen
 author: ghogen
-manager: jillfra
+manager: jmartens
 ms.assetid: 480e3062-aae7-48ef-9701-e4f9ea041382
 ms.topic: how-to
 ms.workload: multiple
 ms.date: 07/25/2019
 ms.technology: vs-azure
-ms.openlocfilehash: de7065ebdf5426077418e50d2c03118de9f9d68f
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: 3eafb6f3ef345da4316fdbe5d6b96a25d7dc90a9
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97729307"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99867639"
 ---
 # <a name="debug-apps-in-a-local-docker-container"></a>Yerel bir Docker kapsayıcısında uygulamalarda hata ayıklama
 
@@ -25,7 +25,7 @@ Bu makalede, yerel bir Docker kapsayıcısında bir uygulamayı başlatmak, değ
 
 Desteklenen türde bir projeniz zaten varsa, Visual Studio bir Dockerfile oluşturabilir ve projenizi bir kapsayıcıda çalışacak şekilde yapılandırabilir. Bkz. [Visual Studio 'Da kapsayıcı araçları](overview.md).
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Yerel bir Docker kapsayıcısında uygulamalarda hata ayıklamak için aşağıdaki araçların yüklü olması gerekir:
 

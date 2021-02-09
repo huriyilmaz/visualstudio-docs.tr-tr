@@ -6,15 +6,15 @@ ms.topic: conceptual
 description: Geliştirme bilgisayarınızı Kubernetes kümenize bağlamak için Kubernetes 'e köprü kullanma işlemlerini açıklar
 keywords: Kubernetes, Docker, Kubernetes, Azure, kapsayıcılar için köprü oluşturma
 monikerRange: '>=vs-2019'
-manager: jillfra
+manager: jmartens
 author: ghogen
 ms.author: ghogen
-ms.openlocfilehash: c6a85faf2d1451dcab9bc822fcdf228513b90dca
-ms.sourcegitcommit: ab60fd7b4a8219e378d100df1386e1b038ecdafc
+ms.openlocfilehash: 253b50ff4778458b28375b06b7fb7f24f4d85054
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96595272"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99867574"
 ---
 # <a name="how-bridge-to-kubernetes-works"></a>Bridge to Kubernetes’in işleyiş biçimi
 

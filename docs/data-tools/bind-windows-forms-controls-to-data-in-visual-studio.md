@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 243338ef-41af-4cc5-aff7-1e830236f0ec
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: ee50a01093ff83faba17ec6fd59f4ddc1101012a
-ms.sourcegitcommit: 63ff7cb85b3baeeb713240d17bb2a18497f3741d
+ms.openlocfilehash: 3da0c4e9835c9b6f6498aa28b82f2e631d1717ba
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94518654"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99867418"
 ---
 # <a name="bind-windows-forms-controls-to-data-in-visual-studio"></a>Visual Studio'da verilere Windows Forms denetimleri bağlama
 
@@ -33,7 +33,7 @@ Verileri Windows Forms 'e bağlayarak uygulamanızın kullanıcılarına veriler
 ![Veri kaynağı sürükleme işlemi](../data-tools/media/raddata-data-source-drag-operation.png)
 
 > [!TIP]
-> **Veri kaynakları** penceresi görünür değilse, **View**  >  **diğer Windows**  >  **veri kaynaklarını** görüntüle ' yi seçerek veya **SHIFT** + **alt** + **D** tuşlarına basarak dosyayı açabilirsiniz. **Veri kaynakları** penceresini görmek Için Visual Studio 'da açık bir projeniz olmalıdır.
+> **Veri kaynakları** penceresi görünür değilse,   >  **diğer Windows**  >  **veri kaynaklarını** görüntüle ' yi seçerek veya **SHIFT** + **alt** + **D** tuşlarına basarak dosyayı açabilirsiniz. **Veri kaynakları** penceresini görmek Için Visual Studio 'da açık bir projeniz olmalıdır.
 
 Öğeleri sürüklemeden önce, bağlamak istediğiniz denetim türünü ayarlayabilirsiniz. Farklı değerler tablonun kendisini mi yoksa tek bir sütun mı seçtiğinize bağlı olarak görünür.  Ayrıca, özel değerler de ayarlayabilirsiniz. Bir tablo için **Ayrıntılar** , her sütunun ayrı bir denetime bağlandığı anlamına gelir.
 

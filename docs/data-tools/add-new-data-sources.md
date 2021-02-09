@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: ed28c625-bb89-4037-bfde-cfa435d182a2
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: ec58528bfe5e1687c4b4edc7f86451c08b04652c
-ms.sourcegitcommit: 63ff7cb85b3baeeb713240d17bb2a18497f3741d
+ms.openlocfilehash: b6e42681d2c25162df22af9711d47b71ba155d67
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94518680"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99867444"
 ---
 # <a name="add-new-data-sources"></a>Yeni veri kaynağı ekleme
 
@@ -53,7 +53,7 @@ Veri kaynaklarını bir Windows Forms veya Windows Presentation Foundation uygul
 Bir veri kaynağı oluşturduktan sonra **veri kaynakları** araç penceresinde görünür.
 
 > [!TIP]
-> **Veri kaynakları** penceresini açmak için projenizin açık olduğundan emin olun ve ardından **SHIFT** + **alt** + **D** ' ye basın veya **View**  >  **diğer Windows**  >  **veri kaynaklarını** görüntüle ' yi seçin.
+> **Veri kaynakları** penceresini açmak için projenizin açık olduğundan emin olun ve ardından **SHIFT** + **alt** + **D** ' ye basın veya   >  **diğer Windows**  >  **veri kaynaklarını** görüntüle ' yi seçin.
 
 Veri **kaynakları** penceresinden bir veri kaynağını form tasarım yüzeyine veya denetimine sürükleyebilirsiniz. Bu, veri deposundaki verileri görüntüleyen ortak kodların oluşturulmasına neden olur.
 
@@ -67,7 +67,7 @@ Veritabanı veya veritabanı dosyası için veri kaynağı olarak kullanmak üze
 
 ### <a name="dataset"></a>Veri kümesi
 
-Veri kaynağı olarak bir veri kümesi oluşturmak için, **Proje** yeni veri kaynağı Ekle ' yi seçerek **veri kaynağı Yapılandırma Sihirbazı** 'nı çalıştırın  >  **Add New Data Source**. **Veritabanı** veri kaynağı türünü seçin ve yeni veya mevcut bir veritabanı bağlantısı ya da bir veritabanı dosyası belirtmek için istemleri izleyin.
+Veri kaynağı olarak bir veri kümesi oluşturmak için, **Proje** yeni veri kaynağı Ekle ' yi seçerek **veri kaynağı Yapılandırma Sihirbazı** 'nı çalıştırın  >  . **Veritabanı** veri kaynağı türünü seçin ve yeni veya mevcut bir veritabanı bağlantısı ya da bir veritabanı dosyası belirtmek için istemleri izleyin.
 
 ### <a name="entity-classes"></a>Varlık sınıfları
 
@@ -87,7 +87,7 @@ Veri kaynağı olarak bir Entity Framework modeli oluşturmak için:
 
 ## <a name="data-source-for-a-service"></a>Bir hizmet için veri kaynağı
 
-Bir hizmetten veri kaynağı oluşturmak için, **veri kaynağı Yapılandırma Sihirbazı** 'nı çalıştırın ve **hizmet** veri kaynağı türünü seçin. Bu yalnızca **hizmet başvurusu Ekle** iletişim kutusunun bir kısayoludur. bu, **Çözüm Gezgini** projeye sağ tıklayıp **hizmet başvurusu Ekle** ' yi seçerek de erişebilirsiniz.
+Bir hizmetten veri kaynağı oluşturmak için, **veri kaynağı Yapılandırma Sihirbazı** 'nı çalıştırın ve **hizmet** veri kaynağı türünü seçin. Bu yalnızca **hizmet başvurusu Ekle** iletişim kutusunun bir kısayoludur. bu, **Çözüm Gezgini** projeye sağ tıklayıp **hizmet başvurusu Ekle**' yi seçerek de erişebilirsiniz.
 
 Bir hizmetten veri kaynağı oluşturduğunuzda, Visual Studio projenize bir hizmet başvurusu ekler. Visual Studio Ayrıca hizmetin döndürdüğü nesnelere karşılık gelen proxy nesnelerini de oluşturur. Örneğin, bir veri kümesi döndüren bir hizmet projenizde veri kümesi olarak temsil edilir; belirli bir türü döndüren bir hizmet, projenizde döndürülen tür olarak temsil edilir.
 

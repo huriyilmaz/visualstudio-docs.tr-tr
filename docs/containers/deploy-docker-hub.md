@@ -2,19 +2,19 @@
 title: Docker Hub 'a ASP.NET Core Docker kapsayıcısı dağıtma | Microsoft Docs
 description: ASP.NET Core Web uygulamasını Docker Hub 'a dağıtmak için Visual Studio kapsayıcı araçlarını kullanmayı öğrenin
 author: ghogen
-manager: jillfra
+manager: jmartens
 ms.technology: vs-azure
 ms.devlang: dotnet
 ms.topic: how-to
 ms.date: 07/23/2019
 ms.author: ghogen
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: 5bbdbffa9de9ac7789495249d3e7bfb0a8d65377
-ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
+ms.openlocfilehash: e51088d135d0d2cdcc5d1bcca71f72fed8b73fd2
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91829892"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99867665"
 ---
 # <a name="deploy-to-docker-hub"></a>Docker Hub’a dağıtma
 
@@ -32,7 +32,7 @@ Docker Hub deponuz yoksa, [Docker Hub](https://hub.docker.com/)'da bir tane olu�
 
    ![Dağıtım seçeneklerinin ekran görüntüsü](media/container-tools/vs-2019/docker-container-registry.png)
 
-1. **Docker Container Registry**seçin ve **Docker Hub**' ı seçin.
+1. **Docker Container Registry** seçin ve **Docker Hub**' ı seçin.
 
    ![Yayımla iletişim kutusunun ekran görüntüsü-Docker Hub 'ı seçme](media/deploy-docker-hub/container-tools-docker-hub-deploy.png)
 

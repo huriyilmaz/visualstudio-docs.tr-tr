@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 8c43e7d2-ba94-4d9b-96de-3aa971955afd
 author: ghogen
 ms.author: ghogen
-manager: jillfra
-ms.openlocfilehash: 004004a420374f3b0ce9504098ac5836cb307f1d
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+manager: jmartens
+ms.openlocfilehash: 5591dc9c3422918fa8f9c605105ea10c8fbc447d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94382071"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99867431"
 ---
 # <a name="add-custom-controls-to-the-data-sources-window"></a>Veri kaynakları penceresine özel denetimler ekleme
 
@@ -40,9 +40,9 @@ Veri kaynakları penceresinde belirli bir veri türüne sahip öğeler için kul
 2. **Veri kaynakları** penceresinde, pencereye eklediğiniz bir veri kaynağının parçası olan bir öğeye tıklayın ve sonra öğenin açılan menüsüne tıklayın.
 
    > [!TIP]
-   > Veri kaynakları penceresi açık değilse, **View**  >  **diğer Windows**  >  **veri kaynaklarını** görüntüle ' yi seçerek açın.
+   > Veri kaynakları penceresi açık değilse,   >  **diğer Windows**  >  **veri kaynaklarını** görüntüle ' yi seçerek açın.
 
-3. Açılan menüde, **Özelleştir** ' e tıklayın. Aşağıdaki iletişim kutularından biri açılır:
+3. Açılan menüde, **Özelleştir**' e tıklayın. Aşağıdaki iletişim kutularından biri açılır:
 
     - **Windows Form Tasarımcısı** açıksa, **Seçenekler** Iletişim kutusunun **veri UI özelleştirmesi** sayfası açılır. Daha fazla bilgi için bkz. [veri Kullanıcı arabirimi özelleştirme seçenekleri iletişim kutusu](../ide/reference/options-windows-forms-designer-data-ui-customization.md).
 
@@ -61,7 +61,7 @@ Veri kaynakları penceresinde belirli bir veri türüne sahip öğeler için kul
     > [!NOTE]
     > Seçmek istediğiniz denetim **ilişkili denetimler** kutusunda görünmezse, denetimi listeye eklemeniz gerekir. Daha fazla bilgi için bkz. [ilişkili denetimler ekleme](#add-associated-controls).
 
-6. **Tamam** ’a tıklayın.
+6. **Tamam**'a tıklayın.
 
 7. **Veri kaynakları** penceresinde, yalnızca bir veya daha fazla denetimi ilişkilendirdiğiniz veri türünün bir öğesine tıklayın ve sonra öğenin açılan menüsüne tıklayın.
 

@@ -12,23 +12,23 @@ helpviewer_keywords:
 ms.assetid: d43c2ccd-4902-43d8-b1a8-d10ca5d3210c
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: a02edd3f0e34b0315e9b583c509cda4eb0287bf1
-ms.sourcegitcommit: 63ff7cb85b3baeeb713240d17bb2a18497f3741d
+ms.openlocfilehash: c1a6e424fe76b94321ca79ab08496cd160969890
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94518693"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99867535"
 ---
 # <a name="add-code-to-datasets-in-n-tier-applications"></a>N katmanlı uygulamalarda Veri Kümelerine kod ekleme
 
-Veri kümesi için kısmi bir sınıf dosyası oluşturarak ve buna kod ekleyerek bir veri kümesinin işlevselliğini genişletebilirsiniz ( *DataSetName* 'e kod eklemek yerine). DataSet. Designer dosyası). Kısmi sınıflar, belirli bir sınıfın kodunu birden çok fiziksel dosyaya bölünecek şekilde etkinleştirir. Daha fazla bilgi için bkz. [kısmi](/dotnet/visual-basic/language-reference/modifiers/partial) veya [kısmi sınıflar ve Yöntemler](/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods).
+Veri kümesi için kısmi bir sınıf dosyası oluşturarak ve buna kod ekleyerek bir veri kümesinin işlevselliğini genişletebilirsiniz ( *DataSetName*'e kod eklemek yerine). DataSet. Designer dosyası). Kısmi sınıflar, belirli bir sınıfın kodunu birden çok fiziksel dosyaya bölünecek şekilde etkinleştirir. Daha fazla bilgi için bkz. [kısmi](/dotnet/visual-basic/language-reference/modifiers/partial) veya [kısmi sınıflar ve Yöntemler](/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods).
 
 Veri kümesini tanımlayan kod, veri kümesi tanımına her değişiklik yapıldığında oluşturulur (yazılan veri kümesinde). Bu kod ayrıca, bir veri kümesinin yapılandırmasını değiştiren herhangi bir sihirbazın çalıştırılması sırasında değişiklikler yaptığınızda da oluşturulur. Bir veri kümesinin yeniden oluşturulması sırasında kodunuzun silinmesini engellemek için, veri kümesinin kısmi sınıf dosyasına kod ekleyin.
 
-Varsayılan olarak, veri kümesini ve TableAdapter kodunu ayırdıktan sonra sonuç, her projedeki ayrı bir sınıf dosyasıdır. Özgün projenin, TableAdapter kodunu içeren *DataSetName. Designer. vb* (veya *DataSetName.Designer.cs* ) adlı bir dosyası vardır. **DataSet projesi** özelliğinde belirtilen proje, *DataSetName. DataSet. Designer. vb* (veya *DataSetName.DataSet.Designer.cs* ) adlı bir dosya içerir. Bu dosya veri kümesi kodunu içerir.
+Varsayılan olarak, veri kümesini ve TableAdapter kodunu ayırdıktan sonra sonuç, her projedeki ayrı bir sınıf dosyasıdır. Özgün projenin, TableAdapter kodunu içeren *DataSetName. Designer. vb* (veya *DataSetName.Designer.cs*) adlı bir dosyası vardır. **DataSet projesi** özelliğinde belirtilen proje, *DataSetName. DataSet. Designer. vb* (veya *DataSetName.DataSet.Designer.cs*) adlı bir dosya içerir. Bu dosya veri kümesi kodunu içerir.
 
 > [!NOTE]
 > Veri kümelerini ve TableAdapters ayırabilirsiniz ( **veri kümesi proje** özelliğini ayarlayarak), projedeki mevcut kısmi veri kümesi sınıfları otomatik olarak taşınmaz. Mevcut veri kümesi kısmi sınıflarının veri kümesi projesine el ile taşınması gerekir.
@@ -42,7 +42,7 @@ Varsayılan olarak, veri kümesini ve TableAdapter kodunu ayırdıktan sonra son
 
 2. Veri kümesini açmak için **. xsd** dosyasını seçin.
 
-3. Kod eklemek istediğiniz veri tablosuna (başlık çubuğundaki tablo adı) sağ tıklayın ve ardından **kodu görüntüle** ' yi seçin.
+3. Kod eklemek istediğiniz veri tablosuna (başlık çubuğundaki tablo adı) sağ tıklayın ve ardından **kodu görüntüle**' yi seçin.
 
      Kod düzenleyicisinde kısmi bir sınıf oluşturulur ve açılır.
 
