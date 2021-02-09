@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, troubleshooting
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: a9ef5e7d47f72b82e7a8fab52cc2f1f8716c83bf
-ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
+ms.openlocfilehash: c6b0e031e96d2543ae0bb109f243824125f431a3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95970264"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99892300"
 ---
 # <a name="troubleshoot-sharepoint-solutions"></a>SharePoint Çözümlerinde Sorun giderme
   Hata ayıklayıcıyı kullanarak SharePoint Çözümlerinde hata ayıklarken aşağıdaki sorunlar veya uyarılar oluşabilir [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . Daha fazla bilgi için bkz. [SharePoint 2007 Iş akışı çözümlerinde hata ayıklama](/previous-versions/bb386166(v=vs.100)).
@@ -193,7 +193,7 @@ ms.locfileid: "95970264"
 
 1. **Çözüm Gezgini**, dosya adı uzantısı *. ascx* olan kullanıcı denetim dosyasını seçin.
 
-2. Menü çubuğunda **View**  >  **Özellikler penceresini** görüntüle ' yi seçin.
+2. Menü çubuğunda   >  **Özellikler penceresini** görüntüle ' yi seçin.
 
 3. **Özellikler** penceresinde **dağıtım konumu** düğümünü genişletin.
 
@@ -259,7 +259,7 @@ ms.locfileid: "95970264"
 ### <a name="resolution"></a>Çözüm
  Bu durum, bir SharePoint çözümünün hata ayıklama oturumunu kapattıktan sonra otomatik olarak geri çekin özelliğinin çözümü geri çeker. Geri çekme, liste tanımını SharePoint 'ten siler, ancak listenin örneğini silmez. Liste örneği için temel alınan liste tanımı gereklidir.
 
- Bu sorunu çözmek için, menü çubuğunda **Yapı** dağıtımı ' nı seçerek çözümü dağıtın  >  **Deploy**. ( **F5** tuşunu seçerek çözümde hata ayıklamayın.) Ardından, SharePoint 'teki liste örneğini silin.
+ Bu sorunu çözmek için, menü çubuğunda **Yapı** dağıtımı ' nı seçerek çözümü dağıtın  >  . ( **F5** tuşunu seçerek çözümde hata ayıklamayın.) Ardından, SharePoint 'teki liste örneğini silin.
 
 ## <a name="original-sharepoint-solution-is-replaced-by-an-exported-version"></a>Özgün SharePoint çözümü, dışarıya aktarılmış bir sürümle değiştirilmiştir
  Bir SharePoint çözümünü dışarı aktarırsanız, çözümü içine aktarın [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ve ardından, dışarı aktarılan siteye geri döndüğünüzde özgün SharePoint çözümü değiştirilmiştir. Çözümü, üzerinde etkin bir çözüm etkinleştirilmemiş bir sunucuya dağıtırsanız bu sorun oluşmaz.

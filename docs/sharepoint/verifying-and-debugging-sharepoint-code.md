@@ -14,15 +14,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, unit testing
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: ce891e40552c0f8927bfd4ce006b750b6e5f8a54
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: d406afbc0a8506262f1bdc17310802b7f41a931a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96914510"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99892144"
 ---
 # <a name="verify-and-debug-sharepoint-code"></a>SharePoint kodunu doğrulama ve hata ayıklama
 IntelliTrace ve birim testi kullanarak SharePoint çözümlerinizde daha kolay hata ayıklama yapabilir ve bunların her bir yönteminin doğru şekilde çalıştığından emin olabilirsiniz. Bu özellikleri, diğer proje türleri için aynı yordamları izleyerek Visual Studio 'da SharePoint projeleri için kullanabilirsiniz.

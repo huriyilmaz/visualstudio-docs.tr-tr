@@ -15,15 +15,15 @@ helpviewer_keywords:
 - attachments [Office development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 54617bd61a6b45e3b105bce71342ea1a97f63050
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: 972203b5306d3fa7c94461b235c204051871c33c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96847396"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99892092"
 ---
 # <a name="how-to-programmatically-attach-files-to-outlook-email-items"></a>Nasıl yapılır: program aracılığıyla Outlook e-posta öğelerine dosya iliştirme
   Bu örnek, yeni bir posta öğesine bir dosya iliştirir ve Armando Pinto 'ya gönderir. Örnekte, Armando Pinto adlı bir kişinin alıcı olarak varolduğu varsayılır.
