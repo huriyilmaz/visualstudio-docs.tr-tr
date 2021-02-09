@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 7be783f6-0ef6-42bc-924a-df9a2eba7781
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7b17a9a29b55721695509deed6b3d33cc7554aa9
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: 5cacf6f6774ad1c0f29ff81407848b23cb3b170d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94903981"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99928126"
 ---
 # <a name="showbydefault-element-visual-studio-templates"></a>ShowByDefault öğesi (Visual Studio şablonları)
 Varsa `false` , şablonun yalnızca belirtilen [TemplateGroupID](../extensibility/templategroupid-element-visual-studio-templates.md)altında görüntülendiğini belirtir.

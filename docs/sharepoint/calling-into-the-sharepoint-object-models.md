@@ -14,15 +14,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, extensibility features
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 40cd7132888d8b19d8e2a2818ec9a299b465e786
-ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
+ms.openlocfilehash: 14358b5cc84f63227fd5001731c261002a324492
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94850058"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99928945"
 ---
 # <a name="call-into-the-sharepoint-object-models"></a>SharePoint nesne modellerine çağrı
   Visual Studio 'da SharePoint araçları için Uzantılar oluşturduğunuzda, belirli görevleri gerçekleştirmek için SharePoint API 'Lerini çağırmanız gerekebilir. Örneğin, SharePoint projeleri için özel bir dağıtım adımı oluşturursanız, çözümleri dağıtmak için bazı görevleri gerçekleştirmek üzere SharePoint API 'Lerini çağırmanız gerekebilir.

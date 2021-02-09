@@ -9,26 +9,26 @@ helpviewer_keywords:
 ms.assetid: 9e5e681b-ad49-4c62-bd95-4afa11d61a57
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: afc461d52f81afc2c2e7127a90313bea7b9dacf3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4121ecf719ba8422f1ac8d4544a57e81aaf2efde
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80733230"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99928516"
 ---
 # <a name="idebugcontainerfieldenumfields"></a>IDebugContainerField::EnumFields
 Kapsayıcının alanları için bir Numaralandırıcı oluşturur.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
-HRESULT EnumFields( 
+HRESULT EnumFields( 
    FIELD_KIND         dwKindFilter,
    FIELD_MODIFIERS    dwModifiersFilter,
    LPCOLESTR          pszNameFilter,

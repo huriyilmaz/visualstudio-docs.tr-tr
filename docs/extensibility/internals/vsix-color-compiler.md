@@ -7,15 +7,15 @@ ms.topic: conceptual
 ms.assetid: 99395da7-ec34-491d-9baa-0590d23283ce
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: e50cd1f1c8c3ff7f86cd00e4b384f548c7ec9d21
-ms.sourcegitcommit: 19061b61759ce8e3b083a0e01a858e5435580b3e
+ms.openlocfilehash: 7e6e4a07a023be398c4106984fe4dc33eddd2706
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97488004"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99929205"
 ---
 # <a name="vsix-color-compiler"></a>VSIX Renk Derleyicisi
 Visual Studio Uzantı rengi derleyici aracı, var olan Visual Studio temaları için renkleri temsil eden bir. xml dosyası alan ve bu renklerin Visual Studio 'da kullanılabilmesi için bir. pkgdef dosyasına bağlayan bir konsol uygulamasıdır. . Xml dosyaları arasındaki farkları karşılaştırmak çok kolay olduğundan, bu araç kaynak denetimindeki özel renkleri yönetmek için yararlıdır. Ayrıca derleme ortamlarına, derleme çıkışının geçerli bir. pkgdef dosyası olması için de bağlanabilir.
@@ -107,7 +107,7 @@ Visual Studio Uzantı rengi derleyici aracı, var olan Visual Studio temaları i
 
 |**Öznitelik**|**Tanım**|
 |-|-|
-|Tür|Istenir Rengin türü. Aşağıdakilerden biri olabilir:<br /><br /> *CT_INVALID:* Renk geçersiz veya ayarlı değil.<br /><br /> *CT_RAW:* Ham ARGB değeri.<br /><br /> *CT_COLORINDEX:* KULLANMAYıN.<br /><br /> *CT_SYSCOLOR:* Syscreng'ten bir Windows sistem rengi.<br /><br /> *CT_VSCOLOR:* __VSSYSCOLOREX bir Visual Studio rengi.<br /><br /> *CT_AUTOMATIC:* Otomatik renk.<br /><br /> *CT_TRACK_FOREGROUND:* KULLANMAYıN.<br /><br /> *CT_TRACK_BACKGROUND:* KULLANMAYıN.|
+|Tür|Istenir Rengin türü. Şunlardan biri olabilir:<br /><br /> *CT_INVALID:* Renk geçersiz veya ayarlı değil.<br /><br /> *CT_RAW:* Ham ARGB değeri.<br /><br /> *CT_COLORINDEX:* KULLANMAYıN.<br /><br /> *CT_SYSCOLOR:* Syscreng'ten bir Windows sistem rengi.<br /><br /> *CT_VSCOLOR:* __VSSYSCOLOREX bir Visual Studio rengi.<br /><br /> *CT_AUTOMATIC:* Otomatik renk.<br /><br /> *CT_TRACK_FOREGROUND:* KULLANMAYıN.<br /><br /> *CT_TRACK_BACKGROUND:* KULLANMAYıN.|
 |Kaynak|Istenir Onaltılık renkle temsil edilen rengin değeri|
 
  __VSCOLORTYPE numaralandırması tarafından desteklenen tüm değerler, tür özniteliğinde şema tarafından desteklenir. Ancak, yalnızca CT_RAW ve CT_SYSCOLOR kullanmanızı öneririz.
@@ -133,7 +133,7 @@ Visual Studio Uzantı rengi derleyici aracı, var olan Visual Studio temaları i
 
  Valtcolorcompiler \<XML file> \<PkgDef file>\<Optional Args>
 
- **Arguments**
+ **Bağımsız değişkenler**
 
 |**Anahtar adı**|**Notlar**|**Gerekli veya Isteğe bağlı**|
 |-|-|-|

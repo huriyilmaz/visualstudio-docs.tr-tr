@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Outlook [Office development in Visual Studio], projects
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: ea4874effcba4ee948f921ae9bf91f145b661f4f
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: 1e21a876fd2af04523ae205882463b0f8e0e3f3b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96845641"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99928893"
 ---
 # <a name="debug-office-projects"></a>Office projelerinde hata ayıklama
   [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]Diğer projeler için kullandığınız Microsoft araçlarını kullanarak Office projelerinde hata ayıklaması yapabilirsiniz [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] hata ayıklama özellikleri, örneğin, **Yerel öğeler** penceresinde kesme noktaları ekleme ve değişkenleri görüntüleme özelliği gibi Office projelerinde hata ayıklarken da kullanılabilir. Hata ayıklama araçları hakkında daha fazla bilgi için [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] bkz. [Visual Studio 'Da hata ayıklama](../debugger/debugger-feature-tour.md).

@@ -9,26 +9,26 @@ helpviewer_keywords:
 ms.assetid: d6ce26d5-42ba-44c1-8659-0516db5bc82d
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 51341b3c9b351307d2662538cc3a6797c58b62f9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3fa72b6dfc02f29e5efd8d3e04f98f078cba66a2
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80732790"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99928451"
 ---
 # <a name="idebugcustomattributegetattributetypefield"></a>IDebugCustomAttribute::GetAttributeTypeField
 Özel öznitelik sınıfı türünü alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
-HRESULT GetAttributeTypeField( 
+HRESULT GetAttributeTypeField( 
    IDebugClassField** ppCAType
 );
 ```

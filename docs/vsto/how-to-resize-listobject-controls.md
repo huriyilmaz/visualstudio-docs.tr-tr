@@ -12,15 +12,15 @@ helpviewer_keywords:
 - ListObject control, resizing
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 5c401f3938679c72cee3a07c4bff79a5777fcbc1
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: e839e253e54e7c9c0358bef7330f9e330684b809
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97528535"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99927840"
 ---
 # <a name="how-to-resize-listobject-controls"></a>Nasıl yapılır: ListObject denetimlerini yeniden boyutlandırma
   Bir <xref:Microsoft.Office.Tools.Excel.ListObject> denetimin boyutunu Microsoft Office bir Excel çalışma kitabına eklediğinizde ayarlarsınız; ancak, daha sonra yeniden boyutlandırmak isteyebilirsiniz. Örneğin, iki sütunlu bir listeyi üç sütun olarak değiştirmek isteyebilirsiniz.
@@ -52,7 +52,7 @@ ms.locfileid: "97528535"
 
 3. Tablonuz için yeni veri aralığını seçin.
 
-4. **Tamam** düğmesine tıklayın.
+4. **Tamam**'a tıklayın.
 
 ## <a name="resize-a-listobject-control-at-run-time-in-a-document-level-project"></a><a name="runtimedoclevel"></a> Belge düzeyindeki bir projede bir ListObject denetimini çalışma zamanında yeniden boyutlandırma
  <xref:Microsoft.Office.Tools.Excel.ListObject>Yöntemini kullanarak çalışma zamanında bir denetimi yeniden boyutlandırabilirsiniz <xref:Microsoft.Office.Tools.Excel.ListObject.Resize%2A> . Bu yöntemi, <xref:Microsoft.Office.Tools.Excel.ListObject> denetimi çalışma sayfasındaki yeni bir konuma taşımak için kullanamazsınız. Üst bilgiler aynı satırda kalmalıdır ve yeniden boyutlandırılmış <xref:Microsoft.Office.Tools.Excel.ListObject> Denetim özgün liste nesnesiyle çakışmalıdır. Yeniden boyutlandırılmış <xref:Microsoft.Office.Tools.Excel.ListObject> Denetim bir başlık satırı ve en az bir veri satırı içermelidir.

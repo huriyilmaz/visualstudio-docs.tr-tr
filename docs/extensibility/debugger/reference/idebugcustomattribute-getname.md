@@ -9,26 +9,26 @@ helpviewer_keywords:
 ms.assetid: ba509cc5-5816-4925-a094-4c72d88c360c
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 15d435d043d0e3863358628fa12016431a417918
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5aade49d77861d6aacdf955a167aeccbbaca4071
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80732766"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99928438"
 ---
 # <a name="idebugcustomattributegetname"></a>IDebugCustomAttribute::GetName
 Özel özniteliğin adını alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
-HRESULT GetName( 
+HRESULT GetName( 
    BSTR* bstrName
 );
 ```
