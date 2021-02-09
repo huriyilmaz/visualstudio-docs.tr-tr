@@ -5,17 +5,17 @@ ms.date: 12/06/2018
 ms.topic: quickstart
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 089be3e6f28a939979f6bd97097ea7558824b493
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 81f337cf3feca517f46632e7fe08a9f5a62cd707
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62429775"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99902449"
 ---
 # <a name="quickstart-create-a-python-project-from-a-template-in-visual-studio"></a>Hızlı başlangıç: Visual Studio 'da bir şablondan Python projesi oluşturma
 
@@ -27,7 +27,7 @@ ms.locfileid: "62429775"
 
     ![Boş Flask Web projesi şablonuyla yeni bir proje oluşturma](media/quickstart-python-06-blank-flask-template.png)
 
-1. Visual Studio, **Bu projenin dış paketler gerektirdiğini** belirten bir iletişim kutusu ister. Bu iletişim kutusu, şablon Flask üzerinde bir bağımlılık belirten bir *requirements.txt* dosyası içerdiğinden görüntülenir. Visual Studio paketleri otomatik olarak yükleyebilir ve bunları bir *sanal ortama*yüklemek için seçenek sağlar. Bir sanal ortamın kullanılması için genel bir ortama yükleme yapılması önerilir, bu nedenle devam etmek için **sanal ortama yükleme** ' yi seçin.
+1. Visual Studio, **Bu projenin dış paketler gerektirdiğini** belirten bir iletişim kutusu ister. Bu iletişim kutusu, şablon Flask üzerinde bir bağımlılık belirten bir *requirements.txt* dosyası içerdiğinden görüntülenir. Visual Studio paketleri otomatik olarak yükleyebilir ve bunları bir *sanal ortama* yüklemek için seçenek sağlar. Bir sanal ortamın kullanılması için genel bir ortama yükleme yapılması önerilir, bu nedenle devam etmek için **sanal ortama yükleme** ' yi seçin.
 
     ![Sanal ortama Flask yükleme](media/quickstart-python-07-install-into-virtual-environment.png)
 
@@ -36,7 +36,7 @@ ms.locfileid: "62429775"
     > [!Tip]
     > Bir projeye başladığınızda, çoğu Visual Studio şablonu sizi davet eden bir sanal ortamı hemen oluşturmanız önerilir. Sanal ortamlar, kitaplıkları eklerken ve kaldırırken projenizin tam gereksinimlerini zaman içinde tutar. Daha sonra bu bağımlılıkları diğer geliştirme bilgisayarlarına (kaynak denetimi kullanılırken olduğu gibi) yeniden yüklemek için kullandığınız ve projeyi bir üretim sunucusuna dağıttığınızda kolayca *requirements.txt* bir dosya oluşturabilirsiniz. Sanal ortamlar ve avantajları hakkında daha fazla bilgi için bkz. [sanal ortamları kullanma](../python/selecting-a-python-environment-for-a-project.md#use-virtual-environments) ve [gerekli paketleri requirements.txtile yönetme ](../python/managing-required-packages-with-requirements-txt.md).
 
-1. Visual Studio bu ortamı oluşturduktan sonra, *requirements.txt*ile birlikte bir *app.py* dosyanız olup olmadığını görmek için **Çözüm Gezgini** bakın. Şablonda, daha fazla eklenen bölümle bir [Flask ile bir Web uygulaması oluşturmak](../ide/quickstart-python.md)için *app.py* açın. Aşağıda gösterilen tüm kod şablon tarafından oluşturulur, bu nedenle *app.py* 'e dilediğiniz şekilde yapıştırmanız gerekmez.
+1. Visual Studio bu ortamı oluşturduktan sonra, *requirements.txt* ile birlikte bir *app.py* dosyanız olup olmadığını görmek için **Çözüm Gezgini** bakın. Şablonda, daha fazla eklenen bölümle bir [Flask ile bir Web uygulaması oluşturmak](../ide/quickstart-python.md)için *app.py* açın. Aşağıda gösterilen tüm kod şablon tarafından oluşturulur, bu nedenle *app.py* 'e dilediğiniz şekilde yapıştırmanız gerekmez.
 
     Kod, gerekli içeri aktarımlarla başlar:
 
@@ -73,11 +73,11 @@ ms.locfileid: "62429775"
         app.run(HOST, PORT)
     ```
 
-1. **Debug**  >  Uygulamayı çalıştırmak ve ' de bir tarayıcı açmak için**hata ayıklama olmadan Başlat** ' ı seçin `localhost:5555` .
+1.   >  Uygulamayı çalıştırmak ve ' de bir tarayıcı açmak için **hata ayıklama olmadan Başlat** ' ı seçin `localhost:5555` .
 
 **Soru: diğer Python şablonları, Visual Studio tarafından sunulur.**
 
-**Cevap**: Python iş yükü yüklüyken, Visual Studio [Flask, şişe ve docgo Web çerçeveleri](../python/python-web-application-project-templates.md), Azure bulut Hizmetleri, farklı makine öğrenimi senaryoları ve hatta bir Python uygulaması içeren mevcut bir klasör yapısından proje oluşturmak için bir şablon içeren çeşitli proje şablonları sağlar. Bunlara **File**  >  **New**  >  , **Python** dil düğümünü ve onun alt düğümlerini seçerek dosya yeni**Proje** iletişim kutusunu kullanarak erişebilirsiniz.
+**Cevap**: Python iş yükü yüklüyken, Visual Studio [Flask, şişe ve docgo Web çerçeveleri](../python/python-web-application-project-templates.md), Azure bulut Hizmetleri, farklı makine öğrenimi senaryoları ve hatta bir Python uygulaması içeren mevcut bir klasör yapısından proje oluşturmak için bir şablon içeren çeşitli proje şablonları sağlar. Bunlara   >    >  , **Python** dil düğümünü ve onun alt düğümlerini seçerek dosya yeni **Proje** iletişim kutusunu kullanarak erişebilirsiniz.
 
 Visual Studio aynı zamanda bir Python sınıfı, bir Python paketi, bir Python birimi testi, *web.config* dosyaları ve daha fazlasını oluşturmak için çeşitli dosya veya *öğe şablonları* sağlar. Açık bir Python projeniz olduğunda, **Proje**  >  **Yeni öğe Ekle** menü komutu aracılığıyla öğe şablonlarına erişirsiniz. [Öğe şablonları](python-item-templates.md) başvurusuna bakın.
 

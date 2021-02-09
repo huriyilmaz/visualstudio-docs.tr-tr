@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 0a647047-e2d5-4724-a0b8-68108425ecad
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 1633c5e9aa6ff251fedce83a0243664cd9e0e0a7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0148a92ee37a4f9885c9c12a5076ff966051d20b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80737921"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99902112"
 ---
 # <a name="bp_passcount_style"></a>BP_PASSCOUNT_STYLE
 Kesme noktasının tetiklenmesine neden olan kesme noktası geçiş sayısıyla ilişkili koşulu belirtir.
@@ -70,7 +70,7 @@ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Listelemeler](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md)
 - [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md)
 - [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md)

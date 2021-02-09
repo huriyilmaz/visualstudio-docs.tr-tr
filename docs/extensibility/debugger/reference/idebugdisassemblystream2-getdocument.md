@@ -9,33 +9,33 @@ helpviewer_keywords:
 ms.assetid: 3d039a44-ebaa-4413-ac18-7cfd92c408bd
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: cf5d1a73e15ad38bf14d954718ce97c088b2e525
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6ad0b4d4fcb316447ca836fbc5ac15170a71270e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80732191"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99901761"
 ---
 # <a name="idebugdisassemblystream2getdocument"></a>IDebugDisassemblyStream2::GetDocument
 Bu giriş akışıyla ilişkili kaynak belgeyi alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
-HRESULT GetDocument( 
+HRESULT GetDocument( 
    BSTR              bstrDocumentUrl,
    IDebugDocument2** ppDocument
 );
 ```
 
 ```csharp
-int GetDocument( 
+int GetDocument( 
    string              bstrDocumentUrl,
    out IDebugDocument2 ppDocument
 );

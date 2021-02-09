@@ -10,15 +10,15 @@ f1_keywords:
 ms.assetid: 5db09a16-b82c-4ba3-8ec9-630cdc109397
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f932c6c02bf8b3e60487b781dd3211f6019d49c9
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: b637c4cf1b065426bb4070d2e08bf59984c8ff23
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93134380"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99902365"
 ---
 # <a name="shader-designer"></a>Gölgelendirici Tasarımcısı
 
@@ -48,13 +48,13 @@ Bu bölümde, Visual Studio C++ projenize bir DGSL gölgelendiricisi ekleme ve k
 
 1. Grafiklerle çalışmanız için gereken Visual Studio bileşeninin yüklü olduğundan emin olun. Bileşen, **görüntü ve 3B model düzenleyicileri** olarak adlandırılır.
 
-   Yüklemek için **Araçlar**  >  menüsünü ve menü çubuğundan Araçlar **Al** ' ı seçerek Visual Studio yükleyicisi açın ve ardından **ayrı bileşenler** sekmesini seçin. **Oyunlar ve grafikler** kategorisi altındaki **görüntü ve 3B model düzenleyicileri** bileşenini seçin ve ardından **Değiştir** ' i seçin.
+   Yüklemek için **Araçlar**  >  menüsünü ve menü çubuğundan Araçlar **Al** ' ı seçerek Visual Studio yükleyicisi açın ve ardından **ayrı bileşenler** sekmesini seçin. **Oyunlar ve grafikler** kategorisi altındaki **görüntü ve 3B model düzenleyicileri** bileşenini seçin ve ardından **Değiştir**' i seçin.
 
    ![Görüntü ve 3B model düzenleyicileri bileşeni](media/image-3d-model-editors-component.png)
 
-2. **Çözüm Gezgini** ' de, gölgelendiriciyi eklemek istediğiniz C++ projesinin kısayol menüsünü açın ve **Add**  >  **Yeni öğe** Ekle ' yi seçin.
+2. **Çözüm Gezgini**' de, gölgelendiriciyi eklemek istediğiniz C++ projesinin kısayol menüsünü açın ve   >  **Yeni öğe** Ekle ' yi seçin.
 
-3. **Yeni öğe Ekle** iletişim kutusunda, **yüklü** altında **grafikler** ' i seçin ve ardından **Görsel Gölgelendirici Grafiği (. dgsl)** öğesini seçin.
+3. **Yeni öğe Ekle** iletişim kutusunda, **yüklü** altında **grafikler**' i seçin ve ardından **Görsel Gölgelendirici Grafiği (. dgsl)** öğesini seçin.
 
    > [!NOTE]
    > **Yeni öğe Ekle** Iletişim kutusunda **grafik** kategorisini görmüyorsanız ve **resim ve 3B model düzenleyicileri** bileşeni yüklüyse, grafik öğeleri proje türü için desteklenmez.
@@ -83,7 +83,7 @@ Gölgelendirici Tasarımcısının durumunu etkileyen komutlar, ana Visual Studi
 
 Bu tabloda, **gölgelendirici tasarımcı modu** araç çubuğunda soldan sağa göründükleri sırada listelenen öğeler açıklanmaktadır:
 
-|Araç Çubuğu Öğesi|Açıklama|
+|Araç Çubuğu Öğesi|Description|
 |------------------|-----------------|
 |**Seç**|Grafikteki düğümlerle ve kenarlarla etkileşimi sunar. Bu modda düğümleri seçip taşıyabilir ya da silebilirsiniz ve kenarları oluşturabilir veya bunları kesebilirsiniz.|
 |**Kaydır**|Bir gölgelendirici grafiğinin pencere çerçevesine göre taşınmasını sağlar. Kaydırmak için tasarım yüzeyinde bir nokta seçin ve taşıyın.<br /><br /> **Seçim** modunda, **Dikey Çevir** modunu geçici olarak etkinleştirmek için **CTRL** tuşuna basılı tutabilirsiniz.|
@@ -98,7 +98,7 @@ Bu tabloda, **gölgelendirici tasarımcı modu** araç çubuğunda soldan sağa 
 |**Düzlemle Önizleme**|Etkinleştirildiğinde, gölgelendiriciyi önizlemek için düzlemin bir modeli kullanılır. Tek seferde yalnızca bir önizleme şekli etkinleştirilebilir.|
 |**Araç Kutusu**|Ayrıca **araç kutusunu** gösterir veya gizler.|
 |**Özellikler**|Alternatif olarak, **Özellikler** penceresini gösterir veya gizler.|
-|**Gelişmiş**|Gelişmiş komutları ve seçenekleri içerir.<br /><br /> **Dışarı aktar** : bir gölgelendiricinin birkaç biçimde dışa aktarılmasını mümkün.<br /><br /> **Farklı ver** : gölgelendiriciyi HLSL kaynak kodu veya derlenen gölgelendirici bayt olarak dışa aktarır. Gölgelendiricilerin nasıl dışarı aktarılacağı hakkında daha fazla bilgi için bkz. [nasıl yapılır: gölgelendiriciyi dışarı aktarma](../designers/how-to-export-a-shader.md).<br /><br /> **Grafik altyapıları** : tasarım yüzeyini göstermek için kullanılan oluşturucunun seçilmesini sağlar.<br /><br /> **D3d11 Ile işle** : Gölgelendirici Tasarımcısı tasarım yüzeyini Işlemek için Direct3D 11 kullanır.<br /><br /> **D3D11WARP Ile işleme** : Gölgelendirici Tasarımcısı tasarım yüzeyini Işlemek için Direct3D 11 Windows Gelişmiş Tarama Platformu (warp) kullanır.<br /><br /> **Görünüm** : Gölgelendirici Tasarımcısı hakkında ek bilgi seçimini sunar.<br /><br /> **Kare hızı** : etkinleştirildiğinde, tasarım yüzeyinin sağ üst köşesindeki geçerli kare hızını görüntüler. Kare hızı, saniye başına çizilen çerçeve sayısıdır. Bu seçenek, **gerçek zamanlı Işleme modu** seçeneğini etkinleştirdiğinizde yararlıdır.|
+|**Gelişmiş**|Gelişmiş komutları ve seçenekleri içerir.<br /><br /> **Dışarı aktar**: bir gölgelendiricinin birkaç biçimde dışa aktarılmasını mümkün.<br /><br /> **Farklı ver**: gölgelendiriciyi HLSL kaynak kodu veya derlenen gölgelendirici bayt olarak dışa aktarır. Gölgelendiricilerin nasıl dışarı aktarılacağı hakkında daha fazla bilgi için bkz. [nasıl yapılır: gölgelendiriciyi dışarı aktarma](../designers/how-to-export-a-shader.md).<br /><br /> **Grafik altyapıları**: tasarım yüzeyini göstermek için kullanılan oluşturucunun seçilmesini sağlar.<br /><br /> **D3d11 Ile işle**: Gölgelendirici Tasarımcısı tasarım yüzeyini Işlemek için Direct3D 11 kullanır.<br /><br /> **D3D11WARP Ile işleme**: Gölgelendirici Tasarımcısı tasarım yüzeyini Işlemek için Direct3D 11 Windows Gelişmiş Tarama Platformu (warp) kullanır.<br /><br /> **Görünüm**: Gölgelendirici Tasarımcısı hakkında ek bilgi seçimini sunar.<br /><br /> **Kare hızı**: etkinleştirildiğinde, tasarım yüzeyinin sağ üst köşesindeki geçerli kare hızını görüntüler. Kare hızı, saniye başına çizilen çerçeve sayısıdır. Bu seçenek, **gerçek zamanlı Işleme modu** seçeneğini etkinleştirdiğinizde yararlıdır.|
 
 > [!TIP]
 > Son komutu yeniden çalıştırmak için **Gelişmiş** düğmesini seçebilirsiniz.
@@ -119,7 +119,7 @@ Düğümleri eklemek, kaldırmak, yeniden konumlandırmak, bağlamak ve yapılan
 
   - İki düğüm bağlamak için bir düğümün çıkış terminalini diğer düğümün giriş terminaline taşıyın. Yalnızca uyumlu türleri olan terminaller bağlanabilir. Terminallerde bir çizgi bağlantıyı gösterir.
 
-  - Bir bağlantıyı kaldırmak için, bağlı terminallerin her biri için kısayol menüsünde **Bağlantıları Kes** ' i seçin.
+  - Bir bağlantıyı kaldırmak için, bağlı terminallerin her biri için kısayol menüsünde **Bağlantıları Kes**' i seçin.
 
   - Bir düğümün özelliklerini yapılandırmak için düğümü seçin ve ardından **Özellikler** penceresinde özellikler için yeni değerler belirtin.
 
@@ -147,18 +147,18 @@ Aşağıdaki tabloda, değiştirebileceğiniz Gölgelendirici parametreleri gös
 
 |Parametre|Özellikler|
 |---------------|----------------|
-|**Doku 1**  -  **Doku 8**|**Erişim** : özelliğin model düzenleyicisinden ayarlaneklenmesine izin vermek için                             **genel** ' e gidin; Aksi takdirde, **özel** .<br /><br /> **Dosya adı** : Bu doku kaydı ile ilişkili doku dosyasının tam yolu.|
-|**Malzeme çevresel**|**Erişim** : özelliğin model düzenleyicisinden ayarlaneklenmesine izin vermek için                             **genel** ' e gidin; Aksi takdirde, **özel** .<br /><br /> **Değer** : dolaylı veya çevresel aydınlatma nedeniyle geçerli pikselin dağıtma rengi.|
-|**Malzeme dağıtma**|**Erişim** : özelliğin model düzenleyicisinden ayarlaneklenmesine izin vermek için **genel** ' e gidin; Aksi takdirde, **özel** .<br /><br /> **Değer** : geçerli pikselin nasıl doğrudan aydınlatma kullandığını açıklayan bir renk.|
-|**Malzeme yanıltıcı**|**Erişim** : özelliğin model düzenleyicisinden ayarlaneklenmesine izin vermek için                              **genel** ' e gidin; Aksi takdirde, **özel** .<br /><br /> **Değer** : kendi kendine sunulan aydınlatma nedeniyle geçerli pikselin renk katkısı.|
-|**Malzeme yansımalı**|**Erişim** : özelliğin model düzenleyicisinden ayarlaneklenmesine izin vermek için                              **genel** ' e gidin; Aksi takdirde, **özel** .<br /><br /> **Değer** : geçerli pikselin doğrudan aydınlatmayı nasıl yansıttığını açıklayan bir renk.|
-|**Malzeme yansımalı güç**|**Erişim** : özelliğin model düzenleyicisinden ayarlaneklenmesine izin vermek için                             **genel** ' e gidin; Aksi takdirde, **özel** .<br /><br /> **Değer** : geçerli pikselde Yansımalı vurguların yoğunluğunu tanımlayan üs.|
+|**Doku 1**  -  **Doku 8**|**Erişim**: özelliğin model düzenleyicisinden ayarlaneklenmesine izin vermek için                             **genel** ' e gidin; Aksi takdirde, **özel**.<br /><br /> **Dosya adı**: Bu doku kaydı ile ilişkili doku dosyasının tam yolu.|
+|**Malzeme çevresel**|**Erişim**: özelliğin model düzenleyicisinden ayarlaneklenmesine izin vermek için                             **genel** ' e gidin; Aksi takdirde, **özel**.<br /><br /> **Değer**: dolaylı veya çevresel aydınlatma nedeniyle geçerli pikselin dağıtma rengi.|
+|**Malzeme dağıtma**|**Erişim**: özelliğin model düzenleyicisinden ayarlaneklenmesine izin vermek için **genel** ' e gidin; Aksi takdirde, **özel**.<br /><br /> **Değer**: geçerli pikselin nasıl doğrudan aydınlatma kullandığını açıklayan bir renk.|
+|**Malzeme yanıltıcı**|**Erişim**: özelliğin model düzenleyicisinden ayarlaneklenmesine izin vermek için                              **genel** ' e gidin; Aksi takdirde, **özel**.<br /><br /> **Değer**: kendi kendine sunulan aydınlatma nedeniyle geçerli pikselin renk katkısı.|
+|**Malzeme yansımalı**|**Erişim**: özelliğin model düzenleyicisinden ayarlaneklenmesine izin vermek için                              **genel** ' e gidin; Aksi takdirde, **özel**.<br /><br /> **Değer**: geçerli pikselin doğrudan aydınlatmayı nasıl yansıttığını açıklayan bir renk.|
+|**Malzeme yansımalı güç**|**Erişim**: özelliğin model düzenleyicisinden ayarlaneklenmesine izin vermek için                             **genel** ' e gidin; Aksi takdirde, **özel**.<br /><br /> **Değer**: geçerli pikselde Yansımalı vurguların yoğunluğunu tanımlayan üs.|
 
 #### <a name="time-based-effects"></a>Zamana dayalı etkiler
 
 Bazı gölgelendiriciler, etkiyi canlandıra zaman tabanlı bir bileşene sahiptir. Efektin işlem içinde nasıl göründüğünü göstermek için, önizlemenin saniyede birkaç kez güncellenmesi gerekir. Varsayılan olarak, Önizleme yalnızca gölgelendirici değiştirildiğinde güncelleştirilir; zamana dayalı etkileri görüntüleyebilmeniz için bu davranışı değiştirmek için gerçek zamanlı işlemeyi etkinleştirmeniz gerekir.
 
-Gerçek zamanlı işlemeyi etkinleştirmek için, gölgelendirici Tasarımcısı araç çubuğunda **gerçek zamanlı işleme** ' yı seçin.
+Gerçek zamanlı işlemeyi etkinleştirmek için, gölgelendirici Tasarımcısı araç çubuğunda **gerçek zamanlı işleme**' yı seçin.
 
 #### <a name="examine-the-effect"></a>Etkiyi inceleyin
 
@@ -170,7 +170,7 @@ Birçok gölgelendiriciler, açı veya yönlü aydınlatmayı görüntüleme gib
 
 Uygulamanızda bir gölgelendirici kullanabilmeniz için, bunu DirectX 'in anladığı bir biçimde dışarı aktarmanız gerekir.
 
-Gölgelendiricileri HLSL kaynak kodu olarak veya derlenen gölgelendirici bayt olarak dışarı aktarabilirsiniz. HLSL kaynak kodu, *. HLSL* dosya adı uzantısına sahip bir metin dosyasına aktarılmıştır. Gölgelendirici bytecode 'u *. cso* dosya adı uzantısına sahip bir ham ikili dosyaya ya da gölgelendirici bayt kodunu bir diziye kodlayan bir C++ üst bilgi ( *. h* ) dosyasına aktarılabilir.
+Gölgelendiricileri HLSL kaynak kodu olarak veya derlenen gölgelendirici bayt olarak dışarı aktarabilirsiniz. HLSL kaynak kodu, *. HLSL* dosya adı uzantısına sahip bir metin dosyasına aktarılmıştır. Gölgelendirici bytecode 'u *. cso* dosya adı uzantısına sahip bir ham ikili dosyaya ya da gölgelendirici bayt kodunu bir diziye kodlayan bir C++ üst bilgi (*. h*) dosyasına aktarılabilir.
 
 Gölgelendiricilerin nasıl dışarı aktarılacağı hakkında daha fazla bilgi için bkz. [nasıl yapılır: gölgelendiriciyi dışarı aktarma](../designers/how-to-export-a-shader.md).
 
@@ -178,12 +178,12 @@ Gölgelendiricilerin nasıl dışarı aktarılacağı hakkında daha fazla bilgi
 
 |Komut|Klavye kısayolları|
 |-------------| - |
-|**Seçme** moduna geçiş yap|**CTRL** + **G** , **CTRL** + **s**<br /><br /> **S**|
-|**Yakınlaştırma** moduna geç|**CTRL** + **G** , **CTRL** + **Z**<br /><br /> **Z**|
-|**Pan** moduna geç|**CTRL** + **G** , **CTRL** + **P**<br /><br /> **K**|
+|**Seçme** moduna geçiş yap|**CTRL** + **G**, **CTRL** + **s**<br /><br /> **S**|
+|**Yakınlaştırma** moduna geç|**CTRL** + **G**, **CTRL** + **Z**<br /><br /> **Kadar**|
+|**Pan** moduna geç|**CTRL** + **G**, **CTRL** + **P**<br /><br /> **K**|
 |Tümünü seç|**CTRL** + **Bir**|
 |Geçerli seçimi sil|**Silme**|
-|Geçerli seçimi iptal et|**Escape** ( **ESC** )|
+|Geçerli seçimi iptal et|**Escape** (**ESC**)|
 |Yakınlaştır|**CTRL** + **Fare tekerleği ileri**<br /><br /> Artı Işareti ( **+** )|
 |Uzaklaştır|**CTRL** + **Fare tekerleği geriye doğru**<br /><br /> Eksi Işareti ( **-** )|
 |Tasarım yüzeyini yukarı kaydır|**Fare tekerleği geriye doğru**<br /><br /> **PageDown**|
@@ -197,7 +197,7 @@ Gölgelendiricilerin nasıl dışarı aktarılacağı hakkında daha fazla bilgi
 |Geçerli seçimi yukarı taşı|**SHIFT** + **Yukarı ok**|
 |Geçerli seçimi aşağı taşı|**SHIFT** + **Aşağı ok**|
 |Geçerli seçimi sola taşı|**SHIFT** + **Sol ok**|
-|Geçerli seçimi sağa taşı|**SHIFT** + **Sağ ok** .|
+|Geçerli seçimi sağa taşı|**SHIFT** + **Sağ ok**.|
 
 ## <a name="related-topics"></a>İlgili konular
 

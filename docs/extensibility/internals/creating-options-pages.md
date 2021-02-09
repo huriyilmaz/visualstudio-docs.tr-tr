@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 1bf11fec-dece-4943-8053-6de1483c43eb
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4759b3590fcde116e6f106ac326ff875e9566c43
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+ms.openlocfilehash: b01133e1f7daada2d9e2778c3966ccd66a81fd94
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96328645"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99903165"
 ---
 # <a name="create-options-pages"></a>Seçenek sayfaları oluşturma
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Yönetilen paket çerçevesinde, <xref:Microsoft.VisualStudio.Shell.DialogPage> [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **Araçlar** menüsünün altına **Seçenekler** sayfası ekleyerek IDE 'yi genişletten türetilmiş sınıflar.
@@ -36,7 +36,7 @@ ms.locfileid: "96328645"
 
  <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> <xref:Microsoft.VisualStudio.Shell.DialogPage> Bir **araç seçenekleri** sayfası uygulayan her türetilmiş tür için bir örnek olmalıdır.
 
- Her bir örneği, Araçlar Seçenekler sayfasını <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> uygulayan türü **Tools Options** , bir **araç seçenekleri** sayfasını tanımlamak için kullanılan kategori ve alt kategoriyi Içeren dizeleri ve türü bir **araç seçenekleri** sayfası olarak kaydetmek için kaynak bilgilerini kullanır.
+ Her bir örneği, Araçlar Seçenekler sayfasını <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> uygulayan türü  , bir **araç seçenekleri** sayfasını tanımlamak için kullanılan kategori ve alt kategoriyi Içeren dizeleri ve türü bir **araç seçenekleri** sayfası olarak kaydetmek için kaynak bilgilerini kullanır.
 
 ## <a name="persist-tools-options-page-state"></a>Kalıcı Araçlar Seçenekler sayfası durumu
  Bir **araç seçenekleri** sayfası uygulamasının Otomasyon desteği etkinken kayıtlı olması halınde, IDE sayfanın durumunu diğer tüm **araç seçenekleri** sayfalarıyla birlikte sürdürür.
@@ -61,21 +61,21 @@ ms.locfileid: "96328645"
 ## <a name="example"></a>Örnek
  Aşağıda, bir Seçenekler sayfasının basit bir "Hello World" uygulamasıdır. Aşağıdaki kodu **menü komutu** seçeneği seçili olan Visual Studio paket şablonu tarafından oluşturulan varsayılan bir projeye eklemek, seçenek sayfası işlevselliğini yeterince gösterir.
 
-### <a name="description"></a>Açıklama
+### <a name="description"></a>Description
  Aşağıdaki sınıf, en düşük bir "Hello World" seçenekleri sayfasını tanımlar. Açıldığında, Kullanıcı `HelloWorld` bir özellik kılavuzunda ortak özelliği ayarlayabilir.
 
 ### <a name="code"></a>Kod
  [!code-csharp[UI_UserSettings_ToolsOptionPages#11](../../extensibility/internals/codesnippet/CSharp/creating-options-pages_1.cs)]
  [!code-vb[UI_UserSettings_ToolsOptionPages#11](../../extensibility/internals/codesnippet/VisualBasic/creating-options-pages_1.vb)]
 
-### <a name="description"></a>Açıklama
+### <a name="description"></a>Description
  Aşağıdaki öznitelik paket sınıfına uygulandığında, paket yüklendiğinde Seçenekler sayfası kullanılabilir hale gelir. Sayılar, kategori ve sayfa için rastgele kaynak kimliklerdir ve sonundaki Boole değeri sayfanın Otomasyonu destekleyip desteklemediğini belirtir.
 
 ### <a name="code"></a>Kod
  [!code-csharp[UI_UserSettings_ToolsOptionPages#07](../../extensibility/internals/codesnippet/CSharp/creating-options-pages_2.cs)]
  [!code-vb[UI_UserSettings_ToolsOptionPages#07](../../extensibility/internals/codesnippet/VisualBasic/creating-options-pages_2.vb)]
 
-### <a name="description"></a>Açıklama
+### <a name="description"></a>Description
  Aşağıdaki olay işleyicisi, Seçenekler sayfasında ayarlanmış özelliğin değerine bağlı olarak bir sonuç görüntüler. Bu yöntem, bir <xref:Microsoft.VisualStudio.Shell.Package.GetDialogPage%2A> yöntemi, sayfanın açığa çıkarılan özelliklerine erişmek için özel seçenek sayfası türüne açıkça bir atama ile kullanır.
 
  Paket şablonu tarafından oluşturulan bir proje söz konusu olduğunda, `MenuItemCallback` **araç** menüsüne eklenen varsayılan komuta eklemek için bu işlevi işlevinden çağırın.

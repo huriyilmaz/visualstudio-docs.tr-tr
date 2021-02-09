@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: 1105e169-5272-4e7c-b3e7-cda1b7798a6b
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 78440c6da86d49364f7fd9006779166e8c2fb7d3
-ms.sourcegitcommit: 686aa3516594ab951d48b192fc60b102eedaf9b7
+ms.openlocfilehash: 496994c0f9d546efe8804481230081090309d47e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99628012"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99903568"
 ---
 # <a name="specify-symbol-pdb-and-source-files-in-the-visual-studio-debugger-c-c-visual-basic-f"></a>Visual Studio hata ayıklayıcısında simge (. pdb) ve kaynak dosyaları belirtme (C#, C++, Visual Basic, F #)
 

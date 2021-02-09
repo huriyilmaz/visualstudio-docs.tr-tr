@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: ad329c87-b0ad-4304-84de-ae9496514c42
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: cf02fda50678d9de4eb01dc28b4825844e33063e
-ms.sourcegitcommit: b1f7e7d7a0550d5c6f46adff3bddd44bc1d6ee1c
+ms.openlocfilehash: 550baf52347c1128ef50509e7787861355c9428f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98069506"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99903404"
 ---
 # <a name="ltinstallchecksgt-element-bootstrapper"></a>&lt;Installdenetimlerin &gt; öğesi (önyükleyici)
 `InstallChecks`Öğesi, bir uygulamaya yönelik tüm uygun önkoşulların yüklendiğinden emin olmak için yerel bilgisayara karşı çeşitli testlerin başlatılmasını destekler.
@@ -158,7 +158,7 @@ ms.locfileid: "98069506"
 ## <a name="installconditions"></a>InstallConditions
  `InstallChecks`Değerlendirildiğinde, özellikler üretir. Daha sonra Özellikler tarafından `InstallConditions` , bir paketin yüklenmesi, Atlanmasının veya başarısız olup olmadığını anlamak için kullanılır. Aşağıdaki tabloda şunları listelenmektedir `InstallConditions` :
 
-|Koşul|Açıklama|
+|Koşul|Description|
 |-|-|
 |`FailIf`|Herhangi bir `FailIf` koşul true olarak değerlendirilirse, paket başarısız olur. Koşulların geri kalanı değerlendirilmeyecektir.|
 |`BypassIf`|Herhangi bir `BypassIf` koşul true olarak değerlendirilirse, paket atlanır. Koşulların geri kalanı değerlendirilmeyecektir.|

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - TextTransform.exe
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d849439f3c7b8af310f1f82fc0af8f086139d12b
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: 741e7625d301e250daa28a93f18a82193675e068
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97363919"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99902700"
 ---
 # <a name="generate-files-with-the-texttransform-utility"></a>TextTransform yardımcı programı ile dosya oluşturma
 
@@ -72,7 +72,7 @@ TextTransform [<options>] <templateName>
 
 |**Seçenek**|**Açıklama**|
 |-|-|
-|**-out** \<filename>|Dönüşümün çıktısının yazıldığı dosya.|
+|**-Out**\<filename>|Dönüşümün çıktısının yazıldığı dosya.|
 |**-r**\<assembly>|Metin şablonunu derlemek ve çalıştırmak için kullanılan bir derleme.|
 |**-u**\<namespace>|Şablonu derlemek için kullanılan bir ad alanı.|
 |**-I**\<includedirectory>|Belirtilen metin şablonunda bulunan metin şablonlarını içeren bir dizin.|

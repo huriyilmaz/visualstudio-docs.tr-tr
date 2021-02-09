@@ -13,15 +13,15 @@ helpviewer_keywords:
 - what's new [Office development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 05f3662f1bc6379fa3401e98473971bcefc36ddd
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: 2bb8f6064bd2c2df55c7d0cf8fea1e25c513da0f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96847864"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99903792"
 ---
 # <a name="changes-to-the-design-of-office-projects-that-target-the-net-framework-4-or-the-net-framework-45"></a>.NET Framework 4 ' ü veya .NET Framework 4,5 ' i hedefleyen Office projelerinin tasarımında yapılan değişiklikler
   ' Den itibaren [!INCLUDE[vs_dev10_long](../sharepoint/includes/vs-dev10-long-md.md)] , Visual Studio, [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] veya sonraki sürümlerini hedefleyen Office projelerinin tasarımında bazı değişiklikler getirmiştir. Visual Studio 'nun önceki sürümlerindeki Office projelerine alışkın değilseniz, .NET Framework 4,0 veya üzeri sürümlerini hedefleyen Office projeleri geliştirebilmeniz için bu değişikliklerden haberdar olmanız gerekir. Varsayılan olarak, Visual Studio 2013 veya üzeri kullanarak oluşturduğunuz tüm projeler .NET Framework 4,0 veya üstünü hedefleyin.

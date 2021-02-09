@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: f35ddb24-53bf-461e-b34f-7414f657c082
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: e1426b271ea8db4d486043c9fbe885a0f428b514
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+ms.openlocfilehash: 97c82254516c78a3aff9884e91e44adc45b95981
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96328529"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99902984"
 ---
 # <a name="custom-user-interface-source-control-vspackage"></a>Özel Kullanıcı arabirimi (kaynak denetimi VSPackage)
 VSPackage, Visual Studio komut tablosu (*. vsct*) dosyası aracılığıyla menü öğelerini ve bunların varsayılan durumlarını bildirir. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Tümleşik geliştirme ortamı (IDE), VSPackage yükleninceye kadar menü öğelerini varsayılan durumlarında görüntüler. Daha sonra, <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> yöntemi menü öğelerini etkinleştirmek veya devre dışı bırakmak için çağrılır.
@@ -51,7 +51,7 @@ VSPackage, Visual Studio komut tablosu (*. vsct*) dosyası aracılığıyla men�
 
   Aşağıdaki tabloda, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE 'nin farklı kullanıcı arabirimi öğelerini nasıl gizlediğini gösteren özel ayrıntılar açıklanmaktadır.
 
-| UI öğesi | Açıklama |
+| UI öğesi | Description |
 | - | - |
 | Menüler ve araç çubukları | Kaynak denetim paketi, ilk menü ve araç çubuğu görünürlük durumlarını, *. vsct* dosyasının [visibilitykýsýtlamalarındaki](../../extensibility/visibilityconstraints-element.md) kaynak denetim paketi kimliğine ayarlamış olmalıdır. Bu, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE 'nin, VSPackage yüklemeden ve yönteminin bir uygulamasını çağırarak menü öğelerinin durumunu uygun şekilde ayarlanmasını sağlar <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> . |
 | Araç pencereleri | Kaynak denetimi VSPackage, etkin olmadığında sahip olduğu tüm araç pencerelerini gizler. |

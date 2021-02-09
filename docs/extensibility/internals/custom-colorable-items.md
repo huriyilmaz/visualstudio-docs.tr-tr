@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: b4d0ddee-c04b-48dc-ba82-f6068570cef0
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 648a8e45b5b472ccc1a37cd69e2043f0bb5b9aa3
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+ms.openlocfilehash: 7df029be478fef3cf1e9b6138456986016465d5d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96328541"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99903008"
 ---
 # <a name="custom-colorable-items"></a>Özel renklenebilir öğeler
 Dil hizmetinizin bir parçası olarak özel renklenebilir öğeler uygulayarak, anahtar sözcükler ve açıklamalar gibi renklendirime için tür listesini geçersiz kılabilirsiniz.

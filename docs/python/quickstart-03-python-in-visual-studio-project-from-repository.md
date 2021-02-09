@@ -5,17 +5,17 @@ ms.date: 12/06/2018
 ms.topic: quickstart
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 5d0363626748588b6f4058e197f0d6796ece51ee
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 55db74b2b2882aac12ac1587c4e972e31f7dfe10
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64543147"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99902396"
 ---
 # <a name="quickstart-clone-a-repository-of-python-code-in-visual-studio"></a>Hızlı başlangıç: Visual Studio 'da Python kodu deposunu kopyalama
 
@@ -29,22 +29,22 @@ ms.locfileid: "64543147"
 
 1. Visual Studio 'Yu başlatın.
 
-1. **View**  >  GitHub veya Azure Repos 'e bağlanabildiğinizi veya bir depoyu klonlayabileceğiniz **Takım Gezgini** penceresini açmak için**Takım Gezgini** görüntüle ' yi seçin. (Aşağıda gösterilen **Bağlan** sayfasını görmüyorsanız, en üstteki araç çubuğunda yer alan tak simgesini seçin ve bu sayfaya gidersiniz.)
+1.   >  GitHub veya Azure Repos 'e bağlanabildiğinizi veya bir depoyu klonlayabileceğiniz **Takım Gezgini** penceresini açmak için **Takım Gezgini** görüntüle ' yi seçin. (Aşağıda gösterilen **Bağlan** sayfasını görmüyorsanız, en üstteki araç çubuğunda yer alan tak simgesini seçin ve bu sayfaya gidersiniz.)
 
     ![Bir depoyu Azure Repos, GitHub ve kopyalamayı gösteren Takım Gezgini penceresi](media/team-explorer.png)
 
-1. **Yerel Git depoları**altında, **Kopyala** komutunu seçin, sonra `https://github.com/gregmalcolm/python_koans` URL alanına girin, kopyalanmış dosyalar Için bir klasör girin ve **Kopyala** düğmesini seçin.
+1. **Yerel Git depoları** altında, **Kopyala** komutunu seçin, sonra `https://github.com/gregmalcolm/python_koans` URL alanına girin, kopyalanmış dosyalar Için bir klasör girin ve **Kopyala** düğmesini seçin.
 
     > [!Tip]
     > **Takım Gezgini** içinde belirttiğiniz klasör klonlanan dosyaları almak için tam klasördür. Komutun aksine `git clone` , **Takım Gezgini** bir kopyanın oluşturulması, otomatik olarak deponun adı ile bir alt klasör oluşturmaz.
 
-1. Kopyalama tamamlandığında, Depo adı **yerel Git depoları** listesinde görünür. **Takım Gezgini**içindeki depo panosuna gitmek için bu ada çift tıklayın.
+1. Kopyalama tamamlandığında, Depo adı **yerel Git depoları** listesinde görünür. **Takım Gezgini** içindeki depo panosuna gitmek için bu ada çift tıklayın.
 
-1. **Çözümler**altında **Yeni**' yi seçin.
+1. **Çözümler** altında **Yeni**' yi seçin.
 
     ![Takım Gezgini penceresi, bir kopyadan yeni bir proje oluşturma](media/team-explorer-new-project.png)
 
-1. Görüntülenen **Yeni proje** iletişim kutusunda, **Python** diline gidin (veya "Python" üzerinde arama yapın), **varolan Python kodundan**seçim yapın, proje için bir ad belirleyin, **konumu** depoyla aynı klasöre ayarlayın ve **Tamam**' ı seçin. Görüntülenen sihirbazda **son**' u seçin.
+1. Görüntülenen **Yeni proje** iletişim kutusunda, **Python** diline gidin (veya "Python" üzerinde arama yapın), **varolan Python kodundan** seçim yapın, proje için bir ad belirleyin, **konumu** depoyla aynı klasöre ayarlayın ve **Tamam**' ı seçin. Görüntülenen sihirbazda **son**' u seçin.
 
 1. Menüden **Görünüm**  >  **Çözüm Gezgini** seçin.
 
@@ -54,9 +54,9 @@ ms.locfileid: "64543147"
 
     ![Python projesi için çalışma dizinini ayarlama](media/projects-set-working-directory.png)
 
-1. **Ctrl** + Programı çalıştırmak için CTRL**F5** tuşuna basın veya **hata ayıklama**  >  **olmadan Başlat** ' ı seçin. *koans.txt*Için bir **filenotfounbir** görürseniz, önceki adımda açıklandığı gibi çalışma dizini ayarını kontrol edin.
+1.  + Programı çalıştırmak için CTRL **F5** tuşuna basın veya **hata ayıklama**  >  **olmadan Başlat** ' ı seçin. *koans.txt* Için bir **filenotfounbir** görürseniz, önceki adımda açıklandığı gibi çalışma dizini ayarını kontrol edin.
 
-1. Program başarıyla çalıştırıldığında, 17. satırdaki *python3/koans/about_asserts. Kopyala*üzerinde bir onaylama hatası görüntüler. Bu bilerek yapılır: program, kasıtlı olarak tüm hataları düzelterek Python 'a öğretmek için tasarlanmıştır. (Python koans 'da daha fazla ayrıntı için bkz. [Ruby](https://rubykoans.com/)'ler.)
+1. Program başarıyla çalıştırıldığında, 17. satırdaki *python3/koans/about_asserts. Kopyala* üzerinde bir onaylama hatası görüntüler. Bu bilerek yapılır: program, kasıtlı olarak tüm hataları düzelterek Python 'a öğretmek için tasarlanmıştır. (Python koans 'da daha fazla ayrıntı için bkz. [Ruby](https://rubykoans.com/)'ler.)
 
     ![Python koans programından ilk çıkış](media/koans-output.png)
 

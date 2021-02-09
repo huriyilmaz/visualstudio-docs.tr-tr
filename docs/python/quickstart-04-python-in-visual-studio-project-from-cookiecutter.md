@@ -5,17 +5,17 @@ ms.date: 02/25/2019
 ms.topic: quickstart
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18, SEO-VS-2020
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 6868b4c581674c8015d30bf81f64f2ab24ea2ee0
-ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
+ms.openlocfilehash: 4c8a3727faa01b69962dd3dc456ac7b704f62882
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90100741"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99902433"
 ---
 # <a name="quickstart-create-a-project-from-a-cookiecutter-template"></a>Hızlı başlangıç: Cookiecutter şablonundan proje oluşturma
 
@@ -25,7 +25,7 @@ ms.locfileid: "90100741"
 
 1. Visual Studio 'Yu başlatın.
 
-1. **File**  >  **New**  >  **Cookiecutter 'ten**yeni dosya seçin. Bu komut, Visual Studio 'da şablonlara gözatabileceğiniz bir pencere açar.
+1.   >    >  **Cookiecutter 'ten** yeni dosya seçin. Bu komut, Visual Studio 'da şablonlara gözatabileceğiniz bir pencere açar.
 
     ![Cookiecutter şablonundan yeni proje](media/projects-from-cookiecutter1.png)
 
@@ -35,9 +35,9 @@ ms.locfileid: "90100741"
 
     ![Cookiecutter kullanarak ikinci adım, proje özelliklerini ayarlama](media/projects-from-cookiecutter2.png)
 
-1. İşlem tamamlandığında, **şablon kullanarak dosyaları başarıyla oluşturdu**iletisini görürsünüz... Proje otomatik olarak Çözüm Gezgini açılır.
+1. İşlem tamamlandığında, **şablon kullanarak dosyaları başarıyla oluşturdu** iletisini görürsünüz... Proje otomatik olarak Çözüm Gezgini açılır.
 
-1. **Ctrl** + Programı çalıştırmak için CTRL**F5** tuşuna basın veya **hata ayıklama**  >  **olmadan Başlat** ' ı seçin.
+1.  + Programı çalıştırmak için CTRL **F5** tuşuna basın veya **hata ayıklama**  >  **olmadan Başlat** ' ı seçin.
 
     ![Python-sköğren-sınıflandırıcı-cookiecutter şablon projesinin çıkışı](media/projects-from-cookiecutter4.png)
 

@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 0248430a-3b61-4809-87a9-e9b6bb7d1130
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 50e6bdc0dba8f6bcbdd55c45132dff02735786d6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 735acca4d4b2e2881c49a236dadae44aaa3cc1fd
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80737947"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99902134"
 ---
 # <a name="bp_location_type"></a>BP_LOCATION_TYPE
 Kesme noktası isteği için kesme noktasının konum türünü belirtir.
@@ -129,6 +129,6 @@ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Listelemeler](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [GetLocationType](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getlocationtype.md)
 - [BP_TYPE](../../../extensibility/debugger/reference/bp-type.md)

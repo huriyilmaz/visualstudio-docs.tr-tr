@@ -5,18 +5,18 @@ ms.date: 11/04/2020
 ms.topic: reference
 author: andysterland
 ms.author: andster
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: b10d3cd72c52c2cabda0eb4d9b0da81366e4acb3
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 6cffc3641cf3b7c696b8c51c2cad57ecc2b2df18
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94437096"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99903393"
 ---
 # <a name="sample-list"></a>Örnek listesi
 
@@ -29,5 +29,5 @@ Aşağıdaki tabloda, GitHub Codespaces ' de devinit kullanmak için şu anda ku
 | [**Özel Beta**](sample-private-preview.md)     | GitHub Codespaces Visual Studio özel beta 'da kullanılan özelleştirmeler örneği.                                      |   |
 | [**CV 'yi açın**](sample-opencv.md)                   | OpenCV projesi için gereken özelleştirmeler örneği.                                                                |   |
 | [**.NET Core Runtime**](sample-dotnet-runtime.md) | .NET Core çalışma zamanı [DotNet/Runtime](https://github.com/dotnet/runtime) projesi için gereken özelleştirmeler örneği. |   |
-| [**.NET Core Uygulaması**](sample-dotnet-core.md)        | Gerekli .NET Core SDK yüklemek için devinit kullanan bir depo örneği.                                             |   |
-| [**Node.js Uygulaması**](sample-nodejs.md)               | Bir Node.js Express projesi için NPM paketlerini yüklemek için devinit kullanan bir depo örneği.                             |   |
+| [**.NET Core uygulaması**](sample-dotnet-core.md)        | Gerekli .NET Core SDK yüklemek için devinit kullanan bir depo örneği.                                             |   |
+| [**Node.js uygulaması**](sample-nodejs.md)               | Bir Node.js Express projesi için NPM paketlerini yüklemek için devinit kullanan bir depo örneği.                             |   |

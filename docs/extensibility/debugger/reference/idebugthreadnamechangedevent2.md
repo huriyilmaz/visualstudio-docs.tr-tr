@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 34c1652e-f019-48ba-8b26-ace20f8a158c
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: e218fc2ed99e0f180421aede1fc3aa212dcfa993
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cdb65d73db0e506e5cba89834c0c7e90fdf6e8f9
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80718460"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99901576"
 ---
 # <a name="idebugthreadnamechangedevent2"></a>IDebugThreadNameChangedEvent2
 Bu arabirim, hata ayıklama altyapısı (DE) tarafından, hata ayıklama yapılmakta olan programdaki bir iş parçacığı adı değiştiğinde oturum hata ayıklama Yöneticisi 'ne (SDM) gönderilir.
@@ -25,7 +25,7 @@ Bu arabirim, hata ayıklama altyapısı (DE) tarafından, hata ayıklama yapılm
 ## <a name="syntax"></a>Syntax
 
 ```
-IDebugThreadNameChangedEvent2 : IUnknown
+IDebugThreadNameChangedEvent2 : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>Implemenonun notları

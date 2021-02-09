@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 4fc7b5a5-11b0-46ca-9656-8c2a0b08d1fe
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 852b910de742676e1fe7dd0c85129640eb37a9ae
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: 6287abee811d406ef7aafa5ce3cc3dc62624b0d1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93046931"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99902618"
 ---
 # <a name="uidmanager-task"></a>UidManager görevi
 
@@ -38,7 +38,7 @@ ms.locfileid: "93046931"
 |-------------------------| - |
 | `IntermediateDirectory` | İsteğe bağlı **dize** parametresi.<br /><br /> **MarkupFiles** parametresi tarafından BELIRTILEN kaynak xaml dosyalarını yedeklemek için kullanılan dizini belirtir. |
 | `MarkupFiles` | Gerekli **ıtaskitem []** parametresi.<br /><br /> UID denetimi, güncelleştirilmesi veya kaldırılması için dahil edilecek kaynak XAML dosyalarını belirtir. |
-| `Task` | Gerekli **dize** parametresi.<br /><br /> Gerçekleştirmek istediğiniz UID yönetim görevini belirtir. Geçerli seçenekler **Check** , **Update** veya **Remove** seçenekleridir. |
+| `Task` | Gerekli **dize** parametresi.<br /><br /> Gerçekleştirmek istediğiniz UID yönetim görevini belirtir. Geçerli seçenekler **Check**, **Update** veya **Remove** seçenekleridir. |
 
 ## <a name="example"></a>Örnek
 

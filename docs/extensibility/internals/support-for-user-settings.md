@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: ad9beac3-4f8d-4093-ad0e-6fb00444a709
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b9f6ee52e9ba87eb2f570a6e388dc98c050989c9
-ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
+ms.openlocfilehash: 06cd22ec933e72344ab743372fe30c1a3ddf5fbf
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97876542"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99901593"
 ---
 # <a name="support-for-user-settings"></a>Kullanıcı Ayarları için Destek
 VSPackage, bir Kullanıcı **Araçlar** menüsündeki **Içeri/dışarı aktarma ayarlarını** seçtiğinde devam eden durum değişkenlerinin grupları olan bir veya daha fazla ayar kategorisi tanımlayabilir. Bu kalıcılığı etkinleştirmek için içindeki ayarlar API 'Lerini kullanın [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] .
@@ -52,7 +52,7 @@ VSPackage, bir Kullanıcı **Araçlar** menüsündeki **Içeri/dışarı aktarma
 
  AlternateParent = CategoryName
 
-| Ad | Tür | Veriler | Açıklama |
+| Ad | Tür | Veriler | Description |
 |-----------------|--------| - | - |
 | (Varsayılan) | REG_SZ | Özel ayarlar noktasının adı | Anahtarın adı, `<CSPName`>, özel ayar noktasının yerelleştirilmemiş adıdır.<br /><br /> MPF tabanlı uygulamalar için, anahtarın adı, `categoryName` `objectName` oluşturucunun ve bağımsız değişkenlerinin içine birleştirilerek elde edilir <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> `categoryName_objectName` .<br /><br /> Anahtar boş olabilir veya bir uydu DLL içindeki yerelleştirilmiş dizeye başvuru KIMLIĞINI içerebilir. Bu değer, `objectNameResourceID` bağımsız değişkenden <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> oluşturucuya alınır. |
 | Paket | REG_SZ | GUID | Özel ayarlar noktasını uygulayan VSPackage GUID 'SI.<br /><br /> MPF tabanlı uygulamalar <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> sınıfını kullanarak, `objectType` <xref:System.Type> Bu değeri elde etmek Için VSPackage 'ın ve Reflection içeren bağımsız değişkenini kullanın. |

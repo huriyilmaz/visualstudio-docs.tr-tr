@@ -7,15 +7,15 @@ ms.topic: reference
 ms.assetid: b7df5ef3-dd4f-4964-9d96-34e0e180515e
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c3e45789358e49a0b224a6de3ea6e5dfea44bf01
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: 0bf9ea986fde744ec384f68338eca0d2239a3e73
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93133968"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99902267"
 ---
 # <a name="texture-nodes"></a>Doku düğümleri
 
@@ -23,7 +23,7 @@ Gölgelendirici tasarımcısında, doku düğümleri örnek olarak çeşitli dok
 
 ## <a name="texture-node-reference"></a>Doku düğüm başvurusu
 
-|Node|Ayrıntılar|Özellikler|
+|Düğüm|Ayrıntılar|Özellikler|
 |----------|-------------|----------------|
 |**Cubemap örneği**|Belirtilen koordinatlardaki küp harita 'ten bir renk örneği alır.<br /><br /> Yansıma efektleri için renk ayrıntısı sağlamak üzere bir küp harita kullanabilir veya bir 2B dokusundaki daha az deformasyonu olan bir küresel nesneye uygulayabilirsiniz.<br /><br /> **Girişinin**<br /><br /> `UVW`: `float3`<br /> Örnek alınan doku küpünde konumu belirten bir vektör. Örnek, bu vector öğesinin kübü kesiştiği yerde alınır.<br /><br /> **Çıktıların**<br /><br /> `Output`: `float4`<br /> Renk örneği.|**Doku**<br /> Örnekleyici ile ilişkili doku kaydı.|
 |**Normal harita örneği**|Belirtilen koordinatlardaki 2B normal eşlemden normal bir örnek alır<br /><br /> Bir nesnenin yüzeyindeki ek geometrik ayrıntıların görünümünün benzetimini yapmak için normal bir harita kullanabilirsiniz. Normal haritalar, renk verileri yerine bir birim vektörünü temsil eden paketlenmiş verileri içerir<br /><br /> **Girişinin**<br /><br /> `UV`: `float2`<br /> Örneğin çekildiği koordinatlar.<br /><br /> **Çıktıların**<br /><br /> `Output`: `float3`<br /> Normal örnek.|**Eksen ayarlaması**<br /> Normal harita örneğinin el kullanımını ayarlamak için kullanılan faktör.<br /><br /> **Doku**<br /> Örnekleyici ile ilişkili doku kaydı.|

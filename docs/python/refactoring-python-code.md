@@ -5,17 +5,17 @@ ms.date: 03/13/2019
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: be93ac7b8bc0659da522abcf6000d97ec05d46b9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8eb46f324359549d7f74e8edd90d3056820e234e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88801340"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99902387"
 ---
 # <a name="refactor-python-code"></a>Python kodunu yeniden düzenleme
 
@@ -28,7 +28,7 @@ Visual Studio, Python kaynak kodunuzu otomatik olarak dönüştürmek ve temizle
 
 ## <a name="rename"></a>Rename
 
-1. Yeniden adlandırmak istediğiniz tanımlayıcıya sağ tıklayın ve **Yeniden Adlandır**' ı seçin veya giriş işaretini bu tanımlayıcıya yerleştirin ve yeniden **düzenleme**  >  **Refactor**  >  **Yeniden Adlandır** menü komutunu (**F2**) seçin.
+1. Yeniden adlandırmak istediğiniz tanımlayıcıya sağ tıklayın ve **Yeniden Adlandır**' ı seçin veya giriş işaretini bu tanımlayıcıya yerleştirin ve yeniden **düzenleme**  >    >  **Yeniden Adlandır** menü komutunu (**F2**) seçin.
 2. Görüntülenen **Yeniden Adlandır** iletişim kutusunda, tanımlayıcı için yeni bir ad girin ve **Tamam**' ı seçin:
 
    ![Yeni tanımlayıcı adı için istemi yeniden adlandır](media/code-refactor-rename-1.png)
@@ -42,7 +42,7 @@ Visual Studio, Python kaynak kodunuzu otomatik olarak dönüştürmek ve temizle
 ## <a name="extract-method"></a>Ayıklama metodu
 
 1. Kod satırlarını veya ayrı bir yönteme Ayıklanacak ifadeyi seçin.
-2. Yeniden **düzenleme**  >  **Refactor**  >  **ayıklama yöntemini** Düzenle menü komutunu seçin veya **CTRL** + **R**  >  **M**yazın.
+2. Yeniden **düzenleme**  >    >  **ayıklama yöntemini** Düzenle menü komutunu seçin veya **CTRL** + **R**  >  **M** yazın.
 3. Görüntülenen iletişim kutusunda yeni bir yöntem adı girin, bunu hangi noktada çıkaracağı belirtin ve tüm kapatma değişkenlerini seçin. Kapanış için seçili olmayan değişkenler metot bağımsız değişkenlerine açıktır:
 
    ![Metodu Ayıkla iletişim kutusu](media/code-refactor-extract-method-1.png)
@@ -71,7 +71,7 @@ Son olarak, bir şeyler normalde dışlanırsa ancak dahil edilecek diğer değe
 
 Kod yazarken, `import` hiç kullanılmayan modüller için deyimlerle daha kolay bir şekilde bitemez. Visual Studio, kodunuzu analiz ettiğinden, `import` içeri aktarılan adın deyimin gerçekleştiği kapsam içinde kullanılıp kullanılmadığını arayarak otomatik olarak bir deyimin gerekip gerekmediğini otomatik olarak belirleyebilir.
 
-Düzenleyicide herhangi bir yere sağ tıklayın ve **Içeri aktarmaları kaldır**' ı seçerek **tüm kapsamlardan** veya yalnızca **geçerli kapsamdan**kaldırma seçenekleri sunulur:
+Düzenleyicide herhangi bir yere sağ tıklayın ve **Içeri aktarmaları kaldır**' ı seçerek **tüm kapsamlardan** veya yalnızca **geçerli kapsamdan** kaldırma seçenekleri sunulur:
 
 ![İçeri aktarmalar menüsünü kaldır](media/code-refactor-remove-imports-1.png)
 

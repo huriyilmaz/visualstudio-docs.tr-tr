@@ -15,15 +15,15 @@ helpviewer_keywords:
 - Chart control [Office development in Visual Studio], data binding
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 45de5170ca8a8b7e8a71521e18523e73ebc24046
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: 3530e0821d4569381f610f44ae541c04b484b469
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96847837"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99903783"
 ---
 # <a name="chart-control"></a>Grafik denetimi
   <xref:Microsoft.Office.Tools.Excel.Chart>Denetim, olayları ortaya çıkaran bir grafik nesnesidir. Bir çalışma sayfasına bir grafik eklediğinizde, Visual Studio <xref:Microsoft.Office.Tools.Excel.Chart> Microsoft Office Excel nesne modelinde geçiş yapmak zorunda kalmadan doğrudan programlama yapabileceğiniz bir nesne oluşturur.
@@ -41,7 +41,7 @@ ms.locfileid: "96847837"
 ## <a name="formatting"></a>Biçimlendirme
  Bir denetimine uygulanabilecek tüm biçimlendirmeler <xref:Microsoft.Office.Interop.Excel.Chart> de bir <xref:Microsoft.Office.Tools.Excel.Chart> denetime uygulanabilir. Bu, kenarlıkları, yazı tiplerini, grafik türünü, kılavuz çizgilerini, göstergeyi ve veri etiketlerini içerir.
 
-## <a name="events"></a>Olaylar
+## <a name="events"></a>Ekinlikler
  Denetim için aşağıdaki olaylar mevcuttur <xref:Microsoft.Office.Tools.Excel.Chart> :
 
 - <xref:Microsoft.Office.Tools.Excel.Chart.ActivateEvent>

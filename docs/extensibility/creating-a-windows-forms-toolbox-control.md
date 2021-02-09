@@ -10,21 +10,21 @@ helpviewer_keywords:
 ms.assetid: 0be6ffc1-8afd-4d02-9a5d-e27dde05fde6
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b8dd62c01bad3ac50a57062729fe96588a7ef5be
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4bb9505ab475da7919a39eb03e7c84b92857db4e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88801873"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99902196"
 ---
 # <a name="create-a-windows-forms-toolbox-control"></a>Windows Forms araç kutusu denetimi oluşturma
 
 Visual Studio Genişletilebilirlik Araçları (VS SDK) eklenen Windows Forms araç kutusu denetim öğesi şablonu, uzantı yüklendiğinde otomatik olarak eklenen bir **araç kutusu** denetimi oluşturmanıza olanak sağlar. Bu izlenecek yolda, diğer kullanıcılara dağıtabileceğiniz basit bir sayaç denetimi oluşturmak için şablonunun nasıl kullanılacağı gösterilmektedir.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yüklememeyin. Visual Studio kurulumuna isteğe bağlı bir özellik olarak dahildir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
 
@@ -36,9 +36,9 @@ Windows Forms araç kutusu denetim şablonu tanımsız bir kullanıcı denetimi 
 
 1. Adlı bir VSıX projesi oluşturun `MyWinFormsControl` . VSıX proje şablonunu **Yeni proje** iletişim kutusunda, "VSIX" araması yaparak bulabilirsiniz.
 
-2. Proje açıldığında adlı bir **Windows Forms araç kutusu denetim** öğesi şablonu ekleyin `Counter` . **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve **Add**  >  **Yeni öğe**Ekle ' yi seçin. **Yeni öğe Ekle** iletişim kutusunda, **Visual C#**  >  **genişletilebilirliği** ' ne gidin ve **Windows Forms araç kutusu denetimi** ' ni seçin.
+2. Proje açıldığında adlı bir **Windows Forms araç kutusu denetim** öğesi şablonu ekleyin `Counter` . **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve   >  **Yeni öğe** Ekle ' yi seçin. **Yeni öğe Ekle** iletişim kutusunda, **Visual C#**  >  **genişletilebilirliği** ' ne gidin ve **Windows Forms araç kutusu denetimi** ' ni seçin.
 
-3. Bu, `ProvideToolboxControlAttribute` <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute> denetimin **araç kutusuna**yerleştirileceği bir Kullanıcı denetımı ve dağıtım Için VSIX bildiriminde bir **Microsoft. VisualStudio. ToolboxControl** varlık girişi ekler.
+3. Bu, `ProvideToolboxControlAttribute` <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute> denetimin **araç kutusuna** yerleştirileceği bir Kullanıcı denetımı ve dağıtım Için VSIX bildiriminde bir **Microsoft. VisualStudio. ToolboxControl** varlık girişi ekler.
 
 ### <a name="build-a-user-interface-for-the-control"></a>Denetim için bir kullanıcı arabirimi oluşturma
 
@@ -80,16 +80,16 @@ Windows Forms araç kutusu denetim şablonu tanımsız bir kullanıcı denetimi 
 3. Aşağıdaki ortak özellik bildirimlerini oluşturun.
 
     ```csharp
-    public int Value {
+    public int Value {
         get { return currentValue; }
     }
 
-    public string Message {
+    public string Message {
         get { return displayText; }
         set { displayText = value; }
     }
 
-    public bool ShowReset {
+    public bool ShowReset {
         get { return btnReset.Visible; }
         set { btnReset.Visible = value; }
     }
@@ -101,7 +101,7 @@ Windows Forms araç kutusu denetim şablonu tanımsız bir kullanıcı denetimi 
 4. Denetim için olaya aşağıdaki kodu koyun `Load` .
 
     ```csharp
-    private void Counter_Load(object sender, EventArgs e)
+    private void Counter_Load(object sender, EventArgs e)
     {
         currentValue = 0;
         label1.Text = Message + Value;
@@ -109,12 +109,12 @@ Windows Forms araç kutusu denetim şablonu tanımsız bir kullanıcı denetimi 
 
     ```
 
-    Olaydaki **etiket** metninin ayarlanması, <xref:System.Windows.Forms.UserControl.Load> değerleri uygulanmadan önce hedef özelliklerin yüklenmesine olanak sağlar. Oluşturucuda **etiket** metninin ayarlanması boş bir **etikete**neden olur.
+    Olaydaki **etiket** metninin ayarlanması, <xref:System.Windows.Forms.UserControl.Load> değerleri uygulanmadan önce hedef özelliklerin yüklenmesine olanak sağlar. Oluşturucuda **etiket** metninin ayarlanması boş bir **etikete** neden olur.
 
 5. Sayacı artırmak için aşağıdaki ortak yöntemi oluşturun.
 
     ```csharp
-    public void Increment()
+    public void Increment()
     {
         currentValue++;
         label1.Text = displayText + Value;
@@ -126,7 +126,7 @@ Windows Forms araç kutusu denetim şablonu tanımsız bir kullanıcı denetimi 
 6. Denetim sınıfına olay için bir bildirim ekleyin `Incremented` .
 
     ```csharp
-    public event EventHandler Incremented;
+    public event EventHandler Incremented;
     ```
 
     Çağıranlar, sayaç değerindeki değişikliklere yanıt vermek için bu olaya işleyiciler ekleyebilir.
@@ -134,7 +134,7 @@ Windows Forms araç kutusu denetim şablonu tanımsız bir kullanıcı denetimi 
 7. Tasarım görünümüne dönüp olay işleyicisini oluşturmak için **Sıfırla** düğmesine çift tıklayın `btnReset_Click` . Ardından, aşağıdaki örnekte gösterildiği gibi doldurmanız gerekir.
 
     ```csharp
-    private void btnReset_Click(object sender, EventArgs e)
+    private void btnReset_Click(object sender, EventArgs e)
     {
         currentValue = 0;
         label1.Text = displayText + Value;
@@ -142,13 +142,13 @@ Windows Forms araç kutusu denetim şablonu tanımsız bir kullanıcı denetimi 
 
     ```
 
-8. Sınıf tanımının hemen üzerinde, `ProvideToolboxControl` öznitelik bildiriminde, ilk parametresinin değerini `"MyWinFormsControl.Counter"` olarak değiştirin `"General"` . Bu, **araç kutusunda**denetimi barındıracak olan öğe grubunun adını ayarlar.
+8. Sınıf tanımının hemen üzerinde, `ProvideToolboxControl` öznitelik bildiriminde, ilk parametresinin değerini `"MyWinFormsControl.Counter"` olarak değiştirin `"General"` . Bu, **araç kutusunda** denetimi barındıracak olan öğe grubunun adını ayarlar.
 
     Aşağıdaki örnek, `ProvideToolboxControl` özniteliğini ve ayarlanmış sınıf tanımını gösterir.
 
     ```csharp
     [ProvideToolboxControl("General", false)]
-    public partial class Counter : UserControl
+    public partial class Counter : UserControl
     ```
 
 ### <a name="test-the-control"></a>Denetimi test etme
@@ -157,7 +157,7 @@ Windows Forms araç kutusu denetim şablonu tanımsız bir kullanıcı denetimi 
 
 #### <a name="to-test-the-control"></a>Denetimi test etmek için
 
-1. **Hata ayıklamayı başlatmak**için **F5** 'e basın.
+1. **Hata ayıklamayı başlatmak** için **F5** 'e basın.
 
     Bu komut projeyi oluşturur ve denetimin yüklü olduğu ikinci bir Visual Studio örneğini açar.
 
@@ -190,7 +190,7 @@ Windows Forms araç kutusu denetim şablonu tanımsız bir kullanıcı denetimi 
     else counter1.ShowReset = true;
     ```
 
-13. **F5**tuşuna basın.
+13. **F5** tuşuna basın.
 
     Form açılır. `Counter`Denetimde aşağıdaki metin görüntülenir.
 
@@ -214,7 +214,7 @@ Windows Forms araç kutusu denetim şablonu tanımsız bir kullanıcı denetimi 
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bir **araç kutusu** denetimi oluştururken, Visual Studio projenizin \bin\debug\ klasöründe *ProjectName. vsix* adlı bir dosya oluşturur. *. Vsix* dosyasını bir ağa veya bir Web sitesine yükleyerek bu denetimi dağıtabilirsiniz. Bir Kullanıcı *. vsix* dosyasını açtığında, denetim yüklenir ve kullanıcının bilgisayarında Visual Studio **araç kutusu** 'na eklenir. Alternatif olarak, kullanıcıların **araçları** [Visual Studio Marketplace](https://marketplace.visualstudio.com/) *.vsix*  >  **Uzantılar ve güncelleştirmeler** iletişim kutusunda bulabilmeleri için. vsix dosyasını Visual Studio Market yükleyebilirsiniz.
+Bir **araç kutusu** denetimi oluştururken, Visual Studio projenizin \bin\debug\ klasöründe *ProjectName. vsix* adlı bir dosya oluşturur. *. Vsix* dosyasını bir ağa veya bir Web sitesine yükleyerek bu denetimi dağıtabilirsiniz. Bir Kullanıcı *. vsix* dosyasını açtığında, denetim yüklenir ve kullanıcının bilgisayarında Visual Studio **araç kutusu** 'na eklenir. Alternatif olarak, kullanıcıların **araçları** [](https://marketplace.visualstudio.com/)   >  **Uzantılar ve güncelleştirmeler** iletişim kutusunda bulabilmeleri için. vsix dosyasını Visual Studio Market yükleyebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

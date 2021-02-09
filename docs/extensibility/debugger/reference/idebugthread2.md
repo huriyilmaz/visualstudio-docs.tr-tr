@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 221b4b1b-4a26-466e-bc29-5eff800fab13
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1965ff1b4cfa89e4584c194942dec7ae486473ff
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a3eb4710e3073ee49aa9660aa322b4638c4c0d24
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80718587"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99901618"
 ---
 # <a name="idebugthread2"></a>IDebugThread2
 Bu arabirim, bir programda çalışan bir iş parçacığını temsil eder.
@@ -50,7 +50,7 @@ IDebugThread2 : IUnknown
 |[CanSetNextStatement](../../../extensibility/debugger/reference/idebugthread2-cansetnextstatement.md)|Sonraki deyimin verilen yığın çerçevesine ve kod bağlamına ayarlanamayacağını belirler.|
 |[SetNextStatement](../../../extensibility/debugger/reference/idebugthread2-setnextstatement.md)|Sonraki ifadeyi verilen yığın çerçevesine ve kod bağlamına ayarlar.|
 |[GetThreadId](../../../extensibility/debugger/reference/idebugthread2-getthreadid.md)|Sistem iş parçacığı tanımlayıcısını alır.|
-|[Suspend](../../../extensibility/debugger/reference/idebugthread2-suspend.md)|Bir iş parçacığını askıya alır.|
+|[Askıya Alma](../../../extensibility/debugger/reference/idebugthread2-suspend.md)|Bir iş parçacığını askıya alır.|
 |[Sürdür](../../../extensibility/debugger/reference/idebugthread2-resume.md)|Bir iş parçacığını sürdürür.|
 |[GetThreadProperties](../../../extensibility/debugger/reference/idebugthread2-getthreadproperties.md)|Bir iş parçacığını tanımlayan özellikleri alır.|
 |[GetLogicalThread](../../../extensibility/debugger/reference/idebugthread2-getlogicalthread.md)|Bu fiziksel iş parçacığı ile ilişkili mantıksal iş parçacığını alır.|

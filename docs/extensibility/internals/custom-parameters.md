@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: ba5c364b-66e6-47ea-9760-a0b70de8f0a0
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f2fd2ba746f10094a79f1b37e57ba4ca90ff117b
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+ms.openlocfilehash: 1b4927e63bec93fbe7b6730e131a0893372aa70d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96328450"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99902968"
 ---
 # <a name="custom-parameters"></a>Özel parametreler
 Özel parametreler sihirbaz başladıktan sonra sihirbazın işlemini denetler. İlgili bir *. vsz* dosyası, tümleşik geliştirme ORTAMı (IDE) tarafından paketlenmiş ve sihirbaz başlatıldığında dize dizisi olarak sihirbaza geçilen Kullanıcı tanımlı parametrelerin dizisini sağlar. Sihirbaz daha sonra dizeler dizisini ayrıştırır ve sihirbazın gerçek işlemini denetlemek için bu bilgileri kullanır. Bu şekilde, bir sihirbaz *. vsz* dosyasının içeriğine bağlı olarak işlevselliği özelleştirebilir.

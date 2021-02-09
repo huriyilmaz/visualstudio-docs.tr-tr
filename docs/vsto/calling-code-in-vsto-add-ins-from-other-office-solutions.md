@@ -16,15 +16,15 @@ helpviewer_keywords:
 - calling code from VBA
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: fad3f107487e4736ccd0a6aa59ea5a801b5f72e5
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: deb8fec9212c686bce670df6bab23ed56e51741f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96847851"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99903800"
 ---
 # <a name="call-code-in-vsto-add-ins-from-other-office-solutions"></a>Diğer Office çözümlerindeki VSTO eklentilerindeki kodu çağırma
   VSTO eklentiinizdeki bir nesneyi diğer Microsoft Office çözümleri de dahil olmak üzere diğer çözümlere kullanıma sunabilirsiniz. Bu, VSTO eklentisinin diğer çözümlerin kullanmasını sağlamak istediğiniz bir hizmet sağlıyorsa yararlı olur. Örneğin, bir Web hizmetinden finans verilerinde hesaplamalar gerçekleştiren Microsoft Office Excel için bir VSTO eklentileriniz varsa, diğer çözümler çalışma zamanında Excel VSTO eklentisini çağırarak bu hesaplamaları gerçekleştirebilir.
@@ -84,7 +84,7 @@ ms.locfileid: "96847851"
 ### <a name="expose-classes-to-vba"></a>Sınıfları VBA 'da kullanıma sunma
  Yukarıda belirtilen adımları gerçekleştirdiğinizde, VBA kodu yalnızca arabirimde bildirdiğiniz yöntemleri çağırabilir. VBA kodu, sınıfınızın gibi temel sınıflardan elde ettiği yöntemler de dahil olmak üzere sınıfınıza başka yöntemler çağrılamaz <xref:System.Object> .
 
- Alternatif olarak, sıralamasının [IDispatch](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> oto ya da oto Dual değerine ayarlayarak IDispatch arabirimini kullanıma sunabilirsiniz <xref:System.Runtime.InteropServices.ClassInterfaceType> . Arabirimi kullanıma sunmanız durumunda, yöntemleri ayrı bir arabirimde bildirmeniz gerekmez. Ancak, VBA kodu, gibi temel sınıflardan edinilen yöntemler de dahil olmak üzere sınıfınızdan ortak ve statik olmayan yöntemleri çağırabilir <xref:System.Object> . Ayrıca, erken bağlama kullanan işlem dışı istemciler sınıfınızı çağıramaz.
+ Alternatif olarak, sıralamasının [](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> oto ya da oto Dual değerine ayarlayarak IDispatch arabirimini kullanıma sunabilirsiniz <xref:System.Runtime.InteropServices.ClassInterfaceType> . Arabirimi kullanıma sunmanız durumunda, yöntemleri ayrı bir arabirimde bildirmeniz gerekmez. Ancak, VBA kodu, gibi temel sınıflardan edinilen yöntemler de dahil olmak üzere sınıfınızdan ortak ve statik olmayan yöntemleri çağırabilir <xref:System.Object> . Ayrıca, erken bağlama kullanan işlem dışı istemciler sınıfınızı çağıramaz.
 
 ### <a name="expose-classes-to-out-of-process-clients"></a><a name="outofproc"></a> Sınıfları işlem dışı istemcilerde kullanıma sunma
  VSTO eklentiinizdeki bir sınıfı işlem dışı istemcilere sunmak istiyorsanız, <xref:System.Runtime.InteropServices.StandardOleMarshalObject> işlem dışı istemcilerin sunulan VSTO eklenti nesnesini çağırabilecekleri şekilde sınıfından sınıfını türetirsiniz... Aksi takdirde, işlem dışı bir istemcide kullanıma sunulan nesnenizin bir örneğini alma girişimleri beklenmedik şekilde başarısız olabilir.
