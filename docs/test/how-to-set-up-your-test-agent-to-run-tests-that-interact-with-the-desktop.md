@@ -9,13 +9,13 @@ helpviewer_keywords:
 ms.assetid: 3a94dd07-6d17-402c-ae8f-7947143755c9
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
-ms.openlocfilehash: 13949465677301a336f0a4738e903657dbfe2b7f
-ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
+manager: jmartens
+ms.openlocfilehash: 830469525429d298f1c9bf03b845a1132021373a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95441019"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99926644"
 ---
 # <a name="how-to-set-up-your-test-agent-to-run-tests-that-interact-with-the-desktop"></a>Nasıl yapılır: Masaüstü ile etkileşimi olan testleri çalıştırmak için test aracınızı ayarlama
 
@@ -45,7 +45,7 @@ Masaüstüyle etkileşim kurması gereken bir görevi gerçekleştiren bir role 
 
 ## <a name="to-set-up-an-agent-to-run-as-a-process"></a>Bir aracıyı işlem olarak çalışacak şekilde ayarlamak için
 
-1. Bir işlem olarak çalıştırmak üzere yüklediğiniz test aracısını yapılandırmak için **Start**  >  **Test Aracısı yapılandırma aracı**'nı Başlat ' a gidin.
+1. Bir işlem olarak çalıştırmak üzere yüklediğiniz test aracısını yapılandırmak için   >  **Test Aracısı yapılandırma aracı**'nı Başlat ' a gidin.
 
    **Test aracısını Yapılandır** iletişim kutusu görüntülenir.
 
@@ -80,7 +80,7 @@ Masaüstüyle etkileşim kurması gereken bir görevi gerçekleştiren bir role 
 7. **Yapılandırma Özeti** iletişim kutusunu kapatmak için **Kapat**' ı seçin. Ardından, **Test Aracısı yapılandırma aracı**'nı kapatmak Için yeniden **Kapat** ' ı seçin.
 
    > [!NOTE]
-   > İşlem olarak çalışan bir test aracısı için bilgisayarda çalışan bir bildirim alanı simgesi vardır. Test aracısının durumunu gösterir. Bu aracı kullanarak bir işlem olarak çalışıyorsa aracıyı başlatabilir, durdurabilir veya yeniden başlatabilirsiniz. Test aracısını çalışmıyorsa bir işlem olarak başlatmak için, **Start**  >  **Visual Studio**  >  **Microsoft Visual Studio Test Aracısı**' nı Başlat ' ı seçin.
+   > İşlem olarak çalışan bir test aracısı için bilgisayarda çalışan bir bildirim alanı simgesi vardır. Test aracısının durumunu gösterir. Bu aracı kullanarak bir işlem olarak çalışıyorsa aracıyı başlatabilir, durdurabilir veya yeniden başlatabilirsiniz. Test aracısını çalışmıyorsa bir işlem olarak başlatmak için,   >  **Visual Studio**  >  **Microsoft Visual Studio Test Aracısı**' nı Başlat ' ı seçin.
 
    ::: moniker range="vs-2017"
    Bu test aracısı için test denetleyicisi Team Foundation Server kaydedilmişse, etkileşimli bir işlem olarak çalışan bir test aracısının durumu, Microsoft Test Yöneticisi için **Laboratuvar merkezindeki** **denetleyiciler** görünümünde görüntülenir. Etkileşimli bir işlem olarak çalıştığını göstermek için önceki bir yıldız simgesiyle listelenir. Bu test aracısını yeniden başlatmak için, **denetleyiciler** görünümü değil, test aracısı için bilgisayarda çalışan aracı kullanmanız gerekir.

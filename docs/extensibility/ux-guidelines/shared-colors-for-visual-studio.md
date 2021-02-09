@@ -6,15 +6,15 @@ ms.topic: conceptual
 ms.assetid: 8d11b9a0-6175-4f2e-8e7f-79daee1bfd41
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 939a327100b1fcf0908c56a4fc67540e646eac7e
-ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
+ms.openlocfilehash: 856f071cbab3156daa6afd0a5282a69636f2fe8f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97668917"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99927229"
 ---
 # <a name="shared-colors-for-visual-studio"></a>Visual Studio için paylaşılan renkler
 Ortak Visual Studio Kabuk öğelerini kullanan kullanıcı arabirimini tasarlarken veya arabirim öğenizin benzer özelliklerle tutarlı olmasını istiyorsanız, renkleri seçmek ve atamak için paket tanımlama dosyalarında mevcut belirteç adlarını kullanın. Bu, UI 'nizin genel Visual Studio ortamı ile tutarlı kalmasını ve Temalar eklendiğinde veya güncelleştirildiğinde otomatik olarak güncelleştirilmesini sağlar.
@@ -111,7 +111,7 @@ Belirteç adlarını doğru kullandığınızdan emin olun:
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `CommonControls.CheckBoxBackground` |
+| Arka Plan | `CommonControls.CheckBoxBackground` |
 | Kenarlık | `CommonControls.CheckBoxBorder` |
 | Metin | `CommonControls.CheckBoxText` |
 | Simge | `CommonControls.CheckBoxGlyph` |
@@ -122,7 +122,7 @@ Belirteç adlarını doğru kullandığınızdan emin olun:
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `CommonControls.CheckBoxBackgroundDisabled` |
+| Arka Plan | `CommonControls.CheckBoxBackgroundDisabled` |
 | Kenarlık | `CommonControls.CheckBoxBorderDisabled` |
 | Metin | `CommonControls.CheckBoxTextDisabled` |
 | Simge | `CommonControls.CheckBoxGlyphDisabled` |
@@ -133,7 +133,7 @@ Belirteç adlarını doğru kullandığınızdan emin olun:
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `CommonControls.CheckBoxBackgroundHover` |
+| Arka Plan | `CommonControls.CheckBoxBackgroundHover` |
 | Kenarlık | `CommonControls.CheckBoxBorderHover` |
 | Metin | `CommonControls.CheckBoxTextHover` |
 | Simge | `CommonControls.CheckBoxGlyphHover` |
@@ -144,7 +144,7 @@ Belirteç adlarını doğru kullandığınızdan emin olun:
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `CommonControls.CheckBoxBackgroundPressed` |
+| Arka Plan | `CommonControls.CheckBoxBackgroundPressed` |
 | Kenarlık | `CommonControls.CheckBoxBorderPressed` |
 | Metin | `CommonControls.CheckBoxTextPressed` |
 | Simge | `CommonControls.CheckBoxGlyphPressed` |
@@ -155,7 +155,7 @@ Belirteç adlarını doğru kullandığınızdan emin olun:
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `CommonControls.CheckBoxBackgroundFocused` |
+| Arka Plan | `CommonControls.CheckBoxBackgroundFocused` |
 | Kenarlık | `CommonControls.CheckBoxBorderFocused` |
 | Metin | `CommonControls.CheckBoxTextFocused` |
 | Simge | `CommonControls.CheckBoxGlyphFocused` |
@@ -174,7 +174,7 @@ Belirteç adlarını doğru kullandığınızdan emin olun:
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `CommonControls.ComboBoxBackground` |
+| Arka Plan | `CommonControls.ComboBoxBackground` |
 | Kenarlık | `CommonControls.ComboBoxBorder` |
 | Metin | `CommonControls.ComboBoxText` |
 | Ayırıcı | `CommonControls.ComboBoxSeparator` |
@@ -187,7 +187,7 @@ Belirteç adlarını doğru kullandığınızdan emin olun:
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `CommonControls.ComboBoxBackgroundDisabled` |
+| Arka Plan | `CommonControls.ComboBoxBackgroundDisabled` |
 | Kenarlık | `CommonControls.ComboBoxBorderDisabled` |
 | Metin | `CommonControls.ComboBoxTextDisabled` |
 | Ayırıcı | `CommonControls.ComboBoxSeparatorDisabled` |
@@ -200,7 +200,7 @@ Belirteç adlarını doğru kullandığınızdan emin olun:
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `CommonControls.ComboBoxBackgroundHover` |
+| Arka Plan | `CommonControls.ComboBoxBackgroundHover` |
 | Kenarlık | `CommonControls.ComboBoxBorderHover` |
 | Metin | `CommonControls.ComboBoxTextHover` |
 | Ayırıcı | `CommonControls.ComboBoxSeparatorHover` |
@@ -213,7 +213,7 @@ Belirteç adlarını doğru kullandığınızdan emin olun:
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `CommonControls.ComboBoxBackgroundPressed` |
+| Arka Plan | `CommonControls.ComboBoxBackgroundPressed` |
 | Kenarlık | `CommonControls.ComboBoxBorderPressed` |
 | Metin | `CommonControls.ComboBoxTextPressed` |
 | Ayırıcı | `CommonControls.ComboBoxSeparatorPressed` |
@@ -226,7 +226,7 @@ Belirteç adlarını doğru kullandığınızdan emin olun:
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `CommonControls.ComboBoxListBackground`<br />`CommonControls.ComboBoxListBackgroundHover`<br />`CommonControls.ComboBoxListItemBackgroundPressed`<br />`CommonControls.ComboBoxListItemBackgroundFocused` |
+| Arka Plan | `CommonControls.ComboBoxListBackground`<br />`CommonControls.ComboBoxListBackgroundHover`<br />`CommonControls.ComboBoxListItemBackgroundPressed`<br />`CommonControls.ComboBoxListItemBackgroundFocused` |
 | Kenarlık | `CommonControls.ComboBoxListBorder`<br />`CommonControls.ComboBoxListBorderHover`<br />`CommonControls.ComboBoxListBorderPressed`<br />`CommonControls.ComboBoxListBorderFocused` |
 | Öğe metni | `CommonControls.ComboBoxListItemText`<br /> `CommonControls.ComboBoxListItemTextHover`<br />`CommonControls.ComboBoxListItemTextPressed`<br />`CommonControls.ComboBoxListItemTextFocused` |
 | Arka plan gölgesi | `CommonControls.ComboBoxListBackgroundShadow` |
@@ -237,7 +237,7 @@ Belirteç adlarını doğru kullandığınızdan emin olun:
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `CommonControls.ComboBoxBackgroundFocused` |
+| Arka Plan | `CommonControls.ComboBoxBackgroundFocused` |
 | Kenarlık | `CommonControls.ComboBoxBorderFocused` |
 | Metin | `CommonControls.ComboBoxTextFocused` |
 | Ayırıcı | `CommonControls.ComboBoxSeparatorFocused` |
@@ -268,7 +268,7 @@ Sütun üst bilgileri, bir arka plan, kenarlık, başlık metni ve genellikle bi
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Header.Default` |
+| Arka Plan | `Header.Default` |
 | Ön plan (metin) | `Environment.CommandBarTextActive` |
 | Ön plan (karakter) | `Header.Glyph` |
 | Kenarlık | `Header.SeparatorLine` |
@@ -277,7 +277,7 @@ Sütun üst bilgileri, bir arka plan, kenarlık, başlık metni ve genellikle bi
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Header.MouseOver` |
+| Arka Plan | `Header.MouseOver` |
 | Ön plan (metin) | `Environment.CommandBarTextHover` |
 | Ön plan (karakter) | `Header.MouseOverGlyph` |
 | Kenarlık | `Header.SeparatorLine` |
@@ -286,7 +286,7 @@ Sütun üst bilgileri, bir arka plan, kenarlık, başlık metni ve genellikle bi
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `CommonControls.CheckBoxBackgroundPressed` |
+| Arka Plan | `CommonControls.CheckBoxBackgroundPressed` |
 | Ön plan (metin) | `CommonControls.CheckBoxBorderPressed` |
 | Ön plan (karakter) | `CommonControls.CheckBoxTextPressed` |
 | Kenarlık | `CommonControls.CheckBoxGlyphPressed` |
@@ -298,7 +298,7 @@ Sütun üst bilgileri, bir arka plan, kenarlık, başlık metni ve genellikle bi
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | Geçirgen |
+| Arka Plan | Geçirgen |
 | Ön plan (metin) | `Environment.CommandBarTextActive` |
 | Kenarlık | Yok |
 
@@ -306,7 +306,7 @@ Sütun üst bilgileri, bir arka plan, kenarlık, başlık metni ve genellikle bi
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `TreeView.SelectedItemActive` |
+| Arka Plan | `TreeView.SelectedItemActive` |
 | Ön plan (metin) | `TreeView.SelectedItemActiveText` |
 | Kenarlık | Yok |
 
@@ -314,7 +314,7 @@ Sütun üst bilgileri, bir arka plan, kenarlık, başlık metni ve genellikle bi
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `TreeView.SelectedItemInactive` |
+| Arka Plan | `TreeView.SelectedItemInactive` |
 | Ön plan (metin) | `TreeView.SelectedItemInactiveText` |
 | Kenarlık | Yok |
 
@@ -356,7 +356,7 @@ Yönerge metni, iletişim kutusunda veya belge sayfasında ne yapacaklarınız i
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
 | Ön plan (metin) | `Environment.ControlRequiredHintText` |
-| Arka plan | `Environment.ControlRequiredBackground` |
+| Arka Plan | `Environment.ControlRequiredBackground` |
 
 **Arama kutusu denetim metni**
 
@@ -424,7 +424,7 @@ Popüler bir bağlam hakkında daha fazla bilgi sağlamak için ve her zaman bir
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `InfoBar.InfoBarBackground` |
+| Arka Plan | `InfoBar.InfoBarBackground` |
 | Ön plan (metin) | `InfoBar.InfoBar` |
 | Kenarlık | `InfoBar.InfoBarBorder` |
 
@@ -434,7 +434,7 @@ Popüler bir bağlam hakkında daha fazla bilgi sağlamak için ve her zaman bir
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `InfoBar.CloseButton` |
+| Arka Plan | `InfoBar.CloseButton` |
 | Kenarlık | `InfoBar.CloseButtonBorder` |
 | Simge | `InfoBar.CloseButtonGlyph` |
 
@@ -444,7 +444,7 @@ Popüler bir bağlam hakkında daha fazla bilgi sağlamak için ve her zaman bir
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `InfoBar.CloseButtonHover` |
+| Arka Plan | `InfoBar.CloseButtonHover` |
 | Kenarlık | `InfoBar.CloseButtonHoverBorder` |
 | Simge | `InfoBar.CloseButtonHoverGlyph` |
 
@@ -454,7 +454,7 @@ Popüler bir bağlam hakkında daha fazla bilgi sağlamak için ve her zaman bir
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `InfoBar.CloseButtonDown` |
+| Arka Plan | `InfoBar.CloseButtonDown` |
 | Kenarlık | `InfoBar.CloseButtonDownBorder` |
 | Simge | `InfoBar.CloseButtonDownGlyph` |
 
@@ -512,7 +512,7 @@ Popüler bir bağlam hakkında daha fazla bilgi sağlamak için ve her zaman bir
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `InfoBar.Button` |
+| Arka Plan | `InfoBar.Button` |
 | Ön plan (metin) | `InfoBar.Button` |
 | Kenarlık | `InfoBar.ButtonBorder` |
 
@@ -522,7 +522,7 @@ Popüler bir bağlam hakkında daha fazla bilgi sağlamak için ve her zaman bir
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `InfoBar.ButtonMouseOver` |
+| Arka Plan | `InfoBar.ButtonMouseOver` |
 | Ön plan (metin) | `InfoBar.ButtonMouseOver` |
 | Kenarlık | `InfoBar.ButtonMouseOverBorder` |
 
@@ -532,7 +532,7 @@ Popüler bir bağlam hakkında daha fazla bilgi sağlamak için ve her zaman bir
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `InfoBar.ButtonMouseDown` |
+| Arka Plan | `InfoBar.ButtonMouseDown` |
 | Ön plan (metin) | `InfoBar.ButtonMouseDown` |
 | Kenarlık | `InfoBar.ButtonMouseDownBorder` |
 
@@ -542,7 +542,7 @@ Popüler bir bağlam hakkında daha fazla bilgi sağlamak için ve her zaman bir
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `InfoBar.ButtonDisabled` |
+| Arka Plan | `InfoBar.ButtonDisabled` |
 | Ön plan (metin) | `InfoBar.ButtonDisabled` |
 | Kenarlık | `InfoBar.ButtonDisabledBorder` |
 
@@ -552,7 +552,7 @@ Popüler bir bağlam hakkında daha fazla bilgi sağlamak için ve her zaman bir
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `InfoBar.ButtonFocus` |
+| Arka Plan | `InfoBar.ButtonFocus` |
 | Ön plan (metin) | `InfoBar.ButtonFocus` |
 | Kenarlık | `InfoBar.ButtonFocusBorder` |
 
@@ -598,7 +598,7 @@ Kaydırma çubukları, Visual Studio ortamı tarafından stillendirilerek temal�
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.ScrollBarArrowBackground`<br />(Kaydırma çubuğu ile aynı renge ayarlanır.) |
+| Arka Plan | `Environment.ScrollBarArrowBackground`<br />(Kaydırma çubuğu ile aynı renge ayarlanır.) |
 | Ön plan (karakter) | `Environment.ScrollBarArrowGlyph` |
 
 **Kaydırma çubuğu oku: üzerine gelme durumu**
@@ -607,7 +607,7 @@ Kaydırma çubukları, Visual Studio ortamı tarafından stillendirilerek temal�
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.ScrollBarArrowMouseOverBackground`<br />(Kaydırma çubuğu ile aynı renge ayarlanır.) |
+| Arka Plan | `Environment.ScrollBarArrowMouseOverBackground`<br />(Kaydırma çubuğu ile aynı renge ayarlanır.) |
 | Ön plan (karakter) | `Environment.ScrollBarArrowGlyphMouseOver` |
 
 **Kaydırma çubuğu oku: basılmış durumu**
@@ -616,7 +616,7 @@ Kaydırma çubukları, Visual Studio ortamı tarafından stillendirilerek temal�
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.ScrollBarArrowPressedBackground`<br />(Kaydırma çubuğu ile aynı renge ayarlanır.) |
+| Arka Plan | `Environment.ScrollBarArrowPressedBackground`<br />(Kaydırma çubuğu ile aynı renge ayarlanır.) |
 | Ön plan (karakter) | `Environment.ScrollBarArrowGlyphPressed` |
 
 ### <a name="search-boxes"></a><a name="BKMK_SearchBoxes"></a>Arama kutuları
@@ -645,7 +645,7 @@ Bir arama kutusu, bazıları birbirini dışlamalı birkaç durumdan biri olabil
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `SearchControl.FocusedBackground` |
+| Arka Plan | `SearchControl.FocusedBackground` |
 | Ön plan (metin) | `SearchControl.FocusedBackground` |
 | Kenarlık | `SearchControl.FocusedBorder` |
 | Ayırıcı | `SearchControl.FocusedDropDownSeparator` |
@@ -656,7 +656,7 @@ Bir arama kutusu, bazıları birbirini dışlamalı birkaç durumdan biri olabil
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `SearchControl.SearchActiveBackground` |
+| Arka Plan | `SearchControl.SearchActiveBackground` |
 | Ön plan (metin) | `SearchControl.SearchActiveBackground` |
 | Kenarlık | `SearchControl.UnfocusedBorder` |
 | Ayırıcı | `SearchControl.DropDownSeparator` |
@@ -667,7 +667,7 @@ Bir arama kutusu, bazıları birbirini dışlamalı birkaç durumdan biri olabil
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `SearchControl.Unfocused` |
+| Arka Plan | `SearchControl.Unfocused` |
 | Ön plan (metin) | `SearchControl.Unfocused` |
 | Kenarlık | `SearchControl.UnfocusedBorder` |
 | Ayırıcı | `SearchControl.DropDownSeparator` |
@@ -678,7 +678,7 @@ Bir arama kutusu, bazıları birbirini dışlamalı birkaç durumdan biri olabil
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `SearchControl.Selection` |
+| Arka Plan | `SearchControl.Selection` |
 | Ön plan (metin) | `SearchControl.FocusedBackground` |
 | Kenarlık | Yok |
 | Ayırıcı | `SearchControl.FocusedDropDownSeparator` |
@@ -689,7 +689,7 @@ Bir arama kutusu, bazıları birbirini dışlamalı birkaç durumdan biri olabil
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `SearchControl.Disabled` |
+| Arka Plan | `SearchControl.Disabled` |
 | Ön plan (metin) | `SearchControl.Disabled` |
 | Kenarlık | `SearchControl.DisabledBorder` |
 | Ayırıcı | `SearchControl.DropDownSeparator` |
@@ -700,7 +700,7 @@ Bir arama kutusu, bazıları birbirini dışlamalı birkaç durumdan biri olabil
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | Yok |
+| Arka Plan | Yok |
 | Ön plan (karakter ara) | `SearchControl.SearchGlyph` |
 | Ön plan (glifi Durdur) | `SearchControl.StopGlyph` |
 | Ön plan (glifi temizle) | `SearchControl.ClearGlyph` |
@@ -712,7 +712,7 @@ Bir arama kutusu, bazıları birbirini dışlamalı birkaç durumdan biri olabil
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | Yok |
+| Arka Plan | Yok |
 | Ön plan (karakter ara) | `SearchControl.SearchGlyph` |
 | Ön plan (glifi Durdur) | `SearchControl.StopGlyph` |
 | Ön plan (glifi temizle) | `SearchControl.ClearGlyph` |
@@ -724,7 +724,7 @@ Bir arama kutusu, bazıları birbirini dışlamalı birkaç durumdan biri olabil
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `SearchControl.ActionButtonMouseDown` |
+| Arka Plan | `SearchControl.ActionButtonMouseDown` |
 | Ön plan (karakter) | `SearchControl.ActionButtonMouseDownGlyph` |
 | Kenarlık | `SearchControl.ActionButtonMouseDownBorder` |
 
@@ -734,7 +734,7 @@ Bir arama kutusu, bazıları birbirini dışlamalı birkaç durumdan biri olabil
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | Yok |
+| Arka Plan | Yok |
 | Ön plan (karakter) | `SearchControl.ActionButtonDisabledGlyph` |
 | Kenarlık | Yok |
 
@@ -744,7 +744,7 @@ Bir arama kutusu, bazıları birbirini dışlamalı birkaç durumdan biri olabil
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `SearchControl.FocusedDropDownButton` |
+| Arka Plan | `SearchControl.FocusedDropDownButton` |
 | Ön plan (karakter) | `SearchControl.FocusedDropDownButtonGlyph` |
 | Kenarlık | `SearchControl.FocusedDropDownButtonBorder` |
 
@@ -754,7 +754,7 @@ Bir arama kutusu, bazıları birbirini dışlamalı birkaç durumdan biri olabil
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `SearchControl.UnfocusedDropDownButton` |
+| Arka Plan | `SearchControl.UnfocusedDropDownButton` |
 | Ön plan (karakter) | `SearchControl.UnfocusedDropDownButtonGlyph` |
 | Kenarlık | `SearchControl.UnfocusedDropDownButtonBorder` |
 
@@ -764,7 +764,7 @@ Bir arama kutusu, bazıları birbirini dışlamalı birkaç durumdan biri olabil
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `SearchControl.MouseDownDropDownButton` |
+| Arka Plan | `SearchControl.MouseDownDropDownButton` |
 | Ön plan (karakter) | `SearchControl.MouseDownDropDownButtonGlyph` |
 | Kenarlık | `SearchControl.MouseDownDropDownButtonBorder` |
 
@@ -774,7 +774,7 @@ Bir arama kutusu, bazıları birbirini dışlamalı birkaç durumdan biri olabil
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | Yok |
+| Arka Plan | Yok |
 | Ön plan (karakter) | `SearchControl.DisabledDownButtonGlyph` |
 | Kenarlık | Yok |
 
@@ -802,7 +802,7 @@ Arama kutusu açılan menüsü, Visual Studio 'daki diğer açılan menülerden 
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `SearchControl.PopupItemsListBackgroundGradientBegin`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
+| Arka Plan | `SearchControl.PopupItemsListBackgroundGradientBegin`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
 | Ön plan (metin) | `SearchControl.PopupItemText` |
 
 **Önerilen aramalar: üzerine gelme durumu**
@@ -811,7 +811,7 @@ Arama kutusu açılan menüsü, Visual Studio 'daki diğer açılan menülerden 
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `SearchControl.PopupControlMouseOverBackgroundGradientBegin`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
+| Arka Plan | `SearchControl.PopupControlMouseOverBackgroundGradientBegin`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
 | Ön plan (metin) | `SearchControl.PopupMouseOverItemText` |
 | Kenarlık | `SearchControl.PopupControlMouseOverBorder` |
 
@@ -823,7 +823,7 @@ Arama kutusu açılan menüsü, Visual Studio 'daki diğer açılan menülerden 
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `SearchControl.PopupSectionBackgroundGradientBegin`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
+| Arka Plan | `SearchControl.PopupSectionBackgroundGradientBegin`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
 | Ön plan (onay kutusu metni) | `SearchControl.PopupCheckboxText` |
 | Ön plan (bağlantı metni) | `SearchControl.PopupButtonText` |
 | Üst bilgi arka planı | `SearchControl.PopupSectionHeaderGradientBegin`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
@@ -837,7 +837,7 @@ Arama kutusu açılan menüsü, Visual Studio 'daki diğer açılan menülerden 
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `SearchControl.PopupControlMouseOverBackgroundGradientBegin`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
+| Arka Plan | `SearchControl.PopupControlMouseOverBackgroundGradientBegin`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
 | Ön plan (onay kutusu metni) | `SearchControl.PopupCheckboxMouseDownText` |
 | Ön plan (bağlantı metni) | `SearchControl.PopupButtonMouseDownText` |
 | Kenarlık | `SearchControl.PopupControlMouseOverBorder` |
@@ -871,7 +871,7 @@ Arama kutusu açılan menüsü, Visual Studio 'daki diğer açılan menülerden 
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `TreeView.Background` |
+| Arka Plan | `TreeView.Background` |
 | Ön plan (metin) | `TreeView.Background` |
 | Ön plan (karakter) | `TreeView.Glyph` |
 | Kenarlık | Yok |
@@ -882,7 +882,7 @@ Arama kutusu açılan menüsü, Visual Studio 'daki diğer açılan menülerden 
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `TreeView.Background` |
+| Arka Plan | `TreeView.Background` |
 | Ön plan (metin) | `TreeView.Background` |
 | Ön plan (karakter) | `TreeView.GlyphMouseOver` |
 | Kenarlık | Yok |
@@ -893,7 +893,7 @@ Arama kutusu açılan menüsü, Visual Studio 'daki diğer açılan menülerden 
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `TreeView.DragOverItem` |
+| Arka Plan | `TreeView.DragOverItem` |
 | Ön plan (metin) | `TreeView.DragOverItem` |
 | Ön plan (karakter) | `TreeView.DragOverItemGlyph` |
 | Kenarlık | Yok |
@@ -904,7 +904,7 @@ Arama kutusu açılan menüsü, Visual Studio 'daki diğer açılan menülerden 
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `TreeView.SelectedItemActive` |
+| Arka Plan | `TreeView.SelectedItemActive` |
 | Ön plan (metin) | `TreeView.SelectedItemActive` |
 | Ön plan (karakter) | `TreeView.SelectedItemActiveGlyph` |
 | Kenarlık | `TreeView.FocusVisualBorder` |
@@ -915,7 +915,7 @@ Arama kutusu açılan menüsü, Visual Studio 'daki diğer açılan menülerden 
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `TreeView.SelectedItemInactive` |
+| Arka Plan | `TreeView.SelectedItemInactive` |
 | Ön plan (metin) | `TreeView.SelectedItemInactive` |
 | Ön plan (karakter) | `TreeView.SelectedItemInactiveGlyph` |
 | Kenarlık | Yok |
@@ -926,7 +926,7 @@ Arama kutusu açılan menüsü, Visual Studio 'daki diğer açılan menülerden 
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `TreeView.SelectedItemActive` |
+| Arka Plan | `TreeView.SelectedItemActive` |
 | Ön plan (metin) | `TreeView.SelectedItemActive` |
 | Ön plan (karakter) | `TreeView.SelectedItemActiveGlyphMouseOver` |
 | Kenarlık | `TreeView.FocusVisualBorder` |
@@ -937,14 +937,14 @@ Arama kutusu açılan menüsü, Visual Studio 'daki diğer açılan menülerden 
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `TreeView.SelectedItemInactive` |
+| Arka Plan | `TreeView.SelectedItemInactive` |
 | Ön plan (metin) | `TreeView.SelectedItemInactive` |
 | Ön plan (karakter) | `TreeView.SelectedItemActiveGlyphMouseOver` |
 | Kenarlık | Yok |
 
 ## <a name="shell-appearance"></a>Kabuk görünümü
 
-### <a name="background"></a>Arka plan
+### <a name="background"></a>Arka Plan
 Ortam arka planı iki katmandan oluşur. Alt katman, tüm IDE 'yi içeren düz bir renktir. En üstteki katman, komut rafı altına ve araç penceresi arasında IDE 'nin sol ve sağ kenarlarındaki kanalları otomatik olarak gizler. Üst ve alt arka plan katmanları, açık ve koyu temalarda aynı renge ayarlanır.
 
 ![Visual Studio Kabuğu arka planı (Redline)](../../extensibility/ux-guidelines/media/0303-187_shellbackgroundredline.png "0303-187_ShellBackgroundRedline")<br />Visual Studio Kabuğu arka planı (Redline)
@@ -958,7 +958,7 @@ Ortam arka planı iki katmandan oluşur. Alt katman, tüm IDE 'yi içeren düz b
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.EnvironmentBackground` |
+| Arka Plan | `Environment.EnvironmentBackground` |
 
 **Üst katman kabuğu görünümü**
 
@@ -966,7 +966,7 @@ Ortam arka planı iki katmandan oluşur. Alt katman, tüm IDE 'yi içeren düz b
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.EnvironmentBackgroundGradientBegin`<br />`Environment.EnvironmentBackgroundGradientEnd`<br />`Environment.EnvironmentBackgroundGradientMiddle1`<br />`Environment.EnvironmentBackgroundGradientMiddle2` |
+| Arka Plan | `Environment.EnvironmentBackgroundGradientBegin`<br />`Environment.EnvironmentBackgroundGradientEnd`<br />`Environment.EnvironmentBackgroundGradientMiddle1`<br />`Environment.EnvironmentBackgroundGradientMiddle2` |
 
 ### <a name="command-shelf"></a>Komut rafı
 Komut raf planları için iki belirteç adı kümesi kullanılır: menü çubuğunun bulunduğu bir küme ve komut çubuklarının bulunduğu konum. Tek bir komut çubuğu grubu, "komut çubuğu" bölümünde daha ayrıntılı olarak ele alınan kendi arka plan rengi değerlerine sahiptir. Menü çubuğu ve komut çubuğu metni sırasıyla menü ve komut çubuğu bölümlerinde ele alınmıştır.
@@ -984,7 +984,7 @@ Komut raf planları için iki belirteç adı kümesi kullanılır: menü çubuğ
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.CommandShelfHighlightGradientBegin`<br /><br />`Environment.CommandShelfHighlightGradientMiddle`<br />`Environment.CommandShelfHighlightGradientEnd` |
+| Arka Plan | `Environment.CommandShelfHighlightGradientBegin`<br /><br />`Environment.CommandShelfHighlightGradientMiddle`<br />`Environment.CommandShelfHighlightGradientEnd` |
 
 **Komut rafı komut çubuğu**
 
@@ -992,7 +992,7 @@ Komut raf planları için iki belirteç adı kümesi kullanılır: menü çubuğ
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.CommandShelfBackgroundGradientBegin`<br />`Environment.CommandShelfBackgroundGradientMiddle`<br />`Environment.CommandShelfBackgroundGradientEnd` |
+| Arka Plan | `Environment.CommandShelfBackgroundGradientBegin`<br />`Environment.CommandShelfBackgroundGradientMiddle`<br />`Environment.CommandShelfBackgroundGradientEnd` |
 
 ## <a name="manifest-designer"></a>Bildirim Tasarımcısı
 Bildirim Tasarımcısı, Windows 8 ve Windows Phone 8 projelerinde bildirim dosyasını düzenlemeyi kolaylaştırmak için bir yol olarak tasarlanmıştır. Tüketim için kullanılabilen bir paylaşılan çerçeve olmasa da, yönlendirme/gezinti sekmelerinin ve genel yapının tasarım düzen ve renklerini eşleştirmek uygun olabilir. Düzen ayrıntıları hakkında daha fazla bilgi için bkz. [Visual Studio Için düzen](../../extensibility/ux-guidelines/layout-for-visual-studio.md).
@@ -1008,33 +1008,33 @@ Bildirim Tasarımcısı, Windows 8 ve Windows Phone 8 projelerinde bildirim dosy
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `ManifestDesigner.TabActive` |
+| Arka Plan | `ManifestDesigner.TabActive` |
 | Kenarlık | Yok |
 
 **Bildirim Tasarımcısı Seçili açıklama bölmesi: varsayılan durum**
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `ManifestDesigner.DescriptionPane` |
+| Arka Plan | `ManifestDesigner.DescriptionPane` |
 
 **Bildirim Tasarımcısı Seçili içerik sayfası: varsayılan durum**
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `ManifestDesigner.Background` |
+| Arka Plan | `ManifestDesigner.Background` |
 | İletişim kutusu Yardımcısı metni | `ManifestDesigner.WatermarkText`<br />(Bu belirteç adı işlevle eşleşmiyor.) |
 
 **Bildirim Tasarımcısı sekmesi: seçilmemiş durum**
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `ManifestDesigner.Tab.Inactive` |
+| Arka Plan | `ManifestDesigner.Tab.Inactive` |
 
 **Bildirim Tasarımcısı sekmesi: üzerine gelme durumu**
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `ManifestDesigner.Tab.Mouseover` |
+| Arka Plan | `ManifestDesigner.Tab.Mouseover` |
 
 ## <a name="command-structures"></a>Komut yapıları
 
@@ -1066,7 +1066,7 @@ Menü başlıkları bir arka plan, kenarlık ve başlık metninin yanı sıra, g
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | Yok |
+| Arka Plan | Yok |
 | Ön plan (metin) | `Environment.CommandBarTextActive` |
 | Ön plan (karakter) | `Environment.CommandBarMenuGlyph` |
 | Kenarlık | Yok |
@@ -1079,7 +1079,7 @@ Menü başlıkları bir arka plan, kenarlık ve başlık metninin yanı sıra, g
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.CommandBarMouseOverBackgroundBegin`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
+| Arka Plan | `Environment.CommandBarMouseOverBackgroundBegin`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
 | Ön plan (metin) | `Environment.CommandBarTextHover` |
 | Ön plan (karakter) | `Environment.CommandBarMenuMouseOverGlyph` |
 | Kenarlık | `Environment.CommandBarBorder` |
@@ -1092,7 +1092,7 @@ Menü başlıkları bir arka plan, kenarlık ve başlık metninin yanı sıra, g
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.CommandBarMenuBackgroundGradientBegin`<br/>(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
+| Arka Plan | `Environment.CommandBarMenuBackgroundGradientBegin`<br/>(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
 | Ön plan (metin) | `Environment.CommandBarTextActive` |
 | Ön plan (karakter) | `Environment.CommandBarMenuMouseDownGlyph` |
 | Kenarlık | `Environment.CommandBarMenuBorder`<br />(Yalnızca sol, üst ve sağ kenarlar.) |
@@ -1103,7 +1103,7 @@ Menü başlıkları bir arka plan, kenarlık ve başlık metninin yanı sıra, g
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | Yok |
+| Arka Plan | Yok |
 | Ön plan (metin) | `Environment.CommandBarTextInactive` |
 | Ön plan (karakter) | `Environment.CommandBarTextInactive` |
 | Kenarlık | Yok |
@@ -1124,7 +1124,7 @@ Tek bir menü öğesi menü metnini ve isteğe bağlı bir simge, onay kutusu ya
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.CommandBarMenuBackgroundGradientBegin`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
+| Arka Plan | `Environment.CommandBarMenuBackgroundGradientBegin`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
 | Ön plan (metin) | `Environment.CommandBarTextActive` |
 | Ön plan (alt menü karakteri) | `Environment.CommandBarMenuSubmenuGlyph` |
 | Kenarlık | `Environment.CommandBarMenuBorder` |
@@ -1155,7 +1155,7 @@ Tek bir menü öğesi menü metnini ve isteğe bağlı bir simge, onay kutusu ya
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.CommandBarMenuItemMouseOver` |
+| Arka Plan | `Environment.CommandBarMenuItemMouseOver` |
 | Ön plan (metin) | `Environment.CommandBarMenuItemMouseOverText` |
 | Ön plan (alt menü karakteri) | `Environment.CommandBarMenuMouseOverSubmenuGlyph` |
 | Onay işareti | `Environment.CommandBarCheckBoxMouseOver` |
@@ -1204,7 +1204,7 @@ Bir komut çubuğu grubu, ilgili bir komut çubuğu denetimleri kümesinden olu�
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.CommandBarGradientBegin`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
+| Arka Plan | `Environment.CommandBarGradientBegin`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
 | Kenarlık | `Environment.CommandBarToolBarBorder` |
 | Sürükleme tutamacı | `Environment.CommandBarDragHandle` |
 | Ayırıcı | `Environment.CommandBarToolBarSeparator`<br />`Environment.CommandBarToolBarSeparatorHighlight` |
@@ -1225,7 +1225,7 @@ Bir komut çubuğu grubu, ilgili bir komut çubuğu denetimleri kümesinden olu�
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | Yok (komut çubuğu arka planıyla devralır) |
+| Arka Plan | Yok (komut çubuğu arka planıyla devralır) |
 | Ön plan (metin) | `Environment.CommandBarTextActive` |
 | Kenarlık | Yok |
 
@@ -1235,7 +1235,7 @@ Bir komut çubuğu grubu, ilgili bir komut çubuğu denetimleri kümesinden olu�
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.CommandBarSelected` |
+| Arka Plan | `Environment.CommandBarSelected` |
 | Ön plan (metin) | `Environment.CommandBarTextSelected` |
 | Kenarlık | `Environment.CommandBarSelectedBorder` |
 
@@ -1245,7 +1245,7 @@ Bir komut çubuğu grubu, ilgili bir komut çubuğu denetimleri kümesinden olu�
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.CommandBarMouseOverBackgroundBegin`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
+| Arka Plan | `Environment.CommandBarMouseOverBackgroundBegin`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
 | Ön plan (metin) | `Environment.CommandBarTextHover` |
 | Kenarlık | `Environment.CommandBarBorder` |
 
@@ -1255,7 +1255,7 @@ Bir komut çubuğu grubu, ilgili bir komut çubuğu denetimleri kümesinden olu�
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.CommandBarHoverOverSelected` |
+| Arka Plan | `Environment.CommandBarHoverOverSelected` |
 | Ön plan (metin) | `Environment.CommandBarTextHoverOverSelected` |
 | Kenarlık | `Environment.CommandBarHoverOverSelectedIconBorder` |
 
@@ -1265,7 +1265,7 @@ Bir komut çubuğu grubu, ilgili bir komut çubuğu denetimleri kümesinden olu�
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.CommandBarMouseDownBackgroundBegin`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
+| Arka Plan | `Environment.CommandBarMouseDownBackgroundBegin`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
 | Ön plan (metin) | `Environment.CommandBarTextMouseDown` |
 | Kenarlık | `Environment.CommandBarBorder` |
 
@@ -1275,7 +1275,7 @@ Bir komut çubuğu grubu, ilgili bir komut çubuğu denetimleri kümesinden olu�
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | Yok (komut çubuğu arka planıyla devralır) |
+| Arka Plan | Yok (komut çubuğu arka planıyla devralır) |
 | Ön plan (metin) | `Environment.CommandBarTextInactive` |
 | Kenarlık | Yok |
 
@@ -1297,7 +1297,7 @@ Bir komut çubuğu grubu, ilgili bir komut çubuğu denetimleri kümesinden olu�
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.ComboBoxBackground` |
+| Arka Plan | `Environment.ComboBoxBackground` |
 | Ön plan (metin) | `Environment.ComboBoxText` |
 | Kenarlık | `Environment.ComboBoxBorder` |
 | Ayırıcı | Ayırıcı yok |
@@ -1308,7 +1308,7 @@ Bir komut çubuğu grubu, ilgili bir komut çubuğu denetimleri kümesinden olu�
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | Yok (komut çubuğu arka planıyla devralır) |
+| Arka Plan | Yok (komut çubuğu arka planıyla devralır) |
 | Ön plan (karakter) | `Environment.ComboBoxGlyph` |
 
 **Komut çubuğu açılan listesi: varsayılan durum**
@@ -1317,7 +1317,7 @@ Bir komut çubuğu grubu, ilgili bir komut çubuğu denetimleri kümesinden olu�
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.ComboBoxPopupBackgroundBegin`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
+| Arka Plan | `Environment.ComboBoxPopupBackgroundBegin`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
 | Ön plan (metin) | `Environment.ComboBoxItemText` |
 | Kenarlık | `Environment.ComboBoxPopupBorder` |
 
@@ -1327,7 +1327,7 @@ Bir komut çubuğu grubu, ilgili bir komut çubuğu denetimleri kümesinden olu�
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.ComboBoxMouseOverBackgroundBegin`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
+| Arka Plan | `Environment.ComboBoxMouseOverBackgroundBegin`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
 | Ön plan (metin) | `Environment.ComboBoxMouseOverText` |
 | Kenarlık | `Environment.ComboBoxMouseOverBorder` |
 | Ayırıcı | `Environment.ComboBoxMouseOverSeparator` |
@@ -1338,7 +1338,7 @@ Bir komut çubuğu grubu, ilgili bir komut çubuğu denetimleri kümesinden olu�
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.ComboBoxButtonMouseOverBackground` |
+| Arka Plan | `Environment.ComboBoxButtonMouseOverBackground` |
 | Ön plan (karakter) | `Environment.ComboBoxMouseOverGlyph` |
 
 **Komut çubuğu açılır listesi: üzerine gelme durumu**
@@ -1357,7 +1357,7 @@ Bir komut çubuğu grubu, ilgili bir komut çubuğu denetimleri kümesinden olu�
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.ComboBoxFocusedBackground` |
+| Arka Plan | `Environment.ComboBoxFocusedBackground` |
 | Ön plan (metin) | `Environment.ComboBoxFocusedText` |
 | Kenarlık | `Environment.ComboBoxFocusedBorder` |
 | Ayırıcı | `Environment.ComboBoxFocusedButtonSeparator` |
@@ -1368,7 +1368,7 @@ Bir komut çubuğu grubu, ilgili bir komut çubuğu denetimleri kümesinden olu�
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.ComboBoxFocusedButtonBackground` |
+| Arka Plan | `Environment.ComboBoxFocusedButtonBackground` |
 | Ön plan (karakter) | `Environment.ComboBoxFocusedGlyph` |
 
  **Komut çubuğu açılan kutusu giriş alanı: basılı durum**
@@ -1377,7 +1377,7 @@ Bir komut çubuğu grubu, ilgili bir komut çubuğu denetimleri kümesinden olu�
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.ComboBoxMouseDownBackground` |
+| Arka Plan | `Environment.ComboBoxMouseDownBackground` |
 | Ön plan (metin) | `Environment.ComboBoxMouseDownText` |
 | Kenarlık | `Environment.ComboBoxMouseDownBorder` |
 | Ayırıcı | `Environment.ComboBoxMouseDownSeparator` |
@@ -1388,7 +1388,7 @@ Bir komut çubuğu grubu, ilgili bir komut çubuğu denetimleri kümesinden olu�
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.ComboBoxButtonMouseDownBackground` |
+| Arka Plan | `Environment.ComboBoxButtonMouseDownBackground` |
 | Ön plan (karakter) | `Environment.ComboBoxMouseDownGlyph` |
 
 **Komut çubuğu açılan kutusu giriş alanı: devre dışı durumu**
@@ -1397,7 +1397,7 @@ Bir komut çubuğu grubu, ilgili bir komut çubuğu denetimleri kümesinden olu�
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.ComboBoxDisabledBackground` |
+| Arka Plan | `Environment.ComboBoxDisabledBackground` |
 | Ön plan (metin) | `Environment.ComboBoxDisabledText` |
 | Kenarlık | `Environment.ComboBoxDisabledBorder` |
 | Ayırıcı | Ayırıcı yok |
@@ -1408,7 +1408,7 @@ Bir komut çubuğu grubu, ilgili bir komut çubuğu denetimleri kümesinden olu�
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | Yok |
+| Arka Plan | Yok |
 | Ön plan (karakter) | `Environment.ComboBoxDisabledGlyph` |
 
 #### <a name="command-bar-drop-downs"></a><a name="BKMK_CommandDropDown"></a> Komut çubuğu açılır listeleri
@@ -1429,7 +1429,7 @@ Bir komut çubuğu grubu, ilgili bir komut çubuğu denetimleri kümesinden olu�
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.DropDownBackground` |
+| Arka Plan | `Environment.DropDownBackground` |
 | Ön plan (metin) | `DropDownText` |
 | Kenarlık | `DropDownBorder` |
 | Ayırıcı | Ayırıcı yok |
@@ -1440,7 +1440,7 @@ Bir komut çubuğu grubu, ilgili bir komut çubuğu denetimleri kümesinden olu�
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | Yok |
+| Arka Plan | Yok |
 | Ön plan (karakter) | `Environment.DropDownGlyph` |
 
 **Komut çubuğu açılan listesi: varsayılan durum**
@@ -1449,7 +1449,7 @@ Bir komut çubuğu grubu, ilgili bir komut çubuğu denetimleri kümesinden olu�
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.DropDownPopupBackgroundBegin`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
+| Arka Plan | `Environment.DropDownPopupBackgroundBegin`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
 | Ön plan (metin) | `Environment.ComboBoxItemText` |
 | Kenarlık | `Environment.DropDownPopupBorder` |
 | Gölgeli | `Environment.DropShadowBackground` |
@@ -1460,7 +1460,7 @@ Bir komut çubuğu grubu, ilgili bir komut çubuğu denetimleri kümesinden olu�
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.DropDownMouseOverBackgroundBegin`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
+| Arka Plan | `Environment.DropDownMouseOverBackgroundBegin`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
 | Ön plan (metin) | `Environment.DropDownMouseOverText` |
 | Kenarlık | `Environment.DropDownMouseOverBorder` |
 | Ayırıcı | `Environment.DropDownButtonMouseOverSeparator` |
@@ -1471,7 +1471,7 @@ Bir komut çubuğu grubu, ilgili bir komut çubuğu denetimleri kümesinden olu�
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.DropDownButtonMouseOverBackground` |
+| Arka Plan | `Environment.DropDownButtonMouseOverBackground` |
 | Ön plan (karakter) | `Environment.DropDownMouseOverGlyph` |
 
 **Komut çubuğu açılır listesi: üzerine gelme durumu**
@@ -1490,7 +1490,7 @@ Bir komut çubuğu grubu, ilgili bir komut çubuğu denetimleri kümesinden olu�
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.DropDownMouseDownBackground` |
+| Arka Plan | `Environment.DropDownMouseDownBackground` |
 | Ön plan (metin) | `Environment.DropDownMouseDownText` |
 | Kenarlık | `Environment.DropDownMouseDownBorder` |
 | Ayırıcı | `Environment.DropDownButtonMouseDownSeparator` |
@@ -1501,7 +1501,7 @@ Bir komut çubuğu grubu, ilgili bir komut çubuğu denetimleri kümesinden olu�
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.DropDownButtonMouseDownBackground` |
+| Arka Plan | `Environment.DropDownButtonMouseDownBackground` |
 | Ön plan (karakter) | `Environment.DropDownMouseDownGlyph` |
 
 **Komut çubuğu aşağı açılan seçim alanı: devre dışı durumu**
@@ -1510,7 +1510,7 @@ Bir komut çubuğu grubu, ilgili bir komut çubuğu denetimleri kümesinden olu�
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.DropDownDisabledBackground` |
+| Arka Plan | `Environment.DropDownDisabledBackground` |
 | Ön plan (metin) | `Environment.DropDownDisabledText` |
 | Kenarlık | `Environment.DropDownDisabledBorder` |
 | Ayırıcı | Ayırıcı yok |
@@ -1521,7 +1521,7 @@ Bir komut çubuğu grubu, ilgili bir komut çubuğu denetimleri kümesinden olu�
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | Yok |
+| Arka Plan | Yok |
 | Ön plan (karakter) | `Environment.DropDownDisabledGlyph` |
 
 #### <a name="command-bar-split-buttons"></a>Komut çubuğu bölme düğmeleri
@@ -1540,7 +1540,7 @@ Bölünmüş düğmeler, birçok belirteç adını düğmeler, menüler ve komut
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | Yok |
+| Arka Plan | Yok |
 | Ön plan (metin) | `Environment.CommandBarTextActive` |
 | Ön plan (karakter) | `Environment.CommandBarSplitButtonGlyph` |
 | Kenarlık | Yok |
@@ -1552,7 +1552,7 @@ Bölünmüş düğmeler, birçok belirteç adını düğmeler, menüler ve komut
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.CommandBarMouseOverBackgroundBegin`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
+| Arka Plan | `Environment.CommandBarMouseOverBackgroundBegin`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
 | Ön plan (metin) | `Environment.CommandBarTextHover` |
 | Ön plan (karakter) | `Environment.CommandBarSplitButtonMouseOverGlyph` |
 | Kenarlık | `Environment.CommandBarBorder` |
@@ -1564,7 +1564,7 @@ Bölünmüş düğmeler, birçok belirteç adını düğmeler, menüler ve komut
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.CommandBarMouseDownBackgroundBegin`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
+| Arka Plan | `Environment.CommandBarMouseDownBackgroundBegin`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
 | Ön plan (metin) | `Environment.CommandBarTextMouseDown` |
 | Ön plan (karakter) | `Environment.CommandBarSplitButtonMouseDownGlyph` |
 | Kenarlık | `Environment.CommandBarBorder` |
@@ -1576,7 +1576,7 @@ Bölünmüş düğmeler, birçok belirteç adını düğmeler, menüler ve komut
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | Yok |
+| Arka Plan | Yok |
 | Ön plan (metin) | `Environment.ComboBoxItemTextInactive` |
 | Ön plan (karakter) | `Environment.CommandBarTextInactive` |
 | Kenarlık | Yok |
@@ -1599,7 +1599,7 @@ Bölünmüş düğmeler, birçok belirteç adını düğmeler, menüler ve komut
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.CommandBarOptionsBackground` |
+| Arka Plan | `Environment.CommandBarOptionsBackground` |
 | Ön plan (karakter) | `Environment.CommandBarOptionsGlyph` |
 
 **Komut çubuğu ' diğer seçenekler ' ve ' taşma ' düğmeleri: üzerine gelme durumu**
@@ -1610,7 +1610,7 @@ Bölünmüş düğmeler, birçok belirteç adını düğmeler, menüler ve komut
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.CommandBarOptionsMouseOverBackgroundBegin`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
+| Arka Plan | `Environment.CommandBarOptionsMouseOverBackgroundBegin`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
 | Ön plan (karakter) | `Environment.CommandBarOptionsMouseDownGlyph` |
 
 **Komut çubuğu ' diğer seçenekler ' ve ' taşma ' düğmeleri: basılmış durumu**
@@ -1621,7 +1621,7 @@ Bölünmüş düğmeler, birçok belirteç adını düğmeler, menüler ve komut
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.CommandBarOptionsMouseDownBackgroundBegin`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
+| Arka Plan | `Environment.CommandBarOptionsMouseDownBackgroundBegin`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
 | Ön plan (karakter) | `Environment.CommandBarOptionsMouseDownGlyph` |
 
 ## <a name="document-windows"></a>Belge pencereleri
@@ -1644,7 +1644,7 @@ Belge pencereleri IDE 'ye yerleştirilmiş ya da ayrı bir pencere olarak kayan 
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | Belge türüne bağlıdır |
+| Arka Plan | Belge türüne bağlıdır |
 | Ön plan (metin) | Belge türüne bağlıdır |
 | Kenarlık | `Environment.ToolWindowBorder` |
 
@@ -1654,7 +1654,7 @@ Belge pencereleri IDE 'ye yerleştirilmiş ya da ayrı bir pencere olarak kayan 
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.ToolWindowFloatingFrame` |
+| Arka Plan | `Environment.ToolWindowFloatingFrame` |
 | Ön plan (metin) | `Environment.ToolWindowFloatingFrame` |
 | Ön plan (karakter) | `Environment.RaftedWindowButtonActiveGlyph` |
 | Kenarlık | `Environment.MainWindowActiveDefaultBorder` |
@@ -1666,7 +1666,7 @@ Belge pencereleri IDE 'ye yerleştirilmiş ya da ayrı bir pencere olarak kayan 
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.ToolWindowFloatingFrameInactive` |
+| Arka Plan | `Environment.ToolWindowFloatingFrameInactive` |
 | Ön plan (metin) | `Environment.ToolWindowFloatingFrameInactive` |
 | Ön plan (karakter) | `Environment.RaftedWindowButtonInactiveGlyph` |
 | Kenarlık | `Environment.MainWindowInactiveBorder` |
@@ -1731,7 +1731,7 @@ Her açık belge, belge sekmesi kanalında adını görüntüleyen bir sekmeye s
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.FileTabSelectedGradientTop`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
+| Arka Plan | `Environment.FileTabSelectedGradientTop`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
 | Ön plan (metin) | `Environment.FileTabSelectedText` |
 | Kenarlık | `Environment.FileTabSelectedBorder`<br />(Arka plan ile aynı renge ayarlanır.) |
 | Belge kenarlığı | `Environment.FileTabDocumentBorderBackground` |
@@ -1742,7 +1742,7 @@ Her açık belge, belge sekmesi kanalında adını görüntüleyen bir sekmeye s
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.FileTabInactiveGradientTop`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
+| Arka Plan | `Environment.FileTabInactiveGradientTop`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
 | Ön plan (metin) | `Environment.FileTabInactiveText` |
 | Kenarlık | `Environment.FileTabInactiveBorder`<br />(Arka plan ile aynı renge ayarlanır.) |
 | Belge kenarlığı | `Environment.FileTabInactiveDocumentBorderBackground` |
@@ -1753,7 +1753,7 @@ Her açık belge, belge sekmesi kanalında adını görüntüleyen bir sekmeye s
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.FileTabBackground` |
+| Arka Plan | `Environment.FileTabBackground` |
 | Ön plan (metin) | `Environment.FileTabText` |
 | Kenarlık | `Environment.FileTabBorder`<br />(Arka plan ile aynı renge ayarlanır.) |
 
@@ -1763,7 +1763,7 @@ Her açık belge, belge sekmesi kanalında adını görüntüleyen bir sekmeye s
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.FileTabHotGradientTop`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
+| Arka Plan | `Environment.FileTabHotGradientTop`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
 | Ön plan (metin) | `Environment.FileTabHotText` |
 | Kenarlık | `Environment.FileTabHotBorder`<br />(Arka plan ile aynı renge ayarlanır.) |
 
@@ -1783,7 +1783,7 @@ Her açık belge, belge sekmesi kanalında adını görüntüleyen bir sekmeye s
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.FileTabProvisionalSelectedActive` |
+| Arka Plan | `Environment.FileTabProvisionalSelectedActive` |
 | Ön plan (metin) | `Environment.FileTabProvisionalSelectedActiveForeground` |
 | Kenarlık | `Environment.FileTabProvisionalSelectedActiveBorder`<br />(Arka plan ile aynı renge ayarlanır.) |
 | Belge kenarlığı | `Environment.FileTabProvisionalSelectedActiveBorder` |
@@ -1794,7 +1794,7 @@ Her açık belge, belge sekmesi kanalında adını görüntüleyen bir sekmeye s
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.FileTabProvisionalSelectedInactive` |
+| Arka Plan | `Environment.FileTabProvisionalSelectedInactive` |
 | Ön plan (metin) | `Environment.FileTabProvisionalSelectedInactiveForeground` |
 | Kenarlık | `Environment.FileTabProvisionalSelectedInactiveBorder` |
 | Belge kenarlığı | `Environment.FileTabProvisionalSelectedInactiveBorder` |
@@ -1805,7 +1805,7 @@ Her açık belge, belge sekmesi kanalında adını görüntüleyen bir sekmeye s
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.FileTabProvisionalInactive` |
+| Arka Plan | `Environment.FileTabProvisionalInactive` |
 | Ön plan (metin) | `Environment.FileTabProvisionalInactiveForeground` |
 | Kenarlık | `Environment.FileTabProvisionalInactiveBorder`<br />(Arka plan ile aynı renge ayarlanır.) |
 
@@ -1815,7 +1815,7 @@ Her açık belge, belge sekmesi kanalında adını görüntüleyen bir sekmeye s
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.FileTabProvisionalHover` |
+| Arka Plan | `Environment.FileTabProvisionalHover` |
 | Ön plan (metin) | `Environment.FileTabProvisionalHoverForeground` |
 | Kenarlık | `Environment.FileTabProvisionalHoverBorder`<br />(Arka plan ile aynı renge ayarlanır.) |
 
@@ -1835,7 +1835,7 @@ Geçerli yapılandırmada tüm belge sekmelerine sığacak şekilde bir veya dah
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.DocWellOverflowButtonBackground` |
+| Arka Plan | `Environment.DocWellOverflowButtonBackground` |
 | Ön plan (karakter) | `Environment.DocWellOverflowButtonGlyph` |
 | Kenarlık | Yok |
 
@@ -1845,7 +1845,7 @@ Geçerli yapılandırmada tüm belge sekmelerine sığacak şekilde bir veya dah
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.DocWellOverflowButtonMouseOverBackground` |
+| Arka Plan | `Environment.DocWellOverflowButtonMouseOverBackground` |
 | Ön plan (karakter) | `Environment.DocWellOverflowButtonMouseOverGlyph` |
 | Kenarlık | `Environment.DocWellOverflowButtonMouseOverBorder` |
 
@@ -1855,7 +1855,7 @@ Geçerli yapılandırmada tüm belge sekmelerine sığacak şekilde bir veya dah
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.DocWellOverflowButtonMouseDownBackground` |
+| Arka Plan | `Environment.DocWellOverflowButtonMouseDownBackground` |
 | Ön plan (karakter) | `Environment.DocWellOverflowButtonMouseDownGlyph` |
 | Kenarlık | `Environment.DocWellOverflowButtonMouseDownBorder` |
 
@@ -1876,7 +1876,7 @@ Visual Studio, bir kullanıcının izleme amacıyla aranabilir anahtar sözcükl
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Tag.Background` |
+| Arka Plan | `Tag.Background` |
 | Ön plan (metin) | `Tag.Background` |
 
 **Etiket: üzerine gelme durumu**
@@ -1885,7 +1885,7 @@ Visual Studio, bir kullanıcının izleme amacıyla aranabilir anahtar sözcükl
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Tag.HoverBackground` |
+| Arka Plan | `Tag.HoverBackground` |
 | Ön plan (metin) | `Tag.HoverBackgroundText` |
 
 **Etiket: basılan durum**
@@ -1894,7 +1894,7 @@ Visual Studio, bir kullanıcının izleme amacıyla aranabilir anahtar sözcükl
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Tag.PressedBackground` |
+| Arka Plan | `Tag.PressedBackground` |
 | Ön plan (metin) | `Tag.PressedBackgroundText` |
 
 **Etiket: Seçili durum**
@@ -1903,7 +1903,7 @@ Visual Studio, bir kullanıcının izleme amacıyla aranabilir anahtar sözcükl
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Tag.SelectedBackground` |
+| Arka Plan | `Tag.SelectedBackground` |
 | Ön plan (metin) | `Tag.SelectedBackgroundText` |
 
 #### <a name="close-times-tag-glyph"></a>Close ( &times; ) etiketi karakteri
@@ -1914,7 +1914,7 @@ Visual Studio, bir kullanıcının izleme amacıyla aranabilir anahtar sözcükl
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | Yok |
+| Arka Plan | Yok |
 | Ön plan (karakter) | `Tag.TagHoverGlyph` |
 
 **Close ( &times; ) etiketi karakteri: üzerine gelme durumu**
@@ -1923,7 +1923,7 @@ Visual Studio, bir kullanıcının izleme amacıyla aranabilir anahtar sözcükl
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Tag.TagHoverGlyphHoverBackground` |
+| Arka Plan | `Tag.TagHoverGlyphHoverBackground` |
 | Ön plan (karakter) | `Tag.TagHoverGlyphHover` |
 | Kenarlık | `Tag.TagHoverGlyphHoverBorder` |
 
@@ -1933,7 +1933,7 @@ Visual Studio, bir kullanıcının izleme amacıyla aranabilir anahtar sözcükl
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Tag.TagHoverGlyphPressedBackground` |
+| Arka Plan | `Tag.TagHoverGlyphPressedBackground` |
 | Ön plan (karakter) | `Tag.TagHoverGlyphPressed` |
 | Kenarlık | `Tag.TagHoverGlyphPressedBorder` |
 
@@ -1943,7 +1943,7 @@ Visual Studio, bir kullanıcının izleme amacıyla aranabilir anahtar sözcükl
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | Yok |
+| Arka Plan | Yok |
 | Ön plan (karakter) | `Tag.TagSelectedGlyph` |
 
 **Close () karakteri ile seçili etiket &times; : üzerine gelme durumu**
@@ -1952,7 +1952,7 @@ Visual Studio, bir kullanıcının izleme amacıyla aranabilir anahtar sözcükl
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Tag.TagSelectedGlyphHoverBackground` |
+| Arka Plan | `Tag.TagSelectedGlyphHoverBackground` |
 | Ön plan (karakter) | `Tag.TagSelectedGlyphHover` |
 | Kenarlık | `Tag.TagSelectedGlyphHoverBorder` |
 
@@ -1962,7 +1962,7 @@ Visual Studio, bir kullanıcının izleme amacıyla aranabilir anahtar sözcükl
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Tag.TagSelectedGlyphPressedBackground` |
+| Arka Plan | `Tag.TagSelectedGlyphPressedBackground` |
 | Ön plan (karakter) | `Tag.TagSelectedGlyphPressed` |
 | Kenarlık | `Tag.TagSelectedGlyphPressedBorder` |
 
@@ -1990,7 +1990,7 @@ Visual Studio 'daki araç pencereleri birçok farklı görev için kullanılır 
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.ToolWindowBackground` |
+| Arka Plan | `Environment.ToolWindowBackground` |
 | Kenarlık | `Environment.ToolWindowBorder` |
 
 **Kayan, odaklanmış araç penceresi**
@@ -1999,7 +1999,7 @@ Visual Studio 'daki araç pencereleri birçok farklı görev için kullanılır 
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.ToolWindowBackground` |
+| Arka Plan | `Environment.ToolWindowBackground` |
 | Kenarlık | `Environment.MainWindowActiveDefaultBorder` |
 
 **Kayan, odaklanmış olmayan araç penceresi**
@@ -2008,7 +2008,7 @@ Visual Studio 'daki araç pencereleri birçok farklı görev için kullanılır 
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.ToolWindowBackground` |
+| Arka Plan | `Environment.ToolWindowBackground` |
 | Kenarlık | `Environment.MainWindowInactiveBorder` |
 
 ### <a name="toolbox-like-windows"></a>Araç kutusu-benzeri pencereler
@@ -2028,8 +2028,8 @@ Araç kutusu, Visual Studio 'da en sık kullanılan yaygın araç pencerelerini 
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.ToolboxContent`<br />Larınızı |
-| Arka plan | `Environment.ToolWindowBackground`<br />(Kullanılabilir denetim yoksa tek tek öğeler veya tüm pencere) |
+| Arka Plan | `Environment.ToolboxContent`<br />Larınızı |
+| Arka Plan | `Environment.ToolWindowBackground`<br />(Kullanılabilir denetim yoksa tek tek öğeler veya tüm pencere) |
 | Kenarlık | Yok |
 | Ön plan (karakter) | `Environment.ToolboxContent` |
 | Ön plan (metin) | `Environment.ToolboxContent` |
@@ -2040,7 +2040,7 @@ Araç kutusu, Visual Studio 'da en sık kullanılan yaygın araç pencerelerini 
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.ToolboxContentMouseOver`<br />(Yalnızca ayrı öğeler) |
+| Arka Plan | `Environment.ToolboxContentMouseOver`<br />(Yalnızca ayrı öğeler) |
 | Kenarlık | Yok |
 | Ön plan (metin) | `Environment.ToolboxContentMouseOver`<br />(Yalnızca ayrı öğeler) |
 
@@ -2052,7 +2052,7 @@ Araç kutusu, Visual Studio 'da en sık kullanılan yaygın araç pencerelerini 
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `TreeView.SelectedItemActive`<br />[Ağaç görünümü](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_TreeView) kategorisinden |
+| Arka Plan | `TreeView.SelectedItemActive`<br />[Ağaç görünümü](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_TreeView) kategorisinden |
 | Kenarlık | `TreeView.FocusVisualBorder`<br />[Ağaç görünümü](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_TreeView) kategorisinden |
 | Ön plan (karakter) | `TreeView.SelectedItemActive`<br />[Ağaç görünümü](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_TreeView) kategorisinden |
 | Ön plan (metin) | `TreeView.SelectedItemActive`<br />[Ağaç görünümü](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_TreeView) kategorisinden |
@@ -2065,7 +2065,7 @@ Araç kutusu, Visual Studio 'da en sık kullanılan yaygın araç pencerelerini 
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `TreeView.SelectedItemInactive`<br />[Ağaç görünümü](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_TreeView) kategorisinden |
+| Arka Plan | `TreeView.SelectedItemInactive`<br />[Ağaç görünümü](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_TreeView) kategorisinden |
 | Kenarlık | Yok |
 | Ön plan (karakter) | `TreeView.SelectedItemInactive`<br />[Ağaç görünümü](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_TreeView) kategorisinden |
 | Ön plan (metin) | `TreeView.SelectedItemInactive`<br />[Ağaç görünümü](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_TreeView) kategorisinden |
@@ -2085,7 +2085,7 @@ Başlık çubuğu kenarlığı gerçek bir kenarlık değildir ve başlık çubu
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.TitleBarActiveGradientBegin`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
+| Arka Plan | `Environment.TitleBarActiveGradientBegin`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
 | Ön plan (metin) | `Environment.TitleBarActiveText` |
 | Kenarlık | `Environment.TitleBarActiveBorder`<br />(Arka plan ile aynı renge ayarlanır.) |
 | Sürükleme tutamacı | `Environment.TitleBarDragHandleActive` |
@@ -2096,7 +2096,7 @@ Başlık çubuğu kenarlığı gerçek bir kenarlık değildir ve başlık çubu
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.TitleBarInactiveGradientBegin`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
+| Arka Plan | `Environment.TitleBarInactiveGradientBegin`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
 | Ön plan (metin) | `Environment.TitleBarInactiveText` |
 | Kenarlık | Yok |
 | Sürükleme tutamacı | `Environment.TitleBarDragHandle` |
@@ -2115,7 +2115,7 @@ Başlık çubuğu kenarlığı gerçek bir kenarlık değildir ve başlık çubu
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | Yok |
+| Arka Plan | Yok |
 | Ön plan (karakter) | `Environment.ToolWindowButtonActiveGlyph` |
 | Kenarlık | Yok |
 
@@ -2125,7 +2125,7 @@ Başlık çubuğu kenarlığı gerçek bir kenarlık değildir ve başlık çubu
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | Yok |
+| Arka Plan | Yok |
 | Ön plan (karakter) | `Environment.ToolWindowButtonInactiveGlyph` |
 | Kenarlık | Yok |
 
@@ -2135,7 +2135,7 @@ Başlık çubuğu kenarlığı gerçek bir kenarlık değildir ve başlık çubu
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.ToolWindowButtonHoverActive` |
+| Arka Plan | `Environment.ToolWindowButtonHoverActive` |
 | Ön plan (karakter) | `Environment.ToolWindowButtonHoverActiveGlyph` |
 | Kenarlık | `Environment.ToolWindowButtonHoverActiveBorder` |
 
@@ -2145,7 +2145,7 @@ Başlık çubuğu kenarlığı gerçek bir kenarlık değildir ve başlık çubu
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.ToolWindowButtonHoverInactive` |
+| Arka Plan | `Environment.ToolWindowButtonHoverInactive` |
 | Ön plan (karakter) | `Environment.ToolWindowButtonHoverInactiveGlyph` |
 | Kenarlık | `Environment.ToolWindowButtonHoverInactiveBorder` |
 
@@ -2155,7 +2155,7 @@ Başlık çubuğu kenarlığı gerçek bir kenarlık değildir ve başlık çubu
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.ToolWindowButtonDown` |
+| Arka Plan | `Environment.ToolWindowButtonDown` |
 | Ön plan (karakter) | `Environment.ToolWindowButtonDownActiveGlyph` |
 | Kenarlık | `Environment.ToolWindowButtonDownBorder` |
 
@@ -2165,7 +2165,7 @@ Başlık çubuğu kenarlığı gerçek bir kenarlık değildir ve başlık çubu
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.ToolWindowButtonDown` |
+| Arka Plan | `Environment.ToolWindowButtonDown` |
 | Ön plan (karakter) | `Environment.ToolWindowButtonDownInactiveGlyph` |
 | Kenarlık | `Environment.ToolWindowButtonDownBorder` |
 
@@ -2182,7 +2182,7 @@ Başlık çubuğu kenarlığı gerçek bir kenarlık değildir ve başlık çubu
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.ToolWindowTabSelectedTab` |
+| Arka Plan | `Environment.ToolWindowTabSelectedTab` |
 | Ön plan (metin) | `Environment.ToolWindowTabSelectedActiveText` |
 | Kenarlık | `Environment.ToolWindowTabSelectedBorder`<br />(Arka plan ile aynı renge ayarlanır.) |
 
@@ -2192,7 +2192,7 @@ Başlık çubuğu kenarlığı gerçek bir kenarlık değildir ve başlık çubu
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.ToolWindowTabSelectedTab` |
+| Arka Plan | `Environment.ToolWindowTabSelectedTab` |
 | Ön plan (metin) | `Environment.ToolWindowTabSelectedText` |
 | Kenarlık | `Environment.ToolWindowTabSelectedBorder`<br />(Arka plan ile aynı renge ayarlanır.) |
 
@@ -2202,7 +2202,7 @@ Başlık çubuğu kenarlığı gerçek bir kenarlık değildir ve başlık çubu
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.ToolWindowTabGradientBegin`<br />`Environment.ToolWindowTabGradientEnd`<br />(Gradyan duraklar Visual Studio 2013 aynı renk değerine ayarlanır.) |
+| Arka Plan | `Environment.ToolWindowTabGradientBegin`<br />`Environment.ToolWindowTabGradientEnd`<br />(Gradyan duraklar Visual Studio 2013 aynı renk değerine ayarlanır.) |
 | Ön plan (metin) | `Environment.ToolWindowTabText` |
 | Kenarlık | `Environment.ToolWindowTabBorder` |
 
@@ -2212,7 +2212,7 @@ Başlık çubuğu kenarlığı gerçek bir kenarlık değildir ve başlık çubu
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.ToolWindowTabMouseOverBackgroundBegin`<br />`Environment.ToolWindowTabMouseOverBackgroundEnd`<br />(Gradyan duraklar Visual Studio 2013 aynı renk değerine ayarlanır.) |
+| Arka Plan | `Environment.ToolWindowTabMouseOverBackgroundBegin`<br />`Environment.ToolWindowTabMouseOverBackgroundEnd`<br />(Gradyan duraklar Visual Studio 2013 aynı renk değerine ayarlanır.) |
 | Ön plan (metin) | `Environment.ToolWindowTabMouseOverText` |
 | Kenarlık | `Environment.ToolWindowTabMouseOverBorder`<br />(Arka plan ile aynı renge ayarlanır.) |
 
@@ -2230,7 +2230,7 @@ Başlık çubuğu kenarlığı gerçek bir kenarlık değildir ve başlık çubu
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.AutoHideTabBackgroundBegin`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
+| Arka Plan | `Environment.AutoHideTabBackgroundBegin`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
 | Ön plan (metin) | `Environment.AutoHideTabText` |
 | Kenarlık | `Environment.AutoHideTabBorder` |
 
@@ -2240,6 +2240,6 @@ Başlık çubuğu kenarlığı gerçek bir kenarlık değildir ve başlık çubu
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka plan | `Environment.AutoHideTabMouseOverBackgroundBegin`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
+| Arka Plan | `Environment.AutoHideTabMouseOverBackgroundBegin`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
 | Ön plan (metin) | `Environment.AutoHideTabMouseOverText` |
 | Kenarlık | `Environment.AutoHideTabMouseOverBorder` |

@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: fec04f2e-bf38-4d44-b2ec-fa50f58fd0d9
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
-ms.openlocfilehash: 95e7c612e7379c44c95f17e7b12c36f7a6f07d8c
-ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
+manager: jmartens
+ms.openlocfilehash: 01129ae017dd51a6bc36d966a495eb7fd1afd2f2
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95442657"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99926904"
 ---
 # <a name="edit-load-test-scenarios"></a>Yük testi senaryolarını Düzenle
 
@@ -35,7 +35,7 @@ Bir yük testi oluşturduğunuzda belirttiğiniz ilk yapılandırma seçenekleri
 
 Senaryolar aşağıdaki bileşenleri içerir:
 
-|Terim|Tanım|
+|Süre|Tanım|
 |-|-|
 |Tarayıcı karışımı|Sanal kullanıcıların çeşitli web tarayıcıları aracılığıyla bir Web sitesine erişmesini taklit eder.|
 |Yük kalıbı|Yük testi sırasında etkin olan sanal kullanıcı sayısını ve yeni kullanıcıların başlatılma hızını belirtir. Örneğin: adım, sabit ve amaç tabanlı.|

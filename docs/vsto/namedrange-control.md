@@ -16,15 +16,15 @@ helpviewer_keywords:
 - NamedRange control
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: f1881afb0dd718eec3815ab9de3becbeaf070f5d
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 74eb3467c4cfbba5a2cb411a1f0ad439b1a7620b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97528093"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99926631"
 ---
 # <a name="namedrange-control"></a>NamedRange denetimi
   <xref:Microsoft.Office.Tools.Excel.NamedRange>Denetim, benzersiz bir ada sahip, olayları ortaya çıkaran ve verilere bağlanabilen bir aralıktır. Daha fazla bilgi için bkz. [Excel nesne modeline genel bakış](../vsto/excel-object-model-overview.md).

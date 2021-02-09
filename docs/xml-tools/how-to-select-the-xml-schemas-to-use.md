@@ -7,15 +7,15 @@ ms.topic: how-to
 ms.assetid: d6fda3ef-d465-4788-8514-2f2d528d658c
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 9773df597269d5f7044bf168626f530e4a454020
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 1e0d8bf1bca7917c6692d7c9c2398df47c4145e6
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400160"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99926553"
 ---
 # <a name="how-to-select-the-xml-schemas-to-use"></a>Nasıl yapılır: kullanılacak XML şemalarını seçme
 
@@ -23,7 +23,7 @@ XML Düzenleyicisi, *%VSInstallDir%\Xml\Schemas* dizininde bulunan bir şema ön
 
 Bir veya daha fazla XML şeması tanım dili (XSD) şeması seçmek için **şemalar** belge özelliğini kullanın. Şema önbelleğinden veya başka bir yerde şemaları seçebilirsiniz.
 
-Belirttiğiniz şemalar bir (gizli) çözüm Kullanıcı seçenekleri dosyasına (. *suo* ), diğer tüm XML belge özellikleriyle birlikte. Sonuç olarak, çözümü bir sonraki açışınızda bu değerleri yeniden girmeniz gerekmez.
+Belirttiğiniz şemalar bir (gizli) çözüm Kullanıcı seçenekleri dosyasına (.*suo*), diğer tüm XML belge özellikleriyle birlikte. Sonuç olarak, çözümü bir sonraki açışınızda bu değerleri yeniden girmeniz gerekmez.
 
 > [!NOTE]
 > Düzenleyici, satır içi bir şemanın veya öznitelik tarafından başvurulan bir şemanın kullanımını doğrulayabilir `xsd:schemaLocation` . Daha fazla bilgi için bkz. [XML belge doğrulaması](../xml-tools/xml-document-validation.md).
@@ -40,11 +40,11 @@ Belirttiğiniz şemalar bir (gizli) çözüm Kullanıcı seçenekleri dosyasına
 
 3. Aşağıdakilerden birini yaparak doğrulama için kullanılacak şemaları seçin:
 
-   - **XML şemaları** iletişim kutusunda listelenen bir şemayı seçin, **kullan** sütununa tıklayın ve **Bu şemayı kullan** ' ı seçin.
+   - **XML şemaları** iletişim kutusunda listelenen bir şemayı seçin, **kullan** sütununa tıklayın ve **Bu şemayı kullan**' ı seçin.
 
      -veya-
 
-   - **XML şemaları** iletişim kutusunda birden çok şema seçin ve sağ tıklayın ve **Bu şemayı kullan** ' ı seçin.
+   - **XML şemaları** iletişim kutusunda birden çok şema seçin ve sağ tıklayın ve **Bu şemayı kullan**' ı seçin.
 
 4. **Tamam ' ı** seçin.
 
@@ -54,13 +54,13 @@ Belirttiğiniz şemalar bir (gizli) çözüm Kullanıcı seçenekleri dosyasına
 
 1. Belge Özellikleri penceresinde, **şemalar** alanındaki düğmesine tıklayın.
 
-2. **Ekle** 'ye tıklayın.
+2. **Ekle**'ye tıklayın.
 
    **Open xsd şeması** iletişim kutusu açılır.
 
 3. Şema önbelleğine eklenecek şemaya gözatıp seçin.
 
-4. **Aç** 'a tıklayın.
+4. **Aç**’a tıklayın.
 
    Şemalar şema önbelleğine eklenir ve **Use** sütun değeri **Bu şemayı kullanacak** şekilde ayarlanır.
 
@@ -68,12 +68,12 @@ Belirttiğiniz şemalar bir (gizli) çözüm Kullanıcı seçenekleri dosyasına
 
 1. Belge Özellikleri penceresinde, **şemalar** alanındaki düğmesine tıklayın.
 
-2. Kaldırılacak şemayı seçin ve ardından **Kaldır** ' a tıklayın.
+2. Kaldırılacak şemayı seçin ve ardından **Kaldır**' a tıklayın.
 
    Şema, bellek içi şema önbelleğinden kaldırılır, ancak dosya sisteminden kaldırılmaz.
 
    > [!NOTE]
-   > Şemaya hala bir özniteliği aracılığıyla başvurunuz varsa `schemaLocation` veya eşleşen bir eşleme varsa, `targetNamespace` Bu durum otomatik ilişkilendirme **Remove** nedeniyle bu durumda çalışmaz. Bu durumda, şemayı **Use** sütununda **Seçili şemaları kullanmayın** olarak işaretlemeniz önerilir.
+   > Şemaya hala bir özniteliği aracılığıyla başvurunuz varsa `schemaLocation` veya eşleşen bir eşleme varsa, `targetNamespace` Bu durum otomatik ilişkilendirme  nedeniyle bu durumda çalışmaz. Bu durumda, şemayı **Use** sütununda **Seçili şemaları kullanmayın** olarak işaretlemeniz önerilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

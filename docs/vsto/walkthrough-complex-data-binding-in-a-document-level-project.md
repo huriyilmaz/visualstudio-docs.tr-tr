@@ -15,15 +15,15 @@ helpviewer_keywords:
 - data binding [Office development in Visual Studio], multiple columns
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 988394595e8aa4710a22e1fedf22a921481c7396
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 2dc5708da09074c7d973336958c9e89c16bf9da6
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97527117"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99927671"
 ---
 # <a name="walkthrough-complex-data-binding-in-a-document-level-project"></a>İzlenecek yol: belge düzeyi projede karmaşık veri bağlama
   Bu izlenecek yol, belge düzeyindeki bir projede karmaşık veri bağlamanın temellerini gösterir. Microsoft Office Excel çalışma sayfasındaki birden çok hücreyi Northwind SQL Server veritabanındaki alanlara bağlayabilirsiniz.
@@ -140,7 +140,7 @@ ms.locfileid: "97527117"
      [!code-csharp[Trin_VstcoreDataExcel#10](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet3.cs#10)]
      [!code-vb[Trin_VstcoreDataExcel#10](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet3.vb#10)]
 
-## <a name="test-the-application"></a>Uygulamayı test etme
+## <a name="test-the-application"></a>Uygulamayı test edin
  Artık, verilerin beklendiği gibi göründüğünü ve liste nesnesindeki verileri işleyebildiğinizi doğrulamak için çalışma kitabınızı test edebilirsiniz.
 
 ### <a name="to-test-the-data-binding"></a>Veri bağlamayı test etmek için
@@ -177,7 +177,7 @@ ms.locfileid: "97527117"
 
 1. Liste nesnesi içinde bir hücre seçin.
 
-    Yeni satırın ilk hücresinde bir yıldız işareti (* _) olan listenin en altında yeni bir satır görüntülenir *\** .
+    Yeni satırın ilk hücresinde bir yıldız işareti () ile listenin en altında yeni bir satır görüntülenir **\*** .
 
 2. Aşağıdaki bilgileri boş satıra ekleyin.
 
@@ -187,7 +187,7 @@ ms.locfileid: "97527117"
 
 ### <a name="to-delete-rows"></a>Satırları silmek için
 
-- Çalışma sayfasının sol tarafında bulunan 16 ' ya (satır 16) sağ tıklayın ve ardından _ * Sil * * ' e tıklayın.
+- Çalışma sayfasının sol tarafında bulunan 16 ' ya (satır 16) sağ tıklayın ve ardından **Sil**' e tıklayın.
 
 ### <a name="to-sort-the-rows-in-the-list"></a>Listedeki satırları sıralamak için
 

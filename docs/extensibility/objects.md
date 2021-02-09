@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 8a5ab7a4-3668-4f78-9c08-04c5af7090f2
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: bff2b16684c41d18f997e6aab7950aa19a7d1db1
-ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
+ms.openlocfilehash: abee929ecb92605d9fd6dd576ecdf63a124349db
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/04/2021
-ms.locfileid: "97863695"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99926891"
 ---
 # <a name="objects"></a>Nesneler
 Aşağıdaki başvuru bilgileri, çekirdek metin düzenleyicisinin bir örneğini oluşturmak için kullanılan nesneleri açıklar.

@@ -14,15 +14,15 @@ helpviewer_keywords:
 - casting, object to specific type
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 201b850d8a577f8cc76aff97e2370998b6f885ed
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 455816b2e23a25ad5ef83c726b2a78e4245ed99a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97523566"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99927658"
 ---
 # <a name="late-binding-in-office-solutions"></a>Office çözümlerinde geç bağlama
   Office uygulamalarının nesne modellerindeki bazı türler, geç bağlama özellikleri aracılığıyla kullanılabilen işlevselliği sağlar. Örneğin, bazı yöntemler ve özellikler Office uygulamasının bağlamına bağlı olarak farklı nesne türleri döndürebilir ve bazı türler farklı bağlamlarda farklı yöntemler veya özellikler sunabilir.

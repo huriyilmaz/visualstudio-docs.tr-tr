@@ -19,20 +19,20 @@ helpviewer_keywords:
 ms.assetid: eb6dfe79-f54c-4331-8e36-073688e70973
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 737e1092d88c48227183a32072502cb833ebcd37
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: fa9e94bf124888d05b6393a4821b5db61181871c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94349496"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99927580"
 ---
 # <a name="publish-clickonce-applications"></a>ClickOnce uygulamalarını yayımlama
 Bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulamayı ilk kez yayımlarken yayımlama özellikleri, Yayımlama Sihirbazı kullanılarak ayarlanabilir. Sihirbazda yalnızca birkaç özellik mevcuttur; diğer tüm özellikler varsayılan değerlerine ayarlanır.
 
- Yayımla özelliklerinde sonraki değişiklikler, **Proje Tasarımcısı** 'nda **Yayımla** sayfasında yapılır.
+ Yayımla özelliklerinde sonraki değişiklikler, **Proje Tasarımcısı**'nda **Yayımla** sayfasında yapılır.
 
 ## <a name="publish-wizard"></a>Yayımlama Sihirbazı
  Uygulamanızı yayımlamak için temel ayarları ayarlamak üzere Yayımla sihirbazını kullanabilirsiniz. Bu, aşağıdaki yayımlama özelliklerini içerir:

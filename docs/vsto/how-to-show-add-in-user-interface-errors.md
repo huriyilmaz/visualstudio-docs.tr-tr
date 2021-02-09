@@ -14,15 +14,15 @@ helpviewer_keywords:
 - application-level add-ins [Office development in Visual Studio], user interface errors
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: e74d60fe6386575417114fe1ad4823704cf09d46
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 29e07e49d901b44b534d9d274e5535be663e97ef
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97528130"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99927685"
 ---
 # <a name="how-to-show-add-in-user-interface-errors"></a>Nasıl yapılır: eklenti Kullanıcı arayüzü hatalarını gösterme
   Varsayılan olarak, bir VSTO eklentisi Microsoft Office Kullanıcı arabirimini (UI) işlemeyi denerse ve başarısız olursa, hata iletisi gösterilmez. Ancak, Kullanıcı arabirimiyle ilgili hatalara yönelik iletileri göstermek için Microsoft Office uygulamaları yapılandırabilirsiniz. Bu iletileri, özel bir şeridin neden görünmediğini veya bir şeridin neden göründüğünü, ancak hiçbir denetimin görünmediğini belirlemede yardımcı olması için kullanabilirsiniz.
