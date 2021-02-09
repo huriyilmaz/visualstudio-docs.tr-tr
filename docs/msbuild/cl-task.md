@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 651ba971-b755-4f03-a549-4816beb3cc0d
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 7d930ed8d918a08503a6eaa6b60848abeec7683a
-ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
+ms.openlocfilehash: 542d84f4c0279c1f76fa1ea29a244e78c53b394d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92796842"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99878441"
 ---
 # <a name="cl-task"></a>CL görevi
 
-Microsoft C++ derleyici aracı 'nı sarmalayan *cl.exe* . Derleyici yürütülebilir ( *. exe* ) dosyalar, dinamik bağlantı kitaplığı ( *. dll* ) dosyaları veya kod modülü ( *. netmodule* ) dosyaları oluşturur. Daha fazla bilgi için bkz. [derleyici seçenekleri](/cpp/build/reference/compiler-options) ve [komut satırından MSBuild 'i kullanma](/cpp/build/msbuild-visual-cpp) ve [komut satırından Microsoft C++ araç takımını kullanma](/cpp/build/building-on-the-command-line).
+Microsoft C++ derleyici aracı 'nı sarmalayan *cl.exe*. Derleyici yürütülebilir (*. exe*) dosyalar, dinamik bağlantı kitaplığı (*. dll*) dosyaları veya kod modülü (*. netmodule*) dosyaları oluşturur. Daha fazla bilgi için bkz. [derleyici seçenekleri](/cpp/build/reference/compiler-options) ve [komut satırından MSBuild 'i kullanma](/cpp/build/msbuild-visual-cpp) ve [komut satırından Microsoft C++ araç takımını kullanma](/cpp/build/building-on-the-command-line).
 
 ## <a name="parameters"></a>Parametreler
 
@@ -66,7 +66,7 @@ Microsoft C++ derleyici aracı 'nı sarmalayan *cl.exe* . Derleyici yürütüleb
 
    İsteğe bağlı dize parametresi.
 
-   Her zaman komut satırına yayılan bir dize. Varsayılan değeri " **/c** " dir.
+   Her zaman komut satırına yayılan bir dize. Varsayılan değeri "**/c**" dir.
 
 - **Lerlistinglocation 'ı birleştirin**
 
@@ -92,7 +92,7 @@ Microsoft C++ derleyici aracı 'nı sarmalayan *cl.exe* . Derleyici yürütüleb
 
   - **Tümü**  -  **/FACS**
 
-    Daha fazla bilgi için/fa **,** **/fac** , **/Fas** ve/FA,/FA [(listeleme dosyası)](/cpp/build/reference/fa-fa-listing-file)içindeki **/FACS** seçeneklerine bakın.
+    Daha fazla bilgi için/fa **,** **/fac**, **/Fas** ve/FA,/FA [(listeleme dosyası)](/cpp/build/reference/fa-fa-listing-file)içindeki **/FACS** seçeneklerine bakın.
 
 - **Basicruntimedenetimleri**
 
@@ -206,7 +206,7 @@ Microsoft C++ derleyici aracı 'nı sarmalayan *cl.exe* . Derleyici yürütüleb
 
    İsteğe bağlı dize parametresi.
 
-   Programınız için oluşturulan hata ayıklama bilgileri türünü ve bu bilgilerin nesne ( *. obj* ) dosyalarında mi yoksa bir program VERITABANı (pdb) içinde tutulup tutulmadığını seçer.
+   Programınız için oluşturulan hata ayıklama bilgileri türünü ve bu bilgilerin nesne (*. obj*) dosyalarında mi yoksa bir program VERITABANı (pdb) içinde tutulup tutulmadığını seçer.
 
    Her biri bir komut satırı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.
 
@@ -330,7 +330,7 @@ Microsoft C++ derleyici aracı 'nı sarmalayan *cl.exe* . Derleyici yürütüleb
 
    `true`, Güvenilir kayan nokta özel durum modelini etkinleştirmesine izin vermez. Özel durumlar, tetiklendikten hemen sonra oluşturulur.
 
-   Daha fazla bilgi için bkz./fp içindeki/ **FP: except** seçeneği [(kayan nokta davranışını belirt)](/cpp/build/reference/fp-specify-floating-point-behavior).
+   Daha fazla bilgi için bkz./fp içindeki/**FP: except** seçeneği [(kayan nokta davranışını belirt)](/cpp/build/reference/fp-specify-floating-point-behavior).
 
 - **FloatingPointModel**
 
@@ -456,7 +456,7 @@ Microsoft C++ derleyici aracı 'nı sarmalayan *cl.exe* . Derleyici yürütüleb
 
    İsteğe bağlı `Boolean` parametre.
 
-   `true`, Nesne ( *. obj* ) dosyasındaki varsayılan C çalışma zamanı kitaplık adını atlar. Varsayılan olarak, derleyici, bağlayıcıyı doğru kitaplığa yönlendirmek için kitaplığın adını *. obj* dosyasına koyar.
+   `true`, Nesne (*. obj*) dosyasındaki varsayılan C çalışma zamanı kitaplık adını atlar. Varsayılan olarak, derleyici, bağlayıcıyı doğru kitaplığa yönlendirmek için kitaplığın adını *. obj* dosyasına koyar.
 
    Daha fazla bilgi için bkz. [/zl (varsayılan kitaplık adını atla)](/cpp/build/reference/zl-omit-default-library-name).
 
@@ -498,7 +498,7 @@ Microsoft C++ derleyici aracı 'nı sarmalayan *cl.exe* . Derleyici yürütüleb
 
    İsteğe bağlı **dize** parametresi.
 
-   Derleme sırasında önceden derlenmiş üst bilgi ( *. pch* ) dosyası oluşturun veya kullanın.
+   Derleme sırasında önceden derlenmiş üst bilgi (*. pch*) dosyası oluşturun veya kullanın.
 
    Her biri bir komut satırı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.
 
@@ -628,7 +628,7 @@ Microsoft C++ derleyici aracı 'nı sarmalayan *cl.exe* . Derleyici yürütüleb
 
    Daha fazla bilgi için [/RTC (çalışma zamanı hata denetimleri)](/cpp/build/reference/rtc-run-time-error-checks)içindeki **/RTCC** seçeneğine bakın.
 
-- **Ğına**
+- **Kaynaklar**
 
    Gerekli `ITaskItem[]` parametre.
 
@@ -686,7 +686,7 @@ Microsoft C++ derleyici aracı 'nı sarmalayan *cl.exe* . Derleyici yürütüleb
 
    Belirtilen derleyici uyarıları listesini hata olarak değerlendirir.
 
-   Daha fazla bilgi için **/we** `n` [/w,/W0,/W1,/W2,/W3,/W4,/W1,/W2,/W3,/W4,/duvar,/WD,/we,/Wo,/WV,/WX (uyarı düzeyi)](/cpp/build/reference/compiler-option-warning-level)içindeki/we seçeneğine bakın.
+   Daha fazla bilgi için  `n` [/w,/W0,/W1,/W2,/W3,/W4,/W1,/W2,/W3,/W4,/duvar,/WD,/we,/Wo,/WV,/WX (uyarı düzeyi)](/cpp/build/reference/compiler-option-warning-level)içindeki/we seçeneğine bakın.
 
 - **TreatWarningAsError**
 
@@ -786,7 +786,7 @@ Microsoft C++ derleyici aracı 'nı sarmalayan *cl.exe* . Derleyici yürütüleb
 
    *Okuma dosyası izleme günlüklerini* temsil eden bir öğe dizisi belirtir.
 
-   Okuma dosyası izleme günlüğü ( *. TLog* ), bir görev tarafından okunan giriş dosyalarının adlarını içerir ve proje yapı sistemi tarafından artımlı derlemeleri desteklemek için kullanılır. Daha fazla bilgi için bu tablodaki **TrackerLogDirectory** ve **TrackFileAccess** parametrelerine bakın.
+   Okuma dosyası izleme günlüğü (*. TLog*), bir görev tarafından okunan giriş dosyalarının adlarını içerir ve proje yapı sistemi tarafından artımlı derlemeleri desteklemek için kullanılır. Daha fazla bilgi için bu tablodaki **TrackerLogDirectory** ve **TrackFileAccess** parametrelerine bakın.
 
 - **TLogWriteFiles**
 
@@ -794,7 +794,7 @@ Microsoft C++ derleyici aracı 'nı sarmalayan *cl.exe* . Derleyici yürütüleb
 
    *Yazma dosyası izleme günlüklerini* temsil eden bir öğe dizisi belirtir.
 
-   Yazma dosyası izleme günlüğü ( *. TLog* ), bir görev tarafından yazılan çıkış dosyalarının adlarını içerir ve proje yapı sistemi tarafından artımlı derlemeleri desteklemek için kullanılır. Daha fazla bilgi için bu tablodaki **TrackerLogDirectory** ve **TrackFileAccess** parametrelerine bakın.
+   Yazma dosyası izleme günlüğü (*. TLog*), bir görev tarafından yazılan çıkış dosyalarının adlarını içerir ve proje yapı sistemi tarafından artımlı derlemeleri desteklemek için kullanılır. Daha fazla bilgi için bu tablodaki **TrackerLogDirectory** ve **TrackFileAccess** parametrelerine bakın.
 
 - **TrackFileAccess**
 

@@ -8,15 +8,15 @@ ms.topic: how-to
 ms.assetid: 17a837ca-5db9-46cd-b5a7-b14ad1d2c47d
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5b0e164c24770048495d16da852523b3dd50a43a
-ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
+ms.openlocfilehash: aaa36e7089be12cb0775b3300a134eb77b2eb618
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92136907"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99878675"
 ---
 # <a name="how-to-exclude-projects-from-a-build"></a>Nasıl yapılır: bir derlemeden projeleri hariç tutma
 
@@ -32,7 +32,7 @@ Daha fazla bilgi için bkz. [derleme yapılandırmasını anlama](../ide/underst
 
 ## <a name="to-temporarily-remove-a-project-from-the-active-solution-configuration"></a>Etkin çözüm yapılandırmasından bir projeyi geçici olarak kaldırmak için
 
-1. Menü çubuğunda Configuration Manager **Oluştur**' u seçin  >  **Configuration Manager**.
+1. Menü çubuğunda Configuration Manager **Oluştur**' u seçin  >  .
 
 2. **Proje bağlamları** tablosunda, derlemeden dışlamak istediğiniz projeyi bulun.
 
@@ -42,7 +42,7 @@ Daha fazla bilgi için bkz. [derleme yapılandırmasını anlama](../ide/underst
 
 ## <a name="to-create-a-solution-configuration-that-excludes-a-project"></a>Projeyi dışlayan bir çözüm yapılandırması oluşturmak için
 
-1. Menü çubuğunda Configuration Manager **Oluştur**' u seçin  >  **Configuration Manager**.
+1. Menü çubuğunda Configuration Manager **Oluştur**' u seçin  >  .
 
 2. **Etkin çözüm yapılandırması** listesinde, öğesini seçin **\<New>** .
 
@@ -58,7 +58,7 @@ Daha fazla bilgi için bkz. [derleme yapılandırmasını anlama](../ide/underst
 
 ## <a name="skipped-projects"></a>Atlanan projeler
 
-Projeler, güncel olmadıkları veya yapılandırmadan dışlandığı için derleme sırasında atlanabilir. Visual Studio, projelerinizi derlemek için MSBuild kullanır. MSBuild, dosya zaman damgalarına göre belirlendiği şekilde yalnızca çıkış girdiden eskiyse bir hedef oluşturur. Yeniden derlemeyi zorlamak için, **derleme**  >  **yeniden oluşturma çözümünü**kullanın.
+Projeler, güncel olmadıkları veya yapılandırmadan dışlandığı için derleme sırasında atlanabilir. Visual Studio, projelerinizi derlemek için MSBuild kullanır. MSBuild, dosya zaman damgalarına göre belirlendiği şekilde yalnızca çıkış girdiden eskiyse bir hedef oluşturur. Yeniden derlemeyi zorlamak için, **derleme**  >  **yeniden oluşturma çözümünü** kullanın.
 
 **Çıkış** penceresinin **derleme** bölmesinde, Visual Studio güncel olan proje sayısını, başarıyla oluşturulan sayıyı, başarısız olan sayıyı ve atlanan sayıyı raporlar. Atlanan sayı, güncel olduklarından derlenmediği projeleri içermiyor. Projeler etkin yapılandırmadan dışlandıklarında, derleme sırasında atlanır. Yapı çıkışında, projenin atlandığını belirten bir ileti görürsünüz:
 

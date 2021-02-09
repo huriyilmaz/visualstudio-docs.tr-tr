@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 76577f6c-7669-44ad-a840-363e37a04d34
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a4d1f9fe79ae5092992ff66ddaf5e10729e8b19a
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: f8241188b484447f94c60aa0e0c9bf05e477dd39
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93049070"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99878285"
 ---
 # <a name="msbuild-task"></a>MSBuild görevi
 
@@ -39,7 +39,7 @@ Başka bir MSBuild projesinden MSBuild projeleri oluşturur.
 |-----------------------------------| - |
 | `BuildInParallel` | İsteğe bağlı `Boolean` parametre.<br /><br /> İse `true` , parametresinde belirtilen projeler `Projects` Mümkünse paralel olarak oluşturulur. `false` varsayılan değerdir. |
 | `Projects` | Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Oluşturulacak proje dosyalarını belirtir. |
-| `Properties` | İsteğe bağlı `String` parametre.<br /><br /> Alt projeye genel özellikler olarak uygulanacak Özellik adı/değer çiftleri için noktalı virgülle ayrılmış bir liste. Bu parametreyi belirttiğinizde, [*MSBuild.exe*](../msbuild/msbuild-command-line-reference.md)ile oluşturduğunuzda **-Property** anahtarına sahip özellikleri ayarlamaya işlevsel olarak eşdeğerdir. Örneğin:<br /><br /> `Properties="Configuration=Debug;Optimize=$(Optimize)"`<br /><br /> Parametreleri parametre aracılığıyla projeye geçirdiğinizde `Properties` , proje dosyası zaten yüklenmiş olsa bile MSBuild, projenin yeni bir örneğini oluşturabilir. MSBuild, belirli bir proje yolu ve benzersiz bir genel özellikler kümesi için tek bir proje örneği oluşturur. Örneğin, bu davranış, Configuration = sürümü ile *MyProject. proj* ' i çağıran birden çok MSBuild görevi oluşturmanıza olanak sağlar ve *MyProject. proj* ' in tek bir örneğini alırsınız (görevde benzersiz özellikler belirtilmemişse). Henüz MSBuild tarafından görülmemiş bir özellik belirtirseniz MSBuild, projenin diğer örneklerine paralel olarak oluşturulan yeni bir örneğini oluşturur. Örneğin, bir sürüm yapılandırması hata ayıklama yapılandırması ile aynı anda derleyebilir.|
+| `Properties` | İsteğe bağlı `String` parametre.<br /><br /> Alt projeye genel özellikler olarak uygulanacak Özellik adı/değer çiftleri için noktalı virgülle ayrılmış bir liste. Bu parametreyi belirttiğinizde, [*MSBuild.exe*](../msbuild/msbuild-command-line-reference.md)ile oluşturduğunuzda **-Property** anahtarına sahip özellikleri ayarlamaya işlevsel olarak eşdeğerdir. Örneğin:<br /><br /> `Properties="Configuration=Debug;Optimize=$(Optimize)"`<br /><br /> Parametreleri parametre aracılığıyla projeye geçirdiğinizde `Properties` , proje dosyası zaten yüklenmiş olsa bile MSBuild, projenin yeni bir örneğini oluşturabilir. MSBuild, belirli bir proje yolu ve benzersiz bir genel özellikler kümesi için tek bir proje örneği oluşturur. Örneğin, bu davranış, Configuration = sürümü ile *MyProject. proj*' i çağıran birden çok MSBuild görevi oluşturmanıza olanak sağlar ve *MyProject. proj* ' in tek bir örneğini alırsınız (görevde benzersiz özellikler belirtilmemişse). Henüz MSBuild tarafından görülmemiş bir özellik belirtirseniz MSBuild, projenin diğer örneklerine paralel olarak oluşturulan yeni bir örneğini oluşturur. Örneğin, bir sürüm yapılandırması hata ayıklama yapılandırması ile aynı anda derleyebilir.|
 | `RebaseOutputs` | İsteğe bağlı `Boolean` parametre.<br /><br /> Eğer `true` , derleme projelerinin hedef çıkış öğelerinin göreli yollarının, çağıran projeye göreli olarak ayarlanmış yolları vardır. `false` varsayılan değerdir. |
 | `RemoveProperties` | İsteğe bağlı `String` parametre.<br /><br /> Kaldırılacak genel özellikler kümesini belirtir. |
 | `RunEachTargetSeparately` | İsteğe bağlı `Boolean` parametre.<br /><br /> Varsa `true` , MSBuild görevi her bir hedefi aynı anda değil, her seferinde MSBuild 'e geçirilen listede çağırır. Bu parametre, `true` daha önce çağrılan hedefler başarısız olsa bile sonraki hedeflerin çağrılmasını güvence altına almak için ayarlanıyor. Aksi takdirde, bir yapı hatası sonraki tüm hedeflerin çağrılmasını durdurur. `false` varsayılan değerdir. |

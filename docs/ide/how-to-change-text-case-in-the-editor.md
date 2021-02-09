@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: b04d1327-a45e-4c12-a0d0-67672b3fa855
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4574874e14ee66bbfb0f11d7767d59516b6666f3
-ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
+ms.openlocfilehash: 9947551fce9bc05b44c3d7f22a11966793b87e55
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95597294"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99878688"
 ---
 # <a name="how-to-change-text-case-in-the-editor"></a>Nasıl yapılır: düzenleyicide metin durumunu değiştirme
 
@@ -31,9 +31,9 @@ Seçilen metnin büyük/küçük harflere veya tüm küçük harflere dönüşt�
 
 1. Dönüştürmek istediğiniz metni seçin.
 
-2. Metni büyük harflere dönüştürmek için **Edit**  >  **Gelişmiş**  >  **Oluştur büyük harf** Düzenle ' yi seçin veya **CTRL** + **SHIFT** + **U** tuşlarına basın.
+2. Metni büyük harflere dönüştürmek için   >  **Gelişmiş**  >  **Oluştur büyük harf** Düzenle ' yi seçin veya **CTRL** + **SHIFT** + **U** tuşlarına basın.
 
-   Metni küçük harfe dönüştürmek için **Edit**  >  **Gelişmiş**  >  **yap Düzenle küçük harf** ' i seçin veya **CTRL** + **U** tuşlarına basın. (C++ geliştirme iş yükünüz yüklüyse, bu KeyBinding farklı bir komut tarafından kullanılabilir.)
+   Metni küçük harfe dönüştürmek için   >  **Gelişmiş**  >  **yap Düzenle küçük harf** ' i seçin veya **CTRL** + **U** tuşlarına basın. (C++ geliştirme iş yükünüz yüklüyse, bu KeyBinding farklı bir komut tarafından kullanılabilir.)
 
 > [!TIP]
 > Bu değişiklikten önce önceki durum biçimlendirmesine dönmek için, **Düzenle** menüsünden **geri al** ' ı seçin.

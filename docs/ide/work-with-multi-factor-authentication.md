@@ -6,16 +6,16 @@ ms.topic: conceptual
 description: Visual Studio 'Yu Multi-Factor Authentication gerektiren hesaplarla nasıl kullanacağınızı öğrenin.
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: ebacdd78cbb72bbd1cb90a0b5c719d0c753a95ca
-ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
+ms.openlocfilehash: 6b85d64d3f84bce34f2a9b30d9caf01127149abc
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90093360"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99878493"
 ---
 # <a name="how-to-use-visual-studio-with-accounts-that-require-multi-factor-authentication"></a>Multi-Factor Authentication gerektiren hesaplarla Visual Studio 'Yu kullanma
 
@@ -37,7 +37,7 @@ Bu sorunlar, Visual Studio örneğinizin günde birden çok kez yeniden kimlik d
 ### <a name="enabling-system-web-browser"></a>Sistem Web tarayıcısını etkinleştirme
 
 > [!NOTE] 
-> En iyi deneyim için, bu iş akışına devam etmeden önce sisteminizin varsayılan Web tarayıcısı verilerini temizlemeniz önerilir. Ayrıca, Windows 10 ayarlarınızda **erişim iş veya okul**altında Iş veya okul hesaplarınız varsa, lütfen bunların düzgün şekilde doğrulandıklarından emin olun.
+> En iyi deneyim için, bu iş akışına devam etmeden önce sisteminizin varsayılan Web tarayıcısı verilerini temizlemeniz önerilir. Ayrıca, Windows 10 ayarlarınızda **erişim iş veya okul** altında Iş veya okul hesaplarınız varsa, lütfen bunların düzgün şekilde doğrulandıklarından emin olun.
 
 Bu iş akışını etkinleştirmek için Visual Studio 'nun Seçenekler iletişim kutusuna **(araçlar > seçenekler...)** gidin, **hesaplar** sekmesini seçin ve **hesapları ekleme ve yeniden kimlik doğrulaması altında:** açılan menüsünden **sistem Web tarayıcısı** ' nı seçin. 
 

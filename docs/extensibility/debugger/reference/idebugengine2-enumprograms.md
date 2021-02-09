@@ -9,32 +9,32 @@ helpviewer_keywords:
 ms.assetid: 56bf98eb-beec-4e5f-9ebe-46c922e54c56
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 5ab53366b228077ab3c3cc6b1ab38ee5d0383dcd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a53c8d7057f9af94f9c674638b796c35b39eaa05
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80731092"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99879013"
 ---
 # <a name="idebugengine2enumprograms"></a>IDebugEngine2::EnumPrograms
 Hata ayıklama altyapısı (DE) tarafından hata ayıklanan tüm programların listesini alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
-HRESULT EnumPrograms( 
+HRESULT EnumPrograms( 
    IEnumDebugPrograms2** ppEnum
 );
 ```
 
 ```csharp
-int EnumPrograms( 
+int EnumPrograms( 
    out IEnumDebugPrograms2 ppEnum
 );
 ```

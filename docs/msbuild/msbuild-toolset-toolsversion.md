@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 40040ee7-4620-4043-a6d8-ccba921421d1
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e0b27a1914d85f5fde8ef6c5c467d73197c084ce
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: b146913365583d49f1d70ebd5ca316f54ca89049
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93049022"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99878233"
 ---
 # <a name="msbuild-toolset-toolsversion"></a>MSBuild Araç Takımı (ToolsVersion)
 
@@ -89,7 +89,7 @@ MSBuild, araç seti 'ne erişmenin iki yolunu sağlar:
 
 - Yöntemleri kullanarak <xref:Microsoft.Build.Utilities.ToolLocationHelper>
 
-Araç kümesi özellikleri araçların yollarını belirtir. Visual Studio 2017 ' den başlayarak MSBuild artık sabit bir konuma sahip değildir. Varsayılan olarak, Visual Studio yükleme konumuna göre *Msbuild\15.0\Bin* klasöründe bulunur. Daha önceki sürümlerde MSBuild, `ToolsVersion` karşılık gelen kayıt defteri anahtarını bulmak için proje dosyasındaki özniteliğin değerini kullanır ve ardından araç kümesi özelliklerini ayarlamak için kayıt defteri anahtarındaki bilgileri kullanır. Örneğin, değeri varsa `ToolsVersion` `12.0` MSBuild, araç kümesi özelliklerini bu kayıt defteri anahtarına göre ayarlar: **Hklm\software\microsoft\msbuild\tools\versions\12.0** .
+Araç kümesi özellikleri araçların yollarını belirtir. Visual Studio 2017 ' den başlayarak MSBuild artık sabit bir konuma sahip değildir. Varsayılan olarak, Visual Studio yükleme konumuna göre *Msbuild\15.0\Bin* klasöründe bulunur. Daha önceki sürümlerde MSBuild, `ToolsVersion` karşılık gelen kayıt defteri anahtarını bulmak için proje dosyasındaki özniteliğin değerini kullanır ve ardından araç kümesi özelliklerini ayarlamak için kayıt defteri anahtarındaki bilgileri kullanır. Örneğin, değeri varsa `ToolsVersion` `12.0` MSBuild, araç kümesi özelliklerini bu kayıt defteri anahtarına göre ayarlar: **Hklm\software\microsoft\msbuild\tools\versions\12.0**.
 
  Araç kümesi özellikleri şunlardır:
 
@@ -137,4 +137,4 @@ MSBuild, `ToolLocationHelper` `VisualStudioVersion` bir parametre olarak numaral
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Standart ve özel araç takımı yapılandırması](../msbuild/standard-and-custom-toolset-configurations.md)
-- [Çoklu sürüm desteği](../msbuild/msbuild-multitargeting-overview.md)
+- [Çoklu Sürüm Desteği](../msbuild/msbuild-multitargeting-overview.md)

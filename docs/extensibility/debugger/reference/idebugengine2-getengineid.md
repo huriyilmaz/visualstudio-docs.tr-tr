@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: 0d5674c8-a9b9-4b72-8211-d2d68695775a
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f4071e8279c2c4ab615ff625c1bbedebfd8e64ad
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8ec0c294c0d1a1e19942ac86847cad1226041b24
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80731084"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99878974"
 ---
 # <a name="idebugengine2getengineid"></a>IDebugEngine2::GetEngineID
 Hata ayıklama altyapısının (DE) GUID 'INI alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
 HRESULT GetEngineID(
