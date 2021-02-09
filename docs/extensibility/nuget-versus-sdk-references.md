@@ -6,15 +6,15 @@ ms.date: 08/02/2019
 ms.topic: conceptual
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 50197eeda1828156113fbbfa507447484618861a
-ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
+ms.openlocfilehash: ab2a99c2230c9fc150fe06c305741eedf14ded37
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/04/2021
-ms.locfileid: "97863774"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99874041"
 ---
 # <a name="nuget-versus-sdk-as-a-project-reference"></a>Proje başvurusu olarak NuGet ile SDK karşılaştırması
 

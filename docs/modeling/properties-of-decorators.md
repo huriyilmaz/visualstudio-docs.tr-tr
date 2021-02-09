@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Domain-Specific Language, decorators
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ef863d0d3dab394c2ca427a27d039c19e5921a51
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: e29dcda43fdbb7b60567ff0aa0627b41ca3ca299
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97360839"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99873794"
 ---
 # <a name="properties-of-decorators"></a>Dekoratörlerin Özellikleri
 Dekoratörler, diyagramdaki şekiller veya bağlayıcılar üzerinde görünebilen simgelerle, metin veya genişletme/daraltma köşeli ayraçlardır. Aşağıdaki tablolarda, üç dekoratörün çeşitinin özellikleri gösterilmektedir. Bazı özellikler yalnızca şekil dekoratlarını veya yalnızca bağlayıcı dekoratlarını üzerinde görünür.
@@ -28,7 +28,7 @@ Dekoratörler, diyagramdaki şekiller veya bağlayıcılar üzerinde görünebil
 |Özellik|Açıklama|Varsayılan|
 |-|-|-|
 |DisplayName|Oluşturulan tasarımcıda görüntülenecek dekoratörün adı.|Daraltma dekoratörü Genişlet|
-|Ad|Dekoratörün adı.|ExpandCollapseDecorator|
+|Name|Dekoratörün adı.|ExpandCollapseDecorator|
 |Notlar|Bu dekoratör ile ilişkili resmi olmayan notlar.|\<none>|
 |Horizontalkayması|Dekoratörün varsayılan konumuna göre inç cinsinden yatay konum. (Yalnızca şekiller üzerinde.)|0|
 |Verticalsapmayı|Dekoratörün varsayılan konumuna göre inç cinsinden dikey konum. (Yalnızca şekiller üzerinde.)|0|
@@ -42,7 +42,7 @@ Dekoratörler, diyagramdaki şekiller veya bağlayıcılar üzerinde görünebil
 |-|-|-|
 |DefaultIcon|Görüntülenecek simgenin veya resim dosyasının yolu.|\<none>|
 |DisplayName|Oluşturulan tasarımcıda görüntülenecek dekoratör adı.|Simge dekoratör|
-|Ad|Dekoratörün adı.|Şeklindeki IconDecorator|
+|Name|Dekoratörün adı.|Şeklindeki IconDecorator|
 |Notlar|Dekoratör ile ilişkili resmi olmayan notlar.|\<none>|
 |Horizontalkayması|Dekoratörün varsayılan konumuna göre inç cinsinden yatay konum. (Yalnızca şekiller üzerinde.)|0|
 |Verticalsapmayı|Dekoratörün varsayılan konumuna göre inç cinsinden dikey konum. (Yalnızca şekiller üzerinde.)|0|
@@ -58,7 +58,7 @@ Dekoratörler, diyagramdaki şekiller veya bağlayıcılar üzerinde görünebil
 |DisplayName|Oluşturulan tasarımcıda görüntülenecek dekoratör adı.|Etiketle|
 |FontSize|Dekoratör içinde görüntülenen metnin yazı tipi boyutu.|8|
 |FontStyle|Dekoratör içinde görüntülenen metnin yazı tipi stili.|Düzenli|
-|Ad|Dekoratörün adı.|Etiketle|
+|Name|Dekoratörün adı.|Etiketle|
 |Notlar|Dekoratör ile ilişkili resmi olmayan notlar.|\<none>|
 |Horizontalkayması|Dekoratörün varsayılan konumuna göre inç cinsinden yatay konum. (Yalnızca şekiller üzerinde.)|0|
 |Verticalsapmayı|Dekoratörün varsayılan konumuna göre inç cinsinden dikey konum. (Yalnızca şekiller üzerinde.)|0|

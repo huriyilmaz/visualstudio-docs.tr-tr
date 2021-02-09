@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 7a0535f6-1cd4-4b51-ad34-f4a45b9f1ce3
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1536c00f68232bb9e4aa92102b605b59ec58b196
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: 88dc5beeace4b88f5591853d932976d987b0d3c1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97726858"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99872433"
 ---
 # <a name="debugging-preparation-c-f-and-visual-basic-project-types"></a>Hata Ayıklama Hazırlığı: C#, F# ve Visual Basic Proje Türleri
 Bu bölümdeki konularda C#, F # ve [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] Proje şablonları tarafından oluşturulan proje türlerinin hatalarını ayıklama işlemi açıklanır [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .

@@ -7,15 +7,15 @@ f1_keywords:
 - vs.toolsoptionspages.text_editor.r.lint
 author: kraigb
 ms.author: kraigb
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-science
-ms.openlocfilehash: aecf9d95fb8a3b2cda659e2694bff145424e150b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1c32bffbd25a39ff2053dea22930365860ed04a7
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62970750"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99873664"
 ---
 # <a name="lint-r-code-in-visual-studio"></a>Visual Studio 'da LINT R kodu
 
@@ -23,7 +23,7 @@ Bir şifre, olası hataları, biçimlendirme sorunlarını ve sursuz boşluk gib
 
 Visual Studio için R Araçları (RTVS), bu makalede açıklanan çeşitli seçeneklerle denetlenen, R için yerleşik bir yerleşik olarak sunulur. Bu seçenekler **Araçlar**  >  **Seçenekler**  >  **metin Düzenleyicisi**  >  **R**  >  **Lint**' te bulunur.
 
-LINT varsayılan olarak devre dışıdır. Lint 'i etkinleştirmek için, **Tüm**  >  **Enable Lint** seçeneğini **true**olarak ayarlayın.
+LINT varsayılan olarak devre dışıdır. Lint 'i etkinleştirmek için, **Tüm**  >  **Enable Lint** seçeneğini **true** olarak ayarlayın.
 
 Etkinleştirildiğinde, bir düzenleyici, yazarken düzenleyicide çalışır. Sorunlar yeşil dalgalı çizgiler gibi görünür. Aşağıdaki grafikte, örneğin, RTVS, `=` `<-` atama için yerine kullanılması, işlev bağımsız değişkenlerinde boşluk olmaması, Pascal büyük/küçük harf tanımlayıcıları kullanımı ve noktalı virgülden kullanımı dahil olmak üzere altı LINT sorunu tanımlamıştır. Bir sorunun üzerine gelindiğinde bir açıklama sağlanır.
 
@@ -59,7 +59,7 @@ Hepsi varsayılan olarak **true** olarak ayarlanan bu seçenekler, her birinin b
 
 | Seçenek | Varsayılan değer | LINT efekti |
 | --- | --- | --- |
-| **Birden çok** | **True** | Aynı satırda birden çok deyim olduğunu tanımlar. |
+| **Çoklu** | **True** | Aynı satırda birden çok deyim olduğunu tanımlar. |
 | **Noktalı virgülle** | **True** | Noktalı virgüllerle kullanımları tanımlar. |
 
 ## <a name="text-group"></a>Metin grubu

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 912b4ba2-7719-43d5-b087-db33e3f9329a
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e399b28d3ddce07cae263550b536c21ad1db028
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: fcd4375b475106b0428f21057f5b44fc8bee8700
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97728310"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99872436"
 ---
 # <a name="debugging-preparation-c-project-types"></a>Hata Ayıklama Hazırlığı: C++ proje türleri
 Bu bölümde, proje şablonları tarafından oluşturulan temel proje türlerinde hata ayıklama işlemlerinin nasıl yapılacağı açıklanmaktadır [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] .

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - kernel debugger
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 569d3d0baf98f5c13d0ccb182df6e51160db93d6
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: a06ed9092145188bf5fbecd2caeb42f5ad5c2e3a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852777"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99871773"
 ---
 # <a name="error-debugging-isn39t-possible-because-a-kernel-debugger-is-enabled-on-the-system"></a>Hata: sistemde bir çekirdek hata ayıklayıcısı etkinleştirildiğinden, ISN&#39;t hata ayıklaması mümkün
 Yönetilen kodda hata ayıklarken, aşağıdaki hata iletisini alabilirsiniz:
@@ -99,5 +99,5 @@ Debugging isn't possible because a kernel debugger is enabled on the system
      `gn`
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Hata Ayıklama Güvenliği](../debugger/debugger-security.md)
+- [Hata ayıklayıcı güvenliği](../debugger/debugger-security.md)
 - [Yönetilen Kodda Hata Ayıklama](../debugger/debugging-managed-code.md)

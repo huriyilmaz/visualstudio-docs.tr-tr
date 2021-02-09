@@ -1,5 +1,5 @@
 ---
-title: Visual Studio aramasını kullanma
+title: Visual Studio Aramasını kullanma
 description: Ayarları, menüleri ve kodu bulmak için Visual Studio arama 'yı kullanmayı öğrenin.
 ms.date: 10/08/2020
 ms.topic: how-to
@@ -16,21 +16,21 @@ ms.assetid: 3870a8fd-4afa-4f1e-a811-9fdf41a9e82d
 monikerRange: vs-2019
 author: profexorgeek
 ms.author: jusjohns
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b9f8182646af4facb0f2f86c74f95dff091d55d1
-ms.sourcegitcommit: cea9e5787ff33e0e18aa1942bf4236748e0ef547
+ms.openlocfilehash: 101875b3a600a71c832498d05073187d2cf0b774
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92199651"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99873911"
 ---
 # <a name="use-visual-studio-search"></a>Visual Studio aramasını kullanma
 
 Visual Studio tümleşik geliştirme ortamı (IDE), anımsanması zor olabilecek birçok menü, seçenek ve özelliğe sahiptir. Visual Studio arama özelliği, geliştiricilerin IDE menülerini ve seçeneklerini bulmasına yardımcı olan tek bir arama kutusudur ve ayrıca kodunuzda arama yapın. Visual Studio veya deneyimli bir geliştirici için yeni bir özelliktir, bu özellik IDE özellikleri ve kodunuz arasında arama yapmanın hızlı bir yolunu sunar.
 
-**Ctrl** + Arama kutusuna erişmek için CTRL**Q** klavye kısayolunu kullanın veya varsayılan olarak menü çubuğunun yanında bulunan Visual Studio arama giriş kutusuna tıklayın:
+ + Arama kutusuna erişmek için CTRL **Q** klavye kısayolunu kullanın veya varsayılan olarak menü çubuğunun yanında bulunan Visual Studio arama giriş kutusuna tıklayın:
 
 :::image type="content" source="media/visual-studio-search-cropped.png" alt-text="Visual Studio arama kutusu" lightbox="media/visual-studio-search.png":::
 
@@ -43,26 +43,28 @@ Dosyalarda bul veya arama Çözüm Gezgini gibi diğer arama özelliklerinden fa
 
 Ayarları, seçenekleri ve benzer yapılandırma öğelerini bulmak için Visual Studio arama kutusunu kullanabilirsiniz. Örneğin, aşağıdaki ekran görüntüsünde gösterildiği gibi Visual Studio Color temasını değiştirmenize olanak sağlayan iletişim kutusunu hızla bulup açmak için *değişiklik temasını* arayın:
 
-:::image type="content" source="media/visual-studio-search-options.png" alt-text="Visual Studio arama kutusu":::
+:::image type="content" source="media/visual-studio-search-options.png" alt-text="Visual Studio ayarları ve seçeneklerinde ara":::
 
 > [!TIP]
 > Çoğu durumda, Visual Studio Search, sonuçlarda her öğenin menü, kısayol tuşu ve konumunu da hatırlatacaktır.
 
 Menü öğelerini ve komutları bulmak için Visual Studio arama kutusunu kullanabilirsiniz. Örneğin, Clean Solution komutunu hızlıca bulup yürütmek için *Clean Nuevo* araması yapın. Arama sonuçları Ayrıca, aşağıdaki ekran görüntüsünde gösterildiği gibi menülerde bu komutun nerede bulunacağı hakkında bir anımsatıcı sunar:
 
-:::image type="content" source="media/visual-studio-search-menu.png" alt-text="Visual Studio arama kutusu":::
+:::image type="content" source="media/visual-studio-search-menu.png" alt-text="Visual Studio menü öğeleri ve komutları ara":::
 
 Son olarak, yanlışlıkla kapattığınız Windows veya panellerde arama yapabilirsiniz. Örneğin, test Gezgini penceresini bulmak ve açmak için *Test* araması yapın:
 
-:::image type="content" source="media/visual-studio-search-window.png" alt-text="Visual Studio arama kutusu":::
+:::image type="content" source="media/visual-studio-search-window.png" alt-text="Visual Studio Windows ve panellerinde ara":::
 
 ## <a name="search-files-and-code"></a>Dosya ve kod ara
 
 Visual Studio Search, çözüm öğelerinizi dosya adı, kod, yöntem ve diğer eşleşmeler için de arar. Aşağıdaki ekran görüntüsünde, *markaşağı* araması MarkdownMetaExtractor.cs dosyasını, `MarkdownMetaExtractor` sınıfını ve çözüm içinde iki yöntemi buldu:
 
-:::image type="content" source="media/visual-studio-search-files.png" alt-text="Visual Studio arama kutusu" araması da yapabilirsiniz. Aşağıdaki ekran görüntüsünde, *FSS* araması bir **F**daha eski**s****canner**dosyası, sınıfı ve yöntemi buldu:
+:::image type="content" source="media/visual-studio-search-files.png" alt-text="Visual Studio Search ile dosyaları arama":::
 
-:::image type="content" source="media/visual-studio-search-camel.png" alt-text="Visual Studio arama kutusu":::
+"Camel Case" araması da yapabilirsiniz. Aşağıdaki ekran görüntüsünde, *FSS* araması bir **F** daha eski **s****canner** dosyası, sınıfı ve yöntemi buldu:
+
+:::image type="content" source="media/visual-studio-search-camel.png" alt-text="Visual Studio Search ile Camel Hump arama":::
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

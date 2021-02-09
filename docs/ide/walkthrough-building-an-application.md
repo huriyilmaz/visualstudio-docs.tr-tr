@@ -7,15 +7,15 @@ ms.technology: vs-ide-compile
 ms.topic: conceptual
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 76a281b90b3dabe2b1d91c43a27ee5f9c858f96c
-ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
+ms.openlocfilehash: f7fe40f78b8a8447c1ae784e33a25e905e368118
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92136621"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99873833"
 ---
 # <a name="walkthrough-build-an-application"></a>İzlenecek yol: Uygulama oluşturma
 
@@ -45,7 +45,7 @@ Bir çözüm oluşturduğunuzda, hata ayıklama ve yayın yapılandırma yapıla
 
 1. **Etkin çözüm platformu** listesinde, öğesini seçin **\<New...\>** .
 
-1. **Yeni çözüm platformu** iletişim kutusunda **x64**öğesini seçin ve ayarları x86 platformundan kopyalamayın.
+1. **Yeni çözüm platformu** iletişim kutusunda **x64** öğesini seçin ve ayarları x86 platformundan kopyalamayın.
 
    ![Yeni çözüm platformu Iletişim kutusu](../ide/media/buildwalk_newsolutionplatform.png)
 
@@ -95,11 +95,11 @@ Yapı çıkışını yığılmaları yerine, derleme sırasında belirli uyarı 
 
 1. **Çözüm Gezgini**' de en üst düzey proje düğümünü seçin.
 
-1. Menü çubuğunda, **View**  >  **özellik sayfalarını**görüntüle ' yi seçin.
+1. Menü çubuğunda,   >  **özellik sayfalarını** görüntüle ' yi seçin.
 
      **Proje Tasarımcısı** açılır.
 
-1. **Yapı** sayfasını seçin ve ardından **uyarıları bastır** kutusunda **0168**uyarı numarasını belirtin.
+1. **Yapı** sayfasını seçin ve ardından **uyarıları bastır** kutusunda **0168** uyarı numarasını belirtin.
 
      ![Derleme sayfası, proje Tasarımcısı](../ide/media/buildwalk_csharpsuppresswarnings.png)
 
@@ -115,7 +115,7 @@ Yapı çıkışını yığılmaları yerine, derleme sırasında belirli uyarı 
 
 1. **Çözüm Gezgini**' de en üst düzey proje düğümünü seçin.
 
-2. Menü çubuğunda, **View**  >  **özellik sayfalarını**görüntüle ' yi seçin.
+2. Menü çubuğunda,   >  **özellik sayfalarını** görüntüle ' yi seçin.
 
      **Proje Tasarımcısı** açılır.
 
@@ -135,7 +135,7 @@ Yapı çıkışını yığılmaları yerine, derleme sırasında belirli uyarı 
 
 ## <a name="display-additional-build-details-in-the-output-window"></a>Çıkış penceresinde ek derleme ayrıntılarını görüntüleme
 
-**Çıkış** penceresinde yapı işlemi hakkındaki bilgilerin ne kadar göründüğünü değiştirebilirsiniz. Yapı ayrıntı düzeyi genellikle **en az**bir olarak ayarlanır. Bu, **çıktı** penceresinin yalnızca derleme işleminin bir özetini ve yalnızca herhangi bir yüksek öncelikli uyarı veya hata ile birlikte görüntülenmesini sağlar. [Seçenekler iletişim kutusu, projeler ve çözümler, oluşturma ve çalıştırma seçeneklerini](../ide/reference/options-dialog-box-projects-and-solutions-build-and-run.md)kullanarak yapı hakkında daha fazla bilgi görüntüleyebilirsiniz.
+**Çıkış** penceresinde yapı işlemi hakkındaki bilgilerin ne kadar göründüğünü değiştirebilirsiniz. Yapı ayrıntı düzeyi genellikle **en az** bir olarak ayarlanır. Bu, **çıktı** penceresinin yalnızca derleme işleminin bir özetini ve yalnızca herhangi bir yüksek öncelikli uyarı veya hata ile birlikte görüntülenmesini sağlar. [Seçenekler iletişim kutusu, projeler ve çözümler, oluşturma ve çalıştırma seçeneklerini](../ide/reference/options-dialog-box-projects-and-solutions-build-and-run.md)kullanarak yapı hakkında daha fazla bilgi görüntüleyebilirsiniz.
 
 > [!IMPORTANT]
 > Daha fazla bilgi belirtirseniz, yapılandırmanın tamamlanması daha uzun sürer.
@@ -150,18 +150,18 @@ Yapı çıkışını yığılmaları yerine, derleme sırasında belirli uyarı 
 
 1. **MSBuild proje derleme çıkışı ayrıntı** listesinde **normal**' i seçin ve ardından **Tamam** düğmesini seçin.
 
-1. Menü çubuğunda, **Build**  >  **temiz çözüm**oluştur ' u seçin.
+1. Menü çubuğunda,   >  **temiz çözüm** oluştur ' u seçin.
 
 1. Çözümü oluşturun ve ardından **Çıkış** penceresindeki bilgileri gözden geçirin.
 
      Yapı bilgileri, yapılandırmanın başlatıldığı saati (başlangıcında bulunur) ve dosyaların işlendiği sırayı içerir. Bu bilgiler, Visual Studio 'Nun derleme sırasında çalıştığı gerçek derleyici söz dizimini da içerir.
 
-     Örneğin, C# derlemesinde, [/nowarn](/dotnet/visual-basic/reference/command-line-compiler/nowarn) seçeneği, bu konunun önceki kısımlarında yer alan üç farklı uyarıyla birlikte belirttiğiniz **0168**uyarı kodunu listeler.
+     Örneğin, C# derlemesinde, [/nowarn](/dotnet/visual-basic/reference/command-line-compiler/nowarn) seçeneği, bu konunun önceki kısımlarında yer alan üç farklı uyarıyla birlikte belirttiğiniz **0168** uyarı kodunu listeler.
 
      Visual Basic derlemede, [/nowarn](/dotnet/visual-basic/reference/command-line-compiler/nowarn) hariç tutulacak belirli uyarıları içermez, bu nedenle hiçbir uyarı görünmez.
 
     > [!TIP]
-    > **CTRL**F tuşlarını seçerek **bul** iletişim kutusunu görüntülediğinizde **Çıkış** penceresinin içeriğinde arama yapabilirsiniz + **F** .
+    > **CTRL** F tuşlarını seçerek **bul** iletişim kutusunu görüntülediğinizde **Çıkış** penceresinin içeriğinde arama yapabilirsiniz +  .
 
 Daha fazla bilgi için bkz. [nasıl yapılır: yapı günlüğü dosyalarını görüntüleme, kaydetme ve yapılandırma](../ide/how-to-view-save-and-configure-build-log-files.md).
 
@@ -173,7 +173,7 @@ Daha fazla bilgi için bkz. [nasıl yapılır: derleme çıkış dizinini deği�
 
 ### <a name="specify-a-release-build-for-visual-basic"></a>Visual Basic için bir yayın derlemesi belirtin
 
-1. **Proje tasarımcısını**açın.
+1. **Proje tasarımcısını** açın.
 
      ![Görünüm menüsü, özellik sayfaları komutu](../ide/media/buildwalk_viewpropertypages.png)
 
@@ -196,7 +196,7 @@ Daha fazla bilgi için bkz. [nasıl yapılır: derleme çıkış dizinini deği�
 
 ### <a name="specify-a-release-build-for-c"></a>C için bir yayın derlemesi belirtin\#
 
-1. **Proje tasarımcısını**açın.
+1. **Proje tasarımcısını** açın.
 
      ![Görünüm menüsü, özellik sayfaları komutu](../ide/media/buildwalk_viewpropertypages.png)
 
@@ -213,7 +213,7 @@ Daha fazla bilgi için bkz. [nasıl yapılır: derleme çıkış dizinini deği�
     > [!IMPORTANT]
     > Belirttiğiniz ağ paylaşımının güvenilir bir konum olmayabilir uyarısı veren bir ileti kutusu görünür. Belirttiğiniz konuma güveniyorsanız ileti kutusunda **Tamam** düğmesini seçin.
 
-1. **Standart araç çubuğunda**çözüm konfigürasyonlarını **Sürüm** ve çözüm platformlarını **x86**olarak ayarlayın.
+1. **Standart araç çubuğunda** çözüm konfigürasyonlarını **Sürüm** ve çözüm platformlarını **x86** olarak ayarlayın.
 
 1. Uygulamayı derleyin.
 

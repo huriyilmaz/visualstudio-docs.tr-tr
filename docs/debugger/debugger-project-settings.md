@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5e1b2a30-d2db-49e8-aba3-2d3a190eea80
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 6a3a5ba7a1e215fddd5b1127859948496e9b4e1d
-ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
+ms.openlocfilehash: a3f517e54ba96ecf81b1ac533cf734f2b0a0eb5f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96561038"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99873051"
 ---
 # <a name="debugger-project-settings"></a>Hata Ayıklayıcı Proje Ayarları
 Belirli proje ayarları hata ayıklamayı da etkiler. Bu ayarlar, hata ayıklayıcının hangi dizinlerde göründüğünü, programı başlatmak için kullanılan komut ve komut bağımsız değişkenlerini ve program için oluşturulan hata ayıklama bilgilerinin türünü tespit eden şeyleri sağlar. Bu ayarları **Özellik sayfaları** iletişim kutusunda değiştirebilirsiniz.

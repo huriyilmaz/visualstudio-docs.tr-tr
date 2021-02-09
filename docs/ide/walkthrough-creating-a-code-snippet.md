@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: 0dcaae11-39cf-4463-9c90-2494321251c2
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 61b7f227344f00fe277d4bf062f83bd3c1d79fd5
-ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
+ms.openlocfilehash: 39565b95b93e489a739c2da3a0f88fb9f683a2bc
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96479647"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99873807"
 ---
 # <a name="walkthrough-create-a-code-snippet"></a>İzlenecek yol: Kod parçacığı oluşturma
 
-Yalnızca birkaç adımdan oluşan bir kod parçacığı oluşturabilirsiniz. Yapmanız gereken tek şey bir XML dosyası oluşturur, uygun öğeleri doldurur ve kodunuzu buna ekler. İsteğe bağlı olarak değiştirme parametrelerini ve proje başvurularını kullanabilirsiniz. **Kod parçacıkları yöneticisinin** (**Araçlar** **Import**  >  **kod parçacıkları Yöneticisi**) içeri aktar düğmesini kullanarak kod parçacığını Visual Studio yüklemenize aktarın.
+Yalnızca birkaç adımdan oluşan bir kod parçacığı oluşturabilirsiniz. Yapmanız gereken tek şey bir XML dosyası oluşturur, uygun öğeleri doldurur ve kodunuzu buna ekler. İsteğe bağlı olarak değiştirme parametrelerini ve proje başvurularını kullanabilirsiniz. **Kod parçacıkları yöneticisinin** (**Araçlar**   >  **kod parçacıkları Yöneticisi**) içeri aktar düğmesini kullanarak kod parçacığını Visual Studio yüklemenize aktarın.
 
 ## <a name="snippet-template"></a>Kod parçacığı şablonu
 
@@ -110,7 +110,7 @@ Aşağıdaki XML, temel kod parçacığı şablonudur:
 
    ::: moniker-end
 
-6. Bir C# veya Visual Basic projesi açarak kod parçacığınızı test edin. Düzenleyicide bir kod dosyası açıkken, **Snippets**  >  sağ tıklama menüsünde kod **parçacığı Ekle** ' yi ve ardından **kod parçacılarımı** seçin. **Kare kök** adlı bir kod parçacığı görmeniz gerekir. Çift tıklayın.
+6. Bir C# veya Visual Basic projesi açarak kod parçacığınızı test edin. Düzenleyicide bir kod dosyası açıkken,   >  sağ tıklama menüsünde kod **parçacığı Ekle** ' yi ve ardından **kod parçacılarımı** seçin. **Kare kök** adlı bir kod parçacığı görmeniz gerekir. Çift tıklayın.
 
    Kod parçacığı kodu kod dosyasına eklenir.
 
@@ -204,7 +204,7 @@ Kod parçacığının bölümlerinin Kullanıcı tarafından değiştirilmesini 
 
 ## <a name="import-a-namespace"></a>Ad alanını içeri aktarma
 
-`using`Içeri aktarmalar öğesini ekleyerek bir yönerge (C#) veya `Imports` ifade (Visual Basic) [Imports element](code-snippets-schema-reference.md#imports-element)eklemek için bir kod parçacığı kullanabilirsiniz. .NET Framework projeler için, [Başvurular öğesini](code-snippets-schema-reference.md#references-element)kullanarak da projeye bir başvuru ekleyebilirsiniz.
+`using`Içeri aktarmalar öğesini ekleyerek bir yönerge (C#) veya `Imports` ifade (Visual Basic) [](code-snippets-schema-reference.md#imports-element)eklemek için bir kod parçacığı kullanabilirsiniz. .NET Framework projeler için, [Başvurular öğesini](code-snippets-schema-reference.md#references-element)kullanarak da projeye bir başvuru ekleyebilirsiniz.
 
 Aşağıdaki XML, System.IO ad alanında yöntemini kullanan bir kod parçacığını gösterir `File.Exists` ve bu nedenle, System.IO ad alanını içeri aktarmak Için **Imports** öğesini tanımlar.
 

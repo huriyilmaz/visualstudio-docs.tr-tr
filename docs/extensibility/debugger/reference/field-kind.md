@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: fd522b9c-52e2-42fa-939d-343347d5c3b1
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: cafe4a34745f3b34070f7d8fed1a246c806375a4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a18739ebe30a41e9dca837287d58db57795f878b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80736868"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99874375"
 ---
 # <a name="field_kind"></a>FIELD_KIND
 Bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesinde bulunan alan türünü belirtir.
@@ -28,7 +28,7 @@ Bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesn
 ## <a name="syntax"></a>Syntax
 
 ```cpp
-enum enum_FIELD_KIND {
+enum enum_FIELD_KIND {
     FIELD_KIND_NONE       = 0x00000000,
 
     // Type of field
@@ -58,7 +58,7 @@ enum enum_FIELD_KIND {
     FIELD_TYPE_EXTENDED   = 0x00800000,
 
     // Specific information about symbols
-    FIELD_SYM_MEMBER      = 0x01000000,
+    FIELD_SYM_MEMBER      = 0x01000000,
     FIELD_SYM_LOCAL       = 0x02000000,
     FIELD_SYM_PARAM       = 0x04000000,
     FIELD_SYM_THIS        = 0x08000000,
@@ -107,7 +107,7 @@ public enum enum_FIELD_KIND {
     FIELD_TYPE_EXTENDED   = 0x00800000,
 
     // Specific information about symbols
-    FIELD_SYM_MEMBER      = 0x01000000,
+    FIELD_SYM_MEMBER      = 0x01000000,
     FIELD_SYM_LOCAL       = 0x02000000,
     FIELD_SYM_PARAM       = 0x04000000,
     FIELD_SYM_THIS        = 0x08000000,
@@ -237,7 +237,7 @@ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Listelemeler](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [FIELD_MODIFIERS](../../../extensibility/debugger/reference/field-modifiers.md)
 - [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md)
 - [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

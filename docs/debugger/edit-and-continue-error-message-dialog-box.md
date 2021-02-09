@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f98c91c0-447a-4533-85b6-87170a0dc4c3
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8ef34889b838e2f7eaa92420eec90db9def57e65
-ms.sourcegitcommit: 47da50a74fcd3db66d97cb20accac983bc41912f
+ms.openlocfilehash: 0835746b94412380bee314bc3fac59b4c48f86d3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96862853"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99872007"
 ---
 # <a name="edit-and-continue-error-message"></a>Düzenle ve devam et hata iletisi
 
@@ -42,12 +42,12 @@ Bu hata iletisinin olası nedenleri şunlardır:
 - Dr. Watson dökümünden hata ayıklarken kodu düzenlemeye çalışılıyor.
 - İşlenmeyen bir özel durum oluştuktan sonra kodu düzenlemeye çalışılıyor ve **işlenmemiş özel durumlarla çağrı yığınını bırakma** seçeneği seçili değil.
 - Gömülü çalışma zamanı uygulamasında hata ayıklarken kodu düzenlemeye çalışılıyor.
-- 64 bit uygulama hedefi ile 4.5.1 'ten önceki bir .NET Framework sürümünü kullanarak yönetilen kodu düzenlemeye çalışılıyor. 4.5.1 ' den önceki .NET Framework Düzenle ve devam et özelliğini kullanmak için, **x86** **\<ProjectName>**  >  **Özellikler**  >  **derleme** sekmesi, **Gelişmiş derleyici** ayarında hedefi x86 olarak ayarlayın.
+- 64 bit uygulama hedefi ile 4.5.1 'ten önceki bir .NET Framework sürümünü kullanarak yönetilen kodu düzenlemeye çalışılıyor. 4.5.1 ' den önceki .NET Framework Düzenle ve devam et özelliğini kullanmak için,  **\<ProjectName>**  >  **Özellikler**  >  **derleme** sekmesi, **Gelişmiş derleyici** ayarında hedefi x86 olarak ayarlayın.
 - Hata ayıklama sırasında değiştirilmiş ve yeniden yüklenmiş bir derlemede kod düzenlemeye çalışılıyor.
 - Yüklenemeyen bir derlemede kod düzenlemeye çalışılıyor.
 - En son sürümde derleme hataları olduğundan, uygulamanın eski bir sürümünde hata ayıklama işlemi başlatılıyor.
 
-Daha fazla bilgi için bkz:
+Daha fazla bilgi için bkz.
 - [C++ Düzenle ve devam et blog gönderisi](https://devblogs.microsoft.com/cppblog/c-edit-and-continue-in-visual-studio-2015-update-3/)
 - [Desteklenen kod değişiklikleri (C++)](../debugger/supported-code-changes-cpp.md)
 - [Düzenle ve Devam Et](../debugger/edit-and-continue.md)

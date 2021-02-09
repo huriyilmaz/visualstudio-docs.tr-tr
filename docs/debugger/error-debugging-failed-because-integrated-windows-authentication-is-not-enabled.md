@@ -14,15 +14,15 @@ helpviewer_keywords:
 - debugger, Web application errors
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 35c602b2754e4361b4e41e2b4d4d5cdcc09381c5
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 4d1bbdc3e06dee87e7d8930bc5c4e60c6d25ee2f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90852790"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99871747"
 ---
 # <a name="error-debugging-failed-because-integrated-windows-authentication-is-not-enabled"></a>Hata: Tümleşik Windows Kimlik Doğrulaması Etkinleştirilmediğinden Hata Ayıklama Başarısız
 Hata ayıklamayı isteyen kullanıcının kimlik doğrulaması bir kimlik doğrulama hatası nedeniyle engellendi. Bu durum, bir Web uygulamasına veya bir XML Web hizmetine adım adım çalışırken oluşabilir. Bu hatanın bir nedeni tümleşik Windows kimlik doğrulamasının etkinleştirilmemesine neden olur. Etkinleştirmek için "tümleşik Windows kimlik doğrulamasını etkinleştirmek Için" bölümündeki adımları izleyin.
@@ -37,7 +37,7 @@ Hata ayıklamayı isteyen kullanıcının kimlik doğrulaması bir kimlik doğru
 
 3. **Denetim Masası**'Nda **Yönetimsel Araçlar**' a çift tıklayın.
 
-4. **Internet Information Services**çift tıklayın.
+4. **Internet Information Services** çift tıklayın.
 
 5. Web sunucusu düğümüne tıklayın.
 
@@ -53,7 +53,7 @@ Hata ayıklamayı isteyen kullanıcının kimlik doğrulaması bir kimlik doğru
 
      **Kimlik doğrulama yöntemleri** iletişim kutusu görüntülenir.
 
-9. **Kimliği doğrulanmış erişim**altında, **Tümleşik Windows kimlik doğrulaması**' nı seçin.
+9. **Kimliği doğrulanmış erişim** altında, **Tümleşik Windows kimlik doğrulaması**' nı seçin.
 
 10. **Kimlik doğrulama yöntemleri** iletişim kutusunu kapatmak için **Tamam** ' ı tıklatın.
 
@@ -69,7 +69,7 @@ Hata ayıklamayı isteyen kullanıcının kimlik doğrulaması bir kimlik doğru
 
     1. **Başlat**' a, **Denetim Masası** ' na ve ardından **Programlar**' a tıklayın.
 
-    2. **Programlar ve Özellikler**altında, **Windows özelliklerini aç veya kapat**' a tıklayın.
+    2. **Programlar ve Özellikler** altında, **Windows özelliklerini aç veya kapat**' a tıklayın.
 
          Kullanıcı Access Control iletişim kutusu görünür ve devam etmek için sizden izin ister.
 
@@ -79,17 +79,17 @@ Hata ayıklamayı isteyen kullanıcının kimlik doğrulaması bir kimlik doğru
 
     4. Özellik listesinde **Internet Information Services** düğümünü genişletin.
 
-    5. **Internet Information Services**altında **World Wide Web Hizmetleri** düğümünü genişletin.
+    5. **Internet Information Services** altında **World Wide Web Hizmetleri** düğümünü genişletin.
 
-    6. **World Wide Web Hizmetler**altında **güvenlik**' e tıklayın.
+    6. **World Wide Web Hizmetler** altında **güvenlik**' e tıklayın.
 
     7. **Windows kimlik doğrulaması**' na tıklayın.
 
-    8. **Internet Information Services**altında **Web yönetim araçları** düğümünü genişletin.
+    8. **Internet Information Services** altında **Web yönetim araçları** düğümünü genişletin.
 
     9. **Web yönetimi araçları**' nın altında, **IIS 6 Yönetim uyumluluğu** düğümünü genişletin ve **IIS 6 metatabanı ve IIS 6 yapılandırma uyumluluğu** onay kutusunu seçin.
 
-    10. **Web yönetimi araçları**altında **IIS Yönetim Konsolu** ' nu seçin ve **Tamam** ' ı tıklatın.
+    10. **Web yönetimi araçları** altında **IIS Yönetim Konsolu** ' nu seçin ve **Tamam** ' ı tıklatın.
 
     11. Bu değişikliklerin etkili olması için bilgisayarı yeniden başlatın.
 
@@ -107,7 +107,7 @@ Hata ayıklamayı isteyen kullanıcının kimlik doğrulaması bir kimlik doğru
 
 8. Orta bölmenin başlığı, seçtiğiniz web sitesinin adı olarak değişir. Bu bölmede, **IIS** başlığı altında **kimlik doğrulama**' ya çift tıklayın.
 
-     Bölmenin başlığı, **kimlik doğrulamasında**değişir.
+     Bölmenin başlığı, **kimlik doğrulamasında** değişir.
 
 9. **Kimlik doğrulama** bölmesindeki **ad** sütununda, **Windows kimlik doğrulaması** ' na sağ tıklayın ve ardından **Etkinleştir**' e tıklayın.
 
