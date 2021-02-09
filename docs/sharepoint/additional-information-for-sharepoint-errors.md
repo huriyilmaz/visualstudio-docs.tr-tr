@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, troubleshooting
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 240913e93dc1945846613ac1ecc8d0141368f7b3
-ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
+ms.openlocfilehash: 5ce41bdf53ee55bfcbcec0cc2a2271ba9914aed8
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94850435"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99851744"
 ---
 # <a name="additional-information-for-sharepoint-errors"></a>SharePoint hataları için ek bilgiler
   [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]Sorun giderme konularında ve genel forumlarda SharePoint araçları hatalarını ve uyarılarını sorun giderme konusunda yardım bulabilirsiniz.
@@ -40,7 +40,7 @@ ms.locfileid: "94850435"
 ## <a name="other-resources"></a>Diğer kaynaklar
  Aşağıdaki tabloda [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint Araç forumları ve diğer kaynaklar listelenmektedir.
 
-|Terim|Tanım|
+|Süre|Tanım|
 |----------|----------------|
 |[SharePoint geliştirme](https://social.msdn.microsoft.com/Forums/office/home?forum=sharepointdevelopmentprevious)|' De SharePoint geliştirme hakkında sorularınız için bir forum sağlar [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .|
 |[Visual Studio forumları](https://social.msdn.microsoft.com/Forums/vstudio/home?category=visualstudio)|Hakkında sorularınız için bir forum sağlar [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .|

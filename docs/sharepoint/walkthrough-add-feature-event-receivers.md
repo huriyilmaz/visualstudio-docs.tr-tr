@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, feature event receivers
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 98b85222fca4da6dfca653ad74e1315801798d83
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: c9d50de6630a813a9c8c7a075af6f921608fcd93
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96915602"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99851538"
 ---
 # <a name="walkthrough-add-feature-event-receivers"></a>İzlenecek yol: özellik Olay alıcıları ekleme
 Özellik Olay alıcıları, SharePoint 'te aşağıdaki özellikle ilgili olaylardan biri gerçekleştiğinde yürütülen yöntemlerdir:
@@ -58,7 +58,7 @@ Bu izlenecek yol, bir SharePoint projesindeki bir özelliğe olay alıcısının
 
 #### <a name="to-create-a-project-with-a-feature-event-receiver"></a>Özellik olay alıcısı olan bir proje oluşturmak için
 
-1. **File**  >  **New**  >  **Yeni proje** iletişim kutusunu göstermek için menü çubuğunda dosya yeni **Proje** ' yi seçin.
+1.   >    >  **Yeni proje** iletişim kutusunu göstermek için menü çubuğunda dosya yeni **Proje** ' yi seçin.
 
 2. **Visual C#** veya **Visual Basic** altında **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
 

@@ -5,15 +5,15 @@ ms.date: 12/04/2017
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-science
-ms.openlocfilehash: 686f98aaaade035f1632139d255ccff8b37eddf3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 96078d1b2fdb5a54c912cbf214024726ce102e4e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75850061"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99851848"
 ---
 # <a name="set-up-remote-workspaces"></a>Uzak çalışma alanlarını ayarlama
 
@@ -76,8 +76,8 @@ Sertifikayı uzak bilgisayara yüklemek için bir komut isteminden *Certlm. msc*
 Sertifika içeri aktarıldıktan sonra, `NETWORK SERVICE` Aşağıdaki yönergelerde açıklandığı gibi özel anahtarı okumak için hesap izinlerini verin. `NETWORK_SERVICE` , sunucu bilgisayarına gelen SSL bağlantılarını sonlandıran hizmet olan R Services Broker 'ı çalıştırmak için kullanılan hesaptır.
 
 1. Bir yönetici komut isteminden *Certlm. msc* (Sertifika Yöneticisi) komutunu çalıştırın.
-1. **Kişisel**  >  **Sertifikalar**' ı genişletin, sertifikaya sağ tıklayın ve **All Tasks**  >  **özel anahtarları Yönet**tüm görevler ' i seçin.
-1. Sertifikaya sağ tıklayın ve **Tüm görevler**altında **özel anahtarları Yönet** komutunu seçin.
+1. **Kişisel**  >  **Sertifikalar**' ı genişletin, sertifikaya sağ tıklayın ve   >  **özel anahtarları Yönet** tüm görevler ' i seçin.
+1. Sertifikaya sağ tıklayın ve **Tüm görevler** altında **özel anahtarları Yönet** komutunu seçin.
 1. Görüntülenen iletişim kutusunda **Ekle** ' yi seçin ve `NETWORK SERVICE` Hesap adı olarak girin:
 
     ![Özel anahtarları Yönet iletişim kutusu, NETWORK_SERVICE ekleme](media/workspaces-remote-manage-private-key-dialog.png)
@@ -115,7 +115,7 @@ Otomatik olarak imzalanan bir sertifika vermek için:
 
 ### <a name="configure-rtvs-daemon"></a>RTVS Daemon 'ı yapılandırma
 
-SSL sertifika dosyası yolu (PFX dosyasının yolu), *üzerinde/etc/rtvs/rtvsd.config.js*ayarlanmalıdır. `X509CertificateFile` `X509CertificatePassword` Dosya yolunu ve parolayı sırasıyla güncelleştirin.
+SSL sertifika dosyası yolu (PFX dosyasının yolu), *üzerinde/etc/rtvs/rtvsd.config.js* ayarlanmalıdır. `X509CertificateFile` `X509CertificatePassword` Dosya yolunu ve parolayı sırasıyla güncelleştirin.
 
 ```json
 {
@@ -211,7 +211,7 @@ Uzak bilgisayara komut satırından ping işlemi yapmayı deneyin: `ping remote-
 - `Microsoft.R.Host.Broker` `Microsoft.R.Host` Bağlantı noktası 5444 üzerinde hem gelen hem de giden bağlantılar için güvenlik duvarı kuralları etkinleştirilmemiş.
 - Yüklü bir SSL sertifikası `CN=<remote-machine-name>` yüklü değil.
 
-Yukarıdaki değişikliklerden herhangi birini yaptıktan sonra bilgisayarı yeniden başlatın. Bu durumda, `RHostBrokerService` ve ' `RUserProfileService` nin Görev Yöneticisi (Hizmetler sekmesi) veya *Services. msc*aracılığıyla çalıştığından emin olun.
+Yukarıdaki değişikliklerden herhangi birini yaptıktan sonra bilgisayarı yeniden başlatın. Bu durumda, `RHostBrokerService` ve ' `RUserProfileService` nin Görev Yöneticisi (Hizmetler sekmesi) veya *Services. msc* aracılığıyla çalıştığından emin olun.
 
 **Ç. R Server 'a bağlanırken R etkileşimli penceresi neden "401 Erişim engellendi" deyin?**
 
@@ -230,4 +230,4 @@ Güvenlik Duvarı kurallarının `Microsoft.R.Host.Broker` `Microsoft.R.Host` ba
 
 **Ç. Tüm bu çözümleri denedim ve hala çalışmıyor. Şimdi ne?**
 
-*C:\windows\serviceprofiles\networkservice\appdata\local\temp*konumundaki günlük dosyalarına bakın. Bu klasör, çalıştırılan R Broker hizmetinin her bir örneği için ayrı günlük dosyaları içerir. Hizmet her yeniden başlatıldığında yeni bir günlük dosyası oluşturulur. Neyin yanlış gittiğini öğrenmek için en son günlük dosyasını denetleyin.
+*C:\windows\serviceprofiles\networkservice\appdata\local\temp* konumundaki günlük dosyalarına bakın. Bu klasör, çalıştırılan R Broker hizmetinin her bir örneği için ayrı günlük dosyaları içerir. Hizmet her yeniden başlatıldığında yeni bir günlük dosyası oluşturulur. Neyin yanlış gittiğini öğrenmek için en son günlük dosyasını denetleyin.

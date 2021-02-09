@@ -6,21 +6,21 @@ ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 ms.reviewer: karthiknadig
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-science
-ms.openlocfilehash: 8c5b4278ab50aac96703f03e74c014d29831f22e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 01048bc9b21287eb62693096b34a1ea8305e0ee9
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62810245"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99851874"
 ---
 # <a name="use-docker-containers-with-r-tools-for-visual-studio"></a>Visual Studio için R Araçları ile Docker Kapsayıcıları Kullanma
 
 [Docker for Windows](https://www.docker.com/docker-windows)yüklemesiyle birlikte Visual Studio için R araçları (rtvs) sürüm 1.3 +, Docker kapsayıcılarıyla çalışmayı destekler.
 
-## <a name="create-a-container"></a>Bir kapsayıcı oluşturma
+## <a name="create-a-container"></a>Kapsayıcı oluşturma
 
 1. **Çalışma alanları** penceresinin sağ köşesindeki **kapsayıcılar** düğmesini seçin (**R araçları**  >  **Windows**  >  **çalışma alanları**). Bu pencere, Docker for Windows yüklü değilse ve indirme için bir bağlantı sağlıyorsa size bildirir. Docker 'ı yüklemek için bilgisayarın yeniden başlatılması gerekebilir.
 
@@ -68,4 +68,4 @@ docker build -t my-rtvs-image:latest .
 docker run -p 6056:5444 --name my-rtvs-container my-rtvs-image:latest rtvsd
 ```
 
-`-p 6056:5444`Bağımsız değişken, rtvs 'in rtvs-Daemon ' ı algılaması için 6056 numaralı bağlantı noktasını iç bağlantı noktası 5444 ' e eşler. 5444 kapsayıcı bağlantı noktasını sunan herhangi bir kapsayıcı, **çalışma alanları** penceresinde listelenir. Daha sonra, **Workspaces** `<<unix>>\ruser1` Docker dosyasında farklı kimlik bilgileri belirtmediğiniz sürece Kullanıcı adı ve parola olarak "foobar" kullanarak bir kapsayıcıya bağlanmak için çalışma alanları penceresini kullanabilirsiniz.
+`-p 6056:5444`Bağımsız değişken, rtvs 'in rtvs-Daemon ' ı algılaması için 6056 numaralı bağlantı noktasını iç bağlantı noktası 5444 ' e eşler. 5444 kapsayıcı bağlantı noktasını sunan herhangi bir kapsayıcı, **çalışma alanları** penceresinde listelenir. Daha sonra,  `<<unix>>\ruser1` Docker dosyasında farklı kimlik bilgileri belirtmediğiniz sürece Kullanıcı adı ve parola olarak "foobar" kullanarak bir kapsayıcıya bağlanmak için çalışma alanları penceresini kullanabilirsiniz.

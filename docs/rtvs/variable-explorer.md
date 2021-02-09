@@ -5,19 +5,19 @@ ms.date: 01/24/2018
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-science
-ms.openlocfilehash: 799b7f2789898e0d02d9588f9a3ad7d1e8098a00
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f69e5b61e80d3a00522307dd7481f74418407d99
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62809877"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99851809"
 ---
 # <a name="variable-explorer"></a>Değişken Gezgini
 
-**R araçları**Windows değişken Gezgini kullanılarak açılan **değişken Gezgini** penceresi  >  **Windows**  >  **Variable Explorer** (veya **Ctrl** + **8** **R araçları**  >  **veri bilimi ayarları**kullandıysanız CTRL 8), geçerli R oturumunda belirli bir kapsamdaki tüm değişkenleri gösterir. Örneğin, **değişken Gezgini** açarsanız ve [etkileşimli pencereye](interactive-repl-for-r-in-visual-studio.md)aşağıdaki satırları girerseniz:
+**R araçları** Windows değişken Gezgini kullanılarak açılan **değişken Gezgini** penceresi  >    >   (veya  +  **R araçları**  >  **veri bilimi ayarları** kullandıysanız CTRL 8), geçerli R oturumunda belirli bir kapsamdaki tüm değişkenleri gösterir. Örneğin, **değişken Gezgini** açarsanız ve [etkileşimli pencereye](interactive-repl-for-r-in-visual-studio.md)aşağıdaki satırları girerseniz:
 
 ```R
 x <- 42
@@ -29,7 +29,7 @@ n <- c(1,2,3,5,8,13)
 
 ![Visual Studio 'da değişken Gezgin penceresi](media/variable-explorer-window.png)
 
-Oturumda tanımlanmış daha karmaşık bir R veri çerçevesine sahipseniz verilere gidebilirsiniz. Örneğin, çalıştırdıktan sonra, `cars <- mtcars` **değişken Gezgini**farklı düğümleri genişleterek veri kümesinde gezinebilirsiniz:
+Oturumda tanımlanmış daha karmaşık bir R veri çerçevesine sahipseniz verilere gidebilirsiniz. Örneğin, çalıştırdıktan sonra, `cars <- mtcars` **değişken Gezgini** farklı düğümleri genişleterek veri kümesinde gezinebilirsiniz:
 
 ![Değişken Gezgini genişletilmiş görünümü](media/variable-explorer-expanded-results.png)
 
@@ -45,7 +45,7 @@ Veriler çoğunlukla tablo olarak olduğu için, büyüteç simgesini seçerek v
 
 Sütun başlığına tıklanması verileri sütuna göre sıralar (artan ve azalan arasında değişen). **SHIFT** tuşunu basılı tutmak ve ek sütunlara tıklatmak, bu sütunları sıralamaya de ekler. **SHIFT** olmadan bir sütuna tıkladığınızda tek sütunlu sıralama döndürülür.
 
-Sütun başlıklarını tıklamayı seçtiğiniz sıra, sıralamanın gerçekleştirileceği sırayı belirler. Örneğin, sağ **üst karakter** + sütununa **cyl** **tıklayın** **Shift** + ve sonra listeyi artan silindir ve azalan mil başına-galon için sıralamak üzere **MPG** sütununa iki kez**tıklayın** :
+Sütun başlıklarını tıklamayı seçtiğiniz sıra, sıralamanın gerçekleştirileceği sırayı belirler. Örneğin, sağ **üst karakter** + sütununa  **tıklayın**  + ve sonra listeyi artan silindir ve azalan mil başına-galon için sıralamak üzere **MPG** sütununa iki kez **tıklayın** :
 
 ![İki sütuna göre veri sıralamanın tablo görünümü.](media/variable-explorer-table-view-sorting.png)
 
@@ -53,7 +53,7 @@ Sütun başlıklarını tıklamayı seçtiğiniz sıra, sıralamanın gerçekle�
 
 ## <a name="open-in-excel-or-other-csv-capable-application"></a>Excel 'de aç (veya CSV özellikli diğer uygulama)
 
-Daha fazla düzenleme ve çözümleme için, oturum değişkenlerini CSV 'ye aktarmak genellikle yararlı olur. Dışarı aktarma işlemi, ![ değişken Gezgini her bir düğümün yanındaki küçük Excel simgesiyle (Excel dışa aktarma simgesi ](media/variable-explorer-excel-icon.png) ) veya **Variable Explorer**BIR öğeye sağ tıklayıp **CSV uygulamasında aç**' ı seçerek yapılır. Simgenin seçilmesi, verileri *%userprofile%\Documents\ RTVS_CSV_Exports* klasöründe yenı bir CSV dosyasına yazar ve ardından bu dosyayı başlatır *. csv* uzantısıyla ilişkili herhangi bir uygulamanın bulunduğu bu dosya açılır.
+Daha fazla düzenleme ve çözümleme için, oturum değişkenlerini CSV 'ye aktarmak genellikle yararlı olur. Dışarı aktarma işlemi, ![ değişken Gezgini her bir düğümün yanındaki küçük Excel simgesiyle (Excel dışa aktarma simgesi ](media/variable-explorer-excel-icon.png) ) veya BIR öğeye sağ tıklayıp **CSV uygulamasında aç**' ı seçerek yapılır. Simgenin seçilmesi, verileri *%userprofile%\Documents\ RTVS_CSV_Exports* klasöründe yenı bir CSV dosyasına yazar ve ardından bu dosyayı başlatır *. csv* uzantısıyla ilişkili herhangi bir uygulamanın bulunduğu bu dosya açılır.
 
 ## <a name="scopes"></a>Kapsamlar
 
@@ -69,7 +69,7 @@ Ayrıca, hata ayıklayıcıdaki bir kesme noktasında durdurulduğunda bir işle
 
 ## <a name="import-data-into-variable-explorer"></a>Değişken Gezgini verileri içeri aktarma
 
-**Değişken Gezgini** araç çubuğunda, **r araçları**  >  **verileri** menüsünde de kullanılabilen iki komut, dış CSV veri kümelerini r oturumunuza içeri aktarın: **veri kümesini Web URL 'sinden r oturumuna** aktar ve **veri kümesini metin dosyasından r oturumuna**aktar.
+**Değişken Gezgini** araç çubuğunda, **r araçları**  >  **verileri** menüsünde de kullanılabilen iki komut, dış CSV veri kümelerini r oturumunuza içeri aktarın: **veri kümesini Web URL 'sinden r oturumuna** aktar ve **veri kümesini metin dosyasından r oturumuna** aktar.
 
 İçeri aktarılacak CSV dosyasını tanımladıktan sonra, Visual Studio bu veri dosyasının nasıl ayrıştırılabileceğini (yani alan ayırıcısının ne olduğunu ve tekliflerin nasıl işleneceğini) denetleme seçeneklerinizin bulunduğu bir **Içeri aktarma veri kümesi** iletişim kutusu görüntüler. Ayrıca, içeri aktarılan veri çerçevesinin ve özgün veri dosyasının önizlemesini de görebilirsiniz:
 

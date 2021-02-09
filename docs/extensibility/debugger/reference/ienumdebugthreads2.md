@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 1854f078-3b49-42c2-b65b-33e3b506fd63
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: bbbe047c08f8e91264163d028c1b40d94cde97fc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6e3771545d4a5fe545382344d17ed5ea929999d1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80715097"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99852784"
 ---
 # <a name="ienumdebugthreads2"></a>IEnumDebugThreads2
 Bu arabirim, geçerli hata ayıklama oturumunda çalışan iş parçacıklarını numaralandırır.
@@ -42,7 +42,7 @@ IEnumDebugThreads2 : IUnknown
 |[Sonraki](../../../extensibility/debugger/reference/ienumdebugthreads2-next.md)|Sabit Listesi dizisinde belirtilen sayıda iş parçacığı alır.|
 |[Atla](../../../extensibility/debugger/reference/ienumdebugthreads2-skip.md)|Bir numaralandırma dizisindeki belirtilen sayıda iş parçacığını atlar.|
 |[Sıfırla](../../../extensibility/debugger/reference/ienumdebugthreads2-reset.md)|Bir numaralandırma dizisini başlangıca sıfırlar.|
-|[Kopyalama](../../../extensibility/debugger/reference/ienumdebugthreads2-clone.md)|Geçerli numaralandırma durumunu içeren bir Numaralandırıcı oluşturur.|
+|[Oluşturulacak](../../../extensibility/debugger/reference/ienumdebugthreads2-clone.md)|Geçerli numaralandırma durumunu içeren bir Numaralandırıcı oluşturur.|
 |[GetCount](../../../extensibility/debugger/reference/ienumdebugthreads2-getcount.md)|Bir Numaralandırıcı içindeki iş parçacığı sayısını alır.|
 
 ## <a name="remarks"></a>Açıklamalar

@@ -7,15 +7,15 @@ ms.topic: overview
 ms.assetid: 586da5dc-f678-402b-afd0-0332959fd7a6
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 78770c74e5b866ad6791db01a448d46231edfd2a
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: 2dc5f347e3f5823613d11c8c217fcb2d29635867
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96915628"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99851354"
 ---
 # <a name="create-custom-project-and-item-templates"></a>Özel proje ve öğe şablonları oluşturma
 
@@ -84,7 +84,7 @@ Temel şablon oluşturma senaryolarında, sıkıştırılmış bir dosyaya çık
 
 4. Çözümü oluşturun ve **F5** tuşuna basın. Deneysel örnek görüntülenir.
 
-5. Proje şablonu projesi için, proje şablonunuzu,**File** Visual C# veya Visual Basic düğümündeki **Yeni proje** iletişim kutusunda (dosya  >  **Yeni**  >  **Proje**) listelendiğini görmeniz gerekir. Bir öğe şablonu projesi için, öğe şablonunuzun **Yeni öğe Ekle** iletişim kutusunda listelendiğini görmeniz gerekir. **Yeni öğe Ekle** iletişim kutusunu görüntülemek için, **Çözüm Gezgini**, proje düğümünü seçin ve **Add**  >  **Yeni öğe** Ekle ' yi seçin.
+5. Proje şablonu projesi için, proje şablonunuzu,Visual C# veya Visual Basic düğümündeki **Yeni proje** iletişim kutusunda (dosya  >  **Yeni**  >  **Proje**) listelendiğini görmeniz gerekir. Bir öğe şablonu projesi için, öğe şablonunuzun **Yeni öğe Ekle** iletişim kutusunda listelendiğini görmeniz gerekir. **Yeni öğe Ekle** iletişim kutusunu görüntülemek için, **Çözüm Gezgini**, proje düğümünü seçin ve   >  **Yeni öğe** Ekle ' yi seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

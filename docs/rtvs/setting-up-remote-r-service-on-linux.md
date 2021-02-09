@@ -6,15 +6,15 @@ ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 ms.reviewer: karthiknadig
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-science
-ms.openlocfilehash: c4d65388db0ef90f807ec85b8c9216d717c2b571
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 586f3038ff4bb091fb99160d7965ad927eda070a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62809563"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99851822"
 ---
 # <a name="remote-r-service-for-linux"></a>Linux için Uzak R Hizmeti
 
@@ -22,7 +22,7 @@ Linux için uzak R hizmeti şu anda rtvs-daemon olarak paketlenmiştir. Arka pla
 
 Uzak makineyi yapılandırdıktan sonra, aşağıdaki adımlar Visual Studio için R Araçları (RTVS) bu hizmete bağlanır:
 
-1. **R Tools**  >  **Windows**  >  **Çalışma alanları** penceresini açmak için R araçları Windows**çalışma alanları** ' nı seçin.
+1.   >    >  **Çalışma alanları** penceresini açmak için R araçları Windows **çalışma alanları** ' nı seçin.
 1. **Bağlantı ekle**' yi seçin.
 1. Bağlama bir ad verin ve URL 'sini sağlayın (örneğin, `https://localhost:5444` Linux için Windows alt sistemi) veya `https://public-ip:5444` (Azure Container). Tamamlandığında **Kaydet** ' i seçin.
 1. Bağlantı simgesini seçin veya bağlantı öğesine çift tıklayın.
@@ -154,7 +154,7 @@ Her durumda, uzak bilgisayarda aşağıdaki R yorumlayıcılarını yüklemiş o
     docker run -p 5444:5444 myrimage rtvsd
     ```
 
-1. RTVS 'den kapsar öğesine bağlanmak için `https://localhost:5444` yol, Kullanıcı adı `<<unix>>\ruser1` ve parola kullanın `foobar` . Kapsayıcı uzak bir bilgisayarda çalışıyorsa, `https://remote-host-name:5444` bunun yerine yol olarak kullanın. Bağlantı noktası, *üzerinde/etc/rtvs/rtvsd.config.js*güncelleştirilerek değiştirilebilir.
+1. RTVS 'den kapsar öğesine bağlanmak için `https://localhost:5444` yol, Kullanıcı adı `<<unix>>\ruser1` ve parola kullanın `foobar` . Kapsayıcı uzak bir bilgisayarda çalışıyorsa, `https://remote-host-name:5444` bunun yerine yol olarak kullanın. Bağlantı noktası, *üzerinde/etc/rtvs/rtvsd.config.js* güncelleştirilerek değiştirilebilir.
 
 ### <a name="container-running-on-azure-container-instances"></a>Azure Container Instances üzerinde çalışan kapsayıcı
 

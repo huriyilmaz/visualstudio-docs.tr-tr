@@ -15,18 +15,18 @@ helpviewer_keywords:
 - SharePoint Connections [SharePoint development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 79e8d3dbc1dab865b2ab9048cea8d13c478f2a12
-ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
+ms.openlocfilehash: b188d95e6478e488fc896b0622fb8d145ef2a741
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94849837"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99851614"
 ---
 # <a name="browse-sharepoint-connections-by-using-server-explorer"></a>Sunucu Gezgini kullanarak SharePoint bağlantılarına gözatın
-  Artık **Sunucu Gezgini**'de yerel SharePoint bağlantılarına gözatabiliyor olabilirsiniz. Bu tekniği kullanarak, sisteminizdeki bir SharePoint sitesinin bileşenlerine gidebilirsiniz. Liste tanımları ve içerik türleri gibi SharePoint site bileşenleri, **Sunucu Gezgini** ağaç görünümünde **SharePoint bağlantıları** adlı bir düğümde görüntülenir. **Sunucu Gezgini** görüntülemek için, menü çubuğunda, Sunucu Gezgini **görüntüle**' yi seçin  >  **Server Explorer**. SharePoint site bileşenlerini görüntülemenin yanı sıra, öğeleri kaldırabilir, özelliklerini görüntüleyebilir veya kısayol menüsündeki komutları kullanarak ağaç görünümünü yenileyebilirsiniz.
+  Artık **Sunucu Gezgini**'de yerel SharePoint bağlantılarına gözatabiliyor olabilirsiniz. Bu tekniği kullanarak, sisteminizdeki bir SharePoint sitesinin bileşenlerine gidebilirsiniz. Liste tanımları ve içerik türleri gibi SharePoint site bileşenleri, **Sunucu Gezgini** ağaç görünümünde **SharePoint bağlantıları** adlı bir düğümde görüntülenir. **Sunucu Gezgini** görüntülemek için, menü çubuğunda, Sunucu Gezgini **görüntüle**' yi seçin  >  . SharePoint site bileşenlerini görüntülemenin yanı sıra, öğeleri kaldırabilir, özelliklerini görüntüleyebilir veya kısayol menüsündeki komutları kullanarak ağaç görünümünü yenileyebilirsiniz.
 
 > [!IMPORTANT]
 > Bir SharePoint sitesine gözatabilmeniz için SharePoint site koleksiyonunun yöneticisi olmanız ve Visual Studio 'Yu yerel bilgisayarın yöneticisi olarak çalıştırıyor olmanız gerekir. Aksi takdirde, site **Sunucu Gezgini** görüntülenir, ancak düğümünü genişletemez. Site koleksiyonunun Yöneticisi olup olmadığını doğrulamak için, siteyi bir Web tarayıcısında açın, site **eylemleri** menüsünü açın, **Site izinleri**' ni seçin ve ardından **izinler: ekip sitesi** sayfasında, Şeritteki **Yönet** grubundan **site koleksiyonu yöneticileri** komutunu seçin. Bir site koleksiyonu yöneticisiyseniz adınız metin kutusunda görünür. **Site koleksiyonu yöneticileri** komutu Şeritteki Yönet grubunda görünmezse, site koleksiyonu için yönetici değilsiniz ve site yöneticisinden uygun izinleri edinmeniz gerekir.
@@ -37,7 +37,7 @@ ms.locfileid: "94849837"
 ## <a name="node-shortcut-menu-commands"></a>Düğüm kısayol menü komutları
  Her düğümün, düğüme sağ tıklayıp ve ardından **SHIFT** + **F10** tuşlarını seçerek erişebileceğiniz bir kısayol menüsü vardır. Düğüm komutları şunları içerebilir:
 
-|Komut adı|Açıklama|
+|Komut adı|Description|
 |------------------|-----------------|
 |Yenile|Ağaç görünümünü, düğümün en son görüntülenmesinden bu yana oluşmuş olabilecek değişiklikleri yansıtacak şekilde güncelleştirir.|
 |Sil|Seçili düğümü ağaç görünümünden kaldırır. **Note:**  Bu komut yalnızca **SharePoint** bağlantıları düğümü altında listelenen SharePoint bağlantılarında etkindir.|

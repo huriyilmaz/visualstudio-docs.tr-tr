@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 01ad328a-736c-4933-a9f8-c2ded19ddd8c
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0214d3e8d097efa31b3f8b02e67f419226a093a4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: da51eda00bd2c80152029e503cfb33089e608683
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85461345"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99853312"
 ---
 # <a name="idiasymbol"></a>IDiaSymbol
 Bir sembol örneğinin özelliklerini açıklar.
@@ -25,7 +25,7 @@ Bir sembol örneğinin özelliklerini açıklar.
 ## <a name="syntax"></a>Syntax
 
 ```
-IDiaSymbol : IUnknown
+IDiaSymbol : IUnknown
 ```
 
 ## <a name="methods-in-alphabetical-order"></a>Alfabetik sırada Yöntemler

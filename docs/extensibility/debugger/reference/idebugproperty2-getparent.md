@@ -9,32 +9,32 @@ helpviewer_keywords:
 ms.assetid: 58780469-fe25-4d84-9187-67940ca0767f
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 7620c22d425a0426daa8c15d067a4d61c6bf96e2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9855ff168152ed68117569aab939e62da990f81b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80721428"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99850977"
 ---
 # <a name="idebugproperty2getparent"></a>IDebugProperty2::GetParent
 Bir özelliğin üst özelliğini alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
-HRESULT GetParent ( 
+HRESULT GetParent ( 
    IDebugProperty2** ppParent
 );
 ```
 
 ```csharp
-int GetParent ( 
+int GetParent ( 
    out IDebugProperty2 ppParent
 );
 ```

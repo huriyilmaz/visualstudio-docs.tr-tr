@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Web Parts [SharePoint development in Visual Studio], creating
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 09b237704a5b42f75c2239bd6d159e3d58e3025e
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: 14f6add337ecfae3ab0dc5aa77a72962f2a0a915
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94903721"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99851601"
 ---
 # <a name="how-to-create-a-sharepoint-web-part-by-using-a-designer"></a>Nasıl yapılır: tasarımcı kullanarak SharePoint Web Bölümü oluşturma
   Herhangi bir SharePoint projesine bir **görsel web bölümü** öğesi ekleyerek bir Web bölümü oluşturabilirsiniz. Bu, Visual Studio 'da web bölümüne denetimler ve kod ekleyebileceğiniz Visual Web Developer Designer 'ı açar. Görsel Web bölümleri, Web bölümleri ile aynı şekilde çalışır. Tek fark, Visual Web Developer Designer 'da görsel Web bölümleri tasarlayamanızdır.

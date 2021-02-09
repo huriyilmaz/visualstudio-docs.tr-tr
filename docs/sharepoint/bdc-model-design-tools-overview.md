@@ -22,15 +22,15 @@ helpviewer_keywords:
 - BDC [SharePoint development in Visual Studio], designer
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: b6e78b6809d3136c0db1f558d175706dc0ecd75b
-ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
+ms.openlocfilehash: b398d9c00caf3a4fa2ca58bafa3273673a305859
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94850322"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99851692"
 ---
 # <a name="bdc-model-design-tools-overview"></a>IVB modeli tasarım araçlarına genel bakış
   IVB tasarımcısını, **IVB yöntemi ayrıntıları** penceresini ve **BDC Gezginini** kullanarak bir Iş verileri bağlantısı (BDC) modeli tasarlayabilirsiniz.
@@ -53,14 +53,14 @@ ms.locfileid: "94850322"
 
  **BDC Yöntem ayrıntıları** penceresinde bulucu, belirli bulucu, Oluşturucu, Güncelleştirici ve deleter yöntemlerini hızlıca oluşturabilirsiniz. Bu yöntemleri oluştururken, Visual Studio metoduna parametreler, örnekler ve tür tanımlayıcıları gibi meta veriler ekler. Bu meta verileri, belirli senaryonuzu karşılayacak şekilde değiştirebilirsiniz.
 
- **İVB yöntemi ayrıntıları** penceresini açmak için, menü çubuğunda **View**  >  **diğer Windows**  >  **BDC Yöntem ayrıntılarını** görüntüle ' yi seçin.
+ **İVB yöntemi ayrıntıları** penceresini açmak için, menü çubuğunda   >  **diğer Windows**  >  **BDC Yöntem ayrıntılarını** görüntüle ' yi seçin.
 
  **IVB yöntemi ayrıntıları** penceresindeki yöntemleri görüntülemek Için bdc Tasarımcısı 'nda varlığı seçin. Seçilen varlığın yöntemleri **BDC Yöntem ayrıntıları** penceresinde görünür. IVB tasarımcısında bir varlık görmüyorsanız, **IVB yöntemi ayrıntıları** penceresi hiçbir bilgi görüntüler.
 
  Parametreleri, örnekleri ve filtre tanımlayıcılarını tanımlamak için **BDC Yöntem ayrıntıları** penceresindeki düğümleri genişletin veya daraltın. Tür tanımlayıcılarını tanımlamak için **BDC Gezginini** kullanın.
 
 ## <a name="bdc-explorer"></a>BDC Gezgini
- **IVB Gezgini** , modeli oluşturan öğeleri görüntüler. **İVB Gezginini** açmak için, menü çubuğunda **View**  >  **diğer Windows**  >  **BDC Gezginini** görüntüle ' yi seçin. Modele gözatabileceğiniz **BDC Gezgini**'ndeki düğümler ' i genişletin. Her düğüm, model dosyasının XML dosyasındaki bir öğeyi temsil eder.
+ **IVB Gezgini** , modeli oluşturan öğeleri görüntüler. **İVB Gezginini** açmak için, menü çubuğunda   >  **diğer Windows**  >  **BDC Gezginini** görüntüle ' yi seçin. Modele gözatabileceğiniz **BDC Gezgini**'ndeki düğümler ' i genişletin. Her düğüm, model dosyasının XML dosyasındaki bir öğeyi temsil eder.
 
  **IVB Gezgininde** düğümleri seçerken, seçtiğiniz her bir düğümün özellikleri **Özellikler** penceresinde görünür. Bu özelliklerin birçoğu model dosyasındaki özniteliklere karşılık gelir. **IVB Gezgini**'nin en üstündeki arama kutusunu kullanarak modelde arama yapabilirsiniz.
 

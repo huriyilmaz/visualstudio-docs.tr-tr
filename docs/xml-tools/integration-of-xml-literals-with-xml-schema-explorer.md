@@ -7,15 +7,15 @@ ms.topic: conceptual
 ms.assetid: 57a29998-c6e8-48ac-bdb0-5788e73f9164
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 059263f06421fee3c90f2471df4c8b2c7bf8fc86
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: f46020dc8423da617deb8f4f70c2a159b4a32014
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93398507"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99851549"
 ---
 # <a name="integration-of-xml-literals-with-xml-schema-explorer"></a>XML şema Gezgini ile XML sabit değerlerini tümleştirme
 
@@ -23,7 +23,7 @@ Visual Basic XML sabit değerlerini destekler. Bu, XML parçalarını doğrudan 
 
 ## <a name="how-to"></a>Nasıl yapılır
 
-Visual Basic projenizdeki bir XSD dosyası bir XML sabit değeri içeriyorsa, XML şema **Gezgini** 'nde XML şeması kümesini görüntüleyebilirsiniz. Bir XML sabit değeri ile ilişkili Şema kümesini görüntülemek için, XML sabit değerinde bir xml düğümüne veya XML ad alanı içeri aktarma ' ya sağ tıklayın ve **şema Gezgininde göster** ' i seçin.
+Visual Basic projenizdeki bir XSD dosyası bir XML sabit değeri içeriyorsa, XML şema **Gezgini**'nde XML şeması kümesini görüntüleyebilirsiniz. Bir XML sabit değeri ile ilişkili Şema kümesini görüntülemek için, XML sabit değerinde bir xml düğümüne veya XML ad alanı içeri aktarma ' ya sağ tıklayın ve **şema Gezgininde göster**' i seçin.
 
 ![Şema Gezgini komutunda görüntüsü olan bir XML düğümü üzerinde bağlam menüsünü gösteren Visual Basic proje penceresinin ekran görüntüsü.](../xml-tools/media/vbxmlliteralswithxmlschemaexplorer1.gif)
 

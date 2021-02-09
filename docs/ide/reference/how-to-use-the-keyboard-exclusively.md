@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: d71a4cc1-d352-4164-8538-3f9fa070a331
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 52d6bda98ee01dad4faf4a51412e810e1f5e4fa7
-ms.sourcegitcommit: 4eb8fe6eb7f1dc639f1d213db05a7a3007e8087e
+ms.openlocfilehash: 7daa0bfc6f67bd0dc9fee0775ba8dce591ce8148
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92156567"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99852537"
 ---
 # <a name="how-to-use-the-keyboard-exclusively"></a>Klavye kullanımı özel
 
@@ -43,9 +43,9 @@ Visual Studio 'da komut kısayol tuşlarının tam listesi için bkz. [varsayıl
 
 Araç kutusu üzerinde fare kullanmadan bir form veya tasarımcıya denetim eklemek için:
 
-1. Menü çubuğunda **Görünüm**  >  **araç kutusunu**seçin.
+1. Menü çubuğunda **Görünüm**  >  **araç kutusunu** seçin.
 
-2. **Ctrl** + **Up arrow** **Ctrl** + **Araç kutusu** sekmesindeki bölümler arasında ilerlemek için Ctrl yukarı ok veya CTRL**aşağı ok** tuşlarını kullanın.
+2.  +   + **Araç kutusu** sekmesindeki bölümler arasında ilerlemek için Ctrl yukarı ok veya CTRL **aşağı ok** tuşlarını kullanın.
 
 3. Bir bölümdeki denetimler arasında gezinmek için **yukarı ok** tuşunu veya **aşağı ok** tuşunu kullanın.
 
@@ -55,7 +55,7 @@ Araç kutusu üzerinde fare kullanmadan bir form veya tasarımcıya denetim ekle
 
 Bir iletişim kutusundaki seçenekler arasında ilerlemek ve seçenek ayarlarını yalnızca klavyeyi kullanarak değiştirmek için:
 
-1. İletişim **Tab** **Shift** + kutusundaki denetimlerde yukarı ve aşağı gitmek için sekme veya SHIFT**sekmesini** kullanın.
+1. İletişim   + kutusundaki denetimlerde yukarı ve aşağı gitmek için sekme veya SHIFT **sekmesini** kullanın.
 
 2. Seçenek ayarlarını değiştirmek için:
 
@@ -67,11 +67,11 @@ Bir iletişim kutusundaki seçenekler arasında ilerlemek ve seçenek ayarların
 
    - Düğmeler için, çağırmak için **ENTER** ' u seçin.
 
-   - Kılavuzlar için, gezinmek için ok tuşlarını kullanın. Kılavuzlardaki açılan listede, **Shift** + **Alt** + öğeleri göstermek için SHIFT alt**aşağı okunu** kullanın ve ardından **yukarı ok** ve **aşağı ok** tuşlarını kullanarak seçili öğeyi değiştirin.
+   - Kılavuzlar için, gezinmek için ok tuşlarını kullanın. Kılavuzlardaki açılan listede,  +  + öğeleri göstermek için SHIFT alt **aşağı okunu** kullanın ve ardından **yukarı ok** ve **aşağı ok** tuşlarını kullanarak seçili öğeyi değiştirin.
 
 ## <a name="navigate-between-windows-and-files"></a>Pencereler ve dosyalar arasında gezinme
 
-- Bir düzenleyici veya tasarımcı içindeki dosyalar arasında geçiş yapmak için, **Ctrl** + **etkin dosyalar** seçiliyken IDE Gezginini göstermek için CTRL**Tab** klavye kısayolunu kullanın. Vurgulanan dosyaya gitmek için **ENTER** tuşunu seçin.
+- Bir düzenleyici veya tasarımcı içindeki dosyalar arasında geçiş yapmak için,  + **etkin dosyalar** seçiliyken IDE Gezginini göstermek için CTRL **Tab** klavye kısayolunu kullanın. Vurgulanan dosyaya gitmek için **ENTER** tuşunu seçin.
 
 - Sabitlenmiş araç pencereleri arasında gezinmek için **alt** + **F7** klavye kısayolunu kullanarak IDE Gezginini seçili **etkin araç pencereleri** ile görüntüleyin. Vurgulanan pencereye gitmek için **ENTER** tuşunu seçin.
 
@@ -81,7 +81,7 @@ Bir iletişim kutusundaki seçenekler arasında ilerlemek ve seçenek ayarların
 
 2. **Pencere** menüsünde, **dockable** seçeneğini belirleyin.
 
-3. **Alt** + **boşluk**tuşuna basın ve ardından **Taşı**' yı seçin.
+3. **Alt** + **boşluk** tuşuna basın ve ardından **Taşı**' yı seçin.
 
    Yerleştirme Kılavuzu elmas görünür.
 

@@ -5,15 +5,15 @@ ms.date: 06/29/2017
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-science
-ms.openlocfilehash: dbb3984385e0042c669f8aad1d5bb4a2f64de917
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 64b5ac36edf6c5f506628f9af88ba36bd62c71c8
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88801626"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99851835"
 ---
 # <a name="create-visual-data-plots-with-r"></a>R ile görsel veri çizimleri oluşturma
 
@@ -67,15 +67,15 @@ Bir çizim penceresinin yeniden boyutlandırılması, en iyi kalite görüntüs�
 
 Veri bilimcileri birçok farklı veri kümesinden çok sayıda çizim ile çalıştığı için RTVS, çok sayıda bağımsız çizim penceresi oluşturmanızı sağlar. Daha sonra bu pencereleri, Visual Studio çerçevesinde veya bu çerçevenin dışında istediğiniz şekilde düzenleyebilirsiniz. (Windows 'u yerleştirme ve yeniden boyutlandırma hakkında genel bilgi için bkz. [Visual Studio 'da pencere düzenlerini özelleştirme](../ide/customizing-window-layouts-in-visual-studio.md) .)
 
-Araç çubuğu düğmesini veya **R araçları**  >  **Çizim**  >  **penceresi ' ni**kullanarak yeni bir çizim penceresi oluşturursunuz. Yeni çizim penceresi, yeni çizilmez oluşturulan *etkin* pencere olur. Etkin pencereyi değiştirmek için, ona geçin ve **çizim penceresi** araç çubuğu düğmesini veya **R araçları**' nı Etkinleştir  >  **Plots**  >  **Çiz penceresini**seçin.
+Araç çubuğu düğmesini veya **R araçları**  >  **Çizim**  >  **penceresi ' ni** kullanarak yeni bir çizim penceresi oluşturursunuz. Yeni çizim penceresi, yeni çizilmez oluşturulan *etkin* pencere olur. Etkin pencereyi değiştirmek için, ona geçin ve **çizim penceresi** araç çubuğu düğmesini veya **R araçları**' nı Etkinleştir  >    >  **Çiz penceresini** seçin.
 
-Çizim, çok bağımsız nesnelerdir, fare ile sürükle ve bırak ile veya sağ tıklama bağlam ve **düzenleme** menülerinde **Kopyala**, **Kes**ve **Yapıştır** komutlarını kullanarak bunları kopyalayabilir veya taşıyabilirsiniz.
+Çizim, çok bağımsız nesnelerdir, fare ile sürükle ve bırak ile veya sağ tıklama bağlam ve **düzenleme** menülerinde **Kopyala**, **Kes** ve **Yapıştır** komutlarını kullanarak bunları kopyalayabilir veya taşıyabilirsiniz.
 
 Sürükle ve bırak için varsayılan davranış kopyalama ' dır; **kaydırma** tuşuna basarak taşımak için sürükle ve bırak.
 
 ## <a name="plot-history"></a>Geçmişi çiz
 
-Çizim komutları her pencere için bir çizim geçmişinde saklanır, bu da bir oturumdaki tüm çizinizin korunmasını sağlar. Geçmişi gezinmek için, çizim penceresi araç çubuğundaki ok düğmelerini veya **CTRL** + **alt** + **F11** ve **CTRL** + **alt** + **F12**tuşlarını kullanın. Ayrıca, araç çubuğu düğmelerini veya **R araçları**  >  **çizimleri** menü komutlarını kullanarak penceredeki tüm çizimleri kaldırabilir veya tek çizimleri temizleyebilir.
+Çizim komutları her pencere için bir çizim geçmişinde saklanır, bu da bir oturumdaki tüm çizinizin korunmasını sağlar. Geçmişi gezinmek için, çizim penceresi araç çubuğundaki ok düğmelerini veya **CTRL** + **alt** + **F11** ve **CTRL** + **alt** + **F12** tuşlarını kullanın. Ayrıca, araç çubuğu düğmelerini veya **R araçları**  >  **çizimleri** menü komutlarını kullanarak penceredeki tüm çizimleri kaldırabilir veya tek çizimleri temizleyebilir.
 
 Tüm çizim topluluğunu görmek için, araç çubuğu düğmesini veya **R araçları**  >  **Çizim**  >  **geçmişi penceresi**' ni kullanarak çizim Geçmişi penceresini açın.
 Bu geçmiş, bu pencerede görüntülenen, farklı çizim pencereleri (veya cihazlara) göre gruplanmış olarak çizimler için küçük resimlerin bir listesini sağlar. Araç çubuğundaki yakınlaştırma düğmelerini kullanmak küçük resimlerin boyutunu değiştirir.
