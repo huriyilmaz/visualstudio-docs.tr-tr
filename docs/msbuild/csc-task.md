@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: d8c19b36-f5ca-484b-afa6-8ff3b90e103a
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 16cf1c2505ad61a8c53d18d8981b8c08f9e6e02c
-ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
+ms.openlocfilehash: a3787d5aa21e029ab4900bdd89c88f1cc60f3489
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92796569"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99901342"
 ---
 # <a name="csc-task"></a>Csc görevi
 
-*csc.exe* sarmalanmış ve yürütülebilir dosyalar ( *. exe* dosyaları), dinamik bağlantı kitaplıkları ( *. dll* dosyaları) veya kod modülleri ( *. netmodule* dosyaları) oluşturur. *csc.exe* hakkında daha fazla bilgi için bkz. [C# derleyici seçenekleri](/dotnet/csharp/language-reference/compiler-options/index).
+*csc.exe* sarmalanmış ve yürütülebilir dosyalar (*. exe* dosyaları), dinamik bağlantı kitaplıkları (*. dll* dosyaları) veya kod modülleri (*. netmodule* dosyaları) oluşturur. *csc.exe* hakkında daha fazla bilgi için bkz. [C# derleyici seçenekleri](/dotnet/csharp/language-reference/compiler-options/index).
 
 ## <a name="parameters"></a>Parametreler
 
@@ -80,9 +80,9 @@ Aşağıdaki tablo, görevin parametrelerini açıklar `Csc` .
 | `WarningLevel` | İsteğe bağlı `Int32` parametre.<br /><br /> Derleyicinin görüntüleyeceği uyarı düzeyini belirtir. Daha fazla bilgi için bkz. [-Warn (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/warn-compiler-option). |
 | `WarningsAsErrors` | İsteğe bağlı `String` parametre.<br /><br /> Hata olarak değerlendirmek için uyarıların listesini belirtir. Daha fazla bilgi için bkz. [-warnaserror (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/warnaserror-compiler-option).<br /><br /> Bu parametre, parametresini geçersiz kılar `TreatWarningsAsErrors` . |
 | `WarningsNotAsErrors` | İsteğe bağlı `String` parametre.<br /><br /> Hata olarak değerlendirilmediğini belirten uyarıların bir listesini belirtir. Daha fazla bilgi için bkz. [-warnaserror (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/warnaserror-compiler-option).<br /><br /> Bu parametre yalnızca `TreatWarningsAsErrors` parametresi olarak ayarlandıysa faydalıdır `true` . |
-| `Win32Icon` | İsteğe bağlı `String` parametre.<br /><br /> **Dosya Gezgini** 'nde, çıktı dosyasına istenen görünümü sağlayan bir *. ico* dosyasını derlemeye ekler. Daha fazla bilgi için bkz. [-win32icon (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/win32icon-compiler-option). |
+| `Win32Icon` | İsteğe bağlı `String` parametre.<br /><br /> **Dosya Gezgini**'nde, çıktı dosyasına istenen görünümü sağlayan bir *. ico* dosyasını derlemeye ekler. Daha fazla bilgi için bkz. [-win32icon (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/win32icon-compiler-option). |
 | `Win32Manifest` | İsteğe bağlı `String` parametre.<br /><br /> Dahil edilecek Win32 bildirimini belirtir. |
-| `Win32Resource` | İsteğe bağlı `String` parametre.<br /><br /> Çıktı dosyasına bir Win32 kaynağı ( *. res* ) dosyası ekler. Daha fazla bilgi için bkz. [-win32res (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/win32res-compiler-option). |
+| `Win32Resource` | İsteğe bağlı `String` parametre.<br /><br /> Çıktı dosyasına bir Win32 kaynağı (*. res*) dosyası ekler. Daha fazla bilgi için bkz. [-win32res (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/win32res-compiler-option). |
 
 [!INCLUDE [ToolTaskExtension arguments](includes/tooltaskextension-base-params.md)]
 

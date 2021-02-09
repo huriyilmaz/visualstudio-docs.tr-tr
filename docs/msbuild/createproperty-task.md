@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: fbc31a88-62d4-43d2-b739-68ef3fac38f5
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 7d7dd8d7f5a50998832a8fac6f47bf66e9a6bbe9
-ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
+ms.openlocfilehash: 6ea412f67629998eab035b8cca79111659ab8a0c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92796193"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99901370"
 ---
 # <a name="createproperty-task"></a>CreateProperty görevi
 
@@ -70,7 +70,7 @@ Aşağıdaki örnek, `CreateProperty` `NewFile` ve özelliğinin değerlerinin b
 </Project>
 ```
 
-Projeyi çalıştırdıktan sonra `NewFile` özelliğin değeri *Module1. vb* ' dir.
+Projeyi çalıştırdıktan sonra `NewFile` özelliğin değeri *Module1. vb*' dir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
