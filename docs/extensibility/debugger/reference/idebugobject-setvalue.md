@@ -9,26 +9,26 @@ helpviewer_keywords:
 ms.assetid: d652e09c-cdc1-4519-8116-d7c743f5679b
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 9e4652eb3c77a1871063dfa71b464fb1f7c43f94
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c282e5682cb01da56407cbbcb91a69984ded85de
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80726362"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99953597"
 ---
 # <a name="idebugobjectsetvalue"></a>IDebugObject::SetValue
 Nesnenin değerini ardışık bir bayt dizisinden ayarlar.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
-HRESULT SetValue( 
+HRESULT SetValue( 
    BYTE* pValue,
    UINT  nSize
 );
