@@ -6,19 +6,19 @@ ms.date: 01/28/2019
 ms.topic: tutorial
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 96c067d4c55a5df4d9343e60360142466e8f218f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9767630fc7fee4eafce72e4eb99aa12db8469691
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62431309"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99970549"
 ---
-# <a name="install-python-support-in-visual-studio"></a>Visual Studio 'da Python desteği 'ni yükler
+# <a name="install-python-support-in-visual-studio"></a>Visual Studio’da Python desteğini yükleme
 
 > [!Note]
 > Python desteği şu anda yalnızca Windows için Visual Studio 'da kullanılabilir; Mac ve Linux 'ta Python desteği [Visual Studio Code](https://code.visualstudio.com/docs/python/python-tutorial)aracılığıyla kullanılabilir.
@@ -31,11 +31,11 @@ ms.locfileid: "62431309"
     >[!Tip]
     > Topluluk sürümü, bireysel geliştiriciler, ders öğrenimi, akademik araştırmalar ve açık kaynak geliştirmesi içindir. Diğer kullanımlar için [Visual Studio Professional](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Professional&rel=15&rid=34347&utm_source=docs&utm_medium=clickbutton&utm_campaign=python_gettingstarted) veya [Visual Studio Enterprise](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Enterprise&rel=15&rid=34347&utm_source=docs&utm_medium=clickbutton&utm_campaign=python_gettingstarted)yükler.
 
-1. Yükleyici, belirli bir geliştirme alanı için ilgili seçeneklerin grupları olan iş yüklerinin bir listesini sunar. Python için **Python geliştirme** iş yükünü seçin ve **yüklemeyi**seçin:
+1. Yükleyici, belirli bir geliştirme alanı için ilgili seçeneklerin grupları olan iş yüklerinin bir listesini sunar. Python için **Python geliştirme** iş yükünü seçin ve **yüklemeyi** seçin:
 
     ![Visual Studio yükleyicisinde Python geliştirme iş yükü](media/installation-python-workload.png)
 
-1. Python desteğini hızlıca test etmek için Visual Studio 'yu başlatın, **alt** + **i** tuşlarına basarak **Python etkileşimli** penceresini açın ve girin `2+2` . **4**çıkışını görmüyorsanız, adımlarınızı yeniden denetleyin.
+1. Python desteğini hızlıca test etmek için Visual Studio 'yu başlatın, **alt** + **i** tuşlarına basarak **Python etkileşimli** penceresini açın ve girin `2+2` . **4** çıkışını görmüyorsanız, adımlarınızı yeniden denetleyin.
 
     ![Etkileşimli pencere aracılığıyla Python test etme](media/installation-interactive-test.png)
 

@@ -5,17 +5,17 @@ ms.date: 03/18/2019
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18, SEO-VS-2020
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 46b0a8005ea76445a1d6205c8635963dbaedd0d4
-ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
+ms.openlocfilehash: 6521df812d708744a617c0e3fe95285fdbfa0262
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90097040"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99970614"
 ---
 # <a name="how-to-select-a-python-environment-for-a-project"></a>Bir proje için Python ortamı seçme
 
@@ -41,7 +41,7 @@ Farklı bir ortamı hızlıca etkinleştirmek için, bu ortam adına sağ tıkla
 | Komut | Açıklama |
 | --- | --- |
 | **Sanal ortam ekle** | Projede yeni bir sanal ortam oluşturma işlemini başlatır. Bkz. [sanal ortam oluşturma](#create-a-virtual-environment). |
-| **Var olan sanal ortamı Ekle** | Sanal ortam içeren bir klasör seçmenizi ve bunu **Python ortamları**altındaki listeye eklememenizi ister, ancak etkinleştirmez. Bkz. [var olan sanal ortamı etkinleştirme](#activate-an-existing-virtual-environment). |
+| **Var olan sanal ortamı Ekle** | Sanal ortam içeren bir klasör seçmenizi ve bunu **Python ortamları** altındaki listeye eklememenizi ister, ancak etkinleştirmez. Bkz. [var olan sanal ortamı etkinleştirme](#activate-an-existing-virtual-environment). |
 | **Conda ortamı oluşturma** | Ortam için bir ad girdiğiniz ve temel yorumlayıcısını belirten **Python ortamları** *penceresine* geçiş yapar. Bkz. [Conda ortamları](managing-python-environments-in-visual-studio.md#conda-environments). |
 ::: moniker-end
 
@@ -65,11 +65,11 @@ Sanal ortam kullanmanın bir avantajı, zaman içinde proje geliştirdikçe, san
 
 Visual Studio 'da bir *requirements.txt* dosyası içeren bir proje açtığınızda, Visual Studio otomatik olarak sanal ortamı yeniden oluşturma seçeneğini sağlar. Visual Studio 'Nun yüklü olmadığı bilgisayarlarda `pip install -r requirements.txt` paketleri geri yüklemek için kullanabilirsiniz.
 
-Sanal bir ortam temel yorumlayıcı için sabit kodlanmış bir yol içerdiğinden ve *requirements.txt*kullanarak ortamı yeniden oluşturabileceğinden, genellikle kaynak denetiminden tüm sanal ortam klasörünü atlayabilirsiniz.
+Sanal bir ortam temel yorumlayıcı için sabit kodlanmış bir yol içerdiğinden ve *requirements.txt* kullanarak ortamı yeniden oluşturabileceğinden, genellikle kaynak denetiminden tüm sanal ortam klasörünü atlayabilirsiniz.
 
 Aşağıdaki bölümlerde, bir projede var olan bir sanal ortamın nasıl etkinleştirileceği ve yeni bir sanal ortamın nasıl oluşturulacağı açıklanmaktadır.
 
-Visual Studio 'da, bir proje için bir sanal ortam, **Çözüm Gezgini**üzerinde **Python ortamları** düğümü aracılığıyla başka bir şekilde etkinleştirilebilir.
+Visual Studio 'da, bir proje için bir sanal ortam, **Çözüm Gezgini** üzerinde **Python ortamları** düğümü aracılığıyla başka bir şekilde etkinleştirilebilir.
 
 Projenize bir sanal ortam eklendikten sonra, bu, **Python ortamları** penceresinde görünür. Daha sonra bunu başka bir ortam gibi etkinleştirebilir ve paketleri yönetebilirsiniz.
 
@@ -89,7 +89,7 @@ Visual Studio 'da doğrudan aşağıdaki gibi yeni bir sanal ortam oluşturabili
 1. Sanal ortam varsayılan olarak etkinleştirilmez. Projenin sanal ortamını etkinleştirmek için, sağ tıklayın ve **ortamı etkinleştir**' i seçin.
 
 > [!Note]
-> Konum yolu var olan bir sanal ortamı tanımlarsa, Visual Studio temel yorumlayıcı 'yı otomatik olarak algılar (ortamın *lib* dizinindeki *orig-prefix.txt* dosyasını kullanarak) ve **Oluştur** düğmesini **Ekle**olarak değiştirir.
+> Konum yolu var olan bir sanal ortamı tanımlarsa, Visual Studio temel yorumlayıcı 'yı otomatik olarak algılar (ortamın *lib* dizinindeki *orig-prefix.txt* dosyasını kullanarak) ve **Oluştur** düğmesini **Ekle** olarak değiştirir.
 >
 > Bir sanal ortam eklenirken bir *requirements.txt* dosyası varsa, **sanal ortam ekle** iletişim kutusu paketleri otomatik olarak yüklemek için bir seçenek görüntüler, bu da bir ortamın başka bir bilgisayarda yeniden oluşturulması kolaylaşır:
 >
@@ -169,7 +169,7 @@ Görüntülenen girdilerin her zaman doğru olmayabilir ve yükleme ve kaldırma
 Ayrıca, Visual Studio 'Nun `conda` paketleri bir Conda ortamına yüklemek için kullanmayı desteklemediğini unutmayın. `conda`Bunun yerine komut satırından kullanın.
 
 > [!Tip]
-> Bir paketin yüklenemediği yaygın bir durum, paketin * \* . PYD* dosyalarındaki yerel bileşenlere yönelik kaynak kodu içeruğradığında oluşur. Visual Studio 'nun gerekli sürümü yüklü olmadığında, PIP bu bileşenleri derleyemiyor. Bu durumda görünen hata iletisi **hata: vcvarsall.batbulunamıyor **. `easy_install` , önceden derlenmiş ikili dosyaları indirebilir ve ' den daha eski Python sürümleri için uygun bir derleyici indirebilirsiniz [https://www.microsoft.com/download/details.aspx?id=44266](https://www.microsoft.com/download/details.aspx?id=44266) . Daha fazla ayrıntı için bkz. Python araçları ekibi blogu üzerinde ["vcvarsallbat bulunamıyor" sorunuyla ilgili sorun giderme](https://devblogs.microsoft.com/python/unable-to-find-vcvarsall-bat/) .
+> Bir paketin yüklenemediği yaygın bir durum, paketin *\* . PYD* dosyalarındaki yerel bileşenlere yönelik kaynak kodu içeruğradığında oluşur. Visual Studio 'nun gerekli sürümü yüklü olmadığında, PIP bu bileşenleri derleyemiyor. Bu durumda görünen hata iletisi **hata: vcvarsall.batbulunamıyor**. `easy_install` , önceden derlenmiş ikili dosyaları indirebilir ve ' den daha eski Python sürümleri için uygun bir derleyici indirebilirsiniz [https://www.microsoft.com/download/details.aspx?id=44266](https://www.microsoft.com/download/details.aspx?id=44266) . Daha fazla ayrıntı için bkz. Python araçları ekibi blogu üzerinde ["vcvarsallbat bulunamıyor" sorunuyla ilgili sorun giderme](https://devblogs.microsoft.com/python/unable-to-find-vcvarsall-bat/) .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

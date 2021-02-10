@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 2f70863b-425b-4e65-86b4-d6a898e29dc7
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 99377db0e835de8d84485d0254d84892a360f5f0
-ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
+ms.openlocfilehash: 1dbdb2f04ad5038941eeb9790efa9e05781def3f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96190167"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99969015"
 ---
 # <a name="add-items-to-the-add-new-item-dialog-box"></a>Yeni öğe Ekle iletişim kutusuna öğe ekleme
 **Yeni öğe Ekle** iletişim kutusuna öğe ekleme işlemi kayıt defteri anahtarlarıyla başlar. Aşağıdaki kayıt defteri girişlerinde gösterildiği gibi, **Additemtemplates** bölümü, **Yeni öğe Ekle** iletişim kutusunda bulunan öğelerin bulunduğu dizinin yolunu ve adını içerir.
@@ -37,7 +37,7 @@ ms.locfileid: "96190167"
 
  **SortPriority** = DWORD: 00000064
 
-| Ad | Tür | Veri ( *. rgs* dosyası) | Açıklama |
+| Ad | Tür | Veri ( *. rgs* dosyası) | Description |
 |------------------|-----------| - | - |
 | @ (Varsayılan) | REG_SZ | #% IDS_ADDITEM_TEMPLATES_ENTRY% | **Öğe şablonları eklemek** IÇIN kaynak kimliği. |
 | Val şablonları dizini | REG_SZ | % TEMPLATE_PATH% \\ &lt; someprojectıtems&gt; | **Yeni öğe Ekle** sihirbazının iletişim kutusunda görünen proje öğelerinin yolu. |

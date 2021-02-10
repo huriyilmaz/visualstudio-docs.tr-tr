@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: ''
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 1fc40c826499b36d5d713d0842a2c0e8dae462d1
-ms.sourcegitcommit: 8a0d0f4c4910e2feb3bc7bd19e8f49629df78df5
+ms.openlocfilehash: b3626d09d790ca6f15ded3745801eae1ca426bab
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97668371"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99970666"
 ---
 # <a name="install-and-use-visual-studio-and-azure-services-behind-a-firewall-or-proxy-server"></a>Visual Studio ve Azure hizmetlerini bir güvenlik duvarı veya proxy sunucusunun arkasında yükleyip kullanma
 
@@ -112,7 +112,7 @@ Bir güvenlik duvarı veya proxy sunucusu arkasında Visual Studio veya Azure hi
 | Python paketi <br>bulma<br><br>Python paketi <br>yönetim<br><br>Yeni <br>Python <br> proje <br>templates | pypi.org<br> <br>pypi.python.org <br>bootstrap.pypa.io<br><br>go.microsoft.com | https/443 | PIP paketleri arama olanağı sağlar<br><br>Eksik ise PIP 'yi otomatik olarak yüklemek için kullanılır <br><br>Aşağıdaki yeni Python proje şablonlarını cookiecutter şablon URL 'Lerine çözümlemek için kullanılır:<br> -Sınıflandırıcı projesi<br>-Kümeleme projesi <br> -Gerileme projesi <br> -PyKinect kullanan PyGame <br> -Pyvot projesi |
 | Office Web <br>eklenti <br> Bildirim <br>Doğrulama <br>Hizmet | verificationservice.osi.office.net | https/443 | Office Web eklentileri için bildirimleri doğrulamak için kullanılır |
 | SharePoint ve <br>Office Eklentileri | sharepoint.com<br> microsoft.com/microsoft-365<br> microsoftonline.com <br> outlook.com | https/443 | SharePoint ve Office eklentilerini SharePoint Online ve Microsoft 365 yayımlamak ve test etmek için kullanılır |
-| İş akışı Yöneticisi <br>Test hizmeti<br> Yönetici | | http/12292 | SharePoint eklentilerini iş akışlarıyla test etmek için otomatik olarak oluşturulan bir güvenlik duvarı kuralı |
+| İş akışı Yöneticisi <br>Test hizmeti<br> Ana bilgisayar | | http/12292 | SharePoint eklentilerini iş akışlarıyla test etmek için otomatik olarak oluşturulan bir güvenlik duvarı kuralı |
 | Otomatik olarak toplanan <br>güvenilirlik istatistikleri <br>ve diğer <br>Müşteri deneyimi <br>Geliştirme programları (CEIP)<br> Azure SDK ve <br>SQL araçları için <br><br> | vortex.data.microsoft.com<br> <br>dc.services.visualstudio.com | https/443 | Kullanıcıdan Microsoft 'a güvenilirlik istatistikleri (kilitlenme/yanıt vermeyen veriler) göndermek için kullanılır. Windows Hata Bildirimi etkinse gerçek kilitlenme/yanıt vermeyen dökümler yine de karşıya yüklenir. Yalnızca istatistiksel bilgiler bastırılır; <br>Visual Studio 'ya yönelik Azure Araçları SDK uzantısı için anonim kullanım düzenlerini açığa çıkarmak için ve Visual Studio 'ya SQL araçları için kullanım desenleri için kullanılır |
 | Visual Studio <br> Müşteri deneyimi <br>Geliştirme programı (CEIP) <br><br>PerfWatson.exe | vortex.data.microsoft.com<br>dc.services.visualstudio.com<br>visualstudio-devdiv-c2s.msedge.net<br>az667904.vo.msecnd.net <br>scus-breeziest-in.cloudapp.net<br> | https/443 | Anonim kullanım desenlerini ve hata günlüklerini toplamak için kullanılır <br><br>UI dondurma sorunlarını izlemek için kullanılır |
 | Oluşturma ve<br>Yönetim <br>Azure kaynakları | management.azure.com <br>management.core.windows.net | https/443 | Web uygulamalarının, Azure Işlevlerinin veya Webişlerin yayımlanmasını desteklemek üzere Azure Web siteleri veya diğer kaynaklar oluşturmak için kullanılır |

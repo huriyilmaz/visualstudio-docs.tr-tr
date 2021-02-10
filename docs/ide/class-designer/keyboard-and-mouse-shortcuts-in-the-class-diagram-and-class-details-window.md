@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: c12d8dac-9902-4fde-b721-2a8116da53b7
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c184a12474e2d7ff0b626547acaaf2a37d460c8e
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: 6576377714fa08343543ccd3d186de0e2a0e039b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94901108"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99969911"
 ---
 # <a name="keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window"></a>Sınıf diyagramı ve Sınıf Ayrıntıları penceresinde klavye ve fare kısayolları
 
@@ -30,7 +30,7 @@ ms.locfileid: "94901108"
 
 Aşağıdaki fare eylemleri sınıf diyagramlarında desteklenir:
 
-|Fare birleşimi|Bağlam|Açıklama|
+|Fare birleşimi|Bağlam|Description|
 | - |-------------|-----------------|
 |Çift tıklama|Şekil öğeleri|Kod düzenleyicisini açar.|
 |Çift tıklama|Lolipop Bağlayıcısı|Lolipop 'i Genişlet/Daralt.|
@@ -58,7 +58,7 @@ Bir fare kullanarak, **Sınıf Ayrıntıları** penceresinin ve görüntülediğ
 
 Aşağıdaki klavye eylemleri sınıf diyagramlarında desteklenir:
 
-|Anahtar|Bağlam|Açıklama|
+|Anahtar|Bağlam|Description|
 |---------|-------------|-----------------|
 |**Ok tuşları**|Tür şekillerinin içinde|Şekil içeriklerinde ağaç stili gezinti (şeklin etrafında kaydırma desteklenir). Sol ve sağ tuşları, Genişletilebilir ise geçerli öğeyi genişletir/daraltır ve değilse üst öğeye gidebilir (ayrıntılı davranış için bkz. ağaç görünümü gezintisi).|
 |**Ok tuşları**|Üst düzey şekiller|Diyagramda şekiller taşınıyor.|
@@ -69,7 +69,7 @@ Aşağıdaki klavye eylemleri sınıf diyagramlarında desteklenir:
 |**End**|Üst düzey şekiller|Diyagramdaki son şekle gidin.|
 |**SHIFT** + **Giriş sayfası**|Tür şeklinin içinde|Geçerli öğeyle başlayan ve aynı şekildeki en üstteki öğeyle biten şekildeki öğeleri seçer.|
 |**SHIFT** + **Son**|Tür şeklinin içinde|**SHIFT** + **girişi** , ancak yukarıdan aşağı yönle aynıdır.|
-|**Girmesini**|Tüm bağlamlar|Şekil üzerinde, Çift tıklama ile de kullanılabilen varsayılan eylemi çağırır. Çoğu durumda bu, kod görüntüler ancak bazı öğeler bunu farklı şekilde tanımlar (Lollipop 'lar, bölme üstbilgileri, lolipop etiketleri).|
+|**Enter**|Tüm bağlamlar|Şekil üzerinde, Çift tıklama ile de kullanılabilen varsayılan eylemi çağırır. Çoğu durumda bu, kod görüntüler ancak bazı öğeler bunu farklı şekilde tanımlar (Lollipop 'lar, bölme üstbilgileri, lolipop etiketleri).|
 |**+** ' **-**|Tüm bağlamlar|Şu anda odaklanmış öğe Genişletilebilir ise, bu anahtarlar öğeyi genişletir veya daraltır.|
 |**>**|Tüm bağlamlar|Alt öğeleri olan öğelerde, daraltılamışsa ve ilk alt öğeye gidiliyorsa, bu öğe genişletilir.|
 |**<**|Tüm bağlamlar|Üst öğeye gider.|
@@ -78,7 +78,7 @@ Aşağıdaki klavye eylemleri sınıf diyagramlarında desteklenir:
 |**Silme**|Tür ve açıklama şekilleri üzerinde|**Diyagramdan kaldır** komutunu çağırır.|
 |**Silme**|Diğer her şey.|**Koddan Sil** komutunu (Üyeler, parametreler, ilişkilendirmeler, devralma, Lollipop etiketleri) çağırır.|
 |**CTRL** + **Sil**|Tüm bağlamlar|Seçimdeki **kodu Sil** komutundan çağırır.|
-|**Sekmesinde**|Tüm bağlamlar|Aynı üst öğe içindeki sonraki alt öğeye gider (kaydırmayı destekler).|
+|**Sekme**|Tüm bağlamlar|Aynı üst öğe içindeki sonraki alt öğeye gider (kaydırmayı destekler).|
 |**SHIFT** + **Sekme**|Tüm bağlamlar|Aynı üst öğe içinde önceki alt öğeye gider (kaydırmayı destekler).|
 |**Boşluk çubuğu**|Tüm bağlamlar|Geçerli öğedeki seçime geçiş yapar.|
 
@@ -93,7 +93,7 @@ Aşağıdaki klavye eylemleri sınıf diyagramlarında desteklenir:
 |-|-|
 |**,** (virgül)|İmleç bir parametre satırdaysa, bir virgül yazıldığında, imleç sonraki parametrenin ad alanına getirilir. İmleç bir yöntemin son parametre satırdaysa, imleci \<add parameter> alana, yeni bir parametre oluşturmak için kullanabileceğiniz şekilde taşıyabilirsiniz.<br /><br /> İmleç, **Sınıf Ayrıntıları** penceresinde başka bir yerse, bir virgül yazıldığında geçerli alana bir virgül eklenir.|
 |**;** (noktalı virgül) veya **)** (parantez kapatma)|İmleci, **Sınıf Ayrıntıları** penceresi kılavuzundaki sonraki üye satırının ad alanına taşıyın.|
-|**Sekmesinde**|İmleci bir sonraki alana taşır, önce sola ve sonra yukarıdan aşağıya doğru hareket eder. İmleç metin yazdığınız bir alandan taşıyor ise, **Sınıf Ayrıntıları** bu metni işler ve bir hata oluşturmuyorsa onu depolar.<br /><br /> İmleç gibi boş bir alanda ise \<add parameter> Tab, sonraki satırın ilk alanına gider.|
+|**Sekme**|İmleci bir sonraki alana taşır, önce sola ve sonra yukarıdan aşağıya doğru hareket eder. İmleç metin yazdığınız bir alandan taşıyor ise, **Sınıf Ayrıntıları** bu metni işler ve bir hata oluşturmuyorsa onu depolar.<br /><br /> İmleç gibi boş bir alanda ise \<add parameter> Tab, sonraki satırın ilk alanına gider.|
 |**Boşluk çubuğu**|İmleci bir sonraki alana taşır, önce sola ve sonra yukarıdan aşağıya doğru hareket eder. İmleç gibi boş bir alanda yer alıyorsa \<add parameter> , sonraki satırın ilk alanına gider. \<space>Virgül yoksayıldıktan hemen sonra yazılan unutmayın.<br /><br /> İmleç Özet alanında ise, boşluk yazıldığında boşluk karakteri eklenir.<br /><br /> İmleç belirli bir satırın gizleme sütunundayken, bir boşluk yazıldığında gizleme onay kutusunun değeri geçer.|
 |**CTRL** + **Sekme**|Başka bir belge penceresine geç. Örneğin, **Sınıf Ayrıntıları** penceresinden açık bir kod dosyasına geçiş yapın.|
 |**Esc**|Bir alana metin yazmaya başladıysanız ESC tuşuna basmak geri alma anahtarı olarak davranır ve alanın içeriğini önceki değerine geri alır. Sınıf Detayları Penceresi genel odağa sahipse ancak belirli bir hücre odağa sahip değilse, ESC tuşuna basmak, **Sınıf Ayrıntıları** penceresinden odağı uzağa kaydırır.|

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 845302fc-273d-4f81-820a-7296ce91bd76
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 323d118b73649c8c23d9b4a2e3ace2fd2fc6fdea
-ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
+ms.openlocfilehash: f8a298f19f247c45740e87074804755f6ca691ec
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92136764"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99969873"
 ---
 # <a name="how-to-configure-projects-to-target-platforms"></a>Nasıl yapılır: projeleri hedef platformlar için yapılandırma
 
@@ -37,7 +37,7 @@ Visual Studio, uygulamalarınızı 64 bitlik platformlar dahil farklı platforml
 
 ### <a name="to-configure-a-project-to-target-a-64-bit-platform"></a>Bir projeyi 64 bitlik bir platformu hedefleyecek şekilde yapılandırmak için
 
-1. Menü çubuğunda Configuration Manager **Oluştur**' u seçin  >  **Configuration Manager**.
+1. Menü çubuğunda Configuration Manager **Oluştur**' u seçin  >  .
 
 2. **Etkin çözüm platformu** listesinde, çözümün hedeflenecek 64 bitlik bir platform seçin ve sonra **Kapat** düğmesini seçin.
 
@@ -45,7 +45,7 @@ Visual Studio, uygulamalarınızı 64 bitlik platformlar dahil farklı platforml
 
          **Yeni çözüm platformu** iletişim kutusu görüntülenir.
 
-    2. **Yazın veya yeni platform listesini seçin** , **x64**öğesini seçin.
+    2. **Yazın veya yeni platform listesini seçin** , **x64** öğesini seçin.
 
         > [!NOTE]
         > Yapılandırmanıza yeni bir ad verirseniz, **Proje tasarımcısında** ayarları doğru platformu hedefleyecek şekilde değiştirmeniz gerekebilir.
@@ -55,7 +55,7 @@ Visual Studio, uygulamalarınızı 64 bitlik platformlar dahil farklı platforml
 64 bitlik platformu hedefleyen tüm projeler için özellikler güncellenir ve projenin sonraki derlemesi 64 bit platformlar için iyileştirilir.
 
 > [!NOTE]
-> **Win32** platform adı C++ projeleri için kullanılır ve **x86**anlamına gelir. Visual Studio hem proje düzeyi platformları hem de çözüm düzeyi platformları ve proje platformları dile özgü proje sistemlerinden gelir. C++ projeleri **Win32** ve **x64**kullanır, ancak çözüm platformları **x86** ve **x64**kullanır. Çözüm yapılandırması olarak **x86** seçeneğini belirlediğinizde, Visual Studio, C++ projeleri için **Win32** platformunu seçer. Hem proje düzeyi platformu hem de çözüm düzeyi platform ayarlarını görmek için **Configuration Manager** açın ve iki platform ayarını aklınızda yapın. Çözüm düzeyi Platform **etkin çözüm platformu** açılan listesinde gösterilir ve tablo her proje için proje düzeyi platformu gösterir.
+> **Win32** platform adı C++ projeleri için kullanılır ve **x86** anlamına gelir. Visual Studio hem proje düzeyi platformları hem de çözüm düzeyi platformları ve proje platformları dile özgü proje sistemlerinden gelir. C++ projeleri **Win32** ve **x64** kullanır, ancak çözüm platformları **x86** ve **x64** kullanır. Çözüm yapılandırması olarak **x86** seçeneğini belirlediğinizde, Visual Studio, C++ projeleri için **Win32** platformunu seçer. Hem proje düzeyi platformu hem de çözüm düzeyi platform ayarlarını görmek için **Configuration Manager** açın ve iki platform ayarını aklınızda yapın. Çözüm düzeyi Platform **etkin çözüm platformu** açılan listesinde gösterilir ve tablo her proje için proje düzeyi platformu gösterir.
 > ![Çözüm platformunu ve proje platformunu gösteren ekran görüntüsü](media/project-platform-win32.png)
 
 ## <a name="target-platforms-in-the-project-designer"></a>Proje tasarımcısında hedef platformlar

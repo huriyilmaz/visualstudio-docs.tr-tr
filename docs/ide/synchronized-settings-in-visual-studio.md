@@ -7,15 +7,15 @@ ms.topic: conceptual
 ms.assetid: a3d2ea29-be5d-4012-9820-44b06adbb7dd
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 310e716f890dcc2185d6ebf6e60411934a1761f4
-ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
+ms.openlocfilehash: 396981533502f2687040f470ded9b490cab1ef7a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96560921"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99970640"
 ---
 # <a name="synchronize-visual-studio-settings-across-multiple-computers"></a>Visual Studio ayarlarını birden çok bilgisayar arasında eşitler
 
@@ -54,7 +54,7 @@ Visual Studio için eşitlenmiş ayarlar varsayılan olarak açıktır. Bir bilg
 Örnek olarak, "A" bilgisayarındaki Visual Studio 'daki ayarları eşitlememeye karar verirseniz, "A" bilgisayarında yapılan herhangi bir ayar değişikliği "B" bilgisayarında veya "C" bilgisayarında görünmez. "B" ve "C" bilgisayarları birbirleriyle eşitlemeye devam eder, ancak "A" bilgisayarıyla kalmaz.
 
 > [!NOTE]
-> Ayarları, **Araçlar**  >  **Seçenekler** ortam hesapları sayfasındaki seçeneğin seçimini kaldırarak eşitlemeiyorsanız  >  **Environment**  >  **Accounts** , Visual Studio 'nun aynı bilgisayardaki diğer sürümleri veya sürümleri etkilenmez. Visual Studio 'nun bu yan yana yüklemeleri, ayarlarını eşitlemeye devam edecektir (çok fazla onay işareti yoksa).
+> Ayarları, **Araçlar**  >  **Seçenekler** ortam hesapları sayfasındaki seçeneğin seçimini kaldırarak eşitlemeiyorsanız  >    >   , Visual Studio 'nun aynı bilgisayardaki diğer sürümleri veya sürümleri etkilenmez. Visual Studio 'nun bu yan yana yüklemeleri, ayarlarını eşitlemeye devam edecektir (çok fazla onay işareti yoksa).
 
 ## <a name="synchronize-settings-across-visual-studio-ide-products-and-editions"></a>Visual Studio IDE ürünleri ve sürümleri üzerinde ayarları eşitler
 
@@ -89,7 +89,7 @@ Araç penceresi düzeni gibi bazı ayarlar, Visual Studio 'nun farklı yan yana 
 
 ## <a name="reset-synchronized-settings"></a>Eşitlenmiş ayarları Sıfırla
 
-Tüm ayarları varsayılan değerlerine sıfırlamak için, Visual Studio 'da oturum açın ve ardından **Araçlar** içeri aktar ve dışarı aktar ayarları ' nı seçerek  >  **Import and Export Settings** **Ayarları içeri ve dışarı aktarma Sihirbazı**' nı açın. **Tüm ayarları Sıfırla** ' yı seçin ve ardından sihirbazın kalan adımlarını izleyin.
+Tüm ayarları varsayılan değerlerine sıfırlamak için, Visual Studio 'da oturum açın ve ardından **Araçlar** içeri aktar ve dışarı aktar ayarları ' nı seçerek  >   **Ayarları içeri ve dışarı aktarma Sihirbazı**' nı açın. **Tüm ayarları Sıfırla** ' yı seçin ve ardından sihirbazın kalan adımlarını izleyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

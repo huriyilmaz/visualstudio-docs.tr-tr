@@ -6,21 +6,21 @@ ms.topic: conceptual
 ms.devlang: javascript
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 652ff7b0380fc03a3f9c8155a2f8696d9dfee5b9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 891822d0b79cbfd53cf14229f11e003bf740c660
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "67692370"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99969496"
 ---
 # <a name="packagejson-configuration"></a>package.json yapılandırması
 
-Çok sayıda NPM paketi olan bir Node.js uygulaması geliştiriyorsanız, bir veya daha fazla paket güncelleştirildikten sonra projenizi oluştururken uyarı veya hatalara çalışmak yaygın bir şekilde çalışmaz. Bazen sürüm çakışması sonuçları veya paket sürümü kullanım dışı bırakılmıştır. İşte [package.jsdosya üzerinde](https://docs.npmjs.com/files/package.json) yapılandırmanıza ve uyarılar veya hatalar gördüğünüzde neler olduğunu anlamanıza yardımcı olacak birkaç hızlı ipucu. Bu, * üzerindepackage.js* için kapsamlı bir kılavuz değildir ve yalnızca NPM paketi sürümü oluşturma ' ya odaklanmıştır.
+Çok sayıda NPM paketi olan bir Node.js uygulaması geliştiriyorsanız, bir veya daha fazla paket güncelleştirildikten sonra projenizi oluştururken uyarı veya hatalara çalışmak yaygın bir şekilde çalışmaz. Bazen sürüm çakışması sonuçları veya paket sürümü kullanım dışı bırakılmıştır. İşte [package.jsdosya üzerinde](https://docs.npmjs.com/files/package.json) yapılandırmanıza ve uyarılar veya hatalar gördüğünüzde neler olduğunu anlamanıza yardımcı olacak birkaç hızlı ipucu. Bu, *üzerindepackage.js* için kapsamlı bir kılavuz değildir ve yalnızca NPM paketi sürümü oluşturma ' ya odaklanmıştır.
 
 NPM paketi sürüm oluşturma sistemi katı kurallara sahiptir. Sürüm biçimi buradan aşağıda verilmiştir:
 
@@ -36,7 +36,7 @@ Bir 5.2.1 sürümü ile uygulamanızdaki bir paketiniz olduğunu varsayalım. An
 
 Bu, bazı NPM paketi özelliklerinin bağımlılıklara sahip olduğunu belirtmekte bir değer. Örneğin, WebPack ile TypeScript derleyici paketinin (TS-Loader) yeni bir özelliğini kullanmak için, WebPack NPM paketini ve WebPack-CLI paketini de güncelleştirmeniz gerekir.
 
-NPM, paket sürümü oluşturmayı yönetmeye yardımcı olmak için * üzerindepackage.js*kullanabileceğiniz çeşitli gösterimleri destekler. Uygulamanızda kabul etmek istediğiniz paket güncelleştirmelerinin türünü denetlemek için bu gösterimleri kullanabilirsiniz.
+NPM, paket sürümü oluşturmayı yönetmeye yardımcı olmak için *üzerindepackage.js* kullanabileceğiniz çeşitli gösterimleri destekler. Uygulamanızda kabul etmek istediğiniz paket güncelleştirmelerinin türünü denetlemek için bu gösterimleri kullanabilirsiniz.
 
 Yanıt kullandığınızı **ve tepki verme ve** **tepki verme-Dom** NPM paketini dahil etmeniz gerektiğini varsayalım. Bunu, *package.js* dosyadaki çeşitli yollarla belirtebilirsiniz. Örneğin, bir paketin tam sürümünün kullanımını aşağıda gösterildiği gibi belirtebilirsiniz.
 

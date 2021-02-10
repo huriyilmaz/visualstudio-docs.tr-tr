@@ -7,7 +7,7 @@ helpviewer_keywords:
 - ETL Trace
 author: corob-msft
 ms.author: corob
-manager: jillfra
+manager: jmartens
 dev_langs:
 - CSharp
 - VB
@@ -15,12 +15,12 @@ dev_langs:
 ms.workload:
 - multiple
 ms.description: Use perfview.exe to collect ETL traces for troubleshooting issues with Visual Studio
-ms.openlocfilehash: 9ac4d90a0da15fe2415ada02d6e8e1cdbe11af56
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6f0696a24f04d2cba52994c86a3475f56d3e7947
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85770819"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99970718"
 ---
 # <a name="collect-an-etl-trace-with-perfview"></a>PerfView ile ETL izlemesi toplama
 
@@ -34,7 +34,7 @@ PerfView öğesini [GitHub](https://github.com/Microsoft/perfview/blob/master/do
 
 1. Windows Gezgini 'nde **PerfView.exe** sağ tıklayın ve **yönetici olarak yönetici olarak çalıştır** ' ı seçin.
 1. Topla menüsünde **topla** ' yı seçin.
-1. **Zip**, **birleştirme**ve **threadtime**'ı denetleyin.
+1. **Zip**, **birleştirme** ve **threadtime**'ı denetleyin.
 1. **DAIRESEL MB** ile 1000 arasında bir artış yapın.
 1. Birden çok kez toplanmanız durumunda ETL izlemelerini belirtilen bir klasöre ve veri dosyasına kaydetmek için **geçerli dizini** değiştirin.
 1. Veri kaydetmeye başlamak için **koleksiyonu Başlat** düğmesini seçin.

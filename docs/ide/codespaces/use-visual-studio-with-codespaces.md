@@ -5,18 +5,18 @@ ms.topic: how-to
 ms.date: 09/21/2020
 author: gregvanl
 ms.author: gregvanl
-manager: jillfra
+manager: jmartens
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
 monikerRange: vs-2019
-ms.openlocfilehash: c3a2e14236c2d24bc9650fab81150cc295826844
-ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
+ms.openlocfilehash: 95ed318c327735c85fda854d207b36874eeffca7
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96189933"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99970991"
 ---
 # <a name="how-to-use-visual-studio-with-a-codespace-preview"></a>Visual Studio 'Yu bir codespace ile kullanma (Önizleme)
 
@@ -32,7 +32,7 @@ Visual Studio, GitHub Codespaces 'da geliştirme için harika destek içerir. Bi
 
 Visual Studio 2019 Preview ile GitHub Codespaces 'a bağlanmak varsayılan olarak etkin değildir, bu nedenle önce Önizleme özellikleri seçeneğini etkinleştirmeniz gerekir.
 
-1. Visual Studio 2019 önizlemesinde, **Tools**  >  Seçenekler iletişim kutusunu açmak için Araçlar **Seçenekler** menü öğesini kullanın.
+1. Visual Studio 2019 önizlemesinde,   >  Seçenekler iletişim kutusunu açmak için Araçlar **Seçenekler** menü öğesini kullanın.
 
 2. **Ortam** altında **Önizleme özellikleri** ' ni seçin ve **GitHub Codespaces** Önizlemesi ' ne bağlan ' ı işaretleyin.
 
@@ -86,7 +86,7 @@ Codespace 'i oluşturduktan sonra, codespace 'i doğrudan Visual Studio 'dan aç
 
    ![Codespace 'e bağlanma ile Visual Studio başlangıç penceresi](media/visual-studio-start-window.png)
 
-   Zaten Visual Studio kullanıyorsanız, **File**  >  **bir codespace** menü öğesini kullanarak dosya bağla ' yı kullanabilirsiniz.
+   Zaten Visual Studio kullanıyorsanız,   >  **bir codespace** menü öğesini kullanarak dosya bağla ' yı kullanabilirsiniz.
 
    ![Visual Studio dosyası bir codespace menü öğesine Bağlan](media/visual-studio-file-connect-to-codespace.png)
 

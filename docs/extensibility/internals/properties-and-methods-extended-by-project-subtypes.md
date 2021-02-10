@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 2b9833bf-8551-4ae1-93db-197ba645c65e
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: cff332d7b573bb2fdff886b4206ea1267c091c48
-ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
+ms.openlocfilehash: 8d5d81135a2571db3c84b67acb2fa08e4f83f57d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97878046"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99970068"
 ---
 # <a name="properties-and-methods-extended-by-project-subtypes"></a>Proje Alt Türleri Tarafından Genişletilen Özellikler ve Metotlar
 Proje alt türünün, bir temel projenin toplayıcısı olarak oluşturulduğundan projenin davranışını etkilemek için çok güç vardır. Bu bölümde, proje alt türleri tarafından geliştirilmiş veya değiştirilebilen bazı özellikler özetlenmektedir.

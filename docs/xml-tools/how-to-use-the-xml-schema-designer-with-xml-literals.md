@@ -7,17 +7,17 @@ ms.topic: how-to
 ms.assetid: d11803e7-f81a-41a2-a145-ba494a45cc93
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 3b86cc50e5a25466b0ec80e45a225d64b8a97f72
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: f233eaed4b08e499b3a7543d10caafd36c77a480
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93399178"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99969080"
 ---
 # <a name="how-to-use-the-xml-schema-designer-with-xml-literals"></a>Nasıl yapılır: XML şema tasarımcısını XML değişmez değerleri ile kullanma
 
@@ -29,7 +29,7 @@ Bu konu, bir Visual Basic projesindeki bir XML sabit değeri ile ilişkili bir �
 
 2. **Xmldeğişmezleri** adlı yeni bir Visual Basic **konsol uygulaması** projesi oluşturun.
 
-     Yeni proje bir Visual Basic kaynak dosyası ( *Module1. vb* ) içerir.
+     Yeni proje bir Visual Basic kaynak dosyası ( *Module1. vb*) içerir.
 
 ## <a name="add-an-existing-xsd-file"></a>Mevcut bir XSD dosyası Ekle
 
@@ -37,7 +37,7 @@ Bu konu, bir Visual Basic projesindeki bir XML sabit değeri ile ilişkili bir �
 
 2. Dosyayı *PurchaseOrderSchema. xsd* adlı bir konuma kaydedin.
 
-3. **Çözüm Gezgini** , projenin adına sağ tıklayın, **Ekle** ' yi seçin ve ardından **Varolan öğe** ' yi seçin. **Addexıting öğesi** iletişim kutusu görüntülenir. *PurchaseOrderSchema. xsd* dosyasına gidin, seçin ve ardından **Ekle** ' ye tıklayın.
+3. **Çözüm Gezgini**, projenin adına sağ tıklayın, **Ekle**' yi seçin ve ardından **Varolan öğe**' yi seçin. **Addexıting öğesi** iletişim kutusu görüntülenir. *PurchaseOrderSchema. xsd* dosyasına gidin, seçin ve ardından **Ekle**' ye tıklayın.
 
      Xmlharfler projesi artık iki dosya içerir: *Module1. vb* ve *PurchaseOrderSchema. xsd*.
 
@@ -74,6 +74,6 @@ Projeye dahil olan XSD dosyasını temel alan bir XML sabit değeri ile Visual B
    End Module
    ```
 
-2. XML sabit değerinde bir xml düğümüne veya XML ad alanı içeri aktarma öğesine sağ tıklayın ve **şema Gezgininde göster** ' i seçin.
+2. XML sabit değerinde bir xml düğümüne veya XML ad alanı içeri aktarma öğesine sağ tıklayın ve **şema Gezgininde göster**' i seçin.
 
    XML **şema Gezgini** , XML şema KÜMESIYLE ilişkili XML sabit değeri olan bir Visual Basic dosyası ile yan yana görüntülenir.

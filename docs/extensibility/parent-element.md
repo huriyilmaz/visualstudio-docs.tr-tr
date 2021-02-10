@@ -10,20 +10,20 @@ helpviewer_keywords:
 ms.assetid: e4624ac8-1b9a-4940-910a-528a661cefad
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 03f1709184126d31845bfe1145afdebfeffcd1d1
-ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
+ms.openlocfilehash: e34b857d26be49bb98096c6b0ba85ff8049290b3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/04/2021
-ms.locfileid: "97863336"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99968989"
 ---
 # <a name="parent-element"></a>Üst öğe
 Bir düğme veya Birleşik giriş kutusunun üst öğesi yalnızca bir grup olabilir. Bir menünün veya grubun üstü başka bir menü veya grup olabilir. [Commandyerleştirme öğesinde](../extensibility/commandplacement-element.md)bu öğe gereklidir; diğer tüm örneklerde, bu isteğe bağlıdır. Bu öğe atlanırsa, üst öğesi de `Group_Undefined:0` kapsanır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <Parent guid="guidMyCommandSet" id="MyParentGroupOrMenu" />
@@ -40,7 +40,7 @@ Bir düğme veya Birleşik giriş kutusunun üst öğesi yalnızca bir grup olab
 |kimlik|Gereklidir. GUID/ID komut tanımlayıcısının KIMLIĞI.|
 
 ### <a name="child-elements"></a>Alt öğeleri
- Hiçbiri
+ Yok
 
 ### <a name="parent-elements"></a>Üst öğeler
 

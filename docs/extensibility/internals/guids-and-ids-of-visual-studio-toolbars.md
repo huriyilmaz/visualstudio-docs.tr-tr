@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c9cacd57-9225-450f-a9ac-cbf3168ea844
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b44cda401faa0d7e34bf9ce7579aa3cca026fa13
-ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
+ms.openlocfilehash: 7b4df4bac9fcc933cccc1bd54ced89c416b23863
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96480388"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99970224"
 ---
 # <a name="guids-and-ids-of-visual-studio-toolbars"></a>Visual Studio araç çubuklarının GUID 'Leri ve kimlikleri
 Bu konu, Visual Studio tümleşik geliştirme ortamında (IDE) ve içerdikleri gruplarda bulunan araç çubuklarının GUID ve KIMLIK değerlerini numaralandırır. Bu değerler, Visual Studio SDK 'nin bir parçası olarak yüklenen *. vsct* dosyalarında tanımlanmıştır. Daha fazla bilgi için bkz. [IDE tanımlı komutlar, menüler ve gruplar](../../extensibility/internals/ide-defined-commands-menus-and-groups.md).
@@ -63,13 +63,13 @@ Bu konu, Visual Studio tümleşik geliştirme ortamında (IDE) ve içerdikleri g
 
 ### <a name="standard-toolbar-groups"></a>Standart araç çubuğu grupları
 
-|Ad|ID|
+|Name|ID|
 |----------|--------|
 |Kaydet/Aç|IDG_VS_TOOLSB_SAVEOPEN|
 |Kes/kopyala|IDG_VS_TOOLSB_CUTCOPY|
 |Geri Al/Yinele|IDG_VS_TOOLSB_UNDOREDO|
 |Çalıştır/oluştur|IDG_VS_TOOLSB_RUNBUILD|
-|Arama|IDG_VS_TOOLSB_SEARCH|
+|Arayın|IDG_VS_TOOLSB_SEARCH|
 |Windows|IDG_VS_TOOLSB_WINDOWS|
 |Yeni pencereler|IDG_VS_TOOLSB_NEWWINDOWS|
 |Yükle/Kaydet|IDG_VS_WINDOWUI_LOADSAVE|
@@ -77,14 +77,14 @@ Bu konu, Visual Studio tümleşik geliştirme ortamında (IDE) ve içerdikleri g
 
 ### <a name="build-toolbar-groups"></a>Araç çubuğu grupları oluşturma
 
-|Ad|ID|
+|Name|ID|
 |----------|--------|
 |Yapı çubuğu|IDG_VS_BUILDBAR|
 |İptal|IDG_VS_BUILD_CANCEL|
 
 ### <a name="text-editor-toolbar-groups"></a>Metin düzenleyici araç çubuğu grupları
 
-|Ad|ID|
+|Name|ID|
 |----------|--------|
 |Tamamlama|IDM_VS_TOOL_TEXTEDITOR|
 |Leyebilirsiniz|IDG_VS_EDITTOOLBAR_INDENT|
@@ -93,7 +93,7 @@ Bu konu, Visual Studio tümleşik geliştirme ortamında (IDE) ve içerdikleri g
 
 ### <a name="debug-toolbar-groups"></a>Hata ayıklama araç çubuğu grupları
 
-|Ad|ID|
+|Name|ID|
 |----------|--------|
 |Yürütme|IDM_DEBUG_TOOLBAR|
 |Atma|IDG_DEBUG_TOOLBAR_STEPPING|
@@ -102,7 +102,7 @@ Bu konu, Visual Studio tümleşik geliştirme ortamında (IDE) ve içerdikleri g
 
 ### <a name="debug-location-toolbar-groups"></a>Hata ayıklama konumu araç çubuğu grupları
 
-|Ad|ID|
+|Name|ID|
 |----------|--------|
 |Hata ayıklama konumu|IDG_DEBUG_CONTEXT_TOOLBAR|
 
