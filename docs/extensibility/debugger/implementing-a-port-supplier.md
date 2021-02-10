@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 6b8579df-58df-4c7f-8112-6015993e8765
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 72963660e4f50a72cdbc04bab4833b397d15fc27
-ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
+ms.openlocfilehash: 8bec31bb49433b7058ca7021091582f89933f0b2
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96560674"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99947690"
 ---
 # <a name="implement-a-port-supplier"></a>Bağlantı noktası sağlayıcısı uygulama
 Bir bağlantı noktası sağlayıcısı, oturum hata ayıklama Yöneticisi 'ne (SDM) istek üzerine bağlantı noktaları sağlar. DCOM olmayan bir makinede hata ayıklanırken veya yeni bir cihaz destek gerektirdiğinde, bir bağlantı noktası sağlayıcısı uygulanmalıdır. Örneğin, bir hücre telefonunda hata ayıklama sağlamak için, cep telefonuna (Belki IR veya bir hücre bağlantısı yoluyla) bağlanan bağlantı noktaları sağlayan bir bağlantı noktası sağlayıcısı ayarlayabilir ve telefonda çalışan işlem ve programları numaralandırır.

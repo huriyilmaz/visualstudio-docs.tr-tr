@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: df27a8d6-3938-45ff-b47f-b684e80b38a0
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: e79ceea58fc78922cd07bb6635ed2f399e97dd1c
-ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
+ms.openlocfilehash: 46e9b18f7bb34433ff86fe6a5bede436228d3ff1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96560817"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99947703"
 ---
 # <a name="how-to-debug-a-custom-debug-engine"></a>Nasıl yapılır: özel hata ayıklama altyapısında hata ayıklama
 Proje türü, yöntemi hata ayıklama altyapısını (DE) başlatır <xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg.DebugLaunch%2A> . Bu, öğesinin proje türünü denetleme örneğinin denetimi altında başlatıldığı anlamına gelir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Ancak, bu örneği [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] de hata ayıklaması yapılamaz. Özel DE hata ayıklamanıza olanak tanıyan adımlar aşağıda verilmiştir.
