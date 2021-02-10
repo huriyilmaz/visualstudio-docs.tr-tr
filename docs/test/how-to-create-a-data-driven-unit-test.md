@@ -12,16 +12,16 @@ helpviewer_keywords:
 - unit tests, data-driven
 - data-driven unit tests
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 31e1fb08d77992e6fb592e286553196928b13ad4
-ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
+ms.openlocfilehash: 94dcc3aed8d41f9ece0f9b51410fc749330b01df
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95441202"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99966701"
 ---
 # <a name="how-to-create-a-data-driven-unit-test"></a>Nasıl yapılır: veri temelli birim testi oluşturma
 
@@ -69,7 +69,7 @@ public int AddIntegers(int first, int second)
 
 Yöntemi test etmek için `AddIntegers` , parametreler için bir değer aralığı ve döndürülmek üzere bekleyen toplam değeri belirten bir veri kaynağı oluşturun. Bu örnekte, adlı bir SQL Compact veritabanı `MathsData` ve `AddIntegersData` Aşağıdaki sütun adlarını ve değerlerini içeren adlı bir tablo oluşturacağız
 
-|Ilksayı|Ikincisayı|Toplam|
+|Ilksayı|Ikincisayı|Sum|
 |-|------------------|-|
 |0|1|1|
 |1|1|2|

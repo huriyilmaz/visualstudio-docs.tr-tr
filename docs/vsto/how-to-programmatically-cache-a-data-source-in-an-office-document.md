@@ -15,15 +15,15 @@ helpviewer_keywords:
 - data [Office development in Visual Studio], caching
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: c0b739a7671f19b126b0566dfc8f4775a2c91063
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: d1e66b587a149c02059e549fb20a5293f296a4a8
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96845023"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99968950"
 ---
 # <a name="how-to-programmatically-cache-a-data-source-in-an-office-document"></a>Nasıl yapılır: bir Office belgesinde program aracılığıyla veri kaynağını önbelleğe alma
   `StartCaching`,, Veya gibi bir konak öğesinin yöntemini çağırarak bir belgedeki veri önbelleğine programlı bir şekilde veri nesnesi ekleyebilirsiniz <xref:Microsoft.Office.Tools.Word.Document> <xref:Microsoft.Office.Tools.Excel.Workbook> <xref:Microsoft.Office.Tools.Excel.Worksheet> . Bir konak öğesinin yöntemini çağırarak veri önbelleğinden veri nesnesini kaldırın `StopCaching` .

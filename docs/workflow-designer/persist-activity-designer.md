@@ -9,15 +9,15 @@ f1_keywords:
 ms.assetid: be8648dd-3eb9-4a50-8ec1-57a8be804692
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 3daa7cef76d2448cc7bcda66a967a3406bb2352c
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 988c080b7b6c89baa4151858fcaf4e3320582e09
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94435579"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99968729"
 ---
 # <a name="persist-activity-designer"></a>Persist Etkinlik Tasarımcısı
 

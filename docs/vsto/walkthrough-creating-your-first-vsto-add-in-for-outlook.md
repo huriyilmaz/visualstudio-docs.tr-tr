@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Outlook [Office development in Visual Studio], creating your first project
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 7950858d3205cf910eb09e5b0a99b5f67c71c4bd
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 16f735e2902527307ac812922495a2a0cb3b377e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97524228"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99966597"
 ---
 # <a name="walkthrough-create-your-first-vsto-add-in-for-outlook"></a>İzlenecek yol: Outlook için ilk VSTO eklentisini oluşturma
   Bu izlenecek yol, Outlook Microsoft Office için VSTO eklentisi oluşturmayı gösterir. Bu tür çözümde oluşturduğunuz özellikler, hangi Outlook öğesinin açık olduğuna bakılmaksızın uygulamanın kendisi tarafından kullanılabilir. Daha fazla bilgi için bkz. [Office çözümleri geliştirmeye genel bakış &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md).
@@ -66,7 +66,7 @@ ms.locfileid: "97524228"
 
 6. **Ad** kutusuna **FirstOutlookAddIn** yazın.
 
-7. **Tamam** düğmesine tıklayın.
+7. **Tamam**'a tıklayın.
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**FirstOutlookAddIn** projesini oluşturur ve **ThisAddIn** kod dosyasını düzenleyicide açar.
 

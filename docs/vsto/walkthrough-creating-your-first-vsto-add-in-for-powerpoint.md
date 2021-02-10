@@ -15,15 +15,15 @@ helpviewer_keywords:
 - add-ins [Office development in Visual Studio], creating your first project
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 3e02da3484ce7c2beb35e643d3d90d8e37225e11
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: c73c5ab61c51ca4be749e9bf14700c7bea64023e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97524859"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99966545"
 ---
 # <a name="walkthrough-create-your-first-vsto-add-in-for-powerpoint"></a>İzlenecek yol: PowerPoint için ilk VSTO eklentisini oluşturma
   Bu izlenecek yol, PowerPoint Microsoft Office için VSTO eklentisi oluşturmayı gösterir. Bu tür çözümde oluşturduğunuz özellikler, hangi sunuların açık olduğuna bakılmaksızın uygulamanın kendisi için kullanılabilir. Daha fazla bilgi için bkz. [Office çözümleri geliştirmeye genel bakış &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md).
@@ -65,7 +65,7 @@ ms.locfileid: "97524859"
 
 6. **Ad** kutusuna **FirstPowerPointAddIn** yazın.
 
-7. **Tamam** düğmesine tıklayın.
+7. **Tamam**'a tıklayın.
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**FirstPowerPointAddIn** projesini oluşturur ve **ThisAddIn** kod dosyasını düzenleyicide açar.
 

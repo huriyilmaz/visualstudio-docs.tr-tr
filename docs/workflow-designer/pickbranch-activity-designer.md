@@ -9,15 +9,15 @@ f1_keywords:
 ms.assetid: f523ad47-bbc0-4cda-a35c-41e67c4ba081
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: bce1cee7fad7ccff57a6911c99a9470a22b9a927
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 9d3ac314d5f8eb7980bdf5102d871546d3167141
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94434239"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99968677"
 ---
 # <a name="pickbranch-activity-designer"></a>PickBranch Etkinlik Tasarımcısı
 
@@ -33,11 +33,11 @@ ms.locfileid: "94434239"
 
 <xref:System.Activities.Statements.PickBranch> **Branch1** ve **branch2** görünen adlarına sahip iki boş nesne, <xref:System.Activities.Statements.Pick> **çekme** etkinliği Tasarımcısı başlangıçta iş akışı Tasarımcısı bir etkinliğin öğeleri olarak oluşturulur. Bu ilgili <xref:System.Activities.Statements.PickBranch.DisplayName%2A> özellik değerleri, **PickBranch** Designer üst bilgisinde veya her dal için **Özellikler** penceresinde düzenlenebilir.
 
-Nesne koleksiyonuna nesne eklemenin iki yolu vardır <xref:System.Activities.Statements.PickBranch> <xref:System.Activities.Statements.Pick> : **araç kutusundan** **PickBranch** tasarımcısını sürükleyip bırakarak veya tasarım yüzeyi içinden sağ tıklama menüsünü kullanarak: **Pick**
+Nesne koleksiyonuna nesne eklemenin iki yolu vardır <xref:System.Activities.Statements.PickBranch> <xref:System.Activities.Statements.Pick> : **araç kutusundan** **PickBranch** tasarımcısını sürükleyip bırakarak veya tasarım yüzeyi içinden sağ tıklama menüsünü kullanarak: 
 
 - **PickBranch** Designer, <xref:System.Activities.Statements.PickBranch> **araç kutusundan** sürüklendiğinde ve iş akışı Tasarımcısı yüzeyinde bir **seçim** etkinliği tasarımcısının dallarından birine bırakıldığında bir oluşturur. Yeni <xref:System.Activities.Statements.PickBranch> nesneler, daha <xref:System.Activities.Statements.Pick> önce koleksiyonda bulunan mevcut öğelerin sol veya sağ tarafında tasarımcı içine yerleştirilebilir <xref:System.Activities.Statements.PickBranch> . Bir **PickBranch** tasarımcısını fareyle **seçim** tasarımcısına sürüklediğinizde, **seçim** Tasarımcısı, <xref:System.Activities.Statements.PickBranch> belirli bir fare yerleşimi için nereye ekleneceğini göstermek için dikey mavi gri bir bant kullanır.
 
-- Bir bağlam menüsü edinmek ve yeni bir eklemek için **dal oluştur** ' u seçerek etkinlik tasarımcısını **Seç** ( **PickBranch** Designer içinde değil) öğesine sağ tıklayın <xref:System.Activities.Statements.PickBranch> . Yeni öğesinin, <xref:System.Activities.Statements.PickBranch> seçme tasarımcısında var olan nesnelerin sağına eklendiğini unutmayın <xref:System.Activities.Statements.PickBranch> . **Pick**
+- Bir bağlam menüsü edinmek ve yeni bir eklemek için **dal oluştur** ' u seçerek etkinlik tasarımcısını **Seç** ( **PickBranch** Designer içinde değil) öğesine sağ tıklayın <xref:System.Activities.Statements.PickBranch> . Yeni öğesinin, <xref:System.Activities.Statements.PickBranch> seçme tasarımcısında var olan nesnelerin sağına eklendiğini unutmayın <xref:System.Activities.Statements.PickBranch> . 
 
 **PickBranch** Designer, üst bilgilerinin sağ tarafındaki çift yüzlere tıklanarak **tetikleyici** ve **eylem** kutularını açığa çıkarmak veya daraltılması için genişletilebilir. Etkinlikleri, <xref:System.Activities.Statements.PickBranch.Trigger%2A> <xref:System.Activities.Statements.PickBranch.Action%2A> <xref:System.Activities.Statements.PickBranch> tasarımcılarının **tetikleyici** ve **eylem** kutularına bırakarak her birini düzenleyin.
 
@@ -46,7 +46,7 @@ Nesne koleksiyonuna nesne eklemenin iki yolu vardır <xref:System.Activities.Sta
 Şunları silmenin iki yolu vardır <xref:System.Activities.Statements.PickBranch> :
 
 - **PickBranch** tasarımcısını seçin ve silin.
-- **PickBranch** tasarımcısını seçin, bağlam menüsünü almak için sağ tıklayın ve **Sil** ' i seçin.
+- **PickBranch** tasarımcısını seçin, bağlam menüsünü almak için sağ tıklayın ve **Sil**' i seçin.
 
 , **Tetikleyicisinin** veya **eylem** kutularının içindeki etkinliklerden birini, yanlışlıkla bu etkinliklerden birini siler ve nesne değil, seçim **dalı** tasarımcısını seçmeye dikkat edin <xref:System.Activities.Statements.PickBranch> .
 

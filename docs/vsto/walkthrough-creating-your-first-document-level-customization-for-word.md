@@ -13,15 +13,15 @@ helpviewer_keywords:
 - document-level customizations [Office development in Visual Studio], creating your first project
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: c1f827346c30720cefd781dade3039416504b9c0
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 56777213c4cac0e2356fa33235d2527abdbb5172
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97527084"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99966649"
 ---
 # <a name="walkthrough-create-your-first-document-level-customization-for-word"></a>İzlenecek yol: Word için ilk belge düzeyi özelleştirmeyi oluşturma
 
@@ -67,7 +67,7 @@ ms.locfileid: "97527084"
 
 6. **Ad** kutusuna **FirstDocumentCustomization** yazın.
 
-7. **Tamam** düğmesine tıklayın.
+7. **Tamam**'a tıklayın.
 
 8. **Office projesi için Visual Studio Araçları** **Yeni belge oluştur** ' u seçin ve **Tamam**' ı tıklatın.
 ::: moniker-end

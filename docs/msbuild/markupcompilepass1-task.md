@@ -16,15 +16,15 @@ helpviewer_keywords:
 - MarkupCompilePass1 task [WPF MSBuild], converting XAML to binary format
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 775884692963da226947a8fac524a8bd440d6c8d
-ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
+ms.openlocfilehash: 89d67c083c9e40710e79568c12684ab54653a5be
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92904273"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99966207"
 ---
 # <a name="markupcompilepass1-task"></a>MarkupCompilePass1 görevi
 
@@ -42,18 +42,18 @@ ms.locfileid: "92904273"
 | `AssemblyPublicKeyToken` | İsteğe bağlı **dize** parametresi.<br /><br /> Derleme için ortak anahtar belirtecini belirtir. |
 | `AssemblyVersion` | İsteğe bağlı **dize** parametresi.<br /><br /> Derlemenin sürüm numarasını belirtir. |
 | `ContentFiles` | İsteğe bağlı **ıtaskitem []** parametresi.<br /><br /> Gevşek içerik dosyalarının listesini belirtir. |
-| `DefineConstants` | İsteğe bağlı **dize** parametresi.<br /><br /> **Definesabitleri** 'nin geçerli değerinin tutulduğu belirtir. hedef derleme üretimini etkiler; Bu parametre değiştirilirse, hedef derlemedeki ortak API değiştirilebilir ve yerel türlere başvuruda bulunan XAML dosyalarının derlenmesi etkilenebilir. |
+| `DefineConstants` | İsteğe bağlı **dize** parametresi.<br /><br /> **Definesabitleri**'nin geçerli değerinin tutulduğu belirtir. hedef derleme üretimini etkiler; Bu parametre değiştirilirse, hedef derlemedeki ortak API değiştirilebilir ve yerel türlere başvuruda bulunan XAML dosyalarının derlenmesi etkilenebilir. |
 | `ExtraBuildControlFiles` | İsteğe bağlı **ıtaskitem []** parametresi.<br /><br /> Görev tekrar çalıştığında yeniden oluşturma tetiklenip tetiklenmediğini denetleyen dosyaların listesini belirtir <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass1> ; Bu dosyalardan biri değişirse yeniden oluşturma tetiklenir. |
 | `GeneratedBamlFiles` | İsteğe bağlı **ıtaskitem []** çıkış parametresi.<br /><br /> XAML ikili biçimindeki oluşturulan dosyaların listesini içerir. |
 | `GeneratedCodeFiles` | İsteğe bağlı **ıtaskitem []** çıkış parametresi.<br /><br /> Oluşturulan yönetilen kod dosyalarının listesini içerir. |
 | `GeneratedLocalizationFiles` | İsteğe bağlı **ıtaskitem []** çıkış parametresi.<br /><br /> Her yerelleştirilebilir XAML dosyası için oluşturulan yerelleştirme dosyalarının listesini içerir. |
 | `HostInBrowser` | İsteğe bağlı **dize** parametresi.<br /><br /> Oluşturulan derlemenin bir XAML tarayıcı uygulaması (XBAP) olup olmadığını belirtir. Geçerli seçenekler **true** ve **false** şeklindedir. **True** ise tarayıcı barındırmayı desteklemek için kod üretilir. |
 | `KnownReferencePaths` | İsteğe bağlı **dize []** parametresi.<br /><br /> Yapı işlemi sırasında değiştirolmayan derlemelere yönelik başvuruları belirtir. Genel derleme önbelleğinde (GAC), bir .NET yükleme dizininde bulunan derlemeler ve bu şekilde devam eder. |
-| `Language` | Gerekli **dize** parametresi.<br /><br /> Derleyicinin desteklediği yönetilen dili belirtir. Geçerli seçenekler **C#** , **vb** , **JScript** ve **C++** ' dir. |
+| `Language` | Gerekli **dize** parametresi.<br /><br /> Derleyicinin desteklediği yönetilen dili belirtir. Geçerli seçenekler **C#**, **vb**, **JScript** ve **C++**' dir. |
 | `LanguageSourceExtension` | İsteğe bağlı **dize** parametresi.<br /><br /> Oluşturulan yönetilen kod dosyasının uzantısına eklenen uzantıyı belirtir:<br /><br /> `<Filename>.g<LanguageSourceExtension>`<br /><br /> **LanguageSourceExtension** parametresi belirli bir değer ile ayarlanmamışsa, dil için varsayılan kaynak dosya adı uzantısı kullanılır: Visual Basic için. *vb* , C# için *. CSharp* . |
-| `LocalizationDirectivesToLocFile` | İsteğe bağlı **dize** parametresi.<br /><br /> Her kaynak XAML dosyası için yerelleştirme bilgilerinin nasıl oluşturulacağını belirtir. Geçerli seçenekler None, **CommentsOnly** ve **All** **'tur** . |
+| `LocalizationDirectivesToLocFile` | İsteğe bağlı **dize** parametresi.<br /><br /> Her kaynak XAML dosyası için yerelleştirme bilgilerinin nasıl oluşturulacağını belirtir. Geçerli seçenekler None, **CommentsOnly** ve **All** **'tur**. |
 | `OutputPath` | Gerekli **dize** parametresi.<br /><br /> Oluşturulan yönetilen kod dosyalarının ve XAML ikili biçim dosyalarının oluşturulduğu dizini belirtir. |
-| `OutputType` | Gerekli **dize** parametresi.<br /><br /> Bir proje tarafından oluşturulan derlemenin türünü belirtir. Geçerli seçenekler **winexe** , **exe** , **Library** ve **netmodule** ' dir. |
+| `OutputType` | Gerekli **dize** parametresi.<br /><br /> Bir proje tarafından oluşturulan derlemenin türünü belirtir. Geçerli seçenekler **winexe**, **exe**, **Library** ve **netmodule**' dir. |
 | `PageMarkup` | İsteğe bağlı **ıtaskitem []** parametresi.<br /><br /> İşlenecek XAML dosyalarının bir listesini belirtir. |
 | `References` | İsteğe bağlı **ıtaskitem []** parametresi.<br /><br /> XAML dosyalarında kullanılan türleri içeren derlemelere ait başvuruların listesini belirtir. |
 | `RequirePass2ForMainAssembly` | İsteğe bağlı **Boole** çıkış parametresi.<br /><br /> Projenin, ana derlemeye katıştırılmış yerel türlere başvuran, yerelleştirilemeyen XAML dosyaları içerip içermediğini gösterir. |
@@ -65,7 +65,7 @@ ms.locfileid: "92904273"
 
 ## <a name="remarks"></a>Açıklamalar
 
-<xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass1>Görev genellıkle xaml 'yi ikili biçimde derler ve kod dosyaları oluşturur. Bir XAML dosyası aynı projede tanımlı türlere başvurular içeriyorsa, derleme ikili biçime, **MarkupCompilePass1** tarafından ikinci bir biçimlendirme derleme geçişine ( **MarkupCompilePass2** ) ertelenir. Başvurulan yerel olarak tanımlanan türler derlenene kadar beklememeleri gerektiğinden, bu tür dosyaların derlenmesi ertelenmelidir. Ancak, bir XAML dosyasında bir öznitelik varsa `x:Class` , <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass1> dile özgü kod dosyasını oluşturur.
+<xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass1>Görev genellıkle xaml 'yi ikili biçimde derler ve kod dosyaları oluşturur. Bir XAML dosyası aynı projede tanımlı türlere başvurular içeriyorsa, derleme ikili biçime, **MarkupCompilePass1** tarafından ikinci bir biçimlendirme derleme geçişine (**MarkupCompilePass2**) ertelenir. Başvurulan yerel olarak tanımlanan türler derlenene kadar beklememeleri gerektiğinden, bu tür dosyaların derlenmesi ertelenmelidir. Ancak, bir XAML dosyasında bir öznitelik varsa `x:Class` , <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass1> dile özgü kod dosyasını oluşturur.
 
 XAML dosyası özniteliği kullanan öğeler içeriyorsa yerelleştirilebilir `x:Uid` :
 

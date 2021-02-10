@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d82e2485-e5f0-4936-a357-745bacccc299
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 58ac6b02424da40ba1130d8a1b549886c9efd718
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: a4b8e3cb3acccc2e7ae4c6c2d93353bec79a3690
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93047959"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99966051"
 ---
 # <a name="task-element-of-target-msbuild"></a>Hedefin görev öğesi (MSBuild)
 
@@ -50,7 +50,7 @@ MSBuild görevi örneğini oluşturur ve yürütür. Öğe adı, oluşturulmakta
 |Öznitelik|Açıklama|
 |---------------|-----------------|
 |`Condition`|İsteğe bağlı öznitelik. Değerlendirilecek koşul. Daha fazla bilgi için bkz. [koşullar](../msbuild/msbuild-conditions.md).|
-|`ContinueOnError`|İsteğe bağlı öznitelik. , Aşağıdaki değerlerden birini içerebilir:<br /><br /> -   **WarnAndContinue** veya **true** . Bir görev başarısız olduğunda, [hedef](../msbuild/target-element-msbuild.md) öğe ve yapı içindeki sonraki görevler yürütülmeye devam eder ve görevdeki tüm hatalar uyarı olarak kabul edilir.<br />-   **Errportadcontinue** . Bir görev başarısız olduğunda, öğedeki sonraki görevler `Target` ve derleme yürütülmeye devam eder ve görevdeki tüm hatalar hata olarak değerlendirilir.<br />-   **Errportadstop** veya **false** (varsayılan). Bir görev başarısız olduğunda, öğe ve yapı içindeki kalan görevler `Target` yürütülmez ve tüm `Target` öğe ve derleme başarısız olarak kabul edilir.<br /><br /> 4,5 ' den önceki .NET Framework sürümleri yalnızca `true` ve değerlerini destekliyordu `false` .<br /><br /> Daha fazla bilgi için bkz. [nasıl yapılır: görevlerdeki hataları yoksayma](../msbuild/how-to-ignore-errors-in-tasks.md).|
+|`ContinueOnError`|İsteğe bağlı öznitelik. , Aşağıdaki değerlerden birini içerebilir:<br /><br /> -   **WarnAndContinue** veya **true**. Bir görev başarısız olduğunda, [hedef](../msbuild/target-element-msbuild.md) öğe ve yapı içindeki sonraki görevler yürütülmeye devam eder ve görevdeki tüm hatalar uyarı olarak kabul edilir.<br />-   **Errportadcontinue**. Bir görev başarısız olduğunda, öğedeki sonraki görevler `Target` ve derleme yürütülmeye devam eder ve görevdeki tüm hatalar hata olarak değerlendirilir.<br />-   **Errportadstop** veya **false** (varsayılan). Bir görev başarısız olduğunda, öğe ve yapı içindeki kalan görevler `Target` yürütülmez ve tüm `Target` öğe ve derleme başarısız olarak kabul edilir.<br /><br /> 4,5 ' den önceki .NET Framework sürümleri yalnızca `true` ve değerlerini destekliyordu `false` .<br /><br /> Daha fazla bilgi için bkz. [nasıl yapılır: görevlerdeki hataları yoksayma](../msbuild/how-to-ignore-errors-in-tasks.md).|
 |`Parameter`|Görev sınıfı, özniteliğiyle etiketlenmiş bir veya daha fazla özellik içeriyorsa gereklidir `[Required]` .<br /><br /> Değer olarak parametre değerini içeren Kullanıcı tanımlı bir görev parametresi. `Task`Her öznitelik, görev sınıfındaki bir .NET özelliği ile eşlenmesiyle, öğesinde herhangi bir sayıda parametre olabilir.|
 
 ### <a name="child-elements"></a>Alt öğeleri

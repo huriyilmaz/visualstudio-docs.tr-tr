@@ -11,15 +11,15 @@ helpviewer_keywords:
 - ProjectOutputFile element
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: ffe6f95bdfd7795c837aaaa25ec7ef2a35a7ae76
-ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
+ms.openlocfilehash: a3b5a0f6474231fdc8f7617040ec4aa57056d9c0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95442035"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99966961"
 ---
 # <a name="projectoutputfile-element"></a>ProjectOutputFile öğesi
   SharePoint 'e dağıtıldığında proje öğesiyle birlikte dahil edilecek ayrı bir projenin çıkışını temsil eder.
@@ -64,7 +64,7 @@ ms.locfileid: "95442035"
 
 |Özellik|Değer|
 |-|-|
-|**Uzayına**|http: \/ \/ schemas.Microsoft.com/VisualStudio/<br>2010/SharePointTools/Sharepointprojectıtemmodel|
+|**Ad Alanı**|http: \/ \/ schemas.Microsoft.com/VisualStudio/<br>2010/SharePointTools/Sharepointprojectıtemmodel|
 |**Şema adı**|SharePoint proje öğesi şeması|
 |**Doğrulama dosyası**|Projectıtemmodelschema. xsd|
 |**Boş olabilir**|Hayır|

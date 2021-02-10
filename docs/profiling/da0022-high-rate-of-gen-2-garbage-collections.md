@@ -9,16 +9,16 @@ f1_keywords:
 ms.assetid: f871a547-0e6f-4b11-b2d7-174d30fc2ed8
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: eb1834bf395d3a9c5d4f516a9fec1693d40ff378
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 61fb953b1eae3ecfb0aa9c87e8b10a25099cb12a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90035696"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99967013"
 ---
 # <a name="da0022-high-rate-of-gen-2-garbage-collections"></a>DA0022: Yüksek oranda 2. nesil atık toplama
 
@@ -43,7 +43,7 @@ ms.locfileid: "90035696"
  Bu kural, çok sayıda 2. nesil atık toplama işlemi yaparken ateşlenir. İyi davranmış .NET Framework uygulamalar 2. nesil çok sayıda atık koleksiyonu 2. nesil koleksiyonlar olarak 5 ' ten fazla kez olacaktır. (10 x faktörü büyük olasılıkla idealdir.)
 
 ## <a name="how-to-investigate-a-warning"></a>Uyarı araştırma
- Profil oluşturma verilerinin [Işaretler görünümüne](../profiling/marks-view.md) gitmek Için hatalar Listesi penceresinde iletiye çift tıklayın. ** \\ Gen 0 KOLEKSIYONLARıNıN .NET CLR bellek** sayısını ve ** \\ Genel 1 koleksiyonlar sütunlarının .NET CLR bellek sayısını** bulun. Çöp toplamanın daha sık gerçekleştiği program yürütmesinin belirli aşamaları olup olmadığını saptayın. Yönetilen bellek ayırmaları deseninin aşırı bellek yönetimi ek yüküne neden olup olmadığını görmek için bu değerleri **GC sütunundaki% Time** ile karşılaştırın.
+ Profil oluşturma verilerinin [Işaretler görünümüne](../profiling/marks-view.md) gitmek Için hatalar Listesi penceresinde iletiye çift tıklayın. **\\ Gen 0 KOLEKSIYONLARıNıN .NET CLR bellek** sayısını ve **\\ Genel 1 koleksiyonlar sütunlarının .NET CLR bellek sayısını** bulun. Çöp toplamanın daha sık gerçekleştiği program yürütmesinin belirli aşamaları olup olmadığını saptayın. Yönetilen bellek ayırmaları deseninin aşırı bellek yönetimi ek yüküne neden olup olmadığını görmek için bu değerleri **GC sütunundaki% Time** ile karşılaştırın.
 
  2. nesil atık koleksiyonların yüksek oranındaki her zaman bir sorun değildir. Tasarım ile olabilir. Yürütme sırasında uzun süreler için etkin kalması gereken büyük veri yapılarını ayıran bir uygulama, bu kuralı tetikleyebilir. Bu tür bir uygulama bellek baskısı altında olduğunda, sık sık çöp koleksiyonları gerçekleştirmeye zorlanabilir. Daha az maliyetli nesil 0 ve 1. nesil çöp koleksiyonları yalnızca küçük miktarda yönetilen bellek geri kazanılmiyorsa, daha sık 2. nesil atık koleksiyonlar zamanlanır.
 

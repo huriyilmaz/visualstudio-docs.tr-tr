@@ -12,15 +12,15 @@ helpviewer_keywords:
 - data access [Office development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: e436c7a30708fac0cf59c2e79100cc89dade84b2
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: 1c610bdc33564e3e211d1ec5aab943af4eec49d1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96847630"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99965804"
 ---
 # <a name="access-data-in-documents-on-the-server"></a>Sunucudaki belgelerdeki verilere erişin
   Microsoft Office Word veya Microsoft Office Excel 'in nesne modelini kullanmak zorunda kalmadan belge düzeyi özelleştirmesindeki verilere karşı programlama yapabilirsiniz. Bu, Word veya Excel yüklü olmayan bir sunucuda bulunan bir belgede bulunan verilere erişebileceğiniz anlamına gelir. Örneğin, bir sunucudaki kod (örneğin, bir [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] sayfada) bir belgedeki verileri özelleştirebilir ve özelleştirilmiş belgeyi bir son kullanıcıya gönderebilir. Son Kullanıcı belgeyi açtığında, çözüm derlemesinde veri bağlama kodu özelleştirilmiş verileri belgeye bağlar. Belgedeki veriler kullanıcı arabiriminden ayrıldığından bu mümkündür. Daha fazla bilgi için bkz. [belge düzeyi özelleştirmelerde önbelleğe alınmış veriler](../vsto/cached-data-in-document-level-customizations.md).
@@ -57,9 +57,9 @@ ms.locfileid: "96847630"
 
 3. Değiştirilen nesneyi, aşağıdaki seçeneklerden birini kullanarak veri önbelleğine geri doğru bir şekilde seri hale getirme:
 
-    - Değişiklikleri otomatik olarak seri hale getirmek istiyorsanız <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.SerializeDataInstance%2A> yöntemini kullanın. Bu yöntem veri önbelleğinde **DiffGram** seri hale getirmek <xref:System.Data.DataSet> , <xref:System.Data.DataTable> ve türü belirtilmiş veri kümesi nesneleri için DiffGram biçimini kullanır. **DiffGram** biçimi çevrimdışı bir belgedeki veri önbelleğinde yapılan değişikliklerin sunucuya doğru şekilde gönderilmesini sağlar.
+    - Değişiklikleri otomatik olarak seri hale getirmek istiyorsanız <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.SerializeDataInstance%2A> yöntemini kullanın. Bu yöntem veri önbelleğinde  seri hale getirmek <xref:System.Data.DataSet> , <xref:System.Data.DataTable> ve türü belirtilmiş veri kümesi nesneleri için DiffGram biçimini kullanır. **DiffGram** biçimi çevrimdışı bir belgedeki veri önbelleğinde yapılan değişikliklerin sunucuya doğru şekilde gönderilmesini sağlar.
 
-    - Önbelleğe alınan verilerde yapılan değişiklikler için kendi serileştirme işlemini gerçekleştirmek istiyorsanız, doğrudan <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.Xml%2A> özelliğine yazabilirsiniz. Bir **DiffGram** <xref:System.Data.Common.DataAdapter> veritabanını <xref:System.Data.DataSet> ,, <xref:System.Data.DataTable> veya türü belirtilmiş veri kümesindeki verilerde yapılan değişikliklerle güncelleştirmek için kullanıyorsanız, DiffGram biçimini belirtin. Aksi takdirde, <xref:System.Data.Common.DataAdapter> mevcut satırları değiştirmek yerine yeni satırlar ekleyerek veritabanını güncelleştirir.
+    - Önbelleğe alınan verilerde yapılan değişiklikler için kendi serileştirme işlemini gerçekleştirmek istiyorsanız, doğrudan <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.Xml%2A> özelliğine yazabilirsiniz. Bir  <xref:System.Data.Common.DataAdapter> veritabanını <xref:System.Data.DataSet> ,, <xref:System.Data.DataTable> veya türü belirtilmiş veri kümesindeki verilerde yapılan değişikliklerle güncelleştirmek için kullanıyorsanız, DiffGram biçimini belirtin. Aksi takdirde, <xref:System.Data.Common.DataAdapter> mevcut satırları değiştirmek yerine yeni satırlar ekleyerek veritabanını güncelleştirir.
 
 ### <a name="modify-data-without-deserializing-the-current-value"></a>Geçerli değerin serisini kaldırmadan verileri Değiştir
  Bazı durumlarda, önbelleğe alınmış nesnenin değerini, önce geçerli değeri seri durumdan kaldırmadan değiştirmek isteyebilirsiniz. Örneğin, bir dize veya tamsayı gibi basit bir türe sahip bir nesnenin değerini değiştiriyorsanız veya bir sunucuda önbelleğe alınmış bir belgeyi başlatırken bunu yapabilirsiniz <xref:System.Data.DataSet> . Bu durumlarda, <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.SerializeDataInstance%2A> önce önbelleğe alınmış nesnenin geçerli değerini seri durumdan çıkarmak zorunda kalmadan yöntemini kullanabilirsiniz.

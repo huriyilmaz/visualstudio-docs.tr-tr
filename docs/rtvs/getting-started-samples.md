@@ -5,15 +5,15 @@ ms.date: 01/24/2018
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-science
-ms.openlocfilehash: ef3316d929b00203815918a656568f75571e954e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0ed322a03d056f72ac2246e96d3aaeefa8f557c7
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75843817"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99967026"
 ---
 # <a name="r-tools-for-visual-studio-sample-projects"></a>Visual Studio için R Araçları örnek projeleri
 
@@ -41,7 +41,7 @@ Bu örnek, iki kaynak dosyada kapsamlı açıklamalarla R 'ye ayrıntılı bir g
 
 Bu örnek koleksiyonu, Machine Learning modelleri oluşturmak ve [Microsoft Machine Learning Server](/machine-learning-server/what-is-machine-learning-server)avantajlarından yararlanmak için R 'yi nasıl kullanacağınızı gösterir.
 
-Tüm örneklerde olduğu gibi, dosyasını açın, imleci üst kısımdaki yere yerleştirin ve ardından **CTRL**ENTER ile kod satırı satırına ilerleyin + **Enter**. Her klasördeki markaşağı dosyaları da ek ayrıntılar içerir.
+Tüm örneklerde olduğu gibi, dosyasını açın, imleci üst kısımdaki yere yerleştirin ve ardından **CTRL** ENTER ile kod satırı satırına ilerleyin + . Her klasördeki markaşağı dosyaları da ek ayrıntılar içerir.
 
 - `Benchmarks` , Microsoft R Open ve Intel Math çekirdek kitaplığı (MKL) kullanımı aracılığıyla olası performans kazançlarını göstermek için çok sayıda yoğun, paralel doğrusal algedeniz hesaplamaları çalıştırır. Benzetimli verilerle, kıyaslamalar, bir iş parçacığında matris hesaplamalarını özellikle karşılaştırın.
 

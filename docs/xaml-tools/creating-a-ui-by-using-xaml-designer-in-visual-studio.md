@@ -14,13 +14,13 @@ ms.devlang: CSharp
 ms.assetid: c54969a7-d75a-4a35-9b37-af7a596a7c24
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
-ms.openlocfilehash: 73e7fb0b3216baa960a1b69302fe43161e311399
-ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
+manager: jmartens
+ms.openlocfilehash: 132a5aef33b501ad17a2a089684cfe927321b2e5
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92796790"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99966493"
 ---
 # <a name="create-a-ui-by-using-xaml-designer"></a>XAML Tasarımcısı’nı kullanarak bir kullanıcı arabirimi oluşturma
 
@@ -33,9 +33,9 @@ Visual Studio ve Visual Studio için Blend XAML Tasarımcısı, WPF ve UWP gibi 
 
 ## <a name="xaml-designer-workspace"></a>XAML Tasarımcısı çalışma alanı
 
-XAML Tasarımcısı çalışma alanı çeşitli görsel arabirim öğelerinden oluşur. Bunlar, *çalışma yüzeyini* (görsel tasarım yüzeyi), XAML Düzenleyicisi, belge ana hattı penceresi (Visual Studio için Blend nesneler ve zaman çizelgesi pencere) ve Özellikler penceresi içerir. XAML Tasarımcısı açmak için **Çözüm Gezgini** bir xaml dosyasına sağ tıklayın ve **Görünüm Tasarımcısı** ' nı seçin.
+XAML Tasarımcısı çalışma alanı çeşitli görsel arabirim öğelerinden oluşur. Bunlar, *çalışma yüzeyini* (görsel tasarım yüzeyi), XAML Düzenleyicisi, belge ana hattı penceresi (Visual Studio için Blend nesneler ve zaman çizelgesi pencere) ve Özellikler penceresi içerir. XAML Tasarımcısı açmak için **Çözüm Gezgini** bir xaml dosyasına sağ tıklayın ve **Görünüm Tasarımcısı**' nı seçin.
 
-XAML Tasarımcısı, uygulamanızın işlenmiş XAML işaretlemesini bir XAML görünümü ve eşitlenmiş Tasarım görünümü sağlar. Visual Studio 'da veya Visual Studio için Blend bir XAML dosyası açıkken, **Tasarım** ve **xaml** SEKMELERINI kullanarak tasarım görünümü ve XAML görünümü arasında geçiş yapabilirsiniz. **Swap Panes** ![ ](media/swap-panes.PNG) Üstteki hangi pencerenin çalışma yüzeyi ya da xaml Düzenleyicisi olarak görüneceğini değiştirmek için XAML Tasarımcısı ' deki bölmeleri takas et düğmesini kullanabilirsiniz.
+XAML Tasarımcısı, uygulamanızın işlenmiş XAML işaretlemesini bir XAML görünümü ve eşitlenmiş Tasarım görünümü sağlar. Visual Studio 'da veya Visual Studio için Blend bir XAML dosyası açıkken, **Tasarım** ve **xaml** SEKMELERINI kullanarak tasarım görünümü ve XAML görünümü arasında geçiş yapabilirsiniz.  ![ ](media/swap-panes.PNG) Üstteki hangi pencerenin çalışma yüzeyi ya da xaml Düzenleyicisi olarak görüneceğini değiştirmek için XAML Tasarımcısı ' deki bölmeleri takas et düğmesini kullanabilirsiniz.
 
 ### <a name="design-view"></a>Tasarım görünümü
 
@@ -125,8 +125,8 @@ Visual Studio 'daki belge anahattı penceresi, Visual Studio için Blend [nesnel
 
 - [Animasyonlar oluşturun](animate-objects-in-xaml-designer.md) (yalnızca Visual Studio için Blend).
 
-Visual Studio 'da belge ana hat penceresini görüntülemek için, menü çubuğunda **View**  >  **diğer Windows**  >  **belge anahattını** görüntüle ' yi seçin.
-Visual Studio için Blend nesneler ve zaman çizelgesi penceresini görüntülemek için, menü çubuğunda **View**  >  **belge anahattını** görüntüle ' yi seçin.
+Visual Studio 'da belge ana hat penceresini görüntülemek için, menü çubuğunda   >  **diğer Windows**  >  **belge anahattını** görüntüle ' yi seçin.
+Visual Studio için Blend nesneler ve zaman çizelgesi penceresini görüntülemek için, menü çubuğunda   >  **belge anahattını** görüntüle ' yi seçin.
 
 ![Visual Studio 'da belge anahattı penceresi](media/document-outline-window.png)
 
@@ -134,11 +134,11 @@ Belge ana hat/Nesneler ve Zaman Çizelgesi penceresindeki ana görünüm bir bel
 
 **Göster/gizle**
 
-Çalışma yüzeyi öğelerini görüntüler veya gizler. Gösterildiğinde bir gözle sembol olarak görünür. Ayrıca, bir öğeyi gizlemek için **CTRL** + **h** tuşlarına basabilir ve **Shift** + **Ctrl** + bunu göstermek için CTRL **h** tuşlarına basabilirsiniz.
+Çalışma yüzeyi öğelerini görüntüler veya gizler. Gösterildiğinde bir gözle sembol olarak görünür. Ayrıca, bir öğeyi gizlemek için **CTRL** + **h** tuşlarına basabilir ve  +  + bunu göstermek için CTRL **h** tuşlarına basabilirsiniz.
 
 **Kilit/kilit açma**
 
-Çalışma yüzeyi öğelerini kilitler veya kilitlerini kaldırır. Kilitli öğeler değiştirilemez. Kilitliyken bir asma kilit simgesi olarak görünür. Ayrıca, **Ctrl** + bir öğeyi kilitlemek için CTRL **l** tuşlarına basabilir ve **Shift** + **Ctrl** + kilidini açmak için CTRL **l** tuşlarına basabilirsiniz.
+Çalışma yüzeyi öğelerini kilitler veya kilitlerini kaldırır. Kilitli öğeler değiştirilemez. Kilitliyken bir asma kilit simgesi olarak görünür. Ayrıca,  + bir öğeyi kilitlemek için CTRL **l** tuşlarına basabilir ve  +  + kilidini açmak için CTRL **l** tuşlarına basabilirsiniz.
 
 **Kapsam, pageRoot 'e döndürün**
 
@@ -154,7 +154,7 @@ Bir yukarı ok simgesini gösteren belge ana hattı/Nesneler ve Zaman Çizelgesi
 
 - **Ad** kutusunda şu anda seçili olan öğenin adını değiştirin.
 - Sol üst köşede, şu anda seçili olan öğeyi temsil eden bir simge vardır.
-- Özellikleri kategoriye veya alfabetik olarak düzenlemek için, **Düzenleme ölçütü** listesinde **Kategori** , **ad** veya **kaynak** ' a tıklayın.
+- Özellikleri kategoriye veya alfabetik olarak düzenlemek için, **Düzenleme ölçütü** listesinde **Kategori**, **ad** veya **kaynak** ' a tıklayın.
 - Bir denetimin olay listesini görmek için, bir şimşek işareti simgesi olarak görünen **Olaylar** düğmesine tıklayın.
 - Bir özelliği aramak için, arama kutusuna özelliğin adını yazmak üzere başlatın. **Özellikler** penceresinde, yazarken aramanızla eşleşen özellikler görüntülenir.
 
