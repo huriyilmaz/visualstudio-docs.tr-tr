@@ -1,7 +1,7 @@
 ---
 title: require-vscomponent
 description: devinit aracı-vscomponent gerektirir.
-ms.date: 11/20/2020
+ms.date: 02/08/2021
 ms.topic: reference
 author: andysterland
 ms.author: andster
@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 0b58e80a03828bf486e6beb4d0014f6fe2267485
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 50172f96a49e2384553a372ded0c889b30a23fff
+ms.sourcegitcommit: e262f4c2a147c3fa2d27de666aae3a0497317867
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99918356"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "100006395"
 ---
 # <a name="require-vscomponent"></a>require-vscomponent
 
@@ -38,11 +38,17 @@ Hem hem de `input` `additionalOptions` özellikleri atlanırsa veya boşsa, ara�
 
 ### <a name="additional-options"></a>Ek seçenekler
 
-Kullanılmadı.
+Ek yapılandırma seçenekleri ' ın bir değeri olarak geçirilebilir `additionalOptions` . 
+
+| Ad                      | Tür      | Gerekli | Değer                                                                                                                                                                                    |
+|---------------------------|-----------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| --InstallPath             | dize    | No       | Değiştirmek istediğiniz Visual Studio örneğinin install yolu.                                                                                                                       |
+
+Hiçbir yükleme yolu belirtilmemişse, makinenizde birden çok örnek varsa, araç makinenizde en eski yüklü Visual Studio 'Yu değiştirecektir. 
 
 ### <a name="default-behavior"></a>Varsayılan davranış
 
-Aracın varsayılan davranışı `require-vscomponent` `.vsconfig` geçerli dizindeki bir dosyayı aramak ve bu ayrıntılarla Visual Studio yükleyicisi sessiz modda çalıştırmak içindir. `require-vscomponent` yalnızca var olan bir Visual Studio yüklemesinin değiştirilmesini destekler.
+Aracın varsayılan davranışı `require-vscomponent` `.vsconfig` geçerli dizindeki bir dosyayı aramak ve bu ayrıntılarla Visual Studio yükleyicisi sessiz modda çalıştırmak içindir. `require-vscomponent` yalnızca var olan bir Visual Studio yüklemesinin değiştirilmesini destekler. 
 
 ## <a name="example-usage"></a>Örnek kullanım
 Kullanarak nasıl çalıştırılacağını gösteren bir örnek aşağıda verilmiştir `require-vscomponent` `.devinit.json` .
@@ -56,6 +62,21 @@ Kullanarak nasıl çalıştırılacağını gösteren bir örnek aşağıda veri
         {
             "tool": "require-vscomponent",
             "input": "C:\\.vsconfig"
+        }
+    ]
+}
+```
+
+#### <a name="devinitjson-that-will-import-the-configurations-of-a-given-vsconfig-file-path-to-the-visual-studio-instance-specified-via-an-install-path"></a>Bunun .devinit.js, belirli bir. vsconfig dosyası yolunun yapılandırmalarını, bir install yolu ile belirtilen Visual Studio örneğine aktarır:
+```json
+{
+    "$schema": "https://json.schemastore.org/devinit.schema-3.0",
+    "comments": "A sample dot-devinit file.",
+    "run": [
+        {
+            "tool": "require-vscomponent",
+            "input": "C:\\.vsconfig",
+            "additionalOptions": "--installPath 'C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Enterprise'"
         }
     ]
 }

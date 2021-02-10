@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: d1796f20-523b-4e0d-8ac3-ca87f3b5a9b6
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 326588259203224d3f70b505af8437af22930faa
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: e306f6453ca3abbc2ad881821254ca88a160d01b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94672352"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99967286"
 ---
 # <a name="previewimage-element-visual-studio-templates"></a>Previewiımage öğesi (Visual Studio şablonları)
 Önizleme görüntüsünün **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda görünecek olan önizleme resmini bir dosya adı olarak belirtir.

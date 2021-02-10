@@ -19,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: 15c99f5c-7124-4bbc-bc03-70c7bcce8893
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5aef78460197796767ec1429179e5598d0f12dbc
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: 7227fff5dd4c58e1bce81ef8cad5c32f854abf55
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93047208"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99960331"
 ---
 # <a name="xsd-task"></a>XSD görevi
 
-Bir kaynaktan şema veya sınıf dosyaları üreten XML şema tanımı aracını ( *xsd.exe* ) sarmalanmış olarak kaydırır.
+Bir kaynaktan şema veya sınıf dosyaları üreten XML şema tanımı aracını (*xsd.exe*) sarmalanmış olarak kaydırır.
 
 > [!NOTE]
 > Visual Studio 2017 ' den başlayarak *xsd.exe* için C++ proje desteği kullanım dışıdır. GAC 'ye *CppCodeProvider.dll* El Ile ekleyerek **Microsoft. VisualC. CppCodeProvider** API 'lerini kullanmaya devam edebilirsiniz.
@@ -72,7 +72,7 @@ Bir kaynaktan şema veya sınıf dosyaları üreten XML şema tanımı aracını
 
      Oluşturulan türleri için çalışma zamanı ad alanını belirtir.
 
-- **Ğına**
+- **Kaynaklar**
 
      Gerekli `ITaskItem[]` parametre.
 

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d65d2c04-dd84-42b0-b956-555b11f5a645
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b6e2784066c98f8fac696306e455e7cf26b65907
-ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
+ms.openlocfilehash: 2c6b6260bad412127afe4dd9135ccf66d48e9e3e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "96996155"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99968313"
 ---
 # <a name="devenv-command-line-switches-for-vspackage-development"></a>VSPackage geliştirmesi için Devenv komut satırı anahtarları
 
@@ -43,7 +43,7 @@ Visual Studio `devenv.exe` , Visual STUDIO IDE 'yi Başlatan dosyayı yürütür
 
 Visual Studio belgeleri, Kullanıcı düzeyi `devenv` komut satırı anahtarlarını açıklar. Daha fazla bilgi için bkz. [Devenv komut satırı anahtarları](../ide/reference/devenv-command-line-switches.md). `devenv`Araç ayrıca VSPackage geliştirme, dağıtım ve hata ayıklama ile yararlı olan ek komut satırı anahtarlarını da destekler.
 
-| Komut satırı anahtarı | Açıklama |
+| Komut satırı anahtarı | Description |
 |---------------------| - |
 | `/ResetSkipPkgs` | Sorunlu VSPackages yüklemeden kaçınmak isteyen kullanıcılar tarafından eklenmiş tüm atlama yükleme seçeneklerini temizler ve sonra Visual Studio 'Yu başlatır. Bir Skipyükleme etiketinin varlığı, VSPackage yüklemesini devre dışı bırakır. Etiketi temizlemek, VSPackage yüklemesini yeniden etkinleştirilir.<br /><br /> Bu anahtar bağımsız değişken almaz. |
 | `/RootSuffix` | Visual Studio 'Yu alternatif bir konum kullanarak başlatır. Aşağıdaki komut, Visual Studio SDK yükleyicisi tarafından oluşturulan kısayol tarafından çalıştırılır:<br /><br /> `devenv /RootSuffix exp`<br /><br /> Bu durumda, `exp` belirli bir sonekine sahip bir konum tanımlar (örneğin, `10.0Exp` yerine `10.0` ). Deneysel örnek, bir VSPackage 'ın kod yazmak için kullandığınız Visual Studio örneğinden ayrı olarak hata ayıklamanıza olanak tanır.<br /><br /> Bu anahtar, VSRegEx.exe kullanarak oluşturduğunuz bir konumu tanımlayan herhangi bir dizeyi alabilir. Daha fazla bilgi için bkz. [deneysel örnek](../extensibility/the-experimental-instance.md). |

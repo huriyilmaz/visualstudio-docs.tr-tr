@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: a3c0386d-551e-4734-9a0c-368d1c2e6671
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 215256cbbcff45dfa0b85a480f0900e6f8ddfa71
-ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
+ms.openlocfilehash: 9bf2e154d5803324161e073edbd74e049c0897ca
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "96996038"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99960695"
 ---
 # <a name="supported-event-types"></a>Desteklenen olay türleri
 Visual Studio hata ayıklaması Şu anda aşağıdaki olay türlerini destekler:
@@ -58,20 +58,20 @@ Visual Studio hata ayıklaması Şu anda aşağıdaki olay türlerini destekler:
 |Olay|IDebugProgram2|IDebugThread2|Olayları durdurma|
 |-----------|--------------------|-------------------|---------------------|
 |[IDebugActivateDocumentEvent2](../../extensibility/debugger/reference/idebugactivatedocumentevent2.md)|İzin veriliyor, ancak gerekli değil|İzin veriliyor, ancak gerekli değil|Hayır|
-|[IDebugBreakEvent2](../../extensibility/debugger/reference/idebugbreakevent2.md)|Gerekli|Gerekli|Evet|
+|[IDebugBreakEvent2](../../extensibility/debugger/reference/idebugbreakevent2.md)|Gerekli|Gerekli|Yes|
 |[IDebugBreakpointBoundEvent2](../../extensibility/debugger/reference/idebugbreakpointboundevent2.md)|İzin veriliyor, ancak gerekli değil|İzin veriliyor, ancak gerekli değil|Hayır|
 |[IDebugBreakpointErrorEvent2](../../extensibility/debugger/reference/idebugbreakpointerrorevent2.md)|İzin veriliyor, ancak gerekli değil|İzin veriliyor, ancak gerekli değil|Hayır|
 |[IDebugBreakpointUnboundEvent2](../../extensibility/debugger/reference/idebugbreakpointunboundevent2.md)|İzin veriliyor, ancak gerekli değil|İzin veriliyor, ancak gerekli değil|Hayır|
-|[IDebugBreakpointEvent2](../../extensibility/debugger/reference/idebugbreakpointevent2.md)|Gerekli|Gerekli|Evet|
+|[IDebugBreakpointEvent2](../../extensibility/debugger/reference/idebugbreakpointevent2.md)|Gerekli|Gerekli|Yes|
 |[IDebugCanStopEvent2](../../extensibility/debugger/reference/idebugcanstopevent2.md)|Gerekli|Gerekli|Hayır|
 |[IDebugDocumentTextEvents2](../../extensibility/debugger/reference/idebugdocumenttextevents2.md)|İzin verilmiyor|İzin verilmiyor|Hayır|
 |[IDebugEngineCreateEvent2](../../extensibility/debugger/reference/idebugenginecreateevent2.md)|İzin verilmiyor|İzin verilmiyor|Hayır|
-|[IDebugEntryPointEvent2](../../extensibility/debugger/reference/idebugentrypointevent2.md)|Gerekli|Gerekli|Evet|
+|[IDebugEntryPointEvent2](../../extensibility/debugger/reference/idebugentrypointevent2.md)|Gerekli|Gerekli|Yes|
 |[IDebugErrorEvent2](../../extensibility/debugger/reference/idebugerrorevent2.md)|İzin veriliyor, ancak gerekli değil|İzin veriliyor, ancak gerekli değil|Olabilir|
-|[IDebugExceptionEvent2](../../extensibility/debugger/reference/idebugexceptionevent2.md)|Gerekli|Gerekli|Evet|
+|[IDebugExceptionEvent2](../../extensibility/debugger/reference/idebugexceptionevent2.md)|Gerekli|Gerekli|Yes|
 |[IDebugExpressionEvaluationCompleteEvent2](../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2.md)|İzin veriliyor, ancak gerekli değil|İzin veriliyor, ancak gerekli değil|Olabilir|
-|[IDebugInterceptExceptionCompleteEvent2](../../extensibility/debugger/reference/idebuginterceptexceptioncompleteevent2.md)|Gerekli|Gerekli|Evet|
-|[IDebugLoadCompleteEvent2](../../extensibility/debugger/reference/idebugloadcompleteevent2.md)|Gerekli|Gerekli|Evet|
+|[IDebugInterceptExceptionCompleteEvent2](../../extensibility/debugger/reference/idebuginterceptexceptioncompleteevent2.md)|Gerekli|Gerekli|Yes|
+|[IDebugLoadCompleteEvent2](../../extensibility/debugger/reference/idebugloadcompleteevent2.md)|Gerekli|Gerekli|Yes|
 |[IDebugMessageEvent2](../../extensibility/debugger/reference/idebugmessageevent2.md)|İzin veriliyor, ancak gerekli değil|İzin veriliyor, ancak gerekli değil|Olabilir|
 |[IDebugModuleLoadEvent2](../../extensibility/debugger/reference/idebugmoduleloadevent2.md)|Gerekli|İzin veriliyor, ancak gerekli değil|Hayır|
 |[IDebugOutputStringEvent2](../../extensibility/debugger/reference/idebugoutputstringevent2.md)|İzin veriliyor, ancak gerekli değil|İzin veriliyor, ancak gerekli değil|Hayır|
@@ -80,8 +80,8 @@ Visual Studio hata ayıklaması Şu anda aşağıdaki olay türlerini destekler:
 |[IDebugPropertyCreateEvent2](../../extensibility/debugger/reference/idebugpropertycreateevent2.md)|Gerekli|İzin veriliyor, ancak gerekli değil|Hayır|
 |[IDebugPropertyDestroyEvent2](../../extensibility/debugger/reference/idebugpropertydestroyevent2.md)|Gerekli|İzin veriliyor, ancak gerekli değil|Hayır|
 |[IDebugReturnValueEvent2](../../extensibility/debugger/reference/idebugreturnvalueevent2.md)|İzin veriliyor, ancak gerekli değil|İzin veriliyor, ancak gerekli değil|Hayır|
-|IDebugStopCompleteEvent2|Gerekli|Gerekli|Evet|
-|[IDebugStepCompleteEvent2](../../extensibility/debugger/reference/idebugstepcompleteevent2.md)|Gerekli|Gerekli|Evet|
+|IDebugStopCompleteEvent2|Gerekli|Gerekli|Yes|
+|[IDebugStepCompleteEvent2](../../extensibility/debugger/reference/idebugstepcompleteevent2.md)|Gerekli|Gerekli|Yes|
 |[IDebugSymbolSearchEvent2](../../extensibility/debugger/reference/idebugsymbolsearchevent2.md)|İzin veriliyor, ancak gerekli değil|İzin veriliyor, ancak gerekli değil|Hayır|
 |[IDebugThreadCreateEvent2](../../extensibility/debugger/reference/idebugthreadcreateevent2.md)|Gerekli|Gerekli|Hayır|
 |[IDebugThreadDestroyEvent2](../../extensibility/debugger/reference/idebugthreaddestroyevent2.md)|Gerekli|Gerekli|Hayır|

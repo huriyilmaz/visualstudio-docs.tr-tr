@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 6c36b6eb-c93f-496b-af08-4199f7afd8bd
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b8f2e796ed122bc4dba0c1fb4cfca85c74065fb8
-ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
+ms.openlocfilehash: 384a6252ef17709970f6e902dfdf83a157b0460a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95597047"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99968053"
 ---
 # <a name="how-to-move-around-in-the-visual-studio-ide"></a>Nasıl yapılır: Visual Studio IDE 'de gezinme
 
@@ -65,7 +65,7 @@ Ayrıca, dosyaya son erişiminizden bağımsız olarak, **IDE Gezginini**, düze
 
 ### <a name="to-switch-to-specific-files-in-the-editor"></a>Düzenleyicideki belirli dosyalara geçiş yapmak için
 
-- **Ctrl** + **Tab** **IDE Gezginini** göstermek için CTRL tuşuna basın. **CTRL** tuşunu basılı tutun ve geçiş yapmak istediğiniz dosyayı seçene kadar **sekme** tuşuna basın.
+-  +  **IDE Gezginini** göstermek için CTRL tuşuna basın. **CTRL** tuşunu basılı tutun ve geçiş yapmak istediğiniz dosyayı seçene kadar **sekme** tuşuna basın.
 
     > [!TIP]
     > **Etkin dosyalar** listesinden gittiğiniz sırayı tersine çevirmek için **CTRL** + **SHIFT** tuşlarını basılı tutarak **Tab** tuşuna basın.
@@ -89,7 +89,7 @@ Ayrıca, dosyaya son erişiminizden bağımsız olarak, **IDE Gezginini**, düze
 
 ### <a name="to-switch-to-a-specific-tool-window-in-the-ide"></a>IDE 'de belirli bir araç penceresine geçiş yapmak için
 
-- **Alt** + **IDE Gezginini** göstermek için alt **F7** tuşuna basın. Geçiş yapmak istediğiniz pencereyi seçene kadar **alt** tuşunu basılı tutun ve **F7** tuşuna basın.
+-  + **IDE Gezginini** göstermek için alt **F7** tuşuna basın. Geçiş yapmak istediğiniz pencereyi seçene kadar **alt** tuşunu basılı tutun ve **F7** tuşuna basın.
 
     > [!TIP]
     > **Etkin araç pencereleri** listesinden gittiğiniz sırayı tersine çevirmek için **SHIFT** + **alt** tuşlarını basılı tutun ve **F7** tuşuna basın.

@@ -10,12 +10,12 @@ author: mikejo5000
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 4bf43fa5dd3e95500b036d5ef5d65055b5d5870f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f15af6958c7f5855b5005fc0a6aa4c821346ccb5
+ms.sourcegitcommit: e262f4c2a147c3fa2d27de666aae3a0497317867
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99946286"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "100006399"
 ---
 # <a name="use-shims-to-isolate-your-app-for-unit-testing"></a>Birim testi için uygulamanızı yalıtmak üzere dolgular kullanma
 
@@ -30,7 +30,7 @@ Genel bakış ve "hızlı başlangıç" Kılavuzu için bkz. [Microsoft Fakes il
 - Visual Studio Enterprise
 - Bir .NET Framework projesi
 ::: moniker range=">=vs-2019"
-- Visual Studio 2019 güncelleştirme 6 ' da önizlenen .NET Core ve SDK stili proje desteği ve güncelleştirme 8 ' de varsayılan olarak etkinleştirilmiştir. Daha fazla bilgi için bkz. [.NET Core ve SDK stilindeki projeler Için Microsoft Fakes](/visualstudio/releases/2019/release-notes#microsoft-fakes-for-net-core-and-sdk-style-projects).
+- Visual Studio 2019 güncelleştirme 6 ' da önizlenen .NET Core, .NET 5,0 ve SDK stili proje desteği ve güncelleştirme 8 ' de varsayılan olarak etkinleştirilmiştir. Daha fazla bilgi için bkz. [.NET Core ve SDK stilindeki projeler Için Microsoft Fakes](/visualstudio/releases/2019/release-notes#microsoft-fakes-for-net-core-and-sdk-style-projects).
 ::: moniker-end
 
 ## <a name="example-the-y2k-bug"></a>Örnek: Y2K hatası
@@ -71,7 +71,7 @@ using (ShimsContext.Create()) {
 1. **Çözüm Gezgini**, 
     - Daha eski bir .NET Framework projesi (SDK olmayan stil) için, birim testi projenizin **Başvurular** düğümünü genişletin.
     ::: moniker range=">=vs-2019"
-    - .NET Framework veya .NET Core 'u hedefleyen SDK stili bir proje için, **derlemeler**, **Projeler** veya **paketler** altında taklit etmek istediğiniz derlemeyi bulmak için **Bağımlılıklar** düğümünü genişletin.
+    - .NET Framework, .NET Core veya .NET 5,0 ' i hedefleyen SDK stili bir proje için, **derlemeler**, **Projeler** veya **paketler** altında taklit etmek istediğiniz derlemeyi bulmak için **Bağımlılıklar** düğümünü genişletin.
     ::: moniker-end
     - Visual Basic ' de çalışıyorsanız, **Başvurular** düğümünü görmek için **Çözüm Gezgini** araç çubuğunda **tüm dosyaları göster** ' i seçin.
 
@@ -524,7 +524,7 @@ System.Fakes.ShimEnvironment.GetCommandLineArgsGet = ...
 
 ## <a name="limitations"></a>Sınırlamalar
 
-Shims, .NET Core sınıf kitaplığı **mscorlib** ve System ' de .NET Framework **sistem** **. Runtime** ve .NET Core 'da bulunan tüm türler üzerinde kullanılamaz.
+Dolgu, .NET Core veya .NET 5,0 ' deki **System. Runtime** içindeki .net temel sınıf kitaplığından **mscorlib** ve .NET Framework **sistem** tüm türlerinde kullanılamaz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

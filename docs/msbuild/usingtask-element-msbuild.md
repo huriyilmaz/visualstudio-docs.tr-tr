@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 20247902-9446-4a1f-8253-5c7a17e4fe43
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5d09f266f5bf51b870dbbbc0f80aa8282e91faa9
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: 3adc3d648e73fc1f3596cc7a5c2cb2148a8f611b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93046113"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99960344"
 ---
 # <a name="usingtask-element-msbuild"></a>UsingTask öğesi (MSBuild)
 
@@ -43,7 +43,7 @@ Bir [görev](../msbuild/task-element-msbuild.md) öğesinde başvurulan görevi,
 ```
 
 > [!NOTE]
-> Özellikler ve öğelerin aksine, *first* `UsingTask` için geçerli olan ilk öğe `TaskName` kullanılacaktır; görevleri geçersiz kılmak için, mevcut bir tane daha önce tanımlamanız gerekir `UsingTask` *before* .
+> Özellikler ve öğelerin aksine,  `UsingTask` için geçerli olan ilk öğe `TaskName` kullanılacaktır; görevleri geçersiz kılmak için, mevcut bir tane daha önce tanımlamanız gerekir `UsingTask`  .
 
 ## <a name="attributes-and-elements"></a>Öznitelikler ve öğeler
 

@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 306ea0b4-6d9e-4871-8d8d-a4032d422940
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 99b094fd1019e0d7dea09e2953cb4f31e03b80dc
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: e5263c696f9f76c71463538d56414702e616a670
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96847890"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99960851"
 ---
 # <a name="send-startup-events-after-a-launch"></a>Başlatma sonrasında başlangıç olaylarını gönder
 Hata ayıklama altyapısı (DE) programa eklendikten sonra, hata ayıklama oturumuna geri bir dizi başlangıç olayı gönderir.
@@ -39,7 +39,7 @@ Hata ayıklama altyapısı (DE) programa eklendikten sonra, hata ayıklama oturu
 
 - Programın ana giriş noktasına ( **Main** veya gibi) ulaştığına işaret eden bir giriş noktası olayı `WinMain` . Bu olay genellikle zaten çalışmakta olan bir programa eklendiğinde gönderilmez.
 
-  Program aracılığıyla ilk olarak, bir altyapı oluşturma olayını temsil eden bir IDebugEngineCreateEvent2 arabirimi olan ve ardından bir program oluşturma olayını temsil eden bir [IDebugProgramCreateEvent2](../../extensibility/debugger/reference/idebugprogramcreateevent2.md)olan oturum ayıklama Yöneticisi 'NI (SDM) gönderen bir [IDebugEngineCreateEvent2](../../extensibility/debugger/reference/idebugenginecreateevent2.md) arabirimini de gönderir.
+  Program aracılığıyla ilk olarak, bir altyapı oluşturma olayını temsil eden bir IDebugEngineCreateEvent2 arabirimi olan ve ardından bir program oluşturma olayını temsil eden bir [IDebugProgramCreateEvent2](../../extensibility/debugger/reference/idebugprogramcreateevent2.md)olan oturum ayıklama Yöneticisi 'NI (SDM) gönderen bir [](../../extensibility/debugger/reference/idebugenginecreateevent2.md) arabirimini de gönderir.
 
   Bu olaylar genellikle bir veya daha fazla [IDebugThreadCreateEvent2](../../extensibility/debugger/reference/idebugthreadcreateevent2.md) iş parçacığı oluşturma olayı ve [IDebugModuleLoadEvent2](../../extensibility/debugger/reference/idebugmoduleloadevent2.md) modülü yükleme olayları tarafından izlenir.
 

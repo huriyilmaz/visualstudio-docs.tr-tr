@@ -6,15 +6,15 @@ ms.date: 11/16/2020
 ms.topic: conceptual
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 071c6061417e26b45e5f9e67bc6ac1001bf08530
-ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
+ms.openlocfilehash: 169415537460dae94ca844c426bb3770449161b5
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96480349"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99960461"
 ---
 # <a name="work-with-multiple-user-accounts"></a>Birden çok kullanıcı hesabıyla çalışma
 
@@ -35,7 +35,7 @@ Microsoft hesabı veya kurumsal hesapla Visual Studio 'da oturum açın. Kullan�
 
 ### <a name="access-your-azure-account-in-server-explorer"></a>Sunucu Gezgini Azure hesabınıza erişin
 
-Sunucu Gezgini açmak için Sunucu Gezgini **görüntüle**' yi seçin  >  **Server Explorer** (veya "genel" [ortam ayarlarını](../ide/environment-settings.md)kullanıyorsanız **CTRL** + **alt** + **öğeleri**' ne basın. **Azure** düğümünü genişletin ve Visual Studio 'da oturum açmak için kullandığınız hesapla ilişkili Azure hesabında kullanılabilir kaynakları içerdiğine dikkat edin. Aşağıdaki resme benzer şekilde görünür:
+Sunucu Gezgini açmak için Sunucu Gezgini **görüntüle**' yi seçin  >   (veya "genel" [ortam ayarlarını](../ide/environment-settings.md)kullanıyorsanız **CTRL** + **alt** + **öğeleri**' ne basın. **Azure** düğümünü genişletin ve Visual Studio 'da oturum açmak için kullandığınız hesapla ilişkili Azure hesabında kullanılabilir kaynakları içerdiğine dikkat edin. Aşağıdaki resme benzer şekilde görünür:
 
 ![Azure node genişletilmiş Sunucu Gezgini](../ide/media/work-with-multiple-user-accounts/server-explorer.png)
 
@@ -49,7 +49,7 @@ Belirli bir cihazda Visual Studio 'Yu ilk kez kullandığınızda, iletişim kut
 
 1. Mevcut bir projeyi açın veya yeni bir proje oluşturun.
 
-1. **Çözüm Gezgini**' de proje düğümünü seçin ve ardından sağ tıklayıp **Add**  >  **bağlı hizmet** Ekle ' yi seçin.
+1. **Çözüm Gezgini**' de proje düğümünü seçin ve ardından sağ tıklayıp   >  **bağlı hizmet** Ekle ' yi seçin.
 
    **Bağlı hizmet ekle** Sihirbazı görüntülenir ve Visual Studio kişiselleştirme hesabınızla ilişkili Azure hesabındaki hizmetlerin listesini gösterir. Azure 'da ayrı olarak oturum açmanıza gerek yoktur. Ancak, farklı bir makineden kaynaklarına ilk kez erişmeye çalıştığınızda diğer hesaplarda oturum açmanız gerekir.
 
@@ -99,9 +99,9 @@ Bazı durumlarda, oturum açamaz ve düzenli olarak bir hesap ekleyemezsiniz. Bu
 
 Cihaz kod akışını kullanarak oturum açmak için:
 
-1. **Araçlar** seçenekler ortamı altında [**hesaplar**](reference/accounts-environment-options-dialog-box.md) sayfasını açın  >  **Options**  >  **Environment** ve **bir hesabı eklerken veya yeniden doğrularken cihaz kod akışını etkinleştir**' i seçin. Seçenekler sayfalarını kapatmak için **Tamam ' ı** seçin.
+1. **Araçlar** seçenekler ortamı altında [**hesaplar**](reference/accounts-environment-options-dialog-box.md) sayfasını açın  >    >  ve **bir hesabı eklerken veya yeniden doğrularken cihaz kod akışını etkinleştir**' i seçin. Seçenekler sayfalarını kapatmak için **Tamam ' ı** seçin.
 
-1. **File**  >  Hesap Yönetimi sayfasını açmak için dosya **hesabı ayarları** ' nı seçin.
+1.   >  Hesap Yönetimi sayfasını açmak için dosya **hesabı ayarları** ' nı seçin.
 
 1. **Tüm hesaplar** altında **Hesap Ekle** ' yi seçin.
 
@@ -109,7 +109,7 @@ Cihaz kod akışını kullanarak oturum açmak için:
 
    ![Cihaz kod akışı URL 'SI ve kodu](media/work-with-multiple-user-accounts/device-login-code.png)
 
-1. **Ctrl** + İletişim kutusunun metnini kopyalamak için CTRL **C** tuşlarına basın ve ardından iletişim kutusunu kapatmak için **Tamam** ' ı seçin. Kopyaladığınız metni Not Defteri gibi bir metin düzenleyicisine yapıştırın. Bu, bir sonraki adımda kodu kopyalamayı kolaylaştırır.
+1.  + İletişim kutusunun metnini kopyalamak için CTRL **C** tuşlarına basın ve ardından iletişim kutusunu kapatmak için **Tamam** ' ı seçin. Kopyaladığınız metni Not Defteri gibi bir metin düzenleyicisine yapıştırın. Bu, bir sonraki adımda kodu kopyalamayı kolaylaştırır.
 
 1. Visual Studio 'da oturum açmak için kullanmak istediğiniz makinede veya Web tarayıcısında bulunan cihaz oturum açma URL 'sine gidin ve ardından **kodu** yazan kutuya kopyaladığınız kodu yapıştırın veya girin.
 

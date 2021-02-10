@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: e3acff7c-cb4e-4ae1-8be2-a871bcff847b
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 3ebe3c60e4061a66bb77f41bf165fb16e0c427c2
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: 2d3d0462382ddcc86a23c7e25162fb429b9f9893
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93046055"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99967546"
 ---
 # <a name="walkthrough-create-an-msbuild-project-file-from-scratch"></a>İzlenecek yol: Sıfırdan MSBuild proje dosyası oluşturma
 
@@ -57,7 +57,7 @@ MSBuild 'i kullanabilmeniz için, PATH ortam değişkenini tüm gerekli araçlar
 
  Bu bölümde, bir metin düzenleyicisi kullanarak en az bir C# uygulama kaynak dosyasının nasıl oluşturulacağı gösterilmektedir.
 
-1. Komut isteminde, uygulamayı oluşturmak istediğiniz klasöre göz atın, örneğin, *\Documents \\* veya *\Desktop \\* .
+1. Komut isteminde, uygulamayı oluşturmak istediğiniz klasöre göz atın, örneğin, *\Documents \\* veya *\Desktop \\*.
 
 2. *\Helloworld \\* adlı bir alt klasör oluşturmak için **md HelloWorld** yazın.
 
@@ -152,7 +152,7 @@ Minimum proje dosyanız aşağıdaki koda benzemelidir:
 </Project>
 ```
 
-Yapı hedefi içindeki görevler sırayla yürütülür. Bu durumda, Visual C# derleyici `Csc` görevi tek görevdir. Derlemek için kaynak dosyalarının bir listesini bekler ve bu, öğenin değeri tarafından verilir `Compile` . `Compile`Öğe yalnızca bir kaynak dosyasına ( *HelloWorld.cs* ) başvurur.
+Yapı hedefi içindeki görevler sırayla yürütülür. Bu durumda, Visual C# derleyici `Csc` görevi tek görevdir. Derlemek için kaynak dosyalarının bir listesini bekler ve bu, öğenin değeri tarafından verilir `Compile` . `Compile`Öğe yalnızca bir kaynak dosyasına ( *HelloWorld.cs*) başvurur.
 
 > [!NOTE]
 > Öğe öğesinde, \* *. cs* dosya adı uzantısına sahip tüm dosyalara şu şekilde başvurmak için yıldız joker karakterini () kullanabilirsiniz:
@@ -256,7 +256,7 @@ Proje dosyanız şimdi aşağıdaki koda benzemelidir:
 
      Bu, *\Bin \\* klasörünü oluşturur ve sonra *MSBuildSample* uygulamasını oluşturmak için Visual C# derleyicisini çağırır ve bunu *\Bin \\* klasörüne koyar.
 
-2. *\\ \Bin* klasörünün oluşturulduğunu ve *MSBuildSample* uygulamasını içerdiğini doğrulamak için, tür **dir bin** .
+2. *\\ \Bin* klasörünün oluşturulduğunu ve *MSBuildSample* uygulamasını içerdiğini doğrulamak için, tür **dir bin**.
 
 3. Uygulamayı **Bin\msbuildsample** yazarak test edin.
 
@@ -353,7 +353,7 @@ Proje dosyanız şimdi aşağıdaki koda benzemelidir:
 
      Bir proje dosyası belirtilmese de, geçerli klasörde yalnızca bir proje dosyası olduğundan MSBuild *HelloWorld. csproj* dosyasını oluşturur. Bu, *MSBuildSample* uygulamasının *\\ \Bin* klasöründe oluşturulmasına neden olur.
 
-     *\\ \Bin* klasörünün *MSBuildSample* uygulamasını içerdiğini doğrulamak için, tür **dir bin** .
+     *\\ \Bin* klasörünün *MSBuildSample* uygulamasını içerdiğini doğrulamak için, tür **dir bin**.
 
 ## <a name="build-incrementally"></a>Artımlı olarak derleme
 

@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 511DAFC7-896E-449A-BFF7-0E8F7BBA8A78
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 899334e6ac4a952ea2d33f01d95ecfbe0a972653
-ms.sourcegitcommit: 55bc9df751a21656de8cc5b6dbd8a2a1915ec690
+ms.openlocfilehash: 178c84be9def77e013da336193877617c1434b2e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "99572973"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99960539"
 ---
 # <a name="history-of-whats-new-in-visual-studio-docs"></a>Visual Studio belgelerindeki yeniliklerin geçmişi
 
@@ -80,7 +80,7 @@ Visual Studio docs 'taki yenilikler geçmişine hoş geldiniz. Bu makale, docs 2
   - Tutorial-projects-solutions.md Güncelleştir
   - eksik menü seçeneği
 
-### <a name="test"></a>Test
+### <a name="test"></a>Test etme
 
 **Güncelleştirilmiş makaleler**
 
@@ -216,7 +216,7 @@ Visual Studio docs 'taki yenilikler geçmişine hoş geldiniz. Bu makale, docs 2
 
 - [Uygulama performansını](../profiling/profile-apps-from-command-line.md) komut satırı-güncelleştirme profil oluşturma komut satırı belgelerinden ölçme
 
-### <a name="test"></a>Test
+### <a name="test"></a>Test etme
 
 **Güncelleştirilmiş makaleler**
 
@@ -555,7 +555,7 @@ Visual Studio docs 'taki yenilikler geçmişine hoş geldiniz. Bu makale, docs 2
 - [Ortak MSBuild öğe meta verileri](../msbuild/common-msbuild-item-metadata.md) -MSBuild: bağlantı ve bağlantı tabanı ile isteğe bağlı meta veriler için tablo ekleme
 - [MSBuild 'de çözüm filtreleri](../msbuild/solution-filters.md) -MSBuild çözüm filtreleri
 
-### <a name="test"></a>Test
+### <a name="test"></a>Test etme
 
 **Yeni makaleler**
 

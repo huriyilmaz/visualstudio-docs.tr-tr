@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 89844796-621B-4EF5-9D76-197084B011CB
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 8a76222d7424bb32de15c67b72a0c19b929e63f3
-ms.sourcegitcommit: 55bc9df751a21656de8cc5b6dbd8a2a1915ec690
+ms.openlocfilehash: 17b307e248e18710a93669116ccf032e533145f3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "99572934"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99960500"
 ---
 # <a name="visual-studio-docs-whats-new-for-january-2021"></a>Visual Studio belgeleri: Ocak 2021 ' deki yenilikler
 
@@ -101,7 +101,7 @@ Ocak 2021 için Visual Studio docs 'daki yenilikler 'e hoş geldiniz. Bu makaled
 
 - [Visual Studio Profiler 'dan DotNet sayaçlarını görselleştirin](../profiling/dotnet-counters-tool.md) -.net sayaçlarını ekleme araç belgesi
 
-## <a name="test"></a>Test
+## <a name="test"></a>Test etme
 
 **Güncelleştirilmiş makaleler**
 

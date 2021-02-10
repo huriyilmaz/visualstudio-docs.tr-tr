@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: 9d5c6bc6-7e72-4f1b-801c-7192458f3ba8
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3ae54e34f316fb404a1ec125c3922584d7218bc2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5b31a5c0ef8a5aee53d34b110f0568d30980a2db
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80717875"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99967494"
 ---
 # <a name="ienumcodepaths2clone"></a>IEnumCodePaths2::Clone
 Geçerli numaralandırmanın ayrı bir nesne olarak kopyasını döndürür.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
 HRESULT Clone(
