@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Domain-Specific Language, domain properties
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 97bfbcf73a950692d5736b7a6e0b529cfe658caa
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: f9cca8468e99d41d879bee02dded8538e5fa9c5c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97361527"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99941365"
 ---
 # <a name="properties-of-domain-properties"></a>Etki Alanı Özelliklerinin Özellikleri
 Bir *alan özelliği* , bir değeri tutabilecek bir model öğesinin özelliğidir. Örneğin, `Person` etki alanı sınıfının özellikleri `Name` ve olabilir `BirthDate` . DSL tanımında etki alanı özellikleri, diyagramdaki etki alanı sınıfı kutusunda ve DSL Gezgini 'ndeki etki alanı sınıfında listelenir. Daha fazla bilgi için bkz. [Domain-Specific dil tanımlama](../modeling/how-to-define-a-domain-specific-language.md).
@@ -44,7 +44,7 @@ Bir *alan özelliği* , bir değeri tutabilecek bir model öğesinin özelliğid
 |**Göz atılamaz**|Varsa `True` , bu DSL modelleri açık olduğunda, Özellikler penceresindeki kullanıcıya etki alanı özelliği görüntülenir.<br /><br /> İse `False` , etki alanı özelliği Kullanıcı arabiriminde gizlidir.<br /><br /> Etki alanı özelliğini görünür halde salt okunurdur, küme **yalnızca kullanıcı arabirimi salt okunurdur**.|`True`|
 |**Öğe adı**|`True`Bu etki alanı özelliği, DSL Gezgini 'ndeki model öğesinin adı olarak görüntülenecektir.<br /><br /> Yeni model öğeleri, bu özellik için benzersiz bir varsayılan değer alacaktır. Bu değerlerin nasıl oluşturulduğunu denetlemek istiyorsanız, **öğe adı sağlayıcısı**' nı ayarlayın.|`False`|
 |**UI salt okunurdur**|İse `True` , Domain özelliğinin değeri kullanıcı arabirimi kullanılarak değiştirilemez. Hala programlar tarafından ayarlanabilir ve Özellikler penceresi görünür olur.<br /><br /> Etki alanı özelliğini kullanıcıdan gizlemek istiyorsanız, **Bu ayarı göz atılamaz olarak** ayarlayın. Erişimi programlara göre denetlemek istiyorsanız, **ayarlayıcı erişim değiştiricisi**' ni ayarlayın.|`False`|
-|**Tür**|Etki alanı özelliği türü ( `Normal` , `Calculated` veya `CustomStorage` ). Daha fazla bilgi için bkz. [hesaplanan ve özel depolama özellikleri](../modeling/calculated-and-custom-storage-properties.md).|`Normal`|
+|**Tip**|Etki alanı özelliği türü ( `Normal` , `Calculated` veya `CustomStorage` ). Daha fazla bilgi için bkz. [hesaplanan ve özel depolama özellikleri](../modeling/calculated-and-custom-storage-properties.md).|`Normal`|
 |**Ad**|Bu etki alanı özelliğinin adı. Bunun geçerli bir tanımlayıcı olması gerekir, örneğin **SongTitle**.|\<none>|
 |**Notlar**|Bu etki alanı özelliği ile ilişkili resmi olmayan notlar.|\<none>|
 |**Ayarlayıcı erişim değiştiricisi**|Ayarlayıcı için erişim değiştiricisi. Bu, program kodunun özelliği ayarlayabileceği kapsamı denetler.|`public`|

@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 6b491d88-f79e-4686-8841-857624bdcfda
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5828fb114a4df559c46dd6ae7f64887ab48e7429
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 59206c206f04aaf3506771ee2310daebd0af273a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "68919531"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99939753"
 ---
 # <a name="accessibility-tips-and-tricks-for-visual-studio"></a>Visual Studio için erişilebilirlik ipuçları ve püf noktaları
 
@@ -65,7 +65,7 @@ Diğer bazı faydalı klavye kısayolları aşağıdakileri içerir.
 |Menüler|Kısayol tuşlarını kullanarak bir menü öğesine hızlıca erişin. Komutu etkinleştirmek için **alt** tuşunu ve ardından bir menüdeki altı çizili harfleri seçin. Örneğin, Visual Studio 'da Proje Aç iletişim kutusunu görüntülemek için **alt** + **F** + **O** + **P**'yi seçin.  <br><br> **Note:** Standart Windows klavye kısayolu|**Alt**  +  **[harf]**|
 |Arama kutusu|Visual Studio 'da arama özelliğini kullanın.|**CTRL** + **Soru-cevap**|
 |Araç kutusu penceresi|Araç kutusu sekmeleri arasında hareket edin.|**CTRL** + **Yukarı ok**<br /><br /> ve<br /><br /> **CTRL** + **Aşağı ok**|
-|Araç kutusu penceresi|Araç kutusundan bir form veya tasarımcıya denetim ekleyin.|**Girmesini**|
+|Araç kutusu penceresi|Araç kutusundan bir form veya tasarımcıya denetim ekleyin.|**Enter**|
 |Seçenekler iletişim kutusu: ortam > klavye|**Kısayol tuşlarına basın** seçeneğinde girilen bir tuş birleşimini silin.|**Geri Al tuşu**|
 |Bildirimler araç penceresi|İki klavye kısayol tuşu birleşimini ve diğeri tarafından izlenen bildirimler araç penceresini açın. Ardından, ok tuşlarını kullanarak bir bildirimi seçerek bunu seçin.| **CTRL** + **&#92;**, **CTRL** + **N**|
 
@@ -93,9 +93,9 @@ Visual Studio program olaylarına bir ses atamak için Windows 'daki ses uygulam
 * Oluşturma başarısız oldu
 * Derleme başarılı oldu
 
-Bunu yapmak için:
+Aşağıdaki adımları uygulayın:
 
-1. Windows 10 çalıştıran bir bilgisayardaki **arama** kutusunda, **sistem seslerini Değiştir**yazın.
+1. Windows 10 çalıştıran bir bilgisayardaki **arama** kutusunda, **sistem seslerini Değiştir** yazın.
 
    ![Windows 10 ' da arama kutusu](media/type-here-to-search.png "Windows 10 ' da arama kutusunun ekran görüntüsü")
 
@@ -111,7 +111,7 @@ Bunu yapmak için:
 
    ![Windows 10 ' da ses uygulamasının sesler sekmesi](media/sound-applet.png "Windows 10 ' da ses uygulamasının sesler sekmesi")
 
-1. **Tamam**’a tıklayın.
+1. **Tamam**'a tıklayın.
 
 ::: moniker range="vs-2017"
 

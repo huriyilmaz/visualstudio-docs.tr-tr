@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: bb1fe2c4-4383-436f-8326-c24cc4a46150
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: efeca838050c9024ad3768b2ac7f73ce7dd06720
-ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
+ms.openlocfilehash: 3a2f124fa7e83e9f85e572276eed1851f42f7047
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92353297"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99939558"
 ---
 # <a name="calltarget-task"></a>CallTarget görevi
 
@@ -35,7 +35,7 @@ Proje dosyası içinde belirtilen hedefleri çağırır.
 
 | Parametre | Açıklama |
 |---------------------------| - |
-| `RunEachTargetSeparately` | İsteğe bağlı `Boolean` giriş parametresi.<br /><br /> İse `true` , MSBuild altyapısı her hedef için bir kez çağırılır. İse `false` , tüm hedefleri derlemek Için MSBuild altyapısı bir kez çağırılır. Varsayılan değer: `false`. |
+| `RunEachTargetSeparately` | İsteğe bağlı `Boolean` giriş parametresi.<br /><br /> İse `true` , MSBuild altyapısı her hedef için bir kez çağırılır. İse `false` , tüm hedefleri derlemek Için MSBuild altyapısı bir kez çağırılır. `false` varsayılan değerdir. |
 | `TargetOutputs` | İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıkış parametresi.<br /><br /> Tüm oluşturulan hedeflerin çıkışlarını içerir. |
 | `Targets` | İsteğe bağlı `String[]` parametre.<br /><br /> Derlenecek hedefi veya hedefleri belirtir. |
 | `UseResultsCache` | İsteğe bağlı `Boolean` parametre.<br /><br /> Varsa `true` , önbelleğe alınan sonuç varsa döndürülür.<br /><br /> **Göz önünde** Bir MSBuild görevi çalıştırıldığında, çıktısı derleme öğelerinin listesi olarak bir kapsamda (ProjectFileName, GlobalProperties) [TargetNames] önbelleğe alınır. |

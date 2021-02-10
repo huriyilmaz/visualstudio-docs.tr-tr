@@ -15,21 +15,21 @@ helpviewer_keywords:
 - Object Browser, icons in Class View
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 9e0348c1f6c51f0a82328814be671d8f44e3d4a7
-ms.sourcegitcommit: 3922edfe67063e1ede418cdbf6aa6293117c4855
+ms.openlocfilehash: 551033ce7dcd7b8755124b86734243470442b6e0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98773346"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99939987"
 ---
 # <a name="class-view-and-object-browser-icons"></a>Sınıf Görünümü ve Nesne Tarayıcısı simgeleri
 
 **Sınıf görünümü** ve **nesne tarayıcısı** ; Örneğin, ad alanları, sınıflar, işlevler ve değişkenler gibi kod varlıklarını temsil eden simgeler görüntüler. Aşağıdaki tabloda, simgeler gösterilmektedir ve açıklanmaktadır.
 
-|Simge|Açıklama|Simge|Açıklama|
+|Simge|Description|Simge|Description|
 |----------|-----------------|----------|-----------------|
 |![Ad alanı simgesi](../ide/media/vxnamespace_icon.gif)|Ad Alanı|![Bildirim simgesi](../ide/media/vxmethod_icon.gif)|Yöntem veya Işlev|
 |![Sınıf simgesi](../ide/media/vxclass_icon.gif)|Sınıf|![İşleç simgesi](../ide/media/vxoperator_icon.gif)|Operatör|
@@ -54,7 +54,7 @@ ms.locfileid: "98773346"
 
 Aşağıdaki sinyal simgeleri önceki tüm simgelere uygulanır ve erişilebilirliğini gösterir.
 
-|Simge|Açıklama|
+|Simge|Description|
 |----------|-----------------|
 |\<No Signal Icon>|Geneldir. Bu bileşenin her yerinden ve ona başvuran herhangi bir bileşenden erişilebilir.|
 |![Sinyal korumalı simgesi](../ide/media/vxsignal_icon_key.gif)|Korunamadı. Kapsayan sınıf veya türden ya da kapsayan sınıf veya türden türeten erişilebilir.|

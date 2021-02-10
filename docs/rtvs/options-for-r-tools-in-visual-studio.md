@@ -10,15 +10,15 @@ f1_keywords:
 - vs.toolsoptionspages.r_tools.#150
 author: kraigb
 ms.author: kraigb
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-science
-ms.openlocfilehash: c7c2cb57dc96d7bb0df09248eb7a877820e50521
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ed2ee29fb7a0a832dd3076cbd47a7f9cd1414d96
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89315089"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99939480"
 ---
 # <a name="r-tools-for-visual-studio-options"></a>Visual Studio için R Araçları seçenekleri
 
@@ -82,15 +82,15 @@ Bu seçenekler, [değişken Gezgini](variable-explorer.md) ve Izleme ve Yereller
 
 | Seçenek | Varsayılan değer | Description |
 | --- | --- | --- |
-| F1 web tarayıcısı | `Internal` | **CTRL**F1 kullanarak bir terimi ararken yardım 'ın nasıl görüntüleneceğini denetler + **F1**. Olarak ayarlandığında `Internal` , yardım, Visual Studio 'daki bir araç penceresi içinde işlenir. Olarak ayarlandığında `External` , yardım varsayılan Web tarayıcınızda görüntülenir. |
-| F1 Web Araması dizesi | `R site:stackoverflow.com` | **Ctrl** + Düzenleyicideki bir terim üzerinde CTRL**F1** tuşuna bastığınızda arama koşullarının arama altyapısına nasıl geçtiğini denetler. Varsayılan olarak dize, `R site:stackoverflow.com` `R` Arama teriminizi ekler. , Arama `site:stackoverflow.com` altyapısına, bu, etki alanı içindeki sayfalara aramanın kapsamını belirten bir yönergedir `stackoverflow.com` . |
+| F1 web tarayıcısı | `Internal` | **CTRL** F1 kullanarak bir terimi ararken yardım 'ın nasıl görüntüleneceğini denetler + . Olarak ayarlandığında `Internal` , yardım, Visual Studio 'daki bir araç penceresi içinde işlenir. Olarak ayarlandığında `External` , yardım varsayılan Web tarayıcınızda görüntülenir. |
+| F1 Web Araması dizesi | `R site:stackoverflow.com` |  + Düzenleyicideki bir terim üzerinde CTRL **F1** tuşuna bastığınızda arama koşullarının arama altyapısına nasıl geçtiğini denetler. Varsayılan olarak dize, `R site:stackoverflow.com` `R` Arama teriminizi ekler. , Arama `site:stackoverflow.com` altyapısına, bu, etki alanı içindeki sayfalara aramanın kapsamını belirten bir yönergedir `stackoverflow.com` . |
 | R Yardım tarayıcısı | `Automatic` | R belgelerini **F1**, **?**, veya **??** kullanarak ararken yardım 'ın nasıl görüntüleneceğini denetler. Olarak ayarlandığında `Automatic` , uygun pencerede yardım işler. Örneğin, HTML Yardımı bir Visual Studio araç penceresi içinde görünür, ancak PDF 'Ler varsayılan PDF programınızda görüntülenir. Olarak ayarlandığında `External` , yardım varsayılan Web tarayıcınızda işlenir. |
 
 ### <a name="history"></a>Geçmiş
 
 | Seçenek | Varsayılan değer | Description |
 | --- | --- | --- |
-| Geçmişi her zaman Kaydet | `True` | RTVS 'nin komut geçmişinizi bir öğesine yazıp yazmadığını denetler *. * Çalışma dizininizde her ne zaman bir proje kapatıldığında RHistory dosyası. Sihirbazdan çıkmadan önce projenizi kaydetmeseniz bile geçmiş kaydedilir. |
+| Geçmişi her zaman Kaydet | `True` | RTVS 'nin komut geçmişinizi bir öğesine yazıp yazmadığını denetler *.* Çalışma dizininizde her ne zaman bir proje kapatıldığında RHistory dosyası. Sihirbazdan çıkmadan önce projenizi kaydetmeseniz bile geçmiş kaydedilir. |
 | Arama filtresini Sıfırla | `True` | Geçmiş penceresinin komut geçmişinizi yalnızca R Geçmiş iletişim kutusunda filtre terimiyle alt dize ile eşleşen komutları gösterecek şekilde filtreleyemeyeceğini belirler. Bu ayar, yeni bir komut çalıştırdığınız veya yeni bir projeye geçiş yaptığınızda geçmiş arama filtreinizin sıfırlanıp sıfırlanmayacağını belirler. Bu, farklı yükü tetikler *. RHistory* dosyası. Varsayılan ayar, `True` filtre kümesi ile bir komut çalıştırdığınızda beklenmedik şekilde en aza indirir ve az önce çalıştırdığınız komutun geçmişte gösterilmediğini merak ettiniz. |
 | Çok satırlı seçim kullan | `True` | Tek bir tıklama geçmişi içinde çok satırlı bir deyimin seçip seçmeyeceğinizi belirtir. Ayrıca, satırlarda değil, etkileşimli pencerelerin deyimlerini izleyerek yukarı/aşağı ok gezintisini de mümkün. |
 

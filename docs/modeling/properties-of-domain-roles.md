@@ -6,15 +6,15 @@ ms.date: 11/04/2016
 ms.topic: reference
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 6dda8e7c5538b0517c181a451072c4f8a9544965
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: 9edee5f8128933b2ecb36434a64d39c40d3d799f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97362346"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99941313"
 ---
 # <a name="properties-of-domain-roles"></a>Etki Alanı Rollerinin Özellikleri
 Aşağıdaki tabloda yer alan Özellikler bir etki alanı rolüyle ilişkilendirilir. Etki alanı rolleri hakkında daha fazla bilgi için bkz. [modelleri, sınıfları ve Ilişkileri anlama](../modeling/understanding-models-classes-and-relationships.md). Bu özelliklerin nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [Domain-Specific dilini özelleştirme ve genişletme](../modeling/customizing-and-extending-a-domain-specific-language.md).
@@ -28,14 +28,14 @@ Aşağıdaki tabloda yer alan Özellikler bir etki alanı rolüyle ilişkilendir
 |Özellik alıcısı erişim değiştiricisi|Oluşturulan özelliğin ( `public` , `internal` ,, `private` `protected` veya `protected internal` ) alıcı için erişim değiştiricisi.|`public`|
 |Özellik ayarlayıcı erişim değiştiricisi|Oluşturulan özelliğin ( `public` , `internal` ,, `private` `protected` veya `protected internal` ) ayarlayıcı için erişim değiştiricisi.|`public`|
 |Çokluk|Karşıt rolü ( `0..1` , `1..1` ,, `0..*` veya) çalabilen model öğelerinin sayısı `1..*` . Çoğulluk veya ise `0..*` `1..*` , oluşturulan özellik bir koleksiyonu temsil eder; Aksi takdirde, oluşturulan özellik tek bir model öğesini temsil eder.|İlişki türüne ve bu ilişkide kaynak veya hedef rol olup olmamasına bağlıdır.|
-|Ad|Etki alanı rolünün adı. Bu özellik boşluk içeremez.|Bu rolün rol oyuncusunun etki alanı sınıfının adı.|
+|Name|Etki alanı rolünün adı. Bu özellik boşluk içeremez.|Bu rolün rol oyuncusunun etki alanı sınıfının adı.|
 |Kopyayı yayar|`DoNotPropagateCopy` -Kopyalanmış rol oyuncusunun bu bağlantının bir kopyası olmayacaktır.<br /><br /> `PropagateCopyToLinkOnly` -Kopyalanmış bağlantı var olan karşı rol oyuncusuna işaret eder.<br /><br /> `PropagateCopyToLinkAndOppositeRolePlayer` -Kopyalanmış bağlantı, karşı rol yürütücüsünün bir kopyasına işaret eder.|`PropagateCopyToLinkAndOppositeRolePlayer` eklenebilir kaynak roller için.<br /><br /> `DoNotPropagateCopy` diğer roller için.<br /><br /> Daha fazla bilgi için bkz. [kopyalama davranışını özelleştirme](../modeling/customizing-copy-behavior.md)|
 |Silmeyi yayar|`True` ilişkili bağlantı silindiğinde bu rolü yürüten öğeyi silmek için.|`True` bir katıştırma rolünün hedefi için.<br /><br /> `False` diğer roller için.|
 |Özellik Adı|Rol oyuncusunun kodunda oluşturulan özelliğin adı. Bu ad boşluk içeremez.|Bu rol sıfırdan bir veya bire bir çokluğa sahipse ters rolün adı; Aksi takdirde, karşıt rolün plurlaştırılan adı.|
 |Rol oynatıcı|İlişkide bu rolü çalasağlayan öğenin etki alanı sınıfı. Bu özellik salt okunur durumdadır.|Bu rol için rol oyuncusunun etki alanı sınıfı.|
 |Notlar|Etki alanı rolüyle ilişkili resmi olmayan notlar.|<yok\>|
 |Kategori|Oluşturulan tasarımcının **Özellikler** penceresinde oluşturulan özelliğin altında göründüğü kategori. Bu özellik boşsa, oluşturulan özellik, **Sair** kategori altında görünür|<yok\>|
-|Açıklama|Kodu belgelemek için kullanılan açıklama ve oluşturulan tasarımcının Kullanıcı arabiriminde kullanılır.<br /><br /> Açıklama, rol oynatıcı sınıfında oluşturulan özelliğin IntelliSense araç ipucunda görüntülenir.|`Description for`*rolün tam adı*|
+|Description|Kodu belgelemek için kullanılan açıklama ve oluşturulan tasarımcının Kullanıcı arabiriminde kullanılır.<br /><br /> Açıklama, rol oynatıcı sınıfında oluşturulan özelliğin IntelliSense araç ipucunda görüntülenir.|`Description for`*rolün tam adı*|
 |Görünen Ad|Etki alanı rolü için oluşturulan tasarımcıda görüntülenen ad.|Ad özelliğinin ayarlanmış değeri.|
 |Help anahtar sözcüğü|Etki alanı rolü için F1 yardımını dizine eklemek üzere kullanılan isteğe bağlı anahtar sözcük.|\<none>|
 |Özellik görünen adı|Oluşturulan rol özelliği için oluşturulan tasarımcıda görüntülenen ad.|Özellik adı özelliğinin ayarlanmış değeri.|

@@ -7,17 +7,17 @@ ms.technology: vs-python
 ms.topic: quickstart
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: SEO-VS-2020
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 4318cd98de166210a8e8744840967942006b8ea6
-ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
+ms.openlocfilehash: dc47bdb2913e2d18998663967d4da3c0a7dcdd9f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90100519"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99939948"
 ---
 # <a name="quickstart-create-your-first-python-web-app-using-visual-studio"></a>Hızlı başlangıç: Visual Studio kullanarak ilk Python web uygulamanızı oluşturma
 
@@ -48,7 +48,7 @@ Aşağıdaki adımlar, uygulama için kapsayıcı görevi gören boş bir proje 
 
     ![Python web projesi seçiliyken yeni proje iletişim kutusu](media/quickstart-python-00-web-project.png)
 
-    Python proje şablonlarını görmüyorsanız, **Visual Studio yükleyicisi**çalıştırın, **daha fazla** > **Değiştir**' i seçin, **Python geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
+    Python proje şablonlarını görmüyorsanız, **Visual Studio yükleyicisi** çalıştırın, **daha fazla** > **Değiştir**' i seçin, **Python geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
 
     ![Visual Studio yükleyicisinde Python geliştirme iş yükü](../python/media/installation-python-workload.png)
 
@@ -64,11 +64,11 @@ Aşağıdaki adımlar, uygulama için kapsayıcı görevi gören boş bir proje 
 
     ![Python web projesi seçiliyken yeni bir proje ekranı oluştur](media/quickstart-python-00-web-project-2019a.png)
 
-    Python proje şablonlarını görmüyorsanız, **Visual Studio yükleyicisi**çalıştırın, **daha fazla** > **Değiştir**' i seçin, **Python geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
+    Python proje şablonlarını görmüyorsanız, **Visual Studio yükleyicisi** çalıştırın, **daha fazla** > **Değiştir**' i seçin, **Python geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
 
     ![Visual Studio yükleyicisinde Python geliştirme iş yükü](../python/media/installation-python-workload.png)
 
-4. Aşağıdaki **yeni projeyi Yapılandır** iletişim kutusunda, **Proje adı**için "Merhaba Python" yazın, bir konum belirtin ve **Oluştur**' u seçin. ( **Çözüm adı** , **Proje adı**ile eşleşecek şekilde otomatik olarak ayarlanır.)
+4. Aşağıdaki **yeni projeyi Yapılandır** iletişim kutusunda, **Proje adı** için "Merhaba Python" yazın, bir konum belirtin ve **Oluştur**' u seçin. ( **Çözüm adı** , **Proje adı** ile eşleşecek şekilde otomatik olarak ayarlanır.)
 
     ![Yeni proje iletişim kutusunu yapılandırın](media/quickstart-python-00-web-project-2019b.png)
 
@@ -98,7 +98,7 @@ Burada, Flask kitaplığını Visual Studio 'nun bu proje için kullandığı va
 
 2. Ortama sağ tıklayın ve **Python paketini yükler**' i seçin. Bu komut, **paketler** sekmesinde **Python ortamları** penceresini açar.
 
-3. Arama alanına "Flask" yazın ve **Pypı 'den PyPI 'den pypi**'yi seçin. Yönetici ayrıcalıklarına yönelik tüm istemleri kabul edin ve devam etmek için Visual Studio 'daki **Çıkış** penceresini inceleyin. (Genel ortamın paketler klasörü, *C:\Program Files*gibi bir korumalı alan içinde bulunduğunda yükseltme istemi olur.)
+3. Arama alanına "Flask" yazın ve **Pypı 'den PyPI 'den pypi**'yi seçin. Yönetici ayrıcalıklarına yönelik tüm istemleri kabul edin ve devam etmek için Visual Studio 'daki **Çıkış** penceresini inceleyin. (Genel ortamın paketler klasörü, *C:\Program Files* gibi bir korumalı alan içinde bulunduğunda yükseltme istemi olur.)
 
     ![PIP yüklemesi kullanarak Flask kitaplığı yükleme](media/quickstart-python-03-install-package.png)
 ::: moniker-end
@@ -109,12 +109,12 @@ Burada, Flask kitaplığını Visual Studio 'nun bu proje için kullandığı va
 
 2. Ortama sağ tıklayın ve **Python paketlerini Yönet...** seçeneğini belirleyin. Bu komut, **Packages (PyPI)** sekmesindeki **Python ortamları** penceresini açar.
 
-3. Arama alanına "Flask" yazın. Arama kutusunun altında **Flask** görünürse, bu adımı atlayabilirsiniz. Aksi takdirde, **Çalıştır komutunu seçin: PIP Install Flask**. Yönetici ayrıcalıklarına yönelik tüm istemleri kabul edin ve devam etmek için Visual Studio 'daki **Çıkış** penceresini inceleyin. (Genel ortamın paketler klasörü, *C:\Program Files*gibi bir korumalı alan içinde bulunduğunda yükseltme istemi olur.)
+3. Arama alanına "Flask" yazın. Arama kutusunun altında **Flask** görünürse, bu adımı atlayabilirsiniz. Aksi takdirde, **Çalıştır komutunu seçin: PIP Install Flask**. Yönetici ayrıcalıklarına yönelik tüm istemleri kabul edin ve devam etmek için Visual Studio 'daki **Çıkış** penceresini inceleyin. (Genel ortamın paketler klasörü, *C:\Program Files* gibi bir korumalı alan içinde bulunduğunda yükseltme istemi olur.)
 
     ![PIP yüklemesi kullanarak Flask kitaplığı yükleme](media/quickstart-python-03-install-package-2019.png)
 ::: moniker-end
 
-4. Yüklendikten sonra, kitaplık **Çözüm Gezgini**ortamda görünür, bu da Python kodunda bunu kullanabileceğiniz anlamına gelir.
+4. Yüklendikten sonra, kitaplık **Çözüm Gezgini** ortamda görünür, bu da Python kodunda bunu kullanabileceğiniz anlamına gelir.
 
     ::: moniker range="vs-2017"
     ![Flask kitaplığı yüklendi ve Çözüm Gezgini ' de gösteriliyor](media/quickstart-python-04-package-installed.png)
@@ -136,7 +136,7 @@ Artık en az bir Web uygulaması uygulamak için bir Python kodu eklemek için h
 
 1. **Çözüm Gezgini** projeye sağ tıklayın ve **> yeni öğe Ekle**' yi seçin.
 
-1. Görüntülenen iletişim kutusunda **boş Python dosyası**' nı seçin, *app.py*olarak adlandırın ve **Ekle**' yi seçin. Visual Studio dosyayı bir düzenleyici penceresinde otomatik olarak açar.
+1. Görüntülenen iletişim kutusunda **boş Python dosyası**' nı seçin, *app.py* olarak adlandırın ve **Ekle**' yi seçin. Visual Studio dosyayı bir düzenleyici penceresinde otomatik olarak açar.
 
 1. Aşağıdaki kodu kopyalayın ve *app.py*'e yapıştırın:
 
@@ -184,7 +184,7 @@ Artık en az bir Web uygulaması uygulamak için bir Python kodu eklemek için h
 
 3. Dosyalarda yapılan değişiklikleri kaydeden ve uygulamayı çalıştıran hata ayıklama > hata ayıklama **olmadan Başlat** ' ı seçin (**CTRL** + **F5**).
 
-4. **Https: \/ /localhost: 4449 içinde çalışan**iletinin bulunduğu bir komut penceresi görünür ve `localhost:4449` "Merhaba, Python!" iletisini gördüğünüz konuma bir tarayıcı penceresi açması gerekir GET isteği, komut penceresinde 200 durumu ile de görüntülenir.
+4. **Https: \/ /localhost: 4449 içinde çalışan** iletinin bulunduğu bir komut penceresi görünür ve `localhost:4449` "Merhaba, Python!" iletisini gördüğünüz konuma bir tarayıcı penceresi açması gerekir GET isteği, komut penceresinde 200 durumu ile de görüntülenir.
 
     Bir tarayıcı otomatik olarak açılmadığından, seçtiğiniz tarayıcıyı başlatın ve adresine gidin `localhost:4449` .
 

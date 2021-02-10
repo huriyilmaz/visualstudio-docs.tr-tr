@@ -7,15 +7,15 @@ ms.topic: conceptual
 ms.assetid: 52f12785-1c51-4c2c-8228-c8e10316cd83
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 26f78be8708e61370be3256c8cde481d5c61c89d
-ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
+ms.openlocfilehash: d86f57abdc96e4fc4f2abbb781e9437c74854a7c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95598152"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99939298"
 ---
 # <a name="add-a-language-server-protocol-extension"></a>Dil Sunucusu Protokolü uzantısı ekleme
 
@@ -47,48 +47,48 @@ Aşağıdaki tablolarda, Visual Studio 'da hangi LSP özelliklerinin desteklendi
 
 İleti | Visual Studio 'da desteğe sahiptir
 --- | ---
-Öbek | yes
-başlatıldığını | yes
-kapatma | yes
-çıkıp | yes
-$/cancelRequest | yes
-pencere/showMessage | yes
-Window/showMessageRequest | yes
-pencere/oturum Iletisi | yes
+Öbek | evet
+başlatıldığını | evet
+kapatma | evet
+çıkıp | evet
+$/cancelRequest | evet
+pencere/showMessage | evet
+Window/showMessageRequest | evet
+pencere/oturum Iletisi | evet
 Telemetri/olay |
 istemci/kayıt yeteneği |
 istemci/unregisterCapability |
-çalışma alanı/didChangeConfiguration | yes
-çalışma alanı/didChangeWatchedFiles | yes
-çalışma alanı/simge | yes
-çalışma alanı/executeCommand | yes
-çalışma alanı/applyEdit | yes
-textDocument/publishDiagnostics | yes
-textDocument/didOpen | yes
-textDocument/didChange | yes
+çalışma alanı/didChangeConfiguration | evet
+çalışma alanı/didChangeWatchedFiles | evet
+çalışma alanı/simge | evet
+çalışma alanı/executeCommand | evet
+çalışma alanı/applyEdit | evet
+textDocument/publishDiagnostics | evet
+textDocument/didOpen | evet
+textDocument/didChange | evet
 textDocument/willSave |
 textDocument/Sollsavewaituntil |
-textDocument/didSave | yes
-textDocument/didClose | yes
-textDocument/tamamlama | yes
-tamamlama/çözme | yes
-textDocument/vurgulu | yes
-textDocument/signatureHelp | yes
-textDocument/başvurular | yes
-textDocument/Belgetri ışığı | yes
-textDocument/documentSymbol | yes
-textDocument/biçimlendirme | yes
-textDocument/rangeFormatting | yes
+textDocument/didSave | evet
+textDocument/didClose | evet
+textDocument/tamamlama | evet
+tamamlama/çözme | evet
+textDocument/vurgulu | evet
+textDocument/signatureHelp | evet
+textDocument/başvurular | evet
+textDocument/Belgetri ışığı | evet
+textDocument/documentSymbol | evet
+textDocument/biçimlendirme | evet
+textDocument/rangeFormatting | evet
 textDocument/onTypeFormatting |
-textDocument/tanım | yes
-textDocument/codeAction | yes
+textDocument/tanım | evet
+textDocument/codeAction | evet
 textDocument/codeLens |
 codeLens/Resolve |
 textDocument/documentLink |
 documentLink/Resolve |
-textDocument/yeniden adlandır | yes
+textDocument/yeniden adlandır | evet
 
-## <a name="get-started"></a>Kullanmaya başlayın
+## <a name="get-started"></a>başlarken
 
 > [!NOTE]
 > Visual Studio 2017 sürüm 15,8 ' den başlayarak, ortak dil sunucusu protokolü desteği Visual Studio 'da yerleşik olarak bulunur. Preview [Language Server CLIENT VSIX](https://marketplace.visualstudio.com/items?itemName=vsext.LanguageServerClientPreview) sürümünü kullanarak LSP uzantıları oluşturduysanız, sürüm 15,8 veya üzeri sürümüne yükselttikten sonra çalışmayı durduracaktır. LSP uzantılarınızın yeniden çalışmasını sağlamak için aşağıdakileri yapmanız gerekir:
@@ -294,7 +294,7 @@ LSP dil sunucuları için destek eklemek, Visual Studio 'da kendi proje sistemin
 
 LSP dil hizmeti uzantınızın ayarlarına yönelik destek eklemek için aşağıdaki adımları izleyin:
 
-1. Projenize, ayarlarını ve varsayılan değerlerini içeren bir JSON dosyası (örneğin, *MockLanguageExtensionSettings.json*) ekleyin. Örnek:
+1. Projenize, ayarlarını ve varsayılan değerlerini içeren bir JSON dosyası (örneğin, *MockLanguageExtensionSettings.json*) ekleyin. Örneğin:
 
     ```json
     {
@@ -344,7 +344,7 @@ LSP dil hizmeti uzantınızın ayarlarına yönelik destek eklemek için aşağ�
 
 1. Kullanıcı, sunucunuzun sahip olduğu dosyaları içeren bir çalışma alanı açar.
 2. Kullanıcı, içinde *VSWorkspaceSettings.js* adlı *. vs* klasörüne bir dosya ekler.
-3. Kullanıcı, sunucunun sağladığı bir ayar için dosyadaki *VSWorkspaceSettings.js* bir satır ekler. Örnek:
+3. Kullanıcı, sunucunun sağladığı bir ayar için dosyadaki *VSWorkspaceSettings.js* bir satır ekler. Örneğin:
 
     ```json
     {

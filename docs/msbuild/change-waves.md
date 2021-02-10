@@ -8,16 +8,16 @@ helpviewer_keywords:
 - MSBuildDisableFeaturesFromVersion environment variable
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 monikerRange: '>=vs-2019'
 ms.workload:
 - multiple
-ms.openlocfilehash: 68aafd8ebb97b4bf649cc41eb7739e1700c9cb1a
-ms.sourcegitcommit: 83a39d48b00c6c351e5c1707942633b7f73aaad6
+ms.openlocfilehash: 77f93b4741ee987bac871e619ccbe58e2d4d4000
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94532074"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99939532"
 ---
 # <a name="change-waves"></a>Dalgaları değiştirme
 
@@ -79,5 +79,5 @@ Kabul etmek bizim için daha iyi bir yaklaşım, aksi takdirde bir özellik mü�
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [MSBUILD](msbuild.md)
+- [MSBuild](msbuild.md)
 - [MSBuild 16 ' daki yenilikler](whats-new-msbuild-16-0.md)

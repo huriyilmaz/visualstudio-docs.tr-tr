@@ -5,26 +5,26 @@ ms.date: 01/24/2018
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-science
-ms.openlocfilehash: d35bfd45e862912ff78ae600eed01ce8dc002493
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f6c543286951e50fb1f51e7496e166968b5d98e9
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62998874"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99939428"
 ---
 # <a name="package-manager"></a>Paket yöneticisi
 
-Visual Studio için R Araçları (RTVS) Paket Yöneticisi, R paketlerini yönetmek için bir kullanıcı arabirimi. Açmak için **R araçları**  >  **Windows**  >  **paketleri** ' ni seçin veya **CTRL** + **7**tuşlarına basın.
+Visual Studio için R Araçları (RTVS) Paket Yöneticisi, R paketlerini yönetmek için bir kullanıcı arabirimi. Açmak için **R araçları**  >  **Windows**  >  **paketleri** ' ni seçin veya **CTRL** + **7** tuşlarına basın.
 
 Paket yöneticisinin üç sekmesi vardır. Her sekme, sol taraftaki ilgili paketlerin bir listesini, paketin sürüm, açıklama, lisans, yüklemesi konumu ve diğer ilgili bilgilere bağlantılar da dahil olmak üzere sağda görüntüler. Sağ üst köşedeki arama kutusu listeyi filtrelemenizi sağlar.
 
 > [!Tip]
 > Sekmeler arasında geçiş yaparken arama kutusundaki terim etkin kalır.
 
-- **Kullanılabilir** , yüklenecek paketlere gözatmanızı sağlar. Paket zaten yüklüyse, doğru değişiklikleri **kaldırmak**için **yükleme** düğmesi.
+- **Kullanılabilir** , yüklenecek paketlere gözatmanızı sağlar. Paket zaten yüklüyse, doğru değişiklikleri **kaldırmak** için **yükleme** düğmesi.
 
     ![Visual Studio için R Araçları paket yöneticisinde kullanılabilir paketler sekmesi](media/package-manager-available.png)
 

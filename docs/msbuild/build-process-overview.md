@@ -8,15 +8,15 @@ helpviewer_keywords:
 - MSBuild, build process overview
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4374e6763933e2da3e6a11c5609b76e3341e1050
-ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
+ms.openlocfilehash: 8a7f8645cd34fe56d7d8d0f6a9efa6bf01bd13d8
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92353258"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99939675"
 ---
 # <a name="how-msbuild-builds-projects"></a>MSBuild nasıl proje oluşturur
 
@@ -26,7 +26,7 @@ Tüm derleme süreci, projeyi oluşturan hedeflerin ve görevlerin [ilk başlatm
 
 ## <a name="startup"></a>Başlangıç
 
-MSBuild, *Microsoft.Build.dll*içinde MSBuild nesne modeli aracılığıyla veya yürütülebilir dosya doğrudan komut satırında ya da CI sistemlerinde olduğu gibi bir betikte çağırarak Visual Studio 'dan çağrılabilir. Her iki durumda da, yapı işlemini etkileyen girişler proje dosyasını (veya Visual Studio için dahili proje nesnesi), muhtemelen bir çözüm dosyası, ortam değişkenleri ve komut satırı anahtarları ya da nesne modeli eşdeğerleriyle içerir. Başlangıç aşamasında, oturum cihazlarını yapılandırma gibi MSBuild ayarlarını yapılandırmak için komut satırı seçenekleri veya nesne modeli eşdeğerleri kullanılır. Veya anahtarını kullanarak komut satırında ayarlanan özellikler `-property` `-p` Genel özellikler olarak ayarlanır ve proje dosyaları daha sonra okunsa bile proje dosyalarında ayarlanacak tüm değerleri geçersiz kılar.
+MSBuild, *Microsoft.Build.dll* içinde MSBuild nesne modeli aracılığıyla veya yürütülebilir dosya doğrudan komut satırında ya da CI sistemlerinde olduğu gibi bir betikte çağırarak Visual Studio 'dan çağrılabilir. Her iki durumda da, yapı işlemini etkileyen girişler proje dosyasını (veya Visual Studio için dahili proje nesnesi), muhtemelen bir çözüm dosyası, ortam değişkenleri ve komut satırı anahtarları ya da nesne modeli eşdeğerleriyle içerir. Başlangıç aşamasında, oturum cihazlarını yapılandırma gibi MSBuild ayarlarını yapılandırmak için komut satırı seçenekleri veya nesne modeli eşdeğerleri kullanılır. Veya anahtarını kullanarak komut satırında ayarlanan özellikler `-property` `-p` Genel özellikler olarak ayarlanır ve proje dosyaları daha sonra okunsa bile proje dosyalarında ayarlanacak tüm değerleri geçersiz kılar.
 
 Sonraki bölümlerde, çözüm dosyaları veya proje dosyaları gibi giriş dosyaları hakkında bilgi verilmektedir.
 
@@ -139,7 +139,7 @@ Bkz. [MSBuild ile paralel olarak birden çok proje oluşturma](building-multiple
 
 *Microsoft. Common. targets* dosyası ve içeri aktardığı hedef dosyalar .NET projeleri için standart derleme işlemini tanımlar. Ayrıca, derlemeyi özelleştirmek için kullanabileceğiniz uzantı noktaları da sağlar.
 
-Uygulamasında, *Microsoft. Common. targets* , *Microsoft. Common. CurrentVersion. targets*içeri aktaran bir ince sarmalayıcı. Bu dosya, standart özellikler için ayarları içerir ve yapı sürecini tanımlayan gerçek hedefleri tanımlar. `Build`Hedef burada tanımlanmıştır, ancak aslında boştur. Ancak hedef,, `Build` `DependsOn` ve olan gerçek derleme adımlarını oluşturan tek tek hedefleri belirten özniteliği içerir `BeforeBuild` `CoreBuild` `AfterBuild` . `Build`Hedef aşağıdaki gibi tanımlanır:
+Uygulamasında, *Microsoft. Common. targets* , *Microsoft. Common. CurrentVersion. targets* içeri aktaran bir ince sarmalayıcı. Bu dosya, standart özellikler için ayarları içerir ve yapı sürecini tanımlayan gerçek hedefleri tanımlar. `Build`Hedef burada tanımlanmıştır, ancak aslında boştur. Ancak hedef,, `Build` `DependsOn` ve olan gerçek derleme adımlarını oluşturan tek tek hedefleri belirten özniteliği içerir `BeforeBuild` `CoreBuild` `AfterBuild` . `Build`Hedef aşağıdaki gibi tanımlanır:
 
 ```xml
   <PropertyGroup>
@@ -217,7 +217,7 @@ Aşağıdaki tabloda bu hedefler açıklanmaktadır; Bazı hedefler yalnızca be
 | IncrementalClean | Önceki bir derlemede üretilen ancak geçerli derlemede üretilmeyen dosyaları kaldırın. Bu, `Clean` artımlı derlemelerde iş yapmak için gereklidir. |
 | PostBuildEvent | Derlemeden sonra çalıştırılacak görevleri tanımlamak için projeler için uzantı noktası |
 
-Önceki tabloda bulunan hedeflerin birçoğu, *Microsoft. CSharp. targets*gibi dile özgü içeri aktarmalar içinde bulunur. Bu dosya, C# .NET projeleri için standart derleme işlemindeki adımları tanımlar. Örneğin, `Compile` aslında C# derleyicisini çağıran hedefi içerir.
+Önceki tabloda bulunan hedeflerin birçoğu, *Microsoft. CSharp. targets* gibi dile özgü içeri aktarmalar içinde bulunur. Bu dosya, C# .NET projeleri için standart derleme işlemindeki adımları tanımlar. Örneğin, `Compile` aslında C# derleyicisini çağıran hedefi içerir.
 
 ## <a name="user-configurable-imports"></a>Kullanıcı tarafından yapılandırılabilir içeri aktarmalar
 
@@ -228,11 +228,11 @@ Standart içeri aktarmalara ek olarak, yapı sürecini özelleştirmek için ekl
 
 Bu dosyalar, içindeki herhangi bir alt klasördeki herhangi bir proje için standart içeri aktarmalar tarafından okundu. Bu, genellikle Çözümdeki tüm projeleri denetlemek için ayarlar için çözüm düzeyinde olur, ancak sürücünün köküne kadar dosya sisteminde de daha yüksek olabilir.
 
-*Directory. Build. props* dosyası *Microsoft. Common. props*tarafından içeri aktarıldığından, tanımlanan özellikler proje dosyasında kullanılabilir. Proje temelinde değerleri özelleştirmek için proje dosyasında yeniden tanımlanabilir. *Dizin. Build. targets* dosyası, proje dosyasından sonra okundu. Genellikle hedefleri içerir, ancak burada tek tek projelerin yeniden tanımlamayı istemediğiniz özellikleri de tanımlayabilirsiniz.
+*Directory. Build. props* dosyası *Microsoft. Common. props* tarafından içeri aktarıldığından, tanımlanan özellikler proje dosyasında kullanılabilir. Proje temelinde değerleri özelleştirmek için proje dosyasında yeniden tanımlanabilir. *Dizin. Build. targets* dosyası, proje dosyasından sonra okundu. Genellikle hedefleri içerir, ancak burada tek tek projelerin yeniden tanımlamayı istemediğiniz özellikleri de tanımlayabilirsiniz.
 
 ## <a name="customizations-in-a-project-file"></a>Proje dosyasındaki özelleştirmeler
 
-Visual Studio, **Çözüm Gezgini**, **Özellikler** penceresinde veya **proje özelliklerinde**değişiklik yaparken proje dosyalarınızı güncelleştirir, ancak proje dosyasını doğrudan düzenleyerek kendi değişikliklerinizi de yapabilirsiniz.
+Visual Studio, **Çözüm Gezgini**, **Özellikler** penceresinde veya **proje özelliklerinde** değişiklik yaparken proje dosyalarınızı güncelleştirir, ancak proje dosyasını doğrudan düzenleyerek kendi değişikliklerinizi de yapabilirsiniz.
 
 Birçok yapı davranışı, proje ve çözümlerin tüm klasörlerinin genel olarak özellikleri ayarlamak için *, bir projeye* yerel ayarlar için proje dosyasında ya da önceki bölümde belirtildiği gibi, MSBuild özellikleri ayarlanarak yapılandırılabilir. Komut satırında veya betiklerdeki geçici derlemeler için, `/p` belirli bir MSBuild çağrısı için özellikleri ayarlamak üzere komut satırındaki seçeneğini de kullanabilirsiniz. Ayarlayabileceğiniz özellikler hakkında daha fazla bilgi için bkz. [Ortak MSBuild proje özellikleri](common-msbuild-project-properties.md) .
 
@@ -242,4 +242,4 @@ MSBuild işlemi, burada açıklananlar dışında birkaç başka uzantı noktas�
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[MSBUILD](msbuild.md)
+[MSBuild](msbuild.md)

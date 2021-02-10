@@ -6,15 +6,15 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: eaab198edae66fc334e854ae1f47dae313dce76b
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: 8fe531b127d657228ed68fa79358ef5df69ff17c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97363490"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99941495"
 ---
 # <a name="get-started-with-domain-specific-languages"></a>Alana Özgü Dilleri Kullanmaya Başlama
 
@@ -63,7 +63,7 @@ Yeni bir etki alanına özgü dil oluşturmak için Domain-Specific Language pro
 
      ![DSL oluştur iletişim kutusu](../modeling/media/create_dsldialog.png)
 
-4. **Ad** kutusuna **FamilyTree** yazın. **Tamam** düğmesine tıklayın.
+4. **Ad** kutusuna **FamilyTree** yazın. **Tamam**'a tıklayın.
 
      **Etki alanına özgü dil Sihirbazı** açılır ve şablon DSL çözümlerinin listesini görüntüler.
 

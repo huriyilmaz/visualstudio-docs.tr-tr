@@ -9,15 +9,15 @@ f1_keywords:
 ms.assetid: 476601be-1608-4014-af15-5aba6ccbed1c
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 6970c582b6f3ac254f5bbb60f0324128dac63cfe
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: 47da8ae405dc24cad5bab4c98384ad5db5a97ef2
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98721053"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99941183"
 ---
 # <a name="concurrency-visualizer-command-line-utility-cvcollectioncmd"></a>Eşzamanlılık görselleştiricisi komut satırı yardımcı programı (CVCollectionCmd)
 Eşzamanlılık görselleştiricisi komut satırı yardımcı programını (*CVCollectionCmd.exe*) kullanarak, bunları Visual Studio Için eşzamanlılık görselleştiricisi içinde görüntüleyebilmeniz için komut satırından izleme toplayabilirsiniz. Araçlar, Visual Studio yüklü olmayan bilgisayarlarda kullanılabilir.
@@ -63,7 +63,7 @@ Eşzamanlılık görselleştiricisi komut satırı yardımcı programını (*CVC
 ### <a name="configuration-file-tags"></a>Yapılandırma dosyası etiketleri
  Yapılandırma dosyası XML tabanlıdır. Geçerli Etiketler ve değerler şunlardır:
 
-| Etiket | Açıklama | Değerler |
+| Etiket | Description | Değerler |
 |-------------------------| - | - |
 | Config | Genel yapılandırma dosyasını kaldırır. | Şu öğeleri içermelidir:<br /><br /> -MinorVersion<br />-MajorVersion |
 | MajorVersion | Yapılandırma dosyasının ana sürümünü belirtir. | Projeler için 1 olmalıdır [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] . 1 değilse, yardımcı program çalışmaz. |

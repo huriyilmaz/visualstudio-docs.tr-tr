@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Office applications [Office development in Visual Studio], MSI
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: e49705c99801cd6e09f4bf6d9be3c411cc2c53e3
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: 75c2d97e8cd30bb3cf5605d50e65a68513590647
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96846551"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99939376"
 ---
 # <a name="deploying-a-vsto-solution-using-windows-installer"></a>Windows Installer kullanarak VSTO çözümünü dağıtma
 
@@ -272,7 +272,7 @@ Eklentiyi veya çözümü yüklemek için MSI paketi kullanılıyorsa, yüklenme
    1. **VSTO 2010 çalışma zamanı kullanılabilirliğini doğrulamak** Için **(ad)** öğesini ayarlayın.
    2. **Koşulun** değerini **Vstoruntimeredist \> = "10.0.30319"** olarak değiştirin
    3. **InstallUrl** özelliğini boş bırakın.
-   4. **Message** **Office çalışma zamanı için Visual Studio 2010 Araçları ' na yönelik iletiyi ayarlama yüklü değil. Eklentiyi yüklemek için lütfen Setup.exe çalıştırın**.
+   4.  **Office çalışma zamanı için Visual Studio 2010 Araçları ' na yönelik iletiyi ayarlama yüklü değil. Eklentiyi yüklemek için lütfen Setup.exe çalıştırın**.
 
         ![Çalışma zamanı kullanılabilirliğini doğrula başlatma koşulunun Özellikler penceresinin ekran görüntüsü](media/setup-project-figure-8.jpg)
 
@@ -329,7 +329,7 @@ Daha fazla bilgi için bkz. [tür denklik ve katıştırılmış birlikte çalı
     1. **Office PAYLAŞıLAN PIA kullanılabilirliğini doğrulamak** Için **(adı)** öğesini değiştirin.
     2. **Koşulu** **hassharedpıa** olarak değiştirin.
     3. **InstallUrl** 'yi boş bırakın.
-    4. **Message** **Excel ile etkileşim kurmak Için iletiyi gerekli bir bileşen olarak değiştirme kullanılamıyor. Lütfen setup.exeçalıştırın**.
+    4.  **Excel ile etkileşim kurmak Için iletiyi gerekli bir bileşen olarak değiştirme kullanılamıyor. Lütfen setup.exeçalıştırın**.
 
     ![Office Paylaşılan PIA başlatma koşulunun Özellikler penceresinin ekran görüntüsü](media/setup-project-figure-10.jpg)
   

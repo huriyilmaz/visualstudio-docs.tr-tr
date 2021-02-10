@@ -5,15 +5,15 @@ ms.date: 01/24/2018
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-science
-ms.openlocfilehash: 854f7d410e327ca92d0c5156d89bc21765e13cc7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: de6a8ffbaa0fb10929d013a351ebffa8e3f4b529
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62999047"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99939441"
 ---
 # <a name="intellisense"></a>IntelliSense
 
@@ -25,19 +25,19 @@ Bir işlev veya başka bir ifade yazarken, IntelliSense zaten girdiklerinize gö
 
 ![IntelliSense otomatik tamamlama menüsü](media/intellisense-auto-complete-menu.png)
 
-**Sekmeye** basmak (veya seçeneklerin nasıl ayarlandığına bağlı olarak **ENTER**veya **boşluk**), açılan menüde seçilen öğeyi ekler. Seçimi ok tuşlarıyla değiştirebilirsiniz.
+**Sekmeye** basmak (veya seçeneklerin nasıl ayarlandığına bağlı olarak **ENTER** veya **boşluk**), açılan menüde seçilen öğeyi ekler. Seçimi ok tuşlarıyla değiştirebilirsiniz.
 
 IntelliSense, R nesnelerinin üyeleri için de öneriler sağlar:
 
 ![Nesne üyeleri için IntelliSense önerileri](media/intellisense-auto-complete-r-objects.png)
 
-**ESC** tuşuna basmak menüyü tamamen geri atar. **CTRL**Space 'i kullanarak geri dönebilirsiniz + **Space**.
+**ESC** tuşuna basmak menüyü tamamen geri atar. **CTRL** Space 'i kullanarak geri dönebilirsiniz + .
 
 `(`Bir işlev çağrısının açılmasını yazmak, kapatmayı ekler `)` ve daha önce gösterildiği gibi imza yardımını getirir:
 
 ![Bir işlev için IntelliSense imza yardımı](media/intellisense-function-signature.png)
 
-Daha sonra **ESC** , açılan pencereyi kapatır; işlev imzaları için, **CTRL** + **vardiyası** + **alanı**ile tekrar getirebilirsiniz.
+Daha sonra **ESC** , açılan pencereyi kapatır; işlev imzaları için, **CTRL** + **vardiyası** + **alanı** ile tekrar getirebilirsiniz.
 
 > [!Tip]
 > Parametresi altındaki metni gizler hale getirmek için **CTRL** tuşuna basılı tutarak parametre yardım metnini yarı saydam yapın.

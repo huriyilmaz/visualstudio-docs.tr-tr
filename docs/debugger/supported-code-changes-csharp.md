@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c7a48ea9-5a7f-4328-a9d7-f0e76fac399d
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 267d9097ebe53b4074bed6c5caf4077006c946eb
-ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
+ms.openlocfilehash: 4fc3f49038a44b2b2bd5b467d6e1874f8a9a9803
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98149215"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99940767"
 ---
 # <a name="supported-code-changes-c-and-visual-basic"></a>Desteklenen kod değişiklikleri (C# ve Visual Basic)
 Düzenle ve devam et, yöntem gövdelerinde birçok kod değişikliği türünü işler. Ancak Yöntem gövdelerinin dışındaki değişiklikler ve Yöntem gövdelerinin içindeki birkaç değişiklik, hata ayıklama sırasında uygulanamaz. Bu desteklenmeyen değişiklikleri uygulamak için, hata ayıklamayı durdurmanız ve kodun yeni bir sürümüyle yeniden başlatmanız gerekir.
@@ -35,9 +35,9 @@ Aşağıdaki tabloda, oturum yeniden başlatmadan hata ayıklama oturumu sıras�
 |Dil öğesi/özelliği|Desteklenen düzenleme işlemi|Sınırlamalar|
 |-|-|-|
 |Türler|Yöntemler, alanlar, oluşturucular, et al|[Evet](https://github.com/dotnet/roslyn/blob/master/docs/wiki/EnC-Supported-Edits.md)|
-|Yineleyiciler|Ekleme veya değiştirme|No|
+|Yineleyiciler|Ekleme veya değiştirme|Hayır|
 |zaman uyumsuz/await ifadeleri|Ekleme veya değiştirme|[Evet](https://github.com/dotnet/roslyn/blob/master/docs/wiki/EnC-Supported-Edits.md)|
-|Dinamik nesneler|Ekleme veya değiştirme|No|
+|Dinamik nesneler|Ekleme veya değiştirme|Hayır|
 |lambda ifadeleri|Ekleme veya değiştirme|[Evet](https://github.com/dotnet/roslyn/blob/master/docs/wiki/EnC-Supported-Edits.md)|
 |LINQ ifadeleri|Ekleme veya değiştirme|[Lambda ifadeleriyle aynı](https://github.com/dotnet/roslyn/blob/master/docs/wiki/EnC-Supported-Edits.md)|
 

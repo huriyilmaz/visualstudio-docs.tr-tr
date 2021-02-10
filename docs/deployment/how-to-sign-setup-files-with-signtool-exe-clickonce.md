@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: 545a4005-d283-4110-9821-c78a9833c250
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d8907018c7f5b131747e802902d88a02ca95c2cc
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: fdfdabf66c48a875f3b4316ac22e1911c141275c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94350978"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99940533"
 ---
 # <a name="how-to-sign-setup-files-with-signtoolexe-clickonce"></a>Nasıl yapılır: kurulum dosyalarını SignTool.exe ile Imzalama (ClickOnce)
-Bir kurulum programını imzalamak için *SignTool.exe* kullanabilirsiniz ( *setup.exe* ). Bu işlem, değiştirilen dosyaların son kullanıcı bilgisayarlarında yüklü olmamasını sağlamaya yardımcı olur.
+Bir kurulum programını imzalamak için *SignTool.exe* kullanabilirsiniz (*setup.exe*). Bu işlem, değiştirilen dosyaların son kullanıcı bilgisayarlarında yüklü olmamasını sağlamaya yardımcı olur.
 
  Varsayılan olarak, ClickOnce imzalı bildirimlere ve imzalı bir kurulum programına sahiptir. Ancak, Kurulum programının parametrelerini daha sonra değiştirmek istiyorsanız Kurulum programını daha sonra imzalamanız gerekir. Kurulum programı imzalandıktan sonra parametreleri değiştirirseniz, imza bozulur.
 
@@ -40,23 +40,23 @@ Bir kurulum programını imzalamak için *SignTool.exe* kullanabilirsiniz ( *set
 
 2. **Çözüm Gezgini** içinde projeyi seçin.
 
-3. **Proje** menüsünde, *ProjectName* **özellikleri** ' ne tıklayın.
+3. **Proje** menüsünde, *ProjectName* **özellikleri**' ne tıklayın.
 
 4. **İmzalama** sayfasında, **ClickOnce bildirimlerinin** işaretini kaldırın.
 
-5. **Yayımla** sayfasında, **Önkoşullar** ' ı tıklatın.
+5. **Yayımla** sayfasında, **Önkoşullar**' ı tıklatın.
 
-6. Tüm önkoşulların seçili olduğunu doğrulayın ve ardından **Tamam** ' a tıklayın.
+6. Tüm önkoşulların seçili olduğunu doğrulayın ve ardından **Tamam**' a tıklayın.
 
-7. **Yayımla** sayfasında, yayımlama ayarlarını doğrulayın ve **Şimdi Yayımla** ' ya tıklayın.
+7. **Yayımla** sayfasında, yayımlama ayarlarını doğrulayın ve **Şimdi Yayımla**' ya tıklayın.
 
      Çözüm, imzasız uygulama bildirimini, imzasız dağıtım bildirimini, sürüme özgü dosyaları ve imzasız Kurulum programını yayımlama klasörü konumuna yayımlar.
 
-8. **Yayımla** sayfasında, **Önkoşullar** ' ı tıklatın.
+8. **Yayımla** sayfasında, **Önkoşullar**' ı tıklatın.
 
 9. Önkoşul iletişim **kutusunda,** **Önkoşul bileşenlerini yüklemek Için Kurulum programı oluştur** seçimini kaldırın.
 
-10. **Yayımla** sayfasında, yayımlama ayarlarını doğrulayın ve **Şimdi Yayımla** ' ya tıklayın.
+10. **Yayımla** sayfasında, yayımlama ayarlarını doğrulayın ve **Şimdi Yayımla**' ya tıklayın.
 
      Çözüm, imzalı uygulama bildirimini, imzalı dağıtım bildirimini ve sürüme özgü dosyaları yayımlama klasörü konumuna yayımlar. İmzasız Kurulum programı, yayımlama işlemi tarafından üzerine yazılmaz.
 

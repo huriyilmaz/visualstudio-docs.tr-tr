@@ -25,15 +25,15 @@ helpviewer_keywords:
 - Ribbon [Office development in Visual Studio], shortcut keys
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: b72270da75d27ed2837540369f74e9c5e87b417b
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 06211bb22ae071132b4cfad67352daa46182d366
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97528007"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99940923"
 ---
 # <a name="ribbon-designer"></a>Şerit Tasarımcısı
   Şerit Tasarımcısı görsel tasarım tuvaldir. Bir Microsoft Office uygulamasının şeritlerine özel sekmeler, gruplar ve denetimler eklemek için şerit tasarımcısını kullanın.
@@ -145,7 +145,7 @@ ms.locfileid: "97528007"
 |**ButtonGroup**|Bir veya daha fazla düğme, iki durumlu düğme, menü, bölünmüş düğme ve galerinin bulunduğu bir grup. Bir grup veya menüye düğme grubu ekleyebilirsiniz.|
 |**CheckBox**|Bir seçeneği açmak veya kapatmak için seçilen veya temizlenmiş bir kutu.|
 |**ComboBox**|Liste kutusu eklenmiş bir düzenleme kutusu. Kullanıcılar kendi tercih edebilir veya seçebilir. Kutu geçerli seçimi görüntüler. <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Items%2A>Şerit Office uygulamasına yüklenmeden önce veya sonra çalışma zamanında öğe eklemek ve kaldırmak için özelliğini kullanın.|
-|**DropDown**|Kullanıcının seçebileceğiniz öğelerin listesi. Kullanıcı açılan listede yeni bir öğe yazamaz.<br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Items%2A>Listeye öğe eklemek için özelliğini kullanın. Çalışma zamanında öğeleri ekleyebilir ve kaldırabilirsiniz.<br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Buttons%2A>Listeye düğme eklemek için özelliğini kullanın. Ancak, Şerit Office uygulamasına yüklendikten sonra çalışma zamanında düğme ekleyemez ve kaldıramazsınız.|
+|**Listenin**|Kullanıcının seçebileceğiniz öğelerin listesi. Kullanıcı açılan listede yeni bir öğe yazamaz.<br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Items%2A>Listeye öğe eklemek için özelliğini kullanın. Çalışma zamanında öğeleri ekleyebilir ve kaldırabilirsiniz.<br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.Buttons%2A>Listeye düğme eklemek için özelliğini kullanın. Ancak, Şerit Office uygulamasına yüklendikten sonra çalışma zamanında düğme ekleyemez ve kaldıramazsınız.|
 |**EditBox**|Kullanıcının metin yazbileceği bir kutu.|
 |**Galeri**|Kullanıcıların seçebileceğiniz görsel seçimlerden oluşan bir dizi veya kılavuz sunan bir menü. Menüdeki seçimlerin yerleşimini kontrol edebilirsiniz. <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ColumnCount%2A> <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.RowCount%2A> Galerinin öğe ve düğmelerini görüntüleyecek olan satır ve sütun sayısını belirtmek için ve özelliklerini kullanın.|
 |**Etiketle**|Şeritteki denetimleri tanımlamak için kullanabileceğiniz metin.|

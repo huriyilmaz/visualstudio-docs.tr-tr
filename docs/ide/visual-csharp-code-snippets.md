@@ -11,15 +11,15 @@ helpviewer_keywords:
 - C#, code snippets
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 46b2d231f1fa9a0e90538c426f48c86e5fafecbe
-ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
+ms.openlocfilehash: e4656e0769075be26db5bd06108093a49fb5e2af
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96478763"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99941547"
 ---
 # <a name="c-code-snippets"></a>C# kod parçacıkları
 
@@ -33,7 +33,7 @@ Kod parçacıkları, kodunuza hızlı bir şekilde ekleyebileceğiniz kod parça
 
 Varsayılan olarak, aşağıdaki kod parçacıkları C# için Visual Studio 'Ya eklenmiştir.
 
-|Ad (veya kısayol)|Açıklama|Kod parçacığı eklemek için geçerli konumlar|
+|Ad (veya kısayol)|Description|Kod parçacığı eklemek için geçerli konumlar|
 | - |-----------------| - |
 |#if|Bir [#if](/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-if) yönergesi ve [#endif](/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-endif) yönergesi oluşturur.|Yerdeki.|
 |#region|Bir [#region](/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-region) yönergesi ve [#endregion](/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-endregion) yönergesi oluşturur.|Yerdeki.|
@@ -63,7 +63,7 @@ Varsayılan olarak, aşağıdaki kod parçacıkları C# için Visual Studio 'Ya 
 |Prop|[Otomatik uygulanan bir özellik](/dotnet/csharp/programming-guide/classes-and-structs/auto-implemented-properties) bildirimi oluşturur.|Bir sınıf veya yapı içinde.|
 |propfull|Ve erişimcileri ile bir özellik bildirimi oluşturur `get` `set` .|Bir sınıf veya yapı içinde.|
 |propg|Özel erişimcisi olan salt okunurdur bir [Otomatik uygulanmış özellik](/dotnet/csharp/programming-guide/classes-and-structs/auto-implemented-properties) oluşturur `set` .|Bir sınıf veya yapı içinde.|
-|SIM|Statik bir [static](/dotnet/csharp/language-reference/keywords/static) [int](/dotnet/csharp/language-reference/keywords/int) Main yöntemi bildirimi oluşturur.|Bir sınıf veya yapı içinde.|
+|SIM|Statik bir [](/dotnet/csharp/language-reference/keywords/static) [int](/dotnet/csharp/language-reference/keywords/int) Main yöntemi bildirimi oluşturur.|Bir sınıf veya yapı içinde.|
 |struct|Bir [struct](/dotnet/csharp/language-reference/keywords/struct) bildirimi oluşturur.|Bir ad alanı içinde (genel ad alanı dahil), bir sınıf veya yapı.|
 |SVM|[Statik](/dotnet/csharp/language-reference/keywords/static) [void](/dotnet/csharp/language-reference/keywords/void) Main yöntemi bildirimi oluşturur.|Bir sınıf veya yapı içinde.|
 |switch|Bir [anahtar](/dotnet/csharp/language-reference/keywords/switch) bloğu oluşturur.|Bir yöntem içinde, bir Dizin Oluşturucu, bir özellik erişimcisi veya bir olay erişimcisi.|
