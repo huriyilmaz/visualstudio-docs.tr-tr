@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: ddc96c4c-0600-46c1-8267-7dce4c44ad24
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ac857d961b1ae736645ba2cfda3f1ef5755d0fa1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4d7cc99747571feb5b443f10355d867da7c22f44
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85770283"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99952921"
 ---
 # <a name="how-to-set-ide-accessibility-options"></a>Nasıl yapılır: IDE erişilebilirlik seçeneklerini ayarlama
 
@@ -54,7 +54,7 @@ Tümleşik geliştirme ortamındaki (IDE) pencereleri, çalışma şeklinize en 
 
 ### <a name="change-the-size-of-text"></a>Metin boyutunu değiştirme
 
-**Araç** **Command** **Immediate** **Output**  >  **seçenekleri**  >  **ortam**  >  **yazı tiplerini ve renklerini**kullanarak komut penceresi, anlık pencere ve çıkış penceresi gibi metin tabanlı araç pencerelerinin ayarlarını değiştirebilirsiniz.
+**Araç**     >  **seçenekleri**  >  **ortam**  >  **yazı tiplerini ve renklerini** kullanarak komut penceresi, anlık pencere ve çıkış penceresi gibi metin tabanlı araç pencerelerinin ayarlarını değiştirebilirsiniz.
 
 **Ayarları göster** açılan listesinde **[tüm metin araç pencereleri]** seçeneğini belirlediğinizde, varsayılan ayar **öğe ön planı** ve **öğe arka plan** açılan listelerinde **varsayılan** olarak listelenir. Bu ayarları değiştirmek için **özel** düğmesini seçin.
 
@@ -62,7 +62,7 @@ Ayrıca, metnin düzenleyicide nasıl görüntüleneceği için ayarları deği�
 
 1. **Araçlar** menüsünde **Seçenekler**' i seçin.
 
-1. **Ortam**  >  **yazı tiplerini ve renklerini**seçin.
+1. **Ortam**  >  **yazı tiplerini ve renklerini** seçin.
 
 1. **Ayarları göster** açılan menüsünde bir seçenek belirleyin.
 
@@ -83,7 +83,7 @@ Ayrıca, metnin düzenleyicide nasıl görüntüleneceği için ayarları deği�
     > [!TIP]
     > Metin tabanlı araç pencereleri ve düzenleyicilerinin metin boyutunu sıfırlamak için **Varsayılanları Kullan**' ı seçin.
 
-7. **Tamam ' ı**seçin.
+7. **Tamam ' ı** seçin.
 
 ### <a name="change-the-colors-that-are-used-in-the-ide"></a>IDE 'de kullanılan renkleri değiştirme
 
@@ -93,16 +93,16 @@ Metin, kenar boşluğu göstergeleri, boşluk ve düzenleyicideki kod öğeleri 
 
 1. **Ortam** klasöründe, **yazı tipleri ve renkler**' i seçin.
 
-1. **Ayarları göster**bölümünde **metin düzenleyici**' yi seçin.
+1. **Ayarları göster** bölümünde **metin düzenleyici**' yi seçin.
 
-1. **Görüntüleme öğelerinden** **düz metin**, **Gösterge kenar boşluğu**, **görünür**boşluk, **HTML öznitelik adı**veya **XML özniteliği**gibi görüntülemesi gereken görünümü olan bir öğe seçin.
+1. **Görüntüleme öğelerinden** **düz metin**, **Gösterge kenar boşluğu**, **görünür** boşluk, **HTML öznitelik adı** veya **XML özniteliği** gibi görüntülemesi gereken görünümü olan bir öğe seçin.
 
-1. Aşağıdaki seçeneklerden görüntüleme ayarları ' nı seçin: **öğe ön planı**, **öğe arka planı**ve **kalın**.
+1. Aşağıdaki seçeneklerden görüntüleme ayarları ' nı seçin: **öğe ön planı**, **öğe arka planı** ve **kalın**.
 
-1. **Tamam ' ı**seçin.
+1. **Tamam ' ı** seçin.
 
 > [!TIP]
-> İşletim sisteminizdeki tüm uygulama pencerelerinin yüksek karşıtlık renklerini kullanmak için **sol alt** + **Sol SHIFT** + **PrtScn**tuşuna basın. Visual Studio açıksa, yüksek karşıtlık renklerini tam olarak uygulamak için kapatın ve yeniden açın.
+> İşletim sisteminizdeki tüm uygulama pencerelerinin yüksek karşıtlık renklerini kullanmak için **sol alt** + **Sol SHIFT** + **PrtScn** tuşuna basın. Visual Studio açıksa, yüksek karşıtlık renklerini tam olarak uygulamak için kapatın ve yeniden açın.
 
 ## <a name="toolbars"></a>Araç Çubukları
 
@@ -120,13 +120,13 @@ Araç çubuğu kullanılabilirliğini ve erişilebilirliğini geliştirmek için
 
 1. **Seçimi Değiştir**' i seçin.
 
-1. **Görüntü ve metin**seçin.
+1. **Görüntü ve metin** seçin.
 
 ### <a name="to-modify-the-displayed-text-in-a-button"></a>Bir düğmedeki görüntülenecek metni değiştirmek için
 
 1. **Seçimi Değiştir**' i yeniden seçin.
 
-1. **Ad**alanına bitişik, Ekle seçili düğme için yeni bir başlık girin.
+1. **Ad** alanına bitişik, Ekle seçili düğme için yeni bir başlık girin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

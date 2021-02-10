@@ -7,15 +7,15 @@ ms.date: 02/05/2019
 ms.topic: quickstart
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f80dd85e1cc8f93784ed938ef1788730b3c926e8
-ms.sourcegitcommit: a7944c325bedd8efbb244452741864089a02f5db
+ms.openlocfilehash: 2dd480bb214acf2529d271d085711f21effea23a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91947823"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99952934"
 ---
 # <a name="first-look-at-the-visual-studio-ide"></a>Visual Studio IDE’ye ilk bakış
 
@@ -83,7 +83,7 @@ Visual Studio 'nun özelliklerini araştırmaya devam etmek için yeni bir proje
 
 ::: moniker range="vs-2017"
 
-1. **Başlangıç sayfasında**, **Yeni proje**altındaki arama kutusuna, proje türleri listesini ad veya dil türlerine "JavaScript" içeren olanlarla filtrelemek için **JavaScript** yazın.
+1. **Başlangıç sayfasında**, **Yeni proje** altındaki arama kutusuna, proje türleri listesini ad veya dil türlerine "JavaScript" içeren olanlarla filtrelemek için **JavaScript** yazın.
 
    ![Visual Studio başlangıç sayfasında proje şablonları ara](media/start-page-search-templates.png)
 
@@ -98,7 +98,7 @@ Visual Studio 'nun özelliklerini araştırmaya devam etmek için yeni bir proje
 
 ## <a name="solution-explorer"></a>Çözüm Gezgini
 
-Genellikle Visual Studio 'nun sağ tarafındaki **Çözüm Gezgini**, projenizde, çözümünüzde veya kod klasörünüzdeki dosya ve klasörler hiyerarşisinin grafik bir gösterimini gösterir. Hiyerarşiye gözatabilir ve **Çözüm Gezgini**bir dosyaya gidebilirsiniz.
+Genellikle Visual Studio 'nun sağ tarafındaki **Çözüm Gezgini**, projenizde, çözümünüzde veya kod klasörünüzdeki dosya ve klasörler hiyerarşisinin grafik bir gösterimini gösterir. Hiyerarşiye gözatabilir ve **Çözüm Gezgini** bir dosyaya gidebilirsiniz.
 
 ![Visual Studio 'da Çözüm Gezgini](media/quickstart-IDE-solution-explorer.png)
 
@@ -120,7 +120,7 @@ Visual Studio gruplarının üst kısmında bulunan menü çubuğu, kategoriler 
 
 **Çıkış** penceresinde, projenizi ve kaynak denetimi sağlayıcınızdan oluşturduğunuz çıkış iletileri görüntülenir.
 
-Ayrıca, bazı derleme çıktısını görmek için projeyi derlim. **Build** menüsünde **Build Solution**öğesini seçin. **Çıkış** penceresi, odağı otomatik olarak edinir ve başarılı bir derleme iletisi görüntüler.
+Ayrıca, bazı derleme çıktısını görmek için projeyi derlim. **Build** menüsünde **Build Solution** öğesini seçin. **Çıkış** penceresi, odağı otomatik olarak edinir ve başarılı bir derleme iletisi görüntüler.
 
 ![Visual Studio 'da çıkış penceresi](media/build-output-minimal.png)
 
@@ -134,7 +134,7 @@ Arama kutusu, Visual Studio 'da oldukça çok şey yapmanın hızlı ve kolay bi
 
    **Seçenekler** iletişim kutusu, **derleme ve çalıştırma** seçenekleri sayfasına açılır.
 
-1. **MSBuild proje derlemesi çıkış ayrıntı düzeyi**altında **normal**' i seçin ve ardından **Tamam**' a tıklayın.
+1. **MSBuild proje derlemesi çıkış ayrıntı düzeyi** altında **normal**' i seçin ve ardından **Tamam**' a tıklayın.
 
 1. **Çözüm Gezgini** ' de **NodejsWebApp1** projesine sağ tıklayıp bağlam menüsünden **yeniden oluştur** ' u seçerek projeyi yeniden derleyin.
 

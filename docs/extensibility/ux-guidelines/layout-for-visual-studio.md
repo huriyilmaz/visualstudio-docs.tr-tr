@@ -7,15 +7,15 @@ ms.topic: conceptual
 ms.assetid: c19e3022-047c-43b6-a046-a82717efed4f
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3e6c90831c39f0e378dd9060397c68592ec73384
-ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
+ms.openlocfilehash: 16a4178231c575f590a13b8205cd872668f46143
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/04/2021
-ms.locfileid: "97863668"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99951946"
 ---
 # <a name="layout-for-visual-studio"></a>Visual Studio İçin Düzen
 Visual Studio iletişim kutularının çoğunluğu, standart [Windows Masaüstü iletişim kutusu düzen ilkelerini](/windows/desktop/uxguide/win-dialog-box)izleyen temalı iletişim kutuları olan [araç kutusu yerleşimidir](../../extensibility/ux-guidelines/layout-for-visual-studio.md#BKMK_UtilityDialogLayout). Visual Studio, Kullanıcı arabirimini yenilemeye yönelik olarak taşındıkça, daha belirgin birçok iletişim kutusu, bunları ürün tanımlama deneyimleri olarak belirleyen yeni bir tasarıma sahiptir. Bu [temalı iletişim kutusu düzeninde](../../extensibility/ux-guidelines/layout-for-visual-studio.md#BKMK_ThemedDialogLayout) temalı bir görünüm vardır.

@@ -8,19 +8,19 @@ ms.prod: visual-studio-windows
 ms.topic: tutorial
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 dev_langs:
 - CSharp
 ms.workload:
 - dotnet
 - dotnetcore
 monikerRange: vs-2017
-ms.openlocfilehash: 6989de1c5b4542998d048e5eadd47f48dc7e05b1
-ms.sourcegitcommit: cfeffe2364275a347db0ba2dce36d8e80001c081
+ms.openlocfilehash: 97bfe7178d3bd744d1e441f8428cd38e8241b721
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99181298"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99951933"
 ---
 # <a name="tutorial-open-a-project-from-a-repo-in-visual-studio-2017"></a>Öğretici: Visual Studio 2017 ' de bir depoyu bir proje açın
 
@@ -43,7 +43,7 @@ Bu öğreticide, bir depoya ilk kez bağlanmak ve ardından projeden bir proje a
 
     ![Yerel Git depoları bölümünden kopyayı seçin](./media/open-proj-repo-local-git-repo-clone.png)
 
-1. **_Kopyalanacak bir git deposunun URL 'sini girin_*_, deponuzu URL 'sini yazın veya yapıştırın ve ardından _ ENTER tuşuna basın***. (GitHub 'da oturum açmak için bir istem alabilirsiniz; varsa, bunu yapın.)
+1. ***Kopyalanacak bir git deposunun URL 'Sini girin** _, deponuzu URL 'sini yazın veya yapıştırın ve ardından _ * ENTER * * tuşuna basın. (GitHub 'da oturum açmak için bir istem alabilirsiniz; varsa, bunu yapın.)
 
    Visual Studio deponuzu klonladıktan sonra, Takım Gezgini kapanır ve Çözüm Gezgini açılır. *Çözümlerin listesini görüntülemek için yukarıdaki çözüm ve klasörler ' e tıkladiğini* belirten bir ileti görüntülenir. **Çözümler ve klasörler ' i** seçin.
 

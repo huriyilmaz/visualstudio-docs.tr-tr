@@ -14,15 +14,15 @@ helpviewer_keywords:
 - profiling [SharePoint development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 66e19f7744a56d147fb0760c6f20254ea4308603
-ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
+ms.openlocfilehash: 796c41ae50a33f00f72e0286d5e9680f9016cf58
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95970096"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99952570"
 ---
 # <a name="walkthrough-profile-a-sharepoint-application"></a>İzlenecek yol: SharePoint uygulaması profili oluşturma
   Bu izlenecek yol, bir SharePoint uygulamasının performansını iyileştirmek için Visual Studio 'da profil oluşturma araçlarının nasıl kullanılacağını gösterir. Örnek uygulama, özellik olay alıcısının performansını düşürür bir boşta kalma döngüsü içeren bir SharePoint özellik olay alıcıdır. Visual Studio Profiler, projenin *etkin yol* olarak da bilinen en pahalı (en yavaş performanslı) kısmını bulmanıza ve ortadan kaldırmanıza olanak sağlar.
@@ -51,7 +51,7 @@ ms.locfileid: "95970096"
 
 ### <a name="to-create-a-sharepoint-project"></a>SharePoint projesi oluşturmak için
 
-1. **File**  >  **New**  >  **Yeni proje** iletişim kutusunu göstermek için menü çubuğunda dosya yeni **Proje** ' yi seçin.
+1.   >    >  **Yeni proje** iletişim kutusunu göstermek için menü çubuğunda dosya yeni **Proje** ' yi seçin.
 
 2. **Visual C#** veya **Visual Basic** altında **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
 

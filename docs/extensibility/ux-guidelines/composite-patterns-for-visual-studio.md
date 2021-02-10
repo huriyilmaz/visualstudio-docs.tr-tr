@@ -7,15 +7,15 @@ ms.topic: conceptual
 ms.assetid: e48ecfb2-f4b5-4d3a-b4a2-7a4d62fa4ec0
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 719ce0ac88761599fbed7da90643fd8a9d79db69
-ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
+ms.openlocfilehash: c8ac314a2ec49b805fc87badf6b63a719b8511e8
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/21/2020
-ms.locfileid: "97715827"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99952102"
 ---
 # <a name="composite-patterns-for-visual-studio"></a>Visual Studio İçin Bileşik Desenler
 Bileşik desenler, etkileşim ve tasarım öğelerini ayrı yapılandırmalarda birleştirir. Tutarlılığa göre Visual Studio 'daki en önemli bileşik desenlerden bazıları şunlardır:
@@ -70,7 +70,7 @@ Bileşik desenler, etkileşim ve tasarım öğelerini ayrı yapılandırmalarda 
 
 ### <a name="other-charting-considerations"></a>Diğer grafik konuları
 
-#### <a name="color"></a>Color
+#### <a name="color"></a>Renk
  Visual Studio 'da kullanılmak üzere tanımlanan belirli bir grafik renkleri paleti vardır. Palet, renk değişimlerinin ana türleri için erişilebilir ve renklerin çok dar dilimleri olarak kullanılması durumunda bile renk yapılabilir. Bu renkleri, Kullanıcı arabiriminizdeki herhangi bir grafik veya grafik türü için herhangi bir bileşimde kullanabilirsiniz. Birçok farklı renge ihtiyacınız yoksa yedi rengin hepsini kullanmanız gerekmez. Bu renkler herhangi bir ön plan öğeleriyle kullanılmak üzere tasarlanmamıştır, bu nedenle metin veya glifleri bu renklerin üzerine yerleştirmeyin. Bu kuleler, **araçlar > seçenekleri** altında (bkz. [son kullanıcılar için renkleri gösterme](../../extensibility/ux-guidelines/colors-and-styling-for-visual-studio.md#BKMK_ExposingColorsForEndUsers)) sabit kodlanmış ve Kullanıcı özelleştirmesine açık olmalıdır.
 
 |Basılı|Onaltılık|RGB|
@@ -327,7 +327,7 @@ Bileşik desenler, etkileşim ve tasarım öğelerini ayrı yapılandırmalarda 
 
 #### <a name="mouse-interaction"></a>Fare etkileşimi
 
-|Girdi|Sonuç|
+|Giriş|Sonuç|
 |-----------|------------|
 |Seçilmemiş bir nesneye tıklayın|Nesneyi seçer ve nesne yeniden boyutlandırılabilir ise kesikli çizgi ve seçim tutamaçları görüntüler.|
 |Seçili bir nesneye tıklayın|Nesne destekliyorsa, yerinde düzenlemesini etkinleştirir. Nesnenin dışına tıklamak yerinde Düzenle modunu devre dışı bırakır.|
@@ -342,7 +342,7 @@ Bileşik desenler, etkileşim ve tasarım öğelerini ayrı yapılandırmalarda 
 
 #### <a name="keyboard-interaction"></a>Klavye etkileşimi
 
-|Girdi|Sonuç|
+|Giriş|Sonuç|
 |-----------|------------|
 |Tab|Odak göstergesini düzenleyicideki nesnelerin mantıksal sıralaması arasında kaydırır. Bu, **TabIndex** (veya eşdeğeri) özellik değerine, nesne oluşturma sırasına ve düzenleyicinin genel amacına bağlı olarak soldan sağa veya yukarıdan aşağıya doğru olabilir. SHIFT + TAB odak göstergesinin yönünü tersine çevirir.|
 |Boşluk çubuğu|Tuş vuruşu korunurken kaydırma modunu etkinleştirir. Görünüm penceresinin konumunu kaydırmak için ek fare girişi gerekir.|
@@ -362,7 +362,7 @@ Bileşik desenler, etkileşim ve tasarım öğelerini ayrı yapılandırmalarda 
 #### <a name="graphical-containers"></a>Grafik kapsayıcıları
  Grafik düzenleyicileri, bazı durumlarda Windows Forms panel denetimi veya HTML Tasarımcısı içindeki kılavuz düzen denetimi gibi diğer grafik nesneleri için kapsayıcılar sağlar. Düzenleyiciniz diğer grafik nesneleri için kapsayıcılar sağlıyorsa, şu seçim modelinin yalnızca kapsayıcı için kullanılması gerekir (kapsayıcıdaki nesneler, yukarıda açıklandığı gibi standart modeli izler):
 
-|Girdi|Sonuç|
+|Giriş|Sonuç|
 |-----------|------------|
 |Kapsayıcıya tek tıklama|Kapsanan nesnelerden hiçbirini doğrudan seçmeden kapsayıcı nesnesini seçer. Kapsayıcı, standart fare ve klavye girişi (yukarıda açıklandığı gibi) ile taşınabilir ve/veya yeniden boyutlandırılabilir. Kapsanan nesneler kapsayıcıya göre taşınır, ancak aynı zamanda doğrudan seçilmedikleri takdirde içerilen nesneler yeniden boyutlandırılmaz.|
 |Kapsayıcının sınır bölgesinin üzerine gelme|Kapsayıcının taşınabileceğini belirten, fareyi taşıma imlecine dönüştürür.|
@@ -422,7 +422,7 @@ Bileşik desenler, etkileşim ve tasarım öğelerini ayrı yapılandırmalarda 
 ##### <a name="renaming"></a>Adlandırıl
  Ağaçtaki düğümler yeniden adlandırmayı destekliyorsa, yeniden adlandırma işlemi yerinde yapılmalıdır. Yerinde işlem, Visual Studio 'daki tüm ağaç denetimlerinde standart olmalıdır. Yerinde değiştirme modunu hemen etkinleştiren, Kullanıcı girişini kabul etmeye izin veren, düğüm adının tamamını kapsayan metin seçimiyle birlikte yeniden adlandırma komutu sağlayın. Düğüm bir dosyayı temsil ediyorsa, dosya adı uzantıyı içermelidir. Seçim vurgusu, uzantının değil yalnızca dosya adının gövdesini içermelidir.
 
-|Girdi|Sonuç|
+|Giriş|Sonuç|
 |-----------|------------|
 |Enter tuşu|Yeniden adlandırma işlemini kaydeder|
 |ESC tuşu|Yeniden adlandırma işlemini iptal eder|

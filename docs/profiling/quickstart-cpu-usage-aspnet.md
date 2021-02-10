@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Diagnostics Tools, CPU Usage
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - aspnet
-ms.openlocfilehash: f79a9f5178959b9a1ec79dc3c22d8da9c0f6735e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7170983732ff1350061629e1e8aa4ec88fad3fa1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80411984"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99952843"
 ---
 # <a name="quickstart-analyze-cpu-usage-data-in-visual-studio-aspnet-core"></a>Hızlı başlangıç: Visual Studio 'da CPU kullanım verilerini çözümleme (ASP.NET Core)
 
@@ -34,7 +34,7 @@ Hata ayıklayıcı (**Tanılama araçları** penceresi) ile profil oluşturma ar
    ::: moniker range="vs-2017"
    Üstteki menü çubuğundan **Dosya** > **Yeni** > **Proje**' yi seçin.
 
-   Sol bölmedeki **Yeni proje** iletişim kutusunda, **Visual C#**' ı genişletin ve ardından **Web**' i seçin. Orta bölmede **ASP.NET Web uygulaması (.NET Core)** öğesini seçin. Sonra *MyProfilingApp_MVC*projeyi adlandırın.
+   Sol bölmedeki **Yeni proje** iletişim kutusunda, **Visual C#**' ı genişletin ve ardından **Web**' i seçin. Orta bölmede **ASP.NET Web uygulaması (.NET Core)** öğesini seçin. Sonra *MyProfilingApp_MVC* projeyi adlandırın.
 
    > [!NOTE]
    > **ASP.NET Web uygulaması (.NET Core)** proje şablonunu görmüyorsanız, **Yeni proje** iletişim kutusunun sol bölmesindeki **Visual Studio yükleyicisi aç** bağlantısını seçin. Visual Studio Yükleyicisi başlatılır. **ASP.net ve Web geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
@@ -61,7 +61,7 @@ Hata ayıklayıcı (**Tanılama araçları** penceresi) ile profil oluşturma ar
 
    Visual Studio yeni projenizi açar.
 
-1. Çözüm Gezgini, modeller klasörüne sağ tıklayın ve sınıf **Ekle**' yi seçin  >  **Class**.
+1. Çözüm Gezgini, modeller klasörüne sağ tıklayın ve sınıf **Ekle**' yi seçin  >  .
 
 1. Yeni sınıfı adlandırın `Data.cs` ve **Ekle**' yi seçin.
 
@@ -215,7 +215,7 @@ Hata ayıklayıcı (**Tanılama araçları** penceresi) ile profil oluşturma ar
 
 1. **Tanılama araçları** pencere, siz kapatmadığınız müddetçe zaten görünür. Pencereyi yeniden getirmek için, **Hata Ayıkla**  >  **Windows**  >  **Tanılama araçları göster**' e tıklayın.
 
-1. Hata **Debug**  >  **ayıklamayı Başlat** ' a tıklayın (veya araç çubuğundan veya **F5**' i **başlatın** ).
+1. Hata   >  **ayıklamayı Başlat** ' a tıklayın (veya araç çubuğundan veya **F5**' i **başlatın** ).
 
 1. Uygulamanın yüklenmesi bittiğinde, yeni kodu çalıştırmaya başlamak için Web sayfasının en üstündeki uygun bağlantıya tıklayın.
 
@@ -263,7 +263,7 @@ CPU kullanımı altındaki işlevlerin listesini inceleyerek, en çok iş yapan 
 
     ![Tanılama araçları arayan/çağrılan görünümü](../profiling/media/quickstart-cpu-usage-caller-callee-aspnet.png)
 
-    Bu görünümde, seçilen işlev başlıkta ve **geçerli işlev** kutusunda ( `ServerClass::GetNumber` Bu örnekte) görüntülenir. Geçerli işlevi çağıran işlev sol tarafta **çağıran işlevin**altında gösterilir ve geçerli işlev tarafından çağrılan işlevler sağ taraftaki **çağrılan işlevler** kutusunda gösterilir. (Geçerli işlevi değiştirmek için iki kutuyu da seçebilirsiniz.)
+    Bu görünümde, seçilen işlev başlıkta ve **geçerli işlev** kutusunda ( `ServerClass::GetNumber` Bu örnekte) görüntülenir. Geçerli işlevi çağıran işlev sol tarafta **çağıran işlevin** altında gösterilir ve geçerli işlev tarafından çağrılan işlevler sağ taraftaki **çağrılan işlevler** kutusunda gösterilir. (Geçerli işlevi değiştirmek için iki kutuyu da seçebilirsiniz.)
 
     Bu görünümde, işlevin tamamlanışında toplam süre (MS) ve Toplam uygulama çalışma zamanının yüzdesi gösterilir.
 

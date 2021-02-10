@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: e3f26ac2-6163-42e1-a764-22cfea5a3bc6
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: a5ba512642e1a63d9d39856f96194d717583d44f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a68b03f594ad686f2b3e23aab52cabfe4fa5d92a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80701179"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99952115"
 ---
 # <a name="scccheckin-function"></a>SccCheckin işlevi
 Bu işlev, önceden kullanıma alınmış dosyaları kaynak denetim sistemine iade eder, değişiklikleri depolayarak ve yeni bir sürüm oluşturuyor. Bu işlev bir sayı ve iade edilecek dosyaların bir adı dizisiyle çağrılır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
 SCCRTN SccCheckin (

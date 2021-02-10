@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, extending project items
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 3a360b6a336f64920c0144f742e98a64282eeeec
-ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
+ms.openlocfilehash: 74d57ae4beca074fbf7711ea3d732d903d8faa4b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95970410"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99952687"
 ---
 # <a name="walkthrough-extend-a-sharepoint-project-item-type"></a>İzlenecek yol: bir SharePoint proje öğesi türünü genişletme
   SharePoint 'te Iş verileri bağlantısı (BDC) hizmeti için bir model oluşturmak üzere **Iş verileri bağlantı modeli** Proje öğesini kullanabilirsiniz. Varsayılan olarak, bu proje öğesini kullanarak bir model oluşturduğunuzda, modeldeki veriler kullanıcılara gösterilmez. Ayrıca, kullanıcıların verileri görüntülemesini sağlamak için SharePoint 'te bir dış liste oluşturmanız gerekir.
@@ -203,7 +203,7 @@ ms.locfileid: "95970410"
 
 3. Generateexternalverists kod dosyasını açın ve sonra yöntemdeki kodun ilk satırına bir kesme noktası ekleyin `GenerateExternalDataLists_Execute` .
 
-4. **F5** tuşunu seçerek veya menü **çubuğunda hata ayıklamayı** Başlat ' ı seçerek hata ayıklamayı başlatın  >  **Start Debugging**.
+4. **F5** tuşunu seçerek veya menü **çubuğunda hata ayıklamayı** Başlat ' ı seçerek hata ayıklamayı başlatın  >  .
 
      Visual Studio, uzantıyı%UserProfile%\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Contoso\External Data List Generator\1.0 dizinine yükleyerek Visual Studio 'nun deneysel bir örneğini başlatır. Bu Visual Studio örneğinde Proje öğesini test edersiniz.
 
@@ -231,7 +231,7 @@ ms.locfileid: "95970410"
 
 11. Visual Studio 'nun diğer örneğindeki kodun, `Initialize` ProjectItemExtension kod dosyası yönteminde ayarladığınız kesme noktasında durduğunu doğrulayın.
 
-12. Visual Studio 'nun durdurulmuş örneğinde **F5** tuşuna basın veya menü çubuğunda **hata** Ayıkla ' yı seçerek  >  **Continue** projede hata ayıklamaya devam edin.
+12. Visual Studio 'nun durdurulmuş örneğinde **F5** tuşuna basın veya menü çubuğunda **hata** Ayıkla ' yı seçerek  >   projede hata ayıklamaya devam edin.
 
 13. Visual Studio 'nun deneysel örneğinde **F5** tuşunu seçin veya menü **çubuğunda hata**  >  **ayıklamayı Başlat** ' ı seçerek **TestBDCModel** projesini oluşturun, dağıtın ve çalıştırın.
 

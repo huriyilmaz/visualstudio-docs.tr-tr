@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 06cd6d7f-8dc1-4e49-8a72-cc9e331d7bca
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 17cb665d1b5ae399647868652f2b1e73fcd4543e
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: ff8f195b6d77aeab9a01a6f3f6262f4024de1153
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93046680"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99951660"
 ---
 # <a name="visual-studio-integration-msbuild"></a>Visual Studio tümleştirmesi (MSBuild)
 
@@ -38,7 +38,7 @@ Visual Studio, yönetilen projeleri yüklemek ve derlemek için MSBuild barınd�
 
 ## <a name="project-file-name-extensions"></a>Proje dosya adı uzantıları
 
- *MSBuild.exe* , düzeniyle eşleşen herhangi bir proje dosya adı uzantısını tanır *. \* PROJ* . Ancak, Visual Studio yalnızca projeyi yükleyecek dile özgü proje sistemini belirleyen bu proje dosya adı uzantılarının bir alt kümesini tanır. Visual Studio 'Nun dilden bağımsız MSBuild tabanlı proje sistemi yoktur.
+ *MSBuild.exe* , düzeniyle eşleşen herhangi bir proje dosya adı uzantısını tanır *. \* PROJ*. Ancak, Visual Studio yalnızca projeyi yükleyecek dile özgü proje sistemini belirleyen bu proje dosya adı uzantılarının bir alt kümesini tanır. Visual Studio 'Nun dilden bağımsız MSBuild tabanlı proje sistemi yoktur.
 
  Örneğin, C# proje sistemi *. csproj* dosyalarını yükler, ancak Visual Studio bir *. xxproj* dosyasını yükleyemez. Rastgele bir dildeki kaynak dosyaları için bir proje dosyası, Visual Studio 'da yüklenecek Visual Basic veya C# proje dosyaları ile aynı uzantıyı kullanmalıdır.
 
@@ -60,7 +60,7 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
 
 ## <a name="additional-build-actions"></a>Ek derleme eylemleri
 
- Visual Studio, bir projedeki dosyanın öğe türü adını **dosya özellikleri** penceresinin **Build Action** özelliği ile değiştirmenize olanak sağlar. **Derleme** , **EmbeddedResource** , **içerik** ve **none** öğe türü adları her zaman projenizde olan diğer öğe türü adlarıyla birlikte bu menüde listelenir. Bu menüde her zaman özel öğe türü adlarının kullanılabilir olduğundan emin olmak için adları adlı bir öğe türüne ekleyebilirsiniz `AvailableItemName` . Örneğin, proje dosyanıza aşağıdakileri eklemek, özel tür **JScript** 'i içeri aktarılan tüm projeler için bu menüye ekler:
+ Visual Studio, bir projedeki dosyanın öğe türü adını **dosya özellikleri** penceresinin **Build Action** özelliği ile değiştirmenize olanak sağlar. **Derleme**, **EmbeddedResource**, **içerik** ve **none** öğe türü adları her zaman projenizde olan diğer öğe türü adlarıyla birlikte bu menüde listelenir. Bu menüde her zaman özel öğe türü adlarının kullanılabilir olduğundan emin olmak için adları adlı bir öğe türüne ekleyebilirsiniz `AvailableItemName` . Örneğin, proje dosyanıza aşağıdakileri eklemek, özel tür **JScript** 'i içeri aktarılan tüm projeler için bu menüye ekler:
 
 ```xml
 <ItemGroup>
@@ -99,7 +99,7 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
 
 ## <a name="display-properties-and-items"></a>Özellikleri ve öğeleri görüntüle
 
- Visual Studio belirli özellik adlarını ve değerlerini tanır. Örneğin, bir projedeki aşağıdaki özellik, **Windows uygulamasının** **Proje Tasarımcısı** 'ndaki **uygulama türü** kutusunda görünmesine neden olur.
+ Visual Studio belirli özellik adlarını ve değerlerini tanır. Örneğin, bir projedeki aşağıdaki özellik, **Windows uygulamasının** **Proje Tasarımcısı**'ndaki **uygulama türü** kutusunda görünmesine neden olur.
 
 ```xml
 <OutputType>WinExe</OutputType>
@@ -148,23 +148,23 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
 
 #### <a name="to-unload-and-edit-a-project-file-in-visual-studio"></a>Visual Studio'da bir proje dosyasının yüklemesini kaldırmak ve düzenlemek için
 
-1. **Çözüm Gezgini** ' de, proje için kısayol menüsünü açın ve ardından **Projeyi Kaldır** ' ı seçin.
+1. **Çözüm Gezgini**' de, proje için kısayol menüsünü açın ve ardından **Projeyi Kaldır**' ı seçin.
 
-     Proje işaretlendi **(kullanılamıyor)** .
+     Proje işaretlendi **(kullanılamıyor)**.
 
-2. **Çözüm Gezgini** ' de, kullanılamayan proje için kısayol menüsünü açın ve ardından **Düzenle \<Project File>** ' yi seçin.
+2. **Çözüm Gezgini**' de, kullanılamayan proje için kısayol menüsünü açın ve ardından **Düzenle \<Project File>**' yi seçin.
 
      Proje dosyası Visual Studio XML düzenleyicisinde açılır.
 
 3. Proje dosyasını düzenleyin, kaydedin ve ardından kapatın.
 
-4. **Çözüm Gezgini** ' de, kullanılamayan proje için kısayol menüsünü açın ve ardından **projeyi yeniden yükle** ' yi seçin.
+4. **Çözüm Gezgini**' de, kullanılamayan proje için kısayol menüsünü açın ve ardından **projeyi yeniden yükle**' yi seçin.
 
 ## <a name="intellisense-and-validation"></a>IntelliSense ve doğrulama
 
  Proje dosyalarını düzenlemek için XML düzenleyicisini kullanırken, IntelliSense ve doğrulama MSBuild şema dosyaları tarafından çalıştırılır. Bunlar, *\<Visual Studio installation directory> \Xml\schemas\1010\msbuild* dizininde bulunan şema önbelleğine yüklenir.
 
- Temel MSBuild türleri, Microsoft. Build *. Core. xsd* ve Visual Studio tarafından kullanılan ortak türlerde tanımlanmıştır, *Microsoft. Build. CommonTypes. xsd* dosyasında tanımlanmıştır. Şemaları, özel öğe türü adları, özellikleri ve görevleri için IntelliSense ve doğrulamaya sahip olacak şekilde özelleştirmek için *Microsoft. Build. xsd* ' yi düzenleyebilir ya da CommonTypes veya Core şemalarını içeren kendi şemanızı oluşturabilirsiniz. Kendi şemanızı oluşturursanız, **Özellikler** penceresini kullanarak bulmak için XML düzenleyicisini yönlendirirsiniz.
+ Temel MSBuild türleri, Microsoft. Build *. Core. xsd* ve Visual Studio tarafından kullanılan ortak türlerde tanımlanmıştır, *Microsoft. Build. CommonTypes. xsd* dosyasında tanımlanmıştır. Şemaları, özel öğe türü adları, özellikleri ve görevleri için IntelliSense ve doğrulamaya sahip olacak şekilde özelleştirmek için *Microsoft. Build. xsd*' yi düzenleyebilir ya da CommonTypes veya Core şemalarını içeren kendi şemanızı oluşturabilirsiniz. Kendi şemanızı oluşturursanız, **Özellikler** penceresini kullanarak bulmak için XML düzenleyicisini yönlendirirsiniz.
 
 ## <a name="edit-loaded-project-files"></a>Yüklenen proje dosyalarını Düzenle
 
@@ -198,7 +198,7 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
 
 ## <a name="performance-shortcuts"></a>Performans kısayolları
 
- Hata ayıklamayı başlatmak için Visual Studio IDE 'yi kullanırsanız (F5 tuşunu seçerek veya menü çubuğunda **hata**  >  **ayıklamayı Başlat** ' ı seçerek) veya projenizi oluşturmak için (örneğin, **derleme**  >  **çözümü** ), yapı işlemi performansı artırmak için hızlı bir güncelleştirme denetimi kullanır. Özelleştirilmiş yapıların, yerleşik olarak oluşturulan dosyalar oluşturmasındaki bazı durumlarda, hızlı güncelleştirme denetimi değiştirilen dosyaları doğru şekilde tanımlamaz. Daha kapsamlı güncelleştirme denetimleri gerektiren projeler, ortam değişkenini ayarlayarak hızlı denetlemeyi kapatabilir `DISABLEFASTUPTODATECHECK=1` . Alternatif olarak, projeler bunu projede veya projenin içeri aktardığı bir dosyada MSBuild özelliği olarak ayarlayabilir.
+ Hata ayıklamayı başlatmak için Visual Studio IDE 'yi kullanırsanız (F5 tuşunu seçerek veya menü çubuğunda **hata**  >  **ayıklamayı Başlat** ' ı seçerek) veya projenizi oluşturmak için (örneğin, **derleme**  >  **çözümü**), yapı işlemi performansı artırmak için hızlı bir güncelleştirme denetimi kullanır. Özelleştirilmiş yapıların, yerleşik olarak oluşturulan dosyalar oluşturmasındaki bazı durumlarda, hızlı güncelleştirme denetimi değiştirilen dosyaları doğru şekilde tanımlamaz. Daha kapsamlı güncelleştirme denetimleri gerektiren projeler, ortam değişkenini ayarlayarak hızlı denetlemeyi kapatabilir `DISABLEFASTUPTODATECHECK=1` . Alternatif olarak, projeler bunu projede veya projenin içeri aktardığı bir dosyada MSBuild özelliği olarak ayarlayabilir.
 
  Visual Studio 'daki normal derlemeler için hızlı güncelleştirme denetimi uygulanmaz ve proje, derlemeyi bir komut isteminde çağırırı olarak derler.
 

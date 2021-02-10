@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SharePoint Connections [SharePoint development in Visual Studio], creating a new node type
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 55950d8498b436d38d2145c2692556330718883e
-ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
+ms.openlocfilehash: aa190ea6d5376c00584cc5936d1074d245b9509e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95970220"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99952674"
 ---
 # <a name="walkthrough-extend-server-explorer-to-display-web-parts"></a>İzlenecek yol: Sunucu Gezgini Web bölümlerini görüntüleyecek şekilde genişletme
   Visual Studio 'da SharePoint sitelerindeki bileşenleri görüntülemek için **Sunucu Gezgini** **SharePoint bağlantıları** düğümünü kullanabilirsiniz. Ancak **Sunucu Gezgini** , bazı bileşenleri varsayılan olarak göstermez. Bu kılavuzda, her bağlı SharePoint sitesinde Web Bölümü galerisini görüntüleyecek şekilde **Sunucu Gezgini** genişleteceksiniz.
@@ -333,7 +333,7 @@ ms.locfileid: "95970220"
 
 #### <a name="to-test-the-extension"></a>Uzantıyı test etmek için
 
-1. Deneysel örneğinde [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , menü çubuğunda Sunucu Gezgini **görüntüle**' yi seçin  >  **Server Explorer**.
+1. Deneysel örneğinde [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , menü çubuğunda Sunucu Gezgini **görüntüle**' yi seçin  >  .
 
 2. Test için kullanmak istediğiniz SharePoint sitesi **Sunucu Gezgini**' deki **SharePoint bağlantıları** düğümü altında görünmezse aşağıdaki adımları gerçekleştirin:
 

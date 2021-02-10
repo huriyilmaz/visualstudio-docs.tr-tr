@@ -15,15 +15,15 @@ helpviewer_keywords:
 - workflows [SharePoint development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 3c8d5ca5b941a7ae6e6ebada21f1eafaef2b6f43
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: 637d46eaa9ac9306d63befed1c011c278b46af24
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96915316"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99952726"
 ---
 # <a name="walkthrough-create-and-debug-a-sharepoint-workflow-solution"></a>İzlenecek yol: SharePoint iş akışı çözümü oluşturma ve hatalarını ayıklama
   Bu izlenecek yol, temel sıralı bir iş akışı şablonunun nasıl oluşturulacağını göstermektedir. İş akışı, bir belgenin gözden geçirilip geçirilmediğini anlamak için paylaşılan belge kitaplığının bir özelliğini denetler. Belge incelenip iş akışı tamamlanır.
@@ -91,7 +91,7 @@ ms.locfileid: "96915316"
 
 1. Başlatın [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
-2. **File**  >  **New**  >  **Yeni proje** iletişim kutusunu göstermek için menü çubuğunda dosya yeni **Proje** ' yi seçin.
+2.   >    >  **Yeni proje** iletişim kutusunu göstermek için menü çubuğunda dosya yeni **Proje** ' yi seçin.
 
 3. **Visual C#** veya **Visual Basic** altında **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
 
