@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: ae4bbe0a-fbe1-49be-a310-ea64279a434b
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ab57f599214cfbd7a1f5fcca15fa104b072d1d48
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 498b928d7e04fc97ec076cb67722b7947686c3a7
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80729874"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99933303"
 ---
 # <a name="idebugexceptionevent2canpasstodebuggee"></a>IDebugExceptionEvent2::CanPassToDebuggee
 Hata ayıklama altyapısının (DE), yürütme devam ettiğinde hata ayıklamakta olan programa bu özel durumu geçirme seçeneğini destekleyip desteklemediğini belirler.
@@ -28,13 +28,13 @@ Hata ayıklama altyapısının (DE), yürütme devam ettiğinde hata ayıklamakt
 ## <a name="syntax"></a>Syntax
 
 ```cpp
-HRESULT CanPassToDebuggee(
+HRESULT CanPassToDebuggee(
    void
 );
 ```
 
 ```csharp
-int CanPassToDebuggee();
+int CanPassToDebuggee();
 ```
 
 ## <a name="return-value"></a>Dönüş Değeri

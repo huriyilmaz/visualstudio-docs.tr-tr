@@ -7,16 +7,16 @@ ms.topic: conceptual
 ms.assetid: 9976b6fd-d052-4017-b848-35b5bf4b2f66
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 monikerRange: '>=vs-2017'
-ms.openlocfilehash: 3ab22ac92cdf995c56d8244225a45fc350e9d360
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: a7bbf46a1677a31726bdd7f2749f5ef3006e34f5
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93047798"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99933849"
 ---
 # <a name="whats-new-in-msbuild-15"></a>MSBuild 15 ' teki yenilikler
 
@@ -24,7 +24,7 @@ MSBuild artık [.NET Core SDK](https://www.microsoft.com/net/download/core) bir 
 
 ## <a name="changed-path"></a>Değiştirilen yol
 
- MSBuild, Visual Studio 'nun her bir sürümünde bir klasöre yüklenmiştir. Örneğin, *C:\Program Files (x86) \Microsoft Visual Studio\2017\Enterprise\MSBuild* . MSBuild: [vssetup. PowerShell](https://github.com/Microsoft/vssetup.powershell)' i bulmak Için aşağıdaki PowerShell modülünü de kullanabilirsiniz.
+ MSBuild, Visual Studio 'nun her bir sürümünde bir klasöre yüklenmiştir. Örneğin, *C:\Program Files (x86) \Microsoft Visual Studio\2017\Enterprise\MSBuild*. MSBuild: [vssetup. PowerShell](https://github.com/Microsoft/vssetup.powershell)' i bulmak Için aşağıdaki PowerShell modülünü de kullanabilirsiniz.
 
  MSBuild artık genel derleme önbelleğinde yüklü değil. Programlı olarak MSBuild 'e başvurmak için NuGet paketlerini kullanın. Daha fazla bilgi için bkz. [MSBuild 15,0 için mevcut bir uygulamayı güncelleştirme](../msbuild/updating-an-existing-application.md).
 
@@ -44,7 +44,7 @@ MSBuild artık [.NET Core SDK](https://www.microsoft.com/net/download/core) bir 
 
 - [Proje öğesinin](../msbuild/project-element-msbuild.md) yeni bir `SDK` özniteliği vardır. Ayrıca, `Xmlns` özniteliği artık isteğe bağlıdır. Özniteliği hakkında daha fazla bilgi için `SDK` bkz. [nasıl yapılır: MSBuild proje SDK 'ları](../msbuild/how-to-use-project-sdk.md), [paketleri, Metapaketleri ve çerçeveleri](/dotnet/core/packages) ve [eklemeleri .NET Core için csproj biçiminde](/dotnet/core/tools/csproj)kullanma.
 - Hedeflerin dışında [öğe öğesi](../msbuild/item-element-msbuild.md) yeni bir `Update` özniteliğe sahiptir. Ayrıca, öznitelik üzerindeki kısıtlama `Remove` ortadan kaldırılmıştır.
-- *Directory. Build. props* , bir dizin altındaki projelere özelleştirmeler sağlayan Kullanıcı tanımlı bir dosyadır. Bu dosya, özelliği false olarak ayarlanmadığı takdirde *Microsoft. Common. props* öğesinden otomatik olarak içeri aktarılır `ImportDirectoryBuildTargets` . **false** *Directory. Build. targets* , *Microsoft. Common. targets* tarafından içeri aktarılır.
+- *Directory. Build. props* , bir dizin altındaki projelere özelleştirmeler sağlayan Kullanıcı tanımlı bir dosyadır. Bu dosya, özelliği false olarak ayarlanmadığı takdirde *Microsoft. Common. props* öğesinden otomatik olarak içeri aktarılır `ImportDirectoryBuildTargets` .  *Directory. Build. targets* , *Microsoft. Common. targets* tarafından içeri aktarılır.
 - Geçerli öznitelik listesiyle çakışmayan bir ada sahip tüm meta veriler, isteğe bağlı olarak bir öznitelik olarak ifade edilebilir. Daha fazla bilgi için bkz. [öğe öğesi](../msbuild/item-element-msbuild.md).
 
 ## <a name="new-property-functions"></a>Yeni özellik işlevleri

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - icons [Office development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: aaf6b96548a9856833fcd1768764ed914da30a07
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: a3a2fab671d6302583f1207f5756118c548bd8a9
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96848098"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99933615"
 ---
 # <a name="guidelines-to-create-outlook-form-regions"></a>Outlook form bölgeleri oluşturma yönergeleri
   Aşağıdaki bilgiler, form bölgelerini iyileştirmenize ve olası sorunları önlemenize yardımcı olabilir:
@@ -42,7 +42,7 @@ ms.locfileid: "96848098"
 ## <a name="use-form-region-names"></a><a name="UsingFormRegions"></a> Form bölgesi adlarını kullan
  Form bölgesini anlatmak için kullanılan birkaç ad vardır. Bu adlar ve bunların form bölgesini nasıl etkilediği arasındaki farkı anlamak önemlidir. Aşağıdaki tabloda her bir ad açıklanmaktadır.
 
-|Form bölgesi adı|Açıklama|
+|Form bölgesi adı|Description|
 |----------------------|-----------------|
 |Form bölgesi öğe adı|**Yeni öğe Ekle** Iletişim kutusunda **Outlook form bölgesi** öğesi için belirttiğiniz addır. Bu, **Çözüm Gezgini** görüntülenen form bölgesi kod dosyasının adıdır.|
 |<xref:Microsoft.Office.Tools.Outlook.FormRegionManifest.FormRegionName%2A> özelliði|Bu adı açıklayıcı metin olarak belirtin ve **Yeni Outlook form bölgesi** Sihirbazı ' nın **görüntüleme tercihlerini seçin** . Bu ad, **Özellikler** penceresinde **FormRegionName** özelliği olarak görünür.<br /><br /> <xref:Microsoft.Office.Tools.Outlook.FormRegionManifest.FormRegionName%2A>Outlook Kullanıcı arabiriminde (UI) form bölgesini tanımlayan etiketi belirtmek için özelliğini kullanın. Ayrı form bölgelerinde, bu ad Outlook öğesi şeridinde bir düğme olarak görünür.<br /><br /> Bitişik form bölgeleri için bu ad, form bölgesinin üstünde başlık metni olarak görünür.|
@@ -86,7 +86,7 @@ ms.locfileid: "96848098"
 
   **Sayfa** simgesi, ayrı, değiştirme veya değiştirme formu bölgeleri olan öğeler Için bir Inspector şeridinde görüntülenir.
 
-  **Pencere** simgesi, bildirim alanında ve **Alt** + değiştirme veya değiştirme-tüm form bölgelerini görüntüleyen açık öğeler için alt **sekme** iletişim kutusunda görünür.
+  **Pencere** simgesi, bildirim alanında ve  + değiştirme veya değiştirme-tüm form bölgelerini görüntüleyen açık öğeler için alt **sekme** iletişim kutusunda görünür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Çalışma zamanında form bölgesine erişme](../vsto/accessing-a-form-region-at-run-time.md)

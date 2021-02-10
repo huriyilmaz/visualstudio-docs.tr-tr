@@ -35,15 +35,15 @@ helpviewer_keywords:
 - host controls [Office development in Visual Studio], deleting
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: edc8939f2a9e5f41f81c8176d5268528c273a7ce
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: c58ad4dee128f7b2d0dcd91edb7b19c7f8f5a474
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96845576"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99933628"
 ---
 # <a name="host-items-and-host-controls-overview"></a>Konak öğeleri ve konak denetimlerine genel bakış
   Konak öğeleri ve konak denetimleri, Visual Studio 'da Office geliştirme araçları kullanılarak oluşturulan Office çözümlerine yönelik programlama modelinin sağlanmasına yardımcı olan türlerdir. Konak öğeleri ve konak denetimleri, COM 'a dayalı Microsoft Office Word ve Microsoft Office Excel 'in nesne modelleriyle etkileşim kuran Windows Forms denetimleri gibi yönetilen nesnelerle etkileşim kurma gibi.

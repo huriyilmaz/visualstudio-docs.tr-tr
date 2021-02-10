@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: abc5d9d9-b267-48a1-92ad-75fbf2f4c1b9
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: e3e2fe51c365e3e6936a73aef9d4de9d52024d47
-ms.sourcegitcommit: 2f964946d7044cc7d49b3fc10b413ca06cb2d11b
+ms.openlocfilehash: fc9e80f549a5bf8cbf151ee224a9f503470a90de
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96761094"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99934135"
 ---
 # <a name="how-vspackages-add-user-interface-elements"></a>VSPackages Kullanıcı arabirimi öğeleri ekleme
 VSPackage, *. vsct* dosyası aracılığıyla, menüler, araç çubukları ve araç pencereleri gibi kullanıcı ARABIRIMI (UI) öğelerini Visual Studio 'ya ekleyebilir.
@@ -83,7 +83,7 @@ Birlikte, `guid` ve `id` öznitelikleri, Kullanıcı arabirimi öğesinin *imzas
 
 - `priority`Kullanıcı arabirimi öğesinin üst menü veya grubunda yerleşimini belirleyen bir özniteliği.
 
-- [Parent element](../../extensibility/parent-element.md) `guid` `id` Üst menünün veya grubun imzasını belirten ve öznitelikleri olan bir üst öğe.
+- [](../../extensibility/parent-element.md) `guid` `id` Üst menünün veya grubun imzasını belirten ve öznitelikleri olan bir üst öğe.
 
 #### <a name="menus"></a>Menüler
 Her menü, bölümünde bir [menü öğesi](../../extensibility/menu-element.md) olarak tanımlanır `Menus` . Menüler `guid` , `id` , ve `priority` öznitelikleri ve bir `Parent` öğesi ve ayrıca aşağıdaki ek öznitelikleri ve alt öğeleri içermelidir:
