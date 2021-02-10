@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 27d4bbcf-99b1-498f-8b66-40002e3db0f8
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0de48e30ea20ab2f7df4e512312978e4faa3a46b
-ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
+ms.openlocfilehash: bdff50655f846ced91e59a93a2d264bb06641ed1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95597937"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99951556"
 ---
 # <a name="add-a-most-recently-used-list-to-a-submenu"></a>Alt menüye en son kullanılan bir liste ekleme
 Bu izlenecek yol, [bir menüye alt menü ekleme](../extensibility/adding-a-submenu-to-a-menu.md)ve bir alt menüye nasıl dinamik bir liste ekleneceğini gösterir. Dinamik liste, en son kullanılanlar (MRU) listesini oluşturma temelini oluşturur.

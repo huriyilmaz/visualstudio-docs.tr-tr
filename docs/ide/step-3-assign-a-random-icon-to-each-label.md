@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: 0ba5ed7a-9aaa-41f4-95d2-e3c2d567bc79
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 3f3330daeed243f96c44825a4be5516c573bb005
-ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
+ms.openlocfilehash: 82356ce29f46388f9c74318c05dc6a4b68fcbbae
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96480635"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99950776"
 ---
 # <a name="step-3-assign-a-random-icon-to-each-label"></a>3. Adım: Her etikete rastgele bir simge atama
 
@@ -57,7 +57,7 @@ Simgeler her oyunda aynı hücrelerde gösterilirse, oyun pek de zorlu olmaz. Bu
 
      Kodun belirli bir bölümünün ne işe yaradığından emin olamadığınızda, fare işaretçisini kod öğesinin üzerine getirip ortaya çıkan araç ipucunu gözden geçirebileceğinizi unutmayın. Ayrıca, Visual Studio hata ayıklayıcısını kullanarak, program çalışırken kodun her satırını adım adım geçebilirsiniz. Bkz. [nasıl yaparım?: Visual Studio 'daki hata ayıklayıcıyla adımla mı?](https://msdn.microsoft.com/vstudio/ee672313.aspx) veya daha fazla bilgi için [hata ayıklayıcıyla birlikte kod içine gidin](../debugger/navigating-through-code-with-the-debugger.md) .
 
-3. Oyun panosunu simgelerle doldurmanız için `AssignIconsToSquares()` Program başlatıldıktan hemen sonra yöntemi çağırmanız gerekir. C# kullanıyorsanız, Form1 oluşturucusunda yöntemine yapılan çağrının hemen altına bir ifade ekleyin `InitializeComponent()` , böylece formunuz görüntülenmeden önce **Form1** _constructor_ kendisini ayarlamak için yeni yönteminizi çağırır. Oluşturucular, sınıf veya yapı gibi yeni bir nesne oluşturduğunuzda çağrılır. Daha fazla bilgi için bkz. [oluşturucular (C# Programlama Kılavuzu)](/dotnet/csharp/programming-guide/classes-and-structs/constructors) veya Visual Basic [oluşturucular ve Yıkıcılar kullanın](/previous-versions/visualstudio/visual-studio-2008/2z08e49e\(v\=vs.90\)) .
+3. Oyun panosunu simgelerle doldurmanız için `AssignIconsToSquares()` Program başlatıldıktan hemen sonra yöntemi çağırmanız gerekir. C# kullanıyorsanız, Form1 oluşturucusunda yöntemine yapılan çağrının hemen altına bir ifade ekleyin `InitializeComponent()` , böylece formunuz görüntülenmeden önce  kendisini ayarlamak için yeni yönteminizi çağırır. Oluşturucular, sınıf veya yapı gibi yeni bir nesne oluşturduğunuzda çağrılır. Daha fazla bilgi için bkz. [oluşturucular (C# Programlama Kılavuzu)](/dotnet/csharp/programming-guide/classes-and-structs/constructors) veya Visual Basic [oluşturucular ve Yıkıcılar kullanın](/previous-versions/visualstudio/visual-studio-2008/2z08e49e\(v\=vs.90\)) .
 
      [!code-csharp[VbExpressTutorial4Step2_3_4#13](../ide/codesnippet/CSharp/step-3-assign-a-random-icon-to-each-label_4.cs)]
 

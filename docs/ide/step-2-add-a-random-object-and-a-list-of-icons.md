@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: 95faea28-eddc-4cfa-95fb-3b34b5a976d7
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 1018b390f6ebbf67fab88554aa85fe6a8ecec88d
-ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
+ms.openlocfilehash: 496bf75495d864024ef587849edd554bfd435db5
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96480700"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99950893"
 ---
 # <a name="step-2-add-a-random-object-and-a-list-of-icons"></a>2. Adım: rastgele bir nesne ve simge listesi ekleme
 
@@ -28,7 +28,7 @@ Bu adımda, oyun için bir grup eşleşen simge oluşturuyorsunuz. Her simge, fo
 
 ## <a name="to-add-a-random-object-and-a-list-of-icons"></a>Rastgele bir nesne ve simge listesi eklemek için
 
-1. **Çözüm Gezgini**, C# kullanıyorsanız *Form1.cs* ' yi veya Visual Basic kullanıyorsanız *Form1. vb* öğesini seçin ve ardından menü çubuğunda kodu **görüntüle**' yi seçin  >  **Code**. Alternatif olarak, **F7** tuşunu seçebilir veya **Çözüm Gezgini** içinde **Form1** ' e çift tıklayatıklayabilirsiniz.
+1. **Çözüm Gezgini**, C# kullanıyorsanız *Form1.cs* ' yi veya Visual Basic kullanıyorsanız *Form1. vb* öğesini seçin ve ardından menü çubuğunda kodu **görüntüle**' yi seçin  >  . Alternatif olarak, **F7** tuşunu seçebilir veya **Çözüm Gezgini** içinde **Form1** ' e çift tıklayatıklayabilirsiniz.
 
      Böylece Form1'in arkasındaki kod modülü görüntülenir.
 
@@ -44,7 +44,7 @@ Bu adımda, oyun için bir grup eşleşen simge oluşturuyorsunuz. Her simge, fo
 
 3. Liste nesnesi eklenirken, açılan **IntelliSense** penceresine dikkat edin. Aşağıda bir C# örneği verilmiştir ancak Visual Basic bir liste eklediğinizde benzer bir metin görüntülenir.
 
-     ![Tıklama olayını gösteren Özellikler penceresi](../ide/media/express_listintellisense.png)<br/>**_IntelliSense_* penceresi*
+     ![Tıklama olayını gösteren Özellikler penceresi](../ide/media/express_listintellisense.png)<br/>***IntelliSense** penceresi*
 
     > [!NOTE]
     > IntelliSense penceresi yalnızca el ile kod girdiğinizde görünür. Kodu kopyalayıp yapıştırırsanız görünmez.

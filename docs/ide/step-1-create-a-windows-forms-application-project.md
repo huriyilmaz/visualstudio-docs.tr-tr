@@ -9,15 +9,15 @@ ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 76225685a9f68ca6f6cb05f902922f8fa208015d
-ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
+ms.openlocfilehash: 04168d6f648a9219c40f81aa042cbc778429ca0e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96480401"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99951010"
 ---
 # <a name="step-1-create-a-windows-forms-app-project"></a>1. Adım: Windows Forms Uygulaması projesi oluşturma
 
@@ -29,7 +29,7 @@ Bir resim görüntüleyici oluşturduğunuzda, ilk adım Windows Forms bir uygul
 
 1. Menü çubuğunda **Dosya**  >  **Yeni**  >  **Proje**' yi seçin. İletişim kutusu aşağıdaki ekran görüntüsüne benzer görünmelidir.
 
-     ![Yeni proje iletişim kutusu](../ide/media/newprojectdialogcallouts.png)<br/>**_Yeni proje_* _ _dialog kutusu *
+     ![Yeni proje iletişim kutusu](../ide/media/newprojectdialogcallouts.png)<br/>***Yeni proje** _ _dialog kutusu *
 
 2. **Yeni proje** iletişim kutusunun sol tarafında, **Visual C#** veya **Visual Basic** seçeneklerinden birini belirleyin ve ardından **Windows Masaüstü**' ne tıklayın.
 
@@ -107,7 +107,7 @@ Visual Studio, uygulamanız için bir çözüm oluşturur. Bir çözüm, uygulam
      Alternatif olarak, aşağıdaki görüntüde gösterildiği gibi, araç çubuğunda **Tümünü Kaydet** düğmesini seçin.
 
      ![Tümünü Kaydet araç çubuğu düğmesi](../ide/media/express_iconsaveall.png)<br/>
-     **_Tümünü Kaydet_* _ _toolbar düğmesi *
+     ***Tümünü Kaydet** _ _toolbar düğmesi *
 
      Visual Studio, klasör adı ve proje adını otomatik olarak doldurur ve projeyi projeler klasörünüze kaydeder.
 

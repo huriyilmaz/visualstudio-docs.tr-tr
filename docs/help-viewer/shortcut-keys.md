@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: ec14c85d-7efb-441c-a46b-bee34a227e39
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 264917d515e25823f8d6c2cb522e85dcc9c47d84
-ms.sourcegitcommit: dfbbf041e68ec3a4cd97196b19c9226a4793e702
+ms.openlocfilehash: 24f13e61f783b041134dc38a4c9bc1690421b6cc
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91878962"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99951140"
 ---
 # <a name="shortcut-keys-in-help-viewer"></a>Yardım görüntüleyicisinde kısayol tuşları
 
@@ -49,7 +49,7 @@ Aşağıdaki tablodaki kısayol tuşlarını kullanarak **Microsoft Yardım Gör
 |Konu|**Page Up**|Belgenin başlangıcına doğru her seferinde bir ekran kaydırın.|
 |Konu|**Page Down**|Belgenin sonuna doğru bir ekran kaydırmak için bir seferde bir ekran.|
 |Konu|**Giriş Ekranı**|Belgenin başlangıcına gidin.|
-|Konu|**Erer**|Belgenin sonuna taşı.|
+|Konu|**End**|Belgenin sonuna taşı.|
 |Konu|**CTRL** + **F**|Bu sayfada arama metni bulun.|
 |Konu|**F5**|Geçerli sayfayı yenileyin.|
 |Konu|**CTRL** + **P**|Geçerli sayfayı yazdır.|
@@ -60,28 +60,28 @@ Aşağıdaki tablodaki kısayol tuşlarını kullanarak **Microsoft Yardım Gör
 |Konu|**CTRL** + **Sekme**|Sekmelerin arasından soldan sağa geçiş yapın.|
 |Konu|**CTRL** + **SHIFT** + **Sekme**|Sekmeler arasında sağdan sola geçiş yapın.|
 |Konu|**CTRL** + **W**|Geçerli sekmeyi kapatın.|
-|Konu|**CTRL** + ** _Sayı_**|**_Sayının_** 1 ile 9 arasında olduğu belirli bir sekmeye geçin ve hangi sekmenin sırada olduğunu gösterir.|
+|Konu|**CTRL** + **_Sayı_**|**_Sayının_** 1 ile 9 arasında olduğu belirli bir sekmeye geçin ve hangi sekmenin sırada olduğunu gösterir.|
 |Konu|**CTRL** + **Alt** + **F4**|Diğer içerik sekmelerini kapatın.|
 |Konu|**CTRL** + **SHIFT** + **Artı işareti**|Yakınlaştırmayı %10 oranında arttırın.|
 |Konu|**CTRL** + **Eksi işareti**|%10 oranında yakınlaştırmayı azalt.|
 |Konu|**CTRL** + **0** (sıfır)|Yakınlaştırmayı %100 olarak değiştirin.|
-|Dizin oluşturma|**Sekmesinde**|Anahtar sözcük girdisinden anahtar sözcük listesine kaydır.|
+|Dizin oluşturma|**Sekme**|Anahtar sözcük girdisinden anahtar sözcük listesine kaydır.|
 |Dizin oluşturma|**CTRL** + **K**|Belirttiğiniz anahtar sözcüğü içeren girişleri ve belirttiğiniz anahtar sözcüğü ile başlayan girdileri gösterme arasında geçiş yapın.|
 |Sık Kullanılanlar|**CTRL** + **SHIFT** + **Del**|Göz atma geçmişinizi temizleyin.|
 |Sık Kullanılanlar|**Tuşunun**|Belirtilen öğeyi silin.|
-|Sık Kullanılanlar|**CTRL** + **N**|**Sık Kullanılanlar**içinde bir klasör oluşturun.|
+|Sık Kullanılanlar|**CTRL** + **N**|**Sık Kullanılanlar** içinde bir klasör oluşturun.|
 |Sık Kullanılanlar|**F2**|Belirtilen sık kullanılanı veya klasörü yeniden adlandırın.|
 |İçerik & Dizin & arama|**CTRL** + **D**|Belirtilen konuyu **Sık Kullanılanlar** sekmesine ekleyin.|
 |İçerik & Dizin & arama & Sık Kullanılanlar|**CTRL** + **P**|Belirtilen konuyu yazdır.|
 |İçerik & Dizin & arama & Sık Kullanılanlar|**CTRL** + **F2**|Belirtilen konunun baskı önizlemesini görüntüleyin.|
 |İçerik & Dizin & arama & Sık Kullanılanlar|**CTRL** + **Tıklama**|Konuyu yeni bir sekmede açın.|
-|Search|**Esc**|Arama metin kutusunu temizleyin.|
+|Arayın|**Esc**|Arama metin kutusunu temizleyin.|
 |Görüntüleyici Seçenekleri|**Alt** + **T**|Odağı **metin boyutu** listesiyle değiştirin.|
 |Görüntüleyici Seçenekleri|**Alt** + **S**|Odağı **en fazla arama sonuçları** listesine değiştirin.|
 |Görüntüleyici Seçenekleri|**Alt** + **H**|Odağı, **kaydedilen en fazla geçmiş girdileri** listesine göre değiştirin.|
 |Görüntüleyici Seçenekleri|**Alt** + **E**|Etkinleştirilirse, **tüm gezinme sekmeleri ve F1 Isteklerinde İngilizce Içeriği dahil et** onay kutusunu işaretleyin veya temizleyin.|
 |Görüntüleyici Seçenekleri|**Alt** + **O**|**İçerik güncelleştirmelerini denetlemek için çevrimiçi ol** onay kutusunu seçin veya temizleyin.|
-|Bul|**Girmesini**|Odağı sonraki öğeye değiştirme.|
+|Bul|**Enter**|Odağı sonraki öğeye değiştirme.|
 |Bul|**SHIFT** + Şunu **girin**|Odağı önceki öğeye değiştir.|
 |Bul|**Esc**|**Bul** metin kutusunu gizler.|
 |Durum çubuğu|**Alt** + **E**|Durum çubuğunda bir hata oluştuğunu gösteriyorsa **hata** iletişim kutusunu açın.|
@@ -102,14 +102,14 @@ Aşağıdaki tablodaki kısayol tuşlarını kullanarak **Microsoft Yardım Gör
 |-|-|
 |**Alt** + **D**|Yükleme kaynağını disk olarak değiştirin.|
 |**Alt** + **O**|Yükleme kaynağını çevrimiçi olarak değiştirin.|
-|**Sekmesinde**|Odağı **yerel depo yolu** metin kutusuna değiştirin.|
-|**Sekmesinde**|Odağı **Taşı** düğmesine değiştirin.|
+|**Sekme**|Odağı **yerel depo yolu** metin kutusuna değiştirin.|
+|**Sekme**|Odağı **Taşı** düğmesine değiştirin.|
 |**Alt** + **V**|**Içeriği taşı** iletişim kutusunu açın.|
 |**CTRL** + **Alt** + **F**|Odağı, **filtre belgeleri** metin kutusuna değiştirin.|
-|**Sekmesinde**|Odağı belge listesine değiştirin.|
+|**Sekme**|Odağı belge listesine değiştirin.|
 |**Yukarı ok** ve **aşağı ok**|Belge listesinde ilerleyin.|
 |**Boşlu**|**Bekleyen değişiklikler** listesine bir öğe ekleyin.|
-|**Sekmesinde**|Odağı **bekleyen değişiklikler** listesine değiştirin.|
+|**Sekme**|Odağı **bekleyen değişiklikler** listesine değiştirin.|
 |**Yukarı ok** ve **aşağı ok**|**Bekleyen değişiklikler** listesinde ilerleyin.|
 |**Boşlu**|**Bekleyen değişiklikler** listesinden bir öğeyi kaldırır.|
 |**Alt** + **T**|Tüm bekleyen değişiklikleri Uygula.|

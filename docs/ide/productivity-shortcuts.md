@@ -5,15 +5,15 @@ ms.date: 11/02/2018
 ms.topic: reference
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 71116fbc05eade8ffb89c38a922106f375b86021
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cd11a05ed6b19fe5d6236bec2c6b4926bbcdefd3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75585736"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99951114"
 ---
 # <a name="shortcut-tips-for-visual-studio"></a>Visual Studio için kısayol ipuçları
 
@@ -44,7 +44,7 @@ Komut kısayollarının tüm listesi için bkz. [varsayılan klavye kısayollar�
 |Görev|Kısayol|
 |-|-|
 |Çözüm Gezgini arama|**CTRL** + **;**|
-|Odağı herhangi bir araç penceresinde (düzenleyici dışında) arama kutusuna yerleştir|**Alt** + Alt **`** araç penceresi odağa sahip olduğunda|
+|Odağı herhangi bir araç penceresinde (düzenleyici dışında) arama kutusuna yerleştir| + Alt **`** araç penceresi odağa sahip olduğunda|
 |Visual Studio 'Da ara|**CTRL** + **Soru-cevap**|
 |Arama kutusu sonuçları filtresi|@opt -Seçenekler<br />@cmd -Komutlar<br />@mru -En son kullanılan<br />@doc -Açık belgeler|
 |Araç seçeneklerinde ara|**CTRL** + **E**|
@@ -54,7 +54,7 @@ Komut kısayollarının tüm listesi için bkz. [varsayılan klavye kısayollar�
 |Görev|Kısayol|
 |-|-|
 |Hızlı Bul|**CTRL** + **F**|
-|Sonraki sonucu hızlı bul|**Girmesini**|
+|Sonraki sonucu hızlı bul|**Enter**|
 |Önceki sonuca hızlı bul|**SHIFT** + Şunu **girin**|
 |Hızlı bul Genişlet açılan liste|**Alt** + **Aşağı ok**|
 |Bulmayı kapat|**Esc**|
@@ -81,7 +81,7 @@ Komut kısayollarının tüm listesi için bkz. [varsayılan klavye kısayollar�
 |Hızlı bilgileri göster|**CTRL** + **K**,**ı**|
 |Şuraya gidin|**CTRL** + **,**|
 |Vurgulanan başvurularda gezin|**CTRL** + **SHIFT** + **Yukarı** (önceki)<br />**CTRL** + **SHIFT** + **Aşağı** (ileri)|
-|Düzenleyici Yakınlaştırma|**CTRL** + **Shift** + SHIFT **>** 'Ndaki<br />**CTRL** + **Shift** + SHIFT **<** Dışı|
+|Düzenleyici Yakınlaştırma|**CTRL** +  + SHIFT **>** 'Ndaki<br />**CTRL** +  + SHIFT **<** Dışı|
 |Seçimi engelle|**Alt** tuşunu basılı tutun ve fareyi sürükleyin<br />**SHIFT** + **Alt** + **Ok tuşları**|
 |Üstteki/alttaki satırı taşı|**Alt** + **Yukarı ok**  /  **Alt** + **Aşağı ok**|
 |Yinelenen satır|**CTRL** + **E**,**V**|
@@ -92,7 +92,7 @@ Komut kısayollarının tüm listesi için bkz. [varsayılan klavye kısayollar�
 |Tanım yığınına git|**CTRL** + **SHIFT** + **8** (geri)<br />**CTRL** + **SHIFT** + **7** (ileri)|
 |Özet Tanım penceresini kapat|**Esc**|
 |Özet Tanım penceresini normal belge sekmesine yükselt|**CTRL** + **Alt** + **Giriş sayfası**|
-|Birden çok gözatma tanımı penceresi arasında gezinme|**CTRL** + **Alt** + Alt **-** ve **CTRL** + **alt**+**=**|
+|Birden çok gözatma tanımı penceresi arasında gezinme|**CTRL** +  + Alt **-** ve **CTRL** + **alt**+**=**|
 |Birden çok göz atma sonucu arasında gezinme|**F8** ve **SHIFT** + **F8**|
 |Kod Düzenleyicisi penceresi ve Özet Tanım penceresi arasında geçiş yap|**SHIFT** + **ESC**|
 |Kapsayan bloğa git|**CTRL** + **Alt** + **Yukarı ok**|
@@ -106,7 +106,7 @@ Komut kısayollarının tüm listesi için bkz. [varsayılan klavye kısayollar�
 |Düğme ekleme|Araç çubuğu taşması düğmesini seçin|
 |Standart araç çubuğunda arama açılan kutusu|**CTRL** + **D**|
 |Metin kutusu komut modunu bul|Türüyle **>**|
-|Yeni diğer ad oluştur|**Komut** penceresinde tür **takma adı \<new alias> \<command> **|
+|Yeni diğer ad oluştur|**Komut** penceresinde tür **takma adı \<new alias> \<command>**|
 
 ## <a name="debugging"></a>Hata Ayıklama
 

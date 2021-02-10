@@ -10,32 +10,32 @@ helpviewer_keywords:
 ms.assetid: b32c12f9-b34d-43bd-a1b9-61af6cf8e51b
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: bcc7bd57ce0c392a2874f107c6e4d8d5753399d3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8f02d74b1c826b9e9ef7fa7406ca9a61d19b7311
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80735437"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99951309"
 ---
 # <a name="idebugboundbreakpoint2setpasscount"></a>IDebugBoundBreakpoint2::SetPassCount
 Bu ilişkili kesme noktasıyla ilişkili geçiş sayısını ayarlar veya değiştirir.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
-HRESULT SetPassCount( 
+HRESULT SetPassCount( 
    BP_PASSCOUNT bpPassCount
 );
 ```
 
 ```csharp
-int SetPassCount( 
+int SetPassCount( 
    BP_PASSCOUNT bpPassCount
 );
 ```

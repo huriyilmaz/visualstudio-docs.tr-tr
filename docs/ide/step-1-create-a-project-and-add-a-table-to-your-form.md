@@ -9,15 +9,15 @@ ms.technology: vs-ide-general
 ms.assetid: 1cac4ba4-f3cd-43bd-ad5d-50fc599234e8
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 1a8ae9b17df85431945b19d65f5435ac081b4a1c
-ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
+ms.openlocfilehash: c8d3a907651169e74f992fb908ce8a13c127a693
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96480726"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99950984"
 ---
 # <a name="step-1-create-a-project-and-add-a-table-to-your-form"></a>1. Adım: Proje oluşturma ve formunuza tablo ekleme
 
@@ -119,10 +119,10 @@ Eşleştirme oyunu hazırlarken ilk adım projeyi oluşturmak ve formunuza bir t
        > [!NOTE]
        > Webdings yazı tipi, simgelerden oluşan bir yazı tipi olup Windows işletim sistemiyle birlikte gelir. Eşleştirme oyununuzda oyuncunun simge çiftlerini eşleştirmesi gerektiğinden, eşleştirilecek simgeleri göstermek için bu yazı tipini kullanıyorsunuz. **Metin** özelliğine **c** koymak yerine, hangi simgelerin görüntülendiğini görmek için farklı harfler girmeyi deneyin. Ünlem işareti bir örümcek, büyük N harfi bir göz ve virgül ise kırmızı biberdir.
 
-5. Etiket denetiminizi seçin ve TableLayoutPanel içindeki bir sonraki hücreye kopyalayın. ( **CTRL** + 'yi seçin **C** tuşları, ya da menü çubuğunda kopyayı **Düzenle**' yi seçin  >  **Copy**.) Ardından yapıştırın. ( **CTRL** + 'yi seçin **V** tuşları, ya da menü çubuğunda yapıştırmayı **Düzenle**' yi seçin  >  **Paste**.) İlk etiketin bir kopyası TableLayoutPanel 'in ikinci hücresinde görüntülenir. Tekrar yapıştırın ve üçüncü hücrede başka bir etiket görüntülenir. Tüm hücreler dolduruluncaya kadar etiket denetimlerini yapıştırmayı sürdürün.
+5. Etiket denetiminizi seçin ve TableLayoutPanel içindeki bir sonraki hücreye kopyalayın. ( **CTRL** + 'yi seçin **C** tuşları, ya da menü çubuğunda kopyayı **Düzenle**' yi seçin  >  .) Ardından yapıştırın. ( **CTRL** + 'yi seçin **V** tuşları, ya da menü çubuğunda yapıştırmayı **Düzenle**' yi seçin  >  .) İlk etiketin bir kopyası TableLayoutPanel 'in ikinci hücresinde görüntülenir. Tekrar yapıştırın ve üçüncü hücrede başka bir etiket görüntülenir. Tüm hücreler dolduruluncaya kadar etiket denetimlerini yapıştırmayı sürdürün.
 
    > [!NOTE]
-   > Çok sayıda yapıştırırsanız, IDE, yeni etiket denetiminizi eklemek için bir yer olmasını sağlamak üzere TableLayoutPanel 'e yeni bir satır ekler. Bunu geri alabilirsiniz. Yeni hücreyi kaldırmak için **CTRL** + **Z** tuşlarını seçin veya menü çubuğunda **Edit**  >  **geri al**'ı Düzenle ' yi seçin.
+   > Çok sayıda yapıştırırsanız, IDE, yeni etiket denetiminizi eklemek için bir yer olmasını sağlamak üzere TableLayoutPanel 'e yeni bir satır ekler. Bunu geri alabilirsiniz. Yeni hücreyi kaldırmak için **CTRL** + **Z** tuşlarını seçin veya menü çubuğunda   >  **geri al**'ı Düzenle ' yi seçin.
 
     Artık formunuz düzenlenmiştir. Aşağıdaki resme benzer görünmelidir.
 

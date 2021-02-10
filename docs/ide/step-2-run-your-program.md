@@ -9,15 +9,15 @@ ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ddc016df63a7bb6ffbe3923de72c4f23cb32739c
-ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
+ms.openlocfilehash: 4939e7a307e39f0548a72feeed7537efdcbd7f2c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96480661"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99950854"
 ---
 # <a name="step-2-run-your-picture-viewer-app"></a>2. Adım: resim görüntüleyici uygulamanızı çalıştırma
 
@@ -34,12 +34,12 @@ Uygulamanızı çalıştırmak için aşağıdaki adımları uygulayın.
     - Araç çubuğunda, aşağıdaki gibi görünen **hata ayıklamayı Başlat** düğmesini seçin:
 
       ![Hata ayıklamayı Başlat araç çubuğu düğmesi](../ide/media/express_icondebug.png)<br>
-      **_Hata ayıklamayı Başlat_* _ _toolbar düğmesi *
+      ***Hata ayıklamayı Başlat** _ _toolbar düğmesi *
 
 1. Visual Studio, uygulamanızı çalıştırır ve **Form1** adlı bir pencere görünür. Aşağıdaki ekran görüntüsünde, yeni oluşturduğunuz uygulama gösterilmektedir. Uygulama çalışıyor ve yakında buna ekleyeceğiz.
 
      ![Windows Forms uygulama çalışıyor](../ide/media/express_firstrun.png)<br>
-**_Windows Forms App_* _, _running *
+***Windows Forms App** _, _running *
 
 1. Visual Studio tümleşik geliştirme ortamına (IDE) dönün ve yeni araç çubuğuna bakın. Bir uygulamayı çalıştırdığınızda, araç çubuğunda ek düğmeler görüntülenir. Bu düğmeler, uygulamanızı durdurma ve başlatma gibi işlemleri yapmanızı sağlar ve sahip olabileceği hataları (hataları) izlemenize yardımcı olur. Bu örnekte, uygulamayı başlatmak ve durdurmak için kullanırız.
 

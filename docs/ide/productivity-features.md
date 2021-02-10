@@ -6,15 +6,15 @@ ms.date: 4/29/2020
 ms.topic: conceptual
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: bee392ddc4e7a0d185bdcc2d0e31dbd17832c733
-ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
+ms.openlocfilehash: 01367d821ffc74de0e9d087bfe52680508fad9e3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "95870878"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99951166"
 ---
 # <a name="productivity-guide-for-visual-studio"></a>Visual Studio için üretkenlik Kılavuzu
 
@@ -42,17 +42,17 @@ Komutlar, ayarlar, belgeler ve Install seçenekleri de dahil olmak üzere ihtiya
 
 Aşağıdaki özellikleri kullanarak daha hızlı bir şekilde kod yazın.
 
-- **Kullanışlı komutları kullanın**. Visual Studio, yaygın Düzenle görevleri daha hızlı gerçekleştirmenize yardımcı olacak çeşitli komutlar içerir. Örneğin, bir kod satırını kopyalamak zorunda kalmadan kolayca çoğaltmak için bir komut seçebilirsiniz, imleci yeniden konumlandırabilirsiniz ve yapıştırın. Yinelemeyi **Düzenle**  >  **Duplicate** ' yi seçin veya **CTRL** + **E**,**V** tuşlarına basın. Ayrıca **Edit**  >  ,**Gelişmiş**  >  **Genişlet seçimini** Düzenle veya **Edit**  >  **Gelişmiş**  >  **sözleşme seçimini** Düzenle ' yi seçerek veya **SHIFT** + **alt** + **=** veya **SHIFT** + **alt** + **-** tuşlarına basarak bir metin seçimini hızlıca genişletebilir veya dağıtabilirsiniz.
+- **Kullanışlı komutları kullanın**. Visual Studio, yaygın Düzenle görevleri daha hızlı gerçekleştirmenize yardımcı olacak çeşitli komutlar içerir. Örneğin, bir kod satırını kopyalamak zorunda kalmadan kolayca çoğaltmak için bir komut seçebilirsiniz, imleci yeniden konumlandırabilirsiniz ve yapıştırın. Yinelemeyi **Düzenle**  >   ' yi seçin veya **CTRL** + **E**,**V** tuşlarına basın. Ayrıca   >  ,**Gelişmiş**  >  **Genişlet seçimini** Düzenle veya   >  **Gelişmiş**  >  **sözleşme seçimini** Düzenle ' yi seçerek veya **SHIFT** + **alt** + **=** veya **SHIFT** + **alt** + **-** tuşlarına basarak bir metin seçimini hızlıca genişletebilir veya dağıtabilirsiniz.
 
 - **IntelliSense kullanın**. Düzenleyicide kod girerken, liste üyeleri, parametre bilgileri, hızlı bilgi, Imza yardımı ve tüm kelime gibi IntelliSense bilgileri görüntülenir. Bu özellikler, metnin belirsiz eşleşmesini destekler; Örneğin, liste üyeleri için sonuç listeleri yalnızca girdiğiniz karakterlerle başlayan girişleri değil, aynı zamanda adlarının herhangi bir yerindeki karakter kombinasyonunu içeren girdileri de içerir. Daha fazla bilgi için bkz. [IntelliSense 'ı kullanma](../ide/using-intellisense.md).
 
 - **Kod girerken IntelliSense seçeneklerinin otomatik olarak eklenmesini değiştirin**. IntelliSense 'i öneri moduna geçirerek, IntelliSense seçeneklerinin yalnızca açıkça seçtiğiniz durumlarda ekleneceğini belirtebilirsiniz.
 
-     Öneri modunu etkinleştirmek için **CTRL** + **alt** + **Ara çubuğu** tuşlarını seçin veya menü çubuğunda IntelliSense **Düzenle**  >  **IntelliSense**  >  **tamamlama modunu** seçin.
+     Öneri modunu etkinleştirmek için **CTRL** + **alt** + **Ara çubuğu** tuşlarını seçin veya menü çubuğunda IntelliSense **Düzenle**  >    >  **tamamlama modunu** seçin.
 
 - **Kod parçacıklarını kullanın**. Yerleşik kod parçacıklarını kullanabilir veya kendi kod parçacıklarınızı oluşturabilirsiniz.
 
-     Bir kod parçacığı eklemek için, menü çubuğunda IntelliSense **düzenleme**  >  **IntelliSense**  >  **kod parçacığı Ekle** veya **ile Çevrele**' yi seçin veya kısayol menüsünü bir dosyada açın ve **kod parçacığı**  >  **Ekle parçacık** veya **ile çevreleyin**' i seçin. Daha fazla bilgi için bkz. [kod parçacıkları](../ide/code-snippets.md).
+     Bir kod parçacığı eklemek için, menü çubuğunda IntelliSense **düzenleme**  >    >  **kod parçacığı Ekle** veya **ile Çevrele**' yi seçin veya kısayol menüsünü bir dosyada açın ve **kod parçacığı**  >  **Ekle parçacık** veya **ile çevreleyin**' i seçin. Daha fazla bilgi için bkz. [kod parçacıkları](../ide/code-snippets.md).
 
 - **Kod hatalarını satır Içinde düzeltir**. Hızlı Eylemler, tek bir eylem ile kodu kolayca yeniden düzenleme, oluşturma veya başka şekilde değiştirmenize olanak sağlar. Bu eylemler, Screwdriver ![ screwsürücü simgesi ](media/screwdriver-icon.png) veya hafif Ampul ampul ![ simgesi ](media/light-bulb-icon.png) simgeleri kullanılarak veya **alt** + **ENTER** ya da **CTRL** tuşlarına basarak uygulanabilir + **.** imlecinizin uygun kod satırında olması durumunda. Daha fazla bilgi için bkz. [hızlı eylemler](quick-actions.md) .
 
@@ -72,11 +72,11 @@ Kodunuzda belirli konumları daha hızlı bir şekilde bulmak ve taşımak için
 
 - **Kod satırları yer işareti**. Bir dosyadaki belirli kod satırlarına hızlıca gezinmek için yer işaretlerini kullanabilirsiniz.
 
-    Bir yer işareti ayarlamak için, menü çubuğunda **Edit**  >  **yer imlerini** Düzenle yer işaretlerini Seç  >  **yer işaretini** seçin. Bir çözümün tüm yer imlerini **yer işaretleri** penceresinde görüntüleyebilirsiniz. Daha fazla bilgi için bkz. [koddaki yer Imlerini ayarlama](../ide/setting-bookmarks-in-code.md).
+    Bir yer işareti ayarlamak için, menü çubuğunda   >  **yer imlerini** Düzenle yer işaretlerini Seç  >  **yer işaretini** seçin. Bir çözümün tüm yer imlerini **yer işaretleri** penceresinde görüntüleyebilirsiniz. Daha fazla bilgi için bkz. [koddaki yer Imlerini ayarlama](../ide/setting-bookmarks-in-code.md).
 
 - **Bir dosyada sembol tanımlarını arayın**. Sembol tanımlarını ve dosya adlarını bulmak için bir çözüm içinde arama yapabilirsiniz, ancak arama sonuçları ad alanları veya yerel değişkenler içermez.
 
-   Bu özelliğe erişmek için, menü çubuğunda, **Edit**  >  **Git 'e git**' i seçin.
+   Bu özelliğe erişmek için, menü çubuğunda,   >  **Git 'e git**' i seçin.
 
 - **Kodunuzun genel yapısına gözatın**. **Çözüm Gezgini**, Koleksiyonlarınızda sınıfları ve bunların türlerini ve üyelerini arayabilir ve bunlara gözatabilirler. Ayrıca sembolleri arayabilir, yöntemin Çağrı hiyerarşisini görüntüleyebilir, sembol başvurularını bulabilir ve diğer görevleri gerçekleştirebilirsiniz. **Çözüm Gezgini** bir kod öğesi seçerseniz, ilişkili dosya bir **Önizleme** sekmesinde açılır ve imleç dosyadaki öğeye gider. Daha fazla bilgi için bkz. [kod yapısını görüntüleme](../ide/viewing-the-structure-of-code.md).
 
@@ -112,7 +112,7 @@ Araç pencerelerinin içeriğini yalnızca geçerli göreviniz için ilgili bilg
 
    ::: moniker-end
 
-   **Ctrl** + Doğrudan arama kutusuna gitmek için CTRL **Q** tuşlarına basın.
+    + Doğrudan arama kutusuna gitmek için CTRL **Q** tuşlarına basın.
 
 ## <a name="debug-code"></a>Kod hatalarını ayıklama
 
