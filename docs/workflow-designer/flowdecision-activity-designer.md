@@ -9,15 +9,15 @@ f1_keywords:
 ms.assetid: 4a49edc3-3662-4b7b-812e-0a5ba00d6c94
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 1a70e7e44976df975be721d93e918d7c25d192bf
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 77570557563b4aca3109f5bcbdebd16c7af09144
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94438002"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99938447"
 ---
 # <a name="flowdecision-activity-designer"></a>FlowDecision Etkinlik Tasarımcısı
 

@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: 9b0b3ce6-08cb-46fd-a6d9-92b36e60da19
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 7434825f52bf1fa5291ccd2729a8134b10142458
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b017d80008edfa02f429d14700d42e927eca80cc
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80715543"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99939051"
 ---
 # <a name="ienumdebugpropertyinfo2getcount"></a>IEnumDebugPropertyInfo2::GetCount
 Numaralandırmadaki öğe sayısını döndürür.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
 HRESULT GetCount(

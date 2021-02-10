@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 8bed85f4-235f-4192-b58f-5fad7a4d7a78
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: fa64147738a916d44b6924f193860f74bd10a855
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 116eb36cf96284698a6d93730db39bb38d22b93e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80714325"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99938713"
 ---
 # <a name="module_info_fields"></a>MODULE_INFO_FIELDS
 Hata ayıklama modülü bilgileri için bayrakları belirtir.
@@ -28,7 +28,7 @@ Hata ayıklama modülü bilgileri için bayrakları belirtir.
 ## <a name="syntax"></a>Syntax
 
 ```cpp
-enum enum_MODULE_INFO_FIELDS { 
+enum enum_MODULE_INFO_FIELDS { 
    MIF_NONE              = 0x0000,
    MIF_NAME              = 0x0001,
    MIF_URL               = 0x0002,
@@ -47,7 +47,7 @@ typedef DWORD MODULE_INFO_FIELDS;
 ```
 
 ```csharp
-public enum enum_MODULE_INFO_FIELDS { 
+public enum enum_MODULE_INFO_FIELDS { 
    MIF_NONE              = 0x0000,
    MIF_NAME              = 0x0001,
    MIF_URL               = 0x0002,
@@ -119,6 +119,6 @@ public enum enum_MODULE_INFO_FIELDS { 
  Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Listelemeler](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md)
 - [GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md)

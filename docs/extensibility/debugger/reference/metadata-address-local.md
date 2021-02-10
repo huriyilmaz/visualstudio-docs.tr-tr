@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 635f6bc5-c486-4e0e-83db-36f15e543843
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e3adf9ca5f679c7a526f10b1ee6c91d50dac52d2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d5d4e9ee9808c25bb0df570ac451c061067904c2
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80714484"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99938765"
 ---
 # <a name="metadata_address_local"></a>METADATA_ADDRESS_LOCAL
 
@@ -59,7 +59,7 @@ Yöntem veya işlevde bu yerel değişkenin dizini veya başka bir değer (dile 
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu yapı, [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) `dwKind` `DEBUG_ADDRESS_UNION` yapı alanı `ADDRESS_KIND_LOCAL` ( [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) numaralandırmasından bir değer) olarak ayarlandığında DEBUG_ADDRESS_UNION yapısındaki birleşimin bir parçasıdır.
+Bu yapı, [](../../../extensibility/debugger/reference/debug-address-union.md) `dwKind` `DEBUG_ADDRESS_UNION` yapı alanı `ADDRESS_KIND_LOCAL` ( [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) numaralandırmasından bir değer) olarak ayarlandığında DEBUG_ADDRESS_UNION yapısındaki birleşimin bir parçasıdır.
 
 > [!WARNING]
 > [Yalnızca C++] `pLocal` Null değilse, `Release` belirteç işaretçisi üzerinde çağırmanız gerekir ( `addr` [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) yapısındaki bir alandır):

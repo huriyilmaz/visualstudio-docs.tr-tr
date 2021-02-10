@@ -11,15 +11,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, MSBuild properties
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: f1eab3832121f1e0c926257797ddbc79695546a5
-ms.sourcegitcommit: 2244665d5a0e22d12dd976417f2a782e68684705
+ms.openlocfilehash: 20458cc7047e913e13f4594380d4b4946b44ec17
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2020
-ms.locfileid: "96305142"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99938518"
 ---
 # <a name="msbuild-properties-supported-by-sharepoint"></a>SharePoint tarafından desteklenen MsBuild özellikleri
   [!INCLUDE[vstecmsbuild](../sharepoint/includes/vstecmsbuild-md.md)]Microsoft. VisualStudio. SharePoint. targets dosyasında, proje dosyasında veya Project User dosyasında tanımlanan herhangi bir özellik [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint projelerinde kullanılabilir. [!INCLUDE[vstecmsbuild](../sharepoint/includes/vstecmsbuild-md.md)]SharePoint, projenin sağladığı ortak özelliklere ek olarak SharePoint projelerine özgü ek özellikler tanımlar.
@@ -51,7 +51,7 @@ ms.locfileid: "96305142"
  Esneklik için, SharePoint Özellikler sayfasında **dağıtım öncesi komut satırı** ve **dağıtım sonrası komut satırı** kutularında sabit kodlanmış dizeler kullanmak yerine, SharePoint özelliklerini bağımsız değişkenler olarak kullanabilirsiniz. Örneğin, [!INCLUDE[TLA2#tla_url](../sharepoint/includes/tla2sharptla-url-md.md)] SharePoint sitesi için belirli bir dize belirtmek yerine, ' yi kullanabilirsiniz `$(SharePointSiteUrl)` .
 
 > [!NOTE]
-> [!INCLUDE[vstecmsbuild](../sharepoint/includes/vstecmsbuild-md.md)] `$(` *propertyName* `)` `%` *propertyName* `%` Bir özellik belirtmek için, değişken sözdizimi PropertyName veya ortam değişkeni sözdizimi PropertyName ' i kullanabilirsiniz.
+> [!INCLUDE[vstecmsbuild](../sharepoint/includes/vstecmsbuild-md.md)] `$(`  `)` `%`  `%` Bir özellik belirtmek için, değişken sözdizimi PropertyName veya ortam değişkeni sözdizimi PropertyName ' i kullanabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

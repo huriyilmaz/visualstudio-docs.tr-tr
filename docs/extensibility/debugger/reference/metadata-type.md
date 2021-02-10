@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: 2d8b78f6-0aef-4d79-809a-cff9b2c24659
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: afe5ea128775c7be0e48035ab4c7e7d370c9d233
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d41716dcbc1aefba52f6507bb624973f36025af0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80714297"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99938739"
 ---
 # <a name="metadata_type"></a>METADATA_TYPE
 Bu yapı, meta verilerden alınan bir alan türü hakkında bilgi belirtir.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
 typedef struct _tagTYPE_METADATA {
@@ -56,7 +56,7 @@ public struct METADATA_TYPE {
  [C++] `_mdToken` , `typedef` 32 bitlik bir içindir `int` .
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yapı, [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) `dwKind` `TYPE_INFO` yapı alanı `TYPE_KIND_METADATA` ( [dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md) numaralandırmasından bir değer) olarak ayarlandığında TYPE_INFO yapısındaki birleşimin bir parçası olarak görüntülenir.
+ Bu yapı, [](../../../extensibility/debugger/reference/type-info.md) `dwKind` `TYPE_INFO` yapı alanı `TYPE_KIND_METADATA` ( [dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md) numaralandırmasından bir değer) olarak ayarlandığında TYPE_INFO yapısındaki birleşimin bir parçası olarak görüntülenir.
 
  `tokClass`Değer, bir türü benzersiz bir şekilde tanımlayan bir meta veri belirtecidir. Meta veri belirteci KIMLIĞININ üst bitlerini yorumlama hakkında daha fazla bilgi için `CorTokenType` .NET Framework SDK 'sindeki CorHdr. h dosyasındaki sabit listesine bakın.
 

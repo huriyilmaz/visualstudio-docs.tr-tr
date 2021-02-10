@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: c92b193b-054d-4923-834b-d4226a4c7a1a
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 97c4fe8d72cc8e2216ee8f5057d032c071974bf3
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 8a8e1dea5fb3716d593ca9b28f52ca0cd59a054f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94350835"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99938505"
 ---
 # <a name="localize-clickonce-applications"></a>ClickOnce uygulamalarını yerelleştirme
 Yerelleştirme, uygulamanızı belirli bir kültür için uygun hale getirme işlemidir. Bu işlem, Kullanıcı arabirimi (UI) metnini bölgeye özgü bir dile çevirmeyi, doğru tarih ve para birimi biçimlendirmesini kullanarak, form üzerindeki denetimlerin boyutunu ayarlamayı ve gerekirse denetimleri sağdan sola yansıtmayı içerir.
@@ -48,7 +48,7 @@ Yerelleştirme, uygulamanızı belirli bir kültür için uygun hale getirme iş
 
  Bu yöntem, içindeki varsayılandır [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Bu yöntemi içinde kullanmak için [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ek bir iş yapmanız gerekmez.
 
- Bu yöntemi *MageUI.exe* kullanmak için, uygulamanız için kültürü *MageUI.exe* **bağımsız** olarak ayarlamanız gerekir. Ardından, tüm uydu derlemelerini dağıtımınıza el ile eklemeniz gerekir. *MageUI.exe* , uygulama bildiriminizde **dosyalar** sekmesindeki **doldur** düğmesini kullanarak uydu derlemelerini ekleyebilirsiniz.
+ Bu yöntemi *MageUI.exe* kullanmak için, uygulamanız için kültürü *MageUI.exe* **bağımsız** olarak ayarlamanız gerekir. Ardından, tüm uydu derlemelerini dağıtımınıza el ile eklemeniz gerekir. *MageUI.exe*, uygulama bildiriminizde **dosyalar** sekmesindeki **doldur** düğmesini kullanarak uydu derlemelerini ekleyebilirsiniz.
 
  Bu yaklaşımın avantajı, tek bir dağıtım oluşturup yerelleştirilmiş dağıtım hikayenizi basitleştirmesidir. Çalışma zamanında, kullanıcının Windows işletim sisteminin varsayılan kültürüne bağlı olarak uygun uydu derlemesi kullanılacaktır. Bu yaklaşımın bir dezavantajı, uygulama her yüklendiğinde veya bir istemci bilgisayara güncelleştirildiğinde tüm uydu derlemelerini indirmesidir. Uygulamanızda çok sayıda dize varsa veya müşterilerinizin yavaş bir ağ bağlantısı varsa, bu işlem uygulama güncelleştirmesi sırasında performansı etkileyebilir.
 
@@ -60,7 +60,7 @@ Yerelleştirme, uygulamanızı belirli bir kültür için uygun hale getirme iş
 
  Bu yöntemi içinde kullanmak için [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] **Yayımla** sekmesinde **Yayımla dili** özelliğini istenen bölgeye ayarlayın. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , seçtiğiniz bölge için gereken uydu derlemesini otomatik olarak ekler ve diğer tüm uydu derlemelerini dağıtımdan hariç bırakır.
 
- Aynı şeyi Microsoft 'taki *MageUI.exe* aracını kullanarak gerçekleştirebilirsiniz [!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)] . Uygulama dizininden diğer tüm uydu derlemelerini hariç tutmak için uygulama bildiriminizde bulunan **dosyalar** sekmesindeki **doldur** düğmesini kullanın ve ardından *MageUI.exe* ' de dağıtım bildiriminiz için **ad** sekmesinde **kültür** alanını ayarlayın. Bu adımlar yalnızca doğru uydu derlemesini içermez, ancak aynı zamanda `language` `assemblyIdentity` dağıtım bildiriminizde öğe üzerindeki özniteliği ilgili kültür olarak ayarlar.
+ Aynı şeyi Microsoft 'taki *MageUI.exe* aracını kullanarak gerçekleştirebilirsiniz [!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)] . Uygulama dizininden diğer tüm uydu derlemelerini hariç tutmak için uygulama bildiriminizde bulunan **dosyalar** sekmesindeki **doldur** düğmesini kullanın ve ardından *MageUI.exe*' de dağıtım bildiriminiz için **ad** sekmesinde **kültür** alanını ayarlayın. Bu adımlar yalnızca doğru uydu derlemesini içermez, ancak aynı zamanda `language` `assemblyIdentity` dağıtım bildiriminizde öğe üzerindeki özniteliği ilgili kültür olarak ayarlar.
 
  Uygulamayı yayımladıktan sonra, uygulamanızın desteklediği her ek kültür için bu adımı tekrarlamalısınız. Her uygulama bildirimi farklı bir uydu derlemesine başvuracağı ve her dağıtım bildiriminin öznitelik için farklı bir değere sahip olacağı için, her seferinde farklı bir Web sunucusu dizinine veya dosya paylaşma dizinine yayımladığınızdan emin olmanız gerekir `language` .
 

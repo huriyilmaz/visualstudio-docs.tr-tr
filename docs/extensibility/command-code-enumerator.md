@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 5d2c360c-59e4-4da8-bcb4-dd07c7441e40
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9a831813bb975819e9152dfab4d4eefd6b440606
-ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
+ms.openlocfilehash: 2911a39c15fa259057e0b7b48d79e142cda34094
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94974257"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99938267"
 ---
 # <a name="command-code-enumerator"></a>Komut kodu numaralandırıcısı
 Bu Numaralandırıcı, seçeneklerin belirtilme komutunu göstermek için [Sccgetcommandooptıons](../extensibility/sccgetcommandoptions-function.md) ve [SccPopulateList](../extensibility/sccpopulatelist-function.md)seçeneklerinde kullanılır.
