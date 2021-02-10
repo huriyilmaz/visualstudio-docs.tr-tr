@@ -4,21 +4,24 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 588480a3-8806-4ea5-9915-c25974770069
-ms.date: 12/02/2020
+ms.date: 02/09/2021
 ms.topic: how-to
 description: Visual Studio aboneliğinize dahil olan Windows Geliştirici hesabı hakkında bilgi edinin.
-ms.openlocfilehash: 4b8d2190792f942f808c1fda62a7020fefdca866
-ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
+ms.openlocfilehash: a988dabb5849d13733c72ebb5976be489f67dd95
+ms.sourcegitcommit: 0f3606917cf5451e8c4e0b2e0c3fbb9113429645
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96537727"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100089599"
 ---
 # <a name="windows-developer-account-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Windows Geliştirici hesabı
 Seçili Visual Studio aboneliğine dahil olan Windows geliştirici hesabınız, Windows Mağazası 'na ücretsiz ve ücretli Windows uygulamaları göndermenize olanak tanır.
 
 ## <a name="activation-steps"></a>Etkinleştirme adımları
 Windows Geliştirici hesabınızı kullanmak için bir hesap ayarlamanız veya mevcut bir hesabı kullanarak oturum açmanız gerekir.
+
+> [!IMPORTANT]
+> Bir Windows geliştirici hesabının oluşturulması için bir Microsoft hesabı (MSA) kullanılması gerekir.  Azure Active Directory hesaplarının kullanımı desteklenmez.  
 
 Bu işlem için bir "özel" tarayıcı penceresi oluşturmanızı öneririz.  Örneğin, Google Chrome 'da yeni bir "ınbilito" penceresi oluşturun.  Internet Explorer 'da yeni bir "InPrivate" penceresi oluşturun.
 
@@ -43,10 +46,10 @@ Bu işlem için bir "özel" tarayıcı penceresi oluşturmanızı öneririz.  Ö
 ## <a name="eligibility"></a>Önceliği
 | Abonelik düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilenebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standart)   | VL, Azure, perakende, seçili NFR<sup>1</sup> | Dahil       |  Evet|
-| GitHub Enterprise ile Visual Studio Enterprise aboneliği   | VL  | Dahil       |  Evet|
-| Visual Studio Professional (Standart) | VL, Azure, perakende                                       | Dahil                                                            |Evet|
-| GitHub Enterprise ile Visual Studio Professional aboneliği | VL                                        | Dahil                                                            |Evet|
+| Visual Studio Enterprise (Standart)   | VL, Azure, perakende, seçili NFR<sup>1</sup> | Dahil       |  Yes|
+| GitHub Enterprise ile Visual Studio Enterprise aboneliği   | VL  | Dahil       |  Yes|
+| Visual Studio Professional (Standart) | VL, Azure, perakende                                       | Dahil                                                            |Yes|
+| GitHub Enterprise ile Visual Studio Professional aboneliği | VL                                        | Dahil                                                            |Yes|
 | Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Kullanılamaz                                            |  NA|
 | MSDN Platformları (Standart)                                          | VL, perakende                                              |  Kullanılamaz                                            |  NA|
 | Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure                                       | Kullanılamaz                                                           |NA|
