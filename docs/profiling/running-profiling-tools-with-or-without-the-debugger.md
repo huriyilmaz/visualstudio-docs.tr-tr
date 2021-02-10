@@ -6,15 +6,15 @@ ms.topic: conceptual
 ms.assetid: 3fcdccad-c1bd-4c67-bcec-bf33a8fb5d63
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0bd8f90c586366a298ba96009dfe5d87a042141b
-ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
+ms.openlocfilehash: 7bf1d90e4c56e0768faa0dd2e877f0d2bcb1eb5d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "95970298"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99950188"
 ---
 # <a name="run-profiling-tools-with-or-without-the-debugger"></a>Hata ayıklayıcı ile veya hata ayıklayıcı olmadan profil oluşturma araçları çalıştırma
 
@@ -39,7 +39,7 @@ Hangi araçların ve sonuçların kullanılacağına karar vermek için aşağı
 
 ## <a name="collect-profiling-data-while-debugging"></a><a name="BKMK_Quick_start__Collect_diagnostic_data"></a> Hata ayıklarken profil oluşturma verilerini topla
 
-**Hata ayıklama**  >  **başlatma hata ayıklamayı** seçerek veya **F5** tuşuna basarak, Visual Studio 'da hata ayıklamayı başlattığınızda, varsayılan olarak **Tanılama araçları** pencere görüntülenir. El ile açmak için **Debug**  >  **Windows**  >  **göster tanılama araçları** Hata Ayıkla ' yı seçin. **Tanılama araçları** pencere, olaylar, işlem belleğı ve CPU kullanımı hakkındaki bilgileri gösterir.
+**Hata ayıklama**  >  **başlatma hata ayıklamayı** seçerek veya **F5** tuşuna basarak, Visual Studio 'da hata ayıklamayı başlattığınızda, varsayılan olarak **Tanılama araçları** pencere görüntülenir. El ile açmak için   >  **Windows**  >  **göster tanılama araçları** Hata Ayıkla ' yı seçin. **Tanılama araçları** pencere, olaylar, işlem belleğı ve CPU kullanımı hakkındaki bilgileri gösterir.
 
 ![Tanılama Araçları penceresinin ekran görüntüsü](../profiling/media/diagnostictoolswindow.png " Tanılama Araçları Penceresi")
 

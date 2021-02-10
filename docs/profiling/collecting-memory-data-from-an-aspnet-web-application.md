@@ -10,16 +10,16 @@ helpviewer_keywords:
 ms.assetid: 57acf2b0-327a-4c0e-8078-ac2f6d99457d
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - aspnet
-ms.openlocfilehash: b2cb0e199e543152b9d11da4b4de014c9465c1b7
-ms.sourcegitcommit: 7a5c4f60667b5792f876953d55192b49a73f5fe9
+ms.openlocfilehash: edcac130a37b90f164cc2b90c11fe43adeea8414
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98533777"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99949408"
 ---
 # <a name="collect-memory-data-from-an-aspnet-web-application-by-using-the-profiler-command-line"></a>Profil oluşturucu komut satırını kullanarak bir ASP.NET Web uygulamasından bellek verileri toplama
 Bu bölümde, **VSPerfCmd** komut satırı aracını kullanarak bir ASP.NET Web uygulaması için bellek ayırma ve nesne yaşam süresi verilerini toplamaya yönelik yordamlar ve seçenekler açıklanmaktadır.

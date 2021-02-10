@@ -4,7 +4,7 @@ description: Visual Studio 'da proje şablonlarına etiket ekleme veya düzenlem
 ms.date: 04/30/2019
 author: minsa110
 ms.author: somin
-manager: jillfra
+manager: jmartens
 ms.topic: reference
 helpviewer_keywords:
 - item templates, updating
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - updating templates [Visual Studio]
 - template tagging, updating
 - template tags, updating
-ms.openlocfilehash: 37a1965712920420bdc4d784a003dbfbd2f2167a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a5f8c3f6e96e8e593fe74fd58b3e8bafab0ad88e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85285224"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99950620"
 ---
 # <a name="add-tags-to-project-templates"></a>Proje şablonlarına etiketler ekleme
 
@@ -99,7 +99,7 @@ Aşağıdaki listede, Visual Studio 'da kullanılabilen yerleşik Etiketler gös
 | C# ( `csharp` ) | Azure ( `azure` ) | Console ( `console` ) |
 | F # ( `fsharp` ) | iOS ( `ios` ) | Masaüstü ( `desktop` ) |
 | Java ( `java` ) | Linux ( `linux` ) | Uzantılar ( `extension` ) |
-| JavaScript ( `javascript` ) | macOS ( `macos` ) | Oyunlar ( `games` ) |
+| JavaScript (`javascript`) | macOS ( `macos` ) | Oyunlar ( `games` ) |
 | Python ( `python` ) | tvOS ( `tvos` ) | IoT ( `iot` ) |
 | Sorgu Languate ( `querylanguage` ) | Windows ( `windows` ) | Library ( `library` ) |
 | TypeScript ( `typescript` ) | Xbox ( `xbox` ) | Machine Learning ( `machinelearning` ) |

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a05b5f2f-d1f2-471a-8096-8b11f7554265
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 1cb992355378e6e124cadef3383633a52a9111c2
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: aa698fc0ac0e46fa645ede54d6608b79dd031655
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94350559"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99949668"
 ---
 # <a name="secure-clickonce-applications"></a>ClickOnce uygulamalarını koruma
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulamalar, kodun korumalı kaynaklara ve işlemlere erişimi sınırlamaya yardımcı olmak üzere .NET Framework kod erişimi güvenlik kısıtlamalarına tabidir. Bu nedenle, uygulamalarınızı uygun şekilde yazmak için kod erişimi güvenliğinin etkilerini anlamanız önemlidir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . Uygulamalarınız erişim için Internet ve Intranet gibi tam güven veya kısmi bölgeler kullanabilir.
@@ -52,7 +52,7 @@ ms.locfileid: "94350559"
  Kod erişimi güvenliği ve ClickOnce hakkında daha fazla bilgi için bkz. [ClickOnce uygulamaları Için kod erişimi güvenliği](../deployment/code-access-security-for-clickonce-applications.md).
 
 ## <a name="code-signing-certificates"></a>Kod imzalama sertifikaları
- Dağıtım kullanarak bir uygulamayı yayımlamak için [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] , ortak/özel anahtar çiftini kullanarak uygulama için uygulama ve dağıtım bildirimlerini imzalayabilirsiniz. Bir bildirimi imzalama araçları, **Proje Tasarımcısı** ' nın **imzalama** sayfasında kullanılabilir. Daha fazla bilgi için bkz. [Imzalama sayfası, proje Tasarımcısı](../ide/reference/signing-page-project-designer.md).
+ Dağıtım kullanarak bir uygulamayı yayımlamak için [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] , ortak/özel anahtar çiftini kullanarak uygulama için uygulama ve dağıtım bildirimlerini imzalayabilirsiniz. Bir bildirimi imzalama araçları, **Proje Tasarımcısı**' nın **imzalama** sayfasında kullanılabilir. Daha fazla bilgi için bkz. [Imzalama sayfası, proje Tasarımcısı](../ide/reference/signing-page-project-designer.md).
 
  Bildirimler imzalandıktan sonra, Authenticode imzasına bağlı yayımcı bilgisi uygulamanın güvenilir bir kaynaktan olduğunu kullanıcıya göstermek için izinler iletişim kutusunda gösterilir.
 

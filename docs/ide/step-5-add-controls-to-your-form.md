@@ -9,15 +9,15 @@ ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4ff3e132087b97339bc710555428ba7488fa2e06
-ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
+ms.openlocfilehash: 58f46f80a90cce116b985def0377ef80f5a671c6
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96480583"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99950672"
 ---
 # <a name="step-5-add-controls-to-your-form"></a>5. Adım: Formunuza denetimler ekleme
 
@@ -34,7 +34,7 @@ Bu adımda, <xref:System.Windows.Forms.PictureBox> Formunuza denetim ve denetim 
     ![PictureBox görevleri](../ide/media/express_pictureboxtasks.png)<br/>PictureBox **_ _tasks**
 
     > [!NOTE]
-    > Yanlışlıkla TableLayoutPanel içinde yanlış denetim türü eklerseniz, bunu silebilirsiniz. Denetime sağ tıklayın ve sonra bağlam menüsünde **Sil** ' i seçin. Ayrıca, menü çubuğunu kullanarak formdan denetimleri kaldırabilirsiniz. Menü çubuğunda, **Edit**  >  **geri al** Düzenle ' yi seçin veya Sil ' i **düzenleyin**  >  **Delete**.
+    > Yanlışlıkla TableLayoutPanel içinde yanlış denetim türü eklerseniz, bunu silebilirsiniz. Denetime sağ tıklayın ve sonra bağlam menüsünde **Sil** ' i seçin. Ayrıca, menü çubuğunu kullanarak formdan denetimleri kaldırabilirsiniz. Menü çubuğunda,   >  **geri al** Düzenle ' yi seçin veya Sil ' i **düzenleyin**  >  .
 
 1. **PictureBox** denetimindeki **PictureBox görevleri** menüsünde, **ana kapsayıcı içinde yerleştir** bağlantısını seçin. Bu, PictureBox **Dock** özelliğini **Fill** olarak ayarlar. Bunu görmek için **PictureBox** denetimini seçip seçin, **Özellikler** penceresine gidin ve **Dock** özelliğinin **Fill** olarak ayarlandığından emin olun.
 
@@ -45,7 +45,7 @@ Bu adımda, <xref:System.Windows.Forms.PictureBox> Formunuza denetim ve denetim 
 
 1. Formda **TableLayoutPanel** öğesini seçin ve ardından forma onay kutusu denetimi ekleyin. Tablodaki bir sonraki boş hücreye yeni bir CheckBox denetimi eklemek için **araç kutusu** ' nda **onay** kutusu öğesine çift tıklayın. PictureBox, TableLayoutPanel içindeki ilk iki hücreyi kullandığından, CheckBox denetimi sol alt hücreye eklenir. Aşağıdaki görüntüde gösterildiği gibi **metin** özelliğini seçin ve sözcük **uzatılmasına** yazın.
 
-    ![Esnetme özelliği ile TextBox denetimi](../ide/media/express_pictureviewercheckbox.png)<br/>*_* ***Esnetme**_ _Property * ile *_metin kutusu_* _ denetimi
+    ![Esnetme özelliği ile TextBox denetimi](../ide/media/express_pictureviewercheckbox.png)<br/>*_* ***Esnetme**_ _Property * ile **metin kutusu** _ denetimi
 
 1. Formda **TableLayoutPanel** öğesini seçin ve ardından **araç kutusundaki** **kapsayıcılar** grubuna gidin (TableLayoutPanel denetiminizi aldığınız yerdir) ve **FlowLayoutPanel** öğesine çift tıklayarak son hücreye (sağ alt) yeni bir denetim ekleyin. Ardından, TableLayoutPanel içindeki FlowLayoutPanel 'i yerleştirin. Bunu, FlowLayoutPanel 'in siyah üçgen görev listesinde **Ana kapsayıcıda yerleştir** ' i seçerek ya da FlowLayoutPanel **Dock** özelliğini **Fill** olarak ayarlayarak yapabilirsiniz.
 
@@ -56,7 +56,7 @@ Bu adımda, <xref:System.Windows.Forms.PictureBox> Formunuza denetim ve denetim 
 
 1. Eklediğiniz yeni FlowLayoutPanel 'i seçin. **Araç kutusundaki** **ortak denetimlere** gidin ve FlowLayoutPanel 'e **button1** adlı bir düğme denetimi eklemek için **düğme** öğesine çift tıklayın. Başka bir düğme eklemek için tekrarlayın. IDE zaten **button1** **adlı bir düğme** olduğunu belirler ve bir sonraki bir sonrakini çağırır.
 
-1. Genellikle, **araç kutusunu** kullanarak diğer düğmeleri eklersiniz. Bu kez, **button2**' ı seçin ve ardından menü çubuğundan kopyayı **Düzenle**' yi seçin  >  **Copy** (veya **CTRL** + **C** tuşlarına basın). Sonra, **Edit**  >  **Paste** düğme kopyasını yapıştırmak için menü çubuğundan Yapıştırmayı Düzenle ' yi (veya **CTRL** + **V** tuşlarına basın) seçin. Şimdi yapıştırın. IDE 'nin FlowLayoutPanel 'e **Button3** ve **Button4** eklediğine dikkat edin.
+1. Genellikle, **araç kutusunu** kullanarak diğer düğmeleri eklersiniz. Bu kez, **button2**' ı seçin ve ardından menü çubuğundan kopyayı **Düzenle**' yi seçin  >   (veya **CTRL** + **C** tuşlarına basın). Sonra,   >   düğme kopyasını yapıştırmak için menü çubuğundan Yapıştırmayı Düzenle ' yi (veya **CTRL** + **V** tuşlarına basın) seçin. Şimdi yapıştırın. IDE 'nin FlowLayoutPanel 'e **Button3** ve **Button4** eklediğine dikkat edin.
 
     > [!NOTE]
     > Herhangi bir denetimi kopyalayabilir ve yapıştırabilirsiniz. IDE adları ve yeni denetimleri mantıksal bir şekilde koyar. Bir kapsayıcıya bir denetim yapıştırırsanız, IDE yerleştirme için bir sonraki mantıksal alanı seçer.
@@ -76,7 +76,7 @@ Bu adımda, <xref:System.Windows.Forms.PictureBox> Formunuza denetim ve denetim 
 
    Düğmeleriniz artık doğru şekilde boyutlandırılıp doğru sırada olmalıdır. (Dört düğme seçildiği sürece, tüm dört **AutoSize** özelliklerini de aynı anda değiştirebilirsiniz.) Aşağıdaki görüntüde dört düğme gösterilmektedir.
 
-    ![Dört düğme içeren resim görüntüleyici](../ide/media/express_autosize.png)<br/>**_Resim görüntüleyici_* _ _with dört düğme *
+    ![Dört düğme içeren resim görüntüleyici](../ide/media/express_autosize.png)<br/>***Resim görüntüleyici** _ _with dört düğme *
 
 1. Şimdi yaptığınız değişiklikleri görmek için programınızı yeniden çalıştırın.
 

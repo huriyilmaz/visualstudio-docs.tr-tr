@@ -6,21 +6,21 @@ ms.topic: conceptual
 ms.assetid: f0f77faf-0a05-4718-a2c5-47934be40868
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 96cad46cd8a42346ab6199bca664cdc885bfc3cd
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: 1fc17bd86868a7b3e87c47ec44fd5caabf7a6cfd
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98720273"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99950149"
 ---
 # <a name="resource-monitoring-performance-rules"></a>Kaynak İzleme Performans Kuralları
 Kaynak Izleme kategorisindeki performans iletileri uygulamanızın performansı hakkında ek veriler sağlar. Bu verileri, performans sorunlarını analiz etmek için kullanabilirsiniz. Bu kurallar bilgilendirme amaçlıdır ve her profil oluşturma çalışması için raporlanır.
 
-|Kural|Açıklama|
+|Kural|Description|
 |-|-|
 |[DA0501: Işlem tarafından ortalama CPU kullanımı profili oluşturuldu.](../profiling/da0501-average-cpu-consumption-by-the-process-being-profiled.md)|Bu ileti, bir işlemcinin uygulamadan yönergeleri yürütürken meşgul olduğu sürenin yüzdesini bildirir. Bildirilen değer, işlem yapılan işlemin etkin olduğu tüm ölçüm aralıklarının ortalaması olarak belirlenir.|
 |[DA0502: Profili oluşturulan İşlemin En Yüksek CPU kullanımı](../profiling/da0502-maximum-cpu-consumption-by-the-process-being-profiled.md)|Bu ileti, bir işlemcinin uygulamadan yönergeleri yürütürken meşgul olduğu sürenin en uzun yüzdesini bildirir. Bildirilen değer, işlem yapılan işlemin etkin olduğu tüm ölçüm aralıkları arasında raporlanan en büyük değerdir.|

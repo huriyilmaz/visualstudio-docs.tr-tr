@@ -13,15 +13,15 @@ helpviewer_keywords:
 - <document> element
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 36d822d60d1a28d48f660f6d358b75bf4a913048
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e92c17d71b1c0959cb1918ce6fbad0e2cd44d5ec
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "63000030"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99949837"
 ---
 # <a name="ltdocumentgt-element-office-development-in-visual-studio"></a>&lt;Document &gt; öğesi (Visual Studio 'Da Office geliştirme)
   `document`Ad alanının öğesi, `vstov4` belge düzeyi özelleştirmeleri için özelleştirmeye özgü bilgileri depolar.
@@ -43,7 +43,7 @@ ms.locfileid: "63000030"
 
 ## <a name="document-level-customization-example"></a>Belge düzeyi özelleştirmesi örneği
 
-### <a name="description"></a>Açıklama
+### <a name="description"></a>Description
  Aşağıdaki kod örneği, `document` kullanılarak dağıtılan bir belge düzeyi Office çözümünde öğesini göstermektedir [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Bu kod örneği, [Office çözümleri Için uygulama bildirimlerinde](../vsto/application-manifests-for-office-solutions.md)sunulan daha büyük bir örneğin bir parçasıdır.
 
 ### <a name="code"></a>Kod

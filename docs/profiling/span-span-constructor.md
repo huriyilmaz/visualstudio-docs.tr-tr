@@ -9,21 +9,21 @@ helpviewer_keywords:
 ms.assetid: 8b5578aa-5e5c-4ac7-87c7-ce87c4246e2c
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f761e87c1658c11bfdfd93a4f4e22299d88575a8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0a813506e64242d1effdb9ed64d35c9ee5d31239
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62979828"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99949980"
 ---
 # <a name="spanspan-constructor"></a>span::span Oluşturucusu
 
 `span` sınıfının yeni bir örneğini başlatır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
 span(
@@ -70,4 +70,4 @@ span(
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [span sınıfı](../profiling/span-class.md)
+- [Span sınıfı](../profiling/span-class.md)

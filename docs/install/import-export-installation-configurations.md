@@ -13,17 +13,17 @@ helpviewer_keywords:
 - Visual Studio installer
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 4dcad21ce0a77e18bed0b077f731a509916e9e63
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 043622d08b5389db8bf4cce80450f62c070a0ace
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85418827"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99949473"
 ---
 # <a name="import-or-export-installation-configurations"></a>Yükleme yapılandırmasını içeri veya dışarı aktarma
 
@@ -78,7 +78,7 @@ Ayrıca, Çözüm Gezgini doğrudan bir. vsconfig dosyası da oluşturabilirsini
 
 1. Çözüm dosyanıza sağ tıklayın.
 
-1. **Add** > **Yükleme yapılandırma dosyası**Ekle ' yi seçin.
+1.  > **Yükleme yapılandırma dosyası** Ekle ' yi seçin.
 
 1. . Vsconfig dosyasını kaydetmek istediğiniz konumu onaylayın ve sonra **ayrıntıları gözden geçir**' i seçin.
 

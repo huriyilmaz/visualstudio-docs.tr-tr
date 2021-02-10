@@ -11,17 +11,17 @@ f1_keywords:
 ms.assetid: f8625d5e-f6ea-4db0-83c0-619b77fab3cf
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 1c658d97ed678950869c9a011af04e04eeacf5b1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2e4a7e0f9335971bb026ccc1c6b977680d9e3121
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86156825"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99949564"
 ---
 # <a name="create-an-offline-installation-of-visual-studio"></a>Visual Studio’nun çevrimdışı yüklemesini oluşturma
 
@@ -136,7 +136,7 @@ Bir komut istemi açın ve aşağıdaki örneklerde komutlardan birini kullanın
     vs_community.exe --layout c:\vslayout --add Microsoft.VisualStudio.Workload.NativeDesktop --includeRecommended --lang en-US
     ```
 
-- Tüm özelliklerle tam bir yerel düzen oluşturmak için (çok sayıda özelliği olan bu uzun bir süre sürer &mdash; !), şunu çalıştırın: _lots_
+- Tüm özelliklerle tam bir yerel düzen oluşturmak için (çok sayıda özelliği olan bu uzun bir süre sürer &mdash; !), şunu çalıştırın: 
 
    ```cmd
     vs_community.exe --layout c:\vslayout --lang en-US
@@ -192,7 +192,7 @@ c:\vslayout\vs_community.exe --noweb --add Microsoft.VisualStudio.Workload.Manag
 | ----------------------- | --------------- |
 | cs-CZ | Çekçe |
 | de-DE | Almanca |
-| tr-TR | İngilizce |
+| en-US | İngilizce |
 | es-ES | İspanyolca |
 | fr-FR | Fransızca |
 | it-IT | İtalyanca |

@@ -6,15 +6,15 @@ ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 623cbdcfaae6acd1889e265fecafec805e5a9440
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: bf6082ec8860f7f50e758eb65a8471ece94103aa
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97363139"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99950417"
 ---
 # <a name="msi-and-vsix-deployment-of-a-dsl"></a>DSL'nin MSI ve VSIX Dağıtımı
 Kendi bilgisayarınıza veya diğer bilgisayarlara, etki alanına özgü bir dil yükleyebilirsiniz. Visual Studio 'Nun hedef bilgisayarda zaten yüklü olması gerekir.
@@ -22,7 +22,7 @@ Kendi bilgisayarınıza veya diğer bilgisayarlara, etki alanına özgü bir dil
 ## <a name="choosing-between-vsix-and-msi-deployment"></a><a name="which"></a> VSıX ve MSI dağıtımı arasında seçim yapma
  Etki alanına özgü dil dağıtmanın iki yöntemi vardır:
 
-|Yöntem|Yararları|
+|Yöntem|Avantajlar|
 |-|-|
 |VSX (Visual Studio uzantısı)|Dağıtım çok kolay: **. vsix** dosyasını DslPackage projesinden kopyalayın ve yürütün.<br /><br /> Daha fazla bilgi için bkz. [VSX kullanarak DSL yükleme ve kaldırma](#Installing).|
 |MSI (yükleyici dosyası)|-Kullanıcının bir DSL dosyasına çift tıklayarak Visual Studio 'Yu açmasına izin verir.<br />-Bir simgeyi hedef bilgisayardaki DSL dosyası türüyle ilişkilendirir.<br />-Bir XSD (XML Şeması) DSL dosya türüyle ilişkilendirir. Bu, dosya Visual Studio 'ya yüklendiğinde uyarıları önler.<br /><br /> MSI oluşturmak için çözümünüze bir kurulum projesi eklemeniz gerekir.<br /><br /> Daha fazla bilgi için bkz. [MSI dosyası kullanarak DSL dağıtma](#msi).|
