@@ -8,13 +8,13 @@ helpviewer_keywords:
 - Windows Forms Designer, get started
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
-ms.openlocfilehash: d4d3c0965d638c9e048cef29d7f1b535a54e54a5
-ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
+manager: jmartens
+ms.openlocfilehash: 5803530290988affd6cfbb8342f3b1d545238985
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94493484"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99947859"
 ---
 # <a name="tutorial-get-started-with-windows-forms-designer"></a>Öğretici: Windows Form Tasarımcısı kullanmaya başlayın
 
@@ -45,7 +45,7 @@ Windows Form Tasarımcısı, Windows Forms uygulamalar oluşturmak için birçok
 
    ::: moniker-end
 
-2. Dosyayı yeniden adlandırmak için, **Çözüm Gezgini** ' de, **UserControl1. vb** veya **UserControl1.cs** öğesine sağ tıklayın, **Yeniden Adlandır** ' ı seçin ve dosya adını demohesaplayıcı. vb veya DemoCalculator.cs olarak değiştirin. "UserControl1" kod öğesiyle tüm başvuruları yeniden adlandırmak isteyip istemediğiniz sorulduğunda **Evet** ' i seçin.
+2. Dosyayı yeniden adlandırmak için, **Çözüm Gezgini**' de, **UserControl1. vb** veya **UserControl1.cs** öğesine sağ tıklayın, **Yeniden Adlandır**' ı seçin ve dosya adını demohesaplayıcı. vb veya DemoCalculator.cs olarak değiştirin. "UserControl1" kod öğesiyle tüm başvuruları yeniden adlandırmak isteyip istemediğiniz sorulduğunda **Evet** ' i seçin.
 
 Windows Form Tasarımcısı Demohesaplayıcı denetimi için tasarımcı yüzeyini gösterir. Bu görünümde, araç kutusu ' ndan denetimler ve bileşenler ' i seçip tasarımcı yüzeyine yerleştirerek denetimin görünümünü grafiksel olarak tasarlayabilirsiniz. Özel denetimler hakkında daha fazla bilgi için bkz. [Özel denetimlerin değişen özellikleri](/dotnet/framework/winforms/controls/varieties-of-custom-controls).
 
@@ -55,7 +55,7 @@ Demohesaplayıcı denetimi çeşitli Windows Forms denetimleri içerir. Bu yorda
 
 1. Windows Form Tasarımcısı, sağ alt köşedeki boyutlandırma tutamacını seçerek ve sağa sürükleyerek Demohesaplayıcı denetimini daha büyük bir boyutla değiştirin. Visual Studio 'nun sağ alt köşesinde, denetimler için boyut ve konum bilgilerini bulun. Denetimi yeniden boyutlandırırken boyut bilgilerini izleyerek denetimin boyutunu Width 500 ve Height 400 olarak ayarlayın.
 
-2. **Araç kutusu** 'nda, açmak için **kapsayıcılar** düğümünü seçin. **SplitContainer** denetimini seçin ve tasarımcı yüzeyine sürükleyin.
+2. **Araç kutusu**'nda, açmak için **kapsayıcılar** düğümünü seçin. **SplitContainer** denetimini seçin ve tasarımcı yüzeyine sürükleyin.
 
    , `SplitContainer` Demohesaplayıcı denetiminin tasarımcı yüzeyine yerleştirilir.
 
@@ -79,17 +79,17 @@ Demohesaplayıcı denetimi çeşitli Windows Forms denetimleri içerir. Bu yorda
 
 6. **Özellikler** penceresinde, `BorderStyle` özelliğinin değerini olarak değiştirin `Fixed3D` .
 
-7. **Araç kutusu** ' nda **ortak denetimler** düğümünü seçerek açın. Denetimi seçin `ListView` ve denetimin sağ paneline sürükleyin `SplitContainer` .
+7. **Araç kutusu**' nda **ortak denetimler** düğümünü seçerek açın. Denetimi seçin `ListView` ve denetimin sağ paneline sürükleyin `SplitContainer` .
 
 8. `ListView`Denetimin akıllı etiket karakterini seçin. Akıllı etiket panelinde `View` ayarı olarak değiştirin `Details` .
 
-9. Akıllı etiket panelinde **Sütunları Düzenle** ' yi seçin.
+9. Akıllı etiket panelinde **Sütunları Düzenle**' yi seçin.
 
    **ColumnHeader koleksiyon Düzenleyicisi** iletişim kutusu açılır.
 
 10. **ColumnHeader koleksiyon Düzenleyicisi** iletişim kutusunda, denetime sütun eklemek için **Ekle** ' yi seçin `ListView` . Sütunun `Text` özelliğinin değerini **History** olarak değiştirin. Sütunu oluşturmak için **Tamam ' ı** seçin.
 
-11. Akıllı etiket panelinde, **Ana kapsayıcıda yerleştir** ' i seçin ve akıllı etiket panelini kapatmak için akıllı etiket glifi ' nı seçin.
+11. Akıllı etiket panelinde, **Ana kapsayıcıda yerleştir**' i seçin ve akıllı etiket panelini kapatmak için akıllı etiket glifi ' nı seçin.
 
 12. **Kapsayıcılar** düğüm **araç kutusundan** denetimin `TableLayoutPanel` sol paneline bir denetim sürükleyin `SplitContainer` .
 
@@ -101,7 +101,7 @@ Demohesaplayıcı denetimi çeşitli Windows Forms denetimleri içerir. Bu yorda
 
 14. Beş sütun görüntülenene kadar **Ekle** düğmesini seçin. Beş sütunu da seçin ve ardından **Boyut türü** kutusunda **yüzde** ' yi seçin. **Yüzde** değerini **20** olarak ayarlayın. Bu, her sütunu aynı genişliğe ayarlar.
 
-15. **Göster** altında **Satırlar** ' ı seçin.
+15. **Göster** altında **Satırlar**' ı seçin.
 
 16. Beş satır görüntülenene kadar **Ekle** ' yi seçin. Beş satırı ve **Boyut türü** kutusunda **yüzde** seçimini seçin. **Yüzde** değerini **20** olarak ayarlayın. Bu, her bir satırı aynı yüksekliğe ayarlar.
 
@@ -113,7 +113,7 @@ Demohesaplayıcı denetimi çeşitli Windows Forms denetimleri içerir. Bu yorda
 
 Artık denetimin düzeni ayarlanmış olduğuna göre, Demohesaplayıcı denetimini düğmeler ve bir ekran ile doldurabilirsiniz.
 
-1. **Araç kutusu** ' nda `TextBox` Denetim simgesini seçin.
+1. **Araç kutusu**' nda `TextBox` Denetim simgesini seçin.
 
    Denetim, `TextBox` denetimin ilk hücresine yerleştirilir `TableLayoutPanel` .
 
@@ -131,15 +131,15 @@ Artık denetimin düzeni ayarlanmış olduğuna göre, Demohesaplayıcı denetim
 
 6. Denetimi seçin `TableLayoutPanel` .
 
-7. **Araç kutusu** 'nda simgesini seçin `Button` .
+7. **Araç kutusu**'nda simgesini seçin `Button` .
 
    Denetim, `Button` denetimin bir sonraki açık hücresine yerleştirilir `TableLayoutPanel` .
 
-8. **Araç kutusu** ' nda, `Button` denetimin ikinci satırını doldurmak için simgeyi dört kez daha seçin `TableLayoutPanel` .
+8. **Araç kutusu**' nda, `Button` denetimin ikinci satırını doldurmak için simgeyi dört kez daha seçin `TableLayoutPanel` .
 
-9. `Button` **Shift** tuşunu basılı tutarken beş denetimin tamamını seçerek seçin. **Ctrl** + Denetimleri panoya kopyalamak için CTRL **C** tuşlarına basın `Button` .
+9. `Button` **Shift** tuşunu basılı tutarken beş denetimin tamamını seçerek seçin.  + Denetimleri panoya kopyalamak için CTRL **C** tuşlarına basın `Button` .
 
-10. **Ctrl** + Denetimlerin kopyalarını denetimin kalan satırlarına kopyalamak için CTRL **V** ' ye üç kez basın `Button` `TableLayoutPanel` .
+10.  + Denetimlerin kopyalarını denetimin kalan satırlarına kopyalamak için CTRL **V** ' ye üç kez basın `Button` `TableLayoutPanel` .
 
 11. `Button` **Shift** tuşunu basılı tutarken tüm 20 denetimleri seçerek seçin.
 
@@ -151,19 +151,19 @@ Artık denetimin düzeni ayarlanmış olduğuna göre, Demohesaplayıcı denetim
 
     Tüm denetimler, aralarında `Button` daha büyük bir kenar boşluğu oluşturmak için daha küçük boyutlardır.
 
-14. **Button10** ve **button20** ' i seçin ve sonra düzenden kaldırmak için **Sil** ' e basın.
+14. **Button10** ve **button20**' i seçin ve sonra düzenden kaldırmak için **Sil** ' e basın.
 
-15. **Button5** ve **button15** öğesini seçin ve ardından `RowSpan` özelliğinin değerini **2** olarak değiştirin. Bu, **Clear** **=** demohesaplayıcı denetimi için açık ve düğmeler olacaktır.
+15. **Button5** ve **button15** öğesini seçin ve ardından `RowSpan` özelliğinin değerini **2** olarak değiştirin. Bu,  **=** demohesaplayıcı denetimi için açık ve düğmeler olacaktır.
 
 ## <a name="use-the-document-outline-window"></a>Belge Anahattı penceresini kullanın
 
 Denetiminiz veya formunuz çeşitli denetimlerle doldurulduğu zaman, belge anahattı penceresi ile mizanpajınızı gezinmeyi daha kolay bulabilirsiniz.
 
-1. Menü çubuğunda, **View**  >  **diğer Windows**  >  **belge anahattını** görüntüle ' yi seçin.
+1. Menü çubuğunda,   >  **diğer Windows**  >  **belge anahattını** görüntüle ' yi seçin.
 
    Belge Anahattı penceresi, Demohesaplayıcı denetiminin ve onun bileşen denetimlerinin ağaç görünümünü gösterir. İçindeki kapsayıcı denetimleri, `SplitContainer` alt denetimlerini ağaçta alt düğümleri olarak göster. Ayrıca Belge Anahattı penceresini kullanarak yerinde denetimleri yeniden adlandırabilirsiniz.
 
-2. **Belge ana hattı** penceresinde **button1** ' e sağ tıklayın ve ardından **Yeniden Adlandır** ' ı seçin. Adını yeti düğmesi olarak değiştirin.
+2. **Belge ana hattı** penceresinde **button1**' e sağ tıklayın ve ardından **Yeniden Adlandır**' ı seçin. Adını yeti düğmesi olarak değiştirin.
 
 3. **Belge Anahattı** penceresini kullanarak, `Button` aşağıdaki listeye göre tasarımcı tarafından oluşturulan ad içindeki denetimleri üretim adı olarak yeniden adlandırın:
 
@@ -221,9 +221,9 @@ Denetiminiz veya formunuz çeşitli denetimlerle doldurulduğu zaman, belge anah
 
    - Altbutton denetim metni özelliğini **6** olarak değiştirme
 
-   - MultiplicationButton denetim metni özelliğini * *\** _ (yıldız işareti) olarak değiştirin
+   - MultiplicationButton denetim metni özelliğini **\*** (yıldız işareti) olarak değiştirme
 
-   - OneButton denetim metni özelliğini _ *1* olarak değiştirin*
+   - OneButton denetim metni özelliğini **1** olarak değiştirin
 
    - Twobtan denetim metni özelliğini **2** olarak değiştirme
 
@@ -265,7 +265,7 @@ Demohesaplayıcı denetimi sınıfından devraldığından <xref:System.Windows.
 
 2. Paneller arasındaki kenarlığı seçin `SplitContainer` ve sola ve sağa sürükleyin. `TableLayoutPanel`Ve tüm alt denetimleri, kullanılabilir alana sığacak şekilde kendilerini yeniden boyutlandırır.
 
-3. Denetimi test etmeyi bitirdiğinizde **Kapat** ' ı seçin.
+3. Denetimi test etmeyi bitirdiğinizde **Kapat**' ı seçin.
 
 ## <a name="use-the-control-on-a-form"></a>Form üzerinde denetimi kullanma
 
@@ -277,11 +277,11 @@ Demohesaplayıcı denetimi, diğer bileşik denetimlerde veya bir formda kullan�
 
 1. Yeni bir **Windows Forms uygulama** projesi oluşturun ve bunu **Demohesaplatortest** olarak adlandırın.
 
-2. **Çözüm Gezgini** , **Demohesaplatortest** projesine sağ tıklayın ve **sonra başvuru Ekle Iletişim kutusunu** açmak için **Başvuru Ekle** ' yi seçin.
+2. **Çözüm Gezgini**, **Demohesaplatortest** projesine sağ tıklayın ve **sonra başvuru Ekle Iletişim kutusunu** açmak için **Başvuru Ekle** ' yi seçin.
 
 3. **Projeler** sekmesine gidin ve ardından başvuruyu test projesine eklemek Için Demohesaplatorlib projesini seçin.
 
-4. **Çözüm Gezgini** , **Demohesaplatortest** öğesine sağ tıklayın ve ardından **Başlangıç projesi olarak ayarla** ' yı seçin.
+4. **Çözüm Gezgini**, **Demohesaplatortest** öğesine sağ tıklayın ve ardından **Başlangıç projesi olarak ayarla**' yı seçin.
 
 5. Windows Form Tasarımcısı, formun boyutunu **700 x 500** hakkında artırın.
 
@@ -289,7 +289,7 @@ Demohesaplayıcı denetimi, diğer bileşik denetimlerde veya bir formda kullan�
 
 Bir uygulamada Demohesaplayıcı denetimini kullanmak için, onu bir forma yerleştirmeniz gerekir.
 
-1. **Araç kutusu** 'Nda **Demohesaplatorlib bileşenleri** düğümünü genişletin.
+1. **Araç kutusu**'Nda **Demohesaplatorlib bileşenleri** düğümünü genişletin.
 
 2. **Araç kutusu** ' ndan **demohesaplayıcı** denetimini formunuza sürükleyin. Denetimi formun sol üst köşesine taşıyın. Denetim formun kenarlıklarına yakınsa, yama *çizgileri* görüntülenir. Anlık görüntü çizgileri, formun `Padding` özelliğinin ve denetimin özelliğinin uzaklığını belirtir `Margin` . Denetimi, snaplines belirtilen konuma konumlandırın.
 
@@ -299,7 +299,7 @@ Bir uygulamada Demohesaplayıcı denetimini kullanmak için, onu bir forma yerle
 
 4. `Button`Denetimi Demohesaplayıcı denetiminin çevresinde taşıyın ve anlık görüntü çizgilerinin nerede göründüğünü gözlemleyin. Bu özelliği kullanarak denetimlerinizi tam ve kolay bir şekilde hizalayabilirsiniz. `Button`İşiniz bittiğinde denetimi silin.
 
-5. Demohesaplayıcı denetimine sağ tıklayıp **Özellikler** ' i seçin.
+5. Demohesaplayıcı denetimine sağ tıklayıp **Özellikler**' i seçin.
 
 6. `Dock`Özelliğin değerini olarak değiştirin `Fill` .
 

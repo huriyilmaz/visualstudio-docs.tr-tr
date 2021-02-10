@@ -21,15 +21,15 @@ helpviewer_keywords:
 - helper methods [Office development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: e971556605a120b4ef475f434390c6dcf7b17938
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: 5d49c7fa9224b2d527956536cb0c56b016f6b52e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96844848"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99948654"
 ---
 # <a name="add-controls-to-office-documents-at-run-time"></a>Çalışma zamanında Office belgelerine denetim ekleme
   Çalışma zamanında bir Microsoft Office Word belgesine ve Microsoft Office Excel çalışma kitabına denetimler ekleyebilirsiniz. Onları çalışma zamanında da kaldırabilirsiniz. Çalışma zamanında eklediğiniz veya kaldırdığınız denetimlere *Dinamik denetimler* denir.
@@ -56,7 +56,7 @@ ms.locfileid: "96844848"
 - Excel veya Word için VSTO eklentisi projesinde, `Controls` çalışma zamanında oluşturduğunuz bir veya öğesinin özelliğini kullanın <xref:Microsoft.Office.Tools.Excel.Worksheet> <xref:Microsoft.Office.Tools.Word.Document> . Çalışma zamanında bu nesneleri oluşturma hakkında daha fazla bilgi için bkz. [çalışma ZAMANıNDA VSTO Eklentilerindeki Word belgelerini ve Excel çalışma kitaplarını genişletme](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md).
 
 ### <a name="add-controls"></a>Denetim Ekle
- <xref:Microsoft.Office.Tools.Excel.ControlCollection>Ve <xref:Microsoft.Office.Tools.Word.ControlCollection> türleri, belgelere ve çalışma sayfalarına konak denetimleri ve ortak Windows Forms denetimleri eklemek için kullanabileceğiniz yardımcı yöntemleri içerir. Her yöntem adı, denetim sınıfının, `Add` eklemek istediğiniz denetimin *control class* sınıf adı olduğu biçim *denetim sınıfına* sahiptir. Örneğin, belgenize bir denetim eklemek için <xref:Microsoft.Office.Tools.Excel.NamedRange> <xref:Microsoft.Office.Tools.Excel.ControlCollection.AddNamedRange%2A> yöntemini kullanın.
+ <xref:Microsoft.Office.Tools.Excel.ControlCollection>Ve <xref:Microsoft.Office.Tools.Word.ControlCollection> türleri, belgelere ve çalışma sayfalarına konak denetimleri ve ortak Windows Forms denetimleri eklemek için kullanabileceğiniz yardımcı yöntemleri içerir. Her yöntem adı, denetim sınıfının, `Add` eklemek istediğiniz denetimin  sınıf adı olduğu biçim *denetim sınıfına* sahiptir. Örneğin, belgenize bir denetim eklemek için <xref:Microsoft.Office.Tools.Excel.NamedRange> <xref:Microsoft.Office.Tools.Excel.ControlCollection.AddNamedRange%2A> yöntemini kullanın.
 
  Aşağıdaki kod örneği, <xref:Microsoft.Office.Tools.Excel.NamedRange> `Sheet1` Excel için belge düzeyi projesine öğesine ekler.
 

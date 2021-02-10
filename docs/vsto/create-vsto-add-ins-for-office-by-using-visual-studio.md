@@ -10,15 +10,15 @@ dev_langs:
 - CSharp
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 50337b728647b5e15a877216713cd6fc9823742a
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: 611feb69dc4c5ebdd340a61c49e76e0d7c33e713
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96847981"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99947964"
 ---
 # <a name="create-vsto-add-ins-for-office-by-using-visual-studio"></a>Visual Studio kullanarak Office için VSTO Eklentileri oluşturma
   Office 'i genişleten .NET Framework uygulamalar oluşturmak için Visual Studio 'daki Microsoft Office Geliştirici Araçları ' nı kullanabilirsiniz. Bu uygulamalar *Office çözümleri* olarak da adlandırılır.

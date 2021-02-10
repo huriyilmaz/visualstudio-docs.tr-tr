@@ -15,15 +15,15 @@ helpviewer_keywords:
 - Outlook [Office development in Visual Studio], form regions
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: f3273c02416cac54dfd244ba4f163fb5d726413c
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: ba2c4412b344a37e1b1db74cdddea8c5b60b69d0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96847968"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99947899"
 ---
 # <a name="create-outlook-form-regions"></a>Outlook form bölgeleri oluşturma
   Form bölgelerini Microsoft Office Outlook formlarını özelleştirmek için kullanabilirsiniz. Visual Studio, form bölgelerini tasarlamanıza, geliştirmenize ve hata ayıklamanıza daha kolay bir şekilde gelişmiş araçlar sağlar.
@@ -71,7 +71,7 @@ ms.locfileid: "96847968"
 
  Oluşturmak istediğiniz form bölgesi türünü belirtmek için Sihirbazı kullanın. Aşağıdaki tabloda her form bölge türü açıklanmaktadır.
 
-|Bölge türü|Açıklama|
+|Bölge türü|Description|
 |-----------------|-----------------|
 |Bağımsız|Form bölgesini Outlook formunda yeni bir sayfa olarak ekler.|
 |Boşluğuna bitişik alanda|Form bölgesini Outlook formunun varsayılan sayfasının altına ekler.|
@@ -153,7 +153,7 @@ ms.locfileid: "96847968"
 ### <a name="handle-form-region-events"></a><a name="HandlingFormRegionEvents"></a> Form bölgesi olaylarını işle
  **Outlook form bölgesi** öğesi, aşağıdaki üç olay işleyicisini form bölgesi kod dosyasına otomatik olarak ekler.
 
-|Olay|Açıklama|
+|Olay|Description|
 |-----------|-----------------|
 |Formregionbaşlatılıyor|Form bölgesi başlatılmadan önce oluşur. Outlook 'un form bölgesini görüntülemesi gerekip gerekmediğini öğrenmek için bu olay işleyicisindeki koşulları kontrol edebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: Outlook 'un form bölgesini görüntülemesini engelleme](../vsto/how-to-prevent-outlook-from-displaying-a-form-region.md).|
 |Bir Formregiongösteriliyor|Form bölgesinin bir örneği oluşturulduktan sonra, ancak form bölgesi görüntülenmeden önce oluşur.|

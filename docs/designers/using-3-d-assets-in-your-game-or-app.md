@@ -14,15 +14,15 @@ f1_keywords:
 ms.assetid: ea587909-e434-46a8-abf8-9b3e95a58b4f
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ee9dff2cd6b762b2f81581963de6186cdd36e3ab
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: 18294a9a6b6a0b967748d6a00817e4194e4cc32f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93134759"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99948537"
 ---
 # <a name="how-to-use-3d-assets-in-your-game-or-app"></a>Nasıl yapılır: Oyununuzda veya uygulamanızda 3B varlıklar kullanma
 
@@ -36,7 +36,7 @@ Bu makalede, Visual Studio 'Yu kullanarak 3B varlıkları nasıl işleyebileceğ
 
 ### <a name="to-add-the-build-customizations-to-your-project"></a>Projenize yapı özelleştirmeleri eklemek için
 
-1. **Çözüm Gezgini** ' de, proje için kısayol menüsünü açın ve ardından **yapı bağımlılıkları**  >  **Derleme özelleştirmeleri** ' ni seçin.
+1. **Çözüm Gezgini**' de, proje için kısayol menüsünü açın ve ardından **yapı bağımlılıkları**  >  **Derleme özelleştirmeleri**' ni seçin.
 
    **Visual C++ yapı özelleştirmeleri dosyaları** iletişim kutusu görüntülenir.
 
@@ -56,13 +56,13 @@ Artık projeniz kullanmak istediğiniz farklı türlerdeki 3B varlıkların oldu
 
 ### <a name="to-add-an-asset-to-your-build"></a>Derlemenize bir varlık eklemek için
 
-1. **Çözüm Gezgini** , projenizde bir varlığın kısayol menüsünü açın ve ardından **Özellikler** ' i seçin.
+1. **Çözüm Gezgini**, projenizde bir varlığın kısayol menüsünü açın ve ardından **Özellikler**' i seçin.
 
    Varlığın **özellik sayfası** iletişim kutusu görüntülenir.
 
 2. **Yapılandırma** ve **Platform** özelliklerinin, değişikliklerinizin uygulanmasını istediğiniz değerlere ayarlandığından emin olun.
 
-3. **Yapılandırma özellikleri** ' nin altında **genel** ' i seçin ve sonra özellik kılavuzunda, **genel** altında, **öğe türü** özelliğini uygun içerik ardışık düzen öğe türü olarak ayarlayın. Örneğin, bir görüntü veya doku dosyası için **görüntü içeriği Işlem hattı** ' nı seçin.
+3. **Yapılandırma özellikleri**' nin altında **genel**' i seçin ve sonra özellik kılavuzunda, **genel** altında, **öğe türü** özelliğini uygun içerik ardışık düzen öğe türü olarak ayarlayın. Örneğin, bir görüntü veya doku dosyası için **görüntü içeriği Işlem hattı**' nı seçin.
 
     > [!IMPORTANT]
     > Varsayılan olarak, Visual Studio, Visual Studio 'da yerleşik olarak bulunan **görüntü** öğesi türü kullanılarak birçok görüntü dosyası türünün kategorize olması gerektiğini varsayar. Bu nedenle, görüntü içeriği ardışık düzeni tarafından işlenmesini istediğiniz her bir görüntünün **öğe türü** özelliğini değiştirmeniz gerekir. 3B modeller ve Visual gölgelendirici grafik için diğer içerik ardışık düzen kaynak dosyalarının doğru **öğe türü** için varsayılan türü.
@@ -73,9 +73,9 @@ Aşağıda üç içerik ardışık düzen öğe türü ve ilişkili kaynak ve ç
 
 |Öğe türü|Kaynak dosya türleri|Çıkış dosyası biçimi|
 |---------------| - | - |
-|**Görüntü Içeriği ardışık düzeni**|Taşınabilir Ağ Grafikleri ( *. png* )<br /><br /> JPEG ( *. jpg* , *. jpeg* , *. jpe* , *.* JI)<br /><br /> Doğrudan çizim yüzeyi ( *. DDS* )<br /><br /> Grafik Değişim Biçimi ( *. gif* )<br /><br /> Bit eşlem ( *. bmp* , *. dib* )<br /><br /> Etiketli resim dosyası biçimi ( *. tif* , *. tiff* )<br /><br /> Targa ( *. tga* )|DirectDraw yüzeyi ( *. DDS* )|
-|**Kafes Içerik ardışık düzeni**|AutoDesk FBX değişim dosyası ( *. fbx* )<br /><br /> Collada Dade dosyası ( *. Dade* )<br /><br /> Wavefront OBJ dosyası ( *. obj* )|3B ağ dosyası ( *. CMO* )|
-|**Gölgelendirici Içerik ardışık düzeni**|Görsel Gölgelendirici Grafiği ( *. dgsl* )|Derlenen gölgelendirici çıkışı ( *. cso* )|
+|**Görüntü Içeriği ardışık düzeni**|Taşınabilir Ağ Grafikleri (*. png*)<br /><br /> JPEG (*. jpg*, *. jpeg*, *. jpe*, *.* JI)<br /><br /> Doğrudan çizim yüzeyi (*. DDS*)<br /><br /> Grafik Değişim Biçimi (*. gif*)<br /><br /> Bit eşlem (*. bmp*, *. dib*)<br /><br /> Etiketli resim dosyası biçimi (*. tif*, *. tiff*)<br /><br /> Targa (*. tga*)|DirectDraw yüzeyi (*. DDS*)|
+|**Kafes Içerik ardışık düzeni**|AutoDesk FBX değişim dosyası (*. fbx*)<br /><br /> Collada Dade dosyası (*. Dade*)<br /><br /> Wavefront OBJ dosyası (*. obj*)|3B ağ dosyası (*. CMO*)|
+|**Gölgelendirici Içerik ardışık düzeni**|Görsel Gölgelendirici Grafiği (*. dgsl*)|Derlenen gölgelendirici çıkışı (*. cso*)|
 
 ## <a name="configure-asset-content-pipeline-properties"></a>Varlık içeriği ardışık düzen özelliklerini yapılandırma
 
@@ -83,7 +83,7 @@ Her bir varlık dosyasının içerik ardışık düzen özelliklerini belirli bi
 
 ### <a name="to-configure-content-pipeline-properties"></a>İçerik ardışık düzen özelliklerini yapılandırmak için
 
-1. **Çözüm Gezgini** , projenizde varlık dosyasının kısayol menüsünü açın ve ardından **Özellikler** ' i seçin.
+1. **Çözüm Gezgini**, projenizde varlık dosyasının kısayol menüsünü açın ve ardından **Özellikler**' i seçin.
 
    Varlığın **özellik sayfası** iletişim kutusu görüntülenir.
 
@@ -100,8 +100,8 @@ Bir doku varlığı oluşturmak için görüntü içeriği ardışık düzen ara
 |Özellik|Açıklama|
 |--------------|-----------------|
 |**Madı**|Çıktı dosyası için kullanılan sıkıştırma türünü belirtir.<br /><br /> Şu seçenekler sağlanır:<br /><br /> -   **Sıkıştırma yok**<br />-   **BC1_UNORM sıkıştırma**<br />-   **BC1_UNORM_SRGB sıkıştırma**<br />-   **BC2_UNORM sıkıştırma**<br />-   **BC2_UNORM_SRGB sıkıştırma**<br />-   **BC3_UNORM sıkıştırma**<br />-   **BC3_UNORM_SRGB sıkıştırma**<br />-   **BC4_UNORM sıkıştırma**<br />-   **BC4_SNORM sıkıştırma**<br />-   **BC5_UNORM sıkıştırma**<br />-   **BC5_SNORM sıkıştırma**<br />-   **BC6H_UF16 sıkıştırma**<br />-   **BC6H_SF16 sıkıştırma**<br />-   **BC7_UNORM sıkıştırma**<br />-   **BC7_UNORM_SRGB sıkıştırma**<br /><br /> DirectX 'in farklı sürümlerinde hangi sıkıştırma biçimlerinin desteklendiği hakkında bilgi için bkz. [DXGı Için Programlama Kılavuzu](/windows/win32/direct3ddxgi/dx-graphics-dxgi-overviews).|
-|Önceden çoğaltılmış alfa biçimine Dönüştür|**Evet** , görüntüyü çıkış dosyasında önceden çarpılan Alfa biçimine dönüştürmek için. Aksi takdirde, **Hayır** . Yalnızca çıkış dosyası değiştirildiğinde, kaynak görüntü değiştirilmez.|
-|**MIPS oluştur**|Derleme zamanında tam MıP zinciri oluşturmak ve bunu çıkış dosyasına dahil etmek için **Evet** ; Aksi takdirde, **Hayır** . **Hayır** ise ve kaynak dosya zaten bir mipmap zinciri içeriyorsa, çıkış dosyası bir MIP zincirine sahip olur; Aksi takdirde, çıkış dosyası MıP zincirine sahip olmaz.|
+|Önceden çoğaltılmış alfa biçimine Dönüştür|**Evet** , görüntüyü çıkış dosyasında önceden çarpılan Alfa biçimine dönüştürmek için. Aksi takdirde, **Hayır**. Yalnızca çıkış dosyası değiştirildiğinde, kaynak görüntü değiştirilmez.|
+|**MIPS oluştur**|Derleme zamanında tam MıP zinciri oluşturmak ve bunu çıkış dosyasına dahil etmek için **Evet** ; Aksi takdirde, **Hayır**. **Hayır** ise ve kaynak dosya zaten bir mipmap zinciri içeriyorsa, çıkış dosyası bir MIP zincirine sahip olur; Aksi takdirde, çıkış dosyası MıP zincirine sahip olmaz.|
 |**İçerik çıkışı**|Çıktı dosyasının adını belirtir. **Önemli:**  Çıkış dosyasının dosya adı uzantısının değiştirilmesinin dosya biçimi üzerinde hiçbir etkisi yoktur.|
 
 ### <a name="mesh-content-pipeline-configuration"></a>Kafes içerik ardışık düzen yapılandırması

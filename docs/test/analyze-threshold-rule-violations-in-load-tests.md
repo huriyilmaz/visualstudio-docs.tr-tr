@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 969ed346-cf2e-4d48-82b3-edb3e075e1c0
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
-ms.openlocfilehash: 49fe5893254083dd83551ef5f43fffcc295a992a
-ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
+manager: jmartens
+ms.openlocfilehash: 519a908b85c6cdf3dbecc38e032d72ac223a8bdc
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95442709"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99948055"
 ---
 # <a name="analyzing-threshold-rule-violations-in-load-tests-using-the-load-test-analyzer"></a>Yük Testi Çözümleyicisini kullanarak yük testlerinde eşik kuralı ihlallerini çözümleme
 
@@ -38,12 +38,12 @@ Eşik ihlalleri tablosu ilk 1.000 ihlallerini görüntüler. Aşağıdaki tablo 
 
 |Sütun|Açıklama|Varsayılan olarak görünür|
 |-|-|-|
-|Saat|Yük testi sırasında ihlalin gerçekleştiği zaman.|Evet|
-|Bilgisayar|İhlalin gerçekleştiği test altındaki bilgisayarın adı. **Note:**  Bu, yük testlerini Rig 'ler üzerinde çalıştırdığınızda önemlidir.|Evet|
-|Kategori|İhlalin gerçekleştiği performans sayacının kategorisi.|Evet|
-|Sayaç|İhlalin gerçekleştiği performans sayacının adı.|Evet|
-|Örnek|İhlalin gerçekleştiği performans sayacı örneği.|Evet|
-|İleti|Eşik ihlalini açıklayan bir ileti. Örneğin, **5 değeri 0 ' ın kritik eşik değerini aşıyor**.|Evet|
+|Saat|Yük testi sırasında ihlalin gerçekleştiği zaman.|Yes|
+|Bilgisayar|İhlalin gerçekleştiği test altındaki bilgisayarın adı. **Note:**  Bu, yük testlerini Rig 'ler üzerinde çalıştırdığınızda önemlidir.|Yes|
+|Kategori|İhlalin gerçekleştiği performans sayacının kategorisi.|Yes|
+|Sayaç|İhlalin gerçekleştiği performans sayacının adı.|Yes|
+|Örnek|İhlalin gerçekleştiği performans sayacı örneği.|Yes|
+|İleti|Eşik ihlalini açıklayan bir ileti. Örneğin, **5 değeri 0 ' ın kritik eşik değerini aşıyor**.|Yes|
 
 > [!NOTE]
 > Sütun üstbilgilerini seçerek tabloyu sıralayabilirsiniz.

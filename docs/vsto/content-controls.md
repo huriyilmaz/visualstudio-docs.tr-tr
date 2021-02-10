@@ -37,15 +37,15 @@ helpviewer_keywords:
 - BuildingBlockGalleryContentControl class
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: a34211c7fb1fa001719219b7d08baab65340bde5
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: ce692bf10c5473c648fd6587b6b6568d369ed496
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96848046"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99948003"
 ---
 # <a name="content-controls"></a>İçerik denetimleri
   İçerik denetimleri, bu özelliklere sahip belge ve şablonlar tasarlamak için bir yol sağlar:
@@ -165,7 +165,7 @@ ms.locfileid: "96848046"
 |---------------|-----------------------------|----------------------------------------------------------------|
 |<xref:System.Boolean><br /><br /> <xref:System.Byte><br /><br /> <xref:System.Char><br /><br /> <xref:System.Double><br /><br /> <xref:System.Enum><br /><br /> <xref:System.Guid><br /><br /> <xref:System.Int16><br /><br /> <xref:System.Int32><br /><br /> <xref:System.Int64><br /><br /> <xref:System.SByte><br /><br /> <xref:System.Single><br /><br /> <xref:System.String><br /><br /> <xref:System.TimeSpan><br /><br /> <xref:System.UInt16><br /><br /> <xref:System.UInt32><br /><br /> <xref:System.UInt64>|<xref:Microsoft.Office.Tools.Word.PlainTextContentControl>|<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl><br /><br /> <xref:Microsoft.Office.Tools.Word.ComboBoxContentControl><br /><br /> <xref:Microsoft.Office.Tools.Word.DatePickerContentControl><br /><br /> <xref:Microsoft.Office.Tools.Word.RichTextContentControl>|
 |<xref:System.DateTime>|<xref:Microsoft.Office.Tools.Word.DatePickerContentControl>|<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl><br /><br /> <xref:Microsoft.Office.Tools.Word.ComboBoxContentControl><br /><br /> <xref:Microsoft.Office.Tools.Word.PlainTextContentControl><br /><br /> <xref:Microsoft.Office.Tools.Word.RichTextContentControl>|
-|<xref:System.Drawing.Image><br /><br /> <xref:System.Byte> dizide|<xref:Microsoft.Office.Tools.Word.PictureContentControl>|Hiçbiri|
+|<xref:System.Drawing.Image><br /><br /> <xref:System.Byte> dizide|<xref:Microsoft.Office.Tools.Word.PictureContentControl>|Yok|
 
  Belge düzeyi ve VSTO eklenti projelerinde, <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> denetimin özelliğinin yöntemini kullanarak bir içerik denetimini bir veri kaynağına programlı bir şekilde bağlayabilirsiniz <xref:System.Windows.Forms.IBindableComponent.DataBindings%2A> . Bunu yaparsanız, dize **metnini** yönteminin *PropertyName* parametresine geçirin <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> . **Text** özelliği, içerik denetimlerinin varsayılan veri bağlama özelliğidir.
 

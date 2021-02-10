@@ -15,15 +15,15 @@ helpviewer_keywords:
 - documents [Office development in Visual Studio], controls
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 203edcf2b77cfff3fb557ce7c1c8fea7592e17ea
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: 5e94f39f287055cc4812d85abe2a4bfc0d81eb2b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96847994"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99947951"
 ---
 # <a name="controls-on-office-documents"></a>Office belgelerindeki denetimler
   Word belgelerine ve Excel çalışma sayfalarına Windows Forms denetimleri ve *konak denetimleri* eklemek Için Visual Studio 'da Office geliştirme araçları ' nı kullanabilirsiniz. Konak denetimleri, Word ve Excel nesne modellerinde çeşitli kullanıcı arabirimi (UI) nesnelerini genişleten nesnelerdir.

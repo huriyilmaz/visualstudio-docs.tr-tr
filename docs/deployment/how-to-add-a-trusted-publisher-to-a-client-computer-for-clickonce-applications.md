@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 35fe324c-45a1-4509-b7be-5c18b4b1b4ab
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: cef5eb1df80c7fffcc4a938504e82cac2aa3ae46
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: c04b8d700d7739f0e4ef1fba259aab0595cea28c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94382708"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99947826"
 ---
 # <a name="how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications"></a>Nasıl yapılır: ClickOnce uygulamaları için bir istemci bilgisayara güvenilir yayımcı ekleme
 Güvenilen uygulama dağıtımı ile, istemci bilgisayarlarını, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulamalarınızın kullanıcıya sormadan daha yüksek bir güven düzeyiyle çalışmasını sağlayacak şekilde yapılandırabilirsiniz. Aşağıdaki yordamlarda, bir yayımcının sertifikasını bir istemci bilgisayarındaki Güvenilen Yayımcılar deposuna eklemek için CertMgr.exe komut satırı aracının nasıl kullanılacağı gösterilmektedir.
@@ -40,7 +40,7 @@ Güvenilen uygulama dağıtımı ile, istemci bilgisayarlarını, [!INCLUDE[ndpt
 
 1. Bir CA 'dan dijital sertifika alın.
 
-2. Sertifikayı Base64 X. 509.440 ( *. cer* ) biçiminde dışarı aktarın. Sertifika biçimleri hakkında daha fazla bilgi için bkz. [bir sertifikayı dışarı aktarma](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730988(v=ws.10)).
+2. Sertifikayı Base64 X. 509.440 (*. cer*) biçiminde dışarı aktarın. Sertifika biçimleri hakkında daha fazla bilgi için bkz. [bir sertifikayı dışarı aktarma](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730988(v=ws.10)).
 
 3. İstemci bilgisayarlardaki komut isteminden aşağıdaki komutu çalıştırın:
 
@@ -50,7 +50,7 @@ Güvenilen uygulama dağıtımı ile, istemci bilgisayarlarını, [!INCLUDE[ndpt
 
 1. Bir CA 'dan dijital sertifika alın.
 
-2. Sertifikayı Base64 X. 509.440 ( *. cer* ) biçiminde dışarı aktarın. Sertifika biçimleri hakkında daha fazla bilgi için bkz. [bir sertifikayı dışarı aktarma](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730988(v=ws.10)).
+2. Sertifikayı Base64 X. 509.440 (*. cer*) biçiminde dışarı aktarın. Sertifika biçimleri hakkında daha fazla bilgi için bkz. [bir sertifikayı dışarı aktarma](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730988(v=ws.10)).
 
 3. İstemci bilgisayarlardaki komut isteminden aşağıdaki komutu çalıştırın:
 
