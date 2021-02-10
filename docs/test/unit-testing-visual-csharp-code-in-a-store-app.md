@@ -6,15 +6,15 @@ ms.date: 09/27/2019
 ms.topic: conceptual
 ms.author: mikejo
 author: mikejo5000
-manager: jillfra
+manager: jmartens
 ms.workload:
 - uwp
-ms.openlocfilehash: 410d5dfefa5980bceabff99d66067987b390a615
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+ms.openlocfilehash: e0267fb31515d842f7c9b6591d412e454c803bdb
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96330088"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99962554"
 ---
 # <a name="unit-test-c-code"></a>C# birim testi sınıfı
 
@@ -32,7 +32,7 @@ Bu makalede, *test odaklı geliştirme* gösterilmektedir. Bu yaklaşımda, önc
 
 3. Projeyi **Maaltı** olarak adlandırın.
 
-4. **Çözüm Gezgini**, çözüme sağ tıklayın ve **Add**  >  **Yeni proje** Ekle ' yi seçin.
+4. **Çözüm Gezgini**, çözüme sağ tıklayın ve   >  **Yeni proje** Ekle ' yi seçin.
 
 5. **Birim testi uygulaması (Evrensel Windows)** proje şablonunu arayın ve seçin.
 
@@ -54,7 +54,7 @@ Bu makalede, *test odaklı geliştirme* gösterilmektedir. Bu yaklaşımda, önc
 
 ::: moniker range="vs-2017"
 
-2. **Test** menüsünde **Run** > **tüm testleri** Çalıştır ' ı seçin.
+2. **Test** menüsünde  > **tüm testleri** Çalıştır ' ı seçin.
 
 ::: moniker-end
 
@@ -68,7 +68,7 @@ Bu makalede, *test odaklı geliştirme* gösterilmektedir. Bu yaklaşımda, önc
 
 ## <a name="add-the-rooter-class-to-the-maths-project"></a>Rooter sınıfını Maon projesine ekleyin
 
-1. **Çözüm Gezgini**, **maaltı** projeye sağ tıklayın ve ardından sınıf **Ekle**' yi seçin  >  **Class**.
+1. **Çözüm Gezgini**, **maaltı** projeye sağ tıklayın ve ardından sınıf **Ekle**' yi seçin  >  .
 
 2. Sınıf dosyasını *Rooter.cs* olarak adlandırın.
 
@@ -98,7 +98,7 @@ Bu makalede, *test odaklı geliştirme* gösterilmektedir. Bu yaklaşımda, önc
 
 1. RooterTests projesinden Maon uygulamasına bir başvuru ekleyin.
 
-    1. **Çözüm Gezgini**, **RooterTests** projesine sağ tıklayın ve ardından başvuru **Ekle**' yi seçin  >  **Reference**.
+    1. **Çözüm Gezgini**, **RooterTests** projesine sağ tıklayın ve ardından başvuru **Ekle**' yi seçin  >  .
 
     2. **Başvuru Ekle-RooterTests** Iletişim kutusunda **çözüm** ' i genişletin ve **Projeler**' i seçin. **Maaltı** projeyi seçin.
 

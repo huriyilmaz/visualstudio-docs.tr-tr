@@ -15,15 +15,15 @@ helpviewer_keywords:
 - application development [Office development in Visual Studio], automating
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 81c2852a92124a7cf9fb6078b196982d22100be7
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 11a0db0e23cf5512a6568ba5b66e0c18e563bd12
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97528101"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99962385"
 ---
 # <a name="how-to-target-office-applications-through-primary-interop-assemblies"></a>Nasıl yapılır: birincil birlikte çalışma Derlemeleriyle Office uygulamalarını hedefleme
   Yeni bir Office projesi oluşturduğunuzda, Visual Studio, projenizi oluşturmak için gereken Microsoft Office birincil birlikte çalışma derlemesine (PIA 'lar) otomatik olarak başvurular ekler. Aşağıdaki senaryolarda diğer PIA 'lara başvuru eklemeniz gerekir:
@@ -49,7 +49,7 @@ ms.locfileid: "97528101"
     > [!NOTE]
     > Office projelerinde, **com** sekmesi yerine **Başvuru Ekle** iletişim kutusunun **.net** sekmesini kullanarak her zaman Office PIA 'lara başvurular ekleyin. Daha fazla bilgi için bkz. [Office birincil birlikte çalışma derlemeleri](../vsto/office-primary-interop-assemblies.md).
 
-4. **Tamam** düğmesine tıklayın.
+4. **Tamam**'a tıklayın.
 
      Derleme adı, **Çözüm Gezgini** **References** klasöründe görünür.
 

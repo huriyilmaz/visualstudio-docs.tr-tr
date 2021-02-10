@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 6ff9efc4-919d-4071-a80d-6dbdd2ceb2f8
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: c4132d878ff1ec7689be890446a1849577fafd30
-ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
+ms.openlocfilehash: 98c73da67e607346138d7d6fae124a86b7a34618
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97877929"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99961852"
 ---
 # <a name="walkthrough-publishing-a-visual-studio-extension-via-command-line"></a>İzlenecek yol: komut satırı aracılığıyla Visual Studio uzantısı yayımlama
 
@@ -32,7 +32,7 @@ VsixPublisher.exe, Market 'e Visual Studio uzantıları yayımlamaya yönelik ko
 
 Market 'e bir uzantı yayımlar. Uzantı bir VSIX, bir exe/MSI dosyası ya da bir bağlantı olabilir. Aynı sürüme sahip uzantı zaten varsa, uzantının üzerine yazar. Uzantı yoksa, yeni bir uzantı oluşturacaktır.
 
-|Komut seçenekleri |Açıklama |
+|Komut seçenekleri |Description |
 |---------|---------|
 |Yük (gerekli) | Yayımlanacak yükün yolu veya "daha fazla bilgi URL 'SI" olarak kullanılacak bir bağlantı. |
 |publishManifest (gerekli) | Kullanılacak yayımlama bildirimi dosyasının yolu. |
@@ -47,7 +47,7 @@ VsixPublisher.exe publish -payload "{path to vsix}" -publishManifest "{path to v
 
 Market 'te bir Yayımcı oluşturur. Ayrıca, gelecekteki eylemler için yayımcıyı makineye de kaydeder (örneğin, bir uzantıyı silme/yayımlama).
 
-|Komut seçenekleri |Açıklama |
+|Komut seçenekleri |Description |
 |---------|---------|
 |displayName (gerekli) | Yayımcının görünen adı. |
 |publisherName (gerekli) | Yayımcının adı (örneğin, tanımlayıcı). |
@@ -63,7 +63,7 @@ VsixPublisher.exe createPublisher -publisherName "{Publisher Name}" -displayName
 
 Market 'teki bir yayımcıyı siler.
 
-|Komut seçenekleri |Açıklama |
+|Komut seçenekleri |Description |
 |---------|---------|
 |publisherName (gerekli) | Yayımcının adı (örneğin, tanımlayıcı). |
 |personalAccessToken (gerekli) | Yayımcının kimliğini doğrulamak için kullanılan kişisel erişim belirteci. |
@@ -76,7 +76,7 @@ VsixPublisher.exe deletePublisher -publisherName "{Publisher Name}" -personalAcc
 
 Marketten bir uzantıyı siler.
 
-|Komut seçenekleri |Açıklama |
+|Komut seçenekleri |Description |
 |---------|---------|
 |extensionName (gerekli) | Silinecek uzantının adı. |
 |publisherName (gerekli) | Yayımcının adı (örneğin, tanımlayıcı). |
@@ -90,7 +90,7 @@ VsixPublisher.exe deleteExtension -extensionName "{Extension Name}" -publisherNa
 
 Bir yayımcıyı makineye kaydeder.
 
-|Komut seçenekleri |Açıklama |
+|Komut seçenekleri |Description |
 |---------|---------|
 |personalAccessToken (gerekli | Yayımcının kimliğini doğrulamak için kullanılan kişisel erişim belirteci. |
 |publisherName (gerekli) | Yayımcının adı (örneğin, tanımlayıcı). |
@@ -104,7 +104,7 @@ VsixPublisher.exe login -personalAccessToken "{Personal Access Token}" -publishe
 
 Makinenin bir yayımcısını günlüğe kaydeder.
 
-|Komut seçenekleri |Açıklama |
+|Komut seçenekleri |Description |
 |---------|---------|
 |publisherName (gerekli) | Yayımcının adı (örneğin, tanımlayıcı). |
 |ıgnoremissingpublisher | Belirtilen yayımcı zaten oturum açmadıysa aracın hata olmaması gerektiğini belirtir. |
@@ -194,7 +194,7 @@ This is test extension.
 
 ## <a name="publishing-walkthrough"></a>Yayımlama Kılavuzu
 
-### <a name="prerequisites"></a>Ön koşullar
+### <a name="prerequisites"></a>Önkoşullar
 
 Bu yönergeyi izlemek için, Visual Studio SDK 'sını yüklemelisiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yükleme](../extensibility/installing-the-visual-studio-sdk.md).
 

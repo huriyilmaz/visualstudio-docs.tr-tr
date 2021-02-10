@@ -12,21 +12,21 @@ helpviewer_keywords:
 - Application page in Project Designer
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0b77ee4edca8f9cb8de2079e01d9c9997a24aeff
-ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
+ms.openlocfilehash: 30f0951073214a70ec2865bce89426d0758b19cc
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "95871385"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99965115"
 ---
 # <a name="application-page-project-designer-c"></a>Uygulama Sayfası, Proje Tasarımcısı (C#)
 
 Projenin uygulama ayarlarını ve özelliklerini belirtmek için **Proje Tasarımcısı** ' nın **uygulama** sayfasını kullanın.
 
-**Uygulama** sayfasına erişmek için **Çözüm Gezgini**' de bir proje düğümü ( **çözüm** düğümünü değil) seçin. Ardından **Project**  >  , menü çubuğunda Proje **özellikleri** ' ni seçin. **Proje Tasarımcısı** göründüğünde **uygulama** sekmesine tıklayın.
+**Uygulama** sayfasına erişmek için **Çözüm Gezgini**' de bir proje düğümü ( **çözüm** düğümünü değil) seçin. Ardından   >  , menü çubuğunda Proje **özellikleri** ' ni seçin. **Proje Tasarımcısı** göründüğünde **uygulama** sekmesine tıklayın.
 
 [!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)]
 

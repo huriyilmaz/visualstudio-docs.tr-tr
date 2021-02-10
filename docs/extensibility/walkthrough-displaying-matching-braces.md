@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: 5af08ac7-1d08-4ccf-997e-01aa6cb3d3d7
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ce40f5673a8aba4ab3f7714a3aafdc3de4697cc4
-ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
+ms.openlocfilehash: f89c6303dc8ca9e48fb212a3ae889251b34ece91
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97877955"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99961735"
 ---
 # <a name="walkthrough-display-matching-braces"></a>İzlenecek yol: eşleşen ayraçları görüntüle
 Eşleştirmek istediğiniz küme ayraçlarını tanımlayarak, parantez eşleştirme ile eşleşen dil tabanlı özellikleri uygulayın ve şapka işareti ayraçlarından birinde olduğunda, eşleşen ayraçların içine bir metin işaretçisi etiketi ekleyin. Bir dilin bağlamında küme ayraçları tanımlayabilir, kendi dosya adı uzantınızı ve içerik türünü tanımlayabilir ve etiketleri yalnızca o türe uygulayabilir ya da etiketleri varolan bir içerik türüne (örneğin "metin") uygulayabilirsiniz. Aşağıdaki izlenecek yol, "metin" içerik türüne parantez ile eşleşen etiketlerin nasıl uygulanacağını gösterir.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
  Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yükleyemezsiniz. Visual Studio kurulumunda isteğe bağlı bir özellik olarak eklenmiştir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-a-managed-extensibility-framework-mef-project"></a>Managed Extensibility Framework (MEF) projesi oluşturma

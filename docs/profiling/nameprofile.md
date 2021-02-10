@@ -9,16 +9,16 @@ helpviewer_keywords:
 ms.assetid: 1bb05441-c4ff-4323-9fef-f3924fba4430
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 3bd210f1d92245889be8d18156c43e0cad7ee3db
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: 53d6dcc6cdc903f0050eeb326ebd3c5fa36252ae
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98722925"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99964751"
 ---
 # <a name="nameprofile"></a>NameProfile
 `NameProfile`İşlevi belirtilen işlem veya iş parçacığına bir dize atar.
@@ -51,7 +51,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI NameProfile(
 
   Performans veri koleksiyonunun uygulanabileceğini gösteren profil düzeyini gösterir. Aşağıdaki **PROFILE_CONTROL_LEVEL** değerleri, performans verileri koleksiyonunun uygulanabileceği üç düzeyden birini göstermek için kullanılabilir:
 
-|Sının|Açıklama|
+|Sının|Description|
 |----------------|-----------------|
 |PROFILE_GLOBALLEVEL|Genel düzey ayarı, profil oluşturma çalıştırmasında tüm işlem ve iş parçacıklarını etkiler.|
 |PROFILE_PROCESSLEVEL|İşlem düzeyi ayarı, belirtilen işlemin parçası olan tüm iş parçacıklarını etkiler.|
@@ -64,7 +64,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI NameProfile(
 ## <a name="property-valuereturn-value"></a>Özellik değeri/dönüş değeri
  İşlev, **PROFILE_COMMAND_STATUS** numaralandırma kullanılarak başarılı veya başarısız olduğunu gösterir. Dönüş değeri aşağıdakilerden biri olabilir:
 
-|Sının|Açıklama|
+|Sının|Description|
 |----------------|-----------------|
 |NAME_ERROR_ID_NOEXIST|Belirtilen profil oluşturma öğesi yok.|
 |NAME_ERROR_INVALID_NAME|Ad geçersiz.|

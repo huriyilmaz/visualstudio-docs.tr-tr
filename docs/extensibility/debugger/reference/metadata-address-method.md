@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: fc0e5370-1b4f-4867-837f-0d63c4b9dd09
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: bc3dd7a34e4f9a3e1b933781aeaf4e18cad7ec17
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 26de14b4c5e23334da85d49d5192ec332e418af8
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80714448"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99961930"
 ---
 # <a name="metadata_address_method"></a>METADATA_ADDRESS_METHOD
 Bu yapı, bir sınıfın bir yönteminin adresini temsil eder.
@@ -56,7 +56,7 @@ public struct METADATA_ADDRESS_METHOD {
  Metodun sürümü (Bu değer, sembol sağlayıcısı için benzersizdir).
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yapı, [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) `dwKind` `DEBUG_ADDRESS_UNION` yapı alanı `ADDRESS_KIND_METHOD` ( [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) numaralandırmasından bir değer) olarak ayarlandığında DEBUG_ADDRESS_UNION yapısındaki birleşimin bir parçasıdır.
+ Bu yapı, [](../../../extensibility/debugger/reference/debug-address-union.md) `dwKind` `DEBUG_ADDRESS_UNION` yapı alanı `ADDRESS_KIND_METHOD` ( [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) numaralandırmasından bir değer) olarak ayarlandığında DEBUG_ADDRESS_UNION yapısındaki birleşimin bir parçasıdır.
 
 ## <a name="requirements"></a>Gereksinimler
  Üstbilgi: SH. h

@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 2f5104d1-7b4c-4ca0-a626-50530a8f7f5c
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: e46252cea550a2caaa81c92853220db4fa2b5b1a
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+ms.openlocfilehash: 5473fffa00723735b022412e7f37f184e043df4b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96328385"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99963451"
 ---
 # <a name="determine-command-status-by-using-interop-assemblies"></a>Birlikte çalışabilirlik derlemelerini kullanarak komut durumunu belirleme
 VSPackage, işleyebilmesi için komutların durumunu takip etmelidir. Ortam, VSPackage içinde işlenen bir komutun etkin veya devre dışı olacağını belirleyemiyor. Bu, ortama komut durumları hakkında bilgi vermek için VSPackage 'ın sorumluluğundadır. Örneğin, **Kes**, **Kopyala** ve **Yapıştır** gibi genel komutların durumu.

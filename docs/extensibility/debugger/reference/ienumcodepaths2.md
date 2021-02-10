@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 17ec9f9e-dc06-4532-b5db-da52efcc8630
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 89c8cac9a7c2baa020002fe852330639d7081982
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 69a65488d38fe2562392be152e448369ff081915
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80717723"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99962164"
 ---
 # <a name="ienumcodepaths2"></a>IEnumCodePaths2
 Bu arabirim, kod yollarının bir listesini temsil eder.
@@ -42,7 +42,7 @@ IEnumCodePaths2 : IUnknown
 |[Sonraki](../../../extensibility/debugger/reference/ienumcodepaths2-next.md)|Sabit Listesi dizisinde belirtilen sayıda kod yolunu alır.|
 |[Atla](../../../extensibility/debugger/reference/ienumcodepaths2-skip.md)|Sabit Listesi dizisinde belirtilen sayıda kod yolunu atlar.|
 |[Sıfırla](../../../extensibility/debugger/reference/ienumcodepaths2-reset.md)|Bir numaralandırma dizisini başlangıca sıfırlar.|
-|[Kopyalama](../../../extensibility/debugger/reference/ienumcodepaths2-clone.md)|Geçerli numaralandırıcı ile aynı numaralandırma durumunu içeren bir Numaralandırıcı oluşturur.|
+|[Oluşturulacak](../../../extensibility/debugger/reference/ienumcodepaths2-clone.md)|Geçerli numaralandırıcı ile aynı numaralandırma durumunu içeren bir Numaralandırıcı oluşturur.|
 |[GetCount](../../../extensibility/debugger/reference/ienumcodepaths2-getcount.md)|Bir Numaralandırıcı içindeki kod yollarının sayısını alır.|
 
 ## <a name="remarks"></a>Açıklamalar

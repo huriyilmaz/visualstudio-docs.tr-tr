@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: bb87a322-bac4-4258-92bc-9a876f05d653
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: a1ccab1eddf38e2f93cb00f1f5fdea6ce09f2f05
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+ms.openlocfilehash: 13722aa9968e21d4208ad5aa99fefe4c985ffb79
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96328437"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99963503"
 ---
 # <a name="design-xml-command-table-vsct-files"></a>XML komut tablosu (. vsct) dosyaları tasarlama
 Bir XML komut tablosu (*. vsct*) dosyası, VSPackage için komut öğelerinin yerleşimini ve görünümünü açıklar. Komut öğeleri düğme, Birleşik giriş kutuları, menüler, araç çubukları ve komut öğesi gruplarını içerir. Bu makale, XML komut tablosu dosyalarını, komut öğelerini ve menülerini nasıl etkileyeceğini ve bunların nasıl oluşturulacağını açıklamaktadır.
@@ -91,7 +91,7 @@ Var olan bir *. CTO* dosyasını bir *. vsct* dosyasına dönüştürmek için *
 
 - [Visibilitykısıtlamalar öğesi](../../extensibility/visibilityconstraints-element.md): bir komutun her zaman mı yoksa yalnızca belirli bağlamlarda mı (örneğin, belirli bir iletişim kutusu veya pencere görüntülendiğinde) gösterilip gösterilmeyeceğini belirtir. Bu öğe için bir değere sahip menüler ve komutlar yalnızca belirtilen bağlam etkin olduğunda görüntülenir. Varsayılan davranış, komutu her zaman görüntülemektir.
 
-- [Keybindings öğesi](../../extensibility/keybindings-element.md): komutlar için herhangi bir anahtar bağlama belirtir. Diğer bir deyişle, **CTRL** S gibi komutları yürütmek için basılan bir veya daha fazla tuş birleşimi + **S**.
+- [Keybindings öğesi](../../extensibility/keybindings-element.md): komutlar için herhangi bir anahtar bağlama belirtir. Diğer bir deyişle, **CTRL** S gibi komutları yürütmek için basılan bir veya daha fazla tuş birleşimi + .
 
 - [UsedCommands öğesi](../../extensibility/usedcommands-element.md): ortama, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] belirtilen komutun diğer kod tarafından uygulanmasını, ancak geçerli VSPackage etkin olduğunda, komut uygulamasını sağladığını bildirir.
 

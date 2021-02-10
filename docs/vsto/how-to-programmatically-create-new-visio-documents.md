@@ -12,15 +12,15 @@ helpviewer_keywords:
 - documents [Office development in Visual Studio], creating Visio documents
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 59c1fe0264a294692bea04b05e5e143fa28be801
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: a5aeddeecf7fb76000817f2c57b90e30465fa4ed
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97526847"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99964036"
 ---
 # <a name="how-to-programmatically-create-new-visio-documents"></a>Nasıl yapılır: program aracılığıyla yeni Visio belgeleri oluşturma
   Yeni bir Microsoft Office Visio çizim belgesi oluşturduğunuzda, bu dosyayı `Microsoft.Office.Interop.Visio.Documents` Açık Visio belgeleri koleksiyonuna eklersiniz. Sonuç olarak, `Microsoft.Office.Interop.Visio.Documents.Add` yöntemi yeni bir Visio çizim belgesi oluşturur. Daha fazla bilgi için,Microsoft.Office.Interop.Visio.Documtları için VBA başvuru belgelerine bakın [ . Yöntem ekleyin](/office/vba/api/Visio.Documents.Add) .

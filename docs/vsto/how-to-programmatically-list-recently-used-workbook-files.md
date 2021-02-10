@@ -15,15 +15,15 @@ helpviewer_keywords:
 - recent file list, Excel
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: bbcad553ade6234d3a688c8f718a0dd6e6cda509
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 75405c7a2e02189e205edf6615c5d95a8f1d023c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97525640"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99963152"
 ---
 # <a name="how-to-programmatically-list-recently-used-workbook-files"></a>Nasıl yapılır: son kullanılan çalışma kitabı dosyalarını program aracılığıyla listeleme
   <xref:Microsoft.Office.Interop.Excel._Application.RecentFiles%2A>Özelliği, son kullanılan dosyalar Microsoft Office Excel listesinde görünen tüm dosyaların adlarını içeren bir koleksiyon döndürür. Listenin uzunluğu, kullanıcının tutulması için seçtiği dosya sayısına bağlı olarak değişir. Sonuçları bir aralıkta görüntüleyebilirsiniz.

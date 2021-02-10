@@ -16,15 +16,15 @@ helpviewer_keywords:
 - workbooks, protecting
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 3b35b0fc234c3015275650ddb51e8ea3011c97a6
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 05587b067fb5e8365433049c7da7fd3d5949a831
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97528293"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99963854"
 ---
 # <a name="how-to-programmatically-protect-workbooks"></a>Nasıl yapılır: program aracılığıyla çalışma kitaplarını koruma
   Microsoft Office bir Excel çalışma kitabını, kullanıcıların çalışma sayfaları ekleyememesi veya silememeleri ve ayrıca çalışma kitabının korumasını kaldırmak için koruyabilirsiniz. İsteğe bağlı olarak bir parola belirtebilir, yapının korunmasını isteyip istemediğinizi belirtebilir (böylece kullanıcılar, sayfaları taşıyabilir) ve çalışma kitabının pencerelerinin korunmasını isteyip istemediğinizi belirtebilirsiniz.

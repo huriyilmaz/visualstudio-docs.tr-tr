@@ -20,15 +20,15 @@ helpviewer_keywords:
 - extensibility interfaces [Office development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 436f426eee6c90476997f416bab907c8e17f94cc
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: f84a694c9a18b6ec1c64204c8150ff721633278d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96845628"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99962476"
 ---
 # <a name="customize-ui-features-by-using-extensibility-interfaces"></a>Genişletilebilirlik arabirimlerini kullanarak Kullanıcı arabirimi özelliklerini özelleştirme
   Visual Studio 'daki Office geliştirme araçları, bir VSTO eklentisi içinde özel görev bölmeleri, Şerit özelleştirmeleri ve Outlook form bölgeleri oluşturmak için kullandığınızda birçok uygulama ayrıntılarını işleyen sınıflar ve tasarımcılar sağlar. Ancak, özel gereksinimleriniz varsa, her bir özellik için *genişletilebilirlik arabirimini* de uygulayabilirsiniz.
@@ -45,7 +45,7 @@ ms.locfileid: "96845628"
 ## <a name="extensibility-interfaces-you-can-implement-in-a-vsto-add-in"></a>VSTO eklentisi içinde uygulayabileceğiniz genişletilebilirlik arabirimleri
  Aşağıdaki tabloda uygulayabileceğiniz genişletilebilirlik arabirimleri ve bunları destekleyen uygulamalar listelenmektedir.
 
-|Arabirim|Açıklama|Uygulamalar|
+|Arabirim|Description|Uygulamalar|
 |---------------|-----------------|------------------|
 |<xref:Microsoft.Office.Core.IRibbonExtensibility>|Şerit kullanıcı arabirimini özelleştirmek için bu arabirimi uygulayın. **Note:**  VSTO eklentiinizdeki varsayılan bir uygulama oluşturmak için bir projeye **Şerit (XML)** öğesi ekleyebilirsiniz <xref:Microsoft.Office.Core.IRibbonExtensibility> . Daha fazla bilgi için bkz. [ŞERIT XML](../vsto/ribbon-xml.md).|Excel<br /><br /> [!INCLUDE[InfoPath_15_short](../vsto/includes/infopath-15-short-md.md)]<br /><br /> InfoPath 2010<br /><br /> Outlook<br /><br /> PowerPoint<br /><br /> Project<br /><br /> Visio<br /><br /> Word|
 |<xref:Microsoft.Office.Core.ICustomTaskPaneConsumer>|Özel bir görev bölmesi oluşturmak için bu arabirimi uygulayın.|Excel<br /><br /> Outlook<br /><br /> PowerPoint<br /><br /> Word|

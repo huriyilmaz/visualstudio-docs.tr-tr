@@ -5,15 +5,15 @@ ms.date: 01/24/2018
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: jillfra
+manager: jmartens
 ms.workload:
 - data-science
-ms.openlocfilehash: 97ce4f226c39a20ad41c5977f800aa178450c69c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3627a8944941fc77bb9b19fe3dd0a1549f41892a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89314946"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99961592"
 ---
 # <a name="control-where-r-code-runs-with-workspaces"></a>R kodunun çalışma alanlarıyla çalıştığı yeri denetleme
 
@@ -35,7 +35,7 @@ Varsayılan olarak, bir projeyi kapatıp yeniden açtığınızda RTVS çalışm
 
 Yerel çalışma alanları listesinde bilgisayarınızda yüklü olan tüm R yorumlayıcıları görüntülenir.
 
-Visual Studio başlatıldığında, **HKEY_LOCAL_MACHINE \Software\R-Core \\ ** kayıt defteri anahtarına bakarak, yüklediğiniz tüm R sürümlerini otomatik olarak algılamaya çalışır. Bu denetim yalnızca başlangıçta yapıldığından, yeni bir R yorumlayıcısı yüklüyorsanız Visual Studio 'Yu yeniden başlatmanız gerekir.
+Visual Studio başlatıldığında, **HKEY_LOCAL_MACHINE\Software\R-Core\\** kayıt defteri anahtarını arayarak yüklediğiniz tüm R sürümlerini otomatik olarak algılamaya çalışır. Bu denetim yalnızca başlangıçta yapıldığından, yeni bir R yorumlayıcısı yüklüyorsanız Visual Studio 'Yu yeniden başlatmanız gerekir.
 
 RTVS, standart olmayan bir şekilde yüklenmiş bir R yorumlayıcısı algılamayabilir (örneğin, yalnızca bir yükleyiciyi çalıştırmak yerine dosyaları bir klasöre kopyalarken). Bu durumda, el ile yeni bir yerel R çalışma alanını aşağıdaki şekilde oluşturun:
 
@@ -99,13 +99,13 @@ Ancak, bu uyarı, güvenilen bir sağlayıcıdan bir tane kullanmak yerine, uzak
 
 ## <a name="directories-on-local-and-remote-computers"></a>Yerel ve uzak bilgisayarlardaki dizinler
 
-Varsayılan olarak, yerel bir çalışma alanında yeni bir R yorumlayıcısı başlattığınızda, geçerli çalışma dizininiz *%USERPROFILE%\Documents*olur. **R araçları**  >  **çalışma dizini** komutlarını kullanarak veya Visual Studio Çözüm Gezgini bir projeye sağ tıklayıp, **çalışma dizinini ayarla**gibi komutları seçerek dizini dilediğiniz zaman değiştirebilirsiniz.
+Varsayılan olarak, yerel bir çalışma alanında yeni bir R yorumlayıcısı başlattığınızda, geçerli çalışma dizininiz *%USERPROFILE%\Documents* olur. **R araçları**  >  **çalışma dizini** komutlarını kullanarak veya Visual Studio Çözüm Gezgini bir projeye sağ tıklayıp, **çalışma dizinini ayarla** gibi komutları seçerek dizini dilediğiniz zaman değiştirebilirsiniz.
 
 Bir uzak bilgisayara ilk kez bağlandığınızda, RTVS, çalışma dizinini bu profil altındaki *Belgeler* klasörüne ayarlayan kimlik bilgilerinizi temel alan kullanıcı profilini otomatik olarak oluşturur. Bu klasör, aynı kimlik bilgilerini kullanan sonraki tüm uzak oturumlarda kullanılır.
 
 Sonuç olarak, kodunuzun çalıştırıldığı konum yerel ve uzak çalışma alanları arasında farklılık gösterebilir. Kodunuzda, her zaman veri dosyalarına göreli yollar kullanın ve bu sayede kodunuzun çalışma alanları arasında taşınabilir olması gerekir.
 
-Ayrıca, uzak çalışma alanları ile, çalışma dizinindeki tüm dosyalar aynı kullanıcı profili için oturumlar arasında yerinde kalır. Daha önce belirtildiği gibi, **R Tools**  >  **Session**  >  uzak bir çalışma alanı kullanırken R araçları oturum**sıfırlama** komutunu (veya etkileşimli penceredeki sıfırlama düğmesini) kullanarak bu dosyaları silebilirsiniz. Bu komut, yeniden bağlandığınızda yeniden oluşturulan kullanıcı profilini sunucudan siler.
+Ayrıca, uzak çalışma alanları ile, çalışma dizinindeki tüm dosyalar aynı kullanıcı profili için oturumlar arasında yerinde kalır. Daha önce belirtildiği gibi,   >    >  uzak bir çalışma alanı kullanırken R araçları oturum **sıfırlama** komutunu (veya etkileşimli penceredeki sıfırlama düğmesini) kullanarak bu dosyaları silebilirsiniz. Bu komut, yeniden bağlandığınızda yeniden oluşturulan kullanıcı profilini sunucudan siler.
 
 ## <a name="copy-project-files-to-remote-workspaces"></a>Proje dosyalarını uzak çalışma alanlarına Kopyala
 
@@ -117,18 +117,18 @@ Dosyalar uzak sunucuya aşağıdaki şekilde kopyalanır:
 
 - Ayrıca, Çözüm Gezgini ve ardından **kaynak seçili dosyalar**' ı seçerek dosyaları kopyalayabilirsiniz. Bu eylem, onları etkileşimli pencereye yükler ve orada çalıştırır. Oturum uzak bir bilgisayara bağlıysa, önce dosyalar kopyalanır.
 
-- Rtvs, uzak bir çalışma alanına bağlandığında ve **F5**tuşuna bastığınızda **hata**ayıklama  >  **başlatma hata ayıklaması**' nı seçtiğinizde veya kodunuzu çalıştırmaya başladığınızda, rtvs varsayılan olarak projenin dosyasını uzak çalışma alanına otomatik olarak kopyalar (Bu davranışı denetleme için aşağıya bakın).
+- Rtvs, uzak bir çalışma alanına bağlandığında ve **F5** tuşuna bastığınızda **hata** ayıklama  >  **başlatma hata ayıklaması**' nı seçtiğinizde veya kodunuzu çalıştırmaya başladığınızda, rtvs varsayılan olarak projenin dosyasını uzak çalışma alanına otomatik olarak kopyalar (Bu davranışı denetleme için aşağıya bakın).
 
 - Sunucuda zaten var olan dosyaların üzerine yazılır.
 
 > [!Note]
-> RTVS, tüm R işlev çağrılarını güvenilir bir şekilde ele amadığından, `source()` `runApp()` etkileşimli penceredeki veya (kılı uygulamalar için) gibi işlevleri çağırmak uzak çalışma *not* alanına dosya kopyalamaz.
+> RTVS, tüm R işlev çağrılarını güvenilir bir şekilde ele amadığından, `source()` `runApp()` etkileşimli penceredeki veya (kılı uygulamalar için) gibi işlevleri çağırmak uzak çalışma  alanına dosya kopyalamaz.
 
 [Proje özellikleri](r-projects-in-visual-studio.md#project-properties) , rtvs 'in bir proje çalıştırıldığında dosyaları kopyaladığını ve tam olarak hangi dosyaların kopyalandığını denetler. Bu sayfayı açmak için **Proje**  >  **(ad) Özellikler** menü komutunu seçin ya da Çözüm Gezgini ' de projeye sağ tıklayıp **Özellikler**' i seçin.
 
 ![Dosya Aktarım ayarlarıyla proje özellikleri çalıştırma sekmesi](media/workspaces-remote-file-transfer-filter-settings.png)
 
-Burada, **Run on Files** özelliği, rtvs 'nin proje dosyalarını otomatik olarak kopyaladığını belirler. **Aktarılacak dosyalar** daha sonra tam olarak hangi dosyaların aktarılacağını filtreliyor. Varsayılan değer yalnızca kopyalama amaçlıdır *. R*, *. RMD*, *. SQL*, *. MD*ve *. cpp* dosyaları. Bu davranış, büyük veri dosyalarını her çalıştırmada yanlışlıkla sunucuya kopyalamayı önler.
+Burada, **Run on Files** özelliği, rtvs 'nin proje dosyalarını otomatik olarak kopyaladığını belirler. **Aktarılacak dosyalar** daha sonra tam olarak hangi dosyaların aktarılacağını filtreliyor. Varsayılan değer yalnızca kopyalama amaçlıdır *. R*, *. RMD*, *. SQL*, *. MD* ve *. cpp* dosyaları. Bu davranış, büyük veri dosyalarını her çalıştırmada yanlışlıkla sunucuya kopyalamayı önler.
 
 ## <a name="copy-files-from-a-remote-workspace"></a>Uzak çalışma alanından dosya kopyalama
 

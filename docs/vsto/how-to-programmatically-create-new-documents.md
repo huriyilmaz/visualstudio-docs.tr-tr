@@ -13,15 +13,15 @@ helpviewer_keywords:
 - documents [Office development in Visual Studio], creating
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: a7168c6b80657fe0e5ba7c8ae8511c1e000db4cb
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: e9ff98654da8d7125ecf788fadc9cbf7ff4bdfc7
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97525877"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99964075"
 ---
 # <a name="how-to-programmatically-create-new-documents"></a>Nasıl yapılır: program aracılığıyla yeni belgeler oluşturma
   Programlı olarak bir belge oluşturduğunuzda, yeni belge yerel bir <xref:Microsoft.Office.Interop.Word.Document> nesnedir. Bu nesne, bir konak öğesinin ek olaylarına ve veri bağlama özelliklerine sahip değil <xref:Microsoft.Office.Tools.Word.Document> . Daha fazla bilgi için bkz. [konak öğelerinin ve konak denetimlerinin programlama sınırlamaları](../vsto/programmatic-limitations-of-host-items-and-host-controls.md).

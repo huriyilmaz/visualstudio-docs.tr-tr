@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 52e9f7fc-6fe0-4d23-890b-5673dca8c3cb
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f71d993c7f99cade5b866e67298132a325986e3a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f6082b06e6235a93b0e198d973b40efb728bd815
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80714790"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99962138"
 ---
 # <a name="ipropertyproxyprovider"></a>IPropertyProxyProvider
 Bu arabirim, bir nesnenin verilerini görüntülemek ve değiştirmek için bir proxy arabirimi sağlar.
@@ -32,7 +32,7 @@ IPropertyProxyProvider : IUnknown
  İfade değerlendirici (EE), bu arabirimi, [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) arabirimini uygulayan aynı nesne üzerinde, görselin tür Görselleştiriciler desteğinin bir parçası olarak uygular.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- [QueryInterface](/cpp/atl/queryinterface) `IDebugProperty3` Bu arabirimi edinmek Için arabirim üzerinde QueryInterface 'i çağırın.
+ [](/cpp/atl/queryinterface) `IDebugProperty3` Bu arabirimi edinmek Için arabirim üzerinde QueryInterface 'i çağırın.
 
 ## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
  `IPropertyProxyProvider`Arabirimi aşağıdaki yöntemi uygular:

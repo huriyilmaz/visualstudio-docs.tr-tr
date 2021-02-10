@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 0ba94acf-bf0b-4bb3-8cca-aaac1b5d6737
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: c4befcf3950c41beba2440e6f023983269137b1f
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+ms.openlocfilehash: 20287ba123c5736c9eb7077622623f4a739bde5c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96329815"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99963477"
 ---
 # <a name="detect-system-requirements"></a>Sistem gereksinimlerini Algıla
 Visual Studio yüklü değilse VSPackage işlevi çalışamaz. VSPackage yüklemesini yönetmek için Microsoft Windows Installer kullandığınızda, yükleyiciyi, Visual Studio 'nun yüklü olup olmadığını algılamak için yapılandırabilirsiniz. Ayrıca, sistemi diğer gereksinimlere göre (örneğin, belirli bir Windows sürümü veya belirli bir RAM miktarı) denetlemek üzere de yapılandırabilirsiniz.
@@ -26,7 +26,7 @@ Visual Studio yüklü değilse VSPackage işlevi çalışamaz. VSPackage yüklem
 ## <a name="detect-visual-studio-editions"></a>Visual Studio sürümlerini Algıla
  Visual Studio 'nun bir sürümünün yüklü olup olmadığını anlamak için, aşağıdaki tabloda listelendiği gibi **yükleme** kayıt defteri anahtarının değerini uygun klasörde *(REG_DWORD) 1* olduğunu doğrulayın. Visual Studio sürümlerinin bir hiyerarşisi olduğunu unutmayın:
 
-1. Enterprise
+1. Kurumsal
 
 2. Professional
 

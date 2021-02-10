@@ -6,21 +6,21 @@ ms.topic: how-to
 ms.devlang: javascript
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 8b2bbbdf478f27f936d4897f2ff773baa4cca1d6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9f13128bc552ffdb31b3f4a9315a3f9aa3543b0f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85285010"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99962697"
 ---
 # <a name="work-with-the-nodejs-interactive-window"></a>Etkileşimli Node.js penceresiyle çalışma
 
-Visual Studio için Node.js araçları, yüklü Node.js çalışma zamanına yönelik etkileşimli bir pencere içerir. Bu pencere, JavaScript kodu girmenize ve sonuçları hemen görmenize olanak tanır. Ayrıca, geçerli projeyle etkileşimde bulunmak için NPM komutlarını yürütün. Etkileşimli pencere aynı zamanda REPL (**R**EAD/**E**valuate/**P**rint **L**OOP) olarak da bilinir.
+Visual Studio için Node.js araçları, yüklü Node.js çalışma zamanına yönelik etkileşimli bir pencere içerir. Bu pencere, JavaScript kodu girmenize ve sonuçları hemen görmenize olanak tanır. Ayrıca, geçerli projeyle etkileşimde bulunmak için NPM komutlarını yürütün. Etkileşimli pencere aynı zamanda REPL (**R** EAD/**E** valuate/**P** rint **L** OOP) olarak da bilinir.
 
 ## <a name="open-the-interactive-window"></a>Etkileşimli pencereyi aç
 
@@ -28,7 +28,7 @@ Etkileşimli pencereyi, Çözüm Gezgini Node.js proje düğümüne sağ tıklay
 
 ![Proje bağlam menüsünde etkileşimli pencere Node.js](../javascript/media/interactivewindow-open-from-project.png)
 
-Node.js etkileşimli pencereyi açmak için varsayılan kısa kesme tuşları **[Ctrl] + K, N**. Ya da **View**  >  **Windows**  >  **Node.js etkileşimli penceresini**görüntüle ' yi seçerek pencereyi araç çubuğundan açabilirsiniz.
+Node.js etkileşimli pencereyi açmak için varsayılan kısa kesme tuşları **[Ctrl] + K, N**. Ya da   >  **Windows**  >  **Node.js etkileşimli penceresini** görüntüle ' yi seçerek pencereyi araç çubuğundan açabilirsiniz.
 
 ## <a name="use-the-repl"></a>REPL kullanın
 

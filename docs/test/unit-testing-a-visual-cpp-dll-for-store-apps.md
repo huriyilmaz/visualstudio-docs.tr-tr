@@ -5,16 +5,16 @@ ms.custom: SEO-VS-2020
 ms.date: 05/01/2019
 ms.topic: how-to
 ms.author: corob
-manager: jillfra
+manager: jmartens
 ms.workload:
 - uwp
 author: corob-msft
-ms.openlocfilehash: a7ae79ff4df783d3c4541720c9fef709087e7da6
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+ms.openlocfilehash: 5117ffb8731ef06f054b0ecbfc651aef2563078e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96330101"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99962632"
 ---
 # <a name="how-to-test-a-c-dll"></a>C++ DLL 'yi test etme
 
@@ -154,7 +154,7 @@ Yeni bir test projesi oluşturarak başlayın. **Dosya** menüsünde **Yeni**  >
 
 1. RooterLib öğesini RooterLibTests projesine ekleyin.
 
-   1. **Çözüm Gezgini**, **RooterLibTests** projesini ve ardından **Add**  >  kısayol menüsünde **başvuru** Ekle ' yi seçin.
+   1. **Çözüm Gezgini**, **RooterLibTests** projesini ve ardından   >  kısayol menüsünde **başvuru** Ekle ' yi seçin.
 
    1. **Başvuru Ekle** Iletişim kutusunda **Projeler**' i seçin. Ardından, **Routerlib** öğesini seçin.
 

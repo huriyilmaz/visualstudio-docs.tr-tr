@@ -15,15 +15,15 @@ helpviewer_keywords:
 - ranges, defining in documents
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: d1cc0475f7b25550b85018477d7c842f012445e2
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: e9c703f4d4e747934d1bab458b75a9d499f0d439
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97528323"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99963958"
 ---
 # <a name="how-to-programmatically-define-and-select-ranges-in-documents"></a>Nasıl yapılır: belgelerde aralıkları program aracılığıyla tanımlama ve seçme
   Bir nesne kullanarak Microsoft Office Word belgesinde bir Aralık tanımlayabilirsiniz <xref:Microsoft.Office.Interop.Word.Range> . Tüm belgeyi, örneğin, <xref:Microsoft.Office.Interop.Word.Range.Select%2A> nesnesinin yöntemini kullanarak <xref:Microsoft.Office.Interop.Word.Range> veya sınıfının içerik özelliğini <xref:Microsoft.Office.Tools.Word.Document> (belge düzeyi özelleştirmesinde) ya da <xref:Microsoft.Office.Interop.Word.Document> sınıfını (VSTO eklentisi içinde) kullanarak seçebilirsiniz (örneğin, nesne).

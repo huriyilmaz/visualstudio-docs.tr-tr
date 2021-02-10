@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1eba3721-cc12-4b80-9987-84923ede5e2e
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ea072cf3e9a236fdc6a4ad66b1c0cf7ddcda1550
-ms.sourcegitcommit: 7a5c4f60667b5792f876953d55192b49a73f5fe9
+ms.openlocfilehash: cd43be13351309e0f4715ee889fb910f4f7e49a3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98533452"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99963204"
 ---
 # <a name="common-msbuild-project-items"></a>Yaygın MSBuild proje öğeleri
 
@@ -182,7 +182,7 @@ Yapı için temel uygulama bildirimini temsil eder ve ClickOnce dağıtımı gü
 
 İçeri aktarılacak FxCop projesini temsil eder.
 
-### <a name="import"></a>İçeri Aktar
+### <a name="import"></a>İçeri Aktarma
 
 Ad alanları Visual Basic Derleyicisi tarafından içeri aktarılması gereken derlemeleri temsil eder.
 

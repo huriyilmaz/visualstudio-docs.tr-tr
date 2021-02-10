@@ -6,13 +6,13 @@ ms.topic: overview
 monikerRange: vs-2019
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
-ms.openlocfilehash: 29fa854ab00764fc0166a53d8b48989f2c74f036
-ms.sourcegitcommit: d526af3642163180e0cc3e1e73b0a00f02542683
+manager: jmartens
+ms.openlocfilehash: df2c257caed24e85569ca41f3cc83dd9d47d5b03
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/31/2020
-ms.locfileid: "97833305"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99962320"
 ---
 # <a name="xaml-code-editor"></a>XAML kod düzenleyici
 
@@ -277,7 +277,7 @@ XAML kod Düzenleyicisi için varsayılan ayarları değiştirmek üzere [Seçen
 
 XAML için [Seçenekler](../ide/reference/options-text-editor-xaml-formatting.md) iletişim kutusunda, aşağıdaki ilk üç öğe, VISUAL Studio IDE 'nin desteklediği tüm programlama dillerinde evrendir. Bu seçenekler ve bunların nasıl kullanılacağı hakkında daha fazla bilgi edinmek için aşağıdaki tablodaki bağlantılı bilgileri ziyaret edin.
 
-|Ad  |Daha fazla bilgi  |
+|Name  |Daha fazla bilgi  |
 |---------|---------|
 |Genel  | [Seçenekler iletişim kutusu: tüm diller > metin Düzenleyicisi](../ide/reference/options-text-editor-all-languages.md) |
 |Kaydırma çubukları | [Seçenekler, metin düzenleyici, tüm diller, kaydırma çubukları](../ide/reference/options-text-editor-all-languages-scroll-bars.md) |
@@ -287,7 +287,7 @@ XAML için [Seçenekler](../ide/reference/options-text-editor-xaml-formatting.md
 
 Aşağıdaki tabloda, XAML tabanlı uygulamalar geliştirirken, düzen deneyiminizi geliştirebileceğiniz [Seçenekler](../ide/reference/options-text-editor-xaml-formatting.md) iletişim kutusundaki ayarlar listelenmektedir. Bu seçenekler ve bunların nasıl kullanılacağı hakkında daha fazla bilgi edinmek için bağlantılı bilgileri ziyaret edin.
 
-|Ad  |Daha fazla bilgi  |
+|Name  |Daha fazla bilgi  |
 |---------|---------|
 |Biçimlendirme | [Seçenekler, Metin Düzenleyici, XAML, Biçimlendirme](../ide/reference/options-text-editor-xaml-formatting.md) |
 |Çeşitli |  [Seçenekler, metin düzenleyici, XAML, çeşitli](../ide/reference/options-text-editor-xaml-miscellaneous.md) |

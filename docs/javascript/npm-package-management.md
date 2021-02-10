@@ -7,17 +7,17 @@ ms.topic: how-to
 ms.devlang: javascript
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: d2c7ec425767e432105bfcec493599197e2fd5ec
-ms.sourcegitcommit: 105e7b5a486262bc92939980383ceee068098a11
+ms.openlocfilehash: 26c750a11c2910a6c6f91e1207d731024af64a5f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/30/2020
-ms.locfileid: "97815691"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99962723"
 ---
 # <a name="manage-npm-packages-in-visual-studio"></a>Visual Studio 'da NPM paketlerini yönetme
 
@@ -40,7 +40,7 @@ Node.js projeleri için aşağıdaki görevleri gerçekleştirebilirsiniz:
 
 Bu özellikler birlikte çalışarak proje sistemiyle ve projedeki *package.js* dosya ile eşitlenir.
 
-### <a name="prerequisites"></a>Ön koşullar
+### <a name="prerequisites"></a>Önkoşullar
 
 Projenize NPM desteği eklemek için **Node.js geliştirme** iş yükü ve Node.js çalışma zamanının yüklü olması gerekir. Ayrıntılı adımlar için bkz. [Node.js projesi oluşturma](../ide/quickstart-nodejs.md?toc=%252fvisualstudio%252fjavascript%252ftoc.json).
 
