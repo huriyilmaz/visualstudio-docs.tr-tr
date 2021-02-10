@@ -11,15 +11,15 @@ helpviewer_keywords:
 - postAction element
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 149aa0cf8543f5b5b1b5ada18a8b2f0e58f063d0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0490e9423cb747782029eb0fd7254407adb3a607
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85546945"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99955768"
 ---
 # <a name="ltpostactiongt-element-office-development-in-visual-studio"></a>&lt;Postatransaction &gt; öğesi (Visual Studio 'Da Office geliştirme)
   `postAction`Ad alanı öğesi, `vstav3` `entrypoint` `postActionData` Office çözümleri yüklendikten sonra çalıştırılan dağıtım sonrası eylemlerle ilişkili öğeleri ve tüm öğeleri içerir.

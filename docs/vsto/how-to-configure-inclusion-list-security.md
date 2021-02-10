@@ -12,15 +12,15 @@ helpviewer_keywords:
 - inclusion lists [Office development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 1f9eca5150e019906805adf40e5c9b6af8a3c14e
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: ddbc74c00c1e1f74ce078586d624e2da4dbd8163
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96846733"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99954026"
 ---
 # <a name="how-to-configure-inclusion-list-security"></a>Nasıl yapılır: ekleme listesi güvenliğini yapılandırma
   Yönetici izinleriniz varsa, [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] son kullanıcılara, ekleme listesine bir güven kararı kaydederek Office çözümlerini yükleme seçeneği verilip verilmediğini denetlemek için güven istemi 'ni yapılandırabilirsiniz. Ekleme listeleri hakkında daha fazla bilgi için bkz. [ekleme listelerini kullanarak Office çözümlerine güvenme](../vsto/trusting-office-solutions-by-using-inclusion-lists.md).
@@ -40,7 +40,7 @@ ms.locfileid: "96846733"
 
 ### <a name="to-enable-the-inclusion-list-by-using-the-registry-editor"></a>Kayıt defteri düzenleyicisini kullanarak ekleme listesini etkinleştirmek için
 
-1. Kayıt defteri düzenleyicisini açın: 
+1. Kayıt defteri düzenleyicisini açın:
 
     1. **Başlat**' a ve ardından **Çalıştır**' a tıklayın.
 
@@ -99,7 +99,7 @@ ms.locfileid: "96846733"
 
 ### <a name="to-restrict-the-inclusion-list"></a>Ekleme listesini kısıtlamak için
 
-1. Kayıt defteri düzenleyicisini açın: 
+1. Kayıt defteri düzenleyicisini açın:
 
     1. **Başlat**' a ve ardından **Çalıştır**' a tıklayın.
 
@@ -158,7 +158,7 @@ ms.locfileid: "96846733"
 
 ### <a name="to-disable-the-inclusion-list"></a>Ekleme listesini devre dışı bırakmak için
 
-1. Kayıt defteri düzenleyicisini açın: 
+1. Kayıt defteri düzenleyicisini açın:
 
     1. **Başlat**' a ve ardından **Çalıştır**' a tıklayın.
 

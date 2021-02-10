@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: a117365d-320d-4bb5-b61d-3e6457b8f6bc
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: fc239d5b0d580d420683c6940ac2bbd5198335d7
-ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
+ms.openlocfilehash: 60e24162407c4daeb8643bf106c385f76b11c7d7
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97875953"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99954533"
 ---
 # <a name="parameter-info-in-a-legacy-language-service-2"></a>Eski dil hizmetinde parametre bilgisi 2
 IntelliSense parametre bilgisi, Kullanıcı parametre listesi başlangıç karakterini (genellikle açık bir parantez), yöntem parametre listesi için yazdığında bir yöntemin imzasını görüntüleyen bir araç ipucudur. Her parametre girildiği ve parametre ayırıcısı (genellikle virgül) yazıldığında araç ipucu, sonraki parametreyi kalın olarak göstermek için güncelleştirilir.

@@ -8,17 +8,17 @@ ms.topic: how-to
 ms.devlang: javascript
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 187ca5ea0d0232e0ca8b99165e77ee265b81e801
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9838cd39fe29f8233f82df00dda6a7392e3494cd
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85285094"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99955495"
 ---
 # <a name="develop-javascript-and-typescript-code-in-visual-studio-without-solutions-or-projects"></a>Visual Studio 'da çözüm veya proje olmadan JavaScript ve TypeScript kodu geliştirme
 
@@ -37,12 +37,12 @@ Açtığınız klasör bir *package.js* dosyası içeriyorsa, NPM 'ye özgü bir
 
 Kısayol menüsünde, NPM tarafından yüklenen paketleri, [NPM paketlerini](npm-package-management.md) bir proje dosyası kullanırken yönettiğiniz şekilde yönetebilirsiniz.
 
-Ayrıca, menü Ayrıca `scripts` * üzerindepackage.js*öğesinde tanımlanan betikleri çalıştırmanıza de olanak tanır. Bu betikler, ortam değişkeninde kullanılabilir Node.js sürümünü kullanacaktır `PATH` . Betikler yeni bir pencerede çalışır. Bu, derleme veya çalıştırma betikleri çalıştırmak için harika bir yoldur.
+Ayrıca, menü Ayrıca `scripts` *üzerindepackage.js* öğesinde tanımlanan betikleri çalıştırmanıza de olanak tanır. Bu betikler, ortam değişkeninde kullanılabilir Node.js sürümünü kullanacaktır `PATH` . Betikler yeni bir pencerede çalışır. Bu, derleme veya çalıştırma betikleri çalıştırmak için harika bir yoldur.
 
 ## <a name="build-and-debug"></a>Derleme ve hata ayıklama
 
 ### <a name="packagejson"></a>package.json
-Klasördeki *package.js* bir `main` öğesi belirtiyorsa, **hata ayıklama** komutu, *package.js*için sağ tıklama kısayol menüsünde kullanılabilir olacaktır.
+Klasördeki *package.js* bir `main` öğesi belirtiyorsa, **hata ayıklama** komutu, *package.js* için sağ tıklama kısayol menüsünde kullanılabilir olacaktır.
 Bunu tıklatmak, belirtilen komut dosyası bağımsız değişkeni olarak *node.exe* başlayacaktır.
 
 ### <a name="javascript-files"></a>JavaScript dosyaları
@@ -54,13 +54,13 @@ Klasörde mevcut bir *tsconfig.js* yoksa, bu dosyayı derleyip hata ayıklamanı
 > [!NOTE]
 > TypeScript kodu oluştururken ' de yüklü en yeni sürümü kullanıyoruz `C:\Program Files (x86)\Microsoft SDKs\TypeScript` .
 
-Klasörde mevcut bir *tsconfig.js* varsa, bu TypeScript dosyasında hata ayıklamak üzere bir menü komutu görmek Için bir TypeScript dosyasına sağ tıklayabilirsiniz. Seçeneği yalnızca `outFile` * üzerindetsconfig.js*belirtilmemişse görüntülenir. Eğer `outFile` belirtilmişse, * üzerindetsconfig.js* sağ tıklayıp doğru seçeneği belirleyerek bu dosyada hata ayıklayabilirsiniz. Bu `tsconfig.json` Dosya Ayrıca, derleyici seçeneklerini belirtmenize izin veren bir yapı seçeneği sağlar.
+Klasörde mevcut bir *tsconfig.js* varsa, bu TypeScript dosyasında hata ayıklamak üzere bir menü komutu görmek Için bir TypeScript dosyasına sağ tıklayabilirsiniz. Seçeneği yalnızca `outFile` *üzerindetsconfig.js* belirtilmemişse görüntülenir. Eğer `outFile` belirtilmişse, *üzerindetsconfig.js* sağ tıklayıp doğru seçeneği belirleyerek bu dosyada hata ayıklayabilirsiniz. Bu `tsconfig.json` Dosya Ayrıca, derleyici seçeneklerini belirtmenize izin veren bir yapı seçeneği sağlar.
 
 > [!NOTE]
 > *tsconfig.js* hakkında daha fazla bilgi Için [tsconfig.jsTypeScript el kitabı sayfasında](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html)hakkında daha fazla bilgi edinebilirsiniz.
 
 ## <a name="unit-tests"></a>Birim testleri
-*Üzerindepackage.js*bir test kökü belirterek, Visual Studio 'da birim testi tümleştirmesini etkinleştirebilirsiniz:
+*Üzerindepackage.js* bir test kökü belirterek, Visual Studio 'da birim testi tümleştirmesini etkinleştirebilirsiniz:
 
 ```json
 {
@@ -73,7 +73,7 @@ Klasörde mevcut bir *tsconfig.js* varsa, bu TypeScript dosyasında hata ayıkla
 ```
 
 Test Çalıştırıcısı, hangi test çerçevesinin kullanılacağını belirleyen yerel olarak yüklenen paketleri numaralandırır.
-Desteklenen çerçevelerin hiçbiri tanınmazsa, Test Çalıştırıcısı varsayılan olarak *ExportRunner*olur. Desteklenen diğer çerçeveler şunlardır:
+Desteklenen çerçevelerin hiçbiri tanınmazsa, Test Çalıştırıcısı varsayılan olarak *ExportRunner* olur. Desteklenen diğer çerçeveler şunlardır:
 * Mocha ([mochajs.org](https://mochajs.org/))
 * Jasmine ([Jasmine.GitHub.io](https://jasmine.github.io/))
 * Bant ([GitHub.com/substack/Tape](https://github.com/substack/tape))

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - exporting Ribbon
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: f39131eb7e3469d389ad2d50aaeb1ee97e3865b9
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: 2a0511fd103345859f96b18f333465106505057a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96844146"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99953987"
 ---
 # <a name="how-to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml"></a>Nasıl yapılır: Şerit Tasarımcısından Şerit XML 'ine şerit aktarma
   **Şerit (görsel Tasarımcı)** öğesi, tüm olası Şerit özelleştirmesi türlerini desteklemiyor. Şeriti gelişmiş yöntemlerle özelleştirmek için, tasarımcıyı tasarımcıdan Şerit XML 'Ine aktarabilir ve XML 'i doğrudan düzenleyebilirsiniz.

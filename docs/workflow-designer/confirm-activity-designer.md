@@ -9,15 +9,15 @@ f1_keywords:
 ms.assetid: c753b67b-b0e7-462a-bb4e-ba8db04a078d
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4928dcd7a9e1b83ba797614545315022d0f36ac3
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 0227a300160434d0052e81d7c1ccd107c5a11a01
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94438158"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99955664"
 ---
 # <a name="confirm-activity-designer"></a>Confirm Etkinlik Tasarımcısı
 

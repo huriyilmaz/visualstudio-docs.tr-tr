@@ -14,15 +14,15 @@ helpviewer_keywords:
 - customizing the Ribbon, adding Ribbon to project
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 3974fe85a97226a920959b41256fa7e29923c9d1
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: d82d059166b9efbb80ed6ce4cffcbb973235b01b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96845953"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99953922"
 ---
 # <a name="how-to-get-started-customizing-the-ribbon"></a>Nasıl yapılır: Şeriti özelleştirmeye başlama
   Bir Microsoft Office uygulamasının Şeridini özelleştirmek için bir Office projesine **Şerit (görsel Tasarımcı)** veya **Şerit (XML)** öğesi ekleyin.
@@ -67,7 +67,7 @@ ms.locfileid: "96845953"
 
    - Windows veya DOS için ayrılan adlar ("nul", "AUX", "Con", "COM1", "lpt1" vb.)
 
-4. **Tamam** düğmesine tıklayın.
+4. **Tamam**'a tıklayın.
 
    Şerit öğesi **Çözüm Gezgini** görünür. Sonraki adımlar hakkında daha fazla bilgi için bkz. [Şerite genel bakış](../vsto/ribbon-overview.md).
 

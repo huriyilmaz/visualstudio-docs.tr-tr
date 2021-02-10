@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: e1c3ba41-ffca-4edf-9a7f-8a5a9244ef9b
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 52e2575e034dbabe5e380857edd95e4bc46f56d2
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: 554562a567975f6663f05c5de77cd1dd572e16c3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98721027"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99955430"
 ---
 # <a name="configure-performance-sessions"></a>Performans oturumlarını yapılandırma
 Profil Oluşturma Araçları kullanarak [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] çok sayıda uygulama türü için çok çeşitli performans verileri toplayabilirsiniz. Bu bölümde, sizi ilgilendiren verileri toplamak üzere Profil Oluşturma Araçları yapılandırmak için performans oturumu ve hedef ikilisinin performans Sihirbazı ve özelliklerinin nasıl kullanılacağı gösterilmektedir. Profil Oluşturma Araçları yapılandırma özellikleri, profil oluşturma çalıştırmasında ne kadar veri toplandığını denetlemek için de kullanılabilir. Daha fazla bilgi için bkz. [Denetim verileri toplama](../profiling/controlling-data-collection.md).

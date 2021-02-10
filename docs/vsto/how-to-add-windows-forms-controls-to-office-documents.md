@@ -14,15 +14,15 @@ helpviewer_keywords:
 - documents [Office development in Visual Studio], Windows Forms controls
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: a8f073a72db1a18574dff6ab060b1ea069475fbb
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: 8d2f8d54e791acd7d027350caa3ce88c8eea9959
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96846785"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99954156"
 ---
 # <a name="how-to-add-windows-forms-controls-to-office-documents"></a>Nasıl yapılır: Office belgelerine Windows Forms denetimleri ekleme
   Belge düzeyi projelerinde, tasarım zamanında Excel Microsoft Office ve Microsoft Office Word belgelerine Windows Forms denetimleri ekleyebilirsiniz. Çalışma zamanında, belge düzeyi özelleştirmelerine ve VSTO eklentilerine denetim ekleyebilirsiniz. Örneğin, <xref:Microsoft.Office.Tools.Excel.Controls.ComboBox> kullanıcıların bir seçenek listesinden seçim yapabilmesi için çalışma sayfanıza bir denetim ekleyebilirsiniz.
@@ -108,7 +108,7 @@ ms.locfileid: "96846785"
 
 1. Ad Add bir yöntemi kullanın \<*control class*> (burada *Denetim sınıfı* , eklemek istediğiniz Windows Forms denetiminin sınıf adıdır <xref:Microsoft.Office.Tools.Word.ControlExtensions.AddButton%2A> ).
 
-     Aşağıdaki kod örneği, <xref:Microsoft.Office.Tools.Excel.Controls.Button> **C5** `Sheet1` Excel için belge düzeyindeki bir projede C5 öğesinin bir hücresine nasıl ekleneceğini gösterir.
+     Aşağıdaki kod örneği, <xref:Microsoft.Office.Tools.Excel.Controls.Button>  `Sheet1` Excel için belge düzeyindeki bir projede C5 öğesinin bir hücresine nasıl ekleneceğini gösterir.
 
      [!code-vb[Trin_VstcoreProgrammingControlsExcel#4](../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb#4)]
      [!code-csharp[Trin_VstcoreProgrammingControlsExcel#4](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs#4)]

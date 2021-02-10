@@ -6,15 +6,15 @@ ms.date: 09/18/2018
 ms.topic: how-to
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8d9a416dc64a9d49d14e367a04023f067c7b595c
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+ms.openlocfilehash: 88298cf9fecdb6ce3862ee289d63c4f31b748449
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96329646"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99955807"
 ---
 # <a name="manage-test-controllers-and-test-agents"></a>Test denetleyicilerini ve test aracılarını yönetme
 
@@ -38,7 +38,7 @@ Farklı bir test denetleyicisine test aracısı eklemek isteyebilirsiniz veya ye
 
 ### <a name="to-add-a-test-agent-to-a-test-controller"></a>Test denetleyicisine test aracısı eklemek için
 
-1. **Start**  >  **Test Aracısı yapılandırma aracını** Başlat ' ı seçin.
+1.   >  **Test Aracısı yapılandırma aracını** Başlat ' ı seçin.
 
      **Test aracısını Yapılandır** iletişim kutusu görüntülenir.
 
@@ -157,7 +157,7 @@ Aşağıdaki yordamları kullanarak bir test aracısının durumunu ve diğer ay
 
 1. Aşağıdaki test Aracısı özelliklerini gerekli şekilde değiştirin:
 
-|Test Aracısı özelliği|Açıklama|
+|Test Aracısı özelliği|Description|
 |-|-----------------|
 |**Ağırlıklı**|Farklı performans düzeyleriyle test aracıları kullandığınızda yükü dağıtmak için kullanılır. Örneğin, 100 ağırlığı olan bir test aracısı, yük, 50 ağırlığa sahip bir test aracısı olarak iki kat alır.|
 |**IP değiştirme**|IP geçişini yapılandırmak için kullanılır. IP anahtarlama, bir test aracısının bir IP adresi aralığı kullanarak istekleri sunucuya göndermesini sağlar. Bu, farklı istemci bilgisayarlardan gelen çağrıların benzetimini yapar.<br /><br /> Yük testiniz bir Web grubuna erişiyorsa, IP geçişi önemlidir. Çoğu yük dengeleyiciler, istemcinin IP adresini kullanarak bir istemciyle belirli bir Web sunucusu arasında benzeşim kurar. Tüm istekler tek bir istemciden geliyor gibi görünüyorsa, yük dengeleyici yükü dengeetmez. Web grubunda iyi yük dengelemesi elde etmek için isteklerin bir IP adresi aralığından geldiğinden emin olun. **Note:**  Bir ağ bağdaştırıcısı belirtebilir veya şu anda kullanılmayan birini otomatik olarak seçmek için **(Tümü Atanmamış)** seçeneğini kullanabilirsiniz. <br /><br /> IP anahtarlama özelliğini kullanmak için, Visual Studio Test Aracısı hizmetinin bu aracı bilgisayar için Yöneticiler grubunda bir kullanıcı olarak çalışıyor olması gerekir. Bu Kullanıcı, aracı kurulumu sırasında seçilir, ancak hizmetin özellikleri değiştirilerek yeniden başlatılarak değiştirilebilir.<br /><br /> IP geçişinin düzgün çalıştığını doğrulamak için Web sunucusunda IIS günlüğü 'nü etkinleştirin, isteklerin yapılandırdığınız IP adreslerinden geldiğini doğrulamak için IIS günlük oluşturma işlevini kullanın.|
@@ -181,7 +181,7 @@ Test denetleyicinizi Team Foundation Server projesi koleksiyonunuza kaydetmek is
 
 ### <a name="to-configure-a-test-controller"></a>Bir test denetleyicisini yapılandırmak için
 
-1. Test denetleyicinizi istediğiniz zaman yeniden yapılandırmak üzere aracı çalıştırmak için, **Start**  >  **Test denetleyicisi yapılandırma aracını** Başlat ' ı seçin.
+1. Test denetleyicinizi istediğiniz zaman yeniden yapılandırmak üzere aracı çalıştırmak için,   >  **Test denetleyicisi yapılandırma aracını** Başlat ' ı seçin.
 
      **Test denetleyicisini Yapılandır** iletişim kutusu görüntülenir.
 

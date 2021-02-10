@@ -11,15 +11,15 @@ helpviewer_keywords:
 - ProjectItemFile element
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 099f20926487b09240219f04d9bce4a79709f6e6
-ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
+ms.openlocfilehash: a7c6dd7fc46dc8616eddc164bcf2ec801657cb00
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95440811"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99955144"
 ---
 # <a name="projectitemfile-element"></a>ProjectItemFile öğesi
   SharePoint 'e dağıtıldığında proje öğesiyle birlikte dahil edilecek özellik öğesi dosyası gibi bir SharePoint dosyasını temsil eder.
@@ -62,7 +62,7 @@ ms.locfileid: "95440811"
 
 |Özellik|Değer|
 |-|-|
-|**Uzayına**|http: \/ \/ schemas.Microsoft.com/VisualStudio/<br>2010/SharePointTools/Sharepointprojectıtemmodel|
+|**Ad Alanı**|http: \/ \/ schemas.Microsoft.com/VisualStudio/<br>2010/SharePointTools/Sharepointprojectıtemmodel|
 |**Şema adı**|SharePoint proje öğesi şeması|
 |**Doğrulama dosyası**|Projectıtemmodelschema. xsd|
 |**Boş olabilir**|Hayır|

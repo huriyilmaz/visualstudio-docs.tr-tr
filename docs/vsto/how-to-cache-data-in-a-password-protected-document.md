@@ -13,15 +13,15 @@ helpviewer_keywords:
 - data [Office development in Visual Studio], caching
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 2a11b70da4bdd2500f70d2b45f025340af21ea94
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: cd7efe4aa2aa14cb94a68f0729bc7fe3535888ee
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96846005"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99954039"
 ---
 # <a name="how-to-cache-data-in-a-password-protected-document"></a>Nasıl yapılır: parola korumalı bir belgedeki verileri önbelleğe alma
   Parola ile korunan bir belge veya çalışma kitabındaki veri önbelleğine veri eklerseniz, önbelleğe alınmış verilerde yapılan değişiklikler otomatik olarak kaydedilmez. Projenizdeki iki yöntemi geçersiz kılarak önbelleğe alınmış verideki değişiklikleri kaydedebilirsiniz.

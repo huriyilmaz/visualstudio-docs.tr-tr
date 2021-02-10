@@ -10,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: f79b894f-52c4-43c2-9a68-c71536451f6c
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d522d0fb7f339888632a518897cfce0c23655ddc
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: af48a3b42bf559595714c9af8116c112579a4012
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90038315"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99954910"
 ---
 # <a name="idebugcomplussymbolprovider2loadsymbolsfromstreamwithcormodule"></a>IDebugComPlusSymbolProvider2::LoadSymbolsFromStreamWithCorModule
 **ICorDebugModule** nesnesi verilen bir veri akışından hata ayıklama sembolleri yükleyin.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
 HRESULT LoadSymbolsFromStreamWithCorModule(
