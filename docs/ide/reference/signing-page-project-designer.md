@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: dab3ba13-2f92-4827-92bd-1be3c35bc48b
 author: Mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 6e76be0482353ffe4740956ab16f24d6ce82f4da
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: f52d02407316fbc8f9a7b5e3db1c02a3566cda87
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94348521"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99957588"
 ---
 # <a name="signing-page-project-designer"></a>İmzalama Sayfası, Proje Tasarımcısı
 
@@ -37,7 +37,7 @@ Uygulama ve dağıtım bildirimlerinin imzalanmasının, bir derlemenin imzalanm
 
 Ayrıca, anahtar dosya bilgilerinin depolanması, bildirim imzalama ve derleme imzalama için farklılık gösterir. Bildirim imzalama için, anahtar bilgileri bilgisayarınızın şifreleme depolama veritabanında ve geçerli kullanıcının Windows sertifika deposunda depolanır. Derleme imzalama için, anahtar bilgileri yalnızca bilgisayarınızın şifreleme depolama veritabanında depolanır.
 
-**İmzalama** sayfasına erişmek için **Çözüm Gezgini** ' de bir proje düğümü seçin ve ardından **Proje** menüsünde **Özellikler** ' e tıklayın. **Proje Tasarımcısı** göründüğünde **imzalama** sekmesine tıklayın.
+**İmzalama** sayfasına erişmek için **Çözüm Gezgini**' de bir proje düğümü seçin ve ardından **Proje** menüsünde **Özellikler**' e tıklayın. **Proje Tasarımcısı** göründüğünde **imzalama** sekmesine tıklayın.
 
 ## <a name="application-and-deployment-manifest-signing"></a>Uygulama ve dağıtım bildirimi Imzalama
 
@@ -51,7 +51,7 @@ Geçerli kullanıcının kişisel sertifika deposundan mevcut bir sertifikayı s
 
 **Mağazadan Seç** ' i tıkladığınızda, kişisel sertifika deponuzda Şu anda geçerli olan ve özel anahtarlara sahip olan sertifikaları listeleyen **bir sertifika seç** iletişim kutusu açılır. Seçtiğiniz sertifikanın amacı kod imzalama içermelidir.
 
-**Sertifika özelliklerini görüntüle** ' ye tıklarsanız, **sertifika ayrıntıları** iletişim kutusu görüntülenir. Bu iletişim kutusu sertifikayla ilgili ayrıntılı bilgileri içerir ve ek seçenekleri içerir. Ek Yardım bilgilerini görüntülemek için **Sertifikalar hakkında daha fazla bilgi** ' ye tıklayabilirsiniz.
+**Sertifika özelliklerini görüntüle**' ye tıklarsanız, **sertifika ayrıntıları** iletişim kutusu görüntülenir. Bu iletişim kutusu sertifikayla ilgili ayrıntılı bilgileri içerir ve ek seçenekleri içerir. Ek Yardım bilgilerini görüntülemek için **Sertifikalar hakkında daha fazla bilgi** ' ye tıklayabilirsiniz.
 
 Dosyadan **Seç** düğmesi
 

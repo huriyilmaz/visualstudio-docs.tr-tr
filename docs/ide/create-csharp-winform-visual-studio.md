@@ -8,17 +8,17 @@ ms.technology: vs-ide-general
 ms.devlang: CSharp
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: a06a6885c3d0858f60c8de48dd61054534aad40f
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 0fcc42b999039abe5d682394e378cb95f12b9283
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809052"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99956938"
 ---
 # <a name="create-a-windows-forms-app-in-visual-studio-with-c"></a>C ile Visual Studio 'da Windows Forms uygulaması oluşturma\#
 
@@ -100,7 +100,7 @@ C# proje şablonunuzu seçip Dosyanızı adlandırın, Visual Studio sizin için
 
      ![Araç kutusu penceresini açmak için araç kutusunu seçin](../ide/media/csharp-toolbox-toolwindow.png)
 
-     ( **Araç kutusu** açılır seçeneğini görmüyorsanız, menüyü menü çubuğundan açabilirsiniz. Bunu yapmak için **View**  >  **araç kutusunu**görüntüleyin. Ya da **CTRL** + **alt** + **X**tuşlarına basın.)
+     ( **Araç kutusu** açılır seçeneğini görmüyorsanız, menüyü menü çubuğundan açabilirsiniz. Bunu yapmak için   >  **araç kutusunu** görüntüleyin. Ya da **CTRL** + **alt** + **X** tuşlarına basın.)
 
 1. **Araç kutusu** penceresini sabitlemek için **raptiye** simgesini seçin.
 
@@ -110,13 +110,13 @@ C# proje şablonunuzu seçip Dosyanızı adlandırın, Visual Studio sizin için
 
      ![Forma Düğme Ekle](../ide/media/csharp-add-button-form1.png)
 
-1. **Özellikler** penceresinde, **metni**bulun, **button1** olarak adı değiştirin `Click this` ve ardından **ENTER**tuşuna basın.
+1. **Özellikler** penceresinde, **metni** bulun, **button1** olarak adı değiştirin `Click this` ve ardından **ENTER** tuşuna basın.
 
      ![Formdaki düğmeye metin ekleme](../ide/media/vb-button-control-text.png)
 
-     ( **Özellikler** penceresini görmüyorsanız, menüyü menü çubuğundan açabilirsiniz. Bunu yapmak için **View**  >  **Özellikler penceresini**görüntüle ' yi seçin. Ya da **F4**tuşuna basın.)
+     ( **Özellikler** penceresini görmüyorsanız, menüyü menü çubuğundan açabilirsiniz. Bunu yapmak için   >  **Özellikler penceresini** görüntüle ' yi seçin. Ya da **F4** tuşuna basın.)
 
-1. **Özellikler** penceresinin **Tasarım** bölümünde, **button1** olarak adı değiştirin `btnClickThis` ve ardından **ENTER**tuşuna basın.
+1. **Özellikler** penceresinin **Tasarım** bölümünde, **button1** olarak adı değiştirin `btnClickThis` ve ardından **ENTER** tuşuna basın.
 
      ![Formdaki düğmeye bir işlev ekleyin](../ide/media/vb-button-control-function.png)
 
@@ -129,7 +129,7 @@ Bir eylem oluşturmak için bir düğme denetimi ekledik, artık metin gönderme
 
 1. **Araç kutusu** penceresinden **etiket** denetimini seçin ve sonra bu düğmenin altına sürükleyip bırakın ve sonra **Bu düğmeye tıklayın** .
 
-1. **Özellikler** penceresinin **Tasarım** bölümünde veya **(DataBindings)** bölümünde, **Label1** adını olarak değiştirin `lblHelloWorld` ve ardından **ENTER**tuşuna basın.
+1. **Özellikler** penceresinin **Tasarım** bölümünde veya **(DataBindings)** bölümünde, **Label1** adını olarak değiştirin `lblHelloWorld` ve ardından **ENTER** tuşuna basın.
 
 ### <a name="add-code-to-the-form"></a>Forma kod ekleme
 
@@ -147,7 +147,7 @@ Bir eylem oluşturmak için bir düğme denetimi ekledik, artık metin gönderme
 
      ![Hata ayıklamak ve uygulamayı çalıştırmak için Başlat 'ı seçin](../ide/media/vb-click-start-hello-world.png)
 
-   Birkaç şey meydana gelir. Visual Studio IDE 'de, **Tanılama araçları** penceresi açılır ve bir **Çıkış** penceresi de açılır. Ancak IDE dışında bir **Form1** iletişim kutusu belirir. Bu düğme, **Bu düğmeye tıklayın** ve **Label1**belirten metni içerir.
+   Birkaç şey meydana gelir. Visual Studio IDE 'de, **Tanılama araçları** penceresi açılır ve bir **Çıkış** penceresi de açılır. Ancak IDE dışında bir **Form1** iletişim kutusu belirir. Bu düğme, **Bu düğmeye tıklayın** ve **Label1** belirten metni içerir.
 
 1. **Form1** iletişim kutusunda **Bu düğmeye tıklayın** . **Label1** metninin **Merhaba Dünya!** olarak değiştiğine dikkat edin.
 

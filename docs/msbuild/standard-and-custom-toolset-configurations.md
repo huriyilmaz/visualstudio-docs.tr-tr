@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 15a048c8-5ad3-448e-b6e9-e3c5d7147ed2
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b82eaf6ca52b04d39e9f776feca74f5bb223a0d5
-ms.sourcegitcommit: 1a36533f385e50c05f661f440380fda6386ed3c1
+ms.openlocfilehash: 70b0d85ea161a3f938013c01702dd2ccce73a31d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93048177"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99956106"
 ---
 # <a name="standard-and-custom-toolset-configurations"></a>Standart ve özel araç takımı yapılandırması
 
@@ -31,7 +31,7 @@ MSBuild Araç Takımı, bir uygulama projesi oluşturmak için kullanabileceğin
 
 |ToolsVersion|Araç takımı yolu (Msbuildaraçları yolu veya MSBuildBinPath derleme özelliğinde belirtilen şekilde)|
 |------------------| - |
-|2,0|*\<Windows installation path>\Microsoft.Net\Framework\v2.0.50727\\*|
+|2.0|*\<Windows installation path>\Microsoft.Net\Framework\v2.0.50727\\*|
 |3,5|*\<Windows installation path>\Microsoft.NET\Framework\v3.5\\*|
 |4.0|*\<Windows installation path>\Microsoft.NET\Framework\v4.0.30319\\*|
 |Geçerli|*\<Visual Studio installation path>\MSBuild\Current\bin*|
@@ -45,7 +45,7 @@ MSBuild Araç Takımı, bir uygulama projesi oluşturmak için kullanabileceğin
 
 |ToolsVersion|Araç takımı yolu (Msbuildaraçları yolu veya MSBuildBinPath derleme özelliğinde belirtilen şekilde)|
 |------------------| - |
-|2,0|*\<Windows installation path>\Microsoft.Net\Framework\v2.0.50727\\*|
+|2.0|*\<Windows installation path>\Microsoft.Net\Framework\v2.0.50727\\*|
 |3,5|*\<Windows installation path>\Microsoft.NET\Framework\v3.5\\*|
 |4.0|*\<Windows installation path>\Microsoft.NET\Framework\v4.0.30319\\*|
 |15.0|*\<Visual Studio installation path>\MSBuild\15.0\bin*|

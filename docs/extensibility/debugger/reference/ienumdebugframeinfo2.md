@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 994e30ad-435a-4f9e-9272-d96d9e01099c
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0aa67792ced94afd9c4439cbc6ea577e6b85f28b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fdc2006b45a664496615988251081f1000cdb428
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80716615"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99956301"
 ---
 # <a name="ienumdebugframeinfo2"></a>IEnumDebugFrameInfo2
 Bu arabirim [frameInfo](../../../extensibility/debugger/reference/frameinfo.md) yapılarını numaralandırır.
@@ -42,7 +42,7 @@ IEnumDebugFrameInfo2 : IUnknown
 |[Sonraki](../../../extensibility/debugger/reference/ienumdebugframeinfo2-next.md)|Bir numaralandırma dizisinde belirtilen sayıda [frameInfo](../../../extensibility/debugger/reference/frameinfo.md) yapısını alır.|
 |[Atla](../../../extensibility/debugger/reference/ienumdebugframeinfo2-skip.md)|Sabit Listesi dizisinde belirtilen sayıda [frameInfo](../../../extensibility/debugger/reference/frameinfo.md) yapısını atlar.|
 |[Sıfırla](../../../extensibility/debugger/reference/ienumdebugframeinfo2-reset.md)|Bir numaralandırma dizisini başlangıca sıfırlar.|
-|[Kopyalama](../../../extensibility/debugger/reference/ienumdebugframeinfo2-clone.md)|Geçerli numaralandırıcı ile aynı numaralandırma durumunu içeren bir Numaralandırıcı oluşturur.|
+|[Oluşturulacak](../../../extensibility/debugger/reference/ienumdebugframeinfo2-clone.md)|Geçerli numaralandırıcı ile aynı numaralandırma durumunu içeren bir Numaralandırıcı oluşturur.|
 |[GetCount](../../../extensibility/debugger/reference/ienumdebugframeinfo2-getcount.md)|Bir Numaralandırıcı içindeki [frameInfo](../../../extensibility/debugger/reference/frameinfo.md) yapılarının sayısını alır.|
 
 ## <a name="remarks"></a>Açıklamalar

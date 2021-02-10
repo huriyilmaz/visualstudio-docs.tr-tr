@@ -9,26 +9,26 @@ helpviewer_keywords:
 ms.assetid: 1b0f02cb-8ace-4614-88f3-0e10239012b3
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 27767af36093e9424775074a55bafadac9a4480d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 15838ff1efe9cba6920b98a8b7f00cb62f2fc3b4
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80719411"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99956470"
 ---
 # <a name="idebugsymbolprovidergetaddressesfromposition"></a>IDebugSymbolProvider::GetAddressesFromPosition
 Bu yöntem bir belge konumunu hata ayıklama adresleri dizisiyle eşler.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
-HRESULT GetAddressesFromPosition( 
+HRESULT GetAddressesFromPosition( 
    IDebugDocumentPosition2* pDocPos,
    BOOL                     fStatmentOnly,
    IEnumDebugAddresses**    ppEnumBegAddresses,
@@ -37,7 +37,7 @@ HRESULT GetAddressesFromPosition( 
 ```
 
 ```csharp
-int GetAddressesFromPosition( 
+int GetAddressesFromPosition( 
    IDebugDocumentPosition2  pDocPos,
    bool                     fStatmentOnly,
    out IEnumDebugAddresses  ppEnumBegAddresses,

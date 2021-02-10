@@ -8,13 +8,13 @@ helpviewer_keywords:
 - editorconfig [Visual Studio]
 author: mikadumont
 ms.author: midumont
-manager: jillfra
-ms.openlocfilehash: a1f66368972614347df9eebe33af435987ea9cc8
-ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
+manager: jmartens
+ms.openlocfilehash: 8ab90fda1f14521d59982ef7b5d20998cf61e505
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95006503"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99956847"
 ---
 # <a name="create-portable-custom-editor-settings-with-editorconfig"></a>EditorConfig ile taşınabilir, özel düzenleyici ayarları oluşturma
 
@@ -27,7 +27,7 @@ EditorConfig ayarları, Visual Studio da dahil olmak üzere çok sayıda kod Dü
 Visual Studio 'da projenize bir EditorConfig dosyası eklediğinizde, yeni kod satırları EditorConfig ayarlarına göre biçimlendirilir. Aşağıdaki komutlardan birini çalıştırmadığınız takdirde varolan kodun biçimlendirmesi değiştirilmez:
 
  - [Kod temizleme](../ide/code-styles-and-code-cleanup.md) (**CTRL** + **K**, **CTRL** + **E**), girinti stili gibi tüm beyaz boşluk ayarlarını ve nasıl sıralama yönergeleri gibi seçili kod stili ayarlarını uygular `using` .
- - **Düzenle** > **Gelişmiş** > **Format Document** **Ctrl** + **K** **Ctrl** + Yalnızca girinti stili gibi beyaz boşluk ayarlarını uygulayan belgeyi (veya varsayılan profilde CTRL **D** ) biçimlendirin.
+ - **Düzenle** > **Gelişmiş** >   +   + Yalnızca girinti stili gibi beyaz boşluk ayarlarını uygulayan belgeyi (veya varsayılan profilde CTRL **D** ) biçimlendirin.
 
  ::: moniker-end
 
@@ -74,7 +74,7 @@ EditorConfig Düzenleyicisi ayarları, XML hariç tüm Visual Studio tarafından
 
 ## <a name="add-and-remove-editorconfig-files"></a>EditorConfig dosyalarını ekleme ve kaldırma
 
-Projenize veya kod tabanınıza bir EditorConfig dosyası eklediğinizde, yazdığınız tüm yeni kod satırları EditorConfig dosyasına göre biçimlendirilir. Ancak, bir EditorConfig dosyası eklemek, belgeyi biçimlendirene veya [kod temizliği](../ide/code-styles-and-code-cleanup.md)çalıştırana kadar mevcut stilleri yeni olanlara dönüştürmez. Örneğin, dosyanızda sekmelerle biçimlendirilmiş Girintileriniz varsa ve boşluklarla girintilenen bir EditorConfig dosyası eklerseniz, girinti karakterleri otomatik olarak boşluklara dönüştürülmez. Belgeyi biçimlendirdiğinizde (**Edit**  >  **Gelişmiş**  >  **Biçim belgesini** Düzenle veya **CTRL** + **K**, **CTRL** + **D**), editorconfig dosyasındaki boşluk ayarları, varolan kod satırlarına uygulanır.
+Projenize veya kod tabanınıza bir EditorConfig dosyası eklediğinizde, yazdığınız tüm yeni kod satırları EditorConfig dosyasına göre biçimlendirilir. Ancak, bir EditorConfig dosyası eklemek, belgeyi biçimlendirene veya [kod temizliği](../ide/code-styles-and-code-cleanup.md)çalıştırana kadar mevcut stilleri yeni olanlara dönüştürmez. Örneğin, dosyanızda sekmelerle biçimlendirilmiş Girintileriniz varsa ve boşluklarla girintilenen bir EditorConfig dosyası eklerseniz, girinti karakterleri otomatik olarak boşluklara dönüştürülmez. Belgeyi biçimlendirdiğinizde (  >  **Gelişmiş**  >  **Biçim belgesini** Düzenle veya **CTRL** + **K**, **CTRL** + **D**), editorconfig dosyasındaki boşluk ayarları, varolan kod satırlarına uygulanır.
 
 Bir EditorConfig dosyasını projenizden veya kod tabanınızdan kaldırırsanız ve yeni kod satırlarının genel düzenleyici ayarlarına göre biçimlendirilmesini istiyorsanız, açık kod dosyalarını kapatıp yeniden açmanız gerekir.
 
@@ -106,7 +106,7 @@ Projenize bir EditorConfig dosyası eklemenin birkaç yolu vardır:
 
 - Visual Studio için ıntellicode 'un [kod çıkarımı özelliği](/visualstudio/intellicode/code-style-inference) , kod stillerinizi mevcut koddan algılar. Daha sonra, kod stili tercihleriniz zaten tanımlanmış boş olmayan bir EditorConfig dosyası oluşturur.
 
-- Visual Studio 2019 ' den başlayarak, **Araçlar** [seçeneklerinizde kod stili ayarlarınıza göre bir editorconfig dosyası](code-styles-and-code-cleanup.md#code-styles-in-editorconfig-files) oluşturabilirsiniz  >  **Options**.
+- Visual Studio 2019 ' den başlayarak, **Araçlar** [seçeneklerinizde kod stili ayarlarınıza göre bir editorconfig dosyası](code-styles-and-code-cleanup.md#code-styles-in-editorconfig-files) oluşturabilirsiniz  >  .
 
 ## <a name="file-hierarchy-and-precedence"></a>Dosya hiyerarşisi ve önceliği
 
@@ -168,7 +168,7 @@ Projenizin konumunun veya üstündeki dizin yapısında herhangi bir yerde bir E
 
    **"Bu dosya türü için Kullanıcı tercihleri bu projenin kodlama kuralları tarafından geçersiz kılınır."**
 
-Diğer bir deyişle, **Araçlar**  >  **Seçenekler**  >  **metin düzenleyicisinde** (girinti boyutu ve stil, sekme boyutu veya kodlama kuralları gibi) herhangi bir düzenleyici ayarı, dizin yapısında proje üzerinde veya üzerinde bir editorconfig dosyasında belirtildiğinde, editorconfig dosyasındaki kurallar **seçeneklerindeki** ayarları geçersiz kılar. **Araç** seçenekleri metin düzenleyicisinde **Proje kodlama kurallarını izle** seçeneğini değiştirerek bu davranışı kontrol edebilirsiniz  >  **Options**  >  **Text Editor**. Seçeneğin işaretlenmesi, Visual Studio için EditorConfig desteğini devre dışı bırakır.
+Diğer bir deyişle, **Araçlar**  >  **Seçenekler**  >  **metin düzenleyicisinde** (girinti boyutu ve stil, sekme boyutu veya kodlama kuralları gibi) herhangi bir düzenleyici ayarı, dizin yapısında proje üzerinde veya üzerinde bir editorconfig dosyasında belirtildiğinde, editorconfig dosyasındaki kurallar **seçeneklerindeki** ayarları geçersiz kılar. **Araç** seçenekleri metin düzenleyicisinde **Proje kodlama kurallarını izle** seçeneğini değiştirerek bu davranışı kontrol edebilirsiniz  >    >  . Seçeneğin işaretlenmesi, Visual Studio için EditorConfig desteğini devre dışı bırakır.
 
 ![Araç seçenekleri-proje kodlama kurallarını izleyin](media/coding_conventions_option.png)
 

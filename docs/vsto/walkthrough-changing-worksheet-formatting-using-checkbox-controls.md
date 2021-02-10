@@ -13,15 +13,15 @@ helpviewer_keywords:
 - controls [Office development in Visual Studio], adding to worksheets
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 28b9f000c2e8517304387e2b203dfa7888b33d64
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 908660693abce2f2adf07d98e7f2a451a8f3c8e5
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97527225"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99956600"
 ---
 # <a name="walkthrough-change-worksheet-formatting-using-checkbox-controls"></a>İzlenecek yol: CheckBox denetimlerini kullanarak çalışma sayfası biçimlendirmesini değiştirme
   Bu izlenecek yol, biçimlendirmeyi değiştirmek için Microsoft Office Excel çalışma sayfasındaki onay kutularını kullanmanın temellerini gösterir. Visual Studio 'da Office geliştirme araçları 'nı kullanarak projenize kod oluşturmanız ve kod eklemeniz gerekir. Sonucu tamamlanmış bir örnek olarak görmek için bkz. [Office geliştirme örnekleri ve izlenecek yollar](../vsto/office-development-samples-and-walkthroughs.md): Excel denetimleri örneği.
@@ -104,7 +104,7 @@ ms.locfileid: "97527225"
 
 2. **$B $9** ' nin düzenlenebilir metin kutusunda göründüğünü ve **B9** hücresinin seçildiğini doğrulayın. Aksi takdirde, seçmek için hücre **B9** ' a tıklayın.
 
-3. **Tamam** düğmesine tıklayın.
+3. **Tamam**'a tıklayın.
 
 4. **B9** hücresi adlı bir Aralık haline gelir `NamedRange1` .
 
@@ -145,7 +145,7 @@ ms.locfileid: "97527225"
 
      [!code-csharp[Trin_VstcoreProgrammingControlsExcel#10](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs#10)]
 
-## <a name="test-the-application"></a>Uygulamayı test etme
+## <a name="test-the-application"></a>Uygulamayı test edin
  Artık, bir onay kutusunu seçtiğinizde veya temizlediğinizde metnin doğru biçimlendirildiğinden emin olmak için çalışma kitabınızı test edebilirsiniz.
 
 ### <a name="to-test-your-workbook"></a>Çalışma kitabınızı test etmek için

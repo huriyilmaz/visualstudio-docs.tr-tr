@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 2c7b1ae5-3756-4795-bc59-f6bb113f2ba5
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 65261d6304ead5ade7c28f40495fa68afb0c2171
-ms.sourcegitcommit: d13f7050c873b6284911d1f4acf07cfd29360183
+ms.openlocfilehash: 4125a40ea0be18cceb99e7f3a8118a10d26a5437
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98686226"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99955872"
 ---
 # <a name="current-tab"></a>Geçerli sekme
 **Geçerli** sekmeye tıklayarak, bir CPU iş parçacığı kesimi seçildiyse, zaman çizelgesinde geçerli seçim noktasına en yakın olan çağrı yığınını (varsa) görebilirsiniz.  Bu durumda seçim noktası, zaman çizelgesinin üzerindeki bir siyah ok veya şapka ile temsil edilir. Engelleyici bir segment seçildiğinde, bir yürütme olmadığından giriş işareti görüntülenmez. Ancak, segment hala vurgulanmıştır ve bir çağrı yığını görüntülenir.
