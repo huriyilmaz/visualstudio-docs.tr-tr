@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Web Parts [SharePoint development in Visual Studio], designing
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: bc9427d561817cb115473bddc71f2ba63475427e
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: ae28ab44b12c979f3c405bd7d853d7a2d196aae4
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94672801"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99948940"
 ---
 # <a name="create-web-parts-for-sharepoint"></a>SharePoint için Web bölümleri oluşturma
   Web bölümleri 'ni kullanarak bir SharePoint sitesinin sayfalarının içeriğini, görünümünü ve davranışını bir tarayıcı kullanarak değiştirebilirsiniz. Web bölümleri, bir Web Bölümü sayfası içinde çalışan sunucu tarafı denetimleridir: bir SharePoint sitesinde görünen sayfaların yapı taşlarıdır. Bkz. [Yapı bloğu: Web bölümleri](/previous-versions/office/developer/sharepoint-2010/ee535520(v=office.14)).
@@ -45,7 +45,7 @@ ms.locfileid: "94672801"
 ### <a name="web-part-item"></a>Web Bölümü öğesi
  **Web Bölümü** öğesi, bir SharePoint sitesi için bir Web Bölümü tasarlamak üzere kullanabileceğiniz dosyalar sağlar. Bir **Web Bölümü** öğesi eklediğinizde, Visual Studio projenizde bir klasör oluşturur ve sonra klasöre birkaç dosya ekler. Aşağıdaki tabloda her bir dosya açıklanmaktadır.
 
-|Dosya|Açıklama|
+|Dosya|Description|
 |----------|-----------------|
 |*Elements.xml*|Projenizdeki Özellik tanım dosyasının Web bölümünü dağıtmak için kullandığı bilgileri içerir.|
 |. WebPart dosyası|Web Bölümü galerisinde, SharePoint 'in Web bölümünü görüntülemesi için gereken bilgileri sağlar.|
@@ -59,7 +59,7 @@ ms.locfileid: "94672801"
 ## <a name="sharepoint-controls"></a>SharePoint denetimleri
  Visual Studio, uygulama sayfaları gibi SharePoint sayfaları oluşturmaya yönelik bazı denetimler sağlar. Bu denetimler, **SharePoint denetimleri** altındaki **araç kutusunda** görünür. Bu denetimlerin işlevselliği, SharePoint sitesinde ve liste sayfalarında kullanılan ASP.NET sunucu denetimlerini içeren [Microsoft. SharePoint. WebControls](/previous-versions/office/sharepoint-server/ms413880(v=office.15)) ad alanından türetilir.
 
-|Denetim adı|Açıklama|
+|Denetim adı|Description|
 |------------------|-----------------|
 |[AspMenu](/previous-versions/office/sharepoint-server/ms454108(v=office.15))|Bir ASP menüsü ekler. Daha fazla bilgi için bkz. [menü denetimine genel bakış](/previous-versions/ecs0x9w5(v=vs.140)).|
 |[CssLink](/previous-versions/office/sharepoint-server/ms439048(v=office.15))|*. Aspx* sayfasına bir **bağlantı** öğesi ekler ve **CssRegistration** tarafından tanımlanan bir veya daha fazla dış stil sayfası uygular.|

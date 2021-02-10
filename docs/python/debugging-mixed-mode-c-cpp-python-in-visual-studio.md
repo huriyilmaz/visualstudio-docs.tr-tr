@@ -5,17 +5,17 @@ ms.date: 11/12/2018
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 0b55a0bbeee7c5a8c38a0df61db0a1b17ae5e033
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 85118cebfa862a1575762985d41df61ef76b5cc5
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88238666"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99949330"
 ---
 # <a name="debug-python-and-c-together"></a>Python ve C++ ile birlikte hata ayıklama
 
@@ -46,7 +46,7 @@ Karma mod hata ayıklama özellikleri, bu makalede açıklandığı gibi aşağ�
     ![Yerel kod hata ayıklamasını etkinleştirme](media/mixed-mode-debugging-enable-native.png)
 
     > [!Tip]
-    > Yerel kod hata ayıklamasını etkinleştirdiğinizde, bir program her ne kadar her zaman, duraklatmaya **devam etmek için herhangi bir tuşa basmadan** , Python çıkış penceresi hemen kaybolabilir. Bir duraklatma zorlamak için, `-i` **Run**  >  yerel kod hata ayıklamasını etkinleştirdiğinizde **hata ayıklama** sekmesindeki**yorumlayıcı bağımsız değişkenlerini** Çalıştır alanına seçeneği ekleyin. Bu bağımsız değişken, kod bittikten sonra Python yorumlayıcısını etkileşimli moda koyar, bu noktada **Ctrl** + çıkmak için CTRL**Z**  >  **ENTER** tuşlarına basmanız önerilir.
+    > Yerel kod hata ayıklamasını etkinleştirdiğinizde, bir program her ne kadar her zaman, duraklatmaya **devam etmek için herhangi bir tuşa basmadan** , Python çıkış penceresi hemen kaybolabilir. Bir duraklatma zorlamak için, `-i`   >  yerel kod hata ayıklamasını etkinleştirdiğinizde **hata ayıklama** sekmesindeki **yorumlayıcı bağımsız değişkenlerini** Çalıştır alanına seçeneği ekleyin. Bu bağımsız değişken, kod bittikten sonra Python yorumlayıcısını etkileşimli moda koyar, bu noktada  + çıkmak için CTRL **Z**  >  **ENTER** tuşlarına basmanız önerilir.
 
 1. Karışık modda hata ayıklayıcıyı varolan bir işleme iliştirirken (**hata ayıklama**  >  **işleme ekleme**), **Select** düğmesini kullanarak **kod türünü seç** iletişim kutusunu açın. Sonra **Bu kod türlerini hata ayıkla** seçeneğini belirleyin ve listede hem **Yerel** hem de **Python** 'u seçin:
 
@@ -54,7 +54,7 @@ Karma mod hata ayıklama özellikleri, bu makalede açıklandığı gibi aşağ�
 
     Kod türü ayarları kalıcıdır, bu nedenle daha sonra farklı bir işleme eklenirken karışık modda hata ayıklamayı devre dışı bırakmak istiyorsanız **Python** kod türünü temizleyin.
 
-    Diğer kod türlerini, veya yerine, **Yerel**olarak veya yerine seçebilirsiniz. Örneğin, yönetilen bir uygulama, sırasıyla yerel uzantı modüllerini kullanır ve bu üç üçüne hata ayıklamak istiyorsanız, **Python**, **Yerel**ve **yönetilen** bir hata ayıklama deneyimi için birleştirilmiş çağrı yığınlarını ve üç çalışma alanı arasında adımlamayı bir araya getirebilirsiniz.
+    Diğer kod türlerini, veya yerine, **Yerel** olarak veya yerine seçebilirsiniz. Örneğin, yönetilen bir uygulama, sırasıyla yerel uzantı modüllerini kullanır ve bu üç üçüne hata ayıklamak istiyorsanız, **Python**, **Yerel** ve **yönetilen** bir hata ayıklama deneyimi için birleştirilmiş çağrı yığınlarını ve üç çalışma alanı arasında adımlamayı bir araya getirebilirsiniz.
 
 1. Karma modda hata ayıklamaya ilk kez başladığınızda, bir **Python sembolleri gerekli** iletişim kutusu görebilirsiniz (bkz. [karışık mod hata ayıklama sembolleri](debugging-symbols-for-mixed-mode-c-cpp-python.md)). Sembolleri, belirli bir Python ortamı için yalnızca bir kez yüklemeniz gerekir. Visual Studio yükleyicisi aracılığıyla Python desteği yüklerseniz semboller otomatik olarak eklenir (Visual Studio 2017 ve üzeri).
 
@@ -62,7 +62,7 @@ Karma mod hata ayıklama özellikleri, bu makalede açıklandığı gibi aşağ�
 
 ## <a name="enable-mixed-mode-debugging-in-a-cc-project"></a>C/C++ projesinde karışık modda hata ayıklamayı etkinleştir
 
-Visual Studio (2017 sürüm 15,5 ve üzeri), bir C/C++ projesinden karışık modda hata ayıklamayı destekler (örneğin, [Python.org ' de açıklandığı gibi başka bir uygulamaya Python](https://docs.python.org/3/extending/embedding.html)eklenirken). Karışık modda hata ayıklamayı etkinleştirmek için, C/C++ projesini **Python/yerel hata ayıklamayı**başlatmak üzere yapılandırın:
+Visual Studio (2017 sürüm 15,5 ve üzeri), bir C/C++ projesinden karışık modda hata ayıklamayı destekler (örneğin, [Python.org ' de açıklandığı gibi başka bir uygulamaya Python](https://docs.python.org/3/extending/embedding.html)eklenirken). Karışık modda hata ayıklamayı etkinleştirmek için, C/C++ projesini **Python/yerel hata ayıklamayı** başlatmak üzere yapılandırın:
 
 1. **Çözüm Gezgini** ' de C/C++ projesine sağ tıklayın ve **Özellikler**' i seçin.
 1. **Hata ayıklama** sekmesini seçin, **başlatılacak hata ayıklayıcıdan** **Python/yerel hata ayıklama** öğesini seçin ve **Tamam**' ı seçin.
@@ -72,14 +72,14 @@ Visual Studio (2017 sürüm 15,5 ve üzeri), bir C/C++ projesinden karışık mo
 > [!Note]
 > **Python/yerel hata ayıklamayı** seçme seçeneğiniz yoksa, önce vs yükleyicisini kullanarak **Python yerel geliştirme araçlarını** yüklemeniz gerekir. Bunu, Python geliştirme iş yükü altında bir seçenek olarak bulabilirsiniz. Daha fazla bilgi için bkz. [Windows üzerinde Visual Studio 'Da Python desteği nasıl yüklenir](installing-python-support-in-visual-studio.md).
 
-Bu yöntemi kullanarak, hata ayıklayıcının iliştirilemediği bir alt *python.exe* işlemini oluşturduğundan *py.exe* başlatıcısı 'nın kendisinde hata ayıklayamayacağınız farkında olun. Bağımsız değişkenlerle *python.exe* doğrudan başlatmak istiyorsanız **Python/yerel hata ayıklama** özelliklerindeki (önceki görüntüde gösterilen) **komut** seçeneğini değiştirerek *python.exe*tam yolunu belirtin ve ardından **komut bağımsız**değişkenlerinde bağımsız değişkenleri belirtin.
+Bu yöntemi kullanarak, hata ayıklayıcının iliştirilemediği bir alt *python.exe* işlemini oluşturduğundan *py.exe* başlatıcısı 'nın kendisinde hata ayıklayamayacağınız farkında olun. Bağımsız değişkenlerle *python.exe* doğrudan başlatmak istiyorsanız **Python/yerel hata ayıklama** özelliklerindeki (önceki görüntüde gösterilen) **komut** seçeneğini değiştirerek *python.exe* tam yolunu belirtin ve ardından **komut bağımsız** değişkenlerinde bağımsız değişkenleri belirtin.
 
 ### <a name="attaching-the-mixed-mode-debugger"></a>Karışık modda hata ayıklayıcıyı iliştirme
 
 Visual Studio 'nun önceki tüm sürümlerinde doğrudan karışık modda hata ayıklama yalnızca Visual Studio 'da bir Python projesi başlatılırken etkindir çünkü C/C++ projeleri yalnızca yerel hata ayıklayıcıyı kullanır. Ancak, hata ayıklayıcıyı ayrı olarak iliştirebilirsiniz:
 
-1. C++ projesini hata ayıklama olmadan**başlatın (hata ayıklama**  >  **olmadan Başlat** veya **CTRL** + **F5**).
-1. İşleme **Ekle hata ayıkla**öğesini seçin  >  **Attach to Process**. Görüntülenen iletişim kutusunda, uygun işlemi seçin ve ardından **seçim** düğmesini kullanarak **Python**seçebileceğiniz **kod türünü seç** iletişim kutusunu açın:
+1. C++ projesini hata ayıklama olmadan **başlatın (hata ayıklama**  >  **olmadan Başlat** veya **CTRL** + **F5**).
+1. İşleme **Ekle hata ayıkla** öğesini seçin  >  . Görüntülenen iletişim kutusunda, uygun işlemi seçin ve ardından **seçim** düğmesini kullanarak **Python** seçebileceğiniz **kod türünü seç** iletişim kutusunu açın:
 
     ![Hata ayıklayıcı eklenirken hata ayıklama türü olarak Python seçme](media/mixed-mode-debugging-attach-type.png)
 
@@ -99,7 +99,7 @@ Visual Studio 'nun önceki tüm sürümlerinde doğrudan karışık modda hata a
 
 ![Karışık modda hata ayıklama ile Birleşik çağrı yığını](media/mixed-mode-debugging-call-stack.png)
 
-Geçiş yönü belirtilmeden geçişler **[Dış kod]** olarak görünür yalnızca kendi kodum, **Tools**  >  **Options**  >  genel etkinleştir için**hata ayıklama**seçenekleri  >  **General**  >  **Enable Just My Code** seçeneği ayarlanırsa Araçlar Seçenekler.
+Geçiş yönü belirtilmeden geçişler **[Dış kod]** olarak görünür yalnızca kendi kodum,   >    >  genel etkinleştir için **hata ayıklama** seçenekleri  >    >   seçeneği ayarlanırsa Araçlar Seçenekler.
 
 Herhangi bir çağrı çerçevesini çift tıklamak etkin hale getirir ve mümkünse uygun kaynak kodu açar. Kaynak kodu kullanılabilir değilse, çerçeve hala etkin hale getirilir ve yerel değişkenler incelenebilir.
 

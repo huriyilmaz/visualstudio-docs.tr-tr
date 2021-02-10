@@ -14,15 +14,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, overview
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 755723dd2ae309e971e86852646ee33d2caa22cf
-ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
+ms.openlocfilehash: 2f085f5679db2c5c4a1e3cf0cc8d7bbf7cad58eb
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "95970385"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99948844"
 ---
 # <a name="develop-sharepoint-solutions"></a>SharePoint çözümleri geliştirme
   [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]SharePoint siteleri ve site öğeleri oluşturmak için içinde çeşitli SharePoint proje türü şablonları mevcuttur. Kullanılabilir proje türlerinin bir listesi için bkz. [SharePoint projesi ve proje öğesi şablonları](../sharepoint/sharepoint-project-and-project-item-templates.md). Aşağıda bir SharePoint projesinin öğelerinin ve özelliklerinin açıklaması verilmiştir.

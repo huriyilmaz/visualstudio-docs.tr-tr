@@ -14,15 +14,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, Business Data Connectivity service
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 0486ce6ac53850b1b607f9e7f859806cdc3ef8fe
-ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
+ms.openlocfilehash: 8232847ce336ca559134aa1211a70057a1306faa
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94850474"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99949265"
 ---
 # <a name="create-a-business-data-connectivity-model"></a>İş verileri bağlantı modeli oluşturma
   Visual Studio kullanarak, bir Iş verileri bağlantısı (BDC) modeli oluşturabilir veya var olan bir BDC modelini özelleştirebilirsiniz. Her SharePoint projesi yalnızca bir model içerebilir. Daha fazla bilgi için bkz. [iş verilerini SharePoint Ile tümleştirme](../sharepoint/integrating-business-data-into-sharepoint.md).
@@ -37,7 +37,7 @@ ms.locfileid: "94850474"
 
  Visual Studio yeni klasöre aşağıdaki dosyaları ekler:
 
-|Dosya|Açıklama|
+|Dosya|Description|
 |----------|-----------------|
 |Model tanımı dosyası|Varlıkları, yöntemleri, Iş kolu (LOB) sistem nesnelerini ve modeli tanımlayan diğer meta verileri tanımlayan XML içerir.<br /><br /> IVB Tasarımcısı, **BDC Gezgini**, **İVB yöntemi ayrıntıları** penceresi ve **Özellikler** penceresini kullanarak bu dosyadaki meta verileri değiştirin.|
 |Varlık hizmeti kod dosyası|Varsayılan varlığın örneklerini alma, güncelleştirme ve silme yöntemlerini içerir.|

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - packages [SharePoint development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: bbe458f6ab4de01ffb224ae4e493bf23e3fc6ceb
-ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
+ms.openlocfilehash: 423fcaf54d1d46ddf92352f4ff8bdbb637bbe514
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94850565"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99949096"
 ---
 # <a name="create-sharepoint-solution-packages"></a>SharePoint çözüm paketleri oluşturma
   Paket Tasarımcısını kullanarak dağıtım paketleri oluşturabilir ve bunları özelleştirebilirsiniz. Örneğin, SharePoint proje öğeleri ve özellikleri ekleyebilir, IIS sunucusunu sıfırlayabilir, özellik etkinleştirme kapsamlarını ayarlayabilir ve özellik bağımlılıklarını belirleyebilirsiniz. Tasarımcı Ayrıca her paketi açıklayan bir XML dosyası bildirimi de oluşturur.
@@ -37,7 +37,7 @@ ms.locfileid: "94850565"
 
 |Paket Tasarımcısı özelliği|Varsayılan ayarın açıklaması|
 |-------------------------------|------------------------------------|
-|Ad|Gereklidir. Paketin varsayılan adı *ProjectName* olarak ayarlanır.|
+|Name|Gereklidir. Paketin varsayılan adı *ProjectName* olarak ayarlanır.|
 |Web sunucusu sıfırlama|İsteğe bağlı. *. Wsp* dosyası SharePoint sunucusuna yüklendikten sonra Web sunucusunu yeniden başlatmak istiyorsanız seçin.|
 |Dağıtım sunucusu türü|İsteğe bağlı. Paketi barındıran sunucunun türünü temsil eder. Ayarlanmamışsa, varsayılan olarak Webön uç olur.<br /><br /> ApplicationServer: hizmetleri barındıran bir sunucuyu tanımlar.<br /><br /> Webön uç: Web sitelerini barındıran bir sunucuyu tanımlar.|
 |Çözümdeki öğeler|Pakete eklenebilecek tüm SharePoint proje öğeleri ve özellikleri.|
@@ -48,7 +48,7 @@ ms.locfileid: "94850565"
 
  Aşağıdaki tabloda, *. wsp* dosyasının nasıl oluşturulduğunu özelleştirmek için kullanabileceğiniz iki MSBuild hedefi gösterilmektedir.
 
-|Hedef|Açıklama|
+|Hedef|Description|
 |------------|-----------------|
 |BeforeLayout|Dosyalar bir ara dizine kopyalanmadan hemen önce görevleri gerçekleştiren hedef. Dosyaları bir paket dosyası (*. wsp*) oluşturmadan önce değiştirebilirsiniz.|
 |AfterLayout|Dosyalar bir ara dizine kopyalandıktan hemen sonra görevleri gerçekleştiren hedef.|

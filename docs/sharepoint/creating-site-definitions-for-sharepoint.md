@@ -12,15 +12,15 @@ helpviewer_keywords:
 - site definitions [SharePoint development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 7585a4b80322afb37e816758fc7074806a443676
-ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
+ms.openlocfilehash: c802832a9881cf3bf247c8e48b8ecdc2d784b1c5
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94850578"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99949018"
 ---
 # <a name="create-site-definitions-for-sharepoint"></a>SharePoint için site tanımları oluşturma
   İçindeki SharePoint site tanımı projesi, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Yeni bir SharePoint sitesi için temel görevi gören bir *site tanımı* oluşturmanızı sağlar. Bu tanımlar yalnızca SharePoint sitesinin görünüm ve davranışını ve ayrıca varsayılan içerik ve işlevlerini belirlememez. Tanımda önceden yapılandırılmış listeleri, içerik türlerini, olay alıcılarını, görüntüleri ve diğer öğeleri yerleştirebilirsiniz. SharePoint, örneğin BLOG gibi bazı site tanımlarını içerir. BLOG site tanımına dayalı bir site oluşturduğunuzda, site, bir blog sitesinin gerektirdiği listeleri, Web bölümlerini ve diğer öğeleri içerir.

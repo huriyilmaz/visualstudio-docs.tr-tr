@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, deploying
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: ab97efc82575c31c8e05b73063c2b53a09691d2d
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: cd0dfa3a12c675463c46e93aa0d5b25e8b4bd4b2
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94672671"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99948862"
 ---
 # <a name="deploy-publish-and-upgrade-sharepoint-solution-packages"></a>SharePoint çözüm paketlerini dağıtma, yayımlama ve yükseltme
   Visual Studio 'da bir SharePoint çözümü geliştirdikten sonra, paket (. wsp) dosyasını yerel bir SharePoint sunucusuna dağıtabilir veya uzak ya da yerel bir SharePoint sunucusunda yayımlayabilirsiniz. Dosyaları dağıtırsanız, paket dosyalarının (. wsp) nasıl dağıtıldığını özelleştirebilirsiniz.
@@ -47,7 +47,7 @@ ms.locfileid: "94672671"
 ## <a name="customize-the-deployment-process"></a>Dağıtım işlemini özelleştirme
  Aşağıdaki tabloda bir SharePoint çözümünü hata ayıkladığınızda ve dağıttığınızda kullanabileceğiniz iki dağıtım yapılandırması gösterilmektedir.
 
-|Dağıtım yapılandırması|Açıklama|
+|Dağıtım yapılandırması|Description|
 |------------------------------|-----------------|
 |Varsayılan|Varsayılan dağıtım yapılandırması. Aşağıdaki dağıtım adımları gerçekleştirilir:<br /><br /> 1. dağıtım öncesi komutunu çalıştırın.<br />2. IIS uygulama havuzunu geri dönüştürün.<br />3. çözümü geri çekin.<br />4. çözüm ekleyin.<br />5. özellikleri etkinleştirin.<br />6. dağıtım sonrası komutunu çalıştırın.<br /><br /> Bir paket kaldırıldığında, aşağıdaki geri çekme adımları gerçekleştirilir.<br /><br /> 1. IIS uygulama havuzunu geri dönüştürün.<br />2. çözümü geri çekin.|
 |Etkinleştirme yok|Bu dağıtım yapılandırması, varsayılan yapılandırmayla aynı adımları çalıştırır, ancak Etkinleştirme adımını atlar.|

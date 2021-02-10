@@ -15,15 +15,15 @@ helpviewer_keywords:
 - application pages [SharePoint development in Visual Studio], creating
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 1228ef551235fd616803d6e05057ee50f0ea7ec4
-ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
+ms.openlocfilehash: 9ecd6573573d76c3e47a2c87a4f455cb9890fb31
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94850448"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99949187"
 ---
 # <a name="create-application-pages-for-sharepoint"></a>SharePoint için uygulama sayfaları oluşturma
   Bir *uygulama sayfası* , SharePoint Web sitesinde kullanılmak üzere tasarlanan bir ASP.NET Web sayfasıdır. Uygulama sayfaları, ASP.NET sayfasının özelleşmiş bir türüdür. Bir uygulama sayfası ve standart ASP.NET sayfası arasındaki birincil fark, bir uygulama sayfasının bir SharePoint ana sayfasıyla birleştirilmiş içerik içermesinden bir uygulamadır. Ana sayfa, uygulama sayfalarının bir sitedeki diğer sayfalarla aynı görünümü ve davranışı paylaşmasına olanak sağlar.
@@ -43,14 +43,14 @@ ms.locfileid: "94850448"
 ## <a name="create-an-application-page"></a>Uygulama sayfası oluşturma
  Bir uygulama sayfası oluşturmak için bir SharePoint projesine bir **Uygulama sayfa** öğesi ekleyin. Bir uygulama sayfası oluşturduğunuzda, Visual Studio projenize aşağıdaki klasörleri ekler:
 
-|Klasör|Açıklama|
+|Klasör|Description|
 |------------|-----------------|
 |Düzenler|SharePoint dosya sisteminin _layouts sanal diziniyle eşlenir.|
 |Düzenler alt klasörü|Uygulama sayfasını oluşturan dosyaları içerir. Varsayılan olarak, bu klasör projenizle aynı ada sahiptir. Bu klasörü dilediğiniz zaman yeniden adlandırabilirsiniz. Projeyi çalıştırdığınızda, Visual Studio bu klasörü SharePoint dosya sisteminin _layouts sanal dizinine dağıtır.|
 
  Visual Studio projenize aşağıdaki dosyaları ekler:
 
-|Dosya|Açıklama|
+|Dosya|Description|
 |----------|-----------------|
 |ASP.NET sayfa dosyası (*. aspx*)|Sayfayı tanımlayan XML işaretlemesini içerir.|
 |Uygulama sayfası kod dosyası|Uygulama sayfasının arkasındaki kodu içerir. Bu dosyaya olayları işleyen kodu ekleyin.|

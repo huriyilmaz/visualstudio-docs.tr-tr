@@ -17,15 +17,15 @@ helpviewer_keywords:
 - project items [SharePoint development in Visual Studio], creating custom templates
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 59710eb4651f363d669dc27b6190f8d224d9917f
-ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
+ms.openlocfilehash: 538bc709ed3af1c7b1424b56c1bd843b127c6ab7
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94850643"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99949161"
 ---
 # <a name="create-item-templates-and-project-templates-for-sharepoint-project-items"></a>SharePoint proje öğeleri için öğe şablonları ve proje şablonları oluşturma
 
@@ -40,7 +40,7 @@ ms.locfileid: "94850643"
 
  Aşağıdaki tabloda bir SharePoint proje öğesi için bir öğe şablonu oluşturmak üzere gerekli dosyalar listelenmektedir.
 
-|Gerekli dosya|Açıklama|
+|Gerekli dosya|Description|
 |-------------------|-----------------|
 |Bir *. spdata* dosyası|Bu XML dosyası, proje öğesinin içeriğini ve varsayılan davranışını belirtir. Bu dosya, öğe şablonuna dahil olmalıdır. *. Spdata* dosyalarının içerikleri hakkında daha fazla bilgi için bkz. [SharePoint proje öğesi şema başvurusu](../sharepoint/sharepoint-project-item-schema-reference.md).|
 |*. Vstemplate* dosyası.|Bu dosya, Visual Studio 'Yu **Yeni öğe Ekle** iletişim kutusunda şablonu göstermek ve şablondan bir proje öğesi oluşturmak için gereken bilgileri sağlar. Bu dosya, öğe şablonuna dahil olmalıdır. Daha fazla bilgi için bkz. [Visual Studio şablon meta verileri dosyaları](/previous-versions/visualstudio/visual-studio-2010/xsxc3ete\(v\=vs.100\)).|
@@ -48,7 +48,7 @@ ms.locfileid: "94850643"
 
  Aşağıdaki tabloda, öğe şablonuna eklenebilecek en sık kullanılan isteğe bağlı dosyaların bazıları listelenmiştir. Bazı proje öğesi türleri burada listelenmeyen diğer dosyaları gerektirebilir.
 
-| İsteğe bağlı dosya | Açıklama |
+| İsteğe bağlı dosya | Description |
 |----------------------| - |
 | *Elements.xml* | Bir *özellik öğesi* dosyası. Bu dosya, proje öğesi tarafından oluşturulan özelleştirmenin Kullanıcı arabirimini ve davranışını tanımlar. Liste örnekleri, içerik türleri veya özel eylemler gibi her özelleştirme türünün, bu dosyanın içeriğini tanımlayan farklı bir şeması vardır. Daha fazla bilgi için bkz. [Yapı bloğu: Özellikler](/previous-versions/office/developer/sharepoint-2010/ee537350(v=office.14)) ve [özellik şemaları](/previous-versions/office/developer/sharepoint-2010/ms414322(v=office.14)). |
 | *Schema.xml* | Liste tanımlarının şema dosyası. Daha fazla bilgi için bkz. [Yapı bloğu: listeler ve belge kitaplıkları](/previous-versions/office/developer/sharepoint-2010/ee534985(v=office.14)) ve [Schema.xml](/previous-versions/office/developer/sharepoint-2010/ms459356(v=office.14)). |
@@ -64,7 +64,7 @@ ms.locfileid: "94850643"
 
  Aşağıdaki tabloda bir SharePoint proje şablonuna dahil olması gereken dosyalar listelenmektedir.
 
-|Gerekli dosya|Açıklama|
+|Gerekli dosya|Description|
 |-------------------|-----------------|
 |Bir *. vstemplate* dosyası|Bu dosya, Visual Studio 'Yu **Yeni proje** iletişim kutusunda şablonu göstermek ve şablondan bir proje oluşturmak için gereken bilgileri sağlar. Daha fazla bilgi için bkz. [Visual Studio şablon meta verileri dosyaları](/previous-versions/visualstudio/visual-studio-2010/xsxc3ete\(v\=vs.100\)).|
 |Bir *. csproj* veya *. vbproj* dosyası|Bu proje dosyasıdır. Projenin içerik ve yapılandırma ayarlarını tanımlar.|
@@ -73,7 +73,7 @@ ms.locfileid: "94850643"
 
  Aşağıdaki tabloda, proje şablonunda yer alan isteğe bağlı dosyalar listelenmektedir.
 
-|İsteğe bağlı dosya|Açıklama|
+|İsteğe bağlı dosya|Description|
 |-------------------|-----------------|
 |SharePoint proje öğeleri|SharePoint proje öğesi türlerini tanımlayan bir veya daha fazla. spdata dosyası ekleyebilirsiniz. Her *. spdata* dosyasının, <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider> Proje şablonuyla VSIX paketine dahil edilen bir uzantı derlemesinde eşleşen bir uygulamasına sahip olması gerekir. Daha fazla bilgi için bkz. [öğe şablonları oluşturma](#create-item-templates).<br /><br /> Genellikle, SharePoint projeleri en az bir SharePoint proje öğesi içerir. Ancak, bu gerekli değildir.|
 |*\<featureName>. Feature*|Bu dosya, dağıtım için birkaç proje öğesini gruplandırmak üzere kullanılan bir SharePoint özelliğini tanımlar. Projenizdeki bir özelliği özelleştirmek için özellik tasarımcısını kullandığınızda, Visual Studio bu dosyadaki özellik hakkındaki verileri depolar. Proje öğelerini farklı özelliklere gruplandırmak isterseniz, birden fazla *. feature* dosyası ekleyebilirsiniz.<br /><br /> Özel bir SharePoint proje şablonu oluşturduğunuzda, her bir *. feature* dosyasında yalnızca gereken en az içeriği dahil etmenizi ve <xref:Microsoft.VisualStudio.SharePoint.Features> Proje şablonuyla ilişkili bir uzantıdaki ad alanındaki API 'leri kullanarak özellikleri yapılandırmanızı öneririz. Bunu yaparsanız, proje şablonunuz daha sonra *. feature* dosyası yapısına karşı değişir. Yalnızca gerekli en az içeriğe sahip bir *. feature* dosyası oluşturmayı gösteren bir örnek için bkz. [izlenecek yol: proje şablonu, Bölüm 1 ile bir site sütunu oluşturma proje öğesi](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md).<br /><br /> Bir *. feature* dosyasını doğrudan değiştirmek istiyorsanız, *% Program Files (x86)% \ Microsoft Visual Studio 11.0 \ Xml\schemas\featuremodelschema.exe. xsd* konumundaki şemayı kullanarak içeriği doğrulayabilirsiniz.|
