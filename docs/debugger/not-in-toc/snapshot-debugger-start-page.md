@@ -5,15 +5,15 @@ robots: noindex, nofollow
 ms.topic: reference
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: cf2aba33089623dc98a90c23166291bb2d6e7123
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9f237f121d0bd0a5eaa57cd2b198024d22951622
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62905290"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99942002"
 ---
 # <a name="getting-started-with-the-snapshot-debugger"></a>Snapshot Debugger kullanmaya başlama
 
@@ -37,7 +37,7 @@ Snapshot Debugger, uygulamanızın anlık görüntülerini toplar. Anlık görü
 
 ### <a name="open-a-snapshot"></a>Anlık görüntü aç
 
-1. Anlık görüntü noktası isabet edildiğinde, sağdaki Tanılama Araçları penceresinde bir anlık görüntü görüntülenir. Pencere açılmazsa, **Hata Ayıkla**  >  **Windows**  >  **göster tanılama araçları**öğesini seçerek açabilirsiniz.
+1. Anlık görüntü noktası isabet edildiğinde, sağdaki Tanılama Araçları penceresinde bir anlık görüntü görüntülenir. Pencere açılmazsa, **Hata Ayıkla**  >  **Windows**  >  **göster tanılama araçları** öğesini seçerek açabilirsiniz.
 
     ![Tanılama Araçları penceresinde anlık görüntü](../media/snapshot-startpage-diagsession-window.png)
 
@@ -69,6 +69,6 @@ Web sitesinin kendisi de canlı ve son kullanıcılar etkilenmemektedir. Varsay�
 
 ## <a name="dont-show-me-this-again"></a>Bunu bir daha gösterme
 
-Snapshot Debugger bağladığınızda Snapshot debugger başlangıç sayfasını hiçbir zaman göstermek için, **Araçlar**seçenekler Snapshot Debugger **oturum başlatma seçeneğinde ' Başlarken ' sayfasını göster** seçeneğini değiştirin  >  **Options**  >  **Snapshot Debugger**.
+Snapshot Debugger bağladığınızda Snapshot debugger başlangıç sayfasını hiçbir zaman göstermek için, **Araçlar** seçenekler Snapshot Debugger **oturum başlatma seçeneğinde ' Başlarken ' sayfasını göster** seçeneğini değiştirin  >    >  .
 
 ![Snapshot Debugger araç seçeneği sayfası](../media/snapshot-startpage-tools-options.png)

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - text boxes, displaying text in documents
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 1cda1fe3e7430ff30dcc3b3921eb2bcd4d31b699
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 0efea386da2bec0136a8a5399a04b9ce8cabf5c7
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97522745"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99942106"
 ---
 # <a name="walkthrough-display-text-in-a-text-box-in-a-document-using-a-button"></a>İzlenecek yol: düğme kullanarak bir belgedeki metin kutusunda metin görüntüleme
   Bu izlenecek yol, Microsoft Office Word için belge düzeyi özelleştirmesinde düğmelerin ve metin kutularının nasıl kullanılacağını gösterir.
@@ -93,7 +93,7 @@ ms.locfileid: "97522745"
 
      [!code-csharp[Trin_VstcoreProgrammingControlsWord#8](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs#8)]
 
-## <a name="test-the-application"></a>Uygulamayı test etme
+## <a name="test-the-application"></a>Uygulamayı test edin
  Artık Merhaba Dünya iletinin olduğundan emin olmak için belgenizi test edebilirsiniz **!** düğmeye tıkladığınızda metin kutusunda görünür.
 
 ### <a name="to-test-your-document"></a>Belgenizi test etmek için
