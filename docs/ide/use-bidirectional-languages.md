@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: b56f9795-ed8d-4452-9d49-8ca0b0145d86
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: aa2520527259c476f84d83cdff81d9f96bc2bbd7
-ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
+ms.openlocfilehash: a16aa4d445878ac8d357fa551e46552a1465bfe1
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96478971"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99971355"
 ---
 # <a name="support-for-bidirectional-languages-in-visual-studio"></a>Visual Studio 'da çift yönlü diller için destek
 
@@ -60,7 +60,7 @@ Aşağıdaki öğeler Arapça veya Ibranice kullanılarak adlandırılabilir ve 
 
 - Özellik değerleri.
 
-   **Özellikler** penceresinde Arapça veya İbranice metin kullanabilirsiniz. Pencere, standart Windows tuş vuruşlarını kullanarak sağdan sola ve soldan sağa okuma düzeni arasında geçiş yapmanıza olanak **sağlar (** + **RightShift** sağdan sola ve **Ctrl** + soldan sağa **kaydırma** için CTRL + SHIFT tuşlarına basın).
+   **Özellikler** penceresinde Arapça veya İbranice metin kullanabilirsiniz. Pencere, standart Windows tuş vuruşlarını kullanarak sağdan sola ve soldan sağa okuma düzeni arasında geçiş yapmanıza olanak **sağlar (** +  sağdan sola ve  + soldan sağa **kaydırma** için CTRL + SHIFT tuşlarına basın).
 
 - Kod ve sabit metin.
 
@@ -80,7 +80,7 @@ Dosyaları dile özgü veya Unicode kodlamalı bir şekilde kaydedebilir ve aça
 
 ## <a name="right-to-left-reading-order"></a>Sağdan sola okuma düzeni
 
-Visual Studio, sağdan sola okuma düzeni için sınırlı desteğe sahiptir. Varsayılan olarak, Visual Studio 'daki metin girişi denetimleri soldan sağa okuma düzeni kullanır. Çoğu durumda, okuma düzenini değiştirmek için standart Windows hareketlerini kullanabilirsiniz. Örneğin, **Ctrl** + **Özellikler** penceresini özellik değerleri için sağdan sola okuma düzenini destekleyecek şekilde değiştirmek için CTRL **+ SHIFT** tuşlarına basabilirsiniz.
+Visual Studio, sağdan sola okuma düzeni için sınırlı desteğe sahiptir. Varsayılan olarak, Visual Studio 'daki metin girişi denetimleri soldan sağa okuma düzeni kullanır. Çoğu durumda, okuma düzenini değiştirmek için standart Windows hareketlerini kullanabilirsiniz. Örneğin,  + **Özellikler** penceresini özellik değerleri için sağdan sola okuma düzenini destekleyecek şekilde değiştirmek için CTRL **+ SHIFT** tuşlarına basabilirsiniz.
 
 Aşağıdaki konumlarda, Visual Studio 'da sağdan sola okuma düzeni desteklenmez:
 

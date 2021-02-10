@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: 09a18bd2-b788-411a-9da6-067d806e46f6
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: c2d69308d2f569fc2e0d72dcf64c762687955d4d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 50281ffdd233debd3c10672868e9debd4b1f395f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80700898"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99965219"
 ---
 # <a name="sccget-function"></a>SccGet işlevi
 Bu işlev, görüntüleme ve derleme için bir veya daha fazla dosyanın kopyasını alır, ancak düzenlenmiyor. Çoğu sistemde dosyalar salt okunurdur.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
 SCCRTN SccGet(
@@ -86,7 +86,7 @@ SCCRTN SccGet(
  Son olarak, bir kaynak denetimi eklentisi `SCC_CAP_GET_NOUI` başlatma üzerinde bayrağı belirtse bile, bir get komutu için bir kullanıcı arabirimine sahip olmadığını belirten, bu işlev hala IDE tarafından dosyaları almak için çağrılabilir. Bayrak, IDE 'nin bir get menü öğesini görüntülememesinin ve eklentinin herhangi bir kullanıcı arabirimi sağlaması beklenmediği anlamına gelir.
 
 ## <a name="rename-files-and-sccget"></a>Dosyaları ve SccGet 'i yeniden adlandırma
- Durum: bir Kullanıcı bir dosyayı (örneğin, *a.txt*) denetler ve değiştirir. *a.txt* önce iade etmeden önce, ikinci bir Kullanıcı kaynak denetimi veritabanında *b.txt* *a.txt* yeniden adlandırır, *b.txt*denetler, dosyada bazı değişiklikler yapar ve içindeki dosyayı denetler. İlk Kullanıcı ikinci Kullanıcı tarafından yapılan değişiklikleri istemektedir, bu nedenle ilk Kullanıcı *a.txt* dosyasının yerel sürümlerini *b.txt* olarak yeniden adlandırarak dosya üzerinde bir get yapar. Ancak, sürüm numaralarını izleyen yerel önbellek, *a.txt* ilk sürümünün yerel olarak depolanmasını hala önler ve kaynak denetimi farklılıkları çözemez.
+ Durum: bir Kullanıcı bir dosyayı (örneğin, *a.txt*) denetler ve değiştirir. *a.txt* önce iade etmeden önce, ikinci bir Kullanıcı kaynak denetimi veritabanında *b.txt* *a.txt* yeniden adlandırır, *b.txt* denetler, dosyada bazı değişiklikler yapar ve içindeki dosyayı denetler. İlk Kullanıcı ikinci Kullanıcı tarafından yapılan değişiklikleri istemektedir, bu nedenle ilk Kullanıcı *a.txt* dosyasının yerel sürümlerini *b.txt* olarak yeniden adlandırarak dosya üzerinde bir get yapar. Ancak, sürüm numaralarını izleyen yerel önbellek, *a.txt* ilk sürümünün yerel olarak depolanmasını hala önler ve kaynak denetimi farklılıkları çözemez.
 
  Kaynak denetim sürümlerinin yerel önbelleğinin kaynak denetimi veritabanıyla eşitlenmemiş olması durumunda bu durumu çözmek için iki yol vardır:
 
@@ -96,9 +96,9 @@ SCCRTN SccGet(
 
     1. Kaynak denetim veritabanında *b.txt* *a.txt* yeniden adlandırmayla Ilgili bilgi edinmek için [SccQueryChanges](../extensibility/sccquerychanges-function.md) işlevini çağırın.
 
-    2. Yerel *a.txt* *b.txt*olarak yeniden adlandırın.
+    2. Yerel *a.txt* *b.txt* olarak yeniden adlandırın.
 
-    3. `SccGet`Hem *a.txt* hem de *b.txt*için işlevi çağırın.
+    3. `SccGet`Hem *a.txt* hem de *b.txt* için işlevi çağırın.
 
     4. Kaynak denetim veritabanında *a.txt* bulunmadığından, yerel sürüm önbelleği eksik *a.txt* sürüm bilgileri temizlenir.
 

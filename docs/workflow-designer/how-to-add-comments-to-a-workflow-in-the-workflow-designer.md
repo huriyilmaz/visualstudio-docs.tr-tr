@@ -9,16 +9,16 @@ f1_keywords:
 - Annotation
 ms.assetid: 9aa0e8d6-8129-4438-8389-d460611581a7
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 author: TerryGLee
-ms.openlocfilehash: 0fe5b766c0c5545a1cc3839e29d71e3f3b7a1f39
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 9417dd0084b381d8fc997a90b4690c49191f4785
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94437963"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99971706"
 ---
 # <a name="how-to-add-comments-to-a-workflow-in-the-workflow-designer"></a>Nasıl yapılır: İş Akışı Tasarımcısında bir iş akışına açıklama ekleme
 
@@ -41,7 +41,7 @@ Daha büyük, daha karmaşık iş akışları oluşturmayı kolaylaştırmak iç
 
 ## <a name="adding-an-annotation-to-an-activity-in-the-designer"></a>Tasarımcıda bir etkinliğe ek açıklama ekleme
 
-1. İş akışı tasarımcısında, iş akışı tasarımcısında bir öğeye sağ tıklayın ve **ek** **Açıklama Ekle** ' yi seçin.
+1. İş akışı tasarımcısında, iş akışı tasarımcısında bir öğeye sağ tıklayın ve **ek** **Açıklama Ekle**' yi seçin.
 
 1. Ek açıklamanın metnini, girilen alana ekleyin.
 
@@ -65,7 +65,7 @@ Daha büyük, daha karmaşık iş akışları oluşturmayı kolaylaştırmak iç
 
    Tüm ek açıklamalar etkinliğin tasarımcıları içinde görüntülenir.
 
-1. Etkinliğin tasarımcıları dışındaki tüm ek açıklamaları göstermek için, etkinliğe sağ tıklayın ve **ek açıklamalar** ' ı seçin, **tüm ek açıklamaları gizleyin**.
+1. Etkinliğin tasarımcıları dışındaki tüm ek açıklamaları göstermek için, etkinliğe sağ tıklayın ve **ek açıklamalar**' ı seçin, **tüm ek açıklamaları gizleyin**.
 
 ## <a name="editing-or-deleting-an-annotation-for-an-activity"></a>Etkinlik için ek açıklama ekleme veya silme
 
@@ -75,7 +75,7 @@ Daha büyük, daha karmaşık iş akışları oluşturmayı kolaylaştırmak iç
 
    Ek açıklama, düzenlenmek veya silinmek üzere açıldı.
 
-1. Tüm ek açıklamaları aynı anda silmek için, iş akışı tasarımcısına sağ tıklayın ve **ek açıklama** ' yı seçin, **tüm ek açıklamaları silin**.
+1. Tüm ek açıklamaları aynı anda silmek için, iş akışı tasarımcısına sağ tıklayın ve **ek açıklama**' yı seçin, **tüm ek açıklamaları silin**.
 
 ## <a name="adding-editing-and-deleting-an-annotation-for-a-variable-or-argument"></a>Bir değişken veya bağımsız değişken için ek açıklama ekleme, düzenlememe ve silme
 

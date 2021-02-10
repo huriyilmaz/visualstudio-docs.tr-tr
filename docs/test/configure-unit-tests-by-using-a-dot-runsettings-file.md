@@ -5,16 +5,16 @@ ms.custom: SEO-VS-2020
 ms.date: 07/15/2020
 ms.topic: conceptual
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: ca15e265f9e6f3188826c019a8c81d02a7668bcf
-ms.sourcegitcommit: 02f14db142dce68d084dcb0a19ca41a16f5bccff
+ms.openlocfilehash: 10bfed2a9a2a0ce466e1b3276a487695d40fb580
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95442696"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99964569"
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>*. Runsettings* dosyasını kullanarak birim testlerini yapılandırma
 
@@ -26,7 +26,7 @@ Visual Studio 'daki birim testleri, bir *. runsettings* dosyası kullanılarak y
 
 ## <a name="create-a-run-settings-file-and-customize-it"></a>Çalışma ayarları dosyası oluşturma ve özelleştirme
 
-1. Çözümünüze bir çalışma ayarları dosyası ekleyin. **Çözüm Gezgini**, çözümünüzün kısayol menüsünde, **Add**  >  **Yeni öğe** Ekle ' yi seçin ve **XML dosyası**' nı seçin. Dosyayı *test. runsettings* gibi bir adla kaydedin.
+1. Çözümünüze bir çalışma ayarları dosyası ekleyin. **Çözüm Gezgini**, çözümünüzün kısayol menüsünde,   >  **Yeni öğe** Ekle ' yi seçin ve **XML dosyası**' nı seçin. Dosyayı *test. runsettings* gibi bir adla kaydedin.
 
    > [!TIP]
    > Dosya adı, *. runsettings* uzantısını kullandığınız sürece büyük değildir.
@@ -180,7 +180,7 @@ Varsayılan bir değere sahip olduğundan, yapılandırma öğelerinin her biri 
 
 **RunConfiguration** öğesi aşağıdaki öğeleri içerebilir:
 
-|Node|Varsayılan|Değerler|
+|Düğüm|Varsayılan|Değerler|
 |-|-|-|
 |**MaxCpuCount**|1|Bu ayar, makinedeki kullanılabilir çekirdekleri kullanarak birim testlerini çalıştırırken paralel test yürütme derecesini denetler. Test yürütme altyapısı, kullanılabilir her çekirdek üzerinde ayrı bir işlem olarak başlar ve her bir çekirdeğe, testlerin çalışmasına sahip bir kapsayıcı verir. Kapsayıcı bir derleme, DLL veya ilgili yapıt olabilir. Sınama kapsayıcısı zamanlama birimidir. Her kapsayıcıda testler, test çerçevesine göre çalıştırılır. Birçok kapsayıcı varsa, süreçler bir kapsayıcıda testlerin yürütülmesi tamamlandığında, bir sonraki kullanılabilir kapsayıcıya verilirler.<br /><br />MaxCpuCount şu olabilir:<br /><br />n, burada 1 <= n <= çekirdek sayısı: en fazla n işlem başlatıldı<br /><br />n, burada n = diğer herhangi bir değer: başlatılan işlem sayısı kullanılabilir çekirdek sayısına kadar olabilir. Örneğin, n = 0 ' ı, platformun ortama göre başlatılacak en iyi işlem sayısına otomatik olarak karar vermesini sağlamak için ayarlayın.|
 |**ResultsDirectory**||Test sonuçlarının yerleştirildiği dizin. Yol,. runsettings dosyasını içeren dizine göredir.|

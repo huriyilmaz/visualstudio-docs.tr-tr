@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: da149c9a-20f4-4543-a29e-429c8c1d2e19
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 80904e95c1561dd20ed2a6cc9ad561e6c18ee93a
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: 2418e958c027fea7fd39c93b0d5abbd95d64435b
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96845225"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99960799"
 ---
 # <a name="setnotificationforwaitcompletion-method"></a>SetNotificationForWaitCompletion Metodu
 TASK_STATE_WAIT_COMPLETION_NOTIFICATION durum bitini ayarlar veya temizler.
@@ -37,7 +37,7 @@ internal void SetNotificationForWaitCompletion(bool enabled)
 
  `true` bit ' i ayarlamak için; `false` bit.
 
-## <a name="exceptions"></a>Özel Durumlar
+## <a name="exceptions"></a>Özel durumlar
 
 ## <a name="remarks"></a>Açıklamalar
  Hata ayıklayıcı, zaman uyumsuz yöntem gövdesinin dışına yardım etmek için bu biti ayarlar. `enabled`İse `true` , bu yöntemin yalnızca henüz tamamlanmamış bir görevde çağrılması gerekir. Ne zaman, `enabled` `false` Bu yöntem tamamlanmış görevlerde çağrılabilir. Her iki olayda yalnızca Promise stili görevler için kullanılmalıdır.

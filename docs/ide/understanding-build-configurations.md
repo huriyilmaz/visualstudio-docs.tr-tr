@@ -25,15 +25,15 @@ helpviewer_keywords:
 ms.assetid: 934c727d-3a22-429c-bd13-3552cecf2e24
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 3d8b61275e8197c90bfba85cb1b4be680f3c1f1a
-ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
+ms.openlocfilehash: 3c6037bd6ed3b7899ff00bce202df7707356683a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92136686"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99971407"
 ---
 # <a name="understand-build-configurations"></a>Derleme yapılandırmalarını anlama
 
@@ -48,7 +48,7 @@ Oluşturulan çıkış dosyalarının depolandığı yapılandırma ve platform 
 
 Çözüm ve proje düzeyinde kendi yapı yapılandırmalarınızı oluşturabilirsiniz. Çözüm yapılandırması, yapılandırma etkin olduğunda hangi projelerin yapıya ekleneceğini belirler. Yalnızca etkin çözüm yapılandırmasında belirtilen projeler oluşturulur. Configuration Manager birden çok hedef platform seçildiyse, o platformda uygulanan tüm projeler oluşturulur. Proje yapılandırması, projeyi oluştururken hangi derleme ayarlarının ve derleyici seçeneklerinin kullanıldığını belirler.
 
-Bir yapılandırma oluşturmak, seçmek, değiştirmek veya silmek için **Configuration Manager**kullanabilirsiniz. Açmak için, menü çubuğunda **Build**  >  **Configuration Manager**oluştur ' u seçin veya arama kutusuna **yapılandırma** yazın. Bir yapılandırma seçmek veya **Configuration Manager**açmak için **Standart** araç çubuğundaki **çözüm yapılandırmaları** listesini de kullanabilirsiniz.
+Bir yapılandırma oluşturmak, seçmek, değiştirmek veya silmek için **Configuration Manager** kullanabilirsiniz. Açmak için, menü çubuğunda   >  **Configuration Manager** oluştur ' u seçin veya arama kutusuna **yapılandırma** yazın. Bir yapılandırma seçmek veya **Configuration Manager** açmak için **Standart** araç çubuğundaki **çözüm yapılandırmaları** listesini de kullanabilirsiniz.
 
 ![Configuration Manager](media/understanding-build-configurations/config-manager.png)
 
@@ -59,9 +59,9 @@ Varsayılan olarak, **hata ayıklama** ve **Sürüm** yapılandırmalarının ş
 
 ## <a name="solution-configurations"></a>Çözüm yapılandırması
 
-Çözüm yapılandırması, çözümdeki projelerin nasıl oluşturulup dağıtılacağını belirler. Bir çözüm yapılandırmasını değiştirmek veya yeni bir tane tanımlamak için **Configuration Manager**, **etkin çözüm yapılandırması**altında **Düzenle** veya **Yeni**' yi seçin.
+Çözüm yapılandırması, çözümdeki projelerin nasıl oluşturulup dağıtılacağını belirler. Bir çözüm yapılandırmasını değiştirmek veya yeni bir tane tanımlamak için **Configuration Manager**, **etkin çözüm yapılandırması** altında **Düzenle** veya **Yeni**' yi seçin.
 
-Bir çözüm yapılandırmasındaki **Proje bağlamları** kutusundaki her giriş çözümdeki bir projeyi temsil eder. **Etkin çözüm yapılandırması** ve **etkin çözüm platformunun**her birleşimi için, her projenin nasıl kullanıldığını belirleyebilirsiniz. (Çözüm platformları hakkında daha fazla bilgi için bkz. [derleme platformlarını anlama](../ide/understanding-build-platforms.md).)
+Bir çözüm yapılandırmasındaki **Proje bağlamları** kutusundaki her giriş çözümdeki bir projeyi temsil eder. **Etkin çözüm yapılandırması** ve **etkin çözüm platformunun** her birleşimi için, her projenin nasıl kullanıldığını belirleyebilirsiniz. (Çözüm platformları hakkında daha fazla bilgi için bkz. [derleme platformlarını anlama](../ide/understanding-build-platforms.md).)
 
 Yeni bir çözüm yapılandırması tanımladığınızda ve **Yeni proje yapılandırmaları oluştur** onay kutusunu seçtiğinizde, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] otomatik olarak yeni yapılandırmayı projelere atar. Benzer şekilde, yeni bir çözüm platformu tanımlayıp **Yeni proje platformları oluştur** onay kutusunu seçtiğinizde, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] otomatik olarak yeni platformu projelere atar. Ayrıca, yeni platformu hedefleyen bir proje eklerseniz, Visual Studio bu platformu çözüm platformları listesine ekler ve bunu tüm projelere atar. Her projenin ayarlarını yine de değiştirebilirsiniz.
 
@@ -77,13 +77,13 @@ Bir projenin hedeflediği yapılandırma ve platform, derleme ayarlarını ve de
 
 **Build**  >  **Build Solution** komutunu kullanarak bir çözüm oluşturduğunuzda, Visual Studio yalnızca etkin yapılandırmayı oluşturur. Bu çözüm yapılandırmasında belirtilen tüm projeler oluşturulmuştur ve oluşturulan tek proje yapılandırması, Visual Studio 'da araç çubuğunda gösterilen etkin çözüm yapılandırmasında ve etkin çözüm platformunda belirtidir. Örneğin, **Hata Ayıkla** ve **x86**. Diğer tanımlı yapılandırma ve platformlar derlenmez.
 
-Tek bir eylemde birden çok yapılandırma ve platform oluşturmak istiyorsanız, **Build**  >  Visual Studio 'da**toplu** derleme oluştur seçeneğini kullanabilirsiniz. Bu özelliğe erişmek için **CTRL** + **Q** tuşlarına basarak arama kutusunu açın ve girin `Batch build` . Toplu derleme tüm proje türleri için kullanılamaz. Bkz. [nasıl yapılır: aynı anda birden çok yapılandırma oluşturma](how-to-build-multiple-configurations-simultaneously.md).
+Tek bir eylemde birden çok yapılandırma ve platform oluşturmak istiyorsanız,   >  Visual Studio 'da **toplu** derleme oluştur seçeneğini kullanabilirsiniz. Bu özelliğe erişmek için **CTRL** + **Q** tuşlarına basarak arama kutusunu açın ve girin `Batch build` . Toplu derleme tüm proje türleri için kullanılamaz. Bkz. [nasıl yapılır: aynı anda birden çok yapılandırma oluşturma](how-to-build-multiple-configurations-simultaneously.md).
 
 ## <a name="how-visual-studio-assigns-project-configurations"></a>Visual Studio proje yapılandırmasını nasıl atar
 
 Yeni bir çözüm yapılandırması tanımladığınızda ve ayarları var olan bir sunucudan kopyalamazsanız, Visual Studio varsayılan proje yapılandırmalarını atamak için aşağıdaki ölçütleri kullanır. Ölçütler gösterilen sırayla değerlendirilir.
 
-1. Projenin yeni çözüm yapılandırması adıyla tam olarak eşleşen* \<configuration name> \<platform name> *bir yapılandırma adı () varsa, bu yapılandırma atanır. Yapılandırma adları büyük/küçük harfe duyarlı değildir.
+1. Projenin yeni çözüm yapılandırması adıyla tam olarak eşleşen *\<configuration name> \<platform name>* bir yapılandırma adı () varsa, bu yapılandırma atanır. Yapılandırma adları büyük/küçük harfe duyarlı değildir.
 
 1. Projenin, yapılandırma adı bölümünün yeni çözüm yapılandırmasıyla eşleştiği bir yapılandırma adı varsa, bu yapılandırma atanır ve platform bölümünün eşleşip eşleşmediğini belirtir.
 
@@ -97,7 +97,7 @@ Visual Studio, çözüm yapılandırması atamak için aşağıdaki ölçütleri
 
 - Bir proje yapılandırması bir platform belirtmezse veya yalnızca bir platform belirtirse, adı yeni proje yapılandırmasıyla eşleşen bir çözüm yapılandırması bulundu veya eklendi. Bu çözüm yapılandırmasının varsayılan adı bir platform adı içermez; formu alır *\<project configuration name>* .
 
-- Bir proje birden çok platformu destekliyorsa, desteklenen her platform için bir çözüm yapılandırması bulunur ya da eklenir. Her çözüm yapılandırmasının adı hem proje yapılandırma adını hem de platform adını içerir ve forma * \<project configuration name> \<platform name> *sahiptir.
+- Bir proje birden çok platformu destekliyorsa, desteklenen her platform için bir çözüm yapılandırması bulunur ya da eklenir. Her çözüm yapılandırmasının adı hem proje yapılandırma adını hem de platform adını içerir ve forma *\<project configuration name> \<platform name>* sahiptir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

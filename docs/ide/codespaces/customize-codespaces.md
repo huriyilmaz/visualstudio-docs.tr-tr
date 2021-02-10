@@ -5,18 +5,18 @@ ms.topic: how-to
 ms.date: 09/21/2020
 author: gregvanl
 ms.author: gregvanl
-manager: jillfra
+manager: jmartens
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
 monikerRange: vs-2019
-ms.openlocfilehash: 9072676dfc96ffc6286f81785048eca8ec46b0b8
-ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
+ms.openlocfilehash: 15efee817e41f928e5ca1162e9ace20276bd20d2
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94850513"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99971160"
 ---
 # <a name="how-to-customize-a-codespace-preview"></a>Codespace 'i özelleştirme (Önizleme)
 
@@ -28,21 +28,21 @@ Hemen kullanmaya başlamak için Windows codespaces, zaten yüklü birçok çer�
 
 | Uygulama                                         | Yol diğer adı | Sürüm            |
 |---------------------------------------------|------------|--------------------|
-| .NET                                        | YOK        | 4.8                |
+| .NET                                        | Yok        | 4.8                |
 | .NET Core Runtime                           | dotnet     | 2,1, 3,1           |
 | .NET Core SDK                               | dotnet     | 2,1, 3.1.3, 3.1.4  |
-| Azure CLI’si                                   | az         | 2.5                |
+| Azure CLI                                   | az         | 2.5                |
 | Chocolatey                                  | Choco      | 0.10.15            |
 | CMake                                       | CMake      | 3,17               |
 | Git                                         | git        | 2,26               |
 | Microsoft derleme                             | MSBUILD    | 16,7               |
-| Microsoft SQL Server Express Edition 2019   | YOK        | 15.0               |
+| Microsoft SQL Server Express Edition 2019   | Yok        | 15.0               |
 | Ninja                                       | Ninja      | 1.8.2              |
 | Node.js                                     | node       | 12,16              |
 | NPM                                         | npm        | 6,14               |
 | Python                                      | python     | 3.7                |
 | VC Paket Yöneticisi                          | vcpkg      | 2020,02            |
-| Windows SDK’sı                                 | YOK        | 10.0.18362         |
+| Windows SDK’sı                                 | Yok        | 10.0.18362         |
 
 Yukarıdaki liste ayrıntılı değildir ve Visual Studio 'Nun yüklediği birçok aracı dışlar (örneğin, IISExpress). Bir bileşen, yukarıda belirtilenden farklı bir küçük veya yayama sürümüne de sahip olabilir.
 
@@ -152,7 +152,7 @@ Dosyadaki *.devinit.js* içeriği. Bu dosyanın *.devcontainer.js* ile aynı kla
 }
 ```
 
-Örnekler listesinde daha fazla `devinit` örnek bulabilirsiniz `devinit` [Samples list](../../devinit/sample-readme.md).
+Örnekler listesinde daha fazla `devinit` örnek bulabilirsiniz `devinit` [](../../devinit/sample-readme.md).
 
 ## <a name="port-forwarding"></a>Bağlantı noktası iletme
 
@@ -178,7 +178,7 @@ Aşağıda, yerel MS SQL Server 'a bağlanmak için bir bağlantı dizesi örne�
 "Server=(LocalDB);Integrated Security=true;"
 ```
 
-### <a name="azure-cli"></a>Azure CLI’si
+### <a name="azure-cli"></a>Azure CLI
 
 Azure CLı, tüm Windows Codespace ortamlarına yüklenir ve farklı yolda bulunabilir `az` .
 

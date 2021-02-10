@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: fa34810d-185a-4d22-92bd-9852915e5f1d
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c56de103fa116cbf77ec16dc0116a2897e6ccdce
-ms.sourcegitcommit: d3bca34f82de03fa34ecdd72233676c17fb3cb14
+ms.openlocfilehash: 75c06082a34f5dd3248024f1707cb188107863c6
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92353206"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99964894"
 ---
 # <a name="build-loggers"></a>Günlükçüleri derleme
 
@@ -52,9 +52,9 @@ Bazı durumlarda, MSBuild.exe **ayrıntı** düzeyi anahtarı belirli bir değer
 
 ## <a name="specify-a-logger"></a>Günlükçü belirtin
 
-Günlükçü bir derlemeye derlendikten sonra, derlemeler sırasında bu günlükçü 'yi kullanmak için MSBuild 'e söylemeniz gerekir. Bu işlem, *MSBuild.exe*ile **-günlükçü** anahtarı kullanılarak yapılır. *MSBuild.exe*için kullanılabilir anahtarlar hakkında daha fazla bilgi için bkz. [komut satırı başvurusu](../msbuild/msbuild-command-line-reference.md).
+Günlükçü bir derlemeye derlendikten sonra, derlemeler sırasında bu günlükçü 'yi kullanmak için MSBuild 'e söylemeniz gerekir. Bu işlem, *MSBuild.exe* ile **-günlükçü** anahtarı kullanılarak yapılır. *MSBuild.exe* için kullanılabilir anahtarlar hakkında daha fazla bilgi için bkz. [komut satırı başvurusu](../msbuild/msbuild-command-line-reference.md).
 
-Aşağıdaki komut satırı *MyProject. csproj* projesini oluşturur ve *SimpleLogger.dll*uygulanan günlükçü sınıfını kullanır. **-Nologo** anahtarı başlık ve telif hakkı iletisini gizler ve **-noconsolegünlükçü** anahtarı varsayılan MSBuild konsol günlükçüsü 'yi devre dışı bırakır.
+Aşağıdaki komut satırı *MyProject. csproj* projesini oluşturur ve *SimpleLogger.dll* uygulanan günlükçü sınıfını kullanır. **-Nologo** anahtarı başlık ve telif hakkı iletisini gizler ve **-noconsolegünlükçü** anahtarı varsayılan MSBuild konsol günlükçüsü 'yi devre dışı bırakır.
 
 ```cmd
 MSBuild -nologo -noconsolelogger -logger:SimpleLogger.dll
