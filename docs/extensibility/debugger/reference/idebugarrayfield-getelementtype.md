@@ -9,26 +9,26 @@ helpviewer_keywords:
 ms.assetid: c46bf625-0a48-4cbb-8f1f-286356f2c065
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3870f28ffb62239d0a092093d28c83d25e92bd31
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 44b49cbcd52137b31dd456c4cf45bb3fe8ead947
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80736337"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99944659"
 ---
 # <a name="idebugarrayfieldgetelementtype"></a>IDebugArrayField::GetElementType
 Dizideki öğe türünü alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
-HRESULT GetElementType( 
+HRESULT GetElementType( 
    IDebugField** ppType
 );
 ```

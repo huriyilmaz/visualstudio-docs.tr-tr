@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Ribbon [Office development in Visual Studio], dialog box launcher
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 85b5d6f127c6f8b2b8140e778792aa1088efe05c
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: d8e04b7549d1b6a458f0993804946502f55f0165
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96844939"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99942288"
 ---
 # <a name="how-to-add-a-dialog-box-launcher-to-a-ribbon-group"></a>Nasıl yapılır: Şerit grubuna Iletişim kutusu Başlatıcısı Ekleme
   Şeritteki herhangi bir gruba bir iletişim kutusu Başlatıcısı ekleyebilirsiniz. İletişim kutusu Başlatıcısı, bir grupta görüntülenen küçük bir simgedir. Kullanıcılar, grupla ilgili daha fazla seçenek sağlayan ilgili iletişim kutularını veya görev bölmelerini açmak için bu simgeye tıklayın.

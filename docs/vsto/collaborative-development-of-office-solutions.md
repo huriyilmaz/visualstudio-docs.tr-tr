@@ -14,15 +14,15 @@ helpviewer_keywords:
 - collaborative development [Office development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: d30f28b3e97469bc9e0bf921438960206b4f89c0
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: 028530014afdc78ab6c9c0483c3d443195383793
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96845810"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99942314"
 ---
 # <a name="collaborative-development-of-office-solutions"></a>Office çözümlerinin işbirlikçi geliştirmesi
   Birden çok geliştirici, diğer Visual Studio projelerinde birlikte çalıştıkları şekilde bir Office projesi üzerinde çalışabilir. Visual Studio, Office farklı konumlara yüklense bile, her bilgisayarda Microsoft Office yüklemesini doğru şekilde konumlandırır. Ancak farkında olmanız gereken bazı önemli noktalar vardır.
@@ -40,7 +40,7 @@ ms.locfileid: "96845810"
  Değişikliklerinizi yaptıktan sonra, tüm dosyaları geri iade edin. Projelerde gizli kod dosyaları hakkında daha fazla bilgi için bkz. [Visual Studio ortamında Office projeleri](../vsto/office-projects-in-the-visual-studio-environment.md).
 
 ## <a name="security-for-informal-collaboration-on-a-network"></a>Bir ağ üzerinde resmi olmayan işbirliği için güvenlik
- Bir ağ konumunda (sunucuadı \ PaylaşımAdı) olan tüm belge düzeyi çözümler için \\ \\ *Servername* \\ *Sharename*, üzerinde çalıştığınız Microsoft Office uygulamasındaki güvenilen klasör listesine tam nitelikli konum eklenmelidir. Ana klasörün altına alt dizinleri dahil etme seçeneğini belirleyin veya özel olarak hata ayıklama ve yapı klasörlerini güvenilen klasör listesine ekleyin. Bunun nasıl yapılacağı hakkında daha fazla bilgi için bkz. [belgelere güven verme](../vsto/granting-trust-to-documents.md).
+ Bir ağ konumunda (sunucuadı \ PaylaşımAdı) olan tüm belge düzeyi çözümler için \\ \\  \\ , üzerinde çalıştığınız Microsoft Office uygulamasındaki güvenilen klasör listesine tam nitelikli konum eklenmelidir. Ana klasörün altına alt dizinleri dahil etme seçeneğini belirleyin veya özel olarak hata ayıklama ve yapı klasörlerini güvenilen klasör listesine ekleyin. Bunun nasıl yapılacağı hakkında daha fazla bilgi için bkz. [belgelere güven verme](../vsto/granting-trust-to-documents.md).
 
  Derleme zamanında otomatik olarak oluşturulan geçici sertifikalar parolalarla güvenli değildir. Sertifikalar, geliştiricinin oturum açma adını ve diğer kişisel bilgilerini içerir. Geçici sertifikalar tarafından imzalanan özelleştirmeler dağıtırsanız, diğerleri bu bilgilere erişebiliyor olabilir.
 

@@ -7,17 +7,17 @@ ms.topic: how-to
 ms.devlang: javascript
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: e16b09a165421d36c67dad1fc657fd36846cd382
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 52281c403ceb0f2708aa546cbd73559593c419be
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85285172"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99942834"
 ---
 # <a name="create-a-vuejs-application-using-nodejs-tools-for-visual-studio"></a>Visual Studio için Node.js araçları 'nı kullanarak Vue.js uygulaması oluşturma
 
@@ -40,7 +40,7 @@ Aşağıdaki yeni özellikler, Visual Studio 'da uygulama geliştirmeyi Vue.js d
     Gerekli bir sürüm yüklü değilse, [Visual Studio 2019](https://visualstudio.microsoft.com/downloads)' i yükleme.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)   sayfasına giderek ücretsiz olarak yükleme yapın.
+    Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) sayfasına giderek ücretsiz olarak yükleme yapın.
     ::: moniker-end
 
     İş yükünü yüklemeniz gerekir, ancak zaten Visual Studio 'ya sahipseniz **Araçlar**  >  **ve Özellikler al.**.. ' a giderek Visual Studio yükleyicisi açılır. **Node.js geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
@@ -71,10 +71,10 @@ Bu örnekte, boş bir ASP.NET Core uygulaması (C#) kullanırsınız. Ancak, çe
 1. Visual Studio 'Yu açın ve yeni bir proje oluşturun.
 
     ::: moniker range=">=vs-2019"
-    Başlangıç penceresini kapatmak için **ESC** tuşuna basın. **CTRL + Q** yazarak arama kutusunu açın, **asp.net**yazıp **Yeni ASP.NET Core Web uygulaması oluştur**' u seçin. Görüntülenen iletişim kutusunda, **istemci uygulaması**adını yazın ve ardından **Oluştur**' u seçin.
+    Başlangıç penceresini kapatmak için **ESC** tuşuna basın. **CTRL + Q** yazarak arama kutusunu açın, **asp.net** yazıp **Yeni ASP.NET Core Web uygulaması oluştur**' u seçin. Görüntülenen iletişim kutusunda, **istemci uygulaması** adını yazın ve ardından **Oluştur**' u seçin.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Üstteki menü çubuğundan **Dosya**  >  **Yeni**  >  **Proje**' yi seçin. **Yeni proje** iletişim kutusunun sol bölmesinde, **Visual C#**' ı genişletin, ardından **Web**' i seçin. Orta bölmede **ASP.NET Core Web uygulaması**' nı seçin, **istemci uygulaması**adını yazın ve ardından **Tamam**' ı seçin.
+    Üstteki menü çubuğundan **Dosya**  >  **Yeni**  >  **Proje**' yi seçin. **Yeni proje** iletişim kutusunun sol bölmesinde, **Visual C#**' ı genişletin, ardından **Web**' i seçin. Orta bölmede **ASP.NET Core Web uygulaması**' nı seçin, **istemci uygulaması** adını yazın ve ardından **Tamam**' ı seçin.
     ::: moniker-end
 
     **ASP.NET Core Web uygulaması** proje şablonunu görmüyorsanız, **ASP.net ve Web geliştirme** iş yükünü ve ' nı yüklemelisiniz. Önce **NET Core** geliştirme iş yükü. İş yüklerini yüklemek için **Yeni proje** iletişim kutusunun sol bölmesindeki **Aç Visual Studio yükleyicisi** bağlantısına tıklayın ( **Dosya**  >  **Yeni**  >  **Proje**' yi seçin). Visual Studio Yükleyicisi başlatılır. Gerekli iş yüklerini seçin.
@@ -85,7 +85,7 @@ Bu örnekte, boş bir ASP.NET Core uygulaması (C#) kullanırsınız. Ancak, çe
 
 #### <a name="configure-the-project-startup-file"></a>Proje başlangıç dosyasını yapılandırma
 
-* *./Startup.cs*dosyasını açın ve configure yöntemine aşağıdaki satırları ekleyin:
+* *./Startup.cs* dosyasını açın ve configure yöntemine aşağıdaki satırları ekleyin:
 
     ```csharp
     app.UseDefaultFiles(); // Enables default file mapping on the web root.
@@ -107,7 +107,7 @@ Vue-CLI NPM modülünü yüklemek için bir komut istemi açın ve `npm install 
 
 #### <a name="modify-the-webpack-configuration-to-output-the-built-files-to-wwwroot"></a>Web paketi yapılandırmasını, oluşturulan dosyaları Wwwroot 'a çıkarmak için değiştirin
 
-* *./Client-App/config/index.js*dosyasını açın ve `build.index` ve ile `build.assetsRoot` Wwwroot yolunu değiştirin:
+* *./Client-App/config/index.js* dosyasını açın ve `build.index` ve ile `build.assetsRoot` Wwwroot yolunu değiştirin:
 
     ```js
     // Template for index.html
@@ -121,11 +121,11 @@ Vue-CLI NPM modülünü yüklemek için bir komut istemi açın ve `npm install 
 
 1. Visual Studio 'da **Proje**  >  **özellikleri**  >  **derleme olayları**' na gidin.
 
-1. **Oluşturma öncesi olay komut satırı**üzerinde yazın `npm --prefix ./client-app run build` .
+1. **Oluşturma öncesi olay komut satırı** üzerinde yazın `npm --prefix ./client-app run build` .
 
 #### <a name="configure-webpacks-output-module-names"></a>WebPack 'in çıkış modülü adlarını yapılandırma
 
-* *./Client-App/Build/webpack.base.conf.js*dosyasını açın ve çıkış özelliğine aşağıdaki özellikleri ekleyin:
+* *./Client-App/Build/webpack.base.conf.js* dosyasını açın ve çıkış özelliğine aşağıdaki özellikleri ekleyin:
 
     ```js
     devtoolModuleFilenameTemplate: '[absolute-resource-path]',

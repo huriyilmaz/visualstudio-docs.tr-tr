@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: dfc0e231-6b4e-447d-9d64-0e66dea3394a
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9a34f5c7f1ae3a214a0a72932ae80dbc44845a45
-ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
+ms.openlocfilehash: 893f59aa9e99d990623e0c8383c12bbffbc4a510
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97875208"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99944517"
 ---
 # <a name="registering-a-project-type"></a>Proje Türü Kaydetme
 Yeni bir proje türü oluşturduğunuzda, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Proje türü tanımak ve bunlarla çalışmak için etkinleştirilecek kayıt defteri girişleri oluşturmanız gerekir. Genellikle bu kayıt defteri girdilerini bir kayıt defteri betiği (. RGS) dosyası kullanarak oluşturursunuz.
@@ -49,7 +49,7 @@ Yeni bir proje türü oluşturduğunuzda, [!INCLUDE[vsprvs](../../code-quality/i
    @="devenv.exe \"%1\""
 ```
 
-|Ad|Tür|Veriler|Açıklama|
+|Ad|Tür|Veriler|Description|
 |----------|----------|----------|-----------------|
 |`@`|REG_SZ|`FigPrjFile`|. Figp uzantısına sahip proje türü dosyalarının adı ve açıklaması.|
 |`Content Type`|REG_SZ|`Text/plain`|Proje dosyaları için içerik türü.|
@@ -81,7 +81,7 @@ Yeni bir proje türü oluşturduğunuzda, [!INCLUDE[vsprvs](../../code-quality/i
    "FigProjectItemsEvents"="Returns the FigProjectItemsEvents Object"
 ```
 
-|Ad|Tür|Veriler|Açıklama|
+|Ad|Tür|Veriler|Description|
 |----------|----------|----------|-----------------|
 |`@` Varsayılanını|REG_SZ|`FigPrj Project VSPackage`|Bu kayıtlı VSPackage 'ın yerelleştirilebilir adı (proje türü).|
 |`InprocServer32`|REG_SZ|`%MODULE%`|Proje türü DLL dosyasının yolu. IDE bu DLL 'yi yükler ve nesneyi oluşturmaya ulaşmak için VSPackage CLSID değerini geçirir `DllGetClassObject` <xref:Microsoft.VisualStudio.OLE.Interop.IClassFactory> <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage> .|
@@ -132,7 +132,7 @@ Yeni bir proje türü oluşturduğunuzda, [!INCLUDE[vsprvs](../../code-quality/i
    "SortPriority"=dword:00000064
 ```
 
-|Ad|Tür|Veriler|Açıklama|
+|Ad|Tür|Veriler|Description|
 |----------|----------|----------|-----------------|
 |`@`|REG_SZ|`FigPrj Project`|Bu türdeki projelerin varsayılan adı.|
 |`DisplayName`|REG_SZ|`#%IDS_PROJECT_TYPE%`|Paketler altında kayıtlı olan uydu DLL 'sinden alınacak adın kaynak KIMLIĞI.|
@@ -149,7 +149,7 @@ Yeni bir proje türü oluşturduğunuzda, [!INCLUDE[vsprvs](../../code-quality/i
 
  Aşağıdaki tabloda, önceki kod segmentinde bulunan filtre seçenekleri gösterilmektedir.
 
-|Filtre seçeneği|Açıklama|
+|Filtre seçeneği|Description|
 |-------------------|-----------------|
 |`CommonFindFilesFilter`|Filtrenin **dosyalarda bul** iletişim kutusunda ortak filtrelerden biri olduğunu gösterir. Ortak filtreler, filtreler ortak olarak işaretlenmeden önce filtre listesinde listelenir.|
 |`CommonOpenFilesFilter`|Filtrenin **Dosya Aç** iletişim kutusundaki ortak filtrelerden biri olduğunu gösterir. Ortak filtreler, filtreler ortak olarak işaretlenmeden önce filtre listesinde listelenir.|
@@ -172,7 +172,7 @@ Yeni bir proje türü oluşturduğunuzda, [!INCLUDE[vsprvs](../../code-quality/i
    "NewProjectDialogOnly"=dword:00000000
 ```
 
-|Ad|Tür|Veriler|Açıklama|
+|Ad|Tür|Veriler|Description|
 |----------|----------|----------|-----------------|
 |`@`|REG_SZ|`#%IDS_NEWPROJ_ TEMPLATES_ENTRY%`|Yeni proje şablonları için kaynak KIMLIĞI.|
 |`TemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjects`|Kayıtlı proje türünün projeleri için varsayılan yol.|
@@ -193,9 +193,9 @@ Yeni bir proje türü oluşturduğunuzda, [!INCLUDE[vsprvs](../../code-quality/i
    "SortPriority"=dword:00000064
 ```
 
-|Ad|Tür|Veriler|Açıklama|
+|Ad|Tür|Veriler|Description|
 |----------|----------|----------|-----------------|
-|`@`|REG_SZ|Hiçbiri|Diğer dosyalar proje girdileri için aşağıdaki girdilerin olduğunu gösteren varsayılan değer.|
+|`@`|REG_SZ|Yok|Diğer dosyalar proje girdileri için aşağıdaki girdilerin olduğunu gösteren varsayılan değer.|
 |`@`|REG_SZ|`#%IDS_ADDITEM_TEMPLATES_ENTRY%`|Yeni öğe Ekle şablon dosyaları için kaynak KIMLIĞI değeri.|
 |`TemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjectItems`|**Yeni öğe Ekle** iletişim kutusunda görüntülenecek olan öğelerin varsayılan yolu.|
 |`SortPriority`|REG_DWORD|`100 (vcprx64)`|**Yeni öğe Ekle** iletişim kutusunun ağaç düğümünde görüntülenmek üzere sıralama düzeni oluşturur.|
@@ -222,7 +222,7 @@ Yeni bir proje türü oluşturduğunuzda, [!INCLUDE[vsprvs](../../code-quality/i
 
   Son alan, CTMENU kaynağı için sürüm numarasını tanımlar. Sürüm numarasını değiştirerek menüyü bir kez daha birleştirebilirsiniz.
 
-|Ad|Tür|Veriler|Açıklama|
+|Ad|Tür|Veriler|Description|
 |----------|----------|----------|-----------------|
 |% CLSID_Package%|REG_SZ|`,1000,1`|Menü bilgilerini almak için kaynak.|
 
@@ -236,7 +236,7 @@ Yeni bir proje türü oluşturduğunuzda, [!INCLUDE[vsprvs](../../code-quality/i
    "NewProjectDialogOnly"=dword:00000000
 ```
 
-|Ad|Tür|Veriler|Açıklama|
+|Ad|Tür|Veriler|Description|
 |----------|----------|----------|-----------------|
 |`@`|REG_SZ|`#%IDS_NEWPROJ_TEMPLATES_ENTRY%`|Şekil projesi yeni proje şablonlarının kaynak KIMLIĞI değeri.|
 |`TemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjects`|Yeni projeler dizininin varsayılan yolu. Bu dizindeki öğeler, **Yeni proje Sihirbazı** iletişim kutusunda görüntülenir.|
@@ -251,7 +251,7 @@ Yeni bir proje türü oluşturduğunuzda, [!INCLUDE[vsprvs](../../code-quality/i
    "UseInterface"=dword:00000001
 ```
 
-|Ad|Tür|Veriler|Açıklama|
+|Ad|Tür|Veriler|Description|
 |----------|----------|----------|-----------------|
 |`Package`|REG_SZ|`%CLSID_Package%`|Kayıtlı VSPackage sınıf KIMLIĞI.|
 |`UseInterface`|REG_DWORD|`1`|1 Kullanıcı arabiriminin bu proje ile etkileşim kurmak için kullanılacağını gösterir. 0, UI arabirimi olmadığını gösterir.|

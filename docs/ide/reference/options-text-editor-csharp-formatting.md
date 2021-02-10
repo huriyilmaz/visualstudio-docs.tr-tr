@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Text editor Options dialog box, formatting
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: a29f298579d571595cbf537f99ed67b333fbbb9c
-ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
+ms.openlocfilehash: eea4f9afd82dd87385e02ba9f149e91f336369a2
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96039779"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99944075"
 ---
 # <a name="options-dialog-box-text-editor--c--code-style--formatting"></a>Seçenekler iletişim kutusu: metin düzenleyici \> C# \> kod stili \> biçimlendirme
 
@@ -42,7 +42,7 @@ Bu seçenekler sayfasına erişmek için, menü çubuğundan **Araçlar**  >  **
 
 Bu ayarlar, kod düzenleyicisinin koda biçimlendirme seçeneklerini uyguladığı *zaman* etkiler.
 
-|Etiketle|Açıklama|
+|Etiketle|Description|
 |-----------|-----------------|
 |**Yazarken Otomatik Biçimlendir**|Seçimi kaldırıldığında,, ve biçim **bloğu on}** seçeneklerinde **Biçim açıklaması** devre dışı bırakılır.|
 |**; Üzerinde otomatik olarak biçim ekstresi**|Seçildiğinde, deyimi, düzenleyici için seçilen biçimlendirme seçeneklerine göre tamamlama sırasında biçimlendirir.|
@@ -62,12 +62,12 @@ Visual Studio 2017 ' deki **belge biçimlendirme** komutunu kullanarak C# dosyal
 
 Bu ayarlar, dosya üzerinde ek kod temizleme işlemini gerçekleştirmek için **Biçim belgesi** komutunu yapılandırır. Bu ayarların nasıl uygulandığı hakkında daha fazla bilgi için bkz. [belge komutunu Biçimlendir](../code-styles-and-code-cleanup.md#apply-code-styles).
 
-|Etiketle|Açıklama|İlgili EditorConfig ve araçlar > seçenekleri kuralları|
+|Etiketle|Description|İlgili EditorConfig ve araçlar > seçenekleri kuralları|
 |-----------|-----------------|-----------------|-----------------|
 |**Tüm C# biçimlendirme kurallarını Uygula (girintileme, kaydırma, Aralık)**|**Biçim belgesi** komutu her zaman biçimlendirme sorunlarını düzeltir. Bu ayar değiştirilemez.| [Core EditorConfig seçenekleri](../../ide/create-portable-custom-editor-options.md)<br/>[.NET EditorConfig biçimlendirme seçenekleri](/dotnet/fundamentals/code-analysis/style-rules/formatting-rules)<br/><br/>**Araçlar**  >  **Seçenekler**  >  **Metin düzenleyici**  >  **C#**  >  **Biçimlendirme** > [**girintileme** veya **yeni çizgiler** ya da **boşluk** ya da **kaydırma**]|
 |**Biçimlendirme sırasında ek kod temizlemeyi gerçekleştir**|Seçildiğinde, **Edit. FormatDocument** komutunda belirtilen kurallara ilişkin düzeltmeleri uygular.| Yok |
 |**Gereksiz kullanımları kaldır**|Seçildiğinde, `using` **Edit. FormatDocument** tetiklendiğinde gereksiz yönergeleri kaldırır.| Yok |
-|**Kullanımları sıralama**|Seçildiğinde, `using` **düzenleme. FormatDocument** tetiklendiğinde yönergeleri sıralar.| dotnet_sort_system_directives_first<br/><br/>**Araçlar**  >  **Seçenekler**  >  **Metin düzenleyici**  >  **C#**  >  **Gelişmiş**  >  **Using deyimlerini sıralarken ' System ' yönergelerini ilk olarak Yerleştir** |
+|**Using deyimlerini Sırala**|Seçildiğinde, `using` **düzenleme. FormatDocument** tetiklendiğinde yönergeleri sıralar.| dotnet_sort_system_directives_first<br/><br/>**Araçlar**  >  **Seçenekler**  >  **Metin düzenleyici**  >  **C#**  >  **Gelişmiş**  >  **Using deyimlerini sıralarken ' System ' yönergelerini ilk olarak Yerleştir** |
 |**Tek satırlı denetim deyimleri için küme ayraçları Ekle/Kaldır**|Seçildiğinde, **Edit. FormatDocument** tetiklendiğinde tek satırlık denetim deyimlerine küme ayraçları ekler veya kaldırır.| csharp_prefer_braces<br/><br/>**Araçlar**  >  **Seçenekler**  >  **Metin düzenleyici**  >  **C#**  >  **Kod stili**  >  **Kod bloğu tercihleri**  >  **Küme ayraçlarını tercih et** |
 |**Erişilebilirlik değiştiricileri Ekle**|Seçildiğinde, **Edit. FormatDocument** tetiklendiğinde eksik erişilebilirlik değiştiricileri ekler.| dotnet_style_require_accessibility_modifiers |
 |**Erişilebilirlik değiştiricilerini sıralama**|Seçildiğinde, **düzenleme. FormatDocument** tetiklendiğinde erişilebilirlik değiştiricilerini sıralar.| csharp_preferred_modifier_order<br/>visual_basic_preferred_modifier_order |

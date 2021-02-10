@@ -6,15 +6,15 @@ ms.topic: conceptual
 ms.assetid: 4340c69f-b96b-4932-bb82-38b16a5ab149
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 312b886ee0becc794f657ecaaba7fb028d4b3cf1
-ms.sourcegitcommit: dfbbf041e68ec3a4cd97196b19c9226a4793e702
+ms.openlocfilehash: e52b03b01f53a8064dc6ec691f751c86266af6a4
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91878897"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99944309"
 ---
 # <a name="help-viewer-administrator-guide"></a>Yardım Görüntüleyicisi Yönetici Kılavuzu
 
@@ -99,7 +99,7 @@ Temel içerik kümesini oluşturabilmeniz için önce hedef bilgisayardaki tüm 
 
 4. Kaldırmak için **Güncelleştir** ' i seçin.
 
-5. *%ProgramData%\Microsoft\HelpLibrary2\Catalogs\VisualStudio15* ' e gidin ve klasörün yalnızca dosya *catalogType.xml*içerdiğini doğrulayın.
+5. *%ProgramData%\Microsoft\HelpLibrary2\Catalogs\VisualStudio15* ' e gidin ve klasörün yalnızca dosya *catalogType.xml* içerdiğini doğrulayın.
 
    Daha önce yüklenmiş olan tüm yerel Visual Studio yardım içeriğini kaldırdıktan sonra, temel içerik kümesini indirmeye hazırlanın.
 
@@ -107,7 +107,7 @@ Temel içerik kümesini oluşturabilmeniz için önce hedef bilgisayardaki tüm 
 
 1. Yardım Görüntüleyicisi 'nde **Içeriği Yönet** sekmesini seçin.
 
-2. **Önerilen belgeler** veya **kullanılabilir belgeler**altında, indirmek istediğiniz belge kümelerine gidin ve **Ekle**' yi seçin.
+2. **Önerilen belgeler** veya **kullanılabilir belgeler** altında, indirmek istediğiniz belge kümelerine gidin ve **Ekle**' yi seçin.
 
 3. **Güncelleştir**' i seçin.
 
@@ -131,7 +131,7 @@ Daha sonra, içeriği istemci bilgisayarlara dağıtılabilmesi için paketlemey
 
 1. Bir ağ paylaşma oluşturun ve yardım içeriğini bu konuma kopyalayın.
 
-     Örneğin, *C:\VSHelp* içindeki içeriği * \\ \myserver\VSHelp*'e kopyalayın.
+     Örneğin, *C:\VSHelp* içindeki içeriği *\\ \myserver\VSHelp*'e kopyalayın.
 
 2. Yardım içeriği için dağıtım betiğini içeren bir *. bat* dosyası oluşturun. İstemci, gönderim kapsamında silinmekte olan dosyaların hiçbirinde okuma kilidine sahip olduğundan, güncelleştirmeleri dağıtmadan önce istemcinin kapatılmasını sağlayabilirsiniz. Örneğin:
 

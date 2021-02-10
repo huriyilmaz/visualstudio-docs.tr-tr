@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: 08154aed-ae5c-463c-8694-745d0e332965
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 74354e05b16830f599dd706fbe48aadd75b11a18
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3ed763635d5629400c70c53497c7a798e0ac38f2
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80701032"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99943133"
 ---
 # <a name="scccreatesubproject-function"></a>Scccreatealt proje işlevi
 Bu işlev, bağımsız değişken tarafından belirtilen mevcut bir üst proje altında verilen ada sahip bir alt proje oluşturur `lpParentProjPath` .
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
 SCCRTN SccCreateSubProject(
@@ -92,7 +92,7 @@ SCCRTN SccCreateSubProject(
 ## <a name="technical-notes-for-scccreatesubproject-and-sccgetparentprojectpath"></a>Scccreatealt projesi ve SccGetParentProjectPath için teknik notlar
  Kaynak denetimine çözüm ve proje ekleme, bir kullanıcının kaynak denetim sisteminde konumları kaç kez seçmesi gerektiğini en aza indirmek için Visual Studio 'da basitleştirilmiştir. Bu değişiklikler, bir kaynak denetimi eklentisi hem yeni işlevleri hem de ' yi destekliyorsa, Visual Studio tarafından etkinleştirilir `SccCreateSubProject` `SccGetParentProjectPath` . Ancak, aşağıdaki kayıt defteri girişi, bu değişiklikleri devre dışı bırakmak ve önceki Visual Studio 'ya geri dönmek için kullanılabilir (kaynak denetimi eklentisi API sürümü 1,1) davranışı:
 
- **[HKEY_CURRENT_USER \Software\Microsoft\VisualStudio\8.0\SourceControl] "DoNotCreateSolutionRootFolderInSourceControl" = DWORD: 00000001**
+ **[HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0\SourceControl] "DoNotCreateSolutionRootFolderInSourceControl" = DWORD: 00000001**
 
  Bu kayıt defteri girdisi yoksa veya DWORD: 00000000 olarak ayarlandıysa, Visual Studio yeni işlevleri ve ' ı kullanmaya çalışır `SccCreateSubProject` `SccGetParentProjectPath` .
 

@@ -5,17 +5,17 @@ ms.date: 01/28/2019
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: e53ef96ad8fab8b26f04ccd5f7f0488d1f0d6985
-ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
+ms.openlocfilehash: 343c87f3c14e8ebafeb99a55a88d0b86df1bafcf
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94974083"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99942645"
 ---
 # <a name="use-ipython-in-the-interactive-window"></a>Etkileşimli pencerede IPython kullanın
 
@@ -26,9 +26,9 @@ Bu izlenecek yol için, IPython ve gerekli kitaplıkları içeren [Anaconda](htt
 > [!Note]
 > IronPython, bunu **Etkileşimli Seçenekler** formunda seçebileceğiniz Için IPython 'u desteklemez. Daha fazla bilgi için bkz. [özellik isteği](https://github.com/Microsoft/PTVS/issues/84).
 
-1. Visual Studio 'yu açın, **Python ortamları** penceresine geçin (**View**  >  **diğer Windows**  >  **Python ortamlarını** görüntüleyin) ve bir Anaconda ortamı seçin.
+1. Visual Studio 'yu açın, **Python ortamları** penceresine geçin (  >  **diğer Windows**  >  **Python ortamlarını** görüntüleyin) ve bir Anaconda ortamı seçin.
 
-2. **Packages** Ve ' nin listelendiğinden emin olmak için, bu ortam için **paketler (Conda)** sekmesini ( **PIP** veya paket olarak görünebilir) inceleyin `ipython` `matplotlib` . Aksi takdirde, bunları buraya yüklersiniz. (Bkz. [Python ortamları Windows-paketler sekmesi](python-environments-window-tab-reference.md).)
+2. Ve ' nin listelendiğinden emin olmak için, bu ortam için **paketler (Conda)** sekmesini ( **PIP** veya paket olarak görünebilir) inceleyin `ipython` `matplotlib` . Aksi takdirde, bunları buraya yüklersiniz. (Bkz. [Python ortamları Windows-paketler sekmesi](python-environments-window-tab-reference.md).)
 
 3. **Genel bakış** sekmesini seçin ve **IPython etkileşimli modunu kullan**' ı seçin. (Visual Studio 2015 ' de, **Seçenekler** iletişim kutusunu açmak için **etkileşimli seçenekleri Yapılandır** ' ı seçin, sonra **etkileşimli modu** **IPython** olarak ayarlayın ve **Tamam**' ı seçin.
 
@@ -76,7 +76,7 @@ Bu izlenecek yol için, IPython ve gerekli kitaplıkları içeren [Anaconda](htt
 
     ![Düzenleyiciden etkileşimli pencereye kod gönderme](media/ipython-repl-05.png)
 
-8. **Etkileşimli** pencerenin dışındaki grafikleri görmek için, hata ayıklama başlangıcı komutuyla **Hata Ayıkla** komutunu kullanarak kodu çalıştırın  >  **Start without Debugging** .
+8. **Etkileşimli** pencerenin dışındaki grafikleri görmek için, hata ayıklama başlangıcı komutuyla **Hata Ayıkla** komutunu kullanarak kodu çalıştırın  >   .
 
 IPython, sistem kabuğu, değişken değiştirme, çıkış yakalama vb. gibi diğer birçok yararlı özelliğe sahiptir. Daha fazla bilgi için [IPython belgelerine](https://ipython.org/documentation.html) bakın.
 

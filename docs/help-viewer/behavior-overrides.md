@@ -6,15 +6,15 @@ ms.topic: conceptual
 ms.assetid: 95fe6396-276b-4ee5-b03d-faacec42765f
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 60f4e46d8c43c90759c964dbf01145d876a9f413
-ms.sourcegitcommit: dfbbf041e68ec3a4cd97196b19c9226a4793e702
+ms.openlocfilehash: f9c9a950156f29bda68a134af2eb299b3431445f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91879066"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99944296"
 ---
 # <a name="help-content-manager-overrides"></a>Yardım Içerik Yöneticisi geçersiz kılmaları
 
@@ -32,7 +32,7 @@ Visual Studio IDE 'deki Yardım Görüntüleyicisi ve yardım ile ilgili özelli
 
 ### <a name="registry-key-values"></a>Kayıt defteri anahtarı değerleri
 
-|Kayıt defteri anahtarı değeri|Tür|Veriler|Açıklama|
+|Kayıt defteri anahtarı değeri|Tür|Veriler|Description|
 |------------------|----|----|-----------|
 |NewContentAndUpdateService|string|\<http URL for service endpoint\>|Benzersiz bir hizmet uç noktası tanımlama|
 |UseOnlineHelp|ekleyebileceği|`0` yerel yardım 'ı belirtmek için, `1` çevrimiçi yardım belirtme|Çevrimiçi veya çevrimdışı yardım varsayılanını tanımlama|
@@ -59,7 +59,7 @@ Aşağıdaki iki davranış kayıt defteri düzenleyicisinde kayıt defteri anah
 
 |Görev|Kayıt Defteri Anahtarı|Değer|Veriler|
 |----------|-----|------|----|
-|BITS iş önceliğini geçersiz kıl|HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node (64 bitlik bir makinede) \Microsoft\help\v2,3|Bitspriınlık|**ön plan**, **yüksek**, **normal**veya **düşük**|
+|BITS iş önceliğini geçersiz kıl|HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node (64 bitlik bir makinede) \Microsoft\help\v2,3|Bitspriınlık|**ön plan**, **yüksek**, **normal** veya **düşük**|
 |Ağ paylaşımındaki yerel içerik deposuna işaret edin|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\ v 2.3 \ Catalogs\VisualStudio15|LocationPath|"*Contentstorenetworkshare*"|
 
 ## <a name="see-also"></a>Ayrıca bkz.

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - SharePoint commands [SharePoint development in Visual Studio], executing
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 2746704e30a61b0971db50a5083855b4a93560d4
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: b5a9ea96820aafe32ca119d7e6d08057b91206fd
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94903542"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99943828"
 ---
 # <a name="how-to-execute-a-sharepoint-command"></a>Nasıl yapılır: SharePoint komutu yürütme
   Sunucu nesne modelini bir SharePoint Araçları uzantısında kullanmak istiyorsanız, API 'yi çağırmak için özel bir *SharePoint komutu* oluşturmanız gerekir. Komutunu tanımladıktan ve SharePoint araçları uzantılarınızla dağıttıktan sonra, uzantınız SharePoint Server nesne modelini çağırmak için komutunu yürütebilir. Komutu yürütmek için, bir nesnenin ExecuteCommand yöntemlerinden birini kullanın <xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection> .

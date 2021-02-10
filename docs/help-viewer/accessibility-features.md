@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 94a3225c-d2cb-4565-8453-855d1cdc1acf
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 359a1c4c87a139c35bf38d36edc6a53b2147dd98
-ms.sourcegitcommit: dfbbf041e68ec3a4cd97196b19c9226a4793e702
+ms.openlocfilehash: 7ada860eb82b6c391e04e7431d6625c876174654
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91879079"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99944361"
 ---
 # <a name="accessibility-features-of-the-help-viewer"></a>Yardım görüntüleyicisinin erişilebilirlik özellikleri
 Microsoft ürünlerinin ve hizmetlerinin kullanımını herkes için daha kolay hale getireceğini taahhüt eder. Bu konu, çok çeşitli yeteneklere sahip kişiler için Microsoft Yardım Görüntüleyicisi erişimine yardımcı olan özellikler, ürünler ve hizmetlerle ilgili bilgiler içerir.

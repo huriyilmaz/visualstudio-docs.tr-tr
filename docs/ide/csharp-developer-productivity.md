@@ -3,23 +3,23 @@ title: .NET geliştirme için üretkenliğinizi artırın
 description: Daha iyi .NET kodu daha hızlı yazmanıza yardımcı olacak gezinti, kod analizi, birim testi ve diğer özelliklere genel bakış.
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.date: 11/21/2019
 ms.topic: conceptual
 helpviewer_keywords:
 - editor
 ms.workload:
 - dotnet
-ms.openlocfilehash: 23b50221845cf2b02b963c98f912a218a60630c6
-ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
+ms.openlocfilehash: 036c59e54ba2e2068cf1bfa7eb05b67059cdf855
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91658418"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99942951"
 ---
 # <a name="visual-studio-productivity-guide-for-c-developers"></a>C# geliştiricileri için Visual Studio üretkenlik Kılavuzu
 
-Visual Studio 'Nun geliştiricilerin her zamankinden daha üretken olmasını nasıl sağladığını öğrenin. Ön derlenmiş derlemelere gezinti, yazarken değişken adı önerileri, **Test Gezgini**'nde bir hiyerarşi görünümü,**Ctrl** + **T**bir akıllı **özel durum Yardımcısı**, kod stili yapılandırma ve zorlama ve birçok yeniden düzenlemeler ve kod düzeltmesi gibi performans ve üretkenlik geliştirmelerinden yararlanın...
+Visual Studio 'Nun geliştiricilerin her zamankinden daha üretken olmasını nasıl sağladığını öğrenin. Ön derlenmiş derlemelere gezinti, yazarken değişken adı önerileri, **Test Gezgini**'nde bir hiyerarşi görünümü, + bir akıllı **özel durum Yardımcısı**, kod stili yapılandırma ve zorlama ve birçok yeniden düzenlemeler ve kod düzeltmesi gibi performans ve üretkenlik geliştirmelerinden yararlanın...
 
 ## <a name="im-used-to-keyboard-shortcuts-from-a-different-editor"></a>Farklı bir düzenleyiciden klavye kısayolları için kullandım
 
@@ -83,13 +83,13 @@ Kodlama kurallarını birlikte kullanmak ve kaynak ile seyahat etmek için bir E
 
 ![Visual Studio 'da kod stili zorlama](../ide/media/VSGuide_CodeStyle.png)
 
-- Varsayılan bir veya ekleyin. Yeni öğe Ekle seçeneğini belirleyerek projenize net stil editorconfig dosyası **ekleyin**  >  **New Item**. **Yeni öğe Ekle** iletişim kutusunda, "editorconfig" ifadesini aratın. **Editorconfig dosyası** öğe şablonlarından birini seçin ve ardından **Ekle**' yi seçin.
+- Varsayılan bir veya ekleyin. Yeni öğe Ekle seçeneğini belirleyerek projenize net stil editorconfig dosyası **ekleyin**  >  . **Yeni öğe Ekle** iletişim kutusunda, "editorconfig" ifadesini aratın. **Editorconfig dosyası** öğe şablonlarından birini seçin ve ardından **Ekle**' yi seçin.
 
    ![Visual Studio 'da EditorConfig öğe şablonları](media/editorconfig-item-templates.png)
 
 ::: moniker range=">=vs-2019"
 
-- **Araçlar** Seçenekler *.editorconfig* > **Options** > **metin Düzenleyicisi** > **C#** > **kod stili**içindeki kod stili ayarlarınıza göre otomatik olarak bir. editorconfig dosyası oluşturun.
+- **Araçlar** Seçenekler  >  > **metin Düzenleyicisi** > **C#** > **kod stili** içindeki kod stili ayarlarınıza göre otomatik olarak bir. editorconfig dosyası oluşturun.
 
    ![VS 2019 ' deki ayarlardan. editorconfig dosyası oluştur](media/vs-2019/generate-editorconfig-file.png)
 
@@ -97,7 +97,7 @@ Kodlama kurallarını birlikte kullanmak ve kaynak ile seyahat etmek için bir E
 
 - Visual Studio için ıntellicode 'un [kod çıkarımı özelliği](/visualstudio/intellicode/code-style-inference) , kod stillerinizi mevcut koddan algılar. Daha sonra, kod stili tercihleriniz zaten tanımlanmış boş olmayan bir EditorConfig dosyası oluşturur.
 
-- Bir kod stili kuralının önem düzeyini doğrudan düzenleyici aracılığıyla yapılandırın. Şu anda bir. editorconfig dosyanız yoksa, sizin için bir tane oluşturulur. İmlecinizi hata, uyarı veya öneriye yerleştirin ve **CTRL**yazın + **.** Hızlı Eylemler ve yeniden düzenlemeler menüsünü açmak için. **Sorunları Yapılandır veya gizle**' yi seçin. Daha sonra kuralı seçin ve bu kural için yapılandırmak istediğiniz önem derecesini seçin. Bu, mevcut EditorConfig dosyanızı kuralın yeni önem derecesiyle güncelleştirir.
+- Bir kod stili kuralının önem düzeyini doğrudan düzenleyici aracılığıyla yapılandırın. Şu anda bir. editorconfig dosyanız yoksa, sizin için bir tane oluşturulur. İmlecinizi hata, uyarı veya öneriye yerleştirin ve **CTRL** yazın + **.** Hızlı Eylemler ve yeniden düzenlemeler menüsünü açmak için. **Sorunları Yapılandır veya gizle**' yi seçin. Daha sonra kuralı seçin ve bu kural için yapılandırmak istediğiniz önem derecesini seçin. Bu, mevcut EditorConfig dosyanızı kuralın yeni önem derecesiyle güncelleştirir.
 
    ![Bir kod stili kuralının önem düzeyini doğrudan düzenleyicide yapılandırma](../ide/media/configure-severity-level.png)
 
@@ -107,7 +107,7 @@ Kodlama kurallarını birlikte kullanmak ve kaynak ile seyahat etmek için bir E
 
 ## <a name="code-cleanup"></a>Kod temizleme
 
-Visual Studio kod **Temizleme** özelliği aracılığıyla kod stili tercihleri de dahil olmak üzere kod dosyanız için isteğe bağlı biçimlendirme sağlar. Kod temizlemeyi çalıştırmak için düzenleyicinin altındaki Broom simgesine tıklayın veya **CTRL** + **K**, **CTRL** + **E**tuşlarına basın.
+Visual Studio kod **Temizleme** özelliği aracılığıyla kod stili tercihleri de dahil olmak üzere kod dosyanız için isteğe bağlı biçimlendirme sağlar. Kod temizlemeyi çalıştırmak için düzenleyicinin altındaki Broom simgesine tıklayın veya **CTRL** + **K**, **CTRL** + **E** tuşlarına basın.
 
 ![Visual Studio 2019 ' de kod temizleme düğmesi](media/execute-code-cleanup.png)
 
@@ -121,7 +121,7 @@ Dosyanızı boşluk, girintiler, et cetera için biçimlendirmeye ek olarak, **k
 
 ## <a name="refactorings-and-code-fixes"></a>Yeniden düzenlemeler ve kod düzeltmeleri
 
-Visual Studio çok sayıda yeniden düzenlemeler, kod oluşturma eylemi ve kod düzeltmesiyle birlikte gelir. Red dalgalı çizgiler hataları, yeşil dalgalı çizgiler uyarıları temsil eder ve üç gri noktayla kod önerilerini temsil eder. Ampul veya screwsürücü simgesine tıklayarak veya **CTRL**tuşuna basarak kod düzeltmelere erişebilirsiniz + **.** veya **alt** + **girin**. Her bir onarım, düzeltmesinin nasıl çalıştığına ilişkin canlı bir kod farkı gösteren bir önizleme penceresiyle birlikte gelir.
+Visual Studio çok sayıda yeniden düzenlemeler, kod oluşturma eylemi ve kod düzeltmesiyle birlikte gelir. Red dalgalı çizgiler hataları, yeşil dalgalı çizgiler uyarıları temsil eder ve üç gri noktayla kod önerilerini temsil eder. Ampul veya screwsürücü simgesine tıklayarak veya **CTRL** tuşuna basarak kod düzeltmelere erişebilirsiniz + **.** veya **alt** + **girin**. Her bir onarım, düzeltmesinin nasıl çalıştığına ilişkin canlı bir kod farkı gösteren bir önizleme penceresiyle birlikte gelir.
 
 Popüler hızlı düzeltmeler ve yeniden düzenlemeler şunları içerir:
 
@@ -131,7 +131,7 @@ Popüler hızlı düzeltmeler ve yeniden düzenlemeler şunları içerir:
 - Oluşturucu oluştur
 - Oluşturma yöntemi
 - Türü dosyaya taşı
-- Null denetimi Ekle
+- Null-Check Ekle
 - Parametre Ekle
 - Gereksiz kullanımları kaldır
 - LINQ sorgusuna veya LINQ yöntemine foreach döngüsü
@@ -175,7 +175,7 @@ Visual Studio 2017 ' den başlayarak, test deneyiminde çok sayıda iyileştirme
 
 - **Test Gezgini** test keşfi hızlıdır.
 
-- Testleri **Test Gezgini** 'nde *hiyerarşik sıralamaya*göre düzenleyin.
+- Testleri **Test Gezgini** 'nde *hiyerarşik sıralamaya* göre düzenleyin.
 
    ![Visual Studio 'da metin Gezgini için hiyerarşi görünümü](../ide/media/VSGuide_Testing.png)
 
@@ -187,8 +187,8 @@ Visual Studio 'dan bazılarının hata ayıklama özellikleri şunları içerir:
 
 ::: moniker range=">=vs-2019"
 
-- **İzleme**, **oto**ve **Yerel öğeler** pencerelerinde dize arama özelliği.
-- *' A tıklayarak*bir kod satırının yanına gelin, görüntülenen yeşil ' oynat ' simgesine basın ve bu satıra ulaşana kadar programınızı çalıştırın.
+- **İzleme**, **oto** ve **Yerel öğeler** pencerelerinde dize arama özelliği.
+- *' A tıklayarak* bir kod satırının yanına gelin, görüntülenen yeşil ' oynat ' simgesine basın ve bu satıra ulaşana kadar programınızı çalıştırın.
 - En önemli bilgileri iletişim kutusunda en üst düzeyde (örneğin, bir değişken) yerleştiren **özel durum Yardımcısı** `null` `NullReferenceException` .
 - Önceki kesme noktalarına veya adımlara geri dönmenizi ve uygulamanın geçmişte bulunduğu durumu görüntülemenizi sağlayan [hata ayıklama işlemini geri](../debugger/view-historical-application-state.md)alabilirsiniz.
 - Bir özel durum oluştuğunda canlı bir Web uygulamasının durumunu araştırmanıza olanak tanıyan [anlık görüntü hata ayıklaması](/azure/application-insights/app-insights-snapshot-debugger)(Azure 'da olmalıdır).
@@ -197,7 +197,7 @@ Visual Studio 'dan bazılarının hata ayıklama özellikleri şunları içerir:
 
 ::: moniker range="vs-2017"
 
-- *' A tıklayarak*bir kod satırının yanına gelin, görüntülenen yeşil ' oynat ' simgesine basın ve bu satıra ulaşana kadar programınızı çalıştırın.
+- *' A tıklayarak* bir kod satırının yanına gelin, görüntülenen yeşil ' oynat ' simgesine basın ve bu satıra ulaşana kadar programınızı çalıştırın.
 - En önemli bilgileri iletişim kutusunda en üst düzeyde (örneğin, bir değişken) yerleştiren **özel durum Yardımcısı** `null` `NullReferenceException` .
 - Önceki kesme noktalarına veya adımlara geri dönmenizi ve uygulamanın geçmişte bulunduğu durumu görüntülemenizi sağlayan [hata ayıklama işlemini geri](../debugger/view-historical-application-state.md)alabilirsiniz.
 - Bir özel durum oluştuğunda canlı bir Web uygulamasının durumunu araştırmanıza olanak tanıyan [anlık görüntü hata ayıklaması](/azure/application-insights/app-insights-snapshot-debugger)(Azure 'da olmalıdır).

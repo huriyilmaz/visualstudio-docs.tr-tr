@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 74e41666-2ce8-4ac0-a0e5-3723d1e322c2
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 76e0ec4755584a7021d4f5489500aa53b9bad87e
-ms.sourcegitcommit: dfbbf041e68ec3a4cd97196b19c9226a4793e702
+ms.openlocfilehash: 339d424dd0b09404fc135a119606d47cf7570be3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91878975"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99944101"
 ---
 # <a name="microsoft-help-viewer"></a>Microsoft Yardım Görüntüleyicisi
 
@@ -54,12 +54,12 @@ Gezinti sekmelerini kullanarak yüklü içerikte bilgi bulabilir, konu sekmesind
 
 ### <a name="navigation-tabs"></a>Gezinti sekmeleri
 
-|Tab|Açıklama|
+|Tab|Description|
 |---|-----------|
 |İçindekiler|Yüklü içeriği hiyerarşi (İçindekiler tablosu) olarak görüntüler. Görüntülenen başlıkları filtrelemek için ölçüt belirtebilirsiniz.|
 |Dizin oluşturma|Dizinli terimlerin alfabetik bir listesini görüntüler. Dizinde arama yapabilir, girişleri filtrelemek için ölçütler belirtebilir ve dizin girişlerinin belirttiğiniz metni içermesini veya kullanmaya başlamasını isteyebilirsiniz.|
 |Sık Kullanılanlar|**Sık Kullanılanlara Ekle** düğmesini seçerek "sık kullanılan" konuları ve bu sekmede görünen konuları seçebilirsiniz. **Geçmiş** bölümü, son zamanlarda görüntülediğiniz konuların listesini görüntüler.|
-|Search|Kodda, kod ve konu başlıkları dahil olmak üzere her yerde şartlar araygeçirebileceğiniz bir metin kutusu sağlar.|
+|Arayın|Kodda, kod ve konu başlıkları dahil olmak üzere her yerde şartlar araygeçirebileceğiniz bir metin kutusu sağlar.|
 
 ### <a name="view-topics"></a>Konuları görüntüle
 

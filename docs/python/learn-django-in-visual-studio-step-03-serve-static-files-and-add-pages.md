@@ -6,17 +6,17 @@ ms.date: 11/19/2018
 ms.topic: tutorial
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 748f941d5a8f257b3765b06651ff3244793e0123
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7aabfa91f7f6c6204919c4a06d2d3080b5174c5f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88238536"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99942587"
 ---
 # <a name="step-3-serve-static-files-add-pages-and-use-template-inheritance-with-django-app"></a>3. Adım: statik dosyaları sunma, sayfa ekleme ve Docgo uygulamasıyla şablon devralmayı kullanma
 
@@ -36,7 +36,7 @@ Bu adımda şunları yapmayı öğreneceksiniz:
 
 Docgo uygulaması geliştirirken genellikle daha fazla Python, HTML, CSS ve JavaScript dosyası eklersiniz. Her dosya türü için (Ayrıca, dağıtım için ihtiyaç duyduğunuz *web.config* gibi diğer dosyalar), Visual Studio başlamanıza olanak sağlayacak uygun [öğe şablonları](python-item-templates.md) sağlar.
 
-Kullanılabilir şablonları görmek için **Çözüm Gezgini**gidin, öğeyi oluşturmak istediğiniz klasörü sağ tıklatın, **Add**  >  **Yeni öğe**Ekle ' yi seçin:
+Kullanılabilir şablonları görmek için **Çözüm Gezgini** gidin, öğeyi oluşturmak istediğiniz klasörü sağ tıklatın,   >  **Yeni öğe** Ekle ' yi seçin:
 
 ![Visual Studio 'da yeni öğe Ekle iletişim kutusu](media/django/step03-add-new-item-dialog.png)
 
@@ -63,9 +63,9 @@ STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static']))
 
 İstediğiniz *statik* içindeki herhangi bir klasör yapısını kullanarak dosyaları düzenleyebilir ve ardından dosyalara başvurmak için bu klasörde göreli yollar kullanabilirsiniz. Bu işlemi göstermek için aşağıdaki adımlar uygulamaya bir CSS dosyası ekler ve sonra bu stil sayfasını *index.html* şablonunda kullanır:
 
-1. **Çözüm Gezgini**, Visual Studio projesindeki **hellodocgoapp** klasörüne sağ tıklayın, yeni klasör Ekle ' yi seçin **Add**  >  **New folder**ve klasörü adlandırın `static` .
+1. **Çözüm Gezgini**, Visual Studio projesindeki **hellodocgoapp** klasörüne sağ tıklayın, yeni klasör Ekle ' yi seçin   >  ve klasörü adlandırın `static` .
 
-1. **Statik** klasöre sağ tıklayın ve **Add**  >  **Yeni öğe**Ekle ' yi seçin. Görüntülenen iletişim kutusunda, **stil sayfası** şablonunu seçin, dosyayı adlandırın `site.css` ve **Tamam**' ı seçin. **Site. css** dosyası projede görünür ve düzenleyicide açılır. Klasör yapınız aşağıdaki görüntüye benzer görünmelidir:
+1. **Statik** klasöre sağ tıklayın ve   >  **Yeni öğe** Ekle ' yi seçin. Görüntülenen iletişim kutusunda, **stil sayfası** şablonunu seçin, dosyayı adlandırın `site.css` ve **Tamam**' ı seçin. **Site. css** dosyası projede görünür ve düzenleyicide açılır. Klasör yapınız aşağıdaki görüntüye benzer görünmelidir:
 
     ![Çözüm Gezgini gösterildiği gibi statik dosya yapısı](media/django/step03-static-file-structure.png)
 
@@ -101,7 +101,7 @@ Cevap: `{% load staticfiles %}` ve gibi öğelerde statik dosyalara başvurulmad
 
 ### <a name="question-are-there-any-conventions-for-organizing-static-files"></a>Soru: statik dosyaları düzenlemek için herhangi bir kural var mı?
 
-Yanıt: diğer CSS, JavaScript ve HTML dosyalarını *statik* klasörünüze ekleyebilirsiniz, ancak istediğiniz gibi. Statik dosyaları düzenlemenin tipik bir yolu, *yazı tipleri*, *betikler*ve *içerik* (stil sayfaları ve diğer dosyalar için) adlı alt klasörler oluşturmaktır. Her durumda, bu klasörleri başvurulara dosyanın göreli yoluna dahil etmeyi unutmayın `{% static %}` .
+Yanıt: diğer CSS, JavaScript ve HTML dosyalarını *statik* klasörünüze ekleyebilirsiniz, ancak istediğiniz gibi. Statik dosyaları düzenlemenin tipik bir yolu, *yazı tipleri*, *betikler* ve *içerik* (stil sayfaları ve diğer dosyalar için) adlı alt klasörler oluşturmaktır. Her durumda, bu klasörleri başvurulara dosyanın göreli yoluna dahil etmeyi unutmayın `{% static %}` .
 
 ### <a name="question-can-i-complete-the-same-task-without-using-the--load-staticfiles--tag"></a>Soru: {% Load staticfiles%} etiketini kullanmadan aynı görevi tamamlayabilirim?
 
@@ -129,7 +129,7 @@ Uygulamaya başka bir sayfa eklemek aşağıdakiler anlamına gelir:
 
 Aşağıdaki adımlarda "Hellodocgoapp" projesine bir "hakkında" sayfası ve bu sayfanın giriş sayfasından bağlantıları verilmiştir:
 
-1. **Çözüm Gezgini**, **Templates/hellodocgoapp** klasörüne sağ tıklayın, yeni öğe **Ekle**' yi seçin  >  **New item**, **HTML sayfası** öğe şablonunu seçin, dosyayı adlandırın `about.html` ve **Tamam**' ı seçin.
+1. **Çözüm Gezgini**, **Templates/hellodocgoapp** klasörüne sağ tıklayın, yeni öğe **Ekle**' yi seçin  >  , **HTML sayfası** öğe şablonunu seçin, dosyayı adlandırın `about.html` ve **Tamam**' ı seçin.
 
     > [!Tip]
     > **Yeni öğe** komutu **Ekle** menüsünde görünmezse, Visual Studio 'nun hata ayıklama modundan çıkmasını sağlamak için sunucuyu durdurduğunuzdan emin olun.
@@ -176,7 +176,7 @@ Aşağıdaki adımlarda "Hellodocgoapp" projesine bir "hakkında" sayfası ve bu
     <div><a href="about">About</a></div>
     ```
 
-1. **Dosya**  >  **Tümünü Kaydet** menü komutunu kullanarak tüm dosyaları kaydedin veya **CTRL** + **+ Shift** + **S**tuşlarına basın. (Teknik olarak, Visual Studio 'da projeyi çalıştırmak için bu adım gerekli değildir. dosyaları otomatik olarak kaydeder. Bununla birlikte, bunun hakkında bilgi edinmek için iyi bir komuttur!)
+1. **Dosya**  >  **Tümünü Kaydet** menü komutunu kullanarak tüm dosyaları kaydedin veya **CTRL** + **+ Shift** + **S** tuşlarına basın. (Teknik olarak, Visual Studio 'da projeyi çalıştırmak için bu adım gerekli değildir. dosyaları otomatik olarak kaydeder. Bununla birlikte, bunun hakkında bilgi edinmek için iyi bir komuttur!)
 
 1. Sonuçları gözlemlemek ve sayfalar arasında gezinmeyi denetlemek için projeyi çalıştırın. Bitince sunucuyu kapatın.
 
@@ -194,7 +194,7 @@ Docgo 'nın şablon oluşturma sistemi, birden çok şablon genelinde belirli ö
 
 - , Söz dizimi kullanılarak başvuran şablonda belirli bir yere eklediğiniz diğer sayfa şablonlarıyla *dahildir* `{% include <template_path> %}` . Ayrıca, kodda dinamik olarak yolu değiştirmek istiyorsanız bir değişkeni de kullanabilirsiniz. Eklemeleri genellikle sayfanın gövdesinde, paylaşılan şablonu sayfada belirli bir konumda çekmek için kullanılır.
 
-- *Devralma* , `{% extends <template_path> %}` başvuran şablonun üzerinde derleneceği paylaşılan temel şablonu belirtmek için bir sayfa şablonunun başındaki öğesini kullanır. Devralma genellikle, bir uygulamanın sayfalarına yönelik olarak paylaşılan bir düzen, gezinme çubuğu ve diğer yapıları tanımlamak için kullanılır. bu nedenle, şablonlar yalnızca temel şablonun *bloklar*olarak adlandırılan belirli bölgelerini eklemesi veya değiştirmesi gerekir.
+- *Devralma* , `{% extends <template_path> %}` başvuran şablonun üzerinde derleneceği paylaşılan temel şablonu belirtmek için bir sayfa şablonunun başındaki öğesini kullanır. Devralma genellikle, bir uygulamanın sayfalarına yönelik olarak paylaşılan bir düzen, gezinme çubuğu ve diğer yapıları tanımlamak için kullanılır. bu nedenle, şablonlar yalnızca temel şablonun *bloklar* olarak adlandırılan belirli bölgelerini eklemesi veya değiştirmesi gerekir.
 
 Her iki durumda da `<template_path>` uygulamanın *Şablonlar* klasörüne görelidir ( `../` veya `./` Ayrıca izin verilir).
 
@@ -202,7 +202,7 @@ Bir temel şablon `{% block <block_name> %}` , ve etiketlerini kullanarak blokla
 
 Aşağıdaki adımlarda devralma gösterilmektedir:
 
-1. Uygulamanın *Templates/hellodocgoapp* klasöründe yeni bir HTML dosyası oluşturun ( **Add**  >  **Yeni öğe** Ekle bağlam menüsünü kullanarak veya **Add**  >  **HTML sayfası**Ekle ' yi kullanarak) *layout.html*adlı adı ve içeriğini aşağıdaki biçimlendirmeyle değiştirin. Bu şablonun, başvuran sayfaların yerini almak için gereken "içerik" adlı bir blok içerdiğini görebilirsiniz:
+1. Uygulamanın *Templates/hellodocgoapp* klasöründe yeni bir HTML dosyası oluşturun (   >  **Yeni öğe** Ekle bağlam menüsünü kullanarak veya   >  **HTML sayfası** Ekle ' yi kullanarak) *layout.html* adlı adı ve içeriğini aşağıdaki biçimlendirmeyle değiştirin. Bu şablonun, başvuran sayfaların yerini almak için gereken "içerik" adlı bir blok içerdiğini görebilirsiniz:
 
     ```html
     <!DOCTYPE html>

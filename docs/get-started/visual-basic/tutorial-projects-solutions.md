@@ -9,17 +9,17 @@ ms.custom:
 ms.topic: tutorial
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0277379c44a7d0334798920759438dce52ae16f8
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: 36aabdd07dd7fa966a31d8fc3844e68d816c59ae
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94901277"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99944530"
 ---
 # <a name="learn-about-projects-and-solutions-using-visual-basic"></a>Visual Basic kullanarak projeler ve çözümler hakkında bilgi edinin
 
@@ -90,7 +90,7 @@ Boş bir çözüm oluşturarak araştırmayla başlayacağız. Visual Studio 'Yu
 
 ::: moniker range="vs-2017"
 
-1. **Çözüm Gezgini** **' hızlı çözüm ' çözümünün** sağ tıklama veya bağlam menüsünden **Add** > **Yeni proje** Ekle ' yi seçin.
+1. **Çözüm Gezgini** **' hızlı çözüm ' çözümünün** sağ tıklama veya bağlam menüsünden  > **Yeni proje** Ekle ' yi seçin.
 
    **Yeni Proje Ekle** iletişim kutusu açılır.
 
@@ -107,7 +107,7 @@ Boş bir çözüm oluşturarak araştırmayla başlayacağız. Visual Studio 'Yu
 
 ::: moniker range=">=vs-2019"
 
-1. **Çözüm Gezgini** **' hızlı çözüm ' çözümünün** sağ tıklama veya bağlam menüsünden **Add** > **Yeni proje** Ekle ' yi seçin.
+1. **Çözüm Gezgini** **' hızlı çözüm ' çözümünün** sağ tıklama veya bağlam menüsünden  > **Yeni proje** Ekle ' yi seçin.
 
    **Yeni bir proje ekleyen** bir iletişim kutusu açılır.
 
@@ -130,7 +130,7 @@ Boş bir çözüm oluşturarak araştırmayla başlayacağız. Visual Studio 'Yu
 
 Boş bir projem var. Bir kod dosyası ekleyelim.
 
-1. **Çözüm Gezgini** içindeki **quickdate** projesinin sağ tıklama veya kısayol menüsünden **Add**  >  **Yeni öğe** Ekle ' yi seçin.
+1. **Çözüm Gezgini** içindeki **quickdate** projesinin sağ tıklama veya kısayol menüsünden   >  **Yeni öğe** Ekle ' yi seçin.
 
    **Yeni öğe Ekle** iletişim kutusu açılır.
 
@@ -160,7 +160,7 @@ Birden fazla proje içermesi ve genellikle bu projelerin birbirlerine başvurmas
 
 Çözümünüze bir birim testi projesi ekleyelim. Bu kez bir proje şablonundan başlayacağız, böylece projeye ek bir kod dosyası eklememiz gerekmez.
 
-1. **Çözüm Gezgini** **' hızlı çözüm ' çözümünün** sağ tıklama veya bağlam menüsünden **Add**  >  **Yeni proje** Ekle ' yi seçin.
+1. **Çözüm Gezgini** **' hızlı çözüm ' çözümünün** sağ tıklama veya bağlam menüsünden   >  **Yeni proje** Ekle ' yi seçin.
 
 ::: moniker range="Vs-2017"
 
@@ -240,12 +240,12 @@ Bu özniteliği içeren *Calendar. vb* dosyasındaki satır, <xref:System.Runtim
 
 ## <a name="optional-run-the-test"></a>Seçim Testi çalıştırın
 
-Birim testinizin çalıştığını denetlemek isterseniz, **Test**  >  **Run**  >  menü çubuğundan **tüm testleri** Çalıştır test ' i seçin. **Test Gezgini** adlı bir pencere açılır ve **TestGetCurrentDate** testin başarılı olduğunu görmeniz gerekir.
+Birim testinizin çalıştığını denetlemek isterseniz,   >    >  menü çubuğundan **tüm testleri** Çalıştır test ' i seçin. **Test Gezgini** adlı bir pencere açılır ve **TestGetCurrentDate** testin başarılı olduğunu görmeniz gerekir.
 
 ![Başarılı testi gösteren Visual Studio 'da metin Gezgini](../media/tutorial-projects-test-explorer.png)
 
 > [!TIP]
-> **Test Gezgini** otomatik olarak açılmazsa, **Test**  >  **Windows**  >  menü çubuğundan Windows **Test Gezgini** 'ni test et ' i seçerek açın.
+> **Test Gezgini** otomatik olarak açılmazsa,   >    >  menü çubuğundan Windows **Test Gezgini** 'ni test et ' i seçerek açın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

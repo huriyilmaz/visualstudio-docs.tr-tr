@@ -6,17 +6,17 @@ ms.date: 01/07/2019
 ms.topic: tutorial
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 69fd704976ee941cb053d75040a3d3ec7871a380
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d474236aca50a74b96689001a56e7d0701caae30
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88238748"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99942392"
 ---
 # <a name="step-3-serve-static-files-add-pages-and-use-template-inheritance-with-flask-app"></a>3. Adım: sabit dosyaları sunma, sayfa ekleme ve Flask uygulamasıyla şablon devralmayı kullanma
 
@@ -36,7 +36,7 @@ Bu adımda şunları yapmayı öğreneceksiniz:
 
 Flask uygulaması geliştirirken, genellikle birçok Python, HTML, CSS ve JavaScript dosyası eklersiniz. Her dosya türü için (Ayrıca, dağıtım için ihtiyaç duyduğunuz *web.config* gibi diğer dosyalar), Visual Studio başlamanıza olanak sağlayacak uygun [öğe şablonları](python-item-templates.md) sağlar.
 
-Kullanılabilir şablonları görmek için **Çözüm Gezgini**gidin, öğeyi oluşturmak istediğiniz klasörü sağ tıklatın, **Add**  >  **Yeni öğe**Ekle ' yi seçin:
+Kullanılabilir şablonları görmek için **Çözüm Gezgini** gidin, öğeyi oluşturmak istediğiniz klasörü sağ tıklatın,   >  **Yeni öğe** Ekle ' yi seçin:
 
 ![Visual Studio 'da yeni öğe Ekle iletişim kutusu](media/flask/step03-add-new-item-dialog.png)
 
@@ -56,9 +56,9 @@ Her iki durumda da, istediğiniz gibi dosyaları *statik* olarak düzenleyebilir
 
 ### <a name="use-a-static-file-in-a-template"></a>Şablonda statik dosya kullanma
 
-1. **Çözüm Gezgini**, Visual Studio projesindeki **helloflask** klasörüne sağ tıklayın, yeni klasör Ekle ' yi seçin **Add**  >  **New folder**ve klasörü adlandırın `static` .
+1. **Çözüm Gezgini**, Visual Studio projesindeki **helloflask** klasörüne sağ tıklayın, yeni klasör Ekle ' yi seçin   >  ve klasörü adlandırın `static` .
 
-1. **Statik** klasöre sağ tıklayın ve **Add**  >  **Yeni öğe**Ekle ' yi seçin. Görüntülenen iletişim kutusunda, **stil sayfası** şablonunu seçin, dosyayı adlandırın `site.css` ve **Tamam**' ı seçin. **Site. css** dosyası projede görünür ve düzenleyicide açılır. Klasör yapınız aşağıdaki görüntüye benzer görünmelidir:
+1. **Statik** klasöre sağ tıklayın ve   >  **Yeni öğe** Ekle ' yi seçin. Görüntülenen iletişim kutusunda, **stil sayfası** şablonunu seçin, dosyayı adlandırın `site.css` ve **Tamam**' ı seçin. **Site. css** dosyası projede görünür ve düzenleyicide açılır. Klasör yapınız aşağıdaki görüntüye benzer görünmelidir:
 
     ![Çözüm Gezgini gösterildiği gibi statik dosya yapısı](media/flask/step03-static-file-structure.png)
 
@@ -91,7 +91,7 @@ Her iki durumda da, istediğiniz gibi dosyaları *statik* olarak düzenleyebilir
 
 Flask `serve_static_file` , projenin *statik* klasörü içindeki herhangi bir dosyaya başvurmak için koddan çağrılabilecek adlı bir işlev sağlar. Aşağıdaki işlem, statik bir veri dosyası döndüren basit bir API uç noktası oluşturur.
 
-1. Daha önce yapmadıysanız, bir *statik* klasör oluşturun: **Çözüm Gezgini**, Visual Studio projesindeki **helloflask** klasörüne sağ tıklayın, yeni klasör **Ekle**' yi seçin  >  **New folder**ve klasörü adlandırın `static` .
+1. Daha önce yapmadıysanız, bir *statik* klasör oluşturun: **Çözüm Gezgini**, Visual Studio projesindeki **helloflask** klasörüne sağ tıklayın, yeni klasör **Ekle**' yi seçin  >  ve klasörü adlandırın `static` .
 
 1. *Statik* klasörde, aşağıdaki içeriklerle *data.js* adlı statik bir JSON veri dosyası oluşturun (anlamsız örnek veriler):
 
@@ -115,7 +115,7 @@ Flask `serve_static_file` , projenin *statik* klasörü içindeki herhangi bir d
 
 ### <a name="question-are-there-any-conventions-for-organizing-static-files"></a>Soru: statik dosyaları düzenlemek için herhangi bir kural var mı?
 
-Yanıt: diğer CSS, JavaScript ve HTML dosyalarını *statik* klasörünüze ekleyebilirsiniz, ancak istediğiniz gibi. Statik dosyaları düzenlemenin tipik bir yolu, *yazı tipleri*, *betikler*ve *içerik* (stil sayfaları ve diğer dosyalar için) adlı alt klasörler oluşturmaktır.
+Yanıt: diğer CSS, JavaScript ve HTML dosyalarını *statik* klasörünüze ekleyebilirsiniz, ancak istediğiniz gibi. Statik dosyaları düzenlemenin tipik bir yolu, *yazı tipleri*, *betikler* ve *içerik* (stil sayfaları ve diğer dosyalar için) adlı alt klasörler oluşturmaktır.
 
 ### <a name="question-how-do-i-handle-url-variables-and-query-parameters-in-an-api"></a>Soru: bir API 'de URL değişkenlerini ve sorgu parametrelerini işlemek Nasıl yaparım??
 
@@ -131,7 +131,7 @@ Uygulamaya başka bir sayfa eklemek aşağıdakiler anlamına gelir:
 
 Aşağıdaki adımlarda "HelloFlask" projesine bir "About" sayfası ve bu sayfanın giriş sayfasından bağlantıları verilmiştir:
 
-1. **Çözüm Gezgini**, **Şablonlar** klasörüne sağ tıklayın, yeni öğe **Ekle**' yi seçin  >  **New item**, **HTML sayfası** öğe şablonunu seçin, dosyayı adlandırın `about.html` ve **Tamam**' ı seçin.
+1. **Çözüm Gezgini**, **Şablonlar** klasörüne sağ tıklayın, yeni öğe **Ekle**' yi seçin  >  , **HTML sayfası** öğe şablonunu seçin, dosyayı adlandırın `about.html` ve **Tamam**' ı seçin.
 
     > [!Tip]
     > **Yeni öğe** komutu **Ekle** menüsünde görünmezse, Visual Studio 'nun hata ayıklama modundan çıkmasını sağlamak için uygulamayı durdurduğunuzdan emin olun.
@@ -168,7 +168,7 @@ Aşağıdaki adımlarda "HelloFlask" projesine bir "About" sayfası ve bu sayfan
     <div><a href="about">About</a></div>
     ```
 
-1. **Dosya**  >  **Tümünü Kaydet** menü komutunu kullanarak tüm dosyaları kaydedin veya **CTRL** + **+ Shift** + **S**tuşlarına basın. (Teknik olarak, Visual Studio 'da projeyi çalıştırmak için bu adım gerekli değildir. dosyaları otomatik olarak kaydeder. Bununla birlikte, bunun hakkında bilgi edinmek için iyi bir komuttur!)
+1. **Dosya**  >  **Tümünü Kaydet** menü komutunu kullanarak tüm dosyaları kaydedin veya **CTRL** + **+ Shift** + **S** tuşlarına basın. (Teknik olarak, Visual Studio 'da projeyi çalıştırmak için bu adım gerekli değildir. dosyaları otomatik olarak kaydeder. Bununla birlikte, bunun hakkında bilgi edinmek için iyi bir komuttur!)
 
 1. Sonuçları gözlemlemek ve sayfalar arasında gezinmeyi denetlemek için projeyi çalıştırın. Bittiğinde uygulamayı durdurun.
 
@@ -184,7 +184,7 @@ Flask 'nın şablon oluşturma sistemi (varsayılan olarak Jınja), birden çok 
 
 - , Söz dizimi kullanılarak başvuran şablonda belirli bir yere eklediğiniz diğer sayfa şablonlarıyla *dahildir* `{% include <template_path> %}` . Ayrıca, kodda dinamik olarak yolu değiştirmek istiyorsanız bir değişkeni de kullanabilirsiniz. Eklemeleri genellikle sayfanın gövdesinde, paylaşılan şablonu sayfada belirli bir konumda çekmek için kullanılır.
 
-- *Devralma* , `{% extends <template_path> %}` başvuran şablonun üzerinde derleneceği paylaşılan temel şablonu belirtmek için bir sayfa şablonunun başındaki öğesini kullanır. Devralma genellikle, bir uygulamanın sayfalarına yönelik olarak paylaşılan bir düzen, gezinme çubuğu ve diğer yapıları tanımlamak için kullanılır. bu nedenle, şablonlar yalnızca temel şablonun *bloklar*olarak adlandırılan belirli bölgelerini eklemesi veya değiştirmesi gerekir.
+- *Devralma* , `{% extends <template_path> %}` başvuran şablonun üzerinde derleneceği paylaşılan temel şablonu belirtmek için bir sayfa şablonunun başındaki öğesini kullanır. Devralma genellikle, bir uygulamanın sayfalarına yönelik olarak paylaşılan bir düzen, gezinme çubuğu ve diğer yapıları tanımlamak için kullanılır. bu nedenle, şablonlar yalnızca temel şablonun *bloklar* olarak adlandırılan belirli bölgelerini eklemesi veya değiştirmesi gerekir.
 
 Her iki durumda da `<template_path>` uygulamanın *Şablonlar* klasörüne görelidir ( `../` veya `./` Ayrıca izin verilir).
 
@@ -192,7 +192,7 @@ Bir temel şablon, ve etiketlerini kullanarak *blokları* ayırıcıları `{% bl
 
 Aşağıdaki adımlarda devralma gösterilmektedir:
 
-1. Uygulamanın *Şablonlar* klasöründe,layout.html adlı yeni bir HTML dosyası oluşturun ( **Add**  >  **Yeni öğe** Ekle bağlam menüsünü veya **Add**  >  **HTML sayfası**Ekle ' yi kullanarak) *layout.html*ve içeriğini aşağıdaki biçimlendirme ile değiştirin. Bu şablonun, başvuran sayfaların yerini almak için gereken "içerik" adlı bir blok içerdiğini görebilirsiniz:
+1. Uygulamanın *Şablonlar* klasöründe,layout.html adlı yeni bir HTML dosyası oluşturun (   >  **Yeni öğe** Ekle bağlam menüsünü veya   >  **HTML sayfası** Ekle ' yi kullanarak) ve içeriğini aşağıdaki biçimlendirme ile değiştirin. Bu şablonun, başvuran sayfaların yerini almak için gereken "içerik" adlı bir blok içerdiğini görebilirsiniz:
 
     ```html
     <!DOCTYPE html>

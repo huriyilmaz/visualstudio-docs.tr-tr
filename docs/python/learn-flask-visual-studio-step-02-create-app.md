@@ -6,17 +6,17 @@ ms.date: 01/07/2019
 ms.topic: tutorial
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: a06c6dbacf21cb2ce00539af901c24c77aaf9ef5
-ms.sourcegitcommit: 5027eb5c95e1d2da6d08d208fd6883819ef52d05
+ms.openlocfilehash: 8e9d55d9c1c22edea1ff826b23beb6d0ec6b392c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94974091"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99942418"
 ---
 # <a name="step-2-create-a-flask-app-with-views-and-page-templates"></a>2. Adım: görünümler ve sayfa şablonlarıyla bir Flask uygulaması oluşturma
 
@@ -34,7 +34,7 @@ Bu adımda şu adımları öğrenebilirsiniz:
 
 "Boş Flask Web projesi" şablonu tarafından oluşturulan kodda, tek bir görünümle birlikte başlangıç kodu içeren tek bir *app.py* dosyanız vardır. Birden çok görünüm ve şablon içeren bir uygulamanın daha fazla geliştirmesinde izin vermek için, bu kaygıları ayırmak en iyisidir.
 
-1. Proje klasörünüzde adlı bir uygulama klasörü oluşturun `HelloFlask` ( **Çözüm Gezgini** içinde projeye sağ tıklayın ve yeni klasör Ekle ' yi seçin **Add**  >  **New Folder**.)
+1. Proje klasörünüzde adlı bir uygulama klasörü oluşturun `HelloFlask` ( **Çözüm Gezgini** içinde projeye sağ tıklayın ve yeni klasör Ekle ' yi seçin   >  .)
 
 2. *Helloflask* klasöründe, örneği oluşturan ve uygulamanın görünümlerini yükleyen (bir sonraki adımda oluşturulan) aşağıdaki içeriklerle *\_ \_ init \_ \_ . Kopyala* adlı bir dosya oluşturun `Flask` :
 
@@ -45,7 +45,7 @@ Bu adımda şu adımları öğrenebilirsiniz:
     import HelloFlask.views
     ```
 
-3. *Helloflask* klasöründe, aşağıdaki içeriklerle *views.py* adlı bir dosya oluşturun. *views.py* `import HelloFlask.views` *\_ \_ İnit \_ \_ . Kopyala* içinde kullandığınız için views.py adı önemlidir; adlar eşleşmezse çalışma zamanında bir hata görürsünüz.
+3. *Helloflask* klasöründe, aşağıdaki içeriklerle *views.py* adlı bir dosya oluşturun.  `import HelloFlask.views` *\_ \_ İnit \_ \_ . Kopyala* içinde kullandığınız için views.py adı önemlidir; adlar eşleşmezse çalışma zamanında bir hata görürsünüz.
 
     ```python
     from flask import Flask
@@ -82,9 +82,9 @@ Bu adımda şu adımları öğrenebilirsiniz:
 
     ![Kodu yeniden düzenlemeye başladıktan sonra proje yapısı](media/flask/step02-project-structure.png)
 
-7. **Debug**  >  Uygulamayı başlatmak ve bir tarayıcı açmak için, hata **ayıklamayı Başlat** (**F5**) hata ayıkla seçeneğini belirleyin veya araç çubuğunda **Web sunucusu** düğmesini kullanın. Hem/hem de/Home URL 'SI yollarını deneyin.
+7.   >  Uygulamayı başlatmak ve bir tarayıcı açmak için, hata **ayıklamayı Başlat** (**F5**) hata ayıkla seçeneğini belirleyin veya araç çubuğunda **Web sunucusu** düğmesini kullanın. Hem/hem de/Home URL 'SI yollarını deneyin.
 
-8. Ayrıca, kodun çeşitli bölümlerinde kesme noktaları ayarlayabilir ve başlangıç sırasını izlemek için uygulamayı yeniden başlatabilirsiniz. Örneğin, *runserver.py* ve *\_ Helloflask* init_ *. kopyala*' nın ilk satırlarında ve `return "Hello Flask!"` *views.py* içindeki satıra bir kesme noktası ayarlayın. Ardından, uygulamayı yeniden başlatın (**Hata Ayıkla**  >  **Restart**, **CTRL** + **+ SHIFT** + **F5** veya aşağıda gösterilen araç çubuğu düğmesi) ve **F5** kullanarak **F10** her bir kesme noktasından çalıştırın.
+8. Ayrıca, kodun çeşitli bölümlerinde kesme noktaları ayarlayabilir ve başlangıç sırasını izlemek için uygulamayı yeniden başlatabilirsiniz. Örneğin, *runserver.py* ve *\_ Helloflask* init_ *. kopyala*' nın ilk satırlarında ve `return "Hello Flask!"` *views.py* içindeki satıra bir kesme noktası ayarlayın. Ardından, uygulamayı yeniden başlatın (**Hata Ayıkla**  >  , **CTRL** + **+ SHIFT** + **F5** veya aşağıda gösterilen araç çubuğu düğmesi) ve **F5** kullanarakher bir kesme noktasından çalıştırın.
 
     ![Visual Studio 'da hata ayıklama araç çubuğunda yeniden Başlat düğmesi](media/debugging-restart-toolbar-button.png)
 
@@ -203,7 +203,7 @@ Cevap: Şablonlar genellikle ayrı HTML dosyalarında tutulabilse de, bir satır
 
 Cevap: sayfa şablonu dosyaları için *. html* uzantısı tamamen isteğe bağlıdır, çünkü her zaman işlevin ilk bağımsız değişkeninde bulunan dosyanın tam yolunu her zaman belirlemelisiniz `render_template` . Ancak, Visual Studio (ve diğer düzenleyiciler), genellikle, sayfa şablonlarının tamamen HTML olmaması durumunda kod tamamlama ve *. html* dosyalarıyla söz dizimi renklendirme gibi özellikler sağlar.
 
-Aslında, bir Flask projesiyle çalışırken, Visual Studio, düzenlemekte olduğunuz HTML dosyasının aslında bir Flask şablonu olduğu zaman otomatik olarak algılar ve belirli otomatik tamamlanmış özellikleri sağlar. Örneğin, bir Flask sayfa şablonu açıklaması yazmaya başladığınızda, `{#` Visual Studio otomatik olarak kapanış `#}` karakterleri verir. **Açıklama seçimi** ve **seçim komutlarının açıklamasını kaldırın** ( **Edit**  >  **Gelişmiş** düzenleme menüsünde ve araç çubuğunda), HTML açıklamaları yerine şablon açıklamalarını de kullanır.
+Aslında, bir Flask projesiyle çalışırken, Visual Studio, düzenlemekte olduğunuz HTML dosyasının aslında bir Flask şablonu olduğu zaman otomatik olarak algılar ve belirli otomatik tamamlanmış özellikleri sağlar. Örneğin, bir Flask sayfa şablonu açıklaması yazmaya başladığınızda, `{#` Visual Studio otomatik olarak kapanış `#}` karakterleri verir. **Açıklama seçimi** ve **seçim komutlarının açıklamasını kaldırın** (   >  **Gelişmiş** düzenleme menüsünde ve araç çubuğunda), HTML açıklamaları yerine şablon açıklamalarını de kullanır.
 
 ### <a name="question-can-templates-be-organized-into-further-subfolders"></a>Soru: Şablonlar, daha fazla alt klasör halinde düzenlenebilir mi?
 

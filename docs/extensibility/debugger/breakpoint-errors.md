@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 79221c6b-a924-4c8e-a778-e312e4e0c0c8
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 88a5003ce8abe79fcba9f9604047d2265810fda2
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: 840fde5943cb2249bdf73cc92ca15878ae4e3890
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96914497"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99943460"
 ---
 # <a name="breakpoint-errors"></a>Kesme noktası hataları
 Aşağıdaki, bir kesme noktası koda bağlamayı denediğinde ancak başarısız olduğunda süreci açıklar.

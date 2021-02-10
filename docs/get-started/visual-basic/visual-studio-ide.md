@@ -9,17 +9,17 @@ ms.custom:
 ms.topic: conceptual
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 990bff2832f290987ed29fd48b69f4d7a1a05bba
-ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
+ms.openlocfilehash: 3d771fac2cf494e92cbc27fdbdca0b78af97b67e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96189894"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99944400"
 ---
 # <a name="welcome-to-the-visual-studio-ide--visual-basic"></a>Visual Studio IDE 'ye hoş geldiniz | Visual Basic
 
@@ -110,7 +110,7 @@ Visual Studio 'da, yazılım geliştirirken daha üretken olmanıza yardımcı o
    Visual Studio çok sayıda menü, seçenek ve özellik ile zaman içinde yoğun görünebilir. Arama kutusu, Visual Studio 'da gerekenleri hızlı bir şekilde bulmanın harika bir yoludur. Aradığınız bir şeyin adını yazmaya başladığınızda, Visual Studio size tam olarak gitmeniz gereken yere sahip olan sonuçları listeler. Visual Studio 'ya işlevsellik eklemeniz gerekiyorsa, örneğin ek bir programlama dili için destek eklemek istiyorsanız, arama kutusu, bir iş yükünü veya tek bir bileşeni yüklemek için Visual Studio Yükleyicisi açan sonuçlar sağlar.
 
    > [!TIP]
-   > **Ctrl** + Arama kutusunun kısayol olarak Ctrl **Q** tuşuna basın.
+   >  + Arama kutusunun kısayol olarak Ctrl **Q** tuşuna basın.
 
    ::: moniker range="vs-2017"
 
@@ -238,7 +238,7 @@ Visual Studio Kullanıcı arabirimini kişiselleştirmek için, varsayılan renk
 
 ::: moniker-end
 
-2. Menü çubuğunda, **Tools**  >  **Seçenekler** iletişim kutusunu açmak için Araçlar **Seçenekler** ' i seçin.
+2. Menü çubuğunda,   >  **Seçenekler** iletişim kutusunu açmak için Araçlar **Seçenekler** ' i seçin.
 
 3. **Ortam**  >  **genel** seçenekleri sayfasında, **renk teması** seçimini **koyu** olarak değiştirin ve ardından **Tamam**' ı seçin.
 
@@ -330,7 +330,7 @@ IDE 'yi kişiselleştirmek için kullanabileceğiniz diğer yollar hakkında bil
    Console.WriteLine("Hello " + name + "!")
    ```
 
-1. **CTRL** F5 tuşuna basarak uygulamayı yeniden çalıştırın + **F5**.
+1. **CTRL** F5 tuşuna basarak uygulamayı yeniden çalıştırın + .
 
    Visual Studio uygulamayı yeniden oluşturur ve bir konsol penceresi açılır ve sizden adınızı ister.
 
@@ -397,7 +397,7 @@ IDE 'yi kişiselleştirmek için kullanabileceğiniz diğer yollar hakkında bil
    Console.WriteLine("Hello " + name + "!")
    ```
 
-1. **CTRL** F5 tuşuna basarak uygulamayı yeniden çalıştırın + **F5**.
+1. **CTRL** F5 tuşuna basarak uygulamayı yeniden çalıştırın + .
 
    Visual Studio uygulamayı yeniden oluşturur ve bir konsol penceresi açılır ve sizden adınızı ister.
 
@@ -462,7 +462,7 @@ Yeniden [düzenleme](../../ide/refactoring-in-visual-studio.md) ve [IntelliSense
 
 ::: moniker range="vs-2017"
 
-10. **CTRL** F5 tuşuna basarak programı yeniden çalıştırın + **F5**. Çıktı şuna benzer:
+10. **CTRL** F5 tuşuna basarak programı yeniden çalıştırın + . Çıktı şuna benzer:
 
     ![Program çıktısı olan konsol penceresi](../media/overview-console-final.png)
 
@@ -470,7 +470,7 @@ Yeniden [düzenleme](../../ide/refactoring-in-visual-studio.md) ve [IntelliSense
 
 ::: moniker range=">=vs-2019"
 
-10. **CTRL** F5 tuşuna basarak programı yeniden çalıştırın + **F5**. Çıktı şuna benzer:
+10. **CTRL** F5 tuşuna basarak programı yeniden çalıştırın + . Çıktı şuna benzer:
 
     ![Program çıktısı olan konsol penceresi](../media/vs-2019/overview-console-final.png)
 

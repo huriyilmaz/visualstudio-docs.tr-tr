@@ -7,17 +7,17 @@ ms.technology: vs-ide-general
 ms.topic: tutorial
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: c46120c369fa130e83620549ca0bc084a5075f7f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 227d54fbc2734290954fc1c847a34846bb6dc5cf
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87235153"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99944543"
 ---
 # <a name="learn-to-use-the-code-editor-with-visual-basic"></a>Kod düzenleyicisini Visual Basic ile kullanmayı öğrenin
 
@@ -70,7 +70,7 @@ Yeni bir dosya oluşturarak ve buna kod ekleyerek başlayın.
 
 Visual Studio, yaygın olarak kullanılan kod bloklarını hızlı ve kolay bir şekilde oluşturmak için kullanabileceğiniz yararlı *kod parçacıkları* sağlar. [Kod parçacıkları](../../ide/code-snippets.md) Visual Basic, C# ve C++ gibi farklı programlama dilleri için kullanılabilir. Visual Basic **alt** kod parçacığını dosyanıza ekleyelim.
 
-1. İmlecinizi, belirten çizginin üzerine getirin `End Class` ve **Sub**yazın.
+1. İmlecinizi, belirten çizginin üzerine getirin `End Class` ve **Sub** yazın.
 
    `Sub`Anahtar sözcüğü ve **alt** kod parçacığını ekleme hakkında bilgi içeren bir açılır iletişim kutusu görüntülenir.
 
@@ -80,7 +80,7 @@ Visual Studio, yaygın olarak kullanılan kod bloklarını hızlı ve kolay bir 
 
    Alt yordamın ana hattı `MySub()` dosyaya eklenir.
 
-Kullanılabilir kod parçacıkları farklı programlama dilleri için farklılık gösterir. IntelliSense ekleme kod parçacığını **Düzenle**' yi seçerek Visual Basic için kullanılabilir kod parçacıklarına bakabilirsiniz  >  **IntelliSense**  >  **Insert Snippet** (veya **CTRL** + **K**, **CTRL** + **X**tuşlarına basın). Visual Basic için, kod parçacıkları aşağıdaki kategoriler için kullanılabilir:
+Kullanılabilir kod parçacıkları farklı programlama dilleri için farklılık gösterir. IntelliSense ekleme kod parçacığını **Düzenle**' yi seçerek Visual Basic için kullanılabilir kod parçacıklarına bakabilirsiniz  >    >   (veya **CTRL** + **K**, **CTRL** + **X** tuşlarına basın). Visual Basic için, kod parçacıkları aşağıdaki kategoriler için kullanılabilir:
 
 ![Kod parçacığı listesini Visual Basic](media/tutorial-code-snippet-list.png)
 
@@ -116,7 +116,7 @@ Visual Studio 'daki menü çubuğu altındaki düğmelerin satırı olan araç �
                Select word
    ```
 
-1. Diziyi kullanmıyoruz `morewords` , ancak bunu daha sonra tamamen silmek istemdiğimiz için kullanabiliriz. Bunun yerine, bu satırları açıklamaya bakalım. `morewords`Kapanış küme ayracı için tüm tanımı seçin ve ardından araç çubuğundaki **Seçili çizgiler** düğmesini seçin. Klavyeyi kullanmayı tercih ediyorsanız **CTRL** + **K**, **CTRL** + **C**tuşlarına basın.
+1. Diziyi kullanmıyoruz `morewords` , ancak bunu daha sonra tamamen silmek istemdiğimiz için kullanabiliriz. Bunun yerine, bu satırları açıklamaya bakalım. `morewords`Kapanış küme ayracı için tüm tanımı seçin ve ardından araç çubuğundaki **Seçili çizgiler** düğmesini seçin. Klavyeyi kullanmayı tercih ediyorsanız **CTRL** + **K**, **CTRL** + **C** tuşlarına basın.
 
    ![Açıklama dışarı düğmesi](media/tutorial-comment-out.png)
 
@@ -124,7 +124,7 @@ Visual Studio 'daki menü çubuğu altındaki düğmelerin satırı olan araç �
 
 ## <a name="collapse-code-blocks"></a>Kod bloklarını Daralt
 
-Yalnızca ilginizi çeken parçalara odaklanmak için kod bölümlerini daraltabilirsiniz. Pratikte, `_words` diziyi tek bir kod satırına darallayalım. Görüntülenen satırın kenar boşluğunda eksi işareti olan küçük gri kutusunu seçin `Dim _words = New String() {` . Ya da bir klavye kullanıcısı kullanıyorsanız, imleci dizi tanımında herhangi bir yere yerleştirin ve **CTRL** + **m**, **CTRL** + **m**tuşlarına basın.
+Yalnızca ilginizi çeken parçalara odaklanmak için kod bölümlerini daraltabilirsiniz. Pratikte, `_words` diziyi tek bir kod satırına darallayalım. Görüntülenen satırın kenar boşluğunda eksi işareti olan küçük gri kutusunu seçin `Dim _words = New String() {` . Ya da bir klavye kullanıcısı kullanıyorsanız, imleci dizi tanımında herhangi bir yere yerleştirin ve **CTRL** + **m**, **CTRL** + **m** tuşlarına basın.
 
 ![Anahat Daralt düğmesi](media/tutorial-collapse.png)
 
@@ -134,7 +134,7 @@ Kod bloğu yalnızca ilk satırı ve ardından üç nokta () ile daraltır `...`
 
 Visual Studio Düzenleyicisi bir tür, yöntem vb. tanımlamayı incelemenizi kolaylaştırır. Tek bir yol, tanımı içeren dosyaya gitmeniz, örneğin simgenin başvurduğu her yerde **Tanıma Git** ' i seçerek. Odağı, üzerinde çalıştığınız dosyadan uzağa taşımayın, [göz atma tanımını](../../ide/go-to-and-peek-definition.md#peek-definition)kullanmaktır. Türün tanımına göz atalım `String` .
 
-1. Sözcüğe sağ tıklayın `String` ve içerik menüsünden **Açıklama Özeti** ' ni seçin. Alternatif olarak, **alt** + **F12**tuşuna basın.
+1. Sözcüğe sağ tıklayın `String` ve içerik menüsünden **Açıklama Özeti** ' ni seçin. Alternatif olarak, **alt** + **F12** tuşuna basın.
 
    Sınıfının tanımına sahip bir açılır pencere görüntülenir `String` . Açılır pencere içinde kaydırma yapabilir veya atılamıyor kodundan başka bir türün tanımına de göz atın.
 
@@ -156,7 +156,7 @@ Kodlamadan [IntelliSense](../../ide/using-intellisense.md) , değerli bir kaynak
 
    ![Visual Studio 'da IntelliSense kelime tamamlama](media/tutorial-intellisense-completion-list.png)
 
-1. `query`IntelliSense 'in kelime tamamlama işlevini kullanarak sözcüğün geri kalanını eklemek Için **Tab**tuşuna basın.
+1. `query`IntelliSense 'in kelime tamamlama işlevini kullanarak sözcüğün geri kalanını eklemek Için **Tab** tuşuna basın.
 
 1. Aşağıdaki kod gibi görmek için kod bloğunu sona erdirin.
 
@@ -174,7 +174,7 @@ Hiç kimse ilk kez kod alır ve değiştirmeniz gerekebilecek işlemlerden biri 
 
    Düzenleyicinin sağ üst köşesinde bir açılır pencere **yeniden adlandırma** iletişim kutusu görüntülenir.
 
-1. Değişken seçili durumdayken `_words` , istenen **sözcüklerin**adını yazın. `words`Sorgudaki başvurunun da otomatik olarak yeniden adlandırıldığına dikkat edin. **ENTER** tuşuna bastıktan veya **Uygula**' ya tıklamadan önce, **Yeniden Adlandır** açılan kutusunda **açıklamaları dahil et** onay kutusunu seçin.
+1. Değişken seçili durumdayken `_words` , istenen **sözcüklerin** adını yazın. `words`Sorgudaki başvurunun da otomatik olarak yeniden adlandırıldığına dikkat edin. **ENTER** tuşuna bastıktan veya **Uygula**' ya tıklamadan önce, **Yeniden Adlandır** açılan kutusunda **açıklamaları dahil et** onay kutusunu seçin.
 
    ![Yeniden Adlandır iletişim kutusu](media/tutorial-rename.png)
 

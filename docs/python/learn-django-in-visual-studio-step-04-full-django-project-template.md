@@ -6,17 +6,17 @@ ms.date: 11/19/2018
 ms.topic: tutorial
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: c778d830b20797962306700a5af938eb3a3bb142
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3c0a0f0f4e009d689a69e840b31281e65bc5a0e2
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62961712"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99942561"
 ---
 # <a name="step-4-use-the-full-django-web-project-template"></a>4. Adım: tam Docgo Web proje şablonunu kullanma
 
@@ -35,7 +35,7 @@ Bu adımda Şu anda şunları yapabilirsiniz:
 
 ## <a name="step-4-1-create-a-project-from-the-template"></a>Adım 4-1: Şablondan proje oluşturma
 
-1. Visual Studio 'da **Çözüm Gezgini**gidin, bu öğreticide daha önce oluşturulan **learningdocgo** çözümüne sağ tıklayın ve **Add**  >  **Yeni proje**Ekle ' yi seçin. (Alternatif olarak, yeni bir çözüm kullanmak isterseniz **Dosya**  >  ' yı seçin. **Yeni**  >  Bunun yerine **Proje** .)
+1. Visual Studio 'da **Çözüm Gezgini** gidin, bu öğreticide daha önce oluşturulan **learningdocgo** çözümüne sağ tıklayın ve   >  **Yeni proje** Ekle ' yi seçin. (Alternatif olarak, yeni bir çözüm kullanmak isterseniz **Dosya**  >  ' yı seçin. **Yeni**  >  Bunun yerine **Proje** .)
 
 1. Yeni proje iletişim kutusunda **Docgo Web projesi** şablonunu arayıp seçin, "Docgoweb" projesini çağırın ve **Tamam**' ı seçin.
 
@@ -61,7 +61,7 @@ Bu adımda Şu anda şunları yapabilirsiniz:
 
 1. Uygulamanın, izleyen bölümler için çalışır durumda kalmasını sağlayabilirsiniz.
 
-    Uygulamayı durdurmak ve [kaynak denetimine değişiklikleri uygulamak](learn-django-in-visual-studio-step-02-create-an-app.md#commit-to-source-control)istiyorsanız, önce **Takım Gezgini**içindeki **değişiklikler** sayfasını açın, sanal ortam (Belki de **env**) klasörüne sağ tıklayın ve **Bu yerel öğeleri yoksay**' ı seçin.
+    Uygulamayı durdurmak ve [kaynak denetimine değişiklikleri uygulamak](learn-django-in-visual-studio-step-02-create-an-app.md#commit-to-source-control)istiyorsanız, önce **Takım Gezgini** içindeki **değişiklikler** sayfasını açın, sanal ortam (Belki de **env**) klasörüne sağ tıklayın ve **Bu yerel öğeleri yoksay**' ı seçin.
 
 ### <a name="examine-what-the-template-creates"></a>Şablonun ne oluşturduğunu inceleyin
 
@@ -73,7 +73,7 @@ En geniş düzeyde, "Docgo Web projesi" şablonu aşağıdaki yapıyı oluşturu
   - Docgo 1. x üzerinde bir bağımlılık içeren *requirements.txt* .
   - Projeyi oluşturduktan sonra Visual Studio 'da görüntülenen bir dosya olan *readme.html*. Önceki bölümde belirtildiği gibi, uygulama için bir süper kullanıcı (yönetici) hesabı oluşturmak için buradaki yönergeleri izleyin.
 - *Uygulama* klasörü, görünümler, modeller, testler, formlar, şablonlar ve statik dosyalar dahil olmak üzere tüm uygulama dosyalarını içerir (bkz. Adım 4-2). Bu klasörü genellikle daha farklı bir uygulama adı kullanacak şekilde yeniden adlandırmanız gerekir.
-- *Docgoweb* (docgo Projesi) klasörü, tipik docgo proje dosyalarını içerir: * \_ \_ init \_ \_ . Kopyala*, *Settings.py*, *URLs.py*ve *wsgi.py*. Proje şablonunu kullanarak, *Settings.py* zaten uygulama ve veritabanı dosyası için yapılandırılmıştır ve *URLs.py* , oturum açma formu dahil olmak üzere tüm uygulama sayfalarına yönelik yollarla zaten yapılandırılmıştır.
+- *Docgoweb* (docgo Projesi) klasörü, tipik docgo proje dosyalarını içerir: *\_ \_ init \_ \_ . Kopyala*, *Settings.py*, *URLs.py* ve *wsgi.py*. Proje şablonunu kullanarak, *Settings.py* zaten uygulama ve veritabanı dosyası için yapılandırılmıştır ve *URLs.py* , oturum açma formu dahil olmak üzere tüm uygulama sayfalarına yönelik yollarla zaten yapılandırılmıştır.
 
 ### <a name="question-is-it-possible-to-share-a-virtual-environment-between-visual-studio-projects"></a>Soru: Visual Studio projeleri arasında sanal bir ortam paylaşmak mümkün mü?
 
@@ -144,7 +144,7 @@ def about(request):
 </html>
 ```
 
-Tek tek sayfa şablonları, *about.html*, *contact.html*ve *index.html*, her biri temel şablonu *layout.html*'yi genişletir. *about.html* en basit olanıdır ve etiketlerini gösterir `{% extends %}` `{% block content %}` :
+Tek tek sayfa şablonları, *about.html*, *contact.html* ve *index.html*, her biri temel şablonu *layout.html*'yi genişletir. *about.html* en basit olanıdır ve etiketlerini gösterir `{% extends %}` `{% block content %}` :
 
 ```html
 {% extends "app/layout.html" %}
@@ -161,7 +161,7 @@ Tek tek sayfa şablonları, *about.html*, *contact.html*ve *index.html*, her bir
 
 *index.html* ve *contact.html* aynı yapıyı kullanır ve "içerik" bloğunda tablodan içerik sağlar.
 
-*Şablonlar/App* klasöründe ayrıca, *layout.html* 'ye getirilen *loginpartial.html* ile birlikte *login.html*adlı dördüncü bir sayfa `{% include %}` . Bu şablon dosyaları, kimlik doğrulamasında 5. adımda ele alınmıştır.
+*Şablonlar/App* klasöründe ayrıca, *layout.html* 'ye getirilen *loginpartial.html* ile birlikte *login.html* adlı dördüncü bir sayfa `{% include %}` . Bu şablon dosyaları, kimlik doğrulamasında 5. adımda ele alınmıştır.
 
 ### <a name="question-can--block--and--endblock--be-indented-in-the-django-page-template"></a>Soru: {% Block%} ve {% endblock%}, Docgo sayfa şablonunda girintilenebilir mi?
 

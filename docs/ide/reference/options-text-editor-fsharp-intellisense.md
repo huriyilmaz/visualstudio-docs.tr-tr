@@ -8,15 +8,15 @@ f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.FSharp.IntelliSense
 author: jillre
 ms.author: jillfra
-manager: jillfra
+manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 84e24f609891e67bdafaab5ff8847dc341b861ba
-ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
+ms.openlocfilehash: d8005a427aeb0e07235c077d23f12906ab2d29ed
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96039620"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99943867"
 ---
 # <a name="options-text-editor-f-intellisense"></a>Seçenekler, metin düzenleyici, F #, IntelliSense
 
@@ -26,7 +26,7 @@ F # için bazı metin düzenleyici ayarlarını değiştirmek üzere **IntelliSe
 
 - **Bir karakter yazıldıktan sonra tamamlanma listesini göster**
 
-   Bu seçenek belirlendiğinde, yazmaya başladığınızda IntelliSense, tamamlanma listesini otomatik olarak görüntüler. Bu seçeneği seçmezseniz, IntelliSense 'i IntelliSense menüsünde veya **CTRL** Space tuşuna basarak kullanmaya devam edebilirsiniz  +  **Space**.
+   Bu seçenek belirlendiğinde, yazmaya başladığınızda IntelliSense, tamamlanma listesini otomatik olarak görüntüler. Bu seçeneği seçmezseniz, IntelliSense 'i IntelliSense menüsünde veya **CTRL** Space tuşuna basarak kullanmaya devam edebilirsiniz  +  .
 
 - **Bir karakter silindikten sonra tamamlanma listesini göster**
 

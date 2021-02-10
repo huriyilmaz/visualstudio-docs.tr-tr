@@ -7,15 +7,15 @@ ms.topic: conceptual
 ms.assetid: a3643792-b0df-481c-bc35-576f948e04cf
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1cd618b66eed900c2436704d40de5325c1205e85
-ms.sourcegitcommit: dd96a95d87a039525aac86abe689c30e2073ae87
+ms.openlocfilehash: 13d111ea6e812de8290433c416a12dbd252662b5
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/04/2021
-ms.locfileid: "97863487"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99942886"
 ---
 # <a name="interaction-patterns-for-visual-studio"></a>Visual Studio İçin Etkileşim Desenleri
 ## <a name="overview"></a>Genel Bakış
@@ -25,7 +25,7 @@ ms.locfileid: "97863487"
 
 ### <a name="visual-studio-client-pattern-types"></a>Visual Studio Istemci model türleri
 
-|Model türü|Açıklama|Örnekler|
+|Model türü|Description|Örnekler|
 |------------------|-----------------|--------------|
 |**Uygulama düzeyi desenleri**|Uygulamada ortak olan üst düzey desenler, uygulama bağlamını belirleme veya görüntüleme, ve bunlar içinde bileşik ve Denetim desenleri içeren|-Araç pencereleri<br />-Belge pencereleri|
 |**Bileşik desenler**|Uygulama desenleri arasında yayılabilen ortak desenler veya ayrı bir yapılandırmadaki çeşitli denetimlerden oluşan tanınan bir desen|-Geçişi görüntüle<br />-Liste oluşturucular<br />-Verileri görüntüleme<br />-Bildirimler<br />-Doğrulama<br />-Seçim modelleri|

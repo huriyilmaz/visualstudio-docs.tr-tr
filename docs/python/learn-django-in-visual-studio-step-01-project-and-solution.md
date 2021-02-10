@@ -6,17 +6,17 @@ ms.date: 11/19/2018
 ms.topic: tutorial
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 3b21268b488eb0061c5c329e0afcb57ef1ec6e3a
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: afde24347237ed3fc87d7a00ebdf21787d78909c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809930"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99942667"
 ---
 # <a name="tutorial-get-started-with-the-django-web-framework-in-visual-studio"></a>Öğretici: Visual Studio 'da Docgo Web çerçevesini kullanmaya başlama
 
@@ -35,8 +35,8 @@ Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 ## <a name="prerequisites"></a>Önkoşullar
 
 - Aşağıdaki seçeneklerle Visual Studio 2017 veya üzeri Windows üzerinde:
-  - **Python geliştirme** iş yükü (yükleyicideki**iş yükü** sekmesi). Yönergeler için bkz. [Visual Studio 'Da Python desteğini Yüklemeyi](installing-python-support-in-visual-studio.md).
-  - **Visual Studio Için Windows ve GitHub Uzantısı** için **Git** , **kod araçları**altındaki **tek bileşenler** sekmesinde.
+  - **Python geliştirme** iş yükü (yükleyicideki **iş yükü** sekmesi). Yönergeler için bkz. [Visual Studio 'Da Python desteğini Yüklemeyi](installing-python-support-in-visual-studio.md).
+  - **Visual Studio Için Windows ve GitHub Uzantısı** için **Git** , **kod araçları** altındaki **tek bileşenler** sekmesinde.
 
 Docgo proje şablonları, önceki Visual Studio için Python Araçları tüm sürümlerine de dahildir, ancak Ayrıntılar Bu öğreticide açıklanana kadar farklılık gösterebilir (özellikle Docgo çerçevesinin önceki sürümleriyle farklıdır).
 
@@ -60,10 +60,10 @@ Komut satırından Docgo ile çalışırken, genellikle komutunu çalıştırara
 
 1. İletişim kutusunun altındaki alanlarda aşağıdaki bilgileri girin (önceki grafikte gösterildiği gibi) ve ardından **Tamam**' ı seçin:
 
-    - **Ad**: Visual Studio projesinin adını **BasicProject**olarak ayarlayın. Bu ad, Docgo projesi için de kullanılır.
+    - **Ad**: Visual Studio projesinin adını **BasicProject** olarak ayarlayın. Bu ad, Docgo projesi için de kullanılır.
     - **Konum**: Visual Studio çözümünün ve projenin oluşturulacağı bir konum belirtin.
     - **Çözüm**: Bu denetimi varsayılan **yeni çözüm oluştur** seçeneğine ayarlı bırakın.
-    - **Çözüm adı**: Bu öğreticide birden çok projenin kapsayıcısı olarak çözüm olarak uygun olan **Learningdocgo**olarak ayarlanır.
+    - **Çözüm adı**: Bu öğreticide birden çok projenin kapsayıcısı olarak çözüm olarak uygun olan **Learningdocgo** olarak ayarlanır.
     - **Çözüm için dizin oluştur**: kümeyi bırak (varsayılan).
     - **Yeni git deposu oluştur**: Visual Studio 'nun çözümü oluşturduğunda yerel bir git deposu oluşturması için bu seçeneği (varsayılan olarak temiz) seçin. Bu seçeneği görmüyorsanız, Visual Studio yükleyicisi 'ni çalıştırın ve **kod araçları**' nın altındaki **tek bileşenler** sekmesinde Visual Studio için **Git ve Windows** için **GitHub uzantısını** ekleyin.
 
@@ -71,7 +71,7 @@ Komut satırından Docgo ile çalışırken, genellikle komutunu çalıştırara
 
     ![Projenin dış paketler gerektirdiğini söyleyen bir istem](media/django/step01-requirements-prompt-install-myself.png)
 
-1. **Kendim yükleyeceğim**seçeneğini belirleyin. Kaynak denetiminden dışlandığından emin olmak için sanal ortamı kısa süre içinde oluşturursunuz. (Ortam her zaman *requirements.txt*oluşturulabilir.)
+1. **Kendim yükleyeceğim** seçeneğini belirleyin. Kaynak denetiminden dışlandığından emin olmak için sanal ortamı kısa süre içinde oluşturursunuz. (Ortam her zaman *requirements.txt* oluşturulabilir.)
 
 ## <a name="step-1-2-examine-the-git-controls-and-publish-to-a-remote-repository"></a>Adım 1-2: git denetimlerini Inceleme ve uzak depoda yayımlama
 
@@ -90,7 +90,7 @@ Yeni **Proje** iletişim kutusunda **Yeni git deposu oluştur** ' u seçtiğiniz
 
     ![Değişiklikler sayfasında Takım Gezgini penceresi](media/django/step01-team-explorer-changes.png)
 
-1. Visual Studio durum çubuğunda, **Takım Gezgini**' de **eşitleme** sayfasını açmak için teslim edilmemiş işlemeler düğmesini ( **2**ile yukarı ok) seçin. Yalnızca yerel bir depo olduğundan, Bu sayfa depoyu farklı uzak depolara yayımlamak için kolay seçenekler sağlar.
+1. Visual Studio durum çubuğunda, **Takım Gezgini**' de **eşitleme** sayfasını açmak için teslim edilmemiş işlemeler düğmesini ( **2** ile yukarı ok) seçin. Yalnızca yerel bir depo olduğundan, Bu sayfa depoyu farklı uzak depolara yayımlamak için kolay seçenekler sağlar.
 
     ![Kaynak denetimi için kullanılabilir git deposu seçeneklerini gösteren Takım Gezgini pencere](media/django/step01-team-explorer.png)
 
@@ -105,7 +105,7 @@ Yeni **Proje** iletişim kutusunda **Yeni git deposu oluştur** ' u seçtiğiniz
 1. Bu öğreticide çalışırken, değişiklikleri yürütmek ve göndermek için Visual Studio 'daki denetimleri kullanarak düzenli aralıklarla habite ulaşın. Bu öğretici size uygun noktalarda hatırlatır.
 
 > [!Tip]
-> **Takım Gezgini**içinde hızlıca gezinmek için, kullanılabilir sayfaların açılır menüsünü görmek üzere üstbilgiyi seçin (Yukarıdaki **Resimleri okur veya** yukarıdaki görüntüleri **Gönder** ) seçeneğini belirleyin.
+> **Takım Gezgini** içinde hızlıca gezinmek için, kullanılabilir sayfaların açılır menüsünü görmek üzere üstbilgiyi seçin (Yukarıdaki **Resimleri okur veya** yukarıdaki görüntüleri **Gönder** ) seçeneğini belirleyin.
 
 ### <a name="question-what-are-some-advantages-of-using-source-control-from-the-beginning-of-a-project"></a>Soru: bir projenin başından itibaren kaynak denetimi kullanmanın avantajları nelerdir?
 
@@ -115,7 +115,7 @@ Otomasyon olarak kaynak denetimi hakkında daha fazla bilgi için bkz. [Truth 'N
 
 ### <a name="question-can-i-prevent-visual-studio-from-auto-committing-a-new-project"></a>Soru: Visual Studio 'Nun yeni bir projeyi otomatik olarak çalıştırmasını engelleyebilir miyim?
 
-Yanıt: Evet. Otomatik yürütmeyi devre dışı bırakmak için **Takım Gezgini** **Ayarlar** sayfasına gidin, **Git**  >  **genel ayarları**' nı seçin, **Varsayılan olarak Birleştirmeden sonra değişiklikleri Yürüt**etiketli seçeneği temizleyin ve ardından **Güncelleştir**' i seçin.
+Yanıt: Evet. Otomatik yürütmeyi devre dışı bırakmak için **Takım Gezgini** **Ayarlar** sayfasına gidin, **Git**  >  **genel ayarları**' nı seçin, **Varsayılan olarak Birleştirmeden sonra değişiklikleri Yürüt** etiketli seçeneği temizleyin ve ardından **Güncelleştir**' i seçin.
 
 ## <a name="step-1-3-create-the-virtual-environment-and-exclude-it-from-source-control"></a>Adım 1-3: sanal ortam oluşturma ve kaynak denetiminden dışlama
 
@@ -133,9 +133,9 @@ Projeniz için kaynak denetimini yapılandırdığınıza göre, proje için ger
 
 1. İstenirse, yönetici ayrıcalıklarına onay vermeniz gerekiyorsa, Visual Studio paketleri indirirken ve yüklerken birkaç dakika bekleyin. Bu, Docgo için birkaç bin dosyanın çok sayıda alt klasör üzerinde genişletilmesi anlamına gelir! İlerlemeyi, Visual Studio **çıktı** penceresinde görebilirsiniz. Beklerken, aşağıdaki soru bölümlerini izleyin.
 
-1. Visual Studio git denetimlerinde (durum çubuğunda), **Takım Gezgini**içindeki **değişiklikler** sayfasını açan değişiklikler göstergesini ( **99&#42;**) seçin.
+1. Visual Studio git denetimlerinde (durum çubuğunda), **Takım Gezgini** içindeki **değişiklikler** sayfasını açan değişiklikler göstergesini ( **99&#42;**) seçin.
 
-    Sanal ortam, binlerce değişikliğe göre oluşturulur, ancak siz (ya da projeyi Klonladığınız herkes) her zaman ortamı *requirements.txt*yeniden oluşturabileceğinden kaynak denetimine bunlardan herhangi birini eklemeniz gerekmez.
+    Sanal ortam, binlerce değişikliğe göre oluşturulur, ancak siz (ya da projeyi Klonladığınız herkes) her zaman ortamı *requirements.txt* yeniden oluşturabileceğinden kaynak denetimine bunlardan herhangi birini eklemeniz gerekmez.
 
     Sanal ortamı dışlamak için **env** klasörüne sağ tıklayın ve **Bu yerel öğeleri yoksay**' ı seçin.
 
@@ -151,9 +151,9 @@ Cevap: sanal bir ortam, uygulamanızın tam bağımlılıklarını yalıtmak iç
 
 ### <a name="question-how-do-i-remove-a-virtual-environment-thats-already-committed-to-source-control"></a>Soru: kaynak denetimine zaten kaydedilmiş bir sanal ortamı kaldırmak Nasıl yaparım? mı?
 
-Cevap: Ilk olarak, klasörü hariç tutmak için *. gitignore* dosyanızı düzenleyin: ile birlikte, açıklama ile sonundaki bölümü bulun `# Python Tools for Visual Studio (PTVS)` ve sanal ortam klasörü için gibi yeni bir satır ekleyin `/BasicProject/env` . (Visual Studio **Çözüm Gezgini**dosyayı göstermediğinden, **dosyayı doğrudan dosya**  >  kullanarak açın **Açık**  >  **Dosya** menü komutu. Dosyayı **Takım Gezgini**içinden de açabilirsiniz: **Ayarlar** sayfasında **Depo ayarları**' nı seçin, **& öznitelik dosyalarını yoksay** bölümüne gidin ve sonra **. gitignore**' in yanındaki **Düzenle** bağlantısını seçin.
+Cevap: Ilk olarak, klasörü hariç tutmak için *. gitignore* dosyanızı düzenleyin: ile birlikte, açıklama ile sonundaki bölümü bulun `# Python Tools for Visual Studio (PTVS)` ve sanal ortam klasörü için gibi yeni bir satır ekleyin `/BasicProject/env` . (Visual Studio **Çözüm Gezgini** dosyayı göstermediğinden, **dosyayı doğrudan dosya**  >  kullanarak açın **Açık**  >  **Dosya** menü komutu. Dosyayı **Takım Gezgini** içinden de açabilirsiniz: **Ayarlar** sayfasında **Depo ayarları**' nı seçin, **& öznitelik dosyalarını yoksay** bölümüne gidin ve sonra **. gitignore**' in yanındaki **Düzenle** bağlantısını seçin.
 
-İkinci olarak, bir komut penceresi açın, *env*ve çalıştırmak gibi sanal ortam klasörünü Içeren *BasicProject* gibi bir klasöre gidin `git rm -r env` . Sonra bu değişiklikleri komut satırından ( `git commit -m 'Remove venv'` ) işleyin veya **Takım Gezgini** **değişiklikler** sayfasından işleyin.
+İkinci olarak, bir komut penceresi açın, *env* ve çalıştırmak gibi sanal ortam klasörünü Içeren *BasicProject* gibi bir klasöre gidin `git rm -r env` . Sonra bu değişiklikleri komut satırından ( `git commit -m 'Remove venv'` ) işleyin veya **Takım Gezgini** **değişiklikler** sayfasından işleyin.
 
 ## <a name="step-1-4-examine-the-boilerplate-code"></a>Adım 1-4: ortak kodu Inceleme
 
@@ -190,7 +190,7 @@ Yanıt: Evet. **Python ortamları** düğümünü genişletin, sanal ortamınız
 
     ![Docgo proje varsayılan görünümü](media/django/step01-first-run-success.png)
 
-1. İşiniz bittiğinde, konsol penceresini kapatarak veya **Debug**  >  Visual Studio 'da hata**ayıklamayı Durdur** komutunu kullanarak sunucuyu durdurun.
+1. İşiniz bittiğinde, konsol penceresini kapatarak veya   >  Visual Studio 'da hata **ayıklamayı Durdur** komutunu kullanarak sunucuyu durdurun.
 
 ### <a name="question-is-django-a-web-server-as-well-as-a-framework"></a>Soru: bir Web sunucusunun yanı sıra bir çerçeve mi?
 
@@ -198,7 +198,7 @@ Cevap: Evet ve hayır. Docgo 'ın geliştirme amacıyla kullanılan yerleşik bi
 
 ### <a name="question-whats-the-difference-between-using-the-debug-menu-commands-and-the-server-commands-on-the-projects-python-submenu"></a>Soru: Hata Ayıkla menü komutlarının ve proje Python alt menüsünde sunucu komutlarının kullanımı arasındaki fark nedir?
 
-Cevap: **hata ayıklama** menü komutları ve araç çubuğu düğmelerine ek olarak, **Python**  >  projenin bağlam menüsündeki Python**çalıştırma sunucusu** veya **Python**  >  **çalıştırma hata ayıklama sunucusu** komutlarını kullanarak sunucuyu da başlatabilirsiniz. Her iki komut de çalışan sunucu için yerel URL 'YI (localhost: bağlantı noktası) görebileceğiniz bir konsol penceresi açar. Ancak, bu URL ile bir tarayıcıyı el ile açmanız gerekir ve hata ayıklama sunucusunu çalıştırmak Visual Studio hata ayıklayıcıyı otomatik olarak başlatmamalıdır. Çalıştırmak istiyorsanız, **Debug**  >  **işlemek için** hata ayıkla komutunu kullanarak, çalışan işleme daha sonra bir hata ayıklayıcı ekleyebilirsiniz.
+Cevap: **hata ayıklama** menü komutları ve araç çubuğu düğmelerine ek olarak,   >  projenin bağlam menüsündeki Python **çalıştırma sunucusu** veya **Python**  >  **çalıştırma hata ayıklama sunucusu** komutlarını kullanarak sunucuyu da başlatabilirsiniz. Her iki komut de çalışan sunucu için yerel URL 'YI (localhost: bağlantı noktası) görebileceğiniz bir konsol penceresi açar. Ancak, bu URL ile bir tarayıcıyı el ile açmanız gerekir ve hata ayıklama sunucusunu çalıştırmak Visual Studio hata ayıklayıcıyı otomatik olarak başlatmamalıdır. Çalıştırmak istiyorsanız,   >  **işlemek için** hata ayıkla komutunu kullanarak, çalışan işleme daha sonra bir hata ayıklayıcı ekleyebilirsiniz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

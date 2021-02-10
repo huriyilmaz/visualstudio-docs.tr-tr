@@ -6,23 +6,23 @@ ms.date: 11/19/2018
 ms.topic: tutorial
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: bdc76b0a7b9d3f74da77b317faf31dae83706f04
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ea708c1721d85468d99a0ccc327f378042579f85
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62957891"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99942496"
 ---
 # <a name="step-5-authenticate-users-in-django"></a>5. Adım: Docgo 'da kullanıcıların kimliğini doğrulama
 
 **Önceki adım: [tam Docgo Web proje şablonunu kullanma](learn-django-in-visual-studio-step-04-full-django-project-template.md)**
 
-Kimlik doğrulaması Web uygulamaları için yaygın bir gereksinimdir, "Docgo Web projesi" şablonu temel bir kimlik doğrulama akışı içerir. (Bu öğreticinin 6. adımında açıklanan "Docgo Web projesini yoklamalar" şablonu aynı akışı da içerir.) Docgo proje şablonlarından herhangi birini kullanırken, Visual Studio Docgo projesinin *Settings.py*kimlik doğrulaması için gerekli tüm modülleri içerir.
+Kimlik doğrulaması Web uygulamaları için yaygın bir gereksinimdir, "Docgo Web projesi" şablonu temel bir kimlik doğrulama akışı içerir. (Bu öğreticinin 6. adımında açıklanan "Docgo Web projesini yoklamalar" şablonu aynı akışı da içerir.) Docgo proje şablonlarından herhangi birini kullanırken, Visual Studio Docgo projesinin *Settings.py* kimlik doğrulaması için gerekli tüm modülleri içerir.
 
 Bu adımda şunları öğreneceksiniz:
 
@@ -76,7 +76,7 @@ Aşağıdaki adımlar, kimlik doğrulama akışını ve projenin dahil olduğu b
     }
     ```
 
-    Burada, `template_name` oturum açma sayfasının şablonunu, bu durumda *Templates/app/login.html*olarak tanımlar. `extra_context`Özelliği, şablona verilen varsayılan bağlam verilerine eklenir. Son olarak, `authentication_form` oturum açmayla birlikte kullanılacak bir form sınıfı belirtir; şablonda nesne olarak görünür `form` . Varsayılan değer `AuthenticationForm` (from `django.contrib.auth.views` ); bunun yerine Visual Studio proje şablonu, uygulamanın *Forms.py* dosyasında tanımlanan formu kullanır:
+    Burada, `template_name` oturum açma sayfasının şablonunu, bu durumda *Templates/app/login.html* olarak tanımlar. `extra_context`Özelliği, şablona verilen varsayılan bağlam verilerine eklenir. Son olarak, `authentication_form` oturum açmayla birlikte kullanılacak bir form sınıfı belirtir; şablonda nesne olarak görünür `form` . Varsayılan değer `AuthenticationForm` (from `django.contrib.auth.views` ); bunun yerine Visual Studio proje şablonu, uygulamanın *Forms.py* dosyasında tanımlanan formu kullanır:
 
     ```python
     from django import forms
@@ -154,7 +154,7 @@ Aşağıdaki adımlar, kimlik doğrulama akışını ve projenin dahil olduğu b
 
 1. Özellikle süper kullanıcı veya yönetici, "/admin/" ve "/admin/doc/" göreli URL 'Leri kullanılarak yerleşik Docgo yönetici arabirimlerine erişme yetkisine sahiptir. Bu arabirimleri etkinleştirmek için aşağıdakileri yapın:
 
-    1. Docutils Python paketini ortamınıza yükler. Bunu yapmanın harika bir yolu, *requirements.txt* dosyanıza "docutils" eklemek, ardından **Çözüm Gezgini**, projeyi genişletmeniz, **Python ortamları** düğümünü genişletmeniz ve ardından requirements.txtbir SELECT **yüklemesi **kullandığınız ortama sağ tıklamanız gerekir.
+    1. Docutils Python paketini ortamınıza yükler. Bunu yapmanın harika bir yolu, *requirements.txt* dosyanıza "docutils" eklemek, ardından **Çözüm Gezgini**, projeyi genişletmeniz, **Python ortamları** düğümünü genişletmeniz ve ardından requirements.txtbir SELECT **yüklemesi** kullandığınız ortama sağ tıklamanız gerekir.
 
     1. Docgo projesinin *URLs.py* açın ve aşağıdaki girişlerden varsayılan açıklamaları kaldırın:
 

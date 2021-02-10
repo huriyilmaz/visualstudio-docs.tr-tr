@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 9c0bc950-7323-4f0f-8de2-0b0af9a42b85
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 402aa5deaae6b082c8360b9867807516f11d935d
-ms.sourcegitcommit: dfbbf041e68ec3a4cd97196b19c9226a4793e702
+ms.openlocfilehash: 0421a5cdb93c64093ae5b428260c78da44e71e3c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91879040"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99944205"
 ---
 # <a name="customize-the-help-viewer"></a>Yardım Görüntüleyiciyi özelleştirme
 Yardım Görüntüleyici pencerelerinin yerleşimini, yazı tipi boyutu, en fazla sonuç sayısı ve Ingilizce içerik dahil edilip edilmeyeceğini özelleştirebilirsiniz.
@@ -31,7 +31,7 @@ Yardım görüntüleyicisinin pencere yerleşimini özelleştirebilirsiniz. Yard
 Yardım Görüntüleyicisi, Standart yerleştirme işlevlerini destekler. Varsayılan olarak, yardım görüntüleyicisindeki tüm sekmeler yerleşik olarak bulunur, ancak bunları taşıyabilir, yeniden boyutlandırabilir, diğer konumlara sabitleyebilir ve "float" yazarak bağımsız alt pencereler olarak görünürler.
 
 ### <a name="opening-a-topic-in-a-new-tab"></a>Konuyu yeni bir sekmede açma
-Herhangi bir gezinti sekmesinde konuyu seçin ve ardından **CTRL + ENTER**tuşlarına basın.
+Herhangi bir gezinti sekmesinde konuyu seçin ve ardından **CTRL + ENTER** tuşlarına basın.
 
 ### <a name="minimize-a-navigation-tab"></a>Gezinti sekmesini en aza indirme
 Gezinti sekmeleri için PIN simgesini seçerek konuları görüntülemek için daha fazla alan oluşturun. Bu sekmeler küçültüldüğünde, pencerenin en yakın kenarında yalnızca etiketleri görüntülenir. Sekmeleri geri yüklemek için herhangi bir sekmenin etiketini seçin ve sonra PIN simgesini yeniden seçin.

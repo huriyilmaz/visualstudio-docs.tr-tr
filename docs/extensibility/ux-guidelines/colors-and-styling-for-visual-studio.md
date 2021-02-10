@@ -7,15 +7,15 @@ ms.topic: conceptual
 ms.assetid: 0e384ea1-4d9e-4307-8884-6e183900732c
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 99e33ae67e0fd18ecd9a1a40a8b8075cd22d4bf7
-ms.sourcegitcommit: 94a57a7bda3601b83949e710a5ca779c709a6a4e
+ms.openlocfilehash: bf32f4cd32ad6e53c1db33f75f68559e84414436
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/21/2020
-ms.locfileid: "97715671"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99942912"
 ---
 # <a name="colors-and-styling-for-visual-studio"></a>Visual Studio İçin Renkler ve Stil
 
@@ -360,7 +360,7 @@ Altında `[HKLM\SOFTWARE\Microsoft \Visual Studio\\<Visual Studio version\>\Font
 
 Kayıt defterini iki değerle doldurun:
 
-| Ad | Tür | Veriler | Açıklama |
+| Ad | Tür | Veriler | Description |
 | --- | --- | --- | --- |
 | Kategori | REG_SZ | GUID | Kategoriyi tanımlamak için oluşturulmuş bir GUID |
 | Paket | REG_SZ | GUID | Kategoriyi destekleyen VSPackage hizmetinin GUID 'SI |
@@ -373,7 +373,7 @@ Kayıt defterini iki değerle doldurun:
 
 Kayıt defterini iki değerle doldurun:
 
-| Ad | Tür | Veriler | Açıklama |
+| Ad | Tür | Veriler | Description |
 |--- | --- | --- | --- |
 | Kategori | REG_SZ | GUID | Kategoriyi tanımlamak için oluşturulmuş bir GUID |
 | Paket | REG_SZ | GUID | Kategoriyi destekleyen VSPackage hizmetinin GUID 'SI |

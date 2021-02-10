@@ -12,15 +12,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, extending SharePoint Connections node in Server Explorer
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: bad90701d19f97036ecba55bb2901739ad30b200
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: 4983930a7c16edef826a5912abf0870598b1f906
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94903552"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99943802"
 ---
 # <a name="how-to-extend-a-sharepoint-node-in-server-explorer"></a>Nasıl yapılır: Sunucu Gezgini bir SharePoint düğümünü genişletme
   **Sunucu Gezgini** Içindeki **SharePoint bağlantıları** düğümünün altında düğümleri genişletebilirsiniz. Bu, varolan bir düğüme yeni alt düğümler, kısayol menü öğeleri veya özellikler eklemek istediğinizde yararlıdır. Daha fazla bilgi için, bkz. [Sunucu Gezgini SharePoint bağlantıları düğümünü genişletme](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md).

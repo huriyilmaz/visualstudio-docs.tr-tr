@@ -6,17 +6,17 @@ ms.date: 11/19/2018
 ms.topic: tutorial
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 1f81c665bc742daf7e2b0e34a849aad566362a28
-ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
+ms.openlocfilehash: 5e524232eed7e4044454c57fc4fcaa30c6e2a8a0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92099342"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99942483"
 ---
 # <a name="step-6-use-the-polls-django-web-project-template"></a>6. Adım: Docgo Web proje şablonunu yoklayan şekilde kullanın
 
@@ -37,7 +37,7 @@ Bu şablon kullanılarak oluşturulan bir proje, Docgo belgelerinden [Ilk Docgo 
 
 ## <a name="step-6-1-create-the-project-and-initialize-the-database"></a>Adım 6-1: projeyi oluşturma ve veritabanını başlatma
 
-1. Visual Studio 'da **Çözüm Gezgini**gidin, bu öğreticide daha önce oluşturulan **learningdocgo** çözümüne sağ tıklayın ve **Add**  >  **Yeni proje**Ekle ' yi seçin. (Alternatif olarak, yeni bir çözüm kullanmak isterseniz **Dosya**  >  ' yı seçin. **Yeni**  >  Bunun yerine **Proje** .)
+1. Visual Studio 'da **Çözüm Gezgini** gidin, bu öğreticide daha önce oluşturulan **learningdocgo** çözümüne sağ tıklayın ve   >  **Yeni proje** Ekle ' yi seçin. (Alternatif olarak, yeni bir çözüm kullanmak isterseniz **Dosya**  >  ' yı seçin. **Yeni**  >  Bunun yerine **Proje** .)
 
 1. Yeni proje iletişim kutusunda, **Docgo Web projesi şablonunu yoklayıp** seçin, "DjangoPolls" projesini çağırın ve **Tamam**' ı seçin.
 
@@ -61,7 +61,7 @@ Bu şablon kullanılarak oluşturulan bir proje, Docgo belgelerinden [Ilk Docgo 
 
 1. Uygulamanın, izleyen bölümler için çalışır durumda kalmasını sağlayabilirsiniz.
 
-    Uygulamayı durdurmak ve [kaynak denetimine değişiklikleri uygulamak](learn-django-in-visual-studio-step-02-create-an-app.md#commit-to-source-control)istiyorsanız, önce **Takım Gezgini**içindeki **değişiklikler** sayfasını açın, sanal ortam (Belki de **env**) klasörüne sağ tıklayın ve **Bu yerel öğeleri yoksay**' ı seçin.
+    Uygulamayı durdurmak ve [kaynak denetimine değişiklikleri uygulamak](learn-django-in-visual-studio-step-02-create-an-app.md#commit-to-source-control)istiyorsanız, önce **Takım Gezgini** içindeki **değişiklikler** sayfasını açın, sanal ortam (Belki de **env**) klasörüne sağ tıklayın ve **Bu yerel öğeleri yoksay**' ı seçin.
 
 ### <a name="examine-the-project-contents"></a>Proje içeriğini inceleyin
 
@@ -77,7 +77,7 @@ Bu makalenin ilerleyen bölümlerinde 6-3 adımında bir geçişle çalışırs�
 
 ## <a name="step-6-2-understand-data-models"></a>Adım 6-2: veri modellerini anlama
 
-Yoklama ve seçim adlı uygulama modelleri *App/modeller. Kopyala*bölümünde tanımlanmıştır. , ' Dan türetilen ve ' ın `django.db.models.Model` `models` sınıf, `CharField` `IntegerField` veritabanı sütunları ile eşlenen modeldeki alanları tanımlamak için ve gibi yöntemleri kullanan bir Python sınıfıdır.
+Yoklama ve seçim adlı uygulama modelleri *App/modeller. Kopyala* bölümünde tanımlanmıştır. , ' Dan türetilen ve ' ın `django.db.models.Model` `models` sınıf, `CharField` `IntegerField` veritabanı sütunları ile eşlenen modeldeki alanları tanımlamak için ve gibi yöntemleri kullanan bir Python sınıfıdır.
 
 ```python
 from django.db import models
@@ -183,9 +183,9 @@ Bir modeli değiştirmenin etkisini görmek için aşağıdaki adımları deneyi
     ```
 
 1. Dosyayı kaydedin, sonra **Çözüm Gezgini** ' de **DjangoPolls** projesine sağ tıklayın ve **Python**  >  **docgo geçişleri yap** komutunu seçin.
-1. **Project**  >  Yeni oluşturulan betiği, **geçiş** klasörü **002_auto_** ile başlayan geçişler klasöründe görmek için proje**tüm dosyaları göster** komutunu seçin. Bu dosyaya sağ tıklayın ve **projeye dahil et**' i seçin. Sonra **Project**  >  orijinal görünümü geri yüklemek için proje**tüm dosyaları yeniden göster** ' i seçebilirsiniz. (Bu adımla ilgili ayrıntılar için aşağıdaki ikinci soruya bakın.)
+1.   >  Yeni oluşturulan betiği, **geçiş** klasörü **002_auto_** ile başlayan geçişler klasöründe görmek için proje **tüm dosyaları göster** komutunu seçin. Bu dosyaya sağ tıklayın ve **projeye dahil et**' i seçin. Sonra   >  orijinal görünümü geri yüklemek için proje **tüm dosyaları yeniden göster** ' i seçebilirsiniz. (Bu adımla ilgili ayrıntılar için aşağıdaki ikinci soruya bakın.)
 1. İsterseniz, Docgo 'nun önceki model durumundan yeni duruma nasıl değişiklik olduğunu incelemek için bu dosyayı açın.
-1. Visual Studio projesine tekrar sağ tıklayın ve **Python**  >  değişiklikleri veritabanına uygulamak için Python**docgo geçişi** ' ni seçin.
+1. Visual Studio projesine tekrar sağ tıklayın ve   >  değişiklikleri veritabanına uygulamak için Python **docgo geçişi** ' ni seçin.
 1. İsterseniz, değişikliği onaylamak için veritabanını uygun bir görüntüleyicide açın.
 
 Genel, Dibgo 'nun geçiş özelliği, veritabanı şemanızı hiçbir şekilde el ile yönetmeyeceğiniz anlamına gelir. Modellerinizde değişiklikler yapmanız, geçiş betikleri oluşturmanız ve geçirme komutuyla uygulamanız yeterlidir.
@@ -210,7 +210,7 @@ Cevap: Evet, [docgo-admin showgeçişleri komutunu](https://docs.djangoproject.c
 
 Bu öğreticide daha önce sizinle çalıştığınız "Docgo Web projesi" şablonu tarafından oluşturulan görünümlerin büyük bir çoğunluğu, yaklaşık olarak bu öğreticide daha önce çalıştık. Yoklamalar uygulamasındaki farklı özellikler, giriş sayfasının, oylama ve yoklama sonuçlarını görüntülemek için birkaç eklenen sayfa gibi modelleri kullanmasına olanak sağlar.
 
-İle başlamak için, urls.py dosyasındaki Docgo projesi dizisinin ilk satırı `urlpatterns` yalnızca bir uygulama *urls.py* görünümüne basit bir yönlendirmeden daha fazla. Bunun yerine, uygulamanın kendi *URLs.py* dosyasını çeker:
+İle başlamak için, urls.py dosyasındaki Docgo projesi dizisinin ilk satırı `urlpatterns` yalnızca bir uygulama  görünümüne basit bir yönlendirmeden daha fazla. Bunun yerine, uygulamanın kendi *URLs.py* dosyasını çeker:
 
 ```python
 from django.conf.urls import url, include
@@ -258,9 +258,9 @@ Burada daha karmaşık normal ifadelerle ilgili bilgi sahibi değilseniz, bir a�
 
 Docgo 'da sözdizimi `?P<name>pattern` adlı bir grup oluşturur `name` ve bu, görünümler için bağımsız değişken olarak, göründüğü sırada geçirilir. Daha önce gösterilen kodda adlı bir bağımsız değişken alır ve adlı bir bağımsız `PollsDetailView` `PollsResultsView` `pk` `app.views.vote` değişken alır `poll_id` .
 
-Ayrıca, görünümlerin çoğunun yalnızca *App/views. Kopyala*içindeki bir görünüm işlevine yönelik başvuruları doğrudan yönlendirmediğinden de bakabilirsiniz. Bunun yerine, en çok, veya ' den türetilen aynı dosyadaki bir sınıfa `django.views.generic.ListView` başvurur `django.views.generic.DetailView` . Temel sınıflar `as_view` , `template_name` şablonu tanımlamak için bir bağımsız değişken veren yöntemler sağlar. Ana `ListView` sayfa için kullanılan temel sınıf, `queryset` Bu durumda, verileri içeren bir özelliği ve `context_object_name` şablondaki verilere başvurmak istediğiniz değişken adına sahip bir özelliği de bekler `latest_poll_list` .
+Ayrıca, görünümlerin çoğunun yalnızca *App/views. Kopyala* içindeki bir görünüm işlevine yönelik başvuruları doğrudan yönlendirmediğinden de bakabilirsiniz. Bunun yerine, en çok, veya ' den türetilen aynı dosyadaki bir sınıfa `django.views.generic.ListView` başvurur `django.views.generic.DetailView` . Temel sınıflar `as_view` , `template_name` şablonu tanımlamak için bir bağımsız değişken veren yöntemler sağlar. Ana `ListView` sayfa için kullanılan temel sınıf, `queryset` Bu durumda, verileri içeren bir özelliği ve `context_object_name` şablondaki verilere başvurmak istediğiniz değişken adına sahip bir özelliği de bekler `latest_poll_list` .
 
-Artık `PollListView` *uygulama/görünümlerde*aşağıdaki gibi tanımlanan giriş sayfası için ' i inceleyebilirsiniz:
+Artık `PollListView` *uygulama/görünümlerde* aşağıdaki gibi tanımlanan giriş sayfası için ' i inceleyebilirsiniz:
 
 ```python
 class PollListView(ListView):
@@ -327,7 +327,7 @@ Burada, görünümün kendisine karşılık gelen şablonu diğer sayfalar gibi 
 
 İlki, Docgo projesi *URLs.py* içindeki URL desenleri `url(r'^admin/', include(admin.site.urls)),` Varsayılan olarak eklenmiştir; "Yönetici/belge" deseni de dahil edilir ancak açıklama eklenir.
 
-Daha sonra uygulama, *admin.py* `django.contrib.admin` `INSTALLED_APPS` *Settings.py*dizisine dahil olmak üzere yönetim arabirimini ziyaret ettiğinizde docgo 'nun otomatik olarak çalıştığı admin.py dosyasını içerir. Proje şablonu tarafından sağlandığı gibi bu dosyadaki kod aşağıdaki gibidir:
+Daha sonra uygulama,  `django.contrib.admin` `INSTALLED_APPS` *Settings.py* dizisine dahil olmak üzere yönetim arabirimini ziyaret ettiğinizde docgo 'nun otomatik olarak çalıştığı admin.py dosyasını içerir. Proje şablonu tarafından sağlandığı gibi bu dosyadaki kod aşağıdaki gibidir:
 
 ```python
 from django.contrib import admin
@@ -370,7 +370,7 @@ Geliştirme bilgisayarınızda bir Web uygulaması çalıştırmak, uygulamayı 
 
 - Web uygulamasını Azure App Service gibi bir üretim sunucusuna dağıtın. Bkz. [Azure App Service yayımlama](publishing-python-web-applications-to-azure-from-visual-studio.md).
 
-- *Şablonlar/404.html*adlı bir şablon oluşturarak 404 sayfasını özelleştirin. Mevcut olduğunda, Docgo, varsayılan değer yerine bu şablonu kullanır. Daha fazla bilgi için, bkz. Docgo belgelerindeki [hata görünümleri](https://docs.djangoproject.com/en/2.0/ref/views/#error-views) .
+- *Şablonlar/404.html* adlı bir şablon oluşturarak 404 sayfasını özelleştirin. Mevcut olduğunda, Docgo, varsayılan değer yerine bu şablonu kullanır. Daha fazla bilgi için, bkz. Docgo belgelerindeki [hata görünümleri](https://docs.djangoproject.com/en/2.0/ref/views/#error-views) .
 
 - Birim testlerini *Tests.py*'de yazın; Visual Studio proje şablonları bunlar için başlangıç noktaları sağlar ve dmongo belgelerinde dmongo 'da [Ilk Dmongo uygulamanızı yazma, 5. bölüm-test](https://docs.djangoproject.com/en/2.0/intro/tutorial05/) ve [test etme](https://docs.djangoproject.com/en/2.0/topics/testing/) konusunda daha fazla bilgi bulabilirsiniz.
 
