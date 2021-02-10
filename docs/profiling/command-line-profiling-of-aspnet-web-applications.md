@@ -10,16 +10,16 @@ helpviewer_keywords:
 ms.assetid: 897c00d5-5767-433b-a960-4a29c6023ede
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - aspnet
-ms.openlocfilehash: c4c95890ae4022b854b76d2e4857fc2a27ce97e5
-ms.sourcegitcommit: 7a5c4f60667b5792f876953d55192b49a73f5fe9
+ms.openlocfilehash: e97e6a3d9115be2b14cac4e87698c6eeb9fc091d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98533699"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99945194"
 ---
 # <a name="command-line-profiling-of-aspnet-web-applications"></a>ASP.NET Web uygulamalarının komut satırı profili oluşturma
 Bu bölümde, [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] komut satırından profil oluşturma araçları kullanarak Web uygulamaları için performans verilerini toplamaya yönelik yordamlar ve seçenekler açıklanmaktadır [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .

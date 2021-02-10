@@ -10,17 +10,17 @@ ms.topic: quickstart
 ms.devlang: vb
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: 20b2cf2bf12e9b24ca12d0a73b43e4a56e8246f4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e3c6646fca0f0b20f7fb5d5d018c297d1ece920d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77579481"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99945558"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-c-console-app"></a>Hızlı başlangıç: ilk C# konsol uygulamanızı oluşturmak için Visual Studio 'Yu kullanma
 
@@ -48,7 +48,7 @@ Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://
 
 2. Üstteki menü çubuğundan **Dosya** > **Yeni** > **Proje**' yi seçin.
 
-3. Sol bölmedeki **Yeni proje** iletişim kutusunda **C#**' ı genişletin ve ardından **.NET Core**' u seçin. Orta bölmede **konsol uygulaması (.NET Core)** öğesini seçin. Ardından projeyi *HelloWorld*olarak adlandırın.
+3. Sol bölmedeki **Yeni proje** iletişim kutusunda **C#**' ı genişletin ve ardından **.NET Core**' u seçin. Orta bölmede **konsol uygulaması (.NET Core)** öğesini seçin. Ardından projeyi *HelloWorld* olarak adlandırın.
 
    ![Visual Studio IDE 'de yeni proje iletişim kutusundaki konsol uygulaması (.NET Core) proje şablonu](../ide/media/new-project-csharp-dotnetcore-helloworld-console-app.png)
 
@@ -113,13 +113,13 @@ Visual Studio, projenizde varsayılan "Merhaba Dünya" kodunu içerir.
 
    ![Şablondan varsayılan Merhaba Dünya kodunu görüntüleme](../ide/media/csharp-console-helloworld-template.png)
 
-**F5**tuşuna basarsanız, programı hata ayıklama modunda çalıştırabilirsiniz. Ancak, konsol penceresi kapanmadan önce yalnızca bir süre görünür.
+**F5** tuşuna basarsanız, programı hata ayıklama modunda çalıştırabilirsiniz. Ancak, konsol penceresi kapanmadan önce yalnızca bir süre görünür.
 
 (Bu davranış, `Main` yöntemi tek ifadesinin yürütüldükten sonra sonlandırdığı ve bu nedenle uygulama sona erdiğinde oluşur.)
 
 ### <a name="add-some-code"></a>Kod ekleme
 
-Uygulamayı duraklatmak için, **ENTER**tuşuna basarak konsol penceresinin kapanmaması için bazı kodlar ekleyelim.
+Uygulamayı duraklatmak için, **ENTER** tuşuna basarak konsol penceresinin kapanmaması için bazı kodlar ekleyelim.
 
 1. Yöntemine yapılan çağrıdan hemen sonra aşağıdaki kodu ekleyin <xref:System.Console.WriteLine%2A> :
 
@@ -133,7 +133,7 @@ Uygulamayı duraklatmak için, **ENTER**tuşuna basarak konsol penceresinin kapa
 
 ## <a name="run-the-application"></a>Uygulamayı çalıştırma
 
-1. Uygulamayı hata ayıklama modunda çalıştırmak için araç çubuğunda **HelloWorld** düğmesini seçin. (Veya **F5**tuşuna basabilirsiniz.)
+1. Uygulamayı hata ayıklama modunda çalıştırmak için araç çubuğunda **HelloWorld** düğmesini seçin. (Veya **F5** tuşuna basabilirsiniz.)
 
    ![Uygulamayı araç çubuğundan çalıştırmak için Merhaba Dünya düğmesini seçin](../ide/media/csharp-console-hello-world-button.png)
 

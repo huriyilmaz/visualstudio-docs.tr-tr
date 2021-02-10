@@ -5,18 +5,18 @@ ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: SEO-VS-2020
 ms.workload:
 - multiple
-ms.openlocfilehash: 8e4c712eed732830da4bc1b158c8ad53a65a45d8
-ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
+ms.openlocfilehash: 41c3ba299df1e6f9ce0e2848f7ffad59e5b3fbea
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90100459"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99945415"
 ---
-# <a name="create-a-windows-forms-based-domain-specific-language"></a>Windows Forms tabanlı bir etki alanına özgü dil oluşturma
+# <a name="create-a-windows-forms-based-domain-specific-language"></a>Windows Forms tabanlı Domain-Specific dili oluşturma
 
 Bir DSL diyagramı kullanmak yerine, etki alanına özgü dil (DSL) modelinin durumunu göstermek için Windows Forms kullanabilirsiniz. Bu konu başlığında, Visual Studio görselleştirme ve modelleme SDK 'sını kullanarak bir Windows formunu DSL 'ye bağlama işlemi adım adım gösterilmektedir.
 
@@ -33,7 +33,7 @@ Aşağıdaki görüntüde bir DSL örneği için Windows form kullanıcı arabir
     Bu kılavuzda, aşağıdaki adlar varsayılır:
 
     - Çözüm ve DSL adı: `FarmApp`
-    - Uzayına `Company.FarmApp`
+    - Ad Alanı: `Company.FarmApp`
 
 2. Şablonun sağladığı ilk örnekle denemeler yapın:
 
@@ -53,7 +53,7 @@ Aşağıdaki görüntüde bir DSL örneği için Windows form kullanıcı arabir
 
 - `DslDefinition.dsl` diyagram öğesi içermiyor. Bunun nedeni, DSL diyagramlarını bu DSL 'nin örnek modellerini görüntülemek için kullanmayacak. Bunun yerine, bir Windows formunu modele bağlayacaksınız ve formdaki öğeler modeli görüntüleyecektir.
 
-- Ve projelerine ek olarak `Dsl` `DslPackage` çözüm, Kullanıcı Arabirimi projesi adlı üçüncü bir proje içerir `UI.` **UI** Windows Forms denetimin tanımını içerir. `DslPackage` öğesine bağlıdır `UI` ve bağımlıdır `UI` `Dsl` .
+- Ve projelerine ek olarak `Dsl` `DslPackage` çözüm, Kullanıcı Arabirimi projesi adlı üçüncü bir proje içerir `UI.`  Windows Forms denetimin tanımını içerir. `DslPackage` öğesine bağlıdır `UI` ve bağımlıdır `UI` `Dsl` .
 
 - `DslPackage`Projesinde, `UI\DocView.cs` projede tanımlanan Windows Forms denetimini görüntüleyen kodu içerir `UI` .
 
@@ -79,7 +79,7 @@ Aşağıdaki görüntü, bu kılavuzda kullanılan DSL tanımıdır.
 
 3. **ExampleModel** etki alanı sınıfını olarak yeniden adlandırın `Farm` .
 
-     Buna `Size` **Int32**türü ve `IsOrganic` **Boole**türü adlı ek etki alanı özellikleri verin.
+     Buna `Size` **Int32** türü ve `IsOrganic` **Boole** türü adlı ek etki alanı özellikleri verin.
 
     > [!NOTE]
     > Kök etki alanı sınıfını silip yeni bir kök oluşturursanız, düzenleyici kök sınıfı özelliğini sıfırlamanız gerekir. **DSL Gezgini**' nde **Düzenleyici**' yi seçin. Ardından Özellikler penceresi, **kök sınıfı** olarak ayarlayın `Farm` .
@@ -88,7 +88,7 @@ Aşağıdaki görüntü, bu kılavuzda kullanılan DSL tanımıdır.
 
     - `Field` -Buna adlı ek bir etki alanı özelliği verin `Size` .
 
-    - `Animal` -Özellikler penceresi, **Devralma değiştiricisini** **soyut**olarak ayarlayın.
+    - `Animal` -Özellikler penceresi, **Devralma değiştiricisini** **soyut** olarak ayarlayın.
 
 5. Aşağıdaki sınıfları oluşturmak için **etki alanı sınıfı** aracını kullanın:
 
@@ -135,9 +135,9 @@ Artık DSL modelinde depolanan bilgileri görüntüleyecek yeni bir kullanıcı 
 
 1. **UI** projesinde, var olan tüm. cs dosyalarını silin.
 
-2. UI projesine adlı yeni bir **Kullanıcı denetim** dosyası ekleyin `FarmControl` . **UI**
+2. UI projesine adlı yeni bir **Kullanıcı denetim** dosyası ekleyin `FarmControl` . 
 
-3. **Veri kaynakları** penceresinde, **gruptaki**açılan menüde **Ayrıntılar**' ı seçin.
+3. **Veri kaynakları** penceresinde, **gruptaki** açılan menüde **Ayrıntılar**' ı seçin.
 
     Diğer özellikler için varsayılan ayarları bırakın.
 
@@ -149,7 +149,7 @@ Artık DSL modelinde depolanan bilgileri görüntüleyecek yeni bir kullanıcı 
 
 5. **Farmbindingnavigator**'ı silin. Bu, tasarımcıda de otomatik olarak oluşturulur `FarmControl` , ancak bu uygulama için yararlı değildir.
 
-6. Araç kutusunu kullanarak, iki **DataGridView**örneği oluşturun ve bunları ve olarak adlandırın `AnimalGridView` `FieldGridView` .
+6. Araç kutusunu kullanarak, iki **DataGridView** örneği oluşturun ve bunları ve olarak adlandırın `AnimalGridView` `FieldGridView` .
 
    > [!NOTE]
    > Alternatif bir adım, hayvanlar ve alanlar öğelerini veri kaynakları penceresinden denetim üzerine sürüklemektir. Bu eylem, kılavuz görünümü ve veri kaynağı arasındaki veri kılavuzlarını ve bağlamaları otomatik olarak oluşturur. Ancak, bu bağlama DSLs için doğru çalışmaz. Bu nedenle, veri kılavuzlarını ve bağlamaları el ile oluşturmak daha iyidir.
@@ -158,9 +158,9 @@ Artık DSL modelinde depolanan bilgileri görüntüleyecek yeni bir kullanıcı 
 
 8. Araç kutusunu kullanarak, **ModelingBindingSource**'un iki örneğini oluşturun ve bunları ve olarak `AnimalBinding` adlandırın `FieldBinding` .
 
-9. Her **ModelingBindingSource** 'un **DataSource** özelliğini **farmBindingSource**olarak ayarlayın.
+9. Her **ModelingBindingSource** 'un **DataSource** özelliğini **farmBindingSource** olarak ayarlayın.
 
-     **DataMember** özelliğini **hayvanlar** veya **alanlar**olarak ayarlayın.
+     **DataMember** özelliğini **hayvanlar** veya **alanlar** olarak ayarlayın.
 
 10. ' A ve ' nin **veri kaynağı** özelliklerini olarak ayarlayın `AnimalGridView` `AnimalBinding`  `FieldGridView` `FieldBinding` .
 
@@ -325,6 +325,6 @@ Bu nedenle, <xref:Microsoft.VisualStudio.Modeling.ElementOperations> yeni öğel
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Etki alanına özgü dil tanımlama](../modeling/how-to-define-a-domain-specific-language.md)
-- [Etki alanına özgü dili özelleştirmek için kod yazma](../modeling/writing-code-to-customise-a-domain-specific-language.md)
+- [Domain-Specific dilini tanımlama](../modeling/how-to-define-a-domain-specific-language.md)
+- [Domain-Specific dilini özelleştirmek için kod yazma](../modeling/writing-code-to-customise-a-domain-specific-language.md)
 - [Visual Studio için Modelleme SDK'sı - Etki Alanına Özgü Diller](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md)

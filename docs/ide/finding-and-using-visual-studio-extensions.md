@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4ca92d93-31b9-47ef-8109-4a429d9e2ca3
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c5d4cf36d722c260f52584b16557bcb8d7cda83c
-ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
+ms.openlocfilehash: bb088954833f42e35de6c8316e5553d0f9e3fc68
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95006542"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99945597"
 ---
 # <a name="manage-extensions-for-visual-studio"></a>Visual Studio için uzantıları yönetme
 
@@ -81,7 +81,7 @@ Uzantıları, Visual Studio 'daki [Visual Studio Market](https://marketplace.vis
 
 Visual Studio içinden uzantı yüklemek için:
 
-1. Uzantılardan **Extensions**  >  **Uzantıları Yönet**' den yüklemek istediğiniz uzantıyı bulun. (Uzantının adının adını veya parçasını biliyorsanız, **arama** penceresinde arama yapabilirsiniz.)
+1. Uzantılardan   >  **Uzantıları Yönet**' den yüklemek istediğiniz uzantıyı bulun. (Uzantının adının adını veya parçasını biliyorsanız, **arama** penceresinde arama yapabilirsiniz.)
 
 2. **İndir**'i seçin.
 
@@ -91,7 +91,7 @@ Bağımlılıkları olan bir uzantıyı yüklemeye çalışırsanız, yükleyici
 
 ### <a name="install-without-using-the-manage-extensions-dialog-box"></a>Uzantıları Yönet iletişim kutusunu kullanmadan yükler
 
-*. Vsix* dosyalarında paketlenmiş uzantılar Visual Studio Market dışındaki konumlarda kullanılabilir olabilir. Uzantıları **Extensions**  >  **Yönet** iletişim kutusu bu dosyaları algılayamaz, ancak dosyayı çift tıklayarak veya dosyayı seçip **ENTER** tuşuna basarak bir *. vsix* dosyası yükleyebilirsiniz. Bundan sonra yönergeleri izlemeniz yeterlidir. Uzantı yüklendiğinde, **Uzantıları Yönet** iletişim kutusunu etkinleştirmek, devre dışı bırakmak veya kaldırmak için kullanabilirsiniz.
+*. Vsix* dosyalarında paketlenmiş uzantılar Visual Studio Market dışındaki konumlarda kullanılabilir olabilir. Uzantıları   >  **Yönet** iletişim kutusu bu dosyaları algılayamaz, ancak dosyayı çift tıklayarak veya dosyayı seçip **ENTER** tuşuna basarak bir *. vsix* dosyası yükleyebilirsiniz. Bundan sonra yönergeleri izlemeniz yeterlidir. Uzantı yüklendiğinde, **Uzantıları Yönet** iletişim kutusunu etkinleştirmek, devre dışı bırakmak veya kaldırmak için kullanabilirsiniz.
 
 > [!NOTE]
 > - Visual Studio Market hem VSıX hem de MSI uzantılarını içerir. Uzantıları Yönet iletişim kutusu, MSI tabanlı uzantıları etkinleştiremez veya devre dışı bırakamıyorum.
@@ -128,7 +128,7 @@ Otomatik güncelleştirmeleri devre dışı bırakmak istiyorsanız, tüm uzant�
 
 ::: moniker range="vs-2017"
 
-- Tüm uzantılar için otomatik güncelleştirmeleri devre dışı bırakmak için, **Araçlar** Uzantılar ve güncelleştirmeler iletişim kutusunda **uzantılarınızı ve güncelleştirme ayarlarını değiştirin** bağlantısını seçin  >  **Extensions and Updates** . **Seçenekler** iletişim kutusunda, **uzantıları otomatik güncelleştir** onay kutusunun işaretini kaldırın.
+- Tüm uzantılar için otomatik güncelleştirmeleri devre dışı bırakmak için, **Araçlar** Uzantılar ve güncelleştirmeler iletişim kutusunda **uzantılarınızı ve güncelleştirme ayarlarını değiştirin** bağlantısını seçin  >   . **Seçenekler** iletişim kutusunda, **uzantıları otomatik güncelleştir** onay kutusunun işaretini kaldırın.
 
 - Belirli bir uzantının otomatik güncelleştirmelerini devre dışı bırakmak için **Uzantılar ve güncelleştirmeler** iletişim kutusunun sağ tarafındaki uzantının Ayrıntılar bölmesinde **Bu uzantıyı otomatik olarak güncelleştir** seçeneğinin işaretini kaldırın.
 
@@ -136,7 +136,7 @@ Otomatik güncelleştirmeleri devre dışı bırakmak istiyorsanız, tüm uzant�
 
 ::: moniker range=">=vs-2019"
 
-- Tüm uzantılar için otomatik güncelleştirmeleri devre dışı bırakmak **üzere uzantılar** Uzantıları Yönet iletişim kutusunda **Uzantılar için ayarlarınızı değiştirin** bağlantısı ' nı seçin  >  **Manage Extensions** . **Seçenekler** iletişim kutusunda, **uzantıları otomatik güncelleştir** onay kutusunun işaretini kaldırın.
+- Tüm uzantılar için otomatik güncelleştirmeleri devre dışı bırakmak **üzere uzantılar** Uzantıları Yönet iletişim kutusunda **Uzantılar için ayarlarınızı değiştirin** bağlantısı ' nı seçin  >   . **Seçenekler** iletişim kutusunda, **uzantıları otomatik güncelleştir** onay kutusunun işaretini kaldırın.
 
 - Belirli bir uzantının otomatik güncelleştirmelerini devre dışı bırakmak için, **Uzantıları Yönet** iletişim kutusunun sağ tarafındaki uzantının Ayrıntılar bölmesinde **Bu uzantıyı otomatik olarak güncelleştir** seçeneğinin işaretini kaldırın.
 
@@ -184,13 +184,13 @@ Bu bildirimler gösterildiğinde, bildirimi yoksayabilirsiniz veya aşağıdaki 
 
 ::: moniker range="vs-2017"
 
-**Tools** > Bu örneklerle ilgili görevleri gerçekleştirmek için Araçlar **Uzantılar ve güncelleştirmeler** iletişim kutusunu kullanabilirsiniz:
+ > Bu örneklerle ilgili görevleri gerçekleştirmek için Araçlar **Uzantılar ve güncelleştirmeler** iletişim kutusunu kullanabilirsiniz:
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-**Extensions** > Bu örneklerle ilgili görevleri gerçekleştirmek için uzantıları **Yönet** iletişim kutusunu kullanabilirsiniz:
+ > Bu örneklerle ilgili görevleri gerçekleştirmek için uzantıları **Yönet** iletişim kutusunu kullanabilirsiniz:
 
 ::: moniker-end
 

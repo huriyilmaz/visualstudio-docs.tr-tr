@@ -5,17 +5,17 @@ ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 author: mikejo5000
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 0ce89246d227d747fee2d3a02484855257f016f8
-ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
+ms.openlocfilehash: 4bf43fa5dd3e95500b036d5ef5d65055b5d5870f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95598217"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99946286"
 ---
 # <a name="use-shims-to-isolate-your-app-for-unit-testing"></a>Birim testi için uygulamanızı yalıtmak üzere dolgular kullanma
 
@@ -97,7 +97,7 @@ Her dolgu bağlamını doğru bir şekilde atmak önemlidir. Bir Thumb kuralı o
 
 ### <a name="write-a-test-with-shims"></a>Dolgular ile test yazma
 
-Test kodunuzda, taklit etmek istediğiniz yöntem için bir *deturu* ekleyin. Örnek:
+Test kodunuzda, taklit etmek istediğiniz yöntem için bir *deturu* ekleyin. Örneğin:
 
 ```csharp
 [TestClass]

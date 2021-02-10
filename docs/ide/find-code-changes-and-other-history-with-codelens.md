@@ -8,15 +8,15 @@ f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.All_Languages.CodeLens
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 485287239a13f61d10ee39bad854a0f3bdae4f55
-ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
+ms.openlocfilehash: 59df5a4b0b0c873de69c5e574ad5c2cccbc43567
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95006711"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99945883"
 ---
 # <a name="find-code-changes-and-other-history-with-codelens"></a>CodeLens ile kod değişikliklerini ve diğer geçmişi bulma
 
@@ -132,7 +132,7 @@ Takımınız, sabit kodu parçalara ayırma riskini azaltmak için birden çok d
 
 ![CodeLens: geçerli dalınızdaki değişiklikleri bulma](../ide/media/codelensfirstbranchconceptual.png)
 
-Kodunuzu kaç kişinin değiştirmiş olduğunu ve ana dalda **alt** 6 tuşlarına basarak kaç değişiklik yapıldığını öğrenebilirsiniz + **6**:
+Kodunuzu kaç kişinin değiştirmiş olduğunu ve ana dalda **alt** 6 tuşlarına basarak kaç değişiklik yapıldığını öğrenebilirsiniz + :
 
 ![CodeLens: dalınızda kaç değişiklik olduğunu bulun](../ide/media/codelens-branch-changes.png)
 
@@ -187,7 +187,7 @@ Değişikliklerin ne zaman birleştirildiğini görebilirsiniz, böylece dalın�
 
 ## <a name="linked-work-items"></a>Bağlantılı iş öğeleri
 
-**İş öğeleri** göstergesini seçerek veya **alt** 8 tuşlarına basarak bağlantılı iş öğelerini bulun + **8**.
+**İş öğeleri** göstergesini seçerek veya **alt** 8 tuşlarına basarak bağlantılı iş öğelerini bulun + .
 
 ![CodeLens-belirli bir kod için iş öğelerini bul](../ide/media/codelens-work-items.png)
 
@@ -199,13 +199,13 @@ Değişikliklerin ne zaman birleştirildiğini görebilirsiniz, böylece dalın�
 
 ## <a name="linked-bugs"></a>Bağlantılı hatalar
 
-**Hata** göstergesini seçerek veya **alt** 7 tuşlarına basarak bağlantılı hataları bulun + **7**.
+**Hata** göstergesini seçerek veya **alt** 7 tuşlarına basarak bağlantılı hataları bulun + .
 
 ![CodeLens-değişiklik kümelerine bağlı hataları bul](../ide/media/codelens-bugs-changesets.png)
 
 ## <a name="contact-the-owner-of-an-item"></a>Bir öğenin sahibine başvurun
 
-**Yazarların** göstergesini seçerek veya **alt** 5 tuşlarına basarak bir öğenin yazarını bulun + **5**.
+**Yazarların** göstergesini seçerek veya **alt** 5 tuşlarına basarak bir öğenin yazarını bulun + .
 
 ![Bir öğenin sahibine başvurun](../ide/media/codelens-contact-item-owner.png)
 
@@ -221,7 +221,7 @@ C# veya Visual Basic kodunuz için var olan birim testlerini **Test Gezgini**'ni
 
 2. Henüz yapmadıysanız CodeLens test göstergelerini yüklemek için uygulamanızı derleyin.
 
-3. Alt 3 tuşlarına basarak kodun testlerini gözden geçirin **Alt** + **3**.
+3. Alt 3 tuşlarına basarak kodun testlerini gözden geçirin  + .
 
      ![CodeLens-kod düzenleyicisinde test durumu seçme](../ide/media/codelens-choose-test-indicator.png)
 
@@ -314,7 +314,7 @@ Y **:** **Araçlar**  >  **Seçenekler**  >  **ortam**  >  **yazı tipleri ve re
 
 Klavyeyi kullanmak için:
 
-1. **Alt** + **T** + **Seçenekler** iletişim kutusunu açmak için alt T **O** tuşlarına basın.
+1.  +  + **Seçenekler** iletişim kutusunu açmak için alt T **O** tuşlarına basın.
 
 2. **Ortam** düğümüne gitmek Için **yukarı ok** veya **aşağı ok** tuşuna basın ve ardından düğümü genişletmek için **sol ok** tuşuna basın.
 

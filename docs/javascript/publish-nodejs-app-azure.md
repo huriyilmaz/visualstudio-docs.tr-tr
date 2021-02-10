@@ -6,17 +6,17 @@ ms.topic: tutorial
 ms.devlang: javascript
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: d75bb4f5274201b7cf745ff8c7c6f27b869855c3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c83516891a33a026399a6e5fcfc2458b5e03a0bd
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "81445018"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99945441"
 ---
 # <a name="publish-a-nodejs-application-to-azure-linux-app-service"></a>Azure 'da bir Node.js uygulaması yayımlama (Linux App Service)
 
@@ -36,15 +36,15 @@ Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 > * Azure 'da Linux App Service oluşturma
 > * Linux 'a dağıtma
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 * Visual Studio yüklü ve Node.js geliştirme iş yüküne sahip olmanız gerekir.
 
     ::: moniker range=">=vs-2019"
-    Visual Studio 2019 ' ü henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads/)   sayfasına giderek ücretsiz olarak yükleme yapın.
+    Visual Studio 2019 ' ü henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads/) sayfasına giderek ücretsiz olarak yükleme yapın.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Visual Studio 2017 ' ü henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads/)   sayfasına giderek ücretsiz olarak yükleme yapın.
+    Visual Studio 2017 ' ü henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads/) sayfasına giderek ücretsiz olarak yükleme yapın.
     ::: moniker-end
 
     İş yükünü yüklemeniz gerekir, ancak zaten Visual Studio 'ya sahipseniz **Araçlar**  >  **ve Özellikler al.**.. ' a giderek Visual Studio yükleyicisi açılır. **Node.js geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
@@ -62,7 +62,7 @@ Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 1. Yeni bir TypeScript Express uygulaması oluşturun.
 
     ::: moniker range=">=vs-2019"
-    Başlangıç penceresini kapatmak için **ESC** tuşuna basın. **CTRL + Q** yazarak arama kutusunu açın, **Node.js**yazın ve ardından **Yeni temel Azure Node.js Express 4 uygulaması** (TypeScript) öğesini seçin. Görüntülenen iletişim kutusunda **Oluştur**' u seçin.
+    Başlangıç penceresini kapatmak için **ESC** tuşuna basın. **CTRL + Q** yazarak arama kutusunu açın, **Node.js** yazın ve ardından **Yeni temel Azure Node.js Express 4 uygulaması** (TypeScript) öğesini seçin. Görüntülenen iletişim kutusunda **Oluştur**' u seçin.
     ::: moniker-end
     ::: moniker range="vs-2017"
     Üstteki menü çubuğundan **Dosya**  >  **Yeni**  >  **Proje**' yi seçin. **Yeni proje** iletişim kutusunun sol bölmesinde **TypeScript**' i genişletin ve ardından **Node.js**' yi seçin. Orta bölmede **temel Azure Node.js Express 4 uygulaması**' nı seçin ve ardından **Tamam**' ı seçin.
@@ -75,7 +75,7 @@ Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 
 1. Uygulamayı derlemek ve çalıştırmak için **F5** tuşuna basın ve her şeyin beklendiği gibi çalıştığından emin olun.
 
-1. **File**  >  Proje için yerel bir git deposu oluşturmak üzere dosya**kaynak denetimine Ekle** ' yi seçin.
+1.   >  Proje için yerel bir git deposu oluşturmak üzere dosya **kaynak denetimine Ekle** ' yi seçin.
 
     Bu noktada, Express çerçevesini kullanan ve TypeScript 'te yazılan Node.js bir uygulama çalışır ve yerel kaynak denetimine iade edilir.
 
@@ -85,9 +85,9 @@ Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 
 Visual Studio için GitHub 'ı ayarlamak için:
 
-1. [Visual Studio için GitHub uzantısının](https://visualstudio.github.com/) , menü öğesi **araçları**  >  **uzantıları ve güncelleştirmeleri**kullanılarak yüklendiğinden ve etkinleştirildiğinden emin olun.
+1. [Visual Studio için GitHub uzantısının](https://visualstudio.github.com/) , menü öğesi **araçları**  >  **uzantıları ve güncelleştirmeleri** kullanılarak yüklendiğinden ve etkinleştirildiğinden emin olun.
 
-2. Menüden **View**  >  **diğer Windows**  >  **GitHub**'ı görüntüle ' yi seçin.
+2. Menüden   >  **diğer Windows**  >  **GitHub**'ı görüntüle ' yi seçin.
 
     GitHub penceresi açılır.
 
@@ -95,7 +95,7 @@ Visual Studio için GitHub 'ı ayarlamak için:
 
     ![GitHub penceresini açın](../javascript/media/azure-github-get-started.png)
 
-4. **Başlayın**'a tıklayın.
+4. **Başlarken**' e tıklayın.
 
     Zaten GitHub 'a bağlıysanız, araç kutusu aşağıdaki çizime benzer şekilde görünür.
 
@@ -154,7 +154,7 @@ Visual Studio için GitHub 'ı ayarlamak için:
 
 ## <a name="modify-your-app-and-push-changes"></a>Uygulamanızı değiştirin ve değişiklikleri gönderin
 
-1. Burada gösterilen kodu, satırdan sonra *app. TS* ' de ekleyin `app.use('/users', users);` . Bu, */API*URL 'sinde bir REST API ekler.
+1. Burada gösterilen kodu, satırdan sonra *app. TS* ' de ekleyin `app.use('/users', users);` . Bu, */API* URL 'sinde bir REST API ekler.
 
     ```typescript
     app.use('/api', (req, res, next) => {
@@ -175,7 +175,7 @@ Visual Studio için GitHub 'ı ayarlamak için:
 * node.exe işlem olursa (diğer bir deyişle, işlenmeyen bir özel durum oluşursa), kapsayıcı yeniden başlatılır.
 * Kapsayıcı başladığında, Node.js işlemini nasıl başlatacağınızı anlamak için çeşitli buluşsal yöntemler aracılığıyla çalışır. Uygulamanın ayrıntıları, [generateStartupCommand.js](https://github.com/Azure/app-service-builtin-images/blob/master/node/8.9.4/startup/generateStartupCommand.js)' de görülebilir.
 * Araştırmalar için SSH aracılığıyla çalışan kapsayıcıya bağlanabilirsiniz. Bu, Azure portal kullanılarak kolayca yapılır. App Service seçin ve **geliştirme araçları** bölümü altında **SSH** 'ye ulaşıncaya kadar araç listesini aşağı kaydırın.
-* Sorun gidermeye yardımcı olmak için, App Service için **tanılama günlükleri** ayarlarına gidin ve **Docker kapsayıcı günlüğü** ayarını **dosya sistemine**çevirin. **Off** Günlükler */Home/LogFiles/*_docker. log * altındaki kapsayıcıda oluşturulur ve SSH veya FTP kullanılarak kutudan erişilebilir.
+* Sorun gidermeye yardımcı olmak için, App Service için **tanılama günlükleri** ayarlarına gidin ve **Docker kapsayıcı günlüğü** ayarını **dosya sistemine** çevirin.  Günlükler */Home/LogFiles/* _docker. log * altındaki kapsayıcıda oluşturulur ve SSH veya FTP kullanılarak kutudan erişilebilir.
 * Varsayılan olarak atanmış *. azurewebsites.net URL 'SI yerine siteye özel bir etki alanı adı atanabilir. Daha ayrıntılı bilgi için bkz. [özel etki alanı eşleme](/azure/app-service/app-service-web-tutorial-custom-domain)konusu.
 * Üretime geçmeden önce daha fazla test için bir hazırlama sitesine dağıtım en iyi uygulamadır. Bunun nasıl yapılandırılacağı hakkında ayrıntılı bilgi için, [hazırlama ortamları oluşturma](/azure/app-service/web-sites-staged-publishing)konusuna bakın.
 * Daha sık sorulan sorular için [Linux 'ta App Service](/azure/app-service/containers/app-service-linux-faq) bakın.

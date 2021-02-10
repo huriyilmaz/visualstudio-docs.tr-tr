@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ab5b6712-f32a-4e33-842f-e88ab4818ccf
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 07b40cb9c4e1d79390bb4a0541e1cb5bd8862d3a
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: e6541e99b23579713e77cf2bf1dc62152f02b4ce
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94383150"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99946104"
 ---
 # <a name="clickonce-and-authenticode"></a>ClickOnce ve Authenticode
 *Authenticode* , uygulama kodunu uygulama yayımcısının orijinalliğini doğrulayan dijital sertifikalarla imzalamak için sektör standardı şifrelemeyi kullanan bir Microsoft teknolojisidir. Uygulama dağıtımı için Authenticode kullanarak [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] bir Truva atı riskini azaltır. Truva atı, kötü amaçlı üçüncü tarafın oluşturulmuş, güvenilir bir kaynaktan gelen yasal bir program olarak yanlış temsil ettiği bir virüs veya diğer zararlı programdır. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Dijital sertifikayla imzalama dağıtımları, derlemelerin ve dosyaların değiştirilmediğini doğrulamak için isteğe bağlı bir adımdır.
@@ -66,7 +66,7 @@ ms.locfileid: "94383150"
 
 ### <a name="store-certificates"></a>Sertifikaları depola
 
-- Sertifikaları dosya sisteminizde bir *. pfx* dosyası olarak saklayabilir veya bunları bir anahtar kapsayıcısının içine kaydedebilirsiniz. Windows etki alanındaki bir kullanıcının birçok anahtar kapsayıcısı olabilir. *MakeCert.exe* , varsayılan olarak, bunun yerine bir *. pfx* ' e kaydedilmesini belirtmediğiniz müddetçe, sertifikaları Kişisel anahtar kapsayıcıınızda depolayacaktır. *Mage.exe* ve *MageUI.exe* , [!INCLUDE[winsdkshort](../debugger/debug-interface-access/includes/winsdkshort_md.md)] dağıtım oluşturmaya yönelik araçlar [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] , her iki şekilde depolanan sertifikaları kullanmanıza olanak sağlar.
+- Sertifikaları dosya sisteminizde bir *. pfx* dosyası olarak saklayabilir veya bunları bir anahtar kapsayıcısının içine kaydedebilirsiniz. Windows etki alanındaki bir kullanıcının birçok anahtar kapsayıcısı olabilir. *MakeCert.exe* , varsayılan olarak, bunun yerine bir *. pfx* ' e kaydedilmesini belirtmediğiniz müddetçe, sertifikaları Kişisel anahtar kapsayıcıınızda depolayacaktır. *Mage.exe* ve *MageUI.exe*, [!INCLUDE[winsdkshort](../debugger/debug-interface-access/includes/winsdkshort_md.md)] dağıtım oluşturmaya yönelik araçlar [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] , her iki şekilde depolanan sertifikaları kullanmanıza olanak sağlar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [ClickOnce güvenliği ve dağıtımı](../deployment/clickonce-security-and-deployment.md)

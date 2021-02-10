@@ -5,25 +5,25 @@ ms.date: 12/06/2018
 ms.topic: reference
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 528606356c2d976de71ab2c0317a1a0236d2e63f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 23a79d0842592ff3ad68f63c2739a2af9847aaeb
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85533399"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99945168"
 ---
 # <a name="python-item-templates"></a>Python öğe şablonları
 
-Öğe **şablonları,**  >  **Yeni öğe Ekle** menü komutu veya **Add**  >  **Çözüm Gezgini**içindeki bağlam menüsünde**Yeni öğe** Ekle komutu aracılığıyla Python projelerinde kullanılabilir.
+Öğe **şablonları,**  >  **Yeni öğe Ekle** menü komutu veya   >  **Çözüm Gezgini** içindeki bağlam menüsünde **Yeni öğe** Ekle komutu aracılığıyla Python projelerinde kullanılabilir.
 
 ![Yeni öğe Ekle iletişim kutusu](media/project-item-templates.png)
 
-Öğe için sağladığınız adı kullanarak, bir şablon genellikle projedeki Şu anda seçili olan klasörde bir veya daha fazla dosya ve klasör oluşturur (bağlam menüsünü açmak için bir klasörü sağ tıklatmak, klasörü otomatik olarak seçer). Öğe eklendiğinde, Visual Studio projesine dahildir ve öğe **Çözüm Gezgini**görünür.
+Öğe için sağladığınız adı kullanarak, bir şablon genellikle projedeki Şu anda seçili olan klasörde bir veya daha fazla dosya ve klasör oluşturur (bağlam menüsünü açmak için bir klasörü sağ tıklatmak, klasörü otomatik olarak seçer). Öğe eklendiğinde, Visual Studio projesine dahildir ve öğe **Çözüm Gezgini** görünür.
 
 Aşağıdaki tablo, bir Python projesindeki her öğe şablonunun etkisini kısaca açıklar:
 
@@ -31,7 +31,7 @@ Aşağıdaki tablo, bir Python projesindeki her öğe şablonunun etkisini kısa
 | --- | --- |
 | **Boş Python dosyası** | *. Köpek* uzantılı boş bir dosya. |
 | **Python sınıfı** | Tek bir boş Python sınıfı tanımı içeren bir *. Kopyala* dosyası. |
-| **Python paketi** | Bir * \_ \_ init \_ \_ . Kopyala* dosyası içeren bir klasör. |
+| **Python paketi** | Bir *\_ \_ init \_ \_ . Kopyala* dosyası içeren bir klasör. |
 | **Python birim testi** | Çerçeve tabanlı tek bir birim testine sahip bir *. Kopyala* dosyası `unittest` , `unittest.main()` dosyadaki testleri çalıştırmak için çağrısı ile birlikte. |
 | **HTML sayfası** | Ve öğeden oluşan basit sayfa yapısına sahip bir *. html* dosyası `<head>` `<body>` . |
 | **JavaScript** | Boş bir  *. js* dosyası. |

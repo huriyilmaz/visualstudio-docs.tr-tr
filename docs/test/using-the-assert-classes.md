@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Assert methods
 - unit tests, Assert classes
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: c5401fb15a19d069c0bf454661d6d9283abb2585
-ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
+ms.openlocfilehash: 1f064ee1ca41aab19e19fa6006d983a76ed006d7
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95598204"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99946208"
 ---
 # <a name="use-assert-classes-for-unit-testing"></a>Birim testi için onaylama sınıfları kullanma
 
@@ -36,7 +36,7 @@ Test yönteminde, sınıfının herhangi bir yöntemini (gibi) çağırabilirsin
 
 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert>Dizeleri karşılaştırmak ve incelemek için sınıfını kullanın. Bu sınıf, ve gibi çeşitli yararlı yöntemler içerir <xref:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert.Contains%2A?displayProperty=nameWithType> <xref:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert.Matches%2A?displayProperty=nameWithType> <xref:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert.StartsWith%2A?displayProperty=nameWithType> .
 
-### <a name="exceptions"></a>Özel Durumlar
+### <a name="exceptions"></a>Özel durumlar
 
 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException>Bir test başarısız olduğunda özel durum oluşturulur. Test zaman aşımına uğrarsa başarısız olur, beklenmeyen bir özel durum oluşturur veya **başarısız** bir sonuç üreten bir onay açıklaması içerir.
 

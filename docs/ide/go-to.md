@@ -11,15 +11,15 @@ helpviewer_keywords:
 - go to
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e3e000224fc09810e15ba3cdbdc4be729139eaaa
-ms.sourcegitcommit: d6207a3a590c9ea84e3b25981d39933ad5f19ea3
+ms.openlocfilehash: 257db632c095027d9fa4be667a30e809ecb2fff4
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95597541"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99946624"
 ---
 # <a name="find-code-using-go-to-commands"></a>Git komutlarını kullanarak kod bulma
 
@@ -29,8 +29,8 @@ Visual Studio 'nun komutlara **Git** , belirtilen öğeleri hızlı bir şekilde
 
 Giriş | İşlev
 ------------ | ---
-**Klavye** | **CTRL** + **T** veya **CTRL** + **,** tuşlarına basın
-**Fare** | **Düzenle** git ' i seçerek  >  **Go To**  >  **Tümünü git** ' i seçin
+**Klavye** | **CTRL** + **T** veya **CTRL** +  tuşlarına basın
+**Fare** | **Düzenle** git ' i seçerek  >    >  **Tümünü git** ' i seçin
 
 Kod Düzenleyicinizde sağ üst köşede küçük bir pencere görüntülenir.
 
@@ -60,7 +60,7 @@ Aramanızı belirli bir kod öğesi türüne daraltmak için, arama kutusunda bi
 f| ![Dosyalar simgesi](media/gotoall-files-icon.png) | **CTRL** + **1**, **CTRL** + **F** | Belirtilen dosyaya git
 r| ![Son dosyalar simgesi](media/gotoall-recent-files-icon.png) | **CTRL** + **1**, **CTRL** + **R** | Belirtilen, son ziyaret edilen dosyaya git
 t| ![Türler simgesi](media/gotoall-types-icon.png) | **CTRL** + **1**, **CTRL** + **T** | Belirtilen türe git
-m| ![Üyeler simgesi](media/gotoall-members-icon.png) | **CTRL** + **1**, **CTRL tuşuna** + **M** | Belirtilen üyeye git
+m| ![Üyeler simgesi](media/gotoall-members-icon.png) | **CTRL** + **1**, **CTRL tuşuna** +  | Belirtilen üyeye git
 \#| ![Semboller simgesi](media/gotoall-symbols-icon.png) | **CTRL** + **1**, **CTRL** + **S** | Belirtilen simgeye git
 
 ### <a name="filter-to-a-specific-location"></a>Belirli bir konuma filtrele
