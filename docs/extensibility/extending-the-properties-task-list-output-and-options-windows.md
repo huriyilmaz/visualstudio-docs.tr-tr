@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 06990510-5424-44b8-9fd9-6481acec5c76
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 54b78197be71dca9fbabbfded90c4e07660a74db
-ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
+ms.openlocfilehash: 2586618b16afa8f8bfd6b7aa529486adf1d9ce41
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "96995804"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99938141"
 ---
 # <a name="extend-the-properties-task-list-output-and-options-windows"></a>Özellikleri, Görev Listesi, çıktıyı ve seçenekler pencerelerini genişletme
 Visual Studio 'daki herhangi bir araç penceresine erişebilirsiniz. Bu izlenecek yol, araç pencerenize ilişkin bilgilerin yeni bir **Seçenekler** sayfası ve **Özellikler** sayfasında yeni bir ayar ve ayrıca **görev listesi** ve **Çıkış** pencerelerinin nasıl yazılacağı gösterilmektedir.

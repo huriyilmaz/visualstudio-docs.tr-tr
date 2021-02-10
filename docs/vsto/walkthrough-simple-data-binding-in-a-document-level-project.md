@@ -16,15 +16,15 @@ helpviewer_keywords:
 - simple data binding [Office development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 868a120baa8207d922d3dee55e10c8e903381e19
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 31084703a581999a1f25bfc82db6c36d9e2cbf6c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97524105"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99937418"
 ---
 # <a name="walkthrough-simple-data-binding-in-a-document-level-project"></a>İzlenecek yol: belge düzeyi projede basit veri bağlama
   Bu izlenecek yol, belge düzeyindeki bir projede veri bağlamanın temellerini gösterir. SQL Server veritabanındaki tek bir veri alanı, Microsoft Office Excel içindeki bir adlandırılmış aralığa bağlanır. İzlenecek yol Ayrıca, tablodaki tüm kayıtlarda kaydırmanıza imkan tanıyan denetimlerin nasıl ekleneceğini gösterir.
@@ -172,7 +172,7 @@ ms.locfileid: "97524105"
      [!code-csharp[Trin_VstcoreDataExcel#7](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#7)]
      [!code-vb[Trin_VstcoreDataExcel#7](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#7)]
 
-## <a name="test-the-application"></a>Uygulamayı test etme
+## <a name="test-the-application"></a>Uygulamayı test edin
  Artık çalışma kitabınızı test edebilir ve veritabanındaki kayıtlara göz atadığınızdan emin olun.
 
 ### <a name="to-test-your-workbook"></a>Çalışma kitabınızı test etmek için

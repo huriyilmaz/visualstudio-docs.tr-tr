@@ -14,15 +14,15 @@ helpviewer_keywords:
 - exporting shortcut keys [Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4b551e3f980e962733d2797924331e4cd6dbefa5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 84d78a86c64cd85ea8738ec9038c5e64642ca950
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85770860"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99935956"
 ---
 # <a name="identify-and-customize-keyboard-shortcuts-in-visual-studio"></a>Visual Studio 'da klavye kısayollarını tanımla ve Özelleştir
 
@@ -32,7 +32,7 @@ Visual Studio komutları için kısayollar tanımlayabilir, bu kısayolları öz
 
 - Kısayolun davranışını özelleştirip özelleştirmediğiniz.
 
-- Kısayolu seçtiğiniz anda içinde bulunduğunuz bağlam. Örneğin, **F2** `Edit.EditCell` **Ayarlar tasarımcısını** kullanıyorsanız F2 kısayolu komutu çağırır ve `File.Rename` **Takım Gezgini**kullanıyorsanız komutu çağırır.
+- Kısayolu seçtiğiniz anda içinde bulunduğunuz bağlam. Örneğin,  `Edit.EditCell` **Ayarlar tasarımcısını** kullanıyorsanız F2 kısayolu komutu çağırır ve `File.Rename` **Takım Gezgini** kullanıyorsanız komutu çağırır.
 
 Ayarlar, özelleştirme ve bağlamlarından bağımsız olarak, **Seçenekler** iletişim kutusunda her zaman bir klavye kısayolunu bulabilir ve değiştirebilirsiniz. Ayrıca [popüler klavye kısayollarında](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md)birkaç düzine komut için varsayılan klavye kısayollarına bakabilirsiniz. Tüm varsayılan kısayolların listesi için ( **genel geliştirme** ayarlarına bağlı olarak), [tüm klavye kısayollarına](../ide/default-keyboard-shortcuts-in-visual-studio.md)bakın.
 
@@ -76,7 +76,7 @@ Bir kısayol *genel* bağlamdaki bir komuta atanmışsa ve başka bağlam yoksa,
    Örneğin, kısayolun tüm bağlamlarda çalışmasını istiyorsanız **genel** ' i seçebilirsiniz. Başka bir düzenleyicide Genel olarak eşlenmemiş herhangi bir kısayolu kullanabilirsiniz. Aksi takdirde düzenleyici kısayolu geçersiz kılar.
 
    > [!NOTE]
-   > Aşağıdaki anahtarları **küresel**bir klavye kısayolunun parçası olarak atayamazsınız:
+   > Aşağıdaki anahtarları **küresel** bir klavye kısayolunun parçası olarak atayamazsınız:
    >
    > - ENTER, Tab, Caps Lock
    > - PRINT SCRN/SYS RQ, Scroll Lock, Duraklat/kes
@@ -119,13 +119,13 @@ Bir kısayol *genel* bağlamdaki bir komuta atanmışsa ve başka bağlam yoksa,
 
 ::: moniker range="vs-2017"
 
-Varsayılan olarak, kısayollarınız *%userprofile%\, Studio 2017 \ Settings* klasöründeki bir dosyaya kaydedilir. Dosyanın adı, ayarları verdiğiniz tarihi yansıtır ve uzantı *. vssettings*olur.
+Varsayılan olarak, kısayollarınız *%userprofile%\, Studio 2017 \ Settings* klasöründeki bir dosyaya kaydedilir. Dosyanın adı, ayarları verdiğiniz tarihi yansıtır ve uzantı *. vssettings* olur.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Varsayılan olarak, kısayollarınız *%userprofile%\, Studio 2019 \ ayarlar* klasöründeki bir dosyaya kaydedilir. Dosyanın adı, ayarları verdiğiniz tarihi yansıtır ve uzantı *. vssettings*olur.
+Varsayılan olarak, kısayollarınız *%userprofile%\, Studio 2019 \ ayarlar* klasöründeki bir dosyaya kaydedilir. Dosyanın adı, ayarları verdiğiniz tarihi yansıtır ve uzantı *. vssettings* olur.
 
 ::: moniker-end
 

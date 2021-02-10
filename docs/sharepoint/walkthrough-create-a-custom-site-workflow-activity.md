@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, site workflows
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 86302a0b8eef4344a909ae3b8fb2c513c86c4ad6
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: f2b722ccef084286287b9825c43fa9069f64dcc4
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96913962"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99937725"
 ---
 # <a name="walkthrough-create-a-custom-site-workflow-activity"></a>İzlenecek yol: özel site iş akışı etkinliği oluşturma
   Bu izlenecek yol, kullanarak site düzeyinde iş akışı için özel bir etkinliğin nasıl oluşturulacağını gösterir [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . (Site düzeyi iş akışları yalnızca sitede bir liste değil, tüm site için geçerlidir.) Özel etkinlik bir yedekleme duyuruları listesi oluşturur ve sonra Duyurular listesinin içeriğini buna kopyalar.
@@ -54,7 +54,7 @@ ms.locfileid: "96913962"
 
 #### <a name="to-create-a-site-workflow-custom-activity-project"></a>Bir site iş akışı özel etkinlik projesi oluşturmak için
 
-1. **File**  >  **New**  >  **Yeni proje** iletişim kutusunu göstermek için menü çubuğunda dosya yeni **Proje** ' yi seçin.
+1.   >    >  **Yeni proje** iletişim kutusunu göstermek için menü çubuğunda dosya yeni **Proje** ' yi seçin.
 
 2. **Visual C#** veya **Visual Basic** altında **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
 
@@ -85,7 +85,7 @@ ms.locfileid: "96913962"
 
 #### <a name="to-add-a-custom-workflow-activity-class"></a>Özel bir iş akışı etkinlik sınıfı eklemek için
 
-1. **Project**  >  **Yeni öğe** Ekle iletişim kutusunu göstermek için menü çubuğunda Proje **Yeni öğe Ekle** ' yi seçin.
+1.   >  **Yeni öğe** Ekle iletişim kutusunu göstermek için menü çubuğunda Proje **Yeni öğe Ekle** ' yi seçin.
 
 2. **Yüklü şablonlar** ağacı görünümünde, **kod** düğümünü seçin ve ardından proje öğesi şablonları listesinden **sınıf** şablonunu seçin. Class1 varsayılan adını kullanın. **Ekle** düğmesini seçin.
 

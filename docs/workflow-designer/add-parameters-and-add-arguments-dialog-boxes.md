@@ -8,22 +8,22 @@ f1_keywords:
 - AddParameters.UI
 ms.assetid: a21fb4fe-134b-40b0-8497-86b842940ca1
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 author: TerryGLee
-ms.openlocfilehash: f29ee2aeedc971fc25654b6681c87b5dab71e386
-ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
+ms.openlocfilehash: f0a5bba22ea9255fcc6c65ea5fa6a59990548dc9
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "96995518"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99937146"
 ---
 # <a name="add-parameters-and-add-arguments-dialog-boxes"></a>Parametreler ve Bağımsız Değişkenler Ekle İletişim Kutuları
 
 Aşağıdaki tabloda, tasarımcı tarafından kullanılan **parametre Ekle** iletişim kutusunun kullanıcı ARABIRIMI (UI) öğeleri açıklanmaktadır <xref:System.Activities.Statements.InvokeMethod> :
 
-|Ad|Değer|
+|Name|Değer|
 |-|-|
 |**Yön**|Parametrenin yönteme veri akışını, yöntemin dışına mı yoksa her ikisini de temsil ettiğini belirtir.|
 |**Tür**|Yeni parametrenin tür adı.|
@@ -31,7 +31,7 @@ Aşağıdaki tabloda, tasarımcı tarafından kullanılan **parametre Ekle** ile
 
 Aşağıdaki tabloda, tasarımcı tarafından kullanılan **bağımsız değişken Ekle** iletişim kutusunun kullanıcı ARABIRIMI (UI) öğeleri açıklanmaktadır <xref:System.Activities.Statements.InvokeDelegate> :
 
-|Ad|Değer|
+|Name|Değer|
 |-|-|
 |**Ad**|Bağımsız değişkenin adı.|
 |**Yön**|Bağımsız değişkenin temsilciye veri akışını temsil ettiğini, temsilcinin dışına mı yoksa her ikisini birden mi temsil ettiğini belirtir.|

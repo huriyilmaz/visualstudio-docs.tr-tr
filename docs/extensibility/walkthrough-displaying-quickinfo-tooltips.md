@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 23fb8384-4f12-446f-977f-ce7910347947
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 34e1bb2c92cd387e979fdaa5746a34ea8d3995fc
-ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
+ms.openlocfilehash: 3c07dd32b889a9d75222bc8ff5a245f516fab528
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97877942"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99935930"
 ---
 # <a name="walkthrough-display-quickinfo-tooltips"></a>İzlenecek yol: hızlı bilgi araç ipuçlarını görüntüle
 QuickInfo, Kullanıcı işaretçiyi bir yöntem adı üzerine taşırken Yöntem imzalarını ve açıklamalarını görüntüleyen bir IntelliSense özelliğidir. QuickInfo gibi dil tabanlı özellikleri, hızlı bilgi açıklamaları sağlamak istediğiniz tanımlayıcıları tanımlayarak ve sonra içeriğin görüntüleneceği bir araç ipucu oluşturmak için uygulayabilirsiniz. Hızlı bilgileri bir dil hizmeti bağlamında tanımlayabilir veya kendi dosya adı uzantınızı ve içerik türünü tanımlayabilir ve yalnızca bu tür için hızlı bilgileri görüntüleyebilir veya var olan bir içerik türü için QuickInfo görüntüleyebilirsiniz (örneğin, "metin"). Bu izlenecek yol, "metin" içerik türü için hızlı bilgi görüntülemeyi gösterir.
@@ -39,7 +39,7 @@ QuickInfo, Kullanıcı işaretçiyi bir yöntem adı üzerine taşırken Yöntem
 
   Bu örnekte, QuickInfo kaynağı yöntem adlarının ve açıklamalarının sabit kodlanmış bir listesini kullanır, ancak tam uygulamalarda, dil hizmeti ve dil belgeleri bu içeriği sağlamaktan sorumludur.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
  Visual Studio 2015 ' den başlayarak, indirme merkezinden Visual Studio SDK 'yı yüklemeniz gerekmez. Visual Studio kurulumunda isteğe bağlı bir özellik olarak eklenmiştir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-a-mef-project"></a>MEF projesi oluşturma

@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 7b2cb14a-511a-4fef-9e4f-308139719fba
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 4136726e5c8b798121dbd38975d8f2bb935ed04a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 073dac8de37edddc1b748c52258047cd2d85e218
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80737115"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99937081"
 ---
 # <a name="evalflags"></a>EVALFLAGS
 İfade değerlendirmesini denetleyen bayrakları belirtir.
@@ -28,7 +28,7 @@ ms.locfileid: "80737115"
 ## <a name="syntax"></a>Syntax
 
 ```cpp
-enum enum_EVALFLAGS {
+enum enum_EVALFLAGS {
     EVAL_RETURNVALUE = 0x0002,
     EVAL_NOSIDEEFFECTS = 0x0004,
     EVAL_ALLOWBPS = 0x0008,
@@ -41,7 +41,7 @@ typedef DWORD EVALFLAGS;
 ```
 
 ```csharp
-public enum enum_EVALFLAGS {
+public enum enum_EVALFLAGS {
     EVAL_RETURNVALUE = 0x0002,
     EVAL_NOSIDEEFFECTS = 0x0004,
     EVAL_ALLOWBPS = 0x0008,
@@ -87,6 +87,6 @@ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Listelemeler](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md)
 - [EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md)

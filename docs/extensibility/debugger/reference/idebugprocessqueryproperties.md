@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: ce29a248-81a0-42c0-99a7-1606e8c548ec
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 08abf401b4e8f0e7a33d882e8178d77e6f248318
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ae588724f19f9722244ce69f77b64fad07552f9c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80723285"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99938180"
 ---
 # <a name="idebugprocessqueryproperties"></a>IDebugProcessQueryProperties
 Bu arabirim, [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) ımplemenbu tarafından uygulanan bir uzantı arabirimidir. Uygulayıcının hata ayıklama işlem ortamıyla ilgili bilgi almasına izin verir.

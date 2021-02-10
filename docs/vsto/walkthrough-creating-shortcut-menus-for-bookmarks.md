@@ -14,15 +14,15 @@ helpviewer_keywords:
 - menus, creating in Office applications
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 8b018687ec10eb725ece7d776277ea1c699dbbec
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: aabc7dec0a9965a055bce07cafeca25ac0165037
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97524217"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99937426"
 ---
 # <a name="walkthrough-create-shortcut-menus-for-bookmarks"></a>İzlenecek yol: yer işaretleri için kısayol menüleri oluşturma
   Bu izlenecek yol <xref:Microsoft.Office.Tools.Word.Bookmark> , Word için belge düzeyi özelleştirmesindeki denetimler için kısayol menülerinin nasıl oluşturulacağını gösterir. Bir Kullanıcı bir yer işareti içindeki metne sağ tıkladığında, bir kısayol menüsü görünür ve metin biçimlendirme için Kullanıcı seçeneklerini verir.
@@ -172,7 +172,7 @@ ms.locfileid: "97524217"
 
      [!code-csharp[Trin_Word_Document_Menus#4](../vsto/codesnippet/CSharp/trin_word_document_menus.cs/thisdocument.cs#4)]
 
-## <a name="test-the-application"></a>Uygulamayı test etme
+## <a name="test-the-application"></a>Uygulamayı test edin
  Kalın ve italik menü öğelerinin kısayol menüsünde göründüğünü doğrulamak için belgenizi test edin ve bir yer işaretinde metin ' i sağ tıklayıp metnin düzgün biçimlendirildiğinden emin olun.
 
 ### <a name="to-test-your-document"></a>Belgenizi test etmek için

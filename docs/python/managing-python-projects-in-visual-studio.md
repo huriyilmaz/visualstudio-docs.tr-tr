@@ -5,17 +5,17 @@ ms.date: 03/18/2019
 ms.topic: conceptual
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 9031b0107babf3d31b6e3b70bb7952cd83467d7d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 09203557fd9adcd6580dfafa981d6ed4f80eca16
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88238796"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99936463"
 ---
 # <a name="python-projects-in-visual-studio"></a>Visual Studio 'da Python projeleri
 
@@ -23,7 +23,7 @@ Python uygulamaları genellikle yalnızca klasörler ve dosyalar kullanılarak t
 
 ![Çözüm Gezgini Python projesi](media/projects-solution-explorer.png)
 
-Ayrıca, projeler her zaman bir Visual Studio *çözümü*içinde yönetilir ve bu, bir diğerine başvurgerekebilecek birçok proje içerebilir. Örneğin, bir Python projesi uzantı modülünü uygulayan bir C++ projesine başvurabilir. Bu ilişkiyle birlikte, Python projesinde hata ayıklamaya başladığınızda Visual Studio otomatik olarak C++ projesini (gerekliyse) oluşturur. (Genel bir tartışma için bkz. [Visual Studio 'Da çözümler ve projeler](../ide/solutions-and-projects-in-visual-studio.md).)
+Ayrıca, projeler her zaman bir Visual Studio *çözümü* içinde yönetilir ve bu, bir diğerine başvurgerekebilecek birçok proje içerebilir. Örneğin, bir Python projesi uzantı modülünü uygulayan bir C++ projesine başvurabilir. Bu ilişkiyle birlikte, Python projesinde hata ayıklamaya başladığınızda Visual Studio otomatik olarak C++ projesini (gerekliyse) oluşturur. (Genel bir tartışma için bkz. [Visual Studio 'Da çözümler ve projeler](../ide/solutions-and-projects-in-visual-studio.md).)
 
 Visual Studio, var olan bir klasör ağacından proje oluşturmak için bir şablon ve temiz ve boş bir proje oluşturmak için bir şablon dahil olmak üzere çeşitli Python proje şablonları sağlar. Bkz. bir dizin için [Proje şablonları](#project-templates) .
 
@@ -43,14 +43,14 @@ Visual Studio, var olan bir klasör ağacından proje oluşturmak için bir şab
 
 ## <a name="add-files-assign-a-startup-file-and-set-environments"></a>Dosya ekleme, başlangıç dosyası atama ve ortamları ayarlama
 
-Uygulamanızı geliştirirken, genellikle projeye farklı türlerde yeni dosyalar eklemeniz gerekir. Bu tür dosyaları eklemek, projeye sağ tıklayıp, **Add**  >  eklenecek bir dosyaya gözatabileceğiniz**Varolan öğe** Ekle ' yi seçerek ve **Add**  >  çeşitli öğe şablonlarıyla bir iletişim kutusu getiren**Yeni öğe**Ekle ' yi seçerek yapılır. [Öğe şablonları](python-item-templates.md) başvurusunda açıklandığı gibi, Seçenekler boş Python dosyalarını, bir Python sınıfını, birim testini ve Web uygulamalarıyla ilgili çeşitli dosyaları içerir. Visual Studio sürümünüzde nelerin kullanılabildiğini öğrenmek için bu seçenekleri bir test projesiyle keşfedebilirsiniz.
+Uygulamanızı geliştirirken, genellikle projeye farklı türlerde yeni dosyalar eklemeniz gerekir. Bu tür dosyaları eklemek, projeye sağ tıklayıp,   >  eklenecek bir dosyaya gözatabileceğiniz **Varolan öğe** Ekle ' yi seçerek ve   >  çeşitli öğe şablonlarıyla bir iletişim kutusu getiren **Yeni öğe** Ekle ' yi seçerek yapılır. [Öğe şablonları](python-item-templates.md) başvurusunda açıklandığı gibi, Seçenekler boş Python dosyalarını, bir Python sınıfını, birim testini ve Web uygulamalarıyla ilgili çeşitli dosyaları içerir. Visual Studio sürümünüzde nelerin kullanılabildiğini öğrenmek için bu seçenekleri bir test projesiyle keşfedebilirsiniz.
 
-Her Python projesinde, **Çözüm Gezgini**kalın harflerle gösterilen bir atanmış başlangıç dosyası vardır. Başlangıç dosyası, hata ayıklamayı başlattığınızda (**F5** veya **Hata Ayıkla**,  >  **hata ayıklamayı Başlat**) veya projenizi **etkileşimli** pencerede çalıştırdığınızda (**SHIFT** + **alt** + **F5** veya bir **Debug**  >  **projeyi Python etkileşimli olarak**Hata Ayıkla) çalışan dosyadır. Bunu değiştirmek için, yeni dosyaya sağ tıklayın ve **Başlangıç öğesi olarak ayarla** ' yı (veya Visual Studio 'nun eski sürümlerinde **başlangıç dosyası olarak ayarla** ) seçin.
+Her Python projesinde, **Çözüm Gezgini** kalın harflerle gösterilen bir atanmış başlangıç dosyası vardır. Başlangıç dosyası, hata ayıklamayı başlattığınızda (**F5** veya **Hata Ayıkla**,  >  **hata ayıklamayı Başlat**) veya projenizi **etkileşimli** pencerede çalıştırdığınızda (**SHIFT** + **alt** + **F5** veya bir   >  **projeyi Python etkileşimli olarak** Hata Ayıkla) çalışan dosyadır. Bunu değiştirmek için, yeni dosyaya sağ tıklayın ve **Başlangıç öğesi olarak ayarla** ' yı (veya Visual Studio 'nun eski sürümlerinde **başlangıç dosyası olarak ayarla** ) seçin.
 
 > [!Tip]
 > Seçili başlangıç dosyasını bir projeden kaldırır ve yeni bir tane seçmezseniz, projeyi çalıştırmaya çalıştığınızda Visual Studio hangi Python dosyasının başlatılacağını bilmez. Bu durumda, Visual Studio 2017 sürüm 15,6 ve sonraki bir hata gösterir. önceki sürümler, Python yorumlayıcı çalıştıran bir çıkış penceresi açın veya çıkış penceresinin görüntülendiğini, ancak neredeyse hemen kaybolduğunu görürsünüz. Bu davranışlardan herhangi biriyle karşılaşırsanız, atanmış bir başlangıç dosyasına sahip olup olmadığınızı kontrol edin.
 >
-> Herhangi bir nedenle çıkış penceresini açık tutmak istiyorsanız projenize sağ tıklayın, **Özellikler**' i seçin, **Hata Ayıkla** sekmesini seçin ve ardından `-i` **yorumlayıcı bağımsız değişkenleri** alanına ekleyin. Bu bağımsız değişken, bir program tamamlandıktan sonra yorumlayıcı 'nın etkileşimli moda geçmesine neden olur, böylece **Ctrl** + çıkmak için CTRL**Z**  >  **ENTER** tuşuna girene kadar pencereyi açık tutun.
+> Herhangi bir nedenle çıkış penceresini açık tutmak istiyorsanız projenize sağ tıklayın, **Özellikler**' i seçin, **Hata Ayıkla** sekmesini seçin ve ardından `-i` **yorumlayıcı bağımsız değişkenleri** alanına ekleyin. Bu bağımsız değişken, bir program tamamlandıktan sonra yorumlayıcı 'nın etkileşimli moda geçmesine neden olur, böylece  + çıkmak için CTRL **Z**  >  **ENTER** tuşuna girene kadar pencereyi açık tutun.
 
 ::: moniker range="vs-2017"
 Her zaman varsayılan genel Python ortamıyla ilişkili yeni bir proje. Projeyi farklı bir ortamla (sanal ortamlar dahil) ilişkilendirmek için, projede **Python ortamları** düğümüne sağ tıklayın, **Python ortamlarını Ekle/Kaldır**' ı seçin ve istediklerinizi seçin.
@@ -69,7 +69,7 @@ Etkin ortamı değiştirmek için **Çözüm Gezgini** ' de istediğiniz ortama 
 
 ## <a name="project-templates"></a>Proje şablonları
 
-Visual Studio, sıfırdan veya mevcut koddan bir Python projesi ayarlamanıza yönelik çeşitli yollar sunar. Bir şablon kullanmak için **Dosya**  >  **Yeni**  >  **Proje** menü komutunu seçin veya **Çözüm Gezgini** ' de çözüme sağ tıklayıp yeni proje **Ekle**' yi seçin ve  >  **New Project**her ikisi de aşağıdaki **Yeni proje** iletişim kutusunu açın. Python 'a özgü şablonları görmek için, "Python" üzerinde arama yapın veya **yüklü**  >  **Python** düğümünü seçin:
+Visual Studio, sıfırdan veya mevcut koddan bir Python projesi ayarlamanıza yönelik çeşitli yollar sunar. Bir şablon kullanmak için **Dosya**  >  **Yeni**  >  **Proje** menü komutunu seçin veya **Çözüm Gezgini** ' de çözüme sağ tıklayıp yeni proje **Ekle**' yi seçin ve  >  her ikisi de aşağıdaki **Yeni proje** iletişim kutusunu açın. Python 'a özgü şablonları görmek için, "Python" üzerinde arama yapın veya **yüklü**  >  **Python** düğümünü seçin:
 
 ![Python şablonlarıyla yeni proje iletişim kutusu](media/projects-new-project-dialog.png)
 
@@ -104,7 +104,7 @@ Aşağıdaki tabloda, Visual Studio 2017 ve üzeri sürümlerde kullanılabilen 
 
 Bağlantılı dosyalar bir projeye getirilen ancak genellikle uygulamanın proje klasörlerinin dışında bulunan dosyalardır. Bunlar, bir kaplama kısayolu simgesi olan normal dosyalar olarak **Çözüm Gezgini** görünürler: ![ bağlı dosya simgesi](media/projects-linked-file-icon.png)
 
-Bağlantılı dosyalar *. pyproj* dosyasında öğesi kullanılarak belirtilir `<Compile Include="...">` . Bağlı dosyalar, dizin yapısının dışında göreli bir yol kullanıyorsa veya **Çözüm Gezgini**içinde yollar kullandıklarında açık bir şekilde yapılır:
+Bağlantılı dosyalar *. pyproj* dosyasında öğesi kullanılarak belirtilir `<Compile Include="...">` . Bağlı dosyalar, dizin yapısının dışında göreli bir yol kullanıyorsa veya **Çözüm Gezgini** içinde yollar kullandıklarında açık bir şekilde yapılır:
 
 ```xml
 <Compile Include="..\test2.py">
@@ -121,11 +121,11 @@ Bağlı dosyalar aşağıdaki koşullardan herhangi biri altında yok sayılır:
 
 ### <a name="work-with-linked-files"></a>Bağlantılı dosyalarla çalışma
 
-Var olan bir öğeyi bağlantı olarak eklemek için, projede dosyayı eklemek istediğiniz klasörü sağ tıklatın ve ardından **Add**  >  **Varolan öğe**Ekle ' yi seçin. Görüntülenen iletişim kutusunda bir dosya seçin ve **Ekle** düğmesine açılan listeden **bağlantı olarak ekle** ' yi seçin. Çakışan dosya olmadığından, bu komut seçili klasörde bir bağlantı oluşturur. Ancak, aynı ada sahip bir dosya zaten varsa veya projede zaten bu dosya için bir bağlantı varsa bağlantı eklenmez.
+Var olan bir öğeyi bağlantı olarak eklemek için, projede dosyayı eklemek istediğiniz klasörü sağ tıklatın ve ardından   >  **Varolan öğe** Ekle ' yi seçin. Görüntülenen iletişim kutusunda bir dosya seçin ve **Ekle** düğmesine açılan listeden **bağlantı olarak ekle** ' yi seçin. Çakışan dosya olmadığından, bu komut seçili klasörde bir bağlantı oluşturur. Ancak, aynı ada sahip bir dosya zaten varsa veya projede zaten bu dosya için bir bağlantı varsa bağlantı eklenmez.
 
-Proje klasörlerinde zaten bulunan bir dosyaya bağlantı kurmayı denerseniz, bir bağlantı olarak değil, normal bir dosya olarak eklenir. Dosyayı bir bağlantıya dönüştürmek **için dosya**  >  **farklı kaydet** ' i seçerek dosyayı proje hiyerarşisi dışında bir konuma kaydedin; Visual Studio otomatik olarak bir bağlantıya dönüştürür. Benzer şekilde, dosyayı **File**  >  Proje hiyerarşisinde bir yere kaydetmek için dosya**farklı kaydet** kullanılarak bir bağlantı geri dönüştürülebilir.
+Proje klasörlerinde zaten bulunan bir dosyaya bağlantı kurmayı denerseniz, bir bağlantı olarak değil, normal bir dosya olarak eklenir. Dosyayı bir bağlantıya dönüştürmek **için dosya**  >  **farklı kaydet** ' i seçerek dosyayı proje hiyerarşisi dışında bir konuma kaydedin; Visual Studio otomatik olarak bir bağlantıya dönüştürür. Benzer şekilde, dosyayı   >  Proje hiyerarşisinde bir yere kaydetmek için dosya **farklı kaydet** kullanılarak bir bağlantı geri dönüştürülebilir.
 
-Bağlı bir dosyayı **Çözüm Gezgini**taşırsanız bağlantı taşınır ancak gerçek dosya etkilenmez. Benzer şekilde, bir bağlantıyı silme, dosyayı etkilemeden bağlantıyı kaldırır.
+Bağlı bir dosyayı **Çözüm Gezgini** taşırsanız bağlantı taşınır ancak gerçek dosya etkilenmez. Benzer şekilde, bir bağlantıyı silme, dosyayı etkilemeden bağlantıyı kaldırır.
 
 Bağlantılı dosyalar yeniden adlandırılamaz.
 

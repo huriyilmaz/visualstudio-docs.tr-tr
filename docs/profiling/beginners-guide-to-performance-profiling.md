@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: da2fbf8a-2d41-4654-a509-dd238532d25a
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: caac02510d2fce95fa67340d2061341ed77ac13e
-ms.sourcegitcommit: 14637be49401f56341c93043eab560a4ff6b57f6
+ms.openlocfilehash: a18302067749e3b4fc70b08519056dc391d3dca4
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90075437"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99936892"
 ---
 # <a name="measure-application-performance-by-analyzing-cpu-usage"></a>CPU kullanımını çözümleyerek uygulama performansını ölçme
 
@@ -57,7 +57,7 @@ Bu öğreticide şunları yapacaksınız:
 
      Temel olarak CPU kullanımına bakıyoruz, bu nedenle **CPU kullanımının** etkinleştirildiğinden emin olun (varsayılan olarak etkindir).
 
-5. Hata **Debug**  >  **ayıklamayı Başlat** ' a tıklayın (veya araç çubuğundan veya **F5**' i **başlatın** ).
+5. Hata   >  **ayıklamayı Başlat** ' a tıklayın (veya araç çubuğundan veya **F5**' i **başlatın** ).
 
      Uygulamanın yüklenmesi bittiğinde, tanılama araçlarının Özet görünümü görüntülenir. Pencereyi açmanız gerekiyorsa, **Hata Ayıkla**  >  **Windows**  >  **Tanılama araçları göster**' e tıklayın.
 
@@ -71,7 +71,7 @@ Bu öğreticide şunları yapacaksınız:
 
      ![Tanılama araçları CPU profilini oluşturmayı etkinleştirir](../profiling/media/diag-tools-enable-cpu-profiling.png "Diagtoolsenablecpuprofil oluşturma")
 
-     **Kayıt CPU profilini**seçtiğinizde, Visual Studio işlevlerinizi kaydetmeye başlar ve ne kadar süre sürer. Bu toplanan verileri yalnızca, uygulamanız bir kesme noktasında durdurulduğunda görüntüleyebilirsiniz.
+     **Kayıt CPU profilini** seçtiğinizde, Visual Studio işlevlerinizi kaydetmeye başlar ve ne kadar süre sürer. Bu toplanan verileri yalnızca, uygulamanız bir kesme noktasında durdurulduğunda görüntüleyebilirsiniz.
 
 8. Uygulamanızı ikinci kesme noktasına çalıştırmak için F5 'e basın.
 
@@ -111,7 +111,7 @@ CPU kullanımı altındaki işlevlerin listesini inceleyerek, en çok iş yapan 
 
     ![Tanılama araçları çağıran çağrılan görünümü](../profiling/media/diag-tools-caller-callee.png "Diagtoolscallerçağrılan")
 
-    Bu görünümde, seçilen işlev başlıkta ve **geçerli işlev** kutusunda (getnumber, bu örnekte) görüntülenir. Geçerli işlevi çağıran işlev, sol tarafta **çağırma işlevleri**altında gösterilir ve geçerli işlev tarafından çağrılan işlevler sağ taraftaki **çağrılan işlevler** kutusunda gösterilir. (Geçerli işlevi değiştirmek için iki kutuyu da seçebilirsiniz.)
+    Bu görünümde, seçilen işlev başlıkta ve **geçerli işlev** kutusunda (getnumber, bu örnekte) görüntülenir. Geçerli işlevi çağıran işlev, sol tarafta **çağırma işlevleri** altında gösterilir ve geçerli işlev tarafından çağrılan işlevler sağ taraftaki **çağrılan işlevler** kutusunda gösterilir. (Geçerli işlevi değiştirmek için iki kutuyu da seçebilirsiniz.)
 
     Bu görünümde, işlevin tamamlanışında toplam süre (MS) ve Toplam uygulama çalışma zamanının yüzdesi gösterilir.
     **Işlev gövdesi** Ayrıca, işlev gövdesinde harcanan ve çağrılan işlevlerde harcanan süre hariç toplam süreyi (ve zaman yüzdesini) gösterir. (Bu örnekte, işlev gövdesinde 2367 MS 'tan 2389 tanesi harcanmış ve kalan 22 MS, bu işlev tarafından çağrılan harici kodda harcanmıştı).
@@ -130,7 +130,7 @@ CPU kullanımı altındaki işlevlerin listesini inceleyerek, en çok iş yapan 
     ![Tanılama araçları çağrı ağacı](../profiling/media/diag-tools-call-tree.png "DiagToolsCallTree")
     ::: moniker-end
 
-    |Görüntü|Açıklama|
+    |Görüntü|Description|
     |-|-|
     |![1. Adım](../profiling/media/ProcGuid_1.png "ProcGuid_1")|CPU kullanım çağrısı ağaçlarında en üst düzey düğüm bir sözde düğümdür|
     |![2. Adım](../profiling/media/ProcGuid_2.png "ProcGuid_2")|Çoğu uygulamalarda, [dış kodu göster](#view-external-code) seçeneği devre dışı bırakıldığında, ikinci düzey düğüm, uygulamayı başlatan ve durduran sistem ve çerçeve kodunu içeren bir **[Dış kod]** düğümüdür, Kullanıcı arabirimini çizer, iş parçacığı zamanlamasını denetler ve uygulamaya diğer alt düzey hizmetler sağlar.|

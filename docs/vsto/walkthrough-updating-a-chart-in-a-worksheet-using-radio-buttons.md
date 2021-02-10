@@ -13,15 +13,15 @@ helpviewer_keywords:
 - worksheets, using radio buttons
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 4e375f394cd3d8be35ace8e3df07920fb824a07e
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: b1c9da3b1d019c77988ef01e1b3c019dd3f1d775
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97526062"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99937322"
 ---
 # <a name="walkthrough-updating-a-chart-in-a-worksheet-using-radio-buttons"></a>İzlenecek Yol: Radyo Düğmelerini Kullanarak Çalışma Sayfasında Grafik Güncelleme
   Bu izlenecek yol, kullanıcıya seçenekler arasında hızlı bir şekilde geçiş yapmak için bir yol sağlamak üzere Microsoft Office Excel çalışma sayfasındaki radyo düğmelerinin kullanımıyla ilgili temel bilgileri gösterir. Bu durumda, Seçenekler grafiğin stilini değiştirir.
@@ -99,7 +99,7 @@ ms.locfileid: "97526062"
 
 2. **Gözden geçirme düğmesine tıklayın** ve bu kılavuzda daha önce oluşturduğunuz çalışma kitabına gidin.
 
-3. **Tamam** düğmesine tıklayın.
+3. **Tamam**'a tıklayın.
 
      Visual Studio tasarımcıda yeni Excel çalışma kitabını açar ve **Çözüm Gezgini**'e **Excel Chart projem** ekler.
 
@@ -231,7 +231,7 @@ ms.locfileid: "97526062"
 
      [!code-cs[Trin_VstcoreProgrammingControlsExcel#20](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs#20)]
 
-## <a name="test-the-application"></a>Uygulamayı test etme
+## <a name="test-the-application"></a>Uygulamayı test edin
  Bir radyo düğmesini seçtiğinizde grafiğin doğru şekilde stillendirilmiş olduğunu doğrulamak için artık çalışma kitabınızı test edebilirsiniz.
 
 ### <a name="to-test-your-workbook"></a>Çalışma kitabınızı test etmek için

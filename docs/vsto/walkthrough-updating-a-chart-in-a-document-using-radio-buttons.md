@@ -13,15 +13,15 @@ helpviewer_keywords:
 - controls [Office development in Visual Studio], updating documents
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: df2996d99e752fbe0f7f36bcab537ee8c19d4f06
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 0db8cd113983231ee45252fec8fb47e3a7b75b7d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97528388"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99937335"
 ---
 # <a name="walkthrough-update-a-chart-in-a-document-using-radio-buttons"></a>İzlenecek yol: radyo düğmelerini kullanarak bir belgedeki grafiği güncelleştirme
   Bu izlenecek yol, kullanıcılara belgedeki grafik stillerini seçme seçeneği sunmak üzere Microsoft Office Word için belge düzeyi özelleştirmesinde radyo düğmelerinin nasıl kullanılacağını gösterir.
@@ -197,7 +197,7 @@ ms.locfileid: "97528388"
 
      [!code-csharp[Trin_VstcoreProgrammingControlsWord#16](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs#16)]
 
-## <a name="test-the-application"></a>Uygulamayı test etme
+## <a name="test-the-application"></a>Uygulamayı test edin
  Artık bir radyo düğmesini seçtiğinizde grafik stilinin doğru şekilde güncelleştirildiğinden emin olmak için belgenizi test edebilirsiniz.
 
 ### <a name="to-test-your-document"></a>Belgenizi test etmek için

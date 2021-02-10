@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, content types
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: b1670dfa3c7202e8ebbdb28396f161daeffac491
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: d205203797d8bd50c7b3132df86fbff9dbad1771
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96914016"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99937699"
 ---
 # <a name="walkthrough-create-a-site-column-content-type-and-list-for-sharepoint"></a>İzlenecek yol: SharePoint için site sütunu, içerik türü ve liste oluşturma
   Aşağıdaki yordamlarda, özel SharePoint site sütunlarının — veya *alanlarının* yanı sıra site sütunlarını kullanan bir içerik türü oluşturma işlemleri gösterilmektedir. Ayrıca, yeni içerik türünü kullanan bir listenin nasıl oluşturulacağını gösterir.
@@ -89,7 +89,7 @@ ms.locfileid: "96914016"
 
 #### <a name="to-add-site-columns"></a>Site sütunları eklemek için
 
-1. Yeni bir site sütunu ekleyin. Bunu yapmak için, **Çözüm Gezgini**, **Clinic** projesine sağ tıklayın ve ardından **Add**  >  **Yeni öğe** Ekle ' yi seçin.
+1. Yeni bir site sütunu ekleyin. Bunu yapmak için, **Çözüm Gezgini**, **Clinic** projesine sağ tıklayın ve ardından   >  **Yeni öğe** Ekle ' yi seçin.
 
 2. **Yeni öğe Ekle** Iletişim kutusunda **site sütunu**' nı seçin, adı **haentname** olarak değiştirin ve ardından **Ekle** düğmesini seçin.
 
@@ -157,7 +157,7 @@ ms.locfileid: "96914016"
 
 3. **Visual C#** veya **Visual Basic** altında **SharePoint** düğümünü genişletin.
 
-4. Şablonlar bölmesinde, **liste** şablonunu seçin, adı **hastalar** olarak değiştirin ve ardından **Templates** **Ekle** düğmesini seçin.
+4. Şablonlar bölmesinde, **liste** şablonunu seçin, adı **hastalar** olarak değiştirin ve ardından  **Ekle** düğmesini seçin.
 
 5. **Listeyi** varsayılan olarak ayarla **(özel liste)** seçeneğini belirleyin ve ardından **son** düğmesini seçin.
 
@@ -220,7 +220,7 @@ ms.locfileid: "96914016"
 
 15. **Sütun adı** listesinde, **hasta adı**' nı seçin, **sıralama** sütununun **artan** olarak ayarlandığından emin olun ve **Tamam** düğmesini seçin.
 
-## <a name="test-the-application"></a>Uygulamayı test etme
+## <a name="test-the-application"></a>Uygulamayı test edin
  Artık özel site sütunları, içerik türü ve liste hazır hale gelmiştir, bunları SharePoint 'e dağıtın ve test etmek için uygulamayı çalıştırın.
 
 #### <a name="to-test-the-application"></a>Uygulamayı test etmek için

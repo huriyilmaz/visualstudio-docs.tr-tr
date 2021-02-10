@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e379921e-9ef1-4326-bbf3-53ba67925526
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ed4bc8d045ff21a536016edc0a0ac64d99c63c2f
-ms.sourcegitcommit: 0893244403aae9187c9375ecf0e5c221c32c225b
+ms.openlocfilehash: 12c14850717688b17caed2fbe7feb546e0ebdb6e
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94383111"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99936177"
 ---
 # <a name="clickonce-cache-overview"></a>ClickOnce önbelleğine genel bakış
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Yerel olarak yüklenmiş veya çevrimiçi olarak barındırılan tüm uygulamalar, istemci bilgisayarda bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama *önbelleğinde* depolanır. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Önbellek, geçerli kullanıcının belgeler ve ayarlar klasörünün yerel ayarlar dizininde bulunan gizli dizinlerin bir ailesidir. Bu önbellek derlemeler, yapılandırma dosyaları, uygulama ve Kullanıcı ayarları ve veri dizini dahil tüm uygulama dosyalarını barındırır. Önbellek, uygulamanın veri dizinini en son sürüme geçirmeden de sorumludur. Veri taşıma hakkında daha fazla bilgi için bkz. [ClickOnce uygulamalarında yerel ve uzak verilere erişme](../deployment/accessing-local-and-remote-data-in-clickonce-applications.md).

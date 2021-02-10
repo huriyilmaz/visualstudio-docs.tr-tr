@@ -15,15 +15,15 @@ helpviewer_keywords:
 - actions panes [Office development in Visual Studio], adding controls
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 44fd876dfad99e1a1320a5e5d743ea8e30dfdb98
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: c0f24c7270dc3c174be124506e1e36dafe7581f6
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97524162"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99937387"
 ---
 # <a name="walkthrough-insert-text-into-a-document-from-an-actions-pane"></a>İzlenecek yol: Eylemler bölmesinden belgeye metin ekleme
   Bu izlenecek yol, bir Microsoft Office Word belgesinde bir eylemler bölmesinin nasıl oluşturulacağını göstermektedir. Eylemler bölmesi girişi toplayıp metni belgeye gönderen iki denetim içerir.
@@ -164,7 +164,7 @@ ms.locfileid: "97524162"
      [!code-csharp[Trin_VstcoreActionsPaneWord#11](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs#11)]
      [!code-vb[Trin_VstcoreActionsPaneWord#11](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb#11)]
 
-## <a name="test-the-application"></a>Uygulamayı test etme
+## <a name="test-the-application"></a>Uygulamayı test edin
  Belge açıldığında eylemler bölmesinin açıldığını ve düğme tıklandığında metin kutularına yazılan metinlerin yer işaretlerine eklendiğini doğrulamak için belgenizi test edin.
 
 ### <a name="to-test-your-document"></a>Belgenizi test etmek için

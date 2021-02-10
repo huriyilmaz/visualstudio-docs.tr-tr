@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 4a6a884b-5730-4b54-9264-99684f5b523c
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: be324ab48d42e859678ccf01d8c75faae6cea381
-ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
+ms.openlocfilehash: 8933822ee5bb63b341ff51296ba2884fef2aeb75
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97876252"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99935917"
 ---
 # <a name="walkthrough-display-signature-help"></a>İzlenecek yol: Imza yardımını görüntüle
 İmza yardımı ( *parametre bilgisi* olarak da bilinir), bir Kullanıcı parametre listesi başlangıç karakterini (genellikle bir açılış ayracı) yazdığında bir araç ipucunda bir yöntemin imzasını görüntüler. Bir parametre ve parametre ayırıcısı (genellikle virgül) yazıldığında araç ipucu, sonraki parametreyi kalın olarak göstermek için güncelleştirilir. Aşağıdaki yollarla Imza yardımını tanımlayabilirsiniz: bir dil hizmeti bağlamında kendi dosya adı uzantınızı ve içerik türünü tanımlayabilir ve yalnızca bu tür için Imza yardımını görüntüleyebilir ya da mevcut bir içerik türü için Imza yardımını (örneğin, "metin") görüntüleyin. Bu izlenecek yol, "metin" içerik türü için Imza yardımını görüntülemeyi gösterir.
@@ -26,7 +26,7 @@ ms.locfileid: "97876252"
 
  Bu izlenecek yol, sabit kodlanmış tanımlayıcı kümesi için Imza yardımını ayarlamayı gösterir. Tam uygulamalarda, bu içeriği sağlamaktan dil sorumludur.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
  Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yükleyemezsiniz. Visual Studio kurulumunda isteğe bağlı bir özellik olarak eklenmiştir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="creating-a-mef-project"></a>MEF projesi oluşturma

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - worksheets, automating
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 9e311a567d32ee083bcc13f417c248f5f3d3ee5a
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: b3305fdc8f4fbadb3dcdd9775c3a6fe3dac3a1fb
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97526125"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99937400"
 ---
 # <a name="walkthrough-program-against-events-of-a-namedrange-control"></a>İzlenecek yol: NamedRange denetimi olaylarına karşı programlama
   Bu izlenecek yol <xref:Microsoft.Office.Tools.Excel.NamedRange> , Visual Studio 'Da Office geliştirme araçları 'nı kullanarak Microsoft Office Excel çalışma sayfasına ve programına yönelik bir denetimin nasıl ekleneceğini gösterir.
@@ -73,7 +73,7 @@ ms.locfileid: "97526125"
 
 3. **$A $1** ' nin düzenlenebilir metin kutusunda göründüğünü ve **a1** hücresinin seçildiğini doğrulayın. Aksi takdirde, seçmek için **a1** hücresini tıklatın.
 
-4. **Tamam** düğmesine tıklayın.
+4. **Tamam**'a tıklayın.
 
      **A1** hücresi adlı bir aralığa dönüşür `namedRange1` . Çalışma sayfasında görünür bir gösterge yoktur, ancak `namedRange1` **a1** hücresi seçildiğinde **ad** kutusunda (sol taraftaki çalışma sayfasının hemen üzerinde bulunur) görünür.
 
@@ -81,7 +81,7 @@ ms.locfileid: "97526125"
 
 6. **$B $3** ' nin düzenlenebilir metin kutusunda göründüğünü ve **B3** hücresinin seçildiğini doğrulayın. Aksi takdirde, seçmek için hücre **B3** ' e tıklayın.
 
-7. **Tamam** düğmesine tıklayın.
+7. **Tamam**'a tıklayın.
 
      **B3** hücresi adlı bir aralığa dönüşür `namedRange2` .
 
@@ -136,7 +136,7 @@ ms.locfileid: "97526125"
     > [!NOTE]
     > Excel aralığındaki bir hücreye çift tıklamak seçimin aralığa taşınmasına neden olduğundan, <xref:Microsoft.Office.Tools.Excel.NamedRange.SelectionChange> olay gerçekleşmeden önce bir olay oluşur <xref:Microsoft.Office.Tools.Excel.NamedRange.BeforeDoubleClick> .
 
-## <a name="test-the-application"></a>Uygulamayı test etme
+## <a name="test-the-application"></a>Uygulamayı test edin
  Artık, bir denetimin olaylarını açıklayan metnin, <xref:Microsoft.Office.Tools.Excel.NamedRange> Olaylar oluşturulduğunda başka bir adlandırılmış aralığa eklendiğini doğrulamak için çalışma kitabınızı test edebilirsiniz.
 
 ### <a name="to-test-your-document"></a>Belgenizi test etmek için

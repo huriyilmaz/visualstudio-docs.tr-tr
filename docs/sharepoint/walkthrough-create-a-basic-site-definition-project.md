@@ -12,15 +12,15 @@ helpviewer_keywords:
 - site definitions [SharePoint development in Visual Studio]
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 0411f027b105622d806e123bd80f38c4b05281ca
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: def1ae862a7b9ba4def62cb590260c5a18758929
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96913860"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99937712"
 ---
 # <a name="walkthrough-create-a-basic-site-definition-project"></a>İzlenecek yol: temel bir site tanımı projesi oluşturma
   Bu izlenecek yol, üzerinde bazı denetimlerle görsel bir Web Bölümü içeren temel bir site tanımı oluşturmayı gösterir. Daha fazla açıklık için, oluşturduğunuz görsel web bölümünün yalnızca birkaç denetimi vardır. Ancak, daha fazla işlevsellik içeren daha gelişmiş SharePoint site tanımları oluşturabilirsiniz.

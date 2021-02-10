@@ -7,16 +7,16 @@ ms.topic: how-to
 ms.assetid: 2cdd9903-39db-47e8-93dd-5e6a21bc3435
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - aspnet
-ms.openlocfilehash: c26342fb956aa5043f316015f05e18ef70d20559
-ms.sourcegitcommit: 8e15b434bf5db3e0f719320ca82682df1a3da110
+ms.openlocfilehash: 513840110a5f948e245a0ff91878c28fc3b21e6c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "98883598"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99936580"
 ---
 # <a name="how-to-instrument-a-dynamically-compiled-aspnet-web-application-and-collect-memory-data-by-using-the-profiler-command-line"></a>Nasıl yapılır: profil oluşturucu komut satırını kullanarak dinamik olarak derlenmiş bir ASP.NET Web uygulamasını izleme ve bellek verileri toplama
 Bu konu [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] , izleme profili oluşturma yöntemi kullanılarak dinamik olarak derlenen bir Web uygulaması için ayrıntılı .net bellek ayırma ve nesne yaşam süresi verilerini toplamak üzere profil oluşturma araçları komut satırı araçlarının nasıl kullanılacağını açıklar.

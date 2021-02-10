@@ -15,15 +15,15 @@ helpviewer_keywords:
 - workbooks [Office development in Visual Studio], inserting data
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 23acfc79514d034faa6fce5c2c27a8edcaa4c58d
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 2456f92e6bd0b6e1a6b8bf6389718ec6a41342dd
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97526222"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99937447"
 ---
 # <a name="walkthrough-insert-data-into-a-workbook-on-a-server"></a>İzlenecek yol: sunucudaki çalışma kitabına veri ekleme
   Bu kılavuzda, sınıfını kullanarak Excel 'i başlatmadan Microsoft Office Excel çalışma kitabında önbelleğe alınmış bir veri kümesine veri ekleme işlemi gösterilmektedir <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> .
@@ -79,7 +79,7 @@ ms.locfileid: "97526222"
 
 7. **Yeni proje** iletişim kutusunda, **çözüm için dizin oluştur** onay kutusunun seçili olmadığından emin olun.
 
-8. **Tamam** düğmesine tıklayın.
+8. **Tamam**'a tıklayın.
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**Çözüm Gezgini** Için bir **AdventureWorksDataSet** projesi ekler ve **Class1.cs** veya **Class1. vb** kod dosyasını açar.
 
@@ -137,7 +137,7 @@ ms.locfileid: "97526222"
 
 5. **Ad** kutusuna **AdventureWorksReport** yazın. Konumu değiştirmeyin.
 
-6. **Tamam** düğmesine tıklayın.
+6. **Tamam**'a tıklayın.
 
      **Office proje sihirbazı Visual Studio Araçları** açılır.
 
@@ -218,7 +218,7 @@ ms.locfileid: "97526222"
 
 4. **Ad** kutusuna **DataWriter** yazın. Konumu değiştirmeyin.
 
-5. **Tamam** düğmesine tıklayın.
+5. **Tamam**'a tıklayın.
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**DataWriter** projesini **Çözüm Gezgini** ekler ve **program.cs** veya **Module1. vb** kod dosyasını açar.
 
@@ -231,7 +231,7 @@ ms.locfileid: "97526222"
 
 2. **.Net** sekmesinde, **Microsoft. VisualStudio. Tools. Applications. ServerDocument** öğesini seçin.
 
-3. **Tamam** düğmesine tıklayın.
+3. **Tamam**'a tıklayın.
 
 4. **Çözüm Gezgini**, **DataWriter** projesine sağ tıklayın ve **Başvuru Ekle**' ye tıklayın.
 

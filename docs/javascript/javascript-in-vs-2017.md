@@ -13,13 +13,13 @@ ms.assetid: 74dca14c-5071-416f-a92b-d09f95e3dfb8
 caps.latest.revision: 1
 author: bowdenk7
 ms.author: jillfra
-manager: jillfra
-ms.openlocfilehash: a5d71b2b20d0723b1809ae78717b64ee43ae2b6b
-ms.sourcegitcommit: ba966327498a0f67d2df2291c60b62312f40d1d3
+manager: jmartens
+ms.openlocfilehash: b39ee716c5092f41ef3ea8f05c529509ceca3717
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93414548"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99936866"
 ---
 # <a name="javascript-in-visual-studio-2017"></a>Visual Studio 2017’de JavaScript
 
@@ -255,14 +255,14 @@ VSDoc, yazma daha kolay olan [JSDoc](https://jsdoc.app/about-getting-started.htm
 Daha önce, üçüncü taraf kitaplıklar için özel tamamlanma sonuçları eklemenize olanak tanıyan [IntelliSense uzantıları](/previous-versions/visualstudio/visual-studio-2015/ide/extending-javascript-intellisense) yazabilirsiniz.
 Bu uzantıların yazma ve yükleme ve bunlara başvurulması oldukça zordur, bu nedenle yeni dil hizmetinin iletilmesi bu dosyaları desteklemez.
 Daha kolay bir alternatif olarak, eski uzantılarla aynı IntelliSense avantajlarını sağlamak için bir TypeScript tanım dosyası yazabilirsiniz `.intellisense.js` .
-Burada bildirim ( `.d.ts` ) dosyası yazma hakkında daha fazla bilgi [here](http://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html)edinebilirsiniz.
+Burada bildirim ( `.d.ts` ) dosyası yazma hakkında daha fazla bilgi [](http://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html)edinebilirsiniz.
 
 ### <a name="unsupported-patterns"></a>Desteklenmeyen desenler
 
 Yeni dil hizmeti bir yürütme altyapısı yerine statik analizler tarafından desteklenmediğinden (farklar hakkında bilgi edinmek için [Bu sorunu](https://github.com/Microsoft/TypeScript/issues/4789) okuyun), artık algılanamayan birkaç JavaScript deseni vardır.
 En yaygın olarak kullanılan desenler "daha fazla" modeldir.
 Şu anda dil hizmeti, bildirimde daha sonra bulunan özelliklere sahip nesneler üzerinde IntelliSense sağlayamaz.
-Örnek:
+Örneğin:
 
 ```js
 var obj = {};

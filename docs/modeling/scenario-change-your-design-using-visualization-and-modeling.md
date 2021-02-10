@@ -14,15 +14,15 @@ helpviewer_keywords:
 author: JoshuaPartlow
 ms.author: joshuapa
 ms.custom: SEO-VS-2020
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 91b62716c87fafd965652452b6494fe255530e7b
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: 79f131276172a9df91dd8408149fae66a2f28ca9
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97363867"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99938050"
 ---
 # <a name="scenario-change-your-design-using-visualization-and-modeling"></a>Senaryo: Görselleştirme ve modelleme kullanarak tasarımınızı değiştirme
 
@@ -83,10 +83,10 @@ Aşağıdaki tabloda, bu araçların yazılım geliştirme yaşam döngüsünün
 
 |Araç/rol|Kullanıcı gereksinimleri Modelleme|İş süreci modelleme|Sistem mimarisi & tasarımı|Kod görselleştirme & araştırması|Doğrulama|
 |------|-|-|-|-|-|
-|Domain-Specific Language (DSL) diyagramı|Evet|Evet|Evet|||
-|Bağımlılık diyagramı, katman doğrulama|||Evet|Evet|Evet|
-|Kod eşlemesi|||Evet|Evet|Evet|
-|Sınıf Tasarımcısı (kod tabanlı)||||Evet||
+|Domain-Specific Language (DSL) diyagramı|Yes|Yes|Yes|||
+|Bağımlılık diyagramı, katman doğrulama|||Yes|Yes|Yes|
+|Kod eşlemesi|||Yes|Yes|Yes|
+|Sınıf Tasarımcısı (kod tabanlı)||||Yes||
 
 Bağımlılık diyagramları çizmek için, mevcut bir çözümün parçası olarak bir modelleme projesi oluşturmanız veya yeni bir tane oluşturmanız gerekir. Bu diyagramların modelleme projesinde oluşturulması gerekir.
 Bağımlılık diyagramlarındaki öğeler, modelleme projesinde bulunur, ancak ortak modelde depolanmaz. Kod haritaları ve koddan oluşturulan .NET sınıf diyagramları, modelleme projesi dışında bulunur.

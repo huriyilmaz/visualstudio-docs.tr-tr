@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 80a52e93-4a04-4ab2-8adc-a7847c2dc20b
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 32d0dd7dbeee70b8c4eb566a07cf9a44d40d4f49
-ms.sourcegitcommit: 42981ace63c0f2b087de5703ca76b8dcdd93a719
+ms.openlocfilehash: 7b98914d4e7fc2d63fd6cc9f79789c389e19b784
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96606547"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99936008"
 ---
 # <a name="sdk-helpers-for-debugging"></a>Hata Ayıklama için SDK Yardımcıları
 Bu işlevler ve bildirimler, C++ ' da hata ayıklama altyapılarını, Expression değerlendiricileri ve sembol sağlayıcılarını uygulamak için genel yardımcı işlevlerdir.
@@ -166,7 +166,7 @@ HRESULT EnumMetricSections(
 |metrictypeException|Tüm özel durum ölçümleri.|
 |metricttypeEEExtension|Tüm ifade değerlendirici uzantıları.|
 
-|Hata ayıklama altyapısı özellikleri|Açıklama|
+|Hata ayıklama altyapısı özellikleri|Description|
 |-----------------------------|-----------------|
 |metricAddressBP|Adres kesme noktaları desteğini göstermek için sıfır dışında olarak ayarlayın.|
 |metricAlwaysLoadLocal|Hata ayıklama altyapısını her zaman yerel olarak yüklemek için sıfır dışında olarak ayarlayın.|
@@ -202,13 +202,13 @@ HRESULT EnumMetricSections(
 |Metricıncompatiblelist|Bu hata ayıklama altyapısıyla uyumsuz olan hata ayıklama motorları için GUID 'Leri belirten girişleri içeren kayıt defteri anahtarı.|
 |Metricdisablejitoptılama|Tam zamanında iyileştirmelerin (yönetilen kod için) hata ayıklama sırasında devre dışı bırakılacağını belirtmek için bunu sıfır dışında olarak ayarlayın.|
 
-|İfade değerlendirici özellikleri|Açıklama|
+|İfade değerlendirici özellikleri|Description|
 |-------------------------------------|-----------------|
 |metricEngine|Bu, belirtilen ifade değerlendiricisi 'ni destekleyen hata ayıklama altyapısının sayısını tutar.|
 |metricPreloadModules|Bir programa karşı bir ifade değerlendirici başlatıldığında modüllerin önceden yüklenmesi gerektiğini belirtmek için bunu sıfır dışında olarak ayarlayın.|
 |metricThisObjectName|Bunu "This" nesne adı olarak ayarlayın.|
 
-|İfade değerlendirici uzantı özellikleri|Açıklama|
+|İfade değerlendirici uzantı özellikleri|Description|
 | - |-----------------|
 |metricExtensionDll|Bu uzantıyı destekleyen dll 'nin adı.|
 |metricExtensionRegistersSupported|Desteklenen kayıt listesi.|
@@ -216,18 +216,18 @@ HRESULT EnumMetricSections(
 |Metricextensiontypesdestekleniyor|Desteklenen türlerin listesi.|
 |metricExtensionTypesEntryPoint|Türlere erişmek için giriş noktası.|
 
-|Bağlantı noktası sağlayıcı özellikleri|Açıklama|
+|Bağlantı noktası sağlayıcı özellikleri|Description|
 |------------------------------|-----------------|
 |Metricportpickerclsıd|Bağlantı noktası seçicisinin CLSID 'SI (kullanıcının bağlantı noktalarını seçmek ve hata ayıklama için kullanılacak bağlantı noktaları eklemek için kullanabileceği bir iletişim kutusu).|
 |metricDisallowUserEnteredPorts|Kullanıcı tarafından girilen bağlantı noktaları bağlantı noktası sağlayıcısına eklenemediğinde sıfır dışında (Bu, bağlantı noktası Seçici iletişim kutusunu temelde salt okunurdur).|
 |metricPidBase|İşlem kimlikleri ayrılırken bağlantı noktası sağlayıcısı tarafından kullanılan temel işlem KIMLIĞI.|
 
-|Önceden tanımlanmış SP deposu türleri|Açıklama|
+|Önceden tanımlanmış SP deposu türleri|Description|
 |-------------------------------|-----------------|
 |storetypeFile|Semboller ayrı bir dosyada depolanır.|
 |storetypeMetadata|Semboller bir derlemede meta veri olarak depolanır.|
 
-|Çeşitli özellikler|Açıklama|
+|Çeşitli özellikler|Description|
 |------------------------------|-----------------|
 |metricShowNonUserCode|Kullanıcı olmayan kodu göstermek için bunu sıfır dışında olarak ayarlayın.|
 |metricJustMyCodeStepping|Adımlamayı Yalnızca Kullanıcı kodunda gerçekleşebileceğini belirtmek için sıfır dışında olarak ayarlayın.|
@@ -261,7 +261,7 @@ HRESULT EnumMetricSections(
 
  *[ölçüm] = [ölçüm değeri]*
 
-|Yer tutucu|Açıklama|
+|Yer tutucu|Description|
 |-----------------|-----------------|
 |*[kayıt defteri anahtarı]*|`HKEY_CURRENT_USER` veya `HKEY_LOCAL_MACHINE`.|
 |*[sürüm kökü]*|Visual Studio sürümü (örneğin,, `7.0` `7.1` veya `8.0` ). Ancak, bu kök, **devenv.exe** için **/rootsuffix** anahtarı kullanılarak da değiştirilebilir. VSıP için bu değiştirici genellikle **Exp** olur, bu nedenle sürüm kökü, örneğin, 8.0 exp olur.|
@@ -294,7 +294,7 @@ HRESULT EnumMetricSections(
 
  `1` = *[bağlantı noktası sağlayıcı GUID]*
 
-|Yer tutucu|Açıklama|
+|Yer tutucu|Description|
 |-----------------|-----------------|
 |*[motor GUID 'si]*|Hata ayıklama altyapısının GUID 'SI.|
 |*[sınıf GUID 'si]*|Bu hata ayıklama altyapısını uygulayan sınıfın GUID 'ı.|
@@ -313,7 +313,7 @@ HRESULT EnumMetricSections(
 
  *[ölçüm] = [ölçüm değeri]*
 
-|Yer tutucu|Açıklama|
+|Yer tutucu|Description|
 |-----------------|-----------------|
 |*[bağlantı noktası sağlayıcı GUID]*|Bağlantı noktası tedarikçinin GUID 'SI|
 |*[sınıf GUID 'si]*|Bu bağlantı noktası tedarikçiyi uygulayan sınıfın GUID 'ı|
@@ -341,7 +341,7 @@ HRESULT EnumMetricSections(
 
  *[ölçüm] = [ölçüm değeri]*
 
-|Yer tutucu|Açıklama|
+|Yer tutucu|Description|
 |-----------------|-----------------|
 |*[sembol sağlayıcısı GUID]*|Sembol sağlayıcısının GUID 'SI|
 |*[sınıf GUID 'si]*|Bu sembol sağlayıcısını uygulayan sınıfın GUID 'ı|
@@ -370,7 +370,7 @@ HRESULT EnumMetricSections(
 
  `1` = *[hata ayıklama altyapısı GUID]*
 
-|Yer tutucu|Açıklama|
+|Yer tutucu|Description|
 |-----------------|-----------------|
 |*[dil GUID 'si]*|Bir dilin GUID 'SI|
 |*[satıcı GUID]*|Satıcının GUID 'SI|
@@ -388,11 +388,11 @@ HRESULT EnumMetricSections(
 
  *[ölçüm] = [ölçüm değeri]*
 
-|Yer tutucu|Açıklama|
+|Yer tutucu|Description|
 |-----------------|-----------------|
 |*[uzantı GUID]*|Bir ifade değerlendirici uzantısının GUID 'SI|
 
-### <a name="exceptions"></a>Özel Durumlar
+### <a name="exceptions"></a>Özel durumlar
  Aşağıda, kayıt defterindeki özel durum ölçümlerinin organizasyonu verilmiştir. `Exception` , özel durumların ölçüm türü adıdır ve *[ölçüm türü]* öğesine karşılık gelir.
 
  `Exception`\
@@ -413,7 +413,7 @@ HRESULT EnumMetricSections(
 
  *[ölçüm] = [ölçüm değeri]*
 
-|Yer tutucu|Açıklama|
+|Yer tutucu|Description|
 |-----------------|-----------------|
 |*[hata ayıklama altyapısı GUID]*|Özel durumları destekleyen bir hata ayıklama altyapısının GUID 'ı.|
 |*[özel durum türleri]*|Ele alınan özel durumların sınıfını tanımlayan alt anahtar için genel bir başlık. Genellikle **C++ özel durumları**, **Win32 özel durumları**, **ortak dil çalışma zamanı özel durumları** ve **Yerel Run-Time denetimleri** bulunur. Bu adlar, kullanıcıya belirli bir özel durum sınıfını tanımlamak için de kullanılır.|

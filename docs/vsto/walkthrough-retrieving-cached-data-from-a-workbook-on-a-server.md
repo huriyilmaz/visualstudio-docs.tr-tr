@@ -16,15 +16,15 @@ helpviewer_keywords:
 - documents [Office development in Visual Studio], server-side data access
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: f32ad4ffe44eb725953bc664acf4c4c38da4b11e
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 818c7c9aa5edeae32859d0b5af6449b513df1c85
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97524848"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99937452"
 ---
 # <a name="walkthrough-retrieve-cached-data-from-a-workbook-on-a-server"></a>İzlenecek yol: sunucudaki çalışma kitabından önbelleğe alınmış verileri alma
   Bu kılavuzda, sınıfını kullanarak Excel 'i başlatmadan Microsoft Office Excel çalışma kitabında önbelleğe alınmış bir veri kümesinden verilerin nasıl alınacağını gösterir <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> .
@@ -80,7 +80,7 @@ ms.locfileid: "97524848"
 
 7. **Yeni proje** iletişim kutusunda, **çözüm için dizin oluştur** onay kutusunun seçili olmadığından emin olun.
 
-8. **Tamam** düğmesine tıklayın.
+8. **Tamam**'a tıklayın.
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**Çözüm Gezgini** Için bir **AdventureWorksDataSet** projesi ekler ve *Class1.cs* veya *Class1. vb* kod dosyasını açar.
 
@@ -138,7 +138,7 @@ ms.locfileid: "97524848"
 
 5. **Ad** kutusuna **AdventureWorksReport** yazın. Konumu değiştirmeyin.
 
-6. **Tamam** düğmesine tıklayın.
+6. **Tamam**'a tıklayın.
 
      **Office proje sihirbazı Visual Studio Araçları** açılır.
 
@@ -227,7 +227,7 @@ ms.locfileid: "97524848"
 
 4. **Ad** kutusuna **DataReader** yazın. Konumu değiştirmeyin.
 
-5. **Tamam** düğmesine tıklayın.
+5. **Tamam**'a tıklayın.
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**Çözüm Gezgini** **DataReader** projesi ekler ve *program.cs* veya *Module1. vb* kod dosyasını açar.
 
@@ -240,7 +240,7 @@ ms.locfileid: "97524848"
 
 2. **.Net** sekmesinde, **Microsoft. VisualStudio. Tools. Applications. ServerDocument** öğesini seçin.
 
-3. **Tamam** düğmesine tıklayın.
+3. **Tamam**'a tıklayın.
 
 4. **Çözüm Gezgini**, **DataReader** projesine sağ tıklayın ve **Başvuru Ekle**' ye tıklayın.
 

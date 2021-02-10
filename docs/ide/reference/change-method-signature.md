@@ -5,7 +5,7 @@ ms.date: 07/20/2020
 ms.topic: reference
 author: mikadumont
 ms.author: midumont
-manager: jillfra
+manager: jmartens
 f1_keywords:
 - vs.csharp.refactoring.remove
 - vs.csharp.refactoring.reorder
@@ -14,12 +14,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2d91406b65950515afb3659c0d5918841465b2fc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 01acbab7725effff5b2edbf8a80ab4f115fd2eff
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86869574"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99935852"
 ---
 # <a name="change-a-method-signature-refactoring"></a>Yöntem imzasını yeniden düzenlemeyi değiştirme
 
@@ -50,11 +50,11 @@ Bu yeniden düzenleme için geçerlidir:
 2. Sonra, aşağıdakilerden birini yapın:
 
    - **Klavye**
-      - **CTRL + R**, ardından **CTRL + V**tuşlarına basın.  (Klavye kısayolunuzun seçtiğiniz profile göre farklı olabileceğini unutmayın.)
-      - **CTRL**tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek ve Önizleme penceresi açılır penceresinde **imzayı Değiştir** ' i seçmek için.
+      - **CTRL + R**, ardından **CTRL + V** tuşlarına basın.  (Klavye kısayolunuzun seçtiğiniz profile göre farklı olabileceğini unutmayın.)
+      - **CTRL** tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek ve Önizleme penceresi açılır penceresinde **imzayı Değiştir** ' i seçmek için.
    - **Fare**
       - **Parametreleri kaldırmak > düzenle > yeniden Düzenle**' yi seçin.
-      - **Düzenle > yeniden düzenleme > parametreleri yeniden**düzenleyin ' i seçin.
+      - **Düzenle > yeniden düzenleme > parametreleri yeniden** düzenleyin ' i seçin.
       - Koda sağ tıklayın, **Hızlı Eylemler ve yeniden düzenlemeler** menüsünü seçin ve Önizleme penceresi açılır penceresinde **imzayı Değiştir** ' i seçin.
 
 3. Açılan **Imza Değiştir** iletişim kutusunda, yöntem imzasını değiştirmek için sağ taraftaki düğmeleri kullanabilirsiniz:
