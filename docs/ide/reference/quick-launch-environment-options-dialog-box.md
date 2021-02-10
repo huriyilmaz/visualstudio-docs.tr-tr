@@ -13,26 +13,26 @@ helpviewer_keywords:
 ms.assetid: 4200f297-d065-4723-9a30-d91ff2e26c9d
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 monikerRange: vs-2017
-ms.openlocfilehash: e055906dd4cddabd16b39e3b2cad66d07dddd38d
-ms.sourcegitcommit: 2cf87f79762906ccaa133a7645aa4c77a0bed7da
+ms.openlocfilehash: f1889b20f96e051867d470bc96df36b7018abdc4
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96616752"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99958212"
 ---
 # <a name="quick-launch-environment-options-dialog-box"></a>Hızlı Başlatma, Ortam, Seçenekler İletişim Kutusu
 
 Seçenekler, şablonlar, menüler gibi IDE varlıkları için eylemleri hızlıca aramak ve yürütmek üzere **Hızlı Başlat** ' ı kullanabilirsiniz. Kodu ve sembolleri aramak için **Hızlı başlatma** kullanamazsınız. **Hızlı Başlat** arama kutusu, menü çubuğunun sağ üst köşesinde bulunur ve **CTRL** + **Q** tuşlarına basarak erişilebilir. Arama dizenizi kutuya yazın. @ İçeren dizeleri aramak için ' @ @ ' kullanın.
 
-**Hızlı başlatma** , Visual Studio 'yu yüklediğinizde varsayılan olarak etkindir. Menü çubuğunda, **Araçlar** Seçenekler ' i seçerek **hızlı başlatmayı** gösterebilir veya gizleyebilirsiniz  >  **Options**. **Ortamlar** düğümünü genişletin ve **Hızlı Başlat**' ı seçin. **Hızlı başlatmayı etkinleştir** onay kutusunu seçin veya temizleyin. Ayrıca, bu sayfada arama kategorilerini etkinleştirebilir veya devre dışı bırakabilirsiniz.
+**Hızlı başlatma** , Visual Studio 'yu yüklediğinizde varsayılan olarak etkindir. Menü çubuğunda, **Araçlar** Seçenekler ' i seçerek **hızlı başlatmayı** gösterebilir veya gizleyebilirsiniz  >  . **Ortamlar** düğümünü genişletin ve **Hızlı Başlat**' ı seçin. **Hızlı başlatmayı etkinleştir** onay kutusunu seçin veya temizleyin. Ayrıca, bu sayfada arama kategorilerini etkinleştirebilir veya devre dışı bırakabilirsiniz.
 
 ## <a name="category-list"></a>Kategori listesi
 
-Hızlı başlatma arama sonuçları dört kategoride görünür: **en son kullanılanlar**, **menüler**, **Seçenekler** ve **Açık belgeler**, kategori içindeki öğe sayısı ile birlikte. Arama sonuçlarıyla kategoriye göre geçiş yapmak için, **Ctrl** + sonraki kategorinin tüm sonuçlarını göstermek üzere CTRL **Q** tuşlarını seçin. Son kategori görüntülendikten sonra, **CTRL** + **Q** her kategoriden birkaç sonuç gösterir. **Ctrl** + **Shift** + Kategoriler arasında ters sırada gezinmek için CTRL SHIFT **Q** tuşuna basın. Bir kategori altındaki tüm arama sonuçlarını görüntülemek için kategori adını seçin.
+Hızlı başlatma arama sonuçları dört kategoride görünür: **en son kullanılanlar**, **menüler**, **Seçenekler** ve **Açık belgeler**, kategori içindeki öğe sayısı ile birlikte. Arama sonuçlarıyla kategoriye göre geçiş yapmak için,  + sonraki kategorinin tüm sonuçlarını göstermek üzere CTRL **Q** tuşlarını seçin. Son kategori görüntülendikten sonra, **CTRL** + **Q** her kategoriden birkaç sonuç gösterir.  +  + Kategoriler arasında ters sırada gezinmek için CTRL SHIFT **Q** tuşuna basın. Bir kategori altındaki tüm arama sonuçlarını görüntülemek için kategori adını seçin.
 
 Aramanızı belirli kategorilere sınırlamak için aşağıdaki kısayolları kullanabilirsiniz.
 
@@ -44,7 +44,7 @@ Aramanızı belirli kategorilere sınırlamak için aşağıdaki kısayolları k
 |Belgeler|@doc<br /><br /> Örneğin, `@doc program.cs`|Arama kriterlerine yönelik açık belgelerin dosya adlarıyla ve yollarına yönelik aramayı kısıtlar, ancak dosyaların içinde metinde arama yapmaz.|
 
 > [!NOTE]
-> **General**  >  **Seçenekler** iletişim kutusundaki Genel **klavye** sayfasında kısayol tuşlarını değiştirebilirsiniz.
+>   >  **Seçenekler** iletişim kutusundaki Genel **klavye** sayfasında kısayol tuşlarını değiştirebilirsiniz.
 
 ## <a name="show-previous-results"></a>Önceki sonuçları göster
 

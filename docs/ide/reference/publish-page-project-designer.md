@@ -12,30 +12,30 @@ helpviewer_keywords:
 - Publish page in Project Designer
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 13edc1b2e2e235eaf5a475764a98067aa4b0150d
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 32bbd09b087639c362fbb5d6a137241c1aab85af
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94350289"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99958329"
 ---
 # <a name="publish-page-project-designer"></a>Yayın Sayfası, Proje Tasarımcısı
 
 **Proje Tasarımcısı** ' nın **Yayımla** sayfası ClickOnce dağıtımı için özellikleri yapılandırmak üzere kullanılır.
 
-**Yayımla** sayfasına erişmek için **Çözüm Gezgini** ' de bir proje düğümü seçin ve ardından **Proje** menüsünde **Özellikler** ' e tıklayın. **Proje Tasarımcısı** göründüğünde, **Yayımla** sekmesine tıklayın.
+**Yayımla** sayfasına erişmek için **Çözüm Gezgini**' de bir proje düğümü seçin ve ardından **Proje** menüsünde **Özellikler**' e tıklayın. **Proje Tasarımcısı** göründüğünde, **Yayımla** sekmesine tıklayın.
 
 > [!NOTE]
-> Burada açıklanan bazı ClickOnce özellikleri, **derleme** menüsünde veya bu sayfadaki **publishwizard** düğmesine tıklanarak bulunan **publishwizard** 'da da ayarlanabilir.
+> Burada açıklanan bazı ClickOnce özellikleri, **derleme** menüsünde veya bu sayfadaki **publishwizard** düğmesine tıklanarak bulunan **publishwizard**'da da ayarlanabilir.
 
 ## <a name="uielement-list"></a>UIElement Listesi
 
  **Yayımlama klasörü konumu**
 
-Uygulamanın yayımlandığı konumu belirtir. , Bir sürücü yolu ( `C:\deploy\myapplication` ), bir dosya paylaşma ( `\\server\myapplication` ) veya bir FTP sunucusu () olabilir `ftp://ftp.microsoft.com/myapplication` . Göz at ( **...** ) düğmesinin çalışması Için **Yayımlama konumu** kutusunda metnin mevcut olması gerektiğini unutmayın.
+Uygulamanın yayımlandığı konumu belirtir. , Bir sürücü yolu ( `C:\deploy\myapplication` ), bir dosya paylaşma ( `\\server\myapplication` ) veya bir FTP sunucusu () olabilir `ftp://ftp.microsoft.com/myapplication` . Göz at (**...**) düğmesinin çalışması Için **Yayımlama konumu** kutusunda metnin mevcut olması gerektiğini unutmayın.
 
  **Yükleme klasörü URL 'SI**
 
@@ -65,7 +65,7 @@ Diğer gelişmiş yayımlama seçeneklerini belirtmek için kullanılan Yayımla
 
  **Yayımlama sürümü**
 
-Uygulama için yayımlama sürüm numarasını ayarlar; sürüm numarası değiştirildiğinde, uygulama bir güncelleştirme olarak yayımlanır. Yayımla sürümünün ( **ana** , **İkincil** , **derleme** , **Düzeltme** ) her bölümü <xref:System.UInt16.MaxValue> , izin verilen en yüksek 65355 () değerine sahip olabilir <xref:System.Version> .
+Uygulama için yayımlama sürüm numarasını ayarlar; sürüm numarası değiştirildiğinde, uygulama bir güncelleştirme olarak yayımlanır. Yayımla sürümünün (**ana**, **İkincil**, **derleme**, **Düzeltme**) her bölümü <xref:System.UInt16.MaxValue> , izin verilen en yüksek 65355 () değerine sahip olabilir <xref:System.Version> .
 
 ClickOnce kullanarak bir uygulamanın birden fazla sürümünü yüklediğinizde yükleme, uygulamanın önceki sürümlerini belirttiğiniz Yayımla konumundaki arşiv adlı bir klasöre taşır. Önceki sürümlerin bu şekilde arşivlenmesi, yükleme dizinini önceki sürümden klasörlerin temizlenmesini önler.
 
@@ -79,7 +79,7 @@ Yayımla sihirbazını açar. Yayımla sihirbazının tamamlanması, **derleme**
 
  **Şimdi Yayımla**
 
-Geçerli ayarları kullanarak uygulamayı yayımlar. **Publishwizard** 'daki **son** düğmesine eşittir.
+Geçerli ayarları kullanarak uygulamayı yayımlar. **Publishwizard**'daki **son** düğmesine eşittir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

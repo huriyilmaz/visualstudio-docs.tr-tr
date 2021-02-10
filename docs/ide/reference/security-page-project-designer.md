@@ -13,21 +13,21 @@ helpviewer_keywords:
 - Security page in Project Designer
 author: Mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 7080c1a2ce77d26987f81acaa0a751887f9f574e
-ms.sourcegitcommit: 75bfdaab9a8b23a097c1e8538ed1cde404305974
+ms.openlocfilehash: 426179eb20fcb71ac02039c3b2be20dab6f685b3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94350263"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99957861"
 ---
 # <a name="security-page-project-designer"></a>Güvenlik Sayfası, Proje Tasarımcısı
 
 **Proje Tasarımcısı** 'nın **güvenlik** sayfası, ClickOnce dağıtımı kullanılarak dağıtılan uygulamalar için kod erişimi güvenlik ayarlarını yapılandırmak üzere kullanılır. Daha fazla bilgi için bkz. [ClickOnce uygulamaları Için kod erişimi güvenliği](../../deployment/code-access-security-for-clickonce-applications.md).
 
-**Güvenlik** sayfasına erişmek için **Çözüm Gezgini** ' de bir proje düğümüne tıklayın ve ardından **Proje** menüsünde **Özellikler** ' e tıklayın. **Proje Tasarımcısı** göründüğünde, **güvenlik** sekmesine tıklayın.
+**Güvenlik** sayfasına erişmek için **Çözüm Gezgini**' de bir proje düğümüne tıklayın ve ardından **Proje** menüsünde **Özellikler**' e tıklayın. **Proje Tasarımcısı** göründüğünde, **güvenlik** sekmesine tıklayın.
 
 ## <a name="security-settings"></a>Güvenlik Ayarları
 

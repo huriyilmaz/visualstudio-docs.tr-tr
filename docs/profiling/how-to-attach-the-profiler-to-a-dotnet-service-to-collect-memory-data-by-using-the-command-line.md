@@ -7,16 +7,16 @@ ms.topic: how-to
 ms.assetid: aeac39af-ad99-479f-aa36-4104356ca512
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: e31404c07fb7093bb2bd1114340cdb87d3c8558a
-ms.sourcegitcommit: 589d96700208bf22c8da9e26a1d2041fbf39b8f9
+ms.openlocfilehash: 22db478d5d88f8e3311b7b3ddb883768d5ad9af6
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98800583"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99958797"
 ---
 # <a name="how-to-attach-the-profiler-to-a-net-framework-service-to-collect-memory-data-by-using-the-command-line"></a>Nasıl yapılır: komut satırını kullanarak bellek verileri toplamak için profil oluşturucuyu bir .NET Framework hizmetine Iliştirme
 Bu makalede [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , bir .NET Framework hizmetine profil oluşturucu eklemek ve bellek verileri toplamak için profil oluşturma araçları komut satırı araçlarının nasıl kullanılacağı açıklanır. Bellek ayırmalarının sayısı ve boyutu hakkında veri toplayabilir ve ayrıca, bellek nesnelerinin yaşam süresi hakkında veri toplayabilirsiniz.

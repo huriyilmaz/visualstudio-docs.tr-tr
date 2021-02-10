@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: f7d48602-ba32-4487-b51a-89e596124108
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: df2ffebee150ae106003ed5113e4c7354458143c
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: 9556e2e4551761c7fbf0cd81ff422f43dcdc2a12
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98720728"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99959018"
 ---
 # <a name="cores-view-zoom-tool"></a>Çekirdekler Görünümü Yakınlaştırma aracı
 Yakınlaştırma denetimi, belirli bir ilgilendiğiniz alanlara odaklanabilmeniz için zaman çizelgesinde yakınlaştırıp uzaklaşmanızı sağlayan bir kaydırıcıdır. Bu denetim geçerli görünümün ortasına yakınlaşarak, yakınlaştırma yapmadan önce görünümü ayarlayın.

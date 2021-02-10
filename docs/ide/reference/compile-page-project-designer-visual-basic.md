@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: b2a80230-906e-4e85-b3e0-fcd9c40426e1
 author: ghogen
 ms.author: ghogen
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 60172d9e308e38967f5ab5a8d882057e78f083c8
-ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
+ms.openlocfilehash: c822b6e8cbce1279a14c5a947d70208fc7f5480a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92136634"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99958381"
 ---
 # <a name="compile-page-project-designer-visual-basic"></a>Derleme Sayfası, Proje Tasarımcısı (Visual Basic)
 
@@ -45,11 +45,11 @@ Aşağıdaki ayarlar, görüntülenecek veya değiştirilecek olan yapılandırm
 
 **Yapılandırma**
 
-Görüntülenecek veya değiştirilecek yapılandırma ayarlarını belirtir. Ayarlar **hata ayıklama** (varsayılan), **yayın**veya **Tüm yapılandırmalardan**yapılır. Daha fazla bilgi için bkz. [derleme yapılandırmasını anlama](../../ide/understanding-build-configurations.md) ve [nasıl yapılır: yapılandırma oluşturma ve düzenleme](../../ide/how-to-create-and-edit-configurations.md).
+Görüntülenecek veya değiştirilecek yapılandırma ayarlarını belirtir. Ayarlar **hata ayıklama** (varsayılan), **yayın** veya **Tüm yapılandırmalardan** yapılır. Daha fazla bilgi için bkz. [derleme yapılandırmasını anlama](../../ide/understanding-build-configurations.md) ve [nasıl yapılır: yapılandırma oluşturma ve düzenleme](../../ide/how-to-create-and-edit-configurations.md).
 
 **Platform**
 
-Görüntülenecek veya değiştirilecek platform ayarlarını belirtir. **Herhangi BIR CPU** (varsayılan), **x64**veya **x86**belirtebilirsiniz.
+Görüntülenecek veya değiştirilecek platform ayarlarını belirtir. **Herhangi BIR CPU** (varsayılan), **x64** veya **x86** belirtebilirsiniz.
 
 ## <a name="compiler-configuration-options"></a>Derleyici yapılandırma seçenekleri
 
@@ -75,7 +75,7 @@ Yeni bir proje oluşturduğunuzda, **derleme sayfasındaki** **Açık ayar seçe
 
 **Option Strict**
 
-Katı tür semantiğinin zorlanıp zorlanmayacağını belirtir. **Option Strict** **Açık**olduğunda, aşağıdaki koşullar derleme zamanı hatasına neden olur:
+Katı tür semantiğinin zorlanıp zorlanmayacağını belirtir. **Option Strict** **Açık** olduğunda, aşağıdaki koşullar derleme zamanı hatasına neden olur:
 
 - Örtük daraltma dönüşümleri
 
@@ -105,9 +105,9 @@ Bir proje oluşturduğunuzda, **derleme sayfasındaki** **katı** ayarı **Seçe
 
 - **Örtük tür; nesne varsayıldı**
 
-**Option Strict** **on on**olarak ayarlandığında, bu uyarı yapılandırma ayarlarının üçü de **hata**olarak ayarlanır. **Option Strict** ' i **off**olarak ayarlarsanız, üç ayar **hiçbiri None**olarak ayarlanır.
+**Option Strict** **on on** olarak ayarlandığında, bu uyarı yapılandırma ayarlarının üçü de **hata** olarak ayarlanır. **Option Strict** ' i **off** olarak ayarlarsanız, üç ayar **hiçbiri None** olarak ayarlanır.
 
-Her uyarı yapılandırma ayarını **hiçbiri**, **Uyarı**veya **hata**olarak tek tek değiştirebilirsiniz. Üç uyarı yapılandırma ayarı **hata**olarak ayarlanırsa, `On` `Option strict` kutusunda görünür. Üçü de **hiçbiri**olarak ayarlandıysa, `Off` Bu kutuda görüntülenir. Bu ayarların diğer birleşimleri için **(özel)** görüntülenir.
+Her uyarı yapılandırma ayarını **hiçbiri**, **Uyarı** veya **hata** olarak tek tek değiştirebilirsiniz. Üç uyarı yapılandırma ayarı **hata** olarak ayarlanırsa, `On` `Option strict` kutusunda görünür. Üçü de **hiçbiri** olarak ayarlandıysa, `Off` Bu kutuda görüntülenir. Bu ayarların diğer birleşimleri için **(özel)** görüntülenir.
 
 **Option Compare**
 
@@ -127,7 +127,7 @@ Bu ayar [/OptionInfer](/dotnet/visual-basic/reference/command-line-compiler/opti
 
 Bir kaynak kodu dosyası bir [seçenek çıkarımı bildirisi](/dotnet/visual-basic/language-reference/statements/option-infer-statement)içeriyorsa, `On` `Off` deyimdeki or değeri, **derleme sayfasındaki** **seçenek çıkarımı** ayarını geçersiz kılar.
 
-Bir proje oluşturduğunuzda, **derleme sayfasındaki** **seçenek çıkarımı** ayarı **Seçenekler** iletişim kutusundaki **seçenek çıkarımı** ayarı değerine ayarlanır. Bu iletişim kutusundaki ayarı görüntülemek veya değiştirmek için, **Araçlar** menüsünde **Seçenekler**' e tıklayın. **Seçenekler** iletişim kutusunda, **Projeler ve çözümler**' i genişletin ve ardından **vb Varsayılanları**' na tıklayın. **Vb** varsayılan olarak **seçenek çıkarımı** başlangıç varsayılan ayarı **Açık**olur.
+Bir proje oluşturduğunuzda, **derleme sayfasındaki** **seçenek çıkarımı** ayarı **Seçenekler** iletişim kutusundaki **seçenek çıkarımı** ayarı değerine ayarlanır. Bu iletişim kutusundaki ayarı görüntülemek veya değiştirmek için, **Araçlar** menüsünde **Seçenekler**' e tıklayın. **Seçenekler** iletişim kutusunda, **Projeler ve çözümler**' i genişletin ve ardından **vb Varsayılanları**' na tıklayın. **Vb** varsayılan olarak **seçenek çıkarımı** başlangıç varsayılan ayarı **Açık** olur.
 
 **Hedef CPU**
 
@@ -143,7 +143,7 @@ Daha fazla bilgi için bkz. [/Platform (Visual Basic)](/dotnet/visual-basic/refe
 
 Bu onay kutusu yalnızca aşağıdaki koşulların tümü doğru olduğunda kullanılabilir:
 
-- **Derle sayfasında**, **hedef CPU** listesi **herhangi bir CPU**olarak ayarlanır.
+- **Derle sayfasında**, **hedef CPU** listesi **herhangi bir CPU** olarak ayarlanır.
 
 - Uygulama **sayfasında**, **uygulama türü** listesi projenin bir uygulama olduğunu belirtir.
 
@@ -151,7 +151,7 @@ Bu onay kutusu yalnızca aşağıdaki koşulların tümü doğru olduğunda kull
 
 **Uyarı konfigürasyonları**
 
-Bu tabloda, derleme koşulları ve ilgili bildirim düzeyi **yok**, **Uyarı**veya her biri için **hata** listelenmektedir.
+Bu tabloda, derleme koşulları ve ilgili bildirim düzeyi **yok**, **Uyarı** veya her biri için **hata** listelenmektedir.
 
 Varsayılan olarak, derleme sırasında tüm derleyici uyarıları Görev Listesi eklenir. Derleyicinin uyarı veya hata vermesine yol açmamasını sağlamak için **tüm uyarıları devre dışı bırak** ' ı seçin. Derleyicinin uyarıları düzeltilmesi gereken hata olarak görmesini istiyorsanız, **tüm uyarıları hata olarak değerlendir** ' i seçin.
 
@@ -163,7 +163,7 @@ Bu ayar, [/nowarn](/dotnet/visual-basic/reference/command-line-compiler/nowarn) 
 
 **Tüm uyarıları hata olarak değerlendir**
 
-Uyarıların nasıl ele alınacağını belirtir. Varsayılan olarak, bu onay kutusu temizlenir, böylece tüm uyarı bildirimleri **Uyarı**olarak ayarlanır. Tüm uyarı bildirimlerini **hata**olarak değiştirmek için bu onay kutusunu işaretleyin.
+Uyarıların nasıl ele alınacağını belirtir. Varsayılan olarak, bu onay kutusu temizlenir, böylece tüm uyarı bildirimleri **Uyarı** olarak ayarlanır. Tüm uyarı bildirimlerini **hata** olarak değiştirmek için bu onay kutusunu işaretleyin.
 
 Bu seçenek yalnızca **tüm uyarıları devre dışı bırak** silinirse kullanılabilir.
 

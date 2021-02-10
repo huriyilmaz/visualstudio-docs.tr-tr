@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 13d5728c-4e28-42e4-944a-a565b1765ef8
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 33437994770ee78327d130f288d9d2e9689774fe
-ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
+ms.openlocfilehash: 33c13b1bc0c7b3b700d65b67e0aa6b856372dffa
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97876109"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99958472"
 ---
 # <a name="source-control"></a>Kaynak Denetimi
 Bu bölümde kaynak denetimi, kaynak denetimi [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] eklentisi veya kaynak denetimi VSPackage aracılığıyla tümleşik bir özelliği olarak uygulama seçenekleri açıklanmaktadır.

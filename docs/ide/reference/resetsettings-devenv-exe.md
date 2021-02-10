@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 1d41021c-6f58-4bd5-b122-d1c995812192
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 22b3308b3bd1fed6ff1bc3d1f3a5622eb6f8284f
-ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
+ms.openlocfilehash: c7a5b8bacaa7d78be0c7b88bba8e20b416a3c076
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96040036"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99958004"
 ---
 # <a name="resetsettings-devenvexe"></a>/ResetSettings (devenv.exe)
 
@@ -54,7 +54,7 @@ devenv /ResetSettings [SettingsFile|DefaultCollectionSpecifier]
   | **Visual Basic** | `VB` |
   | **Visual C #** | `CSharp` |
   | **Visual C++** | `VC` |
-  | **Web Geliştirme** | `Web` |
+  | **Web geliştirme** | `Web` |
   | **Web geliştirme (yalnızca kod)** | `WebCode` |
 
 ## <a name="remarks"></a>Açıklamalar

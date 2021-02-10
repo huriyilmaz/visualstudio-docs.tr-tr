@@ -15,15 +15,15 @@ helpviewer_keywords:
 - controls [Office development in Visual Studio], adding to documents
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 931e9554a10e0e1525d9ee4a10505633b211610b
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: 4d83fb8fad6de0c932d371f7f874cea0ff9a8f80
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97527243"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99958667"
 ---
 # <a name="walkthrough-change-document-formatting-using-checkbox-controls"></a>İzlenecek yol: CheckBox denetimlerini kullanarak belge biçimlendirmesini değiştirme
   Bu izlenecek yol, metin biçimlendirmesini değiştirmek için Microsoft Office Word için belge düzeyi özelleştirmesinde Windows Forms denetimlerinin nasıl kullanılacağını gösterir.
@@ -140,7 +140,7 @@ ms.locfileid: "97527243"
 
      [!code-csharp[Trin_VstcoreProgrammingControlsWord#6](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs#6)]
 
-## <a name="test-the-application"></a>Uygulamayı test etme
+## <a name="test-the-application"></a>Uygulamayı test edin
  Artık, bir onay kutusunu seçtiğinizde veya temizlediğinizde metnin doğru biçimlendirildiğinden emin olmak için belgenizi test edebilirsiniz.
 
 ### <a name="test-your-document"></a>Belgenizi test etme

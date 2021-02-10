@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4cd062b1-b496-4668-bbc1-ee85545e066d
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 88825e5328fc11702a503311b227fde155c79d73
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: ee870e3c3794fc0f87b9e29e2bff8b20b79d84fa
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94438080"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99959824"
 ---
 # <a name="develop-apps-with-the-workflow-designer"></a>İş Akışı Tasarımcısı ile uygulamaları geliştirme
 
@@ -33,7 +33,7 @@ ms.locfileid: "94438080"
 
 Visual Studio 'da Iş akışı proje şablonlarını kullanmak için önce **Windows Workflow Foundation** bileşenini yüklemeniz gerekir.
 
-1. Visual Studio Yükleyicisi açın. **Tools**  >  Visual Studio 'da Araçlar **ve Özellikler Al ' i** seçerek açmak için hızlı bir yoldur.
+1. Visual Studio Yükleyicisi açın.   >  Visual Studio 'da Araçlar **ve Özellikler Al ' i** seçerek açmak için hızlı bir yoldur.
 
 1. Visual Studio Yükleyicisi, **tek tek bileşenler** sekmesini seçin.
 
@@ -41,7 +41,7 @@ Visual Studio 'da Iş akışı proje şablonlarını kullanmak için önce **Win
 
    ![Visual Studio Windows Workflow Foundation bileşeni](media/windows-workflow-foundation-component.png)
 
-1. **Değiştir** 'i seçin.
+1. **Değiştir**'i seçin.
 
    Visual Studio **Windows Workflow Foundation** bileşenini yüklüyor.
 

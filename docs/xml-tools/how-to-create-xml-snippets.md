@@ -7,15 +7,15 @@ ms.topic: how-to
 ms.assetid: d8556dd7-1382-4af7-ba80-3e873c9416be
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d935f479e3133db8fb5340359d6a354058a3020a
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: ad907175f0826a5dd040f77c03517e00d4e1391c
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400036"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99959785"
 ---
 # <a name="how-to-create-xml-snippets"></a>Nasıl yapılır: XML parçacıkları oluşturma
 
@@ -25,17 +25,17 @@ XML Düzenleyicisi, yeni XML parçacıkları oluşturmak için kullanılabilir. 
 
 Yeni bir XML kod parçacığı oluşturmak için yeni bir XML dosyası oluşturun ve **kod parçacığı Ekle** özelliğini kullanın.
 
-1. **Dosya** menüsünde **Yeni** ' ye ve ardından **Dosya** ' ya tıklayın.
+1. **Dosya** menüsünde **Yeni** ' ye ve ardından **Dosya**' ya tıklayın.
 
-2. **XML dosyası** ' na ve sonra **Aç** ' a tıklayın.
+2. **XML dosyası** ' na ve sonra **Aç**' a tıklayın.
 
-3. Düzenleyici bölmesine sağ tıklayın ve **kod parçacığı Ekle** ' yi seçin.
+3. Düzenleyici bölmesine sağ tıklayın ve **kod parçacığı Ekle**' yi seçin.
 
 4. Listeden **kod parçacığı** öğesini seçin ve **ENTER** tuşuna basın.
 
 5. Yeni kod parçacığında herhangi bir değişiklik yapın.
 
-6. **Dosya** menüsünden **Kaydet XMLFile.xml** ' yi seçin.
+6. **Dosya** menüsünden **Kaydet XMLFile.xml**' yi seçin.
 
      **Dosyayı farklı kaydet** iletişim kutusu görüntülenir.
 

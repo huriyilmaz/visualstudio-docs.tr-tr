@@ -11,17 +11,17 @@ f1_keywords:
 ms.assetid: 0e445255-b796-426d-ad93-a4d8e36da2c5
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: e924ead1b8796089242ef20c7f5a3070833b68ba
-ms.sourcegitcommit: 172aaf05596a9d8ded298b7b104569c1cce6160e
+ms.openlocfilehash: 7d7c4400d553d8244d3b9239f0b0a984d382c99a
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92007151"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99959174"
 ---
 # <a name="uninstall-visual-studio"></a>Visual Studio'yu kaldırma
 
@@ -41,12 +41,12 @@ Bu sayfada, geliştiriciler için tümleşik üretkenlik araçları takımımız
 
 1. Bilgisayarınızda Visual Studio Yükleyicisi bulun.
 
-     Örneğin, Windows 10 yıldönümü güncelleştirmesi veya sonraki bir sürümünü çalıştıran bir bilgisayarda **Başlat** ' ı seçin ve **Visual Studio yükleyicisi**olarak listelendiği **V**harfine gidin.
+     Örneğin, Windows 10 yıldönümü güncelleştirmesi veya sonraki bir sürümünü çalıştıran bir bilgisayarda **Başlat** ' ı seçin ve **Visual Studio yükleyicisi** olarak listelendiği **V** harfine gidin.
 
      ![Visual Studio Yükleyicisi](media/locate-the-visual-studio-installer.png "Microsoft Visual Studio yükleyicisini bulun")
 
    > [!NOTE]
-   > Bazı bilgisayarlarda Visual Studio Yükleyicisi, **Microsoft Visual Studio yükleyicisi**olarak **"d"** harfi altında listelenmiş olabilir.<br/><br/> Alternatif olarak, Visual Studio Yükleyicisi aşağıdaki konumda bulabilirsiniz: `C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe`
+   > Bazı bilgisayarlarda Visual Studio Yükleyicisi, **Microsoft Visual Studio yükleyicisi** olarak **"d"** harfi altında listelenmiş olabilir.<br/><br/> Alternatif olarak, Visual Studio Yükleyicisi aşağıdaki konumda bulabilirsiniz: `C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe`
 
 1. Yükleyicide, yüklediğiniz Visual Studio sürümünü arayın. Daha sonra, **daha fazla**' yı ve ardından **Kaldır**' ı seçin.
 
@@ -63,7 +63,7 @@ Visual Studio 2017 ve Visual Studio Yükleyicisi tüm yüklemelerini makinenizde
 1. Windows 10 ' da, "aramak için buraya yazın" kutusuna **uygulamalar ve Özellikler** yazın.
 1. **Microsoft Visual Studio 2017** (veya **Visual Studio 2017**) bulun.
 1. **Kaldır**' ı seçin.
-1. Ardından **Microsoft Visual Studio yükleyiciyi**bulun.
+1. Ardından **Microsoft Visual Studio yükleyiciyi** bulun.
 1. **Kaldır**' ı seçin.
 
 ::: moniker-end
@@ -100,7 +100,7 @@ Visual Studio 2019 ve Visual Studio Yükleyicisi tüm yüklemelerini makinenizde
 1. Windows 10 ' da, "aramak için buraya yazın" kutusuna **uygulamalar ve Özellikler** yazın.
 1. **Visual Studio 2019**' i bulun.
 1. **Kaldır**' ı seçin.
-1. Ardından **Microsoft Visual Studio yükleyiciyi**bulun.
+1. Ardından **Microsoft Visual Studio yükleyiciyi** bulun.
 1. **Kaldır**' ı seçin.
 
 ::: moniker-end
