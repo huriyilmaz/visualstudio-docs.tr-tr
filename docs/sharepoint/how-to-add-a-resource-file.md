@@ -12,15 +12,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, resource files
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 440777aaaf239dcdd3c276786a82e3d8aef55070
-ms.sourcegitcommit: ad2c820b280b523a7f7aef89742cdb719354748f
+ms.openlocfilehash: 22b5638f7251b34c74da348e55e755cd27132aff
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94850142"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99934851"
 ---
 # <a name="how-to-add-a-resource-file"></a>Nasıl yapılır: kaynak dosyası ekleme
   Kaynak dosyalarını ekleme komutları, Çözüm Gezgini çözüm düğümünün kısayol menüsünde ve özellik düğümlerinin ' de yer alır. Daha fazla bilgi için bkz. [SharePoint çözümlerini yerelleştirme](../sharepoint/localizing-sharepoint-solutions.md).

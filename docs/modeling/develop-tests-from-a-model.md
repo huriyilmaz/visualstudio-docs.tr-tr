@@ -8,15 +8,15 @@ helpviewer_keywords:
 - tests and requirements
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 1f49b52bece0c1dddc65da919d266c4f21b1bf69
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: e4884ec4eb3e316e22e4ba54cd8defe71d4b8018
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97361839"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99935176"
 ---
 # <a name="develop-tests-from-a-model"></a>Model aracılığıyla test geliştirme
 Sistem ve bileşenlerinin testlerini düzenlemenize yardımcı olması için gereksinimleri ve mimari modelleri kullanabilirsiniz. Bu uygulama, kullanıcılar ve diğer paydaşlar için önemli olan gereksinimleri test etmenize yardımcı olur ve gereksinimler değiştiğinde testleri hızlı bir şekilde güncelleştirmenize yardımcı olur. Kullanıyorsanız [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)] , modeller ve testler arasındaki bağlantıları da koruyabilirsiniz.

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Domain-Specific Language, serialization
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e889bb81b4c13d003beb15f733d053ef159b197f
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: 019f77320e9118d5f3d31e647a59c71bb474d204
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97362944"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99935547"
 ---
 # <a name="customize-file-storage-and-xml-serialization"></a>Dosya Depolama ve XML Serileştirmeyi Özelleştirme
 
@@ -81,7 +81,7 @@ Bu model kaydedildi ve sonra XML metin düzenleyicisinde yeniden açıldı:
 
 Serileştirilmiş model hakkında aşağıdaki noktalara dikkat edin:
 
-- Her XML düğümü, bir etki alanı sınıf adı ile aynı bir ada sahiptir, ancak ilk harf küçük harfle yazılmalıdır. Örneğin, `familyTreeModel` ve `person`.
+- Her XML düğümü, bir etki alanı sınıf adı ile aynı bir ada sahiptir, ancak ilk harf küçük harfle yazılmalıdır. Örneğin `familyTreeModel` ve `person`.
 
 - Ad ve Doğum yılı gibi etki alanı özellikleri, XML düğümlerinde öznitelikler olarak serileştirilir. Yeniden, özellik adının ilk karakteri küçük harfe dönüştürülür.
 

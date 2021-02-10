@@ -6,15 +6,15 @@ ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 6effda90580a184bb8ebfb8c4f4830dc6cb844d5
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: 42819379aa2b21788686bf0917b1523bf77e6c64
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97362866"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99935371"
 ---
 # <a name="customizing-text-and-image-fields"></a>Metin ve Görüntü Alanlarını Özelleştirme
 Bir şekildeki metin dekoratörü tanımladığınızda, bir TextField tarafından temsil edilir. TextFields ve diğer şekil alanlarının başlatılmasının örnekleri için DSL çözümünüzdeki Dsl\GeneratedCode\Shapes.cs inceleyin.

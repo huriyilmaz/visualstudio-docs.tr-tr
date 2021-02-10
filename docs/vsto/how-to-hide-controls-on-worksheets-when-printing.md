@@ -14,15 +14,15 @@ helpviewer_keywords:
 - worksheets, hiding controls when printing
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: acc90986dd394e69de12893aac01e0a4f662b1a3
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: d87da5c22969fc355fe473e9505c61429b8023f3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96846499"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99934812"
 ---
 # <a name="how-to-hide-controls-on-worksheets-when-printing"></a>Nasıl yapılır: yazdırırken çalışma sayfalarında denetimleri gizleme
   Windows Forms denetimleri içeren bir Microsoft Office Excel belgesi yazdırdığınızda, denetimler yazdırılmış çalışma sayfasında görünür. Çalışma sayfası yazdırılırken denetimleri gizleyebilirsiniz.

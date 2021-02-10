@@ -14,15 +14,15 @@ f1_keywords:
 - VS.ToolsOptionsPages.Environment.ProductUpdates
 author: ornellaalt
 ms.author: ornella
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 01bc8fe18ff32d5da3f56eb39465b3fc696239b4
-ms.sourcegitcommit: 172aaf05596a9d8ded298b7b104569c1cce6160e
+ms.openlocfilehash: d087ed0a43296f77ca934671f63f716bf6ddfae8
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92007178"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99935722"
 ---
 # <a name="update-visual-studio-to-the-most-recent-release"></a>Visual Studio 'Yu en son sürüme güncelleştirme
 
@@ -74,7 +74,7 @@ Bir güncelleştirmeyi denetleyebilir ve sonra Visual Studio 'daki menü çubuğ
 
 1. Çalışmanızı kaydedin.
 
-1. **Help** > **Güncelleştirmeler için yardım denetle**' yi seçin.
+1.  > **Güncelleştirmeler için yardım denetle**' yi seçin.
 
      ![Visual Studio sürüm 15,6 ' deki yeni Yardım menüsü](media/vs-help-menu-check-for-updates.png "Visual Studio sürüm 15,6 ' deki yeni Yardım menüsü")
 
@@ -94,7 +94,7 @@ Visual Studio 'nun önceki sürümlerinde olduğu gibi, bir güncelleştirmeyi y
 1. Yükleyiciyi açın. Devam etmeden önce Visual Studio Yükleyicisi güncelleştirilmesi gerekebilir.
 
    > [!NOTE]
-   > Windows 10 çalıştıran bir bilgisayarda, yükleyiciyi **Visual Studio yükleyicisi**olarak **V** harfi altında veya **Microsoft Visual Studio yükleyicisi**olarak **d** harfi altında bulabilirsiniz.
+   > Windows 10 çalıştıran bir bilgisayarda, yükleyiciyi **Visual Studio yükleyicisi** olarak **V** harfi altında veya **Microsoft Visual Studio yükleyicisi** olarak **d** harfi altında bulabilirsiniz.
 
 1. Yükleyicideki **ürün** sayfasında, daha önce yüklediğiniz Visual Studio sürümünü arayın.
 
@@ -150,7 +150,7 @@ Bir bildirimi yok saymayı seçerseniz, Visual Studio bunu göstermeyi durduruyo
 1. Yükleyiciyi açın. Devam etmeden önce yükleyiciyi güncelleştirmeniz gerekebilir. Böyle bir durum söz konusu olduğunda bunu yapmanız istenir.
 
    > [!NOTE]
-   > Windows 10 çalıştıran bir bilgisayarda, yükleyiciyi **Visual Studio yükleyicisi**olarak **V** harfi altında veya **Microsoft Visual Studio yükleyicisi**olarak **d** harfi altında bulabilirsiniz.
+   > Windows 10 çalıştıran bir bilgisayarda, yükleyiciyi **Visual Studio yükleyicisi** olarak **V** harfi altında veya **Microsoft Visual Studio yükleyicisi** olarak **d** harfi altında bulabilirsiniz.
 
 1. Yükleyicideki **ürün** sayfasında, daha önce yüklenen Visual Studio sürümünü arayın.
 
@@ -212,7 +212,7 @@ Bir güncelleştirmeyi denetleyebilir ve ardından menü çubuğunu veya Visual 
 
     ![Visual Studio 2019 'yi açın](media/vs-2019/vs-installer-visual-studio-2019.png "Windows 'dan Visual Studio 2019 'yi açın")
 
-1. **Kullanmaya**başlayın ' ın altında, IDE 'yi açmak için herhangi bir seçeneği belirleyin.
+1. **Kullanmaya** başlayın ' ın altında, IDE 'yi açmak için herhangi bir seçeneği belirleyin.
 
     ![Visual Studio Yükleyicisi açın](media/vs2019-choose-option-from-get-started.png "Visual Studio Yükleyicisi açın")
 
@@ -237,7 +237,7 @@ Bir güncelleştirmeyi denetleyebilir ve ardından menü çubuğunu veya Visual 
      ![Yardım menüsünden ' güncelleştirmeleri denetle 'yi seçin](media/vs-2019/vs-ide-check-updates-help-menu.png "Yardım menüsünden ' güncelleştirmeleri denetle 'yi seçin")
 
     > [!NOTE]
-    > Ayrıca, güncelleştirmeleri denetlemek için IDE 'deki arama kutusunu da kullanabilirsiniz. **CTRL** + **Q**tuşlarına basın, "güncelleştirmeleri denetle" yazın ve ardından eşleşen arama sonucunu seçin.
+    > Ayrıca, güncelleştirmeleri denetlemek için IDE 'deki arama kutusunu da kullanabilirsiniz. **CTRL** + **Q** tuşlarına basın, "güncelleştirmeleri denetle" yazın ve ardından eşleşen arama sonucunu seçin.
 
 1. **Kullanılabilir güncelleştirme** Iletişim kutusunda **Güncelleştir**' i seçin.
 

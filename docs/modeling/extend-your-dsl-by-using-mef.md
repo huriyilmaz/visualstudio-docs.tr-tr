@@ -6,15 +6,15 @@ ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 20dc9b6ac1bd4e565fd10793889c611f9b039778
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: 324037010e642ab4e96f6efea5da0f232c9bd530
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97363178"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99935072"
 ---
 # <a name="extend-your-dsl-by-using-mef"></a>MEF kullanarak DSL'nizi genişletme
 
@@ -131,7 +131,7 @@ Kendiniz veya başka biri tarafından oluşturulan MEF özellikli bir DSL 'ye er
 
    - Bu derleme genellikle ".Dsl.dll" ile biten bir ada sahiptir.
 
-   - DSL projesine erişiminiz varsa derleme dosyasını **DSL \\ bin \\ \** _ dizininde bulabilirsiniz.
+   - DSL projesine erişiminiz varsa, derleme dosyasını Dizin **DSL \\ bin \\ \*** altında bulabilirsiniz.
 
    - DSL VSıX dosyasına erişiminiz varsa, VSıX dosyasının dosya adı uzantısını ". zip" olarak değiştirerek derlemeyi bulabilirsiniz. . Zip dosyasını sıkıştırmasını açın.
 
@@ -147,7 +147,7 @@ Kendiniz veya başka biri tarafından oluşturulan MEF özellikli bir DSL 'ye er
 
    - System.Windows.Forms.dll
 
-4. Yeni bir _ *VSIX proje** projesi oluşturun.
+4. Yeni bir **VSIX proje** projesi oluşturun.
 
 5. **Çözüm Gezgini**, VSIX projesine sağ tıklayın ve **Başlangıç projesi olarak ayarla**' yı seçin.
 
@@ -159,11 +159,11 @@ Kendiniz veya başka biri tarafından oluşturulan MEF özellikli bir DSL 'ye er
 
    1. **Source. Extension. valtmanifest** Içinde **Başvuru Ekle** ' ye tıklayın.
 
-   2. İletişim kutusunda **Yük Ekle** ' ye tıklayın ve ardından dsl dosyasının VSIX dosyasını bulun. VSıX dosyası, **DslPackage \\ bin \\ \** _ içindeki DSL çözümünde oluşturulmuştur.
+   2. İletişim kutusunda **Yük Ekle** ' ye tıklayın ve ardından dsl dosyasının VSIX dosyasını bulun. VSıX dosyası, **DslPackage \\ bin \\ \***' de DSL çözümünde yerleşiktir.
 
        Bu, kullanıcıların DSL 'yi ve uzantınızı aynı anda yüklemesine olanak tanır. Kullanıcı DSL 'yi zaten yüklemiştir, yalnızca uzantınızın yüklenmesi gerekir.
 
-9. _ * Kaynak. Extension. valtmanifest * * diğer alanlarını gözden geçirin ve güncelleştirin. **Sürümleri Seç** ' e tıklayın ve doğru Visual Studio sürümlerinin ayarlandığını doğrulayın.
+9. **Kaynak. Extension. valtmanifest**'in diğer alanlarını gözden geçirin ve güncelleştirin. **Sürümleri Seç** ' e tıklayın ve doğru Visual Studio sürümlerinin ayarlandığını doğrulayın.
 
 10. Sınıf kitaplığı projesine kod ekleyin. Bir sonraki bölümdeki örnekleri kılavuz olarak kullanın.
 

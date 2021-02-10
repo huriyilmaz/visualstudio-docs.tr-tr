@@ -6,15 +6,15 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: fd98e449f674d2841dd41aa88e320468698f4736
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: 898bb0f3a923cfeac863b365e4746a63ccbc4c91
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97363828"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99935332"
 ---
 # <a name="define-shapes-and-connectors"></a>Şekilleri ve bağlayıcıları tanımlama
 
@@ -36,7 +36,7 @@ Bu desenler zorlanmaz, ancak daha güçlü bir şekilde desteklenir. Bir DSL tas
 
 Aşağıdaki şekil türleri kullanılabilir:
 
-|Şekil türü|Açıklama|
+|Şekil türü|Description|
 |-|-|
 |Geometri şekli|Genel amaçlı dikdörtgen veya elips şekil. Şeklin sınırlarına göre belirli konumlarda metin ve simge dekoratlarını gösterebilirsiniz. Ayrıca, şekilleri geometri şekillerinin içinde iç içe geçirebilirsiniz.|
 |Bölme şekli|Bir UML sınıfı gibi üst bilgi ve bölmeleri içeren dikdörtgen. Her bölme, bir metin satırları listesi içerebilir.<br /><br /> Satırlar genellikle şeklin gösterdiği öğe altında gömülü öğeleri temsil eder. Bir örnek için, sınıf diyagramları çözüm şablonundan DSL oluşturun.|

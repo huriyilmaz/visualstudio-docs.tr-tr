@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Domain-Specific Language, domain path
 author: JoshuaPartlow
 ms.author: joshuapa
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a24e2c9bcbecb095282c0914fa09f93e5c21e699
-ms.sourcegitcommit: 4d394866b7817689411afee98e85da1653ec42f2
+ms.openlocfilehash: c11776576d00306e4b0f3de5e7ff830037c1fefd
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "97361749"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99935163"
 ---
 # <a name="domain-path-syntax"></a>Etki Alanı Yolu Sözdizimi
 DSL tanımları bir modeldeki belirli öğeleri bulmak için XPath benzeri bir sözdizimi kullanır.

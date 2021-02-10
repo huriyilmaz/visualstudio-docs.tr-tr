@@ -7,15 +7,15 @@ ms.topic: conceptual
 ms.assetid: fd0a86b9-015d-408e-aa58-59a0a97826ac
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 16c0655cdd55a1825f0a872ef013392bc9e5db79
-ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
+ms.openlocfilehash: aee937b382e3fa4731516c05acf46276d3059e8f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98150112"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99934552"
 ---
 # <a name="using-the-microsoft-monitoring-agent-c-visual-basic"></a>Microsoft Monitoring Agent kullanma (C#, Visual Basic)
 
@@ -79,7 +79,7 @@ ms.locfileid: "98150112"
 3. En son yardım içeriğini almak için [TechNet sitesini ziyaret edin](/previous-versions/system-center/developer/cc817313(v=msdn.10)) .
 
 #### <a name="q-how-do-i-set-up-permissions-for-the-application-pool"></a><a name="FullPermissionsITLog"></a> S: uygulama havuzu için izinleri ayarla Nasıl yaparım??
- Y **:** Windows **ıccacls** komutunu kullanın veya Windows Gezgini (veya dosya Gezgini) kullanın. Örnek:
+ Y **:** Windows **ıccacls** komutunu kullanın veya Windows Gezgini (veya dosya Gezgini) kullanın. Örneğin:
 
 - Windows **ıccacls** komutuyla izinleri ayarlamak için:
 
@@ -136,7 +136,7 @@ ms.locfileid: "98150112"
 
     |Ad|Açıklama|
     |-|-|
-    |*"\<appName>"*|IIS içinde web sitesinin yolunu ve web uygulamasının adını belirtin. İsterseniz IIS yolunu da ekleyebilirsiniz.<br /><br /> *" \<IISWebsiteName> \\<ııswebappname \> "*<br /><br /> -veya-<br /><br /> **"IIS: \ siteler** *\\<ııswebsitename \> \\<iiswebappname \> "*<br /><br /> Bu yolu IIS Yöneticisi'nde bulabilirsiniz. Örnek:<br /><br /> ![IIS Web sitesi ve Web uygulaması yolu](../debugger/media/ffr_iismanager.png "FFR_IISManager")<br /><br /> [Get-website](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee807832(v=technet.10)) ve [Get WebApplication](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee790554(v=technet.10)) komutlarını da kullanabilirsiniz.|
+    |*"\<appName>"*|IIS içinde web sitesinin yolunu ve web uygulamasının adını belirtin. İsterseniz IIS yolunu da ekleyebilirsiniz.<br /><br /> *" \<IISWebsiteName> \\<ııswebappname \> "*<br /><br /> -veya-<br /><br /> **"IIS: \ siteler** *\\<ııswebsitename \> \\<iiswebappname \> "*<br /><br /> Bu yolu IIS Yöneticisi'nde bulabilirsiniz. Örneğin:<br /><br /> ![IIS Web sitesi ve Web uygulaması yolu](../debugger/media/ffr_iismanager.png "FFR_IISManager")<br /><br /> [Get-website](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee807832(v=technet.10)) ve [Get WebApplication](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee790554(v=technet.10)) komutlarını da kullanabilirsiniz.|
     |*\<monitoringMode>*|İzleme modunu belirtin:<br /><br /> <ul><li>**İzleme**: özel durum olayları ve performans olayları hakkında en az ayrıntıları kaydedin. Bu mod varsayılan toplama planını kullanır.</li><li>**Trace**: belirtilen koleksiyon planını kullanarak işlev düzeyi ayrıntılarını kaydedin veya SharePoint 2010 ve SharePoint 2013 uygulamalarını izleyin. Bu mod, uygulamanızın daha yavaş çalışmasına neden olabilir.<br /><br /> <ul><li>[S: uygulama havuzu için izinleri ayarla Nasıl yaparım??](#FullPermissionsITLog)</li><li>[S: uygulamamı yavaşlatmadan en çok veriyi almak Nasıl yaparım??](#Minimizing)</li></ul><br />     Bu örnek, bir SharePoint sitesi üzerindeki SharePoint uygulaması için olayları kaydeder:<br /><br />     **Start-WebApplicationMonitoring "FabrikamSharePointSite\FabrikamSharePointApp" Trace "C:\Program Files\Microsoft Monitoring Agent\Agent\IntelliTraceCollector\collection_plan.ASP.NET.default.xml" "C:\IntelliTraceLogs"**</li><li>**Özel**: belirtilen özel toplama planını kullanarak özel ayrıntıları kaydedin. İzleme başladıktan sonra toplama planını değiştirirseniz izlemeyi yeniden başlatmanız gerekir.</li></ul>|
     |*"\<outputPath>"*|IntelliTrace günlüklerinin depolanacağı tam dizin yolunu belirtin. Bu dizini izlemeye başlamadan önce oluşturduğunuzdan emin olun.|
     |*\<UInt32>*|IntelliTrace günlüğünün çıkabileceği en büyük boyutu belirtin. IntelliTrace günlüğü için varsayılan en büyük boyut 250 MB'tır.<br /><br /> Günlük bu sınıra ulaştığında, aracı yeni girişlere yer açmak için en eski girişlerin üzerine yazar. Bu sınırı değiştirmek için **-maximumfilesizeınmegabayt** seçeneğini kullanın veya `MaximumLogFileSize` koleksiyon planındaki özniteliği düzenleyin.|
@@ -161,7 +161,7 @@ ms.locfileid: "98150112"
 
    `enabled`Öznitelik yoksa, olay etkinleştirilir.
 
-   Örnek:
+   Örneğin:
 
   - Windows Workflow kullanmayan uygulamalar için Windows Workflow olaylarını devre dışı bırakın.
 
@@ -246,7 +246,7 @@ Aracı `id`, `Employee.Id` ve `Employee.Name` değerlerini ve `Employee` yöntem
 
     **Checkpoint-WebApplicationMonitoring "IIS: \ Sites** *\\<ııswebsitename \> \\<iiswebappname \> "*
 
-    Örnek:
+    Örneğin:
 
     **PS C: \\>Checkpoint-WebApplicationMonitoring "Fabrikam\FabrikamFiber.Web"**
 
@@ -280,7 +280,7 @@ Aracı `id`, `Employee.Id` ve `Employee.Name` değerlerini ve `Employee` yöntem
 
     **Stop-WebApplicationMonitoring-tümü**
 
-    Örnek:
+    Örneğin:
 
     **PS C: \\>Stop-WebApplicationMonitoring "Fabrikam\iFabrikamFiber.Web"**
 

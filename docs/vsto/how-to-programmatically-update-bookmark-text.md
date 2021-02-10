@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Bookmark control, updating contents
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 9b9fa4b5ef19fdcaae38ef477952580f6568fcc0
-ms.sourcegitcommit: 4bd2b770e60965fc0843fc25318a7e1b46137875
+ms.openlocfilehash: cf38843d2ce7f617d44793769e6ca236c2683805
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97523554"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99934734"
 ---
 # <a name="how-to-programmatically-update-bookmark-text"></a>Nasıl yapılır: yer işareti metnini program aracılığıyla güncelleştirme
   Metni daha sonra alabilmeniz veya bir yer işaretinin içindeki metni değiştirmek için Microsoft Office Word belgesinde yer tutucu yer işaretine metin ekleyebilirsiniz. Belge düzeyi özelleştirmesi geliştiriyorsanız, verilere bağlanan bir denetimdeki metni de güncelleştirebilirsiniz <xref:Microsoft.Office.Tools.Word.Bookmark> . Daha fazla bilgi için bkz. [Office çözümlerinde verileri denetimlere bağlama](../vsto/binding-data-to-controls-in-office-solutions.md).

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a9753fbb-e7f4-47f0-9dbe-9de90c6c8457
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 76364dd6817774c38daa62463cd5bc635075ba73
-ms.sourcegitcommit: 105e7b5a486262bc92939980383ceee068098a11
+ms.openlocfilehash: e814e442fe740c6a5090a43a2d76fb50168ea205
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/30/2020
-ms.locfileid: "97815704"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99934643"
 ---
 # <a name="remote-debugging-a-c-or-visual-basic-project-in-visual-studio"></a>Visual Studio 'da C# veya Visual Basic projesi üzerinde uzaktan hata ayıklama
 Farklı bir bilgisayara dağıtılan bir Visual Studio uygulamasında hata ayıklamak için, uygulamanızı dağıttığınız bilgisayara Uzak araçları yükleyip çalıştırın, projenizi Visual Studio 'dan uzak bilgisayara bağlanacak şekilde yapılandırın ve ardından uygulamanızı çalıştırın.

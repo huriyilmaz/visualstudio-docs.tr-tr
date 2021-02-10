@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: adb461c4-812a-4b8c-b2ab-96002379f6a9
 author: john-hart
 ms.author: JohnHart
-manager: jillfra
+manager: jmartens
 monikerRange: '>= vs-2019'
 ms.workload:
 - multiple
-ms.openlocfilehash: f2d7b500caacf320df599843e45cc4e93b4f3e69
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: 5a6f7c2c8d6c79270df94c100bbd4625856efa15
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94441350"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99934513"
 ---
 # <a name="deploy-a-net-windows-desktop-application-using-clickonce"></a>ClickOnce kullanarak .NET Windows masaüstü uygulaması dağıtma
 
@@ -31,13 +31,13 @@ Visual Studio 2019 sürüm 16,8 ' den başlayarak, Visual Studio 'dan ClickOnce 
 
     ![Çözüm Gezgini içindeki proje bağlam menüsündeki Yayımla komutu](../deployment/media/quickstart-clickonce-solution-explorer.png "Yayımla ' yı seçin")
 
-1. Daha önce herhangi bir yayımlama profili yapılandırdıysanız **Yayımla** sayfası görüntülenir. **Yeni** 'yi seçin.
+1. Daha önce herhangi bir yayımlama profili yapılandırdıysanız **Yayımla** sayfası görüntülenir. **Yeni**'yi seçin.
 
-1. **Yayımla** sihirbazında **klasör** ' ü seçin.
+1. **Yayımla** sihirbazında **klasör**' ü seçin.
 
     ![Yayımla hedefi olarak klasör seçin](../deployment/media/quickstart-clickonce-publish-folder-category.png "Klasör Seç")
 
-1. **Belirli hedef** sayfasında, **ClickOnce** ' ı seçin.
+1. **Belirli hedef** sayfasında, **ClickOnce**' ı seçin.
 
     ![Belirli hedef olarak ClickOnce seçin](../deployment/media/quickstart-clickonce-publish-folder-target.png "ClickOnce seçin")
 
@@ -86,7 +86,7 @@ Ayrıca, bu sayfada yayımla sürümünü ve sürüm her bir yayınla otomatik o
 
     ![Profil özetini gösteren özellik bölmesini Yayımla](../deployment/media/quickstart-clickonce-summary.png)
 
-1. Yeniden yayımlamak için **Yayımla** ' yı seçin.
+1. Yeniden yayımlamak için **Yayımla**' yı seçin.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
