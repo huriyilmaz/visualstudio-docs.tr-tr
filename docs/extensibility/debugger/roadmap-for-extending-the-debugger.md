@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 1f4096a8-f7aa-4dfa-84e1-6d59263e70bb
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2574fe76faadf4284088c0d47592d0c5ba0d38f9
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: be0f746a849a8370b145a46f9fbf6340a1dc98fc
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96848345"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99961098"
 ---
 # <a name="roadmap-for-extending-the-debugger"></a>Hata ayıklayıcıyı genişletmek için yol haritası
 Bu belge [!INCLUDE[vs_current_short](../../code-quality/includes/vs_current_short_md.md)] , hata ayıklayıcıyı ile genişletmek için kılavuz ve başvuru bilgileri sağlar [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] .

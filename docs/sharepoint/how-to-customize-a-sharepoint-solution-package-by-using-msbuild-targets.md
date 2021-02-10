@@ -12,15 +12,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, packages
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 5aa0afbe685c85d9a005dc621f58f17d396c0236
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: b4d181a6310e1ff924f060e906093d3c28d60ede
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94903656"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99959928"
 ---
 # <a name="how-to-customize-a-sharepoint-solution-package-by-using-msbuild-targets"></a>Nasıl yapılır: MSBuild hedeflerini kullanarak SharePoint çözüm paketini özelleştirme
   Bir komut isteminde MSBuild hedeflerini kullanarak, Visual Studio 'Nun SharePoint paket dosyalarını (*. wsp*) nasıl oluşturduğunu özelleştirebilirsiniz. Örneğin, paket ara dizinini ve numaralandırılmış dosyaları belirten MSBuild öğe gruplarını değiştirmek için MSBuild özelliklerini özelleştirebilirsiniz.

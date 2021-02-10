@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 39af2f57-0a01-42b8-b093-b7fbc61e2909
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d86997d11e124fd5a47981314cf383f5cd8aff7d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5511624fb69015351d8cc37d6b27ad142a5956d4
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80719475"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99961189"
 ---
 # <a name="idebugstackframe3"></a>IDebugStackFrame3
 Bu arabirim, ele geçirilebilecek özel durumları işlemek için [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md) 'i genişletir.
@@ -32,7 +32,7 @@ IDebugStackFrame3 : IDebugStackFrame2
  Hata ayıklama altyapısı (DE), bu arabirimi, kesilen özel durumları desteklemek için [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md) arabirimini uygulayan aynı nesne üzerinde uygular.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- [QueryInterface](/cpp/atl/queryinterface) `IDebugStackFrame2` Bu arabirimi edinmek Için arabirim üzerinde QueryInterface 'i çağırın.
+ [](/cpp/atl/queryinterface) `IDebugStackFrame2` Bu arabirimi edinmek Için arabirim üzerinde QueryInterface 'i çağırın.
 
 ## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
  [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)öğesinden devralınan yöntemlere ek olarak `IDebugStackFrame3` aşağıdaki yöntemleri sunar.

@@ -9,33 +9,33 @@ helpviewer_keywords:
 ms.assetid: 627e7d38-b2ac-4873-9a40-37ff7f47cd1d
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 1fa3d111559a2c82fe36def202e5c1cf120c5202
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3841ba0698c5e63bbf58e47e0e4a8b8f75d068e0
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80721591"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99961221"
 ---
 # <a name="idebugprogrampublisher2unpublishprogram"></a>IDebugProgramPublisher2::UnpublishProgram
 Bir programın hata ayıklaması için kullanılamaz hale getirir.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
-HRESULT UnpublishProgram(
-   IUnknown* pDebuggeeInterface
+HRESULT UnpublishProgram(
+   IUnknown* pDebuggeeInterface
 );
 ```
 
 ```csharp
-int UnpublishProgram(
-   object pDebuggeeInterface
+int UnpublishProgram(
+   object pDebuggeeInterface
 );
 ```
 

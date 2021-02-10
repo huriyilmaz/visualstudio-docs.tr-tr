@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 9ff61542-9be7-4e81-bfe5-5d2c6eb112c1
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 9b7174418267a77cc668ab0a79092fc7daefbf58
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 260d4210ccb00739b3f1bcdc7d4b6be831cdecb7
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62979672"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99960097"
 ---
 # <a name="spanspan-destructor"></a>span:: ~ span yıkıcısı
 
@@ -37,4 +37,4 @@ Nesneyi yok eder `span` ve kaynaklarını serbest bırakır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [span sınıfı](../profiling/span-class.md)
+- [Span sınıfı](../profiling/span-class.md)

@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 236be234-e05f-4ad8-9200-24ce51768ecf
 author: acangialosi
 ms.author: anthc
-manager: jillfra
+manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8f26eddf7191ee4393dd2ca986fe7a1d2c3af9e2
-ms.sourcegitcommit: ce85cff795df29e2bd773b4346cd718dccda5337
+ms.openlocfilehash: 1074e8dea5dfdb05571d3b1aa04e5c411530bb1f
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96847149"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99961111"
 ---
 # <a name="register-an-expression-evaluator"></a>İfade değerlendiricisi kaydetme
 > [!IMPORTANT]
@@ -112,7 +112,7 @@ namespace EEMC
 
 2. `SetEEMetric`Aşağıdaki tabloda GÖSTERILEN Ee ölçümlerine Visual Studio ile kaydolmak için yardımcı işlevini çağırır. `SetEEMetric`Aşağıdaki şekilde belirtilen işlev ve ölçümler *dbgmetric. lib* kitaplığının bir parçasıdır. Ayrıntılar için bkz. [hata ayıklama Için SDK yardımcıları](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) .
 
-    |Ölçüm|Açıklama|
+    |Metric|Açıklama|
     |------------|-----------------|
     |`metricCLSID`|`CLSID` EE sınıf fabrikasının|
     |`metricName`|EE 'ın görüntülenebilen bir dize olarak adı|
@@ -122,7 +122,7 @@ namespace EEMC
     > [!NOTE]
     > , `metricLanguage``GUID` Dili adına göre tanımlar, ancak `guidLang` `SetEEMetric` dilin seçtiği bağımsız değişkendir. Derleyici hata ayıklama bilgileri dosyasını oluşturduğunda, `guidLang` HANGI Ee 'ın kullanılacağını bilmesi için uygun şekilde yazması gerekir. Bu, genellikle sembol sağlayıcısını, `GUID` hata ayıklama bilgileri dosyasında depolanan bu dil için sorar.
 
-3. HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudiox. Y altında anahtar oluşturarak Visual Studio ile kaydolduktan \\ *X.Y* sonra *x. y* , kayıt yapılacak Visual Studio sürümüdür.
+3. HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudiox. Y altında anahtar oluşturarak Visual Studio ile kaydolduktan \\ sonra *x. y* , kayıt yapılacak Visual Studio sürümüdür.
 
 ### <a name="example"></a>Örnek
  Aşağıdaki işlev, yönetilmeyen kod (C++) EE 'ın Visual Studio ile kendisini nasıl kaydedeceğini ve onun kaydını silmediğini gösterir.

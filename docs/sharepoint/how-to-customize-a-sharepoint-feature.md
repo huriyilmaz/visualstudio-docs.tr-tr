@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, features
 author: John-Hart
 ms.author: johnhart
-manager: jillfra
+manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: b4846d79af7a031970e8870626f88450e8a3e647
-ms.sourcegitcommit: 86e98df462b574ade66392f8760da638fe455aa0
+ms.openlocfilehash: 0604b6497920e1e6df0a792ce758519f425ac155
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94903669"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99959954"
 ---
 # <a name="how-to-customize-a-sharepoint-feature"></a>Nasıl yapılır: bir SharePoint özelliğini özelleştirme
   Visual Studio 'daki Özellik tasarımcısını kullanarak SharePoint özelliklerini oluşturabilir ve özelleştirebilirsiniz. Örneğin, özellik kapsamını ayarlayabilir ve diğer özellikleri bağımlılıklar olarak ekleyebilirsiniz. Varsayılan olarak, Çözüm Gezgini veya SharePoint paket Gezgini ' nde yeni bir özellik eklediğinizde özellik Tasarımcısı açılır.

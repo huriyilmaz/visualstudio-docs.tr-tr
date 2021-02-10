@@ -11,15 +11,15 @@ f1_keywords:
 ms.assetid: d5af2276-5215-4138-880a-cf2b90bbf3a0
 author: TerryGLee
 ms.author: tglee
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 08c7957d79d51cab93e45adf8f74899ecc59b76d
-ms.sourcegitcommit: ed26b6e313b766c4d92764c303954e2385c6693e
+ms.openlocfilehash: c9c46ae3dcc0063c7a2664e032fba14ce320af18
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94438015"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99961306"
 ---
 # <a name="flowchart-activity-designer"></a>Flowchart Etkinlik Tasarımcısı
 
