@@ -190,8 +190,8 @@
           href: ide/creating-solutions-and-projects.md
         - name: Visual Studio 2017 ' de bir depoyu bir projeyi açma
           href: get-started/tutorial-open-project-from-repo-visual-studio-2017.md
-        - name: Visual Studio 'da bir depoyu bir proje açma
-          href: get-started/tutorial-open-project-from-repo.md
+        - name: Visual Studio 2019 ' de bir depoyu bir projeyi açma
+          href: get-started/tutorial-open-project-from-repo-visual-studio-2019.md
         - name: 'Projeleri taşıma, geçirme ve yükseltme'
           href: porting/port-migrate-and-upgrade-visual-studio-projects.md
         - name: Proje ve çözüm özelliklerini yönetme
