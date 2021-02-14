@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0387542487b2c24baa129fbb0163dee0140cb413
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: aa0512e5d29cb1b5c5a39715e34667803b752795
+ms.sourcegitcommit: 04954be0c4373f82f79181e1a5e7812be4d3e1f7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99860054"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100496268"
 ---
 # <a name="how-to-generate-code-metrics-data"></a>Nasıl yapılır: kod ölçümleri verileri oluşturma
 
@@ -279,7 +279,7 @@ NuGet paketini yüklemek istemiyorsanız, çalıştırılabilir *Metrics.exe* do
 1. [DotNet/Roslyn-çözümleyiciler](https://github.com/dotnet/roslyn-analyzers) deposunu kopyalayın.
 2. Visual Studio için Geliştirici Komut İstemi yönetici olarak açın.
 3. **Roslyn-çözümleyiciler** deposunun kökünden aşağıdaki komutu yürütün:`Restore.cmd`
-4. Dizini *Src\tools* olarak değiştirin.
+4. Dizini *Src\tools\ölçümleri* olarak değiştirin.
 5. **Ölçümler. csproj** projesi oluşturmak için aşağıdaki komutu yürütün:
 
    ```shell

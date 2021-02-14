@@ -28,18 +28,6 @@
       href: tutorial-wpf.md
     - name: Windows Forms uygulaması oluşturma
       href: ../../ide/create-csharp-winform-visual-studio.md?toc=/visualstudio/get-started/csharp/toc.json&bc=/visualstudio/get-started/csharp/breadcrumb/toc.json
-    - name: Öğretici Video - ASP.NET Core Web Uygulaması Oluşturma
-      items:
-        - name: 1 - Visual Studio’yu yükleme
-          href: tutorial-aspnet-core-ef-step-01.md
-        - name: 2 - İlk ASP.NET Core web uygulamanızı oluşturma
-          href: tutorial-aspnet-core-ef-step-02.md
-        - name: 3 - Verilerle çalışma
-          href: tutorial-aspnet-core-ef-step-03.md
-        - name: 4 - Web API’si oluşturma
-          href: tutorial-aspnet-core-ef-step-04.md
-        - name: 5 - ASP.NET Core uygulamanızı Azure’a dağıtma
-          href: tutorial-aspnet-core-ef-step-05.md
 - name: Visual Studio'yu öğrenin
   expanded: true
   items:
