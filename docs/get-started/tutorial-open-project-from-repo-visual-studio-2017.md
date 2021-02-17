@@ -2,7 +2,7 @@
 title: "Öğretici: Visual Studio 2017 ' de bir depoyu bir proje açın"
 description: Visual Studio 2017 kullanarak bir git veya Azure DevOps deposunda bir projeyi açmayı öğrenin.
 ms.custom: get-started
-ms.date: 01/25/2021
+ms.date: 02/15/2021
 ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
 ms.topic: tutorial
@@ -15,12 +15,12 @@ ms.workload:
 - dotnet
 - dotnetcore
 monikerRange: vs-2017
-ms.openlocfilehash: 97bfe7178d3bd744d1e441f8428cd38e8241b721
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 01aca95bde7a20f746d4faece4090eac60b3849e
+ms.sourcegitcommit: 51e4426889ae5f49c69b122e37b3f48aa7a3925d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99951933"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100542983"
 ---
 # <a name="tutorial-open-a-project-from-a-repo-in-visual-studio-2017"></a>Öğretici: Visual Studio 2017 ' de bir depoyu bir proje açın
 
@@ -60,6 +60,9 @@ Bu öğreticide, bir depoya ilk kez bağlanmak ve ardından projeden bir proje a
 Önceki bölümde tamamladığınız işi denetlemek için aşağıdaki animasyonu görüntüleyin.
 
    ![Visual Studio kullanarak GitHub deposunda proje açma animasyonu](./media/open-project-from-github.gif)
+
+> [!NOTE]
+> Visual Studio 2019 'e özgü bilgiler için bkz. [Visual Studio 'da bir depodan proje açma 2019](tutorial-open-project-from-repo-visual-studio-2019.md) sayfası.
 
 ## <a name="open-a-project-from-an-azure-devops-repo-by-using-visual-studio-2017"></a>Visual Studio 2017 kullanarak bir Azure DevOps deposundan proje açma
 
@@ -108,6 +111,7 @@ Visual Studio 2017 ile kod oluşturmaya hazırsanız, dile özgü aşağıdaki �
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
+- [Visual Studio 2019 ' de bir depoyu bir projeyi açma](tutorial-open-project-from-repo-visual-studio-2019.md)
+- [Visual Studio 2019 'de yeni git deneyimi](../ide/git-with-visual-studio.md)
 - [Azure DevOps Services: Azure Repos ve Visual Studio ile çalışmaya başlama](/azure/devops/repos/git/gitquickstart/)
 - [Microsoft Learn: Azure DevOps ile çalışmaya başlama](/learn/modules/get-started-with-devops/)
-- [Visual Studio 2019 'de yeni git deneyimi](../ide/git-with-visual-studio.md?view=vs-2019&preserve-view=true)

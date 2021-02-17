@@ -7,12 +7,12 @@ ms.assetid: bc8b526c-2fed-4ac8-aaa2-73d2495256fd
 ms.date: 12/02/2020
 ms.topic: how-to
 description: Seçili Visual Studio aboneliklerine dahil edilen Pluralsel eğitim aboneliği hakkında bilgi edinin.
-ms.openlocfilehash: 02ed0d2417317116182800980206a1fcc7fbfc16
-ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
+ms.openlocfilehash: c5503c2adad075bdf6f186567fc372705f1ab55f
+ms.sourcegitcommit: 51e4426889ae5f49c69b122e37b3f48aa7a3925d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96537987"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100542996"
 ---
 # <a name="pluralsight-training-benefits-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde pluralalsel eğitim avantajları
 
@@ -95,6 +95,9 @@ Hangi aboneliğin kullanmakta olduğunuzdan emin değil misiniz?  [https://my.vi
 
 ### <a name="q-i-have-a-visual-studio-enterprise-subscription-but-i-dont-see-the-pluralsight-tile-on-the-benefits-page-whats-wrong"></a>S: Visual Studio Enterprise aboneliğim var, ancak avantajlar sayfasında Pluralalm kutucuğunu görmüyorum. Ne oldu?
 Y: tüm Visual Studio Enterprise abonelikler, pluralalalalalalalalalal  Aboneliğinizin uygun olup olmadığını görmek için [uygunluk tablosuna](#eligibility) bakın.
+
+### <a name="q-can-i-use-the-pluralsight-benefit-more-than-once"></a>S: Pluralm avantajını birden çok kez kullanabilir miyim?  
+Y: seçili Visual Studio aboneliklerinde bulunan Pluralalalalsel avantajı, aboneliğiniz yenilendiğinde yenilenir. Örneğin, her yıl yenilemenizi sağlayan yıllık bir aboneliğiniz varsa, bu avantaj her yıl yenilemenizi sağlar. Çok yıllı bir aboneliğiniz varsa, bir abonelik dönemi boyunca Pluralalalalalalalalalalalalalalalalali avantajı  Çok yıllık bir aboneliği yenilediğinizde, bu, yenileme sonrasında yeniden kullanılabilir olacaktır.  Yenileme tarihini bulmak için <https://my.visualstudio.com/subscriptions> *destek bilgileri* ' ne gidin ve "geçerlilik tarihi:" tarihini bulun. 
 
 ### <a name="q-do-i-have-access-to-any-customized-learning--playlists-or-channels"></a>S: özelleştirilmiş bir öğrenme çalma listelerine veya kanala erişimim var mı?
 C: Evet. Visual Studio abonesi olarak, Pluralsel eğitim avantajın bir parçası olarak öne çıkan roller, öğrenme yolları ve özel kanallar (çalma listeleri) için erişim elde edersiniz. Öne çıkan içerikler Microsoft ve Plurali tarafından özel olarak kaldırılmıştır ve ilgilendiğiniz önemli alanlarda öğrenmeye yöneliktir. Pluralalsel <https://my.visualstudio.com/benefits> giriş sayfanızdaki bu ve diğer içeriklere erişebilmek Için Visual Studio abonelik portalınız aracılığıyla Pluralalsel avantajınızı etkinleştirin.

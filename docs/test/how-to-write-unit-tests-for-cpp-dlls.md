@@ -2,19 +2,19 @@
 title: C++ dll 'Leri için birim testleri yazma
 description: Dll 'nin test etmek istediğiniz işlevleri dışarı aktarıp vermediğine bağlı olarak, DLL kodunu test etmenin çeşitli yolları hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
-ms.date: 05/01/2019
+ms.date: 02/16/2021
 ms.topic: how-to
 ms.author: corob
 manager: markl
 ms.workload:
 - cplusplus
 author: corob-msft
-ms.openlocfilehash: b7eb7b7be524e20ca87c70c3f1f771f4f8a01141
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+ms.openlocfilehash: 06ad7bd437fca98c7be92a1e12ce31234d876b28
+ms.sourcegitcommit: cc8547eb211c43b67b8123d1211b80b5642e3b18
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96328632"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100563419"
 ---
 # <a name="write-unit-tests-for-c-dlls-in-visual-studio"></a>Visual Studio 'da C++ dll 'Leri için birim testleri yazma
 
@@ -70,7 +70,7 @@ Bu yaklaşım, testlerin dışarıya aktarılmamış üyeleri kullanmasına izin
 
       ::: moniker-end
 
-  1. **Çözüm Gezgini**' de, test projesine sağ tıklayın ve ardından başvuru **Ekle**' yi seçin  >  **Reference**.
+  1. **Çözüm Gezgini**' de, test projesine sağ tıklayın ve ardından başvuru **Ekle**' yi seçin  >  .
 
   1. **Projeler** ve ardından sınanacak proje ' yi seçin.
 
@@ -86,7 +86,7 @@ Bu yaklaşım, testlerin dışarıya aktarılmamış üyeleri kullanmasına izin
 
 ### <a name="to-link-the-tests-to-the-object-or-library-files"></a><a name="objectRef"></a> Testleri nesne veya kitaplık dosyalarına bağlamak için
 
-- DLL test etmek istediğiniz işlevleri dışa aktarmaz, Output *. obj* veya *. lib* dosyasını test projesinin bağımlılıklarına ekleyebilirsiniz.
+- DLL, test etmek istediğiniz işlevleri dışa aktarmazsa, Output *. obj* veya *. lib* dosyasını test projesinin bağımlılıklarına ekleyebilirsiniz.
 
   1. Yerel birim testi projesi oluşturun.
 
@@ -102,17 +102,17 @@ Bu yaklaşım, testlerin dışarıya aktarılmamış üyeleri kullanmasına izin
 
       ::: moniker-end
 
-  2. **Çözüm Gezgini**, test projesinin kısayol menüsünde **Özellikler**' i seçin.
+  1. **Çözüm Gezgini**, test projesinin kısayol menüsünde **Özellikler**' i seçin.
 
-  3. **Yapılandırma özellikleri**  >  **bağlayıcı**  >  **Input**  >  **ek bağımlılıklar** gir ' i seçin.
+  1. **Yapılandırma özellikleri**  >  **bağlayıcı**  >    >  **ek bağımlılıklar** gir ' i seçin.
 
        **Düzenle**' yi seçin ve **. obj** veya **. lib** dosyalarının adlarını ekleyin. Tam yol adlarını kullanmayın.
 
-  4. **Yapılandırma özellikleri**  >  **Bağlayıcısı**  >  **genel**  >  **Ek kitaplık dizinleri**' ni seçin.
+  1. **Yapılandırma özellikleri**  >  **Bağlayıcısı**  >  **genel**  >  **Ek kitaplık dizinleri**' ni seçin.
 
        **Düzenle**' yi seçin ve **. obj** veya **. lib** dosyalarının dizin yolunu ekleyin. Yol, genellikle test kapsamındaki projenin Build klasöründedir.
 
-  5. **Yapılandırma özellikleri**  >  **VC + + dizinler**  >  **içerme dizinleri**' ni seçin.
+  1. **Yapılandırma özellikleri**  >  **VC + + dizinler**  >  **içerme dizinleri**' ni seçin.
 
        **Düzenle**' yi seçin ve ardından test altında projenin üstbilgi dizinini ekleyin.
 
@@ -124,18 +124,20 @@ Bu yaklaşım, testlerin dışarıya aktarılmamış üyeleri kullanmasına izin
 
    1. **Çözüm Gezgini**' de, test altındaki projenin kısayol menüsünde, **Özellikler**' i seçin. Proje **özellikleri** penceresi açılır.
 
-   2. **Yapılandırma özellikleri**  >  **VC + + dizinleri**' ni seçin.
+   1. **Yapılandırma özellikleri**  >  **VC + + dizinleri**' ni seçin.
 
-   3. Ekleme ve kitaplık dizinlerini düzenleyin:
+   1. Ekleme ve kitaplık dizinlerini düzenleyin:
 
        |Dizin|Özellik|
        |-|-|
-       |**Dizinleri dahil et** | **$ (VCInstallDir) UnitTest\include; $ (IncludePath)**|
-       |**Kitaplık dizinleri** | **$ (VCInstallDir) UnitTest\lib; $ (LibraryPath)**|
+       |**Dizinleri dahil et** | **$ (VCInstallDir) Auxiliary\VS\UnitTest\include** |
+       |**Kitaplık dizinleri** | **$ (VCInstallDir) Auxiliary\VS\UnitTest\lib** |
 
-2. C++ birim testi dosyası Ekle:
+1. C++ birim testi dosyası Ekle:
 
-   - **Çözüm Gezgini**, projenin kısayol menüsünde **Add**  >  **Yeni öğe** Ekle  >  **C++ birim testi**' ni seçin.
+   1. **Çözüm Gezgini** ' de proje düğümüne sağ tıklayın ve   >  **Yeni öğe** Ekle ' yi seçin.
+
+   1. **Yeni öğe Ekle** iletişim kutusunda, **C++ dosyası (. cpp)** öğesini seçin, uygun bir ad verin ve ardından **Ekle**' yi seçin.
 
    [Birim testlerini yazmak](#addTests)için gidin.
 
@@ -143,7 +145,7 @@ Bu yaklaşım, testlerin dışarıya aktarılmamış üyeleri kullanmasına izin
 
 1. Her birim test kodu dosyasında, `#include` test edilen projenin üst bilgileri için bir ifade ekleyin.
 
-2. Birim test kodu dosyalarına test sınıfları ve yöntemleri ekleyin. Örneğin:
+1. Birim test kodu dosyalarına test sınıfları ve yöntemleri ekleyin. Örneğin:
 
     ```cpp
     #include "stdafx.h"
@@ -167,9 +169,9 @@ Bu yaklaşım, testlerin dışarıya aktarılmamış üyeleri kullanmasına izin
 
 1. **Test** menüsünde **Windows**  >  **Test Gezgini**' ni seçin.
 
-1. Tüm testleriniz pencerede görünmüyorsa, **Çözüm Gezgini** ' de düğümüne sağ tıklayıp **Derle** veya **yeniden oluştur**' u seçerek test projesi oluşturun.
+1. Tüm testleriniz pencerede görünmüyorsa, test projesini oluşturun: **Çözüm Gezgini** ' de düğümüne sağ tıklayıp **Oluştur** veya **yeniden oluştur**' u seçin.
 
-1. **Test Gezgini** Içinde **Tümünü Çalıştır**' ı seçin veya çalıştırmak istediğiniz belirli testleri seçin. Kesme noktaları etkinken hata ayıklama modunda çalıştırmak dahil diğer seçenekler için teste sağ tıklayın.
+1. **Test Gezgini** Içinde **Tümünü Çalıştır**' ı seçin veya çalıştırmak istediğiniz belirli testleri seçin. Diğer seçenekler için bir teste sağ tıklayın, örneğin, kesme noktaları etkinken hata ayıklama modunda çalıştırın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
