@@ -7,14 +7,14 @@ manager: jmartens
 ms.technology: vs-azure
 ms.devlang: dotnet
 ms.topic: how-to
-ms.date: 01/27/2020
+ms.date: 02/21/2021
 ms.author: ghogen
-ms.openlocfilehash: 2e23658cfde1154f5b4df7ae7dade71b1569e35c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f9a4f26227d2cd3bd065fab88ba294f7341ea4ed
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99859651"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101684317"
 ---
 # <a name="deploy-an-aspnet-core-container-to-azure-app-service-using-visual-studio"></a>Visual Studio kullanarak Azure App Service ASP.NET Core kapsayıcısını dağıtma
 
@@ -50,8 +50,8 @@ Aşağıdaki adımlar, bu öğreticide kullanılacak temel bir ASP.NET Core uygu
 ::: moniker range=">= vs-2019"
 1. Visual Studio başlangıç penceresinde **Yeni proje oluştur**' u seçin.
 1. **ASP.NET Core Web uygulaması**' nı seçin ve **İleri**' yi seçin.
-1. Yeni uygulamanıza bir ad verin (veya varsayılanı alın) ve **Oluştur**' a tıklayın.
-1. **Web uygulaması**' nı seçin.
+1. Yeni uygulamanıza bir ad verin (veya varsayılanı alın) ve **İleri ' yi** seçin.
+1. Hedeflemek istediğiniz .NET sürümünü seçin. Emin değilseniz, uzun süreli destek (LTS) sürümünü seçin.
 1. SSL desteğini **https Için Yapılandır** onay kutusunu kullanarak isteyip istemediğinizi seçin.
 1. **Docker desteğini etkinleştir** onay kutusunu işaretleyin.
 1. Kapsayıcı türünü seçin ve **Oluştur**' a tıklayın.
@@ -65,13 +65,13 @@ Aşağıdaki adımlar, bu öğreticide kullanılacak temel bir ASP.NET Core uygu
 1. Hedef Yayımla iletişim kutusunda **App Service Linux** veya **App Service** öğesini seçin. Bu, Web sunucusunu barındıracak olan işletim sistemidir.
 1. Yalnızca App Service yayımlayabilirsiniz veya App Service ve Azure Container Registry (ACR) ' de yayımlayabilirsiniz. Kapsayıcıyı bir Azure Container Registry (ACR) içinde yayımlamak için, **kapsayıcılar için yeni App Service oluştur**' u seçin ve **Yayımla**' ya tıklayın.
 
-   ![Yayımla iletişim kutusunun ekran görüntüsü](media/deploy-app-service/publish-app-service-linux.PNG)
+   ![Yayımla iletişim kutusunun ekran görüntüsü](media/deploy-app-service/publish-app-service-linux-1.png)
 
    Yalnızca Azure Container Registry kullanmadan Azure App Service yayımlamak için **Yeni oluştur**' u seçin ve **Yayımla**' ya tıklayın.
 
 1. Azure aboneliğinizle ilişkili hesapla oturum açtığınızdan emin olun ve benzersiz bir ad, abonelik, kaynak grubu, barındırma planı ve kapsayıcı kayıt defteri (varsa) seçin veya Varsayılanları kabul edin.
 
-   ![Yayımlama ayarlarının ekran görüntüsü](media/deploy-app-service/publish-app-service-linux2.png)
+   ![Yayımlama ayarlarının ekran görüntüsü](media/deploy-app-service/publish-app-service-linux-2.png)
 
 1. **Oluştur**' a tıklayın. Kapsayıcınız, seçtiğiniz kaynak grubu ve kapsayıcı kayıt defterinde Azure 'a dağıtılır. Bu işlem biraz zaman alır. Tamamlandığında, **Yayımla** sekmesi, SITE URL 'si dahil olmak üzere yayımlandıklarınız hakkındaki bilgileri gösterir.
 

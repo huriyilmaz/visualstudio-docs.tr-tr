@@ -1,7 +1,7 @@
 ---
 title: Visual Basic geliştiricilere genel bakış
 description: Kodu düzenlemek, hatalarını ayıklamak ve derlemek için Visual Studio 'Yu kullanma hakkında bilgi edinin ve ardından bir uygulamayı Visual Basic geliştirici olarak yayımlayın.
-ms.date: 11/15/2018
+ms.date: 03/02/2021
 ms.technology: vs-ide-general
 ms.custom:
 - get-started
@@ -14,12 +14,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3d771fac2cf494e92cbc27fdbdca0b78af97b67e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 398070e0214e36f696bb69614bb6a51b3462a551
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99944400"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101682924"
 ---
 # <a name="welcome-to-the-visual-studio-ide--visual-basic"></a>Visual Studio IDE 'ye hoş geldiniz | Visual Basic
 
@@ -232,7 +232,8 @@ Visual Studio Kullanıcı arabirimini kişiselleştirmek için, varsayılan renk
 
 1. Visual Studio'yu açın. Başlangıç penceresinde, **kod olmadan devam et**' i seçin.
 
-   ![Visual Studio 2019 ' de başlangıç penceresi](media/vs-2019/continue-without-code.png)
+
+    :::image type="content" source="media/vs-2019/continue-without-code.png" alt-text="Visual Studio 2019 ' de başlangıç penceresinin, ' kod olmadan devam et ' bağlantısı vurgulanmış ekran görüntüsü.":::
 
    IDE açılır.
 
@@ -240,7 +241,7 @@ Visual Studio Kullanıcı arabirimini kişiselleştirmek için, varsayılan renk
 
 2. Menü çubuğunda,   >  **Seçenekler** iletişim kutusunu açmak için Araçlar **Seçenekler** ' i seçin.
 
-3. **Ortam**  >  **genel** seçenekleri sayfasında, **renk teması** seçimini **koyu** olarak değiştirin ve ardından **Tamam**' ı seçin.
+3. **Ortam**  >  **genel** seçenekleri sayfasında, **renk teması** seçimini **koyu** olarak değiştirin ve ardından **Tamam**' a tıklayın.
 
    ![Visual Studio 'da renk temasını koyu olarak değiştirme](media/change-color-theme.png)
 
@@ -264,13 +265,13 @@ Ardından, Visual Studio 'Yu Visual Basic geliştiricilere uyarlanmış ortam ay
 
 1. Menü çubuğunda **Araçlar**  >  **içeri aktar ve dışarı aktar ayarları**' nı seçin.
 
-2. **Ayarları içeri ve dışarı aktarma sihirbazında**, ilk sayfadaki **tüm ayarları Sıfırla** ' yı seçin ve ardından **İleri**' yi seçin.
+2. **Ayarları içeri ve dışarı aktarma sihirbazında**, ilk sayfadaki **tüm ayarları Sıfırla** ' yı seçin ve ardından **İleri**' ye tıklayın.
 
-3. **Geçerli ayarları Kaydet** sayfasında, geçerli ayarlarınızı kaydetmek için bir seçenek belirleyin ve ardından **İleri**' yi seçin. (Herhangi bir ayarı özelleştirilmediyseniz, **Hayır, geçerli ayarlarım üzerine yazarak ayarları Sıfırla**' yı seçin.)
+3. **Geçerli ayarları Kaydet** sayfasında, geçerli ayarlarınızı kaydetmek için bir seçenek belirleyin ve ardından **İleri**' ye tıklayın. (Herhangi bir ayarı özelleştirilmediyseniz, **Hayır, geçerli ayarlarım üzerine yazarak ayarları Sıfırla**' yı seçin.)
 
-4. **Varsayılan ayarlar koleksiyonunu seçin** sayfasında, **Visual Basic**' yi seçin ve ardından **son**' u seçin.
+4. **Varsayılan ayarlar koleksiyonunu seçin** sayfasında **Visual Basic**' yi seçin ve ardından **son**' a tıklayın.
 
-5. **Sıfırlama Tamam** sayfasında **Kapat**' ı seçin.
+5. **Sıfırlama Tamam** sayfasında **Kapat**' a tıklayın.
 
 IDE 'yi kişiselleştirmek için kullanabileceğiniz diğer yollar hakkında bilgi edinmek için bkz. [Visual Studio 'Yu kişiselleştirme](../../ide/personalizing-the-visual-studio-ide.md).
 
@@ -344,21 +345,25 @@ IDE 'yi kişiselleştirmek için kullanabileceğiniz diğer yollar hakkında bil
 
 ::: moniker range=">=vs-2019"
 
-1. Visual Studio menü çubuğunda **Dosya** > **Yeni proje**' yi seçin.
+1. Visual Studio menü çubuğunda **Dosya**  >  **Yeni**  >  **Proje**' yi seçin. (Alternatif olarak, **CTRL** + tuşuna basın **SHIFT** + **N**.)
 
-   ![Dosya > menü çubuğunda yeni proje](media/vs-2019/file-new-project.png)
+    :::image type="content" source="media/vs-2019/file-new-project.png" alt-text="Visual Studio 2019 menü çubuğundan Dosya > yeni > proje seçimini bir ekran görüntüsü.":::
 
    **Yeni proje oluştur** penceresi açılır ve birçok proje *şablonunu* gösterir. Şablon, belirli bir proje türü için gereken temel dosyaları ve ayarları içerir.
 
-1. İstediğimiz şablonu bulmak için arama kutusuna **.NET Core konsolunu** yazın veya girin. Kullanılabilir şablonların listesi, girdiğiniz anahtar sözcüklere göre otomatik olarak filtrelenir. Ayrıca, **dil** açılır listesinden **Visual Basic** seçerek şablon sonuçlarını daha fazla filtreleyebilirsiniz.
+1. İstediğimiz şablonu bulmak için arama kutusuna **.NET Core konsolunu** yazın veya girin. Kullanılabilir şablonların listesi, girdiğiniz anahtar sözcüklere göre otomatik olarak filtrelenir. Tüm **Diller** açılan listesinden, **Windows** tüm **platformlar** listesinden ve **tüm proje türleri** listesinden **konsolundan** **Visual Basic** ' yi seçerek şablon sonuçlarını daha fazla filtreleyebilirsiniz.
 
-1. **Konsol uygulaması (.NET Core)** şablonunu seçin ve ardından **İleri**' yi seçin.
+   **Konsol uygulaması** şablonunu seçin ve ardından **İleri**' ye tıklayın.
 
-   ![Visual Studio 'da yeni proje oluşturma](media/vs-2019/create-new-project.png)
+    :::image type="content" source="media/vs-2019/create-new-project.png" alt-text="Visual Studio 2019 ' de, istediğiniz şablonu seçtiğiniz &quot;yeni proje oluştur&quot; penceresinin ekran görüntüsü.":::
 
-1. **Yeni projenizi yapılandırın** penceresinde, **Proje adı** kutusuna **HelloWorld** girin, isteğe bağlı olarak proje dosyalarınızın dizin konumunu değiştirin ve ardından **Oluştur**' u seçin.
+1. **Yeni projenizi yapılandırın** penceresinde, **Proje adı** kutusuna **HelloWorld** girin, isteğe bağlı olarak proje dosyalarınız için dizin konumunu değiştirin (varsayılan yerel ayar `C:\Users\<name>\source\repos` ) ve ardından **İleri**' ye tıklayın.
 
-   ![Visual Studio 'da yeni proje yapılandırma](media/vs-2019/configure-new-project.png)
+    :::image type="content" source="media/vs-2019/configure-new-project.png" alt-text="Visual Studio 2019 ' de, projenin adını girdiğiniz ' yeni projeyi yapılandırma ' penceresinin ekran görüntüsü.":::
+
+1. **Ek bilgi** penceresinde, **.NET Core 3,1** ' in **hedef çerçeve** açılan menüsünde göründüğünü doğrulayın ve ardından **Oluştur**' a tıklayın.
+
+    :::image type="content" source="media/vs-2019/create-project-additional-info.png" alt-text="Visual Studio 2019 ' de istediğiniz .NET Core Framework sürümünü seçtiğiniz ' ek bilgiler ' penceresinin ekran görüntüsü.":::
 
    Visual Studio projeyi oluşturur. <xref:System.Console.WriteLine?displayProperty=nameWithType>"Merhaba Dünya!" değişmez dizesini göstermek için yöntemini çağıran basit bir "Merhaba Dünya" uygulaması Konsol (program çıktısı) penceresinde.
 

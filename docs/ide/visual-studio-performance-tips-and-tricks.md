@@ -2,19 +2,19 @@
 title: Performansı artırmaya yönelik ipuçları
 description: Performansı artırmaya yardımcı olmak için kullanmadığınız belirli Visual Studio özelliklerini iyileştirmeyi öğrenin.
 ms.custom: SEO-VS-2020
-ms.date: 12/14/2020
+ms.date: 03/02/2021
 ms.topic: conceptual
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e53a2e3b1a65e496b4ead3d3bca0e8b0254c39e0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5e2187426fbd2e8892d41672c1cf682ed0b93592
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99873872"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101683766"
 ---
 # <a name="visual-studio-performance-tips-and-tricks"></a>Visual Studio performans ipuçları ve püf noktaları
 
@@ -142,6 +142,10 @@ Bazı araçlar veya uzantılar, performansı artırmak için kapatılabilir.
 - **İş yüklerini kaldır**
 
     Artık kullanılmayan iş yüklerini kaldırmak için Visual Studio Yükleyicisi kullanabilirsiniz. Bu eylem, artık gerekli olmayan paketleri ve derlemeleri atlayarak başlangıç ve çalışma zamanı maliyetini kolaylaştırabilir.
+
+- **Yerel. gitignore 'e izlenmeyen dosyalar ekleyin**
+
+    Visual Studio, `git status` bir depoya yeni dosyalar eklediğinizde sorunsuz bir deneyim sağlamak Için Git komutunu izlenmeyen dosyalarla çalıştırır. İzlenmeyen dosya sayısı çok `git status` fazla olduğunda fazla bellek kullanabilir. Bu dosyaları yoksaymak ve performansını geliştirmek için `git status` Bu dosya veya klasörleri Local. gitignore dosyanıza ekleyebilirsiniz. Dosyaya erişmek **için git**  >  **ayarları**  >  **Git deposu ayarları**' na gidin. Ardından, **Git dosyaları** bölümünde, **Ekle** ' ye tıklayarak bir. gitignore dosyası oluşturun veya zaten varsa **Düzenle** ' yi tıklatın.
 
 ## <a name="force-a-garbage-collection"></a>Çöp toplamayı zorla
 

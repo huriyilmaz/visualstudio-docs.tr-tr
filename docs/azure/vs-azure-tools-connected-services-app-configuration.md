@@ -9,21 +9,23 @@ ms.topic: how-to
 ms.date: 12/11/2020
 ms.author: ghogen
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: a0db2f2e4993fcc3c986686322b8915615758e13
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: 250b89c983da039717982b31873a470172bde0f5
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97727300"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101683301"
 ---
 # <a name="adding-azure-app-configuration-by-using-visual-studio-connected-services"></a>Visual Studio bağlı hizmetler 'i kullanarak Azure Uygulama yapılandırması ekleme
 
-Bu öğreticide, ASP.NET Core veya herhangi bir tür ASP.NET projesi kullanıp kullanmayacağınızı, Visual Studio 'da Web projelerine yönelik yapılandırma ve özellik bayraklarını yönetmek üzere Azure Uygulama yapılandırması 'nı kullanmaya başlamak için gereken her şeyi kolayca eklemeyi öğreneceksiniz. Visual Studio 'daki bağlı hizmetler özelliğini kullanarak, Visual Studio 'Nun Azure 'daki uygulama yapılandırma kaynağına bağlanmak için gereken tüm kod, NuGet paketleri ve yapılandırma ayarlarını otomatik olarak eklemesini sağlayabilirsiniz. Bu özelliği kullanmak için Visual Studio 2019 sürüm 16,9 veya sonraki bir sürümünü kullanmanız gerekir.
+Bu öğreticide, Visual Studio 'da Web projelerine yönelik yapılandırma ve özellik bayraklarını yönetmek üzere Azure Uygulama yapılandırması 'nı kullanmaya başlamak için gereken her şeyi kolayca eklemeyi öğreneceksiniz. Visual Studio 'daki bağlı hizmetler özelliğini kullanarak, Visual Studio 'Nun Azure 'daki uygulama yapılandırma kaynağına bağlanmak için gereken tüm kod, NuGet paketleri ve yapılandırma ayarlarını otomatik olarak eklemesini sağlayabilirsiniz. Bu özelliği kullanmak için Visual Studio 2019 sürüm 16,9 veya sonraki bir sürümünü kullanmanız gerekir.
+
+Uygulama yapılandırması bağlı hizmetleri özelliğini ASP.NET Core, .NET Core konsolu ve .NET Framework projeleri ' nde kullanabilirsiniz.
 
 > [!NOTE]
 > Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için [Mac için Visual Studio bağlı hizmetler](/visualstudio/mac/connected-services)' i inceleyin.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 - Azure iş yükü yüklü olan Visual Studio.
 - Desteklenen türlerden birinin projesi

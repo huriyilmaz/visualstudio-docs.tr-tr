@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: dbac3de879937435e9f2e1dc5ab4fad0e7358fc9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: cbde477e076203625e35ebf0109ed344679563f8
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99925388"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101683309"
 ---
 # <a name="walkthrough-debug-a-multithreaded-app-using-the-threads-window-c-visual-basic-c"></a>İzlenecek yol: Iş parçacıkları penceresini kullanarak çok iş parçacıklı bir uygulamada hata ayıklama (C#, Visual Basic, C++)
 
@@ -44,12 +44,14 @@ Bu öğreticide kullanmak üzere aşağıdaki çok iş parçacıklı uygulama pr
 
    **Yeni proje oluştur** penceresinde, arama kutusuna *konsol* girin veya yazın. Ardından, dil listesinden **C#** veya **C++** ' ı seçin ve ardından platform listesinden **Windows** ' u seçin. 
 
-   Dil ve platform filtrelerini uyguladıktan sonra **konsol uygulaması (.NET Core)** veya C++ Için **konsol uygulaması** şablonu ' nu seçin ve ardından **İleri**' yi seçin.
+   Dil ve platform filtrelerini uyguladıktan sonra .NET Core veya C++ için **konsol uygulamasını** seçin ve ardından **İleri**' yi seçin.
 
    > [!NOTE]
-   > Doğru şablonu görmüyorsanız **Araçlar**  >  **ve Özellikler al..**. ' a giderek Visual Studio yükleyicisi açan araçlar ' a gidin. C++ iş yüküyle **.net masaüstü geliştirme** veya **masaüstü geliştirme** seçeneklerini belirleyin ve ardından **Değiştir**' i seçin.
+   > Doğru şablonu görmüyorsanız **Araçlar**  >  **ve Özellikler al..**. ' a giderek Visual Studio yükleyicisi açan araçlar ' a gidin. **.NET Core platformlar arası geliştirme** veya C++ iş yükü **ile masaüstü geliştirme** seçeneklerini belirleyin ve ardından **Değiştir**' i seçin.
 
-   **Yeni projeyi yapılandırın** penceresinde, **Proje adı** kutusuna *MyThreadWalkthroughApp* yazın veya girin. Ardından **Oluştur**' u seçin.
+   **Yeni projeyi yapılandırın** penceresinde, **Proje adı** kutusuna *MyThreadWalkthroughApp* yazın veya girin. Sonra, **İleri** veya **Oluştur**' u seçin, hangisi kullanılabilir seçeneği vardır.
+
+   .NET Core için, önerilen hedef Framework 'ü (.NET Core 3,1) veya .NET 5 ' i seçin ve ardından **Oluştur**' u seçin.
 
    ::: moniker-end
    ::: moniker range="vs-2017"
@@ -58,7 +60,7 @@ Bu öğreticide kullanmak üzere aşağıdaki çok iş parçacıklı uygulama pr
    - C# uygulaması için, **Visual C#** altında, **Windows Masaüstü**' nün ardından orta bölmedeki **konsol uygulaması (.NET Framework)** seçeneğini belirleyin.
    - C++ uygulaması için, **Visual C++** altında, **Windows Masaüstü**' nün ardından **Windows konsol uygulaması**' nı seçin.
 
-   **Konsol uygulamasını (.NET Core)** görmüyorsanız veya C++ için **konsol uygulaması** proje şablonu ' na **gidin Araçlar**  >  **ve Özellikler al..**. ' a giderek Visual Studio yükleyicisi açılır. C++ iş yüküyle **.net masaüstü geliştirme** veya **masaüstü geliştirme** seçeneklerini belirleyin ve ardından **Değiştir**' i seçin.
+   **Konsol uygulamasını (.NET Framework)** görmüyorsanız veya C++ için **konsol uygulama** projesi şablonu ' na **gidin Araçlar**  >  **ve Özellikler al..**. ' a giderek Visual Studio yükleyicisi açılır. C++ iş yüküyle **.net masaüstü geliştirme** veya **masaüstü geliştirme** seçeneklerini belirleyin ve ardından **Değiştir**' i seçin.
 
    Ardından, *MyThreadWalkthroughApp* gibi bir ad yazın ve **Tamam**' a tıklayın.
 
@@ -147,7 +149,7 @@ Geçerli durumuna bağlı olarak, iş parçacığı durumunu bayraklı veya bayr
 
 Ayrıca, kısayol menüsünden bir satıra sağ tıklayıp **bayrak**, bayrağı **Kaldır** veya **tüm iş parçacıklarını işaretini kaldır** ' ı seçebilirsiniz.
 
-**Iş parçacıkları** penceresi araç çubuğu aynı zamanda **yalnızca bayraklı iş parçacıklarını göster** düğmesine sahiptir, bu iki bayrak simgelerinden biri olan righthand. **Hata ayıklama konumu** araç çubuğundaki düğmeyle aynı şekilde çalışacaktır ve iki düğme de her iki konumdaki görüntüyü denetler.
+**Iş parçacıkları** penceresi araç çubuğunda Ayrıca, iki bayrak simgelerinden oluşan, **yalnızca bayrak eklenmiş bir iş parçacığı göster** düğmesi bulunur. **Hata ayıklama konumu** araç çubuğundaki düğmeyle aynı şekilde çalışacaktır ve iki düğme de her iki konumdaki görüntüyü denetler.
 
 ### <a name="other-threads-window-features"></a>Diğer Iş parçacıkları penceresi özellikleri
 

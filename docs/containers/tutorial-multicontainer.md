@@ -7,18 +7,18 @@ ms.author: ghogen
 ms.date: 01/10/2020
 ms.technology: vs-azure
 ms.topic: include
-ms.openlocfilehash: 93f9d5ba8bd84341e1b314c1fabca07690114e39
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: 1dd5e237e99333e9c2fb9414b3d32ff19b70dd9b
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97729294"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101684254"
 ---
 # <a name="tutorial-create-a-multi-container-app-with-docker-compose"></a>Öğretici: Docker Compose ile çok kapsayıcılı bir uygulama oluşturma
 
 Bu öğreticide, birden fazla kapsayıcıyı yönetmeyi ve Visual Studio 'da kapsayıcı araçları kullanırken aralarında iletişim kurmayı öğreneceksiniz.  Birden çok kapsayıcıyı yönetmek için *kapsayıcı düzenlemesi* gerekir ve Docker Compose, Kubernetes veya Service Fabric gibi bir Orchestrator gerekir. Burada Docker Compose kullanacağız. Docker Compose, geliştirme döngüsünün üzerinde yerel hata ayıklama ve test için harika bir yoldur.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 ::: moniker range="vs-2017"
 * [Docker Masaüstü](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
@@ -34,7 +34,7 @@ Bu öğreticide, birden fazla kapsayıcıyı yönetmeyi ve Visual Studio 'da kap
 
 ## <a name="create-a-web-application-project"></a>Web uygulaması projesi oluşturma
 
-Visual Studio 'da adlı bir **ASP.NET Core Web uygulaması** projesi oluşturun `WebFrontEnd` . Razor sayfaları olan bir Web uygulaması oluşturmak için **Web uygulaması** ' nı seçin. 
+Visual Studio 'da, Razor sayfaları olan bir Web uygulaması oluşturmak için adlı bir **ASP.NET Core Web uygulaması** projesi oluşturun `WebFrontEnd` .
   
 ::: moniker range="vs-2017"
 
@@ -46,11 +46,11 @@ Visual Studio 'da adlı bir **ASP.NET Core Web uygulaması** projesi oluşturun 
 
 ::: moniker range="vs-2019"
 
-![Yeni projenizi yapılandırma ekranının ekran görüntüsü ASP.NET Core Web uygulaması için, proje adı ve çözüm adı alanları "Webön uç" olarak ayarlanır.](./media/tutorial-multicontainer/vs-2019/new-aspnet-core-project1.png)
+![ASP.NET Core Web uygulaması projesi oluştur](./media/tutorial-multicontainer/vs-2019/create-web-project1.png)
 
 **Docker desteğini etkinleştir**' i seçmeyin. Docker desteğini daha sonra ekleyeceksiniz.
 
-![Web uygulaması seçiliyken yeni bir ASP.NET Core Web uygulaması oluşturma ekranının ekran görüntüsü. Docker desteğini etkinleştirme seçeneği seçili değil.](./media/tutorial-multicontainer/vs-2019/new-aspnet-core-project.png)
+![Web projesi oluştururken ek bilgi ekranının ekran görüntüsü. Docker desteğini etkinleştirme seçeneği seçili değil.](./media/tutorial-multicontainer/vs-2019/create-web-project-additional-information.png)
 
 ::: moniker-end
 
@@ -62,7 +62,7 @@ Aynı çözüme bir proje ekleyin ve *Mywebapi* olarak çağırın. Proje türü
    ![Web API projesi oluşturma ekran görüntüsü](./media/tutorial-multicontainer/docker-tutorial-mywebapi.png)
 ::: moniker-end
 ::: moniker range="vs-2019"
-   ![Web API projesi oluşturma ekran görüntüsü](./media/tutorial-multicontainer/vs-2019/web-api-project.png)
+   ![Web API projesi oluşturma ekran görüntüsü](./media/tutorial-multicontainer/vs-2019/create-web-api-project.png)
 ::: moniker-end
 
 ## <a name="add-code-to-call-the-web-api"></a>Web API 'sini çağırmak için kod ekleme

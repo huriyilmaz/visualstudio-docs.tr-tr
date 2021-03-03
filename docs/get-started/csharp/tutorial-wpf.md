@@ -2,7 +2,7 @@
 title: "C 'de WPF ile uygulama Merhaba Dünya #"
 description: Windows Presentation Foundation (WPF) Kullanıcı arabirimi çerçevesini kullanarak Visual Studio Ile C# dilinde basit bir Windows Masaüstü .NET uygulaması oluşturun.
 ms.custom: seodec18, get-started
-ms.date: 08/09/2019
+ms.date: 02/10/2021
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
 ms.topic: tutorial
@@ -14,12 +14,12 @@ ms.author: ornella
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4384a724b57de565e03637057e16fc26e8213e5e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1f3232ad0a8b7cc34abbe6d49c05944c066226da
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99924881"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101682899"
 ---
 # <a name="tutorial-create-a-simple-application-with-c"></a>Öğretici: C ile basit bir uygulama oluşturma\#
 
@@ -80,16 +80,17 @@ Visual Studio'da bir uygulama oluştururken önce bir proje ve bir çözüm olu�
 
    ![' Yeni proje oluştur ' penceresini görüntüleyin](../../get-started/media/vs-2019/start-window-create-new-project.png "' Yeni proje oluştur ' penceresinin ekran görüntüsü")
 
-1. **Yeni proje oluştur** ekranında, "WPF" araması yapın **WPF uygulaması (.NET Core)** öğesini seçin ve ardından **İleri**' yi seçin.
+1. **Yeni proje oluştur** ekranında, "WPF" araması yapın **WPF uygulaması**' nı seçin ve ardından **İleri**' yi seçin.
 
-   ![' Yeni proje oluştur ' iletişim kutusunda WPF uygulama şablonu](media/vs-2019/exploreide-newprojectcsharp-vs2019.png "' Yeni proje oluştur ' iletişim kutusunda WPF uygulama şablonunun ekran görüntüsü")
+   :::image type="content" source="media/vs-2019/explore-ide-new-project-csharp-vs-2019.png" alt-text="' Yeni proje oluştur ' iletişim kutusunda WPF uygulama şablonu":::
 
-   > [!NOTE]
-   > Biri .NET Framework ve diğeri .NET Core için olmak üzere iki WPF Masaüstü şablonu bulabilirsiniz. .NET Core şablonu, Visual Studio 2019 sürüm 16,3 ve sonraki sürümlerinde kullanılabilir. Bu öğretici için bunlardan birini kullanabilirsiniz, ancak yeni geliştirme için .NET Core önerilir.
+1. Sonraki ekranda, projeye **HelloWPFApp** adını verin ve **İleri**' yi seçin.
 
-1. Sonraki ekranda, projeye **HelloWPFApp** adını verin ve **Oluştur**' u seçin.
+   :::image type="content" source="./media/vs-2019/explore-ide-name-project.png" alt-text="Projenizin ' HelloWPFApp ' olarak adlandırın":::
 
-   ![Projenizin ' HelloWPFApp ' olarak adlandırın](./media/vs-2019/exploreide-nameproject.png "Projenizin adını girdiğiniz pencerenin ekran görüntüsü")
+1. **Ek bilgi** penceresinde **.NET Core 3,1** , hedef çerçeve'niz için zaten seçilmelidir. Aksi takdirde, **.NET Core 3,1**' i seçin. Ardından **Oluştur**' u seçin.
+
+   :::image type="content" source="./media/vs-2019/wpf-target-framework.png" alt-text="' Ek bilgi ' penceresinde, .NET Core 3,1 ' ın seçili olduğundan emin olun":::
 
 ::: moniker-end
 

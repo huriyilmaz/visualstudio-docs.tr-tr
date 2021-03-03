@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: ea87135b1f60c7ae65a8bc25399604151ab2fcee
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d411465869cc960631063d09752d38536af94119
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99887815"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101683607"
 ---
 # <a name="get-started-with-live-unit-testing"></a>Live Unit Testing kullanmaya başlama
 
@@ -113,20 +113,26 @@ Sonraki adım, StringLibrary kitaplığını test etmek için birim test projesi
 
 4. Projeyi oluşturmak için **Tamam**'ı seçin.
 
+   > [!NOTE]
+   > Bu Başlangıç Öğreticisi, MSTest test çerçevesiyle Live Unit Testing kullanır. Ayrıca xUnit ve NUnit test çerçevelerini de kullanabilirsiniz.
+
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-2. Şablon arama kutusuna **birim testi** yazın ve **MSTest test projesi (.NET Core)** şablonunu seçin. **İleri**’ye tıklayın.
+2. Şablon arama kutusuna **birim testi** yazın, dil olarak **C#** ' yi seçin ve ardından .NET Core şablonu için **birim testi projesi** ' ni seçin. **İleri**’ye tıklayın.
 
-3. Projeyi **Stringlibrarytests** olarak adlandırın.
+   > [!NOTE]
+   > Visual Studio 2019 sürüm 16,9 ' den başlayarak, MSTest proje şablonu adı **MSTest birim testi projesinden (.NET Core)** **birim testi projesine** değişti.
 
-4. Projeyi oluşturmak için **Oluştur** ' a tıklayın.
+3. Projeyi **Stringlibrarytests** olarak adlandırın ve **İleri**' ye tıklayın.
 
-::: moniker-end
+4. Önerilen hedef Framework 'ü (.NET Core 3,1) veya .NET 5 ' i seçin ve ardından **Oluştur**' u seçin.
 
    > [!NOTE]
    > Bu Başlangıç Öğreticisi, MSTest test çerçevesiyle Live Unit Testing kullanır. Ayrıca xUnit ve NUnit test çerçevelerini de kullanabilirsiniz.
+
+::: moniker-end
 
 5. Birim testi projesi test edilen sınıf kitaplığına otomatik olarak erişemez. Sınıf kitaplığı projesine bir başvuru ekleyerek test Kitaplığı erişimi verirsiniz. Bunu yapmak için projeye sağ tıklayın `StringLibraryTests` ve başvuru Ekle ' yi seçin   >  . **Başvuru Yöneticisi** iletişim kutusunda, **çözüm** sekmesinin seçili olduğundan emin olun ve aşağıdaki çizimde gösterildiği gibi StringLibrary projesini seçin.
 

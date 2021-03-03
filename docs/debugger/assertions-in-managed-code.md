@@ -24,12 +24,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 49560ac3293c416719b9addc1cbadf1b0c04f438
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 626f86c2a1d370a7f31e47f86d8adafc3f905672
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99866092"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101684230"
 ---
 # <a name="assertions-in-managed-code"></a>Yönetilen Koddaki Onaylar
 Bir onay veya `Assert` deyimi, `Assert` deyimine bağımsız değişken olarak belirttiğiniz bir koşulu test eder. Koşul true olarak değerlendirilirse işlem yapmanız gerekmez. Koşul false olarak değerlendirilirse onay başarısız olur. Hata ayıklama derlemesiyle çalışıyorsanız programınız kesme moduna girer.
@@ -173,7 +173,7 @@ Debug.Assert ( stacksize > 0 );
 Trace.Assert ( stacksize > 0 );
 ```
 
- Varsa ikinci ve üçüncü bağımsız değişkenler dize olmalıdır. <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=fullName>Ya da <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName> iki veya üç bağımsız değişkenle veya ' i çağırırsanız, ilk bağımsız değişken bir durumdur. Yöntemi koşulu denetler ve sonuç yanlış ise ikinci dizeyi ve üçüncü dizeleri verir. Aşağıdaki örnek, <xref:System.Diagnostics.Debug.Assert(System.Boolean,System.String)?displayProperty=fullName> <xref:System.Diagnostics.Trace.Assert(System.Boolean,System.String)?displayProperty=fullName> iki bağımsız değişkenle birlikte gösterilmektedir ve kullanılır:
+  Varsa ikinci ve üçüncü bağımsız değişkenler dize olmalıdır. <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=fullName>Ya da <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName> iki veya üç bağımsız değişkenle veya ' i çağırırsanız, ilk bağımsız değişken bir durumdur. Yöntemi koşulu denetler ve sonuç yanlış ise ikinci dizeyi ve üçüncü dizeleri verir. Aşağıdaki örnek, <xref:System.Diagnostics.Debug.Assert(System.Boolean,System.String)?displayProperty=fullName> <xref:System.Diagnostics.Trace.Assert(System.Boolean,System.String)?displayProperty=fullName> iki bağımsız değişkenle birlikte gösterilmektedir ve kullanılır:
 
 ```VB
 Debug.Assert(stacksize > 0, "Out of stack space")
@@ -185,7 +185,7 @@ Debug.Assert ( stacksize > 0, "Out of stack space" );
 Trace.Assert ( stacksize > 0, "Out of stack space" );
 ```
 
- Aşağıdaki örnek ve gösterir <xref:System.Diagnostics.Debug.Assert%2A> <xref:System.Diagnostics.Trace.Assert%2A> :
+  Aşağıdaki örnek, <xref:System.Diagnostics.Debug.Assert(System.Boolean,System.String,System.String)?displayProperty=fullName> <xref:System.Diagnostics.Trace.Assert(System.Boolean,System.String,System.String)?displayProperty=fullName> üç bağımsız değişkenle birlikte gösterir ve kullanılır:
 
 ```VB
 Debug.Assert(stacksize > 0, "Out of stack space. Bytes left:" , Format(size, "G"))

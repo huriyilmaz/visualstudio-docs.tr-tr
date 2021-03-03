@@ -5,15 +5,15 @@ ms.custom: SEO-VS-2020
 author: ghogen
 description: Visual Studio kapsayıcı araçları ve Docker ile kapsayıcılı bir tepki olmayan bir SPA uygulaması oluşturmayı öğrenin
 ms.author: ghogen
-ms.date: 05/14/2020
+ms.date: 02/21/2021
 ms.technology: vs-azure
 ms.topic: quickstart
-ms.openlocfilehash: 15c781be33343d2672396c44492d71f42cbb4eda
-ms.sourcegitcommit: 296ab61c40bf090c577ef20e84d581939bd1855b
+ms.openlocfilehash: 7a2a9e7c8b2c53dcee7f11d4b0b795b66ab80a80
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92502194"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101684345"
 ---
 # <a name="quickstart-use-docker-with-a-react-single-page-app-in-visual-studio"></a>Hızlı başlangıç: Visual Studio 'da bir tepki verme tek sayfalı uygulamayla Docker kullanma
 
@@ -45,23 +45,28 @@ Docker yüklemesi için ilk olarak [Windows Için Docker Desktop](https://docs.d
 
 ::: moniker range="vs-2017"
 1. **ASP.NET Core Web uygulaması** şablonunu kullanarak yeni bir proje oluşturun.
-1. **React.js**seçin. **Docker desteğini etkinleştir**' i seçemezsiniz ancak endişelenmeyin, projeyi oluşturduktan sonra bu desteği ekleyebilirsiniz.
+1. **React.js** seçin. **Docker desteğini etkinleştir**' i seçemezsiniz ancak endişelenmeyin, projeyi oluşturduktan sonra bu desteği ekleyebilirsiniz.
 
    ![Yeni React.js projesinin ekran görüntüsü](media/container-tools-react/vs-2017/new-react-project.png)
 
-1. Proje düğümüne sağ tıklayın ve **Add** > projenize bir dockerfile eklemek için **Docker desteği** Ekle ' yi seçin.
+1. Proje düğümüne sağ tıklayın ve  > projenize bir dockerfile eklemek için **Docker desteği** Ekle ' yi seçin.
 
    ![Docker desteği ekleme](media/container-tools-react/vs-2017/add-docker-support.png)
 
 1. Kapsayıcı türünü seçin ve **Tamam**' ı tıklatın.
 ::: moniker-end
+
 ::: moniker range=">=vs-2019"
-1. **ASP.NET Core Web uygulaması** şablonunu kullanarak yeni bir proje oluşturun.
-1. **React.js**' yi seçin ve **Oluştur**' a tıklayın. **Docker desteğini etkinleştir**' i seçemezsiniz ancak endişelenmeyin, daha sonra bu desteği ekleyebilirsiniz.
 
-   ![Yeni React.js projesinin ekran görüntüsü](media/container-tools-react/vs-2019/new-react-project.png)
+1. **React.jsşablonuyla ASP.NET Core** kullanarak yeni bir proje oluşturun.
 
-1. Proje düğümüne sağ tıklayın ve **Add** > projenize bir dockerfile eklemek için **Docker desteği** Ekle ' yi seçin.
+   ![Yeni React.js projesi oluşturma ekran görüntüsü](media/container-tools-react/vs-2019/create-reactjs-project.png)
+
+1. **Ek bilgi** ekranında **Docker desteğini etkinleştir**' i seçemezsiniz ancak endişelenmeyin, daha sonra bu desteği ekleyebilirsiniz.
+
+   ![Yeni React.js projesi oluşturma ekran görüntüsü-ek bilgi ekranı](media/container-tools-react/vs-2019/new-react-project-additional-information.png)
+
+1. Proje düğümüne sağ tıklayın ve  > projenize bir dockerfile eklemek için **Docker desteği** Ekle ' yi seçin.
 
    ![Docker desteği ekleme](media/container-tools-react/vs-2017/add-docker-support.png)
 
@@ -187,7 +192,7 @@ Dockerfile dosyasını aşağıdaki satırları ekleyerek güncelleştirin. Bu, 
 
 Araç çubuğundaki hata ayıklama açılır listesinden **Docker** ' ı seçin ve uygulamada hata ayıklamayı başlatın. Bir sertifikaya güvenmek üzere bir istem içeren bir ileti görebilirsiniz. devam etmek için sertifikaya güvenmeyi seçin.  İlk kez oluşturduğunuzda Docker temel görüntüleri indirir, bu nedenle biraz daha uzun sürebilir.
 
-**Çıkış** penceresinde **kapsayıcı araçları** seçeneği hangi eylemlerin gerçekleştireceğinizi gösterir. *npm.exe*ilişkili yükleme adımlarını görmeniz gerekir.
+**Çıkış** penceresinde **kapsayıcı araçları** seçeneği hangi eylemlerin gerçekleştireceğinizi gösterir. *npm.exe* ilişkili yükleme adımlarını görmeniz gerekir.
 
 Tarayıcı, uygulamanın giriş sayfasını gösterir.
 
@@ -202,7 +207,7 @@ Tarayıcı, uygulamanın giriş sayfasını gösterir.
 
 Menü **araçları**> NuGet Paket Yöneticisi, **Paket Yöneticisi konsolu**' ndan **Paket Yöneticisi konsolu 'nu** (PMC) açın.
 
-Uygulamanın elde edilen Docker görüntüsü *dev*olarak etiketlendi. Görüntü, *DotNet/Core/ASPNET* temel görüntüsünün *3,1-nanoserver-1903* etiketine dayalıdır. `docker images`Komutunu **Paket Yöneticisi konsolu** (PMC) penceresinde çalıştırın. Makinedeki görüntüler görüntülenir:
+Uygulamanın elde edilen Docker görüntüsü *dev* olarak etiketlendi. Görüntü, *DotNet/Core/ASPNET* temel görüntüsünün *3,1-nanoserver-1903* etiketine dayalıdır. `docker images`Komutunu **Paket Yöneticisi konsolu** (PMC) penceresinde çalıştırın. Makinedeki görüntüler görüntülenir:
 
 ```console
 REPOSITORY                             TAG                 IMAGE ID            CREATED             SIZE
@@ -230,13 +235,13 @@ Uygulamanın geliştirme ve hata ayıklama döngüsünü tamamladıktan sonra uy
 1. **Çözüm Gezgini** ' de projenize sağ tıklayın ve **Yayımla**' yı seçin.
 1. Hedefi Yayımla iletişim kutusunda **Container Registry**' yi seçin.
 1. **Yeni Azure Container Registry oluştur** ' u seçin ve **Yayımla**' ya tıklayın.
-1. **Yeni Azure Container Registry oluştur ' a**istediğiniz değerleri girin.
+1. **Yeni Azure Container Registry oluştur ' a** istediğiniz değerleri girin.
 
     | Ayar      | Önerilen değer  | Açıklama                                |
     | ------------ |  ------- | -------------------------------------------------- |
     | **DNS Ön Eki** | Genel olarak benzersiz bir ad | Kapsayıcı kayıt defterinizi benzersiz bir şekilde tanımlayan ad. |
     | **Abonelik** | Aboneliğinizi seçin | Kullanılacak Azure aboneliği. |
-    | **[Kaynak grubu](/azure/azure-resource-manager/resource-group-overview)** | myResourceGroup |  Kapsayıcı kayıt defterinizin oluşturulacağı kaynak grubunun adı. Yeni kaynak grubu oluşturmak **Yeni**'yi seçin.|
+    | **[Kaynak Grubu](/azure/azure-resource-manager/resource-group-overview)** | myResourceGroup |  Kapsayıcı kayıt defterinizin oluşturulacağı kaynak grubunun adı. Yeni kaynak grubu oluşturmak **Yeni**'yi seçin.|
     | **[SKU](/azure/container-registry/container-registry-skus)** | Standart | Kapsayıcı kayıt defterinin hizmet katmanı  |
     | **Kayıt Defteri Konumu** | Size yakın bir konum | Size yakın bir [bölgede](https://azure.microsoft.com/regions/) veya kapsayıcı kayıt defterinizi kullanacak diğer hizmetlerin yakınında bir konum seçin. |
 
@@ -251,22 +256,22 @@ Uygulamanın geliştirme ve hata ayıklama döngüsünü tamamladıktan sonra uy
 
 1. Yapılandırma açılır öğesini değiştirerek uygulamayı **serbest bırakın** ve oluşturun.
 1. **Çözüm Gezgini** ' de projenize sağ tıklayın ve **Yayımla**' yı seçin.
-1. Hedefi Yayımla iletişim kutusunda **Docker Container Registry**öğesini seçin.
+1. Hedefi Yayımla iletişim kutusunda **Docker Container Registry** öğesini seçin.
 
    ![Docker Container Registry seçin](media/container-tools-react/vs-2019/publish-dialog1.png)
 
-1. Sonra **Azure Container Registry**öğesini seçin.
+1. Sonra **Azure Container Registry** öğesini seçin.
 
    ![Azure Container Registry seçin](media/container-tools-react/vs-2019/publish-dialog-acr.png)
 
-1. **Yeni Azure Container Registry oluştur ' a**tıklayın.
+1. **Yeni Azure Container Registry oluştur ' a** tıklayın.
 1. **Yeni Azure Container Registry oluştur** ekranında istediğiniz değerleri girin.
 
     | Ayar      | Önerilen değer  | Açıklama                                |
     | ------------ |  ------- | -------------------------------------------------- |
     | **DNS Ön Eki** | Genel olarak benzersiz bir ad | Kapsayıcı kayıt defterinizi benzersiz bir şekilde tanımlayan ad. |
     | **Abonelik** | Aboneliğinizi seçin | Kullanılacak Azure aboneliği. |
-    | **[Kaynak grubu](/azure/azure-resource-manager/resource-group-overview)** | myResourceGroup |  Kapsayıcı kayıt defterinizin oluşturulacağı kaynak grubunun adı. Yeni kaynak grubu oluşturmak **Yeni**'yi seçin.|
+    | **[Kaynak Grubu](/azure/azure-resource-manager/resource-group-overview)** | myResourceGroup |  Kapsayıcı kayıt defterinizin oluşturulacağı kaynak grubunun adı. Yeni kaynak grubu oluşturmak **Yeni**'yi seçin.|
     | **[SKU](/azure/container-registry/container-registry-skus)** | Standart | Kapsayıcı kayıt defterinin hizmet katmanı  |
     | **Kayıt Defteri Konumu** | Size yakın bir konum | Size yakın bir [bölgede](https://azure.microsoft.com/regions/) veya kapsayıcı kayıt defterinizi kullanacak diğer hizmetlerin yakınında bir konum seçin. |
 

@@ -2,19 +2,19 @@
 title: Birden çok kullanıcı hesabıyla çalışma
 description: Tüm Microsoft hesaplarınızı Visual Studio 'ya eklemeyi öğrenin. böylece, kaynaklara ayrı olarak oturum açmanıza gerek kalmadan herhangi bir hesaptan erişebilirsiniz.
 ms.custom: SEO-VS-2020
-ms.date: 11/16/2020
+ms.date: 03/02/2021
 ms.topic: conceptual
 author: ornellaalt
 ms.author: ornella
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 169415537460dae94ca844c426bb3770449161b5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6740eb4c23d739f439103b2ecdd0e8882018204d
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99960461"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101683788"
 ---
 # <a name="work-with-multiple-user-accounts"></a>Birden çok kullanıcı hesabıyla çalışma
 
@@ -65,7 +65,7 @@ Bunu eylemde görmek için yeni bir **ASP.NET Core Web uygulaması** projesi olu
 
 ::: moniker range=">=vs-2019"
 
-Bunu eylemde görmek için yeni bir **ASP.NET Core Web uygulaması** projesi oluşturun. **Yeni bir ASP.NET Core Web uygulaması oluştur** sayfasında, **Web uygulaması** şablonunu seçin ve ardından **kimlik doğrulaması** altında **Değiştir** ' i seçin.
+Bunu eylemde görmek için yeni bir **ASP.NET Core Web uygulaması** projesi oluşturun. **Yeni bir ASP.NET Core Web uygulaması oluştur** sayfasında, açılan listeden **ASP.NET Core 3,1** ' i seçin, **Web uygulaması** şablonunu seçin ve ardından **kimlik doğrulaması** altında **Değiştir** ' i seçin.
 
 ::: moniker-end
 

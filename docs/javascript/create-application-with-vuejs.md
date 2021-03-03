@@ -12,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 52281c403ceb0f2708aa546cbd73559593c419be
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 338e53d576e9f4d73b32c3f432223480d9e708c3
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99942834"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101683930"
 ---
 # <a name="create-a-vuejs-application-using-nodejs-tools-for-visual-studio"></a>Visual Studio için Node.js araçları 'nı kullanarak Vue.js uygulaması oluşturma
 
@@ -68,20 +68,22 @@ Bu örnekte, boş bir ASP.NET Core uygulaması (C#) kullanırsınız. Ancak, çe
 
 #### <a name="create-an-empty-project"></a>Boş bir proje oluştur
 
-1. Visual Studio 'Yu açın ve yeni bir proje oluşturun.
+* Visual Studio 'Yu açın ve yeni bir proje oluşturun.
 
     ::: moniker range=">=vs-2019"
-    Başlangıç penceresini kapatmak için **ESC** tuşuna basın. **CTRL + Q** yazarak arama kutusunu açın, **asp.net** yazıp **Yeni ASP.NET Core Web uygulaması oluştur**' u seçin. Görüntülenen iletişim kutusunda, **istemci uygulaması** adını yazın ve ardından **Oluştur**' u seçin.
+    Visual Studio 2019 ' de başlangıç penceresinde **Yeni proje oluştur** ' u seçin. Başlangıç penceresi açık değilse **Dosya**  >  **Başlangıç penceresi**' ni seçin. **Web uygulaması** yazın, dil **olarak C#** ' ı seçin, sonra **ASP.NET Core boş**' ı seçin ve ardından **İleri**' yi seçin. Sonraki ekranda, proje **istemcisi-uygulaması**' nı adlandırın ve ardından **İleri**' yi seçin.
+
+    Önerilen hedef Framework 'ü (.NET Core 3,1) veya .NET 5 ' i seçin ve ardından **Oluştur**' u seçin.
     ::: moniker-end
     ::: moniker range="vs-2017"
     Üstteki menü çubuğundan **Dosya**  >  **Yeni**  >  **Proje**' yi seçin. **Yeni proje** iletişim kutusunun sol bölmesinde, **Visual C#**' ı genişletin, ardından **Web**' i seçin. Orta bölmede **ASP.NET Core Web uygulaması**' nı seçin, **istemci uygulaması** adını yazın ve ardından **Tamam**' ı seçin.
+
+    **Boş**' ı seçin ve ardından **Tamam**' a tıklayın.
+
+    Visual Studio, Çözüm Gezgini (sağ bölme) içinde açılan projeyi oluşturur.
     ::: moniker-end
 
     **ASP.NET Core Web uygulaması** proje şablonunu görmüyorsanız, **ASP.net ve Web geliştirme** iş yükünü ve ' nı yüklemelisiniz. Önce **NET Core** geliştirme iş yükü. İş yüklerini yüklemek için **Yeni proje** iletişim kutusunun sol bölmesindeki **Aç Visual Studio yükleyicisi** bağlantısına tıklayın ( **Dosya**  >  **Yeni**  >  **Proje**' yi seçin). Visual Studio Yükleyicisi başlatılır. Gerekli iş yüklerini seçin.
-
-1. **Boş**' ı seçin ve ardından **Tamam**' a tıklayın.
-
-    Visual Studio, Çözüm Gezgini (sağ bölme) içinde açılan projeyi oluşturur.
 
 #### <a name="configure-the-project-startup-file"></a>Proje başlangıç dosyasını yapılandırma
 

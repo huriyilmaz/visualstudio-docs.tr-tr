@@ -2,7 +2,7 @@
 title: Visual Studio 2019’daki yenilikler
 titleSuffix: ''
 description: Visual Studio 2019 ' deki yeni özellikler hakkında bilgi edinin.
-ms.date: 11/10/2020
+ms.date: 03/02/2021
 helpviewer_keywords:
 - Visual Studio, what's new
 - what's new [Visual Studio]
@@ -15,16 +15,16 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 41ccdd8ef7285ba0e5fa211b6b9f76fead5a2f3c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e3dc790310fdff71539c6cae354a0170ec36e65e
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99960578"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101684033"
 ---
 # <a name="whats-new-in-visual-studio-2019"></a>Visual Studio 2019’daki yenilikler
 
-**[16,8 sürümü](/visualstudio/releases/2019/release-notes/) için güncelleştirildi**
+**[16,9 sürümü](/visualstudio/releases/2019/release-notes/) için güncelleştirildi**
 
 >[!div class="button"]
 >[Visual Studio 2019’u İndirin](https://visualstudio.microsoft.com/downloads)
@@ -245,8 +245,8 @@ Visual Studio ekibine neden geri bildirim gönderilsin? Müşteri geri bildiriml
 * [Mac için Visual Studio 2019 sürüm notları](/visualstudio/releasenotes/vs2019-mac-relnotes/)
 * [Visual Studio 2019 SDK 'daki yenilikler](../extensibility/whats-new-visual-studio-2019-sdk.md)
 * [Visual Studio 2017’deki C++ yenilikleri](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio/)
-* [C# 8,0 yenilikleri](/dotnet/csharp/whats-new/csharp-8/)
-* [​.NET Core 3.1’deki yenilikler](/dotnet/core/whats-new/dotnet-core-3-1/)
+* [C# 9,0 yenilikleri](/dotnet/csharp/whats-new/csharp-9)
+* [.NET 5’teki yenilikler](/dotnet/core/dotnet-five)
 * [.NET Framework yenilikleri](/dotnet/framework/whats-new/)
 * [Microsoft derleme Konferansı](https://www.microsoft.com/build)
 * [Microsoft Ignite konferansı](https://www.microsoft.com/ignite)

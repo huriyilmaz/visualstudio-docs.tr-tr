@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: c28355e4097dc014f4757788f175ea80850a3f63
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 411fbd757eb063202136eba5c1e5fbec27f56523
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99960435"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101683635"
 ---
 # <a name="tutorial-create-an-aspnet-core-app-with-typescript-in-visual-studio"></a>Öğretici: Visual Studio 'da TypeScript ile ASP.NET Core uygulaması oluşturma
 
@@ -69,18 +69,18 @@ Bu öğreticide, ASP.NET Core MVC uygulaması için kod içeren basit bir proje 
 1. Yeni bir proje oluşturma.
 
     ::: moniker range=">=vs-2019"
-    Başlangıç penceresi açık değilse **Dosya**  >  **Başlangıç penceresi**' ni seçin. Başlangıç penceresinde **Yeni proje oluştur**' u seçin. Dil açılan listesinde **C#**' ı seçin. Arama kutusuna **ASP.net** yazın ve ardından **ASP.NET Core Web uygulaması**' nı seçin. **İleri**’yi seçin.
+    Visual Studio 2019 ' de başlangıç penceresinde **Yeni proje oluştur** ' u seçin. Başlangıç penceresi açık değilse **Dosya**  >  **Başlangıç penceresi**' ni seçin. **Web** uygulaması yazın, dil olarak **C#** ' yi seçin, ardından **ASP.NET Core Web uygulaması (Model-View-Controller)** öğesini seçin ve ardından **İleri**' yi seçin. Sonraki ekranda, projeyi adlandırın ve ardından **İleri**' yi seçin.
 
-    Proje için bir ad yazın ve **Oluştur**' u seçin.
+    Önerilen hedef Framework 'ü (.NET Core 3,1) veya .NET 5 ' i seçin ve ardından **Oluştur**' u seçin.
     ::: moniker-end
     ::: moniker range="vs-2017"
     Üstteki menü çubuğundan **Dosya**  >  **Yeni**  >  **Proje**' yi seçin. **Yeni proje** iletişim kutusunun sol bölmesinde, **Visual C#**' ı genişletin ve ardından **.NET Core**' u seçin. Orta bölmede, **Web uygulaması-C# ASP.NET Core** seçin ve ardından **Tamam**' ı seçin.
+
+    Görüntülenen iletişim kutusunda, iletişim kutusunda **Web uygulaması (Model-View-Controller)** öğesini seçin ve ardından **Oluştur** (veya **Tamam**) öğesini seçin.
+
+    ![MVC şablonunu seçin](../javascript/media/aspnet-core-ts-mvc-template.png)
     ::: moniker-end
     **ASP.NET Core Web uygulaması** proje şablonunu görmüyorsanız, **ASP.net ve Web geliştirme** iş yükünü eklemeniz gerekir. Ayrıntılı yönergeler için bkz. [Önkoşullar](#prerequisites).
-
-1. Görüntülenen iletişim kutusunda, iletişim kutusunda **Web uygulaması (Model-View-Controller)** öğesini seçin ve ardından **Oluştur** (veya **Tamam**) öğesini seçin.
-
-   ![MVC şablonunu seçin](../javascript/media/aspnet-core-ts-mvc-template.png)
 
     Visual Studio yeni çözümü oluşturur ve projenizi sağ bölmede açar.
 

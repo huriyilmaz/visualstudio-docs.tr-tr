@@ -2,7 +2,7 @@
 title: Değişiklik günlüğü (Unity için Visual Studio Araçları, Mac) | Microsoft Docs
 description: Unity için Visual Studio Araçları, Mac için değişiklik günlüğünü görüntüleyin. 2.7.0.0 ve dışında 1.0.0.0 sürümündeki değişikliklere bakın.
 ms.custom: ''
-ms.date: 12/18/2020
+ms.date: 3/1/2021
 ms.technology: vs-unity-tools
 ms.prod: visual-studio-dev16
 ms.topic: conceptual
@@ -12,16 +12,93 @@ ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 53aade9880686746d11fb899b377e81174915bfa
-ms.sourcegitcommit: 4976419fae731860295dbcd072e6778832f7255d
+ms.openlocfilehash: f11c5c1407d16d7a82a9d8d24e6a8dd3a04e57eb
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97917905"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101683376"
 ---
 # <a name="change-log-visual-studio-tools-for-unity-mac"></a>Değişiklik Günlüğü (Unity için Visual Studio Araçları, Mac)
 
 Unity için Visual Studio Araçları değişiklik günlüğü.
+
+## <a name="2920"></a>2.9.2.0
+Yayımlanma tarihi 2 Mart 2021
+
+### <a name="bug-fixes"></a>Hata düzeltmeleri
+
+- **Tümleştirme**
+
+  - Unity ileti iletişim kutusunda sabit arama vurgulaması.
+
+  - Unity proje TreeView ile ilgili sabit kararlılık sorunları.
+
+- **Masının**
+
+  - Koşullu kesme noktalarının sabit işlenmesi.
+
+## <a name="2910"></a>2.9.1.0
+Yayın tarihi 9 Şubat 2021
+
+### <a name="new-features"></a>Yeni Özellikler
+
+- **Tümleştirme**
+
+  - IDE 'den Unity testlerini çalıştırmaya ve hata ayıklamaya yönelik destek eklendi
+
+- **Değerlendirmesinin**
+
+  - `Active Scene`Kök oyun nesnelerini gösteren Yereller 'e eklenir.
+
+  - `this.gameObject`Unity projelerinde yaygın olarak kullanıldığından, Yereller 'e eklenir.
+
+  - Tüm `Children` `Components` `GameObject` nesne hiyerarşisini kolayca görüntüleyebilmeniz için tüm örneklere eklenen ve gruplar.
+
+  - `Scene Path` `GameObject` Sahnenin konumunu göstermek için tüm örneklere eklenir.
+
+  - `JobEntityBatch`Kaynak oluşturucuları Ile varlıklar kullanılırken/Lambdas desteği eklendi.
+
+  - Büyük dizileri (Dizin demetlenmesidir kullanarak) görüntüleme desteği geliştirildi.
+
+  - 2019,4 API için eksik Unity iletileri eklendi.
+
+### <a name="bug-fixes"></a>Hata düzeltmeleri
+
+- **Tümleştirme**
+
+  - Unity iletisi iletişim kutusuyla ilgili sabit kararlılık sorunları
+
+  - TRK dil olmayan dillerde çeşitli kullanıcı arabirimi sorunları düzeltildi.
+
+  - Tanılama ile ilgili sabit kararlılık sorunları [`UNT0018`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0018.md) .
+
+- **Masının**
+
+  - Yöntemler kullanılırken sabit VM bağlantısı kesme sorunları `Trace` .
+
+- **Değerlendirmesinin**
+
+  - Geçersiz özellikleri oluşturan özel durumlar düzeltildi.
+
+## <a name="2900"></a>2.9.0.0
+Yayın 20 Ocak 2021
+
+### <a name="new-features"></a>Yeni Özellikler
+
+- **Tümleştirme**
+
+  - `raytrace shaders`Ve dosyaları için destek `UXML` eklendi `USS` .
+
+  - Unity iletileri API 'SI güncelleştirildi (eş yordam olarak kullanılan tüm yöntemler için).
+
+  - Android SDK algılaması güncelleştirildi.
+
+### <a name="bug-fixes"></a>Hata düzeltmeleri
+
+- **Tümleştirme**
+
+  - Sabit [`UNT0006`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0006.md) tanı, corlar ve için yanlış uyarılar veriliyor `AssetPostprocessor.OnAssignMaterialModel` .
 
 ## <a name="2840"></a>2.8.4.0
 Yayın tarihi, 15 Aralık 2020

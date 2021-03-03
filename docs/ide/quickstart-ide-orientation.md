@@ -3,19 +3,19 @@ title: 'Hızlı başlangıç: Visual Studio IDE turu'
 description: Visual Studio tümleşik geliştirme ortamının (IDE) bazı Windows, menü ve diğer kullanıcı arabirimi özellikleri hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 titleSuffix: ''
-ms.date: 02/21/2019
+ms.date: 03/02/2021
 ms.topic: quickstart
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5e0199319bc0c647f42e87d4003dd2fabe4544a0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 237b3384d6bec010a760c4bc193b9a95f33febeb
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99945506"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101683981"
 ---
 # <a name="quickstart-first-look-at-the-visual-studio-ide"></a>Hızlı başlangıç: Visual Studio IDE 'ye Ilk bakış
 
@@ -83,15 +83,25 @@ Visual Studio 'nun özelliklerini araştırmaya devam etmek için yeni bir proje
 
 1. Başlangıç penceresinde **Yeni proje oluştur**' u seçin.
 
-   **Yeni bir proje oluşturur** yazılı bir iletişim kutusu açılır. Burada, bir proje şablonunu arayabilir, filtreleyebilir ve seçebilirsiniz. Ayrıca, son kullanılan proje şablonlarının bir listesini gösterir.
+    :::image type="content" source="../get-started/media/vs-2019/start-window-create-new-project.png" alt-text="Visual Studio 2019 ' de ' yeni proje oluşturma ' penceresinin ekran görüntüsü.":::
 
-1. Üstteki arama kutusunda, proje türleri listesini, adında "konsol" içeren olanlarla filtrelemek için **konsol** yazın. **Dil** seçicisinden **C#** (veya tercih ettiğiniz başka bir dil) seçerek arama sonuçlarını daha da belirginleştirin.
+   **Yeni proje oluştur** penceresi açılır ve birçok proje *şablonunu* gösterir. Şablon, belirli bir proje türü için gereken temel dosyaları ve ayarları içerir.
 
-   ![Visual Studio 2019 'de yeni proje iletişim kutusu](media/vs-2019/create-a-new-project.png)
+   Burada, bir proje şablonunu arayabilir, filtreleyebilir ve seçebilirsiniz. Ayrıca, son kullanılan proje şablonlarının bir listesini gösterir.
 
-1. Diliniz olarak C#, Visual Basic veya F # ' ı seçtiyseniz **konsol uygulaması (.NET Core)** şablonunu seçin ve ardından **İleri**' yi seçin. (Farklı bir dil seçtiyseniz, herhangi bir şablonu seçmeniz yeterlidir. Bakılacak Kullanıcı arabirimi tüm programlama dilleri için benzerdir.)
+1. Üstteki arama kutusunda, proje türleri listesini, adında "konsol" içeren olanlarla filtrelemek için **konsol** yazın. **Tüm dil** açılır listesinden **C#** (veya tercih ettiğiniz başka bir dil) seçerek arama sonuçlarını daha da belirginleştirin.
 
-1. **Yeni projenizi yapılandırın** sayfasında varsayılan proje adını ve konumunu kabul edin ve **Oluştur**' u seçin.
+    :::image type="content" source="media/vs-2019/create-new-project.png" alt-text="Visual Studio 2019 ' de, istediğiniz şablonu seçtiğiniz &quot;yeni proje oluştur&quot; penceresinin ekran görüntüsü.":::
+
+1. Diliniz olarak C#, Visual Basic veya F # ' ı seçtiyseniz **konsol uygulaması** şablonunu seçin ve ardından **İleri**' yi seçin. (Farklı bir dil seçtiyseniz, herhangi bir şablonu seçmeniz yeterlidir. Bakılacak Kullanıcı arabirimi tüm programlama dilleri için benzerdir.)
+
+1. **Yeni projeyi yapılandırın** penceresinde, varsayılan proje adını ve konumunu kabul edin ve ardından **İleri**' yi seçin.
+
+    :::image type="content" source="media/vs-2019/configure-new-project-console.png" alt-text="Visual Studio 2019 ' de, projenin adını girdiğiniz ' yeni proje yapılandırma ' penceresinin ekran görüntüsü.":::
+
+1. **Ek bilgi** penceresinde, **.NET Core 3,1** ' in **hedef çerçeve** açılan menüsünde göründüğünü doğrulayın ve ardından **Oluştur**' a tıklayın.
+
+    :::image type="content" source="../get-started/media/vs-2019/create-project-additional-info.png" alt-text="Visual Studio 2019 ' de istediğiniz .NET Core Framework sürümünü seçtiğiniz ' ek bilgiler ' penceresinin ekran görüntüsü.":::
 
 ::: moniker-end
 

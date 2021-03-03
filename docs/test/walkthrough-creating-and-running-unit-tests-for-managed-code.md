@@ -15,12 +15,12 @@ manager: jmartens
 ms.workload:
 - dotnet
 author: mikejo5000
-ms.openlocfilehash: 264744d7fe39c77da625c778d1bfea51f55e1f2d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a6ab205b7f651f8bb5954bee4998602c79fd78e7
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99948016"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101683924"
 ---
 # <a name="walkthrough-create-and-run-unit-tests-for-managed-code"></a>İzlenecek yol: Yönetilen kod için birim testleri oluşturma ve çalıştırma
 
@@ -55,9 +55,14 @@ Bu makalede, yönetilen kod ve Visual Studio **Test Gezgini** için Microsoft bi
 
 2. Başlangıç penceresinde **Yeni proje oluştur**' u seçin.
 
-3. C# **konsol uygulaması (.NET Core)** proje şablonunu arayıp seçin ve ardından **İleri**' ye tıklayın.
+3. .NET Core için C# **konsol uygulaması** proje şablonunu arayıp seçin ve ardından **İleri**' ye tıklayın.
 
-4. Proje **bankasının** adını, ardından **Oluştur**' a tıklayın.
+   > [!NOTE]
+   > **Konsol uygulaması** şablonunu görmüyorsanız, **Yeni proje oluştur** penceresinden yükleyebilirsiniz. **Aradığınızı bulamıyor musunuz?** iletisi için **daha fazla araç ve özellik yüklemeyi** seçin bağlantısına tıklayın. Sonra, Visual Studio Yükleyicisi **.NET Core platformlar arası geliştirme** iş yükünü seçin.
+
+4. Proje **bankasının** adını belirleyip **İleri**' ye tıklayın.
+
+   Önerilen hedef Framework 'ü (.NET Core 3,1) veya .NET 5 ' i seçin ve ardından **Oluştur**' u seçin.
 
    Banka projesi oluşturulur ve kod düzenleyicisinde açık olan *program.cs* dosyası ile **Çözüm Gezgini** görüntülenir.
 
@@ -163,11 +168,14 @@ Artık test edebilirsiniz yöntemleri olan bir projeniz var. Bu makalede, testle
 
 ::: moniker range=">=vs-2019"
 
-2. C# **MSTest test projesi (.NET Core)** proje şablonunu arayıp seçin ve ardından **İleri**' ye tıklayın.
+2. Arama kutusuna **birim testi** yazın, dil olarak **c#** ' yi seçin ve ardından .NET Core şablonu Için c# **birim testi projesi** ' ni seçin ve ardından **İleri**' ye tıklayın.
 
-3. Projeyi **BankTests** olarak adlandırın.
+   > [!NOTE]
+   > Visual Studio 2019 sürüm 16,9 ' den başlayarak, MSTest proje şablonu adı **MSTest birim testi projesinden (.NET Core)** **birim testi projesine** değişti.
 
-4. **Oluştur**’a tıklayın.
+3. Projeyi **BankTests** olarak adlandırın ve **İleri**' ye tıklayın.
+
+4. Önerilen hedef Framework 'ü (.NET Core 3,1) veya .NET 5 ' i seçin ve ardından **Oluştur**' u seçin.
 
    **BankTests** projesi **Banka** çözümüne eklenir.
 

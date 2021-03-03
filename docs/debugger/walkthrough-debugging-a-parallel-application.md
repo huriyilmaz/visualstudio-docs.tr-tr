@@ -22,12 +22,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f46efe377cb01b7b78a9df2de2d1e6fc89826014
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d8f739ab99f060005f7bbfebc400c424c50ba7d5
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99884292"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101684130"
 ---
 # <a name="walkthrough-debugging-a-parallel-application-in-visual-studio-c-visual-basic-c"></a>İzlenecek yol: Visual Studio 'da paralel uygulamada hata ayıklama (C#, Visual Basic, C++)
 
@@ -70,14 +70,16 @@ Bu izlenecek yol, paralel bir uygulamada hata ayıklamak için paralel **Görevl
 
    Başlangıç penceresinde **Yeni proje oluştur**' u seçin.
 
-   **Yeni proje oluştur** penceresinde, arama kutusuna *konsol* girin veya yazın. Ardından, dil listesinden **C#**, **C++** veya **Visual Basic** seçin ve ardından platform listesinden **Windows** ' u seçin. 
+   **Yeni proje oluştur** penceresinde, arama kutusuna *konsol* girin veya yazın. Ardından, dil listesinden **C#**, **C++** veya **Visual Basic** seçin ve ardından platform listesinden **Windows** ' u seçin.
 
-   Dil ve platform filtrelerini uyguladıktan sonra **konsol uygulaması (.NET Core)** veya C++ Için **konsol uygulaması** şablonu ' nu seçin ve ardından **İleri**' yi seçin.
+   Dil ve platform filtrelerini uyguladıktan sonra .NET Core veya C++ **konsol uygulamasını** seçin ve ardından **İleri**' yi seçin.
 
    > [!NOTE]
-   > Doğru şablonu görmüyorsanız **Araçlar**  >  **ve Özellikler al..**. ' a giderek Visual Studio yükleyicisi açan araçlar ' a gidin. C++ iş yüküyle **.net masaüstü geliştirme** veya **masaüstü geliştirme** seçeneklerini belirleyin ve ardından **Değiştir**' i seçin.
+   > Doğru şablonu görmüyorsanız **Araçlar**  >  **ve Özellikler al..**. ' a giderek Visual Studio yükleyicisi açan araçlar ' a gidin. **.NET Core platformlar arası geliştirme** veya C++ iş yükü **ile masaüstü geliştirme** seçeneklerini belirleyin ve ardından **Değiştir**' i seçin.
 
-   **Yeni projeyi yapılandırın** penceresinde, **Proje adı** kutusunda bir ad yazın veya varsayılan adı kullanın. Ardından **Oluştur**' u seçin.
+   **Yeni projeyi yapılandırın** penceresinde, **Proje adı** kutusunda bir ad yazın veya varsayılan adı kullanın. Sonra, **İleri** veya **Oluştur**' u seçin, hangisi kullanılabilir seçeneği vardır.
+
+   .NET Core için, önerilen hedef Framework 'ü (.NET Core 3,1) veya .NET 5 ' i seçin ve ardından **Oluştur**' u seçin.
 
    ::: moniker-end
    ::: moniker range="vs-2017"

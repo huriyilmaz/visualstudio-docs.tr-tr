@@ -14,12 +14,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 7172ca8c5341dbaee59ae5b2635da9c5585793cc
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fe3eaf3c5efcc8341613e9f223d22410111a548f
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99838740"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101682594"
 ---
 # <a name="introduction-to-projects-and-solutions"></a>Projelere ve çözümlere giriş
 
@@ -189,9 +189,14 @@ Boş bir projem var. Bir kod dosyası ekleyelim.
 
 2. **Yeni Proje Ekle** iletişim kutusunda, üstteki arama kutusuna metin **birimi testini** girin ve ardından **dil** altında **C#** ' ı seçin.
 
-3. **MSTest test projesi (.NET Core)** proje şablonunu seçin ve ardından **İleri**' yi seçin.
+3. .NET Core için **birim testi projesi** proje şablonunu seçin ve ardından **İleri**' yi seçin.
 
-4. Projeyi **hızlı teste** adlandırın ve ardından **Oluştur**' u seçin.
+   > [!NOTE]
+   > Visual Studio 2019 sürüm 16,9 ' den başlayarak, MSTest proje şablonu adı **MSTest birim testi projesinden (.NET Core)** **birim testi projesine** değişti. Bu güncelleştirmede proje oluşturma içindeki birkaç adım değişti.
+
+4. Projeyi **hızlı teste** adlandırın ve ardından **İleri**' yi seçin.
+
+5. Önerilen hedef Framework 'ü (.NET Core 3,1) veya .NET 5 ' i seçin ve ardından **Oluştur**' u seçin.
 
    **Çözüm Gezgini** ikinci bir proje ve düzenleyicide *UnitTest1.cs* adlı bir dosya açılır.
 

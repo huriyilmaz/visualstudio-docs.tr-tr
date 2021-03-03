@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - aspnet
-ms.openlocfilehash: 7170983732ff1350061629e1e8aa4ec88fad3fa1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fa8601b6fe625c5cab2aa1f5de8a69f2d550ee2a
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99952843"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101683622"
 ---
 # <a name="quickstart-analyze-cpu-usage-data-in-visual-studio-aspnet-core"></a>Hızlı başlangıç: Visual Studio 'da CPU kullanım verilerini çözümleme (ASP.NET Core)
 
@@ -42,24 +42,17 @@ Hata ayıklayıcı (**Tanılama araçları** penceresi) ile profil oluşturma ar
    Görüntülenen iletişim kutusunda Ortadaki bölmede **MVC** ' yi seçin ve ardından **Tamam**' a tıklayın.
    ::: moniker-end
    ::: moniker range="vs-2019"
-   Başlangıç penceresi açık değilse **Dosya** > **Başlangıç penceresi**' ni seçin.
+   Visual Studio 2019 ' de başlangıç penceresinde **Yeni proje oluştur** ' u seçin. Başlangıç penceresi açık değilse, **Dosya**  >  **Başlangıç penceresi**' ni seçin ve ardından **Yeni proje oluştur**' u seçin.
 
-   Başlangıç penceresinde **Yeni proje oluştur**' u seçin.
+   Arama kutusuna **Web uygulaması** yazın, dil olarak **C#** , **ASP.NET Core Web uygulaması (Model-View-Controller)** öğesini seçin ve ardından **İleri**' yi seçin. Sonraki ekranda, proje *MyProfilingApp_MVC* adlandırın ve ardından **İleri**' yi seçin.
 
-   **Yeni proje oluştur** penceresinde, arama kutusuna *ASP.net* girin veya yazın. Ardından, dil listesinden **C#** öğesini seçin ve ardından platform listesinden **Windows** ' u seçin.
-
-   Dil ve platform filtrelerini uyguladıktan sonra, **ASP.NET Web uygulaması (.NET Core)** şablonunu seçin ve ardından **İleri**' yi seçin.
+   Önerilen hedef Framework 'ü (.NET Core 3,1) veya .NET 5 ' i seçin ve ardından **Oluştur**' u seçin.
 
    > [!NOTE]
    > **ASP.NET Web uygulaması (.NET Core)** şablonunu görmüyorsanız, **Yeni proje oluştur** penceresinden yükleyebilirsiniz. **Aradığınızı bulamıyor musunuz?** iletisi için **daha fazla araç ve özellik yüklemeyi** seçin bağlantısına tıklayın. Ardından Visual Studio Yükleyicisi, **ASP.net ve Web geliştirme** iş yükünü seçin.
-
-   **Yeni projeyi yapılandırın** penceresinde, **proje adı** kutusuna *MyProfilingApp_MVC* yazın veya girin. Ardından **Oluştur**' u seçin.
-
-   Görüntülenen pencerede, **Web uygulaması (Model-View-Controller)** öğesini seçin ve ardından **Oluştur**' u seçin.
-
    ::: moniker-end
 
-   Visual Studio yeni projenizi açar.
+   Visual Studio yeni projenizi oluşturur ve açar.
 
 1. Çözüm Gezgini, modeller klasörüne sağ tıklayın ve sınıf **Ekle**' yi seçin  >  .
 

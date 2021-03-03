@@ -2,7 +2,7 @@
 title: Değişiklik günlüğü (Unity için Visual Studio Araçları, Windows) | Microsoft Docs
 description: Unity için Visual Studio Araçları, Windows için değişiklik günlüğünü görüntüleyin. 4.7.0.0 ve dışında 1.0.0.0 sürümündeki değişikliklere bakın.
 ms.custom: ''
-ms.date: 11/13/2020
+ms.date: 3/1/2021
 ms.technology: vs-unity-tools
 ms.prod: visual-studio-dev16
 ms.topic: conceptual
@@ -12,16 +12,76 @@ ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: e3b4b730608234b8d25b7ff4bf6b6fcfa25bec09
-ms.sourcegitcommit: 3d96f7a8c9affab40358c3e81e3472db31d841b2
+ms.openlocfilehash: 12a6e122d6193b7aa98cf27668dab201bbb86ce4
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94671252"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101683485"
 ---
 # <a name="change-log-visual-studio-tools-for-unity-windows"></a>Değişiklik günlüğü (Unity için Visual Studio Araçları, Windows)
 
 Unity için Visual Studio Araçları değişiklik günlüğü.
+
+## <a name="4910"></a>4.9.1.0
+Yayımlanma tarihi 2 Mart 2021
+
+### <a name="new-features"></a>Yeni Özellikler
+
+- **Değerlendirmesinin**
+
+  - `Active Scene`Kök oyun nesnelerini gösteren Yereller 'e eklenir.
+
+  - `this.gameObject`Unity projelerinde yaygın olarak kullanıldığından, Yereller 'e eklenir.
+
+  - Tüm `Children` `Components` `GameObject` nesne hiyerarşisini kolayca görüntüleyebilmeniz için tüm örneklere eklenen ve gruplar.
+
+  - `Scene Path` `GameObject` Sahnenin konumunu göstermek için tüm örneklere eklenir.
+
+  - `JobEntityBatch`Kaynak oluşturucuları Ile varlıklar kullanılırken/Lambdas desteği eklendi.
+
+  - Büyük dizileri (Dizin demetlenmesidir kullanarak) görüntüleme desteği geliştirildi.
+  
+  - 2019,4 API için eksik Unity iletileri eklendi.
+
+### <a name="bug-fixes"></a>Hata düzeltmeleri
+
+- **Tümleştirme**
+
+  - TRK dil olmayan dillerde çeşitli kullanıcı arabirimi sorunları düzeltildi.
+
+  - Tanılama ile ilgili sabit kararlılık sorunları [`UNT0018`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0018.md) .
+  
+- **Masının**
+
+  - Yöntemler kullanılırken sabit VM bağlantısı kesme sorunları `Trace` .
+
+- **Değerlendirmesinin**
+
+  - Geçersiz özellikleri oluşturan özel durumlar düzeltildi.
+
+## <a name="4900"></a>4.9.0.0
+Yayın 20 Ocak 2021
+
+### <a name="new-features"></a>Yeni Özellikler
+
+- **Tümleştirme**
+
+  - `raytrace shaders`Ve dosyaları için destek `UXML` eklendi `USS` .
+
+  - `.vsconfig`Oluşturma desteği eklendi. Visual Studio artık hangi bileşenlerin eksik olduğunu tespit etmelidir ve Unity projelerini kullanırken bunları yüklemenizi ister.
+
+  - Unity iletileri API 'SI güncelleştirildi (eş yordam olarak kullanılan tüm yöntemler için).
+
+  - Android SDK algılaması güncelleştirildi.
+
+### <a name="bug-fixes"></a>Hata düzeltmeleri
+
+- **Tümleştirme**
+
+  - Örnek seçimi iletişim kutusu kullanılırken sabit işlem yenileme.
+
+  - Sabit [`UNT0006`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0006.md) tanı, corlar ve için yanlış uyarılar veriliyor `AssetPostprocessor.OnAssignMaterialModel` .
 
 ## <a name="4820"></a>4.8.2.0
 Yayın tarihi 10 Kasım 2020

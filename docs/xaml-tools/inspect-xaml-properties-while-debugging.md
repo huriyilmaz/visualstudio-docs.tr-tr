@@ -2,7 +2,7 @@
 title: Hata ayıklarken XAML özelliklerini İnceleme | Microsoft Docs
 description: XAML özelliklerini incelemek ve Kullanıcı arabirimi öğelerinin ağaç görünümünü almak için hata ayıklarken canlı görsel ağacı ve canlı Özellik Gezgini araçlarını nasıl kullanacağınızı öğrenin.
 ms.custom: SEO-VS-2020
-ms.date: 11/12/2019
+ms.date: 03/02/2021
 ms.topic: how-to
 ms.assetid: 390edde4-7b8d-4c89-8d69-55106b7e6b11
 author: TerryGLee
@@ -10,12 +10,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - uwp
-ms.openlocfilehash: d9033921c9e9863e5210721fb2c1244c326802d4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 76edf9f1af414a67abd83cec3c2f597c6cdf8707
+ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99881379"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101683455"
 ---
 # <a name="inspect-xaml-properties-while-debugging"></a>Hata ayıklama sırasında XAML özelliklerini denetleme
 
@@ -34,7 +34,17 @@ Bir liste görünümü ve bir düğme içeren çok basit bir WPF uygulamasını 
 
 ### <a name="create-the-project"></a>Proje oluşturma
 
-1. Yeni bir C# WPF uygulaması oluşturun (**Dosya**  >  **Yeni**  >  **Proje**' ye tıklayın, ardından "C# WPF" yazın ve **WPF uygulaması (.NET Core)** ya da **WPF uygulaması (.NET Framework)** seçeneğini belirleyin. **TestXaml** olarak adlandırın.
+::: moniker range="vs-2019"
+
+1. Yeni bir C# WPF uygulaması (**Dosya** > **Yeni** > **Proje**) oluşturun, "c# WPF" yazın, **WPF uygulaması** proje şablonunu seçin, projeyi **TestXaml** olarak adlandırın ve ardından **.NET Core 3,1** 'nin **hedef çerçeve** açılır penceresinde göründüğünü doğrulayın.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+1. Yeni bir C# WPF uygulaması (**Dosya**  >  **Yeni**  >  **Proje**) oluşturun ve ardından "C# WPF" yazın ve **WPF uygulaması (.NET Framework)** seçeneğini belirleyin. **TestXaml** olarak adlandırın.
+
+::: moniker-end
 
 1. MainWindow. xaml ' i şu şekilde değiştirin:
 
