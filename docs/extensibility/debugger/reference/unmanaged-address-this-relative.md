@@ -1,4 +1,5 @@
 ---
+description: Bu yapı, bu işaretçiye (Visual Basic) göre bir adresi temsil eder.
 title: UNMANAGED_ADDRESS_THIS_RELATIVE | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 5c19109215a9e8824f1648860c39ccb33836ca93
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: cc3e72a536af25c3c62d953a0e5cfb75b5200c69
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99880001"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102223374"
 ---
 # <a name="unmanaged_address_this_relative"></a>UNMANAGED_ADDRESS_THIS_RELATIVE
 Bu yapı, bir `this` işaretçiye (Visual Basic) göre bir adresi temsil eder `Me` .

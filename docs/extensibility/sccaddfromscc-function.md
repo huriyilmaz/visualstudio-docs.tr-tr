@@ -1,4 +1,5 @@
 ---
+description: Bu işlev, kullanıcının zaten kaynak denetimi sisteminde bulunan dosyalara gözatmasını ve ardından bu dosyaları geçerli projenin bir parçası yapmasını sağlar.
 title: SccAddFromScc Işlevi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: e35ae460d6ceb505bc7ad64a0e522bf2841260f2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2bbc321d7ff7e335b28f6bc7430fb0f8dce3d57c
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99886619"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102221710"
 ---
 # <a name="sccaddfromscc-function"></a>SccAddFromScc işlevi
 Bu işlev, kullanıcının zaten kaynak denetimi sisteminde bulunan dosyalara gözatmasını ve ardından bu dosyaları geçerli projenin bir parçası yapmasını sağlar. Örneğin, bu işlev, geçerli projeye dosyayı kopyalamadan ortak bir üst bilgi dosyası alabilir. Dosyaların dönüş dizisi, `lplpFileNames` kullanıcının IDE projesine eklemek istediği dosyaların listesini içerir.
