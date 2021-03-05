@@ -1,4 +1,5 @@
 ---
+description: Bu programın hatalarını ayıklayabilmesini sağlayan tüm olası hata ayıklama altyapısının (DE) GUID 'Lerini döndürür.
 title: 'IDebugProgramEngines2:: Trmpossıbleengines | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: aa404f713a8982177cb28c48ddc83f332e5c5e56
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e5719728637f26ed61283578565470b39fc60455
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99899002"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102151590"
 ---
 # <a name="idebugprogramengines2enumpossibleengines"></a>IDebugProgramEngines2::EnumPossibleEngines
 Bu programın hatalarını ayıklayabilmesini sağlayan tüm olası hata ayıklama altyapısının (DE) GUID 'Lerini döndürür.

@@ -1,4 +1,5 @@
 ---
+description: Bu kayıtlı arabirim, oturum hata ayıklama Yöneticisi 'nin (SDM) IDebugProgramPublisher2 arabirimi aracılığıyla yayımlanmış programlar hakkında bilgi almasına izin verir.
 title: IDebugProgramProvider2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 788c4add42b70107ea2960ae5682a2e2cc815d59
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d0102aa650d9739ae862f1357a1560842ae2fa59
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99959629"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102151447"
 ---
 # <a name="idebugprogramprovider2"></a>IDebugProgramProvider2
 Bu kayıtlı arabirim, oturum hata ayıklama Yöneticisi 'nin (SDM) [IDebugProgramPublisher2](../../../extensibility/debugger/reference/idebugprogrampublisher2.md) arabirimi aracılığıyla "yayınlanan" programlar hakkında bilgi almasına izin verir.

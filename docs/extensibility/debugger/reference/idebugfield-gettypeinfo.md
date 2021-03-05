@@ -1,4 +1,5 @@
 ---
+description: Bu yöntem, sembol veya tür hakkındaki tür bağımsız bilgileri alır.
 title: 'IDebugField:: GetTypeInfo | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 0f74cc24d7698c3d83991c7f338bd2ef155ee1ce
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e908fb4eec16ec9891eda5127c753616419fc176
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99869797"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102151876"
 ---
 # <a name="idebugfieldgettypeinfo"></a>IDebugField::GetTypeInfo
 Bu yöntem, sembol veya tür hakkındaki tür bağımsız bilgileri alır.

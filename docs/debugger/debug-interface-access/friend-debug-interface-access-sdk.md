@@ -1,4 +1,5 @@
 ---
+description: Friend sınıfları ve arkadaş işlevleri SymTagFriend sembolleri tarafından tanımlanır.
 title: Arkadaş (hata ayıklama arabirimi erişim SDK 'Sı) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,12 +15,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 9b895555ce1334fa306b64fe213787bdf5dc827e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4a0e9784c864b2b591847f3d77ced553762911c1
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99865386"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102151218"
 ---
 # <a name="friend-debug-interface-access-sdk"></a>Arkadaş (Arabirim Erişimi SDK'sında Hata Ayıklama)
 Friend sınıfları ve arkadaş işlevleri semboller tarafından tanımlanır `SymTagFriend` . Bunlar, üst Kullanıcı tanımlı türlerin (UDTs) alt öğesidir ve bir [IDiaSymbol:: get_classParent](../../debugger/debug-interface-access/idiasymbol-get-classparent.md) özelliğine sahiptir.
