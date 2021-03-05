@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: e10f9b628d1d9fbbdb2911977fe7e63b1a7b6d57
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 04ef9834fdc66256b601ecdcf156e4d290447ce3
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99957484"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102171324"
 ---
 # <a name="unit-testing-javascript-and-typescript-in-visual-studio"></a>Visual Studio 'da JavaScript ve TypeScript ile birim testi
 
@@ -97,7 +97,7 @@ TypeScript için, birim testleri oluşturulan JavaScript koduna karşı çalış
 
 ### <a name="run-tests-from-the-command-line"></a>Komut satırından test çalıştırma
 
-Aşağıdaki komutu kullanarak testleri Visual Studio için [Geliştirici komut istemi](/dotnet/framework/tools/developer-command-prompt-for-vs) çalıştırabilirsiniz:
+Aşağıdaki komutu kullanarak [Visual Studio için geliştirici komut istemi](../ide/reference/command-prompt-powershell.md) testlerini çalıştırabilirsiniz:
 
 ```
 vstest.console.exe <path to project file>\NodejsConsoleApp23.njsproj /TestAdapterPath:<VisualStudioFolder>\Common7\IDE\Extensions\Microsoft\NodeJsTools\TestAdapter
@@ -152,11 +152,12 @@ Ve uygulamalarına yönelik iyi bir örnek için `find_tests` `run_tests` , Içi
 Kullanılabilir test çerçevelerini bulma işlemi Visual Studio başlangıcında oluşur. Visual Studio çalışırken bir çerçeve eklenirse, Framework 'ü algılamak için Visual Studio 'Yu yeniden başlatın. Ancak uygulamada değişiklik yaparken yeniden başlatmanız gerekmez.
 
 ## <a name="unit-tests-in-other-project-types"></a>Diğer proje türlerinde birim testleri
+
 Yalnızca Node.js projelerinizde birim testlerini yazmak sınırlı değildir. TestFramework ve TestRoot özelliklerini herhangi bir C# veya Visual Basic projesine eklediğinizde, bu testler numaralandırılır ve test Gezgini penceresini kullanarak bunları çalıştırabilirsiniz.
 
 Bunu etkinleştirmek için Çözüm Gezgini proje düğümüne sağ tıklayın, **Projeyi Kaldır**' ı seçin ve ardından **projeyi Düzenle**' yi seçin. Ardından proje dosyasında, bir özellik grubuna aşağıdaki iki öğeyi ekleyin.
 
-> [!NOTE]
+> [!IMPORTANT]
 > Öğelerini eklemekte olduğunuz özellik grubunun belirtilen bir koşula sahip olmadığından emin olun.
 > Bu beklenmeyen davranışlara neden olabilir.
 
@@ -170,6 +171,7 @@ Bunu etkinleştirmek için Çözüm Gezgini proje düğümüne sağ tıklayın, 
 Ardından, testlerinizi belirttiğiniz test kök klasörüne ekleyin ve test Gezgini penceresinde çalıştırmak için kullanılabilir olacaktır. Başlangıçta görünmüyorsa projeyi yeniden oluşturmanız gerekebilir.
 
 ### <a name="unit-test-net-core-and-net-standard"></a>Birim testi .NET Core ve .NET Standard
+
 Yukarıdaki özelliklere ek olarak, [Microsoft. JavaScript. UnitTest](https://www.nuget.org/packages/Microsoft.JavaScript.UnitTest/) NuGet paketini yüklemeniz ve özelliğini ayarlamanız gerekir:
 
 ```xml

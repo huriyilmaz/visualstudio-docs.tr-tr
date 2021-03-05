@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 89f62550d75a86c6d48848a31c99ca169964faa0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 82f0def521a7a5a6bf4bd4595d32775324a0a39c
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99950430"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102171024"
 ---
 # <a name="set-env"></a>set-env
 
@@ -55,7 +55,7 @@ Aracın varsayılan davranışı, `set-env` tüm geçerli ortam değişkenlerini
 
 ## <a name="usage-in-a-codespace"></a>Codespace 'teki kullanım
 
-Codespace kullanıyorsanız, dosyadaki özelliği özelleştirerek codespace 'te kullanılan ortam değişkenlerini ayarlayabilirsiniz `remoteEnv` [`.devcontainer.json`](/visualstudio/codespaces/reference/configuring) .
+Codespace kullanıyorsanız, dosyadaki özelliği özelleştirerek codespace 'te kullanılan ortam değişkenlerini ayarlayabilirsiniz `remoteEnv` [`.devcontainer.json`](https://code.visualstudio.com/docs/remote/devcontainerjson-reference) .
 
 ## <a name="example-usage"></a>Örnek kullanım
 Kullanarak nasıl çalıştırılacağını gösteren örnekler aşağıda verilmiştir `set-env` `.devinit.json` .
