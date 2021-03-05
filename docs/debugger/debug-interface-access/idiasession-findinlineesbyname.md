@@ -1,4 +1,5 @@
 ---
+description: Bir istemcinin, belirtilen bir adla eşleşen tüm satır numarası işlevlerinin satır numarası bilgilerini yinelemesinden izin veren bir sabit listesi alır.
 title: 'IDiaSession:: Findınlineesbyname | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,12 +11,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 76995b9c595e56a86945637a19022837e197294e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6c5f39638c16444f7a60df028813c66525b0d025
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99855188"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102147725"
 ---
 # <a name="idiasessionfindinlineesbyname"></a>IDiaSession::findInlineesByName
 Bir istemcinin, belirtilen bir adla eşleşen tüm satır numarası işlevlerinin satır numarası bilgilerini yinelemesinden izin veren bir sabit listesi alır.

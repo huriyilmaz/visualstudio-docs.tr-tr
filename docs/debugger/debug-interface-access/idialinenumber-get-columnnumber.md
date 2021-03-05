@@ -1,4 +1,5 @@
 ---
+description: İfadenin veya deyimin başladığı sütun numarasını alır.
 title: 'IDiaLineNumber:: get_columnNumber | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ec9075be8ab003cda087b37c13a0f2ef9c481dff
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 06d2dc2f703f74d5a3964ee3eb1a1fff948a50ad
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99864805"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102148306"
 ---
 # <a name="idialinenumberget_columnnumber"></a>IDiaLineNumber::get_columnNumber
 İfadenin veya deyimin başladığı sütun numarasını alır.

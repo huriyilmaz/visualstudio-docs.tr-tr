@@ -1,4 +1,5 @@
 ---
+description: Hata ayıklamayı isteyen kullanıcının kimlik doğrulaması bir kimlik doğrulama hatası nedeniyle engellendi.
 title: Tümleşik Windows kimlik doğrulaması etkinleştirilmediğinden hata ayıklama başarısız oldu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: error-reference
@@ -17,12 +18,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4d1bbdc3e06dee87e7d8930bc5c4e60c6d25ee2f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a3f95359c7963ca7da3d59f81aa471424c23de8a
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99871747"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102147035"
 ---
 # <a name="error-debugging-failed-because-integrated-windows-authentication-is-not-enabled"></a>Hata: Tümleşik Windows Kimlik Doğrulaması Etkinleştirilmediğinden Hata Ayıklama Başarısız
 Hata ayıklamayı isteyen kullanıcının kimlik doğrulaması bir kimlik doğrulama hatası nedeniyle engellendi. Bu durum, bir Web uygulamasına veya bir XML Web hizmetine adım adım çalışırken oluşabilir. Bu hatanın bir nedeni tümleşik Windows kimlik doğrulamasının etkinleştirilmemesine neden olur. Etkinleştirmek için "tümleşik Windows kimlik doğrulamasını etkinleştirmek Için" bölümündeki adımları izleyin.

@@ -1,4 +1,5 @@
 ---
+description: Bellek içi görüntünün bir parçası oluşturulmadan önce bölümün kaldırılıp kaldırılmadığını gösteren bir bayrak alır.
 title: 'IDiaSectionContrib:: get_remove | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 41f968bcf5f295ae249c8e3c176fe3c10745f30b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: cf345506988ed2a6954bf4bdbce5e7b7dad1afa9
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99864399"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102147914"
 ---
 # <a name="idiasectioncontribget_remove"></a>IDiaSectionContrib::get_remove
 Bellek içi görüntünün bir parçası oluşturulmadan önce bölümün kaldırılıp kaldırılmadığını gösteren bir bayrak alır.

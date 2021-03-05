@@ -1,4 +1,5 @@
 ---
+description: "Tam ileti metni: ' function ' işlevi değerlendirilirken hedef işlemden ' Code ' kodu ile çıkıldı."
 title: '&apos; &apos; İşlev işlevi değerlendirilirken hedef işlemden kod koduyla çıkıldı &apos; &apos; | Microsoft Docs'
 ms.date: 4/06/2018
 ms.topic: error-reference
@@ -9,12 +10,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 07891e5bcbcab35a4ec5652676a014b87dd32d43
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ba1e2e258a12c6548317b272365db67503dc3d16
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99871643"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102147009"
 ---
 # <a name="error-the-target-process-exited-with-code-39code39-while-evaluating-the-function-39function39"></a>Hata: işlev &#39;işlevi değerlendirilirken hedef işleme kod &#39;kodla çıkıldı&#39;&#39;
 
