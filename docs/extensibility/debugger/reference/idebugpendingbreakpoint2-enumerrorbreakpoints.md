@@ -1,4 +1,5 @@
 ---
+description: Bu bekleyen kesme noktasından kaynaklanan tüm hata kesme noktalarının listesini alır.
 title: 'IDebugPendingBreakpoint2:: Enumerrorkesmenoktaları | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -16,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 34336c51d51c50f6dee7239a38588f36c935edbd
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 664a64896244f58e98c9fd600b4fab71b5e9fe35
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99934357"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102169814"
 ---
 # <a name="idebugpendingbreakpoint2enumerrorbreakpoints"></a>IDebugPendingBreakpoint2::EnumErrorBreakpoints
 Bu bekleyen kesme noktasından kaynaklanan tüm hata kesme noktalarının listesini alır.

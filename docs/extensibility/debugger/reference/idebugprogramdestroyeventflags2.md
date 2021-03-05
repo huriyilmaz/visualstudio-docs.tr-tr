@@ -1,4 +1,5 @@
 ---
+description: Bir hata ayıklama oturumunu sonlandırdığınızda, Visual Studio Kullanıcı arabiriminin varsayılan davranışını geçersiz kılmak için bir hata ayıklama altyapısı sağlar.
 title: IDebugProgramDestroyEventFlags2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,12 +11,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: bd43b93f8a74e0e1fcb12ac9be4da47142a79519
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 02b2d934c2a556d3556d494368145e52a8c97394
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99848227"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102168198"
 ---
 # <a name="idebugprogramdestroyeventflags2"></a>IDebugProgramDestroyEventFlags2
 Bir hata ayıklama oturumunu sonlandırdığınızda, bir hata ayıklama altyapısının Kullanıcı arabiriminin varsayılan davranışını geçersiz kılmasını sağlar [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] .

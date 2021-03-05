@@ -1,4 +1,5 @@
 ---
+description: Bir bağlantı noktasında çalışan tüm işlemlerin listesini döndürür.
 title: 'IDebugPort2:: EnumProcesses | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e303787a21996ba4a743e854d6ba1263438259b2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c07541200635417287ce8d6bd8731a87ddfc88ef
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99844833"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102169541"
 ---
 # <a name="idebugport2enumprocesses"></a>IDebugPort2::EnumProcesses
 Bir bağlantı noktasında çalışan tüm işlemlerin listesini döndürür.

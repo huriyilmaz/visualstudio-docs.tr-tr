@@ -1,4 +1,5 @@
 ---
+description: Bu arabirim sembolleri ve türleri sağlayan bir sembol sağlayıcısını temsil eder ve bunları alan olarak döndürür.
 title: IDebugSymbolProvider | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8485497f9a5f0c6a04090755e6848bf8ed916ab3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e0488520f8bde0ccd2638636810cb0055a7f3f4b
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99909567"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102168432"
 ---
 # <a name="idebugsymbolprovider"></a>IDebugSymbolProvider
 Bu arabirim sembolleri ve türleri sağlayan bir sembol sağlayıcısını temsil eder ve bunları alan olarak döndürür.
