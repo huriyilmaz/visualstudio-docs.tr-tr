@@ -2,7 +2,7 @@
 title: Profil oluşturma araçlarıyla çalışmaya başlama
 description: Visual Studio 'da bulunan farklı tanılama araçlarına göz atın.
 ms.custom: ''
-ms.date: 09/08/2020
+ms.date: 02/18/2021
 ms.topic: overview
 f1_keywords:
 - vs.diagnosticshub.overview
@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: bfd7055303fed2c18501d5eea3b49b34c68ec248
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 855a04fae1d5b406019e758c6d6f931d6657bb4e
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99929114"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102145384"
 ---
 # <a name="first-look-at-profiling-tools"></a>Profil oluşturma araçlarına ilk bakış
 
@@ -162,6 +162,14 @@ Araç, her sorguyu bir liste görünümünde gösterir. Sorgu başlangıç saati
 
 ![Ayırma](./media/db-gotosource.png "Ayırma")
 
+## <a name="visualize-net-counters-net-core"></a>.NET sayaçlarını görselleştirme (.NET Core)
+
+Visual Studio 2019 sürüm 16,7 ' den başlayarak, performans sayaçlarını görselleştirmek için Visual Studio 'daki [.net sayaçları aracını](../profiling/dotnet-counters-tool.md) kullanabilirsiniz. [DotNet sayaçları](/dotnet/core/diagnostics/dotnet-counters)kullanılarak oluşturulan sayaçları görselleştirebilirsiniz. DotNet sayaçları, CPU kullanımı ve çöp toplayıcı yığın boyutu gibi birçok sayacı destekler.
+
+Araç, bir liste görünümündeki her sayaç için canlı değerleri gösterir.
+
+:::image type="content" source="../profiling/media/dotnet-counters-tool-collecting.png" alt-text=".NET sayaç aracı toplanıyor.":::
+
 ::: moniker-end
 
 ## <a name="examine-ui-performance-and-accessibility-events-uwp"></a>UI performans ve erişilebilirlik olaylarını İnceleme (UWP)
@@ -235,6 +243,7 @@ Aşağıda, Visual Studio tekliflerinin farklı araçları ve bunları kullanabi
 |[Uygulama Zaman Çizelgesi](../profiling/application-timeline.md)|Evet (XAML)|evet|hayır|
 |[Olay Görüntüleyicisi](../profiling/events-viewer.md)|evet|evet|evet|
 |[.NET Async](../profiling/analyze-async.md)|Evet (yalnızca .NET)|evet|evet|
+|[.NET Sayaçları](../profiling/dotnet-counters-tool.md)|Evet (yalnızca .NET Core)|hayır|Evet (yalnızca ASP.NET Core)|
 |[Veritabanı](../profiling/analyze-database.md)|Evet (yalnızca .NET Core)|hayır|Evet (yalnızca ASP.NET Core)|
 |[Performans Gezgini](#analyze-performance-legacy-tools)|hayır|hayır|hayır|
 |[IntelliTrace](../debugger/intellitrace.md)|Yalnızca Visual Studio Enterprise .NET|Yalnızca Visual Studio Enterprise .NET|Yalnızca Visual Studio Enterprise .NET|

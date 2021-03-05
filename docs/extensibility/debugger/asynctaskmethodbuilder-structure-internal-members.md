@@ -1,4 +1,5 @@
 ---
+description: Bu makalede System. Runtime. CompilerServices. AsyncTaskMethodBuilder sınıfının iç üyeleri açıklanmaktadır.
 title: AsyncTaskMethodBuilder Yapısı - Dahili Üyeler
 titleSuffix: ''
 ms.custom: SEO-VS-2020
@@ -13,12 +14,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 604f86311e2689d4301fec8a186e2a102d633062
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 241b4f3aae50ac70afc8320b637535035ee427e2
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99888439"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102145696"
 ---
 # <a name="asynctaskmethodbuilder-structure---internal-members"></a>AsyncTaskMethodBuilder yapısı-dahili Üyeler
 Bu konu, sınıfının iç üyelerini açıklar <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder> . Bu sınıf hakkında genel bilgi için <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder> başvuru konusuna bakın.

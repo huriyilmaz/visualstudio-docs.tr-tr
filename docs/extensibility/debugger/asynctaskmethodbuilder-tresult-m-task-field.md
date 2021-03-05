@@ -1,4 +1,5 @@
 ---
+description: Geç tarafından başlatılan oluşturulmuş görevi temsil eder.
 title: AsyncTaskMethodBuilder &lt; TResult &gt; .m_task alanı | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -10,12 +11,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f82acdcdd129ae9a5d72a71be04e9e8fa9b13b89
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 51935b1c66dda161a040655e0276dd91b9391b28
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99915662"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102145683"
 ---
 # <a name="asynctaskmethodbuilderlttresultgtm_task-field"></a>AsyncTaskMethodBuilder &lt; TResult &gt; .m_task alanı
 Geç tarafından başlatılan oluşturulmuş görevi temsil eder.

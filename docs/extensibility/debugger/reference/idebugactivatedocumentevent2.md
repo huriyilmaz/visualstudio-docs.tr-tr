@@ -1,4 +1,5 @@
 ---
+description: Hata ayıklama altyapısı (DE), yüklenecek bir belge istemek için bu arabirimi kullanır.
 title: IDebugActivateDocumentEvent2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5ec3168a7e104e20bbb53607b4bd7a6acd8e79e7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 557cb86765c06c8589f30a013a1087764f3f909e
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99904660"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102145462"
 ---
 # <a name="idebugactivatedocumentevent2"></a>IDebugActivateDocumentEvent2
 Hata ayıklama altyapısı (DE), yüklenecek bir belge istemek için bu arabirimi kullanır.
@@ -37,7 +38,7 @@ IDebugActivateDocumentEvent2 : IUnknown
 ## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
  Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDebugActivateDocumentEvent2` .
 
-|Yöntemler|Description|
+|Yöntemler|Açıklama|
 |-------------|-----------------|
 |[GetDocument](../../../extensibility/debugger/reference/idebugactivatedocumentevent2-getdocument.md)|Etkinleştirilecek belgeyi alır.|
 |[GetDocumentContext](../../../extensibility/debugger/reference/idebugactivatedocumentevent2-getdocumentcontext.md)|Belge içindeki konumu açıklayan belge bağlamını alır.|

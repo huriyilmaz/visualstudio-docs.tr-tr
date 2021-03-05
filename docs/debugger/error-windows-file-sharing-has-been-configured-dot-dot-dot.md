@@ -1,4 +1,5 @@
 ---
+description: Windows dosya paylaşımı, uzak bilgisayara farklı bir Kullanıcı adı kullanarak bağlanacak şekilde yapılandırılmıştır.
 title: Windows dosya paylaşımı yapılandırıldı... | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: error-reference
@@ -14,12 +15,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d1cc81c8ef39aeeb716a26209a4aded0c69dcf95
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: cc34e269d609837d9080cd1e84787fbabf45ce76
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99870876"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102146255"
 ---
 # <a name="error-windows-file-sharing-has-been-configured"></a>Hata: Windows dosya paylaşımı yapılandırıldı...
 Windows dosya paylaşımı, uzak bilgisayara farklı bir Kullanıcı adı kullanarak bağlanacak şekilde yapılandırılmıştır. Bu, uzaktan hata ayıklama ile uyumsuzdur

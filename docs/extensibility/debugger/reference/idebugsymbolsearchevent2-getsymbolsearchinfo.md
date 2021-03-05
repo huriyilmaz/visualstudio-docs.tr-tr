@@ -1,4 +1,5 @@
 ---
+description: Bir sembol yükleme işlemi hakkındaki sonuçları almak için bir olay işleyicisi tarafından çağırılır.
 title: 'IDebugSymbolSearchEvent2:: GetSymbolSearchInfo | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 01b7ee4b0220fcd83573d29954c03d738ed53051
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9f03562f3370268f720b2d8053bbd6a2979f6a19
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99909373"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102145774"
 ---
 # <a name="idebugsymbolsearchevent2getsymbolsearchinfo"></a>IDebugSymbolSearchEvent2::GetSymbolSearchInfo
 Bir sembol yükleme işlemi hakkındaki sonuçları almak için bir olay işleyicisi tarafından çağırılır.

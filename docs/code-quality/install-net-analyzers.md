@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: b41615e1826987cb42076ab3195fe7bfad235e7a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 368fd5bc9c8b7e2659c86b6e3dc69a609da37617
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99867899"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102144669"
 ---
 # <a name="enable-or-install-first-party-net-analyzers"></a>Birinci taraf .NET çözümleyicilerinin etkinleştirilmesi veya yüklenmesi
 
@@ -26,7 +26,7 @@ ms.locfileid: "99867899"
 
 Birinci taraf .NET Çözümleyicileri 'ni aşağıdaki yollarla etkinleştirebilir veya yükleyebilirsiniz:
 
-- **.NET SDK 'Dan etkinleştir**: Visual Studio 2019 16,8 ve .NET 5,0 'den başlayarak, bu çözümleyiciler [.NET SDK 'ya dahildir](/dotnet/fundamentals/code-analysis/overview). Varsayılan olarak, .NET 5,0 veya üstünü hedefleyen projeler için analiz etkindir. Özelliğini olarak ayarlayarak, önceki .NET sürümlerini hedefleyen projelerde Kod analizini etkinleştirebilirsiniz `EnableNETAnalyzers` `true` . Ayrıca, olarak ayarlayarak projeniz için kod analizini devre dışı bırakabilirsiniz `EnableNETAnalyzers` `false` .
+- **.NET SDK 'Dan etkinleştir**: Visual Studio 2019 16,8 ve .NET 5,0 'den başlayarak, bu çözümleyiciler [.NET SDK 'ya dahildir](/dotnet/fundamentals/code-analysis/overview). Varsayılan olarak, .NET 5,0 veya üstünü hedefleyen projeler için analiz etkindir. MSBUILD [Enablenetçözümleyiciler](/dotnet/core/project-sdk/msbuild-props#enablenetanalyzers) özelliğini olarak ayarlayarak, daha önceki .NET sürümlerini hedefleyen projelerde Kod analizini etkinleştirebilirsiniz `true` . Ayrıca, olarak ayarlayarak projeniz için kod analizini devre dışı bırakabilirsiniz `EnableNETAnalyzers` `false` .
 
 - **NuGet paketi olarak yükleyebilirsiniz**: .NET 5 + SDK ' ya geçmek istemiyorsanız veya bir NuGet paket tabanlı modeli tercih ediyorsanız, çözümleyiciler `Microsoft.CodeAnalysis.NetAnalyzers` Visual Studio 2019 üzerinde [NuGet paketinde](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers) de mevcuttur.  İsteğe bağlı sürüm güncelleştirmeleri için paket tabanlı bir model tercih edebilirsiniz. Visual Studio 2017 kullanıyorsanız, `2.9.x` `Microsoft.CodeAnalysis.FxCopAnalyzers` bunun yerine [NuGet paketinin](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/) en son sürümünü yükleyebilirsiniz.
 
