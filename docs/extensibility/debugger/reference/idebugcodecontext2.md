@@ -1,4 +1,5 @@
 ---
+description: Bu arabirim, bir kod yönergesinin başlangıç konumunu temsil eder.
 title: IDebugCodeContext2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f03bef276d4f4aada1a173c45defd100e4becbf4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 228b6e84ca2f85803c4a248b966698b822bb572f
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99928698"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102164103"
 ---
 # <a name="idebugcodecontext2"></a>IDebugCodeContext2
 Bu arabirim, bir kod yönergesinin başlangıç konumunu temsil eder. Günümüzde çoğu çalışma zamanı mimarilerinde, bir programın yürütme akışında bir adres olarak bir kod bağlamı düşünülebilir.

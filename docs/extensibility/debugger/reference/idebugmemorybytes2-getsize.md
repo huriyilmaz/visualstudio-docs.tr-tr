@@ -1,4 +1,5 @@
 ---
+description: Bu IDebugMemoryBytes2 nesnesi tarafından temsil edilen belleğin bayt cinsinden boyutunu alır.
 title: 'IDebugMemoryBytes2:: GetSize | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -16,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 790fcccd54aa80c51137655b0653970897f496d9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 55dfc147eca60f43da32e6c0584f0d540b3f90fc
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99909939"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102165208"
 ---
 # <a name="idebugmemorybytes2getsize"></a>IDebugMemoryBytes2::GetSize
 Bu [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md) nesnesi tarafından temsil edilen belleğin bayt cinsinden boyutunu alır.

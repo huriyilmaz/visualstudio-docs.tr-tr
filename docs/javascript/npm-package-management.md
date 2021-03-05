@@ -2,7 +2,7 @@
 title: npm paketlerini yönetme
 description: Visual Studio, Node.js paket yöneticisini (NPM) kullanarak paketleri yönetmenize yardımcı olur
 ms.custom: seodec18
-ms.date: 04/16/2020
+ms.date: 02/23/2021
 ms.topic: how-to
 ms.devlang: javascript
 author: mikejo5000
@@ -12,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 26c750a11c2910a6c6f91e1207d731024af64a5f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b017495d12d654be3e11da7153310b5bcba367d5
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99962723"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102165819"
 ---
 # <a name="manage-npm-packages-in-visual-studio"></a>Visual Studio 'da NPM paketlerini yönetme
 
@@ -179,5 +179,7 @@ Bir paketin yüklenmesi birkaç dakika sürebilir. **Çıkış** penceresindeki 
 * Node.js projelerinde, NPM desteği için **Node.js geliştirme** iş yükünün yüklü olması gerekir.
 
 * Bazı senaryolarda, [burada](https://github.com/aspnet/Tooling/issues/479)açıklanan bilinen bir sorundan dolayı yüklü NPM paketleri için doğru durumu gösteremeyebilir Çözüm Gezgini. Örneğin, paket yüklendiğinde yüklü değil olarak görünebilir. Çoğu durumda, *package.js* Çözüm Gezgini güncelleştirebilir, Visual Studio 'yu yeniden başlatarak ve bu makalede daha önce anlatıldığı gibi *package.js* dosyaya yeniden ekleyebilirsiniz. Ya da paketleri yüklerken, yükleme durumunu doğrulamak için NPM çıkış penceresini kullanabilirsiniz.
+
+* Bazı ASP.NET Core senaryolarda, Projeyi derledikten sonra Çözüm Gezgini NPM düğümü görünür olmayabilir. Düğümü yeniden görünür hale getirmek için proje düğümüne sağ tıklayın ve **Projeyi Kaldır** ' ı seçin. Ardından proje düğümüne sağ tıklayın ve **projeyi yeniden yükle**' yi seçin.
 
 * Uygulamanızı veya transpiling TypeScript kodunuzu oluştururken herhangi bir hata görürseniz olası hata kaynakları olarak NPM paket uyumsuzluklarını denetleyin. Hataları belirlemede yardımcı olması için, bu makalede daha önce açıklandığı gibi paketleri yüklerken NPM çıkış penceresini kontrol edin. Örneğin, bir veya daha fazla NPM paket sürümü kullanım dışı bırakılmış ve bir hatayla sonuçlanmışsa, hataları onarmak için daha yeni bir sürüm yüklemeniz gerekebilir. NPM paket sürümlerini denetlemek için *üzerindepackage.js* kullanma hakkında bilgi için bkz. [package.jsyapılandırma](../javascript/configure-packages-with-package-json.md).

@@ -1,4 +1,5 @@
 ---
+description: Metodun parametreleri için bir Numaralandırıcı oluşturur.
 title: 'IDebugMethodField:: Trmparameters | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 4c164fa08f4195d685bf7dd2faa120ff030e44c6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 51b0ca4d799bc5943a1effd612947b5822730d37
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99837729"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102165000"
 ---
 # <a name="idebugmethodfieldenumparameters"></a>IDebugMethodField::EnumParameters
 Metodun parametreleri için bir Numaralandırıcı oluşturur.

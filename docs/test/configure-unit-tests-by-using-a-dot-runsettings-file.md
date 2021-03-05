@@ -9,12 +9,12 @@ manager: jmartens
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 10bfed2a9a2a0ce466e1b3276a487695d40fb580
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9d6b4dd8bd21da7fcfc4d7cde54e5f5a7926472e
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99964569"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102165728"
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>*. Runsettings* dosyasını kullanarak birim testlerini yapılandırma
 
@@ -135,7 +135,7 @@ Dosya, Test menüsünde görünür ve onu seçebilir veya seçimden kaldırabili
 
 Komut satırından testleri çalıştırmak için *vstest.console.exe* kullanın ve **/Settings** parametresini kullanarak ayarlar dosyasını belirtin.
 
-1. Visual Studio için bir [Geliştirici komut istemi](/dotnet/framework/tools/developer-command-prompt-for-vs) açın.
+1. [Visual Studio için geliştirici komut istemi](../ide/reference/command-prompt-powershell.md)açın.
 
 2. Şuna benzer bir komut girin:
 

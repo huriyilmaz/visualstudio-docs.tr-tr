@@ -1,4 +1,5 @@
 ---
+description: 'IDebugProgram2:: Continue bu programı durdurulmuş bir durumdan çalıştırmaya devam ediyor. Önceki yürütme durumu (bir adım gibi) korunur ve program yeniden yürütülmeye başlar.'
 title: 'IDebugProgram2:: Continue | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 07e48a59f044f8f3ccc94576210a51e7d70d9b66
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4f10d9266e8562d7ba1afed45b4b054f306bfbca
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99912944"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102164727"
 ---
 # <a name="idebugprogram2continue"></a>IDebugProgram2::Continue
 Bu programı durdurulmuş bir durumdan çalıştırmaya devam eder. Önceki yürütme durumu (bir adım gibi) korunur ve program yeniden yürütülmeye başlar.
