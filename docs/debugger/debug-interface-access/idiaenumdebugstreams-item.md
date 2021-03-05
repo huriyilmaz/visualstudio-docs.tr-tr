@@ -1,4 +1,5 @@
 ---
+description: Bir dizin veya ad aracılığıyla hata ayıklama akışı alır.
 title: 'IDiaEnumDebugStreams:: öğe | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: bca409a40b69111edcf7f13ae2749f8cc5abf679
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ff8b1dc19cec15b414c92c0aa13aaae3f6a7c49c
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99856952"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102158149"
 ---
 # <a name="idiaenumdebugstreamsitem"></a>IDiaEnumDebugStreams::Item
 Bir dizin veya ad aracılığıyla hata ayıklama akışı alır.

@@ -1,4 +1,5 @@
 ---
+description: Belirtilen bir adresi içeren belirtilen bir compiland içindeki satırları alır.
 title: 'IDiaSession:: findLinesByAddr | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0179789f509cb4464d7b62c3c2d72b5ec7cd73be
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7f90ca3fca2ff5bb41a7767c1b200518a6e2a211
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99864175"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102157079"
 ---
 # <a name="idiasessionfindlinesbyaddr"></a>IDiaSession::findLinesByAddr
 Belirtilen bir adresi içeren belirtilen bir compiland içindeki satırları alır.

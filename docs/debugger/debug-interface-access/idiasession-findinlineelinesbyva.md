@@ -1,4 +1,5 @@
 ---
+description: 'IDiaSession:: Findınlineelinesbyva, bir istemcinin belirtilen ana sembolüyle doğrudan veya dolaylı olarak satır numarası bilgileri üzerinden yineleme yapmasına izin veren bir sabit listesi alır ve belirtilen sanal adreste (VA) bulunur.'
 title: 'IDiaSession:: findInlineeLinesByVA | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,12 +11,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e335c97ed9178834975030aaa634a13e3e2816e3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5b777a035585e2aa9cab60e02da39a6e1858b193
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99864238"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102157128"
 ---
 # <a name="idiasessionfindinlineelinesbyva"></a>IDiaSession::findInlineeLinesByVA
 Bir istemcinin, belirtilen ana sembolüyle doğrudan veya dolaylı olarak satır numarası bilgileri üzerinden yineleme yapmasına izin veren ve belirtilen sanal adres (VA) içinde yer alan bir sabit listesi alır.

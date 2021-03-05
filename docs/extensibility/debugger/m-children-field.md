@@ -1,4 +1,5 @@
 ---
+description: Bu görevle kaydedilen alt görevlerin listesi.
 title: m_children alanı | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -10,12 +11,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 12bf76c5c9b62184a74006ddf288c7e581215ce0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5aaf29d76a7bbd81a416c86360f315bc5c09b76c
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99925274"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102158875"
 ---
 # <a name="m_children-field"></a>m_children alanı
 Bu görevle kaydedilen alt görevlerin listesi.

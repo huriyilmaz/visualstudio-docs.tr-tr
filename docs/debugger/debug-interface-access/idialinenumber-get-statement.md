@@ -1,4 +1,5 @@
 ---
+description: Bu satır bilgisinin program kaynağında bir ifade yerine bir deyimin başlangıcını açıkladığını belirten bir bayrak alır.
 title: 'IDiaLineNumber:: get_statement | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0baad9c254efad1fff772cfae27828e3597d078b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e6c36852f5aa48bcd5146419415dd06ec9d0a847
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99864735"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102157449"
 ---
 # <a name="idialinenumberget_statement"></a>IDiaLineNumber::get_statement
 Bu satır bilgisinin program kaynağında bir ifade yerine bir deyimin başlangıcını açıkladığını belirten bir bayrak alır.

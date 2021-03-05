@@ -1,4 +1,5 @@
 ---
+description: Geçerli tablolar Numaralandırıcı ile aynı numaralandırma durumunu içeren bir Numaralandırıcı oluşturur.
 title: 'IDiaEnumTables:: Clone | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5b7abdc5545c25f0e4dfa68657a0867c4c97b483
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 410e02ab0a7a914c06b09b97a10fe3e2f3e3c630
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99856049"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102157898"
 ---
 # <a name="idiaenumtablesclone"></a>IDiaEnumTables::Clone
 Geçerli numaralandırıcı ile aynı numaralandırma durumunu içeren bir Numaralandırıcı oluşturur.

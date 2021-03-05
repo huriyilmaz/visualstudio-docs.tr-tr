@@ -1,4 +1,5 @@
 ---
+description: Açılır ve program veritabanı (. pdb) dosyasının belirtilen imza bilgilerini eşleştirdiğini doğrular ve. pdb dosyasını hata ayıklama veri kaynağı olarak hazırlar.
 title: 'IDiaDataSource:: loadAndValidateDataFromPdb | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 57f903bde5121a9ece797f6eb97c29805a3290a1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0d55053271e38ee87533a11a8c5f6cd30d7e7333
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99857169"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102158290"
 ---
 # <a name="idiadatasourceloadandvalidatedatafrompdb"></a>IDiaDataSource::loadAndValidateDataFromPdb
 Açılır ve program veritabanı (. pdb) dosyasının belirtilen imza bilgilerini eşleştirdiğini doğrular ve. pdb dosyasını hata ayıklama veri kaynağı olarak hazırlar.
