@@ -1,4 +1,5 @@
 ---
+description: Sınıfın veya yöntemin korumalı olup olmadığını belirten bir bayrak alır.
 title: 'IDiaSymbol:: get_sealed | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 03447b1b0b8d5b5a47db61cd75c8857508e3ab40
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: dfca3d05cdab630e029446ba1dfe80aea8e5b46c
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99862719"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102155784"
 ---
 # <a name="idiasymbolget_sealed"></a>IDiaSymbol::get_sealed
 Sınıfın veya yöntemin korumalı olup olmadığını belirten bir bayrak alır.

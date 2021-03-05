@@ -1,4 +1,5 @@
 ---
+description: Sembol dosyasının C türlerini içerip içermediğini gösteren bir bayrak alır.
 title: 'IDiaSymbol:: get_isCTypes | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c65b9e054f56c02c228c2e8b767c8c852f86d51f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0931223f8932a379a8db9aba6d1dea41a31b50f1
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99854117"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102156211"
 ---
 # <a name="idiasymbolget_isctypes"></a>IDiaSymbol::get_isCTypes
 Sembol dosyasının C türlerini içerip içermediğini gösteren bir bayrak alır.

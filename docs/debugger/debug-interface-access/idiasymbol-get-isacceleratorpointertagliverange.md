@@ -1,4 +1,5 @@
 ---
+description: Simgenin bir C++ AMP Hızlandırıcısı için derlenmiş koddaki bir işaretçi değişkeninin etiket bileşeni için açıklama aralığı simgesine karşılık geldiğini belirten bir bayrak alır.
 title: 'IDiaSymbol:: get_isAcceleratorPointerTagLiveRange | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,12 +11,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5a0e2d22da73402c7eb68e2a84cfe98e59fc0832
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7f46618e0dddf788f106cfccd836d3e228835735
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99863258"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102156246"
 ---
 # <a name="idiasymbolget_isacceleratorpointertagliverange"></a>IDiaSymbol::get_isAcceleratorPointerTagLiveRange
 Simgenin bir C++ AMP Hızlandırıcısı için derlenmiş koddaki bir işaretçi değişkeninin etiket bileşeni için *Açıklama aralığı simgesine* karşılık geldiğini belirten bir bayrak alır. Tanım aralığı simgesi, bir adres yayılımı için bir değişkenin konumudur.

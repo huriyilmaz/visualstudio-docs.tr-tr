@@ -1,4 +1,5 @@
 ---
+description: 'IDiaSymbol:: Findınlineelinesbyva, bir istemcinin belirtilen sanal adres (VA) içindeki Bu sembolde yer alan ve doğrudan veya dolaylı olarak satır numarası bilgilerini yinelemesinden izin veren bir sabit listesi alır.'
 title: 'IDiaSymbol:: findInlineeLinesByVA | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,12 +11,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 6c3dfb222108d2a531e83673ed2fe7f23c5d619f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 24b0eeb503e49f4fd9cda3c9cb7404e712e3c626
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99854643"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102156708"
 ---
 # <a name="idiasymbolfindinlineelinesbyva"></a>IDiaSymbol::findInlineeLinesByVA
 Bir istemcinin, belirtilen sanal adres (VA) içindeki Bu sembolde yer alan ve doğrudan veya dolaylı olarak satır numarası bilgilerini yinelemesinden izin veren bir sabit listesi alır.

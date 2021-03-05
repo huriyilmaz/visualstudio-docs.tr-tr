@@ -1,4 +1,5 @@
 ---
+description: Belirtilen yığın adresinde veya yakınında bir dönüş adresi için belirtilen yığın çerçevesini arar.
 title: 'IDiaStackWalkHelper:: searchForReturnAddressStart | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 097bc8f1d2cadd800db78623523b26d6fe7587e8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5dfda60c2be8f7900a8b2fc0db54e4801c628bb7
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99863755"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102156771"
 ---
 # <a name="idiastackwalkhelpersearchforreturnaddressstart"></a>IDiaStackWalkHelper::searchForReturnAddressStart
 Belirtilen yığın adresinde veya yakınında bir dönüş adresi için belirtilen yığın çerçevesini arar.

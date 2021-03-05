@@ -1,4 +1,5 @@
 ---
+description: İşlevin yapılandırılmış özel durum Işleme (C/C++)) içerip içermediğini belirten bir bayrak alır (örneğin, _try/__except blokları).
 title: 'IDiaSymbol:: get_hasSEH | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0689490e855508314835a21e44e6cb9a02736ef4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a802a14c1c4e9b9c3b080c751d8cd512c3adf75d
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99863307"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102156268"
 ---
 # <a name="idiasymbolget_hasseh"></a>IDiaSymbol::get_hasSEH
 İşlevin [yapılandırılmış özel durum işleme (C/C++)](/cpp/cpp/structured-exception-handling-c-cpp) içerip içermediğini belirten bir bayrak alır (örneğin, __try/ \_ _Except blokları).

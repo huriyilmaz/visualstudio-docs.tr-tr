@@ -1,4 +1,5 @@
 ---
+description: Bu işlev, bu sembolün üst/kapsayıcısını temsil eden bir simgeye yönelik bir işaretçi alır.
 title: 'IDiaSymbol:: get_container | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a1f5deb0854a10e3d8947af7ed4c78d0432c21a8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 724127e50708585613175b0f5773f231f1b33944
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99854418"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102156386"
 ---
 # <a name="idiasymbolget_container"></a>IDiaSymbol::get_container
 Bu işlev, bu sembolün üst/kapsayıcısını temsil eden bir simgeye yönelik bir işaretçi alır.
