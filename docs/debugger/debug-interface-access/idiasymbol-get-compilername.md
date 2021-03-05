@@ -1,4 +1,5 @@
 ---
+description: Compiland oluşturmak için kullanılan derleyicinin adını döndürür.
 title: 'IDiaSymbol:: get_compilerName | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 810197226185e848cdc9ace69654e1b40ce05a5a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 27f59110696a12423b9ada1001bcbce8c84d7b5d
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99863482"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102162202"
 ---
 # <a name="idiasymbolget_compilername"></a>IDiaSymbol::get_compilerName
 [Compiland](../../debugger/debug-interface-access/compiland.md)oluşturmak için kullanılan derleyicinin adını döndürür.

@@ -1,4 +1,5 @@
 ---
+description: İşaretçi türünün bir rvalue başvurusu olup olmadığını belirten bir bayrak alır.
 title: 'IDiaSymbol:: get_RValueReference | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a66ec650c1e12e795241ab31cafc50ebaacf20ee
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3be0c7f5a25459823911c27c39f80f3b6593cbbe
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99853655"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102161860"
 ---
 # <a name="idiasymbolget_rvaluereference"></a>IDiaSymbol::get_RValueReference
 İşaretçi türünün bir rvalue başvurusu olup olmadığını belirten bir bayrak alır. [SymTagEnum numaralandırması](../../debugger/debug-interface-access/symtagenum.md) bir işaretçi türüne ayarlandığında kullanın.
