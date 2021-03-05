@@ -1,4 +1,5 @@
 ---
+description: Bir işlevde hata ayıklamanın sona erdirmek için tanımlı bir nokta varsa, hata ayıklama başlangıç noktası, Symtagfuncdebugging Gend etiketine sahip bir sembol tarafından tanımlanır.
 title: Funcmı Gentıd | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,12 +14,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 88a81f9a179ab573cdf370c1870378b993e4b6fd
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5b28fe8f1a436dd308487187897fa62fd247a293
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99857281"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102149166"
 ---
 # <a name="funcdebugend"></a>FuncDebugEnd
 Bir işlevde hata ayıklamanın sona erdirmek için tanımlı bir nokta varsa, hata ayıklama başlangıç noktası etiketi ile bir sembol tarafından tanımlanır `SymTagFuncDebugEnd` .

@@ -1,4 +1,5 @@
 ---
+description: IDebugBreakpointRequest3 arabirimi, herhangi bir kesme noktası türü oluşturmak ve bağlamak için gereken bilgileri temsil eder.
 title: IDebugBreakpointRequest3 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d6e42111ca0c8b357a7f8841511cf935694a30b3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 628a68cf6712e6863550d85a5f876afbe1b6bdb5
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99893067"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102150750"
 ---
 # <a name="idebugbreakpointrequest3"></a>IDebugBreakpointRequest3
 Bu arabirim, herhangi bir kesme noktası türü oluşturmak ve bağlamak için gereken bilgileri temsil eder. Bu bir [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md)uzantısıdır.

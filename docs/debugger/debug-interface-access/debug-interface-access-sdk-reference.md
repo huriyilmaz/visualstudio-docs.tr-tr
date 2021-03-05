@@ -1,4 +1,5 @@
 ---
+description: Tüm arabirimlerin ve DIA SDK Numaralandırmaların ve yapıların desteklenmesine yönelik tüm başvuru.
 title: Hata ayıklama arabirimi erişimi SDK başvurusu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,12 +15,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 6e914cb7fade7c46213f3ffc1c68113ebf83188b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 012de677e6b6d819df05cf0b95640fe800b63b3d
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99865414"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102149306"
 ---
 # <a name="debug-interface-access-sdk-reference"></a>Arabirim Erişimi SDK Başvurusunda Hata Ayıklama
 

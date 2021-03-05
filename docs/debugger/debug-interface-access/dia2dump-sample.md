@@ -1,4 +1,5 @@
 ---
+description: Dia2dump örnek, Microsoft hata ayıklama arabirimi erişim yazılım geliştirme seti 'nin (DIA SDK) bilgi için bir PDB dosyasını sorgulamak için nasıl kullanılacağını gösterir.
 title: Dia2dump örneği | Microsoft Docs
 ms.date: 07/24/2018
 ms.topic: reference
@@ -13,12 +14,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: fee6f04b3ee0aefe0aac99f8079e2f31733ce08b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a94a16d8e9fd60b042ea7113304b6d14c649b6fa
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99865421"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102149188"
 ---
 # <a name="dia2dump-sample"></a>Dia2dump Örneği
 
