@@ -1,6 +1,6 @@
 ---
 title: DLL projesinden hata ayıkla | Microsoft Docs
-Description: Proje özelliklerinde çağıran uygulamayı belirterek, bir DLL projesinin hata ayıklamasını projenin kendisinden başlatabilirsiniz. Ayrıntılar için bu makaleye bakın.
+description: Proje özelliklerinde çağıran uygulamayı belirterek, bir DLL projesinin hata ayıklamasını projenin kendisinden başlatabilirsiniz. Ayrıntılar için bu makaleye bakın.
 ms.custom: SEO-VS-2020
 ms.date: 10/10/2018
 ms.topic: how-to
@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 3b819a5cdbd09ced66fddec91574c1d03718518f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1f6063c5a0343951bb098c6937ce13dac7100d4a
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99913278"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102160452"
 ---
 # <a name="how-to-debug-from-a-dll-project-in-visual-studio-c-c-visual-basic-f"></a>Nasıl yapılır: Visual Studio 'da DLL projesinde hata ayıklama (C#, C++, Visual Basic, F #)
 

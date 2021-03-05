@@ -1,4 +1,5 @@
 ---
+description: Belirtilen bir sanal adresi içeren veya en yakın olan, belirtilen bir sembol türünü alır.
 title: 'IDiaSession:: findSymbolByVA | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 60304d7a94bdd03d5a9d0bfda57dc282ef5104ba
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b225f42d7ea8ed0d75e931b63d0ae68ce8ede897
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99864119"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102158945"
 ---
 # <a name="idiasessionfindsymbolbyva"></a>IDiaSession::findSymbolByVA
 Belirtilen bir sanal adresi içeren veya en yakın olan, belirtilen bir sembol türünü alır.

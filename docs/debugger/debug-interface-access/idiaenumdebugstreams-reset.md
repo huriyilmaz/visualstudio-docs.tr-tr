@@ -1,4 +1,5 @@
 ---
+description: Hata ayıklama akışlarının numaralandırma dizisini başlangıca sıfırlar.
 title: 'IDiaEnumDebugStreams:: Reset | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 89dcc6e367594b88516d896735e98d07040992f5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 838b740b85992a5d703571f142116dbe427b2489
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99856924"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102159448"
 ---
 # <a name="idiaenumdebugstreamsreset"></a>IDiaEnumDebugStreams::Reset
 Bir numaralandırma dizisini başlangıca sıfırlar.

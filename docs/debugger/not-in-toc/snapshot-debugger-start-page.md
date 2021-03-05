@@ -1,4 +1,5 @@
 ---
+description: Visual Studio Snapshot Debugger artık hizmetinize bağlı ve hata ayıklamayla ilgili yardım almak için anlık görüntüler toplamaya başlayabilirsiniz.
 title: Snapshot Debugger için başlangıç sayfası
 ms.date: 07/14/2018
 robots: noindex, nofollow
@@ -8,12 +9,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 9f237f121d0bd0a5eaa57cd2b198024d22951622
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 96e0c6196d99b8a2b7ac9b4187dbd1397111abbd
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99942002"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102160348"
 ---
 # <a name="getting-started-with-the-snapshot-debugger"></a>Snapshot Debugger kullanmaya başlama
 

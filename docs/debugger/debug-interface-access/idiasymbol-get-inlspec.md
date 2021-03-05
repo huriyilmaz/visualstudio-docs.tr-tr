@@ -1,4 +1,5 @@
 ---
+description: Bu işlev, işlevin satır içi olarak işaretlenip işaretlenmediğini belirten bir bayrak alır (satır içi, _inline, __forceinline) özniteliklerinden birini kullanarak).
 title: 'IDiaSymbol:: get_InlSpec | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: efde91caaa4e7b79db01975c0691b2acb5f01bee
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f727e83d067fed37698eb750bb39309a9454535a
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99854194"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102160871"
 ---
 # <a name="idiasymbolget_inlspec"></a>IDiaSymbol::get_InlSpec
 Bu işlev, işlevin satır içi olarak işaretlenip işaretlenmediğini belirten bir bayrak alır ( [satır içi, __inline \_ _forceinline](/cpp/cpp/inline-functions-cpp) özniteliklerinden birini kullanarak).

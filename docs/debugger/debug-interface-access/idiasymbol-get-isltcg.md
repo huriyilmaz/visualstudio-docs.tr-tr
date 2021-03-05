@@ -1,4 +1,5 @@
 ---
+description: Compiland 'ın, tüm program iyileştirmesine yardımcı olan/LTCG (bağlantı zamanı kodu oluşturma) bağlayıcı anahtarıyla (/CPP/Build/Reference/LTCG-link-Time-Code-Generation) bağlantılı olup olmadığını belirten bir bayrak alır.
 title: 'IDiaSymbol:: get_isLTCG | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b3f1fde1a3509181182e7d41486facfb01d3efe1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1b8306dabe6533287d7d28841ea76f2d6478e4a3
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99863181"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102160815"
 ---
 # <a name="idiasymbolget_isltcg"></a>IDiaSymbol::get_isLTCG
 [Compiland](../../debugger/debug-interface-access/compiland.md) 'ın, tüm program iyileştirmesine yardımcı olan [/LTCG (bağlama zamanı kodu oluşturma)](/cpp/build/reference/ltcg-link-time-code-generation)bağlayıcı anahtarıyla bağlanıp bağlanmadığını belirten bir bayrak alır. Bu anahtar yalnızca yönetilen kod için geçerlidir.
