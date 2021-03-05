@@ -2,7 +2,7 @@
 title: MSBuild sorunları için sorun giderme ve günlük oluşturma
 description: Visual Studio projenizde derleme sorunlarının nasıl tanınabileceği hakkında bilgi edinin ve gerekirse, araştırma için Microsoft 'a göndermek üzere bir günlük oluşturun.
 ms.custom: SEO-VS-2020
-ms.date: 06/27/2019
+ms.date: 02/08/2021
 ms.technology: vs-ide-compile
 ms.topic: troubleshooting
 helpviewer_keywords:
@@ -17,12 +17,12 @@ dev_langs:
 ms.workload:
 - multiple
 ms.description: Generate build logs for msbuild projects to collect helpful information when troubleshooting issues.
-ms.openlocfilehash: d9308bff68a5a5377c025bba5861ac344dcb0326
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3496eb5a0e8f699a994037ccc853a76e4f93e4ee
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99880495"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102225230"
 ---
 # <a name="troubleshoot-and-create-logs-for-msbuild-problems"></a>MSBuild sorunları için sorun giderme ve günlük oluşturma
 
@@ -99,22 +99,41 @@ Visual Studio IDE 'de oluşturuyorsanız (ayrıntılı çıkış penceresi ayrı
 1>Project is not up-to-date: build input 'f:\test\project1\project1\project1.h' was modified after the last build finished.
 ```
 
-## <a name="create-a-binary-msbuild-log"></a>İkili MSBuild günlüğü oluşturma
+## <a name="create-a-binary-msbuild-log-at-the-command-prompt"></a>Komut isteminde ikili MSBuild günlüğü oluşturma
 
 1. Visual Studio sürümünüz için Geliştirici Komut İstemi açın
+
 1. Komut isteminden aşağıdaki komutlardan birini çalıştırın. (Gerçek projenizi ve yapılandırma değerlerinizi kullanmayı unutmayın.):
 
-    ```cmd
-    Msbuild /p:Configuration="MyConfiguration";Platform="x86" /bl MySolution.sln
-    ```
+   ```cmd
+   Msbuild /p:Configuration="MyConfiguration";Platform="x86" /bl MySolution.sln
+   ```
 
-    veya
+   veya
 
-    ```cmd
-    Msbuild /p:/p:SolutionDir="c:\MySolutionDir\";Configuration="MyConfiguration";Platform="Win32" /bl MyProject.vcxproj
-    ```
+   ```cmd
+   Msbuild /p:SolutionDir="c:\MySolutionDir\";Configuration="MyConfiguration";Platform="Win32" /bl MyProject.vcxproj
+   ```
 
-MSBuild 'i çalıştırdığınız dizinde MSBuild. binlog dosyası oluşturulur. [MSBuild yapılandırılmış günlük görüntüleyicisini](http://www.msbuildlog.com/)kullanarak bunu görüntüleyebilir ve arayabilirsiniz.
+MSBuild *. binlog* dosyası, MSBuild 'i çalıştırdığınız dizinde oluşturulur.
+
+## <a name="create-a-binary-msbuild-log-by-using-the-project-system-tools-extension"></a>Proje sistemi araçları uzantısını kullanarak ikili MSBuild günlüğü oluşturma
+
+1. [Proje sistemi araçları uzantısını](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.ProjectSystemTools)indirin ve yükleyin.
+
+1. Uzantı yüklendikten sonra,   >  **diğer pencereleri** görüntüle menüsünde bazı yeni öğeler görüntülenir.
+
+   ![Diğer pencereler menüsü](../ide/media/view-menu.png)
+
+1.   >    >  Visual Studio 'da **derleme günlüğü** penceresini göstermek için diğer Windows **derlemesi günlüğünü** görüntüle ' yi seçin. Proje sisteminde hem normal hem de tasarım zamanı derlemelerini kaydetmeye başlamak için ilk araç çubuğu simgesini seçin.
+
+   ![Derleme günlüğü penceresi](../ide/media/build-logging-click-to-record.png)
+
+1. Bir yapı kaydedildikten sonra, derleme günlüğü penceresinde görünür. Öğeye sağ tıklayın ve *. binlog* dosyanızı kaydetmek için bağlam menüsünde **günlükleri kaydet** ' i seçin.
+
+   ![Derleme günlüğü bağlam menüsü](../ide/media/build-logging-context-menu.png)
+
+[MSBuild yapılandırılmış günlük görüntüleyicisini](http://www.msbuildlog.com/)kullanarak *. binlog* dosyalarınızı görüntüleyebilir ve arayabilirsiniz.
 
 ## <a name="create-a-detailed-log"></a>Ayrıntılı günlük oluşturma
 

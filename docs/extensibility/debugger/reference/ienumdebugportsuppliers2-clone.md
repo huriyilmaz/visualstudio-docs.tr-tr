@@ -1,4 +1,5 @@
 ---
+description: Geçerli bağlantı noktası sağlayıcılarının sabit listesinin bir kopyasını ayrı bir nesne olarak döndürür.
 title: 'IEnumDebugPortSuppliers2:: Clone | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: fca68c1fd6f0c3d59759499c6aa5e4f5a7fe8e22
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f7c5a96f30150c40bb0042afcb2574d49843a2bb
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99967793"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102226273"
 ---
 # <a name="ienumdebugportsuppliers2clone"></a>IEnumDebugPortSuppliers2::Clone
 Geçerli numaralandırmanın ayrı bir nesne olarak kopyasını döndürür.

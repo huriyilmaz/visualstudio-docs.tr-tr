@@ -1,4 +1,5 @@
 ---
+description: Numaralandırmadaki kod bağlamı öğelerinin sayısını döndürür.
 title: 'IEnumDebugCodeContexts2:: GetCount | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: df6d463d58ffb5caa33c2df12946f31e2d51bf73
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 804a91c8d8631ea4adaf8319849fb1a4dd0688f2
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99929478"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102226975"
 ---
 # <a name="ienumdebugcodecontexts2getcount"></a>IEnumDebugCodeContexts2::GetCount
 Numaralandırmadaki öğe sayısını döndürür.

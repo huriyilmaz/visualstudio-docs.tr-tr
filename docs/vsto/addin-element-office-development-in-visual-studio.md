@@ -1,4 +1,5 @@
 ---
+description: Vstav3 ad alanının AddIn öğesi, Visual Studio ile geliştirilen Microsoft Office VSTO eklentileri ve belge düzeyi özelleştirmelerine özgü bilgiler içerir.
 title: "&lt;AddIn &gt; öğesi (Visual Studio 'Da Office geliştirme)"
 titleSuffix: ''
 ms.date: 02/02/2017
@@ -15,12 +16,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 71fa31122432f4894bfca59929ee5eb127b7cad2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4cfc59475b01fbf42c387b4a7a5ca533b313a322
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99896725"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102227391"
 ---
 # <a name="ltaddingt-element-office-development-in-visual-studio"></a>&lt;AddIn &gt; öğesi (Visual Studio 'Da Office geliştirme)
   Ad alanının **addin** öğesi, `vstav3` Visual Studio Ile geliştirilen Microsoft Office VSTO eklentileri ve belge düzeyi özelleştirmelerine özgü bilgiler içerir.
@@ -70,7 +71,7 @@ ms.locfileid: "99896725"
 
 ## <a name="document-level-customization-example"></a>Belge düzeyi özelleştirmesi örneği
 
-### <a name="description"></a>Description
+### <a name="description"></a>Açıklama
  Aşağıdaki kod örneği, kullanılarak dağıtılan belge düzeyi Office çözümünde **eklenti öğesini gösterir** [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Bu kod örneği, [Office çözümleri Için uygulama bildirimlerinde](../vsto/application-manifests-for-office-solutions.md)sunulan daha büyük bir örneğin bir parçasıdır.
 
 ### <a name="code"></a>Kod
@@ -134,7 +135,7 @@ ms.locfileid: "99896725"
 
 ## <a name="vsto-add-in-example"></a>VSTO eklentisi örneği
 
-### <a name="description"></a>Description
+### <a name="description"></a>Açıklama
  Aşağıdaki kod örneği, kullanılarak dağıtılan uygulama düzeyi Office çözümünde **eklenti öğesini gösterir** [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Bu kod örneği, [Office çözümleri Için uygulama bildirimlerinde](../vsto/application-manifests-for-office-solutions.md)sunulan daha büyük bir örneğin bir parçasıdır.
 
 ### <a name="code"></a>Kod
