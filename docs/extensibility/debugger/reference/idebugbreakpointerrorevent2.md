@@ -1,4 +1,5 @@
 ---
+description: Bu arabirim, bir uyarı veya hata nedeniyle, bekleyen bir kesme noktasının yüklenmiş bir programa bağlanamadığı bir oturum hata ayıklama Yöneticisi 'ne (SDM) söyler.
 title: IDebugBreakpointErrorEvent2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 033c997f3bd1038c2103a6c0ef3ad9ddbd74c249
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 89342f5d26c5aeec41222bba12a29f534798782b
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99901862"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102143369"
 ---
 # <a name="idebugbreakpointerrorevent2"></a>IDebugBreakpointErrorEvent2
 Bu arabirim, bir uyarı veya hata nedeniyle, bekleyen bir kesme noktasının yüklenmiş bir programa bağlanamadığı bir oturum hata ayıklama Yöneticisi 'ne (SDM) söyler.

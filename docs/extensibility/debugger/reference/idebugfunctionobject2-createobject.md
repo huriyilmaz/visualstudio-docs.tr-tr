@@ -1,4 +1,5 @@
 ---
+description: Değerlendirme bayrağı ayarları ve zaman aşımı değeri verilen bir Oluşturucu kullanan bir nesne oluşturur.
 title: 'IDebugFunctionObject2:: CreateObject | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,12 +15,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 424599d322c2c8dd4db8ff4e19bab60eceaefc08
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4cd5eb81972af35b84c688e34b8cbc285c4723c2
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99921001"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102143148"
 ---
 # <a name="idebugfunctionobject2createobject"></a>IDebugFunctionObject2::CreateObject
 Değerlendirme bayrağı ayarları ve zaman aşımı değeri verilen bir Oluşturucu kullanan bir nesne oluşturur.

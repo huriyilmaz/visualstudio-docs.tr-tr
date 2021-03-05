@@ -1,4 +1,5 @@
 ---
+description: Konum, program ve iş parçacığı dahil bir hata kesme noktası çözünürlüğünü açıklar.
 title: BP_ERROR_RESOLUTION_INFO | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 489d1f8738d5f6d9655bf7978f617ca2c2a37c8b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 730ab3558f1e0b466ec22f5966735257b70ccfbd
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99853071"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102144422"
 ---
 # <a name="bp_error_resolution_info"></a>BP_ERROR_RESOLUTION_INFO
 Konum, program ve iş parçacığı dahil bir hata kesme noktası çözünürlüğünü açıklar.

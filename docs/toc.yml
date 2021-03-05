@@ -1070,6 +1070,8 @@
       items:
         - name: Çağrı Hiyerarşisi
           href: ide/reference/call-hierarchy.md
+        - name: Geliştirici Komut İstemi & geliştirici PowerShell
+          href: ide/reference/command-prompt-powershell.md
         - name: Değişiklikleri Önizleme
           href: ide/preview-changes.md
         - name: 'Araç Kutusu öğelerini, WPF bileşenlerini seçme'
