@@ -1,4 +1,5 @@
 ---
+description: Her dönüştürücü bir Symtagdönüştürücü etiketiyle tanımlanır.
 title: Dönüştürücü | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,12 +14,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 3a5cb3051c2facd23fa92e7edf911fa6fbc44b9e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2dc512192299c165ec837ac26eaf27787bdf6a08
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99853165"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102161587"
 ---
 # <a name="thunk"></a>Dönüştürücü
 Her biri `thunk` bir etiketi tarafından tanımlanır `SymTagThunk` .

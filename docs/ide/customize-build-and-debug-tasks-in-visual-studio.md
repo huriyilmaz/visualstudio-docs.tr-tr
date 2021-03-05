@@ -15,12 +15,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 1088cae031dc3498d2c5cdcd33db8d42f721b7d7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 659e0f4e46d6960a2a1350c605e55357a84ec115
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99954429"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102161306"
 ---
 # <a name="customize-build-and-debug-tasks-for-open-folder-development"></a>"Klasör aç" geliştirmesi için derleme ve hata ayıklama görevlerini özelleştirin
 
@@ -203,7 +203,7 @@ Bu bölümde, *üzerindetasks.vs.js* belirtebileceğiniz bazı özellikler açı
 
 Alanında adını belirterek herhangi bir dosya veya klasör için görevler oluşturabilirsiniz `appliesTo` , örneğin `"appliesTo": "hello.js"` . Aşağıdaki dosya maskeleri değer olarak kullanılabilir:
 
-|Dosya maskesi|Description|
+|Dosya maskesi|Açıklama|
 |-|-|
 |`"*"`| görev, çalışma alanındaki tüm dosya ve klasörler için kullanılabilir|
 |`"*/"`| görev, çalışma alanındaki tüm klasörler için kullanılabilir|
@@ -215,9 +215,9 @@ Alanında adını belirterek herhangi bir dosya veya klasör için görevler olu
 
 #### <a name="macros-for-tasksvsjson"></a>tasks.vs.jsmakrolar
 
-|Makroya|Description|
+|Makroya|Açıklama|
 |-|-|
-|`${env.<VARIABLE>}`| Herhangi bir ortam değişkenini belirtir (örneğin, $ {env. Geliştirici komut istemi için ayarlanan PATH}, $ {env. COMSPEC} ve benzeri). Daha fazla bilgi için bkz. [Visual Studio Için Geliştirici komut istemi](/dotnet/framework/tools/developer-command-prompt-for-vs).|
+|`${env.<VARIABLE>}`| Herhangi bir ortam değişkenini belirtir (örneğin, $ {env. Geliştirici komut istemi için ayarlanan PATH}, $ {env. COMSPEC} ve benzeri). Daha fazla bilgi için bkz. [Geliştirici komut istemi ve geliştirici PowerShell](../ide/reference/command-prompt-powershell.md).|
 |`${workspaceRoot}`| Çalışma alanı klasörünün tam yolu (örneğin, *C:\sources\hello*)|
 |`${file}`| Bu görevi çalıştırmak için seçilen dosya veya klasörün tam yolu (örneğin, *C:\sources\hello\src\hello.js*)|
 |`${relativeFile}`| Dosya veya klasörün göreli yolu (örneğin, *src\hello.js*)|

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - editor
 ms.workload:
 - dotnet
-ms.openlocfilehash: 036c59e54ba2e2068cf1bfa7eb05b67059cdf855
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a3ac2e91ed9166a2eb8bdc4a19f2143c4fc71640
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99942951"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102161319"
 ---
 # <a name="visual-studio-productivity-guide-for-c-developers"></a>C# geliştiricileri için Visual Studio üretkenlik Kılavuzu
 
@@ -143,10 +143,23 @@ Kod sorunlarını işaretlemek için [FxCop çözümleyicileri yükleyebilirsini
 
 Birçok topluluk üyesi, ek kod İncelemeleri ekleyen ücretsiz uzantılar yazdı:
 
+::: moniker range="vs-2017"
+
 - [Roslynator](https://marketplace.visualstudio.com/items?itemName=josefpihrt.Roslynator2017)
 - [Visual Studio için Sonarlınt](https://marketplace.visualstudio.com/items?itemName=SonarSource.SonarLintforVisualStudio2017)
 - [Stylecopçözümleyiciler](https://www.nuget.org/packages/stylecop.analyzers/)
 - [CodeCracker](https://www.nuget.org/packages/codecracker.CSharp/)
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+- [Roslynator](https://marketplace.visualstudio.com/items?itemName=josefpihrt.Roslynator2019)
+- [Visual Studio için Sonarlınt](https://marketplace.visualstudio.com/items?itemName=SonarSource.SonarLintforVisualStudio2019)
+- [Stylecopçözümleyiciler](https://www.nuget.org/packages/stylecop.analyzers/)
+- [CodeCracker](https://www.nuget.org/packages/codecracker.CSharp/)
+
+::: moniker-end
 
 ![Visual Studio 'da yeniden düzenlemeler](../ide/media/VSGuide_CodeAnalysis.png)
 
