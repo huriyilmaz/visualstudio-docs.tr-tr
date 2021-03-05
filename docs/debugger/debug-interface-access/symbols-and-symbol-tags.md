@@ -1,4 +1,5 @@
 ---
+description: Derlenmiş bir programla ilgili hata ayıklama bilgileri, program veritabanı (. pdb) dosyasında hata ayıklama arabirimi erişimi (DIA) SDK API 'Leri kullanılarak erişilebilen semboller olarak depolanır.
 title: Semboller ve sembol etiketleri | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 12f1927e4290ff9d008eff9f497c9d570d9d44f8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 98631149e5a53c13bfc9b12b0d6de165c345e29a
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99862285"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102155287"
 ---
 # <a name="symbols-and-symbol-tags"></a>Simgeler ve Simge Etiketleri
 Derlenmiş bir programla ilgili hata ayıklama bilgileri, program veritabanı (. pdb) dosyasında hata ayıklama arabirimi erişimi (DIA) SDK API 'Leri kullanılarak erişilebilen semboller olarak depolanır. Tüm semboller bir [IDiaSymbol:: get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md) ve [ıdiasymbol:: get_symIndexId](../../debugger/debug-interface-access/idiasymbol-get-symindexid.md) özelliğine sahiptir. `symTag`Özelliği, [SymTagEnum numaralandırma](../../debugger/debug-interface-access/symtagenum.md) numaralandırması tarafından tanımlanan sembolün türünü gösterir. `symIndexId`Özelliği, `DWORD` bir simgenin her örneği için benzersiz tanımlayıcıyı içeren bir değerdir.

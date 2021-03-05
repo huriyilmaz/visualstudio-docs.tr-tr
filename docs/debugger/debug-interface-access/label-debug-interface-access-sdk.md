@@ -1,4 +1,5 @@
 ---
+description: Program kodundaki bir konum SymTagLabel simgesiyle tanımlanır.
 title: Etiket (hata ayıklama arabirimi erişim SDK 'Sı) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,12 +14,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 254be1bd88151b962cf563de3ff8aa26a983bc1e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f63adb3873cc94ea5631603b50387e5c9614a646
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99862369"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102155413"
 ---
 # <a name="label-debug-interface-access-sdk"></a>Etiket (Arabirim Erişimi SDK'sında Hata Ayıklama)
 Program kodundaki bir konum bir sembol tarafından tanımlanır `SymTagLabel` .

@@ -1,4 +1,5 @@
 ---
+description: Aşağıdaki tabloda, sözcük temelli hiyerarşide sembol türleri gösterilmektedir.
 title: Sembol türlerinin sözcük hiyerarşisi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,19 +13,19 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d1c9284637be43ab30d35d3e0cb4aea937c0a224
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 605b16d2a53178b52095e9919c10bba53f3f21a1
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99853256"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102155392"
 ---
 # <a name="lexical-hierarchy-of-symbol-types"></a>Simge Türlerinin Sözcük Hiyerarşisi
 Aşağıdaki tabloda, sözcük temelli hiyerarşide sembol türleri gösterilmektedir.
 
 ## <a name="symbol-types"></a>Sembol türleri
 
-|Sembol türü|Description|
+|Sembol türü|Açıklama|
 |-----------------|-----------------|
 |[Ek Açıklama](../../debugger/debug-interface-access/annotation.md)|Program kodunda açıklamalı bir konum belirtir.|
 |[Block](../../debugger/debug-interface-access/block.md)|İşlevlerde iç içe kapsamları belirtir.|

@@ -1,4 +1,5 @@
 ---
+description: Bu arabirim bir metin belgesini temsil eder.
 title: IDebugDocumentText2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: af72993a4a02ce7d25858bf3bd4f0690e0d30f5a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: eb1c5928362616466985a6f88102ffcbf4377444
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99923098"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102154216"
 ---
 # <a name="idebugdocumenttext2"></a>IDebugDocumentText2
 Bu arabirim bir metin belgesini temsil eder.
