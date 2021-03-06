@@ -9,12 +9,12 @@ monikerRange: '>=vs-2019'
 manager: jmartens
 author: ghogen
 ms.author: ghogen
-ms.openlocfilehash: 253b50ff4778458b28375b06b7fb7f24f4d85054
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d44dc484da904d2692b90e23d10db6edc6f6e7b8
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99867574"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102223166"
 ---
 # <a name="how-bridge-to-kubernetes-works"></a>Bridge to Kubernetes’in işleyiş biçimi
 
@@ -86,7 +86,7 @@ Aşağıdaki diyagramda, Kubernetes ile aynı küme, yalıtım modunda etkin ola
 
 ![Kubernetes ile Köprü özellikli küme diyagramı](media/bridge-to-kubernetes/kubr-cluster-devcomputer.svg)
 
-Kümede *GENERATED_NAME* alt etki alanı ile bir istek alındığında, öğesine bir *Kubernetes-Route-as = GENERATED_NAME* üst bilgisi eklenir. Haberci Pod, kümede uygun hizmete istek yapan yönlendirmeyi işler. İstek yalıtımda üzerinde çalışılan hizmete yönlendiriliyorsa, bu istek uzak aracı tarafından geliştirme bilgisayarınıza yönlendirilir.
+Kümede *GENERATED_NAME* alt etki alanı ile bir istek alındığında, isteğe bir *Kubernetes-Route-as = GENERATED_NAME* üst bilgisi eklenir. Haberci Pod, kümede uygun hizmete istek yapan yönlendirmeyi işler. İstek yalıtımda üzerinde çalışılan hizmete yönlendiriliyorsa, bu istek uzak aracı tarafından geliştirme bilgisayarınıza yönlendirilir.
 
 Kümede *GENERATED_NAME* alt etki alanı olmayan bir istek alındığında, isteğe hiçbir üst bilgi eklenmez. Haberci Pod, kümede uygun hizmete istek yapan yönlendirmeyi işler. İstek değiştirilmekte olan hizmete yönlendiriliyorsa, bu istek bunun yerine uzak aracı yerine özgün hizmete yönlendirilir.
 

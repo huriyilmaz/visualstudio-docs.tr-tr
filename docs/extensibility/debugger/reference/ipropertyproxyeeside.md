@@ -1,4 +1,5 @@
 ---
+description: Bu arabirim, ilişkili nesne üzerindeki verileri görüntülemek için yöntemler sağlar.
 title: IPropertyProxyEESide | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f0331365716c8399c1b2a565fc8046482df5d80f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 80a295ad68341cfa4675d36b22d5de042078a0a3
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99938908"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102222614"
 ---
 # <a name="ipropertyproxyeeside"></a>IPropertyProxyEESide
 Bu arabirim, ilişkili nesne üzerindeki verileri görüntülemek için yöntemler sağlar. Bu arabirim, tür Görselleştiriciler için desteğin bir parçasıdır.

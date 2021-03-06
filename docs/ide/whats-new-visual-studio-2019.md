@@ -15,12 +15,12 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: bdbad2633136ead7cfe04a1ef82e3cc9db587212
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 8371b9baa22b72eff0c829426b1b39bcf42398f2
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 03/05/2021
-ms.locfileid: "102151421"
+ms.locfileid: "102221190"
 ---
 # <a name="whats-new-in-visual-studio-2019"></a>Visual Studio 2019’daki yenilikler
 
@@ -57,7 +57,7 @@ Daha fazla bilgi için bkz. [Visual Studio Search kullanma](visual-studio-search
 
 #### <a name="intelligent-search-service"></a>Akıllı arama hizmeti
 
-**16,9 ' de yeni**: bulut destekli teknoloji, yapay zeka ve makine öğrenimi kullanarak arama sonuçlarımızı geliştirdik. Yalnızca Visual Studio 'da daha alakalı bir arama değildir, ancak ürün özelliklerini daha kolay buletmenize de yardımcı olabilir.
+**16,9 ' de yeni**: bulut destekli teknoloji, yapay zeka ve makine öğrenimi kullanarak arama sonuçlarımızı geliştirdik. Artık yalnızca Visual Studio 'da arama yapmak daha ilgili sonuçlar üretmez, ancak aynı zamanda ürün özelliklerini daha kolay keşfetmenize de yardımcı olabilir.
 
 Daha fazla bilgi için bkz. [akıllı Visual Studio Search hizmeti](https://devblogs.microsoft.com/visualstudio/intelligent-visual-studio-search-service/) blog gönderisi.
 

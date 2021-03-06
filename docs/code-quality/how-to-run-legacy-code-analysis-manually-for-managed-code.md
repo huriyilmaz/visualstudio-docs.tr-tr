@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 45f201e2c647a1b1074585d59c7618e1ddeb9084
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f214ac47ad3d831432b91652c5bbe3249ce5f1c5
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99860002"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102223491"
 ---
 # <a name="how-to-run-legacy-code-analysis-manually-for-managed-code"></a>Nasıl yapılır: yönetilen kod için eski kod analizini el ile çalıştırma
 
@@ -28,7 +28,7 @@ Kod Analizi Aracı, kaynak kodunuzda olası hatalar hakkında bilgi sağlar. Kod
 1. Visual Studio 2019 sürüm 16,5 veya sonraki bir sürümü kullanıyorsanız, Visual Studio 'Yu başlatmadan önce komut isteminde aşağıdaki komutu yürütün:
 
 ```
-set EnableLegacyCodeAnalysis = true
+setx EnableLegacyCodeAnalysis true
 ```
 
 2. **Çözüm Gezgini**, projeye tıklayın.
