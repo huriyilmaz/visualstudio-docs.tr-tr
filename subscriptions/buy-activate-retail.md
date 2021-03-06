@@ -4,36 +4,36 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 76654645-08ee-445d-b9ee-123126d1f0fb
-ms.date: 04/13/2020
+ms.date: 02/18/2021
 ms.topic: how-to
 description: Visual Studio aboneliklerini Microsoft Store nasıl satın alabileceğinizi ve bunları Visual Studio abonelikleri portalında nasıl etkinleştireceğinizi öğrenin.
-ms.openlocfilehash: 244d6e6a0e5ccd6bf98b0e95d2165459cbe492c4
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 3902ca5a4cce146d4a0ad62eb23dd777d6032f67
+ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005969"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102249415"
 ---
 # <a name="visual-studio-subscriptions-are-available-through-the-microsoft-store"></a>Visual Studio abonelikleri Microsoft Store aracılığıyla kullanılabilir
-Visual Studio abonelikleri, [toplu lisanslama](https://www.microsoft.com/licensing/default), bulut çözümü sağlayıcıları, [Visual Studio Market](https://marketplace.visualstudio.com/subscriptions)ve Microsoft Store dahil olmak üzere çeşitli kanallar aracılığıyla kullanılabilir.  Bu makale, [Microsoft Store](https://www.microsoft.com/store/collections/visualstudio)aracılığıyla abonelikleri satın almayı ve etkinleştirmeyi keşfedecektir.  
+Visual Studio abonelikleri çeşitli kanallar aracılığıyla kullanılabilir. [Toplu lisanslama](https://www.microsoft.com/licensing/default), bulut çözümü sağlayıcıları, [Visual Studio Market](https://marketplace.visualstudio.com/subscriptions)ve Microsoft Store seçeneklerinden birini belirleyin.  Bu makale, [Microsoft Store](https://www.microsoft.com/store/collections/visualstudio)aracılığıyla abonelikleri satın almayı ve etkinleştirmeyi keşfedecektir.  
 
 ## <a name="how-to-buy-subscriptions"></a>Abonelikleri satın alma
-Hangi aboneliğin sizin için uygun olduğuna karar vermenize yardımcı olması mı gerekiyor?  [Abonelik avantajları sayfasına](https://visualstudio.microsoft.com/vs/benefits/)göz atın.  
+Hangi aboneliğin sizin için uygun olduğuna karar vermek için yardıma mı ihtiyacınız var?  [Abonelik avantajları sayfasına](https://visualstudio.microsoft.com/vs/benefits/)göz atın.  
 
 Microsoft Store üzerinden sunulan Visual Studio abonelikleri şunlardır:
 - [Visual Studio Enterprise](https://www.microsoft.com/p/visual-studio-enterprise-subscription/dg7gmgf0dst4?activetab=pivot%3aoverviewtab)
 - [Visual Studio Professional](https://www.microsoft.com/p/visual-studio-professional-subscription/dg7gmgf0dst3?activetab=pivot%3aoverviewtab)
 - [Visual Studio Test Professional](https://www.microsoft.com/p/visual-studio-test-professional-subscription/dg7gmgf0dst6?activetab=pivot%3aoverviewtab)
 
-Bu aboneliğin her biri, ilk satın alma veya mevcut bir aboneliği yenileme seçeneği sunar.  Önemli bir indirimi yansıtan yenileme fiyatlandırması yalnızca mevcut abonelikler için kullanılabilir. 
+Bu aboneliklerden her biri, ilk satın alma veya var olan bir aboneliği yenileme seçeneği sunar.  Önemli bir indirimi yansıtan yenileme fiyatlandırması yalnızca mevcut abonelikler için kullanılabilir. 
 
 > [!IMPORTANT]
-> Abonelikleri indirimli yenileme fiyatındaki yenilemeyi nitelemek için, aboneliklerin süreleri dolmadan önce yenilenmelidir.  
+> Abonelikleri indirimli yenileme fiyatıyla yenileme koşullarını sağlaması için aboneliklerin süresi dolmadan önce yenilenmeleri gerekir.  
 
 ## <a name="how-to-activate-subscriptions"></a>Abonelikleri etkinleştirme
 Microsoft Store aracılığıyla bir Visual Studio aboneliği satın aldıktan sonra, satın alımınızdan sonra aldığınız "onay sayfasından" veya "onay e-postalarından" etkinleştirme işlemini başlatabilirsiniz.
 
-1. Onay e-postasında veya satın alma onayı sayfasında **oturum açmak için buraya tıklayın ' ı** seçin.
+1. Onay e-postasında veya satın alma onayı sayfasında **oturum açmak için burayı tıklatın** bağlantısını seçin.
 2. Uygulamasına yönlendirilirsiniz [https://my.visualstudio.com/subscriptions/activate](https://my.visualstudio.com/subscriptions/activate?wt.mc_id=o~msft~docs) .
 3. Visual Studio aboneliğine erişim gerektiren e-posta adresini girin ve **devam**' ı seçin.
 4. Kullanmakta olduğunuz hesap türüne bağlı olarak iki farklı oturum açma sayfasının birine yönlendirilebilirsiniz:
@@ -46,6 +46,9 @@ Microsoft Store aracılığıyla bir Visual Studio aboneliği satın aldıktan s
 
 ## <a name="support-for-microsoft-store"></a>Microsoft Store için destek
 Microsoft Store aracılığıyla satın alma hakkında sorularınız varsa, yardım sunulmaktadır.  [Desteğe Microsoft Store](https://support.microsoft.com/help/28808/microsoft-store-contact-support?ocid=MSCOMStoreFooter-ContactUs)başvurun.
+
+## <a name="resources"></a>Kaynaklar 
+- [Visual Studio abonelikleri desteği](https://my.visualstudio.com/gethelp)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)

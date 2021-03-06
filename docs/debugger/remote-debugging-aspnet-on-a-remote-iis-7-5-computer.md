@@ -12,14 +12,15 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - aspnet
-ms.openlocfilehash: 854d3e23252e63d6330abd9f1704890d3b90ae36
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 104927d42f7ec68e43686278042c0712bb3c875e
+ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99908309"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102250081"
 ---
 # <a name="remote-debug-aspnet-on-a-remote-iis-computer"></a>Uzak IIS bilgisayarında uzaktan hata ayıklama ASP.NET
+
 IIS 'ye dağıtılan bir ASP.NET uygulamasında hata ayıklamak için, uygulamanızı dağıttığınız bilgisayara Uzak araçları yükleyip çalıştırın ve ardından Visual Studio 'dan çalışan uygulamanıza bağlayın.
 
 ![Uzaktan hata ayıklayıcı bileşenleri](../debugger/media/remote-debugger-aspnet.png "Remote_debugger_components")
@@ -39,6 +40,7 @@ Visual Studio 2017, bu makalede gösterilen adımları izlemek için gereklidir.
 ::: moniker-end
 
 Bu yordamlar, bu sunucu yapılandırmalarında test edilmiştir:
+
 * Windows Server 2012 R2 ve IIS 8 (Windows Server 2008 R2 Için sunucu adımları farklıdır)
 
 ## <a name="network-requirements"></a>Ağ gereksinimleri
@@ -130,10 +132,17 @@ Bu seçeneği kullanarak bir yayımlama ayarları dosyası oluşturabilir ve Vis
 
 Uygulama başarıyla dağıtıldıktan sonra otomatik olarak başlamalıdır. Uygulama Visual Studio 'dan başlamazsa uygulamayı IIS 'de başlatın.
 
-1. **Ayarlar** iletişim kutusunda, **İleri**' ye tıklayarak hata ayıklamayı etkinleştirin, **hata ayıklama** yapılandırması ' nı seçin ve ardından **dosya yayımlama** seçenekleri altında **Hedefteki ek dosyaları Kaldır** ' ı seçin.
+1. Hata ayıklama yapılandırmasına geçiş yapın.
 
-    > [!IMPORTANT]
-    > Bir yayın yapılandırması seçerseniz, ' ı yayımladığınızda *web.config* dosyasında hata ayıklamayı devre dışı bırakabilirsiniz.
+   ::: moniker range=">=vs-2019"
+   Profili düzenlemek için **Düzenle** ' yi seçin ve ardından **Ayarlar**' ı seçin. Bir **hata ayıklama** yapılandırması seçin ve ardından **dosya yayımlama** seçenekleri altında **Hedefteki ek dosyaları Kaldır** ' ı seçin.
+   ::: moniker-end
+   ::: moniker range="vs-2017"
+   **Ayarlar** iletişim kutusunda, **İleri**' ye tıklayarak hata ayıklamayı etkinleştirin, **hata ayıklama** yapılandırması ' nı seçin ve ardından **dosya yayımlama** seçenekleri altında **Hedefteki ek dosyaları Kaldır** ' ı seçin.
+   ::: moniker-end
+
+   > [!IMPORTANT]
+   > Bir yayın yapılandırması seçerseniz, ' ı yayımladığınızda *web.config* dosyasında hata ayıklamayı devre dışı bırakabilirsiniz.
 
 1. **Kaydet** ' e tıklayın ve uygulamayı yeniden yayımlayın.
 

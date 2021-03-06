@@ -11,12 +11,12 @@ manager: jmartens
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 1b4eabfe35671b3cda0e2df71163b7c91695b264
-ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
+ms.openlocfilehash: a364289ded27879c74767f03e89b9ea7b9f604fc
+ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101683078"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102249932"
 ---
 # <a name="remote-debug-aspnet-core-on-a-remote-iis-computer-in-visual-studio"></a>Visual Studio 'da uzak IIS bilgisayarında uzaktan hata ayıklama ASP.NET Core
 
@@ -129,10 +129,17 @@ Bu seçeneği kullanarak bir yayımlama ayarları dosyası oluşturabilir ve Vis
 
 Uygulama başarıyla dağıtıldıktan sonra otomatik olarak başlamalıdır. Uygulama Visual Studio 'dan başlamazsa, düzgün çalıştığını doğrulamak için uygulamayı IIS 'de başlatın. ASP.NET Core için, **DefaultAppPool** için uygulama havuzu alanının **yönetilen kod yok** olarak ayarlandığından emin olmanız gerekir.
 
-1. **Ayarlar** iletişim kutusunda, **İleri**' ye tıklayarak hata ayıklamayı etkinleştirin, **hata ayıklama** yapılandırması ' nı seçin ve ardından **dosya yayımlama** seçenekleri altında **Hedefteki ek dosyaları Kaldır** ' ı seçin.
+1. Hata ayıklama yapılandırmasına geçiş yapın.
 
-    > [!IMPORTANT]
-    > Bir yayın yapılandırması seçerseniz, ' ı yayımladığınızda *web.config* dosyasında hata ayıklamayı devre dışı bırakabilirsiniz.
+   ::: moniker range=">=vs-2019"
+   Profili düzenlemek için **Düzenle** ' yi seçin ve ardından **Ayarlar**' ı seçin. Bir **hata ayıklama** yapılandırması seçin ve ardından **dosya yayımlama** seçenekleri altında **Hedefteki ek dosyaları Kaldır** ' ı seçin.
+   ::: moniker-end
+   ::: moniker range="vs-2017"
+   **Ayarlar** iletişim kutusunda, **İleri**' ye tıklayarak hata ayıklamayı etkinleştirin, **hata ayıklama** yapılandırması ' nı seçin ve ardından **dosya yayımlama** seçenekleri altında **Hedefteki ek dosyaları Kaldır** ' ı seçin.
+   ::: moniker-end
+
+   > [!IMPORTANT]
+   > Bir yayın yapılandırması seçerseniz, ' ı yayımladığınızda *web.config* dosyasında hata ayıklamayı devre dışı bırakabilirsiniz.
 
 1. **Kaydet** ' e tıklayın ve uygulamayı yeniden yayımlayın.
 
@@ -150,13 +157,13 @@ Uygulamayı PowerShell, RoboCopy kullanarak IIS 'e kopyalamak istiyorsanız veya
 
 4. **Varsayılan Web sitesini** seçin, **temel ayarlar**' ı seçin ve **fiziksel yolu** **C:\publish** olarak ayarlayın.
 
-4. **Varsayılan Web sitesi** düğümüne sağ tıklayın ve **Uygulama Ekle**' yi seçin.
+5. **Varsayılan Web sitesi** düğümüne sağ tıklayın ve **Uygulama Ekle**' yi seçin.
 
-5. **Diğer ad** alanını **Myaspapp** olarak ayarlayın, varsayılan uygulama havuzunu (**DefaultAppPool**) kabul edin ve **fiziksel yolu** **C:\publish** olarak ayarlayın.
+6. **Diğer ad** alanını **Myaspapp** olarak ayarlayın, varsayılan uygulama havuzunu (**DefaultAppPool**) kabul edin ve **fiziksel yolu** **C:\publish** olarak ayarlayın.
 
-6. **Bağlantılar** altında **uygulama havuzları**' nı seçin. **DefaultAppPool** ' i açın ve uygulama havuzu alanını **yönetilen kod olmadan** ayarlayın.
+7. **Bağlantılar** altında **uygulama havuzları**' nı seçin. **DefaultAppPool** ' i açın ve uygulama havuzu alanını **yönetilen kod olmadan** ayarlayın.
 
-7. IIS Yöneticisi 'nde yeni siteye sağ tıklayın, **Izinleri Düzenle**' yi seçin ve Web uygulamasına erişim için yapılandırılmış ıusr, IIS_IUSRS veya kullanıcının okuma & yürütme haklarına sahip yetkili bir kullanıcı olduğundan emin olun.
+8. IIS Yöneticisi 'nde yeni siteye sağ tıklayın, **Izinleri Düzenle**' yi seçin ve Web uygulamasına erişim için yapılandırılmış ıusr, IIS_IUSRS veya kullanıcının okuma & yürütme haklarına sahip yetkili bir kullanıcı olduğundan emin olun.
 
     Erişim izni olan bu kullanıcılardan birini görmüyorsanız, okuma & yürütme hakları olan bir kullanıcı olarak ıUSR ekleme adımlarını izleyin.
 

@@ -12,12 +12,12 @@ ms.workload:
 - aspnet
 - dotnetcore
 - azure
-ms.openlocfilehash: d41beea47e8173170ea2d428b40bd7c7ed8ff67e
-ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
+ms.openlocfilehash: 619f1f1cc99cbab425bc1bcb2bac181e09db8fc4
+ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101684155"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102250061"
 ---
 # <a name="remote-debug-aspnet-core-on-iis-in-azure-in-visual-studio"></a>Visual Studio 'da Azure 'da IIS 'de uzaktan hata ayıklama ASP.NET Core
 
@@ -79,13 +79,23 @@ Visual Studio 'da uygulamanızı hızlı bir şekilde sağlanan bir IIS örneği
 
 1. Visual Studio 'da proje düğümüne sağ tıklayın ve **Yayımla**' yı seçin.
 
-    Daha önce herhangi bir yayımlama profili yapılandırdıysanız, **Yayımla** bölmesi görüntülenir. **Yeni profil**' e tıklayın.
+    Daha önce herhangi bir yayımlama profili yapılandırdıysanız, **Yayımla** bölmesi görüntülenir. **Yeni** ya da **Yeni profil**' i seçin.
 
-1. **Yayımla** iletişim kutusundan **Azure App Service** öğesini seçin, **Yeni oluştur**' u seçin ve bir profil oluşturmak için istemleri izleyin.
+1. Yeni bir yayımlama profili oluşturun.
 
-    Ayrıntılı yönergeler için bkz. [Visual Studio kullanarak Azure 'da ASP.NET Core Web uygulaması dağıtma](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs).
+    ::: moniker range=">=vs-2019"
+    **Yayımla** Iletişim kutusundan **Azure** ' u seçin ve **İleri ' yi** seçin. **Azure App Service (Windows)** öğesini seçin, **İleri**' yi seçin ve bir profil oluşturmak için istemleri izleyin.
+
+    :::image type="content" source="../debugger/media/vs-2019/remotedbg-azure-app-service-profile.png" alt-text="Visual Studio kullanarak Azure’a bir ASP.NET Core web uygulaması dağıtın":::
+    ::: moniker-end
+    ::: moniker range="vs-2017"
+
+    **Yayımla** iletişim kutusundan **Azure App Service** öğesini seçin, **Yeni oluştur**' u seçin ve bir profil oluşturmak için istemleri izleyin.
 
     ![Azure App Service’e yayımlama](../debugger/media/remotedbg_azure_app_service_profile.png)
+    ::: moniker-end
+
+    Daha ayrıntılı yönergeler için bkz. [Visual Studio kullanarak Azure 'a ASP.NET Core Web uygulaması dağıtma](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs).
 
 1. Yayımla penceresinde **yapılandırmayı Düzenle** ' yi seçin ve bir hata ayıklama yapılandırmasına geçin ve ardından **Yayımla**' yı seçin.
 
@@ -106,6 +116,7 @@ Visual Studio 'da uygulamanızı hızlı bir şekilde sağlanan bir IIS örneği
 Windows Server için bir Azure VM oluşturabilir, ardından IIS 'yi ve diğer gerekli yazılım bileşenlerini yükleyip yapılandırabilirsiniz. Bu, bir Azure App Service dağıtmaya kıyasla daha fazla zaman alır ve bu öğreticideki kalan adımları izlemenizi gerektirir.
 
 Bu yordamlar, bu sunucu yapılandırmalarında test edilmiştir:
+
 * Windows Server 2012 R2 ve IIS 8
 * Windows Server 2016 ve IIS 10
 * Windows Server 2019 ve IIS 10
@@ -143,7 +154,7 @@ Yazılımı indirdiğinizde, çeşitli web sitesi betikleri ve kaynakları yükl
     > [!NOTE]
     > Sistemin bir Internet bağlantısı yoksa, .NET Core Windows Server barındırma paketi 'ni yüklemeden önce *[Microsoft Visual C++ 2015 yeniden dağıtılabilir](https://www.microsoft.com/download/details.aspx?id=53840)* sürümünü edinin ve yükleme.
 
-3. Sistemi yeniden başlatın (veya **net stop was/y** ' i yürütün ve ardından sistem yolunda bir değişiklik yapmak için bir komut isteminden net **start w3svc** ' i çalıştırın).
+2. Sistemi yeniden başlatın (veya **net stop was/y** ' i yürütün ve ardından sistem yolunda bir değişiklik yapmak için bir komut isteminden net **start w3svc** ' i çalıştırın).
 
 ## <a name="choose-a-deployment-option"></a>Dağıtım seçeneği seçin
 

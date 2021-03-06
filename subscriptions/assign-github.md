@@ -7,12 +7,12 @@ ms.assetid: f271d623-dcde-442a-865c-4dca5ad8a9c5
 ms.date: 03/03/2021
 ms.topic: conceptual
 description: GitHub Enterprise ile Visual Studio aboneliklerinde abonelikleri yönetme
-ms.openlocfilehash: d1734e3f416815b9c63f7237eca4e7df26e34331
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 5837ec33e6f17f0970178a0f1b306960e9c42668
+ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102159581"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102249688"
 ---
 # <a name="manage-visual-studio-subscriptions-with-github-enterprise"></a>GitHub Enterprise ile Visual Studio aboneliklerini yönetme
 Microsoft ile kurumsal anlaşma (EA) olan müşteriler, Visual Studio Standard abonelikleri ve GitHub Enterprise 'ı birlikte getiren yeni bir abonelik teklifi satın almaya uygundur. Visual Studio abonelerinin GitHub Enterprise 'ı edinmenin kolay ve ekonomik bir yoludur. 
@@ -72,7 +72,7 @@ GitHub, bulut tabanlı GitHub.com ya da şirket içi GitHub Enterprise Server ol
 - [GitHub belgelerinden](https://docs.github.com/en/github/setting-up-and-managing-your-enterprise-account/managing-licenses-for-the-github-enterprise-and-visual-studio-bundle) GitHub ataması hakkında daha fazla bilgi edinin
 - [GitHub yardımı](https://help.github.com/en)'nda çok çeşitli GitHub konuları dizisiyle ilgili soruların yanıtlarını bulun.
 - [GitHub topluluk forumundaki](https://github.community/)diğer GitHub kullanıcılarından yardım alın.
-- Visual Studio abonelikleri için Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım için [Visual Studio yönetim ve abonelik desteğiyle](https://my.visualstudio.com/gethelp)görüşün.
+- Visual Studio abonelikleri için Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım için [abonelikler desteğiyle](https://visualstudio.microsoft.com/subscriptions/support/)iletişim kurun.
 - Visual Studio IDE, Azure DevOps Services veya diğer Visual Studio ürünleri veya hizmetleri hakkında sorularınız mı var?  [Visual Studio desteği](https://visualstudio.microsoft.com/support/)' ni ziyaret edin.
 - GitHub Enterprise için [Teknik destek](https://support.microsoft.com/supportforbusiness/productselection?sapId=b77fe80f-5417-80bd-4b2a-275cf0018c24) alın.   
 

@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: a335ed23-34ee-40cb-83c6-6c93dee57424
-ms.date: 10/26/2020
+ms.date: 02/18/2021
 ms.topic: how-to
 description: Kurumsal sözleşmeleri olan müşteriler için sunulan özel Azure DevTest fiyatlandırmasının avantajlarından nasıl yararlandığını öğrenin
-ms.openlocfilehash: a4da6356c250b3c07cb19fb8bf4c5e260e9d3e29
-ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
+ms.openlocfilehash: 9043a2d8f3ab069bcc02375089780d16d1e8a18b
+ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92904468"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102249478"
 ---
 # <a name="azure-enterprise-agreement-devtest-offer"></a>Azure Kurumsal Anlaşma DevTest teklifi
 
@@ -32,14 +32,17 @@ Teklifleri etkinleştirmek için:
 0. Hesap adının üzerine gelin. 
 0. En sağdaki **düzenleme** simgesine (kurşun kalem) tıklayın. 
 0. **Geliştirme/test** onay kutusuna tıklayın.
-0. **Kaydet** ’e tıklayın.
+0. **Kaydet**’e tıklayın.
 
 ## <a name="create-individual-subscriptions-within-the-account"></a>Hesap içinde bireysel abonelikler oluşturun
 Hesaptaki her abone, şu adımları izleyerek bir abonelik oluşturabilir:
 1. [https://account.windowsazure.com/signup?showCatalogs=True](https://account.windowsazure.com/signup?showCatalogs=True) adresinde oturum açın.
 0. **Kurumsal Geliştirme ve test** teklifini seçin.
 0. Aboneliğin Kurumsal Anlaşma göre yönetildiğini onaylamak için onay kutusuna tıklayın. 
-0. **Satın al** ’a tıklayın.  (Bu teklifle, aslında hiçbir şey satın almanız gerekmez.)
+0. **Satın al**’a tıklayın.  (Bu teklifle, aslında hiçbir şey satın almanız gerekmez.)
+
+## <a name="resources"></a>Kaynaklar
+- Yardıma mı ihtiyacınız var?  [Abonelik desteğiyle](https://visualstudio.microsoft.com/subscriptions/support/)iletişim kurun.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)

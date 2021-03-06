@@ -3,15 +3,15 @@ title: Visual Studio abonelerine belirli GUID 'Ler atama | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
-ms.date: 10/22/2020
+ms.date: 02/18/2021
 ms.topic: conceptual
 description: Yöneticilerin abonelere nasıl özel abonelik GUID 'SI olabileceğini öğrenin
-ms.openlocfilehash: 1097743d1640fbadba550f3c2ee6908ac694436d
-ms.sourcegitcommit: bf5e2bba5acdcf05869b861211f8bb755081e5ce
+ms.openlocfilehash: 3c92a3e6cc35230f6bcf10320e92a50dc5ffb85b
+ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92467485"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102249680"
 ---
 # <a name="assign-specific-subscriptions-in-the-visual-studio-subscriptions-administration-portal"></a>Visual Studio abonelikleri yönetim portalı 'nda belirli abonelikleri atama
 
@@ -61,6 +61,9 @@ Son adım, **toplu ekleme** şablonunu indirmenin yanı sıra atamak istediğini
 ## <a name="frequently-asked-questions"></a>Sık sorulan sorular
 ### <a name="q-how-do-i-change-which-subscription-is-currently-assigned-to-an-individual-user"></a>S: tek bir kullanıcıya şu anda hangi aboneliğin atandığını Nasıl yaparım? değiştirilsin mi?
 Y: bir kullanıcıya hangi GUID 'nin atandığını değiştirmek istiyorsanız, önce bu kullanıcı için aboneliği silmeniz gerekir.  Daha fazla bilgi için lütfen [abonelik silme](delete-license.md) makalemizi inceleyin.  Bu Kullanıcı için aboneliği sildikten sonra, listeyi dışarı aktarmak ve yeni abonelik bilgilerini karşıya yüklemek için yukarıda özetlenen işlemi kullanın.  
+
+## <a name="resources"></a>Kaynaklar
+- [Abonelik desteği](https://visualstudio.microsoft.com/subscriptions/support/)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)

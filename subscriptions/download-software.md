@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: e2f2619c-7736-47e5-a066-5940d5994db9
-ms.date: 10/26/2020
+ms.date: 02/18/2021
 ms.topic: conceptual
 description: Visual Studio aboneliklerinde Microsoft yazılım başlıklarını bulmayı ve indirmeyi öğrenin
-ms.openlocfilehash: e6a5b6a1caab199ec2b67108f539c1d68d545551
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: c53429f7fe7d88c1c75642d9f820c8a6fa444eb9
+ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2020
-ms.locfileid: "92903637"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102249279"
 ---
 # <a name="downloading-software-titles-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde yazılım başlıkları indiriliyor
 Sahip olduğunuz Visual Studio aboneliğine bağlı olarak, kullanabileceğiniz çok çeşitli Microsoft yazılım başlıkları bulunabilir.  Bu makalede, aboneliğinizden en iyi şekilde yararlanmak için ihtiyacınız olan yazılımın nasıl konumlandırılmaları ve indirileceği açıklanır. 
@@ -51,6 +51,9 @@ Ayrıntılar bölmesinde, ürün anahtarlarınızın durumunu denetlemek için *
 İndirilmek üzere bir ürün anahtarı almak için, **Get Key** etiketli mavi anahtarı seçebilir veya Ayrıntılar bölmesini zaten görüntülüyorsanız, **anahtarlar** sekmesinde **talep anahtarı** ' nı seçin.
 > [!div class="mx-imgBorder"]
 > ![Visual Studio 2019 talep ürün anahtarları](_img/subscriber-downloads/vs2019-claim-keys.png "Kalan anahtarları talep etmek için talep anahtarı ' nı seçin.")
+
+## <a name="resources"></a>Kaynaklar
+- [Visual Studio abonelikleri desteği](https://my.visualstudio.com/gethelp)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)

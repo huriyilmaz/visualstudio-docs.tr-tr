@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 4e529a43-7aed-4eee-895d-862a631952df
-ms.date: 09/21/2020
+ms.date: 02/18/2021
 ms.topic: conceptual
 description: Yöneticilerin abonelere nasıl lisans atayabileceği hakkında bilgi edinin
-ms.openlocfilehash: dd80a14a3ff57100f210fd7ae1b882c0ab7a9faf
-ms.sourcegitcommit: 8e9c38da7bcfbe9a461c378083846714933a0e1e
+ms.openlocfilehash: 3bfa1174a8655de27496c3138e1eab21e32c2f8d
+ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96915420"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102249554"
 ---
 # <a name="assign-licenses-in-the-visual-studio-subscriptions-administration-portal"></a>Visual Studio abonelikleri yönetim portalı 'nda lisans atama
 Visual Studio abonelikleri Yöneticisi olarak, bireysel kullanıcılara ve Kullanıcı gruplarına abonelik atamak için yönetim portalını kullanabilirsiniz.
@@ -67,6 +67,8 @@ Bir bildirim e-posta adresi kullanmak, abonelerin, oturum açma e-posta adresler
 Bir abone ekledikten sonra, bir atama e-postası, daha fazla yönerge ile otomatik olarak yeni aboneye gönderilir. Atama e-postasını istediğiniz zaman, abone ' i seçip üst menüdeki yeniden **Gönder** düğmesini seçerek gönderebilirsiniz.  E-postaları birden çok kullanıcıya yeniden göndermek için, aboneleri seçerken **CTRL** tuşunu basılı tutun.  Yeniden **Gönder** düğmesini seçtiğinizde, bu abonelere yeniden göndermek istediğinizi onaylamanızı isteyen bir iletişim kutusu görürsünüz.  
 
 
+## <a name="resources"></a>Kaynaklar
+- Yardıma mı ihtiyacınız var?  [Abonelik desteğiyle](https://visualstudio.microsoft.com/subscriptions/support/)iletişim kurun.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)
@@ -74,7 +76,5 @@ Bir abone ekledikten sonra, bir atama e-postası, daha fazla yönerge ile otomat
 - [Azure belgeleri](/azure/)
 - [Microsoft 365 belgeleri](/microsoft-365/)
 
-
 ## <a name="next-steps"></a>Sonraki adımlar
 - Eklemek için çok sayıda kullanıcı mı var?  [Birden çok aboneye](assign-license-bulk.md)abonelik atamayı öğrenin.
-- Yardıma mı ihtiyacınız var?  [Visual Studio yönetim ve abonelikler desteğiyle](https://visualstudio.microsoft.com/support/support-overview-vs)iletişim kurun.

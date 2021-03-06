@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 64455e79-229a-42f0-9d65-c2cca8ab8513
-ms.date: 09/08/2020
+ms.date: 02/18/2021
 ms.topic: how-to
 description: Sorular veya sorunlarla ilgili yardım almak için abonelik yöneticinize nasıl başvurabileceğiniz hakkında bilgi edinin.
-ms.openlocfilehash: 363fc84d0607e511d259153dc3e39d4b4063ff42
-ms.sourcegitcommit: fb2a60cfdf78964fa0cb6783a5d947deae04b6bc
+ms.openlocfilehash: 4eb17f5480b3839248d0968b6c20434c149bb756
+ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93289971"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102250043"
 ---
 # <a name="get-assistance-from-your-subscriptions-admin"></a>Abonelik yöneticinizden yardım alın
 Visual Studio aboneliğiniz sizin veya okulunuz tarafından size sağlanmışsa, size bir abonelik Yöneticisi veya "Yönetici" tarafından atanmıştı.  Yöneticiler abonelikleri atayabilir veya kaldırabilir, oturum açma e-posta adreslerini değiştirebilir, yazılım indirebilme ve aboneliğiniz ile ilgili başka işlevler gerçekleştirmenize izin verebilir.
@@ -27,13 +27,13 @@ Birçok kuruluşun boyut ve karmaşıklığı göz önüne alındığında, yön
    > ![Yöneticime başvur](_img/contact-my-admin/contact-my-admin-button.png "Yöneticime Başvur düğmesini seçin, iletinizi girin ve Gönder ' i seçin.")
 4. Yöneticinizin iletisini girin.
 5. Yöneticinize gönderilen iletinin bir kopyasını almak isterseniz, **bir kopya gönder** onay kutusunu seçin. 
-6. Son olarak, **Gönder** ' i seçin.
+6. Son olarak, **Gönder**' i seçin.
 
 > [!NOTE]
 > **Süper Yöneticiler:**  "Yöneticime başvur" isteklerinin gönderildiği e-posta adresini ayarlamak için, [sözleşme tercihlerinde](admin-prefs.md#contact-email-address)bu adresi belirtin.
 
 ## <a name="resources"></a>Kaynaklar
-- [Visual Studio Yönetim ve Abonelik Desteği](https://visualstudio.microsoft.com/subscriptions/support/#talktous)
+- [Visual Studio abonelikleri desteği](https://my.visualstudio.com/gethelp)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)

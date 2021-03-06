@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: c2853359-18fd-4be4-97a6-02230c862f92
-ms.date: 02/02/2021
+ms.date: 02/18/2021
 ms.topic: how-to
 description: Yöneticilerin toplu ekleme özelliğini veya Microsoft Azure Active Directory gruplarını kullanarak birden çok aboneye nasıl lisans atayabileceği hakkında bilgi edinin
-ms.openlocfilehash: 995859dce259b3a4edf968fac98723e226cf59d5
-ms.sourcegitcommit: d124123528776993eb5e7461dae8da3975d11d0d
+ms.openlocfilehash: 76717090731b2e1fad0758c3c6298ab572bbb4de
+ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99511377"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102249571"
 ---
 # <a name="assign-subscriptions-to-multiple-users"></a>Birden çok kullanıcıya abonelik atama
 Abonelikler yönetim portalı, kullanıcıları tek seferde veya büyük gruplar halinde eklemenize olanak tanır.  Bireysel kullanıcı eklemek için bkz. [tek kullanıcı ekleme](assign-license.md).
@@ -147,4 +147,4 @@ Y: kuruluşunuzun Azure AD 'yi nasıl yapılandırdığına bağlı olarak, kull
 
 ## <a name="next-steps"></a>Sonraki adımlar
 - Eklemek için yalnızca bir veya iki abone mi var?  [Tek Kullanıcı Ekle](assign-license.md) 'ye göz atın
-- Yardıma mı ihtiyacınız var? [Visual Studio yönetim ve abonelikler desteğiyle](https://visualstudio.microsoft.com/support/support-overview-vs)iletişim kurun.
+- Yardıma mı ihtiyacınız var? [Abonelik desteğiyle](https://visualstudio.microsoft.com/subscriptions/support/)iletişim kurun.

@@ -8,12 +8,12 @@ ms.topic: include
 ms.date: 05/23/2018
 ms.author: mikejo
 ms.custom: include file
-ms.openlocfilehash: 1d049bc8b74b83028e04fe92e7ce96f45907d042
-ms.sourcegitcommit: 3c571f44bfd6402efea5187af43df287bac5b6ac
+ms.openlocfilehash: b6ceee76d8c24ccddb41e47c0865d96c79e6fc32
+ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97762630"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102249876"
 ---
 1. **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve **Yayımla** ' yı (Web Forms, **Web uygulaması Yayımla**) seçin.
 
@@ -21,18 +21,30 @@ ms.locfileid: "97762630"
 
 1. **Yayımla** Iletişim kutusunda **klasör**' i seçin, **Araştır**' a tıklayın ve yeni bir klasör oluşturun, **C:\publish**.
 
-    ![Yayımla hedefi olarak seçili ' bin\Release\Publish ' klasörünü içeren Visual Studio 'da bir Yayımla hedefi seç iletişim kutusunun ekran görüntüsü.](../media/remotedbg_publish_local.png)
+   ::: moniker range=">=vs-2019"
 
-    Web Forms uygulama için Yayımla iletişim kutusunda **özel** ' i seçin, bir profil adı girin ve **Tamam**' ı seçin.
+   :::image type="content" source="../media/vs-2019/remotedbg-publish-local.png" alt-text="Yayımla hedefi olarak seçilen ' C:\Publish ' klasörüyle Visual Studio 'da bir Yayımla hedefi seç iletişim kutusunun ekran görüntüsü.":::
 
-1. Açılan listede **Profil oluştur** ' a tıklayın (**Publish** varsayılan değerdir).
+   Yayımla profilini kaydetmek için **son** ' a tıklayın.
+   ::: moniker-end
+   ::: moniker range="vs-2017"
+   ![Yayımla hedefi olarak seçili ' bin\Release\Publish ' klasörünü içeren Visual Studio 'da bir Yayımla hedefi seç iletişim kutusunun ekran görüntüsü.](../media/remotedbg_publish_local.png)
+   Web Forms uygulama için Yayımla iletişim kutusunda **özel** ' i seçin, bir profil adı girin ve **Tamam**' ı seçin.
 
-1. **Yayımla** Iletişim kutusunda **Ayarlar** bağlantısına tıklayın ve ardından **Ayarlar** sekmesini seçin.
+   Açılan listede **Profil oluştur** ' a tıklayın (**Publish** varsayılan değerdir).
+   ::: moniker-end
 
-1. Yapılandırmayı **Hata Ayıkla** olarak ayarlayın, **yayımlamadan önce tüm mevcut dosyaları sil**' i seçin ve ardından **Kaydet**' e tıklayın.
+1. Hata ayıklama yapılandırmasına geçiş yapın.
 
-    > [!NOTE]
-    > Yayın derlemesi kullanıyorsanız, yayımladığınızda web.config dosyasında hata ayıklamayı devre dışı bırakabilirsiniz.
+   ::: moniker range=">=vs-2019"
+   Profili düzenlemek için **Düzenle** ' yi seçin ve ardından **Ayarlar**' ı seçin. Bir **hata ayıklama** yapılandırması seçin ve ardından **dosya yayımlama** seçenekleri altında **Hedefteki ek dosyaları Kaldır** ' ı seçin.
+   ::: moniker-end
+   ::: moniker range="vs-2017"
+   **Ayarlar** iletişim kutusunda, **İleri**' ye tıklayarak hata ayıklamayı etkinleştirin, **hata ayıklama** yapılandırması ' nı seçin ve ardından **dosya yayımlama** seçenekleri altında **Hedefteki ek dosyaları Kaldır** ' ı seçin.
+   ::: moniker-end
+
+   > [!NOTE]
+   > Yayın derlemesi kullanıyorsanız, yayımladığınızda *web.config* dosyasında hata ayıklamayı devre dışı bırakabilirsiniz.
 
 1. **Yayımla**’ya tıklayın.
 
@@ -43,7 +55,7 @@ ms.locfileid: "97762630"
 1. Visual Studio bilgisayarından ASP.NET proje dizinini, Windows Server bilgisayarındaki ASP.NET uygulaması (Bu örnekte, **C:\publish**) için yapılandırılmış yerel dizine kopyalayın. Bu öğreticide, el ile kopyaladığınızı varsayıyoruz, ancak PowerShell, xcopy veya Robocopy gibi diğer araçları da kullanabilirsiniz.
 
     > [!CAUTION]
-    > Kodda değişiklik yapmanız veya yeniden oluşturmanız gerekiyorsa, bu adımı yeniden yayımlamanız ve yinelemeniz gerekir. Uzak makineye kopyaladığınız yürütülebilir dosya yerel kaynak ve sembollerle tam olarak eşleşmelidir.    Bunu yapmazsanız `cannot find or open the PDB file` , işlemde hata ayıklamaya çalıştığınızda Visual Studio 'da bir uyarı alırsınız.
+    > Kodda değişiklik yapmanız veya yeniden oluşturmanız gerekiyorsa, bu adımı yeniden yayımlamanız ve yinelemeniz gerekir. Uzak makineye kopyaladığınız yürütülebilir dosya yerel kaynak ve sembollerle tam olarak eşleşmelidir. Bunu yapmazsanız `cannot find or open the PDB file` , işlemde hata ayıklamaya çalıştığınızda Visual Studio 'da bir uyarı alırsınız.
 
 1. Windows Server 'da uygulamayı tarayıcınızda açarak uygulamayı doğru şekilde çalıştırabildiğinizi doğrulayın.
 

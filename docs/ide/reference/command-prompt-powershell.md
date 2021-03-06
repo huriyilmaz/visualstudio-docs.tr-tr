@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Visual Studio terminal
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
 no-loc: cmdlet
-ms.openlocfilehash: 2500a540a4135517c65736d7a0f3d039c90cc71e
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 406ef4e7d475df82a0e36732dd5e777959ea3b96
+ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102168880"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102249741"
 ---
 # <a name="developer-command-prompt-and-developer-powershell"></a>Geliştirici Komut İstemi ve geliştirici PowerShell
 
@@ -55,11 +55,11 @@ Geliştirici Komut İstemi veya geliştirici PowerShell 'i Visual Studio içinde
 
    ![Visual Studio 'da komut istemi menü öğesi](./media/developer-command-prompt-for-vs/vs-menu.png)
 
-### <a name="use-the-windows-start-menu"></a>Windows Başlat menüsünü kullanma
+## <a name="use-the-windows-start-menu"></a>Windows Başlat menüsünü kullanma
 
 Visual Studio sürümüne ve yüklediğiniz ek SDK ve iş yüklerine bağlı olarak birden çok komut istemi olabilir. Aşağıdaki adımlar çalışmazsa, [makinenizde dosyaları el ile bulmayı](#manually-locate-the-file) deneyebilir veya [kabuğu Visual Studio 'nun içinden başlatabilirsiniz](#start-the-shell-from-inside-visual-studio).
 
-#### <a name="windows-10"></a>Windows 10
+### <a name="windows-10"></a>Windows 10
 
 1.  ![ Klavyede Windows logo tuşunu Başlat ' ı seçin.](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) ve **V** harfine kaydırın.
 
@@ -71,7 +71,7 @@ Visual Studio sürümüne ve yüklediğiniz ek SDK ve iş yüklerine bağlı ola
 
    ![Windows 10 ' da arama davranışını gösteren animasyonlu GIF](./media/developer-command-prompt-for-vs/windows-10-search.gif)
 
-#### <a name="windows-81"></a>Windows 8.1
+### <a name="windows-81"></a>Windows 8.1
 
 1. Klavyede Windows logosu tuşu Windows logosu tuşuna basarak **Başlangıç** ekranına gidin ![ .](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) Örneğin, klavyenizde.
 
@@ -79,7 +79,7 @@ Visual Studio sürümüne ve yüklediğiniz ek SDK ve iş yüklerine bağlı ola
 
 1. Vs 2019 için VS 2019 veya **Geliştirici PowerShell** **için geliştirici komut istemi** seçin.
 
-#### <a name="windows-7"></a>Windows 7
+### <a name="windows-7"></a>Windows 7
 
 1. **Başlat** ' ı ve ardından **tüm programlar**' ı seçin.
 
@@ -89,11 +89,11 @@ Visual Studio sürümüne ve yüklediğiniz ek SDK ve iş yüklerine bağlı ola
 
 [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk) veya [önceki sürümler](https://developer.microsoft.com/windows/downloads/sdk-archive)gibi başka SDK 'lar yüklüyse, ek komut istemleri görebilirsiniz. Hangi komut istemi sürümünü kullanmanız gerektiğini belirlemek için, tek tek araçlara ilişkin belgelere bakın.
 
-### <a name="manually-locate-the-file"></a>Dosyayı el ile bulma
+## <a name="manually-locate-the-file"></a>Dosyayı el ile bulma
 
 Genellikle, yüklediğiniz kabukların kısayolları, *%ProgramData%\Microsoft\Windows\Start Menu\Programs\Visual Studio 2019 \ Visual Studio Araçları* gibi Visual Studio Için **Başlat menüsü** klasörüne yerleştirilir. Ancak, komut istemi araması beklenen sonuçları oluşturmazsa, makinenizde dosyaları el ile bulmayı deneyebilirsiniz.
 
-#### <a name="developer-command-prompt"></a>Geliştirici Komut İstemi
+### <a name="developer-command-prompt"></a>Geliştirici Komut İstemi
 
 *VsDevCmd.bat* olan komut istemi dosyasının adını arayın veya *% ProgramFiles (x86)% \ Microsoft Visual Studio\2019\Community\Common7\Tools* (Visual Studio sürümünüz, sürüm ve yükleme konumunuza göre yol değişiklikleri) gibi Visual Studio için Araçlar klasörüne gidin.
 
@@ -112,7 +112,7 @@ Veya Windows **Çalıştır** iletişim kutusuna aşağıdaki komutu girin:
 > [!TIP]
 > Visual Studio yüklemenizin eşleşmesi için yolu düzenlemeniz gerekir.
 
-#### <a name="developer-powershell"></a>Geliştirici PowerShell
+### <a name="developer-powershell"></a>Geliştirici PowerShell
 
 *Launch-VsDevShell.ps1* adlı bir PowerShell betik dosyası arayın veya Visual Studio için Araçlar klasörüne gidin (örneğin, *% ProgramFiles (x86)% \ Microsoft Visual Studio\2019\Community\Common7\Tools*. (Yol, Visual Studio sürümünüz, sürümünüz ve yükleme konumunuza göre değişir.) PowerShell dosyasını bulduktan sonra, bir Windows PowerShell veya PowerShell 6 isteminde aşağıdaki komutu girerek çalıştırın:
 

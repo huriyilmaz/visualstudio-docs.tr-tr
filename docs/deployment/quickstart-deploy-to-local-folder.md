@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 2b16c10d13f63be43ad2e8c3e16d24c0f9fd5e38
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 23ef2036af7b93ee6eeaaa14cb8733a4e0ced638
+ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99927437"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102249492"
 ---
 # <a name="deploy-an-app-to-a-folder-using-visual-studio"></a>Visual Studio 'Yu kullanarak bir klasöre uygulama dağıtma
 
@@ -46,25 +46,34 @@ ms.locfileid: "99927437"
 
 1. **Yayımla** penceresinde **klasör**' ü seçin.
 
-    ![Yayımla hedefi olarak klasör seçin](../deployment/media/quickstart-publish-folder-new.png "Klasör Seç")
+   ![Yayımla hedefi olarak klasör seçin](../deployment/media/quickstart-publish-folder-new.png "Klasör Seç")
 
-::: moniker range=">=vs-2019"
+   ::: moniker range=">=vs-2019"
 
-4. Bir .NET Core 3,1 veya daha yeni bir Windows uygulaması dağıtıyorsanız, **belirli hedef** pencerede **klasör** ' i seçmeniz gerekebilir.
+   Bir .NET Core 3,1 veya daha yeni bir Windows uygulaması dağıtıyorsanız, **belirli hedef** pencerede **klasör** ' i seçmeniz gerekebilir.
 
-![Belirli bir hedef olarak klasör seçin](../deployment/media/quickstart-publish-folder-targets.png "Belirli hedef seçin")
+   ![Belirli bir hedef olarak klasör seçin](../deployment/media/quickstart-publish-folder-targets.png "Belirli hedef seçin")
 
-5. ClickOnce ile bir .NET Core 3,1 veya daha yeni bir sürümü yayınlamak istiyorsanız, bkz. [ClickOnce kullanarak .NET Windows uygulaması dağıtma](quickstart-deploy-using-clickonce-folder.md).
+   ClickOnce ile bir .NET Core 3,1 veya daha yeni bir sürümü yayınlamak istiyorsanız, bkz. [ClickOnce kullanarak .NET Windows uygulaması dağıtma](quickstart-deploy-using-clickonce-folder.md).
+   ::: moniker-end
 
- ::: moniker-end
+1. Bir yol girin veya bir klasör belirtmek için **Araştır** ' ı seçin.
 
-4. Bir yol girin veya bir klasör belirtmek için **Araştır** ' ı seçin.
+   ![Klasörün yolunu belirtin](../deployment/media/quickstart-publish-folder-path.png "Klasör Seç")
 
-    ![Klasörün yolunu belirtin](../deployment/media/quickstart-publish-folder-path.png "Klasör Seç")
+   ::: moniker range=">=vs-2019"
+   Profili kaydetmek için **son** ' a tıklayın.
 
-1. **Yayımla**’yı seçin. Visual Studio projeyi oluşturur ve belirtilen klasöre yayımlar. Bir profil Özeti gösteren proje özellikleri **Yayımla** bölmesi görüntülenir.
+   ![Profil özetini gösteren özellik bölmesini Yayımla](../deployment/media/quickstart-publish-folder-summary.png)
+   ::: moniker-end
 
-    ![Profil özetini gösteren özellik bölmesini Yayımla](../deployment/media/quickstart-publish-folder-summary.png)
+1. **Yayımla**’yı seçin. Visual Studio projeyi oluşturur ve belirtilen klasöre yayımlar.
+
+   ::: moniker range="vs-2017"
+   Bir profil Özeti gösteren proje özellikleri **Yayımla** bölmesi görüntülenir.
+
+   ![Profil özetini gösteren özellik bölmesini Yayımla](../deployment/media/quickstart-publish-folder-summary.png)
+   ::: moniker-end
 
 1. Dağıtım ayarlarını yapılandırmak için, yayımlama profili özetinde **Düzenle** ' yi seçin ve **Ayarlar** sekmesini seçin.
 
