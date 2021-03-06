@@ -1,4 +1,5 @@
 ---
+description: Bu yöntem, alanlar numaralandırmasından sonraki öğe kümesini döndürür.
 title: 'IEnumDebugFields:: Next | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 19d996f1a040cd07742f23f467e3f25bee1f04d4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: cb60dcf991c1a3002612b6779ef179c1571f3244
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99900027"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102226663"
 ---
 # <a name="ienumdebugfieldsnext"></a>IEnumDebugFields::Next
 Bu yöntem, Numaralandırmadaki öğelerin bir sonraki kümesini döndürür.

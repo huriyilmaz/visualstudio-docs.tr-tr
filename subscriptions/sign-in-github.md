@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 1bdcb3c9-bba1-4e25-a609-9d7e539d78e0
-ms.date: 12/02/2020
+ms.date: 03/05/2021
 ms.topic: conceptual
 description: GitHub hesabınızla Visual Studio aboneliğinizde nasıl oturum kullanabileceğinizi öğrenin.
-ms.openlocfilehash: 52f67afdf8a4056063cdefef618be5b895dbb960
-ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
+ms.openlocfilehash: 41966fb4468832b3e1a320e898164989d1fb5c3b
+ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96538000"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102249730"
 ---
 # <a name="signing-in-to-visual-studio-subscriptions-with-your-github-account"></a>GitHub hesabınızla Visual Studio abonelikleriniz üzerinde oturum açma 
 
@@ -59,7 +59,7 @@ Y: güvenlik kısıtlamaları nedeniyle, iki adımlı doğrulama etkin olsa bile
 Y: hesap diğer adınızı (e-posta adresi, telefon numarası, Skype adı) kullanarak oturum açtığınızda, hesabınız için tüm oturum açma yöntemlerini göstereceğiz. GitHub 'ı orada görmüyorsanız, henüz kurmadınız.
 
 #### <a name="q--how-can-i-unlink-my-microsoft-and-github-accounts"></a>S: Microsoft ve GitHub hesaplarından nasıl bağlantıyı nasıl kaldırabilirim? 
-Y: account.microsoft.com ' un [Güvenlik sekmesine](https://account.microsoft.com/security) gidin ve GitHub Hesabınızın bağlantısını kaldırmak Için **daha fazla güvenlik seçenekleri ' ne** tıklayın. GitHub hesabınızın bağlantısı kesmek, bu hesabı bir oturum açma yöntemi olarak kaldırır ve Visual Studio 'daki herhangi bir GitHub depolarına erişimi kaldırır. Diğer Microsoft ürünleri, GitHub hesabınıza ayrı olarak erişim isteğinde bulunabilir, bu nedenle buradaki erişimin kaldırılması tüm ürünlerde erişimi kaldırmaz. Burada listelenen uygulamalardan izin iptal etmek için GitHub profilinizin [Uygulama izinleri](https://github.com/settings/applications) sayfasına gidin.
+Y: account.microsoft.com ' un [Güvenlik sekmesine](https://account.microsoft.com/security) gidin ve GitHub Hesabınızın bağlantısını kaldırmak için **Gelişmiş güvenlik seçenekleri** ' ne tıklayın. GitHub hesabınızın bağlantısı kesmek, bu hesabı bir oturum açma yöntemi olarak kaldırır ve Visual Studio 'daki herhangi bir GitHub depolarına erişimi kaldırır. Diğer Microsoft ürünleri, GitHub hesabınıza ayrı olarak erişim isteğinde bulunabilir, bu nedenle buradaki erişimin kaldırılması tüm ürünlerde erişimi kaldırmaz. Burada listelenen uygulamalardan izin iptal etmek için GitHub profilinizin [Uygulama izinleri](https://github.com/settings/applications) sayfasına gidin.
 
 #### <a name="q--i-try-to-use-my-github-account-to-sign-in-but-im-prompted-that-i-already-have-a-microsoft-identity-that-i-should-use-instead--whats-happening"></a>S: kayıt açmak için GitHub hesabımı kullanmaya çalışıyorum, ancak bunun yerine kullandığım bir Microsoft kimliği zaten var.  Ne oluyor?
 Y: GitHub hesabınızda bir Azure Active Directory e-posta adresiniz varsa, bu, Azure 'a erişebilen ve GitHub kodunuzu kullanarak CI işlem hatlarını çalıştıran bir Microsoft kimliğiniz zaten var demektir. Bu hesabın kullanılması, Azure kaynaklarınızın ve derleme işlem hatlarınızın kurumsal sınırlarınızda kalmasını sağlar. Bununla birlikte, kişisel işler gerçekleştiriyorsanız, bu hesaba her zaman erişebilmenizi sağlamak için GitHub hesabınıza kişisel bir e-posta adresi koymayı öneririz. Bunu yaptıktan sonra yeniden oturum açmayı deneyin ve iş veya okul hesabınızda oturum açmanız istendiğinde **farklı bir e-posta adresi kullan** ' ı seçin. Bu, kişisel e-posta adresini kullanarak yeni bir Microsoft hesabı oluşturmanızı sağlar.

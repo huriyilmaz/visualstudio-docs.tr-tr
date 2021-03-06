@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 21e0471d-ad59-4d21-9c6f-13f7147569af
-ms.date: 02/04/2021
+ms.date: 03/05/2021
 ms.topic: conceptual
 description: Bulut abonelikleri için faturalandırma soruları.
-ms.openlocfilehash: a812965a549f2e6e6d6c58366d943f3129d951cd
-ms.sourcegitcommit: 55bc9df751a21656de8cc5b6dbd8a2a1915ec690
+ms.openlocfilehash: 2c03871d11279b7c368ebd0c7012670fc92c9ee0
+ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "99572882"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102249725"
 ---
 # <a name="visual-studio-cloud-subscriptions-billing-faq"></a>Visual Studio Cloud abonelikleri faturalama hakkında SSS
 Bulut ve standart Visual Studio abonelikleri arasındaki karşılaştırmalar, abone avantajları hakkındaki ayrıntılar ve daha fazlası ile her bir Visual Studio aboneliğinin avantajlarını anlamak için [bulut aboneliği avantajlarını ve fiyatlandırmasını karşılaştırdığınızdan](https://visualstudio.microsoft.com/vs/pricing/) emin olun.
@@ -56,13 +56,13 @@ Daha sonra ücretli miktarı artırdığınızda, geçerli ay içindeki kalan g�
 ### <a name="q-how-are-annual-cloud-subscription-charges-processed"></a>S: **yıllık** bulut aboneliği ücretleri nasıl işlenir?
 Y: her satınalmada, hemen satın alınan miktarın tamamını faturalandırırız. Ücretler yıla yayılmış değildir ve eşit değildir. Yıllık bulut aboneliklerini yılda farklı zamanlarda satın alırsanız farklı aylarda aboneliklerin yenilenmesi gerekir. Müşterinin yıllık bulut aboneliklerinin tümünü Microsoft toplu lisanslama sözleşmesi satın alma ile yaygın olarak sunmuyoruz.
 
-### <a name="q-how-do-cancelations-work"></a>S: iptal istekleri nasıl çalışır?
+### <a name="q-how-do-cancellations-work"></a>S: iptaller nasıl çalışır?
 Y: bir Visual Studio bulut aboneliğini iptal ettiğinizde otomatik yenilemeyi iptal edersiniz. Abonelik normal yenileme tarihine kadar devam eder ve sonra süresi dolmuş olur.
 Süresi dolduğunda, Visual Studio abonesi artık Visual Studio’yu ve aboneliğin getirdiği diğer hiçbir avantajı kullanamaz.
 
-Aylık bulut abonelikleriyle, iptal eden bir sonraki ayın ilk günü devreye girer. Aylık bulut aboneliklerinizden yalnızca bir bölümünü iptal ediyorsanız, doğru kişilerin etkin abonelikler atanmış durumda kalmaya davet ettiğinden emin olmak için kullanıcıları sonraki ayın ilk gününde kaldırmaya dikkat edin.
+Aylık bulut aboneliklerinde iptaller sonraki ayın ilk günü geçerlilik kazanır. Aylık bulut aboneliklerinizden yalnızca bir bölümünü iptal ediyorsanız, doğru kişilerin etkin abonelikler atanmış durumda kalmaya davet ettiğinden emin olmak için kullanıcıları sonraki ayın ilk gününde kaldırmaya dikkat edin.
 
-Yıllık bulut aboneliklerinde, zaman, ilk satın alma işleminden sonraki 12 ay boyunca ayın ilk günü veya son yıllık yenileme ücretinden 12 ay sonra devreye girer. Örneğin Visual Studio Professional yıllık bulut aboneliğini 3 Ocak 2018’de satın aldıysanız, abonelik bir yıl için daha otomatik olarak yenilendiği 1 Şubat 2019’da kadar etkin kalır. O tarihten 1 Şubat 2020’ye kadar herhangi bir anda iptal edersiniz, 1 Şubat 2020’de aboneliğin süresi dolacaktır. Yıllık bulut aboneliklerinde abonelik yılı dolmadan önce iptal etmek indirime hak kazandırmaz.
+Yıllık bulut aboneliği için, ilk satın almayı izleyen 12 aydan sonraki veya son yıllık yenileme ücretinin ödenmesini izleyen 12 aydan sonraki ayın ilk günü geçerlilik kazanır. Örneğin Visual Studio Professional yıllık bulut aboneliğini 3 Ocak 2018’de satın aldıysanız, abonelik bir yıl için daha otomatik olarak yenilendiği 1 Şubat 2019’da kadar etkin kalır. O tarihten 1 Şubat 2020’ye kadar herhangi bir anda iptal edersiniz, 1 Şubat 2020’de aboneliğin süresi dolacaktır. Yıllık bulut aboneliklerinde abonelik yılı dolmadan önce iptal etmek indirime hak kazandırmaz.
 
 ### <a name="q-what-kind-of-volume-discounts-are-available-for-visual-studio-subscriptions"></a>S: Visual Studio abonelikleri için ne tür bir birim indirimi mevcuttur?
 Y: 6. ve *her abonelik türü içinde* sonraki tüm abonelikler için %5 Indirim elde edersiniz:
@@ -93,6 +93,9 @@ Y: Evet. Yeni sürümler yayınlanma sırasında onları indirebilir ve çalış
 
 ### <a name="q-can-i-buy-visual-studio-cloud-subscriptions-from-my-software-reseller"></a>S: yazılım satıcımda Visual Studio bulut abonelikleri satın alabilir miyim?
 Y: Evet, satıcınız bulut çözümü sağlayıcısı (CSP) programına katılıyorsa, bunu yapabilirsiniz. Yalnızca sorun.
+
+### <a name="q-where-can-i-find-information-about-azure-invoices"></a>S: Azure faturalarıyla ilgili bilgileri nereden bulabilirim?
+Y: [Azure belgelerindeki](/azure/) [Azure Faturanızı Anlama](https://docs.microsoft.com/azure/cost-management-billing/understand/understand-invoice) makalesini inceleyin.
 
 ## <a name="related-resources"></a>İlgili kaynaklar
 - [Visual Studio abonelikleri Yönetici portalı](https://manage.visualstudio.com/)

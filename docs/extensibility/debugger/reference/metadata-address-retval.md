@@ -1,4 +1,5 @@
 ---
+description: Bu yapı bir yöntem veya işlevden döndürülen değeri temsil eder.
 title: METADATA_ADDRESS_RETVAL | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ec357bcc21cb3f7cd8f4f9eaa8318c4b0deb1d42
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d727771128e161eed77bf78091c8e0dadcc20ee6
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99961904"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102225558"
 ---
 # <a name="metadata_address_retval"></a>METADATA_ADDRESS_RETVAL
 Bu yapı bir yöntem veya işlevden döndürülen değeri temsil eder.

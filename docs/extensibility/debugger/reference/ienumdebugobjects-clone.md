@@ -1,4 +1,5 @@
 ---
+description: Bu yöntem, geçerli ıdebugobjects sabit listesinin bir kopyasını ayrı bir nesne olarak döndürür.
 title: 'IEnumDebugObjects:: Clone | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f051c1f0c64d99d4abac3c4466b1e9149ebb5cdc
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ca8a89f214ae3384d48051edf2f67a3f9e8ba68d
+ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99890792"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102224739"
 ---
 # <a name="ienumdebugobjectsclone"></a>IEnumDebugObjects::Clone
 Bu yöntem, geçerli numaralandırmanın ayrı bir nesne olarak kopyasını döndürür.
