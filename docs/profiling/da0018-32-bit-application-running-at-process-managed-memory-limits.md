@@ -1,5 +1,6 @@
 ---
 title: DA0018-32-işlem yönetilen bellek sınırlarında çalışan bit uygulama | Microsoft Docs
+description: Profil oluşturma işlemi sırasında toplanan sistem verileri, .NET Framework bellek yığınlarının, yönetilen yığınlardaki 32 bitlik bir işlemde ulaşabileceği en büyük boyutu approached gösterir.
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,12 +14,12 @@ manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: f5730e96a47e7e931606269341d5f1cca302a0e5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 48f94f064b983ae671546f543dfbdfa380f35119
+ms.sourcegitcommit: 8590cf6b3351e82827fd21159beefef0c02bf162
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99886398"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102466108"
 ---
 # <a name="da0018-32-bit-application-running-at-process-managed-memory-limits"></a>DA0018: işlem tarafından yönetilen bellek sınırlarında çalışan 32 bit uygulama
 

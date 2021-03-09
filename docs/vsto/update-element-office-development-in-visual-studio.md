@@ -1,5 +1,6 @@
 ---
 title: "&lt;Update &gt; öğesi (Visual Studio 'Da Office geliştirme)"
+description: Update öğesi, çözümün güncelleştirmeleri denet, zaman aralığını belirtir.
 ms.date: 02/02/2017
 ms.topic: reference
 dev_langs:
@@ -14,12 +15,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 5712be9e12ede3338856955e00a34a7565d733ee
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 59e7b21902c486bd78548cd79f2e79a5056042a5
+ms.sourcegitcommit: 8590cf6b3351e82827fd21159beefef0c02bf162
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99968768"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102468535"
 ---
 # <a name="ltupdategt-element-office-development-in-visual-studio"></a>&lt;Update &gt; öğesi (Visual Studio 'Da Office geliştirme)
   `update`Öğesi, çözümün güncelleştirmeleri denet, zaman aralığını belirtir.
@@ -59,7 +60,7 @@ ms.locfileid: "99968768"
 
 ## <a name="example-of-always-checking-for-updates"></a>Güncelleştirmelerin her zaman denetlenme örneği
 
-### <a name="description"></a>Description
+### <a name="description"></a>Açıklama
  Aşağıdaki kod örneği, `update` Office çözümlerinde güncelleştirmeleri her zaman denetlenecek şekilde ayarlanmış bir öğe göstermektedir.
 
 ### <a name="code"></a>Kod
@@ -70,7 +71,7 @@ ms.locfileid: "99968768"
 
 ## <a name="example-of-setting-a-default-update-interval"></a>Varsayılan güncelleştirme aralığı ayarlama örneği
 
-### <a name="description"></a>Description
+### <a name="description"></a>Açıklama
  Aşağıdaki kod örneği, `update` Office çözümleri için bir uygulama bildiriminde bir öğe gösterir. Bu kod örneği, [Office çözümleri Için uygulama bildirimlerinde](../vsto/application-manifests-for-office-solutions.md)sunulan daha büyük bir örneğin bir parçasıdır.
 
 ### <a name="code"></a>Kod

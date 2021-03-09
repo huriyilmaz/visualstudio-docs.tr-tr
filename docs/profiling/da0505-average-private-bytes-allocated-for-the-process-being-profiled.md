@@ -1,5 +1,6 @@
 ---
 title: DA0505-profili oluşturulan Işlem için ayrılan ortalama özel bayt sayısı | Microsoft Docs
+description: Bu ileti, işlemin o anda ayrılan ortalama sanal bellek miktarını bayt (özel bayt) olarak bildirir.
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,12 +14,12 @@ manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: ff2ab87ab783ea58ffa060c0c6d29a8ca0dd8468
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f141ce40c22fbd6ee9445dc676b49f0d601f2a74
+ms.sourcegitcommit: 8590cf6b3351e82827fd21159beefef0c02bf162
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99918051"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102465822"
 ---
 # <a name="da0505-average-private-bytes-allocated-for-the-process-being-profiled"></a>DA0505: Profili oluşturulan İşlem için ayırılmış Ortalama Özel Baytlar
 
