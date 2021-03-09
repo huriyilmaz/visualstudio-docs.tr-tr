@@ -1,5 +1,6 @@
 ---
 title: DA0012-önemli miktarda yansıma | Microsoft Docs
+description: InvokeMember ve GetMember gibi System. Reflection yöntemlerine veya MemberInvoke gibi Yöntem türlerine yapılan çağrılar, profil oluşturma verilerinin önemli bir orandır.
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -14,12 +15,12 @@ manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: d69b0fca82984c4aa2d9fe80f0dc4e66b7ddc2d3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 733f9d6c38b93005c0344de2f3d5b1d43093c12e
+ms.sourcegitcommit: 8590cf6b3351e82827fd21159beefef0c02bf162
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99916806"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102469968"
 ---
 # <a name="da0012-significant-amount-of-reflection"></a>DA0012: Önemli miktarda Yansıma
 

@@ -1,5 +1,6 @@
 ---
 title: '&lt;Postalamalar &gt; öğesi (Office geliştirme)'
+description: Vstav3 ad alanının Postalamalar öğesi, Office çözümleri yüklendikten sonra çalıştırılan dağıtım sonrası eylemleri açıklayan tüm postaçalıştır öğelerini içerir.
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: da0c3ee640d7ae4ec1b61df7a60893a7e1428cd2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5c4a66e270cd446996884262d380df0f7384f54f
+ms.sourcegitcommit: 8590cf6b3351e82827fd21159beefef0c02bf162
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99879442"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102470046"
 ---
 # <a name="ltpostactionsgt-element-office-development"></a>&lt;Postalamalar &gt; öğesi (Office geliştirme)
   `postActions`Ad alanı öğesi, `vstav3` `postAction` Office çözümleri yüklendikten sonra çalıştırılan dağıtım sonrası eylemleri açıklayan tüm öğeleri içerir.
@@ -50,7 +51,7 @@ ms.locfileid: "99879442"
 
 ## <a name="post-deployment-action-example"></a>Dağıtım sonrası eylem örneği
 
-### <a name="description"></a>Description
+### <a name="description"></a>Açıklama
  Aşağıdaki kod örneği, `postActions` kullanılarak dağıtılan bir Office çözümünün uygulama bildiriminde bulunan öğesini göstermektedir [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Bu kod örneği, [Office çözümleri Için uygulama bildirimlerinde](../vsto/application-manifests-for-office-solutions.md)sunulan daha büyük bir örneğin bir parçasıdır.
 
 ### <a name="code"></a>Kod

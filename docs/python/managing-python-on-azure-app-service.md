@@ -11,12 +11,12 @@ ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: b76bc008c30efdee0185e6f122abaff8457acef6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f7c874a5cd2742f795c6d8b04db88b98b19a556d
+ms.sourcegitcommit: 8590cf6b3351e82827fd21159beefef0c02bf162
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99882797"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102470020"
 ---
 # <a name="how-to-set-up-a-python-environment-on-azure-app-service-windows"></a>Azure App Service (Windows) üzerinde Python ortamı ayarlama
 
@@ -46,7 +46,7 @@ Azure App Service için özelleştirilebilir Python desteği, her biri Python ç
 
 ## <a name="choose-a-python-version-through-the-azure-resource-manager"></a>Azure Resource Manager bir Python sürümü seçin
 
-Bir Azure Resource Manager şablonuyla App Service dağıtıyorsanız, site uzantısını kaynak olarak ekleyin. Özellikle uzantı, `resources` `resources` türü `siteextensions` ve [siteextensions.net](https://www.siteextensions.net/packages?q=Tags%3A%22python%22)'dan adı ile iç içe geçmiş kaynak (altında bir nesne) olarak görünür.
+Bir Azure Resource Manager şablonuyla App Service dağıtıyorsanız, site uzantısını kaynak olarak ekleyin. Özellikle uzantı, türü ile iç içe geçmiş kaynak ( `resources` altında bir nesne `resources` ) olarak görünür `siteextensions` .
 
 Örneğin, bir başvuru eklendikten sonra `python361x64` (Python 3.6.1 x64), şablonunuz aşağıdaki gibi görünebilir (bazı özellikler atlandı):
 

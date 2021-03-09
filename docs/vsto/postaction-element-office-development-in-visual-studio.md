@@ -1,5 +1,6 @@
 ---
 title: "&lt;Postatransaction &gt; öğesi (Visual Studio 'Da Office geliştirme)"
+description: Vstav3 ad alanının postalandırma öğesi, giriş noktası öğelerini ve Office çözümleri yüklendikten sonra çalıştırılan dağıtım sonrası eylemlerle ilişkili tüm postaverileri öğelerini içerir.
 ms.date: 02/02/2017
 ms.topic: reference
 dev_langs:
@@ -14,12 +15,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 0490e9423cb747782029eb0fd7254407adb3a607
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 04f8c92c52aeee9f7f1dd5ab67b3dcef3a295474
+ms.sourcegitcommit: 8590cf6b3351e82827fd21159beefef0c02bf162
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99955768"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102470059"
 ---
 # <a name="ltpostactiongt-element-office-development-in-visual-studio"></a>&lt;Postatransaction &gt; öğesi (Visual Studio 'Da Office geliştirme)
   `postAction`Ad alanı öğesi, `vstav3` `entrypoint` `postActionData` Office çözümleri yüklendikten sonra çalıştırılan dağıtım sonrası eylemlerle ilişkili öğeleri ve tüm öğeleri içerir.
@@ -50,7 +51,7 @@ ms.locfileid: "99955768"
 
 ## <a name="post-deployment-action-example"></a>Dağıtım sonrası eylem örneği
 
-### <a name="description"></a>Description
+### <a name="description"></a>Açıklama
  Aşağıdaki kod örneği, `postAction` kullanılarak dağıtılan bir Office çözümü için uygulama bildiriminde bulunan öğesini gösterir [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Bu kod örneği, [Office çözümleri Için uygulama bildirimlerinde](../vsto/application-manifests-for-office-solutions.md)sunulan daha büyük bir örneğin bir parçasıdır.
 
 ### <a name="code"></a>Kod
