@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: af1f7888-6942-4515-9475-0928ecf49dab
-ms.date: 10/28/2020
+ms.date: 02/19/2021
 ms.topic: overview
 description: Uzun vadeli bir sözleşme olmadan bir ayda ayda veya yıllık esasına göre Visual Studio Professional veya Visual Studio Enterprise.
-ms.openlocfilehash: fbb4204ec5b36d865a1c8b3d9c235cdf97b4019e
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: 6aa17046726e19086f511c7ab59ab19228142e20
+ms.sourcegitcommit: 35fa920126b34c8d3839da53e3a4c2c6f509968f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2020
-ms.locfileid: "92918090"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102473393"
 ---
 # <a name="buy-visual-studio-professional-and-visual-studio-enterprise-cloud-subscriptions"></a>Visual Studio Professional ve Visual Studio Enterprise bulut abonelikleri satın alın
 [Visual Studio Market](https://marketplace.visualstudio.com) [Visual Studio Professional ve Visual Studio Enterprise abonelikleri](https://visualstudio.microsoft.com/subscriptions/) satın alabilirsiniz. Bunlar **"bulut abonelikleri"** olarak adlandırılır.
@@ -72,7 +72,7 @@ Abonelikleri iptal etmek için yalnızca anlaşmanızın abonelik sayısını s�
 > [!div class="mx-imgBorder"]
 > ![Abonelik genel bakışını görüntüleme](_img/buy-vs-subscriptions/overview-button.png "Abonelik ayrıntılarını göstermek için genel bakış düğmesini seçin")
 
-4. İptal etmek istediğiniz abonelikler için girişi bulun ve **miktarı değiştir** ' i seçin.
+4. İptal etmek istediğiniz abonelikler için girişi bulun ve **miktarı değiştir**' i seçin.
 1. Miktarı sıfır (0) olarak ayarlayın. Abonelikleriniz, zamanlanan faturalandırma tarihine kadar yerinde kalır, ancak faturalandırma tarihine ulaşıldığında yenilemeyecektir.   
 
 > [!div class="mx-imgBorder"]
@@ -125,9 +125,9 @@ Y: başka bir bulut yıllık aboneliği satın alaamayacak olsa da, Visual Studi
 
 ## <a name="related-resources"></a>İlgili kaynaklar
 - [Visual Studio abonelikleri Yönetici portalı](https://manage.visualstudio.com/)
-- [Visual Studio abonelik desteği](https://visualstudio.microsoft.com/vs/support/)
 - [Visual Studio bulut aboneliği faturalandırma hakkında SSS](vscloud-billing-faq.md)
 - [CSP 'Ler için Visual Studio bulut aboneliği satın alma](vscloud-csp.md)
+- - Visual Studio abonelikleri için Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım için bkz. Visual Studio [abonelikleri desteği](https://aka.ms/vssubscriberhelp).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)

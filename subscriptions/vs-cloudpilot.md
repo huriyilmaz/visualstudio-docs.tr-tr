@@ -4,20 +4,20 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 6255b6a3-f101-4b2c-b7fa-851eccc944b2
-ms.date: 12/02/2020
+ms.date: 02/19/2021
 ms.topic: conceptual
 description: Seçili Visual Studio aboneliklerinde bulunan CloudPilot avantajı hakkında bilgi edinin
-ms.openlocfilehash: 505e4caad5ee6d9b70fc50769c8a008469aa1345
-ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
+ms.openlocfilehash: 4d9b7bea4b2165b8efc9f57396b078c42a5fc8eb
+ms.sourcegitcommit: 35fa920126b34c8d3839da53e3a4c2c6f509968f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96538156"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102473367"
 ---
 # <a name="the-cloudpilot-benefit-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde CloudPilot avantajı
 Uygulamalarınızı birkaç kolay adımda Microsoft Azure taşıyın. Dakikalar içinde, başarılı geçiş için kod satırına tüm gerekli kod değişikliklerini belirlemek için: kapsayıcılar, VM 'Ler, App Services, SQL Azure ve/veya SQL MI. Ardından, ASR, DMA ve DMS kullanan sihirbazları kullanarak uygulamaları Azure 'a geçirin.
 
-## <a name="overview"></a>Genel bakış
+## <a name="overview"></a>Genel Bakış
 UniFi bulutu tarafından sağlanan CloudPilot, geliştiricilerin uygulamaları hızla ve kolayca Azure 'a taşımalarına yardımcı olmak için tasarlanmıştır.  El ile gerçekleştirilen bir değerlendirmenin zaman içinde, CloudPilot, Azure PaaS & IaaS geçiş maliyetlerini doğru şekilde belirler ve uygulamanın bulutta çalışması için hangi kod değişikliklerinin yapılması gerektiği hakkında ayrıntılı öneriler sağlar. CloudPilot, buluta yönelik ayrıntılı kod düzeyinde değişiklikler sunarak ve kurumsal teknoloji denetimleri ve ilkelerine karşı son sınamalarda, bulut geçiş çabasından ve geliştirme planlamadaki ilk değerlendirmede yardımcı olur.
 
 ## <a name="activation-steps"></a>Etkinleştirme adımları
@@ -81,7 +81,7 @@ Hangi aboneliğin kullanmakta olduğunuzdan emin değil misiniz?  [https://my.vi
   - [CloudPilot Kullanıcı El Ile](https://www.cloudatlasinc.com/cloudpilot/doc/CloudPilot-User-Manual.pdf )
   - [Destek isteği gönder](https://support.datacamp.com/hc/requests/new)
 
-- Visual Studio abonelikleri için Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım için Visual Studio [abonelikleri desteğiyle](https://visualstudio.microsoft.com/subscriptions/support/)görüşün.
+- Visual Studio abonelikleri için Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım için bkz. Visual Studio [abonelikleri desteği](https://aka.ms/vssubscriberhelp).
 - Visual Studio IDE, Azure DevOps Services veya diğer Visual Studio ürünleri veya hizmetleri hakkında sorularınız mı var?  [Visual Studio desteği](https://visualstudio.microsoft.com/support/)' ni ziyaret edin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
