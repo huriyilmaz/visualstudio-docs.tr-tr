@@ -2,7 +2,7 @@
 title: Varsayılan klavye kısayolları
 description: Visual Studio 'da çeşitli komutlara ve Windows 'a erişmenize izin veren varsayılan klavye kısayolları hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
-ms.date: 06/26/2017
+ms.date: 03/10/2021
 ms.topic: reference
 helpviewer_keywords:
 - shortcut keys [Visual Studio], keyboard binding schemes
@@ -15,12 +15,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8a4901cecf36208f3ed2141e5baef15ecbe43a6e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 73bb5e48c37cb24d434e57356a90f2bc3907a696
+ms.sourcegitcommit: 6f18481e4f84d86a837ec5d0e8f12fff1a1a8b65
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99894744"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "102782830"
 ---
 # <a name="default-keyboard-shortcuts-in-visual-studio"></a>Visual Studio 'da varsayılan klavye kısayolları
 
@@ -34,7 +34,7 @@ Yaygın klavye kısayollarının ve diğer üretkenlik bilgilerinin bir listesi 
 
 Visual Studio 'da erişilebilirlik hakkında daha fazla bilgi için bkz. [erişilebilirlik ipuçları ve püf noktaları](../ide/reference/accessibility-tips-and-tricks.md) ve [nasıl yapılır: klavyeyi özel olarak kullanma](../ide/reference/how-to-use-the-keyboard-exclusively.md).
 
-- [Çözümleme](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_analyze)
+- [Analiz](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_analyze)
 - [Düzenle](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_edit)
 - [Project](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_project)
 - [Test](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_test)
@@ -240,6 +240,7 @@ Bu klavye kısayolları *geneldir*. Bu, herhangi bir Visual Studio penceresi oda
 
 |Komutlar|Klavye kısayolları|
 |--------------| - |
+|EditorContextMenus. CodeWindow. Breakpoint. BreakpointConditions|**Alt + F9, C**|
 |EditorContextMenus.CodeWindow.Breakpoint.BreakpointEditlabels|**Alt+F9, L**|
 |EditorContextMenus.CodeWindow.CodeMap.ShowItem|**CTRL + '**|
 |EditorContextMenus.CodeWindow.Execute|**Ctrl+Alt+F5**|

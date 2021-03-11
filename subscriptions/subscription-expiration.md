@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: b6fbfa3e-654a-462f-8e22-e313b6ea617f
-ms.date: 10/30/2020
+ms.date: 02/19/2021
 ms.topic: conceptual
 description: Visual Studio aboneliğinizin süresi dolarsa ne olacağını öğrenin
-ms.openlocfilehash: 3bab529f4a45a57e6cc21260fdde2d5e18bc5217
-ms.sourcegitcommit: f81984aec5341a84b87c2466461656c38d8ff681
+ms.openlocfilehash: 26659cf70ace2ffb6eaa8f02146ed965c03df48a
+ms.sourcegitcommit: f9ed9c4c6c166ef9826feb21dcb9c4d47ed14e1a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93245006"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102607150"
 ---
 # <a name="what-happens-when-your-subscription-expires"></a>Aboneliğinizin süresi dolarsa ne olur?
 Visual Studio aboneliklerinin belirli süreleri vardır ve yenilenmedikleri takdirde bu süre sona erer.  Bir aboneliğin süresi dolarsa, aboneliğin sağladığı avantajlar farklı yollarla etkilenir.  Bu makalede, son kullanım süresinin Visual Studio aboneliğinin çeşitli yönlerini nasıl etkilediği açıklanmaktadır. 
@@ -25,7 +25,7 @@ Yeni bir abonelik satın almak istiyorsanız [fiyatlandırma sayfamızda](https:
 ## <a name="product-keys"></a>Ürün anahtarları
 Ürün anahtarları sayfası <https://my.visualstudio.com/productkeys> artık kullanılamıyor.  Daha önce talep ettiğiniz herhangi bir ürün anahtarı normal şekilde çalışmaya devam eder.  Tüm yükleme sınırları etkilenmemiştir.  Aboneliğinizin süresi dolduktan sonra, talep ettiğiniz ürün anahtarlarınızı dışarı aktarmak için lütfen <https://my.visualstudio.com/subscriptions> **tüm anahtarları dışarı aktar** düğmesini ziyaret edin ve tıklatın.  Aboneliğinizin süresi dolduktan sonra yeni ürün anahtarı istenmeyebilir.
 
-## <a name="benefits"></a>Yararları 
+## <a name="benefits"></a>Avantajlar 
 Bir aboneliğin süresi dolarsa tüm avantajlar aynı şekilde etkilenmez.  Aboneliğinizin süresi dolduktan sonra hiçbir avantaj etkinleştirilemez.  Daha önce etkinleştirdiğiniz avantajlar hala kullanılabilir olabilir.  
 
 ### <a name="visual-studio-ide"></a>Visual Studio IDE
@@ -39,6 +39,9 @@ Aylık Azure kredi servis birimi, aboneliğinizin süresi dolduktan sonra sını
 
 ### <a name="other-benefits"></a>Diğer avantajlar 
 Visual Studio aboneliklerine dahil edilen avantajlardan birçoğu belirli süreler içerir.  Microsoft 'un Pluraltarizi, DataCamp veya beyaz kaynak gibi iş ortaklarının sağladığı avantajlar, etkinleştirildikten sonra zaman sınırlarına sahiptir.  Daha önce etkinleştirdiğiniz avantajlar, hükümlerinin geri kalanı için size uygun olmaya devam edecektir.  Örneğin, altı aylık bir LinkedIn öğrenme aboneliğini etkinleştirdiyseniz ve Visual Studio aboneliğinizin süresi dolmuşsa hala dört ay daha varsa, LinkedIn öğrenme aboneliğine dört ay daha erişiminiz olur.  
+
+## <a name="resources"></a>Kaynaklar
+- Visual Studio abonelikleri için Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım için bkz. Visual Studio [abonelikleri desteği](https://aka.ms/vssubscriberhelp).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)

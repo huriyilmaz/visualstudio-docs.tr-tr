@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: f39a2672-c283-4755-93d3-31c7c7a032d0
-ms.date: 10/28/2020
+ms.date: 02/19/2021
 ms.topic: how-to
 description: İş veya okul hesabınızla Visual Studio aboneliğinizde nasıl oturum kullanabileceğinizi öğrenin.
-ms.openlocfilehash: 3ac4e9fedae66656d4dee2155c8a8dcbe9325970
-ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
+ms.openlocfilehash: effec7889199d4eddc3c149bdd4ded296a50e0b1
+ms.sourcegitcommit: f9ed9c4c6c166ef9826feb21dcb9c4d47ed14e1a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92903384"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102607268"
 ---
 # <a name="signing-in-to-visual-studio-subscriptions-with-your-work-or-school-account"></a>İş veya okul hesabınızla Visual Studio abonelikleriniz üzerinde oturum açma 
 
@@ -28,7 +28,7 @@ Bu makalede, çalışmanız veya okulunuz tarafından sağlanmış bir e-posta a
    > [!NOTE]
    > Bu adres, aldığınız abone hoş geldiniz e-postasında da tanımlanmıştır. Hoş geldiniz e-postasını bulmada sorun yaşıyorsanız lütfen önemsiz posta klasörlerinizi denetleyin.
 
-3. **Devam** ’a tıklayın.
+3. **Devam**’a tıklayın.
 4. Şirket oturum açma sayfanıza yönlendirilirsiniz.
 5. Parolanızı girin.
 6. **Oturum aç** ' a tıklayın
@@ -46,7 +46,7 @@ Ayrıca, şu anda seçili aboneliğinizi sağ üst köşede, Kullanıcı adını
    > [!NOTE]
    > Bu adres, abone Karşılama mektubunda de tanımlanır. Hoş geldiniz mektubu alınmadığında lütfen gereksiz posta klasörlerinizi denetleyin
 
-3. **Devam** ’a tıklayın.
+3. **Devam**’a tıklayın.
 4. Bir karar sayfasına yönlendirilirsiniz.
     - Abonelik, bir Azure Active Directory (AAD) kiracısıyla ilişkili bir "Iş veya okul) hesabıyla ilişkiliyse **iş veya okul hesabı** ' nı seçin.
     - Abonelik bir "Kurumsal" e-posta adresiyle ilişkiliyse, ancak aynı zamanda bir "kişisel" Microsoft hesabına (MSA) dönüştürülmüşse **Kişisel** ' i seçin.
@@ -57,7 +57,7 @@ Ayrıca, şu anda seçili aboneliğinizi sağ üst köşede, Kullanıcı adını
     - Bir yol başarısız olursa, diğerini deneyin.  Abonelik yöneticileri aboneliğinizi değiştirmiş olabilir.
 
 5. Parolanızı girin.
-6. **Oturum aç** ’a tıklayın.
+6. **Oturum aç**’a tıklayın.
 7. Bu noktada, "avantajlar" sayfası görüntülenmelidir.
 
 ## <a name="frequently-asked-questions"></a>Sık sorulan sorular
@@ -69,7 +69,8 @@ Y: birçok kullanıcının birden fazla aboneliği vardır.  Abonelik portalınd
 1. Farklı bir Microsoft hesabıyla oturum açtınız.  Profesyonel veya kurumsal abonelik ve Visual Studio Dev Essentials üyeliği gibi birden çok aboneliğiniz olabilir ve bunlar farklı e-posta adresleriyle ilişkilendirilir. Diğer abonelikleri görmek için oturumunuzu kapatın ve diğer MSA kullanarak yeniden oturum açın.
 2. Aynı e-posta adresiyle ilişkilendirilmiş birden çok aboneliğiniz var.  E-posta adresinizle ilişkili tüm abonelikleri görmek için, https://my.visualstudio.com/subscriptions kullanmak istediğiniz aboneliği ziyaret edin ve seçin. 
 
-Hala sorun yaşıyorsanız, yardım için [abonelik destek](https://visualstudio.microsoft.com/subscriptions/support/) ekibimize ulaşabilirsiniz.  
+## <a name="resources"></a>Kaynaklar 
+- Visual Studio abonelikleri için Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım için bkz. Visual Studio [abonelikleri desteği](https://aka.ms/vssubscriberhelp).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)

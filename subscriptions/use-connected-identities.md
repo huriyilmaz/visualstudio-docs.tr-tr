@@ -4,16 +4,16 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: 50ce0445-ef1a-4e92-b9d0-aebb2155a111
-ms.date: 10/28/2020
+ms.date: 02/19/2021
 ms.topic: conceptual
 robots: noindex, nofollow
 description: Bağlı Microsoft hesaplarıyla ve Azure Active Directory kimliklerle çalışmayı öğrenin
-ms.openlocfilehash: a4c7b72c91c4c1180a5fd888e3afd0a33fa2d81b
-ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
+ms.openlocfilehash: 9625774cbf5338750034f1f288bd2ada0aa9fc33
+ms.sourcegitcommit: f9ed9c4c6c166ef9826feb21dcb9c4d47ed14e1a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92904036"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102607125"
 ---
 # <a name="how-to-use-connected-identities-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde bağlı kimlikler kullanma
 İş veya okulunuz aracılığıyla bir Visual Studio aboneliği alırsanız ve oturum açmak için Microsoft hesabı (MSA) kullanıyorsanız, abonelik yöneticiniz, MSA 'yı kuruluşunuzun Azure Active Directory (Azure AD) olarak kimliğinize bağlayabilirsiniz.  Bu, aboneliğinize dahil olan avantajlardan bazılarına nasıl erişirsiniz. 
@@ -24,7 +24,7 @@ Kuruluşlar, aboneliklerin otomatik yönetimi için geliştirilmiş güvenlik ve
 Yöneticiniz MSA ve Azure AD kimliklerinizi bağladığında, MSA yerine Azure AD Kimliğiniz ile Visual Studio aboneliğinize erişmeye başlamasını sağlayan bir e-posta alırsınız. 
 
 ## <a name="how-to-access-benefits-using-azure-ad-identities"></a>Azure AD kimlikleri kullanarak avantajlara erişme
-Yöneticiniz, MSA 'ı Azure AD kimliğinize bağladıktan sonra Azure AD https://my.visualstudio.com kimlik bilgilerinizi kullanarak Azure AD 'yi kullanan avantajlara erişmeniz için abone portalında oturum açmanız gerekir.  Bunlar:
+Yöneticiniz, MSA 'ı Azure AD kimliğinize bağladıktan sonra Azure AD https://my.visualstudio.com kimlik bilgilerinizi kullanarak Azure AD 'yi kullanan avantajlara erişmeniz için abone portalında oturum açmanız gerekir.  Bu modüller şunlardır:
 - Visual Studio IDE
 - Azure DevOps
 - Azure DevTest bireysel kredisi
@@ -41,6 +41,9 @@ A: yöneticinizle iletişim kurma hakkında bilgi edinmek için lütfen [aboneli
 
 ### <a name="q-im-an-admin--how-do-i-use-this"></a>S: yöneticiyim.  Nasıl yaparım? bunu kullanmak istiyor musunuz?
 Y: bağlı kimlikleri uygulama basittir.  Daha fazla bilgi için [Bu makaleye](personal-email-sign-ins.md) göz atın. 
+
+## <a name="resources"></a>Kaynaklar
+- Visual Studio abonelikleri için Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım için bkz. Visual Studio [abonelikleri desteği](https://aka.ms/vssubscriberhelp).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)

@@ -1,7 +1,7 @@
 ---
 title: Yönetici olarak çalıştır ögesini seçin
 description: Visual Studio 'Yu yönetici olarak çalıştırmayı öğrenin.
-ms.date: 01/06/2020
+ms.date: 03/09/2021
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual Studio, user permissions
@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 63787b394d9e8988759cd141540785e34324f8c6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b3d2a22533137bf2c1f2e7cfeb3802f5824c3926
+ms.sourcegitcommit: f9ed9c4c6c166ef9826feb21dcb9c4d47ed14e1a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99971303"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102607255"
 ---
 # <a name="user-permissions-and-visual-studio"></a>Kullanıcı izinleri ve Visual Studio
 
@@ -72,7 +72,17 @@ Visual Studio 'Yu yönetici olarak çalıştırmanız gerekiyorsa IDE 'yi açmak
 
 ::: moniker-end
 
-Ayrıca, uygulama kısayolunu her zaman yönetici izinleriyle çalışacak şekilde değiştirebilirsiniz.
+Ayrıca, uygulama kısayolunu her zaman yönetici izinleriyle çalışacak şekilde değiştirebilirsiniz:
+
+1. **Başlat** menüsünü açın, kullandığınız Visual Studio sürümüne kaydırın ve **daha fazla**  >  **Açık dosya konumu**' nu seçin.
+
+1. **Dosya Gezgini**'nde, kullanmakta olduğunuz sürüm Için **Visual Studio** kısayolunu bulun. Ardından, kısayolu sağ tıklatın ve masaüstüne **Gönder**  >  **(kısayol oluştur)** seçeneğini belirleyin.
+
+1. **Windows** masaüstünde, **Visual Studio** kısayoluna sağ tıklayın ve ardından **Özellikler**' i seçin.
+
+1. **Gelişmiş** düğmesini seçin ve ardından **yönetici olarak çalıştır** onay kutusunu seçin.
+
+1. **Tamam**’ı ve ardından tekrar **Tamam**’ı seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

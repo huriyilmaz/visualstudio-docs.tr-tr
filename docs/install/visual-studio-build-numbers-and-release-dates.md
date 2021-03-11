@@ -5,19 +5,19 @@ description: Visual Studio için yayınlanmış sürümlerin ve derleme numarala
 author: ornellaalt
 ms.author: ornella
 manager: jmartens
-ms.date: 03/02/2021
+ms.date: 03/09/2021
 ms.topic: reference
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 open_to_public_contributors: false
-ms.openlocfilehash: 1577edce6db3f62df5e57d15aab1f0328a1950a6
-ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
+ms.openlocfilehash: 3f904c2528ce0daa228bc2cb8fbe1c48908ce0ea
+ms.sourcegitcommit: f9ed9c4c6c166ef9826feb21dcb9c4d47ed14e1a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102221112"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102607385"
 ---
 # <a name="visual-studio-build-numbers-and-release-dates"></a>Visual Studio derleme numaraları ve yayın tarihleri
 
@@ -29,6 +29,9 @@ Aşağıdaki tabloda, Visual Studio 2019 için derleme numaraları ve sürüm ta
 
 | **Sürüm**| **Kanal** | **Yayın tarihi** | **Derleme sürümü** |
 | ---------------------- | ----------- | ---------------- | ----------------- |
+| 16.4.20 | Yayınla | 9 Mart 2021 | 16.4.31026.101 |
+| 16.7.13 | Yayınla | 9 Mart 2021 | 16.7.31026.100 |
+| 16.9.1 | Yayınla | 9 Mart 2021 | 16.9.31105.61 |
 | 16.10.0 | Önizleme 1 | 2 Mart 2021 | 16.10.31025.218 |
 | 16.9.0 | Yayınla | 2 Mart 2021 | 16.9.31025.194 |
 | 16.9.0 | Preview 5 | 23 Şubat 2021 | 16.9.31019.194 |
@@ -214,6 +217,7 @@ Aşağıdaki tabloda, Visual Studio 2017 için derleme numaraları ve sürüm ta
 
 | **Sürüm**| **Kanal** | **Yayın tarihi** | **Derleme sürümü** |
 | ---------------------- | ----------- | ---------------- | ----------------- |
+| 15.9.34 | Yayınla | 9 Mart 2021 | 15.9.28307.1440 |
 | 15.9.33 | Yayınla | 10 Şubat 2021 | 15.9.28307.1401 |
 | 15.9.32 | Yayınla | 9 Şubat 2021 | 15.9.28307.1382 |
 | 15.9.31 | Yayınla | 12 Ocak 2021 | 15.9.28307.1342 |

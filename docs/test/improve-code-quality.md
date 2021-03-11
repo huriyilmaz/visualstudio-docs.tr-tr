@@ -12,12 +12,12 @@ manager: jmartens
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 0c3f40900c30ca3632b3e82c4b197f28f9d108bd
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7efc8e5955f4d11004d8408cadf312e6cbcb43eb
+ms.sourcegitcommit: f9ed9c4c6c166ef9826feb21dcb9c4d47ed14e1a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99969249"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102607411"
 ---
 # <a name="first-look-at-testing-tools-in-visual-studio"></a>Visual Studio 'da test araçlarına ilk bakış
 
@@ -79,7 +79,7 @@ Kod kapsamı analizi, hem yönetilen hem de yönetilmeyen (yerel) koda uygulanab
 Test yöntemlerini Test Gezgini'ni kullanarak çalıştırdığınızda kod kapsamı bir seçenektir. Sonuçlar tablosu, her derleme sınıfı ve yöntemi içinde çalışan kod yüzdesini gösterir. Ayrıca, kaynak düzenleyici hangi kodun test edildiğini gösterir.
 
 * [Kod kapsamını kullanarak ne kadar kodun test edildiğini belirleme](using-code-coverage-to-determine-how-much-code-is-being-tested.md)
-* [Visual Studio (Lab) ile birim testi, kod kapsamı ve kod kopyası Analizi](https://www.boost.org/doc/libs/1_71_0/libs/test/doc/html/index.html)
+* [Visual Studio (Lab) ile birim testi, kod kapsamı ve kod kopyası Analizi](https://azuredevopslabs.com/labs/devopsserver/liveunittesting)
 * [Kod kapsamı analizini özelleştirme](customizing-code-coverage-analysis.md)
 
 ## <a name="microsoft-fakes"></a>Microsoft Fakes
@@ -103,7 +103,7 @@ Selenium ile, en iyi kodlanmış UI testlerini veya genel tarayıcı tabanlı UI
 * [Kodunuzu test etmek için UI Otomasyonunu kullanma](use-ui-automation-to-test-your-code.md)
 * [Kodlanmış UI testi oluşturmaya, düzenlemesine ve sürdürme ile çalışmaya başlama](walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)
 * [Kodlanmış UI Testleriyle UWP uygulamalarını test etme](test-uwp-app-with-coded-ui-test.md)
-* [Visual Studio Enterprise (Lab) ile kodlanmış UI testlerine giriş](https://www.boost.org/doc/libs/1_71_0/libs/test/doc/html/index.html)
+* [Visual Studio Enterprise (Lab) ile kodlanmış UI testlerine giriş](https://azuredevopslabs.com/labs/tfs/codedui)
 
 ## <a name="related-scenarios"></a>İlgili senaryolar
 

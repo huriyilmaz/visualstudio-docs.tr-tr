@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 7aaa4727-00ef-41dc-937d-8d46973aaf56
-ms.date: 10/28/2020
+ms.date: 03/08/2021
 ms.topic: conceptual
 description: Toplu lisans sözleşmeleriyle ilgili yöneticilerin Visual Studio abonelikleri yönetim portalına nasıl erişebileceğinizi öğrenin
-ms.openlocfilehash: 85e82eed6b8810e7e6a2f8622aead9d50323841d
-ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
+ms.openlocfilehash: 4704b3258eedf8fd1639804a8792a1c18fafce77
+ms.sourcegitcommit: f9ed9c4c6c166ef9826feb21dcb9c4d47ed14e1a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92904217"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102607294"
 ---
 # <a name="accessing-the-admin-portal-as-an-admin-on-a-volume-license-agreement"></a>Toplu lisans sözleşmesinde yönetici olarak yönetim portalına erişme
 
@@ -23,10 +23,10 @@ Kuruluşunuzun anlaşmasıyla ilgili birincil veya bildirimler varsa, toplu lisa
 
 Oturum açtıktan sonra otomatik olarak süper yönetici olarak ayarlanır ve abonelikleri ve diğer yöneticileri yönetmeye başlayabilirsiniz. Süper Yöneticiler ve yöneticiler arasındaki farklar hakkında daha fazla bilgi için, [yönetici rolleri](admin-roles.md)hakkındaki makalemize göz atın.
 
-Bu, aşağıdakiler dahil ancak bunlarla sınırlı olmamak üzere tüm toplu lisanslama sözleşmesi türleri için geçerlidir: Kurumsal Anlaşmalar, kurumsal abonelikler, seçme, artı, açık, Açık Lisans, govt. ve akademik anlaşmalar. 
+Bu, aşağıdakiler dahil ancak bunlarla sınırlı olmamak üzere tüm toplu lisanslama anlaşması türleri için geçerlidir: Kurumsal Anlaşmalar, kurumsal abonelikler, Select, artı, açık, Açık Lisans, kamu. ve akademik anlaşmalar. 
 
 ## <a name="resources"></a>Kaynaklar
-- [Visual Studio Yöneticisi ve abonelikleri desteği](https://visualstudio.microsoft.com/support/support-overview-vs)
+- Visual Studio abonelikleri için Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım için bkz. Visual Studio [abonelikleri desteği](https://aka.ms/vssubscriberhelp).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)
