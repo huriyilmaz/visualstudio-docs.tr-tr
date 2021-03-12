@@ -7,15 +7,17 @@ ms.assetid: e49242bc-e9f2-49e8-8caa-f574d508aba6
 ms.date: 02/18/2021
 ms.topic: how-to
 description: Yöneticilerin Visual Studio abonelikleri yönetim portalındaki abonelik atamalarını nasıl silebileceğinizi öğrenin
-ms.openlocfilehash: 4eedc767e6397b371256c7957662147964782f75
-ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
+ms.openlocfilehash: efd0e149f390dd21a286b6ab7405ec36a43b8f78
+ms.sourcegitcommit: 9da787bf5b4281f933dc22083dc0bdeae3bc9461
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102250023"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103225982"
 ---
 # <a name="delete-assignments-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde atamaları silme
 Bir abone artık şirketten ayrıldıklarında, bir projeyi tamamlamada veya yeni bir iş rolüne geçiş yaparken olduğu gibi bir Visual Studio aboneliği gerektirdiğinde, aboneliğini kaldırabilir ve başka birine atayabilirsiniz. Aboneliği yeniden atadığınızda, tüm abone avantajlarının sıfırlanmadığını lütfen unutmayın.  Yeni Kullanıcı, talep edilmemiş anahtarları talep edebilir ve daha önce **talep edilen anahtarları görüntüleyebilir, ancak** talep limitleri sıfırlanmaz.  Kurumsal anlaşmalar (EA) olan kuruluşlar için, özgün kullanıcı tarafından kullanılan Pluralaltim eğitimi gibi tüm avantajlar sıfırlanır. 
+> [!Important]
+> Abonelikler yalnızca abonelik son atandıktan sonra en az 90 gün geçtikten sonra farklı kullanıcılara atanabilir.  Örneğin, abonelik 1 Haziran tarihinde bir aboneye atanmışsa, en az 30 Ağustos 'a kadar yeni bir abone 'e atanamaz. 
 
 Atamaları silme hakkında bilgi edinmek için bu videoyu izleyin veya okumaya devam edin.  
 

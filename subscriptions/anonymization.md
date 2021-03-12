@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: ce5fc8a4-484c-4df6-97c3-cb60174fb66b
-ms.date: 02/20/2020
+ms.date: 03/11/2021
 ms.topic: conceptual
 description: Aboneliklerde erişim kesildiğinde abone verilerinin nasıl anonimleştirilmemiş olduğunu öğrenin.
-ms.openlocfilehash: 34059c20a65c41f7998efe344e2d8d4ac63cf7af
-ms.sourcegitcommit: bf5e2bba5acdcf05869b861211f8bb755081e5ce
+ms.openlocfilehash: 69f41232a678a857908b30d63df2ae7f72b79904
+ms.sourcegitcommit: 9da787bf5b4281f933dc22083dc0bdeae3bc9461
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92467498"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103225969"
 ---
 # <a name="anonymization-of-visual-studio-subscriber-information"></a>Visual Studio abone bilgilerini anonimleştirme
 Bir aboneliğin kullanım süresi veya bir abonenin oturum açma hesabı silme gibi bir abonelik kullanımını engelleyen bir olay meydana geldiğinde, kullanıcının ad ve oturum açma hesabı gibi kişisel bilgileri, bunları kullanılamaz hale getirecek şekilde karmaşıklamaz.  Bu, abonenin kişisel bilgilerini korumak için yapılır.
@@ -35,7 +35,9 @@ Abone için kullanılamayan bir aboneliği işleyen olaylar, anonimleştirme tet
 Y: Hayır.  Anonimleştirme, aboneliğe erişim kaybına neden olan bir olaya yanıt olarak, ancak erişim eksikliğine neden olmaz.
 
 ### <a name="q--im-an-admin-for-my-organizations-subscriptions--if-one-of-my-subscribers-information-is-anonymized-can-that-subscription-be-reassigned-to-another-user"></a>S: Kuruluşumun abonelikleri için yöneticiyim.  Abonimin bilgilerden biri anonimleştirilmiştir, bu abonelik başka bir kullanıcıya yeniden atanabilir mi?
-Y: Evet--aboneliğin süresi dolmadığından, başka bir aboneye yeniden atanabilir.
+Y: Evet.  Bu ölçütler karşılanıyorsa abonelikler yeniden atanabilir:
+- Aboneliğin süresi dolmadı
+- Aboneliğin bir aboneye en son atanmasından bu yana en az 90 gün geçti.  Örneğin, abonelik 1 Haziran tarihinde abone olmak üzere atandıysa, en az 30 Ağustos 'a kadar yeniden atanamaz.
 
 ### <a name="q-how-can-i-prevent-anonymization-caused-by-deleting-a-sign-in-email-address"></a>S: bir oturum açma e-posta adresinin silinmesinden kaynaklanan anonim seçimi nasıl önleyebilirim?
 Y: Bu sorunu önlemenin iki yolu vardır:
