@@ -18,12 +18,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d62d35a296c70462aab75af5a8c6729179d5b34d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e2314bb8fdb44d769a5067a39b01b40b0a74734f
+ms.sourcegitcommit: 99b66b0f4ced46ead0b2506a103f974f40cc0076
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99925764"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103295753"
 ---
 # <a name="use-regular-expressions-in-visual-studio"></a>Visual Studio 'da normal ifadeler kullanma
 
@@ -60,7 +60,7 @@ Aşağıdaki tabloda bazı normal ifade karakterleri, işleçler, yapılar ve mo
 |Herhangi bir [boşluk karakteriyle](/dotnet/standard/base-types/character-classes-in-regular-expressions#whitespace-character-s) Eşleştir|\s|`Public\sInterface` "ortak arabirim" ifadesi ile eşleşir|
 |Herhangi bir [ondalık basamak karakteriyle](/dotnet/standard/base-types/character-classes-in-regular-expressions#decimal-digit-character-d) Eşleştir|\d|`\d` "WD40" içinde "4" ve "0" ile eşleşir|
 
-Bazı işleçleri ve yapıları bir onaltılık sayıyla eşleşecek şekilde birleştiren örnek bir normal ifade `\b0[xX]([0-9a-fA-F]+\)\b` . Bu ifade "0xc67f" ile eşleşir ancak "0xc67g" olarak eşleşmez.
+Bazı işleçleri ve yapıları bir onaltılık sayıyla eşleşecek şekilde birleştiren örnek bir normal ifade `\b0[xX]([0-9a-fA-F]+)\b` . Bu ifade "0xc67f" ile eşleşir ancak "0xc67g" olarak eşleşmez.
 
 > [!TIP]
 > Windows işletim sistemlerinde, çoğu satır "\r\n" (bir satır başı ve ardından yeni bir satır) ile biter. Bu karakterler görünmez, ancak düzenleyicide bulunur ve .NET normal ifade hizmetine geçirilir.

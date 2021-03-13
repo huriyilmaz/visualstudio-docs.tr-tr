@@ -119,6 +119,10 @@
           href: customizing-code-coverage-analysis.md
         - name: Kod kapsamı sorunlarını giderme
           href: troubleshooting-code-coverage.md
+    - name: Geçiş
+      items:
+        - name: MSTestV1 'den MSTestV2 'ye yükseltme
+          href: mstest-update-to-mstestv2.md
 - name: Live Unit Testing
   items:
     - name: Giriş

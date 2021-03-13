@@ -8,12 +8,12 @@ ms.author: tglee
 author: TerryGLee
 ms.manager: jillfra
 monikerRange: vs-2019
-ms.openlocfilehash: 5f93d8c29bcf7e85df04dd364868e65f70482b72
-ms.sourcegitcommit: 59b63039982bb5894eb35d8b544657688731614f
+ms.openlocfilehash: 354be4d3e31ead2d77e62f61600c20c1774353cd
+ms.sourcegitcommit: 99b66b0f4ced46ead0b2506a103f974f40cc0076
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98597418"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103295782"
 ---
 # <a name="git-experience-in-visual-studio"></a>Visual Studio 'da git deneyimi
 
@@ -117,7 +117,7 @@ Her iki konumdan de mevcut dallar arasında geçiş yapabilirsiniz.
 
 ### <a name="create-a-new-branch"></a>Yeni dal oluştur
 
-Ayrıca, yeni bir dal oluşturabilirsiniz. Bu eylem için eşdeğer komut `git checkout <branchname>` .
+Ayrıca, yeni bir dal oluşturabilirsiniz. Bu eylem için eşdeğer komut `git checkout -b <branchname>` .
 
 Yeni bir dal oluşturmak, dal adını girip mevcut bir dala dayandırmak kadar basittir.
 

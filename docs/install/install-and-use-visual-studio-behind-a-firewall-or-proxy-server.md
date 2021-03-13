@@ -17,12 +17,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: b3626d09d790ca6f15ded3745801eae1ca426bab
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 44af5c5a00e1ca26eb545b0973090486f6d320ea
+ms.sourcegitcommit: 99b66b0f4ced46ead0b2506a103f974f40cc0076
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99970666"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103295710"
 ---
 # <a name="install-and-use-visual-studio-and-azure-services-behind-a-firewall-or-proxy-server"></a>Visual Studio ve Azure hizmetlerini bir güvenlik duvarı veya proxy sunucusunun arkasında yükleyip kullanma
 
@@ -141,6 +141,7 @@ Bir güvenlik duvarı veya proxy sunucusu arkasında Visual Studio veya Azure hi
 | Hata Ayıklayıcısı | 1. <br>vsdebugger.blob.core.windows.net <br>vsdebugger.azureedge.net <br><br>2. <br>download.visualstudio.com/\*/<br/>OneCore \* . Msvsmon. zip<br><br> 3. referencesource.microsoft.com/symbols <br><br> 4. <br>symbols.nuget.org/download/symbols<br><br> 5. visualstudio.com<br><br>6. msdl.microsoft.com/download/symbols | https/443 | 1. <br>SSH üzerinden UNIX/macOS 'ta .NET Core hata ayıklama için hata ayıklayıcı bitlerini indirmek için kullanılır <br><br>2. <br>Uzak Windows Docker kapsayıcısı hata ayıklaması için hata ayıklayıcı bitlerini indirmek için kullanılır<br><br> 3. .NET Framework kaynak adımlaması için kullanılır <br><br> 4. <br>(Kullanıcı tarafından opts) Nuget.org symbol Server 'da yayınlanan sembolleri indirmek için kullanılır.<br><br> 5. (Kullanıcı opvaları) MS sembolleri ve ikili dosyaları indirmek için kullanılıyorsa, dökümdeki yönetilen kodda hata ayıklama için de gerekli olabilir |
 | GitHub Codespaces| \*. online.visualstudio.com | https/443 | GitHub Codespaces API 'Lerini çağırmak için kullanılır |
 | Xamarin Android uygulama yayımlama | \*. googleapis.com <br/> play.google.com <br/>accounts.google.com | https/443 | Xamarin Android uygulamalarını doğrudan Visual Studio 'dan yayınlamak/karşıya yüklemek için Google Play Store hizmetiyle etkileşim kurmak için kullanılır. |
+| Visual Studio Arama Hizmeti | data-ai.microsoft.com/search | https/443 | Arama kutusuna AI özellikli Visual Studio Arama Hizmeti sağlamak için kullanılır `Ctrl+Q` |
 | Azure Container Registry | *. azurecr.io | https/443 | CICD ardışık düzenleri yapılandırması için Azure 'da barındırılan kapsayıcı kayıt defterlerine erişin |
 | | | | |
 
