@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ecb7c774314a35f99de41af720b180475e0c55b5
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 649efd5202d8b153b5fe5b4dbf9ba5052883f352
+ms.sourcegitcommit: 66951f064d601b1d7a2253cb9b250380807e12db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102158276"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103483186"
 ---
 # <a name="idiadatasourceloaddataforexe"></a>IDiaDataSource::loadDataForExe
 . Exe/. dll dosyasıyla ilişkili hata ayıklama verilerini açar ve hazırlar.
@@ -60,6 +60,8 @@ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürü
 
 ## <a name="remarks"></a>Açıklamalar
 . Exe/. dll dosyasının hata ayıklama üst bilgisi, ilişkili hata ayıklama veri konumunu adlandırır.
+
+Bir sembol sunucusundan hata ayıklama verileri yüklüyorsanız, *symsrv.dll* kullanıcının uygulamasının veya *msdia140.dll* yüklendiği aynı dizinde bulunmalı veya sistem dizininde bulunması gerekir.
 
 Bu yöntem hata ayıklama üstbilgisini okur ve hata ayıklama verilerini arar ve hazırlar. Aramanın ilerleme durumu isteğe bağlı olarak, geri çağrılar aracılığıyla raporlanabilmesi ve denetlenemeyebilir. Örneğin, yöntem bir hata ayıklama dizini bulduğunda ve işlediğinde, [ıaloadcallback:: NotifyDebugDir](../../debugger/debug-interface-access/idialoadcallback-notifydebugdir.md) çağrılır `IDiaDataSource::loadDataForExe` .
 

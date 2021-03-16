@@ -2,18 +2,18 @@
 title: Visual Studio 'da git deneyimi
 titleSuffix: ''
 description: Visual Studio 2019 ' de yeni tümleşik git deneyiminin daha üretken olmanıza nasıl yardımcı olabileceğini öğrenin.
-ms.date: 01/15/2021
+ms.date: 03/08/2021
 ms.topic: conceptual
 ms.author: tglee
 author: TerryGLee
 ms.manager: jillfra
 monikerRange: vs-2019
-ms.openlocfilehash: 354be4d3e31ead2d77e62f61600c20c1774353cd
-ms.sourcegitcommit: 99b66b0f4ced46ead0b2506a103f974f40cc0076
+ms.openlocfilehash: e97088f11c32eae6b5d0ef4b7a3490e120a1b6d2
+ms.sourcegitcommit: 8edb1a7e3e8eee48bf0a900f00b5ee8e08de8e1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2021
-ms.locfileid: "103295782"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103481408"
 ---
 # <a name="git-experience-in-visual-studio"></a>Visual Studio 'da git deneyimi
 
@@ -202,6 +202,7 @@ Yeni git deneyimi artık Visual Studio 2019 [sürüm 16,8](/visualstudio/release
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
+- YouTube 'da [Visual Studio videosunda git ile çalışmaya](https://www.youtube.com/watch?v=GCZ9x3yqkyc) başlama
 - [Visual Studio blog gönderisine git deneyiminin yayını duyurusu](https://devblogs.microsoft.com/visualstudio/announcing-the-release-of-the-git-experience-in-visual-studio/)
 - YouTube 'da [Yeni git deneyiminin başlatılması](https://www.youtube.com/watch?v=UHrAg3iKoe0&t)
 - [Visual Studio araç kutusu serisi şunları sunar:](https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/The-New-Git-Experience) Channel 9 ve [YouTube](https://www.youtube.com/watch?v=ZiQ2LXtAJ6I&feature=youtu.be) 'da yeni git deneyimi videosu
