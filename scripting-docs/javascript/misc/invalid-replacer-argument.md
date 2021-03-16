@@ -1,4 +1,5 @@
 ---
+description: JSON çağırma girişimi, geçerli olmayan bir bağımsız değişkenle JSON. stringbelirt çağrısı yapıldı.
 title: Geçersiz yeniden değiştirici bağımsız değişkeni | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
@@ -15,12 +16,12 @@ caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b6a77675a1cb618210d9c44104cf6397dda03c11
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: 95a73d6fcbcf1350eece52e2cd58693646617a28
+ms.sourcegitcommit: 691d2a47f92f991241fdb132a82c53a537198d50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91862566"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103570901"
 ---
 # <a name="invalid-replacer-argument"></a>Geçersiz değiştirici bağımsız değişken
 `JSON.stringify`Geçerli olmayan bir bağımsız değişkenle Invoke yapılmaya çalışıldı. `replacer`Bağımsız değişken bir işlev veya dizi olmalıdır.  

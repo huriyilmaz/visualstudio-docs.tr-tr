@@ -9,12 +9,12 @@ monikerRange: '>=vs-2019'
 manager: jmartens
 author: ghogen
 ms.author: ghogen
-ms.openlocfilehash: d44dc484da904d2692b90e23d10db6edc6f6e7b8
-ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
+ms.openlocfilehash: 49c3081e68baf4f2bf1d0975bcdae7ea25ab90b3
+ms.sourcegitcommit: 691d2a47f92f991241fdb132a82c53a537198d50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102223166"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103571551"
 ---
 # <a name="how-bridge-to-kubernetes-works"></a>Bridge to Kubernetes’in işleyiş biçimi
 
@@ -142,10 +142,8 @@ kubectl -n <namespace> apply -f <yaml file name>
 
 Kubernetes Köprüsü aşağıdaki sınırlamalara sahiptir:
 
-* Bu hizmete bağlanabilmek için bir hizmetin tek bir pod tarafından desteklenen olması gerekir. Çoğaltmaları olan bir hizmet gibi birden fazla pods içeren bir hizmete bağlanamazsınız.
-* Pod, başarıyla bağlanmak için Kubernetes 'e Köprüsü için bu Pod 'da çalışan tek bir kapsayıcıya sahip olabilir. Kubernetes Köprüsü, hizmet kafesleri tarafından eklenen sepet kapsayıcıları gibi ek kapsayıcıları olan Pod hizmetlerine bağlanamaz.
+* Pod, başarıyla bağlanmak için Kubernetes 'e Köprüsü için bu Pod 'da çalışan tek bir kapsayıcıya sahip olabilir.
 * Şu anda, Kubernetes Pod Köprüsü 'nün Linux kapsayıcıları olması gerekir. Windows kapsayıcıları desteklenmez.
-* Visual Studio ile Kubernetes için köprü kullandığınızda yalıtım, HTTPS ile kullanılamaz. HTTPS yalnızca Visual Studio Code kullandığınızda yalıtım modunda desteklenir.
 * Kubernetes köprüsünün, ana bilgisayar Dosyanızı düzenlemek için geliştirme bilgisayarınızda çalışması için yükseltilmiş izinlere sahip olması gerekir.
 * Kubernetes Köprüsü Azure Dev Spaces etkinleştirilmiş kümeler üzerinde kullanılamaz.
 

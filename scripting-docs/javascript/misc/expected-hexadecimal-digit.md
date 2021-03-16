@@ -1,4 +1,5 @@
 ---
+description: Yanlış bir Unicode kaçış sırası oluşturdunuz.
 title: Onaltılık basamak bekleniyor | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
@@ -14,12 +15,12 @@ ms.assetid: 67a86df7-49f9-43cb-99c6-99b1a427827a
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8c6be5302c0c4c6565884fa800da7cb9a002d151
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: 107ce2dd4f9a65a0a04b8e2ec773367ffae4ce81
+ms.sourcegitcommit: 691d2a47f92f991241fdb132a82c53a537198d50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91861925"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103570433"
 ---
 # <a name="expected-hexadecimal-digit"></a>Beklenen onaltılık basamak
 Yanlış bir Unicode kaçış sırası oluşturdunuz. Unicode kaçış dizileri, tam olarak dört onaltılık basamakla (daha fazla ve daha az olmadan), \u ile başlar. Unicode onaltılık basamaklar yalnızca 0-9 rakamları, büyük harf A-F ve küçük harf a-f karakterleri içerebilir. Aşağıdaki örnekte, doğru biçimlendirilmiş bir Unicode kaçış sırası gösterilmektedir.  

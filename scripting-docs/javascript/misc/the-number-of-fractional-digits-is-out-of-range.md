@@ -1,4 +1,5 @@
 ---
+description: İşlev numarasına geçersiz bir bağımsız değişken geçirmeye çalıştınız. prototype. Toüs.
 title: Kesirli basamakların sayısı Aralık dışında | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
@@ -14,12 +15,12 @@ ms.assetid: dbe05d7d-fcf6-4823-9c61-4b814d1ad3c4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3ede65345bdaab22b26274323ad08779313d186e
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: 30cfdd010cc99cd2345e1009e613b102fe7cbf30
+ms.sourcegitcommit: 691d2a47f92f991241fdb132a82c53a537198d50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91862732"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103570706"
 ---
 # <a name="the-number-of-fractional-digits-is-out-of-range"></a>Kesir basamakları sayısı aralık dışı
 İşlev numarasına geçersiz bir bağımsız değişken geçirmeye çalıştınız. **prototype. Toüs**. **Toüstel ()** işlevinin bağımsız değişkeni 0 ile 20 (dahil) arasında olmalıdır.  

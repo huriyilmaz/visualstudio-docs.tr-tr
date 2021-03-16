@@ -1,4 +1,5 @@
 ---
+description: Aşağıdaki tablolarda, ilgili kategorilerindeki JavaScript işleçleri listelenmektedir.
 title: İşleç Özeti (JavaScript) | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
@@ -12,12 +13,12 @@ ms.assetid: 3bc55336-912f-4ff8-8d28-1e26e0144840
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: de5d26f810fc1ab46c5ef09112fd62fada5d7d9b
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: 47f14b0d8ee87877dc8f4305eb19679ea19fb9e3
+ms.sourcegitcommit: 691d2a47f92f991241fdb132a82c53a537198d50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91862085"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103571694"
 ---
 # <a name="operator-summary-javascript"></a>İşleç Özeti (JavaScript)
 Aşağıdaki tablolarda [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] ilgili kategorilerindeki işleçler listelenmektedir.  
@@ -47,8 +48,8 @@ Aşağıdaki tablolarda [!INCLUDE[javascript](../../javascript/includes/javascri
 |[Kimlik](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators)|===|  
 |[Eşitsizlik](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators)|!=|  
 |[Küçüktür](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators)|<|  
-|[Küçüktür veya eşittir](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators)|<=|  
-|[Mantıksal AND](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators)|&&|  
+|[Küçük veya eşittir](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators)|<=|  
+|[Mantıksal VE](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators)|&&|  
 |[Mantıksal NOT](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators)|!|  
 |[Mantıksal or](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators)|&#124;&#124;|  
 |[Nonidentity](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators)|!==|  

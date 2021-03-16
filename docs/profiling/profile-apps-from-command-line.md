@@ -14,12 +14,12 @@ manager: jmartens
 monikerRange: '>= vs-2019'
 ms.workload:
 - multiple
-ms.openlocfilehash: 0b1d5906213b148605e35c483b377280dc942515
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e1c8c20d350561eec520038dec521ab7bc5f5311
+ms.sourcegitcommit: 691d2a47f92f991241fdb132a82c53a537198d50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99936554"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103570693"
 ---
 # <a name="measure-application-performance-from-the-command-line"></a>Komut satırından uygulama performansını ölçme
 
@@ -79,7 +79,7 @@ Visual Studio tanılama CLı araçları kullanılarak profil oluşturma işlemi,
 
 Koleksiyon aracıları, ölçmeye çalıştığınız seçeneğe bağlı olarak farklı veri türlerini toplamanızı sağlayan, değiştirilebilir bileşenlerdir.
 
-Kolaylık olması için, bu bilgileri bir aracı yapılandırma dosyasında saklayabilirsiniz. Yapılandırma dosyası, en az *. dll* ve com CLSID adını içeren bir *. JSON* dosyasıdır. Aşağıdaki klasörde bulabileceğiniz örnek yapılandırma dosyaları aşağıda verilmiştir:
+Kolaylık olması için, bu bilgileri bir aracı yapılandırma dosyasında depolamanızı öneririz. Yapılandırma dosyası, en az *. dll* ve com CLSID adını içeren bir *. JSON* dosyasıdır. Aşağıdaki klasörde bulabileceğiniz örnek yapılandırma dosyaları aşağıda verilmiştir:
 
 ```<Visual Studio installation folder>Team Tools\DiagnosticsHub\Collector\AgentConfigs\```
 
@@ -99,11 +99,7 @@ DotNetObjectAlloc yapılandırması (taban/düşük), [.NET nesne ayırma aracı
 
 Taban/düşük/yüksek yapılandırma örnekleme hızına başvurur. Örneğin, düşük değer 100 örnek/saniye ve yüksek 4000 örnek/saniye.
 
-*VSDiagnostics.exe* aracının bir koleksiyon aracısıyla çalışması için, uygun aracı IÇIN hem dll hem de com CLSID gerektirir ve aracının ek yapılandırma seçenekleri de olabilir. Yapılandırma dosyası olmadan bir aracı kullanıyorsanız, aşağıdaki komutta biçimini kullanın.
-
-```cmd
-VSDiagnostics.exe start <id> /attach:<pid> /loadAgent:<agentCLSID>;<agentName>[;<config>]
-```
+*VSDiagnostics.exe* aracının bir koleksiyon aracısıyla çalışması için, uygun aracı IÇIN hem dll hem de com CLSID gerektirir. Aracı, uygun yapılandırma seçeneklerine da sahip olabilir. Bu, yapılandırma dosyasında belirtilen herhangi bir seçenek olacak şekilde, düzgün bir şekilde kaçış JSON olarak biçimlendirilir.
 
 ## <a name="permissions"></a>İzinler
 

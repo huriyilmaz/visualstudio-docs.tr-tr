@@ -1,4 +1,5 @@
 ---
+description: Bu nesne için mevcut olmayan bir özellik veya yöntem belirttiniz.
 title: Nesne bu özelliği veya yöntemi desteklemiyor | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
@@ -14,12 +15,12 @@ ms.assetid: 35f7a9b4-74fa-4ddb-b9f2-1a92345cb2ff
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: bf4afa6e3a9dc26b40ddbc8fbd2dbcedb92a74c3
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: 7e3f9ea821a27d345832d94ceceb173392c6513b
+ms.sourcegitcommit: 691d2a47f92f991241fdb132a82c53a537198d50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91861444"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103570888"
 ---
 # <a name="object-doesnt-support-this-property-or-method"></a>Nesne bu özelliği veya yöntemi desteklemiyor
 Bu nesne için mevcut olmayan bir özellik veya yöntem belirttiniz. Tüm nesneler tüm özellikleri ve yöntemleri desteklemez.  

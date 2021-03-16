@@ -1,4 +1,5 @@
 ---
+description: Bağımsız değişken olarak bir dizi sağlamadınız.
 title: Dizi veya bağımsız değişkenler nesnesi bekleniyor | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
@@ -14,12 +15,12 @@ ms.assetid: 22b83e2f-8916-46db-8d8c-50c8481b7c90
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2e4b3eaee0a244f9d14d88d1393742ab6d31a509
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: c363335909db25a985797063381f4a189ed328cf
+ms.sourcegitcommit: 691d2a47f92f991241fdb132a82c53a537198d50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91862669"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103572136"
 ---
 # <a name="array-or-arguments-object-expected"></a>Dizi ya da bağımsız değişkenler nesnesi bekleniyor
 Bağımsız değişken olarak bir dizi sağlamadınız. Bu hata yalnızca **function. prototype. Apply** yöntemi için geçerlidir. Belirtilmişse, bu işlevin ikinci bağımsız değişkeni bir `Array` nesne ya da bir **bağımsız değişken** nesnesi olmalıdır.  

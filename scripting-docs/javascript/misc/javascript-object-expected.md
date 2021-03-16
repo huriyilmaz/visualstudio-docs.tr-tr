@@ -1,4 +1,5 @@
 ---
+description: JavaScript olmayan bir nesneyi bir JavaScript nesnesi bekleyen yerleşik bir işleve geçirmeye çalıştınız.
 title: JavaScript nesnesi bekleniyor | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
@@ -14,12 +15,12 @@ ms.assetid: cc7cc32b-e444-4afa-9be1-802c83fdf5ae
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 754285b22f0da6f45d63f86f774d24279aeb7f22
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: 9ac73851ad8765fa81852e51f5759a0e511c3629
+ms.sourcegitcommit: 691d2a47f92f991241fdb132a82c53a537198d50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91862550"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103571317"
 ---
 # <a name="javascript-object-expected"></a>JavaScript nesne bekleniyor
 Nesneyi [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] bekleyen bir yerleşik işleve nesne olmayan bir işlev geçirmeye çalıştınız [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] . Çeşitli yerleşik işlevler, içinde tanımlanan nesneleri [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] (konak tarafından tanımlanan nesnelerin aksine veya bir denetim gibi bir dış bileşen) gerektirir.  

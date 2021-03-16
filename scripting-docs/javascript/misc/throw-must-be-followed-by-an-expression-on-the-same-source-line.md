@@ -1,4 +1,5 @@
 ---
+description: Throw anahtar sözcüğünü kullandınız, ancak aynı kaynak satırdaki bir ifadeyle izmedi.
 title: Throw sonrasında aynı kaynak satırındaki bir ifade gelmelidir | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
@@ -14,12 +15,12 @@ ms.assetid: b03b7747-01a1-40c6-af80-a1dd70bc5781
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b1ce004eb523497b912e8d7ec29c3b03044f0220
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: cfa2bace6f82ae972204cc0a405cc7e8682e98af
+ms.sourcegitcommit: 691d2a47f92f991241fdb132a82c53a537198d50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91861989"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103570719"
 ---
 # <a name="throw-must-be-followed-by-an-expression-on-the-same-source-line"></a>Throw ardından aynı kaynak satırdaki bir ifade gelmelidir
 `throw`Anahtar sözcüğünü kullandınız, ancak aynı kaynak satırdaki bir ifadeyle izmedi. `throw`Deyim iki bölümden oluşur: `throw` anahtar sözcüğü ve sonra oluşturulacak ifade. Örnek:  

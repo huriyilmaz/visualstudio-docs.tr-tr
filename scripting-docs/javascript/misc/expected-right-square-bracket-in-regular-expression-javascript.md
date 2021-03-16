@@ -1,4 +1,5 @@
 ---
+description: Normal ifade eşleşmesi için bir karakter sınıfı oluşturmaya çalıştınız, ancak sağ köşeli ayracı içermiyordu.
 title: Normal ifadede '] ' bekleniyor (JavaScript) | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
@@ -14,12 +15,12 @@ ms.assetid: 1ca2079a-44dd-479f-a1e3-e04a14d0739e
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 31d1ebd30ba5e793a1c52c00d8b58603bdaa9a75
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: 6b5e7a25f6fbef3bf87d084b149ee9f356981600
+ms.sourcegitcommit: 691d2a47f92f991241fdb132a82c53a537198d50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91862331"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103570953"
 ---
 # <a name="expected--in-regular-expression-javascript"></a>Normal ifadede ']' bekleniyor (JavaScript)
 Normal ifade eşleşmesi için bir karakter sınıfı oluşturmaya çalıştınız, ancak sağ köşeli ayracı içermiyordu. Tek sabit karakter birleşimleri, köşeli ayraçlar içine yerleştirerek karakter sınıflarında birleştirilebilir. Bir karakter sınıfı, içerdiği bir karakterle eşleşir. Örneğin/[abc]/, "a", "b" veya "c" harflerinden herhangi biriyle eşleşir.  

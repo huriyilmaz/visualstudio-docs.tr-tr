@@ -1,5 +1,6 @@
 ---
 title: Tanımlayıcı için bir anahtar sözcük kullanımı geçersiz | Microsoft Docs
+description: Bir anahtar sözcüğü bir değişken, işlev veya Kullanıcı tanımlı başka tanımlayıcı adı olarak kullanamazsınız.
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -14,12 +15,12 @@ ms.assetid: 04951b3b-a8b5-4d36-94f8-d2daee1ce0f8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9ae4fd36d78ee2d9e17d3fe22c6013a338e85a21
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: ed4a27b735bfec34aa0bb7e9b09bc8f4e4e829c6
+ms.sourcegitcommit: 691d2a47f92f991241fdb132a82c53a537198d50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91862718"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103571538"
 ---
 # <a name="the-use-of-a-keyword-for-an-identifier-is-invalid"></a>Tanımlayıcı için bir anahtar sözcük kullanımı geçersiz
 1048: tanımlayıcı için bir anahtar sözcük kullanımı geçersiz  

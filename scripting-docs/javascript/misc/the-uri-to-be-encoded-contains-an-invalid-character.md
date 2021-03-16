@@ -1,4 +1,5 @@
 ---
+description: Bir dizeyi URI olarak kodlamaya çalıştınız, ancak geçersiz karakterler içeriyor.
 title: Kodlanacak URI geçersiz karakter içeriyor | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
@@ -14,12 +15,12 @@ ms.assetid: a3f0fdbb-8d4b-41ae-a396-43dfc9483760
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 310db785041de0beb0ebbba0cdd9b7c356397bc4
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: 73ed9a814c5d608df1a9686c2b61166d664115f7
+ms.sourcegitcommit: 691d2a47f92f991241fdb132a82c53a537198d50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91862381"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103570667"
 ---
 # <a name="the-uri-to-be-encoded-contains-an-invalid-character"></a>Kodlanacak URI geçersiz karakter içeriyor
 Bir dizeyi URI (Tekdüzen Kaynak tanımlayıcısı) olarak kodlamaya çalıştınız, ancak geçersiz karakterler içeriyor. Çoğu karakter, URI 'lere dönüştürülecek dizelerin içinde geçerli olsa da bazı Unicode karakter dizileri geçersizdir.  

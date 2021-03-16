@@ -1,4 +1,5 @@
 ---
+description: Var olan bir dizi nesnesinin length özelliğini ayarlarken, pozitif sayı veya sıfır olmayan bir dizi uzunluğu belirttiniz.
 title: Dizi uzunluğuna sonlu pozitif bir sayı atanmalıdır | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
@@ -14,15 +15,15 @@ ms.assetid: c51c66a4-a543-4e95-b18d-2cfbcb3d1fdd
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8e0016c7a0a6acb3f08121d8636ccdf848dcf201
-ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
+ms.openlocfilehash: 3938f240580564112915ab0ba3036b63dc96cd8f
+ms.sourcegitcommit: 691d2a47f92f991241fdb132a82c53a537198d50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91862807"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103572149"
 ---
 # <a name="array-length-must-be-assigned-a-finite-positive-number"></a>Dizi uzunluğuna sonsuz olmayan pozitif bir sayı atanmalıdır
-Var olan bir **dizi** nesnesinin **length** özelliğini ayarlarken, pozitif sayı veya sıfır olmayan bir dizi uzunluğu belirttiniz. Bu hata **length** `Array` , negatif olan veya sayı olmayan () bir nesnenin Length özelliğine bir değer atadığınızda oluşur `NaN` . [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]Kesir sayılarını otomatik olarak tam tamsayılara dönüştürdüğüne unutmayın.  
+Var olan bir **dizi** nesnesinin **length** özelliğini ayarlarken, pozitif sayı veya sıfır olmayan bir dizi uzunluğu belirttiniz. Bu hata  `Array` , negatif olan veya sayı olmayan () bir nesnenin Length özelliğine bir değer atadığınızda oluşur `NaN` . [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]Kesir sayılarını otomatik olarak tam tamsayılara dönüştürdüğüne unutmayın.  
   
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
