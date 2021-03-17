@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 684c6254aac8bd45926759e0b6ad96cfe3f6c8ec
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fb30135ac5c137fdc836273855e2d9f000f1c6b2
+ms.sourcegitcommit: 3a855d3513407ea78336386dc3be0b75142614b0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99964427"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103622640"
 ---
 # <a name="create-unit-test-method-stubs-from-code"></a>Koddan birim testi yöntemi saplamaları oluştur
 
@@ -52,7 +52,7 @@ Bu testleri test Otomasyonu sürecinin bir parçası olarak çalıştırmayı pl
 NUnit veya xUnit için birim testlerini otomatik olarak oluşturmak için, bu test çerçevesi uzantılarından birini Visual Studio Market adresinden birine yüklersiniz:
 
 * [Test oluşturucuları için NUnit uzantısı](https://marketplace.visualstudio.com/items?itemName=NUnitDevelopers.TestGeneratorNUnitextension)
-* [test oluşturucuları için xUnit.net uzantısı](https://marketplace.visualstudio.com/items?itemName=BradWilson.xUnitnetTestExtensions)
+* [test oluşturucuları için xUnit.net uzantısı](https://marketplace.visualstudio.com/items?itemName=YowkoTsai.xUnitnetTestGenerator)
 
 ## <a name="when-should-i-use-this-feature"></a>Bu özelliği ne zaman kullanmalıyım?
 

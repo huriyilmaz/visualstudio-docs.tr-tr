@@ -2,18 +2,18 @@
 title: Visual Studio 'da git deneyimi
 titleSuffix: ''
 description: Visual Studio 2019 ' de yeni tümleşik git deneyiminin daha üretken olmanıza nasıl yardımcı olabileceğini öğrenin.
-ms.date: 03/08/2021
+ms.date: 03/16/2021
 ms.topic: conceptual
 ms.author: tglee
 author: TerryGLee
 ms.manager: jillfra
 monikerRange: vs-2019
-ms.openlocfilehash: e97088f11c32eae6b5d0ef4b7a3490e120a1b6d2
-ms.sourcegitcommit: 8edb1a7e3e8eee48bf0a900f00b5ee8e08de8e1d
+ms.openlocfilehash: e33b91088022a4588773737b2820677c84a65807
+ms.sourcegitcommit: 3a855d3513407ea78336386dc3be0b75142614b0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103481408"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103622653"
 ---
 # <a name="git-experience-in-visual-studio"></a>Visual Studio 'da git deneyimi
 
@@ -48,7 +48,7 @@ Kodunuz git ile ilişkili değilse, yeni bir git deposu oluşturarak başlayabil
 > [!TIP]
 > Deponuzun ortak veya özel olup olmadığı, bir ekip ile çalışmasanız bile, kodunuzun bir uzak yedeğinin GitHub 'da güvenli bir şekilde depolanmasını sağlamak en iyisidir. Bu Ayrıca, kullandığınız bilgisayar ne olduğuna bakılmaksızın kodunuzun sizin için kullanılabilir olmasını sağlar.
 
-**Yalnızca yerel** ' i kullanarak yerel bir git deposu oluşturmayı tercih edebilirsiniz. Ya da, **var olan uzak** seçeneğini kullanarak, deponuzu herhangi bir başka git sağlayıcısında mevcut bir boş uzak depoya bağlayabilirsiniz.
+**Yalnızca yerel** ' i kullanarak yerel bir git deposu oluşturmayı tercih edebilirsiniz. Ya da **mevcut uzak** seçeneği kullanarak yerel projenizi Azure DevOps veya başka bir git sağlayıcısı üzerinde var olan bir boş uzak depoya bağlayabilirsiniz.
 
 ## <a name="clone-an-existing-git-repository"></a>Var olan bir Git deposunu Kopyala
 
