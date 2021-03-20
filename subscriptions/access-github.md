@@ -4,23 +4,23 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 2249b32a-46d7-4e29-b543-4769c71ceda6
-ms.date: 10/22/2020
+ms.date: 03/19/2021
 ms.topic: conceptual
 description: Visual Studio aboneliklerinin bir parçası olarak GitHub Enterprise 'a erişme hakkında bilgi edinin
-ms.openlocfilehash: 7ad60b1c1a177353cad13e3dbcbc50c67b5500ac
-ms.sourcegitcommit: d124123528776993eb5e7461dae8da3975d11d0d
+ms.openlocfilehash: 41cf3779f5572ecd63d11907eb80837e05e176c8
+ms.sourcegitcommit: d8d230791890cda532c263d04288dc13d2261c7f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99511364"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104757717"
 ---
 # <a name="visual-studio-subscriptions-with-github-enterprise"></a>GitHub Enterprise ile Visual Studio abonelikleri 
 
 Microsoft ile kurumsal anlaşma (EA) olan müşteriler, Visual Studio Standard abonelikleri ve GitHub Enterprise 'ı birlikte getiren yeni bir abonelik teklifi satın almaya uygundur. Visual Studio abonelerinin GitHub Enterprise 'ı edinmenin kolay ve ekonomik bir yoludur. 
 
-- Açık kaynak kodu, topluluk ve en iyi uygulamaları IDE ve iş akışlarınıza güvenli bir şekilde sunarak, Visual Studio ve GitHub ile yenilik yapın ölçeklendirin.
-- Harika uygulamalar oluşturmak, dağıtmak ve yönetmek için en kapsamlı kaynak kümesiyle geliştiriciler için en iyi sınıf geliştirme araçları ve hizmetleri kullanın. 
-- GitHub Enterprise üzerinde çekme isteklerini yönetin ve düzenleyicide yazıldığı kaynak kodu gözden geçirin. 
+- Açık kaynak kodu, topluluk ve en iyi uygulamaları IDE ve iş akışlarınıza güvenli bir şekilde taşıyarak yenilik yapın Visual Studio ve GitHub ile ölçeklendirin.
+- Harika uygulamalar oluşturmak, dağıtmak ve yönetmek için en kapsamlı kaynak kümesine sahip geliştiriciler için en iyi sınıf geliştirme araçları ve hizmetlerini kullanın. 
+- GitHub Enterprise 'ta "çekme istekleri" ni işbirliği yapıp yönetin ve düzenleyicide yazıldığı kaynak kodu gözden geçirin. 
 
 ## <a name="whats-available"></a>Neler mevcuttur? 
 
@@ -31,7 +31,7 @@ Aşağıdaki seçenekler kullanılabilir:
 
 Visual Studio Enterprise, Visual Studio Professional ve GitHub Enterprise da ayrıca kullanılabilir olmaya devam edecektir. 
 
-Avantajlar ve seçenekler hakkında daha fazla bilgi edinmek için lütfen adresini ziyaret edin <https://visualstudio.microsoft.com/subscriptions/visual-studio-github> . 
+Avantajlar ve seçenekler hakkında daha fazla bilgi edinmek için sayfasını ziyaret edin <https://visualstudio.microsoft.com/subscriptions/visual-studio-github> . 
 
 ## <a name="what-is-the-visual-studio-subscription-with-github-enterprise-setup-process"></a>GitHub Enterprise Kurulum işlemiyle Visual Studio aboneliği nedir?
 
@@ -78,14 +78,14 @@ GitHub 'a yeni başladıysanız, bazı faydalı kaynaklar aşağıda verilmişti
 Y: bir GitHub Enterprise hesabı ayarlama işlemi biraz zaman alabilir.  Beklediğiniz ve hiç şey duymadığınız takdirde GitHub yöneticinize ulaşmak isteyebilirsiniz.  Yöneticinizin hala üzerinde çalışıyor olması veya bir GitHub Enterprise hesabı oluşturmamayı tercih etmesi olabilir. 
 
 ### <a name="q-do-i-get-the-full-visual-studio-subscription-benefits"></a>S: tam Visual Studio aboneliği avantajlarına sahip mıyım?
-Y: GitHub Enterprise ile birlikte, Yazılım İndirmeleri, bulut Hizmetleri, teknik destek ve iş ortağı avantajları da dahil olmak üzere standart bir Visual Studio aboneliğinin tüm avantajlarını, aboneliğin ayrı olarak satın alınıp alınacaksa olduğu gibi alırsınız.
+Y: GitHub Enterprise ile birlikte, Yazılım İndirmeleri, bulut Hizmetleri, teknik destek ve iş ortağı avantajları dahil olmak üzere standart bir Visual Studio aboneliğinin tüm avantajlarını, aboneliğin ayrı olarak satın alındığına göre alırsınız.
 
 ## <a name="support-resources"></a>Destek kaynakları
 - [GitHub belgelerinden](https://docs.github.com/github/setting-up-and-managing-your-enterprise-account/managing-licenses-for-the-github-enterprise-and-visual-studio-bundle) GitHub ataması hakkında daha fazla bilgi edinin
 - [GitHub yardımı](https://help.github.com)'nda çok çeşitli GitHub konuları dizisiyle ilgili soruların yanıtlarını bulun.
 - Daha fazla yardıma mı ihtiyacınız var?  [GitHub desteğiyle](https://support.github.com/) iletişim kurun
 - [GitHub topluluk forumundaki](https://github.community/)diğer GitHub kullanıcılarından yardım alın.
-- Visual Studio abonelikleri için Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım için lütfen [Get Yardım](https://my.visualstudio.com/GetHelp) sayfamızı ziyaret edin.
+- Visual Studio abonelikleri için Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım için lütfen [Get Yardım](https://aka.ms/vssubscriberhelp) sayfamızı ziyaret edin.
 - Visual Studio IDE, Azure DevOps Services veya diğer Visual Studio ürünleri veya hizmetleri hakkında sorularınız mı var?  [Visual Studio desteği](https://visualstudio.microsoft.com/support/)' ni ziyaret edin.
 - GitHub Enterprise için [Teknik destek](https://support.microsoft.com/en-us/supportforbusiness/productselection?sapId=b77fe80f-5417-80bd-4b2a-275cf0018c24) alın.   
 

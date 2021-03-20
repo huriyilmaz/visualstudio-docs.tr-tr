@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: cabuschl
 manager: cabuschl
 ms.assetid: 36f0d9f1-fe28-469f-a54c-dc46638270a8
-ms.date: 09/03/2020
+ms.date: 03/19/2021
 ms.topic: how-to
 description: Abonelik yönetim portalına yeni aylık Visual Studio abonelikleri satın alma hakkında bilgi edinin
-ms.openlocfilehash: f6b835969fff3a8316a2b46c6e15217ebe3e33b1
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: 931f297a650926e4da5c13271a58091c9f00ddd3
+ms.sourcegitcommit: d8d230791890cda532c263d04288dc13d2261c7f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2020
-ms.locfileid: "92467602"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104757652"
 ---
 # <a name="add-new-monthly-visual-studio-subscriptions-to-the-subscriptions-administration-portal"></a>Yeni aylık Visual Studio aboneliklerini abonelikler yönetim portalına ekleme
 Bir Azure aboneliği kullanarak yeni aylık Visual Studio abonelikleri satın aldığınızda kullanıcılara atamak için bunları abonelikler yönetim portalına eklemeniz gerekebilir.  
@@ -40,6 +40,9 @@ Aylık abonelikler ekleme adımları, kuruluşunuzun sahip olduğu abonelik tür
 ## <a name="things-to-keep-in-mind"></a>Akılda tutulması gereken noktalar
 - Yeni aylık abonelikler ekleme seçeneği, yalnızca ilk satın alma işleminde kullanılabilir olacaktır.  Aylık abonelikler ekledikten sonra portalda her oturum açışınızda yeni abonelikler denetliyoruz. 
 - Yeni abonelikler bulunduğunda, bunların abonelere zaten atandığını görebilirsiniz.  Bunun nedeni, Azure aboneliğine erişimi olan başka Yöneticiler olduğundan ve kullanıcılara zaten yeni Visual Studio abonelikleri atamış olmalardır.  Ayrıca, bunları portala ekledığınıza göre, bu abonelikleri yönetebilirsiniz. 
+
+## <a name="support-resources"></a>Destek kaynakları
+- Visual Studio aboneliklerinin yönetimiyle ilgili yardım için [Visual Studio abonelikleri desteğiyle](https://aka.ms/vsadminhelp)görüşün.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 Artık abonelik eklemişseniz, bunları kullanıcılara atamaya hazırsınız demektir.  Bunu birkaç şekilde yapabilirsiniz:

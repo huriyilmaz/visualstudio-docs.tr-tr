@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 97bf7474-c6c2-49b3-b2c9-f1b2808eed1a
-ms.date: 10/22/2020
+ms.date: 03/19/2021
 ms.topic: conceptual
 description: Diğer adlar veya kolay adlar kullanılıyorsa oturum açma başarısız olabilir
-ms.openlocfilehash: 4d9b3194cf7636106740e35b230cc02aaab7eded
-ms.sourcegitcommit: bf5e2bba5acdcf05869b861211f8bb755081e5ce
+ms.openlocfilehash: d3a3cd962bafcf6a3e0c5aa20c98128233ace988
+ms.sourcegitcommit: d8d230791890cda532c263d04288dc13d2261c7f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92467615"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104757704"
 ---
 # <a name="signing-into-visual-studio-subscriptions-may-fail-when-using-aliases"></a>Diğer adlar kullanılırken Visual Studio aboneliklerinde oturum açma başarısız olabilir
 Oturum açmak için kullanılan hesap türüne bağlı olarak, kullanılabilir abonelikler ' de oturum açarken doğru görüntülenmeyebilir [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) . Olası bir neden, aboneliğin atandığı oturum açma kimliği yerine "diğer adlar" veya "kolay adlar" in kullanılması olabilir. Bu "diğer ad" olarak adlandırılır.
@@ -46,7 +46,7 @@ Bir şirket, UserPrincipalName (UPN) birincil SMTP adresi ile aynı olmayan bir 
 
 3. Oturum açma posta adresini abonenin UPN 'si olarak değiştirme 
 
-0. Değişiklikleri Kaydet 
+0. Değişiklikleri kaydedin 
 
 0. Abone portalı oturumunu kapatıp UPN 'yi kullanarak yeniden erişmeyi bildirin 
 
@@ -64,7 +64,7 @@ Aynı zamanda, Visual Studio abonelikleri portalında oturum açmak için kullan
 
 Visual Studio platformu, abonelik ayrıntılarını göstermek için birincil diğer adı önceliklendirir. 
 
-1. **Microsoft 'ta nasıl oturum açabileceğinizi yönetmek**için gidin. İstenirse Microsoft hesabı oturum açın. 
+1. **Microsoft 'ta nasıl oturum açabileceğinizi yönetmek** için gidin. İstenirse Microsoft hesabı oturum açın. 
 
 2. Hesap diğer adları ' nın altında, aboneliği atamak için kullanılan e-posta adresinin yanındaki **birincil yap** ' ı seçin. 
 
@@ -91,12 +91,14 @@ Bu seçeneklerin her ikisi de aşağıdaki adımları tamamlayarak yönetim port
 > [!NOTE]
 > Bireysel ve toplu değişiklikler için abonelere, oturum açma e-posta adresinin değiştiği ve güncelleştirilmiş e-posta adresini kullanarak oturum açması gereken yönergeler içeren bir e-posta gönderilir. Abone, daha önce diğer oturum açma adresi altında daha fazla avantaj sunduklarında, bunlara erişmek için diğer oturum açma adresini kullanmaya devam etmek için de önemlidir.  
 
+## <a name="support-resources"></a>Destek kaynakları
+- Visual Studio aboneliklerinin yönetimiyle ilgili yardım için [Visual Studio abonelikleri desteğiyle](https://aka.ms/vsadminhelp)görüşün.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)
 - [Azure DevOps belgeleri](/azure/devops/)
 - [Azure belgeleri](/azure/)
 - [Microsoft 365 belgeleri](/microsoft-365/)
-
 
 ## <a name="next-steps"></a>Sonraki adımlar
 Visual Studio aboneliklerini yönetme hakkında daha fazla bilgi edinin.

@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 0a02232c-437f-4c48-85c1-93ca7887236b
-ms.date: 10/26/2020
+ms.date: 03/19/2021
 ms.topic: how-to
 description: Aboneliklerde nelerin dahil olduğu ve bunların nasıl etkinleştirileceği hakkında bilgi edinin.
-ms.openlocfilehash: 351d81f29d01ec8322fcd6602d3ac4afccdb8ca1
-ms.sourcegitcommit: 8efe6b45d65f9db23f5575c15155fe363fa12cdb
+ms.openlocfilehash: 13c0633c7d775b082bf10cf21421ec843092231d
+ms.sourcegitcommit: d8d230791890cda532c263d04288dc13d2261c7f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92750148"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104757639"
 ---
 # <a name="about-your-subscription-benefits"></a>Abonelik avantajlarınız hakkında
 Bir Visual Studio abonesi olarak, abonelik düzeyinize bağlı olarak çeşitli avantajlara erişebilirsiniz. Avantajlar hakkında dikkat etmeniz gereken birkaç önemli nokta vardır.
@@ -34,7 +34,7 @@ Varsayılan olarak, ziyaret ettiğiniz tüm avantajlarınız görüntülenir <ht
    > ![Kategoriye göre avantajlar listesini filtrele](_img/about-benefits/categories.png "Kullanılabilir avantajlar listesini filtrelemek için bir kategori seçin.")
 
 ## <a name="benefits-and-offers-provided-by-partners"></a>İş ortakları tarafından sunulan avantajlar ve teklifler
-Eğitim ve araçlar gibi bazı popüler avantajlar dahil olmak üzere Visual Studio aboneliklerine dahil edilen avantajlardan bazıları iş ortaklarımız tarafından sağlanmaktadır. Bu tekliflerin ayrıntıları iş ortakları tarafından belirlenir. Örneğin:
+Eğitim ve araçlar gibi bazı popüler avantajlar dahil olmak üzere Visual Studio aboneliklerine dahil edilen avantajlardan bazıları iş ortaklarımız tarafından sağlanmaktadır. Bu tekliflerin ayrıntıları iş ortakları tarafından belirlenir. Örnek:
 - Avantajdaki süre, Visual Studio aboneliğinizin süresiyle eşleşmeyebilir. Örneğin, bir 12 aylık Visual Studio aboneliğiniz olabilir, ancak iş ortağının sağladığı avantajlardan birçoğu üç veya altı ay gibi daha kısa bir dönem için en son olabilir.
 - Bu avantajlar veya teklifler için kullanılabilen tüm destek iş ortakları tarafından da sağlanır.
 - Visual Studio aboneliğiniz yenilendiğinde bazı avantajlar yenilenir. Diğer durumlarda, iş ortağı teklifi "bir yaşam süresi içinde" olur ve yenilenmez. Bireysel avantajlar hakkında daha fazla bilgi için, içindekiler tablosundaki ilgili makaleye göz atın.
@@ -42,6 +42,9 @@ Eğitim ve araçlar gibi bazı popüler avantajlar dahil olmak üzere Visual Stu
 
 ## <a name="benefits-that-become-temporarily-unavailable"></a>Geçici olarak kullanılamayan avantajlar
 Nadiren de olsa, bazen teknik sorunlar kısa bir süre için kullanım dışı bir avantaj sağlayabilir. Bu gibi durumlarda, sorun çözümlenene kadar "geçici olarak kullanılamıyor" avantajı olduğunu göstermek için [Visual Studio abonelikleri portalındaki](https://my.visualstudio.com/benefits) avantaj kutucuğunu değiştireceksiniz ve bu süre kutucuğunu geri yükleyeceğiz ve avantajların yeniden kullanılabilmesi gerekir.
+
+## <a name="support-resources"></a>Destek kaynakları
+- Visual Studio abonelikleri için Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım için [Visual Studio abonelikleri desteğiyle](https://aka.ms/vssubscriberhelp)görüşün.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)
