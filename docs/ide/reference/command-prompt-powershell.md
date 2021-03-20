@@ -1,6 +1,6 @@
 ---
 title: Geliştiriciler için komut satırı kabukları
-description: .NET ve C++ araçlarını daha kolay kullanmanıza imkan tanıyan Visual Studio, geliştirici PowerShell ve Visual Studio Terminal için Geliştirici Komut İstemi bulmayı ve kullanmayı öğrenin.
+description: .NET ve C++ araçlarını daha kolay kullanmanıza imkan tanıyan Visual Studio Geliştirici Komut İstemi, Visual Studio Developer PowerShell ve Visual Studio Terminal 'yi bulmayı ve kullanmayı öğrenin.
 ms.date: 03/04/2021
 ms.custom: contperf-fy21q3
 helpviewer_keywords:
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - Visual Studio terminal
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
 no-loc: cmdlet
-ms.openlocfilehash: 406ef4e7d475df82a0e36732dd5e777959ea3b96
-ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
+ms.openlocfilehash: fb2c99037577528b77ab5c1b0c74bf7af9e73d1b
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102249741"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672331"
 ---
 # <a name="developer-command-prompt-and-developer-powershell"></a>Geliştirici Komut İstemi ve geliştirici PowerShell
 
 Visual Studio 2019, geliştiriciler için iki komut satırı kabuklarını içerir:
 
-- **Visual Studio için geliştirici komut istemi** -komut satırı geliştirici araçlarını kullanmayı daha kolay hale getirmek için belirli ortam değişkenlerine ayarlanmış standart bir komut istemi.
-- **Geliştirici PowerShell** -bir komut isteminden daha güçlü. Örneğin, bir komutun çıkışını başka bir komutun (bir olarak bilinir) çıktısını geçirebilirsiniz *cmdlet* cmdlet . Bu kabukta Geliştirici Komut İstemi ile aynı ortam değişkenleri ayarlanmış.
+- **Visual Studio Geliştirici komut istemi** -komut satırı geliştirici araçlarını kullanmayı daha kolay hale getirmek için ayarlanan belirli ortam değişkenlerine sahip standart bir komut istemi. Visual Studio 2015 sürümünden itibaren kullanılabilir.
+- **Visual Studio Geliştirici PowerShell** -bir komut isteminden daha güçlü. Örneğin, bir komutun çıkışını başka bir komutun (bir olarak bilinir) çıktısını geçirebilirsiniz *cmdlet* cmdlet . Bu kabukta Geliştirici Komut İstemi ile aynı ortam değişkenleri ayarlanmış. Visual Studio 2019 sürümünden itibaren kullanılabilir.
 
 Her iki kabukların de komut satırı geliştirici araçlarını daha kolay bir şekilde kullanmanızı sağlayan belirli ortam değişkenleri vardır. Bu kabukların birini açtıktan sonra, farklı yardımcı programlara ait komutları bulundukları yere bildirmek zorunda kalmadan girebilirsiniz. Çalıştırabileceğiniz komutlar şunlardır:
 
@@ -40,10 +40,6 @@ Visual Studio 2019 sürüm 16,5 ' den başlayarak, Visual Studio, bu kabukların
 :::image type="content" source="media/developer-command-prompt-for-vs/vs-terminal.png" alt-text="Birden çok sekme gösteren Visual Studio Terminal":::
 
 Visual Studio 'daki geliştirici kabularından birini ayrı bir uygulama olarak veya Terminal penceresinde açtığınızda, bu, geçerli çözümünüzün dizinine (yüklenmiş bir çözümünüz varsa) açılır. Bu davranış, komutları çözüme veya projelerine karşı çalıştırmayı kolaylaştırır.
-
-## <a name="prerequisites"></a>Önkoşullar
-
-- [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)
 
 ## <a name="start-the-shell-from-inside-visual-studio"></a>Kabuğu Visual Studio 'Nun içinden başlatın
 

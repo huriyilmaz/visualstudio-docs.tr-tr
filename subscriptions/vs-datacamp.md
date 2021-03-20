@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: fc33d419-78cf-485e-b558-5b7efa900f14
-ms.date: 12/02/2020
+ms.date: 03/17/2021
 ms.topic: how-to
 description: Seçili Visual Studio abonelikleriyle birlikte bulunan veri Camp eğitim aboneliği hakkında bilgi edinin.
-ms.openlocfilehash: c675d49f1a099c53dfdabe08a71f1c5545010f97
-ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
+ms.openlocfilehash: 270dffd75a0b442e5f275d0840033e54be5fe883
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96538091"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672021"
 ---
 # <a name="the-datacamp-training-benefit-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde DataCamp eğitimi avantajı
 Uygun Visual Studio abonelikleri, DataCamp abonelikleri içerir.  DataCamp ile, tarayıcınızın rahatlığıyla ihtiyacınız olan tüm veri bilimi yeteneklerini öğrenebilirsiniz. Ne zaman ve ne zaman öğreneceğinizi seçebilirsiniz. Yüklenecek yazılım olmadan ve özel donanım gereksinimleri olmadan öğrenme veri bilimi her zamankinden daha kolay.
@@ -68,7 +68,7 @@ Herhangi bir noktada durabilir ve bir sonraki oturumunuzda öğreticinizi sürd�
 | Visual Studio Enterprise (Standart)  | NFR<sup>1</sup> |Kullanılamaz  | Yok |
 | Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure | Kullanılamaz | Yok |
 
-<sup>1</sup>  *şunları içerir: iş için değil (NFR), FTE, en DEĞERLI profesyonel (MVP), bölgesel Müdürü (RD), Microsoft iş ortağı ağı (MPN), Visual Studio Endüstri ortağı (VSIP), Microsoft Sertifikalı Trainer, BizSpark, Imagine*
+<sup>1</sup>  *şunları Içerir: for SATıL (NFR), FTE, en DEĞERLI profesyonel (MVP), bölgesel yönetmen (RD), Microsoft iş ortağı ağı (MPN), Visual Studio Endüstri ortağı (VSIP), Microsoft Sertifikalı Trainer, BizSpark, Imagine.  Dışlar: NFR Basic*
 
 > [!NOTE]
 > Microsoft artık Visual Studio Professional yıllık abonelikler ve Visual Studio Enterprise yıllık abonelikleri bulut aboneliklerinde sunmayacaktır. Mevcut müşteriler deneyiminde değişiklik yapılmaz ve aboneliklerini yenileyebilme, artırma, azaltma veya iptal etme imkanına sahip olmayacaktır. Yeni müşterilerin, [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) Visual Studio 'yu satın almaya yönelik farklı seçeneklere göz atın.
@@ -80,7 +80,7 @@ Hangi aboneliğin kullanmakta olduğunuzdan emin değil misiniz?  [https://my.vi
   - Forum ve öğreticiler sağlayan [Datacamp topluluğu](https://www.datacamp.com/community/tutorials).
   - Arama destek konuları ve Kullanıcı sorularını isteme hakkında bilgi sahibi olan [Datacamp yardım merkezi](https://support.datacamp.com/hc).
   - [Destek isteği gönder](https://support.datacamp.com/hc/requests/new)
-- Visual Studio abonelikleri için Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım için Visual Studio [abonelikleri desteğiyle](https://visualstudio.microsoft.com/subscriptions/support/)görüşün.
+- Visual Studio abonelikleri için Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım için [Visual Studio abonelikleri desteğiyle](https://my.visualstudio.com/gethelp)görüşün.
 - Visual Studio IDE, Azure DevOps Services veya diğer Visual Studio ürünleri veya hizmetleri hakkında sorularınız mı var?  [Visual Studio desteği](https://visualstudio.microsoft.com/support/)' ni ziyaret edin.
 
 ## <a name="see-also"></a>Ayrıca bkz.

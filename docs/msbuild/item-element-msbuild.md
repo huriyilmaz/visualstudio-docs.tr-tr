@@ -18,20 +18,20 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 59a0660bb78e966150a6ef8d17dc24512a901a26
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2b5fd7129cfb21e5b59e8cdf0049b4ee75d59c87
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99913953"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672741"
 ---
 # <a name="item-element-msbuild"></a>Item öğesi (MSBuild)
 
 Kullanıcı tanımlı bir öğe ve onun meta verilerini içerir. Bir MSBuild projesinde kullanılan her öğe, bir öğesinin alt öğesi olarak belirtilmelidir `ItemGroup` .
 
-\<Project>
-\<ItemGroup>
-\<Item>
+\<Project>\
+&nbsp;\<ItemGroup>\
+&nbsp;&nbsp;\<Item>
 
 ## <a name="syntax"></a>Syntax
 
@@ -116,7 +116,7 @@ Aşağıdaki kod örneği, türünde iki öğenin nasıl bildirilemeyeceğini g�
 </ItemGroup>
 ```
 
-Aşağıdaki kod örneği, `Update` bir glob aracılığıyla eklenen *somefile.cs* adlı bir dosyadaki meta verileri değiştirmek için özniteliğini nasıl kullanacağınızı gösterir. (Yalnızca Visual Studio 2017 veya üzeri sürümlerde .NET Core projeleri için kullanılabilir.)
+Aşağıdaki kod örneği, `Update` bir glob aracılığıyla eklenen *somefile. cs* adlı bir dosyadaki meta verileri değiştirmek için özniteliğini nasıl kullanacağınızı gösterir. (Yalnızca Visual Studio 2017 veya üzeri sürümlerde .NET Core projeleri için kullanılabilir.)
 
 ```xml
 <ItemGroup>

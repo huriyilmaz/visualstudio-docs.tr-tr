@@ -11,14 +11,17 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 99daeeff40091bb3600b82b1f25cc9cf44c52cf9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 660bb5a2c3d235a347e478d55ae8176e87c5d626
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99848241"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672483"
 ---
 # <a name="getting-started-with-devinit"></a>Devinit ile çalışmaya başlama
+
+> [!IMPORTANT]
+> 12 Nisan 2021 itibariyle, Visual Studio 2019 ' den GitHub Codespaces 'a bağlanmak artık desteklenmeyecektir ve bu özel önizleme sona ermiştir. Bulut destekli bir iç döngü ve çok sayıda Visual Studio iş yükü için iyileştirilmiş VDı çözümleri için gelişen deneyimlere odaklanıyoruz. Bu `devinit` ve ilişkili araçların bir parçası olarak artık kullanılabilir olmayacaktır. Gelecekteki önizlemeler ve yol haritası bilgileri hakkında bilgi için, Visual Studio için geliştirici topluluğu forumumuza dahil etmeniz önerilir.
 
 devinit, basit bir komut çalıştırarak, herkesin koda almasını ve deponuzda üretken olmasını sağlamak için kullanabileceğiniz bir araçtır. Deponuzda SQL Server, Node.js, Docker veya IIS gibi bir şeyler için gereken tüm sistem genelinde bağımlılıkları tanımlamak için devinit kullanabilirsiniz. Devinit, deponuzu yüklemek için diğer araçları ve paket yöneticilerini çağırabilir. Bu bağımlılıkları [ üzerinde.devinit.js](devinit-json.md) ADLı bir JSON dosyasında tanımlarsınız ve sonra deponuzu kullanmak için bir sonraki kişinin yalnızca [`devinit init`](devinit-commands.md#init) Tüm bu bağımlılıkları yüklemek üzere çalıştırması gerekir. Bu nedenle, yeni bir depoya bir gün sonra ekleme yapmak yerine dakikalar içinde yapılabilir.
 

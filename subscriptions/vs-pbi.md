@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 383fc910-3f4c-474a-a3f8-0f13525f05e9
-ms.date: 12/02/2020
+ms.date: 03/17/2021
 ms.topic: how-to
 description: Seçili Visual Studio aboneliklerine dahil Power BI Pro aboneliği hakkında bilgi edinin.
-ms.openlocfilehash: 6d64c9e5d15e24dcf53dd5b45261305dffb43353
-ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
+ms.openlocfilehash: 1801ed8deae3294837078401420e16efdc016979
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96538078"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672910"
 ---
 # <a name="power-bi-pro-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Power BI Pro
 
@@ -63,16 +63,16 @@ Power BI Pro kullanmak için, bir hesap ayarlamanız veya mevcut bir hesabı kul
 
 | Abonelik düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilenebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standart)   | VL, Azure, perakende, seçili NFR<sup>1</sup> | Kullanılabilir       |  Evet|
-| GitHub Enterprise ile Visual Studio Enterprise aboneliği  | VL | Kullanılabilir       |  Evet|
+| Visual Studio Enterprise (Standart)   | VL, Azure, perakende, seçili NFR<sup>1</sup> | Kullanılabilir       |  Yes|
+| GitHub Enterprise ile Visual Studio Enterprise aboneliği  | VL | Kullanılabilir       |  Yes|
 | Visual Studio Professional (Standart, aylık bulut) | VL, Azure, perakende                                       | Kullanılamaz                                                            |NA         |
 | GitHub Enterprise ile Visual Studio Professional aboneliği | VL                                      | Kullanılamaz                                                            |NA         |
 | Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Kullanılamaz                                                            |NA         |
-| MSDN Platformları (Standart)                                          | VL, perakende                                              | Kullanılabilir       |  Evet|
+| MSDN Platformları (Standart)                                          | VL, perakende                                              | Kullanılabilir       |  Yes|
 | Visual Studio Enterprise (aylık bulut) | Azure                                       | Kullanılamaz                                  |NA|
 ||
 
-<sup>1</sup>  *şunları Içerir: for SATıLAMAZ (NFR), Visual Studio Endüstri ortağı (VSIP), BIZSPARK, mct Software & Services Geliştirici, mct Software & Service, en DEĞERLI profesyonel (MVP), bölgesel yönetmen (RD).  Dışlar: Microsoft İş Ortağı Ağı (MPN), FTE, Imagine.*
+<sup>1</sup>  *şunları Içerir: for SATıLAMAZ (NFR), Visual Studio Endüstri ortağı (VSIP), BIZSPARK, mct Software & Services Geliştirici, mct Software & Service, en DEĞERLI profesyonel (MVP), bölgesel yönetmen (RD).  Dışlar: Microsoft İş Ortağı Ağı (MPN), FTE, Imagine, NFR Basic.*
 
 > [!NOTE]
 > Microsoft artık Visual Studio Professional yıllık abonelikler ve Visual Studio Enterprise yıllık abonelikleri bulut aboneliklerinde sunmayacaktır. Mevcut müşteriler deneyiminde değişiklik yapılmaz ve aboneliklerini yenileyebilme, artırma, azaltma veya iptal etme imkanına sahip olmayacaktır. Yeni müşterilerin, [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) Visual Studio 'yu satın almaya yönelik farklı seçeneklere göz atın.
@@ -110,7 +110,7 @@ Y: Hayır.  Power BI Pro avantajı kamu kiracılarına eklenemiyor.
   - [Çevrimiçi belgelere](/power-bi/)göz atın.
   - Kaydolma sorunları mı yaşıyorsunuz?  [Bireysel olarak Power BI](/power-bi/service-self-service-signup-for-power-bi) kaydolma
   - Popüler sorunları bulun, topluluktan yardım alın veya [destek bileti sayfasında](https://powerbi.microsoft.com/support/)bir destek bileti gönderebilirsiniz.
-- Visual Studio abonelikleri için Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım için Visual Studio [abonelikleri desteğiyle](https://visualstudio.microsoft.com/subscriptions/support/)görüşün.
+- Visual Studio abonelikleri için Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım için [Visual Studio abonelikleri desteğiyle](https://my.visualstudio.com/gethelp) iletişim kurun
 - Visual Studio IDE, Azure DevOps Services veya diğer Visual Studio ürünleri veya hizmetleri hakkında sorularınız mı var?  [Visual Studio desteği](https://visualstudio.microsoft.com/support/)' ni ziyaret edin.
 
 ## <a name="see-also"></a>Ayrıca bkz.

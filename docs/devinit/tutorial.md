@@ -11,14 +11,17 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 32d407c4803c2b50276145a2c9a66c2c501f05ab
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5fc53a534b592b4f6a4799100ce16b1d45049457
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99874422"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104671800"
 ---
 # <a name="tutorial"></a>Öğretici
+
+> [!IMPORTANT]
+> 12 Nisan 2021 itibariyle, Visual Studio 2019 ' den GitHub Codespaces 'a bağlanmak artık desteklenmeyecektir ve bu özel önizleme sona ermiştir. Bulut destekli bir iç döngü ve çok sayıda Visual Studio iş yükü için iyileştirilmiş VDı çözümleri için gelişen deneyimlere odaklanıyoruz. Gelecekteki önizlemeler ve yol haritası bilgileri hakkında bilgi için, Visual Studio için geliştirici topluluğu forumumuza dahil etmeniz önerilir.
 
 Bu öğreticide, devinit ve Codespaces ile [Eshoponweb deposunu](https://github.com/andysterland/eShopOnWeb) ayarlamayı inceleyeceğiz. Bu öğreticide, [Başlarken sayfasında](getting-started-with-devinit.md)açıklandığı gibi devınit 'in zaten kullanılabildiği varsayılmaktadır.
 

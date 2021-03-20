@@ -11,14 +11,17 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 38a8ab363fffe1f13651afb4065833cfd3eb840f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c49f77fe8b32ce6617b34d522e36cc5988d0c33c
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99950451"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672291"
 ---
 # <a name="require-nuget"></a>require-nuget
+
+> [!IMPORTANT]
+> 12 Nisan 2021 itibariyle, Visual Studio 2019 ' den GitHub Codespaces 'a bağlanmak artık desteklenmeyecektir ve bu özel önizleme sona ermiştir. Bulut destekli bir iç döngü ve çok sayıda Visual Studio iş yükü için iyileştirilmiş VDı çözümleri için gelişen deneyimlere odaklanıyoruz. Bu `devinit` ve ilişkili araçların bir parçası olarak artık kullanılabilir olmayacaktır. Gelecekteki önizlemeler ve yol haritası bilgileri hakkında bilgi için, Visual Studio için geliştirici topluluğu forumumuza dahil etmeniz önerilir.
 
 `require-nuget`Araç NUGET CLI 'yı indirir ve öğesine ekler `PATH` . NuGet CLı, proje dosyalarında değişiklik yapmadan paketleri yüklemek, oluşturmak, yayımlamak ve yönetmek için NuGet işlevlerinin tam kapsamını sağlar. NuGet CLı hakkında [buradan](/nuget/reference/nuget-exe-cli-reference)daha fazla bilgi edinin.
 

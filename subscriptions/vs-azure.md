@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 872c5746-5357-4764-949b-aa525a0adf1a
-ms.date: 02/19/2021
+ms.date: 03/18/2021
 ms.topic: how-to
 description: Visual Studio aboneliğinize dahil edilen Azure DevTest bireysel kredi avantajını nasıl etkinleştireceğinizi öğrenin.
-ms.openlocfilehash: 0834020113ac4a383abe551ace0ae2e3181e0650
-ms.sourcegitcommit: 35fa920126b34c8d3839da53e3a4c2c6f509968f
+ms.openlocfilehash: 1fb85c64ec49d906ba843ac944d550ef1e41fd4d
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "102473380"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672263"
 ---
 # <a name="use-microsoft-azure-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Microsoft Azure kullanma
 Bir Visual Studio abonesi olarak, ek ücret ödemeden Microsoft Azure kullanabilirsiniz.  [Aylık Azure DevTest krediniz](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/)sayesinde Azure, geliştirme ve test için kişisel korumalı alanınız.  Sanal makineleri, bulut hizmetlerini ve diğer Azure kaynaklarını sağlayabilirsiniz.  Kredi tutarları abonelik düzeyine göre farklılık gösterir.
@@ -80,7 +80,7 @@ Kaynakları aktarma, harcama limitlerini kaldırma veya diğer Azure konuların�
 |              Visual Studio Professional aylık              |        Kullanılamaz        |                                                             |
 |                    Visual Studio test Pro                    |     $50 aylık kredi      |                             Yes                             |
 |                        MSDN Platformları                        |     $100 aylık kredi     |                             Yes                             |
-|               Visual Studio Enterprise-NFR\*               |     $150 aylık kredi     |                             Yes                             |
+|               Visual Studio Enterprise-NFR<sup>1</sup>                 |     $150 aylık kredi     |                             Yes                             |
 |                Visual Studio Enterprise-FTE                |     $150 aylık kredi     |                             Yes                             |
 |     Visual Studio Enterprise Microsoft İş Ortağı Ağı     |     $150 aylık kredi     |                             Yes                             |
 |    Visual Studio Professional Microsoft İş Ortağı Ağı    |        Kullanılamaz        |                                                             |
@@ -90,7 +90,7 @@ Kaynakları aktarma, harcama limitlerini kaldırma veya diğer Azure konuların�
 |      Visual Studio Enterprise – MCT Software & Hizmetleri      |     $100 aylık kredi     |                             Yes                             |
 | Visual Studio Enterprise – MCT Software & Services geliştiricisi |     $150 aylık kredi     |                             Yes                             |
 
-* Bir for Studio (NFR), en değerli profesyonel (MVP), bölgesel yönetmen (RD), Visual Studio sektör ortağı (VSıP) dahil değildir.
+<sup>1</sup>  *şunları Içerir: SATıLAMAZ (NFR), en DEĞERLI profesyonel (MVP), bölgesel Müdürü (RD), Visual Studio Endüstri ortağı (VSIP) hariç tutar: NFR Basic*
 
 > [!NOTE]
 > Microsoft artık Visual Studio Professional yıllık abonelikler ve Visual Studio Enterprise yıllık abonelikleri bulut aboneliklerinde sunmayacaktır. Mevcut müşteriler deneyiminde değişiklik yapılmaz ve aboneliklerini yenileyebilme, artırma, azaltma veya iptal etme imkanına sahip olmayacaktır. Yeni müşterilerin, [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) Visual Studio 'yu satın almaya yönelik farklı seçeneklere göz atın.

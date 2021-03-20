@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 588480a3-8806-4ea5-9915-c25974770069
-ms.date: 02/09/2021
+ms.date: 03/17/2021
 ms.topic: how-to
 description: Visual Studio aboneliğinize dahil olan Windows Geliştirici hesabı hakkında bilgi edinin.
-ms.openlocfilehash: a988dabb5849d13733c72ebb5976be489f67dd95
-ms.sourcegitcommit: 0f3606917cf5451e8c4e0b2e0c3fbb9113429645
+ms.openlocfilehash: 4ea61f0bdb131c20412c0b99bbd09cbc44777fb7
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100089599"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672767"
 ---
 # <a name="windows-developer-account-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Windows Geliştirici hesabı
 Seçili Visual Studio aboneliğine dahil olan Windows geliştirici hesabınız, Windows Mağazası 'na ücretsiz ve ücretli Windows uygulamaları göndermenize olanak tanır.
@@ -55,7 +55,7 @@ Bu işlem için bir "özel" tarayıcı penceresi oluşturmanızı öneririz.  Ö
 | Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure                                       | Kullanılamaz                                                           |NA|
 ||
 
-<sup>1</sup>  *şunları Içerir: for SATıM (NFR), FTE, Visual Studio Endüstri ortağı (VSIP), BIZSPARK, mct Software & Services geliştiricisi, en DEĞERLI profesyonel (MVP), bölgesel Müdürü (RD). Dışlar: Microsoft İş Ortağı Ağı (MPN), Imagine, MCT Software & Services.*
+<sup>1</sup>  *şunları Içerir: for SATıM (NFR), FTE, Visual Studio Endüstri ortağı (VSIP), BIZSPARK, mct Software & Services geliştiricisi, en DEĞERLI profesyonel (MVP), bölgesel Müdürü (RD). Dışlar: Microsoft İş Ortağı Ağı (MPN), Imagine, MCT Software & Services, NFR Basic.*
 
 > [!NOTE]
 > Microsoft artık Visual Studio Professional yıllık abonelikler ve Visual Studio Enterprise yıllık abonelikleri bulut aboneliklerinde sunmayacaktır. Mevcut müşteriler deneyiminde değişiklik yapılmaz ve aboneliklerini yenileyebilme, artırma, azaltma veya iptal etme imkanına sahip olmayacaktır. Yeni müşterilerin, [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) Visual Studio 'yu satın almaya yönelik farklı seçeneklere göz atın.
@@ -65,7 +65,7 @@ Hangi aboneliğin kullanmakta olduğunuzdan emin değil misiniz?  [https://my.vi
 ## <a name="support-resources"></a>Destek kaynakları
 - Windows Geliştirici hesabınızı kullanmakla ilgili yardıma mı ihtiyacınız var?  [Windows Geliştirme Merkezi](https://developer.microsoft.com/windows)'ndeki [destek](https://developer.microsoft.com/windows/support) kaynaklarına göz atın.
 - [Windows Geliştirme](/windows/)
-- Visual Studio abonelikleri için Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım için Visual Studio [abonelikleri desteğiyle](https://visualstudio.microsoft.com/subscriptions/support/)görüşün.
+- Visual Studio abonelikleri için Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım için Visual Studio [Visual Studio abonelikleri desteğiyle](https://my.visualstudio.com/gethelp)iletişim kurun.
 - Visual Studio IDE, Azure DevOps Services veya diğer Visual Studio ürünleri veya hizmetleri hakkında sorularınız mı var?  [Visual Studio desteği](https://visualstudio.microsoft.com/support/)' ni ziyaret edin.
 
 ## <a name="see-also"></a>Ayrıca bkz.

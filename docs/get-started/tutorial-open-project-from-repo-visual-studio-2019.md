@@ -2,7 +2,7 @@
 title: "Öğretici: Visual Studio 2019 ' de bir depoyu bir proje açın"
 description: Visual Studio 2019 kullanarak bir git veya Azure DevOps deposunda bir projeyi açmayı öğrenin.
 ms.custom: get-started
-ms.date: 02/11/2021
+ms.date: 03/18/2021
 ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
 ms.topic: tutorial
@@ -15,12 +15,12 @@ ms.workload:
 - dotnet
 - dotnetcore
 monikerRange: vs-2019
-ms.openlocfilehash: 5a637b2536c05e8f5678989f47dba61cd6ec7381
-ms.sourcegitcommit: 15109ead7991f52092502518a6f4d9061cc22cd2
+ms.openlocfilehash: 76dcd5061e2e12688f5119598071c3235e620967
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2021
-ms.locfileid: "100335499"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104671719"
 ---
 # <a name="tutorial-open-a-project-from-a-repo"></a>Öğretici: bir depodan bir proje açın
 
@@ -53,6 +53,9 @@ Ancak hangi sürümü yüklediğinizden bağımsız olarak, Visual Studio ile bi
    ![Visual Studio 2019 sürüm 16,8 ve sonraki sürümlerde hesap bilgilerinizi girdiğiniz veya düzenlediğiniz git Kullanıcı bilgileri iletişim kutusunun ekran görüntüsü](../ide/media/vs-2019/git-user-information-dialog.png)
 
     Bilgileri Global. gitconfig 'de ayarla dosyanıza eklemek için **Kaydet** ' i seçin. (Veya daha sonra **iptal**' i seçerek bunu yapmayı seçebilirsiniz.)
+
+    > [!TIP]
+    > Visual Studio 'da oturum açma hakkında daha fazla bilgi için bkz. [Visual Studio 'Da oturum açma](../ide/signing-in-to-visual-studio.md) sayfası. Ayrıca, GitHub hesabınızı kullanarak oturum açmak için nasıl kullanılacağına ilişkin belirli bilgiler için, [Visual Studio 'Da GitHub hesaplarıyla çalışma](../ide/work-with-github-accounts.md) sayfasına bakın.
 
     Ardından, Visual Studio otomatik olarak çözümü depodan yükler ve açar.
 
@@ -207,5 +210,6 @@ Visual Studio ile kod oluşturmaya hazırsanız, dile özgü aşağıdaki öğre
 
 - [Visual Studio 2017 ' de bir depoyu bir projeyi açma](tutorial-open-project-from-repo-visual-studio-2017.md)
 - [Visual Studio 2019 'de yeni git deneyimi](../ide/git-with-visual-studio.md)
+- [Git ve Takım Gezgini yan yana karşılaştırın](../ide/git-team-explorer-feature-comparison.md)
 - [Azure DevOps Services: Azure Repos ve Visual Studio ile çalışmaya başlama](/azure/devops/repos/git/gitquickstart/)
 - [Microsoft Learn: Azure DevOps ile çalışmaya başlama](/learn/modules/get-started-with-devops/)

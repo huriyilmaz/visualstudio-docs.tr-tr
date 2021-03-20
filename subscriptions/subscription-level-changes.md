@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: bb2fa359-8170-4db0-a0c5-d49fc692b0aa
-ms.date: 03/05/2021
+ms.date: 03/18/2021
 ms.topic: conceptual
 description: Visual Studio abonelik düzeyinizi yükseltmenin veya indirmeyle ilgili etkileri öğrenin.
-ms.openlocfilehash: ac4355149ba66cd06ae5c1abaeb57e7065631050
-ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
+ms.openlocfilehash: 93ea729280916cb62ba2b87ff820bb25069369d7
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102250099"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672988"
 ---
 # <a name="what-happens-when-you-change-visual-studio-subscription-levels"></a>Visual Studio abonelik düzeylerini değiştirdiğinizde ne olur?
 Visual Studio aboneliklerinde, yazılım, Araçlar, hizmetler ve diğer avantajlar abonelik düzeyinize göre değişir.  Genellikle abonelik düzeyiniz arttıkça, sağladığı avantajların daha güçlü olması gerekir.  
@@ -63,7 +63,7 @@ Visual Studio 'da her oturum açışınızda kimlik doğrulamasından geçen bir
 Geçerli aboneliğinizde sunulan avantajları kullanıyorsanız ancak sizinki indirgenme aboneliğinden yararlandıysanız, bu avantajlara erişiminizi kaybedebilirsiniz.  
 
 ## <a name="support-resources"></a>Destek kaynakları
-- Visual Studio abonelikleri için Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım için Visual Studio [abonelikleri desteğiyle](https://visualstudio.microsoft.com/subscriptions/support/)görüşün.
+- Visual Studio abonelikleri için Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım için [Visual Studio abonelikleri desteğiyle](https://my.visualstudio.com/gethelp)görüşün.
 - Visual Studio IDE, Azure DevOps veya diğer Visual Studio ürünleri veya hizmetleri hakkında sorularınız mı var?  [Visual Studio desteği](https://visualstudio.microsoft.com/support/)' ni ziyaret edin.
 
 ## <a name="see-also"></a>Ayrıca bkz.

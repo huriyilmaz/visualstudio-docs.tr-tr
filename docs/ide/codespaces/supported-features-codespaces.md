@@ -11,14 +11,18 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 monikerRange: vs-2019
-ms.openlocfilehash: 1a94915748f6c7cedb19a0b27c67eb67d6086963
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ebd64a314f1c4d6afd7b6e6fcc3b38148ff68225
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99971147"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672975"
 ---
 # <a name="supported-visual-studio-features-preview"></a>Desteklenen Visual Studio özellikleri (Önizleme)
+
+> [!Important] 
+> 12 Nisan 2021 itibariyle, Visual Studio 2019 ' den GitHub Codespaces 'a bağlanmak artık desteklenmeyecektir ve bu özel önizleme sona ermiştir. Bulut destekli bir iç döngü ve çok sayıda Visual Studio iş yükü için iyileştirilmiş VDı çözümleri için gelişen deneyimlere odaklanıyoruz. Gelecekteki önizlemeler ve yol haritası bilgileri hakkında bilgi için, Visual Studio için [Geliştirici topluluğu forumumuza](https://developercommunity.visualstudio.com/home) dahil etmeniz önerilir. 
+
 
 Visual Studio, bir codespace 'e bağlanırken zengin bir geliştirme deneyimi sağlar. Kaynak kodunuzu düzenleme, hata ayıklama, test etme ve sürüm ile proje şablonları, zengin kod gezintisi ve IntelliSense gibi üretkenlik özelliklerini düzenlemek için bildiğiniz Visual Studio iç döngüsü araçlarını edinin.
 

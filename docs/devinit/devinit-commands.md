@@ -11,14 +11,17 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 9cd9fef6cebdefc190d37c067616e51c6d3e372f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d6c8f487fcb35fc210db57f0c8a49a2a86f909e9
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99908127"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672216"
 ---
 # <a name="devinit-commands"></a>devinit komutları
+
+> [!IMPORTANT]
+> 12 Nisan 2021 itibariyle, Visual Studio 2019 ' den GitHub Codespaces 'a bağlanmak artık desteklenmeyecektir ve bu özel önizleme sona ermiştir. Bulut destekli bir iç döngü ve çok sayıda Visual Studio iş yükü için iyileştirilmiş VDı çözümleri için gelişen deneyimlere odaklanıyoruz. Bu `devinit` ve ilişkili araçların bir parçası olarak artık kullanılabilir olmayacaktır. Gelecekteki önizlemeler ve yol haritası bilgileri hakkında bilgi için, Visual Studio için geliştirici topluluğu forumumuza dahil etmeniz önerilir.
 
 ## <a name="init"></a>Init
 
@@ -34,10 +37,10 @@ Komut için isteğe bağlı seçenekler `devinit init` .
 
 | Bağımsız Değişken             | Gerekli | Açıklama                                                               |
 |----------------------|----------|---------------------------------------------------------------------------|
-| -f,--dosyası            | Hayır       | `.devinit.json`Dosyanın yolu.                                         |
-| --hata-eylem       | Hayır       | Hataların nasıl işleneceğini belirtir. Seçenekler: durdur, Yoksay, devam et (varsayılan).|
-| -v,--verbose         | Hayır       | Ayrıntılı çıktıyı yay.                                                      |
-| -n,--Kuru çalıştırma         | Hayır       | Kuru çalıştırma.                                                                  |
+| -f,--dosyası            | No       | `.devinit.json`Dosyanın yolu.                                         |
+| --hata-eylem       | No       | Hataların nasıl işleneceğini belirtir. Seçenekler: durdur, Yoksay, devam et (varsayılan).|
+| -v,--verbose         | No       | Ayrıntılı çıktıyı yay.                                                      |
+| -n,--Kuru çalıştırma         | No       | Kuru çalıştırma.                                                                  |
 
 #### <a name="--file-argument"></a>--Dosya bağımsız değişkeni
 
@@ -82,11 +85,11 @@ Komut için Seçenekler `devinit run` .
 | Bağımsız Değişken                                      | Gerekli | Açıklama                                                                          |
 |-----------------------------------------------|----------|--------------------------------------------------------------------------------------|
 | -t,--aracı                                     | Yes      | Gereklidir. Araç adı.                                                             |
-| -ı,--girişi                                    | Hayır       | Araç giriş değeri. Örneğin, bir dosya adı, paket veya ad.                     |
-| --hata-eylem                                | Hayır       | Araç hatalarının nasıl işleneceğini belirtir: durdur, Yoksay, devam et. Varsayılan değer durdurulur. |
-| -v,--verbose                                  | Hayır       | Ayrıntılı çıktıyı yay.                                                                 |
-| -n,--Kuru çalıştırma                                  | Hayır       | Kuru çalıştırma.                                                                             |
-| --&lt;arg1 &gt; &lt; arg2 &gt; ... &lt; argN&gt;  | Hayır       | Araca ek komut satırı bağımsız değişkenleri.                                       |
+| -ı,--girişi                                    | No       | Araç giriş değeri. Örneğin, bir dosya adı, paket veya ad.                     |
+| --hata-eylem                                | No       | Araç hatalarının nasıl işleneceğini belirtir: durdur, Yoksay, devam et. Varsayılan değer durdurulur. |
+| -v,--verbose                                  | No       | Ayrıntılı çıktıyı yay.                                                                 |
+| -n,--Kuru çalıştırma                                  | No       | Kuru çalıştırma.                                                                             |
+| --&lt;arg1 &gt; &lt; arg2 &gt; ... &lt; argN&gt;  | No       | Araca ek komut satırı bağımsız değişkenleri.                                       |
 
 #### <a name="--error-action-argument"></a>--hata-eylem bağımsız değişkeni
 
@@ -152,7 +155,7 @@ devinit version
 
 Devinit için geçerli sürüm bilgilerini yazdırır.
 
-## <a name="help"></a>Yardım
+## <a name="help"></a>Help
 
 ```console
 devinit help

@@ -17,22 +17,20 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: cd43be13351309e0f4715ee889fb910f4f7e49a3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ceb6b01f06964b8c79fa7357da6688e2e0229799
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99963204"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672832"
 ---
 # <a name="common-msbuild-project-items"></a>Yaygın MSBuild proje öğeleri
 
 MSBuild 'de, bir öğe bir veya daha fazla dosyaya adlandırılmış bir başvurudur. Öğeler, dosya adları, yollar ve sürüm numaraları gibi meta verileri içerir. Visual Studio 'daki tüm proje türlerinde ortak olarak birkaç öğe vardır. Bu öğeler *Microsoft. Build. CommonTypes. xsd* dosyasında tanımlanmıştır.
 
-## <a name="common-items"></a>Ortak öğeler
+Bu makalede tüm ortak proje öğeleri listelenir.
 
-Tüm ortak proje öğelerinin listesi aşağıda verilmiştir.
-
-### <a name="reference"></a>Başvuru
+## <a name="reference"></a>Başvuru
 
 Projedeki derleme (yönetilen) başvurusunu temsil eder.
 
@@ -45,7 +43,7 @@ Projedeki derleme (yönetilen) başvurusunu temsil eder.
 |Diğer adlar|İsteğe bağlı dize. Başvuru için herhangi bir diğer ad.|
 |Özel|İsteğe bağlı Boolean. Başvurunun çıkış klasörüne kopyalanıp kopyalanmayacağını belirtir. Bu öznitelik, Visual Studio IDE içinde olan başvurunun yereli **Kopyala** özelliğiyle eşleşir.|
 
-### <a name="comreference"></a>COMReference
+## <a name="comreference"></a>COMReference
 
 Projedeki COM (yönetilmeyen) bileşen başvurusunu temsil eder. Bu öğe yalnızca .NET projeleri için geçerlidir.
 
@@ -59,7 +57,7 @@ Projedeki COM (yönetilmeyen) bileşen başvurusunu temsil eder. Bu öğe yalnı
 |WrapperTool|İsteğe bağlı dize. Bileşende kullanılan sarmalayıcı aracının adı, örneğin, "Tlbimp."|
 |Yalıtılmış|İsteğe bağlı Boolean. Bileşenin bir reg-Free bileşeni olup olmadığını belirtir.|
 
-### <a name="comfilereference"></a>COMFileReference
+## <a name="comfilereference"></a>COMFileReference
 
 `TypeLibFiles` [ResolveComReference](resolvecomreference-task.md) hedefinin parametresine geçirilen tür kitaplıklarının listesini temsil eder. Bu öğe yalnızca .NET projeleri için geçerlidir.
 
@@ -67,7 +65,7 @@ Projedeki COM (yönetilmeyen) bileşen başvurusunu temsil eder. Bu öğe yalnı
 |---------------|-----------------|
 |WrapperTool|İsteğe bağlı dize. Bileşende kullanılan sarmalayıcı aracının adı, örneğin, "Tlbimp."|
 
-### <a name="nativereference"></a>NativeReference
+## <a name="nativereference"></a>NativeReference
 
 Yerel bir bildirim dosyasını veya bu tür bir dosyaya yapılan başvuruyu temsil eder.
 
@@ -76,7 +74,7 @@ Yerel bir bildirim dosyasını veya bu tür bir dosyaya yapılan başvuruyu tems
 |Ad|Gerekli dize. Bildirim dosyasının temel adı.|
 |HintPath|Gerekli dize. Bildirim dosyasının göreli yolu.|
 
-### <a name="projectreference"></a>ProjectReference
+## <a name="projectreference"></a>ProjectReference
 
 Başka bir projenin başvurusunu temsil eder. `ProjectReference` öğeler, hedef tarafından [başvuru](#reference) öğelerine dönüştürülür `ResolveProjectReferences` `ProjectReference` . bu nedenle, dönüştürme işlemi onun üzerine yazmazsa, başvurudaki geçerli meta veriler üzerinde geçerli olabilir.
 
@@ -93,7 +91,7 @@ Başka bir projenin başvurusunu temsil eder. `ProjectReference` öğeler, hedef
 |SkipGetTargetFrameworkProperties|İsteğe bağlı Boolean. İse `true` , başvurulan projeyi en uyumlu değere anlaşmadan oluşturur `TargetFramework` . Varsayılan olarak olur `false` .|
 |Targets|İsteğe bağlı `string[]` . Başvurulan projelerde oluşturulması gereken hedeflerin noktalı virgülle ayrılmış listesi. Varsayılan, varsayılan `$(ProjectReferenceBuildTargets)` hedefleri gösteren varsayılan değeri boş olan değeridir.|
 
-### <a name="compile"></a>Se
+## <a name="compile"></a>Se
 
 Derleyicinin kaynak dosyalarını temsil eder.
 
@@ -105,7 +103,7 @@ Derleyicinin kaynak dosyalarını temsil eder.
 | Görünür | İsteğe bağlı Boolean. Visual Studio 'da **Çözüm Gezgini** dosyanın görüntülenip görüntülenmeyeceğini gösterir. |
 | CopyToOutputDirectory | İsteğe bağlı dize. Dosyanın çıkış dizinine kopyalanıp kopyalanmayacağını belirler. Değerler şunlardır:<br /><br /> 1. hiçbir şekilde<br />2. her zaman<br />3. Preservenebatı |
 
-### <a name="embeddedresource"></a>EmbeddedResource
+## <a name="embeddedresource"></a>EmbeddedResource
 
 Oluşturulan derlemeye gömülebilen kaynakları temsil eder.
 
@@ -120,7 +118,7 @@ Oluşturulan derlemeye gömülebilen kaynakları temsil eder.
 | CopyToOutputDirectory | İsteğe bağlı dize. Dosyanın çıkış dizinine kopyalanıp kopyalanmayacağını belirler. Değerler şunlardır:<br /><br /> 1. hiçbir şekilde<br />2. her zaman<br />3. Preservenebatı |
 | LogicalName | Gerekli dize. Gömülü kaynağın mantıksal adı. |
 
-### <a name="content"></a>Content
+## <a name="content"></a>Content
 
 Projeye derlenmemiş ancak birlikte gömülebilir veya onunla birlikte yayımlanabilir olan dosyaları temsil eder.
 
@@ -136,7 +134,7 @@ Projeye derlenmemiş ancak birlikte gömülebilir veya onunla birlikte yayımlan
 | Görünür | İsteğe bağlı Boolean. Visual Studio 'da **Çözüm Gezgini** dosyanın görüntülenip görüntülenmeyeceğini gösterir. |
 | CopyToOutputDirectory | İsteğe bağlı dize. Dosyanın çıkış dizinine kopyalanıp kopyalanmayacağını belirler. Değerler şunlardır:<br /><br /> 1. hiçbir şekilde<br />2. her zaman<br />3. Preservenebatı |
 
-### <a name="none"></a>Yok
+## <a name="none"></a>Yok
 
 Yapı işleminde rolü olmaması gereken dosyaları temsil eder.
 
@@ -150,7 +148,7 @@ Yapı işleminde rolü olmaması gereken dosyaları temsil eder.
 | Görünür | İsteğe bağlı Boolean. Visual Studio 'da **Çözüm Gezgini** dosyanın görüntülenip görüntülenmeyeceğini gösterir. |
 | CopyToOutputDirectory | İsteğe bağlı dize. Dosyanın çıkış dizinine kopyalanıp kopyalanmayacağını belirler. Değerler şunlardır:<br /><br /> 1. hiçbir şekilde<br />2. her zaman<br />3. Preservenebatı |
 
-### <a name="assemblymetadata"></a>AssemblyMetadata
+## <a name="assemblymetadata"></a>AssemblyMetadata
 
 Olarak oluşturulacak derleme özniteliklerini temsil eder `[AssemblyMetadata(key, value)]` .
 
@@ -162,7 +160,7 @@ Olarak oluşturulacak derleme özniteliklerini temsil eder `[AssemblyMetadata(ke
 > [!NOTE]
 > Bu öğe, .NET 5 (ve .NET Core) ve sonraki sürümler için SDK 'Yı kullanan projeler için geçerlidir.
 
-### <a name="internalsvisibleto"></a>InternalsVisibleTo
+## <a name="internalsvisibleto"></a>InternalsVisibleTo
 
 Derleme öznitelikleri olarak yayınlanedilecek derlemeleri belirtir `[InternalsVisibleTo(..)]` .
 
@@ -174,15 +172,15 @@ Derleme öznitelikleri olarak yayınlanedilecek derlemeleri belirtir `[Internals
 > [!NOTE]
 > Bu öğe, .NET 5 (ve .NET Core) ve sonraki sürümler için SDK 'Yı kullanan projeler için geçerlidir.
 
-### <a name="baseapplicationmanifest"></a>BaseApplicationManifest
+## <a name="baseapplicationmanifest"></a>BaseApplicationManifest
 
 Yapı için temel uygulama bildirimini temsil eder ve ClickOnce dağıtımı güvenlik bilgilerini içerir.
 
-### <a name="codeanalysisimport"></a>Codeanalysisımport
+## <a name="codeanalysisimport"></a>Codeanalysisımport
 
 İçeri aktarılacak FxCop projesini temsil eder.
 
-### <a name="import"></a>İçeri Aktarma
+## <a name="import"></a>İçeri Aktar
 
 Ad alanları Visual Basic Derleyicisi tarafından içeri aktarılması gereken derlemeleri temsil eder.
 

@@ -7,12 +7,12 @@ ms.assetid: 4c099fe8-883e-4789-9468-387ce5697dfe
 ms.date: 10/28/2020
 ms.topic: overview
 description: Abonelik Yönetici portalı ile kuruluşunuzun Visual Studio aboneliklerini yönetmeye nasıl başlaleyeceğinizi öğrenin.
-ms.openlocfilehash: a9e23208bea480167452711442b52fb84b2bd8ee
-ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
+ms.openlocfilehash: 3ac02dcd49af1c3277be0c3a15a2e3bf9c735f04
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92904551"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104673079"
 ---
 # <a name="overview-of-the-visual-studio-subscriptions-administrator-portal"></a>Visual Studio abonelikleri yönetici portalına genel bakış
 
@@ -25,7 +25,7 @@ Portalın turuna katılın.
 ## <a name="important-considerations"></a>Önemli noktalar
 Visual Studio abonelikleri Yönetici portalını kullanırken bu noktaları aklınızda bulundurun:
 - **Visual Studio abonelikleri Kullanıcı başına lisanslanır.** Her abone, yazılımı geliştirme ve test için gereken sayıda bilgisayar üzerinde kullanabilir.
-- Her abone için, kuruluşunuzun satın aldığı Visual Studio aboneliğine karşılık gelen **yalnızca bir abonelik düzeyi atayın** . Birden fazla abonelik düzeyi atanmış abonelere sahipseniz, ayarlarını yalnızca bir tane olacak şekilde düzenleyin.
+- Her abone için, kuruluşunuzun satın aldığı Visual Studio aboneliğine karşılık gelen **yalnızca bir abonelik düzeyi atayın**. Birden fazla abonelik düzeyi atanmış abonelere sahipseniz, ayarlarını yalnızca bir tane olacak şekilde düzenleyin.
 - Abonelik yükseltildiğinde ("adım yukarı" lisans satın alındıktan sonra) veya daha düşük bir düzeyde yenileniyorsa **, abonenin abonelik düzeyinin güncellenmesi gerekir** .
 - **Abonelikler arasında abonelikleri paylaşmayın.** Abonelikler adlandırılmış bireylere atanmalıdır.  Takımlara abonelikler atamaya izin verilmez.  Abonelik avantajlarının tamamını veya bir kısmını (geliştirme ve test için yazılım, Microsoft Azure, e-öğrenme vb.) kullanan herkese bir abonelik atamanız gerekir.
 
@@ -57,7 +57,7 @@ Görüntülemekte olduğunuz anlaşma hakkında daha fazla bilgi için, anlaşma
 - [Visual Studio lisanslama teknik incelemesi](https://visualstudio.microsoft.com/wp-content/uploads/2019/06/Visual-Studio-Licensing-Whitepaper-May-2019.pdf)
 - [Abonelik seçeneklerini ve fiyatlandırmalarını karşılaştırma](https://visualstudio.microsoft.com/vs/pricing)
 - [Visual Studio IDE özelliklerini karşılaştırma](https://visualstudio.microsoft.com/vs/compare)
-- [Visual Studio Yöneticisi ve abonelikleri desteği](https://visualstudio.microsoft.com/support/support-overview-vs)
+- [Abonelik desteği](https://visualstudio.microsoft.com/subscriptions/support/)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)

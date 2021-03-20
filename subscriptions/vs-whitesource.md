@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 5e5d3f1a-533d-42eb-960e-01bb6bc7ca16
-ms.date: 12/02/2020
+ms.date: 03/17/2021
 ms.topic: how-to
 description: Visual Studio aboneliğinize dahil edilen beyaz kaynak sürgüsü aboneliğini nasıl etkinleştireceğinizi öğrenin.
-ms.openlocfilehash: dffa4645795e771b2f947426907ed3e03caedf80
-ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
+ms.openlocfilehash: def7e206fee75dcc76212df2163e41a8b1a96a83
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96537688"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104671813"
 ---
 # <a name="whitesource-bolt-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde beyaz kaynak sürgüsü
 
@@ -42,8 +42,8 @@ Açık kaynak güvenlik açıklarını bulup düzeltir ve derinizdeki tüm açı
 
 | Abonelik düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilenebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standart)   | VL, Azure, perakende, seçili NFR<sup>1</sup> | 6 ay       |  Evet       |
-| GitHub Enterprise ile Visual Studio Enterprise aboneliği | VL | 6 ay       |  Evet       |
+| Visual Studio Enterprise (Standart)   | VL, Azure, perakende, seçili NFR<sup>1</sup> | 6 ay       |  Yes       |
+| GitHub Enterprise ile Visual Studio Enterprise aboneliği | VL | 6 ay       |  Yes       |
 | Visual Studio Professional (Standart) | VL, Azure, perakende                                       | Kullanılamaz                                                           |NA         |
 | GitHub Enterprise ile Visual Studio Professional aboneliği | VL                                      | Kullanılamaz                                                           |NA         |
 | Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Kullanılamaz                                                           |NA         |
@@ -51,14 +51,14 @@ Açık kaynak güvenlik açıklarını bulup düzeltir ve derinizdeki tüm açı
 | Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure                                       | Kullanılamaz                                                           |NA|
 ||
 
-<sup>1</sup>  *şunları içerir: Microsoft iş ortağı ağı (Kurumsal).  Hariç tutar: satılamaz (NFR), Visual Studio Endüstri ortağı (VSıP), FTE, MCT Software & Services geliştiricisi, BizSpark, Imagine, en değerli profesyonel (MVP), bölgesel yönetmen (RD).  MCT Software & Hizmetleri.*
+<sup>1</sup>  *şunları içerir: Microsoft iş ortağı ağı (Kurumsal).  Hariç tutar: satılamaz (NFR), Visual Studio Endüstri ortağı (VSıP), FTE, MCT Software & Services geliştiricisi, BizSpark, Imagine, en değerli profesyonel (MVP), bölgesel yönetmen (RD).  MCT Software & Hizmetleri, NFR Basic.*
 
 > [!NOTE]
 > Microsoft artık Visual Studio Professional yıllık abonelikler ve Visual Studio Enterprise yıllık abonelikleri bulut aboneliklerinde sunmayacaktır. Mevcut müşteriler deneyiminde değişiklik yapılmaz ve aboneliklerini yenileyebilme, artırma, azaltma veya iptal etme imkanına sahip olmayacaktır. Yeni müşterilerin, [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) Visual Studio 'yu satın almaya yönelik farklı seçeneklere göz atın.
 
 ## <a name="support-resources"></a>Destek kaynakları
 - Beyaz kaynak sürgüsü ile ilgili yardım mı gerekiyor?  Beyaz kaynaklı bir Cıvatiyle sohbet edin https://www.whitesourcesoftware.com/vse_whitesource_bolt/
-- Visual Studio abonelikleri için Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım için Visual Studio [abonelikleri desteğiyle](https://visualstudio.microsoft.com/subscriptions/support/)görüşün.
+- Visual Studio abonelikleri için Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım için Visual Studio [Visual Studio abonelikleri desteğiyle](https://my.visualstudio.com/gethelp)iletişim kurun.
 - Visual Studio IDE, Azure DevOps Services veya diğer Visual Studio ürünleri veya hizmetleri hakkında sorularınız mı var?  [Visual Studio desteği](https://visualstudio.microsoft.com/support/)' ni ziyaret edin.
 
 ## <a name="see-also"></a>Ayrıca bkz.

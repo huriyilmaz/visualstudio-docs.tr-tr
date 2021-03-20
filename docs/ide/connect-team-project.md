@@ -1,5 +1,5 @@
 ---
-title: Takım Gezgini projelere bağlanma
+title: Ekip Gezgini'nde projelere bağlanma
 description: Projeleri geliştirmek ve yönetmek için Visual Studio 'da Takım Gezgini kullanarak takım üyeleriyle nasıl çalışacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/17/2020
@@ -7,14 +7,14 @@ ms.topic: conceptual
 ms.author: tglee
 author: TerryGLee
 ms.manager: jillfra
-ms.openlocfilehash: fd482bd2225025b5cd8a14f0387e938626fad6d5
-ms.sourcegitcommit: 66cda27b63c9b55782b1db223a6dbda9f8cabe13
+ms.openlocfilehash: 58603b72128af1c6dd9caae93f92c435f0851ada
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95006321"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104673001"
 ---
-# <a name="connect-to-projects-in-team-explorer"></a>Takım Gezgini projelere bağlanma
+# <a name="connect-to-projects-in-team-explorer"></a>Ekip Gezgini'nde projelere bağlanma
 
 ::: moniker range="vs-2017"
 
@@ -38,7 +38,7 @@ Bir proje geliştirmek ve size, takımınızı ya da projelerinize atanan işler
 ::: moniker range="vs-2017"
 
 > [!TIP]
-> Visual Studio 'yu açıp **Takım Gezgini** görünmezse, **View**  >  menü çubuğundan **Takım Gezgini** görüntüle ' yi seçerek veya **CTRL** + **&#92;**, **CTRL** tuşuna basarak dosyayı açın + **M**.
+> Visual Studio 'yu açıp **Takım Gezgini** görünmezse,   >  menü çubuğundan **Takım Gezgini** görüntüle ' yi seçerek veya **CTRL** + **&#92;**, **CTRL** tuşuna basarak dosyayı açın + .
 
 ::: moniker-end
 
@@ -63,6 +63,7 @@ Bir projeye bağlanmak için:
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
+- [Git ve Takım Gezgini yan yana karşılaştırın](git-team-explorer-feature-comparison.md)
 - [Visual Studio 'da yeni git deneyimi](git-with-visual-studio.md)
 - [Öğretici: bir depodan bir proje açın](../get-started/tutorial-open-project-from-repo.md)
 - [Takım Gezgini başvurusu](reference/team-explorer-reference.md)

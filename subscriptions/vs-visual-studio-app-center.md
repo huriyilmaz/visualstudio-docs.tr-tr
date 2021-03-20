@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabushcl
 ms.assetid: badd1d4a-90a6-46de-a037-945a91e6019b
-ms.date: 12/02/2020
+ms.date: 03/17/2021
 ms.topic: how-to
 description: Visual Studio aboneliklerine dahil Visual Studio App Center avantajı hakkında bilgi edinin.
-ms.openlocfilehash: 8468b7641d12eca4db09d55d8d308ef5a913bc3c
-ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
+ms.openlocfilehash: 85d8a8aeda72e9a5c8fc94e98d1cbec22af32221
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96537779"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672715"
 ---
 # <a name="visual-studio-app-center-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Visual Studio App Center
 
@@ -42,15 +42,15 @@ Visual Studio App Center kullanmaya başlamak kolaydır.
 
 | Abonelik düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilenebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standart, aylık bulut)   | VL, Azure, perakende, NFR<sup>1</sup> | Dahil       |  Evet          |
-| GitHub Enterprise ile Visual Studio Enterprise aboneliği  | VL | Dahil       |  Evet          |
-| Visual Studio Professional (Standart, aylık bulut) | VL, Azure, perakende                                       | Dahil                                                            |Evet |
-| GitHub Enterprise ile Visual Studio Professional aboneliği | VL                                      | Dahil                                                            |Evet |
-| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Dahil                                                            |Evet |
-| MSDN Platformları (Standart)                                          | VL, perakende                                              | Dahil                                                            |Evet |
+| Visual Studio Enterprise (Standart, aylık bulut)   | VL, Azure, perakende, NFR<sup>1</sup> | Dahil       |  Yes          |
+| GitHub Enterprise ile Visual Studio Enterprise aboneliği  | VL | Dahil       |  Yes          |
+| Visual Studio Professional (Standart, aylık bulut) | VL, Azure, perakende                                       | Dahil                                                            |Yes |
+| GitHub Enterprise ile Visual Studio Professional aboneliği | VL                                      | Dahil                                                            |Yes |
+| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Dahil                                                            |Yes |
+| MSDN Platformları (Standart)                                          | VL, perakende                                              | Dahil                                                            |Yes |
 ||
 
-<sup>1</sup>  *şunları Içerir: for SATıL (NFR), FTE, Visual Studio Endüstri ortağı (VSIP), ımagine, Microsoft iş ortağı ağı (MPN), mct yazılım & Hizmetleri, mct Software & Services Geliştirici, BizSpark, en DEĞERLI profesyonel (MVP), bölgesel yönetmen (RD).*
+<sup>1</sup>  *şunları Içerir: for SATıL (NFR), FTE, Visual Studio Endüstri ortağı (VSIP), ımagine, Microsoft iş ortağı ağı (MPN), mct yazılım & Hizmetleri, mct Software & Services Geliştirici, BizSpark, en DEĞERLI profesyonel (MVP), bölgesel yönetmen (RD).  Dışlar: NFR Basic*
 
 > [!NOTE]
 > Microsoft artık Visual Studio Professional yıllık abonelikler ve Visual Studio Enterprise yıllık abonelikleri bulut aboneliklerinde sunmayacaktır. Mevcut müşteriler deneyiminde değişiklik yapılmaz ve aboneliklerini yenileyebilme, artırma, azaltma veya iptal etme imkanına sahip olmayacaktır. Yeni müşterilerin, [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) Visual Studio 'yu satın almaya yönelik farklı seçeneklere göz atın.
@@ -71,7 +71,7 @@ Artık App Center portalına erişebiliyor ve hesabınızı oluşturabileceksini
 - App Center yardım mı gerekiyor?
   - [App Center yardım merkezindeki](https://intercom.help/appcenter/)App Center ekibinden gelen önerileri ve yanıtları alın.
   - Tüm [App Center belgelerini](/appcenter/) kullanıma alma
-- Visual Studio abonelikleri için Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım için Visual Studio [abonelikleri desteğiyle](https://visualstudio.microsoft.com/subscriptions/support/)görüşün.
+- Visual Studio abonelikleri için Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım için Visual Studio [Visual Studio abonelikleri desteğiyle](https://my.visualstudio.com/gethelp)iletişim kurun.
 - Visual Studio IDE, Azure DevOps Services veya diğer Visual Studio ürünleri veya hizmetleri hakkında sorularınız mı var?  [Visual Studio desteği](https://visualstudio.microsoft.com/support/)' ni ziyaret edin.
 
 ## <a name="see-also"></a>Ayrıca bkz.

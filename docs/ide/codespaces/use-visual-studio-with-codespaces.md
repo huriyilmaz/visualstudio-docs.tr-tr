@@ -11,16 +11,19 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 monikerRange: vs-2019
-ms.openlocfilehash: 95ed318c327735c85fda854d207b36874eeffca7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: add43a5d130d8938193774d50bb643f48ecc3f8c
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99970991"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104673053"
 ---
 # <a name="how-to-use-visual-studio-with-a-codespace-preview"></a>Visual Studio 'Yu bir codespace ile kullanma (Önizleme)
 
-Visual Studio, GitHub Codespaces 'da geliştirme için harika destek içerir. Bir codespace oluşturup bu alana bağlanabilir ve Visual Studio 'nun tam gücünden uzak, barındırılan bir ortamda projeleriniz üzerinde çalışabilirsiniz. Kaynak kodunuz ve araçlarınız bir codespace içinde olsa da, derleme ve hata ayıklama bulutu bulutta gerçekleşse de, yerel olarak çalıştıkmiş gibi geliştirme deneyiminiz hızlı ve duyarlı bir şekilde ücretsizdir. Visual Studio 2019 Preview içinden bir codespace ile çalışabilirsiniz ([sınırlı genel beta için kaydolabilirsiniz](https://github.com/features/codespaces/signup-vs)).
+> [!Important] 
+> 12 Nisan 2021 itibariyle, Visual Studio 2019 ' den GitHub Codespaces 'a bağlanmak artık desteklenmeyecektir ve bu özel önizleme sona ermiştir. Bulut destekli bir iç döngü ve çok sayıda Visual Studio iş yükü için iyileştirilmiş VDı çözümleri için gelişen deneyimlere odaklanıyoruz. Gelecekteki önizlemeler ve yol haritası bilgileri hakkında bilgi için, Visual Studio için [Geliştirici topluluğu forumumuza](https://developercommunity.visualstudio.com/home) dahil etmeniz önerilir. 
+
+Visual Studio, GitHub Codespaces 'da geliştirme için harika destek içerir. Bir codespace oluşturup bu alana bağlanabilir ve Visual Studio 'nun tam gücünden uzak, barındırılan bir ortamda projeleriniz üzerinde çalışabilirsiniz. Kaynak kodunuz ve araçlarınız bir codespace içinde olsa da, derleme ve hata ayıklama bulutu bulutta gerçekleşse de, yerel olarak çalıştıkmiş gibi geliştirme deneyiminiz hızlı ve duyarlı bir şekilde ücretsizdir.
 
 > [!NOTE]
 > Bu makale, GitHub Codespaces 'a bağlanmak için özellikle Visual Studio 'Yu kullanmayı açıklamaktadır. [Visual Studio Code](https://docs.github.com/github/developing-online-with-codespaces/connecting-to-your-codespace-from-visual-studio-code) veya [GitHub](https://docs.github.com/github/developing-online-with-codespaces/developing-in-a-codespace) belgelerindeki diğer istemcilerle bir codespace 'e bağlanma hakkında bilgi edinebilirsiniz.

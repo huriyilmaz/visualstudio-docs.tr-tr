@@ -11,14 +11,17 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 monikerRange: vs-2019
-ms.openlocfilehash: 15efee817e41f928e5ca1162e9ace20276bd20d2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0e23ca3255761f4d93f89251d00c12c14aecf7b9
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99971160"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672357"
 ---
 # <a name="how-to-customize-a-codespace-preview"></a>Codespace 'i özelleştirme (Önizleme)
+
+> [!Important] 
+> 12 Nisan 2021 itibariyle, Visual Studio 2019 ' den GitHub Codespaces 'a bağlanmak artık desteklenmeyecektir ve bu özel önizleme sona ermiştir. Bulut destekli bir iç döngü ve çok sayıda Visual Studio iş yükü için iyileştirilmiş VDı çözümleri için gelişen deneyimlere odaklanıyoruz. Gelecekteki önizlemeler ve yol haritası bilgileri hakkında bilgi için, Visual Studio için [Geliştirici topluluğu forumumuza](https://developercommunity.visualstudio.com/home) dahil etmeniz önerilir. 
 
 GitHub Codespaces, bulutta tam bir geliştirme ortamı sağlar. Visual Studio 2019 kullanarak Windows tabanlı geliştirmede, GitHub Codespaces varsayılan örnekleri harika bir başlangıç noktası sağlar ancak Ayrıca, belirli projeniz için ortamı özelleştirebilirsiniz.
 
@@ -31,7 +34,7 @@ Hemen kullanmaya başlamak için Windows codespaces, zaten yüklü birçok çer�
 | .NET                                        | Yok        | 4.8                |
 | .NET Core Runtime                           | dotnet     | 2,1, 3,1           |
 | .NET Core SDK                               | dotnet     | 2,1, 3.1.3, 3.1.4  |
-| Azure CLI                                   | az         | 2.5                |
+| Azure CLI’si                                   | az         | 2.5                |
 | Chocolatey                                  | Choco      | 0.10.15            |
 | CMake                                       | CMake      | 3,17               |
 | Git                                         | git        | 2,26               |
@@ -178,7 +181,7 @@ Aşağıda, yerel MS SQL Server 'a bağlanmak için bir bağlantı dizesi örne�
 "Server=(LocalDB);Integrated Security=true;"
 ```
 
-### <a name="azure-cli"></a>Azure CLI
+### <a name="azure-cli"></a>Azure CLI’si
 
 Azure CLı, tüm Windows Codespace ortamlarına yüklenir ve farklı yolda bulunabilir `az` .
 

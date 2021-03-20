@@ -11,25 +11,25 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 monikerRange: vs-2019
-ms.openlocfilehash: 374e07735667a2a8891824b23d49b061651b3b95
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a4bf2cf948b6df65ee0407c1cc736e8056820a54
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99911724"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672793"
 ---
 # <a name="what-is-github-codespaces-preview"></a>GitHub Codespaces nedir? (Önizleme)
 
+> [!Important] 
+> 12 Nisan 2021 itibariyle, Visual Studio 2019 ' den GitHub Codespaces 'a bağlanmak artık desteklenmeyecektir ve bu özel önizleme sona ermiştir. Bulut destekli bir iç döngü ve çok sayıda Visual Studio iş yükü için iyileştirilmiş VDı çözümleri için gelişen deneyimlere odaklanıyoruz. Gelecekteki önizlemeler ve yol haritası bilgileri hakkında bilgi için, Visual Studio için [Geliştirici topluluğu forumumuza](https://developercommunity.visualstudio.com/home) dahil etmeniz önerilir. 
+
 Codespaces 'a hoş geldiniz! Burada size sevindik.
 
-GitHub Codespaces, tüm etkinlikler için bulut destekli bir geliştirme ortamı, uzun süreli bir proje veya çekme isteğini gözden geçirme gibi kısa süreli bir görev sağlar. Visual Studio 2019 Preview içinden bir codespace ile çalışabilirsiniz ([sınırlı genel beta için kaydolabilirsiniz](https://github.com/features/codespaces/signup-vs)).
+GitHub Codespaces, tüm etkinlikler için bulut destekli bir geliştirme ortamı, uzun süreli bir proje veya çekme isteğini gözden geçirme gibi kısa süreli bir görev sağlar.
 
 Ayrıca, GitHub Codespaces, &mdash; genellikle üretim iş yükleri için bir geliştirme ortamına ayrılmış yinelenebilirlik ve güvenilirlik gibi DevOps 'ın avantajlarından çoğunu getirir &mdash; . Ayrıca, istediğiniz ve kullandığınız araçların, işlemlerin ve yapılandırmaların de aynı olduğundan, GitHub Code alanlarını kişiselleştirebilirsiniz.
 
 Bu belge, temel kavramları açıklayacak ve Codespaces özelliklerinin tanıtılmasına neden olacak. Başlamak istiyorsanız, [Visual Studio 'yu bir codespace Ile kullanma](use-visual-studio-with-codespaces.md)' yı inceleyin.
-
-> [!IMPORTANT]
-> GitHub Codespaces 'ı kullanmak için sınırlı [genel beta](https://github.com/features/codespaces/signup-vs) için kaydolmanız gerekir. Beta döneminde GitHub, Codespaces kullanılabilirliği hakkında garanti vermez. Beta 'a katılma hakkında daha fazla bilgi için bkz. [Codespaces hakkında](https://docs.github.com/github/developing-online-with-codespaces/about-codespaces#joining-the-beta).
 
 ## <a name="concepts-and-features"></a>Kavramlar ve özellikler
 

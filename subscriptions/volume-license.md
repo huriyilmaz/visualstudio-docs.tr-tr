@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 7aaa4727-00ef-41dc-937d-8d46973aaf56
-ms.date: 03/08/2021
+ms.date: 03/18/2021
 ms.topic: conceptual
 description: Toplu lisans sözleşmeleriyle ilgili yöneticilerin Visual Studio abonelikleri yönetim portalına nasıl erişebileceğinizi öğrenin
-ms.openlocfilehash: 4704b3258eedf8fd1639804a8792a1c18fafce77
-ms.sourcegitcommit: f9ed9c4c6c166ef9826feb21dcb9c4d47ed14e1a
+ms.openlocfilehash: 0ab0ca532c1c2cdb848a3f6df9862c1d80518248
+ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102607294"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104672536"
 ---
 # <a name="accessing-the-admin-portal-as-an-admin-on-a-volume-license-agreement"></a>Toplu lisans sözleşmesinde yönetici olarak yönetim portalına erişme
 
@@ -26,7 +26,7 @@ Oturum açtıktan sonra otomatik olarak süper yönetici olarak ayarlanır ve ab
 Bu, aşağıdakiler dahil ancak bunlarla sınırlı olmamak üzere tüm toplu lisanslama anlaşması türleri için geçerlidir: Kurumsal Anlaşmalar, kurumsal abonelikler, Select, artı, açık, Açık Lisans, kamu. ve akademik anlaşmalar. 
 
 ## <a name="resources"></a>Kaynaklar
-- Visual Studio abonelikleri için Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım için bkz. Visual Studio [abonelikleri desteği](https://aka.ms/vssubscriberhelp).
+- Visual Studio abonelikleri için Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım için bkz. Visual Studio [abonelikleri desteği](https://visualstudio.microsoft.com/subscriptions/support/)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)
