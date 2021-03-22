@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 196c6d04-9a33-47d5-b0f1-038e7c3a7ac9
-ms.date: 03/09/2020
+ms.date: 03/21/2021
 ms.topic: conceptual
 description: Visual Studio aboneliklerinizden en iyi şekilde nasıl yararlanalabileceğinizi öğrenin
-ms.openlocfilehash: a865bfa5cf7d55504e022efb1b134bddde7d231c
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: fce096a0999fefe16abc009c04f87cf4eff35748
+ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2020
-ms.locfileid: "92904689"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104776838"
 ---
 # <a name="managing-subscriptions"></a>Abonelikleri yönetme
 
@@ -71,7 +71,7 @@ Profilinizdeki iletişim bilgilerini ve tercihlerini kolayca değiştirebilirsin
 1. Abone portalının sağ üst köşesinde adınızı seçin.
 2. **Profili Düzenle** düğmesini seçin.
 3. **Hakkında** sekmesinde ad, e-posta, ülke/bölge, profil resminiz ve iletişim tercihlerinizi değiştirebilirsiniz. **Tercihler** sekmesinde tercih ettiğiniz dili, tarih ve saat desenlerini, saat dilimini ve Kullanıcı arabirimi temasını seçebilirsiniz.
-4. Değişikliklerinizi sonuçlandırdığınızda **Kaydet** ' i seçin.
+4. Değişikliklerinizi sonuçlandırdığınızda **Kaydet**' i seçin.
 5. Avantajlar sayfasına geri dönmek için tarayıcınızın **geri** düğmesini seçin.
 
 ### <a name="setting-communications-preferences"></a>İletişim tercihlerini ayarlama
@@ -89,8 +89,8 @@ Alternatif bir hesap eklemek için:
 
 1. [Abone portalında](https://my.visualstudio.com?wt.mc_id=o~msft~docs) Microsoft HESABıNıZLA (MSA) oturum açın.
 2. **Abonelikler** sekmesini seçin.
-3. **Ilgili bağlantılar** altında **Alternatif hesap ekle** ' yi seçin.
-4. İş/okul hesabınızın e-posta adresini girin ve **Ekle** ' yi seçin.
+3. **Ilgili bağlantılar** altında **Alternatif hesap ekle**' yi seçin.
+4. İş/okul hesabınızın e-posta adresini girin ve **Ekle**' yi seçin.
 
 Alternatif bir hesap ekledikten sonra, **abonelikler** sekmesini seçerek ve **ilgili bağlantılar** bölümünde uygun seçeneği belirleyerek istediğiniz zaman onu güncelleştirebilir veya kaldırabilirsiniz.
 
@@ -112,6 +112,9 @@ Y: satın alma kanalına bağlı olarak Microsoft, müşteri verilerini farklı 
 > [!NOTE]
 > - Microsoft hesabınızı veya Azure AD 'yi kapatmayı seçerseniz, kişisel verileriniz hemen anonimleştirilir.
 > - Etkin abonelikleriniz varsa tüm kişisel verilerinizi tam olarak kaldırmayacak.
+
+## <a name="support-resources"></a>Destek kaynakları
+- Visual Studio abonelikleri için Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım için [Visual Studio abonelikleri desteğiyle](https://aka.ms/vssubscriberhelp)görüşün.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)

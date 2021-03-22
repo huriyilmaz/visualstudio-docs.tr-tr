@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 14e4cffb-a695-436c-b269-7820f7411f4e
-ms.date: 02/18/2021
+ms.date: 03/21/2021
 ms.topic: conceptual
 description: Aboneler listesini ve abonelik atamalarının ayrıntılarını nasıl dışarı aktarılacağını öğrenin.
-ms.openlocfilehash: afd30470b5d9171f803c14b0d604eca626b70342
-ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
+ms.openlocfilehash: 991128fc0f45b0caa0727c8ab418ba632d90e60c
+ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102250026"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104776824"
 ---
 # <a name="export-subscription-information"></a>Abonelik bilgilerini dışarı aktarma
 Visual Studio abonelikleri [yönetim portalında](https://manage.visualstudio.com), abonelerinizin bir listesini ve atamalarınızın ayrıntılarını dışa aktarabilirsiniz. Bu bilgiler, ad, e-posta adresi, alternatif e-posta adresi, abonelik düzeyi, atanma tarihi, etkinleştirme durumu, sona erme tarihi, başvuru alanı, indirmelerin etkin olup olmadığı, ülke, dil, abonelik durumu ve abonelik GUID 'SI içerir.  Liste, grafikler, Özet ve diğer yapıtlar oluşturmak için Microsoft Excel 'de kolayca açılabilen bir CSV dosyası olarak verilir.
@@ -33,7 +33,7 @@ Dışarı aktarma işlemini gerçekleştirmek için:
 > ![Aboneleri dışarı aktar](_img/exporting-subscriptions/exporting-subscriptions.png "Atanan aboneliklerinizin tamamını bir listesini indirmek için dışarı aktar ' a tıklayın.")
 
 ## <a name="resources"></a>Kaynaklar
-- [Abonelik desteği](https://visualstudio.microsoft.com/subscriptions/support/)
+- [Abonelik desteği](https://aka.ms/vsadminhelp)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)

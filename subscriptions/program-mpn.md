@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 7f4399d8-41da-41e5-a666-acc34958b8c0
-ms.date: 03/09/2020
+ms.date: 03/21/2021
 ms.topic: conceptual
 description: Hangi aboneliklerin sunulmakta olduğuna, hangi kuralların uygulanacağını ve MPN ' de kaç abonelik sunulacağı hakkında ayrıntılar.
-ms.openlocfilehash: 47b13147e87880ea90c07ee4746d5359571719b0
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: eab7779c7aedbbe7116a6227b16b6b3f4f15471c
+ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005839"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104776759"
 ---
 # <a name="visual-studio-subscriptions-offered-to-partners-in-the-microsoft-partner-network-mpn"></a>Microsoft İş Ortağı Ağı (MPN) iş ortaklarına sunulan Visual Studio abonelikleri
 
@@ -33,9 +33,9 @@ Bir iş ortağı bir uzmanlığa sahip olduğunda (gümüş veya altın düzeyde
 | Uzmanlığı                                  | **Gümüş** uzmanlık için kazanılan ek abonelikler | **Altın** uzmanlık için kazanılan ek abonelikler |
 |---------------------------------------------|-----------------------------------------------------------|---------------------------------------------------------|
 | Uygulama Geliştirme                     | 5 Visual Studio Enterprise aboneliği                  | 25 Visual Studio Enterprise abonelikleri               |
-| Bulut müşterisi Ilişki yönetimi      | 5 Visual Studio Enterprise aboneliği                  | 25 Visual Studio Enterprise abonelikleri               |
-| Bulut platformu                              | 5 Visual Studio Enterprise aboneliği                  | 25 Visual Studio Enterprise abonelikleri               |
-| Bulut verimliliği                          | 5 Visual Studio Enterprise aboneliği                  | 25 Visual Studio Enterprise abonelikleri               |
+| Bulut Müşteri İlişkileri Yönetimi      | 5 Visual Studio Enterprise aboneliği                  | 25 Visual Studio Enterprise abonelikleri               |
+| Bulut Platformu                              | 5 Visual Studio Enterprise aboneliği                  | 25 Visual Studio Enterprise abonelikleri               |
+| Bulut Üretkenliği                          | 5 Visual Studio Enterprise aboneliği                  | 25 Visual Studio Enterprise abonelikleri               |
 | DevOps                                      | 5 Visual Studio Enterprise aboneliği                  | 25 Visual Studio Enterprise abonelikleri                |
 
 Bir iş ortağının kaç uzmanlık kazandığına bakılmaksızın, Visual Studio aboneliklerinin sayısı şu şekilde sınırlıdır:
@@ -50,7 +50,7 @@ Bir iş ortağının kaç uzmanlık kazandığına bakılmaksızın, Visual Stud
 
 Uzmanlığa sahip iş ortakları Eylem Paketi satın almaya uygundur. İş ortağı başına yalnızca bir Eylem Paketi satın alınabilir.
 
-Eylem Paketi, iş ortağı **3 Visual Studio Professional (MPN) abonelikleri**kazanırlar. Visual Studio Professional (MPN), pazarda ticari olarak kullanılabilir bir eşdeğer olmadan özel bir tekliftir. Dahil edilen özellikler şunlardır:
+Eylem Paketi, iş ortağı **3 Visual Studio Professional (MPN) abonelikleri** kazanırlar. Visual Studio Professional (MPN), pazarda ticari olarak kullanılabilir bir eşdeğer olmadan özel bir tekliftir. Dahil edilen özellikler şunlardır:
 
 - Visual Studio Professional--yalnızca en son sürüm
 - Yalnızca geliştirme ve test için kullanılmak üzere Windows Enterprise--yalnızca en son sürüm
@@ -71,11 +71,10 @@ Yalnızca bu iç kullanım kısıtlaması temelde, iş ortaklarının yazılım�
 MPN aracılığıyla sunulan Visual Studio abonelikleri sayesinde, lisanslı kullanıcının Visual Studio aboneliğini etkinleştirmek için kullanılan kimlik/oturum açma bilgilerini kullanarak Visual Studio 'da oturum açması gerekir. Ürünün kilidini açmak için ürün anahtarları sunulmaz; oturum açmak, Visual Studio 'Yu çalıştırmaya yönelik tek seçenektir. Visual Studio abonesi, Visual Studio 'Nun çalışmayı durdurmadan önce 30 güne kadar çevrimdışı çalışabilir. Çevrimiçi çalışırken, aboneliğin hala geçerli olduğundan emin olmak için, Visual Studio kullanıcının lisans durumunu düzenli aralıklarla sessizce yeniler.
 
 ## <a name="resources"></a>Kaynaklar
-
 - [Microsoft İş Ortağı Ağı Programları Kılavuzu](https://assets.microsoft.com/MPN-MAPS-Product-Usage-Guide.pdf?tpqid=300-000121)
 - [MPN çalışanlarına Visual Studio abonelikleri atama](manage-mpn-subscriptions.md)
 - [Kullanım koşulları](https://www.microsoft.com/useterms/) -MPN aracılığıyla sunulan Visual Studio abonelikleri, Visual Studio abonelikleri için olmayan (NFR) EULA 'ya tabidir.
-
+- Visual Studio abonelikleri için Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım için [Visual Studio abonelikleri desteğiyle](https://aka.ms/vssubscriberhelp)görüşün.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)

@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 9c0b9a4f-b9a3-491c-a68f-6e4bac7f7b3d
-ms.date: 09/21/2020
+ms.date: 03/21/2021
 ms.topic: how-to
 description: Yöneticilerin yönetim portalında bireysel aboneleri veya grupları nasıl bulabileceğinizi öğrenin.
-ms.openlocfilehash: e1fd5ea959043cbea58d0eb9a14649044f5d556e
-ms.sourcegitcommit: a731a9454f1fa6bd9a18746d8d62fe2e85e5ddb1
+ms.openlocfilehash: df94b32dfcc5e2672282c0d18859cba42b490437
+ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2020
-ms.locfileid: "92904540"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104776694"
 ---
 # <a name="search-and-filter-subscribers-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde aboneleri arama ve filtreleme
 Visual Studio abonelikleri yönetim portalı, çeşitli ölçütlere göre belirli bir abone alt kümesini bulmanızı sağlar. Abone listesini ad, e-posta adresi, abonelik düzeyi ve diğer bilgilere göre filtreleyebilirsiniz.
@@ -36,14 +36,12 @@ Visual Studio abonelikleri yönetim portalı, çeşitli ölçütlere göre belir
    > [!div class="mx-imgBorder"]
    > ![Abone listesinden filtreyi temizle](_img/search-filter/clear-filter.png "Filtreyi kaldırmak için Filtreyi Temizle ' ye tıklayın ve tüm atanan aboneliklerinizi görüntülemeyi sürdürebilirsiniz.")
 
-
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)
 - [Azure DevOps belgeleri](/azure/devops/)
 - [Azure belgeleri](/azure/)
 - [Microsoft 365 belgeleri](/microsoft-365/)
 
-
 ## <a name="next-steps"></a>Sonraki adımlar
 - Bir abonenin nasıl bulunacağını öğrenmiş olduğunuza göre, aboneliğini nasıl [düzenleyeceğinizi](edit-license.md) öğrenin.
-- Yönetim portalını kullanma konusunda yardıma mı ihtiyacınız var?  [Visual Studio yönetim ve abonelikler desteğiyle](https://visualstudio.microsoft.com/support/support-overview-vs)iletişim kurun.
+- Yönetim portalını kullanma konusunda yardıma mı ihtiyacınız var?  [Visual Studio yönetim ve abonelikler desteğiyle](https://aka.ms/vsadminhelp)iletişim kurun.

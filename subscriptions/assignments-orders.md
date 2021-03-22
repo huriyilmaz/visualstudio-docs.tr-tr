@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 83a9162a-b9e7-43a4-b07f-6c1fd8580f78
-ms.date: 02/18/2021
+ms.date: 03/21/2021
 ms.topic: conceptual
 description: Kullanıcı atamalarını ve işlem emirlerini izlemek için yöneticilerin sorumluluğunu öğrenin.
-ms.openlocfilehash: 3da446dad534a6a76413a66de2b9ad52e937e253
-ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
+ms.openlocfilehash: 9ba54d13f4481f68d13e43a2e21f62036d23cab3
+ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102249485"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104776993"
 ---
 # <a name="track-user-assignment-and-process-orders"></a>Kullanıcı atamasını ve işlem emirlerini izleme
 Visual Studio abonelikleri yöneticisinin, toplu lisanslama sözleşmenizde veya Microsoft ürün ve hizmet anlaşmasındaki zamanlamaya göre kullanımda olan tüm artışlar için Visual Studio kullanımı ve işlem siparişlerinin izlenmesi beklenmektedir. Yeni Visual Studio abonelikleri yönetim portalı, kullanılabilir ve kullanılan lisanslarınızı gösteren yararlı bir izleyici ile bu basit hale geçti.
@@ -38,7 +38,7 @@ Açık Lisans ve açık değer gibi programlar aracılığıyla veya aylık olar
 Microsoft Kurumsal anlaşmalar (EA), MPSA ve Select Plus sözleşmeleri, Visual Studio yazılımlarını zaman içinde nasıl kullanacağınızı ve lisanslayabilmeniz için size esneklik sağlar. Visual Studio yöneticileri, yazılım lisanslarını sözleşme dönemi boyunca belirlenen en yüksek kullanıma kadar getirecek bir yıllık True-Up sırası vermelidir.
 
 ## <a name="resources"></a>Kaynaklar
-- Yardıma mı ihtiyacınız var?  [Abonelik desteğiyle](https://visualstudio.microsoft.com/subscriptions/support/)iletişim kurun.
+- Yardıma mı ihtiyacınız var?  [Abonelik desteğiyle](https://aka.ms/vsadminhelp)iletişim kurun.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)

@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: a335ed23-34ee-40cb-83c6-6c93dee57424
-ms.date: 02/18/2021
+ms.date: 03/21/2021
 ms.topic: how-to
 description: Kurumsal sözleşmeleri olan müşteriler için sunulan özel Azure DevTest fiyatlandırmasının avantajlarından nasıl yararlandığını öğrenin
-ms.openlocfilehash: 9043a2d8f3ab069bcc02375089780d16d1e8a18b
-ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
+ms.openlocfilehash: 157d094ef02864578ce4bf626d11457506817418
+ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102249478"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104776980"
 ---
 # <a name="azure-enterprise-agreement-devtest-offer"></a>Azure Kurumsal Anlaşma DevTest teklifi
 
@@ -42,7 +42,7 @@ Hesaptaki her abone, şu adımları izleyerek bir abonelik oluşturabilir:
 0. **Satın al**’a tıklayın.  (Bu teklifle, aslında hiçbir şey satın almanız gerekmez.)
 
 ## <a name="resources"></a>Kaynaklar
-- Yardıma mı ihtiyacınız var?  [Abonelik desteğiyle](https://visualstudio.microsoft.com/subscriptions/support/)iletişim kurun.
+- Yardıma mı ihtiyacınız var?  [Abonelik desteğiyle](https://aka.ms/vsadminhelp)iletişim kurun.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)

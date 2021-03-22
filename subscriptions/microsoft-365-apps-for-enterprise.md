@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: d1257931-392a-4a65-bf26-177737505122
-ms.date: 06/24/2020
+ms.date: 03/21/2021
 ms.topic: how-to
 description: Enterprise için Microsoft 365 uygulamalar hakkında bilgi edinin ve bunları yükler
-ms.openlocfilehash: d23f8cccd284972d05d7085aea7e0b1cab0f275d
-ms.sourcegitcommit: 29099741fcf94a5aef2655ee16605728b8b9a0ea
+ms.openlocfilehash: e1d629aae2d3c9e5d906a5593c287bd0b3250446
+ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96537831"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104776720"
 ---
 # <a name="microsoft-365-apps-for-enterprise-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Enterprise için Microsoft 365 uygulamalar
 Enterprise (eskiden Office 365 Pro Plus) için Microsoft 365 uygulamalar, seçilen Visual Studio aboneliklerinde kullanılabilir. 
@@ -34,7 +34,7 @@ Kurumsal abonelik için Microsoft 365 uygulamalarınızı etkinleştirme işlemi
    > [!div class="mx-imgBorder"]
    > ![Kurumsal müşteri bilgileri için Microsoft 365 uygulamalar](_img/microsoft-365-apps-for-enterprise/get-to-know-you.png "İletişim bilgilerinizi girin")
 
-1. "Kullanıcı Kimliğinizi oluşturma" iletişim kutusunda kiracınız için Kullanıcı adınızı ve parolanızı oluşturun ve ardından **hesabı oluştur**' u seçin.
+1. "Kullanıcı KIMLIĞINIZI oluşturma" iletişim kutusunda kiracınız için Kullanıcı adınızı ve parolanızı oluşturun, sonra **Hesabımı oluştur**' u seçin.
    > [!div class="mx-imgBorder"]
    > ![Kurumsal Kullanıcı KIMLIĞI oluşturma için Microsoft 365 uygulamalar](_img/microsoft-365-apps-for-enterprise/create-your-user-id.png "Kullanıcı KIMLIĞINIZI ve parolanızı oluşturma")
 
@@ -55,8 +55,8 @@ Kurumsal abonelik için Microsoft 365 uygulamalarınızı etkinleştirme işlemi
 
 | Abonelik düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilenebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standart)   | VL, Azure, perakende| Kullanılabilir       |  Evet          |
-| GitHub Enterprise ile Visual Studio Enterprise aboneliği  | VL | Kullanılabilir       |  Evet          |
+| Visual Studio Enterprise (Standart)   | VL, Azure, perakende| Kullanılabilir       |  Yes          |
+| GitHub Enterprise ile Visual Studio Enterprise aboneliği  | VL | Kullanılabilir       |  Yes          |
 | Visual Studio Enterprise (Standart)   | NFR<sup>1</sup> | Kullanılamaz       |  Yok          |
 | Visual Studio Professional (Standart) | VL, Azure, perakende                                       | Kullanılamaz                                                            |  Yok          |
 | GitHub Enterprise ile Visual Studio Professional aboneliği | VL | Kullanılamaz         |  Yok          |
@@ -74,7 +74,7 @@ Hangi aboneliğin kullanmakta olduğunuzdan emin değil misiniz?  [https://my.vi
 
 ## <a name="support-resources"></a>Destek kaynakları
 - Enterprise için Microsoft 365 uygulamalarının herhangi bir bileşeniyle teknik destek için lütfen ürünü ziyaret edin https://support.microsoft.com/allproducts ve seçin.
-- Visual Studio abonelikleri için Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım için Visual Studio [abonelikleri desteğiyle](https://visualstudio.microsoft.com/subscriptions/support/)görüşün.
+- Visual Studio abonelikleri için Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım için Visual Studio [abonelikleri desteğiyle](https://aka.ms/vssubscriberhelp)görüşün.
 - Visual Studio IDE, Azure DevOps veya diğer Visual Studio ürünleri veya hizmetleri hakkında sorularınız mı var?  [Visual Studio desteği](https://visualstudio.microsoft.com/support/)' ni ziyaret edin.
 
 ## <a name="see-also"></a>Ayrıca bkz.

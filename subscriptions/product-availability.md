@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: abf271b5-7547-4695-a46f-72b2878ba8d4
-ms.date: 03/09/2020
+ms.date: 03/21/2021
 ms.topic: conceptual
 description: Visual Studio abonelikleri için yazılım indirmelerinde ürün kullanılabilirliği hakkında bilgi edinin
-ms.openlocfilehash: e223946aabd9a0b789f51e80e522c24d8a85dd4c
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 8188395c236ae116c36da7f60f0afb8042cb81b3
+ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005865"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104776629"
 ---
 # <a name="product-availability-for-software-downloads-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Yazılım İndirmeleri için ürün kullanılabilirliği
 Abone avantajlarınızın bir parçası olarak, çok çeşitli yazılım indirmelerine erişiminiz vardır.
@@ -37,6 +37,9 @@ Belirli ürünlerin aboneler tarafından sunulmamasının birkaç nedeni vardır
 > Aynı e-posta adresiyle ilişkili birden fazla aboneliğiniz varsa, sizin için kullanabileceğiniz yazılım başlıkları sahip olduğunuz **en yüksek** düzey aboneliğe göre belirlenir.  Örneğin, bir Visual Studio Enterprise aboneliğiniz ve bir Visual Studio Test Professional aboneliğiniz varsa, şu anda abonelikler portalında kullanılan aboneliğin ne olursa olsun, Visual Studio Enterprise aboneliğine dahil olan yazılım başlıklarına erişebilirsiniz. 
 
 Hangi aboneliğin kullanmakta olduğunuzdan emin değil misiniz?  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs)E-posta adresinize atanan tüm abonelikleri görmek için bağlantısını yapın. Tüm aboneliklerinizi görmüyorsanız, farklı bir e-posta adresine atanmış bir veya daha fazla sahip olabilirsiniz.  Bu abonelikleri görmek için bu e-posta adresiyle oturum açmanız gerekir.
+
+## <a name="support-resources"></a>Destek kaynakları
+- Visual Studio abonelikleri için Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım için [Visual Studio abonelikleri desteğiyle](https://aka.ms/vssubscriberhelp)görüşün.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)

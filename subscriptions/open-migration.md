@@ -7,12 +7,12 @@ ms.assetid: 6866dfab-c4fa-428e-bb0d-7b202c81f770
 ms.date: 10/28/2020
 ms.topic: conceptual
 description: İş ortaklarının müşterileri için Visual Studio abonelikleri yönetme hakkında bilgi edinin.
-ms.openlocfilehash: ba62a2b3d9920ca145722c137322e4471d110d9e
-ms.sourcegitcommit: f1d47655974a2f08e69704a9a0c46cb007e51589
+ms.openlocfilehash: 72891535be7f65b54fb6b9493bd7cc638516177f
+ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92903758"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104776798"
 ---
 # <a name="partners-managing-subscriptions-on-behalf-of-customers"></a>Müşteri adına abonelikleri yöneten iş ortakları
 Visual Studio [abonelikleri yönetim portalındaki](https://manage.visualstudio.com)abonelikleri yönetmek için birkaç adım iş ortağının izlenmesi gerekir. 
@@ -26,7 +26,7 @@ Visual Studio [abonelikleri yönetim portalındaki](https://manage.visualstudio.
 Bu senaryo, zaten yeni açık lisans siparişleri yerleştirmiş ancak [VLSC](https://www.microsoft.com/Licensing/servicecenter/default.aspx) 'de kaydolmamış ve doğrudan [Visual Studio abonelikleri yönetim portalına](https://manage.visualstudio.com)gidebilen yeni iş ortakları için geçerlidir.  Şu adımları izleyin:
 1. Adresini ziyaret edin <https://manage.visualstudio.com> .
 1. Tanınan bir kullanıcı olmadığı hakkında bir bildirim alırsınız.
-1. **OLP Iş ortakları** kayıt seçeneğini belirleyin ve siparişte kullanılan yetkilendirme numarasını, lisans numarasını, müşteri e-posta adresini girin, onay kutusunu seçin ve **Gönder** ' e tıklayın.
+1. **OLP Iş ortakları** kayıt seçeneğini belirleyin ve siparişte kullanılan yetkilendirme numarasını, lisans numarasını, müşteri e-posta adresini girin, onay kutusunu seçin ve **Gönder**' e tıklayın.
 
 > [!NOTE]
 > Müşteriye, açık lisansa bir Iş ortağının eklendiğini bildiren bir bildirim e-postası gönderilir. Iş ortağının erişimini kaldırmayı seçebilirler.
@@ -53,7 +53,7 @@ Bu, [Visual Studio abonelikleri yönetim portalına](https://manage.visualstudio
 İş ortaklarının yeni lisans eklemesi adımları:
 1. <https://manage.visualstudio.com> adresinde oturum açın.
 1. Sözleşme açılan menüsünde + anlaşma Ekle ' yi seçin ve **Yeni bir açık lisansa** bir seçenek olduğu yerde seçin ve aşağı kaydırın.
-1. Açılır panelde, anlaşmada bulunan Yetkilendirme numarasını, lisans numarasını, müşteri e-posta adresini girin, onay kutusunu işaretleyin ve ardından **Gönder** ' e tıklayın.
+1. Açılır panelde, anlaşmada bulunan Yetkilendirme numarasını, lisans numarasını, müşteri e-posta adresini girin, onay kutusunu işaretleyin ve ardından **Gönder**' e tıklayın.
 
 > [!NOTE]
 > Müşteriye, açık lisansa bir Iş ortağının eklendiğini bildiren bir bildirim e-postası gönderilir. Iş ortağının erişimini kaldırmayı seçebilirler.
@@ -61,7 +61,7 @@ Bu, [Visual Studio abonelikleri yönetim portalına](https://manage.visualstudio
 
 ## <a name="resources"></a>Kaynaklar
 - [Visual Studio Lisanslama Teknik İncelemesi](https://aka.ms/vslicensing)
-- [Visual Studio Yönetim ve Abonelik Desteği](https://visualstudio.microsoft.com/support/support-overview-vs)
+- [Visual Studio Yönetim ve Abonelik Desteği](https://aka.ms/vsadminhelp)
 - [Toplu Lisanslama Koşulları](https://www.microsoft.com/licensing/product-licensing/products.aspx)
 
 ## <a name="see-also"></a>Ayrıca bkz.
