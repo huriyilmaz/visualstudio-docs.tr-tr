@@ -11,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: ef9154a34ddd08e7e0a4b9434f7f748b2603aef4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7926a7983e43545ad47e8bc975f051821c108c18
+ms.sourcegitcommit: f1dff6c4532c43b0444aa12ea57e90bb7dba6fba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99882875"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104806010"
 ---
 # <a name="step-4-use-the-full-flask-web-project-template"></a>4. Adım: tam Flask Web projesi şablonunu kullanma
 
@@ -229,8 +229,24 @@ Hem Jinja hem de Jade sözdizimleri ile denemeler yapıp sizin için en uygun ol
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-> [!div class="nextstepaction"]
-> [Flask Web projesi şablonunu yokladığı](learn-flask-visual-studio-step-05-polls-flask-web-project-template.md)
+::: moniker range="vs-2017"
+- [Flask Web projesi şablonunu yokladığı](learn-flask-visual-studio-step-05-polls-flask-web-project-template.md)
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+> [!Note]
+> Visual Studio çözümünüzü Bu öğreticinin tamamında kaynak denetimine uyguladıysanız, başka bir işleme yapmak iyi bir zaman olabilir. Çözümünüz GitHub 'daki öğretici kaynak kodu ile eşleşmelidir: [Microsoft/Python-Sample-vs-Learning-Flask](https://github.com/Microsoft/python-sample-vs-learning-flask).
+
+Artık "boş Flask Web projesinin", "Flask [/Jade] Web projesinin" tamamını incelediniz ve Visual Studio 'daki "Flask [/Jade] Web projesi" şablonlarını araştırdık. Flask 'nin görünümlerini, şablonlarını ve yönlendirmeyi kullanma gibi tüm temel bilgilerini öğrendiniz ve veri depolarının nasıl kullanılacağını gördünüz. Artık ihtiyacınız olan herhangi bir görünüm ve modelle kendi Web uygulamasını kullanmaya başlamanızı öneririz.
+
+Geliştirme bilgisayarınızda bir Web uygulaması çalıştırmak, uygulamayı müşterileriniz için kullanılabilir hale getirmek için yalnızca bir adımdır. Sonraki adımlarda aşağıdaki görevler bulunabilir:
+
+- Web uygulamasını Azure App Service gibi bir üretim sunucusuna dağıtın. Bkz. [Azure App Service yayımlama](publishing-python-web-applications-to-azure-from-visual-studio.md).
+
+- PostgreSQL, MySQL ve SQL Server (tümü Azure üzerinde barındırılabilen) gibi başka bir üretim düzeyi veri deposu kullanan bir depo uygulamasını ekleyin. Ayrıca, [Python Için Azure SDK 'sını](/azure/python/) tablolar ve Bloblar gibi Azure depolama hizmetleriyle ve Cosmos DB de kullanabilirsiniz.
+
+- Azure DevOps gibi bir hizmette sürekli tümleştirme/sürekli dağıtım işlem hattı ayarlayın. Kaynak denetimiyle (Azure Repos veya GitHub ya da başka bir yerde) çalışmaya ek olarak, bir Azure DevOps projesini, birim testlerinizi bir ön koşul olarak otomatik olarak çalıştıracak şekilde yapılandırabilir ve ayrıca işlem hattını üretime dağıtmadan önce ek testler için bir hazırlama sunucusuna dağıtılacak şekilde yapılandırabilirsiniz. Azure DevOps, Ayrıca, App Insights gibi izleme çözümleriyle tümleştirilir ve çevik planlama araçlarıyla tüm döngüyü kapatır. Daha fazla bilgi için bkz. [Python için BIR CI/CD işlem hattı oluşturma Azure DevOps Projeleri](/azure/devops-project/azure-devops-project-python?view=vsts&preserve-view=true) ve ayrıca genel [Azure DevOps belgeleri](/azure/devops/?view=vsts&preserve-view=true).
+::: moniker-end
 
 ## <a name="go-deeper"></a>Daha derin git
 

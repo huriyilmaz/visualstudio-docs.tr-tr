@@ -11,18 +11,24 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: ea708c1721d85468d99a0ccc327f378042579f85
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3f589aed953a852cb57570988d914f77b2fa10b2
+ms.sourcegitcommit: f1dff6c4532c43b0444aa12ea57e90bb7dba6fba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99942496"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104806023"
 ---
 # <a name="step-5-authenticate-users-in-django"></a>5. Adım: Docgo 'da kullanıcıların kimliğini doğrulama
 
 **Önceki adım: [tam Docgo Web proje şablonunu kullanma](learn-django-in-visual-studio-step-04-full-django-project-template.md)**
 
+::: moniker range="vs-2017"
 Kimlik doğrulaması Web uygulamaları için yaygın bir gereksinimdir, "Docgo Web projesi" şablonu temel bir kimlik doğrulama akışı içerir. (Bu öğreticinin 6. adımında açıklanan "Docgo Web projesini yoklamalar" şablonu aynı akışı da içerir.) Docgo proje şablonlarından herhangi birini kullanırken, Visual Studio Docgo projesinin *Settings.py* kimlik doğrulaması için gerekli tüm modülleri içerir.
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+Kimlik doğrulaması Web uygulamaları için yaygın bir gereksinimdir, "Docgo Web projesi" şablonu temel bir kimlik doğrulama akışı içerir. Docgo proje şablonlarından herhangi birini kullanırken, Visual Studio Docgo projesinin *Settings.py* kimlik doğrulaması için gerekli tüm modülleri içerir.
+::: moniker-end
 
 Bu adımda şunları öğreneceksiniz:
 
@@ -210,9 +216,28 @@ Cevap: `{% csrf_token %}` etiket docgo 'nun yerleşik [siteler arası istek saht
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-> [!div class="nextstepaction"]
-> [Docgo Web proje şablonunu Yoklat ' i kullanın](learn-django-in-visual-studio-step-06-polls-django-web-project-template.md)
+::: moniker range="vs-2017"
+- [Docgo Web proje şablonunu Yoklat ' i kullanın](learn-django-in-visual-studio-step-06-polls-django-web-project-template.md)
+::: moniker-end
 
+::: moniker range=">=vs-2019"
+> [!Note]
+> Visual Studio çözümünüzü Bu öğreticinin tamamında kaynak denetimine uyguladıysanız, başka bir işleme yapmak iyi bir zaman olabilir. Çözümünüz GitHub 'daki öğretici kaynak kodu ile eşleşmelidir: [Microsoft/Python-Sample-vs-Learning-docgo](https://github.com/Microsoft/python-sample-vs-learning-django).
+
+Artık, Visual Studio 'daki "boş Docgo Web projesi" ve "Docgo Web projesi" şablonlarından tamamen araştırdık. Görünümler ve Şablonlar kullanma gibi Docgo 'un tüm temel bilgilerini öğrendiniz ve veritabanı modellerini kullanarak, bir yönlendirme, kimlik doğrulama ve değişiklik yapabilirsiniz. Artık ihtiyacınız olan herhangi bir görünüm ve modelle kendinizinkini bir Web uygulaması oluşturabilmeniz gerekir.
+
+Geliştirme bilgisayarınızda bir Web uygulaması çalıştırmak, uygulamayı müşterileriniz için kullanılabilir hale getirmek için yalnızca bir adımdır. Sonraki adımlarda aşağıdaki görevler bulunabilir:
+
+- Web uygulamasını Azure App Service gibi bir üretim sunucusuna dağıtın. Bkz. [Azure App Service yayımlama](publishing-python-web-applications-to-azure-from-visual-studio.md).
+
+- *Şablonlar/404.html* adlı bir şablon oluşturarak 404 sayfasını özelleştirin. Mevcut olduğunda, Docgo, varsayılan değer yerine bu şablonu kullanır. Daha fazla bilgi için, bkz. Docgo belgelerindeki [hata görünümleri](https://docs.djangoproject.com/en/2.0/ref/views/#error-views) .
+
+- Birim testlerini *Tests.py*'de yazın; Visual Studio proje şablonları bunlar için başlangıç noktaları sağlar ve dmongo belgelerinde dmongo 'da [Ilk Dmongo uygulamanızı yazma, 5. bölüm-test](https://docs.djangoproject.com/en/2.0/intro/tutorial05/) ve [test etme](https://docs.djangoproject.com/en/2.0/topics/testing/) konusunda daha fazla bilgi bulabilirsiniz.
+
+- Uygulamayı SQLite ' dan PostgreSQL, MySQL ve SQL Server (tümü Azure üzerinde barındırılabilen) gibi bir üretim düzeyi veri deposu olarak değiştirin. SQLite (sqlite.org) [ne zaman kullanılacağı](https://www.sqlite.org/whentouse.html) konusunda açıklandığı gibi, SQLite, 100 ' den az KB/gün içinde düşük ve orta ölçekli trafik siteleri için uygundur, ancak daha yüksek birimler için önerilmez. Aynı zamanda tek bir bilgisayarla sınırlandırılmıştır, bu nedenle yük dengeleme ve coğrafi çoğaltma gibi çok sunuculu bir senaryoda kullanılamaz. Docgo 'nun diğer veritabanları için desteği hakkında bilgi için bkz. [veritabanı kurulumu](https://docs.djangoproject.com/en/2.0/intro/tutorial02/#database-setup). Ayrıca, [Python Için Azure SDK 'sını](/azure/python/) tablolar ve Bloblar gibi Azure depolama hizmetleriyle birlikte çalışmak için de kullanabilirsiniz.
+
+- Azure DevOps gibi bir hizmette sürekli tümleştirme/sürekli dağıtım işlem hattı ayarlayın. Kaynak denetimiyle (Azure Repos veya GitHub ya da başka bir yerde) çalışmaya ek olarak, bir Azure DevOps projesini, birim testlerinizi bir ön koşul olarak otomatik olarak çalıştıracak şekilde yapılandırabilir ve ayrıca işlem hattını üretime dağıtmadan önce ek testler için bir hazırlama sunucusuna dağıtılacak şekilde yapılandırabilirsiniz. Azure DevOps, Ayrıca, App Insights gibi izleme çözümleriyle tümleştirilir ve çevik planlama araçlarıyla tüm döngüyü kapatır. Daha fazla bilgi için bkz. [Azure DevOps projesiyle Python için BIR CI/CD işlem hattı oluşturma](/azure/devops-project/azure-devops-project-python?view=vsts&preserve-view=true) ve ayrıca genel [Azure DevOps belgeleri](/azure/devops/?view=vsts&preserve-view=true).
+::: moniker-end
 ## <a name="go-deeper"></a>Daha derin git
 
 - [Docgo 'Da Kullanıcı kimlik doğrulaması](https://docs.djangoproject.com/en/2.0/topics/auth/) (docs.djangoproject.com)

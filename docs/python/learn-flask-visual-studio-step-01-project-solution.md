@@ -11,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: e77d4ea1d46914962f0791af91ad6c1efe21825c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ca82beef26f897b2f5d3a145c968c11efaabc294
+ms.sourcegitcommit: f1dff6c4532c43b0444aa12ea57e90bb7dba6fba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99942522"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104806062"
 ---
 # <a name="tutorial-get-started-with-the-flask-web-framework-in-visual-studio"></a>Öğretici: Visual Studio 'da Flask Web çerçevesi ile çalışmaya başlama
 
@@ -24,16 +24,27 @@ ms.locfileid: "99942522"
 
 Doğrudan form doğrulaması, veritabanı soyutlama, kimlik doğrulama vb. gibi özellikler sağlamadığından Flask "mikro" çerçevesi olarak adlandırılır. Bu tür özellikler bunun yerine Flask *uzantıları* adlı özel Python paketleri tarafından sağlanır. Uzantılar Flask ile sorunsuz bir şekilde tümleşir, böylece Flask 'nin bir parçası gibi görünürler. Örneğin, Flask 'nın kendisi bir sayfa şablonu altyapısı sağlamıyor. Şablon oluşturma, bu öğreticide gösterildiği gibi Jınja ve Jade gibi uzantılar tarafından sağlanır.
 
+::: moniker range="vs-2017"
 Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
-
-> [!div class="checklist"]
-> - "Boş Flask Web projesi" şablonunu kullanarak bir git deposunda temel bir Flask projesi oluşturma (1. adım)
-> - Tek sayfalı bir Flask uygulaması oluşturun ve bu sayfayı şablon kullanarak oluşturun (2. adım)
-> - Statik dosyaları sunma, sayfa ekleme ve şablon devralmayı kullanma (3. adım)
-> - Birden çok sayfa ve yanıt veren tasarıma sahip bir uygulama oluşturmak için Flask Web projesi şablonunu kullanın (4. adım)
-> - Çeşitli depolama seçeneklerini (Azure Storage, MongoDB veya bellek) kullanan bir yoklama uygulaması oluşturmak için Flask Web projesi şablonunu Yoklat ' i kullanın.
+- "Boş Flask Web projesi" şablonunu kullanarak bir git deposunda temel bir Flask projesi oluşturma (1. adım)
+- Tek sayfalı bir Flask uygulaması oluşturun ve bu sayfayı şablon kullanarak oluşturun (2. adım)
+- Statik dosyaları sunma, sayfa ekleme ve şablon devralmayı kullanma (3. adım)
+- Birden çok sayfa ve yanıt veren tasarıma sahip bir uygulama oluşturmak için Flask Web projesi şablonunu kullanın (4. adım)
+- Çeşitli depolama seçeneklerini (Azure Storage, MongoDB veya bellek) kullanan bir yoklama uygulaması oluşturmak için Flask Web projesi şablonunu Yoklat ' i kullanın.
 
 Bu adımları izleyerek, üç ayrı proje içeren tek bir Visual Studio çözümü oluşturursunuz. Projeyi, Visual Studio ile birlikte gelen farklı Flask proje şablonlarını kullanarak oluşturursunuz. Projeleri aynı çözümde tutarak, karşılaştırma için farklı dosyalar arasında kolayca geri ve ileri geçiş yapabilirsiniz.
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
+- "Boş Flask Web projesi" şablonunu kullanarak bir git deposunda temel bir Flask projesi oluşturma (1. adım)
+- Tek sayfalı bir Flask uygulaması oluşturun ve bu sayfayı şablon kullanarak oluşturun (2. adım)
+- Statik dosyaları sunma, sayfa ekleme ve şablon devralmayı kullanma (3. adım)
+- Birden çok sayfa ve yanıt veren tasarıma sahip bir uygulama oluşturmak için Flask Web projesi şablonunu kullanın (4. adım)
+
+Bu adımları uygulayarak, iki ayrı proje içeren tek bir Visual Studio çözümü oluşturursunuz. Projeyi, Visual Studio ile birlikte gelen farklı Flask proje şablonlarını kullanarak oluşturursunuz. Projeleri aynı çözümde tutarak, karşılaştırma için farklı dosyalar arasında kolayca geri ve ileri geçiş yapabilirsiniz.
+::: moniker-end
 
 > [!Note]
 > Bu öğretici, Flask hakkında daha fazla bilgi edinmenize ve kendi projeleriniz için daha kapsamlı bir başlangıç noktası sağlayan farklı Flask proje şablonlarının nasıl kullanılacağına ilişkin [Flask hızlı](../ide/quickstart-python.md?toc=/visualstudio/python/toc.json&bc=/visualstudio/python/_breadcrumb/toc.json) başlangıçından farklıdır. Örneğin, proje şablonları otomatik olarak bir proje oluştururken Flask paketini yükler ve hızlı başlangıçta gösterildiği gibi paketi el ile yüklemenizi gerektirir.

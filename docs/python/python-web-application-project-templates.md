@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 1f6376978826afc2946cfac25ab635d0b7533dc4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a309ba898c22836fb5c0cebfc390b6c8d7c116c5
+ms.sourcegitcommit: f1dff6c4532c43b0444aa12ea57e90bb7dba6fba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99939545"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104805997"
 ---
 # <a name="python-web-application-project-templates"></a>Python web uygulaması proje şablonları
 
@@ -39,7 +39,7 @@ Diğer tüm şablonlar şişe, Flask veya Docgo Web çerçevelerine dayalıdır 
 
 Tüm **boş \<framework> Web projesi** şablonları, daha fazla veya daha az ortak kod içeren bir proje oluşturur ve bir *requirements.txt* dosyasında belirtilen bağımlılıklardır.
 
-| Şablon | Description |
+| Şablon | Açıklama |
 | --- | --- |
 | **Boş şişe Web projesi** | , İçin bir giriş sayfası  `/` ve `/hello/<name>` `<name>` çok kısa bir satır içi sayfa şablonu kullanarak yankı sağlayan bir sayfa olan App.py içinde en az bir uygulama oluşturur. |
 | **Boş Docgo Web projesi** | Core Docgo site yapısıyla bir Docgo projesi oluşturur, ancak Docgo uygulaması yoktur. Daha fazla bilgi için bkz. [docgo şablonları](python-django-web-application-project-template.md) ve [docgo 1. adımı öğrenme](learn-django-in-visual-studio-step-01-project-and-solution.md). |
@@ -49,23 +49,25 @@ Tüm **boş \<framework> Web projesi** şablonları, daha fazla veya daha az ort
 
 Tüm **\<Framework> Web projesi** şablonları, seçilen çerçeveye bakılmaksızın özdeş tasarıma sahip bir başlatıcı Web uygulaması oluşturur. Uygulamanın ana, hakkında ve Iletişim sayfaları, bir gezinti çubuğu ve önyükleme ile hızlı bir şekilde tasarım vardır. Her uygulama statik dosyaları (CSS, JavaScript ve yazı tipleri) sunacak şekilde yapılandırılır ve çerçeveye uygun bir sayfa şablonu mekanizması kullanır.
 
-| Şablon | Description |
+| Şablon | Açıklama |
 | --- | --- |
 | **Şişe Web projesi** | Statik dosyaları *statik* klasörde bulunan ve *app.py* içindeki kodla işlenen bir uygulama oluşturur. Ayrı sayfalar için yönlendirme *Routes.py* içinde bulunur ve *Görünümler* klasörü sayfa şablonlarını içerir.|
 | **Docgo Web projesi** | Üç sayfa, kimlik doğrulama desteği ve bir SQLite veritabanı (ancak veri modeli olmadan) ile bir Docgo projesi ve Docgo uygulaması oluşturur. Daha fazla bilgi için bkz. [docgo şablonları](python-django-web-application-project-template.md) ve [Docgo adım 4](learn-django-in-visual-studio-step-04-full-django-project-template.md). |
 | **Flask Web projesi** | *Statik klasörde bulunan* statik dosyaları içeren bir uygulama oluşturur. *Views.py* sürümündeki kod, *Şablonlar* klasöründe bulunan jınja altyapısını kullanan sayfa şablonlarıyla yönlendirme gerçekleştirir. *Runserver.py* dosyası başlangıç kodu sağlar. Bkz. [Flask adımını öğrenme 4](learn-flask-visual-studio-step-04-full-flask-project-template.md). |
 | **Flask/Jade Web projesi** | **Flask Web projesi** şablonuyla aynı uygulamayı, ancak Jınja şablon oluşturma altyapısı Için Jade uzantısını kullanarak oluşturur. |
 
+::: moniker range="vs-2017"
 ### <a name="polls-group"></a>Grubu yoklamalar
 
 **\<framework> Web projesi şablonlarının yokladığı** , kullanıcıların farklı yoklama sorularını oylayabilir bir başlatıcı Web uygulaması oluşturur. Her uygulama, yoklamaları ve kullanıcı yanıtlarını yönetmek üzere bir veritabanı kullanmak için **Web** projesi şablonlarının yapısını oluşturur. Uygulamalar, uygun veri modellerini ve dosyadaki *samples.js* yoklamaları yükleyen özel bir uygulama sayfasını (/Seed) içerir.
 
-| Şablon | Description |
+| Şablon | Açıklama |
 | --- | --- |
 | **Şişe Web projesini yoklar** | Ortam değişkeni kullanılarak yapılandırılan bir bellek içi veritabanı, MongoDB veya Azure Tablo depolama için çalışabilen bir uygulama oluşturur `REPOSITORY_NAME` . Veri modelleri ve veri deposu kodu *modeller* klasöründe bulunur ve *Settings.py* dosyası, hangi veri deposunun kullanıldığını belirleyen kodu içerir. |
 | **Docgo Web projesini yoklar** | Üç sayfa ve bir SQLite veritabanı ile Docgo projesi ve Docgo uygulaması oluşturur. Kimliği doğrulanmış bir yöneticinin yoklamaları oluşturmasına ve yönetmesine izin vermek için Docgo yönetim arabirimine özelleştirmeler içerir. Daha fazla bilgi için bkz. [docgo şablonları](python-django-web-application-project-template.md) ve [docgo 6. adımı öğrenin](learn-django-in-visual-studio-step-06-polls-django-web-project-template.md). |
 | **Flask Web projesini yoklar** | Ortam değişkeni kullanılarak yapılandırılan bir bellek içi veritabanı, MongoDB veya Azure Tablo depolama için çalışabilen bir uygulama oluşturur `REPOSITORY_NAME` . Veri modelleri ve veri deposu kodu *modeller* klasöründe bulunur ve *Settings.py* dosyası, hangi veri deposunun kullanıldığını belirleyen kodu içerir. Uygulama, sayfa şablonları için Jınja altyapısını kullanır. Bkz. [Flask adım 5](learn-flask-visual-studio-step-05-polls-flask-web-project-template.md)' i öğrenin. |
 | **Flask/Jade Web projesini yoklar** | , **Flask Web projesi şablonu yoklayıp** aynı uygulamayı oluşturur, ancak Jınja şablon oluşturma altyapısı Için Jade uzantısını kullanarak. |
+::: moniker-end
 
 ## <a name="install-project-requirements"></a>Proje gereksinimlerini yükler
 

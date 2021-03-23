@@ -11,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: afde24347237ed3fc87d7a00ebdf21787d78909c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c6bf427f7597b59fc5bb6fb32766134daa5b22bf
+ms.sourcegitcommit: f1dff6c4532c43b0444aa12ea57e90bb7dba6fba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99942667"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104806075"
 ---
 # <a name="tutorial-get-started-with-the-django-web-framework-in-visual-studio"></a>Öğretici: Visual Studio 'da Docgo Web çerçevesini kullanmaya başlama
 
@@ -24,13 +24,22 @@ ms.locfileid: "99942667"
 
 Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 
-> [!div class="checklist"]
-> - Git deposunda "boş Docgo Web projesi" şablonunu kullanarak temel bir Docgo projesi oluşturma (1. adım)
-> - Tek sayfalı bir Docgo uygulaması oluşturun ve bu sayfayı şablon kullanarak oluşturun (2. adım)
-> - Statik dosyaları sunma, sayfa ekleme ve şablon devralmayı kullanma (3. adım)
-> - Birden çok sayfa ve yanıt veren tasarıma sahip bir uygulama oluşturmak için Docgo Web projesi şablonunu kullanın (4. adım)
-> - Kullanıcıların kimliğini doğrulama (5. adım)
-> - Yönetim arabirimine modeller, veritabanı geçişleri ve özelleştirmeler kullanan bir uygulama oluşturmak için Docgo Web proje şablonunu yoklayan (6. adım) kullanın
+::: moniker range="vs-2017"
+- Git deposunda "boş Docgo Web projesi" şablonunu kullanarak temel bir Docgo projesi oluşturma (1. adım)
+- Tek sayfalı bir Docgo uygulaması oluşturun ve bu sayfayı şablon kullanarak oluşturun (2. adım)
+- Statik dosyaları sunma, sayfa ekleme ve şablon devralmayı kullanma (3. adım)
+- Birden çok sayfa ve yanıt veren tasarıma sahip bir uygulama oluşturmak için Docgo Web projesi şablonunu kullanın (4. adım)
+- Kullanıcıların kimliğini doğrulama (5. adım)
+- Yönetim arabirimine modeller, veritabanı geçişleri ve özelleştirmeler kullanan bir uygulama oluşturmak için Docgo Web proje şablonunu yoklayan (6. adım) kullanın
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+- Git deposunda "boş Docgo Web projesi" şablonunu kullanarak temel bir Docgo projesi oluşturma (1. adım)
+- Tek sayfalı bir Docgo uygulaması oluşturun ve bu sayfayı şablon kullanarak oluşturun (2. adım)
+- Statik dosyaları sunma, sayfa ekleme ve şablon devralmayı kullanma (3. adım)
+- Birden çok sayfa ve yanıt veren tasarıma sahip bir uygulama oluşturmak için Docgo Web projesi şablonunu kullanın (4. adım)
+- Kullanıcıların kimliğini doğrulama (5. adım)
+::: moniker-end
 
 ## <a name="prerequisites"></a>Önkoşullar
 
