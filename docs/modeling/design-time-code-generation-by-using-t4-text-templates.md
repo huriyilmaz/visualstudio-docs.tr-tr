@@ -17,12 +17,12 @@ ms.author: joshuapa
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 11c9384d03971f475abbe680f6731d2757cbb195
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ec309be7fbeb81951af73517412f36f7b28bc82f
+ms.sourcegitcommit: 20f546a0b13b56e7b0da21abab291d42a5ba5928
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99935306"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104884154"
 ---
 # <a name="design-time-code-generation-by-using-t4-text-templates"></a>T4 Metin Şablonları Kullanarak Tasarım Zamanı Kodu Oluşturma
 
@@ -56,7 +56,7 @@ Metin şablonu, oluşturmak istediğiniz metnin bir karışımını ve metnin de
 
     Şablonu bir [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] projeye eklediyseniz, dil özniteliği " `VB` " olur.
 
-4. Dosyanın sonuna bir metin ekleyin. Örneğin:
+4. Dosyanın sonuna bir metin ekleyin. Örnek:
 
    ```
    Hello, world!
@@ -125,7 +125,7 @@ Metin şablonları, oluşturulan dosyanın içeriğini değiştirmek için progr
 
 Metin şablonunda hata ayıklamak için:
 
-- `debug="true"` `template` Yönergeye ekleyin. Örneğin:
+- `debug="true"` `template` Yönergeye ekleyin. Örnek:
 
    `<#@ template debug="true" hostspecific="false" language="C#" #>`
 
@@ -274,7 +274,7 @@ Türü `this.Host` (vb, `Me.Host` ) `Microsoft.VisualStudio.TextTemplating.IText
 
 ### <a name="getting-data-from-visual-studio"></a>Visual Studio 'dan veri alma
 
-Visual Studio 'da sunulan hizmetleri kullanmak için, özniteliğini ayarlayın `hostSpecific` ve `EnvDTE` derlemeyi yükleyin. `Microsoft.VisualStudio.TextTemplating`Genişletme yöntemini içeren içeri aktarma `GetCOMService()` .  Daha sonra, DTE ve diğer hizmetlere erişmek için ıvıceprovider. GetCOMService () kullanabilirsiniz. Örneğin:
+Visual Studio 'da sunulan hizmetleri kullanmak için, özniteliğini ayarlayın `hostSpecific` ve `EnvDTE` derlemeyi yükleyin. `Microsoft.VisualStudio.TextTemplating`Genişletme yöntemini içeren içeri aktarma `GetCOMService()` .  Daha sonra, DTE ve diğer hizmetlere erişmek için ıvıceprovider. GetCOMService () kullanabilirsiniz. Örnek:
 
 ```src
 <#@ template hostspecific="true" language="C#" #>
@@ -352,7 +352,7 @@ Warning("A warning message");
 
 4. **. Tt** dosyasının aşağıdaki özelliklerini doğrulayın:
 
-   | | |
+   |Özellik |Ayar |
    |-|-|
    | **Özel araç =** | **TextTemplatingFileGenerator** |
    | **Derleme eylemi =** | **Hiçbiri** |

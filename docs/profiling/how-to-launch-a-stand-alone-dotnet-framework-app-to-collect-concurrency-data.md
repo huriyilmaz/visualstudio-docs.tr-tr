@@ -11,12 +11,12 @@ manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: ab5ddea8ddb3fdd741f4df3b3b53f4239d016049
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 81311e9dea2c5367b44cdf2cc8e2327a8aff5617
+ms.sourcegitcommit: 20f546a0b13b56e7b0da21abab291d42a5ba5928
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99928993"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104884115"
 ---
 # <a name="how-to-launch-a-stand-alone-net-framework-application-with-the-profiler-to-collect-concurrency-data-by-using-the-command-line"></a>Nasıl yapılır: komut satırını kullanarak eşzamanlılık verileri toplamak için Profil Oluşturucu ile tek başına .NET Framework uygulaması başlatma
 Bu konu, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] bir .NET Framework tek başına (istemci) uygulaması başlatmak ve işlem ve iş parçacığı eşzamanlılık verilerini toplamak için profil oluşturma araçları komut satırı araçlarının nasıl kullanılacağını açıklar
@@ -39,7 +39,7 @@ Bu konu, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] bir .NET Fram
 
    - [/Start](../profiling/start.md) seçeneği profil oluşturucuyu başlatır.
 
-     | | |
+     | Komut | Açıklama |
      |-------------------------------------| - |
      | **/Start: eşzamanlılık** | Hem kaynak çekişmesinin hem de iş parçacığı yürütme verilerinin toplanmasını mümkün. |
      | **/Start: eşzamanlılık, yalnızca Resource** | Yalnızca kaynak çekişme verilerinin toplanmasını mümkün. |

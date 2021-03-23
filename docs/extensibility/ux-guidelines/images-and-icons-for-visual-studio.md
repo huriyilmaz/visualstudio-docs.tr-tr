@@ -9,12 +9,12 @@ ms.author: anthc
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f31ed0ccb09074798ddf56f601e9ad26facd505f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9c7bc09147c2c9a6cf36a1a967241219df9e9bce
+ms.sourcegitcommit: 20f546a0b13b56e7b0da21abab291d42a5ba5928
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99952544"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104884167"
 ---
 # <a name="images-and-icons-for-visual-studio"></a>Visual Studio İçin Görüntüler ve Simgeler
 ## <a name="image-use-in-visual-studio"></a><a name="BKMK_ImageUseInVisualStudio"></a> Visual Studio 'da görüntü kullanımı
@@ -336,13 +336,13 @@ ms.locfileid: "99952544"
 
 ##### <a name="examples-of-icons-with-language-modifiers"></a>Dil değiştiricilerine sahip simgeler örnekleri
 
-|VB|C#|F#|JavaScript|Python|
+|VB|C#|C++|F#|JavaScript|Python|
 |-|-|-|-|-|-|
 |![Visual Basic simgesi](../../extensibility/ux-guidelines/media/0405-25_vb.png "0405-25_VB")|![C&#35; simgesi](../../extensibility/ux-guidelines/media/0405-26_csharp.png "0405-26_CSharp")|![C&#43;&#43; simgesi](../../extensibility/ux-guidelines/media/0405-27_cplusplus.png "0405-27_CPlusPlus")|![F&#35; simgesi](../../extensibility/ux-guidelines/media/0405-28_fsharp.png "0405-28_FSharp")|![JavaScript simgesi](../../extensibility/ux-guidelines/media/0405-29_javascript.png "0405-29_JavaScript")|![Python simgesi](../../extensibility/ux-guidelines/media/0405-30_python.png "0405-30_Python")|
 
 |HTML|WPF|ASP|CSS|TypeScript|
-|-|-|-|-|-|-|
-|![HTML simgesi](../../extensibility/ux-guidelines/media/0405-31_html.png "0405-31_HTML")<br />HTML|![WPF simgesi](../../extensibility/ux-guidelines/media/0405-32_wpf.png "0405-32_WPF")<br />WPF|![ASP simgesi](../../extensibility/ux-guidelines/media/0405-33_asp.png "0405-33_ASP")<br />ASP|![CSS simgesi](../../extensibility/ux-guidelines/media/0405-34_css.png "0405-34_CSS")<br />CSS|![TypeScript simgesi](../../extensibility/ux-guidelines/media/0405-35_typescript.png "0405-35_TypeScript")<br />TypeScript||
+|-|-|-|-|-|
+|![HTML simgesi](../../extensibility/ux-guidelines/media/0405-31_html.png "0405-31_HTML")<br />HTML|![WPF simgesi](../../extensibility/ux-guidelines/media/0405-32_wpf.png "0405-32_WPF")<br />WPF|![ASP simgesi](../../extensibility/ux-guidelines/media/0405-33_asp.png "0405-33_ASP")<br />ASP|![CSS simgesi](../../extensibility/ux-guidelines/media/0405-34_css.png "0405-34_CSS")<br />CSS|![TypeScript simgesi](../../extensibility/ux-guidelines/media/0405-35_typescript.png "0405-35_TypeScript")<br />TypeScript|
 
 #### <a name="intellisense"></a>IntelliSense
  IntelliSense simgeleri özel bir renk paleti kullanır. Bu renkler, kullanıcıların IntelliSense açılan listesinde farklı öğeler arasında hızlı bir şekilde ayrım yapmanıza yardımcı olmak için kullanılır.

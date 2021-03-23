@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.date: 11/20/2019
 ms.technology: vs-azure
 ms.topic: conceptual
-ms.openlocfilehash: 004427ced7d18d9a5af5c863172416fd8637aa69
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 07ecc9a171cf6c0ca254ddbf284f116545ddd0f0
+ms.sourcegitcommit: 20f546a0b13b56e7b0da21abab291d42a5ba5928
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85536870"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104884089"
 ---
 # <a name="how-visual-studio-builds-containerized-apps"></a>Visual Studio’nun kapsayıcılı uygulama oluşturma şekli
 
@@ -76,7 +76,7 @@ docker build -f Dockerfile ..
 
 .NET Framework projeleri için Visual Studio tarafından oluşturulan dockerfiles (ve Visual Studio 2017 güncelleştirme 4 ' ten önceki Visual Studio sürümleriyle oluşturulan .NET Core projeleri için) çok aşamalı Dockerfiles değildir.  Bu Dockerfiles içindeki adımlar kodunuzu derlemez.  Bunun yerine, Visual Studio .NET Framework Dockerfile oluşturduğunda, öncelikle projenizi MSBuild kullanarak derler.  Bu başarılı olduğunda Visual Studio, yapı çıkışını MSBuild 'ten elde edilen Docker görüntüsüne kopyalayan Dockerfile öğesini oluşturur.  Kodunuzu derlemek için gereken adımlar Dockerfile 'a dahil edilmediğinden, komut satırından kullanarak .NET Framework Dockerfiles derlenemez `docker build` . Bu projeleri derlemek için MSBuild 'i kullanmanız gerekir.
 
-Tek Docker kapsayıcı projesi için bir görüntü oluşturmak üzere, MSBuild 'i `/t:ContainerBuild` komut seçeneğiyle kullanabilirsiniz. Örneğin:
+Tek Docker kapsayıcı projesi için bir görüntü oluşturmak üzere, MSBuild 'i `/t:ContainerBuild` komut seçeneğiyle kullanabilirsiniz. Örnek:
 
 ```cmd
 MSBuild MyProject.csproj /t:ContainerBuild /p:Configuration=Release
@@ -105,9 +105,9 @@ Warmup yalnızca **hızlı** modda gerçekleşecektir, bu nedenle çalışan kap
 
 Kapsayıcılarda çalışan hata ayıklama için, Visual Studio hata ayıklayıcı ve NuGet klasörlerini konak makinesinden eşlemek için birim eşlemesi kullanır. Birim eşleme, [burada](https://docs.docker.com/storage/volumes/)Docker belgelerinde açıklanmıştır. Kapsayıcıda bağlanan birimler şunlardır:
 
-|Birim|Description|
+|Birim|Açıklama|
 |-|-|
-| **Uzaktan hata ayıklayıcı** | Proje türüne bağlı olarak kapsayıcıda hata ayıklayıcıyı çalıştırmak için gereken bitleri içerir. Bu konuda daha fazla bilgi açıklanmaktadır |[hata ayıklama](#debugging) bölümünde ayrıntılar.
+| **Uzaktan hata ayıklayıcı** | Proje türüne bağlı olarak kapsayıcıda hata ayıklayıcıyı çalıştırmak için gereken bitleri içerir. Bu, [hata ayıklama](#debugging) bölümünde daha ayrıntılı olarak açıklanmıştır.|
 | **Uygulama klasörü** | Dockerfile dosyasının bulunduğu proje klasörünü içerir.|
 | **Kaynak klasör** | Docker komutlarına geçirilen yapı bağlamını içerir.|
 | **NuGet paket klasörleri** | Projedeki *obj \{ projesi}. csproj. NuGet. g. props* dosyasından okunan NuGet paketlerini ve geri dönüş klasörlerini içerir. |
@@ -192,5 +192,5 @@ Proje dosyalarınızda ek MSBuild özellikleri ayarlayarak derlemelerinizi nası
 ## <a name="see-also"></a>Ayrıca bkz.
 
 [MSBuild](../msbuild/msbuild.md) 
- Windows üzerinde Dockerfile [Dockerfile on Windows](/virtualization/windowscontainers/manage-docker/manage-windows-dockerfile) 
+ Windows üzerinde Dockerfile [](/virtualization/windowscontainers/manage-docker/manage-windows-dockerfile) 
  [Windows 'Da Linux kapsayıcıları](/virtualization/windowscontainers/deploy-containers/linux-containers)
