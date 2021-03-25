@@ -5,17 +5,17 @@ ms.custom: SEO-VS-2020
 ms.date: 04/26/2017
 ms.topic: conceptual
 ms.assetid: a793cf7a-f230-43ce-88d0-fa5d6f1aa9c7
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 38c560cf75fad8887dabdaab38004b10ae0ffc08
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ce44b9234465af6bf52ce8baa0e60e641e845d3c
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99926126"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105052677"
 ---
 # <a name="ux-essentials-for-visual-studio"></a>Visual Studio İçin UX Temel Bileşenleri
 
@@ -156,7 +156,7 @@ Bu durumun doğru tasarımı, Internet Explorer, Office ve Visual Studio 'da ort
 
    ![Renk hizmeti yok sayılıyor ve köprüler için "daha fazla bilgi" kullanılarak Visual Studio Anti-desenler bulunur.](../../extensibility/ux-guidelines/media/0102-j_hyperlinkincorrect.png "0102-j_HyperlinkIncorrect")<br />Renk hizmeti yok sayılıyor ve köprüler için "daha fazla bilgi" kullanılarak Visual Studio Anti-desenler bulunur.
 
-**Daha iyi çözüm:** Kullanıcının bağlantıya tıklayarak istediği soruyu ortaya çıkaran. Örneğin:
+**Daha iyi çözüm:** Kullanıcının bağlantıya tıklayarak istediği soruyu ortaya çıkaran. Örnek:
 
 - Windows Azure hizmetleri nasıl çalışır?
 

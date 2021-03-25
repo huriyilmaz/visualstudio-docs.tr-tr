@@ -5,17 +5,17 @@ ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: c19e3022-047c-43b6-a046-a82717efed4f
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 16a4178231c575f590a13b8205cd872668f46143
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1c15b7458bfd18314015bbb9228c212a06fcd82f
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99951946"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105072981"
 ---
 # <a name="layout-for-visual-studio"></a>Visual Studio İçin Düzen
 Visual Studio iletişim kutularının çoğunluğu, standart [Windows Masaüstü iletişim kutusu düzen ilkelerini](/windows/desktop/uxguide/win-dialog-box)izleyen temalı iletişim kutuları olan [araç kutusu yerleşimidir](../../extensibility/ux-guidelines/layout-for-visual-studio.md#BKMK_UtilityDialogLayout). Visual Studio, Kullanıcı arabirimini yenilemeye yönelik olarak taşındıkça, daha belirgin birçok iletişim kutusu, bunları ürün tanımlama deneyimleri olarak belirleyen yeni bir tasarıma sahiptir. Bu [temalı iletişim kutusu düzeninde](../../extensibility/ux-guidelines/layout-for-visual-studio.md#BKMK_ThemedDialogLayout) temalı bir görünüm vardır.
