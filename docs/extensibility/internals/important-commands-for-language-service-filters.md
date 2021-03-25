@@ -8,17 +8,17 @@ helpviewer_keywords:
 - language services, filters
 - language services, commands to support
 ms.assetid: 4948c494-3d4d-4f50-b3f9-959e73f90e4d
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4eaa85eab9d9691125afce28d51c61d464e56cb2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5d27f1c3057266d1b167999f3178a3e554a78ddb
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99839839"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105069562"
 ---
 # <a name="important-commands-for-language-service-filters"></a>Dil Hizmeti Filtreleri için Önemli Komutlar
 Tam özellikli bir dil hizmeti filtresi oluşturmak istiyorsanız aşağıdaki komutları işlemeyi göz önünde bulundurun. Komut tanımlayıcılarının tam listesi, <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID> yönetilen kod için numaralandırmada ve yönetilmeyen kod Için Stdidcmd. h üst bilgi dosyasına tanımlanmıştır [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] . Stdidcmd. h dosyasını *Visual STUDIO SDK yükleme yolu*\VisualStudioIntegration\Common\Inc. ' de bulabilirsiniz.
