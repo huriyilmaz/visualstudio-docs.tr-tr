@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - VSCT files, manual authoring
 ms.assetid: e9f715dc-12b7-439b-bdf3-f3dc75e62f1c
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3c484c08b3335d51283f1f6e1a7b29757a2271aa
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 73d16337daefdfe25425982a7fc7249c42f0fa1a
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99906073"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105086345"
 ---
 # <a name="author-vsct-files"></a>Author. vsct dosyaları
 Bu belgede, Visual Studio tümleşik geliştirme ortamına (IDE) menü öğeleri, araç çubukları ve diğer kullanıcı arabirimi (UI) öğeleri eklemek için bir *. vsct* dosyasının nasıl yazılacağı gösterilmektedir. Zaten bir *. vsct* dosyası olmayan bir Visual Studio paketine (VSPackage) Kullanıcı arabirimi öğeleri eklediğinizde bu adımları kullanın.
