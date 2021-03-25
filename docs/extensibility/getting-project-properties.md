@@ -8,17 +8,17 @@ helpviewer_keywords:
 - project properties, displaying in tool window
 - tool windows, displaying project properties
 ms.assetid: 96ba07ca-0811-4013-8602-12550ac4ba79
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: e89a19ee51a62e8d92c0ec8984e912703e2b92b5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8de3f32951cb70b8115781ce067950c7e518b102
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99968196"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105057669"
 ---
 # <a name="get-project-properties"></a>Proje özelliklerini al
 
@@ -38,7 +38,7 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
 
 ### <a name="to-display-project-properties-in-a-tool-window"></a>Proje özelliklerini bir araç penceresinde görüntüleme
 
-1. ProjectPropertiesToolWindowCommand.cs dosyasında, aşağıdaki using yönergelerini ekleyin.
+1. ProjectPropertiesToolWindowCommand. cs dosyasında, aşağıdaki using yönergelerini ekleyin.
 
     ```csharp
     using EnvDTE;
@@ -46,9 +46,9 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
 
     ```
 
-2. *ProjectPropertiesToolWindowControl. xaml* dosyasında, var olan düğmeyi kaldırın ve araç kutusundan bir TreeView ekleyin. Ayrıca, Click olay işleyicisini *ProjectPropertiesToolWindowControl.xaml.cs* dosyasından kaldırabilirsiniz.
+2. *ProjectPropertiesToolWindowControl. xaml* dosyasında, var olan düğmeyi kaldırın ve araç kutusundan bir TreeView ekleyin. Ayrıca, Click olay işleyicisini *ProjectPropertiesToolWindowControl. xaml. cs* dosyasından da kaldırabilirsiniz.
 
-3. *ProjectPropertiesToolWindowCommand.cs* içinde, `ShowToolWindow()` projeyi açmak ve özelliklerini okumak için yöntemini kullanın, sonra özellikleri TreeView öğesine ekleyin. ShowToolWindow için kod aşağıdaki gibi görünmelidir:
+3. *ProjectPropertiesToolWindowCommand. cs* dosyasında, bu `ShowToolWindow()` yöntemi kullanarak projeyi açın ve özelliklerini okuyun, sonra da özellikleri TreeView öğesine ekleyin. ShowToolWindow için kod aşağıdaki gibi görünmelidir:
 
     ```csharp
     private void ShowToolWindow(object sender, EventArgs e)

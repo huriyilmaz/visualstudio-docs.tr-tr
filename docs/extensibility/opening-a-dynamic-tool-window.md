@@ -7,17 +7,17 @@ ms.topic: how-to
 helpviewer_keywords:
 - tool windows, dynamic
 ms.assetid: 21547ba7-6e81-44df-9277-265bf34f877a
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1998091559f78ed7c7eb8d9585206cf0217d8b2d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 357644f67da9a3bbc468d708cf39e44f737dbf0f
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99946598"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105090427"
 ---
 # <a name="open-a-dynamic-tool-window"></a>Dinamik araç penceresi aç
 Araç pencereleri genellikle menüdeki bir komuttan veya eşdeğer bir klavye kısayoluna açılır. Ancak, her zaman belirli bir kullanıcı arabirimi bağlamı geçerli olduğunda açılan bir araç penceresine gerek duyabilirsiniz ve Kullanıcı arabirimi bağlamı artık geçerli olmadığında kapanır. Bu tür araç pencereleri *dinamik* veya *Otomatik görünür* olarak adlandırılır.
@@ -34,9 +34,9 @@ Araç pencereleri genellikle menüdeki bir komuttan veya eşdeğer bir klavye k�
 
 ## <a name="to-open-a-dynamic-tool-window"></a>Dinamik bir araç penceresi açmak için
 
-1. **DynamicToolWindow** ADLı bir VSIX projesi oluşturun ve *DynamicWindowPane.cs* adlı bir araç penceresi öğe şablonu ekleyin. Daha fazla bilgi için bkz. [bir araç penceresi ile uzantı oluşturma](../extensibility/creating-an-extension-with-a-tool-window.md).
+1. **DynamicToolWindow** ADLı bir VSIX projesi oluşturun ve *DynamicWindowPane. cs* adlı bir araç penceresi öğe şablonu ekleyin. Daha fazla bilgi için bkz. [bir araç penceresi ile uzantı oluşturma](../extensibility/creating-an-extension-with-a-tool-window.md).
 
-2. *DynamicWindowPanePackage.cs* dosyasında, Dynamicwindowbölmesi paket bildirimini bulun. <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowVisibilityAttribute> Araç penceresini kaydetmek için ve özniteliklerini ekleyin.
+2. *Dynamicwindowbölmesi Package. cs* dosyasında, dynamicwindowbölmesi paket bildirimini bulun. <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowVisibilityAttribute> Araç penceresini kaydetmek için ve özniteliklerini ekleyin.
 
     ```vb
     [ProvideToolWindow(typeof(DynamicWindowPane)]

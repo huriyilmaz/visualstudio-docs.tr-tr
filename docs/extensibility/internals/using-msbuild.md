@@ -9,17 +9,17 @@ helpviewer_keywords:
 - MSBuild, extensibility
 - packages, compiling with MSBuild
 ms.assetid: 9d38c388-1f64-430e-8f6c-e88bc99a4260
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 92c423254c2e2e0a605ab3f7ff2238db41f4b45a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8891d9674a952f0272855c8b9203109ad2e22468
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99883135"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105090700"
 ---
 # <a name="using-msbuild"></a>MSBuild Kullanma
 MSBuild, oluşturulacak proje öğelerini tam olarak tanımlayan proje dosyaları oluşturmak, görevleri derlemek ve derleme yapılandırması için iyi tanımlanmış, genişletilebilir XML biçimi sağlar.
@@ -27,7 +27,7 @@ MSBuild, oluşturulacak proje öğelerini tam olarak tanımlayan proje dosyalar�
 ## <a name="general-msbuild-considerations"></a>Genel MSBuild konuları
  MSBuild proje dosyaları, örneğin [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] . csproj ve [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] . vbproj dosyaları, derleme zamanında kullanılan verileri içerir, ancak tasarım zamanında kullanılan verileri de içerebilir. Derleme zamanı verileri, [öğe öğesi (MSBuild)](../../msbuild/item-element-msbuild.md) ve [özellik öğesi (MSBuild)](../../msbuild/property-element-msbuild.md)dahil olmak üzere MSBuild temel öğeleri kullanılarak depolanır. Proje türüne ve ilgili proje alt türlerine özgü veriler olan tasarım zamanı verileri, için ayrılmış serbest biçimli XML 'de depolanır.
 
- MSBuild, yapılandırma nesneleri için yerel destek içermez, ancak yapılandırmaya özgü verileri belirtmek için koşullu öznitelikler sağlar. Örneğin:
+ MSBuild, yapılandırma nesneleri için yerel destek içermez, ancak yapılandırmaya özgü verileri belirtmek için koşullu öznitelikler sağlar. Örnek:
 
 ```xml
 <OutputDir Condition="'$(Configuration)'=="release'">Bin\MyReleaseConfig</OutputDir>

@@ -8,24 +8,24 @@ helpviewer_keywords:
 - properties, adding to a project item
 - project items, adding properties
 ms.assetid: d7a0f2b0-d427-4d49-9536-54edfb37c0f3
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 63b1a4a7cb6e2d12882794a07e51151effe36716
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 58c46da9023cc64246f1ea9ee4bde1ec866c545d
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99967429"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105090362"
 ---
 # <a name="persist-the-property-of-a-project-item"></a>Proje öğesinin özelliğini kalıcı hale getirme
 Bir kaynak dosyanın yazarı gibi bir proje öğesine eklediğiniz bir özelliği kalıcı hale getirmek isteyebilirsiniz. Bunu, özelliği proje dosyasında depolayarak yapabilirsiniz.
 
  Bir proje dosyasında bir özelliği kalıcı hale getirmek için ilk adım, projenin hiyerarşisini arabirim olarak elde etmek <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> . Bu arabirimi Otomasyon kullanarak veya kullanarak elde edebilirsiniz <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection> . Arabirimi edindikten sonra, o anda hangi proje öğesinin seçili olduğunu anlamak için kullanabilirsiniz. Proje öğesi KIMLIĞI ' ne sahip olduktan sonra <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.SetItemAttribute%2A> özelliğini eklemek için kullanabilirsiniz.
 
- Aşağıdaki yordamlarda, *VsPkg.cs* özelliğini `Author` Proje dosyasındaki değeriyle kalıcı hale getirin `Tom` .
+ Aşağıdaki yordamlarda, *VsPkg. cs* özelliğini `Author` Proje dosyasındaki değeriyle kalıcı hale getirin `Tom` .
 
 ## <a name="to-obtain-the-project-hierarchy-with-the-dte-object"></a>DTE nesnesi ile proje hiyerarşisini almak için
 
@@ -119,7 +119,7 @@ Bir kaynak dosyanın yazarı gibi bir proje öğesine eklediğiniz bir özelliğ
 
 1. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]Bir çözüm başlatın ve açın veya oluşturun.
 
-2. **Çözüm Gezgini** Proje öğesini seçin VsPkg.cs.
+2. **Çözüm Gezgini** Içindeki VsPkg. cs Proje öğesini seçin.
 
 3. Bir kesme noktası kullanın veya VSPackage 'un yüklendiğini ve SetItemAttribute 'ın çalıştığını saptayın.
 

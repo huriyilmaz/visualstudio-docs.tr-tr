@@ -6,16 +6,16 @@ ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 8dd2cd1d-d8ba-49b9-870a-45acf3a3259d
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 ms.workload:
 - vssdk
-ms.openlocfilehash: 41b804d3f7697890773b4b6888bcffa108b7a11b
-ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
+ms.openlocfilehash: 0ce09edd20c0c46a6b93ace77808fdfc7d5d1c5d
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "96993464"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105057370"
 ---
 # <a name="how-to-use-rule-based-ui-context-for-visual-studio-extensions"></a>Nasıl yapılır: Visual Studio uzantıları için kural tabanlı kullanıcı arabirimi bağlamını kullanma
 
@@ -132,7 +132,7 @@ Kural tabanlı kullanıcı arabirimi bağlamı çeşitli yollarla kullanılabili
 
 Desteklenen çeşitli terim türleri şunlardır:
 
-|Terim|Açıklama|
+|Süre|Açıklama|
 |-|-|
 |{nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn}|GUID, bir UI bağlamını ifade eder. Kullanıcı arabirimi bağlamı etkin olduğunda terim true, aksi durumda false olur.|
 |HierSingleSelectionName:\<pattern>|Etkin hiyerarşide seçim tek bir öğe olduğunda ve seçili öğenin adı "model" tarafından verilen .net normal ifadesiyle eşleştiğinde, terim true olur.|

@@ -5,17 +5,17 @@ ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 47926aa1-3b41-410d-bca8-f77fc950cbe7
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 03d4fbd509cbbb408bdcd0465ba4460f8c3b1e9f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8af418d8ffcaad18aca4497078f4e24f9bb679fd
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99943250"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105090648"
 ---
 # <a name="manage-universal-windows-projects"></a>Evrensel Windows projelerini yönetme
 
@@ -31,7 +31,7 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
 
 2. *Microsoft.VisualStudio.Shell.Interop.12.1.DesignTime.dll* ve *Microsoft.VisualStudio.Shell.Interop.14.0.DesignTime.dll* ( **Uzantılar** bölümünde) bir başvuru ekleyin.
 
-3. *TestUniversalProject.cs* açın ve aşağıdaki yönergeleri ekleyin `using` :
+3. *Testüniversalproject. cs* ' i açın ve aşağıdaki `using` yönergeleri ekleyin:
 
     ```csharp
     using EnvDTE;
@@ -425,9 +425,9 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
 
       Bu yordamda paylaşılan bir projeye ve bir platform projesine bir olay dinleyicisi eklersiniz. Ardından, paylaşılan bir projedeki bir dosyayı ve bir platform projesindeki başka bir dosyayı yeniden adlandırdığınızda, her yeniden adlandırma işlemi için tetiklenen olayları görebilirsiniz.
 
-2. Olay dinleyicisi ekleyin. Projeye yeni bir sınıf dosyası ekleyin ve *HierarchyEventListener.cs* çağırın.
+2. Olay dinleyicisi ekleyin. Projeye yeni bir sınıf dosyası ekleyin *ve bunu bulunan*
 
-3. *HierarchyEventListener.cs* dosyasını açın ve aşağıdaki using yönergelerini ekleyin:
+3. *Hiyerarşik Yeventlistener. cs* dosyasını açın ve aşağıdaki using yönergelerini ekleyin:
 
    ```csharp
    using Microsoft.VisualStudio.Shell.Interop;
@@ -551,7 +551,7 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
     this.ModifyFileNameInProject(sharedHier, fullPath);
     ```
 
-11. Projeyi derleyin ve çalıştırın. Deneysel örnekte bir C# Universal Hub uygulaması oluşturun, **Araçlar** menüsüne gidin ve **Testuniversal Salproject komutunu çağır**' a tıklayın ve genel çıkış bölmesindeki metni denetleyin. Paylaşılan projedeki ilk öğenin adı ( *app. xaml* dosyası olması beklenir) değiştirilmelidir ve <xref:EnvDTE.ProjectItemsEventsClass.ItemRenamed> olayın tetiklendiğini görmeniz gerekir. Bu durumda, *app. xaml* 'in yeniden adlandırılması, *app.xaml.cs* 'in de yeniden adlandırılmasına neden olduğundan, dört olay görmeniz gerekir (her platform projesi için iki adet). (DTE olayları Paylaşılan projedeki öğeleri izlemez.) İki olay görmeniz gerekir <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> (Platform projelerinin her biri için bir tane), ancak <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A> olay yok.
+11. Projeyi derleyin ve çalıştırın. Deneysel örnekte bir C# Universal Hub uygulaması oluşturun, **Araçlar** menüsüne gidin ve **Testuniversal Salproject komutunu çağır**' a tıklayın ve genel çıkış bölmesindeki metni denetleyin. Paylaşılan projedeki ilk öğenin adı ( *app. xaml* dosyası olması beklenir) değiştirilmelidir ve <xref:EnvDTE.ProjectItemsEventsClass.ItemRenamed> olayın tetiklendiğini görmeniz gerekir. Bu durumda, *app. xaml* 'in yeniden adlandırılması için *app. xaml. cs* dosyasının da yeniden adlandırılmasına neden olur. bu da dört olay görmeniz gerekir (her platform projesi için iki adet). (DTE olayları Paylaşılan projedeki öğeleri izlemez.) İki olay görmeniz gerekir <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> (Platform projelerinin her biri için bir tane), ancak <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A> olay yok.
 
 12. Şimdi bir platform projesindeki bir dosyayı yeniden adlandırmayı deneyin ve tetiklenen olaylardaki farkı görebilirsiniz. Çağrısından sonra içine aşağıdaki kodu ekleyin `ShowMessageBox` `ModifyFileName` .
 

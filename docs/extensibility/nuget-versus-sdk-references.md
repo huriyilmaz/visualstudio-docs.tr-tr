@@ -4,17 +4,17 @@ description: Bir Visual Studio projesinde başvuruluyorsa, bir NuGet paketi veya
 ms.custom: SEO-VS-2020
 ms.date: 08/02/2019
 ms.topic: conceptual
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ab2a99c2230c9fc150fe06c305741eedf14ded37
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 74dd27db6372fa8b3712216f9efca6300dbc6d7d
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99874041"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105090609"
 ---
 # <a name="nuget-versus-sdk-as-a-project-reference"></a>Proje başvurusu olarak NuGet ile SDK karşılaştırması
 
