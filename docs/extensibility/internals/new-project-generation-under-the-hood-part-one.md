@@ -7,17 +7,17 @@ helpviewer_keywords:
 - projects [Visual Studio], new project dialog
 - projects [Visual Studio], new project generation
 ms.assetid: 66778698-0258-467d-8b8b-c351744510eb
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 98a305e4e3188131b2ee3c6e2ecb82dc8d4537b1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 27a7e0f3175388b963e85950ea903843caff3baa
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99895784"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105063155"
 ---
 # <a name="new-project-generation-under-the-hood-part-one"></a>Yeni Proje Oluşturma: Arka Plan, 1. Bölüm
 Kendi proje türünü nasıl oluşturacağınız hakkında düşündük? Yeni bir proje oluşturduğunuzda gerçekten ne olduğunu merak ediyor musunuz? Ayrıca, aşın altında bir göz atalım ve nelerin gerçekten devam ettiğinin yanı sıra.

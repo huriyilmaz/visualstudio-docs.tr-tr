@@ -8,17 +8,17 @@ helpviewer_keywords:
 - debugging [Debugging SDK], call stack evaluation
 - call stacks, evaluation
 ms.assetid: 373d6b49-0459-4cce-816e-05745a44fe49
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 223b1fff75c8fefdfed5bce5765d82fc5309738d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c7e7180301965e43e6757340019c3506fe1a5e1f
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99930739"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105055095"
 ---
 # <a name="call-stack-evaluation"></a>Çağrı yığını değerlendirmesi
 Kesme modu sırasında çağrı yığınının yığın çerçevelerini görüntülemek için, [EnumFrameInfo](../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md) yöntemini uygulamanız gerekir.

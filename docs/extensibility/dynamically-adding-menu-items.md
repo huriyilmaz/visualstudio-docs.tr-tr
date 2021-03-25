@@ -9,17 +9,17 @@ helpviewer_keywords:
 - menu items, adding dynamically
 - menus, adding dynamic items
 ms.assetid: d281e9c9-b289-4d64-8d0a-094bac6c333c
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: c3432092bc73ef3a06c807a1b4c4942080b9fce8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fa85d5b5cf4b99840e181fb24b5913ff72a3fee0
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99883551"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105070342"
 ---
 # <a name="dynamically-add-menu-items"></a>Menü öğelerini dinamik olarak ekle
 `DynamicItemStart`Visual Studio komut tablosu (*. vsct*) dosyasındaki bir yer tutucu düğme tanımında komut bayrağını belirterek, çalışma zamanında menü öğeleri ekleyebilirsiniz, sonra (kodda) komutları göstermek ve işlemek için menü öğelerinin sayısını tanımlayarak tanımlayabilirsiniz. VSPackage yüklendiğinde, yer tutucu dinamik menü öğeleriyle değiştirilmiştir.
@@ -144,7 +144,7 @@ ms.locfileid: "99883551"
 ## <a name="implement-the-dynamic-menu-command"></a>Dinamik menü komutunu uygulama
  Öğesinden devralan dinamik bir menü komut sınıfı oluşturursunuz <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> . Bu uygulamada, Oluşturucu eşleştirme komutları için kullanılacak bir koşul belirtir. <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.DynamicItemMatch%2A>Çağrılacak komutu tanımlayan özelliğini ayarlamak için bu koşulu kullanmak için yöntemini geçersiz kılmanız gerekir <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.MatchedCommandId%2A> .
 
-1. *DynamicItemMenuCommand.cs* adlı yeni bir C# sınıf dosyası oluşturun ve öğesinden devralan **Dynamicıtemmenucommand** adlı bir sınıf ekleyin <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> :
+1. *Dynamicıtemmenucommand. cs* adlı yeni bir C# sınıf dosyası oluşturun ve öğesinden devralan **dynamicıtemmenucommand** adlı bir sınıf ekleyin <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> :
 
     ```csharp
     class DynamicItemMenuCommand : OleMenuCommand
@@ -207,14 +207,14 @@ ms.locfileid: "99883551"
 ## <a name="add-the-command"></a>Komutu ekleyin
  DynamicMenu Oluşturucusu, dinamik menüler ve menü öğeleri dahil olmak üzere menü komutlarını ayarladığınız yerdir.
 
-1. *DynamicMenuPackage.cs*' de, komut kümesinin GUID 'ini ve komut kimliğini ekleyin:
+1. *Dynamicmenupackage. cs* dosyasında, komut kümesinin GUID 'ini ve komut kimliğini ekleyin:
 
     ```csharp
     public const string guidDynamicMenuPackageCmdSet = "00000000-0000-0000-0000-00000000";  // get the GUID from the .vsct file
     public const uint cmdidMyCommand = 0x104;
     ```
 
-2. *DynamicMenu.cs* dosyasında aşağıdaki yönergeleri kullanarak aşağıdakileri ekleyin:
+2. *DynamicMenu. cs* dosyasında aşağıdaki yönergeleri kullanarak aşağıdakileri ekleyin:
 
     ```csharp
     using EnvDTE;
@@ -333,7 +333,7 @@ private bool IsValidDynamicItem(int commandId)
 ```
 
 ## <a name="set-the-vspackage-to-load-only-when-a-solution-has-multiple-projects"></a>VSPackage 'ı yalnızca bir çözümde birden çok proje olduğunda yüklenecek şekilde ayarlayın
- Etkin çözümde birden fazla proje yoksa, **Başlangıç projesini ayarla** komutu anlamlı olmadığından, VSPackage 'ı yalnızca o durumda otomatik olarak yüklenecek şekilde ayarlayabilirsiniz. <xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute>UI bağlamı ile birlikte kullanırsınız <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids.SolutionHasMultipleProjects> . *DynamicMenuPackage.cs* dosyasında aşağıdaki öznitelikleri DynamicMenuPackage sınıfına ekleyin:
+ Etkin çözümde birden fazla proje yoksa, **Başlangıç projesini ayarla** komutu anlamlı olmadığından, VSPackage 'ı yalnızca o durumda otomatik olarak yüklenecek şekilde ayarlayabilirsiniz. <xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute>UI bağlamı ile birlikte kullanırsınız <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids.SolutionHasMultipleProjects> . *Dynamicmenupackage. cs* dosyasında aşağıdaki öznitelikleri dynamicmenupackage sınıfına ekleyin:
 
 ```csharp
 [PackageRegistration(UseManagedResourcesOnly = true)]
