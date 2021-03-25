@@ -8,17 +8,17 @@ helpviewer_keywords:
 - automation [Visual Studio SDK], implementing project objects
 - project models, automation
 ms.assetid: c8db8fdb-88c1-4b12-86fe-f3c30a18f9ee
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: e167a974dde1b98d43f7515581658f1ea549df9d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 506606291996c94ff10514c6c57f83c6e1133862
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99896831"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105062830"
 ---
 # <a name="project-modeling"></a>Proje Modelleme
 Projeniz için Otomasyon sağlamanın bir sonraki adımı, Standart proje nesneleri: <xref:EnvDTE.Projects> ve koleksiyonları; ve `ProjectItems` `Project` <xref:EnvDTE.ProjectItem> nesneleri ve geri kalan nesneleri uygulamanıza özel olarak uygulamaktır. Bu standart nesneler Dteınternal. h dosyasında tanımlanmıştır. BscPrj örneğinde standart nesneler için bir uygulama verilmiştir. Bu sınıfları, diğer proje türlerindeki proje nesneleriyle yan yana olan kendi standart proje nesnelerinizi oluşturmak için modeller olarak kullanabilirsiniz.

@@ -5,17 +5,17 @@ ms.custom: SEO-VS-2020
 ms.date: 05/23/2019
 ms.topic: how-to
 ms.assetid: efd27f00-7fe5-45f8-9b97-371af732be97
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f022023ec03ddb280424f3c47944c91e8fa696de
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8ff3fa6f061f894abce17d2e6c58bfb791740a90
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99958394"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105061777"
 ---
 # <a name="writing-to-the-user-settings-store"></a>Kullanıcı Ayarları Deposuna Yazma
 Kullanıcı ayarları, **Araçlar/Seçenekler** iletişim kutusu, Özellikler pencereleri ve diğer diğer iletişim kutuları gibi yazılabilir ayarlardır. Visual Studio uzantıları, küçük miktarlarda veri depolamak için bunları kullanabilir. Bu izlenecek yol, Kullanıcı ayarları deposundan okuma ve yazma yoluyla Visual Studio 'ya bir dış araç olarak not defteri eklemeyi gösterir.
@@ -24,7 +24,7 @@ Kullanıcı ayarları, **Araçlar/Seçenekler** iletişim kutusu, Özellikler pe
 
 1. UserSettingsStoreExtension adlı bir VSıX projesi oluşturun ve ardından UserSettingsStoreCommand adlı bir özel komut ekleyin. Özel bir komut oluşturma hakkında daha fazla bilgi için bkz. [bir menü komutuyla uzantı oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md)
 
-2. UserSettingsStoreCommand.cs ' de, aşağıdaki using yönergelerini ekleyin:
+2. UserSettingsStoreCommand. cs dosyasında, aşağıdaki using yönergelerini ekleyin:
 
     ```csharp
     using System.Collections.Generic;

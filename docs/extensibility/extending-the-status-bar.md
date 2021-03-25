@@ -8,17 +8,17 @@ helpviewer_keywords:
 - status bars, about status bars
 - status bars, overview
 ms.assetid: f955115c-4c5f-45ec-b41b-365868c5ec0c
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7776c7fa35cd7ac06dec60ced3604cb67c96da4a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5ab87f9c8b54d9c31466068668eb8dd5a1857a06
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99903193"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105070108"
 ---
 # <a name="extend-the-status-bar"></a>Durum çubuğunu genişletme
 Bilgileri göstermek için IDE 'nin altındaki Visual Studio durum çubuğunu kullanabilirsiniz.
@@ -36,7 +36,7 @@ Bilgileri göstermek için IDE 'nin altındaki Visual Studio durum çubuğunu ku
 
 1. **TestStatusBarExtension** ADLı bir VSIX projesi oluşturun ve **TestStatusBarCommand** adlı bir menü komutu ekleyin.
 
-2. *TestStatusBarCommand.cs* içinde, komut işleyici yöntemi kodunu ( `MenuItemCallback` ) aşağıdaki kodla değiştirin:
+2. *TestStatusBarCommand. cs* dosyasında, komut işleyici yöntemi kodunu ( `MenuItemCallback` ) aşağıdaki kodla değiştirin:
 
     ```csharp
     private void MenuItemCallback(object sender, EventArgs e)
@@ -80,7 +80,7 @@ Bilgileri göstermek için IDE 'nin altındaki Visual Studio durum çubuğunu ku
 
 1. Bu yordamda ilerleme çubuğunun nasıl başlatılacağını ve güncelleştirilmesini göstereceğiz.
 
-2. *TestStatusBarCommand.cs* dosyasını açın ve `MenuItemCallback` yöntemi aşağıdaki kodla değiştirin:
+2. *TestStatusBarCommand. cs* dosyasını açın ve `MenuItemCallback` yöntemi aşağıdaki kodla değiştirin:
 
     ```csharp
     private void MenuItemCallback(object sender, EventArgs e)
@@ -118,7 +118,7 @@ Bilgileri göstermek için IDE 'nin altındaki Visual Studio durum çubuğunu ku
 
      Bu yordamda, bir proje veya çözüm oluşturmayı temsil eden standart Visual Studio animasyonunu görüntüliyoruz.
 
-2. *TestStatusBarCommand.cs* dosyasını açın ve `MenuItemCallback` yöntemi aşağıdaki kodla değiştirin:
+2. *TestStatusBarCommand. cs* dosyasını açın ve `MenuItemCallback` yöntemi aşağıdaki kodla değiştirin:
 
     ```csharp
     private void MenuItemCallback(object sender, EventArgs e)

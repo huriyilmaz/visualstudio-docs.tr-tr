@@ -9,17 +9,17 @@ helpviewer_keywords:
 - language services [managed package framework], outlining
 - outlining, supporting in language services [managed package framework]
 ms.assetid: 7b5578b4-a20a-4b94-ad4c-98687ac133b9
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8a2f00cc4e968551983a8b943d256b49e33d7d6d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a56d755341aa611f0e2762f6bae8940778fe0864
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99954644"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105062960"
 ---
 # <a name="outlining-in-a-legacy-language-service"></a>Eski Dil Hizmetinde Ana Hat Oluşturma
 Anahat oluşturma karmaşık bir programı bir genel bakış veya anahatta daraltmak mümkün kılar. Örneğin, C# ' de tüm yöntemler tek bir satıra daraltılabilir ve yalnızca Yöntem imzası gösteriliyor. Ayrıca, yapılar ve sınıflar yalnızca yapıların ve sınıfların adlarını gösterecek şekilde daraltılabilirler. Tek bir yöntemin içinde,, ve gibi yalnızca ilk bir deyim göstererek genel akışı göstermek için karmaşık mantık daraltılabilir `foreach` `if` `while` .

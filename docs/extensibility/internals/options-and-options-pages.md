@@ -11,17 +11,17 @@ helpviewer_keywords:
 - Tools Options pages [Visual Studio SDK], layouts
 - Tools Options pages [Visual Studio SDK], attributes
 ms.assetid: e6c0e636-5ec3-450e-b395-fc4bb9d75918
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: dac6c6898a8a8766d073cb5cd2f3bd330e7e2658
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1b6c5810cd95b50a63f32cfaa6123e81e35a4be9
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99954585"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105063038"
 ---
 # <a name="options-and-options-pages"></a>Seçenekler ve Seçenekler Sayfaları
 **Araçlar** menüsünde **Seçenekler** ' i tıklatmak **Seçenekler** iletişim kutusunu açar. Bu iletişim kutusundaki seçenekler topluca seçenek sayfaları olarak adlandırılır. Gezinti bölmesindeki ağaç denetimi seçenek kategorilerini içerir ve her kategorinin seçenek sayfaları vardır. Bir sayfa seçtiğinizde, seçenekleri sağ bölmede görünür. Bu sayfalar, VSPackage 'un durumunu belirten seçeneklerin değerlerini değiştirmenize olanak sağlar.

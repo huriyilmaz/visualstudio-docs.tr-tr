@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK]
 ms.assetid: 5653bac9-724f-4948-a820-68ce6aa96365
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 038253d1863c2d599c7c7a1e5c5a1398d67740ab
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 194fb7f159123b97ab1bb866b3c834320dd4bd88
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99883525"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105070329"
 ---
 # <a name="editor-and-language-service-extensions"></a>Düzenleyici ve dil hizmeti uzantıları
 Visual Studio Code Editor özelliklerinin çoğunu genişletebilirsiniz. Düzenleyici, Windows Presentation Foundation (WPF) temel alır ve yönetilen kodda yazılmıştır. Bu tasarım, Visual Studio 'nun önceki sürümlerindeki tasarımlardan farklı olsa da, aynı özelliklerin çoğunu sağlar. Düzenleyiciyi genişletmek için Managed Extensibility Framework (MEF) kullanın.
