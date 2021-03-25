@@ -8,17 +8,17 @@ helpviewer_keywords:
 - multi
 - tool windows
 ms.assetid: 4a7872f1-acc9-4f43-8932-5a526b36adea
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d1d332e3c41a55de8f405f028070fa95f97f6717
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ce6122cbf4d6f85ab50e067fbbd643053ac4e4dd
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99923273"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105089361"
 ---
 # <a name="create-a-multi-instance-tool-window"></a>Çok örnekli bir araç penceresi oluşturma
 Bir araç penceresini, birden çok örneğinin aynı anda açılmasını sağlayacak şekilde programlayabilirsiniz. Araç pencerelerinin varsayılan olarak yalnızca bir örnek açık olabilir.
@@ -34,7 +34,7 @@ Bir araç penceresini, birden çok örneğinin aynı anda açılmasını sağlay
 
 ## <a name="make-a-tool-window-multi-instance"></a>Araç penceresini çoklu örnek yapın
 
-1. *MIToolWindowPackage.cs* dosyasını açın ve `ProvideToolWindow` özniteliğini bulun. `MultiInstances=true`Aşağıdaki örnekte gösterildiği gibi parametresi:
+1. *Mıtoolwindowpackage. cs* dosyasını açın ve `ProvideToolWindow` özniteliği bulun. `MultiInstances=true`Aşağıdaki örnekte gösterildiği gibi parametresi:
 
     ```csharp
     [PackageRegistration(UseManagedResourcesOnly = true)]
@@ -46,7 +46,7 @@ Bir araç penceresini, birden çok örneğinin aynı anda açılmasını sağlay
     {. . .}
     ```
 
-2. *MIToolWindowCommand.cs* dosyasında `ShowToolWindos()` yöntemini bulun. Bu yöntemde, <xref:Microsoft.VisualStudio.Shell.Package.FindToolWindow%2A> yöntemi çağırın ve `create` bayrağını olarak ayarlayın `false` . böylece, kullanılabilir araç penceresi örnekleri arasında yineleme olacak şekilde bir kullanılabilir `id` .
+2. *Mıtoolwindowcommand. cs* dosyasında, `ShowToolWindos()` yöntemini bulun. Bu yöntemde, <xref:Microsoft.VisualStudio.Shell.Package.FindToolWindow%2A> yöntemi çağırın ve `create` bayrağını olarak ayarlayın `false` . böylece, kullanılabilir araç penceresi örnekleri arasında yineleme olacak şekilde bir kullanılabilir `id` .
 
 3. Bir araç penceresi örneği oluşturmak için <xref:Microsoft.VisualStudio.Shell.Package.FindToolWindow%2A> yöntemini çağırın ve öğesini `id` kullanılabilir bir değere ve `create` bayrağını olarak ayarlayın `true` .
 

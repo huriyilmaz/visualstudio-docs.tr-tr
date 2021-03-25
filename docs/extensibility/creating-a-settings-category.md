@@ -7,17 +7,17 @@ ms.topic: how-to
 helpviewer_keywords:
 - profile settings, creating categories
 ms.assetid: 97c88693-05ff-499e-8c43-352ee073dcb7
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: bf089eeaf8c4408a0bc76d2f3982d311ac9c5979
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1e3ef6dbfc58c67ce8e4dd7ff26634e4dbce2218
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99896266"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105089348"
 ---
 # <a name="create-a-settings-category"></a>Ayarlar kategorisi oluşturma
 
@@ -50,7 +50,7 @@ Bu yönergeyi başlatmak için önce [bir seçenek sayfası oluştur sayfasını
     > [!NOTE]
     > Bu üçü de yalnızca kategori adı, **içeri ve dışarı aktarma ayarları** sihirbazında görünmez.
 
-3. *MyToolsOptionsPackage.cs*' de, `float` `OptionFloat` `OptionPageGrid` Aşağıdaki örnekte gösterildiği gibi sınıfına adlı bir özellik ekleyin.
+3. *Myaraçları Optionspackage. cs* dosyasında, `float` `OptionFloat` `OptionPageGrid` Aşağıdaki örnekte gösterildiği gibi sınıfına adlı bir özellik ekleyin.
 
     ```csharp
     public class OptionPageGrid : DialogPage

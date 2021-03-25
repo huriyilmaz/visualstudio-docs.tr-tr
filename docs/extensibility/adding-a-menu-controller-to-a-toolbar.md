@@ -9,17 +9,17 @@ helpviewer_keywords:
 - menus, adding menu controllers to toolbars
 - menu controllers, adding to toolbars
 ms.assetid: 6af9b0b4-037f-404c-bb40-aaa1970768ea
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 82da331d93a2208b76bb953f3a6a489913c907ac
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 304f4ea11abc332c01603f96b6b67c0bd22e38c6
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99951530"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105060074"
 ---
 # <a name="add-a-menu-controller-to-a-toolbar"></a>Araç çubuğuna menü denetleyicisi ekleme
 Bu izlenecek yol, araç [çubuğunda araç çubuğu ekleme](../extensibility/adding-a-toolbar-to-a-tool-window.md) izlenecek yol ve araç penceresi araç çubuğuna nasıl menü denetleyicisi ekleneceğini gösterir. Burada gösterilen adımlar [araç çubuğu ekle](../extensibility/adding-a-toolbar.md) gözden geçirmede oluşturulan araç çubuğuna da uygulanabilir.
@@ -112,7 +112,7 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
 
 ## <a name="implement-the-menu-controller-commands"></a>Menü denetleyicisi komutlarını uygulama
 
-1. *TWTestCommandPackageGuids.cs*' de, mevcut komut kimliklerinden sonra üç menü öğesi Için komut kimliklerini ekleyin.
+1. *Twtestcommandpackageguid. cs* dosyasında, mevcut komut kimliklerinden sonra üç menü öğesi Için komut kimliklerini ekleyin.
 
     ```csharp
     public const int cmdidMCItem1 = 0x130;
@@ -120,7 +120,7 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
     public const int cmdidMCItem3 = 0x132;
     ```
 
-2. *TWTestCommand.cs*' de, sınıfının en üstüne aşağıdaki kodu ekleyin `TWTestCommand` .
+2. *TWTestCommand. cs* dosyasında, sınıfının en üstüne aşağıdaki kodu ekleyin `TWTestCommand` .
 
     ```csharp
     private int currentMCCommand; // The currently selected menu controller command

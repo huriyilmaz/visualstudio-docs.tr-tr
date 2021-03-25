@@ -8,17 +8,17 @@ helpviewer_keywords:
 - toolbox
 - windows forms
 ms.assetid: 0be6ffc1-8afd-4d02-9a5d-e27dde05fde6
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4bb9505ab475da7919a39eb03e7c84b92857db4e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 42dcf30e7c31880357bb95e3858a2c70aa59f174
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99902196"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105089335"
 ---
 # <a name="create-a-windows-forms-toolbox-control"></a>Windows Forms araç kutusu denetimi oluşturma
 
@@ -46,7 +46,7 @@ Windows Forms araç kutusu denetim şablonu tanımsız bir kullanıcı denetimi 
 
 #### <a name="to-build-the-user-interface"></a>Kullanıcı arabirimini oluşturmak için
 
-1. **Çözüm Gezgini**, tasarımcıda açmak için *Counter.cs* öğesine çift tıklayın.
+1. **Çözüm Gezgini**, tasarımcı 'da açmak için *Counter. cs* öğesine çift tıklayın.
 
 2. **Buraya tıklayın!** Windows Forms araç kutusu denetim öğesi şablonunu eklediğinizde varsayılan olarak eklenen düğme.
 
@@ -163,7 +163,7 @@ Windows Forms araç kutusu denetim şablonu tanımsız bir kullanıcı denetimi 
 
 2. Visual Studio 'nun deneysel örneğinde bir **Windows Forms uygulama** projesi oluşturun.
 
-3. **Çözüm Gezgini**, zaten açık değilse Tasarımcıda açmak için *Form1.cs* öğesine çift tıklayın.
+3. **Çözüm Gezgini**, zaten açık değilse, tasarımcıda açmak için *Form1. cs* ' ye çift tıklayın.
 
 4. **Araç kutusunda**, `Counter` denetimin **genel** bölümünde görüntülenmesi gerekir.
 
@@ -173,7 +173,7 @@ Windows Forms araç kutusu denetim şablonu tanımsız bir kullanıcı denetimi 
 
 7. Forma bir <xref:System.Windows.Forms.Button> Denetim sürükleyin ve sonra düğmenin adını ve metin özelliklerini olarak ayarlayın `Test` .
 
-8. Kod görünümünde *Form1.cs* açmak ve bir tıklama işleyicisi oluşturmak için düğmeye çift tıklayın.
+8. Kod görünümünde *Form1. cs* ' yi açmak için düğmeye çift tıklayın ve bir tıklama işleyicisi oluşturun.
 
 9. Tıklama işleyicisinde öğesini çağırın `counter1.Increment()` .
 

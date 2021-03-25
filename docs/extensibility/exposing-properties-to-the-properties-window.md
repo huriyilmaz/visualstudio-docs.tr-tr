@@ -9,17 +9,17 @@ helpviewer_keywords:
 - properties [Visual Studio SDK]
 - Property Browser, exposing properties
 ms.assetid: 47f295b5-1ca5-4e7b-bb52-7b926b136622
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: bd9f2eb66bd2e1b8edcffd9e1053e4f644ba5e77
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b9de86e956fe6a4d7841d519d7252b75ae216229
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99890766"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105075256"
 ---
 # <a name="expose-properties-to-the-properties-window"></a>Özellikler penceresi özellikleri kullanıma sunun
 
@@ -37,9 +37,9 @@ Bu bölümde, özel bir araç penceresi oluşturur ve **Özellikler** penceresin
 
 1. Her Visual Studio uzantısı, uzantı varlıklarını içeren bir VSıX dağıtım projesiyle başlar. Adlı bir [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] VSIX projesi oluşturun `MyObjectPropertiesExtension` . "VSIX" araması yaparak VSıX proje şablonunu **Yeni proje** iletişim kutusunda bulabilirsiniz.
 
-2. Adlı özel bir araç penceresi öğe şablonu ekleyerek bir araç penceresi ekleyin `MyToolWindow` . **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve   >  **Yeni öğe** Ekle ' yi seçin. **Yeni öğe Ekle iletişim kutusunda**, **Visual C# öğeleri**  >  **genişletilebilirliği** ' ne gidin ve **özel araç penceresi**' ni seçin. İletişim kutusunun alt kısmındaki **ad** alanında, dosya adını *MyToolWindow.cs* olarak değiştirin. Özel bir araç penceresi oluşturma hakkında daha fazla bilgi için bkz. [bir araç penceresi ile uzantı oluşturma](../extensibility/creating-an-extension-with-a-tool-window.md).
+2. Adlı özel bir araç penceresi öğe şablonu ekleyerek bir araç penceresi ekleyin `MyToolWindow` . **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve   >  **Yeni öğe** Ekle ' yi seçin. **Yeni öğe Ekle iletişim kutusunda**, **Visual C# öğeleri**  >  **genişletilebilirliği** ' ne gidin ve **özel araç penceresi**' ni seçin. İletişim kutusunun alt kısmındaki **ad** alanında, dosya adını *MyToolWindow. cs* olarak değiştirin. Özel bir araç penceresi oluşturma hakkında daha fazla bilgi için bkz. [bir araç penceresi ile uzantı oluşturma](../extensibility/creating-an-extension-with-a-tool-window.md).
 
-3. *MyToolWindow.cs* açın ve aşağıdaki using ifadesini ekleyin:
+3. *MyToolWindow. cs* ' i açın ve aşağıdaki using ifadesini ekleyin:
 
    ```csharp
    using System.Collections;
@@ -112,7 +112,7 @@ Bu bölümde bir araç penceresi ekler ve özelliklerini kullanıma sunun. Özel
 
 ### <a name="to-expose-tool-window-properties"></a>Araç penceresi özelliklerini açığa çıkarmak için
 
-1. *MyToolWindow.cs*' i açın ve sınıfı Için IsChecked genel Boole özelliğini ekleyin `MyToolWindow` .
+1. *MyToolWindow. cs*' yi açın ve sınıfa IsChecked genel Boolean özelliğini ekleyin `MyToolWindow` .
 
     ```csharp
     [Category("My Properties")]
@@ -131,7 +131,7 @@ Bu bölümde bir araç penceresi ekler ve özelliklerini kullanıma sunun. Özel
 
      Bu özellik, daha sonra oluşturacağınız WPF onay kutusunun durumunu alır.
 
-2. *MyToolWindowControl.xaml.cs* açın ve MyToolWindowControl oluşturucusunu aşağıdaki kodla değiştirin.
+2. *MyToolWindowControl. xaml. cs* ' i açın ve MyToolWindowControl oluşturucusunu aşağıdaki kodla değiştirin.
 
     ```vb
     private MyToolWindow pane;
@@ -145,7 +145,7 @@ Bu bölümde bir araç penceresi ekler ve özelliklerini kullanıma sunun. Özel
 
      Bu `MyToolWindowControl` , bölmeye erişim sağlar `MyToolWindow` .
 
-3. *MyToolWindow.cs* içinde, `MyToolWindow` oluşturucuyu aşağıdaki gibi değiştirin:
+3. *MyToolWindow. cs* dosyasında, `MyToolWindow` oluşturucuyu aşağıdaki gibi değiştirin:
 
     ```csharp
     base.Content = new MyToolWindowControl(this);
@@ -189,7 +189,7 @@ Bu bölümde bir araç penceresi ekler ve özelliklerini kullanıma sunun. Özel
 
 ### <a name="to-change-selection-lists"></a>Seçim listesini değiştirmek için
 
-1. *MyToolWindow.cs* açın ve adlı ortak bir sınıf ekleyin `Simple` .
+1. *MyToolWindow. cs* ' i açın ve adlı ortak bir sınıf ekleyin `Simple` .
 
     ```csharp
     public class Simple
@@ -242,7 +242,7 @@ Bu bölümde bir araç penceresi ekler ve özelliklerini kullanıma sunun. Özel
     }
     ```
 
-3. *MyToolWindowControl.cs*' de, onay kutusu işleyicilerini şu kod satırlarıyla değiştirin:
+3. *MyToolWindowControl. cs* dosyasında, onay kutusu işleyicilerini şu kod satırlarıyla değiştirin:
 
     ```csharp
     private void checkbox_Checked(object sender, RoutedEventArgs e)
