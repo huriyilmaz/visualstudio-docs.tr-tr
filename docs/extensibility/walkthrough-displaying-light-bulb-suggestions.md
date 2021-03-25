@@ -5,17 +5,17 @@ ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 99e5566d-450e-4660-9bca-454e1c056a02
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: e1c906b96f3bd20b72cf2b5eca92190e0ad42916
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ad000d486b0808ea4ddc3311daa7178c6eda1231
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99931298"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105080326"
 ---
 # <a name="walkthrough-display-light-bulb-suggestions"></a>İzlenecek yol: ampul önerilerini görüntüleme
 Hafif bulbs, Visual Studio düzenleyicisinde, yerleşik kod Çözümleyicileri veya kod yeniden düzenleme tarafından tanımlanan sorunlara yönelik düzeltmeler gibi bir dizi eylemi görüntüleyecek şekilde genişlettiğinde simgeler.
@@ -74,7 +74,7 @@ Hafif bulbs, Visual Studio düzenleyicisinde, yerleşik kod Çözümleyicileri v
 
 ## <a name="implement-the-light-bulb-source-provider"></a>Ampul kaynak sağlayıcısını uygulama
 
-1. *LightBulbTest.cs* sınıf dosyasında, LightBulbTest sınıfını silin. Öğesini uygulayan **Testmütedadctionssourceprovider** adlı bir sınıf ekleyin <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSourceProvider> . **Önerilen bir test eylemi** adı ve <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> "metin" ile dışarı aktarın.
+1. *Lightbulbtest. cs* sınıf dosyasında, lightbulbtest sınıfını silin. Öğesini uygulayan **Testmütedadctionssourceprovider** adlı bir sınıf ekleyin <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSourceProvider> . **Önerilen bir test eylemi** adı ve <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> "metin" ile dışarı aktarın.
 
     ```csharp
     [Export(typeof(ISuggestedActionsSourceProvider))]
