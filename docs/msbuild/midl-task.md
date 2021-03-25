@@ -28,12 +28,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a310cd4428232338ed46a8a54502d9956e73be15
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: eadec17e7c5221f0b169d38b15b9601cec746fa4
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99932025"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105094984"
 ---
 # <a name="midl-task"></a>MIDL görevi
 
@@ -79,7 +79,7 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını *midl.exe* sarmal
 
      İsteğe bağlı **dize** parametresi.
 
-     C/C++ ön işlemcisi 'ne geçirilecek seçenekleri belirtir. Önişlemci seçeneklerinin boşlukla ayrılmış bir listesini belirtin.
+     C/C++ ön işlemcisi 'ne geçirilecek seçenekleri belirtir. Önişlemci seçeneklerinin boşlukla ayrılmış bir listesini belirtin. `/E`Seçeneği içermelidir.
 
      Daha fazla bilgi için [MIDL komut satırı başvurusu](/windows/desktop/Midl/midl-command-line-reference)içindeki **/cpp_opt** seçeneğine bakın.
 

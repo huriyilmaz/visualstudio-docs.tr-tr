@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - project files, persisting data in
 ms.assetid: 6a920cb7-453d-4ffd-af1c-6f3084bd03f7
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d2011cd8686f3210ee534fdaefaa26d2f3b4ad5e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5e2cf082e4ca6a45bf42bd66ce34111d5c056787
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99954455"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105095023"
 ---
 # <a name="persisting-data-in-the-msbuild-project-file"></a>MSBuild Proje Dosyasında Verileri Kalıcı Hale Getirme
 Bir proje alt türünün, daha sonra kullanmak üzere, alt türe özgü verileri proje dosyasında kalıcı hale getirmeniz gerekebilir. Proje alt türü, aşağıdaki gereksinimleri karşılamak için proje dosyası kalıcılığını kullanır:
@@ -26,7 +26,7 @@ Bir proje alt türünün, daha sonra kullanmak üzere, alt türe özgü verileri
 
     1. Yapılandırmaya bağımsız veriler. Diğer bir deyişle, boş veya eksik koşullara sahip MSBuild öğelerinde depolanan veriler.
 
-    2. Yapılandırmaya bağlı veriler. Diğer bir deyişle, belirli bir proje yapılandırması için koşullu olan MSBuild öğelerinde depolanan veriler. Örneğin:
+    2. Yapılandırmaya bağlı veriler. Diğer bir deyişle, belirli bir proje yapılandırması için koşullu olan MSBuild öğelerinde depolanan veriler. Örnek:
 
         ```
         <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">

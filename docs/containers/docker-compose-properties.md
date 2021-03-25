@@ -7,12 +7,12 @@ ms.author: ghogen
 ms.date: 08/12/2019
 ms.technology: vs-azure
 ms.topic: reference
-ms.openlocfilehash: 0a27535e9c07f87391b3cdfd8440578e36feee9e
-ms.sourcegitcommit: d577818d3d8e365baa55c6108fa8159c46ed8b43
+ms.openlocfilehash: 4478656af7fff4cfd3a0fdafefe623af5811154f
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97846820"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105068303"
 ---
 # <a name="docker-compose-build-properties"></a>Docker Compose derleme özellikleri
 
@@ -34,16 +34,17 @@ Bir özelliğin değerini ayarlamak için proje dosyasını düzenleyin. Docker 
 
 Aşağıdaki tabloda Docker Compose projeleri için kullanılabilen MSBuild özellikleri gösterilmektedir.
 
-| Özellik adı | Konum | Açıklama | Varsayılan değer  |
+| Özellik adı | Konum | Description | Varsayılan değer  |
 |---------------|----------|-------------|----------------|
 |AdditionalComposeFilePaths|dcproj|Tüm komutlar için docker-compose.exe gönderilmek üzere, noktalı virgülle ayrılmış bir listede ek oluşturma dosyaları belirtir. Docker-Compose proje dosyasından (dcproj) göreli yollara izin verilir.|-|
-|DockerComposeBaseFilePath|dcproj|Docker-Compose dosyalarının dosya adlarının ilk kısmını *. yıml* uzantısı olmadan belirtir. Örneğin: <br>1. DockerComposeBaseFilePath = null/tanımsız: *Docker-Compose* taban dosya yolunu kullanın ve dosyalar *Docker-Compose. yml* ve *Docker-Compose. override. yml* olarak adlandırılır<br>2. DockerComposeBaseFilePath = *mydockercompose*: dosyalar *mydockercompose. yml* ve *mydockercompose. override. yml* olarak adlandırılacak<br> 3. DockerComposeBaseFilePath = *.. \mydockercompose*: dosyalar bir düzey yukarı kalacak. |Docker-Compose|
+|DockerComposeBaseFilePath|dcproj|Docker-Compose dosyalarının dosya adlarının ilk kısmını *. yıml* uzantısı olmadan belirtir. Örnek: <br>1. DockerComposeBaseFilePath = null/tanımsız: *Docker-Compose* taban dosya yolunu kullanın ve dosyalar *Docker-Compose. yml* ve *Docker-Compose. override. yml* olarak adlandırılır<br>2. DockerComposeBaseFilePath = *mydockercompose*: dosyalar *mydockercompose. yml* ve *mydockercompose. override. yml* olarak adlandırılacak<br> 3. DockerComposeBaseFilePath = *.. \mydockercompose*: dosyalar bir düzey yukarı kalacak. |Docker-Compose|
 |DockerComposeBuildArguments|dcproj|Komuta geçirilecek ek parametreleri belirtir `docker-compose build` . Örneğin, `--parallel --pull` |
-|DockerComposeDownArguments|dcproj|Komuta geçirilecek ek parametreleri belirtir `docker-compose down` . Örneğin, `--timeout 500`|-|  
+|DockerComposeDownArguments|dcproj|Komuta geçirilecek ek parametreleri belirtir `docker-compose down` . Örneğin, `--timeout 500`|-|
+|DockerComposeProjectName| dcproj | Belirtilmişse, Docker-Compose projesi için proje adını geçersiz kılar. | "dockercompose" + otomatik üretilen karma |
 |DockerComposeProjectPath|csproj veya vbproj|Docker-Compose projesi (dcproj) dosyasının göreli yolu. Docker-Compose. yıml dosyasında depolanan ilişkili görüntü derleme ayarlarını bulmak için hizmet projesini yayımlarken bu özelliği ayarlayın.|-|
 |DockerComposeUpArguments|dcproj|Komuta geçirilecek ek parametreleri belirtir `docker-compose up` . Örneğin, `--timeout 500`|-|
 |DockerDevelopmentMode|dcproj| "Konak oluşturma" iyileştirmesi ("hızlı mod" hata ayıklama) etkin olup olmadığını denetler.  İzin verilen değerler **hızlı** ve **normal**. | Hızlı |
-|DockerLaunchAction| dcproj | F5 veya CTRL + F5 üzerinde gerçekleştirilecek başlatma eylemini belirtir.  İzin verilen değerler None, LaunchBrowser ve LaunchWCFTestClient 'Tur|Hiçbiri|
+|DockerLaunchAction| dcproj | F5 veya CTRL + F5 üzerinde gerçekleştirilecek başlatma eylemini belirtir.  İzin verilen değerler None, LaunchBrowser ve LaunchWCFTestClient 'Tur.|Yok|
 |DockerLaunchBrowser| dcproj | Tarayıcının başlatılıp başlatılmayacağını belirtir. DockerLaunchAction belirtilmişse yoksayıldı. | Yanlış |
 |DockerServiceName| dcproj|DockerLaunchAction veya DockerLaunchBrowser belirtilmişse DockerServiceName, başlatılacak hizmetin adıdır.  Bu özelliği kullanarak, bir Docker-Compose dosyasının başvurmasına yönelik olabilecek çok sayıda projeden hangisini başlatılacağı belirlenir.|-|
 |DockerServiceUrl 'Si| dcproj | Tarayıcı başlatılırken kullanılacak URL.  Geçerli değiştirme belirteçleri şunlardır "{Serviceıpaddress}", "{ServicePort}" ve "{Scheme}".  Örneğin: {Scheme}: ı{serviceipaddress}: {ServicePort}|-|
@@ -105,7 +106,7 @@ services:
 
 Yukarıdaki örnekte olduğu gibi, değerlerin etrafında çift tırnak işareti kullanın ve ters eğik çizgiyi yollarda ters eğik çizgi için kaçış karakteri olarak kullanın.
 
-|Etiket adı|Açıklama|
+|Etiket adı|Description|
 |----------|-----------|
 |com. Microsoft. VisualStudio. debugayıklanan. Arguments|Hata ayıklama başlatılırken programa geçirilen bağımsız değişkenler. .NET Core uygulamaları için, bu bağımsız değişkenler genellikle NuGet paketleri için ek arama yollarıdır ve ardından projenin çıkış derlemesinin yoludur.|
 |com. Microsoft. VisualStudio. debugayıklanan. killprogram|Bu komut, kapsayıcının içinde çalışan hata ayıklanan programı durdurmak için kullanılır (gerektiğinde).|

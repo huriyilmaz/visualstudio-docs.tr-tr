@@ -10,17 +10,17 @@ helpviewer_keywords:
 - cascading submenus
 - menus, creating cascading submenus
 ms.assetid: 692600cb-d052-40e2-bdae-4354ae7c6c84
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b784cae836f1a5cae520a9650c8f396ccc960a72
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: cc6d521e699beb2345ba76e2e617ff749886eee9
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99951517"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105094907"
 ---
 # <a name="add-a-submenu-to-a-menu"></a>Menüye alt menü ekleme
 Bu izlenecek yol, **TestMenu** menüsüne bir alt menü nasıl ekleneceğini göstererek, [Visual Studio menü çubuğuna bir menü ekleme](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md) bölümündeki gösteride oluşturulur.
@@ -85,7 +85,7 @@ Bu izlenecek yol, **TestMenu** menüsüne bir alt menü nasıl ekleneceğini gö
 
 ## <a name="add-a-command"></a>Komut Ekle
 
-1. *TestCommand.cs* ' i açın ve var olan komut kimliğinden sonra AŞAĞıDAKI komut kimliğini ekleyin.
+1. *TestCommand. cs* ' i açın ve var olan komut kimliğinden sonra AŞAĞıDAKI komut kimliğini ekleyin.
 
     ```csharp
     public const int cmdidTestSubCmd = 0x0105;

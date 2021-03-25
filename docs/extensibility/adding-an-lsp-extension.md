@@ -5,17 +5,17 @@ ms.custom: SEO-VS-2020
 ms.date: 11/14/2017
 ms.topic: conceptual
 ms.assetid: 52f12785-1c51-4c2c-8228-c8e10316cd83
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d86f57abdc96e4fc4f2abbb781e9437c74854a7c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: accf054cbf0b58066568124a3f35e064ce3cba78
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99939298"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105094997"
 ---
 # <a name="add-a-language-server-protocol-extension"></a>Dil Sunucusu Protokolü uzantısı ekleme
 
@@ -294,7 +294,7 @@ LSP dil sunucuları için destek eklemek, Visual Studio 'da kendi proje sistemin
 
 LSP dil hizmeti uzantınızın ayarlarına yönelik destek eklemek için aşağıdaki adımları izleyin:
 
-1. Projenize, ayarlarını ve varsayılan değerlerini içeren bir JSON dosyası (örneğin, *MockLanguageExtensionSettings.json*) ekleyin. Örneğin:
+1. Projenize, ayarlarını ve varsayılan değerlerini içeren bir JSON dosyası (örneğin, *MockLanguageExtensionSettings.json*) ekleyin. Örnek:
 
     ```json
     {
@@ -344,7 +344,7 @@ LSP dil hizmeti uzantınızın ayarlarına yönelik destek eklemek için aşağ�
 
 1. Kullanıcı, sunucunuzun sahip olduğu dosyaları içeren bir çalışma alanı açar.
 2. Kullanıcı, içinde *VSWorkspaceSettings.js* adlı *. vs* klasörüne bir dosya ekler.
-3. Kullanıcı, sunucunun sağladığı bir ayar için dosyadaki *VSWorkspaceSettings.js* bir satır ekler. Örneğin:
+3. Kullanıcı, sunucunun sağladığı bir ayar için dosyadaki *VSWorkspaceSettings.js* bir satır ekler. Örnek:
 
     ```json
     {
