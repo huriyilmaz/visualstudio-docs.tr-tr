@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Add New Item dialog box, extending
 ms.assetid: 67ae8af6-3752-49e8-8ce3-007aca5f7982
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 68a16d544147ca95512f8b6064d2b9712b26ed64
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 131c04d1025885c59a884220a61098b2c85dd5a1
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99969028"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105079156"
 ---
 # <a name="add-directories-to-the-add-new-item-dialog-box"></a>Yeni öğe Ekle iletişim kutusuna dizin ekleme
 Aşağıdaki kod örneğinde **Yeni öğe Ekle** iletişim kutusu için yeni bir dizin kümesinin nasıl kaydedileceği gösterilmektedir. **Yeni öğe Ekle** iletişim kutusu için dizinler her proje için farklıdır. Bu nedenle, dizinler **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\Projects** bulunan **Projeler** alt anahtarı altında kaydedilir.

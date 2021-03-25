@@ -7,20 +7,20 @@ ms.topic: how-to
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - QuickInfo
 ms.assetid: 23fb8384-4f12-446f-977f-ce7910347947
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 3c07dd32b889a9d75222bc8ff5a245f516fab528
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: acda716c72d10f35bf8c89978956f62a6d3754dc
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99935930"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105078610"
 ---
 # <a name="walkthrough-display-quickinfo-tooltips"></a>İzlenecek yol: hızlı bilgi araç ipuçlarını görüntüle
 QuickInfo, Kullanıcı işaretçiyi bir yöntem adı üzerine taşırken Yöntem imzalarını ve açıklamalarını görüntüleyen bir IntelliSense özelliğidir. QuickInfo gibi dil tabanlı özellikleri, hızlı bilgi açıklamaları sağlamak istediğiniz tanımlayıcıları tanımlayarak ve sonra içeriğin görüntüleneceği bir araç ipucu oluşturmak için uygulayabilirsiniz. Hızlı bilgileri bir dil hizmeti bağlamında tanımlayabilir veya kendi dosya adı uzantınızı ve içerik türünü tanımlayabilir ve yalnızca bu tür için hızlı bilgileri görüntüleyebilir veya var olan bir içerik türü için QuickInfo görüntüleyebilirsiniz (örneğin, "metin"). Bu izlenecek yol, "metin" içerik türü için hızlı bilgi görüntülemeyi gösterir.

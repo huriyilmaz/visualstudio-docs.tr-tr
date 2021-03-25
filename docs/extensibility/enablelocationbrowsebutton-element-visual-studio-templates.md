@@ -11,17 +11,17 @@ f1_keywords:
 helpviewer_keywords:
 - EnableLocationBrowseButton [Visual Studio project templates]
 ms.assetid: a12d10d8-af49-482a-af77-e084fd07a47d
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d909e70f38800bdbeb873ad3fd9bff1d55132825
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5bf5ec98fc71158d9ebe3b95ec9e3d49526cb491
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99883434"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105061400"
 ---
 # <a name="enablelocationbrowsebutton-element-visual-studio-templates"></a>EnableLocationBrowseButton öğesi (Visual Studio şablonları)
 Kullanıcıların yeni bir projenin kaydedildiği varsayılan dizini kolayca değiştirebilmeleri için **Yeni proje** iletişim kutusunda, **tarayıcı** düğmesinin kullanılabilir olup olmadığını belirtir.

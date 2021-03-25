@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - getting the DTE object
 ms.assetid: c1f40bab-c6ec-45b0-8333-ea5ceb02a39d
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7228165d49c7f11c15d12086933c473699ef6bc8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7035842f608428f149dd2c0965b4792afa25db67
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99905585"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105062076"
 ---
 # <a name="walkthrough-access-the-dte-object-from-an-editor-extension"></a>İzlenecek yol: bir düzenleyici uzantısından DTE nesnesine erişme
 
@@ -40,7 +40,7 @@ Bu yönergeyi izlemek için, Visual Studio SDK 'sını yüklemelisiniz. Daha faz
     - Microsoft. VisualStudio. Shell. Framework
     - Microsoft. VisualStudio. Shell. sabit. 10.0
 
-3. *DTETestProvider.cs* dosyasında aşağıdaki `using` yönergeleri ekleyin:
+3. *Dtetestprovider. cs* dosyasında aşağıdaki `using` yönergeleri ekleyin:
 
     ```csharp
     using EnvDTE;
@@ -70,7 +70,7 @@ Bu yönergeyi izlemek için, Visual Studio SDK 'sını yüklemelisiniz. Daha faz
    - EnvDTE
    - Microsoft. VisualStudio. Shell. Framework
 
-3. *DTETestProvider.cs* dosyasında aşağıdaki `using` yönergeleri ekleyin:
+3. *Dtetestprovider. cs* dosyasında aşağıdaki `using` yönergeleri ekleyin:
 
     ```csharp
     using EnvDTE;

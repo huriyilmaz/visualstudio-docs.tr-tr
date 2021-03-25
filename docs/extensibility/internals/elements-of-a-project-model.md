@@ -9,17 +9,17 @@ helpviewer_keywords:
 - project models
 - projects [Visual Studio SDK], elements
 ms.assetid: a1dbe0dc-68da-45d7-8704-5b43ff7e4fc4
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f786ae8e0725c7c1b6f0683a779a65f015ac2a75
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 85b31996a7a0636f136e43531e69fe25c6d87d8f
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99946767"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105061296"
 ---
 # <a name="elements-of-a-project-model"></a>Proje modelinin öğeleri
 Temel yapıyı paylaşan tüm projelerin arabirimleri ve uygulamaları [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] : proje türü için proje modeli. Geliştirmekte olduğunuz VSPackage olan proje modelinizde, tasarım kararlarınızla uyumlu olan ve IDE tarafından sunulan genel işlevlerle birlikte çalışan nesneler oluşturursunuz. Bir proje öğesinin nasıl kalıcı olduğunu denetlemenize karşın, örneğin, bir dosyanın kalıcı olması gerektiğini kontrol edersiniz. Bir Kullanıcı, odağı açık bir proje öğesine yerleştiriyor ve menü çubuğundaki **Dosya** menüsünde **Kaydet** [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ' i SEÇTIĞINDE, proje türü kodunuz IDE 'den komutu ele almalıdır, dosyayı kalıcı hale getirin ve dosyanın artık değiştirilmediğini daha sonra geri bildirim gönderir.

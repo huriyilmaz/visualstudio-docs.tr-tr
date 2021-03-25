@@ -8,17 +8,17 @@ helpviewer_keywords:
 - managed VSPackages, registering
 - registration, managed VSPackages
 ms.assetid: 79b9424e-7e9b-4fc8-9b9f-00212674573c
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 111debccd1623901790c83e743469327ffdd667e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9e2ed8d7c376f7d9f23e06786fefc1a955ebea3a
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99905828"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105069471"
 ---
 # <a name="registering-vspackages"></a>VSPackage’ları Kaydetme
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , bir VSPackage 'ı belirlemek ve bulmak için. pkgdef dosyalarını kullanır. Bir. pkgdef dosyası, aksi durumda sistem kayıt defterine eklenecek tüm kayıt bilgilerini içerir. Yönetilen VSPackages, kaynak koda öznitelikler eklenerek ve sonra bir. pkgdef dosyası oluşturmak için elde edilen derlemede [CreatePkgDef yardımcı programı](../../extensibility/internals/createpkgdef-utility.md) çalıştırılarak kaydedilir.

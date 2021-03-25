@@ -7,23 +7,23 @@ ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - extensions
 ms.assetid: 5388EEBA-211D-4114-8CD9-70C899919F7E
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: Meng
 ms.workload:
 - vssdk
-ms.openlocfilehash: c959660b920abc18be70b228fa6b40de1ab585f8
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 57b447be3ee411b737c1aea5b0a4be5ef966c8c6
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037666"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105062154"
 ---
 # <a name="walkthrough-create-an-extension-pack"></a>İzlenecek yol: Uzantı Paketi Oluşturma
 
 Uzantı paketi, birlikte yüklenebilen bir uzantılar kümesidir. Uzantı paketleri, sık kullandığınız uzantıları diğer kullanıcılarla kolayca paylaşmanıza veya belirli bir senaryo için bir dizi uzantıyı birlikte paketlemenize olanak tanır.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Visual Studio 2015 ' den başlayarak Visual Studio SDK, Visual Studio Kurulumu 'nda isteğe bağlı bir özellik olarak eklenmiştir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yükleme](../extensibility/installing-the-visual-studio-sdk.md).
 
@@ -33,9 +33,9 @@ Uzantı paketi özelliği Visual Studio 15,8 Preview 2 ' den itibaren kullanıla
 
 Uzantı paketi öğe şablonu, birlikte yüklenebilen uzantılar kümesine sahip bir uzantı paketi oluşturur.
 
-1. **Yeni proje** iletişim kutusunda, "VSIX" araması yapın ve **VSIX projesi**' ni seçin. **Proje adı**Için "test Uzantı paketi" yazın. **Oluştur**’u seçin.
+1. **Yeni proje** iletişim kutusunda, "VSIX" araması yapın ve **VSIX projesi**' ni seçin. **Proje adı** Için "test Uzantı paketi" yazın. **Oluştur**’u seçin.
 
-2. **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve **Add**  >  **Yeni öğe**Ekle ' yi seçin. Visual C# **genişletilebilirlik** düğümüne gidin ve **Uzantı paketi**' ni seçin. Varsayılan dosya adını (ExtensionPack1.cs) bırakın.
+2. **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve   >  **Yeni öğe** Ekle ' yi seçin. Visual C# **genişletilebilirlik** düğümüne gidin ve **Uzantı paketi**' ni seçin. Varsayılan dosya adını (ExtensionPack1. cs) bırakın.
 
 3. Aşağıdaki kodu içeren ExtensionPack1. vsext dosyası eklenir
 
@@ -85,9 +85,9 @@ Artık uzantı yayımlandığına göre, Visual Studio 'Ya yükleyip test edin.
 
 2. **Çevrimiçi** ' e tıklayın ve ardından "test Uzantı paketi" ni arayın.
 
-3. **İndir**'e tıklayın. Uzantı ve uzantı paketine dahil olan uzantıların listesi, daha sonra yüklenmek üzere zamanlanır.
+3. **İndir**’e tıklayın. Uzantı ve uzantı paketine dahil olan uzantıların listesi, daha sonra yüklenmek üzere zamanlanır.
 
-4. **Uzantıları Yönet** iletişim kutusunun örnek Uzantı paketi indirme görünümü aşağıda verilmiştir. Uzantı paketine dahil edilen uzantılardan yalnızca bazılarını yüklemeyi tercih ediyorsanız, ' ın **yüklenmek üzere zamanlanan**uzantı listesini değiştirebilirsiniz.
+4. **Uzantıları Yönet** iletişim kutusunun örnek Uzantı paketi indirme görünümü aşağıda verilmiştir. Uzantı paketine dahil edilen uzantılardan yalnızca bazılarını yüklemeyi tercih ediyorsanız, ' ın **yüklenmek üzere zamanlanan** uzantı listesini değiştirebilirsiniz.
 
     ![Uzantı paketini Market 'ten indirin](media/vside-extensionpack.png)
 

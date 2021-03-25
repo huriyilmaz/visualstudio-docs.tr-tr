@@ -11,17 +11,17 @@ helpviewer_keywords:
 - lists, symbols for the object manager
 - symbols, exposing lists to the object manager
 ms.assetid: 19757068-bdaa-4e7e-85d6-f8ce5026a859
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: cf1d717f423768f9dc53972c2a482e2eab913d81
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0cf4cef21746834a92abfd8b2e1df3f61e08b2dd
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99928217"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105078896"
 ---
 # <a name="how-to-expose-lists-of-symbols-provided-by-the-library-to-the-object-manager"></a>Nasıl yapılır: kitaplık tarafından nesne yöneticisine sunulan simgelerin listesini kullanıma sunma
 Sembol tarama araçları, **sınıf görünümü**, **nesne tarayıcısı** **çağrı tarayıcısı** ve **sembol sonuçları bul**, yeni veriler için istekleri [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] nesne yöneticisine geçirin. Nesne Yöneticisi uygun kitaplıkları bulur ve sembol yeni listesini ister. Kitaplıklar, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] arabirim aracılığıyla nesne yöneticisine istenen verileri sağlayarak yanıt verir <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2> . [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Nesne Yöneticisi, <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2> verileri almak için arabirimindeki yöntemleri çağırır ve sembol tarama araçlarının görünümlerini doldurmak veya güncelleştirmek için onu kullanır.

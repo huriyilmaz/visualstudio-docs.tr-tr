@@ -7,17 +7,17 @@ ms.topic: how-to
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - signature help/parameter info
 ms.assetid: 4a6a884b-5730-4b54-9264-99684f5b523c
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8933822ee5bb63b341ff51296ba2884fef2aeb75
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1a9aedc6324eb1d4a57517a10b80348841fa72df
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99935917"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105078506"
 ---
 # <a name="walkthrough-display-signature-help"></a>İzlenecek yol: Imza yardımını görüntüle
 İmza yardımı ( *parametre bilgisi* olarak da bilinir), bir Kullanıcı parametre listesi başlangıç karakterini (genellikle bir açılış ayracı) yazdığında bir araç ipucunda bir yöntemin imzasını görüntüler. Bir parametre ve parametre ayırıcısı (genellikle virgül) yazıldığında araç ipucu, sonraki parametreyi kalın olarak göstermek için güncelleştirilir. Aşağıdaki yollarla Imza yardımını tanımlayabilirsiniz: bir dil hizmeti bağlamında kendi dosya adı uzantınızı ve içerik türünü tanımlayabilir ve yalnızca bu tür için Imza yardımını görüntüleyebilir ya da mevcut bir içerik türü için Imza yardımını (örneğin, "metin") görüntüleyin. Bu izlenecek yol, "metin" içerik türü için Imza yardımını görüntülemeyi gösterir.

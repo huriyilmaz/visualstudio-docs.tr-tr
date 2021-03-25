@@ -7,17 +7,17 @@ ms.topic: how-to
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - link keystrokes to commands
 ms.assetid: cf6cc6c6-5a65-4f90-8f14-663decf74672
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d0f6cb0d3cc0bef03539428bafeff5ae3da64964
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c2d49fa9e858d65529e466f6ed960835ab8c2324
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99931272"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105061959"
 ---
 # <a name="walkthrough-use-a-shortcut-key-with-an-editor-extension"></a>İzlenecek yol: bir düzenleyici uzantısıyla kısayol tuşu kullanma
 Düzenleyici uzantıdaki kısayol tuşlarına yanıt verebilirsiniz. Aşağıdaki izlenecek yol, bir kısayol tuşu kullanarak bir metin görünümüne Görünüm kenarlığı nasıl ekleneceğini gösterir. Bu izlenecek yol, görünüm penceresinin kenarlığı düzenleyici şablonunu temel alır ve + karakterini kullanarak kenarlığı eklemenize olanak tanır.
@@ -47,7 +47,7 @@ Düzenleyici uzantıdaki kısayol tuşlarına yanıt verebilirsiniz. Aşağıdak
 this.layer = view.GetAdornmentLayer("PurpleCornerBox");
 ```
 
-KeyBindingTestTextViewCreationListener.cs sınıf dosyasında, **KeyBindingTest** ' den Purnmentlayer ' ın adını **Espleköşeli kutusuna** değiştirin:
+KeyBindingTestTextViewCreationListener. cs sınıf dosyasında, Donnmentlayer adını **KeyBindingTest** öğesinden **Purpleköşeli kutusuna** değiştirin:
 
 ```csharp
 [Export(typeof(AdornmentLayerDefinition))]
@@ -259,7 +259,7 @@ Komut işleyicisi <xref:Microsoft.VisualStudio.Commanding.ICommandHandler%601> ,
    }
    ```
 
-   7. *KeyBindingTestTextViewCreationListener.cs* dosyasındaki kenarlığı katman tanımını *KeyBindingCommandHandler.cs* olarak kopyalayın ve *KeyBindingTestTextViewCreationListener.cs* dosyasını silin:
+   7. *Keybindingtesttextviewcreationlistener. cs* dosyasındaki kenarlığı katman tanımını *Keybindingcommandhandler. cs* dosyasına kopyalayın ve ardından *keybindingtesttextviewcreationlistener. cs* dosyasını silin:
 
    ```csharp
    /// <summary>
@@ -276,7 +276,7 @@ Komut işleyicisi <xref:Microsoft.VisualStudio.Commanding.ICommandHandler%601> ,
 
 Özgün kenarlığı, metin dosyasındaki her ' a ' karakteriyle görüldü. Artık kodu, kenarlığı yanıt olarak karakteri eklemek üzere değiştirdiğimiz için **+** , kenarlığı yalnızca **+** karakterin yazıldığı satıra eklenir. Kenarlığı kodunu, her ' a ' üzerinde daha fazla kenarlığı bir kez daha görünecek şekilde değiştirebiliriz.
 
-*KeyBindingTest.cs* dosyasında, `CreateVisuals()` ' a ' karakterini süslemek için görünümdeki tüm satırlarda yinelemek üzere yöntemini değiştirin.
+*KeyBindingTest. cs* dosyasında, `CreateVisuals()` ' a ' karakterini süslemek için görünümdeki tüm satırları yinelemek için yöntemini değiştirin.
 
 ```csharp
 private void CreateVisuals(ITextViewLine line)

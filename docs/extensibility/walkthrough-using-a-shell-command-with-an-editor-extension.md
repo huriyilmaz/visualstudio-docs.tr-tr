@@ -7,17 +7,17 @@ ms.topic: how-to
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - add a menu command
 ms.assetid: 08526848-a442-4cd4-afa1-b2eac2005adb
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4e0072d3f39ef037dfaa660d3a297afb59baacf3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f36d141c75b43dfaf90960261e40c4a619069802
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99888920"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105061998"
 ---
 # <a name="walkthrough-use-a-shell-command-with-an-editor-extension"></a>İzlenecek yol: Düzenleyici uzantısı ile bir Shell komutu kullanma
 VSPackage 'da, düzenleyiciye menü komutları gibi özellikler ekleyebilirsiniz. Bu izlenecek yol, bir menü komutunu çağırarak düzenleyicide bir metin görünümüne nasıl kenarlığı ekleneceğini gösterir.
@@ -614,7 +614,7 @@ VSPackage 'da, düzenleyiciye menü komutları gibi özellikler ekleyebilirsiniz
 
     - Microsoft. VisualStudio. Text. UI. WPF
 
-2. *AddAdornment.cs* dosyasını açın ve aşağıdaki `using` yönergeleri ekleyin.
+2. *AddAdornment. cs* dosyasını açın ve aşağıdaki `using` yönergeleri ekleyin.
 
     ```csharp
     using Microsoft.VisualStudio.TextManager.Interop;
