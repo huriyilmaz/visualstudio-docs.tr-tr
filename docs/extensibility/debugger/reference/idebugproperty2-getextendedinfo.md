@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProperty2::GetExtendedInfo
 ms.assetid: 0c9c0b2b-7540-4424-adb5-fce7aa37a026
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 004c7d545dbaaa20016fd94febe999420305fc7a
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: ad540166ff769aaa894ad4142843553951217234
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102171505"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105065041"
 ---
 # <a name="idebugproperty2getextendedinfo"></a>IDebugProperty2::GetExtendedInfo
 Özelliği için genişletilmiş bilgileri alır.
@@ -57,7 +57,7 @@ dışı `VARIANT` Genişletilmiş özellik bilgilerini almak için kullanılabil
 
  Aşağıdaki GUID 'Ler genellikle bu yöntem tarafından tanınır (ad hiçbir derlemede kullanılamadığından, C# için GUID değerleri belirtilir). İç kullanım için ek GUID 'Ler oluşturulabilir.
 
-|Name|GUID|Açıklama|
+|Name|GUID|Description|
 |----------|----------|-----------------|
 |guidDocument|{3f98de84-fee9-11D0-b47f-00a0244a1dd2}|Belgeye bir `IUnknown` arabirim döndürür. Genellikle, [IDebugDocumentText2](../../../extensibility/debugger/reference/idebugdocumenttext2.md) arabirimi Bu arabirimden elde edilebilir `IUnknown` .|
 |guidCodeContext|{e2fc65e-56ce-11D1-b528-00aax004a8797}|`IUnknown`Belge bağlamına bir arabirim döndürür. Genellikle, [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) arabirimi Bu arabirimden elde edilebilir `IUnknown` .|

@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - source control plug-ins, functions
 ms.assetid: 4b0536dd-4f92-4ef2-9031-4548281f37aa
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8df7a4be9c8a270feebd7e27d25c006eb4dc5817
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c28c175d53fb37cf890dad4240a84fb132f6af35
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99927956"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105090128"
 ---
 # <a name="source-control-plug-in-api-functions"></a>Kaynak Denetimi Eklentisi API İşlevleri
 Kaynak denetimi eklentisi API 'si, bu API 'ye uygun olarak kaynak denetimi eklentisi tarafından uygulanması gereken aşağıdaki işlevleri sağlar. Her bir işlevin imzaları ve bit bayraklarıyla ve diğer parametrelerle ilişkili semantik bu başvuruda ayrıntılı olarak açıklanmaktadır.
