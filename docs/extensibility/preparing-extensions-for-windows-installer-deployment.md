@@ -7,17 +7,17 @@ ms.topic: how-to
 helpviewer_keywords:
 - vsix msi
 ms.assetid: 5ee2d1ba-478a-4cb7-898f-c3b4b2ee834e
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ba25698cd1efc6aebf030638e191f139a14f99a6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6436d05d3b15be1c1fe8d7c7bb9c8592dee091dc
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99967299"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105090284"
 ---
 # <a name="prepare-extensions-for-windows-installer-deployment"></a>Windows Installer dağıtımı için uzantıları hazırlama
 Bir VSıX paketini dağıtmak için bir Windows Installer paketi (MSI) kullanamazsınız. Ancak, MSI dağıtımı için bir VSıX paketinin içeriğini ayıklayabilirsiniz. Bu belgede, varsayılan çıktısı bir kurulum projesine eklemek için VSıX paketi olan bir projenin nasıl hazırlanacağı gösterilir.

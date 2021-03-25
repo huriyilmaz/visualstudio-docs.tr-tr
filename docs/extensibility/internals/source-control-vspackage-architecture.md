@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - source control packages, architecture
 ms.assetid: 453125fc-23dc-49b1-8476-94581f05e6c7
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1e4de5f46746f79e1c7598e1c2a2a6af6ae1d92a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4e9f19506c58f65f80900c08fe339c7478144546
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99912683"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105064234"
 ---
 # <a name="source-control-vspackage-architecture"></a>Kaynak Denetimi VSPackage’ı Mimarisi
 Kaynak denetimi paketi, IDE 'nin sağladığı Hizmetleri kullanan bir VSPackage [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Sonuç olarak, kaynak denetimi paketi işlevlerini kaynak denetimi hizmeti olarak sağlar. Ayrıca, kaynak denetimi paketi, kaynak denetimi ile tümleştirme için bir kaynak denetimi eklentisinin daha çok yönlü bir alternatifidir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .

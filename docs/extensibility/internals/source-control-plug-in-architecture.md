@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - source control plug-ins, architecture
 ms.assetid: 35351d4c-9414-409b-98fc-f2023e2426b7
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 669ef527e65e56612199b8303f7cc99e8b993b50
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3fe51878603996044535b0abfb70302ef9027c03
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99846406"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105064260"
 ---
 # <a name="source-control-plug-in-architecture"></a>Kaynak Denetimi Eklentisi Mimarisi
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Kaynak denetimi eklentisini uygulayarak ve ekleyerek tümleşik geliştirme ortamına (IDE) kaynak denetimi desteği ekleyebilirsiniz. IDE, kaynak denetimi eklentisine, iyi tanımlanmış kaynak denetimi Plug-In API 'SI aracılığıyla bağlanır. IDE, araç çubukları ve menü komutlarından oluşan bir kullanıcı arabirimi (UI) sağlayarak kaynak denetim sisteminin sürüm denetim özelliklerini kullanıma sunar. Kaynak denetimi eklentisi, kaynak denetimi işlevini uygular.
