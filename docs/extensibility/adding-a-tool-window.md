@@ -8,17 +8,17 @@ helpviewer_keywords:
 - tutorials
 - tool windows
 ms.assetid: 8e16c381-03c8-404e-92ef-3614cdf3150a
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f3c84eafcfe19efdf6427db10f65dcf24504b598
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 314a684e34c91f43abe9babe4cdd6efc8a15cc35
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99951439"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105085526"
 ---
 # <a name="add-a-tool-window"></a>Araç penceresi ekleme
 
@@ -117,7 +117,7 @@ Araç çubuğuna düğme olarak görünen bir komut ekleyin.
     </Button>
     ```
 
-3. *FirstToolWindowCommand.cs* ' i açın ve varolan alanlardan hemen sonra sınıfına aşağıdaki satırları ekleyin.
+3. *FirstToolWindowCommand. cs* ' i açın ve varolan alanlardan hemen sonra sınıfına aşağıdaki satırları ekleyin.
 
     ```csharp
     public const string guidFirstToolWindowPackageCmdSet = "00000000-0000-0000-0000-0000";  // get the GUID from the .vsct file
@@ -143,7 +143,7 @@ public System.Windows.Controls.MediaElement MediaPlayer
 ## <a name="instantiate-the-tool-window-and-toolbar"></a>Araç penceresini ve araç çubuğunu oluşturma
 **Dosya Aç** iletişim kutusunu çağıran ve seçilen medya dosyasını oynatan bir araç çubuğu ve bir menü komutu ekleyin.
 
-1. *FirstToolWindow.cs* açın ve aşağıdaki yönergeleri ekleyin `using` :
+1. *FirstToolWindow. cs* ' i açın ve aşağıdaki `using` yönergeleri ekleyin:
 
     ```csharp
     using System.ComponentModel.Design;
@@ -188,7 +188,7 @@ public System.Windows.Controls.MediaElement MediaPlayer
     }
     ```
 
-6. Araç çubuğuna menü komutunu ekleyin. FirstToolWindowCommand.cs sınıfında, aşağıdaki using yönergesini ekleyin:
+6. Araç çubuğuna menü komutunu ekleyin. FirstToolWindowCommand. cs sınıfında, aşağıdaki using yönergesini ekleyin:
 
     ```csharp
     using System.Windows.Forms;
@@ -255,9 +255,9 @@ public System.Windows.Controls.MediaElement MediaPlayer
 
 ## <a name="set-the-default-position-for-the-tool-window"></a>Araç penceresi için varsayılan konumu ayarlama
 
-Ardından, araç penceresi için IDE 'de varsayılan bir konum belirtin. Araç penceresi için yapılandırma bilgileri *FirstToolWindowPackage.cs* dosyasında bulunur.
+Ardından, araç penceresi için IDE 'de varsayılan bir konum belirtin. Araç penceresi için yapılandırma bilgileri *FirstToolWindowPackage. cs* dosyasında bulunur.
 
-1. *FirstToolWindowPackage.cs* Içinde, <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> `FirstToolWindowPackage` FirstToolWindow türünü oluşturucuya geçiren sınıfında özniteliğini bulun. Varsayılan bir konum belirtmek için, aşağıdaki örnekteki oluşturucuya daha fazla parametre eklemeniz gerekir.
+1. *FirstToolWindowPackage. cs* dosyasında, <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> `FirstToolWindowPackage` sınıfının FirstToolWindow türünü oluşturucuya geçiren özniteliğini bulun. Varsayılan bir konum belirtmek için, aşağıdaki örnekteki oluşturucuya daha fazla parametre eklemeniz gerekir.
 
     ```csharp
     [ProvideToolWindow(typeof(FirstToolWindow),
