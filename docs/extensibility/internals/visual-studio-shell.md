@@ -8,17 +8,17 @@ helpviewer_keywords:
 - shell, Visual Studio
 - Visual Studio, shell
 ms.assetid: cb124ef4-1a6b-4bfe-bfbf-295ef9c07f36
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9ebc01c76c17319ebcfe2b61c06a6f2365a68122
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5dafd90294fd0968c78846d4162c1ff02c584f3f
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99941625"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105074346"
 ---
 # <a name="visual-studio-shell"></a>Visual Studio Kabuğu
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Kabuk, ' deki tümleştirme birincil aracısıdır [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Kabuk, VSPackages 'ın ortak hizmetleri paylaşmasını sağlamak için gerekli işlevleri sağlar. Öğesinin mimari hedefi [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] VSPackages içindeki birincil işlevselliğe Vest çünkü kabuk, temel işlevleri sağlamak ve bileşen VSPackages 'ler arasında çapraz iletişim desteği sağlamak için bir çerçevedir.

@@ -9,17 +9,17 @@ helpviewer_keywords:
 - toolbox
 - wpf
 ms.assetid: 9cc34db9-b0d1-4951-a02f-7537fbbb51ad
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9b401baf1605a869772ba41ce83ad906061f8144
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1dccdeb09a938b3b0bbbab803faeed538001b825
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99851445"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105089257"
 ---
 # <a name="create-a-wpf-toolbox-control"></a>WPF araç kutusu denetimi oluşturma
 
@@ -33,7 +33,7 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
 
 1. Adlı bir VSıX projesi oluşturun `MyToolboxControl` . "VSIX" araması yaparak VSıX proje şablonunu **Yeni proje** iletişim kutusunda bulabilirsiniz.
 
-2. Proje açıldığında, adlı bir **WPF araç kutusu denetim** öğesi şablonu ekleyin `MyToolboxControl` . **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve   >  **Yeni öğe** Ekle ' yi seçin. **Yeni öğe Ekle** iletişim kutusunda, **Visual C#**  >  **genişletilebilirliği** ' ne gidin ve **WPF araç kutusu denetimi**' ni seçin. Pencerenin alt kısmındaki **ad** alanında, komut dosyası adını *MyToolboxControl.cs* olarak değiştirin.
+2. Proje açıldığında, adlı bir **WPF araç kutusu denetim** öğesi şablonu ekleyin `MyToolboxControl` . **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve   >  **Yeni öğe** Ekle ' yi seçin. **Yeni öğe Ekle** iletişim kutusunda, **Visual C#**  >  **genişletilebilirliği** ' ne gidin ve **WPF araç kutusu denetimi**' ni seçin. Pencerenin alt kısmındaki **ad** alanında, komut dosyası adını *MyToolboxControl. cs* olarak değiştirin.
 
     Çözüm artık, `ProvideToolboxControlAttribute` <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute> denetimi **araç kutusuna** ekleyen bir Kullanıcı denetımı ve dağıtım Için VSIX bildiriminde bir **Microsoft. VisualStudio. ToolboxControl** varlık girişi içerir.
 
@@ -57,9 +57,9 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
 
 ## <a name="renaming-the-control"></a>Denetimi yeniden adlandırma
 
- Varsayılan olarak, denetiminiz **araç kutusunda** **MyToolboxControl. MyToolboxControl** adlı bir grupta **MyToolboxControl** olarak görünür. *MyToolboxControl.xaml.cs* dosyasında bu adları değiştirebilirsiniz.
+ Varsayılan olarak, denetiminiz **araç kutusunda** **MyToolboxControl. MyToolboxControl** adlı bir grupta **MyToolboxControl** olarak görünür. *MyToolboxControl. xaml. cs* dosyasındaki bu adları değiştirebilirsiniz.
 
-1. Kod görünümünde *MyToolboxControl.xaml.cs* öğesini açın.
+1. Kod görünümünde *MyToolboxControl. xaml. cs* ' i açın.
 
 2. Sınıfını bulun `MyToolboxControl` ve TestControl olarak yeniden adlandırın. (Bunu yapmanın en hızlı yolu, sınıfı yeniden adlandırmanız ve bağlam menüsünden **Yeniden Adlandır** ' ı seçip adımları tamamlamayın. ( **Yeniden adlandırma** komutu hakkında daha fazla bilgi için bkz. [yeniden düzenlemeyi yeniden adlandırma (C#)](../ide/reference/rename.md).)
 

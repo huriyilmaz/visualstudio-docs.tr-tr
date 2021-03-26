@@ -10,17 +10,17 @@ helpviewer_keywords:
 - tutorials
 - visual studio package
 ms.assetid: f97104c8-2bcb-45c7-a3c9-85abeda8df98
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4ada5870bc06465b97bdf767eb64910f62e15f0a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: de79662494a3228dd301e8d08480c6aa0a0192a2
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99944914"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105089218"
 ---
 # <a name="create-an-extension-with-a-menu-command"></a>Menü komutuyla uzantı oluşturma
 
@@ -36,13 +36,13 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
 
 ::: moniker range="vs-2017"
 
-2. Proje açıldığında, **FirstCommand** adlı özel bir komut öğesi şablonu ekleyin. **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve   >  **Yeni öğe** Ekle ' yi seçin. **Yeni öğe Ekle** iletişim kutusunda, **Visual C#**  >  **genişletilebilirliği** ' ne gidin ve **özel komut**' yi seçin. Pencerenin alt kısmındaki **ad** alanında, komut dosyası adını *FirstCommand.cs* olarak değiştirin.
+2. Proje açıldığında, **FirstCommand** adlı özel bir komut öğesi şablonu ekleyin. **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve   >  **Yeni öğe** Ekle ' yi seçin. **Yeni öğe Ekle** iletişim kutusunda, **Visual C#**  >  **genişletilebilirliği** ' ne gidin ve **özel komut**' yi seçin. Pencerenin alt kısmındaki **ad** alanında, komut dosyası adını *FirstCommand. cs* olarak değiştirin.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-2. Proje açıldığında, **FirstCommand** adlı özel bir komut öğesi şablonu ekleyin. **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve   >  **Yeni öğe** Ekle ' yi seçin. **Yeni öğe Ekle** iletişim kutusunda, **Visual C#**  >  **genişletilebilirliği** ' ne gidin ve **komut**' yi seçin. Pencerenin alt kısmındaki **ad** alanında, komut dosyası adını *FirstCommand.cs* olarak değiştirin.
+2. Proje açıldığında, **FirstCommand** adlı özel bir komut öğesi şablonu ekleyin. **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve   >  **Yeni öğe** Ekle ' yi seçin. **Yeni öğe Ekle** iletişim kutusunda, **Visual C#**  >  **genişletilebilirliği** ' ne gidin ve **komut**' yi seçin. Pencerenin alt kısmındaki **ad** alanında, komut dosyası adını *FirstCommand. cs* olarak değiştirin.
 
 ::: moniker-end
 
@@ -68,7 +68,7 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
 
 Şimdi komut işleyicisini Not defteri 'Ni başlatacak şekilde güncelleştirelim.
 
-1. Hata ayıklamayı durdurun ve Visual Studio çalışma örneğinizi geri dönün. *FirstCommand.cs* dosyasını açın ve aşağıdaki using ifadesini ekleyin:
+1. Hata ayıklamayı durdurun ve Visual Studio çalışma örneğinizi geri dönün. *FirstCommand. cs* dosyasını açın ve aşağıdaki using ifadesini ekleyin:
 
     ```csharp
     using System.Diagnostics;

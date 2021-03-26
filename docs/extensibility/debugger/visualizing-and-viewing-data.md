@@ -8,17 +8,17 @@ helpviewer_keywords:
 - debugging [Debugging SDK], viewing data
 - debugging [Debugging SDK], visualizing data
 ms.assetid: 699dd0f5-7569-40b3-ade6-d0fe53e832bc
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 61c2094564ea20c1073a198c3da162862c543e65
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4fd87ba5af069a923853c18e43a1c8ba4943c91d
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99965362"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105091428"
 ---
 # <a name="visualizing-and-viewing-data"></a>Verileri görselleştirme ve görüntüleme
 Görselleştiriciler ve özel görüntüleyiciler, verileri bir geliştiriciye hızlı bir şekilde anlamlı olacak şekilde sunar. İfade değerlendirici (EE), üçüncü taraf tür görselleştiricilerini destekleyebilir ve kendi özel görüntüleyicilerini sağlayabilir.

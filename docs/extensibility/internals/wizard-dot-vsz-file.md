@@ -9,17 +9,17 @@ helpviewer_keywords:
 - vsz files
 - wizards, files
 ms.assetid: 72e1d0f3-eef1-455e-b803-96827f030f50
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5fa9b9e06ccb20e6a2859770c0637fc85422fd0a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2663a6b05780b16d05b419c00aba904ded848796
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99935879"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105074242"
 ---
 # <a name="wizard-vsz-file"></a>Sihirbaz (.Vsz) Dosyası
 
@@ -50,6 +50,6 @@ Parametreler,. vsz dosyasını Sihirbaza ek özel parametreler geçirecek şekil
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Özel Parametreler](../../extensibility/internals/custom-parameters.md)
+- [Özel parametreler](../../extensibility/internals/custom-parameters.md)
 - [Sihirbazlar](../../extensibility/internals/wizards.md)
 - [Şablon Dizin Açıklaması (.Vsdir) Dosyaları](../../extensibility/internals/template-directory-description-dot-vsdir-files.md)

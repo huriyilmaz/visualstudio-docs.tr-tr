@@ -9,17 +9,17 @@ helpviewer_keywords:
 - menu commands, changing appearance
 - menus, changing command appearance
 ms.assetid: da2474fa-f92d-4e9e-b8bf-67c61bf249c2
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1514fb9409805df91a16678a5cce67ee1f66ab9f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8b6911d865b253ff82ffcc6c4911e0989f109f28
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99911236"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105089829"
 ---
 # <a name="change-the-appearance-of-a-command"></a>Komutun görünümünü değiştirme
 Bir komutun görünümünü değiştirerek, kullanıcıya geri bildirim sağlayabilirsiniz. Örneğin, kullanılamayan bir komutun farklı görünmesini isteyebilirsiniz. Komutları kullanılabilir veya kullanılamaz hale getirebilirsiniz, gizleyebilir veya gösterebilir veya menüdeki bu öğeleri denetleyebilir ya da işaretini kaldırabilirsiniz.
@@ -38,19 +38,19 @@ Bir komutun görünüşünü değiştirmek için şu eylemlerden birini gerçekl
 
 1. Adlı bir menü öğesi oluşturmak için [menü komutunun metnini değiştirme](../extensibility/changing-the-text-of-a-menu-command.md) bölümündeki yönergeleri izleyin `New Text` .
 
-2. *ChangeMenuText.cs* dosyasında, aşağıdaki using ifadesini ekleyin:
+2. *ChangeMenuText. cs* dosyasında aşağıdaki using ifadesini ekleyin:
 
     ```csharp
     using System.Security.Permissions;
     ```
 
-3. *ChangeMenuTextPackageGuids.cs* dosyasında, aşağıdaki satırı ekleyin:
+3. *Changemenutextpackageguid. cs* dosyasında aşağıdaki satırı ekleyin:
 
     ```csharp
     public const string guidChangeMenuTextPackageCmdSet= "00000000-0000-0000-0000-00000000";  // get the GUID from the .vsct file
     ```
 
-4. *ChangeMenuText.cs* dosyasında, ShowMessageBox yöntemindeki kodu aşağıdaki kodla değiştirin:
+4. *ChangeMenuText. cs* dosyasında, ShowMessageBox yöntemindeki kodu aşağıdaki kodla değiştirin:
 
     ```csharp
     private void Execute(object sender, EventArgs e)

@@ -10,17 +10,17 @@ helpviewer_keywords:
 - Options dialog box, controlling with the Visual Studio SDK
 - VSPackages, user preferences
 ms.assetid: 5bb6277a-8c9d-48c8-9b4e-1cb3052caded
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f9c51456654862a94c6caf4c1819a36f4656cc74
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: afc0e9eb1904515554e08ae06a70fe5af8c1dd7b
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99862115"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105075009"
 ---
 # <a name="extend-user-settings-and-options"></a>Kullanıcı ayarlarını ve seçeneklerini genişletme
 Visual Studio 'da, Kullanıcı tercihlerini korumak için iki ana yol vardır. **Araç**  >  **seçenekleri** sayfaları, kullanıcıların, hem genel hem de dile özgü birçok farklı tür ayar için kendi değerlerini ayarlamanıza olanak sağlar. Kullanıcı ayarları, kullanıcıların genel Visual Studio yapılandırma özelliklerini belirtmesini sağlar. Seçenekler sayfaları hakkında daha fazla bilgi için bkz. [Seçenekler ve Seçenekler sayfaları](../extensibility/internals/options-and-options-pages.md). Kullanıcı ayarları hakkında daha fazla bilgi için bkz. [Kullanıcı ayarları Için destek](../extensibility/internals/support-for-user-settings.md).

@@ -5,17 +5,17 @@ ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 0448274c-d3d2-4e12-9d11-8aca78a1f3f5
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4cbdd539437bce6f160dfa8661f514bf9f40b134
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f9973bb86296442f4b936ddb54ff645d74d7ab74
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99965336"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105074944"
 ---
 # <a name="how-to-provide-an-asynchronous-visual-studio-service"></a>Nasıl yapılır: zaman uyumsuz bir Visual Studio hizmeti sağlama
 UI iş parçacığını engellemeden bir hizmet almak istiyorsanız, zaman uyumsuz bir hizmet oluşturmanız ve paketi bir arka plan iş parçacığına yüklemeniz gerekir. Bu amaçla <xref:Microsoft.VisualStudio.Shell.AsyncPackage> , yerine bir kullanabilir <xref:Microsoft.VisualStudio.Shell.Package> ve hizmeti zaman uyumsuz paketin özel zaman uyumsuz yöntemleriyle birlikte ekleyebilirsiniz.
@@ -26,9 +26,9 @@ UI iş parçacığını engellemeden bir hizmet almak istiyorsanız, zaman uyums
 
 1. VSIX projesi oluşturun (**Dosya**  >  **Yeni**  >  **Proje**  >  **Visual C#**  >  **Extensiblity**  >  **VSIX projesi**). Projeyi **Testasync** olarak adlandırın.
 
-2. Projeye VSPackage ekleyin. **Çözüm Gezgini** proje düğümünü seçin ve   >  **Yeni öğe** Ekle  >  **Visual C# öğeleri**  >  **genişletilebilirlik**  >  **Visual Studio paketi**' ne tıklayın. Bu dosyayı *TestAsyncPackage.cs* olarak adlandırın.
+2. Projeye VSPackage ekleyin. **Çözüm Gezgini** proje düğümünü seçin ve   >  **Yeni öğe** Ekle  >  **Visual C# öğeleri**  >  **genişletilebilirlik**  >  **Visual Studio paketi**' ne tıklayın. Bu dosyayı *Testasyncpackage. cs* olarak adlandırın.
 
-3. *TestAsyncPackage.cs*' de, paketi yerine şuradan devralacak şekilde değiştirin `AsyncPackage` `Package` :
+3. *Testasyncpackage. cs* dosyasında, paketi yerine şuradan devralacak şekilde değiştirin `AsyncPackage` `Package` :
 
     ```csharp
     public sealed class TestAsyncPackage : AsyncPackage
@@ -122,7 +122,7 @@ public sealed class TestAsyncPackage : AsyncPackage
 
 ## <a name="add-a-service"></a>Hizmet ekleme
 
-1. *TestAsyncPackage.cs* içinde, yöntemini kaldırın `Initialize()` ve yöntemi geçersiz kılın `InitializeAsync()` . Hizmeti ekleyin ve hizmetleri oluşturmak için bir geri arama yöntemi ekleyin. Hizmet ekleme zaman uyumsuz başlatıcısının bir örneği aşağıda verilmiştir:
+1. *Testasyncpackage. cs* dosyasında, yöntemi kaldırın `Initialize()` ve yöntemi geçersiz kılın `InitializeAsync()` . Hizmeti ekleyin ve hizmetleri oluşturmak için bir geri arama yöntemi ekleyin. Hizmet ekleme zaman uyumsuz başlatıcısının bir örneği aşağıda verilmiştir:
 
     ```csharp
     protected override async Task InitializeAsync(CancellationToken cancellationToken, IProgress<ServiceProgressData> progress)
@@ -173,15 +173,15 @@ public sealed class TestAsyncPackage : AsyncPackage
 ## <a name="use-an-asynchronous-service-in-a-command-handler"></a>Bir komut işleyicisinde zaman uyumsuz bir hizmet kullanma
  Bir menü komutunda zaman uyumsuz bir hizmetin nasıl kullanılacağına ilişkin bir örnek aşağıda verilmiştir. Hizmeti, zaman uyumsuz olmayan diğer yöntemlerle kullanmak için burada gösterilen yordamı kullanabilirsiniz.
 
-1. Projenize bir menü komutu ekleyin. ( **Çözüm Gezgini**, proje düğümünü seçin, sağ tıklayın ve **Ekle**  >  ' yi seçin. **Yeni öğe**  >  **Genişletilebilirlik**  >  **Özel komut**.) Komut dosyasını *TestAsyncCommand.cs* olarak adlandırın.
+1. Projenize bir menü komutu ekleyin. ( **Çözüm Gezgini**, proje düğümünü seçin, sağ tıklayın ve **Ekle**  >  ' yi seçin. **Yeni öğe**  >  **Genişletilebilirlik**  >  **Özel komut**.) *Testasynccommand. cs* komut dosyasını adlandırın.
 
-2. Özel komut şablonu, `Initialize()` komutu başlatmak için yöntemi *TestAsyncPackage.cs* dosyasına yeniden ekler. `Initialize()`Yönteminde, komutu Başlatan satırı kopyalayın. Şu şekilde görünmelidir:
+2. Özel komut şablonu, `Initialize()` komutu başlatmak için yöntemini *Testasyncpackage. cs* dosyasına yeniden ekler. `Initialize()`Yönteminde, komutu Başlatan satırı kopyalayın. Şu şekilde görünmelidir:
 
     ```csharp
     TestAsyncCommand.Initialize(this);
     ```
 
-     Bu satırı `InitializeAsync()` *AsyncPackageForService.cs* dosyasındaki yöntemine taşıyın. Bu zaman uyumsuz bir başlatmada olduğundan, komutunu kullanarak çalıştırmadan önce ana iş parçacığına geçmeniz gerekir <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.SwitchToMainThreadAsync%2A> . Şimdi şöyle görünmelidir:
+     Bu satırı `InitializeAsync()` *Asyncpackageforservice. cs* dosyasındaki yöntemine taşıyın. Bu zaman uyumsuz bir başlatmada olduğundan, komutunu kullanarak çalıştırmadan önce ana iş parçacığına geçmeniz gerekir <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.SwitchToMainThreadAsync%2A> . Şimdi şöyle görünmelidir:
 
     ```csharp
 
@@ -204,7 +204,7 @@ public sealed class TestAsyncPackage : AsyncPackage
 
 3. Yöntemi silin `Initialize()` .
 
-4. *TestAsyncCommand.cs* dosyasında `MenuItemCallback()` yöntemini bulun. Metodun gövdesini silin.
+4. *Testasynccommand. cs* dosyasında `MenuItemCallback()` yöntemini bulun. Metodun gövdesini silin.
 
 5. Using yönergesini ekleyin:
 

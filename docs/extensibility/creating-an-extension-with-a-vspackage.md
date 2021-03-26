@@ -5,17 +5,17 @@ ms.custom: SEO-VS-2020
 ms.date: 3/16/2019
 ms.topic: how-to
 ms.assetid: c0cc5e08-4897-44f2-8309-e3478f1f999e
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b847fad9752c6a2448c0fdc571815ea1823e2d9c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a6c93d90771eeffbfe28ae91781403019743afa9
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99944901"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105089153"
 ---
 # <a name="create-an-extension-with-a-vspackage"></a>VSPackage ile uzantı oluşturma
 
@@ -29,7 +29,7 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
 
 1. **Firstpackage** ADLı bir VSIX projesi oluşturun. "VSIX" araması yaparak VSıX proje şablonunu **Yeni proje** iletişim kutusunda bulabilirsiniz.
 
-2. Proje açıldığında, **Firstpackage** adlı bir Visual Studio paket öğe şablonu ekleyin. **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve   >  **Yeni öğe** Ekle ' yi seçin. **Yeni öğe Ekle** iletişim kutusunda **Visual C#**  >  **genişletilebilirliği** ' ne gidin ve **Visual Studio paketi**' ni seçin. Pencerenin alt kısmındaki **ad** alanında, komut dosyası adını *FirstPackage.cs* olarak değiştirin.
+2. Proje açıldığında, **Firstpackage** adlı bir Visual Studio paket öğe şablonu ekleyin. **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve   >  **Yeni öğe** Ekle ' yi seçin. **Yeni öğe Ekle** iletişim kutusunda **Visual C#**  >  **genişletilebilirliği** ' ne gidin ve **Visual Studio paketi**' ni seçin. Pencerenin alt kısmındaki **ad** alanında, komut dosyası adını *firstpackage. cs* olarak değiştirin.
 
 3. Projeyi derleyin ve hata ayıklamayı başlatın.
 
@@ -41,7 +41,7 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
 
 Bu noktada, yüklenmesine neden olan hiçbir şey olmadığından uzantı yüklenmez. Genellikle bir uzantıyı, Kullanıcı arabirimiyle etkileşim kurarken (bir menü komutuna tıklayarak, bir araç penceresi açarak) veya VSPackage 'ın belirli bir kullanıcı arabirimi bağlamında yüklenmesi gerektiğini belirterek yükleyebilirsiniz. VSPackages ve UI bağlamlarını yükleme hakkında daha fazla bilgi için bkz. [VSPackages yükleme](../extensibility/loading-vspackages.md). Bu yordamda, bir çözüm açıkken VSPackage yükleme işlemini göstereceğiz.
 
-1. *FirstPackage.cs* dosyasını açın. Sınıfının bildirimini bulun `FirstPackage` . Mevcut öznitelikleri aşağıdaki özniteliklerle değiştirin:
+1. *Firstpackage. cs* dosyasını açın. Sınıfının bildirimini bulun `FirstPackage` . Mevcut öznitelikleri aşağıdaki özniteliklerle değiştirin:
 
     ```csharp
     [PackageRegistration(UseManagedResourcesOnly = true)]

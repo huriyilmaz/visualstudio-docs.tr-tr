@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Output window, about Output window
 ms.assetid: b02fa88c-f92a-4ff6-ba5f-2eb4d48a643a
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 91c59737d269af4eb91df402f38346cf41e3146e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: cf875d070d27d307380f23e71af2bda7c4a205b5
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99961774"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105075048"
 ---
 # <a name="extend-the-output-window"></a>Çıkış penceresini genişletme
 **Çıkış** penceresi, okuma/yazma metin bölmeleri kümesidir. Visual Studio, bu yerleşik bölmelere sahiptir: derleme, projelerin derlemeler hakkındaki iletileri ve **genel** olarak IDE hakkındaki iletileri iletişim kurmasını sağlayan **derleme** [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Projeler, arabirim yöntemleri aracılığıyla **derleme** bölmesine otomatik olarak bir başvuru alır <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg> ve Visual Studio, hizmet aracılığıyla **genel** bölmeye doğrudan erişim sağlar <xref:Microsoft.VisualStudio.Shell.Interop.SVsGeneralOutputWindowPane> . Yerleşik bölmelere ek olarak kendi özel bölmelerinizi oluşturabilir ve yönetebilirsiniz.
@@ -35,14 +35,14 @@ ms.locfileid: "99961774"
 
     2. EnvDTE80
 
-3. *TestOutput.cs*' de, aşağıdaki using ifadesini ekleyin:
+3. *TestOutput. cs* dosyasında aşağıdaki using ifadesini ekleyin:
 
     ```f#
     using EnvDTE;
     using EnvDTE80;
     ```
 
-4. *TestOutput.cs* içinde, yöntemini silin `ShowMessageBox` . Aşağıdaki yöntem saplaması 'nı ekleyin:
+4. *TestOutput. cs* dosyasında, yöntemini silin `ShowMessageBox` . Aşağıdaki yöntem saplaması 'nı ekleyin:
 
     ```csharp
     private void OutputCommandHandler(object sender, EventArgs e)

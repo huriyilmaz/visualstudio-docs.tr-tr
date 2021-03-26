@@ -8,17 +8,17 @@ helpviewer_keywords:
 - commands, intercepting language service
 - language services, intercepting commands
 ms.assetid: eea69f03-349c-44bb-bd4f-4925c0dc3e55
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: c6a759f0cef7329d14d7d1472d38f662c0206448
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8d7af9ff4a8f04382cff4999b8c57549f3da3db7
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99839800"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105074697"
 ---
 # <a name="intercepting-legacy-language-service-commands"></a>Eski Dil Hizmeti Komutlarını Kesme
 İle [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , metin görünümünün daha sonra işleyememesi için dil hizmeti kesme komutlarının de olmasını sağlayabilirsiniz. Bu, metin görünümünün yönetmediğinden dile özgü davranış için yararlıdır. Dil hizmetinizdeki metin görünümüne bir veya daha fazla komut filtresi ekleyerek bu komutları ele alabilirsiniz.

@@ -9,17 +9,17 @@ helpviewer_keywords:
 - Visual Studio integration SDK roadmap
 - integration roadmap, Visual Studio SDK
 ms.assetid: 9118eaa4-0453-4dc5-9e16-c7062d254869
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: c2d67c3d9f998c8dd5192363cf8ff8fae2ce4b57
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e11ee862f43ead3605d8e07dc159e18da13413b8
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99839865"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105074710"
 ---
 # <a name="inside-the-visual-studio-sdk"></a>Visual Studio SDK’nın İçinde
 
@@ -64,7 +64,7 @@ Bu bölümde Visual Studio mimarisi, bileşenler, hizmetler, şemalar, yardımc�
 
  Bazı araç pencereleri, Çözüm Gezgini araç penceresini görüntüleyen ve diğer araç pencerelerini gizleyen ve sekmeler ' i tıklatarak kullanılabilir hale getiren tek bir bölmede birlikte yerleştirildi. Resimde, tek bir bölmede birlikte yerleştirilen **hata listesi** ve **Çıkış** penceresi olmak üzere iki diğer araç pencereleri gösterilmektedir.
 
- Ayrıca, çeşitli düzenleyici pencereleri gösteren ana belge bölmesi de gösterilir. Araç pencereleri genellikle yalnızca bir örneğe sahip olsa da (örneğin, yalnızca bir **Çözüm Gezgini** açabilirsiniz), düzenleyici pencerelerinin her biri ayrı bir belgeyi düzenlemek için kullanılan ancak hepsi aynı bölmeye yerleştirilmiş olan birden fazla örneğe sahip olabilir. Resimde, tek form Tasarımcısı penceresi olmak üzere iki düzenleyici Windows içeren bir belge bölmesi görüntülenir. Belge bölmesindeki tüm pencereler sekmeler ' i tıklatarak kullanılabilir, ancak EditorPane.cs dosyasını içeren Düzenleyici penceresi görünür ve etkin olur.
+ Ayrıca, çeşitli düzenleyici pencereleri gösteren ana belge bölmesi de gösterilir. Araç pencereleri genellikle yalnızca bir örneğe sahip olsa da (örneğin, yalnızca bir **Çözüm Gezgini** açabilirsiniz), düzenleyici pencerelerinin her biri ayrı bir belgeyi düzenlemek için kullanılan ancak hepsi aynı bölmeye yerleştirilmiş olan birden fazla örneğe sahip olabilir. Resimde, tek form Tasarımcısı penceresi olmak üzere iki düzenleyici Windows içeren bir belge bölmesi görüntülenir. Belge bölmesindeki tüm pencereler sekmeler ' i tıklatarak kullanılabilir, ancak EditorPane. cs dosyasını içeren Düzenleyici penceresi görünür ve etkin olur.
 
  Visual Studio 'Yu genişlettiğinizde, Visual Studio kullanıcılarının uzantlarınızla etkileşime girmesine izin veren araç pencereleri oluşturabilirsiniz. Ayrıca, Visual Studio kullanıcılarının belgeleri düzenlemesine izin veren kendi düzenleyicilerinizi de oluşturabilirsiniz. Araç pencereleri ve düzenleyicilerimizin Visual Studio ile tümleştirileceği için, onları sabitlemek veya bir sekmede doğru bir şekilde görünmesi için programlayabilirsiniz. Visual Studio 'da doğru şekilde kaydedildiğinde, Visual Studio 'daki araç pencereleri ve Belge pencerelerinin tipik özellikleri otomatik olarak olur. Daha fazla bilgi için bkz. [araç pencerelerini genişletme ve özelleştirme](../../extensibility/extending-and-customizing-tool-windows.md).
 

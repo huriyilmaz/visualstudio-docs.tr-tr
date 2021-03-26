@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - language services [managed package framework]
 ms.assetid: a646e4f0-767d-4cd1-8e1a-9a2aa210a1b7
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d34ce48d9543107831ec358a9cf7eeed74d2787b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2bb5169eeb53aa16d0827cdf50cb50d0db34d996
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99839670"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105074528"
 ---
 # <a name="legacy-language-service-features-1"></a>Eski dil hizmeti özellikleri 1
 Yönetilen bir paket çerçevesi (MPF) dil hizmeti, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] sözdizimi vurgulama, IntelliSense ve kesme noktası doğrulaması gibi bir veya daha fazla özelliği destekleyebilir. Her özellik diğerlerinden bağımsız olarak uygulanabilir, ancak yalnızca bir tarayıcı gerektiren sözdizimi vurgulama dışında bir Ayrıştırıcı ve tarayıcı gerektirir.
