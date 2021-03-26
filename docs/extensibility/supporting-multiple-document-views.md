@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], custom - multiple document views
 ms.assetid: c7ec2366-91c4-477f-908d-e89068bdb3e3
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5360f67714e1da4f7372ee51eb4f75cc8835c1fd
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e54ee028c6a7db2d5d2ea1ab609be6c2887c9829
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99965128"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105056213"
 ---
 # <a name="supporting-multiple-document-views"></a>Birden Çok Belge Görünümünü Destekleme
 Düzenleyicinizde ayrı belge verileri ve belge görünümü nesneleri oluşturarak bir belgenin birden fazla görünümünü sağlayabilirsiniz. Ek belge görünümü yararlı olabilecek bazı durumlar şunlardır:
@@ -26,7 +26,7 @@ Düzenleyicinizde ayrı belge verileri ve belge görünümü nesneleri oluştura
 
 - Form ve kod görünümü desteği: Düzenleyicinizde farklı türlerin görünümlerini sağlamasını istersiniz. [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]Örneğin, hem form görünümü hem de kod görünümü sağlar.
 
-  Bunun hakkında daha fazla bilgi için Visual Studio paket şablonu tarafından oluşturulan özel düzenleyici projesindeki EditorFactory.cs dosyasındaki CreateEditorInstance yordamına bakın. Bu proje hakkında daha fazla bilgi için bkz. [Izlenecek yol: özel bir düzenleyici oluşturma](../extensibility/walkthrough-creating-a-custom-editor.md).
+  Bunun hakkında daha fazla bilgi için Visual Studio paket şablonu tarafından oluşturulan özel düzenleyici projesindeki EditorFactory. cs dosyasındaki CreateEditorInstance yordamına bakın. Bu proje hakkında daha fazla bilgi için bkz. [Izlenecek yol: özel bir düzenleyici oluşturma](../extensibility/walkthrough-creating-a-custom-editor.md).
 
 ## <a name="synchronizing-views"></a>Görünümler eşitleniyor
  Birden çok görünüm uyguladığınızda, tüm görünümlerin verilerle eşitlenmiş şekilde tutulması için belge verileri nesnesi sorumludur. <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>Birden çok görünümü verilerle eşleştirmek için üzerinde olay işleme arabirimlerini kullanabilirsiniz.

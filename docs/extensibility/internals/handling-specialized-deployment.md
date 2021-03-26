@@ -8,17 +8,17 @@ helpviewer_keywords:
 - deploying applications [Visual Studio SDK]
 - specialized deployment
 ms.assetid: de068b6a-e806-45f0-9dec-2458fbb486f7
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 279732f6019757c1a0d9fef566e8aaf1898dbdfb
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9fcba9e5f63497ad81dc6729a3fb757038fc7776
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99880066"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105056642"
 ---
 # <a name="handle-specialized-deployment"></a>Özelleştirilmiş dağıtımı işle
 Dağıtım, projeler için isteğe bağlı bir işlemdir. Örneğin, bir Web projesi, projenin bir Web sunucusunu güncelleştirmesine izin vermek için bir dağıtımı destekler. Benzer şekilde, **akıllı bir cihaz** projesi, yerleşik bir uygulamayı hedef cihaza kopyalamak için bir dağıtımı destekler. Proje alt türleri, arabirimini uygulayarak özelleştirilmiş dağıtım davranışı sağlayabilir <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg> . Bu arabirim, dağıtım işlemlerinin bir bütün kümesini tanımlar:

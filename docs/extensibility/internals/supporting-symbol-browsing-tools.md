@@ -15,17 +15,17 @@ helpviewer_keywords:
 - symbols
 - libraries, symbol-browsing tools
 ms.assetid: 70d8c9e5-4b0b-4a69-b3b3-90f36debe880
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 377cdd9875ebc2fddd80c673e53ecb318d171e47
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d54f56ae3bc5fd5956f67400d84edfd4c8c9e55c
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99875568"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105080573"
 ---
 # <a name="supporting-symbol-browsing-tools"></a>Sembol Tarama Araçlarını Destekleme
 **Nesne tarayıcısı**, **sınıf görünümü**, **çağrı tarayıcısı** ve **bulma sembol sonuçları** araçları, Visual Studio 'da sembol tarama özellikleri sağlar. Bu araçlar, sembollerin hiyerarşik ağaç görünümlerini görüntüler ve ağaçtaki semboller arasındaki ilişkileri gösterir. Semboller, çeşitli bileşenlerde bulunan ad alanlarını, nesneleri, sınıfları, sınıf üyelerini ve diğer dil öğelerini temsil edebilir. Bileşenler Visual Studio projeleri, dış .NET Framework bileşenleri ve tür (. tlb) kitaplıklarını içerir. Daha fazla bilgi için bkz. [kod yapısını görüntüleme](../../ide/viewing-the-structure-of-code.md).

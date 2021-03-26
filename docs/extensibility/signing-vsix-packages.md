@@ -11,17 +11,17 @@ helpviewer_keywords:
 - vsix
 - packages
 ms.assetid: e34cfc2c-361c-44f8-9cfe-9f2be229d248
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: a0127b16438191a7d4f10ebf351b697455f72b16
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c2a2c9703eb41c1a3e5baa023d8240b56ccbb13b
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99928035"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105056369"
 ---
 # <a name="signing-vsix-packages"></a>VSIX Paketlerini İmzalama
 Uzantı derlemelerinin Visual Studio 'da çalıştırılmadan önce imzalanması gerekmez, ancak bunu yapmak iyi bir uygulamadır.

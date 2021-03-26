@@ -5,17 +5,17 @@ ms.custom: SEO-VS-2020
 ms.date: 04/26/2017
 ms.topic: conceptual
 ms.assetid: 8ed68602-4e28-46fe-b39f-f41979b308a2
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1d647a1dbd3bc6bf99f9803870c7b58ead358b41
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7b19d60294431a08fa26f11bf58606893f392cd1
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99892599"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105060243"
 ---
 # <a name="application-patterns-for-visual-studio"></a>Visual Studio İçin Uygulama Desenleri
 ## <a name="window-interactions"></a><a name="BKMK_WindowInteractions"></a> Pencere etkileşimleri
@@ -117,7 +117,7 @@ Gezinilebilir liste araç pencereleri örnekleri Çözüm Gezgini ve sonuçları
 
 | Araç penceresi | İşlev |
 | --- | --- |
-| Yardım | "Nasıl yapılır?" yönteminden farklı yardım alma yöntemlerine kullanıcıların erişmesine izin veren bir pencere videoları MSDN forumlarına. |
+| Help | "Nasıl yapılır?" yönteminden farklı yardım alma yöntemlerine kullanıcıların erişmesine izin veren bir pencere videoları MSDN forumlarına. |
 | Dinamik yardım | Geçerli seçime uygun yardım konularına ilişkin bağlantıları görüntüleyen bir araç penceresi. |
 | Nesne Tarayıcısı | Sol bölmedeki hiyerarşik nesne bileşenlerinin listesi ve sağ sütundaki nesnenin özellikleri ve yöntemleri içeren iki sütunlu bir çerçeve kümesi. |
 
@@ -419,7 +419,7 @@ Varsayılan komut için kalıcı bir bozucu eylem seçmekten kaçının. Böyle 
 | --- | --- |
 | Tamam | Enter |
 | İptal | Esc |
-| Yardım | F1 |
+| Help | F1 |
 
 #### <a name="imagery"></a>Canlandırın
 İletişim kutularında görüntüleri gelişigüzel kullanın. Yalnızca alanı kullanmak için iletişim kutularında büyük simgeler kullanmayın. Yalnızca ileti, uyarı simgeleri veya durum animasyonları gibi kullanıcıya iletiyi almak için önemli bir parçasıysa görüntüleri kullanın.

@@ -9,17 +9,17 @@ helpviewer_keywords:
 - VSDIR files
 - template directory description files
 ms.assetid: 9df51800-190e-4662-b685-fdaafcff1400
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0e2b56c061ce6e3124a7ed5a5dc00e41c3964204
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: bdd21dfa9fe5aae11553bb0268017690aba46fe9
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99898235"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105080508"
 ---
 # <a name="template-directory-description-vsdir-files"></a>Şablon Dizin Açıklaması (.Vsdir) Dosyaları
 Şablon dizin açıklama dosyası (. vsdir), tümleşik geliştirme ortamının (IDE), iletişim kutularındaki projenizle ilişkili klasörleri, sihirbaz. vsz dosyalarını ve şablon dosyalarını görüntülemesini sağlayan bir metin dosyasıdır. İçerikler dosya veya klasör başına bir kayıt içerir. Başvurulan bir konumdaki tüm. VSDir dosyaları birleştirilir, ancak birden çok klasörü, Sihirbazı veya şablon dosyasını anlatmak için genellikle yalnızca bir. vsdir dosyası sağlanır.

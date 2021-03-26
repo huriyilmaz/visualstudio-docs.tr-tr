@@ -8,17 +8,17 @@ helpviewer_keywords:
 - Visual Studio, supporting multiple versions
 - VSPackages, side-by-side compatibility
 ms.assetid: 0047aa90-1ed4-40d3-8772-622b2719a4b1
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 52b8bf1be57e10790d91d4712e56d707621cc7df
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3d455ebf18ee8817e2adac2fa266592594ca7e6c
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99889947"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105056109"
 ---
 # <a name="supporting-multiple-versions-of-visual-studio"></a>Visual Studio'nun Birden Çok Sürümünü Destekleme
 *Yan yana* terimi, bir ürünün birden çok sürümünü aynı bilgisayara yükleyip koruyabilmeniz anlamına gelir. VSPackages için, bir kullanıcının aynı bilgisayarda birçok Visual Studio sürümü yüklü olabileceği anlamına gelir. Ancak, VSPackages 'ın tek bir Visual Studio sürümüne yüklenmiş yan yana sürümlerine sahip olabilirsiniz.

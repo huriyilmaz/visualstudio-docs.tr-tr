@@ -5,20 +5,20 @@ ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: ef96a249-5eef-402a-a8d5-d74cb49239bd
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 1f1ede0e642f14581d13d571acf67a952360bf65
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6ce834a2c949c55a6deeb6b7c7d0a9751771e316
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99838701"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105080404"
 ---
 # <a name="walkthrough-create-an-sdk-using-c-or-visual-basic"></a>İzlenecek yol: C# veya Visual Basic kullanarak SDK oluşturma
 Bu kılavuzda, Visual C# kullanarak basit bir matematik kitaplığı SDK 'Sı oluşturmayı ve sonra SDK 'Yı bir Visual Studio uzantısı (VSıX) olarak paketlemeyi öğreneceksiniz. Aşağıdaki yordamları tamamlayacaksınız:
@@ -41,7 +41,7 @@ Bu kılavuzda, Visual C# kullanarak basit bir matematik kitaplığı SDK 'Sı ol
 
 4. **Çözüm Gezgini**, **SimpleMath** proje düğümünün kısayol menüsünü açın ve ardından **Özellikler**' i seçin.
 
-5. **Class1.cs** öğesini **arithmetic.cs** olarak yeniden adlandırın ve aşağıdaki kodla eşleşecek şekilde güncelleştirin:
+5. **Class1. cs** öğesini **aritmetik. cs** olarak yeniden adlandırın ve aşağıdaki kodla eşleşecek şekilde güncelleştirin:
 
     [!code-csharp[CreatingAnSDKUsingWinRT#3](../extensibility/codesnippet/CSharp/walkthrough-creating-an-sdk-using-csharp-or-visual-basic_1.cs)]
     [!code-vb[CreatingAnSDKUsingWinRT#3](../extensibility/codesnippet/VisualBasic/walkthrough-creating-an-sdk-using-csharp-or-visual-basic_1.vb)]
@@ -234,7 +234,7 @@ Bu kılavuzda, Visual C# kullanarak basit bir matematik kitaplığı SDK 'Sı ol
     </Page>
     ```
 
-11. **MainPage.xaml.cs** öğesini aşağıdaki kodla eşleşecek şekilde güncelleştirin:
+11. **MainPage. xaml. cs** öğesini aşağıdaki kodla eşleşecek şekilde güncelleştirin:
 
      [!code-csharp[CreatingAnSDKUsingWinRTDemoApp#2](../extensibility/codesnippet/CSharp/walkthrough-creating-an-sdk-using-csharp-or-visual-basic_5.cs)]
      [!code-vb[CreatingAnSDKUsingWinRTDemoApp#2](../extensibility/codesnippet/VisualBasic/walkthrough-creating-an-sdk-using-csharp-or-visual-basic_5.vb)]
