@@ -13,17 +13,17 @@ helpviewer_keywords:
 - tool window toolbar
 - guid
 ms.assetid: c9cacd57-9225-450f-a9ac-cbf3168ea844
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7b4df4bac9fcc933cccc1bd54ced89c416b23863
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8ca3a2ec0b9d0eef7821641eaf05e93f83f94f40
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99970224"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105082081"
 ---
 # <a name="guids-and-ids-of-visual-studio-toolbars"></a>Visual Studio araç çubuklarının GUID 'Leri ve kimlikleri
 Bu konu, Visual Studio tümleşik geliştirme ortamında (IDE) ve içerdikleri gruplarda bulunan araç çubuklarının GUID ve KIMLIK değerlerini numaralandırır. Bu değerler, Visual Studio SDK 'nin bir parçası olarak yüklenen *. vsct* dosyalarında tanımlanmıştır. Daha fazla bilgi için bkz. [IDE tanımlı komutlar, menüler ve gruplar](../../extensibility/internals/ide-defined-commands-menus-and-groups.md).
@@ -43,9 +43,9 @@ Bu konu, Visual Studio tümleşik geliştirme ortamında (IDE) ve içerdikleri g
 |Araç Çubuğu|ID|
 |-------------|--------|
 |Standart|IDM_VS_TOOL_STANDARD|
-|Oluşturma|IDM_VS_TOOL_BUILD|
+|Derleme|IDM_VS_TOOL_BUILD|
 |Metin düzenleyici|IDM_VS_TOOL_TEXTEDITOR|
-|Hata ayıklama|Gudvsdebuggroup: IDM_DEBUG_TOOLBAR|
+|Hata Ayıklama|Gudvsdebuggroup: IDM_DEBUG_TOOLBAR|
 |Hata ayıklama konumu|Gudvsdebuggroup: IDM_DEBUG_CONTEXT_TOOLBAR|
 
 ### <a name="special-toolbars"></a>Özel araç çubukları

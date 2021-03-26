@@ -11,17 +11,17 @@ helpviewer_keywords:
 - templates [Visual Studio], wizards
 - IWizard interface
 ms.assetid: 47ee26cf-67b7-4ff1-8a9d-ab11a725405c
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: eb70931f2c26c248b2e2d41348fa26958d5348b3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 41290f946c198ed854cad9a7eb2af088f6fe228a
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99883317"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105082289"
 ---
 # <a name="how-to-use-wizards-with-project-templates"></a>Nasıl yapılır: Sihirbazları Proje Şablonlarıyla Kullanma
 
@@ -74,7 +74,7 @@ Bu yordamda, proje oluşturulmadan önce bir Windows formu açan özel bir sihir
 
 5. VSıX projesine sihirbaz uygulamasına yönelik bir sınıf ekleyin. ( **Çözüm Gezgini**, VSIX proje düğümüne sağ tıklayın ve **Ekle**' yi ve ardından **Yeni öğe**' yi ve ardından **sınıf**' ı seçin.) Sınıfı **Wizardimplementation** olarak adlandırın.
 
-6. *WizardImplementationClass.cs* dosyasındaki kodu aşağıdaki kodla değiştirin:
+6. *Wizardimplementationclass. cs* dosyasındaki kodu aşağıdaki kodla değiştirin:
 
    ```csharp
    using System;
@@ -161,7 +161,7 @@ Bu yordamda, proje oluşturulmadan önce bir Windows formu açan özel bir sihir
 
      Bu örnek, Kullanıcı giriş formundan parametresine bir parametre değeri ekler <xref:System.Collections.Generic.Dictionary%602> . Projedeki parametrenin her örneği, `$custommessage$` Kullanıcı tarafından girilen metinle birlikte değişir.
 
-7. Şimdi **UserInputForm**'u oluşturun. *WizardImplementation.cs* dosyasında, sınıfının sonundan sonra aşağıdaki kodu ekleyin `WizardImplementation` .
+7. Şimdi **UserInputForm**'u oluşturun. *Wizardimplementation. cs* dosyasında, sınıfının sonundan sonra aşağıdaki kodu ekleyin `WizardImplementation` .
 
    ```csharp
    public partial class UserInputForm : Form
@@ -265,7 +265,7 @@ Bu yordamda, proje oluşturulmadan önce bir Windows formu açan özel bir sihir
 
 Bu örnekte, şablon olarak kullanılan proje, özel sihirbazın kullanıcı giriş formunda belirtilen iletiyi görüntüler.
 
-1. **Çözüm Gezgini**, **myprojecttemplate** projesine gidin ve *Class1.cs* açın.
+1. **Çözüm Gezgini**, **myprojecttemplate** projesine gidin ve *Class1. cs*' yi açın.
 
 2. `Main`Uygulamanın yönteminde aşağıdaki kod satırını ekleyin.
 

@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - source control plug-ins, reference
 ms.assetid: 964980ca-21c5-4706-8535-6ea23e1c9cc9
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ab076cef7aaab96779e303ee7b85c8047eb6b52e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a6788d738d37ac62156958acb15c1bcd5d536515
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99848123"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105089959"
 ---
 # <a name="source-control-plug-ins"></a>Kaynak Denetimi Eklentileri
 Kaynak denetimi eklentisi SDK 'Sı başvuru bölümü, kaynak denetim sistemlerinin ile tümleştirilebilmesine olanak tanıyan tam arabirim belirtimini içerir [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Kaynak denetim eklentisinin [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Tümleşik geliştirme ortamı (IDE) ile arabirim için uygulanması gereken çeşitli işlevlerin ve veri türlerinin söz dizimi ve semantiğini belirtir.

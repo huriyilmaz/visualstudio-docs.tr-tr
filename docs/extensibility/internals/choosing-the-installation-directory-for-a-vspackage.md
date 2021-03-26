@@ -7,29 +7,29 @@ ms.topic: conceptual
 helpviewer_keywords:
 - VSPackages, installation directory
 ms.assetid: 01fbbb5b-f747-446c-afe0-2a081626a945
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ea697e6e445eeae117bb6bf1d1603220ec0c0675
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6442a8475c862693b851be783ae85bbb0a2e90af
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99874080"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105082120"
 ---
 # <a name="choose-the-installation-directory-for-a-vspackage"></a>VSPackage için yükleme dizinini seçin
 Bir VSPackage ve destekleyici dosyaları bir kullanıcının dosya sisteminde olmalıdır. Konum, VSPackage 'ın yönetilip yönetilmediğini, yan yana sürüm oluşturma şemanızın ve Kullanıcı tercihinizin olup olmamasına bağlıdır.
 
 ## <a name="unmanaged-vspackages"></a>Yönetilmeyen VSPackages
- Yönetilmeyen VSPackage, herhangi bir konuma yüklenebilen bir COM sunucusudur. Kayıt bilgileri, konumunu doğru şekilde yansıtmalıdır. Yükleyici Kullanıcı arabiriminiz (UI), Windows Installer özellik değerinin alt dizini olarak varsayılan bir konum sağlamalıdır `ProgramFilesFolder` . Örneğin:
+ Yönetilmeyen VSPackage, herhangi bir konuma yüklenebilen bir COM sunucusudur. Kayıt bilgileri, konumunu doğru şekilde yansıtmalıdır. Yükleyici Kullanıcı arabiriminiz (UI), Windows Installer özellik değerinin alt dizini olarak varsayılan bir konum sağlamalıdır `ProgramFilesFolder` . Örnek:
 
 *&lt;ProgramFilesFolder &gt; \\ &lt; şirketim &gt; \\ &lt; myvspackageproduct &gt; \v1.0\\*
 
  Kullanıcının küçük bir önyükleme bölümünü tutan ve başka bir birime uygulama ve araç yüklemeyi tercih ettiği kullanıcılara uyum sağlaması için varsayılan dizini değiştirmesine izin verilmelidir.
 
- Yan yana şemanızın sürümü sürümlü bir VSPackage kullanıyorsa, farklı sürümleri depolamak için alt dizinleri kullanabilirsiniz. Örneğin:
+ Yan yana şemanızın sürümü sürümlü bir VSPackage kullanıyorsa, farklı sürümleri depolamak için alt dizinleri kullanabilirsiniz. Örnek:
 
  *&lt;ProgramFilesFolder &gt; \\ &lt; şirketim &gt; \\ &lt; myvspackageproduct &gt; \\ v 1.0 \\ 2002\\*
 

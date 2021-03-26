@@ -7,17 +7,17 @@ ms.topic: how-to
 helpviewer_keywords:
 - dialog boxes, managing in Visual Studio
 ms.assetid: 491bc0de-7dba-478c-a76b-923440e090f3
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 949f136913a30848ba13185bc699fa0bc51ac456
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 96ac3c9ee92cd9124485dde29814f4a1e5c942c8
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99884981"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105055758"
 ---
 # <a name="create-and-manage-modal-dialog-boxes"></a>Kalıcı iletişim kutuları oluşturma ve yönetme
 Visual Studio içinde kalıcı iletişim kutusu oluşturduğunuzda iletişim kutusu görüntülenirken iletişim kutusunun ana penceresinin devre dışı olduğundan emin olmanız gerekir ve iletişim kutusu kapatıldıktan sonra üst pencereyi yeniden etkinleştirin. Bunu yapmazsanız, şu hatayı alabilirsiniz: *kalıcı bir iletişim kutusu etkin olduğundan Microsoft Visual Studio kapatılamadı. Etkin iletişim kutusunu kapatın ve yeniden deneyin.*
@@ -40,7 +40,7 @@ Bunu yapmanın iki yolu vardır. Önerilen yol, bir WPF iletişim kutusu varsa, 
 
     - *System. xaml*
 
-3. *OpenDialog.cs* içinde aşağıdaki `using` ifadeyi ekleyin:
+3. *OpenDialog. cs* dosyasında aşağıdaki `using` ifadeyi ekleyin:
 
     ```csharp
     using Microsoft.VisualStudio.PlatformUI;

@@ -2,7 +2,7 @@
 title: Visual Studio 2019’daki yenilikler
 titleSuffix: ''
 description: Visual Studio 2019 ' deki yeni özellikler hakkında bilgi edinin.
-ms.date: 03/04/2021
+ms.date: 03/19/2021
 helpviewer_keywords:
 - Visual Studio, what's new
 - what's new [Visual Studio]
@@ -15,12 +15,12 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 8371b9baa22b72eff0c829426b1b39bcf42398f2
-ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
+ms.openlocfilehash: 60e1aca5e0f561539f3e27cf36dac67bb92c4ddf
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102221190"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105082029"
 ---
 # <a name="whats-new-in-visual-studio-2019"></a>Visual Studio 2019’daki yenilikler
 
@@ -166,7 +166,7 @@ Visual Studio 2019 ile kullanmak üzere indirebileceğiniz yeni bir uzantı sunu
 
 Daha fazla bilgi için [Visual Studio çekme istekleri uzantısı blog gönderisini kullanarak kod incelemelerine](https://devblogs.microsoft.com/visualstudio/code-reviews-using-the-visual-studio-pull-requests-extension/) bakın.
 
-## <a name="debug"></a>Hata ayıklama
+## <a name="debug"></a>Hata Ayıklama
 
 Hata ayıklarken kesin hedefleme ile nasıl tam olarak izin sağlayacağınız hakkında daha fazla bilgi edinmek için aşağıdaki videoyu görüntüleyin. <br><br>*Video uzunluğu: 3,54 dakika*
 
@@ -222,13 +222,7 @@ Daha fazla bilgi için bkz. [Pintuma özellikleri: Debug & yönetilen nesneleri 
 
 Visual Studio 2019 ' i genellikle geliştirme deneyiminizi daha da iyi hale getirebileceğiniz yeni özelliklerle güncelleştiririz. En son yeniliklerimiz hakkında daha fazla bilgi edinmek için [Visual Studio bloguna](https://devblogs.microsoft.com/visualstudio/)göz atın. Önizleme tarihine kadar yayımladığımız bir kayıt için [Önizleme sürüm notlarına](/visualstudio/releases/2019/release-notes-preview/)göz atın. Ve daha sonra yayınlanmasını planladığımızı bir liste için bkz. [Visual Studio yol haritası](/visualstudio/productinfo/vs-roadmap).
 
-Bu sırada, şu anda çalışmadaki yeni özelliklerden bazıları aşağıda verilmiştir.
-
-- **GitHub Codespaces için Visual Studio 2019 desteği (Önizleme)**
-
-  Artık her zamankinden daha fazla, geliştiriciler iş üzerinde ve evde birden fazla projeyi daha da kolaylaştırıyor. Yeni özellikler, hata düzeltmeleri, çekme isteği incelemeleri, &amp; prototipler, zaman için rekabet ve sabit bağlam geçişi gerektirir. [GitHub Codespaces](https://github.com/features/codespaces) yardımcı olabilir. Tamamen bulutta geliştirebilir ve birkaç dakika içinde projelerinizden her biri için ayrılmış özel ortamlar oluşturabilirsiniz. Visual Studio 2019 ile codespace 'e bağlanabilir ve yerel olarak olduğu gibi çalışabilirsiniz.
-
-  Daha fazla bilgi için bkz. [GitHub Codespaces nedir](codespaces/codespaces-overview.md) sayfası.
+Bu sırada, şu anda çalışmadaki yeni bir özellik aşağıda verilmiştir.
 
 - **Visual Studio 2019 'de gelişmiş git deneyimi (Önizleme)**
 
