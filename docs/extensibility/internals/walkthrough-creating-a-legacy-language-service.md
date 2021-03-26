@@ -7,17 +7,17 @@ ms.topic: how-to
 helpviewer_keywords:
 - language services [managed package framework], creating
 ms.assetid: 6a5dd2c2-261b-4efd-a3f4-8fb90b73dc82
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 61f4dfd8068cc44fca97eb5e07ddbf62b21ee1f2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ded5624aed40ac2e878c44fd8dabc7d35c4d1ac8
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99899919"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105074281"
 ---
 # <a name="walkthrough-creating-a-legacy-language-service"></a>İzlenecek yol: Eski Dil Hizmeti oluşturma
 ' De bir dil hizmetini uygulamak için yönetilen paket çerçevesi (MPF) dil sınıflarının kullanılması [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] basittir. Dil hizmetini, dil hizmetini ve diliniz için bir ayrıştırıcısı barındırmak üzere bir VSPackage gerekir.
@@ -68,11 +68,11 @@ ms.locfileid: "99899919"
 
 4. Şablon listesinde **sınıfın** seçildiğinden emin olun.
 
-5. Sınıf dosyasının adı için **MyLanguageService.cs** girin ve **Ekle**' ye tıklayın.
+5. Sınıf dosyasının adı için **MyLanguageService. cs** girin ve **Ekle**' ye tıklayın.
 
      Dilediğiniz adı kullanabilirsiniz. Burada ayrıntılı `MyLanguageService` olarak açıklanan yordamlar adı olarak varsayılır.
 
-6. MyLanguageService.cs dosyasında aşağıdaki `using` yönergeleri ekleyin.
+6. MyLanguageService. cs dosyasında aşağıdaki `using` yönergeleri ekleyin.
 
      [!code-csharp[CreatingALanguageService(ManagedPackageFramework)#1](../../extensibility/internals/codesnippet/CSharp/walkthrough-creating-a-legacy-language-service_1.cs)]
      [!code-vb[CreatingALanguageService(ManagedPackageFramework)#1](../../extensibility/internals/codesnippet/VisualBasic/walkthrough-creating-a-legacy-language-service_1.vb)]
@@ -88,7 +88,7 @@ ms.locfileid: "99899919"
 
 ### <a name="register-the-language-service"></a>Dil hizmetini kaydetme
 
-1. MyLanguagePackagePackage.cs dosyasını açın ve aşağıdaki `using` yönergeleri ekleyin:
+1. MyLanguagePackagePackage. cs dosyasını açın ve aşağıdaki `using` yönergeleri ekleyin:
 
      [!code-vb[CreatingALanguageService(ManagedPackageFramework)#3](../../extensibility/internals/codesnippet/VisualBasic/walkthrough-creating-a-legacy-language-service_3.vb)]
      [!code-csharp[CreatingALanguageService(ManagedPackageFramework)#3](../../extensibility/internals/codesnippet/CSharp/walkthrough-creating-a-legacy-language-service_3.cs)]
