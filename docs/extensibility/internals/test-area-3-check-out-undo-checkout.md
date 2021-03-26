@@ -10,17 +10,17 @@ helpviewer_keywords:
 - source control [Visual Studio SDK], checking out
 - source control [Visual Studio SDK], undo checkout
 ms.assetid: ce00c5a5-d472-4f45-8776-d77a1fbe9d37
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: bb59b0342d67ab9118ffcdba74c177106fcceea0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c184aeb1b5a43e54bc00d5694ddee7711a815593
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99898120"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105078636"
 ---
 # <a name="test-area-3-check-outundo-checkout"></a>Test Alanı 3: Kullanıma Alma/Kullanıma Almayı Geri Alma
 Bu kaynak denetimi eklentisi test alanı **, kullanıma alma ve** **geri alma** komutlarını kullanarak sürüm deposundan öğeleri düzenlemenizi ve geri döndürmeyi içerir.

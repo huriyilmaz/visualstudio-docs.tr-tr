@@ -8,17 +8,17 @@ helpviewer_keywords:
 - source control plug-ins, what's new in API v1.2
 - what's new [Visual Studio SDK], source control plug-ins
 ms.assetid: 7c5fa471-456e-4f95-8309-5750ec4e5e85
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9a7c1b57f509689d103a9f90a49c83a9489ac74f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 90df3c62d658f1c71957b00ee6e005f20777d463
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99941586"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105069055"
 ---
 # <a name="what39s-new-in-the-source-control-plug-in-api-version-12"></a>Kaynak denetimi eklentisi API sürüm 1,2 ' deki yenilikler&#39;
 Bu bölüm, kaynak denetimi eklentisi API 'SI sürüm 1,2 ' daki gelişmiş kaynak kodu denetim işlevlerini vurgular. Aşağıda sürüm 1,2 ' deki yeni özellikler listelenmektedir:
