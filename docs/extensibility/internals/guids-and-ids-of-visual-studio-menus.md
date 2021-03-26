@@ -12,17 +12,17 @@ helpviewer_keywords:
 - guid
 - menus
 ms.assetid: 84639d86-dd21-4b35-9988-6bb654162488
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: bd2bdc047ddd5a568aca01ed99b6148b0f288faa
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d9f5066c5ae5c9fa57517406b8eca388747979c4
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99970276"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105082094"
 ---
 # <a name="guids-and-ids-of-visual-studio-menus"></a>Visual Studio menülerinin GUID 'Leri ve kimlikleri
 Bu makalede, Visual Studio menü çubuğundaki menülerin ve grupların GUID ve KIMLIK değerleri numaralandırılır. Bu değerler, Visual Studio SDK 'nin bir parçası olarak yüklenen *. vsct* dosyalarında tanımlanmıştır. Daha fazla bilgi için bkz. [IDE tanımlı komutlar, menüler ve gruplar](../../extensibility/internals/ide-defined-commands-menus-and-groups.md).
@@ -39,7 +39,7 @@ Bu makalede, Visual Studio menü çubuğundaki menülerin ve grupların GUID ve 
 |Dosya/düzenleme/görüntüleme|IDG_VS_MM_FILEEDITVIEW|
 |Yeniden Düzenle|IDG_VS_MM_REFACTORING:|
 |Project|IDG_VS_MM_PROJECT|
-|Oluşturma|IDG_VS_MM_BUILDDEBUGRUN|
+|Derleme|IDG_VS_MM_BUILDDEBUGRUN|
 |Biçim/Araçlar|IDG_VS_MM_TOOLSADDINS|
 |Pencere/yardım/topluluk|IDG_VS_MM_WINDOWHELP|
 |Eklentiler|IDG_VS_MM_MACROS|
@@ -55,14 +55,14 @@ Bu makalede, Visual Studio menü çubuğundaki menülerin ve grupların GUID ve 
 |Görünüm|IDM_VS_MENU_VIEW|
 |Yeniden düzenleme|IDM_VS_MENU_REFACTORING|
 |Project|IDM_VS_MENU_PROJECT|
-|Oluşturma|IDM_VS_MENU_BUILD|
+|Derleme|IDM_VS_MENU_BUILD|
 |Biçimlendir|IDM_VS_MENU_FORMAT|
 |Araçlar|IDM_VS_MENU_TOOLS|
 |Uzantıları|IDM_VS_MENU_EXTENSIONS|
 |Pencere|IDM_VS_MENU_WINDOW|
 |Eklentiler|IDM_VS_MENU_ADDINS|
 |Topluluk|IDM_VS_MENU_COMMUNITY|
-|Yardım|IDM_VS_MENU_HELP|
+|Help|IDM_VS_MENU_HELP|
 
 ## <a name="groups-on-visual-studio-menus"></a>Visual Studio menülerindeki gruplar
  Aşağıdaki listelerde, doğrudan Visual Studio menü çubuğundaki menülerden gelen gruplar gösterilmektedir. Bir Visual Studio menüsüne komut eklemenin en hızlı yolu, bu gruplardan birini üst öğe olarak ayarlamanıza olanak sağlar. Alt menülerinden gösterilen gruplar bu bölümde görünmez.
