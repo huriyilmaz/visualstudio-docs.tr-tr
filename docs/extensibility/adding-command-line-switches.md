@@ -10,17 +10,17 @@ helpviewer_keywords:
 - IVsAppCommandLine::GetOption method
 - command line, switches
 ms.assetid: 8bbbd87e-76fe-4fb5-8ef9-65f5e31967cf
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: fa38e508c087d61ad5ea1762e3e3cc33d6d4f538
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 826029154763a98279b5e5446317802531b08bfe
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99939233"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105097571"
 ---
 # <a name="add-command-line-switches"></a>Komut satırı anahtarları Ekle
 *devenv.exe* yürütüldüğünde VSPackage için uygulanan komut satırı anahtarlarını ekleyebilirsiniz. <xref:Microsoft.VisualStudio.Shell.ProvideAppCommandLineAttribute>Anahtarın adını ve özelliklerini bildirmek için kullanın. Bu örnekte, bir bağımsız **değişken içermeyen ve** VSPackage otomatik olarak yüklenen VSPackage adlı VSPackage alt sınıfı Için mySwitch anahtarı eklenir.

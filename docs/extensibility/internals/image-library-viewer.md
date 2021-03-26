@@ -5,17 +5,17 @@ ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 9d9c7fbb-ebae-4b20-9dd8-3c9070c0d0d1
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: dc0acd64a61acac2cb30b9251bcb4e528c08f227
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d60443e97bc557bc964d59750417b2662e4c3c8f
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99840125"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105085981"
 ---
 # <a name="image-library-viewer"></a>Görüntü Kitaplığı Görüntüleyicisi
 Visual Studio Görüntü Kitaplığı Görüntüleyicisi Aracı, görüntü bildirimleri yükleyip arayabilir ve bu sayede, kullanıcının bunları Visual Studio ile aynı şekilde değiştirmesine izin verebilirsiniz. Kullanıcı arka plan, boyut, DPı, yüksek karşıtlık ve diğer ayarları değiştirebilir. Araç ayrıca her görüntü bildirimi için bilgileri yükleme ve görüntü bildirimindeki her bir görüntü için kaynak bilgilerini görüntüler. Bu araç için yararlı olur:
@@ -72,7 +72,7 @@ Visual Studio Görüntü Kitaplığı Görüntüleyicisi Aracı, görüntü bild
 
 |**Subelement**|**Tanım**|
 |-|-|
-|İçeri Aktarma|Geçerli bildirimde kullanılmak üzere verilen bildirim dosyasının sembollerini içeri aktarır.|
+|İçeri Aktar|Geçerli bildirimde kullanılmak üzere verilen bildirim dosyasının sembollerini içeri aktarır.|
 |Guid|Sembol bir GUID 'YI temsil eder ve GUID biçimlendirmesine uymalıdır.|
 |ID|Sembol bir KIMLIĞI temsil eder ve negatif olmayan bir tamsayı olmalıdır.|
 |Dize|Sembol rastgele bir dize değerini temsil eder.|

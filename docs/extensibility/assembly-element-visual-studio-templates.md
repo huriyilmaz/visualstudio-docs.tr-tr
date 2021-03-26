@@ -12,17 +12,17 @@ helpviewer_keywords:
 - Assembly element [Visual Studio templates]
 - <Assembly> element [Visual Studio templates]
 ms.assetid: 9242f76a-1273-4b8a-8f26-6606f91829ef
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d7891687a76d0023b54be2c44c3b5fc09c97f010
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 54fc5cfccde99776136f0cb904d02bf6a4971045
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99932801"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105097324"
 ---
 # <a name="assembly-element-visual-studio-templates"></a>Assembly öğesi (Visual Studio şablonları)
 Şablonun projelere Bu derlemenin bir başvurusunu eklemek için kullandığı bir derleme hakkındaki bilgileri belirtir.
@@ -58,7 +58,7 @@ ms.locfileid: "99932801"
 
  Bu metin, öğe şablonu örneği oluşturulduğunda bir projeye eklenecek derlemeyi belirtir. Bu derleme adı aşağıdaki yollarla belirtilmelidir:
 
-- Tam derleme adı olarak. Örneğin:
+- Tam derleme adı olarak. Örnek:
 
     ```
     <Assembly>
@@ -66,7 +66,7 @@ ms.locfileid: "99932801"
     </Assembly>
     ```
 
-- Basit metin başvurusu olarak. Örneğin:
+- Basit metin başvurusu olarak. Örnek:
 
     ```
     <Assembly> System </Assembly>

@@ -5,17 +5,17 @@ ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 17ecacea-397d-4a97-b003-01bd5d56e936
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 709867c44456223da129460eb6ea72c413ba5b48
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5ae844b0b0b6d585895b6939d1d33b2a699c2756
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99839421"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105095166"
 ---
 # <a name="manifest-to-code"></a>Manifest to Code
 Manifest to Code Aracı, Visual Studio Image hizmeti için bir. ımagemanifest dosyası alan ve Visual Studio uzantıları için C++, C#, VB veya. vsct dosyalarındaki görüntü bildiriminin değerlerine başvurmak için bir sarmalayıcı dosyası ya da dosyaları oluşturan bir konsol uygulamasıdır. Bu araç, doğrudan Visual Studio görüntü hizmetinden görüntü istemek için veya kod kendi Kullanıcı arabirimini ve işlemesini karşılamıyorsa API 'Ler aracılığıyla bildirim değerlerini iletmek için kullanılabilecek sarmalayıcı dosyalar oluşturur.

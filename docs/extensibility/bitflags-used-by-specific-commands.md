@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - source control plug-ins, bitflags used by specific commands
 ms.assetid: 37969977-6f7d-45c9-ba03-1306ae71f5d1
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6e018631e24cf7e678072b6b54183fd3c619dc4a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 41f070d61e547724b3067a9f4a1980d658fc30be
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99890337"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105097298"
 ---
 # <a name="bitflags-used-by-specific-commands"></a>Belirli komutlar tarafından kullanılan bitflags
 Kaynak denetimi eklentisi API 'sindeki bir dizi işlevin davranışı tek bir değerde bir veya daha fazla bit ayarlanarak değiştirilebilir. Bu değerler bitflags olarak bilinir. Kaynak denetimi eklentisi API 'SI tarafından kullanılan çeşitli bitflags burada, bunları kullanan işleve göre gruplanmış olarak ayrıntılıdır.

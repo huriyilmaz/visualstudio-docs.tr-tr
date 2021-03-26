@@ -12,17 +12,17 @@ helpviewer_keywords:
 - localize visual studio
 - localize vsct
 ms.assetid: b04ee0f6-82ea-47e6-853a-72382267d6da
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: af86f64935d4e99d4c1245669505fcef8ce7ec1f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 141fb0d8ba6746e7d299984461fb3ca739d931d4
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99893626"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105073267"
 ---
 # <a name="localize-menu-commands"></a>Yerelleştirmek menü komutları
 
@@ -112,9 +112,9 @@ Komut adlarından farklı metin kaynakları kaynak (*. resx*) dosyalarında tan�
 
 ## <a name="incorporate-localized-resources-into-the-project"></a>Yerelleştirilmiş kaynakları projeye ekleyin
 
-Yerelleştirilmiş kaynakları birleştirmek için *Assemblyinfo.cs* dosyasını ve proje dosyasını değiştirmeniz gerekir.
+Yerelleştirilmiş kaynakları birleştirmek için *AssemblyInfo. cs* dosyasını ve proje dosyasını değiştirmeniz gerekir.
 
-1. **Çözüm Gezgini** **Özellikler** düğümünden, düzenleyicide *Assemblyinfo.cs* veya *AssemblyInfo. vb* dosyasını açın.
+1. **Çözüm Gezgini** **Özellikler** düğümünden, düzenleyicide *AssemblyInfo. cs* veya *AssemblyInfo. vb* dosyasını açın.
 
 2. Aşağıdaki girişi ekleyin.
 

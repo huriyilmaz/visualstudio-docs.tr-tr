@@ -10,17 +10,17 @@ helpviewer_keywords:
 - shortcut menus, adding to tool windows
 - tool windows, adding context menus
 ms.assetid: 50234537-9e95-4b7e-9cb7-e5cf26d6e9d2
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: a35652c0eacf22a46eed3f3fc64c3bcc0d6d10ec
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3ba0eb2324812ca7536b361d602bb683d627c743
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99951543"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105097623"
 ---
 # <a name="add-a-shortcut-menu-in-a-tool-window"></a>Araç penceresine kısayol menüsü ekleme
 Bu izlenecek yol, bir araç penceresine kısayol menüsü yerleştirir. Kısayol menüsü, bir Kullanıcı bir düğmeyi, metin kutusunu veya pencere arka planını sağ tıklattığında görüntülenen bir menü olur. Kısayol menüsündeki komutlar, diğer menülerdeki veya araç çubuklarındaki komutlarla aynı şekilde davranır. Bir kısayol menüsünü desteklemek için, *. vsct* dosyasında belirtin ve fareyi sağ tıklaması karşılığında görüntüleyin.
@@ -114,7 +114,7 @@ Bu kılavuzda gösterildiği gibi bir kısayol menüsü, kullanıcının araç p
     </Buttons>
     ```
 
-5. *ShortcutMenuCommand.cs*' de, komut kümesi GUID 'si, kısayol menüsü ve menü öğeleri için tanımları ekleyin.
+5. *Shortcutmenucommand. cs* dosyasında komut kümesi GUID 'si, kısayol menüsü ve menü öğeleri için tanımları ekleyin.
 
     ```csharp
     public const string guidShortcutMenuPackageCmdSet = "00000000-0000-0000-0000-00000000"; // your GUID will differ
@@ -129,9 +129,9 @@ Bu kılavuzda gösterildiği gibi bir kısayol menüsü, kullanıcının araç p
 ## <a name="implementing-the-shortcut-menu"></a>Kısayol menüsünü uygulama
  Bu bölüm, kısayol menüsünü ve komutlarını uygular.
 
-1. *ShortcutMenu.cs*' de, araç penceresi menü komutu hizmetini alabilir, ancak içerdiği denetim olamaz. Aşağıdaki adımlarda menü komut hizmetinin Kullanıcı denetimi için nasıl kullanılabilir yapılacağı gösterilmektedir.
+1. *ShortcutMenu. cs*' de, araç penceresi menü komutu hizmetini alabilir, ancak içerdiği denetim kullanamaz. Aşağıdaki adımlarda menü komut hizmetinin Kullanıcı denetimi için nasıl kullanılabilir yapılacağı gösterilmektedir.
 
-2. *ShortcutMenu.cs*' de, aşağıdaki using yönergelerini ekleyin:
+2. *ShortcutMenu. cs*' de, aşağıdaki using yönergelerini ekleyin:
 
     ```csharp
     using Microsoft.VisualStudio.Shell;
@@ -159,7 +159,7 @@ Bu kılavuzda gösterildiği gibi bir kısayol menüsü, kullanıcının araç p
     }
     ```
 
-5. *ShortcutMenuControl.xaml.cs*' de menü komut hizmeti için bir özel alan ekleyin ve menü komut hizmetini alacak şekilde denetim oluşturucusunu değiştirin. Ardından kısayol menü komutlarını eklemek için menü komut hizmetini kullanın. ShortcutMenuControl Oluşturucusu şimdi aşağıdaki kod gibi görünmelidir. Komut işleyicisi daha sonra tanımlanacaktır.
+5. *ShortcutMenuControl. xaml. cs* dosyasında menü komut hizmeti için bir özel alan ekleyin ve menü komut hizmetini alacak şekilde denetim oluşturucusunu değiştirin. Ardından kısayol menü komutlarını eklemek için menü komut hizmetini kullanın. ShortcutMenuControl Oluşturucusu şimdi aşağıdaki kod gibi görünmelidir. Komut işleyicisi daha sonra tanımlanacaktır.
 
     ```csharp
     public ShortcutMenuControl(OleMenuCommandService service)
@@ -207,7 +207,7 @@ Bu kılavuzda gösterildiği gibi bir kısayol menüsü, kullanıcının araç p
     </UserControl>
     ```
 
-7. *ShortcutMenuControl.xaml.cs*' de, olay işleyicisi için bir saplama ekleyin.
+7. *ShortcutMenuControl. xaml. cs* dosyasında olay işleyicisi için bir saplama ekleyin.
 
     ```csharp
     private void MyToolWindow_MouseRightButtonDown(object sender, MouseButtonEventArgs e)

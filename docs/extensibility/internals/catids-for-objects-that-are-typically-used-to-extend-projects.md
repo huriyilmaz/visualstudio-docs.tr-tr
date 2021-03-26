@@ -9,17 +9,17 @@ helpviewer_keywords:
 - GUIDs, VSPackages
 - CATIDs for VSPackages
 ms.assetid: 0c7fdb66-ed96-4b36-89f6-021bca573572
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: bebaf35fc19cbad86a1e1ee4c8bbeddef0259cb4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 276e7f146858c2de166c0ba20063a0bf4d8b88a0
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99905875"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105086098"
 ---
 # <a name="catids-for-objects-that-are-typically-used-to-extend-projects"></a>Projeleri genişletmek için genellikle kullanılan nesneler için CATIDs
 Aşağıdaki tabloda `Project` `ProjectItem` [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] , ve projeleri için nesneleri genişletmek ve otomasyon Için kullanılan catids listelenmiştir [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] . Bu CATIDs, *VSLangProj. olb* içinde tanımlanmıştır.
