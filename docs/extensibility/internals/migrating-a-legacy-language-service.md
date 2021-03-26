@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - language services, migrating
 ms.assetid: e0f666a0-92a7-4f9c-ba79-d05b13fb7f11
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7a0e20c77a1c8a81a29691079ace1e4751135560
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: afe98f2d96618999aa02dd01f03f55395af46e19
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99895693"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105063272"
 ---
 # <a name="migrating-a-legacy-language-service"></a>Eski Dil Hizmetini Geçirme
 Projeyi güncelleştirerek ve projeye bir Source. Extension. valtmanifest dosyası ekleyerek eski bir dil hizmetini Visual Studio 'nun sonraki bir sürümüne geçirebilirsiniz. Dil hizmetinin kendisi, daha önce olduğu gibi çalışmaya devam eder, çünkü Visual Studio Düzenleyicisi tarafından uyum sağlar.
@@ -71,13 +71,13 @@ Projeyi güncelleştirerek ve projeye bir Source. Extension. valtmanifest dosyas
 
     - Microsoft.VisualStudio.Shell.Interop.10.0.dll bir başvuru ekleyin.
 
-8. VsPkg.cs dosyasını açın ve özniteliğinin değerini olarak değiştirin. `DefaultRegistryRoot`
+8. VsPkg. cs dosyasını açın ve özniteliğinin değerini olarak değiştirin. `DefaultRegistryRoot`
 
     ```
     "Software\\Microsoft\\VisualStudio\\14.0Exp"
     ```
 
-9. Özgün örnek, dil hizmetini kaydetmez, bu nedenle aşağıdaki özniteliğini VsPkg.cs öğesine eklemeniz gerekir.
+9. Özgün örnek, dil hizmetini kaydetmez, bu nedenle VsPkg. cs ' ye aşağıdaki özniteliği eklemeniz gerekir.
 
     ```
     [ProvideLanguageService(typeof(RegularExpressionLanguageService), "RegularExpressionLanguage", 0, RequestStockColors=true)]

@@ -8,17 +8,17 @@ helpviewer_keywords:
 - project configurations
 - configuration options, about configuration options
 ms.assetid: f4ad4dd3-b39e-42df-ad89-d403cdf24a2b
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: aa018d340e016ba5c9f424f705599a150ecdc818
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ad30e3f7b91e8a76715f66d9f6701597f3830bd6
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99884695"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105057136"
 ---
 # <a name="configuration-options-overview"></a>Yapılandırma seçeneklerine genel bakış
 İçindeki projeler [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , derlenen, hata ayıklaması yapılan, çalıştırılan ve/veya dağıtılan birden fazla yapılandırmayı destekleyebilir. Yapılandırma, genellikle derleyici anahtarları ve dosya konumları gibi adlandırılmış özellikler kümesiyle tanımlanan bir yapı türüdür. Varsayılan olarak, yeni çözümler iki yapılandırma, *hata ayıklama* ve *yayın* içerir. Bu yapılandırma, varsayılan ayarları kullanılarak uygulanabilir veya özel çözümünüzü ve/veya proje gereksinimlerinizi karşılayacak şekilde değiştirilebilir. Bazı paketler iki şekilde oluşturulabilir: ActiveX Düzenleyicisi veya yerinde bileşen olarak. Ancak projelerin birden çok yapılandırmayı desteklemesi gerekmez. Yalnızca bir yapılandırma varsa, bu yapılandırma tüm çözüm yapılandırmalarına eşlenir.
@@ -33,7 +33,7 @@ ms.locfileid: "99884695"
 
 |Yapılandırma adı|Platform: Win32|Platform: Win64|
 |------------------------|----------------------|----------------------|
-|*Hata ayıklama*|\<Debug Win32 settings>|\<Debug Win64 settings>|
+|*Hata Ayıklama*|\<Debug Win32 settings>|\<Debug Win64 settings>|
 |*Sürüm*|\<Release Win32 settings>|\<Release Win64 settings>|
 |*MyConfig*|Yok|\<MyConfig Win64 settings>|
 

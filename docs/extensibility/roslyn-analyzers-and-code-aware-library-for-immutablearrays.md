@@ -6,17 +6,17 @@ titleSuffix: ''
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 0b0afa22-3fca-4d59-908e-352464c1d903
-author: acangialosi
-ms.author: anthc
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: c41b70cf9a4e4e5ae4b1d1ddd2d2a6f6876b9a96
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e3bdcc9c35f5acaf9937bd18b0160f9e5a58161c
+ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99875529"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105060594"
 ---
 # <a name="roslyn-analyzers-and-code-aware-library-for-immutablearrays"></a>Immutablearışın için Roslyn Çözümleyicileri ve kod duyarlı kitaplık
 
@@ -66,7 +66,7 @@ Düzenleyicinin giriş işaretini, bildiren satıra yerleştirin `b1` . Syntax V
 
 Ana menüden **Dosya**  >  **Yeni**  >  **Proje**' yi seçin. **Yeni proje** iletişim kutusunda, sol gezinti çubuğundaki **C#** projeleri altında **genişletilebilirlik**' i seçin ve sağ bölmedeki **kod düzeltmesini içeren çözümleyici** proje şablonu ' nu seçin. Bir ad girin ve iletişim kutusunu onaylayın.
 
-Şablon bir *DiagnosticAnalyzer.cs* dosyası açar. Düzenleyici arabelleği sekmesini seçin. Bu dosya, `DiagnosticAnalyzer` (bir Roslyn API türü) öğesinden türetilen bir çözümleyici sınıfına (projeyi verdiğiniz adından oluşturulmuş) sahiptir. Yeni sınıfınız, `DiagnosticAnalyzerAttribute` çözümleyicinizin, çözümleyicinizi bulduğu ve yükleyeceği şekilde C# diliyle ilgili olduğunu belirten bir bildirim içerir.
+Şablon bir *Diagnosticanalyzer. cs* dosyası açar. Düzenleyici arabelleği sekmesini seçin. Bu dosya, `DiagnosticAnalyzer` (bir Roslyn API türü) öğesinden türetilen bir çözümleyici sınıfına (projeyi verdiğiniz adından oluşturulmuş) sahiptir. Yeni sınıfınız, `DiagnosticAnalyzerAttribute` çözümleyicinizin, çözümleyicinizi bulduğu ve yükleyeceği şekilde C# diliyle ilgili olduğunu belirten bir bildirim içerir.
 
 ```csharp
 [DiagnosticAnalyzer(LanguageNames.CSharp)]
