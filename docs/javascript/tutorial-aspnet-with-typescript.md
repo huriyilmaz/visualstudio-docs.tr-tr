@@ -1,7 +1,7 @@
 ---
 title: TypeScript ile ASP.NET Core uygulaması oluşturma
 description: Bu öğreticide, ASP.NET Core ve TypeScript kullanarak bir uygulama oluşturacaksınız
-ms.date: 03/16/2020
+ms.date: 03/25/2021
 ms.topic: tutorial
 ms.devlang: javascript
 author: mikejo5000
@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 6297f7a392a497b79adca991b1ceba7fd701856d
-ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
+ms.openlocfilehash: ce27b8fdd73c1fcc001861a9b1fb7c2e9e4f4058
+ms.sourcegitcommit: 00e16b9afe6b22ba0591e4d0d92690544e6d4357
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104672845"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "105616993"
 ---
 # <a name="tutorial-create-an-aspnet-core-app-with-typescript-in-visual-studio"></a>Öğretici: Visual Studio 'da TypeScript ile ASP.NET Core uygulaması oluşturma
 
@@ -287,7 +287,10 @@ Bu öğreticide, ASP.NET Core MVC uygulaması için kod içeren basit bir proje 
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-ASP.NET Core ile TypeScript kullanma hakkında daha fazla bilgi edinmek isteyebilirsiniz.
+ASP.NET Core ile TypeScript kullanma hakkında daha fazla bilgi edinmek isteyebilirsiniz. Visual Studio 'da AngularJS programlama ile ilgileniyorsanız, Visual Studio için [AngularJS Language Service uzantısını](https://devblogs.microsoft.com/visualstudio/angular-language-service-for-visual-studio) kullanabilirsiniz.
 
 > [!div class="nextstepaction"]
 > [ASP.NET Core ve TypeScript](https://www.typescriptlang.org/docs/handbook/asp-net-core.html)
+
+> [!div class="nextstepaction"]
+> [AngularJS Language Service uzantısı](https://devblogs.microsoft.com/visualstudio/angular-language-service-for-visual-studio)

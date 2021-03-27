@@ -2,7 +2,7 @@
 title: İlk Node.js uygulamanızı oluşturma
 ms.custom: SEO-VS-2020
 description: Bu hızlı başlangıçta, Visual Studio 'da bir Node.js uygulaması oluşturacaksınız
-ms.date: 06/27/2018
+ms.date: 03/25/2021
 ms.technology: vs-javascript
 ms.topic: quickstart
 ms.devlang: javascript
@@ -14,12 +14,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: c342018a2331b27a411b5efc23af1438fa18518d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ecd65c0348ac16a2097061726e3896961ae04482
+ms.sourcegitcommit: 00e16b9afe6b22ba0591e4d0d92690544e6d4357
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99932624"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "105617058"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-nodejs-app"></a>Hızlı başlangıç: ilk Node.js uygulamanızı oluşturmak için Visual Studio 'Yu kullanma
 
@@ -115,5 +115,8 @@ Tebrikler, Visual Studio IDE ve Node.js ile çalışmaya başladığınız bu h�
 > [!div class="nextstepaction"]
 > [Uygulamayı Linux 'a dağıtma App Service](../javascript/publish-nodejs-app-azure.md)
 
-- [Node.js ve Express öğreticisi](../javascript/tutorial-nodejs.md)
-- [Node.js ve tepki verme öğreticisi](../javascript/tutorial-nodejs-with-react-and-jsx.md)
+> [!div class="nextstepaction"]
+> [Node.js ve Express öğreticisi](../javascript/tutorial-nodejs.md)
+
+> [!div class="nextstepaction"]
+> [Node.js ve tepki verme öğreticisi](../javascript/tutorial-nodejs-with-react-and-jsx.md)

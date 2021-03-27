@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: b572a6854d505704accd79cc4da2ac4e52c193d6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e76c5346230b6991f238384a4852938dcc540f6c
+ms.sourcegitcommit: 00e16b9afe6b22ba0591e4d0d92690544e6d4357
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99850183"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "105616941"
 ---
 # <a name="create-a-network-installation-of-visual-studio"></a>Visual Studio 'nun ağ yüklemesi oluşturma
 
@@ -70,7 +70,7 @@ Desteklenen diğer bootstrapdenetleyicileri [vs_teamexplorer.exe](https://downlo
 
 ## <a name="create-an-offline-installation-folder"></a>Çevrimdışı yükleme klasörü oluşturma
 
-Bu adımı tamamlayabilmeniz için bir internet bağlantınızın olması gerekir. Tüm diller ve tüm özelliklerle çevrimdışı bir yükleme oluşturmak için aşağıdaki örneklerden birine benzer bir komut kullanın.
+Bu adımı tamamlayabilmeniz için bir internet bağlantınızın olması gerekir. Tüm diller ve tüm özelliklerle çevrimdışı bir yükleme oluşturmak için aşağıdaki örneklerden birine benzer bir komut kullanın. Bu klasör statik kalmalıdır ve düzen için tüm güncelleştirmelerin bu klasöre dahil olması gerekir. 
 
    > [!IMPORTANT]
    > Tek bir dil yerel ayarı için kapsamlı bir düzen, Visual Studio Community için 35 GB disk alanı ve Visual Studio Enterprise için 42 GB gerektirir. Ek [dil yerel ayarları](use-command-line-parameters-to-install-visual-studio.md#list-of-language-locales) her bırı için GB olmak üzere gereklidir. Daha fazla bilgi için [ağ yerleşimini özelleştirme](#customize-the-network-layout) bölümüne bakın.

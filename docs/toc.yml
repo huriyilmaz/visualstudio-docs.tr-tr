@@ -62,6 +62,10 @@
                   href: install/troubleshooting-network-related-errors-in-visual-studio.md
         - name: Bir kurumda dağıtma
           items:
+            - name: Yönetici güncelleştirmeleri uygulanıyor
+              href: install/applying-administrator-updates.md
+            - name: Yönetici güncelleştirmelerini etkinleştirme
+              href: install/enabling-administrator-updates.md
             - name: Yanıt dosyası ile Visual Studio yüklemesini otomatikleştirme
               href: install/automated-installation-with-response-file.md
             - name: Visual Studio’yu dağıtırken ürün anahtarlarını otomatik olarak uygulama

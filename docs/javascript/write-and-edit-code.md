@@ -1,7 +1,7 @@
 ---
 title: JavaScript geliştiricileri için düzenlemelere giriş
 description: Visual Studio 'da kod düzenleyicisine giriş, Visual Studio 'Nun JavaScript kodunu yazma, gezinme ve anlamayı kolaylaştıran bazı yolları gösterir.
-ms.date: 12/13/2018
+ms.date: 03/25/2021
 ms.topic: how-to
 author: mikejo5000
 ms.author: mikejo
@@ -10,12 +10,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: cec6a19d525f89b5ca8873344d3dce9c830fd4c3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b1d9fb7cdc850bc54298cd3d82d52786a9e6a639
+ms.sourcegitcommit: 00e16b9afe6b22ba0591e4d0d92690544e6d4357
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99935696"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "105616967"
 ---
 # <a name="learn-to-use-the-code-editor-for-javascript"></a>JavaScript için kod düzenleyicisini kullanmayı öğrenin
 
@@ -48,7 +48,7 @@ IntelliSense 'i, ayırt etmek için yeterince karakter yazdıktan sonra bir söz
 
 IntelliSense, programlama öğelerinin üzerine geldiğinizde, türler hakkındaki bilgileri de gösterebilir.
 
-IntelliSense bilgilerini sağlamak için dil hizmeti TypeScript *d. TS* dosyalarını ve JSDoc açıklamalarını kullanabilir. En yaygın JavaScript kitaplıkları için *d. TS* dosyaları otomatik olarak alınır. IntelliSense bilgilerinin nasıl alındığı hakkında daha fazla ayrıntı için bkz. [JavaScript IntelliSense](../ide/javascript-intellisense.md?toc=/visualstudio/javascript/toc.json)
+IntelliSense bilgilerini sağlamak için dil hizmeti TypeScript *d. TS* dosyalarını ve JSDoc açıklamalarını kullanabilir. En yaygın JavaScript kitaplıkları için *d. TS* dosyaları otomatik olarak alınır. IntelliSense bilgilerinin nasıl alındığı hakkında daha fazla ayrıntı için bkz. [JavaScript IntelliSense](../ide/javascript-intellisense.md?toc=/visualstudio/javascript/toc.json). Visual Studio 'da AngularJS programlama ile ilgileniyorsanız, IntelliSense 'i almak için Visual Studio [AngularJS Language Service uzantısını](https://devblogs.microsoft.com/visualstudio/angular-language-service-for-visual-studio) kullanabilirsiniz.
 
 ## <a name="check-syntax"></a>Sözdizimini denetle
 
