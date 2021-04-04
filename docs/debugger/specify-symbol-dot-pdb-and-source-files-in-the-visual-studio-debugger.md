@@ -2,7 +2,7 @@
 title: Hata ayıklayıcıda sembol (. pdb) ve kaynak dosyaları ayarlama
 description: Visual Studio 'da sembol ve kaynak dosyalarını yapılandırma ve yönetme hakkında bilgi edinin
 ms.custom: ''
-ms.date: 10/31/2019
+ms.date: 3/31/2021
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Debugger.Native
@@ -29,12 +29,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 496994c0f9d546efe8804481230081090309d47e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7ad72d2aa659f3d43bfca99c359d5db94e2d1045
+ms.sourcegitcommit: 155d5f0fd54ac1d20df2f5b0245365924faa3565
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99903568"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106083697"
 ---
 # <a name="specify-symbol-pdb-and-source-files-in-the-visual-studio-debugger-c-c-visual-basic-f"></a>Visual Studio hata ayıklayıcısında simge (. pdb) ve kaynak dosyaları belirtme (C#, C++, Visual Basic, F #)
 
@@ -246,9 +246,10 @@ Bu durumda, hata ayıklayıcı **yüklü sembol yok** veya gerekli sembolleri ve
 
 - Arama yolunu değiştirmek için, seçilmemiş bir yolu seçin veya **yeni yol** veya **Yeni VSTS yolu** ' nu seçin ve yeni bir yol girin veya seçin. Yolları tekrar aramak ve bulunursa sembol dosyasını yüklemek için **Yükle** ' yi seçin.
 - Herhangi bir sembol seçeneklerini geçersiz kılmak ve arama yollarını yeniden denemek için, **Araştır ve \<executable-name> bul**' u seçin. Sembol dosyası bulunursa yüklenir veya sembol dosyasını el ile seçebilmeniz için **Dosya Gezgini** açılır.
-- **Seçenekleri**  >  **hata ayıklama**  >  **sembolleri** sayfasında, **sembol ayarlarını değiştir**' i seçin.
-- Ayrıştırılmış derlemeyi bir kez yeni bir pencerede göstermek için, ayrıştırılmış **derlemeyi görüntüle**' yi seçin veya kaynak veya sembol dosyaları bulunamadığında her zaman ayrıştırılmış derlemeyi göster seçeneğini ayarlamak için **Seçenekler iletişim kutusunu** seçin.
+- Davranışı yapılandırmak üzere sembol ayarları sayfasını açmak için **sembol ayarlarını değiştir** ' i seçin (veya **seçenekleri**  >  **hata ayıklama**  >  **sembolleri** seçin).
+- Ileri Ayrıştırılmış derlemeyi bir kez yeni bir pencerede göstermek için, ayrıştırılmış **derlemeyi görüntüle**' yi seçin veya kaynak veya sembol dosyaları bulunamadığında her zaman ayrıştırılmış derlemeyi göster seçeneğini ayarlamak için **Seçenekler iletişim kutusunu** seçin. Daha fazla bilgi için bkz. [ayrıştırma kodunu görüntüleme](../debugger/how-to-use-the-disassembly-window.md).
 - Aranan konumları ve sonucu göstermek için **sembol yükleme bilgileri**' ni genişletin.
+- C# kodu için, kaynak kodu **yüklü olmayan** veya **kaynak yüklenmemiş** sayfalardan [derlemeyi kaldırma](../debugger/decompilation.md) seçeneğini de belirleyebilirsiniz.
 
 Seçeneklerden birini yürütmeden sonra hata ayıklayıcı *. pdb* dosyasını bulursa ve *. pdb* dosyasındaki bilgileri kullanarak kaynak dosyayı alabiliyorsanız, kaynağı görüntüler. Aksi halde, sorunu giderebilecek eylemlerin bağlantılarıyla birlikte, sorunu açıklayan bir **kaynak yüklenmemiş** sayfa görüntüler.
 
@@ -259,6 +260,8 @@ Hata ayıklayıcının kaynak dosyalarını arayacağı konumları belirtebilir 
 1. **Çözüm Gezgini**' de çözümü seçin ve ardından **Özellikler** simgesini seçin, **alt** + **ENTER** tuşuna basın veya sağ tıklayıp **Özellikler**' i seçin.
 
 1. **Kaynak dosyalarını hata ayıkla**' yı seçin.
+
+   ![Kaynak dosyalarını hata ayıkla sayfası](../debugger/media/dbg-source-files.png)
 
 1. **Kaynak kodu Içeren dizinler** altında, Aranacak kaynak kodu konumlarını yazın veya seçin. **Yeni satır** simgesini kullanarak daha fazla konum ekleyin, **yukarı** ve **aşağı** ok simgelerini yeniden sıralayın veya **X** simgesini silin.
 
