@@ -13,12 +13,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 71e6c03c4ed0319b45c5b6ef0b79f65abbfc9f73
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c499e36b7ee6bb15980fe89c6185a105681d4d05
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99867197"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106216507"
 ---
 # <a name="create-a-simple-data-application-by-using-adonet"></a>ADO.NET kullanarak basit veri uygulaması oluşturma
 
@@ -150,7 +150,7 @@ Uygulamayı çalıştırdığınızda gezinti formu açılır. **Hesap Ekle** d�
 
 #### <a name="make-the-navigation-form-the-startup-form"></a>Gezinti formunu başlangıç formu haline getirme
 
-C# kullanıyorsanız, **Çözüm Gezgini**' de **program.cs** açın ve ardından `Application.Run` satırı bu şekilde değiştirin: `Application.Run(new Navigation());`
+C# kullanıyorsanız, **Çözüm Gezgini**' de **program. cs**' yi açın ve ardından `Application.Run` satırı bu şekilde değiştirin: `Application.Run(new Navigation());`
 
 Visual Basic kullanıyorsanız, **Çözüm Gezgini**' de **Özellikler** penceresini açın, **uygulama** sekmesini seçin ve ardından **başlangıç formu** listesinden **simpledataapp. Navigation** öğesini seçin.
 
@@ -162,8 +162,8 @@ Boş olay işleyicisi yöntemleri oluşturmak için gezinti formundaki üç dü�
 
 Gezinti formu için kod sayfasında, aşağıdaki kodda gösterildiği gibi üç düğme için yöntem gövdelerini, olay işleyicileri ' ne tıklayın.
 
-[!code-csharp[Navigation#1](../data-tools/codesnippet/CSharp/SimpleDataApp/Navigation.cs#1)]
-[!code-vb[Navigation#1](../data-tools/codesnippet/VisualBasic/SimpleDataApp/Navigation.vb#1)]
+:::code language="csharp" source="../data-tools/codesnippet/CSharp/SimpleDataApp/Navigation.cs" id="Snippet1":::
+:::code language="vb" source="../data-tools/codesnippet/VisualBasic/SimpleDataApp/Navigation.vb" id="Snippet1":::
 
 ### <a name="newcustomer-form"></a>NewCustomer formu
 
@@ -189,13 +189,13 @@ NewCustomer form mantığını gerçekleştirmek için aşağıdaki adımları i
 
 2. Aşağıdaki kodda gösterildiği gibi, sınıfa bazı değişkenler ve yardımcı yöntemler ekleyin.
 
-     [!code-csharp[NewCustomer#1](../data-tools/codesnippet/CSharp/SimpleDataApp/NewCustomer.cs#1)]
-     [!code-vb[NewCustomer#1](../data-tools/codesnippet/VisualBasic/SimpleDataApp/NewCustomer.vb#1)]
+     :::code language="csharp" source="../data-tools/codesnippet/CSharp/SimpleDataApp/NewCustomer.cs" id="Snippet1":::
+     :::code language="vb" source="../data-tools/codesnippet/VisualBasic/SimpleDataApp/NewCustomer.vb" id="Snippet1":::
 
 3. Aşağıdaki kodda gösterildiği gibi dört düğme için yöntem gövdelerini, olay işleyiciler ' ı doldurun.
 
-     [!code-csharp[NewCustomer#2](../data-tools/codesnippet/CSharp/SimpleDataApp/NewCustomer.cs#2)]
-     [!code-vb[NewCustomer#2](../data-tools/codesnippet/VisualBasic/SimpleDataApp/NewCustomer.vb#2)]
+     :::code language="csharp" source="../data-tools/codesnippet/CSharp/SimpleDataApp/NewCustomer.cs" id="Snippet2":::
+     :::code language="vb" source="../data-tools/codesnippet/VisualBasic/SimpleDataApp/NewCustomer.vb" id="Snippet2":::
 
 ### <a name="fillorcancel-form"></a>FillOrCancel formu
 
@@ -223,13 +223,13 @@ FillOrCancel form mantığını gerçekleştirmek için aşağıdaki adımları 
 
 2. Aşağıdaki kodda gösterildiği gibi sınıfına bir değişken ve yardımcı yöntem ekleyin.
 
-     [!code-csharp[FillOrCancel#1](../data-tools/codesnippet/CSharp/SimpleDataApp/FillOrCancel.cs#1)]
-     [!code-vb[FillOrCancel#1](../data-tools/codesnippet/VisualBasic/SimpleDataApp/FillOrCancel.vb#1)]
+     :::code language="csharp" source="../data-tools/codesnippet/CSharp/SimpleDataApp/FillOrCancel.cs" id="Snippet1":::
+     :::code language="vb" source="../data-tools/codesnippet/VisualBasic/SimpleDataApp/FillOrCancel.vb" id="Snippet1":::
 
 3. Aşağıdaki kodda gösterildiği gibi dört düğme için yöntem gövdelerini, olay işleyiciler ' ı doldurun.
 
-     [!code-csharp[FillOrCancel#2](../data-tools/codesnippet/CSharp/SimpleDataApp/FillOrCancel.cs#2)]
-     [!code-vb[FillOrCancel#2](../data-tools/codesnippet/VisualBasic/SimpleDataApp/FillOrCancel.vb#2)]
+     :::code language="csharp" source="../data-tools/codesnippet/CSharp/SimpleDataApp/FillOrCancel.cs" id="Snippet2":::
+     :::code language="vb" source="../data-tools/codesnippet/VisualBasic/SimpleDataApp/FillOrCancel.vb" id="Snippet2":::
 
 ## <a name="test-your-application"></a>Uygulamanızı test etme
 

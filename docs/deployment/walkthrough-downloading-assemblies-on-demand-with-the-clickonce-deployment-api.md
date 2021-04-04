@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a87bcd8b51bc393921d21d838943d5e1fe8f02a2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 316be1f0a8fa881f781d983cfe9ed663e5907749
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99917341"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106216910"
 ---
 # <a name="walkthrough-download-assemblies-on-demand-with-the-clickonce-deployment-api"></a>İzlenecek yol: ClickOnce dağıtım API 'SI ile isteğe bağlı derlemeleri Indirme
 Varsayılan olarak, uygulama ilk çalıştırıldığında bir uygulamaya dahil edilen tüm derlemeler [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] indirilir. Ancak, uygulamanızın küçük bir kullanıcı kümesi tarafından kullanılan bölümlerine sahip olabilirsiniz. Bu durumda, bir derlemeyi yalnızca türlerinden birini oluştururken indirmek istersiniz. Aşağıdaki izlenecek yol, uygulamanızda belirli derlemelerin "isteğe bağlı" olarak nasıl işaretleneceğini ve <xref:System.Deployment.Application> ortak dil çalışma zamanı (CLR) tarafından talep edildiğinde ad alanındaki sınıfları kullanarak nasıl indirileceğini gösterir.
@@ -56,10 +56,10 @@ Varsayılan olarak, uygulama ilk çalıştırıldığında bir uygulamaya dahil 
 
 5. Not defteri veya başka bir metin düzenleyicisi kullanarak adlı tek bir özelliği olan adlı bir sınıf tanımlayın `DynamicClass` `Message` .
 
-    [!code-vb[ClickOnceLibrary#1](../deployment/codesnippet/VisualBasic/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api_1.vb)]
-    [!code-csharp[ClickOnceLibrary#1](../deployment/codesnippet/CSharp/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api_1.cs)]
+    :::code language="vb" source="../snippets/visualbasic/VS_Snippets_Winforms/ClickOnceLibrary/VB/Class1.vb" id="Snippet1":::
+    :::code language="csharp" source="../snippets/csharp/VS_Snippets_Winforms/ClickOnceLibrary/CS/Class1.cs" id="Snippet1":::
 
-6. Metni, kullandığınız dile bağlı olarak *ClickOnceLibrary.cs* veya *ClickOnceLibrary. vb* adlı bir dosya olarak, *ClickOnceOnDemand* dizinine kaydedin.
+6. Kullandığınız dile bağlı olarak, metni *ClickOnceLibrary. cs* veya *ClickOnceLibrary. vb* adlı bir dosya olarak, *ClickOnceOnDemand* dizinine kaydedin.
 
 7. Dosyayı bir derlemede derleyin.
 
@@ -79,14 +79,14 @@ Varsayılan olarak, uygulama ilk çalıştırıldığında bir uygulamaya dahil 
 
 9. Metin düzenleyicinizi kullanarak yeni bir dosya oluşturun ve aşağıdaki kodu girin. Bu kod, gerekli olduğunda ClickOnceLibrary derlemesini indiren bir Windows Forms uygulaması oluşturur.
 
-     [!code-csharp[ClickOnceOnDemandCmdLine#1](../deployment/codesnippet/CSharp/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api_2.cs)]
-     [!code-vb[ClickOnceOnDemandCmdLine#1](../deployment/codesnippet/VisualBasic/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api_2.vb)]
+    :::code language="csharp" source="../snippets/csharp/VS_Snippets_Winforms/ClickOnceOnDemandCmdLine/CS/Form1.cs" id="Snippet1":::
+    :::code language="vb" source="../snippets/visualbasic/VS_Snippets_Winforms/ClickOnceOnDemandCmdLine/VB/Form1.vb" id="Snippet1":::
 
 10. Kodunda, çağrısını bulun <xref:System.Reflection.Assembly.LoadFile%2A> .
 
 11. `PublicKeyToken`Daha önce aldığınız değere ayarlayın.
 
-12. Dosyayı *Form1.cs* veya *Form1. vb* olarak kaydedin.
+12. Dosyayı *Form1. cs* veya *Form1. vb* olarak kaydedin.
 
 13. Aşağıdaki komutu kullanarak bir yürütülebilir dosyaya derleyin.
 

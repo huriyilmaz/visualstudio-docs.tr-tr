@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: c49f091477d204b7ed81a6f89fb24a56b2d60669
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c58de345400c7b724a755839cb8baa1afc3cfce2
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99945116"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106217196"
 ---
 # <a name="how-to-get-data-for-a-built-in-sharepoint-node-in-server-explorer"></a>Nasıl yapılır: Sunucu Gezgini yerleşik bir SharePoint düğümü için veri alma
   **Sunucu Gezgini** içindeki her bir yerleşik SharePoint düğümü için, düğümün gösterdiği temel SharePoint bileşeni için veri alabilirsiniz. Daha fazla bilgi için, bkz. [Sunucu Gezgini SharePoint bağlantıları düğümünü genişletme](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md).
@@ -29,8 +29,8 @@ ms.locfileid: "99945116"
 ## <a name="example"></a>Örnek
  Aşağıdaki kod örneği, bir liste düğümünün **Sunucu Gezgini** içinde temsil ettiği temel alınan SharePoint listesi için verilerin nasıl alınacağını gösterir. Varsayılan olarak, liste düğümlerinde, listeleri bir Web tarayıcısında açmak için tıklayan bir **tarayıcıda görünüm** bağlam menüsü öğesi vardır. Bu örnek liste düğümlerini, listeleri doğrudan Visual Studio 'da açan **Visual Studio** bağlam menü öğesinde bir görünüm ekleyerek genişletir. Kod, Visual Studio 'da açılacak listenin URL 'sini almak için düğüm liste verilerine erişir.
 
- [!code-vb[SPExtensibility.ProjectSystemExtension.General#10](../sharepoint/codesnippet/VisualBasic/projectsystemexamples/extension/serverexplorerextensionnodeinfo.vb#10)]
- [!code-csharp[SPExtensibility.ProjectSystemExtension.General#10](../sharepoint/codesnippet/CSharp/projectsystemexamples/extension/serverexplorerextensionnodeinfo.cs#10)]
+ :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/projectsystemexamples/extension/serverexplorerextensionnodeinfo.vb" id="Snippet10":::
+ :::code language="csharp" source="../sharepoint/codesnippet/CSharp/projectsystemexamples/extension/serverexplorerextensionnodeinfo.cs" id="Snippet10":::
 
  Bu örnek, <xref:EnvDTE.DTE> Visual Studio 'da listeleri açmak için kullanılan nesneyi almak Için SharePoint proje hizmetini kullanır. SharePoint proje hizmeti hakkında daha fazla bilgi için bkz. [SharePoint proje hizmetini kullanma](../sharepoint/using-the-sharepoint-project-service.md).
 

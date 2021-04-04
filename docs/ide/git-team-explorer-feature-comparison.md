@@ -2,18 +2,18 @@
 title: Visual Studio 'da git ve Takım Gezgini yan yana karşılaştırması
 titleSuffix: ''
 description: Kaynak denetimini yönetmek için Visual Studio 'daki Takım Gezgini ve yeni git deneyiminin nasıl kullanılacağını karşılaştırın.
-ms.date: 03/12/2021
+ms.date: 04/01/2021
 ms.topic: how-to
 ms.author: tglee
 author: TerryGLee
 ms.manager: jmartens
 monikerRange: vs-2019
-ms.openlocfilehash: 4cbd5b928bb066401c2f091863ad610fbd9f23d5
-ms.sourcegitcommit: 8edb1a7e3e8eee48bf0a900f00b5ee8e08de8e1d
+ms.openlocfilehash: bff03c9435a763607fd32936ddfa3fb38b45296b
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103482287"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106216923"
 ---
 # <a name="side-by-side-comparison-of-git-and-team-explorer"></a>Git ve Takım Gezgini yan yana karşılaştırması
 
@@ -69,5 +69,7 @@ Takım Gezgini kullanıyorsanız, yeni git deneyimini nasıl kullanabileceğiniz
 Yeni git deneyimi hakkında daha fazla bilgi edinmek için bkz. [Visual Studio 'Da git ile çalışmaya](https://www.youtube.com/watch?v=GCZ9x3yqkyc)başlama, YouTube 'da en son video.
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Visual Studio 'da yeni git deneyimi](git-with-visual-studio.md)
+- [Visual Studio 'da git ve GitHub ile çalışmaya başlama](/learn/modules/visual-studio-github-push/)
 - [Visual Studio’da GitHub hesaplarıyla çalışma](work-with-github-accounts.md)

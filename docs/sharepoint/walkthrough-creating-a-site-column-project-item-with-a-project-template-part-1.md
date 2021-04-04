@@ -18,12 +18,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: b9ccf478a084b8dedabc6f470a333e3fe4b54eb7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 07f3b90df070eca4e17e5bba9fa6a9e3582bd238
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99918739"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106217807"
 ---
 # <a name="walkthrough-create-a-site-column-project-item-with-a-project-template-part-1"></a>İzlenecek yol: proje şablonu, Bölüm 1 ile bir site sütunu proje öğesi oluşturma
   SharePoint projeleri bir veya daha fazla SharePoint proje öğesi için kapsayıcılardır. Visual Studio 'da, kendi SharePoint proje öğesi türlerinizi oluşturup bunları bir proje şablonuyla ilişkilendirerek SharePoint proje sistemini genişletebilirsiniz. Bu kılavuzda, bir site sütunu oluşturmak için bir proje öğesi türü tanımlayacaksınız ve sonra bir site sütunu proje öğesi içeren yeni bir proje oluşturmak için kullanılabilecek bir proje şablonu oluşturacaksınız.
@@ -150,8 +150,8 @@ ms.locfileid: "99918739"
 
 1. **SiteColumnProjectItemTypeProvider** kod dosyasında, varsayılan kodu aşağıdaki kodla değiştirin ve dosyayı kaydedin.
 
-     [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#1](../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projectitemtypedefinition/sitecolumnprojectitemtypeprovider.cs#1)]
-     [!code-vb[SPExtensibility.ProjectItem.SiteColumn#1](../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projectitemtypedefinition/sitecolumnprojectitemtypeprovider.vb#1)]
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projectitemtypedefinition/sitecolumnprojectitemtypeprovider.cs" id="Snippet1":::
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projectitemtypedefinition/sitecolumnprojectitemtypeprovider.vb" id="Snippet1":::
 
 ## <a name="create-a-visual-studio-project-template"></a>Visual Studio proje şablonu oluşturma
  Bir proje şablonu oluşturarak, diğer geliştiricilerin site sütunu proje öğelerini içeren SharePoint projeleri oluşturmalarına olanak tanır. SharePoint proje şablonu, Visual Studio 'daki *. csproj* veya *. vbproj* ve *. vstemplate* dosyaları gibi tüm projeler için gerekli dosyaları ve SharePoint projelerine özgü dosyaları içerir. Daha fazla bilgi için bkz. [SharePoint proje öğeleri için öğe şablonları ve proje şablonları oluşturma](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md).
@@ -225,7 +225,7 @@ ms.locfileid: "99918739"
 ## <a name="edit-the-project-template-files"></a>Proje şablonu dosyalarını düzenleme
  SiteColumnProjectTemplate projesinde, proje şablonunun davranışını tanımlamak için aşağıdaki dosyaları düzenleyin:
 
-- *AssemblyInfo.cs* veya *AssemblyInfo. vb*
+- *AssemblyInfo. cs* veya *AssemblyInfo. vb*
 
 - *Elements.xml*
 
@@ -241,9 +241,9 @@ ms.locfileid: "99918739"
 
   Aşağıdaki yordamlarda, bu dosyalardan bazılarına değiştirilebilen parametreler ekleyeceksiniz. Değiştirilebilir bir parametre, dolar işareti ($) karakteriyle başlayan ve biten bir belirteçtir. Bir Kullanıcı bir proje oluşturmak için bu proje şablonunu kullandığında, Visual Studio yeni projedeki bu parametreleri belirli değerlerle otomatik olarak değiştirir. Daha fazla bilgi için bkz. [değiştirilebilen parametreler](../sharepoint/replaceable-parameters.md).
 
-#### <a name="to-edit-the-assemblyinfocs-or-assemblyinfovb-file"></a>AssemblyInfo.cs veya AssemblyInfo. vb dosyasını düzenlemek için
+#### <a name="to-edit-the-assemblyinfocs-or-assemblyinfovb-file"></a>AssemblyInfo. cs veya AssemblyInfo. vb dosyasını düzenlemek için
 
-1. SiteColumnProjectTemplate projesinde, *AssemblyInfo.cs* veya *AssemblyInfo. vb* dosyasını açın ve bunun üstüne aşağıdaki ifadeyi ekleyin:
+1. SiteColumnProjectTemplate projesinde *AssemblyInfo. cs* veya *AssemblyInfo. vb* dosyasını açın ve ardından aşağıdaki ifadeyi onun üstüne ekleyin:
 
     ```vb
     Imports System.Security

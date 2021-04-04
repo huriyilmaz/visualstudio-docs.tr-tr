@@ -4,17 +4,17 @@ description: Visual Studio sistem tarafından oluşturulan Günlükler, toplanan
 ms.custom: SEO-VS-2020
 ms.date: 05/24/2018
 ms.topic: conceptual
-author: jillre
-ms.author: michma
+author: TerryGLee
+ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 7a6df4a90d8ddb31db88bb91ff4e874cadd3c589
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d357b5e21ca86d7ccf11f576a15bbd0e7a90e466
+ms.sourcegitcommit: a339547aa2f4e0f64b7afbcc3e1ade0a4f9287d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99894666"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "106171842"
 ---
 # <a name="system-generated-logs-collected-by-visual-studio"></a>Visual Studio tarafından toplanan sistem tarafından oluşturulan Günlükler
 
@@ -70,7 +70,7 @@ Uzantı yazarları, kişisel bilgilerin görünürlüğünü, modülleri, türle
 
 ## <a name="opt-out-of-data-collection"></a>Veri toplamayı geri çevirme
 
-Topladığımız verilerin amacı ve erişim ve bekletme kısıtlamaları verildiğinde, Visual Studio ve Windows için varsayılan gizlilik ayarlarını kullanmanızı öneririz. Ancak, Visual Studio Deneyimini Geliştirme Programı [devre dışı](../ide/visual-studio-experience-improvement-program.md#opt-in-or-out) bırakabilirsiniz. Tüm programlar için sistem tarafından oluşturulan günlük toplamayı devre dışı bırakmak için bkz. [Windows 10 ' da tanılama, geri bildirim ve gizlilik](https://privacy.microsoft.com/windows-10-feedback-diagnostics-and-privacy). Seçenekler, kullanmakta olduğunuz Windows sürümüne bağlı olarak farklılık gösterebilir.
+Topladığımız verilerin amacı ve erişim ve bekletme kısıtlamaları verildiğinde, Visual Studio ve Windows için varsayılan gizlilik ayarlarını kullanmanızı öneririz. Ancak, Visual Studio Deneyimini Geliştirme Programı [devre dışı](../ide/visual-studio-experience-improvement-program.md#opt-in-or-out) bırakabilirsiniz. Bunu devre dışı bırakırsanız, **isteğe bağlı** tanılama veri toplamayı devre dışı olursunuz. Visual Studio 'Nun güvenli olduğundan, güncel olduğundan ve beklendiği gibi çalıştığından emin olmak için bazı tanılama verileri koleksiyonu **gerekir** . Gerekli tanılama veri toplama, VSCEıP 'i devre dışı bırakmak için seçiminizden etkilenmeyecektir. Tüm programlar için sistem tarafından oluşturulan günlük toplamayı devre dışı bırakmak için bkz. [Windows 10 ' da tanılama, geri bildirim ve gizlilik](https://privacy.microsoft.com/windows-10-feedback-diagnostics-and-privacy). Seçenekler, kullanmakta olduğunuz Windows sürümüne bağlı olarak farklılık gösterebilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

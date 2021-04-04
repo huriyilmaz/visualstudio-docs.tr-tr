@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: def1ae862a7b9ba4def62cb590260c5a18758929
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a505ff059b347c6adbef15a8fe8bcfe7b274eaa4
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99937712"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106218028"
 ---
 # <a name="walkthrough-create-a-basic-site-definition-project"></a>İzlenecek yol: temel bir site tanımı projesi oluşturma
   Bu izlenecek yol, üzerinde bazı denetimlerle görsel bir Web Bölümü içeren temel bir site tanımı oluşturmayı gösterir. Daha fazla açıklık için, oluşturduğunuz görsel web bölümünün yalnızca birkaç denetimi vardır. Ancak, daha fazla işlevsellik içeren daha gelişmiş SharePoint site tanımları oluşturabilirsiniz.
@@ -112,10 +112,10 @@ ms.locfileid: "99937712"
     </table>
     ```
 
-6. *VisualWebPart1. ascx* altında, *VisualWebPart1.ascx.cs* dosyasını (için [!INCLUDE[csprcs](../sharepoint/includes/csprcs-md.md)] ) veya *VisualWebPart1. ascx. vb* (için) açın [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] ve aşağıdaki kodu ekleyin:
+6. *VisualWebPart1. ascx* altında, *VisualWebPart1. ascx. cs* dosyasını (için [!INCLUDE[csprcs](../sharepoint/includes/csprcs-md.md)] ) veya *VisualWebPart1. ascx. vb* (için) açın [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] ve aşağıdaki kodu ekleyin:
 
-     [!code-vb[SP_SimpleSiteDef#1](../sharepoint/codesnippet/VisualBasic/testsitedefvb/sitedefinition/visualwebpart1/visualwebpart1usercontrol.ascx.vb#1)]
-     [!code-csharp[SP_SimpleSiteDef#1](../sharepoint/codesnippet/CSharp/testsitedef/sitedefinition/visualwebpart1/visualwebpart1usercontrol.ascx.cs#1)]
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/testsitedefvb/sitedefinition/visualwebpart1/visualwebpart1usercontrol.ascx.vb" id="Snippet1":::
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/testsitedef/sitedefinition/visualwebpart1/visualwebpart1usercontrol.ascx.cs" id="Snippet1":::
 
      Bu kod, Web bölümünün düğme tıkla, işlevselliği ekler.
 

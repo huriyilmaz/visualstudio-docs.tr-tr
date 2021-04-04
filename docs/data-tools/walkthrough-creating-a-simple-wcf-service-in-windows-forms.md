@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 92c2d72e2b0c71abe93290ab2bfb9b5b584e9178
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5352ad4724e7c54e72dbaa52573c814657fa041e
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99866287"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106216104"
 ---
 # <a name="walkthrough-create-a-simple-wcf-service-in-windows-forms"></a>İzlenecek yol: Windows Forms basit bir WCF hizmeti oluşturma
 
@@ -65,35 +65,35 @@ Bu izlenecek yol, basit bir Windows Communication Foundation (WCF) hizmeti oluş
    > [!NOTE]
    > Bu, test edilebilir ve erişilebilen bir çalışan hizmet oluşturur. Aşağıdaki iki adım, farklı bir veri türünü kullanmak için varsayılan yöntemi nasıl değiştirebileceğinizi göstermektedir. Gerçek bir uygulamada, hizmete kendi işlevlerinizi de eklemeniz gerekir.
 
-5. **Çözüm Gezgini**, **IService1. vb** veya **IService1.cs** öğesine çift tıklayın.
+5. **Çözüm Gezgini**, **IService1. vb** veya **IService1. cs**' ye çift tıklayın.
 
    ![IService1 dosyası](../data-tools/media/wcf2.png)
 
    Şu satırı bulun:
 
-   [!code-csharp[WCFWalkthrough#4](../data-tools/codesnippet/CSharp/walkthrough-creating-a-simple-wcf-service-in-windows-forms_1.cs)]
-   [!code-vb[WCFWalkthrough#4](../data-tools/codesnippet/VisualBasic/walkthrough-creating-a-simple-wcf-service-in-windows-forms_1.vb)]
+   :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/wcfwalkthrough/cs/iservice1_2.cs" id="Snippet4":::
+   :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/wcfwalkthrough/vb/iservice1_2.vb" id="Snippet4":::
 
    `value`Parametrenin türünü dize olarak değiştirin:
 
-   [!code-csharp[WCFWalkthrough#1](../data-tools/codesnippet/CSharp/walkthrough-creating-a-simple-wcf-service-in-windows-forms_2.cs)]
-   [!code-vb[WCFWalkthrough#1](../data-tools/codesnippet/VisualBasic/walkthrough-creating-a-simple-wcf-service-in-windows-forms_2.vb)]
+   :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/wcfwalkthrough/cs/iservice1.cs" id="Snippet1":::
+   :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/wcfwalkthrough/vb/iservice1.vb" id="Snippet1":::
 
    Yukarıdaki kodda, veya özniteliklerini aklınızda edin `<OperationContract()>` `[OperationContract]` . Bu öznitelikler, hizmet tarafından sunulan herhangi bir yöntem için gereklidir.
 
-6. **Çözüm Gezgini**, **Service1. vb** veya **Service1.cs** öğesine çift tıklayın.
+6. **Çözüm Gezgini**, **Service1. vb** veya **Service1. cs**' ye çift tıklayın.
 
    ![Service1 dosyası](../data-tools/media/wcf3.png)
 
    Şu satırı bulun:
 
-   [!code-vb[WCFWalkthrough#5](../data-tools/codesnippet/VisualBasic/walkthrough-creating-a-simple-wcf-service-in-windows-forms_3.vb)]
-   [!code-csharp[WCFWalkthrough#5](../data-tools/codesnippet/CSharp/walkthrough-creating-a-simple-wcf-service-in-windows-forms_3.cs)]
+   :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/wcfwalkthrough/vb/service1_2.vb" id="Snippet5":::
+   :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/wcfwalkthrough/cs/service1_2.cs" id="Snippet5":::
 
    `value`Parametrenin türünü dize olarak değiştirin:
 
-   [!code-csharp[WCFWalkthrough#2](../data-tools/codesnippet/CSharp/walkthrough-creating-a-simple-wcf-service-in-windows-forms_4.cs)]
-   [!code-vb[WCFWalkthrough#2](../data-tools/codesnippet/VisualBasic/walkthrough-creating-a-simple-wcf-service-in-windows-forms_4.vb)]
+   :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/wcfwalkthrough/cs/service1.cs" id="Snippet2":::
+   :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/wcfwalkthrough/vb/service1.vb" id="Snippet2":::
 
 ## <a name="test-the-service"></a>Hizmeti test etme
 
@@ -135,7 +135,7 @@ Bu izlenecek yol, basit bir Windows Communication Foundation (WCF) hizmeti oluş
 
 ### <a name="build-a-client-application"></a>İstemci uygulaması oluşturma
 
-1. **Çözüm Gezgini**, zaten açık değilse Windows Form Tasarımcısı açmak için **Form1. vb** veya **Form1.cs** öğesine çift tıklayın.
+1. **Çözüm Gezgini**, zaten açık değilse Windows Form Tasarımcısı açmak için **Form1. vb** veya **Form1. cs** ' ye çift tıklayın.
 
 2. **Araç kutusundan** bir `TextBox` denetimi, `Label` denetimi ve `Button` denetimi form üzerine sürükleyin.
 
@@ -143,8 +143,8 @@ Bu izlenecek yol, basit bir Windows Communication Foundation (WCF) hizmeti oluş
 
 3. Öğesine çift tıklayın `Button` ve olay işleyicisine aşağıdaki kodu ekleyin `Click` :
 
-     [!code-csharp[WCFWalkthrough#3](../data-tools/codesnippet/CSharp/walkthrough-creating-a-simple-wcf-service-in-windows-forms_5.cs)]
-     [!code-vb[WCFWalkthrough#3](../data-tools/codesnippet/VisualBasic/walkthrough-creating-a-simple-wcf-service-in-windows-forms_5.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/wcfwalkthrough/cs/form1.cs" id="Snippet3":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/wcfwalkthrough/vb/form1.vb" id="Snippet3":::
 
 4. **Çözüm Gezgini**' de, **WindowsApplication1** ' a sağ tıklayın ve **Başlangıç projesi olarak ayarla**' ya tıklayın.
 

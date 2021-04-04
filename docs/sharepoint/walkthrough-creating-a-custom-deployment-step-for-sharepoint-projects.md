@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 8d42726cddb0565af66e161b41c16c94cfe2cb2b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 77c80134ad63346b363c072ef2eff7e49978501f
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99839142"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106217937"
 ---
 # <a name="walkthrough-create-a-custom-deployment-step-for-sharepoint-projects"></a>İzlenecek yol: SharePoint projeleri için özel bir dağıtım adımı oluşturma
   Bir SharePoint projesi dağıtırken, Visual Studio belirli bir sırada bir dizi dağıtım adımını yürütür. Visual Studio birçok yerleşik dağıtım adımı içerir, ancak kendi kendinize de oluşturabilirsiniz.
@@ -151,8 +151,8 @@ ms.locfileid: "99839142"
     > [!NOTE]
     > Bu kodu ekledikten sonra, projede bazı derleme hataları olacaktır, ancak sonraki adımlarda kod eklediğinizde bu işlemler kaybolur.
 
-     [!code-csharp[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#1](../sharepoint/codesnippet/CSharp/UpgradeDeploymentStep/deploymentstepextension/upgradestep.cs#1)]
-     [!code-vb[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#1](../sharepoint/codesnippet/VisualBasic/upgradedeploymentstep/deploymentstepextension/upgradestep.vb#1)]
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/UpgradeDeploymentStep/deploymentstepextension/upgradestep.cs" id="Snippet1":::
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/upgradedeploymentstep/deploymentstepextension/upgradestep.vb" id="Snippet1":::
 
 ## <a name="create-a-deployment-configuration-that-includes-the-custom-deployment-step"></a>Özel dağıtım adımını içeren bir dağıtım yapılandırması oluşturma
  Yeni dağıtım yapılandırması için, çeşitli yerleşik dağıtım adımlarını ve yeni yükseltme dağıtım adımını içeren bir proje uzantısı oluşturun. Bu uzantıyı oluşturarak SharePoint geliştiricilerinin SharePoint projelerinde dağıtımı Yükselt adımını kullanmasına yardımcı olursunuz.
@@ -163,8 +163,8 @@ ms.locfileid: "99839142"
 
 1. **DeploymentStepExtension** projesinde, DeploymentConfigurationExtension kod dosyasını açın ve ardından aşağıdaki kodu buraya yapıştırın.
 
-     [!code-csharp[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#2](../sharepoint/codesnippet/CSharp/UpgradeDeploymentStep/deploymentstepextension/deploymentconfigurationextension.cs#2)]
-     [!code-vb[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#2](../sharepoint/codesnippet/VisualBasic/upgradedeploymentstep/deploymentstepextension/deploymentconfigurationextension.vb#2)]
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/UpgradeDeploymentStep/deploymentstepextension/deploymentconfigurationextension.cs" id="Snippet2":::
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/upgradedeploymentstep/deploymentstepextension/deploymentconfigurationextension.vb" id="Snippet2":::
 
 ## <a name="create-the-custom-sharepoint-commands"></a>Özel SharePoint komutlarını oluşturma
  SharePoint için sunucu nesne modeline çağıran iki özel komut oluşturun. Bir komut, bir çözümün zaten dağıtılıp dağıtılmadığını belirler; diğer komut bir çözümü yükseltir.
@@ -173,8 +173,8 @@ ms.locfileid: "99839142"
 
 1. **SharePointCommands** projesinde, komutlar kod dosyasını açın ve ardından aşağıdaki kodu içine yapıştırın.
 
-     [!code-csharp[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#4](../sharepoint/codesnippet/CSharp/UpgradeDeploymentStep/SharePointCommands/Commands.cs#4)]
-     [!code-vb[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#4](../sharepoint/codesnippet/VisualBasic/upgradedeploymentstep/sharepointcommands/commands.vb#4)]
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/UpgradeDeploymentStep/SharePointCommands/Commands.cs" id="Snippet4":::
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/upgradedeploymentstep/sharepointcommands/commands.vb" id="Snippet4":::
 
 ## <a name="checkpoint"></a>Checkpoint
  Bu noktada, Özel Dağıtım adımının ve SharePoint komutlarının tüm kodları artık projelerde bulunur. Onları hatasız olarak derlendiklerinden emin olmak için oluşturun.

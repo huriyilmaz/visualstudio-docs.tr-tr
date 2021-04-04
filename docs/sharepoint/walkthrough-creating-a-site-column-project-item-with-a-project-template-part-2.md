@@ -14,12 +14,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: bc664a50fc307c59d5c168b26c8af1bc6181ebad
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 13a2f2c147bbf175a7601cd465dc8acbba9b5388
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99918726"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106217755"
 ---
 # <a name="walkthrough-create-a-site-column-project-item-with-a-project-template-part-2"></a>İzlenecek yol: proje şablonu, Bölüm 2 ile bir site sütunu proje öğesi oluşturma
   Özel bir SharePoint proje öğesi türü tanımladıktan ve Visual Studio 'daki bir proje şablonuyla ilişkilendirdikten sonra, şablon için bir sihirbaz de sağlamak isteyebilirsiniz. Sihirbazı kullanarak, Proje öğesini içeren yeni bir proje oluşturmak için şablonunuzu kullandıklarında kullanıcılardan bilgi toplayabilirsiniz. Topladığınız bilgiler Proje öğesini başlatmak için kullanılabilir.
@@ -204,22 +204,22 @@ ms.locfileid: "99918726"
 
 1. ProjectTemplateWizard projesinde CommandIds kod dosyasını açın ve ardından bu dosyanın tüm içeriğini aşağıdaki kodla değiştirin.
 
-     [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#5](../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/commandids.cs#5)]
-     [!code-vb[SPExtensibility.ProjectItem.SiteColumn#5](../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/commandids.vb#5)]
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/commandids.cs" id="Snippet5":::
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/commandids.vb" id="Snippet5":::
 
 #### <a name="to-create-the-wizard-model"></a>Sihirbaz modeli oluşturmak için
 
 1. SiteColumnWizardModel kod dosyasını açın ve bu dosyanın tüm içeriğini aşağıdaki kodla değiştirin.
 
-     [!code-vb[SPExtensibility.ProjectItem.SiteColumn#6](../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/sitecolumnwizardmodel.vb#6)]
-     [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#6](../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/sitecolumnwizardmodel.cs#6)]
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/sitecolumnwizardmodel.vb" id="Snippet6":::
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/sitecolumnwizardmodel.cs" id="Snippet6":::
 
 #### <a name="to-create-the-project-signing-manager"></a>Proje imzalama yöneticisini oluşturmak için
 
 1. ProjectSigningManager kod dosyasını açın ve ardından bu dosyanın tüm içeriğini aşağıdaki kodla değiştirin.
 
-     [!code-vb[SPExtensibility.ProjectItem.SiteColumn#8](../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/projectsigningmanager.vb#8)]
-     [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#8](../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/projectsigningmanager.cs#8)]
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/projectsigningmanager.vb" id="Snippet8":::
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/projectsigningmanager.cs" id="Snippet8":::
 
 ## <a name="create-the-wizard-ui"></a>Sihirbaz kullanıcı arabirimini oluşturma
  Sihirbaz penceresinin Kullanıcı arabirimini ve sihirbaz sayfalarına yönelik Kullanıcı ARABIRIMINI sağlayan iki kullanıcı denetimini tanımlamak için XAML ekleyin ve pencere ve Kullanıcı denetimlerinin davranışını tanımlamak için kod ekleyin. Oluşturduğunuz sihirbaz, Visual Studio 'daki SharePoint projeleri için yerleşik sihirbaza benzer.
@@ -233,7 +233,7 @@ ms.locfileid: "99918726"
 
 2. Tasarımcının XAML görünümünde, geçerli XAML 'yi aşağıdaki XAML ile değiştirin. XAML, <xref:System.Windows.Controls.Grid> pencerenin alt kısmındaki Sihirbaz sayfalarını ve gezinti düğmelerini içeren bir başlık içeren bir kullanıcı arabirimi tanımlar.
 
-     [!code-xml[SPExtensibility.ProjectItem.SiteColumn#10](../sharepoint/codesnippet/Xaml/sitecolumnprojectitem/projecttemplatewizard/wizardwindow.xaml#10)]
+     :::code language="xml" source="../sharepoint/codesnippet/Xaml/sitecolumnprojectitem/projecttemplatewizard/wizardwindow.xaml" id="Snippet10":::
 
     > [!NOTE]
     > Bu XAML 'de oluşturulan pencere, <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow> temel sınıftan türetilir. Visual Studio 'ya özel bir WPF iletişim kutusu eklediğinizde, diğer Visual Studio iletişim kutuları ile tutarlı bir Stillendirme ve aksi takdirde oluşabilecek kalıcı iletişim sorunlarından kaçınmak için iletişim kutusunu bu sınıftan türetmenizi öneririz. Daha fazla bilgi için bkz. [kalıcı Iletişim kutuları oluşturma ve yönetme](../extensibility/creating-and-managing-modal-dialog-boxes.md).
@@ -248,8 +248,8 @@ ms.locfileid: "99918726"
 
 5. Dosyanın üst kısmındaki bildirimler hariç, bu dosyanın içeriğini `using` aşağıdaki kodla değiştirin.
 
-     [!code-vb[SPExtensibility.ProjectItem.SiteColumn#4](../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/wizardwindow.xaml.vb#4)]
-     [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#4](../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/wizardwindow.xaml.cs#4)]
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/wizardwindow.xaml.vb" id="Snippet4":::
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/wizardwindow.xaml.cs" id="Snippet4":::
 
 #### <a name="to-create-the-first-wizard-page-ui"></a>İlk sihirbaz sayfası kullanıcı arabirimini oluşturmak için
 
@@ -257,7 +257,7 @@ ms.locfileid: "99918726"
 
 2. Tasarımcının XAML görünümünde, geçerli XAML 'yi aşağıdaki XAML ile değiştirin. XAML, kullanıcıların hata ayıklama için kullanmak istedikleri yerel sitelerin URL 'sini girebilecekleri bir metin kutusu içeren bir kullanıcı arabirimi tanımlar. Kullanıcı arabirimi, kullanıcıların projenin korumalı olup olmadığını belirleyebileceği seçenek düğmelerini de içerir.
 
-     [!code-xml[SPExtensibility.ProjectItem.SiteColumn#11](../sharepoint/codesnippet/Xaml/sitecolumnprojectitem/projecttemplatewizard/page1.xaml#11)]
+     :::code language="xml" source="../sharepoint/codesnippet/Xaml/sitecolumnprojectitem/projecttemplatewizard/page1.xaml" id="Snippet11":::
 
 3. Visual Basic bir proje geliştiriyorsanız, `ProjectTemplateWizard` ad alanını `Page1` öğenin özniteliğinde sınıf adından kaldırın `x:Class` `UserControl` . Bu, XAML 'in ilk satırdır. İşiniz bittiğinde, ilk satır aşağıdaki gibi görünmelidir.
 
@@ -267,8 +267,8 @@ ms.locfileid: "99918726"
 
 4. `using`Aşağıdaki kodla, dosyanın en üstündeki bildirimler hariç, Sayfa1. xaml dosyasının içeriğini değiştirin.
 
-     [!code-vb[SPExtensibility.ProjectItem.SiteColumn#2](../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/page1.xaml.vb#2)]
-     [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#2](../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/page1.xaml.cs#2)]
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/page1.xaml.vb" id="Snippet2":::
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/page1.xaml.cs" id="Snippet2":::
 
 #### <a name="to-create-the-second-wizard-page-ui"></a>İkinci sihirbaz sayfası kullanıcı arabirimini oluşturmak için
 
@@ -278,7 +278,7 @@ ms.locfileid: "99918726"
 
 2. XAML görünümünde, geçerli XAML 'yi aşağıdaki XAML ile değiştirin. XAML, site sütununun temel türünü seçmek için açılan bir liste, galeride site sütununun görüntüleneceği bir yerleşik veya özel grup belirtmeye yönelik bir açılan kutu ve site sütununun adını belirtmek için bir metin kutusu içeren bir kullanıcı arabirimi tanımlar.
 
-     [!code-xml[SPExtensibility.ProjectItem.SiteColumn#12](../sharepoint/codesnippet/Xaml/sitecolumnprojectitem/projecttemplatewizard/page2.xaml#12)]
+     :::code language="xml" source="../sharepoint/codesnippet/Xaml/sitecolumnprojectitem/projecttemplatewizard/page2.xaml" id="Snippet12":::
 
 3. Visual Basic bir proje geliştiriyorsanız, `ProjectTemplateWizard` ad alanını `Page2` öğenin özniteliğinde sınıf adından kaldırın `x:Class` `UserControl` . Bu, XAML 'in ilk satırdır. İşiniz bittiğinde, ilk satır aşağıdaki gibi görünmelidir.
 
@@ -288,8 +288,8 @@ ms.locfileid: "99918726"
 
 4. Page2. xaml dosyası için arka plan kod dosyasının içeriğini, `using` dosyanın en üstündeki bildirimler dışında, aşağıdaki kodla değiştirin.
 
-     [!code-vb[SPExtensibility.ProjectItem.SiteColumn#3](../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/page2.xaml.vb#3)]
-     [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#3](../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/page2.xaml.cs#3)]
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/page2.xaml.vb" id="Snippet3":::
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/page2.xaml.cs" id="Snippet3":::
 
 ## <a name="implement-the-wizard"></a>Sihirbazı uygulama
  Arabirimi uygulayarak sihirbazın ana işlevlerini tanımlayın <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> . Bu arabirim, sihirbaz başladığında ve tamamlandığında Visual Studio 'Nun çağırdığı ve sihirbaz çalışırken belirli zamanlarda çağrı yaptığı yöntemleri tanımlar.
@@ -300,8 +300,8 @@ ms.locfileid: "99918726"
 
 2. Bu dosyanın tüm içeriğini aşağıdaki kodla değiştirin.
 
-     [!code-vb[SPExtensibility.ProjectItem.SiteColumn#7](../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/sitecolumnprojectwizard.vb#7)]
-     [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#7](../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/sitecolumnprojectwizard.cs#7)]
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/projecttemplatewizard/sitecolumnprojectwizard.vb" id="Snippet7":::
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/projecttemplatewizard/sitecolumnprojectwizard.cs" id="Snippet7":::
 
 ## <a name="create-the-sharepoint-commands"></a>SharePoint komutlarını oluşturma
  SharePoint Server nesne modeli ' ni çağıran iki özel komut oluşturun. Bir komut, sihirbazda Kullanıcı türlerindeki site URL 'sinin geçerli olup olmadığını belirler. Diğer komut, kullanıcıların yeni site sütunları için temel olarak hangisini kullanacağınızı seçmesini sağlamak için, belirtilen SharePoint sitesindeki tüm alan türlerini alır.
@@ -312,8 +312,8 @@ ms.locfileid: "99918726"
 
 2. Bu dosyanın tüm içeriğini aşağıdaki kodla değiştirin.
 
-     [!code-vb[SPExtensibility.ProjectItem.SiteColumn#9](../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/sharepointcommands/commands.vb#9)]
-     [!code-csharp[SPExtensibility.ProjectItem.SiteColumn#9](../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/sharepointcommands/commands.cs#9)]
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/sitecolumnprojectitem/sharepointcommands/commands.vb" id="Snippet9":::
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/sitecolumnprojectitem/sharepointcommands/commands.cs" id="Snippet9":::
 
 ## <a name="checkpoint"></a>Checkpoint
  Bu noktada, sihirbazın tüm kodu artık projede bulunur. Hata olmadan derlendiğinden emin olmak için projeyi derleyin.

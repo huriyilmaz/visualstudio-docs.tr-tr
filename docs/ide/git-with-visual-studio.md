@@ -2,18 +2,18 @@
 title: Visual Studio 'da git deneyimi
 titleSuffix: ''
 description: Visual Studio 2019 ' de yeni tümleşik git deneyiminin daha üretken olmanıza nasıl yardımcı olabileceğini öğrenin.
-ms.date: 03/16/2021
+ms.date: 04/01/2021
 ms.topic: conceptual
 ms.author: tglee
 author: TerryGLee
 ms.manager: jillfra
 monikerRange: vs-2019
-ms.openlocfilehash: e33b91088022a4588773737b2820677c84a65807
-ms.sourcegitcommit: 3a855d3513407ea78336386dc3be0b75142614b0
+ms.openlocfilehash: b58a60efbf2c602706eed6d9278574d1bf1fffcc
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/17/2021
-ms.locfileid: "103622653"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106216767"
 ---
 # <a name="git-experience-in-visual-studio"></a>Visual Studio 'da git deneyimi
 
@@ -202,9 +202,10 @@ Yeni git deneyimi artık Visual Studio 2019 [sürüm 16,8](/visualstudio/release
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
+- Microsoft Learn [Visual Studio 'Da git ve GitHub Ile çalışmaya başlama](/learn/modules/visual-studio-github-push/) öğreticisi
 - YouTube 'da [Visual Studio videosunda git ile çalışmaya](https://www.youtube.com/watch?v=GCZ9x3yqkyc) başlama
 - [Visual Studio blog gönderisine git deneyiminin yayını duyurusu](https://devblogs.microsoft.com/visualstudio/announcing-the-release-of-the-git-experience-in-visual-studio/)
-- YouTube 'da [Yeni git deneyiminin başlatılması](https://www.youtube.com/watch?v=UHrAg3iKoe0&t)
+- YouTube 'da [Yeni git deneyimi videosunu başlatma](https://www.youtube.com/watch?v=UHrAg3iKoe0&t)
 - [Visual Studio araç kutusu serisi şunları sunar:](https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/The-New-Git-Experience) Channel 9 ve [YouTube](https://www.youtube.com/watch?v=ZiQ2LXtAJ6I&feature=youtu.be) 'da yeni git deneyimi videosu
 - [Visual Studio blog gönderisine git deneyimine heyecan verici yeni güncelleştirmeler](https://devblogs.microsoft.com/visualstudio/exciting-new-updates-to-the-git-experience-in-visual-studio/)
 - [Visual Studio 2019 blog gönderisine gelişmiş git deneyimi](https://devblogs.microsoft.com/visualstudio/improved-git-experience-in-visual-studio-2019/)

@@ -20,12 +20,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: c410d9290b7e377654a9cff87f8df7524a1b7149
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f84fbaae3273b8830cce1c39cc3e42b62e487d3e
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99866885"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106216247"
 ---
 # <a name="handle-a-concurrency-exception"></a>Bir eşzamanlılık özel durumunu işleme
 
@@ -159,13 +159,13 @@ Bir güncelleştirme gerçekleştirmeye çalıştığınızda ve bir özel durum
 
 1. Aşağıdaki kodu yönteminin altına ekleyin `Form1_Load` :
 
-   [!code-csharp[VbRaddataConcurrency#1](../data-tools/codesnippet/CSharp/handle-a-concurrency-exception_1.cs)]
-   [!code-vb[VbRaddataConcurrency#1](../data-tools/codesnippet/VisualBasic/handle-a-concurrency-exception_1.vb)]
+   :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataConcurrency/CS/Form1.cs" id="Snippet1":::
+   :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataConcurrency/VB/Form1.vb" id="Snippet1":::
 
 2. Yöntemi, `CustomersBindingNavigatorSaveItem_Click` yöntemini çağırmak için `UpdateDatabase` aşağıdaki gibi görünmesi için değiştirin:
 
-   [!code-csharp[VbRaddataConcurrency#2](../data-tools/codesnippet/CSharp/handle-a-concurrency-exception_2.cs)]
-   [!code-vb[VbRaddataConcurrency#2](../data-tools/codesnippet/VisualBasic/handle-a-concurrency-exception_2.vb)]
+   :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataConcurrency/CS/Form1.cs" id="Snippet2":::
+   :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataConcurrency/VB/Form1.vb" id="Snippet2":::
 
 ### <a name="display-choices-to-the-user"></a>Kullanıcı için seçimleri görüntüle
 
@@ -173,8 +173,8 @@ Yeni yazdığınız kod, `CreateMessage` kullanıcıya hata bilgilerini görünt
 
 **Kod düzenleyicisine** aşağıdaki kodu ekleyerek iletiyi oluşturun. Metodun altına bu kodu girin `UpdateDatabase` :
 
-[!code-csharp[VbRaddataConcurrency#4](../data-tools/codesnippet/CSharp/handle-a-concurrency-exception_3.cs)]
-[!code-vb[VbRaddataConcurrency#4](../data-tools/codesnippet/VisualBasic/handle-a-concurrency-exception_3.vb)]
+:::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataConcurrency/CS/Form1.cs" id="Snippet4":::
+:::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataConcurrency/VB/Form1.vb" id="Snippet4":::
 
 ### <a name="process-the-users-response"></a>Kullanıcının yanıtını işle
 
@@ -182,8 +182,8 @@ Kullanıcının ileti kutusuna yanıtını işlemek için de kod gerekir. Seçen
 
 Önceki bölümde eklenmiş olan kodun altına aşağıdaki kodu ekleyin:
 
-[!code-csharp[VbRaddataConcurrency#3](../data-tools/codesnippet/CSharp/handle-a-concurrency-exception_4.cs)]
-[!code-vb[VbRaddataConcurrency#3](../data-tools/codesnippet/VisualBasic/handle-a-concurrency-exception_4.vb)]
+:::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataConcurrency/CS/Form1.cs" id="Snippet3":::
+:::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataConcurrency/VB/Form1.vb" id="Snippet3":::
 
 ## <a name="test-the-form-behavior"></a>Form davranışını test etme
 

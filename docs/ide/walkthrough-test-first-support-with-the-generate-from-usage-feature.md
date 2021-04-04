@@ -15,12 +15,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4ea04a9c70f23c30a5f603fa9411780223fff563
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1a1f115dfff92b1c5e5979e62af257cde6a92360
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99883057"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106216598"
 ---
 # <a name="walkthrough-test-first-development-with-the-generate-from-usage-feature"></a>İzlenecek yol: kullanımdan oluştur özelliğinden önce test geliştirme
 
@@ -79,21 +79,21 @@ Visual Studio, iş akışınız için en az kesintiyle yeni türler ve Üyeler o
 
 5. **Tür oluştur** iletişim kutusunu açmak için **yeni tür oluştur** ' a tıklayın. Bu iletişim kutusu, türü farklı bir projede oluşturmayı içeren seçenekler sağlar.
 
-6. **Proje** listesinde, Visual Studio 'nun dosyayı test projesi yerine sınıf kitaplığı projesine eklemesini Istemek Için **gfudemo \_ vb** veya **GFUDemo_CS** ' a tıklayın. Henüz seçili değilse, **yeni dosya oluştur** ' u seçin ve *automobile.cs* veya *otomobil. vb* olarak adlandırın.
+6. **Proje** listesinde, Visual Studio 'nun dosyayı test projesi yerine sınıf kitaplığı projesine eklemesini Istemek Için **gfudemo \_ vb** veya **GFUDemo_CS** ' a tıklayın. Henüz seçili değilse, **yeni dosya oluştur** ' u seçin ve *otomobil. cs* veya *otomobil. vb* olarak adlandırın.
 
      ![Yeni tür oluştur iletişim kutusu](../ide/media/genotherdialog.png)
 
 7. İletişim kutusunu kapatmak ve yeni dosyayı oluşturmak için **Tamam** ' ı tıklatın.
 
-8. **Çözüm Gezgini**, yeni *otomobil. vb* veya *automobile.cs* dosyasının orada olduğunu doğrulamak için, **GFUDemo_VB** veya **GFUDemo_CS** proje düğümüne bakın. Kod düzenleyicisinde, odak hala içinde olduğundan `AutomobileTest.DefaultAutomobileIsInitializedCorrectly` , testinizi en az kesintiyle yazmaya devam etmenizi sağlar.
+8. **Çözüm Gezgini**, yeni *otomobil. vb* veya *otomobil. cs* dosyasının orada olduğunu doğrulamak için, **GFUDemo_VB** veya **GFUDemo_CS** proje düğümüne bakın. Kod düzenleyicisinde, odak hala içinde olduğundan `AutomobileTest.DefaultAutomobileIsInitializedCorrectly` , testinizi en az kesintiyle yazmaya devam etmenizi sağlar.
 
 ### <a name="generate-a-property-stub"></a>Özellik saplaması oluştur
 Ürün belirtiminin, `Automobile` sınıfının ve adında iki ortak özelliğe sahip olduğunu varsayalım `Model` `TopSpeed` . Bu özelliklerin varsayılan ve varsayılan oluşturucularla başlatılması gerekir `"Not specified"` `-1` . Aşağıdaki birim testi varsayılan oluşturucunun özellikleri doğru varsayılan değerlerine ayarladiğini doğrular.
 
 1. Aşağıdaki kod satırını `DefaultAutomobileIsInitializedCorrectly` test yöntemine ekleyin.
 
-     [!code-csharp[VbTDDWalkthrough#1](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_1.cs)]
-     [!code-vb[VbTDDWalkthrough#1](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_1.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/vbtddwalkthrough/cs/unittest1.cs" id="Snippet1":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/vbtddwalkthrough/vb/unittest1.vb" id="Snippet1":::
 
 2. Kod, üzerinde iki tanımsız özelliğe başvurduğundan `Automobile` , ve altında dalgalı bir alt çizgi `Model` görünür `TopSpeed` . Üzerine gelin `Model` ve **hızlı eylemler** hatası ampul ' i seçin ve ardından **' otomobil mobil. model ' özelliğini oluştur**' u seçin.
 
@@ -106,8 +106,8 @@ Visual Studio, iş akışınız için en az kesintiyle yeni türler ve Üyeler o
 
 1. Aşağıdaki ek test yöntemini `AutomobileTest` sınıfınıza ekleyin.
 
-     [!code-csharp[VbTDDWalkthrough#2](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_2.cs)]
-     [!code-vb[VbTDDWalkthrough#2](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_2.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/vbtddwalkthrough/cs/intermediate.cs" id="Snippet2":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/vbtddwalkthrough/vb/intermediate.vb" id="Snippet2":::
 
 2. Kırmızı dalgalı çizgi altındaki **hızlı eylem** hatası ampulü ve ardından **' otomobil ' içinde Oluşturucu üret**' e tıklayın.
 
@@ -120,8 +120,8 @@ Belirtiminin, `Automobile` `IsRunning` `Model` ve `TopSpeed` özellikleri varsay
 
 1. Yöntemine aşağıdaki satırları ekleyin `AutomobileWithModelNameCanStart` .
 
-     [!code-csharp[VbTDDWalkthrough#3](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_3.cs)]
-     [!code-vb[VbTDDWalkthrough#3](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_3.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/vbtddwalkthrough/cs/unittest1.cs" id="Snippet3":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/vbtddwalkthrough/vb/unittest1.vb" id="Snippet3":::
 
 2. Yöntem çağrısı için **hızlı eylemler** hata ışığı ampul ' i tıklatın `myAuto.Start` ve ardından **' otomobil. Başlat ' metodunu üret**' e tıklayın.
 
@@ -145,13 +145,13 @@ Belirtiminin, `Automobile` `IsRunning` `Model` ve `TopSpeed` özellikleri varsay
 
 1. , `Model` `TopSpeed` Ve `IsRunning` özelliklerinin tamamı,, ve `"Not specified"` `-1` `False` (veya `false` C# için) doğru varsayılan değerlerine başlatıldığından, varsayılan oluşturucuya aşağıdaki kodu ekleyin.
 
-     [!code-csharp[VbTDDWalkthrough#5](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_5.cs)]
-     [!code-vb[VbTDDWalkthrough#5](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_5.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/vbtddwalkthrough/cs/automobile.cs" id="Snippet5":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/vbtddwalkthrough/vb/automobile.vb" id="Snippet5":::
 
 2. `Start`Yöntemi çağrıldığında, `IsRunning` bayrağı true olarak ayarlamanız gerekir, `Model` Aksi takdirde veya `TopSpeed` özellikleri varsayılan değerleri dışında bir değere ayarlanır. `NotImplementedException`Yöntemini Yöntem gövdesinden kaldırın ve aşağıdaki kodu ekleyin.
 
-     [!code-csharp[VbTDDWalkthrough#6](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_6.cs)]
-     [!code-vb[VbTDDWalkthrough#6](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_6.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/vbtddwalkthrough/cs/automobile.cs" id="Snippet6":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/vbtddwalkthrough/vb/automobile.vb" id="Snippet6":::
 
 ### <a name="run-the-tests-again"></a>Testleri yeniden çalıştırın
 

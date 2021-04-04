@@ -21,12 +21,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: dbf996a2d44f94e4571a332fa7a86d861d820d45
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0811b029bf7e4705bc0c3689eff73f38280c3b3d
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99847719"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106217690"
 ---
 # <a name="walkthrough-create-an-external-list-in-sharepoint-by-using-business-data"></a>İzlenecek yol: iş verileri kullanarak SharePoint 'te dış liste oluşturma
 
@@ -114,9 +114,9 @@ Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vard�
 
 3. Tasarımcıda **Entity1** için kısayol menüsünü açın ve **Sil**' i seçin.
 
-4. **Çözüm Gezgini**' de, *Entity1. vb* (Visual Basic) veya *Entity1.cs* (C# ' de) için kısayol menüsünü açın ve **Sil**' i seçin.
+4. **Çözüm Gezgini**' de, *Entity1. vb* (Visual Basic) veya *Entity1. cs* (C# ' ta) için kısayol menüsünü açın ve **Sil**' i seçin.
 
-5. *Entity1Service. vb* (Visual Basic) veya *Entity1Service.cs* (C# ' de) için kısayol menüsünü açın ve **Sil**' i seçin.
+5. *Entity1Service. vb* (Visual Basic) veya *Entity1Service. cs* (C# ' de) için kısayol menüsünü açın ve **Sil**' i seçin.
 
 ## <a name="add-an-entity-to-the-model"></a>Modele bir varlık ekleyin
 
@@ -126,7 +126,7 @@ Modele bir varlık ekleyin. Visual Studio **araç kutusu** 'ndan bdc Tasarımcı
 
 2. **Araç kutusunun** **BUSINESSDATACONNECTIVITY** sekmesinde, İVB tasarımcısına bir **varlık** ekleyin.
 
-     Yeni varlık tasarımcıda görünür. Visual Studio, projeye *EntityService. vb* (Visual Basic) veya *EntityService.cs* (C# ' de) adlı bir dosya ekler.
+     Yeni varlık tasarımcıda görünür. Visual Studio, projeye *EntityService. vb* (Visual Basic) veya *EntityService. cs* (C# ' de) adlı bir dosya ekler.
 
 3. Menü çubuğunda   >  **Özellikler**  >  **penceresini** görüntüle ' yi seçin.
 
@@ -208,8 +208,8 @@ BDC hizmetinin belirli bir kişiyi göstermesini sağlamak için belirli bir bul
     > [!NOTE]
     > `ServerName`Alanın değerini sunucunuzun adıyla değiştirin.
 
-     [!code-csharp[SP_BDC#3](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs#3)]
-     [!code-vb[SP_BDC#3](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb#3)]
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs" id="Snippet3":::
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb" id="Snippet3":::
 
 ## <a name="add-a-finder-method"></a>Bulucu yöntemi ekleme
 
@@ -236,8 +236,8 @@ BDC hizmetinin kişileri bir listede görüntülemesini sağlamak için bir bulu
      > [!NOTE]
      > `ServerName`Alanın değerini sunucunuzun adıyla değiştirin.
 
-     [!code-csharp[SP_BDC#2](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs#2)]
-     [!code-vb[SP_BDC#2](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb#2)]
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs" id="Snippet2":::
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb" id="Snippet2":::
 
 ## <a name="test-the-project"></a>Projeyi test etme
 

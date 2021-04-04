@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 0f55eb3ba06f2541bf1f4777c24927993444c6b1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8f01d3c15490a19c8cb5071cf7677fcf2b2a5384
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99873612"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106216624"
 ---
 # <a name="how-to-create-a-sharepoint-project-item-extension"></a>Nasıl yapılır: SharePoint proje öğesi uzantısı oluşturma
   Visual Studio 'da zaten yüklü olan bir SharePoint proje öğesine işlevsellik eklemek istediğinizde bir proje öğesi uzantısı oluşturun. Daha fazla bilgi için bkz. [SharePoint proje öğelerini genişletme](../sharepoint/extending-sharepoint-project-items.md).
@@ -49,8 +49,8 @@ ms.locfileid: "99873612"
 ## <a name="example"></a>Örnek
  Aşağıdaki kod örneği, olay alıcısı proje öğesi için nasıl basit bir uzantı oluşturacağınızı göstermektedir. Kullanıcı bir SharePoint projesine bir olay alıcısı proje öğesi eklediğinde, bu uzantı **Çıkış** penceresine ve **hata listesi** penceresine bir ileti yazar.
 
- [!code-csharp[SPExtensibility.ProjectSystemExtension.General#1](../sharepoint/codesnippet/CSharp/projectsystemexamples/extension/projectitemextension.cs#1)]
- [!code-vb[SPExtensibility.ProjectSystemExtension.General#1](../sharepoint/codesnippet/VisualBasic/projectsystemexamples/extension/projectitemextension.vb#1)]
+ :::code language="csharp" source="../sharepoint/codesnippet/CSharp/projectsystemexamples/extension/projectitemextension.cs" id="Snippet1":::
+ :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/projectsystemexamples/extension/projectitemextension.vb" id="Snippet1":::
 
  Bu örnek, **Çıkış** penceresine ve **hata listesi** penceresine ileti yazmak için SharePoint proje hizmetini kullanır. Daha fazla bilgi için bkz. [SharePoint proje hizmetini kullanma](../sharepoint/using-the-sharepoint-project-service.md).
 

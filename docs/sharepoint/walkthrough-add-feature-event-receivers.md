@@ -18,12 +18,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: c9d50de6630a813a9c8c7a075af6f921608fcd93
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 305220a8206cc84e55ed7319b5ce6ce1c8058b3c
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99851538"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106217040"
 ---
 # <a name="walkthrough-add-feature-event-receivers"></a>İzlenecek yol: özellik Olay alıcıları ekleme
 Özellik Olay alıcıları, SharePoint 'te aşağıdaki özellikle ilgili olaylardan biri gerçekleştiğinde yürütülen yöntemlerdir:
@@ -85,16 +85,16 @@ Bu izlenecek yol, bir SharePoint projesindeki bir özelliğe olay alıcısının
 
 2. **Özellikler** düğümü altında, **özellik1** için kısayol menüsünü açın ve sonra özelliğe bir olay alıcısı eklemek için **olay alıcısı Ekle** ' yi seçin.
 
-     Bu, Özellik1 altına bir kod dosyası ekler. Bu durumda, projenizin geliştirme diline bağlı olarak *Feature1.EventReceiver.cs* veya *Özellik1. eventahize. vb* olarak adlandırılır.
+     Bu, Özellik1 altına bir kod dosyası ekler. Bu durumda, projenizin geliştirme diline bağlı olarak *özellik1. Eventalıcı. cs* veya *Özellik1. eventahize. vb* olarak adlandırılır.
 
 3. Projeniz ' de yazılmışsa [!INCLUDE[csprcs](../sharepoint/includes/csprcs-md.md)] , şu kodu henüz yoksa olay alıcısının üst kısmına ekleyin:
 
-     [!code-csharp[SP_FeatureEvt#1](../sharepoint/codesnippet/CSharp/featureevttest2/features/feature1/feature1.eventreceiver.cs#1)]
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/featureevttest2/features/feature1/feature1.eventreceiver.cs" id="Snippet1":::
 
 4. Olay alıcısı sınıfı, olay olarak davranan çeşitli açıklamalı yöntemler içerir. **Featuredevre dışı bırakma** yöntemini aşağıdaki kodla değiştirin:
 
-     [!code-vb[SP_FeatureEvt#2](../sharepoint/codesnippet/VisualBasic/featureevt2vb/features/feature1/feature1.eventreceiver.vb#2)]
-     [!code-csharp[SP_FeatureEvt#2](../sharepoint/codesnippet/CSharp/featureevttest2/features/feature1/feature1.eventreceiver.cs#2)]
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/featureevt2vb/features/feature1/feature1.eventreceiver.vb" id="Snippet2":::
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/featureevttest2/features/feature1/feature1.eventreceiver.cs" id="Snippet2":::
 
 ## <a name="test-the-feature-event-receiver"></a>Özellik olay alıcısını test etme
  Sonra, özelliği **devre dışı bırak yönteminin SharePoint** Duyurular listesine bir duyuru çıkışı yapıp bırakmadığını test etmek için özelliği devre dışı bırakın.

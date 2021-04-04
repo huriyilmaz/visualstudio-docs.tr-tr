@@ -18,12 +18,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: f2b722ccef084286287b9825c43fa9069f64dcc4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 29a3cd6fe37ec824a3db3a2c83aad7434d0018cb
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99937725"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106218054"
 ---
 # <a name="walkthrough-create-a-custom-site-workflow-activity"></a>İzlenecek yol: özel site iş akışı etkinliği oluşturma
   Bu izlenecek yol, kullanarak site düzeyinde iş akışı için özel bir etkinliğin nasıl oluşturulacağını gösterir [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . (Site düzeyi iş akışları yalnızca sitede bir liste değil, tüm site için geçerlidir.) Özel etkinlik bir yedekleme duyuruları listesi oluşturur ve sonra Duyurular listesinin içeriğini buna kopyalar.
@@ -91,8 +91,8 @@ ms.locfileid: "99937725"
 
 3. Class1 içindeki tüm kodu aşağıdakiler ile değiştirin:
 
-     [!code-csharp[SP_AnnBackup#1](../sharepoint/codesnippet/CSharp/announcementbackup/class1.cs#1)]
-     [!code-vb[SP_AnnBackup#1](../sharepoint/codesnippet/VisualBasic/announcementbackupvb/class1.vb#1)]
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/announcementbackup/class1.cs" id="Snippet1":::
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/announcementbackupvb/class1.vb" id="Snippet1":::
 
 4. Projeyi kaydedin ve sonra menü **çubuğunda yapı**  >  **oluşturma çözümü**' ni seçin.
 

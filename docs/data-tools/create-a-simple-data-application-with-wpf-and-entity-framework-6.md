@@ -11,12 +11,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 52c9d8ca4af6467c6db21be64083b5bf64af0b6a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e3432dd9a72fa71ea1e749dd28e80a3d55cce19c
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99859196"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106216065"
 ---
 # <a name="create-a-simple-data-application-with-wpf-and-entity-framework-6"></a>WPF ve Entity Framework 6 kullanarak basit veri uygulaması oluşturma
 
@@ -130,9 +130,9 @@ Kendi veri bağlama kodunuzu yazmak mümkündür, ancak Visual Studio 'Nun sizin
 
      ![Siparişler sınıflarını kılavuz olarak sürükleyin](../data-tools/media/raddata-drag-orders-classes-as-grid.png)
 
-7. Visual Studio, Kullanıcı arabirimi denetimlerini modeldeki olaylara bağlayan tüm bağlama kodunu oluşturdu. Bazı verileri görmek için yapmanız gereken tek şey, modeli doldurmak için kod yazmak olacaktır. İlk olarak, *MainWindow.xaml.cs* adresine gidin ve veri bağlamı için MainWindow sınıfına bir veri üyesi ekleyin. Sizin için oluşturulan bu nesne, modeldeki değişiklikleri ve olayları izleyen bir denetim gibi davranır. Ayrıca, müşteriler ve siparişler için CollectionViewSource veri üyeleri ve ilişkili Oluşturucu başlatma mantığı da eklersiniz. Sınıfın en üstü şöyle görünmelidir:
+7. Visual Studio, Kullanıcı arabirimi denetimlerini modeldeki olaylara bağlayan tüm bağlama kodunu oluşturdu. Bazı verileri görmek için yapmanız gereken tek şey, modeli doldurmak için kod yazmak olacaktır. İlk olarak, *MainWindow. xaml. cs* ' ye gidin ve veri bağlamı için MainWindow sınıfına bir veri üyesi ekleyin. Sizin için oluşturulan bu nesne, modeldeki değişiklikleri ve olayları izleyen bir denetim gibi davranır. Ayrıca, müşteriler ve siparişler için CollectionViewSource veri üyeleri ve ilişkili Oluşturucu başlatma mantığı da eklersiniz. Sınıfın en üstü şöyle görünmelidir:
 
-     [!code-csharp[MainWindow#1](../data-tools/codesnippet/CSharp/CreateWPFDataApp/MainWindow.xaml.cs#1)]
+     :::code language="csharp" source="../data-tools/codesnippet/CSharp/CreateWPFDataApp/MainWindow.xaml.cs" id="Snippet1":::
 
      `using`Yük uzantısı metodunu kapsama getirmek Için System. Data. Entity için bir yönerge ekleyin:
 
@@ -142,7 +142,8 @@ Kendi veri bağlama kodunuzu yazmak mümkündür, ancak Visual Studio 'Nun sizin
 
      Şimdi aşağı kaydırın ve `Window_Loaded` olay işleyicisini bulun. Visual Studio 'Nun bir CollectionViewSource nesnesi eklediğine dikkat edin. Bu, modeli oluştururken seçtiğiniz NorthwindEntities nesnesini temsil eder. Bunu zaten eklediniz, bu nedenle buraya ihtiyacınız yoktur. `Window_Loaded`Yöntemin şimdi şunun gibi görünmesi için içindeki kodu değiştirin:
 
-     [!code-csharp[Window_Loaded#2](../data-tools/codesnippet/CSharp/CreateWPFDataApp/MainWindow.xaml.cs#2)]
+     :::code language="csharp" source="../data-tools/codesnippet/CSharp/CreateWPFDataApp/MainWindow.xaml.cs" id="Snippet2":::
+
 
 8. **F5** tuşuna basın. CollectionViewSource 'a alınan ilk müşterinin ayrıntılarını görmeniz gerekir. Ayrıca, veri kılavuzundaki emirlerini de görmeniz gerekir. Biçimlendirme harika olmadığından, bunu çözelim. Ayrıca, diğer kayıtları görüntülemek ve temel CRUD işlemlerini yapmak için bir yol da oluşturabilirsiniz.
 
@@ -421,9 +422,10 @@ Komut mantığın dört bölümü vardır: (1) komutlar, (2) bağlamalar, (3), d
 
 Arka plan kod ekleme ve silme yöntemleri hariç en düşük düzeydedir. Gezinti, CollectionViewSource 'un View özelliğindeki Yöntemler çağırarak gerçekleştirilir. , `DeleteOrderCommandHandler` Bir siparişte art arda silmenin nasıl gerçekleştirileceğini gösterir. Öncelikle onunla ilişkili olan Order_Details silmemiz gerekir. , `UpdateCommandHandler` Koleksiyona yeni bir müşteri veya sipariş ekler ya da yalnızca mevcut bir müşteriyi veya siparişi, kullanıcının metin kutularında yaptığı değişikliklerle güncelleştirir.
 
-Bu işleyici yöntemlerini *MainWindow.xaml.cs* içinde MainWindow sınıfına ekleyin. Müşteriler tablosu için Collectionviewkaynağınız farklı bir ada sahipse, bu yöntemlerin her birinde adı ayarlamanız gerekir:
+Bu işleyici yöntemlerini *MainWindow. xaml. cs* içindeki MainWindow sınıfına ekleyin. Müşteriler tablosu için Collectionviewkaynağınız farklı bir ada sahipse, bu yöntemlerin her birinde adı ayarlamanız gerekir:
 
-[!code-csharp[CommandHandlers#3](../data-tools/codesnippet/CSharp/CreateWPFDataApp/MainWindow.xaml.cs#3)]
+:::code language="csharp" source="../data-tools/codesnippet/CSharp/CreateWPFDataApp/MainWindow.xaml.cs" id="Snippet3":::
+
 
 ## <a name="run-the-application"></a>Uygulamayı çalıştırma
 

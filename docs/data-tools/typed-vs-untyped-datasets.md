@@ -13,12 +13,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: e4853dfbffdf07d3b605b13c5fce749a30285c27
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: daf4f722eb51a08e7a6ddb287e5b54956ecdfe73
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99866339"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106216026"
 ---
 # <a name="typed-vs-untyped-datasets"></a>Yazılan ve yazılmayan veri kümelerinin karşılaştırması
 Türü belirtilmiş veri kümesi, ilk olarak temel sınıftan türetilmiş bir veri kümesidir <xref:System.Data.DataSet> ve sonra yeni ve türü kesin belirlenmiş bir veri kümesi sınıfı oluşturmak için bir. xsd dosyasında depolanan **veri kümesi Tasarımcısı** bilgileri kullanır. Şemadan alınan bilgiler (tablolar, sütunlar, vb.) oluşturulup ilk sınıf nesne ve özellik kümesi olarak bu yeni veri kümesi sınıfına derlenir. Türü belirtilmiş bir veri kümesi temel sınıftan devraldığı için <xref:System.Data.DataSet> , yazılan sınıf sınıfın tüm işlevselliğini varsayar <xref:System.Data.DataSet> ve bir sınıfın örneğini bir parametre olarak alan yöntemlerle birlikte kullanılabilir <xref:System.Data.DataSet> .
@@ -28,13 +28,13 @@ Bunun aksine, türsüz bir veri kümesinin karşılık gelen yerleşik bir şema
 ## <a name="contrast-data-access-in-typed-and-untyped-datasets"></a>Türü belirtilmiş ve türsüz veri kümelerinde kontrast verileri erişimi
 Türü belirtilmiş bir veri kümesinin sınıfının, özelliklerinin tablo ve sütunların gerçek adlarını aldığı bir nesne modeli vardır. Örneğin, türü belirtilmiş bir veri kümesiyle çalışıyorsanız, aşağıdaki gibi bir kod kullanarak bir sütuna başvurabilirsiniz:
 
-[!code-csharp[VbRaddataDatasets#4](../data-tools/codesnippet/CSharp/typed-vs-untyped-datasets_1.cs)]
-[!code-vb[VbRaddataDatasets#4](../data-tools/codesnippet/VisualBasic/typed-vs-untyped-datasets_1.vb)]
+:::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataDatasets/CS/Form1.cs" id="Snippet4":::
+:::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataDatasets/VB/Form1.vb" id="Snippet4":::
 
 Buna karşılık, türsüz bir veri kümesiyle çalışıyorsanız, eşdeğer kod şu şekilde olur:
 
-[!code-csharp[VbRaddataDatasets#5](../data-tools/codesnippet/CSharp/typed-vs-untyped-datasets_2.cs)]
-[!code-vb[VbRaddataDatasets#5](../data-tools/codesnippet/VisualBasic/typed-vs-untyped-datasets_2.vb)]
+:::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataDatasets/CS/Form1.cs" id="Snippet5":::
+:::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataDatasets/VB/Form1.vb" id="Snippet5":::
 
 Yazılan erişim yalnızca Visual Studio **Kod Düzenleyicisi**'nde IntelliSense tarafından tam olarak desteklenmekte, ancak aynı zamanda daha kolay okunabilir. İle çalışmanın yanı sıra, yazılan veri kümesinin sözdizimi, derleme zamanında tür denetlemesi sağlar ve veri kümesi üyelerine değer atarken hata olasılığını büyük ölçüde azaltır. Sınıfınıza bir sütunun adını değiştirip <xref:System.Data.DataSet> uygulamanızı derlerseniz, derleme hatası alırsınız. **Görev listesi** yapı hatasına çift tıklayarak, eski sütun adına başvuruda bulunan satır veya kod satırlarına doğrudan gidebilirsiniz. Belirlenmiş bir veri kümesindeki tablo ve sütunlara erişim, çalışma zamanında, çalışma zamanında koleksiyonlar aracılığıyla değil, derleme zamanında belirlendiği için, çalışma zamanında biraz daha hızlıdır.
 

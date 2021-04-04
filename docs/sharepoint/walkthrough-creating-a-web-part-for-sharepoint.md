@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 0f2d14bfd069fcf5064c9d8643393e28e52570be
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3e018085bd9900a9ee04f838b7c802afd2acc4fe
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99918633"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106217716"
 ---
 # <a name="walkthrough-create-a-web-part-for-sharepoint"></a>İzlenecek yol: SharePoint için bir Web Bölümü oluşturma
 
@@ -82,14 +82,14 @@ Projeye bir **Web Bölümü** öğesi ekleyin. **Web Bölümü** öğesi, Web b�
 
 Web bölümünde görünmesini istediğiniz denetimleri, Web Bölümü sınıfının denetimler koleksiyonuna ekleyerek belirtebilirsiniz.
 
-1. **Çözüm Gezgini**' de, *WebPart1. vb* (Visual Basic) veya *WebPart1.cs* (C# ' de) öğesini açın.
+1. **Çözüm Gezgini**' de, *WebPart1. vb* dosyasını açın (Visual Basic) veya *WebPart1. cs* (C# dilinde).
 
      Web bölümü kod dosyası kod düzenleyicisinde açılır.
 
 2. Aşağıdaki yönergeleri Web bölümü kod dosyasının en üstüne ekleyin.
 
-     [!code-csharp[SP_WebPart#1](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#1)]
-     [!code-vb[SP_WebPart#1](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#1)]
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs" id="Snippet1":::
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb" id="Snippet1":::
 
 3. Aşağıdaki kodu `WebPart1` sınıfına ekleyin. Bu kod aşağıdaki alanları bildirir:
 
@@ -101,13 +101,13 @@ Web bölümünde görünmesini istediğiniz denetimleri, Web Bölümü sınıfı
 
    - Çalışan veri dosyasının yolunu içeren bir dize.
 
-     [!code-csharp[SP_WebPart#2](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#2)]
-     [!code-vb[SP_WebPart#2](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#2)]
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs" id="Snippet2":::
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb" id="Snippet2":::
 
 4. Aşağıdaki kodu `WebPart1` sınıfına ekleyin. Bu kod, Web bölümüne adlı özel bir özellik ekler `DataFilePath` . Özel özellik, Kullanıcı tarafından SharePoint 'te ayarlanarak kullanılabilecek bir özelliktir. Bu özellik, veri kılavuzunu doldurmak için kullanılan bir XML veri dosyasının konumunu alır ve ayarlar.
 
-     [!code-csharp[SP_WebPart#3](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#3)]
-     [!code-vb[SP_WebPart#3](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#3)]
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs" id="Snippet3":::
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb" id="Snippet3":::
 
 5. `CreateChildControls` yöntemini aşağıdaki kodla değiştirin. Bu kod aşağıdaki görevleri gerçekleştirir:
 
@@ -115,8 +115,8 @@ Web bölümünde görünmesini istediğiniz denetimleri, Web Bölümü sınıfı
 
    - Veri kılavuzunu, çalışan verileri içeren bir XML dosyasına bağlar.
 
-     [!code-csharp[SP_WebPart#4](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#4)]
-     [!code-vb[SP_WebPart#4](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#4)]
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs" id="Snippet4":::
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb" id="Snippet4":::
 
 6. Sınıfına aşağıdaki yöntemi ekleyin `WebPart1` . Bu kod aşağıdaki görevleri gerçekleştirir:
 
@@ -124,8 +124,8 @@ Web bölümünde görünmesini istediğiniz denetimleri, Web Bölümü sınıfı
 
    - Kullanıcı fiiller menüsünde fiil seçtiğinde oluşan olayı işler. Bu kod, veri kılavuzunda görünen çalışanların listesini filtreler.
 
-     [!code-csharp[SP_WebPart#5](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#5)]
-     [!code-vb[SP_WebPart#5](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#5)]
+     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs" id="Snippet5":::
+     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb" id="Snippet5":::
 
 ## <a name="test-the-web-part"></a>Web bölümünü test etme
 

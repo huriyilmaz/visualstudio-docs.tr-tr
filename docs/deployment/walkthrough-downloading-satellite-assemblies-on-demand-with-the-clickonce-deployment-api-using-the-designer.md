@@ -22,12 +22,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 74e6641eff7fcaecfab300afe4747bb2ab7b75b2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9e9166dbd3d6cd7ba4500e2390bd611a31bcee7b
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99917302"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106216884"
 ---
 # <a name="walkthrough-download-satellite-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer"></a>İzlenecek yol: Tasarımcıyı kullanarak ClickOnce dağıtım API 'SI ile uydu derlemelerini isteğe bağlı olarak Indirme
 Windows Forms uygulamalar, uydu derlemeleri kullanılarak birden çok kültür için yapılandırılabilir. *Uydu derlemesi* , uygulamanın varsayılan kültürü dışında bir kültür için uygulama kaynakları içeren bir derlemedir.
@@ -57,11 +57,11 @@ Windows Forms uygulamalar, uydu derlemeleri kullanılarak birden çok kültür i
 
 ### <a name="to-download-satellite-assemblies-on-demand-in-c"></a>C 'de isteğe bağlı uydu derlemelerini indirmek için\#
 
-1. *Program.cs* dosyasını açın. Bu dosyayı Çözüm Gezgini görmüyorsanız, projenizi seçin ve **Proje** menüsünde **tüm dosyaları göster**' e tıklayın.
+1. *Program. cs* dosyasını açın. Bu dosyayı Çözüm Gezgini görmüyorsanız, projenizi seçin ve **Proje** menüsünde **tüm dosyaları göster**' e tıklayın.
 
 2. Uygun uydu derlemesini indirmek ve uygulamanızı başlatmak için aşağıdaki kodu kullanın.
 
-     [!code-csharp[ClickOnce.SatelliteAssemblies#1](../deployment/codesnippet/CSharp/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer_1.cs)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_Winforms/ClickOnce.SatelliteAssemblies/CS/Program.cs" id="Snippet1":::
 
 ### <a name="to-download-satellite-assemblies-on-demand-in-visual-basic"></a>Uydu derlemelerini Visual Basic isteğe bağlı olarak indirmek için
 
@@ -71,11 +71,11 @@ Windows Forms uygulamalar, uydu derlemeleri kullanılarak birden çok kültür i
 
 3. Aşağıdaki içeri aktarmaları *ApplicationEvents. vb* dosyasının başına ekleyin.
 
-     [!code-vb[ClickOnce.SatelliteAssembliesVB#1](../deployment/codesnippet/VisualBasic/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer_2.vb)]
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_Winforms/ClickOnce.SatelliteAssembliesVB/VB/ApplicationEvents.vb" id="Snippet1":::
 
 4. Aşağıdaki kodu `MyApplication` sınıfına ekleyin.
 
-     [!code-vb[ClickOnce.SatelliteAssembliesVB#2](../deployment/codesnippet/VisualBasic/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer_3.vb)]
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_Winforms/ClickOnce.SatelliteAssembliesVB/VB/ApplicationEvents.vb" id="Snippet2":::
 
 ## <a name="next-steps"></a>Sonraki adımlar
  Bir üretim ortamında, büyük olasılıkla belirli bir değere ayarlanmış kod örneklerinde satırı kaldırmanız gerekir <xref:System.Threading.Thread.CurrentUICulture%2A> , çünkü istemci makineler varsayılan olarak doğru değere sahip olacaktır. Uygulamanız bir Japonca istemci makinesinde çalıştığında, örneğin, <xref:System.Threading.Thread.CurrentUICulture%2A> `ja-JP` Varsayılan olarak olur. Uygulamanızı dağıtmadan önce programlama yoluyla ayarlama, uydu derlemelerinizi test etmenin iyi bir yoludur.
