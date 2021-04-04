@@ -11,12 +11,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8a7f8645cd34fe56d7d8d0f6a9efa6bf01bd13d8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9bc7fe3898bec19b4eb0130e7279974823669e7f
+ms.sourcegitcommit: 155d5f0fd54ac1d20df2f5b0245365924faa3565
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99939675"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106082545"
 ---
 # <a name="how-msbuild-builds-projects"></a>MSBuild nasıl proje oluşturur
 
@@ -139,7 +139,7 @@ Bkz. [MSBuild ile paralel olarak birden çok proje oluşturma](building-multiple
 
 *Microsoft. Common. targets* dosyası ve içeri aktardığı hedef dosyalar .NET projeleri için standart derleme işlemini tanımlar. Ayrıca, derlemeyi özelleştirmek için kullanabileceğiniz uzantı noktaları da sağlar.
 
-Uygulamasında, *Microsoft. Common. targets* , *Microsoft. Common. CurrentVersion. targets* içeri aktaran bir ince sarmalayıcı. Bu dosya, standart özellikler için ayarları içerir ve yapı sürecini tanımlayan gerçek hedefleri tanımlar. `Build`Hedef burada tanımlanmıştır, ancak aslında boştur. Ancak hedef,, `Build` `DependsOn` ve olan gerçek derleme adımlarını oluşturan tek tek hedefleri belirten özniteliği içerir `BeforeBuild` `CoreBuild` `AfterBuild` . `Build`Hedef aşağıdaki gibi tanımlanır:
+Uygulamasında, *Microsoft. Common. targets* , *Microsoft. Common. CurrentVersion. targets* içeri aktaran bir ince sarmalayıcı. Bu dosya, standart özellikler için ayarları içerir ve yapı sürecini tanımlayan gerçek hedefleri tanımlar. `Build`Hedef burada tanımlanmıştır, ancak aslında boştur. Ancak hedef,, `Build` `DependsOnTargets` ve olan gerçek derleme adımlarını oluşturan tek tek hedefleri belirten özniteliği içerir `BeforeBuild` `CoreBuild` `AfterBuild` . `Build`Hedef aşağıdaki gibi tanımlanır:
 
 ```xml
   <PropertyGroup>
@@ -157,7 +157,7 @@ Uygulamasında, *Microsoft. Common. targets* , *Microsoft. Common. CurrentVersio
       Returns="@(TargetPathWithTargetPlatformMoniker)" />
 ```
 
-`BeforeBuild` ve `AfterBuild` uzantı noktalardır. Bunlar *Microsoft. Common. CurrentVersion. targets* dosyasında boştur, ancak projeler, `BeforeBuild` `AfterBuild` ana yapı işleminden önce veya sonra gerçekleştirilmesi gereken görevlerle kendi ve hedeflerini sağlayabilir. `AfterBuild` , hiçbir işlem yapılmadan önce çalıştırılır, `Build` çünkü `AfterBuild` `DependsOn` Hedefteki özniteliğinde görünür `Build` , ancak bundan sonra gerçekleşir `CoreBuild` .
+`BeforeBuild` ve `AfterBuild` uzantı noktalardır. Bunlar *Microsoft. Common. CurrentVersion. targets* dosyasında boştur, ancak projeler, `BeforeBuild` `AfterBuild` ana yapı işleminden önce veya sonra gerçekleştirilmesi gereken görevlerle kendi ve hedeflerini sağlayabilir. `AfterBuild` , hiçbir işlem yapılmadan önce çalıştırılır, `Build` çünkü `AfterBuild` `DependsOnTargets` Hedefteki özniteliğinde görünür `Build` , ancak bundan sonra gerçekleşir `CoreBuild` .
 
 `CoreBuild`Hedef, derleme araçlarına yapılan çağrıları aşağıda gösterildiği gibi içerir:
 

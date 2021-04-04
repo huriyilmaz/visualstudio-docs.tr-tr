@@ -17,12 +17,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 2ebfc2071bdf9f9e9dc40b36744bb34d4a68ac04
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b67e70792f6e7864749b603f30ab868ef177336a
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99859287"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106215571"
 ---
 # <a name="bind-wpf-controls-to-a-dataset"></a>Bir veri kümesine WPF denetimleri bağlama
 
@@ -201,20 +201,20 @@ Kullanıcıların, düğmeleri kullanarak ürün kayıtları arasında gezinmele
 
 2. ,, Ve,,, `Window_Loaded` `ProductViewSource` `AdventureWorksLTDataSet` ve `AdventureWorksLTDataSetProductTableAdapter` tüm form için erişilebilir olan olay işleyicisini değiştirin. Yalnızca bu form için genel olacak şekilde bildirme ve bunları `Window_Loaded` Şuna benzer olay işleyicisi içinde atama:
 
-     [!code-csharp[Data_WPFDATASET#1](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-dataset_1.cs)]
-     [!code-vb[Data_WPFDATASET#1](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-dataset_1.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_ProTools/data_wpfdataset/cs/mainwindow.xaml.cs" id="Snippet1":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_ProTools/data_wpfdataset/vb/mainwindow.xaml.vb" id="Snippet1":::
 
 3. Aşağıdaki kodu `backButton_Click` olay işleyicisine ekleyin:
 
-     [!code-csharp[Data_WPFDATASET#2](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-dataset_2.cs)]
-     [!code-vb[Data_WPFDATASET#2](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-dataset_2.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_ProTools/data_wpfdataset/cs/mainwindow.xaml.cs" id="Snippet2":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_ProTools/data_wpfdataset/vb/mainwindow.xaml.vb" id="Snippet2":::
 
 4. Tasarımcıya dönün ve düğmeye çift tıklayın **>** .
 
 5. Aşağıdaki kodu `nextButton_Click` olay işleyicisine ekleyin:
 
-     [!code-csharp[Data_WPFDATASET#3](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-dataset_3.cs)]
-     [!code-vb[Data_WPFDATASET#3](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-dataset_3.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_ProTools/data_wpfdataset/cs/mainwindow.xaml.cs" id="Snippet3":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_ProTools/data_wpfdataset/vb/mainwindow.xaml.vb" id="Snippet3":::
 
 ## <a name="save-changes-to-product-records"></a>Ürün kayıtlarında yapılan değişiklikleri Kaydet
 
@@ -226,8 +226,8 @@ Kullanıcıların, düğmeleri kullanarak ürün kayıtları arasında gezinmele
 
 2. Aşağıdaki kodu `saveButton_Click` olay işleyicisine ekleyin:
 
-     [!code-csharp[Data_WPFDATASET#4](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-dataset_4.cs)]
-     [!code-vb[Data_WPFDATASET#4](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-dataset_4.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_ProTools/data_wpfdataset/cs/mainwindow.xaml.cs" id="Snippet4":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_ProTools/data_wpfdataset/vb/mainwindow.xaml.vb" id="Snippet4":::
 
     > [!NOTE]
     > Bu örnek `Save` , `TableAdapter` değişiklikleri kaydetmek için yöntemini kullanır. Yalnızca bir veri tablosu değiştiğinden bu izlenecek yol için uygundur. Birden çok veri tablosuna yaptığınız değişiklikleri kaydetmeniz gerekiyorsa alternatif olarak, `UpdateAll` `TableAdapterManager` Visual Studio 'nun veri kümeniz ile oluşturduğu yöntemini kullanabilirsiniz. Daha fazla bilgi için bkz. [TableAdapters](../data-tools/create-and-configure-tableadapters.md).

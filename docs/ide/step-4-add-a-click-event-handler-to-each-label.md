@@ -15,12 +15,12 @@ ms.author: ornella
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f37d0f89ad5124956198df1bde94bdb6cf54f64
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 931bd4191331f229f40a813b605eac7f69a1427a
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99950685"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106214284"
 ---
 # <a name="step-4-add-a-click-event-handler-to-each-label"></a>4. Adım: Her etikete bir tıklama olayı işleyicisi ekleme
 
@@ -36,7 +36,7 @@ Eşleştirme oyunu aşağıdaki gibi çalışır:
 
 ## <a name="to-add-a-click-event-handler-to-each-label"></a>Her etikete bir tıklama olayı işleyicisi eklemek için
 
-1. **Windows Form Tasarımcısı** formunu açın. **Çözüm Gezgini**' de *Form1.cs* veya *Form1. vb* öğesini seçin. Menü çubuğunda **Görünüm**  >  **Tasarımcısı**' nı seçin.
+1. **Windows Form Tasarımcısı** formunu açın. **Çözüm Gezgini**, *Form1. cs* veya *Form1. vb* öğesini seçin. Menü çubuğunda **Görünüm**  >  **Tasarımcısı**' nı seçin.
 
 2. İlk etiket denetimini belirleyip seçin. Daha sonra, seçmek için diğer etiketlerin her birini seçerken **CTRL** tuşunu basılı tutun. Her etiketin seçildiğinden emin olun.
 
@@ -48,11 +48,11 @@ Eşleştirme oyunu aşağıdaki gibi çalışır:
 
 5. Kodun geri kalanını aşağıdaki gibi doldurun:
 
-     [!code-csharp[VbExpressTutorial4Step2_3_4#4](../ide/codesnippet/CSharp/step-4-add-a-click-event-handler-to-each-label_1.cs)]
-     [!code-vb[VbExpressTutorial4Step2_3_4#4](../ide/codesnippet/VisualBasic/step-4-add-a-click-event-handler-to-each-label_1.vb)]
+    :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial4step2_3_4/cs/form1.cs" id="Snippet4":::
+    :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial4step2_3_4/vb/form1.vb" id="Snippet4":::
 
-     > [!IMPORTANT]
-     > C# kod parçacığını veya Visual Basic kod parçacığını görüntülemek için bu sayfanın sağ üst kısmındaki programlama dili denetimini kullanın.<br><br>![Docs.Microsoft.com için programlama dili denetimi](../ide/media/docs-programming-language-control.png)
+    > [!IMPORTANT]
+    > C# kod parçacığını veya Visual Basic kod parçacığını görüntülemek için bu sayfanın sağ üst kısmındaki programlama dili denetimini kullanın.<br><br>![Docs.Microsoft.com için programlama dili denetimi](../ide/media/docs-programming-language-control.png)
 
     > [!NOTE]
     > Kodu `label_Click()` el ile girmek yerine kod bloğunu kopyalayıp yapıştırırsanız, var olan kodun değiştirilmesini unutmayın `label_Click()` . Aksi takdirde, yinelenen bir kod bloğu ile karşı karşıya kalırsınız.

@@ -2,7 +2,7 @@
 title: DLL projesinden hata ayıkla | Microsoft Docs
 description: Proje özelliklerinde çağıran uygulamayı belirterek, bir DLL projesinin hata ayıklamasını projenin kendisinden başlatabilirsiniz. Ayrıntılar için bu makaleye bakın.
 ms.custom: SEO-VS-2020
-ms.date: 10/10/2018
+ms.date: 3/30/2021
 ms.topic: how-to
 dev_langs:
 - CSharp
@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 1f6063c5a0343951bb098c6937ce13dac7100d4a
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 7846cc3fd17b46365da59f6fe1a744032cb8ba14
+ms.sourcegitcommit: 155d5f0fd54ac1d20df2f5b0245365924faa3565
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102160452"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106083648"
 ---
 # <a name="how-to-debug-from-a-dll-project-in-visual-studio-c-c-visual-basic-f"></a>Nasıl yapılır: Visual Studio 'da DLL projesinde hata ayıklama (C#, C++, Visual Basic, F #)
 
@@ -81,7 +81,13 @@ Yerel ve yönetilen DLL projelerinin çağıran uygulamaları belirtmek için fa
 
 1. **Çözüm yapılandırma** alanının **Hata Ayıkla** olarak ayarlandığından emin olun. **F5** tuşuna basın, yeşil **Başlangıç** okuna tıklayın veya hata ayıklama   >  **başlatma hata ayıklaması**' nı seçin.
 
-Hata ayıklama kesme noktalarınız isabet aldıysa, DLL çıkışlarınızın (varsayılan olarak, *\<project> \debug* klasörü) çağıran uygulamanın çağrıldığı konum olduğundan emin olun.
+Ek ipuçları:
+
+- Hata ayıklama kesme noktalarınız isabet aldıysa, DLL çıkışlarınızın (varsayılan olarak, *\<project> \debug* klasörü) çağıran uygulamanın çağrıldığı konum olduğundan emin olun.
+
+- Yönetilen bir çağıran uygulamadaki koda yerel bir DLL 'den bölmek istiyorsanız veya tam tersi durumda, [karışık modda hata ayıklamayı](../debugger/how-to-debug-in-mixed-mode.md)etkinleştirin.
+
+- Bazı senaryolarda, hata ayıklayıcıya kaynak kodu nerede bulacağınızı bildirmeniz gerekebilir. Daha fazla bilgi için bkz. [simge yok yüklendi/kaynak yüklenmemiş sayfa yok](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md#use-the-no-symbols-loadedno-source-loaded-pages).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [DLL projelerinde hata ayıklama](../debugger/debugging-dll-projects.md)

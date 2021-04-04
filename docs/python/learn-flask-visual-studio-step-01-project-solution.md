@@ -11,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: ca82beef26f897b2f5d3a145c968c11efaabc294
-ms.sourcegitcommit: f1dff6c4532c43b0444aa12ea57e90bb7dba6fba
+ms.openlocfilehash: 89a84198256657ae7f94d0a923780163bee73e48
+ms.sourcegitcommit: 5c0e20fc6005bc1f8ca38f4122378c4ac21ba89a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104806062"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "106110616"
 ---
 # <a name="tutorial-get-started-with-the-flask-web-framework-in-visual-studio"></a>Öğretici: Visual Studio 'da Flask Web çerçevesi ile çalışmaya başlama
 
@@ -221,17 +221,17 @@ def hello():
 
 ### <a name="question-how-does-flask-work-with-variable-url-routes-and-query-parameters"></a>Soru: nasıl Flask, değişken URL yönlendirmeleri ve sorgu parametreleriyle nasıl çalışır?
 
-Cevap: bir rotada, ile herhangi bir değişkeni işaretlersiniz `<variable_name>` ve bir adlandırılmış bağımsız değişken kullanarak değişkeni işlevi işleve geçirir. Değişken, URL yolunun bir parçası veya bir sorgu parametresi olabilir. Örneğin, biçiminde bir yol, `'/hello/<name>` işlevine çağrılan bir dize bağımsız değişkeni oluşturur `name` ve rotada kullanılması, `?message=<msg>` "Message =" sorgu parametresi için verilen değeri ayrıştırır ve şu şekilde işleve geçirir `msg` :
+Cevap: bir rotada, ile herhangi bir değişkeni işaretlersiniz `<variable_name>` ve sonra, URL yolundaki adlandırılmış bir bağımsız değişkeni kullanarak değişkeni işlevi işleve geçirir. Örneğin, biçiminde bir yol, `/hello/<name>` işlevine çağrılan bir dize bağımsız değişkeni oluşturur `name` . Sorgu parametreleri, `request.args` özellikle yöntemi aracılığıyla özelliği aracılığıyla kullanılabilir `request.args.get` . Daha fazla bilgi için Flask belgelerindeki [istek nesnesine](https://flask.palletsprojects.com/en/1.1.x/quickstart/#the-request-object) bakın.
 
 ```python
-@app.route('/hello/<name>?message=<msg>')
-def hello(name, msg):
-    return "Hello " + name + "! Message is " + msg + "."
+# URL: /hello/<name>?message=Have%20a%20nice%20day
+@app.route('/hello/<name>')
+def hello(name):
+    msg = request.args.get('message','')
+    return "Hello " + name + "! "+ msg + "."
 ```
 
 Türü değiştirmek için, değişkeni, `int` `float` , `path` (klasör adlarını belirtmek için eğik çizgileri kabul eder), ve ile önekini yapın `uuid` . Ayrıntılar için Flask belgelerindeki [değişken kuralları](https://flask.palletsprojects.com/en/1.0.x/quickstart/#variable-rules) bölümüne bakın.
-
-Sorgu parametreleri, `request.args` özellikle yöntemi aracılığıyla özelliği aracılığıyla da kullanılabilir `request.args.get` . Daha fazla bilgi için Flask belgelerindeki [istek nesnesine](https://flask.palletsprojects.com/en/1.0.x/quickstart/#the-request-object) bakın.
 
 ### <a name="question-can-visual-studio-generate-a-requirementstxt-file-from-a-virtual-environment-after-i-install-other-packages"></a>Soru: diğer paketleri yükledikten sonra Visual Studio sanal ortamdan bir requirements.txt dosyası oluşturabilir mi?
 

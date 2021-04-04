@@ -9,12 +9,12 @@ ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: f5f5fdd51e4aa13df66470534303f7fba19e44ab
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1b92792cf9db0090c52f583754e56c306e6d7234
+ms.sourcegitcommit: 155d5f0fd54ac1d20df2f5b0245365924faa3565
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99841672"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106082584"
 ---
 # <a name="build-and-run-the-todo-sample-app"></a>Todo örnek uygulamasını derleyin ve çalıştırın
 
@@ -30,7 +30,7 @@ Uygulamayı çalıştırmadan önce, makinenizde uygulama kaynak kodunu almanız
 
 1. Yerel makinede Docker for Windows veya Docker Community Edition 'ın yüklü olduğundan emin olun. [Docker for Windows yükleme belgelerine](https://docs.docker.com/docker-for-windows/install/)bakın. Yüklemesi işlemi, örneği içeren ZIP dosyasını localhost adresinde kullanılabilir hale getirir.
 
-1. [ZIP 'ı indirin](http://localhost/assets/app.zip). ZIP dosyasını açın ve içeriği ayıkladığınızdan emin olun.
+1. [ZIP 'ı indirin](https://github.com/docker/getting-started/tree/master/app). ZIP dosyasını açın ve içeriği ayıkladığınızdan emin olun.
 
 1. Ayıkladıktan sonra, en sevdiğiniz kod düzenleyicinizi kullanarak projeyi açın. Düzenleyicinizde ihtiyacınız varsa [Visual Studio Code](https://code.visualstudio.com/)kullanabilirsiniz. `package.json`Ve iki alt dizin görmeniz gerekir ( `src` ve `spec` ).
 

@@ -13,12 +13,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 4342af681f8e2cc38855bec6041e8b4cd83dcf5d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c5f085cae185a48f3d41c6fa4bca5cad7afb46b3
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99866625"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106215805"
 ---
 # <a name="query-datasets"></a>Veri kümelerini sorgulama
 Bir veri kümesindeki belirli kayıtları aramak için `FindBy` DataTable 'daki yöntemi kullanın, tablonun satır koleksiyonu üzerinde döngü yapmak için kendi foreach deyiminizi yazın veya [LINQ to DataSet](/dotnet/framework/data/adonet/linq-to-dataset)kullanın.
@@ -39,8 +39,8 @@ Ancak, büyük/küçük harf duyarlılığı, verilerin veri kümesi içinde nas
 
      Aşağıdaki örnekte, `CustomerID` sütunu tablonun birincil anahtarıdır `Customers` . Bu, oluşturulan `FindBy` yöntemin olduğu anlamına gelir `FindByCustomerID` . Örnek, oluşturulan yöntemi kullanarak belirli bir değişkene nasıl atanacağını gösterir <xref:System.Data.DataRow> `FindBy` .
 
-     [!code-csharp[VbRaddataEditing#18](../data-tools/codesnippet/CSharp/query-datasets_1.cs)]
-     [!code-vb[VbRaddataEditing#18](../data-tools/codesnippet/VisualBasic/query-datasets_1.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataEditing/CS/Form1.cs" id="Snippet18":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataEditing/VB/Form1.vb" id="Snippet18":::
 
 #### <a name="to-find-a-row-in-an-untyped-dataset-with-a-primary-key-value"></a>Türsüz bir veri kümesinde birincil anahtar değeri olan bir satır bulmak için
 
@@ -48,8 +48,8 @@ Ancak, büyük/küçük harf duyarlılığı, verilerin veri kümesi içinde nas
 
      Aşağıdaki örnek, adlı yeni bir satırın nasıl bildirilemeyeceğini `foundRow` ve yöntemin dönüş değerini nasıl atayacağınızı gösterir <xref:System.Data.DataRowCollection.Find%2A> . Birincil anahtar bulunursa, sütun dizini 1 ' in içeriği bir ileti kutusunda görüntülenir.
 
-     [!code-csharp[VbRaddataEditing#19](../data-tools/codesnippet/CSharp/query-datasets_2.cs)]
-     [!code-vb[VbRaddataEditing#19](../data-tools/codesnippet/VisualBasic/query-datasets_2.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataEditing/CS/Form1.cs" id="Snippet19":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataEditing/VB/Form1.vb" id="Snippet19":::
 
 ## <a name="find-rows-by-column-values"></a>Sütun değerlerine göre satırları bulma
 
@@ -59,8 +59,8 @@ Ancak, büyük/küçük harf duyarlılığı, verilerin veri kümesi içinde nas
 
      Aşağıdaki örnek <xref:System.Data.DataTable.Select%2A> , <xref:System.Data.DataTable> belirli satırları bulmak için yönteminin nasıl kullanılacağını gösterir.
 
-     [!code-csharp[VbRaddataEditing#20](../data-tools/codesnippet/CSharp/query-datasets_3.cs)]
-     [!code-vb[VbRaddataEditing#20](../data-tools/codesnippet/VisualBasic/query-datasets_3.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataEditing/CS/Form1.cs" id="Snippet20":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataEditing/VB/Form1.vb" id="Snippet20":::
 
 ## <a name="access-related-records"></a>İlgili kayıtlara erişme
 Bir veri kümesindeki tablolar ilişkili olduğunda, bir <xref:System.Data.DataRelation> nesnesi ilgili kayıtları başka bir tabloda kullanılabilir hale getirir. Örneğin, içeren bir veri kümesi `Customers` ve `Orders` tabloları kullanılabilir hale getirilebilir.
@@ -86,15 +86,15 @@ Ayrıca, her iki tablonun da döndürülecek kayıtlar için verilerle doldurulm
 
 - <xref:System.Data.DataRow.GetChildRows%2A>Belirli bir veri satırının yöntemini çağırın `Customers` ve tablodaki satırların dizisini döndürün `Orders` :
 
-     [!code-csharp[VbRaddataDatasets#6](../data-tools/codesnippet/CSharp/query-datasets_4.cs)]
-     [!code-vb[VbRaddataDatasets#6](../data-tools/codesnippet/VisualBasic/query-datasets_4.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataDatasets/CS/Form1.cs" id="Snippet6":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataDatasets/VB/Form1.vb" id="Snippet6":::
 
 #### <a name="to-return-the-parent-record-of-a-selected-child-record"></a>Seçili alt kaydın üst kaydını döndürmek için
 
 - <xref:System.Data.DataRow.GetParentRow%2A>Belirli bir veri satırının yöntemini çağırın `Orders` ve tablosundan tek bir satır döndürün `Customers` :
 
-     [!code-csharp[VbRaddataDatasets#7](../data-tools/codesnippet/CSharp/query-datasets_5.cs)]
-     [!code-vb[VbRaddataDatasets#7](../data-tools/codesnippet/VisualBasic/query-datasets_5.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataDatasets/CS/Form1.cs" id="Snippet7":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataDatasets/VB/Form1.vb" id="Snippet7":::
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

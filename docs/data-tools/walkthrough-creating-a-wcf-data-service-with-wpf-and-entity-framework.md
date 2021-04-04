@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 54699947588e29da7312c0574833a13bbc3c8cfd
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f519d8e3bfe01fc3e4a1e4cfe82f4f8502c84821
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99858195"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106215701"
 ---
 # <a name="walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework"></a>İzlenecek Yol: WPF ve Entity Framework ile WCF Veri Hizmeti Oluşturma
 Bu izlenecek yol [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] , bir Web uygulamasında barındırılan basit bir oluşturma [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] ve ardından bu uygulamaya Windows Forms bir uygulamadan erişme işlemlerinin nasıl yapılacağını gösterir.
@@ -126,13 +126,14 @@ Sonraki adımda, veri hizmetini oluşturup test edersiniz.
 
 4. **Kod Düzenleyicisi**'nde, ilk `TODO:` yorumu bulun ve kodu aşağıdaki kodla değiştirin:
 
-     [!code-vb[WCFDataServiceWalkthrough#1](../data-tools/codesnippet/VisualBasic/walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework_1.vb)]
-     [!code-csharp[WCFDataServiceWalkthrough#1](../data-tools/codesnippet/CSharp/walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework_1.cs)]
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/wcfdataservicewalkthrough/vb/northwindcustomers.svc.vb" id="Snippet1":::
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/wcfdataservicewalkthrough/cs/northwindcustomers.svc.cs" id="Snippet1":::
 
 5. `InitializeService`Olay işleyicisindeki açıklamaları şu kodla değiştirin:
 
-     [!code-vb[WCFDataServiceWalkthrough#2](../data-tools/codesnippet/VisualBasic/walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework_2.vb)]
-     [!code-csharp[WCFDataServiceWalkthrough#2](../data-tools/codesnippet/CSharp/walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework_2.cs)]
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/wcfdataservicewalkthrough/vb/northwindcustomers.svc.vb" id="Snippet2":::
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/wcfdataservicewalkthrough/cs/northwindcustomers.svc.cs" id="Snippet2":::
+
 
 6. Hizmeti çalıştırmak için menü çubuğunda Hata **ayıklama**  >  **olmadan Başlat** ' ı seçin. Bir tarayıcı penceresi açılır ve hizmet için XML şeması görüntülenir.
 
@@ -198,7 +199,7 @@ Sonraki adımda, hizmetten gelen verileri görüntüleyen Kullanıcı arabirimin
 
 1. **Veri kaynakları** penceresinde, **müşteriler** düğümünün kısayol menüsünü açın ve **Kopyala**' yı seçin.
 
-2. **Form1. vb** veya **Form1.cs** form tasarımcısında, kısayol menüsünü açın ve **Yapıştır**' ı seçin.
+2. **Form1. vb** veya **Form1. cs** form tasarımcısında, kısayol menüsünü açın ve **Yapıştır**' ı seçin.
 
     Bir <xref:System.Windows.Forms.DataGridView> Denetim, <xref:System.Windows.Forms.BindingSource> bileşen ve <xref:System.Windows.Forms.BindingNavigator> bileşen forma eklenir.
 
@@ -249,7 +250,7 @@ Bu adımda, verileri müşterinin şehre göre filtrelemek için uygulamayı öz
 
 ### <a name="to-add-filtering-by-city"></a>Şehir bilgisine göre filtreleme eklemek için
 
-1. **Çözüm Gezgini**, **Form1. vb** veya **Form1.cs** düğümünün kısayol menüsünü açın ve **Aç**' ı seçin.
+1. **Çözüm Gezgini**, **Form1. vb** veya **Form1. cs** düğümünün kısayol menüsünü açın ve **Aç**' ı seçin.
 
 2. <xref:System.Windows.Forms.TextBox> <xref:System.Windows.Forms.Button> **Araç kutusundan** forma bir denetim ve denetim ekleyin.
 

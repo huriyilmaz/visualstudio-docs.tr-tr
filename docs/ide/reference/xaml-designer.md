@@ -12,12 +12,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - uwp
-ms.openlocfilehash: 15bfae190ba2960c291dca635bfff1188ac64ab5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b0418c8f3928ae2004055db7dfa70be123719377
+ms.sourcegitcommit: 155d5f0fd54ac1d20df2f5b0245365924faa3565
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99836195"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106082532"
 ---
 # <a name="xaml-designer-options-page"></a>XAML Tasarımcısı seçenekleri sayfası
 
@@ -63,6 +63,17 @@ Bir XAML belgesi düzenlenirken yakınlaştırmanın nasıl çalıştığını a
 |**Alt + fare tekerleği**|Fare tekerleğini kaydırırken **alt** tuşuna basarak XAML Tasarımcısı yakınlaştırın.|
 
 Bu ayarlar bir XAML belgesi düzenlenirken tasarımcı davranışını belirlenir.
+
+## <a name="default-zoom-setting"></a>Varsayılan yakınlaştırma ayarı
+
+XAML belgesini görüntülemek için varsayılan yakınlaştırma değerini öğrenmek için bu ayarı kullanın.
+
+|Ad|Açıklama|
+|-|-|
+|**Son kullanılan**|Varsayılan olarak tüm XAML belgeleri için en son kullanılan yakınlaştırma değerini kullanın. Bir XAML belgesi ilk kez açıldığında, yalnızca ilk kez "tümünü Sığdır" ayarını kullanacaktır.|
+|**Tümünü Sığdır**|XAML Tasarımcısı için yakınlaştırma değerini "tümünü Sığdır" olarak ayarlamak için bu seçeneği kullanın. Bir XAML belgesi kapatılıp yeniden açıldığında, bu oturum için son küme değeri kalır, ancak farklı oturumlar için "tümünü Sığdır" varsayılan olarak kullanılır.|
+
+Bu ayarlar bir XAML belgesini düzenlerken tasarımcı davranışını belirlenir.
 
 |Ad|Açıklama|
 |-|-|

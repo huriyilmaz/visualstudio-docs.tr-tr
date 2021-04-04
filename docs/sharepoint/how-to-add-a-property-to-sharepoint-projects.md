@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: cde9235ffb7c692240c8f16ea0e93f49c79f002e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7be241dd4a043b8104c628e73f98e8881dc8b88b
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99934877"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106215428"
 ---
 # <a name="how-to-add-a-property-to-sharepoint-projects"></a>Nasıl yapılır: SharePoint projelerine özellik ekleme
   Herhangi bir SharePoint projesine özellik eklemek için bir proje uzantısı kullanabilirsiniz. Özellik, proje **Çözüm Gezgini** seçildiğinde **Özellikler** penceresinde görünür.
@@ -39,8 +39,8 @@ ms.locfileid: "99934877"
 ## <a name="example"></a>Örnek
  Aşağıdaki kod örneği, SharePoint projelerine nasıl iki özellik ekleneceğini göstermektedir. Bir özellik, projenin verilerini proje Kullanıcı seçenek dosyasında ( *. csproj. User* dosyası veya *. vbproj. User* dosyası) devam ettirir. Diğer özellik, projenin verilerini proje dosyasında (*. csproj* dosyası veya *. vbproj* dosyası) devam ettirir.
 
- [!code-vb[SpExt_SPCustomPrjProperty#1](../sharepoint/codesnippet/VisualBasic/customspproperty/customproperty.vb#1)]
- [!code-csharp[SpExt_SPCustomPrjProperty#1](../sharepoint/codesnippet/CSharp/customspproperty/customproperty.cs#1)]
+ :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/customspproperty/customproperty.vb" id="Snippet1":::
+ :::code language="csharp" source="../sharepoint/codesnippet/CSharp/customspproperty/customproperty.cs" id="Snippet1":::
 
 ### <a name="understand-the-code"></a>Kodu anlama
  `CustomProjectProperties`Olayın her gerçekleştiği her seferinde sınıfın aynı örneğinin kullanıldığından emin olmak için <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectPropertiesRequested> , kod örneği, <xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject.Annotations%2A> Bu olay ilk kez gerçekleştiğinde, Özellikler nesnesini projenin özelliğine ekler. Bu olay yeniden her gerçekleştiğinde kod bu nesneyi alır. Verileri projelerle ilişkilendirmek için özelliğini kullanma hakkında daha fazla bilgi için <xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject.Annotations%2A> bkz. [SharePoint Araçları uzantıları ile özel verileri ilişkilendirme](../sharepoint/associating-custom-data-with-sharepoint-tools-extensions.md).

@@ -12,12 +12,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 82176afaacae3b9f4553c8b1b5b41b9a4f10dace
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: ca1998b5ca3ad78b269c50244ddf51796c9e4005
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105097558"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106215532"
 ---
 # <a name="add-search-to-a-tool-window"></a>Araç penceresine arama ekleme
 Uzantınızın bir araç penceresini oluştururken veya güncelleştirdiğinizde, Visual Studio 'da başka bir yerde görünen aynı arama işlevini ekleyebilirsiniz. Bu işlevsellik aşağıdaki özellikleri içerir:
@@ -79,8 +79,8 @@ Bu izlenecek yolu izleyerek aşağıdaki görevleri nasıl gerçekleştireceğin
 
      Bu kod <xref:System.Windows.Controls.TextBox> **Searchresultstextbox** adlı ortak bir özellik ve **searchcontent** adlı bir genel dize özelliği ekler. Oluşturucuda, SearchResultsTextBox metin kutusu olarak ayarlanır ve SearchContent, yeni bir dize kümesi olarak başlatılır. Metin kutusunun içeriği, dizeler kümesine de başlatılır.
 
-     [!code-csharp[ToolWindowSearch#1](../extensibility/codesnippet/CSharp/adding-search-to-a-tool-window_1.cs)]
-     [!code-vb[ToolWindowSearch#1](../extensibility/codesnippet/VisualBasic/adding-search-to-a-tool-window_1.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/toolwindowsearch/cs/mycontrol.xaml.cs" id="Snippet1":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/toolwindowsearch/vb/mycontrol.xaml.vb" id="Snippet1":::
 
 5. Projeyi derleyin ve hata ayıklamayı başlatın. Visual Studio 'nun deneysel örneği görüntülenir.
 

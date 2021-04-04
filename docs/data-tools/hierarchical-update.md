@@ -23,12 +23,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: 05575e6cc75468a85a3dd410ea59bebca79eee0f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d43d4267ce0e180a525e990e372b7a6773a9cc51
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99858845"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106215818"
 ---
 # <a name="hierarchical-update"></a>Hiyerarşik güncelleştirme
 
@@ -93,8 +93,8 @@ Oluşturulan kaydetme kodu, yöntemi çağıran bir kod satırı da içerir `Cus
 
 2. Yöntemi `OrdersBindingSource.EndEdit` çağıran satırdan sonra yöntemi çağırmak için bir kod satırı ekleyin `CustomersBindingSource.EndEdit` . **Kaydet** düğmesine tıklama olayının kodu aşağıdakine benzemelidir:
 
-     [!code-vb[VSProDataOrcasHierarchicalUpdate#1](../data-tools/codesnippet/VisualBasic/hierarchical-update_1.vb)]
-     [!code-csharp[VSProDataOrcasHierarchicalUpdate#1](../data-tools/codesnippet/CSharp/hierarchical-update_1.cs)]
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VSProDataOrcasHierarchicalUpdate/VB/Form1.vb" id="Snippet1":::
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VSProDataOrcasHierarchicalUpdate/CS/Form1.cs" id="Snippet1":::
 
 Verileri bir veritabanına kaydetmeden önce ilişkili bir alt tabloya değişiklikleri kaydetmenin yanı sıra, yeni alt kayıtları bir veri kümesine eklemeden önce yeni oluşturulan üst kayıtları da kaydetmeniz gerekebilir. Diğer bir deyişle, `Customer` yabancı anahtar kısıtlamaları `Orders` veri kümesine eklenmek üzere yeni alt kayıtları () etkinleştirmeden önce, yeni üst kayıt () veri kümesine eklemeniz gerekebilir. Bunu başarmak için alt `BindingSource.AddingNew` olayı kullanabilirsiniz.
 
@@ -109,8 +109,8 @@ Verileri bir veritabanına kaydetmeden önce ilişkili bir alt tabloya değişik
 
 2. Yöntemi çağıran olay işleyicisine bir kod satırı ekleyin `CustomersBindingSource.EndEdit` . `OrdersBindingSource_AddingNew`Olay işleyicisindeki kod aşağıdakine benzemelidir:
 
-     [!code-vb[VSProDataOrcasHierarchicalUpdate#2](../data-tools/codesnippet/VisualBasic/hierarchical-update_2.vb)]
-     [!code-csharp[VSProDataOrcasHierarchicalUpdate#2](../data-tools/codesnippet/CSharp/hierarchical-update_2.cs)]
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VSProDataOrcasHierarchicalUpdate/VB/Form1.vb" id="Snippet2":::
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VSProDataOrcasHierarchicalUpdate/CS/Form1.cs" id="Snippet2":::
 
 ## <a name="tableadaptermanager-reference"></a>TableAdapterManager başvurusu
 

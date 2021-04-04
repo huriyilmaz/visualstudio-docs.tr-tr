@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: cc0eca8005c4eee6e1eb89c410b50be5d0228ec6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 973c3d4b3c4fa2dc602e45736dc3a2d2f23c7616
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99946338"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106215298"
 ---
 # <a name="convert-between-sharepoint-project-system-types-and-other-visual-studio-project-types"></a>SharePoint proje sistem türleri ve diğer Visual Studio proje türleri arasında dönüştürme
   Bazı durumlarda, SharePoint proje sisteminde bir nesneniz olabilir ve Visual Studio Otomasyon nesne modeli veya Tümleştirme nesne modelinde karşılık gelen nesnenin özelliklerini kullanmak veya bunun tersini yapmak isteyebilirsiniz. Bu durumlarda, <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.Convert%2A> nesneyi farklı bir nesne modeline dönüştürmek Için SharePoint proje hizmeti yöntemini kullanabilirsiniz.
@@ -40,8 +40,8 @@ ms.locfileid: "99946338"
 ## <a name="example"></a>Örnek
  Aşağıdaki kod örneği, bir <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.Convert%2A> nesnesini bir nesnesine dönüştürmek için yönteminin nasıl kullanılacağını gösterir <xref:Microsoft.VisualStudio.SharePoint.ISharePointProject> <xref:EnvDTE.Project> .
 
- [!code-csharp[SPExtensibility.ProjectService.FromDTE#2](../sharepoint/codesnippet/CSharp/spprojectserviceaddin/connect.cs#2)]
- [!code-vb[SPExtensibility.ProjectService.FromDTE#2](../sharepoint/codesnippet/VisualBasic/spprojectserviceaddin/connect.vb#2)]
+:::code language="csharp" source="../sharepoint/codesnippet/CSharp/spprojectserviceaddin/connect.cs" id="Snippet2":::
+:::code language="vb" source="../sharepoint/codesnippet/VisualBasic/spprojectserviceaddin/connect.vb" id="Snippet2":::
 
  Bu örnek şunları gerektirir:
 

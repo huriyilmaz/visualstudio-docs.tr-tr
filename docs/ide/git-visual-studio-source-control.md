@@ -2,18 +2,18 @@
 title: Visual Studio 'Nun kaynak denetimini nasıl kolaylaştırdığını
 titleSuffix: ''
 description: Visual Studio 'da git & GitHub kullanarak kodunuzda yapılan değişiklikleri takip etme ve gerekirse bunları döndürmeyi öğrenin.
-ms.date: 03/22/2021
+ms.date: 04/01/2021
 ms.topic: conceptual
 ms.author: tglee
 author: TerryGLee
 ms.manager: jmartens
 monikerRange: vs-2019
-ms.openlocfilehash: 15e3c08606edf0e491785ba8599c5eb07c6b4551
-ms.sourcegitcommit: 08ee19f260164271e18bdbafe624301508f554ce
+ms.openlocfilehash: 6e4bed3201a48975e9da266794f085f78be6d68c
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "105006805"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106215584"
 ---
 # <a name="how-visual-studio-makes-source-control-easy"></a>Visual Studio 'Nun kaynak denetimini nasıl kolaylaştırdığını
 
@@ -51,5 +51,6 @@ Visual Studio 'da git ve GitHub kullanma hakkında daha fazla bilgi edinmek içi
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
+- [Visual Studio 'da git ve GitHub ile çalışmaya başlama](/learn/modules/visual-studio-github-push/)
 - [Visual Studio 'da yeni git deneyimi](git-with-visual-studio.md)
 - [Git ve Takım Gezgini yan yana karşılaştırın](git-team-explorer-feature-comparison.md)

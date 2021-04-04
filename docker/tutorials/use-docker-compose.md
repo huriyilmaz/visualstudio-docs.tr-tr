@@ -9,12 +9,12 @@ ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: f95a4f130e8ad662b3f0eca8f6f7d2162e2d1c7e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3bcf3a69dcf8053851e3d8519a25f61fe23ae7e3
+ms.sourcegitcommit: 155d5f0fd54ac1d20df2f5b0245365924faa3565
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99841724"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106082571"
 ---
 # <a name="use-docker-compose"></a>Docker Compose kullanma
 
@@ -168,7 +168,7 @@ docker run -d \
         image: mysql:5.7
     ```
 
-1. Ardından, birim eşlemesini tanımlayın. Kapsayıcıyı ile çalıştırdığınızda `docker run` , adlandırılmış birim otomatik olarak oluşturulmuştur. Ancak, Compose ile çalışırken gerçekleşmez. Üst düzey bölümünde birimi tanımlamanız `volumes:` ve ardından hizmet yapılandırmasında bağlama noktasını belirtmeniz gerekir. Yalnızca birim adını sağlayarak varsayılan seçenekler kullanılır. [Birden çok daha fazla seçenek](https://docs.docker.com/compose/compose-file/#volume-configuration-reference) mevcuttur.
+1. Ardından, birim eşlemesini tanımlayın. Kapsayıcıyı ile çalıştırdığınızda `docker run` , adlandırılmış birim otomatik olarak oluşturulmuştur. Ancak, Compose ile çalışırken gerçekleşmez. Üst düzey bölümünde birimi tanımlamanız `volumes:` ve ardından hizmet yapılandırmasında bağlama noktasını belirtmeniz gerekir. Yalnızca birim adını sağlayarak varsayılan seçenekler kullanılır. [Birden çok daha fazla seçenek](https://github.com/compose-spec/compose-spec/blob/master/spec.md#volumes-top-level-element) mevcuttur.
 
     ```yaml hl_lines="8 9 10 11 12"
     version: "3.7"

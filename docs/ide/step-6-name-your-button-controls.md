@@ -15,12 +15,12 @@ ms.author: ornella
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f6612806f8bf1453cf28f9d75c78588c2074bb0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f69a87d923eebaea03c9c8a38496c4c379db8aba
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99868887"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106214219"
 ---
 # <a name="step-6-name-your-button-controls"></a>6. Adım: Düğme denetimlerinizi adlandırma
 
@@ -43,15 +43,15 @@ Formunuzda dört düğme vardır ve bunları **button1**, **button2**, **BUTTON3
 1. Diğer üç düğmeyi **backgroundButton**, **clearButton** ve **showButton** olarak yeniden adlandırın.
 **Özellikler** penceresinde denetim Seçicisi açılan listesini seçerek adları doğrulayabilirsiniz. Yeni düğme adları görüntülenir.
 
-1. Formdaki **resim göster** düğmesine çift tıklayın. Alternatif olarak, formda **bir resim göster** düğmesini seçin ve **ENTER** tuşuna basın. Bunu yaptığınızda IDE, **Form1.cs** adlı ana pencerede ek bir sekme açar. (Visual Basic kullanıyorsanız, sekme **Form1. vb** olarak adlandırılır).
+1. Formdaki **resim göster** düğmesine çift tıklayın. Alternatif olarak, formda **bir resim göster** düğmesini seçin ve **ENTER** tuşuna basın. Bunu yaptığınızda, IDE **Form1. cs** adlı ana pencerede ek bir sekme açar. (Visual Basic kullanıyorsanız, sekme **Form1. vb** olarak adlandırılır).
 
    Bu sekme, aşağıdaki ekran görüntüsünde gösterildiği gibi, formun arkasındaki kod dosyasını görüntüler.
 
-    ![Visual C&#35; Code ile Form1.cs sekmesi](../ide/media/express_showbuttoncode.png)<br>
-***Form1.cs** _ _Tab C# kodu *
+    ![Visual C&#35; Code ile Form1. cs sekmesi](../ide/media/express_showbuttoncode.png)<br>
+***Form1. cs** _ _Tab C# kodu *
 
     > [!NOTE]
-    > Form1.cs veya Form1. vb sekmesinizdeki **showButton** **yerine showButton görüntülenebilir** .
+    > Form1. cs veya Form1. vb sekmesinizdeki **showButton** **yerine showButton görüntülenebilir** .
 
 1. Kodun bu bölümüne odaklanın.
 
@@ -71,18 +71,18 @@ Formunuzda dört düğme vardır ve bunları **button1**, **button2**, **BUTTON3
 
    Adlandırılan koda bakıyorsunuz `showButton_Click()` (alternatif olarak, `ShowButton_Click()` ). IDE bunu, **showButton** düğmesi için kod dosyasını açtığınızda formun koduna eklemiştir. Tasarım zamanında, bir formdaki denetim için kod dosyasını açtığınızda, zaten mevcut değilse denetim için kod oluşturulur. *Yöntem* olarak bilinen bu kod, uygulamanızı çalıştırdığınızda çalışır ve bu durumda **bir resim göster** düğmesi.
 
-1. **Windows Form Tasarımcısı** sekmesini yeniden seçin (**Form1.cs [Design]**) ve ardından formun kodunda bir yöntem oluşturmak için **Resmi Temizle** düğmesine ait kod dosyasını açın. Bunu kalan iki düğme için tekrarlayın. Her seferinde IDE, formun kod dosyasına yeni bir yöntem ekler.
+1. **Windows Form Tasarımcısı** sekmesini bir kez daha seçin (**Form1. cs [Design]**) ve ardından formun kodunda bir yöntem oluşturmak için **Resmi Temizle** düğmesine ait kod dosyasını açın. Bunu kalan iki düğme için tekrarlayın. Her seferinde IDE, formun kod dosyasına yeni bir yöntem ekler.
 
 1. Bir yöntemi daha eklemek için, IDE 'nin bir yöntem eklemesini sağlamak üzere **Windows form tasarımcısı** **onay kutusu** denetimi için kod dosyasını açın `checkBox1_CheckedChanged()` . Bu yöntem, Kullanıcı onay kutusunu seçtiğinde veya temizlediğinde çağrılır.
 
    > [!TIP]
-   > Uygulama üzerinde çalışırken genellikle kod Düzenleyicisi ve **Windows Form Tasarımcısı** arasında geçiş yapabilirsiniz. IDE, projenizde gezinmeyi kolaylaştırır. **Windows Form Tasarımcısı** açmak için **Çözüm Gezgini** kullanın Visual Basic C# veya *Form1. vb* içindeki *Form1.cs* çift tıklayarak ya da menü çubuğunda, **Görünüm**  >  **Tasarımcısı**' nı seçin.
+   > Uygulama üzerinde çalışırken genellikle kod Düzenleyicisi ve **Windows Form Tasarımcısı** arasında geçiş yapabilirsiniz. IDE, projenizde gezinmeyi kolaylaştırır. Visual Basic ' de C# veya *Form1. vb* içindeki *Form1. cs* ' ye çift tıklayarak **Windows Form Tasarımcısı** açmak için **Çözüm Gezgini** kullanın, ya da menü çubuğunda **Görünüm**  >  **Tasarımcısı**' nı seçin.
 
     Aşağıdaki kod düzenleyicisinde gördüğünüz yeni kodu gösterir.
 
-    [!code-csharp[VbExpressTutorial1Step6_#2](../ide/codesnippet/CSharp/step-6-name-your-button-controls_2.cs)]
+    :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial1step6/cs/form1.cs" id="Snippet2":::
 
-    [!code-vb[VbExpressTutorial1Step6_#2](../ide/codesnippet/VisualBasic/step-6-name-your-button-controls_2.vb)]
+    :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial1step6/vb/form1.vb" id="Snippet2":::
 
     > [!NOTE]
     > Kodunuz, "camelCase" harflerine olay işleyicilerini görüntülemeyebilir.

@@ -19,12 +19,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 1b4722f04ae46f85d7cc70dadf6127330e8f6616
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5665fc28bacb76c6887cb7dcb1820ec9dc0d2b3a
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99851730"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106215324"
 ---
 # <a name="associate-custom-data-with-sharepoint-tools-extensions"></a>SharePoint Araç Uzantıları ile özel verileri ilişkilendirme
   SharePoint araçları uzantılarında belirli nesnelere özel veriler ekleyebilirsiniz. Bu, uzantınızın bir bölümünde yer alan ve daha sonra uzantınızın diğer kodundan erişmek istediğiniz veriler olduğunda yararlıdır. Verileri depolamak ve verilere erişmek için özel bir yol uygulamak yerine, verileri uzantınızın bir nesnesiyle ilişkilendirebilir ve ardından verileri aynı nesneden daha sonra alabilirsiniz.
@@ -79,8 +79,8 @@ ms.locfileid: "99851730"
 
   Aşağıdaki kod örneği, belirli bir veri nesnesinin zaten bir proje öğesiyle ilişkili olup olmadığını belirler. Veri nesnesi zaten proje öğesiyle ilişkili değilse, kod nesneyi <xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject.Annotations%2A> proje öğesinin özelliğine ekler. Daha büyük bir örnek bağlamında bu örneği görmek için bkz. [nasıl yapılır: özel bir SharePoint proje öğe türüne özellik ekleme](../sharepoint/how-to-add-a-property-to-a-custom-sharepoint-project-item-type.md).
 
-  [!code-vb[SPExtensibility.ProjectItemExtension.MenuAndProperty#13](../sharepoint/codesnippet/VisualBasic/projectitemmenuandproperty/extension/projectitemtypeproperty.vb#13)]
-  [!code-csharp[SPExtensibility.ProjectItemExtension.MenuAndProperty#13](../sharepoint/codesnippet/CSharp/projectitemmenuandproperty/extension/projectitemtypeproperty.cs#13)]
+  :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/projectitemmenuandproperty/extension/projectitemtypeproperty.vb" id="Snippet13":::
+  :::code language="csharp" source="../sharepoint/codesnippet/CSharp/projectitemmenuandproperty/extension/projectitemtypeproperty.cs" id="Snippet13":::
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [SharePoint Araçları uzantıları için programlama kavramları ve özellikleri](../sharepoint/programming-concepts-and-features-for-sharepoint-tools-extensions.md)

@@ -20,12 +20,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 785d1bcfb8fdce5b09e749dcca17ff476a5d3f48
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c3b89e074a4c67e8d16a07eb48431ebe1ade694f
+ms.sourcegitcommit: 155d5f0fd54ac1d20df2f5b0245365924faa3565
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99877167"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106083574"
 ---
 # <a name="exec-task"></a>Yürütme görevi
 
@@ -49,6 +49,7 @@ Aşağıdaki tabloda, görevi için parametreler açıklanmaktadır `Exec` .
 |`Outputs`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıkış parametresi.<br /><br /> Görevden çıkış öğelerini içerir. `Exec`Görev bunları kendisi yapmaz. Bunun yerine, daha sonra projede kullanılabilmesi için bunları ayarlamış gibi sağlayabilirsiniz.|
 |`StdErrEncoding`|İsteğe bağlı `String` çıkış parametresi.<br /><br /> Yakalanan görev standart hata akışının kodlamasını belirtir. Varsayılan değer geçerli konsol çıkış kodlamasında bulunur.|
 |`StdOutEncoding`|İsteğe bağlı `String` çıkış parametresi.<br /><br /> Yakalanan görev standart çıkış akışının kodlamasını belirtir. Varsayılan değer geçerli konsol çıkış kodlamasında bulunur.|
+|`UseUtf8Encoding`|İsteğe bağlı `String` parametre.<br /><br /> Yürütülen komutlar için komut satırını işlerken UTF8 kod sayfasının kullanılıp kullanılmayacağını belirtir. Geçerli değerler `Always` , `Never` , veya `Detect` . Varsayılan değer `Detect` olarak, yalnızca ANSI olmayan karakterler mevcut olduğunda UTF8 Code sayfasını kullanın.|
 |`WorkingDirectory`|İsteğe bağlı `String` parametre.<br /><br /> Komutun çalıştırılacağı dizini belirtir.<br /><br />Varsayılan: projenin geçerli çalışma dizini.|
 
 [!INCLUDE [ToolTaskExtension arguments](includes/tooltaskextension-base-params.md)]

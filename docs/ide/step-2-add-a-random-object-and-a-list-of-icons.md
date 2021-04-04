@@ -15,12 +15,12 @@ ms.author: ornella
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 496bf75495d864024ef587849edd554bfd435db5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3d38ccb600894cec523bd06d46f0aee071af8796
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99950893"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106214349"
 ---
 # <a name="step-2-add-a-random-object-and-a-list-of-icons"></a>2. Adım: rastgele bir nesne ve simge listesi ekleme
 
@@ -28,14 +28,14 @@ Bu adımda, oyun için bir grup eşleşen simge oluşturuyorsunuz. Her simge, fo
 
 ## <a name="to-add-a-random-object-and-a-list-of-icons"></a>Rastgele bir nesne ve simge listesi eklemek için
 
-1. **Çözüm Gezgini**, C# kullanıyorsanız *Form1.cs* ' yi veya Visual Basic kullanıyorsanız *Form1. vb* öğesini seçin ve ardından menü çubuğunda kodu **görüntüle**' yi seçin  >  . Alternatif olarak, **F7** tuşunu seçebilir veya **Çözüm Gezgini** içinde **Form1** ' e çift tıklayatıklayabilirsiniz.
+1. **Çözüm Gezgini**' de, C# kullanıyorsanız *Form1. cs* ' i veya Visual Basic kullanıyorsanız *Form1. vb* öğesini seçin ve ardından menü çubuğunda kodu **görüntüle**' yi seçin  >  . Alternatif olarak, **F7** tuşunu seçebilir veya **Çözüm Gezgini** içinde **Form1** ' e çift tıklayatıklayabilirsiniz.
 
      Böylece Form1'in arkasındaki kod modülü görüntülenir.
 
 2. Varolan kod içine aşağıdaki kodu ekleyin.
 
-     [!code-csharp[VbExpressTutorial4Step2_3_4#1](../ide/codesnippet/CSharp/step-2-add-a-random-object-and-a-list-of-icons_1.cs)]
-     [!code-vb[VbExpressTutorial4Step2_3_4#1](../ide/codesnippet/VisualBasic/step-2-add-a-random-object-and-a-list-of-icons_1.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial4step2_3_4/cs/form1.cs" id="Snippet1":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial4step2_3_4/vb/form1.vb" id="Snippet1":::
 
       > [!IMPORTANT]
       > C# kod parçacığını veya Visual Basic kod parçacığını görüntülemek için bu sayfanın sağ üst kısmındaki programlama dili denetimini kullanın.<br><br>![Docs.Microsoft.com için programlama dili denetimi](../ide/media/docs-programming-language-control.png)

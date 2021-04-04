@@ -906,6 +906,7 @@
 - name: Hata ayıklama >>
   href: debugger/index.yml
 - name: Sürüm denetimi
+  expanded: true
   items:
     - name: Visual Studio 'da yeni git deneyimi
       href: ide/git-with-visual-studio.md
