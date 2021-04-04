@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 579289a7ba5afa1eb50bdf5f1dbb105fc2a6b01e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 87e05ba763095a818cc5db6f92828e6259d30e73
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99881574"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106217443"
 ---
 # <a name="save-data-in-extensions-of-the-sharepoint-project-system"></a>SharePoint proje sisteminin uzantılarında veri kaydetme
   SharePoint proje sistemini genişlettiğinizde, bir SharePoint projesi kapatıldıktan sonra devam eden dize verilerini kaydedebilirsiniz. Veriler genellikle belirli bir proje öğesiyle veya projenin kendisiyle ilişkilendirilir.
@@ -32,8 +32,8 @@ ms.locfileid: "99881574"
 
  Aşağıdaki kod örneği, <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.ExtensionData%2A> özel bir SharePoint proje öğesi türünde tanımlanan bir dize özelliğinin değerini kaydetmek için özelliğinin nasıl kullanılacağını gösterir. Daha büyük bir örnek bağlamında bu örneği görmek için bkz. [nasıl yapılır: özel bir SharePoint proje öğe türüne özellik ekleme](../sharepoint/how-to-add-a-property-to-a-custom-sharepoint-project-item-type.md).
 
- [!code-vb[SPExtensibility.ProjectItemExtension.MenuAndProperty#14](../sharepoint/codesnippet/VisualBasic/projectitemmenuandproperty/extension/projectitemtypeproperty.vb#14)]
- [!code-csharp[SPExtensibility.ProjectItemExtension.MenuAndProperty#14](../sharepoint/codesnippet/CSharp/projectitemmenuandproperty/extension/projectitemtypeproperty.cs#14)]
+ :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/projectitemmenuandproperty/extension/projectitemtypeproperty.vb" id="Snippet14":::
+ :::code language="csharp" source="../sharepoint/codesnippet/CSharp/projectitemmenuandproperty/extension/projectitemtypeproperty.cs" id="Snippet14":::
 
 ## <a name="save-data-that-is-associated-with-a-project"></a>Bir projeyle ilişkili verileri kaydetme
  SharePoint projelerine eklediğiniz bir özelliğin değeri gibi proje düzeyi verileriniz varsa, verileri proje dosyasına ( *. csproj* dosyası veya *. vbproj* dosyası) veya proje Kullanıcı seçenek dosyasına ( *. csproj. User* dosyası veya *. vbproj. User* dosyası) kaydedebilirsiniz. Verileri kaydetmek için seçtiğiniz dosya, verilerin nasıl kullanılmasını istediğinize bağlıdır:
@@ -45,16 +45,16 @@ ms.locfileid: "99881574"
 ### <a name="save-data-to-the-project-file"></a>Verileri proje dosyasına kaydet
  Proje dosyasına verileri kaydetmek için bir <xref:Microsoft.VisualStudio.SharePoint.ISharePointProject> nesneyi <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage> nesnesine dönüştürün ve sonra <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.SetPropertyValue%2A> yöntemini kullanın. Aşağıdaki kod örneğinde bir proje özelliğinin değerini proje dosyasına kaydetmek için bu yöntemin nasıl kullanılacağı gösterilmektedir. Daha büyük bir örnek bağlamında bu örneği görmek için bkz. [nasıl yapılır: SharePoint projelerine özellik ekleme](../sharepoint/how-to-add-a-property-to-sharepoint-projects.md).
 
- [!code-vb[SpExt_SPCustomPrjProperty#3](../sharepoint/codesnippet/VisualBasic/customspproperty/customproperty.vb#3)]
- [!code-csharp[SpExt_SPCustomPrjProperty#3](../sharepoint/codesnippet/CSharp/customspproperty/customproperty.cs#3)]
+ :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/customspproperty/customproperty.vb" id="Snippet3":::
+ :::code language="csharp" source="../sharepoint/codesnippet/CSharp/customspproperty/customproperty.cs" id="Snippet3":::
 
  <xref:Microsoft.VisualStudio.SharePoint.ISharePointProject>Nesneleri Visual Studio Otomasyon nesne modeli veya Tümleştirme nesne modelindeki diğer türlere dönüştürme hakkında daha fazla bilgi için bkz. [SharePoint proje sistem türleri ve diğer Visual Studio proje türleri arasında dönüştürme](../sharepoint/converting-between-sharepoint-project-system-types-and-other-visual-studio-project-types.md).
 
 ### <a name="save-data-to-the-project-user-option-file"></a>Verileri proje Kullanıcı seçenek dosyasına kaydet
  Proje Kullanıcı seçenek dosyasına veri kaydetmek için <xref:Microsoft.VisualStudio.SharePoint.ISharePointProject.ProjectUserFileData%2A> bir nesnenin özelliğini kullanın <xref:Microsoft.VisualStudio.SharePoint.ISharePointProject> . Aşağıdaki kod örneğinde, proje özelliğinin değerini proje Kullanıcı seçenek dosyasına kaydetmek için bu özelliğin nasıl kullanılacağı gösterilmektedir. Daha büyük bir örnek bağlamında bu örneği görmek için bkz. [nasıl yapılır: SharePoint projelerine özellik ekleme](../sharepoint/how-to-add-a-property-to-sharepoint-projects.md).
 
- [!code-vb[SpExt_SPCustomPrjProperty#2](../sharepoint/codesnippet/VisualBasic/customspproperty/customproperty.vb#2)]
- [!code-csharp[SpExt_SPCustomPrjProperty#2](../sharepoint/codesnippet/CSharp/customspproperty/customproperty.cs#2)]
+ :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/customspproperty/customproperty.vb" id="Snippet2":::
+ :::code language="csharp" source="../sharepoint/codesnippet/CSharp/customspproperty/customproperty.cs" id="Snippet2":::
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [SharePoint proje sistemini genişletme](../sharepoint/extending-the-sharepoint-project-system.md)

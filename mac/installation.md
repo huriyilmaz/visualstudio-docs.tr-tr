@@ -3,24 +3,24 @@ title: Mac için Visual Studio 2019 'yi yükler
 description: Mac için Visual Studio 2019 ' i ve platformlar arası geliştirme için gereken ek bileşenleri yüklemek için yönergeler.
 author: heiligerdankgesang
 ms.author: dominicn
-ms.date: 09/18/2019
+ms.date: 03/04/2021
 ms.technology: vs-ide-install
 ms.assetid: 22B1F2CD-32AE-464D-80AC-C8AB4786B015
 ms.custom: video
 ms.topic: how-to
-ms.openlocfilehash: 5155c37a89f566841fc342bbd8213f5a38eb399d
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: 653e653a0574da52c0030b06c7a8c13b436ed686
+ms.sourcegitcommit: 4bf7d82eb3a837ad5d1ae5c110039cbf74258f18
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97727573"
+ms.lasthandoff: 04/03/2021
+ms.locfileid: "106273420"
 ---
 # <a name="install-visual-studio-2019-for-mac"></a>Mac için Visual Studio 2019 'yi yükler
 
 MacOS 'ta yerel, platformlar arası .NET uygulamaları geliştirmeye başlamak için aşağıdaki adımları izleyerek Mac için Visual Studio 2019 ' yi yüklemelisiniz.
 
  > [!div class="button"]
- > [Mac için Visual Studio indir](https://visualstudio.microsoft.com/vs/mac/)
+ > [Mac için Visual Studio’yu indirin](https://visualstudio.microsoft.com/vs/mac/)
 
 ## <a name="requirements"></a>Gereksinimler
 
@@ -28,7 +28,8 @@ MacOS 'ta yerel, platformlar arası .NET uygulamaları geliştirmeye başlamak i
 
 İOS veya macOS için Xamarin uygulamaları oluşturmak üzere şunları da yapmanız gerekir:
 
-- Xcode 10,0 veya üzeri. En son kararlı sürüm genellikle önerilir.
+- En son Xcode sürümüyle uyumlu bir Mac. Apple 'ın [En düşük gereksinimleri belgelerine](https://developer.apple.com/support/xcode/) bakın
+- [Xcode](https://developer.apple.com/xcode)'un en son sürümü. Mac 'niz en son sürümle uyumlu değilse, [Xcode 'un eski bir sürümünü kullanmak](https://docs.microsoft.com/xamarin/ios/troubleshooting/questions/old-version-xcode) mümkün olabilir.
 - Bir Apple KIMLIĞI. Zaten bir Apple KIMLIĞINIZ yoksa, üzerinde yeni bir tane oluşturabilirsiniz https://appleid.apple.com . Xcode 'a yükleme ve oturum açma için bir Apple KIMLIĞI olması gerekir.
 
 ## <a name="installation-instructions"></a>Yükleme yönergeleri
@@ -96,14 +97,21 @@ Mac için Visual Studio yükleme, uygulamalarınız için kod yazmaya başlayabi
 
 ### <a name="ios"></a>iOS
 
-1. [Hello, iOS](https://developer.xamarin.com/guides/ios/getting_started/hello,_iOS/)
-2. [Cihaz sağlama](https://developer.xamarin.com/guides/ios/getting_started/installation/device_provisioning)(uygulamanızı cihazda çalıştırmak için).
+1. [Hello, iOS](https://docs.microsoft.com//xamarin/ios/get-started/hello-ios/)
+2. [Cihaz sağlama](https://docs.microsoft.com/xamarin/ios/get-started/installation/device-provisioning/)(uygulamanızı cihazda çalıştırmak için).
 
 ### <a name="android"></a>Android
 
-1. [Xamarin Android SDK Manager 'ı kullanma](https://developer.xamarin.com/guides/android/getting_started/installation/android-sdk/?ide=xs)
-2. [Android SDK Emulator](https://developer.xamarin.com/guides/android/getting_started/installation/android-emulator/)
-4. [Cihazı Dağıtım için Ayarlama](https://developer.xamarin.com/guides/android/getting_started/installation/set_up_device_for_development/)
+1. [Hello, Android](https://docs.microsoft.com/xamarin/android/get-started/hello-android/)
+2. [Xamarin Android SDK Manager 'ı kullanma](https://docs.microsoft.com/xamarin/android/get-started/installation/android-sdk?tabs=macos)
+3. [Android SDK Emulator](https://docs.microsoft.com/xamarin/android/get-started/installation/android-emulator/)
+4. [Cihazı Dağıtım için Ayarlama](https://docs.microsoft.com/xamarin/android/get-started/installation/set-up-device-for-development)
+
+### <a name="xamarinforms"></a>Xamarin.Forms
+
+Xamarin. Forms ile yerel platformlar arası uygulamalar oluşturun:
+
+1. [Xamarin.Forms Hızlı Başlangıçları](https://docs.microsoft.com/xamarin/get-started/quickstarts/)
 
 ### <a name="net-core-apps-aspnet-core-web-apps-unity-game-development"></a>.NET Core Uygulamaları, ASP.NET Core Web Apps, Unity oyun geliştirme
 

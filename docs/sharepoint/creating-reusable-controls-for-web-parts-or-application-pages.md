@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 01d8602971e2a89aef8cf8451d1273fa28c70f05
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b61474f4290771fb139d511296580ec1ef0f8820
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99949135"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106213920"
 ---
 # <a name="create-reusable-controls-for-web-parts-or-application-pages"></a>Web bölümleri veya uygulama sayfaları için yeniden kullanılabilir denetimler oluşturma
   Visual Studio 'da, uygulama sayfaları ve SharePoint 'te çalışan Web Bölümleri tarafından tüketilen özel, yeniden kullanılabilir denetimler oluşturabilirsiniz. Bu denetimlere Kullanıcı denetimleri denir. Kullanıcı denetimi, bir ASP.NET Web sayfasına çok benzeyen bir bileşik denetim türüdür. var olan Web sunucusu denetimlerini ve işaretlemesini bir kullanıcı denetimine ekleyebilir ve denetimin özelliklerini ve yöntemlerini tanımlayabilirsiniz. Daha sonra bunları birim olarak davranan ASP.NET Web sayfalarına ekleyebilirsiniz.
@@ -47,8 +47,8 @@ ms.locfileid: "99949135"
 
  Bir Web bölümüne Kullanıcı denetimi eklemek için Kullanıcı denetimini Web Bölümü <xref:System.Web.UI.WebControls.WebParts.Part.Controls%2A> kod dosyasında Web Bölümü koleksiyonuna ekleyin. Aşağıdaki örnek bir Web Bölümü koleksiyonuna bir kullanıcı denetimi ekler <xref:System.Web.UI.WebControls.WebParts.Part.Controls%2A> .
 
- [!code-vb[SP_VisualWebPart#5](../sharepoint/codesnippet/VisualBasic/sp_visualwebpart.vb/visualwebpart1/visualwebpart1.vb#5)]
- [!code-csharp[SP_VisualWebPart#5](../sharepoint/codesnippet/CSharp/sp_visualwebpart.cs/visualwebpart1/visualwebpart1.cs#5)]
+ :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/sp_visualwebpart.vb/visualwebpart1/visualwebpart1.vb" id="Snippet5":::
+ :::code language="csharp" source="../sharepoint/codesnippet/CSharp/sp_visualwebpart.cs/visualwebpart1/visualwebpart1.cs" id="Snippet5":::
 
 ## <a name="debug-a-user-control"></a>Kullanıcı denetiminde hata ayıklama
  Bir kullanıcı denetiminde hata ayıklamak için, Kullanıcı denetiminin SharePoint projenizdeki bir uygulama sayfasına veya Web bölümüne eklendiğinden emin olun. Daha sonra, herhangi bir Visual Studio projesindeki kodda hata ayıklama yaptığınız gibi, Kullanıcı denetimindeki kodda hata ayıklayabilirsiniz.

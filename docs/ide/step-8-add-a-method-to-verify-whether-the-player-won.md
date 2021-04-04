@@ -15,12 +15,12 @@ ms.author: ornella
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 68a4848f00153206b87dd3e5893bbaaeccf3b358
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c49a5d05e5bf1bb381bdc34d9fef60819e2790b1
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99868757"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106214141"
 ---
 # <a name="step-8-add-a-method-to-verify-whether-the-player-won"></a>8. Adım: Oyuncunun kazanıp kazanmadığını doğrulamak için yöntem ekleme
 Eğlenceli bir oyun oluşturdunuz, ancak bitirmek için bir şeye daha ihtiyaç var. Oyuncu, oynatıcı WINS 'e göre sona erdirmek `CheckForWinner()` için oyuncunun kazanıp kazanılmadığını doğrulamak üzere bir yöntem eklemeniz gerekir.
@@ -29,8 +29,8 @@ Eğlenceli bir oyun oluşturdunuz, ancak bitirmek için bir şeye daha ihtiyaç 
 
 1. `CheckForWinner()`Aşağıdaki kodda gösterildiği gibi, kodunuzun altına, olay işleyicisinin altına bir yöntem ekleyin `timer1_Tick()` .
 
-     [!code-csharp[VbExpressTutorial4Step8#10](../ide/codesnippet/CSharp/step-8-add-a-method-to-verify-whether-the-player-won_1.cs)]
-     [!code-vb[VbExpressTutorial4Step8#10](../ide/codesnippet/VisualBasic/step-8-add-a-method-to-verify-whether-the-player-won_1.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial4step8/cs/form1.cs" id="Snippet10":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial4step8/vb/form1.vb" id="Snippet10":::
 
       > [!IMPORTANT]
       > C# kod parçacığını veya Visual Basic kod parçacığını görüntülemek için bu sayfanın sağ üst kısmındaki programlama dili denetimini kullanın.<br><br>![Docs.Microsoft.com için programlama dili denetimi](../ide/media/docs-programming-language-control.png)     
@@ -39,8 +39,8 @@ Eğlenceli bir oyun oluşturdunuz, ancak bitirmek için bir şeye daha ihtiyaç 
 
 2. Sonra, etiketin <xref:System.Windows.Forms.Control.Click> olay işleyicisinin yeni yöntemi çağırmasını sağlayabilirsiniz `CheckForWinner()` . Oyuncunun seçtiği ikinci simgeyi gösterdikten hemen sonra programınızın bir kazanan olup olmadığını denetlediğinden emin olun. İkinci seçili simgenin rengini ayarladığınız çizgiyi bulun ve ardından `CheckForWinner()` aşağıdaki kodda gösterildiği gibi yöntemi hemen sonra çağırın.
 
-     [!code-csharp[VbExpressTutorial4Step8#11](../ide/codesnippet/CSharp/step-8-add-a-method-to-verify-whether-the-player-won_2.cs)]
-     [!code-vb[VbExpressTutorial4Step8#11](../ide/codesnippet/VisualBasic/step-8-add-a-method-to-verify-whether-the-player-won_2.vb)]
+     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial4step8/cs/form1.cs" id="Snippet11":::
+     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial4step8/vb/form1.vb" id="Snippet11":::
 
 3. Programı kaydedip çalıştırın. Oyunu oynayın ve tüm simgeleri eşleştirin. Kazandığınızda, program bir kutlama **MessageBox** (aşağıdaki ekran görüntüsünde gösterildiği gibi) görüntüler ve sonra kutuyu kapatır.
 

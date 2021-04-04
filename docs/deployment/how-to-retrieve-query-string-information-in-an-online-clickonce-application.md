@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 49fd3ca9b625b9dec179ec37603e875cfdd296c0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6f53d2d005ad9b706f318ec82d48898f73ce0f07
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99885137"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106213933"
 ---
 # <a name="how-to-retrieve-query-string-information-in-an-online-clickonce-application"></a>Nasıl yapılır: çevrimiçi bir ClickOnce uygulamasında sorgu dize bilgilerini alma
 *Sorgu dizesi* , bir URL 'nin *adı = değer* biçiminde rastgele bilgiler içeren bir soru işareti (?) ile başlayan bölümüdür. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Üzerinde barındırdığınızı adlı bir uygulamanız olduğunu `WindowsApp1` `servername` ve uygulama başlatıldığında değişken için bir değer geçirmek istediğinizi varsayalım `username` . URL 'niz aşağıdakine benzer şekilde görünebilir:
@@ -50,8 +50,9 @@ ms.locfileid: "99885137"
 
 1. Aşağıdaki kodu projenize yerleştirin. Bu kodun çalışması için, System. Web `using` `Imports` , System. Collections. özelleşmiş ve System. Deployment. Application için bir başvuruya sahip olmanız gerekir.
 
-     [!code-csharp[ClickOnceQueryString#1](../deployment/codesnippet/CSharp/how-to-retrieve-query-string-information-in-an-online-clickonce-application_1.cs)]
-     [!code-vb[ClickOnceQueryString#1](../deployment/codesnippet/VisualBasic/how-to-retrieve-query-string-information-in-an-online-clickonce-application_1.vb)]
+    :::code language="csharp" source="../snippets/csharp/VS_Snippets_Winforms/ClickOnceQueryString/CS/Form1.cs" id="Snippet1":::
+    :::code language="vb" source="../snippets/visualbasic/VS_Snippets_Winforms/ClickOnceQueryString/VB/Form1.vb" id="Snippet1":::
+
 
 2. <xref:System.Collections.DictionaryBase.Dictionary%2A>Ad ile dizine alınmış sorgu dizesi parametrelerini almak için daha önce tanımlanan işlevi çağırın.
 

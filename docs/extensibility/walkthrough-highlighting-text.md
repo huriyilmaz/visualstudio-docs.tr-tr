@@ -12,12 +12,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: a500d63eb497ce6d2b23860cd3793cbc2632b819
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: f9e69f635b18d4ed67b78751ac6179cad04f002c
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105078467"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106217534"
 ---
 # <a name="walkthrough-highlight-text"></a>İzlenecek yol: metni vurgula
 Managed Extensibility Framework (MEF) bileşen bölümleri oluşturarak düzenleyiciye farklı görsel etkiler ekleyebilirsiniz. Bu izlenecek yol, bir metin dosyasında geçerli sözcüğün her geçtiği yeri vurgulamanın nasıl yapılacağını gösterir. Bir kelime bir metin dosyasında birden çok kez oluşursa ve giriş işaretini tek bir tekrara konumlandırdıysanız, her oluşum vurgulanır.
@@ -201,8 +201,9 @@ Managed Extensibility Framework (MEF) bileşen bölümleri oluşturarak düzenle
 
 5. Ayrıca `TagsChanged` Update yöntemi tarafından çağrılan bir olay da eklemeniz gerekir.
 
-     [!code-csharp[VSSDKHighlightWordTest#10](../extensibility/codesnippet/CSharp/walkthrough-highlighting-text_1.cs)]
-     [!code-vb[VSSDKHighlightWordTest#10](../extensibility/codesnippet/VisualBasic/walkthrough-highlighting-text_1.vb)]
+    :::code language="csharp" source="../snippets/csharp/VS_Snippets_VSSDK/vssdkhighlightwordtest/cs/highlightwordtag.cs" id="Snippet10":::
+    :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VSSDK/vssdkhighlightwordtest/vb/highlightwordtag.vb" id="Snippet10":::
+
 
 6. `UpdateAtCaretPosition()`Yöntemi, metin arabelleğindeki, imlecin bulunduğu sözcüğe benzer ve sözcüğün oluşumlarına karşılık gelen nesnelerin bir listesini oluşturan her sözcüğü bulur <xref:Microsoft.VisualStudio.Text.SnapshotSpan> . Sonra `SynchronousUpdate` olayı oluşturan çağırır `TagsChanged` .
 

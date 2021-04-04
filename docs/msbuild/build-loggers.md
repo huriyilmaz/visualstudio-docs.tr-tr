@@ -14,12 +14,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 75c06082a34f5dd3248024f1707cb188107863c6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b676fe015f5f513a069ffaf6ae4fac59c1a5fa68
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99964894"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106213907"
 ---
 # <a name="build-loggers"></a>Günlükçüleri derleme
 
@@ -36,19 +36,19 @@ Günlükçü uygularken kullanabileceğiniz iki yaklaşım vardır:
 
 Günlükçü amacı, derleme altyapısı tarafından bildirildiği için derleme ilerlemesi hakkında bilgi toplamaktır ve daha sonra bu bilgileri faydalı bir şekilde bildirir. Tüm Günlükçüler <xref:Microsoft.Build.Utilities.Logger.Initialize%2A> , günlükçü 'nin olaylar için kaydettiği yöntemi geçersiz kılmalıdır. Bu örnekte, günlükçü <xref:Microsoft.Build.Framework.IEventSource.TargetStarted> ,, <xref:Microsoft.Build.Framework.IEventSource.ProjectStarted> ve olaylarını kaydeder <xref:Microsoft.Build.Framework.IEventSource.ProjectFinished> .
 
-[!code-csharp[msbuild_SimpleConsoleLogger#2](../msbuild/codesnippet/CSharp/build-loggers_1.cs)]
+:::code language="csharp" source="../snippets/csharp/VS_Snippets_Misc/msbuild_SimpleConsoleLogger/CS/msbuild_SimpleConsoleLogger.cs" id="Snippet2":::
 
 ## <a name="respond-to-events"></a>Olaylara yanıt verme
 
 Günlükçüler belirli olaylara kaydoldığına göre, bu olayları gerçekleştiğinde işlemek gerekir. <xref:Microsoft.Build.Framework.IEventSource.ProjectStarted>Ve olayları için, <xref:Microsoft.Build.Framework.IEventSource.ProjectFinished> günlükçü yalnızca kısa bir ifade ve olaya dahil olan proje dosyasının adını yazar. Günlükçü 'deki tüm iletiler konsol penceresine yazılır.
 
-[!code-csharp[msbuild_SimpleConsoleLogger#3](../msbuild/codesnippet/CSharp/build-loggers_2.cs)]
+:::code language="csharp" source="../snippets/csharp/VS_Snippets_Misc/msbuild_SimpleConsoleLogger/CS/msbuild_SimpleConsoleLogger.cs" id="Snippet3":::
 
 ## <a name="respond-to-logger-verbosity-values"></a>Günlükçü ayrıntı değerlerine yanıt verme
 
 Bazı durumlarda, MSBuild.exe **ayrıntı** düzeyi anahtarı belirli bir değer içeriyorsa yalnızca bir olaydan bilgileri günlüğe kaydetmek isteyebilirsiniz. Bu örnekte, <xref:Microsoft.Build.Framework.IEventSource.TargetStarted> olay işleyicisi yalnızca <xref:Microsoft.Build.Utilities.Logger.Verbosity%2A> **-ayrıntı** anahtarı tarafından ayarlanan özellik öğesine eşitse bir iletiyi günlüğe kaydeder <xref:Microsoft.Build.Framework.LoggerVerbosity> `Detailed` .
 
-[!code-csharp[msbuild_SimpleConsoleLogger#4](../msbuild/codesnippet/CSharp/build-loggers_3.cs)]
+:::code language="csharp" source="../snippets/csharp/VS_Snippets_Misc/msbuild_SimpleConsoleLogger/CS/msbuild_SimpleConsoleLogger.cs" id="Snippet4":::
 
 ## <a name="specify-a-logger"></a>Günlükçü belirtin
 
@@ -74,7 +74,7 @@ Aşağıdaki örnek, günlükçü için kodun tamamını içerir.
 
 ### <a name="code"></a>Kod
 
-[!code-csharp[msbuild_SimpleConsoleLogger#1](../msbuild/codesnippet/CSharp/build-loggers_4.cs)]
+:::code language="csharp" source="../snippets/csharp/VS_Snippets_Misc/msbuild_SimpleConsoleLogger/CS/msbuild_SimpleConsoleLogger.cs" id="Snippet1":::
 
 ## <a name="example-2"></a>Örnek 2
 
@@ -84,7 +84,7 @@ Aşağıdaki örnek, günlüğü konsol penceresinde görüntülemek yerine bir 
 
 ### <a name="code"></a>Kod
 
-[!code-csharp[msbuild_BasicLogger#1](../msbuild/codesnippet/CSharp/build-loggers_5.cs)]
+:::code language="csharp" source="../snippets/csharp/VS_Snippets_Misc/msbuild_BasicLogger/CS/msbuild_BasicLogger.cs" id="Snippet1":::
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

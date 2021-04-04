@@ -1,19 +1,19 @@
 ---
 title: C/C++ için birim testleri yazma
 description: CTest, Boost. test ve Google Test dahil çeşitli test çerçeveleri kullanarak Visual Studio 'da C++ birim testlerini yazın.
-ms.date: 02/08/2020
+ms.date: 04/01/2021
 ms.topic: conceptual
 ms.author: corob
 manager: markl
 ms.workload:
 - cplusplus
 author: corob-msft
-ms.openlocfilehash: cf6287ebdb4c2df6145a0e60e22ac1197a517fde
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: d20bcdef769d8cd751230000b0e4d4319b10e46f
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97729372"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106217469"
 ---
 # <a name="write-unit-tests-for-cc-in-visual-studio"></a>Visual Studio 'da C/C++ için birim testleri yazma
 
@@ -92,7 +92,7 @@ Kaynak dosyadaki her bir Include deyimindeki tam yolu yazmak zorunda kalmamak i�
 ### <a name="write-test-methods"></a>Yazma testi yöntemleri
 
 > [!NOTE]
-> Bu bölümde, C/C++ için Microsoft birim testi çerçevesi sözdizimi gösterilmektedir. Burada belgelenmiştir: [Microsoft. VisualStudio. TestTools. CppUnitTestFramework API başvurusu](microsoft-visualstudio-testtools-cppunittestframework-api-reference.md). Google Test belgeler için bkz. [Google test öncü](https://github.com/google/googletest/blob/master/googletest/docs/primer.md). Boost. test için bkz. [Boost test Kitaplığı: birim test çerçevesi](https://www.boost.org/doc/libs/1_46_0/libs/test/doc/html/utf.html).
+> Bu bölümde, C/C++ için Microsoft birim testi çerçevesi sözdizimi gösterilmektedir. Burada belgelenmiştir: [Microsoft. VisualStudio. TestTools. CppUnitTestFramework API başvurusu](microsoft-visualstudio-testtools-cppunittestframework-api-reference.md). Google Test belgeler için bkz. [Google test öncü](https://github.com/google/googletest/blob/master/docs/primer.md). Boost. test için bkz. [Boost test Kitaplığı: birim test çerçevesi](https://www.boost.org/doc/libs/1_46_0/libs/test/doc/html/utf.html).
 
 Test projenizdeki *. cpp* dosyasında, sizin için tanımlanan bir saplama sınıfı ve yöntemi vardır. Test kodunun nasıl yazılacağını gösteren bir örnek gösterir. İmzalar TEST_CLASS ve TEST_METHOD makrolarını kullanır, bu da yöntemleri **Test Gezgini** penceresinden bulunabilir hale getirir.
 

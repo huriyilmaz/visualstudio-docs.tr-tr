@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 4983930a7c16edef826a5912abf0870598b1f906
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e38f1d18736c18f5273eb2e202de52af81e73f85
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99943802"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106217456"
 ---
 # <a name="how-to-extend-a-sharepoint-node-in-server-explorer"></a>Nasıl yapılır: Sunucu Gezgini bir SharePoint düğümünü genişletme
   **Sunucu Gezgini** Içindeki **SharePoint bağlantıları** düğümünün altında düğümleri genişletebilirsiniz. Bu, varolan bir düğüme yeni alt düğümler, kısayol menü öğeleri veya özellikler eklemek istediğinizde yararlıdır. Daha fazla bilgi için, bkz. [Sunucu Gezgini SharePoint bağlantıları düğümünü genişletme](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md).
@@ -64,8 +64,8 @@ ms.locfileid: "99943802"
 
 - **Body** adlı bir alanı temsil eden her düğüme **ContosoExampleProperty** adlı özel bir özellik ekleyen uzantı.
 
-  [!code-csharp[SPExtensibility.ProjectSystemExtension.General#9](../sharepoint/codesnippet/CSharp/projectsystemexamples/extension/serverexplorerextension.cs#9)]
-  [!code-vb[SPExtensibility.ProjectSystemExtension.General#9](../sharepoint/codesnippet/VisualBasic/projectsystemexamples/extension/serverexplorerextension.vb#9)]
+  :::code language="csharp" source="../sharepoint/codesnippet/CSharp/projectsystemexamples/extension/serverexplorerextension.cs" id="Snippet9":::
+  :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/projectsystemexamples/extension/serverexplorerextension.vb" id="Snippet9":::
 
   Bu uzantı düğümlere düzenlenebilir dize özelliği ekler. Ayrıca, SharePoint sunucusundan salt okunurdur verileri görüntüleyen özel özellikler de oluşturabilirsiniz. Bunun nasıl yapılacağını gösteren bir örnek için bkz. [Izlenecek yol: Sunucu Gezgini Web bölümlerini görüntülemek Için genişletme](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md).
 

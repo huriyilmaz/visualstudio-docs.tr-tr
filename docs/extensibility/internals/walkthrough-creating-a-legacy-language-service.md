@@ -12,12 +12,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ded5624aed40ac2e878c44fd8dabc7d35c4d1ac8
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 42c9f2d2a91b90cab31dd225d0ace081988135fb
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105074281"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106213647"
 ---
 # <a name="walkthrough-creating-a-legacy-language-service"></a>İzlenecek yol: Eski Dil Hizmeti oluşturma
 ' De bir dil hizmetini uygulamak için yönetilen paket çerçevesi (MPF) dil sınıflarının kullanılması [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] basittir. Dil hizmetini, dil hizmetini ve diliniz için bir ayrıştırıcısı barındırmak üzere bir VSPackage gerekir.
@@ -74,13 +74,13 @@ ms.locfileid: "105074281"
 
 6. MyLanguageService. cs dosyasında aşağıdaki `using` yönergeleri ekleyin.
 
-     [!code-csharp[CreatingALanguageService(ManagedPackageFramework)#1](../../extensibility/internals/codesnippet/CSharp/walkthrough-creating-a-legacy-language-service_1.cs)]
-     [!code-vb[CreatingALanguageService(ManagedPackageFramework)#1](../../extensibility/internals/codesnippet/VisualBasic/walkthrough-creating-a-legacy-language-service_1.vb)]
+     :::code language="csharp" source="../../snippets/csharp/VS_Snippets_VSSDK/creatingalanguageservice(managedpackageframework)/cs/mylanguageservice.cs" id="Snippet1":::
+     :::code language="vb" source="../../snippets/visualbasic/VS_Snippets_VSSDK/creatingalanguageservice(managedpackageframework)/vb/mylanguageservice.vb" id="Snippet1":::
 
 7. Sınıfından `MyLanguageService` türetmek için sınıfı değiştirin <xref:Microsoft.VisualStudio.Package.LanguageService> :
 
-     [!code-csharp[CreatingALanguageService(ManagedPackageFramework)#2](../../extensibility/internals/codesnippet/CSharp/walkthrough-creating-a-legacy-language-service_2.cs)]
-     [!code-vb[CreatingALanguageService(ManagedPackageFramework)#2](../../extensibility/internals/codesnippet/VisualBasic/walkthrough-creating-a-legacy-language-service_2.vb)]
+     :::code language="csharp" source="../../snippets/csharp/VS_Snippets_VSSDK/creatingalanguageservice(managedpackageframework)/cs/mylanguageservice.cs" id="Snippet2":::
+     :::code language="vb" source="../../snippets/visualbasic/VS_Snippets_VSSDK/creatingalanguageservice(managedpackageframework)/vb/mylanguageservice.vb" id="Snippet2":::
 
 8. İmleci "LanguageService" üzerine konumlandırın ve **Düzenle**, **IntelliSense** menüsünde, **soyut sınıf Uygula**' yı seçin. Bu, dil hizmeti sınıfını uygulamak için gereken en düşük yöntemleri ekler.
 
@@ -90,8 +90,8 @@ ms.locfileid: "105074281"
 
 1. MyLanguagePackagePackage. cs dosyasını açın ve aşağıdaki `using` yönergeleri ekleyin:
 
-     [!code-vb[CreatingALanguageService(ManagedPackageFramework)#3](../../extensibility/internals/codesnippet/VisualBasic/walkthrough-creating-a-legacy-language-service_3.vb)]
-     [!code-csharp[CreatingALanguageService(ManagedPackageFramework)#3](../../extensibility/internals/codesnippet/CSharp/walkthrough-creating-a-legacy-language-service_3.cs)]
+     :::code language="vb" source="../../snippets/visualbasic/VS_Snippets_VSSDK/creatingalanguageservice(managedpackageframework)/vb/mylanguagepackagepackage.vb" id="Snippet3":::
+     :::code language="csharp" source="../../snippets/csharp/VS_Snippets_VSSDK/creatingalanguageservice(managedpackageframework)/cs/mylanguagepackagepackage.cs" id="Snippet3":::
 
 2. Dil hizmeti sınıfınızı, [eski dil hizmetini kaydettirme](../../extensibility/internals/registering-a-legacy-language-service1.md)konusunda açıklandığı gibi kaydettirin. Bu, ProvideXX özniteliklerini ve "dil hizmetini güçlendirme" bölümlerine dahildir. Bu konunun TestLanguageService kullandığı MyLanguageService ' i kullanın.
 
@@ -114,8 +114,8 @@ ms.locfileid: "105074281"
 
 3. Yeni sınıf dosyasında aşağıdaki `using` yönergeleri ekleyin.
 
-     [!code-csharp[CreatingALanguageService(ManagedPackageFramework)#4](../../extensibility/internals/codesnippet/CSharp/walkthrough-creating-a-legacy-language-service_4.cs)]
-     [!code-vb[CreatingALanguageService(ManagedPackageFramework)#4](../../extensibility/internals/codesnippet/VisualBasic/walkthrough-creating-a-legacy-language-service_4.vb)]
+     :::code language="csharp" source="../../snippets/csharp/VS_Snippets_VSSDK/creatingalanguageservice(managedpackageframework)/cs/mysource.cs" id="Snippet4":::
+     :::code language="vb" source="../../snippets/visualbasic/VS_Snippets_VSSDK/creatingalanguageservice(managedpackageframework)/vb/mysource.vb" id="Snippet4":::
 
 4. İstenen MPF sınıfından türetmek için sınıfı değiştirin.
 
@@ -123,8 +123,8 @@ ms.locfileid: "105074281"
 
      Örneğin, sınıftan türetilmiş bir sınıf için Oluşturucu <xref:Microsoft.VisualStudio.Package.Source> aşağıdaki gibi görünebilir:
 
-     [!code-csharp[CreatingALanguageService(ManagedPackageFramework)#5](../../extensibility/internals/codesnippet/CSharp/walkthrough-creating-a-legacy-language-service_5.cs)]
-     [!code-vb[CreatingALanguageService(ManagedPackageFramework)#5](../../extensibility/internals/codesnippet/VisualBasic/walkthrough-creating-a-legacy-language-service_5.vb)]
+     :::code language="csharp" source="../../snippets/csharp/VS_Snippets_VSSDK/creatingalanguageservice(managedpackageframework)/cs/mysource.cs" id="Snippet5":::
+     :::code language="vb" source="../../snippets/visualbasic/VS_Snippets_VSSDK/creatingalanguageservice(managedpackageframework)/vb/mysource.vb" id="Snippet5":::
 
 6. **Düzen**, **IntelliSense** menüsünde, temel sınıfta uygulanması gereken herhangi bir soyut yöntem varsa, **Özet sınıfını Uygula** ' yı seçin.
 

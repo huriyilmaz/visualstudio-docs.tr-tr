@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0c5ac6cf82d39790fa2d7762fea6b711a546da24
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 6f3932658442774ad6f54bd5e6243fe73679b38f
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105080755"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106214037"
 ---
 # <a name="support-for-project-and-configuration-properties"></a>Proje ve Yapılandırma Özellikleri için Destek
  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Tümleşik GELIŞTIRME ortamındaki (IDE) Özellikler penceresi, proje ve yapılandırma özelliklerini görüntüleyebilir. Kullanıcının uygulamanızın özelliklerini ayarlayabilmesi için kendi proje türüne yönelik bir özellik sayfası sağlayabilirsiniz.
@@ -72,8 +72,8 @@ ms.locfileid: "105080755"
 ## <a name="provideobjectattribute-and-registry-path"></a>ProvideObjectAttribute ve kayıt defteri yolu
  Sınıfından türetilmiş sınıflar `SettingsPage` , VSPackages genelinde paylaşılmak üzere tasarlanmıştır. Bir VSPackage 'dan türetilmiş bir sınıf oluşturmasını mümkün kılmak için `SettingsPage` , `Microsoft.VisualStudio.Shell.ProvideObjectAttribute` öğesinden türetilmiş bir sınıfa öğesine ekleyin `Microsoft.VisualStudio.Shell.Package` .
 
- [!code-csharp[VSSDKSupportProjectConfigurationProperties#1](../../extensibility/internals/codesnippet/CSharp/support-for-project-and-configuration-properties_1.cs)]
- [!code-vb[VSSDKSupportProjectConfigurationProperties#1](../../extensibility/internals/codesnippet/VisualBasic/support-for-project-and-configuration-properties_1.vb)]
+ :::code language="csharp" source="../../snippets/csharp/VS_Snippets_VSSDK/vssdksupportprojectconfigurationproperties/cs/vssdksupportprojectconfigurationpropertiespackage.cs" id="Snippet1":::
+ :::code language="vb" source="../../snippets/visualbasic/VS_Snippets_VSSDK/vssdksupportprojectconfigurationproperties/vb/vssdksupportprojectconfigurationpropertiespackage.vb" id="Snippet1":::
 
  Özniteliğin eklendiği VSPackage önemli değildir. Bir VSPackage ile kaydettirilirse [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , oluşturulabilecek herhangi bir nesnenin sınıf kimliği (CLSID), bir çağrısının oluşturulabilmesi için kaydedilir <xref:Microsoft.VisualStudio.Shell.Interop.ILocalRegistry.CreateInstance%2A> .
 
@@ -87,8 +87,8 @@ ms.locfileid: "105080755"
 
  Aşağıdaki kod parçasını göz önünde bulundurun:
 
- [!code-vb[VSSDKSupportProjectConfigurationProperties#2](../../extensibility/internals/codesnippet/VisualBasic/support-for-project-and-configuration-properties_2.vb)]
- [!code-csharp[VSSDKSupportProjectConfigurationProperties#2](../../extensibility/internals/codesnippet/CSharp/support-for-project-and-configuration-properties_2.cs)]
+ :::code language="vb" source="../../snippets/visualbasic/VS_Snippets_VSSDK/vssdksupportprojectconfigurationproperties/vb/myprojectpropertypage.vb" id="Snippet2":::
+ :::code language="csharp" source="../../snippets/csharp/VS_Snippets_VSSDK/vssdksupportprojectconfigurationproperties/cs/myprojectpropertypage.cs" id="Snippet2":::
 
  `MyConfigProp`Yapılandırma özelliği, yapılandırma özelliği sayfasında, kategorisinde, **My My** **config özelliği** olarak görünür. Seçenek **belirlenmişse açıklama panelinde** açıklama açıklaması görüntülenir.
 

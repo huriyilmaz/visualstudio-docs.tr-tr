@@ -23,12 +23,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 7efd3d622e40c21574c0aa9e39263d53979706ec
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d40c4e5c5d61b9da3cdbdd3fe96f45c4a0cff929
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99949200"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106213972"
 ---
 # <a name="create-an-association-between-entities"></a>Varlıklar arasında ilişkilendirme oluşturma
   İlişkiler oluşturarak Iş verileri bağlantısı (BDC) modelinizdeki varlıklar arasında ilişkiler tanımlayabilirsiniz. Visual Studio, her ilişki hakkında bilgi içeren modelin tüketicilerini sağlayan yöntemler oluşturur. Bu yöntemler, veri ilişkilerini bir kullanıcı arabiriminde (UI) göstermek için SharePoint Web bölümleri, listeleri veya özel uygulamalar tarafından kullanılabilir.
@@ -53,13 +53,13 @@ ms.locfileid: "99949200"
 
  Hedef varlıkların koleksiyonunu döndüren kaynak varlığın Ilişkilendirme gezgin yöntemine kod ekleyin. Aşağıdaki örnek, bir kişinin satış siparişlerini döndürür.
 
- [!code-csharp[SP_BDC#7](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs#7)]
- [!code-vb[SP_BDC#7](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb#7)]
+ :::code language="csharp" source="../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs" id="Snippet7":::
+ :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb" id="Snippet7":::
 
  Kaynak varlık döndüren hedef varlığın Ilişkilendirme gezgin yöntemine kod ekleyin. Aşağıdaki örnek, satış siparişiyle ilgili olan kişiyi döndürür.
 
- [!code-csharp[SP_BDC#8](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/salesorderservice.cs#8)]
- [!code-vb[SP_BDC#8](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/salesorderservice.vb#8)]
+ :::code language="csharp" source="../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/salesorderservice.cs" id="Snippet8":::
+ :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/salesorderservice.vb" id="Snippet8":::
 
 ### <a name="foreign-keyless-association"></a>Yabancı anahtarsız ilişkilendirmesi
  Tanımlayıcıları alan türü tanımlayıcılarıyla eşleştirmeden bir ilişkilendirme oluşturabilirsiniz. Kaynak varlığın hedef varlıkla doğrudan bir ilişkisi olmadığında, bu tür bir ilişki oluşturun. Örneğin, bir `SalesOrderDetail` tablo, bir tablodaki birincil anahtarla eşleşen yabancı anahtara sahip değildir `Contact` .
@@ -70,13 +70,13 @@ ms.locfileid: "99949200"
 
  Aşağıdaki örnek, tabloları birleştirerek tüm satış siparişlerinin ayrıntılarını döndürür.
 
- [!code-csharp[SP_BDC#9](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs#9)]
- [!code-vb[SP_BDC#9](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb#9)]
+ :::code language="csharp" source="../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs" id="Snippet9":::
+ :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb" id="Snippet9":::
 
  Varlığın Ilişkilendirme gezinti yönteminde `SalesOrderDetail` ilgili öğesini döndürün `Contact` . Aşağıdaki örnek bunu gösterir.
-
- [!code-csharp[SP_BDC#10](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/salesorderdetailservice.cs#10)]
- [!code-vb[SP_BDC#10](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/salesorderdetailservice.vb#10)]
+                                                                            
+ :::code language="csharp" source="../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/salesorderdetailservice.cs" id="Snippet10":::
+ :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/salesorderdetailservice.vb" id="Snippet10":::
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [İş verileri bağlantı modeli tasarlama](../sharepoint/designing-a-business-data-connectivity-model.md)

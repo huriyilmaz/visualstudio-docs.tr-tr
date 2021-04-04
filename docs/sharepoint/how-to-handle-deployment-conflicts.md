@@ -11,12 +11,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 7c163aa10bdcb3ee28de6d6950dd15f85df876bc
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b09db3fecde5d4b87b24963930b2783b0c68052c
+ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99885618"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106213985"
 ---
 # <a name="how-to-handle-deployment-conflicts"></a>Nasıl yapılır: dağıtım çakışmalarını Işleme
   Bir SharePoint proje öğesi için dağıtım çakışmalarını işlemek üzere kendi kodunuzu sağlayabilirsiniz. Örneğin, geçerli proje öğesinde bulunan herhangi bir dosyanın dağıtım konumunda zaten mevcut olup olmadığını belirleyebilir ve ardından geçerli proje öğesi dağıtılmadan önce dağıtılan dosyaları silebilirsiniz. Dağıtım çakışmaları hakkında daha fazla bilgi için bkz. [SharePoint paketleme ve dağıtımını genişletme](../sharepoint/extending-sharepoint-packaging-and-deployment.md).
@@ -44,8 +44,8 @@ ms.locfileid: "99885618"
 
  Kolaylık olması için, <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.DeploymentStepStarted> Bu örnekteki olay işleyicisi bir dağıtım çakışması olduğunu varsayar (yani, her zaman yeni bir <xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict> nesne ekler) ve `Resolve` Yöntem, çakışmanın çözümlendiğini göstermek için yalnızca **true** değerini döndürür. Gerçek bir senaryoda, <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.DeploymentStepStarted> olay işleyiciniz önce geçerli proje öğesinde bir dosya ile dağıtım konumundaki bir dosya arasında bir çakışma olup olmadığını ve <xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict> yalnızca bir çakışma varsa bir nesne ekleyin. Örneğin, `e.ProjectItem.Files` Proje öğesindeki dosyaları çözümlemek için olay işleyicisinde özelliğini kullanabilir ve dağıtım konumundaki dosyaları çözümlemek için bir SharePoint komutu çağırabilirsiniz. Benzer şekilde, gerçek bir senaryoda `Resolve` Yöntem SharePoint sitesindeki çakışmayı çözmek için bir SharePoint komutunu çağırabilir. SharePoint komutları oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: SharePoint komutu oluşturma](../sharepoint/how-to-create-a-sharepoint-command.md).
 
- [!code-vb[SPExtensibility.ProjectItemExtension.DeploymentConflict#1](../sharepoint/codesnippet/VisualBasic/deploymentconflict/extension/deploymentconflictextension.vb#1)]
- [!code-csharp[SPExtensibility.ProjectItemExtension.DeploymentConflict#1](../sharepoint/codesnippet/CSharp/deploymentconflict/extension/deploymentconflictextension.cs#1)]
+ :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/deploymentconflict/extension/deploymentconflictextension.vb" id="Snippet1":::
+ :::code language="csharp" source="../sharepoint/codesnippet/CSharp/deploymentconflict/extension/deploymentconflictextension.cs" id="Snippet1":::
 
 ## <a name="compile-the-code"></a>Kodu derle
  Bu örnek, aşağıdaki derlemelere başvurular gerektirir:
