@@ -1,5 +1,5 @@
 ---
-title: Cloud Services kullanın (genişletilmiş destek) (Önizleme)
+title: Cloud Services kullan (genişletilmiş destek)
 description: Visual Studio ile Azure Resource Manager kullanarak Cloud Services (genişletilmiş destek) oluşturup dağıtmayı öğrenin
 author: ghogen
 manager: jmartens
@@ -9,32 +9,26 @@ ms.topic: how-to
 ms.date: 01/25/2021
 ms.author: ghogen
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: 39a76f4c76afb2ed0c738adfc477807eebfdbc61
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 289bc88d9aef40fdc260ce84395b1c4b9237c689
+ms.sourcegitcommit: 2a50f4c1705baeee5c05580f04e3f468550f44e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99841139"
+ms.lasthandoff: 04/05/2021
+ms.locfileid: "106381613"
 ---
-# <a name="create-and-deploy-to-cloud-services-extended-support-in-visual-studio-preview"></a>Visual Studio 'da Cloud Services (genişletilmiş destek) oluşturma ve dağıtma (Önizleme)
+# <a name="create-and-deploy-to-cloud-services-extended-support-in-visual-studio"></a>Visual Studio 'da Cloud Services oluşturma ve dağıtma (genişletilmiş destek)
 
-[Visual Studio 2019 sürüm 16,9](https://visualstudio.microsoft.com/vs/preview) (Şu anda önizleme aşamasında) ile başlayarak, Azure kaynaklarının bakımını ve yönetimini büyük ölçüde kolaylaştıran ve destekleyen Azure Resource Manager kullanarak bulut hizmetleriyle çalışabilirsiniz. Bu, *Cloud Services (genişletilmiş destek)* olarak adlandırılan yeni bir Azure hizmeti tarafından etkinleştirilir. Mevcut bir bulut hizmetini Cloud Services (genişletilmiş destek) olarak yayımlayabilirsiniz. Bu Azure hizmeti hakkında daha fazla bilgi için bkz. [Cloud Services (genişletilmiş destek) belgeleri](/azure/cloud-services-extended-support/overview).
+[Visual Studio 2019 sürüm 16,9](https://visualstudio.microsoft.com/vs/)' den Itibaren, Azure kaynaklarının bakımını ve yönetimini büyük ölçüde kolaylaştıran ve destekleyen Azure Resource Manager kullanarak bulut hizmetleriyle çalışabilirsiniz. Bu, *Cloud Services (genişletilmiş destek)* olarak adlandırılan yeni bir Azure hizmeti tarafından etkinleştirilir. Mevcut bir bulut hizmetini Cloud Services (genişletilmiş destek) olarak yayımlayabilirsiniz. Bu Azure hizmeti hakkında daha fazla bilgi için bkz. [Cloud Services (genişletilmiş destek) belgeleri](/azure/cloud-services-extended-support/overview).
 
 ## <a name="publish-to-cloud-services-extended-support"></a>Cloud Services yayımlama (genişletilmiş destek)
 
-Mevcut Azure bulut hizmeti projenizi Cloud Services (genişletilmiş destek) ' a yayımladığınızda, klasik bir Azure bulut hizmetine yayımlama özelliğini yine de koruyabilirsiniz. Visual Studio 2019 sürüm 16,9 Preview 3 ve sonraki sürümlerinde, klasik bulut hizmeti projelerinin **Yayımla** komutunun özel bir sürümü **(genişletilmiş destek)** vardır. Bu komut **Çözüm Gezgini** kısayol menüsünde görüntülenir.
+Mevcut Azure bulut hizmeti projenizi Cloud Services (genişletilmiş destek) ' a yayımladığınızda, klasik bir Azure bulut hizmetine yayımlama özelliğini yine de koruyabilirsiniz. Visual Studio 2019 sürüm 16,9 ve sonrasında, klasik bulut hizmeti projelerinin **Yayımla** komutunun özel bir sürümü **(genişletilmiş destek)** vardır. Bu komut **Çözüm Gezgini** kısayol menüsünde görüntülenir.
 
-Cloud Services (genişletilmiş destek) yayımladığınızda bazı farklılıklar vardır. Örneğin, bu dağıtım yuvaları genişletilmiş destek yayımlama modelinin parçası olmadığından, **hazırlama** veya **üretime** yayımladıysanız sizden sorulmaz. Bunun yerine, Cloud Services (genişletilmiş destek) ile birden çok dağıtım ayarlayabilir ve dağıtım Azure portal. Visual Studio Araçları, 16,9 Preview 3 ' te bu ayarı ayarlamaya izin verse de, daha sonraki bir Cloud Services (genişletilmiş destek) ve Önizleme sırasında dağıtım zamanında bir hatayla sonuçlanana kadar takas özelliği etkinleştirilmeyecektir.
+Cloud Services (genişletilmiş destek) yayımladığınızda bazı farklılıklar vardır. Örneğin, bu dağıtım yuvaları genişletilmiş destek yayımlama modelinin parçası olmadığından, **hazırlama** veya **üretime** yayımladıysanız sizden sorulmaz. Bunun yerine, Cloud Services (genişletilmiş destek) ile birden çok dağıtım ayarlayabilir ve dağıtım Azure portal. Visual Studio Araçları, 16,9 ' de bu ayarı ayarlamaya izin veriyorsa, değiştirme özelliği Cloud Services (genişletilmiş destek) ' in daha yeni bir sürümüne kadar etkinleştirilmez ve Önizleme sırasında dağıtım zamanında bir hata oluşmasına neden olabilir.
 
 Cloud Services (genişletilmiş destek) için klasik bir Azure bulut hizmetini yayımlamadan önce, projenizin kullandığı depolama hesaplarını denetleyin ve bunların Storage v1 veya Storage v2 hesapları olduklarından emin olun. Klasik depolama hesabı türleri, dağıtım zamanında bir hata iletisiyle başarısız olur. Tanılama tarafından kullanılan depolama hesabını denetlediğinizden emin olun. Tanılama depolama hesabını denetlemek için bkz. [Azure Cloud Services için tanılamayı ayarlama ve sanal makineler](vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines.md). Hizmetiniz klasik bir depolama hesabı kullanıyorsa, bunu yükseltebilirsiniz; bkz. [genel amaçlı v2 depolama hesabına yükseltme](/azure/storage/common/storage-account-upgrade?tabs=azure-portal).  Depolama hesabı türleri hakkında genel bilgi için bkz. [depolama hesabına genel bakış](/azure/storage/common/storage-account-overview).
 
 ### <a name="to-publish-a-classic-azure-cloud-service-project-to-cloud-services-extended-support"></a>Cloud Services için klasik bir Azure bulut hizmeti projesi yayımlamak için (genişletilmiş destek)
-
-1. Cloud Services (genişletilmiş destek) Şu anda önizleme aşamasındadır. Aboneliğiniz için özelliği aşağıdaki şekilde kaydedin:
-
-   ```azurepowershell-interactive
-   Register-AzProviderFeature -FeatureName CloudServices -ProviderNamespace Microsoft.Compute
-   ```
 
 1. Azure bulut hizmeti (klasik) projenizdeki proje düğümüne sağ tıklayın ve Yayımla ' yı **(genişletilmiş destek) seçin...** **Yayımla Sihirbazı** ilk ekranda açılır.
 

@@ -10,12 +10,12 @@ metadata:
   ms.topic: landing-page
   ms.date: 12/05/2019
   ms.author: ghogen
-  ms.openlocfilehash: e2a545d1b9165a158f7d1913668e983386127874
-  ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
-  ms.translationtype: HT
+  ms.openlocfilehash: 7a7740ad4fffd80bc4b96ef7096b3bdd7c7a31bd
+  ms.sourcegitcommit: 2a50f4c1705baeee5c05580f04e3f468550f44e3
+  ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 10/09/2020
-  ms.locfileid: "91860532"
+  ms.lasthandoff: 04/05/2021
+  ms.locfileid: "106381587"
 landingContent:
 - title: Azure App Service'e dağıtma
   linkLists:
@@ -73,7 +73,7 @@ landingContent:
     links:
     - text: Azure Active Directory
       url: /azure/active-directory/develop/vs-active-directory-add-connected-service
-    - text: Redis için Azure Önbelleği
+    - text: Redis için Azure Cache
       url: azure-cache-for-redis-add-connected-service.md
     - text: Azure CosmosDB
       url: azure-cosmosdb-add-connected-service.md
@@ -83,12 +83,14 @@ landingContent:
       url: azure-signalr-add-connected-service.md
     - text: Azure SQL Veritabanı
       url: azure-sql-database-add-connected-service.md
-    - text: Azure Storage
+    - text: Azure Depolama
       url: vs-azure-tools-connected-services-storage.md
 - title: Azure Cloud Services
   linkLists:
   - linkListType: how-to-guide
     links:
+    - text: Cloud Services oluşturma ve dağıtma (genişletilmiş destek)
+      url: cloud-services-extended-support.md
     - text: Azure bulut hizmeti projeleri oluşturma ve yapılandırma
       url: vs-azure-tools-azure-project-create.md
     - text: Bulut hizmetlerinde yerel olarak ve Azure’da hata ayıklama
