@@ -2,7 +2,7 @@
 title: Microsoft uç noktası ile Visual Studio için yönetici güncelleştirmelerini etkinleştirme Configuration Manager
 titleSuffix: ''
 description: Yönetici güncelleştirmelerini Visual Studio 'ya dağıtma hakkında daha fazla bilgi edinin.
-ms.date: 03/04/2021
+ms.date: 04/06/2021
 ms.custom: ''
 ms.topic: overview
 ms.assetid: 546fbad6-f12b-49cf-bccc-f2e63e051a18
@@ -13,12 +13,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: ae0bdde60cbf4c4c1eed00847c76ee797809b8db
-ms.sourcegitcommit: 00e16b9afe6b22ba0591e4d0d92690544e6d4357
+ms.openlocfilehash: 9ca14e1f4e84777fd1781249dd54a6646fb2c72a
+ms.sourcegitcommit: 56060e3186086541d9016d4185e6f1bf3471e958
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "105617335"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106547485"
 ---
 # <a name="enabling-administrator-updates-to-visual-studio-with-microsoft-endpoint-configuration-manager"></a>Microsoft uç noktası ile Visual Studio için yönetici güncelleştirmelerini etkinleştirme Configuration Manager
 
@@ -63,7 +63,7 @@ Bir istemci makinenin Visual Studio Yönetici güncelleştirmelerini kabul etmes
 
 ### <a name="visual-studio-client-detector-utility"></a>Visual Studio Istemci algılayıcısı yardımcı programı 
 
-Yönetici güncelleştirmelerinin düzgün alınabilmesi için istemci makinelerde Visual Studio Istemci algılayıcısı yardımcı programı yüklü olmalıdır. Bu yardımcı program, tüm son Visual Studio yayınlarına eklenmiştir.  
+Yönetici güncelleştirmelerinin düzgün şekilde tanınması ve alınabilmesi için, istemci makinelerde [Visual Studio Istemci algılayıcısı yardımcı programı](https://support.microsoft.com/help/5001148) yüklü olmalıdır. Bu yardımcı program, 12 Mayıs 2020 tarihinde veya bu tarihten sonra yayınlanan tüm Visual Studio 2017 ve Visual Studio 2019 ürün güncelleştirmelerine eklenmiştir. Bu, tüm Visual Studio Yönetici güncelleştirmelerinde önkoşul olarak dahildir ve ayrıca, bağımsız olarak yüklemek için [Microsoft Update kataloğunda](https://catalog.update.microsoft.com) de mevcuttur. 
 
 ### <a name="encoding-administrator-intent-on-the-client-machines"></a>İstemci makinelerde yönetici hedefini kodlama 
 
@@ -79,14 +79,14 @@ Yönetici güncelleştirmelerini almak için istemci bilgisayarların etkinleşt
 
 Visual Studio yönetici güncelleştirmeleri hakkında geri bildirim sağlamak veya güncelleştirmeleri etkileyen sorunları bildirmek için aşağıdaki yöntemleri kullanabilirsiniz:
 * [Visual Studio yükleme ve yükseltme sorunlarını giderme](../install/troubleshooting-installation-issues.md) kılavuzuna bakın.
-* [Visual Setup soru-cevap&](https://docs.microsoft.com/answers/topics/vs-setup.html)topluluğa soru sorabilirsiniz.
+* [Visual Studio Kurulumu soru-cevap&](https://docs.microsoft.com/answers/topics/vs-setup.html)topluluğa soru sorun.
 * [Visual Studio destek sayfasına](https://visualstudio.microsoft.com/vs/support/)gidin ve sorunun SSS bölümünde listelenip listelenmediğini denetleyin.  Sohbet yardımı için [destek bağlantısı](https://visualstudio.microsoft.com/vs/support/#talktous) düğmesini de seçebilirsiniz.
-* Bu deneyim için [özellik geri bildirimi sağlayın veya Visual Studio ekibine bir sorun bildirin](https://aka.ms/vs/wsus/feedback) .
+* Yönetici güncelleştirmelerini etkinleştirme deneyimiyle ilgili olarak, [özellik geri bildirimi sağlayın veya Visual Studio ekibine bir sorun bildirin](https://aka.ms/vs/wsus/feedback) .
 * Microsoft için kuruluşunuzun teknik hesap yöneticisiyle iletişim kurun.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 * [Yönetici güncelleştirmeleri uygulanıyor](../install/applying-administrator-updates.md)
-* [Visual Studio Yönetici Kılavuzu](../install/visual-studio-administrator-guide.md)
+* [Visual Studio yönetici kılavuzu](../install/visual-studio-administrator-guide.md)
 * [Visual Studio Ürün Yaşam Döngüsü ve Bakım](https://docs.microsoft.com/visualstudio/productinfo/vs-servicing-vs)
 * [Visual Studio 2019 Sürüm Notları](https://docs.microsoft.com/visualstudio/releases/2019/release-notes)
 * [Visual Studio 2017 Sürüm Notları](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes)

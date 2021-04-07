@@ -2,7 +2,7 @@
 title: Microsoft uç noktası ile Visual Studio 'ya yönetici güncelleştirmeleri uygulama Configuration Manager
 titleSuffix: ''
 description: Yönetici güncelleştirmelerini Visual Studio 'ya uygulamayı öğrenin.
-ms.date: 03/10/2021
+ms.date: 04/06/2021
 ms.custom: ''
 ms.topic: overview
 ms.assetid: 9a3fdb28-db3d-4970-bc17-7417a985f0fb
@@ -13,12 +13,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 78c2de8b1d1ffb28cc536b770bf6bd9a4ab0aa35
-ms.sourcegitcommit: 00e16b9afe6b22ba0591e4d0d92690544e6d4357
+ms.openlocfilehash: d316fc35df8c571a9112d7a653737e099df80559
+ms.sourcegitcommit: 56060e3186086541d9016d4185e6f1bf3471e958
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "105617336"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106547459"
 ---
 # <a name="applying-administrator-updates-that-use-microsoft-endpoint-configuration-manager"></a>Microsoft uç noktası kullanan yönetici güncelleştirmelerini uygulama Configuration Manager
 
@@ -44,52 +44,70 @@ Visual Studio 'Da üç tür yönetici güncelleştirmesi vardır:
 
 Her yönetici güncelleştirmesinin başlığı, hem ilgili sürüm aralığını hem de güncelleştirmenin sonuç sürümünü açıklar.Örneğin,
 
-* **Visual studio 2019 sürüm 16.7.0 to 16.7.12 Update** "Security Update" olarak sınıflandırılır, istemcideki 16.7.0 ile 16.7.12 arasındaki sürümler arasında tüm Visual Studio sürümleri için geçerlidir ve bu istemci sürümlerini 16.7.12 olarak güncelleştirir.  
+::: moniker range="vs-2017"
 
-* "Özellik paketi" olarak sınıflandırılan **Visual studio 2019 16.0.0 to 16.9.0 Update** , Istemcideki Visual Studio sürümleri için 16.0.0 ile 16.9.0 arasındaki tüm ürün sürümü aralığı arasında ve bu istemci sürümlerini (önceki bir hizmet ana bilgisayarında kalacak şekilde yapılandırılmamış), 16.9.0 olarak güncelleştirecek şekilde güncelleştirecektir. 
+* **Visual studio 2017 sürüm 15.9.0 to 15.9.35 Update** "Security Update" olarak sınıflandırıldı, istemcideki 15.9.0 ile 15.9.35 arasındaki sürümler arasında herhangi bir visual Studio 2017 sürümü için geçerlidir ve bu istemci sürümlerini 15.9.35 olarak güncelleştirir.
 
-* **Visual studio 2019 sürüm 16.8.0 to 16.8.7 Update** , istemci üzerindeki 16.8.0 ile 16.8.7 arasındaki sürümler arasında Visual Studio sürümlerini seçme için geçerlidir ve bu istemci sürümlerini 16.8.7 olarak güncelleştirir. 
+* **Visual studio 2017 sürüm 'sının 15.0.0 to 15.9.0 Update** "Feature Pack" olarak sınıflandırılan visual Studio 2017 sürümleri, istemci üzerinde 'sının 15.0.0 ile 15.9.0 arasında tüm ürün sürümü aralığı arasında kurumsal kullanım için lisanslanır ve bu istemci sürümleri 15.9.0 ' ye güncelleştirecektir. Bu özellik paketinin uygulanması, istemcilerin güvenlik güncelleştirmelerini almasını sağlar. 
+
+* **Visual studio 2017 sürüm 15.9.0 to 15.9.37 Update** , istemci üzerinde 15.9.0 ile 15.9.37 arasındaki sürümler arasında kurumsal kullanım için lisanslanan visual Studio 2017 sürümleri için geçerlidir ve bu istemci sürümlerini 15.9.37 olarak güncelleştirir. 
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+* **Visual studio 2019 sürüm 16.7.0 to 16.7.12 Update** "Security Update" olarak sınıflandırıldı, istemcideki 16.7.0 ile 16.7.12 arasındaki sürümler arasında herhangi bir visual Studio 2019 sürümü için geçerlidir ve bu istemci sürümlerini 16.7.12 olarak güncelleştirir.  
+
+* **Visual studio 2019 sürüm 16.0.0 to 16.9.0 Update** "Feature Pack" olarak sınıflandırılan visual Studio 2019 sürümleri, istemci üzerinde 16.0.0 ile 16.9.0 arasındaki tüm ürün sürümü aralığı arasında kurumsal kullanım için lisanslanır ve bu istemci sürümlerini (daha önceki bir hizmet ana bilgisayarında kalacak şekilde yapılandırılmamış) 16.9.0 olarak güncelleştirir. 
+
+* **Visual studio 2019 sürüm 16.8.0 to 16.8.7 Update** , istemci üzerinde 16.8.0 ile 16.8.7 arasındaki sürümler arasında kurumsal kullanım için lisanslanan visual Studio 2019 sürümleri için geçerlidir ve bu istemci sürümlerini 16.8.7 olarak güncelleştirir. 
+
+::: moniker-end
 
 ## <a name="using-configuration-manager-to-deploy-visual-studio-updates"></a>Visual Studio güncelleştirmelerini dağıtmak için Configuration Manager kullanma
 
 ### <a name="understanding-configuration-options"></a>Yapılandırma seçeneklerini anlama
 
-Visual Studio Yönetici güncelleştirmelerini, kuruluşunuzun dağıtım gereksinimleriyle uyumlu ve uyumlu olacak şekilde uyarlamak için kullanılabilecek birkaç yapılandırma seçeneği vardır. En yaygın seçenekler aşağıda listelenmiştir.  Yönetici güncelleştirmeleri tarafından desteklenen tüm komut satırı parametrelerinin ayrıntılı bir listesi için, [Visual Studio belgelerini yüklemek üzere komut satırı parametrelerini kullanma](../install/use-command-line-parameters-to-install-visual-studio.md) ve yalnızca "Güncelleştir" eylemine karşılık gelen eylemlere ödeme yapma bölümüne bakın.
+Visual Studio Yönetici güncelleştirmelerini kuruluşunuzun dağıtım tercihleri ve gereksinimleriyle uyumlu olacak şekilde uyarlamak için kullanılabilecek birkaç yapılandırma seçeneği vardır. En yaygın yapılandırma seçenekleri aşağıda listelenmiştir. Desteklenen tüm yönetici güncelleştirme davranışlarının ayrıntılı bir listesi için bkz. [Visual Studio 'yu yüklemek için komut satırı parametrelerini kullanma](../install/use-command-line-parameters-to-install-visual-studio.md) ve yalnızca "Güncelleştir" eylemine karşılık gelen bir uyarı ödeme.
 
-* **Yönetici güncelleştirmesi kabul etme**: istemci makinenin yönetici güncelleştirmelerini alması için [yönetici güncelleştirmelerini etkinleştirme](../install/enabling-administrator-updates.md) bölümünde açıklanan bu kayıt defteri anahtarı gereklidir. Bu, bir makine genelindeki anahtardır ve bu, kutuda yüklü olan tüm Visual Studio örnekleri için geçerli olduğu anlamına gelir. 
+* **[Yönetici güncelleştirme katılımı](../install/enabling-administrator-updates.md#encoding-administrator-intent-on-the-client-machines)**: Bu kayıt defteri anahtarı, istemci makinenin yönetici güncelleştirmelerini alması için gereklidir. Bu, bir makine genelindeki anahtardır ve bu, kutuda yüklü olan tüm Visual Studio örnekleri için geçerli olduğu anlamına gelir. 
  
-* **Geliştirici geri çevirme**: geliştiriciler,    Visual Studio Yönetici güncelleştirmelerini almayı *devre dışı* bırakmak için ayrı bir makine genelinde AdministratorUpdatesOptOut anahtarı kullanabilir. Bu anahtarın amacı, Visual Studio kullanıcısının amacını kodlayamaktır. İstemci bilgisayarı yönetici güncelleştirmelerini engelleyecek şekilde yapılandırmak için, **AdministratorUpdatesOptOut**   REG_DWORD anahtarını **1** olarak ayarlayın. Anahtarın yokluğu veya **0** kümesi değeri, Visual Studio kullanıcısının Visual Studio 'ya yönetici güncelleştirmelerini almak istediği anlamına gelir.
+* **Visual Studio kullanıcısı geri çevirme**: Visual Studio kullanıcıları, Visual Studio Yönetici güncelleştirmelerini almayı *devre dışı* bırakmak için ayrı bir makine genelinde **AdministratorUpdatesOptOut** kayıt defteri anahtarı kullanabilir. Bu anahtarın amacı, Visual Studio kullanıcısına güncelleştirmelerin makineye otomatik olarak uygulanması için bazı denetimler olmasına izin versağlamaktır. İstemci bilgisayarı yönetici güncelleştirmelerini engelleyecek şekilde yapılandırmak için, **AdministratorUpdatesOptOut**   REG_DWORD anahtarını **1** olarak ayarlayın. Anahtarın yokluğu veya **0** kümesi değeri, Visual Studio kullanıcısının Visual Studio 'ya yönetici güncelleştirmelerini almak istediği anlamına gelir.
 
-     ****   BT Yöneticisi hedefini kodlayan, AdministratorUpdatesOptOut anahtarının (örneğin Geliştirici amacı Için), **tınupdatesenabled** anahtarı üzerinden önceliklendirildiğine unutmayın   .  **AdministratorUpdatesOptOut**    **1** olarak ayarlandıysa, \Administrators istemci üzerinde engelleniyordu, ancak **admupdatesenabled**   anahtarı da **1** olarak ayarlanmış olsa bile.Bu eylem, BT yöneticilerinin hangi geliştiricilerin kabul etmek istediğinizi ve bu kişilerin ne kadar önemli olduğunu anlatabileceği anlamına gelir.BT yöneticileri her zaman istedikleri zaman her iki anahtarı da değiştirebilir.
+     ****   Kullanıcı tercihini kodlamaya yönelik ADMINISTRATORUPDATESOPTOUT anahtarının, BT Yöneticisi hedefini kodlayan **tınupdatesenabled** anahtarı üzerinden önceliklendirildiğini unutmayın   .  **AdministratorUpdatesOptOut**    **1** olarak ayarlandıysa, \Administrators istemci üzerinde engelleniyordu, ancak **admupdatesenabled**   anahtarı da **1** olarak ayarlanmış olsa bile.Bu eylem, BT yöneticilerinin hangi geliştiricilerin kabul etmek istediğinizi ve bu kişilerin ne kadar önemli olduğunu anlatabileceği anlamına gelir.BT yöneticileri her zaman istedikleri zaman her iki anahtarı da değiştirebilir.
  
-* **Güncelleştirilmiş ürün bitlerinin konumu**: çoğu zaman, Istemci MAKINELERI Microsoft CDN aracılığıyla Internet 'ten güncelleştirilmiş ürün bitlerini indirir. Bu senaryo, istemci makinelerin internet erişimine sahip olmasını gerektirir. Bununla birlikte, bazı kuruluşlar, istemci makinelerini yalnızca bir iç ağ düzeni konumundan BITS yüklemek ve güncelleştirmek üzere kısıtlar. Yönetici güncelleştirmelerinin bir iç ağ konumundan uygulanabileceğini sağlamak için aşağıdaki koşulların doğru olması gerekir: 
+* **Güncelleştirilmiş ürün bitlerinin konumu**: çoğu zaman, Istemci MAKINELERI Microsoft CDN aracılığıyla Internet 'ten güncelleştirilmiş ürün bitlerini indirir. Bu senaryo, istemci makinelerin internet erişimine sahip olmasını gerektirir. Bununla birlikte, bazı kuruluşlar, istemci makinelerini yalnızca bir iç ağ düzeni konumundan BITS yüklemek ve güncelleştirmek üzere kısıtlar. Yönetici güncelleştirmelerinin dahili bir ağ konumunda bulunan güncelleştirilmiş bitler kullanılarak uygulanabileceğini sağlamak için, yönetici güncelleştirmesinin başarıyla dağıtılması için aşağıdaki koşulların doğru olması gerekir: 
 
-  - İstemci makinenin, ürünü bir ağ düzeni konumundan (örn. yerel yükleme önbelleği) yüklemiş olması gerekir. 
-  - Bu ağ düzeni konumu (istemcinin başlangıçta yüklendiği), yönetici güncelleştirmesi tarafından belirtilen [Güncelleştirilmiş ürün bitlerini içerecek şekilde güncelleştirilmiştir](../install/update-a-network-installation-of-visual-studio.md) . 
- 
-* **Visual Studio kullanımda olsa bile güncelleştirmenin oluşmasını zorla**: güncelleştirmeyi yüklemeden önce Visual Studio kapatılmalıdır. Visual Studio açıksa veya kullanılıyorsa, güncelleştirme yüklemesi iptal edilir. Visual Studio 'Nun kapalı olduğundan emin olmanın kolay bir yolu, bir makine yeniden başlatıldıktan sonra güncelleştirme hakkını uygulamak için onay yöneticisini yapılandırmaktır. `--force`Visual Studio 'yu kapatmayı zorlamak için parametresini de kullanabilirsiniz. Visual Studio 'Nun kapatılmasını zorlamak iş kaybına neden olabilir, bu nedenle dikkatli olun. Varsayılan sistem bağlamında bir yönetici güncelleştirmesi çalıştırıldığında bayrağı yok sayılacak, bu `–-force` nedenle yönetici güncelleştirmesini kullanıcı bağlamında çalıştırılacak şekilde yapılandırmanız gerekir.
- 
+  - İstemci makinenin bir noktada zaten bu ağ düzeni konumundan bir önyükleyiciyi çalıştırması gerekir. İdeal olarak, özgün istemci yüklemesi ağ düzeninden önyükleyici kullanılarak gerçekleşmiş olur, ancak aynı ağ konumunda güncelleştirilmiş bir önyükleyici kullanarak yalnızca bir güncelleştirme yüklemek de mümkündür. Bu eylemlerden biri, söz konusu düzen konumuyla bir bağlantı olan istemci makinesine katıştırılabilir.   
+  - Ağ düzeni konumunun (istemcinin bağlandığı yer), yönetici güncelleştirmesinin dağıtmak istediği [Güncelleştirilmiş ürün bitlerini içerecek şekilde güncelleştirilmesi](../install/update-a-network-installation-of-visual-studio.md) gerekir. 
+
+::: moniker range="vs-2019"
+
 * **Hizmet ana hat sürekliliği**: yukarıda açıklanan şekilde, özellik güncelleştirmeleri olan yönetici güncelleştirmeleri bir Visual Studio yüklemesini ürünün daha güncel bir alt sürümüne ilerledi. Ancak bazı durumlarda, geliştirme ekipleri belirli bir kararlı ve güvenli hizmet temeli düzeyinde kalmak ve istemcilerinin daha güncel bir alt sürüme ne zaman ilerledikleri hakkında kontrol etmek gibi. Bir istemci makinesini bir hizmet ana makinesinde kalacak ve kendisine gönderilen istenmeyen yönetici Özellik güncelleştirmelerini yoksayacak şekilde yapılandırmak için, **BaselineStickinessVersions2019** REG_SZ veri değerini oluşturmanız ve istemci makinesinin üzerinde kalabileceğini izin verilen taban çizgilerini temsil eden bir dizeye ayarlamanız gerekir.  Dize, **16.4.0, 16.7.0** gibi virgülle ayırarak bir hizmet ana hat sürümü dizisi içerebilir. Herhangi bir sayıda hizmet temeli sürümü, dizeye dahil edilebilir ve tüm desteklenen hizmet temellerine başvurmak için toplu olan **Tüm** sözcük de desteklenir. 
 
      `BaselineStickinessVersions2019`Kayıt defteri değeri hatalı biçimlendirilmişse, tüm özellik güncelleştirmelerinin makineye yüklenmesi engellenir. Ayrıca, lütfen [Visual Studio özellik güncelleştirmelerine yönelik desteklenen zaman çerçevelerine](https://docs.microsoft.com/visualstudio/productinfo/vs-servicing-vs)dikkat edin. Yaşam sürelerinin sonuna ulaşan Özellik güncelleştirmelerini uygulamak teknik olarak mümkün olsa da, destek dışı ve bu nedenle güvensiz olabilecek özellikler için önerilmez.
+
+::: moniker-end
+
+* **Visual Studio kullanımda olsa bile güncelleştirmenin oluşmasını zorla**: güncelleştirmeyi yüklemeden önce Visual Studio kapatılmalıdır. Visual Studio açıksa veya kullanılıyorsa, güncelleştirme yüklemesi iptal edilir. Visual Studio 'Nun kapalı olduğundan emin olmanın kolay bir yolu, bir makine yeniden başlatıldıktan sonra güncelleştirme hakkını uygulamak için onay yöneticisini yapılandırmaktır. `--force`Visual Studio 'yu kapatmayı zorlamak için parametresini de kullanabilirsiniz. Visual Studio 'Nun kapatılmasını zorlamak iş kaybına neden olabilir, bu nedenle dikkatli olun. Varsayılan sistem bağlamında bir yönetici güncelleştirmesi çalıştırıldığında bayrağı yok sayılacak, bu `–-force` nedenle yönetici güncelleştirmesini kullanıcı bağlamında çalıştırılacak şekilde yapılandırmanız gerekir.
 
 ### <a name="methods-for-configuring-an-administrator-update"></a>Yönetici Güncelleştirmesi yapılandırma yöntemleri
 
 Yönetici güncelleştirmelerini yapılandırmanın üç ana yöntemi vardır: bir kayıt defteri anahtarı, istemci makinesindeki bir yapılandırma dosyası veya Configuration Manager dağıtım paketinin kendisi üzerinde değişiklik.   
 
-* **Kayıt defteri anahtarı**: yönetici güncelleştirmeleri, [kurumsal dağıtımlar Için Varsayılanları Ayarla] belgelerinde açıklandığı gibi standart Visual Studio konumlarından herhangi birinde belirli kayıt defteri anahtarlarına bakar. Kayıt defteri anahtarları tarafından denetlenen seçenekler, **AdministratorUpdatesOptOut** REG_DWORD, **AdministratorUpdatesOptOut**   REG_DWORD ve **BaselineStickinessVersions2019** REG_SZ gibi öğelerdir. İstemci bilgisayarda yönetici erişimi, kayıt defteri anahtarlarının değerini oluşturmak ve ayarlamak için gereklidir. 
+* **Kayıt defteri anahtarı**: yönetici güncelleştirmeleri, [kurumsal dağıtımlar için varsayılanları ayarlama](../install/set-defaults-for-enterprise-deployments.md)bölümünde açıklandığı gibi standart Visual Studio konumlarından herhangi birinde belirli kayıt defteri anahtarlarına bakar. Kayıt defteri anahtarları tarafından denetlenen seçenekler, **AdministratorUpdatesOptOut** REG_DWORD, **AdministratorUpdatesOptOut**   REG_DWORD ve **BaselineStickinessVersions2019** REG_SZ gibi öğelerdir. İstemci bilgisayarda yönetici erişimi, kayıt defteri anahtarlarının değerini oluşturmak ve ayarlamak için gereklidir. 
  
-* **Yapılandırma dosyası**: bazı ayarlar, istemci makinesinde, yalnızca bir kez ayarlamaya ve gelecekteki tüm yönetici güncelleştirmelerine uygulanmasını sağlayan isteğe bağlı bir yapılandırma dosyasında korunabilir. Yapılandırma dosyası yaklaşımı bir kayıt defteri anahtarı gibi davranır ve makine genişliğinde olur ve bu, istemci makinesine yüklenen tüm Visual Studio yüklemelerine uygulanacak anlamına gelir. Yapılandırma dosyası için standart konum: `C:\ProgramData\Microsoft\VisualStudio\updates.config` . Ancak, dosyayı depolamak için başka bir konum kullanmak istiyorsanız, **Updateconfigurationfile** adlı bir REG_SZ kayıt defteri anahtarı oluşturarak ve bu anahtarın değerini yapılandırma dosyanızın yoluna ayarlayarak bunu yapabilirsiniz. Bu kayıt defteri anahtarı, [Kurumsal dağıtımlarda ayarlanan varsayılanlar](../install/set-defaults-for-enterprise-deployments.md)bölümünde açıklandığı gibi, Visual Studio kayıt defteri konumlarından herhangi birine yer alabilir. Özel yapılandırma dosyası konumu için bir kayıt defteri değeri eklemeyi seçerseniz, bu dosya için arama yapılır; Dosya yoksa, bir özel durum oluşturulur ve güncelleştirme başarısız olur.    
+* **Yapılandırma dosyası**: bazı ayarlar, istemci makinesinde, yalnızca bir kez ayarlamaya ve gelecekteki tüm yönetici güncelleştirmelerine uygulanmasını sağlayan isteğe bağlı bir yapılandırma dosyasında korunabilir. Yapılandırma dosyası yaklaşımı bir kayıt defteri anahtarı gibi davranır ve makine genişliğinde olur ve bu, istemci makinesine yüklenen tüm Visual Studio yüklemelerine uygulanacak anlamına gelir. Yapılandırma dosyası için standart konum: `C:\ProgramData\Microsoft\VisualStudio\updates.config` . Ancak, dosyayı depolamak için başka bir konum kullanmak istiyorsanız, **Updateconfigurationfile** adlı bir REG_SZ kayıt defteri anahtarı oluşturarak ve bu anahtarın değerini yapılandırma dosyanızın yoluna ayarlayarak bunu yapabilirsiniz. Bu kayıt defteri anahtarı, [kurumsal dağıtımlar için varsayılanları ayarlama](../install/set-defaults-for-enterprise-deployments.md)bölümünde açıklandığı gibi, Visual Studio kayıt defteri konumlarından herhangi birine yer alabilir. Özel yapılandırma dosyası konumu için bir kayıt defteri değeri eklemeyi seçerseniz, bu dosya için arama yapılır; Dosya yoksa, bir özel durum oluşturulur ve güncelleştirme başarısız olur.    
  
-JSON biçimindeki yapılandırma dosyası, `installerUpdateArgs` Visual Studio yükleyicisine geçirebilmeniz için daha fazla anahtar belirten virgüller ile ayrılmış bir dize dizisi olan seçeneği destekler. Dosyanın içeriği geçersiz bir alan veya desteklenmeyen bir seçenek içeriyorsa, güncelleştirme başarısız olur. Daha fazla bilgi için bkz. [Visual Studio 'yu yüklemek için komut satırı parametrelerini kullanma](../install/use-command-line-parameters-to-install-visual-studio.md).
+     JSON biçimindeki yapılandırma dosyası, `installerUpdateArgs` Visual Studio yükleyicisine geçirebilmeniz için daha fazla anahtar belirten virgüller ile ayrılmış bir dize dizisi olan seçeneği destekler. Dosyanın içeriği geçersiz bir alan veya desteklenmeyen bir seçenek içeriyorsa, güncelleştirme başarısız olur. Daha fazla bilgi için bkz. [Visual Studio 'yu yüklemek için komut satırı parametrelerini kullanma](../install/use-command-line-parameters-to-install-visual-studio.md).
  
-Örnek bir yapılandırma dosyası aşağıda verilmiştir: 
+   Örnek bir yapılandırma dosyası aşağıda verilmiştir: 
 
-```
-“installerUpdateArgs” : [“--quiet”, “--noWeb”], 
+   ```
+   “installerUpdateArgs” : [“--quiet”, “--noWeb”], 
 
-“checkPendingReboot” :  “true” 
-```
+   “checkPendingReboot” :  “true” 
+   ```
 
 * **SCCM 'de yönetici güncelleştirmeleri paketini el ile güncelleştirme**: SCCM 'de tek yönetici güncelleştirme paketinin komut satırı parametreleri de el ile değiştirilebilir.
 
@@ -133,14 +151,14 @@ Yönetim güncelleştirmeleri aşağıdaki dönüş kodlarını döndürebilir:�
 
 Visual Studio yönetici güncelleştirmeleri hakkında geri bildirim sağlamak veya güncelleştirmeleri etkileyen sorunları bildirmek için aşağıdaki yöntemleri kullanabilirsiniz:
 * [Visual Studio yükleme ve yükseltme sorunlarını giderme](../install/troubleshooting-installation-issues.md) kılavuzuna bakın.
-* [Visual Setup soru-cevap&](https://docs.microsoft.com/answers/topics/vs-setup.html)topluluğa soru sorabilirsiniz.
+* [Visual Studio Kurulumu soru-cevap&](https://docs.microsoft.com/answers/topics/vs-setup.html)topluluğa soru sorun.
 * [Visual Studio destek sayfasına](https://visualstudio.microsoft.com/vs/support/)gidin ve sorunun SSS bölümünde listelenip listelenmediğini denetleyin.  Sohbet yardımı için [destek bağlantısı](https://visualstudio.microsoft.com/vs/support/#talktous) düğmesini de seçebilirsiniz.
-* Bu deneyim için [özellik geri bildirimi sağlayın veya Visual Studio ekibine bir sorun bildirin](https://aka.ms/vs/wsus/feedback) .
+* Yönetici güncelleştirmelerini uygulama hakkında bu deneyimle ilgili olarak, [özellik geri bildirimi sağlayın veya Visual Studio ekibine bir sorun bildirin](https://aka.ms/vs/wsus/feedback) .
 * Microsoft için kuruluşunuzun teknik hesap yöneticisiyle iletişim kurun.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 * [Yönetici güncelleştirmelerini etkinleştirme](../install/enabling-administrator-updates.md)    
-* [Visual Studio Yönetici Kılavuzu](../install/visual-studio-administrator-guide.md)
+* [Visual Studio yönetici kılavuzu](../install/visual-studio-administrator-guide.md)
 * [Visual Studio Ürün Yaşam Döngüsü ve Bakım](https://docs.microsoft.com/visualstudio/productinfo/vs-servicing-vs)
 * [Visual Studio 2019 Sürüm Notları](https://docs.microsoft.com/visualstudio/releases/2019/release-notes)
 * [Visual Studio 2017 Sürüm Notları](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes)

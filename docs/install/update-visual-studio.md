@@ -2,7 +2,7 @@
 title: Visual Studio’yu güncelleştirme
 titleSuffix: ''
 description: Visual Studio 'Yu en son sürüme güncelleştirme, adım adım yönergeler hakkında bilgi edinin.
-ms.date: 10/12/2020
+ms.date: 04/06/2021
 ms.custom: seodec18
 ms.topic: how-to
 ms.prod: visual-studio-windows
@@ -17,12 +17,12 @@ ms.author: ornella
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d087ed0a43296f77ca934671f63f716bf6ddfae8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 02beb43dede8e38f290ff02febb3b84c53b90f9e
+ms.sourcegitcommit: 56060e3186086541d9016d4185e6f1bf3471e958
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99935722"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106547511"
 ---
 # <a name="update-visual-studio-to-the-most-recent-release"></a>Visual Studio 'Yu en son sürüme güncelleştirme
 
@@ -287,12 +287,17 @@ Aşağıdaki adımları uygulayın:
 
 ::: moniker-end
 
+## <a name="administrator-updates"></a>Yönetici güncelleştirmeleri 
+
+Yazılım yüklemelerinin yönetimini merkezileştiren bir kuruluşun parçasıysa kuruluş yöneticiniz, Visual Studio 'Nun makinenizde güncelleştirilmesine neden olabilir. Makinenizin kabul edebileceği güncelleştirme türlerini denetleme veya yapılandırma hakkında daha fazla bilgi için bkz. [Using Configuration Manager, Visual Studio güncelleştirmelerini dağıtmak için](../install/applying-administrator-updates.md#using-configuration-manager-to-deploy-visual-studio-updates). 
+
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 * [Visual Studio sürümlerini yan yana yükleme](install-visual-studio-versions-side-by-side.md)
 * [Visual Studio’nun ağ tabanlı yüklemesini güncelleştirme](update-a-network-installation-of-visual-studio.md)
+* [Visual Studio Enterprise kılavuzu](visual-studio-enterprise-guide.md)
 * [Bakım temeli sırasında Visual Studio’yu güncelleştirme](update-servicing-baseline.md)
 * [Ağ tabanlı Visual Studio dağıtımlarında güncelleştirmeleri denetleme](controlling-updates-to-visual-studio-deployments.md)
 * [Visual Studio’yu değiştirme](modify-visual-studio.md)

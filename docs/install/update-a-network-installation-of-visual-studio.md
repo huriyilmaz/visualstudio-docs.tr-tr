@@ -1,7 +1,7 @@
 ---
 title: Ağ tabanlı yüklemeyi güncelleştirme
 description: --Layout komutunu kullanarak ağ tabanlı Visual Studio yüklemesini güncelleştirme hakkında bilgi edinin
-ms.date: 06/29/2020
+ms.date: 04/06/2021
 ms.custom: seodec18
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 6829bac79f747d4f9bacfe5e71f57352fcad0970
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d5ad0231c2dc21acc4a8d954456921dbe2838e39
+ms.sourcegitcommit: 56060e3186086541d9016d4185e6f1bf3471e958
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99959161"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106547407"
 ---
 # <a name="update-a-network-based-installation-of-visual-studio"></a>Visual Studio’nun ağ tabanlı yüklemesini güncelleştirme
 
@@ -33,17 +33,7 @@ Visual Studio 'nun bir ağ yükleme düzeninin en son ürün güncelleştirmeler
 
 Ağ yükleme paylaşımınızı en son güncelleştirmeleri içerecek şekilde yenilemek için, `--layout` güncelleştirilmiş paketleri artımlı olarak indirmek üzere komutunu çalıştırın.
 
-::: moniker range="vs-2017"
-
-**15,3 ' de yeni**: [ağ düzeni ilk oluşturduğunuzda](create-a-network-installation-of-visual-studio.md)kısmi bir düzen seçtiyseniz, bu ayarlar kaydedilir. Gelecekteki tüm düzen komutları, önceki seçenekleri ve belirttiğiniz tüm yeni seçenekleri kullanır. Ancak önceki bir sürümün bir yerleşimini kullanıyorsanız, içeriğini güncelleştirmek için ağ yüklemesi yerleşimini (diğer bir deyişle, aynı iş yüklerini ve dilleri) ilk oluşturduğunuzda kullandığınız komut satırı parametrelerinin aynısını kullanmanız gerekir.
-
-::: moniker-end
-
-::: moniker range="vs-2019"
-
 [Ağ yerleşimini ilk oluşturduğunuzda](create-a-network-installation-of-visual-studio.md)kısmi bir düzen seçtiyseniz, bu ayarlar kaydedilir. Gelecekteki tüm düzen komutları, önceki seçenekleri ve belirttiğiniz tüm yeni seçenekleri kullanır.
-
-::: moniker-end
 
 Bir dosya paylaşımında bir düzen barındırdıysanız, düzenin özel bir kopyasını (örneğin, c:\VSLayout) güncelleştirmeniz gerekir ve ardından tüm güncelleştirilmiş içerik indirildikten sonra dosyayı dosya paylaşımınıza kopyalayın (örneğin, \\ Server\products\vs). Bunu yapmazsanız, düzeni güncelleştirirken kurulum 'U çalıştıran tüm kullanıcıların, henüz tamamen güncelleştirilmediği için düzenden tüm içeriği elde edememesinde daha büyük bir şansınız vardır.
 
