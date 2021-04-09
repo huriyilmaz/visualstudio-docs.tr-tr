@@ -15,16 +15,62 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: bbad51f6d06c221118ffda01e1c7e93374eea2ff
-ms.sourcegitcommit: 3a855d3513407ea78336386dc3be0b75142614b0
+ms.openlocfilehash: 05af4933569e988b35bea9763a27d8f68aae3627
+ms.sourcegitcommit: be14ae4b95e289f16e9444293bb2ec997d4b4d72
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/17/2021
-ms.locfileid: "103622575"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "107031599"
 ---
 # <a name="history-of-whats-new-in-visual-studio-docs"></a>Visual Studio belgelerindeki yeniliklerin geçmişi
 
-Visual Studio docs 'taki yenilikler geçmişine hoş geldiniz. Bu makale, 2021 Şubat 'tan önce docs 'a kadar olan büyük değişiklikleri içerir (2020 Temmuz 'dan itibaren). En son yenilikler için bkz. [Visual Studio docs: docs 'taki](whats-new-visual-studio-docs.md)yenilikler.
+Visual Studio docs 'taki yenilikler geçmişine hoş geldiniz. Bu makalede Mart 2021 ' den önceki belgelere yapılan büyük değişiklikler (2020 Temmuz 'dan itibaren) yer almaktadır. En son yenilikler için bkz. [Visual Studio docs: docs 'taki](whats-new-visual-studio-docs.md)yenilikler.
+
+## <a name="february-2021"></a>Şubat 2021
+
+### <a name="debugger"></a>Hata Ayıklayıcısı
+
+**Güncelleştirilmiş makaleler**
+
+- [Visual Studio hata ayıklayıcısında kesme noktaları kullan](../debugger/using-breakpoints.md) -erişilebilirlik güncelleştirmeleri
+
+### <a name="get-started"></a>başlarken
+
+**Güncelleştirilmiş makaleler**
+
+- [Öğretici: Visual Studio 2017 ' de bir depodan bir proje açın](../get-started/tutorial-open-project-from-repo-visual-studio-2017.md) -güncelleştirme ayrıca bkz. VS2017 Open Project in from the bir deposundan
+- [Öğretici: bir depoyu bir depodan açın](../get-started/tutorial-open-project-from-repo-visual-studio-2019.md) -' bir depoyu bir VS2017 sürümüne ekleyin ' sayfasında ' bir proje açın ' sayfasından bir proje açın
+
+### <a name="ide"></a>IDE
+
+**Güncelleştirilmiş makaleler**
+
+- [MSBuild sorunları Için sorun giderme ve günlük oluşturma](./msbuild-logs.md) -proje sistemi araçları uzantısını kullanma hakkında yönergeler ekleme
+
+### <a name="install"></a>Yükleme
+
+**Güncelleştirilmiş makaleler**
+
+- [En düşük düzeyde çevrimdışı düzen kullanarak Visual Studio'yu güncelleştirme](../install/update-minimal-layout.md)
+  - Seçenekler tablosunda 2017 örnek ekleme
+  - VS2017 için örnekler ekleme
+
+### <a name="msbuild"></a>MSBuild
+
+**Yeni makaleler**
+
+- [MSB3644: ' FrameworkVersion ' için başvuru derlemeleri bulunamadı](../msbuild/errors/msb3644.md) -MSBuild hataları
+- [MSB8036: Windows SDK ' version ' bulunamadı](../msbuild/errors/msb8036.md) -MSBuild hataları
+
+### <a name="test"></a>Test
+
+**Güncelleştirilmiş makaleler**
+
+- [Visual Studio 'Da C++ Için Microsoft birim testi çerçevesini kullanma](../test/how-to-use-microsoft-test-framework-for-cpp.md) -küçük içerik yenileme ve düzenleme
+- [Visual Studio 'Da C++ dll 'leri için birim testleri yazma](../test/how-to-write-unit-tests-for-cpp-dlls.md) -küçük içerik yenileme ve düzenleme
+- [Test Gezgini ile birim testleri çalıştırma](../test/run-unit-tests-with-test-explorer.md) -erişilebilirlik güncelleştirmeleri
+- [Izlenecek yol: yönetilen kod için birim testleri oluşturma ve çalıştırma](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md) -erişilebilirlik için güncelleştirmeler
+- [Microsoft Fakes ile test edilen kodu yalıtın](../test/isolating-code-under-test-with-microsoft-fakes.md) -Fakes docs 'taki .NET 5,0 'yi açıkça belirleyin
 
 ## <a name="january-2021"></a>Ocak 2021
 ### <a name="azure"></a>Azure
@@ -102,7 +148,7 @@ Visual Studio docs 'taki yenilikler geçmişine hoş geldiniz. Bu makale, 2021 �
 
 - [Visual Studio Profiler 'dan DotNet sayaçlarını görselleştirin](../profiling/dotnet-counters-tool.md) -.net sayaçlarını ekleme araç belgesi
 
-### <a name="test"></a>Test etme
+### <a name="test"></a>Test
 
 **Güncelleştirilmiş makaleler**
 
@@ -162,7 +208,7 @@ Visual Studio docs 'taki yenilikler geçmişine hoş geldiniz. Bu makale, 2021 �
   - Tutorial-projects-solutions.md Güncelleştir
   - eksik menü seçeneği
 
-### <a name="test"></a>Test etme
+### <a name="test"></a>Test
 
 **Güncelleştirilmiş makaleler**
 
@@ -298,7 +344,7 @@ Visual Studio docs 'taki yenilikler geçmişine hoş geldiniz. Bu makale, 2021 �
 
 - [Uygulama performansını](../profiling/profile-apps-from-command-line.md) komut satırı-güncelleştirme profil oluşturma komut satırı belgelerinden ölçme
 
-### <a name="test"></a>Test etme
+### <a name="test"></a>Test
 
 **Güncelleştirilmiş makaleler**
 
@@ -637,7 +683,7 @@ Visual Studio docs 'taki yenilikler geçmişine hoş geldiniz. Bu makale, 2021 �
 - [Ortak MSBuild öğe meta verileri](../msbuild/common-msbuild-item-metadata.md) -MSBuild: bağlantı ve bağlantı tabanı ile isteğe bağlı meta veriler için tablo ekleme
 - [MSBuild 'de çözüm filtreleri](../msbuild/solution-filters.md) -MSBuild çözüm filtreleri
 
-### <a name="test"></a>Test etme
+### <a name="test"></a>Test
 
 **Yeni makaleler**
 

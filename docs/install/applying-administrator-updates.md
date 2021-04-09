@@ -2,7 +2,7 @@
 title: Microsoft uç noktası ile Visual Studio 'ya yönetici güncelleştirmeleri uygulama Configuration Manager
 titleSuffix: ''
 description: Yönetici güncelleştirmelerini Visual Studio 'ya uygulamayı öğrenin.
-ms.date: 04/06/2021
+ms.date: 04/07/2021
 ms.custom: ''
 ms.topic: overview
 ms.assetid: 9a3fdb28-db3d-4970-bc17-7417a985f0fb
@@ -13,12 +13,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: d316fc35df8c571a9112d7a653737e099df80559
-ms.sourcegitcommit: 56060e3186086541d9016d4185e6f1bf3471e958
+ms.openlocfilehash: 4df931ee5eb5eaefdf6d918ff05df65b799bef7e
+ms.sourcegitcommit: be14ae4b95e289f16e9444293bb2ec997d4b4d72
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/07/2021
-ms.locfileid: "106547459"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "107031612"
 ---
 # <a name="applying-administrator-updates-that-use-microsoft-endpoint-configuration-manager"></a>Microsoft uç noktası kullanan yönetici güncelleştirmelerini uygulama Configuration Manager
 
@@ -83,9 +83,9 @@ Visual Studio Yönetici güncelleştirmelerini kuruluşunuzun dağıtım tercihl
 
 ::: moniker range="vs-2019"
 
-* **Hizmet ana hat sürekliliği**: yukarıda açıklanan şekilde, özellik güncelleştirmeleri olan yönetici güncelleştirmeleri bir Visual Studio yüklemesini ürünün daha güncel bir alt sürümüne ilerledi. Ancak bazı durumlarda, geliştirme ekipleri belirli bir kararlı ve güvenli hizmet temeli düzeyinde kalmak ve istemcilerinin daha güncel bir alt sürüme ne zaman ilerledikleri hakkında kontrol etmek gibi. Bir istemci makinesini bir hizmet ana makinesinde kalacak ve kendisine gönderilen istenmeyen yönetici Özellik güncelleştirmelerini yoksayacak şekilde yapılandırmak için, **BaselineStickinessVersions2019** REG_SZ veri değerini oluşturmanız ve istemci makinesinin üzerinde kalabileceğini izin verilen taban çizgilerini temsil eden bir dizeye ayarlamanız gerekir.  Dize, **16.4.0, 16.7.0** gibi virgülle ayırarak bir hizmet ana hat sürümü dizisi içerebilir. Herhangi bir sayıda hizmet temeli sürümü, dizeye dahil edilebilir ve tüm desteklenen hizmet temellerine başvurmak için toplu olan **Tüm** sözcük de desteklenir. 
+* **Hizmet temeli sürekliliği**: yukarıda açıklanan şekilde, yönetici özelliği güncelleştirmeleri bir Visual Studio yüklemesini ürünün daha güncel bir alt sürümüne ilerledi. Ancak bazı durumlarda, Visual Studio kullanıcılarının belirli bir kararlı ve güvenli hizmet temeli düzeyinde kalması ve makinelerinden daha güncel bir alt sürüme ne zaman ilerledikleri kontrol olmaları gerekir. Bir istemci makinesini bir hizmet ana makinesinde kalacak ve kendisine gönderilen istenmeyen yönetici Özellik güncelleştirmelerini yoksaymaya yönelik olarak yapılandırmak için, **BaselineStickinessVersions2019** REG_SZ veri değerini oluşturmanız ve istemci makinenin üzerinde kalması gereken tercih edilen taban çizgisini temsil eden bir dizeye ayarlamanız gerekir. Dize, **16.7.0** gibi, izin verilen bir hizmet temeli sürümü içerebilir.  
 
-     `BaselineStickinessVersions2019`Kayıt defteri değeri hatalı biçimlendirilmişse, tüm özellik güncelleştirmelerinin makineye yüklenmesi engellenir. Ayrıca, lütfen [Visual Studio özellik güncelleştirmelerine yönelik desteklenen zaman çerçevelerine](https://docs.microsoft.com/visualstudio/productinfo/vs-servicing-vs)dikkat edin. Yaşam sürelerinin sonuna ulaşan Özellik güncelleştirmelerini uygulamak teknik olarak mümkün olsa da, destek dışı ve bu nedenle güvensiz olabilecek özellikler için önerilmez.
+     `BaselineStickinessVersions2019`Kayıt defteri değeri hatalı biçimlendirilmişse, tüm yönetici özelliği güncelleştirmelerinin makineye yüklenmesi engellenir. [Visual Studio özellik güncelleştirmeleri için desteklenen zaman çerçevelerine](https://docs.microsoft.com/visualstudio/productinfo/vs-servicing-vs)dikkat edin. Ayrıca, anahtarın varlığı veya değeri ne olursa olsun, `BaselineStickinessVersions2019` yaşam sürelerinin sonuna ulaşan yönetici özelliği güncelleştirmelerinin uygulanması teknik olarak mümkün olsa da, destek dışı ve bu nedenle güvensiz olabilir.
 
 ::: moniker-end
 
