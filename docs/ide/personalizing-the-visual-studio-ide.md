@@ -2,19 +2,19 @@
 title: IDE’yi Özelleştirme
 description: Visual Studio IDE 'yi, kendi geliştirme tarzlarınızı ve gereksinimlerinizi en iyi şekilde destekleyecek şekilde nasıl kişiselleştirebileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
-ms.date: 11/20/2017
+ms.date: 04/12/2021
 ms.topic: conceptual
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 550ab6449cc74d3d0d81d60a41b11f0273003c51
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9a1bcfdc9489ee59f5697f1d96de21e31a71fb17
+ms.sourcegitcommit: 5035ccb32fb5e06451337cbf9a150687082ae2af
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99909017"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107373173"
 ---
 # <a name="personalize-the-visual-studio-ide"></a>Visual Studio IDE 'yi kişiselleştirme
 
@@ -40,7 +40,7 @@ Birçok kişiselleştirme seçeneği, [ortam seçenekleri](../ide/reference/gene
 
 ## <a name="environment-color-themes"></a>Ortam renk temaları
 
-Açık, koyu ve mavi arasındaki renk temasını değiştirmek için, arama kutusuna **ortam** yazın ve ardından **genel > ortam**' ı seçin. **Seçenekler** iletişim kutusunda, **renk teması** seçeneğini değiştirin.
+Renkli temayı koyu, açık, mavi ve mavi (ek kontrast) arasında değiştirmek için, arama kutusuna **Tema** yazın ve ardından **genel > ortam**' ı seçin. **Seçenekler** iletişim kutusunda, **renk teması** seçeneğini değiştirin.
 
 Düzenleyicideki renklendirme seçeneklerini değiştirmek için, arama kutusuna **ortam** yazın ve ardından **> yazı tipi ve renkler**' i seçin. Bkz. [nasıl yapılır: yazı tiplerini ve renkleri değiştirme](../ide/how-to-change-fonts-and-colors-in-visual-studio.md).
 
