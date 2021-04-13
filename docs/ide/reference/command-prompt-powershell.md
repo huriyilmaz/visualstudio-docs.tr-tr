@@ -1,8 +1,8 @@
 ---
-title: Geliştiriciler için komut satırı kabukları
-description: .NET ve C++ araçlarını daha kolay kullanmanıza imkan tanıyan Visual Studio Geliştirici Komut İstemi, Visual Studio Developer PowerShell ve Visual Studio Terminal 'yi bulmayı ve kullanmayı öğrenin.
-ms.date: 03/04/2021
-ms.custom: contperf-fy21q3
+title: Komut satırı kabukları & geliştiriciler için istem
+description: Araçlar > komut satırı menüsünden Başlat. Visual Studio Geliştirici Komut İstemi, geliştirici PowerShell ve Terminal, .NET ve C++ araçlarını daha kolay kullanmanıza imkan sağlar.
+ms.date: 04/11/2021
+ms.custom: contperf-fy21q4
 helpviewer_keywords:
 - Visual Studio command prompt
 - command prompt, Visual Studio
@@ -11,27 +11,21 @@ helpviewer_keywords:
 - Visual Studio terminal
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
 no-loc: cmdlet
-ms.openlocfilehash: fb2c99037577528b77ab5c1b0c74bf7af9e73d1b
-ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
+ms.openlocfilehash: 57cbc93f4b6e8cf64dd5149462788e0cde833350
+ms.sourcegitcommit: 52b093e000334f53d87c6165d1418347e4f45dec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104672331"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "107221737"
 ---
-# <a name="developer-command-prompt-and-developer-powershell"></a>Geliştirici Komut İstemi ve geliştirici PowerShell
+# <a name="visual-studio-developer-command-prompt-and-developer-powershell"></a>Visual Studio Geliştirici Komut İstemi ve geliştirici PowerShell
 
 Visual Studio 2019, geliştiriciler için iki komut satırı kabuklarını içerir:
 
 - **Visual Studio Geliştirici komut istemi** -komut satırı geliştirici araçlarını kullanmayı daha kolay hale getirmek için ayarlanan belirli ortam değişkenlerine sahip standart bir komut istemi. Visual Studio 2015 sürümünden itibaren kullanılabilir.
+
 - **Visual Studio Geliştirici PowerShell** -bir komut isteminden daha güçlü. Örneğin, bir komutun çıkışını başka bir komutun (bir olarak bilinir) çıktısını geçirebilirsiniz *cmdlet* cmdlet . Bu kabukta Geliştirici Komut İstemi ile aynı ortam değişkenleri ayarlanmış. Visual Studio 2019 sürümünden itibaren kullanılabilir.
 
-Her iki kabukların de komut satırı geliştirici araçlarını daha kolay bir şekilde kullanmanızı sağlayan belirli ortam değişkenleri vardır. Bu kabukların birini açtıktan sonra, farklı yardımcı programlara ait komutları bulundukları yere bildirmek zorunda kalmadan girebilirsiniz. Çalıştırabileceğiniz komutlar şunlardır:
-
-- [`MSBuild`](../../msbuild/msbuild-command-line-reference.md), bir proje veya çözüm oluşturmak için.
-- Ve gibi [araçlar .NET Framework](/dotnet/framework/tools/index) [`clrver`](/dotnet/framework/tools/clrver-exe-clr-version-tool) [`ildasm`](/dotnet/framework/tools/ildasm-exe-il-disassembler) .
-- Ve gibi C/C++ derleme araçları [`CL`](/cpp/build/reference/compiler-command-line-syntax) [`NMAKE`](/cpp/build/reference/running-nmake) .
-- Ve gibi ek C/C++ derleme araçları [`LIB`](/cpp/build/reference/lib-reference) [`DUMPBIN`](/cpp/build/reference/dumpbin-reference) .
-- Ve gibi [.net CLI komutları](/dotnet/core/tools/index) [`dotnet`](/dotnet/core/tools/dotnet) [`dotnet run`](/dotnet/core/tools/dotnet-run) . (Bu komutlara düzenli bir komut isteminden de erişilebilir.)
 
 :::image type="content" source="media/developer-command-prompt-for-vs/command-prompt.png" alt-text="Clrver aracını gösteren Visual Studio için Geliştirici Komut İstemi":::
 
@@ -41,7 +35,22 @@ Visual Studio 2019 sürüm 16,5 ' den başlayarak, Visual Studio, bu kabukların
 
 Visual Studio 'daki geliştirici kabularından birini ayrı bir uygulama olarak veya Terminal penceresinde açtığınızda, bu, geçerli çözümünüzün dizinine (yüklenmiş bir çözümünüz varsa) açılır. Bu davranış, komutları çözüme veya projelerine karşı çalıştırmayı kolaylaştırır.
 
-## <a name="start-the-shell-from-inside-visual-studio"></a>Kabuğu Visual Studio 'Nun içinden başlatın
+Her iki kabukların de komut satırı geliştirici araçlarını daha kolay bir şekilde kullanmanızı sağlayan belirli ortam değişkenleri vardır. Bu kabukların birini açtıktan sonra, farklı yardımcı programlara ait komutları bulundukları yere bildirmek zorunda kalmadan girebilirsiniz. 
+
+|Popüler komutlar|Description|
+|--|--|
+|[`MSBuild`](../../msbuild/msbuild-command-line-reference.md)|Proje veya çözüm oluşturma|
+|[`clrver`](/dotnet/framework/tools/clrver-exe-clr-version-tool)| CLR için [.NET Framework araçları](/dotnet/framework/tools/index) .|
+|[`ildasm`](/dotnet/framework/tools/ildasm-exe-il-disassembler)|Disassembler için [.NET Framework aracı](/dotnet/framework/tools/index) .|
+|[`dotnet`](/dotnet/core/tools/dotnet)|[.Net CLI komutu](/dotnet/core/tools/index)|
+|[`dotnet run`](/dotnet/core/tools/dotnet-run)|[.Net CLI komutu](/dotnet/core/tools/index)|
+|[`CL`](/cpp/build/reference/compiler-command-line-syntax)|C/C++ derleme aracı|
+|[`NMAKE`](/cpp/build/reference/running-nmake)|C/C++ derleme aracı|
+|[`LIB`](/cpp/build/reference/lib-reference)| C/C++ derleme aracı|
+|[`DUMPBIN`](/cpp/build/reference/dumpbin-reference)| C/C++ derleme aracı|
+
+
+## <a name="start-in-visual-studio"></a>Visual Studio 'da Başlat
 
 Geliştirici Komut İstemi veya geliştirici PowerShell 'i Visual Studio içinden açmak için şu adımları izleyin:
 
@@ -51,9 +60,9 @@ Geliştirici Komut İstemi veya geliştirici PowerShell 'i Visual Studio içinde
 
    ![Visual Studio 'da komut istemi menü öğesi](./media/developer-command-prompt-for-vs/vs-menu.png)
 
-## <a name="use-the-windows-start-menu"></a>Windows Başlat menüsünü kullanma
+## <a name="start-from-windows-menu"></a>Windows menüsünden Başlat
 
-Visual Studio sürümüne ve yüklediğiniz ek SDK ve iş yüklerine bağlı olarak birden çok komut istemi olabilir. Aşağıdaki adımlar çalışmazsa, [makinenizde dosyaları el ile bulmayı](#manually-locate-the-file) deneyebilir veya [kabuğu Visual Studio 'nun içinden başlatabilirsiniz](#start-the-shell-from-inside-visual-studio).
+Kabukların başlatılması için başka bir yol da Başlangıç menüsünden yapılır. Visual Studio sürümüne ve yüklediğiniz ek SDK ve iş yüklerine bağlı olarak birden çok komut istemi olabilir. 
 
 ### <a name="windows-10"></a>Windows 10
 
@@ -85,7 +94,7 @@ Visual Studio sürümüne ve yüklediğiniz ek SDK ve iş yüklerine bağlı ola
 
 [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk) veya [önceki sürümler](https://developer.microsoft.com/windows/downloads/sdk-archive)gibi başka SDK 'lar yüklüyse, ek komut istemleri görebilirsiniz. Hangi komut istemi sürümünü kullanmanız gerektiğini belirlemek için, tek tek araçlara ilişkin belgelere bakın.
 
-## <a name="manually-locate-the-file"></a>Dosyayı el ile bulma
+## <a name="start-from-file-browser"></a>Dosya tarayıcısından Başlat 
 
 Genellikle, yüklediğiniz kabukların kısayolları, *%ProgramData%\Microsoft\Windows\Start Menu\Programs\Visual Studio 2019 \ Visual Studio Araçları* gibi Visual Studio Için **Başlat menüsü** klasörüne yerleştirilir. Ancak, komut istemi araması beklenen sonuçları oluşturmazsa, makinenizde dosyaları el ile bulmayı deneyebilirsiniz.
 

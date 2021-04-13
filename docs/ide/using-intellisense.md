@@ -17,12 +17,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 46eae980a1dafc8e9b7f95f5d40593e57045cc01
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0e6b984a9f885f137cf387837a242cc1207e45ae
+ms.sourcegitcommit: 52b093e000334f53d87c6165d1418347e4f45dec
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99971329"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "107221724"
 ---
 # <a name="intellisense-in-visual-studio"></a>Visual Studio 'da IntelliSense
 
@@ -68,7 +68,7 @@ Hızlı bilgi kodunuzdaki herhangi bir tanımlayıcı için bütün bildirimi g�
 
 ![C&#35; kod dosyasında parametre bilgisi](../ide/media/vs2015_paraminfo.png)
 
-Hızlı bilgiyi,   >    >  **CTRL** tuşuna basarak veya Düzenleyici araç çubuğunda +  **hızlı bilgi** düğmesini seçerek IntelliSense hızlı bilgilerini düzenle ' yi seçerek el ile çağırabilirsiniz.
+Hızlı bilgi 'yi **Düzenle**' yi seçerek IntelliSense hızlı bilgilerini düzenle ' yi, CTRL  >    >  tuşuna basarak  +   + veya Düzenleyici araç çubuğunda **hızlı bilgi** düğmesini seçerek el ile çağırabilirsiniz.
 
 Bir işlev aşırı yüklenmişse, IntelliSense, tüm aşırı yük biçimleri için bilgileri görüntülemeyebilir.
 
@@ -93,7 +93,7 @@ IntelliSense 'deki simgeler simge değiştiricilerine ek anlam verebilir. Bunlar
 | ![İç simge değiştiricisi](../ide/media/intellisenseInternalModifier.png)       |    İç sınıf    |    Erişim, geçerli derleme ile sınırlıdır.    |
 |![Özel simge değiştiricisi](../ide/media/intellisensePrivateModifier.png)        |    Özel sınıf    |    Erişim, geçerli derleme içindeki içeren sınıftan türetilmiş kapsayan sınıf veya türlerle sınırlıdır. (C# 7,2 sürümünden itibaren kullanılabilir.)    |
 
-## <a name="troubleshoot-intellisense"></a>IntelliSense sorunlarını giderme
+## <a name="troubleshoot-intellisense&quot;></a>IntelliSense sorunlarını giderme
 
 IntelliSense seçenekleri, belirli durumlarda beklediğiniz gibi çalışmayabilir.
 
@@ -104,7 +104,7 @@ IntelliSense seçenekleri, belirli durumlarda beklediğiniz gibi çalışmayabil
 **İmleç bir dize sabit değeri içinde.** İmleç, aşağıdaki örnekte olduğu gibi bir dize sabit değeri etrafında tırnak işaretlerinde ise IntelliSense kullanamazsınız:
 
 ```cpp
-MessageBox( hWnd, "String literal|")
+MessageBox( hWnd, &quot;String literal|")
 ```
 
 **Otomatik seçenekler kapalıdır.** Varsayılan olarak, IntelliSense otomatik olarak işe yarar, ancak devre dışı bırakabilirsiniz. Otomatik deyim tamamlama devre dışı olsa bile, bir IntelliSense özelliğini çağırabilirsiniz.
