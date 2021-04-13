@@ -7,17 +7,17 @@ ms.topic: tutorial
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
 ms.assetid: f44e50be-a5f5-4d77-9cff-dd52374c3f74
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 7597b97a93b2e602a3166eb60b4055082ed7675f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 75019a9f292a07c1dffe6cce5118ef6502014ce6
+ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99951023"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107296605"
 ---
 # <a name="step-1-create-a-project-and-add-labels-to-your-form"></a>1. Adım: Proje oluşturma ve formunuza etiketler ekleme
 
@@ -36,7 +36,7 @@ Bu testi geliştirmenin ilk adımı olarak, projeyi oluşturur ve bir forma Etik
 
 1. Şablon listesinde **Windows Forms App (.NET Framework)** şablonunu seçin, *MathQuiz* olarak adlandırın ve **Tamam** düğmesini seçin.
 
-    Seçtiğiniz programlama diline bağlı olarak, *Form1.cs* veya *Form1. vb* adlı bir form görüntülenir.
+    Seçtiğiniz programlama diline bağlı olarak *Form1. cs* veya *Form1. vb* adlı bir form görüntülenir.
 
    > [!NOTE]
    > **Windows Forms App (.NET Framework)** şablonunu görmüyorsanız, **.net masaüstü geliştirme** iş yükünü yüklemek için Visual Studio yükleyicisi kullanın.<br/><br/>![Visual Studio Yükleyicisi .NET masaüstü geliştirme iş yükü](../ide/media/dot-net-desktop-dev-workload.png)<br/><br/> Daha fazla bilgi için bkz. [Visual Studio 'Yu Install](../install/install-visual-studio.md) sayfası.
@@ -72,7 +72,7 @@ Bu testi geliştirmenin ilk adımı olarak, projeyi oluşturur ve bir forma Etik
 
 ## <a name="to-set-properties-for-a-form"></a>Form özelliklerini ayarlamak için
 
-1. Visual Studio 'da, formu (programlama diline bağlı olarak *Form1.cs* veya *Form1. vb*) seçin ve ardından **Text** özelliğini **matematik sınavı** olarak değiştirin.
+1. Visual Studio 'da, formu seçin (programlama diline bağlı olarak *Form1. cs* veya *Form1. vb*) ve sonra **Text** özelliğini **matematik sınavına** değiştirin.
 
      **Özellikler** penceresi form özelliklerini içerir.
 

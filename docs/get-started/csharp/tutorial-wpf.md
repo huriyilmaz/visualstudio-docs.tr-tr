@@ -9,17 +9,17 @@ ms.topic: tutorial
 dev_langs:
 - CSharp
 ms.assetid: f84339c7-d617-4f56-bfcd-af2215c347ba
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1f3232ad0a8b7cc34abbe6d49c05944c066226da
-ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
+ms.openlocfilehash: 419fa05ae510f3dc22ce82c3805f9f54b4e53b27
+ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101682899"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107295578"
 ---
 # <a name="tutorial-create-a-simple-application-with-c"></a>Öğretici: C ile basit bir uygulama oluşturma\#
 
@@ -228,11 +228,11 @@ Ekleyeceğiniz son UI öğesi bir [düğme](/dotnet/framework/wpf/controls/butto
 
 ### <a name="add-code-to-the-display-button"></a>Görüntü düğmesine kod ekleme
 
-Bu uygulama çalıştığında, bir Kullanıcı radyo düğmesini seçtikten sonra **görüntüle** düğmesini seçtiğinde bir ileti kutusu görünür. Merhaba için bir ileti kutusu ve Güle Güle için bir diğer ileti kutusu görünecektir. Bu davranışı oluşturmak için `Button_Click` *Greetings.xaml.cs* içindeki olaya kod ekleyeceksiniz.
+Bu uygulama çalıştığında, bir Kullanıcı radyo düğmesini seçtikten sonra **görüntüle** düğmesini seçtiğinde bir ileti kutusu görünür. Merhaba için bir ileti kutusu ve Güle Güle için bir diğer ileti kutusu görünecektir. Bu davranışı oluşturmak için `Button_Click` *Greetings. xaml. cs* içindeki olaya kod ekleyeceksiniz.
 
 1. Tasarım yüzeyinde **görüntüle** düğmesine çift tıklayın.
 
-     *Greetings.xaml.cs* , imleç `Button_Click` olayda açılır.
+     *Greetings. xaml. cs* , olayında imleç ile açılır `Button_Click` .
 
     ```csharp
     private void Button_Click(object sender, RoutedEventArgs e)
@@ -293,13 +293,13 @@ Hata ayıklayıcıyı yeniden başlatın ( **F5** tuşuna basın). Uygulamanın 
 
 Hata ayıklamayı durdurmak için şimdi uygulama penceresini kapatın.
 
-### <a name="debug-with-breakpoints"></a>Kesme noktalarıyla hata ayıkla
+### <a name="debug-with-breakpoints&quot;></a>Kesme noktalarıyla hata ayıkla
 
 Hata ayıklama sırasında bazı kesme noktaları ekleyerek kodu test edebilirsiniz. Kesme   >  **noktası geçiş noktasını** seçerek, kesmenin gerçekleşmesini istediğiniz kod satırının yanındaki düzenleyicinin sol kenar boşluğuna tıklayarak veya **F9** tuşuna basarak kesme noktaları ekleyebilirsiniz.
 
-#### <a name="add-breakpoints"></a>Kesme noktası ekleme
+#### <a name=&quot;add-breakpoints&quot;></a>Kesme noktası ekleme
 
-1. *Greetings.xaml.cs* açın ve aşağıdaki satırı seçin:`MessageBox.Show("Hello.")`
+1. *Greetings. xaml. cs*' yi açın ve aşağıdaki satırı seçin:`MessageBox.Show(&quot;Hello.")`
 
 1. Menüden **Hata Ayıkla**' yı ve ardından **kesme noktasını aç**' ı seçerek bir kesme noktası ekleyin.
 

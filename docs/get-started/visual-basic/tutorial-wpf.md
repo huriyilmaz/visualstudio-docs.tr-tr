@@ -9,17 +9,17 @@ ms.topic: tutorial
 dev_langs:
 - VB
 ms.assetid: f84339c7-d617-4f56-bfcd-af2215c347ba
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 00b8488682674b2531bac561e9f2536e616800fb
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f337551c16aa63b606c10492bab9956a92cbe141
+ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99944374"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107295435"
 ---
 # <a name="tutorial-create-a-simple-application-with-visual-basic"></a>Öğretici: Visual Basic ile basit bir uygulama oluşturma
 
@@ -198,7 +198,7 @@ Ekleyeceğiniz son UI öğesi bir [düğme](/dotnet/framework/wpf/controls/butto
 
 ### <a name="add-code-to-the-display-button"></a>Görüntü düğmesine kod ekleme
 
-Bu uygulama çalıştığında, bir Kullanıcı radyo düğmesini seçtikten sonra **görüntüle** düğmesini seçtiğinde bir ileti kutusu görünür. Merhaba için bir ileti kutusu ve Güle Güle için bir diğer ileti kutusu görünecektir. Bu davranışı oluşturmak için `Button_Click` *Greetings. xaml. vb* veya *Greetings.xaml.cs* içindeki olaya kod ekleyeceksiniz.
+Bu uygulama çalıştığında, bir Kullanıcı radyo düğmesini seçtikten sonra **görüntüle** düğmesini seçtiğinde bir ileti kutusu görünür. Merhaba için bir ileti kutusu ve Güle Güle için bir diğer ileti kutusu görünecektir. Bu davranışı oluşturmak için `Button_Click` *Greetings. xaml. vb* veya *Greetings. xaml. cs* içindeki olaya kod ekleyeceksiniz.
 
 1. Tasarım yüzeyinde **görüntüle** düğmesine çift tıklayın.
 
@@ -259,13 +259,13 @@ Hata ayıklayıcıyı yeniden başlatın ( **F5** tuşuna basın). Uygulamanın 
 
  Hata ayıklamayı durdurmak için şimdi uygulama penceresini kapatın.
 
-### <a name="debug-with-breakpoints"></a>Kesme noktalarıyla hata ayıkla
+### <a name="debug-with-breakpoints&quot;></a>Kesme noktalarıyla hata ayıkla
 
 Hata ayıklama sırasında bazı kesme noktaları ekleyerek kodu test edebilirsiniz. Kesme   >  **noktası geçiş noktasını** seçerek, kesmenin gerçekleşmesini istediğiniz kod satırının yanındaki düzenleyicinin sol kenar boşluğuna tıklayarak veya **F9** tuşuna basarak kesme noktaları ekleyebilirsiniz.
 
-#### <a name="add-breakpoints"></a>Kesme noktası ekleme
+#### <a name=&quot;add-breakpoints&quot;></a>Kesme noktası ekleme
 
-1. *Greetings. xaml. vb* dosyasını açın ve aşağıdaki satırı seçin:`MessageBox.Show("Hello.")`
+1. *Greetings. xaml. vb* dosyasını açın ve aşağıdaki satırı seçin:`MessageBox.Show(&quot;Hello.")`
 
 2. **Hata Ayıkla**' yı ve ardından **kesme noktası**' nı seçip menüden **F9** tuşuna basarak bir kesme noktası ekleyin.
 
@@ -283,13 +283,13 @@ Hata ayıklama sırasında bazı kesme noktaları ekleyerek kodu test edebilirsi
 
 6. Menü çubuğunda **Hata Ayıkla**  >  **Step Out**' ı seçin.
 
-     Uygulama yürütmeyi sürdürür ve "Hello" sözcüğünü içeren bir ileti kutusu görünür.
+     Uygulama yürütmeyi sürdürür ve "Hello&quot; sözcüğünü içeren bir ileti kutusu görünür.
 
 7. İletiyi kapatmak için ileti kutusunda **Tamam** düğmesini seçin.
 
 8. **Tebrikler** penceresinde, **güle** radyo düğmesini seçin ve ardından **görüntüle** düğmesini seçin.
 
-     Çizgi `MessageBox.Show("Goodbye.")` sarı renkle vurgulanır.
+     Çizgi `MessageBox.Show(&quot;Goodbye.")` sarı renkle vurgulanır.
 
 9. Hata ayıklamaya devam etmek için **F5** tuşunu seçin. İleti kutusu göründüğünde kapatmak için ileti kutusunda **Tamam** düğmesini seçin.
 

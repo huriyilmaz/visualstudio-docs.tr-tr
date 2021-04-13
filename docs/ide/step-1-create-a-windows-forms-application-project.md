@@ -7,17 +7,17 @@ ms.assetid: 16ac2422-e720-4e3a-b511-bc2a54201a86
 ms.topic: tutorial
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 04168d6f648a9219c40f81aa042cbc778429ca0e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b2bfba4f3035023a93588d4bc4c6e0f378f6b4eb
+ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99951010"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107296579"
 ---
 # <a name="step-1-create-a-windows-forms-app-project"></a>1. Adım: Windows Forms Uygulaması projesi oluşturma
 
@@ -83,7 +83,7 @@ Visual Studio, uygulamanız için bir çözüm oluşturur. Bir çözüm, uygulam
 
     ::: moniker range="vs-2017"
 
-    * **Ana pencere** Bu pencerede, yaptığınız gibi, formlarla çalışma ve kod düzenlemeyle ilgili birçok iş olacaktır. Pencere, **form düzenleyicisinde** bir form gösterir. Pencerenin üst kısmında, **Başlangıç sayfası** sekmesi ve **Form1.cs [Design]** sekmesi görüntülenir. (Visual Basic, sekme adı *. cs* yerine *. vb* ile biter.)
+    * **Ana pencere** Bu pencerede, yaptığınız gibi, formlarla çalışma ve kod düzenlemeyle ilgili birçok iş olacaktır. Pencere, **form düzenleyicisinde** bir form gösterir. Pencerenin üst kısmında, **Başlangıç sayfası** sekmesi ve **Form1. cs [Tasarım]** sekmesi görüntülenir. (Visual Basic, sekme adı *. cs* yerine *. vb* ile biter.)
 
     ::: moniker-end
 

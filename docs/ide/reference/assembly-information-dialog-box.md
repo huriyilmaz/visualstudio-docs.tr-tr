@@ -14,12 +14,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d1ed2fd5fe9e49ab947752f84accb326499392fb
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0a8f4d5612fe8ceaa4470f441133767178b119cc
+ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99836429"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107295448"
 ---
 # <a name="assembly-information-dialog-box"></a>Derleme Bilgileri iletişim kutusu
 
@@ -65,7 +65,7 @@ Derlemenin desteklediği kültürü belirtir. Öğesine karşılık gelir <xref:
 Derlemedeki türlerin COM tarafından kullanılabilir olup olmayacağını belirtir. Öğesine karşılık gelir <xref:System.Runtime.InteropServices.ComVisibleAttribute> .
 
 > [!NOTE]
-> Bir .NET Framework sınıf kitaplığında bir NuGet paketi oluştururken bu özellikleri ayarlama hakkında daha fazla bilgi için bkz. [paket için proje özelliklerini yapılandırma](/nuget/quickstart/create-and-publish-a-package-using-visual-studio-net-framework#configure-project-properties-for-the-package).
+> Bir .NET Framework sınıf kitaplığında bir NuGet paketi oluştururken bu özellikleri ayarlama hakkında daha fazla bilgi için bkz. [paket için proje özelliklerini yapılandırma](/nuget/quickstart/create-and-publish-a-package-using-visual-studio-net-framework#configure-project-properties-for-the-package). Ayrıca, bir NuGet paketiyle ilgili olarak lisanslama ve Ifadeler hakkında daha fazla bilgi için bkz. [Licenses.NuGet.org](/nuget/nuget-org/licenses.nuget.org/).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

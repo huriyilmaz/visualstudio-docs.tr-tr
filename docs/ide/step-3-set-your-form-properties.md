@@ -7,17 +7,17 @@ ms.assetid: 634ef037-1525-48c8-ac7f-abf04be69376
 ms.topic: tutorial
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 10f021e8f8151216cd2728e1e9723b0edb9b3e1f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5741a20def684b517d0eed684e08bfff65a54f6a
+ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99950737"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107296319"
 ---
 # <a name="step-3-set-your-form-properties"></a>3. Adım: Form özelliklerinizi ayarlama
 
@@ -25,7 +25,7 @@ Daha sonra, formunuzun görünüşünü değiştirmek için **Özellikler** penc
 
 ## <a name="how-to-set-your-form-properties"></a>Form özelliklerinizi ayarlama
 
-1. **Windows Form Tasarımcısı** baktığınızdan emin olun. Visual Studio tümleşik geliştirme ortamında (IDE), **Form1.cs [Design]** (ya da **Form1. vb [Design]** ) sekmesini seçerek Visual Basic).
+1. **Windows Form Tasarımcısı** baktığınızdan emin olun. Visual Studio tümleşik geliştirme ortamında (IDE), **Form1. cs [Design]** sekmesini (veya Visual Basic **Form1. vb [Design]** sekmesini) seçin.
 
 1. Seçmek için **Form1** form içinde herhangi bir yeri seçin. Şimdi form özelliklerini göstermeli **Özellikler** penceresine bakın. Formlarda çeşitli özellikler vardır. Örneğin, ön plan ve arka plan rengini, formun üstünde görünen başlık metnini, formun boyutunu ve diğer özellikleri ayarlayabilirsiniz.
 

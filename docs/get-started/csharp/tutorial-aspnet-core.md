@@ -8,20 +8,20 @@ ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
 ms.topic: tutorial
 ms.devlang: CSharp
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 dev_langs:
 - CSharp
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: b9c7f41fd2977ca00294eabd941bc371d8a3220e
-ms.sourcegitcommit: 99b66b0f4ced46ead0b2506a103f974f40cc0076
+ms.openlocfilehash: a86b7273a123a5c9ed0519caf2166127c090d16f
+ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2021
-ms.locfileid: "103295792"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107296930"
 ---
 # <a name="tutorial-get-started-with-c-and-aspnet-core-in-visual-studio"></a>Öğretici: Visual Studio 'da C# ve ASP.NET Core kullanmaya başlayın
 
@@ -162,13 +162,13 @@ Bu çözüm **Razor sayfası** tasarım modelini izler. Model ve denetleyici kod
 
      ![Visual Studio Code düzenleyicisinde about. cshtml dosyasının ilk on satırını gösteren ekran görüntüsü.](media/csharp-aspnet-razor-aboutcshtml-mycoreapp-code.png)
 
- 1. **About.cshtml.cs** dosyasını seçin.
+ 1. **About. cshtml. cs** dosyasını seçin.
 
-     ![Visual Studio Code düzenleyicisinde About.cshtml.cs dosyasını seçin](media/csharp-aspnet-razor-solution-explorer-aboutcshtmlcs.png)
+     ![Visual Studio Code düzenleyicisinde about. cshtml. cs dosyasını seçin](media/csharp-aspnet-razor-solution-explorer-aboutcshtmlcs.png)
 
- 1. Kod düzenleyicisinde **About.cshtml.cs** dosyasını görüntüleyin.
+ 1. Kod düzenleyicisinde **About. cshtml. cs** dosyasını görüntüleyin.
 
-     ![Visual Studio kod Düzenleyicisi 'ndeki About.cshtml.cs dosyasının ilk 18 satırını gösteren ekran görüntüsü. ](media/csharp-aspnet-razor-aboutcshtmlcs-mycoreapp-code.png)
+     ![Visual Studio kod Düzenleyicisi 'ndeki about. cshtml. cs dosyasının ilk 18 satırını gösteren ekran görüntüsü. ](media/csharp-aspnet-razor-aboutcshtmlcs-mycoreapp-code.png)
 
  1. Proje, Web siteniz için kök olan bir **Wwwroot** klasörü içerir. İçeriğini görüntülemek için klasörü genişletin.
 
@@ -209,11 +209,11 @@ Bu çözüm **Razor sayfası** tasarım modelini izler. Model ve denetleyici kod
 
     ![About. cshtml dosyasındaki metni değiştirin](media/csharp-aspnet-razor-aboutcshtml-mycoreapp-code-changed.png)
 
-1. **About.cshtml.cs** seçin. Ardından, `using` aşağıdaki kısayolu kullanarak dosyanın en üstündeki yönergeleri temizleyin:
+1. **. Cshtml. cs** öğesini seçin. Ardından, `using` aşağıdaki kısayolu kullanarak dosyanın en üstündeki yönergeleri temizleyin:
 
    Gri olmayan yönergelerden herhangi birini seçin `using` ve hızlı bir [eylem](../../ide/quick-actions.md) ampul, yalnızca giriş işaretinin altında veya sol kenar boşluğunda görünür. Ampul ' i seçin ve ardından gereksiz kullanımları **Kaldır**' ı seçin.
 
-   ![About.cshtml.cs dosyasındaki gereksiz kullanımları kaldırma](media/csharp-aspnet-razor-remove-unnecessary-usings.png)
+   ![About. cshtml. cs dosyasındaki gereksiz kullanımları kaldırın](media/csharp-aspnet-razor-remove-unnecessary-usings.png)
 
      Visual Studio gereksiz `using` yönergeleri dosyadan siler.
 
@@ -265,11 +265,11 @@ Bu çözüm **Razor sayfası** tasarım modelini izler. Model ve denetleyici kod
 
      ![Visual Studio Code düzenleyicisinde Index. cshtml dosyasını görüntüleme](media/vs-2019/csharp-aspnet-index-cshtml.png)
 
- 1. Her. cshtml dosyası, ilişkili bir kod dosyasına sahiptir. Kod dosyasını düzenleyicide açmak için, Çözüm Gezgini içindeki **Index. cshtml** düğümünü genişletin ve **Index.cshtml.cs** dosyasını seçin.
+ 1. Her. cshtml dosyası, ilişkili bir kod dosyasına sahiptir. Kod dosyasını düzenleyicide açmak için, Çözüm Gezgini içindeki **index. cshtml** düğümünü genişletin ve **index. cshtml. cs** dosyasını seçin.
 
-     ![Visual Studio Code düzenleyicisinde Index.cshtml.cs dosyasını seçin](media/vs-2019/csharp-aspnet-choose-index-cshtml.png)
+     ![Visual Studio Code düzenleyicisinde Index. cshtml. cs dosyasını seçin](media/vs-2019/csharp-aspnet-choose-index-cshtml.png)
 
- 1. Kod düzenleyicisinde **Index.cshtml.cs** dosyasını görüntüleyin.
+ 1. Kod düzenleyicisinde **Index. cshtml. cs** dosyasını görüntüleyin.
 
      ![Visual Studio Code düzenleyicisinde about. cshtml dosyasını görüntüleme](media/vs-2019/csharp-aspnet-index-cshtml-editing.png)
 
@@ -308,11 +308,11 @@ Bu çözüm **Razor sayfası** tasarım modelini izler. Model ve denetleyici kod
 
     ![Gizlilik. cshtml dosyasındaki metni değiştirme](media/vs-2019/csharp-aspnet-privacy-cshtml-code-changed.png)
 
-1. Şimdi bir kod değişikliği yapalim. **Privacy.cshtml.cs** seçin. Ardından, `using` aşağıdaki kısayolu kullanarak dosyanın en üstündeki yönergeleri temizleyin:
+1. Şimdi bir kod değişikliği yapalim. **Gizlilik. cshtml. cs** öğesini seçin. Ardından, `using` aşağıdaki kısayolu kullanarak dosyanın en üstündeki yönergeleri temizleyin:
 
    Gri olmayan yönergelerden herhangi birini seçin `using` ve hızlı bir [eylem](../../ide/quick-actions.md) ampul, yalnızca giriş işaretinin altında veya sol kenar boşluğunda görünür. Ampul ' i seçin ve ardından **gereksiz kullanımları kaldır**' ın üzerine gelin.
 
-   ![Privacy.cshtml.cs dosyasındaki gereksiz kullanımları kaldırma](media/vs-2019/csharp-aspnet-remove-unnecessary-usings.png)
+   ![Gizlilik. cshtml. cs dosyasındaki gereksiz kullanımları kaldırın](media/vs-2019/csharp-aspnet-remove-unnecessary-usings.png)
 
    Şimdi nelerin olacağını görmek için **Değişiklikleri Önizle** ' yi seçin.
 

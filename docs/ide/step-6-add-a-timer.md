@@ -10,17 +10,17 @@ dev_langs:
 - CSharp
 - VB
 ms.assetid: 09e7930b-cab6-4a22-9a6f-72e23f489585
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f59375e9e64e6a7302d65b8c940d82b63adef54f
-ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
+ms.openlocfilehash: 2b983108793b07e1752b88afed90346cd5ff017f
+ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106214206"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107297112"
 ---
 # <a name="step-6-add-a-timer"></a>6. Adım: Süreölçer ekleme
 Ardından, <xref:System.Windows.Forms.Timer> eşleşen oyuna bir denetim eklersiniz. Bir Zamanlayıcı belirtilen sayıda milisaniye bekler ve sonra *değer* olarak adlandırılan bir olayı tetikler. Bu olay, bir eylemi başlatmak veya eylemi düzenli aralıklarla yinelemek için kullanışlıdır. Bu durumda, oyuncuların iki simge seçmesini sağlamak ve simgeler eşleşmez ise, kısa bir süre sonra bu iki simgeyi yeniden gizlemek için bir zamanlayıcı kullanacaksınız.

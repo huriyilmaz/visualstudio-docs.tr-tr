@@ -7,17 +7,17 @@ ms.assetid: ea98c55e-6213-4893-ba7b-f19d7f119527
 ms.topic: tutorial
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a485433ef73ef853a186a5b441396f6d5a57f679
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 66a6663cfbbcc212f05f75a8bc87bf30a3e4f880
+ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99868861"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107297073"
 ---
 # <a name="step-7-add-dialog-components-to-your-form"></a>7. Adım: Formunuza iletişim kutusu bileşenleri ekleme
 
@@ -27,7 +27,7 @@ Bir bileşen, bazı yollarla denetim gibidir. Formunuza bir bileşen eklemek iç
 
 ## <a name="to-add-dialog-components-to-your-form"></a>Formunuza iletişim kutusu bileşenleri eklemek için
 
-1. **Windows Form Tasarımcısı** (**Form1.cs [Design]**) öğesini seçin ve ardından **araç kutusundan** **iletişim** kutusu grubunu açın.
+1. **Windows Form Tasarımcısı** (**Form1. cs [Design]**) öğesini seçin ve ardından **araç kutusundan** **iletişim** kutusu grubunu açın.
 
     > [!NOTE]
     > **Araç kutusundaki** **iletişim** kutusu grubunda, sizin için birçok yararlı iletişim kutusu açan bileşenler bulunur. Bu, dosyaları açmak ve kaydetmek, klasörlere gözatmak ve yazı tipi ve renkler seçmek için kullanılabilir. Bu projede iki iletişim kutusu bileşeni kullanıyorsunuz: OpenFileDialog ve ColorDialog.

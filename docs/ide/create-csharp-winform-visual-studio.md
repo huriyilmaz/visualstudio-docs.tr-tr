@@ -6,19 +6,19 @@ ms.topic: tutorial
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
 ms.devlang: CSharp
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: 0fcc42b999039abe5d682394e378cb95f12b9283
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 26f13d12324beb0e414761ce2d79297767c5d708
+ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99956938"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107297125"
 ---
 # <a name="create-a-windows-forms-app-in-visual-studio-with-c"></a>C ile Visual Studio 'da Windows Forms uygulaması oluşturma\#
 
@@ -133,11 +133,11 @@ Bir eylem oluşturmak için bir düğme denetimi ekledik, artık metin gönderme
 
 ### <a name="add-code-to-the-form"></a>Forma kod ekleme
 
-1. **Form1.cs &#91;tasarım&#93;** penceresinde, **Form1.cs** penceresini açmak için bu düğmeye **tıklayın** .
+1. **Form1. cs &#91;tasarım&#93;** penceresinde, **Bu düğmeye tıklayarak** **Form1. cs** penceresini açın.
 
-      (Alternatif olarak, **Çözüm Gezgini**' de **Form1.cs** genişletebilir ve ardından **Form1**' i seçebilirsiniz.)
+      (Alternatif olarak, **Çözüm Gezgini** içinde **Form1. cs** ' i genişletebilir ve ardından **Form1**' i seçebilirsiniz.)
 
-1. **Form1.cs** penceresinde, **özel void** satırından sonra, `lblHelloWorld.Text = "Hello World!";` aşağıdaki ekran görüntüsünde gösterildiği gibi yazın veya girin:
+1. **Form1. cs** penceresinde, **özel void** satırından sonra, `lblHelloWorld.Text = "Hello World!";` aşağıdaki ekran görüntüsünde gösterildiği gibi yazın veya girin:
 
      ![Forma kod ekleme](../get-started/csharp/media/csharp-winforms-add-code.png)
 
