@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c83b13b852b9ae53bd2218a62b6681478369df1b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1e1576f8865fc5945514ce6965cdba66a1cfda55
+ms.sourcegitcommit: 3985d0ae8d6332f4682c82a10897763173d52961
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99970523"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107386056"
 ---
 # <a name="get-started-with-unit-testing"></a>Birim testini kullanmaya başlama
 
@@ -85,7 +85,7 @@ Bu bölümde, birim testi projesinin nasıl oluşturulduğu açıklanmaktadır.
 
    Örneğin, test çerçevesinden eşleşen doğru belge sekmesini seçerek aşağıdaki kodu kullanabilirsiniz: MSTest, NUnit veya xUnit (yalnızca .NET üzerinde desteklenir).
 
-   # <a name="mstest"></a>[MSTest](#tab/mstest)
+   ### <a name="mstest"></a>[MSTest](#tab/mstest)
 
    ```csharp
    using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -114,7 +114,7 @@ Bu bölümde, birim testi projesinin nasıl oluşturulduğu açıklanmaktadır.
    }
    ```
 
-   # <a name="nunit"></a>[NUnit](#tab/nunit)
+   ### <a name="nunit"></a>[NUnit](#tab/nunit)
 
    ```csharp
    using NUnit.Framework;
@@ -147,7 +147,7 @@ Bu bölümde, birim testi projesinin nasıl oluşturulduğu açıklanmaktadır.
    }
    ```
 
-    # <a name="xunit"></a>[xUnit](#tab/xunit)
+    ### <a name="xunit"></a>[xUnit](#tab/xunit)
 
     ```csharp
     using System;
@@ -174,6 +174,8 @@ Bu bölümde, birim testi projesinin nasıl oluşturulduğu açıklanmaktadır.
         }
     }
     ```
+
+    ---
 
 ## <a name="run-unit-tests"></a>Birim testlerini çalıştırma
 
