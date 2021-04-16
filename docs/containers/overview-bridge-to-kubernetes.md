@@ -9,12 +9,12 @@ monikerRange: '>=vs-2019'
 manager: jmartens
 author: ghogen
 ms.author: ghogen
-ms.openlocfilehash: 49c3081e68baf4f2bf1d0975bcdae7ea25ab90b3
-ms.sourcegitcommit: 691d2a47f92f991241fdb132a82c53a537198d50
+ms.openlocfilehash: 1709785c63bd4fbcd702fbcacfe59dddcb71d1b3
+ms.sourcegitcommit: 0135fc6ffa38995cc9e6ab05fa265758890d2e15
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "103571551"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "107526155"
 ---
 # <a name="how-bridge-to-kubernetes-works"></a>Bridge to Kubernetes’in işleyiş biçimi
 
@@ -26,6 +26,8 @@ Kubernetes Köprüsü, bağlı Kubernetes kümeniz ile geliştirme bilgisayarın
 
 > [!WARNING]
 > Kubernetes Köprüsü yalnızca geliştirme ve test senaryolarında kullanılmak üzere tasarlanmıştır. Üretim kümeleri veya etkin kullanımda olan canlı hizmetlerle kullanılmak üzere tasarlanmamıştır veya desteklenmez.
+
+Şu anda desteklenen özelliklerle ilgili bilgiler ve Kubernetes Köprüsü için gelecekteki bir yol haritası, [Kubernetes yol haritası Ile köprü](https://github.com/microsoft/mindaro/projects/1)altında bulunabilir.
 
 ## <a name="using-bridge-to-kubernetes"></a>Kubernetes için köprü kullanma
 
@@ -53,7 +55,7 @@ Ayrıca, Kubernetes Köprüsü, dosya aracılığıyla geliştirme bilgisayarın
 
 ## <a name="additional-configuration-with-kuberneteslocalprocessconfigyaml"></a>KubernetesLocalProcessConfig. YAML ile ek yapılandırma
 
-`KubernetesLocalProcessConfig.yaml`Dosya, kümedeki yığınlarınızın kullanabildiği ortam değişkenlerini ve bağlı dosyaları çoğaltmanıza olanak sağlar. Ek yapılandırma seçenekleri hakkında daha fazla bilgi için bkz. [Kubernetes Için köprü yapılandırma][using-config-yaml].
+`KubernetesLocalProcessConfig.yaml`Dosya, kümedeki yığınlarınızın kullanabildiği ortam değişkenlerini ve bağlı dosyaları çoğaltmanıza olanak sağlar. Kubernetes geliştirme için Visual Studio 'Yu kullanırken, KubernetesLocalConfig. YAML dosyası, yönlendirilirken hizmetin proje dosyası ile aynı dizinde bulunmalıdır. Ek yapılandırma seçenekleri hakkında daha fazla bilgi için bkz. [Kubernetes Için köprü yapılandırma][using-config-yaml].
 
 ## <a name="using-routing-capabilities-for-developing-in-isolation"></a>Yalıtımda geliştirmeye yönelik yönlendirme özelliklerini kullanma
 

@@ -10,18 +10,18 @@ user.type: subscriber
 tags: download, activate, licensing
 subscription.type: vl, cloud, retail, partner
 sap.id: af210210-e3e1-2b2e-8d79-9bd20e851241
-ms.openlocfilehash: ac57b500685ae885d5cd68c5901a6ee2617462d0
-ms.sourcegitcommit: bbf532e50b9140724c1a0f66f9a35862bf6e4a97
+ms.openlocfilehash: 755574a0ae60b078a2ea5414e43e16c80c91fa67
+ms.sourcegitcommit: f6aa84e34c2f41877b84c01e7ead956a1b4c24f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "107291429"
+ms.lasthandoff: 04/15/2021
+ms.locfileid: "107510624"
 ---
 ## <a name="visual-studio-ide-technical-support"></a>Visual Studio IDE teknik desteği  
 
 Visual Studio abonelikleri desteği Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım sağlar. Visual Studio IDE teknik sorununuz veya sorunuz varsa, sorunuzun [Visual Studio Technical Support](https://visualstudio.microsoft.com/vs/support/)'a yönlendirililmesi gerekir. Visual Studio aboneliğinize dahil olabilecek sınırlı [Visual Studio teknik destek](https://docs.microsoft.com/visualstudio/subscriptions/vs-tech-support) olaylarınızı kullanmadan önce, bazı diğer çevrimiçi kaynakları denemeyi öneririz.
 
-Visual Studio yükleme sorunları için bkz. adım adım yönergeler için [Visual Studio yükleme ve yükseltme sorunlarını giderme](https://docs.microsoft.com/visualstudio/install/troubleshooting-installation-issues?view=vs-2019) . Yükleme ile ilgili sorunlar için [yükleme sohbeti](https://visualstudio.microsoft.com/vs/support/#talktous) (yalnızca İngilizce) desteği seçeneğini de deneyebilirsiniz.
+Visual Studio yükleme sorunları için bkz. adım adım yönergeler için [Visual Studio yükleme ve yükseltme sorunlarını giderme](https://docs.microsoft.com/visualstudio/install/troubleshooting-installation-issues) . Yükleme ile ilgili sorunlar için [yükleme sohbeti](https://visualstudio.microsoft.com/vs/support/#talktous) (yalnızca İngilizce) desteği seçeneğini de deneyebilirsiniz.
 
 
 ## <a name="developer-community--visual-studio-ide"></a>Geliştirici topluluğu | Visual Studio IDE
