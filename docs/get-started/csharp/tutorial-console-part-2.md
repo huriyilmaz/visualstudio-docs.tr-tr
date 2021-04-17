@@ -2,7 +2,7 @@
 title: 'Öğretici: basit bir C# konsol uygulamasını genişletme'
 description: Visual Studio 'da C# konsol uygulaması geliştirmeyi adım adım öğrenin.
 ms.custom: get-started
-ms.date: 07/09/2020
+ms.date: 04/15/2021
 ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
 ms.topic: tutorial
@@ -16,12 +16,12 @@ dev_langs:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: e5552cc3d84eb0dd2a44943c36ddaa60c827ceb6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: cce069b1c4acb1784388b7afb06e810dbe826d59
+ms.sourcegitcommit: 54aac5044a9853a435577acc5a134cb254494ffb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99909315"
+ms.lasthandoff: 04/17/2021
+ms.locfileid: "107584125"
 ---
 # <a name="tutorial-extend-a-simple-c-console-app"></a>Öğretici: basit bir C# konsol uygulamasını genişletme
 
@@ -39,15 +39,15 @@ Gerçek dünyada kod, bir çözümde birlikte çalışan çok sayıda proje içe
 
    ![Sınıf kitaplığı proje şablonu seçiminin ekran görüntüsü](media/vs-2019/calculator2-add-project-dark.png)
 
-1. Proje adı **Hesaplakitaplığı**' nı yazıp **Oluştur**' u seçin. Visual Studio yeni projeyi oluşturur ve çözüme ekler.
+1. Proje adı **Hesaplakitaplığı**' nı yazıp **Oluştur**' u seçin. Daha sonra, sorulduğunda .NET 3,1 ' i seçin. Visual Studio yeni projeyi oluşturur ve çözüme ekler.
 
    ![Hesaplatorlibrary sınıf kitaplığı projesi eklenen Çözüm Gezgini ekran görüntüsü](media/vs-2019/calculator2-solution-explorer-with-class-library-dark2.png)
 
-1. *Class1.cs* yerine **CalculatorLibrary.cs** dosyasını yeniden adlandırın. Yeniden adlandırmak için **Çözüm Gezgini** adına tıklayabilir veya sağ tıklayıp **Yeniden Adlandır**' ı seçebilir veya **F2** tuşuna basabilirsiniz.
+1. *Class1. cs* yerine, **hesaplatorlibrary. cs** dosyasını yeniden adlandırın. Yeniden adlandırmak için **Çözüm Gezgini** adına tıklayabilir veya sağ tıklayıp **Yeniden Adlandır**' ı seçebilir veya **F2** tuşuna basabilirsiniz.
 
    Dosyadaki tüm başvuruları yeniden adlandırmak isteyip istemediğiniz sorulur `Class1` . Daha sonraki bir adımda kodu değiştirdiğinizden, yanıt sizin için önemlidir.
 
-1. Şimdi, ilk projenin yeni sınıf kitaplığı tarafından kullanıma sunulan API 'Leri kullanabilmesi için bir proje başvurusu eklememiz gerekir.  İlk projedeki **Başvurular** düğümüne sağ tıklayın ve **proje başvurusu Ekle**' yi seçin.
+1. Şimdi, ilk projenin yeni sınıf kitaplığı tarafından kullanıma sunulan API 'Leri kullanabilmesi için bir proje başvurusu eklememiz gerekir.  İlk projedeki **Bağımlılıklar** düğümüne sağ tıklayın ve **proje başvurusu Ekle**' yi seçin.
 
    ![Proje başvurusu Ekle menü öğesinin ekran görüntüsü](media/vs-2019/calculator2-add-project-reference-dark.png)
 
@@ -59,7 +59,7 @@ Gerçek dünyada kod, bir çözümde birlikte çalışan çok sayıda proje içe
 
    ![Proje başvurusuyla Çözüm Gezgini ekran görüntüsü](media/vs-2019/calculator2-solution-explorer-with-project-reference-dark2.png)
 
-1. *Program.cs* içinde, `Calculator` sınıfı ve tüm kodunu seçin ve **CTRL + X** tuşlarına basarak program.cs öğesinden kesin. Ardından, *CalculatorLibrary.cs*' de **hesaplamadı**' da kodu `CalculatorLibrary` ad alanına yapıştırın. Daha sonra, hesaplayıcı sınıfını `public` kitaplığın dışına çıkarmak için oluşturun. *CalculatorLibrary.cs* içindeki kod artık aşağıdaki koda benzemelidir:
+1. *Program. cs*' de, `Calculator` sınıfı ve tüm kodunu seçin ve **CTRL + X** tuşlarına basarak program. cs ' den kesin. Ardından, hesap \ *kitaplık. cs*' de **hesaplatorlibrary**' de kodu `CalculatorLibrary` ad alanına yapıştırın. Daha sonra, hesaplayıcı sınıfını `public` kitaplığın dışına çıkarmak için oluşturun. *Hesaplatorlibrary. cs* dosyasındaki kod artık aşağıdaki koda benzemelidir:
 
    ```csharp
    using System;
@@ -101,7 +101,7 @@ Gerçek dünyada kod, bir çözümde birlikte çalışan çok sayıda proje içe
     }
    ```
 
-1. İlk projenin bir başvurusu var, ancak Hesaplayıcı. DoOperation çağrısının çözümlenmediğini belirten bir hata görürsünüz. Bunun nedeni, Hesaplagönderenin bir fark ad alanında olması, bu nedenle `CalculatorLibrary` tam nitelikli bir başvuru için ad alanı eklemektir.
+1. İlk projenin bir başvurusu var, ancak Hesaplayıcı. DoOperation çağrısının çözümlenmediğini belirten bir hata görürsünüz. Bunun nedeni, Hesaplagönderenin farklı bir ad alanında olması, bu nedenle `CalculatorLibrary` tam nitelikli bir başvuru için ad alanı eklemektir.
 
    ```csharp
    result = CalculatorLibrary.Calculator.DoOperation(cleanNum1, cleanNum2, op);
@@ -121,14 +121,14 @@ Gerçek dünyada kod, bir çözümde birlikte çalışan çok sayıda proje içe
 
 ## <a name="reference-net-libraries-write-to-a-log"></a>Başvuru .NET kitaplıkları: bir günlüğe yazma
 
-1. Artık tüm işlemlerin bir günlüğünü eklemek ve bir metin dosyasına yazmak istediğinizi varsayalım. .NET `Trace` sınıfı bu işlevselliği sağlar. (Temel yazdırma hata ayıklama teknikleri de yararlı olur.)  Trace sınıfı System. Diagnostics içinde bulunur ve gibi System.IO sınıfların olması gerekir `StreamWriter` , bu nedenle using yönergelerini ekleyerek başlayın:
+1. Artık tüm işlemlerin bir günlüğünü eklemek ve bir metin dosyasına yazmak istediğinizi varsayalım. .NET `Trace` sınıfı bu işlevselliği sağlar. (Temel yazdırma hata ayıklama teknikleri de yararlı olur.)  Trace sınıfı System. Diagnostics ' dir ve gibi System.IO sınıfların olması gerekir `StreamWriter` . bu nedenle, *hesaplaizetlibrary. cs*' nin en üstündeki using yönergelerini ekleyerek başlayın:
 
    ```csharp
    using System.IO;
    using System.Diagnostics;
    ```
 
-1. Trace sınıfının nasıl kullanıldığına bakarak, bir FILESTREAM ile ilişkili olan sınıfı için bir başvuruya sahip olmanız gerekir. Yani, hesaplayıcı bir nesne olarak daha iyi çalışır, bu nedenle bir Oluşturucu ekleyelim.
+1. Trace sınıfının nasıl kullanıldığına bakarak, bir FILESTREAM ile ilişkili olan sınıfı için bir başvuruya sahip olmanız gerekir. Diğer bir deyişle, hesaplayıcı bir nesne olarak daha iyi çalışacaktır, bu yüzden Hesaplayıcı *. cs* Içindeki Hesaplayıcı sınıfının başına bir Oluşturucu ekleyelim.
 
    ```csharp
    public Calculator()
@@ -144,7 +144,7 @@ Gerçek dünyada kod, bir çözümde birlikte çalışan çok sayıda proje içe
         {
    ```
 
-1. Statik `DoOperation` yöntemi bir üye yöntemi olarak değiştirmemiz gerekiyor.  Ayrıca günlük için her bir hesaplamaya çıktı ekleyelim, böylece DoOperation aşağıdaki koda benzer şekilde görünür:
+1. Statik `DoOperation` yöntemi üye bir yöntemde değiştirmemiz gerekiyor, bu nedenle `static` anahtar sözcüğünü kaldırın.  Ayrıca günlük için her bir hesaplamaya çıktı ekleyelim, böylece DoOperation aşağıdaki koda benzer şekilde görünür:
 
    ```csharp
    public double DoOperation(double num1, double num2, string op)
@@ -182,13 +182,13 @@ Gerçek dünyada kod, bir çözümde birlikte çalışan çok sayıda proje içe
     }
    ```
 
-1. Artık Program.cs 'e geri döndüğünüzde, statik çağrı kırmızı dalgalı bir metinle işaretlenir. Bunu onarmak için `calculator` while döngüsünden hemen önce aşağıdaki satırı ekleyerek bir değişken oluşturun:
+1. Şimdi *program. cs*' ye geri döndüğünüzde, statik çağrı kırmızı dalgalı bir metinle işaretlenir. Bunu onarmak için, `calculator` döngüden hemen önce aşağıdaki satırı ekleyerek bir değişken oluşturun `while (!endApp)` :
 
    ```csharp
    Calculator calculator = new Calculator();
    ```
 
-   Ve çağrı sitesini `DoOperation` aşağıdaki gibi değiştirin:
+   Ve için çağrı sitesini `DoOperation` aşağıdaki gibi değiştirin, böylece bu, küçük harfli adlı nesneye başvurur, böylece `calculator` statik bir yöntem çağrısı yerine bunu bir üye çağrısı yapar:
 
    ```csharp
    result = calculator.DoOperation(cleanNum1, cleanNum2, op);
@@ -203,9 +203,154 @@ Gerçek dünyada kod, bir çözümde birlikte çalışan çok sayıda proje içe
     3 * 3 = 9
     ```
 
+Bu noktada, *Hesaplatorlibrary. cs* şuna benzer şekilde görünmelidir:
+
+```csharp
+using System;
+using System.IO;
+using System.Diagnostics;
+
+
+namespace CalculatorLibrary
+{
+    public class Calculator
+    {
+
+        public Calculator()
+        {
+            StreamWriter logFile = File.CreateText("calculator.log");
+            Trace.Listeners.Add(new TextWriterTraceListener(logFile));
+            Trace.AutoFlush = true;
+            Trace.WriteLine("Starting Calculator Log");
+            Trace.WriteLine(String.Format("Started {0}", System.DateTime.Now.ToString()));
+        }
+
+        public double DoOperation(double num1, double num2, string op)
+        {
+            double result = double.NaN; // Default value is "not-a-number" which we use if an operation, such as division, could result in an error.
+
+            // Use a switch statement to do the math.
+            switch (op)
+            {
+                case "a":
+                    result = num1 + num2;
+                    Trace.WriteLine(String.Format("{0} + {1} = {2}", num1, num2, result));
+                    break;
+                case "s":
+                    result = num1 - num2;
+                    Trace.WriteLine(String.Format("{0} - {1} = {2}", num1, num2, result));
+                    break;
+                case "m":
+                    result = num1 * num2;
+                    Trace.WriteLine(String.Format("{0} * {1} = {2}", num1, num2, result));
+                    break;
+                case "d":
+                    // Ask the user to enter a non-zero divisor.
+                    if (num2 != 0)
+                    {
+                        result = num1 / num2;
+                        Trace.WriteLine(String.Format("{0} / {1} = {2}", num1, num2, result));
+                    }
+                    break;
+                // Return text for an incorrect option entry.
+                default:
+                    break;
+            }
+            return result;
+        }
+    }
+}
+```
+
+Ve *program. cs* aşağıdakine benzemelidir:
+
+```csharp
+using System;
+using CalculatorLibrary;
+
+namespace CalculatorProgram
+{
+   
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            bool endApp = false;
+            // Display title as the C# console calculator app.
+            Console.WriteLine("Console Calculator in C#\r");
+            Console.WriteLine("------------------------\n");
+
+            Calculator calculator = new Calculator();
+            while (!endApp)
+            {
+                // Declare variables and set to empty.
+                string numInput1 = "";
+                string numInput2 = "";
+                double result = 0;
+
+                // Ask the user to type the first number.
+                Console.Write("Type a number, and then press Enter: ");
+                numInput1 = Console.ReadLine();
+
+                double cleanNum1 = 0;
+                while (!double.TryParse(numInput1, out cleanNum1))
+                {
+                    Console.Write("This is not valid input. Please enter an integer value: ");
+                    numInput1 = Console.ReadLine();
+                }
+
+                // Ask the user to type the second number.
+                Console.Write("Type another number, and then press Enter: ");
+                numInput2 = Console.ReadLine();
+
+                double cleanNum2 = 0;
+                while (!double.TryParse(numInput2, out cleanNum2))
+                {
+                    Console.Write("This is not valid input. Please enter an integer value: ");
+                    numInput2 = Console.ReadLine();
+                }
+
+                // Ask the user to choose an operator.
+                Console.WriteLine("Choose an operator from the following list:");
+                Console.WriteLine("\ta - Add");
+                Console.WriteLine("\ts - Subtract");
+                Console.WriteLine("\tm - Multiply");
+                Console.WriteLine("\td - Divide");
+                Console.Write("Your option? ");
+
+                string op = Console.ReadLine();
+
+                try
+                {
+                    result = calculator.DoOperation(cleanNum1, cleanNum2, op); 
+                    if (double.IsNaN(result))
+                    {
+                        Console.WriteLine("This operation will result in a mathematical error.\n");
+                    }
+                    else Console.WriteLine("Your result: {0:0.##}\n", result);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Oh no! An exception occurred trying to do the math.\n - Details: " + e.Message);
+                }
+
+                Console.WriteLine("------------------------\n");
+
+                // Wait for the user to respond before closing.
+                Console.Write("Press 'n' and Enter to close the app, or press any other key and Enter to continue: ");
+                if (Console.ReadLine() == "n") endApp = true;
+
+                Console.WriteLine("\n"); // Friendly linespacing.
+            }
+            return;
+        }
+    }
+}
+```
+
 ## <a name="add-a-nuget-package-write-to-a-json-file"></a>NuGet paketi ekleme: JSON dosyasına yazma
 
-1. Artık, nesne verilerini depolamak için popüler ve taşınabilir bir biçimdeki işlemleri bir JSON biçiminde çıkarmak istediğinizi varsayalım. Bu işlevselliği uygulamak için, üzerinde Newtonsoft.JsNuGet paketine başvuracağız. NuGet paketleri .NET sınıf kitaplıklarının dağıtılması için birincil araçtır. **Çözüm Gezgini**, hesap \ yönetim projesi için **Başvurular** düğümüne sağ tıklayın ve **NuGet Paketlerini Yönet**' i seçin.
+1. Artık, nesne verilerini depolamak için popüler ve taşınabilir bir biçimdeki işlemleri bir JSON biçiminde çıkarmak istediğinizi varsayalım. Bu işlevselliği uygulamak için, üzerinde Newtonsoft.JsNuGet paketine başvuracağız. NuGet paketleri .NET sınıf kitaplıklarının dağıtılması için birincil araçtır. **Çözüm Gezgini**' de, Hesaplatorlibrary projesi için **Bağımlılıklar** düğümüne sağ tıklayın ve **NuGet Paketlerini Yönet**' i seçin.
 
    ![Kısayol menüsünde NuGet paketlerinin yönetilmesi ekran görüntüsü](media/vs-2019/calculator2-manage-nuget-packages-dark2.png)
 
@@ -219,7 +364,7 @@ Gerçek dünyada kod, bir çözümde birlikte çalışan çok sayıda proje içe
 
    Paket indirilir ve projenize eklenir ve **Çözüm Gezgini** başvurular düğümünde yeni bir giriş görüntülenir.
 
-1. *CalculatorLibrary.cs* başlangıcında System.IO ve Newtonsoft.Json paketine yönelik bir using yönergesi ekleyin.
+1. System.IO ve Newtonsoft.Json paketi için *Hesaplatorlibrary. cs*' nin başlangıcında bir using yönergesi ekleyin.
 
    ```csharp
    using Newtonsoft.Json;
@@ -300,7 +445,7 @@ Gerçek dünyada kod, bir çözümde birlikte çalışan çok sayıda proje içe
     }
    ```
 
-1. *Program.cs*' de, sonunda bitirmek için bir çağrı ekleyin.
+1. *Program. cs*' de, sonunda bitirmek için bir çağrı ekleyin.
 
    ```csharp
             // And call to close the JSON writer before return
@@ -334,7 +479,7 @@ Gerçek dünyada kod, bir çözümde birlikte çalışan çok sayıda proje içe
 
 Visual Studio hata ayıklayıcı, programlama sırasında hata yaptığınız kesin noktayı bulmak için kodunuzu adım adım çalıştırmanıza olanak tanıyan güçlü bir araçtır. Kodunuzda yapmanız gereken düzeltmeleri anlamış olursunuz. Visual Studio, programı çalıştırmaya devam edebilmeniz için geçici değişiklikler yapmanıza olanak sağlar.
 
-1. *Program.cs*' de, aşağıdaki kodun solundaki kenar boşluğuna tıklayın (veya kısayol menüsünü açın ve **kesme** noktası  >  **Ekle kesme noktası**' nı seçin veya **F9** tuşuna basın):
+1. *Program. cs*' de, aşağıdaki kodun solundaki kenar boşluğuna tıklayın (veya kısayol menüsünü açın ve **kesme** noktası  >  **Ekle kesme noktası**' nı seçin veya **F9** tuşuna basın):
 
    ```csharp
    result = calculator.DoOperation(cleanNum1, cleanNum2, op);
@@ -392,7 +537,7 @@ Visual Studio hata ayıklayıcı, programlama sırasında hata yaptığınız ke
 
    ![Çağrı yığınının ekran görüntüsü](media/vs-2019/calculator-2-debug-call-stack.png)
 
-   Bu görünüm `Calculator.DoOperation` , sarı işaretçi tarafından belirtilen geçerli yöntemi gösterir ve ikinci satır, `Main` *program.cs* içindeki yöntemden, çağıran işlevi gösterir. Çağrı yığını penceresi, yöntemlerin ve işlevlerin hangi sırada **çağrılacağını** gösterir. Ayrıca, kısayol menüsünden **kaynak koda git** gibi birçok hata ayıklayıcı özelliğine erişim sağlar.
+   Bu görünüm `Calculator.DoOperation` , sarı işaretçi tarafından gösterilen geçerli yöntemi gösterir ve ikinci satır, `Main` *program. cs* içindeki yöntemden, çağıran işlevi gösterir. Çağrı yığını penceresi, yöntemlerin ve işlevlerin hangi sırada **çağrılacağını** gösterir. Ayrıca, kısayol menüsünden **kaynak koda git** gibi birçok hata ayıklayıcı özelliğine erişim sağlar.
 
 1. Uygulama bildirimde duraklayana kadar, **F10** tuşuna basın (veya **hata ayıklama**  >  **adımından** fazla) `switch` .
 
@@ -434,6 +579,174 @@ Visual Studio hata ayıklayıcı, programlama sırasında hata yaptığınız ke
 
 1. ' N ' komutunu kullanarak uygulamayı düzgün bir şekilde kapatın.
 
+## <a name="code-complete"></a>Kod Tamam
+
+Tüm adımlar tamamlandıktan sonra *Hesaplamalibrary. cs* dosyasının tüm kodu aşağıda verilmiştir:
+
+```csharp
+using System;
+using System.IO;
+using System.Diagnostics;
+using Newtonsoft.Json;
+
+namespace CalculatorLibrary
+{
+    public class Calculator
+    {
+
+        JsonWriter writer;
+
+        public Calculator()
+        {
+            StreamWriter logFile = File.CreateText("calculatorlog.json");
+            logFile.AutoFlush = true;
+            writer = new JsonTextWriter(logFile);
+            writer.Formatting = Formatting.Indented;
+            writer.WriteStartObject();
+            writer.WritePropertyName("Operations");
+            writer.WriteStartArray();
+        }
+
+        public double DoOperation(double num1, double num2, string op)
+        {
+            double result = double.NaN; // Default value is "not-a-number" which we use if an operation, such as division, could result in an error.
+            writer.WriteStartObject();
+            writer.WritePropertyName("Operand1");
+            writer.WriteValue(num1);
+            writer.WritePropertyName("Operand2");
+            writer.WriteValue(num2);
+            writer.WritePropertyName("Operation");
+            // Use a switch statement to do the math.
+            switch (op)
+            {
+                case "a":
+                    result = num1 + num2;
+                    writer.WriteValue("Add");
+                    break;
+                case "s":
+                    result = num1 - num2;
+                    writer.WriteValue("Subtract");
+                    break;
+                case "m":
+                    result = num1 * num2;
+                    writer.WriteValue("Multiply");
+                    break;
+                case "d":
+                    // Ask the user to enter a non-zero divisor.
+                    if (num2 != 0)
+                    {
+                        result = num1 / num2;
+                        writer.WriteValue("Divide");
+                    }
+                    break;
+                // Return text for an incorrect option entry.
+                default:
+                    break;
+            }
+            writer.WritePropertyName("Result");
+            writer.WriteValue(result);
+            writer.WriteEndObject();
+
+            return result;
+        }
+
+        public void Finish()
+        {
+            writer.WriteEndArray();
+            writer.WriteEndObject();
+            writer.Close();
+        }
+    }
+}
+```
+
+*Program. cs* kodu aşağıda verilmiştir: 
+
+```csharp
+using System;
+using CalculatorLibrary;
+
+namespace CalculatorProgram
+{
+   
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            bool endApp = false;
+            // Display title as the C# console calculator app.
+            Console.WriteLine("Console Calculator in C#\r");
+            Console.WriteLine("------------------------\n");
+
+            Calculator calculator = new Calculator();
+            while (!endApp)
+            {
+                // Declare variables and set to empty.
+                string numInput1 = "";
+                string numInput2 = "";
+                double result = 0;
+
+                // Ask the user to type the first number.
+                Console.Write("Type a number, and then press Enter: ");
+                numInput1 = Console.ReadLine();
+
+                double cleanNum1 = 0;
+                while (!double.TryParse(numInput1, out cleanNum1))
+                {
+                    Console.Write("This is not valid input. Please enter an integer value: ");
+                    numInput1 = Console.ReadLine();
+                }
+
+                // Ask the user to type the second number.
+                Console.Write("Type another number, and then press Enter: ");
+                numInput2 = Console.ReadLine();
+
+                double cleanNum2 = 0;
+                while (!double.TryParse(numInput2, out cleanNum2))
+                {
+                    Console.Write("This is not valid input. Please enter an integer value: ");
+                    numInput2 = Console.ReadLine();
+                }
+
+                // Ask the user to choose an operator.
+                Console.WriteLine("Choose an operator from the following list:");
+                Console.WriteLine("\ta - Add");
+                Console.WriteLine("\ts - Subtract");
+                Console.WriteLine("\tm - Multiply");
+                Console.WriteLine("\td - Divide");
+                Console.Write("Your option? ");
+
+                string op = Console.ReadLine();
+
+                try
+                {
+                    result = calculator.DoOperation(cleanNum1, cleanNum2, op); 
+                    if (double.IsNaN(result))
+                    {
+                        Console.WriteLine("This operation will result in a mathematical error.\n");
+                    }
+                    else Console.WriteLine("Your result: {0:0.##}\n", result);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Oh no! An exception occurred trying to do the math.\n - Details: " + e.Message);
+                }
+
+                Console.WriteLine("------------------------\n");
+
+                // Wait for the user to respond before closing.
+                Console.Write("Press 'n' and Enter to close the app, or press any other key and Enter to continue: ");
+                if (Console.ReadLine() == "n") endApp = true;
+
+                Console.WriteLine("\n"); // Friendly linespacing.
+            }
+            calculator.Finish();
+            return;
+        }
+    }
+}
+```
+
 ## <a name="next-steps"></a>Sonraki adımlar
 
 Tebrikler, bu öğreticiyi tamamlama! Daha da fazla bilgi edinmek için aşağıdaki öğreticilerle devam edin.
@@ -446,5 +759,5 @@ Tebrikler, bu öğreticiyi tamamlama! Daha da fazla bilgi edinmek için aşağı
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [C# IntelliSense](../../ide/visual-csharp-intellisense.md)
-* [Visual Studio 'da C# kodunda hata ayıklamayı öğrenin](tutorial-debugger.md)
+- [C# IntelliSense](../../ide/visual-csharp-intellisense.md)
+- [Visual Studio 'da C# kodunda hata ayıklamayı öğrenin](tutorial-debugger.md)
