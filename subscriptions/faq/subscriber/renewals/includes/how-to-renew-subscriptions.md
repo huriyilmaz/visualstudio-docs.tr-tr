@@ -6,14 +6,14 @@ ms.assetid: 00b82d16-6a80-42d1-8b71-e12047c6b50c
 ms.technology: ''
 author: CaityBuschlen
 ms.author: cabuschl
-ms.date: 04/02/2021
+ms.date: 04/19/2021
 ms.faqid: q4_2
-ms.openlocfilehash: 8d8b516a7572688314d043dc7ca052d30d26dcf4
-ms.sourcegitcommit: 4bf7d82eb3a837ad5d1ae5c110039cbf74258f18
+ms.openlocfilehash: c53b866cab32270cfa10b6a8632af776ff9afd92
+ms.sourcegitcommit: 6b74cb197e59c23492722935457c7ec278cadb57
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/03/2021
-ms.locfileid: "106273407"
+ms.lasthandoff: 04/20/2021
+ms.locfileid: "107736995"
 ---
 ## <a name="how-do-i-renew-visual-studio-subscriptions"></a>Visual Studio abonelikleri Nasıl yaparım? yenilensin mi? 
 
@@ -34,7 +34,7 @@ Visual Studio aboneliklerini çeşitli yollarla edinebilirsiniz ve mevcut abonel
     - [Visual Studio Test Professional](https://www.microsoft.com/p/visual-studio-test-professional-subscription/dg7gmgf0dst6?activetab=pivot%3aoverviewtab) 
 
 > [!Note]
-> Yenileme fiyatlandırmasına hak kazanmak için aboneliğinizin süresi 30 gün içinde yenilemeniz gerekir.
+> Yenileme fiyatlandırmasına hak kazanmak için zaman aşımı süresi dolduktan sonra aboneliğinizi 30 gün içinde yenilemeniz gerekir. Microsoft Store üzerinden yenileme yaptıysanız, yenilemenizi aldığınız 5x5 anahtarıyla etkinleştirdiğinizden emin olun, aksi takdirde aboneliğiniz güncelleştirilmiş bir bitiş tarihine sahip olmayacaktır veya yenilenmeyecektir.
 
 ### <a name="how-to-renew-cloud-subscriptions"></a>Bulut aboneliklerini yenileme
 Bulut abonelikleri [Visual Studio Market](https://marketplace.visualstudio.com/)aracılığıyla satın alınır.  Aylık ve yıllık bulut aboneliklerinin her ikisi de iptal edilene kadar yenileyin, bu nedenle bunları yenilemek için gereken bir işlem yoktur.
