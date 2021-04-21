@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: c81e22bbf3af08c150f1e1156ee62f1666f59638
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 47f295a6259b8d722c9c3c714b62fe648bdea1c6
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99956639"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107827207"
 ---
 # <a name="how-to-programmatically-print-documents"></a>Nasıl yapılır: program aracılığıyla belgeleri yazdırma
   Bir Microsoft Office Word belgesinin tamamını veya bir belgenin bir kısmını varsayılan yazıcınıza yazdırabilirsiniz.
@@ -33,15 +33,15 @@ ms.locfileid: "99956639"
 
 1. <xref:Microsoft.Office.Tools.Word.Document.PrintOut%2A> `ThisDocument` Tüm belgeyi yazdırmak için projenizdeki sınıfının yöntemini çağırın. Bu örneği kullanmak için, sınıfından kodu çalıştırın `ThisDocument` .
 
-     [!code-vb[Trin_VstcoreWordAutomation#11](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#11)]
-     [!code-csharp[Trin_VstcoreWordAutomation#11](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#11)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet11":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet11":::
 
 ### <a name="to-print-the-current-page-of-the-document"></a>Belgenin geçerli sayfasını yazdırmak için
 
 1. <xref:Microsoft.Office.Tools.Word.Document.PrintOut%2A> `ThisDocument` Projenizdeki sınıfının yöntemini çağırın ve geçerli sayfanın bir kopyasının yazdırılacağını belirtin. Bu örneği kullanmak için, sınıfından kodu çalıştırın `ThisDocument` .
 
-     [!code-vb[Trin_VstcoreWordAutomation#12](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#12)]
-     [!code-csharp[Trin_VstcoreWordAutomation#12](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#12)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet12":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet12":::
 
 ## <a name="print-a-document-by-using-a-vsto-add-in"></a>VSTO eklentisini kullanarak belge yazdırma
 
@@ -49,15 +49,15 @@ ms.locfileid: "99956639"
 
 1. Yazdırmak istediğiniz <xref:Microsoft.Office.Interop.Word._Document.PrintOut%2A> nesnenin yöntemini çağırın <xref:Microsoft.Office.Interop.Word.Document> . Aşağıdaki kod örneği etkin belgeyi yazdırır. Bu örneği kullanmak için, `ThisAddIn` projenizdeki sınıfından kodu çalıştırın.
 
-     [!code-vb[Trin_VstcoreWordAutomationAddIn#11](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#11)]
-     [!code-csharp[Trin_VstcoreWordAutomationAddIn#11](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#11)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb" id="Snippet11":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs" id="Snippet11":::
 
 ### <a name="to-print-the-current-page-of-a-document"></a>Belgenin geçerli sayfasını yazdırmak için
 
 1. Yazdırmak istediğiniz <xref:Microsoft.Office.Interop.Word._Document.PrintOut%2A> nesnenin yöntemini çağırın <xref:Microsoft.Office.Interop.Word.Document> ve geçerli sayfanın bir kopyasının yazdırılacağını belirtin. Aşağıdaki kod örneği etkin belgeyi yazdırır. Bu örneği kullanmak için, `ThisAddIn` projenizdeki sınıfından kodu çalıştırın.
 
-     [!code-vb[Trin_VstcoreWordAutomationAddIn#12](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#12)]
-     [!code-csharp[Trin_VstcoreWordAutomationAddIn#12](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#12)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb" id="Snippet12":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs" id="Snippet12":::
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Office çözümlerinde isteğe bağlı parametreler](../vsto/optional-parameters-in-office-solutions.md)

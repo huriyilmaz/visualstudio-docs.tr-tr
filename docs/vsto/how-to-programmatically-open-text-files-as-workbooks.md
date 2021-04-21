@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 47582718128fc9818bb42571e3f33c0190a32d9e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 14a73d7a06c3d79c15df5b823b38efc9ddceb846
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99888751"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107824178"
 ---
 # <a name="how-to-programmatically-open-text-files-as-workbooks"></a>Nasıl yapılır: program aracılığıyla metin dosyalarını çalışma kitabı olarak açma
   Bir metin dosyasını çalışma kitabı olarak açabilirsiniz. Açmak istediğiniz metin dosyasının adını geçirmeniz gerekir. Ayrıştırmaya başlamak için kullanılacak satır numarası ve dosyadaki verilerin sütun biçimi gibi çeşitli isteğe bağlı parametreleri belirtebilirsiniz.
@@ -29,8 +29,8 @@ ms.locfileid: "99888751"
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
 
 ## <a name="example"></a>Örnek
- [!code-csharp[Trin_VstcoreExcelAutomation#80](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#80)]
- [!code-vb[Trin_VstcoreExcelAutomation#80](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#80)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs" id="Snippet80":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb" id="Snippet80":::
 
 ## <a name="compile-the-code"></a>Kodu derle
  Bu örnek aşağıdaki bileşenleri gerektirir:

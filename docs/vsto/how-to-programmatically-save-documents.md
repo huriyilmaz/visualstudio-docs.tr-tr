@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 34992bb4f76f68229bebbdb98265838f049dc288
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 97f56ce0bd44eac71430a099b4fda9a7eddc7958
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99949785"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107829014"
 ---
 # <a name="how-to-programmatically-save-documents"></a>Nasıl yapılır: program aracılığıyla belgeleri kaydetme
 
@@ -34,15 +34,15 @@ Microsoft Office Word belgelerini kaydetmek için birkaç yol vardır. Belge ad�
 
 1. <xref:Microsoft.Office.Tools.Word.Document.Save%2A>Sınıfının yöntemini çağırın <xref:Microsoft.Office.Tools.Word.Document> . Bu kod örneğini kullanmak için `ThisDocument` projenizdeki sınıftan çalıştırın.
 
-     [!code-vb[Trin_VstcoreWordAutomation#7](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#7)]
-     [!code-csharp[Trin_VstcoreWordAutomation#7](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#7)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet7":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet7":::
 
 ### <a name="to-save-the-active-document"></a>Etkin belgeyi kaydetmek için
 
 1. <xref:Microsoft.Office.Interop.Word._Document.Save%2A>Etkin belge için yöntemini çağırın. Bu kod örneğini kullanmak için, `ThisDocument` `ThisAddIn` projenizdeki veya sınıfından çalıştırın.
 
-    [!code-vb[Trin_VstcoreWordAutomation#8](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#8)]
-    [!code-csharp[Trin_VstcoreWordAutomation#8](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#8)]
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet8":::
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet8":::
 
    Kaydetmek istediğiniz belgenin etkin belge olup olmadığından emin değilseniz, bu belgeye adına göre başvurabilirsiniz.
 
@@ -50,8 +50,8 @@ Microsoft Office Word belgelerini kaydetmek için birkaç yol vardır. Belge ad�
 
 1. Koleksiyon için bir bağımsız değişken olarak belge adını kullanın <xref:Microsoft.Office.Interop.Word.Documents> . Bu kod örneğini kullanmak için, `ThisDocument` `ThisAddIn` projenizdeki veya sınıfından çalıştırın.
 
-     [!code-vb[Trin_VstcoreWordAutomation#9](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#9)]
-     [!code-csharp[Trin_VstcoreWordAutomation#9](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#9)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet9":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet9":::
 
 ## <a name="save-a-document-with-a-new-name"></a>Belgeyi yeni bir adla kaydetme
 
@@ -67,8 +67,8 @@ Yeni bir `SaveAs` ada sahip bir belgeyi kaydetmek için yöntemini kullanın. <x
     > [!NOTE]
     > Bir `SaveAs` hedef dizin yoksa veya dosya kaydetme ile ilgili başka sorunlar varsa yöntemi bir özel durum oluşturur. `try...catch` `SaveAs` Yöntemi etrafında veya çağırma yöntemi içinde bir blok kullanmak iyi bir uygulamadır.
 
-     [!code-vb[Trin_VstcoreWordAutomation#10](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#10)]
-     [!code-csharp[Trin_VstcoreWordAutomation#10](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#10)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet10":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet10":::
 
 ### <a name="to-save-a-native-document-with-a-new-name"></a>Yerel bir belgeyi yeni bir adla kaydetmek için
 
@@ -79,8 +79,8 @@ Yeni bir `SaveAs` ada sahip bir belgeyi kaydetmek için yöntemini kullanın. <x
     > [!NOTE]
     > Bir <xref:Microsoft.Office.Interop.Word._Document.SaveAs%2A> hedef dizin yoksa veya dosya kaydetme ile ilgili başka sorunlar varsa yöntemi bir özel durum oluşturur. TRY kullanmak iyi bir uygulamadır **...** <xref:Microsoft.Office.Interop.Word._Document.SaveAs%2A> yöntemi etrafında veya çağırma yöntemi içinde catch bloğu.
 
-     [!code-vb[Trin_VstcoreWordAutomationAddIn#10](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#10)]
-     [!code-csharp[Trin_VstcoreWordAutomationAddIn#10](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#10)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb" id="Snippet10":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs" id="Snippet10":::
 
 ## <a name="compile-the-code"></a>Kodu derle
 

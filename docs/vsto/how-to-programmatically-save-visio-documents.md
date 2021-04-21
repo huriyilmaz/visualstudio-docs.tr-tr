@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: a9d3b8e7d7e7e1a0a58dee5ceb5f1ca49753930f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 340d813a19c0c0dc5c347d3cfe4c7b29ff1bd049
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99947768"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107829001"
 ---
 # <a name="how-to-programmatically-save-visio-documents"></a>Nasıl yapılır: program aracılığıyla Visio belgelerini kaydetme
   Microsoft Office Visio belgelerini kaydetmek için çeşitli yollar vardır:
@@ -44,8 +44,8 @@ ms.locfileid: "99947768"
     > [!NOTE]
     > `Microsoft.Office.Interop.Visio.Document.Save`Yeni bir Visio belgesi henüz kaydedilmediyse Yöntem bir özel durum oluşturur.
 
-     [!code-csharp[Trin_VstcoreVisioAutomationAddIn#11](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#11)]
-     [!code-vb[Trin_VstcoreVisioAutomationAddIn#11](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#11)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs" id="Snippet11":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb" id="Snippet11":::
 
 ## <a name="save-a-document-with-a-new-name"></a>Belgeyi yeni bir adla kaydetme
  Yeni bir `Microsoft.Office.Interop.Visio.Document.SaveAs` belgeyi veya yeni bir ada sahip bir belgeyi kaydetmek için yöntemini kullanın. Bu yöntem, yeni dosya adını belirtmenizi gerektirir.
@@ -56,8 +56,8 @@ ms.locfileid: "99947768"
 
      Bu kod örneğini kullanmak için `ThisAddIn` projenizdeki sınıftan çalıştırın.
 
-     [!code-csharp[Trin_VstcoreVisioAutomationAddIn#10](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#10)]
-     [!code-vb[Trin_VstcoreVisioAutomationAddIn#10](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#10)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs" id="Snippet10":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb" id="Snippet10":::
 
 ## <a name="save-a-document-with-a-new-name-and-specified-arguments"></a>Belgeyi yeni bir adla ve belirtilen bağımsız değişkenlerle Kaydet
  Yeni bir `Microsoft.Office.Interop.Visio.Document.SaveAsEx` ada sahip bir belgeyi kaydetmek ve belgeye uygulanacak uygun bağımsız değişkenleri belirtmek için yöntemini kullanın.
@@ -68,8 +68,8 @@ ms.locfileid: "99947768"
 
      Aşağıdaki kod örneği, etkin belgeyi yeni bir adla kaydeder, belgeyi salt okunurdur olarak işaretler ve belgeyi en son kullanılan belge listesinde gösterir. Bu kod örneğini kullanmak için `ThisAddIn` projenizdeki sınıftan çalıştırın.
 
-     [!code-csharp[Trin_VstcoreVisioAutomationAddIn#12](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#12)]
-     [!code-vb[Trin_VstcoreVisioAutomationAddIn#12](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#12)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs" id="Snippet12":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb" id="Snippet12":::
 
 ## <a name="compile-the-code"></a>Kodu derle
  Bu kod örneği şunları gerektirir:

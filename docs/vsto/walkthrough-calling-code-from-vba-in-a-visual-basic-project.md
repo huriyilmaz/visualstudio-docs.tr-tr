@@ -22,12 +22,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: bcb13ec0e26b1668a397d56982d049bf9ebcceb0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f4fe056f70e0af03809b43d60968bd8a1a50bf08
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99906548"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107824490"
 ---
 # <a name="walkthrough-call-code-from-vba-in-a-visual-basic-project"></a>İzlenecek yol: Visual Basic projesindeki VBA 'dan kod çağırma
   Bu izlenecek yol, belgedeki Visual Basic for Applications (VBA) kodundan Microsoft Office Word için belge düzeyi özelleştirmesinde bir yöntemin nasıl çağrılacağını gösterir. Yordamda üç temel adım vardır: konak öğesi sınıfına bir yöntem ekleyin `ThisDocument` , YÖNTEMI VBA koduna sunun ve sonra BELGEDEKI VBA kodundan yöntemi çağırın.
@@ -160,7 +160,7 @@ ms.locfileid: "99906548"
 
 2. Sınıfına aşağıdaki yöntemi ekleyin `ThisDocument` . Bu yöntem, belgenin başlangıcında iki satır ve iki sütun içeren bir tablo oluşturur. Parametreler, ilk satırda görüntülenen metni belirtir. Bu izlenecek yolda daha sonra bu yöntemi belgedeki VBA kodundan çağıracaksınız.
 
-     [!code-vb[Trin_CallingVBCustomizationFromVBA#1](../vsto/codesnippet/VisualBasic/CallingCodeFromVBA/ThisDocument.vb#1)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/CallingCodeFromVBA/ThisDocument.vb" id="Snippet1":::
 
 3. Projeyi derleyin.
 

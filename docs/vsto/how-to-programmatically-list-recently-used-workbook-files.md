@@ -18,12 +18,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 75405c7a2e02189e205edf6615c5d95a8f1d023c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ba7ca717af4330e8fb3c102b3a5fe5bf7d9162b6
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99963152"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107825335"
 ---
 # <a name="how-to-programmatically-list-recently-used-workbook-files"></a>Nasıl yapılır: son kullanılan çalışma kitabı dosyalarını program aracılığıyla listeleme
   <xref:Microsoft.Office.Interop.Excel._Application.RecentFiles%2A>Özelliği, son kullanılan dosyalar Microsoft Office Excel listesinde görünen tüm dosyaların adlarını içeren bir koleksiyon döndürür. Listenin uzunluğu, kullanıcının tutulması için seçtiği dosya sayısına bağlı olarak değişir. Sonuçları bir aralıkta görüntüleyebilirsiniz.
@@ -34,8 +34,8 @@ ms.locfileid: "99963152"
 
 1. Son kullanılan dosyalar listesinde döngü yapın ve adları bir nesneye göre hücrelerde görüntüleyin <xref:Microsoft.Office.Interop.Excel.Range> .
 
-     [!code-csharp[Trin_VstcoreExcelAutomationAddIn#9](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#9)]
-     [!code-vb[Trin_VstcoreExcelAutomationAddIn#9](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#9)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs" id="Snippet9":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb" id="Snippet9":::
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Çalışma kitaplarında çalışma](../vsto/working-with-workbooks.md)

@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 4449e286fed0572e2dfc1ed855daf834400bd4e4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fcb2bcc91eb1d19309904caae16701b814113089
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99966636"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107824412"
 ---
 # <a name="walkthrough-create-your-first-vsto-add-in-for-excel"></a>İzlenecek yol: Excel için ilk VSTO eklentisini oluşturma
   Bu açıklayıcı izlenecek yol, Excel Microsoft Office için uygulama düzeyi eklentisi oluşturmayı gösterir. Bu tür çözümde oluşturduğunuz özellikler, hangi çalışma kitaplarının açık olduğuna bakılmaksızın uygulamanın kendisi tarafından kullanılabilir.
@@ -83,12 +83,12 @@ ms.locfileid: "99966636"
 
     Kullanıcı bir çalışma kitabını kaydettiğinde, olay işleyicisi etkin çalışma sayfasının başlangıcına yeni metin ekler.
 
-    [!code-vb[Trin_ExcelAddInTutorial#1](../vsto/codesnippet/VisualBasic/Trin_ExcelAddInTutorial/ThisAddIn.vb#1)]
-    [!code-csharp[Trin_ExcelAddInTutorial#1](../vsto/codesnippet/CSharp/Trin_ExcelAddInTutorial/ThisAddIn.cs#1)]
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_ExcelAddInTutorial/ThisAddIn.vb" id="Snippet1":::
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_ExcelAddInTutorial/ThisAddIn.cs" id="Snippet1":::
 
 2. C# kullanıyorsanız, olay işleyicisine aşağıdaki gerekli kodu ekleyin `ThisAddIn_Startup` . Bu kod `Application_WorkbookBeforeSave` olay işleyicisini olayla bağlamak için kullanılır <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.WorkbookBeforeSave> .
 
-    [!code-csharp[Trin_ExcelAddInTutorial#2](../vsto/codesnippet/CSharp/Trin_ExcelAddInTutorial/ThisAddIn.cs#2)]
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_ExcelAddInTutorial/ThisAddIn.cs" id="Snippet2":::
 
    Çalışma kitabını kaydedildiğinde değiştirmek için, önceki kod örnekleri aşağıdaki nesneleri kullanır:
 

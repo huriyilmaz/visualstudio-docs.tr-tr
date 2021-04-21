@@ -18,12 +18,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 64af8ddfa0d3d086b661483e76cb9b2bd82ae5c9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 615331181b9402e0d2062142ad266bdd41dca4eb
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99892079"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107824945"
 ---
 # <a name="how-to-programmatically-automatically-fill-ranges-with-incrementally-changing-data"></a>Nasıl yapılır: artımlı değişen verilerle aralıkları program aracılığıyla otomatik olarak doldur
   <xref:Microsoft.Office.Interop.Excel.Range.AutoFill%2A>Nesnesinin yöntemi, <xref:Microsoft.Office.Interop.Excel.Range> çalışma sayfasındaki bir aralığı değerleri otomatik olarak doldurmanıza olanak sağlar. Genellikle, <xref:Microsoft.Office.Interop.Excel.Range.AutoFill%2A> yöntemi bir aralıktaki artımlı veya azalan değerleri depolamak için kullanılır. Sabit listesinden isteğe bağlı bir sabit sağlayarak davranışı belirtebilirsiniz <xref:Microsoft.Office.Interop.Excel.XlAutoFillType> .
@@ -40,8 +40,8 @@ ms.locfileid: "99892079"
     > Yerinde bir denetim geçiremezsiniz <xref:Microsoft.Office.Tools.Excel.NamedRange> <xref:Microsoft.Office.Interop.Excel.Range> . Daha fazla bilgi için bkz. [konak öğelerinin ve konak denetimlerinin programlama sınırlamaları](../vsto/programmatic-limitations-of-host-items-and-host-controls.md).
 
 ## <a name="example"></a>Örnek
- [!code-csharp[Trin_VstcoreExcelAutomation#49](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#49)]
- [!code-vb[Trin_VstcoreExcelAutomation#49](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#49)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs" id="Snippet49":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb" id="Snippet49":::
 
 ## <a name="compile-the-code"></a>Kodu derle
  Doldurmanız istediğiniz aralığın ilk hücresi bir başlangıç değeri içermelidir.

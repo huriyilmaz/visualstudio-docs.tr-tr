@@ -18,12 +18,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 4df11976832359363c639a49dd767e7e87b41a26
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9aab30b9c2fa363ef68d7d3f70ca05ca6c387a3c
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99894445"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107828936"
 ---
 # <a name="how-to-update-a-data-source-with-data-from-a-host-control"></a>Nasıl yapılır: bir konak denetimindeki verilerle veri kaynağını güncelleştirme
   Bir konak denetimini bir veri kaynağına bağlayabilir ve veri kaynağını denetimdeki verilerde yapılan değişikliklerle güncelleştirebilirsiniz. Bu işlemde iki ana adım vardır:
@@ -49,8 +49,8 @@ ms.locfileid: "99894445"
 
      Aşağıdaki örnek, bir <xref:Microsoft.Office.Tools.Excel.NamedRange> Excel çalışma sayfasındaki denetimde yapılan değişiklikleri veri kaynağına kaydeder. Bu örnek, <xref:Microsoft.Office.Tools.Excel.NamedRange> `namedRange1` <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> bir veri kaynağındaki bir alana bağlanan özelliği ile adlı bir denetiminizin olduğunu varsayar.
 
-     [!code-csharp[Trin_VstcoreDataExcel#1](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#1)]
-     [!code-vb[Trin_VstcoreDataExcel#1](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#1)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs" id="Snippet1":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb" id="Snippet1":::
 
 ### <a name="automatically-update-the-in-memory-data-source"></a>Bellek içi veri kaynağını otomatik olarak güncelleştir
  Ayrıca, bellek içi veri kaynağını otomatik olarak güncelleştiren bir denetimi de yapılandırabilirsiniz. Belge düzeyi projesinde, kodu veya Tasarımcıyı kullanarak bunu yapabilirsiniz. VSTO eklenti projesinde kodu kullanmanız gerekir.
@@ -68,8 +68,8 @@ ms.locfileid: "99894445"
 
      Aşağıdaki örnek, <xref:Microsoft.Office.Tools.Excel.NamedRange> denetimdeki değer değiştiğinde veri kaynağını otomatik olarak güncelleştirmek için bir denetim yapılandırır. Bu örnek, <xref:Microsoft.Office.Tools.Excel.NamedRange> `namedRange1` <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> bir veri kaynağındaki bir alana bağlanan özelliği ile adlı bir denetiminizin olduğunu varsayar.
 
-     [!code-csharp[Trin_VstcoreDataExcel#19](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#19)]
-     [!code-vb[Trin_VstcoreDataExcel#19](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#19)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs" id="Snippet19":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb" id="Snippet19":::
 
 #### <a name="to-set-a-control-to-automatically-update-the-in-memory-data-source-by-using-the-designer"></a>Tasarımcı kullanarak bellek içi veri kaynağını otomatik olarak güncellemek üzere bir denetim ayarlamak için
 
@@ -103,8 +103,8 @@ ms.locfileid: "99894445"
 
      Aşağıdaki kod örneği, projenizin adlandırılmış bir adı içerdiğini varsayar <xref:System.Windows.Forms.BindingSource> `customersBindingSource` .
 
-     [!code-csharp[Trin_VstcoreDataExcel#20](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#20)]
-     [!code-vb[Trin_VstcoreDataExcel#20](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#20)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs" id="Snippet20":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb" id="Snippet20":::
 
 2. `Update`Projenizde oluşturulan TableAdapter metodunu çağırın.
 
@@ -112,8 +112,8 @@ ms.locfileid: "99894445"
 
      Aşağıdaki kod örneği, Northwind veritabanındaki Customers tablosuna bir bağlantı olduğunu ve projenizin adlı bir TableAdapter `customersTableAdapter` ve adlı türü belirtilmiş bir veri kümesini içerdiğini varsayar `northwindDataSet` .
 
-     [!code-csharp[Trin_VstcoreDataExcel#21](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#21)]
-     [!code-vb[Trin_VstcoreDataExcel#21](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#21)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs" id="Snippet21":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb" id="Snippet21":::
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Office çözümlerinde verileri denetimlere bağlama](../vsto/binding-data-to-controls-in-office-solutions.md)

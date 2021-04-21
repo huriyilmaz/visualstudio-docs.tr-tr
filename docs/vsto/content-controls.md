@@ -40,12 +40,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: ce692bf10c5473c648fd6587b6b6568d369ed496
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b0d55daba4dee07454a31fcb6fc5fa210e8bcc34
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99948003"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107825063"
 ---
 # <a name="content-controls"></a>İçerik denetimleri
   İçerik denetimleri, bu özelliklere sahip belge ve şablonlar tasarlamak için bir yol sağlar:
@@ -233,8 +233,8 @@ plainTextContentControl1.XMLMapping.SetMapping("/Product/Price", String.Empty, n
 ### <a name="check-box-content-controls-in-word-projects"></a><a name="checkbox"></a> Word projelerindeki içerik denetimleri onay kutusu
  Word 2010, bir onay kutusunu temsil eden yeni bir içerik denetimi türü sunmuştur. Ancak, [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Office projelerinde kullanabilmeniz için karşılık gelen bir CheckBoxContentControl türü sağlamaz. Bir veya Word 2010 projesinde onay kutusu içerik denetimi oluşturmak için, [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)] <xref:Microsoft.Office.Tools.Word.ControlCollection.AddContentControl%2A> yöntemini kullanarak bir <xref:Microsoft.Office.Tools.Word.ContentControl> nesne oluşturun ve bir <xref:Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlCheckBox> onay kutusu içerik denetimi belirtmek için değeri yöntemine geçirin. Aşağıdaki kod örneği bunun nasıl yapılacağını göstermektedir.
 
- [!code-vb[Trin_ContentControlReference#800](../vsto/codesnippet/VisualBasic/trin_contentcontrolreference/checkbox.vb#800)]
- [!code-csharp[Trin_ContentControlReference#800](../vsto/codesnippet/CSharp/trin_wordcontentcontrolreference/checkbox.cs#800)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_contentcontrolreference/checkbox.vb" id="Snippet800":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_wordcontentcontrolreference/checkbox.cs" id="Snippet800":::
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Genişletilmiş nesneleri kullanarak Word 'Ü otomatikleştirme](../vsto/automating-word-by-using-extended-objects.md)

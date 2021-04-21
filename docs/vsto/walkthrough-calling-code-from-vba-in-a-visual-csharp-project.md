@@ -21,12 +21,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: a026732f9b49107b8c113796251e1a2b916cf9a3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 260872096f36f91a2618f636e297d3c48b3fe51b
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99906486"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107824477"
 ---
 # <a name="walkthrough-call-code-from-vba-in-a-visual-c-project"></a>İzlenecek yol: Visual C# projesinde VBA 'dan kod çağırma
   Bu izlenecek yol, çalışma kitabındaki Visual Basic for Applications (VBA) kodundan Excel Microsoft Office için belge düzeyi özelleştirmesinde bir yöntemin nasıl çağrılacağını gösterir. Yordamda üç temel adım vardır: konak öğesi sınıfına bir yöntem ekleyin `Sheet1` , yöntemi çalışma KITABıNDA VBA kodu olarak kullanıma sunun ve sonra çalışma KITABıNDAKI VBA kodundan yöntemi çağırın.
@@ -155,28 +155,28 @@ ms.locfileid: "99906486"
 
 ### <a name="to-add-a-method-to-the-sheet1-class"></a>Sayfa1 sınıfına bir yöntem eklemek için
 
-1. **Çözüm Gezgini**' de, **Sheet1.cs**' a sağ tıklayın ve ardından **kodu görüntüle**' ye tıklayın.
+1. **Çözüm Gezgini**, **Sheet1. cs** öğesine sağ tıklayın ve ardından **kodu görüntüle**' ye tıklayın.
 
-     **Sheet1.cs** dosyası kod düzenleyicisinde açılır.
+     **Sheet1. cs** dosyası kod düzenleyicisinde açılır.
 
 2. Aşağıdaki kodu `Sheet1` sınıfına ekleyin. `CreateVstoNamedRange`Yöntemi belirtilen aralıkta yeni bir <xref:Microsoft.Office.Tools.Excel.NamedRange> nesne oluşturur. Bu yöntem, olayı için bir olay işleyicisi de oluşturur <xref:Microsoft.Office.Tools.Excel.NamedRange.Selected> <xref:Microsoft.Office.Tools.Excel.NamedRange> . Bu izlenecek yolda daha sonra, `CreateVstoNamedRange` yöntemi BELGEDEKI VBA kodundan çağıracaksınız.
 
-     [!code-csharp[Trin_CallingCSCustomizationFromVBA#2](../vsto/codesnippet/CSharp/CallingCodeFromVBA/Sheet1.cs#2)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/CallingCodeFromVBA/Sheet1.cs" id="Snippet2":::
 
 3. Sınıfına aşağıdaki yöntemi ekleyin `Sheet1` . Bu yöntem, <xref:Microsoft.Office.Tools.Excel.WorksheetBase.GetAutomationObject%2A> sınıfının geçerli örneğini döndürmek için yöntemini geçersiz kılar `Sheet1` .
 
-     [!code-csharp[Trin_CallingCSCustomizationFromVBA#3](../vsto/codesnippet/CSharp/CallingCodeFromVBA/Sheet1.cs#3)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/CallingCodeFromVBA/Sheet1.cs" id="Snippet3":::
 
 4. Sınıf bildiriminin ilk satırından önce aşağıdaki öznitelikleri uygulayın `Sheet1` . Bu öznitelikler sınıfı COM olarak görünür hale getirir, ancak bir sınıf arabirimi üretmeyecektir.
 
-     [!code-csharp[Trin_CallingCSCustomizationFromVBA#1](../vsto/codesnippet/CSharp/CallingCodeFromVBA/Sheet1.cs#1)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/CallingCodeFromVBA/Sheet1.cs" id="Snippet1":::
 
 ## <a name="extract-an-interface-for-the-sheet1-class"></a>Sheet1 sınıfı için bir arabirim Ayıkla
  Yöntemi VBA kodunda kullanıma sunmadan önce `CreateVstoNamedRange` , bu yöntemi tanımlayan bir ortak arabirim oluşturmanız ve bu ARABIRIMI com 'a almanız gerekir.
 
 ### <a name="to-extract-an-interface-for-the-sheet1-class"></a>Sheet1 sınıfına yönelik bir arabirim ayıklamak için
 
-1. **Sheet1.cs** kod dosyasında, sınıfında herhangi bir yere tıklayın `Sheet1` .
+1. **Sheet1. cs** kod dosyasında, sınıfında herhangi bir yere tıklayın `Sheet1` .
 
 2. Yeniden **Düzenle** menüsünde **Arabirimi Ayıkla**' ya tıklayın.
 
@@ -184,11 +184,11 @@ ms.locfileid: "99906486"
 
 4. **Tamam**'a tıklayın.
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] adlı yeni bir arabirim oluşturur `ISheet1` ve bu arabirimi `Sheet1` arabirimini uygulayan şekilde sınıfın tanımını değiştirir `ISheet1` . [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Ayrıca kod düzenleyicisinde **ISheet1.cs** dosyasını açar.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] adlı yeni bir arabirim oluşturur `ISheet1` ve bu arabirimi `Sheet1` arabirimini uygulayan şekilde sınıfın tanımını değiştirir `ISheet1` . [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Ayrıca, kod Düzenleyicisi 'nde **ISheet1. cs** dosyasını açar.
 
-5. **ISheet1.cs** dosyasında, `ISheet1` arabirim bildirimini aşağıdaki kodla değiştirin. Bu kod, `ISheet1` arabirimi genel hale getirir ve <xref:System.Runtime.InteropServices.ComVisibleAttribute> arabirimi com 'a görünür hale getirmek için özniteliğini uygular.
+5. **ISheet1. cs** dosyasında, `ISheet1` arabirim bildirimini aşağıdaki kodla değiştirin. Bu kod, `ISheet1` arabirimi genel hale getirir ve <xref:System.Runtime.InteropServices.ComVisibleAttribute> arabirimi com 'a görünür hale getirmek için özniteliğini uygular.
 
-     [!code-csharp[Trin_CallingCSCustomizationFromVBA#4](../vsto/codesnippet/CSharp/CallingCodeFromVBA/ISheet1.cs#4)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/CallingCodeFromVBA/ISheet1.cs" id="Snippet4":::
 
 6. Projeyi derleyin.
 
@@ -197,7 +197,7 @@ ms.locfileid: "99906486"
 
 ### <a name="to-expose-the-method-to-vba-code"></a>Yöntemi VBA koduna göstermek için
 
-1. **Çözüm Gezgini**' de, **Sheet1.cs**' ye çift tıklayın.
+1. **Çözüm Gezgini**, **Sheet1. cs**' ye çift tıklayın.
 
      **WorkbookWithVBA** dosyası, Sheet1 görünür ile tasarımcıda açılır.
 

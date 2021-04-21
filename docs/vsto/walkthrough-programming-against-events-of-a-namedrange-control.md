@@ -19,12 +19,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: b3305fdc8f4fbadb3dcdd9775c3a6fe3dac3a1fb
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ec1c670867fae277a3c3c8290cd34d0d4be7ddf3
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99937400"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107824971"
 ---
 # <a name="walkthrough-program-against-events-of-a-namedrange-control"></a>İzlenecek yol: NamedRange denetimi olaylarına karşı programlama
   Bu izlenecek yol <xref:Microsoft.Office.Tools.Excel.NamedRange> , Visual Studio 'Da Office geliştirme araçları 'nı kullanarak Microsoft Office Excel çalışma sayfasına ve programına yönelik bir denetimin nasıl ekleneceğini gösterir.
@@ -101,16 +101,16 @@ ms.locfileid: "99937400"
 
 ### <a name="to-insert-text-into-namedrange2-based-on-the-beforedoubleclick-event"></a>BeforeDoubleClick olayına göre NamedRange2 içine metin eklemek için
 
-1. **Çözüm Gezgini**, **Sheet1. vb** veya **Sheet1.cs** öğesine sağ tıklayın ve **kodu görüntüle**' yi seçin.
+1. **Çözüm Gezgini**, **Sheet1. vb** veya **Sheet1. cs** öğesine sağ tıklayın ve **kodu görüntüle**' yi seçin.
 
 2. Olay işleyicisinin aşağıdakine benzer şekilde kod ekleyin `namedRange1_BeforeDoubleClick` :
 
-     [!code-csharp[Trin_VstcoreHostControlsExcel#24](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs#24)]
-     [!code-vb[Trin_VstcoreHostControlsExcel#24](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb#24)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs" id="Snippet24":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb" id="Snippet24":::
 
 3. C# ' de, aşağıdaki olayda gösterildiği gibi, adlandırılmış aralığa yönelik olay işleyicileri eklemeniz gerekir <xref:Microsoft.Office.Tools.Excel.Worksheet.Startup> . Olay işleyicileri oluşturma hakkında bilgi için bkz. [nasıl yapılır: Office projelerinde olay Işleyicileri oluşturma](../vsto/how-to-create-event-handlers-in-office-projects.md).
 
-     [!code-csharp[Trin_VstcoreHostControlsExcel#25](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs#25)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs" id="Snippet25":::
 
 ## <a name="add-code-to-respond-to-the-change-event"></a>Değişiklik olayına yanıt vermek için kod ekleme
 
@@ -118,8 +118,8 @@ ms.locfileid: "99937400"
 
 1. Olay işleyicisinin aşağıdakine benzer şekilde kod ekleyin `NamedRange1_Change` :
 
-     [!code-csharp[Trin_VstcoreHostControlsExcel#26](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs#26)]
-     [!code-vb[Trin_VstcoreHostControlsExcel#26](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb#26)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs" id="Snippet26":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb" id="Snippet26":::
 
     > [!NOTE]
     > Excel aralığındaki bir hücreye çift tıklamak düzenleme moduna girdiğinde, <xref:Microsoft.Office.Tools.Excel.NamedRange.Change> metinde değişiklik yapılmasa bile seçim aralığın dışına taşındığında bir olay oluşur.
@@ -130,8 +130,8 @@ ms.locfileid: "99937400"
 
 1. **NamedRange1_SelectionChange** olay işleyicisinin aşağıdaki gibi görünmesi için kod ekleyin:
 
-     [!code-csharp[Trin_VstcoreHostControlsExcel#27](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs#27)]
-     [!code-vb[Trin_VstcoreHostControlsExcel#27](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb#27)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs" id="Snippet27":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb" id="Snippet27":::
 
     > [!NOTE]
     > Excel aralığındaki bir hücreye çift tıklamak seçimin aralığa taşınmasına neden olduğundan, <xref:Microsoft.Office.Tools.Excel.NamedRange.SelectionChange> olay gerçekleşmeden önce bir olay oluşur <xref:Microsoft.Office.Tools.Excel.NamedRange.BeforeDoubleClick> .

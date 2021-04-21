@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 43104ad8b26045056ca8d8d653fcb9625734f7eb
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fd3509ab674faa220ed7bbea15a9762f52b1a525
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99899430"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107828286"
 ---
 # <a name="walkthrough-create-your-first-vsto-add-in-for-word"></a>İzlenecek yol: Word için ilk VSTO eklentisini oluşturma
   Bu açıklayıcı izlenecek yol, Microsoft Office Word için VSTO eklentisi oluşturmayı gösterir. Bu tür çözümde oluşturduğunuz özellikler, hangi belgelerin açık olduğuna bakılmaksızın uygulamanın kendisi için kullanılabilir.
@@ -81,15 +81,15 @@ ms.locfileid: "99899430"
 
     Kullanıcı bir belge kaydettiğinde, olay işleyicisi belgenin başlangıcında yeni metin ekler.
 
-    [!code-vb[Trin_WordAddInTutorial#1](../vsto/codesnippet/VisualBasic/FirstWordAddIn/ThisAddIn.vb#1)]
-    [!code-csharp[Trin_WordAddInTutorial#1](../vsto/codesnippet/CSharp/FirstWordAddIn/ThisAddIn.cs#1)]
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/FirstWordAddIn/ThisAddIn.vb" id="Snippet1":::
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/FirstWordAddIn/ThisAddIn.cs" id="Snippet1":::
 
    > [!NOTE]
    > Bu kod, koleksiyondaki ilk paragrafa erişmek için 1 olan bir dizin değeri kullanır <xref:Microsoft.Office.Interop.Word._Document.Paragraphs%2A> . Visual Basic ve Visual C# 0 tabanlı diziler kullanmasına karşın, Word nesne modelindeki çoğu koleksiyonun alt dizi sınırları 1 ' dir. Daha fazla bilgi için bkz. [Office çözümlerinde kod yazma](../vsto/writing-code-in-office-solutions.md).
 
 2. C# kullanıyorsanız, olay işleyicisine aşağıdaki gerekli kodu ekleyin `ThisAddIn_Startup` . Bu kod `Application_DocumentBeforeSave` olay işleyicisini olayla bağlamak için kullanılır <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentBeforeSave> .
 
-    [!code-csharp[Trin_WordAddInTutorial#2](../vsto/codesnippet/CSharp/FirstWordAddIn/ThisAddIn.cs#2)]
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/FirstWordAddIn/ThisAddIn.cs" id="Snippet2":::
 
    Belgeyi kaydedildiğinde değiştirmek için, önceki kod örnekleri aşağıdaki nesneleri kullanır:
 

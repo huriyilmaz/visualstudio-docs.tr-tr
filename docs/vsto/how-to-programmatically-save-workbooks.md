@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 3a4f46a679e04c921aafd9a7774949d56c0925f2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4559d098a80a1dfd8f1d3f5c2c21cbebc992fcb7
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99842016"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107828988"
 ---
 # <a name="how-to-programmatically-save-workbooks"></a>Nasıl yapılır: program aracılığıyla çalışma kitaplarını kaydetme
   Çalışma kitabını kaydetmek için birkaç yol vardır. Yolu değiştirmeden bir çalışma kitabını kaydedebilirsiniz. Çalışma kitabı daha önce kaydedilmemişken, bir yol belirterek çalışma kitabını kaydetmeniz gerekir. Açık bir yol olmadan, Microsoft Office Excel dosyayı oluşturulduğu sırada verilen adla geçerli klasöre kaydeder. Çalışma kitabının bir kopyasını bellekte bulunan açık çalışma kitabında değişiklik yapmadan da kaydedebilirsiniz.
@@ -34,15 +34,15 @@ ms.locfileid: "99842016"
 
 1. <xref:Microsoft.Office.Tools.Excel.Workbook.Save%2A>Sınıfının yöntemini çağırın `ThisWorkbook` .
 
-     [!code-csharp[Trin_VstcoreExcelAutomation#4](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/ThisWorkbook.cs#4)]
-     [!code-vb[Trin_VstcoreExcelAutomation#4](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/ThisWorkbook.vb#4)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/ThisWorkbook.cs" id="Snippet4":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/ThisWorkbook.vb" id="Snippet4":::
 
 ### <a name="to-save-the-active-workbook-in-a-vsto-add-in"></a>Bir VSTO eklentisinin etkin çalışma kitabını kaydetmek için
 
 1. <xref:Microsoft.Office.Interop.Excel._Workbook.Save%2A>Etkin çalışma kitabını kaydetmek için yöntemini çağırın. Aşağıdaki kod örneğini kullanmak için, `ThisAddIn` Excel IÇIN VSTO eklenti projesindeki sınıfında çalıştırın.
 
-     [!code-csharp[Trin_VstcoreExcelAutomationAddIn#3](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#3)]
-     [!code-vb[Trin_VstcoreExcelAutomationAddIn#3](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#3)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs" id="Snippet3":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb" id="Snippet3":::
 
 ## <a name="save-a-workbook-with-a-new-path"></a>Yeni bir yola sahip bir çalışma kitabını kaydetme
  Belirtilen çalışma kitabını yeni bir konuma veya yeni bir adla kaydedebilirsiniz, isteğe bağlı olarak bir dosya biçimi, parola, erişim modu ve daha fazlasını belirtebilirsiniz.
@@ -54,15 +54,15 @@ ms.locfileid: "99842016"
 
 1. <xref:Microsoft.Office.Tools.Excel.Workbook.SaveAs%2A>Sınıfının yöntemini çağırın `ThisWorkbook` . Aşağıdaki kod örneğini kullanmak için `ThisWorkbook` sınıfında çalıştırın.
 
-     [!code-csharp[Trin_VstcoreExcelAutomation#5](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/ThisWorkbook.cs#5)]
-     [!code-vb[Trin_VstcoreExcelAutomation#5](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/ThisWorkbook.vb#5)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/ThisWorkbook.cs" id="Snippet5":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/ThisWorkbook.vb" id="Snippet5":::
 
 ### <a name="to-save-the-active-workbook-in-a-vsto-add-in"></a>Bir VSTO eklentisinin etkin çalışma kitabını kaydetmek için
 
 1. <xref:Microsoft.Office.Interop.Excel._Workbook.SaveAs%2A>Etkin çalışma kitabını yeni bir yola kaydetmek için yöntemini çağırın. Aşağıdaki kod örneğini kullanmak için, `ThisAddIn` Excel IÇIN VSTO eklenti projesindeki sınıfında çalıştırın.
 
-     [!code-csharp[Trin_VstcoreExcelAutomationAddIn#4](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#4)]
-     [!code-vb[Trin_VstcoreExcelAutomationAddIn#4](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#4)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs" id="Snippet4":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb" id="Snippet4":::
 
 ## <a name="save-a-copy-of-the-workbook"></a>Çalışma kitabının bir kopyasını kaydet
  Çalışma kitabının bir kopyasını bellekteki açık çalışma kitabını değiştirmeden bir dosyaya kaydedebilirsiniz. Bu, çalışma kitabının konumunu değiştirmeden bir yedek kopya oluşturmak istediğinizde yararlıdır.
@@ -71,15 +71,15 @@ ms.locfileid: "99842016"
 
 1. <xref:Microsoft.Office.Tools.Excel.Workbook.SaveCopyAs%2A>Sınıfının yöntemini çağırın `ThisWorkbook` . Aşağıdaki kod örneğini kullanmak için `ThisWorkbook` sınıfında çalıştırın.
 
-     [!code-csharp[Trin_VstcoreExcelAutomation#6](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/ThisWorkbook.cs#6)]
-     [!code-vb[Trin_VstcoreExcelAutomation#6](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/ThisWorkbook.vb#6)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/ThisWorkbook.cs" id="Snippet6":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/ThisWorkbook.vb" id="Snippet6":::
 
 ### <a name="to-save-the-active-workbook-in-a-vsto-add-in"></a>Bir VSTO eklentisinin etkin çalışma kitabını kaydetmek için
 
 1. <xref:Microsoft.Office.Interop.Excel._Workbook.SaveCopyAs%2A>Etkin çalışma kitabının bir kopyasını kaydetmek için yöntemini çağırın. Aşağıdaki kod örneğini kullanmak için, `ThisAddIn` Excel IÇIN VSTO eklenti projesindeki sınıfında çalıştırın.
 
-     [!code-csharp[Trin_VstcoreExcelAutomationAddIn#5](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#5)]
-     [!code-vb[Trin_VstcoreExcelAutomationAddIn#5](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#5)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs" id="Snippet5":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb" id="Snippet5":::
 
 ## <a name="robust-programming"></a>Güçlü programlama
  Çalışma kitabını kaydetme veya kopyalama yöntemini etkileşimli olarak iptal etmek kodunuzda bir çalışma zamanı hatası oluşturur. Örneğin, yordamınız yöntemi çağırırsa, <xref:Microsoft.Office.Tools.Excel.Workbook.SaveAs%2A> ancak Excel 'den istemleri devre dışı bırakmazsa ve istendiğinde, Excel bir çalışma  zamanı hatası oluşturur.

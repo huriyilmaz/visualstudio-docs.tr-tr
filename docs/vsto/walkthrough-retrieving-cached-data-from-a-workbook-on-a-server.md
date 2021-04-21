@@ -19,12 +19,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 818c7c9aa5edeae32859d0b5af6449b513df1c85
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e11099b0ea37856919affb927c3f118572d339af
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99937452"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826882"
 ---
 # <a name="walkthrough-retrieve-cached-data-from-a-workbook-on-a-server"></a>İzlenecek yol: sunucudaki çalışma kitabından önbelleğe alınmış verileri alma
   Bu kılavuzda, sınıfını kullanarak Excel 'i başlatmadan Microsoft Office Excel çalışma kitabında önbelleğe alınmış bir veri kümesinden verilerin nasıl alınacağını gösterir <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> .
@@ -82,9 +82,9 @@ ms.locfileid: "99937452"
 
 8. **Tamam**'a tıklayın.
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**Çözüm Gezgini** Için bir **AdventureWorksDataSet** projesi ekler ve *Class1.cs* veya *Class1. vb* kod dosyasını açar.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**Çözüm Gezgini** Için bir **AdventureWorksDataSet** projesi ekler ve *Class1. cs* veya *Class1. vb* kod dosyasını açar.
 
-9. **Çözüm Gezgini**' de, *Class1.cs* veya *Class1. vb* öğesine sağ tıklayın ve ardından **Sil**' e tıklayın. Bu izlenecek yol için bu dosyaya ihtiyacınız yoktur.
+9. **Çözüm Gezgini**, *Class1. cs* veya *Class1. vb* öğesine sağ tıklayın ve ardından **Sil**' e tıklayın. Bu izlenecek yol için bu dosyaya ihtiyacınız yoktur.
 
 ## <a name="define-a-dataset-in-the-class-library-project"></a>Sınıf kitaplığı projesinde bir veri kümesi tanımlama
  SQL Server 2005 için AdventureWorksLT veritabanından veri içeren bir türü belirtilmiş veri kümesi tanımlayın. Bu izlenecek yolda daha sonra, bu veri kümesine bir Excel çalışma kitabı projesinden ve konsol uygulaması projesinden başvurabileceksiniz.
@@ -149,7 +149,7 @@ ms.locfileid: "99937452"
 ## <a name="add-the-dataset-to-data-sources-in-the-excel-workbook-project"></a>Veri kümesini Excel çalışma kitabı projesindeki veri kaynaklarına ekleme
  Veri kümesini Excel çalışma kitabında görüntüleyebilmeniz için önce Excel çalışma kitabı projesindeki veri kaynaklarına veri kümesini eklemeniz gerekir.
 
-1. **Çözüm Gezgini**, **AdventureWorksReport** projesi altındaki *Sheet1.cs* veya *Sheet1. vb* öğesine çift tıklayın.
+1. **Çözüm Gezgini**, **AdventureWorksReport** projesi altında *Sheet1. cs* veya *Sayfa1. vb* ' ye çift tıklayın.
 
      Çalışma kitabı tasarımcıda açılır.
 
@@ -192,12 +192,12 @@ ms.locfileid: "99937452"
 ## <a name="initialize-the-dataset-in-the-workbook"></a>Çalışma kitabındaki veri kümesini başlatma
  Konsol uygulamasını kullanarak önbelleğe alınmış veri kümesinden verileri almak için önce önbelleğe alınmış veri kümesini verilerle doldurmanız gerekir.
 
-1. **Çözüm Gezgini**, *Sheet1.cs* veya *Sheet1. vb* dosyasını sağ tıklayın ve **kodu görüntüle**' ye tıklayın.
+1. **Çözüm Gezgini**, *Sheet1. cs* veya *Sayfa1. vb* dosyasını sağ tıklayın ve **kodu görüntüle**' ye tıklayın.
 
 2. `Sheet1_Startup`Olay işleyicisini aşağıdaki kodla değiştirin. Bu kod, `ProductTableAdapter` Şu anda boşsa, verileri önbelleğe alınmış veri kümesini dolduracak şekilde, **AdventureWorksDataSet** projesinde tanımlanan sınıfının bir örneğini kullanır.
 
-     [!code-csharp[Trin_CachedDataWalkthroughs#8](../vsto/codesnippet/CSharp/AdventureWorksDataSet/AdventureWorksReport/Sheet1.cs#8)]
-     [!code-vb[Trin_CachedDataWalkthroughs#8](../vsto/codesnippet/VisualBasic/AdventureWorksDataSet/AdventureWorksReport/Sheet1.vb#8)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/AdventureWorksDataSet/AdventureWorksReport/Sheet1.cs" id="Snippet8":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/AdventureWorksDataSet/AdventureWorksReport/Sheet1.vb" id="Snippet8":::
 
 ## <a name="checkpoint"></a>Checkpoint
  Hatasız derlendiğinden ve çalıştığından emin olmak için Excel çalışma kitabı projesini derleyin ve çalıştırın. Bu işlem, önbelleğe alınmış veri kümesini de doldurur ve verileri çalışma kitabına kaydeder.
@@ -229,7 +229,7 @@ ms.locfileid: "99937452"
 
 5. **Tamam**'a tıklayın.
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**Çözüm Gezgini** **DataReader** projesi ekler ve *program.cs* veya *Module1. vb* kod dosyasını açar.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**DataReader** projesini **Çözüm Gezgini** ekler ve *program. cs* veya *Module1. vb* kod dosyasını açar.
 
 ## <a name="retrieve-data-from-the-cached-dataset-by-using-the-console-application"></a>Konsol uygulamasını kullanarak önbelleğe alınmış veri kümesinden verileri alma
  <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>Verileri yerel bir nesneye okumak için konsol uygulamasındaki sınıfını kullanın `AdventureWorksLTDataSet` . Yerel veri kümesinin, önbelleğe alınmış veri kümesindeki verilerle başlatıldığını onaylamak için, uygulama yerel veri kümesindeki satır sayısını görüntüler.
@@ -246,12 +246,12 @@ ms.locfileid: "99937452"
 
 5. **Projeler** sekmesinde, **AdventureWorksDataSet**' i seçin ve **Tamam**' ı tıklatın.
 
-6. Kod düzenleyicisinde *program.cs* veya *Module1. vb* dosyasını açın.
+6. Kod düzenleyicisinde *program. cs* veya *Module1. vb* dosyasını açın.
 
 7. Aşağıdaki **using** (C# için) veya **ımports** (for Visual Basic) deyimlerini kod dosyasının en üstüne ekleyin.
 
-    [!code-csharp[Trin_CachedDataWalkthroughs#1](../vsto/codesnippet/CSharp/AdventureWorksDataSet/DataWriter/Program.cs#1)]
-    [!code-vb[Trin_CachedDataWalkthroughs#1](../vsto/codesnippet/VisualBasic/AdventureWorksDataSet/DataWriter/Module1.vb#1)]
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/AdventureWorksDataSet/DataWriter/Program.cs" id="Snippet1":::
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/AdventureWorksDataSet/DataWriter/Module1.vb" id="Snippet1":::
 
 8. `Main` yöntemine aşağıdaki kodu ekleyin. Bu kod aşağıdaki nesneleri bildirir:
 
@@ -264,8 +264,8 @@ ms.locfileid: "99937452"
      > [!NOTE]
      > Aşağıdaki kod, çalışma kitabının *. xlsx* uzantısı kullanılarak kaydedildiğini varsayar. Projenizdeki çalışma kitabının farklı bir uzantısı varsa, yolu gereken şekilde değiştirin.
 
-     [!code-csharp[Trin_CachedDataWalkthroughs#10](../vsto/codesnippet/CSharp/AdventureWorksDataSet/DataWriter/Program.cs#10)]
-     [!code-vb[Trin_CachedDataWalkthroughs#10](../vsto/codesnippet/VisualBasic/AdventureWorksDataSet/DataWriter/Module1.vb#10)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/AdventureWorksDataSet/DataWriter/Program.cs" id="Snippet10":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/AdventureWorksDataSet/DataWriter/Module1.vb" id="Snippet10":::
 
 9. `Main`Önceki adımda eklediğiniz koddan sonra yöntemine aşağıdaki kodu ekleyin. Bu kod aşağıdaki görevleri gerçekleştirir:
 
@@ -275,8 +275,8 @@ ms.locfileid: "99937452"
 
    - Verilerin olduğunu doğrulamak için yerel veri kümesindeki satır sayısını görüntüler.
 
-     [!code-csharp[Trin_CachedDataWalkthroughs#11](../vsto/codesnippet/CSharp/AdventureWorksDataSet/DataWriter/Program.cs#11)]
-     [!code-vb[Trin_CachedDataWalkthroughs#11](../vsto/codesnippet/VisualBasic/AdventureWorksDataSet/DataWriter/Module1.vb#11)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/AdventureWorksDataSet/DataWriter/Program.cs" id="Snippet11":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/AdventureWorksDataSet/DataWriter/Module1.vb" id="Snippet11":::
 
 10. **Yapı** menüsünde, **derleme DataReader**' ı tıklatın.
 

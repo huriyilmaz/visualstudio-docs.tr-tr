@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: d5804c7441682a6bedb776558bd2eb5c79605951
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b91486c193b7b3fdba3b4c5cbbe86f58ffa7f06c
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99885436"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107827883"
 ---
 # <a name="how-to-programmatically-format-text-in-documents"></a>Nasıl yapılır: belgelerde metni program aracılığıyla biçimlendirme
   <xref:Microsoft.Office.Interop.Word.Range>Bir Microsoft Office Word belgesinde metin biçimlendirmek için nesnesini kullanabilirsiniz.
@@ -36,8 +36,8 @@ ms.locfileid: "99885436"
 
 1. Aşağıdaki örnek, belge düzeyi özelleştirmesinde kullanılabilir. Bu kodu kullanmak için `ThisDocument` projenizdeki sınıftan çalıştırın.
 
-     [!code-vb[Trin_VstcoreWordAutomation#62](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#62)]
-     [!code-csharp[Trin_VstcoreWordAutomation#62](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#62)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet62":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet62":::
 
 ## <a name="vsto-add-in-example"></a>VSTO eklentisi örneği
 
@@ -45,8 +45,8 @@ ms.locfileid: "99885436"
 
 1. Aşağıdaki örnek bir VSTO eklentisi içinde kullanılabilir. Bu örnek etkin belgeyi kullanır. Bu kodu kullanmak için `ThisAddIn` projenizdeki sınıftan çalıştırın.
 
-     [!code-vb[Trin_VstcoreWordAutomationAddIn#62](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#62)]
-     [!code-csharp[Trin_VstcoreWordAutomationAddIn#62](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#62)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb" id="Snippet62":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs" id="Snippet62":::
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Nasıl yapılır: belgelerde aralıkları program aracılığıyla tanımlama ve seçme](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)

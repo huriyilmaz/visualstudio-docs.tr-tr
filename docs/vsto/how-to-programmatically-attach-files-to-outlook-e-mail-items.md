@@ -18,12 +18,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 972203b5306d3fa7c94461b235c204051871c33c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f3e1f54efea0295a5fa1dc4b852ddc60820880ae
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99892092"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107828260"
 ---
 # <a name="how-to-programmatically-attach-files-to-outlook-email-items"></a>Nasıl yapılır: program aracılığıyla Outlook e-posta öğelerine dosya iliştirme
   Bu örnek, yeni bir posta öğesine bir dosya iliştirir ve Armando Pinto 'ya gönderir. Örnekte, Armando Pinto adlı bir kişinin alıcı olarak varolduğu varsayılır.
@@ -31,8 +31,8 @@ ms.locfileid: "99892092"
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 
 ## <a name="example"></a>Örnek
- [!code-csharp[Trin_Outlook_RL_AttachFiles#1](../vsto/codesnippet/CSharp/Trin_Outlook_RL_AttachFiles/thisaddin.cs#1)]
- [!code-vb[Trin_Outlook_RL_AttachFiles#1](../vsto/codesnippet/VisualBasic/Trin_Outlook_RL_AttachFiles/thisaddin.vb#1)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Outlook_RL_AttachFiles/thisaddin.cs" id="Snippet1":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Outlook_RL_AttachFiles/thisaddin.vb" id="Snippet1":::
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Posta öğeleriyle çalışma](../vsto/working-with-mail-items.md)

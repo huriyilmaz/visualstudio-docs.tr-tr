@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: e839e253e54e7c9c0358bef7330f9e330684b809
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a2fd0b8ce46ba15066ab4cf070807e2457c21e70
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99927840"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107828962"
 ---
 # <a name="how-to-resize-listobject-controls"></a>Nasıl yapılır: ListObject denetimlerini yeniden boyutlandırma
   Bir <xref:Microsoft.Office.Tools.Excel.ListObject> denetimin boyutunu Microsoft Office bir Excel çalışma kitabına eklediğinizde ayarlarsınız; ancak, daha sonra yeniden boyutlandırmak isteyebilirsiniz. Örneğin, iki sütunlu bir listeyi üç sütun olarak değiştirmek isteyebilirsiniz.
@@ -61,13 +61,13 @@ ms.locfileid: "99927840"
 
 1. <xref:Microsoft.Office.Tools.Excel.ListObject> **A1** hücresini **B3** üzerinden kapsayan bir denetim oluşturun `Sheet1` .
 
-     [!code-csharp[Trin_VstcoreHostControlsExcel#6](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs#6)]
-     [!code-vb[Trin_VstcoreHostControlsExcel#6](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb#6)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs" id="Snippet6":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb" id="Snippet6":::
 
 2. Listeyi, **a1** ile **C5** arasındaki hücreleri içerecek şekilde yeniden boyutlandırın.
 
-     [!code-csharp[Trin_VstcoreHostControlsExcel#7](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs#7)]
-     [!code-vb[Trin_VstcoreHostControlsExcel#7](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb#7)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs" id="Snippet7":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb" id="Snippet7":::
 
 ## <a name="resize-a-listobject-at-run-time-in-a-vsto-add-in-project"></a><a name="runtimeaddin"></a> VSTO eklenti projesindeki bir ListObject 'i çalışma zamanında yeniden boyutlandırma
  <xref:Microsoft.Office.Tools.Excel.ListObject>Çalışma zamanında herhangi bir açık çalışma sayfasında bir denetimi yeniden boyutlandırabilirsiniz. <xref:Microsoft.Office.Tools.Excel.ListObject>VSTO eklentisini kullanarak çalışma sayfasına denetim ekleme hakkında daha fazla bilgi için bkz. [nasıl yapılır: ListObject denetimlerini çalışma sayfalarına ekleme](../vsto/how-to-add-listobject-controls-to-worksheets.md).
@@ -76,13 +76,13 @@ ms.locfileid: "99927840"
 
 1. <xref:Microsoft.Office.Tools.Excel.ListObject> **A1** hücresini **B3** üzerinden kapsayan bir denetim oluşturun `Sheet1` .
 
-     [!code-csharp[Trin_Excel_Dynamic_Controls#12](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/ThisAddIn.cs#12)]
-     [!code-vb[Trin_Excel_Dynamic_Controls#12](../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/ThisAddIn.vb#12)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/ThisAddIn.cs" id="Snippet12":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/ThisAddIn.vb" id="Snippet12":::
 
 2. Listeyi, **a1** ile **C5** arasındaki hücreleri içerecek şekilde yeniden boyutlandırın.
 
-     [!code-csharp[Trin_Excel_Dynamic_Controls#13](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/ThisAddIn.cs#13)]
-     [!code-vb[Trin_Excel_Dynamic_Controls#13](../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/ThisAddIn.vb#13)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/ThisAddIn.cs" id="Snippet13":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/ThisAddIn.vb" id="Snippet13":::
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [VSTO Eklentilerindeki Word belgelerini ve Excel çalışma kitaplarını çalışma zamanında genişletme](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)
