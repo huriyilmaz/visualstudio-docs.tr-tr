@@ -32,12 +32,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 5786ea4bdd0dd6f4c92284aaf9cff2a3c95e4231
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b939131f388642b452445e0afee0f5e38d2a5195
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99920488"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107825543"
 ---
 # <a name="global-access-to-objects-in-office-projects"></a>Office Projelerindeki Nesnelere Genel erişim
   Bir Office projesi oluşturduğunuzda, Visual Studio otomatik olarak projede adlı bir sınıf oluşturur `Globals` . `Globals`Çalışma zamanında, projedeki herhangi bir koddan farklı proje öğelerine erişmek için sınıfını kullanabilirsiniz.
@@ -69,8 +69,8 @@ ms.locfileid: "99920488"
 
   Örneğin, `Globals.Sheet1` <xref:Microsoft.Office.Tools.Excel.NamedRange> `Sheet1` bir Kullanıcı, Excel için belge düzeyindeki bir projede eylemler bölmesindeki bir düğmeye tıkladığında bir denetime metin eklemek için özelliğini kullanabilirsiniz.
 
-  [!code-vb[Trin_VstcoreProgramming#1](../vsto/codesnippet/VisualBasic/Trin_VstcoreProgrammingExcelVB/Sheet1.vb#1)]
-  [!code-csharp[Trin_VstcoreProgramming#1](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingExcelCS/Sheet1.cs#1)]
+  :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreProgrammingExcelVB/Sheet1.vb" id="Snippet1":::
+  :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingExcelCS/Sheet1.cs" id="Snippet1":::
 
  `Globals`Belge veya VSTO eklentisi başlatılmadan önce sınıfı kullanmayı deneyen kod, çalışma zamanı özel durumu oluşturabilir. Örneğin, sınıf `Globals` düzeyinde bir değişken bildirirken kullanılması başarısız olabilir çünkü `Globals` sınıf, bildirilmeyen nesne örneklendirmeden önce tüm konak öğelerinin başvuruları ile başlatılmamış olabilir.
 

@@ -22,12 +22,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: cbda0a4b7977f962751ed9803bd1b39103f67679
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3bc1b674caf46dc84ff7bf57c983131b79cfde51
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99968833"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107827818"
 ---
 # <a name="troubleshoot-errors-in-office-solutions"></a>Office çözümlerinde hata giderme sorunları
   Visual Studio 'da Office çözümleri geliştirirken aşağıdaki görevleri gerçekleştirirken sorunlarla karşılaşabilirsiniz:
@@ -121,7 +121,7 @@ ms.locfileid: "99968833"
 
  Örneğin, <xref:Microsoft.Office.Interop.Excel.Application> nesneler bir <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.NewWorkbook> olaya ve bir özelliğe sahiptir <xref:Microsoft.Office.Interop.Excel._Application.NewWorkbook%2A> . Olayı işlemek için <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.NewWorkbook> , <xref:Microsoft.Office.Interop.Excel.Application> <xref:Microsoft.Office.Interop.Excel.AppEvents_Event> arabirimini arabirimine atayın. Aşağıdaki kod örneği, Excel için belge düzeyindeki bir projede bunun nasıl yapılacağını göstermektedir.
 
- [!code-csharp[Trin_VstcoreTroubleshootingExcel#1](../vsto/codesnippet/CSharp/Trin_VstcoreTroubleshootingExcelCS/ThisWorkbook.cs#1)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreTroubleshootingExcelCS/ThisWorkbook.cs" id="Snippet1":::
 
  Office PIA 'leri içindeki olay arabirimleri hakkında daha fazla bilgi için bkz. [Office birincil birlikte çalışma derlemelerindeki sınıflara ve arabirimlere genel bakış](/previous-versions/office/office-12//ms247299(v=office.12)).
 
@@ -157,18 +157,18 @@ Word.Document document = Globals.ThisAddIn.Application.ActiveDocument;
 ### <a name="references-to-office-classes-are-not-recognized"></a>Office sınıflarına yönelik başvurular tanınmıyor
  Örneğin, uygulama gibi bazı sınıf adları, ve gibi birden çok ad alanında <xref:Microsoft.Office.Interop.Word> bulunur <xref:System.Windows.Forms> . Bu nedenle,  / proje şablonlarının en üstündeki Imports **using** deyimleri, bir kısayol niteleyen sabiti içerir, örneğin:
 
- [!code-csharp[Trin_VstcoreTroubleshootingWord#2](../vsto/codesnippet/CSharp/Trin_VstcoreTroubleshootingWordCS/ThisDocument.cs#2)]
- [!code-vb[Trin_VstcoreTroubleshootingWord#2](../vsto/codesnippet/VisualBasic/Trin_VstcoreTroubleshootingWordVB/ThisDocument.vb#2)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreTroubleshootingWordCS/ThisDocument.cs" id="Snippet2":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreTroubleshootingWordVB/ThisDocument.vb" id="Snippet2":::
 
  **Imports** / **using** ifadesinin bu kullanımı, Office sınıflarının başvurularını Word veya Excel niteleyicisi ile ayırmanızı gerektirir, örneğin:
 
- [!code-csharp[Trin_VstcoreTroubleshootingWord#3](../vsto/codesnippet/CSharp/Trin_VstcoreTroubleshootingWordCS/ThisDocument.cs#3)]
- [!code-vb[Trin_VstcoreTroubleshootingWord#3](../vsto/codesnippet/VisualBasic/Trin_VstcoreTroubleshootingWordVB/ThisDocument.vb#3)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreTroubleshootingWordCS/ThisDocument.cs" id="Snippet3":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreTroubleshootingWordVB/ThisDocument.vb" id="Snippet3":::
 
  Nitelenmemiş bir bildirim kullanırsanız hata alırsınız, örneğin:
 
- [!code-csharp[Trin_VstcoreTroubleshootingWord#4](../vsto/codesnippet/CSharp/Trin_VstcoreTroubleshootingWordCS/ThisDocument.cs#4)]
- [!code-vb[Trin_VstcoreTroubleshootingWord#4](../vsto/codesnippet/VisualBasic/Trin_VstcoreTroubleshootingWordVB/ThisDocument.vb#4)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreTroubleshootingWordCS/ThisDocument.cs" id="Snippet4":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreTroubleshootingWordVB/ThisDocument.vb" id="Snippet4":::
 
  Word veya Excel ad alanını içeri aktarmış olsanız ve içindeki tüm sınıflara erişebilseniz de, ad alanı belirsizi kaldırmak için Word veya Excel ile tüm türleri tamamen nitelemeniz gerekir.
 

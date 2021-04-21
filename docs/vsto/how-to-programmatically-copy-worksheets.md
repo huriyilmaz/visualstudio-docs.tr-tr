@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 67bd9257e96b9c7e22dea2ca6af005ccc74637dc
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2a5b24d7896ec1f81c7e8d5d4c41a5e6af807b13
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99964218"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107828585"
 ---
 # <a name="how-to-programmatically-copy-worksheets"></a>Nasıl yapılır: program aracılığıyla çalışma sayfalarını kopyalama
   Çalışma kitabının bir kopyasını oluşturabilir ve bu çalışma sayfasını çalışma kitabındaki mevcut çalışma sayfasından önce veya sonra ekleyebilirsiniz. Çalışma sayfasının ekleneceği yeri belirtmezseniz, Excel yeni çalışma sayfasını içeren yeni bir çalışma kitabı oluşturur.
@@ -34,15 +34,15 @@ ms.locfileid: "99964218"
 
 1. <xref:Microsoft.Office.Interop.Excel.Worksheets.Copy%2A>Geçerli çalışma kitabındaki ilk çalışma sayfasını kopyalamak ve kopyayı üçüncü sayfadan sonra yerleştirmek için yöntemini kullanın.
 
-     [!code-csharp[Trin_VstcoreExcelAutomation#16](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#16)]
-     [!code-vb[Trin_VstcoreExcelAutomation#16](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#16)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs" id="Snippet16":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb" id="Snippet16":::
 
 ## <a name="to-add-a-copied-worksheet-to-a-workbook-in-a-vsto-add-in"></a>Bir VSTO eklentisinin çalışma kitabına kopyalanmış çalışma sayfası eklemek için
 
 1. <xref:Microsoft.Office.Interop.Excel.Worksheets.Copy%2A>Geçerli çalışma kitabındaki ilk çalışma sayfasını kopyalamak ve kopyayı üçüncü sayfadan sonra yerleştirmek için yöntemini kullanın.
 
-     [!code-csharp[Trin_VstcoreExcelAutomationAddIn#12](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#12)]
-     [!code-vb[Trin_VstcoreExcelAutomationAddIn#12](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#12)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs" id="Snippet12":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb" id="Snippet12":::
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Çalışma sayfalarıyla çalışma](../vsto/working-with-worksheets.md)

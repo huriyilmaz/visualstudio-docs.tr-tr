@@ -20,12 +20,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: d6824d53d552a27a68a49d63497156147283fd29
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9c95842ac2c6d77a2312ac5c4c197ba22ed2020e
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99847706"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107825426"
 ---
 # <a name="optional-parameters-in-office-solutions"></a>Office çözümlerinde isteğe bağlı parametreler
   Microsoft Office uygulamaların nesne modellerindeki birçok yöntem isteğe bağlı parametreleri kabul eder. Visual Studio 'da bir Office çözümü geliştirmek için Visual Basic kullanıyorsanız, varsayılan değerler eksik her parametre için otomatik olarak kullanıldığından isteğe bağlı parametreler için bir değer geçirmeniz gerekmez. Çoğu durumda, Visual C# projelerinde isteğe bağlı parametreleri de atlayabilirsiniz. Ancak,  `ThisDocument` belge düzeyi Word projelerinde sınıfının isteğe bağlı başvuru parametrelerini atlayamazsınız.
@@ -40,19 +40,19 @@ ms.locfileid: "99847706"
 ## <a name="example-in-excel"></a>Excel 'de örnek
  <xref:Microsoft.Office.Tools.Excel.Worksheet.CheckSpelling%2A>Yönteminde birçok isteğe bağlı parametre vardır. Bazı parametrelerin değerlerini belirtebilir ve aşağıdaki kod örneğinde gösterildiği gibi başkalarının varsayılan değerini kabul edebilirsiniz. Bu örnek, adlı bir çalışma sayfası sınıfına sahip bir belge düzeyi projesi gerektirir `Sheet1` .
 
- [!code-csharp[Trin_VstrefGeneralExcel#1](../vsto/codesnippet/CSharp/excelworkbook1/Sheet1.cs#1)]
- [!code-vb[Trin_VstrefGeneralExcel#1](../vsto/codesnippet/VisualBasic/excelworkbook1/Sheet1.vb#1)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/excelworkbook1/Sheet1.cs" id="Snippet1":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/excelworkbook1/Sheet1.vb" id="Snippet1":::
 
 ## <a name="example-in-word"></a>Word 'de örnek
  <xref:Microsoft.Office.Interop.Word.Find.Execute%2A>Yönteminde birçok isteğe bağlı parametre vardır. Bazı parametrelerin değerlerini belirtebilir ve aşağıdaki kod örneğinde gösterildiği gibi başkalarının varsayılan değerini kabul edebilirsiniz.
 
- [!code-vb[Trin_VstrefGeneralWord#1](../vsto/codesnippet/VisualBasic/worddocument1/ThisDocument.vb#1)]
- [!code-csharp[Trin_VstrefGeneralWord#1](../vsto/codesnippet/CSharp/worddocument1/ThisDocument.cs#1)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/worddocument1/ThisDocument.vb" id="Snippet1":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/worddocument1/ThisDocument.cs" id="Snippet1":::
 
 ## <a name="use-optional-parameters-of-methods-in-the-thisdocument-class-in-visual-c-document-level-projects-for-word"></a>Word için Visual C# belge düzeyi projelerindeki ThisDocument sınıfında isteğe bağlı yöntemlerin parametrelerini kullanın
  Word nesne modeli, değerleri kabul eden isteğe bağlı **başvuru** parametrelerine sahip birçok yöntem içerir <xref:System.Object> . Ancak  `ThisDocument` Word Için Visual C# belge düzeyi projelerinde oluşturulan sınıfın yöntemlerinin isteğe bağlı başvuru parametrelerini atlayamazsınız. Visual C# isteğe bağlı **başvuru** parametrelerini yalnızca sınıfların değil arayüzlerin yöntemlerine atlamanızı sağlar. Örneğin, aşağıdaki kod örneği derlenmez, çünkü sınıfının yönteminin isteğe bağlı **başvuru** parametrelerini atlayamazsınız <xref:Microsoft.Office.Tools.Word.DocumentBase.CheckSpelling%2A> `ThisDocument` .
 
- [!code-csharp[Trin_VstrefGeneralWord#3](../vsto/codesnippet/CSharp/worddocument1/ThisDocument.cs#3)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/worddocument1/ThisDocument.cs" id="Snippet3":::
 
  Sınıfının yöntemlerini çağırdığınızda `ThisDocument` Şu yönergeleri izleyin:
 
@@ -62,11 +62,11 @@ ms.locfileid: "99847706"
 
   Aşağıdaki kod örneği, <xref:Microsoft.Office.Tools.Word.DocumentBase.CheckSpelling%2A> *ıgnorebüyük* parametresi için bir değer belirtilerek ve diğer parametrelerin varsayılan değerini kabul ederek yönteminin nasıl çağrılacağını gösterir.
 
-  [!code-csharp[Trin_VstrefGeneralWord#4](../vsto/codesnippet/CSharp/worddocument1/ThisDocument.cs#4)]
+  :::code language="csharp" source="../vsto/codesnippet/CSharp/worddocument1/ThisDocument.cs" id="Snippet4":::
 
   Sınıftaki bir yöntemin isteğe bağlı **başvuru** parametrelerini atlayan bir kod yazmak isterseniz `ThisDocument` , alternatif olarak <xref:Microsoft.Office.Interop.Word.Document> özelliği tarafından döndürülen nesnede aynı yöntemi çağırabilirsiniz <xref:Microsoft.Office.Tools.Word.Document.InnerObject%2A> ve bu yöntemden parametreleri atlayabilirsiniz. Bu <xref:Microsoft.Office.Interop.Word.Document> , bir sınıf yerine bir arabirim olduğundan bunu yapabilirsiniz.
 
-  [!code-csharp[Trin_VstrefGeneralWord#5](../vsto/codesnippet/CSharp/worddocument1/ThisDocument.cs#5)]
+  :::code language="csharp" source="../vsto/codesnippet/CSharp/worddocument1/ThisDocument.cs" id="Snippet5":::
 
   Değer ve başvuru türü parametreleri hakkında daha fazla bilgi için bkz. [bağımsız değişkenleri değere göre ve başvuruya göre geçirme &#40;Visual Basic&#41;](/dotnet/visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference) (Visual Basic için) ve [&#40;C&#35; Programlama Kılavuzu&#41;parametrelerini geçirin ](/dotnet/csharp/programming-guide/classes-and-structs/passing-parameters).
 

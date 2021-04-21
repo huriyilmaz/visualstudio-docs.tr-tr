@@ -27,12 +27,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 8ed86cb10f6521e5863562cdb67e768b1a2367d1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6c35d963b426fe24a43bef24617f79c042c272e9
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99850041"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107828169"
 ---
 # <a name="custom-task-panes"></a>Özel görev bölmeleri
   Görev bölmeleri, genellikle bir Microsoft Office uygulamasındaki bir pencerenin bir tarafına yerleştirilen Kullanıcı arabirimi panolardır. Özel görev bölmeleri, kendi görev bölmenizi oluşturmak ve kullanıcılara çözümünüzün özelliklerine erişmek için tanıdık bir arabirim sağlamak için bir yol sağlar. Örneğin, arabirim, belgeleri değiştirmek veya bir veri kaynağındaki verileri göstermek için kodu çalıştıran denetimleri içerebilir.
@@ -66,8 +66,8 @@ ms.locfileid: "99850041"
 ### <a name="instantiate-the-custom-task-pane"></a>Özel görev bölmesini oluşturma
  Özel görev bölmesinin kullanıcı arabirimini içeren bir kullanıcı denetimi oluşturduktan sonra, örneğini oluşturmanız gerekir <xref:Microsoft.Office.Tools.CustomTaskPane> . Bunu yapmak için, <xref:Microsoft.Office.Tools.CustomTaskPaneCollection> yöntemlerinden birini çağırarak Kullanıcı DENETIMINI VSTO eklentiinizdeki öğesine geçirin <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A> . Bu koleksiyon, `CustomTaskPanes` sınıfının alanı olarak sunulur `ThisAddIn` . Aşağıdaki kod örneği sınıfından çalıştırılmak üzere tasarlanmıştır `ThisAddIn` .
 
- [!code-vb[Trin_TaskPaneBasic#2](../vsto/codesnippet/VisualBasic/Trin_TaskPaneBasic/ThisAddIn.vb#2)]
- [!code-csharp[Trin_TaskPaneBasic#2](../vsto/codesnippet/CSharp/Trin_TaskPaneBasic/ThisAddIn.cs#2)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_TaskPaneBasic/ThisAddIn.vb" id="Snippet2":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_TaskPaneBasic/ThisAddIn.cs" id="Snippet2":::
 
  <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A>Yöntemler yeni bir nesne döndürür <xref:Microsoft.Office.Tools.CustomTaskPane> . Görev bölmesinin görünümünü değiştirmek ve Kullanıcı olaylarına yanıt vermek için bu nesneyi kullanabilirsiniz.
 

@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 62d8236b987afbb7dc9d5e4462b79ffb4fe00bc5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: dbd60f5773392af2066e4693751dd6fff99128b9
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99928880"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107827974"
 ---
 # <a name="access-a-form-region-at-run-time"></a>Çalışma zamanında form bölgesine erişme
 
@@ -38,24 +38,24 @@ ms.locfileid: "99928880"
 
  Aşağıdaki örnek, şu anda odağa sahip olan Inspector 'da görünen form bölgelerinin koleksiyonunu alır. Bu örnek daha sonra adlı koleksiyondaki bir form bölgesine erişir `formRegion1` ve metin kutusunda görüntülenen metni olarak ayarlar `Hello World` .
 
- [!code-vb[Trin_Outlook_FR_Access#2](../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Access_O12/ThisAddIn.vb#2)]
- [!code-csharp[Trin_Outlook_FR_Access#2](../vsto/codesnippet/CSharp/Trin_Outlook_FR_Access_O12/ThisAddIn.cs#2)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Access_O12/ThisAddIn.vb" id="Snippet2":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Outlook_FR_Access_O12/ThisAddIn.cs" id="Snippet2":::
 
 ## <a name="access-form-regions-that-appear-in-a-specific-outlook-explorer-window"></a>Belirli bir Outlook Explorer penceresinde görünen erişim formu bölgeleri
  Belirli bir Outlook Explorer 'da görünen tüm form bölgelerine erişmek için, `FormRegions` sınıfının özelliğini çağırın `Globals` ve <xref:Microsoft.Office.Interop.Outlook.Explorer> Gezgini temsil eden bir nesneyi geçirin.
 
  Aşağıdaki örnek, Gezgin 'de Şu anda odaklanmış olan form bölgelerinin koleksiyonunu alır. Bu örnek daha sonra adlı koleksiyondaki bir form bölgesine erişir `formRegion1` ve metin kutusunda görüntülenen metni olarak ayarlar `Hello World` .
 
- [!code-vb[Trin_Outlook_FR_Access#3](../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Access_O12/ThisAddIn.vb#3)]
- [!code-csharp[Trin_Outlook_FR_Access#3](../vsto/codesnippet/CSharp/Trin_Outlook_FR_Access_O12/ThisAddIn.cs#3)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Access_O12/ThisAddIn.vb" id="Snippet3":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Outlook_FR_Access_O12/ThisAddIn.cs" id="Snippet3":::
 
 ## <a name="access-all-form-regions"></a>Tüm form bölgelerine erişin
  Tüm araştırıcılar ve tüm Denetçilerde görünen tüm form bölgelerine erişmek için, `FormRegions` sınıfının özelliğini çağırın `Globals` .
 
  Aşağıdaki örnek, tüm araştırıcılar ve tüm Denetçilerde görünen form bölgelerinin koleksiyonunu alır. Bu örnekte, adlı bir form bölgesine erişilir `formRegion1` ve metin kutusunda görüntülenen metin olarak ayarlanır `Hello World` .
 
- [!code-vb[Trin_Outlook_FR_Access#1](../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Access_O12/ThisAddIn.vb#1)]
- [!code-csharp[Trin_Outlook_FR_Access#1](../vsto/codesnippet/CSharp/Trin_Outlook_FR_Access_O12/ThisAddIn.cs#1)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Access_O12/ThisAddIn.vb" id="Snippet1":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Outlook_FR_Access_O12/ThisAddIn.cs" id="Snippet1":::
 
 ## <a name="access-controls-on-a-form-region"></a>Form bölgesindeki erişim denetimleri
  Sınıfını kullanarak form bölgesindeki denetimlere erişmek için `Globals` , denetimleri form bölgesi kod dosyası dışındaki kod için erişilebilir yapmanız gerekir.

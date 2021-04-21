@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 90a065ec98da440af6e52a191e11f4371575c2d4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b7cda46330967ef2b2b08db2109a030bbef8cace
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99964231"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107828559"
 ---
 # <a name="how-to-programmatically-copy-and-paste-shapes-in-a-visio-document"></a>Nasıl yapılır: Visio belgesine program aracılığıyla şekilleri kopyalama ve yapıştırma
   Bir belgenin bir sayfasında program aracılığıyla şekilleri kopyalayabilir ve bunları aynı belgede yeni bir sayfaya yapıştırabilirsiniz. Bunları varsayılan konuma (etkin pencerenin Merkezi) veya orijinal sayfada sahip oldukları şekliyle aynı koordinat konumlarına yapıştırmayı seçebilirsiniz.
@@ -33,8 +33,8 @@ ms.locfileid: "99964231"
 
 - Aşağıdaki örnek, ilk sayfadan şekillerin nasıl kopyalanacağını ve ikinci sayfanın ortasına yapıştırılacağını gösterir.
 
-     [!code-csharp[Trin_VstcoreVisioAutomationAddIn#14](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#14)]
-     [!code-vb[Trin_VstcoreVisioAutomationAddIn#14](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#14)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs" id="Snippet14":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb" id="Snippet14":::
 
 ## <a name="copy-and-paste-shapes-with-the-same-positions"></a>Aynı pozisyonlarla şekilleri Kopyala ve Yapıştır
  Nesne modeliyle ilgili ayrıntılar için bkz. Microsoft için VBA başvuru belgeleri [. Office. Interop. Visio. Shape. DrawRectangle](/office/vba/api/Visio.Shape.DrawRectangle), [Microsoft. Office. Interop. Visio. Shape. DrawOval](/office/vba/api/Visio.Shape.DrawOval), [Microsoft. Office. Interop. Visio](/office/vba/api/Visio.Shape.Copy). Shape. Copy, ve [Microsoft. Office. Interop. Visio. Shape. Paste](/office/vba/api/Visio.Shape.Paste) yöntemleri ve [Microsoft. Office. Interop. Visio. VisCutCopyPasteCodes. visCopyPasteNoTranslate](/office/vba/api/Visio.viscutcopypastecodes) bayrağı.
@@ -45,8 +45,8 @@ ms.locfileid: "99964231"
 
 - Aşağıdaki örnek, ilk sayfadan şekillerin nasıl kopyalanacağını ve özgün koordinat konumlarına sahip ikinci sayfaya nasıl yapıştırılacağını gösterir.
 
-     [!code-csharp[Trin_VstcoreVisioAutomationAddIn#15](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#15)]
-     [!code-vb[Trin_VstcoreVisioAutomationAddIn#15](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#15)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs" id="Snippet15":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb" id="Snippet15":::
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visio çözümleri](../vsto/visio-solutions.md)

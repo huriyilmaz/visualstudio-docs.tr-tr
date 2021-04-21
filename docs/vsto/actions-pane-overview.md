@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 9579de6712b742dde1f9b399ca8a1e4598783679
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 61e7ab9f00db6036d3bc8e41b9a2f19cf51f5511
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99896771"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107828156"
 ---
 # <a name="actions-pane-overview"></a>Eylemler bölmesine genel bakış
   Bir eylemler bölmesi, belirli bir Microsoft Office Word belgesine veya Microsoft Office Excel çalışma kitabına eklenen özelleştirilebilir bir **belge eylemleri** görev bölmesidir. Eylemler bölmesi Office görev bölmesinin içinde, Excel 'deki **XML kaynağı** görev bölmesi veya Word 'deki **Stiller ve biçimlendirme** görev bölmesi gibi diğer yerleşik görev bölmeleri ile birlikte barındırılır. Eylemler bölmesi Kullanıcı arabirimini tasarlamak için Windows Forms denetimleri veya WPF denetimleri kullanabilirsiniz.
@@ -37,8 +37,8 @@ ms.locfileid: "99896771"
 ## <a name="display-the-actions-pane"></a>Eylemler bölmesini görüntüleme
  Eylemler bölmesi sınıfı tarafından temsil edilir <xref:Microsoft.Office.Tools.ActionsPane> . Belge düzeyinde bir proje oluşturduğunuzda, bu sınıfın bir örneği, `ActionsPane` `ThisWorkbook` projenizdeki (Excel için) veya `ThisDocument` (Word için) sınıfının alanı kullanılarak kodunuzda kullanılabilir. Eylemler bölmesini göstermek için alanın özelliğine bir Windows Forms denetimi ekleyin <xref:Microsoft.Office.Tools.ActionsPane.Controls%2A> `ActionsPane` . Aşağıdaki kod örneği, eylemler bölmesine adlı bir denetim ekler `actions` .
 
- [!code-csharp[Trin_VstcoreActionsPaneWord#7](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs#7)]
- [!code-vb[Trin_VstcoreActionsPaneWord#7](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb#7)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs" id="Snippet7":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb" id="Snippet7":::
 
  Eylemler bölmesi, açıkça bir denetim eklediğiniz anda çalışma zamanında görünür hale gelir. Eylemler bölmesi görüntülendikten sonra, kullanıcı eylemlerine yanıt olarak denetimleri dinamik olarak ekleyebilir veya kaldırabilirsiniz. Genellikle, ' ın olay işleyicisinde Eylemler bölmesini göstermek için kodu eklersiniz, `Startup` `ThisDocument` `ThisWorkbook` böylece Kullanıcı belgeyi ilk açtığında eylemler bölmesi görünür olur. Ancak, Eylemler bölmesini yalnızca bir kullanıcının belgedeki eylemine yanıt olarak göstermek isteyebilirsiniz. Örneğin, kodu `Click` belgedeki bir denetimin olayına ekleyebilirsiniz.
 
@@ -63,18 +63,18 @@ ms.locfileid: "99896771"
 
 - Word için, <xref:Microsoft.Office.Interop.Word.TaskPane.Visible%2A> <xref:Microsoft.Office.Interop.Word.TaskPane> belge eylemleri görev bölmesini temsil eden nesnenin özelliğini **false** olarak ayarlayın. Aşağıdaki kod örneği, projenizdeki sınıfından çalıştırılmak üzere tasarlanmıştır `ThisDocument` .
 
-     [!code-csharp[Trin_VstcoreActionsPaneWord#34](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs#34)]
-     [!code-vb[Trin_VstcoreActionsPaneWord#34](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb#34)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs" id="Snippet34":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb" id="Snippet34":::
 
 - Excel için <xref:Microsoft.Office.Interop.Excel._Application.DisplayDocumentActionTaskPane%2A> <xref:Microsoft.Office.Tools.Excel.Workbook.Application%2A> nesnesinin özelliğini **false** olarak ayarlayın. Aşağıdaki kod örneği, projenizdeki sınıfından çalıştırılmak üzere tasarlanmıştır `ThisWorkbook` .
 
-     [!code-csharp[Trin_VstcoreActionsPaneExcel#11](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ThisWorkbook.cs#11)]
-     [!code-vb[Trin_VstcoreActionsPaneExcel#11](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneExcelVB/ThisWorkbook.vb#11)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ThisWorkbook.cs" id="Snippet11":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneExcelVB/ThisWorkbook.vb" id="Snippet11":::
 
 - Word veya Excel için, <xref:Microsoft.Office.Core.CommandBar.Visible%2A> görev bölmesini gösteren komut çubuğunun özelliğini **yanlış** olarak ayarlayabilirsiniz. Aşağıdaki kod örneği, `ThisDocument` projenizdeki veya sınıfından çalıştırılmak üzere tasarlanmıştır `ThisWorkbook` .
 
-     [!code-csharp[Trin_VstcoreActionsPaneExcel#9](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ThisWorkbook.cs#9)]
-     [!code-vb[Trin_VstcoreActionsPaneExcel#9](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneExcelVB/ThisWorkbook.vb#9)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ThisWorkbook.cs" id="Snippet9":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneExcelVB/ThisWorkbook.vb" id="Snippet9":::
 
 ### <a name="clear-the-actions-pane-when-the-document-is-opened"></a>Belge açıldığında Eylemler bölmesini temizle
  Eylemler bölmesi görünür durumdayken bir Kullanıcı belgeyi kaydettiğinde, Eylemler bölmesi her açıldığında görünür ve eylemler bölmesi herhangi bir denetim içerip içermediğini belirtir. Ne zaman göründüğünü denetlemek isterseniz, ' <xref:Microsoft.Office.Tools.ActionsPane.Clear%2A> `ActionsPane` `Startup` ın olay işleyicisinde alanın yöntemini çağırın `ThisDocument` ve `ThisWorkbook` belge açıldığında eylemler bölmesinin görünür olmamasını sağlayın.
@@ -118,8 +118,8 @@ ms.locfileid: "99896771"
 
  Aşağıdaki kod, <xref:Microsoft.Office.Tools.ActionsPane.StackOrder%2A> Kullanıcı denetimlerini eylemler bölmesinin en üstünden yığmak için özelliğini ayarlar.
 
- [!code-csharp[Trin_VstcoreActionsPaneExcel#10](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ThisWorkbook.cs#10)]
- [!code-vb[Trin_VstcoreActionsPaneExcel#10](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneExcelVB/ThisWorkbook.vb#10)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ThisWorkbook.cs" id="Snippet10":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneExcelVB/ThisWorkbook.vb" id="Snippet10":::
 
 ## <a name="anchor-controls"></a>Tutturucu denetimleri
  Kullanıcı, çalışma zamanında eylemler bölmesini yeniden boyutlandırırsa, denetimler Eylemler bölmesi ile yeniden boyutlandırılabilir. <xref:System.Windows.Forms.Control.Anchor%2A>Denetimleri eylemler bölmesine bağlamak için bir Windows Forms denetiminin özelliğini kullanabilirsiniz. Ayrıca, Windows Forms denetimlerini aynı şekilde Kullanıcı denetimine de bağlayabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: Windows Forms denetimleri bağlama](/dotnet/framework/winforms/controls/how-to-anchor-controls-on-windows-forms).
@@ -129,16 +129,16 @@ ms.locfileid: "99896771"
 
  Kullanıcı, ihtiyaçlarına en uygun görev bölmesi boyutunu seçebildiğinden, görev bölmesini programlı olarak yeniden boyutlandırma önerilmez. Ancak, görev bölmesinin genişliğini yeniden boyutlandırmanız gerekiyorsa, bu görevi gerçekleştirmek için aşağıdaki kodu kullanabilirsiniz.
 
- [!code-csharp[Trin_VstcoreActionsPaneWord#102](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs#102)]
- [!code-vb[Trin_VstcoreActionsPaneWord#102](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb#102)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs" id="Snippet102":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb" id="Snippet102":::
 
 ## <a name="reposition-the-actions-pane"></a>Eylemler bölmesini yeniden Konumlandır
  Görev bölmesinde katıştırıldığından, doğrudan yeniden konumlandırılamaz <xref:Microsoft.Office.Tools.ActionsPane> . Bununla birlikte, görev bölmesini <xref:Microsoft.Office.Core.CommandBar.Position%2A> temsil eden öğesinin özelliğini ayarlayarak görev bölmesini programlı bir şekilde taşıyabilirsiniz <xref:Microsoft.Office.Core.CommandBar> .
 
  Kullanıcının kendi ihtiyaçlarına en uygun ekranda görev bölmesi konumunu seçebilmesi gerektiğinden, görev bölmesini programlı bir şekilde yeniden konumlandırma önerilmez. Ancak, görev bölmesini belirli bir konuma taşımanız gerekiyorsa, bu görevi gerçekleştirmek için aşağıdaki kodu kullanabilirsiniz.
 
- [!code-csharp[Trin_VstcoreActionsPaneWord#100](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs#100)]
- [!code-vb[Trin_VstcoreActionsPaneWord#100](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb#100)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs" id="Snippet100":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb" id="Snippet100":::
 
 > [!NOTE]
 > Son kullanıcılar, görev bölmesini dilediğiniz zaman el ile yeniden konumlandırabilirler. Görev bölmesinin programlama yoluyla gösterdiğiniz konuma yerleştirilmiş olarak kalmasını sağlamanın bir yolu yoktur. Ancak, yönlendirme değişikliklerini denetleyebilir ve Eylemler bölmesindeki denetimlerin doğru yönde yığıltığınızdan emin olabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: eylemler bölmelerinde denetim yerleşimini yönetme](../vsto/how-to-manage-control-layout-on-actions-panes.md).
@@ -147,8 +147,8 @@ ms.locfileid: "99896771"
 
  Görev bölmesi yerleştirilmemişse, <xref:Microsoft.Office.Core.CommandBar.Top%2A> <xref:Microsoft.Office.Core.CommandBar.Left%2A> <xref:Microsoft.Office.Core.CommandBar> görev bölmesini temsil eden öğesinin ve özelliklerini ayarlayabilirsiniz. Aşağıdaki kod, yerleştirilmemiş bir görev bölmesini belgenin sol üst köşesine kaydırır.
 
- [!code-csharp[Trin_VstcoreActionsPaneWord#101](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs#101)]
- [!code-vb[Trin_VstcoreActionsPaneWord#101](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb#101)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs" id="Snippet101":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb" id="Snippet101":::
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Office çözümlerinde WPF denetimlerini kullanma](../vsto/using-wpf-controls-in-office-solutions.md)

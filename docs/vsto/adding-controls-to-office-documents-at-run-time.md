@@ -24,12 +24,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 5d49c7fa9224b2d527956536cb0c56b016f6b52e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 64a4d4dcd2e6115a3b8093a0a9338cb126f49a28
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99948654"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107825140"
 ---
 # <a name="add-controls-to-office-documents-at-run-time"></a>Çalışma zamanında Office belgelerine denetim ekleme
   Çalışma zamanında bir Microsoft Office Word belgesine ve Microsoft Office Excel çalışma kitabına denetimler ekleyebilirsiniz. Onları çalışma zamanında da kaldırabilirsiniz. Çalışma zamanında eklediğiniz veya kaldırdığınız denetimlere *Dinamik denetimler* denir.
@@ -62,6 +62,9 @@ ms.locfileid: "99948654"
 
  [!code-vb[Trin_ExcelWorkbookDynamicControls#3](../vsto/codesnippet/VisualBasic/trin_excelworkbookdynamiccontrols4/ThisWorkbook.vb#3)]
  [!code-csharp[Trin_ExcelWorkbookDynamicControls#3](../vsto/codesnippet/CSharp/trin_excelworkbookdynamiccontrols4/ThisWorkbook.cs#3)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_excelworkbookdynamiccontrols4/ThisWorkbook.vb" id="Snippet3":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_excelworkbookdynamiccontrols4/ThisWorkbook.cs" id="Snippet3":::
+
 
 ### <a name="access-and-delete-controls"></a>Erişim ve silme denetimleri
  `Controls` <xref:Microsoft.Office.Tools.Excel.Worksheet> <xref:Microsoft.Office.Tools.Word.Document> Tasarım zamanında eklediğiniz denetimler de dahil olmak üzere, belgenizdeki tüm denetimleri yinelemek için veya özelliğini kullanabilirsiniz. Tasarım zamanında eklediğiniz denetimlere de *Statik denetimler* denir.
@@ -70,6 +73,9 @@ ms.locfileid: "99948654"
 
  [!code-vb[Trin_ExcelWorkbookDynamicControls#4](../vsto/codesnippet/VisualBasic/trin_excelworkbookdynamiccontrols4/ThisWorkbook.vb#4)]
  [!code-csharp[Trin_ExcelWorkbookDynamicControls#4](../vsto/codesnippet/CSharp/trin_excelworkbookdynamiccontrols4/ThisWorkbook.cs#4)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_excelworkbookdynamiccontrols4/ThisWorkbook.vb" id="Snippet4":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_excelworkbookdynamiccontrols4/ThisWorkbook.cs" id="Snippet4":::
+
 
  Çalışma zamanında statik denetimleri kaldıramazsınız. `Delete` `Remove` Statik bir denetimi kaldırmak için veya yöntemini kullanmayı denerseniz, bir <xref:Microsoft.Office.Tools.CannotRemoveControlException> oluşturulur.
 
@@ -116,8 +122,8 @@ Bir belge kaydedilip kapatıldığında, dinamik olarak oluşturulan tüm konak 
 
   Aşağıdaki kod örneği, bir <xref:Microsoft.Office.Tools.Excel.ControlCollection.AddControl%2A> belge düzeyi Excel projesindeki çalışma sayfasına dinamik olarak özel kullanıcı denetimi eklemek için yönteminin nasıl kullanılacağını gösterir. Bu örnekte, Kullanıcı denetimi adı ve olarak adlandırılır `UserControl1` <xref:Microsoft.Office.Interop.Excel.Range> `range1` . Bu örneği kullanmak için, bunu `Sheet` projedeki *n* sınıfından çalıştırın.
 
-  [!code-vb[Trin_VstcoreProgrammingControlsExcel#2](../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb#2)]
-  [!code-csharp[Trin_VstcoreProgrammingControlsExcel#2](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs#2)]
+  :::code language="vb" source="../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb" id="Snippet2":::
+  :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs" id="Snippet2":::
 
 ### <a name="use-members-of-custom-controls"></a>Özel denetimlerin üyelerini kullanma
  `AddControl`Çalışma sayfasına veya belgeye denetim eklemek için yöntemlerden birini kullandıktan sonra, artık iki farklı denetim nesneniz vardır:
@@ -136,8 +142,8 @@ Bir belge kaydedilip kapatıldığında, dinamik olarak oluşturulan tüm konak 
 
   Örneğin, hem <xref:Microsoft.Office.Tools.Excel.ControlSite> sınıf hem de <xref:System.Windows.Forms.Control> sınıfın bir `Top` özelliği vardır. Denetimin üst ve belgenin üst arasındaki mesafeyi almak veya ayarlamak için öğesinin özelliğini <xref:Microsoft.Office.Tools.Excel.ControlSite.Top%2A> değil öğesinin özelliğini kullanın <xref:Microsoft.Office.Tools.Excel.ControlSite> <xref:System.Windows.Forms.Control.Top%2A> <xref:System.Windows.Forms.Control> .
 
-  [!code-vb[Trin_VstcoreProgrammingControlsExcel#3](../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb#3)]
-  [!code-csharp[Trin_VstcoreProgrammingControlsExcel#3](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs#3)]
+  :::code language="vb" source="../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb" id="Snippet3":::
+  :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs" id="Snippet3":::
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Office belgelerindeki denetimler](../vsto/controls-on-office-documents.md)

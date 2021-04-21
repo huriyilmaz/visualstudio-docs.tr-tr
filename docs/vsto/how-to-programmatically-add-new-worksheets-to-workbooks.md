@@ -18,12 +18,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: babf029550907cb7faef77b71bdfae25a1307f38
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c093d61e38b3416fbef1e85dcf5af052c64db590
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99879468"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107827415"
 ---
 # <a name="how-to-programmatically-add-new-worksheets-to-workbooks"></a>Nasıl yapılır: program aracılığıyla çalışma kitaplarına yeni çalışma sayfaları ekleme
   Programlı olarak bir çalışma sayfası oluşturabilir ve çalışma kitabını çalışma kitabındaki çalışma sayfaları koleksiyonuna ekleyebilirsiniz.
@@ -34,8 +34,8 @@ ms.locfileid: "99879468"
 
 1. <xref:Microsoft.Office.Interop.Excel.Worksheets.Add%2A>Koleksiyonun yöntemini kullanın <xref:Microsoft.Office.Interop.Excel.Sheets> .
 
-     [!code-csharp[Trin_VstcoreExcelAutomation#15](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#15)]
-     [!code-vb[Trin_VstcoreExcelAutomation#15](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#15)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs" id="Snippet15":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb" id="Snippet15":::
 
      Yeni çalışma sayfası, <xref:Microsoft.Office.Interop.Excel.Worksheet> konak öğesi değil, yerel bir nesnedir. Bir <xref:Microsoft.Office.Tools.Excel.Worksheet> konak öğesi eklemek istiyorsanız, çalışma sayfasını Tasarım zamanında eklemeniz gerekir.
 
@@ -43,8 +43,8 @@ ms.locfileid: "99879468"
 
 1. <xref:Microsoft.Office.Interop.Excel.Worksheets.Add%2A>Koleksiyonun yöntemini kullanın <xref:Microsoft.Office.Interop.Excel.Sheets> .
 
-     [!code-csharp[Trin_VstcoreExcelAutomationAddIn#11](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#11)]
-     [!code-vb[Trin_VstcoreExcelAutomationAddIn#11](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#11)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs" id="Snippet11":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb" id="Snippet11":::
 
      Yeni çalışma sayfası, <xref:Microsoft.Office.Interop.Excel.Worksheet> konak öğesi değil, yerel bir nesnedir. <xref:Microsoft.Office.Tools.Excel.Worksheet>Yerel nesneden bir konak öğesi de oluşturabilirsiniz <xref:Microsoft.Office.Interop.Excel.Worksheet> . Daha fazla bilgi için bkz. [çalışma ZAMANıNDA VSTO Eklentilerindeki Word belgelerini ve Excel çalışma kitaplarını genişletme](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md).
 

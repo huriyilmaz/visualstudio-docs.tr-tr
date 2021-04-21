@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: fea8a8f73155875f9a10e9d8138ee4b345d531d4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 129b1bda44abf7283efe1996f1898491025ee9d9
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99942158"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107825452"
 ---
 # <a name="how-to-remove-managed-code-extensions-from-documents"></a>Nasıl yapılır: belgelerden yönetilen kod uzantılarını kaldırma
   Özelleştirme derlemesini, Microsoft Office Word veya Microsoft Office Excel için belge düzeyi özelleştirmenin parçası olan bir belge veya çalışma kitabından programlı bir şekilde kaldırabilirsiniz. Kullanıcılar daha sonra belgeleri açabilir ve içeriği görüntüleyebilir, ancak belgelere eklediğiniz herhangi bir özel kullanıcı arabirimi (UI) görünmez ve kodunuz çalışmaz.
@@ -41,15 +41,15 @@ ms.locfileid: "99942158"
 
 2. Aşağıdaki **Içeri aktarmaları** veya **using** ifadesini, kod dosyanızın en üstüne ekleyin.
 
-     [!code-csharp[Trin_VstcoreDeployment#1](../vsto/codesnippet/CSharp/Trin_VstcoreDeploymentCS/Program.cs#1)]
-     [!code-vb[Trin_VstcoreDeployment#1](../vsto/codesnippet/VisualBasic/Trin_VstcoreDeploymentVB/Program.vb#1)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDeploymentCS/Program.cs" id="Snippet1":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreDeploymentVB/Program.vb" id="Snippet1":::
 
 3. <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.RemoveCustomization%2A>Sınıfının statik yöntemini çağırın <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> ve parametresi için çözüm belge yolunu belirtin.
 
      Aşağıdaki kod örneği, özelleştirmeyi masaüstündeki *WordDocument1.docx* adlı bir belgeden kaldırabildiğinizi varsayar.
 
-     [!code-csharp[Trin_VstcoreDeployment#2](../vsto/codesnippet/CSharp/Trin_VstcoreDeploymentCS/Program.cs#2)]
-     [!code-vb[Trin_VstcoreDeployment#2](../vsto/codesnippet/VisualBasic/Trin_VstcoreDeploymentVB/Program.vb#2)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDeploymentCS/Program.cs" id="Snippet2":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreDeploymentVB/Program.vb" id="Snippet2":::
 
 4. Projeyi derleyin ve özelleştirmeyi kaldırmak istediğiniz bilgisayarda uygulamayı çalıştırın. Bilgisayarda Office Runtime için Visual Studio 2010 Araçları yüklü olmalıdır.
 

@@ -25,12 +25,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 69ca0269859db9e1a69904c2211b8f4d1ad45710
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a84a0c21bba42263e7b4dad9ad9118f462389ad6
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99879299"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107827506"
 ---
 # <a name="ribbon-xml"></a>Şerit XML
   Şerit (XML) öğesi, XML kullanarak bir şeridi özelleştirmenize olanak sağlar. Şeriti şerit (görsel Tasarımcı) öğesi tarafından desteklenmeyen bir şekilde özelleştirmek istiyorsanız şerit (XML) öğesini kullanın. Her öğe ile yapabileceklerinize ilişkin bir karşılaştırma için bkz. [Şerit 'e genel bakış](../vsto/Ribbon-overview.md).
@@ -51,8 +51,8 @@ ms.locfileid: "99879299"
 
  Aşağıdaki kod örneği, yöntemini geçersiz kılar `CreateRibbonExtensibilityObject` ve MyRibbon adlı bir ŞERIT XML sınıfı döndürür.
 
- [!code-csharp[Trin_Ribbon_Custom_Tab_XML#1](../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab_XML_O12/ThisAddIn.cs#1)]
- [!code-vb[Trin_Ribbon_Custom_Tab_XML#1](../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab_XML_O12/ThisAddIn.vb#1)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab_XML_O12/ThisAddIn.cs" id="Snippet1":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab_XML_O12/ThisAddIn.vb" id="Snippet1":::
 
 ## <a name="define-the-behavior-of-the-custom-ribbon"></a>Özel şeridin davranışını tanımlama
  *Geri çağırma yöntemleri* oluşturarak Şeritteki bir düğmeye tıklanması gibi kullanıcı eylemlerine yanıt verebilirsiniz. Geri çağırma yöntemleri Windows Forms denetimlerindeki olaylara benzer, ancak UI öğesinin XML dosyasındaki bir öznitelik tarafından tanımlanır. Yöntemleri şerit sınıfına yazdığınızda, bir denetim öznitelik değeriyle aynı ada sahip olan yöntemi çağırır. Örneğin, bir Kullanıcı Şeritteki bir düğmeye tıkladığında çağrılan bir geri çağırma yöntemi oluşturabilirsiniz. Bir geri çağırma yöntemi oluşturmak için iki adım gereklidir:
@@ -92,8 +92,8 @@ ms.locfileid: "99879299"
 
   Tüm geri çağırma yöntemlerinin <xref:Microsoft.Office.Core.IRibbonControl> , yöntemi çağıran denetimi temsil eden bir parametresi vardır. Bu parametreyi, birden fazla denetim için aynı geri çağırma yöntemini yeniden kullanmak için kullanabilirsiniz. Aşağıdaki kod örneğinde, kullanıcının tıkladığı denetime bağlı olarak farklı görevler gerçekleştiren bir **OnAction** geri çağırma yöntemi gösterilmektedir.
 
-  [!code-csharp[Trin_RibbonOutlookBasic#2](../vsto/codesnippet/CSharp/Trin_RibbonOutlookBasic/Ribbon1.cs#2)]
-  [!code-vb[Trin_RibbonOutlookBasic#2](../vsto/codesnippet/VisualBasic/Trin_RibbonOutlookBasic/Ribbon1.vb#2)]
+  :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_RibbonOutlookBasic/Ribbon1.cs" id="Snippet2":::
+  :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_RibbonOutlookBasic/Ribbon1.vb" id="Snippet2":::
 
 ## <a name="ribbon-xml-file-reference"></a><a name="RibbonDescriptorFile"></a> Şerit XML dosyası başvurusu
  Şerit XML dosyasına öğeler ve öznitelikler ekleyerek özel şeritlerinizi tanımlayabilirsiniz. Varsayılan olarak, Şerit XML dosyası aşağıdaki XML 'i içerir.

@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 270754005704d91569f014ed2e0be382bc2dd707
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b1209bf903f5a5b9c0005d9ba4ba6a891752aedd
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99906477"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107827792"
 ---
 # <a name="walkthrough-display-text-in-a-text-box-in-a-worksheet-using-a-button"></a>İzlenecek yol: düğme kullanarak çalışma sayfasındaki metin kutusunda metin görüntüleme
   Bu izlenecek yol, Excel çalışma sayfalarında düğme ve metin Microsoft Office kutusu kullanmanın temel bilgilerini ve Visual Studio 'da Office geliştirme araçları 'nı kullanarak Excel projeleri oluşturmayı gösterir. Sonucu tamamlanmış bir örnek olarak görmek için bkz. [Office geliştirme örnekleri ve izlenecek yollar](../vsto/office-development-samples-and-walkthroughs.md): Excel denetimleri örneği.
@@ -87,12 +87,12 @@ ms.locfileid: "99906477"
 
 2. Aşağıdaki kodu <xref:System.Windows.Forms.Control.Click> düğmenin olay işleyicisine ekleyin:
 
-     [!code-vb[Trin_VstcoreProgrammingControlsExcel#11](../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb#11)]
-     [!code-csharp[Trin_VstcoreProgrammingControlsExcel#11](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs#11)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb" id="Snippet11":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs" id="Snippet11":::
 
 3. C# ' de, <xref:Microsoft.Office.Tools.Excel.Worksheet.Startup> olaya aşağıda gösterildiği gibi bir olay işleyicisi eklemeniz gerekir. Olay işleyicileri oluşturma hakkında bilgi için bkz. [nasıl yapılır: Office projelerinde olay Işleyicileri oluşturma](../vsto/how-to-create-event-handlers-in-office-projects.md).
 
-     [!code-csharp[Trin_VstcoreProgrammingControlsExcel#12](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs#12)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs" id="Snippet12":::
 
 ## <a name="test-the-application"></a>Uygulamayı test edin
  Artık Merhaba Dünya ileti olduğundan emin olmak için çalışma kitabınızı test edebilirsiniz **!** düğmeye tıkladığınızda metin kutusunda görünür.

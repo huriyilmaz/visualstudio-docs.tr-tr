@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 21a4b172fe2a29ac098f236cebb33efa43fb11c8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7a21f51c42f1f55423019361d1b1535482f4e4b1
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99964179"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107828013"
 ---
 # <a name="how-to-programmatically-create-a-custom-calendar"></a>Nasıl yapılır: program aracılığıyla özel bir takvim oluşturma
   Bu örnek, **Kişisel takvim** adlı yeni bir takvim klasörü oluşturur ve yeni bir randevu öğesi oluşturur ve bunu Takvim klasörüne ekler. Kod daha sonra Takvim klasörünü görüntüler.
@@ -29,7 +29,7 @@ ms.locfileid: "99964179"
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 
 ## <a name="example"></a>Örnek
- [!code-csharp[Trin_OL_CustomCalendar#1](../vsto/codesnippet/CSharp/Trin_OL_CustomCalendar/thisaddin.cs#1)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_OL_CustomCalendar/thisaddin.cs" id="Snippet1":::
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Takvim öğeleriyle çalışma](../vsto/working-with-calendar-items.md)

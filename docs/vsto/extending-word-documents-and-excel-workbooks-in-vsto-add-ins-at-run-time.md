@@ -21,12 +21,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 465e28ed0c632bba45fac1670dd40cd90ef417f0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 90dac328f336f7204bc9a70a0dbc543ec996922a
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99970380"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107825673"
 ---
 # <a name="extend-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time"></a>VSTO Eklentilerindeki Word belgelerini ve Excel çalışma kitaplarını çalışma zamanında genişletme
   Word belgelerini ve Excel çalışma kitaplarını aşağıdaki yollarla özelleştirmek için bir VSTO eklentisi kullanabilirsiniz:
@@ -59,22 +59,22 @@ ms.locfileid: "99970380"
 
 - Aşağıdaki kod örneğinde, etkin belge için bir konak öğesinin nasıl oluşturulacağı gösterilmektedir.
 
-     [!code-vb[Trin_WordAddInDynamicControls#8](../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb#8)]
-     [!code-csharp[Trin_WordAddInDynamicControls#8](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#8)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb" id="Snippet8":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs" id="Snippet8":::
 
 #### <a name="to-generate-a-host-item-for-an-excel-workbook"></a>Excel çalışma kitabı için bir konak öğesi oluşturmak için
 
 - Aşağıdaki kod örneğinde, etkin çalışma kitabı için bir konak öğesinin nasıl oluşturulacağı gösterilmektedir.
 
-     [!code-vb[Trin_ExcelAddInDynamicControls#2](../vsto/codesnippet/VisualBasic/trin_exceladdindynamiccontrols4/ThisAddIn.vb#2)]
-     [!code-csharp[Trin_ExcelAddInDynamicControls#2](../vsto/codesnippet/CSharp/trin_exceladdindynamiccontrols4/ThisAddIn.cs#2)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_exceladdindynamiccontrols4/ThisAddIn.vb" id="Snippet2":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_exceladdindynamiccontrols4/ThisAddIn.cs" id="Snippet2":::
 
 #### <a name="to-generate-a-host-item-for-an-excel-worksheet"></a>Excel çalışma sayfası için bir konak öğesi oluşturmak için
 
 - Aşağıdaki kod örneğinde, bir projedeki etkin çalışma sayfası için bir konak öğesinin nasıl oluşturulacağı gösterilmektedir.
 
-     [!code-vb[Trin_ExcelAddInDynamicControls#1](../vsto/codesnippet/VisualBasic/trin_exceladdindynamiccontrols4/ThisAddIn.vb#1)]
-     [!code-csharp[Trin_ExcelAddInDynamicControls#1](../vsto/codesnippet/CSharp/trin_exceladdindynamiccontrols4/ThisAddIn.cs#1)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_exceladdindynamiccontrols4/ThisAddIn.vb" id="Snippet1":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_exceladdindynamiccontrols4/ThisAddIn.cs" id="Snippet1":::
 
 ### <a name="generate-listobject-host-controls"></a>ListObject konak denetimleri oluştur
  `GetVstoObject`Öğesini genişletmek için yöntemini kullandığınızda <xref:Microsoft.Office.Interop.Excel.ListObject> yöntemi bir döndürür <xref:Microsoft.Office.Tools.Excel.ListObject> . , <xref:Microsoft.Office.Tools.Excel.ListObject> Orijinalin tüm özelliklerine sahiptir <xref:Microsoft.Office.Interop.Excel.ListObject> . Ayrıca, ek işlevlere sahiptir ve Windows Forms veri bağlama modeli kullanılarak verilere bağlanabilir. Daha fazla bilgi için bkz. [ListObject denetimi](../vsto/listobject-control.md).
@@ -83,8 +83,8 @@ ms.locfileid: "99970380"
 
 - Aşağıdaki kod örneği, bir <xref:Microsoft.Office.Tools.Excel.ListObject> <xref:Microsoft.Office.Interop.Excel.ListObject> projedeki etkin çalışma sayfasında ilki için nasıl oluşturulacağını gösterir.
 
-     [!code-vb[Trin_ExcelAddInDynamicControls#3](../vsto/codesnippet/VisualBasic/trin_exceladdindynamiccontrols4/ThisAddIn.vb#3)]
-     [!code-csharp[Trin_ExcelAddInDynamicControls#3](../vsto/codesnippet/CSharp/trin_exceladdindynamiccontrols4/ThisAddIn.cs#3)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_exceladdindynamiccontrols4/ThisAddIn.vb" id="Snippet3":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_exceladdindynamiccontrols4/ThisAddIn.cs" id="Snippet3":::
 
 ### <a name="add-managed-controls-to-documents-and-worksheets"></a><a name="AddControls"></a> Belgelere ve çalışma sayfalarına yönetilen denetimler ekleme
  Ya da oluşturduktan sonra <xref:Microsoft.Office.Tools.Word.Document> <xref:Microsoft.Office.Tools.Excel.Worksheet> , belgeye veya çalışma sayfasına bu genişletilmiş nesnelerin temsil ettiği denetimleri ekleyebilirsiniz. Denetim eklemek için, `Controls` veya özelliğini kullanın <xref:Microsoft.Office.Tools.Word.Document> <xref:Microsoft.Office.Tools.Excel.Worksheet> . Daha fazla bilgi için bkz. [çalışma zamanında Office belgelerine denetim ekleme](../vsto/adding-controls-to-office-documents-at-run-time.md).
@@ -105,16 +105,16 @@ ms.locfileid: "99970380"
 ### <a name="example-that-uses-native-word-objects"></a>Yerel Word nesneleri kullanan örnek
  Aşağıdaki kod örneği, Word belgeleri için uygulama düzeyindeki bir olayın nasıl işleneceğini gösterir. `CreateDocument`Yöntemi yeni bir belge oluşturur ve sonra <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentBeforeSave> Bu belgenin kaydedilmesini engelleyen bir olay işleyicisini tanımlar. Olay, nesne için oluşturulan uygulama düzeyi olayıdır <xref:Microsoft.Office.Interop.Word.Application> ve olay işleyicisi, `Doc` `document1` `document1` Kaydedilen belgeyi temsil edip etmediğini tespit etmek için parametresini nesnesiyle karşılaştırmalıdır.
 
- [!code-vb[Trin_WordAddInDynamicControls #12](../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb#12)]
- [!code-csharp[Trin_WordAddInDynamicControls#12](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#12)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb" id="Snippet12":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs" id="Snippet12":::
 
 ### <a name="examples-that-use-a-host-item"></a>Konak öğesi kullanan örnekler
  Aşağıdaki kod örnekleri, <xref:Microsoft.Office.Tools.Word.Document.BeforeSave> bir konak öğesinin olayını işleyerek bu işlemi basitleştirir <xref:Microsoft.Office.Tools.Word.Document> . `CreateDocument2`Bu örneklerdeki yöntemi nesnesini genişleten bir oluşturur <xref:Microsoft.Office.Tools.Word.Document> `document2` ve sonra <xref:Microsoft.Office.Tools.Word.Document.BeforeSave> belgenin kaydedilmesini önleyen bir olay işleyicisi tanımlar. Olay işleyicisi yalnızca `document2` kaydedildiğinde çağrılır ve hangi belgenin kaydedildiğini doğrulamak için ek bir iş yapmadan Kaydet eylemini iptal edebilir.
 
  Aşağıdaki kod örneği bu görevi gösterir.
 
- [!code-vb[Trin_WordAddInDynamicControls #13](../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb#13)]
- [!code-csharp[Trin_WordAddInDynamicControls#13](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#13)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb" id="Snippet13":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs" id="Snippet13":::
 
 ## <a name="determine-whether-an-office-object-has-been-extended"></a><a name="HasVstoObject"></a> Bir Office nesnesinin uzatılıp genişletilmediğini belirleme
  Genişletilmiş bir nesnenin belirli bir yerel Office nesnesi için önceden oluşturulup oluşturulmayacağını anlamak için `HasVstoObject` yöntemini kullanın. Bu yöntem, genişletilmiş bir nesne zaten oluşturulmuşsa **true** değerini döndürür.

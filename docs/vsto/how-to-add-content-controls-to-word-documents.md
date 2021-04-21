@@ -28,12 +28,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: ed33208d58e380b688ce2553b71033de0b7d07d6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a902e85f8c53aa7a3d1ebe3b6480a7c68fa60601
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99954299"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107827909"
 ---
 # <a name="how-to-add-content-controls-to-word-documents"></a>Nasıl yapılır: Word belgelerine Içerik denetimleri ekleme
   Belge düzeyi Word projelerinde, tasarım zamanında veya çalışma zamanında projenizdeki belgeye içerik denetimleri ekleyebilirsiniz. Word VSTO eklenti projelerinde, çalışma zamanında herhangi bir açık belgeye içerik denetimleri ekleyebilirsiniz.
@@ -116,8 +116,8 @@ ms.locfileid: "99954299"
 
      Aşağıdaki kod örneği, <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A> belgenin başlangıcına yeni bir eklemek için yöntemini kullanır <xref:Microsoft.Office.Tools.Word.RichTextContentControl> . Bu kodu çalıştırmak için `ThisDocument` projenizdeki sınıfa kodu ekleyin ve `AddRichTextControlAtSelection` `ThisDocument_Startup` olay işleyicisinden yöntemi çağırın.
 
-     [!code-csharp[Trin_ContentControlReference#700](../vsto/codesnippet/CSharp/trin_wordcontentcontrolreference/RichText.cs#700)]
-     [!code-vb[Trin_ContentControlReference#700](../vsto/codesnippet/VisualBasic/trin_contentcontrolreference/RichText.vb#700)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_wordcontentcontrolreference/RichText.cs" id="Snippet700":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_contentcontrolreference/RichText.vb" id="Snippet700":::
 
 ### <a name="to-add-a-content-control-at-a-specified-range"></a>Belirli bir aralığa içerik denetimi eklemek için
 
@@ -125,8 +125,8 @@ ms.locfileid: "99954299"
 
      Aşağıdaki kod örneği, <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A> belgenin başlangıcına yeni bir eklemek için yöntemini kullanır <xref:Microsoft.Office.Tools.Word.RichTextContentControl> . Bu kodu çalıştırmak için `ThisDocument` projenizdeki sınıfa kodu ekleyin ve `AddRichTextControlAtRange` `ThisDocument_Startup` olay işleyicisinden yöntemi çağırın.
 
-     [!code-csharp[Trin_ContentControlReference#701](../vsto/codesnippet/CSharp/trin_wordcontentcontrolreference/RichText.cs#701)]
-     [!code-vb[Trin_ContentControlReference#701](../vsto/codesnippet/VisualBasic/trin_contentcontrolreference/RichText.vb#701)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_wordcontentcontrolreference/RichText.cs" id="Snippet701":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_contentcontrolreference/RichText.vb" id="Snippet701":::
 
 ### <a name="to-add-a-content-control-that-is-based-on-a-native-content-control"></a>Yerel içerik denetimini temel alan bir içerik denetimi eklemek için
 
@@ -134,8 +134,8 @@ ms.locfileid: "99954299"
 
      Aşağıdaki kod örneği, belgesinde bulunan <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A> <xref:Microsoft.Office.Tools.Word.RichTextContentControl> her yerel zengin metin denetimine yeni bir oluşturmak için yöntemini kullanır. Bu kodu çalıştırmak için `ThisDocument` projenizdeki sınıfa kodu ekleyin ve `CreateRichTextControlsFromNativeControls` `ThisDocument_Startup` olay işleyicisinden yöntemi çağırın.
 
-     [!code-csharp[Trin_ContentControlReference#702](../vsto/codesnippet/CSharp/trin_wordcontentcontrolreference/RichText.cs#702)]
-     [!code-vb[Trin_ContentControlReference#702](../vsto/codesnippet/VisualBasic/trin_contentcontrolreference/RichText.vb#702)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_wordcontentcontrolreference/RichText.cs" id="Snippet702":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_contentcontrolreference/RichText.vb" id="Snippet702":::
 
 ## <a name="add-content-controls-at-run-time-in-a-vsto-add-in-project"></a><a name="runtimeaddin"></a> VSTO eklenti projesindeki çalışma zamanında içerik denetimleri ekleme
  Bir VSTO eklentisi kullanarak çalışma zamanında herhangi bir açık belgeye programlama yoluyla içerik denetimleri ekleyebilirsiniz. Bunu yapmak için, açık bir <xref:Microsoft.Office.Tools.Word.Document> belgeyi temel alan bir konak öğesi oluşturun ve ardından <xref:Microsoft.Office.Tools.Word.Document.Controls%2A> Bu konak öğesinin özelliğinin yöntemlerini kullanın. Her yöntemin, aşağıdaki yollarla bir içerik denetimi eklemek için kullanabileceğiniz üç aşırı yüklemesi vardır:
@@ -159,8 +159,8 @@ ms.locfileid: "99954299"
 
      Aşağıdaki kod örneği, <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A> etkin belgenin başlangıcına yeni bir eklemek için yöntemini kullanır <xref:Microsoft.Office.Tools.Word.RichTextContentControl> . Bu kodu çalıştırmak için `ThisAddIn` projenizdeki sınıfa kodu ekleyin ve `AddRichTextControlAtSelection` `ThisAddIn_Startup` olay işleyicisinden yöntemi çağırın.
 
-     [!code-vb[Trin_WordAddInDynamicControls#1](../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb#1)]
-     [!code-csharp[Trin_WordAddInDynamicControls#1](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#1)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb" id="Snippet1":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs" id="Snippet1":::
 
 ### <a name="to-add-a-content-control-at-a-specified-range"></a>Belirli bir aralığa içerik denetimi eklemek için
 
@@ -168,8 +168,8 @@ ms.locfileid: "99954299"
 
      Aşağıdaki kod örneği, <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A> etkin belgenin başlangıcına yeni bir eklemek için yöntemini kullanır <xref:Microsoft.Office.Tools.Word.RichTextContentControl> . Bu kodu çalıştırmak için `ThisAddIn` projenizdeki sınıfa kodu ekleyin ve `AddRichTextControlAtRange` `ThisAddIn_Startup` olay işleyicisinden yöntemi çağırın.
 
-     [!code-vb[Trin_WordAddInDynamicControls#2](../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb#2)]
-     [!code-csharp[Trin_WordAddInDynamicControls#2](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#2)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb" id="Snippet2":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs" id="Snippet2":::
 
 #### <a name="to-add-a-content-control-that-is-based-on-a-native-content-control"></a>Yerel içerik denetimini temel alan bir içerik denetimi eklemek için
 
@@ -177,12 +177,12 @@ ms.locfileid: "99954299"
 
      Aşağıdaki kod örneği, belge <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A> <xref:Microsoft.Office.Tools.Word.RichTextContentControl> açıldıktan sonra bir belgedeki her yerel zengin metin denetimine yeni bir oluşturmak için yöntemini kullanır. Bu kodu çalıştırmak için `ThisAddIn` projenizdeki sınıfa kodu ekleyin.
 
-     [!code-vb[Trin_WordAddInDynamicControls#3](../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb#3)]
-     [!code-csharp[Trin_WordAddInDynamicControls#3](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#3)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb" id="Snippet3":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs" id="Snippet3":::
 
      C# için olay işleyicisini olaya de eklemeniz gerekir `Application_DocumentOpen` <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentOpen> .
 
-     [!code-csharp[Trin_WordAddInDynamicControls#6](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#6)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs" id="Snippet6":::
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Genişletilmiş nesneleri kullanarak Word 'Ü otomatikleştirme](../vsto/automating-word-by-using-extended-objects.md)

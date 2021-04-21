@@ -18,12 +18,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: f3ef1a32d145169db815915ee93d03893943e71f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0f2fc5bbfabbe2672ae59c55734a5cf57fc84318
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99877908"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107825166"
 ---
 # <a name="how-to-programmatically-search-for-and-replace-text-in-documents"></a>Nasıl yapılır: belgelerde metni program aracılığıyla arama ve değiştirme
   <xref:Microsoft.Office.Interop.Word.Find>Nesnesi hem hem de nesnelerinin bir üyesidir <xref:Microsoft.Office.Interop.Word.Selection> <xref:Microsoft.Office.Interop.Word.Range> ve Microsoft Office Word belgelerinde metin aramak için bunlardan birini kullanabilirsiniz. Replace komutu Find komutunun bir uzantısıdır.
@@ -41,23 +41,23 @@ ms.locfileid: "99877908"
 
 1. Bir değişkene arama dizesi atayın.
 
-    [!code-vb[Trin_VstcoreWordAutomation#68](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#68)]
-    [!code-csharp[Trin_VstcoreWordAutomation#68](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#68)]
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet68":::
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet68":::
 
 2. Önceki aramalardan biçimlendirmeyi temizle.
 
-    [!code-vb[Trin_VstcoreWordAutomation#69](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#69)]
-    [!code-csharp[Trin_VstcoreWordAutomation#69](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#69)]
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet69":::
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet69":::
 
 3. Aramayı yürütün ve sonuçlarla birlikte bir ileti kutusu görüntüleyin.
 
-    [!code-vb[Trin_VstcoreWordAutomation#70](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#70)]
-    [!code-csharp[Trin_VstcoreWordAutomation#70](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#70)]
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet70":::
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet70":::
 
    Aşağıdaki örnek, tüm yöntemi gösterir.
 
-   [!code-vb[Trin_VstcoreWordAutomation#67](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#67)]
-   [!code-csharp[Trin_VstcoreWordAutomation#67](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#67)]
+   :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet67":::
+   :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet67":::
 
 ## <a name="use-a-range-object"></a>Aralık nesnesi kullanma
  Bir <xref:Microsoft.Office.Interop.Word.Range> nesne kullanmak, Kullanıcı arabiriminde herhangi bir şey görüntülemeden metin aramanızı sağlar. <xref:Microsoft.Office.Interop.Word.Find>Nesne, arama ölçütleriyle eşleşen metin bulunursa **true** , değilse **false** döndürür. Ayrıca, <xref:Microsoft.Office.Interop.Word.Range> metin bulunursa nesneyi arama ölçütleriyle eşleşecek şekilde yeniden tanımlar.
@@ -68,35 +68,35 @@ ms.locfileid: "99877908"
 
     Aşağıdaki kod örneği, belge düzeyi özelleştirmesinde kullanılabilir.
 
-    [!code-vb[Trin_VstcoreWordAutomation#72](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#72)]
-    [!code-csharp[Trin_VstcoreWordAutomation#72](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#72)]
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet72":::
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet72":::
 
     Aşağıdaki kod örneği bir VSTO eklentisi içinde kullanılabilir. Bu örnek etkin belgeyi kullanır.
 
-    [!code-vb[Trin_VstcoreWordAutomationAddIn#72](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#72)]
-    [!code-csharp[Trin_VstcoreWordAutomationAddIn#72](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#72)]
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb" id="Snippet72":::
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs" id="Snippet72":::
 
 2. <xref:Microsoft.Office.Interop.Word.Range.Find%2A>Nesnesinin özelliğini kullanarak <xref:Microsoft.Office.Interop.Word.Range> , önce var olan biçimlendirme seçeneklerini temizleyin ve ardından **Find beni bul** dizesini arayın.
 
-    [!code-vb[Trin_VstcoreWordAutomation#73](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#73)]
-    [!code-csharp[Trin_VstcoreWordAutomation#73](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#73)]
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet73":::
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet73":::
 
 3. Arama sonuçlarını bir ileti kutusunda görüntüleyin ve öğesini seçerek <xref:Microsoft.Office.Interop.Word.Range> görünür hale getirin.
 
-    [!code-vb[Trin_VstcoreWordAutomation#74](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#74)]
-    [!code-csharp[Trin_VstcoreWordAutomation#74](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#74)]
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet74":::
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet74":::
 
     Arama başarısız olursa ikinci paragraf seçilir; başarılı olursa arama ölçütleri görüntülenir.
 
    Aşağıdaki örnek, belge düzeyi özelleştirmesi için tam kodu gösterir. Bu örneği kullanmak için, `ThisDocument` projenizdeki sınıfından kodu çalıştırın.
 
-   [!code-vb[Trin_VstcoreWordAutomation#71](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#71)]
-   [!code-csharp[Trin_VstcoreWordAutomation#71](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#71)]
+   :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet71":::
+   :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet71":::
 
    Aşağıdaki örnek, bir VSTO eklentisi için tam kodu gösterir. Bu örneği kullanmak için, `ThisAddIn` projenizdeki sınıfından kodu çalıştırın.
 
-   [!code-vb[Trin_VstcoreWordAutomationAddIn#71](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#71)]
-   [!code-csharp[Trin_VstcoreWordAutomationAddIn#71](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#71)]
+   :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb" id="Snippet71":::
+   :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs" id="Snippet71":::
 
 ## <a name="search-for-and-replace-text-in-documents"></a>Belgelerde metin ara ve Değiştir
  Aşağıdaki kod, geçerli seçimi arar ve dize **bul** 'un tüm tekrarlarının **bulduğu** dize ile yerini alır.
@@ -105,8 +105,8 @@ ms.locfileid: "99877908"
 
 1. Aşağıdaki örnek kodu `ThisDocument` `ThisAddIn` projenizdeki or sınıfına ekleyin.
 
-     [!code-vb[Trin_VstcoreWordAutomation#75](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#75)]
-     [!code-csharp[Trin_VstcoreWordAutomation#75](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#75)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet75":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet75":::
 
      <xref:Microsoft.Office.Interop.Word.Find>Sınıfında bir yöntemi vardır <xref:Microsoft.Office.Interop.Word.Find.ClearFormatting%2A> ve <xref:Microsoft.Office.Interop.Word.Replacement> sınıfın kendi yöntemi de vardır <xref:Microsoft.Office.Interop.Word.Replacement.ClearFormatting%2A> . Bulma ve değiştirme işlemlerini gerçekleştirirken, her iki nesnenin de ClearFormatting yöntemini kullanmanız gerekir. Bunu yalnızca nesne üzerinde kullanırsanız <xref:Microsoft.Office.Interop.Word.Find> , değiştirme metninde beklenmeyen sonuçlar elde edebilirsiniz.
 

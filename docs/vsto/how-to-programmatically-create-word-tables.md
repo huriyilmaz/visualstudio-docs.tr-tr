@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 4c0c349fdc0f5af333cbd7aa1d5e77c9c7fd2e5c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5651487e280d7fb9912734b919b00fab28a702db
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99963971"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107827389"
 ---
 # <a name="how-to-programmatically-create-word-tables"></a>Nasıl yapılır: program aracılığıyla Word tabloları oluşturma
   <xref:Microsoft.Office.Interop.Word.Tables>Koleksiyon,, ve sınıflarının bir üyesidir <xref:Microsoft.Office.Interop.Word.Document> ve <xref:Microsoft.Office.Tools.Word.Document> <xref:Microsoft.Office.Interop.Word.Selection> <xref:Microsoft.Office.Interop.Word.Range> Bu bağlamlardan herhangi birinde bir tablo oluşturabileceğiniz anlamına gelir. <xref:Microsoft.Office.Interop.Word.Tables.Add%2A> <xref:Microsoft.Office.Interop.Word.Tables> Belirtilen aralıktaki bir tabloyu eklemek için koleksiyonun yöntemini kullanırsınız.
@@ -35,8 +35,8 @@ ms.locfileid: "99963971"
 
    Aşağıdaki kod örneğini kullanmak için, `ThisDocument` projenizdeki sınıfından çalıştırın.
 
-   [!code-vb[Trin_VstcoreWordAutomation#86](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#86)]
-   [!code-csharp[Trin_VstcoreWordAutomation#86](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#86)]
+   :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet86":::
+   :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet86":::
 
   Bir tablo oluşturduğunuzda, otomatik olarak <xref:Microsoft.Office.Interop.Word.Tables> <xref:Microsoft.Office.Tools.Word.Document> konak öğesi koleksiyonuna eklenir. Ardından, <xref:Microsoft.Office.Interop.Word.Tables.Item%2A> aşağıdaki kodda gösterildiği gibi özelliğini kullanarak tabloya öğe numarası ile başvurabilirsiniz.
 
@@ -46,8 +46,8 @@ ms.locfileid: "99963971"
 
     Aşağıdaki kod örneğini kullanmak için, `ThisDocument` projenizdeki sınıfından çalıştırın.
 
-    [!code-vb[Trin_VstcoreWordAutomation#87](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#87)]
-    [!code-csharp[Trin_VstcoreWordAutomation#87](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#87)]
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet87":::
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet87":::
 
    Her <xref:Microsoft.Office.Interop.Word.Table> nesnenin Ayrıca <xref:Microsoft.Office.Interop.Word.Table.Range%2A> biçimlendirme özniteliklerini ayarlamanıza olanak tanıyan bir özelliği vardır.
 
@@ -57,8 +57,8 @@ ms.locfileid: "99963971"
 
      Aşağıdaki kod örneğini kullanmak için, `ThisDocument` projenizdeki sınıfından çalıştırın.
 
-     [!code-vb[Trin_VstcoreWordAutomation#88](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#88)]
-     [!code-csharp[Trin_VstcoreWordAutomation#88](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#88)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet88":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet88":::
 
 ## <a name="create-tables-in-vsto-add-ins"></a>VSTO eklentilerinde tablo oluşturma
 
@@ -68,8 +68,8 @@ ms.locfileid: "99963971"
 
    Aşağıdaki kod örneği, etkin belgeye bir tablo ekler. Bu örneği kullanmak için, `ThisAddIn` projenizdeki sınıfından çalıştırın.
 
-   [!code-vb[Trin_VstcoreWordAutomationAddIn#86](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#86)]
-   [!code-csharp[Trin_VstcoreWordAutomationAddIn#86](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#86)]
+   :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb" id="Snippet86":::
+   :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs" id="Snippet86":::
 
   Bir tablo oluşturduğunuzda, otomatik olarak <xref:Microsoft.Office.Interop.Word.Tables> koleksiyonuna eklenir <xref:Microsoft.Office.Interop.Word.Document> . Ardından, <xref:Microsoft.Office.Interop.Word.Tables.Item%2A> aşağıdaki kodda gösterildiği gibi özelliğini kullanarak tabloya öğe numarası ile başvurabilirsiniz.
 
@@ -79,8 +79,8 @@ ms.locfileid: "99963971"
 
     Aşağıdaki kod örneği etkin belgeyi kullanır. Bu örneği kullanmak için, `ThisAddIn` projenizdeki sınıfından çalıştırın.
 
-    [!code-vb[Trin_VstcoreWordAutomationAddIn#87](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#87)]
-    [!code-csharp[Trin_VstcoreWordAutomationAddIn#87](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#87)]
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb" id="Snippet87":::
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs" id="Snippet87":::
 
    Her <xref:Microsoft.Office.Interop.Word.Table> nesnenin Ayrıca <xref:Microsoft.Office.Interop.Word.Table.Range%2A> biçimlendirme özniteliklerini ayarlamanıza olanak tanıyan bir özelliği vardır.
 
@@ -90,8 +90,8 @@ ms.locfileid: "99963971"
 
      Aşağıdaki kod örneği etkin belgeyi kullanır. Bu örneği kullanmak için, `ThisAddIn` projenizdeki sınıfından çalıştırın.
 
-     [!code-vb[Trin_VstcoreWordAutomationAddIn#88](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#88)]
-     [!code-csharp[Trin_VstcoreWordAutomationAddIn#88](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#88)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb" id="Snippet88":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs" id="Snippet88":::
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Nasıl yapılır: Word tablolarında hücrelere program aracılığıyla metin ve biçimlendirme ekleme](../vsto/how-to-programmatically-add-text-and-formatting-to-cells-in-word-tables.md)

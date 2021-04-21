@@ -4,15 +4,15 @@ author: ghogen
 description: Visual Studio 'Nun bir Docker Compose uygulamasını nasıl oluşturup yürüttüleceğini özelleştirmek için Docker Compose derleme özelliklerini nasıl düzenleyeceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.author: ghogen
-ms.date: 08/12/2019
+ms.date: 04/06/2021
 ms.technology: vs-azure
 ms.topic: reference
-ms.openlocfilehash: 4478656af7fff4cfd3a0fdafefe623af5811154f
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 7f1ebb11133c640c2e0bdcfd84660592792d4205
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105068303"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107825010"
 ---
 # <a name="docker-compose-build-properties"></a>Docker Compose derleme özellikleri
 
@@ -43,7 +43,7 @@ Aşağıdaki tabloda Docker Compose projeleri için kullanılabilen MSBuild öze
 |DockerComposeProjectName| dcproj | Belirtilmişse, Docker-Compose projesi için proje adını geçersiz kılar. | "dockercompose" + otomatik üretilen karma |
 |DockerComposeProjectPath|csproj veya vbproj|Docker-Compose projesi (dcproj) dosyasının göreli yolu. Docker-Compose. yıml dosyasında depolanan ilişkili görüntü derleme ayarlarını bulmak için hizmet projesini yayımlarken bu özelliği ayarlayın.|-|
 |DockerComposeUpArguments|dcproj|Komuta geçirilecek ek parametreleri belirtir `docker-compose up` . Örneğin, `--timeout 500`|-|
-|DockerDevelopmentMode|dcproj| "Konak oluşturma" iyileştirmesi ("hızlı mod" hata ayıklama) etkin olup olmadığını denetler.  İzin verilen değerler **hızlı** ve **normal**. | Hızlı |
+|DockerDevelopmentMode|dcproj| "Konak oluşturma" iyileştirmesi ("hızlı mod" hata ayıklama) etkin olup olmadığını denetler.  İzin verilen değerler `Fast` ve ' dir `Regular` . | `Fast` Hata ayıklama yapılandırmasında veya `Regular` diğer tüm yapılandırmalarda |
 |DockerLaunchAction| dcproj | F5 veya CTRL + F5 üzerinde gerçekleştirilecek başlatma eylemini belirtir.  İzin verilen değerler None, LaunchBrowser ve LaunchWCFTestClient 'Tur.|Yok|
 |DockerLaunchBrowser| dcproj | Tarayıcının başlatılıp başlatılmayacağını belirtir. DockerLaunchAction belirtilmişse yoksayıldı. | Yanlış |
 |DockerServiceName| dcproj|DockerLaunchAction veya DockerLaunchBrowser belirtilmişse DockerServiceName, başlatılacak hizmetin adıdır.  Bu özelliği kullanarak, bir Docker-Compose dosyasının başvurmasına yönelik olabilecek çok sayıda projeden hangisini başlatılacağı belirlenir.|-|
@@ -93,9 +93,16 @@ services:
 > [!NOTE]
 > DockerComposeBuildArguments, DockerComposeDownArguments ve DockerComposeUpArguments, Visual Studio 2019 sürüm 16,3 ' de yenidir.
 
-## <a name="docker-compose-file-labels"></a>Docker Compose dosya etiketleri
+## <a name="overriding-visual-studios-docker-compose-configuration"></a>Visual Studio 'nun Docker Compose yapılandırmasını geçersiz kılma
 
-Ayrıca, *Docker-Compose. yıml* dosyanızdaki aynı dizinde *Docker-Compose. vs. Debug. Yıml* ( **hata ayıklama** yapılandırması için) veya *Docker-Compose. vs. Release. yıml* ( **Sürüm** yapılandırması için) adlı bir dosya yerleştirerek belirli ayarları geçersiz kılabilirsiniz.  Bu dosyada ayarları aşağıdaki gibi belirtebilirsiniz:
+*Docker-Compose. yıml* dosyanızdaki aynı dizinde *Docker-Compose. vs. Debug. Yıml* ( **hızlı** mod için) veya *Docker-Compose. vs. Release. yıml* ( **normal** mod için) adlı bir dosya yerleştirerek belirli ayarları geçersiz kılabilirsiniz. 
+
+>[!TIP] 
+>Bu ayarlardan herhangi birinin varsayılan değerlerini bulmak için *Docker-Compose. vs. Debug. g. yıml* veya *Docker-Compose. vs. Release. g. yıml* bölümüne bakın.
+
+### <a name="docker-compose-file-labels"></a>Docker Compose dosya etiketleri
+
+ *Docker-Compose. vs. Debug. yml* veya *Docker-Compose. vs. Release. yml* içinde, geçersiz kılmaya özgü etiketleri aşağıdaki gibi tanımlayabilirsiniz:
 
 ```yml
 services:
@@ -109,13 +116,26 @@ Yukarıdaki örnekte olduğu gibi, değerlerin etrafında çift tırnak işareti
 |Etiket adı|Description|
 |----------|-----------|
 |com. Microsoft. VisualStudio. debugayıklanan. Arguments|Hata ayıklama başlatılırken programa geçirilen bağımsız değişkenler. .NET Core uygulamaları için, bu bağımsız değişkenler genellikle NuGet paketleri için ek arama yollarıdır ve ardından projenin çıkış derlemesinin yoludur.|
-|com. Microsoft. VisualStudio. debugayıklanan. killprogram|Bu komut, kapsayıcının içinde çalışan hata ayıklanan programı durdurmak için kullanılır (gerektiğinde).|
 |com. Microsoft. VisualStudio. debugayıklanan. program|Hata ayıklama başlatılırken program başlatıldı. .NET Core uygulamaları için bu ayar genellikle **DotNet**' dir.|
 |com. Microsoft. VisualStudio. debugayıklanan. WorkingDirectory|Hata ayıklama başlatılırken başlangıç dizini olarak kullanılan dizin. Bu ayar genellikle Linux kapsayıcıları için */App* veya Windows kapsayıcıları için *c:\app* ' dir.|
+|com. Microsoft. VisualStudio. debugayıklanan. killprogram|Bu komut, kapsayıcının içinde çalışan hata ayıklanan programı durdurmak için kullanılır (gerektiğinde).|
 
-## <a name="customize-the-app-startup-process"></a>Uygulama başlatma işlemini özelleştirme
+### <a name="customize-the-docker-build-process"></a>Docker Build işlemini özelleştirme
 
-Ayarını kullanarak uygulamanızı başlatmadan önce bir komut veya özel betik çalıştırabilir `entrypoint` ve yapılandırmaya bağımlı hale getirebilirsiniz. Örneğin, serbest bırakma modunda değil, yalnızca **hata ayıklama** modunda bir sertifika ayarlamanız gerekirse `update-ca-certificates` , aşağıdaki kodu yalnızca *Docker-Compose. vs. Debug. yml* içine ekleyebilirsiniz: 
+Özelliğindeki ayarı kullanarak Dockerfile içinde hangi aşamayı derlemek istediğinizi bildirebilirsiniz `target` `build` . Bu geçersiz kılma yalnızca *Docker-Compose. vs. Debug. yıml* veya *Docker-Compose. vs. Release. yıml* içinde kullanılabilir 
+
+```yml
+services:
+  webapplication1:
+    build:
+      target: customStage
+    labels:
+      ...
+```
+
+### <a name="customize-the-app-startup-process"></a>Uygulama başlatma işlemini özelleştirme
+
+Ayarını kullanarak uygulamanızı başlatmadan önce bir komut veya özel betik çalıştırabilir `entrypoint` ve bunu öğesine bağımlı hale getirebilirsiniz `DockerDevelopmentMode` . Örneğin, normal modda değil, yalnızca **hızlı** modda bir sertifika ayarlamanız gerekirse `update-ca-certificates` , aşağıdaki kodu **yalnızca** *Docker-Compose. vs. Debug. yml* içine ekleyebilirsiniz: 
 
 ```yml
 services:
@@ -124,8 +144,6 @@ services:
     labels:
       ...
 ```
-
-*Docker-Compose. vs. Release. yıml* veya *Docker-Compose. vs. Debug. yıml* ' yi atlarsanız, Visual Studio varsayılan ayarlara göre bir tane oluşturur.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
