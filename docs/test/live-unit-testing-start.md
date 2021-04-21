@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: d411465869cc960631063d09752d38536af94119
-ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
+ms.openlocfilehash: 5c965fd73f63906f7a1e055ae5ff051eebab19d5
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101683607"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107828819"
 ---
 # <a name="get-started-with-live-unit-testing"></a>Live Unit Testing kullanmaya başlama
 
@@ -82,7 +82,41 @@ Tek bir .NET Standard Class Library projesinden (StringLibrary) oluşan bir Visu
 
 5. Kod düzenleyicisinde varolan tüm kodu aşağıdaki kodla değiştirin:
 
-   [!code-csharp[StringLibrary source code](samples/csharp/utilitylibraries/stringlibrary/class1.cs)]
+   ```csharp
+   using System;
+
+   namespace UtilityLibraries
+   {
+       public static class StringLibrary
+       {
+           public static bool StartsWithUpper(this string s)
+           {
+               if (String.IsNullOrWhiteSpace(s))
+                   return false;
+
+               return Char.IsUpper(s[0]);
+           }
+
+           public static bool StartsWithLower(this string s)
+           {
+               if (String.IsNullOrWhiteSpace(s))
+                   return false;
+
+               return Char.IsLower(s[0]);
+           }
+
+           public static bool HasEmbeddedSpaces(this string s)
+           {
+               foreach (var ch in s.Trim())
+               {
+                   if (ch == ' ')
+                       return true;
+               }
+               return false;
+           }
+       }
+   }
+   ```
 
    StringLibrary üç statik yönteme sahiptir:
 
@@ -140,7 +174,59 @@ Sonraki adım, StringLibrary kitaplığını test etmek için birim test projesi
 
 6. Şablon tarafından sunulan ortak birim test kodunu şu kodla değiştirin:
 
-   [!code-csharp[StringLibraryTest source code](samples/snippets/csharp/lut-start/unittest1.cs)]
+   ```csharp
+   using System;
+   using Microsoft.VisualStudio.TestTools.UnitTesting;
+   using UtilityLibraries;
+
+   namespace StringLibraryTest
+   {
+       [TestClass]
+       public class UnitTest1
+       {
+           [TestMethod]
+           public void TestStartsWithUpper()
+           {
+               // Tests that we expect to return true.
+               string[] words = { "Alphabet", "Zebra", "ABC", "Αθήνα", "Москва" };
+               foreach (var word in words)
+               {
+                   bool result = word.StartsWithUpper();
+                   Assert.IsTrue(result,
+                                 $"Expected for '{word}': true; Actual: {result}");
+               }
+           }
+
+           [TestMethod]
+           public void TestDoesNotStartWithUpper()
+           {
+               // Tests that we expect to return false.
+               string[] words = { "alphabet", "zebra", "abc", "αυτοκινητοβιομηχανία", "государство",
+                                  "1234", ".", ";", " " };
+               foreach (var word in words)
+               {
+                   bool result = word.StartsWithUpper();
+                   Assert.IsFalse(result,
+                                  $"Expected for '{word}': false; Actual: {result}");
+               }
+           }
+
+           [TestMethod]
+           public void DirectCallWithNullOrEmpty()
+           {
+               // Tests that we expect to return false.
+               string[] words = { String.Empty, null };
+               foreach (var word in words)
+               {
+                   bool result = StringLibrary.StartsWithUpper(word);
+                   Assert.IsFalse(result,
+                                  $"Expected for '{(word == null ? "<null>" : word)}': " +
+                                  $"false; Actual: {result}");
+               }
+           }
+       }
+   }
+   ```
 
 7. Araç çubuğundaki **Kaydet** simgesini seçerek projenizi kaydedin.
 
@@ -162,7 +248,7 @@ Bir sınıf kitaplığı ve bunun için bazı birim testlerini oluşturdunuz. Ar
 
 Şimdiye kadar, StringLibrary sınıf kitaplığı için testleri yazmış olsanız da onları çalıştırmadınız. Live Unit Testing, bunları etkinleştirdikten sonra otomatik olarak yürütür. Bunu yapmak için aşağıdakileri yapın:
 
-1. İsteğe bağlı olarak, StringLibrary kodunu içeren kod düzenleyici penceresini seçin. Bu, bir C# projesi için *Class1.cs* veya Visual Basic projesi için *Class1. vb* ' dir. (Bu adım, Live Unit Testing etkinleştirdikten sonra testlerinizin sonucunu ve kod kapsamınız kapsamını görsel olarak incelemenize olanak sağlar.)
+1. İsteğe bağlı olarak, StringLibrary kodunu içeren kod düzenleyici penceresini seçin. Bu, bir C# projesi için *Class1. cs* veya bir Visual Basic projesi için *Class1. vb* ' dir. (Bu adım, Live Unit Testing etkinleştirdikten sonra testlerinizin sonucunu ve kod kapsamınız kapsamını görsel olarak incelemenize olanak sağlar.)
 
 1.   >    >  En üst düzey Visual Studio menüsünden test Live Unit Testing **Başlat** ' ı seçin.
 
@@ -199,11 +285,11 @@ Kod kapsamını yöntemine genişletmek için `StartsWithLower` aşağıdakileri
 
 1. Aşağıdaki `TestStartsWithLower` ve `TestDoesNotStartWithLower` yöntemlerini projenizin test kaynak kodu dosyasına ekleyin:
 
-    [!code-csharp[StringLibraryTest source code](samples/snippets/csharp/lut-start/unittest2.cs#1)]
+   :::code language="csharp" source="../test/samples/snippets/csharp/lut-start/unittest2.cs" id="Snippet1":::
 
 1. Yöntemine yapılan `DirectCallWithNullOrEmpty` çağrıdan hemen sonra aşağıdaki kodu ekleyerek yöntemi değiştirin [`Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsFalse`](/dotnet/api/microsoft.visualstudio.testtools.unittesting.assert.isfalse) .
 
-    [!code-csharp[StringLibraryTest source code](samples/snippets/csharp/lut-start/unittest2.cs#2)]
+   :::code language="csharp" source="../test/samples/snippets/csharp/lut-start/unittest2.cs" id="Snippet2":::
 
 1. Live Unit Testing, kaynak kodunuzu değiştirirken yeni ve değiştirilmiş testleri otomatik olarak yürütür. Aşağıdaki çizimde gösterildiği gibi, eklediğiniz iki ve değiştirdiğiniz bir öğe de dahil olmak üzere tüm testler başarılı olmuştur.
 
@@ -228,7 +314,7 @@ Bu bölümde, test başarısızlıklarını belirlemek, sorunlarını gidermek v
 
 1. Aşağıdaki yöntemi test dosyanıza ekleyin:
 
-    [!code-csharp[The TestHasEmbeddedSpaces test method](samples/snippets/csharp/lut-start/unittest2.cs#3)]
+   :::code language="csharp" source="../test/samples/snippets/csharp/lut-start/unittest2.cs" id="Snippet3":::
 
 1. Test yürütüldüğünde, `TestHasEmbeddedSpaces` Aşağıdaki çizimde gösterildiği gibi, yönteminin başarısız olduğunu Live Unit Testing.
 
@@ -275,7 +361,7 @@ Bu, hatanın ön araştırması için yeterli bilgi sağlar. `TestHasEmbeddedSpa
 
 1. Eşitlik karşılaştırmasını yönteme yönelik bir çağrı ile değiştirin <xref:System.Char.IsWhiteSpace%2A?displayProperty=fullName> :
 
-    [!code-csharp[The TestHasEmbeddedSpaces test method](samples/snippets/csharp/lut-start/program2.cs#1)]
+   :::code language="csharp" source="../test/samples/snippets/csharp/lut-start/program2.cs" id="Snippet1":::
 
 1. Live Unit Testing başarısız test yöntemini otomatik olarak yeniden çalıştırır.
 

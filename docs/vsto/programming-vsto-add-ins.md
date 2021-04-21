@@ -34,12 +34,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 83fdc3b6a60c5f8972ff5d955c56476fb13315d9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2ee62f35b0626139a8080649076d2ac941366a26
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99971836"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107828715"
 ---
 # <a name="program-vsto-add-ins"></a>Program VSTO eklentileri
   Bir Microsoft Office uygulamasını bir VSTO eklentisi oluşturarak genişlettiğinizde, doğrudan projenizdeki sınıfa karşı kod yazarsınız `ThisAddIn` . Bu sınıfı, Microsoft Office ana bilgisayar uygulamasının nesne modeline erişim, uygulamanın kullanıcı arabirimini (UI) özelleştirme ve VSTO eklentiinizdeki nesneleri diğer Office çözümlerine sunma gibi görevleri gerçekleştirmek için kullanabilirsiniz.
@@ -51,7 +51,7 @@ ms.locfileid: "99971836"
  Visual Studio 'da Office geliştirme araçları 'nı kullanarak, VSTO eklentileri ve oluşturabileceğiniz diğer çözüm türleri hakkında genel bilgi için bkz. [Office çözümleri geliştirmeye genel bakış &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md).
 
 ## <a name="use-the-thisaddin-class"></a>ThisAddIn sınıfını kullanma
- Sınıfında VSTO eklenti kodunuzu yazmaya başlayabilirsiniz `ThisAddIn` . Visual Studio bu sınıfı otomatik olarak VSTO eklenti projenizdeki *ThisAddIn. vb* (in [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] ) veya *ThisAddIn.cs* (C#) kod dosyasında oluşturur. [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]Microsoft Office UYGULAMASı VSTO eklentinizi yüklediğinde, bu sınıfı otomatik olarak başlatır.
+ Sınıfında VSTO eklenti kodunuzu yazmaya başlayabilirsiniz `ThisAddIn` . Visual Studio bu sınıfı, VSTO eklenti projenizdeki *ThisAddIn. vb* (in [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] ) veya *ThisAddIn. cs* (C#) kod dosyasında otomatik olarak oluşturur. [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]Microsoft Office UYGULAMASı VSTO eklentinizi yüklediğinde, bu sınıfı otomatik olarak başlatır.
 
  Sınıfında iki varsayılan olay işleyicisi vardır `ThisAddIn` . VSTO eklentisi yüklendiğinde kodu çalıştırmak için `ThisAddIn_Startup` olay işleyicisine kod ekleyin. VSTO eklentisi kaldırılmadan hemen önce kodu çalıştırmak için `ThisAddIn_Shutdown` olay işleyicisine kod ekleyin. Bu olay işleyicileri hakkında daha fazla bilgi için bkz. [Office Projelerindeki Olaylar](../vsto/events-in-office-projects.md).
 
@@ -112,8 +112,8 @@ Excel.Workbook newWorkbook = Globals.ThisAddIn.Application.Workbooks.Add(System.
 
  Aşağıdaki kod örneği, yalnızca Kullanıcı bir belge oluşturduğunda veya var olan bir belgeyi açtığında Word 'deki bir belge ile birlikte kullanılır.
 
- [!code-csharp[Trin_WordAddIn_Menus#3](../vsto/codesnippet/CSharp/trin_wordaddin_menus.cs/thisaddin.cs#3)]
- [!code-vb[Trin_WordAddIn_Menus#3](../vsto/codesnippet/VisualBasic/trin_wordaddin_menus.vb/thisaddin.vb#3)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_wordaddin_menus.cs/thisaddin.cs" id="Snippet3":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddin_menus.vb/thisaddin.vb" id="Snippet3":::
 
 ### <a name="thisaddin-members-to-use-for-other-tasks"></a>Diğer görevler için kullanılacak ThisAddIn üyeleri
  Aşağıdaki tabloda, diğer ortak görevler açıklanmakta ve bu, hangi sınıf üyelerini `ThisAddIn` görevleri gerçekleştirmek için kullanabileceğiniz gösterilmektedir.

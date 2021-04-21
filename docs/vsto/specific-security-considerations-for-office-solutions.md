@@ -20,12 +20,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 57b330884ef6638e5c853cfb5670e3552aca46cc
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 58cd5f7a26be57ce0cb742e153d88ee455b2f85b
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99940832"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826115"
 ---
 # <a name="specific-security-considerations-for-office-solutions"></a>Office çözümleri için belirli güvenlik konuları
   Microsoft .NET Framework ve Microsoft Office tarafından sağlanan güvenlik özellikleri, Office çözümlerinizi olası güvenlik tehditlerine karşı korumaya yardımcı olabilir. Bu konu, bu tehditlerin bazılarını açıklar ve bunlara karşı koruma sağlamaya yardımcı olmak için öneriler sağlar. Ayrıca, Microsoft Office güvenlik ayarlarının Office çözümlerini nasıl etkilediği hakkında bilgi içerir.
@@ -67,13 +67,13 @@ ms.locfileid: "99940832"
 
  Aşağıdaki kod örneği, nesne modeli koruyucusu etkinse bir güvenlik uyarısı görüntüler. `To`Sınıfının özelliği, `Microsoft.Office.Interop.Outlook.MailItem` nesne modeli koruyucusu tarafından kısıtlanır. `Microsoft.Office.Interop.Outlook.MailItem`Kodu `Microsoft.Office.Interop.Outlook.Application` alanından almak yerine **Yeni** işleç kullanılarak oluşturulan bir öğesinden aldığından, nesne güvenli değildir `Application` .
 
- [!code-csharp[Trin_VstcoreOutlookSecurity#1](../vsto/codesnippet/CSharp/Trin_VstcoreOutlookSecurity/ThisAddIn.cs#1)]
- [!code-vb[Trin_VstcoreOutlookSecurity#1](../vsto/codesnippet/VisualBasic/Trin_VstcoreOutlookSecurity/ThisAddIn.vb#1)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreOutlookSecurity/ThisAddIn.cs" id="Snippet1":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreOutlookSecurity/ThisAddIn.vb" id="Snippet1":::
 
  Aşağıdaki kod örneği, `Microsoft.Office.Interop.Outlook.MailItem` nesne modeli koruyucusu tarafından güvenilen bir nesnenin kısıtlı to özelliğinin nasıl kullanılacağını gösterir. Kod, ' i `Application` almak için güvenilir alanını kullanır `Microsoft.Office.Interop.Outlook.MailItem` .
 
- [!code-csharp[Trin_VstcoreOutlookSecurity#2](../vsto/codesnippet/CSharp/Trin_VstcoreOutlookSecurity/ThisAddIn.cs#2)]
- [!code-vb[Trin_VstcoreOutlookSecurity#2](../vsto/codesnippet/VisualBasic/Trin_VstcoreOutlookSecurity/ThisAddIn.vb#2)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreOutlookSecurity/ThisAddIn.cs" id="Snippet2":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreOutlookSecurity/ThisAddIn.vb" id="Snippet2":::
 
 > [!NOTE]
 > Outlook Exchange ile kullanılıyorsa, tüm Outlook nesnelerini ' den almak, `ThisAddIn.Application` VSTO eklentisinin tüm Outlook nesne modeline erişebilmesini garantilemez. Örneğin, bir Exchange Yöneticisi Outlook 'u Outlook nesne modeli kullanarak adres bilgilerine erişme girişimlerini otomatik olarak reddedecek şekilde ayarladıysanız, kod örneği güvenilir alanı kullansa bile, Outlook önceki kod örneğine erişim için bu özelliğe izin vermez `ThisAddIn.Application` .

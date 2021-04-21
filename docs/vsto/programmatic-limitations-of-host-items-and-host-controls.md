@@ -33,12 +33,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: fbc3258f3ea7e0b3cc93a2887dfff5a3bfefb19d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 463543a40ac9443959b06cf9f65dad4c99c52ee3
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99891897"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107828832"
 ---
 # <a name="programmatic-limitations-of-host-items-and-host-controls"></a>Konak öğelerinin ve konak denetimlerinin programlama sınırlamaları
   Her konak öğesi ve konak denetimi, karşılık gelen bir yerel Microsoft Office kelime veya Microsoft Office Excel nesnesi gibi davranacak şekilde tasarlanmıştır. Ancak, çalışma zamanında konak öğelerinin ve konak denetimlerinin ve yerel Office nesnelerinin davranışları arasında bazı temel farklılıklar vardır.
@@ -74,8 +74,8 @@ ms.locfileid: "99891897"
 
  Aşağıdaki örnek bir denetim oluşturur <xref:Microsoft.Office.Tools.Excel.NamedRange> ve <xref:Microsoft.Office.Interop.Excel.Range.AutoFill%2A> yöntemine geçirir. Kod, <xref:Microsoft.Office.Tools.Excel.NamedRange.InnerObject%2A> yöntemi için gereken temel Office 'i döndürmek için adlandırılmış aralığın özelliğini kullanır <xref:Microsoft.Office.Interop.Excel.Range> <xref:Microsoft.Office.Interop.Excel.Range.AutoFill%2A> .
 
- [!code-csharp[Trin_VstcoreHostControlsExcel#28](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs#28)]
- [!code-vb[Trin_VstcoreHostControlsExcel#28](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb#28)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs" id="Snippet28":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb" id="Snippet28":::
 
 ### <a name="return-types-of-native-office-methods-and-properties"></a>Yerel Office yöntemlerinin ve özelliklerinin dönüş türleri
  Konak öğelerinin çoğu yöntemi ve özellikleri, ana bilgisayar öğesinin temel aldığı temel yerel Office nesnesini döndürür. Örneğin, <xref:Microsoft.Office.Tools.Excel.NamedRange.Parent%2A> <xref:Microsoft.Office.Tools.Excel.NamedRange> Excel 'deki bir konak denetiminin özelliği, <xref:Microsoft.Office.Interop.Excel.Worksheet> bir konak öğesi yerine bir nesne döndürür <xref:Microsoft.Office.Tools.Excel.Worksheet> . Benzer şekilde, <xref:Microsoft.Office.Tools.Word.RichTextContentControl.Parent%2A> <xref:Microsoft.Office.Tools.Word.RichTextContentControl> Word içindeki bir konak denetiminin özelliği, <xref:Microsoft.Office.Interop.Word.Document> bir konak öğesi yerine bir nesne döndürür <xref:Microsoft.Office.Tools.Word.Document> .
@@ -83,8 +83,8 @@ ms.locfileid: "99891897"
 ### <a name="access-collections-of-host-controls"></a>Konak denetimleri koleksiyonlarına erişin
  [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]Her konak denetimi türü için ayrı koleksiyonlar sağlamaz. Bunun yerine, belge veya çalışma sayfasındaki tüm yönetilen denetimleri (konak denetimleri ve Windows Forms denetimleri) yinelemek için bir konak öğesinin Controls özelliğini kullanın ve ardından ilgilendiğiniz konak denetiminin türüyle eşleşen öğeleri arayın. Aşağıdaki kod örneği, bir Word belgesindeki her denetimi inceler ve denetimin bir olup olmadığını belirler <xref:Microsoft.Office.Tools.Word.Bookmark> .
 
- [!code-csharp[Trin_VstcoreHostControlsWord#10](../vsto/codesnippet/CSharp/trin_vstcorehostcontrolsword/ThisDocument.cs#10)]
- [!code-vb[Trin_VstcoreHostControlsWord#10](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsWordVB/ThisDocument.vb#10)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcorehostcontrolsword/ThisDocument.cs" id="Snippet10":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsWordVB/ThisDocument.vb" id="Snippet10":::
 
  Konak öğelerinin denetimler özelliği hakkında daha fazla bilgi için bkz. [çalışma zamanında Office belgelerine denetim ekleme](../vsto/adding-controls-to-office-documents-at-run-time.md).
 

@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 6fd35551c5c40494c169fb569113e3530f633a6f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: dce8bb0667cecbe073c734595d341f9c7b7ccac9
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99940806"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826089"
 ---
 # <a name="threading-support-in-office"></a>Office 'te iş parçacığı desteği
   Bu makalede, iş parçacığı Microsoft Office nesne modelinde nasıl desteklenmiş hakkında bilgi sağlanır. Office nesne modeli iş parçacığı açısından güvenli değildir, ancak bir Office çözümünde birden çok iş parçacığı ile çalışmak mümkündür. Office uygulamaları bileşen nesne modeli (COM) sunucularıdır. COM, istemcilerin rastgele iş parçacıklarında COM sunucuları çağırmasını sağlar. COM, iş parçacığı güvenli olmayan COM sunucuları için, aynı anda yalnızca bir mantıksal iş parçacığının sunucuda yürütüldüğü şekilde eşzamanlı çağrıları seri hale getirmek için bir mekanizma sağlar. Bu mekanizma tek iş parçacıklı Apartment (STA) modeli olarak bilinir. Çağrılar serileştirildiği için, sunucu meşgul olduğu veya bir arka plan iş parçacığında diğer çağrıları işlediği için çağıranlar zaman dilimleri engellenebilir.
@@ -65,8 +65,8 @@ ms.locfileid: "99940806"
 ## <a name="start-the-thread-correctly"></a>İş parçacığını doğru şekilde başlatın
  Yeni bir STA iş parçacığı oluşturduğunuzda, iş parçacığına başlamadan önce grup durumunu STA olarak ayarlayın. Aşağıdaki kod örneği bunun nasıl yapılacağını göstermektedir.
 
- [!code-csharp[Trin_VstcoreCreatingExcel#5](../vsto/codesnippet/CSharp/Trin_VstcoreCreatingExcelCS/ThisWorkbook.cs#5)]
- [!code-vb[Trin_VstcoreCreatingExcel#5](../vsto/codesnippet/VisualBasic/Trin_VstcoreCreatingExcelVB/ThisWorkbook.vb#5)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreCreatingExcelCS/ThisWorkbook.cs" id="Snippet5":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreCreatingExcelVB/ThisWorkbook.vb" id="Snippet5":::
 
  Daha fazla bilgi için bkz. [yönetilen iş parçacığı en iyi yöntemleri](/dotnet/standard/threading/managed-threading-best-practices).
 

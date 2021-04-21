@@ -21,12 +21,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: a49dcc36d4079a6a945806b3112e3949ddcd79e2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 509378b13e48f21a1148d700addd9ac4e78985e9
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99910293"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107825699"
 ---
 # <a name="excel-object-model-overview"></a>Excel nesne modeline genel bakış
   Excel Microsoft Office kullanan çözümler geliştirmek için Excel nesne modeli tarafından sunulan nesnelerle etkileşim kurabilirsiniz. Bu konu, en önemli nesneleri tanıtır:
@@ -50,21 +50,21 @@ ms.locfileid: "99910293"
   Bu konuda, Excel nesne modeline kısa bir genel bakış sunulmaktadır. Tüm Excel nesne modeli hakkında daha fazla bilgi edinmek için bkz. [Excel nesne modeli belgelerini kullanma](#ExcelOMDocumentation).
 
 ## <a name="access-objects-in-an-excel-project"></a>Excel projesindeki nesnelere erişme
- Excel için yeni bir VSTO eklentisi projesi oluşturduğunuzda, Visual Studio otomatik olarak bir *ThisAddIn. vb* veya *ThisAddIn.cs* kod dosyası oluşturur. Veya kullanarak uygulama nesnesine erişebilirsiniz `Me.Application` `this.Application` .
+ Excel için yeni bir VSTO eklentisi projesi oluşturduğunuzda, Visual Studio otomatik olarak bir *ThisAddIn. vb* veya *ThisAddIn. cs* kod dosyası oluşturur. Veya kullanarak uygulama nesnesine erişebilirsiniz `Me.Application` `this.Application` .
 
  Excel için yeni bir belge düzeyi projesi oluşturduğunuzda, yeni bir Excel çalışma kitabı veya Excel şablonu projesi oluşturma seçeneğiniz vardır. Visual Studio, hem çalışma kitabı hem de şablon projeleri için yeni Excel projenizde aşağıdaki kod dosyalarını otomatik olarak oluşturur.
 
 |Visual Basic|C#|
 |------------------|---------|
-|ThisWorkbook. vb|ThisWorkbook.cs|
-|Sayfa1. vb|Sheet1.cs|
-|Sheet2. vb|Sheet2.cs|
-|Sheet3. vb|Sheet3.cs|
+|ThisWorkbook. vb|ThisWorkbook. cs|
+|Sayfa1. vb|Sayfa1. cs|
+|Sheet2. vb|Sheet2. cs|
+|Sheet3. vb|Sheet3. cs|
 
  Projenizdeki sınıfı,,, `Globals` `ThisWorkbook` `Sheet1` `Sheet2` veya `Sheet3` ilgili sınıfın dışından erişmek için kullanabilirsiniz. Daha fazla bilgi için bkz. [Office Projelerindeki Nesnelere Genel erişim](../vsto/global-access-to-objects-in-office-projects.md). Aşağıdaki örnek, <xref:Microsoft.Office.Interop.Excel._Worksheet.PrintPreview%2A> `Sheet1` kodun `Sheet` *n* sınıflarından veya sınıfından birine yerleştirilmiş olmasına bakılmaksızın yöntemini çağırır `ThisWorkbook` .
 
- [!code-csharp[Trin_VstcoreExcelAutomation#82](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#82)]
- [!code-vb[Trin_VstcoreExcelAutomation#82](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#82)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs" id="Snippet82":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb" id="Snippet82":::
 
  Excel belgesindeki veriler yüksek oranda yapılandırıldığı için, nesne modeli hiyerarşik ve kolay bir şekilde yapılandırılmıştır. Excel, etkileşim kurmak isteyebileceğiniz yüzlerce nesne sağlar, ancak kullanılabilir nesnelerin küçük bir alt kümesine odaklanarak nesne modelinde iyi bir başlangıç yapabilirsiniz. Bu nesneler aşağıdaki dört içerir:
 
