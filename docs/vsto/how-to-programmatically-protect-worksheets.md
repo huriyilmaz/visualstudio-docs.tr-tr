@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 92ded3d8320f58bdd200f3892dc40c7a915c502e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 31c0184cbf8f29db6d33d135cf295f8277b55f2e
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99963828"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107827109"
 ---
 # <a name="how-to-programmatically-protect-worksheets"></a>Nasıl yapılır: program aracılığıyla çalışma sayfalarını koruma
   Microsoft Office Excel 'deki koruma özelliği, kullanıcıların ve kodun bir çalışma sayfasındaki nesneleri değiştirmelerini önlemeye yardımcı olur. Varsayılan olarak, korumayı etkinleştirdikten sonra tüm hücreler kilitlenir.
@@ -57,15 +57,15 @@ ms.locfileid: "99963828"
 
 1. <xref:Microsoft.Office.Tools.Excel.Worksheet.Protect%2A>Çalışma sayfasının yöntemini çağırın. Bu örnek, adlı bir çalışma sayfasıyla çalıştığınızı varsayar `Sheet1` .
 
-     [!code-csharp[Trin_VstcoreExcelAutomation#27](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#27)]
-     [!code-vb[Trin_VstcoreExcelAutomation#27](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#27)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs" id="Snippet27":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb" id="Snippet27":::
 
 ### <a name="to-protect-a-worksheet-by-using-code-in-a-vsto-add-in"></a>VSTO eklentideki kodu kullanarak çalışma sayfasını korumak için
 
 1. <xref:Microsoft.Office.Interop.Excel._Worksheet.Protect%2A>Etkin çalışma sayfasının yöntemini çağırın.
 
-     [!code-csharp[Trin_VstcoreExcelAutomationAddIn#17](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#17)]
-     [!code-vb[Trin_VstcoreExcelAutomationAddIn#17](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#17)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs" id="Snippet17":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb" id="Snippet17":::
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Çalışma sayfalarıyla çalışma](../vsto/working-with-worksheets.md)

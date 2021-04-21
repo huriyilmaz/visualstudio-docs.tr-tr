@@ -25,12 +25,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 9ac8c4ef96a421ece6c0591d4340d570d71c08e3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5e7fe64d2df3298d53f567d11fe765280843e2ce
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99846289"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826791"
 ---
 # <a name="walkthrough-synchronize-a-custom-task-pane-with-a-ribbon-button"></a>İzlenecek yol: özel görev bölmesini Şerit düğmesi ile senkronize etme
   Bu izlenecek yol, Şeritteki iki durumlu düğmeye tıklayarak kullanıcıların gizleyebileceğiniz veya görüntüleyeceği özel bir görev bölmesi oluşturmayı gösterir. Microsoft Office uygulamalar, kullanıcıların özel görev bölmelerini göstermek veya gizlemek için varsayılan bir yol sağlamadığından, bir düğme gibi her zaman bir kullanıcı arabirimi (UI) öğesi oluşturmalısınız.
@@ -64,7 +64,7 @@ ms.locfileid: "99846289"
 
 1. Excel eklentisi proje şablonunu kullanarak **SynchronizeTaskPaneAndRibbon** adlı bir Excel eklentisi projesi oluşturun. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**ThisAddIn.cs** veya **ThisAddIn. vb** kod dosyasını açar ve **SynchronizeTaskPaneAndRibbon** projesini **Çözüm Gezgini** ekler.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**ThisAddIn. cs** veya **ThisAddIn. vb** kod dosyasını açar ve **SynchronizeTaskPaneAndRibbon** projesini **Çözüm Gezgini** ekler.
 
 ## <a name="add-a-toggle-button-to-the-ribbon"></a>Şerit 'e iki durumlu düğme Ekle
  Office uygulaması tasarım yönergelerinden biri, kullanıcıların her zaman Office uygulaması kullanıcı arabirimi denetimine sahip olması gerekir. Kullanıcıların özel görev bölmesini denetlemesine olanak tanımak için, görev bölmesini gösteren ve gizleyen bir şerit iki durumlu düğme ekleyebilirsiniz. İki durumlu düğme oluşturmak için projeye **Şerit (görsel Tasarımcı)** öğesi ekleyin. Tasarımcı denetimleri eklemenize ve konumlandıramanıza, denetim özelliklerini ayarlamanıza ve denetim olaylarını işleymenize yardımcı olur. Daha fazla bilgi için bkz. [Şerit Tasarımcısı](../vsto/ribbon-designer.md).
@@ -77,7 +77,7 @@ ms.locfileid: "99846289"
 
 3. Yeni şeridin adını **ManageTaskPaneRibbon** olarak değiştirin ve **Ekle**' ye tıklayın.
 
-     **ManageTaskPaneRibbon.cs** veya **ManageTaskPaneRibbon. vb** dosyası Şerit Tasarımcısı 'nda açılır ve varsayılan bir sekme ve grup görüntüler.
+     **ManageTaskPaneRibbon. cs** veya **ManageTaskPaneRibbon. vb** dosyası Şerit Tasarımcısı 'nda açılır ve varsayılan bir sekme ve grup görüntüler.
 
 4. Şerit tasarımcısında, **grup1**' e tıklayın.
 
@@ -109,27 +109,27 @@ ms.locfileid: "99846289"
 
 1. **Çözüm Gezgini**, **Excel**' i genişletin.
 
-2. **ThisAddIn.cs** veya **ThisAddIn. vb** öğesine sağ tıklayın ve **kodu görüntüle**' ye tıklayın.
+2. **ThisAddIn. cs** veya **ThisAddIn. vb** öğesine sağ tıklayın ve **kodu görüntüle**' ye tıklayın.
 
 3. Aşağıdaki kodu `ThisAddIn` sınıfına ekleyin. Bu kod, üyesi olarak bir örneğini bildirir `TaskPaneControl` `ThisAddIn` .
 
-     [!code-csharp[Trin_TaskPaneRibbonSynchronize#1](../vsto/codesnippet/CSharp/Trin_TaskPaneRibbonSynchronize/ThisAddIn.cs#1)]
-     [!code-vb[Trin_TaskPaneRibbonSynchronize#1](../vsto/codesnippet/VisualBasic/Trin_TaskPaneRibbonSynchronize/ThisAddIn.vb#1)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_TaskPaneRibbonSynchronize/ThisAddIn.cs" id="Snippet1":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_TaskPaneRibbonSynchronize/ThisAddIn.vb" id="Snippet1":::
 
 4. `ThisAddIn_Startup`Olay işleyicisini aşağıdaki kodla değiştirin. Bu kod, `TaskPaneControl` nesnesini `CustomTaskPanes` alana ekler, ancak özel görev bölmesini görüntülemez (varsayılan olarak, <xref:Microsoft.Office.Tools.CustomTaskPane.Visible%2A> <xref:Microsoft.Office.Tools.CustomTaskPane> sınıfının özelliği **false**'dur). Visual C# kodu ayrıca olaya bir olay işleyicisi ekler <xref:Microsoft.Office.Tools.CustomTaskPane.VisibleChanged> .
 
-     [!code-csharp[Trin_TaskPaneRibbonSynchronize#2](../vsto/codesnippet/CSharp/Trin_TaskPaneRibbonSynchronize/ThisAddIn.cs#2)]
-     [!code-vb[Trin_TaskPaneRibbonSynchronize#2](../vsto/codesnippet/VisualBasic/Trin_TaskPaneRibbonSynchronize/ThisAddIn.vb#2)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_TaskPaneRibbonSynchronize/ThisAddIn.cs" id="Snippet2":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_TaskPaneRibbonSynchronize/ThisAddIn.vb" id="Snippet2":::
 
 5. Sınıfına aşağıdaki yöntemi ekleyin `ThisAddIn` . Bu yöntem olayı işler <xref:Microsoft.Office.Tools.CustomTaskPane.VisibleChanged> . Kullanıcı, **Kapat** düğmesine (X) tıklayarak görev bölmesini kapattığında, bu yöntem Şeritteki iki durumlu düğmenin durumunu güncelleştirir.
 
-     [!code-csharp[Trin_TaskPaneRibbonSynchronize#3](../vsto/codesnippet/CSharp/Trin_TaskPaneRibbonSynchronize/ThisAddIn.cs#3)]
-     [!code-vb[Trin_TaskPaneRibbonSynchronize#3](../vsto/codesnippet/VisualBasic/Trin_TaskPaneRibbonSynchronize/ThisAddIn.vb#3)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_TaskPaneRibbonSynchronize/ThisAddIn.cs" id="Snippet3":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_TaskPaneRibbonSynchronize/ThisAddIn.vb" id="Snippet3":::
 
 6. Sınıfına aşağıdaki özelliği ekleyin `ThisAddIn` . Bu özellik özel `myCustomTaskPane1` nesneyi diğer sınıflara gösterir. Bu izlenecek yolda daha sonra `MyRibbon` Bu özelliği kullanan sınıfa kod ekleyeceksiniz.
 
-     [!code-csharp[Trin_TaskPaneRibbonSynchronize#4](../vsto/codesnippet/CSharp/Trin_TaskPaneRibbonSynchronize/ThisAddIn.cs#4)]
-     [!code-vb[Trin_TaskPaneRibbonSynchronize#4](../vsto/codesnippet/VisualBasic/Trin_TaskPaneRibbonSynchronize/ThisAddIn.vb#4)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_TaskPaneRibbonSynchronize/ThisAddIn.cs" id="Snippet4":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_TaskPaneRibbonSynchronize/ThisAddIn.vb" id="Snippet4":::
 
 ## <a name="hide-and-show-the-custom-task-pane-by-using-the-toggle-button"></a>İki durumlu düğmeyi kullanarak özel görev bölmesini gizleme ve görüntüleme
  Son adım, Kullanıcı Şeritteki iki durumlu düğmeye tıkladığında özel görev bölmesini görüntüleyen veya gizleyen kodu eklemektir.
@@ -138,12 +138,12 @@ ms.locfileid: "99846289"
 
 1. Şerit tasarımcısında **görev bölmesini göster** iki durumlu düğmesine çift tıklayın.
 
-     Visual Studio, `toggleButton1_Click` <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Click> iki durumlu düğmenin olayını işleyen adlı bir olay işleyicisini otomatik olarak oluşturur. Visual Studio Ayrıca kod düzenleyicisinde *MyRibbon.cs* veya *MyRibbon. vb* dosyasını açar.
+     Visual Studio, `toggleButton1_Click` <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Click> iki durumlu düğmenin olayını işleyen adlı bir olay işleyicisini otomatik olarak oluşturur. Visual Studio Ayrıca kod düzenleyicisinde *MyRibbon. cs* veya *MyRibbon. vb* dosyasını açar.
 
 2. `toggleButton1_Click`Olay işleyicisini aşağıdaki kodla değiştirin. Kullanıcı iki durumlu düğmeye tıkladığında, bu kod geçiş düğmesine basıldığında veya basılmamış olmasına bağlı olarak özel görev bölmesini görüntüler veya gizler.
 
-     [!code-vb[Trin_TaskPaneRibbonSynchronize#5](../vsto/codesnippet/VisualBasic/Trin_TaskPaneRibbonSynchronize/ManageTaskPaneRibbon.vb#5)]
-     [!code-csharp[Trin_TaskPaneRibbonSynchronize#5](../vsto/codesnippet/CSharp/Trin_TaskPaneRibbonSynchronize/ManageTaskPaneRibbon.cs#5)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_TaskPaneRibbonSynchronize/ManageTaskPaneRibbon.vb" id="Snippet5":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_TaskPaneRibbonSynchronize/ManageTaskPaneRibbon.cs" id="Snippet5":::
 
 ## <a name="test-the-add-in"></a>Eklentiyi test etme
  Projeyi çalıştırdığınızda, Excel özel görev bölmesini görüntülemeden açılır. Kodu test etmek için Şeritteki iki durumlu düğmeye tıklayın.

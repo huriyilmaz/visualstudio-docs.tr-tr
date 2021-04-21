@@ -20,12 +20,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: e833a480713e3c04215c03a3dc4a549c92e0f772
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9d42aa2d8594ed44e4fd4edbac8a0d64c4dc16da
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99938479"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826154"
 ---
 # <a name="persist-dynamic-controls-in-office-documents"></a>Office belgelerinde dinamik denetimleri kalıcı hale getirme
 
@@ -57,8 +57,8 @@ Word için bir konak denetimini veya <xref:Microsoft.Office.Tools.Excel.NamedRan
 
 Örneğin, <xref:Microsoft.Office.Tools.Excel.ListObject?displayProperty=fullName> belge açıldığında var olan bir yerel kümeden bir konak denetimi oluşturmak istiyorsanız, <xref:Microsoft.Office.Interop.Excel.ListObject?displayProperty=fullName> <xref:Microsoft.Office.Tools.Excel.ControlCollection.AddListObject%2A> yöntemini kullanın ve mevcut ' ı geçirin <xref:Microsoft.Office.Interop.Excel.ListObject> . Aşağıdaki kod örneği, Excel için belge düzeyindeki bir projede bunu gösterir. Kod, <xref:Microsoft.Office.Tools.Excel.ListObject> sınıfında varolan bir adı temel alan dinamik bir dinamik oluşturur <xref:Microsoft.Office.Interop.Excel.ListObject> `MyListObject` `Sheet1` .
 
-[!code-csharp[Trin_ExcelWorkbookDynamicControls#6](../vsto/codesnippet/CSharp/trin_excelworkbookdynamiccontrols4/Sheet1.cs#6)]
-[!code-vb[Trin_ExcelWorkbookDynamicControls#6](../vsto/codesnippet/VisualBasic/trin_excelworkbookdynamiccontrols4/Sheet1.vb#6)]
+:::code language="csharp" source="../vsto/codesnippet/CSharp/trin_excelworkbookdynamiccontrols4/Sheet1.cs" id="Snippet6":::
+:::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_excelworkbookdynamiccontrols4/Sheet1.vb" id="Snippet6":::
 
 ### <a name="re-create-chart"></a>Grafiği yeniden oluştur
 
@@ -94,8 +94,8 @@ Bu yordam, belgenin yalnızca VSTO eklentisinin yüklü olduğu bilgisayarlarda 
 
 Aşağıdaki kod örneği, belge açıldığında yönteminin nasıl çağrılacağını gösterir `GetVstoObject` .
 
-[!code-vb[Trin_WordAddInDynamicControls#11](../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb#11)]
-[!code-csharp[Trin_WordAddInDynamicControls#11](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#11)]
+:::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb" id="Snippet11":::
+:::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs" id="Snippet11":::
 
 Yöntemi, `GetVstoObject` birincil olarak çalışma zamanında yeni bir konak öğesi oluşturmak için kullanılsa da bu yöntem, belirli bir belge için ilk çağrılışında belgedeki tüm ActiveX sarmalayıcılarını da temizler. Yönteminin nasıl kullanılacağı hakkında daha fazla bilgi için `GetVstoObject` bkz. [çalışma zamanında VSTO Eklentilerindeki Word belgelerini ve Excel çalışma kitaplarını genişletme](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md).
 
@@ -107,8 +107,8 @@ Belge kapatılmadan önce, VSTO eklentisi her dinamik denetimi belgeden açıkç
 
 Aşağıdaki kod örneği, belge kapatıldığında bir Word belgesinden tüm Windows Forms denetimlerinin nasıl kaldırılacağını gösterir.
 
-[!code-vb[Trin_WordAddInDynamicControls#10](../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb#10)]
-[!code-csharp[Trin_WordAddInDynamicControls#10](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#10)]
+:::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb" id="Snippet10":::
+:::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs" id="Snippet10":::
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

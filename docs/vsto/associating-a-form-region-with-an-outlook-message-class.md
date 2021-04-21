@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 0bbbd381ff84714b780bbb817ccfea64ac05e949
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: be3b789fabf00d853d447cb3489ef07a5b494fcd
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99882550"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826999"
 ---
 # <a name="associate-a-form-region-with-an-outlook-message-class"></a>Form bölgesini Outlook ileti sınıfıyla ilişkilendirme
   Form bölgesini her öğenin ileti sınıfıyla ilişkilendirerek, hangi Microsoft Office Outlook öğelerinin form bölgesi görüntülemesini belirtebilirsiniz. Örneğin, bir posta öğesinin altına bir form bölgesi eklemek istiyorsanız, form bölgesini `IPM.Note` ileti sınıfıyla ilişkilendirebilirsiniz.
@@ -87,8 +87,8 @@ ms.locfileid: "99882550"
 
  Aşağıdaki örnek, <xref:Microsoft.Office.Tools.Outlook.FormRegionMessageClassAttribute> adlı bir form bölgesi fabrikası sınıfına uygulanmış olan iki özniteliği gösterir `myFormRegion` . İlk öznitelik, form bölgesini posta iletisi formu için standart bir ileti sınıfıyla ilişkilendirir. İkinci öznitelik, form bölgesini adlı özel bir ileti sınıfıyla ilişkilendirir `IPM.Task.Contoso` .
 
- [!code-vb[Trin_Outlook_FR_Attributes#1](../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Attributes/FormRegion1.vb#1)]
- [!code-csharp[Trin_Outlook_FR_Attributes#1](../vsto/codesnippet/CSharp/Trin_Outlook_FR_Attributes/FormRegion1.cs#1)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Attributes/FormRegion1.vb" id="Snippet1":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Outlook_FR_Attributes/FormRegion1.cs" id="Snippet1":::
 
  Öznitelikler aşağıdaki kılavuzlarla uyumlu olmalıdır:
 

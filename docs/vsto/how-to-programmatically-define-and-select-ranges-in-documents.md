@@ -18,12 +18,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: e9c703f4d4e747934d1bab458b75a9d499f0d439
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3a5dc0c7fb9f3e9a2b4a15447f81239db973c215
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99963958"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107825959"
 ---
 # <a name="how-to-programmatically-define-and-select-ranges-in-documents"></a>Nasıl yapılır: belgelerde aralıkları program aracılığıyla tanımlama ve seçme
   Bir nesne kullanarak Microsoft Office Word belgesinde bir Aralık tanımlayabilirsiniz <xref:Microsoft.Office.Interop.Word.Range> . Tüm belgeyi, örneğin, <xref:Microsoft.Office.Interop.Word.Range.Select%2A> nesnesinin yöntemini kullanarak <xref:Microsoft.Office.Interop.Word.Range> veya sınıfının içerik özelliğini <xref:Microsoft.Office.Tools.Word.Document> (belge düzeyi özelleştirmesinde) ya da <xref:Microsoft.Office.Interop.Word.Document> sınıfını (VSTO eklentisi içinde) kullanarak seçebilirsiniz (örneğin, nesne).
@@ -37,15 +37,15 @@ ms.locfileid: "99963958"
 
 1. Sınıf yöntemine bir başlangıç ve bitiş karakteri geçirerek belgeye aralığı ekleyin <xref:Microsoft.Office.Tools.Word.Document.Range%2A> <xref:Microsoft.Office.Tools.Word.Document> . Bu kod örneğini kullanmak için `ThisDocument` projenizdeki sınıftan çalıştırın.
 
-     [!code-vb[Trin_VstcoreWordAutomation#18](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#18)]
-     [!code-csharp[Trin_VstcoreWordAutomation#18](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#18)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet18":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet18":::
 
 ### <a name="to-define-a-range-by-using-a-vsto-add-in"></a>VSTO eklentisini kullanarak bir Aralık tanımlamak için
 
 1. Sınıf yöntemine bir başlangıç ve bitiş karakteri geçirerek belgeye aralığı ekleyin <xref:Microsoft.Office.Interop.Word._Document.Range%2A> <xref:Microsoft.Office.Interop.Word.Document> . Aşağıdaki kod örneği, etkin belgeye bir Aralık ekler. Bu kod örneğini kullanmak için `ThisAddIn` projenizdeki sınıftan çalıştırın.
 
-     [!code-vb[Trin_VstcoreWordAutomationAddIn#18](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#18)]
-     [!code-csharp[Trin_VstcoreWordAutomationAddIn#18](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#18)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb" id="Snippet18":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs" id="Snippet18":::
 
 ## <a name="select-a-range-in-a-document-level-customization"></a>Belge düzeyi özelleştirmesindeki bir Aralık seçin
  Aşağıdaki örneklerde <xref:Microsoft.Office.Interop.Word.Range.Select%2A> , bir nesnenin yöntemini kullanarak <xref:Microsoft.Office.Interop.Word.Range> veya <xref:Microsoft.Office.Tools.Word.Document.Content%2A> sınıfının özelliğini kullanarak belgenin tamamını seçme gösterilmektedir <xref:Microsoft.Office.Tools.Word.Document> .
@@ -54,15 +54,15 @@ ms.locfileid: "99963958"
 
 1. <xref:Microsoft.Office.Interop.Word.Range.Select%2A>Tüm belgeyi içeren bir öğesinin yöntemini kullanın <xref:Microsoft.Office.Interop.Word.Range> . Aşağıdaki kod örneğini kullanmak için, `ThisDocument` projenizdeki sınıfından çalıştırın.
 
-     [!code-vb[Trin_VstcoreWordAutomation#19](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#19)]
-     [!code-csharp[Trin_VstcoreWordAutomation#19](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#19)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet19":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet19":::
 
 ### <a name="to-select-the-entire-document-as-a-range-by-using-the-content-property"></a>Içerik özelliğini kullanarak tüm belgeyi bir Aralık olarak seçmek için
 
 1. <xref:Microsoft.Office.Tools.Word.Document.Content%2A>Tüm belgeyi kapsayan bir Aralık tanımlamak için özelliğini kullanın.
 
-    [!code-vb[Trin_VstcoreWordAutomation#20](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#20)]
-    [!code-csharp[Trin_VstcoreWordAutomation#20](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#20)]
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet20":::
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet20":::
 
    Bir Aralık tanımlamak için diğer nesnelerin yöntemlerini ve özelliklerini de kullanabilirsiniz.
 
@@ -70,8 +70,8 @@ ms.locfileid: "99963958"
 
 1. Koleksiyonu kullanarak aralığı ayarlayın <xref:Microsoft.Office.Interop.Word.Sentences> . Seçmek istediğiniz tümcenin dizinini kullanın.
 
-    [!code-vb[Trin_VstcoreWordAutomation#21](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#21)]
-    [!code-csharp[Trin_VstcoreWordAutomation#21](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#21)]
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet21":::
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet21":::
 
    Tümceyi seçmek için bir diğer yol ise aralığın başlangıç ve bitiş değerlerini el ile ayarlamanıza yöneliktir.
 
@@ -79,13 +79,13 @@ ms.locfileid: "99963958"
 
 1. Aralık değişkeni oluşturun.
 
-     [!code-vb[Trin_VstcoreWordAutomation#23](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#23)]
-     [!code-csharp[Trin_VstcoreWordAutomation#23](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#23)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet23":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet23":::
 
 2. Belgede en az iki cümle olup olmadığını denetleyin, aralığın *Başlangıç* ve *bitiş* bağımsız değişkenlerini ayarlayıp aralığı seçin.
 
-     [!code-vb[Trin_VstcoreWordAutomation#24](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#24)]
-     [!code-csharp[Trin_VstcoreWordAutomation#24](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#24)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet24":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet24":::
 
 ## <a name="select-a-range-by-using-a-vsto-add-in"></a>VSTO eklentisi kullanarak bir Aralık seçin
  Aşağıdaki örneklerde <xref:Microsoft.Office.Interop.Word.Range.Select%2A> , bir nesnenin yöntemini kullanarak <xref:Microsoft.Office.Interop.Word.Range> veya <xref:Microsoft.Office.Interop.Word._Document.Content%2A> sınıfının özelliğini kullanarak belgenin tamamını seçme gösterilmektedir <xref:Microsoft.Office.Interop.Word.Document> .
@@ -94,15 +94,15 @@ ms.locfileid: "99963958"
 
 1. <xref:Microsoft.Office.Interop.Word.Range.Select%2A>Tüm belgeyi içeren bir öğesinin yöntemini kullanın <xref:Microsoft.Office.Interop.Word.Range> . Aşağıdaki kod örneği etkin belgenin içeriğini seçer. Bu kod örneğini kullanmak için `ThisAddIn` projenizdeki sınıftan çalıştırın.
 
-     [!code-vb[Trin_VstcoreWordAutomationAddIn#19](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#19)]
-     [!code-csharp[Trin_VstcoreWordAutomationAddIn#19](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#19)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb" id="Snippet19":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs" id="Snippet19":::
 
 ### <a name="to-select-the-entire-document-as-a-range-by-using-the-content-property"></a>Içerik özelliğini kullanarak tüm belgeyi bir Aralık olarak seçmek için
 
 1. <xref:Microsoft.Office.Interop.Word._Document.Content%2A>Tüm belgeyi kapsayan bir Aralık tanımlamak için özelliğini kullanın.
 
-    [!code-vb[Trin_VstcoreWordAutomationAddIn#20](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#20)]
-    [!code-csharp[Trin_VstcoreWordAutomationAddIn#20](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#20)]
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb" id="Snippet20":::
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs" id="Snippet20":::
 
    Bir Aralık tanımlamak için diğer nesnelerin yöntemlerini ve özelliklerini de kullanabilirsiniz.
 
@@ -110,8 +110,8 @@ ms.locfileid: "99963958"
 
 1. Koleksiyonu kullanarak aralığı ayarlayın <xref:Microsoft.Office.Interop.Word.Sentences> . Seçmek istediğiniz tümcenin dizinini kullanın.
 
-    [!code-vb[Trin_VstcoreWordAutomationAddIn#21](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#21)]
-    [!code-csharp[Trin_VstcoreWordAutomationAddIn#21](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#21)]
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb" id="Snippet21":::
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs" id="Snippet21":::
 
    Tümceyi seçmek için bir diğer yol ise aralığın başlangıç ve bitiş değerlerini el ile ayarlamanıza yöneliktir.
 
@@ -119,13 +119,13 @@ ms.locfileid: "99963958"
 
 1. Aralık değişkeni oluşturun.
 
-     [!code-vb[Trin_VstcoreWordAutomationAddIn#23](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#23)]
-     [!code-csharp[Trin_VstcoreWordAutomationAddIn#23](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#23)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb" id="Snippet23":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs" id="Snippet23":::
 
 2. Belgede en az iki cümle olup olmadığını denetleyin, aralığın *Başlangıç* ve *bitiş* bağımsız değişkenlerini ayarlayıp aralığı seçin.
 
-     [!code-vb[Trin_VstcoreWordAutomationAddIn#24](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#24)]
-     [!code-csharp[Trin_VstcoreWordAutomationAddIn#24](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#24)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb" id="Snippet24":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs" id="Snippet24":::
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Word nesne modeline genel bakış](../vsto/word-object-model-overview.md)

@@ -19,12 +19,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 3d593185412db23fa985f7effea6e91f9b3faa6c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3367c1ad557c647639b9fd2d2aacf7845e067660
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99847654"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826635"
 ---
 # <a name="word-object-model-overview"></a>Word nesne modeline genel bakış
   Visual Studio 'da Word çözümleri geliştirirken Word nesne modeliyle etkileşime geçin. Bu nesne modeli, Word için birincil birlikte çalışma derlemesinde sunulan sınıflardan ve arabirimlerden oluşur ve <xref:Microsoft.Office.Interop.Word> ad alanında tanımlanır.
@@ -78,8 +78,8 @@ ms.locfileid: "99847654"
 
  Belge düzeyinde bir proje oluşturduğunuzda, <xref:Microsoft.Office.Tools.Word.Document> projenizdeki oluşturulan sınıfı kullanarak üyelere erişebilirsiniz `ThisDocument` . <xref:Microsoft.Office.Tools.Word.Document>Ana öğe öğesinin üyelerine, sınıftaki koddan **Me** veya **Bu** anahtar sözcükleri kullanarak `ThisDocument` ya da `Globals.ThisDocument` sınıf dışındaki koddan kullanarak erişebilirsiniz `ThisDocument` . Daha fazla bilgi için bkz. [Program belge düzeyi özelleştirmeleri](../vsto/programming-document-level-customizations.md). Örneğin, belgedeki ilk paragrafı seçmek için aşağıdaki kodu kullanın.
 
- [!code-vb[Trin_VstcoreWordAutomation#120](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#120)]
- [!code-csharp[Trin_VstcoreWordAutomation#120](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#120)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet120":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet120":::
 
  VSTO eklenti projelerinde, <xref:Microsoft.Office.Tools.Word.Document> çalışma zamanında konak öğeleri oluşturabilirsiniz. Oluşturulan konak öğesini, ilişkili belgeye denetim eklemek için kullanabilirsiniz. Daha fazla bilgi için bkz. [çalışma ZAMANıNDA VSTO Eklentilerindeki Word belgelerini ve Excel çalışma kitaplarını genişletme](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md).
 

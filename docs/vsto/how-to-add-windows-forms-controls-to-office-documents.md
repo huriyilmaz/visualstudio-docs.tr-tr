@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 8d2f8d54e791acd7d027350caa3ce88c8eea9959
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e5a196c54a513376edef5c837a429bece6dd7b16
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99954156"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107824841"
 ---
 # <a name="how-to-add-windows-forms-controls-to-office-documents"></a>Nasıl yapılır: Office belgelerine Windows Forms denetimleri ekleme
   Belge düzeyi projelerinde, tasarım zamanında Excel Microsoft Office ve Microsoft Office Word belgelerine Windows Forms denetimleri ekleyebilirsiniz. Çalışma zamanında, belge düzeyi özelleştirmelerine ve VSTO eklentilerine denetim ekleyebilirsiniz. Örneğin, <xref:Microsoft.Office.Tools.Excel.Controls.ComboBox> kullanıcıların bir seçenek listesinden seçim yapabilmesi için çalışma sayfanıza bir denetim ekleyebilirsiniz.
@@ -110,8 +110,8 @@ ms.locfileid: "99954156"
 
      Aşağıdaki kod örneği, <xref:Microsoft.Office.Tools.Excel.Controls.Button>  `Sheet1` Excel için belge düzeyindeki bir projede C5 öğesinin bir hücresine nasıl ekleneceğini gösterir.
 
-     [!code-vb[Trin_VstcoreProgrammingControlsExcel#4](../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb#4)]
-     [!code-csharp[Trin_VstcoreProgrammingControlsExcel#4](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs#4)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb" id="Snippet4":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs" id="Snippet4":::
 
 ## <a name="add-controls-at-run-time-in-vsto-add-ins"></a><a name="runtimeaddin"></a> VSTO eklentilerinde çalışma zamanında denetim ekleme
  Çalışma zamanında herhangi bir açık belgeye program aracılığıyla Windows Forms denetimleri ekleyebilirsiniz. İlk olarak, açık bir belgeyi veya çalışma sayfasını temel alan bir konak öğesi oluşturun. Ardından, Word 'de <xref:Microsoft.Office.Tools.Word.Document.Controls%2A> yeni ana bilgisayar öğesinin özelliğinin yöntemlerini kullanın. Excel 'de <xref:Microsoft.Office.Tools.Excel.Worksheet.Controls%2A> yeni ana bilgisayar öğesinin özelliğinin yöntemlerini kullanın. Her yöntemde, denetimin konumunu farklı şekillerde belirtmenize imkan tanıyan birkaç aşırı yükleme vardır.
@@ -129,8 +129,8 @@ ms.locfileid: "99954156"
 
      Aşağıdaki kod örneği, bir <xref:Microsoft.Office.Tools.Word.Controls.Button> Word VSTO eklentisi kullanarak etkin belgenin ilk paragrafına nasıl ekleneceğini gösterir.
 
-     [!code-vb[Trin_WordAddInDynamicControls#7](../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb#7)]
-     [!code-csharp[Trin_WordAddInDynamicControls#7](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#7)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb" id="Snippet7":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs" id="Snippet7":::
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Office belgelerindeki Windows Forms denetimlerine genel bakış](../vsto/windows-forms-controls-on-office-documents-overview.md)

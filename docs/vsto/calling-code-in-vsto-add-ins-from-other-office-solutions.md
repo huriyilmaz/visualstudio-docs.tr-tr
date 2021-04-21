@@ -19,12 +19,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: deb8fec9212c686bce670df6bab23ed56e51741f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2519c9d1a22eb6f5577a258fb9b465cfd7caafc2
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99903800"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826986"
 ---
 # <a name="call-code-in-vsto-add-ins-from-other-office-solutions"></a>Diğer Office çözümlerindeki VSTO eklentilerindeki kodu çağırma
   VSTO eklentiinizdeki bir nesneyi diğer Microsoft Office çözümleri de dahil olmak üzere diğer çözümlere kullanıma sunabilirsiniz. Bu, VSTO eklentisinin diğer çözümlerin kullanmasını sağlamak istediğiniz bir hizmet sağlıyorsa yararlı olur. Örneğin, bir Web hizmetinden finans verilerinde hesaplamalar gerçekleştiren Microsoft Office Excel için bir VSTO eklentileriniz varsa, diğer çözümler çalışma zamanında Excel VSTO eklentisini çağırarak bu hesaplamaları gerçekleştirebilir.
@@ -78,8 +78,8 @@ ms.locfileid: "99903800"
 
    Aşağıdaki kod örneği, `AddInUtilities` `ImportData` diğer çözümler tarafından çağrılabilecek bir yöntemi olan bir sınıfı gösterir. Daha büyük bir anlatım bağlamında bu kodu görmek için bkz. [Izlenecek yol: BIR VSTO EKLENTISINDE VBA 'Dan çağrı kodu](../vsto/walkthrough-calling-code-in-a-vsto-add-in-from-vba.md).
 
-   [!code-csharp[Trin_AddInInteropWalkthrough #3](../vsto/codesnippet/CSharp/Trin_AddInInteropWalkthrough/AddInUtilities.cs#3)]
-   [!code-vb[Trin_AddInInteropWalkthrough#3](../vsto/codesnippet/VisualBasic/Trin_AddInInteropWalkthrough/AddInUtilities.vb#3)]
+   :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_AddInInteropWalkthrough/AddInUtilities.cs" id="Snippet3":::
+   :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_AddInInteropWalkthrough/AddInUtilities.vb" id="Snippet3":::
 
 ### <a name="expose-classes-to-vba"></a>Sınıfları VBA 'da kullanıma sunma
  Yukarıda belirtilen adımları gerçekleştirdiğinizde, VBA kodu yalnızca arabirimde bildirdiğiniz yöntemleri çağırabilir. VBA kodu, sınıfınızın gibi temel sınıflardan elde ettiği yöntemler de dahil olmak üzere sınıfınıza başka yöntemler çağrılamaz <xref:System.Object> .
@@ -96,8 +96,8 @@ ms.locfileid: "99903800"
 ### <a name="override-the-requestcomaddinautomationservice-method"></a>RequestComAddInAutomationService yöntemini geçersiz kılma
  Aşağıdaki kod örneği, <xref:Microsoft.Office.Tools.AddInBase.RequestComAddInAutomationService%2A> VSTO eklentiinizdeki sınıfında nasıl geçersiz kılınacağını göstermektedir `ThisAddIn` . Örnek, diğer çözümlere sunmak istediğiniz adlı bir sınıf tanımlamış olduğunuzu varsayar `AddInUtilities` . Daha büyük bir anlatım bağlamında bu kodu görmek için bkz. [Izlenecek yol: BIR VSTO EKLENTISINDE VBA 'Dan çağrı kodu](../vsto/walkthrough-calling-code-in-a-vsto-add-in-from-vba.md).
 
- [!code-csharp[Trin_AddInInteropWalkthrough#1](../vsto/codesnippet/CSharp/Trin_AddInInteropWalkthrough/ThisAddIn.cs#1)]
- [!code-vb[Trin_AddInInteropWalkthrough#1](../vsto/codesnippet/VisualBasic/Trin_AddInInteropWalkthrough/ThisAddIn.vb#1)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_AddInInteropWalkthrough/ThisAddIn.cs" id="Snippet1":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_AddInInteropWalkthrough/ThisAddIn.vb" id="Snippet1":::
 
  VSTO eklentisi yüklendiğinde, [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] <xref:Microsoft.Office.Tools.AddInBase.RequestComAddInAutomationService%2A> yöntemini çağırır. Çalışma zamanı, döndürülen nesneyi <xref:Microsoft.Office.Core.COMAddIn> VSTO eklentisini temsil eden bir nesnenin COMAddIn. Object özelliğine atar. Bu <xref:Microsoft.Office.Core.COMAddIn> nesne diğer Office çözümleri ve Office 'i otomatikleştiren çözümler için kullanılabilir.
 

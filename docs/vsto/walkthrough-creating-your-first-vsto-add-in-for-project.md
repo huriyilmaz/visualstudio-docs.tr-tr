@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: f35649db5f61cb545bb3550980b3d6b9a8742cd3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 48d7baf9605947818ffd79eb7312c0dbefe581ac
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99966506"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107824269"
 ---
 # <a name="walkthrough-create-your-first-vsto-add-in-for-project"></a>İzlenecek yol: proje için ilk VSTO eklentisini oluşturma
   Bu izlenecek yol, Microsoft Office projesi için bir VSTO eklentisi oluşturmayı gösterir. Bu tür çözümde oluşturduğunuz özellikler, hangi projelerin açık olduğuna bakılmaksızın uygulamanın kendisi için kullanılabilir. Daha fazla bilgi için bkz. [Office çözümleri geliştirmeye genel bakış &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md).
@@ -81,8 +81,8 @@ ms.locfileid: "99966506"
 
     Kullanıcı yeni bir proje oluşturduğunda, bu olay işleyicisi projeye bir görev ekler.
 
-    [!code-vb[Trin_ProjectAddInTutorial#1](../vsto/codesnippet/VisualBasic/Trin_ProjectAddInTutorial/ThisAddIn.vb#1)]
-    [!code-csharp[Trin_ProjectAddInTutorial#1](../vsto/codesnippet/CSharp/Trin_ProjectAddInTutorial/ThisAddIn.cs#1)]
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_ProjectAddInTutorial/ThisAddIn.vb" id="Snippet1":::
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_ProjectAddInTutorial/ThisAddIn.cs" id="Snippet1":::
 
    Projeyi değiştirmek için, bu kod örneği aşağıdaki nesneleri kullanır:
 
@@ -92,7 +92,7 @@ ms.locfileid: "99966506"
 
 1. C# kullanıyorsanız, olay işleyicisine aşağıdaki kodu ekleyin `ThisAddIn_Startup` . Bu kod, `Application_Newproject` olay Işleyicisini NewProject olayı ile bağlar.
 
-     [!code-csharp[Trin_ProjectAddInTutorial#2](../vsto/codesnippet/CSharp/Trin_ProjectAddInTutorial/ThisAddIn.cs#2)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_ProjectAddInTutorial/ThisAddIn.cs" id="Snippet2":::
 
 ## <a name="test-the-project"></a>Projeyi test etme
  Projeyi derleyip çalıştırdığınızda yeni görevin ortaya çıkan yeni projede göründüğünü doğrulayın.

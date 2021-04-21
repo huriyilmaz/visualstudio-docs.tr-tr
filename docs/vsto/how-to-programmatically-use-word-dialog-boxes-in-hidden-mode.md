@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 0977e7241920ad23a6248bb2349ddaeb10a5e931
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 39a81ccec284541d93d3a5901211d8a46ea6b61a
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99931259"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826193"
 ---
 # <a name="how-to-programmatically-use-word-dialog-boxes-in-hidden-mode"></a>Nasıl yapılır: gizli modda program aracılığıyla Word iletişim kutuları kullanma
   Microsoft Office Word içindeki yerleşik iletişim kutularını kullanıcıya görüntülemeden çağırarak, tek bir yöntem çağrısıyla karmaşık işlemler gerçekleştirebilirsiniz. <xref:Microsoft.Office.Interop.Word.Dialog.Execute%2A> <xref:Microsoft.Office.Interop.Word.Dialog> Yöntemi çağırmak zorunda kalmadan nesne yöntemini kullanarak bunu yapabilirsiniz <xref:Microsoft.Office.Interop.Word.Dialog.Display%2A> .
@@ -34,12 +34,12 @@ ms.locfileid: "99931259"
 
  Aşağıdaki örnek, **Option Strict** 'in kapalı olduğu Visual Basic projelerde ve öğesini hedefleyen Visual C# projelerinde bu görevin nasıl gerçekleştirileceğini gösterir [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] . Bu projelerde Visual Basic ve Visual C# derleyicilerinin geç bağlama özelliklerini kullanabilirsiniz. Bu örneği kullanmak için, `ThisDocument` `ThisAddIn` projenizdeki veya sınıfından çalıştırın.
 
- [!code-vb[Trin_VstcoreWordAutomation#123](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#123)]
- [!code-csharp[Trin_VstcoreWordAutomation#123](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#123)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet123":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet123":::
 
  Aşağıdaki örnek, bu görevin, **seçeneğinin Strict** olduğu Visual Basic projelerinde nasıl gerçekleştirileceğini gösterir. Bu projelerde, geç bağlantılı özelliklere erişmek için yansıma kullanmanız gerekir. Bu örneği kullanmak için, `ThisDocument` `ThisAddIn` projenizdeki veya sınıfından çalıştırın.
 
- [!code-vb[Trin_VstcoreWordAutomation#104](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#104)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet104":::
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Nasıl yapılır: Word 'de program aracılığıyla yerleşik iletişim kutuları kullanma](../vsto/how-to-programmatically-use-built-in-dialog-boxes-in-word.md)

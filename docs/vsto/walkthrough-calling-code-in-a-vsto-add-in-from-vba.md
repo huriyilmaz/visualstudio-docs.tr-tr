@@ -20,12 +20,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 61e729113ecfa988f424e2182662d506377d33e5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 21e0928396327911ea794c6270340c6efd27a43e
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99882394"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107824607"
 ---
 # <a name="walkthrough-call-code-in-a-vsto-add-in-from-vba"></a>İzlenecek yol: bir VSTO eklentisinde VBA 'dan kod çağırma
   Bu izlenecek yol, VSTO Eklentilerindeki bir nesneyi Visual Basic for Applications (VBA) ve COM VSTO eklentileri dahil diğer Microsoft Office çözümlerine nasıl kullanıma sunılacağını gösterir.
@@ -58,7 +58,7 @@ ms.locfileid: "99882394"
 
 1. Excel VSTO eklentisi proje şablonunu kullanarak **Excelimportdata** adlı BIR Excel VSTO eklentisi projesi oluşturun. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**ThisAddIn.cs** veya **ThisAddIn. vb** kod dosyasını açar ve **Çözüm Gezgini** için **ExcelImportData** projesini ekler.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**ThisAddIn. cs** veya **ThisAddIn. vb** kod dosyasını açar ve **Çözüm Gezgini** için **ExcelImportData** projesini ekler.
 
 ## <a name="define-a-class-that-you-can-expose-to-other-office-solutions"></a>Diğer Office çözümlerine sergilemek için kullanabileceğiniz bir sınıf tanımlayın
  Bu izlenecek yolun amacı, `ImportData` `AddInUtilities` VBA kodundan VSTO eklentiinizdeki adlı bir sınıf yöntemine çağrı sağlamaktır. Bu yöntem, etkin çalışma sayfasının A1 hücresine bir dize yazar.
@@ -71,17 +71,17 @@ ms.locfileid: "99882394"
 
 2. **Yeni öğe Ekle** iletişim kutusunda, yeni sınıfın adını **AddInUtilities** olarak değiştirin ve **Ekle**' ye tıklayın.
 
-     **AddInUtilities.cs** veya **AddInUtilities. vb** dosyası kod düzenleyicisinde açılır.
+     **AddInUtilities. cs** veya **AddInUtilities. vb** dosyası kod düzenleyicisinde açılır.
 
 3. Aşağıdaki yönergeleri dosyanın en üstüne ekleyin.
 
-     [!code-csharp[Trin_AddInInteropWalkthrough#2](../vsto/codesnippet/CSharp/Trin_AddInInteropWalkthrough/AddInUtilities.cs#2)]
-     [!code-vb[Trin_AddInInteropWalkthrough#2](../vsto/codesnippet/VisualBasic/Trin_AddInInteropWalkthrough/AddInUtilities.vb#2)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_AddInInteropWalkthrough/AddInUtilities.cs" id="Snippet2":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_AddInInteropWalkthrough/AddInUtilities.vb" id="Snippet2":::
 
 4. `AddInUtilities`Sınıfını aşağıdaki kodla değiştirin.
 
-     [!code-csharp[Trin_AddInInteropWalkthrough#3](../vsto/codesnippet/CSharp/Trin_AddInInteropWalkthrough/AddInUtilities.cs#3)]
-     [!code-vb[Trin_AddInInteropWalkthrough#3](../vsto/codesnippet/VisualBasic/Trin_AddInInteropWalkthrough/AddInUtilities.vb#3)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_AddInInteropWalkthrough/AddInUtilities.cs" id="Snippet3":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_AddInInteropWalkthrough/AddInUtilities.vb" id="Snippet3":::
 
      Bu kod, `AddInUtilities` SıNıFıNıN com 'a görünür olmasını sağlar ve `ImportData` yöntemi sınıfına ekler. [IDispatch](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) arabirimini kullanıma sunmak için, `AddInUtilities` sınıfı özniteliği de vardır <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> ve com 'a görünür bir arabirim uygular.
 
@@ -92,12 +92,12 @@ ms.locfileid: "99882394"
 
 1. **Çözüm Gezgini**, **Excel**' i genişletin.
 
-2. **ThisAddIn.cs** veya **ThisAddIn. vb** öğesine sağ tıklayın ve ardından **kodu görüntüle**' ye tıklayın.
+2. **ThisAddIn. cs** veya **ThisAddIn. vb** öğesine sağ tıklayın ve ardından **kodu görüntüle**' ye tıklayın.
 
 3. Aşağıdaki kodu `ThisAddIn` sınıfına ekleyin.
 
-     [!code-csharp[Trin_AddInInteropWalkthrough#1](../vsto/codesnippet/CSharp/Trin_AddInInteropWalkthrough/ThisAddIn.cs#1)]
-     [!code-vb[Trin_AddInInteropWalkthrough#1](../vsto/codesnippet/VisualBasic/Trin_AddInInteropWalkthrough/ThisAddIn.vb#1)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_AddInInteropWalkthrough/ThisAddIn.cs" id="Snippet1":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_AddInInteropWalkthrough/ThisAddIn.vb" id="Snippet1":::
 
 4. **Yapı** menüsünde **Yapı Çözümü**’ne tıklayın.
 

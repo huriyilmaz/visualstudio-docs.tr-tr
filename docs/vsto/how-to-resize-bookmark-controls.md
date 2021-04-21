@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 55fe398b277586404c91ef7cb172f7ce3a9c98ff
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b2b2bd963b2f0b4eb574630382930eb0805909be
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99927853"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107825790"
 ---
 # <a name="how-to-resize-bookmark-controls"></a>Nasıl yapılır: yer Işareti denetimlerini yeniden boyutlandırma
   Bir <xref:Microsoft.Office.Tools.Word.Bookmark> denetimin boyutunu Microsoft Office bir Word belgesine eklediğinizde ayarlarsınız. Ayrıca, daha sonra yeniden boyutlandırabilirsiniz.
@@ -61,13 +61,13 @@ ms.locfileid: "99927853"
 
      Aşağıdaki kod örneği, adlı bir yer işaretinin başlangıcına beş karakter ekler `SampleBookmark` . Bu kod, yer işaretinin önünde en az beş karakterlik metin olduğunu varsayar.
 
-     [!code-csharp[Trin_VstcoreHostControlsWord#2](../vsto/codesnippet/CSharp/trin_vstcorehostcontrolsword/ThisDocument.cs#2)]
-     [!code-vb[Trin_VstcoreHostControlsWord#2](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsWordVB/ThisDocument.vb#2)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcorehostcontrolsword/ThisDocument.cs" id="Snippet2":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsWordVB/ThisDocument.vb" id="Snippet2":::
 
      Aşağıdaki kod örneği, aynı yer işaretinin sonuna beş karakter ekler. Bu kod, yer işaretinden sonra en az beş karakterlik metin olduğunu varsayar.
 
-     [!code-csharp[Trin_VstcoreHostControlsWord#3](../vsto/codesnippet/CSharp/trin_vstcorehostcontrolsword/ThisDocument.cs#3)]
-     [!code-vb[Trin_VstcoreHostControlsWord#3](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsWordVB/ThisDocument.vb#3)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcorehostcontrolsword/ThisDocument.cs" id="Snippet3":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsWordVB/ThisDocument.vb" id="Snippet3":::
 
 ### <a name="to-resize-a-bookmark-in-a-vsto-add-in-project-at-run-time"></a>Çalışma zamanında VSTO eklenti projesindeki bir yer işaretini yeniden boyutlandırmak için
 
@@ -75,8 +75,8 @@ ms.locfileid: "99927853"
 
      Aşağıdaki kod örneği, <xref:Microsoft.Office.Tools.Word.Bookmark> etkin belgenin ilk paragrafında bulunan metni içeren bir oluşturur ve sonra başından ve sonundan beş karakteri kaldırır <xref:Microsoft.Office.Tools.Word.Bookmark> .
 
-     [!code-vb[Trin_WordAddInDynamicControls#16](../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb#16)]
-     [!code-csharp[Trin_WordAddInDynamicControls#16](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#16)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb" id="Snippet16":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs" id="Snippet16":::
 
 ## <a name="recreate-the-bookmark"></a>Yer işaretini yeniden oluşturma
  Varolan yer işaretiyle aynı ada sahip olan ancak farklı boyutta olan yeni bir yer işareti ekleyerek belge düzeyindeki bir projedeki yer işaretini yeniden boyutlandırabilirsiniz.

@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: ec70c03dfdce05c7445762e2cfd452f3fdf90775
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 20b718be3bec6cac3ee6c0b0985fa6efca867189
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99904497"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826947"
 ---
 # <a name="how-to-programmatically-add-and-delete-worksheet-comments"></a>Nasıl yapılır: program aracılığıyla çalışma sayfası açıklamalarını ekleme ve silme
   Microsoft Office Excel çalışma sayfalarında program aracılığıyla açıklama ekleyip silebilirsiniz. Açıklamalar yalnızca tek hücrelere eklenebilir, çok hücreli aralıklar için kullanılamaz.
@@ -36,15 +36,15 @@ ms.locfileid: "99904497"
 
 1. <xref:Microsoft.Office.Tools.Excel.NamedRange.AddComment%2A>Denetimin yöntemini çağırın <xref:Microsoft.Office.Tools.Excel.NamedRange> ve açıklama metnini sağlayın. Bu kodun sınıfa yerleştirilmesi gerekir `Sheet1` .
 
-     [!code-csharp[Trin_VstcoreExcelAutomation#30](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#30)]
-     [!code-vb[Trin_VstcoreExcelAutomation#30](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#30)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs" id="Snippet30":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb" id="Snippet30":::
 
 #### <a name="to-delete-a-comment-from-a-named-range"></a>Adlandırılmış bir aralıktan yorumu silmek için
 
 1. Aralıkta bir açıklamanın bulunduğunu doğrulayın ve silin. Bu kodun sınıfa yerleştirilmesi gerekir `Sheet1` .
 
-     [!code-csharp[Trin_VstcoreExcelAutomation#29](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#29)]
-     [!code-vb[Trin_VstcoreExcelAutomation#29](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#29)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs" id="Snippet29":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb" id="Snippet29":::
 
 ## <a name="add-and-delete-a-comment-in-a-vsto-add-in-project"></a>VSTO eklenti projesinde yorum ekleme ve silme
  Aşağıdaki örneklerde, <xref:Microsoft.Office.Interop.Excel.Range> etkin çalışma sayfasında adlı tek bir hücre olduğu varsayılır `dateComment` .
@@ -53,15 +53,15 @@ ms.locfileid: "99904497"
 
 1. Yöntemini çağırın <xref:Microsoft.Office.Interop.Excel.Range.AddComment%2A> <xref:Microsoft.Office.Interop.Excel.Range> ve açıklama metnini sağlayın.
 
-     [!code-csharp[Trin_VstcoreExcelAutomationAddIn#20](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#20)]
-     [!code-vb[Trin_VstcoreExcelAutomationAddIn#20](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#20)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs" id="Snippet20":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb" id="Snippet20":::
 
 ### <a name="to-delete-a-comment-from-an-excel-range"></a>Bir Excel aralığından bir yorumu silmek için
 
 1. Aralıkta bir açıklamanın bulunduğunu doğrulayın ve silin.
 
-     [!code-csharp[Trin_VstcoreExcelAutomationAddIn#19](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#19)]
-     [!code-vb[Trin_VstcoreExcelAutomationAddIn#19](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#19)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs" id="Snippet19":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb" id="Snippet19":::
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Çalışma sayfalarıyla çalışma](../vsto/working-with-worksheets.md)

@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 18a6176c6472f1587e00364f0e0bd300611eabf0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6038000dec20f9183f974ad8d187230e634d5eed
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99897527"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826219"
 ---
 # <a name="how-to-programmatically-use-built-in-dialog-boxes-in-word"></a>Nasıl yapılır: Word 'de program aracılığıyla yerleşik iletişim kutuları kullanma
   Microsoft Office sözcükle çalışırken, Kullanıcı girişi için iletişim kutularını görüntüetmeniz gerektiğinde zaman vardır. Kendinizinkini oluşturabilseniz de, Word 'de, nesne koleksiyonunda gösterilen yerleşik iletişim kutularını kullanma yaklaşımını de isteyebilirsiniz <xref:Microsoft.Office.Interop.Word.Dialogs> <xref:Microsoft.Office.Interop.Word.Application> . Bu, sabit listesi olarak temsil edilen yerleşik iletişim kutularının 200 üstünden erişmenizi sağlar.
@@ -33,20 +33,20 @@ ms.locfileid: "99897527"
 
  Aşağıdaki kod örneği, **Dosya Aç** iletişim kutusunun nasıl görüntüleneceğini gösterir. Bu örneği kullanmak için, `ThisDocument` `ThisAddIn` projenizdeki veya sınıfından çalıştırın.
 
- [!code-vb[Trin_VstcoreWordAutomation#100](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#100)]
- [!code-csharp[Trin_VstcoreWordAutomation#100](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#100)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet100":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet100":::
 
 ### <a name="access-dialog-box-members-that-are-available-through-late-binding"></a>Geç bağlama aracılığıyla kullanılabilen iletişim kutusu üyelerine erişin
  Word içindeki iletişim kutularının bazı özellikleri ve yöntemleri yalnızca geç bağlama aracılığıyla kullanılabilir. **Option Strict** açık olan Visual Basic projelerinde, bu üyelere erişmek için yansıma kullanmanız gerekir. Daha fazla bilgi için bkz. [Office çözümlerinde geç bağlama](../vsto/late-binding-in-office-solutions.md).
 
  Aşağıdaki kod örneği, **Option Strict** ' in, veya ' i hedefleyen Visual C# projelerindeki Visual Basic projelerde **Dosya Aç** iletişim kutusunun **ad** özelliğinin nasıl kullanılacağını gösterir [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] . Bu örneği kullanmak için, `ThisDocument` `ThisAddIn` projenizdeki veya sınıfından çalıştırın.
 
- [!code-vb[Trin_VstcoreWordAutomation#122](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#122)]
- [!code-csharp[Trin_VstcoreWordAutomation#122](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#122)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet122":::
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet122":::
 
  Aşağıdaki kod örneği, **seçeneğinin katı** olduğu Visual Basic projelerde **Dosya Aç** iletişim kutusunun **Name** özelliğine erişmek için Reflection 'ın nasıl kullanılacağını gösterir. Bu örneği kullanmak için, `ThisDocument` `ThisAddIn` projenizdeki veya sınıfından çalıştırın.
 
- [!code-vb[Trin_VstcoreWordAutomation#102](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#102)]
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet102":::
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Nasıl yapılır: gizli modda program aracılığıyla Word iletişim kutuları kullanma](../vsto/how-to-programmatically-use-word-dialog-boxes-in-hidden-mode.md)

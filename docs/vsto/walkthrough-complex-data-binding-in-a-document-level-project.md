@@ -18,12 +18,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 2dc5708da09074c7d973336958c9e89c16bf9da6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a85f46cf9c234ad662966372a8d014ae0f98be84
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99927671"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826375"
 ---
 # <a name="walkthrough-complex-data-binding-in-a-document-level-project"></a>İzlenecek yol: belge düzeyi projede karmaşık veri bağlama
   Bu izlenecek yol, belge düzeyindeki bir projede karmaşık veri bağlamanın temellerini gösterir. Microsoft Office Excel çalışma sayfasındaki birden çok hücreyi Northwind SQL Server veritabanındaki alanlara bağlayabilirsiniz.
@@ -117,16 +117,16 @@ ms.locfileid: "99927671"
 
 ### <a name="to-initialize-the-control"></a>Denetimi başlatmak için
 
-1. **Çözüm Gezgini**, **Sheet1. vb** veya **Sheet1.cs** öğesine sağ tıklayın ve ardından kısayol menüsünde **kodu görüntüle** ' ye tıklayın.
+1. **Çözüm Gezgini**, **Sheet1. vb** veya **Sayfa1. cs**' ye sağ tıklayın ve ardından kısayol menüsünde **kodu görüntüle** ' ye tıklayın.
 
 2. `Sheet1_Startup`B için metin ayarlamak üzere yöntemine aşağıdaki kodu ekleyin `utton` .
 
-    [!code-csharp[Trin_VstcoreDataExcel#8](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet3.cs#8)]
-    [!code-vb[Trin_VstcoreDataExcel#8](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet3.vb#8)]
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet3.cs" id="Snippet8":::
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet3.vb" id="Snippet8":::
 
 3. Yalnızca C# için, yöntemine olay için bir olay işleyicisi ekleyin <xref:System.Windows.Forms.Control.Click> `Sheet1_Startup` .
 
-    [!code-csharp[Trin_VstcoreDataExcel#9](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet3.cs#9)]
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet3.cs" id="Snippet9":::
 
    Şimdi düğmenin olayını işlemek için kod ekleyin <xref:System.Windows.Forms.Control.Click> .
 
@@ -137,8 +137,8 @@ ms.locfileid: "99927671"
 
 1. Olayı için bir olay işleyicisi ekleyin <xref:System.Windows.Forms.Control.Click> `button` ve veri kümesinde yapılan tüm değişiklikleri veritabanına geri kaydetmek için aşağıdaki kodu ekleyin.
 
-     [!code-csharp[Trin_VstcoreDataExcel#10](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet3.cs#10)]
-     [!code-vb[Trin_VstcoreDataExcel#10](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet3.vb#10)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet3.cs" id="Snippet10":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet3.vb" id="Snippet10":::
 
 ## <a name="test-the-application"></a>Uygulamayı test edin
  Artık, verilerin beklendiği gibi göründüğünü ve liste nesnesindeki verileri işleyebildiğinizi doğrulamak için çalışma kitabınızı test edebilirsiniz.

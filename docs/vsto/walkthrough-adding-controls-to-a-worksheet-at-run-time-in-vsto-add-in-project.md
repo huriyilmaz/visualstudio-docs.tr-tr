@@ -18,12 +18,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: bc6c608d406cabe6962a47dae4c86fa7503a05a1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 178180e8c698ca56b15e46bcbe65877d68c6b2a1
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99921785"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107824685"
 ---
 # <a name="walkthrough-add-controls-to-a-worksheet-at-run-time-in-vsto-add-in-project"></a>İzlenecek yol: çalışma zamanında VSTO eklenti projesindeki çalışma sayfasına denetimler ekleme
   Excel VSTO eklentisini kullanarak, herhangi bir açık çalışma sayfasına denetim ekleyebilirsiniz. Bu izlenecek yol, kullanıcıların <xref:Microsoft.Office.Tools.Excel.Controls.Button> çalışma sayfasına bir, a ve bir eklemek Için şerit 'in nasıl kullanılacağını gösterir <xref:Microsoft.Office.Tools.Excel.NamedRange> <xref:Microsoft.Office.Tools.Excel.ListObject> . Daha fazla bilgi için bkz. [çalışma zamanında Office belgelerine denetim ekleme](../vsto/adding-controls-to-office-documents-at-run-time.md).
@@ -65,7 +65,7 @@ ms.locfileid: "99921785"
 
 2. **Yeni öğe Ekle** Iletişim kutusunda **Şerit (görsel Tasarımcı)** öğesini seçin ve ardından **Ekle**' ye tıklayın.
 
-     Şerit tasarımcısında **Ribbon1.cs** veya **Ribbon1. vb** adlı bir dosya açılır ve varsayılan bir sekme ve grup görüntüler.
+     Şerit tasarımcısında **Ribbon1. cs** veya **Ribbon1. vb** adlı bir dosya açılır ve varsayılan bir sekme ve grup görüntüler.
 
 3. **Araç kutusunun** **Office Şerit denetimleri** sekmesinden **Group1** üzerine bir CheckBox denetimi sürükleyin.
 
@@ -105,10 +105,10 @@ ms.locfileid: "99921785"
 
      Bu kod, `GetVstoObject` çalışma kitabındaki ilk çalışma sayfasını temsil eden bir konak öğesini almak için yöntemini kullanır ve ardından <xref:Microsoft.Office.Tools.Excel.Controls.Button> Şu anda seçili olan hücreye bir denetim ekler.
 
-     [!code-csharp[Trin_Excel_Dynamic_Controls#2](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/Ribbon1.cs#2)]
-     [!code-vb[Trin_Excel_Dynamic_Controls#2](../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/Ribbon1.vb#2)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/Ribbon1.cs" id="Snippet2":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/Ribbon1.vb" id="Snippet2":::
 
-3. **Çözüm Gezgini**' de *Ribbon1.cs* veya *Ribbon1. vb*' yi seçin.
+3. **Çözüm Gezgini** içinde *Ribbon1. cs* veya *Ribbon1. vb* öğesini seçin.
 
 4. **Görünüm** menüsünde **Tasarımcı**' ya tıklayın.
 
@@ -118,8 +118,8 @@ ms.locfileid: "99921785"
 
      Bu kod, `GetVstoObject` çalışma kitabındaki ilk çalışma sayfasını temsil eden bir konak öğesini almak için yöntemini kullanır ve ardından <xref:Microsoft.Office.Tools.Excel.NamedRange> Şu anda seçili olan hücre veya hücreler için bir denetim tanımlar.
 
-     [!code-csharp[Trin_Excel_Dynamic_Controls#3](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/Ribbon1.cs#3)]
-     [!code-vb[Trin_Excel_Dynamic_Controls#3](../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/Ribbon1.vb#3)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/Ribbon1.cs" id="Snippet3":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/Ribbon1.vb" id="Snippet3":::
 
 7. Şerit tasarımcısında **ListObject**' e çift tıklayın.
 
@@ -127,31 +127,31 @@ ms.locfileid: "99921785"
 
      Bu kod, `GetVstoObject` çalışma kitabındaki ilk çalışma sayfasını temsil eden bir konak öğesini almak için yöntemini kullanır ve ardından <xref:Microsoft.Office.Tools.Excel.ListObject> Şu anda seçili olan hücre veya hücreler için bir tanımlar.
 
-     [!code-csharp[Trin_Excel_Dynamic_Controls#4](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/Ribbon1.cs#4)]
-     [!code-vb[Trin_Excel_Dynamic_Controls#4](../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/Ribbon1.vb#4)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/Ribbon1.cs" id="Snippet4":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/Ribbon1.vb" id="Snippet4":::
 
 9. Aşağıdaki deyimlerini Şerit kod dosyasının en üstüne ekleyin.
 
-     [!code-csharp[Trin_Excel_Dynamic_Controls#1](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/Ribbon1.cs#1)]
-     [!code-vb[Trin_Excel_Dynamic_Controls#1](../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/Ribbon1.vb#1)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/Ribbon1.cs" id="Snippet1":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/Ribbon1.vb" id="Snippet1":::
 
 ## <a name="remove-controls-from-the-worksheet"></a>Çalışma sayfasından denetimleri kaldırma
  Çalışma sayfası kaydedilip kapatıldığında denetimler kalıcı olmaz. Çalışma sayfası kaydedilmeden önce oluşturulan tüm Windows Forms denetimlerini program aracılığıyla kaldırmalı veya çalışma kitabı yeniden açıldığında yalnızca denetimin bir anahattı görünür. <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.WorkbookBeforeSave>Oluşturulan konak öğesinin denetimler koleksiyonundan Windows Forms denetimlerini kaldıran olaya kod ekleyin. Daha fazla bilgi için bkz. [Dinamik denetimleri Office belgelerinde kalıcı hale](../vsto/persisting-dynamic-controls-in-office-documents.md)getirme.
 
 ### <a name="to-remove-controls-from-the-worksheet"></a>Çalışma sayfasından denetimleri kaldırmak için
 
-1. **Çözüm Gezgini**' de *ThisAddIn.cs* veya *ThisAddIn. vb* öğesini seçin.
+1. **Çözüm Gezgini**, *ThisAddIn. cs* veya *ThisAddIn. vb* öğesini seçin.
 
 2. **Görünüm** menüsünde **kod**' a tıklayın.
 
 3. Sınıfına aşağıdaki yöntemi ekleyin `ThisAddIn` . Bu kod çalışma kitabındaki ilk çalışma sayfasını alır ve sonra `HasVstoObject` çalışma sayfasında oluşturulmuş bir çalışma sayfası nesnesi olup olmadığını denetlemek için yöntemini kullanır. Oluşturulan çalışma sayfası nesnesinin denetimleri varsa, kod bu çalışma sayfası nesnesini alır ve denetim koleksiyonu aracılığıyla dolaşır, denetimleri kaldırır.
 
-     [!code-csharp[Trin_Excel_Dynamic_Controls#6](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/ThisAddIn.cs#6)]
-     [!code-vb[Trin_Excel_Dynamic_Controls#6](../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/ThisAddIn.vb#6)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/ThisAddIn.cs" id="Snippet6":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/ThisAddIn.vb" id="Snippet6":::
 
 4. C# ' de, olay için bir olay işleyicisi oluşturmanız gerekir <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.WorkbookBeforeSave> . Bu kodu `ThisAddIn_Startup` yöntemine yerleştirebilirsiniz. Olay işleyicileri oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Office projelerinde olay Işleyicileri oluşturma](../vsto/how-to-create-event-handlers-in-office-projects.md). `ThisAddIn_Startup` yöntemini aşağıdaki kodla değiştirin.
 
-     [!code-csharp[Trin_Excel_Dynamic_Controls#5](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/ThisAddIn.cs#5)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/ThisAddIn.cs" id="Snippet5":::
 
 ## <a name="test-the-solution"></a>Çözümü test etme
  Şeritteki özel bir sekmeden seçerek çalışma sayfasına denetimler ekleyin. Çalışma sayfasını kaydettiğinizde, bu denetimler kaldırılır.

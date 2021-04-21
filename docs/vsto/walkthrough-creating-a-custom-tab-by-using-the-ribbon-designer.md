@@ -20,12 +20,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: b87113b47ee0dc4d296bb5e206d6d277394160c5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3886e20d45834f98f36b8d7e48f3b11c9ef7d5dd
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99962281"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107824828"
 ---
 # <a name="walkthrough-create-a-custom-tab-by-using-the-ribbon-designer"></a>İzlenecek yol: Şerit Tasarımcısını kullanarak özel sekme oluşturma
   Şerit Tasarımcısını kullanarak özel bir sekme oluşturup bu sekmeye denetim ekleyip konumlandırabilirsiniz.
@@ -68,7 +68,7 @@ ms.locfileid: "99962281"
 
 2. **Yeni öğe Ekle** iletişim kutusunda, **ActionsPaneControl**' u ve ardından **Ekle**' yi seçin.
 
-     **ActionsPaneControl1.cs** veya **ActionsPaneControl1. vb** dosyası tasarımcıda açılır.
+     **ActionsPaneControl1. cs** veya **ActionsPaneControl1. vb** dosyası tasarımcıda açılır.
 
 3. **Araç kutusunun** **ortak denetimler** sekmesinden tasarımcı yüzeyine bir etiket ekleyin.
 
@@ -87,7 +87,7 @@ ms.locfileid: "99962281"
 
 3. Yeni şeridin adını **MyRibbon** olarak değiştirin ve **Ekle**' yi seçin.
 
-     **MyRibbon.cs** veya **MyRibbon. vb** dosyası Şerit Tasarımcısı 'nda açılır ve varsayılan bir sekme ve grup görüntüler.
+     **MyRibbon. cs** veya **MyRibbon. vb** dosyası Şerit Tasarımcısı 'nda açılır ve varsayılan bir sekme ve grup görüntüler.
 
 4. Şerit Tasarımcısında Varsayılan sekmesini seçin.
 
@@ -116,22 +116,22 @@ ms.locfileid: "99962281"
 
 ### <a name="to-hide-and-show-actions-panes-by-using-buttons-in-the-custom-tab"></a>Özel sekmedeki düğmeleri kullanarak Eylemler bölmesini gizleme ve gösterme
 
-1. **Çözüm Gezgini**' de, *MyRibbon.cs* veya *MyRibbon. vb* kısayol menüsünü açın ve **kodu görüntüle**' yi seçin.
+1. **Çözüm Gezgini**, *MyRibbon. cs* veya *MyRibbon. vb* kısayol menüsünü açın ve **kodu görüntüle**' yi seçin.
 
 2. Aşağıdaki kodu sınıfının üst kısmına ekleyin `MyRibbon` . Bu kod iki eylem bölmesi nesnesi oluşturur.
 
-     [!code-csharp[Trin_Ribbon_Custom_Tab#1](../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab/MyRibbon.cs#1)]
-     [!code-vb[Trin_Ribbon_Custom_Tab#1](../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab/MyRibbon.vb#1)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab/MyRibbon.cs" id="Snippet1":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab/MyRibbon.vb" id="Snippet1":::
 
 3. `MyRibbon_Load` yöntemini aşağıdaki kodla değiştirin. Bu kod, Eylemler bölmesi nesnelerini <xref:Microsoft.Office.Tools.ActionsPane.Controls%2A> koleksiyona ekler ve nesneleri görünümden gizler. Visual C# kodu ayrıca çeşitli şerit denetim olaylarına temsilciler ekler.
 
-     [!code-csharp[Trin_Ribbon_Custom_Tab#2](../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab/MyRibbon.cs#2)]
-     [!code-vb[Trin_Ribbon_Custom_Tab#2](../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab/MyRibbon.vb#2)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab/MyRibbon.cs" id="Snippet2":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab/MyRibbon.vb" id="Snippet2":::
 
 4. Aşağıdaki üç olay işleyicisi yöntemini `MyRibbon` sınıfına ekleyin. Bu yöntemler <xref:Microsoft.Office.Tools.Ribbon.RibbonButton.Click> iki düğmenin olaylarını ve iki <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Click> durumlu düğmenin olayını işler. Button1 ve Button2 için olay işleyicileri alternatif eylemler bölmelerini gösterir. ToggleButton1 için olay işleyicisi, etkin Eylemler bölmesini gösterir ve gizler.
 
-     [!code-csharp[Trin_Ribbon_Custom_Tab#3](../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab/MyRibbon.cs#3)]
-     [!code-vb[Trin_Ribbon_Custom_Tab#3](../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab/MyRibbon.vb#3)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab/MyRibbon.cs" id="Snippet3":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab/MyRibbon.vb" id="Snippet3":::
 
 ## <a name="test-the-custom-tab"></a>Özel sekmeyi test etme
  Projeyi çalıştırdığınızda Excel başlar ve şeritte **özel sekme** sekmesi görüntülenir. Eylemler bölmelerini göstermek ve gizlemek için **özel Sekmesimde** bulunan düğmeleri seçin.

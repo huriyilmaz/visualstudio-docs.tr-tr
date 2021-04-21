@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 94361db98c78a2767680d2358d2153b63df9571a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1bf35e225def686ae2424a89b7e5d6b77207ccee
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99867990"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826063"
 ---
 # <a name="how-to-programmatically-check-spelling-in-worksheets"></a>Nasıl yapılır: çalışma sayfalarında program aracılığıyla yazımı denetleme
   Çalışma sayfasında program aracılığıyla kelimelerin yazımını denetleyebilirsiniz. Çalışma sayfasında yanlış yazılmış kelimeler varsa, **Yazım denetimi** iletişim kutusu otomatik olarak görüntülenir.
@@ -33,15 +33,15 @@ ms.locfileid: "99867990"
 
 1. <xref:Microsoft.Office.Tools.Excel.Worksheet.CheckSpelling%2A>Çalışma sayfasının yöntemini çağırın.
 
-     [!code-csharp[Trin_VstcoreExcelAutomation#45](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#45)]
-     [!code-vb[Trin_VstcoreExcelAutomation#45](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#45)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs" id="Snippet45":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb" id="Snippet45":::
 
 ## <a name="to-check-spelling-in-a-worksheet-in-a-vsto-add-in"></a>Bir VSTO eklentisinin çalışma sayfasında yazım denetimi yapmak için
 
 1. <xref:Microsoft.Office.Interop.Excel._Worksheet.CheckSpelling%2A>Etkin çalışma sayfasının yöntemini çağırın.
 
-     [!code-csharp[Trin_VstcoreExcelAutomationAddIn#22](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#22)]
-     [!code-vb[Trin_VstcoreExcelAutomationAddIn#22](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#22)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs" id="Snippet22":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb" id="Snippet22":::
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Çalışma sayfalarıyla çalışma](../vsto/working-with-worksheets.md)

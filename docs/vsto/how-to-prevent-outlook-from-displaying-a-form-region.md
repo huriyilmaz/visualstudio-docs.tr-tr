@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: f6e6b00e8e26d261aac18dd48af1d912bd6ffad1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1dc9322dd2ad3c3a2111222d7491f9e1a82cd6c4
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99899546"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107825855"
 ---
 # <a name="how-to-prevent-outlook-from-displaying-a-form-region"></a>Nasıl yapılır: Outlook 'un form bölgesini görüntülemesini engelleme
   Outlook Microsoft Office belirli bir öğe için bir form bölgesi görüntülemesini istemediğiniz durumlar olabilir. Örneğin, bir kişi öğesi iş adresi içermiyorsa, bir haritadaki işin konumunu gösteren bir form bölgesinin görüntülenmesini engelleyebilirsiniz.
@@ -38,8 +38,9 @@ ms.locfileid: "99899546"
    Bu örnekte, kişi öğesi bir adres içermiyorsa, <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> özelliği **true** olarak ayarlanır ve form bölgesi görünmez.
 
 ## <a name="example"></a>Örnek
- [!code-csharp[Trin_Outlook_FR_Separate#1](../vsto/codesnippet/CSharp/Trin_Outlook_FR_Separate_O12/MapIt.cs#1)]
- [!code-vb[Trin_Outlook_FR_Separate#1](../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Separate_O12/MapIt.vb#1)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Outlook_FR_Separate_O12/MapIt.cs" id="Snippet1":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Separate_O12/MapIt.vb" id="Snippet1":::
+
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Outlook form bölgeleri oluşturma](../vsto/creating-outlook-form-regions.md)

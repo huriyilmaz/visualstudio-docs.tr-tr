@@ -19,12 +19,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 8e5e3d58ac858afe905aae38c84e6403b43fb789
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6e4a10949f463cc769890b828ba39de30a9b4c1c
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99906621"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107824581"
 ---
 # <a name="walkthrough-bind-content-controls-to-custom-xml-parts"></a>İzlenecek yol: içerik denetimlerini özel XML bölümlerine bağlama
   Bu izlenecek yol, Word için belge düzeyi özelleştirmesindeki içerik denetimlerini belgede depolanan XML verilerine nasıl bağlayabileceğinizi gösterir.
@@ -227,24 +227,24 @@ ms.locfileid: "99906621"
 
 ### <a name="to-add-a-custom-xml-part-to-the-document"></a>Belgeye özel bir XML bölümü eklemek için
 
-1. **Çözüm Gezgini**' de, **ThisDocument.cs** veya **ThisDocument. vb** kısayol menüsünü açın ve **kodu görüntüle**' yi seçin.
+1. **Çözüm Gezgini**' de, **ThisDocument. cs** veya **ThisDocument. vb** kısayol menüsünü açın ve **kodu görüntüle**' yi seçin.
 
 2. Sınıfına aşağıdaki bildirimleri ekleyin `ThisDocument` . Bu kod, belgeye özel bir XML bölümü eklemek için kullanacağınız birkaç nesne bildirir.
 
-     [!code-csharp[Trin_ContentControlXmlPartWalkthrough#1](../vsto/codesnippet/CSharp/EmployeeControls/ThisDocument.cs#1)]
-     [!code-vb[Trin_ContentControlXmlPartWalkthrough#1](../vsto/codesnippet/VisualBasic/EmployeeControls/ThisDocument.vb#1)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/EmployeeControls/ThisDocument.cs" id="Snippet1":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/EmployeeControls/ThisDocument.vb" id="Snippet1":::
 
 3. Sınıfına aşağıdaki yöntemi ekleyin `ThisDocument` . Bu yöntem, derlemede bir kaynak olarak katıştırılmış XML veri dosyasının içeriğini alır ve içeriği bir XML dizesi olarak döndürür.
 
-     [!code-csharp[Trin_ContentControlXmlPartWalkthrough#3](../vsto/codesnippet/CSharp/EmployeeControls/ThisDocument.cs#3)]
-     [!code-vb[Trin_ContentControlXmlPartWalkthrough#3](../vsto/codesnippet/VisualBasic/EmployeeControls/ThisDocument.vb#3)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/EmployeeControls/ThisDocument.cs" id="Snippet3":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/EmployeeControls/ThisDocument.vb" id="Snippet3":::
 
 4. Sınıfına aşağıdaki yöntemi ekleyin `ThisDocument` . `AddCustomXmlPart`Yöntemi yöntemine geçirilen BIR XML dizesi içeren yeni bir özel XML bölümü oluşturur.
 
      Özel XML bölümünün yalnızca bir kez oluşturulduğundan emin olmak için, yöntem yalnızca belgede eşleşen bir GUID 'e sahip özel bir XML bölümü yoksa özel XML bölümünü oluşturur. Bu yöntem ilk kez çağrıldığında, <xref:Microsoft.Office.Core._CustomXMLPart.Id%2A> özelliğinin değerini `employeeXMLPartID` dizeye kaydeder. Dize değeri, `employeeXMLPartID` özniteliği kullanılarak bildirildiği için belgede kalıcı hale getirilir <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute> .
 
-     [!code-csharp[Trin_ContentControlXmlPartWalkthrough#4](../vsto/codesnippet/CSharp/EmployeeControls/ThisDocument.cs#4)]
-     [!code-vb[Trin_ContentControlXmlPartWalkthrough#4](../vsto/codesnippet/VisualBasic/EmployeeControls/ThisDocument.vb#4)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/EmployeeControls/ThisDocument.cs" id="Snippet4":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/EmployeeControls/ThisDocument.vb" id="Snippet4":::
 
 ## <a name="bind-the-content-controls-to-elements-in-the-custom-xml-part"></a>İçerik denetimlerini özel XML bölümünde öğelere bağlama
  Her içerik denetiminin **XmlMapping** özelliğini kullanarak her içerik DENETIMINI özel XML parçasındaki bir öğeye bağlayın.
@@ -253,8 +253,8 @@ ms.locfileid: "99906621"
 
 1. Sınıfına aşağıdaki yöntemi ekleyin `ThisDocument` . Bu yöntem, her içerik denetimini özel XML parçasındaki bir öğeye bağlar ve öğesinin tarih görüntüleme biçimini ayarlar <xref:Microsoft.Office.Tools.Word.DatePickerContentControl> .
 
-     [!code-csharp[Trin_ContentControlXmlPartWalkthrough#5](../vsto/codesnippet/CSharp/EmployeeControls/ThisDocument.cs#5)]
-     [!code-vb[Trin_ContentControlXmlPartWalkthrough#5](../vsto/codesnippet/VisualBasic/EmployeeControls/ThisDocument.vb#5)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/EmployeeControls/ThisDocument.cs" id="Snippet5":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/EmployeeControls/ThisDocument.vb" id="Snippet5":::
 
 ## <a name="run-your-code-when-the-document-is-opened"></a>Belge açıldığında kodunuzu çalıştırın
  Özel XML bölümünü oluşturun ve belge açıldığında özel denetimleri verilere bağlayın.
@@ -263,8 +263,8 @@ ms.locfileid: "99906621"
 
 1. Aşağıdaki kodu `ThisDocument_Startup` sınıfının yöntemine ekleyin `ThisDocument` . Bu kod, **employees.xml** dosyasından XML dizesini alır, XML dizesini belgedeki yeni BIR özel XML bölümüne ekler ve içerik DENETIMLERINI özel XML bölümünde yer alan öğelere bağlar.
 
-     [!code-csharp[Trin_ContentControlXmlPartWalkthrough#2](../vsto/codesnippet/CSharp/EmployeeControls/ThisDocument.cs#2)]
-     [!code-vb[Trin_ContentControlXmlPartWalkthrough#2](../vsto/codesnippet/VisualBasic/EmployeeControls/ThisDocument.vb#2)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/EmployeeControls/ThisDocument.cs" id="Snippet2":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/EmployeeControls/ThisDocument.vb" id="Snippet2":::
 
 ## <a name="test-the-project"></a>Projeyi test etme
  Belgeyi açtığınızda, içerik denetimleri özel XML parçasındaki öğelerden verileri görüntüler. <xref:Microsoft.Office.Tools.Word.DropDownListContentControl> `title` **Employees. xsd** dosyasında tanımlanan, öğesi için geçerli üç değerden birini seçmek için öğesine tıklayabilirsiniz. İçerik denetimlerindeki verileri düzenlerseniz, yeni değerler belgedeki özel XML bölümüne kaydedilir.

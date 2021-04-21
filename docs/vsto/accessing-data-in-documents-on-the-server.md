@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 1c610bdc33564e3e211d1ec5aab943af4eec49d1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0df6aef3c83d66b84f569e85e953fde8a3f0e16c
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99965804"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826778"
 ---
 # <a name="access-data-in-documents-on-the-server"></a>Sunucudaki belgelerdeki verilere erişin
   Microsoft Office Word veya Microsoft Office Excel 'in nesne modelini kullanmak zorunda kalmadan belge düzeyi özelleştirmesindeki verilere karşı programlama yapabilirsiniz. Bu, Word veya Excel yüklü olmayan bir sunucuda bulunan bir belgede bulunan verilere erişebileceğiniz anlamına gelir. Örneğin, bir sunucudaki kod (örneğin, bir [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] sayfada) bir belgedeki verileri özelleştirebilir ve özelleştirilmiş belgeyi bir son kullanıcıya gönderebilir. Son Kullanıcı belgeyi açtığında, çözüm derlemesinde veri bağlama kodu özelleştirilmiş verileri belgeye bağlar. Belgedeki veriler kullanıcı arabiriminden ayrıldığından bu mümkündür. Daha fazla bilgi için bkz. [belge düzeyi özelleştirmelerde önbelleğe alınmış veriler](../vsto/cached-data-in-document-level-customizations.md).
@@ -45,8 +45,8 @@ ms.locfileid: "99965804"
 
   Aşağıdaki kod örneğinde, `Sheet1` bir Excel çalışma kitabı projesinin sınıfında önbelleğe alınmış bir dizeye nasıl erişebileceğiniz gösterilmektedir. Bu örnek, yöntemi için sağlanmış daha büyük bir örneğin bir parçasıdır <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.Save%2A> .
 
-  [!code-csharp[Trin_ServerDocument#12](../vsto/codesnippet/CSharp/Trin_ServerDocument/Form1.cs#12)]
-  [!code-vb[Trin_ServerDocument#12](../vsto/codesnippet/VisualBasic/Trin_ServerDocument/Form1.vb#12)]
+  :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_ServerDocument/Form1.cs" id="Snippet12":::
+  :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_ServerDocument/Form1.vb" id="Snippet12":::
 
 ## <a name="modify-data-in-the-cache"></a>Önbellekteki verileri değiştirme
  Önbelleğe alınmış bir veri nesnesini değiştirmek için genellikle aşağıdaki adımları gerçekleştirirsiniz:
@@ -66,8 +66,8 @@ ms.locfileid: "99965804"
 
  Aşağıdaki kod örneğinde, `Sheet1` bir Excel çalışma kitabı projesinin sınıfında önbelleğe alınmış bir dizenin değerinin nasıl değiştirileceği gösterilmektedir. Bu örnek, yöntemi için sağlanmış daha büyük bir örneğin bir parçasıdır <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.Save%2A> .
 
- [!code-csharp[Trin_ServerDocument#11](../vsto/codesnippet/CSharp/Trin_ServerDocument/Form1.cs#11)]
- [!code-vb[Trin_ServerDocument#11](../vsto/codesnippet/VisualBasic/Trin_ServerDocument/Form1.vb#11)]
+ :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_ServerDocument/Form1.cs" id="Snippet11":::
+ :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_ServerDocument/Form1.vb" id="Snippet11":::
 
 ### <a name="modify-null-values-in-the-data-cache"></a>Veri önbelleğindeki null değerleri Değiştir
  Veri önbelleği, belge kaydedilip kapatıldığında **null** değeri olan nesneleri depolamaz. Önbelleğe alınmış verileri değiştirirken bu sınırlamanın çeşitli sonuçları vardır:

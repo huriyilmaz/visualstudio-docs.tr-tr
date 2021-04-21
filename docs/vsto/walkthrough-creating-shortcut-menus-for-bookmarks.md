@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: aabc7dec0a9965a055bce07cafeca25ac0165037
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 48381d452b0c67a34581092a47896aba60e7125c
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99937426"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826310"
 ---
 # <a name="walkthrough-create-shortcut-menus-for-bookmarks"></a>İzlenecek yol: yer işaretleri için kısayol menüleri oluşturma
   Bu izlenecek yol <xref:Microsoft.Office.Tools.Word.Bookmark> , Word için belge düzeyi özelleştirmesindeki denetimler için kısayol menülerinin nasıl oluşturulacağını gösterir. Bir Kullanıcı bir yer işareti içindeki metne sağ tıkladığında, bir kısayol menüsü görünür ve metin biçimlendirme için Kullanıcı seçeneklerini verir.
@@ -92,7 +92,7 @@ ms.locfileid: "99937426"
 
 1. Projeye bir **ŞERIT XML** öğesi ekleyin. Daha fazla bilgi için bkz. [nasıl yapılır: Şeriti özelleştirmeye başlama](../vsto/how-to-get-started-customizing-the-ribbon.md).
 
-2. **Çözüm Gezgini**' de **ThisDocument.cs** veya **ThisDocument. vb** öğesini seçin.
+2. **Çözüm Gezgini** içinde **ThisDocument. cs** veya **ThisDocument. vb** öğesini seçin.
 
 3. Menü çubuğunda kodu **görüntüle**' yi seçin  >  .
 
@@ -100,8 +100,8 @@ ms.locfileid: "99937426"
 
 4. Aşağıdaki kodu **ThisDocument** sınıfına ekleyin. Bu kod CreateRibbonExtensibilityObject yöntemini geçersiz kılar ve Şerit XML sınıfını Office uygulamasına döndürür.
 
-     [!code-csharp[Trin_Word_Document_Menus#1](../vsto/codesnippet/CSharp/trin_word_document_menus.cs/thisdocument.cs#1)]
-     [!code-vb[Trin_Word_Document_Menus#1](../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/thisdocument.vb#1)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_word_document_menus.cs/thisdocument.cs" id="Snippet1":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/thisdocument.vb" id="Snippet1":::
 
 5. **Çözüm Gezgini**, Şerit XML dosyasını seçin. Varsayılan olarak, Şerit XML dosyası Ribbon1.xml olarak adlandırılır.
 
@@ -131,10 +131,10 @@ ms.locfileid: "99937426"
 
 9. Aşağıdaki değişkenleri ve sınıf düzeyinde bir yer işareti değişkeni bildirin.
 
-     [!code-csharp[Trin_Word_Document_Menus#2](../vsto/codesnippet/CSharp/trin_word_document_menus.cs/thisdocument.cs#2)]
-     [!code-vb[Trin_Word_Document_Menus#2](../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/thisdocument.vb#2)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_word_document_menus.cs/thisdocument.cs" id="Snippet2":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/thisdocument.vb" id="Snippet2":::
 
-10. **Çözüm Gezgini**, Şerit kod dosyasını seçin. Varsayılan olarak, Şerit kod dosyası **Ribbon1.cs** veya **Ribbon1. vb** olarak adlandırılır.
+10. **Çözüm Gezgini**, Şerit kod dosyasını seçin. Varsayılan olarak, Şerit kod dosyası **Ribbon1. cs** veya **Ribbon1. vb** olarak adlandırılır.
 
 11. Menü çubuğunda kodu **görüntüle**' yi seçin  >  .
 
@@ -142,8 +142,8 @@ ms.locfileid: "99937426"
 
 12. Şerit kod dosyasında aşağıdaki yöntemi ekleyin. Bu, belgenin kısayol menüsüne eklediğiniz iki düğme için bir geri çağırma yöntemidir. Bu yöntem, bu düğmelerin kısayol menüsünde görünüp görünmeyeceğini belirler. Kalın ve italik düğmeler yalnızca yer işareti içindeki metni sağ tıklattığınızda görünür.
 
-     [!code-csharp[Trin_Word_Document_Menus#5](../vsto/codesnippet/CSharp/trin_word_document_menus.cs/ribbon1.cs#5)]
-     [!code-vb[Trin_Word_Document_Menus#5](../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/ribbon1.vb#5)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_word_document_menus.cs/ribbon1.cs" id="Snippet5":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/ribbon1.vb" id="Snippet5":::
 
 ## <a name="format-the-text-in-the-bookmark"></a><a name="BKMK_formattextbkmk"></a> Yer işaretinde metni biçimlendirme
 
@@ -151,10 +151,10 @@ ms.locfileid: "99937426"
 
 1. Şerit kod dosyasında, `ButtonClick` yer işaretine biçimlendirme uygulamak için bir olay işleyicisi ekleyin.
 
-     [!code-csharp[Trin_Word_Document_Menus#6](../vsto/codesnippet/CSharp/trin_word_document_menus.cs/ribbon1.cs#6)]
-     [!code-vb[Trin_Word_Document_Menus#6](../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/ribbon1.vb#6)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_word_document_menus.cs/ribbon1.cs" id="Snippet6":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/ribbon1.vb" id="Snippet6":::
 
-2. **Çözüm Gezgini**, **ThisDocument.cs** veya **ThisDocument. vb** öğesini seçin.
+2. **Çözüm Gezgini**, **ThisDocument. cs** veya **ThisDocument. vb** öğesini seçin.
 
 3. Menü çubuğunda kodu **görüntüle**' yi seçin  >  .
 
@@ -162,15 +162,15 @@ ms.locfileid: "99937426"
 
 4. Aşağıdaki kodu **ThisDocument** sınıfına ekleyin.
 
-     [!code-csharp[Trin_Word_Document_Menus#3](../vsto/codesnippet/CSharp/trin_word_document_menus.cs/thisdocument.cs#3)]
-     [!code-vb[Trin_Word_Document_Menus#3](../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/thisdocument.vb#3)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_word_document_menus.cs/thisdocument.cs" id="Snippet3":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/thisdocument.vb" id="Snippet3":::
 
     > [!NOTE]
     > Yer işaretlerinin çakıştığı durumu işlemek için kod yazmanız gerekir. Aksi takdirde, varsayılan olarak, seçimdeki tüm yer işaretleri için kod çağırılır.
 
 5. C# dilinde, olaya yer işareti denetimleri için olay işleyicileri eklemeniz gerekir <xref:Microsoft.Office.Tools.Word.Document.Startup> . Olay işleyicileri oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Office projelerinde olay Işleyicileri oluşturma](../vsto/how-to-create-event-handlers-in-office-projects.md).
 
-     [!code-csharp[Trin_Word_Document_Menus#4](../vsto/codesnippet/CSharp/trin_word_document_menus.cs/thisdocument.cs#4)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_word_document_menus.cs/thisdocument.cs" id="Snippet4":::
 
 ## <a name="test-the-application"></a>Uygulamayı test edin
  Kalın ve italik menü öğelerinin kısayol menüsünde göründüğünü doğrulamak için belgenizi test edin ve bir yer işaretinde metin ' i sağ tıklayıp metnin düzgün biçimlendirildiğinden emin olun.

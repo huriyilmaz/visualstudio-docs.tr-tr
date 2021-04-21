@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 885af73613636b9f6c829393b010c3543f6cea5e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 129493f726967776aa669eb92f6e912ed9c1b11b
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99920480"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107827155"
 ---
 # <a name="how-to-programmatically-print-worksheets"></a>Nasıl yapılır: program aracılığıyla çalışma sayfalarını yazdırma
 
@@ -35,8 +35,8 @@ ms.locfileid: "99920480"
 
 1. Yöntemini çağırın `PrintOut` `Sheet1` , iki kopya isteyin ve yazdırmadan önce belgeyi önizleyin.
 
-    [!code-csharp[Trin_VstcoreExcelAutomation#22](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#22)]
-    [!code-vb[Trin_VstcoreExcelAutomation#22](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#22)]
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs" id="Snippet22":::
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb" id="Snippet22":::
 
    <xref:Microsoft.Office.Tools.Excel.Worksheet.PrintPreview%2A>Yöntemi, belirtilen nesneyi **Baskı Önizleme** penceresinde görüntülemenizi sağlar. Aşağıdaki kod, <xref:Microsoft.Office.Tools.Excel.Worksheet> adlı bir konak öğesine sahip olduğunuzu varsayar `Sheet1` .
 
@@ -44,8 +44,8 @@ ms.locfileid: "99920480"
 
 1. <xref:Microsoft.Office.Tools.Excel.Worksheet.PrintPreview%2A>Çalışma sayfasının yöntemini çağırın.
 
-     [!code-csharp[Trin_VstcoreExcelAutomation#23](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#23)]
-     [!code-vb[Trin_VstcoreExcelAutomation#23](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#23)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs" id="Snippet23":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb" id="Snippet23":::
 
 ## <a name="print-a-worksheet-in-a-vsto-add-in"></a>Bir VSTO eklentisinin çalışma sayfasını yazdırma
 
@@ -53,8 +53,8 @@ ms.locfileid: "99920480"
 
 1. <xref:Microsoft.Office.Interop.Excel._Worksheet.PrintOut%2A>Etkin çalışma sayfasının yöntemini çağırın, iki kopya isteyin ve yazdırmadan önce belgeyi önizleyin.
 
-    [!code-csharp[Trin_VstcoreExcelAutomationAddIn#14](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#14)]
-    [!code-vb[Trin_VstcoreExcelAutomationAddIn#14](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#14)]
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs" id="Snippet14":::
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb" id="Snippet14":::
 
    <xref:Microsoft.Office.Interop.Excel._Worksheet.PrintPreview%2A>Yöntemi, belirtilen nesneyi **Baskı Önizleme** penceresinde görüntülemenizi sağlar.
 
@@ -62,8 +62,8 @@ ms.locfileid: "99920480"
 
 1. <xref:Microsoft.Office.Interop.Excel._Worksheet.PrintPreview%2A>Etkin çalışma sayfasının yöntemini çağırın.
 
-     [!code-csharp[Trin_VstcoreExcelAutomationAddIn#15](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#15)]
-     [!code-vb[Trin_VstcoreExcelAutomationAddIn#15](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#15)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs" id="Snippet15":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb" id="Snippet15":::
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

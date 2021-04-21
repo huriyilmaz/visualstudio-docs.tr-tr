@@ -20,12 +20,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 75df7a3a9ddfa6009b0002bfe83b57f2d91e6e0d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 377c3405211c91712f8754131d8379c3dae7e820
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99906560"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107824555"
 ---
 # <a name="walkthrough-bind-data-to-controls-on-an-excel-actions-pane"></a>İzlenecek yol: Excel eylemler bölmesindeki denetimlere veri bağlama
   Bu izlenecek yol, Excel Microsoft Office bir eylemler bölmesindeki denetimlere veri bağlamayı gösterir. Denetimler SQL Server veritabanındaki tablolar arasında bir ana/ayrıntı ilişkisi gösterir.
@@ -142,29 +142,29 @@ ms.locfileid: "99906560"
 
 2. <xref:System.Windows.Forms.UserControl.Load>Eylemler bölmesi denetiminin olayına aşağıdaki kodu ekleyin.
 
-     [!code-vb[Trin_VstcoreActionsPaneExcel#1](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneExcelVB/ActionsControl.vb#1)]
-     [!code-csharp[Trin_VstcoreActionsPaneExcel#1](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ActionsControl.cs#1)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneExcelVB/ActionsControl.vb" id="Snippet1":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ActionsControl.cs" id="Snippet1":::
 
 3. C# ' de, için bir olay işleyicisi oluşturmanız gerekir `ActionsControl` . Bu kodu `ActionsControl` oluşturucuya yerleştirebilirsiniz. Olay işleyicileri oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Office projelerinde olay Işleyicileri oluşturma](../vsto/how-to-create-event-handlers-in-office-projects.md).
 
-     [!code-csharp[Trin_VstcoreActionsPaneExcel#2](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ActionsControl.cs#2)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ActionsControl.cs" id="Snippet2":::
 
 ## <a name="show-the-actions-pane"></a>Eylemler bölmesini göster
  Çalışma zamanında denetim eklenene kadar eylemler bölmesi görünür değildir.
 
 #### <a name="to-show-the-actions-pane"></a>Eylemler bölmesini göstermek için
 
-1. **Çözüm Gezgini**, *ThisWorkbook. vb* veya *ThisWorkbook.cs* öğesine sağ tıklayın ve ardından **kodu görüntüle**' ye tıklayın.
+1. **Çözüm Gezgini**, *ThisWorkbook. vb* veya *ThisWorkbook. cs* öğesine sağ tıklayın ve ardından **kodu görüntüle**' ye tıklayın.
 
 2. Sınıfında kullanıcı denetiminin yeni bir örneğini oluşturun `ThisWorkbook` .
 
-     [!code-csharp[Trin_VstcoreActionsPaneExcel#3](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ThisWorkbook.cs#3)]
-     [!code-vb[Trin_VstcoreActionsPaneExcel#3](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneExcelVB/ThisWorkbook.vb#3)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ThisWorkbook.cs" id="Snippet3":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneExcelVB/ThisWorkbook.vb" id="Snippet3":::
 
 3. <xref:Microsoft.Office.Tools.Excel.Workbook.Startup>Olay işleyicisinde `ThisWorkbook` , denetimi eylemler bölmesine ekleyin.
 
-     [!code-csharp[Trin_VstcoreActionsPaneExcel#4](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ThisWorkbook.cs#4)]
-     [!code-vb[Trin_VstcoreActionsPaneExcel#4](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneExcelVB/ThisWorkbook.vb#4)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ThisWorkbook.cs" id="Snippet4":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneExcelVB/ThisWorkbook.vb" id="Snippet4":::
 
 ## <a name="test-the-application"></a>Uygulamayı test edin
  Artık belge açıldığında eylemler bölmesinin açıldığını ve denetimlerin Master/Detail ilişkisine sahip olduğunu doğrulamak için belgenizi test edebilirsiniz.

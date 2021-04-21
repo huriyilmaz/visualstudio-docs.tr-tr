@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: e8c88bbf529da8e07976c012d40ca59e5f1e5626
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 62a49919522c5d4a88b6f4b6876b567c8d275dec
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99920367"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107826427"
 ---
 # <a name="walkthrough-collect-data-by-using-a-windows-form"></a>İzlenecek yol: Windows formu kullanarak veri toplama
   Bu izlenecek yol, Excel Microsoft Office için belge düzeyi özelleştirmede bir Windows formu açmayı, kullanıcıdan bilgi toplamayı ve bu bilgileri bir çalışma sayfası hücresine yazmayı gösterir.
@@ -73,7 +73,7 @@ ms.locfileid: "99920367"
 
 2. **Proje** menüsünde **Windows formu Ekle**' ye tıklayın.
 
-3. **GetInputString. vb** veya **GetInputString.cs** formunu adlandırın ve ardından **Ekle**' ye tıklayın.
+3. **GetInputString. vb** veya **GetInputString. cs** biçimini adlandırın ve ardından **Ekle**' ye tıklayın.
 
     Yeni form tasarımcıda açılır.
 
@@ -88,20 +88,20 @@ ms.locfileid: "99920367"
 
 #### <a name="to-display-the-form-and-collect-information"></a>Formu görüntüleme ve bilgileri toplama
 
-1. **Çözüm Gezgini**' de **ThisWorkbook. vb** veya **ThisWorkbook.cs** öğesine sağ tıklayın ve ardından **kodu görüntüle**' ye tıklayın.
+1. **Çözüm Gezgini**' de **ThisWorkbook. vb** veya **ThisWorkbook. cs** öğesine sağ tıklayın ve ardından **kodu görüntüle**' ye tıklayın.
 
 2. <xref:Microsoft.Office.Tools.Excel.Workbook.Open>Olay işleyicisinde `ThisWorkbook` , form için bir değişken bildirmek `GetInputString` ve sonra formu göstermek için aşağıdaki kodu ekleyin.
 
    > [!NOTE]
    > C# ' de, aşağıdaki olayda gösterildiği gibi bir olay işleyicisi eklemeniz gerekir <xref:Microsoft.Office.Tools.Excel.Workbook.Startup> . Olay işleyicileri oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Office projelerinde olay Işleyicileri oluşturma](../vsto/how-to-create-event-handlers-in-office-projects.md).
 
-    [!code-csharp[Trin_VstcoreProgrammingCollectingData#1](../vsto/codesnippet/CSharp/WinFormInputCS/ThisWorkbook.cs#1)]
-    [!code-vb[Trin_VstcoreProgrammingCollectingData#1](../vsto/codesnippet/VisualBasic/WinFormInput/ThisWorkbook.vb#1)]
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/WinFormInputCS/ThisWorkbook.cs" id="Snippet1":::
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/WinFormInput/ThisWorkbook.vb" id="Snippet1":::
 
 3. Adlandırılmış bir aralığa metin yazan adlı bir yöntem oluşturun `WriteStringToCell` . Bu yöntem formdan çağrılır ve kullanıcının girişi, <xref:Microsoft.Office.Tools.Excel.NamedRange> `formInput` **a1** hücresinde, denetime geçirilir.
 
-    [!code-csharp[Trin_VstcoreProgrammingCollectingData#2](../vsto/codesnippet/CSharp/WinFormInputCS/ThisWorkbook.cs#2)]
-    [!code-vb[Trin_VstcoreProgrammingCollectingData#2](../vsto/codesnippet/VisualBasic/WinFormInput/ThisWorkbook.vb#2)]
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/WinFormInputCS/ThisWorkbook.cs" id="Snippet2":::
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/WinFormInput/ThisWorkbook.vb" id="Snippet2":::
 
    Sonra, düğmenin Click olayını işlemek için forma kod ekleyin.
 
@@ -115,10 +115,10 @@ ms.locfileid: "99920367"
 
 3. Metin kutusundan girişi almak için olay işleyicisine kod ekleyin, bunu işleve gönderin `WriteStringToCell` ve sonra formu kapatın.
 
-     [!code-csharp[Trin_VstcoreProgrammingCollectingData#3](../vsto/codesnippet/CSharp/WinFormInputCS/GetInputString.cs#3)]
-     [!code-vb[Trin_VstcoreProgrammingCollectingData#3](../vsto/codesnippet/VisualBasic/WinFormInput/GetInputString.vb#3)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/WinFormInputCS/GetInputString.cs" id="Snippet3":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/WinFormInput/GetInputString.vb" id="Snippet3":::
 
-## <a name="test"></a>Test etme
+## <a name="test"></a>Test
  Artık projeyi çalıştırabilirsiniz. Windows formu görünür ve giriş çalışma sayfasında görünür.
 
 ### <a name="to-test-your-workbook"></a>Çalışma kitabınızı test etmek için

@@ -14,12 +14,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 9eaa78a04c7dfda42a82a5d5a9ff3b407e6502d8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 80c574799029f3fe8c4769d852886a625ffd93aa
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99842023"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107824290"
 ---
 # <a name="walkthrough-design-an-outlook-form-region"></a>İzlenecek yol: Outlook form bölgesi tasarlama
   Özel form bölgeleri, standart veya özel Microsoft Office Outlook formlarını genişletir. Bu kılavuzda, bir kişi öğesinin Inspector penceresinde yeni bir sayfa olarak görünen özel bir form bölgesi tasarlayacaksınız. Bu form bölgesi, adres bilgilerini Windows Live Yerel arama Web sitesine göndererek, iletişim için listelenen her bir adresin haritasını görüntüler. Form bölgeleri hakkında daha fazla bilgi için bkz. [Outlook form bölgeleri oluşturma](../vsto/creating-outlook-form-regions.md).
@@ -90,14 +90,14 @@ ms.locfileid: "99842023"
 
 8. **Bu form bölgesini görüntüleyecek ileti sınıflarını belirleyin** sayfasında, **posta Iletisini** temizleyin, **iletişim**' i seçin ve ardından **son**' a tıklayın.
 
-     Projenize bir *MapIt.cs* veya *mapit. vb* dosyası eklenir.
+     Bir *mapit. cs* veya *mapit. vb* dosyası projenize eklenir.
 
 ## <a name="design-the-layout-of-the-form-region"></a>Form bölgesinin yerleşimini tasarlama
  Form *bölgesi tasarımcısını* kullanarak form bölgelerini görsel olarak geliştirin. Yönetilen denetimleri form bölgesi tasarımcı yüzeyine sürükleyebilirsiniz. Denetim düzeni ve görünümünü ayarlamak için tasarımcı ve **Özellikler** penceresini kullanın.
 
 ### <a name="to-design-the-layout-of-the-form-region"></a>Form bölgesinin yerleşimini tasarlamak için
 
-1. **Çözüm Gezgini**, **MapItAddIn** projesini genişletin ve ardından form bölgesi tasarımcısını açmak Için *MapIt.cs* veya *mapit. vb* öğesine çift tıklayın.
+1. **Çözüm Gezgini**, **MapItAddIn** projesini genişletin ve ardından form bölgesi tasarımcısını açmak için *mapit. cs* veya *mapit. vb* öğesine çift tıklayın.
 
 2. Tasarımcı öğesine sağ tıklayın ve ardından **Özellikler**' e tıklayın.
 
@@ -116,9 +116,9 @@ ms.locfileid: "99842023"
 
 ### <a name="to-customize-the-behavior-of-the-form-region"></a>Form bölgesinin davranışını özelleştirmek için
 
-1. **Çözüm Gezgini**, *MapIt.cs* veya *mapit. vb* öğesine sağ tıklayın ve ardından **kodu görüntüle**' ye tıklayın.
+1. **Çözüm Gezgini**, *mapit. cs* veya *mapit. vb* öğesine sağ tıklayın ve ardından **kodu görüntüle**' ye tıklayın.
 
-    *MapIt.cs* veya *mapit. vb* , kod düzenleyicisinde açılır.
+    *Mapit. cs* veya *mapit. vb* , kod düzenleyicisinde açılır.
 
 2. **Form bölgesi fabrikası** kod bölgesini genişletin.
 
@@ -126,8 +126,8 @@ ms.locfileid: "99842023"
 
 3. Olay işleyicisine aşağıdaki kodu ekleyin `MapItFactory_FormRegionInitializing` . Bu olay işleyicisi, Kullanıcı bir kişi öğesi açtığında çağrılır. Aşağıdaki kod, kişi öğesinin bir adres içerip içermediğini belirler. Kişi öğesi bir adres içermiyorsa, bu kod <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> <xref:Microsoft.Office.Tools.Outlook.FormRegionInitializingEventArgs> sınıfın özelliğini **true** olarak ayarlar ve form bölgesi görüntülenmez. Aksi halde, VSTO eklentisi <xref:Microsoft.Office.Tools.Outlook.FormRegionControl.FormRegionShowing> olayı oluşturur ve form bölgesini görüntüler.
 
-    [!code-csharp[Trin_Outlook_FR_Separate#1](../vsto/codesnippet/CSharp/Trin_Outlook_FR_Separate_O12/MapIt.cs#1)]
-    [!code-vb[Trin_Outlook_FR_Separate#1](../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Separate_O12/MapIt.vb#1)]
+    :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Outlook_FR_Separate_O12/MapIt.cs" id="Snippet1":::
+    :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Separate_O12/MapIt.vb" id="Snippet1":::
 
 4. Olay işleyicisine aşağıdaki kodu ekleyin <xref:Microsoft.Office.Tools.Outlook.FormRegionControl.FormRegionShowing> . Bu kod aşağıdaki görevleri gerçekleştirir:
 
@@ -137,8 +137,8 @@ ms.locfileid: "99842023"
 
      Yerel arama Web sitesi Map It form bölgesinde görünür ve her adresi karalama panelinde sunar.
 
-     [!code-csharp[Trin_Outlook_FR_Separate#2](../vsto/codesnippet/CSharp/Trin_Outlook_FR_Separate_O12/MapIt.cs#2)]
-     [!code-vb[Trin_Outlook_FR_Separate#2](../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Separate_O12/MapIt.vb#2)]
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Outlook_FR_Separate_O12/MapIt.cs" id="Snippet2":::
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Separate_O12/MapIt.vb" id="Snippet2":::
 
 ## <a name="test-the-outlook-form-region"></a>Outlook form bölgesini test etme
  Projeyi çalıştırdığınızda, Visual Studio Outlook 'U açar. Map It form bölgesini görüntülemek için bir kişi öğesi açın. Map It form bölgesi, adresi içeren herhangi bir kişi öğesi formunda bir sayfa olarak görünür.

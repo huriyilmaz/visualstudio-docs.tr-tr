@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 14005f465fd4394e86450017530de457a97b3d4f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 90979fbc7cd0b46329b8d9e9bc142e8cf0066db0
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99885553"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107825894"
 ---
 # <a name="how-to-programmatically-display-documents-in-print-preview"></a>Nasıl yapılır: belgeleri baskı önizlemede program aracılığıyla görüntüleme
   Çözümünüz bir rapor oluşturursa, raporu kullanıcıya baskı önizleme modunda görüntülemek isteyebilirsiniz.
@@ -34,15 +34,15 @@ ms.locfileid: "99885553"
 
 1. <xref:Microsoft.Office.Tools.Word.Document.PrintPreview%2A>Sınıfının yöntemini çağırın <xref:Microsoft.Office.Tools.Word.Document> . Bu kod örneğini kullanmak için `ThisDocument` projenizdeki sınıftan çalıştırın.
 
-     [!code-vb[Trin_VstcoreWordAutomation#13](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#13)]
-     [!code-csharp[Trin_VstcoreWordAutomation#13](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#13)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet13":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet13":::
 
 ### <a name="to-display-a-document-in-print-preview-by-setting-the-printpreview-property"></a>PrintPreview özelliğini ayarlayarak bir belgeyi baskı önizlemede görüntülemek için
 
 1. <xref:Microsoft.Office.Interop.Word._Application.PrintPreview%2A> <xref:Microsoft.Office.Interop.Word.Application> Nesnesinin özelliğini **true** olarak ayarlayın.
 
-     [!code-vb[Trin_VstcoreWordAutomation#14](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#14)]
-     [!code-csharp[Trin_VstcoreWordAutomation#14](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#14)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet14":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet14":::
 
 ## <a name="procedures-for-vsto-add-ins"></a>VSTO eklentileri yordamları
 
@@ -50,15 +50,15 @@ ms.locfileid: "99885553"
 
 1. Önizlemek istediğiniz <xref:Microsoft.Office.Interop.Word._Document.PrintPreview%2A> öğesinin yöntemini çağırın <xref:Microsoft.Office.Interop.Word.Document> . Bu kod örneğini kullanmak için `ThisAddIn` projenizdeki sınıftan çalıştırın.
 
-     [!code-vb[Trin_VstcoreWordAutomationAddIn#13](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#13)]
-     [!code-csharp[Trin_VstcoreWordAutomationAddIn#13](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#13)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb" id="Snippet13":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs" id="Snippet13":::
 
 ### <a name="to-display-a-document-in-print-preview-by-setting-the-printpreview-property"></a>PrintPreview özelliğini ayarlayarak bir belgeyi baskı önizlemede görüntülemek için
 
 1. <xref:Microsoft.Office.Interop.Word._Application.PrintPreview%2A> <xref:Microsoft.Office.Interop.Word.Application> Nesnesinin özelliğini **true** olarak ayarlayın.
 
-     [!code-vb[Trin_VstcoreWordAutomation#14](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#14)]
-     [!code-csharp[Trin_VstcoreWordAutomation#14](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#14)]
+     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet14":::
+     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet14":::
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Nasıl yapılır: program aracılığıyla belgeleri yazdırma](../vsto/how-to-programmatically-print-documents.md)
