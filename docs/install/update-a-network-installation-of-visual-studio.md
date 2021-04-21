@@ -1,7 +1,7 @@
 ---
 title: Ağ tabanlı yüklemeyi güncelleştirme
 description: --Layout komutunu kullanarak ağ tabanlı Visual Studio yüklemesini güncelleştirme hakkında bilgi edinin
-ms.date: 04/06/2021
+ms.date: 04/16/2021
 ms.custom: seodec18
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 0f6e13333b6cab86f6485ddc18516039c712455a
-ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
+ms.openlocfilehash: 0400f4be06afab2326ac738e1ac15f9d93a6ecee
+ms.sourcegitcommit: 367a2d9df789aa617abaa09b0cd0a18db7357d0c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107295955"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107800779"
 ---
 # <a name="update-a-network-based-installation-of-visual-studio"></a>Visual Studio’nun ağ tabanlı yüklemesini güncelleştirme
 
@@ -29,9 +29,9 @@ Visual Studio 'nun bir ağ yükleme düzeninin en son ürün güncelleştirmeler
 ## <a name="how-to-update-a-network-layout"></a>Ağ yerleşimini güncelleştirme
 
 > [!IMPORTANT]
-> Bu yönergelerde, daha önce bir ağ yükleme düzeni oluşturmuş olduğunuz varsayılır. Bunun nasıl yapılacağı hakkında daha fazla bilgi için [Visual Studio 'nun ağ yüklemesi oluşturma](create-a-network-installation-of-visual-studio.md) sayfasına bakın.
+> Bu yönergelerde, daha önce bir ağ yükleme düzeni oluşturduğunuz ve istemcinin güncelleştirmeleri alma hakkında bazı kararlar verdiğiniz varsayılmaktadır. Bunun nasıl yapılacağı hakkında daha fazla bilgi için [Visual Studio 'nun ağ yüklemesi oluşturma](create-a-network-installation-of-visual-studio.md) ve [Visual Studio dağıtımlarını güncelleştirme güncelleştirmeleri](../install/controlling-updates-to-visual-studio-deployments.md) sayfasına bakın.
 
-Ağ yükleme paylaşımınızı en son güncelleştirmeleri içerecek şekilde yenilemek için, `--layout` güncelleştirilmiş paketleri artımlı olarak indirmek üzere komutunu çalıştırın.
+Ağ yükleme paylaşımınızı en son güncelleştirmeleri içerecek şekilde yenilemek için, `--layout` güncelleştirilmiş paketleri indirmek üzere yükleyiciyi kullanarak önyükleyici çalıştırın.
 
 [Ağ yerleşimini ilk oluşturduğunuzda](create-a-network-installation-of-visual-studio.md)kısmi bir düzen seçtiyseniz, bu ayarlar kaydedilir. Gelecekteki tüm düzen komutları, önceki seçenekleri ve belirttiğiniz tüm yeni seçenekleri kullanır.
 

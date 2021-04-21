@@ -2,31 +2,31 @@
 title: Microsoft uç noktası ile Visual Studio 'ya yönetici güncelleştirmeleri uygulama Configuration Manager
 titleSuffix: ''
 description: Yönetici güncelleştirmelerini Visual Studio 'ya uygulamayı öğrenin.
-ms.date: 04/07/2021
+ms.date: 04/16/2021
 ms.custom: ''
 ms.topic: overview
 ms.assetid: 9a3fdb28-db3d-4970-bc17-7417a985f0fb
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 4df931ee5eb5eaefdf6d918ff05df65b799bef7e
-ms.sourcegitcommit: be14ae4b95e289f16e9444293bb2ec997d4b4d72
+ms.openlocfilehash: d7d2950b9495846693d5edee7790b8611cbca170
+ms.sourcegitcommit: 367a2d9df789aa617abaa09b0cd0a18db7357d0c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "107031612"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107800790"
 ---
 # <a name="applying-administrator-updates-that-use-microsoft-endpoint-configuration-manager"></a>Microsoft uç noktası kullanan yönetici güncelleştirmelerini uygulama Configuration Manager
 
-Bu belge, Visual Studio yönetici güncelleştirmelerinin farklı türlerini ve özelliklerini açıklamaktadır. Aşağıda, kuruluşunuzun tamamında nasıl ve ne zaman dağıtılacağı, hangi yapılandırma seçeneklerinin kullanılabildiği ve raporların nasıl görüntüleneceği ve nasıl giderileceği hakkında bilgi bulacaksınız. Yönetici güncelleştirmelerini kullanma önkoşulları hakkında daha fazla bilgi için bkz. [yönetici güncelleştirmelerini etkinleştirme](../install/enabling-administrator-updates.md).
+Bu belge, Visual Studio yönetici güncelleştirmelerinin farklı türlerini ve özelliklerini açıklamaktadır. Aşağıda, kuruluşunuzun tamamında nasıl ve ne zaman dağıtılacağı, hangi yapılandırma seçeneklerinin kullanılabildiği ve raporların nasıl görüntüleneceği ve nasıl giderileceği hakkında bilgi bulacaksınız. Yönetici güncelleştirmelerini kullanma önkoşulları hakkında daha fazla bilgi için bkz. [yönetici güncelleştirmelerini etkinleştirme](../install/enabling-administrator-updates.md). Yönetici güncelleştirmeleri, Visual Studio 'Nun bilgisayarda zaten yüklü olduğunu varsayar. Yönetici güncelleştirmelerinin uygulanması, yepyeni bir yükleme başlatmaz.
 
 ## <a name="understanding-visual-studio-administrator-updates"></a>Visual Studio Yönetici güncelleştirmelerini anlama 
 
-Microsoft kataloğu ve WSUS tarafından kullanılmak üzere Microsoft Update yayımlanan Visual Studio Yöneticisi güncelleştirme paketi, Configuration Manager güncelleştirmeyi indirip istemci makinelerine dağıtmak için gereken bilgileri içerir. Ayrıca, kuruluş genelinde hangi güncelleştirmelerin dağıtılacağını belirlemek ve ağ düzenlerinin bakımını kolaylaştırmak için BT yöneticisinin ihtiyacı olan bilgileri de içerir. Visual Studio Yönetici güncelleştirme paketleri, ürünün yeni bir yüklemesini yapmak için yeterli bilgi içermez veya Content Delivery Network yayımlanan gerçek ürün ikililerini içerir. Visual Studio yönetici güncelleştirmeleri, normal Visual Studio güncelleştirmelerinde olduğu gibi birikimlidir. Daha yüksek bir ürün sürümü numarası ve daha sonraki bir sürüm tarihi olan herhangi bir Visual Studio güncelleştirmesinin daha eski, daha düşük bir sürümün üst kümesi olduğunu varsayabilirsiniz. 
+Microsoft kataloğu ve WSUS tarafından kullanılmak üzere Microsoft Update yayımlanan Visual Studio Yöneticisi güncelleştirme paketi, Configuration Manager Visual Studio güncelleştirmesini indirip istemci makinelere dağıtabilmesi için gereken bilgileri içerir. Ayrıca, kuruluş genelinde hangi güncelleştirmelerin dağıtılacağını belirlemek için bir BT yöneticisinin ihtiyacı olan bilgileri de içerir. Ayrıca, ağ düzenlerinin bakımını kolaylaştırmak için de kullanılabilir. Visual Studio Yönetici güncelleştirme paketleri, ürünün yeni bir yüklemesini yapmak için yeterli bilgi içermez veya Content Delivery Network yayımlanan gerçek ürün ikililerini içerir. Visual Studio yönetici güncelleştirmeleri, normal Visual Studio güncelleştirmelerinde olduğu gibi birikimlidir. Daha yüksek bir ürün sürümü numarası ve daha sonraki bir sürüm tarihi olan herhangi bir Visual Studio güncelleştirmesinin daha eski, daha düşük bir sürümün üst kümesi olduğunu varsayabilirsiniz. 
 
 Visual Studio yönetici güncelleştirmeleri, destek altında olan Visual Studio bakım sürümleri için geçerlidir. Belirli bir zaman çerçevesi sırasında hangi Visual Studio bakım temellerinin hala DESTEKDE olduğu hakkında daha fazla bilgi için bkz. [Visual Studio ürün yaşam döngüsü ve bakımı](https://docs.microsoft.com/visualstudio/productinfo/vs-servicing-vs). Desteklenen tüm Visual Studio bakım temelleri güvenli tutulacak.  
 
