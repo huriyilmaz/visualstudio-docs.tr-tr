@@ -12,12 +12,12 @@ ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 12a6e122d6193b7aa98cf27668dab201bbb86ce4
-ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
+ms.openlocfilehash: a03d0fc896fcbc971bc62cd9391c4f38d0aad06c
+ms.sourcegitcommit: 3e1ff87fba290f9e60fb4049d011bb8661255d58
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101683485"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "107879388"
 ---
 # <a name="change-log-visual-studio-tools-for-unity-windows"></a>Değişiklik günlüğü (Unity için Visual Studio Araçları, Windows)
 
@@ -1879,9 +1879,9 @@ Yayın tarihi, 28 Kasım 2012
 
 - Bilgi konsolu iletisini ayrıştırma, Hata Listesi tıklamak, simgeleri olan ilk StackFrame 'e götürür.
 
-- Kullanıcının proje üretimine katılmasını sağlamak için bir [API](extensibility/customize-project-files-created-by-vstu.md) ekleyin.
+- Kullanıcının proje üretimine katılmasını sağlamak için bir API ekleyin.
 
-- Kullanıcının LogCallback 'a katılmasını sağlamak için bir [API](extensibility/share-the-unity-log-callback-with-vstu.md) ekleyin.
+- Kullanıcının LogCallback 'a katılmasını sağlamak için bir API ekleyin.
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 

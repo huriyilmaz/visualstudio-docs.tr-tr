@@ -3,16 +3,19 @@ title: XAML kod düzenleyici
 description: Visual Studio 'da XAML kod Düzenleyicisi turuna katılın
 ms.date: 06/16/2020
 ms.topic: overview
+f1_keywords:
+- VS.XamlEditor
 monikerRange: vs-2019
+ms.custom: contperf-fy21q4
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
-ms.openlocfilehash: df2c257caed24e85569ca41f3cc83dd9d47d5b03
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 672bfa6b28e364351f262cb2a2c6e2258ecd9746
+ms.sourcegitcommit: 3e1ff87fba290f9e60fb4049d011bb8661255d58
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99962320"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "107879401"
 ---
 # <a name="xaml-code-editor"></a>XAML kod düzenleyici
 
@@ -101,7 +104,7 @@ Orta bölme, XAML kod düzenleyicisinin "Code" kısmıdır. [IDE kod düzenleyic
 
 Tek bir eylem ile kodu yeniden düzenlemek, oluşturmak veya başka şekilde değiştirmek için [Hızlı işlemleri](../ide/quick-actions.md) kullanabilirsiniz.
 
-Örneğin, hızlı eylemleri kullanarak gerçekleştirebileceğiniz yararlı bir görev, **MainWindow.xaml.cs** sekmesindeki C# kodundan **gereksiz kullanımlar kaldırmak** içindir.
+Örneğin, hızlı eylemleri kullanarak gerçekleştirebileceğiniz yararlı bir görev, **MainWindow. xaml. cs** sekmesindeki C# kodundan **gereksiz kullanımlar kaldırmak** içindir.
 
 Aşağıdaki adımları uygulayın:
 
@@ -116,7 +119,7 @@ Bu özelliğe menü çubuğundan de erişebilirsiniz. Bunu yapmak için,   >  **
 
 Using ayarları hakkında daha fazla bilgi için bkz. [using using](../ide/reference/sort-usings.md) Page. IntelliSense hakkında daha fazla bilgi için bkz. [Visual Studio 'Da IntelliSense](../ide/using-intellisense.md) sayfası. Geliştiricilerin hızlı eylemleri kullandığı tipik bazı yollarla ilgili daha fazla bilgi için bkz. [ortak hızlı eylemler](../ide/common-quick-actions.md) sayfası.
 
-#### <a name="change-tracking"></a>Change tracking
+#### <a name="change-tracking"></a>Değişiklik izleme
 
 Sol kenar boşluğunun rengi, bir dosyada yaptığınız değişiklikleri izlemenize olanak sağlar. Renklerin, aldığınız eylemlerle nasıl ilişkilendirileceğiyle ilgilidir:
 
@@ -218,7 +221,7 @@ Geliştiriciler genellikle yorumlarını kullanarak kodlarını belgelemek terci
 
 - Bir yorum ile çevrelemek istediğiniz kodu seçin ve ardından **CTRL** + **K**, **CTRL** + **C** tuşlarına basın. Seçili kodun açıklamasını eklemek için **CTRL** + **K**, **CTRL** + **U** tuşlarına basın.
 
-**MainWindow.xaml.cs** sekmesindeki C# kodunda açıklamaları kullanma hakkında daha fazla bilgi Için, [belge açıklamaları](/dotnet/csharp/language-reference/language-specification/documentation-comments/) sayfasına bakın.
+**MainWindow. xaml. cs** sekmesindeki C# kodunda açıklamaları kullanma hakkında daha fazla bilgi Için, [belge açıklamaları](/dotnet/csharp/language-reference/language-specification/documentation-comments/) sayfasına bakın.
 
 ### <a name="xaml-lightbulbs"></a>XAML lightbs
 
@@ -270,7 +273,7 @@ XAML kod Düzenleyicisi için varsayılan ayarları değiştirmek üzere [Seçen
 
 > [!NOTE]
 > Ayrıca, Seçenekler iletişim kutusuna erişmek için klavye kısayollarını da kullanabilirsiniz. Şöyle açıklanmaktadır:  + IDE aramak için CTRL **Q** tuşlarına basın, **Seçenekler** yazın ve ardından **ENTER** tuşuna basın. Sonra,  + Seçenekler iletişim kutusunda CTRL **E** ' ye basın, **metin düzenleyici** yazın, **ENTER** tuşuna basın, **xaml** yazın ve ardından **ENTER** tuşuna basın.
->  
+>
 > Klavye kısayolları hakkında daha fazla bilgi için bkz. [Visual Studio Için kısayol ipuçları](../ide/productivity-shortcuts.md#code-editor) sayfası.
 
 ### <a name="universal-text-editor-options"></a>Evrensel metin düzenleyici seçenekleri

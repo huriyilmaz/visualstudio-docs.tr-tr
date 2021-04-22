@@ -1,8 +1,8 @@
 ---
 title: Programlama Unity için Visual Studio Araçları | Microsoft Docs
-description: Unity için Visual Studio Araçları (VSTU) API 'sini kullanarak programlama örneklerine bakın. VSTU tarafından oluşturulan proje dosyalarını özelleştirme. Unity günlük geri aramasını VSTU ile paylaşma.
+description: Unity için Visual Studio Araçları (VSTU) API 'sini kullanarak programlama örneklerine bakın. VSTU tarafından oluşturulan proje dosyalarını özelleştirme.
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 04/19/2021
 ms.technology: vs-unity-tools
 ms.prod: visual-studio-dev16
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: c98a3cdbcece87ad5e8fbe0e91ae76f677494477
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 4d81284faba4d75eb00c5905c868a4b4b69a82a4
+ms.sourcegitcommit: 3e1ff87fba290f9e60fb4049d011bb8661255d58
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "94341838"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "107879297"
 ---
 # <a name="program-visual-studio-tools-for-unity"></a>Unity için Visual Studio Araçları’nı Programlama
 Bu bölümde, Unity için Visual Studio Araçları API 'sini kullanma örnekleri bulacaksınız.
@@ -26,7 +26,4 @@ Bu bölümde, Unity için Visual Studio Araçları API 'sini kullanma örnekleri
  Unity için Visual Studio Araçları API 'Lerini nasıl kullanabileceğinizi gösteren bazı örnekler aşağıda verilmiştir.
 
 ### <a name="customize-project-files-created-by-vstu"></a>VSTU tarafından oluşturulan proje dosyalarını özelleştirme
- Unity için Visual Studio Araçları proje dosyası oluşturma sırasında Unity stili geri çağırma sağlar. Her oluşturulduğunda proje dosyasını nasıl değiştirebileceğinizi öğrenmek için bkz. [örnek: proje dosyası oluşturma](./customize-project-files-created-by-vstu.md).
-
-### <a name="share-the-unity-log-callback-with-vstu"></a>VSTU ile Unity günlük geri aramasını paylaşma
- Unity için Visual Studio Araçları, kendi konsolunu Visual Studio 'ya akıkabilmek için Unity ile bir günlük geri çağırma kaydeder. Düzenleyici betikleriniz Ayrıca Unity ile bir günlük geri çağırma işlemini de kaydettirebilir, VSTU geri çağırması onunla karışabilir. VSTU ile Unity günlük geri aramasını nasıl paylaşacağınızı öğrenmek için bkz. [örnek: günlük geri çağırma](./share-the-unity-log-callback-with-vstu.md).
+ Unity, proje dosyası oluşturma sırasında geri çağrılar sağlar. Her oluşturulduğunda proje veya çözüm dosyalarını nasıl değiştirebileceğiniz hakkında bilgi edinmek için bkz. [örnek: proje dosyası oluşturma](./customize-project-files-created-by-vstu.md).
