@@ -905,15 +905,8 @@
       href: ide/walkthrough-creating-a-multiple-computer-build-environment.md
 - name: Hata ayıklama >>
   href: debugger/index.yml
-- name: Sürüm denetimi
-  expanded: true
-  items:
-    - name: Visual Studio 'da yeni git deneyimi
-      href: ide/git-with-visual-studio.md
-    - name: Visual Studio 'Nun kaynak denetimini nasıl kolaylaştırdığını
-      href: ide/git-visual-studio-source-control.md
-    - name: Git ve Takım Gezgini yan yana karşılaştırın
-      href: ide/git-team-explorer-feature-comparison.md
+- name: Sürüm denetimi >>
+  href: version-control/index.yml
 - name: Test >>
   displayName: Unit testing
   href: test/index.yml

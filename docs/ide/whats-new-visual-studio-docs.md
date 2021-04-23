@@ -15,12 +15,12 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: e6e7dfd0d677412ded44459c7850fa9028142c42
-ms.sourcegitcommit: be14ae4b95e289f16e9444293bb2ec997d4b4d72
+ms.openlocfilehash: 863ba91f88ee953ce7d62179ff3b50aca5500c83
+ms.sourcegitcommit: 5fb684ff8729eb118aa91ce9f049c79eeb9747b1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "107031586"
+ms.lasthandoff: 04/23/2021
+ms.locfileid: "107913065"
 ---
 # <a name="visual-studio-docs-whats-new-for-march-2021"></a>Visual Studio belgeleri: Mart 2021 ' deki yenilikler
 
@@ -85,9 +85,9 @@ Mart 2021 için Visual Studio docs 'daki yenilikler 'e hoş geldiniz. Bu makaled
 ## <a name="ide"></a>IDE
 
 **Yeni makaleler**
-- [Visual Studio 'nun kaynak denetimini nasıl basit hale getiren](./git-visual-studio-source-control.md) yeni Visual Studio kaynak denetimi konusu
+- [Visual Studio 'nun kaynak denetimini nasıl basit hale getiren](../version-control/git-visual-studio-source-control.md) yeni Visual Studio kaynak denetimi konusu
 - [Geliştirici komut istemi ve geliştirici PowerShell](./reference/command-prompt-powershell.md) -Geliştirici komut istemi ve geliştirici PowerShell
-- [Git ve Takım Gezgini yan yana karşılaştırması](./git-team-explorer-feature-comparison.md) -Takım Gezgini ve yeni git özelliklerinin yeni yan yana karşılaştırma sayfası ekleme
+- [Git ve Takım Gezgini yan yana karşılaştırması](../version-control/git-team-explorer-feature-comparison.md) -Takım Gezgini ve yeni git özelliklerinin yeni yan yana karşılaştırma sayfası ekleme
 
 **Güncelleştirilmiş makaleler**
 

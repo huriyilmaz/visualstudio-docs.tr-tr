@@ -1,0 +1,48 @@
+### YamlMime:Landing
+title: Visual Studio sürüm denetimi belgeleri
+summary: Visual Studio 2019 içinden git ve GitHub gibi sürüm denetimi teknolojilerini kullanarak kodunuzu paylaşabilirsiniz.
+metadata:
+  title: Visual Studio 'da sürüm denetimi
+  description: Git ve GitHub gibi sürüm denetimi teknolojileri doğrudan Visual Studio içinde bulunabilir. Kod tabanınızdan çıkmadan kodunuzu paylaşmak ve yönetmek için kullanabilirsiniz.
+  ms.topic: landing-page
+  ms.date: 04/20/2021
+  author: TerryGLee
+  ms.author: tglee
+  manager: jmartens
+  ms.prod: visual-studio-windows
+  ms.technology: vs-general-ide
+  ms.openlocfilehash: a377d39b0d8184dc7aca038238f2dacb0345627d
+  ms.sourcegitcommit: 5fb684ff8729eb118aa91ce9f049c79eeb9747b1
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 04/23/2021
+  ms.locfileid: "107917914"
+landingContent:
+- title: Genel Bakış
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Visual Studio 'da git deneyimi
+      url: git-with-visual-studio.md
+  - linkListType: concept
+    links:
+    - text: Visual Studio 'Nun kaynak denetimini nasıl kolaylaştırdığını
+      url: git-visual-studio-source-control.md
+- title: başlarken
+  linkLists:
+  - linkListType: learn
+    links:
+    - text: Visual Studio 'da git ve GitHub ile çalışmaya başlama
+      url: /learn/modules/visual-studio-github-push/
+  - linkListType: how-to-guide
+    links:
+    - text: Git ve Takım Gezgini yan yana karşılaştırın
+      url: git-team-explorer-feature-comparison.md
+- title: Yenilikler
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: Visual Studio 'da git ile geliştirilmiş üretkenlik (Önizleme)
+      url: https://devblogs.microsoft.com/visualstudio/enhanced-productivity-with-git-in-visual-studio/
+    - text: Visual Studio 2019 sürüm notları
+      url: /visualstudio/releases/2019/release-notes/

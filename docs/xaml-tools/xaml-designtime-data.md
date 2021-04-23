@@ -7,12 +7,12 @@ author: alihamie
 ms.author: tglee
 manager: jmartens
 monikerRange: vs-2019
-ms.openlocfilehash: 4bd059fa82f8a959d6e3b8a843f19cbec636fb7e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 915fe38da63f0b3994a809b20515fdc18e0790ce
+ms.sourcegitcommit: 5fb684ff8729eb118aa91ce9f049c79eeb9747b1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99880417"
+ms.lasthandoff: 04/23/2021
+ms.locfileid: "107913078"
 ---
 # <a name="use-design-time-data-with-the-xaml-designer-in-visual-studio"></a>Visual Studio 'da XAML Tasarımcısı tasarım zamanı verilerini kullanma
 
@@ -66,7 +66,10 @@ Sayfaya bağlı olan veya dinamik olarak yüklenen görüntüler için bir tasar
 
 ## <a name="design-time-data-for-listviews"></a>ListViews için tasarım zamanı verileri
 
-ListViews, masaüstü uygulamanızdaki verileri görüntülemenin popüler bir yoludur. Ancak, herhangi bir veri olmadan görselleştirmeleri zordur. Bu özelliği, bir satır içi tasarım zamanı veri ItemSource oluşturmak için kullanabilirsiniz. XAML Tasarımcısı, tasarım zamanında ListView içinde bu dizide yer alan öğeleri görüntüler. Bu, WPF .NET Core için bir örnektir. System: String türünü kullanmak için XAML üst bilgisine dahil ettiğinizden emin olun `xmlns:system="clr-namespace:System;assembly=mscorlib` .
+ListViews, masaüstü uygulamanızdaki verileri görüntülemenin popüler bir yoludur. Ancak, herhangi bir veri olmadan görselleştirmeleri zordur. Bu özelliği, bir satır içi tasarım zamanı veri ItemSource veya öğeleri oluşturmak için kullanabilirsiniz. XAML Tasarımcısı, tasarım zamanında ListView içinde bu dizide yer alan öğeleri görüntüler.
+
+### <a name="wpf-net-core--example"></a>WPF .NET Core örneği
+System: String türünü kullanmak için XAML üst bilgisine dahil ettiğinizden emin olun `xmlns:system="clr-namespace:System;assembly=mscorlib` .
 
 ```xml
 <StackPanel>
@@ -135,6 +138,22 @@ xmlns:models="clr-namespace:Cities.Models"
 [![ListView ile tasarım zamanı verilerinde gerçek model](media\xaml-design-time-listview-models.png "ListView ile gerçek model tasarım zamanı verileri")](media\xaml-design-time-listview-models.png#lightbox)
 
 Buradaki avantaj, denetimlerinizi modelinizin tasarım zamanı statik sürümüne bağlayabilmeniz için gereken avantajdır.
+
+### <a name="uwp-example"></a>UWP örneği 
+
+, UWP 'de x:Array desteklenmez. Bu nedenle, `<d:ListView.Items>` bunun yerine kullanabiliriz. System: String türünü kullanmak için XAML üst bilgisine dahil ettiğinizden emin olun `http://schemas.microsoft.com/winfx/2009/xaml` .
+
+```xml
+    <StackPanel>
+        <ListView>
+            <d:ListView.Items>
+                <system:String>Item One</system:String>
+                <system:String>Item Two</system:String>
+                <system:String>Item Three</system:String>
+            </d:ListView.Items>
+        </ListView>
+    </StackPanel>
+```
 
 ## <a name="use-design-time-data-with-custom-types-and-properties"></a>Özel türler ve özelliklerle tasarım zamanı verileri kullanma
 

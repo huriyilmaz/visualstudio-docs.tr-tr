@@ -15,12 +15,12 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 60e1aca5e0f561539f3e27cf36dac67bb92c4ddf
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 9e4c432afb1a4341dbe30f023d95bfccb4689094
+ms.sourcegitcommit: 5fb684ff8729eb118aa91ce9f049c79eeb9747b1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105082029"
+ms.lasthandoff: 04/23/2021
+ms.locfileid: "107913104"
 ---
 # <a name="whats-new-in-visual-studio-2019"></a>Visual Studio 2019’daki yenilikler
 
@@ -146,7 +146,7 @@ Daha fazla bilgi için bkz. [Get to Code: yeni Visual Studio başlangıç pencer
 
 **16,8 ' deki yenilikler**: git artık Visual Studio 2019 ' de varsayılan sürüm denetimi deneyimidir. Son iki yayın sırasında geri bildirimlerinizi temel alarak, özellik kümesini geliştirdik ve bu, yineleyecek şekilde serbest bırakıldı. Yeni deneyim artık herkes için varsayılan olarak açıktır. Yeni Git menüsünde depoları kopyalayabilir, oluşturabilir veya açabilirsiniz. Kodunuzda değişiklikleri yürütmek ve göndermek, dalları yönetmek, uzak depolarınızda güncel kalmak ve birleştirme çakışmalarını çözmek için tümleşik git araç pencerelerini kullanın.
 
-Daha fazla bilgi için bkz. [Visual Studio 'Da git deneyimi](git-with-visual-studio.md) sayfası.
+Daha fazla bilgi için bkz. [Visual Studio 'Da git deneyimi](../version-control/git-with-visual-studio.md) sayfası.
 
 ### <a name="live-share"></a>Live Share
 
@@ -228,7 +228,7 @@ Bu sırada, şu anda çalışmadaki yeni bir özellik aşağıda verilmiştir.
 
    Yeni git sürüm denetimi deneyimi artık Visual Studio 2019 [sürüm 16,8](/visualstudio/releases/2019/release-notes/)' de varsayılan olarak açık olsa da, deneyimi en yeni önizleme sürümünde iyileştirmek için özellikler eklemeye devam ediyoruz.
 
-   Daha fazla bilgi için bkz. [Visual Studio 'Da git deneyimi](git-with-visual-studio.md) sayfası.
+   Daha fazla bilgi için bkz. [Visual Studio 'Da git deneyimi](../version-control/git-with-visual-studio.md) sayfası.
 
 Önizleme sürümü ve bir indirme bağlantısı hakkında daha fazla bilgi için &mdash; &mdash; bkz. **[Visual Studio önizleme](https://aka.ms/vspreview/)** sayfası.
 

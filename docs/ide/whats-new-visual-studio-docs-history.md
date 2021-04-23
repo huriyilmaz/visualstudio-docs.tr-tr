@@ -15,12 +15,12 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 05af4933569e988b35bea9763a27d8f68aae3627
-ms.sourcegitcommit: be14ae4b95e289f16e9444293bb2ec997d4b4d72
+ms.openlocfilehash: d29c8be82ba0461231d9cd02eb6799dd38a690ed
+ms.sourcegitcommit: 5fb684ff8729eb118aa91ce9f049c79eeb9747b1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "107031599"
+ms.lasthandoff: 04/23/2021
+ms.locfileid: "107913039"
 ---
 # <a name="history-of-whats-new-in-visual-studio-docs"></a>Visual Studio belgelerindeki yeniliklerin geçmişi
 
@@ -296,7 +296,7 @@ Visual Studio docs 'taki yenilikler geçmişine hoş geldiniz. Bu makalede Mart 
 
 **Güncelleştirilmiş makaleler**
 
-- [Visual Studio 'da git deneyimi](./git-with-visual-studio.md)
+- [Visual Studio 'da git deneyimi](../version-control/git-with-visual-studio.md)
   - Alt metin & meta veriler güncelleştirildi
   - 16,8 GA için yeni git deneyimi içeriğine yönelik güncelleştirmeler
 - [Visual Studio 2019 ' deki yenilikler](./whats-new-visual-studio-2019.md)
@@ -482,7 +482,7 @@ Visual Studio docs 'taki yenilikler geçmişine hoş geldiniz. Bu makalede Mart 
 
 **Yeni makaleler**
 
-- [Visual Studio 'Da yeni git deneyimi (Önizleme)](./git-with-visual-studio.md) -yeni git deneyimi içeriği ekleme (Önizleme)
+- [Visual Studio 'Da yeni git deneyimi (Önizleme)](../version-control/git-with-visual-studio.md) -yeni git deneyimi içeriği ekleme (Önizleme)
 - [C++ Editorconfig biçimlendirme kuralları](./cpp-editorconfig-properties.md) -Yeni Makale
 - [GitHub Codespaces nedir? (Önizleme)](./codespaces/codespaces-overview.md) -Codespaces (Önizleme) içeriği ekleme
 - [Codespace 'i özelleştirme (Önizleme)](./codespaces/customize-codespaces.md) -codespaces (Önizleme) içeriğini ekleme
