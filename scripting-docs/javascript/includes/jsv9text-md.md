@@ -1,1 +1,0 @@
-Internet Explorer 9 standartları modu, Internet Explorer 10 standartları modu, Internet Explorer 11 standartları modu ve Windows Mağazası uygulamaları
