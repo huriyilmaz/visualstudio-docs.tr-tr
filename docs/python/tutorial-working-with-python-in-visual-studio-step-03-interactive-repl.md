@@ -11,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: c4ae447976798372e049df46552f8383389f7b3e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e82073b77231f84452ba51402f407904142bbf8e
+ms.sourcegitcommit: 925db7adb9cb554b081c7e727d09680d4863feed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99920769"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "107941103"
 ---
 # <a name="step-3-use-the-interactive-repl-window"></a>3. Adım: etkileşimli REPL penceresini kullanma
 
@@ -40,7 +40,7 @@ Python için Visual Studio **etkileşimli** penceresi, olağan düzenleme-oluşt
 
     ![Python etkileşimli penceresi anlık sonuçları](media/vs-getting-started-python-12-interactive2.png)
 
-1. Bir işlev tanımı gibi çok satırlı bir ifade yazmaya başladığınızda **etkileşimli** pencere, Python 'un **..** . satırına devam etmek için komut satırı REPL 'un aksine otomatik girintileme sağlar:
+1. Bir işlev tanımı gibi çok satırlı bir ifade yazmaya başladığınızda **etkileşimli** pencere, Python 'un **..** . satırına devam etmek için komut satırı REPL 'un aksine otomatik girintileme sağlar. Yeni bir **...** satırı eklemek için şunu basın `Shift+Enter` :
 
     ![Deyimle devam eden Python etkileşimli penceresi](media/vs-getting-started-python-13-interactive3.png)
 

@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 461e68979de6c3b711c05cc4be3ef9d5bd761397
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: df3d32bfedfc730b8fae0837ce0e48f50e6496f4
+ms.sourcegitcommit: 925db7adb9cb554b081c7e727d09680d4863feed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99885943"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "107941155"
 ---
 # <a name="create-a-c-extension-for-python"></a>Python için C++ uzantısı oluşturma
 
@@ -399,16 +399,16 @@ Visual Studio, Python ve C++ kod hatalarını birlikte ayıklamayı destekler. B
 
 Aşağıdaki tabloda açıklandığı gibi Python uzantıları oluşturmak için çeşitli araçlar vardır. Cpıthon ve PyBind11 için ilk iki giriş bu makalede zaten ele alınmıştır.
 
-| Yaklaşım | Vinsat | Temsilci Kullanıcı (ler) | Pro (ler) | Con (ler) |
-| --- | --- | --- | --- | --- |
-| Cpyıthon için C/C++ uzantı modülleri | 1991 | Standart Kitaplık | [Kapsamlı belge ve öğreticiler](https://docs.python.org/3/c-api/). Toplam denetim. | Derleme, taşınabilirlik, başvuru yönetimi. Yüksek C bilgisi. |
-| [PyBind11](https://github.com/pybind/pybind11) (C++ için önerilir) | 2015 |  | Mevcut C++ kodunun Python bağlamalarını oluşturmak için yalnızca hafif ve üst bilgi kitaplığı. Birkaç bağımlılık. PyPy uyumluluğu. | Daha yeni, daha az olgun. C++ 11 özelliklerinin ağır kullanımı. Desteklenen derleyicilerin kısa listesi (Visual Studio dahildir). |
-| Cython (C için önerilir) | 2007 | [gevent](https://www.gevent.org/), [kivy](https://kivy.org/) | Python benzeri. Yüksek olgun. Yüksek performans. | Derleme, yeni sözdizimi, yeni araç zinciri. |
-| [Boost. Python](https://www.boost.org/doc/libs/1_66_0/libs/python/doc/html/index.html) | 2002 | | Yalnızca her C++ derleyicisi ile birlikte kullanılır. | Büyük ve karmaşık kitaplıklar paketi; Eski derleyiciler için birçok geçici çözüm içerir. |
-| ctypes | 2003 | [scryptoto](https://github.com/wbond/oscrypto) | Derleme, geniş kullanılabilirlik yok. | C yapılarına erişme ve bunları azaltma ve hataya açıktır. |
-| YÜZIK | 1996 | [crfsuite](http://www.chokkan.org/software/crfsuite/) | Aynı anda birçok dil için bağlama oluşturun. | Python tek hedef ise aşırı yük yükü. |
-| cffi | 2013 | [şifreleme](https://cryptography.io/en/latest/), [PyPy](https://pypy.org/) | Tümleştirme kolaylığı, PyPy uyumluluğu. | Daha yeni, daha az olgun. |
-| [cppyy](https://cppyy.readthedocs.io/en/latest/) | 2017 | | C++ kullanarak cffı 'ye benzer. | Daha yeni bir deyişle VS 2017 ile ilgili bazı sorunlar olabilir. |
+| Yaklaşım | Vinsat | Temsilci Kullanıcı (ler) | 
+| --- | --- | --- |
+| Cpyıthon için C/C++ uzantı modülleri | 1991 | Standart Kitaplık | 
+| [PyBind11](https://github.com/pybind/pybind11) (C++ için önerilir) | 2015 |  |
+| Cython (C için önerilir) | 2007 | [gevent](https://www.gevent.org/), [kivy](https://kivy.org/) |
+| [Boost. Python](https://www.boost.org/doc/libs/1_66_0/libs/python/doc/html/index.html) | 2002 | |
+| ctypes | 2003 | [scryptoto](https://github.com/wbond/oscrypto) | 
+| YÜZIK | 1996 | [crfsuite](http://www.chokkan.org/software/crfsuite/) | 
+| cffi | 2013 | [şifreleme](https://cryptography.io/en/latest/), [PyPy](https://pypy.org/) |
+| [cppyy](https://cppyy.readthedocs.io/en/latest/) | 2017 | |
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

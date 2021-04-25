@@ -688,6 +688,8 @@
       items:
         - name: Döküm dosyalarını kullanma
           href: using-dump-files.md
+        - name: Yönetilen bellek dökümünde hata ayıklama
+          href: how-to-debug-managed-memory-dump.md
         - name: Döküm Dosyası Özeti Genişletilebilirlik API
           href: dump-file-summary-extensibility-api.md
     - name: Hata ayıklayıcısı güvenliği

@@ -23,12 +23,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 993b5f61d8517d5638cb785fa2d79b47f80d1caf
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f3b72db232e5e83a0d83fbab1d1223da507054d9
+ms.sourcegitcommit: 925db7adb9cb554b081c7e727d09680d4863feed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99940559"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "107941129"
 ---
 # <a name="dump-files-in-the-visual-studio-debugger"></a>Visual Studio hata ayıklayıcısındaki döküm dosyaları
 
@@ -43,6 +43,10 @@ Visual Studio hata ayıklayıcı, yönetilen veya yerel kod için döküm dosyal
 ## <a name="requirements-and-limitations"></a><a name="BKMK_Requirements_and_limitations"></a> Gereksinimler ve sınırlamalar
 
 - 64 bitlik makinelerden alınan döküm dosyalarında hata ayıklamak için, Visual Studio 'Nun 64 bit bir makinede çalışıyor olması gerekir.
+
+::: moniker range=">= vs-2019"
+- Visual Studio, Linux IŞLETIM sisteminden yönetilen uygulamaların döküm dosyalarının hatalarını ayıklayabilir. 
+::: moniker-end
 
 - Visual Studio, ARM cihazlarından yerel uygulamaların döküm dosyalarının hatalarını ayıklayabilir. Ayrıca, yalnızca yerel hata ayıklayıcıda, ARM cihazlarından yönetilen uygulamaların dökümlerinde hata ayıklama yapabilir.
 
@@ -116,6 +120,7 @@ Visual Studio, dökümdeki bir modülün hatalarını ayıklamak için gereken d
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
+- [.NET tanılama Çözümleyicileri ile yönetilen bellek dökümünde hata ayıklama](../debugger/how-to-debug-managed-memory-dump.md)
 - [Tam zamanında hata ayıklama](../debugger/just-in-time-debugging-in-visual-studio.md)
 - [Sembol (. pdb) ve kaynak dosyaları belirtme](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)
 - [IntelliTrace](../debugger/intellitrace.md)
