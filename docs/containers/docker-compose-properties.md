@@ -7,12 +7,12 @@ ms.author: ghogen
 ms.date: 04/06/2021
 ms.technology: vs-azure
 ms.topic: reference
-ms.openlocfilehash: 7f1ebb11133c640c2e0bdcfd84660592792d4205
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: ed4b2a0dc1dc7a0520bf8e83ab1968a3815196e0
+ms.sourcegitcommit: e12d6cdaeb37564f05361965db2ec8ad0d4f21ad
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107825010"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "108025871"
 ---
 # <a name="docker-compose-build-properties"></a>Docker Compose derleme özellikleri
 
@@ -37,16 +37,17 @@ Aşağıdaki tabloda Docker Compose projeleri için kullanılabilen MSBuild öze
 | Özellik adı | Konum | Description | Varsayılan değer  |
 |---------------|----------|-------------|----------------|
 |AdditionalComposeFilePaths|dcproj|Tüm komutlar için docker-compose.exe gönderilmek üzere, noktalı virgülle ayrılmış bir listede ek oluşturma dosyaları belirtir. Docker-Compose proje dosyasından (dcproj) göreli yollara izin verilir.|-|
-|DockerComposeBaseFilePath|dcproj|Docker-Compose dosyalarının dosya adlarının ilk kısmını *. yıml* uzantısı olmadan belirtir. Örnek: <br>1. DockerComposeBaseFilePath = null/tanımsız: *Docker-Compose* taban dosya yolunu kullanın ve dosyalar *Docker-Compose. yml* ve *Docker-Compose. override. yml* olarak adlandırılır<br>2. DockerComposeBaseFilePath = *mydockercompose*: dosyalar *mydockercompose. yml* ve *mydockercompose. override. yml* olarak adlandırılacak<br> 3. DockerComposeBaseFilePath = *.. \mydockercompose*: dosyalar bir düzey yukarı kalacak. |Docker-Compose|
-|DockerComposeBuildArguments|dcproj|Komuta geçirilecek ek parametreleri belirtir `docker-compose build` . Örneğin, `--parallel --pull` |
-|DockerComposeDownArguments|dcproj|Komuta geçirilecek ek parametreleri belirtir `docker-compose down` . Örneğin, `--timeout 500`|-|
+|DockerComposeBaseFilePath|dcproj|Docker-Compose dosyalarının dosya adlarının ilk kısmını *. yıml* uzantısı olmadan belirtir. Örnek: <br>1. DockerComposeBaseFilePath = null/tanımsız: *Docker-Compose* temel dosya yolunu kullanın ve dosyalar *Docker-Compose. yml* ve *Docker-Compose. override. yml* olarak adlandırılır.<br>2. DockerComposeBaseFilePath = *mydockercompose*: dosyalar *mydockercompose. yml* ve *mydockercompose. override. yml* olarak adlandırılır.<br> 3. DockerComposeBaseFilePath = *.. \mydockercompose*: dosyalar bir düzey yukarı kalacak. |Docker-Compose|
+|DockerComposeBuildArguments|dcproj|Komuta geçirilecek ek parametreleri belirtir `docker-compose build` . Örneğin, `--parallel --pull`. |
+|DockerComposeDownArguments|dcproj|Komuta geçirilecek ek parametreleri belirtir `docker-compose down` . Örneğin, `--timeout 500`.|-|  
 |DockerComposeProjectName| dcproj | Belirtilmişse, Docker-Compose projesi için proje adını geçersiz kılar. | "dockercompose" + otomatik üretilen karma |
 |DockerComposeProjectPath|csproj veya vbproj|Docker-Compose projesi (dcproj) dosyasının göreli yolu. Docker-Compose. yıml dosyasında depolanan ilişkili görüntü derleme ayarlarını bulmak için hizmet projesini yayımlarken bu özelliği ayarlayın.|-|
-|DockerComposeUpArguments|dcproj|Komuta geçirilecek ek parametreleri belirtir `docker-compose up` . Örneğin, `--timeout 500`|-|
-|DockerDevelopmentMode|dcproj| "Konak oluşturma" iyileştirmesi ("hızlı mod" hata ayıklama) etkin olup olmadığını denetler.  İzin verilen değerler `Fast` ve ' dir `Regular` . | `Fast` Hata ayıklama yapılandırmasında veya `Regular` diğer tüm yapılandırmalarda |
-|DockerLaunchAction| dcproj | F5 veya CTRL + F5 üzerinde gerçekleştirilecek başlatma eylemini belirtir.  İzin verilen değerler None, LaunchBrowser ve LaunchWCFTestClient 'Tur.|Yok|
+|Dockercomposeprojectstoıgnore|dcproj| Hata ayıklama sırasında Docker-Compose araçları tarafından yoksayılacak projeleri belirtir. Bu özellik, herhangi bir proje için kullanılabilir. Dosya yolları iki yöntemden biri belirtilebilir: <br> 1. dcproj 'e göre. Örneğin, `<DockerComposeProjectsToIgnore>path\to\AngularProject1.csproj</DockerComposeProjectsToIgnore>`. <br> 2. mutlak yollar.<br> **Note**: yollar sınırlayıcı karakterle ayrılmalıdır `;` .|-|
+|DockerComposeUpArguments|dcproj|Komuta geçirilecek ek parametreleri belirtir `docker-compose up` . Örneğin, `--timeout 500`.|-|
+|DockerDevelopmentMode| dcproj | Kullanıcı projesinin kapsayıcıda oluşturulup oluşturulmayacağını denetler. Bir Dockerfile içinde [oluşturulan aşamaların](https://aka.ms/containerfastmode) **hızlı** veya **normal** denetim için izin verilen değerler. Hata ayıklama yapılandırması varsayılan olarak hızlı mod ve normal mod değildir. | Hızlı |
+|DockerLaunchAction| dcproj | F5 veya CTRL + F5 üzerinde gerçekleştirilecek başlatma eylemini belirtir.  İzin verilen değerler None, LaunchBrowser ve LaunchWCFTestClient 'Tur. | Yok |
 |DockerLaunchBrowser| dcproj | Tarayıcının başlatılıp başlatılmayacağını belirtir. DockerLaunchAction belirtilmişse yoksayıldı. | Yanlış |
-|DockerServiceName| dcproj|DockerLaunchAction veya DockerLaunchBrowser belirtilmişse DockerServiceName, başlatılacak hizmetin adıdır.  Bu özelliği kullanarak, bir Docker-Compose dosyasının başvurmasına yönelik olabilecek çok sayıda projeden hangisini başlatılacağı belirlenir.|-|
+|DockerServiceName| dcproj| DockerLaunchAction veya DockerLaunchBrowser belirtilmişse DockerServiceName, Docker-Compose dosyasında başvurulan hizmetin başlatılacağını belirtir.|-|
 |DockerServiceUrl 'Si| dcproj | Tarayıcı başlatılırken kullanılacak URL.  Geçerli değiştirme belirteçleri şunlardır "{Serviceıpaddress}", "{ServicePort}" ve "{Scheme}".  Örneğin: {Scheme}: ı{serviceipaddress}: {ServicePort}|-|
 |DockerTargetOS| dcproj | Docker görüntüsü oluşturulurken kullanılan hedef işletim sistemi.|-|
 

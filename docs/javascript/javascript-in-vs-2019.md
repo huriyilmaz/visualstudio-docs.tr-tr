@@ -14,12 +14,12 @@ author: mikejo5000
 ms.author: mikejo
 manager: jmartens
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: 0fe13030478f62f759b3eabc8e897c09a4295bad
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 267bd8567b60a66bcf9d78c3aef8f02bbc942e0d
+ms.sourcegitcommit: e12d6cdaeb37564f05361965db2ec8ad0d4f21ad
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99936762"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "108025884"
 ---
 # <a name="javascript-and-typescript-in-visual-studio-2019"></a>Visual Studio 2019 ' de JavaScript ve TypeScript
 
@@ -46,4 +46,4 @@ Visual Studio 2019, TypeScript derlemesini projenize tümleştirmek için çeşi
 
 ## <a name="projects"></a>Projeler
 
-UWP JavaScript uygulamaları artık Visual Studio 2019’da desteklenmemektedir. JavaScript UWP projeleri oluşturamaz veya açamazsınız ( *. JSProj* uzantılı dosyalar). Windows üzerinde iyi çalışan [aşamalı Web Apps (PWAs) oluşturma](/microsoft-edge/progressive-web-apps/get-started) hakkındaki belgelerimizi kullanarak daha fazla bilgi edinebilirsiniz.
+UWP JavaScript uygulamaları artık Visual Studio 2019’da desteklenmemektedir. JavaScript UWP projeleri oluşturamaz veya açamazsınız ( *. JSProj* uzantılı dosyalar). Windows üzerinde iyi çalışan [aşamalı Web Apps (PWAs) oluşturma](/microsoft-edge/progressive-web-apps-chromium) hakkındaki belgelerimizi kullanarak daha fazla bilgi edinebilirsiniz.
