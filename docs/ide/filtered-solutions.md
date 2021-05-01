@@ -3,7 +3,6 @@ title: Projelerin bir alt kümesini yükleme
 description: Çözüm filtreleme ve bir çözümdeki projelerin alt kümesini hızlı bir şekilde yüklemenize nasıl izin verdiği hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 04/22/2019
-ms.prod: visual-studio-dev16
 ms.topic: conceptual
 helpviewer_keywords:
 - filtered solution
@@ -12,12 +11,12 @@ author: TerryGLee
 ms.author: stsu
 manager: jmartens
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: 3fc64b5f0623a03443278eaa8e4ee1f47b86da38
-ms.sourcegitcommit: 30c404655fb83ea28f96ab1edb1c09b4d8d7eec4
+ms.openlocfilehash: ea30edbaac7248af8e1a58b76aebd66cf44befba
+ms.sourcegitcommit: a667ce8394a800906d633737f4fcbc77f0fcba7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2021
-ms.locfileid: "108217203"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "108298736"
 ---
 # <a name="filtered-solutions-in-visual-studio"></a>Visual Studio 'da filtrelenmiş çözümler
 
@@ -30,6 +29,9 @@ Aşağıdaki özellikler mevcuttur:
 - Bir çözümü yeniden açtığınızda, Visual Studio önceki oturumunuzda hangi projelerin yüklendiğini anımsar ve yalnızca bu projeleri yükler.
 
 - Bir veya daha fazla proje yük yapılandırması kaydetmek veya yapılandırmayı takım Mates ile paylaşmak için bir çözüm filtresi dosyası oluşturabilirsiniz.
+
+> [!NOTE]
+> Bu konu, Windows üzerinde Visual Studio için geçerlidir.
 
 ## <a name="open-a-filtered-solution"></a>Filtrelenmiş bir çözüm açın
 
