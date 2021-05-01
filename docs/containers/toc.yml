@@ -52,3 +52,5 @@
       href: overview-bridge-to-kubernetes.md
     - name: Bridge to Kubernetes’i yapılandırma
       href: configure-bridge-to-kubernetes.md
+    - name: Kubernetes ile Azure AD yönetilen kimliklerini köprü ile kullanma
+      href: managed-identity.md

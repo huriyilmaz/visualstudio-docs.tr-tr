@@ -3,25 +3,25 @@ title: GitHub Codespaces 'a genel bakış (Önizleme)
 description: Visual Studio ile GitHub Codespaces hakkında daha fazla bilgi edinin ve geliştirme ortamınızı buluta genişletmenize nasıl yardımcı olabileceğini öğrenin.
 ms.topic: overview
 ms.date: 09/04/2020
-author: TerryGLee
-ms.author: tglee
+author: gregvanl
+ms.author: gregvanl
 manager: jmartens
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
 monikerRange: vs-2019
-ms.openlocfilehash: a4bf2cf948b6df65ee0407c1cc736e8056820a54
-ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
+ms.openlocfilehash: ab50c3c2df2cfad6d489d800f47624503844dc9d
+ms.sourcegitcommit: a667ce8394a800906d633737f4fcbc77f0fcba7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104672793"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "108298749"
 ---
 # <a name="what-is-github-codespaces-preview"></a>GitHub Codespaces nedir? (Önizleme)
 
-> [!Important] 
-> 12 Nisan 2021 itibariyle, Visual Studio 2019 ' den GitHub Codespaces 'a bağlanmak artık desteklenmeyecektir ve bu özel önizleme sona ermiştir. Bulut destekli bir iç döngü ve çok sayıda Visual Studio iş yükü için iyileştirilmiş VDı çözümleri için gelişen deneyimlere odaklanıyoruz. Gelecekteki önizlemeler ve yol haritası bilgileri hakkında bilgi için, Visual Studio için [Geliştirici topluluğu forumumuza](https://developercommunity.visualstudio.com/home) dahil etmeniz önerilir. 
+> [!Important]
+> 12 Nisan 2021 itibariyle, Visual Studio 2019 ' den GitHub Codespaces 'a bağlanmak artık desteklenmeyecektir ve bu özel önizleme sona ermiştir. Bulut destekli bir iç döngü ve çok sayıda Visual Studio iş yükü için iyileştirilmiş VDı çözümleri için gelişen deneyimlere odaklanıyoruz. Gelecekteki önizlemeler ve yol haritası bilgileri hakkında bilgi için, Visual Studio için [Geliştirici topluluğu forumumuza](https://developercommunity.visualstudio.com/home) dahil etmeniz önerilir.
 
 Codespaces 'a hoş geldiniz! Burada size sevindik.
 
@@ -39,9 +39,9 @@ GitHub Codespaces özellikleri, birkaç temel kavramın üzerine kurulmuştur. B
 
 Günümüzde birçok geliştirici, belirli geliştirme ve çalışma zamanı yığınları ile yapılandırılan uzak kurulumlarda veya VM 'lerde kod denemeye çalışır. Bu, çok zor, çok kesintiye neden olduğu ve bazı durumlarda bu geliştirme ortamlarını yerel olarak ayarlamak imkansız olduğundan, bu şekilde yapılır. Ayrıca bireyler, yeni teknolojileri veya yeni çerçeveleri, günlük işleri için ihtiyaç duydukları makineleri "kullanıma alma" olmaksızın denemek ister.
 
-Uzak ortamları ve uzaktan özellikli araçları kullanarak geliştiricilere güçlendirirken, genellikle makine yönetiminin ek yükü vardır. Ortam yapılandırması genellikle ekleme ve bağlam geçişini karmaşıklaştırır. GitHub Codespaces, birçok ortamın aynı anda var olmasına olanak tanıyarak hızlı ekleme ve bağlam değiştirme engelleri ortadan kaldırır. 
+Uzak ortamları ve uzaktan özellikli araçları kullanarak geliştiricilere güçlendirirken, genellikle makine yönetiminin ek yükü vardır. Ortam yapılandırması genellikle ekleme ve bağlam geçişini karmaşıklaştırır. GitHub Codespaces, birçok ortamın aynı anda var olmasına olanak tanıyarak hızlı ekleme ve bağlam değiştirme engelleri ortadan kaldırır.
 
-GitHub Codespaces, kurulum üzerinden üretkenliğinizi odaklamenize imkan tanıyan yönetilen çözümler sağlar. GitHub Codespaces, Uzaktan geliştirme için kavramsal ve teknik olarak Visual Studio 2019 ' i genişletir. 
+GitHub Codespaces, kurulum üzerinden üretkenliğinizi odaklamenize imkan tanıyan yönetilen çözümler sağlar. GitHub Codespaces, Uzaktan geliştirme için kavramsal ve teknik olarak Visual Studio 2019 ' i genişletir.
 
 ### <a name="about-codespaces"></a>Codespaces hakkında
 

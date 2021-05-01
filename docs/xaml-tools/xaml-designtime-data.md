@@ -1,18 +1,18 @@
 ---
 title: Visual Studio 'da XAML Tasarımcısı tasarım zamanı verilerini kullanma
 description: XAML 'de tasarım zamanı verilerini nasıl kullanacağınızı öğrenin.
-ms.date: 11/17/2020
+ms.date: 04/22/2021
 ms.topic: overview
 author: alihamie
 ms.author: tglee
 manager: jmartens
 monikerRange: vs-2019
-ms.openlocfilehash: 915fe38da63f0b3994a809b20515fdc18e0790ce
-ms.sourcegitcommit: 5fb684ff8729eb118aa91ce9f049c79eeb9747b1
+ms.openlocfilehash: a9f7f23625bb01c227158f720260f14347d39f9d
+ms.sourcegitcommit: 60b7a6159045a44293043a519c8ea6d915bf2c31
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2021
-ms.locfileid: "107913078"
+ms.lasthandoff: 05/01/2021
+ms.locfileid: "108334947"
 ---
 # <a name="use-design-time-data-with-the-xaml-designer-in-visual-studio"></a>Visual Studio 'da XAML Tasarımcısı tasarım zamanı verilerini kullanma
 
@@ -68,7 +68,7 @@ Sayfaya bağlı olan veya dinamik olarak yüklenen görüntüler için bir tasar
 
 ListViews, masaüstü uygulamanızdaki verileri görüntülemenin popüler bir yoludur. Ancak, herhangi bir veri olmadan görselleştirmeleri zordur. Bu özelliği, bir satır içi tasarım zamanı veri ItemSource veya öğeleri oluşturmak için kullanabilirsiniz. XAML Tasarımcısı, tasarım zamanında ListView içinde bu dizide yer alan öğeleri görüntüler.
 
-### <a name="wpf-net-core--example"></a>WPF .NET Core örneği
+### <a name="wpf-net-core-example"></a>WPF .NET Core örneği
 System: String türünü kullanmak için XAML üst bilgisine dahil ettiğinizden emin olun `xmlns:system="clr-namespace:System;assembly=mscorlib` .
 
 ```xml
@@ -139,7 +139,7 @@ xmlns:models="clr-namespace:Cities.Models"
 
 Buradaki avantaj, denetimlerinizi modelinizin tasarım zamanı statik sürümüne bağlayabilmeniz için gereken avantajdır.
 
-### <a name="uwp-example"></a>UWP örneği 
+### <a name="uwp-example"></a>UWP örneği
 
 , UWP 'de x:Array desteklenmez. Bu nedenle, `<d:ListView.Items>` bunun yerine kullanabiliriz. System: String türünü kullanmak için XAML üst bilgisine dahil ettiğinizden emin olun `http://schemas.microsoft.com/winfx/2009/xaml` .
 
