@@ -7,12 +7,12 @@ ms.assetid: c2853359-18fd-4be4-97a6-02230c862f92
 ms.date: 03/21/2021
 ms.topic: how-to
 description: Yöneticilerin toplu ekleme özelliğini veya Microsoft Azure Active Directory gruplarını kullanarak birden çok aboneye nasıl lisans atayabileceği hakkında bilgi edinin
-ms.openlocfilehash: 4744f689e9b03e4a6cf8c804409abddfde16c527
-ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
+ms.openlocfilehash: 389eb3a578b0b025995c0cd60613d5bcce2e1a9f
+ms.sourcegitcommit: dd2fc6e03a789c044f8438096b8f112e4dba5557
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "104776902"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "108641001"
 ---
 # <a name="assign-subscriptions-to-multiple-users"></a>Birden çok kullanıcıya abonelik atama
 Abonelikler yönetim portalı, kullanıcıları tek seferde veya büyük gruplar halinde eklemenize olanak tanır.  Bireysel kullanıcı eklemek için bkz. [tek kullanıcı ekleme](assign-license.md).
@@ -84,7 +84,6 @@ Bu özelliğin kullanılması, abonelik atamalarınızın üstünde kalmasını 
 > Aboneler eklemek için Azure AD gruplarının kullanımı için aşağıdaki sınırlamalar geçerlidir:
 > - Yönetici, başlangıçta yönetici portalına bir grup eklerken AAD kiracısının bir üyesi olmalıdır.  Grup eklendikten sonra, grupların üyeliğinde yapılan değişiklikler yönetici katılımı gerektirmez. 
 > - Grupların en az bir üye içermesi gerekir.  Boş gruplar desteklenmiyor.
-> - Gruplar 1.000 'den az kullanıcı içermelidir. 
 > - Tüm kullanıcılar grubun en üst düzeyinde olmalıdır.  İç içe gruplar desteklenmiyor.
 > - Yalnızca güvenilen anlaşmalar desteklenir. (Yalnızca ' fazla ayırabilecek ' abonelikler olan anlaşmalar güvenilirdir.)
 > - Grubun tüm üyelerinin Azure AD hesabıyla ilişkilendirilmiş bir e-posta adresi olmalıdır.

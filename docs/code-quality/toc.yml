@@ -49,7 +49,7 @@
             - name: Kod analizi ihlallerini gizleme
               href: in-source-suppression-overview.md
         - name: SSS
-          href: analyzers-faq.md
+          href: analyzers-faq.yml
     - name: Eski analiz
       items:
         - name: Genel Bakış
@@ -92,7 +92,7 @@
             - name: FxCop çözümleyicilerinden .NET çözümleyicilerine geçirme
               href: migrate-from-fxcop-analyzers-to-net-analyzers.md
             - name: SSS
-              href: net-analyzers-faq.md
+              href: net-analyzers-faq.yml
         - name: Kural kümeleri
           items:
             - name: Genel Bakış

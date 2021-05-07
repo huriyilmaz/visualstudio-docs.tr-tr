@@ -13,12 +13,12 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
-ms.openlocfilehash: e435502587e65bd694567f4100516a91fa97cc0a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d6f9c36b1b64abe648c3aa9014c633e4e4949b1a
+ms.sourcegitcommit: d4887ef2ca97c55e2dad9f179eec2c9631d91c95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99867873"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "108798264"
 ---
 # <a name="migrate-from-fxcop-analyzers-to-net-analyzers"></a>FxCop çözümleyicilerinden .NET çözümleyicilerine geçirme
 
@@ -49,8 +49,8 @@ Sürümden itibaren `3.3.2` `Microsoft.CodeAnalysis.FxCopAnalyzers` NuGet paketi
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kaynak kodu analizi ve eski analiz karşılaştırması](net-analyzers-faq.md#whats-the-difference-between-legacy-fxcop-and-net-analyzers)
+- [Kaynak kodu analizi ve eski analiz karşılaştırması](net-analyzers-faq.yml#what-s-the-difference-between-legacy-fxcop-and--net-analyzers-)
 - [Eski analizden .NET çözümleyicilerine geçirme](migrate-from-legacy-analysis-to-net-analyzers.md)
-- [.NET çözümleyicilerinin etkinleştirilmesi veya yüklenmesi](install-net-analyzers.md)
-- [.NET Çözümleyicileri hakkında SSS](net-analyzers-faq.md)
-- [.NET Çözümleyicileri yapılandırma](/dotnet/fundamentals/code-analysis/code-quality-rule-options)
+- [.NET çözümleyicilerini etkinleştirme veya yükleme](install-net-analyzers.md)
+- [.NET çözümleyicileri hakkında SSS](net-analyzers-faq.yml)
+- [.NET çözümleyicilerini yapılandırma](/dotnet/fundamentals/code-analysis/code-quality-rule-options)

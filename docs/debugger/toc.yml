@@ -415,18 +415,18 @@
         - name: Canlı bir Azure Kubernetes uygulamasında hata ayıklama
           href: debug-live-azure-kubernetes.md
         - name: Anlık görüntü hatalarını ayıklama hakkında SSS
-          href: debug-live-azure-apps-faq.md
+          href: debug-live-azure-apps-faq.yml
         - name: Anlık görüntü hatalarını ayıklamayla ilgili sorunları giderme
           href: debug-live-azure-apps-troubleshooting.md
         - name: Canlı Azure sanal makine uygulamasında Zaman Atlatma Hata Ayıklaması
           href: debug-live-azure-virtual-machines-time-travel-debugging.md
-    - name: Linux hata ayıklaması
+    - name: Linux hata ayıklama
       items:
-        - name: WSL 2 ' de .NET Core uygulamalarında hata ayıklama
+        - name: WSL 2'de .NET Core uygulamalarının hata ayıklaması
           href: debug-dotnet-core-in-wsl-2.md
-        - name: Linux üzerinde SSH kullanarak .NET Core hatalarını ayıklama
+        - name: Linux'ta SSH kullanarak .NET Core'da hata ayıklama
           href: remote-debugging-dotnet-core-linux-with-ssh.md
-        - name: Kapsayıcı araçlarıyla hata ayıklama >>
+        - name: Container Tools >> ile hata ayıklama
           href: ../containers/edit-and-refresh.md
     - name: Uygulama türleri
       items:
@@ -949,6 +949,6 @@
 - name: Kaynaklar
   items:
     - name: SSS - Hata ayıklama özelliğinizi bulma
-      href: find-your-debugging-task.md
+      href: find-your-debugging-task.yml
     - name: Visual Studio’da hata ayıklayıcısı yenilikleri
       href: what-s-new-for-the-debugger-in-visual-studio.md

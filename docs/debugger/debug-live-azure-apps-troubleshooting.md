@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 55d6c5a4b9485051f8c0293ad72f78e5cdddca59
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: aad883ac0c3f703b2d6a4e10d3a0ef2468cd8465
+ms.sourcegitcommit: d4887ef2ca97c55e2dad9f179eec2c9631d91c95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99873273"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "108798446"
 ---
 # <a name="troubleshooting-and-known-issues-for-snapshot-debugging-in-visual-studio"></a>Visual Studio 'da anlık görüntü hata ayıklaması için sorun giderme ve bilinen sorunlar
 
@@ -60,32 +60,32 @@ App Service kimlik doğrulaması/yetkilendirme 'yi (EasyAuth) etkinleştirdiysen
 }
 ```
 
-İlk yol, **[IdentityProvider] Ile oturum** açmaya benzer şekilde uygulama etki alanınızı etkin bir şekilde korur. İkinci yol, snapshotdebugger 'ın önceden yüklenmiş site uzantısı App Service için *etkinleştirilmişse, snapshotdebugger tanılama aracısını başlatma* ön tanımlı eylemini gerçekleştiren, Snapshotdebugger agentlaunch uç noktasını kimlik doğrulama dışında kullanıma sunar. Yapılandırma authorization.jshakkında daha fazla bilgi için lütfen bkz. [URL Yetkilendirme kuralları](https://azure.github.io/AppService/2016/11/17/URL-Authorization-Rules.html).
+İlk yol, **[IdentityProvider] Ile oturum** açmaya benzer şekilde uygulama etki alanınızı etkin bir şekilde korur. İkinci yol, snapshotDebugger agentLaunch uç noktasını kimlik doğrulamasının dışında gösterir. Bu uç nokta,  snapshotDebugger tanılama aracısını başlatma işlemini yalnızca SnapshotDebugger önceden yüklenmiş site uzantısı uygulama hizmetiniz için etkinleştirildiğinde gerçekleştirir. Yapılandırmayla ilgili diğer authorization.jsiçin bkz. [URL yetkilendirme kuralları.](https://azure.github.io/AppService/2016/11/17/URL-Authorization-Rules.html)
 
-### <a name="403-forbidden"></a>(403) yasak
+### <a name="403-forbidden"></a>(403) Yasak
 
-Bu hata, iznin reddedildiğini gösterir. Bunun nedeni birçok farklı sorun olabilir.
-
-Şu adımları uygulayın:
-
-* Visual Studio hesabınızın kaynak için gerekli Role-Based Access Control (RBAC) izinlerine sahip geçerli bir Azure aboneliğine sahip olduğunu doğrulayın. AppService için, uygulamanızı barındıran App Service planını [sorgulama](/rest/api/appservice/appserviceplans/get) izniniz olup olmadığını denetleyin.
-* İstemci makinenizin zaman damgasının doğru ve güncel olduğunu doğrulayın. İstek zaman damgasından 15 dakikadan uzun zaman damgalarına sahip sunucular genellikle bu hatayı üretir.
-* Bu hata devam ederse, bu makalenin başlangıcında açıklanan geri bildirim kanallarından birini kullanın.
-
-### <a name="404-not-found"></a>(404) bulunamadı
-
-Bu hata, Web sitesinin sunucuda bulunamadığını gösterir.
+Bu hata iznin reddedilir olduğunu gösterir. Bunun nedeni birçok farklı sorun olabilir.
 
 Şu adımları uygulayın:
 
-* Bağladığınız App Service kaynağında dağıtılan ve çalışan bir Web sitenizin olduğunu doğrulayın.
-* Sitenin https://. azurewebsites.net adresinde kullanılabilir olduğunu doğrulayın \<resource\>
-* Özel Web uygulamasını çalıştırmanın, https://. azurewebsites.net adresinden erişildiğinde 404 durum kodunu döndürmediğinden emin olun \<resource\>
-* Bu hata devam ederse, bu makalenin başlangıcında açıklanan geri bildirim kanallarından birini kullanın.
+* Kaynak için gerekli Visual Studio (RBAC) izinlerine sahip geçerli bir Azure Role-Based Access Control olduğunu doğrulayın. AppService için, App Service [Plan'da](/rest/api/appservice/appserviceplans/get) sorgu App Service izinlerine sahip olup olamayabilirsiniz.
+* İstemci makinenizin zaman damgasının doğru ve güncel olduğunu doğrulayın. İstek zaman damgasının 15 dakikadan uzun bir süre kapalı olduğu sunucular genellikle bu hatayı üretir.
+* Bu hata devam ederse, bu makalenin başında açıklanan geri bildirim kanallarından birini kullanın.
 
-### <a name="406-not-acceptable"></a>(406) kabul edilemez
+### <a name="404-not-found"></a>(404) Bulunamadı
 
-Bu hata, sunucunun isteğin Accept üst bilgisinde ayarlanan türe yanıt veremediğini belirtir.
+Bu hata web sitesinin sunucuda buluna olmadığını gösterir.
+
+Şu adımları uygulayın:
+
+* Web sitenizin dağıtıldığından ve bağlı App Service kaynakta çalıştırıldığından emin olun.
+* Sitenin \<resource\> .https:// azurewebsites.net
+* Düzgün çalışan özel web uygulamanıza .https:// .azurewebsites.net üzerinden erişilirken 404 durum kodu azurewebsites.net \<resource\>
+* Bu hata devam ederse, bu makalenin başında açıklanan geri bildirim kanallarından birini kullanın.
+
+### <a name="406-not-acceptable"></a>(406) Kabul Edilemez
+
+Bu hata, sunucunun isteğin Accept üst bilgisinde ayarlanmış türe yanıt veremiyor olduğunu gösterir.
 
 Şu adımları uygulayın:
 
@@ -121,30 +121,30 @@ Bu hata, sunucu tarafı ağ sorununu gösterir ve geçici olabilir.
 
 Şu adımları uygulayın:
 
-* Snapshot Debugger tekrar iliştirmeden önce birkaç dakika bekledikten sonra deneyin.
-* Bu hata devam ederse, bu makalenin başlangıcında açıklanan geri bildirim kanallarından birini kullanın.
+* Yeniden eklemeden önce birkaç dakika Snapshot Debugger deneyin.
+* Bu hata devam ederse, bu makalenin başında açıklanan geri bildirim kanallarından birini kullanın.
 
-## <a name="issue-snappoint-does-not-turn-on"></a>Sorun: anlık görüntü noktası açık değil
+## <a name="issue-snappoint-does-not-turn-on"></a>Sorun: Anlık bileşen aç değil
 
-Anlık görüntü noktası simgesi yerine anlık görüntü noktanız ile bir uyarı simgesi anlık görüntü ![uyarısı simgesi](../debugger/media/snapshot-troubleshooting-snappoint-warning-icon.png "Anlık görüntü noktası uyarı simgesi") görürseniz, anlık görüntü noktası açık değildir.
+Normal ek bileşen simgesi yerine anlık görüntü ![noktanız](../debugger/media/snapshot-troubleshooting-snappoint-warning-icon.png "Anlık görüntü uyarısı simgesi") ile birlikte bir uyarı simgesi Yas noktası uyarı simgesi görüyorsanız, anlık görüntü açık değildir.
 
-![Anlık görüntü noktası açık değil](../debugger/media/snapshot-troubleshooting-dont-turn-on.png "Anlık görüntü noktası açık değil")
-
-Şu adımları uygulayın:
-
-1. Uygulamanızı derlemek ve dağıtmak için kullanılan aynı kaynak kodu sürümüne sahip olduğunuzdan emin olun. Dağıtımınız için doğru sembolleri yüklediğinizden emin olun. Bunu yapmak için, anlık görüntü hata ayıklaması sırasında **modüller** penceresini görüntüleyin ve sembol dosyası sütununda, hata ayıkladığınız modül için yüklenmiş bir. pdb dosyası olduğunu doğrulayın. Snapshot Debugger, dağıtımınız için sembolleri otomatik olarak indirmeye ve kullanmaya çalışacaktır.
-
-## <a name="issue-symbols-do-not-load-when-i-open-a-snapshot"></a>Sorun: bir anlık görüntü açtığımda semboller yüklenmiyor
-
-Aşağıdaki pencereyi görürseniz, semboller yüklenmedi.
-
-![Simgeler yüklenmiyor](../debugger/media/snapshot-troubleshooting-symbols-wont-load.png "Simgeler yüklenmiyor")
+![Anlık ek bileşen aç değil](../debugger/media/snapshot-troubleshooting-dont-turn-on.png "Anlık ek bileşen aç değil")
 
 Şu adımları uygulayın:
 
-- **Sembol ayarlarını değiştir...** öğesine tıklayın. Bu sayfada bağlantı. **Hata ayıklama > sembol** ayarlarında, bir sembol önbellek dizini ekleyin. Sembol yolu ayarlandıktan sonra anlık görüntü hata ayıklamayı yeniden başlatın.
+1. Uygulamanızı derlemek ve dağıtmak için kullanılan kaynak kodun aynı sürümüne sahip olduğundan emin olun. Dağıtımınız için doğru sembolleri yüklerken emin olun. Bunu yapmak için  Anlık Görüntü Hata Ayıklama sırasında Modüller penceresini açın ve Sembol Dosyası sütununda hata ayıklamakta olan modül için yüklenmiş bir .pdb dosyası olduğunu doğrulayın. Bu Snapshot Debugger, dağıtımınız için sembolleri otomatik olarak indirmeyi ve kullanmayı dener.
 
-   Projenizde bulunan semboller veya. pdb dosyaları App Service dağıtımınız ile aynı olmalıdır. Çoğu dağıtım (Visual Studio ile dağıtım, Azure Pipelines veya Kudu ile olan CI/CD), sembol dosyalarınızı App Service yayınlayacak. Sembol önbelleği dizininin ayarlanması, Visual Studio 'Nun bu sembolleri kullanmasına olanak sağlar.
+## <a name="issue-symbols-do-not-load-when-i-open-a-snapshot"></a>Sorun: Anlık görüntü açken semboller yüklenemedi
+
+Aşağıdaki pencereyi görüyorsanız simgeler yüklenmedi.
+
+![Semboller yüklenemedi](../debugger/media/snapshot-troubleshooting-symbols-wont-load.png "Semboller yüklenemedi")
+
+Şu adımları uygulayın:
+
+- Sembol Ayarlarını **Değiştir...** bağlantısına tıklayın. Hata Ayıklama **> Simgesi** ayarlarına bir sembol önbellek dizini ekleyin. Sembol yolu ayar başlatıldıktan sonra anlık görüntü hata ayıklamasını yeniden başlatın.
+
+   Projeniz için kullanılabilir olan simgeler veya .pdb dosyaları, dağıtım sırasında App Service gerekir. Çoğu dağıtım (Visual Studio ile dağıtım, Azure Pipelines veya Kudu ile olan CI/CD), sembol dosyalarınızı App Service yayınlayacak. Sembol önbelleği dizininin ayarlanması, Visual Studio 'Nun bu sembolleri kullanmasına olanak sağlar.
 
    ![Sembol ayarları](../debugger/media/snapshot-troubleshooting-symbol-settings.png "Sembol ayarları")
 
@@ -171,34 +171,34 @@ Aşağıdaki pencereyi görürseniz, semboller yüklenmedi.
 
 ## <a name="issue-i-only-see-throttled-snapshots-in-the-diagnostic-tools"></a>Sorun: Tanılama Araçları yalnızca kısıtlanmış anlık görüntüleri görüyorum
 
-![Kısıtlanmış anlık görüntü noktası](../debugger/media/snapshot-troubleshooting-throttled-snapshots.png "Kısıtlanmış anlık görüntü noktası")
+![Kısıtlanmış anlık görüntü noktası](../debugger/media/snapshot-troubleshooting-throttled-snapshots.png "Kısıtlandı ek bileşen noktası")
 
 Şu adımları uygulayın:
 
-- Anlık görüntüler çok az bellek alır ancak bir kayıt ücretine sahiptir. Snapshot Debugger sunucunuzun ağır bellek yükü altında olduğunu algılarsa anlık görüntü almaz. Snapshot Debugger oturumunu durdurup yeniden deneyerek, zaten yakalanan anlık görüntüleri silebilirsiniz.
+- Anlık görüntüler çok az bellek alır ancak işleme ücreti vardır. Sunucu Snapshot Debugger yoğun bellek yükü altında olduğunu algılarsa anlık görüntü almaz. Önceden yakalanan anlık görüntüleri silmek için oturum Snapshot Debugger yeniden sınabilirsiniz.
 
 ::: moniker range=">= vs-2019"
-## <a name="issue-snapshot-debugging-with-multiple-versions-of-the-visual-studio-gives-me-errors"></a>Sorun: Visual Studio 'nun birden çok sürümü ile anlık görüntü hata ayıklaması bana hata veriyor
+## <a name="issue-snapshot-debugging-with-multiple-versions-of-the-visual-studio-gives-me-errors"></a>Sorun: Uygulamanın birden çok sürümüyle anlık görüntü Visual Studio hata veriyor
 
-Visual Studio 2019, Azure App Service Snapshot Debugger site uzantısının daha yeni bir sürümünü gerektirir.  Bu sürüm, Visual Studio 2017 tarafından kullanılan Snapshot Debugger site uzantısının eski sürümüyle uyumlu değil.  Visual Studio 2019 ' deki Snapshot Debugger, daha önce Visual Studio 2017 ' de Snapshot Debugger tarafından hata ayıklaması yapılmış bir Azure App Service iliştirmeye çalışırsanız aşağıdaki hatayı alırsınız:
+Visual Studio 2019 için, Snapshot Debugger site uzantının yeni bir sürümü Azure App Service.  Bu sürüm, Visual Studio 2017 tarafından kullanılan Snapshot Debugger site uzantısının eski sürümüyle uyumlu değildir.  Visual Studio 2019'da Snapshot Debugger'ı daha önce Snapshot Debugger 2017'de Snapshot Debugger tarafından hata ayıklaması yapılan bir Azure App Service'a eklemeye Visual Studio hata alırsınız:
 
-![Uyumsuz Snapshot Debugger site uzantısı Visual Studio 2019](../debugger/media/snapshot-troubleshooting-incompatible-vs2019.png "Uyumsuz Snapshot Debugger site uzantısı Visual Studio 2019")
+![2019 Snapshot Debugger site Visual Studio uyumsuz](../debugger/media/snapshot-troubleshooting-incompatible-vs2019.png "Uyumsuz Snapshot Debugger site uzantısı Visual Studio 2019")
 
-Buna karşılık, Snapshot Debugger iliştirmek için Visual Studio 2017 kullanıyorsanız, daha önce Visual Studio 2019 ' de Snapshot Debugger tarafından hata ayıklaması yapılmış bir Azure App Service eklemek için aşağıdaki hatayı alırsınız:
+Buna karşılık, Visual Studio 2017 kullanarak Snapshot Debugger'ı Azure App Service'da Snapshot Debugger tarafından daha önce Visual Studio 2019'da hata ayıklandırılan bir Visual Studio'a iliştirmek için aşağıdaki hatayı alırsınız:
 
-![Uyumsuz Snapshot Debugger site uzantısı Visual Studio 2017](../debugger/media/snapshot-troubleshooting-incompatible-vs2017.png "Uyumsuz Snapshot Debugger site uzantısı Visual Studio 2017")
+![2017 Snapshot Debugger site Visual Studio uyumsuz](../debugger/media/snapshot-troubleshooting-incompatible-vs2017.png "Uyumsuz Snapshot Debugger site uzantısı Visual Studio 2017")
 
-Bu hatayı onarmak için Azure portal aşağıdaki uygulama ayarlarını silin ve Snapshot Debugger yeniden ekleyin:
+Bunu düzeltmek için aşağıdaki Uygulama ayarlarını Azure portal silin ve Snapshot Debugger yeniden iliştirin:
 
 - INSTRUMENTATIONENGINE_EXTENSION_VERSION
 - SNAPSHOTDEBUGGER_EXTENSION_VERSION
 ::: moniker-end
 
-## <a name="issue-i-am-having-problems-snapshot-debugging-and-i-need-to-enable-more-logging"></a>Sorun: anlık görüntü hata ayıklaması sorun yaşıyorum ve daha fazla günlüğe kaydetmeyi etkinleştirmem gerekiyor
+## <a name="issue-i-am-having-problems-snapshot-debugging-and-i-need-to-enable-more-logging"></a>Sorun: Anlık Görüntü Hata Ayıklama ile ilgili sorunm var ve daha fazla günlüğe kaydetmeyi etkinleştirmem gerekiyor
 
-### <a name="enable-agent-logs"></a>Aracı günlüklerini etkinleştir
+### <a name="enable-agent-logs"></a>Aracı Günlüklerini Etkinleştirme
 
-Aracı günlüğünü etkinleştirmek ve devre dışı bırakmak için, Visual Studio 'Yu aç *>araçlar>Seçenekler ' e gidin>Snapshot Debugger aracı günlüğünü etkinleştirin*. Bu *oturum açma işlemi için eski aracı günlüklerini sil* özelliği de etkinse, başarılı olan her Visual Studio Iliştirme önceki aracı günlüklerini siler.
+Aracı günlüğünü etkinleştirmek ve devre dışı bırakmak için Visual Studio Aracı günlüğünü *etkinleştir'>Seçenekler>Snapshot Debugger>'a gidin.* Oturum başlatma *sırasında eski aracı günlüklerini sil özelliği* de etkinse, her başarılı Visual Studio önceki Aracı günlüklerini silebilir.
 
 Aracı günlükleri aşağıdaki konumlarda bulunabilir:
 
@@ -230,23 +230,23 @@ Aracı günlükleri aşağıdaki konumlarda bulunabilir:
 - Roslyn Il iyileştirmeleri ASP.NET Core projelerinde tam olarak desteklenmez. Bazı ASP.NET Core projeleri için bazı değişkenleri görmeyebilirsiniz veya Koşullu deyimlerde bazı değişkenler kullanamazsınız.
 - *$FUNCTION* veya *$Caller* gibi özel değişkenler, ASP.NET Core projeler için Koşullu deyimlerde veya günlüğe kaydetme noktaları 'de değerlendirilemiyor.
 - Anlık görüntü hata ayıklaması, [yerel önbelleğe alma](/azure/app-service/app-service-local-cache) özelliği açık olan uygulama hizmetleri üzerinde çalışmaz.
-- Anlık görüntü hata ayıklama API Apps Şu anda desteklenmiyor.
+- Anlık görüntü API Apps şu anda desteklenmiyor.
 
-## <a name="site-extension-upgrade"></a>Site uzantısı yükseltmesi
+## <a name="site-extension-upgrade"></a>Site Uzantısı Yükseltmesi
 
-Anlık görüntü hata ayıklaması ve Application Insights, site işlemine yüklenen ve yükseltme sırasında dosya kilitleme sorunlarına neden olan bir ICorProfiler 'a bağımlıdır. Üretim sitenize yönelik bir süre olmamasını sağlamak için bu işlemi öneririz.
+Anlık Görüntü Hata Application Insights, site sürecine yüklenen ve yükseltme sırasında dosya kilitleme sorunlarına neden olan bir ICorProfiler'a bağlıdır. Üretim sitenize çalışma zamanlarının çalışmaması için bu işlemi öneririz.
 
-- App Service içinde bir [dağıtım yuvası](/azure/app-service/web-sites-staged-publishing) oluşturun ve sitenizi yuvaya dağıtın.
-- Visual Studio 'daki bulut Gezgini 'nden veya Azure portal, bu yuvayı üretim ile değiştirin.
-- Yuva sitesini durdurun. Bu, tüm örneklerden site w3wp.exe işlemini sonlandırmak birkaç saniye sürer.
-- Yuva sitesi uzantısını kudu sitesinden veya Azure portal (*App Service dikey pencere > geliştirme araçları > uzantıları > güncelleştirme*) yükseltin.
-- Yuva sitesini başlatın. Yeniden ısınma için siteyi ziyaret etmenizi öneririz.
-- Yuvayı üretim ile değiştirin.
+- Uygulamanızın [içinde bir](/azure/app-service/web-sites-staged-publishing) Dağıtım Yuvası App Service ve sitenizi Yuvaya dağıtın.
+- Yuvayı, Visual Studio veya Azure portal.
+- Yuva sitesini durdurun. Bu işlem, tüm örneklerden siteyi ve w3wp.exe birkaç saniye sürer.
+- Yuva sitesi uzantısını Kudu sitesinden veya Azure portal 'den yükseltin ( App Service Blade > Geliştirme Araçları > Uzantıları *> Güncelleştirmesi).*
+- Yuva sitesini başlatma. Siteyi yeniden ısınacak şekilde ziyaret edebilirsiniz.
+- Yuvayı üretimle değiştirin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Studio'da Hata Ayıklama](../debugger/index.yml)
-- [Snapshot Debugger kullanarak canlı ASP.NET uygulamalarında hata ayıklama](../debugger/debug-live-azure-applications.md)
-- [Snapshot Debugger kullanarak canlı ASP.NET Azure sanal makine ölçek kümelerinde hata ayıkla](../debugger/debug-live-azure-virtual-machines.md)
-- [Snapshot Debugger kullanarak canlı ASP.NET Azure Kubernetes hatalarını ayıklama](../debugger/debug-live-azure-kubernetes.md)
-- [Anlık görüntü hatalarını ayıklama hakkında SSS](../debugger/debug-live-azure-apps-faq.md)
+- [Snapshot Debugger kullanarak ASP.NET uygulamalarda canlı Snapshot Debugger](../debugger/debug-live-azure-applications.md)
+- [Azure Sanal ASP.NET\Sanal Makineler Ölçek Kümeleri'nin canlı hata ayıklaması Snapshot Debugger](../debugger/debug-live-azure-virtual-machines.md)
+- [Snapshot Debugger kullanarak Azure Kubernetes'ASP.NET canlı hata ayıklaması Snapshot Debugger](../debugger/debug-live-azure-kubernetes.md)
+- [Anlık görüntü hatalarını ayıklama hakkında SSS](../debugger/debug-live-azure-apps-faq.yml)

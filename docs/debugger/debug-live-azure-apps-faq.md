@@ -13,11 +13,11 @@ manager: jmartens
 ms.workload:
 - multiple
 ms.openlocfilehash: 9bd8a80f7f6d11587c9f0cd5c6b9bf96e38a0a74
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.sourcegitcommit: dd2fc6e03a789c044f8438096b8f112e4dba5557
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99873243"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "108800499"
 ---
 # <a name="frequently-asked-questions-for-snapshot-debugging-in-visual-studio"></a>Visual Studio 'da anlık görüntü hata ayıklaması için sık sorulan sorular
 
@@ -35,31 +35,31 @@ Uygulamanızın birden çok örneğine sahip olduğunuzda, anlık görüntü nok
 
 Snapshot Debugger, uygulamanız için yerel ya da Azure App Service dağıtılan eşleşen simgelere sahip olmanızı gerektirir. (Embedded pdb 'leri Şu anda desteklenmiyor.) Snapshot Debugger, Azure App Service sembolleri otomatik olarak indirir. Visual Studio 2017 sürüm 15,2 ' den başlayarak, Azure App Service dağıtım, uygulamanızın sembollerini de dağıtır.
 
-#### <a name="does-the-snapshot-debugger-work-against-release-builds-of-my-application"></a>Snapshot Debugger uygulamamın yayın Derlemeleriyle mi çalışıyor?
+#### <a name="does-the-snapshot-debugger-work-against-release-builds-of-my-application"></a>Uygulamam Snapshot Debugger derlemelerine karşı çalışıyor mu?
 
-Evet-Snapshot Debugger yayın yapılarına karşı çalışmak üzere tasarlanmıştır. Bir anlık görüntü noktası bir işleve yerleştirildiğinde, işlev bir hata ayıklama sürümüne yeniden derlenir, bunu hata ayıklanabilir yapar. Snapshot Debugger durdurulduğunda, işlev yayın derlemesinin sürümüne döndürülür.
+Evet - Snapshot Debugger derlemelere karşı çalışması amaçlanan bir uygulamadır. Bir işleve ek bileşen yerleştirilsin, işlev bir hata ayıklama sürümüne geri yeniden kodlanabilir ve bu da hata ayıklanabilir hale döner. Bu Snapshot Debugger, işlevleri yayın derlemesi sürümüne döndürür.
 
-#### <a name="can-logpoints-cause-side-effects-in-my-production-application"></a>Günlüğe kaydetme noktaları, üretim uygulamamda yan etkilere neden olabilir mi?
+#### <a name="can-logpoints-cause-side-effects-in-my-production-application"></a>Logpoint'ler üretim uygulamamda yan etkilere neden olabilir mi?
 
-Hayır-uygulamanıza eklediğiniz herhangi bir günlük iletisi neredeyse değerlendirilir. Uygulamanızda herhangi bir yan etkiye neden olamaz. Ancak, bazı yerel özellikler logpoints ile erişilebilir olmayabilir.
+Hayır - Uygulamanıza ekley istediğiniz günlük iletileri sanal olarak değerlendirilir. Bunlar uygulamanıza herhangi bir yan etkiye neden olabilir. Ancak, bazı yerel özelliklere günlük noktalarıyla erişilemiyor olabilir.
 
-#### <a name="does-the-snapshot-debugger-work-if-my-server-is-under-load"></a>Sunucum yükleme altındaysa Snapshot Debugger çalışır mi?
+#### <a name="does-the-snapshot-debugger-work-if-my-server-is-under-load"></a>Sunucum Snapshot Debugger sunucum çalışıyor mu?
 
-Evet, anlık görüntü hata ayıklaması yük altındaki sunucular için çalışabilir. Snapshot Debugger, sunucunuzda düşük miktarda boş bellek olduğu durumlarda, anlık görüntüleri kısıtlar ve yakalamaz.
+Evet, anlık görüntü hata ayıklaması yük altındaki sunucular için kullanılabilir. Bu Snapshot Debugger, sunucunuzda düşük miktarda boş bellek bulunduğu durumlarda anlık görüntüleri kısıtlamaz ve yakalamaz.
 
-#### <a name="how-do-i-uninstall-the-snapshot-debugger"></a>Snapshot Debugger Nasıl yaparım? kaldırmak istiyor musunuz?
+#### <a name="how-do-i-uninstall-the-snapshot-debugger"></a>Nasıl yaparım? kaldırabilirsiniz Snapshot Debugger?
 
-App Service Snapshot Debugger site uzantısını aşağıdaki adımlarla kaldırabilirsiniz:
+Aşağıdaki adımları Snapshot Debugger site uzantınızı App Service site uzantısını kaldırabilirsiniz:
 
-1. App Service, Visual Studio veya Azure portal bulut Gezgini aracılığıyla kapatın.
-1. App Service kudu sitenize (yani, yourappservice) gidin.**SCM**. azurewebsites.net) ve **site uzantılarına** gidin.
-1. Kaldırmak için Snapshot Debugger site uzantısında X öğesine tıklayın.
+1. App Service'daki Bulut Gezgini'Visual Studio veya Azure portal.
+1. Uygulamanıza App Service kudu sitesine (yani, uygulama hizmetinize) gidin.**scm**.azurewebsites.net) ve **Site uzantıları'ne gidin.**
+1. Site uzantısını kaldırmak Snapshot Debugger X'e tıklayın.
 
-#### <a name="why-are-ports-opened-during-a-snapshot-debugger-session"></a>Snapshot Debugger oturumu sırasında bağlantı noktaları neden açıldı?
+#### <a name="why-are-ports-opened-during-a-snapshot-debugger-session"></a>Bağlantı noktaları neden bir oturum Snapshot Debugger açıldı?
 
-Snapshot Debugger, Azure 'da alınan anlık görüntülerde hata ayıklamak için bir bağlantı noktası kümesi açması gerekir, bunlar uzaktan hata ayıklama için gereken bağlantı noktalarıyla aynıdır. [Bağlantı noktalarının listesini buradan bulabilirsiniz](../debugger/remote-debugger-port-assignments.md).
+Snapshot Debugger azure'da alınan anlık görüntülerde hata ayıklamak için bir bağlantı noktası kümesi açmanız gerektiğinde, bunlar uzaktan hata ayıklama için gereken bağlantı noktalarıyla aynıdır. [Bağlantı noktalarının listesini burada bulabilirsiniz.](../debugger/remote-debugger-port-assignments.md)
 
-#### <a name="how-do-i-disable-the-remote-debugger-extension"></a>Nasıl yaparım? uzaktan hata ayıklayıcı uzantısını devre dışı bırakmak istiyor musunuz?
+#### <a name="how-do-i-disable-the-remote-debugger-extension"></a>Nasıl yaparım? Hata Ayıklayıcısı uzantısını devre dışı bırakmak mı?
 
 Uygulama Hizmetleri için:
 1. App Service için Azure portal uzaktan hata ayıklayıcı uzantısını devre dışı bırakın.
@@ -103,13 +103,13 @@ Sanal makine/sanal makine ölçek kümeleri için uzaktan hata ayıklayıcı uza
          > [!NOTE]
          > Sanal Makine Ölçek Kümeleri-Portal DebuggerListener bağlantı noktalarının kaldırılmasına izin vermez. Azure PowerShell kullanmanız gerekir. Ayrıntılar için aşağıya bakın.
 
-2. Sertifikaları ve Azure Keykasasını kaldırma
+2. Sertifikaları ve Azure KeyVault'ı kaldırma
 
-   Sanal makine veya sanal makine ölçek kümeleri için uzaktan hata ayıklayıcı uzantısı yüklenirken, Visual Studio istemcisinin kimliğini Azure sanal makinesi/sanal makine ölçek kümeleri kaynaklarıyla doğrulamak için hem istemci hem de sunucu sertifikaları oluşturulur.
+   Sanal makine veya sanal makine ölçek kümeleri için Uzaktan Hata Ayıklayıcı uzantısını yüklerken, Azure Sanal Makine/sanal makine ölçek kümeleri kaynaklarıyla Visual Studio istemcinin kimliğini doğrulamak için hem istemci hem de sunucu sertifikaları oluşturulur.
 
-   - Istemci sertifikası
+   - İstemci Sertifikası
 
-      Bu sertifika, CERT:/CurrentUser/My/öğesinde bulunan kendinden imzalı bir sertifikadır.
+      Bu sertifika, Cert:/CurrentUser/My/ içinde bulunan otomatik olarak imzalanan bir sertifikadır
 
       ```
       Thumbprint                                Subject
@@ -118,17 +118,17 @@ Sanal makine/sanal makine ölçek kümeleri için uzaktan hata ayıklayıcı uza
       1234123412341234123412341234123412341234  CN=ResourceName
       ```
 
-      Bu sertifikayı makinenizden kaldırmanın bir yolu PowerShell ile
+      Bu sertifikayı makineden kaldırmanın bir yolu PowerShell aracılığıyla kaldırmaktır
 
       ```powershell
       $ResourceName = 'ResourceName' # from above
       Get-ChildItem -Path Cert:\CurrentUser\My | Where-Object {$_.Subject -match $ResourceName} | Remove-Item
       ```
 
-   - Sunucu sertifikası
-      - Karşılık gelen sunucu sertifikası parmak izi, Azure Keykasasında gizli dizi olarak dağıtılır. Visual Studio, sanal makine veya sanal makine ölçek kümeleri kaynağına karşılık gelen bölgede MSVSAZ * önekiyle bir Keykasası bulmayı veya oluşturmayı dener. Bu bölgeye dağıtılan tüm sanal makine veya sanal makine ölçek kümeleri kaynakları aynı anahtar kasasını paylaşır.
-      - Sunucu sertifikası parmak izi gizli anahtarını silmek için Azure portal gidin ve parolanızı barındıran bölgede MSVSAZ * Keykasasını bulun. Etiketlenmesi gereken gizli anahtarı sil `remotedebugcert<<ResourceName>>`
-      - Ayrıca, PowerShell aracılığıyla kaynağından sunucu parolasını da silmeniz gerekir.
+   - Sunucu Sertifikası
+      - İlgili sunucu sertifikası parmak izi, Azure KeyVault'a gizli anahtar olarak dağıtılır. Visual Studio makine veya sanal makine ölçek kümeleri kaynağına karşılık gelen bölgede MSVSAZ* ön ekli bir KeyVault bulmaya veya oluşturmaya çalışacak. Bu nedenle, bu bölgeye dağıtılan tüm sanal makine veya sanal makine ölçek kümeleri kaynakları aynı KeyVault'ları paylaşır.
+      - Sunucu sertifikası parmak izi gizli anahtarını silmek için Azure portal gidin ve kaynağınızı barındıran bölgede MSVSAZ* KeyVault'unu bulun. Etiketlenmiş olması gereken gizli adı silin `remotedebugcert<<ResourceName>>`
+      - Ayrıca PowerShell aracılığıyla kaynağından sunucu gizli ını da silmeniz gerekir.
 
       Sanal makineler için:
 
@@ -137,16 +137,16 @@ Sanal makine/sanal makine ölçek kümeleri için uzaktan hata ayıklayıcı uza
       Update-AzVM -ResourceGroupName $rgName -VM $vm
       ```
 
-      Sanal Makine Ölçek Kümeleri için:
+      Sanal makine ölçek kümeleri için:
 
       ```powershell
       $vmss.VirtualMachineProfile.OsProfile.Secrets[0].VaultCertificates.Clear()
       Update-AzVmss -ResourceGroupName $rgName -VMScaleSetName $vmssName -VirtualMachineScaleSet $vmss
       ```
 
-3. Tüm DebuggerListener gelen NAT havuzlarını Kaldır (yalnızca sanal makine ölçek kümesi)
+3. Tüm DebuggerListener Gelen NAT havuzlarını kaldırma (yalnızca sanal makine ölçek kümesi)
 
-   Uzaktan hata ayıklayıcı, scaleset 'in yük dengeleyicisine uygulanan bir DebuggerListener 'ın bağlantılı NAT havuzlarını tanıtır.
+   Uzaktan Hata Ayıklayıcı, ölçek kümenizin yük dengeleyiciye uygulanan DebuggerListener bağlı NAT havuzlarını tanıtıyor.
 
    ```powershell
    $inboundNatPools = $vmss.VirtualMachineProfile.NetworkProfile.NetworkInterfaceConfigurations.IpConfigurations.LoadBalancerInboundNatPools
@@ -160,10 +160,10 @@ Sanal makine/sanal makine ölçek kümeleri için uzaktan hata ayıklayıcı uza
    }
    ```
 
-#### <a name="how-do-i-disable-snapshot-debugger"></a>Snapshot Debugger devre dışı Nasıl yaparım??
+#### <a name="how-do-i-disable-snapshot-debugger"></a>Nasıl yaparım? devre dışı Snapshot Debugger?
 
-App Service için:
-1. App Service için Azure portal aracılığıyla Snapshot Debugger devre dışı bırakın.
+Daha App Service:
+1. Kendi Snapshot Debugger için Azure portal aracılığıyla App Service.
 2. Uygulama *ayarlarını* > uygulama hizmeti kaynak dikey penceresini > Azure Portal
 3. Azure portal aşağıdaki uygulama ayarlarını silin ve değişikliklerinizi kaydedin.
    - INSTRUMENTATIONENGINE_EXTENSION_VERSION

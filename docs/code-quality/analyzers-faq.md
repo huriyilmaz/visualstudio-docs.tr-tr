@@ -12,11 +12,11 @@ manager: jmartens
 ms.workload:
 - multiple
 ms.openlocfilehash: 6d67471027f36d0e22c055f4306ce2137d972463
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.sourcegitcommit: dd2fc6e03a789c044f8438096b8f112e4dba5557
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99843754"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "108800529"
 ---
 # <a name="code-analysis-faq"></a>Kod Analizi hakkında SSS
 
@@ -45,31 +45,31 @@ Kural kümelerine ve EditorConfig dosyalarına ek olarak, bazı çözümleyicile
 > - EditorConfig dosyaları yalnızca kuralları etkinleştirmek ve Visual Studio 2019 sürüm 16,3 ve üzeri önem derecesini ayarlamak için kullanılabilir.
 > - EditorConfig dosyaları eski Analizi yapılandırmak için kullanılamaz, ancak kural kümeleri olabilir.
 
-## <a name="code-analysis-in-ci-builds"></a>CI Derlemeleriyle kod analizi
+## <a name="code-analysis-in-ci-builds"></a>CI derlemeleri içinde kod analizi
 
-**S**: .net Compiler platform tabanlı kod analizi sürekli TÜMLEŞTIRME (CI) Derlemeleriyle çalışıyor mu?
+**S:**.NET Compiler Platform tabanlı kod analizi sürekli tümleştirme (CI) derlemeleri üzerinde çalışır mı?
 
-Y **: Evet**. Bir NuGet paketinden yüklenen çözümleyiciler için, bu kurallar bir CI derlemesi de dahil olmak üzere [derleme zamanında zorlanır](roslyn-analyzers-overview.md#build-errors). CI 'de kullanılan çözümleyiciler, kural kümelerinden ve EditorConfig dosyalarından gelen kural yapılandırmasına göre oluşturulur. Şu anda, Visual Studio 'da yerleşik olarak bulunan kod Çözümleyicileri bir NuGet paketi olarak kullanılamaz ve bu nedenle bu kurallar bir CI derlemesinde öngörülenebilir değildir.
+**A:** Evet. Bir NuGet paketinden yüklenmiş çözümleyiciler için, [](roslyn-analyzers-overview.md#build-errors)bu kurallar CI derlemesi sırasında dahil olmak üzere derleme zamanında uygulanır. CI derlemesinde kullanılan çözümleyiciler, hem kural kümelerinden hem de EditorConfig dosyalarından kural yapılandırmasını karşılar. Şu anda, Visual Studio yerleşik kod çözümleyicileri nuGet paketi olarak kullanılamaz ve bu nedenle bu kurallar CI derlemesinde zorlanmaz.
 
-## <a name="ide-analyzers-versus-stylecop"></a>IDE Çözümleyicileri ve StyleCop karşılaştırması
+## <a name="ide-analyzers-versus-stylecop"></a>IDE çözümleyicileri ile StyleCop karşılaştırması
 
-**S**: VISUAL Studio IDE kod Çözümleyicileri ve StyleCop Çözümleyicileri arasındaki fark nedir?
+**S:** IDE kod çözümleyicileri Visual Studio StyleCop çözümleyicileri arasındaki fark nedir?
 
-Y **: Visual** Studio IDE, hem kod stili hem de kalite sorunlarına yönelik yerleşik çözümleyiciler içerir. Bu kurallar, sunulan yeni dil özelliklerini kullanmanıza ve kodunuzun bakımlılığını iyileştirmenize yardımcı olur. IDE Çözümleyicileri her bir Visual Studio sürümüyle sürekli olarak güncelleştirilir.
+**A:** Visual Studio IDE, hem kod stili hem de kalite sorunlarını bulan yerleşik çözümleyiciler içerir. Bu kurallar, yeni dil özelliklerini kullanmaya ve kodunuzun bakımını geliştirmenize yardımcı olur. IDE çözümleyicileri her bir sürümle Visual Studio güncelleştirilir.
 
-[StyleCop Çözümleyicileri](https://github.com/DotNetAnalyzers/StyleCopAnalyzers) , kodunuzda stil tutarlılığını denetleyen bir NuGet paketi olarak yüklenen üçüncü taraf Çözümleyicileri. Genel olarak, StyleCop kuralları bir kod tabanı için kişisel tercihlerinizi, başka bir stil önermeksizin ayarlamanıza olanak sağlar.
+[StyleCop çözümleyicileri,](https://github.com/DotNetAnalyzers/StyleCopAnalyzers) kodunuzda stil tutarlılığını kontrol eden bir NuGet paketi olarak yüklenmiş üçüncü taraf çözümleyicileridir. Genel olarak, StyleCop kuralları bir kod tabanı için bir stili diğerine önermeden kişisel tercihler ayarlamanızı sağlar.
 
-## <a name="code-analyzers-versus-legacy-analysis"></a>Kod Çözümleyicileri ve eski analizler
+## <a name="code-analyzers-versus-legacy-analysis"></a>Kod çözümleyicileri ile eski analiz karşılaştırması
 
-**S**: eski analiz ve .net Compiler platform tabanlı kod analizi arasındaki fark nedir?
+**S:** Eski analiz ile .NET Compiler Platform arasındaki fark nedir?
 
-Y **: .net Compiler platform** tabanlı kod analizi, kaynak kodu gerçek zamanlı ve derleme sırasında analiz ederken, eski analiz derleme tamamlandıktan sonra ikili dosyaları analiz eder. Daha fazla bilgi için bkz. [.net Compiler platform tabanlı analizler ve eski analizler](../code-quality/net-analyzers-faq.md#whats-the-difference-between-legacy-fxcop-and-net-analyzers).
+**A:**.NET Compiler Platform tabanlı kod analizi, kaynak kodu gerçek zamanlı olarak ve derleme sırasında analiz ederken, eski analiz derleme tamamlandıktan sonra ikili dosyaları analiz eder. Daha fazla bilgi için [bkz. .NET Compiler Platform tabanlı analiz ile eski analiz karşılaştırması.](../code-quality/net-analyzers-faq.md#whats-the-difference-between-legacy-fxcop-and-net-analyzers)
 
-## <a name="fxcop-analyzers-versus-net-analyzers"></a>FxCop çözümleyicileri, .NET çözümleyicilerine karşı
+## <a name="fxcop-analyzers-versus-net-analyzers"></a>FxCop çözümleyicileri ile .NET çözümleyicileri karşılaştırması
 
-**S**: FxCop çözümleyicileri ve .net Çözümleyicileri arasındaki fark nedir?
+**S:** FxCop çözümleyicileri ile .NET çözümleyicileri arasındaki fark nedir?
 
-Y **: hem** FxCop çözümleyicileri hem de .net Çözümleyicileri, FxCop CA kurallarının .net Compiler platform ("Roslyn") çözümleyici uygulamalarına başvurur. Visual Studio 2019 16,8 ve .NET 5,0 öncesinde, bu çözümleyiciler `Microsoft.CodeAnalysis.FxCopAnalyzers` [NuGet paketi](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers)olarak gönderilir. Visual Studio 2019 16,8 ve .NET 5,0 'den başlayarak, bu çözümleyiciler [.NET SDK 'ya dahildir](/dotnet/fundamentals/code-analysis/overview). Bunlar ayrıca `Microsoft.CodeAnalysis.NetAnalyzers` [NuGet paketi](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers)olarak da kullanılabilir. Lütfen [FxCop çözümleyicileri ' nden .net çözümleyicilerine geçiş](migrate-from-fxcop-analyzers-to-net-analyzers.md)yapmayı düşünün.
+**Y:** FxCop çözümleyicileri ve .NET çözümleyicileri, FxCop CA kurallarının .NET Compiler Platform ("Roslyn") çözümleyicisi uygulamalarını ifade eder. Visual Studio 2019 16,8 ve .NET 5,0 öncesinde, bu çözümleyiciler `Microsoft.CodeAnalysis.FxCopAnalyzers` [NuGet paketi](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers)olarak gönderilir. Visual Studio 2019 16,8 ve .NET 5,0 'den başlayarak, bu çözümleyiciler [.NET SDK 'ya dahildir](/dotnet/fundamentals/code-analysis/overview). Bunlar ayrıca `Microsoft.CodeAnalysis.NetAnalyzers` [NuGet paketi](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers)olarak da kullanılabilir. Lütfen [FxCop çözümleyicileri ' nden .net çözümleyicilerine geçiş](migrate-from-fxcop-analyzers-to-net-analyzers.md)yapmayı düşünün.
 
 ## <a name="treat-warnings-as-errors"></a>Uyarıları hata olarak değerlendir
 
@@ -104,5 +104,5 @@ Y **: çözüm** düzeyindeki kod analizi Özellik sayfası, daha güvenilir pay
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çözümleyiciler genel bakış](roslyn-analyzers-overview.md)
+- [Çözümleyicilere genel bakış](roslyn-analyzers-overview.md)
 - [EditorConfig için .NET kodlama kuralı ayarları](/dotnet/fundamentals/code-analysis/code-style-rule-options)

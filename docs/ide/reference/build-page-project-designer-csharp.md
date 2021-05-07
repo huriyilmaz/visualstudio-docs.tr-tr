@@ -1,6 +1,6 @@
 ---
 title: Derleme Sayfası, Proje Tasarımcısı (C#)
-description: Projenin derleme yapılandırma özelliklerini belirtmek için Visual Studio 'da proje tasarımcısının Build sayfasını kullanmayı öğrenin.
+description: Projenin derleme yapılandırma özelliklerini belirtmek için Visual Studio Proje Tasarımcısı'nın Derleme sayfasını kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 06/20/2017
 ms.technology: vs-ide-compile
@@ -16,43 +16,43 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 95404beb5c2be5363c9ef91e770237b453970429
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 91b254f4c075693e23d8f650356cd97e86a4c746
+ms.sourcegitcommit: d4887ef2ca97c55e2dad9f179eec2c9631d91c95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99836455"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "108798563"
 ---
 # <a name="build-page-project-designer-c"></a>Derleme Sayfası, Proje Tasarımcısı (C#)
 
-Projenin derleme yapılandırma özelliklerini belirtmek için **Proje Tasarımcısı** ' nın **Yapı** sayfasını kullanın. Bu sayfa [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] yalnızca projeler için geçerlidir.
+Projenin **derleme** yapılandırma özelliklerini **belirtmek için Proje** Tasarımcısı'nın Derleme sayfasını kullanın. Bu sayfa yalnızca projeler [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] için geçerlidir.
 
-**Yapı** sayfasına erişmek için **Çözüm Gezgini**' de bir proje düğümü ( **çözüm** düğümünü değil) seçin. Sonra menüdeki **Görünüm**, **Özellik sayfaları** ' nı seçin. Proje Tasarımcısı göründüğünde, **derleme** sekmesini seçin.
+Derleme sayfasına **erişmek için,** içinde bir proje düğümü **(Çözüm düğümü** değil) **Çözüm Gezgini.** Ardından menüde **Görünüm**, **Özellik Sayfaları'ı** seçin. Proje Tasarımcısı görüntülendiğinde Derleme **sekmesini** seçin.
 
 [!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)]
 
-## <a name="configuration-and-platform"></a>Yapılandırma ve platform
+## <a name="configuration-and-platform"></a>Yapılandırma ve Platform
 
-Aşağıdaki seçenekler, görüntülenecek veya değiştirilecek olan yapılandırmayı ve platformu seçmenizi sağlar.
+Aşağıdaki seçenekler, görüntülemek veya değiştirmek için yapılandırmayı ve platformu seçmenize olanak sağlar.
 
 > [!NOTE]
-> Basitleştirilmiş derleme yapılandırmalarında, proje sistemi bir hata ayıklama veya yayın sürümü oluşturulup oluşturulmayacağını belirler. Bu nedenle, bu seçenekler görüntülenmez. Daha fazla bilgi için bkz. [nasıl yapılır: hata ayıklama ve yayın yapılandırmasını ayarlama](../../debugger/how-to-set-debug-and-release-configurations.md).
+> Basitleştirilmiş derleme yapılandırmaları ile proje sistemi bir hata ayıklama veya yayın sürümü derlemeyi belirler. Bu nedenle, bu seçenekler görüntülenmez. Daha fazla bilgi için, [bkz. How to: Set debug and release configurations](../../debugger/how-to-set-debug-and-release-configurations.md).
 
 **Yapılandırma**
 
-Görüntülenecek veya değiştirilecek yapılandırma ayarlarını belirtir. Ayarları **etkin (hata ayıklama)** (varsayılan), **hata ayıklama**, **yayın** veya **Tüm yapılandırmalardan** olabilir.
+Hangi yapılandırma ayarlarının görüntü veya değiştirmesi gerektir olduğunu belirtir. Ayarlar Etkin **(Hata Ayıklama) (varsayılan ayardır),** Hata **Ayıklama,** Sürüm veya Tüm **Yapılandırmalar olabilir.**
 
 **Platform**
 
-Görüntülenecek veya değiştirilecek platform ayarlarını belirtir. Varsayılan ayar **etkindir (herhangi BIR CPU)**. Etkin platformu **Configuration Manager** kullanarak değiştirebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: yapılandırma oluşturma ve düzenleme](../../ide/how-to-create-and-edit-configurations.md).
+Hangi platform ayarlarının görüntüle veya değiştir yapılandırılamayacaklarını belirtir. Varsayılan ayar Etkin **(Herhangi bir CPU) ayarıdır.** etkin platformu değiştirmek için **Yapılandırma Yöneticisi.** Daha fazla bilgi için, [bkz. How to: Create and Edit Configurations](../../ide/how-to-create-and-edit-configurations.md).
 
 ## <a name="general"></a>Genel
 
-Aşağıdaki seçenekler, çeşitli C# derleyici ayarlarını yapılandırmanızı sağlar.
+Aşağıdaki seçenekler çeşitli C# derleyici ayarlarını yapılandırmaya olanak sağlar.
 
 **Koşullu derleme sembolleri**
 
-Koşullu derlemenin gerçekleştirileceği sembolleri belirtir. Sembolleri noktalı virgül (";") ile ayırın. Daha fazla bilgi için bkz. [/define (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/define-compiler-option).
+Koşullu derlemenin hangi sembolleri gerçekleştireceklerini belirtir. Sembolleri noktalı virgül (";") ile ayırın. Daha fazla bilgi için bkz. [/define (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/define-compiler-option).
 
 **Hata ayıklama sabiti tanımla**
 
@@ -78,37 +78,37 @@ Daha fazla bilgi için bkz. [Nullable bağlamları](/dotnet/csharp/nullable-refe
 
 **Prefer32 bit** onay kutusu işaretliyse, uygulama Windows 'un hem 32-bit hem de 64-bit sürümlerinde 32 bitlik bir uygulama olarak çalışır. Onay kutusu silinirse, uygulama Windows 'un 32 bit sürümlerinde 32 bitlik bir uygulama olarak ve Windows 'un 64 bit sürümlerinde bir 64 bit uygulama olarak çalışır.
 
-Bir uygulamayı 64 bitlik bir uygulama olarak çalıştırırsanız, işaretçi boyutu iki katına çıkar ve uyumluluk sorunları, özel olarak 32 bit olan diğer kitaplıklarla meydana gelebilir. 64 bitlik bir uygulamayı yalnızca 4 GB 'den fazla bellek gerekiyorsa veya 64 bit yönergeler önemli bir performans geliştirmesi sağlamak için yararlıdır.
+Bir uygulamayı 64 bit uygulama olarak çalıştırıyorsanız, işaretçi boyutu iki katına çıkar ve yalnızca 32 bit olan diğer kitaplıklarda uyumluluk sorunları oluşabilir. Yalnızca 4 GB'den fazla belleğe veya 64 bit yönergelere ihtiyacı varsa 64 bitlik bir uygulama çalıştırmak önemli bir performans geliştirmesi sağlar.
 
-Bu onay kutusu yalnızca aşağıdaki koşulların tümü doğru olduğunda kullanılabilir:
+Bu onay kutusu yalnızca aşağıdaki koşulların hepsi doğruysa kullanılabilir:
 
-- **Yapı sayfasında**, **Platform hedefi** listesi **herhangi bir CPU** olarak ayarlanır.
+- Derleme **Sayfasında Platform** hedef **listesi Herhangi bir** CPU olarak **ayarlanır.**
 
-- **Uygulama sayfasında**, **Çıkış türü** listesi projenin bir uygulama olduğunu belirtir.
+- Uygulama **Sayfasında,** Çıkış **türü listesi** projenin bir uygulama olduğunu belirtir.
 
-- **Uygulama sayfasında**, **hedef çerçeve** listesi 4,5 .NET Framework belirtir.
+- Uygulama **Sayfasında,** Hedef **çerçeve listesi** 4.5 .NET Framework belirtir.
 
 **Güvenli olmayan koda izin ver**
 
-Derlemek için [unsafe](/dotnet/csharp/language-reference/keywords/unsafe) anahtar sözcüğünü kullanan koda izin verir. Daha fazla bilgi için bkz. [/unsafe (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/unsafe-compiler-option).
+Derlemek için güvenli olmayan anahtar [sözcüğünü kullanan](/dotnet/csharp/language-reference/keywords/unsafe) koda izin verir. Daha fazla bilgi için [bkz. /unsafe (C# Derleyici Seçenekleri)](/dotnet/csharp/language-reference/compiler-options/unsafe-compiler-option).
 
 **Kodu iyileştirme**
 
-Çıkış dosyanızı daha küçük, daha hızlı ve daha verimli hale getirmek için derleyici tarafından gerçekleştirilen iyileştirmeleri etkinleştirin veya devre dışı bırakın. Daha fazla bilgi için bkz. [/optimize (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/optimize-compiler-option).
+Çıkış dosyanızı daha küçük, daha hızlı ve daha verimli hale getirmesi için derleyici tarafından gerçekleştirilen iyileştirmeleri etkinleştirin veya devre dışı gerçekleştirilir. Daha fazla bilgi için bkz. [/optimize (C# Derleyici Seçenekleri)](/dotnet/csharp/language-reference/compiler-options/optimize-compiler-option).
 
 ## <a name="errors-and-warnings"></a>Hatalar ve Uyarılar
 
-Aşağıdaki ayarlar, yapı işlemi için hata ve uyarı seçeneklerini yapılandırmak için kullanılır.
+Derleme işleminin hata ve uyarı seçeneklerini yapılandırmak için aşağıdaki ayarlar kullanılır.
 
 **Uyarı düzeyi**
 
-Derleyici uyarılarının görüntüleneceği düzeyi belirtir. Daha fazla bilgi için bkz. [/Warn (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/warn-compiler-option).
+Derleyici uyarıları için görüntülenme düzeyini belirtir. Daha fazla bilgi için [bkz. /warn (C# Derleyici Seçenekleri)](/dotnet/csharp/language-reference/compiler-options/warn-compiler-option).
 
 **Uyarıları gizleme**
 
-Derleyicinin bir veya daha fazla uyarı oluşturma yeteneğini engeller. Birden çok uyarı numarasını virgül veya noktalı virgülle ayırın. Daha fazla bilgi için bkz. [/nowarn (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/nowarn-compiler-option).
+Derleyicinin bir veya daha fazla uyarı oluşturma becerisini engeller. Birden çok uyarı numaralarını virgül veya noktalı virgülle ayırın. Daha fazla bilgi için bkz. [/nowarn (C# Derleyici Seçenekleri)](/dotnet/csharp/language-reference/compiler-options/nowarn-compiler-option).
 
-## <a name="treat-warnings-as-errors"></a>Uyarıları hata olarak değerlendir
+## <a name="treat-warnings-as-errors"></a>Uyarıları Hata Olarak Davran
 
 Hangi uyarıların hata olarak değerlendirilmediğini belirtmek için aşağıdaki ayarlar kullanılır. Derleme bir uyarıyla karşılaştığında bir hata döndürmek istediğiniz koşullar altında belirtmek için aşağıdaki seçeneklerden birini belirleyin. Daha fazla bilgi için bkz. [/warnaserror (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/warnaserror-compiler-option).
 
@@ -119,7 +119,7 @@ Hangi uyarıların hata olarak değerlendirilmediğini belirtmek için aşağıd
 **Belirli uyarılar** -belirtilen uyarıları hata olarak değerlendirir. Birden çok uyarı numarasını virgül veya noktalı virgülle ayırın.
 
 > [!TIP]
-> Kod Analizi uyarılarının hata olarak değerlendirilmesini istemiyorsanız, bkz. [kod ANALIZI SSS](../../code-quality/analyzers-faq.md#treat-warnings-as-errors).
+> Kod Analizi uyarılarının hata olarak değerlendirilmesini istemiyorsanız, bkz. [kod ANALIZI SSS](/visualstudio/code-quality/analyzers-faq#treat-warnings-as-errors).
 
 ## <a name="output"></a>Çıktı
 
@@ -133,21 +133,21 @@ Basitleştirilmiş derleme yapılandırmalarında, proje sistemi bir hata ayıkl
 
 **XML belge dosyası**
 
-Belge açıklamalarının işleneceği dosyanın adını belirtir. Daha fazla bilgi için bkz. [/doc (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/doc-compiler-option).
+Belge açıklamalarının işleneceği dosyanın adını belirtir. Daha fazla bilgi için [bkz. /doc (C# Derleyici Seçenekleri)](/dotnet/csharp/language-reference/compiler-options/doc-compiler-option).
 
-**COM birlikte çalışması için kaydolun**
+**COM birlikte çalışma için kaydolma**
 
-Yönetilen uygulamanızın bir com nesnesi (com çağrılabilir sarmalayıcı) sergilediğini, bu sayede bir COM nesnesinin yönetilen uygulamanızla etkileşime geçmesini sağlar. Bu uygulama için **Proje Tasarımcısı** 'nın [Uygulama sayfasındaki](../../ide/reference/application-page-project-designer-visual-basic.md) **Çıkış türü** özelliği, **com birlikte çalışma** özelliğinin kullanılabilir olmasını sağlamak için **sınıf kitaplığı** olarak ayarlanmalıdır. Uygulamanıza dahil olabileceğiniz [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] ve bır com nesnesi olarak kullanıma sunabileceğiniz örnek bir sınıf için bkz. [örnek com sınıfı](/dotnet/csharp/programming-guide/interop/example-com-class).
+Yönetilen uygulamanıza com nesnesinin yönetilen uygulamayla etkileşim kurmasını sağlayan bir COM nesnesini (COM çağrılabilir sarmalayıcı) ortaya çıkartır. COM **birlikte** çalışma [](../../ide/reference/application-page-project-designer-visual-basic.md) özelliğine kaydolma özelliğinin kullanılabilir olması için, bu uygulama için **Proje** Tasarımcısı'nın Uygulama sayfasındaki Çıkış türü özelliğinin Sınıf Kitaplığı **olarak** ayarlanmış olması gerekir.  Uygulamanıza dahil olabileceğiniz ve BIR COM nesnesi olarak açığa çıkarabilirsiniz örnek [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] bir sınıf için [bkz. Örnek COM Sınıfı.](/dotnet/csharp/programming-guide/interop/example-com-class)
 
-**Serileştirme bütünleştirilmiş kodu oluştur**
+**Serileştirme derlemesi oluşturma**
 
-Derleyicinin XML serileştirme derlemeleri oluşturmak için XML Serileştiricisi Oluşturma Aracı (Sgen.exe) kullanıp kullanmayacağını belirtir. <xref:System.Xml.Serialization.XmlSerializer>Kodunuzda türleri seri hale getirmek için bu sınıfı kullandıysanız, serileştirme derlemeleri ' nin başlangıç performansını iyileştirebilir. Varsayılan olarak, bu seçenek **Auto** olarak ayarlanır, bu da serileştirme derlemelerinin yalnızca <xref:System.Xml.Serialization.XmlSerializer> kodunuzda türleri XML olarak kodlamak için kullandıysanız oluşturulacağını belirtir. **Kapalı** , kodunuzun kullanıp kullanmadığına bakılmaksızın serileştirme derlemelerinin hiçbir şekilde üretilmediğini belirtir <xref:System.Xml.Serialization.XmlSerializer> . **On** , serileştirme derlemelerinin her zaman oluşturulacağını belirtir. Serileştirme bütünleştirilmiş kodları.XmlSerializers.dll olarak adlandırılır `TypeName` . Daha fazla bilgi için bkz. [XML serileştiricisi oluşturma aracı (Sgen.exe)](/dotnet/framework/serialization/xml-serializer-generator-tool-sgen-exe).
+Derleyicinin XML serileştirme derlemeleri oluşturmak için XML Serileştiricisi Oluşturma Aracı (Sgen.exe) kullanıp kullanmayacaklarını belirtir. Serileştirme derlemeleri, kodundaki türleri <xref:System.Xml.Serialization.XmlSerializer> serileştirmek için bu sınıfı kullandıysanız başlatma performansını geliştirebilir. Varsayılan olarak, bu seçenek Otomatik olarak ayarlanır ve bu, serileştirme derlemelerinin yalnızca kodundaki türleri XML'ye kodlamak için kullandıysanız <xref:System.Xml.Serialization.XmlSerializer> oluşturul olacağını belirtir. **Kapalı,** kodunuzun kullandığına bakılmaksızın seri hale getirme derlemelerinin asla oluşturulamay olmadığını <xref:System.Xml.Serialization.XmlSerializer> belirtir. **üzerinde,** serileştirme derlemelerinin her zaman oluşturul olacağını belirtir. Serileştirme derlemeleri, `TypeName`.XmlSerializers.dll. Daha fazla bilgi için [bkz. XML Serileştiricisi Oluşturma Aracı (Sgen.exe)](/dotnet/framework/serialization/xml-serializer-generator-tool-sgen-exe).
 
 **Gelişmiş**
 
-[Gelişmiş derleme ayarları Iletişim kutusu (C#)](../../ide/reference/advanced-build-settings-dialog-box-csharp.md) iletişim kutusunu göstermek için tıklayın.
+Gelişmiş Derleme Ayarları [İletişim Kutusu (C#) iletişim kutusunu görüntülemek](../../ide/reference/advanced-build-settings-dialog-box-csharp.md) için tıklayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Proje Özellikleri Başvurusu](../../ide/reference/project-properties-reference.md)
-- [C# derleyici seçenekleri](/dotnet/csharp/language-reference/compiler-options/index)
+- [C# Derleyici Seçenekleri](/dotnet/csharp/language-reference/compiler-options/index)

@@ -4,14 +4,14 @@ description: Bu makalede Mac için Visual Studio ' de projelerin ve çözümleri
 ms.topic: overview
 author: heiligerdankgesang
 ms.author: dominicn
-ms.date: 08/29/2019
+ms.date: 05/03/2021
 ms.assetid: FB253757-DB00-4889-A6BF-E44722E25BD1
-ms.openlocfilehash: b4f1cfc3dfdffcc3dd4cb90cd7d29d4333578b9a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a24c57907afedb4f02068a071d2c9f81eb8962bb
+ms.sourcegitcommit: dd2fc6e03a789c044f8438096b8f112e4dba5557
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71128414"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "108640980"
 ---
 # <a name="compiling-and-building-in-visual-studio-for-mac"></a>Mac için Visual Studio derleme ve oluşturma
 
@@ -21,13 +21,13 @@ Başarılı bir derleme, kaynak kodun doğru sözdizimi içerdiği ve kitaplıkl
 
 Mac 'te uygulamanızı derlemek için aşağıdaki yöntemlerden herhangi birini kullanabilirsiniz: Mac için Visual Studio, MSBuild komut satırı araçları veya Azure Pipelines.
 
-| Build yöntemi | Yararları |
+| Build yöntemi | Avantajlar |
 | --- |--- | --- |
 | Mac için Visual Studio |-Derlemeleri hemen oluşturun ve bir hata ayıklayıcıda test edin.<br />-C# projeleri için çok işlemcili derlemeler çalıştırın.<br />-Derleme sisteminin farklı yönlerini özelleştirin. |
 | MSBuild komut satırı| -Mac için Visual Studio yüklemeden projeler oluşturun.<br />-Tüm proje türleri için çok işlemcili derlemeler çalıştırın.<br />-Yapı sisteminin birçok alanını özelleştirin.|
 | Azure Pipelines | -Derleme işleminizi sürekli tümleştirme/sürekli teslim işlem hattının parçası olarak otomatikleştirin.<br />-Her derleme ile otomatikleştirilmiş testler uygulayın.<br />-Derleme işlemlerinde neredeyse sınırsız sayıda bulut tabanlı kaynak kullanmayı.<br />-Derin özelleştirilmiş görevler gerçekleştirmek için derleme iş akışını değiştirin ve derleme etkinlikleri oluşturun.|
 
-Bu bölümdeki belgeler, IDE tabanlı derleme sürecinin daha ayrıntılı ayrıntılarına gider. Komut satırı aracılığıyla uygulama oluşturma hakkında daha fazla bilgi için bkz. [MSBuild](/visualstudio/msbuild/msbuild). Azure Pipelines ile uygulama oluşturma hakkında ayrıntılı bilgi için bkz. [Azure Pipelines](/azure/devops/pipelines).
+Bu bölümdeki belgeler, IDE tabanlı derleme sürecinin daha ayrıntılı ayrıntılarına gider. Mac için Visual Studio yüklemeden komut satırından uygulamalar oluşturmak için en son [.NET Core SDK](https://dotnet.microsoft.com/download)yükleyebilirsiniz. Komut satırı aracılığıyla uygulama oluşturma hakkında daha fazla bilgi için bkz. [MSBuild](/visualstudio/msbuild/msbuild). Azure Pipelines ile uygulama oluşturma hakkında ayrıntılı bilgi için bkz. [Azure Pipelines](/azure/devops/pipelines).
 
 
 > [!NOTE]

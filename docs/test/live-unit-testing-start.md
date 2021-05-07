@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5c965fd73f63906f7a1e055ae5ff051eebab19d5
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: 2270216e7245f20d26df580ad90dc627319adcc1
+ms.sourcegitcommit: d4887ef2ca97c55e2dad9f179eec2c9631d91c95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107828819"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "108798641"
 ---
 # <a name="get-started-with-live-unit-testing"></a>Live Unit Testing kullanmaya başlama
 
@@ -54,14 +54,14 @@ Tek bir .NET Standard Class Library projesinden (StringLibrary) oluşan bir Visu
 
 ::: moniker range="vs-2017"
 
-2. **Yeni Proje Ekle** Iletişim kutusunda C# düğümünü ve ardından **.NET Standard**' yi seçin.
+2. Yeni Proje **Ekle iletişim kutusunda** C# düğümünü seçin ve sonra da .NET Standard. 
 
    > [!NOTE]
-   > Kitaplığımız belirli bir .NET uygulamasının yerine .NET Standard hedeflediğinden, bu .NET Standard sürümünü destekleyen herhangi bir .NET uygulamasından çağrılabilir. Daha fazla bilgi için bkz. [.NET Standard](/dotnet/standard/net-standard).
+   > Kitaplığımız belirli .NET Standard bir .NET uygulaması yerine bir .NET uygulamasını hedeflese de, bu .NET uygulamasının bu sürümünü destekleyen herhangi bir .NET uygulamasından .NET Standard. Daha fazla bilgi için [bkz. .NET Standard.](/dotnet/standard/net-standard)
 
-3. Sağ bölmedeki **sınıf kitaplığı (.NET Standard)** şablonunu seçin ve aşağıdaki çizimde gösterildiği gibi **ad** metin kutusuna **StringLibrary** yazın:
+3. Sağ **bölmede Sınıf Kitaplığı (.NET Standard)** şablonunu seçin ve Aşağıdaki çizimde  gösterildiği gibi Ad metin kutusuna **StringLibrary** yazın:
 
-   ![* * Yeni Proje Ekle * * iletişim kutusu](./media/lut-start/add-project-cs.png)
+   ![**Yeni Proje Ekle** iletişim kutusu](./media/lut-start/add-project-cs.png)
 
 4. Projeyi oluşturmak için **Tamam**'ı seçin.
 
@@ -69,18 +69,18 @@ Tek bir .NET Standard Class Library projesinden (StringLibrary) oluşan bir Visu
 
 ::: moniker range=">=vs-2019"
 
-2. Şablon arama kutusuna **sınıf kitaplığı** yazın ve **sınıf kitaplığı (.NET Standard)** şablonunu seçin. **İleri**’ye tıklayın.
+2. Sınıf **kitaplığını** şablon arama kutusuna yazın ve Sınıf Kitaplığı **(.NET Standard) şablonunu** seçin. **İleri**’ye tıklayın.
 
    > [!NOTE]
-   > Kitaplığımız belirli bir .NET uygulamasının yerine .NET Standard hedeflediğinden, bu .NET Standard sürümünü destekleyen herhangi bir .NET uygulamasından çağrılabilir. Daha fazla bilgi için bkz. [.NET Standard](/dotnet/standard/net-standard).
+   > Kitaplığımız belirli .NET Standard bir .NET uygulaması yerine bir .NET uygulamasını hedeflese de, bu .NET uygulamasının bu sürümünü destekleyen herhangi bir .NET uygulamasından .NET Standard. Daha fazla bilgi için [bkz. .NET Standard.](/dotnet/standard/net-standard)
 
-3. Proje **StringLibrary** olarak adlandırın.
+3. Projeyi **StringLibrary olarak adlandır.**
 
-4. Projeyi oluşturmak için **Oluştur** ' a tıklayın.
+4. Projeyi **oluşturmak için** Oluştur'a tıklayın.
 
 ::: moniker-end
 
-5. Kod düzenleyicisinde varolan tüm kodu aşağıdaki kodla değiştirin:
+5. Kod düzenleyicisinde var olan tüm kodu aşağıdaki kodla değiştirin:
 
    ```csharp
    using System;
@@ -118,19 +118,19 @@ Tek bir .NET Standard Class Library projesinden (StringLibrary) oluşan bir Visu
    }
    ```
 
-   StringLibrary üç statik yönteme sahiptir:
+   StringLibrary'nin üç statik yöntemi vardır:
 
-   - `StartsWithUpper``true`bir dize, büyük harfle başlıyorsa döndürür; Aksi takdirde, döndürür `false` .
+   - `StartsWithUpper` , `true` bir dize büyük harf karakterle başlıyorsa, aksi takdirde `false` döndürür.
 
-   - `StartsWithLower``true`bir dize küçük harf karakteriyle başlıyorsa döndürür; Aksi takdirde, döndürür `false` .
+   - `StartsWithLower`, `true` bir dize küçük harf karakterle başlıyorsa, aksi takdirde `false` döndürür.
 
-   - `HasEmbeddedSpaces``true`bir dize gömülü bir boşluk karakteri içeriyorsa döndürür; Aksi takdirde, döndürür `false` .
+   - `HasEmbeddedSpaces` , `true` bir dize katıştırılmış bir boşluk karakteri içeriyorsa döndürür; aksi takdirde `false` döndürür.
 
-6.   >  Üst düzey Visual Studio menüsünden Build **Build Solution** öğesini seçin. Derleme başarılı olmalıdır.
+6. Üst **düzey**  >  **derleme menüsünde** Derleme Çözümü'Visual Studio seçin. Derlemenin başarılı olması gerekir.
 
-## <a name="create-the-test-project"></a>Test projesi oluşturma
+## <a name="create-the-test-project"></a>Test projesini oluşturma
 
-Sonraki adım, StringLibrary kitaplığını test etmek için birim test projesi oluşturmaktır. Aşağıdaki adımları gerçekleştirerek birim testlerini oluşturun:
+Sonraki adım, StringLibrary kitaplığını test etmek için birim testi projesi oluşturmaktır. Aşağıdaki adımları gerçekleştirerek birim testlerini oluşturun:
 
 1. **Çözüm Gezgini**, kullanımı uygun proje çözümüne sağ tıklayın ve   >  **Yeni proje** Ekle ' yi seçin.
 
@@ -230,32 +230,32 @@ Sonraki adım, StringLibrary kitaplığını test etmek için birim test projesi
 
 7. Araç çubuğundaki **Kaydet** simgesini seçerek projenizi kaydedin.
 
-   Birim test kodu bazı ASCII olmayan karakterler içerdiğinden, dosyayı varsayılan ASCII biçiminde kaydederseniz bazı karakterlerin kaybolacağını uyarmak için aşağıdaki iletişim kutusunu görürsünüz.
+   Birim testi kodu ASCII olmayan bazı karakterlere sahip olduğundan, dosyayı varsayılan ASCII biçiminde kaydetmenizi sağlarsanız bazı karakterlerin kaybolacak uyarısı için aşağıdaki iletişim kutusunu görüntülenir.
 
-8. **Diğer kodlamaya sahip Kaydet** düğmesini seçin.
+8. Diğer Kodlama **ile Kaydet düğmesini** seçin.
 
-   ![Dosya kodlaması seçin](media/lut-start/ascii-encoding.png)
+   ![Dosya kodlaması seçme](media/lut-start/ascii-encoding.png)
 
-9. Aşağıdaki çizimde gösterildiği gibi, **Gelişmiş kaydetme seçenekleri** Iletişim kutusunun **kodlama** açılan LISTESINDE **Unicode (imzasız UTF-8)-kod sayfası 65001**' ı seçin:
+9. Gelişmiş **Kaydetme Seçenekleri** iletişim kutusunun  Kodlama açılan listesinde, aşağıdaki çizimde gösterildiği gibi Unicode (imza olmadan **UTF-8) - Kod sayfası 65001'i** seçin:
 
    ![UTF-8 kodlamasını seçme](media/lut-start/utf8-encoding.png)
 
-10.   >  Üst düzey Visual Studio menüsünden derleme **yeniden oluşturma çözümünü** seçerek birim testi projesini derleyin.
+10. Üst düzey derleme menüsünden Çözümü **Yeniden**  >   Derle'yi seçerek birim testi Visual Studio derle.
 
-Bir sınıf kitaplığı ve bunun için bazı birim testlerini oluşturdunuz. Artık Live Unit Testing kullanmak için gereken başlangıç kuralları tamamladınız.
+Bir sınıf kitaplığının yanı sıra bunun için bazı birim testleri de oluşturdunız. Artık bu aracı kullanmak için gereken ön Live Unit Testing.
 
-## <a name="enable-live-unit-testing"></a>Live Unit Testing etkinleştir
+## <a name="enable-live-unit-testing"></a>Enable Live Unit Testing
 
-Şimdiye kadar, StringLibrary sınıf kitaplığı için testleri yazmış olsanız da onları çalıştırmadınız. Live Unit Testing, bunları etkinleştirdikten sonra otomatik olarak yürütür. Bunu yapmak için aşağıdakileri yapın:
+Şu ana kadar StringLibrary sınıf kitaplığı için testleri yazmadınız ancak bunları yürütmedisiniz. Live Unit Testing etkinleştiren otomatik olarak yürütür. Bunu yapmak için şunları yapın:
 
-1. İsteğe bağlı olarak, StringLibrary kodunu içeren kod düzenleyici penceresini seçin. Bu, bir C# projesi için *Class1. cs* veya bir Visual Basic projesi için *Class1. vb* ' dir. (Bu adım, Live Unit Testing etkinleştirdikten sonra testlerinizin sonucunu ve kod kapsamınız kapsamını görsel olarak incelemenize olanak sağlar.)
+1. İsteğe bağlı olarak, StringLibrary kodunu içeren kod düzenleyicisi penceresini seçin. Bu, bir *C# projesi için Class1.cs* veya bir C# projesi için *Class1.vb* Visual Basic olur. (Bu adım, testlerinizi etkinleştiren testleri ve kod kapsamı kapsamını görsel olarak incelemenize Live Unit Testing.)
 
-1.   >    >  En üst düzey Visual Studio menüsünden test Live Unit Testing **Başlat** ' ı seçin.
+1. Üst **düzey**  >  **Live Unit Testing**  >  **Başlat menüsünden** Test Visual Studio seçin.
 
-1. Visual Studio, tüm testlerinizi otomatik olarak çalıştıran canlı birim testi başlatır.
+1. Visual Studio tüm testlerinizi otomatik olarak çalıştıran Canlı Birim Testi'ne başlar.
 
 ::: moniker range="vs-2017"
-Testlerinizi çalıştırmayı bitirdiğinde, **Test Gezgini** hem genel sonuçları hem de bireysel testlerin sonucunu görüntüler. Ayrıca, kod Düzenleyicisi penceresi hem test kodu kapsamınızla hem de testleriniz için sonucu grafik olarak görüntüler. Aşağıdaki çizimde gösterildiği gibi, üç testin hepsi başarıyla yürütülür. Ayrıca, testlerimizin yöntemdeki tüm kod yollarını kapsadığından `StartsWithUpper` ve bu testlerin başarıyla yürütüldüğü (yeşil onay işareti, "✓" ile belirtilir) gösterilmektedir. Son olarak, StringLibrary 'deki diğer yöntemlerin hiçbirinin kod kapsamı (mavi bir çizgi ile belirtilir, "➖") olduğunu gösterir.
+Test Gezgini, testlerinizi **çalıştırmayı tamamlarsa hem** genel sonuçları hem de tek tek testlerin sonuçlarını görüntüler. Ayrıca, kod düzenleyicisi penceresi hem test kodu kapsamınızı hem de test sonuçlarınızı grafiksel olarak görüntüler. Aşağıdaki çizimde gösterildiği gibi üç test de başarıyla yürütülür. Ayrıca, testlerimizin yöntemdeki tüm kod yollarını kapsadığından `StartsWithUpper` ve bu testlerin başarıyla yürütüldüğü (yeşil onay işareti, "✓" ile belirtilir) gösterilmektedir. Son olarak, StringLibrary 'deki diğer yöntemlerin hiçbirinin kod kapsamı (mavi bir çizgi ile belirtilir, "➖") olduğunu gösterir.
 
 ![Canlı birim testi başladıktan sonra test Gezgini ve kod Düzenleyicisi penceresi](media/lut-start/lut-results-cs.png)
 ::: moniker-end
@@ -279,44 +279,44 @@ Live Unit Testing tanımladığı önemli sorun, tamamlanmamış kod kapsamı. S
 
 ## <a name="expand-test-coverage"></a>Test kapsamını Genişlet
 
-Bu bölümde, birim testlerinizi yöntemine genişleteceksiniz `StartsWithLower` . Bunu yaptığınızda, Live Unit Testing kodunuzu test etmek için dinamik olarak devam eder.
+Bu bölümde birim testlerinizi yöntemine `StartsWithLower` genişletebilirsiniz. Bunu yaparken, Live Unit Testing dinamik olarak kodunuzu test etmeye devam eder.
 
-Kod kapsamını yöntemine genişletmek için `StartsWithLower` aşağıdakileri yapın:
+Kod kapsamı yönteminin `StartsWithLower` kapsamına genişletmek için şunları yapın:
 
-1. Aşağıdaki `TestStartsWithLower` ve `TestDoesNotStartWithLower` yöntemlerini projenizin test kaynak kodu dosyasına ekleyin:
+1. Projenizin `TestStartsWithLower` `TestDoesNotStartWithLower` test kaynak kodu dosyasına aşağıdaki ve yöntemlerini ekleyin:
 
    :::code language="csharp" source="../test/samples/snippets/csharp/lut-start/unittest2.cs" id="Snippet1":::
 
-1. Yöntemine yapılan `DirectCallWithNullOrEmpty` çağrıdan hemen sonra aşağıdaki kodu ekleyerek yöntemi değiştirin [`Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsFalse`](/dotnet/api/microsoft.visualstudio.testtools.unittesting.assert.isfalse) .
+1. yöntemine `DirectCallWithNullOrEmpty` yapılan çağrıdan hemen sonra aşağıdaki kodu ekleyerek yöntemini [`Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsFalse`](/dotnet/api/microsoft.visualstudio.testtools.unittesting.assert.isfalse) değiştirme.
 
    :::code language="csharp" source="../test/samples/snippets/csharp/lut-start/unittest2.cs" id="Snippet2":::
 
-1. Live Unit Testing, kaynak kodunuzu değiştirirken yeni ve değiştirilmiş testleri otomatik olarak yürütür. Aşağıdaki çizimde gösterildiği gibi, eklediğiniz iki ve değiştirdiğiniz bir öğe de dahil olmak üzere tüm testler başarılı olmuştur.
+1. Live Unit Testing kodunuzu değiştirerek yeni ve değiştirilmiş testleri otomatik olarak yürütür. Aşağıdaki çizimde gösterildiği gibi, eklemış olduğunuz ikisi ve değiştirdklerinden biri de dahil olmak üzere tüm testler başarılı oldu.
 
    ::: moniker range="vs-2017"
-   ![Test kapsamını genişlettikten sonra test Gezgini](media/lut-start/test-dynamic.png)
+   ![Test kapsamını genişlettikten sonra Test Gezgini](media/lut-start/test-dynamic.png)
    ::: moniker-end
    ::: moniker range=">=vs-2019"
-   ![Test kapsamını genişlettikten sonra canlı test Gezgini](media/lut-start/vs-2019/test-dynamic.png)
+   ![Test kapsamını genişlettikten sonra Canlı Test Gezgini](media/lut-start/vs-2019/test-dynamic.png)
    ::: moniker-end
 
-1. StringLibrary sınıfının kaynak kodunu içeren pencereye geçiş yapın. Live Unit Testing artık kod kapsamımızın yönteme genişletilme olduğunu gösterir `StartsWithLower` .
+1. StringLibrary sınıfının kaynak kodunu içeren pencereye geçiş. Live Unit Testing kod kapsamımızın yöntemine genişletildi olduğunu `StartsWithLower` gösteriyor.
 
     ![StartsWithLower yöntemi için kod kapsamı](media/lut-start/lut-extended-cs.png)
 
-Bazı durumlarda, **Test Gezgini** 'ndeki başarılı testler gri renkte olabilir. Bu, bir testin yürütülmekte olduğunu veya testin en son yürütüldüğünden bu yana etkilenmeyen hiçbir kod değişikliği olmadığından testin yeniden çalıştırılmadığını gösterir.
+Bazı durumlarda Test Gezgini'nde **başarılı testler** gri olabilir. Bu, bir testin yürütültülürken olduğunu veya son yürütülürken testi etkileyen bir kod değişikliği olmadığını çünkü testin yeniden çalıştırılamay olmadığını gösterir.
 
-Şimdiye kadar, tüm sınamalarımız başarılı oldu. Sonraki bölümde, test başarısızlığını nasıl işleyebileceğini inceleyeceğiz.
+Şimdiye kadar tüm testlerimiz başarılı oldu. Sonraki bölümde test hatalarını nasıl işleyebilirsiniz?
 
-## <a name="handle-a-test-failure"></a>Test başarısızlığı işleme
+## <a name="handle-a-test-failure"></a>Test hatalarını işleme
 
-Bu bölümde, test başarısızlıklarını belirlemek, sorunlarını gidermek ve gidermek için Live Unit Testing nasıl kullanabileceğinizi keşfedebilirsiniz. Bu, test kapsamını yönteme genişleterek bunu yapacaksınız `HasEmbeddedSpaces` .
+Bu bölümde test hatalarını belirlemek, gidermek ve Live Unit Testing için bu bilgileri nasıl kullanabileceğiniz hakkında bilgi edinebilirsiniz. Bunu yapmak için test kapsamını yöntemine `HasEmbeddedSpaces` genişletebilirsiniz.
 
-1. Aşağıdaki yöntemi test dosyanıza ekleyin:
+1. Test dosyanıza aşağıdaki yöntemi ekleyin:
 
    :::code language="csharp" source="../test/samples/snippets/csharp/lut-start/unittest2.cs" id="Snippet3":::
 
-1. Test yürütüldüğünde, `TestHasEmbeddedSpaces` Aşağıdaki çizimde gösterildiği gibi, yönteminin başarısız olduğunu Live Unit Testing.
+1. Test yürütülürken Live Unit Testing yöntemin başarısız `TestHasEmbeddedSpaces` olduğunu gösterir. Aşağıdaki çizimde gösterildiği gibi:
 
    ::: moniker range="vs-2017"
    ![Başarısız testi bildiren test Gezgini](media/lut-start/test-failure.png)
@@ -352,22 +352,22 @@ Bu bölümde, test başarısızlıklarını belirlemek, sorunlarını gidermek v
 
    ![Visual Studio hata ayıklama araçları](media/lut-start/debugging-tools-cs.png)
 
-   **Oto** , `phrase` değişkenin değerinin "adı tdescription" olduğunu ve dizinin ikinci öğesi olduğunu unutmayın. Test yöntemi `HasEmbeddedSpaces` `true` Bu dizeyi geçtiğinde döndürülmesini bekler; bunun yerine, döndürür `false` . Daha açık bir şekilde, "\t", sekme karakterini gömülü bir boşluk olarak tanımaz.
+   Otomatikler **penceresinde** değişkenin değerinin dizinin ikinci öğesi olan `phrase` "Name\tDescription" olduğunu unutmayın. Test yöntemi, bu `HasEmbeddedSpaces` dize `true` geçiriken dönüş bekler; bunun yerine `false` döndürür. Görünen o ki sekme karakteri olan "\t" karakterini ekli alan olarak tanımaz.
 
-1. **Hata Ayıkla**  >  **devam et**' i seçin, **F5** tuşuna basın veya test programını yürütmeye devam etmek için araç çubuğundaki **devam** düğmesine tıklayın. İşlenmemiş bir özel durum oluştuğundan, test sonlanır.
-Bu, hatanın ön araştırması için yeterli bilgi sağlar. `TestHasEmbeddedSpaces`(Test yordamı) yanlış bir varsayım yaptı ya da `HasEmbeddedSpaces` gömülü tüm boşlukları doğru bir şekilde tanımıyor.
+1. Devamında **Hata**  >  **Ayıkla'yı** seçin,  **F5** tuşuna basın veya test programını yürütmeye devam etmek için araç çubuğundaKi Devam düğmesine tıklayın. İşlenemeyen bir özel durum meydana geldiği için test sonlandırılır.
+Bu, hatanın ön araştırması için yeterli bilgi sağlar. (Test `TestHasEmbeddedSpaces` yordamı) yanlış bir varsayımda bulundu veya `HasEmbeddedSpaces` tüm ekli alanları doğru şekilde tanımıyor.
 
-1. Sorunu tanılamak ve düzeltmek için `StringLibrary.HasEmbeddedSpaces` yöntemiyle başlayın. Yöntemindeki karşılaştırmaya bakın `HasEmbeddedSpaces` . Bir katıştırılmış alanı U + 0020 olarak değerlendirir. Ancak, Unicode standart birkaç boşluk karakteri içerir. Bu, kitaplık kodunun bir boşluk karakteri için yanlış test edilmiş olduğunu önerir.
+1. Sorunu tanılamak ve düzeltmek için yöntemiyle `StringLibrary.HasEmbeddedSpaces` çalışmaya başlamanız gerekir. yönteminde karşılaştırmaya `HasEmbeddedSpaces` bakın. Ekli bir alanı U+0020 olarak kabul ediyor. Ancak, Unicode Standart bir dizi başka boşluk karakteri içerir. Bu, kitaplık kodunun yanlış bir şekilde boşluk karakteri için test edilmiş olduğunu önerir.
 
-1. Eşitlik karşılaştırmasını yönteme yönelik bir çağrı ile değiştirin <xref:System.Char.IsWhiteSpace%2A?displayProperty=fullName> :
+1. Eşitlik karşılaştırmasını yöntemine yapılan bir çağrıyla <xref:System.Char.IsWhiteSpace%2A?displayProperty=fullName> değiştirin:
 
    :::code language="csharp" source="../test/samples/snippets/csharp/lut-start/program2.cs" id="Snippet1":::
 
-1. Live Unit Testing başarısız test yöntemini otomatik olarak yeniden çalıştırır.
+1. Live Unit Testing başarısız test yöntemini otomatik olarak yeniden çalıştırıyor.
 
-   Live Unit Testing, Ayrıca, kod Düzenleyicisi penceresinde de görüntülenen güncelleştirilmiş sonuçları gösterir.
+   Live Unit Testing, kod düzenleyicisi penceresinde de görünen güncelleştirilmiş sonuçları gösterir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio 'da Live Unit Testing](live-unit-testing.md)
-- [Live Unit Testing sık sorulan sorular](live-unit-testing-faq.md)
+- [Live Unit Testing'Visual Studio](live-unit-testing.md)
+- [Live Unit Testing Sık Sorulan Sorular](live-unit-testing-faq.yml)

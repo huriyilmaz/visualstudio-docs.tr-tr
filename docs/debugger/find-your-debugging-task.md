@@ -12,11 +12,11 @@ manager: jmartens
 ms.workload:
 - multiple
 ms.openlocfilehash: 3c215b232c64b97c57285618056ee4675587b48e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.sourcegitcommit: dd2fc6e03a789c044f8438096b8f112e4dba5557
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99870720"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "108800498"
 ---
 # <a name="faq---find-the-debugging-feature-you-need-in-visual-studio"></a>SSS-Visual Studio 'da ihtiyacınız olan hata ayıklama özelliğini bulma
 
@@ -47,43 +47,43 @@ Hata ayıklama görevinizi ilgili Visual Studio hata ayıklayıcının doğru ö
 
 - **Belirli bir yinelemede döngü içindeki kodu duraklatma**
 
-  **İsabet sayısı** ' nı koşul olarak kullanarak bir kesme noktası ayarlayın. Daha fazla bilgi için bkz. [isabet sayısı](using-breakpoints.md#set-a-hit-count-condition).
+  **İsabet sayısı** ' nı koşul olarak kullanarak bir kesme noktası ayarlayın. Daha fazla bilgi için bkz. [Hit count](using-breakpoints.md#set-a-hit-count-condition).
 
-- **İşlev adını bildiğiniz ancak konumunu not ettiğinizde bir işlevin başlangıcında kodu duraklatma**
+- **İşlev adını biliyor ancak konumunu bilmiyorken işlevin başındaki kodu duraklatma**
 
-  Bunu bir işlev kesme noktası ile yapabilirsiniz. Daha fazla bilgi için bkz. [işlev kesme noktalarını ayarlama](using-breakpoints.md#BKMK_Set_a_breakpoint_in_a_source_file).
+  Bunu bir işlev kesme noktasıyla da yapabiliriz. Daha fazla bilgi için [bkz. İşlev kesme noktaları ayarlama.](using-breakpoints.md#BKMK_Set_a_breakpoint_in_a_source_file)
 
-- **Aynı ada sahip birden çok işlevin başlangıcında kodu Duraklat**
+- **Aynı adla birden çok işlevin başında kodu duraklatma**
 
-  Aynı ada sahip birden fazla işleviniz varsa (farklı projelerde aşırı yüklenmiş işlevler veya işlevler), bir [işlev kesme noktası](using-breakpoints.md#BKMK_Set_a_breakpoint_in_a_source_file)kullanabilirsiniz.
+  Aynı adla birden çok işleviniz (farklı projelerde aşırı yüklenmiş işlevler veya işlevler) varsa işlev kesme [noktası kullanabilirsiniz.](using-breakpoints.md#BKMK_Set_a_breakpoint_in_a_source_file)
 
-- **Kesme noktalarınızı yönetin ve izleyin**
+- **Kesme noktalarınızı yönetme ve izleme**
 
-  **Kesme noktaları** penceresini kullanın. Daha fazla bilgi için bkz. [kesme noktalarını yönetme](using-breakpoints.md#BKMK_Specify_advanced_properties_of_a_breakpoint_).
+  Kesme **Noktaları penceresini** kullanın. Daha fazla bilgi için [bkz. Kesme noktaları yönetme.](using-breakpoints.md#BKMK_Specify_advanced_properties_of_a_breakpoint_)
 
-- **Belirli bir işlenmiş veya işlenmemiş özel durum oluştuğunda kodu duraklatma ve hata ayıklama**
+- **Kod duraklatma ve belirli bir tanıtıcı veya işsiz özel durum olduğunda hata ayıklama**
 
-  Özel durum Yardımcısı sizi bir hata oluştuğunu gösteriyor olsa da, belirli bir hatayı duraklatmak ve hata ayıklamak istiyorsanız, [bir özel durum oluştuğunda hata ayıklayıcıya kesilmesini söyleyebilirsiniz](managing-exceptions-with-the-debugger.md#tell-the-debugger-to-break-when-an-exception-is-thrown).
+  Özel Durum Yardımcısı size bir hatanın nerede olduğunu gösteriyor olsa da, belirli bir hatayı duraklatmak ve hata ayıklamak için hata ayıklayıcıya bir özel durum [sanız kesmesi söylemek için kullanabilirsiniz.](managing-exceptions-with-the-debugger.md#tell-the-debugger-to-break-when-an-exception-is-thrown)
 
-- **Çağrı yığınından bir kesme noktası ayarlayın**
+- **Çağrı yığınından bir kesme noktası ayarlama**
 
-  Yürütme akışını incelerken veya **çağrı yığını** pencerelerinin işlevlerini görüntülerken kodu duraklatmak ve hata ayıklamak istiyorsanız, bkz. [çağrı yığını penceresinde bir kesme noktası ayarlama](using-breakpoints.md#BKMK_Set_a_breakpoint_from_debugger_windows).
+  Yürütme akışını incelerken veya Çağrı Yığını pencerelerde işlevleri görüntülerken kodu duraklatmak ve hata ayıklamak **için** bkz. Çağrı Yığını penceresinde [bir kesme noktası ayarlama.](using-breakpoints.md#BKMK_Set_a_breakpoint_from_debugger_windows)
 
-- **Belirli bir derleme yönergesinde kodu duraklatma**
+- **Belirli bir derleme yönergesi sırasında kodu duraklatma**
 
-  Bunu, [ayrıştırma penceresinden bir kesme noktası ayarlayarak](using-breakpoints.md#BKMK_Set_a_breakpoint_from_debugger_windows)yapabilirsiniz.
+  Bunu yapmak için [Disassembly penceresinden bir kesme noktası ayarlarsınız.](using-breakpoints.md#BKMK_Set_a_breakpoint_from_debugger_windows)
 
-## <a name="execute-code"></a>Kodu Yürüt
+## <a name="execute-code"></a>Kodu yürütme
 
-- **Hata ayıklarken kodunuzda adım adım ilerme komutlarını öğrenin**
+- **Hata ayıklarken kodunuz boyunca adım adım atma komutlarını öğrenin**
 
-  Daha fazla bilgi için bkz. [hata ayıklayıcıyla koda gitme](navigating-through-code-with-the-debugger.md).
+  Daha fazla bilgi için [bkz. Hata ayıklayıcı ile kodda gezinme.](navigating-through-code-with-the-debugger.md)
 
 ## <a name="inspect-data"></a>Verileri inceleme
 
-- **Uygulamanızı çalıştırırken değişkenlerin değerini denetleyin**
+- **Uygulamanızı çalıştırma sırasında değişkenlerin değerini denetleme**
 
-  [Veri ipuçlarını](view-data-values-in-data-tips-in-the-code-editor.md) kullanarak değişkenlerin üzerine gelin veya [oto ve Yereller penceresinde değişkenleri inceleyin](autos-and-locals-windows.md).
+  Veri ipuçlarını kullanarak [değişkenlerin üzerine](view-data-values-in-data-tips-in-the-code-editor.md) gelin [veya Otomatikler ve YerelLer penceresinde değişkenleri inceleyebilirsiniz.](autos-and-locals-windows.md)
 
 - **Belirli bir değişkenin değişen değerini gözlemleyin**
 
@@ -121,16 +121,16 @@ Hata ayıklama görevinizi ilgili Visual Studio hata ayıklayıcının doğru ö
 
 - **Kod değiştirmeden çıkış penceresine ileti gönderme**
 
-  İzleme noktası ayarlayın. Daha fazla bilgi için bkz. [izleme noktalarını kullanma](using-tracepoints.md).
+  İzleme noktası ayarlayın. Daha fazla bilgi için [bkz. İzleme noktaları kullanma.](using-tracepoints.md)
 
-- **İşlevlerin çağrıldığı sırayı görüntüleme**
+- **İşlevlerin çağrılma sıralarını görüntüleme**
 
-  Bkz. [çağrı yığınını görüntüleme](how-to-use-the-call-stack-window.md).
+  Bkz. [Çağrı yığınını görüntüleme.](how-to-use-the-call-stack-window.md)
 
-- **Uzak makinelerde hata ayıkla**
+- **Uzak makinelerde hata ayıklama**
 
-  Bkz. [Uzaktan hata ayıklama](remote-debugging.md).
+  Bkz. [Uzaktan hata ayıklama.](remote-debugging.md)
 
 - **Performans sorunlarını çözme**
 
-  Bkz [. profil oluşturma araçlarına ilk bakış](../profiling/profiling-feature-tour.md)
+  Bkz. [Profil oluşturma araçlarına ilk bakış](../profiling/profiling-feature-tour.md)

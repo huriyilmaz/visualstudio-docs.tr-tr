@@ -1,8 +1,8 @@
 ---
-title: "Visual Studio belgeleri: Mart 2021 ' deki yenilikler"
+title: "Visual Studio belgeleri: Nisan 2021 ' deki yenilikler"
 titleSuffix: ''
-description: Mart 2021 için Visual Studio docs 'daki yenilikler.
-ms.date: 04/02/2021
+description: Nisan 2021 için Visual Studio docs 'daki yenilikler.
+ms.date: 05/03/2021
 helpviewer_keywords:
 - Visual Studio, what's new, docs
 - what's new [Visual Studio]
@@ -15,215 +15,226 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 863ba91f88ee953ce7d62179ff3b50aca5500c83
-ms.sourcegitcommit: 5fb684ff8729eb118aa91ce9f049c79eeb9747b1
+ms.openlocfilehash: 38115892acc9c27e70ad956740cee8ae9e9c66ef
+ms.sourcegitcommit: dd2fc6e03a789c044f8438096b8f112e4dba5557
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2021
-ms.locfileid: "107913065"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "108640941"
 ---
-# <a name="visual-studio-docs-whats-new-for-march-2021"></a>Visual Studio belgeleri: Mart 2021 ' deki yenilikler
+# <a name="visual-studio-docs-whats-new-for-april-2021"></a>Visual Studio belgeleri: Nisan 2021 ' deki yenilikler
 
-Mart 2021 için Visual Studio docs 'daki yenilikler 'e hoş geldiniz. Bu makalede, bu süre boyunca docs 'ta yapılan önemli değişikliklerden bazıları listelenir. Önceki aylardaki yenilikler hakkında daha fazla bilgi için bkz. yenilikler [geçmişi](whats-new-visual-studio-docs-history.md) makalesi.
+Nisan 2021 için Visual Studio docs 'daki yenilikler 'e hoş geldiniz. Bu makalede, bu süre boyunca docs 'ta yapılan önemli değişikliklerden bazıları listelenir. Önceki aylardaki yenilikler hakkında daha fazla bilgi için bkz. yenilikler [geçmişi](whats-new-visual-studio-docs-history.md) makalesi.
 
-## <a name="code-quality"></a>Kod kalitesi
+## <a name="azure"></a>Azure
 
 **Güncelleştirilmiş makaleler**
 
-- [Nasıl yapılır: yönetilen kod için eski kod analizini El Ile çalıştırma](../code-quality/how-to-run-legacy-code-analysis-manually-for-managed-code.md) -çalışma dalından birleştirmeyi Onayla
-- [Birinci taraf .net çözümleyicilerinin etkinleştirilmesi veya yüklenmesi](../code-quality/install-net-analyzers.md) -GitHub sorun düzeltmeleri
+- [Visual Studio 'da Cloud Services (genişletilmiş destek) oluşturma ve dağıtma](../azure/cloud-services-extended-support.md) -Cloud Services (genişletilmiş destek)-GA değişiklikleri
 
 ## <a name="containers"></a>Kapsayıcılar
 
+**Yeni makaleler**
+
+- Kubernetes Köprüsü için [Kubernetes tarafından yönetilen kimliği olan köprü ile yönetilen kimlik kullan](../containers/managed-identity.md)
+
 **Güncelleştirilmiş makaleler**
 
-- [Kubernetes Için Bridge kullanarak](../containers/bridge-to-kubernetes.md) Kubernetes: .net Todo-App örneğini kullanın
-- [Docker Compose derleme özellikleri](../containers/docker-compose-properties.md) -ComposeProjectName ekleme
-- [Kubernetes Için köprü](../containers/overview-bridge-to-kubernetes.md) oluşturma-Kubernetes ile Köprü oluşturma: kısıtlamaları Güncelleştir bölümü
-- [Öğretici: Docker Compose](../containers/tutorial-multicontainer.md) kapsayıcı araçları multicontainer ile çok kapsayıcılı bir uygulama oluşturma öğreticisi: görüntü bağlantısını çözme
+- [Docker Compose yapı özellikleri](../containers/docker-compose-properties.md) -özellik eklemeleri oluşturma
+- [Visual Studio 'da Kapsayıcılı uygulamalar nasıl oluşturulur](../containers/container-build.md) -LTS için güncelleştirme
 
 ## <a name="debugger"></a>Hata Ayıklayıcısı
 
-**Güncelleştirilmiş makaleler**
+**Yeni makaleler**
 
-- [Nasıl yapılır: Visual Studio 'da BIR DLL projesinde hata ayıklama (C#, C++, Visual Basic, F #)](../debugger/how-to-debug-from-a-dll-project.md) -bir dll 'den hata ayıklamayı yenileme
-- [Visual Studio hata ayıklayıcısında simge (. pdb) ve kaynak dosyaları belirtme (C#, C++, Visual Basic, F #)](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md) -dll 'den hata ayıklamayı yenileme
-- [C/C++ Onayları](../debugger/c-cpp-assertions.md) -GitHub sorun düzeltmeleri
-- [IDiaDataSource:: loadDataForExe](../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) -GitHub sorunları çalışıyor
-- [Visual Studio hata ayıklayıcısında C++ Için biçim belirticileri](../debugger/format-specifiers-in-cpp.md) -GitHub sorunları çalışıyor
-- [Windows güvenlik duvarını uzaktan hata ayıklama Için yapılandırma](../debugger/configure-the-windows-firewall-for-remote-debugging.md) -GitHub sorun düzeltmeleri
-- Uzak [IIS bilgisayarında uzaktan hata ayıklama ASP.net](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md) -IIS ve Azure için uzak hata ayıklama belgelerine yönelik güncelleştirmeler
-- [Visual Studio 'da uzak IIS bilgisayarında uzaktan hata ayıklama ASP.NET Core](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md) -IIS ve Azure için uzak hata ayıklama belgelerine yönelik güncelleştirmeler
-- [Visual Studio 'Da Azure 'DA IIS 'de uzaktan hata ayıklama ASP.NET Core](../debugger/remote-debugging-azure.md) -IIS ve Azure için uzak hata ayıklama belgelerine yönelik güncelleştirmeler
-
-## <a name="deployment"></a>Dağıtım
+- [IDiaSymbol:: get_framePadOffset](../debugger/debug-interface-access/idiasymbol-get-framepadoffset.md) -DIA SDK eklemeleri
+- [IDiaSymbol:: get_framePadSize](../debugger/debug-interface-access/idiasymbol-get-framepadsize.md) -DIA SDK eklemeleri
+- [IDiaSymbol:: get_isRTCs](../debugger/debug-interface-access/idiasymbol-get-isrtcs.md) -DIA SDK eklemeleri
+- [.Net tanılama Çözümleyicileri ile yönetilen bellek dökümünden hata ayıklama](../debugger/how-to-debug-managed-memory-dump.md) -vs bellek dökümü Çözümleyicileri
 
 **Güncelleştirilmiş makaleler**
 
-- [Nasıl yapılır: görsel stiller ETKINKEN WPF uygulaması yayımlama](../deployment/how-to-publish-a-wpf-application-with-visual-styles-enabled.md) -Geliştirici komut istemi ve geliştirici PowerShell
-- [Visual Studio kullanarak bir uygulamayı bir klasöre dağıtma](../deployment/quickstart-deploy-to-local-folder.md) -IIS ve Azure için belgeleri uzaktan hata ayıklama belgelerine güncelleştirme
-
-## <a name="extensibility"></a>Genişletilebilirlik
-
-**Güncelleştirilmiş makaleler**
-
-- [Görsel dil sözlüğü](../extensibility/ux-guidelines/visual-language-dictionary-for-visual-studio.md) -simge oluşturma hatasını giderecek eksik markaşağı köşeli ayraç ekle
-- [VisibilityItem öğesi](../extensibility/visibilityitem-element.md) -çalışma dalından birleştirmeyi Onayla
-- [Şablon yükleme sorunlarını giderme](../extensibility/troubleshooting-template-discovery.md) -Geliştirici komut istemi ve geliştirici PowerShell
+- [Visual Studio hata ayıklayıcısındaki döküm dosyaları](../debugger/using-dump-files.md) -vs bellek dökümü Çözümleyicileri
+- [Mutlak yeni başlayanlar için hata ayıklama](../debugger/debugging-absolute-beginners.md) -yeni başlayanlar kılavuzu 'na vb ekleme
 
 ## <a name="get-started"></a>başlarken
 
 **Güncelleştirilmiş makaleler**
 
-- [Öğretici: bir depodan bir proje açın](../get-started/tutorial-open-project-from-repo-visual-studio-2019.md)
-  - Git & Takım Gezgini bağlantısının yan yana karşılaştırmasıyla ilgili konuları güncelleştirin
-  - oturum açma bölümüne daha fazla bilgi için oturum açma bağlantıları ekleyin
-- [Öğretici: Visual Studio 'da C# ve ASP.NET Core kullanmaya başlayın](../get-started/csharp/tutorial-aspnet-core.md)
-  - Çalışma dalından birleştirmeyi Onayla
-  - Tutorial-aspnet-core.md Güncelleştir
+- [Öğretici: basit bir C# konsol uygulamasını genişletme](../get-started/csharp/tutorial-console-part-2.md) -adımları belirginleştirme ve tam kod ekleme baryürüme öğreticisini Genişlet
 
 ## <a name="ide"></a>IDE
 
-**Yeni makaleler**
-- [Visual Studio 'nun kaynak denetimini nasıl basit hale getiren](../version-control/git-visual-studio-source-control.md) yeni Visual Studio kaynak denetimi konusu
-- [Geliştirici komut istemi ve geliştirici PowerShell](./reference/command-prompt-powershell.md) -Geliştirici komut istemi ve geliştirici PowerShell
-- [Git ve Takım Gezgini yan yana karşılaştırması](../version-control/git-team-explorer-feature-comparison.md) -Takım Gezgini ve yeni git özelliklerinin yeni yan yana karşılaştırma sayfası ekleme
-
 **Güncelleştirilmiş makaleler**
 
-- [Visual Studio tarafından toplanan sistem tarafından oluşturulan Günlükler](./diagnostic-data-collection.md) -güncelleştirme Diagnostic-Data-Collection.MD
-- [Visual Studio müşteri deneyimini geliştirme programı](./visual-studio-experience-improvement-program.md) -güncelleştirme Visual-Studio-Experience-improvement-program.MD
-- [Proje ve öğe şablonlarını özelleştirme](./customizing-project-and-item-templates.md) -şablonları özelleştirme ve komut satırını kullanma hakkında bağlantılar ekleme
-- [Nasıl yapılır: proje şablonları oluşturma](./how-to-create-project-templates.md) -şablonları özelleştirme ve komut satırını kullanma hakkında bağlantı ekleme
-- [Kod Düzenleyicisi F1 Yardım](./not-in-toc/default-f1-text-editor.md) -F1 varsayılan sayfalarına yönelik güncelleştirmeleri bağla
-- [F1 Yardım](./not-in-toc/default.md) -F1 varsayılan sayfalarına yönelik güncelleştirme bağlantıları
-- [Hızlı başlangıç: Visual Studio 'Yu kullanarak ilk Node.js App](./quickstart-nodejs.md) -AngularJS güncelleştirmelerini oluşturma
-- [Metodu ayıklama yeniden düzenleme](./reference/extract-method.md) -güncelleştirme Extract-Method.MD
-- [XAML Tasarımcısı seçenekleri sayfası](./reference/xaml-designer.md) -XAML Tasarımcısı içinde yeni eklenen seçenekler hakkında bilgi ekleme
-- [Visual Studio 2019 ' deki yenilikler](./whats-new-visual-studio-2019.md)
-  - Akıllı Arama Hizmeti bilgileri ekleme
-  - Ayrıca görmek için yeni CSharp 9 bağlantısı ekleyin
-- [Geliştirici Komut İstemi ve geliştirici PowerShell](./reference/command-prompt-powershell.md)
-  - Özellik başlıklarını güncelleştir ve önkoşulları bölümünü kaldır
-  - Başlık hiyerarşisini Güncelleştir
-  - Geliştirici Komut İstemi ve geliştirici PowerShell
-- [Takım Gezgini projelere bağlanma](./connect-team-project.md) -Git & Takım Gezgini link 'in yan yana karşılaştırması ile konuları güncelleştirin
-- [Visual Studio 'da git deneyimi](./git-with-visual-studio.md)
-  - mevcut uzak deyime Azure DevOps ekleme
-  - Takım Gezgini ve yeni git özelliklerinin yeni yan yana karşılaştırma sayfası ekleme
-  - -b bağımsız değişkeni git-with-visual-studio.md içinde yok
-- [Visual Studio 'Da varsayılan klavye kısayolları](./default-keyboard-shortcuts-in-visual-studio.md) -eksik küme kesme noktası koşulları klavye kısayolunu ekleyin
-- [Kullanıcı izinleri ve Visual Studio](./user-permissions-and-visual-studio.md) -kısayol 'ta yönetici Farsça ayarlama yordamı ekleme
-- [Visual Studio 'da Equals ve GetHashCode metot geçersiz kılmaları oluşturma](./reference/generate-equals-gethashcode-methods.md)
-  - ekran görüntüsü boyutunu küçültün ve bir yönergeye küçük düzenleme ekleyin
-  - ekran görüntüleriyle eşleştirmeye kod ekleme
-- [Visual Studio 'da normal Ifadeler kullanma](./using-regular-expressions-in-visual-studio.md) -hatalı Regex çözme
-- [MSBuild sorunları Için sorun giderme ve günlük oluşturma](./msbuild-logs.md) -çalışma dalından birleştirmeyi Onayla
-- Açık klasör geliştirme-Geliştirici Komut İstemi ve geliştirici PowerShell [için derleme ve hata ayıklama görevlerini özelleştirme](./customize-build-and-debug-tasks-in-visual-studio.md)
-- [C# geliştiricileri Için Visual Studio üretkenlik Kılavuzu](./csharp-developer-productivity.md) -VS2019 için kod inceleme uzantısı listesini güncelleştirme
+- [F1 Yardımı: eşleşme bulunamadı](./not-in-toc/default.md) -güncelleştirme default.MD
+- [Geliştirici komut istemi ve geliştirici PowerShell](./reference/command-prompt-powershell.md) -içerik performansı geliştirmeleri
+- [Takım Gezgini projelere bağlanma](./connect-team-project.md) -"Takım Gezgini projelere Bağlan" sayfasında vs 2019 sürümünü gözden geçirin
 
 ## <a name="install"></a>Yükleme
 
-**Yeni makaleler**
-- [Microsoft uç noktası kullanan yönetici güncelleştirmelerini uygulama Configuration Manager](../install/applying-administrator-updates.md) -yönetici güncelleştirmelerini uygulama hakkında yeni içerik oluşturuldu
-- [Microsoft uç noktası Ile Visual Studio 'da yönetici güncelleştirmelerini etkinleştirme Configuration Manager](../install/enabling-administrator-updates.md) -yönetici güncelleştirmelerini etkinleştirme hakkında yeni içerik oluşturuldu
-
 **Güncelleştirilmiş makaleler**
 
-- [Visual Studio derleme numaraları ve yayın tarihleri](../install/visual-studio-build-numbers-and-release-dates.md)
-  - Visual-studio-build-numbers-and-release-dates.md Güncelleştir
-  - 16.9.2 sürüm verisi Ekle
-  - Güncelleştirmeleri Salı Düzeltme Eki
-  - derleme numaralarının tarihini güncelleştirme sayfası
-  - 16,9 GA ve 16,10 Preview 1 için derleme numaraları
-  - Yeni sürümler için güncelleştirme
-- [Çevrimdışı Visual Studio yüklemesi oluşturma](../install/create-an-offline-installation-of-visual-studio.md) -yönetici belge düzenlemelerini güncelleştirme
-- [Visual Studio çevrimdışı yükleme için gerekli sertifikaları yükleme](../install/install-certificates-for-visual-studio-offline.md) -yönetici güncelleştirme belge düzenlemeleri
-- [Visual Studio sürümlerini yan](../install/install-visual-studio-versions-side-by-side.md) yana yönetici güncelleştirme belge düzenlemelerini yükler
-- [Visual Studio ve Azure hizmetlerini bir güvenlik duvarı ya da ara sunucu ile güncelleştiren bir makalenin arkasına yükleyip kullanın](../install/install-and-use-visual-studio-behind-a-firewall-or-proxy-server.md) .
-
-## <a name="javascript"></a>JavaScript
-
-**Güncelleştirilmiş makaleler**
-
-- [Visual Studio 'da JavaScript ve TypeScript # gerekli; arama sonuçlarında sayfa başlığı görüntülendi. Markasını ekleyin. < 60 karakter.](../javascript/index.yml) -AngularJS güncelleştirmeleri
-- [Hızlı başlangıç: Visual Studio 'Yu kullanarak ilk Vue.js App](../javascript/quickstart-vuejs-with-nodejs.md) -AngularJS güncelleştirmelerini oluşturma
-- [Öğretici: Visual Studio 'da TypeScript ile ASP.NET Core uygulaması oluşturma](../javascript/tutorial-aspnet-with-typescript.md)
-  - AngularJS güncelleştirmeleri
-  - VisualStudio-docs/sorunlar/6457--eksik sürüm
-- [Öğretici: Visual Studio 'da Node.js ve Express uygulaması oluşturma](../javascript/tutorial-nodejs.md) -AngularJS Updates
-- JavaScript-AngularJS güncelleştirmeleri [için kod düzenleyicisini kullanmayı öğrenin](../javascript/write-and-edit-code.md)
-- [Visual Studio 'da JavaScript ve TypeScript ile birim testi](../javascript/unit-testing-javascript-with-visual-studio.md)
-  - ASP.NET Core ve TypeScript için birim testleri
-  - Geliştirici Komut İstemi ve geliştirici PowerShell
-  - GitHub sorun düzeltmeleri
-- [Visual Studio 'da NPM paketlerini yönetme](../javascript/npm-package-management.md) -GitHub sorun düzeltmeleri
+- [Çevrimdışı Visual Studio yüklemesi oluşturma](../install/create-an-offline-installation-of-visual-studio.md) -güncelleştirme Use-Command-Line-Parameters-to-install-Visual-Studio.MD
+- [Visual Studio 'yu yüklemek için komut satırı parametrelerini kullanma](../install/use-command-line-parameters-to-install-visual-studio.md) -güncelleştirme Use-Command-Line-Parameters-to-install-Visual-Studio.MD
+- [Visual Studio 'nun kurumsal dağıtımları için varsayılanlar ayarlama](../install/set-defaults-for-enterprise-deployments.md) -yönetici güncelleştirmeleriyle ilgili hataları giderme ve kurumsal dağıtımlar varsayılanlarından gereksiz desteklenmediği uyarısıyla kaldırma
+- [Visual Studio derleme numaraları ve sürüm tarihleri](../install/visual-studio-build-numbers-and-release-dates.md) -düzeltme eki Ekle güncelleştirmeleri
+- [Microsoft uç nokta Configuration Manager yönetici güncelleştirmelerini kullanan yönetici güncelleştirmeleri uygulanıyor](../install/applying-administrator-updates.md)
+- [Ağ tabanlı Visual Studio dağıtımları](../install/controlling-updates-to-visual-studio-deployments.md) -yönetici güncelleştirmeleri güncelleştirmelerini denetleme
+- Visual Studio-yönetici güncelleştirmeleri için [bir ağ yüklemesi oluşturma](../install/create-a-network-installation-of-visual-studio.md)
+- [Microsoft uç nokta Configuration Manager-yönetici güncelleştirmeleriyle Visual Studio 'da yönetici güncelleştirmelerini etkinleştirme](../install/enabling-administrator-updates.md)
+- [Visual Studio örneklerini algılama ve yönetme araçları](../install/tools-for-managing-visual-studio-instances.md) -yönetici güncelleştirmeleri
+- [Visual Studio 'yu en son sürüm](../install/update-visual-studio.md) Yöneticisi güncelleştirmeleriyle güncelleştirme
+- [Visual Studio Yönetici Kılavuzu](../install/visual-studio-administrator-guide.md) -yönetici güncelleştirmeleri
+- [Visual Studio Enterprise Guide](../install/visual-studio-enterprise-guide.md) -yönetici güncelleştirmeleri
 
 ## <a name="msbuild"></a>MSBuild
 
-**Güncelleştirilmiş makaleler**
+**Yeni makaleler**
 
-- [MSBuild derleme projeleri](../msbuild/build-process-overview.md) -hatalı öğe adını düzeltir.
-- [CreateCSharpManifestResourceName görevi](../msbuild/createcsharpmanifestresourcename-task.md) -hatalı çapraz başvuruyu çözme yanlış
-- [Nasıl yapılır: Visual Studio derleme Işlemini genişletme](../msbuild/how-to-extend-the-visual-studio-build-process.md) -XML girintisini onarma
-- [MIDL görevi](../msbuild/midl-task.md) -güncelleştirme Midl-Task.MD
-- [Ortak MSBuild proje öğeleri](../msbuild/common-msbuild-project-items.md) -Makale içi İçindekiler ekleme ve biçimlendirmeyi iyileştirme
-- [Öğe öğesi (MSBuild)](../msbuild/item-element-msbuild.md) -Makale içi İçindekiler ekleme ve biçimlendirmeyi iyileştirme
-- [Exec görevi](../msbuild/exec-task.md) -Utf8Encoding parametresi için belge Ekle
-
-## <a name="profiling"></a>Profil Oluşturma
-
-**Güncelleştirilmiş makaleler**
-
-- [Uygulama performansını komut satırından ölçme](../profiling/profile-apps-from-command-line.md) -GitHub sorun düzeltmeleri
-- [Profil oluşturma araçlarına ilk bakış](../profiling/profiling-feature-tour.md) -.net sayaçları için bulma çalışması aracı
+- [MSB8066: ' item-List ' Için özel derleme ' hata kodu ' koduyla çıktı](../msbuild/errors/msb8066.md) -MSB8066 için yeni sayfa taslağı
+- [MSB8040: Spectre-bu proje Için-hafiftılan kitaplıklar gereklidir](../msbuild/errors/msb8040.md) -MSBuild C++ hata iletileri
+- [MSB8041: Bu proje IÇIN MFC kitaplıkları gereklidir](../msbuild/errors/msb8041.md) -MSBuild C++ hata iletileri
+- [MSB3277: ' Assembly ' öğesinin çözümlenemeyecek farklı sürümleri arasında çakışmalar bulundu](../msbuild/errors/msb3277.md) -MSBUILD hatası MSB3277
 
 ## <a name="python"></a>Python
 
 **Güncelleştirilmiş makaleler**
 
-- [Öğretici: Visual Studio 'da Flask Web çerçevesi ile çalışmaya başlama](../python/learn-flask-visual-studio-step-01-project-solution.md)
-  - Sorgu parametreleriyle ilgili güncelleştirilmiş kod ve metin
-  - Visual Studio 2019 Python öğreticilerinin şablon içeriğini yoklayıp kaldırma
-- [Öğretici: Visual Studio 'Da Docgo Web çerçevesi ile çalışmaya başlama](../python/learn-django-in-visual-studio-step-01-project-and-solution.md) -kaldırıldı visual Studio 2019 Python öğreticilerinin şablon içeriği
-- [5. Adım: Docgo 'da kullanıcıların kimliğini doğrulama](../python/learn-django-in-visual-studio-step-05-django-authentication.md) Visual Studio 2019 Python öğreticilerinde, şablon içeriğini yokladık
-- 6. Adım: Visual Studio 2019 Python öğreticilerinde bulunan [Docgo Web projesi şablonu ' nu yokladığı şekilde kullanın](../python/learn-django-in-visual-studio-step-06-polls-django-web-project-template.md)
-- [4. Adım: tam Flask Web projesi şablonunu kullanma](../python/learn-flask-visual-studio-step-04-full-flask-project-template.md) -kaldırıldı-Visual Studio 2019 Python öğreticilerinin şablon içeriğini kaldırma
-- [5. Adım: Flask Web projesi şablonunu yoklayıp,](../python/learn-flask-visual-studio-step-05-polls-flask-web-project-template.md) kaldırılan Visual Studio 2019 Python öğreticilerinin şablon içeriğini
-- [Docgo Web projesi şablonu](../python/python-django-web-application-project-template.md) -kaldırıldı Visual Studio 2019 Python öğreticilerinde şablon Içeriğini yoklamalar
-- [Python web uygulaması proje şablonları](../python/python-web-application-project-templates.md) -kaldırıldı Visual Studio 2019 Python öğreticilerinde şablon Içeriğini yoklamalar
-- [Python yorumlayıcıları için hata ayıklama sembolleri yükler](../python/debugging-symbols-for-mixed-mode-c-cpp-python.md) -Python 2,7 ' nin son 3 yüklemesini ekleyin
+- [Python için C++ uzantısı oluşturma](../python/working-with-c-cpp-python-in-visual-studio.md)
+  - GH sorunları gidermek için küçük güncelleştirmeler
+  - Working-with-c-cpp-python-in-visual-studio.md geliştir
 
-## <a name="test"></a>Test
-
-**Yeni makaleler**
-
-- [ *. Testsettings* 'den *. runsettings* 'e Yükselt](../test/migrate-testsettings-to-runsettings.md) -runsettings belgesi 'ne geçiş Ekle
-- [MSTestV1 'Den MSTestV2 'e yükseltme](../test/mstest-update-to-mstestv2.md) -MSTestV1 'den MSTestV2 'e yükseltme sırasında belge ekleme
+## <a name="sharepoint"></a>SharePoint
 
 **Güncelleştirilmiş makaleler**
 
-- [Koddan birim testi yöntemi saplamaları oluşturma](../test/create-unit-tests-menu.md) -VisualStudio-docs/sorunlar/6484--Update link
-- [Visual Studio 'da test araçlarına ilk bakış](../test/improve-code-quality.md) -VisualStudio-docs/sorunlar/6429--laboratuvar bağlantılarını Güncelleştir
-- [*. Runsettings* dosyasını kullanarak birim testlerini yapılandırma](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md)
-  - Geliştirici Komut İstemi ve geliştirici PowerShell
-  - Düzeltilen yazım hataları
-- [VSTest.Console.exe komut satırı seçenekleri](../test/vstest-console-options.md) -Geliştirici komut istemi ve geliştirici PowerShell
+- [Varlıklar arasında bir Ilişki oluşturma](../sharepoint/creating-an-association-between-entities.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-6
+- [Nasıl yapılır: Sunucu Gezgini hareketli örnek dosyalara özel bir SharePoint düğümü ekleme](../sharepoint/how-to-add-a-custom-sharepoint-node-to-server-explorer.md) ve kod başvurularını güncelleştirme (Bölüm 1)-6
+- [Nasıl yapılır: SharePoint proje hizmetini alma](../sharepoint/how-to-retrieve-the-sharepoint-project-service.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-6
+- [Verileri SharePoint proje sisteminin uzantılarına kaydetme](../sharepoint/saving-data-in-extensions-of-the-sharepoint-project-system.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-6
+- [Izlenecek yol: öğe şablonu, Bölüm 2 ile özel bir eylem proje öğesi oluşturma,](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2.md) örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-6
+- [Izlenecek yol: SharePoint projeleri için özel bir dağıtım adımı oluşturma](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-6
+- [Izlenecek yol: SharePoint uygulama sayfası oluşturma](../sharepoint/walkthrough-creating-a-sharepoint-application-page.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-6
+- [Izlenecek yol: proje şablonu, Bölüm 2](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme ile bir site sütunu proje öğesi oluşturma (Bölüm 1)-6
+- [Izlenecek yol: tasarımcı hareketli örnek dosyaları kullanarak SharePoint için bir Web Bölümü oluşturma](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint-by-using-a-designer.md) ve kod başvurularını güncelleştirme (1. bölüm)-6
+- [Izlenecek yol: SharePoint için bir Web Bölümü oluşturma](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-6
+- [Izlenecek yol: Web bölümlerini](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md) hareketli örnek dosyaları ve kod başvurularını güncelleştirme Için Sunucu Gezgini genişletme (Bölüm 1)-6
+
+## <a name="test"></a>Test
+
+**Güncelleştirilmiş makaleler**
+
+- [Birim testi ile çalışmaya başlama](../test/getting-started-with-unit-testing.md) -yeni başlayanlar kılavuzu 'na vb 'yi ekleme
+- [Live Unit Testing ile çalışmaya başlama](../test/live-unit-testing-start.md) örnek dosyaları ve kod başvurularını güncelleştirme (Bölüm 1)-7
+
+## <a name="vsto"></a>VSTO
+
+**Güncelleştirilmiş makaleler**
+
+- [Izlenecek yol: Outlook 'ta e-posta iletileri ile özel görev bölmelerini görüntüleme](../vsto/walkthrough-displaying-custom-task-panes-with-e-mail-messages-in-outlook.md) ve kod başvurularını güncelleştirme (1. bölüm)-11
+- [Izlenecek yol: Outlook 'ta tasarlanan ve kod başvurularını güncelleştiren bir form bölgesini Içeri aktarma](../vsto/walkthrough-importing-a-form-region-that-is-designed-in-outlook.md) (1. bölüm)-11
+- Izlenecek yol: sunucu hareketli örnek dosyaları ve kod başvurularını güncelleştirme (1. bölüm)-11 [' de çalışma kitabına veri ekleme](../vsto/walkthrough-inserting-data-into-a-workbook-on-a-server.md)
+- [Izlenecek yol: Eylemler bölmesinden bir belgeye metin ekleme](../vsto/walkthrough-inserting-text-into-a-document-from-an-actions-pane.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (1. bölüm)-11
+- [Izlenecek yol: NamedRange denetimi olaylarına karşı](../vsto/walkthrough-programming-against-events-of-a-namedrange-control.md) programlama-örnek dosyaları taşıma ve kod başvurularını güncelleştirme (1. bölüm)-11
+- [Izlenecek yol: bir sunucudaki çalışma kitabından önbelleğe alınmış verileri alma](../vsto/walkthrough-retrieving-cached-data-from-a-workbook-on-a-server.md) örnek dosyaları ve kod başvurularını güncelleştirme (1. bölüm)-11
+- [Izlenecek yol: belge düzeyi projede basit veri bağlama](../vsto/walkthrough-simple-data-binding-in-a-document-level-project.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (1. bölüm)-11
+- [Izlenecek yol: VSTO eklentisi projesinde basit veri bağlama](../vsto/walkthrough-simple-data-binding-in-vsto-add-in-project.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (1. bölüm)-11
+- [Izlenecek yol: özel görev bölmesini Şerit düğmesi Ile senkronize](../vsto/walkthrough-synchronizing-a-custom-task-pane-with-a-ribbon-button.md) etme-örnek dosyaları taşıma ve kod başvurularını güncelleştirme (1. bölüm)-11
+- [Izlenecek yol: radyo düğmeleri kullanarak belgedeki grafiği güncelleştirme](../vsto/walkthrough-updating-a-chart-in-a-document-using-radio-buttons.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (1. bölüm)-11
+- [Izlenecek yol: radyo düğmelerini kullanarak çalışma sayfasında bir grafiği güncelleştirme](../vsto/walkthrough-updating-a-chart-in-a-worksheet-using-radio-buttons.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (1. bölüm)-11
+- [Izlenecek yol: çalışma zamanında bir Şeritteki denetimleri güncelleştirme](../vsto/walkthrough-updating-the-controls-on-a-ribbon-at-run-time.md) örnek dosyaları ve kod başvurularını güncelleştirme (Bölüm 1)-11
+- [Office çözümlerinde hata giderme](../vsto/troubleshooting-errors-in-office-solutions.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-10
+- Izlenecek yol: bir VSTO eklenti hareketli örnek dosyaları ve güncelleştirme kodu başvurularını güncelleştirmek [için belgeye çalışma zamanında denetim ekleme](../vsto/walkthrough-adding-controls-to-a-document-at-run-time-in-a-vsto-add-in.md) (1. bölüm)-10
+- [Izlenecek yol: VSTO eklentisi projesinde çalışma zamanında çalışma sayfasına denetimler ekleme](../vsto/walkthrough-adding-controls-to-a-worksheet-at-run-time-in-vsto-add-in-project.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-10
+- [Izlenecek yol: bir uygulamayı özel görev bölmesinden otomatikleştirme](../vsto/walkthrough-automating-an-application-from-a-custom-task-pane.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-10
+- [Izlenecek yol: içerik denetimlerini özel XML bölümlerine bağlama](../vsto/walkthrough-binding-content-controls-to-custom-xml-parts.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-10
+- [Izlenecek yol: Word Eylemler bölmesindeki denetimlere veri bağlama](../vsto/walkthrough-binding-data-to-controls-on-a-word-actions-pane.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-10
+- [Izlenecek yol: Excel eylemler bölmesindeki denetimlere veri bağlama](../vsto/walkthrough-binding-data-to-controls-on-an-excel-actions-pane.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-10
+- [Izlenecek yol: VSTO eklenti projesinde bir hizmetten veriye bağlama](../vsto/walkthrough-binding-to-data-from-a-service-in-a-vsto-add-in-project.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-10
+- [Izlenecek yol: VBA 'dan BIR VSTO eklentisinde kod çağırma](../vsto/walkthrough-calling-code-in-a-vsto-add-in-from-vba.md) örnek dosyaları ve kod başvurularını güncelleştirme (Bölüm 1)-10
+- [Izlenecek yol: bir sunucudaki çalışma kitabındaki önbelleğe alınmış verileri değiştirme](../vsto/walkthrough-changing-cached-data-in-a-workbook-on-a-server.md) örnek dosyaları ve kod başvurularını güncelleştirme (Bölüm 1)-10
+- [Izlenecek yol: CheckBox denetimlerini kullanarak belge biçimlendirmesini değiştirme](../vsto/walkthrough-changing-document-formatting-using-checkbox-controls.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-10
+- [Izlenecek yol: CheckBox denetimlerini kullanarak çalışma sayfası biçimlendirmesini değiştirme](../vsto/walkthrough-changing-worksheet-formatting-using-checkbox-controls.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-10
+- [Izlenecek yol: Windows formu hareketli örnek dosyaları kullanarak veri toplama](../vsto/walkthrough-collecting-data-using-a-windows-form.md) ve kod başvurularını güncelleştirme (1. bölüm)-10
+- [Izlenecek yol: belge düzeyi projede karmaşık veri bağlama](../vsto/walkthrough-complex-data-binding-in-a-document-level-project.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-10
+- [Izlenecek yol: VSTO eklentisi projesinde karmaşık veri bağlama](../vsto/walkthrough-complex-data-binding-in-vsto-add-in-project.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-10
+- [Izlenecek yol: ŞERIT XML kullanarak özel sekme oluşturma](../vsto/walkthrough-creating-a-custom-tab-by-using-ribbon-xml.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-10
+- [Izlenecek yol: Şerit Tasarımcısını kullanarak özel sekme oluşturma](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-10
+- [Izlenecek yol: önbelleğe alınmış bir veri kümesi kullanarak ana ayrıntı Ilişkisi oluşturma](../vsto/walkthrough-creating-a-master-detail-relation-using-a-cached-dataset.md) -örnek dosyalar ve kod başvurularını güncelleştirme (Bölüm 1)-10
+- [Izlenecek yol: içerik denetimlerini kullanarak şablon oluşturma](../vsto/walkthrough-creating-a-template-by-using-content-controls.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-10
+- [Izlenecek yol: yer işaretleri için kısayol menüleri oluşturma](../vsto/walkthrough-creating-shortcut-menus-for-bookmarks.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-10
+- [Izlenecek yol: Outlook için Ilk VSTO eklentisini oluşturma](../vsto/walkthrough-creating-your-first-vsto-add-in-for-outlook.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-10
+- [Nasıl yapılır: program aracılığıyla Word tablolarını belge özellikleriyle doldurma](../vsto/how-to-programmatically-populate-word-tables-with-document-properties.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-9
+- [Nasıl yapılır: program aracılığıyla belgeleri yazdırma](../vsto/how-to-programmatically-print-documents.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-9
+- [Nasıl yapılır: program aracılığıyla çalışma sayfalarını yazdırma](../vsto/how-to-programmatically-print-worksheets.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-9
+- [Nasıl yapılır: program aracılığıyla belgeleri ve belge parçalarını koruma](../vsto/how-to-programmatically-protect-documents-and-parts-of-documents.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-9
+- [Nasıl yapılır: program aracılığıyla çalışma kitaplarını koruma](../vsto/how-to-programmatically-protect-workbooks.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-9
+- [Nasıl yapılır: Word belgelerinde aralıkları program aracılığıyla sıfırlama](../vsto/how-to-programmatically-reset-ranges-in-word-documents.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-9
+- [Nasıl yapılır: aramalar sonrasında program aracılığıyla seçimleri geri yükleme](../vsto/how-to-programmatically-restore-selections-after-searches.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-9
+- [Nasıl yapılır: program aracılığıyla Excel hesaplamaları çalıştırma](../vsto/how-to-programmatically-run-excel-calculations-programmatically.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-9
+- [Nasıl yapılır: program aracılığıyla belgeleri kaydetme](../vsto/how-to-programmatically-save-documents.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-9
+- [Nasıl yapılır: program aracılığıyla Visio belgeleri kaydetme](../vsto/how-to-programmatically-save-visio-documents.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-9
+- [Nasıl yapılır: program aracılığıyla çalışma kitaplarını kaydetme](../vsto/how-to-programmatically-save-workbooks.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-9
+- [Nasıl yapılır: belgelerde metin arama ve değiştirme](../vsto/how-to-programmatically-search-for-and-replace-text-in-documents.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-9
+- [Nasıl yapılır: çalışma sayfası aralıklarında program aracılığıyla metin arama](../vsto/how-to-programmatically-search-for-text-in-worksheet-ranges.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-9
+- [Nasıl yapılır: çalışma sayfalarındaki verileri program aracılığıyla sıralama](../vsto/how-to-programmatically-sort-data-in-worksheets.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-9
+- [Nasıl yapılır: program aracılığıyla tarih değerlerini Excel aralıklarında depolama ve alma](../vsto/how-to-programmatically-store-and-retrieve-date-values-in-excel-ranges.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-9
+- [Nasıl yapılır: yer işareti metnini program aracılığıyla güncelleştirme metin](../vsto/how-to-programmatically-update-bookmark-text.md) taşıma örnek dosyaları ve kod başvurularını güncelleştirme (Bölüm 1)-9
+- [Nasıl yapılır: Word 'ü hareketli örnek dosyalarda yerleşik iletişim kutularını program aracılığıyla kullanma](../vsto/how-to-programmatically-use-built-in-dialog-boxes-in-word.md) ve kod başvurularını güncelleştirme (Bölüm 1)-9
+- [Nasıl yapılır: içerik denetimlerini kullanarak belge parçalarını koruma](../vsto/how-to-protect-parts-of-documents-by-using-content-controls.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-9
+- [Nasıl yapılır: belge özelliklerinden okuma ve yazma](../vsto/how-to-read-from-and-write-to-document-properties.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-9
+- [Nasıl yapılır: yer işareti denetimlerini yeniden boyutlandırma](../vsto/how-to-resize-bookmark-controls.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-9
+- [Nasıl yapılır: ListObject denetimlerini yeniden boyutlandırma](../vsto/how-to-resize-listobject-controls.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-9
+- [Nasıl yapılır: NamedRange denetimlerinin boyutunu değiştirme](../vsto/how-to-resize-namedrange-controls.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-9
+- [Nasıl yapılır: bir konak denetimindeki verilerle veri kaynağını güncelleştirme](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-9
+- [Nasıl yapılır: ListObject denetimine yeni bir satır eklendiğinde verileri doğrulama](../vsto/how-to-validate-data-when-a-new-row-is-added-to-a-listobject-control.md) -hareketli örnek dosyaları ve kod başvurularını güncelleştirme (Bölüm 1)-9
+- [Office çözümlerinde geç bağlama](../vsto/late-binding-in-office-solutions.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-9
+- [Office çözümlerinde Isteğe bağlı parametreler](../vsto/optional-parameters-in-office-solutions.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-9
+- [Office belgelerinde dinamik denetimleri kalıcı hale](../vsto/persisting-dynamic-controls-in-office-documents.md) getirme-örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-9
+- [Nasıl yapılır: program aracılığıyla Excel aralıklarına renk uygulama aralıkları](../vsto/how-to-programmatically-apply-color-to-excel-ranges.md) -hareketli örnek dosyalar ve kod başvurularını güncelleştirme (1. bölüm)-8
+- [Nasıl yapılır: program aracılığıyla çalışma kitaplarındaki aralıklara stil uygulama](../vsto/how-to-programmatically-apply-styles-to-ranges-in-workbooks.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-8
+- [Nasıl yapılır: bir Office belgesinde program aracılığıyla veri kaynağını önbelleğe alma](../vsto/how-to-programmatically-cache-a-data-source-in-an-office-document.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-8
+- [Nasıl yapılır: seçili hücreleri içeren çalışma sayfası satırlarında program aracılığıyla biçimlendirmeyi değiştirme](../vsto/how-to-programmatically-change-formatting-in-worksheet-rows-containing-selected-cells.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (1. bölüm)-8
+- [Nasıl yapılır: program aracılığıyla belgeleri kapatma](../vsto/how-to-programmatically-close-documents.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-8
+- [Nasıl yapılır: program aracılığıyla çalışma kitaplarını kapatma](../vsto/how-to-programmatically-close-workbooks.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-8
+- [Nasıl yapılır: belgelerde aralıkları veya seçimleri program aracılığıyla daraltma](../vsto/how-to-programmatically-collapse-ranges-or-selections-in-documents.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-8
+- [Nasıl yapılır: belgelerde program aracılığıyla karakter](../vsto/how-to-programmatically-count-characters-in-documents.md) alma-örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-8
+- [Nasıl yapılır: program aracılığıyla yeni Visio belgeleri oluşturma](../vsto/how-to-programmatically-create-new-visio-documents.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (1. bölüm)-8
+- [Nasıl yapılır: program aracılığıyla Word tabloları oluşturma](../vsto/how-to-programmatically-create-word-tables.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-8
+- [Nasıl yapılır: belgelerde aralıkları program aracılığıyla tanımlama ve seçme](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-8
+- [Nasıl yapılır: program aracılığıyla belgeleri baskı önizlemede görüntüleme](../vsto/how-to-programmatically-display-documents-in-print-preview.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-8
+- Nasıl yapılır: aralıklar hareketli örnek dosyaları oluştururken ve kod başvurularını güncelleştirerek [paragraf Işaretlerini program aracılığıyla dışlama](../vsto/how-to-programmatically-exclude-paragraph-marks-when-creating-ranges.md) (1. bölüm)-8
+- [Nasıl yapılır: belgelerde aralıkları program aracılığıyla genişletme](../vsto/how-to-programmatically-extend-ranges-in-documents.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-8
+- [Nasıl yapılır: belgelerde metni program aracılığıyla gizleme](../vsto/how-to-programmatically-hide-text-in-documents.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-8
+- [Nasıl yapılır: program aracılığıyla Word belgelerine metin ekleme](../vsto/how-to-programmatically-insert-text-into-word-documents.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-8
+- [Nasıl yapılır: program aracılığıyla bulunan öğeler içinde bulunan öğeler arasında döngü gerçekleştirme](../vsto/how-to-programmatically-loop-through-found-items-in-documents.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (1. bölüm)-8
+- [Çalışma zamanında bir form bölgesine erişme](../vsto/accessing-a-form-region-at-run-time.md) örnek dosyaları ve kod başvurularını güncelleştirme (Bölüm 1)-7
+- [Çalışma zamanında Şerit 'e erişme](../vsto/accessing-the-ribbon-at-run-time.md) örnek dosyalar ve kod başvurularını güncelleştirme (Bölüm 1)-7
+- [Eylemler bölmesine genel bakış](../vsto/actions-pane-overview.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-7
+- [Çalışma zamanında Office belgelerine denetim ekleme](../vsto/adding-controls-to-office-documents-at-run-time.md) -örnek dosyaları ve kod başvurularını güncelleştirme (Bölüm 1)-7
+- Çalışma zamanı hareketli örnek dosyaları ve güncelleştirme kodu başvurularını güncelleştirmek [üzere VSTO Eklentilerindeki Word belgelerini ve Excel çalışma kitaplarını genişletme](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md) (Bölüm 1)-7
+- [Nasıl yapılır: Word belgelerine veya Excel çalışma kitaplarına eylemler bölmesi ekleme](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-7
+- [Nasıl yapılır: Word belgelerine yer işareti denetimleri ekleme](../vsto/how-to-add-bookmark-controls-to-word-documents.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-7
+- [Nasıl yapılır: Word belgelerine içerik denetimleri ekleme](../vsto/how-to-add-content-controls-to-word-documents.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-7
+- [Nasıl yapılır: VSTO Eklentilerini kullanarak belgelere özel XML bölümleri ekleme](../vsto/how-to-add-custom-xml-parts-to-documents-by-using-vsto-add-ins.md) ve kod başvurularını güncelleştirme (Bölüm 1)-7
+- [Nasıl yapılır: veri taşıma örnek dosyaları Ile ListObject denetimlerini doldur](../vsto/how-to-fill-listobject-controls-with-data.md) ve kod başvurularını güncelleştirme (Bölüm 1)-7
+- [Nasıl yapılır: Eylemler bölmeleri üzerinde denetim yerleşimini yönetme](../vsto/how-to-manage-control-layout-on-actions-panes.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-7
+- [Nasıl yapılır: ListObject sütunlarını veri](../vsto/how-to-map-listobject-columns-to-data.md) taşıma örnek dosyalarını eşleme ve kod başvurularını güncelleştirme (Bölüm 1)-7
+- [Nasıl yapılır: program aracılığıyla çalışma sayfası açıklamaları ekleme ve silme](../vsto/how-to-programmatically-add-and-delete-worksheet-comments.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-7
+- [Nasıl yapılır: programlı olarak belgelere üstbilgiler ve altbilgiler ekleme](../vsto/how-to-programmatically-add-headers-and-footers-to-documents.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-7
+- [Nasıl yapılır: belgelere program aracılığıyla resim ve Word art ekleme](../vsto/how-to-programmatically-add-pictures-and-word-art-to-documents.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-7
+- [Nasıl yapılır: Word tablolarına program aracılığıyla satır ve sütun ekleme](../vsto/how-to-programmatically-add-rows-and-columns-to-word-tables.md) -örnek dosyaları taşıma ve kod başvurularını güncelleştirme (Bölüm 1)-7
+
+## <a name="xaml-tools"></a>XAML Araçları
+
+**Güncelleştirilmiş makaleler**
+
+- [Visual Studio 'da XAML Tasarımcısı tasarım zamanı verilerini kullanın](../xaml-tools/xaml-designtime-data.md) listviews Için UWP örneği eklendi
 
 ## <a name="community-contributors"></a>Topluluk katkı sağlayanlar
 
 Aşağıdaki kişiler bu süre boyunca Visual Studio belgelerine katkıda bulunanlar. Teşekkür ederiz! [Katkıda bulunan kılavuzundaki](/contribute/)Kılavuzu Izleyerek Visual Studio belgelerine nasıl katkıda bulunabileceğinizi öğrenin.
 
-- [Andrekraemer](https://github.com/AndreKraemer) -Andre Kraemer (1)
-- [Buke](https://github.com/Bouke) -buke haarsma (1)
-- [Chandankkronr](https://github.com/Chandankkrr) -Chandan Rauniyar (1)
-- [Glenn-Slayden](https://github.com/glenn-slayden) -Glenn Slayden (1)
-- [grossag](https://github.com/grossag) -adam Brüt (1)
-- [icnocop](https://github.com/icnocop) -oymi (1)
-- [mookıd](https://github.com/mookid) -Nathan Moreau (1)
-- [nebuk89](https://github.com/nebuk89) -Ben De St Paer-Gotch (1)
-- [stanciuadria](https://github.com/stanciuadrian) -Adrian stanu (1)
-- [stegram](https://github.com/stegrams) -Stefanos Grammenos (1)
-- [tanpuresiddhant](https://github.com/tanpuresiddhant) (1)
-- [Solheimry](https://github.com/WilheimRy) (1)
-- [xh286286](https://github.com/xh286286) (1)
+- [Scott-Xu](https://github.com/scott-xu) -Scott Xu (1)
+- [shreyanavigyan](https://github.com/shreyanavigyan) -shreyan Avigyan (1)

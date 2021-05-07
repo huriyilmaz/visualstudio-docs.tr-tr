@@ -1,6 +1,6 @@
 ---
-title: Live ASP.NET Azure Kubernetes hizmetlerinde hata ayıklama
-description: Visual Studio 'da Snapshot Debugger kullanarak, canlı ASP.NET Azure Kubernetes hizmetlerinde hata ayıklama sırasında anlık görüntü noktalarını ayarlama ve anlık görüntü alma işlemlerini nasıl kullanacağınızı öğrenin.
+title: Azure Kubernetes Services ASP.NET canlı hata ayıklama
+description: Azure Kubernetes Services'Snapshot Debugger canlı hata ayıklaması Visual Studio anlık görüntü almak için ASP.NET nasıl kullanabileceğinizi öğrenin.
 ms.custom: ''
 ms.date: 02/11/2019
 ms.topic: how-to
@@ -13,39 +13,39 @@ monikerRange: '>= vs-2019'
 ms.workload:
 - aspnet
 - azure
-ms.openlocfilehash: 823da6da0a842766739cb50c700bb723a47d0309
-ms.sourcegitcommit: d577818d3d8e365baa55c6108fa8159c46ed8b43
+ms.openlocfilehash: c1c8a593d147b8ba38393aabd89b293e0fbd5d26
+ms.sourcegitcommit: d4887ef2ca97c55e2dad9f179eec2c9631d91c95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97846969"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "108798472"
 ---
-# <a name="debug-live-aspnet-azure-kubernetes-services-using-the-snapshot-debugger"></a>Snapshot Debugger kullanarak canlı ASP.NET Azure Kubernetes hizmetlerinde hata ayıklayın
+# <a name="debug-live-aspnet-azure-kubernetes-services-using-the-snapshot-debugger"></a>Azure Kubernetes Services ASP.NET de canlı hata ayıklaması Snapshot Debugger
 
-Snapshot Debugger, çalışırken ilgilendiğiniz kod olduğunda üretim içi uygulamalarınızın anlık görüntüsünü alır. Hata ayıklayıcıya bir anlık görüntü almasını söylemek için kodunuzda anlık görüntü noktaları ve günlüğe kaydetme noktaları ayarlarsınız. Hata ayıklayıcı, üretim uygulamanızın trafiğini etkilemeden tam olarak neyin yanlış gittiğini görmenizi sağlar. Snapshot Debugger, üretim ortamlarında oluşan sorunları çözmek için geçen süreyi önemli ölçüde düşürmeye yardımcı olabilir.
+Bu Snapshot Debugger, ilgilendiğiniz kod yürütülürken üretim uygulamalarınıza bir anlık görüntü alır. Hata ayıklayıcıya anlık görüntü alma talimatı almak için kodunda anlık görüntü noktaları ve günlük noktaları ayarlayın. Hata ayıklayıcısı, üretim uygulama trafiğinizi etkilemeden tam olarak neyin yanlış gittiğini görmenizi sağlar. Bu Snapshot Debugger, üretim ortamlarında oluşan sorunları çözmek için gereken zamanı önemli ölçüde azaltmanıza yardımcı olabilir.
 
-Anlık görüntü noktaları ve günlüğe kaydetme noktaları, kesme noktalarıyla benzerdir, ancak kesme noktalarından farklı olarak, anlık görüntü noktaları, isabet edildiğinde uygulamayı durdurmayın. Genellikle, bir anlık görüntü noktasında anlık görüntü yakalama 10-20 milisaniye sürer.
+Anlık bileşen ve günlük noktaları kesme noktalarına benzer, ancak kesme noktanın aksine, anlık ek nokta isabetli olduğunda uygulamayı durdurmaz. Genellikle anlık görüntüyü bir anlık görüntüde yakalama 10-20 milisaniye sürer.
 
 Bu öğreticide şunları yapacaksınız:
 
 > [!div class="checklist"]
-> * Snapshot Debugger başlatın
-> * Anlık görüntü noktası ayarlama ve anlık görüntü görüntüleme
-> * Günlüğe kaydetme noktası ayarlama
+> * Start the Snapshot Debugger
+> * Anlık görüntü ayarlama ve anlık görüntüyü görüntüleme
+> * Günlük noktası ayarlama
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
-* Azure Kubernetes Hizmetleri için Snapshot Debugger yalnızca **Azure geliştirme iş yüküyle** Visual Studio 2019 Enterprise veya üzeri sürümlerde kullanılabilir. ( **Tek tek bileşenler** sekmesinde, **hata ayıklama ve test**  >  altında bulabilirsiniz **Anlık görüntü hata ayıklayıcısı**.)
+* Azure Kubernetes Services Snapshot Debugger 2019 Enterprise Visual Studio veya daha yüksek bir azure **geliştirme iş yükü için kullanılabilir.** (Bağımsız **bileşenler sekmesinde** Hata ayıklama ve test altında **bulabilirsiniz**  >  **Snapshot debugger**.)
 
-    Henüz yüklenmemişse, [Visual Studio 2019 Enterprise](https://visualstudio.microsoft.com/vs/)'ı yükleme.
+    Henüz yüklü değilse, [2019 Enterprise Visual Studio yükleyin.](https://visualstudio.microsoft.com/vs/)
 
-* Anlık görüntü koleksiyonu, aşağıdaki Azure Kubernetes Hizmetleri Web uygulamaları için kullanılabilir:
-  * .NET Core 2,2 veya üzeri sürümlerde çalışan uygulamaları ASP.NET Core.
-  * .NET Core 2,2 veya üzeri sürümlerde alp 3,8 üzerinde çalışan uygulamalar ASP.NET Core.
-  * Ubuntu 18,04 üzerinde .NET Core 2,2 veya üzeri sürümlerde çalışan uygulamalar ASP.NET Core.
+* Anlık görüntü koleksiyonu aşağıdaki Azure Kubernetes Services web uygulamaları için kullanılabilir:
+  * ASP.NET Debian 9'da .NET Core 2.2 veya sonraki bir sürümü üzerinde çalışan ASP.NET Core uygulamaları.
+  * ASP.NET 3.8'de .NET Core 2.2 veya sonraki bir üzerinde çalışan ASP.NET Core uygulamaları.
+  * ubuntu 18.04'te .NET Core 2.2 veya üzerinde çalışan ASP.NET Core uygulamaları.
 
     > [!NOTE]
-    > AKS 'de Snapshot Debugger desteğini etkinleştirmenize yardımcı olması için [, Docker görüntülerinin kurulumunu gösteren bir Dockerfiles kümesi içeren bir depo](https://github.com/Microsoft/vssnapshotdebugger-docker)sağladık.
+    > AKS'de veri Snapshot Debugger yardımcı olmak için Docker görüntülerine kurulumu gösteren [bir dizi Dockerfile içeren bir repo sağladık.](https://github.com/Microsoft/vssnapshotdebugger-docker)
 
 ## <a name="open-your-project-and-start-the-snapshot-debugger"></a>Projenizi açın ve Snapshot Debugger başlatın
 
@@ -82,33 +82,33 @@ Visual Studio artık Snapshot hata ayıklama modunda.
    ![Anlık görüntü noktasını aç](../debugger/media/snapshot-start-collection.png)
 
     > [!TIP]
-    > Bir anlık görüntüyü görüntülerken ilerleyemiyorum, ancak farklı kod satırlarındaki yürütmeyi izlemek için kodunuza birden fazla anlık görüntü koyabilirsiniz. Kodunuzda birden fazla anlık görüntü noktanız varsa Snapshot Debugger, ilgili anlık görüntülerin aynı son kullanıcı oturumundan geldiğinden emin olur. Snapshot Debugger, uygulamanıza vurarak çok sayıda kullanıcı olsa da bunu yapar.
+    > Bir anlık görüntüyü görüntülerken adım adım atabilirsiniz, ancak farklı kod satırlarında yürütmeyi takip etmek için kodunuza birden çok ek bileşen yer almaktadır. Kodunda birden çok ek bileşen varsa, Snapshot Debugger anlık görüntülerin aynı son kullanıcı oturumundan olduğundan emin olun. Uygulama Snapshot Debugger çok sayıda kullanıcı olsa bile bunu yapar.
 
 ## <a name="take-a-snapshot"></a>Anlık görüntü alma
 
-Bir anlık görüntü noktası ayarlandıktan sonra, Web sitenizin tarayıcı görünümüne gidip, işaretlenmiş kod satırını çalıştırarak veya kullanıcılarınızın site kullanımlarından bir tane oluşturması için bekleyen bir anlık görüntüyü el ile oluşturabilirsiniz.
+Bir ek bileşen ayarlandıktan sonra, web sitenizin tarayıcı görünümüne gidip işaretlenmiş kod satırı çalıştırarak el ile anlık görüntü oluşturabilir veya kullanıcılarının site kullanımlarından bir anlık görüntü oluşturmasını bekleyebilirsiniz.
 
-## <a name="inspect-snapshot-data"></a>Anlık görüntü verilerini İnceleme
+## <a name="inspect-snapshot-data"></a>Anlık görüntü verilerini inceleme
 
-1. Anlık görüntü noktası isabet edildiğinde, Tanılama Araçları penceresinde bir anlık görüntü görüntülenir. Bu pencereyi açmak için **hata ayıkla > Windows > tanılama araçları göster**' i seçin.
+1. Anlık görüntü, anlık görüntüye isabet Tanılama Araçları görüntülenir. Bu pencereyi açmak için Windows **> Show > hata ayıkla'Tanılama Araçları.**
 
-    ![Anlık görüntü noktası açma](../debugger/media/snapshot-diagsession-window.png)
+    ![Ek bileşen noktası açma](../debugger/media/snapshot-diagsession-window.png)
 
-1. Anlık görüntü noktasını kod düzenleyicisinde açmak için anlık görüntü noktasına çift tıklayın.
+1. Anlık görüntüyü kod düzenleyicisinde açmak için anlık görüntüye çift tıklayın.
 
-    ![Anlık görüntü verilerini İnceleme](../debugger/media/snapshot-inspect-data.png)
+    ![Anlık görüntü verilerini inceleme](../debugger/media/snapshot-inspect-data.png)
 
-    Bu görünümden, veri Ipuçlarını görüntülemek, **Yereller**, **Izler** ve **çağrı yığını** pencerelerini kullanmak ve ayrıca Ifadeleri değerlendirmek için değişkenlerin üzerine geldiğinizde arama yapabilirsiniz.
+    Bu görünümden değişkenlerin üzerine gelerek DataTips'i görüntüleyebilirsiniz, Yereller, **İzlemeler** ve **Çağrı** Yığını pencerelerini kullanabilir ve ifadeleri değerlendirebilirsiniz.
 
-    Web sitesinin kendisi de canlı ve son kullanıcılar etkilenmemektedir. Varsayılan olarak, anlık görüntü noktası başına yalnızca bir anlık görüntü yakalanır: bir anlık görüntü yakalandıktan sonra, anlık görüntü açılır. Anlık görüntü noktasında başka bir anlık görüntü yakalamak istiyorsanız, **koleksiyonu Güncelleştir**' e tıklayarak anlık görüntü noktasını yeniden açabilirsiniz.
+    Web sitesinin kendisi hala canlı ve son kullanıcılar bundan etkilenmez. Varsayılan olarak her anlık görüntüde yalnızca bir anlık görüntü yakalanır: Bir anlık görüntü yakalandikten sonra anlık görüntü kapattır. Ek bileşende başka bir anlık görüntü yakalamak için, Koleksiyonu Güncelleştir'e tıklayarak anlık görüntüyü **yeniden açabilirsiniz.**
 
-Ayrıca, uygulamanıza daha fazla anlık görüntü ekleyebilir ve **koleksiyonu Güncelleştir** düğmesiyle bu noktaları açabilirsiniz.
+Ayrıca, uygulamanıza daha fazla ek bileşen ekleyebilir ve Koleksiyonu Güncelleştir düğmesiyle **bunları açabilirsiniz.**
 
-**Yardıma mı ihtiyacınız var?** [Anlık görüntü hata ayıklama sayfaları Için](../debugger/debug-live-azure-apps-faq.md) [sorun giderme ve bilinen sorunlar](../debugger/debug-live-azure-apps-troubleshooting.md) ve SSS bölümüne bakın.
+**Yardıma mı ihtiyacınız var?** Anlık görüntü [hata ayıklama sayfaları için Sorun giderme](../debugger/debug-live-azure-apps-troubleshooting.md) ve bilinen sorunlar ve [SSS bölümüne](../debugger/debug-live-azure-apps-faq.yml) bakın.
 
-## <a name="set-a-conditional-snappoint"></a>Koşullu bir anlık görüntü noktası ayarlama
+## <a name="set-a-conditional-snappoint"></a>Koşullu ek bileşen ayarlama
 
-Uygulamanızda belirli bir durumu yeniden oluşturmayı zorlaştırıyorsa, koşullu bir anlık görüntü noktası kullanmayı düşünün. Koşullu anlık görüntü noktaları, bir değişken, incelemek istediğiniz belirli bir değeri içerdiğinde olduğu gibi, bir anlık görüntünün ne zaman ele alıp denetistemediğinizi denetlemenize yardımcı olur. İfadeleri ifade, filtre veya isabet sayısı kullanarak ayarlayabilirsiniz.
+Uygulamanıza belirli bir durumu yeniden oluşturmak zorsa koşullu ek bileşen kullanmayı göz önünde bulundurabilirsiniz. Koşullu ek bileşen, bir değişkenin incelemek istediğiniz belirli bir değeri içerdiği durumlarda anlık görüntü alma zamanlarını denetlemeye yardımcı olur. İfadeleri, filtreleri veya isabet sayılarını kullanarak koşulları ayarlayabilirsiniz.
 
 #### <a name="to-create-a-conditional-snappoint"></a>Koşullu bir anlık görüntü noktası oluşturmak için
 
@@ -147,4 +147,4 @@ Anlık görüntü noktası isabet edildiğinde bir anlık görüntü almaya ek o
 Bu öğreticide, Azure Kubernetes için Snapshot Debugger kullanmayı öğrendiniz. Bu özellik hakkında daha fazla ayrıntı okumak isteyebilirsiniz.
 
 > [!div class="nextstepaction"]
-> [Anlık görüntü hatalarını ayıklama hakkında SSS](../debugger/debug-live-azure-apps-faq.md)
+> [Anlık görüntü hatalarını ayıklama hakkında SSS](../debugger/debug-live-azure-apps-faq.yml)

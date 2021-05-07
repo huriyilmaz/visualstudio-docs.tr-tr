@@ -1,7 +1,7 @@
 ---
-title: FxCop 'den kaynak analizine (.NET Çözümleyicileri) geçiş
+title: FxCop'tan kaynak analizine (.NET çözümleyicileri) geçiş
 ms.custom: SEO-VS-2020
-description: Kodu ilk kez analiz etmeyi veya ikili analizden (FxCop) kaynak analizini (.NET Çözümleyicileri) kullanarak yönetilen kodu analiz etmenin yeni yoluna nasıl geçirebileceğinizi öğrenin.
+description: Kodu ilk kez analiz etmeyi veya ikili analizden (FxCop) kaynak analizini (.NET çözümleyicileri) kullanarak yönetilen kodu analiz etme yolunun yeni bir yolu olarak geçiş yapmayı öğrenin.
 ms.date: 03/06/2020
 ms.topic: conceptual
 f1_keywords:
@@ -13,31 +13,31 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
-ms.openlocfilehash: 96a0c0b7fa1f2c703cefde31070ed98c5edddcb6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9a673e7467816e71b8240de9e5f68840c9188dcd
+ms.sourcegitcommit: d4887ef2ca97c55e2dad9f179eec2c9631d91c95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99859768"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "108798238"
 ---
-# <a name="migrate-from-legacy-analysis-fxcop-to-source-analysis-net-analyzers"></a>Eski analizden (FxCop) kaynak analizine (.NET Çözümleyicileri) geçiş
+# <a name="migrate-from-legacy-analysis-fxcop-to-source-analysis-net-analyzers"></a>Eski analizden (FxCop) kaynak analizine (.NET çözümleyicileri) geçiş
 
-.NET Compiler Platform ("Roslyn") Çözümleyicileri kaynak analizi, yönetilen kod için [eski analizler](../code-quality/code-analysis-for-managed-code-overview.md) yerini alır. .NET Core ve .NET Standard projeleri gibi daha yeni proje şablonları için eski analiz kullanılamaz.
+.NET Compiler Platform ("Roslyn") çözümleyicileri tarafından yapılan kaynak analizi, yönetilen [kod için eski](../code-quality/code-analysis-for-managed-code-overview.md) analizin yerini alır. .NET Core ve .NET Standard gibi daha yeni proje şablonları için eski analiz kullanılamaz.
 
-Eski analiz (FxCop) kurallarının birçoğu, bir dizi Roslyn kod Çözümleyicileri olan .NET Çözümleyicileri için zaten yeniden yazıldı. Roslyn Çözümleyicileri, derleyici yürütmesi sırasında kaynak kodu tabanlı analiz çalıştıranlar. Çözümleyici sonuçları derleyici sonuçlarıyla birlikte raporlanır.
+Bir dizi Roslyn kod çözümleyicisi olan .NET çözümleyicileri için eski analiz (FxCop) kurallarının çoğu zaten yeniden yazılmıştır. Roslyn çözümleyicileri, derleyici yürütme sırasında kaynak kodu tabanlı analizler çalıştırabilir. Çözümleyici sonuçları, derleyici sonuçlarıyla birlikte rapor edilir.
 
-Eski analiz ve kaynak analizi arasındaki farklılıklar hakkında daha fazla bilgi için aşağıdakilere bakın:
+Eski analiz ile kaynak analizi arasındaki farklar hakkında daha fazla bilgi için aşağıdakilere bakın:
 
-- [Kaynak kodu analizi ve eski analiz karşılaştırması](../code-quality/net-analyzers-faq.md#whats-the-difference-between-legacy-fxcop-and-net-analyzers)
+- [Kaynak kodu analiziyle eski analiz karşılaştırması](../code-quality/net-analyzers-faq.yml#what-s-the-difference-between-legacy-fxcop-and--net-analyzers-)
 
-- [.NET Çözümleyicileri hakkında SSS](../code-quality/net-analyzers-faq.md)
+- [.NET çözümleyicileri hakkında SSS](../code-quality/net-analyzers-faq.yml)
 
 ## <a name="migration"></a>Geçiş
 
-Kaynak analizine geçiş yapmak için [.net Çözümleyicileri ' ni etkinleştirin veya](install-net-analyzers.md)bu işlemi yapın. Eski analiz kuralı ihlallerine benzer şekilde, kaynak kodu çözümleme ihlalleri Visual Studio 'daki Hata Listesi penceresinde görüntülenir. Ayrıca, kaynak kodu çözümleme ihlalleri, kod Düzenleyicisi 'nde, sorunlu kodun altında *dalgalı çizgiler* olarak da görünür. Dalgalı çizginin rengi kuralın [önem derecesi ayarına](../code-quality/use-roslyn-analyzers.md#configure-severity-levels) bağlıdır. Yeni .NET çözümleyicilerine yönelik kuralların durumunu görmek için bkz. bağlantı noktası [ve olmayan kurallar](../code-quality/fxcop-rule-port-status.md).
+Kaynak analizine geçiş yapmak için [.NET çözümleyicilerini etkinleştirin veya yükleyin.](install-net-analyzers.md) Eski analiz kuralı ihlalleri gibi kaynak kodu analizi ihlalleri de kaynak kodu analizinde hata Visual Studio. Ayrıca kaynak kod analizi ihlalleri, kod düzenleyicisinde rahatsız olan *kodun* altında geçişler olarak da ortaya çıktı. Geçişin rengi, kuralın [önem derecesi ayarına](../code-quality/use-roslyn-analyzers.md#configure-severity-levels) bağlıdır. Yeni .NET çözümleyicileri ile bağlantı noktası yapılan kuralların durumunu görmek için bkz. [Bağlantı noktası ve raporlanmamış kurallar.](../code-quality/fxcop-rule-port-status.md)
 
 > [!NOTE]
-> Visual Studio 2019 16,8 ve .NET 5,0 öncesinde, bu çözümleyiciler `Microsoft.CodeAnalysis.FxCopAnalyzers` [NuGet paketi](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers)olarak gönderilir. Visual Studio 2019 16,8 ve .NET 5,0 'den başlayarak, bu çözümleyiciler [.NET SDK 'ya dahildir](/dotnet/fundamentals/code-analysis/overview). Bunlar ayrıca `Microsoft.CodeAnalysis.NetAnalyzers` [NuGet paketi](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers)olarak da kullanılabilir. Daha fazla bilgi için bkz. [FxCop çözümleyicilerine .net çözümleyicilerine geçiş](migrate-from-fxcop-analyzers-to-net-analyzers.md).
+> 2019 16.8 Visual Studio .NET 5.0'dan önce, bu çözümleyiciler `Microsoft.CodeAnalysis.FxCopAnalyzers` [NuGet paketi olarak gönderildi.](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers) 2019 Visual Studio 16.8 ve .NET 5.0'dan başlayarak, bu çözümleyiciler [.NET SDK'sı ile birlikte gelir.](/dotnet/fundamentals/code-analysis/overview) NuGet paketi olarak `Microsoft.CodeAnalysis.NetAnalyzers` [da kullanılabilirler.](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers) Daha fazla bilgi için [bkz. FxCop çözümleyicilerinden .NET çözümleyicilere geçiş.](migrate-from-fxcop-analyzers-to-net-analyzers.md)
 
 ## <a name="configuration"></a>Yapılandırma
 

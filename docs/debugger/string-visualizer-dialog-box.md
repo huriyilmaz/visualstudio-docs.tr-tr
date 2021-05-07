@@ -2,7 +2,7 @@
 title: Dize görselleştiricisi iletişim kutusu | Microsoft Docs
 description: Visual Studio 'da hata ayıklarken yerleşik dize görselleştiricisi iletişim kutusuyla dizeleri görüntüleyin.
 ms.date: 10/10/2018
-ms.custom: seoapril2019, SEO-VS-2020
+ms.custom: contperf-fy21q4
 ms.topic: reference
 f1_keywords:
 - vs.debug.stringviewer
@@ -21,18 +21,18 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 3084db99226ab268bb6ce70611628dcafcf1753b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 85092f6a339fdaaa3ddaa56112cc351d8b8e9bdc
+ms.sourcegitcommit: dd2fc6e03a789c044f8438096b8f112e4dba5557
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99904284"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "108640852"
 ---
 # <a name="string-visualizer-dialog-box"></a>Dize Görselleştirici iletişim kutusu
 
 Visual Studio 'da hata ayıklarken, dizeleri yerleşik dize görselleştiricisi ile görüntüleyebilirsiniz. Dize görselleştiricisi bir veri ipucu veya hata ayıklayıcı penceresi için çok uzun olan dizeleri gösterir. Hatalı biçimlendirilmiş dizeleri belirlemenize de yardımcı olabilir.
 
-Yerleşik dize görselleştiricisi düz metin, XML, HTML ve JSON seçenekleri içerir. Ayrıca, **oto** veya diğer hata ayıklayıcı pencerelerinin [veri kümesi, DataTable ve DataView](../debugger/dataset-visualizer-dialog-box.md) nesneleri gibi diğer diğer türler için de yerleşik Görselleştiriciler açabilirsiniz.
+Yerleşik dize Görselleştiriciler [metin](#text-string-data), [XML](#xml-string-data), [HTML](#html-string-data)ve [JSON](#json-string-data) seçeneklerini içerir. Ayrıca, **oto** veya diğer hata ayıklayıcı pencerelerinin [veri kümesi, DataTable ve DataView](../debugger/dataset-visualizer-dialog-box.md) nesneleri gibi diğer diğer türler için de yerleşik Görselleştiriciler açabilirsiniz.
 
 > [!NOTE]
 > Görselleştirici içinde XAML veya WPF Kullanıcı arabirimi öğelerini incelemeniz gerekiyorsa, [hata ayıklama SıRASıNDA xaml özelliklerini](../xaml-tools/inspect-xaml-properties-while-debugging.md) görüntüleyin veya inceleyin ya da [WPF Ağacı Görselleştiricisini Kullanma](../debugger/how-to-use-the-wpf-tree-visualizer.md).
@@ -44,6 +44,12 @@ Dize görselleştiricisi ' i açmak için hata ayıklama sırasında duraklamal�
 **İfade** alanı, üzerine geldiğinizde bulunan değişkeni veya ifadeyi gösterir.
 
 **Değer** alanı dize değerini gösterir. Boş **değer** , seçilen Görselleştirici dizeyi tanıyamayacağı anlamına gelir. Örneğin, **XML GÖRSELLEŞTIRICISI** XML etıketı veya JSON dizesi olmayan bir metin dizesi için boş bir **değer** gösterir. Seçilen Görselleştirici tanıyamayacağı dizeleri görüntülemek için, bunun yerine **metin Görselleştirici** ' ı seçin. **Metin görselleştiricisi** düz metin gösterir.
+
+### <a name="text-string-data"></a>Metin dizesi verileri
+
+**Metin görselleştiricisi** düz metin gösterir. C++ dizesi için özel biçimlendirmeye ihtiyacınız varsa, [Natvis görselleştirmesi](../debugger/create-custom-views-of-native-objects.md)oluşturun.
+
+![Metin dizesi görselleştiricisi](../debugger/media/dbg-string-visualizer-text.png "Metin dizesi görselleştiricisi")
 
 ### <a name="json-string-data"></a>JSON dize verileri
 
