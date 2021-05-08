@@ -16,12 +16,12 @@ ms.workload:
 - multiple
 author: kendrahavens
 manager: jmartens
-ms.openlocfilehash: a1e0f998b5fff45a8fee9ac6f9cc6a0ce2268907
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 22ac969ba2ad918fcbeb7c53e04cd3f2b03a0431
+ms.sourcegitcommit: d4887ef2ca97c55e2dad9f179eec2c9631d91c95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99894471"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "108798576"
 ---
 # <a name="visual-studio-test-explorer-faq"></a>Visual Studio Test Gezgini hakkında SSS
 
@@ -57,33 +57,33 @@ Gerçek zamanlı test bulma, kaynak tabanlı test [bulgusunu](https://devblogs.m
 
 ## <a name="real-time-test-discovery"></a>Gerçek zamanlı test bulma
 
-**Testler, projem oluşturmaya gerek kalmadan yazarken test Gezgini 'nde görünür. Ne değişti?**
+**Testler artık projemi derlemek zorunda kalmadan yazma sırasında Test Gezgini'nde görünür. Ne değişti?**
 
-Bu özelliğe gerçek zamanlı [Test bulma](https://devblogs.microsoft.com/dotnet/real-time-test-discovery/)adı verilir. Testleri bulmak ve test Gezginini gerçek zamanlı olarak doldurmak için, projenizi oluşturmanıza gerek kalmadan, bir Roslyn Çözümleyicisi kullanır. Yer veya özel nitelikler gibi dinamik olarak tanımlanmış testlerin test bulma davranışı hakkında daha fazla bilgi için bkz. [dinamik test bulma](#dynamic-test-discovery).
+Bu özellik, gerçek [zamanlı test bulma olarak adlandırılan bir özelliktir.](https://devblogs.microsoft.com/dotnet/real-time-test-discovery/) Projenizi derlemenize gerek kalmadan testleri bulmak ve Test Gezgini'ni gerçek zamanlı olarak doldurmak için Roslyn çözümleyicisini kullanır. Teoriler veya özel nitelikler gibi dinamik olarak tanımlanmış testlerde test bulma davranışı hakkında daha fazla bilgi için [bkz. Dinamik test bulma](#dynamic-test-discovery).
 
 ## <a name="real-time-test-discovery-compatibility"></a>Gerçek zamanlı test bulma uyumluluğu
 
-**Hangi diller ve test çerçeveleri gerçek zamanlı test bulmayı kullanabilir?**
+**Hangi diller ve test çerçeveleri Gerçek Zamanlı Test Bulma kullanabilir?**
 
-[Gerçek zamanlı test bulma](https://devblogs.microsoft.com/dotnet/real-time-test-discovery/) yalnızca yönetilen diller (C# ve Visual Basic) için çalışarak, Roslyn derleyicisi kullanılarak oluşturulmuştur. Şimdilik gerçek zamanlı test bulma yalnızca xUnit, NUnit ve MSTest çerçeveleri için geçerlidir.
+[Roslyn derleyicisi](https://devblogs.microsoft.com/dotnet/real-time-test-discovery/) kullanılarak derlenmiş olduğu için gerçek zamanlı test bulma yalnızca yönetilen diller (C# ve Visual Basic) için çalışır. Şimdilik, gerçek zamanlı test bulma yalnızca xUnit, NUnit ve MSTest çerçeveleri için çalışır.
 
 ## <a name="test-explorer-logs"></a>Test Gezgini günlükleri
 
-**Test Gezgini için günlükleri nasıl etkinleştirebilirim?**
+**Test Gezgini için günlükleri nasıl açabilirsiniz?**
 
-**Araçlar**  >  **Seçenekler**  >  **Test** ' e gidin ve günlüğe kaydetme bölümünü bulun.
+Araçlar Seçenekler  >  **Testi'ne**  >  **gidin** ve Orada Günlük bölümünü bulun.
 
 ## <a name="uwp-test-discovery"></a>UWP test bulma
 
-**Uygulamamı dağıtana kadar UWP projelerindeki testlerim neden bulunamadı?**
+**Uygulamamı dağıtana kadar UWP projelerinde testlerim neden keşfedilmedi?**
 
-UWP testleri, uygulama dağıtıldığında farklı bir çalışma zamanını hedefleyin. Diğer bir deyişle, UWP projeleri için testleri doğru bir şekilde bulmak için yalnızca projenizi oluşturmanız ve ayrıca dağıtmanız yeterlidir.
+Uygulama dağıtıldığında UWP testleri farklı bir çalışma zamanının hedefini yapar. Bu, UWP projeleri için testleri doğru şekilde bulmak için yalnızca projenizi derlemenize değil aynı zamanda dağıtmanıza da gerek olduğu anlamına gelir.
 
-## <a name="test-explorer-sorting"></a>Test Gezgini sıralaması
+## <a name="test-explorer-sorting"></a>Test Gezgini sıralama
 
-**Test sonuçlarını sıralama hiyerarşi görünümünde nasıl çalışır?**
+**Hiyerarşi görünümünde test sonuçlarını sıralama nasıl çalışır?**
 
-Hiyerarşi görünümü, sonuçlara göre aksine testleri alfabetik olarak sıralar. Ayarlara göre önceki gruplandırma, test sonuçlarını sonuca göre sıralar ve sonra alfabetik olarak sıralanır. Test Gezgini 'nde sütun başlığına sağ tıklayıp durum sütununu etkinleştirerek ve sonra bu sütuna sıralama uygulamak için durum sütunu başlığına tıklayarak sonuçlara göre sıralamayı etkinleştirebilirsiniz. Bu [GitHub sorununun](https://github.com/Microsoft/vstest/issues/1425)tasarımı hakkında geri bildirim sağlayabilirsiniz.
+Hiyerarşi görünümü testleri sonuç yerine alfabetik olarak sıralar. Ayarlara göre önceki gruplandırma, test sonuçlarını sonuca göre sıralar ve sonra alfabetik olarak sıralanır. Test Gezgini 'nde sütun başlığına sağ tıklayıp durum sütununu etkinleştirerek ve sonra bu sütuna sıralama uygulamak için durum sütunu başlığına tıklayarak sonuçlara göre sıralamayı etkinleştirebilirsiniz. Bu [GitHub sorununun](https://github.com/Microsoft/vstest/issues/1425)tasarımı hakkında geri bildirim sağlayabilirsiniz.
 
 ## <a name="test-explorer-hierarchy-view"></a>Test Gezgini hiyerarşi görünümü
 
@@ -107,32 +107,32 @@ Visual Studio 2019 ' de, daha önce genel olarak işaretlenmiş ancak hiç resmi
 
 ## <a name="test-adapter-nuget-reference"></a>Test bağdaştırıcısı NuGet başvurusu
 
-**Visual Studio 2017 sürüm 15,8 ' de testler keşfedilir, ancak yürütülmez.**
+**Bu Visual Studio 2017 sürüm 15.8'de testlerim bulundu, ancak yürütülmedi.**
 
-Tüm test projelerinin,. csproj dosyasında .NET test bağdaştırıcısı NuGet başvurusunu içermesi gerekir. Aksi takdirde, bir test bağdaştırıcısı uzantısı tarafından bulma işlemi bir derlemeden sonra veya Kullanıcı seçili testleri çalıştırmayı denediğinde proje üzerinde aşağıdaki test çıktısı görünür:
+Tüm test projelerinin .csproj dosyalarında .NET test bağdaştırıcısı NuGet başvurularını içermesi gerekir. Yoksa, bir derlemeden sonra bir test bağdaştırıcısı uzantısı tarafından bulmanın ardından veya kullanıcı seçilen testleri çalıştırmayı deniyorsa, projede aşağıdaki test çıktısı görüntülenir:
 
-**Test projesi {} hiçbir .net NuGet bağdaştırıcısına başvurmuyor. Test bulma veya yürütme bu proje için çalışmayabilir. Çözümdeki her bir .NET Test projesinde NuGet test bağdaştırıcılarına başvurmak için önerilir.**
+**Test projesi {} herhangi bir .NET NuGet bağdaştırıcısına başvurur. Test bulma veya yürütme bu proje için çalışmıyor olabilir. Çözümdeki her .NET test projesinde NuGet test bağdaştırıcılarına başvurulmanız önerilir.**
 
-Test bağdaştırıcısı uzantılarını kullanmak yerine, projelerin test bağdaştırıcısı NuGet paketlerini kullanması gerekir. Bu gereksinim, performansı büyük ölçüde geliştirir ve sürekli tümleştirme ile daha az soruna neden olur. .NET test bağdaştırıcısı uzantısı hakkında daha fazla bilgi için [sürüm notlarına](/visualstudio/releasenotes/vs2017-relnotes-v15.8#testadapterextension)kullanımdan kaldırma.
+Test bağdaştırıcısı uzantıları kullanmak yerine projelerin test bağdaştırıcısı NuGet paketlerini kullanması gerekir. Bu gereksinim performansı büyük ölçüde artırır ve sürekli tümleştirmeyle ilgili daha az soruna neden olur. Sürüm notlarında .NET Test Bağdaştırıcısı Uzantısının kullanım dışı bırakılası hakkında daha [fazla bilgi edinebilirsiniz.](/visualstudio/releasenotes/vs2017-relnotes-v15.8#testadapterextension)
 
 ::: moniker range="vs-2017"
 > [!NOTE]
-> NUnit 2 test bağdaştırıcısı kullanıyorsanız ve NUnit 3 test bağdaştırıcısına geçiş yapamıyor, bu yeni keşif davranışını **Araçlar**  >  **Seçenekler**  >  **testinde** Visual Studio sürüm 15,8 ' de devre dışı bırakabilirsiniz.
+> NUnit 2 Test Bağdaştırıcısı kullanıyorsanız ve NUnit 3 test bağdaştırıcısına geçiremiyorsanız, Araçlar Seçenekler Testi'nin Visual Studio sürüm 15.8'de bu yeni bulma davranışını   >    >  **kapatabilirsiniz.**
 
-![Araç seçeneklerinde test Gezgini bağdaştırıcı davranışı](media/testex-adapterbehavior.png)
+![Araçlar seçeneklerinde Test Gezgini Bağdaştırıcı davranışı](media/testex-adapterbehavior.png)
 ::: moniker-end
 
 ## <a name="uwp-testcontainer-was-not-found"></a>UWP TestContainer bulunamadı
 
-**UWP testleriniz artık Visual Studio 2017 sürüm 15,7 ve sonrasında yürütülmiyor.**
+**UWP testlerim artık 2017 Visual Studio 15.7 ve sonraki sürümlerde yürütülmeyecek.**
 
-Son UWP test projeleri, test uygulamalarını tanımlamaya yönelik daha iyi performansa izin veren bir test platformu derleme özelliği belirtir. Visual Studio sürüm 15,7 ' den önce başlatılmış bir UWP test projenize sahipseniz, **Çıkış**  >  **testlerinde** bu hatayı görebilirsiniz:
+Son UWP test projeleri, test uygulamalarını tanımlamak için daha iyi performans sağlayan bir test platformu derleme özelliği belirtir. Sürüm 15.7'den önce başlatılan bir UWP test Visual Studio, Çıktı Testlerinde bu **hatayı**  >  **alabilirsiniz:**
 
-**System. AggregateException: bir veya daha fazla hata oluştu. System. InvalidOperationException >---: Şu TestContainer, {} Microsoft. VisualStudio. TestWindow. Controller. TestContainerProvider \<GetTestContainerAsync> D__61. MoveNext () konumunda bulunamadı**
+**System.AggregateException: Bir veya daha fazla hata oluştu. ---> System.InvalidOperationException: Aşağıdaki TestContainer {} Microsoft.VisualStudio.TestWindow.Controller.TestContainerProvider \<GetTestContainerAsync> d__61.MoveNext() içinde bulunamadı**
 
-Bu hatayı onarmak için:
+Bu hatayı düzeltmek için:
 
-- Aşağıdaki kodu kullanarak test projesi derleme özelliğini güncelleştirin:
+- Aşağıdaki kodu kullanarak test projesi derleme özelliğinizi güncelleştirin:
 
 ```XML
 <UnitTestPlatformVersion Condition="'$(UnitTestPlatformVersion)' == ''">$(VisualStudioVersion)</UnitTestPlatformVersion>
@@ -171,4 +171,4 @@ vsregedit set “C:\Program Files (x86)\Microsoft Visual Studio\Preview\Enterpri
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=fullName>
 - [Mevcut kod için birim testleri oluşturma ve çalıştırma](/previous-versions/dd293546(v=vs.110))
 - [Kodunuzun birim testi](unit-test-your-code.md)
-- [Canlı birim testi SSS](live-unit-testing-faq.md)
+- [Canlı birim testi SSS](live-unit-testing-faq.yml)
