@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f8320c460faf7532887364693080d38c0ff6baa6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0853b807d3287eb584e76d9640ac98f930edb1a7
+ms.sourcegitcommit: cc66c898ce82f9f1159bd505647f315792cac9fc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99860522"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "109666815"
 ---
 # <a name="code-metrics---class-coupling"></a>Kod ölçümleri-sınıf bağlantısı
 
@@ -31,27 +31,27 @@ Eşlenme ve cohema kavramlarının kavramları net bir şekilde ilgilidir. Bu ta
 
 ![Sınıf bağlantısı örnek 1](media/class-coupling-example-1.png)
 
-Bu sınıf başka bir sınıf kullanmıyorsa, bu sınıf Şimdi, bir kişi örneği oluşturan ve özellik değerlerini ayarlayan bir yöntemle Personça adlı başka bir sınıf oluşturun. Kod ölçümlerini yeniden hesaplayın:
+Bu sınıf başka sınıf kullanmaz çünkü sınıf eşleştirmesi 0'dır. Şimdi personstuff adlı başka bir sınıf oluşturmak için Person örneği oluşturan ve özellik değerlerini ayaran bir yöntem kullanın. Kod ölçümlerini yeniden hesapla:
 
-![Sınıf bağlantısı örneği 2](media/class-coupling-example-2.png)
+![Sınıf eşleştirme örneği 2](media/class-coupling-example-2.png)
 
-Sınıf bağlantısı nasıl çalışır? Aynı zamanda, kaç özellik ayarlandığına bakılmaksızın, bir sınıf bağlantısı değeri başka bir değer tarafından değil, yalnızca 1 ' den yukarı gider. Sınıf bağlantısı, ne kadar kullanıldıklarından bağımsız olarak, her sınıfı bu ölçüm için yalnızca bir kez ölçer. Buna ek olarak, `DoSomething()` 1, ancak oluşturucusunun `PersonStuff()` değeri için 0 olduğunu görebilirsiniz. Şu anda oluşturucuda başka bir sınıf kullanan bir kod yoktur.
+Sınıf eşleştirme değerinin nasıl daha yüksek olduğunu görüyor musunuz? Ayrıca, kaç özellik ayarlansa da sınıf eşleştirme değerinin başka bir değere göre değil yalnızca 1'e kadar ilerler. Sınıf eşleştirmesi, ne kadar kullanılır olursa olsun bu ölçüm için her sınıfı yalnızca bir kez ölçür. Ayrıca, değerinin 1 olduğunu ancak oluşturucus unda 0 olduğunu `DoSomething()` `PersonStuff()` görüyor musunuz? Şu anda oluşturucuda başka bir sınıf kullanan bir kod yoktur.
 
-Kodu başka bir sınıf kullanan oluşturucuya yerleştirirseniz ne yapabilirsiniz? Aldığınız özellikler şunlardır:
+Başka bir sınıf kullanılan oluşturucuya kod koysanız ne olur? Elde şunları elde ettiysiniz:
 
-![Sınıf bağlantısı örnek 3](media/class-coupling-example-3.png)
+![Sınıf eşleştirme örneği 3](media/class-coupling-example-3.png)
 
-Artık oluşturucunun başka bir sınıfı kullanan kodu açık bir şekilde ve bu olguyu ölçüsüne gösterdiği. Ayrıca, için genel olan tüm sınıf bağlantısı ' nı görebilir `PersonStuff()` ve `DoSomething()` yalnızca bir dış sınıfın, ne kadar dahili kod kullandığını anlamak için de 1 olduğunu gösterir.
+Oluşturucu artık açıkça başka bir sınıf kullanan koda sahip ve sınıf eşleştirme ölçümü bu durumu gösteriyor. Yine için genel sınıf eşleştirmenin 1 olduğunu ve aynı zamanda 1 olduğunu görebilir ve bunu kullanan iç kodunuz ne kadar olursa olsun yalnızca bir dış sınıfın `PersonStuff()` `DoSomething()` kullan olduğunu gösterir.
 
-Sonra, başka bir yeni sınıf oluşturun. Bu sınıfa bir ad verin ve içinde bazı özellikler oluşturun:
+Ardından, başka bir yeni sınıf oluşturun. Bu sınıfa bir ad girin ve içinde bazı özellikler oluşturun:
 
-![Sınıf bağlantısı örneği-yeni sınıf Ekle](media/class-coupling-example-add-new-class.png)
+![Sınıf eşleştirme örneği - yeni sınıf ekleme](media/class-coupling-example-add-new-class.png)
 
-Şimdi sınıf `DoSomething()` içindeki yöntemizdeki sınıfı tükettin `PersonStuff` ve kod ölçümlerini yeniden hesaplayın:
+Şimdi sınıfındaki yöntemimizde `DoSomething()` sınıfını kullanın `PersonStuff` ve kod ölçümlerini yeniden hesaplayın:
 
-![Sınıf bağlantısı örnek 4](media/class-coupling-example-4.png)
+![Sınıf eşleştirme örneği 4](media/class-coupling-example-4.png)
 
-Gördüğünüz gibi, Personça sınıfı için bir sınıf bağlantısı 2 ' ye kadar gider ve sınıfa göz atadıysanız, `DoSomething()` yöntemin içinde en çok eşlenmeye sahip olduğunu ancak oluşturucunun yalnızca 1 sınıf tükettiğini görebilirsiniz.  Bu ölçümleri kullanarak, belirli bir sınıf için genel en büyük sayıyı görebilir ve her üye için ayrıntıların ayrıntılarına gidebilirsiniz.
+Gördüğünüz gibi PersonStuff sınıfı için sınıf eşleştirmesi 2'ye kadar gider ve sınıfa detaya gidersiniz, yöntemin içinde en çok eşleşmeye sahip olduğunu, ancak oluşturucu hala 1 sınıf `DoSomething()` tüketir.  Bu ölçümleri kullanarak, belirli bir sınıf için genel en büyük sayıyı görebilir ve her üye için ayrıntıların ayrıntılarına gidebilirsiniz.
 
 ## <a name="the-magic-number"></a>Sihirli sayı
 
@@ -71,26 +71,24 @@ Bakım alanının içinde, sınıf bağlantısı için bir kuraldır:
 
 Bu kural, bir sınıf bağlantısı aşırı olduğunda bir uyarı verir. Daha fazla bilgi için bkz. [CA1506: aşırı sınıf bağlantısından kaçının](/dotnet/fundamentals/code-analysis/quality-rules/ca1506).
 
-Bu kuralın açıklaması için bkz. arşivlenmiş kod analizi Web günlüğü gönderisi: [Iade ilkesi olarak kod ölçümleri](/archive/blogs/codeanalysis/code-metrics-as-check-in-policy) ve *sınıf için 80 ve üzeri bir yöntemde* eşik açıklaması uyarısı.  Bu değerler anormal ölçüde yüksek görünüyor, ancak en azından aşırı büyük bir üst sınır sağlar. Bu uyarıya ulaşırsanız, bir şey neredeyse kesinlikle yanlış olur.
-
 ## <a name="citations"></a>Alıntı
 
 ### <a name="ck94"></a>CK94
 
-Oyduklik, S. R. & Kemerer, C. F. (1994). Nesne odaklı tasarıma yönelik bir ölçüm paketi (yazılım mühendisliğinde IEEE Işlemleri, Vol. 20, hayır. 6). University of the Yatsburgh Web sitesinden 14 Mayıs 2011 ' den alınır: [http://www.pitt.edu/~ckemerer/CK%20research%20papers/MetricForOOD_ChidamberKemerer94.pdf](http://www.pitt.edu/~ckemerer/CK%20research%20papers/MetricForOOD_ChidamberKemerer94.pdf)
+Oyduklik, S. R. & Kemerer, C. F. (1994). Nesne Odaklı Tasarım için Ölçüm Paketi (Yazılım Mühendisliğinde IEEE İşlemleri, Vol. 20, Hayır. 6). 14 Mayıs 2011, University of Pittsburgh web sitesinden alındı: [http://www.pitt.edu/~ckemerer/CK%20research%20papers/MetricForOOD_ChidamberKemerer94.pdf](http://www.pitt.edu/~ckemerer/CK%20research%20papers/MetricForOOD_ChidamberKemerer94.pdf)
 
 ### <a name="kkls2000"></a>KKLS2000
 
-Kabaili, H., Keller, R., Lustman, F. ve Saint-deno, G. (2000). Sınıf Cohemi yeniden ziyaret: endüstriyel sistemlerde Empırical bir araştırma (Object-Oriented yazılım mühendisliğinde nicelik yaklaşımları üzerinde atölyenin çalışma yordamı). Üniversıté de Montréal Web sitesinden 20 Mayıs 2011 tarihi alındı [http://www.iro.umontreal.ca/~sahraouh/qaoose/papers/Kabaili.pdf](http://www.iro.umontreal.ca/~sahraouh/qaoose/papers/Kabaili.pdf)
+Kabaili, H., Keller, R., Saintman, F., and Saint-Denis, G. (2000). Sınıf Uyumu Yeniden Değerlendirildi: Endüstriyel Sistemlerle ilgili Ampirik Bir Çalışma (Object-Oriented Yazılım Mühendisliğinde Nicel Yaklaşımlar Atölyesinde Proceedings of the Workshop). 20 Mayıs 2011' tarihindeKiré de Montréal web sitesinden alındı [http://www.iro.umontreal.ca/~sahraouh/qaoose/papers/Kabaili.pdf](http://www.iro.umontreal.ca/~sahraouh/qaoose/papers/Kabaili.pdf)
 
 ### <a name="sk2003"></a>SK2003
 
-Subkmanyam, R. & Krishnan, M. S. (2003). Object-Oriented tasarım karmaşıklığı için CK ölçüm Analizi: yazılım bozuklukları (yazılım mühendisliğinde IEEE Işlemleri, ses. 29, hayır) için etkiler. 4). Massachusetts Dartağız Web sitesinin University 'den 14 Mayıs 2011 ' den itibaren alındı [http://moosehead.cis.umassd.edu/cis580/readings/OO_Design_Complexity_Metrics.pdf](http://moosehead.cis.umassd.edu/cis580/readings/OO_Design_Complexity_Metrics.pdf)
+Subramanyam, R. & Ancak, M. S. (2003). Object-Oriented Tasarım Karmaşıklığı için CK Ölçümlerinin Ampirik Analizi: Yazılım Hatalarının Etkileri (Yazılım Mühendisliğinde IEEE İşlemleri, Vol. 29, Hayır. 4). 14 Mayıs 2011, University of University of University Of Sonay web sitesinden alındı [http://moosehead.cis.umassd.edu/cis580/readings/OO_Design_Complexity_Metrics.pdf](http://moosehead.cis.umassd.edu/cis580/readings/OO_Design_Complexity_Metrics.pdf)
 
 ### <a name="s2010"></a>S2010
 
-Shatnawi, R. (2010). Open-Source sistemlerdeki Object-Oriented ölçümlerinin kabul edilebilir risk düzeyleri (yazılım mühendisliğinde IEEE Işlemleri, Vol. 36, hayır) için bir nicel araştırması. 2).
+Shatnawi, R. (2010). Open-Source Sistemlerinde Object-Oriented Ölçümlerinin Kabul Edilebilir Risk Düzeylerinin Nicel Bir Araştırma (Yazılım Mühendisliğinde IEEE İşlemleri, Vol. 36, Hayır. 2).
 
 ### <a name="yc79"></a>YC79
 
-Edward Yourdon ve Larry L. Constantine. Yapılandırılmış tasarım. Prikna salonu, Engliwood Cliffs, N.J., 1979.
+Edward Yourdon ve Angeles L. Constantine. Yapılandırılmış Tasarım. Prentice Hall, Englewood Cliffs, N.J., 1979.
