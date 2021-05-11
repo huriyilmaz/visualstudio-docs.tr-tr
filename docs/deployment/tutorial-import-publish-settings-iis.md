@@ -1,6 +1,6 @@
 ---
-title: Yayımlama ayarlarını içeri aktararak IIS 'de yayımlayın
-description: Visual Studio 'dan IIS 'e uygulama dağıtmak için Yayımlama profili oluşturma ve içeri aktarma
+title: Yayımlama ayarlarını içeri aktararak IIS'de yayımlama
+description: Bir uygulamayı IIS'ye dağıtmak için yayımlama profili oluşturma Visual Studio içeri aktarma
 ms.date: 05/06/2020
 ms.topic: tutorial
 helpviewer_keywords:
@@ -10,46 +10,46 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 9681e01beaa9fcae3163c607290f5793bfae1cdd
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: aeaaff68ab0abe85838456e8c8b69e2520295689
+ms.sourcegitcommit: a0f5e7188838c5989c9cc78d99fb29bb2813501e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99945038"
+ms.lasthandoff: 05/11/2021
+ms.locfileid: "109729279"
 ---
-# <a name="publish-an-application-to-iis-by-importing-publish-settings-in-visual-studio"></a>Visual Studio 'da yayımlama ayarlarını içeri aktararak IIS 'de uygulama yayımlama
+# <a name="publish-an-application-to-iis-by-importing-publish-settings-in-visual-studio"></a>Visual Studio'de yayımlama ayarlarını içeri aktararak bir uygulamayı IIS'Visual Studio
 
-**Yayımla aracını kullanarak** yayınlama ayarlarını içeri aktarabilir ve ardından uygulamanızı dağıtabilirsiniz. Bu makalede, IIS için yayımlama ayarlarını kullanırız, ancak [Azure App Service](../deployment/tutorial-import-publish-settings-azure.md)yayımlama ayarlarını içeri aktarmak için de benzer adımları kullanabilirsiniz. Bazı senaryolarda, bir yayımlama ayarları profili kullanımı, Visual Studio 'nun her yüklemesi için IIS 'e dağıtımı el ile yapılandırmadan daha hızlı olabilir.
+Yayımlama ayarlarını içeri **aktarın** ve ardından uygulamanızı dağıtmak için Yayımla aracını kullanabilirsiniz. Bu makalede IIS için yayımlama ayarlarını kullanacağız ancak yayımlama ayarlarını içeri aktarmaya benzer adımları [Azure App Service.](../deployment/tutorial-import-publish-settings-azure.md) Bazı senaryolarda, yayımlama ayarları profilinin kullanımı, her bir yayımlama profili yüklemesi için IIS'ye dağıtımı el ile yapılandırmaktan Visual Studio.
 
-Bu adımlar, Visual Studio 'da ASP.NET, ASP.NET Core ve .NET Core uygulamaları için geçerlidir.
+Bu adımlar ASP.NET, ASP.NET Core ve .NET Core uygulamaları için Visual Studio.
 
 Bu öğreticide şunları yapacaksınız:
 
 > [!div class="checklist"]
-> * Bir yayımlama ayarları dosyası oluşturabilmeniz için IIS 'yi yapılandırma
+> * Yayımlama ayarları dosyası oluşturamıyorsanız IIS'yi yapılandırma
 > * Yayımlama ayarları dosyası oluşturma
-> * Yayımlama ayarları dosyasını Visual Studio 'ya aktarma
-> * Uygulamayı IIS 'ye dağıtma
+> * Yayımlama ayarları dosyasını Visual Studio
+> * Uygulamayı IIS'ye dağıtma
 
-Yayımlama ayarları dosyası (*\* . publishsettings*), Visual Studio 'da oluşturulan yayımlama profilinden (*\* . pubxml*) farklıdır. Bir yayımlama ayarları dosyası IIS veya Azure App Service tarafından oluşturulur veya el ile oluşturulabilir ve sonra Visual Studio 'ya aktarılabilir.
+Yayımlama ayarları dosyası (*\* .publishsettings*) bir yayımlama profilinden (*\* .pubxml*) farklı Visual Studio. Yayımlama ayarları dosyası IIS veya Azure App Service tarafından oluşturulur ya da el ile oluşturulabilir ve ardından Visual Studio.
 
 > [!NOTE]
-> Visual Studio yayımlama profilini ( \* . pubxml dosyası) bir Visual Studio yüklemesinden diğerine kopyalamanız gerekiyorsa, yönetilen proje türleri için *\\<ProjectName \> \Properties\PublishProfiles* klasöründe yayımlama profilini *\<profilename\> . pubxml* bulabilirsiniz. Web siteleri için *\ App_Data* klasörü altına bakın. Yayımlama profilleri MSBuild XML dosyalarıdır.
+> Visual Studio yayımlama profilini (.pubxml dosyası) Visual Studio yüklemelerinden diğerine kopyalamanız gerekirse, yönetilen proje türleri için \* *\\<projeadı \> \Properties\PublishProfiles* klasöründe yayımlama profilini *\<profilename\> (.pubxml)* bulabilirsiniz. Web siteleri için *\App_Data klasörünün altına* bakın. Yayımlama profilleri MSBuild XML dosyalarıdır.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
 ::: moniker range=">=vs-2019"
 
-* Visual Studio 2019 ' nin yüklü olması ve **ASP.net ve Web geliştirme** iş yüküne sahip olmanız gerekir.
+* Visual Studio 2019'un yüklü olması ve ASP.NET **web geliştirme iş yükünüz olması** gerekir.
 
-    Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads/) sayfasına giderek ücretsiz olarak yükleme yapın.
+    Daha önce yüklememiş Visual Studio indirmeler [sayfasına Visual Studio](https://visualstudio.microsoft.com/downloads/) ücretsiz yükleyin.
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-* Visual Studio 2017 ' nin yüklü olması ve **ASP.net ve Web geliştirme** iş yüküne sahip olmanız gerekir.
+* 2017 Visual Studio ve web geliştirme iş ASP.NET **yüklü olması** gerekir.
 
-    Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads/) sayfasına giderek ücretsiz olarak yükleme yapın.
+    Daha önce yüklememiş Visual Studio indirmeler [sayfasına Visual Studio](https://visualstudio.microsoft.com/downloads/) ücretsiz yükleyin.
 ::: moniker-end
 
 * Sunucunuzda, Windows Server 2012, Windows Server 2016 veya Windows Server 2019 çalıştırıyor olmanız gerekir ve [IIS Web sunucusu rolünün](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45) doğru şekilde yüklenmiş olması gerekir (yayımlama ayarları dosyası (*\* . publishsettings*) oluşturmak için gereklidir). ASP.NET 4,5 veya ASP.NET Core da sunucuda yüklü olmalıdır. ASP.NET 4,5 'yi ayarlamak için bkz. [ASP.NET 3,5 ve ASP.NET 4,5 kullanarak ııs 8,0](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45). ASP.NET Core ayarlamak için bkz. [IIS Ile Windows üzerinde konak ASP.NET Core](/aspnet/core/publishing/iis?tabs=aspnetcore2x#iis-configuration). ASP.NET Core için uygulama havuzunu makalede açıklandığı gibi, **yönetilen kod olmadan** kullanmak üzere yapılandırdığınızdan emin olun.
@@ -70,7 +70,7 @@ Yayımlama ayarları dosyası (*\* . publishsettings*), Visual Studio 'da oluşt
 
     Visual Studio projeyi oluşturur.
 
-1.   >  Projeyi derlemek için derleme **Yapı çözümünü** seçin.
+1.   >  Projeyi derlemek için Build **Build Solution** (veya **CTRL**  +  **SHIFT**  +  **B** tuşlarına basın) öğesini seçin.
 
 ## <a name="install-and-configure-web-deploy-on-windows-server"></a>Windows Server 'da Web Dağıtımı yükleyip yapılandırma
 
@@ -84,11 +84,11 @@ Yayımlama ayarları dosyası (*\* . publishsettings*), Visual Studio 'da oluşt
 
 [!INCLUDE [import-publish-settings](../deployment/includes/import-publish-settings-vs.md)]
 
-Uygulama başarıyla dağıtıldıktan sonra otomatik olarak başlamalıdır. Visual Studio 'dan başlamazsa uygulamayı IIS 'de başlatın. ASP.NET Core için, **DefaultAppPool** için uygulama havuzu alanının **yönetilen kod yok** olarak ayarlandığından emin olmanız gerekir.
+Uygulama başarıyla dağıtıldıktan sonra otomatik olarak başlatılır. Bu, uygulamanın başlangıç Visual Studio IIS'de başlatabilirsiniz. ASP.NET Core için **DefaultAppPool** için Uygulama havuzu alanı'nın Yönetilen Kod Yok olarak ayarlanmış **olduğundan emin olun.**
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu öğreticide, bir yayımlama ayarları dosyası oluşturdunuz, Visual Studio 'ya içeri aktardınız ve IIS 'e bir ASP.NET uygulaması dağıttınız. Visual Studio 'daki diğer yayımlama seçeneklerine genel bir bakış da isteyebilirsiniz.
+Bu öğreticide bir yayımlama ayarları dosyası oluşturdunız, dosyayı Visual Studio aktardınız ve IIS'ye ASP.NET uygulama dağıttınız. Aşağıdaki diğer yayımlama seçeneklerine genel bir bakış Visual Studio.
 
 > [!div class="nextstepaction"]
 > [Dağıtıma ilk bakış](../deployment/deploying-applications-services-and-components.md)

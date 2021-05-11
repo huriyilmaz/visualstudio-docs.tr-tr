@@ -12,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 852bfad102c4ae34bee9528009e3d4b2dd8c7384
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 80516adffcb058d6ce28751e7a9f30002ca3a640
+ms.sourcegitcommit: a0f5e7188838c5989c9cc78d99fb29bb2813501e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99925731"
+ms.lasthandoff: 05/11/2021
+ms.locfileid: "109729305"
 ---
 # <a name="tutorial-create-a-nodejs-and-react-app-in-visual-studio"></a>Öğretici: Visual Studio 'da Node.js oluşturma ve uygulama tepki verme
 
@@ -51,36 +51,36 @@ Tepki verme, bir kullanıcı arabirimi oluşturmak için bir ön uç çerçevesi
 
 JSX, genellikle UI öğelerini tanımlamaya tepki vererek kullanılan bir JavaScript sözdizimi uzantısıdır. JSX kodu, bir tarayıcıda çalışmadan önce transpiled ile düz JavaScript olmalıdır.
 
-### <a name="what-is-webpack"></a>WebPack nedir?
+### <a name="what-is-webpack"></a>Webpack nedir?
 
-Web paketi, JavaScript dosyalarını bir tarayıcıda çalışabilecek şekilde paketler. Ayrıca diğer kaynakları ve varlıkları dönüştürebilir veya paketleyebilir. Genellikle Babel veya TypeScript gibi bir derleyicinin basit JavaScript 'e derleyin JSX veya TypeScript kodunu belirtmek için kullanılır.
+webpack, JavaScript dosyalarını bir tarayıcıda çalıştıracak şekilde paketler. Ayrıca diğer kaynakları ve varlıkları da dönüştürebilirsiniz veya paketler. JSX veya TypeScript kodunu düz JavaScript'e transpile etmek için genellikle Babel veya TypeScript gibi bir derleyici belirtmek için kullanılır.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-* Visual Studio yüklü ve Node.js geliştirme iş yüküne sahip olmanız gerekir.
+* Uygulama ve Visual Studio geliştirme iş Node.js gerekir.
 
     ::: moniker range=">=vs-2019"
-    Visual Studio 2019 ' ü henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads/) sayfasına giderek ücretsiz olarak yükleme yapın.
+    Visual Studio 2019'Visual Studio yüklemediyebilirsiniz. [](https://visualstudio.microsoft.com/downloads/)
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Visual Studio 2017 ' ü henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads/) sayfasına giderek ücretsiz olarak yükleme yapın.
+    Visual Studio 2017'de henüz yüklememişsinizdir, ücretsiz Visual Studio [](https://visualstudio.microsoft.com/downloads/) indirmeler sayfasına gidin.
     ::: moniker-end
 
-    İş yükünü yüklemeniz gerekir, ancak zaten Visual Studio 'ya sahipseniz **Araçlar**  >  **ve Özellikler al.**.. ' a giderek Visual Studio yükleyicisi açılır. **Node.js geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
+    İş yükünü yüklemeniz gerekse ama zaten yüklüyse Visual Studio Araçları ve Özellikleri Al... 'a gidin  >  **ve** Visual Studio Yükleyicisi. Geliştirme iş **Node.js seçin** ve ardından Değiştir'i **seçin.**
 
-    ![VS yükleyicisinde iş yükünü Node.js](../ide/media/quickstart-nodejs-workload.png)
+    ![VS YükleyicisiNode.js de iş yükü yükleme](../ide/media/quickstart-nodejs-workload.png)
 
-* Node.js çalışma zamanının yüklü olması gerekir.
+* Node.js çalışma Node.js yüklü olmalıdır.
 
-    Bu öğretici sürüm 12.6.2 ile test edilmiştir.
+    Bu öğretici 12.6.2 sürümüyle test edilmiştir.
 
-    Yüklü değilse, dış çerçeveler ve kitaplıklar ile en iyi uyumluluk için [Node.js](https://nodejs.org/en/download/) Web sitesinden LTS sürümünü yüklemenizi öneririz. Node.js, 32-bit ve 64-bit mimariler için oluşturulmuştur. Visual Studio 'daki Node.js araçları, Node.js iş yüküne dahil edilmiştir, her iki sürümü de destekler. Yalnızca bir tane gereklidir ve Node.js yükleyici yalnızca aynı anda yüklü olan birini destekler.
-    
-    Genel olarak, Visual Studio yüklü Node.js çalışma zamanını otomatik olarak algılar. Yüklü bir çalışma zamanı algılamazsa, projenizi Özellikler sayfasındaki yüklü çalışma zamanına başvuracak şekilde yapılandırabilirsiniz (bir proje oluşturduktan sonra proje düğümüne sağ tıklayın, **Özellikler**' i seçin ve **Node.exe yolunu** ayarlayın). Node.js genel bir yüklemesini kullanabilir veya Node.js projelerinizde her birinde yerel yorumlayıcı yolunu belirtebilirsiniz. 
+    Yüklü yoksa, dış çerçeveler ve kitaplıklarla en iyi uyumluluk için [ LTS ](https://nodejs.org/en/download/) sürümünüNode.jsweb sitesinden yüklemenizi öneririz. Node.js 32 bit ve 64 bit mimariler için tasarlanmıştır. Node.js iş yüküne dahil Visual Studio araçları her Node.js sürümleri destekler. Yalnızca bir tane gereklidir ve Node.js yükleyicisi aynı anda yalnızca birinin yüklü olduğunu destekler.
+
+    Genel olarak, Visual Studio çalışma zamanı otomatik olarak Node.js algılar. Yüklü bir çalışma zamanı algılanmazsa, projenizi özellikler sayfasında yüklü çalışma zamanlarına başvuracak şekilde yapılandırabilirsiniz (proje oluşturduk sonra proje düğümüne sağ tıklayın, Özellikler'i seçin **(veya** **Alt** Enter tuşuna basın) veNode.exe  +   **yolunu ayarlayın).** Bir yerel yorumlayıcının Node.js yüklemesini kullanabilir veya her bir yerel yorumlayıcının yolunu Node.js belirtebilirsiniz. 
 
 ## <a name="create-a-project"></a>Proje oluşturma
 
-İlk olarak, bir Node.js Web uygulaması projesi oluşturun.
+İlk olarak bir web Node.js projesi oluşturun.
 
 1. Visual Studio'yu açın.
 
@@ -100,40 +100,40 @@ Web paketi, JavaScript dosyalarını bir tarayıcıda çalışabilecek şekilde 
 
     ![Çözüm Gezgini Node.js proje](../javascript/media/tutorial-nodejs-react-project-structure.png)
 
-    (1), **Yeni proje** iletişim kutusunda verdiğiniz adı kullanarak projenizde **kalın** olarak vurgulanır. Dosya sisteminde bu proje, proje klasörünüzdeki bir *. njsproj* dosyası tarafından temsil edilir. Projeye sağ tıklayıp **Özellikler**' i seçerek projeyle ilişkili özellikleri ve ortam değişkenlerini ayarlayabilirsiniz. Proje dosyası Node.js proje kaynağında özel değişiklikler yapmadığından, diğer geliştirme araçlarıyla gidiş dönüşü yapabilirsiniz.
+    (1), **Yeni proje** iletişim kutusunda verdiğiniz adı kullanarak projenizde **kalın** olarak vurgulanır. Dosya sisteminde bu proje, proje klasörünüzdeki bir *. njsproj* dosyası tarafından temsil edilir. Projeye sağ tıklayıp **Özellikler** ' i seçerek (veya **alt** Enter ' a basarak) projeyle ilişkili özellikleri ve ortam değişkenlerini ayarlayabilirsiniz  +  . Proje dosyası Node.js proje kaynağında özel değişiklikler yapmadığından, diğer geliştirme araçlarıyla gidiş dönüşü yapabilirsiniz.
 
     (2) en üst düzeyde, varsayılan olarak projenizle aynı ada sahip olan bir çözümdür. Disk üzerinde *. sln* dosyası tarafından temsil edilen bir çözüm, bir veya daha fazla ilgili proje için bir kapsayıcıdır.
 
     (3) NPM düğümü yüklü NPM paketlerini gösterir. Bir iletişim kutusu kullanarak NPM paketlerini aramak ve yüklemek için NPM düğümüne sağ tıklayabilir veya *package.js* ' deki ayarları ve NPM düğümündeki sağ tıklama seçenekleri ' ni kullanarak paketleri yükleyebilir ve güncelleştirebilirsiniz.
 
-    (4) *package.json* , NPM tarafından yerel olarak yüklenen paketler için paket bağımlılıklarını ve paket sürümlerini yönetmek üzere kullanılan bir dosyadır. Daha fazla bilgi için bkz. [NPM paketlerini yönetme](../javascript/npm-package-management.md).
+    (4) *package.js,* npm tarafından yerel olarak yüklenmiş paketler için paket bağımlılıklarını ve paket sürümlerini yönetmek için kullanılan bir dosyadır. Daha fazla bilgi için [bkz. Npm paketlerini yönetme.](../javascript/npm-package-management.md)
 
-    (5) *server.js* gibi proje dosyaları proje düğümünün altında görünür. *server.js* , proje başlangıç dosyasıdır ve bu nedenle **kalın** olarak görünür. Başlangıç dosyasını projedeki bir dosyaya sağ tıklayıp **Node.js başlangıç dosyası olarak ayarla**' yı seçerek ayarlayabilirsiniz.
+    (5)server.js *gibi* proje dosyaları proje düğümü altında gösterir. *server.js* proje başlangıç dosyasıdır ve bu nedenle kalın olarak **gösterilir.** Proje içinde bir dosyaya sağ tıklar ve Başlangıç dosyası olarak ayarla'Node.js **başlangıç dosyasını ayarlayın.**
 
-## <a name="add-npm-packages"></a>NPM paketleri Ekle
+## <a name="add-npm-packages"></a>npm paketleri ekleme
 
-Bu uygulama, doğru bir şekilde çalışması için birkaç NPM modülü gerektirir.
+Bu uygulamanın doğru çalışması için bir dizi npm modülü gerekir.
 
-* tıkla
-* tepki verme-Dom
+* Tepki
+* react-dom
 * express
 * path
-* TS-yükleyici
+* ts-loader
 * typescript
-* Web paketi
-* Web paketi-CLI
+* Webpack
+* webpack-cli
 
-1. Çözüm Gezgini (sağ bölme) menüsünde, projedeki **NPM** düğümüne sağ tıklayın ve **Yeni NPM paketleri yüklensin**' i seçin.
+1. Yeni Çözüm Gezgini (sağ bölme) altında, projedeki **npm** düğümüne sağ tıklayın ve Yeni **npm Paketleri Yükle'yi seçin.**
 
-    **Yeni NPM paketlerini yükler** iletişim kutusunda, en güncel paket sürümünü yüklemeyi veya bir sürüm belirtmeyi seçebilirsiniz. Bu paketlerin güncel sürümünü yüklemeyi seçer, ancak daha sonra beklenmeyen hatalar halinde çalıştırırsanız, bu adımlarda daha sonra açıklanan paket sürümlerinin aynısını yüklemek isteyebilirsiniz.
+    Yeni **npm Paketlerini Yükle iletişim** kutusunda, en güncel paket sürümünü yükleyebilir veya bir sürüm belirtebilirsiniz. Bu paketlerin geçerli sürümünü yüklemeyi seçerseniz, ancak daha sonra beklenmeyen hatalarla karşılaşacaksanız, bu adımların sonraki adımlarında açıklanan tam paket sürümlerini yüklemek iyi olabilir.
 
-1. **Yeni NPM paketlerini yükler** iletişim kutusunda, yanıt verme paketini arayın ve paketi yüklemek Için **paketi yüklensin** ' i seçin.
+1. Yeni **npm Paketlerini Yükle iletişim kutusunda** react paketini arayın ve Paketi **Yükle'yi seçerek** yükleyin.
 
-    ![NPM paketlerini yükler](../javascript/media/tutorial-nodejs-react-install-package.png)
+    ![npm paketlerini yükleme](../javascript/media/tutorial-nodejs-react-install-package.png)
 
-    Paketin yüklenmesiyle ilgili ilerleme durumunu görmek için **Çıkış** penceresini seçin ( **çıktıyı göster** alanından **NPM** ' yi seçin). Yüklendiğinde, paket **NPM** düğümünün altında görüntülenir.
+    Paketi **yüklemenin** ilerlemesini görmek için Çıkış penceresini seçin (Çıktıyı göster alanında **Npm'yi** seçin).  Paket yüklendikten sonra **npm** düğümü altında görünür.
 
-    Projenin dosyadaki *package.js* , paket sürümü de dahil olmak üzere yeni paket bilgileriyle güncelleştirilir.
+    Projenin dosya *package.js,* paket sürümü de dahil olmak üzere yeni paket bilgileriyle güncelleştirilir.
 
 1. Tek seferde paketleri aramak ve geri kalanını eklemek için Kullanıcı arabirimini kullanmak yerine, aşağıdaki kodu *üzerinepackage.js* yapıştırın. Bunu yapmak için `dependencies` şu kodla bir bölüm ekleyin:
 
@@ -158,7 +158,7 @@ Bu uygulama, doğru bir şekilde çalışması için birkaç NPM modülü gerekt
 
     Bu komut NPM install komutunu doğrudan çalıştırır.
 
-    Alt bölmede, paketlerin yüklenmesiyle ilgili ilerleme durumunu görmek için **Çıkış** penceresini seçin. Yükleme birkaç dakika sürebilir ve sonuçları hemen görmeyebilirsiniz. Çıktıyı görmek için **Çıkış** penceresindeki çıktıyı **göster** alanında **NPM** ' yi seçtiğinizden emin olun.
+    Alt bölmede, paketlerin yüklenmesiyle ilgili ilerleme durumunu görmek için **Çıkış** penceresini seçin. Yükleme birkaç dakika sürebilir ve sonuçları hemen görmeyebilirsiniz. Çıktıyı görmek için **Çıkış** penceresindeki çıktıyı **göster** alanında **NPM** ' yi seçtiğinizden emin olun. (Pencereyi açmak için **Görünüm**  >  ' ü seçin. **Çıktı** veya **CTRL**  +  **alt**  +  **O** tuşlarına basın.)
 
     Çözüm Gezgini, yüklendikten sonra görüntülenen NPM modüllerdir.
 
@@ -178,7 +178,7 @@ Bu adımlarda, projenize dört yeni dosya eklersiniz.
 
 Bu basit uygulama için, proje köküne yeni proje dosyaları eklersiniz. (Çoğu uygulamalarda, genellikle dosyaları alt klasörlere ekler ve göreli yol başvurularını uygun şekilde ayarlayabilirsiniz.)
 
-1. Çözüm Gezgini ' de proje **nodejswebappblank** öğesine sağ tıklayın ve yeni öğe **Ekle**' yi seçin  >  .
+1. Çözüm Gezgini ' de proje **nodejswebappblank** öğesine sağ tıklayın ve yeni öğe **Ekle**' yi seçin  >   (veya **CTRL**  +  **+ SHIFT**  +  **A** tuşlarına basın).
 
 1. **Yeni öğe Ekle** Iletişim kutusunda **TypeScript JSX dosyası**' nı seçin, *app. TSX* adını yazın ve **Ekle** veya **Tamam**' ı seçin.
 
@@ -316,23 +316,23 @@ Bu basit uygulama için, proje köküne yeni proje dosyaları eklersiniz. (Çoğ
 
     Yukarıdaki çıkış yerine herhangi bir hata görürseniz, uygulamanızın çalışması için önce bu hataları çözmeniz gerekir. NPM paket sürümleriniz Bu öğreticide gösterilen sürümlerden farklıysa, bu bir hata kaynağı olabilir. Hataları gidermenin bir yolu, önceki adımlarda gösterilen sürümlerin aynısını kullanmaktır. Ayrıca, bu paket sürümlerinden bir veya daha fazlası kullanım dışı bırakılmış ve bir hatayla sonuçlanmışsa, hataları onarmak için daha yeni bir sürüm yüklemeniz gerekebilir. NPM paket sürümlerini denetlemek için *üzerindepackage.js* kullanma hakkında bilgi için bkz. [package.jsyapılandırma](../javascript/configure-packages-with-package-json.md).
 
-1. Çözüm Gezgini, proje düğümüne sağ tıklayın ve   >  **var olan klasörü** Ekle ' yi seçtikten sonra, *dağ* klasörünü seçip **Klasör Seç**' i seçin.
+1. Bu Çözüm Gezgini proje düğümüne sağ tıklayın ve Var Olan Klasör Ekle'yi seçin, ardından  >   *dist klasörünü* seçin ve Klasör **Seç'i seçin.**
 
-    Visual Studio, *app-bundle.js* ve *app-bundle.js. Map* içeren proje için *Dist* klasörünü ekler.
+    Visual Studio,app-bundle.jsve *app-bundle.js.map'i içeren*  *dist* klasörünü projeye ekler.
 
-1. Transpiled JavaScript kodunu görmek için *app-bundle.js* açın.
+1. JavaScript *app-bundle.js* görmek içinapp-bundle.js'yi açın.
 
-1. Dışarıdan değiştirilen dosyaları yeniden yüklemeniz istenirse, **Tümüne Evet**' i seçin.
+1. Harici olarak değiştirilmiş dosyaları yeniden yüklemek istenirse, Evet'i **All (Tüm dosyalar) olarak seçin.**
 
-    ![Değiştirilen dosyaları yükle](../javascript/media/tutorial-nodejs-react-reload-files.png)
+    ![Değiştirilen dosyaları yükleme](../javascript/media/tutorial-nodejs-react-reload-files.png)
 
-*App. TSX* üzerinde her değişiklik yaptığınızda WebPack komutunu yeniden çalıştırmanız gerekir. Bu adımı otomatik hale getirmek için, derleyin için JSX 'e bir derleme betiği ekleyin.
+*app.tsx üzerinde her değişiklik* yaptığınız zaman webpack komutunu yeniden çalıştırmanız gerekir. Bu adımı otomatikleştirmek için JSX'i transpile etmek için bir derleme betiği ekleyin.
 
-## <a name="add-a-build-script-to-transpile-the-jsx"></a>JSX derleyin 'e derleme betiği ekleme
+## <a name="add-a-build-script-to-transpile-the-jsx"></a>JSX'i transpile etmek için derleme betiği ekleme
 
-Visual Studio 2019 ' den başlayarak bir derleme betiği gereklidir. Transpiling JSX yerine, komut satırında (yukarıdaki bölümde gösterildiği gibi), Visual Studio 'dan oluştururken JSX derleyin sağlayabilirsiniz.
+2019'Visual Studio başlayarak bir derleme betiği gerekir. JSX'i komut satırına (önceki bölümde gösterildiği gibi) çeviri yapmak yerine, JSX'i komut satırına Visual Studio.
 
-* *package.js* açın ve bölümden sonra aşağıdaki bölümü ekleyin `dependencies` :
+* Aşağıdaki *package.jsaçın* ve bölümünden sonra aşağıdaki bölümü `dependencies` ekleyin:
 
    ```json
    "scripts": {
@@ -342,24 +342,24 @@ Visual Studio 2019 ' den başlayarak bir derleme betiği gereklidir. Transpiling
 
 ## <a name="run-the-app"></a>Uygulamayı çalıştırma
 
-1. Geçerli hata ayıklama hedefi olarak **Web sunucusu (Google Chrome)** ya da **Web sunucusu (Microsoft Edge)** seçin.
+1. Geçerli hata **ayıklama hedefi olarak Web Sunucusu (Google Chrome)** veya Web Sunucusu **(Microsoft Edge)** seçeneğini kullanın.
 
     ::: moniker range=">=vs-2019"
-    ![Hata ayıklama hedefi olarak Chrome seçin](../javascript/media/vs-2019/tutorial-nodejs-react-debug-target.png)
+    ![Hata ayıklama hedefi olarak Chrome'u seçin](../javascript/media/vs-2019/tutorial-nodejs-react-debug-target.png)
     ::: moniker-end
     ::: moniker range="vs-2017"
-    ![Hata ayıklama hedefi olarak Chrome seçin](../javascript/media/tutorial-nodejs-react-debug-target.png)
+    ![Hata ayıklama hedefi olarak Chrome'u seçin](../javascript/media/tutorial-nodejs-react-debug-target.png)
     ::: moniker-end
 
-    Makinenizde Chrome varsa, ancak bir seçenek olarak görünmüyorsa, hata ayıklama hedefi açılır listesinden **Araştır** ' ı seçin ve varsayılan tarayıcı hedefi olarak Chrome ' u seçin ( **Varsayılan olarak ayarla**' yı seçin).
+    Chrome makineniz üzerinde kullanılabilir ancak seçenek olarak göstermüyorsa, hata ayıklama hedefi açılan listesinden Birlikte Gözat'ı seçin ve varsayılan tarayıcı hedefi olarak Chrome'u seçin (Varsayılan Olarak **Ayarla'ya tıklayın).** 
 
-1. Uygulamayı çalıştırmak için **F5** (**hata** ayıklama  >  **başlatma hata** ayıklama) veya yeşil ok düğmesine basın.
+1. Uygulamayı çalıştırmak için **F5** **(** Hata AyıklamaYı  >  **Başlat**) veya yeşil ok düğmesine basın.
 
-    Hata ayıklayıcının dinlediği bağlantı noktasını gösteren bir Node.js konsol penceresi açılır.
+    Hata Node.js dinleyen bağlantı noktasını gösteren bir konsol penceresi açılır.
 
-    Visual Studio, *server.js* başlangıç dosyasını başlatarak uygulamayı başlatır.
+    Visual Studio başlangıç dosyasını başlatarak uygulamayı başlatır ve *server.js.*
 
-    ![Tarayıcıda tepki verme](../javascript/media/tutorial-nodejs-react-running-react.png)
+    ![React'i tarayıcıda çalıştırma](../javascript/media/tutorial-nodejs-react-running-react.png)
 
 1. Tarayıcı penceresini kapatın.
 
@@ -398,45 +398,45 @@ Bu senaryo için Chrome ' ı kullanın.
 
 1. Hedef tarayıcı için tüm pencereleri kapatın.
 
-   Diğer tarayıcı örnekleri tarayıcının hata ayıklama etkinken açılmasını önleyebilir. (Tarayıcı uzantıları çalışıyor olabilir ve tam hata ayıklama modunu engelleyebilir, bu nedenle beklenmedik Chrome örneklerini bulmak için Görev Yöneticisi 'Ni açmanız gerekebilir.)
+   Diğer tarayıcı örnekleri, hata ayıklama etkinleştirildiğinde tarayıcının açılmasını önleyebilirsiniz. (Tarayıcı uzantıları çalışıyor ve tam hata ayıklama modunu önliyor olabilir, bu nedenle Beklenmeyen Chrome örneklerini bulmak için Görev Yöneticisi'ni açmanız gerekir.)
 
    ::: moniker range=">=vs-2019"
-   Microsoft Edge (Kmıum) için tüm Chrome örneklerini de kapatın. Her iki tarayıcı de kmıum Code tabanını paylaştığından, bu en iyi sonuçları verir.
+   Bu Microsoft Edge (Chromium) chrome'un tüm örneklerini de kapatır. her iki tarayıcı da chromium kod tabanını paylaştığı için en iyi sonuçları verir.
    ::: moniker-end
 
-2. Hata ayıklama etkinken tarayıcınızı başlatın.
+2. Hata ayıklama etkinleştirildiğinde tarayıcınızı başlatabilirsiniz.
 
     ::: moniker range=">=vs-2019"
-    Visual Studio 2019 ' den başlayarak, `--remote-debugging-port=9222` **hata ayıklama** araç çubuğundan **.** .. > ve ardından **Ekle**' yi seçerek ve sonra da **bağımsız değişkenler** alanında bayrağını ayarlayarak tarayıcı başlatma sırasında bayrağı ayarlayabilirsiniz. Hata **ayıklamayla** hata ayıklama veya Chrome **ile kenar** gibi farklı bir kolay ad kullanın. Ayrıntılar için bkz. [sürüm notları](/visualstudio/releases/2019/release-notes-v16.2).
+    Visual Studio 2019'dan başlayarak, Hata Ayıklama araç çubuğundan `--remote-debugging-port=9222` **Gözat...**  >'yi ve ardından Ekle'yi seçerek ve ardından Bağımsız  Değişkenler alanında bayrağını ayarlayarak tarayıcı başlatma sırasında bayrağını ayarlayın. Tarayıcı için Hata Ayıklama ile **Edge** veya Hata Ayıklama ile Chrome gibi **farklı bir kolay ad kullanın.** Ayrıntılar için bkz. [Sürüm Notları.](/visualstudio/releases/2019/release-notes-v16.2)
 
-    ![Tarayıcınızı hata ayıklama etkinken açılacak şekilde ayarlama](../javascript/media/tutorial-nodejs-react-edge-with-debugging.png)
+    ![Tarayıcınızı hata ayıklama etkin olarak açılacak şekilde ayarlama](../javascript/media/tutorial-nodejs-react-edge-with-debugging.png)
 
-    Alternatif olarak, Windows **Başlat** düğmesinden **Çalıştır** komutunu açın (sağ tıklayıp **Çalıştır**' ı seçin) ve şu komutu girin:
+    Alternatif olarak, **Windows** **Başlat düğmesinden** Çalıştır komutunu açın (sağ tıklayın ve **Çalıştır'ı seçin)** ve aşağıdaki komutu girin:
 
     `msedge --remote-debugging-port=9222`
 
-    veya
+    Veya
 
     `chrome.exe --remote-debugging-port=9222`
     ::: moniker-end
 
     ::: moniker range="vs-2017"
-    Windows **Başlat** düğmesinden **Çalıştır** komutunu açın (sağ tıklayıp **Çalıştır**' ı seçin) ve şu komutu girin:
+    Windows Başlat **düğmesinden** Çalıştır komutunu **açın** (sağ tıklayın ve Çalıştır'ı **seçin)** ve aşağıdaki komutu girin:
 
     `chrome.exe --remote-debugging-port=9222`
     ::: moniker-end
 
     Bu, tarayıcınızı hata ayıklama etkin olarak başlatır.
 
-    Uygulama henüz çalışmıyor, bu nedenle boş bir tarayıcı sayfası alırsınız.
+    Uygulama henüz çalışmamıştır, bu nedenle boş bir tarayıcı sayfası açılır.
 
-### <a name="attach-the-debugger-to-client-side-script"></a>Hata ayıklayıcıyı istemci tarafı betiğe iliştirme
+### <a name="attach-the-debugger-to-client-side-script"></a>Hata ayıklayıcıyı istemci tarafı betiğine ekleme
 
-1. Visual Studio 'ya geçin ve kaynak kodunuzda *app-bundle.js*  ya da *app. TSX* arasında bir kesme noktası ayarlayın.
+1. Visual Studio'a geçiş ve ardından kaynak kodunda *app.tsx* *app-bundle.js* kesme noktası ayarlayın.
 
-    *app-bundle.js* için, `render()` işlevde aşağıdaki çizimde gösterildiği gibi bir kesme noktası ayarlayın:
+    Daha *app-bundle.js* için işlevinde kesme `render()` noktası aşağıdaki çizimde gösterildiği gibi ayarlayın:
 
-    ![app-bundle.js için Visual Studio Code penceresinin ekran görüntüsü. Sol cilt Paydaki kırmızı nokta, render işlevinde bir kesme noktasının ayarlandığını gösterir.](../javascript/media/tutorial-nodejs-react-set-breakpoint-client-code.png)
+    ![Uygulama için Visual Studio penceresinin ekran app-bundle.js. Sol oluk içinde kırmızı bir nokta, işleme işlevinde bir kesme noktası ayar olduğunu gösterir.](../javascript/media/tutorial-nodejs-react-set-breakpoint-client-code.png)
 
     `render()`İşlevi transpiled *app-bundle.js* dosyasında bulmak için **CTRL** + **F** 'yi (**Düzenle**  >  **Bul ve Değiştir**  >  **hızlı bul**) kullanın.
 
@@ -471,43 +471,43 @@ Bu senaryo için Chrome ' ı kullanın.
 
     Uygulama yeni bir tarayıcı sekmesinde açılır.
 
-4. İşleme **Ekle hata ayıkla** öğesini seçin  >  .
+4. İşleme **Ekle hata ayıkla**' yı seçin  >   (veya **CTRL**  +  **alt**  +  **P** tuşlarına basın).
 
     > [!TIP]
-    > Visual Studio 2017 ' den başlayarak, bu adımları izleyerek işleme ilk kez iliştirdikten sonra,   >  **işlemek için** hata ayıklama yeniden iliştirme ' yi seçerek aynı işleme hızlıca tekrar iliştirebilirsiniz.
+    > Visual Studio 2017 ' den itibaren, bu adımları izleyerek işleme ilk kez iliştirdikten sonra, işlem için **hata ayıklamayı** yeniden iliştirme ' yi seçerek aynı işleme hızlıca yeniden iliştirebilirsiniz  >   (veya **SHIFT**  +  **alt**  +  **P**' ye basabilirsiniz).
 
 5. **Işleme İliştir** iletişim kutusunda, ekleyebileceğiniz tarayıcı örneklerinin filtrelenmiş bir listesini alın.
 
     ::: moniker range=">=vs-2019"
-    Visual Studio 2019 ' de, arama sonuçlarını filtrelemek için hedef  tarayıcınız, **JavaScript (Chrome)** veya  **JavaScript (Microsoft Edge-ku)** için doğru hata ayıklayıcıyı  seçin.
+    Visual Studio 2019'da, Hedef tarayıcınız, **JavaScript (Chrome)** veya **JavaScript (Microsoft Edge - Chromium)** için doğru  hata ayıklayıcıyı  seçin, arama sonuçlarını filtrelemek için filtre kutusuna chrome veya kenar yazın. 
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Visual Studio 2017 ' de, **Ekle** alanına **WebKit Code** ' u seçin, arama sonuçlarını filtrelemek için filtre kutusuna **Chrome** yazın.
+    2017 Visual Studio de, Ekle alanında **Webkit** kodu'u  seçin, arama sonuçlarını filtrelemek için filtre kutusuna chrome yazın. 
     ::: moniker-end
 
-6. Doğru ana bilgisayar bağlantı noktasıyla (Bu örnekte localhost) tarayıcı işlemini seçin ve **Ekle**' yi seçin.
+6. Doğru konak bağlantı noktasıyla tarayıcı işlemini seçin (bu örnekte localhost) ve **Ekle'yi seçin.**
 
-    Doğru tarayıcı örneğini seçmenize yardımcı olması için, **başlık** alanında bağlantı noktası (1337) de görünebilir.
+    Doğru tarayıcı örneğini seçmenize yardımcı olmak için  Başlık alanında bağlantı noktası (1337) de görünebilir.
 
     ::: moniker range=">=vs-2019"
-    Aşağıdaki örnekte bunun Microsoft Edge (Kmıum) tarayıcısı için nasıl göründüğü gösterilmektedir.
+    Aşağıdaki örnekte bunun Microsoft Edge (Chromium) tarayıcısında nasıl göründüğünü gösterir.
 
     ![İşleme ekle](../javascript/media/tutorial-nodejs-react-attach-to-process-edge.png)
     ::: moniker-end
     ::: moniker range="vs-2017"
     ![İşleme ekle](../javascript/media/tutorial-nodejs-react-attach-to-process.png)
 
-    Visual Studio 'da DOM Gezgini ve JavaScript konsolu açıldığında hata ayıklayıcının doğru şekilde eklenmiş olduğunu bilirsiniz. Bu hata ayıklama araçları, Microsoft Edge için Chrome Geliştirici Araçları ve F12 araçlarına benzerdir.
+    DOM Gezgini ve JavaScript Konsolu açık olduğunda hata ayıklayıcının doğru şekilde ekli olduğunu Visual Studio. Bu hata ayıklama araçları, chrome için Geliştirici Araçları F12 Araçları'Microsoft Edge.
     ::: moniker-end
 
     > [!TIP]
-    > Hata ayıklayıcı iliştirilemez ve "işleme iliştirilemiyor" iletisini görürsünüz. İşlem geçerli durumda geçerli değil. ", tarayıcı hata ayıklama modunda başlatılmadan önce hedef tarayıcının tüm örneklerini kapatmak için Görev Yöneticisi 'Ni kullanın. Tarayıcı uzantıları çalışıyor ve tam hata ayıklama modu engelleniyor olabilir.
+    > Hata ayıklayıcısı eklenmezse ve "İşleme eklenemiyor. Bir işlem geçerli durumda yasal değildir." hata ayıklama modunda tarayıcıyı başlatmadan önce hedef tarayıcının tüm örneklerini kapatmak için Görev Yöneticisi'ni kullanın. Tarayıcı uzantıları çalışıyor ve tam hata ayıklama modunu engel ediyor olabilir.
 
-7. Kesme noktası olan kod zaten yürütüldüğünden, kesme noktasına isabet etmek için tarayıcı sayfanızı yenileyin.
+7. Kesme noktasıyla kod zaten yürütülür olduğundan, kesme noktasıyla bağlantı noktası için tarayıcı sayfanızı yenileyin.
 
-    Hata ayıklayıcıda duraklalarken, değişkenlerin üzerine giderek ve hata ayıklayıcı pencerelerini kullanarak uygulamanızın durumunu inceleyebilirsiniz. Kod aracılığıyla (**F5**, **F10** ve **F11**) hata ayıklayıcıyı ilerleyebilirsiniz. Temel hata ayıklama özellikleri hakkında daha fazla bilgi için bkz. [hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md).
+    Hata ayıklayıcıda duraklatılmış durumdayken değişkenlerin üzerine gelerek ve hata ayıklayıcı pencerelerini kullanarak uygulama durumunu inceleyebilirsiniz. Kod (**F5**, F10 ve **F11)** adım adım ilerleyerek hata ayıklayıcıyı **ilerletebilirsiniz.** Temel hata ayıklama özellikleri hakkında daha fazla bilgi için [bkz. İlk olarak hata ayıklayıcısına bakın.](../debugger/debugger-feature-tour.md)
 
-    Daha önce, ortamınız ve tarayıcı durumlarınızla birlikte, daha önce izlediğiniz adımlara bağlı olarak, *app-bundle.js* ya da *app. TSX* içindeki eşleştirilmiş konumunda kesme noktasına ulaşırsınız. Her iki durumda da kodun içinde ilerleyebileceğiniz değişkenleri inceleyebilirsiniz.
+    Kesme noktası, daha önce *hangi adımlarıapp-bundle.js* ortamınız ve tarayıcı durumunuz bağlı olarak *app.tsx'te* veya eşlenmişapp-bundle.js'de isabet edersiniz. Her iki şekilde de kod adımlarını atabilir ve değişkenleri inceleyebilirsiniz.
 
    * *App. TSX* içindeki koda ayırmanız ve bunu yapamaması gerekiyorsa, hata ayıklayıcıyı iliştirmek için önceki adımlarda açıklandığı gibi **işlemek için İliştir** ' i kullanın. Ortamınızın doğru ayarlandığından emin olun:
 
