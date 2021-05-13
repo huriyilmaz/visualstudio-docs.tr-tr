@@ -1,6 +1,6 @@
 ---
 title: MSBuild | Microsoft Docs
-description: Microsoft Build Engine (MSBuild) platformunun derlemeleri denetlemek için bir XML şemasına sahip bir proje dosyası nasıl sağladığını öğrenin.
+description: Microsoft Build Engine (MSBuild) platformunun derlemeleri denetlemeye olanak sağlayan xml şemasına sahip bir proje dosyası sağladığını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -13,30 +13,30 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: dbf938e61cc1567beb682847821595f5ca6cc026
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 372fc5c81b963cbb8e46cab689713e476fcfff7d
+ms.sourcegitcommit: 9cb0097c33755a3e5cbadde3b0a6e9e76cee727d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99905469"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "109848285"
 ---
 # <a name="msbuild"></a>MSBuild
 
-Microsoft Build Engine, uygulama oluşturmaya yönelik bir platformdur. MSBuild olarak da bilinen bu altyapı, derleme platformunun yazılım işleme ve derleme şeklini denetleyen bir proje dosyası için bir XML şeması sağlar. Visual Studio MSBuild kullanır, ancak MSBuild, Visual Studio 'ya bağlı değildir. Proje veya çözüm dosyanızda *msbuild.exe* çağırarak, ürünleri Visual Studio 'nun yüklü olmadığı ortamlarda düzenleyebilir ve oluşturabilirsiniz.
+Bu Microsoft Build Engine, uygulamalar için bir platformdur. MSBuild olarak da bilinen bu altyapı, derleme platformunun yazılım işleme ve derleme işlemlerini kontrol eden bir proje dosyası için bir XML şeması sağlar. Visual Studio MSBuild kullanır, ancak MSBuild bu yapılandırmaya Visual Studio. Projeniz *veyamsbuild.exe* dosyanıza bir uygulama kullanarak, uygulamanın yüklenmemiş olduğu ortamlarda ürünleri Visual Studio ve derlemeniz gerekir.
 
- Visual Studio, yönetilen projeleri yüklemek ve derlemek için MSBuild 'i kullanır. Visual Studio 'daki proje dosyaları (*. csproj*, *. vbproj*, *. vcxproj* ve diğerleri), IDE kullanarak bir proje oluşturduğunuzda yürütülen MSBuild xml kodunu içerir. Visual Studio projeleri tipik geliştirme işlerini yapmak için gerekli tüm ayarları ve derleme süreçlerini içeri aktarır, ancak bunları Visual Studio içinden genişletebilir veya bir XML Düzenleyicisi kullanarak değiştirebilirsiniz.
+ Visual Studio projeleri yüklemek ve derlemek için MSBuild kullanır. Visual Studio 'daki proje dosyaları (*.csproj*, *.vbproj*, *.vcxproj* ve diğerleri) IDE kullanarak bir proje derlemeniz zaman yürütülen MSBuild XML kodunu içerir. Visual Studio tüm gerekli ayarları ve derleme işlemlerini tipik geliştirme çalışmalarını yapmak için içeri aktarabilirsiniz, ancak bunları bir XML düzenleyicisini kullanarak Visual Studio veya değiştirebilirsiniz.
 
- C++ için MSBuild hakkında daha fazla bilgi için bkz. [MSBuild (c++)](/cpp/build/msbuild-visual-cpp).
+ C++ için MSBuild hakkında daha fazla bilgi için bkz. [MSBuild (C++)](/cpp/build/msbuild-visual-cpp).
 
- Aşağıdaki örneklerde, Visual Studio IDE yerine komut satırından MSBuild 'i çağırarak derlemeleri nasıl çalıştırabileceğiniz gösterilmektedir.
+ Aşağıdaki örneklerde, IDE'nin komut satırı yerine MSBuild'i ne zaman Visual Studio gösterebilirsiniz.
 
-- Visual Studio yüklü değil. ([Visual Studio olmadan MSBuild 'ı indirin](https://visualstudio.microsoft.com/downloads/?q=build+tools).)
+- Visual Studio yüklü değil. ([MSBuild'i Visual Studio](https://visualstudio.microsoft.com/downloads/?q=build+tools)indirin.)
 
-- MSBuild 'in 64 bitlik sürümünü kullanmak istiyorsunuz. MSBuild 'in bu sürümü genellikle gereksizdir, ancak MSBuild 'in daha fazla belleğe erişmesine izin verir.
+- MSBuild'in 64 bit sürümünü kullanmak istiyor siniz. MSBuild'in bu sürümü genellikle gereksizdir, ancak MSBuild'in daha fazla belleğe erişmesi için izin verir.
 
-- Bir derlemeyi birden çok işlemde çalıştırmak istiyorsunuz. Bununla birlikte, C++ ve C# ' deki projelerde aynı sonuca ulaşmak için IDE 'yi de kullanabilirsiniz.
+- Bir derlemeyi birden çok işlemde çalıştırmak istediğiniz. Ancak, C++ ve C# projelerinde aynı sonucu elde etmek için IDE'yi kullanabilirsiniz.
 
-- Yapı sistemini değiştirmek istiyorsunuz. Örneğin, aşağıdaki eylemleri etkinleştirmek isteyebilirsiniz:
+- Derleme sistemini değiştirmek istediğiniz. Örneğin, aşağıdaki eylemleri etkinleştirmek istiyor olabilir:
 
   - Dosyaları derleyiciye ulaşmadan önce ön işleme.
 
@@ -96,7 +96,7 @@ MSBuild.exe MyProj.proj -property:Configuration=Debug
 
  Öğeler, derleme sistemine giriş ve genellikle dosyaları temsil eder. Öğeler, Kullanıcı tanımlı öğe adlarına göre öğe türlerine göre gruplandırılır. Bu öğe türleri, oluşturma işleminin adımlarını gerçekleştirmek için bireysel öğeleri kullanan görevler için parametre olarak kullanılabilir.
 
- Öğeler, öğe türünün adı bir [ItemGroup](../msbuild/itemgroup-element-msbuild.md) öğesinin alt öğesi olan bir öğe oluşturularak proje dosyasında belirtilir. Örneğin, aşağıdaki kod iki dosya içeren adlı bir öğe türü oluşturur `Compile` .
+ Öğeler, öğe türünün adı bir [ItemGroup](../msbuild/itemgroup-element-msbuild.md) öğesinin alt öğesi olan bir öğe oluşturularak proje dosyasında belirtilir. Örneğin, aşağıdaki kod iki dosya içeren `Compile` adlı bir öğe türü oluşturur.
 
 ```xml
 <ItemGroup>
@@ -105,28 +105,28 @@ MSBuild.exe MyProj.proj -property:Configuration=Debug
 </ItemGroup>
 ```
 
- Öğe türlerine @ () sözdizimi kullanılarak proje dosyası boyunca başvurulabilir \<ItemType> . Örneğin, örnekteki öğe türüne kullanılarak başvurulur `@(Compile)` .
+ Öğe türlerine proje dosyası boyunca @( söz dizimi kullanılarak \<ItemType> başvurulabilirsiniz. Örneğin, örnekteki öğe türüne kullanılarak `@(Compile)` başvurulabilirsiniz.
 
- MSBuild 'de, öğe ve öznitelik adları büyük/küçük harfe duyarlıdır. Ancak özellik, öğe ve meta veri adları değildir. Aşağıdaki örnek, öğe türünü `Compile` , ya da `comPile` herhangi bir diğer durum varyasyonunu oluşturur ve "bir. cs; Two. cs" değerini verir.
+ MSBuild'de öğe ve öznitelik adları büyük/büyük/büyük harfe duyarlıdır. Ancak özellik, öğe ve meta veri adları değildir. Aşağıdaki örnek , veya başka bir büyük/küçük harf varyasyonu öğe türünü oluşturur ve öğe türüne `Compile` `comPile` "one.cs;two.cs" değerini verir.
 
 ```xml
 <ItemGroup>
   <Compile Include="one.cs" />
-  <comPile Include="two.cs" />
+  <Compile Include="two.cs" />
 </ItemGroup>
 ```
 
- Öğeler joker karakterler kullanılarak bildirilebilecek ve daha gelişmiş derleme senaryoları için ek meta veriler içerebilir. Öğeler hakkında daha fazla bilgi için bkz. [Items](../msbuild/msbuild-items.md).
+ Öğeler joker karakterler kullanılarak bildirebilirsiniz ve daha gelişmiş derleme senaryoları için ek meta veriler içerebilir. Öğeler hakkında daha fazla bilgi için bkz. [Öğeler.](../msbuild/msbuild-items.md)
 
-### <a name="tasks"></a><a name="BKMK_Tasks"></a> Görevlerinize
+### <a name="tasks"></a><a name="BKMK_Tasks"></a> Görev
 
- Görevler, MSBuild projelerinin derleme işlemlerini gerçekleştirmek için kullandığı yürütülebilir kod birimleridir. Örneğin, bir görev giriş dosyalarını derleyebilir veya bir dış araç çalıştırabilir. Görevler yeniden kullanılabilir ve farklı projelerde farklı geliştiriciler tarafından paylaşılabilir.
+ Görevler, MSBuild projelerinin derleme işlemlerini gerçekleştirmek için kullanabileceği yürütülebilir kod birimleridir. Örneğin, bir görev giriş dosyalarını derler veya bir dış araç çalıştırabilirsiniz. Görevler yeniden kullanılabilir ve farklı projelerde farklı geliştiriciler tarafından paylaşılır.
 
- Bir görevin yürütme mantığı yönetilen kodda yazılır ve [UsingTask](../msbuild/usingtask-element-msbuild.md) öğesi kullanılarak MSBuild ile eşleştirilir. Arabirimini uygulayan bir yönetilen tür yazarak kendi görevinizi yazabilirsiniz <xref:Microsoft.Build.Framework.ITask> . Görevlerin nasıl yazılacağı hakkında daha fazla bilgi için bkz. [görev yazma](../msbuild/task-writing.md).
+ Bir görevin yürütme mantığı yönetilen kodda yazılır ve [UsingTask](../msbuild/usingtask-element-msbuild.md) öğesi kullanılarak MSBuild'e eşilir. Arabirimi uygulayan bir yönetilen tür yazarak kendi görevinizi <xref:Microsoft.Build.Framework.ITask> yazabilirsiniz. Görevleri yazma hakkında daha fazla bilgi için bkz. [Görev yazma.](../msbuild/task-writing.md)
 
- MSBuild, gereksinimlerinize uyacak şekilde değiştirebileceğiniz ortak görevleri içerir. Örnekler, dosyaları kopyalayan, dizin oluşturan [MakeDir](../msbuild/makedir-task.md), ve Visual C# kaynak kodu dosyalarını derleyen [CSC](../msbuild/csc-task.md)olan [kopyalardır](../msbuild/copy-task.md). Kullanım bilgileri ile birlikte kullanılabilir görevlerin bir listesi için bkz. [görev başvurusu](../msbuild/msbuild-task-reference.md).
+ MSBuild, gereksinimlerinize uyacak şekilde değiştirebilirsiniz ortak görevleri içerir. Örnek [olarak,](../msbuild/copy-task.md)dosyaları kopyalayıp dizin oluşturan [MakeDir](../msbuild/makedir-task.md)ve Visual C# kaynak kodu dosyalarını derleye [Csc](../msbuild/csc-task.md)örnek olarak verilmiştir. Kullanılabilir görevlerin kullanım bilgileriyle birlikte listesi için bkz. [Görev başvurusu.](../msbuild/msbuild-task-reference.md)
 
- Bir görev, bir [hedef](../msbuild/target-element-msbuild.md) öğenin alt öğesi olarak görevin adına sahip olan bir öğe oluşturularak MSBuild proje dosyasında yürütülür. Görevler genellikle öğesinin öznitelikleri olarak geçirilen parametreleri kabul eder. MSBuild özellikleri ve öğeleri parametre olarak kullanılabilir. Örneğin, aşağıdaki kod [MakeDir](../msbuild/makedir-task.md) görevini çağırır ve `BuildDir` Önceki örnekte belirtilen özelliğin değerini geçirir.
+ Görev, bir Hedef öğenin alt öğesi olarak görev adına sahip bir öğe oluşturarak MSBuild proje dosyasında [yürütülür.](../msbuild/target-element-msbuild.md) Görevler genellikle öğesinin öznitelikleri olarak geçirilen parametreleri kabul eder. MSBuild özellikleri ve öğeleri parametre olarak kullanılabilir. Örneğin, aşağıdaki kod [MakeDir](../msbuild/makedir-task.md) görevini çağırır ve `BuildDir` Önceki örnekte belirtilen özelliğin değerini geçirir.
 
 ```xml
 <Target Name="MakeBuildDirectory">
@@ -156,38 +156,38 @@ MSBuild.exe MyProj.proj -property:Configuration=Debug
 
 ## <a name="use-msbuild-in-visual-studio"></a>Visual Studio 'da MSBuild 'i kullanma
 
- Visual Studio, yönetilen projeler hakkında yapı bilgilerini depolamak için MSBuild proje dosyası biçimini kullanır. Visual Studio arabirimi kullanılarak eklenen veya değiştirilen proje ayarları, içinde yansıtılır *. \** her proje için oluşturulan proj dosyası. Visual Studio yönetilen projeler oluşturmak için MSBuild 'in barındırılan bir örneğini kullanır. Bu, yönetilen bir projenin Visual Studio 'da veya bir komut isteminde (Visual Studio yüklü olmasa bile) derolabileceği ve sonuçların aynı olacağı anlamına gelir.
+ Visual Studio, yönetilen projeler hakkında yapı bilgilerini depolamak için MSBuild proje dosyası biçimini kullanır. Visual Studio arabirimi kullanılarak eklenen veya değiştirilen proje ayarları, içinde yansıtılır *. \** her proje için oluşturulan proj dosyası. Visual Studio yönetilen projeler oluşturmak için MSBuild 'in barındırılan bir örneğini kullanır. Bu, yönetilen bir projenin Visual Studio komut isteminde (Visual Studio yüklü olsa bile) ve sonuçların aynı olacağını ifade ediyor.
 
- Visual Studio 'da MSBuild 'i kullanma hakkında bir öğretici için bkz. [Izlenecek yol: MSBuild kullanma](../msbuild/walkthrough-using-msbuild.md).
+ Visual Studio'da MSBuild'i kullanma hakkında bir öğretici için, bkz. [Walkthrough: USING MSBuild](../msbuild/walkthrough-using-msbuild.md).
 
-## <a name="multitargeting"></a><a name="BKMK_Multitargeting"></a> Çoklu sürüm desteği
+## <a name="multitargeting"></a><a name="BKMK_Multitargeting"></a> Çoklu hedef
 
- Visual Studio 'yu kullanarak, .NET Framework çeşitli sürümlerinden herhangi birini çalıştırmak için bir uygulamayı derleyebilirsiniz. Örneğin, bir uygulamayı 32 bit platformda .NET Framework 2,0 ' de çalışacak şekilde derleyebilir ve aynı uygulamayı bir 64-bit platformunda .NET Framework 4,5 üzerinde çalışacak şekilde derleyebilirsiniz. Birden fazla çerçeveye derleme yeteneği Çoklu hedefleme olarak adlandırılır.
+ Bu Visual Studio kullanarak, bir uygulamayı derlemek için uygulamanın farklı sürümlerinden herhangi biri üzerinde .NET Framework. Örneğin, bir uygulamayı 32 bitlik bir platformda .NET Framework 2.0 üzerinde çalıştıracak şekilde derleyebilirsiniz ve aynı uygulamayı 64 bitlik bir platformda .NET Framework 4.5 üzerinde çalıştıracak şekilde derleyebilirsiniz. Birden fazla çerçeveye derleme özelliği multitargeting olarak adlandırılmıştır.
 
- Çoklu hedefleme avantajlarından bazıları şunlardır:
+ Çoklu hedeflere sahip olmak için aşağıdaki avantajlardan faydalanır:
 
-- .NET Framework önceki sürümlerini hedefleyen uygulamalar geliştirebilirsiniz, örneğin 2,0, 3,0 ve 3,5 sürümleri.
+- 2.0, 3.0 ve 3.5 gibi önceki .NET Framework sürümlerini hedef alan uygulamalar geliştirebilirsiniz.
 
-- Örneğin, Silverlight gibi .NET Framework dışındaki çerçeveleri hedefleyebilirsiniz.
+- Silverlight gibi diğer .NET Framework çerçeveleri hedefleysiniz.
 
-- Hedef çerçevenin önceden tanımlanmış bir alt kümesi olan bir *çerçeve profilini* hedefleyebilirsiniz.
+- Hedef çerçevenin *önceden tanımlanmış* bir alt kümesi olan bir çerçeve profilini hedefleyebilirsiniz.
 
-- Geçerli .NET Framework sürümü için bir hizmet paketi yayınlanmışsa, hedefleyebilirsiniz.
+- Geçerli sürümüne yönelik bir hizmet paketi .NET Framework, bunu hedefleyabilirsiniz.
 
-- Çoklu hedefleme, bir uygulamanın yalnızca hedef çerçeve ve platformda kullanılabilir olan işlevleri kullanmasını güvence altına alır.
+- Çoklu hedefleme, bir uygulamanın yalnızca hedef çerçevede ve platformda kullanılabilen işlevleri kullanmalarını garantiler.
 
-Daha fazla bilgi için bkz. [Çoklu hedefleme](../msbuild/msbuild-multitargeting-overview.md).
+Daha fazla bilgi için [bkz. Çoklu Hedef.](../msbuild/msbuild-multitargeting-overview.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 | Başlık | Açıklama |
 | - | - |
-| [İzlenecek yol: Sıfırdan MSBuild proje dosyası oluşturma](../msbuild/walkthrough-creating-an-msbuild-project-file-from-scratch.md) | Yalnızca bir metin düzenleyicisi kullanarak basit bir proje dosyasının artımlı olarak nasıl oluşturulacağını gösterir. |
-| [İzlenecek yol: MSBuild Kullanma](../msbuild/walkthrough-using-msbuild.md) | MSBuild 'in yapı taşlarını tanıtır ve Visual Studio IDE 'yi kapatmadan MSBuild projelerinin nasıl yazılacağını, değiştirileceğini ve hata ayıklacağınızı gösterir. |
-| [MSBuild kavramları](../msbuild/msbuild-concepts.md) | MSBuild: özellikler, öğeler, hedefler ve görevler için dört bina bloğunu gösterir. |
-| [Öğeler](../msbuild/msbuild-items.md) | MSBuild dosya biçiminin arkasındaki genel kavramları ve parçaların birbirine nasıl uyduğunu açıklar. |
-| [MSBuild özellikleri](../msbuild/msbuild-properties.md) | Özellikleri ve özellik koleksiyonlarını tanıtır. Özellikler, yapıları yapılandırmak için kullanılabilen anahtar/değer çiftleridir. |
-| [Targets](../msbuild/msbuild-targets.md) | Görevlerin belirli bir sırada nasıl gruplandırılacağını ve derleme işleminin bölümlerinin komut satırında çağrılacağını etkinleştirir. |
+| [İzlenecek yol: Sıfırdan MSBuild proje dosyası oluşturma](../msbuild/walkthrough-creating-an-msbuild-project-file-from-scratch.md) | Yalnızca bir metin düzenleyicisi kullanarak, temel bir proje dosyasının artımlı olarak nasıl oluşturul olduğunu gösterir. |
+| [İzlenecek yol: MSBuild Kullanma](../msbuild/walkthrough-using-msbuild.md) | MSBuild'in yapı taşlarını tanıtarak, IDE'yi kapatmadan MSBuild projelerini yazma, işleme ve Visual Studio gösterir. |
+| [MSBuild kavramları](../msbuild/msbuild-concepts.md) | MSBuild'in dört yapı taşlarını sunar: özellikler, öğeler, hedefler ve görevler. |
+| [Öğeler](../msbuild/msbuild-items.md) | MSBuild dosya biçiminin ardındaki genel kavramları ve parçaların nasıl bir araya sığacaklarını açıklar. |
+| [MSBuild özellikleri](../msbuild/msbuild-properties.md) | Özellikler ve özellik koleksiyonları sunar. Özellikler, derlemeleri yapılandırmak için kullanılan anahtar/değer çiftleridir. |
+| [Targets](../msbuild/msbuild-targets.md) | Görevleri belirli bir sırada grupla ve derleme işleminin bölümlerinin komut satırı üzerinde çağrılmalarını etkinleştirmeyi açıklar. |
 | [Görevler](../msbuild/msbuild-tasks.md) | Atomik derleme işlemleri gerçekleştirmek için MSBuild tarafından kullanılabilecek bir yürütülebilir kod birimi oluşturmayı gösterir. |
 | [Koşullar](../msbuild/msbuild-conditions.md) | `Condition`Bir MSBuild öğesinde özniteliğin nasıl kullanılacağını açıklar. |
 | [Gelişmiş kavramlar](../msbuild/msbuild-advanced-concepts.md) | Toplu işleme, dönüşümler gerçekleştirme, Çoklu hedefleme ve diğer gelişmiş teknikleri gösterir. |

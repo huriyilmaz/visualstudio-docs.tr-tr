@@ -1,9 +1,9 @@
 ---
 title: Visual Studio kullanarak Office için VSTO Eklentileri oluşturma
-description: Office 'i genişleten .NET Framework uygulamalar oluşturmak için Visual Studio 'daki Microsoft Office geliştirici araçlarını nasıl kullanabileceğinizi öğrenin.
+description: Office'i genişleten yeni Microsoft Office oluşturmak için Visual Studio geliştirici araçlarını .NET Framework nasıl kullanabileceğiniz hakkında bilgi edinebilirsiniz.
 titleSuffix: ''
 ms.custom: seodec18, SEO-VS-2020
-ms.date: 08/14/2019
+ms.date: 04/28/2021
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -13,34 +13,37 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 611feb69dc4c5ebdd340a61c49e76e0d7c33e713
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 990caeec642a745bec5b6e0f2d29ff5d6213d095
+ms.sourcegitcommit: 9cb0097c33755a3e5cbadde3b0a6e9e76cee727d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99947964"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "109848324"
 ---
 # <a name="create-vsto-add-ins-for-office-by-using-visual-studio"></a>Visual Studio kullanarak Office için VSTO Eklentileri oluşturma
-  Office 'i genişleten .NET Framework uygulamalar oluşturmak için Visual Studio 'daki Microsoft Office Geliştirici Araçları ' nı kullanabilirsiniz. Bu uygulamalar *Office çözümleri* olarak da adlandırılır.
+> [!IMPORTANT]
+> VSTO, [.NET Framework.](https://docs.microsoft.com/dotnet/framework/get-started/overview) COM eklentileri de .NET Framework. Office Eklentileri,.NET Core ve [.NET 5+](https://docs.microsoft.com/dotnet/core/dotnet-five)ile oluşturulamaz. Bu, .NET'in en son sürümleridir. Bunun nedeni.NET Core/.NET 5+ ile aynı işlemde .NET Framework birlikte çalışamaz ve eklenti yük hatalarına yol açabilir. Office için VSTO .NET Framework COM eklentilerini yazmak üzere .NET Framework kullanmaya devam edebilirsiniz. Microsoft, VSTO veya COM eklenti platformunu .NET Core veya .NET 5+ kullanmak üzere güncelleştirmez. Office Web Eklentileri'nin sunucu tarafını oluşturmak için .NET Core ve .NET 5+ ASP.NET Core'dan [faydalanabilirsiniz.](https://docs.microsoft.com/office/dev/add-ins/overview/office-add-ins)
 
- Office geliştirici araçları, çeşitli iş ihtiyaçlarını karşılamak için Office çözümleri oluşturmanıza yardımcı olan özellikler sağlar. Araçlar, Visual Basic veya Visual C# ' yi kullanarak Office çözümleri oluşturmanıza yardımcı olan proje şablonlarını ve Office çözümleriniz için özel kullanıcı arabirimleri oluşturmanıza yardımcı olan görsel tasarımcıları içerir.
+  Office'i genişleten Microsoft Office uygulamaları Visual Studio için .NET Framework geliştirici araçlarını kullanabilirsiniz. Bu uygulamalar, Office çözümleri *olarak da adlandırılmıştır.*
+
+ Office geliştirici araçları, çeşitli iş ihtiyaçlarına uygun Office çözümleri oluşturmanıza yardımcı olan özellikler sağlar. Araçlar, Visual Basic veya Visual C# kullanarak Office çözümleri oluşturmanıza yardımcı olacak proje şablonlarını ve Office çözümleriniz için özel kullanıcı arabirimleri oluşturmanıza yardımcı olan görsel tasarımcıları içerir.
 
 [!include[Add-ins note](includes/addinsnote.md)]
 
- Office geliştirme hakkında en son bilgiler için [Microsoft Office Geliştirici Merkezi](https://developer.microsoft.com/office/docs)' ne bakın.
+ Office geliştirme hakkında en son bilgiler için bkz. [Microsoft Office merkezi.](https://developer.microsoft.com/office/docs)
 
 ## <a name="in-this-section"></a>Bu bölümde
-- [Visual Studio 'da Office geliştirme &#40;kullanmaya başlama&#41;](getting-started-office-development-in-visual-studio.md)
+- [Kullanmaya başlayın &#40;Office geliştirme Visual Studio&#41;](getting-started-office-development-in-visual-studio.md)
 
- Office çözümleri oluşturmak için bir geliştirme bilgisayarı yapılandırma, Office çözümlerini oluşturmaya başlama ve Visual Studio 'da Office geliştirmeye yönelik yenilikler hakkında bilgilere bağlantılar sağlar.
+ Bir geliştirme bilgisayarlarını Office çözümleri oluşturmak üzere yapılandırma, Office çözümleri oluşturmaya başlama ve Office'te Office geliştirmeye yönelik yeni Visual Studio.
 
 - [Office çözümlerini yükseltme ve geçirme](upgrading-and-migrating-office-solutions.md)
 
- Visual Studio 'nun önceki sürümleri kullanılarak oluşturulan projelere yönelik yükseltme işlemi hakkındaki bilgilere bağlantılar sağlar.
+ Önceki sürümler kullanılarak oluşturulan projelerin yükseltme işlemiyle ilgili bilgilerin bağlantılarını Visual Studio.
 
-- [Visual Studio 'da Office çözümlerinin mimarisi](architecture-of-office-solutions-in-visual-studio.md)
+- [Office çözümlerinin Visual Studio](architecture-of-office-solutions-in-visual-studio.md)
 
- Belge düzeyi özelleştirmeleri ve VSTO eklentileri hakkında bilgiler de dahil olmak üzere Office çözümlerinin nasıl çalıştığı hakkında bilgi için bağlantılar sağlar.
+ Belge düzeyi özelleştirmeler ve VSTO Eklentileri hakkında bilgiler de dahil olmak üzere Office çözümlerinin nasıl çalışmalarına ilişkin bilgilerin bağlantılarını sağlar.
 
 - [Office çözümleri tasarlama ve oluşturma](designing-and-creating-office-solutions.md)
 
@@ -84,36 +87,36 @@ ms.locfileid: "99947964"
 
 - [Office projelerinde hata ayıklama](debugging-office-projects.md)
 
- İçindeki Office projelerinin hata ayıklaması ve diğer proje türleri arasındaki farklar hakkında bilgi sağlar [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
+ Office projelerinde hata ayıklama ile 'de diğer proje türleri arasındaki farklar hakkında bilgi [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] sağlar.
 
 - [Güvenli Office çözümleri](securing-office-solutions.md)
 
- Office çözümlerinde güvenlik özelliklerinin nasıl çalıştığı hakkında bilgi sağlar.
+ Office çözümlerde güvenlik özelliklerinin çalışması hakkında bilgi sağlar.
 
-- [Office çözümünü dağıtma](deploying-an-office-solution.md)
+- [Office çözümü dağıtma](deploying-an-office-solution.md)
 
- Office çözümlerini kullanıcılarınız için nasıl kullanılabilir hale getirmek ve bir dağıtım yöntemi seçerken göz önünde bulundurmanız gereken önemli sorunlar hakkında bilgi sağlar.
+ Office çözümlerini kullanıcılarınız için kullanılabilir hale nasıl ek olarak dağıtım yöntemi seçtiğinize ilişkin önemli sorunlar hakkında bilgi sağlar.
 
 - [Office geliştirme örnekleri ve izlenecek yollar](office-development-samples-and-walkthroughs.md)
 
- Ortak görevleri gerçekleştirmeye yönelik adım adım yönergeler veren örnek uygulamalara ve konulara bağlantılar sağlar.
+ Genel görevleri gerçekleştirmeye ilişkin adım adım yönergeler sağlayan örnek uygulamalara ve konulara bağlantılar sağlar.
 
-- [Visual Studio 'da Office geliştirme &#40;Genel başvuru&#41;](general-reference-office-development-in-visual-studio.md)
+- [Office geliştirme &#40;genel başvuru Visual Studio&#41;](general-reference-office-development-in-visual-studio.md)
 
- Office birincil birlikte çalışma derlemeleri, bildirimleri, Kullanıcı arabirimi öğeleri ve hata iletileri hakkında ayrıntılı bilgi için bağlantılar sağlar.
+ Office birincil birlikte çalışma derlemeleri, bildirimleri, kullanıcı arabirimi öğeleri ve hata iletileri hakkında ayrıntılı bilgilerin bağlantılarını sağlar.
 
-- [Visual Studio 'da Office geliştirme &#40;yönetilen başvuru&#41;](managed-reference-office-development-in-visual-studio.md)
+- [Office &#40;yönetilen başvuru Visual Studio&#41;](managed-reference-office-development-in-visual-studio.md)
 
- ' İ hedefleyen Office projelerinde kullanılan API ad alanları ve türleri hakkında bilgi bağlantıları sağlar [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] . .NET Framework 3,5 ' i hedefleyen Office projelerinde kullanılan ad alanları ve türler hakkında API başvuru belgeleri için, Visual Studio 2008 belgelerindeki aşağıdaki başvuru bölümüne bakın: [2007 sistem tarafından yönetilen başvuru](managed-reference-office-development-in-visual-studio.md).
+ API ad alanları ve hedef Office projelerinde kullanılan türleri hakkında bilgi bağlantıları [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] sağlar. .NET Framework 3.5'i hedef alan Office projelerinde kullanılan ad alanları ve türleri hakkında API başvurusu belgeleri için, Visual Studio 2008 belgelerinde aşağıdaki başvuru bölümüne [bakın: 2007](managed-reference-office-development-in-visual-studio.md)sistem tarafından yönetilen başvuru.
 
-- [Yönetilmeyen API başvurusu &#40;Visual Studio 'da Office geliştirme&#41;](unmanaged-api-reference-office-development-in-visual-studio.md)
+- [Office geliştirmesinde &#40;API başvurusu Visual Studio&#41;](unmanaged-api-reference-office-development-in-visual-studio.md)
 
- Office uygulamalarında yönetilen VSTO Eklentilerini yükleme ve kaldırma gibi eylemleri gerçekleştirmek için kullanabileceğiniz COM arabirimleri hakkında bilgi bağlantıları içerir.
+ Office uygulamalarında yönetilen VSTO Eklentilerini yükleme ve kaldırma gibi eylemleri gerçekleştirmek için kullanabileceğiniz COM arabirimleri hakkında bilgilerin bağlantılarını içerir.
 
 ## <a name="related-sections"></a>İlgili bölümler
-- [Visual Studio Geliştirici Portalı Ile Office geliştirme](https://developer.microsoft.com/office/docs) Teknik makaleler, videolar ve blogları gibi ek kaynaklar sağlar.
+- [Visual Studio geliştirici portalı ile Office geliştirme](https://developer.microsoft.com/office/docs) Teknik makaleler, videolar ve bloglar gibi ek kaynaklar sağlar.
 
-- [Visual Studio Geliştirici Merkezi](https://visualstudio.microsoft.com/) Teknik makaleler, videolar ve blogları gibi ek Visual Studio kaynakları sağlar.
+- [Visual Studio merkezi](https://visualstudio.microsoft.com/) Teknik makaleler Visual Studio videolar ve bloglar gibi ek kaynak kaynakları sağlar.
 
 - [MSDN Kitaplığı 'nın Microsoft Office geliştirme bölümü](/previous-versions/office/office-12/bb726434(v=office.12)) MSDN Kitaplığı 'nın çeşitli Office sürümleri (Visual Studio kullanarak Office geliştirmeye özgü değil) için çözümler geliştirme hakkında makaleler ve başvuru belgeleri bulabileceğiniz alanı.
 

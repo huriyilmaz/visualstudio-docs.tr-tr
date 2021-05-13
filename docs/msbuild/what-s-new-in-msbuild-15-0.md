@@ -1,5 +1,5 @@
 ---
-title: "&apos;MSBuild 15 ' te yenilikler | Microsoft Docs"
+title: MSBuild 15 ' teki yenilikler | Microsoft Docs
 description: .NET Core SDK ve Windows, macOS ve Linux 'ta .NET Core projeleri oluşturmak için kullanılabilen MSBuild 15 ' in değiştirilmiş, güncelleştirilmiş ve yeni özelliklerine bakın.
 ms.custom: SEO-VS-2020
 ms.date: 03/01/2017
@@ -11,12 +11,12 @@ manager: jmartens
 ms.workload:
 - multiple
 monikerRange: '>=vs-2017'
-ms.openlocfilehash: a7bbf46a1677a31726bdd7f2749f5ef3006e34f5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e0fe78e781af4f2fafa52a230036bc20b657fd8e
+ms.sourcegitcommit: 9cb0097c33755a3e5cbadde3b0a6e9e76cee727d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99933849"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "109848272"
 ---
 # <a name="whats-new-in-msbuild-15"></a>MSBuild 15 ' teki yenilikler
 
@@ -42,17 +42,17 @@ MSBuild artık [.NET Core SDK](https://www.microsoft.com/net/download/core) bir 
 
 ## <a name="updates"></a>Güncelleştirmeler
 
-- [Proje öğesinin](../msbuild/project-element-msbuild.md) yeni bir `SDK` özniteliği vardır. Ayrıca, `Xmlns` özniteliği artık isteğe bağlıdır. Özniteliği hakkında daha fazla bilgi için `SDK` bkz. [nasıl yapılır: MSBuild proje SDK 'ları](../msbuild/how-to-use-project-sdk.md), [paketleri, Metapaketleri ve çerçeveleri](/dotnet/core/packages) ve [eklemeleri .NET Core için csproj biçiminde](/dotnet/core/tools/csproj)kullanma.
-- Hedeflerin dışında [öğe öğesi](../msbuild/item-element-msbuild.md) yeni bir `Update` özniteliğe sahiptir. Ayrıca, öznitelik üzerindeki kısıtlama `Remove` ortadan kaldırılmıştır.
-- *Directory. Build. props* , bir dizin altındaki projelere özelleştirmeler sağlayan Kullanıcı tanımlı bir dosyadır. Bu dosya, özelliği false olarak ayarlanmadığı takdirde *Microsoft. Common. props* öğesinden otomatik olarak içeri aktarılır `ImportDirectoryBuildTargets` .  *Directory. Build. targets* , *Microsoft. Common. targets* tarafından içeri aktarılır.
-- Geçerli öznitelik listesiyle çakışmayan bir ada sahip tüm meta veriler, isteğe bağlı olarak bir öznitelik olarak ifade edilebilir. Daha fazla bilgi için bkz. [öğe öğesi](../msbuild/item-element-msbuild.md).
+- [Proje öğesinin](../msbuild/project-element-msbuild.md) yeni bir `SDK` özniteliği vardır. Ayrıca özniteliği `Xmlns` artık isteğe bağlıdır. özniteliği hakkında daha fazla bilgi için `SDK` [bkz. MsBuild proje SDK'larını,](../msbuild/how-to-use-project-sdk.md) [Paketlerini, meta](/dotnet/core/packages) paketlerini ve çerçevelerini kullanma ve [.NET Core için csproj](/dotnet/core/tools/csproj)biçimine eklemeler.
+- [Hedeflerin](../msbuild/item-element-msbuild.md) dışındaki öğe öğesi yeni bir `Update` özniteliğine sahip. Ayrıca, özniteliğiyle `Remove` ilgili kısıtlama ortadan kaldırılmış.
+- *Directory.Build.props,* bir dizin altındaki projelere özelleştirmeler sağlayan kullanıcı tanımlı bir dosyadır. Özelliği false olarak ayarlanmadıkça bu dosya *Microsoft.Common.props'tan* `ImportDirectoryBuildTargets` otomatik olarak içe **aktarılır.** *Directory.Build.targets,* *Microsoft.Common.targets tarafından içe aktarılır.*
+- Geçerli öznitelik listesiyle çakışmamış bir adı olan meta veriler isteğe bağlı olarak bir öznitelik olarak ifade olabilir. Daha fazla bilgi için [bkz. Öğe öğesi.](../msbuild/item-element-msbuild.md)
 
 ## <a name="new-property-functions"></a>Yeni özellik işlevleri
 
-- `EnsureTrailingSlash` bir yol yoksa bir yola sondaki eğik çizgi ekler.
-- `NormalizePath` yol öğelerini birleştirir ve çıkış dizesinin geçerli işletim sistemi için doğru dizin ayırıcı karakterlerine sahip olmasını sağlar.
-- `NormalizeDirectory` yol öğelerini birleştirir, sonunda eğik çizgi sağlar ve çıkış dizesinin geçerli işletim sistemi için doğru dizin ayırıcı karakterlerine sahip olmasını sağlar.
-- `GetPathOfFileAbove` dosyanın yolunu hemen önceki bir şekilde döndürür. Çağırmak için işlevsel olarak eşdeğerdir `<Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.props))\dir.props" />`
+- `EnsureTrailingSlash` henüz yoksa yola sonda eğik çizgi ekler.
+- `NormalizePath` , yol öğelerini birleştirir ve çıkış dizesinin geçerli işletim sistemi için doğru dizin ayırıcı karakterlerine sahip olduğunu sağlar.
+- `NormalizeDirectory` yol öğelerini birleştirir, sondaki eğik çizgiyi sağlar ve çıkış dizesinin geçerli işletim sistemi için doğru dizin ayırıcı karakterlerine sahip olduğunu sağlar.
+- `GetPathOfFileAbove` , dosyanın bu dosyadan hemen önceki yolunu döndürür. İşlevsel olarak çağrısına eşdeğerdir `<Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.props))\dir.props" />`
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
