@@ -4,9 +4,9 @@ summary: Visual Studio ürün ailesi için belgeleri keşfedin.
 brand: visual-studio
 metadata:
   title: Visual Studio ürün ailesi belgeleri
-  description: Windows ve Mac için Visual Studio IDE'leri, Visual Studio Code, Visual Studio App Center, GitHub Codespaces ve Visual Studio Abonelikleri'ni içeren Visual Studio ürün ailesine yönelik belgeleri inceleyin.
+  description: 'Windows ve Mac için Visual Studio IDE''leri, Visual Studio Code, Visual Studio App Center, GitHub Codespaces ve Visual Studio Abonelikleri''ni içeren Visual Studio ürün ailesine yönelik belgeleri inceleyin.'
   ms.topic: hub-page
-  ms.custom: contperf-fy21q1, contperf-fy21q3
+  ms.custom: 'contperf-fy21q1, contperf-fy21q3'
   ms.date: 03/23/2021
   searchScope: []
   titleSuffix: ''
@@ -15,73 +15,65 @@ metadata:
   ms.manager: jillfra
   monikerRange: '>=vs-2017'
   hide_bc: true
-  ms.openlocfilehash: d9aa5ff71a4dc24b32827f24e0df219db3674df2
-  ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-  ms.translationtype: MT
-  ms.contentlocale: tr-TR
-  ms.lasthandoff: 03/25/2021
-  ms.locfileid: "105073748"
 productDirectory:
   items:
-  - title: Visual Studio
-    imageSrc: ./media/vs-ide-2019.svg
-    links:
-    - url: ./windows/index.yml?view=vs-2019&preserve-view=true
-      text: Visual Studio 2019 (geçerli)
-    - url: ./windows/index.yml?view=vs-2017&preserve-view=true
-      text: Visual Studio 2017
-    - url: /previous-versions/visualstudio/
-      text: Önceki sürümler
-    - url: /visualstudio/releases/2019/release-notes
-      text: Sürüm notları
-    - url: https://visualstudio.microsoft.com/
-      text: Ürün sayfası
-  - title: Mac için Visual Studio
-    imageSrc: ./media/vs-mac-2019.svg
-    links:
-    - url: /visualstudio/mac
-      text: Mac için Visual Studio 2019 (geçerli)
-    - url: /visualstudio/mac/?view=vsmac-2017&preserve-view=true
-      text: Mac için Visual Studio 2017
-    - url: /visualstudio/releasenotes/vs2019-mac-relnotes
-      text: Sürüm notları
-    - url: https://visualstudio.microsoft.com/vs/mac/
-      text: Ürün sayfası
-  - title: Visual Studio Code
-    imageSrc: ./media/vs-code-logo.svg
-    links:
-    - url: https://code.visualstudio.com/docs
-      text: Belgeler
-    - url: https://code.visualstudio.com/updates
-      text: Sürüm notları
-    - url: https://code.visualstudio.com
-      text: Ürün sayfası
-  - title: GitHub Codespaces
-    imageSrc: https://docs.microsoft.com/media/logos/logo_octokitty.svg
-    links:
-    - url: https://docs.github.com/github/developing-online-with-codespaces/
-      text: Belgeler
-    - url: https://code.visualstudio.com/docs/remote/codespaces/
-      text: Visual Studio Code ile kullanma
-    - url: ./ide/codespaces/use-visual-studio-with-codespaces.md
-      text: Visual Studio ile kullanma
-    - url: https://github.com/features/codespaces/
-      text: Ürün sayfası
-  - title: Visual Studio App Center
-    imageSrc: ./media/vs-mobile-center.svg
-    links:
-    - url: /appcenter
-      text: Belgeler
-    - url: https://visualstudio.microsoft.com/app-center/
-      text: Portal
-  - title: Visual Studio Abonelikleri
-    imageSrc: ./media/vs-subscription-temp.svg
-    links:
-    - url: /visualstudio/subscriptions
-      text: Belgeler
-    - url: https://visualstudio.microsoft.com/subscriptions
-      text: Visualstudio.com hakkında bilgiler
-    - url: https://my.visualstudio.com
-      text: Abone portalı
-    - url: https://manage.visualstudio.com
-      text: Yönetici portalı
+    - title: Visual Studio
+      imageSrc: ./media/vs-ide-2019.svg
+      links:
+        - url: ./windows/index.yml?view=vs-2019&preserve-view=true
+          text: Visual Studio 2019 (geçerli)
+        - url: ./windows/index.yml?view=vs-2017&preserve-view=true
+          text: Visual Studio 2017
+        - url: /previous-versions/visualstudio/
+          text: Önceki sürümler
+        - url: /visualstudio/releases/2019/release-notes
+          text: Sürüm notları
+        - url: 'https://visualstudio.microsoft.com/'
+          text: Ürün sayfası
+    - title: Mac için Visual Studio
+      imageSrc: ./media/vs-mac-2019.svg
+      links:
+        - url: /visualstudio/mac
+          text: Mac için Visual Studio 2019 (geçerli)
+        - url: /visualstudio/mac/?view=vsmac-2017&preserve-view=true
+          text: Mac için Visual Studio 2017
+        - url: /visualstudio/releasenotes/vs2019-mac-relnotes
+          text: Sürüm notları
+        - url: 'https://visualstudio.microsoft.com/vs/mac/'
+          text: Ürün sayfası
+    - title: Visual Studio Code
+      imageSrc: ./media/vs-code-logo.svg
+      links:
+        - url: 'https://code.visualstudio.com/docs'
+          text: Belgeler
+        - url: 'https://code.visualstudio.com/updates'
+          text: Sürüm notları
+        - url: 'https://code.visualstudio.com'
+          text: Ürün sayfası
+    - title: GitHub Codespaces
+      imageSrc: 'https://docs.microsoft.com/media/logos/logo_octokitty.svg'
+      links:
+        - url: 'https://docs.github.com/github/developing-online-with-codespaces/'
+          text: Belgeler
+        - url: 'https://code.visualstudio.com/docs/remote/codespaces/'
+          text: Visual Studio Code ile kullanma
+        - url: 'https://github.com/features/codespaces/'
+          text: Ürün sayfası
+    - title: Visual Studio App Center
+      imageSrc: ./media/vs-mobile-center.svg
+      links:
+        - url: /appcenter
+          text: Belgeler
+        - url: 'https://visualstudio.microsoft.com/app-center/'
+          text: Portal
+    - title: Visual Studio Abonelikleri
+      imageSrc: ./media/vs-subscription-temp.svg
+      links:
+        - url: /visualstudio/subscriptions
+          text: Belgeler
+        - url: 'https://visualstudio.microsoft.com/subscriptions'
+          text: Visualstudio.com hakkında bilgiler
+        - url: 'https://my.visualstudio.com'
+          text: Abone portalı
+        - url: 'https://manage.visualstudio.com'
+          text: Yönetici portalı

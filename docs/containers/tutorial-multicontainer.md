@@ -7,12 +7,12 @@ ms.author: ghogen
 ms.date: 03/15/2021
 ms.technology: vs-azure
 ms.topic: tutorial
-ms.openlocfilehash: 412156894658cdb2160574e77ea052e4b194d386
-ms.sourcegitcommit: c875360278312457f4d2212f0811466b4def108d
+ms.openlocfilehash: 43684288eea2e1864bf31a8bb68bbac1b217a976
+ms.sourcegitcommit: 162be102d2c22a1c4ad2c447685abd28e0e85d15
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107315985"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "109973284"
 ---
 # <a name="tutorial-create-a-multi-container-app-with-docker-compose"></a>Öğretici: Docker Compose ile çok kapsayıcılı bir uygulama oluşturma
 
@@ -48,15 +48,15 @@ Visual Studio 'da, Razor sayfaları olan bir Web uygulaması oluşturmak için a
 
 ![ASP.NET Core Web uygulaması projesi oluştur](./media/tutorial-multicontainer/vs-2019/create-web-project1.png)
 
-**Docker desteğini etkinleştir**' i seçmeyin. Docker desteğini daha sonra ekleyeceksiniz.
+**Docker desteğini etkinleştir**' i seçmeyin. Docker desteğini daha sonra eksersiniz.
 
-![Web projesi oluştururken ek bilgi ekranının ekran görüntüsü. Docker desteğini etkinleştirme seçeneği seçili değil.](./media/tutorial-multicontainer/vs-2019/create-web-project-additional-information.png)
+![Web projesi oluştururken Ek bilgiler ekran görüntüsü. Docker Desteğini Etkinleştir seçeneği seçilmez.](./media/tutorial-multicontainer/vs-2019/create-web-project-additional-information.png)
 
 ::: moniker-end
 
-## <a name="create-a-web-api-project"></a>Web API projesi oluşturma
+## <a name="create-a-web-api-project"></a>Web API'si projesi oluşturma
 
-Aynı çözüme bir proje ekleyin ve *Mywebapi* olarak çağırın. Proje türü olarak **API** ' yi SEÇIN ve **https için yapılandırma** onay kutusunu temizleyin. Bu tasarımda, aynı Web uygulamasındaki kapsayıcılar arasında iletişim için değil, yalnızca istemciyle iletişim için SSL kullandık. Yalnızca `WebFrontEnd` https gerektirir ve örneklerdeki kod bu onay kutusunu temizlemiş olduğunu varsayar. Genellikle, Visual Studio tarafından kullanılan .NET Geliştirici sertifikaları, kapsayıcı istekleri için değil, yalnızca dış kapsayıcı istekleri için desteklenir.
+Aynı çözüme bir proje ekleyin ve *myWebAPI olarak buna çağrıyın.* Proje türü olarak **API'yi** seçin ve HTTPS için yapılandır **onay kutusunu temizleyin.** Bu tasarımda, aynı web uygulamasındaki kapsayıcılar arasındaki iletişim için değil, yalnızca istemciyle iletişim için SSL kullanıyoruz. Yalnızca `WebFrontEnd` HTTPS gerekir ve örneklerde yer alan kodda bu onay kutusunun işaretinin temiz olduğu varsayıldı. Genel olarak, Visual Studio tarafından kullanılan .NET geliştirici sertifikaları kapsayıcıdan kapsayıcıya istekler için değil yalnızca dıştan kapsayıcıya istekler için desteklemektedir.
 
 ::: moniker range="vs-2017"
    ![Web API projesi oluşturma ekran görüntüsü](./media/tutorial-multicontainer/docker-tutorial-mywebapi.png)
@@ -65,9 +65,9 @@ Aynı çözüme bir proje ekleyin ve *Mywebapi* olarak çağırın. Proje türü
    ![Web API projesi oluşturma ekran görüntüsü](./media/tutorial-multicontainer/vs-2019/create-webapi-project.png)
 ::: moniker-end
 
-## <a name="add-code-to-call-the-web-api"></a>Web API 'sini çağırmak için kod ekleme
+## <a name="add-code-to-call-the-web-api"></a>Web API'sini çağıran kod ekleme
 
-1. `WebFrontEnd`Projede *Index. cshtml. cs* dosyasını açın ve `OnGet` yöntemi aşağıdaki kodla değiştirin.
+1. Projede `WebFrontEnd` *Index.cshtml.cs* dosyasını açın ve yöntemini `OnGet` aşağıdaki kodla değiştirin.
 
    ```csharp
     public async Task OnGet()
@@ -87,11 +87,11 @@ Aynı çözüme bir proje ekleyin ve *Mywebapi* olarak çağırın. Proje türü
    ```
    
     > [!NOTE]
-    > Gerçek dünyada kodda, `HttpClient` her istekten sonra atılamaz. En iyi uygulamalar için bkz. [Esnek http isteklerini uygulamak Için HttpClientFactory kullanma](/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests).
+    > Gerçek dünya kodunda, her istekten sonra `HttpClient` atmama gerekir. En iyi yöntemler [için, bkz. Use HttpClientFactory to implementsilient HTTP requests](/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests).
 
-   Visual Studio 2019 veya sonraki sürümlerde .NET Core 3,1 için Web API şablonu bir dalgalı tahmin API 'SI kullanır, bu nedenle bu satırın açıklamasını kaldırın ve ASP.NET 2. x için satırı açıklama olarak yapın.
+   Visual Studio 2019 veya sonraki bir sonraki bir yıl içinde .NET Core 3.1 için Web API şablonu WeatherForecast API'si kullanır, bu nedenle bu satırı açıklamadan çıkararak ASP.NET 2.x için satırı açıklama satırı oluşturun.
 
-1. *Index. cshtml* dosyasında, `ViewData["Message"]` dosyanın aşağıdaki koda benzeymek üzere görüntülenecek bir satır ekleyin:
+1. *Index.cshtml dosyasında,* dosyanın aşağıdaki koda benser gibi göründüğünü `ViewData["Message"]` göstermek için bir satır ekleyin:
     
       ```cshtml
       @page
@@ -107,7 +107,7 @@ Aynı çözüme bir proje ekleyin ve *Mywebapi* olarak çağırın. Proje türü
       </div>
       ```
 
-1. (Yalnızca ASP.NET 2. x) Şimdi Web API projesinde, *webön* ucunda eklediğiniz çağrı için API tarafından döndürülen iletiyi özelleştirmek üzere değerler denetleyicisine kod ekleyin.
+1. (ASP.NET 2.x) Şimdi Web API projesinde, *webfrontend'den* eklenen çağrı için API tarafından döndürülen iletiyi özelleştirmek için Değerler denetleyicisine kod ekleyin.
     
       ```csharp
         // GET api/values/5
@@ -118,7 +118,7 @@ Aynı çözüme bir proje ekleyin ve *Mywebapi* olarak çağırın. Proje türü
         }
       ```
 
-    .NET Core 3,1 ile, zaten orada olan dalgalı tahmin API 'sini kullanabilmeniz için buna ihtiyacınız yoktur. Ancak, <xref:Microsoft.AspNetCore.Builder.HttpsPolicyBuilderExtensions.UseHttpsRedirection*> `Configure` Bu kod Web API 'sini ÇAĞıRMAK için https değil http 'yi kullandığından, *Başlangıç. cs* içindeki yönteminde öğesine yapılan çağrıyı açıklamanız gerekir.
+    .NET Core 3.1 ile buna ihtiyacınız yok çünkü zaten orada olan WeatherForecast API'sini kullanabilirsiniz. Ancak, <xref:Microsoft.AspNetCore.Builder.HttpsPolicyBuilderExtensions.UseHttpsRedirection*> `Configure` *çağrısının Startup.cs'de* yönteminde açıklamalarını açıklama olarak almanız gerekir çünkü bu kod Web API'sini aramak için HTTPS değil HTTP kullanır.
 
     ```csharp
                 //app.UseHttpsRedirection();
@@ -177,23 +177,25 @@ Aynı çözüme bir proje ekleyin ve *Mywebapi* olarak çağırın. Proje türü
           dockerfile: MyWebAPI/Dockerfile
     ```
 
-1. Siteyi, beklendiği gibi çalıştığını doğrulamak için şimdi yerel olarak çalıştırın (F5 veya CTRL + F5). Her şey .NET Core 2. x sürümü ile doğru şekilde yapılandırıldıysa, "Web ön ucu ve WebApi 'den (değer 1 ile) Merhaba" iletisini görürsünüz.  .NET Core 3 ile hava durumu tahmin verilerini görürsünüz.
+1. Siteyi, beklendiği gibi çalıştığını doğrulamak için şimdi yerel olarak çalıştırın (F5 veya CTRL + F5). Her şey .NET Core 2.x sürümüyle doğru şekilde yapılandırıldıysa "Hello from webfrontend and webapi (1 değeriyle)" (Hello from webfrontend and webapi)" (Hello from webfrontend and webapi (1 değeriyle) iletisiyle birlikte gelirsiniz.  .NET Core 3 ile hava durumu tahmin verilerini görüyorsunuz.
 
-   Kapsayıcı düzenlemesi eklediğinizde kullandığınız ilk proje, çalıştırdığınızda veya hata ayıkladığınızda başlatılacak şekilde ayarlanır. Başlatma eylemini Docker-Compose projesi için **proje özelliklerinde** yapılandırabilirsiniz.  Docker-Compose projesi düğümünde bağlam menüsünü açmak için sağ tıklayın, ardından **Özellikler**' i seçin veya alt + ENTER ' u kullanın.  Aşağıdaki ekran görüntüsünde, burada kullanılan çözüm için istediğiniz özellikler gösterilmektedir.  Örneğin, **hizmet URL 'si** özelliğini özelleştirerek yüklenen sayfayı değiştirebilirsiniz.
+   Kapsayıcı düzenlemesi eklerken ilk proje, çalıştırarak veya hata ayıklarken başlatacak şekilde ayarlanır. Başlatma eylemlerini docker-compose **projesinin** Proje Özellikleri'ne göre yapılandırabilirsiniz.  docker-compose proje düğümünde bağlam menüsünü açmak için sağ tıklayın ve özellikler'i **seçin** veya Alt+Enter tuşlarına basın.  Aşağıdaki ekran görüntüsü, burada kullanılan çözüm için istediğiniz özellikleri gösterir.  Örneğin, Hizmet URL'si özelliğini özelleştirerek yüklenen **sayfayı değiştirebilirsiniz.**
 
-   ![Docker-Compose proje özelliklerinin ekran görüntüsü](media/tutorial-multicontainer/launch-action.png)
+   ![docker-compose proje özelliklerinin ekran görüntüsü](media/tutorial-multicontainer/launch-action.png)
 
-   Başlatıldığında gördüğünüz Özellikler (.NET Core 2. x sürümü):
+   İlk kez (.NET Core 2.x sürümü) şu şekilde görüyorsunuz:
 
-   ![Çalışan Web uygulamasının ekran görüntüsü](media/tutorial-multicontainer/webfrontend.png)
+   ![Web uygulamasını çalıştırma ekran görüntüsü](media/tutorial-multicontainer/webfrontend.png)
 
-   .NET 3,1 için Web uygulaması, hava durumu verilerini JSON biçiminde gösterir.
+   .NET 3.1 için web uygulaması, hava durumu verilerini JSON biçiminde gösterir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-[Kapsayıcılarınızı Azure 'a](/azure/containers)dağıtmaya yönelik seçeneklere bakın.
+Kapsayıcılarınızı Azure'a dağıtma [seçeneklerine bakın.](/azure/containers)
+
+Bir hata ayıklama oturumu sırasında hangi hizmetlerin başlatıldığında daha fazla denetim için, hata ayıklama sırasında Docker Compose hangi hizmetlerin çalıştırıldığında yapılandıracak şekilde başlatma profillerini nasıl kullanabileceğinizi öğrenin. Bkz. [Docker Compose için başlatma profillerini yönetme](launch-profiles.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
   
 [Docker Compose](https://docs.docker.com/compose/)  
-[Kapsayıcı araçları](./index.yml)
+[Kapsayıcı Araçları](./index.yml)

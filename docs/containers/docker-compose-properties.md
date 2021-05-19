@@ -7,12 +7,12 @@ ms.author: ghogen
 ms.date: 04/06/2021
 ms.technology: vs-azure
 ms.topic: reference
-ms.openlocfilehash: ed4b2a0dc1dc7a0520bf8e83ab1968a3815196e0
-ms.sourcegitcommit: e12d6cdaeb37564f05361965db2ec8ad0d4f21ad
+ms.openlocfilehash: b3744640aada798179c86cc60d2c8ce7b02ccfaa
+ms.sourcegitcommit: 162be102d2c22a1c4ad2c447685abd28e0e85d15
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "108025871"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "109973485"
 ---
 # <a name="docker-compose-build-properties"></a>Docker Compose derleme özellikleri
 
@@ -37,23 +37,23 @@ Aşağıdaki tabloda Docker Compose projeleri için kullanılabilen MSBuild öze
 | Özellik adı | Konum | Description | Varsayılan değer  |
 |---------------|----------|-------------|----------------|
 |AdditionalComposeFilePaths|dcproj|Tüm komutlar için docker-compose.exe gönderilmek üzere, noktalı virgülle ayrılmış bir listede ek oluşturma dosyaları belirtir. Docker-Compose proje dosyasından (dcproj) göreli yollara izin verilir.|-|
-|DockerComposeBaseFilePath|dcproj|Docker-Compose dosyalarının dosya adlarının ilk kısmını *. yıml* uzantısı olmadan belirtir. Örnek: <br>1. DockerComposeBaseFilePath = null/tanımsız: *Docker-Compose* temel dosya yolunu kullanın ve dosyalar *Docker-Compose. yml* ve *Docker-Compose. override. yml* olarak adlandırılır.<br>2. DockerComposeBaseFilePath = *mydockercompose*: dosyalar *mydockercompose. yml* ve *mydockercompose. override. yml* olarak adlandırılır.<br> 3. DockerComposeBaseFilePath = *.. \mydockercompose*: dosyalar bir düzey yukarı kalacak. |Docker-Compose|
-|DockerComposeBuildArguments|dcproj|Komuta geçirilecek ek parametreleri belirtir `docker-compose build` . Örneğin, `--parallel --pull`. |
-|DockerComposeDownArguments|dcproj|Komuta geçirilecek ek parametreleri belirtir `docker-compose down` . Örneğin, `--timeout 500`.|-|  
-|DockerComposeProjectName| dcproj | Belirtilmişse, Docker-Compose projesi için proje adını geçersiz kılar. | "dockercompose" + otomatik üretilen karma |
-|DockerComposeProjectPath|csproj veya vbproj|Docker-Compose projesi (dcproj) dosyasının göreli yolu. Docker-Compose. yıml dosyasında depolanan ilişkili görüntü derleme ayarlarını bulmak için hizmet projesini yayımlarken bu özelliği ayarlayın.|-|
-|Dockercomposeprojectstoıgnore|dcproj| Hata ayıklama sırasında Docker-Compose araçları tarafından yoksayılacak projeleri belirtir. Bu özellik, herhangi bir proje için kullanılabilir. Dosya yolları iki yöntemden biri belirtilebilir: <br> 1. dcproj 'e göre. Örneğin, `<DockerComposeProjectsToIgnore>path\to\AngularProject1.csproj</DockerComposeProjectsToIgnore>`. <br> 2. mutlak yollar.<br> **Note**: yollar sınırlayıcı karakterle ayrılmalıdır `;` .|-|
+|DockerComposeBaseFilePath|dcproj|Docker-Compose dosyalarının dosya adlarının ilk kısmını *. yıml* uzantısı olmadan belirtir. Örnek: <br>1. DockerComposeBaseFilePath = null/tanımsız: *Docker-Compose* temel dosya yolunu kullanın ve dosyalar *Docker-Compose. yml* ve *Docker-Compose. override. yml* olarak adlandırılır.<br>2. DockerComposeBaseFilePath = *mydockercompose*: dosyalar *mydockercompose.yml* ve *mydockercompose.override.yml olarak adlandırılmıştır.*<br> 3. DockerComposeBaseFilePath = *.. \mydockercompose:* dosyalar bir düzey yukarı çıkar. |docker-compose|
+|DockerComposeBuildArguments|dcproj|Komutun geçeceği ek parametreleri `docker-compose build` belirtir. Örneğin, `--parallel --pull`. |
+|DockerComposeDownArguments|dcproj|Komutun geçeceği ek parametreleri `docker-compose down` belirtir. Örneğin, `--timeout 500`.|-|  
+|DockerComposeProjectName| dcproj | Belirtilirse, docker-compose projesi için proje adını geçersiz kılar. | "dockercompose" + otomatik olarak oluşturulan karma |
+|DockerComposeProjectPath|csproj veya vbproj|docker-compose proje (dcproj) dosyasının göreli yolu. Docker-compose.yml dosyasında depolanan ilişkili görüntü derleme ayarlarını bulmak için hizmet projesini yayımlarken bu özelliği ayarlayın.|-|
+|DockerComposeProjectsToIgnore|dcproj| Hata ayıklama sırasında docker-compose araçları tarafından yoksayılacak projeleri belirtir. Bu özellik, herhangi bir proje için kullanılabilir. Dosya yolları iki yöntemden biri belirtilebilir: <br> 1. dcproj 'e göre. Örneğin, `<DockerComposeProjectsToIgnore>path\to\AngularProject1.csproj</DockerComposeProjectsToIgnore>`. <br> 2. mutlak yollar.<br> **Note**: yollar sınırlayıcı karakterle ayrılmalıdır `;` .|-|
 |DockerComposeUpArguments|dcproj|Komuta geçirilecek ek parametreleri belirtir `docker-compose up` . Örneğin, `--timeout 500`.|-|
 |DockerDevelopmentMode| dcproj | Kullanıcı projesinin kapsayıcıda oluşturulup oluşturulmayacağını denetler. Bir Dockerfile içinde [oluşturulan aşamaların](https://aka.ms/containerfastmode) **hızlı** veya **normal** denetim için izin verilen değerler. Hata ayıklama yapılandırması varsayılan olarak hızlı mod ve normal mod değildir. | Hızlı |
-|DockerLaunchAction| dcproj | F5 veya CTRL + F5 üzerinde gerçekleştirilecek başlatma eylemini belirtir.  İzin verilen değerler None, LaunchBrowser ve LaunchWCFTestClient 'Tur. | Yok |
-|DockerLaunchBrowser| dcproj | Tarayıcının başlatılıp başlatılmayacağını belirtir. DockerLaunchAction belirtilmişse yoksayıldı. | Yanlış |
-|DockerServiceName| dcproj| DockerLaunchAction veya DockerLaunchBrowser belirtilmişse DockerServiceName, Docker-Compose dosyasında başvurulan hizmetin başlatılacağını belirtir.|-|
-|DockerServiceUrl 'Si| dcproj | Tarayıcı başlatılırken kullanılacak URL.  Geçerli değiştirme belirteçleri şunlardır "{Serviceıpaddress}", "{ServicePort}" ve "{Scheme}".  Örneğin: {Scheme}: ı{serviceipaddress}: {ServicePort}|-|
-|DockerTargetOS| dcproj | Docker görüntüsü oluşturulurken kullanılan hedef işletim sistemi.|-|
+|DockerLaunchAction| dcproj | F5 veya CTRL + F5 üzerinde gerçekleştirilecek başlatma eylemini belirtir.  İzin verilen değerler None, LaunchBrowser ve LaunchWCFTestClient 'Tur. | Hiçbiri |
+|DockerLaunchBrowser| dcproj | Tarayıcının başlatılıp başlatılmayacağını belirtir. DockerLaunchAction belirtilirse yoksayılır. | Yanlış |
+|DockerServiceName| dcproj| DockerLaunchAction veya DockerLaunchBrowser belirtilirse DockerServiceName, docker-compose dosyasında başvurulan hizmeti belirtir.|-|
+|DockerServiceUrl| dcproj | Tarayıcıyı başlatmada kullanmak üzere URL.  Geçerli değiştirme belirteçleri: "{ServiceIPAddress}", "{ServicePort}" ve "{Scheme}".  Örneğin: {Scheme}://{ServiceIPAddress}:{ServicePort}|-|
+|DockerTargetOS| dcproj | Docker görüntüsünün inşası için kullanılan hedef işletim sistemi.|-|
 
 ## <a name="example"></a>Örnek
 
-Docker Compose dosyalarının konumunu `DockerComposeBaseFilePath` göreli bir yol olarak değiştirirseniz, yapı bağlamının çözüm klasörüne başvurması için değiştirildiğinden da emin olmanız gerekir. Örneğin, Docker oluşturma dosyanız *Dockercomposefiles* adlı bir klasörgerekliyse Docker Compose dosyası Build bağlamını ".." ya da ".. olarak ayarlanmalıdır. çözüm klasörüne göreli olduğu yere bağlı olarak.
+Docker compose dosyalarının konumunu göreli bir yola ayarerek değiştirirseniz, çözüm klasörüne başvurarak derleme bağlamının değiştiri olduğundan da `DockerComposeBaseFilePath` emin olun. Örneğin, docker compose dosyanız *DockerComposeFiles* adlı bir klasörse docker compose dosyası derleme bağlamını ".." veya "." olarak ayarlamalı. /..", çözüm klasörünün göreli olduğu yere bağlı olarak.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -78,7 +78,7 @@ Docker Compose dosyalarının konumunu `DockerComposeBaseFilePath` göreli bir y
 </Project>
 ```
 
-*Mydockercompose. yıml* dosyası, derleme bağlamı çözüm klasörünün göreli yoluna (Bu durumda) ayarlanmış olarak şöyle görünmelidir `..` .
+Derleme bağlamı çözüm klasörünün göreli yoluna ayarlanmış şekilde *mydockercompose.yml* dosyası aşağıdaki gibi olmalıdır (bu `..` durumda).
 
 ```yml
 version: '3.4'
@@ -92,16 +92,16 @@ services:
 ```
 
 > [!NOTE]
-> DockerComposeBuildArguments, DockerComposeDownArguments ve DockerComposeUpArguments, Visual Studio 2019 sürüm 16,3 ' de yenidir.
+> DockerComposeBuildArguments, DockerComposeDownArguments ve DockerComposeUpArguments, Visual Studio 2019 sürüm 16.3'te yeni.
 
-## <a name="overriding-visual-studios-docker-compose-configuration"></a>Visual Studio 'nun Docker Compose yapılandırmasını geçersiz kılma
+## <a name="overriding-visual-studios-docker-compose-configuration"></a>Uygulamanın Visual Studio yapılandırmasını Docker Compose geçersiz kılma
 
-*Docker-Compose. yıml* dosyanızdaki aynı dizinde *Docker-Compose. vs. Debug. Yıml* ( **hızlı** mod için) veya *Docker-Compose. vs. Release. yıml* ( **normal** mod için) adlı bir dosya yerleştirerek belirli ayarları geçersiz kılabilirsiniz. 
+*Docker-compose.vs.debug.yml* **(Hızlı** mod için) veya *docker-compose.vs.release.yml* (Normal mod için) adlı bir dosyayı  *docker-compose.yml* dosyanız ile aynı dizine yerleştirerek belirli ayarları geçersiz kılabilirsiniz. 
 
 >[!TIP] 
->Bu ayarlardan herhangi birinin varsayılan değerlerini bulmak için *Docker-Compose. vs. Debug. g. yıml* veya *Docker-Compose. vs. Release. g. yıml* bölümüne bakın.
+>Bu ayarlardan herhangi biri için varsayılan değerleri bulmak için *docker-compose.vs.debug.g.yml* veya *docker-compose.vs.release.g.yml'ye bakın.*
 
-### <a name="docker-compose-file-labels"></a>Docker Compose dosya etiketleri
+### <a name="docker-compose-file-labels"></a>Docker Compose etiketlerini değiştirme
 
  *Docker-Compose. vs. Debug. yml* veya *Docker-Compose. vs. Release. yml* içinde, geçersiz kılmaya özgü etiketleri aşağıdaki gibi tanımlayabilirsiniz:
 
@@ -148,12 +148,14 @@ services:
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-MSBuild özellikleri hakkında genel bilgi için bkz. [MSBuild özellikleri](../msbuild/msbuild-properties.md).
+MsBuild özellikleri hakkında genel bilgi için bkz. [MSBuild Özellikleri.](../msbuild/msbuild-properties.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Kapsayıcı araçları derleme özellikleri](container-msbuild-properties.md)
+[Kapsayıcı Araçları derleme özellikleri](container-msbuild-properties.md)
 
-[Kapsayıcı araçları başlatma ayarları](container-launch-settings.md)
+[Kapsayıcı Araçları başlatma ayarları](container-launch-settings.md)
+
+[Visual Studio'de Docker Compose için başlatma profillerini Visual Studio](launch-profiles.md)
 
 [MSBuild ayrılmış ve tanınmış özellikleri](../msbuild/msbuild-reserved-and-well-known-properties.md)

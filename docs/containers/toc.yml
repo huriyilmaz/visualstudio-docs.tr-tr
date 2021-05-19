@@ -26,6 +26,8 @@
           href: deploy-app-service.md
         - name: Docker Hub’a dağıtma
           href: deploy-docker-hub.md
+        - name: Başlatma profillerini yönetme (Önizleme)
+          href: launch-profiles.md
         - name: Kapsayıcı ve resimleri görüntüleyip tanılama
           href: view-and-diagnose-containers.md
         - name: Kapsayıcı Araçları’nı yapılandırma
@@ -52,5 +54,5 @@
       href: overview-bridge-to-kubernetes.md
     - name: Bridge to Kubernetes’i yapılandırma
       href: configure-bridge-to-kubernetes.md
-    - name: Kubernetes ile Azure AD yönetilen kimliklerini köprü ile kullanma
+    - name: Azure AD yönetilen kimliklerini Bridge to Kubernetes
       href: managed-identity.md

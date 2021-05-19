@@ -16,6 +16,7 @@
   items:
     - name: Visual Studio'yu yükleme
       href: install/install-visual-studio.md
+      displayName: system requirements
     - name: Çevrimdışı yükleme
       items:
         - name: Visual Studio’nun çevrimdışı yüklemesini oluşturma
@@ -268,16 +269,6 @@
         - name: Yapı özelleştirme ve hata ayıklama görevleri
           displayName: makefile tasks.vs.json
           href: ide/customize-build-and-debug-tasks-in-visual-studio.md
-    - name: Codespaces ile uygulama geliştirme (Önizleme)
-      items:
-        - name: Genel Bakış
-          href: ide/codespaces/codespaces-overview.md
-        - name: Codespace ile Visual Studio’yu kullanma
-          href: ide/codespaces/use-visual-studio-with-codespaces.md
-        - name: Codespace’i özelleştirme
-          href: ide/codespaces/customize-codespaces.md
-        - name: Desteklenen Visual Studio özellikleri
-          href: ide/codespaces/supported-features-codespaces.md
     - name: Ekip Gezgini'nde projelere bağlanma
       displayName: Azure DevOps VSTS
       href: ide/connect-team-project.md
@@ -1443,38 +1434,16 @@
       href: ide/whats-new-visual-studio-docs.md
     - name: Docs 'taki yenilikleri geçmiş
       href: ide/whats-new-visual-studio-docs-history.md
-    - name: Sürüm notları ve sistem gereksinimleri
+    - name: Sürüm notları
       items:
         - name: Yayınlama sıklığı
           href: /visualstudio/productinfo/release-rhythm/
-        - name: Visual Studio 2017
-          items:
-            - name: Güncel sürüm notları
-              href: /visualstudio/releasenotes/vs2017-relnotes/
-            - name: Önizleme sürüm notları
-              href: /visualstudio/releasenotes/vs2017-preview-relnotes/
-            - name: Sürüm notları geçmişi
-              href: /visualstudio/releasenotes/vs2017-relnotes-history/
-            - name: Dağıtılabilir kod
-              href: /visualstudio/productinfo/2017-redistribution-vs/
-            - name: Platform uyumluluğu
-              href: /visualstudio/productinfo/vs2017-compatibility-vs/
-            - name: Sistem gereksinimleri
-              href: /visualstudio/productinfo/vs2017-system-requirements-vs/
-        - name: Visual Studio 2019
-          items:
-            - name: Güncel sürüm notları
-              href: /visualstudio/releases/2019/release-notes/
-            - name: Önizleme sürüm notları
-              href: /visualstudio/releases/2019/release-notes-preview/
-            - name: Sürüm notları geçmişi
-              href: /visualstudio/releases/2019/release-notes-history/
-            - name: Dağıtılabilir kod
-              href: /visualstudio/releases/2019/redistribution/
-            - name: Platform uyumluluğu
-              href: /visualstudio/releases/2019/compatibility/
-            - name: Sistem gereksinimleri
-              href: /visualstudio/releases/2019/system-requirements/
+        - name: Visual Studio 2019 notları
+          href: /visualstudio/releases/2019/release-notes/
+        - name: Visual Studio 2017 notları
+          href: /visualstudio/releasenotes/vs2017-relnotes/
+        - name: Visual Studio 2015 docs
+          href: vs-2015-archive.md
         - name: Lisans koşulları
           href: 'https://visualstudio.microsoft.com/license-terms/'
         - name: Destek yaşam döngüsü ve bakım
@@ -1512,8 +1481,3 @@
       href: ide/developer-community-guidelines.md
     - name: Geliştirici Topluluğu veri gizliliği
       href: ide/developer-community-privacy.md
-- name: Visual Studio 2015
-  expanded: true
-  items:
-    - name: Visual Studio 2015 belgeleri
-      href: vs-2015-archive.md

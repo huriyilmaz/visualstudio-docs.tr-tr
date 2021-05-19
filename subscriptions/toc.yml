@@ -46,9 +46,9 @@
       href: manage-vs-subscriptions.md
     - name: Aboneliklerin süresi dolduğunda
       href: subscription-expiration.md
-    - name: Abonelik düzeyi değişiklikleri
+    - name: Abonelik düzeyindeki değişiklikler
       href: subscription-level-changes.md
-    - name: Kaldırılan abonelikler
+    - name: Abonelikler kaldırıldı
       href: subscription-removed.md
     - name: Abonelikler yöneticinize başvurma
       href: contact-my-admin.md
@@ -161,7 +161,7 @@
         - name: Süper yöneticiler ve yöneticiler
           href: admin-roles.md
         - name: Anlaşma tercihlerini belirleme
-          href: admin-prefs.md
+          href: admin-preferences.md
         - name: Genel Bakış
           href: using-admin-portal.md
         - name: Aylık abonelikler ekleme
