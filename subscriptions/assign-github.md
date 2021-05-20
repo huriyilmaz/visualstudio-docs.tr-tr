@@ -7,12 +7,12 @@ ms.assetid: f271d623-dcde-442a-865c-4dca5ad8a9c5
 ms.date: 03/03/2021
 ms.topic: conceptual
 description: GitHub Enterprise ile Visual Studio abonelikleri yönetme
-ms.openlocfilehash: c174b9beb7a7a0eec6bdb65e684869bc0be7dadb
-ms.sourcegitcommit: 8da735b586276c95bf566a867655e3464ab1f989
+ms.openlocfilehash: a1ece92990bf54d85140b1d3548ebf811913fae4
+ms.sourcegitcommit: 0088835f22334b8fee89f8c07bb12bcdfdef1639
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/11/2021
-ms.locfileid: "109740670"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "110188108"
 ---
 # <a name="manage-visual-studio-subscriptions-with-github-enterprise"></a>Abonelikleri Visual Studio ile GitHub Enterprise
 Microsoft ile Kurumsal Anlaşmaları (EA) olan müşteriler, standart abonelikleri ve abonelikleri bir araya getiren yeni Visual Studio teklifi GitHub Enterprise. Bu, Visual Studio abonelerin GitHub Enterprise kolay ve ekonomik GitHub Enterprise. 
@@ -33,6 +33,10 @@ Abonelikleri yönetme hakkında daha fazla Visual Studio için şu konulara göz
 > Visual Studio sahip abonelikler GitHub Enterprise satın almadan Visual Studio abonelik yöneticileri tarafından atanırsa GitHub'a yeni bir hesap oluşturmak istediğiniz GitHub Enterprise.  **En az bir satın alma** Visual Studio aboneliğin GitHub Enterprise atanmadan önce bu aboneliğin yapılmış olması gerekir.
 
 ## <a name="moving-to-visual-studio-with-github-enterprise"></a>Visual Studio ile GitHub Enterprise
+</br>
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWEAsv]
+
 Kuruluşunuz standart Visual Studio Enterprise sonrasında GitHub kurumsal paketleri ile Visual Studio abonelikleri satın alıyorsa ve Visual Studio Professional abonelikler atandıktan sonra, Yönetici portalı mevcut abonelerinizin GitHub Enterprise ve/veya GitHub Enterprise abonelikleriyle Visual Studio Professional ilgili Visual Studio Enterprise taşımanıza yardımcı olacak bir özellik içerir.  Örneğin, Visual Studio Professional abonelikleri olan aboneler, GitHub Enterprise abonelikleri ile Visual Studio Professional ' ye taşınır. Sol çubukta "genel bakış" panelinde aşağıdaki kutucuğu görürsünüz:
 
    > [!div class="mx-imgBorder"]
@@ -63,13 +67,13 @@ Bu GitHub Enterprise satın alma işlemleri tamam olduğunda GitHub, GitHub'a er
 
 Bu işlem daha karmaşık olduğu için, kuruluşların ve yöneticilerin tam olarak ayarlanmış olması için aboneliklerin satın alımı birkaç gün sürer.
 
-GitHub, bulut tabanlı GitHub.com veya şirket içi GitHub Enterprise Server olarak kullanılabilir.  İki sürümü yönetme işlemleri farklıdır.  GitHub, abonelikleri yönetmenize yardımcı olacak çeşitli yardım konuları ve GitHub Enterprise sağlar.  Aşağıda seçilen konuların bağlantılarını sağladık.  
+GitHub, bulut tabanlı GitHub.com veya şirket içi GitHub Enterprise Server olarak kullanılabilir.  İki sürümü yönetme süreçleri farklıdır.  GitHub, abonelikleri yönetmenize yardımcı olacak çeşitli yardım konuları ve GitHub Enterprise sağlar.  Aşağıda seçilen konuların bağlantılarını sağladık.  
 
 ## <a name="support-resources"></a>Destek kaynakları
 - GitHub ataması hakkında daha fazla bilgi [için GitHub Belgeleri](https://docs.github.com/en/github/setting-up-and-managing-your-enterprise-account/managing-licenses-for-the-github-enterprise-and-visual-studio-bundle)
 - GitHub Yardımı'nda çok çeşitli GitHub konularıyla ilgili [soruların yanıtlarını bulabilirsiniz.](https://help.github.com/en)
 - GitHub Topluluk Forumu'nda diğer [GitHub kullanıcılarından yardım alın.](https://github.community/)
-- Visual Studio Aboneliklerinin yönetimiyle ilgili yardım için, Visual Studio [ile iletişime geçin.](https://aka.ms/vsadminhelp)
+- Visual Studio Aboneliklerinin yönetimiyle ilgili yardım için, Visual Studio [ile iletişim kurun.](https://aka.ms/vsadminhelp)
 - IDE, Visual Studio veya diğer Azure DevOps Services ürün veya Visual Studio hakkında bir Visual Studio var mı?  Destek [Visual Studio ziyaret edin.](https://visualstudio.microsoft.com/support/)
 - Daha [fazla bilgi için](https://support.microsoft.com/supportforbusiness/productselection?sapId=b77fe80f-5417-80bd-4b2a-275cf0018c24) teknik GitHub Enterprise.   
 
