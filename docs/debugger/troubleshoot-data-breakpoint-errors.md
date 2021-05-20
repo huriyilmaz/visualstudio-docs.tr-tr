@@ -2,7 +2,7 @@
 title: Veri kesme noktası ayarlanamıyor | Microsoft Docs
 description: "\"Değer değiştiğinde kes\" kullanılırken gerçekleşen \"veri kesme noktası hataları ayarlanamıyor\" açıklamalarını, çözümlerini ve geçici çözümlerini bulun."
 ms.custom: SEO-VS-2020
-ms.date: 12/3/2019
+ms.date: 5/19/2020
 ms.topic: error-reference
 f1_keywords:
 - vs.debug.error.unable_to_set_data_breakpoint
@@ -17,25 +17,25 @@ ms.author: waan
 manager: caslan
 ms.workload:
 - multiple
-ms.openlocfilehash: 4e90c3d4af8e568f1bb2e6987c66c7fbc0856c57
-ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
+ms.openlocfilehash: 73e7e02d90e2a89c81b5e690718c95fe7efe0fb3
+ms.sourcegitcommit: 6e27b1238a8aa704b127eac34f4173e9d56690c5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98150463"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "110231971"
 ---
 # <a name="troubleshooting-data-breakpoint-errors"></a>Veri kesme noktası hatalarında sorun giderme
 Bu sayfa, "değer değiştiğinde kes" kullanırken görülen yaygın hataları çözme konusunda size kılavuzluk eder
 
 ## <a name="diagnosing-unable-to-set-data-breakpoint-errors"></a>"Veri kesme noktası ayarlanamıyor" hataları tanılanıyor
 > [!IMPORTANT]
-> Yönetilen veri kesme noktaları .NET Core 3,0 ve üzerinde desteklenir. En son sürümü [buradan](https://dotnet.microsoft.com/download)indirebilirsiniz.
+> Yönetilen veri kesme noktaları .NET Core 3,0 ve üzerinde .NET 5.0.3 ve üzerinde desteklenir. En son sürümü [buradan](https://dotnet.microsoft.com/download)indirebilirsiniz.
 
-Yönetilen veri kesme noktaları kullanılırken oluşabilecek hataların bir listesi aşağıda verilmiştir. Hatanın neden meydana geldiğinin yanı sıra hatayı çözümlemek için olası çözümleri veya geçici çözümleri içeren ek açıklamalar içerirler.
+Yönetilen veri kesme noktaları kullanılırken oluşabilecek hataların bir listesi aşağıda verilmiştir. Hatanın neden meydana geldiğinin yanı sıra hatayı çözümlemek için olası çözümleri veya geçici çözümleri içeren daha fazla açıklama içerirler.
 
-- *"Hedef işlem tarafından kullanılan .NET sürümü veri kesme noktalarını desteklemiyor. Veri kesme noktaları x86 veya x64 üzerinde çalışan .NET Core 3.0 + gerektirir. "*
+- *"Hedef işlem tarafından kullanılan .NET sürümü veri kesme noktalarını desteklemiyor. Veri kesme noktaları, x86 veya x64 üzerinde çalışan .NET Core 3. x veya .NET 5.0.3 + gerektirir. "*
 
-  - Yönetilen veri kesme noktaları desteği .NET Core 3,0 ' de başlamıştır. Şu anda 3,0 altında .NET Core .NET Framework veya sürümünde desteklenmemektedir. 
+  - Yönetilen veri kesme noktaları desteği .NET Core 3,0 ' de başlamıştır. Bu, şu anda .NET Framework, .NET Core 'un sürümleri 3,0 veya 5.0.3 altında .NET sürümleri için desteklenmez. 
     
   - **Çözüm**: Bu çözüm, projenizi .net Core 3,0 sürümüne yükseltmek olacaktır.
 
@@ -48,27 +48,32 @@ Yönetilen veri kesme noktaları kullanılırken oluşabilecek hataların bir li
     - Hata ayıklayıcının, izlemek istediğiniz alanı içeren nesneyi bilmesi gerekir. Çöp toplayıcı, hata ayıklayıcının izlemek istediğiniz değişkeni tutan nesneyi bilmesi için nesneyi yığında etrafında taşıyabilir. 
     - **Geçici çözüm**: bir veri kesme noktası ayarlamak istediğiniz nesne içindeki bir yöntem içindeyse, bir çerçeve yukarı gidin ve `locals/autos/watch` nesneyi genişletmek ve istediğiniz alana bir veri kesme noktası ayarlamak için pencereyi kullanın.
 
-- *"Statik alanlar veya statik özellikler için veri kesme noktaları desteklenmiyor."*
+- *"Veri Kesme Noktaları statik alanlar veya statik özellikler için desteklenmiyor."*
     
-  - Statik alanlar ve Özellikler Şu anda desteklenmiyor. Bu özellikle ilgileniyorsanız lütfen [geri bildirim](#provide-feedback)sağlayın.
+  - Statik alanlar ve özellikler şu anda desteklenmiyor. Bu özellikle ilgileniyorsanız lütfen geri bildirim [gönderin.](#provide-feedback)
 
-- *"Yapıların alanları ve özellikleri izlenemez."*
+- *"Yapıların alanları ve özellikleri iz edilemez."*
 
-  - Yapıların alanları ve özellikleri şu anda desteklenmiyor. Bu özellikle ilgileniyorsanız lütfen [geri bildirim](#provide-feedback)sağlayın.
+  - Şu anda yapıların alanları ve özellikleri desteklenmiyor. Bu özellikle ilgileniyorsanız lütfen geri bildirim [gönderin.](#provide-feedback)
 
-- *"Özellik değeri değişti ve artık izlenemez."*
+- *"Özellik değeri değişti ve artık izlenememe."*
 
-  - Bir özellik, çalışma zamanı sırasında nasıl hesaplanacağını değiştirebilir ve bu durumda, özelliğin arttığı ve donanım sınırlamasını aşabilecek değişkenlerin sayısı artar. `"The property is dependent on more memory than can be tracked by the hardware."`Aşağıya bakın.
+  - Bir özellik çalışma zamanı sırasında hesaplanma biçimi değiştirebilir ve bu durumda özelliğin bağlı olduğu değişken sayısı artar ve donanım sınırlamasının aşılır. Aşağıya `"The property is dependent on more memory than can be tracked by the hardware."` bakın.
 
-- *"Özelliği, donanım tarafından izlenebileceğinden daha fazla belleğe bağımlıdır."*
+- *"Özellik, donanım tarafından iznden daha fazla belleğe bağımlıdır."*
     
-  - Her mimaride, destekleyebileceği bir dizi bayt ve donanım veri kesme noktası ve üzerinde veri kesme noktası ayarlamak istediğiniz özellik bu sınırı aştı. Kullanmakta olduğunuz mimaride kaç tane donanım tarafından desteklenen veri kesme noktası ve bayt kullanılabildiğini öğrenmek için lütfen [veri kesme noktası donanım sınırlamaları](#data-breakpoint-hardware-limitations) tablosuna bakın. 
-  - **Geçici çözüm**: özellik içinde değişebilir bir değer üzerinde bir veri kesme noktası ayarlayın.
+  - Her mimari, destekleyene belirli sayıda bayt ve donanım veri kesme noktası içerir ve üzerinde bir veri kesme noktası ayarlamak istediğiniz özellik bu sınırı aştı. Kullanmakta olan [mimari için](#data-breakpoint-hardware-limitations) kaç donanım tarafından desteklenen veri kesme noktası ve bayt olduğunu bulmak için Veri Kesme Noktası Donanım Sınırlamaları tablosuna bakın. 
+  - **Geçici** çözüm: Özelliğin içinde değişe bir değer üzerinde veri kesme noktası ayarlayın.
 
-- *"Eski C# ifade değerlendiricisi kullanılırken veri kesme noktaları desteklenmez."*
+- *"Eski C# ifade değerlendiricisi kullanılırken Veri Kesme Noktaları desteklenmiyor."*
 
-  - Veri kesme noktaları yalnızca eski C# ifade değerlendiricisi üzerinde desteklenir. 
-  - **Çözüm**: eski C# ifade değerlendiricisi, `Debug -> Options` işaretini kaldır ' ın altında olacak şekilde devre dışı bırakır `Debugging -> General` `"Use the legacy C# and VB expression evaluators"` .
+  - Veri kesme noktaları yalnızca eski olmayan C# ifade değerlendiricisinde de kullanılır. 
+  - **Çözüm:** Eski C# ifade değerlendiricisini devre dışı bırakmak için `Debug -> Options` işaretinin altına gidip işaretini `Debugging -> General` kaldırmış `"Use the legacy C# and VB expression evaluators"` olursanız.
+
+- *"X **sınıfı,** yalnızca buna özgü verilerde veri kesme noktaları kullanmayı engelleyen özel bir hata ayıklayıcı görünümüne sahiptir."*
+  
+  - Veri kesme noktaları yalnızca hedef işlem (hata ayıklama yapılan uygulama) tarafından oluşturulan bellekte de kullanılabilir. Veri kesme noktası için ayarlanmış olan bellek, [DebuggerTypeProxy](using-debuggertypeproxy-attribute.md) özniteliği veya hedef sürecin parçası olmayan başka bir nesne tarafından oluşturulmuş bir nesneye ait olabilir olarak işaretlendi.
+  - **Geçici çözüm**: nesnelerin DebuggerTypeProxy görünümünü genişletmek yerine nesne (ler) ın "ham görünümünü" genişletin ve ardından veri kesme noktasını ayarlayın. Bu, veri kesme noktasının bir DebuggerTypeProxy özniteliği tarafından oluşturulan bir nesnenin sahip olduğu bellek üzerinde olmadığından emin olur.
 
 ## <a name="data-breakpoint-hardware-limitations"></a>Veri kesme noktası donanım sınırlamaları
 
