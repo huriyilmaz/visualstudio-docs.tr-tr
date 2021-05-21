@@ -1,6 +1,6 @@
 ---
-title: Windows 'da Docker istemci hatalarında sorun giderme | Microsoft Docs
-description: Visual Studio kullanarak Web uygulamaları oluşturmak ve Windows üzerinde Docker 'a dağıtmak için Visual Studio kullanırken karşılaştığınız sorunları giderin.
+title: Windows |'da Docker istemci hatalarını giderme Microsoft Docs
+description: Visual Studio kullanarak Windows üzerinde Docker'a web uygulamaları oluşturmak ve dağıtmak için Visual Studio.
 ms.technology: vs-azure
 author: ghogen
 manager: jmartens
@@ -11,41 +11,41 @@ ms.topic: troubleshooting
 ms.workload: multiple
 ms.date: 01/27/2020
 ms.author: ghogen
-ms.openlocfilehash: f16ecd899bc1dddd7383ef1a815ed6197b799a19
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5f48b5c06e91b9c05e6edc7e2a1738aeb677a7ba
+ms.sourcegitcommit: 69456d802203d21dabc3ae8662547a3241c24f47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99859534"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "110235917"
 ---
 # <a name="troubleshoot-visual-studio-development-with-docker"></a>Docker ile Visual Studio geliştirme sorunlarını giderme
 
-Visual Studio kapsayıcı araçlarıyla çalışırken, uygulamanızı oluştururken veya hata ayıklarken sorunlarla karşılaşabilirsiniz. Aşağıda bazı yaygın sorun giderme adımları verilmiştir.
+Kapsayıcı Araçları'Visual Studio çalışırken, uygulamanızı oluşturmak veya hata ayıklamak için sorunlarla karşılaşabilirsiniz. Aşağıda bazı yaygın sorun giderme adımları verilmiştir.
 
-## <a name="volume-sharing-is-not-enabled-enable-volume-sharing-in-the-docker-ce-for-windows-settings--linux-containers-only"></a>Birim paylaşımı etkin değil. Docker CE for Windows ayarları 'nda birim paylaşımını etkinleştir (yalnızca Linux kapsayıcıları)
+## <a name="volume-sharing-is-not-enabled-enable-volume-sharing-in-the-docker-ce-for-windows-settings--linux-containers-only"></a>Birim paylaşımı etkin değil. Docker CE for Windows ayarlarından birim paylaşımını etkinleştirme (yalnızca Linux kapsayıcıları)
 
-Dosya paylaşımının yalnızca Docker ile Hyper-V kullanıyorsanız yönetilmesi gerekir. WSL 2 kullanıyorsanız, aşağıdaki adımlar gerekli değildir ve dosya paylaşımı seçeneği görünür olmayacaktır. Bu sorunu çözmek için:
+Dosya paylaşımının yalnızca Docker ile Hyper-V kullanıyorsanız yönetiliyor olması gerekir. WSL 2 kullanıyorsanız, aşağıdaki adımlar gerekli değildir ve dosya paylaşımı seçeneği görünmez. Bu sorunu çözmek için:
 
-1. Bildirim alanında **Docker for Windows** sağ tıklatın ve ardından **Ayarlar**' ı seçin.
-1. **Kaynak**  >  **Dosya Paylaşımı ' nı** seçin ve erişilmesi gereken klasörü paylaşabilirsiniz. Tüm sistem sürücünüzü paylaşma olasılığı vardır ancak önerilmez.
+1. Bildirim alanında **Docker for Windows** sağ tıklayın ve ayarlar'ı **seçin.**
+1. Kaynaklar   >  **Dosya Paylaşımı'ı** seçin ve erişilebilir olması gereken klasörü paylaşın. Sistem sürücünizin tamamını paylaşmak mümkündür ancak önerilmez.
 
-    ![paylaşılan sürücüler](media/troubleshooting-docker-errors/docker-settings-image.png)
+    :::image type="content" source="media//troubleshooting-docker-errors/docker-settings-image.png" alt-text="Paylaşılan sürücüler":::
 
 > [!TIP]
-> Visual Studio 2017 sürüm 15,6 ' den sonraki Visual Studio sürümleri, **paylaşılan sürücülerin** yapılandırılmadığı zaman sorar.
+> Visual Studio 2017 Visual Studio 15.6'dan sonraki sürümler, **Paylaşılan** Sürücüler yapılandırılmamış olduğunda sorulacak.
 
 ## <a name="unable-to-start-debugging"></a>Hata ayıklama başlatılamıyor
 
-Bir neden, Kullanıcı profili klasörünüzde eski hata ayıklama bileşenleri bulundurmak ile ilgili olabilir. En son hata ayıklama bileşenlerinin bir sonraki hata ayıklama oturumunda indirilmesi için bu klasörleri kaldırmak üzere aşağıdaki komutları yürütün.
+Bunun bir nedeni, kullanıcı profili klasörünüzdeki eski hata ayıklama bileşenlerinin olmasıyla ilgili olabilir. Bu klasörleri kaldırmak için aşağıdaki komutları yürütün; böylece bir sonraki hata ayıklama oturumunda en son hata ayıklama bileşenleri indirilir.
 
-- del%USERPROFILE%\vsdbg
-- del%userprofile%\onecoremsvsmon
+- del %userprofile%\vsdbg
+- del %userprofile%\onecoremsvsmon
 
-## <a name="errors-specific-to-networking-when-debugging-your-application"></a>Uygulamanızda hata ayıklarken ağa özgü hatalar
+## <a name="errors-specific-to-networking-when-debugging-your-application"></a>Uygulama hatalarını ayıklarken ağ bağlantısına özgü hatalar
 
-Konuk makinenizde ağla ilgili bileşenleri yenileyecek şekilde, [Temizleme kapsayıcısı konak ağı](https://github.com/MicrosoftDocs/Virtualization-Documentation/tree/master/windows-server-container-tools/CleanupContainerHostNetworking)'ndan indirilebilir betiği yürütmeyi deneyin.
+Betiği Cleanup [Container Host Networking'tan](https://github.com/MicrosoftDocs/Virtualization-Documentation/tree/master/windows-server-container-tools/CleanupContainerHostNetworking)indirmeyi deneyin. Bu komut dosyası konak makinenizin ağ ile ilgili bileşenlerini yeniler.
 
-## <a name="mounts-denied"></a>Bağlama reddedildi
+## <a name="mounts-denied"></a>Bağlamalar reddedildi
 
 MacOS için Docker kullanırken,/usr/local/share/DotNet/SDK/nugetfallbackfolder klasörüne başvurarak bir hatayla karşılaşabilirsiniz. Klasörü Docker 'daki dosya paylaşma sekmesine ekleyin.
 
@@ -86,24 +86,24 @@ Docker, varsayılan olarak, görüntüleri genellikle sistem sürücüsünde, * 
     "graph": "D:\\mypath\\images"
 ```
 
-![Docker dosya paylaşımının ekran görüntüsü](media/troubleshooting-docker-errors/docker-daemon-settings.png)
+:::image type="content" source="media/troubleshooting-docker-errors/docker-daemon-settings.png" alt-text="Docker dosya paylaşımının ekran görüntüsü":::
 
-**& yeniden başlatmak Için Uygula**' ya tıklayın. Bu adımlar *üzerinde% ProgramData% \docker\config\daemon.js* yapılandırma dosyasını değiştirir. Önceden oluşturulmuş görüntüler taşınmaz.
+Yeniden **Başlat'& Uygula'ya tıklayın.** Bu adımlar % *ProgramData%\docker\config\daemon.jsüzerinde* yapılandırma dosyasını değiştirir. Önceden yerleşik görüntüler taşınmaz.
 
-## <a name="container-type-mismatch"></a>Kapsayıcı türü uyumsuzluğu
+## <a name="container-type-mismatch"></a>Kapsayıcı türü eşleşmez
 
-Bir projeye Docker desteği eklerken bir Windows ya da Linux kapsayıcısı seçersiniz. Docker sunucu Konağı, proje hedefi ile aynı kapsayıcı türünü çalıştıracak şekilde yapılandırılmamışsa, büyük olasılıkla aşağıdakine benzer bir hata görürsünüz:
+Projeye Docker desteği eklerken Bir Windows veya Linux kapsayıcısı seçersiniz. Docker Server ana bilgisayarı, proje hedefiyle aynı kapsayıcı türünü çalıştıracak şekilde yapılandırılmamışsa büyük olasılıkla aşağıdakine benzer bir hata görebilirsiniz:
 
-![Docker Konağı ve proje uyumsuzluğu ekran görüntüsü](media/troubleshooting-docker-errors/docker-host-config-change-linux-to-windows.png)
+:::image type="content" source="media/troubleshooting-docker-errors/docker-host-config-change-linux-to-windows.png" alt-text="Docker Ana Bilgisayarı ve Proje Eşleşmesi Ekran Görüntüsü":::
 
 Bu sorunu çözmek için:
 
-- Sistem tepsisindeki Docker for Windows simgesine sağ tıklayın ve **Windows kapsayıcılarına geç...** ' i seçin veya **Linux kapsayıcılarına geç..**..
+- Sistem Tepsisi'Docker for Windows simgesine sağ tıklayın ve Windows kapsayıcılara **geç...** veya Linux kapsayıcılara **geçiş... öğesini seçin.**
 
-## <a name="microsoftdockertools-github-repo"></a>Microsoft/DockerTools GitHub deposu
+## <a name="microsoftdockertools-github-repo"></a>Microsoft/DockerTools GitHub depo
 
 Karşılaştığınız diğer sorunlar için bkz.  [Microsoft/DockerTools](https://github.com/microsoft/dockertools/issues) sorunları.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio sorunlarını giderme](/troubleshoot/visualstudio/welcome-visual-studio/)
+- [Visual Studio giderme](/troubleshoot/visualstudio/welcome-visual-studio/)
