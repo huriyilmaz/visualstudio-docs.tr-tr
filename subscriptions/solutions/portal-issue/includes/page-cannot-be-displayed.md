@@ -10,20 +10,20 @@ user.type: subscriber
 tags: portal-error
 subscription.type: vl, cloud, retail, partner
 sap.id: 8250612f-7446-20c5-7473-16d089f2280d
-ms.openlocfilehash: d8646c451d857446f9b20254d3716b5582fc3963
-ms.sourcegitcommit: 645303f47a5258d4b65cc56bf9e2303865587e1e
+ms.openlocfilehash: d21629abbc145c62ff926502d90556aa94df81a9
+ms.sourcegitcommit: beb16d5cc31b3565ec0c8d69f819a4ec67b45aae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "99541110"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "110349909"
 ---
 ## <a name="were-sorry-to-hear-that-youre-experiencing-an-issue-with-a-page-not-being-displayed-while-using-the-visual-studio-subscriptions-portal"></a>Visual Studio abonelikleri portalını kullanırken görüntülenmeyen bir sayfayla ilgili bir sorun yaşadığınızı duyuyoruz. 
 
-Abonelik portalı denetimleri veya düğmeleri çalışmıyorsa, sayfa hatası görüntülenemez veya boş sayfa hatası, sayfa yüklenmiyor veya zaman aşımına uğramış veya başka Portal işlevselliği sorunu görürsünüz: 
+Abonelik portalı denetimleri veya düğmeleri çalışmıyorsa, sayfa hatası görüntülenemez veya boş sayfa hatası, sayfa yüklenmiyor veya zaman aşımına uğramış veya başka Portal işlevselliği sorunu olduğunu görürsünüz: 
 
 * Tarayıcı önbelleğinizi temizleme ve abonelikler portalında oturum açma 
 * Portalı farklı bir tarayıcıda açma 
 * Portalı bir ınbilito veya InPrivate penceresinde açma 
 * Sayfa yenileniyor  
 
-Bu basit çözümlerin hiçbiri sorunu çözerse, yardım almak için "destek bileti oluştur" düğmesine tıklayın.
+Bu basit çözümlerin hiçbiri sorunu çözmezse, aşağıdaki "çevrimiçi istek" düğmesine tıklayarak Visual Studio abonelikleri desteğiyle iletişime geçin. 

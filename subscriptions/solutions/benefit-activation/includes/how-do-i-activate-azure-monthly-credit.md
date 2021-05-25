@@ -10,12 +10,12 @@ user.type: subscriber
 tags: benefit, azure
 subscription.type: vl, cloud, retail, partner
 sap.id: 8dedd10e-cb1c-2eb1-bcda-fe00b07ac903
-ms.openlocfilehash: 7f1978f0d0679d94bbde3b565ff5680ce89f9063
-ms.sourcegitcommit: 54aac5044a9853a435577acc5a134cb254494ffb
+ms.openlocfilehash: bb387f9a359b6f645dd6a160ffb281375cd747a9
+ms.sourcegitcommit: beb16d5cc31b3565ec0c8d69f819a4ec67b45aae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/17/2021
-ms.locfileid: "107590011"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "110349878"
 ---
 ## <a name="how-to-activate-the-monthly-azure-devtest-individual-credit-benefit"></a>Aylık Azure geliştirme ve test bireysel kredi avantajını etkinleştirme
 
@@ -30,17 +30,17 @@ Visual Studio abonelikleri avantajı aracılığıyla oluşturulan Azure aboneli
 
 ## <a name="azure-credit-benefit-activation-errors"></a>Azure kredi avantajı etkinleştirme hataları
 
-Yeni bir Visual Studio aboneliğiniz varsa ve "Bu Visual Studio avantajını birden çok kez etkinleştiremiyorum" hatasını alıyorsanız, bu çözümün sonundaki "destek bileti oluştur" düğmesine tıklayarak Visual Studio abonelikleri desteğiyle iletişime geçin. 
+Yeni bir Visual Studio aboneliğiniz varsa ve "Bu Visual Studio avantajını birden çok kez etkinleştiremiyorum" hatasını alıyorsanız, bu çözümün sonundaki "çevrimiçi istek" düğmesine tıklayarak Visual Studio abonelikleri desteğiyle iletişim kurun. 
 
 Aboneliğiniz bir süredir atanmışsa, önce kontrol etmeniz gereken birkaç nokta vardır:
 - Abonelik portalının [avantajlar sayfasında](https://my.visualstudio.com/benefits) Azure aylık kredi kutucuğunu denetleyerek bu avantajı henüz etkinleştirmemiş olduğunu onaylayın. 
 - Azure aboneliğinizin bir parçası olarak birden çok dizine sahip olabilirsiniz. Azure aboneliğini ayarladığınız dizini kullandığınızdan emin olun. [Azure Portal](https://portal.azure.com/), sağ üst köşedeki hesap simgesine tıklayarak dizinleri görüntüleyebilir ve değiştirebilirsiniz.
-- Ayrıca, [alternatif bir hesabı](https://docs.microsoft.com/visualstudio/subscriptions/vs-alternate-identity) Visual Studio aboneliğiniz ile ilişkilendirebilirsiniz. aylık kredinizi alternatif hesabınızla etkinleştirdiyseniz, bu e-posta ile her zaman Azure aboneliğinizde oturum açmanız gerekir. 
+- Ayrıca, [alternatif bir hesabı](https://docs.microsoft.com/visualstudio/subscriptions/vs-alternate-identity) Visual Studio aboneliğiniz ile ilişkilendirebilirsiniz. Alternatif hesabınızla aylık kredinizi etkinleştirdikten sonra her zaman bu e-posta ile Azure aboneliğinize oturum açmanız gerekir. 
 
 ## <a name="more-information-about-azure-credits"></a>Azure kredileri hakkında daha fazla bilgi
 
-Aylık Azure kredinizi kullanmanın maliyeti yoktur ve kredi kartı gerekmez. Ay için ayrılan krediden çalıştırdığınız zaman, kredi bir sonraki aya göre sıfırlanana veya harcama limitini kaldırabilmeniz ve bir ödeme yöntemi eklemeniz bitinceye kadar Azure kaynaklarınızın kapatılması kapatılacak. 
+Aylık Azure kredinizi kullanmanın bir maliyeti yoktur ve kredi kartı gerekmez. Ay için kullanılan krediniz azaldı mı? Kredi sonraki ay sıfırlanacak veya harcama limitini kaldıracak ve bir ödeme yöntemi ekleyinceye kadar Azure kaynaklarınız kapatılacaktır. 
 
-[Etkinleştirme, uygunluk ve diğer destek kaynakları hakkında](https://docs.microsoft.com/visualstudio/subscriptions/vs-azure)daha fazla bilgi edinin.  
+Etkinleştirme, [uygunluk ve diğer destek kaynakları hakkında daha fazla bilgi okuyun.](https://docs.microsoft.com/visualstudio/subscriptions/vs-azure)  
 
-Visual Studio aboneliğinize dahil edilen [Azure kredilerini nasıl kullanacağınızı öğrenin](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers/#azure-credits) .  
+[Azure aboneliğinize dahil olan Azure](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers/#azure-credits) kredilerini kullanmayı Visual Studio öğrenin.  
