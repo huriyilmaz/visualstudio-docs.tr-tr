@@ -3,10 +3,10 @@ title: Visual Studio iş yükü ve bileşen kimlikleri
 titleSuffix: ''
 description: Bir komut satırı kullanarak Visual Studio 'Yu yüklemek veya VSıX bildiriminde bir bağımlılık olarak belirtmek için iş yükü ve bileşen kimliklerini kullanın
 keywords: ''
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
-ms.date: 3/2/2020
+ms.date: 05/24/2021
 ms.topic: reference
 helpviewer_keywords:
 - workload ID, Visual Studio
@@ -17,12 +17,12 @@ ms.assetid: 34e19ef1-abfb-44fd-aad2-33c5d7874482
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 open_to_public_contributors: false
-ms.openlocfilehash: be97c0c56395a9fe87633ccf48f0382b15fae560
-ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
+ms.openlocfilehash: 0493cd72151fe8985eeeb1bb47a5af859796d1b6
+ms.sourcegitcommit: 18e7300d4878f2fcd0263a4aff31a755ae8fc289
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101683680"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "110449779"
 ---
 # <a name="visual-studio-workload-and-component-ids"></a>Visual Studio iş yükü ve bileşen kimlikleri
 
@@ -39,24 +39,24 @@ Bir komut satırı kullanarak Visual Studio 'Yu yüklemek veya VSıX bildirimind
 | [Visual &nbsp; Studio Community &nbsp; 2017](workload-component-id-vs-community.md?view=vs-2017&preserve-view=true) | Microsoft. VisualStudio. Product. Community | Öğrenciler, açık kaynak ve bireysel geliştiriciler için ücretsiz, tam özellikli IDE |
 | [Visual &nbsp; Studio Takım &nbsp; Gezgini &nbsp; 2017](workload-component-id-vs-team-explorer.md?view=vs-2017&preserve-view=true) | Microsoft. VisualStudio. Product. TeamExplorer | Visual Studio Geliştirici araç takımı olmadan Team Foundation Server ve Azure DevOps Services etkileşime geçin |
 | [Visual Studio Desktop Express 2017](workload-component-id-vs-express.md?view=vs-2017&preserve-view=true) | Microsoft. VisualStudio. Product. WDExpress | Sözdizimi kullanan kod düzenlemesi, kaynak kodu denetimi ve iş öğesi yönetimi ile WPF, WinForms ve Win32 gibi yerel ve yönetilen uygulamalar oluşturun. C#, Visual Basic ve Visual C++ desteğini içerir. |
-| [Visual &nbsp; Studio derleme &nbsp; araçları &nbsp; 2017](workload-component-id-vs-build-tools.md?view=vs-2017&preserve-view=true) | Microsoft. VisualStudio. Product. BuildTools | Visual Studio Derleme Araçları, Visual Studio IDE 'ye gerek kalmadan yerel ve yönetilen MSBuild tabanlı uygulamalar oluşturmanıza olanak sağlar. Visual C++ derleyicileri ve kitaplıkları, MFC, ATL ve C++/CLı desteğini yüklemeye yönelik seçenekler vardır. |
-| [Visual &nbsp; Studio Test &nbsp; Aracısı &nbsp; 2017](workload-component-id-vs-test-agent.md?view=vs-2017&preserve-view=true)  | Microsoft. VisualStudio. Product. TestAgent | Otomatikleştirilmiş testleri çalıştırmayı ve testleri uzaktan yüklemeyi destekler |
-| [Visual &nbsp; Studio Test &nbsp; denetleyicisi 2017](workload-component-id-vs-test-controller.md?view=vs-2017&preserve-view=true) | Microsoft. VisualStudio. Product. TestController | Otomatikleştirilmiş testleri birden çok makineye dağıtma |
-| [Visual &nbsp; Studio Test &nbsp; uzmanı &nbsp; 2017](workload-component-id-vs-test-professional.md?view=vs-2017&preserve-view=true) | Microsoft. VisualStudio. Product. TestProfessional | Visual Studio Test Uzmanı 2017 |
-| [Visual &nbsp; Studio geri bildirim &nbsp; istemcisi &nbsp; 2017](workload-component-id-vs-feedback-client.md?view=vs-2017&preserve-view=true) | Microsoft. VisualStudio. Product. FeedbackClient | Visual Studio Geri Bildirim İstemcisi 2017 |
+| [Visual &nbsp; Studio derleme &nbsp; araçları &nbsp; 2017](workload-component-id-vs-build-tools.md?view=vs-2017&preserve-view=true) | Microsoft. VisualStudio. Product. BuildTools | Bu Visual Studio Derleme Araçları, IDE'ye gerek kalmadan yerel ve yönetilen MSBuild tabanlı uygulamalar Visual Studio sağlar. Derleyicileri ve kitaplıkları, MFC Visual C++ ATL ve C++/CLI desteğini yüklemek için seçenekler vardır. |
+| [Visual &nbsp; Studio Test Aracısı &nbsp; &nbsp; 2017](workload-component-id-vs-test-agent.md?view=vs-2017&preserve-view=true)  | Microsoft.VisualStudio.Product.TestAgent | Otomatikleştirilmiş testleri çalıştırmayı ve testleri uzaktan yüklemeyi destekler |
+| [Visual &nbsp; Studio Test Denetleyicisi &nbsp; 2017](workload-component-id-vs-test-controller.md?view=vs-2017&preserve-view=true) | Microsoft.VisualStudio.Product.TestController | Otomatikleştirilmiş testleri birden çok makineye dağıtma |
+| [Visual &nbsp; Studio Test Professional &nbsp; &nbsp; 2017](workload-component-id-vs-test-professional.md?view=vs-2017&preserve-view=true) | Microsoft.VisualStudio.Product.TestProfessional | Visual Studio Test Uzmanı 2017 |
+| [Visual &nbsp; Studio Geri Bildirim &nbsp; &nbsp; İstemcisi 2017](workload-component-id-vs-feedback-client.md?view=vs-2017&preserve-view=true) | Microsoft.VisualStudio.Product.FeedbackClient | Visual Studio Geri Bildirim İstemcisi 2017 |
 
-Bu listelerin nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [Visual Studio 'yu yüklemek için komut satırı parametrelerini kullanma 2017](use-command-line-parameters-to-install-visual-studio.md?view=vs-2017&preserve-view=true) sayfası ve [nasıl yapılır: genişletilebilirlik projelerini Visual studio 'ya geçirme 2017](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md?view=vs-2017&preserve-view=true) sayfası.
+Bu listelerin kullanımı hakkında daha fazla bilgi [için, Visual Studio 2017](use-command-line-parameters-to-install-visual-studio.md?view=vs-2017&preserve-view=true) yüklemek için komut satırı parametrelerini kullanma sayfasına ve Nasıl yapılır: Genişletilebilirlik projelerini [Visual Studio 2017'ye](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md?view=vs-2017&preserve-view=true) geçirme sayfasına bakın.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-**[16,8 sürümü](/visualstudio/releases/2019/release-notes/) için güncelleştirildi**
+**[16.8 sürümü için güncelleştirildi](/visualstudio/releases/2019/release-notes/)**
 
 | **Sürüm** | **ID** | **Açıklama** |
 | ----------- | ------ | --------------- |
-| [Visual &nbsp; Studio Enterprise &nbsp; 2019](workload-component-id-vs-enterprise.md?view=vs-2019&preserve-view=true) | Microsoft. VisualStudio. Product. Enterprise | Her boyuttaki takımlar arasında üretkenlik ve koordinasyon için Microsoft DevOps çözümü |
-| [Visual &nbsp; Studio Professional &nbsp; 2019](workload-component-id-vs-professional.md?view=vs-2019&preserve-view=true) | Microsoft. VisualStudio. Product. Professional | Küçük takımlar için profesyonel geliştirici araçları ve Hizmetleri |
+| [Visual &nbsp; Studio Enterprise &nbsp; 2019](workload-component-id-vs-enterprise.md?view=vs-2019&preserve-view=true) | Microsoft.VisualStudio.Product.Enterprise | Herhangi bir boyuttaki ekipler arasında üretkenlik ve koordinasyon için Microsoft DevOps çözümü |
+| [Visual &nbsp; Studio Professional &nbsp; 2019](workload-component-id-vs-professional.md?view=vs-2019&preserve-view=true) | Microsoft.VisualStudio.Product.Professional | Küçük takımlar için profesyonel geliştirici araçları ve hizmetleri |
 | [Visual &nbsp; Studio Community &nbsp; 2019](workload-component-id-vs-community.md?view=vs-2019&preserve-view=true) | Microsoft. VisualStudio. Product. Community | Öğrenciler, açık kaynak ve bireysel geliştiriciler için ücretsiz, tam özellikli IDE |
 | [Visual &nbsp; Studio Takım &nbsp; Gezgini &nbsp; 2019](workload-component-id-vs-team-explorer.md?view=vs-2019&preserve-view=true) | Microsoft. VisualStudio. Product. TeamExplorer | Visual Studio Geliştirici araç takımı olmadan Team Foundation Server ve Azure DevOps Services etkileşime geçin |
 | [Visual &nbsp; Studio derleme &nbsp; araçları &nbsp; 2019](workload-component-id-vs-build-tools.md?view=vs-2019&preserve-view=true) | Microsoft. VisualStudio. Product. BuildTools | Visual Studio Derleme Araçları, Visual Studio IDE 'ye gerek kalmadan yerel ve yönetilen MSBuild tabanlı uygulamalar oluşturmanıza olanak sağlar. Visual C++ derleyicileri ve kitaplıkları, MFC, ATL ve C++/CLı desteğini yüklemeye yönelik seçenekler vardır. |

@@ -1,23 +1,23 @@
 ---
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.date: 03/16/2020
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
-ms.openlocfilehash: a3b5686ea36b77b6024fd1e95aee393877e0eaa1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 00ccf2df85c4b845fa768cebfbb58a86648df6e7
+ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99868621"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "110449656"
 ---
-Bu sayfadaki tablolarda, komut satırından Visual Studio 'Yu yüklemek için kullanabileceğiniz veya VSıX bildiriminde bir bağımlılık olarak belirtebileceğiniz kimlikler listelenmektedir. Visual Studio güncelleştirmelerini yayınlarız, ek bileşenler ekleyeceğiz.
+Bu sayfada yer alan tablolarda, komut Visual Studio yüklemek veya VSIX bildiriminde bağımlılık olarak belirtebilirsiniz. Güncelleştirmeleri Visual Studio'da yayımlayana kadar ek bileşenler ekley Visual Studio.
 
-Ayrıca, sayfa hakkında aşağıdakilere de göz önünde bulabilirsiniz:
+Sayfa hakkında aşağıdakilere de dikkat edin:
 
-* Her iş yükü kendi bölümüne sahiptir ve iş yükü KIMLIĞI ve iş yükü için kullanılabilir bileşenlerin bir tablosu gelir.
-* Varsayılan olarak, **gerekli** bileşenler iş yükünü yüklediğinizde yüklenir.
-* Seçeneğini belirlerseniz, **Önerilen** ve **isteğe bağlı** bileşenleri de yükleyebilirsiniz.
-* Ayrıca, herhangi bir iş yükü ile bağlantılı olmayan ek bileşenleri listeleyen bir bölüm ekledik.
+* Her iş yükünün kendi bölümü ve ardından iş yükü kimliği ve iş yükü için kullanılabilen bileşenlerin bir tablosu vardır.
+* Varsayılan olarak, **iş** yükünü yükleyebilirsiniz.
+* İsterseniz Önerilen ve İsteğe Bağlı bileşenlerini **de** **yükleyebilirsiniz.**
+* Ayrıca, herhangi bir iş yüküyle bağlantılı olan ek bileşenleri listeleye bir bölüm ekledik.
