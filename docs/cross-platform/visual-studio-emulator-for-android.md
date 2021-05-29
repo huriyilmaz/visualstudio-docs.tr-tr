@@ -1,6 +1,6 @@
 ---
-title: Android için Visual Studio öykünücüsü | Microsoft Docs
-description: Android için Visual Studio öykünücüsü 'nün Android cihazına öykünen bir masaüstü uygulaması olduğunu öğrenin.
+title: Android Visual Studio için Visual Studio Öykünücüsü| Microsoft Docs
+description: Android için Visual Studio Öykünücüsü'nin bir Android cihazına öykünen bir masaüstü uygulaması olduğunu öğrenin.
 ms.custom: SEO-VS-2020
 ms.prod: visual-studio-dev15
 ms.date: 03/09/2020
@@ -22,13 +22,13 @@ ms.locfileid: "110687624"
 ---
 # <a name="visual-studio-emulator-for-android"></a>Android için Visual Studio Öykünücüsü
 
-Android için Visual Studio öykünücüsü, bir Android cihazına öykünmek için bir masaüstü uygulamasıdır. Visual Studio 2015 ' de kullanım dışıdır ve Visual Studio 2017 ya da Visual Studio 2019 ' de desteklenmez. Bunun yerine Google Android öykünücülerini kullanmanızı öneririz. Visual Studio 2015 Android yönergeleri için Visual Studio öykünücüsü ' nü görmek üzere belge sürümü seçicisinde Visual Studio 2015 ' yi seçin.
+Android Visual Studio Öykünücüsü, bir Android cihazına öykünen bir masaüstü uygulamasıdır. Visual Studio 2015'te kullanım dışıdır ve Visual Studio 2017 veya 2019'da Visual Studio değildir. Bunun yerine Google Android öykünücülerini kullanmanız önerilir. Visual Studio 2015 için Android için Visual Studio Öykünücüsü yönergelerini görmek için, belge sürümü seçicisinde Visual Studio 2015'i seçin.
 
 > [!IMPORTANT]
-> Çoğu senaryoda, Android için Visual Studio öykünücüsü yerine Google Android öykünücüsü kullanımı önerilir:
-> - Android için Visual Studio öykünücüsü, Visual Studio 2015 sonrasında desteklenmez.
-> - Android sürüm 6,0 ' den sonraki öykünücü görüntüleri, Android için Visual Studio öykünücüsü 'nde kullanılamaz.
-> - Google Android Emulator artık [Hyper-V](/xamarin/android/get-started/installation/android-emulator/hardware-acceleration#accelerating-with-hyper-v)desteklemektedir.
-> - Hem mobil cihaz geliştirmesi için C++ hem de Apache Cordova için Visual Studio Araçları Google Android Emulator ile çalışır. Daha fazla bilgi için bkz. [Android 'de Apache Cordova uygulamanızı çalıştırma](/previous-versions/visualstudio/cross-platform/tools-for-cordova/run-your-app/run-app-android#google-android-emulator). (Artık bu makalede açıklandığı gibi Hyper-V ' i devre dışı bırakmanız gerekmez).
+> Çoğu senaryoda, Android için Öykünücü yerine Google Android öykünücüsü Visual Studio önerilir:
+> - Visual Studio Öykünücüsü, 2015'Visual Studio desteklenmiyor.
+> - Android sürüm 6.0'dan sonraki öykünücü görüntüleri, Android için Visual Studio öykünücü için kullanılamaz.
+> - Google Android Emulator artık [Hyper-V'i destekliyor.](/xamarin/android/get-started/installation/android-emulator/hardware-acceleration#accelerating-with-hyper-v)
+> - Hem Mobil Cihaz Geliştirme için C++ hem de Visual Studio Araçları için Apache Cordova, Google Android Emulator. Daha fazla bilgi için [bkz. Android'Apache Cordova uygulamalarınızı çalıştırma.](/previous-versions/visualstudio/cross-platform/tools-for-cordova/run-your-app/run-app-android#google-android-emulator) (Artık bu makalede açıklanan şekilde Hyper-V'yi devre dışı bırakmanız gerekmeyecek).
 >
-> Google Android öykünücüsü 'nü yapılandırma ve kullanma hakkında daha fazla bilgi için bkz. [Android Emulator kurulum](/xamarin/android/get-started/installation/android-emulator/).
+> Google Android öykünücüsünü yapılandırma ve kullanma hakkında daha fazla bilgi için [bkz. Android Emulator.](/xamarin/android/get-started/installation/android-emulator/).

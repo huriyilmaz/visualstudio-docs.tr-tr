@@ -64,24 +64,24 @@ Xamarin Visual Studio Araçları ile android, iOS ve Windows'u aynı çözümde 
 
  ![Windows, iOS ve Android Usıs arasında kod paylaşma](../cross-platform/media/sharecode.png "ShareCode")
 
- Kodunuzu paylaşılan bir proje, taşınabilir bir sınıf kitaplığı projesi veya her ikisini kullanarak paylaşabilirsiniz. Bazı kodların paylaşılan bir projede en iyi şekilde uyduğunu fark edebilirsiniz ve bazı kodlar taşınabilir bir sınıf kitaplığı projesi içinde daha anlamlı hale gelir.
+ Paylaşılan bir proje, Taşınabilir Sınıf Kitaplığı projesi veya her ikisini kullanarak kodunuzu paylaşabilirsiniz. Bazı kodun paylaşılan bir projeye en uygun olduğunu ve bazı kodun Taşınabilir Sınıf Kitaplığı projesi içinde daha anlamlı olduğunu farkebilirsiniz.
 
 |**Daha fazla bilgi edinin**|
 |--------------------|
-|[Kod seçeneklerini paylaşma](/xamarin/cross-platform/app-fundamentals/code-sharing/) (Xamarin) |
+|[Kod Seçeneklerini Paylaşma](/xamarin/cross-platform/app-fundamentals/code-sharing/) (Xamarin) |
 |[.NET ile kod paylaşma seçenekleri](/dotnet/standard/cross-platform/) |
 
 ### <a name="target-windows-10-devices"></a><a name="WindowsHTML"></a> Hedef Windows 10 cihazları
 
- ![Windows cihazları](../cross-platform/media/windowsdevices.png "Windows cihazları")
+ ![Windows Cihazları](../cross-platform/media/windowsdevices.png "Windows cihazları")
 
- Windows 10 cihazlarının tam kapsamını hedefleyen tek bir uygulama oluşturmak istiyorsanız, bir Evrensel Windows uygulaması oluşturun. Uygulamayı tek bir proje kullanarak tasarlayacaksınız ve sayfalar görüntülemek için kullanılan cihaz ne olduğuna göre düzgün şekilde işlenir.
+ Tüm cihazları hedef alan tek bir uygulama oluşturmak Windows 10 evrensel bir Windows uygulaması oluşturun. Uygulamayı tek bir proje kullanarak tasarlarsanız, sayfalarınız bunları görüntülemek için hangi cihaz kullanılırsa kullanın düzgün bir şekilde işler.
 
- Evrensel Windows Platformu (UWP) uygulama projesi şablonuyla başlayın. Sayfalarınızı görsel olarak tasarlayın ve sonra çeşitli cihaz türleri için nasıl göründüğünü görmek için bunları bir önizleme penceresinde açın. Bir sayfada bir sayfanın nasıl göründüğünü beğenmezseniz, ekran boyutu, çözünürlüğü veya yatay veya dikey mod gibi çeşitli yönlerin daha iyi sığması için sayfayı en iyi hale getirebilirsiniz. Tüm bunları, Visual Studio 'da sezgisel araç pencerelerini ve kolayca erişilebilen menü seçeneklerini kullanarak yapabilirsiniz. Uygulamanızı çalıştırmaya ve kodunuzda ilerlemenize hazırsanız, **Standart** araç çubuğunda bulunan bir açılan listede farklı cihaz türleri için cihaz öykünücülerini ve simülatörleri tümünü bulacaksınız.
+ Bir Evrensel Windows Platformu (UWP) uygulama projesi şablonuyla başlama. Sayfalarınızı görsel olarak tasarlar ve ardından çeşitli cihaz türleri için nasıl görüneceklerini görmek için bunları bir önizleme penceresinde açın. Bir sayfanın cihazda nasıl göründüğüne bakmıyorsanız, sayfayı ekran boyutuna, çözünürlüğüne veya yatay veya dikey mod gibi çeşitli yönlere daha iyi uyacak şekilde iyileyebilirsiniz. Bunların hepsini, sezgisel araç pencerelerini ve kolayca erişilebilen menü seçeneklerini kullanarak Visual Studio. Uygulamalarınızı çalıştırmaya ve kodunuz üzerinde adım adım ilerlerken, farklı cihaz türleri için tüm cihaz öykünücülerini ve simülatörlerini Standart araç çubuğunda bulunan bir açılan listede **birlikte** bulabilirsiniz.
 
 |**Daha fazla bilgi edinin**|
 |--------------------|
-|[Evrensel Windows Platformu giriş](/windows/uwp/get-started/universal-application-platform-guide)|
+|[Evrensel Windows Platformu'a giriş](/windows/uwp/get-started/universal-application-platform-guide)|
 |[İlk uygulamanızı oluşturma](/windows/uwp/get-started/your-first-app)|
 |[Evrensel Windows Platformu (UWP) için uygulama geliştirme](../cross-platform/develop-apps-for-the-universal-windows-platform-uwp.md)|
 
@@ -89,11 +89,11 @@ Xamarin Visual Studio Araçları ile android, iOS ve Windows'u aynı çözümde 
 
 ## <a name="build-an-app-for-android-ios-and-windows-htmljavascript"></a><a name="HTML"></a> Android, iOS ve Windows için uygulama oluşturma (HTML/JavaScript)
 
- ![Windows, iOS ve Android cihazları](../cross-platform/media/homedevices.png "Windows, iOS ve Android cihazları")
+ ![Windows, iOS ve Android cihazlar](../cross-platform/media/homedevices.png "Windows, iOS ve Android cihazlar")
 
- Web geliştiricisiyseniz ve HTML ve JavaScript hakkında bilgi sahibiyseniz, Apache Cordova için Visual Studio Araçları kullanarak Windows, Android ve iOS 'u hedefleyebilirsiniz. Bu uygulamalar üç platformu da hedefleyebilir ve en çok bildiğiniz becerileri ve süreçlerini kullanarak bunları oluşturabilirsiniz.
+ Web geliştiricisiyseniz ve HTML ve JavaScript hakkında bilgi sahibiyseniz, windows, Android ve iOS için Visual Studio Araçları kullanarak windows Apache Cordova. Bu uygulamalar üç platformu da hedefleyenin ve en çok aşina olunan becerileri ve süreçleri kullanarak bunları geliştirebilirsiniz.
 
- Apache Cordova, eklenti modeli içeren bir çerçevedir. Bu eklenti modeli, üç platformun (Android, iOS ve Windows) yerel cihaz özelliklerine erişmek için kullanabileceğiniz tek bir JavaScript API 'SI sağlar.
+ Apache Cordova, eklenti modeli içeren bir çerçevedir. Bu eklenti modeli, üç platformun da (Android, iOS ve Windows) yerel cihaz özelliklerine erişmek için kullanabileceğiniz tek bir JavaScript API'si sağlar.
 
  Bu API 'Ler platformlar arası olduğundan, üç platform arasında yazdığınız kadar çoğunu paylaşabilirsiniz. Bu, geliştirme ve bakım maliyetlerinizi azaltır. Ayrıca, sıfırdan başlamak gerekmez. Başka türde Web uygulamaları oluşturduysanız, bunları dilediğiniz şekilde değiştirmek veya yeniden tasarlamanız gerekmeden bu dosyaları Cordova uygulamanızla paylaşabilirsiniz.
 
@@ -119,31 +119,31 @@ Xamarin Visual Studio Araçları ile android, iOS ve Windows'u aynı çözümde 
 
 ## <a name="build-an-app-for-android-ios-and-windows-c"></a>Android, iOS ve Windows için uygulama oluşturma (C++)
 
-![Android, iOS ve Windows için derlemek üzere C&#43;&#43; kullanma](../cross-platform/media/cross_plat_cpp_intro_image.png "Cross_Plat_CPP_Intro_Image")
+![Android, iOS&#43;&#43; Windows için derlemek için C&#43;&#43; kullanma](../cross-platform/media/cross_plat_cpp_intro_image.png "Cross_Plat_CPP_Intro_Image")
 
- İlk olarak, C++ iş yüküne sahip Visual Studio 'Yu ve **mobil geliştirme** 'yı yüklemeniz gerekir. Daha sonra, Android için yerel bir etkinlik uygulaması veya Windows ya da iOS 'u hedefleyen bir uygulama oluşturabilirsiniz. İsterseniz Android, iOS ve Windows 'u aynı çözümde hedefleyebilir ve sonra platformlar arası statik veya dinamik Paylaşılan kitaplık kullanarak kod paylaşabilirsiniz.
+ İlk olarak, Visual Studio ve **C++ ile Mobil Geliştirme iş yükünü** yükleyin. Ardından, Android için yerel bir etkinlik uygulaması veya Windows ya da iOS'u hedef alan bir uygulama derlemeniz gerekir. Ekleyebilirsiniz Android, iOS ve Windows aynı çözümde ekleyebilirsiniz ve ardından platformlar arası statik veya dinamik paylaşılan kitaplık kullanarak aralarında kod paylaşabilirsiniz.
 
- Bir oyun gibi gelişmiş grafik düzenlemesi gerektiren Android için bir uygulama derlemeniz gerekiyorsa, bunu yapmak için C++ kullanabilirsiniz. **Yerel etkinlik uygulaması (Android)** projesi ile başlayın. Bu proje, Clang toolzincirine yönelik tam desteğe sahiptir.
+ Android için oyun gibi herhangi bir tür gelişmiş grafik işlemesi gerektiren bir uygulama derlemeniz gerekirse, bunu yapmak için C++ kullanabilirsiniz. Yerel Etkinlik Uygulaması **(Android) projesiyle çalışmaya** başlama. Bu proje Clang araçlık için tam destek sağlar.
 
- ![Yerel etkinlik proje şablonu](../cross-platform/media/cross-plat_cpp_native.png "Yerel etkinlik proje şablonu")
+ ![Yerel etkinlik projesi şablonu](../cross-platform/media/cross-plat_cpp_native.png "Yerel etkinlik projesi şablonu")
 
- Uygulamanızı çalıştırmaya ve nasıl göründüğünü görmek için hazırsanız, Android Emulator kullanın. Hızlı, güvenilir ve kolayca yüklenebilir ve yapılandırılabilir.
+ Uygulamanızı çalıştırmaya hazırsanız ve nasıl göründüğünü görmek için Android Emulator. Hızlı, güvenilir ve yüklemesi ve yapılandırılması kolaydır.
 
- Ayrıca, C++ ve Evrensel Windows Platformu (UWP) uygulama projesi şablonu kullanarak Windows 10 cihazlarının tam kapsamını hedefleyen bir uygulama oluşturabilirsiniz. Bu konuda daha önce görünen [hedef Windows 10 cihazları](#WindowsHTML) bölümünde bunun hakkında daha fazla bilgi edinin.
+ Ayrıca C++ ve bir Evrensel Windows Platformu (UWP) uygulama proje şablonu kullanarak Windows 10 tüm cihazları hedef alan bir uygulama oluşturabilirsiniz. Bu konu başlığında daha önce [görünen Hedef Windows 10](#WindowsHTML) cihazlar bölümünde bu konu hakkında daha fazla bilgi edinebilirsiniz.
 
- Statik veya dinamik bir paylaşılan kitaplık oluşturarak Android, iOS ve Windows arasında C++ kodu paylaşabilirsiniz.
+ Statik veya dinamik bir paylaşılan kitaplık oluşturarak C++ kodunu Android, iOS ve Windows arasında paylaşabilirsiniz.
 
  ![Statik ve dinamik paylaşılan kitaplıklar](../cross-platform/media/cross_plat_cpp_libraries.png "Statik ve dinamik paylaşılan kitaplıklar")
 
- Söz konusu kitaplığı, bu bölümde daha önce açıklananlar gibi bir Windows, iOS veya Android projesinde kullanabilirsiniz. Bunu, Xamarin, Java veya yönetilmeyen bir DLL içindeki işlevleri çağırmanızı sağlayan herhangi bir dili kullanarak oluşturduğunuz bir uygulamada da kullanabilirsiniz.
+ Bu kitaplığı bu bölümün önceki kısımlarında açıklananlar gibi bir Windows, iOS veya Android projesinde kullanabilirsiniz. Ayrıca, Xamarin, Java veya bir dil kullanarak derlemek için bir uygulamada veya bir unmanaged DLL'de işlevleri çağırmaya olanak sağlayan herhangi bir dilde de bunu tüketebilirsiniz.
 
- Bu kitaplıklara kod yazarken, Android ve Windows platformlarının yerel API 'Lerini araştırmak için IntelliSense 'i kullanabilirsiniz. Bu kitaplık projeleri Visual Studio hata ayıklayıcıyla tamamen tümleşiktir; böylece kesme noktaları ayarlayabilir, kod içinde adım adım ilerleyerek ve hata ayıklayıcının tüm gelişmiş özelliklerini kullanarak sorunları bulabilir ve giderebilmenizi sağlayabilirsiniz.
+ Bu kitaplıklarda kod yazarak Android ve Windows platformlarının yerel API'lerini keşfetmek için IntelliSense'i kullanabilirsiniz. Bu kitaplık projeleri, Visual Studio hata ayıklayıcısıyla tamamen tümleşiktir. Bu nedenle kesme noktaları ayarlayın, kodda adım atabilir ve hata ayıklayıcının tüm gelişmiş özelliklerini kullanarak sorunları bulup giderebilirsiniz.
 
 |**Daha fazla bilgi edinin**|
 |--------------------|
-|[Visual Studio 'Yu indirin](https://visualstudio.microsoft.com/downloads/) (VisualStudio.com)|
+|[İndirme Visual Studio](https://visualstudio.microsoft.com/downloads/) (VisualStudio.com)|
 |[C++ ile platformlar arası mobil geliştirmeyi yükleme](/cpp/cross-platform/install-visual-cpp-for-cross-platform-mobile-development)|
-|[Birden çok platformu hedeflemek Için C++ kullanma hakkında daha fazla bilgi edinin](https://visualstudio.microsoft.com/vs/cplusplus-mdd/) (VisualStudio.com)|
+|[Birden çok platformu hedeflemek için C++ kullanma](https://visualstudio.microsoft.com/vs/cplusplus-mdd/) hakkında daha fazla bilgi VisualStudio.com|
 |[İhtiyaç duyduğunuz şeyi yükler ve ardından Android için bir C++ yerel etkinlik uygulaması oluşturun](/cpp/cross-platform/create-an-android-native-activity-app)|
 |[Android ve Windows uygulamalarıyla C++ kodu paylaşma hakkında daha fazla bilgi edinin](https://visualstudio.microsoft.com/vs/cplusplus-mdd/) (VisualStudio.com)|
 |[C++ için platformlar arası mobil geliştirme örnekleri](/cpp/cross-platform/cross-platform-mobile-development-examples)|

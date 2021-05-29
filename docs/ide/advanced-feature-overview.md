@@ -1,6 +1,6 @@
 ---
 title: Gelişmiş özellikler
-description: Deneyimli geliştiriciler için daha uygun olabilecek gelişmiş özellikler veya Visual Studio 'Yu zaten bildiğiniz geliştiriciler hakkında bilgi edinin.
+description: Deneyimli geliştiriciler için daha uygun olan gelişmiş özellikler veya önceden bilgi sahibi olan geliştiriciler hakkında bilgi Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 06/01/2018
 ms.topic: conceptual
@@ -16,126 +16,126 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 05/29/2021
 ms.locfileid: "110687596"
 ---
-# <a name="features-of-visual-studio"></a>Visual Studio 'nun özellikleri
+# <a name="features-of-visual-studio"></a>Visual Studio'nin özellikleri
 
-[Visual STUDIO IDE 'ye genel bakış](../get-started/visual-studio-ide.md) makalesi, Visual Studio 'ya temel bir giriş sağlar. Bu makalede, deneyimli geliştiriciler için daha uygun olabilecek özellikler veya Visual Studio 'Yu zaten bildiğiniz geliştiriciler açıklanmaktadır.
+[IDE Visual Studio ye genel bakış](../get-started/visual-studio-ide.md) makalesi, IDE'ye Visual Studio. Bu makalede, deneyimli geliştiriciler veya daha önce bu uygulamalar hakkında bilgi sahibi olan geliştiriciler için daha uygun Visual Studio.
 
 ## <a name="modular-installation"></a>Modüler yükleme
 
-Visual Studio 'nun modüler yükleyicisi, *iş yüklerini* seçmenizi ve yüklemenizi sağlar. İş yükleri, tercih ettiğiniz programlama dili veya platformu için gereken özellik gruplarıdır. Bu strateji, Visual Studio yüklemesinin parmak izini daha küçük tutmaya yardımcı olur, bu da daha hızlı yüklenip güncelleştirilir.
+Visual Studio modüler yükleyicisi, iş yüklerini seçmenize ve *yüklemenize olanak sağlar.* İş yükleri, tercih ettiği programlama dili veya platform için gereken özellik gruplarıdır. Bu strateji, yüklemenin ayak izini daha Visual Studio yardımcı olur. Bu da yükleme ve güncelleştirme işleminin daha hızlı tamamlansa da güncelleştirmeyi sağlar.
 
 ::: moniker range="vs-2017"
 
-Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) sayfasına giderek ücretsiz olarak yükleme yapın.
+Daha önce yüklememiş Visual Studio indirmeler [sayfasına Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) ücretsiz olarak yükleyin.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads) sayfasına giderek ücretsiz olarak yükleme yapın.
+Daha önce yüklememiş Visual Studio indirmeler [sayfasına Visual Studio](https://visualstudio.microsoft.com/downloads) ücretsiz olarak yükleyin.
 
 ::: moniker-end
 
-Visual Studio 'Yu sisteminizde ayarlama hakkında daha fazla bilgi edinmek için bkz. [Visual Studio 'Yu yüklemek](../install/install-visual-studio.md).
+Sisteminize yükleme hakkında daha fazla Visual Studio için bkz. [Yükleme Visual Studio.](../install/install-visual-studio.md)
 
 ## <a name="create-cloud-enabled-apps-for-azure"></a>Azure için bulut özellikli uygulamalar oluşturma
 
-Visual Studio, Microsoft Azure tarafından desteklenen bulut özellikli uygulamaları kolayca oluşturmanıza olanak tanıyan bir araç paketi sunar. Uygulamaları ve Hizmetleri doğrudan IDE 'den Microsoft Azure yapılandırabilir, oluşturabilir, hatalarını ayıklayabilir, paketleyebilir ve dağıtabilirsiniz. Azure araçlarını ve proje şablonlarını almak için, Visual Studio 'Yu yüklerken **Azure geliştirme** iş yükünü seçin.
+Visual Studio, bulut destekli uygulamaları kolayca oluşturmanıza olanak sağlayan bir araç paketi Microsoft Azure. Uygulamaları ve hizmetleri doğrudan IDE'den yapılandırma, derleme, hata ayıklama, Microsoft Azure ve dağıtabilirsiniz. Azure araçlarını ve proje şablonlarını almak için, uygulama **yüklemesini** tamamlarken Azure geliştirme Visual Studio.
 
 ![Azure geliştirme iş yükü](../data-tools/media/azure-development-workload.png)
 
 ::: moniker range="vs-2017"
 
-**Azure geliştirme** iş yükünü yükledikten sonra, **Yeni proje** iletişim kutusunda C# için aşağıdaki **bulut** şablonları kullanılabilir:
+Azure geliştirme iş **yükünü yükledikten** sonra, Yeni **Proje** iletişim kutusunda aşağıdaki C# için Bulut **şablonları** kullanılabilir:
 
-![Visual Studio için bulut proje şablonları](media/cloud-project-templates.png)
+![Bulut proje şablonları Visual Studio](media/cloud-project-templates.png)
 
 ::: moniker-end
 
-Visual Studio 'nun [bulut Gezgini](/azure/vs-azure-tools-resources-managing-with-cloud-explorer) , Visual Studio 'da Azure tabanlı bulut kaynaklarınızı görüntülemenize ve yönetmenize olanak tanır. Bu kaynaklar, sanal makineleri, tabloları, SQL veritabanlarını ve daha fazlasını içerebilir. **Bulut Gezgini,** oturum açtığınız Azure aboneliği altında yönetilen tüm hesaplarda Azure kaynaklarını gösterir. Belirli bir işlem için gerekli **Azure portal, Cloud Explorer** sizi portalda gitmek zorunda olduğunuz yere götüren bağlantılar sağlar.
+Visual Studio Gezgini, [Azure](/azure/vs-azure-tools-resources-managing-with-cloud-explorer) tabanlı bulut kaynaklarınızı bulut kaynakları içinde görüntülemenize ve yönetmenize olanak Visual Studio. Bu kaynaklar sanal makineleri, tabloları, SQL veritabanlarını ve daha fazlasını içerebilir. **Cloud Explorer** , oturum açtığınız Azure aboneliği kapsamında yönetilen tüm hesaplara Azure kaynaklarını gösterir. Belirli bir işlem Azure portal gerektiriyorsa, **Cloud Explorer** , sizi, portala gitmeniz gereken yere götürür.
 
-![Visual Studio'de Cloud Explorer](media/cloud-explorer.png)
+![Visual Studio 'da bulut Gezgini](media/cloud-explorer.png)
 
-Bağlı Hizmetleri kullanarak uygulamalarınız için Azure **hizmetlerden faydalanabilirsiniz,** örneğin:
+Şu gibi **bağlı hizmetleri** kullanarak uygulamalarınız için Azure hizmetlerinden yararlanabilirsiniz:
 
-- [Active Directory bağlı hizmeti,](/azure/active-directory/develop/vs-active-directory-add-connected-service) kullanıcıların web uygulamalarına bağlanmak için [Azure Active Directory](/azure/active-directory/active-directory-whatis) hesaplarını kullanmalarını sağlar
-- [Blob depolama, kuyruklar](/azure/vs-azure-tools-connected-services-storage) ve tablolar için Azure Depolama'ya bağlı hizmet
-- [Key Vault uygulamaları için gizli](/azure/key-vault/vs-key-vault-add-connected-service) dizileri yönetmek için bağlı bir hizmettir
+- Kullanıcıların Web uygulamalarına bağlanmak için [Azure Active Directory](/azure/active-directory/active-directory-whatis) hesaplarını kullanabilmesi için [bağlı hizmet Active Directory](/azure/active-directory/develop/vs-active-directory-add-connected-service)
+- BLOB depolama, kuyruklar ve tablolar için [Azure Storage bağlı hizmeti](/azure/vs-azure-tools-connected-services-storage)
+- Web Apps için gizli dizileri yönetmek üzere [bağlı hizmet Key Vault](/azure/key-vault/vs-key-vault-add-connected-service)
 
-Kullanılabilir Bağlı **Hizmetler proje** türünüze bağlıdır. Çözüm Gezgini'de projeye sağ **tıklar ve Bağlı Hizmet Ekle'yi** **seçerek bir hizmet**  >  **ekleyin.**
+Kullanılabilir **bağlı hizmetler** , proje türüne bağlıdır. **Çözüm Gezgini** ' de projeye sağ tıklayıp   >  **bağlı hizmet** Ekle ' yi seçerek bir hizmet ekleyin.
 
-![Visual Studio Bağlı Hizmetler](media/connected-services.png)
+![Visual Studio bağlı hizmetleri](media/connected-services.png)
 
-Daha fazla bilgi için [bkz. Visual Studio ve Azure ile buluta taşıma.](https://visualstudio.microsoft.com/vs/azure-tools/)
+Daha fazla bilgi için bkz. [Visual Studio ve Azure ile buluta geçme](https://visualstudio.microsoft.com/vs/azure-tools/).
 
-## <a name="create-apps-for-the-web"></a>Web için uygulama oluşturma
+## <a name="create-apps-for-the-web"></a>Web için uygulamalar oluşturma
 
-Web modern dünyamızı destekler ve Visual Studio bu dünya için uygulama yazmanıza yardımcı olabilir. ASP.NET, Node.js, Python, JavaScript ve TypeScript kullanarak web uygulamaları oluşturabilirsiniz. Visual Studio Angular, jQuery, Express ve daha fazlası gibi web çerçevelerini anlar. ASP.NET Core ve .NET Core Windows, Mac ve Linux işletim sistemlerinde çalışır. [ASP.NET Core,](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core) MVC, WebAPI ve SignalR için önemli bir güncelleştirmedir ve Windows, Mac ve Linux üzerinde çalışır.  ASP.NET Core, modern bulut tabanlı web uygulamaları ve hizmetleri oluşturmak için size zayıf ve birleştirilebilir bir .NET yığını sağlayacak şekilde tasarlanmıştır.
+Web sürücüleri modern dünyayı ve Visual Studio BT için uygulama yazmanıza yardımcı olabilir. ASP.NET, Node.js, Python, JavaScript ve TypeScript kullanarak Web Apps oluşturabilirsiniz. Visual Studio, angular, jQuery, Express ve daha fazlası gibi Web çerçevelerini anlamıştır. ASP.NET Core ve .NET Core, Windows, Mac ve Linux işletim sistemlerinde çalışır. [ASP.NET Core](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core) , MVC, Webapı ve SignalR için önemli bir güncelleştirmedir ve Windows, Mac ve Linux üzerinde çalışır.  ASP.NET Core, baştan sona, modern bulut tabanlı Web uygulamaları ve hizmetleri oluşturmaya yönelik yalın ve birleştirilebilir bir .NET yığını sunmak üzere tasarlanmıştır.
 
-Daha fazla bilgi için [bkz. Modern web aracı.](https://visualstudio.microsoft.com/vs/modern-web-tooling/)
+Daha fazla bilgi için bkz. [Modern Web araçları](https://visualstudio.microsoft.com/vs/modern-web-tooling/).
 
-## <a name="build-cross-platform-apps-and-games"></a>Platformlar arası uygulamalar ve oyunlar oluşturma
+## <a name="build-cross-platform-apps-and-games"></a>Platformlar arası uygulamalar ve Oyunlar oluşturun
 
-Visual Studio 'Yu kullanarak macOS, Linux ve Windows için uygulama ve Oyunlar, Android, iOS ve diğer [mobil cihazlar](https://visualstudio.microsoft.com/vs/mobile-app-development/)için de kullanabilirsiniz.
+macOS, Linux Visual Studio Windows'un yanı sıra Android, iOS ve diğer mobil cihazlar için uygulama ve oyunlar oluşturmak için Visual Studio'yi [kullanabilirsiniz.](https://visualstudio.microsoft.com/vs/mobile-app-development/)
 
-- Windows, macOS ve Linux 'ta çalışan [.NET Core](/dotnet/core/) uygulamaları oluşturun.
+- Windows, macOS ve Linux üzerinde çalıştıran [.NET Core](/dotnet/core/) uygulamaları oluşturun.
 
-- [Xamarin](https://developer.xamarin.com/guides/cross-platform/windows/visual-studio/)kullanarak C# ve F # için IOS, Android ve Windows için mobil uygulamalar oluşturun.
+- [Xamarin](https://developer.xamarin.com/guides/cross-platform/windows/visual-studio/)kullanarak C# ve F# ile iOS, Android ve Windows için mobil uygulamalar oluşturun.
 
-- [Unity için Visual Studio Araçları](/gamedev/unity/get-started/visual-studio-tools-for-unity.md)kullanarak C# dilinde 2B ve 3B Oyunlar oluşturun.
+- C# ile 2D ve 3D oyunlar oluşturmak için [Unity için Visual Studio Araçları.](/gamedev/unity/get-started/visual-studio-tools-for-unity.md)
 
-- İOS, Android ve Windows cihazları için yerel C++ uygulamaları oluşturun. [Platformlar arası geliştirme için C++](/cpp/cross-platform/visual-cpp-for-cross-platform-mobile-development)kullanarak IOS, Android ve Windows için oluşturulan kitaplıklarda ortak kod paylaşma.
+- iOS, Android ve Windows cihazları için yerel C++ uygulamaları oluşturun. Platformlar arası geliştirme için C++ kullanarak iOS, Android ve Windows için yerleşik [kitaplıklarda ortak kodu paylaşın.](/cpp/cross-platform/visual-cpp-for-cross-platform-mobile-development)
 
 ## <a name="connect-to-databases"></a>Veritabanlarına bağlanma
 
-**Sunucu Gezgini** , SQL Server örneklerine ve varlıklara yerel olarak, uzaktan ve Azure, Salesforce.com, Microsoft 365 ve web sitelerinde gözatmanıza ve yönetmenize yardımcı olur. **Sunucu Gezgini** açmak için, ana menüdeki Sunucu Gezgini **görüntüle**' yi seçin  >  . Sunucu Gezgini kullanma hakkında daha fazla bilgi için bkz. [yeni bağlantılar ekleme](../data-tools/add-new-connections.md).
+**Sunucu Gezgini** SQL Server azure, Salesforce.com, Microsoft 365 ve web sitelerinde yerel olarak, uzaktan ve varlıklara göz atmanıza ve varlıkları yönetmenize yardımcı olur. Bir **Sunucu Gezgini** açmak için ana menüde Görünüm'Sunucu Gezgini.   >   Yeni bağlantı kullanma hakkında daha Sunucu Gezgini için [bkz. Yeni bağlantı ekleme.](../data-tools/add-new-connections.md)
 
-[SQL Server veri araçları (SSDT)](/sql/ssdt/download-sql-server-data-tools-ssdt) , SQL Server, Azure SQL veritabanı ve Azure SQL veri ambarı için güçlü bir geliştirme ortamıdır. Veritabanlarını oluşturmanızı, hatalarını ayıklamanızı, bakımını ve yeniden düzenlemenize olanak sağlar. Bir veritabanı projesiyle veya doğrudan bağlı bir veritabanı örneğiyle ya da şirket içi olarak çalışabilirsiniz.
+[SQL Server Veri Araçları (SSDT),](/sql/ssdt/download-sql-server-data-tools-ssdt) SQL Server, Azure SQL Veritabanı ve Azure SQL Data Warehouse. Veritabanlarını derleme, hata ayıklama, bakım ve yeniden düzenleme olanaklarını sağlar. Bir veritabanı projesiyle veya doğrudan bağlı bir veritabanı örneğiyle şirket içinde veya şirket içinde çalışabilirsiniz.
 
-Visual Studio 'daki **SQL Server Nesne Gezgini** , SQL Server Management Studio benzer veritabanı nesnelerinizin bir görünümünü sağlar. SQL Server Nesne Gezgini, açık hacimsiz veritabanı yönetimi ve tasarım işi yapmanızı sağlar. İş örnekleri, tablo verilerini düzenlemenizi, şemaları karşılaştırmayı, SQL Server Nesne Gezgini ' den çok bağlamsal menüler kullanarak sorguları yürütmeyi ve daha fazlasını içerir.
+**SQL Server Nesne Gezgini'Visual Studio** veritabanı nesnelerinizin görünümü, veritabanınıza benzer SQL Server Management Studio. SQL Server Nesne Gezgini, hafif veritabanı yönetimi ve tasarım çalışmaları yapmaya olanak sağlar. İş örnekleri arasında tablo verilerini düzenleme, şemaları karşılaştırma, bağlam menülerini kullanarak sorguları yürütme ve SQL Server Nesne Gezgini daha fazlası yer alır.
 
 ![SQL Server Nesne Gezgini](../ide/media/vs2015_sqlobjectexplorer.png)
 
-## <a name="debug-test-and-improve-your-code"></a>Kodunuzda hata ayıklayın, test edin ve geliştirme yapın
+## <a name="debug-test-and-improve-your-code"></a>Kodunuzun hata ayıklaması, testini ve geliştirmesi
 
-Kod yazdığınızda, çalıştırmanız ve hata ve performans için test etmeniz gerekir. Visual Studio 'nun son teknoloji hata ayıklama sistemi, yerel projenizde, uzak bir cihazda veya bir [cihaz öykünücüsünde](../cross-platform/visual-studio-emulator-for-android.md)çalışan kodun hatalarını ayıklamanıza olanak sağlar. Tek seferde kod bir bildirimde ilerleyebileceğiniz gibi değişkenleri inceleyebilirsiniz. Yalnızca belirtilen koşul true olduğunda isabetli kesme noktaları ayarlayın. Hata ayıklama seçenekleri kod düzenleyicisinde yönetilebilir, böylece kodunuzu bırakmanız gerek yoktur. Uygulama içinde hata ayıklama hakkında daha fazla Visual Studio için [bkz. İlk olarak hata ayıklayıcısına bakın.](../debugger/debugger-feature-tour.md)
+Kod yazarak çalıştırmanız ve hataları ve performansı test etmek için yazmanız gerekir. Visual Studio son teknoloji hata ayıklama sistemi yerel projeniz, uzak bir cihaz veya bir cihaz öykünücüsü üzerinde çalışan kodlarda hata [ayıklamanıza olanak sağlar.](../cross-platform/visual-studio-emulator-for-android.md) Tek tek bir deyimi kodla adım adım inceleyebilirsiniz ve değişkenleri ilerlerken inceleyebilirsiniz. Yalnızca belirtilen bir koşul true olduğunda isabet noktalarını ayarlayabilirsiniz. Hata ayıklama seçenekleri kod Düzenleyicisi 'nde yönetilebilir, böylece kodunuzda bırakmanız gerekmez. Visual Studio 'da hata ayıklama hakkında daha fazla bilgi edinmek için bkz. [hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md).
 
-Uygulamalarınızı performansını geliştirme hakkında daha fazla bilgi edinmek için Visual Studio profili oluşturma özelliğine [göz](../profiling/profiling-feature-tour.md) atabilirsiniz.
+Uygulamalarınızın performansını artırma hakkında daha fazla bilgi edinmek için Visual Studio 'nun [profil oluşturma](../profiling/profiling-feature-tour.md) özelliğini kullanıma alın.
 
-test [etmek](../test/improve-code-quality.md)için Visual Studio, birim testi, Live Unit Testing, IntelliTest, yük ve performans testi ve daha fazlasını sunar. Visual Studio tasarım, güvenlik [ve](../code-quality/code-analysis-for-managed-code-overview.md) diğer kusur türlerini yakalamak için gelişmiş kod analizi özelliklerine de sahiptir.
+[Test](../test/improve-code-quality.md)için, Visual Studio birim testi, Live Unit Testing, IntelliTest, yük ve performans testi ve daha fazlasını sunar. Visual Studio 'Da Ayrıca tasarım, güvenlik ve diğer tür kusuru yakalamak için Gelişmiş [Kod Analizi](../code-quality/code-analysis-for-managed-code-overview.md) özellikleri de vardır.
 
-## <a name="deploy-your-finished-application"></a>Bitmiş uygulamanızı dağıtma
+## <a name="deploy-your-finished-application"></a>Tamamlanmış uygulamanızı dağıtma
 
-Uygulamanızı kullanıcılara veya müşterilere dağıtmaya hazır Visual Studio bunu yapmak için araçlar sağlar. Dağıtım seçenekleri arasında Microsoft Store, bir SharePoint sitesine veya InstallShield ya da Windows Installer teknolojileri yer almaktadır. Her şey IDE aracılığıyla erişilebilir. Daha fazla bilgi için [bkz. Uygulamaları, hizmetleri ve bileşenleri dağıtma.](../deployment/deploying-applications-services-and-components.md)
+Uygulamanız kullanıcılara veya müşterilere dağıtmaya hazırsa, Visual Studio bunu yapmak için gereken araçları sağlar. Dağıtım seçenekleri Microsoft Store, bir SharePoint sitesine veya InstallShield ya da Windows Installer teknolojilerine dahildir. Tamamen IDE aracılığıyla erişilebilir. Daha fazla bilgi için bkz. [uygulamaları, hizmetleri ve bileşenleri dağıtma](../deployment/deploying-applications-services-and-components.md).
 
-## <a name="manage-your-source-code-and-collaborate-with-others"></a>Kaynak kodunuzu yönetme ve başkalarıyla işbirliği yapma
+## <a name="manage-your-source-code-and-collaborate-with-others"></a>Kaynak kodunuzu yönetin ve başkalarıyla işbirliği yapın
 
-Kaynak kodunuzu GitHub dahil olmak üzere herhangi bir sağlayıcı tarafından barındırılan Git depolarında yönetebilirsiniz. Veya [Azure DevOps Services](/azure/devops/index) projenizin tamamında hataları ve iş öğelerini yönetmek için bu kodu kullanabilirsiniz. Git [Kullanmaya başlayın kullanarak git depolarını Azure Repos](/azure/devops/repos/git/gitquickstart?tabs=visual-studio) hakkında daha fazla bilgi edinmek için git ve Visual Studio ile Takım Gezgini. Visual Studio diğer yerleşik kaynak denetimi özellikleri de vardır. Bu özellikler hakkında daha fazla bilgi edinmek için bkz. Visual Studio [(blog)](https://devblogs.microsoft.com/devops/new-git-features-in-visual-studio-2017/).
+GitHub da dahil olmak üzere herhangi bir sağlayıcı tarafından barındırılan Git depolarındaki kaynak kodunuzu yönetebilirsiniz. Ya da tüm projeniz için hataları ve iş öğelerini kullanarak kodu yönetmek için [Azure DevOps Services](/azure/devops/index) kullanın. Takım Gezgini kullanarak Visual Studio 'da Git depoları yönetme hakkında daha fazla bilgi edinmek için bkz. [Git ve Azure Repos kullanmaya başlama](/azure/devops/repos/git/gitquickstart?tabs=visual-studio) . Visual Studio 'da Ayrıca diğer yerleşik kaynak denetimi özellikleri de vardır. Bunlar hakkında daha fazla bilgi edinmek için bkz. [Visual Studio 'Da yeni git özellikleri (blog)](https://devblogs.microsoft.com/devops/new-git-features-in-visual-studio-2017/).
 
-Azure DevOps Services planlama, barındırma, otomatikleştirme ve dağıtma ile ekiplerde işbirliğini etkinleştirmeye yönelik bulut tabanlı hizmetlerdir. Azure DevOps Services Git depolarını (dağıtılmış sürüm denetimi) ve Team Foundation Sürüm Denetimi (merkezi sürüm denetimi) destekler. Bunlar, sürüm denetimi sistemlerinde depolanan kodun sürekli derleme ve yayın (CI/CD) için işlem hatlarını destekler. Azure DevOps Services Ayrıca Scrum, CMMı ve çevik geliştirme yöntemlerini de destekler.
+Azure DevOps Services, yazılımı planlamak, barındırmak, otomatikleştirmek ve dağıtmak ve ekiplerde işbirliği sağlamak için bulut tabanlı hizmetlerdir. Azure DevOps Services hem Git depoları (dağıtılmış sürüm denetimi) hem de Team Foundation Sürüm Denetimi (merkezi sürüm denetimi) destekler. Sürüm denetim sistemlerinde depolanan kodun sürekli derlemesi ve sürümü (CI/CD) için işlem hatlarını destekler. Azure DevOps Services Scrum, CMMI ve Çevik geliştirme yöntemlerini de destekler.
 
-Team Foundation Server (TFS), Visual Studio için uygulama yaşam döngüsü yönetim merkezdir. Geliştirme işlemiyle ilgili herkesin tek bir çözüm kullanarak katılmasını sağlar. TFS, heterojen takımları ve projeleri yönetmek için yararlıdır.
+Team Foundation Server (TFS), uygulama yaşam döngüsü yönetim merkezidir Visual Studio. Geliştirme sürecine dahil olan herkesin tek bir çözüm kullanarak katılmalarını sağlar. TFS, heterojen ekipleri ve projeleri yönetmek için de yararlıdır.
 
-Ağınızda bir Azure DevOps kuruluşunuz veya bir Team Foundation Server varsa, Visual Studio 'daki **Takım Gezgini** pencere aracılığıyla buna bağlanırsınız. Bu pencereden, kaynak denetimi içine veya dışına kodu denetleyebilir, iş öğelerini yönetebilir, yapıları başlatabilir ve ekip odalarına ve çalışma alanlarına erişebilirsiniz. **Takım Gezgini** arama kutusundan veya ana menüdeki Takım Gezgini **görüntüle**' den  >   veya **takımdan**  >  **Bağlantıları Yönet**' den açabilirsiniz.
+Ağ üzerinde bir Azure DevOps veya Team Foundation Server varsa, bu kuruluşa ağ Takım Gezgini **penceresinden** Visual Studio. Bu pencereden kodu kaynak denetimine veya kaynak denetiminden çıkarabilirsiniz, iş öğelerini yönetebilir, derlemeleri başlatabilir ve takım odalarına ve çalışma alanlarına erişebilirsiniz. Arama **kutusundan Takım Gezgini** menüyü Görünüm menüsünden veya Bağlantıları Takım  >  **Takım Gezgini** **menüsünden**  >  **açabilirsiniz.**
 
-Aşağıdaki görüntüde, Azure DevOps Services barındırılan bir çözüme yönelik **Takım Gezgini** penceresi gösterilmektedir.
+Aşağıdaki görüntüde, **Takım Gezgini** içinde barındırılan bir çözüme Azure DevOps Services.
 
 ![Visual Studio Takım Gezgini](../ide/media/vs2017_teamexplorer_devops.png)
 
-Ayrıca, takımınızın sürüm denetimine denetlediği kodu oluşturmak için yapı işleminizi otomatikleştirebilir. Örneğin, her bir veya daha fazla projeyi her bir kod iade edildiğinde her gece veya bir kez oluşturabilirsiniz. Daha fazla bilgi için bkz. [Azure Pipelines](/azure/devops/pipelines/index?view=vsts&preserve-view=true).
+Ayrıca derleme işleminizi otomatikleştirin ve takımınız üzerinde geliştirmelerin sürüm denetimine giriş yaptı kodu oluşturabilirsiniz. Örneğin, her gece bir veya daha fazla proje ya da bu kod her iade edildiklerinde derlemek için bir veya daha fazla proje ebilirsiniz. Daha fazla bilgi için [bkz. Azure Pipelines.](/azure/devops/pipelines/index?view=vsts&preserve-view=true)
 
 ## <a name="extend-visual-studio"></a>Visual Studio’yu Genişletme
 
-Visual Studio, ihtiyacınız olan tam işlevselliğe sahip değilse, şunu ekleyebilirsiniz! İş akışınıza ve stilinize göre IDE 'yi kişiselleştirebilir, henüz Visual Studio ile tümleşik olmayan dış araçlara yönelik destek ekleyebilir ve üretkenliğinizi artırmak için mevcut işlevselliği değiştirebilirsiniz. Visual Studio Genişletilebilirlik Araçları (VS SDK) en son sürümünü bulmak için bkz. [Visual STUDIO SDK](../extensibility/visual-studio-sdk.md).
+Bu Visual Studio tam olarak ihtiyacınız olan işleve sahip değilse ekleyin! IDE'yi iş akışınıza ve stilinize göre kişiselleştirebilirsiniz, henüz Visual Studio dış araçlar için destek ekleyebilir ve üretkenliğinizi artırmak için mevcut işlevleri değiştirebilirsiniz. Visual Studio Genişletilebilirlik Araçları(VS SDK) sürümünü bulmak için bkz. [Visual Studio SDK.](../extensibility/visual-studio-sdk.md)
 
-Kendi kod Çözümleyicileri ve kod oluşturanlar yazmak için .NET Compiler Platform ("Roslyn") kullanabilirsiniz. [Roslyn](https://github.com/dotnet/Roslyn)'de ihtiyacınız olan her şeyi bulun.
+Kendi kod çözümleyicilerinizi ve .NET Compiler Platform oluşturucularınızı yazmak için .NET Compiler Platform ("Roslyn") kullanabilirsiniz. [Roslyn'de](https://github.com/dotnet/Roslyn)ihtiyacınız olan her şeyi bulun.
 
-Visual Studio için Microsoft geliştiricilerin yanı sıra geliştirme Topluluğumuzdan oluşturulan [mevcut uzantıları](https://marketplace.visualstudio.com/vs) bulun.
+Hem [Microsoft geliştiricileri hem](https://marketplace.visualstudio.com/vs) Visual Studio geliştirme topluluğumuz tarafından oluşturulan uygulamalar için mevcut uzantıları bulun.
 
-Visual Studio 'Yu genişletme hakkında daha fazla bilgi için bkz. [Visual STUDIO IDE 'Yi genişletme](https://visualstudio.microsoft.com/vs/extend/).
+IDE'leri genişletme hakkında daha Visual Studio için [bkz. IDE'Visual Studio genişletme.](https://visualstudio.microsoft.com/vs/extend/)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio IDE 'ye Genel Bakış](../get-started/visual-studio-ide.md)
+- [Visual Studio IDE'ye genel bakış](../get-started/visual-studio-ide.md)
 - [Visual Studio 2017’deki yenilikler](../ide/whats-new-visual-studio-2017.md)
-- [Visual Studio 2019'daki yeniler](../ide/whats-new-visual-studio-2019.md)
+- [Visual Studio 2019 ' deki yenilikler](../ide/whats-new-visual-studio-2019.md)
