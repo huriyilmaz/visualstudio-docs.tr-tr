@@ -1,6 +1,6 @@
 ---
-title: Visual Studio 'da platformlar arası mobil geliştirme | Microsoft Docs
-description: Bu makalede, Visual Studio 'Yu kullanarak Android, iOS ve Windows cihazları için nasıl uygulama oluşturacağınızı öğrenin.
+title: Visual Studio |'da Platformlar Arası Mobil Visual Studio | Microsoft Docs
+description: Bu makalede, android, iOS ve Windows cihazları için uygulama derlemeyi öğrenmek için Visual Studio.
 titleSuffix: ''
 ms.custom: SEO-VS-2020
 ms.date: 10/17/2019
@@ -12,43 +12,43 @@ ms.author: crdun
 manager: crdun
 ms.workload:
 - multiple
-ms.openlocfilehash: b50edfe91a9b497760c44d3fd548eb6d2a15a049
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 2f3c611ae157be4f2ea89254856bdd3b6fba448d
+ms.sourcegitcommit: 63cb90e8cea112aa2ce8741101b309dbc709e393
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93399383"
+ms.lasthandoff: 05/29/2021
+ms.locfileid: "110687684"
 ---
-# <a name="cross-platform-mobile-development-in-visual-studio"></a>Visual Studio 'da platformlar arası mobil geliştirme
+# <a name="cross-platform-mobile-development-in-visual-studio"></a>Visual Studio'de platformlar arası mobil Visual Studio
 
-Visual Studio 'Yu kullanarak Android, iOS ve Windows cihazları için uygulamalar oluşturabilirsiniz.  Uygulamanızı tasarlarken, Microsoft 365, Azure App Service ve Application Insights gibi bağlı hizmetleri kolayca eklemek için Visual Studio 'daki araçları kullanın.
+Android, iOS ve Windows cihazları için uygulama oluşturmak için Visual Studio.  Uygulamayı tasarlarken, Visual Studio, Microsoft 365 ve Azure App Service gibi bağlı hizmetleri kolayca eklemek için Application Insights.
 
-C# ve .NET Framework, HTML ve JavaScript ya da C++ kullanarak uygulamalarınızı oluşturun. Kod, dizeler, görüntüler ve bazı durumlarda kullanıcı arabiriminden bile paylaşabilirsiniz.
+C# ve .NET Framework, HTML ve JavaScript veya C++ kullanarak uygulamalarınızı oluşturun. Kod, dize, görüntü ve hatta bazı durumlarda kullanıcı arabirimini paylaşın.
 
-Bir oyun veya derinlikli grafik uygulaması oluşturmak istiyorsanız, Unity için Visual Studio Araçları 'nı yükler ve iOS, Android, Windows ve diğer platformlarda çalışan uygulamalar için popüler platformlar arası oyun/grafik altyapısı ve geliştirme ortamı olan Unity ile Visual Studio 'nun güçlü üretkenlik özelliklerinin tümünden yararlanın.
+Bir oyun veya tam ekran grafik uygulaması oluşturmak için Unity için Visual Studio araçlarını yükleyin ve iOS, Android, Windows ve diğer platformlarda çalışan uygulamalar için popüler platformlar arası oyun/grafik altyapısı ve geliştirme ortamı Olan Unity ile Visual Studio'nin tüm güçlü üretkenlik özelliklerinin keyfini çıkarın.
 
 ## <a name="build-an-app-for-android-ios-and-windows-net-framework"></a>Android, iOS ve Windows için uygulama oluşturma (.NET Framework)
 
 ![Cihazlar](../cross-platform/media/homedevices.png "HomeDevices")
 
-Xamarin için Visual Studio Araçları, aynı çözümde Android, iOS ve Windows 'u hedefleyebilir, kod ve hatta Kullanıcı arabirimini de kullanabilirsiniz.
+Xamarin Visual Studio Araçları ile android, iOS ve Windows'u aynı çözümde hedefleyebilirsiniz, kod ve hatta kullanıcı arabirimi paylaşabilirsiniz.
 
 |**Daha fazla bilgi edinin**|
 |--------------------|
-|[Visual Studio 'yu](https://visualstudio.microsoft.com/vs/community/) (VisualStudio.com) yükler|
-|[Visual Studio 'Da Xamarin hakkında bilgi edinin](https://visualstudio.microsoft.com/xamarin/) (VisualStudio.com)|
+|[Yükleme Visual Studio](https://visualstudio.microsoft.com/vs/community/) (VisualStudio.com)|
+|[Visual Studio'de Xamarin](https://visualstudio.microsoft.com/xamarin/) hakkında bilgi VisualStudio.com|
 |[Xamarin mobil uygulama geliştirme belgeleri](/xamarin/) |
 |[Xamarin uygulamaları ile DevOps](/xamarin/tools/ci/devops/) |
-|[Visual Studio 'Da Evrensel Windows uygulamaları hakkında bilgi edinin](https://visualstudio.microsoft.com/vs/universal-windows-platform/) (VisualStudio.com)|
-|[Swift ve C# arasındaki benzerlikler hakkında bilgi edinin](https://aka.ms/scposter) (download.Microsoft.com)|
+|[Visual Studio'da Evrensel Windows uygulamaları](https://visualstudio.microsoft.com/vs/universal-windows-platform/) (VisualStudio.com) hakkında bilgi edinin|
+|[Swift ile C# arasındaki benzerlikler hakkında bilgi download.microsoft.com](https://aka.ms/scposter)|
 
-### <a name="target-android-ios-and-windows-from-a-single-code-base"></a><a name="AndroidHTML"></a> Tek bir kod tabanında Android, iOS ve Windows 'u hedefleyin
+### <a name="target-android-ios-and-windows-from-a-single-code-base"></a><a name="AndroidHTML"></a> Tek bir kod tabanından Android, iOS ve Windows'u hedefleme
 
- C# veya F # kullanarak Android, iOS ve Windows için yerel uygulamalar oluşturabilirsiniz (Visual Basic şu anda desteklenmez).  Başlamak için Visual Studio 'yu yükledikten sonra yükleyicideki **.net Ile mobil geliştirme** seçeneğini belirleyin.
+ C# veya F# kullanarak Android, iOS ve Windows için yerel uygulamalar Visual Basic (şu anda desteklenmiyor).  İlkeyi yüklemek Visual Studio yükleyicide **.NET ile** Mobil Geliştirme seçeneğini belirleyin.
 
- Visual Studio zaten yüklüyse, **Visual Studio yükleyicisi** yeniden çalıştırın ve Xamarin için .net seçeneğiyle aynı **Mobil geliştirmeyi** (yukarıdaki gibi) seçin.
+ Zaten yüklü bir Visual Studio varsa, Visual Studio Yükleyicisi yeniden  çalıştırın ve Xamarin için **.NET** ile Mobil Geliştirme seçeneğini (yukarıda olduğu gibi) seçin.
 
- İşiniz bittiğinde, proje şablonları **Yeni proje** iletişim kutusunda görünür. Xamarin şablonlarını bulmanın en kolay yolu yalnızca "Xamarin" üzerinde arama yapmak için kullanılır.
+ Bitirin, proje şablonları Yeni Proje **iletişim kutusunda** görünür. Xamarin şablonlarını bulmanın en kolay yolu yalnızca "Xamarin" üzerinde arama yapmak için kullanılır.
 
  Xamarin, Android, iOS ve Windows 'un yerel işlevlerini .NET sınıfları ve yöntemleri olarak kullanıma sunar. Bu, uygulamalarınızın yerel API 'Ler ve yerel denetimler için tam erişimi olduğu ve yalnızca yerel platform dillerinde yazılmış uygulamalar olarak yanıt verdikleri anlamına gelir.
 
@@ -110,7 +110,7 @@ Xamarin için Visual Studio Araçları, aynı çözümde Android, iOS ve Windows
 |**Daha fazla bilgi edinin**|
 |--------------------|
 |[Visual Studio 'yu](https://visualstudio.microsoft.com/vs/community/) (VisualStudio.com) yükler|
-|[Apache Cordova için Visual Studio Araçları kullanmaya başlama](/visualstudio/cross-platform/tools-for-cordova/)|
+|[Apache Cordova için Visual Studio Araçları kullanmaya başlama](/previous-versions/visualstudio/cross-platform/tools-for-cordova/)|
 |[Android Için Visual Studio öykünücüsü (VisualStudio.com) hakkında bilgi edinin](https://visualstudio.microsoft.com/vs/msft-android-emulator/)|
 
 ::: moniker-end

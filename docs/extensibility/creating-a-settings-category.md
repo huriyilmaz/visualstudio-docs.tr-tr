@@ -12,12 +12,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1e3ef6dbfc58c67ce8e4dd7ff26634e4dbce2218
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: fe46ea835a119978fd3decd26949db3d59944e5e
+ms.sourcegitcommit: 63cb90e8cea112aa2ce8741101b309dbc709e393
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105089348"
+ms.lasthandoff: 05/29/2021
+ms.locfileid: "110687613"
 ---
 # <a name="create-a-settings-category"></a>Ayarlar kategorisi oluşturma
 
@@ -45,12 +45,12 @@ Bu yönergeyi başlatmak için önce [bir seçenek sayfası oluştur sayfasını
     |107|Ayarlarım|
     |108|OptionInteger ve OptionFloat|
 
-     Bu, "kategorim" kategorisini, "ayarlarımı My" nesnesini ve "OptionInteger ve OptionFloat" Kategori açıklamasını oluşturan kaynakları oluşturur.
+     Bu, kategoriye "Kategorim" adını, "Ayarlarım" nesnesini ve "OptionInteger ve OptionFloat" kategori açıklamasını oluşturan kaynaklar oluşturur.
 
     > [!NOTE]
-    > Bu üçü de yalnızca kategori adı, **içeri ve dışarı aktarma ayarları** sihirbazında görünmez.
+    > Bu üçü arasında, Ayarları İçeri ve Dışarı Aktarma sihirbazında yalnızca **kategori adı görünmez.**
 
-3. *Myaraçları Optionspackage. cs* dosyasında, `float` `OptionFloat` `OptionPageGrid` Aşağıdaki örnekte gösterildiği gibi sınıfına adlı bir özellik ekleyin.
+3. *MyToolsOptionsPackage.cs* içinde, aşağıdaki örnekte gösterildiği gibi `float` `OptionFloat` `OptionPageGrid` sınıfına adlı bir özellik ekleyin.
 
     ```csharp
     public class OptionPageGrid : DialogPage
@@ -78,29 +78,29 @@ Bu yönergeyi başlatmak için önce [bir seçenek sayfası oluştur sayfasını
     ```
 
     > [!NOTE]
-    > `OptionPageGrid`"Kategorim" adlı kategori, artık iki özelliklerden oluşur `OptionInteger` `OptionFloat` .
+    > `OptionPageGrid`"Kategorim" adlı kategori artık ve olmak için iki özellik `OptionInteger` `OptionFloat` içerir.
 
-4. Sınıfına bir ekleyin <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> `MyToolsOptionsPackage` ve CategoryName "kategorim" verin, bunu ObjectName "My Settings" olarak ayarlayın ve Isaraçları OptionPage öğesini true olarak ayarlayın. CategoryResourceId, ObjectNameResourceID ve DescriptionResourceId değerlerini daha önce oluşturulan karşılık gelen dize kaynak kimliklerine ayarlayın.
+4. sınıfına <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> bir ekleyin ve `MyToolsOptionsPackage` CategoryName "My Category" girin, ObjectName "My Settings" yazın ve isToolsOptionPage'i true olarak ayarlayın. categoryResourceID, objectNameResourceID ve DescriptionResourceID'yi daha önce oluşturulan karşılık gelen dize kaynağı kimlikleri olarak ayarlayın.
 
     ```csharp
     [ProvideProfileAttribute(typeof(OptionPageGrid),
         "My Category", "My Settings", 106, 107, isToolsOptionPage:true, DescriptionResourceID = 108)]
     ```
 
-5. Projeyi derleyin ve hata ayıklamayı başlatın. Deneysel örnekte, **kılavuz Sayfamın** şimdi tamsayı ve kayan değerleri olduğunu görmeniz gerekir.
+5. Projeyi derleme ve hata ayıklamayı başlatma. Deneysel örnekte Kılavuzum Sayfasının artık **hem tamsayı hem** de kayan değerlere sahip olduğunu görüyoruz.
 
-## <a name="examine-the-settings-file"></a>Ayarlar dosyasını inceleyin
- Bu bölümde, özellik kategorisi değerlerini bir ayarlar dosyasına dışarı aktaralırsınız. Dosyayı incelemektir ve sonra değerleri özellik kategorisine geri aktarabilirsiniz.
+## <a name="examine-the-settings-file"></a>Ayarlar dosyasını inceleme
+ Bu bölümde, özellik kategorisi değerlerini bir ayarlar dosyasına dışarı aktarın. Dosyayı inceler ve ardından değerleri özellik kategorisine geri içeri aktarabilirsiniz.
 
-1. **F5** tuşuna basarak projeyi hata ayıklama modunda başlatın. Bu, deneysel örneği başlatır.
+1. F5 tuşuna basarak projeyi hata ayıklama **modunda başlatın.** Bu, deneysel örneği başlatır.
 
-2. **Araç**  >  **seçenekleri** iletişim kutusunu açın.
+2. Araçlar Seçenekleri **iletişim**  >  **kutusunu** açın.
 
-3. Sol bölmedeki ağaç görünümünde, **kategorim** ' ı genişletin ve ardından **kılavuz sayfam**' ı tıklatın.
+3. Sol bölmedeki ağaç görünümünde Kategorim'i genişletin ve **ardından** Kılavuz **Sayfam'a tıklayın.**
 
-4. **OptionFloat** değerini 3,1416 ve **OptionInteger** değerlerini 12 olarak değiştirin. **Tamam**'a tıklayın.
+4. **OptionFloat değerini** 3,1416 ve **OptionInteger değerini** 12 olarak değiştirir. **Tamam**'a tıklayın.
 
-5. **Araçlar** menüsünde **Içeri ve dışarı aktarma ayarları**' na tıklayın.
+5. Araçlar menüsünde **Ayarları** İçeri ve Dışarı **Aktar'a tıklayın.**
 
      **Ayarları içeri ve dışarı aktarma** Sihirbazı görüntülenir.
 
@@ -118,7 +118,9 @@ Bu yönergeyi başlatmak için önce [bir seçenek sayfası oluştur sayfasını
 
 9. Yeni ayarlar dosyasını *MySettings. vssettings* olarak adlandırın ve uygun bir dizine kaydedin. **Finish (Son)** düğmesine tıklayın.
 
-     **Dışarı aktarma tamamlandı** sayfası, ayarlarınızın başarıyla verildiğini bildiriyor.
+   `.vssettings`Dosya, Visual Studio ayarları dosyasıdır. Dosyanın şeması açık. En yaygın olarak, şema her kategorinin bir etiket olduğu bir XML yapısına uyar ve bu, kendisini alt kategori etiketleri içerebilir. Bu alt kategori etiketleri, özellik değeri etiketleri içerebilir. Çoğu paket ortak yapıyı kullandığından, Visual Studio 'daki herhangi bir paket, tarafından seçtiği şemayı kullanarak rastgele XML 'yi dosyaya katkıda bulunabilir.
+
+   **Dışarı aktarma tamamlandı** sayfası, ayarlarınızın başarıyla verildiğini bildiriyor.
 
 10. **Dosya** menüsünde **Aç**' ın üzerine gelin ve ardından **Dosya**' ya tıklayın. *MySettings. vssettings* ' i bulun ve açın.
 
@@ -139,20 +141,20 @@ Bu yönergeyi başlatmak için önce [bir seçenek sayfası oluştur sayfasını
 
 11. Ayarları değiştirmeden ayarlar dosyasını kapatın.
 
-12. **Araçlar** menüsünde **Seçenekler**' i tıklatın, **kategorim**' ı genişletin, **kılavuz** Sayfam ' ı tıklatın ve ardından **OptionFloat** değerini 1,0 ve **OptionInteger** olarak 1 olarak değiştirin. **Tamam**'a tıklayın.
+12. Araçlar menüsünde **Seçenekler'e** tıklayın, Kategorim'i **genişletin,** Kılavuz Sayfam'a tıklayın ve **OptionFloat** değerini 1.0 ve **OptionInteger** değerini 1 olarak ayarlayın.   **Tamam**'a tıklayın.
 
-13. **Araçlar** menüsünde **Içeri ve dışarı aktarma ayarları**' na tıklayın, **Seçili ortam ayarlarını içeri aktar**' ı seçin ve ardından **İleri**' ye tıklayın.
+13. Araçlar **menüsünde, Ayarları** İçeri ve Dışarı **Aktar'a tıklayın,** Seçili ortam ayarlarını içeri aktar'ı **seçin** ve ardından Sonraki'ye **tıklayın.**
 
-     **Geçerli ayarları Kaydet** sayfası görüntülenir.
+     Geçerli **Ayarları Kaydet** sayfası görüntülenir.
 
-14. **Hayır, yeni ayarları içeri aktar** ' ı seçin ve ardından **İleri**' ye tıklayın.
+14. **Hayır'ı seçin, yeni ayarları içeri aktarın ve** ardından Sonraki'ye **tıklayın.**
 
-     **Alınacak ayarların bir koleksiyonunu seçin** sayfası görüntülenir.
+     İçeri **Aktar için Ayarlar Koleksiyonu Seçin** sayfası görüntülenir.
 
-15. Ağaç görünümünün **ayarlarım düğümündeki** *MySettings. vssettings* dosyasını seçin. Dosya ağaç görünümünde görünmezse, **Araştır** ' a tıklayın ve bulun. **İleri**’ye tıklayın.
+15. Ağaç *görünümünün Ayarlarım düğümünde MySettings.vssettings* dosyasını seçin.  Dosya ağaç görünümünde görünmüyorsa Gözat'a **tıklayın** ve dosyayı bulun. **İleri**’ye tıklayın.
 
-     **Alınacak ayarları seçin** iletişim kutusu görüntülenir.
+     İçeri **Aktar için Ayarları Seç** iletişim kutusu görüntülenir.
 
-16. **Ayarlarım ' ın seçili** olduğundan emin olun ve ardından **son**' a tıklayın. **Alma Tamam** sayfası göründüğünde **Kapat**' a tıklayın.
+16. Ayarlarım'ın **seçili olduğundan** emin olun ve ardından Son'a **tıklayın.** Tamamlandı İçeri **Aktar sayfası görüntülendiğinde** Kapat'a **tıklayın.**
 
-17. **Araçlar** menüsünde **Seçenekler**' e tıklayın, **kategorim**' i genişletin, **kılavuz** Sayfam ' a tıklayın ve özellik kategorisi değerlerinin geri yüklendiğini doğrulayın.
+17. Araçlar menüsünde **Seçenekler'e** **tıklayın,** **Kategorim'i** genişletin, **Kılavuz** Sayfam'a tıklayın ve özellik kategorisi değerlerinin geri yüklendiklerini doğrulayın.
