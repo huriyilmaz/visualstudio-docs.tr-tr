@@ -15,16 +15,16 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c7a5b8bacaa7d78be0c7b88bba8e20b416a3c076
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e523738ff23b40c80b5df21d90b582d94c59087f
+ms.sourcegitcommit: a8031c1387d2090129ed33e063744f9f31653dcd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99958004"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "110724544"
 ---
 # <a name="resetsettings-devenvexe"></a>/ResetSettings (devenv.exe)
 
-Visual Studio varsayılan ayarlarını geri yükler ve Visual Studio IDE 'yi otomatik olarak başlatır. Bu anahtar isteğe bağlı olarak ayarları belirtilen ayarlar dosyasına sıfırlar.
+Visual Studio varsayılan ayarlarını geri yükler ve Visual Studio IDE 'yi otomatik olarak başlatır. Bu anahtar isteğe bağlı olarak ayarları belirtilen ayarlar dosyasına () sıfırlar `*.vssettings` .
 
 Varsayılan ayarlar, Visual Studio ilk kez başlatıldığında seçili olan profilden gelir.
 
@@ -41,7 +41,7 @@ devenv /ResetSettings [SettingsFile|DefaultCollectionSpecifier]
 
 - *SettingsFile*
 
-  İsteğe bağlı. Visual Studio 'ya uygulanacak ayarlar dosyasının tam yolu ve adı.
+  İsteğe bağlı. `.vssettings`Visual Studio 'ya uygulanacak dosyanın tam yolu ve adı.
 
 - *Defaultcollectionbelirleyicisi*
 
@@ -54,12 +54,13 @@ devenv /ResetSettings [SettingsFile|DefaultCollectionSpecifier]
   | **Visual Basic** | `VB` |
   | **Visual C #** | `CSharp` |
   | **Visual C++** | `VC` |
-  | **Web geliştirme** | `Web` |
+  | **Web Geliştirme** | `Web` |
   | **Web geliştirme (yalnızca kod)** | `WebCode` |
 
 ## <a name="remarks"></a>Açıklamalar
 
-*SettingsFile* BELIRTILMEMIŞSE, IDE var olan ayarları kullanarak açılır.
+*SettingsFile* BELIRTILMEMIŞSE, IDE var olan ayarları kullanarak açılır. 
+
 
 ## <a name="example"></a>Örnek
 
@@ -67,10 +68,14 @@ devenv /ResetSettings [SettingsFile|DefaultCollectionSpecifier]
 
 İkinci örnek, Visual C# varsayılan profilini geri yükler.
 
-```shell
-devenv /resetsettings "%USERPROFILE%\MySettings.vssettings"
+Üçüncü örnek, ayarları uyguladıktan sonra Visual Studio 'Yu da kapatacak. Ekleme yapabilirsiniz `/Command "File.Exit"` .
 
-devenv /resetsettings CSharp
+```shell
+devenv /ResetSettings "%USERPROFILE%\MySettings.vssettings"
+
+devenv /ResetSettings CSharp
+
+devenv /NoSplash /ResetSettings General /Command Exit 
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.

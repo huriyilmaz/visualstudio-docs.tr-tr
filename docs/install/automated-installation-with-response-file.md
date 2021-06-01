@@ -1,6 +1,6 @@
 ---
-title: Yüklemeyi bir yanıt dosyasıyla otomatikleştirin
-description: Visual Studio yüklemenizi otomatikleştirmenize yardımcı olan bir JSON yanıt dosyası oluşturmayı öğrenin
+title: Yanıt dosyası ile yükleme işlemini otomatikleştirme
+description: Uygulama yüklemenizi otomatikleştirmenize yardımcı olacak bir JSON yanıt dosyası Visual Studio öğrenin
 ms.date: 03/30/2019
 ms.custom: seodec18
 ms.topic: conceptual
@@ -9,37 +9,37 @@ helpviewer_keywords:
 - automate
 - installation
 - command-line
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: d3fa063d82a9d0ba9f26e326961b1345b47151b8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7554ac46d7c4171cfb71166c51689ff4ae95c0d5
+ms.sourcegitcommit: a8031c1387d2090129ed33e063744f9f31653dcd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99868743"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "110724557"
 ---
-# <a name="how-to-define-settings-in-a-response-file"></a>Yanıt dosyasındaki ayarları tanımlama
+# <a name="automate-installs-by-using-settings-in-a-response-file"></a>Yanıt dosyasındaki ayarları kullanarak yüklemeleri otomatikleştirme
 
-Visual Studio dağıtan Yöneticiler `--in` , aşağıdaki örnekte olduğu gibi parametresini kullanarak bir yanıt dosyası belirtebilir:
+Dağıtım yapan Visual Studio, aşağıdaki örnekte olduğu gibi `--in` parametresini kullanarak bir yanıt dosyası belirtebilirsiniz:
 
 ```cmd
 vs_enterprise.exe --in customInstall.json
 ```
 
-Yanıt dosyaları, içeriği komut satırı bağımsız değişkenlerini yansıtarak [JSON](http://json-schema.org/) dosyalarıdır.  Genel olarak, bir komut satırı parametresi bağımsız değişken alırsa (örneğin,, `--quiet` `--passive` vb.), yanıt dosyasındaki değer true/false olmalıdır.  Bir bağımsız değişken alırsa (örneğin, `--installPath <dir>` ), yanıt dosyasındaki değer bir dize olmalıdır.  Bir bağımsız değişken alırsa ve komut satırında birden çok kez görünebilen (örneğin, `--add <id>` ), dize dizisi olmalıdır.
+Yanıt dosyaları, içeriği komut satırı bağımsız değişkenlerini yansıtan [JSON](http://json-schema.org/) dosyalarıdır.  Genel olarak, bir komut satırı parametresi bağımsız değişken (örneğin, , vb.) kabul yoksa, yanıt dosyasındaki değer `--quiet` `--passive` true/false olmalıdır.  Bir bağımsız değişken (örneğin, ) alıyorsa, yanıt `--installPath <dir>` dosyasındaki değer bir dize olmalıdır.  Bir bağımsız değişken alır ve komut satırı üzerinde birden çok kez görünebilirse (örneğin, `--add <id>` ), bir dize dizisi olması gerekir.
 
-Parametrelerin birden çok giriş (örneğin,) olması dışında, yanıt dosyasındaki komut satırı geçersiz kılma ayarlarında belirtilen parametreler `--add` . Birden çok giriş olduğunda, komut satırında sağlanan girişler yanıt dosyasındaki ayarlarla birleştirilir.
+Parametrelerin birden çok giriş almaları (örneğin, ) dışında, yanıt dosyasından komut satırı geçersiz kılma ayarlarında belirtilen `--add` parametreler. Birden çok girişiniz olduğunda, komut satırına sağlanan girişler yanıt dosyasındaki ayarlarla birleştirilir.
 
-## <a name="setting-a-default-configuration-for-visual-studio"></a>Visual Studio için varsayılan yapılandırmayı ayarlama
+## <a name="setting-a-default-configuration-for-visual-studio"></a>Visual Studio için varsayılan yapılandırma ayarlama
 
-İle bir ağ düzeni önbelleği oluşturduysanız `--layout` , düzende bir başlangıç `response.json` dosyası oluşturulur. Kısmi bir düzen oluşturursanız, bu yanıt dosyası, düzende yer alan iş yüklerini ve dilleri içerir.  Bu düzenden kurulum 'u çalıştırmak, bu response.js, mizanpaja dahil olan iş yüklerini ve bileşenleri seçen dosya üzerinde otomatik olarak kullanır.  Kullanıcılar, Visual Studio 'Yu yüklemeden önce kurulum Kullanıcı arabirimindeki iş yüklerini seçebilir veya seçimden kaldırır.
+ile bir ağ düzeni önbelleği `--layout` oluşturduysanız, `response.json` düzende bir başlangıç dosyası oluşturulur. Kısmi bir düzen oluşturmanız, bu yanıt dosyası düzenin içinde yer alan iş yüklerini ve dilleri içerir.  Kurulumu bu düzenden çalıştırarak, response.jsiş yüklerini ve bileşenleri seçen bu dosyada otomatik olarak kullanılır.  Kullanıcılar, yüklemeden önce kurulum kullanıcı arabiriminde iş yüklerini seçmeye veya Visual Studio.
 
-Düzen oluşturan Yöneticiler, `response.json` mizanpajdaki dosyayı, kullanıcıların Visual Studio 'nun düzeninden yüklediklerinde göreceği varsayılan ayarları denetlemek için düzenleyebilir.  Örneğin, bir yönetici varsayılan olarak belirli iş yüklerini ve bileşenleri istiyorsa, `response.json` dosyayı eklemek için bu dosyaları yapılandırabilirler.
+Düzen oluşturan yöneticiler, kullanıcıların düzenden yükleme yaptıklarında göreceği varsayılan ayarları kontrol etmek için Visual Studio `response.json` değiştirebilir.  Örneğin, bir yönetici varsayılan olarak belirli iş yüklerinin ve bileşenlerin yüklü olması istiyorsa, bunları eklemek `response.json` için dosyayı yapılandırabilirsiniz.
 
 Visual Studio Kurulumu bir düzen klasöründen çalıştırıldığında, _otomatik olarak_ düzen klasöründeki yanıt dosyasını kullanır.  Seçeneğini kullanmak zorunda değilsiniz `--in` .
 
