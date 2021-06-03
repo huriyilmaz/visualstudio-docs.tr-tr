@@ -2,22 +2,22 @@
 title: C# IntelliSense
 description: C# projenizi kodlarken kullanabileceğiniz bazı IntelliSense özellikleri hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
-ms.date: 11/04/2016
+ms.date: 06/01/2021
 ms.topic: conceptual
 helpviewer_keywords:
 - C#, IntelliSense
 - IntelliSense [C#]
-author: TerryGLee
-ms.author: tglee
+author: mikadumont
+ms.author: midumont
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: b7e67c3a00a427a9f3cd6167af494484a02cc3f2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3156b1236a130478d83fe82c8fa462a1144a8e6a
+ms.sourcegitcommit: f50bbdb15c4f9fca0fa245ca765183c378960cc5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99862069"
+ms.lasthandoff: 06/03/2021
+ms.locfileid: "111351961"
 ---
 # <a name="c-intellisense"></a>C# IntelliSense
 
@@ -101,6 +101,10 @@ IntelliSense **kullanarak ekleme** işlemi, gerekli `using` yönergeyi kod dosya
 ![Kullanarak, hızlı eylem genişletilmiş görüntüsünü ekleyin](../ide/media/addusing-quickaction.png)
 
 Bir hata ampul simgesine tıklayın ve ardından **System.Xml öğesini kullanarak** using yönergesini otomatik olarak ekleyin.
+
+### <a name="add-missing-using-directives-on-paste"></a>Yapıştırma sırasında eksik using yönergelerini ekle
+
+IntelliSense, `using` kod dosyanıza bir tür yapıştırdığınızda eksik yönergeleri otomatik olarak kodunuza ekleyebilir. Bu özellik, bir dosyaya bir tür yapıştırılırken eksik using yönergelerini ekleme görevini otomatikleştirerek size zaman kazandırır. **Araç**  >  **seçenekleri**  >  **metin Düzenleyicisi**  >  **C#** veya **temel** Gelişmiş ' te bu özelliği etkinleştirin  >   ve **yapıştırırken yönergeleri kullanarak eksik Ekle**' yi seçin.
 
 ### <a name="remove-and-sort-usings"></a>Using deyimlerini kaldırma ve sıralama
 

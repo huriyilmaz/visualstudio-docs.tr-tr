@@ -1,42 +1,42 @@
 ---
 title: Seçenekler, Metin Düzenleyici, C#, Gelişmiş
-description: C# için düzenleyici biçimlendirme, kod yeniden düzenleme ve XML belge açıklamaları için ayarları değiştirmek üzere C# bölümündeki gelişmiş sayfasını nasıl kullanacağınızı öğrenin.
+description: C# için düzenleyici biçimlendirme, kod yeniden düzenleme ve XML belge açıklamalarını değiştirmek üzere C# bölümündeki Gelişmiş sayfasını kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
-ms.date: 11/13/2020
+ms.date: 06/01/2021
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.CSharp.Outlining
 - VS.ToolsOptionsPages.Text_Editor.CSharp.Advanced
-author: akhera99
+author: mikadumont
 ms.author: midumont
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: aa202f5c0abc490967a40255332976cdf9dca25a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 29f6dd2b4a101132bc7bc19664c51fd5d4b8283e
+ms.sourcegitcommit: f50bbdb15c4f9fca0fa245ca765183c378960cc5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99959330"
+ms.lasthandoff: 06/03/2021
+ms.locfileid: "111352000"
 ---
 # <a name="options-text-editor-c-advanced"></a>Seçenekler, Metin Düzenleyici, C#, Gelişmiş
 
-C# için düzenleyici biçimlendirme, kod yeniden düzenleme ve XML belge yorumlarının ayarlarını değiştirmek için **Gelişmiş** Seçenekler sayfasını kullanın. Bu seçenekler sayfasına erişmek için **Araçlar**  >  **Seçenekler**' i ve ardından **metin düzenleyici**  >  **C#**  >  **Gelişmiş**' i seçin.
+C# **için** düzenleyici biçimlendirme, kod yeniden düzenleme ve XML belge açıklamalarını değiştirmek üzere Gelişmiş seçenekler sayfasını kullanın. Bu seçenekler sayfasına erişmek için Araçlar **Seçenekleri'ni**  >  **ve** ardından Metin Düzenleyici   >  **C# Gelişmiş'i**  >  **seçin.**
 
 > [!NOTE]
-> Tüm seçenekler burada listelenmeyebilir.
+> Tüm seçenekler burada listelenmiyor olabilir.
 
 ## <a name="analysis"></a>Analiz
 
-- Canlı kod analizi veya arka plan Analizi kapsamı
+- Canlı kod analizi veya Arka plan analizi kapsamı
 
-   Yönetilen kod için arka plan Analizi kapsamını yapılandırın. Daha fazla bilgi için bkz. [nasıl yapılır: yönetilen kod için canlı kod analizi kapsamını yapılandırma](../../code-quality/configure-live-code-analysis-scope-managed-code.md).
+   Yönetilen kod için arka plan analizi kapsamını yapılandırma. Daha fazla bilgi için [bkz. Nasıl yapılandırılır: Yönetilen kod için canlı kod analizi kapsamını yapılandırma.](../../code-quality/configure-live-code-analysis-scope-managed-code.md)
 
-## <a name="using-directives"></a>Using yönergeleri
+## <a name="using-directives"></a>Yönergeleri Kullanma
 
-- Using deyimlerini sıralarken ' System ' yönergelerini ilk olarak Yerleştir
+- Usings sıralamada 'System' yönergelerini ilk önce yer
 
-   Seçildiğinde, sağ tıklama menüsündeki kullanımları **Kaldır ve Sırala** komutu `using` yönergeleri sıralar ve listenin en üstüne ' sistem ' ad alanlarını koyar.
+   Seçildiğinde, sağ **tıklama menüsündeki** KullanarakLarı Kaldır ve Sırala komutu yönergeleri sıralar ve 'Sistem' ad alanlarını `using` listenin en üstüne yer.
 
    Sıralamadan önce:
 
@@ -60,9 +60,9 @@ C# için düzenleyici biçimlendirme, kod yeniden düzenleme ve XML belge yoruml
    using Newtonsoft.Json;
    ```
 
-- Yönerge gruplarını kullanarak ayır
+- Kullanma yönerge gruplarını ayırma
 
-   Seçildiğinde, sağ tıklama menüsündeki kullanımları **Kaldır ve Sırala** komutu, `using` aynı kök ad alanına sahip yönergelerin grupları arasına boş bir satır ekleyerek yönergeleri ayırır.
+   Seçildiğinde, **sağ** tıklama menüsündeki Kullanmaları Kaldır ve Sırala komutu, aynı kök ad alanına sahip yönerge grupları arasına boş bir satır ekerek yönergeleri birbirinden `using` ayırıyor.
 
    Sıralamadan önce:
 
@@ -90,67 +90,83 @@ C# için düzenleyici biçimlendirme, kod yeniden düzenleme ve XML belge yoruml
    ```
 
 ::: moniker range=">=vs-2019"                                              
-- .NET Framework derlemelerindeki türler için kullanımlar önerin
+- Derlemelerde türler için .NET Framework önerme
 ::: moniker-end
                                          
 ::: moniker range="vs-2017"                                                
-- Başvuru derlemelerindeki türler için kullanımlar önerin
+- Başvuru derlemelerinde türler için kullanma önerin
 ::: moniker-end                                                            
 
-- NuGet paketlerindeki türler için kullanımlar önerin
+- NuGet paketlerinde türler için kullanma önerin
 
-   Bu seçenekler belirlendiğinde, bir NuGet paketini yüklemek ve başvurulmayan türler için bir yönerge eklemek için [hızlı bir eylem](../quick-actions.md) kullanılabilir `using` .
+   Bu seçenekler seçildiğinde, NuGet paketini [yüklemek](../quick-actions.md) ve bağlantı kurulmaz türler için bir yönerge eklemek `using` için bir Hızlı Eylem kullanılabilir.
 
-   ![Visual Studio 'da NuGet paketini yüklemeye yönelik hızlı eylem](media/nuget-lightbulb.png)
+   ![NuGet paketini Visual Studio'a yüklemek için hızlı Visual Studio](media/nuget-lightbulb.png)
+
+- Yapıştırma sırasında eksik using yönergelerini ekle
+
+    Bu seçenek seçildiğinde, `using` bir dosyaya bir tür yapıştırırsanız yönergeleri kodunuza otomatik olarak eklenir.
 
 ## <a name="highlighting"></a>Vurgulama
 
-- İmlecin altındaki simgenin başvurularını Vurgula
+- İmleç altındaki sembol başvurularını vurgulama
 
-   İmleç bir simgenin içine konumlandırıldığında veya bir sembole tıkladığınızda, kod dosyasındaki söz konusu sembolün tüm örnekleri vurgulanır.
+   İmleç bir sembolün içine yerleştirilirken veya bir simgeye tıklarsanız, kod dosyasındaki bu sembolün tüm örnekleri vurgulanır.
 
 ## <a name="outlining"></a>Anahat Oluşturma
 
-- Dosyalar açıkken anahat oluşturma moduna gir
+- Dosyalar açıkken açıklama modu girin
 
-   Seçildiğinde, daraltılabilir kod blokları oluşturan kod dosyası otomatik olarak özetlenmektedir. Bir dosya ilk kez açıldığında, #regions blokları ve etkin olmayan kod blokları daraltılır.
+   Seçildiğinde, daraltılabilir kod blokları oluşturan kod dosyasını otomatik olarak özetler. Bir dosya ilk kez açıldığında, bloklar #regions etkin olmayan kod blokları daraltır.
 
-- Yordam satırı ayırıcılarını göster
+- Yordam çizgisi ayırıcılarını gösterme
 
-   Metin Düzenleyicisi, yordamların görsel kapsamını gösterir. Aşağıdaki tabloda listelenen konumlarda projenizin *. cs* kaynak dosyalarında bir çizgi çizilir:
+   Metin düzenleyicisi, yordamların görsel kapsamını gösterir. Aşağıdaki tabloda listelenen konumlarda projenizin *.cs* kaynak dosyalarında bir satır çizilir:
 
-   |. Cs kaynak dosyasındaki konum|Satır konumu örneği|
+   |.cs Kaynak DosyasındaKi Konum|Satır Konumu Örneği|
    |---------------------------------|------------------------------|
-   |Bir blok bildirimi yapısının kapandıktan sonra|-Bir sınıf, yapı, modül, arabirim veya sabit listesinin sonunda<br />-Bir özellik, işlev veya Sub öğesinden sonra<br />-Bir özellikte get ve set yan tümceleri arasında değil|
-   |Tek satırlık bir yapı kümesinden sonra|-İçe aktarma deyimlerinden sonra, bir sınıf dosyasındaki tür tanımından önce<br />-Öğesinden sonra, herhangi bir yordamdan önce, bir sınıfta belirtilen değişkenlerden|
-   |Tek satır bildirimleri sonrasında (blok düzeyi olmayan bildirimler)|-Aşağıdaki import deyimleri, Inherits deyimlerini, değişken bildirimlerini, olay bildirimlerini, temsilci bildirimlerini ve DLL bildirme deyimlerini|
+   |Blok bildirimi yapısı kapat sonrasında|- Bir sınıfın, yapının, modülün, arabirimin veya enum'un sonunda<br />- Bir özellik, işlev veya alt işlevden sonra<br />- Bir özellikte get ve set yan tümceleri arasında değil|
+   |Tek satırlı yapılardan sonra|- İçeri aktarma deyimlerini, bir sınıf dosyasındaki tür tanımından önce<br />- Herhangi bir yordamdan önce, bir sınıfta bildirilen değişkenler sonra|
+   |Tek satırlı bildirimlerin ardından (blok düzeyinde olmayan bildirim)|- İçeri aktarma deyimlerini takip ediyor, deyimlerini, değişken bildirimlerini, olay bildirimlerini, temsilci bildirimlerini ve DLL bildirim deyimlerini devralıyor|
 
-## <a name="block-structure-guides"></a>Yapı kılavuzlarını engelle
+## <a name="block-structure-guides"></a>Blok Yapısı Kılavuzları
 
-Kodunuzda süslü ayraçlar () arasında noktalı dikey çizgiler göstermek için bu onay kutularını seçin **{}** . Daha sonra, bildirim düzeyinize ve kod düzeyi yapılarına yönelik ayrı kod bloklarını kolayca görebilirsiniz.
+Kodundaki köşeli ayraçlar ( ) arasında noktalı dikey çizgiler görüntülemek için **{}** bu onay kutularını seçin. Daha sonra bildirim düzeyi ve kod düzeyi yapılarınız için tek tek kod bloklarını kolayca abilirsiniz.
 
-## <a name="editor-help"></a>Düzenleyici yardımı
+## <a name="comments"></a>Yorumlar
+
+- /// için XML belge yorumları oluşturma
+
+   Seçildiğinde, siz açıklamaya giriş yazdikten sonra XML belge açıklamalarını xml `///` öğeleri ekler. XML belgeleri hakkında daha fazla bilgi için [bkz. XML Belgeleri Yorumları (C# Programlama Kılavuzu)](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments).
+
 ::: moniker range=">=vs-2019"
+
+## <a name="inline-hints"></a>Satır Içi İpuçları
+
 - Satır İçi Parametre Adı İpuçları 
     
-    Seçildiğinde, işlev çağrılarında her bağımsız değişkenden önce sabit değerler, yayımlanmış sabit değerler ve nesne örneklemeleri için parametre adı ipuçları ekler.  
+    Seçildiğinde, işlev çağrılarında her bağımsız değişkenden önce değişmez değer, döküm değişmez değerleri ve nesne örnek oluşturmaları için parametre adı ipuçları ekler.  
     
-    ![CSharp için satır içi parametre adı Ipuçları](media/inline-parameter-name-hints-csharp.png)
+    ![CSharp için Satır Içi Parametre Adı İpuçları](media/inline-parameter-name-hints-csharp.png)
 
-- Satır içi tür Ipuçları 
+- Satır Içi Tür İpuçları 
     
-    Seçildiğinde, çıkartılan türler ve Lambda parametre türleri olan değişkenler için tür ipuçları ekler.  
+    Seçildiğinde, ertelenmiş türlere ve lambda parametre türlerine sahip değişkenler için tür ipuçları ekler.  
     
-    ![CSharp için satır içi tür Ipuçları](media/inline-type-hints-csharp.png)
+    ![CSharp için Satır Içi Tür İpuçları](media/inline-type-hints-csharp.png)
+
+## <a name="inheritance-margin"></a>Devralma Marjı 
+
+- Seçildiğinde, kenar boşluklarında kodunuzun uygulama ve geçersiz kılmalarını temsil eden simgeler ekler. Devralma kenar boşluğu simgelerine tıklarsa, gitmek için seçebilirsiniz devralma seçenekleri görüntülenir.
+
+    ![Devralma Marjı](media/inheritance-margin.png)
+
 ::: moniker-end
-- ///İçin XML belgesi açıklamaları oluştur
-
-   Seçildiğinde, açıklama giriş yazdıktan sonra XML belge açıklamaları için XML öğelerini ekler `///` . XML belgeleri hakkında daha fazla bilgi için bkz. [XML belgeleri Yorumları (C# Programlama Kılavuzu)](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: belge oluşturmak için XML açıklamaları ekleme](../../ide/reference/generate-xml-documentation-comments.md)
+- [Nasıl yapılır: Belge oluşturma için XML yorumları ekleme](../../ide/reference/generate-xml-documentation-comments.md)
 - [XML Belgeleri Yorumları (C# Programlama Kılavuzu)](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments)
-- [Kodunuzu XML açıklamalarıyla belgeleme (C# Kılavuzu)](/dotnet/csharp/codedoc)
+- [Xml açıklamalarını kullanarak kodunuzu belgele (C# Kılavuzu)](/dotnet/csharp/codedoc)
 - [Dile özgü düzenleyici seçeneklerini ayarlama](../../ide/reference/setting-language-specific-editor-options.md)
 - [C# IntelliSense](../../ide/visual-csharp-intellisense.md)
