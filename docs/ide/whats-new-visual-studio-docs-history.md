@@ -16,15 +16,15 @@ ms.topic: conceptual
 ms.workload:
 - multiple
 ms.openlocfilehash: c735eea8fe3a8b62f1901f7b9c6edf50d42aaf2c
-ms.sourcegitcommit: 162be102d2c22a1c4ad2c447685abd28e0e85d15
+ms.sourcegitcommit: c5f2a142ebf9f00808314f79a4508a82e6df1198
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "109973650"
+ms.lasthandoff: 06/05/2021
+ms.locfileid: "111516938"
 ---
 # <a name="history-of-whats-new-in-visual-studio-docs"></a>Visual Studio belgelerindeki yeniliklerin geçmişi
 
-Belgelerde yer alan yeni Visual Studio hoş geldiniz. Bu makale, Nisan 2021'den önce (Temmuz 2020'den başlayarak) belgelerde yapılan önemli değişiklikleri içerir. En son Sürümler için [bkz. Visual Studio belgeleri: Belgelerde yer alan yeni sürümler.](whats-new-visual-studio-docs.md)
+Visual Studio belgelerde yer alan yeni Visual Studio hoş geldiniz. Bu makale, Nisan 2021'den önce (Temmuz 2020'den başlayarak) belgelerde yapılan önemli değişiklikleri içerir. En son Sürümler için [bkz. Visual Studio belgeleri: Belgelerde yer alan yeni sürümler.](whats-new-visual-studio-docs.md)
 
 ## <a name="march-2021"></a>Mart 2021
 
@@ -55,44 +55,44 @@ Belgelerde yer alan yeni Visual Studio hoş geldiniz. Bu makale, Nisan 2021'den 
 - [Uzaktan hata ayıklama için Windows Güvenlik Duvarı'nı yapılandırma](../debugger/configure-the-windows-firewall-for-remote-debugging.md) - GitHub sorun düzeltmeleri
 - [Uzak IIS ASP.NET Uzaktan Hata Ayıklama](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md) - IIS ve Azure için uzaktan hata ayıklama belgelerde güncelleştirmeler
 - [Visual Studio'ASP.NET Uzak IIS](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md) Bilgisayarında Uzaktan Hata Ayıklama - IIS ve Azure için uzaktan hata ayıklama belgelerine güncelleştirmeler
-- [Visual Studio 'Da Azure 'DA IIS 'de uzaktan hata ayıklama ASP.NET Core](../debugger/remote-debugging-azure.md) -IIS ve Azure için uzak hata ayıklama belgelerine yönelik güncelleştirmeler
+- [Azure'da IIS ASP.NET de](../debugger/remote-debugging-azure.md) Uzaktan Hata Ayıklama Visual Studio - IIS ve Azure için uzaktan hata ayıklama belgelerde güncelleştirmeler
 
 ### <a name="deployment"></a>Dağıtım
 
 **Güncelleştirilmiş makaleler**
 
-- [Nasıl yapılır: görsel stiller ETKINKEN WPF uygulaması yayımlama](../deployment/how-to-publish-a-wpf-application-with-visual-styles-enabled.md) -Geliştirici komut istemi ve geliştirici PowerShell
-- [Visual Studio kullanarak bir uygulamayı bir klasöre dağıtma](../deployment/quickstart-deploy-to-local-folder.md) -IIS ve Azure için belgeleri uzaktan hata ayıklama belgelerine güncelleştirme
+- [Nasıl yapabilirsiniz: Görsel stillerin etkin olduğu bir WPF uygulaması yayımlama](../deployment/how-to-publish-a-wpf-application-with-visual-styles-enabled.md) - Geliştirici Komut İstemi ve Geliştirici PowerShell
+- [Visual Studio kullanarak bir klasöre](../deployment/quickstart-deploy-to-local-folder.md) uygulama dağıtma - IIS ve Azure için uzaktan hata ayıklama belgelerini güncelleştirmeler
 
 ### <a name="extensibility"></a>Genişletilebilirlik
 
 **Güncelleştirilmiş makaleler**
 
-- [Görsel dil sözlüğü](../extensibility/ux-guidelines/visual-language-dictionary-for-visual-studio.md) -simge oluşturma hatasını giderecek eksik markaşağı köşeli ayraç ekle
-- [Şablon yükleme sorunlarını giderme](../extensibility/troubleshooting-template-discovery.md) -Geliştirici komut istemi ve geliştirici PowerShell
+- [Görsel dil sözlüğü -](../extensibility/ux-guidelines/visual-language-dictionary-for-visual-studio.md) simge işleme hatasını düzeltmek için eksik Markdown köşeli ayraçları ekleyin
+- [Şablon yükleme sorunlarını giderme](../extensibility/troubleshooting-template-discovery.md) - Geliştirici Komut İstemi Geliştirici PowerShell
 
 ### <a name="get-started"></a>başlarken
 
 **Güncelleştirilmiş makaleler**
 
-- [Öğretici: bir depodan bir proje açın](../get-started/tutorial-open-project-from-repo-visual-studio-2019.md)
-  - Git & Takım Gezgini bağlantısının yan yana karşılaştırmasıyla ilgili konuları güncelleştirin
-  - oturum açma bölümüne daha fazla bilgi için oturum açma bağlantıları ekleyin
-- [Öğretici: Visual Studio 'Da C# ve ASP.NET Core ile çalışmaya başlama](../get-started/csharp/tutorial-aspnet-core.md) -güncelleştirme tutorial-ASPNET-Core.MD
+- [Öğretici: Bir repodan proje açma](../get-started/tutorial-open-project-from-repo-visual-studio-2019.md)
+  - Git güncelleştirme bağlantısının yan yana karşılaştırması ile & Takım Gezgini güncelleştirme
+  - Oturum açma bölümüne daha fazla bilgi için oturum açma bağlantıları ekleme
+- [Öğretici: Kullanmaya başlayın C# ve ASP.NET Core ile Visual Studio](../get-started/csharp/tutorial-aspnet-core.md) - Güncelleştirme tutorial-aspnet-core.md
 
 ### <a name="ide"></a>IDE
 
 **Yeni makaleler**
-- [Visual Studio 'nun kaynak denetimini nasıl basit hale getiren](../version-control/git-visual-studio-source-control.md) yeni Visual Studio kaynak denetimi konusu
-- [Geliştirici komut istemi ve geliştirici PowerShell](./reference/command-prompt-powershell.md) -Geliştirici komut istemi ve geliştirici PowerShell
-- [Git ve Takım Gezgini yan yana karşılaştırması](../version-control/git-team-explorer-feature-comparison.md) -Takım Gezgini ve yeni git özelliklerinin yeni yan yana karşılaştırma sayfası ekleme
+- [Kaynak Visual Studio nasıl kolay olur?](../version-control/git-visual-studio-source-control.md) - Kaynak Denetimi Visual Studio yeni oluşturma
+- [Geliştirici Komut İstemi ve Geliştirici PowerShell](./reference/command-prompt-powershell.md) - Geliştirici Komut İstemi ve Geliştirici PowerShell
+- [Git ve Takım Gezgini](../version-control/git-team-explorer-feature-comparison.md) yan yana karşılaştırma - yeni Git özellikleri ve yeni Git özelliklerinin Takım Gezgini yan yana karşılaştırma sayfası ekleme
 
 **Güncelleştirilmiş makaleler**
 
-- [Visual Studio tarafından toplanan sistem tarafından oluşturulan Günlükler](./diagnostic-data-collection.md) -güncelleştirme Diagnostic-Data-Collection.MD
-- [Visual Studio müşteri deneyimini geliştirme programı](./visual-studio-experience-improvement-program.md) -güncelleştirme Visual-Studio-Experience-improvement-program.MD
-- [Proje ve öğe şablonlarını özelleştirme](./customizing-project-and-item-templates.md) -şablonları özelleştirme ve komut satırını kullanma hakkında bağlantılar ekleme
-- [Nasıl yapılır: proje şablonları oluşturma](./how-to-create-project-templates.md) -şablonları özelleştirme ve komut satırını kullanma hakkında bağlantı ekleme
+- [Visual Studio tarafından toplanan sistem tarafından oluşturulan günlükler](./diagnostic-data-collection.md) - Güncelleştirme diagnostic-data-collection.md
+- [Visual Studio Müşteri Deneyimini Geliştirme Programı](./visual-studio-experience-improvement-program.md) - Güncelleştirme visual-studio-experience-improvement-program.md
+- [Proje ve öğe şablonlarını özelleştirme](./customizing-project-and-item-templates.md) - şablonları özelleştirme ve komut satırı kullanma hakkında bağlantılar ekleme
+- [Nasıllanır: Proje şablonları oluşturma](./how-to-create-project-templates.md) - şablonları özelleştirme ve komut satırı kullanma hakkında bağlantılar ekleme
 - [Kod düzenleyicisi F1 yardımı](./not-in-toc/default-f1-text-editor.md) - F1 varsayılan sayfaları için güncelleştirmeleri bağlama
 - [F1 yardımı](./not-in-toc/default.md) - F1 varsayılan sayfaları için güncelleştirmeleri bağlama
 - [Hızlı Başlangıç: Visual Studio uygulama oluşturmak için Node.js kullanma](./quickstart-nodejs.md) - AngularJS güncelleştirmeleri
@@ -107,66 +107,66 @@ Belgelerde yer alan yeni Visual Studio hoş geldiniz. Bu makale, Nisan 2021'den 
   - Geliştirici Komut İstemi ve Geliştirici PowerShell
 - [Takım Gezgini'da projelere](./connect-team-project.md) bağlanma - Git güncelleştirme bağlantısının yan yana karşılaştırması ile & Takım Gezgini güncelleştirme
 - [Visual Studio'de Git deneyimi](./git-with-visual-studio.md)
-  - mevcut Azure DevOps deyimine dosya ekleme
-  - yeni Git özelliklerinin ve yeni Git özelliklerinin Takım Gezgini yan yana karşılaştırma sayfası ekleme
+  - mevcut Azure DevOps deyimine ekleme
+  - Yeni Git özellikleri ve yeni Git özelliklerinin yeni Takım Gezgini karşılaştırma sayfası ekleme
   - -b bağımsız değişkeni git-with-visual-studio.md
-- [Visual Studio'da](./default-keyboard-shortcuts-in-visual-studio.md) varsayılan klavye kısayolları - Eksik Kesme Noktası Koşullarını Ayarla klavye kısayolu ekleme
+- [Visual Studio'de](./default-keyboard-shortcuts-in-visual-studio.md) varsayılan klavye kısayolları - Eksik Kesme Noktası Koşullarını Ayarla klavye kısayolu ekleme
 - [Kullanıcı izinleri ve Visual Studio](./user-permissions-and-visual-studio.md) - kısayolda Yönetici izinlerini ayarlama yordamı ekleyin
 - [Çalışma zamanlarında Equals ve GetHashCode yöntemi geçersiz kılmaları Visual Studio](./reference/generate-equals-gethashcode-methods.md)
-  - ekran görüntüsü boyutunu küçültün ve bir yönergeye küçük düzenleme ekleyin
-  - ekran görüntüleriyle eşleştirmeye kod ekleme
-- [Visual Studio 'da normal Ifadeler kullanma](./using-regular-expressions-in-visual-studio.md) -hatalı Regex çözme
-- Açık klasör geliştirme-Geliştirici Komut İstemi ve geliştirici PowerShell [için derleme ve hata ayıklama görevlerini özelleştirme](./customize-build-and-debug-tasks-in-visual-studio.md)
-- [C# geliştiricileri Için Visual Studio üretkenlik Kılavuzu](./csharp-developer-productivity.md) -VS2019 için kod inceleme uzantısı listesini güncelleştirme
+  - ekran görüntüsü boyutunu azaltma ve yönergeye küçük düzenleme ekleme
+  - ekran görüntüleriyle eşleştirmek için kod ekleme
+- [Visual Studio](./using-regular-expressions-in-visual-studio.md) normal ifadeler kullanma - yanlış normal ifadeleri düzeltme
+- [Klasör Aç geliştirme için derleme ve hata ayıklama görevlerini özelleştirme](./customize-build-and-debug-tasks-in-visual-studio.md) - Geliştirici Komut İstemi ve Geliştirici PowerShell
+- [Visual Studio C# geliştiricileri için üretkenlik kılavuzu](./csharp-developer-productivity.md) - VS2019 için kod inceleme uzantısı listesini güncelleştirme
 
 ### <a name="install"></a>Yükleme
 
 **Yeni makaleler**
-- [Microsoft uç noktası kullanan yönetici güncelleştirmelerini uygulama Configuration Manager](../install/applying-administrator-updates.md) -yönetici güncelleştirmelerini uygulama hakkında yeni içerik oluşturuldu
-- [Microsoft uç noktası Ile Visual Studio 'da yönetici güncelleştirmelerini etkinleştirme Configuration Manager](../install/enabling-administrator-updates.md) -yönetici güncelleştirmelerini etkinleştirme hakkında yeni içerik oluşturuldu
+- [Microsoft Endpoint Configuration Manager kullanan yönetici güncelleştirmelerini](../install/applying-administrator-updates.md) uygulama - Yönetici güncelleştirmelerini uygulama hakkında yeni içerik oluşturuldu
+- [Microsoft Endpoint Configuration Manager ile Visual Studio güncelleştirmelerini etkinleştirme](../install/enabling-administrator-updates.md) - Yönetici güncelleştirmelerini etkinleştirme hakkında yeni içerik oluşturuldu
 
 **Güncelleştirilmiş makaleler**
 
 - [Visual Studio derleme numaraları ve yayın tarihleri](../install/visual-studio-build-numbers-and-release-dates.md)
-  - Visual-studio-build-numbers-and-release-dates.md Güncelleştir
-  - 16.9.2 sürüm verisi Ekle
-  - Güncelleştirmeleri Salı Düzeltme Eki
-  - derleme numaralarının tarihini güncelleştirme sayfası
-  - 16,9 GA ve 16,10 Preview 1 için derleme numaraları
+  - Güncelleştirme visual-studio-build-numbers-and-release-dates.md
+  - 16.9.2 yayın verilerini ekleme
+  - Salı güncelleştirmelerini düzeltme eki uygulama
+  - derleme numaraları sayfasının güncelleştirme tarihi
+  - 16.9 GA ve 16.10 Preview 1 için derleme numaraları
   - Yeni sürümler için güncelleştirme
-- [Çevrimdışı Visual Studio yüklemesi oluşturma](../install/create-an-offline-installation-of-visual-studio.md) -yönetici belge düzenlemelerini güncelleştirme
-- [Visual Studio çevrimdışı yükleme için gerekli sertifikaları yükleme](../install/install-certificates-for-visual-studio-offline.md) -yönetici güncelleştirme belge düzenlemeleri
-- [Visual Studio sürümlerini yan](../install/install-visual-studio-versions-side-by-side.md) yana yönetici güncelleştirme belge düzenlemelerini yükler
-- [Visual Studio ve Azure hizmetlerini bir güvenlik duvarı ya da ara sunucu ile güncelleştiren bir makalenin arkasına yükleyip kullanın](../install/install-and-use-visual-studio-behind-a-firewall-or-proxy-server.md) .
+- [Visual Studio çevrimdışı yüklemesi](../install/create-an-offline-installation-of-visual-studio.md) oluşturma - Yönetici güncelleştirme belgesi düzenlemeleri
+- [Çevrimdışı yükleme için gereken Visual Studio yükleme](../install/install-certificates-for-visual-studio-offline.md) - Yönetici güncelleştirme belgesi düzenlemeleri
+- [Uygulama Visual Studio yan yana yükleme](../install/install-visual-studio-versions-side-by-side.md) - Yönetici güncelleştirme belgesi düzenlemeleri
+- [Güvenlik duvarı veya ara Visual Studio azure hizmetlerini](../install/install-and-use-visual-studio-behind-a-firewall-or-proxy-server.md) yükleme ve kullanma - Güncelleştirilmiş makale.
 
 ### <a name="javascript"></a>JavaScript
 
 **Güncelleştirilmiş makaleler**
 
-- [Visual Studio 'da JavaScript ve TypeScript # gerekli; arama sonuçlarında sayfa başlığı görüntülendi. Markasını ekleyin. < 60 karakter.](../javascript/index.yml) - AngularJS güncelleştirmeleri
+- [Visual Studio #Required içinde JavaScript ve TypeScript; arama sonuçlarında görüntülenen sayfa başlığı. Markayı dahil etmek. < 60 karakter.](../javascript/index.yml) - AngularJS güncelleştirmeleri
 - [Hızlı Başlangıç: Visual Studio uygulama oluşturmak için Vue.js kullanma](../javascript/quickstart-vuejs-with-nodejs.md) - AngularJS güncelleştirmeleri
 - [Öğretici: Visual Studio'de TypeScript ile ASP.NET Core uygulaması Visual Studio](../javascript/tutorial-aspnet-with-typescript.md)
   - AngularJS güncelleştirmeleri
   - visualstudio-docs/issues/6457 -- eksik sürüm
 - [Öğretici: Node.js'de bir Visual Studio](../javascript/tutorial-nodejs.md) ve Express uygulaması oluşturma - AngularJS güncelleştirmeleri
-- [JavaScript için kod düzenleyicisini kullanmayı öğrenin](../javascript/write-and-edit-code.md) - AngularJS güncelleştirmeleri
-- [JavaScript ve TypeScript'i Visual Studio](../javascript/unit-testing-javascript-with-visual-studio.md)
+- JavaScript-AngularJS güncelleştirmeleri [için kod düzenleyicisini kullanmayı öğrenin](../javascript/write-and-edit-code.md)
+- [Visual Studio 'da JavaScript ve TypeScript ile birim testi](../javascript/unit-testing-javascript-with-visual-studio.md)
   - ASP.NET Core ve TypeScript için birim testleri
-  - Geliştirici Komut İstemi ve Geliştirici PowerShell
+  - Geliştirici Komut İstemi ve geliştirici PowerShell
   - GitHub sorun düzeltmeleri
-- [Visual Studio'de npm](../javascript/npm-package-management.md) paketlerini yönetme - GitHub sorun düzeltmeleri
+- [Visual Studio 'da NPM paketlerini yönetme](../javascript/npm-package-management.md) -GitHub sorun düzeltmeleri
 
 ### <a name="msbuild"></a>MSBuild
 
 **Güncelleştirilmiş makaleler**
 
-- [MSBuild'in projeleri derlemesi](../msbuild/build-process-overview.md) - Hatalı öğe adını düzeltin.
-- [CreateCSharpManifestResourceName görevi](../msbuild/createcsharpmanifestresourcename-task.md) - yanlış çapraz başvuru yazım hatalarını düzeltme
-- [Nasıl yap: Derleme Visual Studio genişletme](../msbuild/how-to-extend-the-visual-studio-build-process.md) - XML girintisini düzeltme
-- [MIDL görevi](../msbuild/midl-task.md) - Güncelleştirme midl-task.md
-- [Ortak MSBuild proje öğeleri](../msbuild/common-msbuild-project-items.md) - Makale içinde toc ekleme ve biçimlendirmeyi geliştirme
-- [Öğe öğesi (MSBuild)](../msbuild/item-element-msbuild.md) - Makale içinde toc ekleme ve biçimlendirmeyi geliştirme
-- [Exec görevi](../msbuild/exec-task.md) - Utf8Encoding parametresi için belge ekleme
+- [MSBuild derleme projeleri](../msbuild/build-process-overview.md) -hatalı öğe adını düzeltir.
+- [CreateCSharpManifestResourceName görevi](../msbuild/createcsharpmanifestresourcename-task.md) -hatalı çapraz başvuruyu çözme yanlış
+- [Nasıl yapılır: Visual Studio derleme Işlemini genişletme](../msbuild/how-to-extend-the-visual-studio-build-process.md) -XML girintisini onarma
+- [MIDL görevi](../msbuild/midl-task.md) -güncelleştirme Midl-Task.MD
+- [Ortak MSBuild proje öğeleri](../msbuild/common-msbuild-project-items.md) -Makale içi İçindekiler ekleme ve biçimlendirmeyi iyileştirme
+- [Öğe öğesi (MSBuild)](../msbuild/item-element-msbuild.md) -Makale içi İçindekiler ekleme ve biçimlendirmeyi iyileştirme
+- [Exec görevi](../msbuild/exec-task.md) -Utf8Encoding parametresi için belge Ekle
 
 ### <a name="profiling"></a>Profil Oluşturma
 
@@ -191,7 +191,7 @@ Belgelerde yer alan yeni Visual Studio hoş geldiniz. Bu makale, Nisan 2021'den 
 - [Python web uygulaması proje şablonları](../python/python-web-application-project-templates.md) -kaldırıldı Visual Studio 2019 Python öğreticilerinde şablon Içeriğini yoklamalar
 - [Python yorumlayıcıları için hata ayıklama sembolleri yükler](../python/debugging-symbols-for-mixed-mode-c-cpp-python.md) -Python 2,7 ' nin son 3 yüklemesini ekleyin
 
-### <a name="test"></a>Test
+### <a name="test"></a>Test etme
 
 **Yeni makaleler**
 
@@ -202,10 +202,10 @@ Belgelerde yer alan yeni Visual Studio hoş geldiniz. Bu makale, Nisan 2021'den 
 
 - [Koddan birim testi yöntemi saplamaları oluşturma](../test/create-unit-tests-menu.md) -VisualStudio-docs/sorunlar/6484--Update link
 - [Visual Studio 'da test araçlarına ilk bakış](../test/improve-code-quality.md) -VisualStudio-docs/sorunlar/6429--laboratuvar bağlantılarını Güncelleştir
-- [*.runsettings* dosyası kullanarak birim testlerini yapılandırma](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md)
-  - Geliştirici Komut İstemi ve Geliştirici PowerShell
-  - Yazım hataları düzeltildi
-- [VSTest.Console.exe satırı seçenekleri](../test/vstest-console-options.md) - Geliştirici Komut İstemi ve Geliştirici PowerShell
+- [*. Runsettings* dosyasını kullanarak birim testlerini yapılandırma](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md)
+  - Geliştirici Komut İstemi ve geliştirici PowerShell
+  - Düzeltilen yazım hataları
+- [VSTest.Console.exe komut satırı seçenekleri](../test/vstest-console-options.md) -Geliştirici komut istemi ve geliştirici PowerShell
 
 ## <a name="february-2021"></a>Şubat 2021
 
@@ -213,43 +213,43 @@ Belgelerde yer alan yeni Visual Studio hoş geldiniz. Bu makale, Nisan 2021'den 
 
 **Güncelleştirilmiş makaleler**
 
-- [Hata ayıklayıcısında kesme Visual Studio kullanma](../debugger/using-breakpoints.md) - Erişilebilirlik güncelleştirmeleri
+- [Visual Studio hata ayıklayıcısında kesme noktaları kullan](../debugger/using-breakpoints.md) -erişilebilirlik güncelleştirmeleri
 
 ### <a name="get-started"></a>başlarken
 
 **Güncelleştirilmiş makaleler**
 
-- [Öğretici: Visual Studio 2017'de](../get-started/tutorial-open-project-from-repo-visual-studio-2017.md) bir repodan proje açma - Güncelleştirme Ayrıca bkz. VS2017'de Projeyi Bir Repodan Açma bağlantıları
-- [Öğretici: Bir repodan](../get-started/tutorial-open-project-from-repo-visual-studio-2019.md) proje açma - 'Bir repodan proje açma' sayfasının VS2017 sürümüne bağlantı ekleme
+- [Öğretici: Visual Studio 2017 ' de bir depodan bir proje açın](../get-started/tutorial-open-project-from-repo-visual-studio-2017.md) -güncelleştirme ayrıca bkz. VS2017 Open Project in from the bir deposundan
+- [Öğretici: bir depoyu bir depodan açın](../get-started/tutorial-open-project-from-repo-visual-studio-2019.md) -' bir depoyu bir VS2017 sürümüne ekleyin ' sayfasında ' bir proje açın ' sayfasından bir proje açın
 
 ### <a name="ide"></a>IDE
 
 **Güncelleştirilmiş makaleler**
 
-- [MSBuild sorunlarını giderme ve günlük oluşturma](./msbuild-logs.md) - Proje sistemi araçları uzantısını kullanma yönergeleri ekleme
+- [MSBuild sorunları Için sorun giderme ve günlük oluşturma](./msbuild-logs.md) -proje sistemi araçları uzantısını kullanma hakkında yönergeler ekleme
 
 ### <a name="install"></a>Yükleme
 
 **Güncelleştirilmiş makaleler**
 
 - [En düşük düzeyde çevrimdışı düzen kullanarak Visual Studio'yu güncelleştirme](../install/update-minimal-layout.md)
-  - Seçenekler tablosuna 2017 örneği ekleme
+  - Seçenekler tablosunda 2017 örnek ekleme
   - VS2017 için örnekler ekleme
 
 ### <a name="msbuild"></a>MSBuild
 
 **Yeni makaleler**
 
-- [MSB3644: 'FrameworkVersion' için](../msbuild/errors/msb3644.md) başvuru derlemeleri bulunamadı - MSBuild hataları
-- [MSB8036: Windows SDK 'version' bulunamadı](../msbuild/errors/msb8036.md) - MSBuild hataları
+- [MSB3644: ' FrameworkVersion ' için başvuru derlemeleri bulunamadı](../msbuild/errors/msb3644.md) -MSBuild hataları
+- [MSB8036: Windows SDK ' version ' bulunamadı](../msbuild/errors/msb8036.md) -MSBuild hataları
 
-### <a name="test"></a>Test
+### <a name="test"></a>Test etme
 
 **Güncelleştirilmiş makaleler**
 
-- Visual Studio - Küçük içerik yenileme ve düzenleme ile [C++ için Microsoft Birim](../test/how-to-use-microsoft-test-framework-for-cpp.md) Testi Çerçevesi'nin kullanımı
-- [Visual Studio'da C++ URL'leri için](../test/how-to-write-unit-tests-for-cpp-dlls.md) birim testleri yazma - Küçük içerik yenileme ve düzenleme
-- [Test Gezgini ile birim testleri çalıştırma](../test/run-unit-tests-with-test-explorer.md) - Erişilebilirlik güncelleştirmeleri
+- [Visual Studio 'Da C++ Için Microsoft birim testi çerçevesini kullanma](../test/how-to-use-microsoft-test-framework-for-cpp.md) -küçük içerik yenileme ve düzenleme
+- [Visual Studio 'Da C++ dll 'leri için birim testleri yazma](../test/how-to-write-unit-tests-for-cpp-dlls.md) -küçük içerik yenileme ve düzenleme
+- [Test Gezgini ile birim testleri çalıştırma](../test/run-unit-tests-with-test-explorer.md) -erişilebilirlik güncelleştirmeleri
 - [Izlenecek yol: yönetilen kod için birim testleri oluşturma ve çalıştırma](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md) -erişilebilirlik için güncelleştirmeler
 - [Microsoft Fakes ile test edilen kodu yalıtın](../test/isolating-code-under-test-with-microsoft-fakes.md) -Fakes docs 'taki .NET 5,0 'yi açıkça belirleyin
 
@@ -315,60 +315,60 @@ Belgelerde yer alan yeni Visual Studio hoş geldiniz. Bu makale, Nisan 2021'den 
 
 **Güncelleştirilmiş makaleler**
 
-- [Visual Studio numaraları ve yayın tarihleri -](../install/visual-studio-build-numbers-and-release-dates.md) Patch Tuesday güncelleştirmeleri
+- [Visual Studio derleme numaraları ve sürüm tarihleri](../install/visual-studio-build-numbers-and-release-dates.md) -düzeltme eki Salı güncelleştirmeleri
 
 ### <a name="msbuild"></a>MSBuild
 
 **Güncelleştirilmiş makaleler**
 
-- [MSBuild sözlüğü](../msbuild/msbuild-glossary.md) - Sözlük anahtarlarını H2'ye yükseltin
+- [MSBuild sözlüğü](../msbuild/msbuild-glossary.md) -sözlük anahtarlarını H2 'e yükselt
 
 ### <a name="profiling"></a>Profil Oluşturma
 
 **Yeni makaleler**
 
-- Visual Studio profil [Visual Studio dotnet](../profiling/dotnet-counters-tool.md) sayaçlarını görselleştirme - .NET Sayaçları araç belgesi ekleme
+- [Visual Studio Profiler 'dan DotNet sayaçlarını görselleştirin](../profiling/dotnet-counters-tool.md) -.net sayaçlarını ekleme araç belgesi
 
-### <a name="test"></a>Test
+### <a name="test"></a>Test etme
 
 **Güncelleştirilmiş makaleler**
 
-- [Test Gezgini ile birim testleri çalıştırma](../test/run-unit-tests-with-test-explorer.md) - Test ses ipucu belgesi ekleme
+- [Test Gezgini ile birim testleri çalıştırma](../test/run-unit-tests-with-test-explorer.md) -test sesi ekleme ipucu belgesi
 
 ## <a name="december-2020"></a>Aralık 2020
 ### <a name="azure"></a>Azure
 
 **Yeni makaleler**
 
-- [bağlı Azure Uygulama Yapılandırması kullanarak Visual Studio ekleme](../azure/vs-azure-tools-connected-services-app-configuration.md) - Uygulama Yapılandırması Bağlı Hizmetler öğreticisi
+- [Visual Studio bağlı hizmetler 'i kullanarak Azure Uygulama yapılandırması ekleme](../azure/vs-azure-tools-connected-services-app-configuration.md) -uygulama yapılandırma bağlı hizmetler öğreticisi
 
 ### <a name="code-quality"></a>Kod kalitesi
 
 **Güncelleştirilmiş makaleler**
 
-- [Genel](../code-quality/use-roslyn-analyzers.md) Bakış - editorconfig ile komut satırıyla bina
-- [Birinci taraf .NET çözümleyicilerini etkinleştirme veya yükleme](../code-quality/install-net-analyzers.md)
-  - FxCopAnalyzers'ın NetAnalyzers'a geçiş belgelerine daha fazla netlik ekleme
-  - .NET çözümleyicileri için içindekiler tablosu yeniden düzenleme
-- [FxCop çözümleyicilerinden .NET](../code-quality/migrate-from-fxcop-analyzers-to-net-analyzers.md) çözümleyicilere geçiş - FxCopAnalyzers'tan NetAnalyzers'a geçiş belgelerine daha fazla netlik ekleme
+- [Genel bakış](../code-quality/use-roslyn-analyzers.md) -editorconfig ile komut satırından oluşturma
+- [Birinci taraf .NET çözümleyicilerinin etkinleştirilmesi veya yüklenmesi](../code-quality/install-net-analyzers.md)
+  - Fxcopçözümleyiciler için geçiş belgelerine daha fazla açıklık ekleyerek Netçözümleyiciler
+  - .NET Çözümleyicileri için İçindekiler tablosunu yeniden düzenleme
+- [FxCop çözümleyicileri ' nden .net çözümleyicilerine geçiş](../code-quality/migrate-from-fxcop-analyzers-to-net-analyzers.md) -fxcopçözümleyiciler için geçiş belgelerine daha fazla açıklık ekleyerek netçözümleyiciler
 
 ### <a name="containers"></a>Kapsayıcılar
 
 **Güncelleştirilmiş makaleler**
 
-- [Docker ile Visual Studio sorunlarını giderme](../containers/troubleshooting-docker-errors.md) - Docker'ı Visual Studio için Güncelleştirme Sorun Giderme kılavuzu
+- [Docker Ile Visual Studio geliştirmesi sorunlarını giderme](../containers/troubleshooting-docker-errors.md) -Visual Studio Için Docker güncelleştirme Kılavuzu
 
 ### <a name="debugger"></a>Hata Ayıklayıcısı
 
 **Güncelleştirilmiş makaleler**
 
-- [SSS - Ihtiyacınız olan hata ayıklama özelliğini Visual Studio](../debugger/find-your-debugging-task.yml) - Hata ayıklama görevinizi bulmak için bulma çalışması ve genel bakış konuları
+- SSS-hata ayıklama görevinizi ve genel bakış konularını bulmak için Visual Studio-bulma işlerinde [ihtiyacınız olan hata ayıklama özelliğini bulun](../debugger/find-your-debugging-task.yml)
 
 ### <a name="get-started"></a>başlarken
 
 **Güncelleştirilmiş makaleler**
 
-- [Öğretici: Visual Studio'da](../get-started/csharp/tutorial-console.md) basit bir C# konsol uygulaması oluşturma - C# konsol öğreticisi: Bölüm 2 yalnızca VS 2019 için geçerlidir
+- [Öğretici: Visual Studio 'da basit bir c# konsol uygulaması oluşturma](../get-started/csharp/tutorial-console.md) -C# konsol öğreticisi: 2. bölüm yalnızca vs 2019 için geçerlidir
 
 ### <a name="ide"></a>IDE
 
@@ -389,57 +389,57 @@ Belgelerde yer alan yeni Visual Studio hoş geldiniz. Bu makale, Nisan 2021'den 
   - Tutorial-projects-solutions.md Güncelleştir
   - eksik menü seçeneği
 
-### <a name="test"></a>Test
+### <a name="test"></a>Test etme
 
 **Güncelleştirilmiş makaleler**
 
 - [Birim testi ile çalışmaya başlama](../test/getting-started-with-unit-testing.md) -test araçları için bulma çalışması ve diğer geliştirmeler
 - [Visual Studio 'da test araçlarına ilk bakış](../test/improve-code-quality.md) -bulma çalışması ve test araçları için diğer geliştirmeler
 - [Visual Studio 'da test araçları # gerekli; arama sonuçlarında sayfa başlığı görüntülendi. Markasını ekleyin. < 60 karakter.](../test/index.yml) -Test araçları için bulma işi ve diğer geliştirmeler
-- [Test Gezgini ile birim testleri çalıştırma](../test/run-unit-tests-with-test-explorer.md) - Fark çerçeveleri için dinamik çalma listesi xml'i ekleme
+- [Test Gezgini ile birim testleri çalıştırma](../test/run-unit-tests-with-test-explorer.md) -fark çerçeveleri için dinamik playlist XML ekleme
 
 ## <a name="november-2020"></a>Kasım 2020
 ### <a name="code-quality"></a>Kod kalitesi
 
 **Yeni makaleler**
 
-- [.NET çözümleyicilerini etkinleştirme veya yükleme](../code-quality/install-net-analyzers.md) - FxCop çözümleyicilerinden .NET çözümleyicilere geçiş için belgeler ekleme
-- [FxCop çözümleyicilerinden .NET](../code-quality/migrate-from-fxcop-analyzers-to-net-analyzers.md) çözümleyicilere geçiş - FxCop çözümleyicilerinden .NET çözümleyicilere geçiş için belgeler ekleme
-- [Eski analizden (FxCop)](../code-quality/migrate-from-legacy-analysis-to-net-analyzers.md) kaynak analizine (.NET çözümleyicileri) geçiş - FxCop çözümleyicilerinden .NET çözümleyicilere geçiş için belgeler ekleme
-- [Eski FxCop ve .NET](../code-quality/net-analyzers-faq.yml) çözümleyicileri hakkında sık sorulan sorular - FxCop çözümleyicilerinden .NET çözümleyicilere geçiş için belgeler ekleme
+- [.Net Çözümleyicileri 'Ni etkinleştirme veya yükleme](../code-quality/install-net-analyzers.md) -FxCop çözümleyicileri ' nden .net çözümleyicilerine geçiş yapmak için belge ekleyin
+- [FxCop çözümleyicileri ' nden .net çözümleyicilerine geçiş](../code-quality/migrate-from-fxcop-analyzers-to-net-analyzers.md) -FxCop çözümleyicileri ' nden .net çözümleyicilerine geçiş yapmak için belge ekleyin
+- [Eski analizden (FxCop) kaynak analizine (.net Çözümleyicileri) geçiş](../code-quality/migrate-from-legacy-analysis-to-net-analyzers.md) -FxCop çözümleyicileri ' nden .net çözümleyicilerine geçiş yapmak için belge ekleyin
+- [Eski FxCop ve .net Çözümleyicileri hakkında sık sorulan sorular](../code-quality/net-analyzers-faq.yml) -FxCop çözümleyicileri ' nden .net çözümleyicilerine geçirilecek belgeler ekleme
 
 **Güncelleştirilmiş makaleler**
 
-- [Kod analizi hakkında SSS](../code-quality/analyzers-faq.yml) - FxCop çözümleyicilerinden .NET çözümleyicilerine geçiş için belgeler eklendi
-- [Fxcop kural bağlantı noktası durumu](../code-quality/fxcop-rule-port-status.md) - FxCop çözümleyicilerinden .NET çözümleyicilerine geçiş için belgeler eklendi
-- [Kullanım dışı kurallar](../code-quality/fxcop-unported-deprecated-rules.md) - FxCop çözümleyicilerinden .NET çözümleyicilerine geçiş için belgeler eklendi
-- [Taşınabilir olan raporlanmamış kurallar](../code-quality/fxcop-unported-rules-may-get-ported.md) - FxCop çözümleyicilerinden .NET çözümleyicilerine geçiş için belgeler eklendi
-- [Raporlanmamış kurallar](../code-quality/fxcop-unported-rules.md) - FxCop çözümleyicilerinden .NET çözümleyicilerine geçiş için belgeler eklendi
-- [Üçüncü taraf çözümleyicilerini yükleme](../code-quality/install-roslyn-analyzers.md) - FxCop çözümleyicilerinden .NET çözümleyicilerine geçiş için belgeler eklendi
-- [Genel](../code-quality/use-roslyn-analyzers.md) Bakış - FxCop çözümleyicilerinden .NET çözümleyicilerine geçiş için belgeler eklendi
+- [Kod analizi hakkında SSS](../code-quality/analyzers-faq.yml) -FxCop çözümleyicileri ' nden .net çözümleyicilerine geçirilecek belgeler eklendi
+- [FxCop kural bağlantı noktası durumu](../code-quality/fxcop-rule-port-status.md) -FxCop çözümleyicileri ' nden .net çözümleyicilerine geçirilecek belgeler eklendi
+- [Kullanım dışı kurallar](../code-quality/fxcop-unported-deprecated-rules.md) -FxCop çözümleyicileri ' nden .net çözümleyicilerine geçirilecek belgeler eklendi
+- FxCop çözümleyicileri 'nden .NET çözümleyicilerine geçiş yapmak için, bağlantı halinde eklenen ve desteklenmeyen [kurallar](../code-quality/fxcop-unported-rules-may-get-ported.md)
+- Çapraz olmayan [kurallar](../code-quality/fxcop-unported-rules.md) -FxCop çözümleyicileri ' nden .net çözümleyicilerine geçirilecek belgeler eklendi
+- [Üçüncü taraf Çözümleyicileri](../code-quality/install-roslyn-analyzers.md) , FxCop çözümleyicilerinin .net çözümleyiciler 'e geçirilmesi için belge eklendi
+- [Genel bakış](../code-quality/use-roslyn-analyzers.md) -FxCop çözümleyicileri ' nden .net çözümleyicilerine geçirilecek belgeler eklendi
 
 ### <a name="containers"></a>Kapsayıcılar
 
 **Güncelleştirilmiş makaleler**
 
-- [Bridge to Kubernetes nasıl çalışır?](../containers/overview-bridge-to-kubernetes.md) - Kubernetes izinleri bölümü
+- [Kubernetes Ile köprü](../containers/overview-bridge-to-kubernetes.md) oluşturma-Kubernetes izinleri bölümü
 
 ### <a name="debugger"></a>Hata Ayıklayıcısı
 
 **Yeni makaleler**
 
-- [Docker kapsayıcısı üzerinde çalışan bir işleme ekleme](../debugger/attach-to-process-running-in-docker-container.md) - Linux senaryoları için işlem belgelerine eklemeyi yeniden düzenleme
+- [Docker kapsayıcısı üzerinde çalışan bir Işleme iliştirme](../debugger/attach-to-process-running-in-docker-container.md) -yeniden düzenleme, Linux senaryolarına yönelik belgeleri işleme
 
 **Güncelleştirilmiş makaleler**
 
-- [Visual Studio](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md) hata ayıklayıcısı ile çalışan işlemlere ekleme - Linux senaryoları için işlem belgelerine eklemeyi yeniden düzenleme
-- [Bir işleme iliştirerek SSH](../debugger/remote-debugging-dotnet-core-linux-with-ssh.md) kullanarak Linux'ta .NET Core'da hata ayıklama - Linux senaryoları için işlem belgelerine eklemeyi yeniden düzenleme
+- [Visual Studio hata ayıklayıcı ile çalışan Işlemlere iliştirme](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md) -yeniden düzenleme, Linux senaryolarına yönelik belgeleri işleme
+- Linux ['ta bir işleme ekleyerek Linux 'ta .NET Core 'Da hata ayıklayın](../debugger/remote-debugging-dotnet-core-linux-with-ssh.md) Linux senaryoları için belgeleri işleme ekleme
 
 ### <a name="deployment"></a>Dağıtım
 
 **Yeni makaleler**
 
-- [ClickOnce kullanarak bir .NET Windows](../deployment/quickstart-deploy-using-clickonce-folder.md) masaüstü uygulaması dağıtma - .NET Windows projeleri için ClickOnce'un hızlı başlangıcını ekleme
+- [ClickOnce kullanarak .NET Windows masaüstü uygulaması dağıtma](../deployment/quickstart-deploy-using-clickonce-folder.md) -.NET Windows projeleri için ClickOnce ekleme hızlı başlangıcı
 
 **Güncelleştirilmiş makaleler**
 
@@ -468,12 +468,12 @@ Belgelerde yer alan yeni Visual Studio hoş geldiniz. Bu makale, Nisan 2021'den 
 
 **Yeni makaleler**
 
-- [Visual Studio 'Da GitHub hesaplarıyla çalışma](./work-with-github-accounts.md) -GitHub sayfasıyla çalışma eklendi ve GitHub hakkında daha fazla bilgi için, diğer sayfalarda kaydolma
-- [Taban sınıf](./reference/extract-base-class.md) tarafından eklenen DotNet üretkenlik özelliklerini Ayıkla
-- [Satır içi Yöntem](./reference/inline-method.md) -DotNet üretkenlik özellikleri eklendi
-- [Sınıf soyut hale getirme](./reference/make-class-abstract.md) -DotNet üretkenlik özellikleri eklendi
-- [Kullanım `new()` ](./reference/use-new.md) -Eklenen DotNet üretkenlik özellikleri
-- [Model eşleme](./reference/use-pattern-matching.md) ile eklenen DotNet üretkenlik özelliklerini kullanma
+- [Visual Studio'da GitHub](./work-with-github-accounts.md) hesaplarıyla çalışma - GitHub sayfasıyla çalışma ve diğer sayfalarda GitHub oturum açma bilgileri eklendi
+- [Temel sınıfı ayıklama](./reference/extract-base-class.md) - Dotnet üretkenlik özellikleri eklendi
+- [Satır içi yöntem](./reference/inline-method.md) - Dotnet üretkenlik özellikleri eklendi
+- [Sınıfı soyut yapma](./reference/make-class-abstract.md) - Dotnet üretkenlik özellikleri eklendi
+- [Kullanma `new()` ](./reference/use-new.md) - dotnet üretkenlik özellikleri eklendi
+- [Desen eşleştirmeyi](./reference/use-pattern-matching.md) kullanma - Dotnet üretkenlik özellikleri eklendi
 
 **Güncelleştirilmiş makaleler**
 
@@ -482,8 +482,8 @@ Belgelerde yer alan yeni Visual Studio hoş geldiniz. Bu makale, Nisan 2021'den 
   - 16.8 GA için Yeni Git Deneyimi içeriği güncelleştirmeleri
 - [Visual Studio 2019'daki yeniler](./whats-new-visual-studio-2019.md)
   - Meta veriler için alternatif & güncelleştirildi
-  - Visual Studio 2019'daki Güncelleştirmeler sayfası 16.8 GA için güncelleştirildi
-- [Takım Gezgini'da projelere](./connect-team-project.md) bağlanma - Takım Gezgini sayfasını yeni Git deneyimi not defteri bağlantısıyla & güncelleştirildi
+  - 16.8 GA için Visual Studio 2019'daki Güncelleştirmeler sayfası güncelleştirildi
+- [Takım Gezgini'da projelere](./connect-team-project.md) bağlanma - Takım Gezgini sayfasını yeni Git deneyimi not & bağlantısıyla güncelleştirildi
 - [Birden çok kullanıcı hesabıyla çalışma](./work-with-multiple-user-accounts.md) - Diğer sayfalarda GitHub oturum açma bilgileri eklendi
 - [C++ EditorConfig biçimlendirme kuralları](./cpp-editorconfig-properties.md)
   - Ön ek cpp_, C++ .editorconfig ayarları için _cpp_ _ değil
@@ -502,44 +502,44 @@ Belgelerde yer alan yeni Visual Studio hoş geldiniz. Bu makale, Nisan 2021'den 
 - [Visual Studio iş yükü ve bileşen kimlikleri](../install/workload-and-component-ids.md) - 16.8 için güncelleştirilmiş bileşen belgeleri
 - [Visual Studio Derleme Araçları dizini](../install/workload-component-id-vs-build-tools.md) - 16.8 için güncelleştirilmiş bileşen belgeleri
 - [Visual Studio Community dizini](../install/workload-component-id-vs-community.md) - 16.8 için güncelleştirilmiş bileşen belgeleri
-- [Visual Studio Enterprise bileşen dizini](../install/workload-component-id-vs-enterprise.md) -16,8 için bileşen belgeleri güncelleştirildi
-- [Visual Studio Takım Gezgini Component Directory](../install/workload-component-id-vs-team-explorer.md) -güncelleştirilmiş bileşen belgeleri 16,8
-- [Visual Studio Test Aracısı bileşen dizini](../install/workload-component-id-vs-test-agent.md) -16,8 için bileşen belgeleri güncelleştirildi
-- [Visual Studio test denetleyicisi bileşen dizini](../install/workload-component-id-vs-test-controller.md) -16,8 için bileşen belgeleri güncelleştirildi
-- [Visual Studio ve Azure hizmetlerini bir güvenlik duvarı veya proxy sunucusu arkasında yükleyip kullanma](../install/install-and-use-visual-studio-behind-a-firewall-or-proxy-server.md) -eksik etki alanı eklendi
+- [Visual Studio Enterprise dizini -](../install/workload-component-id-vs-enterprise.md) 16.8 için güncelleştirilmiş bileşen belgeleri
+- [Visual Studio Takım Gezgini dizini](../install/workload-component-id-vs-team-explorer.md) - 16.8 için güncelleştirilmiş bileşen belgeleri
+- [Visual Studio Test Aracısı bileşen dizini](../install/workload-component-id-vs-test-agent.md) - 16.8 için güncelleştirilmiş bileşen belgeleri
+- [Visual Studio Test Denetleyicisi bileşen dizini](../install/workload-component-id-vs-test-controller.md) - 16.8 için güncelleştirilmiş bileşen belgeleri
+- [Güvenlik duvarı veya ara Visual Studio ve Azure Hizmetleri'nin arkasında](../install/install-and-use-visual-studio-behind-a-firewall-or-proxy-server.md) yükleme ve kullanma - Eksik etki alanı eklendi
 
 ### <a name="msbuild"></a>MSBuild
 
 **Yeni makaleler**
 
-- [Dalgaları değiştirme](../msbuild/change-waves.md) -MSBuild: dalgaları Değiştir Yeni konu
+- [Dalgaları değiştirme](../msbuild/change-waves.md) - MSBuild: Dalgaları değiştirme yeni konu
 
 **Güncelleştirilmiş makaleler**
 
-- [Özellik işlevleri](../msbuild/property-functions.md) -sürüm 16,8
-- [Ortak MSBuild proje öğeleri](../msbuild/common-msbuild-project-items.md) -InternalsVisibleTo öğesi içeriğini geri yükler
+- [Özellik işlevleri](../msbuild/property-functions.md) - Sürüm 16.8
+- [Ortak MSBuild proje öğeleri](../msbuild/common-msbuild-project-items.md) - InternalsVisibleTo öğesi için içeriği geri yükleme
 
 ### <a name="profiling"></a>Profil Oluşturma
 
 **Güncelleştirilmiş makaleler**
 
-- [Uygulama performansını](../profiling/profile-apps-from-command-line.md) komut satırı-güncelleştirme profil oluşturma komut satırı belgelerinden ölçme
+- [Komut satırdan uygulama performansını ölçme](../profiling/profile-apps-from-command-line.md) - Komut satırı belgelerinden profil oluşturmayı güncelleştirme
 
-### <a name="test"></a>Test
+### <a name="test"></a>Test etme
 
 **Güncelleştirilmiş makaleler**
 
-- [Test Gezgini ile birim testlerini çalıştırma](../test/run-unit-tests-with-test-explorer.md) -playlist XML biçiminde bir kısa bölüm eklendi
-- .NET Core desteğiyle [Microsoft Fakes-güncelleştirilmiş belgelerle test edilen kodu yalıtın](../test/isolating-code-under-test-with-microsoft-fakes.md)
-- .NET Core desteğiyle güncelleştirilmiş belgeleri [birim testi için yalıtmak üzere dolgular kullanın](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md)
+- [Test Gezgini ile birim testleri çalıştırma](../test/run-unit-tests-with-test-explorer.md) - Çalma listesi xml biçiminde kısa bir bölüm eklendi
+- [Microsoft Fakes ile test Microsoft Fakes](../test/isolating-code-under-test-with-microsoft-fakes.md) kodu yalıtma - .NET Core desteğiyle Güncelleştirilmiş Belgeler
+- [Birim testi için uygulamalarınızı yalıtmak için dolgular kullanma](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md) - .NET Core desteğiyle Güncelleştirilmiş Belgeler
 
 ### <a name="xaml-tools"></a>XAML araçları
 
 **Güncelleştirilmiş makaleler**
 
-- [Visual Studio 'da XAML Tasarımcısı tasarım zamanı verilerini kullanma](../xaml-tools/xaml-designtime-data.md)
-  - 16,8 GA için gereksinimler bölümü güncelleştirildi
-  - Gereksinimler bölümü değiştirildi
+- [Tasarım Zamanı Verilerini XAML Tasarımcısı ile Visual Studio](../xaml-tools/xaml-designtime-data.md)
+  - 16.8 GA için Gereksinimler bölümü güncelleştirildi
+  - Gereksinimler Bölümü Değiştirildi
   - Güncelleştirme 16.8 Önizleme açıklaması + GA bağlantısı
 
 ## <a name="october-2020"></a>Ekim 2020
@@ -562,11 +562,11 @@ Belgelerde yer alan yeni Visual Studio hoş geldiniz. Bu makale, Nisan 2021'den 
 
 **Yeni makaleler**
 
-- [Visual Studio'da DirectX 12](../debugger/graphics/visual-studio-graphics-diagnostics-directx-12.md) Desteği - Vsdg dx12
+- [Visual Studio' da DirectX 12](../debugger/graphics/visual-studio-graphics-diagnostics-directx-12.md) Desteği - Vsdg dx12
 
 **Güncelleştirilmiş makaleler**
 
-- [Visual Studio'ASP.NET veya ASP.NET Core uygulamalarının](../debugger/how-to-enable-debugging-for-aspnet-applications.md) hata ayıklaması - GitHub sorunları için hata ayıklayıcı içerik düzeltmeleri
+- [Visual Studio'ASP.NET veya ASP.NET Core](../debugger/how-to-enable-debugging-for-aspnet-applications.md) uygulamalarının hata ayıklaması - GitHub sorunları için hata ayıklayıcı içerik düzeltmeleri
 - [Hata ayıklayıcısında kesme Visual Studio kullanma](../debugger/using-breakpoints.md) - GitHub sorunları için hata ayıklayıcı içerik düzeltmeleri
 - [Visual Studio'da Azure hizmetlerde](../debugger/debug-azure-apps.md) hata ayıklama - SEO ve anlık görüntü hata ayıklayıcısı için bağlantı güncelleştirmeleri
 - Snapshot Debugger - SEO [ASP.NET anlık görüntü hata ayıklayıcısı için](../debugger/debug-live-azure-applications.md) bağlantı güncelleştirmelerini kullanarak Canlı Azure uygulamalarının hata ayıklaması
@@ -584,45 +584,45 @@ Belgelerde yer alan yeni Visual Studio hoş geldiniz. Bu makale, Nisan 2021'den 
 
 **Yeni makaleler**
 
-- [Visual Studio arama](./visual-studio-search.md) -vs arama belgesi kullanma
+- [Belgeyi Visual Studio arama](./visual-studio-search.md) - VS Arama kullanma
 
 ### <a name="install"></a>Yükleme
 
 **Güncelleştirilmiş makaleler**
 
 - [Visual Studio derleme numaraları ve yayın tarihleri](../install/visual-studio-build-numbers-and-release-dates.md)
-  - 16.7.7 ve 16,8 Preview 6 verileri ekleme
-  - 16,8 Preview 5 bilgilerini ekle
+  - 16.7.7 ve 16.8 Preview 6 verileri ekleme
+  - 16.8 Önizleme 5 bilgisi ekleme
 
 ### <a name="msbuild"></a>MSBuild
 
 **Güncelleştirilmiş makaleler**
 
-- [Izlenecek yol: MSBuild](../msbuild/walkthrough-using-msbuild.md) -MSBuild izlenecek yol: tek başına yükleme adımları ekleme
+- [Adım adım kılavuz: MSBuild kullanma](../msbuild/walkthrough-using-msbuild.md) - MSBuild adım adım kılavuz: tek başına yükleme adımları ekleme
 
 ### <a name="profiling"></a>Profil Oluşturma
 
 **Güncelleştirilmiş makaleler**
 
 - [Bellek kullanımını analiz etme](../profiling/analyze-memory-usage.md)
-  - Profil oluşturma için bellek kullanım güncelleştirmeleri-bağlantılar ve açıklamalar
-  - Bellek kullanım Aracı güncelleştirmeleri
-- [Performans Profiler 'da hata ayıklama olmadan bellek kullanımını analiz etme](../profiling/memory-usage-without-debugging2.md)
-  - Profil oluşturma için bellek kullanım güncelleştirmeleri-bağlantılar ve açıklamalar
-  - Bellek kullanım Aracı güncelleştirmeleri
+  - Profil oluşturma için bellek kullanımı güncelleştirmeleri - bağlantılar ve netleştirmeler
+  - Bellek kullanım aracı güncelleştirmeleri
+- [Bellek kullanımını hata ayıklama olmadan analiz Performans Profili Oluşturucu](../profiling/memory-usage-without-debugging2.md)
+  - Profil oluşturma için bellek kullanımı güncelleştirmeleri - bağlantılar ve netleştirmeler
+  - Bellek kullanım aracı güncelleştirmeleri
 - [Profil oluşturma araçlarına ilk bakış](../profiling/profiling-feature-tour.md)
-  - Profil oluşturma için bellek kullanım güncelleştirmeleri-bağlantılar ve açıklamalar
-  - Bellek kullanım Aracı güncelleştirmeleri
+  - Profil oluşturma için bellek kullanımı güncelleştirmeleri - bağlantılar ve netleştirmeler
+  - Bellek kullanım aracı güncelleştirmeleri
 - [Hata ayıklayıcı ile veya hata ayıklayıcı olmadan profil oluşturma araçları çalıştırma](../profiling/running-profiling-tools-with-or-without-the-debugger.md)
-  - Profil oluşturma için bellek kullanım güncelleştirmeleri-bağlantılar ve açıklamalar
-  - Bellek kullanım Aracı güncelleştirmeleri
-- Performans Profiler-bellek kullanım aracı güncelleştirmelerinde [, CPU kullanımını hata ayıklamadan çözümleyin](../profiling/cpu-usage.md)
+  - Profil oluşturma için bellek kullanımı güncelleştirmeleri - bağlantılar ve netleştirmeler
+  - Bellek kullanım aracı güncelleştirmeleri
+- [Bellek kullanım aracı güncelleştirmeleri için cpu](../profiling/cpu-usage.md) Performans Profili Oluşturucu hata ayıklama olmadan analiz etme
 
 ### <a name="windows"></a>Windows
 
 **Güncelleştirilmiş makaleler**
 
-- [Visual Studio belgeleri | Microsoft Docs](../windows/index.yml) -Windows hub güncelleştirmeleri
+- [Visual Studio belgeleri | Microsoft Docs](../windows/index.yml) - Windows hub güncelleştirmeleri
 
 ### <a name="xaml-tools"></a>XAML araçları
 
@@ -642,7 +642,7 @@ Belgelerde yer alan yeni Visual Studio hoş geldiniz. Bu makale, Nisan 2021'den 
 
 **Güncel -leştirilmiş**
 
-- [Kaynak kodu analizine genel bakış](../code-quality/roslyn-analyzers-overview.md) - .NET yeniden düzenlemesi için kod analizi güncelleştirmeleri
+- [Kaynak kod analizine genel bakış](../code-quality/roslyn-analyzers-overview.md) - .NET yeniden düzenlemesi için kod analizi güncelleştirmeleri
 - [Kod kalitesi analizini yapılandırma](../code-quality/use-roslyn-analyzers.md) - .NET yeniden düzenlemesi için kod analizi güncelleştirmeleri
 
 ### <a name="containers"></a>Kapsayıcılar
@@ -679,17 +679,17 @@ Belgelerde yer alan yeni Visual Studio hoş geldiniz. Bu makale, Nisan 2021'den 
 
 **Güncelleştirilmiş makaleler**
 
-- [Visual Studio 'yu yüklediğinizde veya kullanırken ağla ilgili hatalarda sorun giderme](../install/troubleshooting-network-related-errors-in-visual-studio.md) -geri bildirim kimlik doğrulama proxy kilitlenme için geçici çözüm ekleme
+- [Visual Studio yükleme veya kullanma](../install/troubleshooting-network-related-errors-in-visual-studio.md) sırasında ağ ile ilgili hataları giderme - Geri bildirim kimlik doğrulaması ara sunucusu kilitlenmesi için geçici çözüm ekleme
 
 ### <a name="profiling"></a>Profil Oluşturma
 
 **Güncelleştirilmiş makaleler**
 
-- [Visual Studio 'da bellek kullanımını ölçme](../profiling/memory-usage.md) -profil oluşturma Özellik turu güncelleştirmeleri
-- [PerfTips](../profiling/perftips.md) -profil oluşturma özelliği turu güncelleştirmeleri
-- [Profil oluşturma araçlarına ilk bakış](../profiling/profiling-feature-tour.md) -profil oluşturma için güncelleştirmeler Özellik turu
+- [Visual Studio'da bellek kullanımını ölçme](../profiling/memory-usage.md) - Profil oluşturma özelliği turu güncelleştirmeleri
+- [PerfTips](../profiling/perftips.md) - Profil oluşturma özellik turu güncelleştirmeleri
+- [Profil oluşturma araçlarına ilk bakış](../profiling/profiling-feature-tour.md) - Profil oluşturma özellik turu güncelleştirmeleri
 - [Hata ayıklayıcı ile veya hata ayıklayıcı olmadan profil oluşturma araçları çalıştırma](../profiling/running-profiling-tools-with-or-without-the-debugger.md)
-  - Profil oluşturma özelliği turu güncelleştirmeleri
+  - Profil oluşturma özellik turu güncelleştirmeleri
   - İçerik performansı geliştirmeleri
 
 ## <a name="august-2020"></a>Ağustos 2020
@@ -697,29 +697,29 @@ Belgelerde yer alan yeni Visual Studio hoş geldiniz. Bu makale, Nisan 2021'den 
 
 **Yeni makaleler**
 
-- VS 2019 16,7 için [Visual Studio bağlı hizmetler 'e bağlı hizmetleri kullanarak Azure Application Insights ekleme](../azure/azure-app-insights-add-connected-service.md)
-- VS 2019 16,7 için [Visual Studio bağlı hizmetler 'e bağlı hizmetleri kullanarak redsıs Için Azure önbelleği ekleme](../azure/azure-cache-for-redis-add-connected-service.md)
-- VS 2019 16,7 için [Visual Studio bağlı hizmetler 'e bağlı hizmetleri kullanarak uygulamanıza Azure Cosmos DB ekleyin](../azure/azure-cosmosdb-add-connected-service.md)
-- VS 2019 16,7 için [Visual Studio bağlı hizmetler 'e bağlı hizmetleri kullanarak Azure SignalR ekleme](../azure/azure-signalr-add-connected-service.md)
-- VS 2019 16,7 için [Azure SQL veritabanı 'na bağlı hizmetlere bağlantı ekleme](../azure/azure-sql-database-add-connected-service.md)
+- [Visual Studio](../azure/azure-app-insights-add-connected-service.md) Bağlı Hizmetler - VS 2019 16.7 için bağlı hizmetleri kullanarak Azure Application Insights ekleme
+- [REDIS IÇIN AZURE CACHE Bağlı Hizmetler - VS](../azure/azure-cache-for-redis-add-connected-service.md) 2019 16.7 Visual Studio bağlı hizmetleri kullanarak veri ekleme
+- [Azure Cosmos DB Visual Studio](../azure/azure-cosmosdb-add-connected-service.md) Bağlı Hizmetler - VS 2019 16.7 için bağlı hizmetleri kullanarak uygulamanıza yeni hizmetler ekleme
+- Visual Studio Bağlı Hizmetler - VS 2019 16.7 için bağlı hizmetleri kullanarak [Azure SignalR](../azure/azure-signalr-add-connected-service.md) ekleme
+- [Azure SQL Veritabanı](../azure/azure-sql-database-add-connected-service.md) bağlantısı ekleme - VS 2019 16.7 için bağlı hizmetler
 
 **Güncelleştirilmiş makaleler**
 
-- [Visual Studio bağlı hizmetler 'i kullanarak Azure depolama ekleme](../azure/vs-azure-tools-connected-services-storage.md)
-  - VS 2019 için bağlı hizmetler 16,7
-  - Azure depolama bağlı hizmetler makalesi: desteklenen Kullanıcı arabirimini ve proje türlerini güncelleştirme
+- [Bağlı Hizmetler'i Visual Studio Azure depolama ekleme](../azure/vs-azure-tools-connected-services-storage.md)
+  - VS 2019 16.7 için bağlı hizmetler
+  - Azure depolamaya bağlı hizmetler makalesi: kullanıcı arabirimini ve proje türlerini güncelleştirme desteği
 
 ### <a name="code-quality"></a>Kod kalitesi
 
 **Yeni makaleler**
 
-- [CA1310: doğruluk Için StringComparison belirtin](/dotnet/fundamentals/code-analysis/quality-rules/ca1310) -CA1307 için CA1310 ve güncelleştirme belgelerine belge ekleyin
-- [CA1837: Process. GetCurrentProcess () yerine Environment. ProcessId kullanın. ](/dotnet/fundamentals/code-analysis/quality-rules/ca1837) CA1837 için kimlik-belgeler
-- [CA1838: `StringBuilder` P/Invoke Için parametrelerden KAÇıNıN](/dotnet/fundamentals/code-analysis/quality-rules/ca1838) -CA1838 için belge ekleyin
-- [CA2008: TaskScheduler geçirmeden görev oluşturma](/dotnet/fundamentals/code-analysis/quality-rules/ca2008) -CA2008 için belge ekleme
+- [CA1310: Doğruluk için StringComparison](/dotnet/fundamentals/code-analysis/quality-rules/ca1310) belirtin - CA1310 için belgeler ekleyin ve CA1307 için belgeleri güncelleştirin
+- [CA1837: Process.GetCurrentProcess() yerine Environment.ProcessId kullanın. Kimlik](/dotnet/fundamentals/code-analysis/quality-rules/ca1837) - CA1837 belgeleri
+- [CA1838: `StringBuilder` P/Invoke'lar için parametrelerden kaçının](/dotnet/fundamentals/code-analysis/quality-rules/ca1838) - CA1838 için belgeler ekleyin
+- [CA2008: TaskScheduler geçirmeden](/dotnet/fundamentals/code-analysis/quality-rules/ca2008) görev oluşturma - CA2008 için belge ekleme
 - [CA2249:](/dotnet/fundamentals/code-analysis/quality-rules/ca2249) CA2249 için String.IndexOf - Docs yerine String.Contains kullanmayı düşünün
 - [CA2361: DataSet.ReadXml()](/dotnet/fundamentals/code-analysis/quality-rules/ca2361) içeren otomatik olarak kullanılmaktadır sınıfının güvenilmeyen verilerle kullanılmay olduğundan emin olur - Diğer DataSet/DataTable kuralları
-- [CA2362:](/dotnet/fundamentals/code-analysis/quality-rules/ca2362) Otomatik olarak serileştirilebilir türlerde güvenli olmayan DataSet veya DataTable uzaktan kod yürütme saldırılarına karşı savunmasız olabilir - Diğer DataSet/DataTable kuralları
+- [CA2362: Otomatik](/dotnet/fundamentals/code-analysis/quality-rules/ca2362) olarak serileştirilebilir türlerde güvenli olmayan DataSet veya DataTable uzaktan kod yürütme saldırılarına karşı savunmasız olabilir - Diğer DataSet/DataTable kuralları
 - [IL3000: Tek dosya olarak yayımlarken](/dotnet/fundamentals/code-analysis/quality-rules/il3000) Derleme dosya yoluna erişmekten kaçının - IL3000 için belgeler ekleyin
 - [IL3001: Tek dosya olarak yayımlarken](/dotnet/fundamentals/code-analysis/quality-rules/il3001) Derleme dosya yoluna erişmekten kaçının - IL3001 için belgeler ekleyin
 
@@ -728,7 +728,7 @@ Belgelerde yer alan yeni Visual Studio hoş geldiniz. Bu makale, Nisan 2021'den 
 - [CA1002: Genel listeleri açığa çıkarma](/dotnet/fundamentals/code-analysis/quality-rules/ca1002) - Yapılandırılabilirlik Ekle - Api Surface bölümü
 - [CA1046: Başvuru türlerinde](/dotnet/fundamentals/code-analysis/quality-rules/ca1046) eşittir işlecini aşırı yüklemeyin - Configurability Ekle - Api Surface bölümü
 - [CA1307: Netlik için StringComparison](/dotnet/fundamentals/code-analysis/quality-rules/ca1307) belirtin - CA1310 için belgeler ekleyin ve CA1307 için belgeleri güncelleştirin
-- [CA1700: Ayrılmış ](/dotnet/fundamentals/code-analysis/quality-rules/ca1700) &#39;için enum&#39;- Yapılandırma Ekle - Api Yüzeyi bölümü
+- [CA1700: Ayrılmış ](/dotnet/fundamentals/code-analysis/quality-rules/ca1700) &#39;-&#39;Ekle - Api Surface bölümü için enum değerlerinin adını anma
 - [CA1707: Tanımlayıcılar alt çizgi](/dotnet/fundamentals/code-analysis/quality-rules/ca1707) içermeli - Yapılandırılabilirlik Ekle - API Yüzeyi bölümü
 - [CA1822: Üyeleri statik olarak işaretle](/dotnet/fundamentals/code-analysis/quality-rules/ca1822) - Yapılandırılabilirlik Ekle - Api Surface bölümü
 - [CA2351: DataSet.ReadXml() girişinin](/dotnet/fundamentals/code-analysis/quality-rules/ca2351) güvenilir olduğundan emin olmak - Diğer DataSet/DataTable kuralları
@@ -738,7 +738,7 @@ Belgelerde yer alan yeni Visual Studio hoş geldiniz. Bu makale, Nisan 2021'den 
 
 **Güncelleştirilmiş makaleler**
 
-- [Visual Studio](../containers/hosting-web-apps-in-docker.md) kullanarak bir kapsayıcı kayıt defterine ASP.NET kapsayıcı dağıtma - Visual Studio 16.7 Yayımlama Kullanıcı Arabirimi için Kapsayıcı Araçları güncelleştirmeleri
+- Visual Studio kullanarak bir kapsayıcı kayıt [defterine](../containers/hosting-web-apps-in-docker.md) ASP.NET kapsayıcı dağıtma - Visual Studio 16.7 Yayımlama Kullanıcı Arabirimi için Kapsayıcı Araçları güncelleştirmeleri
 - [Kullanmaya başlayın Kubernetes](../containers/bridge-to-kubernetes.md) Araçları ile Visual Studio - Kubernetes öğreticisi: Kaldırma adımları ekleme
 
 ### <a name="deployment"></a>Dağıtım
@@ -750,47 +750,47 @@ Belgelerde yer alan yeni Visual Studio hoş geldiniz. Bu makale, Nisan 2021'den 
 **Güncelleştirilmiş makaleler**
 
 - [Uygulamanızı bir klasöre, IIS'ye, Azure'a veya başka bir hedefe dağıtma](../deployment/deploying-applications-services-and-components-resources.md) - Dağıtım güncelleştirmeleri
-- [Visual Studio 'Da dağıtım](../deployment/index.yml) -dağıtım güncelleştirmeleri
+- [Dağıtım Visual Studio](../deployment/index.yml) - Dağıtım güncelleştirmeleri
 
 ### <a name="extensibility"></a>Genişletilebilirlik
 
 **Güncelleştirilmiş makaleler**
-- [Proje alt türleri](../extensibility/internals/project-subtypes.md) -liste öğelerini girintileme girintisini çözme
-- [Visual Studio Için renk değeri başvurusu](../extensibility/ux-guidelines/color-value-reference-for-visual-studio.md) -AB # 1759333 düzeltilmesi eksik sütun başlıkları
+- [Proje Alt Türleri](../extensibility/internals/project-subtypes.md) - Liste öğelerinin girintisini düzeltme
+- [Visual Studio için renk değeri](../extensibility/ux-guidelines/color-value-reference-for-visual-studio.md) başvurusu - AB#1759333 Eksik sütun üst bilgilerini düzeltme
 
 ### <a name="get-started"></a>başlarken
 
 **Güncelleştirilmiş makaleler**
 
-- 5. Adım: yeni bağlı hizmetler kullanıcı arabirimi için [ASP.NET Core uygulamanızı Azure 'A dağıtma](../get-started/csharp/tutorial-aspnet-core-ef-step-05.md) -video öğreticisi güncelleştirmeleri
+- [5. Adım: ASP.NET Core uygulamanızı Azure'a dağıtma](../get-started/csharp/tutorial-aspnet-core-ef-step-05.md) - Yeni Bağlı Hizmetler kullanıcı arabirimi için video öğreticisi güncelleştirmeleri
 
 ### <a name="ide"></a>IDE
 
 **Yeni makaleler**
 
-- [Visual Studio 'Da F1 Yardım anahtarını değiştirme](./not-in-toc/change-f1-help-key.md) -yeniden düzenleme varsayılan F1 Yardım sayfası
-- [Metin Düzenleyicisi Için F1 yardımı](./not-in-toc/default-f1-text-editor.md) -yeniden düzenleme varsayılan F1 Yardım sayfası
-- -Convert typeof öğesini yeniden düzenleme adına [Dönüştür `typeof` `nameof` ](./reference/convert-typeof-to-nameof.md)
-- [LINQ Ifadesini Basitleştir](./reference/simplify-linq-expression.md) -LINQ ifade yeniden düzenlemeyi basitleştirme
+- [Visual Studio F1 yardım](./not-in-toc/change-f1-help-key.md) anahtarını değiştirme - Varsayılan F1 Yardım sayfasını yeniden düzenleme
+- [Metin düzenleyicisi için F1 yardımı](./not-in-toc/default-f1-text-editor.md) - Varsayılan F1 Yardım sayfasını yeniden düzenleme
+- [Dönüştürme `typeof` `nameof` -](./reference/convert-typeof-to-nameof.md) Tür türünü nameof yeniden düzenlemeye dönüştürme
+- [LINQ ifadesini basitleştirme](./reference/simplify-linq-expression.md) - LINQ ifadesi yeniden düzenlemeyi basitleştirme
 
 **Güncelleştirilmiş makaleler**
 
-- [Visual Studio 'da pencere düzenlerini özelleştirme](./customizing-window-layouts-in-visual-studio.md) -pencere düzenlerini özelleştirmek için monikered dikey belge sekmeleri bilgilerini ekleyin.
-- [Visual Studio veya Visual Studio Yükleyicisi ilgili bir sorunu bildirme](./how-to-report-a-problem-with-visual-studio.md)
-  - NMI 'ye daha fazla bilgi eklendi
-  - Sorun bildir sayfasının tamamını yeniden oldu
-- [F1 Yardım](./not-in-toc/default.md) -yeniden düzenleme varsayılan F1 Yardım sayfası
-- [Otomatik kurtarma, ortam, Seçenekler iletişim kutusu](./reference/autorecover-environment-options-dialog-box.md) -güncelleştirilmiş otomatik kaydetme dosya konumları hakkında bilgi ekleme
-- [Seçenekler, metin düzenleyici, temel (Visual Basic),](./reference/options-text-editor-basic-visual-basic.md) satır içi parametre adı Ipuçları için gelişmiş-eklenen temel belgeler
-- [Seçenekler, metin düzenleyici, C#, gelişmiş](./reference/options-text-editor-csharp-advanced.md) -satır içi parametre adı ipuçları için temel belgeler eklendi
-- [Visual Studio performans ipuçları ve püf noktaları](./visual-studio-performance-tips-and-tricks.md) -' harita modunu devre dışı bırak ' ve ' sözcük kaydırmayı devre dışı bırak ' bilgilerini
+- [Visual Studio penceresinde pencere](./customizing-window-layouts-in-visual-studio.md) düzenlerini özelleştirme - Pencere Düzenlerini Özelleştirme makalesine bilinen dikey belge sekmeleri bilgileri ekleyin.
+- [Visual Studio veya Visual Studio Yükleyicisi](./how-to-report-a-problem-with-visual-studio.md)
+  - NMI'ye daha fazla bilgi eklendi
+  - Sorun Bildir sayfasının tamamının redid'ini ekleyin
+- [F1 yardımı](./not-in-toc/default.md) - Varsayılan F1 Yardım sayfasını yeniden düzenleme
+- [AutoRecover, Ortam, Seçenekler iletişim kutusu](./reference/autorecover-environment-options-dialog-box.md) - güncelleştirilmiş otomatik kaydetme dosya konumları hakkında bilgi ekleme
+- [Seçenekler, Metin Düzenleyici, Temel (Visual Basic), Gelişmiş](./reference/options-text-editor-basic-visual-basic.md) - Satır içi parametre adı ipuçları için temel belgeler eklendi
+- [Seçenekler, Metin Düzenleyici, C#, Gelişmiş](./reference/options-text-editor-csharp-advanced.md) - Satır içi parametre adı ipuçları için temel belgeler eklendi
+- [Visual Studio ipuçları ve püf noktaları](./visual-studio-performance-tips-and-tricks.md) - 'eşleme modunu devre dışı bırak' ve 'sözcük kaydırmayı devre dışı bırak' bilgileri ekleyin
 - [Visual Studio 2019'daki](./whats-new-visual-studio-2019.md) yeniler - Visual Studio 2019'daki Güncelleştirmeler 16.7 GA bilgileriyle
 
 ### <a name="rtvs"></a>RTVS
 
 **Güncelleştirilmiş makaleler**
 
-- [SQL Server ve R](../rtvs/integrating-sql-server-with-r.md) ile çalışma - sütun üst bilgilerini içerecek şekilde düzeltilen tablolar
+- [SQL Server ve R ile çalışma](../rtvs/integrating-sql-server-with-r.md) - sütun üst bilgilerini içerecek şekilde düzeltilen tablolar
 
 ## <a name="july-2020"></a>Temmuz 2020
 ### <a name="code-quality"></a>Kod kalitesi
@@ -823,51 +823,51 @@ Belgelerde yer alan yeni Visual Studio hoş geldiniz. Bu makale, Nisan 2021'den 
 
 **Güncelleştirilmiş makaleler**
 
-- [Değişiklik günlüğü (Unity için Visual Studio Araçları, Windows)](/gamedev/unity/change-log-visual-studio-tools-for-unity.md) -kabartma VSTU changelog 4.7.1.0
-- [Değişiklik günlüğü (Unity için Visual Studio Araçları, Mac)](/gamedev/unity/change-log-visual-studio-tools-for-unity-mac.md) -kabartma vstum changelog, 2.7.1.0
+- [Değişiklik günlüğü (Unity için Visual Studio Araçları, Windows)](/gamedev/unity/change-log-visual-studio-tools-for-unity.md) - VSTU değişiklik günlüğünü 4.7.1.0 olarak değiştirme
+- [Değişiklik Günlüğü (Unity için Visual Studio Araçları, Mac)](/gamedev/unity/change-log-visual-studio-tools-for-unity-mac.md) - VSTUM değişiklik günlüğünü 2.7.1.0'a kaldırma
 
 ### <a name="get-started"></a>başlarken
 
 **Yeni makaleler**
 
-- [Öğretici: basit bir C# konsol uygulamasını genişletme](../get-started/csharp/tutorial-console-part-2.md) -yayın genişletme öğreticisi ilk sürümü
+- [Öğretici: Basit bir C# konsol uygulamasını genişletme](../get-started/csharp/tutorial-console-part-2.md) - Sürüm genişletme sidewalk öğreticisi ilk sürümü
 
 ### <a name="ide"></a>IDE
 
 **Yeni makaleler**
 
-- [Geliştirici topluluğu yönergeleri](./developer-community-guidelines.md) -eklenen Devcom yönergeleri
-- [İçeri aktarılmamış türler ve genişletme yöntemleri için IntelliSense tamamlama](./reference/intellisense-completion-unimported-types-extension-methods.md)
+- [Geliştirici Topluluğu yönergeleri](./developer-community-guidelines.md) - DevCom Yönergeleri eklendi
+- [Ported olmayan türler ve uzantı yöntemleri için IntelliSense tamamlama](./reference/intellisense-completion-unimported-types-extension-methods.md)
 
 ### <a name="install"></a>Yükleme
 
 **Yeni makaleler**
 
-- [En düşük düzeyde çevrimdışı düzen kullanarak Visual Studio 'Yu güncelleştirme](../install/update-minimal-layout.md) -belge en az düzen özelliği
-- [Visual Studio kurumsal kılavuzu](../install/visual-studio-enterprise-guide.md) -kurumsal kılavuz
+- [En Visual Studio çevrimdışı düzen kullanarak güncelleştirme - En az](../install/update-minimal-layout.md) düzen özelliğini belgele
+- [Visual Studio kurumsal kılavuz](../install/visual-studio-enterprise-guide.md) - Kurumsal kılavuz
 
 ### <a name="javascript"></a>JavaScript
 
 **Yeni makaleler**
 
-- [TypeScript kodu derleme (Node.js)](../javascript/compile-typescript-code-npm.md) -TypeScript derleme ve derleme
-- [TypeScript kodu derleme (ASP.NET Core)](../javascript/compile-typescript-code-nuget.md) -TypeScript derleme ve derleme
+- [TypeScript kodunu derleme (Node.js)](../javascript/compile-typescript-code-npm.md) - TypeScript derleme ve derleme
+- [TypeScript kodunu derleme (ASP.NET Core)](../javascript/compile-typescript-code-nuget.md) - TypeScript derleme ve derleme
 
 ### <a name="msbuild"></a>MSBuild
 
 **Yeni makaleler**
 
-- [Ortak MSBuild öğe meta verileri](../msbuild/common-msbuild-item-metadata.md) -MSBuild: bağlantı ve bağlantı tabanı ile isteğe bağlı meta veriler için tablo ekleme
-- [MSBuild 'de çözüm filtreleri](../msbuild/solution-filters.md) -MSBuild çözüm filtreleri
+- [Ortak MSBuild öğe meta verileri](../msbuild/common-msbuild-item-metadata.md) - MSBuild: Link ve LinkBase ile isteğe bağlı meta veriler için tablo ekleme
+- [MSBuild'de çözüm filtreleri](../msbuild/solution-filters.md) - MSBuild çözüm filtreleri
 
-### <a name="test"></a>Test
+### <a name="test"></a>Test etme
 
 **Yeni makaleler**
 
-- Test Gezgini-test Gezgini performans çalışması [ile birim testlerini hata ayıklama ve çözümleme](../test/debug-unit-tests-with-test-explorer.md)
+- [Test Gezgini ile birim testlerinde hata ayıklama ve analiz etme](../test/debug-unit-tests-with-test-explorer.md) - Test Gezgini performans çalışması
 
 **Güncelleştirilmiş makaleler**
 
-- [*. Runsettings* dosyasını kullanarak birim testlerini yapılandırma](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md)
-  - Bir runsettings dosyası kullanarak birim testlerini yapılandırmaya yönelik güncelleştirmeler
+- [*.runsettings* dosyası kullanarak birim testlerini yapılandırma](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md)
+  - Runsettings dosyası kullanarak birim testlerini yapılandırma güncelleştirmeleri
   - Blame seçeneği açıklaması değiştirildi ve örnek eklendi.

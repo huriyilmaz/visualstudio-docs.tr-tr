@@ -9,12 +9,12 @@ ms.reviewer: karthiknadig
 manager: jmartens
 ms.workload:
 - data-science
-ms.openlocfilehash: 01048bc9b21287eb62693096b34a1ea8305e0ee9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3aefba3880443269dbdb1c933e2c12b2f8001469
+ms.sourcegitcommit: fc05a763b59e212c86350d117a1900a1f2686ec8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99851874"
+ms.lasthandoff: 06/07/2021
+ms.locfileid: "111551286"
 ---
 # <a name="use-docker-containers-with-r-tools-for-visual-studio"></a>Visual Studio için R Araçları ile Docker Kapsayıcıları Kullanma
 
@@ -53,7 +53,7 @@ ms.locfileid: "99851874"
 RTVS, aşağıdaki Docker dosyasında açıklanan Microsoft/rtvs görüntüsü gibi özel olarak oluşturulmuş görüntüler kullanılarak oluşturulan kapsayıcıların yönetimini algılar ve yönetimine izin verir. Burada kullanılan temel görüntüde rtvs-Daemon, R 3.4.2 ve ortak R paketleri önceden yüklenmiş olarak bulunur. **Note**: gerektiğinde burada gösterilen kullanıcı adını ve parolayı değiştirin.
 
 ```docker
-FROM microsoft/rtvs:1.3-ub1604-r3.4.2
+FROM mcr.microsoft.com/rtvs:1.3-ub1604-r3.4.2
 RUN useradd --create-home ruser1
 RUN echo "ruser1:foobar" | chpasswd
 

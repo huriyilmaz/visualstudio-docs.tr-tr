@@ -15,12 +15,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 28451b9bf317c33e1aff52a62247374ea2b6871e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1675cf43cb9632d4480265f00a377c1f5c530b51
+ms.sourcegitcommit: c5f2a142ebf9f00808314f79a4508a82e6df1198
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99913883"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111395364"
 ---
 # <a name="item-metadata-in-task-batching"></a>Toplu görev işlemede öğe meta verileri
 
@@ -138,9 +138,9 @@ Aşağıdaki örnek, birden çok öğe listesini öğe meta verileri temelinde t
 
 ## <a name="batch-one-item-at-a-time"></a>Tek seferde bir öğe toplu işi
 
-Toplu işlem, oluşturma sırasında her öğeye atanan iyi bilinen öğe meta verileri üzerinde de gerçekleştirilebilir. Bu, bir koleksiyondaki her öğenin toplu işlem için kullanılacak bazı meta verilere sahip olmasını güvence altına alır. `Identity`Meta veri değeri her öğe için benzersizdir ve bir öğe listesindeki her öğeyi ayrı bir toplu işe bölmek için yararlıdır. İyi bilinen öğe meta verilerinin tam bir listesi için bkz. [tanınmış öğe meta verileri](../msbuild/msbuild-well-known-item-metadata.md).
+Toplu işlem, oluşturma sırasında her öğeye atanan iyi bilinen öğe meta verileri üzerinde de gerçekleştirilebilir. Bu, bir koleksiyondaki her öğenin toplu işlem için kullanılacak bazı meta verilere sahip olmasını güvence altına alır. `Identity`Meta veri değeri, bir öğe listesindeki her öğeyi ayrı bir toplu işe bölmek için yararlıdır. İyi bilinen öğe meta verilerinin tam bir listesi için bkz. [tanınmış öğe meta verileri](../msbuild/msbuild-well-known-item-metadata.md).
 
-Aşağıdaki örnek bir öğe listesindeki her bir öğenin tek seferde nasıl toplu olarak kullanılacağını gösterir. `Identity`Her öğenin meta veri değeri benzersiz olduğundan, `ExampColl` öğe listesi altı toplu işe bölünür, her toplu işlem öğe listesinin bir öğesini içerir. Özniteliğinde varlığı, `%(Identity)` `Text` toplu Işleme yapılacak MSBuild 'i bilgilendirir.
+Aşağıdaki örnek bir öğe listesindeki her bir öğenin tek seferde nasıl toplu olarak kullanılacağını gösterir. `ExampColl`Öğe listesi altı toplu işe bölünür, her toplu işlem öğe listesinin bir öğesini içerir. Özniteliğinde varlığı, `%(Identity)` `Text` toplu Işleme yapılacak MSBuild 'i bilgilendirir.
 
 ```xml
 <Project
@@ -174,6 +174,35 @@ Identity: 'Item3' -- Items in ExampColl: Item3
 Identity: 'Item4' -- Items in ExampColl: Item4
 Identity: 'Item5' -- Items in ExampColl: Item5
 Identity: 'Item6' -- Items in ExampColl: Item6
+```
+
+Ancak `Identity` benzersiz olması garanti edilmez; değeri özniteliğin değerlendirilen son değeridir `Include` . Bu nedenle, herhangi bir `Include` öznitelik birden çok kez kullanılıyorsa, birlikte oluşturulur. Aşağıdaki örnekte gösterildiği gibi, bu teknik, `Include` özniteliklerin gruptaki her öğe için benzersiz olmasını gerektirir. Bu noktayı göstermek için aşağıdaki kodu göz önünde bulundurun:
+
+```xml
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Item Include="1">
+      <M>1</M>
+    </Item>
+    <Item Include="1">
+      <M>2</M>
+    </Item>
+    <Item Include="2">
+      <M>3</M>
+    </Item>
+  </ItemGroup>
+
+  <Target Name="Batching">
+    <Warning Text="@(Item->'%(Identity): %(M)')" Condition=" '%(Identity)' != '' "/>
+  </Target>
+</Project>
+```
+
+Çıktı, ilk iki öğenin aynı toplu işte olduğunu gösterir, çünkü `Include` özniteliği bunlar için aynı olur:
+
+```output
+test.proj(15,5): warning : 1: 1;1: 2
+test.proj(15,5): warning : 2: 3
 ```
 
 ## <a name="filter-item-lists"></a>Öğe listelerini filtrele

@@ -1,6 +1,6 @@
 ---
 title: Docker Compose projeleri için başlatma profillerini yönetme
-description: Docker Compose başlatma profillerinin nasıl kullanılacağını ve Visual Studio 'da Docker Compose kullandığınızda hangi hizmetlerin başlatılabildiğini nasıl denetleyeceğinizi öğrenin.
+description: Docker Compose profillerini kullanmayı öğrenin ve bu profillerde Docker Compose Visual Studio.
 author: ghogen
 manager: jmartens
 ms.technology: vs-azure
@@ -9,27 +9,27 @@ ms.topic: how-to
 ms.date: 05/10/2021
 ms.author: ghogen
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: 003205525f883b010f897e6e47d4cab92a31b8a1
-ms.sourcegitcommit: 162be102d2c22a1c4ad2c447685abd28e0e85d15
+ms.openlocfilehash: e740ea3b7950c14bf11522c4e438a105b09eb7f6
+ms.sourcegitcommit: ab5735d64a6ad7aecabf5d6df159888e3246bff5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110018549"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111433707"
 ---
-# <a name="manage-launch-profiles-for-docker-compose-preview"></a>Docker Compose için başlatma profillerini yönetme (Önizleme)
+# <a name="manage-launch-profiles-for-docker-compose"></a>Docker Compose için başlatma profillerini yönetme
 
-Birden çok hizmetten oluşan ve Docker Compose kullanan bir uygulamanız varsa, Docker Compose başlatma ayarları ' nda var olan bir başlatma profili oluşturarak veya düzenleyerek hangi hizmetlerin çalıştırılacağını ve hata ayıklamasını yapılandırabilirsiniz. Başlatma profilleri, yalnızca geçerli senaryonuza bağlı olan hizmetleri dinamik olarak çalıştırmanızı sağlar. Hata ayıklama deneyiminizi özelleştirmek ve gibi belirli başlatma eylemlerini ayarlamak için başlatma profilleri ' nden oluşturabilir ve seçim yapabilirsiniz `Browser Launch URL` . Ayrıca, her bir hizmeti ayrı ayrı seçme ya da bir Docker Compose profili seçerek, çalıştırılacak hizmet grubunu belirlemek için oluşturma dosyanıza de bakacaksınız.
+Birden çok hizmet içeren ve Docker Compose kullanan bir uygulamanız varsa, başlatma ayarlarında mevcut bir başlatma profili oluşturarak veya düzenleyerek hangi hizmetlerin Docker Compose yapılandırabilirsiniz. Başlatma profilleri, yalnızca geçerli senaryo için önemli olan hizmetleri dinamik olarak çalıştırmanıza olanak sağlar. Hata ayıklama deneyiminizi özelleştirmek ve gibi belirli başlatma eylemlerini ayarlamak için başlatma profillerini oluşturabilir ve bu profillerden seçim `Browser Launch URL` gerçekleştirebilirsiniz. Ayrıca, her bir hizmeti ayrı ayrı seçme veya çalıştıracak hizmet grubunu belirlemek için Oluştur dosyanıza da bakan bir Docker Compose profili seçerek seçeneğiniz de vardır.
 
-Docker Compose profilleri hakkında daha fazla bilgi için bkz. [oluşturma ile profilleri kullanma](https://docs.docker.com/compose/profiles/).
+Profil oluşturma hakkında Docker Compose için [bkz. Oluşturma ile profilleri kullanma.](https://docs.docker.com/compose/profiles/)
  
 ## <a name="prerequisites"></a>Önkoşullar
 
-- [Visual Studio 2019 sürüm 16,10 Önizleme](https://visualstudio.microsoft.com/vs/preview/) veya üzeri
-- [Docker Compose Ile kapsayıcı düzenlemesi](tutorial-multicontainer.md) olan bir çözüm
+- [Visual Studio 2019 sürüm 16.10 veya](https://visualstudio.microsoft.com/vs/) sonraki sürümler
+- Kapsayıcı Düzenleme ile [Docker Compose](tutorial-multicontainer.md)
 
 ## <a name="manage-launch-settings"></a>Başlatma ayarlarını yönetme
 
-*Docker-Compose. yıml* 'nin beş hizmet ve üç oluşturma profili (Web, Web1 ve web2) sahip olduğu aşağıdaki Docker Compose projeyi göz önünde bulundurun.
+*docker-compose.yml Docker Compose nin* beş hizmeti ve üç Oluşturma profili (web, web1 ve web2) olduğu bir proje için aşağıdaki adımları göz önünde bulundurabilirsiniz.
 
 ```yml
 version: '3.9'
@@ -65,17 +65,17 @@ services:
 ```
 
 Docker Compose başlatma ayarları iletişim kutusunu açmak için birkaç seçenek vardır:
-- Visual Studio 'da, **Hata Ayıkla**  >  **Docker Compose başlatma ayarları**' nı seçin:
+- Bu Visual Studio Başlat **Ayarları'Docker Compose**  >  **Yönet'i seçin:**
 
-    ![Hata ayıklama oluşturma ayarlarını yönetme menü öğesi ekran görüntüsü](media/launch-settings/debug-dropdown-manage-compose.png)
+    ![Oluşturma Ayarlarını Yönet menü öğesinin Hata Ayıklama ekran görüntüsü](media/launch-settings/debug-dropdown-manage-compose.png)
 
-- Visual Studio projesine sağ tıklayın `docker-compose` ve **Docker Compose başlatma ayarlarını yönet** ' i seçin.
+- Visual Studio projesine sağ tıklayın `docker-compose` ve Başlatma **Ayarları'Docker Compose Yönet'i seçin**
 
     ![Bağlam menüsü öğesinin ekran görüntüsü](media/launch-settings/launch-settings-context-menu.png)
 
-- Hızlı Başlatma ' yı (**CTRL** + **Q**) kullanın ve **Docker Compose** için arama yapın ve belirtilen komutu bulun.
+- Hızlı Başlat (**Ctrl** Q ) kullanın ve Docker Compose komutunu bulmak + için arama yazın. 
 
-Aşağıdaki örnekte, `web1` Oluştur profili seçilidir ve bu profil, **Hizmetler** listesini yalnızca bu profilde bulunan üç beş tanesi ile filtreliyor:
+Aşağıdaki örnekte, Hizmetler listesini bu profile dahil edilen beş profilden yalnızca üçünü filtreleen Oluştur `web1` profili seçilmiştir: 
 
 !["Başlatma ayarları iletişim kutusunun ekran görüntüsü"](media/launch-settings/launch-settings-create-profile.png)
 
@@ -137,7 +137,7 @@ Bu bilgiler aşağıdaki kodda gösterildiği gibi kaydedilir. Varsayılan eylem
 }
 ```
 
-Ayrıca webapplication1'in eylemlerini Hata ayıklama olmadan başlat **olarak değiştirebilirsiniz.** BulaunchSettings.js *ayarlar* aşağıdaki kod gibi olur:
+Ayrıca webapplication1'in eylemlerini Hata ayıklama olmadan başlat **olarak değiştirebilirsiniz.** bulaunchSettings.js *ayarlar* aşağıdaki kod gibi olur:
 
 ```json
 {
@@ -172,14 +172,14 @@ Aşağıdaki açıklama, üzerinde yer alan *launchSettings.js:*
 |serviceActions | Seçilen hizmetleri ve başlatma eylemlerini listeler.|
 |composeLaunchServiceName| DockerLaunchAction veya DockerLaunchBrowser belirtilirse, DockerServiceName, başlatılan hizmetin adıdır. Dosyanın içinde hangi hizmetin başlatıla Docker Compose için bu özelliği kullanın.|
 |composeLaunchAction| F5 veya Ctrl **F5** üzerinde gerçekleştirecek **başlatma** + **eylemlerini belirtir.** İzin verilen değerler None, LaunchBrowser ve LaunchWCFTestClient değerleridir.|
-|composeLaunchUrl| Tarayıcı başlatılırken kullanılacak URL. Geçerli değiştirme belirteçleri şunlardır "{Serviceıpaddress}", "{ServicePort}" ve "{Scheme}". Örneğin: {Scheme}: ı{serviceipaddress}: {ServicePort}|
+|composeLaunchUrl| Tarayıcıyı başlatmada kullanmak üzere URL. Geçerli değiştirme belirteçleri: "{ServiceIPAddress}", "{ServicePort}" ve "{Scheme}". Örneğin: {Scheme}://{ServiceIPAddress}:{ServicePort}|
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-[Visual Studio kapsayıcı araçları derleme ve hata ayıklamayla genel bakış](container-build.md)aracılığıyla kapsayıcı araçlarının nasıl çalıştığı hakkında daha fazla bilgi edinin.
+Container Tools derleme ve hata ayıklamaya genel bakış Visual Studio [Container Tools'un nasıl çalıştığını öğrenebilirsiniz.](container-build.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio kapsayıcı araçları başlatma ayarları](container-launch-settings.md)
+- [Visual Studio Araçları başlatma ayarları](container-launch-settings.md)
 
-- [Docker Compose derleme ayarları](docker-compose-properties.md)
+- [Docker Compose ayarlarını yapılandırma](docker-compose-properties.md)

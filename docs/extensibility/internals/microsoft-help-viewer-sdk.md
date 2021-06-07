@@ -10,12 +10,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: c53191c5f6e02c0b37d29f89a65119f1edab92ea
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 8bc2ed473e25dc75d0155bc864aa02c157e3482f
+ms.sourcegitcommit: f430d014f912aa7874e1db65026dc72688b973e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105063324"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111448330"
 ---
 # <a name="microsoft-help-viewer-sdk"></a>Microsoft Yardım Görüntüleyicisi SDK’sı
 
@@ -362,7 +362,7 @@ IDE 'de, yardım menüsü öğesi altında **Hata Ayıkla yardım bağlamı**' n
 
 Aşağıdaki tabloda, köşeli ayraçlar arasında görünen tüm dizeler, tanınan bir değerle değiştirilmelidir. Örneğin, \<meta name="Microsoft.Help.Locale" content="[language code]" /> "[Language Code]", "en-US" gibi bir değer ile değiştirilmelidir.
 
-| Özellik (HTML temsili) | Description |
+| Özellik (HTML temsili) | Açıklama |
 | - | - |
 | \< meta name="Microsoft.Help.Locale" content="[language-code]" /> | Bu konu için bir yerel ayar ayarlar. Bu etiket bir konu başlığında kullanılıyorsa, yalnızca bir kez kullanılması gerekir ve diğer Microsoft Yardım etiketlerinin üzerine eklenmelidir. Bu etiket kullanılmazsa, konunun gövde metni, belirtilen ürün yerel ayarıyla ilişkili sözcük kesici kullanılarak dizinlenir; Aksi halde, en-US sözcük kesici kullanılır. Bu etiket, ıSOC RFC 4646 ' e uygundur. Microsoft Yardım 'ın doğru şekilde çalıştığından emin olmak için, genel dil özniteliği yerine bu özelliği kullanın. |
 | \< meta name="Microsoft.Help.TopicLocale" content="[language-code]" /> | Diğer yerel ayarlar da kullanıldığında, bu konu için bir yerel ayar ayarlar. Bu etiket bir konu başlığında kullanılıyorsa, yalnızca bir kez kullanılmalıdır. Katalog birden fazla dilde içerik içerdiğinde bu etiketi kullanın. Bir katalogdaki birden çok konu aynı KIMLIĞE sahip olabilir, ancak her birinin benzersiz bir Topılocale belirtmesi gerekir. Kataloğun yerel ayarıyla eşleşen bir Topılocale belirten konu, içindekiler tablosunda görüntülenen konudur. Ancak, konunun tüm dil sürümleri arama sonuçlarında görüntülenir. |
@@ -403,83 +403,83 @@ Marka öğeleri genellikle üç ana kategoriye ayrılır:
 
 - Üstbilgi öğeleri (örnek geri bildirim bağlantısı, koşullu vazgeçme metni, logo)
 
-- İçerik davranışları (örnek, genişletme/daraltma denetim metni öğeleri ve kod parçacığı öğeleri)
+- İçerik davranışları (denetim metni öğelerini ve kod parçacığı öğelerini genişletme/daraltma örnekleri)
 
-- Footer öğeleri (örnek telif hakkı)
+- Alt bilgi öğeleri (örneğin Telif Hakkı)
 
-Markalı öğeler olarak kabul edilen öğeler (bu belirtimde ayrıntılı) şunları içerir:
+Markalı öğeler olarak kabul edilen öğeler şunlardır (bu özellikte ayrıntılı olarak açıklandı):
 
 - Katalog/ürün logosu (örnek, Visual Studio)
 
 - Geri bildirim bağlantısı ve e-posta öğeleri
 
-- Vazgeçme Metni
+- Sorumluluk reddi metni
 
 - Telif hakkı metni
 
-Visual Studio Yardım Görüntüleyicisi markalama paketindeki destek dosyaları şunlardır:
+Yardım Görüntüleyicisi markalama paketinde Visual Studio dosyaları şunlardır:
 
 - Grafikler (logolar, simgeler vb.)
 
-- Branding.js-içerik davranışlarını destekleyen betik dosyaları
+- Branding.js - içerik davranışlarını destekleyen betik dosyaları
 
-- Branding.xml-Katalog içeriklerine sürekli olarak kullanılan dizeler.  Note: branding.xml Visual Studio yerelleştirme metin öğeleri için, _locID = " \<unique value> " ekleyin
+- Branding.xml - katalog içeriği arasında tutarlı olarak kullanılan dizeler.  Not: Visual Studio metin öğelerini yerelleştirmeye eklemek branding.xml" _locID=" \<unique value> "
 
-- Sunum tutarlılığı için marka. CSS stili tanımları
+- Branding.css - sunum tutarlılığı için stil tanımları
 
-- Tutarlı yazdırılmış sunum için. CSS stili tanımları yazdırılıyor
+- Print.css - tutarlı yazdırılmış sunu için stil tanımları
 
-Yukarıda belirtildiği gibi, marka paketleri konusuyla ilişkilendirilir:
+Yukarıda belirtildiği gibi MarkaLama Paketleri şu konu başlığıyla ilişkilendirilmektedir:
 
-- Meta verilerde Selfmarkalı = false tanımlandığında konu, Katalog markalama paketini devralır
+- Meta verilerde SelfBranded = false tanımlandığı zaman, konu katalog markalama paketini devralıyor
 
-- Ya da Selfmarkalı = false olduğunda ve MSHA 'da tanımlanmış benzersiz bir marka paketi varsa ve içerik yüklendiğinde kullanılabilir
+- Veya SelfBranded = false olduğunda ve MSHA'da tanımlanan ve içerik yüklenirken kullanılabilen benzersiz bir Marka Paketi olduğunda
 
-Özel marka paketleri uygulayan VSPs 'ler için (VSP içeriği, Selfmarkalı = true), devam etmenin bir yolu, geri dönüş markalama paketiyle (yardım görüntüleyiciyle yüklenir) başlamamaya ve dosyanın adını uygun şekilde değiştirecek.  Branding_ \<locale> . mshc dosyası,. mshc olarak değiştirilen dosya uzantısına sahip bir zip dosyasıdır. bu nedenle, uzantıyı. mshc 'den. zip 'e değiştirmeniz ve içeriği ayıklamanız yeterlidir.  Bkz. marka paketi öğeleri için aşağıya bakın ve uygun şekilde değiştirin (örneğin, logoyu VSP logosu ve Branding.xml dosyasındaki logo başvurusu olarak değiştirin, VSP özellikleri başına Branding.xml güncelleştirin vb.).
+ÖZEL marka paketleri (VSP içeriği, SelfBranded=True) uygulayan VSP'ler için devam etme yollarından biri geri dönüş marka paketiyle (Yardım Görüntüleyicisi ile birlikte yüklenir) başlamak ve dosyanın adını uygun şekilde değiştirmektir.  .mshc Branding_ dosyası, dosya uzantısı .mshc olarak değiştirilmiş bir zip dosyasıdır, bu nedenle uzantıyı \<locale> .mshc yerine .mshc olarak .zip ve içeriği ayıklamanız gerekir.  Paket öğelerini markalama ve uygun şekilde değiştirme (örneğin, logoyu VSP logosuyla ve Branding.xml dosyasındaki logo başvurusuyla değiştirme, VSP özelliklerine göre Branding.xml güncelleştirme gibi) için aşağıya bakın.
 
-Tüm değişiklikler tamamlandığında, istenen marka öğelerini içeren bir ZIP dosyası oluşturun ve uzantıyı. mshc olarak değiştirin.
+Tüm değişiklikler tamamlansa, istenen marka öğelerini içeren bir zip dosyası oluşturun ve uzantıyı .mshc olarak ayarlayın.
 
-Özel marka paketini ilişkilendirmek için, markalama mshc dosyasına yönelik başvuruyu içeren MSHA 'yı oluşturun (konuları içeren).  Temel bir MSHA oluşturmak için aşağıdaki "MSHA" başlığına bakın.
+Özel markalama paketini ilişkilendirmek için, markalama mshc dosyasının başvurularını ve mshc içeriğini içeren (konuları içeren) MSHA'yı oluşturun.  Temel bir MSHA oluşturma hakkında bilgi için aşağıdaki "MSHA"ya bakın.
 
-Branding.xml dosyası, konu başlığı içerdiğinde bir konudaki belirli öğeleri tutarlı bir şekilde işlemek için kullanılan öğelerin bir listesini içerir \<meta name="Microsoft.Help.SelfBranded" content="false"/> .  Branding.xml dosyasındaki öğelerin Visual Studio listesi aşağıda listelenmiştir.  Bu liste, kendi ürün marka ihtiyaçlarını karşılamak üzere bu öğeleri (örneğin logo, geri bildirim ve telif hakkı) değiştiren ISO kabuğu benimseme şablonu olarak kullanılmak üzere tasarlanmıştır.
+Dosya Branding.xml, konu başlığında yer alan belirli öğeleri tutarlı bir şekilde işlemek için kullanılan öğelerin listesini \<meta name="Microsoft.Help.SelfBranded" content="false"/> içerir.  Visual Studio dosyasındaki öğelerin Branding.xml listesi aşağıda listelenmiştir.  Bu liste, ISO Shell'i benimseyenler için şablon olarak kullanılmak üzere tasarlanmıştır ve bu öğelerde (logo, geri bildirim ve Telif Hakkı gibi) kendi ürün markalama ihtiyaçlarını karşılayacak şekilde değişikliklerini sağlar.
 
-Not: "{n}" tarafından belirtilen değişkenlerin kod bağımlılıkları vardır-bu değerlerin kaldırılması veya değiştirilmesi hatalara neden olur ve büyük olasılıkla uygulama kilitlenmesiyle karşılaşabilirsiniz. Yerelleştirme tanımlayıcıları (örnek _locID = "codeparçacığını. n") Visual Studio marka paketine dahil edilmiştir.
+Not: "{n}" tarafından not alan değişkenlerin kod bağımlılıkları vardır. Bu değerlerin kaldırılması veya değiştirilmesi hatalara ve büyük olasılıkla uygulama kilitlenmeye neden olur. Yerelleştirme tanımlayıcıları (_locID="codesnippet.n") Visual Studio Paketi'ne dahil edilir.
 
 **Branding.xml**
 
 | Öğe | Açıklama |
 | - | - |
-| Özellik | **CollapsibleArea** |
-| Kullanırsınız | Genişlet içerik denetimi metnini Genişlet |
+| Özelliği: | **Daraltılabilir Alan** |
+| Kullanın: | Genişlet, içerik denetimi metnini daraltıyor |
 | **Öğe** | **Değer** |
 | ExpandText | Genişlet |
-| CollapseText | Daralt |
-| Özellik | **CodeSnippet** |
-| Kullanırsınız | Kod parçacığı denetim metni.  Note: "bölünmez" boşluk ile kod parçacığı içeriği, boşluk olarak değiştirilecek. |
+| DaraltMetin | Daralt |
+| Özelliği: | **CodeSnippet** |
+| Kullanın: | Kod parçacığı denetim metni.  Not: "HataYa Neden Olmayan" alana sahip kod parçacığı içeriği boşluk olarak değiştirilir. |
 | **Öğe** | **Değer** |
 | CopyToClipboard | Panoya kopyala |
-| ViewColorizedText | Renklendirilmiş görüntüleme |
-| CombinedVBTabDisplayLanguage | Visual Basic (örnek) |
+| ViewColorizedText | Renklendirmeyi Görüntüle |
+| CombinedVBTabDisplayLanguage | Visual Basic (Örnek) |
 | VBDeclaration | Bildirim |
 | VBUsage | Kullanım |
-| Özellik | **Geri bildirim, altbilgi ve logo** |
-| Kullanırsınız | Müşterinin, e-posta ile geçerli konu hakkında geri bildirim sağlaması için bir geri bildirim denetimi sağlayın.  İçerik için telif hakkı metni.  Logo tanımı. |
-| **Öğe** | **Değer (Bu dizeler, içerik benimseme gereksinimini karşılayacak şekilde değiştirilebilir.)** |
-| Yaptırımlar | © 2013 Microsoft Corporation. All rights reserved. |
-| SendFeedback | \<a href="{0}" {1}>\</a>Bu konuda Microsoft 'A geri bildirim gönderin. |
+| Özelliği: | **Geri Bildirim, Alt Bilgi ve Logo** |
+| Kullanın: | Müşterinin e-posta yoluyla geçerli konu hakkında geri bildirim sağlaması için bir Geri Bildirim denetimi sağlama.  İçerik için telif hakkı metni.  Logo tanımı. |
+| **Öğe** | **Değer (Bu dizeler içeriği benimseyenin ihtiyaçlarını karşılayacak şekilde değiştirilebilir.)** |
+| Telif hakkı | © 2013 Microsoft Corporation. All rights reserved. |
+| SendFeedback | \<a href="{0}" {1}>Bu konu hakkında \</a> Microsoft'a Geri Bildirim gönderin. |
 | FeedbackLink | |
-| Logo başlığı | [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)] |
+| LogoTitle | [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)] |
 | LogoFileName | vs_logo_bk.gif |
 | LogoFileNameHC | vs_logo_wh.gif |
-| Özellik | **Sorumluluk reddi** |
-| Kullanırsınız | Makine çevirisi içeriği için büyük/küçük harfe özgü bildirimler kümesi. |
+| Özelliği: | **Bildirim** |
+| Kullanın: | Makine tarafından çevrilmiş içerik için büyük/küçük harfe özgü bir sorumluluk reddi kümesi. |
 | **Öğe** | **Değer** |
-| MT_Editable | Bu makale makine çevirisi yapıldı. Bir Internet bağlantınız varsa, bu sayfayı orijinal Ingilizce içeriğiyle aynı anda düzenlenebilir modda görüntülemek için "Bu konuyu çevrimiçi görüntüle" seçeneğini belirleyin. |
-| MT_NonEditable | Bu makale makine çevirisi yapıldı. Bir Internet bağlantınız varsa, bu sayfayı orijinal Ingilizce içeriğiyle aynı anda düzenlenebilir modda görüntülemek için "Bu konuyu çevrimiçi görüntüle" seçeneğini belirleyin. |
-| MT_QualityEditable | Bu makale el ile çevrilmiştir. Bir Internet bağlantınız varsa, bu sayfayı orijinal Ingilizce içeriğiyle aynı anda düzenlenebilir modda görüntülemek için "Bu konuyu çevrimiçi görüntüle" seçeneğini belirleyin. |
-| MT_QualityNonEditable | Bu makale el ile çevrilmiştir. Bir Internet bağlantınız varsa, bu sayfayı orijinal Ingilizce içeriğiyle aynı anda düzenlenebilir modda görüntülemek için "Bu konuyu çevrimiçi görüntüle" seçeneğini belirleyin. |
-| MT_BetaContents | Bu makale, bir ön sürüm için makine çevirisi yapıldı. Bir Internet bağlantınız varsa, bu sayfayı orijinal Ingilizce içeriğiyle aynı anda düzenlenebilir modda görüntülemek için "Bu konuyu çevrimiçi görüntüle" seçeneğini belirleyin. |
-| MT_BetaRecycledContents | Bu makale, ön sürüm için el ile çevrilmiştir. Bir Internet bağlantınız varsa, bu sayfayı orijinal Ingilizce içeriğiyle aynı anda düzenlenebilir modda görüntülemek için "Bu konuyu çevrimiçi görüntüle" seçeneğini belirleyin. |
+| MT_Editable | Bu makale makine çevirisidir. İnternet bağlantınız varsa, bu sayfayı aynı anda özgün İngilizce içerikle düzenlenebilir modda görüntülemek için "Bu konuyu çevrimiçi görüntüle"yi seçin. |
+| MT_NonEditable | Bu makale makine çevirisidir. İnternet bağlantınız varsa, bu sayfayı aynı anda özgün İngilizce içerikle düzenlenebilir modda görüntülemek için "Bu konuyu çevrimiçi görüntüle"yi seçin. |
+| MT_QualityEditable | Bu makale el ile çevrildi. İnternet bağlantınız varsa, bu sayfayı aynı anda özgün İngilizce içerikle düzenlenebilir modda görüntülemek için "Bu konuyu çevrimiçi görüntüle"yi seçin. |
+| MT_QualityNonEditable | Bu makale el ile çevrildi. İnternet bağlantınız varsa, bu sayfayı aynı anda özgün İngilizce içerikle düzenlenebilir modda görüntülemek için "Bu konuyu çevrimiçi görüntüle"yi seçin. |
+| MT_BetaContents | Bu makale, bir ön sürüm için makine çevirisidir. İnternet bağlantınız varsa, bu sayfayı aynı anda özgün İngilizce içerikle düzenlenebilir modda görüntülemek için "Bu konuyu çevrimiçi görüntüle"yi seçin. |
+| MT_BetaRecycledContents | Bu makale bir ön sürüm için el ile çevrilmiştir. Bir Internet bağlantınız varsa, bu sayfayı orijinal Ingilizce içeriğiyle aynı anda düzenlenebilir modda görüntülemek için "Bu konuyu çevrimiçi görüntüle" seçeneğini belirleyin. |
 | Özellik | **LinkTable** |
 | Kullanırsınız | Çevrimiçi konu bağlantıları desteği |
 | **Öğe** | **Değer** |
@@ -597,33 +597,33 @@ Marka. css dosyaları Visual Studio konu sunumu için tanımları içerir (deste
 
 **Grafik dosyaları**
 
-Visual Studio içeriği, Visual Studio logosunun yanı sıra diğer grafikleri de görüntüler.  Visual Studio Yardım Görüntüleyicisi markalama paketindeki grafik dosyalarının tüm listesi aşağıda gösterilmiştir.
+Visual Studio içeriği, Visual Studio logosunu ve diğer grafikleri görüntüler.  Visual Studio Yardım Görüntüleyicisi markalama paketinde yer alan grafik dosyalarının tam listesi aşağıda gösterilmiştir.
 
 |**Dosya**|**Kullanım**|**Örnekler**|
 |-|-|-|
-|clear.gif|Daraltılabilir alanı işlemek için kullanılır||
-|footer_slice.gif|Alt bilgi sunumu||
-|info_icon.gif|Bilgiler görüntülenirken kullanılır|Disclaimer|
-|online_icon.gif|Bu simge çevrimiçi bağlantılarla ilişkilendirilmelidir||
-|tabLeftBD.gif|Kod parçacığı kapsayıcısını işlemek için kullanılır||
-|tabRightBD.gif|Kod parçacığı kapsayıcısını işlemek için kullanılır||
-|vs_logo_bk.gif|Branding.xml etiketinde tanımlandığı şekilde normal karşıtlık logo başvuruları için kullanılır \<LogoFileName> .  Visual Studio ürünleri için logo adı vs_logo_bk.gif.||
-|vs_logo_wh.gif|Branding.xml etiketinde tanımlandığı gibi normal yüksek logo başvuruları için kullanılır \<LogoFileNameHC> .  Visual Studio ürünleri için logo adı vs_logo_wh.gif.||
-|ccOff.png|Resim yazısı grafiği||
-|ccOn.png|Resim yazısı grafiği||
-|ImageSprite.png|Daraltılabilir alanı işlemek için kullanılır|genişletme veya daraltma grafiği|
+|clear.gif|Daraltılabilir Alanı işlemek için kullanılır||
+|footer_slice.gif|Alt bilgi sunusu||
+|info_icon.gif|Bilgi görüntülenirken kullanılır|Disclaimer|
+|online_icon.gif|Bu simge çevrimiçi bağlantılarla ilişkilendirilen simgedir||
+|tabLeftBD.gif|Kod parçacığı kapsayıcısı işlemek için kullanılır||
+|tabRightBD.gif|Kod parçacığı kapsayıcısı işlemek için kullanılır||
+|vs_logo_bk.gif|normal karşıtlık logo başvuruları için, Branding.xml \<LogoFileName> kullanılır.  Diğer Visual Studio logo adı vs_logo_bk.gif.||
+|vs_logo_wh.gif|etiketinde tanımlandığı gibi yüksek karşıtlıklı logo Branding.xml \<LogoFileNameHC> kullanılır.  Diğer Visual Studio logo adı vs_logo_wh.gif.||
+|ccOff.png|Açıklamalı alt yazı grafiği||
+|ccOn.png|Açıklamalı alt yazı grafiği||
+|ImageSprite.png|Daraltılabilir Alanı işlemek için kullanılır|genişletilmiş veya daraltılmış grafik|
 
-## <a name="deploy-a-set-of-topics"></a>Konu kümesi dağıtma
+## <a name="deploy-a-set-of-topics"></a>Bir dizi konu dağıtma
 
-Bu, bir MSHA dosyasından ve konuları içeren Cabs veya MSHCs kümesinden oluşan bir Yardım Görüntüleyici içerik dağıtımı kümesi oluşturmaya yönelik basit ve hızlı bir öğreticidir. MSHA, bir cab veya MSHC dosyaları kümesini tanımlayan bir XML dosyasıdır. Yardım Görüntüleyicisi, içeriğin bir listesini almak için MSHA 'yı okuyabilir (. CAB veya. MSHC dosyaları) yerel yükleme için kullanılabilir.
+Bu, bir MSHA dosyasından ve konuları içeren cabs veya MSHC'lerden oluşan bir Yardım Görüntüleyicisi içerik dağıtım kümesi oluşturmaya yönelik basit ve hızlı bir öğreticidir. MSHA, bir dizi cabs veya MSHC dosyasını tanımlayan bir XML dosyasıdır. Yardım Görüntüleyicisi MSHA'yı okuyarak içerik listesini (.CAB. MSHC dosyaları) yerel yükleme için kullanılabilir.
 
-Bu yalnızca Yardım Görüntüleyicisi MSHA için en temel XML şemasını açıklayan bir öncü.  Bu kısa genel bakış ve örnek HelpContentSetup. msha altında örnek bir uygulama vardır.
+Bu yalnızca Yardım Görüntüleyicisi MSHA için çok temel XML şemasını açıklayan bir temel bilgidir.  Bu kısa genel bakışın ve örnek HelpContentSetup.msha'nın altında örnek bir uygulama vardır.
 
-Bu öncü için MSHA adı, HelpContentSetup. msha ' dır (dosyanın adı uzantı ile herhangi bir şey olabilir). MSHA). HelpContentSetup. msha (aşağıdaki örnekte), var olan Cabs veya MSHCs 'nin bir listesini içermelidir.  Dosya türü MSHA içinde tutarlı olmalıdır (MSHA ve CAB dosya türlerinin bir birleşimini desteklemez). Her cab veya mshc için bir \<div class="package"> ... \</div> (aşağıdaki örneğe bakın) olmalıdır.
+Bu temel bilgi için MSHA'nın adı HelpContentSetup.msha'dır (dosyanın adı uzantısıyla herhangi bir şey olabilir). MSHA). HelpContentSetup.msha (aşağıdaki örnekte) kullanılabilir cab'lerin veya MSHC'lerin bir listesini içerebilir.  Dosya türü MSHA içinde tutarlı olmalıdır (MSHA ve CAB dosya türlerinin birleşimini desteklemez). Her CAB veya MSHC için bir \<div class="package"> ... (aşağıdaki \</div> örneğine bakın) olması gerekir.
 
-Note: aşağıdaki uygulama örneğinde marka paketini sunuyoruz. Gerekli Visual Studio içerik işleme öğelerini ve içerik davranışlarını almak için bu önemlidir.
+Not: Aşağıdaki uygulama örneğinde markalama paketini dahil edildik. Bu, içerik işleme öğelerinin ve içerik davranışlarının gerekli Visual Studio için dahil etmek açısından kritik öneme sahiptir.
 
-Örnek HelpContentSetup. msha dosyası: ("içerik kümesi adı 1" ve "içerik kümesi adı 2" vb. dosya adlarınızla değiştirin.)
+Örnek HelpContentSetup.msha dosyası: ("content set name 1" ve "content set name 2" gibi dosyaları dosya adlarla değiştirin.)
 
 ```html
 <html>
@@ -650,13 +650,13 @@ Note: aşağıdaki uygulama örneğinde marka paketini sunuyoruz. Gerekli Visual
 
 1. "C:\SampleContent" gibi bir yerel klasör oluşturun
 
-2. Bu örnek için, MSHC dosyalarını, konuları içerecek şekilde kullanacağız.  Bir MSHC, dosya uzantısının. zip ' den ' e değiştiği bir zip dosyasıdır. MSHC.
+2. Bu örnekte, mshc dosyalarını kullanarak konuları içeririz.  MSHC, dosya uzantısının dosya uzantısı olarak değiştirilmiş bir zip .zip. MSHC.
 
-3. Aşağıdaki HelpContentSetup. msha dosyasını bir metin dosyası olarak oluşturun (dosyayı oluşturmak için Notepad kullanılmıştır) ve yukarıdaki belirtilen klasöre kaydedin (bkz. 1. adım).
+3. Aşağıdaki HelpContentSetup.msha dosyasını bir metin dosyası olarak oluşturun (dosyayı oluşturmak için not defteri kullanılmıştır) ve yukarıdaki belirtilen klasöre kaydedin (bkz. 1. adım).
 
-"Marka" sınıfı vardır ve benzersizdir. Bu temel markada, yüklenen içeriğin markalaması olacak ve MSHCs 'de bulunan içerik davranışları, marka paketinde bulunan uygun destek öğelerine sahip olacak şekilde bu şekilde eklenmiştir. Bu olmadan, sistem kopyalanan (yüklenmiş) içeriğin bir parçası olmayan destek öğelerini ararken hatalar oluşur.
+"Markalama" sınıfı vardır ve benzersizdir. Branding mshc, yüklü içeriğin markaya sahip olması ve MSHC'lerde yer alan içerik davranışlarının markalama paketinde yer alan uygun destek öğelerine sahip olması için bu temel bilgide yer almaktadır. Bu olmadan, sistem parçalanmış (yüklü) içeriğin parçası olmayan destek öğelerine bakarak hatalara neden olur.
 
-Visual Studio marka paketini edinmek için, Branding_en-US. mshc dosyasını C:\Program Files (x86) \Microsoft Help Viewer\v2,3\ konumundaki çalışma klasörünüze kopyalayın.
+Visual Studio marka paketini almak için C:\Program Files (x86)\Microsoft Yardım Görüntüleyicisi\v2.3\ konumundaki Branding_en-US.mshc dosyasını çalışma klasörünüze kopyalayın.
 
 ```html
 <html>
@@ -692,64 +692,64 @@ Visual Studio marka paketini edinmek için, Branding_en-US. mshc dosyasını C:\
 
 **Özet**
 
-Yukarıdaki adımların kullanılması ve genişletilmesi, VSPs 'nin içerik kümelerini Visual Studio yardım görüntüleyicisine dağıtmasına olanak sağlar.
+Yukarıdaki adımları kullanmak ve genişletmek, VSP'lerin yardım görüntüleyicisi için içerik kümelerini Visual Studio sağlar.
 
-### <a name="add-help-to-the-visual-studio-shell-integrated-and-isolated"></a>Visual Studio Kabuğu 'na yardım ekleme (tümleşik ve yalıtılmış)
+### <a name="add-help-to-the-visual-studio-shell-integrated-and-isolated"></a>Visual Studio Shell'e yardım ekleme (Tümleşik ve Yalıtılmış)
 
 **Giriş**
 
-Bu izlenecek yol, yardım içeriğinin bir Visual Studio Kabuğu uygulamasına nasıl ekleneceğini ve sonra nasıl dağıtılacağını göstermektedir.
+Bu kılavuzda Yardım içeriğinin bir Visual Studio Shell uygulamasına nasıl dahil olduğu ve ardından dağıtın.
 
 **Gereksinimler**
 
 1. [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)]
 
-2. [Yalıtılmış Kabuk yeniden dağıtım Visual Studio 2013](https://visualstudio.microsoft.com/vs/older-downloads/isolated-shell/)
+2. [Visual Studio 2013 Yalıtılmış Kabuk Redist](https://visualstudio.microsoft.com/vs/older-downloads/isolated-shell/)
 
 **Genel Bakış**
 
-[!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)]Kabuk, [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)] bir uygulamayı temel alan IDE 'nin bir sürümüdür. Bu tür uygulamalar, oluşturduğunuz uzantılarla birlikte yalıtılmış Kabuğu içerir. Uzantıları derlemek için SDK 'ya dahil olan yalıtılmış Kabuk proje şablonlarını kullanın [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)] .
+Kabuk, [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)] [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)] IDE'nin bir uygulamayı temel alan bir sürümüdür. Bu tür uygulamalar, Yalıtılmış Kabuğu ve sizin oluşturdukları uzantıları içerir. Uzantıları derlemek için SDK'ya dahil edilen Yalıtılmış [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)] Kabuk proje şablonlarını kullanın.
 
-Yalıtılmış kabuk tabanlı bir uygulama ve onun yardımını oluşturmaya yönelik temel adımlar:
+Yalıtılmış Kabuk tabanlı bir uygulama ve onun Yardımı oluşturmak için temel adımlar:
 
-1. [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)]ISO kabuğu yeniden dağıtılabilir (bir Microsoft Download) edinin.
+1. ISO [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)] Shell yeniden dağıtılabilir 'i alın (Bir Microsoft indirmesi).
 
-2. Visual Studio 'da yalıtılmış Kabuğu temel alan bir yardım uzantısı oluşturun, örneğin, bu kılavuzda daha sonra açıklanan contoso yardım uzantısı.
+2. Bu Visual Studio, yalıtılmış Kabuğu temel alan bir Yardım uzantısı oluşturun; örneğin, bu kılavuzda daha sonra açıklanan Contoso Yardımı uzantısı.
 
-3. Uzantıyı ve ISO kabuğunu yeniden dağıtılabilir bir dağıtım MSI (uygulama kurulumu) içine sarın. Bu Izlenecek yol, kurulum adımını içermez.
+3. Uzantıyı ve ISO Kabuğu yeniden dağıtılabilir'i dağıtım MSI'sine (uygulama kurulumu) sarman. Bu Kılavuz bir kurulum adımına dahil değildir.
 
-Bir Visual Studio içerik deposu oluşturun. Tümleşik Kabuk senaryosunda, Visual Studio12 öğesini ürün kataloğu adı ile aşağıdaki gibi değiştirin:
+Yeni bir Visual Studio deposu oluşturun. Tümleşik Kabuk senaryosu için Visual Studio12'i ürün kataloğu adıyla aşağıdaki gibi değiştirin:
 
-- C:\ProgramData\Microsoft\HelpLibrary2\Catalogs\VisualStudio15. klasörü oluştur
+- C:\ProgramData\Microsoft\HelpLibrary2\Catalogs\VisualStudio15 klasörünü oluşturun.
 
-- CatalogType.xml adlı bir dosya oluşturun ve klasöre ekleyin. Dosya aşağıdaki kod satırlarını içermelidir:
+- CatalogType.xml adlı bir dosya oluşturun ve klasöre ekleyin. Dosya aşağıdaki kod satırlarını içermeli:
 
     ```xml
     <?xml version="1.0" encoding="UTF-8"?>
     <catalogType>UserManaged</catalogType>
     ```
 
-Kayıt defterinde içerik deposunu tanımlayın. Tümleşik Kabuk için VisualStudio15 öğesini ürün kataloğu adıyla değiştirin:
+Kayıt defterindeki içerik depolarını tanımlayın. Tümleşik Kabuk için VisualStudio15'i ürün kataloğu adıyla değiştirebilirsiniz:
 
 - HKLM\SOFTWARE\Wow6432Node\Microsoft\Help\v2.3\Catalogs\VisualStudio15
 
-   Anahtar: LocationPath dize değeri: C:\ProgramData\Microsoft\HelpLibrary2\Catalogs\VisualStudio15\
+   Anahtar: LocationPath Dizesi değeri: C:\ProgramData\Microsoft\HelpLibrary2\Catalogs\VisualStudio15\
 
 - HKLM\SOFTWARE\Wow6432Node\Microsoft\Help\v2.3\Catalogs\VisualStudio15\en-US
 
-   Anahtar: katalogadı dize değeri: [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)] belge
+   Anahtar: CatalogName Dizesi değeri: [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)] Belgeler
 
 **Projeyi Oluşturma**
 
 Yalıtılmış Kabuk uzantısı oluşturmak için:
 
-1. Visual Studio 'da, **Dosya** altında **Yeni proje**' yi seçin, **diğer proje türleri** altında **genişletilebilirlik**' i seçin ve ardından  **Visual Studio Kabuğu yalıtılmış**' i seçin. Projeyi, `ContosoHelpShell` Visual Studio yalıtılmış Kabuk şablonunu temel alan bir genişletilebilirlik projesi oluşturacak şekilde adlandırın.
+1. Yeni Visual Studio altında Yeni **Proje'yi** **seçin,** Diğer Proje Türleri altında  Genişletilebilirlik'i seçin ve ardından **Visual Studio Kabuğu Yalıtılmış'ı seçin.**  Yalıtılmış `ContosoHelpShell` Kabuk şablonunu temel alan bir genişletilebilirlik projesi oluşturmak Visual Studio ) adını verir.
 
-2. Çözüm Gezgini, ContosoHelpShellUI projesinde, kaynak dosyaları klasöründe ApplicationCommands. vsct öğesini açın. Bu satırın açıklama olarak belirlendiğinden emin olun ("No_Help" araması yapın): `<!-- <define name="No_HelpMenuCommands"/> -->`
+2. Bu Çözüm Gezgini ContosoHelpShellUI projesinde, Kaynak Dosyaları klasöründe ApplicationCommands.vsct'yi açın. Bu satırın açıklama satırı olduğundan emin olun ("No_Help" ifadesini arayın): `<!-- <define name="No_HelpMenuCommands"/> -->`
 
-3. **Hata ayıklamayı** derlemek ve çalıştırmak için F5 tuşunu seçin. Yalıtılmış Kabuk IDE 'nin deneysel örneğinde **Yardım** menüsünü seçin. **Görünüm yardım**, **Yardım Içeriği ekleme ve kaldırma** ve **Yardım tercihi** komutlarının göründüğünden emin olun.
+3. Hata ayıklamayı derlemek ve çalıştırmak için F5 **anahtarını seçin.** Yalıtılmış Kabuk IDE'nin deneysel örneğinde Yardım **menüsünü** seçin. Yardım Görüntüle, Yardım **İçeriğini** **Ekle ve Kaldır ve Yardım Tercihini** Ayarla **komutlarının görüntüden emin** olun.
 
-4. Çözüm Gezgini ' de, ContosHelpShell projesinde, kabuk özelleştirme klasöründe ContosoHelpShell. pkgdef ' yi açın. Contoso Yardım kataloğunu tanımlamak için aşağıdaki satırları ekleyin:
+4. Bu Çözüm Gezgini ContosHelpShell projesinde, Kabuk Özelleştirme klasöründe ContosoHelpShell.pkgdef'i açın. Contoso Yardım kataloğunu tanımlamak için aşağıdaki satırları ekleyin:
 
     ```
      [$RootKey$\Help]
@@ -759,7 +759,7 @@ Yalıtılmış Kabuk uzantısı oluşturmak için:
     "BrandingPackage"="ContosoBrandingPackage.mshc"
     ```
 
-5. Çözüm Gezgini ' de, ContosHelpShell projesinde, kabuk özelleştirme klasöründe, ContosoHelpShell. Application. pkgdef ' yi açın. F1 yardımını etkinleştirmek için aşağıdaki satırları ekleyin:
+5. Bu Çözüm Gezgini ContosHelpShell projesinde, Kabuk Özelleştirme klasöründe ContosoHelpShell.Application.pkgdef'i açın. F1 Yardım'a etkinleştirmek için aşağıdaki satırları ekleyin:
 
     ```
     // F1 Help Provider
@@ -775,27 +775,27 @@ Yalıtılmış Kabuk uzantısı oluşturmak için:
     @="{4A791146-19E4-11D3-B86B-00C04F79F802}"
     ```
 
-6. Çözüm Gezgini, ContosoHelpShell çözümünün bağlam menüsünde **Özellikler** menü öğesini seçin. **Yapılandırma özellikleri** altında **Configuration Manager**' yi seçin. **Yapılandırma** sütununda, her "Debug" değerini "Release" olarak değiştirin.
+6. Bu Çözüm Gezgini ContosoHelpShell çözümünün bağlam menüsünde Özellikler menü **öğesini** seçin. Yapılandırma **Özellikleri'nin** **altında,** Yapılandırma Yöneticisi. Yapılandırma **sütunundaki** her "Hata Ayıklama" değerini "Yayın" olarak değiştirebilirsiniz.
 
-7. Çözümü derleyin. Bu, bir sonraki bölümde kullanılacak olan bir yayın klasöründe bir dosya kümesi oluşturur.
+7. Çözümü derleyin. Bu, sonraki bölümde kullanılacak bir yayın klasöründe bir dosya kümesi oluşturur.
 
-Bunu dağıtıldıktan sonra test etmek için:
+Bunu dağıtılmış gibi test etmek için:
 
-1. Contoso 'yu dağıttığınız makinede, indirilen (yukarıdaki) ISO kabuğunu yükleyebilirsiniz.
+1. Contoso'ya dağıtın makinede indirilen (yukarıdan) ISO Kabuğunu yükleyin.
 
-2. \\\Program Files (x86) içinde bir klasör oluşturun \\ ve bunu adlandırın `Contoso` .
+2. \Program Files \\ (x86) içinde bir klasör oluşturun \\ ve buna adını `Contoso` girin.
 
-3. ContosoHelpShell sürüm klasöründeki içerikleri \\ \Program Files (x86) \Contoso\ klasörüne kopyalayın.
+3. ContosoHelpShell yayın klasöründeki içeriği \\ \Program Files (x86)\Contoso\ klasörüne kopyalayın.
 
-4. **Başlat** menüsünde **Çalıştır** ' i seçerek ve girerek kayıt defteri düzenleyicisini başlatın `Regedit` . Kayıt Defteri Düzenleyicisi 'nde **Dosya**' yı ve ardından **içeri aktar**' ı seçin. ContosoHelpShell proje klasörüne gidin. ContosoHelpShell alt klasöründe ContosoHelpShell. reg ' yi seçin.
+4. Başlat menüsünde Çalıştır'ın **seçerek** ve **girerek Kayıt Defteri** Düzenleyicisi'ni başlatabilirsiniz. `Regedit` Kayıt defteri düzenleyicisinde Dosya'ya **ve ardından** İçeri Aktar'ı **seçin.** ContosoHelpShell proje klasörüne gidin. ContosoHelpShell alt klasörlerinden ContosoHelpShell.reg dosyasını seçin.
 
-5. Bir içerik deposu oluşturun:
+5. İçerik deposu oluşturma:
 
-    ISO kabuğu için-Contoso içerik deposu oluşturma C:\ProgramData\Microsoft\HelpLibrary2\Catalogs\ContosoDev12
+    ISO Kabuğu için - C:\ProgramData\Microsoft\HelpLibrary2\Catalogs\ContosoDev12 adlı bir Contoso içerik deposu oluşturun
 
-    [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)]Tümleşik Kabuk için C:\ProgramData\Microsoft\HelpLibrary2\Catalogs\VisualStudio15 klasörünü oluşturun
+    Tümleşik [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)] Kabuk için C:\ProgramData\Microsoft\HelpLibrary2\Catalogs\VisualStudio15 klasörünü oluşturun
 
-6. CatalogType.xml oluşturun ve içeren içerik deposuna (önceki adım) ekleyin:
+6. İçerik CatalogType.xml oluşturun ve şunları içeren içerik deposuna ekleyin (önceki adım):
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -804,9 +804,9 @@ Bunu dağıtıldıktan sonra test etmek için:
 
 7. Aşağıdaki kayıt defteri anahtarlarını ekleyin:
 
-    HKLM\SOFTWARE\Wow6432Node\Microsoft\Help\v2.3\Catalogs\VisualStudio15Key: LocationPath dize değeri:
+    HKLM\SOFTWARE\Wow6432Node\Microsoft\Help\v2.3\Catalogs\VisualStudio15Key: LocationPath Dizesi değeri:
 
-    ISO kabuğu için:
+    ISO Kabuğu için:
 
     C:ProgramDataMicrosoftHelpLibrary2CatalogsVisualStudio15
 
@@ -814,24 +814,24 @@ Bunu dağıtıldıktan sonra test etmek için:
 
     C:ProgramDataMicrosoftHelpLibrary2CatalogsVisualStudio15en-US
 
-    Anahtar: katalogadı dize değeri: [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)] belgeler. ISO kabuğu için bu, kataloğunuzun adıdır.
+    Anahtar: CatalogName Dizesi değeri: [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)] Belgeler. ISO Shell için bu, kataloğun adıdır.
 
-8. İçeriğinizi (Cabs veya MSHC ve MSHA) yerel bir klasöre kopyalayın.
+8. İçeriğinizi (cabs veya MSHC ve MSHA) yerel bir klasöre kopyalayın.
 
-9. İçerik deposunu test etmek için örnek tümleşik kabuk komut satırı. ISO kabuğu için, Katalog ve launchingApp değerlerini ürünle eşleşmesi için uygun şekilde değiştirin.
+9. İçerik depolarını test etmek için örnek Tümleşik Kabuk komut satırı. ISO Shell için kataloğu ve Uygulama değerlerini ürünle eşleşmesi için uygun şekilde başlatmayı seçin.
 
-     "C:\Program Files (x86) \Microsoft Help Viewer\v2.3\HlpViewer.exe"/katalogadı VisualStudio15/helpQuery method = "Page&ID = ContosoTopic0"/launchingApp Microsoft, VisualStudio, 12.0
+     "C:\Program Files (x86)\Microsoft Help Viewer\v2.3\HlpViewer.exe" /catalogName VisualStudio15 /helpQuery method="page&id=ContosoTopic0" /launchingApp Microsoft,VisualStudio,12.0
 
-10. Contoso uygulamasını başlatın (contoso uygulama kökünden). ISO kabuğu 'nda **Yardım** menü öğesini seçin ve **yerel yardım 'ı kullanmak** için **Yardım tercihini ayarla** ' yı değiştirin.
+10. Contoso uygulamasını başlatma (Contoso uygulama kökünden). ISO Kabuğu içinde Yardım menü **öğesini seçin** ve Yardım Tercihini Yerel Yardımı **Kullan** **olarak Ayarlayın.**
 
-11. Kabuk içinde **Yardım** menü öğesini seçin ve ardından **Yardım 'ı görüntüleyin**. Yerel Yardım Görüntüleyicisi başlatması gerekir. **Içeriği Yönet** sekmesini seçin. **Yükleme kaynağı** altında **disk** seçenek düğmesini seçin. **...** Düğmesini seçin ve contoso içeriğini içeren yerel klasöre (Yukarıdaki adımda yerel klasöre kopyalanmış) gidin. HelpContentSetup. msha ' ı seçin. Contoso artık kitap seçimlerinde kitap olarak görünür olmalıdır. **Ekle**' yi seçin ve ardından **Güncelleştir** düğmesini (sağ alt köşedeki) seçin.
+11. Kabuk içinde Yardım menü öğesini **ve ardından** Yardımı **Görüntüle'yi seçin.** Yerel Yardım görüntüleyicinin başlatılması gerekir. İçeriği Yönet **sekmesini** seçin. Yükleme **Kaynağı'nın** altında **Disk seçeneği** düğmesini seçin. ... **düğmesini** seçin ve Contoso içeriğini içeren yerel klasöre gidin (yukarıdaki adımda yerel klasöre kopyalanır). HelpContentSetup.msha'yı seçin. Contoso şimdi kitap seçimlerini kitap olarak göstersin. **Ekle'yi** ve ardından Güncelleştir **düğmesini (sağ** alt köşede) seçin.
 
-12. Contoso IDE içinde F1 işlevini test etmek için F1 tuşunu seçin.
+12. Contoso IDE içinde F1 işlevselliğini test etmek için F1 anahtarını seçin.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-Çalışma zamanı API 'SI için bkz. [Windows Yardım API 'si](/previous-versions/windows/desktop/helpapi/helpapi-portal).
+Çalışma Zamanı API'si için [bkz. Windows Yardım API'si.](/previous-versions/windows/desktop/helpapi/helpapi-portal)
 
-Yardım API 'sinin nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [Yardım Görüntüleyicisi kod örnekleri](https://marketplace.visualstudio.com/items?itemName=RobChandlerHelpMVP.HelpViewer20CodeExamples).
+Yardım API'sini kullanma hakkında daha fazla bilgi için bkz. [Yardım Görüntüleyicisi kod örnekleri.](https://marketplace.visualstudio.com/items?itemName=RobChandlerHelpMVP.HelpViewer20CodeExamples)
 
-[Geliştirici topluluğu](https://aka.ms/feedback/suggest?space=8)'nda özellik önerileri gönderebilirsiniz.
+özellik önerilerini [Geliştirici Topluluğu.](https://aka.ms/feedback/suggest?space=8)

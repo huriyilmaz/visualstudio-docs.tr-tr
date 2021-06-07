@@ -1,6 +1,6 @@
 ---
-title: Visual Studio abonelikleri yönetim portalı 'nda oturum açma sorunlarını çözün | Microsoft Docs
-description: Visual Studio abonelikleri yönetim portalına erişim kazanmasıyla ilgili yaygın sorunları çözmeyi öğrenin
+title: Visual Studio Subscriptions Yönetim Portalı | oturum açma sorunlarını çözme Microsoft Docs
+description: Visual Studio Abonelikleri Yönetim Portalı'na erişim kazanmayla ilgili yaygın sorunları çözmeyi öğrenin
 ms.topic: include
 ms.assetid: 4a3f5c7a-003b-4993-9f02-fe5e26c0c065
 author: evanwindom
@@ -10,21 +10,21 @@ user.type: subscriber
 tags: sign-in
 subscription.type: vl, cloud,
 ms.openlocfilehash: 39aafd757c710257cf5f8185ecc8b54eba2c4645
-ms.sourcegitcommit: 60e5a8a7ee91854356797d05f3b502572c4a4884
+ms.sourcegitcommit: f430d014f912aa7874e1db65026dc72688b973e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96916313"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111448404"
 ---
-## <a name="resolve-issues-signing-in-to-visual-studio-subscriptions-administration-portal"></a>Visual Studio abonelikleri yönetim portalı 'nda oturum açma sorunlarını çözme
-Çalışmanız veya okulunuz, toplu lisanslama veya Visual Studio Market abonelik satın alıyorsa, yöneticiler tarafından yönetilir.  İki tür vardır: • Yöneticiler (Yöneticiler) abonelikleri atayabilir, düzenleyebilir ve silebilir.
-• Süper Yöneticiler aynı işlevleri yöneticilerle uygulayabilir ve anlaşmalar ve diğer yöneticiler ile süper Yöneticiler için tercihleri ayarlayabilir.  
+## <a name="resolve-issues-signing-in-to-visual-studio-subscriptions-administration-portal"></a>Visual Studio Abonelikleri Yönetim Portalı'Visual Studio oturum açma sorunlarını çözme
+İş veya okul aboneliğiniz Toplu Lisanslama veya Visual Studio Market satın aldısa, yöneticiler tarafından yönetilir.  İki tür vardır: • Yöneticiler (yöneticiler) abonelikleri atayabilirsiniz, düzenleyebilir ve silebilir.
+• Süper Yöneticiler yöneticilerle aynı işlevleri gerçekleştirmenin yanı sıra sözleşme tercihlerini ayarlamanın yanı sıra diğer yöneticilerin ve Süper Yöneticilerin atamasını da gerçekleştirebilirsiniz.  
 
-**Ortak oturum açma sorunları** Bir yöneticiyseniz ve ' de abonelikler yönetim portalına erişemiyorsanız https://manage.visualstudio.com , portalda oturum açmak için kullandığınız e-posta adresi yanlış olabilir.  Sorunu gidermek için süper yöneticinize başvurun.  Süper yöneticilerinizin kim olduğundan emin değilseniz, anlaşmada bulunan her türlü yönetici size bu bilgileri verebilir.  Bu, Portal 'ın sol tarafındaki ikinci düğme kullanılarak erişilebilen **anlaşma ayrıntılarında** listelenir.
+**Yaygın oturum açma sorunları** Yöneticiyseniz ve abonelikler yönetim portalına sayfasından erişeyseniz, portalda oturum a açma için kullanmakta olan e-posta https://manage.visualstudio.com adresi yanlış olabilir.  Sorunu düzeltmek için Süper Yöneticinize ulaşın.  Süper Yöneticilerinizin kim olduğundan emin değilseniz, sözleşmede yer alan herhangi bir yönetici size bu bilgileri sağlar.  Portalın sol **üst tarafındaki** ikinci düğme kullanılarak erişilebilen Sözleşme ayrıntıları'nın içinde listelenir.
 
-**Yöneticime başvur kullan** Ayrıca atanmış bir aboneliğiniz varsa, yöneticilerinize ve süper yöneticilerinize bir ileti göndermek için Visual Studio abonelikleri portalındaki **yöneticime başvur** özelliğine erişebilirsiniz.  (Süper yöneticileriniz bu iletileri kimin alacağını tespit.)
+**Yöneticime Başvur'a başvur'a gidin** Ayrıca bir aboneliğiniz atanmışsa, yöneticilerinize  ve Süper Yöneticilere ileti göndermek için Visual Studio abonelikler portalında Yöneticime Başvur özelliğine erişebilirsiniz.  (Süper Yöneticileriniz bu iletileri kimin aldığını belirler.)
 
-Süper yönetici ile iletişim kurabileceksiniz, tedarik kuruluşunuzla iletişim kurmanız gerekebilir.  Visual Studio abonelikleri sözleşmeleri üzerinde birincil Iletişim ve bildirimler Ilgili kişisi otomatik olarak süper yönetici olarak listelenir ve size yardımcı olabilir.  Birden çok süper yöneticinin, kuruluştan çıkmadan bir kişinin sizi süper yöneticilerle kalmayacak şekilde listelenmesi önerilir.
+Süper Yönetici ile iletişim kurasanız tedarik organizasyonuyla iletişim kurmanız gerekir.  Aboneliklerde Birincil Kişi ve Bildirim İlgili Visual Studio anlaşmaları otomatik olarak Süper Yöneticiler olarak listelenir ve size yardımcı olabilir.  Birden çok Süper Yöneticinin listelenmiş olması önerilir; böylece, kuruluşlarından bir kişi Sizi Süper Yönetici olmadan bırakmaz.
 
-**Oturum açıldıktan sonra abonelikler göremiyor musunuz?**
-Portalda oturum açabiliyor ancak yönetmek istediğiniz abonelikleri bulamıyorsanız, birden fazla anlaşmada yönetici olmanız mümkündür ve şu anda yanlış bir sorun görüntülüyor olabilirsiniz.  Anlaşmaları değiştirmek için sol üst köşedeki açılan listeyi bulun ve istediğiniz sözleşmeyi seçin.  
+**Oturum açma sonrasında abonelikleri göremeyecek misiniz?**
+Portalda oturum açabilirsiniz ancak yönetmek istediğiniz abonelikleri bulamıyorsanız, birden fazla sözleşmede yöneticiyseniz ve şu anda yanlış abonelikleri görüntüliliyorsanız.  Anlaşmaları değiştirmek için sol üst köşedeki açılan listeyi bulun ve istediğiniz sözleşmeyi seçin.  

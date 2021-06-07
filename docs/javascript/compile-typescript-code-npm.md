@@ -10,12 +10,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 966b08a912a7bab59998daf39590a6fd46920eb7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 96e5689c0108231be26ddf7d598227137f7bc1f7
+ms.sourcegitcommit: ab5735d64a6ad7aecabf5d6df159888e3246bff5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99969535"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111433785"
 ---
 # <a name="compile-typescript-code-nodejs"></a>TypeScript kodunu derle (Node.js)
 
@@ -109,13 +109,13 @@ ASP.NET Core projeleri için, bunun yerine [NuGet paketini](../javascript/compil
 
    Uygulamayı çalıştırdığınızda otomatik olarak oluştursa da, yapı işlemi sırasında gerçekleşen bir şeye göz atmak istiyoruz:
 
-   Kaynak haritaları oluşturduysanız, *OutDir* seçeneğinde belirtilen klasörü açın ve oluşturulan \* . js dosyalarını oluşturulan \* js. map dosyaları ile birlikte bulabilirsiniz.
+   Kaynak haritaları oluşturduysanız, *OutDir* seçeneğinde belirtilen klasörü açın ve oluşturulan \*.js dosya (lar) ı ile birlikte bulunan \* js. Map dosyalarını bulun.
 
    [Hata ayıklama](../javascript/debug-nodejs.md)için kaynak eşleme dosyaları gereklidir.
 
 ### <a name="run-the-application"></a>Uygulamayı çalıştırma
 
-Derlemeden sonra uygulamayı çalıştırma yönergeleri için, bkz. [ilk Node.js uygulamanızı oluşturma](../ide/quickstart-nodejs.md?toc=%252fvisualstudio%252fjavascript%252ftoc.json#run-the-application).
+Derlemeden sonra uygulamayı çalıştırma yönergeleri için, bkz. [ilk Node.js uygulamanızı oluşturma](../ide/quickstart-nodejs.md?toc=%252fvisualstudio%252fjavascript%252ftoc.json#run-the-app).
 
 ## <a name="automate-build-tasks"></a>Derleme görevlerini otomatikleştirin
 

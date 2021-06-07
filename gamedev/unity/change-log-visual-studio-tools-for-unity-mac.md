@@ -1,8 +1,8 @@
 ---
-title: Değişiklik günlüğü (Unity için Visual Studio Araçları, Mac) | Microsoft Docs
-description: Unity için Visual Studio Araçları, Mac için değişiklik günlüğünü görüntüleyin. 2.7.0.0 ve dışında 1.0.0.0 sürümündeki değişikliklere bakın.
+title: Değişiklik Günlüğü (Unity için Visual Studio Araçları, Mac) | Microsoft Docs
+description: Mac için değişiklik Unity için Visual Studio Araçları görüntüleme. Sürüm 1.0.0.0 ile 2.7.0.0 ve ötesindeki değişikliklere bakın.
 ms.custom: ''
-ms.date: 3/1/2021
+ms.date: 6/3/2021
 ms.technology: vs-unity-tools
 ms.prod: visual-studio-dev16
 ms.topic: conceptual
@@ -12,268 +12,339 @@ ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: f11c5c1407d16d7a82a9d8d24e6a8dd3a04e57eb
-ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
+ms.openlocfilehash: 2d3faf8e5231ca5d2e99bcf80dc18b6d4f4607cd
+ms.sourcegitcommit: f430d014f912aa7874e1db65026dc72688b973e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101683376"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111448304"
 ---
 # <a name="change-log-visual-studio-tools-for-unity-mac"></a>Değişiklik Günlüğü (Unity için Visual Studio Araçları, Mac)
 
-Unity için Visual Studio Araçları değişiklik günlüğü.
+Unity için Visual Studio Araçları günlüğü değiştirme.
+
+## <a name="21020"></a>2.10.2.0
+Yayın tarihi: 2 Haziran 2021
+
+### <a name="new-features"></a>Yeni Özellikler
+
+- **Entegrasyon:**
+
+  - Tanılama [`UNT0024`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0024.md) eklendi. Vektör hesaplamaları üzerinden skaler hesaplamalara öncelik verme.
+
+- **Değerlendirme:**
+
+  - Görünür yerelleri düzgün filtrelemek için taşınabilir pdb sembolleri kullanma desteği eklendi.
+
+### <a name="bug-fixes"></a>Hata düzeltmeleri
+
+- **Entegrasyon:**
+
+  - Oynatıcının son Unity sürümleriyle ayrıştırma duyurusu düzeltildi.
+
+## <a name="21010"></a>2.10.1.0
+Yayın tarihi: 11 Mayıs 2021
+
+### <a name="bug-fixes"></a>Hata düzeltmeleri
+
+- **Entegrasyon:**
+
+  - Quickfix ile ilgili [`UNT0008`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0008.md) kararlılık sorunları düzeltildi.
+
+  - İş parçacıklarıyla ilgili performans sorunları düzeltildi.
+
+  - Hatalistesinde gizlenen uyarıları ve hataları filtreleme düzeltildi.
+
+  - Unity arka plan işlemlerini filtreleme düzeltildi.
+
+## <a name="21000"></a>2.10.0.0
+Yayın tarihi: 13 Nisan 2021
+
+### <a name="new-features"></a>Yeni Özellikler
+
+- **Entegrasyon:**
+
+  - Tanılama [`UNT0019`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0019.md) eklendi. için gereksiz dolaylı `GameObject.gameObject` çağrı.
+
+  - Tanılama [`UNT0020`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0020.md) eklendi. `MenuItem` özniteliği statik olmayan yöntemde kullanılır.
+
+  - Tanılama [`UNT0021`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0021.md) eklendi. Unity iletisi korunmalıdır (kabul).
+
+  - Tanılama [`UNT0022`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0022.md) eklendi. Konum ve döndürmeyi ayarlamak için verimsiz yöntem.
+
+  - Tanılama [`UNT0023`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0023.md) eklendi. Unity nesnelerinde atamayı biriktirma.
+
+  - için [`USP0017`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0017.md) suppressor `IDE0074` eklendi. Unity nesneleri biriktirma ataması kullanmaz.
+
+## <a name="2940"></a>2.9.4.0
+Yayın tarihi: 6 Nisan 2021
+
+### <a name="bug-fixes"></a>Hata düzeltmeleri
+
+- **Entegrasyon:**
+
+  - Test sabitleriyle ilgili sorunları düzeltme
+
+## <a name="2930"></a>2.9.3.0
+Yayın tarihi: 30 Mart 2021
+
+### <a name="bug-fixes"></a>Hata düzeltmeleri
+
+- **Entegrasyon:**
+
+  - Test çalıştırıcısı ile ilgili sorunları düzeltme 
 
 ## <a name="2920"></a>2.9.2.0
-Yayımlanma tarihi 2 Mart 2021
+Yayın tarihi: 2 Mart 2021
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Tümleştirme**
+- **Entegrasyon:**
 
-  - Unity ileti iletişim kutusunda sabit arama vurgulaması.
+  - Unity ileti iletişim kutusunda arama vurgulama düzeltildi.
 
-  - Unity proje TreeView ile ilgili sabit kararlılık sorunları.
+  - Unity proje ağaç görünümü ile ilgili kararlılık sorunları düzeltildi.
 
-- **Masının**
+- **Hata ayıklama:**
 
-  - Koşullu kesme noktalarının sabit işlenmesi.
+  - Koşullu kesme noktaları düzeltildi.
 
 ## <a name="2910"></a>2.9.1.0
-Yayın tarihi 9 Şubat 2021
+Yayın tarihi: 9 Şubat 2021
 
 ### <a name="new-features"></a>Yeni Özellikler
 
-- **Tümleştirme**
+- **Entegrasyon:**
 
-  - IDE 'den Unity testlerini çalıştırmaya ve hata ayıklamaya yönelik destek eklendi
+  - IDE'den Unity testlerini çalıştırma ve hata ayıklama desteği eklendi
 
-- **Değerlendirmesinin**
+- **Değerlendirme:**
 
-  - `Active Scene`Kök oyun nesnelerini gösteren Yereller 'e eklenir.
+  - Kök `Active Scene` oyun nesnelerini gösteren yerellere eklendi.
 
-  - `this.gameObject`Unity projelerinde yaygın olarak kullanıldığından, Yereller 'e eklenir.
+  - `this.gameObject`Unity projelerinde yaygın olarak kullanılan yerellere eklendi.
 
-  - Tüm `Children` `Components` `GameObject` nesne hiyerarşisini kolayca görüntüleyebilmeniz için tüm örneklere eklenen ve gruplar.
+  - Tüm `Children` nesne `Components` hiyerarşisini kolayca `GameObject` görüntüleyebiliyor olmak için tüm örneklere ve grupları eklendi.
 
-  - `Scene Path` `GameObject` Sahnenin konumunu göstermek için tüm örneklere eklenir.
+  - Sahnenin `Scene Path` konumunu göstermek için tüm `GameObject` örneklere eklenir.
 
-  - `JobEntityBatch`Kaynak oluşturucuları Ile varlıklar kullanılırken/Lambdas desteği eklendi.
+  - Kaynak oluşturucularla `JobEntityBatch` Varlıklar kullanılırken /Lambdas desteği eklendi.
 
-  - Büyük dizileri (Dizin demetlenmesidir kullanarak) görüntüleme desteği geliştirildi.
+  - Büyük dizileri görüntüleme desteği iyileştirildi (dizin demetleme kullanılarak).
 
-  - 2019,4 API için eksik Unity iletileri eklendi.
+  - 2019.4 API'si için eksik Unity iletileri eklendi.
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Tümleştirme**
+- **Entegrasyon:**
 
-  - Unity iletisi iletişim kutusuyla ilgili sabit kararlılık sorunları
+  - Unity ileti iletişim kutusuyla ilgili kararlılık sorunları düzeltildi
 
-  - TRK dil olmayan dillerde çeşitli kullanıcı arabirimi sorunları düzeltildi.
+  - ENU dışı diller için çeşitli kullanıcı arabirimi sorunları düzeltildi.
 
-  - Tanılama ile ilgili sabit kararlılık sorunları [`UNT0018`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0018.md) .
+  - Tanılama ile ilgili kararlılık sorunları [`UNT0018`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0018.md) düzeltildi.
 
-- **Masının**
+- **Hata ayıklama:**
 
-  - Yöntemler kullanılırken sabit VM bağlantısı kesme sorunları `Trace` .
+  - Yöntemler kullanırken karşılaşılan VM bağlantısı kesilmesi `Trace` sorunları düzeltildi.
 
-- **Değerlendirmesinin**
+- **Değerlendirme:**
 
-  - Geçersiz özellikleri oluşturan özel durumlar düzeltildi.
+  - Eski özelliklerin özel durumlara neden olduğu filtreleme düzeltildi.
 
 ## <a name="2900"></a>2.9.0.0
-Yayın 20 Ocak 2021
+Yayın tarihi: 20 Ocak 2021
 
 ### <a name="new-features"></a>Yeni Özellikler
 
-- **Tümleştirme**
+- **Entegrasyon:**
 
-  - `raytrace shaders`Ve dosyaları için destek `UXML` eklendi `USS` .
+  - , ve `raytrace shaders` dosyaları için destek `UXML` `USS` eklendi.
 
-  - Unity iletileri API 'SI güncelleştirildi (eş yordam olarak kullanılan tüm yöntemler için).
+  - Unity iletileri API'si güncelleştirildi (tüm yöntemler için coroutines olarak kullanılır).
 
-  - Android SDK algılaması güncelleştirildi.
+  - Güncelleştirme Android SDK algılama.
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Tümleştirme**
+- **Entegrasyon:**
 
-  - Sabit [`UNT0006`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0006.md) tanı, corlar ve için yanlış uyarılar veriliyor `AssetPostprocessor.OnAssignMaterialModel` .
+  - Tanılama [`UNT0006`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0006.md) düzeltildi ve Coroutines ve için yanlış uyarılar `AssetPostprocessor.OnAssignMaterialModel` veriyor.
 
 ## <a name="2840"></a>2.8.4.0
-Yayın tarihi, 15 Aralık 2020
+Yayın tarihi: 15 Aralık 2020
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Tümleştirme**
+- **Entegrasyon:**
 
-  - Unity olay oluşturma Sihirbazı kapatılırken bir güvenilirlik sorunu düzeltildi.
+  - Unity Olay oluşturma sihirbazı kapatılıyorken ortaya gelen güvenilirlik sorunu düzeltildi.
 
 ## <a name="2830"></a>2.8.3.0
-Yayın tarihi 10 Kasım 2020
+Yayın tarihi: 10 Kasım 2020
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Sý**
+- **Hata ayıklayıcı:**
 
-  - Çözümde bir VSTU projesi olmasa bile Unity 'ye ekleme düzeltildi.
+  - Çözümde VSTU projesi yoksa bile Unity'ye ekleme düzeltildi.
 
 ## <a name="2820"></a>2.8.2.0
-Yayın tarihi, 27 Ekim 2020
+Yayın tarihi: 27 Ekim 2020
 
 ### <a name="new-features"></a>Yeni Özellikler
 
-- **Tümleştirme**
+- **Entegrasyon:**
 
-  - [`UNT0010`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0010.md)Yalnızca ' den devralan her şeye uygulanacak tanılama geliştirildi `Component` `MonoBehaviour` .
+  - Yalnızca [`UNT0010`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0010.md) 'den devralınan her şeye uygulamak için geliştirilmiş `Component` `MonoBehaviour` tanılama.
 
 ## <a name="2810"></a>2.8.1.0
-Yayın tarihi, 13 Ekim 2020
+Yayın tarihi: 13 Ekim 2020
 
 ### <a name="new-features"></a>Yeni Özellikler
 
-- **Değerlendirmesinin**
+- **Değerlendirme:**
 
-  - Etkinleştirmeleri ile örtük dönüştürme desteği eklendi. Daha önce değerlendirici, kesin tür denetlemesini zorladı ve `Failed to find a match for method([parameters...])` uyarı iletileri elde ediyor.
+  - Çağrılarla örtülü dönüştürme desteği eklendi. Daha önce değerlendirici katı tür denetimi uygulatarak uyarı `Failed to find a match for method([parameters...])` iletilerine neden oldu.
 
-- **Tümleştirme**
+- **Entegrasyon:**
 
-  - [`UNT0018`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0018.md)Tanılama eklendi. ,, `System.Reflection` Veya gibi performans açısından kritik iletilerde özellikleri kullanmamalısınız `Update` `FixedUpdate` `LateUpdate` `OnGUI` .
+  - Tanılama [`UNT0018`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0018.md) eklendi. , , veya `System.Reflection` gibi performans açısından kritik iletilerde özellikleri `Update` `FixedUpdate` `LateUpdate` kullanmamanız `OnGUI` gerekir.
 
-  - [`USP0003`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0003.md) [`USP0005`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0005.md) Tüm statik yöntemler desteğiyle geliştirilmiş ve gizliyoruz `AssetPostprocessor` .
+  - Tüm statik [`USP0003`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0003.md) yöntemleri destekleyen geliştirilmiş ve [`USP0005`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0005.md) `AssetPostprocessor` bastırıcılar.
 
-  - [`USP0016`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0016.md)İçin Suppressor eklendi `CS8618` . `C# 8.0` Nullable başvuru türlerini ve null değer atanamaz başvuru türlerini tanıtır. ' Den devralan türlerin başlatılma algılaması `UnityEngine.Object` desteklenmez ve hatalara neden olur.
+  - için [`USP0016`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0016.md) suppressor `CS8618` eklendi. `C# 8.0` null değere değiştirilebilir başvuru türlerini ve null değerdilemez başvuru türlerini içerir. 'den devralınan türlerin `UnityEngine.Object` başlatma algılaması desteklenmez ve hatalara neden olur.
 
-  - Artık hem Unity 2019. x hem de 2020. x + için aynı oynatıcı ve asmdef proje oluşturma mekanizmasını kullanıyor.
+  - Şimdi hem Unity 2019.x hem de 2020.x+ için aynı oynatıcı ve asmdef proje oluşturma mekanizmasını kullanıyoruz.
   
-  - Bir sihirbazla Unity iletileri oluştururken Geliştirilmiş kullanıcı deneyimi.
+  - Sihirbazla Unity iletileri oluşturulurken kullanıcı deneyimi iyileştirildi.
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Tümleştirme**
+- **Entegrasyon:**
 
   - Açıklamalarda iletiler için beklenmeyen tamamlama düzeltildi.
 
 ## <a name="2800"></a>2.8.0.0 
-Yayın tarihi 14 Eylül 2020
+Yayın tarihi: 14 Eylül 2020
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Tümleştirme**
+- **Entegrasyon:**
 
-  - Unity 2019. x ile sabit oynatıcı proje üretimi.
+  - Unity 2019.x ile oynatıcı projesi oluşturma düzeltildi.
 
 ## <a name="2710"></a>2.7.1.0
-5 Ağustos 2020 tarihinde yayınlandı
+Yayın tarihi: 5 Ağustos 2020
 
 ### <a name="new-features"></a>Yeni Özellikler
 
-- **Tümleştirme**
+- **Entegrasyon:**
 
-  - Unity iletileri API 'SI 2019,4 olarak güncelleştirildi.
+  - Unity iletileri API'si 2019.4'e güncelleştirildi.
 
-  - [`USP0013`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0013.md)İçin Suppressor eklendi `CA1823` . Veya özniteliklerine sahip özel `SerializeField` alanlar `SerializeReference` kullanılmamış (FxCop) olarak işaretlenmemelidir.
+  - için [`USP0013`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0013.md) suppressor `CA1823` eklendi. veya özniteliklerine `SerializeField` sahip özel alanlar `SerializeReference` kullanılmamış (FxCop) olarak işaretlanmaz.
   
-  - [`USP0014`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0014.md)İçin Suppressor eklendi `CA1822` . Unity iletileri `static` değiştirici (FxCop) için aday olarak işaretlenmemelidir.
+  - için [`USP0014`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0014.md) suppressor `CA1822` eklendi. Unity iletileri, değiştirici adayı `static` (FxCop) olarak işaretlenmemeli.
 
-  - [`USP0015`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0015.md)İçin Suppressor eklendi `CA1801` . Kullanılmayan parametreler Unity iletilerinden (FxCop) kaldırılmamalıdır.
+  - için [`USP0015`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0015.md) suppressor `CA1801` eklendi. Kullanılmayan parametreler Unity iletilerinden (FxCop) kaldırılmalıdır.
   
-  - `MenuItem`Suppressor 'a destek eklendi [`USP0009`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0009.md) .  
+  - `MenuItem`Bastırıcıya [`USP0009`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0009.md) destek eklendi.  
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Tümleştirme**
+- **Entegrasyon:**
 
-  - Sabit [`USP0001`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0001.md) ve [`USP0002`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0002.md) suppresler, ek parantezler veya yöntem bağımsız değişkenleriyle çalışmıyor.
+  - Ek [`USP0001`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0001.md) [`USP0002`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0002.md) parantezlerle veya yöntem bağımsız değişkenleriyle çalışmayan ve bastırıcılar düzeltildi.
   
-  - Unity ayarlarında otomatik yenileme devre dışı bırakılsa bile, düzeltilen zorunlu varlık veritabanı yenilemesi.
+  - Unity ayarlarında otomatik yenileme devre dışı bırakılabilirken bile zorunlu varlık veritabanı yenilemesi düzeltildi.
 
 ## <a name="2700"></a>2.7.0.0
-Yayın tarihi, 23 Haziran 2020
+Yayın tarihi: 23 Haziran 2020
 
 ### <a name="new-features"></a>Yeni Özellikler
 
-- **Tümleştirme**
+- **Entegrasyon:**
 
-  - Unity çözüm ve projeleri yeniden oluştururken çözüm klasörlerinin kalıcı hale getirilmesi için destek eklendi.
+  - Unity çözüm ve projeleri yeniden oluştururken çözüm klasörlerini kalıcı yapmak için destek eklendi.
 
-  - [`UNT0015`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0015.md)Tanılama eklendi. Ya da özniteliğiyle yanlış metot imzasını Algıla `InitializeOnLoadMethod` `RuntimeInitializeOnLoadMethod` .
+  - Tanılama [`UNT0015`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0015.md) eklendi. veya özniteliğiyle yanlış yöntem `InitializeOnLoadMethod` imzasını `RuntimeInitializeOnLoadMethod` algıla.
 
-  - [`UNT0016`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0016.md)Tanılama eklendi. `Invoke` `InvokeRepeating` `StartCoroutine` `StopCoroutine` Dize sabit değeri olan ilk bağımsız değişken,, veya kullanarak tür kullanımı güvenli değildir.
+  - Tanılama [`UNT0016`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0016.md) eklendi. İlk `Invoke` bağımsız değişken dize değişmez değeri olan , veya kullanmak tür için güvenli `InvokeRepeating` `StartCoroutine` `StopCoroutine` değildir.
 
-  - [`UNT0017`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0017.md)Tanılama eklendi. `SetPixels` çağırma yavaş.
+  - Tanılama [`UNT0017`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0017.md) eklendi. `SetPixels` çağrı yavaş.
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Sý**
+- **Hata ayıklayıcı:**
 
-  - Oyun eski mono çalışma zamanı üzerinde çalışırken (kesme noktası oluşturulduktan hemen sonra bağlantı noktasını bağlamaya çalışırken), kesme noktaları oluşturma düzeltildi. 
+  - Oyun eski çalışma sırasında kesme noktaları oluşturma Mono çalışma zamanı (Kesme noktası oluşturulur oluşturulmaz bağlamaya çalışıldı). 
   
-- **Tümleştirme**
+- **Entegrasyon:**
 
-  - Unity ileti Sihirbazı 'nda iletileri filtrelerken seçimi sıfırlamayın.
+  - Unity ileti sihirbazında iletileri filtrelerken seçimi sıfırlamayın.
   
-  - [`USP0004`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0004.md), [`USP0006`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0006.md) [`USP0007`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0007.md) `IDE0044` `IDE0051` `CS0649` Serializefield özniteliğiyle donatılmış tüm alanlar için gösterme (salt okunur), (kullanılmamış), (atanmamış), ve bu kurallara göre düzeltildi. `Unity.Object` öğesini genişleten her türdeki genel alanlar için `CS0649` (hiçbir zaman atanmamış) öğesini gizleyin.
+  - , ve bastırıcıları şu kurallarla düzeltildi: SerializeField özniteliğiyle dekore edilmiş tüm alanlar için gizleme [`USP0004`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0004.md) [`USP0006`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0006.md) [`USP0007`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0007.md) `IDE0044` `IDE0051` (salt okunur), `CS0649` (kullanılmayan), (hiçbir zaman atanmamış). `Unity.Object` öğesini genişleten her türdeki genel alanlar için `CS0649` (hiçbir zaman atanmamış) öğesini gizleyin.
 
-  - İçin sabit genel tür parametresi denetimi [`UNT0014`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0014.md) .
+  - için genel tür parametre denetimi [`UNT0014`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0014.md) düzeltildi.
 
-- **Değerlendirmesinin**
+- **Değerlendirme:**
 
-  - Numaralandırmalar ile sabit eşitlik karşılaştırması.
+  - Sabit numaralarla eşitlik karşılaştırması düzeltildi.
 
 ## <a name="2610"></a>2.6.1.0
-Yayımlanma tarihi 19 Mayıs 2020
+Yayın tarihi: 19 Mayıs 2020
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Tümleştirme**
+- **Entegrasyon:**
 
-  - Unity tarafında mesajlaşma sunucusunu oluşturdığımızda uyarın.
+  - Unity tarafında mesajlaşma sunucusu oluşturamadığımız için uyar.
 
-  - Hafif derleme sırasında Çözümleyicileri düzgün şekilde çalıştırın.
+  - Basit derleme sırasında çözümleyicileri düzgün çalıştırın.
 
-  - Unity hub yüklemeleri ile düzeltilen API belgeleri.
+  - Unity Hub yüklemeleriyle API belgeleri düzeltildi.
   
-  - Sabit hata ayıklayıcı görselleştiricisi kilitleniyor.
+  - Hata ayıklayıcı görselleştiricisi kilitlenmeleri düzeltildi.
 
 ## <a name="2600"></a>2.6.0.0
-Yayın tarihi 14 Nisan 2020
+Yayın tarihi: 14 Nisan 2020
 
 ### <a name="new-features"></a>Yeni Özellikler
 
-- **Tümleştirme**
+- **Entegrasyon:**
 
-  - [`UNT0012`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0012.md)Tanılama eklendi. İçindeki bağıntıları tespit edin ve bu çağrıları sarın `StartCoroutine()` .
+  - Tanılama [`UNT0012`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0012.md) eklendi. içinde coroutines çağrılarını algıla ve `StartCoroutine()` sarmala.
 
-  - [`UNT0013`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0013.md)Tanılama eklendi. Geçersiz veya gereksiz özniteliği tespit edin ve kaldırın `SerializeField` .
+  - Tanılama [`UNT0013`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0013.md) eklendi. Geçersiz veya yedekli özniteliği algıla ve `SerializeField` kaldır.
 
-  - [`UNT0014`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0014.md)Tanılama eklendi. Algılama `GetComponent()` , bileşen olmayan veya arabirim olmayan türle çağrıldı.
+  - Tanılama [`UNT0014`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0014.md) eklendi. Bileşen `GetComponent()` olmayan veya Arabirim Türü olmayan çağrılır.
 
-  - [`USP0009`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0009.md)İçin Suppressor eklendi `IDE0051` . Özniteliği özniteliğiyle bayrak eklemeyin `ContextMenu` veya özniteliği kullanılmamış olarak bir alan tarafından başvurulmayın `ContextMenuItem` .
+  - için [`USP0009`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0009.md) suppressor `IDE0051` eklendi. Özniteliği olan veya özniteliği kullanılmayan bir alan tarafından `ContextMenu` başvurulan yöntemlere `ContextMenuItem` bayrak asma.
 
-  - [`USP0010`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0010.md)İçin Suppressor eklendi `IDE0051` . `ContextMenuItem`Özniteliği, kullanılmayan olarak özniteliğe bayrak eklemeyin.
+  - için [`USP0010`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0010.md) suppressor `IDE0051` eklendi. özniteliğine sahip alanlara kullanılmayan `ContextMenuItem` bayrağını attırma.
 
-  - [`USP0011`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0011.md)İçin Suppressor eklendi `IDE0044` . `ContextMenuItem`Özniteliği ile salt okuma alanları yapmayın.
+  - için [`USP0011`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0011.md) suppressor `IDE0044` eklendi. Salt okunur özniteliğine sahip `ContextMenuItem` alanlar yapma.
 
-  - [`USP0004`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0004.md)[`USP0006`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0006.md)ve [`USP0007`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0007.md) artık ve öznitelikleri için de çalışır `SerializeReference` `SerializeField` .
+  - [`USP0004`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0004.md), [`USP0006`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0006.md) ve artık hem hem de öznitelikleri için [`USP0007`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0007.md) `SerializeReference` `SerializeField` çalışıyor.
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
-- **Tümleştirme**
+- **Entegrasyon:**
 
-  - Yalnızca Düzenleyici iletişim kurabiliyorsa Unity 'ye Başlat/Durdur komutlarını gönderin.
+  - Unity'ye yalnızca Düzenleyici iletişim kurayken başlatma/durdurma komutları gönderin.
 
-  - Devralınan iletilerle düzeltilen QuickInfo belgeleri.
+  - Devralınan iletilere sahip QuickInfo belgeleri düzeltildi.
 
-  - İleti için sabit ileti kapsamı `CreateInspectorGUI` .
+  - İletinin ileti kapsamı `CreateInspectorGUI` düzeltildi.
 
-  - [`UNT0001`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0001.md)Polimorfik değiştiricilere sahip yöntemler hakkında rapor vermeyin.
+  - Çok [`UNT0001`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0001.md) biçimli değiştiriciler ile yöntemleri bildirme.
 
-- **Değerlendirmesinin**
+- **Değerlendirme:**
 
-  - Diğer ad kullanımları düzeltildi.
+  - Diğer ad kullananların işlenmesi düzeltildi.
   
-  - Null değerlerin sabit işlenmesi.  
+  - Null değerlerin işlenmesi düzeltildi.  
 
 ## <a name="2520"></a>2.5.2.0
 
@@ -886,7 +957,7 @@ Yayın tarihi, 23 Ekim 2017
 
 - **Proje oluşturma:**
 
-  - Derleme dosya adına yanlışlıkla eklenmiş ek. dll uzantısı düzeltildi.
+  - Derleme dosya adına yanlışlıkla eklenmiş ek .dll uzantısı düzeltildi.
 
   - Varsayılan olarak ' true ' olduğundan AllowAttachedDebuggingOfEditor Unity bayrağını zorlamayın.
 
