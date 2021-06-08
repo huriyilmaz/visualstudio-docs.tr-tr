@@ -10,19 +10,19 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9486f1cd3e931d134c6fe2842f8704926de70966
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 92914703ea4b293ac054c841251b37886bbc1d5a
+ms.sourcegitcommit: 3fe04d5b931ae459a802a1b965f84186757cbc08
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105060711"
+ms.lasthandoff: 06/08/2021
+ms.locfileid: "111588468"
 ---
 # <a name="vsix-color-compiler"></a>VSIX Renk Derleyicisi
-Visual Studio Uzantı rengi derleyici aracı, var olan Visual Studio temaları için renkleri temsil eden bir. xml dosyası alan ve bu renklerin Visual Studio 'da kullanılabilmesi için bir. pkgdef dosyasına bağlayan bir konsol uygulamasıdır. . Xml dosyaları arasındaki farkları karşılaştırmak çok kolay olduğundan, bu araç kaynak denetimindeki özel renkleri yönetmek için yararlıdır. Ayrıca derleme ortamlarına, derleme çıkışının geçerli bir. pkgdef dosyası olması için de bağlanabilir.
+Visual Studio Uzantı rengi derleyici aracı, var olan Visual Studio temaları için renkleri temsil eden bir .xml dosyası alan ve bu renklerin Visual Studio 'da kullanılabilmesi için bir. pkgdef dosyasına bağlayan bir konsol uygulamasıdır. .xml dosyalar arasındaki farkları karşılaştırmak kolaydır çünkü bu araç, kaynak denetimindeki özel renkleri yönetmek için yararlıdır. Ayrıca derleme ortamlarına, derleme çıkışının geçerli bir. pkgdef dosyası olması için de bağlanabilir.
 
  **Tema XML şeması**
 
- Tüm bir Theme. xml dosyası şuna benzer:
+ Tüm tema .xml dosyası şöyle görünür:
 
 ```xml
 <Themes>
@@ -114,7 +114,7 @@ Visual Studio Uzantı rengi derleyici aracı, var olan Visual Studio temaları i
 
  **Hepsi birlikte**
 
- Bu, geçerli bir Theme. xml dosyasının basit bir örneğidir:
+ Bu, geçerli bir tema .xml dosyasının basit bir örneğidir:
 
 ```xml
 <Themes>
@@ -137,7 +137,7 @@ Visual Studio Uzantı rengi derleyici aracı, var olan Visual Studio temaları i
 
 |**Anahtar adı**|**Notlar**|**Gerekli veya Isteğe bağlı**|
 |-|-|-|
-|Adlandırılmamış (. xml dosyası)|Bu ilk adlandırılmamış parametredir ve dönüştürülecek XML dosyasının yoludur.|Gerekli|
+|Adlandırılmamış (.xml dosyası)|Bu ilk adlandırılmamış parametredir ve dönüştürülecek XML dosyasının yoludur.|Gerekli|
 |Adlandırılmamış (. pkgdef dosyası)|Bu ikinci adlandırılmamış parametredir ve oluşturulan. pkgdef dosyası için çıkış yoludur.<br /><br /> Varsayılan: \<XML Filename> . pkgdef|İsteğe Bağlı|
 |/noLogo|Bu bayrak ayarlandığında, ürün ve telif hakkı bilgilerinin yazdırılması durduruluyor.|İsteğe Bağlı|
 |/?|Yardım bilgilerini yazdır.|İsteğe Bağlı|
@@ -151,12 +151,14 @@ Visual Studio Uzantı rengi derleyici aracı, var olan Visual Studio temaları i
 
 ## <a name="notes"></a>Notlar
 
-- Bu araç, VC + + çalışma zamanının en son sürümünün yüklü olmasını gerektirir.
+- Bu araç, VC++ çalışma zamanının en son sürümünün yüklü olması gerekir.
 
-- Yalnızca tek dosyalar desteklenir. Klasör yolları aracılığıyla toplu dönüştürme desteklenmiyor.
+- Yalnızca tek dosyalar de destekler. Klasör yolları aracılığıyla toplu dönüştürme desteklenmiyor.
+
+- Araç şu içinde bulunabilir: `<VS Install Path>\VSSDK\VisualStudioIntegration\Tools\Bin\`
 
 ## <a name="sample-output"></a>Örnek çıktı
- Araç tarafından oluşturulan. pkgdef dosyası aşağıdaki anahtarlara benzer olacaktır:
+ Araç tarafından oluşturulan .pkgdef dosyası aşağıdaki anahtarlara benzer:
 
 ```
 [$RootKey$\Themes\{de3dbbcd-f642-433c-8353-8f1df4370aba}\Environment]
