@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: b3ffe7d2ac219f35d987a3f52551350a2af0fa5c
-ms.sourcegitcommit: 00e16b9afe6b22ba0591e4d0d92690544e6d4357
+ms.openlocfilehash: 5433ae0e84396f3c16dc5ed50f51ce7e9eb7056f
+ms.sourcegitcommit: 01a411cd7ae3488b7b979a947bca92fd296a98e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "105617032"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111760984"
 ---
 # <a name="tutorial-create-a-nodejs-and-express-app-in-visual-studio"></a>Öğretici: Visual Studio 'da Node.js ve Express uygulaması oluşturma
 
@@ -28,7 +28,7 @@ Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads) sayfasına giderek ücretsiz olarak yükleme yapın.
 
@@ -194,31 +194,31 @@ IntelliSense, kod yazarken size yardımcı olan bir Visual Studio aracıdır.
 
     Bu iletinin son satırı JavaScript yorumlayıcı 'nın bir virgül () beklediğine bildirir `,` .
 
-1. Alt bölmede **hata listesi** sekmesine tıklayın ve bildirilen sorun türleri için **Oluştur + IntelliSense** ' i seçin.
+1. Alt bölmede Hata Listesi **sekmesine tıklayın ve** bildirilen **sorunların türü olarak Derleme + IntelliSense'i** seçin.
 
-    Dosya adı ve satır numarası ile birlikte uyarı ve açıklama görürsünüz.
+    Uyarıyı ve açıklamayı dosya adı ve satır numarasıyla birlikte görüyorsunuz.
 
-    ![Hata listesini görüntüle](../javascript/media/tutorial-nodejs-error-list.png)
+    ![Hata listesini görüntüleme](../javascript/media/tutorial-nodejs-error-list.png)
 
-1. Daha önce virgül () ekleyerek kodu düzeltir `,` `"data"` .
+1. 'den önce virgül ( ) ekleyerek `,` kodu `"data"` düzeltin.
 
-    Düzeltildiğinde, kod satırının şöyle görünmesi gerekir: `res.render('index', { title: 'Express', "data": getData() });`
+    Düzeltilmiş olduğunda, kod satırı şu şekilde olması gerekir: `res.render('index', { title: 'Express', "data": getData() });`
 
 ## <a name="set-a-breakpoint"></a>Kesme noktası ayarlama
 
-Uygulamayı Visual Studio hata ayıklayıcısı ekli olarak çalıştırmaya devam edersiniz. Bunu yapmadan önce bir kesme noktası ayarlamanız gerekir.
+Bir sonraki adım, hata ayıklayıcının ekli olduğu Visual Studio çalıştıracak. Bunu yapmadan önce bir kesme noktası ayarlay gerekir.
 
-1. *index.js*, bir kesme noktası ayarlamak için aşağıdaki kod satırından önce sol cilt payı ' na tıklayın:
+1. Bu *index.js,* bir kesme noktası ayarlamak için aşağıdaki kod satırı öncesinde sol olukluna tıklayın:
 
     `res.render('index', { title: 'Express', "data": getData() });`
 
-    Kesme noktaları, güvenilir hata ayıklamanın en temel ve temel özelliğidir. Bir kesme noktası, Visual Studio 'Nun çalışan kodunuzu askıya alması gerektiğini gösterir; böylece değişkenlerin değerlerine veya bellek davranışına veya kodun bir dalının çalıştırılıp çalıştırılmayacağı konusunda bir görünüm elde edebilirsiniz.
+    Kesme noktaları, güvenilir hata ayıklamanın en temel ve temel özelliğidir. Kesme noktası, Visual Studio değerlerine, bellek davranışına veya bir kod dalını çalıştırıp çalıştırmamaya bakabilirsiniz.
 
     ![Kesme noktası ayarlama](../javascript/media/tutorial-nodejs-set-breakpoint.png)
 
 ## <a name="run-the-application"></a>Uygulamayı çalıştırma
 
-1. **Web sunucusu (Google Chrome)** veya **Web sunucusu (Microsoft Edge)** gibi hata ayıklama araç çubuğundan hata ayıklama hedefini seçin.
+1. Hata ayıklama araç çubuğunda Web Sunucusu **(Google Chrome)** veya Web Sunucusu **(Microsoft Edge) gibi hata ayıklama hedefini seçin.**
 
     ::: moniker range=">=vs-2019"
     ![Hata ayıklama hedefini seçin](../javascript/media/vs-2019/tutorial-nodejs-deploy-target.png)
@@ -227,52 +227,52 @@ Uygulamayı Visual Studio hata ayıklayıcısı ekli olarak çalıştırmaya dev
     ![Hata ayıklama hedefini seçin](../javascript/media/tutorial-nodejs-deploy-target.png)
     ::: moniker-end
 
-    Makinenizde Chrome varsa, ancak bir seçenek olarak görünmüyorsa, hata ayıklama hedefi açılır listesinden **Araştır** ' ı seçin ve varsayılan tarayıcı hedefi olarak Chrome ' u seçin ( **Varsayılan olarak ayarla**' yı seçin).
+    Chrome makineniz üzerinde kullanılabilir ancak bir seçenek olarak göster  göstermüyorsa, hata ayıklama hedefi açılan listesinden Birlikte Gözat'ı seçin ve varsayılan tarayıcı hedefi olarak Chrome'u seçin (Varsayılan Olarak **Ayarla'ya tıklayın).**
 
-1. Uygulamayı çalıştırmak için **F5** tuşuna **basın (hata ayıklama**  >  **başlatma hata** ayıklaması).
+1. Uygulamayı **çalıştırmak için F5** (**Hata**  >  **AyıklamaYı Başlat**) tuşuna basın.
 
-    Hata ayıklayıcı, ayarladığınız kesme noktasında duraklatılır. Şimdi uygulamanızın durumunu inceleyebilirsiniz.
+    Hata ayıklayıcı, ayar istediğiniz kesme noktası üzerinde duraklatılır. Artık uygulama durumunu inceebilirsiniz.
 
-1. `getData`Bir veri ipucunda özelliklerini görmek için üzerine gelin
+1. `getData`DataTip'te özelliklerini görmek için üzerine gelin
 
     ![Değişkenleri inceleme](../javascript/media/tutorial-nodejs-inspect-variables.png)
 
-1. Devam etmek için **F5** tuşuna basın (**Hata Ayıkla**  >  **devam et**).
+1. Devam **etmek için F5** (**Devam Hata**  >  **Ayıkla**) tuşuna basın.
 
     Uygulama bir tarayıcıda açılır.
 
-    Tarayıcı penceresinde başlık olarak "Express" ve ilk paragrafta "Express 'e hoş geldiniz" görüntülenir.
+    Tarayıcı penceresinde başlık olarak "Express" ve ilk paragrafta "Express'e Hoş Geldiniz" ifadesini görebilirsiniz.
 
-1. Farklı görüntüleri göstermek için düğmelere tıklayın.
+1. Farklı görüntüler görüntülemek için düğmelere tıklayın.
 
     ![Tarayıcıda çalışan uygulama](../javascript/media/tutorial-nodejs-running-in-browser.png)
 
 1. Web tarayıcısını kapatın.
 
-## <a name="optional-publish-to-azure-app-service"></a>Seçim Azure App Service yayımlama
+## <a name="optional-publish-to-azure-app-service"></a>(İsteğe bağlı) Azure App Service'da yayımlama
 
-1. Çözüm Gezgini, projeye sağ tıklayın ve **Yayımla**' yı seçin.
+1. Bu Çözüm Gezgini projeye sağ tıklayın ve Yayımla'yı **seçin.**
 
    ![Azure App Service’e yayımlama](../javascript/media/tutorial-nodejs-publish-to-azure.png)
 
-1. **Microsoft Azure App Service** seçin.
+1. **Microsoft Azure App Service.**
 
-    **App Service** Iletişim kutusunda Azure hesabınızda oturum açabilir ve mevcut Azure aboneliklerine bağlanabilirsiniz.
+    App Service **iletişim** kutusunda Azure hesabınızla oturum açabilirsiniz ve mevcut Azure aboneliklerine bağlanabilirsiniz.
 
-1. Kalan adımları izleyerek bir abonelik seçin, bir kaynak grubu seçin veya oluşturun, bir App Service düzlemi seçin veya oluşturun ve ardından Azure 'da yayımlama istendiğinde adımları izleyin. Daha ayrıntılı yönergeler için bkz. [Web dağıtımı kullanarak Azure Web sitesinde yayımlama](https://github.com/Microsoft/nodejstools/wiki/Publish-to-Azure-Website-using-Web-Deploy).
+1. Abonelik seçmek, kaynak grubu seçmek veya oluşturmak, app service düzlemi seçmek veya oluşturmak için kalan adımları izleyin ve ardından Azure'da yayımlamanız istendiğinde adımları izleyin. Daha ayrıntılı yönergeler için bkz. [Web dağıtımı kullanarak Azure web sitesinde yayımlama.](https://github.com/Microsoft/nodejstools/wiki/Publish-to-Azure-Website-using-Web-Deploy)
 
-1. **Çıkış** penceresinde, Azure 'a dağıtım ilerleme durumu gösterilir.
+1. Çıktı **penceresi,** Azure'a dağıtım ilerlemesini gösterir.
 
-    Başarılı bir dağıtımda, uygulamanız Azure App Service çalıştıran bir tarayıcıda açılır. Bir görüntüyü göstermek için bir düğmeye tıklayın.
+    Başarılı bir dağıtımda, uygulamanız Azure App Service.'de çalışan bir tarayıcıda açılır. Bir görüntüyü görüntülemek için bir düğmeye tıklayın.
 
-   ![Azure App Service 'de çalışan uygulama](../javascript/media/tutorial-nodejs-running-in-azure.png)
+   ![Azure App Service'de çalışan uygulama](../javascript/media/tutorial-nodejs-running-in-azure.png)
 
-Tebrikler, bu öğreticiyi tamamlama!
+Tebrikler, bu öğreticiyi tamamladıktan sonra!
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 > [!div class="nextstepaction"]
-> [Uygulamayı Linux 'a dağıtma App Service](../javascript/publish-nodejs-app-azure.md)
+> [Uygulamayı Linux App Service](../javascript/publish-nodejs-app-azure.md)
 
 > [!div class="nextstepaction"]
-> [AngularJS Language Service uzantısı](https://devblogs.microsoft.com/visualstudio/angular-language-service-for-visual-studio)
+> [AngularJS dil hizmeti uzantısı](https://devblogs.microsoft.com/visualstudio/angular-language-service-for-visual-studio)

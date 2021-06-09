@@ -1,8 +1,8 @@
 ---
 title: Veri aramak için Windows Form oluşturma
-description: Veri aramak için bir Windows formu oluşturma hakkında bir örnek okuyun. Windows form uygulamasını, veri kaynağını ve formunu oluşturun. Parametreleştirme ekleyin. Uygulamayı test etme.
+description: Veri aramak için Windows Formu oluşturma örneğini okuyun. Windows Form uygulamasını, veri kaynağını ve formu oluşturun. Parametreleştirme ekleyin. Uygulamayı test etme.
 ms.custom: SEO-VS-2020
-ms.date: 11/04/2016
+ms.date: 06/07/2021
 ms.topic: conceptual
 helpviewer_keywords:
 - Windows Forms, searching data
@@ -16,102 +16,145 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: eb6e5a1ba304627c08828b6ad7bff7f6accd3980
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2ce9d3eeebf42855ad69f02b2d72330190a2b390
+ms.sourcegitcommit: 01a411cd7ae3488b7b979a947bca92fd296a98e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99859118"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111761101"
 ---
 # <a name="create-a-windows-form-to-search-data"></a>Veri aramak için Windows Form oluşturma
 
 Sık rastlanan bir uygulama senaryosu seçilen verileri form üzerinde görüntülemektir. Örneğin, belirli bir müşterinin siparişlerini veya belirli bir siparişin ayrıntılarını görüntülemek isteyebilirsiniz. Bu senaryoda, kullanıcı bilgileri forma girer ve sonra kullanıcının girişi parametre olarak kullanılarak bir sorgu yürütülür; diğer bir deyişle veriler parametreli bir sorgu temel alınarak seçilir. Sorgu sadece kullanıcı tarafından girilen ölçütleri karşılayan verileri getirir. Bu kılavuzda, belirli bir şehirdeki müşterileri getiren bir sorgu oluşturma ve kullanıcı arabirimini kullanıcıların şehir adı girip bir düğmeye basarak sorguyu çalıştırabilecekleri şekilde değiştirme işlemleri gösterilmiştir.
 
-Parametreli sorgular kullanılması, veritabanının kayıtları hızla filtreleyerek işini en iyi şekilde yapmasını sağlayarak uygulamanızın verimli çalışmasına yardımcı olur. Buna karşılık, bir veritabanı tablosunun tamamını ister, ağ üzerinden aktarabilir, sonra da istediğiniz kayıtları bulmak için uygulama mantığını kullanırsanız, uygulamanız yavaş ve verimsiz hale gelebilir.
+Parametreli sorgular kullanılması, veritabanının kayıtları hızla filtreleyerek işini en iyi şekilde yapmasını sağlayarak uygulamanızın verimli çalışmasına yardımcı olur. Buna karşılık, veritabanı tablonun tamamını ister, ağ üzerinden aktararak ve ardından istediğiniz kayıtları bulmak için uygulama mantığını kullanırsanız, uygulama yavaş ve verimsiz hale olabilir.
 
-**Arama ölçütleri Oluşturucu** iletişim kutusunu kullanarak herhangi bir TableAdapter 'a parametreli sorgular ekleyebilirsiniz (ve parametre değerlerini kabul etmek ve sorguyu yürütmek için denetimler). **Veri** menüsünde (veya herhangi bir TableAdapter akıllı etiketinde) **Sorgu Ekle** komutunu seçerek iletişim kutusunu açın.
+Arama Ölçütü Oluşturucusu iletişim kutusunu kullanarak herhangi bir TableAdapter'a parametreli sorgular (ve parametre değerlerini kabul etmek ve sorguyu yürütmek için **denetimler)** eklemek için kullanabilirsiniz. Veri menüsünde (veya herhangi  bir TableAdapter akıllı etiketinde) Sorgu Ekle komutunu seçerek iletişim kutusunu açın. 
 
-Bu izlenecek yolda gösterilen görevler şunlardır:
+Bu kılavuzda gösterilen görevler şunlardır:
 
-- Veri kaynağı **yapılandırma** Sihirbazı ile uygulamanızdaki veri kaynağını oluşturma ve yapılandırma.
+- Veri Kaynağı Yapılandırma sihirbazı ile uygulamanıza veri kaynağı **oluşturma ve** yapılandırma.
 
-- **Veri kaynakları** penceresinde öğelerin bırakma türü ayarlanıyor.
+- Veri Kaynakları penceresindeki öğelerin bırakma **türünü** ayarlama.
 
-- **Veri kaynakları** penceresinden bir formun üzerine öğe sürükleyerek verileri görüntüleyen denetimler oluşturma.
+- Veri Kaynakları penceresindeki öğeleri bir forma **sürükleyerek verileri** görüntülüyor denetimler oluşturma.
 
 - Formdaki verileri görüntülemek için denetimler ekleme.
 
-- **Arama ölçütleri Oluşturucu** iletişim kutusu tamamlanıyor.
+- Arama Ölçütleri **Oluşturucusu iletişim** kutusu tamamlandı.
 
-- Forma parametreler girerek ve parametreli sorgu yürütülüyor.
+- Forma parametre girme ve parametreli sorguyu yürütme.
+
+> [!NOTE]
+> Bu makaledeki yordamlar. .NET Core .NET Framework Windows Forms projeleri için değil yalnızca Windows Forms geçerlidir.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını kullanır.
+Veri depolama ve **işleme iş yükünün yüklü** olması gerekir. Bkz. [Visual Studio.](../install/modify-visual-studio.md)
 
-1. SQL Server Express LocalDB yoksa, [SQL Server Express indirme sayfasından](https://www.microsoft.com/sql-server/sql-server-editions-express)veya **Visual Studio yükleyicisi** aracılığıyla yükleyin. **Visual Studio yükleyicisi**, SQL Server Express LocalDB 'yi **veri depolama ve işleme** iş yükünün parçası olarak veya ayrı bir bileşen olarak yükleyebilirsiniz.
+Bu kılavuzda LocalDB SQL Server Express Northwind örnek veritabanı kullanılır.
 
-2. Aşağıdaki adımları izleyerek Northwind örnek veritabanını yüklersiniz:
+1. YerelDB'niz yoksa, SQL Server Express indirme sayfasından veya [SQL Server Express](https://www.microsoft.com/sql-server/sql-server-editions-express)sayfasından **Visual Studio Yükleyicisi.** Bu **Visual Studio Yükleyicisi,** yerel SQL Server Express veri depolama ve işleme iş yükünün bir parçası olarak veya tek bir bileşen olarak yükleyebilirsiniz. 
 
-    1. Visual Studio 'da **SQL Server Nesne Gezgini** penceresini açın. (SQL Server Nesne Gezgini, **Visual Studio yükleyicisi** **veri depolama ve işleme** iş yükünün parçası olarak yüklenir.) **SQL Server** düğümünü genişletin. LocalDB örneğinize sağ tıklayıp **Yeni sorgu**' yı seçin.
+2. Aşağıdaki adımları kullanarak Northwind örnek veritabanını yükleyin:
 
-       Sorgu Düzenleyicisi penceresi açılır.
+    1. Bu Visual Studio, **SQL Server Nesne Gezgini** açın. (SQL Server Nesne Gezgini, veri depolama ve işleme iş yükünün **bir parçası olarak** Visual Studio Yükleyicisi.)  SQL Server **genişletin.** LocalDB örneğine sağ tıklayın ve Yeni **Sorgu'yı seçin.**
 
-    2. [Northwind Transact-SQL betiğini](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) panonuza kopyalayın. Bu T-SQL betiği, Northwind veritabanını sıfırdan oluşturur ve verileri veriyle doldurur.
+       Bir sorgu düzenleyicisi penceresi açılır.
 
-    3. T-SQL betiğini sorgu düzenleyicisine yapıştırın ve sonra **Çalıştır** düğmesini seçin.
+    2. [Northwind Transact-SQL betiği panoya](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) kopyalayın. Bu T-SQL betiği, Northwind veritabanını sıfırdan oluşturur ve verilerle doldurmak için kullanılır.
 
-       Kısa bir süre sonra sorgu çalışmayı sonlandırır ve Northwind veritabanı oluşturulur.
+    3. T-SQL betiği sorgu düzenleyicisine yapıştırın ve ardından Yürüt **düğmesini** seçin.
 
-## <a name="create-the-windows-forms-application"></a>Windows Forms uygulamasını oluşturma
+       Kısa bir süre sonra sorgunun çalışıyor ve Northwind veritabanı oluşturulur.
 
-C# veya Visual Basic için yeni bir **Windows Forms uygulama** projesi oluşturun. Projeyi **WindowsSearchForm** olarak adlandırın.
+## <a name="create-the-windows-forms-application"></a>Windows Forms oluşturma
+
+:::moniker range="vs-2017"
+
+C# veya Windows Forms için yeni .NET Framework App **(.NET Framework)** projesi Visual Basic. Projeye **WindowsSearchForm adını girin.**
 
 ## <a name="create-the-data-source"></a>Veri kaynağını oluşturma
 
-Bu adım **veri kaynağı yapılandırma** Sihirbazı 'nı kullanarak bir veritabanından veri kaynağı oluşturur:
+Bu adım, Veri Kaynağı Yapılandırma sihirbazını kullanarak **veritabanından bir veri kaynağı** oluşturur:
 
-1. Veri **kaynakları** penceresini açmak Için, **veri** menüsünde **veri kaynaklarını göster**' e tıklayın.
+1. Veri Kaynakları **penceresini açmak için** Veri menüsünde **Veri** Kaynaklarını **Göster'e tıklayın.**
 
-2. Veri **kaynakları** penceresinde, **veri kaynağı yapılandırma** Sihirbazı ' nı başlatmak Için **Yeni veri kaynağı Ekle** ' yi seçin.
+2. Veri Kaynağı **Yapılandırma sihirbazını** başlatmak **için Veri Kaynakları penceresinde** Yeni Veri Kaynağı **Ekle'yi** seçin.
 
-3. **Veri kaynağı türü seçin** sayfasında **veritabanı** ' nı seçin ve ardından **İleri**' ye tıklayın.
+3. Veri **Kaynağı** Türü **Seçin sayfasında Veritabanı'yı seçin** ve ardından Sonraki'ye **tıklayın.**
 
-4. **Veri bağlantınızı seçin** sayfasında aşağıdakilerden birini yapın:
+4. Veri **Bağlantınızı Seçin sayfasında,** aşağıdakilerden birini yapın:
 
     - Northwind örnek veritabanıyla kurulan veri bağlantısı aşağı açılan listede kullanılabilir durumdaysa bunu seçin.
 
-    - **Yeni bağlantı** ' yı seçerek **Bağlantı Ekle/Değiştir** iletişim kutusunu başlatın.
+    - Bağlantı **Ekle/Değiştir** iletişim **kutusunu başlatmak için Yeni Bağlantı'ya** tıklayın.
 
-5. Veritabanınız parola gerektiriyorsa, hassas verileri dahil etme seçeneğini belirleyin ve ardından **İleri**' ye tıklayın.
+5. Veritabanınız parola gerektiriyorsa, hassas verileri dahil etmek için seçeneğini belirleyin ve ardından Sonraki 'ye **tıklayın.**
 
-6. **Bağlantı dizesini uygulama yapılandırma dosyasına kaydet** sayfasında, **İleri**' ye tıklayın.
+6. Bağlantı **dizesini Uygulama Yapılandırması dosyasına kaydet sayfasında, Sonraki** 'ye **tıklayın.**
 
-7. **Veritabanı nesnelerinizi seçin** sayfasında **Tablolar** düğümünü genişletin.
+7. Veritabanı **Nesnelerinizi seçin sayfasında** Tablolar **düğümünü** genişletin.
 
-8. **Müşteriler** tablosunu seçin ve ardından **son**' a tıklayın.
+8. Customers **tablosu'u** seçin ve ardından Son'a **tıklayın.**
 
-     **NorthwindDataSet** , projenize eklenir ve **Customers** tablosu **veri kaynakları** penceresinde görünür.
+     **NorthwindDataSet** projenize eklenir ve Veri  Kaynakları penceresinde Müşteriler **tablosu** görüntülenir.
 
-## <a name="create-the-form"></a>Formu oluşturun
+:::moniker-end
 
-Veri **kaynakları** penceresinden formunuza öğe sürükleyerek veri bağlantılı denetimleri oluşturabilirsiniz:
+:::moniker range=">=vs-2019"
 
-1. **Veri kaynakları** penceresindeki **müşteriler** düğümünü genişletin.
+C# veya Windows Forms için yeni .NET Framework App **(.NET Framework)** projesi Visual Basic. Projeye **WindowsSearchForm adını girin.**
 
-2. **Müşteriler** düğümünü **veri kaynakları** penceresinden formunuza sürükleyin.
+## <a name="create-the-data-source"></a>Veri kaynağını oluşturma
 
-     <xref:System.Windows.Forms.DataGridView>Kayıtlar üzerinde gezinmek için bir ve araç şeridi ( <xref:System.Windows.Forms.BindingNavigator> ) formda görüntülenir. Bir [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), CustomersTableAdapter, <xref:System.Windows.Forms.BindingSource> ve <xref:System.Windows.Forms.BindingNavigator> bileşen tepsisinde görünür.
+Bu adım, Veri Kaynağı Yapılandırma sihirbazını kullanarak **veritabanından bir veri kaynağı** oluşturur:
 
-## <a name="add-parameterization-search-functionality-to-the-query"></a>Sorguya Parametreleştirme (arama işlevi) ekleme
+1. Veri Kaynakları **penceresini açmak için** hızlı arama (**Ctrl** Q ) ve Veri Kaynakları araması +  **kullanın.**
 
-**Arama ölçütü Oluşturucu** iletişim kutusunu kullanarak, özgün sorguya bir where yan tümcesi ekleyebilirsiniz:
+1. Veri Kaynağı **Yapılandırma sihirbazını** başlatmak **için Veri Kaynakları penceresinde** Yeni Veri Kaynağı **Ekle'yi** seçin.
 
-1. Denetimi seçin <xref:System.Windows.Forms.DataGridView> ve ardından **veri** menüsünde **Sorgu Ekle** ' yi seçin.
+1. Veri **Kaynağı** Türü **Seçin sayfasında Veritabanı'yı seçin** ve ardından Sonraki'ye **tıklayın.**
 
-2. **Arama ölçütü Oluşturucu** Iletişim kutusundaki **Yeni sorgu adı** alanına **FillByCity** yazın.
+1. Veritabanı Modeli **Seçin ekranında Veri** Kümesi'ne ve **ardından** Sonraki'ye **tıklayın.**
 
-3. Sorgu `WHERE City = @City` **metin** alanındaki sorguya ekleyin.
+1. Veri **Bağlantınızı Seçin sayfasında,** aşağıdakilerden birini yapın:
+
+    - Northwind örnek veritabanıyla kurulan veri bağlantısı aşağı açılan listede kullanılabilir durumdaysa bunu seçin.
+
+    - Bağlantı **Ekle/Değiştir** iletişim **kutusunu başlatmak için Yeni Bağlantı'ya** tıklayın.
+
+1. Bağlantı **dizesini Uygulama Yapılandırması dosyasına kaydet sayfasında, Sonraki** 'ye **tıklayın.**
+
+1. Veritabanı **Nesnelerinizi seçin sayfasında** Tablolar **düğümünü** genişletin.
+
+1. Customers **tablosu'u** seçin ve ardından Son'a **tıklayın.**
+
+     **NorthwindDataSet** projenize eklenir ve Veri  Kaynakları penceresinde Müşteriler **tablosu** görüntülenir.
+
+:::moniker-end
+
+## <a name="create-the-form"></a>Formu oluşturma
+
+Veri Kaynakları penceresindeki öğeleri form üzerine sürükleyerek **veriye bağlı** denetimler oluşturabilirsiniz:
+
+1. Veri tasarımcısının Windows Forms odak noktası olduğundan ve Veri Kaynakları penceresinin **açık ve** sabitlenmiş olduğundan emin olun.
+
+1. Veri **Kaynakları penceresinde** Müşteriler **düğümünü** genişletin.
+
+1. Veri **Kaynakları** penceresindeki **Müşteriler düğümünü** formuza sürükleyin.
+
+     Formda <xref:System.Windows.Forms.DataGridView> kayıtlarda <xref:System.Windows.Forms.BindingNavigator> gezinmek için bir ve araç şeridi ( ) görüntülenir. [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), CustomersTableAdapter <xref:System.Windows.Forms.BindingSource> ve bileşen <xref:System.Windows.Forms.BindingNavigator> tepsisinde görüntülenir.
+
+## <a name="add-parameterization-search-functionality-to-the-query"></a>Sorguya parametreleştirme (arama işlevi) ekleme
+
+Arama Ölçütü Oluşturucusu iletişim kutusunu kullanarak özgün sorguya **WHERE yan tümcesi** ebilirsiniz:
+
+1. Form için tasarım yüzeyinin hemen altında **customersTableAdapter** düğmesini seçin  ve özellikler penceresinde Sorgu **Ekle... öğesini seçin.**
+
+2. Arama Ölçütü Oluşturucusu iletişim **kutusundaki Yeni sorgu** adı alanına **FillByCity** yazın. 
+
+3. sorgusunu `WHERE City = @City` Sorgu Metni **alanında ekleyin.**
 
      Sorgu aşağıdakine benzemelidir:
 
@@ -123,29 +166,29 @@ Veri **kaynakları** penceresinden formunuza öğe sürükleyerek veri bağlant�
      ```
 
     > [!NOTE]
-    > Erişim ve OLE DB veri kaynakları, parametreleri belirtmek için soru işareti ('? ') kullanır, bu nedenle WHERE yan tümcesi şöyle görünür: `WHERE City = ?` .
+    > Erişim OLE DB veri kaynakları parametreleri ifade etmek için soru işaretini ('?') kullanır, bu nedenle WHERE yan tümcesi şöyle olur: `WHERE City = ?` .
 
-4. **Tamam** ' a tıklayarak **arama ölçütleri Oluşturucu** iletişim kutusunu kapatın.
+4. Arama **Ölçütleri** Oluşturucusu iletişim **kutusunu kapatmak için Tamam'a** tıklayın.
 
-     Forma bir **FillByCityToolStrip** eklenir.
+     Forma **bir FillByCityToolStrip** eklenir.
 
 ## <a name="test-the-application"></a>Uygulamayı test edin
 
-Uygulamayı çalıştırmak formunuzu açar ve parametreyi giriş olarak almaya başlamaya çalışır:
+Uygulamayı çalıştırma form sayfanızı açar ve parametreyi giriş olarak almaya hazır hale alır:
 
 1. Uygulamayı çalıştırmak için **F5**'e basın.
 
-2. **Şehir** metin kutusuna **Londra** yazın ve ardından **FillByCity**' ye tıklayın.
+2. City **metin** kutusuna **Londra yazın** ve **FillByCity'ye tıklayın.**
 
-     Veri kılavuzu, ölçütlere uyan müşterilerle doldurulur. Bu örnekte, veri kılavuzu yalnızca, **şehir** sütununda **Londra** değeri olan müşterileri görüntüler.
+     Veri kılavuzu, ölçütlere uyan müşterilerle doldurulur. Bu örnekte veri kılavuzunda yalnızca City sütununda Londra **değerine sahip** **müşteriler** görüntülenir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 Uygulama gereksinimlerinize bağlı olarak, parametreli form oluşturduktan sonra gerçekleştirmek isteyebileceğiniz birkaç adım vardır. Bu izlenecek yolda yapabileceğiniz bazı geliştirmeler şunlardır:
 
-- İlgili verileri görüntüleyen denetimler ekleme. Daha fazla bilgi için bkz. [veri kümelerinde ilişkiler](relationships-in-datasets.md).
+- İlgili verileri görüntüleyen denetimler ekleme. Daha fazla bilgi için [bkz. Veri Kümelerde İlişkiler.](relationships-in-datasets.md)
 
-- Veritabanı nesneleri eklemek veya çıkarmak için veri kümesini düzenleme. Daha fazla bilgi için bkz. [veri kümeleri oluşturma ve yapılandırma](../data-tools/create-and-configure-datasets-in-visual-studio.md).
+- Veritabanı nesneleri eklemek veya çıkarmak için veri kümesini düzenleme. Daha fazla bilgi için [bkz. Veri kümeleri oluşturma ve yapılandırma.](../data-tools/create-and-configure-datasets-in-visual-studio.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
