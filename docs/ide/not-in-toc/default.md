@@ -1,6 +1,8 @@
 ---
 title: F1 yardımı için varsayılan sayfa
 description: Visual Studio için F1 Yardım istekleri için varsayılan sayfa
+ms.prod: visual-studio
+ms.technology: ''
 ms.date: 03/25/2021
 ms.topic: error-reference
 ms.custom: contperf-fy21q3
@@ -10,12 +12,12 @@ f1_keywords:
 manager: jmartens
 author: mikejo5000
 ms.author: mikejo
-ms.openlocfilehash: 9f91a145bc0847eca4303717bbf4602b243f6a3c
-ms.sourcegitcommit: 5fb684ff8729eb118aa91ce9f049c79eeb9747b1
+ms.openlocfilehash: de87c66049366b14b632dcb4c9d0310f8394d335
+ms.sourcegitcommit: de8e06c5cc80314b33bd37afdf0868c8ce2fb52a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2021
-ms.locfileid: "107913052"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111908128"
 ---
 # <a name="f1-help-match-not-found"></a>F1 Yardımı: eşleşme bulunamadı
 
